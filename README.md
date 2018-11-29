@@ -9,7 +9,7 @@
 
 이 리포지토리는 2017년 6월 23에 Microsoft/vcppdocs에서 MicrosoftDocs/cpp-docs-pr로 이동되었습니다.
 
-Visual Basic 및 Visual C#에 대한 설명서는 별도의 리포지토리([http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs))에 있고 Visual Studio 2017 설명서는 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs)의 리포지토리에 있습니다.
+Visual Basic 및 Visual C#에 대한 설명서는 별도의 리포지토리([https://github.com/dotnet/docs](https://github.com/dotnet/docs))에 있고 Visual Studio 2017 설명서는 [https://github.com/MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs)의 리포지토리에 있습니다.
 
 ## <a name="contributing-to-the-documentation"></a>설명서에 기여
 
