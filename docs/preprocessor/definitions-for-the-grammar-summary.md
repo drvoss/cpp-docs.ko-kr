@@ -22,7 +22,7 @@ ms.locfileid: "50521127"
 
 선택적 구성 요소는 첨자 <sub>opt</sub>로 나타냅니다. 예를 들어 다음은 중괄호로 묶인 선택적 식을 나타냅니다.
 
-**{** *expression*<sub>opt</sub> **}**
+**{** *표현식*<sub></sub> **}**
 
 ## <a name="see-also"></a>참고 항목
 
