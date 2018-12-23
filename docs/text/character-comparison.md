@@ -17,21 +17,21 @@ ms.locfileid: "50615412"
 
 다음 팁을 사용하십시오.
 
-- 알려진 선행 바이트와 ASCII 문자 비교는 제대로 수행됩니다.
+- ASCII 문자로 이루어진 알려진 선행 바이트 문자 비교는 제대로 수행됩니다.
 
     ```cpp
     if( *sz1 == 'A' )
     ```
 
-- 두 개의 알 수 없는 문자를 비교하려면 Mbstring.h에 정의된 매크로 중 하나를 사용해야 합니다.
+- 그렇지 않은 문자의 두바이트를 비교하려면 Mbstring.h에 정의된 매크로를 사용합니다.
 
     ```cpp
     if( !_mbccmp( sz1, sz2) )
     ```
 
-   이렇게 하면 더블바이트 문자의 바이트 두 개가 모두 비교됩니다.
+   이렇게 하면 더블바이트 문자의 두 바이트 모두 비교됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[MBCS 프로그래밍 팁](../text/mbcs-programming-tips.md)<br/>
+[멀티바이트 문자 집합(MBCS) 프로그래밍 팁](../text/mbcs-programming-tips.md)<br/>
 [버퍼 오버플로](../text/buffer-overflow.md)
