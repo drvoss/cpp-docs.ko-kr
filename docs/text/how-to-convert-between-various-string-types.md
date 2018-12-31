@@ -92,8 +92,8 @@ int main()
     CStringW cstring(orig);
     cstring += " (CStringW)";
     // To display a CStringW correctly, use wcout and cast cstring
-    // to (LPCTSTR).
-    wcout << (LPCTSTR)cstring << endl;
+    // to (LPCWSTR).
+    wcout << (LPCWSTR)cstring << endl;
 
     // Convert the C style string to a basic_string and display it.
     string basicstring(orig);
@@ -198,7 +198,7 @@ int main()
         cout << printstr << endl;
         // The following line of code is an easier way to
         // display wide character strings:
-        // wcout << (LPCTSTR) ccombstr << endl;
+        wcout << (LPCWSTR) ccombstr << endl;
     }
 
     // Convert a wide wchar_t string to a multibyte CStringA,
@@ -212,8 +212,8 @@ int main()
     CStringW cstring(orig);
     cstring += " (CStringW)";
     // To display a CStringW correctly, use wcout and cast cstring
-    // to (LPCTSTR).
-    wcout << (LPCTSTR)cstring << endl;
+    // to (LPCWSTR).
+    wcout << (LPCWSTR)cstring << endl;
 
     // Convert the wide character wchar_t string to a
     // basic_string, append the type of string to it, and
@@ -316,8 +316,8 @@ int main()
     CStringW cstring(orig.GetBSTR());
     cstring += " (CStringW)";
     // To display a cstring correctly, use wcout and
-    // "cast" the cstring to (LPCTSTR).
-    wcout << (LPCTSTR)cstring << endl;
+    // "cast" the cstring to (LPCWSTR).
+    wcout << (LPCWSTR)cstring << endl;
 
     // Convert the _bstr_t to a basic_string.
     string basicstring((char *)orig);
@@ -406,7 +406,7 @@ int main()
     wcscat_s(wcstring, widesize, strConcat);
 
     // Display the result. Unlike CStringW, a wchar_t does not need
-    // a cast to (LPCTSTR) with wcout.
+    // a cast to (LPCWSTR) with wcout.
     wcout << wcstring << endl;
 
     // Convert a wide character CComBSTR to a wide character _bstr_t,
@@ -425,8 +425,8 @@ int main()
     CStringW cstring(orig);
     cstring += " (CStringW)";
     // To display a cstring correctly, use wcout and cast cstring
-    // to (LPCTSTR).
-    wcout << (LPCTSTR)cstring << endl;
+    // to (LPCWSTR).
+    wcout << (LPCWSTR)cstring << endl;
 
     // Convert a wide character CComBSTR to a wide character
     // basic_string.
@@ -490,7 +490,7 @@ int main()
 ```cpp
 // Set up a wide character CStringW string.
 CStringW origw("Hello, World!");
-wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;
+wcout << (LPCWSTR)origw << _T(" (CStringW)") << endl;
 
 // Convert to a char* string from CStringA string
 // and display the result.
@@ -676,7 +676,7 @@ int main()
     // character CStringW string.
     CStringW cstringw(orig.c_str());
     cstringw += _T(" (CStringW)");
-    wcout << (LPCTSTR)cstringw << endl;
+    wcout << (LPCWSTR)cstringw << endl;
 
     // Convert a basic_string string to a System::String
     String ^systemstring = gcnew String(orig.c_str());
@@ -781,7 +781,7 @@ int main()
     // a wide character CStringW string.
     CStringW cstringw(wch);
     cstringw += " (CStringW)";
-    wcout << (LPCTSTR)cstringw << endl;
+    wcout << (LPCWSTR)cstringw << endl;
 
     // Convert a wide character System::String to
     // a wide character basic_string.
