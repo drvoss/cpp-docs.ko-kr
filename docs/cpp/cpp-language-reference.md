@@ -19,7 +19,7 @@ ms.locfileid: "50469383"
 
 이 문서에서는 Microsoft Visual C++에서 사용하는 C++ 프로그래밍 언어를 설명하며 [*The Annotated C++ Reference Manual*](http://www.stroustrup.com/arm.html)(머거렛 앨리스(Margaret Ellis), 비야네 스트롭스트룹(Bjarne Stroustrup) 공저)의 구성을 참고하고 ANSI/ISO C++ 국제 표준(ISO/IEC FDIS 14882)을 기반으로 합니다. 또한 C++ 언어 기능의 Microsoft 전용 구현 사항이 포함되어 있습니다.
 
-모던 C++ 프로그래밍 방법은 [C++의 진화(최신 C++)](welcome-back-to-cpp-modern-cpp.md)를 참조합니다.
+모던 C++ 프로그래밍 방법은 [C++의 진화( C++)](welcome-back-to-cpp-modern-cpp.md)를 참조합니다.
 
 키워드나 연산자를 빠르게 찾으려면 다음 표를 참조하십시오.
 
