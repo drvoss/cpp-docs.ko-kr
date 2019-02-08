@@ -47,7 +47,7 @@ SafeInt 라이브러리의 인스턴스를 만들지 않고도 사용할 수 있
 이러한 각 함수는 두 가지 서식 파일 형식: `T` 고 `U`입니다. 이러한 각 유형의 부울, 문자 또는 정수 계열 형식 수 있습니다. 정수 계열 형식 수 서명 되거나 서명 되지 않은 및 8 비트에서 64 비트 크기입니다.
 
 > [!NOTE]
-> 이 라이브러리의 최신 버전에 위치한 [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt)합니다.
+> 이 라이브러리의 최신 버전은 [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt)에 있습니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 
