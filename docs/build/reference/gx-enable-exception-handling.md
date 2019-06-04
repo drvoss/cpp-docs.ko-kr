@@ -20,7 +20,7 @@ ms.locfileid: "62292005"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX(예외 처리 사용)
 
-더 이상 사용되지 않습니다. 가정 함수를 사용 하 여 동기 예외 처리를 사용 하 여 선언 하면 `extern "C"` 예외를 throw 하지 않습니다.
+이 컴파일 옵션은 더 이상 사용되지 않습니다. `extern "C"`를 사용하여 선언된 함수가 절대 예외를 throw 하지 않는다는 가정하에 동기 예외 처리를 활성화 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,17 +30,17 @@ ms.locfileid: "62292005"
 
 ## <a name="remarks"></a>설명
 
-**/GX** 는 사용 되지 않습니다. 해당 사용 [/EHsc](eh-exception-handling-model.md) 옵션을 사용 합니다. 사용 되지 않는 컴파일러 옵션의 목록을 참조 하세요. 합니다 **컴파일러 옵션 및 사용 되지 않음** 섹션 [컴파일러 옵션 범주별 목록](compiler-options-listed-by-category.md)합니다.
+**/GX**는 더이상 사용 되지 않습니다. 대신 [/EHsc](eh-exception-handling-model.md) 옵션을 사용 합니다. 사용되지 않는 컴파일러 옵션의 목록은 **컴파일러 옵션 및 사용 되지 않음** 섹션의 [컴파일러 옵션 범주별 목록](compiler-options-listed-by-category.md)을 참조합니다.
 
-기본적으로 **/EHsc**는 해당 **/GX**, Visual Studio 개발 환경을 사용 하 여 컴파일하는 경우 적용 됩니다. 명령줄 도구를 사용 하는 경우 예외 처리 하지 않아도 지정 됩니다. 에 해당 하는 이것이 **/GX-** 합니다.
+기본적으로 **/EHsc**는 **/GX**에 해당하는 것으로 Visual Studio 개발 환경을 사용하여 컴파일하는 경우 적용 됩니다. 명령줄 도구를 사용하는 경우 예외처리를 하지 않도록 지정 됩니다. 이것은 **/GX-**와 동일 합니다.
 
-자세한 내용은 [ C++ 예외 처리](../../cpp/cpp-exception-handling.md)합니다.
+자세한 내용은 [ C++ 예외 처리](../../cpp/cpp-exception-handling.md)를 참조합니다.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. 탐색 창에서 선택 **구성 속성**를 **C /C++** 하십시오 **명령줄**.
+1. 탐색 창에서 **구성 속성**, **C /C++**, **명령줄**을 선택합니다.
 
 1. **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.
 
