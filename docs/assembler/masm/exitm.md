@@ -1,17 +1,17 @@
 ---
 title: EXITM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EXITM
 helpviewer_keywords:
 - EXITM directive
 ms.assetid: a3484d33-04a9-4791-8d53-3fc3bc7b417c
-ms.openlocfilehash: 0fc40b6dad2785c02f097910f26b7465ddf5dbcc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 89611bf9599a59ed09e217cc45cf16b48fe17a89
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397572"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313407"
 ---
 # <a name="exitm"></a>EXITM
 
@@ -27,4 +27,5 @@ ms.locfileid: "74397572"
 
 ## <a name="see-also"></a>참고 항목
 
-[지시문 참조](directives-reference.md)
+[지시문 참조](directives-reference.md)\
+[MASM BNF 문법](masm-bnf-grammar.md)
