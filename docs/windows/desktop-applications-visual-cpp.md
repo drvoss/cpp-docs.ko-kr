@@ -43,7 +43,7 @@ Visual Studio 2017 버전 15.4 이상에서 Windows 응용 프로그램 패키�
 |[빈 Windows 데스크톱 애플리케이션 만들기](creating-an-empty-windows-desktop-application.md)|기본 파일이 없는 Windows 데스크톱 프로젝트를 만드는 방법|
 |[빈 Win32 애플리케이션에 파일 추가](adding-files-to-an-empty-win32-applications.md)|빈 프로젝트에 파일을 추가 하는 방법|
 |[리소스 파일 작업](working-with-resource-files.md)|데스크톱 응용 프로그램에 이미지, 아이콘, 문자열 테이블 및 기타 리소스를 추가 하는 방법입니다.|
-|[DirectX를 사용 하 여 게임을 만들기C++위한 리소스 ()](resources-for-creating-a-game-using-directx.md)|에서 C++게임을 만들기 위한 콘텐츠에 대 한 링크입니다.|
+|[DirectX를 사용하여 게임을 만들기 위한 리소스(C++)](resources-for-creating-a-game-using-directx.md)|C++에서 게임을 만들기 위한 콘텐츠에 대한 링크입니다.|
 |[연습: 정적 라이브러리 만들기 및 사용](walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib 이진 파일을 만드는 방법|
 |[방법: Windows 데스크톱 애플리케이션에서 Windows 10 SDK 사용](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK를 사용하여 빌드할 프로젝트를 설정하는 단계를 설명합니다.|
 
@@ -52,7 +52,7 @@ Visual Studio 2017 버전 15.4 이상에서 Windows 응용 프로그램 패키�
 |제목|설명|
 |-----------|-----------------|
 |[Windows 개발](/windows/win32/index)|Windows API 및 COM에 대한 정보를 제공합니다. 일부 Windows API 및 타사 DLL이 COM 개체로 구현됩니다.|
-|[Hilo: Developing C++ Applications for Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Windows Animation 및 Direct2D를 사용하는 리치 클라이언트 Windows 데스크톱 애플리케이션을 만들어서 캐러셀 기반 사용자 인터페이스를 만드는 방법에 대해 설명합니다.  이 자습서는 Windows 7부터 업데이트 되지 않았지만 Win32 프로그래밍에 대 한 철저 한 소개를 제공 합니다.|
+|[Hilo: Developing C++ Applications for Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Windows Animation 및 Direct2D를 사용하는 리치 클라이언트 Windows 데스크톱 애플리케이션을 만들어서 캐러셀 기반 사용자 인터페이스를 만드는 방법에 대해 설명합니다.  이 자습서는 Windows 7부터 업데이트되지 않았지만 Win32 프로그래밍에 대한 자세한 소개를 제공합니다.|
 |[C++의 Windows 프로그래밍 개요](overview-of-windows-programming-in-cpp.md)|에서 C++Windows 데스크톱 프로그래밍의 주요 기능에 대해 설명 합니다.|
 
 ## <a name="see-also"></a>참조

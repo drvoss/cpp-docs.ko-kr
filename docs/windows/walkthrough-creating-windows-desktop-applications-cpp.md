@@ -23,7 +23,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 > [!IMPORTANT]
 > 간단히 하기 위해 일부 코드 문은 텍스트에서 생략 됩니다. 이 문서의 끝에 있는 [코드 작성](#build-the-code) 섹션에서는 전체 코드를 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제조건
 
 - Microsoft Windows 7 이상 버전을 실행하는 컴퓨터. 최상의 개발 환경을 위해서는 Windows 10이 권장됩니다.
 
@@ -143,7 +143,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
    > [!NOTE]
    > `CALLBACK`, `HINSTANCE`, `_In_`등의 추가 단어는 무엇 인가요? 기존 Windows API는 typedef 및 전처리기 매크로를 광범위 하 게 사용하여 호출 규칙, **__declspec** 선언 및 컴파일러 pragma와 같은 플랫폼별 코드와 형식에 대한 일부 세부 정보를 추상화 합니다. Visual Studio에서는 IntelliSense [요약 정보](/visualstudio/ide/using-intellisense#quick-info) 기능을 사용하여 이러한 형식 정의 및 매크로가 정의 하는 내용을 확인할 수 있습니다. 관심 있는 단어 위에 마우스를 가리키거나 선택 하 고 **ctrl** +**K**, **ctrl** +**I** 를 눌러 정의가 포함 된 작은 팝업 창으로 이동 합니다. 자세한 내용은 [IntelliSense 사용](/visualstudio/ide/using-intellisense)을 참조하세요. 매개 변수 및 반환 형식은 종종 *SAL 주석을* 사용하여 프로그래밍 오류를 파악 하는 데 도움이 됩니다. 자세한 내용은 [SAL 주석을 사용하여 C/C++ 코드 오류 줄이기](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)를 참조 하세요.
 
-1. Windows 데스크톱 프로그램에는 &lt;windows > 필요 합니다. &lt;tchar.h >는 프로젝트에 유니코드 기호가 정의 된 경우 최종적으로 **wchar_t** 로 확인 되는 `TCHAR` 매크로를 정의 합니다. 그렇지 않으면 **char**로 확인 됩니다.  항상 유니코드를 사용 하 여 빌드하는 경우에는 TCHAR.H가 필요 하지 않으며 **wchar_t** 만 직접 사용할 수 있습니다.
+1. Windows 데스크톱 프로그램에는 &lt;windows.h>가 필요합니다. &lt;tchar.h >는 프로젝트에 유니코드 기호가 정의 된 경우 최종적으로 **wchar_t** 로 확인 되는 `TCHAR` 매크로를 정의 합니다. 그렇지 않으면 **char**로 확인 됩니다.  항상 유니코드를 사용하여 빌드하는 경우에는 TCHAR가 필요하지 않으며 **wchar_t**만 직접 사용할 수 있습니다.
 
    ```cpp
    #include <windows.h>
