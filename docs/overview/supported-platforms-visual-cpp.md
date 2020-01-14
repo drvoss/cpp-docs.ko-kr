@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: eb2a258a73e69ef032576f5b42e8071fd27439a1
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 049b28d23c7f5f5f023f3b2964577b75992c2998
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810605"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793832"
 ---
 # <a name="supported-platforms-visual-c"></a>지원되는 플랫폼(Visual C++)
 
@@ -44,7 +42,7 @@ Visual Studio를 사용하여 빌드한 응용 프로그램은 다음과 같이 
 
 대상 플랫폼 구성을 설정하는 방법에 대한 자세한 내용은 [방법: 64비트, x64 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Studio 버전의 Visual C++ 도구 및 기능](visual-cpp-tools-and-features-in-visual-studio-editions.md)
 - [시작](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)
