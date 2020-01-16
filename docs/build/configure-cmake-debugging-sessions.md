@@ -4,12 +4,12 @@ description: Visual Studio를 사용 하 여 CMake 디버거 설정을 구성 �
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946810"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031330"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake 디버깅 세션 구성
 
@@ -73,7 +73,7 @@ ms.locfileid: "75946810"
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>원격 Linux 프로젝트에 대 한 시작 및 json 참조
 
-다음 속성은 **원격 디버그 구성**에만 적용 됩니다. [Gdb에 직접 명령을 보내고](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) [miengine 로깅을 사용 하도록 설정할](https://github.com/microsoft/MIEngine/wiki/Logging)수도 있습니다. 이러한 속성을 사용 하 여 gdb로 전송 되는 명령, 출력 gdb에서 반환 하는 항목 및 각 명령에 걸리는 시간을 확인할 수 있습니다.
+다음 속성은 **원격 디버그 구성**에만 적용 됩니다. [사용자 지정 gdb 명령을 실행](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) 하 여 기본 디버거로 명령을 직접 전송 하 고, [miengine 로깅을 사용](https://github.com/microsoft/MIEngine/wiki/Logging) 하 여 gdb로 전송 되는 명령, 출력 gdb에서 반환 하는 항목 및 각 명령에 걸리는 시간을 확인할 수도 있습니다.
 
 - `cwd`: 원격 컴퓨터에서 종속성 및 기타 파일을 찾기 위한 현재 작업 디렉터리입니다. `${debugInfo.defaultWorkingDirectory}` 매크로를 사용할 수 있습니다. *Cmakelists*를 재정의 하지 않는 한 기본값은 원격 작업 영역 루트입니다. 이 속성은 원격 구성에만 사용 됩니다. `currentDir`는 로컬 프로젝트에 대해 시작 하는 앱의 현재 디렉터리를 설정 하는 데 사용 됩니다.
 
