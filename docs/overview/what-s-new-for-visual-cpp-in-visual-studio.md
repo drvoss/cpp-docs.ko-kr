@@ -3,14 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754140"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793973"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -205,7 +203,7 @@ IncrediBuild는 **C++를 사용한 데스크톱 개발** 워크로드의 선택�
 
   이러한 기술에 대한 샘플 코드는 Microsoft Docs 및 VCSamples GitHub 리포지토리에 보관됩니다.
 
-- Windows 8.1 SDK는 Visual Studio 설치 관리자에서 더 이상 사용할 수 없습니다. C++ 프로젝트를 최신 Windows 10 SDK로 업그레이드하는 것이 좋습니다. 8\.1에 대한 종속성이 높은 경우 Windows SDK 아카이브에서 다운로드할 수 있습니다.
+- Windows 8.1 SDK는 Visual Studio 설치 관리자에서 더 이상 사용할 수 없습니다. C++ 프로젝트를 최신 Windows 10 SDK로 업그레이드하는 것이 좋습니다. 8.1에 대한 종속성이 높은 경우 Windows SDK 아카이브에서 다운로드할 수 있습니다.
 
 - Windows XP 대상은 최신 C++ 도구 세트에서 더 이상 사용할 수 없습니다. VS 2017 수준 MSVC 컴파일러 및 라이브러리가 있는 XP 대상은 여전히 지원되며 "개별 구성 요소"를 통해 설치할 수 있습니다.
 
@@ -286,7 +284,7 @@ Visual Studio 버전 15.7의 MSVC 컴파일러 도구 집합은 이제 C++ 표�
 - 버전 관리: 기본 제공 전처리기 매크로 **\_MSC\_VER**의 값이 이제 Visual C++ 도구 세트 업데이트 시마다 일정하게 업데이트됩니다. 자세한 내용은 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)(Visual C++ 컴파일러 버전)을 참조하세요.
 - 새 도구 세트 레이아웃: 개발 머신에서 컴파일러 및 관련된 빌드 도구의 위치 및 디렉터리 구조가 변경되었습니다. 새 레이아웃을 사용하면 여러 버전의 컴파일러를 병렬 설치할 수 있습니다. 자세한 내용은 [Compiler Tools Layout in Visual Studio 2017](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/)(Visual Studio 2017의 컴파일러 도구 레이아웃)을 참조하세요.
 - 향상된 진단: 이제 출력 창에 오류가 발생하는 열이 표시됩니다. 자세한 내용은 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/)(VS "15" Preview 5의 C++ 컴파일러 진단 향상)를 참조하세요.
-- 코루틴을 사용하는 경우 실험적인 **yield**( **/await** 옵션 아래에서 사용 가능) 키워드가 제거되었습니다. 대신 `co_yield`를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 [`yield` keyword to become `co_yield` in VS 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)(VS 2017에서 `yield` 키워드가 `co_yield`로 변경됨)을 참조하세요.
+- 코루틴을 사용하는 경우 실험적인 **yield**(**/await** 옵션 아래에서 사용 가능) 키워드가 제거되었습니다. 대신 `co_yield`를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 [`yield` keyword to become `co_yield` in VS 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)(VS 2017에서 `yield` 키워드가 `co_yield`로 변경됨)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 버전
 
@@ -312,7 +310,7 @@ Microsoft C++ 컴파일러는 AVX-512의 새로운 기능을 128비트 및 256�
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM(버전 15.0)
 
-- 사소한 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 진단 기능 개선. 문자열 조직에서 IDL 검사를 트립할 경우 그 트립이 일어나게 된 특정 동작이 보고됩니다. 예를 들어 "문자열 반복기를 역참조할 수 없음" 대신에 "범위(예: 끝 반복기) 밖에 있기 때문에 문자열 반복기를 역참조할 수 없음”이라는 메시지가 나타납니다.
+- 사소한 `basic_string``_ITERATOR_DEBUG_LEVEL != 0` 진단 기능 개선. 문자열 조직에서 IDL 검사를 트립할 경우 그 트립이 일어나게 된 특정 동작이 보고됩니다. 예를 들어 "문자열 반복기를 역참조할 수 없음" 대신에 "범위(예: 끝 반복기) 밖에 있기 때문에 문자열 반복기를 역참조할 수 없음”이라는 메시지가 나타납니다.
 - 이전에 코드가 영원히 잠기는 문제가 발생하던 `std::promise` 이동 할당 연산자가 해결되었습니다.
 - `atomic<T*>`를 `T*`로 암시적으로 변환할 때 발생하는 컴파일러 오류를 해결했습니다.
 - `pointer_traits<Ptr>`가 이제 `Ptr::rebind<U>`를 올바르게 검색합니다.
@@ -356,7 +354,7 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 - 로그 시간을 사용하는 힙 알고리즘은 반복기 디버깅이 활성화되었을 때 사실상 입력이 힙인 선형 시간 어설션을 더 이상 수행하지 않습니다.
 - 이제 `__declspec(allocator)`는 이러한 declspec를 인식하지 않는 Clang의 경고를 방지하기 위해 C1XX에서만 보호됩니다.
 - `basic_string::npos`는 이제 컴파일 시간 상수로 사용할 수 있습니다.
-- C++17 모드에서 `std::allocator`는 이제 alignment가 `max_align_t`보다 큰 over-aligned types - types 할당을 올바르게 처리합니다( **/Zc:alignedNew-** 로 비활성화되지 않은 경우에 한함).  예를 들어 16바이트 또는 32바이트 맞춤이 있는 개체의 벡터가 이제 SSE 및 AVX 명령에 맞게 올바르게 맞춰집니다.
+- C++17 모드에서 `std::allocator`는 이제 alignment가 `max_align_t`보다 큰 over-aligned types - types 할당을 올바르게 처리합니다(**/Zc:alignedNew-** 로 비활성화되지 않은 경우에 한함).  예를 들어 16바이트 또는 32바이트 맞춤이 있는 개체의 벡터가 이제 SSE 및 AVX 명령에 맞게 올바르게 맞춰집니다.
 
 ### <a name="conformance-improvements"></a>규칙 향상
 
@@ -526,7 +524,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 
 ## <a name="intellisense"></a>IntelliSense
 
-- 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 **정의로 이동(Go To Definitions)** , **모든 참조 찾기(Find All References)** 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**(이전에는 ...C/C++ | 실험적에 있었음)으로 이동되었습니다.
+- 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 **정의로 이동(Go To Definitions)**, **모든 참조 찾기(Find All References)** 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**(이전에는 ...C/C++ | 실험적에 있었음)으로 이동되었습니다.
 
 - 미리 컴파일된 헤더를 사용하지 않는 프로젝트 및 파일에 대한 IntelliSense 성능이 향상되었습니다. 현재 파일의 헤더에 대해 자동 미리 컴파일된 헤더가 생성됩니다.
 
@@ -544,7 +542,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 - 이제 **모든 참조 찾기**(Shift+F12)를 사용하여 복잡한 코드베이스에서도 쉽게 탐색할 수 있습니다. 고급 그룹화, 필터링, 정렬, 결과 내 검색 및 (일부 언어의 경우) 색 지정이 제공되므로 참조를 명확하게 이해할 수 있습니다. C++의 경우 새로운 UI에 변수에서 읽고 있는지 아니면 변수에 쓰고 있는지에 대한 정보가 포함되어 있습니다.
 - IntelliSense 점-화살표 기능이 실험적에서 고급으로 옮겨졌고 이제 기본적으로 사용됩니다. 편집기 기능인 **범위 확장**과 **우선 순위 확장**도 실험적에서 고급으로 옮겨졌습니다.
 - 실험적 리팩터링 기능인 **시그니처 변경**과 **함수 추출**을 기본적으로 사용할 수 있습니다.
-- C++ 프로젝트에 대해 ‘빠른 프로젝트 로드’라는 실험적 기능이 추가되었습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 후에 프로젝트를 열 때는 ‘훨씬’ 더 빠르게 로드됩니다. 
+- C++ 프로젝트에 대해 ‘빠른 프로젝트 로드’라는 실험적 기능이 추가되었습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 후에 프로젝트를 열 때는 ‘훨씬’ 더 빠르게 로드됩니다.
 - 이러한 기능 중 일부는 다른 언어에 공통적으로 적용되고, 일부는 C++에만 해당합니다. 이러한 새로운 기능에 대한 자세한 내용은 [Announcing Visual Studio “15” Preview 5](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/)(Visual Studio “15” 미리 보기 5 발표)를 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7

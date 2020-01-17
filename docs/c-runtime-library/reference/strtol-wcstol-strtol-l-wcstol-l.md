@@ -1,6 +1,6 @@
 ---
 title: strtol, wcstol, _strtol_l, _wcstol_l
-ms.date: 11/04/2016
+ms.date: 01/14/2020
 api_name:
 - strtol
 - wcstol
@@ -40,39 +40,71 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: b40362e93a41730e46ad0911b5a633118d024e9c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- strtol
+- wcstol
+- _strtol_l
+- _wcstol_l
+- LONG_MAX
+- LONG_MIN
+- errno
+- ERANGE
+- EINVAL
+- LC_NUMERIC
+- _tcstol
+- _tcstol_l
+- localeconv
+- setlocale
+- _wsetlocale
+- strtod
+- _strtod_l
+- wcstod
+- _wcstod_l
+- strtoll
+- _strtoll_l
+- wcstoll
+- _wcstoll_l
+- strtoul
+- _strtoul_l
+- wcstoul
+- _wcstoul_l
+- atof
+- _atof_l
+- _wtof
+- _wtof_l
+ms.openlocfilehash: 83054e1b31b56fda96bdea198ab34d65d633f335
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957631"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123931"
 ---
-# <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
+# <a name="opno-locstrtol-opno-locwcstol-opno-loc_strtol_l-opno-loc_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-문자열을 long 정수값으로 변환합니다.
+문자열을 정수 ( **long** ) 값으로 변환 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```C
 long strtol(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base
 );
 long wcstol(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base
 );
 long _strtol_l(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base,
    _locale_t locale
 );
 long _wcstol_l(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base,
    _locale_t locale
 );
@@ -80,46 +112,44 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*strSource*<br/>
+*string*\
 변환할 Null 종료 문자열입니다.
 
-*endptr*<br/>
-검색을 중지하는 문자에 대한 포인터입니다.
+*end_ptr*\
+출력 매개 변수는 마지막 해석 문자 뒤의 문자를 가리키도록 설정 합니다. **NULL**인 경우 무시 됩니다.
 
-*base*<br/>
+*base*\
 사용할 기수입니다.
 
-*locale*<br/>
+*로캘*\
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>반환 값
 
-**strtol** 는 표현이 오버플로를 발생 시키는 경우를 제외 하 고 **LONG_MAX** 또는 **LONG_MIN**를 반환 하는 경우를 제외 하 고 문자열 *strsource*에 표시 된 값을 반환 합니다. 변환을 수행할 수 없는 경우 **strtol** 는 0을 반환 합니다. **wcstol** 는와 유사 값을 **strtol**로 반환 합니다. 두 함수 모두 오버플로 또는 언더플로가 발생 하는 경우 **errno** 는 **ERANGE** 로 설정 됩니다.
+**strtol** , **wcstol** , **_strtol_l** , **_wcstol_l** 는 *문자열*에 표시 된 값을 반환 합니다. 변환할 수 없는 경우 0을 반환 합니다. 표시로 인해 오버플로가 발생 하는 경우 **LONG_MAX** 또는 **LONG_MIN** 을 반환 합니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은  [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+오버플로 또는 언더플로가 발생 하는 경우 **errno** 은 **ERANGE** 로 설정 됩니다. *문자열이* **NULL**인 경우 **EINVAL** 로 설정 됩니다. 또는 *base* 가 0이 아니고 2 보다 작거나 36 보다 큰 경우입니다. **ERANGE** , **EINVAL** 및 기타 반환 코드에 대 한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조 하세요.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Strtol** 함수는 *strsource* 를 **long**으로 변환 합니다. **strtol** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수도 있고 *base*보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다.
+**strtol** , **wcstol** , **_strtol_l** 및 **_wcstol_l** 함수는 *문자열* 을 **long**으로 변환 합니다. 숫자의 일부로 인식 되지 않는 첫 번째 문자에서 *문자열* 읽기를 중지 합니다. 이 문자는 종료 null 문자 이거나 *base*보다 크거나 같은 첫 번째 영숫자 문자일 수 있습니다.
 
-**wcstol** 는 **strtol**의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**wcstol** 및 **_wcstol_l** 은 **strtol** 및 **_strtol_l** 의 와이드 문자 버전입니다. *문자열* 인수는 와이드 문자열입니다. 이러한 함수는 **strtol** 와 동일 하 게 작동 하며 그렇지 않은 **_strtol_l** . 로캘의 **LC_NUMERIC** 범주 설정은 *문자열*에서 기 하 문자 (분수 표식 또는 소수점)의 인식을 결정 합니다. 함수 **strtol** 및 **wcstol** 현재 로캘을 사용 합니다. 대신 전달 된 로캘을 사용 하 **_strtol_l** 및 **_wcstol_l** 합니다. 자세한 내용은 [setlocale] 및 [로캘](../../c-runtime-library/locale.md)을 참조 하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+*End_ptr* **NULL**인 경우에는 무시 됩니다. 그렇지 않은 경우 검색을 중지 한 문자에 대 한 포인터는 *end_ptr*가 가리키는 위치에 저장 됩니다. 올바른 숫자를 찾을 수 없거나 잘못 된 기본이 지정 된 경우 변환이 가능 하지 않습니다. 그런 다음 *문자열* 의 값은 *end_ptr*가 가리키는 위치에 저장 됩니다.
+
+*문자열* 은 다음 형식의 문자열을 가리키도록 **strtol** 합니다.
+
+> [*공백*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*영숫자*]
+
+대괄호 (`[ ]`)는 선택적 요소를 둘러쌉니다. 한 개의 요소를 대체 하는 중괄호와 세로 막대 (`{ | }`)를 둘러쌉니다. *공백은 무시* 되는 공백과 탭 문자로 구성 될 수 있습니다. *영숫자* 는 10 진수 또는 ' a ' ~ ' z ' (또는 ' a ' ~ ' z ')입니다. 이 폼에 맞지 않는 첫 번째 문자는 검색을 중지 합니다. *Base* 가 2에서 36 사이인 경우 숫자의 밑으로 사용 됩니다. *Base* 가 0 인 경우 *문자열* 에서 가리키는 문자열의 초기 문자를 사용 하 여 기본를 확인 합니다. 첫 번째 문자가 0이 고 두 번째 문자가 ' x ' 또는 ' X '가 아니면 문자열은 8 진수 정수로 해석 됩니다. 첫 번째 문자가 '0'이고 두 번째 문자가 'x' 또는 'X'이면 문자열은 16진수 정수로 해석됩니다. 첫 번째 문자가 '1'~'9' 이면 문자열은 10진수 정수로 해석됩니다. 문자 ' a ' ~ ' z ' (또는 ' A ' ~ ' Z ')에는 값 10 ~ 35이 할당 됩니다. 검색에서는 값이 *base*보다 작은 문자만 사용할 수 있습니다. 밑의 범위를 벗어난 첫 번째 문자가 발견되면 검색이 중지됩니다. 예를 들어 *문자열* 은 "01"로 시작 한다고 가정 합니다. *Base* 가 0 인 경우 스캐너는 8 진수 정수인 것으로 가정 합니다. ' 8 ' 또는 ' 9 ' 문자는 검색을 중지 합니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
-
-현재 로캘의 **LC_NUMERIC** 범주 설정에 따라 *strsource*의 기 개수 문자 인식이 결정 됩니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_L** 접미사가 없는 함수는 현재 로캘을 사용 합니다. **_strtol_l** 및 **_wcstol_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고는 **_l** 접미사가 없는 해당 함수와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
-
-*Endptr* 이 **NULL**이 아닌 경우 검색을 중지 한 문자에 대 한 포인터는 *endptr*에서 가리키는 위치에 저장 됩니다. 올바른 숫자를 찾을 수 없거나 잘못 된 밑을 지정 하 여 변환을 수행할 수 없는 경우 *Strsource* 의 값은 *endptr*에서 가리키는 위치에 저장 됩니다.
-
-**strtol** 는 다음과 같은 형식의 문자열을 가리키는 *strsource* 가 필요 합니다.
-
-> [*공백*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [숫자 문자] **-**
-
-공백은 무시 되는 공백 및 탭 문자로 구성 *될 수 있습니다* . *숫자* 는 하나 이상의 10 진수입니다. *문자* 는 하나 이상의 문자 ' a ' ~ ' z ' (또는 ' a ' ~ ' z ')입니다.  이 형식에 맞지 않는 첫 번째 문자가 발견되면 검색이 중지됩니다. *Base* 가 2에서 36 사이인 경우 숫자의 밑으로 사용 됩니다. *Base* 가 0 인 경우 *strsource* 가 가리키는 문자열의 초기 문자를 사용 하 여 밑을 결정 합니다. 첫 번째 문자가 0이고 두 번째 문자가 'x' 또는 'X'가 아니면 문자열은 8진수 정수로 해석됩니다. 첫 번째 문자가 '0'이고 두 번째 문자가 'x' 또는 'X'이면 문자열은 16진수 정수로 해석됩니다. 첫 번째 문자가 '1'~'9' 이면 문자열은 10진수 정수로 해석됩니다. 문자 'a'~'z' 또는 'A'~'Z'에는 값 10~35가 할당됩니다. 할당된 값이 *밑*보다 작은 문자만 사용할 수 있습니다. 밑의 범위를 벗어난 첫 번째 문자가 발견되면 검색이 중지됩니다. 예를 들어 *base* 가 0이 고 검색 된 첫 번째 문자가 ' 0 ' 이면 8 진수 정수로 간주 되며 ' 8 ' 또는 ' 9 ' 문자는 검색을 중지 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -128,20 +158,22 @@ long _wcstol_l(
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<stdlib.h> 또는 \<wchar.h>|
 |**_strtol_l**|\<stdlib.h>|
+|**_wcstol_l**|\<stdlib.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+**_strtol_l** 및 **_wcstol_l** 함수는 표준 C 라이브러리의 일부가 아니라 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [Compatibility](../compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-[strtod](strtod-strtod-l-wcstod-wcstod-l.md)의 예제를 참조하세요.
+[strtod](strtod-strtod-l-wcstod-wcstod-l.md)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[문자열을 숫자 값으로 변환하는 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
-[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
-[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
-[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[데이터 변환](../data-conversion.md)\
+[로캘](../locale.md)\
+[localeconv](localeconv.md)\
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)\
+[문자열에서 숫자 값 함수](../string-to-numeric-value-functions.md)\
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
+[strtoll, _strtoll_l, wcstoll, _wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)
