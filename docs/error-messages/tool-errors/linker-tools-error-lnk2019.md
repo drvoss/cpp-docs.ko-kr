@@ -1,18 +1,39 @@
 ---
 title: 링커 도구 오류 LNK2019
-ms.date: 10/22/2019
+description: Microsoft Visual Studio 링커 오류 LNK2019와 C 및 C++ 코드에서 진단 하 고 수정 하는 방법에 대해 설명 합니다.
+ms.date: 01/15/2020
 f1_keywords:
 - LNK2019
 helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 948a27e2d80c81afcf41efadd83e56709c98a304
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+no-loc:
+- main
+- WinMain
+- wmain
+- wWinMain
+- __cdecl
+- __stdcall
+- __fastcall
+- __vectorcall
+- extern
+- static
+- const
+- ARCH
+- AVX2
+- wchar_t
+- VERBOSE
+- EXPORTS
+- SYMBOLS
+- DUMPBIN
+- UNDNAME
+ms.openlocfilehash: 0e741c1442f9762c4cf5f9b891c4cd7c38103dfe
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811103"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123918"
 ---
 # <a name="linker-tools-error-lnk2019"></a>링커 도구 오류 LNK2019
 
@@ -46,23 +67,23 @@ Visual Studio에서 기호 정의를 포함 하는 개체 파일 또는 라이�
 
 ### <a name="a-function-or-variable-is-declared-but-not-defined"></a>함수 또는 변수가 선언 되었지만 정의 되지 않았습니다.
 
-LNK2019는 헤더 파일에 선언이 있지만 일치 하는 정의가 구현 되지 않은 경우에 발생할 수 있습니다. 멤버 함수 또는 정적 데이터 멤버의 경우 구현에 클래스 범위 선택기가 포함되어야 합니다. 예제를 보려면 [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md)를 참조하십시오.
+LNK2019는 헤더 파일에 선언이 있지만 일치 하는 정의가 구현 되지 않은 경우에 발생할 수 있습니다. 멤버 함수 또는 static 데이터 멤버의 경우 구현에 클래스 범위 선택 기가 포함 되어야 합니다. 예제를 보려면 [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md)를 참조하십시오.
 
 ### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>함수 선언과 함수 정의 간에 호출 규칙이 다릅니다.
 
-호출 규칙([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)또는 [__vectorcall](../../cpp/vectorcall.md))은 트데코레이된 이름의 일부로써 인코딩됩니다. 호출 규칙이 동일한 지 확인 합니다.
+호출 규칙 ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)또는 [__vectorcall](../../cpp/vectorcall.md))은 데코레이팅된 이름의 일부로 인코딩됩니다. 호출 규칙이 동일한 지 확인 합니다.
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>기호가 C 파일에 정의 되어 있지만 C++ 파일에서 Extern "C"를 사용 하지 않고 선언 되었습니다.
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-opno-locextern-c-in-a-c-file"></a>기호가 C 파일에 정의 되어 있지만 C++ 파일에 extern "C"를 사용 하지 않고 선언 되었습니다.
 
-[extern "C"](../../cpp/using-extern-to-specify-linkage.md) 한정자를 사용하는 경우를 제외하고, C로 컴파일된 파일에 정의된 기호에 C++ 파일에 선언된 기호와 다른 트데코레이된 이름이 있습니다. 선언이 각 기호의 컴파일 링크와 일치 하는지 확인 합니다. 마찬가지로, C 프로그램에서 사용할 기호를 C++ 파일에서 정의하는 경우 정의에 `extern "C"` 을 사용하세요.
+C로 컴파일된 파일에 정의 된 기호에는 [extern "C"](../../cpp/using-extern-to-specify-linkage.md) 한정자를 사용 하지 않는 C++ 한 파일에 선언 된 기호와 다른 데코레이팅된 이름이 있습니다. 선언이 각 기호의 컴파일 링크와 일치 하는지 확인 합니다. 마찬가지로, C 프로그램에서 사용할 기호를 C++ 파일에서 정의하는 경우 정의에 `extern "C"` 을 사용하세요.
 
-### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>기호는 정적으로 정의 된 후 나중에 파일 외부에서 참조 됩니다.
+### <a name="a-symbol-is-defined-as-opno-locstatic-and-then-later-referenced-outside-the-file"></a>기호는 static으로 정의 된 후 나중에 파일 외부에서 참조 됩니다.
 
 C와 달리 C++에서는 [전역 상수](../../error-messages/tool-errors/global-constants-in-cpp.md) 에 `static` 링크가 있습니다. 이 제한을 해결하기 위해 헤더 파일에 `const` 초기화를 포함하고 .cpp 파일에 해당 헤더를 포함하거나, 변수를 비상수로 만들고 상수 참조를 사용하여 액세스할 수 있습니다.
 
-### <a name="a-static-member-of-a-class-isnt-defined"></a>클래스의 정적 멤버가 정의 되지 않았습니다.
+### <a name="a-opno-locstatic-member-of-a-class-isnt-defined"></a>클래스의 static 멤버가 정의 되지 않았습니다.
 
-정적 클래스 멤버에는 고유한 정의가 있어야 합니다. 그렇지 않으면 단일 정의 규칙을 위반하게 됩니다. 인라인으로 정의 될 수 없는 정적 클래스 멤버는 정규화 된 이름을 사용 하 여 한 소스 파일에 정의 되어야 합니다. 전혀 정의 되지 않은 경우 링커는 LNK2019를 생성 합니다.
+static 클래스 멤버에는 고유한 정의가 있어야 합니다. 그렇지 않으면 단일 정의 규칙을 위반 하 게 됩니다. 인라인으로 정의 될 수 없는 static 클래스 멤버는 정규화 된 이름을 사용 하 여 한 소스 파일에 정의 되어야 합니다. 전혀 정의 되지 않은 경우 링커는 LNK2019를 생성 합니다.
 
 ### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>빌드 종속성은 솔루션의 프로젝트 종속성 으로만 정의 됩니다.
 
@@ -70,11 +91,11 @@ C와 달리 C++에서는 [전역 상수](../../error-messages/tool-errors/global
 
 ### <a name="an-entry-point-isnt-defined"></a>진입점이 정의 되지 않았습니다.
 
-응용 프로그램 코드는 적절 한 진입점을 정의 해야 합니다. 콘솔 응용 프로그램에 대 한 `main` 또는 `wmain`, Windows 응용 프로그램에 대 한 `WinMain` 또는 `wWinMain`입니다. 자세한 내용은 [main: Program Startup](../../cpp/main-program-startup.md) 또는 [WinMain 함수](/windows/win32/api/winbase/nf-winbase-winmain)를 참조 하세요. 사용자 지정 진입점을 사용 하려면 [/entry (진입점 기호)](../../build/reference/entry-entry-point-symbol.md) 링커 옵션을 지정 합니다.
+응용 프로그램 코드는 적절 한 진입점을 정의 해야 합니다. 콘솔 응용 프로그램에 대 한 `main` 또는 `wmain`, Windows 응용 프로그램에 대 한 `WinMain` 또는 `wWinMain`입니다. 자세한 내용은 [함수 및 명령줄 인수main](../../cpp/main-function-command-line-args.md) 또는 [WinMain 함수](/windows/win32/api/winbase/nf-winbase-winmain)를 참조 하세요. 사용자 지정 진입점을 사용 하려면 [/entry (진입점 기호)](../../build/reference/entry-entry-point-symbol.md) 링커 옵션을 지정 합니다.
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Windows 응용 프로그램에 대 한 설정을 사용 하 여 콘솔 응용 프로그램을 빌드합니다.
 
-오류 메시지가 **함수 function_name에서 참조 되는 확인 되지 않은 외부 기호 WinMain**과 비슷한 경우 **/SUBSYSTEM: WINDOWS**대신 **/SUBSYSTEM: CONSOLE** 을 사용 하 여 연결 합니다. 이 설정에 대한 자세한 내용과 Visual Studio에서 이 속성을 설정하는 방법에 대한 지침은 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)을 참조하세요.
+오류 메시지가 **함수 function_name 참조 WinMain 확인 되지 않은 외부 기호와**비슷한 경우 **/SUBSYSTEM: WINDOWS**대신 **/SUBSYSTEM: CONSOLE** 을 사용 하 여 연결 합니다. 이 설정에 대한 자세한 내용과 Visual Studio에서 이 속성을 설정하는 방법에 대한 지침은 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)을 참조하세요.
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>32 비트 코드에 64 비트 라이브러리를 연결 하거나 32 비트 라이브러리를 64 비트 코드로 연결 하려고 합니다.
 
@@ -90,11 +111,11 @@ C와 달리 C++에서는 [전역 상수](../../error-messages/tool-errors/global
 
 ### <a name="you-call-intrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-arent-supported-on-your-target-architecture"></a>내장 함수를 호출 하거나 대상 아키텍처에서 지원 되지 않는 내장 함수에 인수 형식을 전달 합니다.
 
-예를 들어 AVX2 내장 함수를 사용 하지만 [/arch: AVX2](../../build/reference/arch-x86.md) 컴파일러 옵션을 지정 하지 않는 경우 컴파일러는 내장 함수가 외부 함수 라고 가정 합니다. 인라인 명령을 생성하는 대신 컴파일러는 내장 함수와 같은 이름의 외부 기호에 대해 호출을 생성합니다. 링커가 이 누락된 함수의 정의를 찾으려고 할 때 LNK2019가 생성됩니다. 대상 아키텍처에서 지 원하는 내장 함수 및 형식만 사용 해야 합니다.
+예를 들어 AVX2 내장 함수를 사용 하지만 [/ARCH:AVX2](../../build/reference/arch-x86.md) 컴파일러 옵션을 지정 하지 않는 경우 컴파일러는 내장 함수가 외부 함수 라고 가정 합니다. 인라인 명령을 생성하는 대신 컴파일러는 내장 함수와 같은 이름의 외부 기호에 대해 호출을 생성합니다. 링커가 이 누락된 함수의 정의를 찾으려고 할 때 LNK2019가 생성됩니다. 대상 아키텍처에서 지 원하는 내장 함수 및 형식만 사용 해야 합니다.
 
-### <a name="you-mix-code-that-uses-native-wchar_t-with-code-that-doesnt"></a>네이티브 wchar_t를 사용 하는 코드를
+### <a name="you-mix-code-that-uses-native-opno-locwchar_t-with-code-that-doesnt"></a>네이티브 wchar_t를 사용 하는 코드를
 
-C++Visual Studio 2005에서 수행 된 언어 규칙 작업은 기본적으로 **wchar_t** 를 네이티브 형식으로 만들었습니다. 일부 파일이 동일한 **/Zc:wchar_t** 설정을 사용하여 컴파일되지 않은 경우, 형식 참조가 호환되는 형식으로 확인되지 않을 수 있습니다. 모든 라이브러리 및 개체 파일의 **wchar_t** 형식이 호환 되는지 확인 합니다. **Wchar_t** typedef에서 업데이트 하거나 컴파일할 때 일관 된 **/zc: wchar_t** 설정을 사용 합니다.
+C++Visual Studio 2005에서 수행 된 언어 규칙 작업은 기본적으로 네이티브 형식 **wchar_t** 했습니다. 모든 파일이 동일한 **/zc:wchar_t** 설정을 사용 하 여 컴파일되지 않은 경우 형식 참조가 호환 되는 형식으로 확인 되지 않을 수 있습니다. 모든 라이브러리 및 개체 파일의 **wchar_t** 형식이 호환 되는지 확인 합니다. **wchar_t** typedef에서 업데이트 하거나 컴파일할 때 일관 된 **/zc:wchar_t** 설정을 사용 합니다.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>타사 라이브러리 문제 및 Vcpkg
 
@@ -104,13 +125,13 @@ C++Visual Studio 2005에서 수행 된 언어 규칙 작업은 기본적으로 *
 
 경우에 따라 링커가 특정 기호 정의를 찾을 수 없는 이유를 알려 주는 것이 어려울 수 있습니다. 빌드에 정의를 포함 하는 코드를 포함 하지 않는 경우가 종종 있습니다. 또는 빌드 옵션에서 외부 기호에 대해 서로 다른 데코레이팅된 이름을 만들었습니다. LNK2019 오류를 진단 하는 데 도움이 되는 몇 가지 도구와 옵션이 있습니다.
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) 링커 옵션은 링커가 참조하는 파일을 확인하는데 도움이 될 수 있습니다. 이 옵션은 기호 정의를 포함 하는 파일이 빌드에 포함 되어 있는지 여부를 확인 하는 데 도움이 될 수 있습니다.
+- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) 링커 옵션은 링커가 참조 하는 파일을 확인 하는 데 도움이 될 수 있습니다. 이 옵션은 기호 정의를 포함 하는 파일이 빌드에 포함 되어 있는지 여부를 확인 하는 데 도움이 될 수 있습니다.
 
-- **DUMPBIN** 유틸리티의 [/Proerand](../../build/reference/dash-exports.md) [/SYMBOLS](../../build/reference/symbols.md) 옵션은 .dll 및 개체 또는 라이브러리 파일에 정의 된 기호를 찾는 데 도움이 될 수 있습니다. 내보낸 데코레이팅된 이름이 링커가 검색 하는 데코레이팅된 이름과 일치 하는지 확인 합니다.
+- **DUMPBIN** 유틸리티의 [/EXPORTS](../../build/reference/dash-exports.md) 및 [/SYMBOLS](../../build/reference/symbols.md) 옵션은 .dll 및 개체 또는 라이브러리 파일에 정의 된 기호를 찾는 데 도움이 될 수 있습니다. 내보낸 데코레이팅된 이름이 링커가 검색 하는 데코레이팅된 이름과 일치 하는지 확인 합니다.
 
-- **Undname.exe** 유틸리티는 데코레이팅된 이름에 해당 하는 데코레이팅되지 않은 외부 기호를 표시할 수 있습니다.
+- **UNDNAME** 유틸리티는 데코레이팅된 이름에 해당 하는 데코레이팅되지 않은 외부 기호를 표시할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 LNK2019 오류를 해결하는 방법에 대한 정보와 함께, LNK2019 오류를 유발하는 여러 가지 코드 예제는 다음과 같습니다.
 
@@ -145,9 +166,9 @@ int main() {}
 
 빌드에 포함 된 파일 중 하나에 `i` 및 `g` 정의 되어 있지 않으면 링커가 LNK2019를 생성 합니다. 컴파일의 일부로써 정의를 포함하는 소스 코드 파일을 포함하여 오류를 해결할 수 있습니다. 또는 링커에 대 한 정의를 포함 하는 .obj 파일 또는 .lib 파일을 전달할 수 있습니다.
 
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>정적 데이터 멤버가 선언되었지만 정의되지 않았습니다.
+### <a name="a-opno-locstatic-data-member-is-declared-but-not-defined"></a>static 데이터 멤버가 선언 되었지만 정의 되지 않았습니다.
 
-정적 데이터 멤버가 선언되었지만 정의되지 않은 경우에도 LNK2019가 발생할 수 있습니다. 다음 샘플에서는 LNK2019가 생성되며 해결 방법을 보여 줍니다.
+static 데이터 멤버가 선언 되었지만 정의 되지 않은 경우에도 LNK2019가 발생할 수 있습니다. 다음 샘플에서는 LNK2019가 생성되며 해결 방법을 보여 줍니다.
 
 ```cpp
 // LNK2019b.cpp
@@ -196,7 +217,7 @@ int main() {
 }
 ```
 
-### <a name="inconsistent-wchar_t-type-definitions"></a>일관성 없는 wchar_t 형식 정의
+### <a name="inconsistent-opno-locwchar_t-type-definitions"></a>일치 하지 않는 wchar_t 형식 정의
 
 이 샘플에서는 `wchar_t`으로 확인 되는 `WCHAR`를 사용 하는 내보내기가 있는 DLL을 만듭니다.
 
@@ -208,7 +229,7 @@ int main() {
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
-다음 샘플은 이전 샘플에서 DLL을 사용 하 고 unsigned short *와 WCHAR\* 형식이 동일 하지 않기 때문에 LNK2019를 생성 합니다.
+다음 샘플은 이전 샘플에서 DLL을 사용 하 고 `unsigned short*` 및 `WCHAR*` 형식이 동일 하지 않기 때문에 LNK2019를 생성 합니다.
 
 ```cpp
 // LNK2019h.cpp
@@ -221,7 +242,7 @@ int main() {
 }
 ```
 
-이 오류를 해결 하려면 `unsigned short`를 `wchar_t` 또는 `WCHAR`로 변경 하거나 **/zc: wchar_t-** 를 사용 하 여 LNK2019g를 컴파일합니다.
+이 오류를 해결 하려면 `unsigned short` `wchar_t` 또는 `WCHAR`로 변경 하거나 **/zc:wchar_t-** 를 사용 하 여 LNK2019g를 컴파일합니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
