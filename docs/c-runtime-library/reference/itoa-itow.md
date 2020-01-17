@@ -1,5 +1,5 @@
 ---
-title: _itata, _itoa 함수
+title: _itoa, _itow 함수
 ms.date: 08/19/2019
 api_name:
 - itoa
@@ -102,12 +102,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a4e429b51e4157b49086d2425bec2698a724a0e0
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953564"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898783"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -128,7 +128,7 @@ wchar_t * _ultow( unsigned long value, wchar_t *buffer, int radix );
 wchar_t * _i64tow( long long value, wchar_t *buffer, int radix );
 wchar_t * _ui64tow( unsigned long long value, wchar_t *buffer, int radix );
 
-// These Posix versions of the functions have deprecated names:
+// These POSIX versions of the functions have deprecated names:
 char * itoa( int value, char *buffer, int radix );
 char * ltoa( long value, char *buffer, int radix );
 char * ultoa( unsigned long value, char *buffer, int radix );
@@ -184,27 +184,27 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 이러한 각 함수는 *버퍼*에 대 한 포인터를 반환 합니다. 반환되는 오류가 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**_Itata**, **_itoa**, **_itoa**, **_i64toa**및 **_ui64toa** 함수는 지정 된 *값* 인수의 숫자를 null로 끝나는 문자열로 변환 하 고 결과를 저장 합니다 (_itoa의 경우 최대 33 자 **).** (_i64toa 및_ltoa toa **의 경우)** 및 *버퍼*에 있는 **_i64toa** 및 **_ltoa toa**의 65. *기* 수가 10이 고 *값* 이 음수인 경우 저장 된 문자열의 첫 번째 문자는 빼기 기호 ( **-** )입니다. **_Itow**, **_ltow**, **_ultow**, **_i64tow**및 **_ui64tow** 함수는 각각 **_itat,** **_itow**, **_itow**, **_i64toa**및 **_ui64toa**의 와이드 문자 버전입니다.
+**_Itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa** 함수는 지정 된 *값* 인수의 숫자를 null로 끝나는 문자열로 변환 하 고 결과 (_itoa, **_ltoa**, **_ultoa**의 경우 33 자, **_i64toa 및** **_ui64toa** **의 경우**65)를 *버퍼*에 저장 합니다. *기* 수가 10이 고 *값* 이 음수인 경우 저장 된 문자열의 첫 번째 문자는 빼기 기호 ( **-** )입니다. **_Itow**, **_ltow**, **_ultow**, **_i64tow**및 **_ui64tow** 함수는 각각 **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa**의 와이드 문자 버전입니다.
 
 > [!IMPORTANT]
 > 이러한 함수는 너무 작은 버퍼의 끝을 지나서 쓸 수 있습니다. 버퍼 오버런을 방지 하려면 *버퍼가* 변환 된 숫자와 후행 null 문자 및 부호 문자를 포함할 만큼 충분히 큰지 확인 합니다. 이러한 함수를 잘못 사용할 경우 코드에서 심각한 보안 문제가 발생할 수 있습니다.
 
-보안 문제가 발생할 수 있기 때문에 기본적으로 이러한 함수는 사용 중단 경고를 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)합니다. **이 함수 또는 변수는 안전 하지 않을 수 있습니다. 대신** safe_function**를 사용 하십시오. 사용 중단을 해제 하려면 _CRT_SECURE_NO_WARNINGS를 사용 합니다.** 경고 메시지에 제안 된 *safe_function* 를 사용 하도록 소스 코드를 변경 하는 것이 좋습니다. 더 안전한 함수는 지정 된 버퍼 크기 보다 더 많은 문자를 쓰지 않습니다. 자세한 내용은 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)를 참조 하세요.
+보안 문제가 발생할 수 있기 때문에 기본적으로 이러한 함수는 사용 중단 경고를 발생 시킵니다. **이 함수 또는 변수는 안전 하지 않을 수 있습니다 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). 대신** *safe_function***을 사용 하는 것이 좋습니다 . 사용 중단을 사용 하지 않도록 설정 하려면 _CRT_SECURE_NO_WARNINGS을 사용 합니다.** 경고 메시지에서 제안 하는 *safe_function* 사용 하도록 소스 코드를 변경 하는 것이 좋습니다. 더 안전한 함수는 지정 된 버퍼 크기 보다 더 많은 문자를 쓰지 않습니다. 자세한 내용은 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)를 참조 하세요.
 
-사용 중단 경고 없이 이러한 함수를 사용 하려면 CRT 헤더를 포함 하기 전에 **_CRT_SECURE_NO_WARNINGS** 전처리기 매크로를 정의 합니다. **/D_CRT_SECURE_NO_WARNINGS** 컴파일러 옵션을 **cl** 명령에 추가 하 여 개발자 명령 프롬프트의 명령줄에서이 작업을 수행할 수 있습니다. 그렇지 않으면 소스 파일에서 매크로를 정의 합니다. 미리 컴파일된 헤더를 사용 하는 경우 미리 컴파일된 헤더의 맨 위에 매크로를 정의 *합니다 (Visual* Studio 2017 및 이전 버전의*stdafx.h* ). 소스 코드에서 매크로를 정의 하려면 다음 예제와 같이 CRT 헤더를 포함 하기 전에 **#define** 지시문을 사용 합니다.
+사용 중단 경고 없이 이러한 함수를 사용 하려면 CRT 헤더를 포함 하기 전에 **_CRT_SECURE_NO_WARNINGS** 전처리기 매크로를 정의 합니다. **D_CRT_SECURE_NO_WARNINGS** 컴파일러 옵션을 **cl** 명령에 추가 하 여 개발자 명령 프롬프트의 명령줄에서이 작업을 수행할 수 있습니다. 그렇지 않으면 소스 파일에서 매크로를 정의 합니다. 미리 컴파일된 헤더를 사용 하는 경우 미리 컴파일된 헤더의 맨 위에 매크로를 정의 *합니다 (Visual* Studio 2017 및 이전 버전의*stdafx.h* ). 소스 코드에서 매크로를 정의 하려면 다음 예제와 같이 CRT 헤더를 포함 하기 전에 **#define** 지시문을 사용 합니다.
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-에서 C++이러한 함수는 보다 안전한 대응 함수를 호출 하는 템플릿 오버 로드를 포함 합니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+에서 C++이러한 함수는 보다 안전한 대응 함수를 호출 하는 템플릿 오버 로드를 포함 합니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-Posix 이름 **itoa**, **ltoa**및 **ultoa** 는 **_itat,** **_itoa**및 **_itoa** 함수에 대 한 별칭으로 존재 합니다. Posix 이름은 ISO C의 구현 별 함수 이름 규칙을 따르지 않으므로 더 이상 사용 되지 않습니다. 기본적으로 이러한 함수는 사용 중단 경고 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)를 발생 시킵니다. **이 항목에 대 한 POSIX 이름은 사용 되지 않습니다. 대신 ISO C와 C++ 규칙을 준수 하는 이름** ( *new_name*)을 사용 합니다. 이러한 함수의 더 안전한 버전 ( **_itoa_s**, **_ltoa_s**또는 **_ultoa_s**)을 사용 하도록 소스 코드를 변경 하는 것이 좋습니다. 자세한 내용은 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)를 참조 하세요.
+POSIX 이름 **itoa**, **ltoa**및 **ultoa** 는 **_itoa**, **_ltoa**및 **_ultoa** 함수의 별칭으로 존재 합니다. POSIX 이름은 ISO C의 구현 관련 전역 함수 이름 규칙을 따르지 않으므로 더 이상 사용 되지 않습니다. 기본적으로 이러한 함수는 사용 중단 경고를 발생 시킵니다. [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) **이 항목에 대 한 POSIX 이름은 사용 되지 않습니다. 대신 ISO C와 C++ 규칙을 준수 하는 이름을 사용** *new_name*합니다. 이러한 함수, **_itoa_s** **_ltoa_s**또는 **_ultoa_s**의 안전한 버전을 사용 하도록 소스 코드를 변경 하는 것이 좋습니다. 자세한 내용은 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)를 참조 하세요.
 
-소스 코드 이식성의 경우 코드에 Posix 이름을 유지할 수 있습니다. 사용 중단 경고 없이 이러한 함수를 사용 하려면 CRT 헤더를 포함 하기 전에 **_CRT_NONSTDC_NO_WARNINGS** 및 **_CRT_SECURE_NO_WARNINGS** 전처리기 매크로를 모두 정의 합니다. **/D_CRT_SECURE_NO_WARNINGS** 및 **/D_CRT_NONSTDC_NO_WARNINGS** 컴파일러 옵션을 **cl** 명령에 추가 하 여 개발자 명령 프롬프트의 명령줄에서이 작업을 수행할 수 있습니다. 그렇지 않으면 소스 파일에서 매크로를 정의 합니다. 미리 컴파일된 헤더를 사용 하는 경우 미리 컴파일된 헤더 포함 파일의 맨 위에 있는 매크로를 정의 합니다. 소스 코드에서 매크로를 정의 하려면 다음 예제와 같이 CRT 헤더를 포함 하기 전에 **#define** 지시문을 사용 합니다.
+소스 코드 이식성의 경우 코드에 POSIX 이름을 유지할 수 있습니다. 사용 중단 경고 없이 이러한 함수를 사용 하려면 CRT 헤더를 포함 하기 전에 **_CRT_NONSTDC_NO_WARNINGS** 및 **_CRT_SECURE_NO_WARNINGS** 전처리기 매크로를 모두 정의 합니다. **D_CRT_SECURE_NO_WARNINGS** 및 **/D_CRT_NONSTDC_NO_WARNINGS** 컴파일러 옵션을 **cl** 명령에 추가 하 여 개발자 명령 프롬프트의 명령줄에서이 작업을 수행할 수 있습니다. 그렇지 않으면 소스 파일에서 매크로를 정의 합니다. 미리 컴파일된 헤더를 사용 하는 경우 미리 컴파일된 헤더 포함 파일의 맨 위에 있는 매크로를 정의 합니다. 소스 코드에서 매크로를 정의 하려면 다음 예제와 같이 CRT 헤더를 포함 하기 전에 **#define** 지시문을 사용 합니다.
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -257,11 +257,11 @@ int main()
 |**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
 |**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> 또는 \<wchar.h>|
 
-이러한 함수와 매크로는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+이러한 함수와 매크로는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 일부 정수 변환 함수를 사용 하는 방법을 보여 줍니다. **_CRT_SECURE_NO_WARNINGS** 매크로를 사용 하 여 경고 C4996를 대기 합니다.
+이 샘플에서는 일부 정수 변환 함수를 사용 하는 방법을 보여 줍니다. **_CRT_SECURE_NO_WARNINGS** 매크로를 사용 하 여 대기 경고 C4996를 확인 합니다.
 
 ```C
 // crt_itoa.c
@@ -336,7 +336,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151042"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123944"
 ---
 # <a name="main-function-and-program-execution"></a>기본 함수 및 프로그램 실행
 
@@ -36,7 +36,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 **main**의 와이드 문자 버전에 대한 설명은 [wmain 사용](../c-language/using-wmain.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[main: 프로그램 시작](../cpp/main-program-startup.md)<br/>
+[main 함수 및 명령줄 인수 (C++)](../cpp/main-function-command-line-args.md)\
 [C 명령줄 인수 구문 분석](../c-language/parsing-c-command-line-arguments.md)

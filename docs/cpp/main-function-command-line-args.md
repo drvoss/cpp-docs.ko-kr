@@ -1,26 +1,42 @@
 ---
-title: main 함수 및 명령줄 인수 (C++)
-description: Main 함수는 C++ 프로그램의 진입점입니다.
-ms.date: 12/10/2019
+title: 함수 및 명령줄 인수 main (C++)
+description: main 함수는 C++ 프로그램의 진입점입니다.
+ms.date: 01/15/2019
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
-ms.openlocfilehash: 95e774700c63dc815f6d814bfda84a38a38d4e6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- main
+- wmain
+- inline
+- static
+- _tmain
+- void
+- exit
+- argc
+- argv
+- envp
+- CreateProcess
+- GetModuleFileName
+- char
+- wchar_t
+- extern
+ms.openlocfilehash: 33753e30304a9bb63c135979d3f20098e6b6401a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302411"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123905"
 ---
-# <a name="main-function-and-command-line-arguments"></a>main 함수 및 명령줄 인수
+# <a name="opno-locmain-function-and-command-line-arguments"></a>main 함수 및 명령줄 인수
 
-모든 C++ 프로그램에는 `main` 기능이 있어야 합니다. Main 함수 없이 C++ *.exe* 프로젝트를 컴파일하려는 경우 컴파일러에서 오류가 발생 합니다. 동적 연결 라이브러리와 정적 라이브러리에는 `main` 함수가 없습니다. `main` 함수는 소스 코드의 실행을 시작 하지만 프로그램이 `main` 함수를 시작 하기 전에 명시적 이니셜라이저가 없는 모든 정적 클래스 멤버가 0으로 설정 됩니다. Microsoft C++에서 전역 정적 개체는 `main`하기 전에 초기화 됩니다. 다른 C++ 함수에는 적용 되지 않는 `main` 함수에는 몇 가지 제한 사항이 적용 됩니다. `main` 함수는 다음과 같습니다.
+모든 C++ 프로그램에는 `main` 기능이 있어야 합니다. main 함수 없이 C++ *.exe* 프로젝트를 컴파일하려는 경우 컴파일러에서 오류가 발생 합니다. (동적 연결 라이브러리 및 static 라이브러리에는 `main` 함수가 없습니다.) `main` 함수는 소스 코드의 실행을 시작 하지만 프로그램이 `main` 함수를 시작 하기 전에 명시적 이니셜라이저가 없는 모든 static 클래스 멤버가 0으로 설정 됩니다. Microsoft C++에서 전역 static 개체는 `main`를 시작 하기 전에도 초기화 됩니다. 다른 C++ 함수에는 적용 되지 않는 `main` 함수에는 몇 가지 제한 사항이 적용 됩니다. `main` 함수는 다음과 같습니다.
 
 - 오버로드될 수 없습니다([오버로드](function-overloading.md) 참조).
-- **inline** 으로 선언될 수 없습니다.
-- **static** 으로 선언될 수 없습니다.
+- **inline** 로 선언할 수 없습니다.
+- **static** 로 선언할 수 없습니다.
 - 주소를 사용할 수 없습니다.
 - 호출할 수 없습니다.
 
-`main`의 선언 구문은 다음과 같습니다.
+main 함수는 언어에 기본 제공 되므로 선언이 없습니다. 이 경우 `main`의 선언 구문은 다음과 같습니다.
 
 ```cpp
 int main();
@@ -38,7 +54,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 Tchar.h에 정의 된 `_tmain`를 사용할 수도 있습니다. _UNICODE을 정의 하지 않으면 `_tmain` `main`으로 확인 됩니다. _UNICODE가 정의된 경우에는 `_tmain`이 `wmain`으로 확인됩니다.
 
-반환 값이 지정 되지 않은 경우 컴파일러는 반환 값 0을 제공 합니다. 또는 `main` 및 `wmain` 함수를 **void** 반환 (반환 값 없음)으로 선언할 수 있습니다. **Void**를 반환 하는 `main` 또는 `wmain`를 선언 하는 경우 [return](../cpp/return-statement-in-program-termination-cpp.md) 문을 사용 하 여 부모 프로세스 또는 운영 체제에 종료 코드를 반환할 수 없습니다. `main` 또는 `wmain` **void**로 선언 된 경우 종료 코드를 반환 하려면 [exit](../cpp/exit-function.md) 함수를 사용 해야 합니다.
+반환 값이 지정 되지 않은 경우 컴파일러는 반환 값 0을 제공 합니다. 또는 `main` 및 `wmain` 함수를 **void** 반환 (반환 값 없음)으로 선언할 수 있습니다. `main` 또는 `wmain`를 **void** 반환 하는 것으로 선언 하는 경우에는 [return](../cpp/return-statement-in-program-termination-cpp.md) 문을 사용 하 여 부모 프로세스 또는 운영 체제에 exit 코드를 반환할 수 없습니다. `main` 또는 `wmain` **void** 으로 선언 될 때 exit 코드를 반환 하려면 [exit](../cpp/exit-function.md) 함수를 사용 해야 합니다.
 
 **Microsoft 전용 종료**
 
@@ -54,7 +70,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 인수 정의는 다음과 같습니다.
 
 *argc*<br/>
-*argv*에 따라오는 인수 갯수로 정수 형식입니다. *argc* 매개변수는 항상 1보다 크거나 같습니다.
+*argv* 에서 이어지는 인수의 개수를 포함 하는 정수입니다. *argc* 매개 변수는 항상 1 보다 크거나 같습니다.
 
 *argv*<br/>
 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv[0]`은 프로그램이 호출되는 명령이고, `argv[1]`은 첫 번째 명령줄 인수이며 `argv[argc]`는 항상 NULL입니다. 명렬줄 처리를 없애려고 한다면 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md)을 참조합니다.
@@ -62,18 +78,18 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 첫 번째 명령줄 인수는 항상 `argv[1]`이고 마지막 인수는 `argv[argc - 1]`입니다.
 
 > [!NOTE]
-> 규칙상 `argv[0]`은 프로그램이 호출되는 명령입니다. 그러나 [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)를 사용하여 프로세스를 생성할 때 첫번째와 두번째 인수(*lpApplicationName*과 *lpCommandLine*)를 모두 사용하는 경우 `argv[0]`은 실행 파일 이름이 아닐 수도 있습니다. [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)을 사용하여 실행 파일 이름과 해당 정규화된 경로를 검색합니다.
+> 규칙상 `argv[0]`은 프로그램이 호출되는 명령입니다. 그러나 [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) 를 사용 하 여 프로세스를 생성할 수 있으며 첫 번째 인수와 두 번째 인수 (*Lpapplicationname* 및 *lpapplicationname*)를 모두 사용 하는 경우 `argv[0]` 실행 이름이 아닐 수 있습니다. [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) 를 사용 하 여 실행 파일 이름 및 정규화 된 경로를 검색 합니다.
 
 **Microsoft 전용**
 
 *envp*<br/>
-많은 UNIX 시스템에서 일반적인 확장인 *envp* 배열을 Microsoft C++에서 사용할 수 있습니다. 이는 사용자 환경에서 설정된 변수를 나타내는 문자열의 배열입니다. 이 배열은 NULL 항목으로 종료됩니다. **char** (`char *envp[]`)에 대한 포인터의 배열이나 **char** (`char **envp`)에 대한 포인터의 포인터로 선언할 수 있습니다. 프로그램이 `main` 대신 `wmain`을 사용하면 **char** 대신 **wchar_t** 데이터 형식을 사용하세요. `main`이나 `wmain`에 전달된 환경 블록은 현재 환경의 "변경되지 않는" 복사본입니다. 나중에 `putenv`나 `_wputenv`를 호출하여 환경을 변경하면 현재 환경(`getenv`나 `_wgetenv`, `_environ`이나 `_wenviron` 변수가 반환)이 변경되지만 *envp*가 가리키는 블록은 변경되지 않습니다. 환경 처리를 하지 않기 위한 정보는 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md)을 참조하세요. 이 인수는 C에서는 ANSI와 호환되지만 C++에서는 호환되지 않습니다.
+많은 UNIX 시스템에서 일반적인 확장인 *envp* 배열은 Microsoft C++에서 사용 됩니다. 이는 사용자 환경에서 설정된 변수를 나타내는 문자열의 배열입니다. 이 배열은 NULL 항목으로 종료됩니다. **char** (`char *envp[]`)에 대 한 포인터의 배열 또는 **char** (`char **envp`) 포인터에 대 한 포인터로 선언할 수 있습니다. 프로그램에서 `main`대신 `wmain`를 사용 하는 경우 **char** 대신 **wchar_t** 데이터 형식을 사용 합니다. `main`이나 `wmain`에 전달된 환경 블록은 현재 환경의 "변경되지 않는" 복사본입니다. 이후에 `putenv` 또는 `_wputenv`에 대 한 호출을 통해 환경을 변경 하는 경우 현재 환경 (`getenv` 또는 `_wgetenv`에서 반환 되는 `_environ` 또는 `_wenviron` 변수에 의해 반환 됨)이 변경 되지만 envp에서 가리키는 블록은 변경 되지 않습니다. 환경 처리를 하지 않기 위한 정보는 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md)을 참조하세요. 이 인수는 C에서는 ANSI와 호환되지만 C++에서는 호환되지 않습니다.
 
 **Microsoft 전용 종료**
 
 ### <a name="example"></a>예
 
-다음 예제에서는 *argc*, *argv* 및 *envp* 인수를 `main`에서 사용하는 방법을 보여줍니다.
+다음 예에서는 *argc* , *argv* 및 *envp* 인수를 사용 하 여 `main`하는 방법을 보여 줍니다.
 
 ```cpp
 // argument_definitions.cpp
@@ -172,9 +188,9 @@ int main( int argc,      // Number of strings in array argv
 
 프로그램에서 명령줄 인수를 사용하지 않는 경우 명령줄 처리를 수행하는 라이브러리 루틴의 사용을 억제하여 약간의 공간을 절약할 수 있습니다. 이 루틴은 `_setargv`라고 하며 [와일드카드 확장](../cpp/wildcard-expansion.md)에서 설명합니다. 루틴의 사용을 억제하기 위해 `main` 함수를 포함하는 파일에서 아무 작업도 하지 않는 루틴을 정의하고 `_setargv`를 명명합니다. `_setargv`에 대한 호출은 `_setargv`의 정의로 충족되며 라이브러리 버전이 로드되지 않습니다.
 
-마찬가지로 `envp` 인수를 통해 환경 테이블에 액세스하지 않을 경우 환경 처리 루틴인 `_setenvp` 대신 사용할 수 있는 사용자 고유의 빈 루틴을 제공할 수 있습니다. `_setargv` 함수와 마찬가지로, `_setenvp`는 **extern "C"** 로 선언되어야 합니다.
+마찬가지로 `envp` 인수를 통해 환경 테이블에 액세스하지 않을 경우 환경 처리 루틴인 `_setenvp` 대신 사용할 수 있는 사용자 고유의 빈 루틴을 제공할 수 있습니다. `_setargv` 함수와 마찬가지로 `_setenvp` **extern "C"** 로 선언 해야 합니다.
 
-프로그램은 C 런타임 라이브러리의 루틴 중 `spawn` 또는 `exec` 제품군에 대해 호출할 수 있습니다. 이런 경우에는 부모 프로세스에서 자식 프로세스로 환경을 전달하는 데 이 루틴이 사용되므로 환경 처리 루틴을 억제하면 안 됩니다.
+프로그램은 C 런타임 라이브러리의 루틴 중 `spawn` 또는 `exec` 제품군에 대해 호출할 수 있습니다. 이 루틴이 부모 프로세스에서 자식 프로세스로 환경을 전달 하는 데 사용 되므로 환경 처리 루틴을 억제 해서는 안 됩니다.
 
 **Microsoft 전용 종료**
 
