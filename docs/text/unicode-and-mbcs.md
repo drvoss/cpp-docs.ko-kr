@@ -20,7 +20,7 @@ ms.locfileid: "62410527"
 ---
 # <a name="unicode-and-mbcs"></a>유니코드 및 MBCS
 
-MFC(Microsoft Foundation Class) 라이브러리, Visual C++의 C 런타임 라이브러리, Visual C++ 개발환경은 프로그래밍에 있어 각국 언어를 지원할 수 있습니다. 제공:
+MFC(Microsoft Foundation Class) 라이브러리, Visual C++의 C 런타임 라이브러리, Visual C++ 개발환경은 프로그래밍에 있어 각국 언어를 다음과 같이 지원할 수 있습니다.
 
 - Windows에서 표준 유니코드를 지원합니다. 유니코드는 현재의 표준이며 가능한 경우 항상 사용해야 합니다.
 
