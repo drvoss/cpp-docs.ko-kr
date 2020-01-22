@@ -3,16 +3,16 @@ title: launch. vs json 스키마 참조 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556645"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518233"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch. vs json 스키마 참조 (C++)
 
-*실행과 json* 파일을 사용 하 여 디버깅 매개 변수를 구성 합니다. 파일을 만듭니다. **솔루션 탐색기** 에서 실행 파일을 마우스 오른쪽 단추로 클릭 하 고 **디버그 및 시작 설정**을 선택 합니다. 프로젝트와 가장 근접 하 게 일치 하는 옵션을 선택 하 고 다음 속성을 사용 하 여 필요에 따라 구성을 수정 합니다.
+*실행과 json* 파일을 사용 하 여 디버깅 매개 변수를 구성 합니다. 파일을 만듭니다. **솔루션 탐색기** 에서 실행 파일을 마우스 오른쪽 단추로 클릭 하 고 **디버그 및 시작 설정**을 선택 합니다. 프로젝트와 가장 가깝게 일치 하는 옵션을 선택한 후 다음 속성을 사용 하 여 필요에 따라 구성을 수정 합니다. Cmake 프로젝트 디버깅에 대 한 자세한 내용은 [Cmake 디버깅 세션 구성](/cpp/build/configure-cmake-debugging-sessions)을 참조 하세요.
 
 ## <a name="default-properties"></a>기본 속성
 

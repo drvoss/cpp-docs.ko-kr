@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890142"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518467"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
 
@@ -61,7 +61,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>주의
 
-조작자는 스트림 `str`에서 추출 되는 개체를 반환 합니다 .이 개체는 `str`에 연결 된 로캘 패싯 `money_get`에 대 한 멤버 함수 `get` 호출 하는 `formatted input function`, *use_intl* 를 사용 하 여 국가별 형식을 나타내는 개체를 반환 합니다. . 성공 하면 호출이 *추출 된 통화 값으로 저장* 됩니다. 그런 다음 조작자는 `str`을 반환합니다.
+조작자는 `str`스트림에서 추출 될 때 *`str`* 를 사용 하 여 국가별 형식을 나타내는 use_intl에 연결 된 로캘 패싯 `money_get`에 대 한 멤버 함수 `get` 호출 하는 `formatted input function`으로 동작 하는 개체를 반환 합니다. 성공 하면 호출이 *추출 된 통화 값으로 저장* 됩니다. 그런 다음 조작자는 `str`을 반환합니다.
 
 `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.
 
@@ -109,7 +109,7 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>주의
 
-조작자는 `str` 스트림에 삽입될 경우 서식 있는 출력 함수처럼 동작하는 개체를 반환합니다. 이 출력 함수는 `str`과 연결된 로캘 패싯 `money_put`에 대해 멤버 함수 `put`을 호출합니다. 성공 하는 경우 *use_intl* 를 사용 하 여 국가별 형식을 나타내고 `str.fill()`를 채우기 요소로 사용 하 여 적절 한 형식의 호출을 `amount` 삽입 합니다. 그런 다음 조작자는 `str`을 반환합니다.
+조작자는 `str` 스트림에 삽입될 경우 서식 있는 출력 함수처럼 동작하는 개체를 반환합니다. 이 출력 함수는 `str`과 연결된 로캘 패싯 `money_put`에 대해 멤버 함수 `put`을 호출합니다. 성공 하는 경우 *use_intl* 를 사용 하 여 국가별 형식을 나타내고 `str.fill()`를 채우기 요소로 사용 하 여 호출 삽입 `amount` 적절 한 형식입니다. 그런 다음 조작자는 `str`을 반환합니다.
 
 `Money`는 `long double` 형식이거나 `str`과 동일한 요소 및 특성 매개 변수를 사용하는 `basic_string`의 인스턴스화여야 합니다.
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>주의
 
-조작자는 `str` 스트림에 삽입될 경우 `formatted output function`처럼 동작하는 개체를 반환합니다. 출력 함수는 `str`과 연결된 로캘 패킷 `time_put`에 대해 멤버 함수 `put`을 호출합니다. Output 함수는 *time_ptr* 을 사용 하 여 시간 구조를 나타내고 *time_format* 를 사용 하 여 null로 끝나는 형식 문자열의 시작을 표시 합니다. 성공하면 형식 문자열에서 리터럴 텍스트를 삽입하고 시간 구조에서 변환된 값을 삽입합니다. 그런 다음 조작자는 `str`을 반환합니다.
+조작자는 `str` 스트림에 삽입될 경우 `formatted output function`처럼 동작하는 개체를 반환합니다. 출력 함수는 `str`과 연결된 로캘 패킷 `time_put`에 대해 멤버 함수 `put`을 호출합니다. Output 함수는 *time_ptr* 을 사용 하 여 시간 구조를 나타내고 *time_format* null로 끝나는 형식 문자열의 시작을 표시 합니다. 성공하면 형식 문자열에서 리터럴 텍스트를 삽입하고 시간 구조에서 변환된 값을 삽입합니다. 그런 다음 조작자는 `str`을 반환합니다.
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,10 +147,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
-Std:: string, char\*, 문자열 리터럴 또는 원시 문자열 리터럴 또는 이러한 형식의 광범위 한 버전 (예: std:: wstring, wchar_t\*).
+*str*\
+Std:: string, char\*, 문자열 리터럴 또는 원시 문자열 리터럴 또는 이러한 형식의 와이드 버전 (예: std:: wstring, wchar_t\*).
 
-*구분 기호* \
+*구분 기호*\
 문자열의 시작과 끝에 대한 구분 기호로 사용할 사용자 지정 문자 또는 와이드 문자입니다.
 
 *이스케이프*\
@@ -160,7 +160,7 @@ Std:: string, char\*, 문자열 리터럴 또는 원시 문자열 리터럴 또�
 
 [삽입 연산자 사용 및 형식 제어](../standard-library/using-insertion-operators-and-controlling-format.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 이 예제에서는 좁은 문자열을 사용하여 기본 구분 기호 및 이스케이프 문자와 함께 `quoted`를 사용하는 방법을 보여 줍니다. 와이드 문자열도 동일하게 지원됩니다.
 
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -217,7 +217,7 @@ Press Enter to exit
 */
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 사용자 지정 구분 기호 및/또는 이스케이프 문자를 제공하는 방법을 보여 줍니다.
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -318,7 +318,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 조작자는 `str`스트림에서 추출 또는 삽입 하는 경우 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`를 호출한 다음 `str`을 반환 하는 개체를 반환 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
@@ -347,7 +347,7 @@ T3 setbase(int base);
 
 - *Base* 가 다른 값 이면 mask는 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
@@ -362,14 +362,14 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>매개 변수
 
-*Ch* \
+*Ch*\
 오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자입니다.
 
 ### <a name="return-value"></a>반환 값
 
 템플릿 조작자는 `str`스트림에 추출 하거나 삽입 하는 경우 `str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`를 호출 하 고 `str`를 반환 하는 개체를 반환 합니다. `Elem` 형식은 스트림 `str`의 요소 형식과 동일 해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
@@ -390,7 +390,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 조작자는 `str`스트림으로 추출 하거나 삽입 하는 경우 `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`를 호출한 다음 `str`를 반환 하는 개체를 반환 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
@@ -411,7 +411,7 @@ T5 setprecision(streamsize Prec);
 
 조작자는 `str`스트림으로 추출 하거나 삽입 하는 경우 `str.`[precision](../standard-library/ios-base-class.md#precision)`(Prec)`를 호출 하 고 `str`를 반환 하는 개체를 반환 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
@@ -436,7 +436,7 @@ T6 setw(streamsize Wide);
 
 setw는 스트림에서 다음 요소에 대한 너비만 설정하며 너비를 지정하려는 각 요소 앞에 삽입되어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // iomanip_setw.cpp

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83ad810da06de1f9d640477f73d4393c932054a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395289"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518389"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>컴파일러 경고(수준 4) C4701
 
-잠재적으로 초기화 되지 않은 지역 변수 'name' 사용
+잠재적으로 초기화 되지 않은 ' name ' 지역 변수를 사용 합니다.
 
-지역 변수 *이름을* 값이 할당 되지 않은 상태로 사용 되었을 수 있습니다. 이 예상치 못한 결과가 발생할 수 있습니다.
+값을 할당 하지 않고 지역 변수 *이름을* 사용 했을 수 있습니다. 이로 인해 예기치 않은 결과가 발생할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드는 C4701 및 C4703을 생성합니다.
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -64,13 +64,13 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [컴파일러 경고(수준 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
-[경고, /sdl 및 초기화 되지 않은 변수 검색 향상](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[경고,/sdl 및 초기화 되지 않은 변수 검색 향상](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
