@@ -2,12 +2,12 @@
 title: Visual Studio에서 C++ Linux 프로젝트 구성
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960697"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031373"
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
 
@@ -96,6 +96,9 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 **연결 관리자**에서 새 연결을 추가하면 Visual Studio는 원격 시스템의 컴파일러용 포함 디렉터리를 자동으로 검색합니다. 그런 다음, Visual Studio는 해당 파일을 압축하여 로컬 Windows 컴퓨터의 디렉터리에 복사합니다. 그러면 Visual Studio 또는 CMake 프로젝트에서 해당 연결을 사용할 때마다 해당 디렉터리의 헤더가 IntelliSense를 제공하는 데 사용됩니다.
 
+> [!NOTE]
+> Visual Studio 2019 버전 16.5 이상에서는 원격 헤더 복사본이 최적화되었습니다. 이제 Linux 프로젝트를 열거나 Linux 대상에 대해 CMake를 구성하는 경우 헤더가 주문형으로 복사됩니다. 복사는 프로젝트의 지정된 컴파일러에 따라 프로젝트별로 백그라운드에서 수행됩니다. 자세한 내용은 [Linux IntelliSense의 정확도 및 성능 향상](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)을 참조하세요.
+
 이 기능은 zip이 설치된 Linux 컴퓨터에 따라 다릅니다. 이 apt-get 명령을 사용하여 zip을 설치할 수 있습니다.
 
 ```cmd
@@ -120,7 +123,7 @@ sudo apt install zip
 
 ::: moniker-end
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [컴파일러 설정 및 빌드 속성](../build/working-with-project-properties.md)<br/>
 [C++ 일반 속성(Linux C++)](../linux/prop-pages/general-linux.md)<br/>
