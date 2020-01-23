@@ -3,7 +3,14 @@
 - name: 'Linux 개발 워크로드 다운로드, 설치 및 설정'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: 원격 Linux 컴퓨터에 연결
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: 원격 Linux 컴퓨터에 연결
+      href: connect-to-your-remote-linux-computer.md
+    - name: FIPS 규격 보안 원격 Linux 개발 설정
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: ConnectionManager 참조
+      href: connectionmanager-reference.md
 - name: 새 Linux 프로젝트 만들기
   href: create-a-new-linux-project.md
 - name: Linux 프로젝트 구성
