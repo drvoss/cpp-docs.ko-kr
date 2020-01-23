@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556736"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518207"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 스키마 참조
 
@@ -146,6 +146,7 @@ Visual Studio 2019에서 Visual Studio 생성기를 지정 하려면 **솔루션
 ```
 
 `"type"`를 정의 하지 않으면 `"STRING"` 형식이 기본적으로 가정 됩니다.
+- `remoteCopyOptimizations`: 원격 대상에 대 한 소스 복사를 제어 하기 위한 **Visual Studio 2019 버전 16.5 이상** 속성입니다. 최적화는 기본적으로 사용 하도록 설정 되어 있습니다. `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs` 및 `remoteCopySourcesMaxSmallChange`를 포함합니다.
 
 ## <a name="environments"></a>에서는
 

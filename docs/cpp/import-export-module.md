@@ -10,12 +10,12 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: 가져오기 및 내보내기 선언을 사용 하 여에 액세스 하 고 지정 된 모듈에 정의 된 형식과 함수를 게시할 수 있습니다.
-ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301459"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518285"
 ---
 # <a name="module-import-export"></a>모듈, 가져오기, 내보내기
 
@@ -59,7 +59,7 @@ namespace Bar
 
 import module ModuleA;
 
-void main() {
+int main() {
   Bar::f(); // OK
   Bar::d(); // OK
   Bar::internal_f(); // Ill-formed: error C2065: 'internal_f': undeclared identifier
