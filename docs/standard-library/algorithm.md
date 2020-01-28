@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/11/2019
 ms.locfileid: "73912887"
 ---
-# <a name="ltalgorithmgt"></a>&lt;알고리즘&gt;
+# <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
 알고리즘을 수행하는 C++ 표준 라이브러리 컨테이너 템플릿 함수를 정의합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "73912887"
 ```
 
 > [!NOTE]
-> \<알고리즘 > 라이브러리는 `#include <initializer_list>` 문도 사용 합니다.
+> \<algorithm> 라이브러리는 `#include <initializer_list>` 문도 사용 합니다.
 
 ## <a name="remarks"></a>주의
 
