@@ -24,7 +24,7 @@ ms.locfileid: "74988078"
 이러한 보안 기능은 Microsoft C++ 컴파일러 및 링커에 기본 제공 됩니다.
 
 [/guard(제어 흐름 보호 사용)](../build/reference/guard-enable-control-flow-guard.md)<br/>
-컴파일러가 컴파일 시간에 간접 호출 대상에 대 한 제어 흐름을 분석 한 다음 런타임에 대상을 확인 하는 코드를 삽입 합니다.
+컴파일러가 컴파일 시간에 간접 호출 대상에 대한 제어 흐름을 분석 한 다음 런타임에 대상을 확인 하는 코드를 삽입 합니다.
 
 [/GS(버퍼 보안 검사)](../build/reference/gs-buffer-security-check.md)<br/>
 악용될 위험이 있는 함수에 오버런 감지 코드를 삽입하도록 컴파일러에 지시합니다. 오버런이 감지되면 실행이 중지됩니다. 이 옵션은 기본적으로 켜져 있습니다.
@@ -35,7 +35,7 @@ ms.locfileid: "74988078"
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (데이터 실행 방지와 호환 가능)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) 이러한 컴파일러 및 링커 옵션은 DEP (데이터 실행 방지) 호환성을 지원 합니다. DEP는 비코드 페이지 실행에 대해 CPU를 보호합니다.
 
 [/analyze(코드 분석)](../build/reference/analyze-code-analysis.md)<br/>
-이 컴파일러 옵션은 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조 및 메모리 누수와 같은 잠재적인 보안 문제를 보고하는 코드 분석을 활성화합니다. 이 옵션은 기본적으로 해제되어 있습니다. 자세한 내용은 [C/C++ 개요에 대 한 코드 분석](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)을 참조 하세요.
+이 컴파일러 옵션은 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조 및 메모리 누수와 같은 잠재적인 보안 문제를 보고하는 코드 분석을 활성화합니다. 이 옵션은 기본적으로 해제되어 있습니다. 자세한 내용은 [C/C++ 개요에 대한 코드 분석](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)을 참조 하세요.
 
 [/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 이 링커 옵션은 실행을 시작할 때 메모리의 다른 위치에 로드될 수 있는 실행 가능한 이미지를 작성할 수 있게 합니다. 또한 이 옵션을 사용하면 메모리의 스택 위치를 예측하기가 훨씬 어렵습니다.
@@ -88,9 +88,9 @@ AppVerifier를 사용하여 다음 작업을 수행할 수 있습니다.
 
 Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개발자 및 확장에 의해 고객이 보안 위험에 노출됩니다. 자세한 내용은 [사용자 그룹의 구성원으로 실행](running-as-a-member-of-the-users-group.md) 및 [UAC (사용자 계정 컨트롤)가 응용 프로그램에 미치는 영향](how-user-account-control-uac-affects-your-application.md)을 참조 하세요.
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>잘못 실행 측 채널에 대 한 지침
+## <a name="guidance-for-speculative-execution-side-channels"></a>잘못 실행 측 채널에 대한 지침
 
-소프트웨어의 C++ 잘못 실행 측 채널 하드웨어 취약점을 식별할 하 고 완화 하는 방법에 대 한 자세한 내용은 [ C++ 추론 실행 측 채널 개발자 가이드](developer-guidance-speculative-execution.md)를 참조 하세요.
+소프트웨어의 C++ 잘못 실행 측 채널 하드웨어 취약점을 식별할 하 고 완화 하는 방법에 대한 자세한 내용은 [ C++ 추론 실행 측 채널 개발자 가이드](developer-guidance-speculative-execution.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참조
 
