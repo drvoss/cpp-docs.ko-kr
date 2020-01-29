@@ -4005,7 +4005,7 @@
               items:
                 - name: 클래스 및 구조체
                   href: cpp/classes-and-structs-cpp.md
-                - name: 클래스
+                - name: class
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md
