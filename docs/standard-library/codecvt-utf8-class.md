@@ -24,13 +24,13 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>매개 변수
 
-*E*\
+*Elem*\
 와이드 문자 요소 형식입니다.
 
 *Maxcode*\
 로캘 패싯에 대한 최대 문자 수입니다.
 
-*모드가*\
+*Mode*\
 로캘 패싯에 대한 구성 정보입니다.
 
 ## <a name="remarks"></a>설명
@@ -39,6 +39,6 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>요구 사항
 
-헤더: \<codecvt >
+헤더: \<codecvt>
 
 네임 스페이스: std
