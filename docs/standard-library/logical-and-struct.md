@@ -7,16 +7,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243282"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821618"
 ---
-# <a name="logicaland-struct"></a>logical_and 구조체
+# <a name="logical_and-struct"></a>logical_and 구조체
 
-논리곱 연산을 수행 하는 미리 정의 된 함수 개체 (`operator&&`) 인수에 대해 합니다.
+인수에서 논리적 결합 작업 (`operator&&`)을 수행 하는 미리 정의 된 함수 개체입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,24 +39,24 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*하십시오 *T*, *U*\
+*형식*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator&&`를 지원하는 모든 형식입니다.
 
-*왼쪽*\
-논리곱 연산의 왼쪽 피연산자입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *T*합니다.
+*Left*\
+논리곱 연산의 왼쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *T*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
-*오른쪽*\
-논리곱 연산의 오른쪽 피연산자입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *U*합니다.
+*Right*\
+논리곱 연산의 오른쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *U*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
 ## <a name="return-value"></a>반환 값
 
 `Left && Right`의 결과입니다. 특수화된 템플릿은 `operator&&`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 사용자 정의 형식의 경우 피연산자 평가의 단락(short-circuiting)이 없습니다. 두 인수 모두 `operator&&`로 평가됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_logical_and.cpp
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

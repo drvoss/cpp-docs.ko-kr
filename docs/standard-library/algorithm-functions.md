@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956980"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821885"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 함수
 
@@ -257,13 +257,13 @@ ForwardIterator adjacent_find(
 
 서로 같거나 (첫 번째 버전의 경우) 이진 조건자 (두 번째 버전)에 지정 된 조건을 충족 하는 인접 한 요소 중 첫 번째 요소에 대 한 전방 반복기입니다 (해당 요소 쌍이 발견 되는 경우). 그렇지 않으면 *last* 를 가리키는 반복기가 반환 됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `adjacent_find` 알고리즘은 변경할 수 없는 시퀀스 알고리즘입니다. 검색할 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 알고리즘의 시간 복잡도는 범위에 포함된 요소 수에 비례합니다.
 
 요소 간의 일치를 확인하는 데 사용되는 `operator==`는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_adj_fnd.cpp
@@ -364,11 +364,11 @@ bool all_of(
 
 지정 된 범위의 각 요소에서 조건이 검색 되거나 범위가 비어 있으면 **true** 를 반환 하 고 그렇지 않으면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 템플릿 함수는 범위의 `N` `[0, last - first)`각에 대해 조건자 `pred(*(first + N))` 가 **true**인 경우에만 true를 반환 합니다.
+템플릿 함수는 `[0, last - first)`범위의 각 `N`에 대해 조건자 `pred(*(first + N))` **true**인 경우에만 **true** 를 반환 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_all_of.cpp
@@ -440,13 +440,13 @@ bool any_of(
 
 지정 된 범위에서 조건이 한 번 이상 검색 되 면 **true** 를 반환 하 고 조건이 검색 되지 않으면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는 범위 에 있는 일부 `N` 에 대해 true를 반환 합니다.
+템플릿 함수는 범위에 있는 일부 `N`에 대해 **true** 를 반환 합니다.
 
-`[0, last - first)`인 경우에 `pred(*(first + N))` 는 조건자가 true입니다.
+`[0, last - first)`조건자 `pred(*(first + N))` true입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_any_of.cpp
@@ -517,7 +517,7 @@ bool binary_search(
 
 지정 된 값과 같거나 동일한 범위에서 요소가 발견 되 면 **true** 입니다. 그렇지 않으면 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -529,7 +529,7 @@ bool binary_search(
 
 알고리즘의 복잡성은 임의 액세스 반복기 및 선형에 대 한 로그 이며, 그렇지 않으면 (`last` - `first`)에 비례 하는 단계 수를 사용 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_bin_srch.cpp
@@ -654,9 +654,9 @@ clamp *값* 에 대 한 값의 상한입니다.
 
 ### <a name="return-value"></a>반환 값
 
-인 경우에는 에 대 `value < lower`한 참조를 반환 하 고, `upper < value`경우에는 *상한을* 반환 합니다. 그렇지 않으면 *값*에 대 한 참조를 반환 합니다.
+`value < lower`경우 *더 낮은* 참조를 반환 하 고, `upper < value`인 경우 *upper* 에 대 한 참조를 반환 합니다. 그렇지 않으면 *값*에 대 한 참조를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 *Upper* 가 *lower*보다 작으면 동작이 정의 되지 않습니다.
 
@@ -690,22 +690,22 @@ ForwardIterator2 copy(
 *last*\
 소스 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 입력 반복기입니다.
 
-*destBeg*\
+*destbeg*
 대상 범위의 첫 번째 요소의 위치를 주소 지정하는 출력 반복기입니다.
 
 ### <a name="return-value"></a>반환 값
 
-대상 범위에서 마지막 요소 하나 다음의 위치를 주소 지정 하는 출력 반복기입니다. 즉, `result` 반복기 주소 + (*last* - *first*)입니다.
+대상 범위에서 마지막 요소 하나 다음의 위치를 주소 지정 하는 출력 반복기입니다. 반복기는 `result` + (*last* - *first*) 주소를 지정 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 소스 범위는 유효해야 하며 대상에서 복사할 모든 요소를 보관할 충분한 공간이 있어야 합니다.
 
-알고리즘은 첫 번째 요소부터 시작 하 여 소스 요소를 복사 하기 때문에 소스 범위의 *마지막* 위치가 대상 범위에 포함 되지 않은 경우 대상 범위가 소스 범위와 겹칠 수 있습니다. `copy`는 소스 범위와 대상 범위가 겹치지 않는 경우 오른쪽이 아닌 왼쪽으로 요소를 이동 하는 데 사용할 수 있습니다. 여러 위치를 오른쪽으로 이동하려면 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 알고리즘을 사용합니다.
+알고리즘은 첫 번째 요소부터 시작 하 여 소스 요소를 복사 하기 때문에 소스 범위의 *마지막* 위치가 대상 범위에 포함 되지 않은 경우 대상 범위가 소스 범위와 겹칠 수 있습니다. 소스 범위와 대상 범위가 겹치지 않는 경우 오른쪽이 아니라 왼쪽으로 요소를 이동 하는 데 `copy` 사용할 수 있습니다. 여러 위치를 오른쪽으로 이동하려면 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 알고리즘을 사용합니다.
 
 이 `copy` 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새로운 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_copy.cpp
@@ -783,18 +783,18 @@ BidirectionalIterator2 copy_backward(
 *last*\
 소스 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.
 
-*destEnd*\
+*Destend*\
 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.
 
 ### <a name="return-value"></a>반환 값
 
-대상 범위에서 마지막 요소 하나 다음의 위치를 주소 지정 하는 출력 반복기입니다. 반복기는 *destend* (*last* - *first*) 주소를 지정 합니다.
+대상 범위에서 마지막 요소 하나 다음의 위치를 주소 지정 하는 출력 반복기입니다. 반복기는 *Destend* (*last* - *first*) 주소를 지정 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 소스 범위는 유효해야 하며 대상에서 복사할 모든 요소를 보관할 충분한 공간이 있어야 합니다.
 
-알고리즘 `copy_backward` 은 `copy` 알고리즘 보다 더 엄격한 요구 사항을 부과 합니다. 입력 및 출력 반복기가 모두 양방향입니다.
+`copy_backward` 알고리즘은 `copy` 알고리즘 보다 더 엄격한 요구 사항을 적용 합니다. 입력 및 출력 반복기가 모두 양방향입니다.
 
 `copy_backward` 및 [move_backward](../standard-library/algorithm-functions.md#move_backward) 알고리즘은 대상 범위의 끝 부분을 가리키는 반복기를 사용하여 출력 범위를 지정하는 유일한 C++ 표준 라이브러리 알고리즘입니다.
 
@@ -802,7 +802,7 @@ BidirectionalIterator2 copy_backward(
 
 이 `copy_backward` 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새로운 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_copy_bkwd.cpp
@@ -892,7 +892,7 @@ ForwardIterator2 copy_if(
 *last*\
 범위의 끝을 나타내는 입력 반복기입니다.
 
-*dest*\
+*대상*\
 복사된 요소에 대한 대상을 나타내는 출력 반복기입니다.
 
 *pred*\
@@ -902,15 +902,15 @@ ForwardIterator2 copy_if(
 
 조건을 충족 하는 각 요소에 대해 한 번씩 *대상의 대상* 으로 증가 하는 출력 반복기입니다. 즉, 반환 값에서 *dest* 를 뺀 값은 복사 된 요소 수와 같습니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 템플릿 함수는
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-`[0, last - first)` 범위의 각 `N`에 대해 위의 식을 한 번 평가하고, 가장 낮은 값부터 시작하여 `N`의 값을 최소값부터 엄격하게 증가시킵니다. *Dest* 및 *first* 가 저장소 영역을 지정 하는 경우, *dest* 는 범위 `[ first, last )`내에 있지 않아야 합니다.
+`[0, last - first)` 범위의 각 `N`에 대해 위의 식을 한 번 평가하고, 가장 낮은 값부터 시작하여 `N`의 값을 최소값부터 엄격하게 증가시킵니다. *Dest* 및 *first* 가 저장소 영역을 지정 하는 경우 *dest* 는 `[ first, last )`범위에 속하지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_copy_if.cpp
@@ -995,18 +995,18 @@ ForwardIterator2 copy_n(
 *count*\
 복사할 요소의 수를 지정하는 부호 있는/부호 없는 정수 형식입니다.
 
-*dest*\
+*대상*\
 요소를 복사할 위치를 나타내는 출력 반복기입니다.
 
 ### <a name="return-value"></a>반환 값
 
 요소가 복사된 출력 반복기를 반환합니다. 이 값은 *dest* 매개 변수의 반환 값과 동일 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는 범위의 `*(dest + N) = *(first + N))` `N` `[0, count)`각에 대해를 한 번 평가 하 여의 `N` 값을 최소값부터 엄격 하 게 늘립니다. 그런 다음 `dest + N`를 반환합니다. *Dest* 및 *first* 가 저장소 영역을 지정 하는 경우, *dest* 는 범위 `[first, last)`내에 있지 않아야 합니다.
+템플릿 함수는 `[0, count)`범위에서 각 `N`에 대해 한 번만 계산 하 여 `N` 값이 가장 작은 값으로 시작 하는 값을 `*(dest + N) = *(first + N))` 합니다. 그런 다음 `dest + N`를 반환합니다. *Dest* 및 *first* 가 저장소 영역을 지정 하는 경우 *dest* 는 `[first, last)`범위에 속하지 않아야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_copy_n.cpp
@@ -1071,15 +1071,15 @@ count(
 
 ### <a name="return-value"></a>반환 값
 
-값이 [*first*, `InputIterator` *last*) 범위 내 요소 수를 계산 하는의 차이 형식입니다.
+값이 [*first*, *last*) 범위 내 요소 수를 계산 하는 `InputIterator`의 차이 유형 *입니다.*
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
 이 알고리즘은 템플릿 함수 [count_if](../standard-library/algorithm-functions.md#count_if)가 포함된 모든 조건자를 충족하는 요소를 계산하기 위해 일반화됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_count.cpp
@@ -1154,11 +1154,11 @@ count_if(
 
 조건자로 지정된 조건과 일치하는 요소의 개수.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 템플릿 함수는 "지정한 값과 일치" 조건자를 다른 임의의 조건자로 교체하는 방식으로 [count](../standard-library/algorithm-functions.md#count) 알고리즘을 일반화한 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_count_if.cpp
@@ -1295,7 +1295,7 @@ bool equal(
 
 요소별로 비교할 경우 범위가 이진 조건자에서 동일하거나 동등한 경우에만 **true**이고, 아닌 경우에는 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 검색할 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -1303,7 +1303,7 @@ bool equal(
 
 피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 `operator==`나 사용자 정의 조건자 모두 필요하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include <iostream>
@@ -1375,17 +1375,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 *값*에 해당 하는 요소가 없는 경우 반환 된 쌍의 전방 반복기는 동일 하 고 범위의 순서를 방해 하지 않고 *값* 을 삽입할 수 있는 지점을 지정 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 알고리즘에 의해 반환된 쌍의 첫 번째 반복기는 [lower_bound](../standard-library/algorithm-functions.md#lower_bound), 두 번째 반복기는 [upper_bound](../standard-library/algorithm-functions.md#upper_bound)입니다.
 
 `equal_range`에 제공된 조건자에 따라 범위를 정렬해야 합니다. 예를 들어, greater-than 조건자를 사용하려는 경우 범위를 내림차순으로 정렬해야 합니다.
 
-에서 `equal_range` 반환 하는 반복기 쌍으로 정의 된 비어 있을 수 있는 하위 범위의 요소는 사용 된 조건자에 정의 된 의미의 *값* 과 동일 합니다.
+`equal_range`에서 반환 하는 반복기 쌍으로 정의 된 비어 있을 수 있는 하위 범위의 요소는 사용 된 조건자에 정의 된 의미의 *값* 과 동일 합니다.
 
-알고리즘의 복잡성은 임의 액세스 반복기 및 선형에 대 한 로그이 고, 그렇지 않으면 (*마지막* - *first*)에 비례 하는 단계 수를 사용 하는 것입니다.
+알고리즘의 복잡성은 임의 액세스 반복기 및 선형에 대 한 로그 이며, 그렇지 않으면 (*last* - *first*)에 비례 하는 단계 수를 사용 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_equal_range.cpp
@@ -1535,11 +1535,11 @@ void fill(
 *value*\
 [*First*, *last*) 범위의 요소에 할당할 값입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_fill.cpp
@@ -1617,11 +1617,11 @@ ForwardIterator fill_n(
 
 *Count* > 0 인 경우 채워진 마지막 요소 다음의 요소에 대 한 반복기이 고, 그렇지 않으면 첫 번째 요소입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_fill_n.cpp
@@ -1706,7 +1706,7 @@ ForwardIterator find(
 
 검색 중인 범위 내에서 지정된 값이 처음 나타나는 위치의 주소를 지정하는 입력 반복기입니다. 동일한 값의 요소가 없는 경우는 *last*를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
@@ -1774,13 +1774,13 @@ find_end(
 
 지정 된 시퀀스 [first2, last2)와 일치 하는 [first1, last1) 내의 마지막 하위 시퀀스의 첫 번째 요소 위치 주소를 지정 하는 전방 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_find_end.cpp
@@ -1938,13 +1938,13 @@ find_first_of(
 
 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_find_first_of.cpp
@@ -2070,17 +2070,17 @@ ForwardIterator find_if(
 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.
 
 *pred*\
-검색 중인 요소가 충족하는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 단항 조건자는 단일 인수를 사용 하 고 만족 되는 경우 **true** 를 반환 하 고 만족 하지 않으면 **false** 를 반환 합니다. `T` *Pred* `bool pred(const T& arg);`의 시그니처는로 반드시 같아야 합니다. 여기서은 역참조 될 때 `InputIterator` 암시적으로 변환 될 수 있는 형식입니다. **Const** 키워드는 함수 개체 또는 람다가 인수를 수정 하지 않아야 함을 보여 주기 위해서만 표시 됩니다.
+검색 중인 요소가 충족하는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 단항 조건자는 단일 인수를 사용 하 고 만족 되는 경우 **true** 를 반환 하 고 만족 하지 않으면 **false** 를 반환 합니다. *Pred* 의 서명은 효과적으로 `bool pred(const T& arg);`해야 합니다. 여기서 `T`는 역참조 될 때 `InputIterator` 암시적으로 변환 될 수 있는 형식입니다. **Const** 키워드는 함수 개체 또는 람다가 인수를 수정 하지 않아야 함을 보여 주기 위해서만 표시 됩니다.
 
 ### <a name="return-value"></a>반환 값
 
 조건자로 지정 된 조건을 충족 하는 범위의 첫 번째 요소를 참조 하는 입력 반복기입니다 (조건자는 **true**임). 조건자를 충족 하는 요소가 없는 경우는 *last*를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 템플릿 함수는 [find](../standard-library/algorithm-functions.md#find) 알고리즘을 일반화한 것으로, "equals a specific value" 조건자를 임의의 조건자로 바꿉니다. 이 조건자와 논리적으로 반대되는 항목(조건자를 충족하지 않는 첫 번째 요소를 찾음)은 [find_if_not](../standard-library/algorithm-functions.md#find_if_not)을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // cl.exe /W4 /nologo /EHsc /MTd
@@ -2192,13 +2192,13 @@ ForwardIterator find_if_not(
 검색할 범위에서 마지막 요소 하나 다음의 위치 주소를 지정하는 입력 반복기입니다.
 
 *pred*\
-검색 중인 요소가 충족하지 않는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 단항 조건자는 단일 인수를 사용 하 고 만족 되는 경우 **true** 를 반환 하 고 만족 하지 않으면 **false** 를 반환 합니다. `T` *Pred* `bool pred(const T& arg);`의 시그니처는로 반드시 같아야 합니다. 여기서은 역참조 될 때 `InputIterator` 암시적으로 변환 될 수 있는 형식입니다. **Const** 키워드는 함수 개체 또는 람다가 인수를 수정 하지 않아야 함을 보여 주기 위해서만 표시 됩니다.
+검색 중인 요소가 충족하지 않는 조건을 정의하는 [람다 식](../cpp/lambda-expressions-in-cpp.md) 또는 사용자 정의 조건자 함수 개체입니다. 단항 조건자는 단일 인수를 사용 하 고 만족 되는 경우 **true** 를 반환 하 고 만족 하지 않으면 **false** 를 반환 합니다. *Pred* 의 서명은 효과적으로 `bool pred(const T& arg);`해야 합니다. 여기서 `T`는 역참조 될 때 `InputIterator` 암시적으로 변환 될 수 있는 형식입니다. **Const** 키워드는 함수 개체 또는 람다가 인수를 수정 하지 않아야 함을 보여 주기 위해서만 표시 됩니다.
 
 ### <a name="return-value"></a>반환 값
 
 조건자로 지정 된 조건을 충족 하지 않는 범위 내 첫 번째 요소를 참조 하는 입력 반복기입니다 (조건자는 **false**로 반환 됨). 모든 요소가 조건자를 충족 하는 경우 (조건자가 모든 요소에 대해 **true** 를 반환)는 *마지막*을 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 템플릿 함수는 [find](../standard-library/algorithm-functions.md#find) 알고리즘을 일반화한 것으로, "equals a specific value" 조건자를 임의의 조건자로 바꿉니다. 이 조건자와 논리적으로 반대되는 항목(조건자를 충족하는 첫 번째 요소를 찾음)은 [find_if](../standard-library/algorithm-functions.md#find_if)를 참조하세요.
 
@@ -2238,15 +2238,15 @@ void for_each(
 
 범위에서 모든 요소에 적용된 후 함수 개체의 복사본입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `for_each` 알고리즘은 매우 유연하여, 사용자가 지정한 서로 다른 방법으로 범위 내에서 각 요소를 수정할 수 있습니다. 서로 다른 매개 변수를 전달하여 템플릿화된 함수를 수정된 형식으로 다시 사용할 수 있습니다. 사용자 정의 함수는 범위의 모든 요소를 처리한 후 알고리즘이 반환할 수 있는 내부 상태 내에서 정보를 누적할 수 있습니다.
 
 참조된 범위는 유효해야 하며, 모든 포인터는 역참조 가능해야 하고 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 이며 최대 (*last* - *first*) 개의 비교가 있습니다.
+복잡성은 선형 이며 최대 (*last* - *first*) 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_for_each.cpp
@@ -2405,15 +2405,15 @@ void generate(
 *gen*\
 인수 없이 호출되는 함수 개체로, 범위 내 각 요소에 할당되는 값을 생성하는 데 사용됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 함수 개체는 범위 내 각 요소에 대해 호출되고 호출될 때마다 동일한 값을 반환할 필요가 없습니다. 예를 들어 파일에서 읽거나 로컬 상태를 참조 및 수정할 수 있습니다. 생성기의 결과 형식은 범위의 정방향 반복기 값 형식으로 변환할 수 있어야 합니다.
 
 참조된 범위는 유효해야 하며, 모든 포인터는 역참조 가능해야 하고 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 이며, 필요한 생성기를 `last`정확히 (  -  `first`) 호출 합니다.
+복잡성은 필요한 생성기에 대해 정확 하 게 (`last` - `first`) 호출을 사용 하는 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_generate.cpp
@@ -2489,7 +2489,7 @@ ForwardIterator generate_n(
 *gen*\
 인수 없이 호출되는 함수 개체로, 범위 내 각 요소에 할당되는 값을 생성하는 데 사용됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 함수 개체는 범위 내 각 요소에 대해 호출되고 호출될 때마다 동일한 값을 반환할 필요가 없습니다. 예를 들어 파일에서 읽거나 로컬 상태를 참조 및 수정할 수 있습니다. 생성기의 결과 형식은 범위의 정방향 반복기 값 형식으로 변환할 수 있어야 합니다.
 
@@ -2497,7 +2497,7 @@ ForwardIterator generate_n(
 
 복잡성은 필요한 생성기에 대해 정확하게 `count`개 선형 호출입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -2604,7 +2604,7 @@ bool includes(
 
 첫 번째 정렬된 범위가 두 번째 정렬된 범위의 모든 요소를 포함하는 경우 **true**, 아닌 경우 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 테스트에서 고려해 볼 또 다른 방법은 두 번째 소스 범위가 첫 번째 소스 범위의 하위 집합인지를 확인하는 것입니다.
 
@@ -2612,13 +2612,13 @@ bool includes(
 
 정렬된 소스 범위는 각각 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.
 
-소스 범위는 알고리즘 `merge`에 의해 수정 되지 않습니다.
+소스 범위는 `merge`알고리즘에 의해 수정 되지 않습니다.
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 좀 더 정확하게, 알고리즘은 지정된 이진 조건자에 따라 첫 번째 정렬된 범위의 모든 요소가 두 번째 정렬된 범위의 모든 요소와 동일한 순서인지를 테스트합니다.
 
-알고리즘의 복잡성은 선형 이며, 비어 있지 않은 `2 * ((last1 - first1) - (last2 - first2)) - 1` 소스 범위에 대 한 대부분의 비교를 포함 합니다.
+알고리즘의 복잡성은 선형 이며, 비어 있지 않은 소스 범위에 대 한 최대 `2 * ((last1 - first1) - (last2 - first2)) - 1` 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_includes.cpp
@@ -2818,15 +2818,15 @@ void inplace_merge(
 *pred*\
 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 비교 조건자는 두 개의 인수를 사용 하 고 첫 번째 요소가 두 번째 요소 보다 작은 경우 **true** 를 반환 하 고 그렇지 않은 경우 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 연속 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 정렬된 연속 범위는 각각 `inplace_merge` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다. 각 범위 내 요소의 상대 순서가 유지되므로 작업이 안정적입니다. 두 소스 범위에 동일한 요소가 있는 경우, 결합된 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다.
 
-알고리즘은 임시 버퍼에 메모리를 할당하므로 복잡성은 사용 가능한 메모리에 따라 달라집니다. 충분 한 메모리를 `(last - first) - 1` 사용할 수 있는 경우에는 비교 시 선형이 가장 좋습니다. 보조 메모리를 사용할 수 없는 경우 가장 최악의 경우는이 고, 여기서 *N* = 은 -  `N log(N)`last*first*입니다.
+알고리즘은 임시 버퍼에 메모리를 할당하므로 복잡성은 사용 가능한 메모리에 따라 달라집니다. 사용할 수 있는 메모리가 충분 한 경우에는 `(last - first) - 1` 비교를 사용 하는 것이 가장 좋습니다. 보조 메모리를 사용할 수 없는 *경우 가장 최악의*경우는 `N log(N)`입니다. 여기서 *N* = *last* - .
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_inplace_merge.cpp
@@ -2985,7 +2985,7 @@ bool is_heap(
 
 지정 된 범위의 요소가 힙을 구성 하면 **true** 를 반환 하 고, 그렇지 않으면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 첫 번째 템플릿 함수는 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`를 반환 합니다.
 
@@ -2995,7 +2995,7 @@ bool is_heap(
 
 ## <a name="is_heap_until"></a>is_heap_until
 
-힙 정렬 조건을 충족 하지 않는 [ `first`, `last`) 범위의 첫 번째 요소에 배치 된 반복기를 반환 하거나, 범위가 힙을 형성 하는 경우 *end* 를 반환 합니다.
+힙 정렬 조건을 충족 하지 않는 [`first`, `last`) 범위의 첫 번째 요소에 배치 된 반복기를 반환 하거나, 범위가 힙을 형성 하는 경우 *end* 를 반환 합니다.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -3035,17 +3035,17 @@ RandomAccessIterator is_heap_until(
 힙에 대해 확인할 범위의 끝을 지정하는 임의 액세스 반복기입니다.
 
 *pred*\
-힙을 정의하는 엄격한/약한 정렬 조건을 지정하는 이진 조건자입니다. Pred가 지정 되지 `std::less<>` 않은 경우 기본 조건자는입니다.
+힙을 정의하는 엄격한/약한 정렬 조건을 지정하는 이진 조건자입니다. *Pred* 가 지정 되지 않은 경우 기본 조건자가 `std::less<>` 됩니다.
 
 ### <a name="return-value"></a>반환 값
 
 지정 된 범위가 힙을 형성 하거나 요소를 하나 이하로 포함 하는 경우 *마지막으로* 를 반환 합니다. 그렇지 않으면 첫 번째로 발견된 힙 조건을 충족하지 않는 요소에 대한 반복기를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-첫 번째 `next` 템플릿 함수는의 `[first, last)` 마지막 반복기를 반환 `[first, next)` 합니다. 여기서는 함수 개체 `std::less<>`에 의해 순서가 지정 된 힙입니다. 거리가 `last - first` 2 보다 작은 경우 함수는 *last*를 반환 합니다.
+첫 번째 템플릿 함수는 `[first, last)`에서 `next` 마지막 반복기를 반환 합니다. 여기서 `[first, next)`는 함수 개체 `std::less<>`에 의해 순서가 지정 된 힙입니다. `last - first` 거리가 2 보다 작은 경우 함수는 *last*를 반환 합니다.
 
-두 번째 템플릿 함수는 힙 순서 조건 대신 `std::less<>` 조건자 *pred* 를 사용 한다는 점을 제외 하 고 첫 번째 템플릿 함수와 동일 하 게 동작 합니다.
+두 번째 템플릿 함수는 힙 정렬 조건으로 `std::less<>` 대신 조건자 *pred* 를 사용 한다는 점을 제외 하 고 첫 번째 템플릿 함수와 동일 하 게 동작 합니다.
 
 ## <a name="is_partitioned"></a>is_partitioned
 
@@ -3084,9 +3084,9 @@ bool is_partitioned(
 
 지정 된 범위에서 조건에 대해 **true** 를 테스트 하는 모든 요소가 **false**를 테스트 하는 요소 앞에 있으면 **true** 를 반환 하 고 그렇지 않으면 **false**를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는의 `[first, last)` 모든 요소가 *pred*에 의해 분할 된 경우에만 true를 반환 합니다 `X` . 즉 `pred (X)` , `[first, last)` 에 대 한 모든 요소가의 모든 요소 `Y` 보다 먼저 발생 합니다. 가 **false 인 경우** `pred (Y)`
+`[first, last)`의 모든 요소가 *pred*로 분할 된 경우에만 템플릿 함수가 **true** 를 반환 합니다. 즉, 모든 요소는 `pred (Y)` **false**인 모든 요소 `Y` 하기 전에 `pred (X)` true 인 `[first, last)`에 `X`.
 
 ## <a name="is_permutation"></a>is_permutation
 
@@ -3144,15 +3144,15 @@ bool is_permutation(
 
 비교 연산자 조건자에 따라 동일 하 게 범위를 다시 정렬할 수 있으면 **true** 입니다. 그렇지 않으면 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 최악의 경우 `is_permutation`은 정방형 복잡성을 갖습니다.
 
-첫 번째 템플릿 함수는 *first2* 에서 시작 하는 범위에로 지정 `[first1, last1)`된 범위 만큼 많은 요소가 있다고 가정 합니다. 두 번째 범위에 더 많은 요소가 있는 경우 무시되고, 더 적은 요소가 있는 경우 정의되지 않은 동작이 발생합니다. 세 째 템플릿 함수(C++14 이상)에서는 이러한 가정을 하지 않습니다. 둘 다 에서 지정 `[first1, last1)` 된 범위의 각 요소 x에 대해 *first2* 또는 `[first2, last2)`에서 시작 하는 범위에 있는 것과 같이 x = = Y와 동일한 범위에 있는 요소 수가 y 인 경우에만 true를 반환 합니다. 여기서는 피연산자 간의 쌍 비교를 수행 해야합니다.`operator==`
+첫 번째 템플릿 함수는 `[first1, last1)`에서 지정 된 범위에 있는 것 처럼 *first2* 에서 시작 하는 범위에 많은 요소가 있다고 가정 합니다. 두 번째 범위에 더 많은 요소가 있는 경우 무시되고, 더 적은 요소가 있는 경우 정의되지 않은 동작이 발생합니다. 세 째 템플릿 함수(C++14 이상)에서는 이러한 가정을 하지 않습니다. `[first1, last1)`로 지정 된 범위의 각 요소 X에 대해 *first2* 또는 `[first2, last2)`부터 시작 되는 범위에 있는 것과 같이 x = = y와 동일한 범위에 요소가 여러 개 있는 경우에만 **true** 를 반환 합니다. 여기서 `operator==` 피연산자 간의 쌍 비교를 수행 해야 합니다.
 
 두 번째 및 네 번째 템플릿 함수는 `operator==(X, Y)`를 `Pred(X, Y)`로 대체한다는 점을 제외하고 동일하게 동작합니다. 올바르게 동작하려면 조건자가 대칭, 재귀 및 전이여야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 `is_permutation`을 사용하는 방법을 보여 줍니다.
 
@@ -3252,9 +3252,9 @@ bool is_sorted(
 *pred*\
 두 요소 사이의 순서를 결정하기 위해 테스트할 조건입니다. 비교 조건자는 두 개의 인수를 사용 하 고 **true** 또는 **false**를 반환 합니다. `operator<`와 동일한 작업을 수행합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-첫 번째 템플릿 함수는 [is_sorted_until](#is_sorted_until)`( first, last ) == last`를 반환 합니다. 함수 `operator<` 는 주문 비교를 수행 합니다.
+첫 번째 템플릿 함수는 [is_sorted_until](#is_sorted_until)`( first, last ) == last`를 반환 합니다. `operator<` 함수는 주문 비교를 수행 합니다.
 
 두 번째 템플릿 함수는 `is_sorted_until( first, last , pred ) == last`를 반환 합니다. *Pred* predicate 함수는 주문 비교를 수행 합니다.
 
@@ -3308,9 +3308,9 @@ ForwardIterator is_sorted_until(
 
 정렬된 순서에서 마지막 요소에 대해 설정된 `ForwardIterator`를 반환합니다. 정렬 된 시퀀스는 *처음*부터 시작 됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-첫 번째 `next` 템플릿 함수는의 `[first, last]` 마지막 반복기를 반환 하 `[first, next)` 여이 정렬 된 시퀀스를 `operator<`로 정렬 합니다. 가 `distance()` 2 보다 작은 경우 함수는 *last*를 반환 합니다.
+첫 번째 템플릿 함수는 `[first, last]`에서 `next` 마지막 반복기를 반환 하므로 `[first, next)`는 `operator<`기준으로 정렬 된 순서입니다. `distance()` 2 보다 작은 경우 함수는 *last*를 반환 합니다.
 
 `operator<(X, Y)`를 `pred(X, Y)`로 바꾸는 것을 제외하면 두 번째 템플릿 함수도 동일하게 동작합니다.
 
@@ -3325,19 +3325,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>매개 변수
 
-*left*\
+*left* \
 값을 교환할 정방향 반복기 중 하나입니다.
 
-*right*\
+*right* \
 값을 교환할 정방향 반복기 중 두 번째입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-`swap`이전 버전과의 호환성을 위해 C++ 표준에 포함 된 iter_swap에 대 한 기본 설정에 사용 해야 합니다. 및 `Fit1` `swap( *Fit1, *Fit2 )`가 전방 반복기`iter_swap( Fit1, Fit2 )`이면는와 동일 합니다. `Fit2`
+`swap`은 이전 버전과의 호환성을위해 C++ 표준에 포함 된 iter_swap에 사용 해야 합니다. `Fit1` 및 `Fit2` 전방 반복기 인 경우 `iter_swap( Fit1, Fit2 )`는 `swap( *Fit1, *Fit2 )`와 동일 합니다.
 
 입력 정방향 반복기의 값 형식은 동일한 값을 가져야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_iter_swap.cpp
@@ -3532,7 +3532,7 @@ bool lexicographical_compare(
 
 첫 번째 범위가 두 번째 범위보다 사전 순으로 작은 경우 **true**, 아닌 경우 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 시퀀스 간 사전순 비교는 다음 조건이 충족될 때까지 요소를 비교합니다.
 
@@ -3542,7 +3542,7 @@ bool lexicographical_compare(
 
 - 같지 없고 시퀀스의 요소 수가 동일 하므로 시퀀스는 동일 하 고 비교 결과는 **false**가 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_lex_comp.cpp
@@ -3674,7 +3674,7 @@ ForwardIterator lower_bound(
 
 지정된 값보다 크거나 같은 값이 있는 정렬된 범위의 첫 번째 요소 위치에 있는 정방향 반복기입니다. 여기서 같음은 이진 조건자로 지정됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -3686,7 +3686,7 @@ ForwardIterator lower_bound(
 
 알고리즘의 복잡성은 임의 액세스 반복기 및 선형에 대 한 로그 이며, 그렇지 않으면 (`last - first`)에 비례 하는 단계 수를 사용 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_lower_bound.cpp
@@ -3804,7 +3804,7 @@ void make_heap(
 *pred*\
 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 힙에는 두 가지 속성이 있습니다.
 
@@ -3814,9 +3814,9 @@ void make_heap(
 
 힙은 우선 순위 큐를 구현하는 이상적인 방법이며 C++ 표준 라이브러리 컨테이너 어댑터 [priority_queue 클래스](../standard-library/priority-queue-class.md)의 구현에 사용됩니다.
 
-복잡성은 선형 이며 비교가 필요 `3 * (last - first)` 합니다.
+복잡성은 선형 이며 `3 * (last - first)` 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_make_heap.cpp
@@ -3883,10 +3883,10 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>매개 변수
 
-*left*\
+*left* \
 비교되는 두 개체 중 첫 번째입니다.
 
-*right*\
+*right* \
 비교되는 두 개체 중 두 번째입니다.
 
 *pred*\
@@ -3899,11 +3899,11 @@ constexpr Type& max(
 
 둘 중 더 큰 개체입니다. 더 큰 개체가 없는 경우 두 개체 중 첫 번째 개체가 반환됩니다. initializer_list의 경우 목록의 개체 중 가장 큰 개체가 반환됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `max` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위에서 작동하는 함수가 필요한 경우 [max_element](../standard-library/algorithm-functions.md#max_element)를 대신 사용합니다. Visual Studio 2017은 initializer_list를 사용 하는 오버 로드에서 **constexpr** 을 사용 하도록 설정 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_max.cpp
@@ -4059,7 +4059,7 @@ int main()
 Using integers 6 and -7...
 The integer with the greater absolute value is: -7
 The integer with the greater value is: 6.
-Comparing the members of an initializer_list...The member with the greater value is: 6The integer wiht the greater absolute value is: -7
+Comparing the members of an initializer_list...The member with the greater value is: 6The integer with the greater absolute value is: -7
 s1 = ( CInt( 1 ), CInt( 2 ) ).
 s2 = ( CInt( 2 ), CInt( 3 ) ).
 s3 = max ( s1, s2 ) = ( CInt( 2 ), CInt( 3 ) ).
@@ -4119,13 +4119,13 @@ ForwardIterator max_element(
 
 검색할 범위에서 최대 요소의 첫 번째 발생 위치의 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 `(last - first) - 1` 입니다. 비어 있지 않은 범위에는 비교가 필요 합니다.
+복잡성은 선형 이며, 비어 있지 않은 범위에 대 한 `(last - first) - 1` 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_max_element.cpp
@@ -4294,7 +4294,7 @@ ForwardIterator merge(
 
 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -4302,15 +4302,15 @@ ForwardIterator merge(
 
 정렬된 소스 범위는 각각 `merge` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.
 
-각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 알고리즘 `merge`에 의해 수정 되지 않습니다.
+각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 `merge`알고리즘에 의해 수정 되지 않습니다.
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다.
 
-알고리즘의 복잡성은 선형 이며, 대부분 `(last1 - first1) - (last2 - first2) - 1` 의 비교에 사용 됩니다.
+알고리즘의 복잡성은 선형 이며 대부분의 `(last1 - first1) - (last2 - first2) - 1` 비교가 있습니다.
 
 [list class](../standard-library/list-class.md) 클래스는 두 목록의 요소를 병합하는 멤버 함수 "병합"을 제공합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_merge.cpp
@@ -4448,27 +4448,27 @@ constexpr Type min(
 
 ### <a name="parameters"></a>매개 변수
 
-*left*\
+*left* \
 비교되는 두 개체 중 첫 번째입니다.
 
-*right*\
+*right* \
 비교되는 두 개체 중 두 번째입니다.
 
 *pred*\
 두 개체를 비교하는 데 사용되는 이진 조건자입니다.
 
 *inlist*\
-비교할 멤버를 포함 하는입니다.`initializer_list`
+비교할 멤버를 포함 하는 `initializer_list`입니다.
 
 ### <a name="return-value"></a>반환 값
 
-둘 중 더 작은 개체입니다. 더 작은 개체가 없는 경우 두 개체 중 첫 번째 개체가 반환됩니다. 의 `initializer_list`경우 목록에서 최소한의 개체를 반환 합니다.
+둘 중 더 작은 개체입니다. 더 작은 개체가 없는 경우 두 개체 중 첫 번째 개체가 반환됩니다. `initializer_list`의 경우 목록에서 최소한의 개체를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `min` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위를 사용하는 함수가 필요한 경우 [min_element](../standard-library/algorithm-functions.md#min_element)를 사용합니다. Visual Studio 2017의 `initializer_list` 오버 로드에서 [constexpr](../cpp/constexpr-cpp.md)을 사용 하도록 설정 했습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_min.cpp
@@ -4683,13 +4683,13 @@ ForwardIterator min_element(
 
 검색할 범위에서 최소 요소의 첫 번째 발생 위치의 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 `(last - first) - 1` 입니다. 비어 있지 않은 범위에는 비교가 필요 합니다.
+복잡성은 선형 이며, 비어 있지 않은 범위에 대 한 `(last - first) - 1` 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_min_element.cpp
@@ -4845,11 +4845,11 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="return-value"></a>반환 값
 
-반환 값
+을 반환합니다.
 
 `pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 첫 번째 템플릿 함수는 다음을 반환합니다.
 
@@ -4887,21 +4887,21 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>매개 변수
 
-*left*\
+*left* \
 비교되는 두 개체 중 첫 번째입니다.
 
-*right*\
+*right* \
 비교되는 두 개체 중 두 번째입니다.
 
 *pred*\
 두 개체를 비교하는 데 사용되는 이진 조건자입니다.
 
 *inlist*\
-비교할 멤버를 포함 하는입니다.`initializer_list`
+비교할 멤버를 포함 하는 `initializer_list`입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-첫 번째 템플릿 함수는 `pair<const Type&, const Type&>( right, left )` *right* 가 *left*보다 작은 경우를 반환 합니다. 그 외의 경우 `pair<const Type&, const Type&>( left, right )`를 반환합니다.
+첫 번째 템플릿 함수는 *right* 가 *left*보다 작은 경우 `pair<const Type&, const Type&>( right, left )`를 반환 합니다. 그렇지 않으면 `pair<const Type&, const Type&>( left, right )`를 반환합니다.
 
 두 번째 멤버 함수는 첫 번째 요소가 작은 값이 고 두 번째 요소는 조건자 *pred*비교할 때 더 큰 쌍을 반환 합니다.
 
@@ -5009,7 +5009,7 @@ mismatch(
 
 두 범위에서 불일치의 위치 주소를 지정하는 반복기 쌍입니다(첫 번째 범위의 위치에 대한 첫 번째 구성 요소 반복기 및 두 번째 범위의 위치에 대한 두 번째 구성 요소 반복기). 비교된 범위의 요소 간에 차이점이 있거나 두 범위의 모든 요소 쌍이 두 번째 버전의 이진 조건자를 충족하면 첫 번째 구성 요소 반복기는 첫 번째 범위에 있는 마지막 요소 하나 다음의 위치를 가리키고 두 번째 구성 요소 반복기는 두 번째 범위에서 테스트된 마지막 요소 하나 다음의 위치를 가리킵니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 첫 번째 템플릿 함수에서는 first2에서 시작하는 범위에 [first1, last1)로 지정된 범위만큼 많은 요소가 있다고 가정합니다. 두 번째 범위에 더 많은 내용이 있으면 무시 됩니다. 더 작은 값이 있는 경우 정의 되지 않은 동작이 발생 합니다.
 
@@ -5019,7 +5019,7 @@ mismatch(
 
 피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 사용자 정의 조건자가 필요하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예제에서는 불일치 사용 방법을 보여 줍니다. C++03 오버로드는 예기치 않은 결과를 생성하는 방법을 보여 주는 목적으로만 표시됩니다.
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg&gt move;
+## <a name="alg_move"></a>&lt;alg&gt; 이동
 
 지정된 범위와 연결된 요소를 이동합니다.
 
@@ -5144,12 +5144,12 @@ ForwardIterator2 move(
 *last*\
 이동할 요소 범위의 끝을 나타내는 입력 반복기입니다.
 
-*dest*\
+*대상*\
 이동된 요소를 포함하는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는 범위의 `*(dest + N) = move(*(first + N))` `N` `[0, last - first)`각에 대해를 한 번 평가 하 여의 `N` 값을 최소값부터 엄격 하 게 늘립니다. 그런 다음 `dest + N`를 반환합니다. 및 `dest` 가 저장소 영역을 *먼저* 지정 하는 경우에는 *dest* 가 범위 `[first, last)`내에 있지 않아야 합니다.
+템플릿 함수는 `[0, last - first)`범위에서 각 `N`에 대해 한 번만 계산 하 여 `N` 값이 가장 작은 값으로 시작 하는 값을 `*(dest + N) = move(*(first + N))` 합니다. 그런 다음 `dest + N`를 반환합니다. `dest` 하 고 *먼저* 저장소 영역을 지정 하는 경우 *dest* 는 `[first, last)`범위에 속하지 않아야 합니다.
 
 ## <a name="move_backward"></a>move_backward
 
@@ -5171,12 +5171,12 @@ BidirectionalIterator2 move_backward(
 *last*\
 요소를 이동할 범위의 끝을 나타내는 반복기입니다. 이 요소를 이동하지 않습니다.
 
-*destEnd*\
+*Destend*\
 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 양방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는 범위의 `*(destEnd - N - 1) = move(*(last - N - 1))` `N` `[0, last - first)`각에 대해를 한 번 평가 하 여의 `N` 값을 최소값부터 엄격 하 게 늘립니다. 그런 다음 `destEnd - (last - first)`를 반환합니다. *Destend* 를 지정 하 고 *먼저* 저장소 영역을 지정 하는 경우 *destend* 는 범위 `[first, last)`에 없어야 합니다.
+템플릿 함수는 `[0, last - first)`범위에서 각 `N`에 대해 한 번만 계산 하 여 `N` 값이 가장 작은 값으로 시작 하는 값을 `*(destEnd - N - 1) = move(*(last - N - 1))` 합니다. 그런 다음 `destEnd - (last - first)`를 반환합니다. *Destend* 를 지정 하 고 *먼저* 저장소 영역을 지정 하는 경우 *destend* 는 `[first, last)`범위에 없어야 합니다.
 
 `move` 및 `move_backward`는 이동 반복기와 함께 `copy` 및 `copy_backward`를 사용하는 것과 기능적으로 등가입니다.
 
@@ -5212,15 +5212,15 @@ bool next_permutation(
 
 사전식으로 다음 순열이 존재하여 범위의 원래 순서를 교체한 경우 **true**, 아닌 경우 **false**입니다. 이 경우 순서 지정은 사전식으로 가장 작은 순열로 변환됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 기본 이진 조건자가 보다 작고 범위의 요소가 다음 순열이 잘 정의 되도록 비교할 수 있는 보다 작아야 합니다.
 
-복잡성은 선형 이며 대부분의 `(last - first) / 2` 교환입니다.
+복잡성은 선형 이며 최대 `(last - first) / 2` 교환입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_next_perm.cpp
@@ -5410,17 +5410,17 @@ void nth_element(
 *pred*\
 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 비교 조건자는 두 개의 인수를 사용 하 여 만족할 경우 **true** 를 반환 하 고 만족 되지 않으면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-알고리즘 `nth_element` 은 *n*번째 요소의 양쪽에 있는 하위 범위의 요소가 정렬 되는 것을 보장 하지 않습니다. 따라서 선택된 요소 아래의 범위에 있는 요소를 정렬하는 `partial_sort`보다 보증이 줄어들고, 더 낮은 범위의 순서가 필요하지 않은 경우 `partial_sort`에 대한 더 빠른 대안으로 사용될 수 있습니다.
+`nth_element` 알고리즘은 *n*번째 요소의 양쪽에 있는 하위 범위의 요소가 정렬 되는 것을 보장 하지 않습니다. 따라서 선택된 요소 아래의 범위에 있는 요소를 정렬하는 `partial_sort`보다 보증이 줄어들고, 더 낮은 범위의 순서가 필요하지 않은 경우 `partial_sort`에 대한 더 빠른 대안으로 사용될 수 있습니다.
 
 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다.
 
 정렬 복잡성의 평균은 *last first*와 관련 하 여 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_nth_elem.cpp
@@ -5523,9 +5523,9 @@ bool none_of(
 
 지정 된 범위에서 조건이 한 번 이상 검색 되지 않으면 **true** 를 반환 하 고, 조건이 검색 되 면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 템플릿 함수는 범위 `[0, last - first)`에 있는 일부 `N` 에 대해 조건자 `pred(*(first + N))` 가 항상 **false**인 경우에만 **true** 를 반환 합니다.
+템플릿 함수는 `[0, last - first)`범위의 일부 `N`에 대해 조건자 `pred(*(first + N))` 항상 **false**인 경우에만 **true** 를 반환 합니다.
 
 ## <a name="partial_sort"></a>partial_sort
 
@@ -5578,15 +5578,15 @@ void partial_sort(
 *pred*\
 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. `sort` 알고리즘은 안정적이 지 않으며 동등한 요소의 상대적인 순서가 유지 될 것임을 보장 하지 않습니다. `stable_sort` 알고리즘은 원래의 순서를 유지합니다.
 
-평균 부분 정렬 복잡성은 *O*`last`((`first`- ) log (`sortEnd`- `first`))입니다.
+평균 부분 정렬 복잡성은 *O*((`last`- `first`) log (`sortEnd`- `first`))입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_partial_sort.cpp
@@ -5720,13 +5720,13 @@ RandomAccessIterator partial_sort_copy(
 
 소스 범위에서 삽입한 마지막 요소를 넘어 대상 범위에서 하나 다음 위치 요소의 주소를 지정하는 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 소스 및 대상 범위는 겹치지 않아야 하며 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며, 각 시퀀스 내 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 등가가 아닌 요소는 정렬되고 등가인 요소는 정렬되지 않도록 엄밀히 약한 정렬을 제공해야 합니다. 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 보다 작음 조건에서 등가이지만, 반드시 같음은 아닙니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_partial_sort_copy.cpp
@@ -5839,15 +5839,15 @@ ForwardIterator partition(
 
 조건자 조건을 충족하지 못하는 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-요소 *a* 와 *b* 는 동일 하지만 반드시 같지는 않습니다. 둘 다 `pred( a, b )` false이 고 `pred( b, a )` 가 false 이면 ( *pred* 는 매개 변수로 지정 된 조건자)입니다. `partition` 알고리즘은 안정적이 지 않으며 동등한 요소의 상대적인 순서가 유지 될 것임을 보장 하지 않습니다. `stable_partition` 알고리즘은 원래의 순서를 유지합니다.
+두 `pred( a, b )` 모두 false이 고 `pred( b, a )` false 이면 요소 *a* 와 *b* 는 동일 하지만 반드시 같지는 않습니다. 여기서 *pred* 는 매개 변수로 지정 된 조건자입니다. `partition` 알고리즘은 안정적이 지 않으며 동등한 요소의 상대적인 순서가 유지 될 것임을 보장 하지 않습니다. `stable_partition` 알고리즘은 원래의 순서를 유지합니다.
 
-복잡성은 선형입니다. `(last - first)` *pred* 및 대부분 `(last - first)/2` 의 교환 응용 프로그램이 있습니다.
+복잡성은 선형입니다. *pred* 및 최대 `(last - first)/2`의 `(last - first)` 응용 프로그램이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_partition.cpp
@@ -5931,9 +5931,9 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 *pred*\
 테스트할 조건입니다. 이 조건은 테스트할 조건을 정의하는 사용자 정의 조건자 함수 개체에 의해 제공됩니다. 단항 조건자는 단일 인수를 사용 하 고 **true** 또는 **false**를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는가 true 인 `X` 경우 `[first,last)` `pred(X)` 의 `*dest1++` 각 요소를에 복사 하 `*dest2++` 고, 그렇지 않으면로 복사 합니다. `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`를 반환합니다.
+템플릿 함수는 `[first,last)`에 `X` 각 요소를 복사 하 여 `pred(X)` true 이면 `*dest1++` 하 고, 그렇지 않은 경우 `*dest2++` 합니다. `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`를 반환합니다.
 
 ## <a name="partition_point"></a>partition_point
 
@@ -5960,11 +5960,11 @@ ForwardIterator partition_point(
 
 ### <a name="return-value"></a>반환 값
 
-Pred에서 `ForwardIterator` 테스트 한 조건을 충족 하지 않는 첫 번째 요소를 참조 하거나, 하나를찾을 수 없는 경우 *마지막으로* 반환 하는을 반환 합니다.
+*Pred*에서 테스트 된 조건을 충족 하지 않는 첫 번째 요소를 참조 하는 `ForwardIterator`를 반환 하거나, 하나를 찾을 수 없는 경우 *마지막으로* 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수는 `it` `pred(*it)` 가 **false**인의 첫 `[first, last)` 번째 반복기를 찾습니다. 순서는 *pred*를 기준으로 정렬 되어야 합니다.
+템플릿 함수는 `pred(*it)` **false**인 `[first, last)`에서 `it` 첫 번째 반복기를 찾습니다. 순서는 *pred*를 기준으로 정렬 되어야 합니다.
 
 ## <a name="pop_heap"></a>pop_heap
 
@@ -5994,7 +5994,7 @@ void pop_heap(
 *pred*\
 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `pop_heap` 알고리즘은 push_heap 알고리즘에 의해 수행되는 연산의 반대입니다. push_heap 알고리즘에서는 범위의 마지막 다음 위치에 있는 요소가 범위의 이전 요소로 구성된 힘에 추가되며, 이 경우 힙에 추가되는 요소는 이미 힙에 있는 다른 요소보다 더 큽니다.
 
@@ -6012,7 +6012,7 @@ void pop_heap(
 
 복잡성은 로그 이며, 대부분의 `log (last - first)` 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_pop_heap.cpp
@@ -6107,7 +6107,7 @@ bool prev_permutation(
 
 사전순으로 이전 순열이 있고 범위의 원래 순서를 바꾼 경우 **true** 입니다. 그렇지 않으면 **false**이며,이 경우 순서는 사전순으로 가장 큰 순열으로 변환 됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6115,7 +6115,7 @@ bool prev_permutation(
 
 복잡성은 선형 이며 최대 (`last` - `first`)/2 개의 교환이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_prev_perm.cpp
@@ -6278,7 +6278,7 @@ void push_heap(
 *pred*\
 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소를 먼저 기존 힙의 끝으로 다시 푸시해야 하며, 그런 다음 이 요소를 기존 힙에 추가하는 데 알고리즘이 사용됩니다.
 
@@ -6296,7 +6296,7 @@ void push_heap(
 
 복잡성은 로그 이며, 대부분의 `log(last - first)` 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_push_heap.cpp
@@ -6365,7 +6365,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>random_shuffle
 
-Std:: random_shuffle () 함수는 사용 되지 않으며 [std:: 무작위](../standard-library/algorithm-functions.md#shuffle)로 대체 되었습니다. 코드 예제 및 자세한 내용은 [ \<임의 >](../standard-library/random.md) 및 Stack Overflow을 참조 하세요. [c + + 14에서 std:: random_shuffle 메서드가 사용 되지 않는 이유는 무엇 인가요?](https://go.microsoft.com/fwlink/p/?linkid=397954)
+Std:: random_shuffle () 함수는 사용 되지 않으며 [std:: 무작위](../standard-library/algorithm-functions.md#shuffle)로 대체 되었습니다. 코드 예제 및 자세한 내용은 [\<random >](../standard-library/random.md) 및 Stack Overflow Post [: c + + 14에서 std:: random_shuffle 메서드가 더 이상 사용 되지 않는 이유](https://go.microsoft.com/fwlink/p/?linkid=397954)를 참조 하세요.
 
 ## <a name="remove"></a>remove
 
@@ -6404,7 +6404,7 @@ ForwardIterator remove(
 
 지정된 값이 없는 나머지 시퀀스의 마지막 요소를 벗어난, 수정된 범위의 새로운 끝 위치에 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6412,11 +6412,11 @@ ForwardIterator remove(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형입니다. 같음에 대`last`한 ( - `first`) 비교가 있습니다.
+복잡성은 선형입니다. 같음에 대 한 (`last` - `first`) 비교가 있습니다.
 
-[List 클래스](../standard-library/list-class.md) 에는 다시 연결 포인터를 포함 하는 보다 `remove`효율적인 멤버 함수 버전이 있습니다.
+[List 클래스](../standard-library/list-class.md) 에는 다시 연결 `remove`의 보다 효율적인 멤버 함수 버전이 있습니다 .이 함수는 또한 포인터를 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_remove.cpp
@@ -6505,7 +6505,7 @@ ForwardIterator2 remove_copy(
 
 지정된 값이 없는 나머지 시퀀스 복사본의 마지막 요소 하나 다음에 대상 범위의 새로운 끝 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 소스 및 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6515,9 +6515,9 @@ ForwardIterator2 remove_copy(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형입니다. 같음 및 최대`last`( - )할당에대`last`한 (`first`) 비교가 있습니다. - `first`
+복잡성은 선형입니다. 같음에 대 한 (`last` - `first`) 비교와 최대 (`last` - `first`) 할당이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_remove_copy.cpp
@@ -6603,7 +6603,7 @@ ForwardIterator2 remove_copy_if(
 
 조건자를 충족하는 요소가 없는 나머지 시퀀스의 마지막 요소 하나 다음에 대상 범위의 새로운 끝 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6613,11 +6613,11 @@ ForwardIterator2 remove_copy_if(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형 이며 같음에 대 한`last`( -  - `first`) 비교와 최대 (`last``first`) 개의 할당이 있습니다.
+복잡성은 선형 이며 같음에 대 한 (`last` - `first`) 비교와 최대 (`last` - `first`) 할당도 있습니다.
 
 이러한 함수의 동작 방식에 대한 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_remove_copy_if.cpp
@@ -6705,7 +6705,7 @@ ForwardIterator remove_if(
 
 지정된 값이 없는 나머지 시퀀스의 마지막 요소를 벗어난, 수정된 범위의 새로운 끝 위치에 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6713,11 +6713,11 @@ ForwardIterator remove_if(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형 이며 같음에 대 한`last`( - `first`) 비교가 있습니다.
+복잡성은 선형 이며 같음에 대 한 (`last` - `first`) 비교가 있습니다.
 
 List에는 remove의 더욱 효율적인 멤버 함수 버전이 있습니다. 이 버전은 포인터를 다시 링크합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_remove_if.cpp
@@ -6801,13 +6801,13 @@ void replace(
 *last*\
 요소가 대체되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 입력 반복기입니다.
 
-*oldVal*\
+*Oldval*\
 대체되는 요소의 이전 값입니다.
 
-*newVal*\
+*Newval*\
 이전 값을 가진 요소에 할당되는 새 값입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6815,9 +6815,9 @@ void replace(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형입니다. 같음에 대`last`한 ( - `first`) 비교와 새 값의`last`최대 ( - `first`) 할당이 있습니다.
+복잡성은 선형입니다. 같음에 대 한 (`last` - `first`) 비교와 새 값의 최대 (`last` - `first`) 할당이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_replace.cpp
@@ -6893,17 +6893,17 @@ ForwardIterator2 replace_copy(
 *result*\
 변경된 요소 시퀀스를 복사할 대상 범위의 첫 번째 요소를 가리키는 출력 반복기입니다.
 
-*oldVal*\
+*Oldval*\
 대체되는 요소의 이전 값입니다.
 
-*newVal*\
+*Newval*\
 이전 값을 가진 요소에 할당되는 새 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
 변경 된 요소 시퀀스를 복사할 대상 범위에서 마지막 요소 하나 다음의 위치를 가리키는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 겹치지 않아야 하고 둘 다 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -6911,9 +6911,9 @@ ForwardIterator2 replace_copy(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형 이며 같음에 대 한`last`( -  - `first`) 비교와 새 값의 최대`last`(`first`) 할당이 있습니다.
+복잡성은 선형 이며 같음에 대 한 (`last` - `first`) 비교와 새 값의 최대 (`last` - `first`) 할당이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_replace_copy.cpp
@@ -7018,7 +7018,7 @@ ForwardIterator2 replace_copy_if(
 
 변경 된 요소 시퀀스를 복사할 대상 범위에서 마지막 요소 하나 다음의 위치를 가리키는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 겹치지 않아야 하고 둘 다 유효해야 합니다. 모든 포인터가 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -7026,9 +7026,9 @@ ForwardIterator2 replace_copy_if(
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형입니다. 같음에 대`last`한 ( - `first`) 비교와 새 값의`last`최대 ( - `first`) 할당이 있습니다.
+복잡성은 선형입니다. 같음에 대 한 (`last` - `first`) 비교와 새 값의 최대 (`last` - `first`) 할당이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_replace_copy_if.cpp
@@ -7132,19 +7132,19 @@ void replace_if(
 *value*\
 이전 값이 조건자를 충족하는 요소에 할당되는 새 값입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 대체되지 않은 요소의 순서는 변하지 않고 남아 있습니다.
 
-알고리즘 `replace_if` 은 알고리즘 `replace`을 일반화 한 것으로, 지정 된 상수 값과 일치 하지 않고 모든 조건자를 지정할 수 있도록 합니다.
+`replace_if` 알고리즘은 지정 된 상수 값과 일치 하지 않고 모든 조건자를 지정할 수 있도록 하는 알고리즘 `replace`의 일반화입니다.
 
 요소 간의 같음을 확인하는 데 사용되는 `operator==` 는 피연산자 간에 동등 관계를 적용해야 합니다.
 
-복잡성은 선형 이며 같음에 대 한`last`( -  - `first`) 비교와 새 값의 최대`last`(`first`) 할당이 있습니다.
+복잡성은 선형 이며 같음에 대 한 (`last` - `first`) 비교와 새 값의 최대 (`last` - `first`) 할당이 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_replace_if.cpp
@@ -7218,11 +7218,11 @@ void reverse(
 *last*\
 요소가 순열되는 범위에서 마지막 요소 하나 다음의 위치를 가리키는 양방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_reverse.cpp
@@ -7302,11 +7302,11 @@ ForwardIterator reverse_copy(
 
 변경 된 요소 시퀀스를 복사할 대상 범위에서 마지막 요소 하나 다음의 위치를 가리키는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 소스 및 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_reverse_copy.cpp
@@ -7380,13 +7380,13 @@ ForwardIterator rotate(
 *last*\
 회전할 범위 내 마지막 요소 하나 다음의 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 이며 최대 (`last` - `first`) 개의 교환이 있습니다.
+복잡성은 선형 이며 최대 (`last` - `first`) 교환입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_rotate.cpp
@@ -7503,13 +7503,13 @@ ForwardIterator2 rotate_copy(
 
 대상 범위에 있는 마지막 요소의 하나 다음 위치를 가리키는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 선형 이며 최대 (`last` - `first`) 개의 교환이 있습니다.
+복잡성은 선형 이며 최대 (`last` - `first`) 교환입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_rotate_copy.cpp
@@ -7645,14 +7645,14 @@ ForwardIterator search(
 *pred*\
 두 요소가 같은 것으로 간주되려면 충족해야 하는 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-*자가*\
+*검색자*\
 찾을 패턴과 사용할 검색 알고리즘을 캡슐화 하는 검색자입니다. Searchers에 대 한 자세한 내용은 [default_searcher 클래스](default-searcher-class.md), [boyer_moore_horspool_searcher 클래스](boyer-moore-horspool-searcher-class.md)및 [boyer_moore_searcher 클래스](boyer-moore-searcher-class.md)를 참조 하세요.
 
 ### <a name="return-value"></a>반환 값
 
 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
@@ -7660,7 +7660,7 @@ ForwardIterator search(
 
 평균 복잡성은 검색 범위의 크기에 대해 선형이며, 가장 나쁜 경우의 복잡성도 검색 대상 시퀀스의 크기에 대해 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_search.cpp
@@ -7821,7 +7821,7 @@ ForwardIterator search_n(
 
 지정한 시퀀스와 일치하거나 이진 조건자가 지정한 사항에 따라 동일한 첫 번째 하위 시퀀스의 첫 번째 요소 위치 주소를 지정하는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 요소와 지정된 값 간의 일치 여부를 확인하는 데 사용되는 `operator==`로서, 피연산자 간에 동등 관계를 적용해야 합니다.
 
@@ -7829,7 +7829,7 @@ ForwardIterator search_n(
 
 복잡성은 검색 결과의 크기와 관련하여 선형입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_search_n.cpp
@@ -7981,7 +7981,7 @@ ForwardIterator set_difference(
 
 두 소스 범위의 차이를 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -7989,13 +7989,13 @@ ForwardIterator set_difference(
 
 정렬된 소스 범위는 각각 `set_difference` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.
 
-각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 merge 알고리즘에 의해 수정되지 않습니다
+각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 병합 알고리즘에 의해 수정되지 않습니다
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함되어 두 번째보다 첫 번째 소스 범위에 더 많은 요소가 있는 경우에는 첫 번째 소스 범위에서 해당 요소의 발생 빈도가 두 번째 소스 범위에서 해당 요소의 발생 빈도를 초과하는 횟수가 대상 범위에 포함됩니다.
 
-알고리즘의 복잡성은 선형 이며, 비어 있지 않은 `2 * ((last1 - first1) - (last2 - first2)) - 1` 소스 범위에 대 한 대부분의 비교를 포함 합니다.
+알고리즘의 복잡성은 선형 이며, 비어 있지 않은 소스 범위에 대 한 최대 `2 * ((last1 - first1) - (last2 - first2)) - 1` 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_set_diff.cpp
@@ -8183,7 +8183,7 @@ ForwardIterator set_intersection(
 
 두 소스 범위의 교집합을 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -8195,9 +8195,9 @@ ForwardIterator set_intersection(
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우 두 소스 범위 모두에서 발생하는 중복 요소의 최대 개수가 대상 범위에 포함됩니다.
 
-알고리즘의 복잡성은 선형 이며, 비어 있지 않은 `2 * ((last1 - first1) + (last2 - first2)) - 1` 소스 범위에 대 한 대부분의 비교를 포함 합니다.
+알고리즘의 복잡성은 선형 이며, 비어 있지 않은 소스 범위에 대 한 최대 `2 * ((last1 - first1) + (last2 - first2)) - 1` 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_set_intersection.cpp
@@ -8381,7 +8381,7 @@ ForwardIterator set_symmetric_difference(
 
 두 소스 범위의 대칭차를 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -8389,13 +8389,13 @@ ForwardIterator set_symmetric_difference(
 
 정렬된 소스 범위는 각각 `merge*` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.
 
-각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 merge 알고리즘에 의해 수정되지 않습니다
+각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 병합 알고리즘에 의해 수정되지 않습니다
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우에는 소스 범위 중 하나에서 해당 요소의 발생 빈도가 두 번째 소스 범위에서 해당 요소의 발생 빈도를 초과하는 횟수의 절대값이 대상 범위에 포함됩니다.
 
-알고리즘의 복잡성은 선형 이며, 비어 있지 않은 `2 * ((last1 - first1) - (last2 - first2)) - 1` 소스 범위에 대 한 대부분의 비교를 포함 합니다.
+알고리즘의 복잡성은 선형 이며, 비어 있지 않은 소스 범위에 대 한 최대 `2 * ((last1 - first1) - (last2 - first2)) - 1` 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_set_sym_diff.cpp
@@ -8583,7 +8583,7 @@ ForwardIterator set_union(
 
 두 소스 범위의 합집합을 나타내는 정렬된 대상 범위에서 마지막 요소 하나 다음 위치의 주소를 지정하는 입력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
@@ -8591,13 +8591,13 @@ ForwardIterator set_union(
 
 정렬된 소스 범위는 각각 `merge` 알고리즘에서 결합된 범위를 정렬하는 데 사용하는 것과 동일한 순서에 따라 알고리즘을 적용하기 위한 사전 조건으로 배열되어야 합니다.
 
-각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 알고리즘 `merge`에 의해 수정 되지 않습니다.
+각 범위 내 요소의 상대 순서가 대상 범위에서 유지되므로 작업이 안정적입니다. 소스 범위는 `merge`알고리즘에 의해 수정 되지 않습니다.
 
 입력 반복기의 값 형식은 보다 작음을 비교하여 순서를 지정할 수 있어야 합니다. 즉, 지정된 두 요소가 동일하거나(어느 것도 다른 것보다 작지 않다는 의미에서) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 두 소스 범위에 동일한 요소가 있는 경우 대상 범위에서 첫 번째 범위의 요소가 두 번째 소스 범위의 요소보다 앞에 옵니다. 소스 범위에 중복 요소가 포함된 경우 두 소스 범위 모두에서 발생하는 중복 요소의 최대 개수가 대상 범위에 포함됩니다.
 
-알고리즘의 복잡성은 선형 이며, 대부분 `2 * ((last1 - first1) - (last2 - first2)) - 1` 의 비교에 사용 됩니다.
+알고리즘의 복잡성은 선형 이며 대부분의 `2 * ((last1 - first1) - (last2 - first2)) - 1` 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_set_union.cpp
@@ -8739,7 +8739,7 @@ void shuffle(
 *gen*\
 `shuffle()` 함수가 연산에 사용하는 난수 생성기입니다. `UniformRandomNumberGenerator`의 요구 사항을 충족해야 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 자세한 내용과 `shuffle()`을 사용하는 코드 샘플은 [\<random>](../standard-library/random.md)을 참조하세요.
 
@@ -8787,15 +8787,15 @@ void sort(
 *pred*\
 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이 이진 조건자는 두 개의 인수를 사용 하 고, 두 인수가 순서 대로 되어 있으면 **true** 를, 그렇지 않으면 **false** 를 반환 합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다. 자세한 내용은 [알고리즘](../standard-library/algorithms.md)을 참조하세요.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. `sort` 알고리즘은 안정적이지 않으므로 등가 요소의 상대적인 순서가 유지될 것임을 보증하지 않습니다. `stable_sort` 알고리즘은 원래의 순서를 유지합니다.
 
-정렬 복잡성의 `O( N log N )`평균은 이며 여기서 *N* = *last* - *first*입니다.
+정렬 복잡성의 평균은 `O( N log N )`입니다. 여기에서 *N* = *마지막* - *먼저*입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_sort.cpp
@@ -8891,7 +8891,7 @@ void sort_heap(
 *pred*\
 한 요소가 다른 요소보다 작다는 의미를 정의하는 사용자 정의 조건자 함수 개체입니다. 비교 조건자는 두 개의 인수를 사용 하 여 만족할 경우 **true** 를 반환 하 고 만족 되지 않으면 **false** 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 힙에는 두 가지 속성이 있습니다.
 
@@ -8907,9 +8907,9 @@ void sort_heap(
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-복잡성은 최대 `N log N`이며 여기서 *N* = *last* - *first*입니다.
+복잡성은 가장 `N log N`이며, 여기서 *N* = *마지막* - *먼저*입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_sort_heap.cpp
@@ -9000,13 +9000,13 @@ BidirectionalIterator stable_partition(
 
 조건자 조건을 충족하지 못하는 범위에서 첫 번째 요소 위치의 주소를 지정하는 양방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-요소 *a* 와 *b* 는 동일 하지만 반드시 같지는 않습니다. 둘 다 `pred( a, b )` false이 고 `pred( b, a )` 가 false 이면 ( *pred* 는 매개 변수로 지정 된 조건자)입니다. 알고리즘 `stable_partition` 은 안정적 이며 동등한 요소의 상대적 순서가 유지 되도록 보장 합니다. 알고리즘 `partition` 은이 원래 순서를 반드시 유지 하지는 않습니다.
+두 `pred( a, b )` 모두 false이 고 `pred( b, a )` false 이면 요소 *a* 와 *b* 는 동일 하지만 반드시 같지는 않습니다. 여기서 *pred* 는 매개 변수로 지정 된 조건자입니다. `stable_partition` 알고리즘은 안정적 이며 동등한 요소의 상대적 순서가 유지 되도록 보장 합니다. `partition` 알고리즘은이 원래 순서를 반드시 유지 하지는 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_stable_partition.cpp
@@ -9097,15 +9097,15 @@ void stable_sort(
 *pred*\
 순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. 알고리즘 `sort` 은 안정적 이며 동등한 요소의 상대적 순서가 유지 되도록 보장 합니다.
+둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다. `sort` 알고리즘은 안정적 이며 동등한 요소의 상대적 순서가 유지 되도록 보장 합니다.
 
-`stable_sort` 의 런타임 복잡성은 사용 가능한 메모리의 양에 따라 달라 지지만, 최상의 경우 (충분 한 메모리가 있는 경우 `O(N (log N)^2)` `O(N log N)` ) 및 최악의 경우는입니다. 여기서 *N* = 은*last*  -   *입니다. 첫 번째*입니다. 일반적으로 알고리즘 `sort` 은 보다 `stable_sort`훨씬 빠릅니다.
+`stable_sort`의 런타임 복잡성은 사용 가능한 메모리의 양에 따라 달라 지지만, 가장 좋은 경우 (메모리가 충분 한 경우)는 `O(N log N)` 하 고 최악의 경우에는 `O(N (log N)^2)`합니다. 여기서 *N* = *마지막* - *먼저*입니다. 일반적으로 `sort` 알고리즘은 `stable_sort`보다 훨씬 빠릅니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_stable_sort.cpp
@@ -9189,17 +9189,17 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*left*\
+*left* \
 첫 번째 재정의에서는 내용이 있는 첫 번째 개체가 교환됩니다. 두 번째 재정의에서는 내용이 있는 첫 번째 개체 배열이 교환됩니다.
 
-*right*\
+*right* \
 첫 번째 재정의에서는 내용이 있는 두 번째 개체가 교환됩니다. 두 번째 재정의에서는 내용이 있는 두 번째 개체 배열이 교환됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 첫 번째 오버로드는 개별 개체에서 작동하도록 설계되었습니다. 두 번째 오버로드는 두 배열 간에 개체의 내용을 교환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_swap.cpp
@@ -9292,13 +9292,13 @@ ForwardIterator2 swap_ranges(
 
 요소를 교환할 두 번째 범위의 마지막 위치 하나 다음을 가리키는 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 두 번째 범위는 첫 번째 범위 정도의 크기여야 합니다.
 
-복잡성은 선형 이며 *last1* - *first1* 교환이 수행 됩니다. 멤버 함수는 일반적으로 일관된 복잡성을 가지고 있기 때문에, 동일한 유형의 컨테이너에서 요소를 교환하는 경우 해당 컨테이너의 `swap` 멤버 함수를 사용해야 합니다.
+복잡성은 *last1* - *first1* 교체를 수행 하는 선형입니다. 멤버 함수는 일반적으로 일관된 복잡성을 가지고 있기 때문에, 동일한 유형의 컨테이너에서 요소를 교환하는 경우 해당 컨테이너의 `swap` 멤버 함수를 사용해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_swap_ranges.cpp
@@ -9421,15 +9421,15 @@ ForwardIterator transform(
 
 함수 개체에 의해 변형된 출력 요소를 받는 대상 범위에서 최종 요소의 하나 다음 위치를 주소 지정하는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 대상 범위는 변환된 소스 범위를 포함할 만큼 충분히 커야 합니다.
 
 알고리즘의 첫 번째 버전에서 *result* 가 *first1* 로 설정 된 경우 원본 및 대상 범위가 동일 하 고 시퀀스가 현재 위치에서 수정 됩니다. 하지만 *결과* 는 [`first1` + 1, `last1`) 범위 내에 있는 위치를 처리 하지 못할 수 있습니다.
 
-복잡성은 선형 이며 최대 (`last1` - `first1`) 개의 비교가 있습니다.
+복잡성은 선형 이며 최대 (`last1` - `first1`) 비교가 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_transform.cpp
@@ -9563,21 +9563,21 @@ ForwardIterator unique(
 
 연속 중복 항목을 포함하지 않는 수정된 시퀀스의 새로운 끝에 대한 정방향 반복기로, 제거되지 않은 마지막 요소 하나 다음 위치의 주소를 지정합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 두 알고리즘 모두 동일한 요소의 연속된 쌍 중 두 번째 중복을 제거합니다.
 
 알고리즘의 작업이 안정적이므로 삭제되지 않은 요소의 상대 순서가 변경되지 않습니다.
 
-참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 시퀀스의 요소 수는 알고리즘 `unique` 에 의해 변경 되지 않으며 수정 된 시퀀스의 끝을 벗어나는 요소는 역참조 가능 하지만 지정 되지 않습니다.
+참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 시퀀스의 요소 수는 `unique` 알고리즘에 의해 변경 되지 않으며 수정 된 시퀀스의 끝을 벗어난 요소는 역참조 가능 하지만 지정 되지 않습니다.
 
-복잡성은 선형 이며 비교가 필요 `(last - first) - 1` 합니다.
+복잡성은 선형 이며 `(last - first) - 1` 비교가 필요 합니다.
 
 List는 성능이 더 뛰어나고 좀 더 효과적인 멤버 함수인 "unique"를 제공합니다.
 
 이러한 알고리즘은 연관 컨테이너에서 사용할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_unique.cpp
@@ -9719,7 +9719,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 연속 중복 항목이 제거된 복사본을 수신하는 대상 범위에서 마지막 요소 하나 다음 위치의 주소 지정하는 출력 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 두 알고리즘 모두 동일한 요소의 연속된 쌍 중 두 번째 중복을 제거합니다.
 
@@ -9729,7 +9729,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 복잡성은 선형 이며 (`last` - `first`) 비교가 필요 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_unique_copy.cpp
@@ -9838,11 +9838,11 @@ ForwardIterator upper_bound(
 
 지정된 값보다 큰 값을 가진 첫 번째 요소의 위치에 대한 정방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 참조된 정렬된 소스 범위는 유효해야 하고 모든 반복기는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.
 
-정렬 된 범위는 사용 `upper_bound` 의 사전 조건이 며, 순서 지정 기준은 비교 조건자에 지정 된 것과 동일 합니다.
+정렬 된 범위는 `upper_bound` 사용의 사전 조건이 며 정렬 기준은 비교 조건자에 지정 된 것과 동일 합니다.
 
 범위는 `upper_bound`에 의해 수정되지 않습니다.
 
@@ -9850,7 +9850,7 @@ ForwardIterator upper_bound(
 
 알고리즘의 복잡성은 임의 액세스 반복기 및 선형에 대 한 로그 이며, 그렇지 않으면 (`last - first`)에 비례 하는 단계 수를 사용 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // alg_upper_bound.cpp

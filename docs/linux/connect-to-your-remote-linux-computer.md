@@ -1,14 +1,13 @@
 ---
 title: Visual Studio에서 대상 Linux 시스템에 연결
 description: Visual Studio C++ 프로젝트 내에서 원격 Linux 머신 또는 Linux용 Windows 하위 시스템에 연결하는 방법입니다.
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755280"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518220"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio에서 대상 Linux 시스템에 연결
 
@@ -18,17 +17,58 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
+원격 머신 또는 WSL(Linux용 Windows 하위 시스템)을 대상으로 하도록 Linux 프로젝트를 구성할 수 있습니다. 원격 머신 및 WSL에 대해 Visual Studio 2017에서 원격 연결을 설정해야 합니다.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+원격 머신 또는 WSL(Linux용 Windows 하위 시스템)을 대상으로 하도록 Linux 프로젝트를 구성할 수 있습니다. 원격 머신에 대해 Visual Studio에서 원격 연결을 설정해야 합니다. WSL에 연결하려면 [WSL에 연결](#connect-to-wsl) 섹션으로 건너뜁니다.
+
+::: moniker-end
+
 ::: moniker range=">=vs-2017"
 
-원격 머신 또는 WSL(Linux용 Windows 하위 시스템)을 대상으로 하도록 Linux 프로젝트를 구성할 수 있습니다. 원격 머신 및 Visual Studio 2017의 WSL에 대해 원격 연결을 설정해야 합니다.
+원격 연결을 사용하는 경우 Visual Studio C++는 원격 머신에 Linux 프로젝트를 빌드합니다. 물리적 머신, 클라우드의 VM 또는 WSL 등은 중요하지 않습니다.
+프로젝트를 빌드하기 위해 Visual Studio는 소스 코드를 원격 Linux 컴퓨터에 복사합니다. 그런 다음 Visual Studio 설정에 따라 코드를 컴파일합니다.
 
-## <a name="connect-to-a-remote-linux-computer"></a>원격 Linux 컴퓨터에 연결
+::: moniker-end
 
-원격 Linux 시스템(VM 또는 물리적 머신)에 대해 C++ Linux 프로젝트를 빌드할 때 Linux 소스 코드가 원격 Linux 컴퓨터에 복사됩니다. 그런 다음, Visual Studio 설정에 따라 컴파일됩니다.
+::: moniker range="vs-2019"
 
-이 원격 연결을 설정하려면:
+> [!NOTE]
+> Visual Studio 2019 버전 16.5 이상에서는 원격 개발을 위해 Linux 시스템에 대한 안전한 FIPS(Federal Information Processing Standard) 140-2 규격 암호화 연결도 지원합니다. FIPS 규격 연결을 사용하려면 대신 [FIPS 규격 보안 원격 Linux 개발 설정](set-up-fips-compliant-secure-remote-linux-development.md)의 단계를 따르세요.
 
-1. 처음으로 프로젝트를 빌드합니다. 또는 새 항목을 수동으로 만들 수 있습니다. **도구 > 옵션**을 선택하고 **플랫폼 간 > 연결 관리자** 노드를 연 다음, **추가** 단추를 선택합니다.
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>원격 시스템에서 SSH 서버 설정
+
+Linux 시스템에서 SSH를 아직 설정하지 않은 상태로 실행한 경우 다음 단계에 따라 설치합니다. 이 문서의 예제에서는 OpenSSH 서버 버전 7.6과 함께 Ubuntu 18.04 LTS를 사용합니다. 그러나 OpenSSH의 비교적 최근 버전을 사용하는 모든 배포판에 대한 지침은 동일해야 합니다.
+
+1. Linux 시스템에서 OpenSSH 서버를 설치하고 시작합니다.
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. 시스템이 부팅될 때 SSH 서버가 자동으로 시작되도록 하려면 systemctl을 사용하여 사용하도록 설정합니다.
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>원격 연결 설정
+
+1. Visual Studio의 메뉴 모음에서 **도구 > 옵션**을 선택하여 **옵션** 대화 상자를 엽니다. 그런 다음 **플랫폼 간 > 연결 관리자**를 선택하여 연결 관리자 대화 상자를 엽니다.
+
+   이전에 Visual Studio에서 연결을 설정하지 않은 경우 프로젝트를 처음 빌드할 때 Visual Studio에서 연결 관리자 대화 상자를 엽니다.
+
+1. 연결 관리자 대화 상자에서 **추가** 단추를 선택하여 새 연결을 추가합니다.
 
    ![연결 관리자](media/settings_connectionmanager.png)
 
@@ -48,19 +88,11 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
    | **프라이빗 키 파일**    | SSH 연결을 위해 생성된 프라이빗 키 파일
    | **암호**          | 위에서 선택한 프라이빗 키와 함께 사용된 암호
 
-   인증을 위해 암호 또는 키 파일과 암호를 사용할 수 있습니다. 대부분의 개발 시나리오에서는 암호 인증으로 충분합니다. 퍼블릭/프라이빗 키 파일을 사용하려는 경우 새로 만들거나 [기존 파일을 재사용](https://security.stackexchange.com/questions/10203/reusing-private-public-keys)할 수 있습니다. 현재, RSA 및 DSA 키만 지원됩니다.
-
-   다음 단계에 따라 프라이빗 RSA 키 파일을 만들 수 있습니다.
-
-   1. Windows 머신에서 `ssh-keygen -t rsa`를 사용하여 ssh 키 쌍을 만듭니다. 이 명령은 퍼블릭 키와 프라이빗 키를 만듭니다. 기본적으로 `id_rsa.pub` 및 `id_rsa` 이름을 사용하여 `C:\Users\%USERNAME%\.ssh` 아래에 키를 배치합니다.
-
-   1. Windows에서 Linux 머신으로 퍼블릭 키를 복사합니다. `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`
-
-   1. Linux 시스템에서 권한 있는 키 목록에 키를 추가하고 파일에 올바른 권한이 있는지 확인합니다. `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   인증을 위해 암호 또는 키 파일과 암호를 사용할 수 있습니다. 대부분의 개발 시나리오에서는 암호 인증으로 충분하지만 키 파일은 더 안전합니다. 키 쌍이 이미 있는 경우 다시 사용할 수 있습니다. 현재 Visual Studio는 원격 연결에 대해 RSA 및 DSA 키만 지원합니다.
 
 1. **연결** 단추를 선택하여 원격 컴퓨터에 대한 연결을 시도합니다.
 
-   연결에 성공하면 Visual Studio에서 원격 헤더를 사용하도록 IntelliSense를 구성하기 시작합니다. 자세한 내용은 [원격 시스템의 헤더에 대한 IntelliSense](configure-a-linux-project.md#remote_intellisense)를 참조하세요.
+   연결에 성공하면 Visual Studio에서 원격 헤더를 사용하도록 IntelliSense를 구성합니다. 자세한 내용은 [원격 시스템의 헤더에 대한 IntelliSense](configure-a-linux-project.md#remote_intellisense)를 참조하세요.
 
    연결이 실패하면 변경해야 하는 입력 상자에 빨간색 윤곽선이 표시됩니다.
 
@@ -72,13 +104,23 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
    ::: moniker range="vs-2019"
 
-   연결 문제 해결을 지원하기 위해 **도구 > 옵션 > 플랫폼 간 > 로깅**으로 이동하여 로깅을 사용하도록 설정합니다.
+## <a name="logging-for-remote-connections"></a>원격 연결에 대한 로깅
+
+   로깅을 활성화하여 연결 문제를 해결할 수 있습니다. 메뉴 모음에서 **도구 > 옵션**을 선택합니다. **옵션** 대화 상자에서 **플랫폼 간 > 로깅**을 선택합니다.
 
    ![원격 로깅](media/remote-logging-vs2019.png)
 
    로그에는 연결, 원격 머신으로 전송되는 모든 명령(해당 텍스트, 종료 코드, 실행 시간), Visual Studio에서 셸로 전송되는 모든 출력이 포함됩니다. 로깅은 Visual Studio의 모든 플랫폼 간 CMake 프로젝트 또는 MSBuild 기반 Linux 프로젝트에 대해 작동합니다.
 
    파일 또는 출력 창의 **플랫폼 간 로깅** 창에 출력되도록 구성할 수 있습니다. MSBuild 기반 Linux 프로젝트의 경우 원격 머신으로 전송된 MSBuild 명령은 Out of Process로 내보내므로 **출력 창**으로 라우팅되지 않습니다. 대신 “msbuild_” 접두사가 포함된 형태로 파일에 기록됩니다.
+
+## <a name="command-line-utility-for-the-connection-manager"></a>연결 관리자에 대한 명령줄 유틸리티  
+
+**Visual Studio 2019 버전 16.5 이상**: ConnectionManager.exe는 Visual Studio 외부에서 원격 개발 연결을 관리하는 명령줄 유틸리티입니다. 새 개발 컴퓨터를 프로비저닝하는 등의 작업에 유용합니다. 또는 연속 통합을 위해 Visual Studio를 설정하는 데 사용할 수 있습니다. ConnectionManager 명령에 대한 예제 및 전체 참조는 [ConnectionManager 참조](connectionmanager-reference.md)를 참조하세요.  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>TCP 포트 전달
 
@@ -94,9 +136,9 @@ rsync는 원격 시스템에 소스 파일을 복사하기 위한 Visual Studio�
 
 gdbserver는 임베디드 디바이스에서 디버그하는 데 사용할 수 있습니다. TCP 포트 전달을 사용하도록 설정할 수 없는 경우 모든 원격 디버깅 시나리오에 대해 gdb를 사용해야 합니다. gdb는 원격 시스템에서 프로젝트를 디버그할 때 기본적으로 사용됩니다.
 
-::: moniker-end
-
 ## <a name="connect-to-wsl"></a>WSL에 연결
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 
@@ -120,7 +162,7 @@ WSL에 대해 MSBuild 프로젝트를 구성하려면 [Linux 프로젝트 구성
 
 ::: moniker-end
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [Linux 프로젝트 구성](configure-a-linux-project.md)\
 [Linux CMake 프로젝트 구성](cmake-linux-project.md)\
