@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223042"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821742"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 클래스
 
-모든 스레드에서 액세스할 수 있는 구성 요소는 agile 구성 요소에서 발생 하는 이벤트를 나타냅니다. 상속 [EventSource](eventsource-class.md) 재정의 `Add` agile 이벤트를 호출 하는 방법에 대 한 옵션을 지정 하는 추가 형식 매개 변수를 사용 하 여 멤버 함수입니다.
+모든 스레드에서 액세스할 수 있는 구성 요소인 agile 구성 요소에 의해 발생 하는 이벤트를 나타냅니다. [EventSource](eventsource-class.md) 에서 상속 되며, agile 이벤트를 호출 하는 방법에 대 한 옵션을 지정 하기 위해 추가 형식 매개 변수를 사용 하 여 `Add` 멤버 함수를 재정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -33,14 +33,14 @@ class AgileEventSource :
 ## <a name="parameters"></a>매개 변수
 
 *TDelegateInterface*<br/>
-인터페이스 이벤트 처리기를 나타내는 대리자입니다.
+이벤트 처리기를 나타내는 대리자에 대 한 인터페이스입니다.
 
 *TEventSourceOptions*<br/>
-[InvokeModeOptions](invokemodeoptions-structure.md) invokeMode 필드를로 갖는 `InvokeMode::StopOnFirstError` 또는 `InvokeMode::FireAll`합니다.
+InvokeMode 필드가 `InvokeMode::StopOnFirstError` 또는 `InvokeMode::FireAll`로 설정 된 [InvokeModeOptions](invokemodeoptions-structure.md) 구조체입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-대부분의 Windows 런타임 구성 요소는 agile 구성 요소입니다. 자세한 내용은 [스레딩 및 마샬링 (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md)합니다.
+Windows 런타임의 대부분 구성 요소는 agile 구성 요소입니다. 자세한 내용은 [스레딩 및 마샬링 (C++/cx)](../../cppcx/threading-and-marshaling-c-cx.md)을 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -50,21 +50,21 @@ class AgileEventSource :
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** event.h
+**헤더:** 이벤트. h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="members"></a>멤버
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Public 메서드
 
 |이름|설명|
 |----------|-----------------|
-|[AgileEventSource::Add 메서드](#add)|현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 agile 이벤트 처리기 추가 **AgileEventSource** 개체입니다.|
+|[AgileEventSource:: Add 메서드](#add)|지정 된 대리자 인터페이스가 나타내는 agile 이벤트 처리기를 현재 **AgileEventSource** 개체에 대 한 이벤트 처리기 집합에 추가 합니다.|
 
-## <a name="add"></a> AgileEventSource::Add 메서드
+## <a name="add"></a>AgileEventSource:: Add 메서드
 
-현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 되는 이벤트 처리기 추가 [EventSource](eventsource-class.md) 개체입니다.
+지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 [EventSource](eventsource-class.md) 개체에 대 한 이벤트 처리기 집합에 추가 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -81,12 +81,12 @@ HRESULT Add(
 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.
 
 *token*<br/>
-이 작업이 완료 될 때 이벤트를 나타내는 핸들입니다. 이 토큰을 사용 하 여 매개 변수로 `Remove()` 이벤트 처리기를 삭제 하는 방법입니다.
+이 작업이 완료 되 면 이벤트를 나타내는 핸들입니다. 이 토큰을 `Remove()` 메서드에 대 한 매개 변수로 사용 하 여 이벤트 처리기를 삭제 합니다.
 
 ### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160077"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821846"
 ---
 # <a name="concurrency-namespace"></a>동시성 네임스페이스
 
-`Concurrency` 네임스페이스는 C++용 동시 프로그래밍 프레임워크인 동시성 런타임에 액세스하는 데 사용할 수 있는 클래스와 함수를 제공합니다. 자세한 내용은 [동시성 런타임](../../../parallel/concrt/concurrency-runtime.md)을 참조하세요.
+`Concurrency` 네임스페이스는 C++용 동시 프로그래밍 프레임워크인 동시성 런타임에 액세스하는 데 사용할 수 있는 클래스와 함수를 제공합니다. 자세한 내용은 [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ ms.locfileid: "62160077"
 namespace concurrency;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>형식 정의
 
@@ -66,8 +66,8 @@ namespace concurrency;
 |[concurrent_queue 클래스](concurrent-queue-class.md)|`concurrent_queue` 클래스는 해당 요소에 대해 선입 선출 액세스를 허용하는 시퀀스 컨테이너 클래스입니다. `push` 및 `try_pop`과 같은 동시성으로부터 안전한 작업의 제한된 집합을 사용할 수 있게 합니다.|
 |[concurrent_unordered_map 클래스](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 클래스는 `std::pair<const K, _Element_type>` 형식의 다양한 길이 요소 시퀀스를 제어하는 동시성으로부터 안전한 컨테이너입니다. 시퀀스는 동시성으로부터 안전한 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 사용할 수 있는 방식으로 표시됩니다.|
 |[concurrent_unordered_multimap 클래스](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 클래스는 `std::pair<const K, _Element_type>` 형식의 다양한 길이 요소 시퀀스를 제어하는 동시성으로부터 안전한 컨테이너입니다. 시퀀스는 동시성으로부터 안전한 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 사용할 수 있는 방식으로 표시됩니다.|
-|[concurrent_unordered_multiset 클래스](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` 클래스는 다양 한 길이의 K. 형식의 요소 시퀀스를 제어 하는 동시성 으로부터 안전한 컨테이너를 시퀀스는 동시성 으로부터 안전한 방식으로 표현 됩니다 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업 합니다.|
-|[concurrent_unordered_set 클래스](concurrent-unordered-set-class.md)|`concurrent_unordered_set` 클래스는 다양 한 길이의 K. 형식의 요소 시퀀스를 제어 하는 동시성 으로부터 안전한 컨테이너를 시퀀스는 동시성 으로부터 안전한 방식으로 표현 됩니다 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업 합니다.|
+|[concurrent_unordered_multiset 클래스](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` 클래스는 K 형식의 다양 한 길이 요소 시퀀스를 제어 하는 동시성이 보장 되는 컨테이너입니다. 시퀀스는 동시성이 보장 되는 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 가능 하 게 하는 방식으로 표현 됩니다.|
+|[concurrent_unordered_set 클래스](concurrent-unordered-set-class.md)|`concurrent_unordered_set` 클래스는 K 형식의 다양 한 길이 요소 시퀀스를 제어 하는 동시성이 보장 되는 컨테이너입니다. 시퀀스는 동시성이 보장 되는 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 가능 하 게 하는 방식으로 표현 됩니다.|
 |[concurrent_vector 클래스](concurrent-vector-class.md)|`concurrent_vector` 클래스는 모든 요소에 대해 임의 액세스를 허용하는 시퀀스 컨테이너 클래스입니다. 동시성으로부터 안전한 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 사용할 수 있게 합니다.|
 |[Context 클래스](context-class.md)|실행 컨텍스트에 대한 추상화를 나타냅니다.|
 |[context_self_unblock 클래스](context-self-unblock-class.md)|이 클래스는 동일한 컨텍스트에서 `Context` 개체의 `Unblock` 메서드를 호출하는 경우 발생하는 예외를 설명합니다. 자신을 차단 해제하려는 지정된 컨텍스트의 시도를 나타냅니다.|
@@ -120,9 +120,9 @@ namespace concurrency;
 |[structured_task_group 클래스](structured-task-group-class.md)|`structured_task_group` 클래스는 구조화된 병렬 작업 컬렉션을 나타냅니다. `task_handle` 개체를 사용하여 개별 병렬 작업을 `structured_task_group`에 대기시킨 다음 완료되기를 기다리거나 실행이 완료되기 전에 작업 그룹을 취소합니다. 이 경우 실행이 시작되지 않은 작업이 모두 중단됩니다.|
 |[target_block 클래스](target-block-class.md)|`target_block` 클래스는 대상 전용 블록에 대해 기본 링크 관리 기능 및 오류 검사를 제공하는 추상 기본 클래스입니다.|
 |[task 클래스(동시성 런타임)](task-class.md)|PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속(`then`), 조인 (`when_all`) 및 선택(`when_any`) 패턴을 사용하여 다른 작업으로 구성될 수도 있습니다.|
-|[task_canceled 클래스](task-canceled-class.md)|이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. 이 throw 됩니다는 `get()` 메서드를 [태스크](task-class.md), 취소 된 작업에 대 한 합니다.|
+|[task_canceled 클래스](task-canceled-class.md)|이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. 취소 된 작업에 대해 [작업](task-class.md)의 `get()` 메서드에서도 throw 됩니다.|
 |[task_completion_event 클래스](task-completion-event-class.md)|`task_completion_event` 클래스를 사용하면 조건이 충족될 때까지 작업 실행을 지연하거나 외부 이벤트에 대한 응답으로 작업을 시작할 수 있습니다.|
-|[task_continuation_context 클래스](task-continuation-context-class.md)|`task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. 만 UWP 앱에서이 클래스를 사용 하는 것이 유용 합니다. 비-Windows 런타임 앱에 대 한 작업 연속의 실행 컨텍스트는 런타임에 의해 결정 및 구성할 수 없습니다.|
+|[task_continuation_context 클래스](task-continuation-context-class.md)|`task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. UWP 앱에서이 클래스를 사용 하는 경우에만 유용 합니다. Windows 런타임 않는 앱의 경우 작업 연속의 실행 컨텍스트는 런타임에 의해 결정 되며 구성할 수 없습니다.|
 |[task_group 클래스](task-group-class.md)|`task_group` 클래스는 대기하거나 취소할 수 있는 병렬 작업 컬렉션을 나타냅니다.|
 |[task_handle 클래스](task-handle-class.md)|`task_handle` 클래스는 개별 병렬 작업 항목을 나타냅니다. 작업을 실행하는 데 필요한 지침 및 데이터를 캡슐화합니다.|
 |[task_options 클래스(동시성 런타임)](task-options-class-concurrency-runtime.md)|작업을 만드는 데 사용할 수 있는 옵션을 나타냅니다.|
@@ -150,7 +150,7 @@ namespace concurrency;
 |[IUMSUnblockNotification 구조체](iumsunblocknotification-structure.md)|차단되었으며 스케줄러의 지정된 일정 컨텍스트로의 반환을 트리거한 스레드 프록시가 차단 해제되고 예약할 준비가 되었다는 리소스 관리자의 알림을 나타냅니다. `GetContext` 메서드에서 반환된 스레드 프록시의 연결된 실행 컨텍스트가 다시 예약된 후에는 이 인터페이스가 유효하지 않습니다.|
 |[IVirtualProcessorRoot 구조체](ivirtualprocessorroot-structure.md)|스레드 프록시가 실행될 수 있는 하드웨어 스레드의 추상화입니다.|
 |[scheduler_interface 구조체](scheduler-interface-structure.md)|Scheduler 인터페이스|
-|[scheduler_ptr 구조체(동시성 런타임)](scheduler-ptr-structure-concurrency-runtime.md)|스케줄러에 대한 포인터를 나타냅니다. 이 클래스는 공유 수명 사양의 원시 포인터를 사용 하 여 shared_ptr 또는 일반 참조를 사용 하 여 있도록 존재 합니다.|
+|[scheduler_ptr 구조체(동시성 런타임)](scheduler-ptr-structure-concurrency-runtime.md)|스케줄러에 대한 포인터를 나타냅니다. 이 클래스는 shared_ptr를 사용 하거나 원시 포인터를 사용 하 여 일반 참조를 사용 하 여 공유 수명 사양을 허용 하기 위해 존재 합니다.|
 
 ### <a name="enumerations"></a>열거형
 
@@ -161,25 +161,25 @@ namespace concurrency;
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|동시성 런타임에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|이벤트 형식에 대한 추적 플래그입니다.|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|컨텍스트가 있는 위험 영역의 형식입니다.|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하세요. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 [Policyelementkey](concurrency-namespace-enums.md#policyelementkey)를 참조 하세요.|
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` 메시징 블록의 형식입니다.|
 |[message_status](concurrency-namespace-enums.md#message_status)|블록에 대한 `message` 개체 제공에 유효한 응답입니다.|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. Scheduler에서 스케줄러 정책 및 그에 따른 영향에 대 한 자세한 내용은 참조 하세요. [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.|
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 정책에서 스케줄러가 기본 실행 컨텍스트에 활용해야 하는 스레드 형식을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하세요. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 정책에서 스케줄러에 활용되는 일정 알고리즘을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하세요. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러 정책 및 스케줄러에 대 한 영향에 대 한 자세한 내용은 [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)를 참조 하세요.|
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 정책에서 스케줄러가 기본 실행 컨텍스트에 활용해야 하는 스레드 형식을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 [Policyelementkey](concurrency-namespace-enums.md#policyelementkey)를 참조 하세요.|
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 정책에서 스케줄러에 활용되는 일정 알고리즘을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 [Policyelementkey](concurrency-namespace-enums.md#policyelementkey)를 참조 하세요.|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|다른 스레드 프록시로의 협조적 컨텍스트 전환을 실행하는 경우 스레드 프록시의 현재 상태를 나타내는 데 사용됩니다.|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|`task_group` 또는 `structured_task_group` 개체의 실행 상태를 설명합니다. 이 형식의 값은 작업 그룹에 예약된 작업이 완료되기를 기다리는 수많은 메서드에 의해 반환됩니다.|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` 정책에서 Windows 8 또는 그 이상 버전의 운영 체제에서 실행되는 애플리케이션에 대한 스케줄러 스레드에서 Windows 런타임이 초기화될지 여부와 초기화되는 방법을 설명하는데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하세요. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` 정책에서 Windows 8 또는 그 이상 버전의 운영 체제에서 실행되는 애플리케이션에 대한 스케줄러 스레드에서 Windows 런타임이 초기화될지 여부와 초기화되는 방법을 설명하는데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 [Policyelementkey](concurrency-namespace-enums.md#policyelementkey)를 참조 하세요.|
 
 ### <a name="functions"></a>함수
 
 |이름|설명|
 |----------|-----------------|
 |[Alloc 함수](concurrency-namespace-functions.md#alloc)|동시성 런타임 캐싱 하위 할당기에서 지정된 크기의 메모리 블록을 할당합니다.|
-|[asend 함수](concurrency-namespace-functions.md#asend)|오버로드됨. 대상 블록에 데이터를 전파하는 작업을 예약하는 비동기 전송 작업입니다.|
+|[asend 함수](concurrency-namespace-functions.md#asend)|오버로드되었습니다. 대상 블록에 데이터를 전파하는 작업을 예약하는 비동기 전송 작업입니다.|
 |[cancel_current_task 함수](concurrency-namespace-functions.md#cancel_current_task)|현재 실행 중인 작업을 취소합니다. 이 함수는 작업 실행을 중단하도록 작업 본문 내에서 호출될 수 있으며 `canceled` 상태로 들어가도록 할 수 있습니다.<br /><br /> `task`의 본문에 없는 경우에 이 함수를 호출하는 것은 지원되는 시나리오가 아닙니다. 그럴 경우 애플리케이션의 충돌 또는 시스템 중단 같이 정의되지 않은 동작이 발생합니다.|
 |[create_async 함수](concurrency-namespace-functions.md#create_async)|사용자가 제공한 람다 또는 함수 개체를 기준으로 Windows 런타임 비동기 구문을 만듭니다. `create_async`의 반환 형식은 메서드에 전달된 람다의 시그니처에 따라 `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` 또는 `IAsyncOperationWithProgress<TResult, TProgress>^` 중 하나입니다.|
-|[create_task 함수](concurrency-namespace-functions.md#create_task)|오버로드됨. PPL을 만듭니다 [태스크](task-class.md) 개체입니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 `auto` 키워드 사용을 허용하기 때문에 주로 편의상 제공됩니다.|
+|[create_task 함수](concurrency-namespace-functions.md#create_task)|오버로드되었습니다. PPL [작업](task-class.md) 개체를 만듭니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 `auto` 키워드 사용을 허용하기 때문에 주로 편의상 제공됩니다.|
 |[CreateResourceManager 함수](concurrency-namespace-functions.md#createresourcemanager)|동시성 런타임 리소스 관리자의 singleton 인스턴스를 나타내는 인터페이스를 반환합니다. 리소스 관리자는 서로 협력하려는 스케줄러에 리소스를 할당해야 합니다.|
 |[DisableTracing 함수](concurrency-namespace-functions.md#disabletracing)|동시성 런타임에서 추적을 사용하지 않도록 설정합니다. ETW 추적이 기본적으로 등록되지 않으므로 이 함수는 사용되지 않습니다.|
 |[EnableTracing 함수](concurrency-namespace-functions.md#enabletracing)|동시성 런타임에서 추적을 사용하도록 설정합니다. 이제 ETW 추적이 기본적으로 설정되므로 이 함수는 사용되지 않습니다.|
@@ -192,42 +192,42 @@ namespace concurrency;
 |[GetSchedulerId 함수](concurrency-namespace-functions.md#getschedulerid)|`IScheduler` 인터페이스를 구현하는 스케줄러에 할당할 수 있는 고유 식별자를 반환합니다.|
 |[interruption_point 함수](concurrency-namespace-functions.md#interruption_point)|취소를 위한 중단 지점을 만듭니다. 이 함수가 호출된 컨텍스트에서 취소가 진행 중이면 현재 실행 중인 병렬 작업의 실행을 중단하는 내부 예외가 발생합니다. 취소가 진행되고 있지 않으면 함수에서 아무 작업도 하지 않습니다.|
 |[is_current_task_group_canceling 함수](concurrency-namespace-functions.md#is_current_task_group_canceling)|현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없는 경우 `false`가 반환됩니다.|
-|[make_choice 함수](concurrency-namespace-functions.md#make_choice)|오버로드됨. 선택적 `choice` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
-|[make_greedy_join 함수](concurrency-namespace-functions.md#make_greedy_join)|오버로드됨. 선택적 `greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
-|[make_join 함수](concurrency-namespace-functions.md#make_join)|오버로드됨. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
+|[make_choice 함수](concurrency-namespace-functions.md#make_choice)|오버로드되었습니다. 선택적 `choice` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
+|[make_greedy_join 함수](concurrency-namespace-functions.md#make_greedy_join)|오버로드되었습니다. 선택적 `greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
+|[make_join 함수](concurrency-namespace-functions.md#make_join)|오버로드되었습니다. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
 |[make_task 함수](concurrency-namespace-functions.md#make_task)|`task_handle` 개체를 만들기 위한 팩터리 메서드입니다.|
-|[parallel_buffered_sort 함수](concurrency-namespace-functions.md#parallel_buffered_sort)|오버로드됨. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 `O(n)` 추가 공간이 필요하고 정렬되는 요소에 대한 기본 초기화를 요구한다는 점을 제외하고, 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|
-|[parallel_for 함수](concurrency-namespace-functions.md#parallel_for)|오버로드됨. `parallel_for`는 일정 범위의 인덱스를 반복하고 각 반복 시 사용자가 제공한 함수를 병렬로 실행합니다.|
-|[parallel_for_each 함수](concurrency-namespace-functions.md#parallel_for_each)|오버로드됨. `parallel_for_each`는 범위 내의 각 요소에 지정된 함수를 병렬로 적용합니다. 요소에 대한 반복이 병렬로 수행되고 반복 순서가 지정되지 않는다는 점을 제외하고 `std` 네임스페이스의 `for_each` 함수와 의미 체계가 같습니다. `_Func` 인수는 `operator()(T)` 형식의 함수 호출 연산자를 지원해야 합니다. 여기서 `T` 매개 변수는 반복되는 컨테이너의 항목 형식입니다.|
-|[parallel_invoke 함수](concurrency-namespace-functions.md#parallel_invoke)|오버로드됨. 매개 변수로 제공된 함수 개체를 병렬로 실행하고 실행이 완료될 때까지 차단됩니다. 각 함수 개체는 람다 식, 함수에 대한 포인터 또는 `void operator()()` 서명을 사용하여 함수 호출 연산자를 지원하는 모든 개체일 수 있습니다.|
-|[parallel_radixsort 함수](concurrency-namespace-functions.md#parallel_radixsort)|오버로드됨. 기수 정렬 알고리즘을 사용하여 지정된 범위의 요소를 비내림차순으로 정렬합니다. 부호 없는 정수와 유사한 키로 정렬할 요소를 프로젝션할 수 있는 프로젝션 함수를 요구하는 안정적인 정렬 함수입니다. 정렬되는 요소에 기본 초기화가 필요합니다.|
-|[parallel_reduce 함수](concurrency-namespace-functions.md#parallel_reduce)|오버로드됨. 연속적 부분 합계를 계산하여 지정된 범위 내 모든 요소의 합계를 계산하거나, 합계 대신 지정된 이항 연산을 사용하여 유사하게 구한 연속적 부분 결과의 결과를 병렬로 계산합니다. `parallel_reduce`는 이항 연산이 결합형이어야 하고 초기 값 대신 ID 값을 요구한다는 점을 제외하고 `std::accumulate`와 의미 체계가 비슷합니다.|
-|[parallel_sort 함수](concurrency-namespace-functions.md#parallel_sort)|오버로드됨. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|
-|[parallel_transform 함수](concurrency-namespace-functions.md#parallel_transform)|오버로드됨. 두 소스 범위에서 요소 쌍에 또는 소스 범위에 있는 각 요소에 지정된 함수 개체를 적용하고 대상 범위에 함수 개체의 반환 값을 병렬로 복사합니다. 이 함수는 `std::transform`과 의미 체계가 같습니다.|
-|[receive 함수](concurrency-namespace-functions.md#receive)|오버로드됨. 컨텍스트에서 정확히 한 소스의 데이터를 대기하고 허용되는 값을 필터링할 수 있게 하는 일반 receive 구현입니다.|
+|[parallel_buffered_sort 함수](concurrency-namespace-functions.md#parallel_buffered_sort)|오버로드되었습니다. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 `O(n)` 추가 공간이 필요하고 정렬되는 요소에 대한 기본 초기화를 요구한다는 점을 제외하고, 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|
+|[parallel_for 함수](concurrency-namespace-functions.md#parallel_for)|오버로드되었습니다. `parallel_for`는 일정 범위의 인덱스를 반복하고 각 반복 시 사용자가 제공한 함수를 병렬로 실행합니다.|
+|[parallel_for_each 함수](concurrency-namespace-functions.md#parallel_for_each)|오버로드되었습니다. `parallel_for_each`는 범위 내의 각 요소에 지정된 함수를 병렬로 적용합니다. 요소에 대한 반복이 병렬로 수행되고 반복 순서가 지정되지 않는다는 점을 제외하고 `std` 네임스페이스의 `for_each` 함수와 의미 체계가 같습니다. `_Func` 인수는 `operator()(T)` 형식의 함수 호출 연산자를 지원해야 합니다. 여기서 `T` 매개 변수는 반복되는 컨테이너의 항목 형식입니다.|
+|[parallel_invoke 함수](concurrency-namespace-functions.md#parallel_invoke)|오버로드되었습니다. 매개 변수로 제공된 함수 개체를 병렬로 실행하고 실행이 완료될 때까지 차단됩니다. 각 함수 개체는 람다 식, 함수에 대한 포인터 또는 `void operator()()` 서명을 사용하여 함수 호출 연산자를 지원하는 모든 개체일 수 있습니다.|
+|[parallel_radixsort 함수](concurrency-namespace-functions.md#parallel_radixsort)|오버로드되었습니다. 기수 정렬 알고리즘을 사용하여 지정된 범위의 요소를 비내림차순으로 정렬합니다. 부호 없는 정수와 유사한 키로 정렬할 요소를 프로젝션할 수 있는 프로젝션 함수를 요구하는 안정적인 정렬 함수입니다. 정렬되는 요소에 기본 초기화가 필요합니다.|
+|[parallel_reduce 함수](concurrency-namespace-functions.md#parallel_reduce)|오버로드되었습니다. 연속적 부분 합계를 계산하여 지정된 범위 내 모든 요소의 합계를 계산하거나, 합계 대신 지정된 이항 연산을 사용하여 유사하게 구한 연속적 부분 결과의 결과를 병렬로 계산합니다. `parallel_reduce`는 이항 연산이 결합형이어야 하고 초기 값 대신 ID 값을 요구한다는 점을 제외하고 `std::accumulate`와 의미 체계가 비슷합니다.|
+|[parallel_sort 함수](concurrency-namespace-functions.md#parallel_sort)|오버로드되었습니다. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|
+|[parallel_transform 함수](concurrency-namespace-functions.md#parallel_transform)|오버로드되었습니다. 두 소스 범위에서 요소 쌍에 또는 소스 범위에 있는 각 요소에 지정된 함수 개체를 적용하고 대상 범위에 함수 개체의 반환 값을 병렬로 복사합니다. 이 함수는 `std::transform`과 의미 체계가 같습니다.|
+|[receive 함수](concurrency-namespace-functions.md#receive)|오버로드되었습니다. 컨텍스트에서 정확히 한 소스의 데이터를 대기하고 허용되는 값을 필터링할 수 있게 하는 일반 receive 구현입니다.|
 |[run_with_cancellation_token 함수](concurrency-namespace-functions.md#run_with_cancellation_token)|지정된 취소 토큰의 컨텍스트에서 동기적으로 즉시 함수 개체를 실행합니다.|
-|[send 함수](concurrency-namespace-functions.md#send)|오버로드됨. 대상이 메시지를 수락 또는 거절할 때까지 기다리는 동기 전송 작업입니다.|
+|[send 함수](concurrency-namespace-functions.md#send)|오버로드되었습니다. 대상이 메시지를 수락 또는 거절할 때까지 기다리는 동기 전송 작업입니다.|
 |[set_ambient_scheduler 함수 (동시성 런타임)](concurrency-namespace-functions.md#set_ambient_scheduler)||
-|[set_task_execution_resources 함수](concurrency-namespace-functions.md#set_task_execution_resources)|오버로드됨. 동시성 런타임 내부 작업자 스레드가 사용하는 실행 리소스를 지정된 선호도 집합으로 제한합니다.<br /><br /> 리소스 관리자가 생성되기 전이나 두 리소스 관리자 수명 사이에만 이 메서드를 호출할 수 있습니다. 리소스 관리자가 호출 시 존재하지 않는 한 여러 번 호출할 수 있습니다. 선호도 제한이 설정된 후에는 다음 유효한 `set_task_execution_resources` 메서드 호출까지 적용된 상태로 유지됩니다.<br /><br /> 제공된 선호도 마스크는 프로세스 선호도 마스크의 하위 집합이 아니어야 합니다. 필요한 경우 프로세스 선호도가 업데이트됩니다.|
+|[set_task_execution_resources 함수](concurrency-namespace-functions.md#set_task_execution_resources)|오버로드되었습니다. 동시성 런타임 내부 작업자 스레드가 사용하는 실행 리소스를 지정된 선호도 집합으로 제한합니다.<br /><br /> 리소스 관리자가 생성되기 전이나 두 리소스 관리자 수명 사이에만 이 메서드를 호출할 수 있습니다. 리소스 관리자가 호출 시 존재하지 않는 한 여러 번 호출할 수 있습니다. 선호도 제한이 설정된 후에는 다음 유효한 `set_task_execution_resources` 메서드 호출까지 적용된 상태로 유지됩니다.<br /><br /> 제공된 선호도 마스크는 프로세스 선호도 마스크의 하위 집합이 아니어야 합니다. 필요한 경우 프로세스 선호도가 업데이트됩니다.|
 |[swap 함수](concurrency-namespace-functions.md#swap)|두 `concurrent_vector` 개체의 요소를 교환합니다.|
 |[task_from_exception 함수 (동시성 런타임)](concurrency-namespace-functions.md#task_from_exception)||
 |[task_from_result 함수 (동시성 런타임)](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name 함수](concurrency-namespace-functions.md#trace_agents_register_name)|ETW 추적에서 메시지 블록 또는 에이전트에 지정된 이름을 연결합니다.|
-|[try_receive 함수](concurrency-namespace-functions.md#try_receive)|오버로드됨. 컨텍스트에서 정확히 한 소스의 데이터를 찾고 허용되는 값을 필터링할 수 있게 하는 일반 try-receive 구현입니다. 데이터가 준비되지 않은 경우 메서드가 false를 반환합니다.|
+|[try_receive 함수](concurrency-namespace-functions.md#try_receive)|오버로드되었습니다. 컨텍스트에서 정확히 한 소스의 데이터를 찾고 허용되는 값을 필터링할 수 있게 하는 일반 try-receive 구현입니다. 데이터가 준비되지 않은 경우 메서드가 false를 반환합니다.|
 |[wait 함수](concurrency-namespace-functions.md#wait)|지정된 시간 동안 현재 컨텍스트를 일시 중지합니다.|
 |[when_all 함수](concurrency-namespace-functions.md#when_all)|인수로 제공된 모든 작업이 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
-|[when_any 함수](concurrency-namespace-functions.md#when_any)|오버로드됨. 인수로 제공된 모든 작업이 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
+|[when_any 함수](concurrency-namespace-functions.md#when_any)|오버로드되었습니다. 인수로 제공된 모든 작업이 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
 
 ### <a name="operators"></a>연산자
 
 |이름|설명|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같지 않은지 테스트합니다.|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|오버로드됨. 인수로 제공된 두 작업이 모두 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
-|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|오버로드됨. 인수로 제공된 작업 중 하나가 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|오버로드되었습니다. 인수로 제공 된 두 작업이 모두 성공적으로 완료 되 면 완료 되는 작업을 만듭니다.|
+|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|오버로드되었습니다. 인수로 제공된 작업 중 하나가 성공적으로 완료될 경우 완료되는 작업을 만듭니다.|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작은지 테스트합니다.|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 작거나 같은지 테스트합니다.|
-|[연산자==](concurrency-namespace-operators.md#operator_eq_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같은지 테스트합니다.|
+|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같은지 테스트합니다.|
 |[operator>](concurrency-namespace-operators.md#operator_gt)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 큰지 테스트합니다.|
 |[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체보다 크거나 같은지 테스트합니다.|
 
@@ -258,6 +258,6 @@ namespace concurrency;
 
 **헤더:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [참조](reference-concurrency-runtime.md)

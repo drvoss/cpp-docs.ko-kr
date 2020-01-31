@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398812"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821716"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 구조체
 
@@ -130,45 +130,45 @@ struct ArgTraits<
 ### <a name="parameters"></a>매개 변수
 
 *TMemberFunction*<br/>
-Typename 매개 변수 수와 일치 하는 ArgTraits 구조체에 대 한 `Invoke` 메서드 시그니처입니다.
+`Invoke` 메서드 시그니처와 일치 시킬 수 없는 ArgTraits 구조체의 Typename 매개 변수입니다.
 
 *TDelegateInterface*<br/>
 대리자 인터페이스입니다.
 
 *TArg1*<br/>
-첫 번째 인수 형식의 `Invoke` 메서드.
+`Invoke` 메서드의 첫 번째 인수 형식입니다.
 
 *TArg2*<br/>
-형식의 두 번째 인수는 `Invoke` 메서드.
+`Invoke` 메서드의 두 번째 인수 형식입니다.
 
 *TArg3*<br/>
-세 번째 인수 형식의 `Invoke` 메서드.
+`Invoke` 메서드의 세 번째 인수 형식입니다.
 
 *TArg4*<br/>
-네 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 네 번째 인수 형식입니다.
 
 *TArg5*<br/>
-다섯 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 다섯 번째 인수 형식입니다.
 
 *TArg6*<br/>
-여섯 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 여섯 번째 인수 형식입니다.
 
 *TArg7*<br/>
-일곱 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 일곱 번째 인수 형식입니다.
 
 *TArg8*<br/>
-여덟 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 여덟 번째 인수 형식입니다.
 
 *TArg9*<br/>
-아홉 번째 인수의 형식은 `Invoke` 메서드.
+`Invoke` 메서드의 아홉 번째 인수 형식입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-`ArgTraits` 구조 인터페이스 및 지정 된 개수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.
+`ArgTraits` 구조체는 지정 된 대리자 인터페이스와 지정 된 수의 매개 변수를 포함 하는 익명 멤버 함수를 선언 합니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
 이름       | 설명
 ---------- | ----------------------
@@ -186,7 +186,7 @@ Typename 매개 변수 수와 일치 하는 ArgTraits 구조체에 대 한 `Invo
 
 이름                     | 설명
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | 매개 변수 개수를 유지 합니다 `Invoke` 대리자 인터페이스의 메서드입니다.
+[ArgTraits::args](#args) | 대리자 인터페이스의 `Invoke` 메서드에 있는 매개 변수 개수를 유지 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -194,9 +194,9 @@ Typename 매개 변수 수와 일치 하는 ArgTraits 구조체에 대 한 `Invo
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** event.h
+**헤더:** 이벤트. h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
 ## <a name="args"></a>ArgTraits::args
 
@@ -206,6 +206,6 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 static const int args = -1;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-매개 변수 개수를 유지 합니다 `Invoke` 대리자 인터페이스의 메서드입니다. 때 `args` 가-1에 대 한 일치 하는 항목이 있을 수 있습니다는 `Invoke` 메서드 시그니처입니다.
+대리자 인터페이스의 `Invoke` 메서드에 있는 매개 변수 개수를 유지 합니다. `args`가-1 이면 `Invoke` 메서드 시그니처와 일치 하는 항목이 없을 수 있습니다.

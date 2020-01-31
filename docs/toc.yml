@@ -692,6 +692,8 @@
                           href: build/reference/qifist-suppress-ftol.md
                         - name: /Qimprecise_fwaits(Try 블록 내의 fwait 제거)
                           href: build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
+                        - name: /QIntel-jcc-erratum
+                          href: build/reference/qintel-jcc-erratum.md
                         - name: /Qpar(자동 평행화 도우미)
                           href: build/reference/qpar-auto-parallelizer.md
                         - name: /Qpar-report(자동 병렬화 도우미 보고 수준)
@@ -4003,7 +4005,7 @@
               items:
                 - name: 클래스 및 구조체
                   href: cpp/classes-and-structs-cpp.md
-                - name: 클래스
+                - name: class
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md

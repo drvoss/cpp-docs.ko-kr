@@ -1,28 +1,28 @@
 ---
-title: '연습: MFC를 사용 하 여 리본 응용 프로그램 만들기'
+title: '연습: MFC를 사용하여 리본 애플리케이션 만들기'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907389"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821924"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>연습: MFC를 사용 하 여 리본 응용 프로그램 만들기
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>연습: MFC를 사용하여 리본 애플리케이션 만들기
 
 이 연습에서는 **MFC 응용 프로그램 마법사** 를 사용 하 여 기본적으로 리본이 있는 응용 프로그램을 만드는 방법을 보여 줍니다. 그런 다음 **즐겨찾기** 리본 패널이 있는 **사용자 지정** 리본 범주를 추가 하 여 리본을 확장 한 다음 자주 사용 하는 몇 가지 명령을 패널에 추가할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습에서는 **일반 개발 설정을**사용 하도록 Visual Studio를 설정 했다고 가정 합니다. 다른 설정을 사용 하는 경우 다음 지침에서 참조 되는 UI (사용자 인터페이스) 요소 중 일부가 표시 되지 않을 수 있습니다.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>리본 메뉴를 포함하고 있는 MFC 애플리케이션을 만들려면
 
-1. **Mfc 응용 프로그램 마법사** 를 사용 하 여 리본의 mfc 응용 프로그램을 만듭니다. [연습: Visual Studio 버전에 대 한](walkthrough-using-the-new-mfc-shell-controls.md) 마법사를 여는 방법에 대 한 지침은 새 MFC 셸 컨트롤을 사용 합니다.
+1. **Mfc 응용 프로그램 마법사** 를 사용 하 여 리본의 mfc 응용 프로그램을 만듭니다. 사용 중인 Visual Studio 버전에 대 한 마법사를 여는 방법에 대 한 지침은 [연습: 새 MFC 셸 컨트롤 사용](walkthrough-using-the-new-mfc-shell-controls.md) 을 참조 하세요.
 
 1. **MFC 응용 프로그램 마법사**에서 다음 옵션을 설정 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "70907389"
 
     **Category1** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다. **속성** 창에서 **Caption** 을 *사용자 지정*으로 변경 합니다.
 
-    **이미지** 및 **작은 이미지** 속성은이 범주의 리본 요소에 대 한 아이콘으로 사용 되는 비트맵을 지정 합니다. 이 연습 범위에서는 사용자 지정 비트맵 만들기를 다루지 않기 때문에, 마법사에서 만든 비트맵을 다시 사용합니다. 작은 비트맵은 16 x 16 픽셀입니다. 작은 이미지의 경우 `IDB_FILESMALL` 리소스 ID가 액세스 하는 비트맵을 사용 합니다. 큰 비트맵은 32 x 32 픽셀입니다. 이미지가 클 경우 `IDB_FILELARGE` 리소스 ID에서 액세스 하는 비트맵을 사용 합니다.
+    **이미지** 및 **작은 이미지** 속성은이 범주의 리본 요소에 대 한 아이콘으로 사용 되는 비트맵을 지정 합니다. 이 연습 범위에서는 사용자 지정 비트맵 만들기를 다루지 않기 때문에, 마법사에서 만든 비트맵을 다시 사용합니다. 작은 비트맵은 16 x 16 픽셀입니다. 작은 이미지의 경우 `IDB_FILESMALL` 리소스 ID에 의해 액세스 되는 비트맵을 사용 합니다. 큰 비트맵은 32 x 32 픽셀입니다. 이미지가 클 경우 `IDB_FILELARGE` 리소스 ID에서 액세스 하는 비트맵을 사용 합니다.
 
     > [!NOTE]
     > HDPI 디스플레이에서는 HDPI 버전의 이미지가 자동으로 사용됩니다.
@@ -73,9 +73,9 @@ ms.locfileid: "70907389"
 
     **인쇄** 단추를 만들려면 단추 도구를 패널로 끌어 옵니다.
 
-    **속성** 창에서 **ID** 속성을 **ID_FILE_PRINT**로 변경 합니다 .이 속성은 이미 정의 되어 있어야 합니다. **캡션을** *인쇄*로 변경 합니다. **이미지 인덱스** 를 *4*로 변경 합니다.
+    **속성** 창에서 **ID** 속성을 이미 정의 되어 있어야 하는 **ID_FILE_PRINT**로 변경 합니다. **캡션을** *인쇄*로 변경 합니다. **이미지 인덱스** 를 *4*로 변경 합니다.
 
-    **빠른 인쇄** 단추를 만들려면 **메뉴 항목**옆의 속성 값 열을 클릭 한 다음 줄임표 ( **...** )를 클릭 합니다. **항목 편집기**에서 레이블이 없는 **추가** 단추를 클릭 하 여 메뉴 항목을 만듭니다. **속성** 창에서 **Caption** 을 *빠른 인쇄*로 변경 하 고 **ID** 를 *ID_FILE_PRINT_DIRECT*로 변경 하 고 **이미지** 를 *5*로 변경 합니다. Image 속성은 `IDB_FILESMALL` 비트맵 리소스의 **빠른 인쇄** 아이콘을 지정 합니다.
+    **빠른 인쇄** 단추를 만들려면 **메뉴 항목**옆의 속성 값 열을 클릭 한 다음 줄임표 ( **...** )를 클릭 합니다. **항목 편집기**에서 레이블이 없는 **추가** 단추를 클릭 하 여 메뉴 항목을 만듭니다. **속성** 창에서 **Caption** 을 *빠른 인쇄*로 변경 하 고 **ID** 를 *ID_FILE_PRINT_DIRECT*, **이미지** 를 *5*로 변경 합니다. Image 속성은 `IDB_FILESMALL` 비트맵 리소스에서 **빠른 인쇄** 아이콘을 지정 합니다.
 
 1. 리본 패널에 단추가 추가되었는지 확인하기 위해 애플리케이션을 빌드하고 실행합니다. 응용 프로그램을 빌드하려면 **빌드** 메뉴에서 **솔루션 빌드**를 클릭 합니다. 응용 프로그램이 성공적으로 빌드되면 **디버그** 메뉴에서 **디버깅 시작** 을 클릭 하 여 응용 프로그램을 실행 합니다. 리본 메뉴의 **사용자 지정** 탭에 있는 **즐겨찾기** 패널의 **인쇄** 단추와 콤보 상자가 표시 됩니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "70907389"
 
 종단 간 샘플은 [샘플 (MFC 기능 팩)](../overview/visual-cpp-samples.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [연습](../mfc/walkthroughs-mfc.md)<br/>
 [샘플 (MFC 기능 팩)](../overview/visual-cpp-samples.md)

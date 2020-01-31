@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398513"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821833"
 ---
 # <a name="eventsource-class"></a>EventSource 클래스
 
-Agile이 아닌 이벤트를 나타냅니다. `EventSource` 멤버 함수는 이벤트 처리기를 추가, 삭제 및 호출합니다. Agile 이벤트를 사용 하 여 [AgileEventSource](agileeventsource-class.md)합니다.
+Agile이 아닌 이벤트를 나타냅니다. `EventSource` 멤버 함수는 이벤트 처리기를 추가, 삭제 및 호출합니다. Agile 이벤트의 경우 [AgileEventSource](agileeventsource-class.md)를 사용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,9 +44,9 @@ class EventSource;
 ### <a name="parameters"></a>매개 변수
 
 *TDelegateInterface*<br/>
-인터페이스 이벤트 처리기를 나타내는 대리자입니다.
+이벤트 처리기를 나타내는 대리자에 대 한 인터페이스입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Public 생성자
 
@@ -58,16 +58,16 @@ class EventSource;
 
 | 이름                                 | 설명                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 되는 이벤트 처리기 추가 `EventSource` 개체입니다.                     |
-| [EventSource::GetSize](#getsize)     | 현재 연결 된 이벤트 처리기의 수를 검색 `EventSource` 개체입니다.                                                                         |
-| [EventSource::InvokeAll](#invokeall) | 현재 연결 된 각 이벤트 처리기가 호출 `EventSource` 지정 된 인수 형식 및 인수를 사용 하 여 개체입니다.                                      |
-| [EventSource::Remove](#remove)       | 현재 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰을 나타내는 이벤트 처리기를 삭제 합니다. `EventSource` 개체입니다. |
+| [EventSource::Add](#add)             | 지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 `EventSource` 개체에 대 한 이벤트 처리기 집합에 추가 합니다.                     |
+| [EventSource::GetSize](#getsize)     | 현재 `EventSource` 개체와 연결 된 이벤트 처리기의 수를 검색 합니다.                                                                         |
+| [EventSource::InvokeAll](#invokeall) | 지정 된 인수 형식 및 인수를 사용 하 여 현재 `EventSource` 개체와 연결 된 각 이벤트 처리기를 호출 합니다.                                      |
+| [EventSource::Remove](#remove)       | 현재 `EventSource` 개체와 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다. |
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
 | 이름                                                    | 설명                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | 에 대 한 액세스를 동기화 합니다 [targets_](#targets) 배열을 추가 하는 경우, 제거 또는 이벤트 처리기를 호출 합니다.                          |
+| [EventSource::addRemoveLock_](#addremovelock)           | 이벤트 처리기를 추가, 제거 또는 호출할 때 [targets_](#targets) 배열에 대 한 액세스를 동기화 합니다.                          |
 | [EventSource::targets_](#targets)                       | 하나 이상의 이벤트 처리기 배열입니다.                                                                                           |
 | [EventSource::targetsPointerLock_](#targetspointerlock) | 이 EventSource의 이벤트 처리기를 추가, 삭제 또는 호출하는 동안에도 내부 데이터 멤버에 대한 액세스를 동기화합니다. |
 
@@ -77,13 +77,13 @@ class EventSource;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** event.h
+**헤더:** 이벤트. h
 
 **네임스페이스:** Microsoft::WRL
 
 ## <a name="add"></a>EventSource::Add
 
-현재 이벤트 처리기 집합에 지정 된 대리자를 인터페이스에 의해 표시 되는 이벤트 처리기 추가 `EventSource` 개체입니다.
+지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 `EventSource` 개체에 대 한 이벤트 처리기 집합에 추가 합니다.
 
 ```cpp
 HRESULT Add(
@@ -98,7 +98,7 @@ HRESULT Add(
 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.
 
 *token*<br/>
-이 작업이 완료 될 때 이벤트를 나타내는 핸들입니다. 이 토큰에 대 한 매개 변수로 사용 합니다 [remove ()](#remove) 이벤트 처리기를 삭제 하는 방법입니다.
+이 작업이 완료 되 면 이벤트를 나타내는 핸들입니다. 이 토큰을 [Remove ()](#remove) 메서드에 대 한 매개 변수로 사용 하 여 이벤트 처리기를 삭제 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -106,7 +106,7 @@ HRESULT Add(
 
 ## <a name="addremovelock"></a>EventSource::addRemoveLock_
 
-에 대 한 액세스를 동기화 합니다 [targets_](#targets) 배열을 추가 하는 경우, 제거 또는 이벤트 처리기를 호출 합니다.
+이벤트 처리기를 추가, 제거 또는 호출할 때 [targets_](#targets) 배열에 대 한 액세스를 동기화 합니다.
 
 ```cpp
 Wrappers::SRWLock addRemoveLock_;
@@ -122,7 +122,7 @@ EventSource();
 
 ## <a name="getsize"></a>EventSource::GetSize
 
-현재 연결 된 이벤트 처리기의 수를 검색 `EventSource` 개체입니다.
+현재 `EventSource` 개체와 연결 된 이벤트 처리기의 수를 검색 합니다.
 
 ```cpp
 size_t GetSize() const;
@@ -130,11 +130,11 @@ size_t GetSize() const;
 
 ### <a name="return-value"></a>반환 값
 
-이벤트 처리기의 수가 [targets_](#targets)합니다.
+[Targets_](#targets)이벤트 처리기 수입니다.
 
 ## <a name="invokeall"></a>EventSource::InvokeAll
 
-현재 연결 된 각 이벤트 처리기가 호출 `EventSource` 지정 된 인수 형식 및 인수를 사용 하 여 개체입니다.
+지정 된 인수 형식 및 인수를 사용 하 여 현재 `EventSource` 개체와 연결 된 각 이벤트 처리기를 호출 합니다.
 
 ```cpp
 void InvokeAll();
@@ -317,7 +317,7 @@ void InvokeAll(
 일곱 번째 이벤트 처리기 인수 형식입니다.
 
 *T8*<br/>
-여덟 번째 이벤트 처리기 인수 형식입니다.
+여덟 번째 이벤트 처리기 인수의 형식입니다.
 
 *T9*<br/>
 아홉 번째 이벤트 처리기 인수 형식입니다.
@@ -354,7 +354,7 @@ void InvokeAll(
 
 ## <a name="remove"></a>EventSource::Remove
 
-현재 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰을 나타내는 이벤트 처리기를 삭제 합니다. `EventSource` 개체입니다.
+현재 `EventSource` 개체와 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다.
 
 ```cpp
 HRESULT Remove(
@@ -365,15 +365,15 @@ HRESULT Remove(
 ### <a name="parameters"></a>매개 변수
 
 *token*<br/>
-이벤트 처리기를 나타내는 핸들입니다. 이 토큰은 이벤트 처리기를 등록 된 경우 반환 된 합니다 [add ()](#add) 메서드.
+이벤트 처리기를 나타내는 핸들입니다. 이 토큰은 [Add ()](#add) 메서드에서 이벤트 처리기를 등록할 때 반환 되었습니다.
 
 ### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-에 대 한 자세한 내용은 `EventRegistrationToken` 구조체를 참조 하세요를 **Windows::Foundation::EventRegistrationToken 구조** 항목에는 **Windows 런타임** 설명서를 참조 합니다.
+`EventRegistrationToken` 구조에 대 한 자세한 내용은 **Windows 런타임** 참조 설명서의 **Windows:: Foundation:: EventRegistrationToken structure** 항목을 참조 하세요.
 
 ## <a name="targets"></a>EventSource::targets_
 
@@ -383,13 +383,13 @@ HRESULT Remove(
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-때 현재 표시 되는 이벤트 `EventSource` 발생 하는 개체, 이벤트 처리기가 호출 됩니다.
+현재 `EventSource` 개체가 나타내는 이벤트가 발생 하면 이벤트 처리기가 호출 됩니다.
 
 ## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
 
-이 대 한 이벤트 처리기는 동안에 내부 데이터 멤버에 대 한 액세스를 동기화 `EventSource` 추가, 제거 또는 호출 합니다.
+이 `EventSource`에 대 한 이벤트 처리기를 추가, 제거 또는 호출 하는 동안에도 내부 데이터 멤버에 대 한 액세스를 동기화 합니다.
 
 ```cpp
 Wrappers::SRWLock targetsPointerLock_;

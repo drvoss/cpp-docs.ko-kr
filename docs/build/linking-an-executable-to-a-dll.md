@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: fe0a4fc37291b4ccc904f889a9d38748fc38195c
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026002"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821384"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL에 실행 파일 링크
 
@@ -42,11 +42,11 @@ ms.locfileid: "70026002"
 
 시스템이 동적으로 연결 된 참조를 포함 하는 프로그램을 시작 하면 프로그램의 실행 파일에 있는 정보를 사용 하 여 필요한 Dll을 찾습니다. DLL을 찾을 수 없는 경우 시스템은 프로세스를 종료 하 고 오류를 보고 하는 대화 상자를 표시 합니다. 그렇지 않으면 시스템은 DLL 모듈을 프로세스 주소 공간에 매핑합니다.
 
-Dll 중 하나에 초기화 및 종료 코드 (예: `DllMain`)에 대 한 진입점 함수가 있는 경우 운영 체제에서 함수를 호출 합니다. 진입점 함수에 전달 된 매개 변수 중 하나는 DLL이 프로세스에 연결 되 고 있음을 나타내는 코드를 지정 합니다. 진입점 함수에서 TRUE를 반환 하지 않는 경우 시스템은 프로세스를 종료 하 고 오류를 보고 합니다.
+Dll에 `DllMain`초기화 및 종료 코드에 대 한 진입점 함수가 있는 경우 운영 체제가 함수를 호출 합니다. 진입점 함수에 전달 된 매개 변수 중 하나는 DLL이 프로세스에 연결 되 고 있음을 나타내는 코드를 지정 합니다. 진입점 함수에서 TRUE를 반환 하지 않는 경우 시스템은 프로세스를 종료 하 고 오류를 보고 합니다.
 
 마지막으로 시스템은 프로세스의 실행 코드를 수정 하 여 DLL 함수에 대 한 시작 주소를 제공 합니다.
 
-프로그램의 나머지 코드와 마찬가지로 로더는 프로세스가 시작 될 때 DLL 코드를 프로세스의 주소 공간에 매핑합니다. 운영 체제는 필요한 경우에만 메모리에 로드 합니다. 따라서 .def 파일에서 사용 `PRELOAD` 하 `LOADONCALL` 는 및 코드 특성은 이전 버전의 Windows에서 로드를 제어 하는 것이 더 이상 의미가 없습니다.
+프로그램의 나머지 코드와 마찬가지로 로더는 프로세스가 시작 될 때 DLL 코드를 프로세스의 주소 공간에 매핑합니다. 운영 체제는 필요한 경우에만 메모리에 로드 합니다. 따라서 .def 파일에서 사용 하는 `PRELOAD` 및 `LOADONCALL` 코드 특성은 이전 버전의 Windows에서 로드를 제어 하는 것이 더 이상 의미가 없습니다.
 
 ### <a name="explicit-linking"></a>명시적 링크
 
@@ -56,17 +56,17 @@ Dll 중 하나에 초기화 및 종료 코드 (예: `DllMain`)에 대 한 진입
 
 - 프로세스 시작 시 DLL이 없으면 운영 체제에서 암시적 링크를 사용 하는 프로세스를 종료 합니다. 명시적 링크를 사용 하는 프로세스는이 상황에서 종료 되지 않으며 오류 로부터 복구를 시도할 수 있습니다. 예를 들어 프로세스에서 사용자에 게 오류를 알리고 DLL에 대 한 다른 경로를 지정할 수 있습니다.
 
-- 연결 된 dll 중 하나라도 실패 하는 `DllMain` 함수가 있는 경우에는 암시적 링크를 사용 하는 프로세스도 종료 됩니다. 이 경우 명시적 링크를 사용 하는 프로세스가 종료 되지 않습니다.
+- 연결 된 Dll 중 하나라도 실패 하는 `DllMain` 함수가 있는 경우에는 암시적 링크를 사용 하는 프로세스도 종료 됩니다. 이 경우 명시적 링크를 사용 하는 프로세스가 종료 되지 않습니다.
 
 - 응용 프로그램이 로드 될 때 Windows에서 모든 Dll을 로드 하기 때문에 많은 Dll에 암시적으로 링크 하는 응용 프로그램을 시작 하는 속도가 느릴 수 있습니다. 시작 성능을 향상 시키기 위해 응용 프로그램은 로드 직후에 필요한 Dll에 대해서만 암시적 링크를 사용할 수 있습니다. 필요한 경우에만 다른 Dll을 로드 하는 명시적 링크를 사용할 수 있습니다.
 
-- 명시적 링크를 사용 하면 가져오기 라이브러리를 사용 하 여 응용 프로그램을 연결할 필요가 없습니다. DLL의 변경으로 인해 내보내기 서 수가 변경 되는 경우 응용 프로그램은 서 수 값이 아닌 `GetProcAddress` 함수 이름을 사용 하 여를 호출 하는 경우 다시 연결할 필요가 없습니다. 암시적 링크를 사용 하는 응용 프로그램은 변경 된 가져오기 라이브러리에 다시 링크 해야 합니다.
+- 명시적 링크를 사용 하면 가져오기 라이브러리를 사용 하 여 응용 프로그램을 연결할 필요가 없습니다. DLL의 변경으로 인해 내보내기 서 수가 변경 되는 경우 응용 프로그램은 서 수 값이 아닌 함수 이름을 사용 하 여 `GetProcAddress`를 호출 하는 경우 다시 연결할 필요가 없습니다. 암시적 링크를 사용 하는 응용 프로그램은 변경 된 가져오기 라이브러리에 다시 링크 해야 합니다.
 
 다음은 명시적 링크를 인식 하기 위한 두 가지 위험한 작업입니다.
 
-- DLL `DllMain` 에 진입점 함수가 있는 경우 운영 체제는를 호출한 `LoadLibrary`스레드의 컨텍스트에서 함수를 호출 합니다. 에 대 한 이전 호출로 `LoadLibrary` 인해 `FreeLibrary` 함수에 대 한 해당 호출이 없어 DLL이 프로세스에 이미 연결 되어 있는 경우 진입점 함수가 호출 되지 않습니다. (또는 `DllMain` `LoadLibrary` )`AfxLoadLibrary`가 호출 될 때 이미 있는 스레드는 모두 초기화 되지 않으므로 DLL에서 함수를 사용 하 여 프로세스의 각 스레드를 초기화 하는 경우 명시적 링크를 사용 하면 문제가 발생할 수 있습니다.
+- DLL에 `DllMain` 진입점 함수가 있는 경우 운영 체제는 `LoadLibrary`를 호출한 스레드의 컨텍스트에서 함수를 호출 합니다. `FreeLibrary` 함수에 대 한 해당 호출이 없는 `LoadLibrary`에 대 한 이전 호출로 인해 DLL이 이미 프로세스에 연결 되어 있으면 진입점 함수가 호출 되지 않습니다. `LoadLibrary` (또는 `AfxLoadLibrary`)를 호출할 때 이미 존재 하는 모든 스레드가 초기화 되지 않았기 때문에 DLL이 `DllMain` 함수를 사용 하 여 프로세스의 각 스레드를 초기화 하는 경우 명시적 링크를 사용 하면 문제가 발생할 수 있습니다.
 
-- DLL에서 정적 익스텐트 데이터를로 `__declspec(thread)`선언 하는 경우 명시적으로 연결 된 경우 보호 오류가 발생할 수 있습니다. 를 호출 하 여 DLL을 로드 한 후 `LoadLibrary`에는 코드가이 데이터를 참조할 때마다 보호 오류가 발생 합니다. 정적 익스텐트 데이터는 전역 및 로컬 정적 항목을 모두 포함 합니다. 따라서 DLL을 만들 때 스레드 로컬 저장소를 사용 하지 않는 것이 좋습니다. 사용할 수 없는 경우 dll을 동적으로 로드할 때 발생할 수 있는 문제에 대해 DLL 사용자에 게 알립니다. 자세한 내용은 [동적 연결 라이브러리에서 스레드 로컬 저장소 사용 (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)을 참조 하세요.
+- DLL이 정적 익스텐트 데이터를 `__declspec(thread)`으로 선언 하는 경우 명시적으로 연결 된 경우 보호 오류가 발생할 수 있습니다. `LoadLibrary`를 호출 하 여 DLL을 로드 한 후에는 코드가이 데이터를 참조할 때마다 보호 오류가 발생 합니다. 정적 익스텐트 데이터는 전역 및 로컬 정적 항목을 모두 포함 합니다. 따라서 DLL을 만들 때 스레드 로컬 저장소를 사용 하지 않는 것이 좋습니다. 사용할 수 없는 경우 dll을 동적으로 로드할 때 발생할 수 있는 문제에 대해 DLL 사용자에 게 알립니다. 자세한 내용은 [동적 연결 라이브러리에서 스레드 로컬 저장소 사용 (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)을 참조 하세요.
 
 <a name="linking-implicitly"></a>
 
@@ -74,7 +74,7 @@ Dll 중 하나에 초기화 및 종료 코드 (예: `DllMain`)에 대 한 진입
 
 암시적 링크를 통해 DLL을 사용 하려면 클라이언트 실행 파일에서 DLL의 공급자 로부터 다음 파일을 가져와야 합니다.
 
-- DLL에서 내보낸 데이터, 함수 및 C++ 클래스의 선언을 포함 하는 하나 이상의 헤더 파일 (.h 파일)입니다. DLL에서 내보낸 클래스, 함수 및 데이터는 모두 헤더 파일에 표시 `__declspec(dllimport)` 되어야 합니다. 자세한 내용은 [dllexport, dllimport](../cpp/dllexport-dllimport.md)를 참조하세요.
+- DLL에서 내보낸 데이터, 함수 및 C++ 클래스의 선언을 포함 하는 하나 이상의 헤더 파일 (.h 파일)입니다. DLL에서 내보낸 클래스, 함수 및 데이터는 모두 헤더 파일에 `__declspec(dllimport)`로 표시 되어야 합니다. 자세한 내용은 [dllexport, dllimport](../cpp/dllexport-dllimport.md)를 참조하세요.
 
 - 실행 파일에 연결할 가져오기 라이브러리입니다. 링커는 DLL을 빌드할 때 가져오기 라이브러리를 만듭니다. 자세한 내용은 [링커 입력으로 사용할 LIB 파일](reference/dot-lib-files-as-linker-input.md)을 참조 하세요.
 
@@ -92,13 +92,13 @@ Dll 중 하나에 초기화 및 종료 코드 (예: `DllMain`)에 대 한 진입
 
 명시적 링크를 통해 DLL을 사용 하려면 응용 프로그램에서 런타임에 DLL을 명시적으로 로드 하는 함수 호출을 수행 해야 합니다. DLL에 명시적으로 연결 하려면 응용 프로그램에서 다음을 수행 해야 합니다.
 
-- [LoadLibrary](loadlibrary-and-afxloadlibrary.md), `LoadLibraryEx`또는 유사한 함수를 호출 하 여 DLL을 로드 하 고 모듈 핸들을 가져옵니다.
+- [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) 또는 유사한 함수를 호출 하 여 DLL을 로드 하 고 모듈 핸들을 가져옵니다.
 
-- [GetProcAddress](getprocaddress.md) 를 호출 하 여 응용 프로그램에서 호출 하는 각 내보낸 함수에 대 한 함수 포인터를 가져옵니다. 응용 프로그램은 포인터를 통해 DLL 함수를 호출 하기 때문에 컴파일러는 외부 참조를 생성 하지 않으므로 가져오기 라이브러리와 연결할 필요가 없습니다. 그러나 호출 하는 내보낸 함수의 `typedef` 호출 `using` 시그니처를 정의 하는 또는 문이 있어야 합니다.
+- [GetProcAddress](getprocaddress.md) 를 호출 하 여 응용 프로그램에서 호출 하는 각 내보낸 함수에 대 한 함수 포인터를 가져옵니다. 응용 프로그램은 포인터를 통해 DLL 함수를 호출 하기 때문에 컴파일러는 외부 참조를 생성 하지 않으므로 가져오기 라이브러리와 연결할 필요가 없습니다. 그러나 호출 하는 내보낸 함수의 호출 시그니처를 정의 하는 `typedef` 또는 `using` 문이 있어야 합니다.
 
 - DLL을 사용 하 여 작업을 수행 하는 경우 [Freelibrary](freelibrary-and-afxfreelibrary.md) 를 호출 합니다.
 
-예를 들어이 샘플 함수 `LoadLibrary` 는 "mydll.dll" 이라는 DLL을 로드 하 고,를 호출 `GetProcAddress` 하 여 "DLLFunc1" 라는 함수에 대 한 포인터를 가져오고, 함수를 호출 하 고, 결과 `FreeLibrary` 를 저장 한 다음를 호출 하 여 dll을 언로드합니다.
+예를 들어이 샘플 함수는 `LoadLibrary`를 호출 하 여 "Mydll.dll" 이라는 DLL을 로드 하 고, `GetProcAddress`를 호출 하 여 "DLLFunc1" 라는 함수에 대 한 포인터를 가져오고, 함수를 호출 하 고, 결과를 저장 한 다음, `FreeLibrary`를 호출 하 여 DLL을 언로드합니다.
 
 ```C
 #include "windows.h"
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-이 예제와 달리 대부분의 경우 응용 프로그램에서 `LoadLibrary` 지정 `FreeLibrary` 된 DLL에 대해를 한 번만 호출 해야 합니다. DLL에서 여러 함수를 호출 하거나 DLL 함수를 반복 해 서 호출 하려는 경우에는 특히 그렇습니다.
+이 예제와 달리 대부분의 경우 응용 프로그램에서 지정 된 DLL에 대해 `LoadLibrary` 및 `FreeLibrary`를 한 번만 호출 해야 합니다. DLL에서 여러 함수를 호출 하거나 DLL 함수를 반복 해 서 호출 하려는 경우에는 특히 그렇습니다.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>추가 정보
 
@@ -143,6 +143,6 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 - [동적 연결 라이브러리 검색 순서](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Visual Studio에서 C/C++ DLL 만들기](dlls-in-visual-cpp.md)
