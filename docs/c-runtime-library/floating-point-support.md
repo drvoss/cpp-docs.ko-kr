@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703131"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821514"
 ---
 # <a name="math-and-floating-point-support"></a>수학식 및 부동 소수점 지원
 
@@ -72,7 +72,7 @@ UCRT(유버니설 C 런타임) 라이브러리는 ISO C99에 필요한 모든 �
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|최젓값을 계산합니다.
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|단일 곱셈 누산기(Fused Multiply-Add)를 계산합니다.
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|인수의 최댓값을 계산합니다.
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|인수의 최솟값을 계산합니다.
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|인수의 최소값을 계산 합니다.
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|부동 소수점 나머지를 계산합니다.
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|부동 소수점 값의 분류를 반환합니다.
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|부동 소수점 값의 분류를 반환합니다.
@@ -127,7 +127,7 @@ UCRT(유버니설 C 런타임) 라이브러리는 ISO C99에 필요한 모든 �
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|제곱근을 계산합니다.
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|부동 소수점 상태 단어를 가져옵니다.
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|문자열을 **float**로 변환합니다.
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|문자열을 **long** **double**로 변환합니다.
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|문자열을 **long** **double** 로 변환 합니다.
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|탄젠트를 계산합니다.
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|쌍곡선 탄젠트를 계산합니다.
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|감마 함수를 계산합니다.
@@ -135,7 +135,7 @@ UCRT(유버니설 C 런타임) 라이브러리는 ISO C99에 필요한 모든 �
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|와이드 문자열을 **double**로 변환합니다.
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Bessel 함수를 계산합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [부동 소수점 기본 형식](../c-runtime-library/reference/floating-point-primitives.md)<br/>

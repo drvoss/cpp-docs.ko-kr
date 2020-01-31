@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398903"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821690"
 ---
 # <a name="callback-function-wrl"></a>콜백 함수 (WRL)
 
@@ -222,7 +222,7 @@ ComPtr<TDelegateInterface> Callback(
 일곱 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.
 
 *TArg8*<br/>
-여덟 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.
+여덟 번째 콜백 메서드 인수의 형식을 지정 하는 템플릿 매개 변수입니다.
 
 *TArg9*<br/>
 아홉 번째 콜백 메서드 인수의 형식을 지정하는 템플릿 매개 변수입니다.
@@ -240,16 +240,16 @@ ComPtr<TDelegateInterface> Callback(
 
 멤버 함수가 지정된 콜백 메서드인 개체입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-대리자 개체의 기본 이어야 합니다 `IUnknown`이 아니라 `IInspectable`합니다.
+대리자 개체의 밑은 `IInspectable`가 아닌 `IUnknown`이어야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** event.h
+**헤더:** 이벤트. h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)
