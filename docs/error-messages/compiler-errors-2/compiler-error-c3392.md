@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243026"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912814"
 ---
 # <a name="compiler-error-c3392"></a>컴파일러 오류 C3392
 
 'type_arg': 제네릭 'generic_type'의 제네릭 매개 변수 'param'에 대한 형식 인수가 잘못되었습니다. 매개 변수가 없는 public 생성자가 있어야 합니다.
 
-제네릭 형식이 잘못 인스턴스화되었습니다. 형식 정의를 확인하세요. 자세한 내용은 [제네릭](../../extensions/generics-cpp-component-extensions.md)합니다.
+제네릭 형식이 잘못 인스턴스화되었습니다. 형식 정의를 확인하세요. 자세한 내용은 [제네릭](../../extensions/generics-cpp-component-extensions.md)을 참조 하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-C +의 제네릭 형식을 제작 하는 경우 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만들려면 다음 샘플에서는 C# + CLI입니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
+다음 샘플에서는를 C# 사용 하 여/cli에서 C++제네릭 형식을 작성할 때 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만듭니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3392.dll 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3392를 생성 합니다.
+C3392 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3392을 생성 합니다.
 
 ```cpp
 // C3392_b.cpp

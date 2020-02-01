@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400320"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912869"
 ---
 # <a name="compiler-error-c3390"></a>컴파일러 오류 C3390
 
@@ -19,11 +19,11 @@ ms.locfileid: "62400320"
 
 제네릭 형식이 잘못 인스턴스화되었습니다.  형식 정의를 확인하세요.  자세한 내용은 [제네릭](../../extensions/generics-cpp-component-extensions.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-C +의 제네릭 형식을 제작 하는 경우 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만드는 첫 번째 예제에서는 C# + CLR. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
+첫 번째 샘플에서는 C# 를 사용 하 여/clr에서 C++제네릭 형식을 제작할 때 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만듭니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3390.dll 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3390을 생성 합니다.
+C3390 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3390을 생성 합니다.
 
 ```cpp
 // C3390_b.cpp
