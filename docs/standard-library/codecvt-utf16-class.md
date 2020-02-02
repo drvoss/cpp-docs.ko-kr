@@ -30,17 +30,17 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 *Maxcode* \
 로캘 패싯에 대한 최대 문자 수입니다.
 
-*모드* \
+*Mode* \
 로캘 패싯에 대한 구성 정보입니다.
 
 ## <a name="remarks"></a>주의
 
-이 클래스 템플릿에서는 u t f-2 또는 u c f-4로 인코드된 와이드 문자와 u t f-UTF-16LE로 인코딩된 바이트 스트림 (모드 & little_endian 또는 u t f-16이 아닌 경우) 사이를 변환 합니다.
+이 클래스 템플릿에서는 UTF-2 또는 UCF-4로 인코드된 와이드 문자와 UTF-UTF-16LE로 인코딩된 바이트 스트림 (모드 &little_endian 또는 UTF-16이 아닌 경우) 사이를 변환 합니다.
 
 바이트 스트림은 이진 파일에 작성해야 하며, 텍스트 파일에 작성하는 경우 손상될 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-헤더: \<codecvt >
+헤더: \<codecvt>
 
 네임 스페이스: std
