@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857829"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972215"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ int feraiseexcept(
 |FE_INVALID|초기 부동 소수점 작업에서 도메인 오류가 발생했습니다.|
 |FE_OVERFLOW|범위 오류가 발생했습니다. 초기 부동 소수점 작업 결과가 표시하기에 너무 큽니다.|
 |FE_UNDERFLOW|초기 부동 소수점 작업 결과가 완전히 정확하게 표시하기에 너무 작습니다. 비정상적인 값이 생성되었습니다.|
-|FE_ALLEXCEPT|모든 지원되는 부동 소수점 예외의 비트 OR입니다.|
+|FE_ALL_EXCEPT|모든 지원되는 부동 소수점 예외의 비트 OR입니다.|
 
 *제외한* 인수는 0, 예외 매크로 값 중 하나 또는 지원 되는 예외 매크로 중 두 개 이상의 비트 or 일 수 있습니다. 지정된 예외 매크로 중 하나가 FE_OVERFLOW 또는 FE_UNDERFLOW이면 파생 작업으로 FE_INEXACT 예외가 발생할 수 있습니다.
 
