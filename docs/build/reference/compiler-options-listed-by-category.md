@@ -4,26 +4,26 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518415"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034586"
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 
 이 문서에는 컴파일러 옵션의 범주별 목록이 포함되어 있습니다. 사전순으로 나열된 목록을 보려면 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)을 참조하세요.
 
-## <a name="optimization"></a>최적화
+## <a name="optimization"></a>Optimization
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|작은 코드를 만듭니다.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|빠른 코드를 만듭니다.|
 |[/Ob](ob-inline-function-expansion.md)|인라인 확장을 제어합니다.|
 |[/Od](od-disable-debug.md)|최적화를 사용하지 않습니다.|
-|[/Og](og-global-optimizations.md)|사용되지 않음. 전역 최적화를 사용합니다.|
+|[/Og](og-global-optimizations.md)|사용되지 않습니다. 전역 최적화를 사용합니다.|
 |[/Oi](oi-generate-intrinsic-functions.md)|내장 함수를 생성합니다.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|코드 크기를 우선으로 합니다.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|코드 속도를 우선으로 합니다.|
@@ -33,7 +33,7 @@ ms.locfileid: "76518415"
 
 ## <a name="code-generation"></a>코드 생성
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/arch](arch-x86.md)|코드 생성 시 SSE 또는 SSE2 명령을 사용합니다. (x86 전용)|
 |[/clr](clr-common-language-runtime-compilation.md)|공용 언어 런타임에 실행할 출력 파일을 생성합니다.|
@@ -41,12 +41,12 @@ ms.locfileid: "76518415"
 |[/fp](fp-specify-floating-point-behavior.md)|부동 소수점 동작을 지정합니다.|
 |[/GA](ga-optimize-for-windows-application.md)|Windows 애플리케이션에 맞게 최적화합니다.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|`__cdecl` 호출 규칙을 사용합니다(x86 (x86 전용)|
-|[/Ge](ge-enable-stack-probes.md)|사용되지 않음. 스택 프로브를 활성화합니다.|
+|[/Ge](ge-enable-stack-probes.md)|사용되지 않습니다. 스택 프로브를 활성화합니다.|
 |[/GF](gf-eliminate-duplicate-strings.md)|문자열 풀링을 사용합니다.|
 |[/Gh](gh-enable-penter-hook-function.md)|후크 함수 `_penter`를 호출합니다.|
 |[/GH](gh-enable-pexit-hook-function.md)|후크 함수 `_pexit`를 호출합니다.|
 |[/GL](gl-whole-program-optimization.md)|전체 프로그램 최적화를 사용합니다.|
-|[/Gm](gm-enable-minimal-rebuild.md)|사용되지 않음. 최소 재빌드를 사용합니다.|
+|[/Gm](gm-enable-minimal-rebuild.md)|사용되지 않습니다. 최소 재빌드를 사용합니다.|
 |[/GR](gr-enable-run-time-type-information.md)|RTTI(런타임 형식 정보)를 사용합니다.|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|`__fastcall` 호출 규칙을 사용합니다(x86 (x86 전용)|
 |[/GS](gs-buffer-security-check.md)|버퍼 보안을 검사합니다.|
@@ -55,27 +55,29 @@ ms.locfileid: "76518415"
 |[/guard:cf](guard-enable-control-flow-guard.md)|제어 흐름 가드 보안 검사를 추가합니다.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 호출 규칙을 사용합니다(x86 및 x64에만 해당).|
 |[/Gw](gw-optimize-global-data.md)|전체 프로그램 전역 데이터 최적화를 사용하도록 설정합니다.|
-|[/GX](gx-enable-exception-handling.md)|사용되지 않음. 동기 예외 처리를 사용합니다. 대신 [/EH](eh-exception-handling-model.md) 를 사용합니다.|
+|[/GX](gx-enable-exception-handling.md)|사용되지 않습니다. 동기 예외 처리를 사용합니다. 대신 [/EH](eh-exception-handling-model.md) 를 사용합니다.|
 |[/Gy](gy-enable-function-level-linking.md)|함수 수준 링크를 사용합니다.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않음. 빠른 검사를 사용하도록 설정합니다. [/RTC1](rtc-run-time-error-checks.md)과 동일합니다.|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않습니다. 빠른 검사를 사용하도록 설정합니다. [/RTC1](rtc-run-time-error-checks.md)과 동일합니다.|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 호출 규칙을 사용합니다(x86 (x86 전용)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|레지스터에 전달된 매개 변수를 함수 시작 시 스택의 해당 위치에 기록합니다. 이 컴파일러 옵션은 x64 컴파일러 (네이티브 및 크로스 컴파일)에만 사용할 수 있습니다.|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|핫 패치할 수 있는 이미지를 만듭니다.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|빠른 초월수를 생성합니다.|
-|[/QIfist](qifist-suppress-ftol.md)|사용되지 않음. 부동 소수점 형식에서 정수 계열 형식으로 변환해야 할 때 도우미 함수 `_ftol` 이 호출되지 않도록 합니다. (x86 전용)|
+|[/QIfist](qifist-suppress-ftol.md)|사용되지 않습니다. 부동 소수점 형식에서 정수 계열 형식으로 변환해야 할 때 도우미 함수 `_ftol` 이 호출되지 않도록 합니다. (x86 전용)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|`fwait` 블록 내에 있는 `try` 명령을 제거합니다.|
 |[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Intel JCC erratum 마이크로코드 업데이트의 성능 영향을 완화 합니다.|
 |[/Qpar](qpar-auto-parallelizer.md)|루프 자동 병렬화를 사용하도록 설정합니다.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|자동 병렬화에 대한 보고 수준을 사용하도록 설정합니다.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|부동 소수점 값에 대한 정수 이동 명령을 사용하고 특정 부동 소수점 부하 최적화를 사용하지 않도록 설정합니다.|
 |[/Qspectre](qspectre.md)|스펙터 공격의 클래스에 대해 CVE 2017-5753에 대 한 완화를 사용 하도록 설정 합니다.|
+|[/Qspectre-load](qspectre-load.md)|모든 로드 명령에 대 한 직렬화 명령을 생성 합니다.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|메모리를 로드 하는 모든 제어 흐름 명령에 대 한 직렬화 명령을 생성 합니다.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|자동 벡터화에 대한 보고 수준을 사용하도록 설정합니다.|
 |[/RTC](rtc-run-time-error-checks.md)|런타임 오류 검사를 사용합니다.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|volatile 키워드가 해석되는 방식을 선택합니다.|
 
 ## <a name="output-files"></a>출력 파일
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|XML 파일에 대해 문서 주석을 처리합니다.|
 |[/FA](fa-fa-listing-file.md)|어셈블리 목록 파일을 구성합니다.|
@@ -86,11 +88,11 @@ ms.locfileid: "76518415"
 |[/Fm](fm-name-mapfile.md)|맵 파일을 만듭니다.|
 |[/Fo](fo-object-file-name.md)|개체 파일을 만듭니다.|
 |[/Fp](fp-name-dot-pch-file.md)|미리 컴파일된 헤더 파일 이름을 지정합니다.|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|생성 된 .sbr 브라우저 파일의 이름입니다.|
+|[/FR,/Fr](fr-fr-create-dot-sbr-file.md)|생성 된 .sbr 브라우저 파일의 이름입니다.|
 
 ## <a name="preprocessor"></a>전처리기
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) 지시문에 전달된 파일 참조를 확인하기 위해 검색할 디렉터리를 지정합니다.|
 |[/C](c-preserve-comments-during-preprocessing.md)|전처리하는 동안 주석을 유지합니다.|
@@ -106,9 +108,9 @@ ms.locfileid: "76518415"
 |[/u](u-u-undefine-symbols.md)|미리 정의된 모든 매크로를 제거합니다.|
 |[/X](x-ignore-standard-include-paths.md)|표준 포함 디렉터리를 무시합니다.|
 
-## <a name="language"></a>Language
+## <a name="language"></a>언어
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|컴파일 시간에 constexpr 평가를 제어 합니다.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|소스 코드에서 [#pragma omp](../../preprocessor/omp.md) 를 활성화합니다.|
@@ -121,7 +123,7 @@ ms.locfileid: "76518415"
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 호환 디버깅 정보를 생성 합니다.|
 |[/Za](za-ze-disable-language-extensions.md)|C89 언어 확장을 사용 하지 않도록 설정 합니다.|
 |[/Zc](zc-conformance.md)|[/Ze](za-ze-disable-language-extensions.md)에서 표준 동작을 지정합니다.|
-|[/Ze](za-ze-disable-language-extensions.md)|사용되지 않음. C89 언어 확장을 사용 합니다.|
+|[/Ze](za-ze-disable-language-extensions.md)|사용되지 않습니다. C89 언어 확장을 사용 합니다.|
 |[/Zf](zf.md)|병렬 빌드에서 PDB 생성 시간을 향상 시킵니다.|
 |[/ZH](zh.md)|디버그 정보에서 체크섬에 대해 MD5, SHA-1 또는 SHA-256을 지정 합니다.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|편집하며 계속하기와 호환되는 프로그램 데이터베이스에 디버깅 정보를 포함합니다. (x86 전용)|
@@ -133,7 +135,7 @@ ms.locfileid: "76518415"
 
 ## <a name="linking"></a>연결
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|스택 크기를 설정합니다.|
 |[/LD](md-mt-ld-use-run-time-library.md)|DLL(동적 연결 라이브러리)을 만듭니다.|
@@ -147,7 +149,7 @@ ms.locfileid: "76518415"
 
 ## <a name="miscellaneous"></a>기타
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|컴파일러 옵션을 나열합니다.|
 |[@](at-specify-a-compiler-response-file.md)|지시 파일을 지정합니다.|
@@ -158,7 +160,7 @@ ms.locfileid: "76518415"
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|ICE (내부 컴파일러 오류) 정보를 Microsoft C++ 팀에 직접 제공할 수 있습니다.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|진단 텍스트에서 cl.exe에 전달된 소스 코드 파일의 전체 경로를 표시합니다.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|MSPDBSRV.EXE를 통해 serialize될 프로그램 데이터베이스(PDB) 파일에 강제로 씁니다.|
-|[/H](h-restrict-length-of-external-names.md)|사용되지 않음. 외부 공개 이름의 길이를 제한합니다.|
+|[/H](h-restrict-length-of-external-names.md)|사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다.|
 |[/HELP](help-compiler-command-line-help.md)|컴파일러 옵션을 나열합니다.|
 |[/J](j-default-char-type-is-unsigned.md)|기본 `char` 형식을 변경합니다.|
 |[/JMC](jmc.md)|네이티브 C++ 내 코드만 디버깅 옵션을 지원합니다.|
@@ -171,7 +173,7 @@ ms.locfileid: "76518415"
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|모든 소스 파일을 C로 지정 합니다.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|C++ 소스 파일을 지정합니다.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|모든 원본 파일은 C++를 지정 합니다.|
-|[/V](v-version-number.md)|사용되지 않음. 버전 문자열을 설정합니다.|
+|[/V](v-version-number.md)|사용되지 않습니다. 버전 문자열을 설정합니다.|
 |[/w](compiler-option-warning-level.md)|모든 경고를 사용하지 않습니다.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|출력 경고 수준을 설정합니다.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|지정된 경고에 대한 경고 수준을 설정합니다.|
@@ -183,7 +185,7 @@ ms.locfileid: "76518415"
 |[/Wv](compiler-option-warning-level.md)|이후 버전의 컴파일러에서 도입된 경고를 사용하지 않습니다.|
 |[/WX](compiler-option-warning-level.md)|경고를 오류로 처리합니다.|
 |[/Yc](yc-create-precompiled-header-file.md)|만드십시오. PCH 파일.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않음. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|디버그 라이브러리를 만들 때 PCH 참조를 삽입합니다.|
 |[/Yu](yu-use-precompiled-header-file.md)|빌드하는 동안 미리 컴파일된 헤더 파일을 사용합니다.|
 |[/Y-](y-ignore-precompiled-header-options.md)|현재 빌드에서 미리 컴파일된 다른 모든 헤더 컴파일러 옵션을 무시합니다.|
@@ -201,32 +203,32 @@ ms.locfileid: "76518415"
 
 실험적 옵션은 특정 버전의 컴파일러 에서만 지원 될 수 있으며 다른 컴파일러 버전에서 다르게 동작할 수 있습니다. 주로 [ C++ Microsoft 팀 블로그](https://devblogs.microsoft.com/cppblog/)에서 실험적 옵션에 대 한 최상의 설명서를 사용할 수 있습니다.
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
 |[/s실험적: 모듈](experimental-module.md)|실험적 모듈 지원을 사용 하도록 설정 합니다.|
 |[/s실험적: 전처리기](experimental-preprocessor.md)|실험적 규격 전처리기 지원을 사용 하도록 설정 합니다.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>사용 되지 않고 제거 되는 컴파일러 옵션
 
-|옵션|용도|
+|옵션|목적|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|사용되지 않음. 대신 [/LN (Create MSIL Module)](ln-create-msil-module.md) 를 사용하세요.|
-|[/Fr](fr-fr-create-dot-sbr-file.md)|사용되지 않음. 지역 변수 없이 찾아보기 정보 파일을 만듭니다.|
-|[/Ge](ge-enable-stack-probes.md)|사용되지 않음. 스택 프로브를 활성화합니다. 기본적으로 설정되어 있습니다.|
-|[/Gm](gm-enable-minimal-rebuild.md)|사용되지 않음. 최소 재빌드를 사용합니다.|
-|[/GX](gx-enable-exception-handling.md)|사용되지 않음. 동기 예외 처리를 사용합니다. 대신 [/EH](eh-exception-handling-model.md) 를 사용합니다.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않음. 빠른 검사를 사용하도록 설정합니다. 대신 [/RTC1](rtc-run-time-error-checks.md) 을 사용합니다.|
-|[/H](h-restrict-length-of-external-names.md)|사용되지 않음. 외부 공개 이름의 길이를 제한합니다.|
-|[/Og](og-global-optimizations.md)|사용되지 않음. 전역 최적화를 사용합니다.|
-|[/QIfist](qifist-suppress-ftol.md)|사용되지 않음. 부동 소수점 형식에서 정수 계열 형식으로 변환하는 방법을 지정하는 데 사용되었습니다.|
-|[/V](v-version-number.md)|사용되지 않음. .obj 파일 버전 문자열을 설정합니다.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|사용되지 않습니다. 64비트 이식성 문제를 검색합니다.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않음. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
-|[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|사용되지 않음. for 루프 범위의 규칙을 사용하지 않도록 설정합니다.|
-|[/Ze](za-ze-disable-language-extensions.md)|사용되지 않음. 언어 확장을 사용합니다.|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|사용되지 않습니다. 대신 [/LN (Create MSIL Module)](ln-create-msil-module.md) 를 사용하세요.|
+|[/Fr](fr-fr-create-dot-sbr-file.md)|사용되지 않습니다. 지역 변수 없이 찾아보기 정보 파일을 만듭니다.|
+|[/Ge](ge-enable-stack-probes.md)|사용되지 않습니다. 스택 프로브를 활성화합니다. 기본적으로 설정되어 있습니다.|
+|[/Gm](gm-enable-minimal-rebuild.md)|사용되지 않습니다. 최소 재빌드를 사용합니다.|
+|[/GX](gx-enable-exception-handling.md)|사용되지 않습니다. 동기 예외 처리를 사용합니다. 대신 [/EH](eh-exception-handling-model.md) 를 사용합니다.|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않습니다. 빠른 검사를 사용하도록 설정합니다. 대신 [/RTC1](rtc-run-time-error-checks.md) 을 사용합니다.|
+|[/H](h-restrict-length-of-external-names.md)|사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다.|
+|[/Og](og-global-optimizations.md)|사용되지 않습니다. 전역 최적화를 사용합니다.|
+|[/QIfist](qifist-suppress-ftol.md)|사용되지 않습니다. 부동 소수점 형식에서 정수 계열 형식으로 변환하는 방법을 지정하는 데 사용되었습니다.|
+|[/V](v-version-number.md)|사용되지 않습니다. .obj 파일 버전 문자열을 설정합니다.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|더 이상 사용되지 않습니다. 64비트 이식성 문제를 검색합니다.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
+|[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|사용되지 않습니다. for 루프 범위의 규칙을 사용하지 않도록 설정합니다.|
+|[/Ze](za-ze-disable-language-extensions.md)|사용되지 않습니다. 언어 확장을 사용합니다.|
 |[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015에서 제거 되었습니다. 함수 프로토타입을 생성합니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C/C++ 빌드 참조](c-cpp-building-reference.md)<br/>
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
