@@ -1,34 +1,34 @@
 ---
-title: '방법: 특정 스케줄러 정책을 사용 하는 에이전트 만들기'
+title: '방법: 특정 Scheduler 정책을 사용하는 에이전트 만들기'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece6b113e3fe10c2c3179517f73137df281acf87
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411372"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141729"
 ---
-# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>방법: 특정 스케줄러 정책을 사용 하는 에이전트 만들기
+# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>방법: 특정 Scheduler 정책을 사용하는 에이전트 만들기
 
-에이전트는 대규모 컴퓨팅 작업을 해결 하기 위해 다른 구성 요소를 사용 하 여 비동기적으로 작동 하는 응용 프로그램 구성 요소입니다. 에이전트는 일반적으로 수명 주기가 설정 하 고 상태를 유지 합니다.
+에이전트는 다른 구성 요소와 비동기 방식으로 작동 하 여 더 큰 컴퓨팅 작업을 해결 하는 응용 프로그램 구성 요소입니다. 에이전트는 일반적으로 설정 된 수명 주기를 가지 며 상태를 유지 관리 합니다.
 
-모든 에이전트에는 고유한 응용 프로그램 요구 사항이 있을 수 있습니다. 예를 들어, 사용자 상호 작용 (검색 입력 또는 출력을 표시)를 사용 하도록 설정 하는 에이전트에는 컴퓨팅 리소스에 액세스 하는 우선 순위가 높아야 필요할 수 있습니다. 스케줄러 정책을 스케줄러가 작업을 관리할 때 사용 하는 전략을 제어할 수 있습니다. 이 항목에서는 특정 스케줄러 정책을 사용 하는 에이전트를 만드는 방법을 보여 줍니다.
+모든 에이전트에는 고유한 응용 프로그램 요구 사항이 있을 수 있습니다. 예를 들어 입력을 검색 하거나 출력을 표시 하는 사용자 상호 작용을 가능 하 게 하는 에이전트는 컴퓨팅 리소스에 대 한 우선 순위가 더 높은 액세스를 요구 합니다. Scheduler 정책을 사용 하면 스케줄러에서 작업을 관리할 때 사용 하는 전략을 제어할 수 있습니다. 이 항목에서는 특정 스케줄러 정책을 사용 하는 에이전트를 만드는 방법을 보여 줍니다.
 
-비동기 메시지 블록 함께 사용자 지정 스케줄러 정책을 사용 하는 기본 예제를 보려면 [방법: 특정 스케줄러 정책 지정](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)합니다.
+비동기 메시지 블록과 함께 사용자 지정 스케줄러 정책을 사용 하는 기본 예제는 [방법: 특정 스케줄러 정책 지정을](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)참조 하세요.
 
-이 항목에서는 사용 하면 에이전트, 메시지 블록 및 메시지 전달 함수 같은 비동기 에이전트 라이브러리에서 기능을 사용 하는 작업을 수행 합니다. 비동기 에이전트 라이브러리에 대 한 자세한 내용은 참조 하세요. [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)합니다.
+이 항목에서는 에이전트, 메시지 블록 및 메시지 전달 함수와 같은 비동기 에이전트 라이브러리의 기능을 사용 하 여 작업을 수행 합니다. 비동기 에이전트 라이브러리에 대 한 자세한 내용은 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)를 참조 하십시오.
 
 ## <a name="example"></a>예제
 
-다음 예제에서 파생 되는 두 개의 클래스를 정의 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md): `permutor` 고 `printer`입니다. `permutor` 클래스는 지정 된 입력된 문자열의 모든 순열을 계산 합니다. `printer` 클래스 진행률 메시지를 콘솔에 출력 합니다. `permutor` 클래스 계산이 많은 작업을 수행 하면 모든 사용 가능한 컴퓨팅 리소스를 사용할 수도 있습니다. 유용 하 게 여 `printer` 클래스 적시에 각 진행률 메시지를 인쇄 해야 합니다.
+다음 예제에서는 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md): `permutor` 및 `printer`에서 파생 되는 두 개의 클래스를 정의 합니다. `permutor` 클래스는 지정 된 입력 문자열의 모든 순열을 계산 합니다. `printer` 클래스는 진행률 메시지를 콘솔에 출력 합니다. `permutor` 클래스는 사용 가능한 모든 컴퓨팅 리소스를 사용할 수 있는 계산 집약적인 작업을 수행 합니다. 유용 하려면 `printer` 클래스에서 각 진행 메시지를 적시에 인쇄 해야 합니다.
 
-제공 하는 `printer` 공정 액세스 컴퓨팅 리소스에 클래스를이 예제에서는 단계에 설명 된 [방법: 스케줄러 인스턴스 관리](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) 사용자 지정 정책이 적용 된 스케줄러 인스턴스를 만들려고 합니다. 사용자 지정 정책에 가장 높은 우선 순위 클래스를 스레드 우선 순위를 지정 합니다.
+이 예제에서는 `printer` 클래스에 컴퓨팅 리소스에 대 한 공평 한 액세스를 제공 하기 위해 [방법: 스케줄러 인스턴스 관리](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) 에 설명 된 단계를 사용 하 여 사용자 지정 정책을 포함 하는 스케줄러 인스턴스를 만듭니다. 사용자 지정 정책은 우선 순위가 가장 높은 클래스가 되도록 스레드 우선 순위를 지정 합니다.
 
-사용자 지정 정책이 적용 된 스케줄러를 사용 하는 이점은 보여 주기 위해이 예제에서는 두 번 전체 작업을 수행 합니다. 이 예제에서는 먼저 기본 스케줄러를 사용 하 여 두 작업을 예약 합니다. 예제를 사용 하 여 기본 스케줄러를 예약 합니다 `permutor` 개체 및 일정을 사용자 지정 정책이 적용 된 스케줄러를 `printer` 개체입니다.
+사용자 지정 정책이 있는 스케줄러를 사용 하는 이점을 보여 주기 위해이 예에서는 전체 작업을 두 번 수행 합니다. 이 예에서는 먼저 기본 스케줄러를 사용 하 여 두 작업을 예약 합니다. 그런 다음이 예제에서는 기본 스케줄러를 사용 하 여 `permutor` 개체를 예약 하 고 사용자 지정 정책을 포함 하는 스케줄러를 사용 하 여 `printer` 개체를 예약 합니다.
 
 [!code-cpp[concrt-permute-strings#1](../../parallel/concrt/codesnippet/cpp/how-to-create-agents-that-use-specific-scheduler-policies_1.cpp)]
 
@@ -44,15 +44,15 @@ Computing all permutations of 'Grapefruit'...
 100% complete...
 ```
 
-사용자 지정 정책을 사용 하는 버전을 사용 하면 동일한 결과 생성 하는 두 가지 작업, 있지만 `printer` 개체가 동작 반응성 있도록 높은 우선 순위에서 실행 합니다.
+두 작업 집합 모두 동일한 결과를 생성 하지만, 사용자 지정 정책을 사용 하는 버전은 `printer` 개체가 더 반응 동작 하도록 승격 된 우선 순위로 실행 될 수 있도록 합니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-예제 코드를 복사하여 Visual Studio 프로젝트 또는 `permute-strings.cpp` 파일에 붙여넣고 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.
+예제 코드를 복사 하 여 Visual Studio 프로젝트에 붙여넣거나, `permute-strings.cpp` 이름이 지정 된 파일에 붙여 넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.
 
-**cl.exe /EHsc permute strings.cpp**
+> **cl.exe/EHsc permute-strings**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스케줄러 정책](../../parallel/concrt/scheduler-policies.md)<br/>
 [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)
