@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512818"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141326"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>동시성 런타임과 기타 동시성 모델 비교
 
@@ -19,7 +19,7 @@ ms.locfileid: "69512818"
 
 다른 동시성 모델을 사용하는 기존 애플리케이션을 보완하기 위해 동시성 런타임의 기능 및 생산성 이점을 사용할 수 있습니다. 여러 작업 스케줄러가 같은 컴퓨팅 리소스에 대해 경쟁하는 경우 동시성 런타임에서 부하 분산을 보장할 수 없습니다. 그러나 작업이 겹치지 않을 경우 이 효과는 최소화됩니다.
 
-##  <a name="top"></a> 섹션
+## <a name="top"></a> 섹션
 
 - [선점형 일정을 협조적 일정과 비교](#models)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69512818"
 
 - [동시성 런타임을 OpenMP와 비교](#openmp)
 
-##  <a name="models"></a> 선점형 일정을 협조적 일정과 비교
+## <a name="models"></a> 선점형 일정을 협조적 일정과 비교
 
 선점형 일정 모델과 협조적 일정 모델은 여러 작업이 프로세서나 하드웨어 스레드 같은 컴퓨팅 리소스를 공유하도록 해주는 두 가지 일반적인 방법입니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "69512818"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="winapi"></a> 동시성 런타임을 Windows API와 비교
+## <a name="winapi"></a> 동시성 런타임을 Windows API와 비교
 
 Windows API(이전의 Win32)라고도 하는 Microsoft Windows 애플리케이션 프로그래밍 인터페이스는 애플리케이션에서 동시성을 가능하게 하는 프로그래밍 모델을 제공합니다. 동시성 런타임은 Windows API를 기반으로 구축되어 기본 운영 체제에서 사용할 수 없는 추가 프로그래밍 모델을 제공합니다.
 
@@ -81,7 +81,7 @@ Windows 7 및 Windows Server 2008 R2에서는 운영 체제가 동시성 및 확
 
 [[맨 위로 이동](#top)]
 
-##  <a name="openmp"></a> 동시성 런타임을 OpenMP와 비교
+## <a name="openmp"></a> 동시성 런타임을 OpenMP와 비교
 
 동시성 런타임은 다양한 프로그래밍 모델을 사용합니다. 이러한 모델은 중복되거나 다른 라이브러리의 모델을 보완할 수 있습니다. 이 섹션에서는 동시성 런타임을 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)와 비교합니다.
 
@@ -95,7 +95,7 @@ OpenMP 프로그래밍 모델은 공개 표준에 의해 정의되며, Fortran �
 
 [[맨 위로 이동](#top)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [동시성 런타임](../../parallel/concrt/concurrency-runtime.md)<br/>
 [개요](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

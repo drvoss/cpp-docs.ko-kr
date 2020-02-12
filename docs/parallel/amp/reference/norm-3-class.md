@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351656"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142159"
 ---
-# <a name="norm3-class"></a>norm_3 클래스
+# <a name="norm_3-class"></a>norm_3 클래스
 
-세 가지 일반 숫자의 짧은 벡터를 나타냅니다.
+세 개의 일반 숫자의 짧은 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[norm_3 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[norm_3 생성자](#ctor)|오버로드되었습니다. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -146,7 +146,7 @@ class norm_3;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -159,13 +159,13 @@ class norm_3;
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[상수 크기](#size)||
+|[크기 상수](#size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |norm_3::b||
 |norm_3::bg||
@@ -198,23 +198,23 @@ class norm_3;
 |norm_3::zy||
 |norm_3::zyx||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `norm_3`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-## <a name="ctor"></a> norm_3 생성자
+## <a name="ctor"></a>norm_3 생성자
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-## <a name="syntax"></a>구문
+### <a name="syntax"></a>구문
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,31 +257,31 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V2*<br/>
-2 요소를 초기화할 값입니다.
+요소 2를 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> 상수 크기
+## <a name="a-namesize-size-constant"></a><a name="size"> size 상수
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

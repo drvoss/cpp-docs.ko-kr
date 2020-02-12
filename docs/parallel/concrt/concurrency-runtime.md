@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a17b4439baaec9caacfeca08983d0255b5a145de
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510558"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141613"
 ---
 # <a name="concurrency-runtime"></a>동시성 런타임
 
@@ -20,7 +20,7 @@ C++용 동시성 런타임은 강력하고 확장 가능하며 응답성이 높�
 참조 설명서 [는 참조를 참조 하세요.](../../parallel/concrt/reference/reference-concurrency-runtime.md)
 
 > [!TIP]
->  동시성 런타임은 C++11 기능에 크게 의존하며 보다 최신 C++ 스타일을 채택합니다. 자세히 알아보려면 [을 ( C++를) 다시 시작 ](../../cpp/welcome-back-to-cpp-modern-cpp.md)하세요.
+> 동시성 런타임은 C++11 기능에 크게 의존하며 보다 최신 C++ 스타일을 채택합니다. 자세히 알아보려면 [을 ( C++를) 다시 시작 ](../../cpp/welcome-back-to-cpp-modern-cpp.md)하세요.
 
 ## <a name="choosing-concurrency-runtime-features"></a>동시성 런타임 기능 선택
 
@@ -46,8 +46,8 @@ C++용 동시성 런타임은 강력하고 확장 가능하며 응답성이 높�
 
 |||
 |-|-|
-|[병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [방법: parallel_for 루프 작성](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [방법: parallel_for_each 루프 작성](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [방법: 병렬로 매핑 및 Reduce 작업 수행](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|`parallel_for`, `parallel_for_each`, `parallel_invoke`및 기타 병렬 알고리즘을 설명합니다. 데이터 컬렉션이 관련된 *데이터 병렬* 문제를 해결하려면 병렬 알고리즘을 사용합니다.|
-|[병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [방법: 병렬 컨테이너를 사용하여 효율성 향상](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [방법: combinable을 사용하여 성능 개선](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [방법: combinable을 사용하여 세트 결합](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|`combinable` 클래스와 `concurrent_vector`, `concurrent_queue`, `concurrent_unordered_map`및 기타 병렬 컨테이너를 설명합니다. 해당 요소에 스레드로부터 안전한 액세스를 제공하는 컨테이너가 필요한 경우 병렬 컨테이너 및 개체를 사용합니다.|
+|[병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [방법: parallel_for 루프 작성](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [방법: parallel_for_each 루프 작성](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [방법: 매핑 수행 및 병렬 작업 줄이기](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|`parallel_for`, `parallel_for_each`, `parallel_invoke`및 기타 병렬 알고리즘을 설명합니다. 데이터 컬렉션이 관련된 *데이터 병렬* 문제를 해결하려면 병렬 알고리즘을 사용합니다.|
+|[병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [방법: 병렬 컨테이너를 사용하여 효율성 향상](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [방법: combinable을 사용하여 성능 개선](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [방법: combinable을 사용하여 집합 결합](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|`combinable` 클래스와 `concurrent_vector`, `concurrent_queue`, `concurrent_unordered_map`및 기타 병렬 컨테이너를 설명합니다. 해당 요소에 스레드로부터 안전한 액세스를 제공하는 컨테이너가 필요한 경우 병렬 컨테이너 및 개체를 사용합니다.|
 |[병렬 패턴 라이브러리의 유용한 정보](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [동시성 런타임의 유용한 일반 정보](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|PPL 사용에 대한 팁과 유용한 정보를 제공합니다.|
 
 ## <a name="canceling-tasks-and-parallel-algorithms"></a>작업 및 병렬 알고리즘 취소
@@ -69,7 +69,7 @@ C++용 동시성 런타임은 강력하고 확장 가능하며 응답성이 높�
 
 |||
 |-|-|
-|[비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [메시지 전달 함수](../../parallel/concrt/message-passing-functions.md)<br /><br /> [방법: 다양한 공급자/소비자 패턴 구현](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [방법: call 및 transformer 클래스에 작업 함수 제공](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [방법: 데이터 파이프라인에서 transformer 사용](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [방법: 완료된 작업 중에서 선택](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [방법: 정기적으로 메시지 보내기](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [방법: 메시지 블록 필터 사용](../../parallel/concrt/how-to-use-a-message-block-filter.md)|동시성 런타임에서 데이터 흐름 작업을 수행하기 위한 구성 요소인 비동기 에이전트, 메시지 블록 및 메시지 전달 함수를 설명합니다.|
+|[비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [메시지 전달 함수](../../parallel/concrt/message-passing-functions.md)<br /><br /> [방법: 다양한 공급자-소비자 패턴 구현](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [방법: call 및 transformer 클래스에 작업 함수 제공](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [방법: 데이터 파이프라인에서 transformer 사용](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [방법: 완료된 작업 간 선택](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [방법: 정기적으로 메시지 보내기](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [방법: 메시지 블록 필터 사용](../../parallel/concrt/how-to-use-a-message-block-filter.md)|동시성 런타임에서 데이터 흐름 작업을 수행하기 위한 구성 요소인 비동기 에이전트, 메시지 블록 및 메시지 전달 함수를 설명합니다.|
 |[연습: 에이전트 기반 애플리케이션 만들기](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [연습: 데이터 흐름 에이전트 만들기](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|기본 에이전트 기반 애플리케이션을 만드는 방법을 보여 줍니다.|
 |[연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|이미지 처리를 수행하는 비동기 메시지 블록의 네트워크를 만드는 방법을 보여 줍니다.|
 |[연습: 조인을 사용하여 교착 상태 방지](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|동시성 런타임을 사용하여 애플리케이션의 교착 상태를 방지하는 방법을 보여 주기 위해 철학자들의 만찬 문제(Dining Philosophers Problem)를 활용합니다.|
@@ -103,6 +103,6 @@ C++용 동시성 런타임은 강력하고 확장 가능하며 응답성이 높�
 |[C++ 및 네이티브 코드 포럼에서 병렬 컴퓨팅](https://go.microsoft.com/fwlink/p/?linkid=183874)|동시성 런타임에 대한 커뮤니티 토론에 참여할 수 있습니다.|
 |[병렬 프로그래밍](/dotnet/standard/parallel-programming/index)|.NET Framework에서 사용할 수 있는 병렬 프로그래밍 모델에 대해 알려줍니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [참조](../../parallel/concrt/reference/reference-concurrency-runtime.md)

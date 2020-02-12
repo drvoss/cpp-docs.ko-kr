@@ -2,12 +2,12 @@
 title: 3. 런타임 라이브러리 함수
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857959"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142953"
 ---
 # <a name="3-run-time-library-functions"></a>3. 런타임 라이브러리 함수
 
@@ -59,8 +59,8 @@ void omp_set_num_threads(int num_threads);
 
 #### <a name="cross-references"></a>상호 참조
 
-- [omp_set_dynamic](#317-omp_set_dynamic-function) function
-- [omp_get_dynamic](#318-omp_get_dynamic-function) function
+- [omp_set_dynamic](#317-omp_set_dynamic-function) 함수
+- [omp_get_dynamic](#318-omp_get_dynamic-function) 함수
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) 환경 변수
 - [num_threads](2-directives.md#23-parallel-construct) 절
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 다음은 `omp_get_max_threads`값의 하 한을 나타냅니다.
 
-```
+> *스레드 사용-다음-팀* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-다른 병렬 지역에서 `num_threads` 절을 사용 하 여 특정 개수의 스레드를 요청 하는 경우 `omp_get_max_threads` 결과의 하한값에 대 한 보장은 유지 되지 않습니다.
+다른 병렬 지역이 `num_threads` 절을 사용 하 여 특정 개수의 스레드를 요청 하는 경우 `omp_get_max_threads` 결과의 하한값에 대 한 보장은 더 이상 포함 되지 않습니다.
 
 `omp_get_max_threads` 함수의 반환 값을 사용 하 여 다음 병렬 지역에서 형성 된 팀의 모든 스레드에 대해 충분 한 저장소를 동적으로 할당할 수 있습니다.
 
@@ -171,7 +167,7 @@ void omp_set_dynamic(int dynamic_threads);
 
 #### <a name="microsoft-specific"></a>Microsoft 전용
 
-`omp_get_dynamic` 및 `omp_set_dynamic`에 대 한 현재 지원은 다음과 같습니다. 
+`omp_get_dynamic` 및 `omp_set_dynamic`에 대 한 현재 지원은 다음과 같습니다.
 
 `omp_set_dynamic`에 대 한 입력 매개 변수는 스레딩 정책에 영향을 주지 않으며 스레드 수를 변경 하지 않습니다. `omp_get_num_threads`는 항상 사용자 정의 번호 (설정 된 경우) 또는 기본 스레드 번호를 반환 합니다. 현재 Microsoft 구현에서는 기존 스레드 집합을 다음 병렬 영역에 다시 사용할 수 있도록 `omp_set_dynamic(0)` 동적 스레딩을 끕니다. `omp_set_dynamic(1)`는 기존 스레드 집합을 삭제 하 고 예정 된 병렬 영역에 대 한 새 집합을 만들어 동적 스레딩을 설정 합니다. 새 집합의 스레드 수는 이전 집합과 같으며 `omp_get_num_threads`의 반환 값을 기반으로 합니다. 따라서 최상의 성능을 위해 `omp_set_dynamic(0)`를 사용 하 여 기존 스레드를 다시 사용 합니다.
 

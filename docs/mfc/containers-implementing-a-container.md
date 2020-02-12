@@ -1,68 +1,68 @@
 ---
-title: '컨테이너: 컨테이너를 구현합니다.'
+title: '컨테이너: 컨테이너 구현'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed95324b8df978a6ab2f7582c0ddf626a45e7fe1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302204"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127922"
 ---
-# <a name="containers-implementing-a-container"></a>컨테이너: 컨테이너를 구현합니다.
+# <a name="containers-implementing-a-container"></a>컨테이너: 컨테이너 구현
 
-이 문서는 컨테이너를 구현 하는 절차를 요약 하 고 자세한 내용을 보려면 컨테이너를 구현 하는 방법에 대 한 설명을 제공 하는 다른 문서를 안내 합니다. 또한 일부 선택적 OLE 구현 하려는 기능과 이러한 기능을 설명 하는 문서를 나열 합니다.
+이 문서에서는 컨테이너를 구현 하는 절차를 요약 하 고 컨테이너 구현에 대 한 자세한 설명을 제공 하는 다른 문서를 가리킵니다. 또한 구현할 수 있는 몇 가지 선택적 OLE 기능과 이러한 기능을 설명 하는 문서를 나열 합니다.
 
-#### <a name="to-prepare-your-cwinapp-derived-class"></a>CWinApp에서 파생 된 클래스를 준비 하려면
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>CWinApp 파생 클래스를 준비 하려면
 
-1. OLE 라이브러리를 호출 하 여 초기화 `AfxOleInit` 에 `InitInstance` 멤버 함수입니다.
+1. `InitInstance` 멤버 함수에서 `AfxOleInit`를 호출 하 여 OLE 라이브러리를 초기화 합니다.
 
-1. 호출 `CDocTemplate::SetContainerInfo` 에서 `InitInstance` 메뉴 및 액셀러레이터를 할당 하는 포함 된 항목이 있을 때 사용 되는 리소스는 내부 활성화. 이 항목에 대 한 자세한 내용은 참조 하세요. [활성화](../mfc/activation-cpp.md)합니다.
+1. `InitInstance`에서 `CDocTemplate::SetContainerInfo`를 호출 하 여 포함 된 항목이 내부에서 활성화 될 때 사용 되는 메뉴 및 액셀러레이터 리소스를 할당 합니다. 이 항목에 대 한 자세한 내용은 [활성화](../mfc/activation-cpp.md)를 참조 하십시오.
 
-이러한 기능은 MFC 응용 프로그램 마법사를 사용 하 여 컨테이너 응용 프로그램을 만드는 경우를 제공 됩니다. 참조 [MFC EXE 프로그램 만들기](../mfc/reference/mfc-application-wizard.md)합니다.
+이러한 기능은 MFC 응용 프로그램 마법사를 사용 하 여 컨테이너 응용 프로그램을 만들 때 자동으로 제공 됩니다. [MFC EXE 프로그램 만들기](../mfc/reference/mfc-application-wizard.md)를 참조 하세요.
 
-#### <a name="to-prepare-your-view-class"></a>뷰 클래스를 준비 하려면
+#### <a name="to-prepare-your-view-class"></a>보기 클래스를 준비 하려면
 
-1. 유지 되는 포인터를 유지 하 여 선택한 항목의 추적 또는 목록 선택된 된 항목에 여러 선택 영역을 지 원하는 경우 포인터입니다. 프로그램 `OnDraw` 함수에는 모든 OLE 항목도 그립니다 해야 합니다.
+1. 선택한 항목에 대 한 포인터 또는 여러 선택을 지 원하는 경우 포인터 목록을 유지 하 여 선택한 항목을 추적 합니다. `OnDraw` 함수는 모든 OLE 항목을 그려야 합니다.
 
-1. 재정의 `IsSelected` 에 전달 된 항목이 현재 선택 되어 있는지 여부를 확인 합니다.
+1. `IsSelected`를 재정의 하 여 전달 된 항목이 현재 선택 되어 있는지 여부를 확인 합니다.
 
-1. 구현 하는 `OnInsertObject` 표시할 메시지 처리기는 **개체 삽입** 대화 상자.
+1. **개체 삽입** 대화 상자를 표시 하는 `OnInsertObject` 메시지 처리기를 구현 합니다.
 
-1. 구현 된 `OnSetFocus` 메시지 처리기 보기에서 포커스를 전체 활성 OLE 전송할 항목을 포함 합니다.
+1. `OnSetFocus` 메시지 처리기를 구현 하 여 뷰에서 현재 위치의 활성 OLE 포함 항목으로 포커스를 전송 합니다.
 
-1. 구현 하는 `OnSize` OLE를 알리기 위해 메시지 처리기 포함 항목 포함 하는 뷰의 크기의 변경 내용을 반영 하려면 해당 영역을 변경 해야 합니다.
+1. 포함 하는 뷰의 크기가 변경 되는 것을 반영 하도록 해당 사각형을 변경 해야 한다는 것을 OLE 포함 된 항목에 알리기 위해 `OnSize` 메시지 처리기를 구현 합니다.
 
-다음 응용 프로그램에서 이러한 기능을 구현 천차만별 때문에 응용 프로그램 마법사만 기본 구현을 제공 합니다. 가능성이 제대로 작동 하려면 응용 프로그램에 이러한 함수를 사용자 지정 해야 합니다. 이 예제를 참조 합니다 [컨테이너](../overview/visual-cpp-samples.md) 샘플입니다.
+이러한 기능의 구현은 응용 프로그램 마다 크게 다르지만 응용 프로그램 마법사는 기본 구현만 제공 합니다. 응용 프로그램이 제대로 작동 하도록 하려면 이러한 함수를 사용자 지정 해야 할 가능성이 높습니다. 이에 대 한 예제는 [컨테이너](../overview/visual-cpp-samples.md) 샘플을 참조 하세요.
 
-#### <a name="to-handle-embedded-and-linked-items"></a>포함 및 연결 된 항목을 처리 하려면
+#### <a name="to-handle-embedded-and-linked-items"></a>포함 된 항목과 연결 된 항목을 처리 하려면
 
-1. 클래스를 파생 [COleClientItem](../mfc/reference/coleclientitem-class.md)합니다. 이 클래스의 개체에 포함 되었거나 OLE 문서에 연결 된 항목을 나타냅니다.
+1. [COleClientItem](../mfc/reference/coleclientitem-class.md)에서 클래스를 파생 시킵니다. 이 클래스의 개체는 OLE 문서에 포함 되거나 연결 된 항목을 나타냅니다.
 
-1. 재정의 `OnChange`하십시오 `OnChangeItemPosition`, 및 `OnGetItemPosition`합니다. 이러한 함수는 크기 조정, 위치 및 수정 포함 및 연결 된 항목을 처리 합니다.
+1. `OnChange`, `OnChangeItemPosition`및 `OnGetItemPosition`를 재정의 합니다. 이러한 함수는 포함 된 항목과 연결 된 항목의 크기 조정, 위치 지정 및 수정을 처리 합니다.
 
-응용 프로그램 마법사, 클래스를 파생 됩니다 있지만 재정의할 가능성이 해야 `OnChange` 이전 절차의 2 단계에서이 사용 하 여 다른 함수를 나열 합니다. 기본 구현은 이러한 함수는 다음 응용 프로그램에서 다르게 구현 되므로 대부분의 응용 프로그램에 대 한 사용자 지정 해야 합니다. 이 예제의 경우 MFC 샘플을 참조 하세요 [DRAWCLI](../overview/visual-cpp-samples.md) 하 고 [컨테이너](../overview/visual-cpp-samples.md)합니다.
+응용 프로그램 마법사가 클래스를 파생 하지만 앞의 절차에서 2 단계에 나열 된 다른 함수 및 `OnChange`을 재정의 해야 할 수 있습니다. 이러한 함수는 응용 프로그램 마다 다르게 구현 되기 때문에 대부분의 응용 프로그램에 대해 기본 구현을 사용자 지정 해야 합니다. 이에 대 한 예제는 MFC 샘플 [DRAWCLI](../overview/visual-cpp-samples.md) 및 [컨테이너](../overview/visual-cpp-samples.md)를 참조 하세요.
 
-항목 수가 OLE를 지원 하기 위해 컨테이너 응용 프로그램의 메뉴 구조에 추가 해야 합니다. 에 대 한 자세한 내용은 참조 하세요. [메뉴 및 리소스: 컨테이너 추가](../mfc/menus-and-resources-container-additions.md)합니다.
+OLE를 지원 하려면 컨테이너 응용 프로그램의 메뉴 구조에 많은 항목을 추가 해야 합니다. 이러한 항목에 대 한 자세한 내용은 [메뉴 및 리소스: 컨테이너 추가](../mfc/menus-and-resources-container-additions.md)를 참조 하세요.
 
 컨테이너 응용 프로그램에서 다음 기능 중 일부를 지원할 수도 있습니다.
 
-- 포함 된 항목을 편집 하는 경우 내부 활성화.
+- 포함 된 항목을 편집할 때 내부 활성화
 
-   자세한 내용은 [활성화](../mfc/activation-cpp.md)합니다.
+   자세한 내용은 [활성화](../mfc/activation-cpp.md)를 참조 하십시오.
 
-- OLE 항목 만들기는 서버 응용 프로그램에서 끌어서 선택 합니다.
+- 서버 응용 프로그램에서 선택 항목을 끌어서 놓는 방법으로 OLE 항목을 만듭니다.
 
-   자세한 내용은 [끌어서 놓기 (OLE)](../mfc/drag-and-drop-ole.md)합니다.
+   자세한 내용은 [OLE 끌어서 놓기](../mfc/drag-and-drop-ole.md)를 참조 하세요.
 
-- 포함 된 개체 또는 조합 컨테이너/서버 응용 프로그램에 연결 합니다.
+- 포함 된 개체 또는 조합 컨테이너/서버 응용 프로그램에 대 한 링크입니다.
 
-   자세한 내용은 참조 하세요. [컨테이너: 고급 기능](../mfc/containers-advanced-features.md)합니다.
+   자세한 내용은 [컨테이너: 고급 기능](../mfc/containers-advanced-features.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컨테이너](../mfc/containers.md)<br/>
 [컨테이너: 클라이언트 항목](../mfc/containers-client-items.md)

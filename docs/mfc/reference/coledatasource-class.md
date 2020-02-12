@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 062234b9bc3c538e8cd5fcade002a2892eea259f
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741614"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127857"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 클래스
 
@@ -53,36 +53,36 @@ ms.locfileid: "70741614"
 class COleDataSource : public CCmdTarget
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[COleDataSource::COleDataSource](#coledatasource)|`COleDataSource` 개체를 생성합니다.|
+|[COleDataSource:: COleDataSource](#coledatasource)|`COleDataSource` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[COleDataSource::CacheData](#cachedata)|구조를 `STGMEDIUM` 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|HGLOBAL를 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
-|[COleDataSource::DelayRenderData](#delayrenderdata)|지연 렌더링을 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|`CFile` 포인터에서 지정 된 형식의 데이터를 제공 합니다.|
-|[COleDataSource::DelaySetData](#delaysetdata)|에서 `OnSetData`지원 되는 모든 형식에 대해 호출 됩니다.|
-|[COleDataSource::DoDragDrop](#dodragdrop)|데이터 소스를 사용 하 여 끌어서 놓기 작업을 수행 합니다.|
-|[COleDataSource::Empty](#empty)|데이터의 `COleDataSource` 개체를 비웁니다.|
-|[COleDataSource::FlushClipboard](#flushclipboard)|모든 데이터를 클립보드에 렌더링 합니다.|
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|클립보드에 저장 된 데이터가 여전히 있는지 확인 합니다.|
-|[COleDataSource::OnRenderData](#onrenderdata)|지연 된 렌더링의 일부로 데이터를 검색 합니다.|
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|지연 된 `CFile` 렌더링의 일부로로 데이터를 검색 합니다.|
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|지연 된 렌더링의 일부로 HGLOBAL 데이터를 검색 합니다.|
-|[COleDataSource::OnSetData](#onsetdata)|`COleDataSource` 개체의 데이터를 바꾸기 위해 호출 됩니다.|
-|[COleDataSource::SetClipboard](#setclipboard)|개체를 `COleDataSource` 클립보드에 배치 합니다.|
+|[COleDataSource:: CacheData](#cachedata)|`STGMEDIUM` 구조체를 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
+|[COleDataSource:: CacheGlobalData](#cacheglobaldata)|HGLOBAL를 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
+|[COleDataSource::D elayRenderData](#delayrenderdata)|지연 렌더링을 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
+|[COleDataSource::D elayRenderFileData](#delayrenderfiledata)|`CFile` 포인터에서 지정 된 형식으로 데이터를 제공 합니다.|
+|[COleDataSource::D elaySetData](#delaysetdata)|`OnSetData`에서 지원 되는 모든 형식에 대해 호출 됩니다.|
+|[COleDataSource::D oDragDrop](#dodragdrop)|데이터 소스를 사용 하 여 끌어서 놓기 작업을 수행 합니다.|
+|[COleDataSource:: Empty](#empty)|데이터의 `COleDataSource` 개체를 비웁니다.|
+|[COleDataSource:: FlushClipboard](#flushclipboard)|모든 데이터를 클립보드에 렌더링 합니다.|
+|[COleDataSource:: GetClipboardOwner](#getclipboardowner)|클립보드에 저장 된 데이터가 여전히 있는지 확인 합니다.|
+|[COleDataSource:: OnRenderData](#onrenderdata)|지연 된 렌더링의 일부로 데이터를 검색 합니다.|
+|[COleDataSource:: OnRenderFileData](#onrenderfiledata)|지연 된 렌더링의 일부로 `CFile` 데이터를 검색 합니다.|
+|[COleDataSource:: OnRenderGlobalData](#onrenderglobaldata)|지연 된 렌더링의 일부로 HGLOBAL 데이터를 검색 합니다.|
+|[COleDataSource:: OnSetData](#onsetdata)|`COleDataSource` 개체의 데이터를 바꾸기 위해 호출 됩니다.|
+|[COleDataSource:: SetClipboard](#setclipboard)|클립보드에 `COleDataSource` 개체를 배치 합니다.|
 
 ## <a name="remarks"></a>설명
 
-OLE 데이터 원본을 직접 만들 수 있습니다. 또는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 및 [COleServerItem](../../mfc/reference/coleserveritem-class.md) 클래스는 `CopyToClipboard` 및 `DoDragDrop` 멤버 함수에 대 한 응답으로 OLE 데이터 원본을 만듭니다. 간략 한 설명은 [COleServerItem:: CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) 를 참조 하세요. 클라이언트 항목 또는 서버 항목 클래스의 `CopyToClipboard` `DoDragDrop` 멤버함수를재정의하여또는멤버함수에대해생성된OLE데이터원본의데이터에클립보드`OnGetClipboardData` 형식을 추가 합니다.
+OLE 데이터 원본을 직접 만들 수 있습니다. 또는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 및 [COleServerItem](../../mfc/reference/coleserveritem-class.md) 클래스는 `CopyToClipboard` 및 `DoDragDrop` 멤버 함수에 대 한 응답으로 OLE 데이터 원본을 만듭니다. 간략 한 설명은 [COleServerItem:: CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) 를 참조 하세요. 클라이언트 항목이 나 서버 항목 클래스의 `OnGetClipboardData` 멤버 함수를 재정의 하 여 `CopyToClipboard` 또는 `DoDragDrop` 멤버 함수에 대해 생성 된 OLE 데이터 원본의 데이터에 클립보드 형식을 추가 합니다.
 
 전송에 대 한 데이터를 준비 하려는 경우 언제 든 지이 클래스의 개체를 만들고 데이터에 가장 적합 한 방법을 사용 하 여 데이터를 채워야 합니다. 데이터를 데이터 소스에 삽입 하는 방법은 데이터가 즉시 제공 되는지 (즉시 렌더링) 또는 요청 시 (지연 렌더링)에 따라 직접적인 영향을 받습니다. 사용할 클립보드 형식 및 선택적 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 전달 하 여 데이터를 제공 하는 모든 클립보드 형식에 대해 [delayrenderdata](#delayrenderdata)를 호출 합니다.
 
@@ -100,7 +100,7 @@ OLE 데이터 원본을 직접 만들 수 있습니다. 또는 [COleClientItem](
 
 **헤더:** afxole
 
-##  <a name="cachedata"></a>  COleDataSource::CacheData
+##  <a name="cachedata"></a>COleDataSource:: CacheData
 
 데이터 전송 작업 중 데이터를 제공 하는 형식을 지정 하려면이 함수를 호출 합니다.
 
@@ -120,23 +120,23 @@ void CacheData(
 지정 된 형식의 데이터를 포함 하는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 가리킵니다.
 
 *lpFormatEtc*<br/>
-데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 이면 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
+데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 인 경우 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
 이 함수는 즉시 렌더링을 사용 하 여 데이터를 제공 하므로 데이터를 제공 해야 합니다. 데이터는 필요할 때까지 캐시 됩니다.
 
-[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 사용 하 여 데이터를 제공 합니다. 제공 하는 데이터 양이 `CacheGlobalData` HGLOBAL를 사용 하 여 효율적으로 전송할 수 있을 만큼 작은 경우에도 멤버 함수를 사용할 수 있습니다.
+[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 사용 하 여 데이터를 제공 합니다. 제공 하는 데이터 양이 HGLOBAL를 사용 하 여 효율적으로 전송할 수 있을 만큼 작은 경우에도 `CacheGlobalData` 멤버 함수를 사용할 수 있습니다.
 
-의 `CacheData` 멤버에`ptd` 대 한 호출 및 lpStgMedium의 내용은 호출자가 아닌 데이터 개체에서 소유 합니다. `lpFormatEtc`
+호출 후에는 `lpFormatEtc`의 `ptd` 멤버 `CacheData` 하 고 *lpStgMedium* 의 내용은 호출자가 아닌 데이터 개체에서 소유 합니다.
 
-지연 렌더링을 사용 하려면 [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+지연 렌더링을 사용 하려면 [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 자세한 내용은 Windows SDK [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) and [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 참조 하십시오.
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData
+##  <a name="cacheglobaldata"></a>COleDataSource:: CacheGlobalData
 
 데이터 전송 작업 중 데이터를 제공 하는 형식을 지정 하려면이 함수를 호출 합니다.
 
@@ -156,19 +156,19 @@ void CacheGlobalData(
 지정 된 형식의 데이터를 포함 하는 전역 메모리 블록에 대 한 핸들입니다.
 
 *lpFormatEtc*<br/>
-데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 이면 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
+데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 인 경우 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 즉시 렌더링을 사용 하 여 데이터를 제공 하므로 함수를 호출할 때 데이터를 제공 해야 합니다. 데이터는 필요할 때까지 캐시 됩니다. 많은 양의 `CacheData` 데이터를 제공 하거나 구조적 저장소 미디어가 필요한 경우 멤버 함수를 사용 합니다.
+이 함수는 즉시 렌더링을 사용 하 여 데이터를 제공 하므로 함수를 호출할 때 데이터를 제공 해야 합니다. 데이터는 필요할 때까지 캐시 됩니다. 많은 양의 데이터를 제공 하거나 구조적 저장소 미디어가 필요한 경우 `CacheData` 멤버 함수를 사용 합니다.
 
-지연 렌더링을 사용 하려면 [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+지연 렌더링을 사용 하려면 [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 자세한 내용은 Windows SDK [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 참조 하세요.
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="coledatasource"></a>  COleDataSource::COleDataSource
+##  <a name="coledatasource"></a>COleDataSource:: COleDataSource
 
 `COleDataSource` 개체를 생성합니다.
 
@@ -176,7 +176,7 @@ void CacheGlobalData(
 COleDataSource();
 ```
 
-##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData
+##  <a name="delayrenderdata"></a>COleDataSource::D elayRenderData
 
 데이터 전송 작업 중 데이터를 제공 하는 형식을 지정 하려면이 함수를 호출 합니다.
 
@@ -192,13 +192,13 @@ void DelayRenderData(
 데이터를 제공할 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 함수에서 반환 되는 값 중 하나일 수 있습니다.
 
 *lpFormatEtc*<br/>
-데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 이면 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
+데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 인 경우 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
 이 함수는 지연 된 렌더링을 사용 하 여 데이터를 제공 하므로 데이터를 즉시 제공 하지 않습니다. [Onrenderdata](#onrenderdata) 또는 [onrenderglobaldata](#onrenderglobaldata) 멤버 함수를 호출 하 여 데이터를 요청 합니다.
 
-개체를 `CFile` 통해 데이터를 제공 하지 않으려면이 함수를 사용 합니다. `CFile` 개체를 통해 데이터를 제공 하려는 경우 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+`CFile` 개체를 통해 데이터를 제공 하지 않으려면이 함수를 사용 합니다. `CFile` 개체를 통해 데이터를 제공 하려는 경우 [Delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 즉시 렌더링을 사용 하려면 [cachedata](#cachedata) 또는 [cacheglobaldata](#cacheglobaldata) 멤버 함수를 호출 합니다.
 
@@ -206,7 +206,7 @@ void DelayRenderData(
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData
+##  <a name="delayrenderfiledata"></a>COleDataSource::D elayRenderFileData
 
 데이터 전송 작업 중 데이터를 제공 하는 형식을 지정 하려면이 함수를 호출 합니다.
 
@@ -222,13 +222,13 @@ void DelayRenderFileData(
 데이터를 제공할 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 함수에서 반환 되는 값 중 하나일 수 있습니다.
 
 *lpFormatEtc*<br/>
-데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 이면 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
+데이터를 제공 하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 인 경우 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
 이 함수는 지연 된 렌더링을 사용 하 여 데이터를 제공 하므로 데이터를 즉시 제공 하지 않습니다. [Onrenderfiledata](#onrenderfiledata) 멤버 함수를 호출 하 여 데이터를 요청 합니다.
 
-`CFile` 개체를 사용 하 여 데이터를 제공 하려는 경우이 함수를 사용 합니다. `CFile` 개체를 사용 하지 않으려면 [delayrenderdata](#delayrenderdata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+`CFile` 개체를 사용 하 여 데이터를 제공 하려는 경우이 함수를 사용 합니다. `CFile` 개체를 사용 하지 않으려면 [Delayrenderdata](#delayrenderdata) 멤버 함수를 호출 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 즉시 렌더링을 사용 하려면 [cachedata](#cachedata) 또는 [cacheglobaldata](#cacheglobaldata) 멤버 함수를 호출 합니다.
 
@@ -236,7 +236,7 @@ void DelayRenderFileData(
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData
+##  <a name="delaysetdata"></a>COleDataSource::D elaySetData
 
 이 함수를 호출 하 여 데이터 소스의 내용 변경을 지원 합니다.
 
@@ -252,19 +252,19 @@ void DelaySetData(
 데이터를 배치할 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 함수에서 반환 되는 값 중 하나일 수 있습니다.
 
 *lpFormatEtc*<br/>
-데이터를 바꿀 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 이면 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
+데이터를 바꿀 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. 이 값이 NULL 인 경우 `FORMATETC` 구조체의 다른 필드에 기본값이 사용 됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 경우 [Onsetdata](#onsetdata) 는 프레임 워크에서 호출 됩니다. 프레임 워크에서 [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)의 데이터 원본을 반환 하는 경우에만 사용 됩니다. 가 `DelaySetData` 호출`OnSetData` 되지 않으면 함수가 호출 되지 않습니다. `DelaySetData`지원 되는 각 클립보드 또는 `FORMATETC` 형식에 대해를 호출 해야 합니다.
+이 경우 [Onsetdata](#onsetdata) 는 프레임 워크에서 호출 됩니다. 프레임 워크에서 [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)의 데이터 원본을 반환 하는 경우에만 사용 됩니다. `DelaySetData`를 호출 하지 않으면 `OnSetData` 함수가 호출 되지 않습니다. 지원 되는 각 클립보드 또는 `FORMATETC` 형식에 대해 `DelaySetData`를 호출 해야 합니다.
 
 자세한 내용은 Windows SDK [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 참조 하세요.
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop
+##  <a name="dodragdrop"></a>COleDataSource::D oDragDrop
 
-멤버 함수를 호출 하 여이 데이터 원본에 대해 일반적으로 [CWnd:: onlbuttondown](../../mfc/reference/cwnd-class.md#onlbuttondown) 처리기에서 끌어서 놓기 작업을 수행 합니다. `DoDragDrop`
+이 데이터 소스에 대해 일반적으로 [CWnd:: OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) 처리기에서 끌어서 놓기 작업을 수행 하려면 `DoDragDrop` 멤버 함수를 호출 합니다.
 
 ```
 DROPEFFECT DoDragDrop(
@@ -278,11 +278,11 @@ DROPEFFECT DoDragDrop(
 *dwEffects*<br/>
 이 데이터 소스에서 허용 되는 끌어서 놓기 작업입니다. 다음 중 하나 이상이 될 수 있습니다.
 
-- DROPEFFECT_COPY 복사 작업을 수행할 수 있습니다.
+- 복사 작업을 수행할 수 DROPEFFECT_COPY.
 
 - DROPEFFECT_MOVE 이동 작업을 수행할 수 있습니다.
 
-- DROPEFFECT_LINK 끌어 놓은 데이터에서 원래 데이터로의 링크를 설정할 수 있습니다.
+- 삭제 된 데이터에서 원래 데이터로의 링크를 설정할 수 DROPEFFECT_LINK.
 
 - DROPEFFECT_SCROLL는 끌기 스크롤 작업이 발생할 수 있음을 나타냅니다.
 
@@ -292,9 +292,9 @@ DROPEFFECT DoDragDrop(
 *pDropSource*<br/>
 놓기 소스를 가리킵니다. NULL 이면 [Coledropsource](../../mfc/reference/coledropsource-class.md) 의 기본 구현이 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-끌어서 놓기 작업에 의해 생성 된 삭제 효과입니다. 그렇지 않으면 사용자가 제공 된 사각형을 벗어나기 전에 마우스 단추를 놓았음을 작업을 시작 하지 않은 경우 DROPEFFECT_NONE입니다.
+끌어서 놓기 작업에 의해 생성 된 삭제 효과입니다. 그렇지 않으면 사용자가 제공 된 사각형을 벗어나기 전에 마우스 단추를 놓았음을 작업을 시작 하지 않을 경우 DROPEFFECT_NONE 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -302,7 +302,7 @@ DROPEFFECT DoDragDrop(
 
 지연 시간은 레지스트리 키 설정에 의해 지정 됩니다. [Cwinapp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [Cwinapp:: writeprofilestring](../../mfc/reference/cwinapp-class.md#writeprofileint)를 호출 하 여 지연 시간을 변경할 수 있습니다. 지연 시간을 지정 하지 않으면 기본값인 200 밀리초가 사용 됩니다. 끌기 지연 시간은 다음과 같이 저장 됩니다.
 
-- Windows NT 끌어서 지연 시간은 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.에 저장 됩니다.
+- Windows NT 끌어서 지연 시간은 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.에 저장 됩니다.
 
 - Windows 3(sp3)의 끌어서 지연 시간은 WIN에 저장 됩니다. INI 파일의 [Windows} 섹션 아래에 있습니다.
 
@@ -310,11 +310,11 @@ DROPEFFECT DoDragDrop(
 
 레지스트리 또는에서 끌어서 지연 정보를 저장 하는 방법에 대 한 자세한 내용 INI 파일 Windows SDK의 [Writeprofilestring](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) 을 참조 하십시오.
 
-자세한 내용은 끌어서 놓기 문서 [를 참조 하세요. 놓기 소스](../../mfc/drag-and-drop-implementing-a-drop-source.md)구현
+자세한 내용은 [OLE 끌어서 놓기](../../mfc/drag-and-drop-ole.md)문서를 참조 하세요.
 
-##  <a name="empty"></a>  COleDataSource::Empty
+##  <a name="empty"></a>COleDataSource:: Empty
 
-데이터 개체를 `COleDataSource` 비우려면이 함수를 호출 합니다.
+데이터의 `COleDataSource` 개체를 비우려면이 함수를 호출 합니다.
 
 ```
 void Empty();
@@ -326,7 +326,7 @@ void Empty();
 
 자세한 내용은 Windows SDK에서 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 을 참조 하세요.
 
-##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard
+##  <a name="flushclipboard"></a>COleDataSource:: FlushClipboard
 
 클립보드에 있는 데이터를 렌더링 한 다음 응용 프로그램이 종료 된 후 클립보드의 데이터를 붙여 넣을 수 있습니다.
 
@@ -338,7 +338,7 @@ static void PASCAL FlushClipboard();
 
 [Setclipboard](#setclipboard) 를 사용 하 여 클립보드에 데이터를 저장 합니다.
 
-##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner
+##  <a name="getclipboardowner"></a>COleDataSource:: GetClipboardOwner
 
 [Setclipboard](#setclipboard) 가 마지막으로 호출 된 이후 클립보드의 데이터가 변경 되었는지 여부를 확인 하 고, 그럴 경우 현재 소유자를 식별 합니다.
 
@@ -346,11 +346,11 @@ static void PASCAL FlushClipboard();
 static COleDataSource* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 클립보드에 있는 데이터 소스 이거나, 클립보드에 아무 것도 없거나 호출 응용 프로그램에서 클립보드를 소유 하지 않은 경우 NULL입니다.
 
-##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData
+##  <a name="onrenderdata"></a>COleDataSource:: OnRenderData
 
 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -368,21 +368,21 @@ virtual BOOL OnRenderData(
 *lpStgMedium*<br/>
 데이터가 반환 되는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 형식은 이전에 지연 렌더링을 위해 `COleDataSource` [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 사용 하 여 개체에 배치 되었습니다. 이 함수의 기본 구현은 제공 된 저장소 미디어가 각각 파일 또는 메모리 일 경우 [Onrenderfiledata](#onrenderfiledata) 또는 [onrenderfiledata](#onrenderglobaldata) 를 호출 합니다. 이러한 형식이 모두 제공 되지 않으면 기본 구현은 0을 반환 하 고 아무 작업도 수행 하지 않습니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+지정 된 형식은 이전에 지연 렌더링을 위해 [delayrenderdata](#delayrenderdata) 또는 [delayrenderfiledata](#delayrenderfiledata) 멤버 함수를 사용 하 여 `COleDataSource` 개체에 배치 되었습니다. 이 함수의 기본 구현은 제공 된 저장소 미디어가 각각 파일 또는 메모리 일 경우 [Onrenderfiledata](#onrenderfiledata) 또는 [onrenderfiledata](#onrenderglobaldata) 를 호출 합니다. 이러한 형식이 모두 제공 되지 않으면 기본 구현은 0을 반환 하 고 아무 작업도 수행 하지 않습니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
-`STGMEDIUM` *LpStgMedium*-> *tymed* 가 TYMED_NULL 인 경우 *lpFormatEtc-> tymed*에 지정 된 대로를 할당 하 고 채워야 합니다. TYMED_NULL 되지 않은 경우 데이터를 사용 `STGMEDIUM` 하 여 입력 해야 합니다.
+*LpStgMedium*-> *tymed* 이 TYMED_NULL 경우 `STGMEDIUM`를 할당 하 고 *lpFormatEtc-> tymed*에 지정 된 대로 채워야 합니다. TYMED_NULL 되지 않은 경우 `STGMEDIUM` 데이터를 사용 하 여 채워야 합니다.
 
-이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의할 수 있습니다. 데이터가 작고 크기가 고정 되어 있으면를 재정의 `OnRenderGlobalData`합니다. 데이터가 파일에 있거나 가변 크기인 경우를 재정의 `OnRenderFileData`합니다.
+이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의할 수 있습니다. 데이터가 작고 크기가 고정 된 경우 `OnRenderGlobalData`를 재정의 합니다. 데이터가 파일에 있거나 가변 크기인 경우 `OnRenderFileData`를 재정의 합니다.
 
 자세한 내용은 Windows SDK에서 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 및 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체, [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) 열거형 형식 및 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 를 참조 하세요.
 
-##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData
+##  <a name="onrenderfiledata"></a>COleDataSource:: OnRenderFileData
 
 지정 된 저장 미디어가 파일인 경우 지정 된 형식으로 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -400,19 +400,19 @@ virtual BOOL OnRenderFileData(
 *pFile*<br/>
 데이터가 렌더링 될 [CFile](../../mfc/reference/cfile-class.md) 개체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 형식은 이전에 지연 된 렌더링을 `COleDataSource` 위해 [delayrenderdata](#delayrenderdata) 멤버 함수를 사용 하 여 개체에 배치 되었습니다. 이 함수의 기본 구현은 단순히 FALSE를 반환 합니다.
+지정 된 형식은 이전에 지연 렌더링을 위해 [Delayrenderdata](#delayrenderdata) 멤버 함수를 사용 하 여 `COleDataSource` 개체에 배치 되었습니다. 이 함수의 기본 구현은 단순히 FALSE를 반환 합니다.
 
-이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 [Onrenderdata](#onrenderdata)를 재정의 합니다. 데이터가 파일에 있거나 가변 크기인 경우를 재정의 `OnRenderFileData`합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 [Onrenderdata](#onrenderdata)를 재정의 합니다. 데이터가 파일에 있거나 가변 크기인 경우 `OnRenderFileData`를 재정의 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 자세한 내용은 Windows SDK [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) Structure and [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 를 참조 하십시오.
 
-##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData
+##  <a name="onrenderglobaldata"></a>COleDataSource:: OnRenderGlobalData
 
 지정 된 저장 미디어가 전역 메모리 인 경우 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -430,21 +430,21 @@ virtual BOOL OnRenderGlobalData(
 *phGlobal*<br/>
 데이터가 반환 될 전역 메모리의 핸들을 가리킵니다. 아직 할당 되지 않은 경우이 매개 변수는 NULL 일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 형식은 이전에 지연 된 렌더링을 `COleDataSource` 위해 [delayrenderdata](#delayrenderdata) 멤버 함수를 사용 하 여 개체에 배치 되었습니다. 이 함수의 기본 구현은 단순히 FALSE를 반환 합니다.
+지정 된 형식은 이전에 지연 렌더링을 위해 [Delayrenderdata](#delayrenderdata) 멤버 함수를 사용 하 여 `COleDataSource` 개체에 배치 되었습니다. 이 함수의 기본 구현은 단순히 FALSE를 반환 합니다.
 
 *Phglobal* 이 NULL 인 경우 새 HGLOBAL을 할당 하 고 *phglobal*에 반환 해야 합니다. 그렇지 않으면 *Phglobal* 로 지정 된 HGLOBAL 데이터를 채워야 합니다. HGLOBAL에 배치 되는 데이터의 양은 메모리 블록의 현재 크기를 초과 하면 안 됩니다. 또한 블록을 더 큰 크기에 다시 할당할 수 없습니다.
 
-이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의할 수 있습니다. 여러 저장소 미디어를 처리 하려는 경우 [Onrenderdata](#onrenderdata)를 재정의 합니다. 데이터가 파일에 있거나 가변 크기인 경우 [Onrenderfiledata](#onrenderfiledata)를 재정의 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 데이터 [개체 및 데이터 원본 문서를 참조 하세요. 조작](../../mfc/data-objects-and-data-sources-manipulation.md).
+이는 고급 재정의 가능입니다. 요청 된 형식 및 중간에 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라이 함수의 다른 버전 중 하나를 대신 재정의할 수 있습니다. 여러 저장소 미디어를 처리 하려는 경우 [Onrenderdata](#onrenderdata)를 재정의 합니다. 데이터가 파일에 있거나 가변 크기인 경우 [Onrenderfiledata](#onrenderfiledata)를 재정의 합니다. MFC에서 처리 되는 지연 된 렌더링에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)문서를 참조 하세요.
 
 자세한 내용은 Windows SDK [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) Structure and [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 를 참조 하십시오.
 
-##  <a name="onsetdata"></a>  COleDataSource::OnSetData
+##  <a name="onsetdata"></a>COleDataSource:: OnSetData
 
 `COleDataSource` 개체의 데이터를 지정 된 형식으로 설정 하거나 바꾸기 위해 프레임 워크에서 호출 됩니다.
 
@@ -466,27 +466,27 @@ virtual BOOL OnSetData(
 *bRelease*<br/>
 함수 호출을 완료 한 후 저장소 미디어의 소유권이 있는 사용자를 나타냅니다. 호출자는 저장소 미디어를 대신해 할당 된 리소스를 해제할 책임이 있는 사용자를 결정 합니다. 호출자가 *bRelease*를 설정 하 여이를 수행 합니다. *BRelease* 가 0이 아닌 경우 데이터 원본은 소유권을 가지 며 사용이 끝나면 미디어를 해제 합니다. *BRelease* 가 0 이면 호출자가 소유권을 유지 하 고 데이터 소스는 호출 기간 동안만 저장소 미디어를 사용할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-데이터 소스는 데이터를 성공적으로 가져올 때까지 데이터 소유권을 받지 않습니다. 즉,가 0을 반환 하는 경우 `OnSetData` 에는 소유권을 사용 하지 않습니다. 데이터 원본에서 소유권을 가져오는 경우 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 함수를 호출 하 여 저장소 미디어를 해제 합니다.
+데이터 소스는 데이터를 성공적으로 가져올 때까지 데이터 소유권을 받지 않습니다. 즉, `OnSetData` 0을 반환 하는 경우에는 소유권을 사용 하지 않습니다. 데이터 원본에서 소유권을 가져오는 경우 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 함수를 호출 하 여 저장소 미디어를 해제 합니다.
 
 기본 구현은 아무 작업도 수행하지 않습니다. 지정 된 형식의 데이터를 바꾸려면이 함수를 재정의 합니다. 이는 고급 재정의 가능입니다.
 
 자세한 내용은 Windows SDK에서 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 및 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체와 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 및 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 함수를 참조 하세요.
 
-##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
+##  <a name="setclipboard"></a>COleDataSource:: SetClipboard
 
-다음 함수 중 하나를 호출한 `COleDataSource` 후 개체에 포함 된 데이터를 클립보드에 넣습니다. [Cachedata](#cachedata), [cacheglobaldata](#cacheglobaldata), [Delayrenderdata](#delayrenderdata)또는 [delayrenderfiledata](#delayrenderfiledata).
+[Cachedata](#cachedata), [cacheglobaldata](#cacheglobaldata), [Delayrenderdata](#delayrenderdata)또는 [delayrenderfiledata](#delayrenderfiledata)함수 중 하나를 호출한 후 `COleDataSource` 개체에 포함 된 데이터를 클립보드에 넣습니다.
 
 ```
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 OCLIENT](../../overview/visual-cpp-samples.md)<br/>

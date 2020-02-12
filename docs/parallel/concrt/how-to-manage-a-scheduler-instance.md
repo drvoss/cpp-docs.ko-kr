@@ -1,24 +1,24 @@
 ---
-title: '방법: 스케줄러 인스턴스 관리'
+title: '방법: Scheduler 인스턴스 관리'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c7ec321eaf0960dc14b61bbd8fdc76b53a31f8c5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510530"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141721"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>방법: 스케줄러 인스턴스 관리
+# <a name="how-to-manage-a-scheduler-instance"></a>방법: Scheduler 인스턴스 관리
 
 스케줄러 인스턴스를 사용 하면 다양 한 종류의 작업에 특정 일정 예약 정책을 연결할 수 있습니다. 이 항목에는 스케줄러 인스턴스를 만들고 관리 하는 방법을 보여 주는 두 가지 기본 예가 포함 되어 있습니다.
 
-이 예제에서는 기본 스케줄러 정책을 사용 하는 스케줄러를 만듭니다. 사용자 지정 정책을 [사용 하는 스케줄러를 만드는 예제는 방법: 특정 스케줄러 정책을](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)지정 합니다.
+이 예제에서는 기본 스케줄러 정책을 사용 하는 스케줄러를 만듭니다. 사용자 지정 정책을 사용 하는 스케줄러를 만드는 예제는 [방법: 특정 스케줄러 정책 지정을](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)참조 하세요.
 
-### <a name="to-manage-a-scheduler-instance-in-your-application"></a>응용 프로그램에서 scheduler 인스턴스를 관리 하려면
+## <a name="to-manage-a-scheduler-instance-in-your-application"></a>응용 프로그램에서 scheduler 인스턴스를 관리 하려면
 
 1. 사용할 스케줄러에 대 한 정책 값이 포함 된 [concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) 개체를 만듭니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69510530"
 
 다음 코드에서는 스케줄러 인스턴스를 관리 하는 두 가지 방법을 보여 줍니다. 각 예제에서는 먼저 기본 스케줄러를 사용 하 여 현재 스케줄러의 고유 식별자를 출력 하는 작업을 수행 합니다. 그런 다음 각 예제에서는 스케줄러 인스턴스를 사용 하 여 동일한 작업을 다시 수행 합니다. 마지막으로, 각 예제에서는 기본 스케줄러를 현재 스케줄러로 복원 하 고 작업을 한 번 더 수행 합니다.
 
-첫 번째 예제에서는 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 클래스를 사용 하 여 스케줄러 인스턴스를 만들고이를 현재 컨텍스트와 연결 합니다. 두 번째 예제에서는 [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) 클래스를 사용 하 여 동일한 작업을 수행 합니다. 일반적으로 클래스는 현재 스케줄러에서 작업 하는 데 사용 됩니다. `CurrentScheduler` `Scheduler` 클래스를 사용 하는 두 번째 예제는 스케줄러가 현재 컨텍스트와 연결 된 시기 또는 특정 스케줄러를 특정 작업과 연결 하려는 경우에 유용 합니다.
+첫 번째 예제에서는 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 클래스를 사용 하 여 스케줄러 인스턴스를 만들고이를 현재 컨텍스트와 연결 합니다. 두 번째 예제에서는 [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) 클래스를 사용 하 여 동일한 작업을 수행 합니다. 일반적으로 `CurrentScheduler` 클래스는 현재 스케줄러에서 작업 하는 데 사용 됩니다. `Scheduler` 클래스를 사용 하는 두 번째 예제는 스케줄러가 현재 컨텍스트와 연결 된 시기 또는 특정 스케줄러를 특정 작업과 연결 하려는 경우에 유용 합니다.
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,11 +71,11 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-예제 코드를 복사하여 Visual Studio 프로젝트 또는 `scheduler-instance.cpp` 파일에 붙여넣고 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.
+예제 코드를 복사 하 여 Visual Studio 프로젝트에 붙여넣거나, `scheduler-instance.cpp` 이름이 지정 된 파일에 붙여 넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.
 
-**cl.exe/EHsc scheduler-instance**
+> **cl.exe/EHsc scheduler-instance**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스케줄러 인스턴스](../../parallel/concrt/scheduler-instances.md)<br/>
 [방법: 특정 스케줄러 정책 지정](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)

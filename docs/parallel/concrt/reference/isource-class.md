@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301879"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139312"
 ---
 # <a name="isource-class"></a>ISource 클래스
 
@@ -29,49 +29,49 @@ ms.locfileid: "62301879"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template<class T>
 class ISource;
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-소스 블록에서 생성 된 메시지 페이로드의의 데이터 형식입니다.
+소스 블록에 의해 생성 되는 메시지 내 페이로드의 데이터 형식입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|`source_type`|에 대 한 형식 별칭을 `T`입니다.|
+|`source_type`|`T`에 대 한 형식 별칭입니다.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[~ ISource 소멸자](#dtor)|제거 된 `ISource` 개체입니다.|
+|[~ ISource 소멸자](#dtor)|`ISource` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[accept](#accept)|파생된 클래스에서 재정의 되 면이 제공 된 메시지를 수락 `ISource` 블록을 호출자에 게 소유권을 전송 합니다.|
-|[acquire_ref](#acquire_ref)|파생된 클래스에서 재정의할 경우,이 참조 횟수를 가져옵니다 `ISource` 삭제가 발생 하지 않도록 차단 합니다.|
-|[consume](#consume)|파생된 클래스에서 재정의 되 면 이전에 제공한 메시지를 생성 `ISource` 차단 하 고 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 합니다.|
-|[link_target](#link_target)|파생된 클래스에서 재정의할 경우,이 대상 블록에 연결 `ISource` 블록입니다.|
-|[release](#release)|파생된 클래스에서 재정의 되 면 이전 성공적인 메시지 예약을 해제 합니다.|
-|[release_ref](#release_ref)|파생된 클래스에서 재정의할 경우,이 참조 횟수를 해제 `ISource` 블록입니다.|
-|[reserve](#reserve)|파생된 클래스에서 재정의 하는 경우이 이전에 제공 되는 메시지를 예약 `ISource` 블록입니다.|
-|[unlink_target](#unlink_target)|파생된 클래스에서 재정의 되 면이 대상 블록을 연결 해제 `ISource` 차단 하는 경우 이전에 연결할 수 있습니다.|
-|[unlink_targets](#unlink_targets)|파생된 클래스에서 재정의 하는 경우 연결에서 모든 대상 블록을 해제 `ISource` 블록입니다.|
+|[수락할](#accept)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록으로 제공 된 메시지를 수락 하 여 호출자에 게 소유권을 전송 합니다.|
+|[acquire_ref](#acquire_ref)|파생 클래스에서 재정의 되는 경우 삭제를 방지 하기 위해이 `ISource` 블록에서 참조 횟수를 가져옵니다.|
+|[consume](#consume)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 이전에 제공 된 메시지를 사용 하 고 대상에서 성공적으로 예약 하 여 호출자에 게 소유권을 전송 합니다.|
+|[link_target](#link_target)|파생 클래스에서 재정의 되는 경우 대상 블록을이 `ISource` 블록에 연결 합니다.|
+|[release](#release)|파생 클래스에서 재정의 되는 경우 이전의 성공적인 메시지 예약을 해제 합니다.|
+|[release_ref](#release_ref)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 참조 횟수를 해제 합니다.|
+|[reserve](#reserve)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 이전에 제공 된 메시지를 예약 합니다.|
+|[unlink_target](#unlink_target)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 대상 블록의 연결을 끊습니다 (이전에 연결 된 경우).|
+|[unlink_targets](#unlink_targets)|파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 모든 대상 블록을 해제 합니다.|
 
 ## <a name="remarks"></a>설명
 
-자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.
+자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)을 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `ISource`
 
@@ -81,11 +81,11 @@ class ISource;
 
 **네임스페이스:** 동시성
 
-##  <a name="accept"></a> 허용
+## <a name="accept"></a>수락할
 
-파생된 클래스에서 재정의 되 면이 제공 된 메시지를 수락 `ISource` 블록을 호출자에 게 소유권을 전송 합니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록으로 제공 된 메시지를 수락 하 여 호출자에 게 소유권을 전송 합니다.
 
-```
+```cpp
 virtual message<T>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -94,24 +94,24 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>매개 변수
 
 *_MsgId*<br/>
-합니다 `runtime_object_identity` 제공 되의 `message` 개체입니다.
+제공 된 `message` 개체의 `runtime_object_identity`입니다.
 
 *_PTarget*<br/>
-호출 하는 대상 블록에 대 한 포인터를 `accept` 메서드.
+`accept` 메서드를 호출 하는 대상 블록에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-호출자의 소유권에는 메시지에 대 한 포인터입니다.
+호출자에 게 소유권이 있는 메시지에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-합니다 `accept` 메서드는 대상에서이에서 메시지를 제공 하는 동안 `ISource` 블록입니다. 메시지 포인터에 전달 된 것과에서 다를 수를 반환 합니다 `propagate` 메서드는 `ITarget` 이 원본 메시지의 복사본을 결정 하는 경우 차단 합니다.
+`accept` 메서드는이 `ISource` 블록에서 메시지를 제공 하는 동안 대상에 의해 호출 됩니다. 이 소스가 메시지의 복사본을 만들도록 결정 한 경우 반환 되는 메시지 포인터는 `ITarget` 블록의 `propagate` 메서드로 전달 된 것과 다를 수 있습니다.
 
-##  <a name="acquire_ref"></a> acquire_ref
+## <a name="acquire_ref"></a>acquire_ref
 
-파생된 클래스에서 재정의할 경우,이 참조 횟수를 가져옵니다 `ISource` 삭제가 발생 하지 않도록 차단 합니다.
+파생 클래스에서 재정의 되는 경우 삭제를 방지 하기 위해이 `ISource` 블록에서 참조 횟수를 가져옵니다.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
@@ -122,13 +122,13 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 프로그램 `ITarget` 하는 동안이 원본에 연결 되는 개체는 `link_target` 메서드.
+이 메서드는 `link_target` 메서드를 실행 하는 동안이 소스에 연결 되는 `ITarget` 개체에 의해 호출 됩니다.
 
-##  <a name="consume"></a> consume
+## <a name="consume"></a>활용
 
-파생된 클래스에서 재정의 되 면 이전에 제공한 메시지를 생성 `ISource` 차단 하 고 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 합니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 이전에 제공 된 메시지를 사용 하 고 대상에서 성공적으로 예약 하 여 호출자에 게 소유권을 전송 합니다.
 
-```
+```cpp
 virtual message<T>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -137,45 +137,45 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>매개 변수
 
 *_MsgId*<br/>
-합니다 `runtime_object_identity` 예약 된의 `message` 개체입니다.
+예약 된 `message` 개체의 `runtime_object_identity`입니다.
 
 *_PTarget*<br/>
-호출 하는 대상 블록에 대 한 포인터를 `consume` 메서드.
+`consume` 메서드를 호출 하는 대상 블록에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-에 대 한 포인터를 `message` 호출자에 이제 소유권을 가진 개체입니다.
+호출자에 게 소유권이 있는 `message` 개체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-`consume` 메서드와 비슷합니다 `accept`를 항상 호출을 통해 야 하지만 `reserve` 반환 **true**합니다.
+`consume` 메서드는 `accept`와 비슷하지만 항상 **true**를 반환 하는 `reserve`를 호출 해야 합니다.
 
-##  <a name="dtor"></a> ~ISource
+## <a name="dtor"></a>~ ISource
 
-제거 된 `ISource` 개체입니다.
+`ISource` 개체를 소멸 시킵니다.
 
-```
+```cpp
 virtual ~ISource();
 ```
 
-##  <a name="link_target"></a> link_target
+## <a name="link_target"></a>link_target
 
-파생된 클래스에서 재정의할 경우,이 대상 블록에 연결 `ISource` 블록입니다.
+파생 클래스에서 재정의 되는 경우 대상 블록을이 `ISource` 블록에 연결 합니다.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *_PTarget*<br/>
-이 연결 되는 대상 블록에 대 한 포인터 `ISource` 블록입니다.
+이 `ISource` 블록에 연결 되는 대상 블록에 대 한 포인터입니다.
 
-##  <a name="release"></a> 릴리스
+## <a name="release"></a>릴리스
 
-파생된 클래스에서 재정의 되 면 이전 성공적인 메시지 예약을 해제 합니다.
+파생 클래스에서 재정의 되는 경우 이전의 성공적인 메시지 예약을 해제 합니다.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -184,16 +184,16 @@ virtual void release(
 ### <a name="parameters"></a>매개 변수
 
 *_MsgId*<br/>
-합니다 `runtime_object_identity` 예약 된의 `message` 개체입니다.
+예약 된 `message` 개체의 `runtime_object_identity`입니다.
 
 *_PTarget*<br/>
-호출 하는 대상 블록에 대 한 포인터를 `release` 메서드.
+`release` 메서드를 호출 하는 대상 블록에 대 한 포인터입니다.
 
-##  <a name="release_ref"></a> release_ref
+## <a name="release_ref"></a>release_ref
 
-파생된 클래스에서 재정의할 경우,이 참조 횟수를 해제 `ISource` 블록입니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 참조 횟수를 해제 합니다.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
@@ -204,13 +204,13 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 `ITarget` 이 원본에서 연결이 해제 되는 개체입니다. 소스 블록 대상 블록에 대 한 예약 된 리소스를 해제할 수 있습니다.
+이 메서드는이 소스에서 연결이 해제 되는 `ITarget` 개체에 의해 호출 됩니다. 소스 블록은 대상 블록에 예약 된 모든 리소스를 해제할 수 있습니다.
 
-##  <a name="reserve"></a> 예약
+## <a name="reserve"></a>두기
 
-파생된 클래스에서 재정의 하는 경우이 이전에 제공 되는 메시지를 예약 `ISource` 블록입니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 이전에 제공 된 메시지를 예약 합니다.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -219,41 +219,41 @@ virtual bool reserve(
 ### <a name="parameters"></a>매개 변수
 
 *_MsgId*<br/>
-합니다 `runtime_object_identity` 제공 되의 `message` 개체입니다.
+제공 된 `message` 개체의 `runtime_object_identity`입니다.
 
 *_PTarget*<br/>
-호출 하는 대상 블록에 대 한 포인터를 `reserve` 메서드.
+`reserve` 메서드를 호출 하는 대상 블록에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 메시지를 성공적으로 예약 하는 경우 **false** 그렇지 않은 경우. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.
+메시지가 성공적으로 예약 되었으면 **true** 이 고, 그렇지 않으면 **false** 입니다. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-호출한 후 `reserve`를 호출 해야 성공 하면 `consume` 또는 `release` 수행 하거나 각각 메시지의 소유를 포기 하기 위해.
+`reserve`호출한 후 성공 하면 `consume` 또는 `release`를 호출 하 여 메시지를 각각 소유 하거나 제공 해야 합니다.
 
-##  <a name="unlink_target"></a> unlink_target
+## <a name="unlink_target"></a>unlink_target
 
-파생된 클래스에서 재정의 되 면이 대상 블록을 연결 해제 `ISource` 차단 하는 경우 이전에 연결할 수 있습니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 대상 블록의 연결을 끊습니다 (이전에 연결 된 경우).
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *_PTarget*<br/>
-이 연결이 해제 되는 대상 블록에 대 한 포인터 `ISource` 블록입니다.
+이 `ISource` 블록에서 연결이 해제 되는 대상 블록에 대 한 포인터입니다.
 
-##  <a name="unlink_targets"></a> unlink_targets
+## <a name="unlink_targets"></a>unlink_targets
 
-파생된 클래스에서 재정의 하는 경우 연결에서 모든 대상 블록을 해제 `ISource` 블록입니다.
+파생 클래스에서 재정의 되는 경우이 `ISource` 블록에서 모든 대상 블록을 해제 합니다.
 
-```
+```cpp
 virtual void unlink_targets() = 0;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임스페이스](concurrency-namespace.md)<br/>
 [ITarget 클래스](itarget-class.md)
