@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: '데이터 개체 및 데이터 소스: 조작'
               href: data-objects-and-data-sources-manipulation.md
-        - name: 끌어서 놓기(OLE)
-          expanded: false
-          items:
-            - name: 끌어서 놓기(OLE)
-              href: drag-and-drop-ole.md
-            - name: '끌어서 놓기: 놓기 소스 구현'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: '끌어서 놓기: 놓기 대상 구현'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: '끌어서 놓기: 사용자 지정'
-              href: drag-and-drop-customizing.md
+        - name: OLE 끌어서 놓기
+          href: drag-and-drop-ole.md
         - name: 메뉴 및 리소스(OLE)
           expanded: false
           items:
@@ -1304,7 +1295,7 @@
                 - name: 창 개체 제거
                   expanded: false
                   items:
-                    - name: 창 개체 제거
+                    - name: 창 개체 소멸
                       href: destroying-window-objects.md
                     - name: 창 소멸 시퀀스
                       href: window-destruction-sequence.md
@@ -1473,7 +1464,7 @@
       href: tn014-custom-controls.md
     - name: 'TN016: MFC에서 C++ 다중 상속 사용'
       href: tn016-using-cpp-multiple-inheritance-with-mfc.md
-    - name: 'TN017: 창 개체 제거'
+    - name: 'TN017: 창 개체 소멸'
       href: tn017-destroying-window-objects.md
     - name: 'TN020: ID 명명 및 번호 매기기 규칙'
       href: tn020-id-naming-and-numbering-conventions.md
