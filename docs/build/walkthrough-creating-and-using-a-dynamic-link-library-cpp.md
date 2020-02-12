@@ -1,5 +1,5 @@
 ---
-title: '연습: 자체 동적 연결 라이브러리 만들기 및 사용(C++)'
+title: '연습: 동적 연결 라이브러리 만들기 및 사용 (C++)'
 description: C++를 사용하여 Visual Studio에서 Windows DLL(동적 연결 라이브러리)을 만듭니다.
 ms.custom: conceptual
 ms.date: 08/22/2019
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70026070"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127844"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>연습: 자체 동적 연결 라이브러리 만들기 및 사용(C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>연습: 동적 연결 라이브러리 만들기 및 사용 (C++)
 
 이 단계별 연습에서는 Visual Studio IDE를 사용 하 여 Microsoft C++ (MSVC)로 작성 된 사용자 고유의 DLL (동적 연결 라이브러리)을 만드는 방법을 보여 줍니다. 그런 다음 다른 C++ 앱에서 DLL을 사용 하는 방법을 보여 줍니다. Dll (UNIX 기반 운영 체제에서 *공유 라이브러리* 라고도 함)은 가장 유용한 Windows 구성 요소 종류 중 하나입니다. 코드와 리소스를 공유 하 고 앱의 크기를 축소 하는 방법으로 사용할 수 있습니다. Dll을 사용 하면 응용 프로그램을 더 쉽게 서비스 하 고 확장할 수 있습니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "70026070"
 
 DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만들기](dlls-in-visual-cpp.md)를 참조하세요. 암시적 링크 및 명시적 연결에 대 한 자세한 내용은 [사용할 링크 방법 결정](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)을 참조 하세요. C 언어 링크 규칙 C++ 을 사용 하는 프로그래밍 언어와 함께 사용할 dll을 만드는 방법에 대 한 자세한 내용은 [c 언어 실행 파일에서 사용할 함수 내보내기 C++ ](exporting-cpp-functions-for-use-in-c-language-executables.md)를 참조 하세요. .NET 언어로 사용할 DLL을 만드는 방법에 대한 자세한 내용은 [Visual Basic 애플리케이션에서 DLL 함수 호출](calling-dll-functions-from-visual-basic-applications.md)을 참조하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft Windows 7 이상 버전을 실행하는 컴퓨터. 최상의 개발 환경을 위해서는 Windows 10이 권장됩니다.
 
@@ -77,7 +77,7 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>Visual Studio 2019에서 DLL 프로젝트를 만들려면
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 **새 프로젝트 만들기** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **파일** > **새** > **프로젝트** 를 선택 하 여 **새 프로젝트 만들기** 대화 상자를 엽니다.
 
    ![새 DLL 프로젝트 만들기](media/create-new-dll-project-2019.png "MathLibrary 프로젝트 만들기")
 
@@ -91,7 +91,7 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 솔루션이 만들어지면 Visual Studio의 **솔루션 탐색기** 창에서 생성 된 프로젝트 및 소스 파일을 볼 수 있습니다.
 
-![Visual Studio에서 생성된 솔루션](media/mathlibrary-solution-explorer-162.png "Visual Studio에서 생성된 솔루션")
+![Visual Studio에서 생성 된 솔루션](media/mathlibrary-solution-explorer-162.png "Visual Studio에서 생성 된 솔루션")
 
 ::: moniker-end
 
@@ -99,17 +99,17 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>Visual Studio 2017에서 DLL 프로젝트를 만들려면
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **파일** > **새** > **프로젝트** 를 선택 하 여 **새 프로젝트** 대화 상자를 엽니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **설치 된** >   > **Visual C++**  **Windows Desktop**을 선택 합니다. 가운데 창에서 **DLL (동적 연결 라이브러리)** 을 선택 합니다. **이름** 상자에 *MathLibrary* 를 입력 하 여 프로젝트의 이름을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
+1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **설치 됨** >  **C++ Visual** > **Windows Desktop**을 선택 합니다. 가운데 창에서 **DLL (동적 연결 라이브러리)** 을 선택 합니다. **이름** 상자에 *MathLibrary* 를 입력 하 여 프로젝트의 이름을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
 
-   ![MathLibrary 프로젝트 이름 지정](media/mathlibrary-new-project-name-159.png "MathLibrary 프로젝트 이름 지정")
+   ![MathLibrary 프로젝트 이름](media/mathlibrary-new-project-name-159.png "MathLibrary 프로젝트 이름")
 
 1. **확인** 단추를 선택하여 프로젝트를 만듭니다.
 
 솔루션이 만들어지면 Visual Studio의 **솔루션 탐색기** 창에서 생성 된 프로젝트 및 소스 파일을 볼 수 있습니다.
 
-![Visual Studio에서 생성된 솔루션](media/mathlibrary-solution-explorer-159.png "Visual Studio에서 생성된 솔루션")
+![Visual Studio에서 생성 된 솔루션](media/mathlibrary-solution-explorer-159.png "Visual Studio에서 생성 된 솔루션")
 
 ::: moniker-end
 
@@ -121,21 +121,21 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **설치됨** > **템플릿**을 확장하고 **Visual C++** 를 선택한 후 가운데 창에서 **Win32 콘솔 애플리케이션**을 선택합니다. **이름** 편집 상자에 *MathLibrary* 를 입력 하 여 프로젝트의 이름을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
 
-   ![MathLibrary 프로젝트 이름 지정](media/mathlibrary-project-name.png "MathLibrary 프로젝트 이름 지정")
+   ![MathLibrary 프로젝트 이름](media/mathlibrary-project-name.png "MathLibrary 프로젝트 이름")
 
 1. **확인** 단추를 선택하여 **새 프로젝트** 대화 상자를 닫고 **Win32 애플리케이션 마법사**를 시작합니다.
 
-   ![Win32 애플리케이션 마법사 개요](media/mathlibrary-project-wizard-1.png "Win32 애플리케이션 마법사 개요")
+   ![Win32 응용 프로그램 마법사 개요](media/mathlibrary-project-wizard-1.png "Win32 응용 프로그램 마법사 개요")
 
 1. **다음** 단추를 선택합니다. **애플리케이션 설정** 페이지의 **애플리케이션 유형**에서 **DLL**을 선택합니다.
 
-   ![Win32 애플리케이션 마법사에서 DLL 만들기](media/mathlibrary-project-wizard-2.png "Win32 애플리케이션 마법사에서 DLL 만들기")
+   ![Win32 응용 프로그램 마법사에서 DLL 만들기](media/mathlibrary-project-wizard-2.png "Win32 응용 프로그램 마법사에서 DLL 만들기")
 
 1. **마침** 단추를 선택하여 프로젝트를 만듭니다.
 
 마법사가 솔루션을 완료하면 Visual Studio의 **솔루션 탐색기** 창에서 생성된 프로젝트 및 소스 파일을 볼 수 있습니다.
 
-![Visual Studio에서 생성된 솔루션](media/mathlibrary-solution-explorer-153.png "Visual Studio에서 생성된 솔루션")
+![Visual Studio에서 생성 된 솔루션](media/mathlibrary-solution-explorer-153.png "Visual Studio에서 생성 된 솔루션")
 
 ::: moniker-end
 
@@ -147,11 +147,11 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 1. **새 항목 추가** 대화 상자의 왼쪽 창에서 **Visual C++** 를 선택합니다. 가운데 창에서 **헤더 파일 (.h)** 을 선택합니다. 헤더 파일 이름으로 *MathLibrary* 를 지정 합니다.
 
-   ![새 항목 추가 대화 상자에서 헤더 추가](media/mathlibrary-add-new-item-header-file.png "새 항목 추가 대화 상자에서 헤더 파일 추가")
+   ![새 항목 추가 대화 상자에서 머리글 추가](media/mathlibrary-add-new-item-header-file.png "새 항목 추가 대화 상자에서 헤더 파일 추가")
 
 1. **추가** 단추를 선택하여 빈 헤더 파일(새 편집기 창에 표시됨)을 생성합니다.
 
-   ![편집기의 빈 MathLibrary.h 파일](media/edit-empty-mathlibrary-header.png "편집기의 빈 MathLibrary.h 파일")
+   ![편집기에서 빈 MathLibrary 파일](media/edit-empty-mathlibrary-header.png "편집기에서 빈 MathLibrary 파일")
 
 1. 헤더 파일의 내용을 다음 코드로 바꿉니다.
 
@@ -194,8 +194,7 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 이 헤더 파일은 두 개의 초기 값이 지정된 일반화된 피보나치 시퀀스를 생성하는 몇 가지 함수를 선언합니다. `fibonacci_init(1, 1)` 호출은 친숙한 피보나치 수열을 생성합니다.
 
-파일 맨 위의 전처리기 문을 확인합니다. DLL 프로젝트용 새 프로젝트 템플릿은 정의 된 전처리기 매크로에 ** _PROJECTNAME_&#95;
-수출** 내보내기를 추가 합니다. 이 예에서 Visual Studio는 MathLibrary DLL 프로젝트가 빌드될 때 **MATHLIBRARY&#95;EXPORTS**를 정의합니다.
+파일 맨 위의 전처리기 문을 확인합니다. DLL 프로젝트용 새 프로젝트 템플릿은 정의 된 전처리기 매크로에  **_PROJECTNAME_&#95;내보내기를** 추가 합니다. 이 예에서 Visual Studio는 MathLibrary DLL 프로젝트가 빌드될 때 **MATHLIBRARY&#95;EXPORTS**를 정의합니다.
 
 **MATHLIBRARY&#95;EXPORTS** 매크로가 정의되면 **MATHLIBRARY&#95;API** 매크로는 함수 선언에서 `__declspec(dllexport)` 한정자를 설정합니다. 이 한정자는 다른 응용 프로그램에서 사용할 수 있도록 DLL에서 함수 또는 변수를 내보내도록 컴파일러와 링커에 지시 합니다. **MATHLIBRARY&#95;EXPORTS**가 정의되지 않은 경우(예: 헤더 파일이 클라이언트 애플리케이션에 의해 포함되는 경우) **MATHLIBRARY&#95;API**는 선언에 `__declspec(dllimport)` 한정자를 적용합니다. 이 한정자는 애플리케이션에서 함수 또는 변수의 가져오기를 최적화합니다. 자세한 내용은 [dllexport, dllimport](../cpp/dllexport-dllimport.md)를 참조하세요.
 
@@ -203,7 +202,7 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 ::: moniker range=">=vs-2019"
 
-1. **솔루션 탐색기**에서 **소스 파일** 노드를 마우스 오른쪽 단추로 클릭 하 고**새 항목** **추가** > 를 선택 합니다. 이전 단계에서 새 헤더 파일을 추가한 것과 동일한 방식으로 *MathLibrary*라는 새 .cpp 파일을 만듭니다.
+1. **솔루션 탐색기**에서 **소스 파일** 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 항목**을 선택 합니다. 이전 단계에서 새 헤더 파일을 추가한 것과 동일한 방식으로 *MathLibrary*라는 새 .cpp 파일을 만듭니다.
 
 1. 편집기 창에서 **MathLibrary.cpp**가 이미 열려 있는 경우 해당 탭을 선택합니다. 그렇지 않은 경우 **솔루션 탐색기** **MathLibrary** 프로젝트의 **소스 파일** 폴더에 있는 **MathLibrary** 를 두 번 클릭 하 여 엽니다.
 
@@ -337,7 +336,7 @@ DLL에 대한 자세한 내용의 링크는 [Visual Studio에서 C/C++ DLL 만�
 
 ::: moniker-end
 
-지금까지 수행한 모든 사항이 작동하는지 확인하려면 동적 연결 라이브러리를 컴파일합니다. 컴파일하려면 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다. DLL 및 관련 컴파일러 출력은 솔루션 폴더 바로 아래에 있는 *Debug* 라는 폴더에 배치 됩니다. 릴리스 빌드를 만드는 경우 출력은 *릴리스*라는 폴더에 배치 됩니다. 출력은 다음과 같습니다.
+지금까지 수행한 모든 사항이 작동하는지 확인하려면 동적 연결 라이브러리를 컴파일합니다. 컴파일하려면 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다. DLL 및 관련 컴파일러 출력은 솔루션 폴더 바로 아래에 있는 *Debug* 라는 폴더에 배치 됩니다. 릴리스 빌드를 만드는 경우 출력은 *릴리스*라는 폴더에 배치 됩니다. 출력은 다음과 비슷합니다.
 
 ::: moniker range=">=vs-2019"
 
@@ -398,7 +397,7 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
 ### <a name="to-create-a-client-app-in-visual-studio"></a>Visual Studio에서 클라이언트 앱을 만들려면
 
-1. 메뉴 모음에서 **파일** > **새로** > 만들기 **프로젝트** 를 선택 하 여 **새 프로젝트 만들기** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **파일** > **새** > **프로젝트** 를 선택 하 여 **새 프로젝트 만들기** 대화 상자를 엽니다.
 
 1. 대화 상자 맨 위에서 **언어**를 **C++** 로 설정하고 **플랫폼**을 **Windows**로 설정하고 **프로젝트 형식**을 **콘솔**로 설정합니다.
 
@@ -406,7 +405,7 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
 1. **새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 *MathClient* 를 입력 하 여 프로젝트의 이름을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 확인 **된 경우 동일한 디렉터리에 솔루션 및 프로젝트** 를 선택 취소 합니다.
 
-   ![클라이언트 프로젝트 이름 지정](media/mathclient-project-name-2019.png "클라이언트 프로젝트 이름 지정")
+   ![클라이언트 프로젝트 이름](media/mathclient-project-name-2019.png "클라이언트 프로젝트 이름")
 
 1. **만들기** 단추를 선택하여 클라이언트 프로젝트를 만듭니다.
 
@@ -418,11 +417,11 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>Visual Studio 2017에서 클라이언트 앱을 만들려면
 
-1. 만든 DLL을 사용하는 C++ 앱을 만들려면 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
+1. 만든 DLL을 C++ 사용 하는 응용 프로그램을 만들려면 메뉴 모음에서 **파일** > **새** > **프로젝트**를 선택 합니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창의 **설치됨** > **Visual C++** 에서 **Windows 데스크톱**을 선택합니다. 가운데 창에서 **Windows 콘솔 응용 프로그램**을 선택 합니다. **이름** 입력란에 프로젝트의 이름 ( *MathClient*)을 지정 합니다.  기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
+1. **새 프로젝트** 대화 상자의 왼쪽 창의 **설치됨**Visual C++ > 에서 **Windows 데스크톱**을 선택합니다. 가운데 창에서 **Windows 콘솔 응용 프로그램**을 선택 합니다. **이름** 입력란에 프로젝트의 이름 ( *MathClient*)을 지정 합니다.  기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
 
-   ![클라이언트 프로젝트 이름 지정](media/mathclient-new-project-name-159.png "클라이언트 프로젝트 이름 지정")
+   ![클라이언트 프로젝트 이름](media/mathclient-new-project-name-159.png "클라이언트 프로젝트 이름")
 
 1. **확인** 을 선택 하 여 클라이언트 앱 프로젝트를 만듭니다.
 
@@ -434,11 +433,11 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
 ### <a name="to-create-a-client-app-in-visual-studio-2015"></a>Visual Studio 2015에서 클라이언트 앱을 만들려면
 
-1. 만든 DLL을 사용하는 C++ 앱을 만들려면 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
+1. 만든 DLL을 C++ 사용 하는 응용 프로그램을 만들려면 메뉴 모음에서 **파일** > **새** > **프로젝트**를 선택 합니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창의 **설치됨** > **템플릿** > **Visual C++** 에서 **Win32**를 선택합니다. 가운데 창에서 **Win32 콘솔 애플리케이션**을 선택합니다. **이름** 입력란에 프로젝트의 이름 ( *MathClient*)을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
+1. **새 프로젝트** 대화 상자의 왼쪽 창의 **설치됨**템플릿 > Visual C++ > 에서 **Win32**를 선택합니다. 가운데 창에서 **Win32 콘솔 애플리케이션**을 선택합니다. **이름** 입력란에 프로젝트의 이름 ( *MathClient*)을 지정 합니다. 기본 **위치** 및 **솔루션 이름** 값을 그대로 둡니다. **솔루션** 을 설정 하 여 **새 솔루션을 만듭니다**. 선택이 취소 되어 있는 경우 **솔루션용 디렉터리 만들기를** 선택 합니다.
 
-   ![클라이언트 프로젝트 이름 지정](media/mathclient-project-name.png "클라이언트 프로젝트 이름 지정")
+   ![클라이언트 프로젝트 이름](media/mathclient-project-name.png "클라이언트 프로젝트 이름")
 
 1. **확인** 단추를 선택하여 **새 프로젝트** 대화 상자를 닫고 **Win32 애플리케이션 마법사**를 시작합니다. **Win32 애플리케이션 마법사** 대화 상자의 **개요** 페이지에서 **다음** 단추를 선택합니다.
 
@@ -458,7 +457,7 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
 1. **구성** 드롭다운 상자에서 **모든 구성** 을 선택 합니다 (아직 선택 하지 않은 경우).
 
-1. 왼쪽 창에서 **구성 속성** >  > **C/C++** **일반**을 선택 합니다.
+1. 왼쪽 창에서 **구성 속성** > **C/C++**  > **일반**을 선택 합니다.
 
 1. 속성 창에서 **추가 포함 디렉터리** 편집 상자 옆에 있는 드롭다운 컨트롤을 선택한 후 **편집**을 선택합니다.
 
@@ -478,7 +477,7 @@ DLL을 만들 때 클라이언트 앱에서 사용할 수 있는 방법을 생�
 
    DLL 및 클라이언트 프로젝트가 다른 폴더에 있으면 상대 경로를 조정 하 여 일치 시킵니다. 또는 줄임표 컨트롤을 사용 하 여 폴더를 찾습니다.
 
-   ![추가 포함 디렉터리 속성에 헤더 위치 추가](media/mathclient-additional-include-directories.png "추가 포함 디렉터리 속성에 헤더 위치 추가")
+   ![추가 포함 디렉터리 속성에 헤더 위치를 추가 합니다.](media/mathclient-additional-include-directories.png "추가 포함 디렉터리 속성에 헤더 위치를 추가 합니다.")
 
 1. **추가 포함 디렉터리** 대화 상자에서 헤더 파일에 대 한 경로를 입력 한 후 **확인** 단추를 선택 합니다. **속성 페이지** 대화 상자에서 **확인** 단추를 선택 하 여 변경 내용을 저장 합니다.
 
@@ -506,7 +505,7 @@ int main()
 }
 ```
 
-이 코드를 컴파일할 수는 있지만 연결할 수는 없습니다. 지금 클라이언트 앱을 빌드하는 경우 오류 목록에 몇 가지 LNK2019 오류가 표시 됩니다. 프로젝트에 일부 정보가 누락 되었기 때문입니다. 프로젝트에 *MathLibrary* 라이브러리에 대 한 종속성이 아직 지정 되지 않았습니다. *MathLibrary* 파일을 찾는 방법을 링커에 지시 하지 않았습니다.
+이 코드를 컴파일할 수는 있지만 연결할 수는 없습니다. 지금 클라이언트 앱을 빌드하는 경우 오류 목록에 몇 가지 LNK2019 오류가 표시 됩니다. 프로젝트에 일부 정보가 누락 되었기 때문입니다. 프로젝트에서 아직 *MathLibrary* 라이브러리에 대 한 종속성을 지정 하지 않았습니다. *MathLibrary* 파일을 찾는 방법을 링커에 지시 하지 않았습니다.
 
 이 문제를 해결 하기 위해 라이브러리 파일을 클라이언트 앱 프로젝트에 직접 복사할 수 있습니다. 링커가 자동으로 검색 하 여 사용 합니다. 그러나 라이브러리와 클라이언트 앱이 모두 개발 중인 경우에는 다른 복사본이 표시 되지 않는 한 복사본이 변경 될 수 있습니다. 이 문제를 방지 하려면 **추가 종속성** 속성을 설정 하 여 프로젝트가 *MathLibrary*에 종속 되어 있음을 빌드 시스템에 지시할 수 있습니다. 그리고 연결할 때 원본 라이브러리에 대 한 경로를 포함 하도록 프로젝트에서 **추가 라이브러리 디렉터리** 경로를 설정할 수 있습니다.
 
@@ -530,13 +529,11 @@ int main()
 
    ![추가 라이브러리 디렉터리 속성 편집](media/mathclient-additional-library-directories-property.png "추가 라이브러리 디렉터리 속성 편집")
 
-1. **추가 라이브러리 디렉터리** 대화 상자의 위쪽 창을 두 번 클릭하여 편집 컨트롤을 사용하도록 설정합니다. 편집 컨트롤에서 **MathLibrary.lib** 파일 위치 경로를 지정합니다. 기본적으로 DLL 솔루션 폴더 바로 아래에 있는 *Debug* 라는 폴더에 있습니다. 릴리스 빌드를 만드는 경우 파일은 *릴리스*라는 폴더에 배치 됩니다. 만든 빌드 종류에 `$(IntDir)` 관계 없이 링커가 DLL을 찾을 수 있도록 매크로를 사용할 수 있습니다. 클라이언트 프로젝트를 DLL 프로젝트의 별도 솔루션에 배치 하는 지침을 따르는 경우 상대 경로는 다음과 같습니다.
+1. **추가 라이브러리 디렉터리** 대화 상자의 위쪽 창을 두 번 클릭하여 편집 컨트롤을 사용하도록 설정합니다. 편집 컨트롤에서 **MathLibrary.lib** 파일 위치 경로를 지정합니다. 기본적으로 DLL 솔루션 폴더 바로 아래에 있는 *Debug* 라는 폴더에 있습니다. 릴리스 빌드를 만드는 경우 파일은 *릴리스*라는 폴더에 배치 됩니다. 사용자가 만드는 빌드 종류에 관계 없이 링커가 DLL을 찾을 수 있도록 `$(IntDir)` 매크로를 사용할 수 있습니다. 클라이언트 프로젝트를 DLL 프로젝트의 별도 솔루션에 배치 하는 지침을 따르는 경우 상대 경로는 다음과 같습니다.
 
    `..\..\MathLibrary\$(IntDir)`
 
-   DLL 및 클라이언트 프로젝트가 동일한 솔루션에 있는 경우 상대 경로는 다음과 같습니다.
-
-   `..\MathLibrary\$(IntDir)`
+   DLL 및 클라이언트 프로젝트가 다른 위치에 있는 경우 일치 하도록 상대 경로를 조정 합니다.
 
    ![라이브러리 디렉터리 추가](media/mathclient-additional-library-directories.png "라이브러리 디렉터리 추가")
 
@@ -544,7 +541,7 @@ int main()
 
 이제 클라이언트 앱을 컴파일하고 연결할 수 있지만, 아직 실행하는 데 필요한 모든 사항이 갖춰지지는 않았습니다. 운영 체제가 앱을 로드할 때 MathLibrary DLL을 찾습니다. 특정 시스템 디렉터리, 환경 경로 또는 로컬 앱 디렉터리에서 DLL을 찾을 수 없는 경우 로드에 실패합니다. 운영 체제에 따라 다음과 같은 오류 메시지가 표시 됩니다.
 
-![MATHLIBRARY DLL을 찾을 수 없음 오류](media/mathclient-system-error-mathlibrary-dll-not-found.png "MATHLIBRARY DLL을 찾을 수 없음 오류")
+![MathLibrary DLL을 찾을 수 없음 오류](media/mathclient-system-error-mathlibrary-dll-not-found.png "MathLibrary DLL을 찾을 수 없음 오류")
 
 이 문제를 방지하는 한 가지 방법은 빌드 프로세스의 일부로 클라이언트 실행 파일을 포함하는 디렉터리에 DLL을 복사하는 것입니다. 빌드 **후 이벤트** 를 프로젝트에 추가 하 여 빌드 출력 디렉터리에 DLL을 복사 하는 명령을 추가할 수 있습니다. 여기에 지정 된 명령은 DLL이 없거나 변경 된 경우에만 해당 DLL을 복사 합니다. 빌드 구성에 따라 매크로를 사용 하 여 디버그 또는 릴리스 위치에 복사 합니다.
 
@@ -554,15 +551,13 @@ int main()
 
 1. **구성** 드롭다운 상자에서 **모든 구성**이 아직 선택되어 있지 않으면 선택합니다.
 
-1. 왼쪽 창에서 **구성 속성** > **빌드 이벤트** > 빌드**후 이벤트**를 선택 합니다.
+1. 왼쪽 창에서 **구성 속성** 을 선택 하 > 빌드 **후 이벤트** > **빌드** 이벤트를 선택 합니다.
 
 1. 속성 창의 **명령줄** 필드에서 편집 컨트롤을 선택 합니다. 클라이언트 프로젝트를 DLL 프로젝트의 별도 솔루션에 배치 하는 지침을 따른 경우 다음 명령을 입력 합니다.
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   DLL 및 클라이언트 프로젝트가 동일한 솔루션 디렉터리에 있는 경우 다음 명령을 입력 합니다.
-
-   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
+   DLL 및 클라이언트 프로젝트가 다른 디렉터리에 있는 경우 일치 하는 DLL에 대 한 상대 경로를 변경 합니다.
 
    ![빌드 후 명령 추가](media/mathclient-post-build-command-line.png "빌드 후 명령 추가")
 
@@ -580,7 +575,7 @@ int main()
 
 축하합니다. DLL의 함수를 호출하는 애플리케이션을 만들었습니다. 이제 애플리케이션을 실행하여 수행하는 작업을 확인합니다. 메뉴 모음에서 **디버그** > **디버깅하지 않고 시작**을 선택합니다. Visual Studio에서 프로그램을 실행하기 위한 명령 창이 열립니다. 출력의 마지막 부분은 다음과 같습니다.
 
-![디버깅하지 않고 클라이언트 앱 시작](media/mathclient-run-without-debugging.png "디버깅하지 않고 클라이언트 앱 시작")
+![디버깅 하지 않고 클라이언트 앱 시작](media/mathclient-run-without-debugging.png "디버깅 하지 않고 클라이언트 앱 시작")
 
 아무 키나 눌러 명령 창을 닫습니다.
 

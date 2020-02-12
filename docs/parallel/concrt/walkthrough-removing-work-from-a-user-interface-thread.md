@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 2ee15d4660984c9afb77cb20f8ef0dab25a8b933
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 518044d4e3adea44c3776793c8277939076066d6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631704"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140703"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>연습: 사용자 인터페이스 스레드에서 작업 제거
 
@@ -18,7 +18,7 @@ ms.locfileid: "69631704"
 
 차단 작업 (예: drawing)을 작업자 스레드에 오프 로드 하 여 UI 스레드에서 작업을 제거 하면 응용 프로그램의 응답성이 향상 됩니다. 이 연습에서는 만델브로트 프랙탈을 생성 하는 그리기 루틴을 사용 하 여 긴 차단 작업을 보여 줍니다. 각 픽셀의 계산은 다른 모든 계산과 독립적 이기 때문에 만델브로트 프랙탈을 생성 하는 것도 병렬 처리에 적합 한 후보입니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 연습을 시작 하기 전에 다음 항목을 참조 하세요.
 
@@ -34,7 +34,7 @@ ms.locfileid: "69631704"
 
 또한이 연습을 시작 하기 전에 MFC 응용 프로그램 개발 및 GDI +의 기본 사항을 이해 하는 것이 좋습니다. MFC에 대 한 자세한 내용은 [Mfc 데스크톱 응용 프로그램](../../mfc/mfc-desktop-applications.md)을 참조 하세요. GDI +에 대 한 자세한 내용은 [Gdi +](/windows/win32/gdiplus/-gdiplus-gdi-start)를 참조 하세요.
 
-##  <a name="top"></a> 섹션
+## <a name="top"></a> 섹션
 
 이 연습에는 다음과 같은 섹션이 있습니다.
 
@@ -48,13 +48,13 @@ ms.locfileid: "69631704"
 
 - [취소 지원 추가](#cancellation)
 
-##  <a name="application"></a>MFC 응용 프로그램 만들기
+## <a name="application"></a>MFC 응용 프로그램 만들기
 
 이 섹션에서는 기본 MFC 응용 프로그램을 만드는 방법을 설명 합니다.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Visual C++ MFC 응용 프로그램을 만들려면
 
-1. **Mfc 응용 프로그램 마법사** 를 사용 하 여 모든 기본 설정을 사용 하 여 mfc 응용 프로그램을 만듭니다. [연습: Visual Studio 버전에 대 한](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) 마법사를 여는 방법에 대 한 지침은 새 MFC 셸 컨트롤을 사용 합니다.
+1. **Mfc 응용 프로그램 마법사** 를 사용 하 여 모든 기본 설정을 사용 하 여 mfc 응용 프로그램을 만듭니다. 사용 중인 Visual Studio 버전에 대 한 마법사를 여는 방법에 대 한 지침은 [연습: 새 MFC 셸 컨트롤 사용](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) 을 참조 하세요.
 
 1. 프로젝트 이름 (예: `Mandelbrot`)을 입력 한 다음 **확인** 을 클릭 하 여 **MFC 응용 프로그램 마법사**를 표시 합니다.
 
@@ -64,21 +64,21 @@ ms.locfileid: "69631704"
 
    응용 프로그램을 빌드하고 실행 하 여 성공적으로 만들어졌는지 확인 합니다. 응용 프로그램을 빌드하려면 **빌드** 메뉴에서 **솔루션 빌드**를 클릭 합니다. 응용 프로그램이 성공적으로 빌드되면 **디버그** 메뉴에서 **디버깅 시작** 을 클릭 하 여 응용 프로그램을 실행 합니다.
 
-##  <a name="serial"></a>만델브로트 응용 프로그램의 일련 버전 구현
+## <a name="serial"></a>만델브로트 응용 프로그램의 일련 버전 구현
 
 이 섹션에서는 만델브로트 프랙탈을 그리는 방법을 설명 합니다. 이 버전은 만델브로트 프랙탈을 GDI + [비트맵](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) 개체에 그린 다음 해당 비트맵의 내용을 클라이언트 창에 복사 합니다.
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>만델브로트 응용 프로그램의 일련 버전을 구현 하려면
 
-1. *Pch .h* (Visual Studio 2017 및 이전 버전의*stdafx.h* )에서 다음 `#include` 지시문을 추가 합니다.
+1. *.Pch* (Visual Studio 2017 및 이전 버전의*stdafx.h* )에서 다음 `#include` 지시문을 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
-1. Childview. h에서 `pragma` 지시문 뒤에 `BitmapPtr` 형식을 정의 합니다. 형식을 사용 하면 `Bitmap` 개체에 대 한 포인터를 여러 구성 요소에서 공유할 수 있습니다. `BitmapPtr` 개체 `Bitmap` 는 구성 요소에서 더 이상 참조 되지 않는 경우 삭제 됩니다.
+1. ChildView. h에서 `pragma` 지시문 뒤에 `BitmapPtr` 형식을 정의 합니다. `BitmapPtr` 형식을 사용 하면 `Bitmap` 개체에 대 한 포인터를 여러 구성 요소에서 공유할 수 있습니다. `Bitmap` 개체는 구성 요소에서 더 이상 참조 되지 않는 경우 삭제 됩니다.
 
    [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
-1. Childview. h에서 `protected` `CChildView` 클래스의 섹션에 다음 코드를 추가 합니다.
+1. ChildView. h에서 `CChildView` 클래스의 `protected` 섹션에 다음 코드를 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
@@ -86,21 +86,21 @@ ms.locfileid: "69631704"
 
    [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-   디버그 빌드에서이 단계를 수행 하면 응용 프로그램이 gdi +와 `DEBUG_NEW` 호환 되지 않는 할당자를 사용할 수 없습니다.
+   디버그 빌드에서이 단계를 수행 하면 응용 프로그램이 GDI +와 호환 되지 않는 `DEBUG_NEW` 할당자를 사용할 수 없습니다.
 
-1. Childview. .cpp에서 `using` `Gdiplus` 네임 스페이스에 지시문을 추가 합니다.
+1. ChildView .cpp에서 `Gdiplus` 네임 스페이스에 `using` 지시어를 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
-1. `CChildView` 클래스의 생성자 및 소멸자에 다음 코드를 추가 하 여 gdi +를 초기화 하 고 종료 합니다.
+1. `CChildView` 클래스의 생성자 및 소멸자에 다음 코드를 추가 하 여 GDI +를 초기화 하 고 종료 합니다.
 
    [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
-1. `CChildView::DrawMandelbrot` 메서드를 구현합니다. 이 메서드는 지정 `Bitmap` 된 개체에 만델브로트 프랙탈을 그립니다.
+1. `CChildView::DrawMandelbrot` 메서드를 구현합니다. 이 메서드는 지정 된 `Bitmap` 개체에 만델브로트 프랙탈을 그립니다.
 
    [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
-1. `CChildView::OnPaint` 메서드를 구현합니다. 이 메서드는 `CChildView::DrawMandelbrot` 를 호출 하 고 `Bitmap` 개체의 내용을 창에 복사 합니다.
+1. `CChildView::OnPaint` 메서드를 구현합니다. 이 메서드는 `CChildView::DrawMandelbrot`를 호출한 다음 `Bitmap` 개체의 내용을 창에 복사 합니다.
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
@@ -108,43 +108,43 @@ ms.locfileid: "69631704"
 
 다음 그림에서는 만델브로트 응용 프로그램의 결과를 보여 줍니다.
 
-![만델브로트 응용 프로그램](../../parallel/concrt/media/mandelbrot.png "만델브로트 응용 프로그램")
+![만델브로트 응용 프로그램](../../parallel/concrt/media/mandelbrot.png "Mandelbrot 응용 프로그램")
 
 각 픽셀에 대 한 계산은 계산 비용이 많이 들기 때문에 UI 스레드는 전체 계산이 완료 될 때까지 추가 메시지를 처리할 수 없습니다. 이렇게 하면 응용 프로그램의 응답성이 저하 될 수 있습니다. 그러나 UI 스레드에서 작업을 제거 하 여이 문제를 완화 시킬 수 있습니다.
 
 [[맨 위로 이동](#top)]
 
-##  <a name="removing-work"></a>UI 스레드에서 작업 제거
+## <a name="removing-work"></a>UI 스레드에서 작업 제거
 
 이 섹션에서는 만델브로트 응용 프로그램의 UI 스레드에서 그리기 작업을 제거 하는 방법을 보여 줍니다. Ui 스레드에서 작업자 스레드로 그리기 작업을 이동 하면 작업자 스레드가 백그라운드에서 이미지를 생성할 때 UI 스레드가 메시지를 처리할 수 있습니다.
 
 동시성 런타임 작업 [그룹](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)및 [간단한 작업](../../parallel/concrt/task-scheduler-concurrency-runtime.md)을 실행 하는 세 가지 방법을 제공 합니다. 이러한 메커니즘 중 하나를 사용 하 여 UI 스레드에서 작업을 제거할 수 있지만이 예제에서는 작업 그룹이 취소를 지원 하기 때문에 [concurrency:: task_group](reference/task-group-class.md) 개체를 사용 합니다. 이 연습에서는 나중에 취소를 사용 하 여 클라이언트 창의 크기를 조정할 때 수행 되는 작업의 양을 줄이고 창이 소멸 될 때 정리를 수행 합니다.
 
-또한이 예제에서는 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 개체를 사용 하 여 UI 스레드 및 작업자 스레드가 서로 통신할 수 있도록 합니다. 작업자 스레드는 이미지를 생성 한 후 개체에 대 한 포인터 `Bitmap` `unbounded_buffer` 를 개체에 보낸 다음 그리기 메시지를 UI 스레드에 게시 합니다. 그러면 UI 스레드가 개체에서 `unbounded_buffer` `Bitmap` 개체를 받아서 클라이언트 창에 그립니다.
+또한이 예제에서는 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 개체를 사용 하 여 UI 스레드 및 작업자 스레드가 서로 통신할 수 있도록 합니다. 작업자 스레드는 이미지를 생성 한 후 `Bitmap` 개체에 대 한 포인터를 `unbounded_buffer` 개체로 보낸 다음 그리기 메시지를 UI 스레드에 게시 합니다. 그런 다음 UI 스레드는 `unbounded_buffer` 개체에서 `Bitmap` 개체를 받아서 클라이언트 창에 그립니다.
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>UI 스레드에서 그리기 작업을 제거 하려면
 
-1. *Pch .h* (Visual Studio 2017 및 이전 버전의*stdafx.h* )에서 다음 `#include` 지시문을 추가 합니다.
+1. *.Pch .h* (Visual Studio 2017 및 이전 버전의*stdafx.h* )에서 다음 `#include` 지시문을 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
-1. Childview. `task_group` h에서 `CChildView` 클래스의 `protected` 섹션 `unbounded_buffer` 에 및 멤버 변수를 추가 합니다. 개체는 그리기를 수행 하는 작업을 포함 `unbounded_buffer` 하며 개체는 완료 된 만델브로트 이미지를 보유 합니다. `task_group`
+1. ChildView. h에서 `CChildView` 클래스의 `protected` 섹션에 `task_group` 및 `unbounded_buffer` 멤버 변수를 추가 합니다. `task_group` 개체는 그리기를 수행 하는 작업을 포함 합니다. `unbounded_buffer` 개체는 완료 된 만델브로트 이미지를 보유 합니다.
 
    [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
-1. Childview. .cpp에서 `using` `concurrency` 네임 스페이스에 지시문을 추가 합니다.
+1. ChildView .cpp에서 `concurrency` 네임 스페이스에 `using` 지시어를 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
-1. 메서드에서를 `Bitmap::UnlockBits`호출한 후 `Bitmap` [concurrency:: send](reference/concurrency-namespace-functions.md#send) 함수를 호출 하 여 개체를 UI 스레드에 전달 합니다. `CChildView::DrawMandelbrot` 그런 다음, 그리기 메시지를 UI 스레드에 게시 하 고 클라이언트 영역을 무효화 합니다.
+1. `CChildView::DrawMandelbrot` 메서드에서 `Bitmap::UnlockBits`를 호출한 후 [concurrency:: send](reference/concurrency-namespace-functions.md#send) 함수를 호출 하 여 `Bitmap` 개체를 UI 스레드에 전달 합니다. 그런 다음, 그리기 메시지를 UI 스레드에 게시 하 고 클라이언트 영역을 무효화 합니다.
 
    [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
-1. `CChildView::OnPaint` 업데이트`Bitmap` 된 개체를 받고 클라이언트 창에 이미지를 그리기 위해 메서드를 업데이트 합니다.
+1. `CChildView::OnPaint` 메서드를 업데이트 하 여 업데이트 된 `Bitmap` 개체를 받고 이미지를 클라이언트 창에 그립니다.
 
    [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-   메서드 `CChildView::OnPaint` 는 메시지 버퍼에 만델브로트 이미지가 없는 경우이 이미지를 생성 하는 작업을 만듭니다. 메시지 버퍼에는 초기 그리기 메시지 `Bitmap` 등의 경우와 클라이언트 창 앞에서 다른 창이 이동 된 경우와 같은 개체가 포함 되지 않습니다.
+   `CChildView::OnPaint` 메서드는 만델브로트 이미지가 메시지 버퍼에 없는 경우이 이미지를 생성 하는 작업을 만듭니다. 메시지 버퍼에는 초기 그리기 메시지 등의 경우와 클라이언트 창 앞에서 다른 창이 이동 된 경우와 같은 `Bitmap` 개체가 포함 되지 않습니다.
 
 1. 응용 프로그램이 빌드 및 실행 되어 성공적으로 업데이트 되었는지 확인 합니다.
 
@@ -152,9 +152,9 @@ ms.locfileid: "69631704"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="performance"></a>그리기 성능 향상
+## <a name="performance"></a>그리기 성능 향상
 
-각 픽셀의 계산은 다른 모든 계산과 독립적 이기 때문에 만델브로트 프랙탈 생성은 병렬 처리에 적합 한 후보입니다. 그리기 프로시저를 병렬화 하려면 다음과 같이 `for` `CChildView::DrawMandelbrot` 메서드의 외부 루프를 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘에 대 한 호출로 변환 합니다.
+각 픽셀의 계산은 다른 모든 계산과 독립적 이기 때문에 만델브로트 프랙탈 생성은 병렬 처리에 적합 한 후보입니다. 그리기 프로시저를 병렬화 하려면 다음과 같이 `CChildView::DrawMandelbrot` 메서드의 외부 `for` 루프를 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘에 대 한 호출로 변환 합니다.
 
 [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]
 
@@ -162,31 +162,31 @@ ms.locfileid: "69631704"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="cancellation"></a>취소 지원 추가
+## <a name="cancellation"></a>취소 지원 추가
 
 이 섹션에서는 창 크기 조정을 처리 하는 방법과 창이 소멸 될 때 활성화 된 그리기 작업을 취소 하는 방법을 설명 합니다.
 
-[PPL의 문서 취소](cancellation-in-the-ppl.md) 는 런타임에서 취소가 작동 하는 방식에 대해 설명 합니다. 취소는 협조적입니다. 따라서 즉시 발생 하지 않습니다. 취소 된 작업을 중지 하기 위해 런타임은 작업에서 런타임으로의 후속 호출 중에 내부 예외를 throw 합니다. 이전 섹션에서는 `parallel_for` 알고리즘을 사용 하 여 그리기 작업의 성능을 향상 시키는 방법을 보여 줍니다. 를 `parallel_for` 호출 하면 런타임에서 작업을 중지할 수 있으므로 취소가 작동할 수 있습니다.
+[PPL의 문서 취소](cancellation-in-the-ppl.md) 는 런타임에서 취소가 작동 하는 방식에 대해 설명 합니다. 취소는 협조적입니다. 따라서 즉시 발생 하지 않습니다. 취소 된 작업을 중지 하기 위해 런타임은 작업에서 런타임으로의 후속 호출 중에 내부 예외를 throw 합니다. 이전 섹션에서는 `parallel_for` 알고리즘을 사용 하 여 그리기 작업의 성능을 향상 시키는 방법을 보여 줍니다. `parallel_for`를 호출 하면 런타임에서 작업을 중지할 수 있으므로 취소가 작동할 수 있습니다.
 
 ### <a name="cancelling-active-tasks"></a>활성 작업 취소
 
-만델브로트 응용 프로그램은 `Bitmap` 해당 차원이 클라이언트 창의 크기와 일치 하는 개체를 만듭니다. 클라이언트 창의 크기를 조정할 때마다 응용 프로그램은 새 창 크기에 대 한 이미지를 생성 하는 추가 백그라운드 작업을 만듭니다. 응용 프로그램에는 이러한 중간 이미지가 필요 하지 않습니다. 최종 창 크기에 대 한 이미지만 필요 합니다. 응용 프로그램에서 이러한 추가 작업을 수행 하지 않도록 하려면 `WM_SIZE` 및 `WM_SIZING` 메시지에 대 한 메시지 처리기에서 활성 그리기 작업을 취소 한 다음 창의 크기가 조정 된 후에 그리기 작업을 다시 예약할 수 있습니다.
+만델브로트 응용 프로그램은 해당 차원이 클라이언트 창의 크기와 일치 하는 `Bitmap` 개체를 만듭니다. 클라이언트 창의 크기를 조정할 때마다 응용 프로그램은 새 창 크기에 대 한 이미지를 생성 하는 추가 백그라운드 작업을 만듭니다. 응용 프로그램에는 이러한 중간 이미지가 필요 하지 않습니다. 최종 창 크기에 대 한 이미지만 필요 합니다. 응용 프로그램에서이 추가 작업을 수행 하지 못하도록 하려면 `WM_SIZE`에 대 한 메시지 처리기에서 활성 그리기 작업을 취소 하 고 메시지 `WM_SIZING` 한 다음 창의 크기가 조정 된 후에 작업을 다시 예약 합니다.
 
-창의 크기를 조정할 때 활성 그리기 작업을 취소 하기 위해 응용 프로그램은 `WM_SIZING` 및 `WM_SIZE` 메시지에 대 한 처리기에서 [concurrency:: task_group:: cancel](reference/task-group-class.md#cancel) 메서드를 호출 합니다. 또한 `WM_SIZE` 메시지의 처리기는 [concurrency:: task_group:: wait](reference/task-group-class.md#wait) 메서드를 호출 하 여 모든 활성 작업이 완료 될 때까지 기다린 후 업데이트 된 창 크기에 대 한 그리기 작업을 다시 예약 합니다.
+창의 크기를 조정할 때 활성 그리기 작업을 취소 하기 위해 응용 프로그램은 `WM_SIZING` 및 `WM_SIZE` 메시지의 처리기에서 [concurrency:: task_group:: cancel](reference/task-group-class.md#cancel) 메서드를 호출 합니다. 또한 `WM_SIZE` 메시지 처리기는 [concurrency:: task_group:: wait](reference/task-group-class.md#wait) 메서드를 호출 하 여 모든 활성 작업이 완료 될 때까지 기다린 후 업데이트 된 창 크기에 대 한 그리기 작업을 다시 예약 합니다.
 
-클라이언트 창이 소멸 되 면 활성 그리기 작업을 취소 하는 것이 좋습니다. 활성 그리기 작업을 취소 하면 클라이언트 창이 소멸 된 후 작업자 스레드가 UI 스레드에 메시지를 게시 하지 않습니다. 응용 프로그램은 `WM_DESTROY` 메시지에 대 한 처리기에서 활성 그리기 작업을 모두 취소 합니다.
+클라이언트 창이 소멸 되 면 활성 그리기 작업을 취소 하는 것이 좋습니다. 활성 그리기 작업을 취소 하면 클라이언트 창이 소멸 된 후 작업자 스레드가 UI 스레드에 메시지를 게시 하지 않습니다. 응용 프로그램은 `WM_DESTROY` 메시지에 대 한 처리기의 모든 활성 그리기 작업을 취소 합니다.
 
 ### <a name="responding-to-cancellation"></a>취소에 응답
 
-그리기 `CChildView::DrawMandelbrot` 작업을 수행 하는 메서드는 취소에 응답 해야 합니다. 런타임에서는 예외 처리를 사용 하 여 작업을 취소 `CChildView::DrawMandelbrot` 하기 때문에 메서드는 모든 리소스가 올바르게 정리 되도록 보장 하기 위해 예외 안전 메커니즘을 사용 해야 합니다. 이 예제에서는 RAII ( *Resource Logis Initialization* ) 패턴을 사용 하 여 작업이 취소 될 때 비트맵 비트의 잠금이 해제 되도록 합니다.
+그리기 작업을 수행 하는 `CChildView::DrawMandelbrot` 메서드는 취소에 응답 해야 합니다. 런타임에서는 예외 처리를 사용 하 여 작업을 취소 하기 때문에 `CChildView::DrawMandelbrot` 메서드는 예외 안전 메커니즘을 사용 하 여 모든 리소스가 제대로 정리 되었는지를 보장 해야 합니다. 이 예제에서는 RAII ( *Resource Logis Initialization* ) 패턴을 사용 하 여 작업이 취소 될 때 비트맵 비트의 잠금이 해제 되도록 합니다.
 
 ##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>만델브로트 응용 프로그램에서 취소에 대 한 지원을 추가 하려면
 
-1. `protected` Childview. h의 `CChildView` 클래스 섹션에서 `OnSize`, `OnSizing`및 `OnDestroy` 메시지 맵 함수에 대 한 선언을 추가 합니다.
+1. ChildView. h의 `CChildView` 클래스의 `protected` 섹션에서 `OnSize`, `OnSizing`및 `OnDestroy` 메시지 맵 함수에 대 한 선언을 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
-1. Childview .cpp에서 `WM_SIZE`, `WM_SIZING`및 `WM_DESTROY` 메시지에 대 한 처리기를 포함 하도록 메시지 맵을 수정 합니다.
+1. ChildView. `WM_SIZE`, `WM_SIZING`및 `WM_DESTROY` 메시지에 대 한 처리기가 포함 되도록 메시지 맵을 수정 합니다.
 
    [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
@@ -202,17 +202,17 @@ ms.locfileid: "69631704"
 
    [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
-1. Childview에서 RAII 패턴을 구현 하 `scope_guard` 는 클래스를 정의 합니다.
+1. ChildView .cpp에서 RAII 패턴을 구현 하는 `scope_guard` 클래스를 정의 합니다.
 
    [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
-1. 호출 후에 `CChildView::DrawMandelbrot` `Bitmap::LockBits`다음 코드를 메서드에 추가 합니다.
+1. `Bitmap::LockBits`를 호출한 후 `CChildView::DrawMandelbrot` 메서드에 다음 코드를 추가 합니다.
 
    [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-   이 코드는 개체를 `scope_guard` 만들어 취소를 처리 합니다. 개체가 범위를 벗어나면 비트맵 비트의 잠금이 해제 됩니다.
+   이 코드는 `scope_guard` 개체를 만들어 취소를 처리 합니다. 개체가 범위를 벗어나면 비트맵 비트의 잠금이 해제 됩니다.
 
-1. 비트맵 비트의 잠금이 해제 `CChildView::DrawMandelbrot` 된 후 메시지를 `scope_guard` UI 스레드로 보내기 전에 메서드 끝을 수정 하 여 개체를 해제 합니다. 이렇게 하면 비트맵 비트의 잠금이 해제 되기 전에 UI 스레드가 업데이트 되지 않습니다.
+1. `CChildView::DrawMandelbrot` 메서드의 끝 부분을 수정 하 여 비트맵 비트의 잠금이 해제 된 후, 메시지를 UI 스레드로 보내기 전에 `scope_guard` 개체를 해제 합니다. 이렇게 하면 비트맵 비트의 잠금이 해제 되기 전에 UI 스레드가 업데이트 되지 않습니다.
 
    [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
@@ -222,7 +222,7 @@ ms.locfileid: "69631704"
 
 [[맨 위로 이동](#top)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [동시성 런타임 연습](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

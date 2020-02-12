@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351578"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126476"
 ---
-# <a name="norm4-class"></a>norm_4 클래스
+# <a name="norm_4-class"></a>norm_4 클래스
 
-네 가지 일반 숫자의 짧은 벡터를 나타냅니다.
+4 개의 일반 숫자의 짧은 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class norm_4;
 ```
 
@@ -289,19 +289,19 @@ class norm_4;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[norm_4 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[norm_4 생성자](#ctor)|오버로드됨. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -442,7 +442,7 @@ class norm_4;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
@@ -455,13 +455,13 @@ class norm_4;
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[상수 크기](#norm_4__size)||
+|[크기 상수](#norm_4__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |norm_4::a||
 |norm_4::ab||
@@ -592,21 +592,21 @@ class norm_4;
 |norm_4::zyx||
 |norm_4::zyxw||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `norm_4`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,29 +667,29 @@ explicit inline norm_4(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V2*<br/>
-2 요소를 초기화할 값입니다.
+요소 2를 초기화할 값입니다.
 
 *_V3*<br/>
-3 요소를 초기화할 값입니다.
+요소 3을 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="norm_4__size"></a> 크기
+## <a name="norm_4__size"></a>크기가
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

@@ -1,20 +1,20 @@
 ---
-title: 해시&lt;string_view&gt; 특수화
+title: '&gt; 특수화 string_view 해시&lt;'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346961"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126177"
 ---
-# <a name="hashltstringviewgt-specialization"></a>해시&lt;string_view&gt; 특수화
+# <a name="hashltstring_viewgt-specialization"></a>&gt; 특수화 string_view 해시&lt;
 
-string_view 지정 된 해시 값을 생성 하는 템플릿 특수화입니다.
+String_view 지정 된 해시 값을 생성 하는 템플릿 특수화입니다.
 
 ```cpp
 template <class CharType, class Traits>
@@ -29,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 ```
 ### <a name="remarks"></a>설명
 
-해시를 string_view 기본 문자열 개체의 해시를 같습니다.
+String_view 해시는 기본 문자열 개체의 해시와 같습니다.
 
 ### <a name="example"></a>예제
 

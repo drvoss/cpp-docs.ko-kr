@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 25ede76a81a77d489d0f2316bd3ae4cb7f84d704
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60757b0edea6b60d080c2175d4df4830ffec0cc3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344043"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139891"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 구조체
 
@@ -24,7 +24,7 @@ ms.locfileid: "64344043"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 struct IVirtualProcessorRoot : public IExecutionResource;
 ```
 
@@ -32,20 +32,20 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[IVirtualProcessorRoot::Activate](#activate)|실행 컨텍스트 인터페이스에 연결 된 스레드 프록시가 `pContext` 이 가상 프로세서 루트에서 실행을 시작 합니다.|
-|[IVirtualProcessorRoot::Deactivate](#deactivate)|스레드 프록시가 실행 컨텍스트를 발송을 중지 하려면이 가상 프로세서 루트에서 현재 실행 합니다. 스레드 프록시는 사용자에 게 다시 시작에 대 한 호출에서 실행 됩니다는 `Activate` 메서드.|
-|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|시스템에서 모든 프로세서에 표시 되려면 개별 프로세서 메모리 계층 구조에 저장 된 데이터를 발생 합니다. 메서드가 반환 되기 전에 모든 프로세서에서 전체 메모리 펜스를가 실행 되었음을 확인 합니다.|
-|[IVirtualProcessorRoot::GetId](#getid)|가상 프로세서 루트에 대 한 고유 식별자를 반환합니다.|
+|[IVirtualProcessorRoot:: Activate](#activate)|실행 컨텍스트 인터페이스와 연결 된 스레드 프록시가이 가상 프로세서 루트에서 실행을 시작 하도록 합니다 `pContext` 합니다.|
+|[IVirtualProcessorRoot::D eactivate](#deactivate)|이 가상 프로세서 루트에서 현재 실행 중인 스레드 프록시가 실행 컨텍스트 디스패치를 중지 하도록 합니다. 스레드 프록시는 `Activate` 메서드에 대 한 호출에서 실행을 다시 시작 합니다.|
+|[IVirtualProcessorRoot:: EnsureAllTasksVisible](#ensurealltasksvisible)|개별 프로세서의 메모리 계층에 저장 된 데이터가 시스템의 모든 프로세서에 표시 됩니다. 메서드가 반환 되기 전에 모든 프로세서에서 전체 메모리 펜스가 실행 되었는지 확인 합니다.|
+|[IVirtualProcessorRoot:: GetId](#getid)|가상 프로세서 루트에 대 한 고유 식별자를 반환 합니다.|
 
 ## <a name="remarks"></a>설명
 
-모든 가상 프로세서 루트에 연결 된 실행 리소스입니다. 합니다 `IVirtualProcessorRoot` 인터페이스에서 상속 되는 [IExecutionResource](iexecutionresource-structure.md) 인터페이스입니다. 여러 가상 프로세서 루트는 동일한 기본 하드웨어 스레드로 해당할 수 있습니다.
+모든 가상 프로세서 루트에는 연결 된 실행 리소스가 있습니다. `IVirtualProcessorRoot` 인터페이스는 [Iexecutionresource](iexecutionresource-structure.md) 인터페이스에서 상속 됩니다. 여러 가상 프로세서 루트는 동일한 기본 하드웨어 스레드에 해당할 수 있습니다.
 
-Resource Manager 리소스에 대 한 요청에 응답 하는 스케줄러에 가상 프로세서 루트를 부여합니다. 스케줄러를 실행 컨텍스트를 사용 하 여 활성화 하 여 작업을 수행 하는 가상 프로세서 루트를 사용할 수 있습니다.
+리소스 관리자는 리소스 요청에 대 한 응답으로 스케줄러에 가상 프로세서 루트를 부여 합니다. 스케줄러는 실행 컨텍스트로 활성화 하 여 작업을 수행 하는 데 가상 프로세서 루트를 사용할 수 있습니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [IExecutionResource](iexecutionresource-structure.md)
 
@@ -53,105 +53,105 @@ Resource Manager 리소스에 대 한 요청에 응답 하는 스케줄러에 �
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** concrtrm.h
+**헤더:** concrtrm. h
 
 **네임스페이스:** 동시성
 
-##  <a name="activate"></a>  Ivirtualprocessorroot:: Activate 메서드
+## <a name="activate"></a>IVirtualProcessorRoot:: Activate 메서드
 
-실행 컨텍스트 인터페이스에 연결 된 스레드 프록시가 `pContext` 이 가상 프로세서 루트에서 실행을 시작 합니다.
+실행 컨텍스트 인터페이스와 연결 된 스레드 프록시가이 가상 프로세서 루트에서 실행을 시작 하도록 합니다 `pContext` 합니다.
 
-```
+```cpp
 virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pContext*<br/>
-이 가상 프로세서 루트에서 발송 되는 실행 컨텍스트를 사용 하는 인터페이스입니다.
+이 가상 프로세서 루트에서 디스패치되는 실행 컨텍스트에 대 한 인터페이스입니다.
 
 ### <a name="remarks"></a>설명
 
-실행 컨텍스트 인터페이스를 사용 하 여 연결 되지 않은 경우 Resource Manager 스레드 프록시를 제공 합니다. `pContext`
+리소스 관리자는 실행 컨텍스트 인터페이스와 연결 되지 않은 경우 스레드 프록시를 제공 합니다 `pContext`
 
-`Activate` 리소스 관리자에서 반환 하는 새 가상 프로세서 루트에서 작업 실행을 시작 하거나는 비활성화 하거나 비활성화 하는 가상 프로세서 루트에서 스레드 프록시를 다시 메서드를 사용할 수 있습니다. 참조 [ivirtualprocessorroot:: Deactivate](#deactivate) 비활성화에 대 한 자세한 내용은 합니다. 비활성화 된 가상 프로세서 루트를 매개 변수를 다시 시작 된 경우 `pContext` 가상 프로세서 루트를 비활성화 하는 데 사용 하는 매개 변수와 동일 해야 합니다.
+`Activate` 메서드를 사용 하 여 리소스 관리자에서 반환 된 새 가상 프로세서 루트에서 작업 실행을 시작 하거나, 비활성화 되었거나 비활성화 되는 가상 프로세서 루트에서 스레드 프록시를 다시 시작할 수 있습니다. 비활성화에 대 한 자세한 내용은 [IVirtualProcessorRoot::D eactivate](#deactivate) 를 참조 하세요. 비활성화 된 가상 프로세서 루트를 다시 시작 하는 경우 `pContext` 매개 변수는 가상 프로세서 루트를 비활성화 하는 데 사용 되는 매개 변수와 같아야 합니다.
 
-가상 프로세서 루트를 처음으로 후속 쌍에 대 한 호출에 대 한 활성화 된 후 `Deactivate` 고 `Activate` 서로 경쟁할 수 있습니다. 즉, Resource Manager에 대 한 호출을 수신 하도록 허용 되는 것 `Activate` 받기 전에 `Deactivate` 을 호출 합니다.
+가상 프로세서 루트를 처음 활성화 한 후에는 `Deactivate` 및 `Activate`에 대 한 후속 호출 쌍이 서로 경합이 발생할 수 있습니다. 즉, 리소스 관리자에서 의도 한 `Deactivate` 호출을 받기 전에 `Activate`에 대 한 호출을 받을 수 있습니다.
 
-가상 프로세서 루트를 활성화 하면 나타낸다고 Resource Manager에이 가상 프로세서 루트는 작업을 사용 하 여 현재 사용 중입니다. 호출 하는데 스케줄러를이 루트에서 실행할 수 없는 경우는 `Deactivate` 유휴 가상 프로세서 루트는 리소스 관리자에 게 알리는 메서드. Resource Manager는 부하 분산 시스템을 위해이 데이터를 사용 합니다.
+가상 프로세서 루트를 활성화 하는 경우이 가상 프로세서 루트가 현재 작업 중 이라는 리소스 관리자에 게 알립니다. 스케줄러가이 루트에서 실행할 작업을 찾을 수 없는 경우 가상 프로세서 루트가 유휴 상태임을 리소스 관리자에 알리는 `Deactivate` 메서드를 호출 해야 합니다. 리소스 관리자는이 데이터를 사용 하 여 시스템의 부하를 분산 합니다.
 
-`invalid_argument` 경우 발생 하는 인수 `pContext` 기본값이 `NULL`합니다.
+인수 `pContext`에 `NULL`값이 있으면 `invalid_argument` throw 됩니다.
 
-`invalid_operation` 경우 throw 되는 인수 `pContext` 최근이 가상 프로세서 루트에서 디스패치 된 실행 컨텍스트를 나타내지 않습니다.
+인수 `pContext`이 가상 프로세서 루트에서 가장 최근에 디스패치 된 실행 컨텍스트를 나타내지 않는 경우 `invalid_operation` throw 됩니다.
 
-가상 프로세서 루트를 활성화 act 기본 하드웨어 스레드의 구독 수준이 하나 증가 합니다. 구독 수준에 대 한 자세한 내용은 참조 하세요. [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)합니다.
+가상 프로세서 루트를 활성화 하는 작업은 기본 하드웨어 스레드의 구독 수준을 하나씩 늘립니다. 구독 수준에 대 한 자세한 내용은 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)을 참조 하세요.
 
-##  <a name="deactivate"></a>  Ivirtualprocessorroot:: Deactivate 메서드
+## <a name="deactivate"></a>IVirtualProcessorRoot::D eactivate 메서드
 
-스레드 프록시가 실행 컨텍스트를 발송을 중지 하려면이 가상 프로세서 루트에서 현재 실행 합니다. 스레드 프록시는 사용자에 게 다시 시작에 대 한 호출에서 실행 됩니다는 `Activate` 메서드.
+이 가상 프로세서 루트에서 현재 실행 중인 스레드 프록시가 실행 컨텍스트 디스패치를 중지 하도록 합니다. 스레드 프록시는 `Activate` 메서드에 대 한 호출에서 실행을 다시 시작 합니다.
 
-```
+```cpp
 virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pContext*<br/>
-현재이 루트에서 디스패치되는 컨텍스트.
+이 루트가 현재 디스패치 중인 컨텍스트입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-부울 값입니다. 값 **true** 스레드 프록시를 반환 합니다 `Deactivate` 메서드 호출에 대 한 응답에서는 `Activate` 메서드. 값 `false` 스레드 프록시 리소스 관리자에서 알림 이벤트에 대 한 응답으로 메서드에서 반환 함을 나타냅니다. 사용자 모드 예약 가능 (UMS) 스레드 스케줄러에서이 나타내고 항목 스케줄러의 완성 목록에 표시 스케줄러 처리 해야 합니다.
+부울 값입니다. **True** 값은 `Activate` 메서드 호출에 대 한 응답으로 `Deactivate` 메서드에서 스레드 프록시가 반환 되었음을 나타냅니다. `false` 값은 스레드 프록시가 리소스 관리자의 알림 이벤트에 대 한 응답으로 메서드에서 반환 되었음을 나타냅니다. UMS (사용자 모드 예약 가능) 스레드 스케줄러에서는 항목이 스케줄러의 완성 목록에 표시 되 고 스케줄러는이를 처리 하는 데 필요 합니다.
 
 ### <a name="remarks"></a>설명
 
-가상 프로세서 루트를 실행 하 여 스케줄러에서 작업을 찾을 수 없는 경우 일시적으로 중지 하려면이 메서드를 사용 합니다. 에 대 한 호출을 `Deactivate` 메서드 내에서 발생 해야 합니다는 `Dispatch` 가상 프로세서 루트와 마지막으로 활성화 된 실행 컨텍스트의 메서드입니다. 즉, 호출 스레드 프록시를 `Deactivate` 메서드는 가상 프로세서 루트에서 현재 실행 중인 것 이어야 합니다. 실행 되지 하는 가상 프로세서 루트에서 메서드를 호출 합니다. 정의 되지 않은 동작이 발생할 수 있습니다.
+스케줄러에서 작업을 찾을 수 없는 경우이 메서드를 사용 하 여 가상 프로세서 루트의 실행을 일시적으로 중지 합니다. `Deactivate` 메서드에 대 한 호출은 가상 프로세서 루트를 마지막으로 활성화 한 실행 컨텍스트의 `Dispatch` 메서드 내에서 시작 해야 합니다. 즉, `Deactivate` 메서드를 호출 하는 스레드 프록시는 가상 프로세서 루트에서 현재 실행 되 고 있는 스레드 여야 합니다. 실행 되 고 있지 않은 가상 프로세서 루트에서 메서드를 호출 하면 정의 되지 않은 동작이 발생할 수 있습니다.
 
-비활성화 된 가상 프로세서 루트에 대 한 호출을 사용 하 여 해제 될 수 있습니다 합니다 `Activate` 에 전달 된 것과 같은 인수를 사용 하 여 메서드를 `Deactivate` 메서드. Scheduler는를 호출 하는 것을 담당 합니다 `Activate` 및 `Deactivate` 메서드 쌍을 있지만 특정 순서 대로 수신 해야 하는 것은 아닙니다. Resource Manager에 대 한 호출을 받는 처리할 수는 `Activate` 메서드 호출을 수신 하기 전에 `Deactivate` 을 메서드.
+비활성화 된 가상 프로세서 루트는 `Deactivate` 메서드에 전달 된 것과 동일한 인수를 사용 하 여 `Activate` 메서드에 대 한 호출로 해제 될 수 있습니다. 스케줄러는 `Activate` 및 `Deactivate` 메서드에 대 한 호출이 쌍을 이룰 수 있도록 하는 일을 담당 하지만 특정 순서로 수신 하지 않아도 됩니다. 리소스 관리자는 `Activate` 메서드에 대 한 호출을 처리할 수 있습니다 .이 메서드는 의도 한 `Deactivate` 메서드에 대 한 호출을 수신 하기 전에 처리할 수 있습니다.
 
-가상 프로세서 루트를 활성화 되는 경우의 반환 값을 `Deactivate` 메서드는 값 **false**, 스케줄러를 통해 UMS 완성 목록을 쿼리해야 합니다.는 `IUMSCompletionList::GetUnblockNotifications` 메서드는 해당 정보에는 act 차례로 호출 이후에 `Deactivate` 메서드를 다시 합니다. 이 때까지 반복 해야 합니다 `Deactivate` 메서드 값을 반환 합니다. `true`합니다.
+가상 프로세서 루트 awakens 및 `Deactivate` 메서드의 반환 값이 **false**이면 스케줄러는 `IUMSCompletionList::GetUnblockNotifications` 메서드를 통해 UMS 완성 목록을 쿼리하여 해당 정보에 대해 작업을 수행한 다음 `Deactivate` 메서드를 다시 호출 해야 합니다. `Deactivate` 메서드가 `true`값을 반환 하는 시간까지 반복 됩니다.
 
-`invalid_argument` 경우 발생 하는 인수 `pContext` 기본값이 NULL입니다.
+인수 `pContext`의 값이 NULL 인 경우 `invalid_argument` throw 됩니다.
 
-`invalid_operation` 가상 프로세서 루트에서 활성화 되지 않은 경우 발생 하는 인수 또는 `pContext` 최근이 가상 프로세서 루트에서 디스패치 된 실행 컨텍스트를 나타내지 않습니다.
+가상 프로세서 루트를 활성화 하지 않은 경우 또는 인수 `pContext`이 가상 프로세서 루트에서 가장 최근에 디스패치 된 실행 컨텍스트를 나타내지 않는 경우 `invalid_operation` throw 됩니다.
 
-가상 프로세서 루트를 비활성화 하면 act 구독 수준의 기본 하드웨어 스레드 하나 감소 합니다. 구독 수준에 대 한 자세한 내용은 참조 하세요. [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)합니다.
+가상 프로세서 루트를 비활성화 하면 기본 하드웨어 스레드의 구독 수준이 1 씩 줄어듭니다. 구독 수준에 대 한 자세한 내용은 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)을 참조 하세요.
 
-##  <a name="ensurealltasksvisible"></a>  Ivirtualprocessorroot:: Ensurealltasksvisible 메서드
+## <a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible 메서드
 
-시스템에서 모든 프로세서에 표시 되려면 개별 프로세서 메모리 계층 구조에 저장 된 데이터를 발생 합니다. 메서드가 반환 되기 전에 모든 프로세서에서 전체 메모리 펜스를가 실행 되었음을 확인 합니다.
+개별 프로세서의 메모리 계층에 저장 된 데이터가 시스템의 모든 프로세서에 표시 됩니다. 메서드가 반환 되기 전에 모든 프로세서에서 전체 메모리 펜스가 실행 되었는지 확인 합니다.
 
-```
+```cpp
 virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pContext*<br/>
-현재이 가상 프로세서 루트에서 디스패치되는 컨텍스트.
+이 가상 프로세서 루트에서 현재 디스패치 중인 컨텍스트입니다.
 
 ### <a name="remarks"></a>설명
 
-새 작업 스케줄러에 추가 하 여 비활성화는 가상 프로세서 루트를 동기화 하려는 경우이 메서드를 유용 알 수 있습니다. 성능상의 이유로 단일 프로세서의 실행 스레드에서 추가 하는 작업 항목 다른 모든 프로세서에 즉시 표시 되지 않습니다. 즉는 메모리 장벽을 실행 하지 않고 스케줄러에 작업 항목을 추가할 결정할 수 있습니다. 와 함께에서이 메서드를 사용 하 여는 `Deactivate` 메서드 스케줄러 모든 가상 프로세서를 비활성화 하지 않도록 보장할 수 있습니다 작업 항목이 스케줄러의 컬렉션에 존재 하는 동안 루트입니다.
+스케줄러에 새 작업을 추가 하 여 가상 프로세서 루트의 비활성화를 동기화 하려는 경우이 메서드를 사용 하는 것이 좋습니다. 성능상의 이유로 메모리 장벽을 실행 하지 않고 스케줄러에 작업 항목을 추가 하도록 결정할 수 있습니다. 즉, 한 프로세서에서 실행 되는 스레드에 의해 추가 된 작업 항목이 다른 모든 프로세서에 즉시 표시 되지 않습니다. 이 방법을 `Deactivate` 메서드와 함께 사용 하면 스케줄러의 컬렉션에 작업 항목이 있는 동안 스케줄러에서 모든 가상 프로세서 루트를 비활성화 하지 않도록 보장할 수 있습니다.
 
-에 대 한 호출을 `EnsureAllTasksVisibleThe` 메서드 내에서 발생 해야 합니다는 `Dispatch` 가상 프로세서 루트와 마지막으로 활성화 된 실행 컨텍스트의 메서드입니다. 즉, 호출 스레드 프록시를 `EnsureAllTasksVisible` 메서드는 가상 프로세서 루트에서 현재 실행 중인 것 이어야 합니다. 실행 되지 하는 가상 프로세서 루트에서 메서드를 호출 합니다. 정의 되지 않은 동작이 발생할 수 있습니다.
+`EnsureAllTasksVisibleThe` 메서드에 대 한 호출은 가상 프로세서 루트를 마지막으로 활성화 한 실행 컨텍스트의 `Dispatch` 메서드 내에서 시작 해야 합니다. 즉, `EnsureAllTasksVisible` 메서드를 호출 하는 스레드 프록시는 가상 프로세서 루트에서 현재 실행 되 고 있는 스레드 여야 합니다. 실행 되 고 있지 않은 가상 프로세서 루트에서 메서드를 호출 하면 정의 되지 않은 동작이 발생할 수 있습니다.
 
-`invalid_argument` 경우 발생 하는 인수 `pContext` 기본값이 `NULL`합니다.
+인수 `pContext`에 `NULL`값이 있으면 `invalid_argument` throw 됩니다.
 
-`invalid_operation` 가상 프로세서 루트에서 활성화 되지 않은 경우 발생 하는 인수 또는 `pContext` 최근이 가상 프로세서 루트에서 디스패치 된 실행 컨텍스트를 나타내지 않습니다.
+가상 프로세서 루트를 활성화 하지 않은 경우 또는 인수 `pContext`이 가상 프로세서 루트에서 가장 최근에 디스패치 된 실행 컨텍스트를 나타내지 않는 경우 `invalid_operation` throw 됩니다.
 
-##  <a name="getid"></a>  Ivirtualprocessorroot:: Getid 메서드
+## <a name="getid"></a>IVirtualProcessorRoot:: GetId 메서드
 
-가상 프로세서 루트에 대 한 고유 식별자를 반환합니다.
+가상 프로세서 루트에 대 한 고유 식별자를 반환 합니다.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 정수 식별자입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임스페이스](concurrency-namespace.md)

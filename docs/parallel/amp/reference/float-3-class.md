@@ -74,20 +74,20 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180312"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126684"
 ---
-# <a name="float3-class"></a>float_3 클래스
+# <a name="float_3-class"></a>float_3 클래스
 
-세 개의 부동 소수점 수의 짧은 벡터를 나타냅니다.
+세 float의 짧은 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class float_3;
 ```
 
@@ -95,19 +95,19 @@ class float_3;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[float_3 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[float_3 생성자](#ctor)|오버로드됨. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |float_3::get_x||
 |float_3::get_xy||
@@ -148,7 +148,7 @@ class float_3;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |float_3::operator-||
 |float_3::operator--||
@@ -161,13 +161,13 @@ class float_3;
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[상수 크기](#float_3__size)||
+|[크기 상수](#float_3__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |float_3::b||
 |float_3::bg||
@@ -200,21 +200,21 @@ class float_3;
 |float_3::zy||
 |float_3::zyx||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `float_3`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V2*<br/>
-2 요소를 초기화할 값입니다.
+요소 2를 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="float_3__size"></a> 크기
+## <a name="float_3__size"></a>크기가
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
