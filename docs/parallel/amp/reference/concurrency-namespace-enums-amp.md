@@ -1,56 +1,56 @@
 ---
-title: Concurrency 네임 스페이스 열거형 (AMP)
+title: Concurrency 네임스페이스 열거형(AMP)
 ms.date: 11/04/2016
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180455"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126955"
 ---
-# <a name="concurrency-namespace-enums-amp"></a>Concurrency 네임 스페이스 열거형 (AMP)
+# <a name="concurrency-namespace-enums-amp"></a>Concurrency 네임스페이스 열거형(AMP)
 
 |||
 |-|-|
 |[access_type 열거형](#access_type)|[queuing_mode 열거형](#queuing_mode)|
 
-##  <a name="access_type"></a>  access_type 열거형
+## <a name="access_type"></a>access_type 열거형
 
-다양 한 유형의 데이터에 대 한 액세스를 나타내는 데 사용 되는 열거형 형식입니다.
+데이터에 대 한 다양 한 형식의 액세스를 나타내는 데 사용 되는 열거형 형식입니다.
 
-```
+```cpp
 enum access_type;
 ```
 
 ### <a name="values"></a>값
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|`access_type_auto`|자동으로 최상의 선택 `access_type` 액셀러레이터 키에 대 한 합니다.|
-|`access_type_none`|집중적으로 다루었습니다. 할당은 CPU 아닌 액셀러레이터 키에 액세스할 수만 있습니다.|
-|`access_type_read`|공유 합니다. 할당은 액셀러레이터 키에 액세스할 수 있으며 CPU에서 읽을 수 있는 합니다.|
-|`access_type_read_write`|공유 합니다. 할당은 액셀러레이터 키에 액세스할 수 있으며 CPU에서 쓸 수입니다.|
-|`access_type_write`|공유 합니다. 할당은 액셀러레이터 키에 액세스할 수 있으며 읽고 CPU에서 쓸 수 있는 합니다.|
+|`access_type_auto`|액셀러레이터 키에 대 한 가장 적합 한 `access_type`를 자동으로 선택 합니다.|
+|`access_type_none`|Dip. 할당은 CPU가 아닌 가속기 에서만 액세스할 수 있습니다.|
+|`access_type_read`|공유할. 할당은 가속기에서 액세스할 수 있으며 CPU에서 읽을 수 있습니다.|
+|`access_type_read_write`|공유할. 할당은 가속기에서 액세스할 수 있으며 CPU에서 쓸 수 있습니다.|
+|`access_type_write`|공유할. 이 할당은 가속기에서 액세스할 수 있으며 CPU에서 읽고 쓸 수 있습니다.|
 
-##  <a name="queuing_mode"></a>  queuing_mode 열거형
+## <a name="queuing_mode"></a>queuing_mode 열거형
 
-액셀러레이터 키에서 지원 되는 큐 모드를 지정 합니다.
+가속기에서 지원 되는 큐 모드를 지정 합니다.
 
-```
+```cpp
 enum queuing_mode;
 ```
 
 ### <a name="values"></a>값
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|`queuing_mode_immediate`|예를 들어 큐 모드를 지정 하는 명령 [parallel_for_each 함수 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), 호출자에 게 반환 되는 즉시 해당 가속기 장치로 보내집니다.|
-|`queuing_mode_automatic`|명령에 해당 하는 명령 큐에 대기 수를 지정 하는 큐 모드를 [accelerator_view](accelerator-view-class.md) 개체입니다. 명령을 장치로 전송 된 경우 [accelerator_view:: flush](accelerator-view-class.md#flush) 라고 합니다.|
+|`queuing_mode_immediate`|[Parallel_for_each 함수 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)와 같은 모든 명령이 호출자에 게 반환 되는 즉시 해당 액셀러레이터 장치로 전송 되도록 지정 하는 큐 모드입니다.|
+|`queuing_mode_automatic`|명령이 [accelerator_view](accelerator-view-class.md) 개체에 해당 하는 명령 큐에 대기 하도록 지정 하는 큐 모드입니다. [Accelerator_view:: flush](accelerator-view-class.md#flush) 가 호출 되 면 장치에 명령이 전송 됩니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

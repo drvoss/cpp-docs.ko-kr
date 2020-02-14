@@ -6,55 +6,55 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8cf1801d0262e3a2995d520604374ea22352fa0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375589"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141891"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>방법: 데이터 파이프라인에서 transformer 사용
 
-이 항목에서는 사용 하는 방법을 보여 주는 기본 예제가 포함 된 [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) 데이터 파이프라인에 클래스입니다. 이미지 처리를 수행 하는 데이터 파이프라인을 사용 하는 자세한 예제를 참조 하세요. [연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)합니다.
+이 항목에는 데이터 파이프라인에서 [concurrency:: 변환기](../../parallel/concrt/reference/transformer-class.md) 클래스를 사용 하는 방법을 보여 주는 기본 예제가 포함 되어 있습니다. 데이터 파이프라인을 사용 하 여 이미지 처리를 수행 하는 전체 예제는 [연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)를 참조 하세요.
 
-*데이터 파이프라인* 동시 프로그래밍의 일반적인 패턴입니다. 데이터 파이프라인은 일련의 단계로, 여기서 각 단계 작업을 수행 하 고 다음 단계로 해당 작업의 결과 전달 합니다 이루어져 있습니다. `transformer` 클래스 데이터의 핵심 구성 요소는 파이프라인 입력된 값을 수신 하기 때문에 해당 값의 작업을 수행 하 고 후 결과 사용 하는 다른 구성 요소에 대해 생성 합니다.
+*데이터 파이프라인* 은 동시 프로그래밍의 일반적인 패턴입니다. 데이터 파이프라인은 일련의 단계로 구성 되며, 각 단계는 작업을 수행 하 고 해당 작업의 결과를 다음 단계로 전달 합니다. `transformer` 클래스는 입력 값을 받고 해당 값에 대해 작업을 수행한 다음 사용할 다른 구성 요소에 대 한 결과를 생성 하기 때문에 데이터 파이프라인의 핵심 구성 요소입니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 일련의 초기 입력된 값을 지정 하는 변환 수행 하려면 다음 데이터 파이프라인을 사용 합니다.
+이 예제에서는 다음 데이터 파이프라인을 사용 하 여 초기 입력 값이 지정 된 일련의 변환을 수행 합니다.
 
-1. 첫 번째 단계는 해당 입력의 절대값을 계산합니다.
+1. 첫 번째 단계는 해당 입력의 절대값을 계산 합니다.
 
-1. 두 번째 단계는 해당 입력의 제곱근을 계산합니다.
+1. 두 번째 단계는 해당 입력의 제곱근을 계산 합니다.
 
-1. 세 번째 단계는 해당 입력의 제곱을 계산합니다.
+1. 세 번째 단계는 해당 입력의 제곱을 계산 합니다.
 
-1. 단계에서 입력을 부정 하는 명시 합니다.
+1. 단계는 해당 입력을 부정 합니다.
 
-1. 다섯 번째 단계는 메시지 버퍼를 최종 결과 씁니다.
+1. 다섯 번째 단계는 최종 결과를 메시지 버퍼에 기록 합니다.
 
-마지막으로 콘솔에 파이프라인의 결과 출력합니다.
+마지막으로 파이프라인의 결과를 콘솔에 출력 합니다.
 
 [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```Output
 The result is -42.
 ```
 
-입력 값에서과 형식이 다른 값을 출력 데이터 파이프라인의 단계에 대 한 것이 일반적입니다. 이 예제에서 두 번째 단계는 형식의 값입니다 `int` 입력으로 해당 값의 제곱근을 생성 하 고 (을 `double`) 출력으로 합니다.
+데이터 파이프라인의 단계에서 형식이 입력 값과 다른 값을 출력 하는 것이 일반적입니다. 이 예제에서 두 번째 단계는 `int` 형식의 값을 입력으로 사용 하 고 해당 값의 제곱근 (`double`)을 출력으로 생성 합니다.
 
 > [!NOTE]
->  이 예제에서 데이터 파이프라인은 그림입니다. 각 변환 작업에서 약간의 작업으로 수행 하므로 메시지 전달 하는 데 오버 헤드가 필요한 수의 이점을 능가 데이터 파이프라인을 사용 하 여 합니다.
+> 이 예제의 데이터 파이프라인은 설명을 위한 것입니다. 각 변환 작업은 거의 작업을 수행 하지 않으므로 메시지 전달을 수행 하는 데 필요한 오버 헤드는 데이터 파이프라인을 사용 하는 경우의 이점 보다 클 수 있습니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-예제 코드를 복사하여 Visual Studio 프로젝트 또는 `data-pipeline.cpp` 파일에 붙여넣고 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.
+예제 코드를 복사 하 여 Visual Studio 프로젝트에 붙여넣거나, `data-pipeline.cpp` 이름이 지정 된 파일에 붙여 넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.
 
-**cl.exe /EHsc data-pipeline.cpp**
+> **cl.exe/EHsc data-pipeline**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

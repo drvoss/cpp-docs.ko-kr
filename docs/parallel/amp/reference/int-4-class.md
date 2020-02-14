@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180214"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126671"
 ---
-# <a name="int4-class"></a>int_4 클래스
+# <a name="int_4-class"></a>int_4 클래스
 
-4 개 정수의 짧은 벡터를 나타냅니다.
+네 개의 정수에 해당 하는 짧은 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class int_4;
 ```
 
@@ -289,19 +289,19 @@ class int_4;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[int_4 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[int_4 생성자](#ctor)|오버로드됨. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -442,7 +442,7 @@ class int_4;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
@@ -455,20 +455,20 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[상수 크기](#int_4__size)||
+|[크기 상수](#int_4__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -599,21 +599,21 @@ class int_4;
 |int_4::zyx||
 |int_4::zyxw||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `int_4`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V2*<br/>
-2 요소를 초기화할 값입니다.
+요소 2를 초기화할 값입니다.
 
 *_V3*<br/>
-3 요소를 초기화할 값입니다.
+요소 3을 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="int_4__size"></a> 크기
+## <a name="int_4__size"></a>크기가
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

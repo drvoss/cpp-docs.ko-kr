@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180260"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126645"
 ---
-# <a name="int2-class"></a>int_2 클래스
+# <a name="int_2-class"></a>int_2 클래스
 
-두 정수의 짧은 벡터를 나타냅니다.
+두 정수의 short 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class int_2;
 ```
 
@@ -49,19 +49,19 @@ class int_2;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[int_2 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[int_2 생성자](#ctor)|오버로드됨. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_2::get_x||
 |int_2::get_xy||
@@ -78,7 +78,7 @@ class int_2;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_2::operator-||
 |int_2::operator--||
@@ -91,20 +91,20 @@ class int_2;
 |int_2::operator~||
 |int_2::operator++||
 |int_2::operator+=||
-|int_2::operator<\<=||
+|int_2:: operator <\<=||
 |int_2::operator=||
 |int_2::operator-=||
 |int_2::operator>>=||
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[상수 크기](#int_2__size)||
+|[크기 상수](#int_2__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |int_2::g||
 |int_2::gr||
@@ -115,21 +115,21 @@ class int_2;
 |int_2::y||
 |int_2::yx||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `int_2`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -170,23 +170,23 @@ explicit inline int_2(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="int_2__size"></a> 크기
+## <a name="int_2__size"></a>크기가
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

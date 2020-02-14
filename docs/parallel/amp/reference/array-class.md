@@ -22,25 +22,25 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efea8dabb69a48e69d68a86110fdf9bc7664948b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405510"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127114"
 ---
 # <a name="array-class"></a>array 클래스
 
-액셀러레이터로 데이터를 이동 하는 데 데이터 컨테이너를 나타냅니다.
+데이터를 액셀러레이터 키로 이동 하는 데 사용 되는 데이터 컨테이너를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template <typename value_type, int _Rank>
 friend class array;
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *value_type*<br/>
 데이터의 요소 형식입니다.
@@ -52,68 +52,68 @@ friend class array;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[배열 생성자](#ctor)|`array` 클래스의 새 인스턴스를 초기화합니다.|
-|[~ array 소멸자](#dtor)|제거 된 `array` 개체입니다.|
+|[array 생성자](#ctor)|`array` 클래스의 새 인스턴스를 초기화합니다.|
+|[~ array 소멸자](#dtor)|`array` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[copy_to](#copy_to)|배열의 내용을 다른 배열로 복사합니다.|
-|[data](#data)|배열의 원시 데이터에 대 한 포인터를 반환합니다.|
-|[get_accelerator_view](#get_accelerator_view)|반환 된 [accelerator_view](accelerator-view-class.md) 배열 할당 된 위치를 나타내는 개체입니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.|
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.|
-|[get_cpu_access_type](#get_cpu_access_type)|반환 된 [access_type](concurrency-namespace-enums-amp.md#access_type) 배열입니다. 이 메서드는 CPU 에서만 액세스할 수 있습니다.|
-|[get_extent](#get_extent)|반환 된 [익스텐트](extent-class.md) 개체 배열입니다.|
-|[reinterpret_as](#reinterpret_as)|모든 요소를 포함 하는 1 차원 배열을 반환 합니다 `array` 개체입니다.|
-|[section](#section)|하위 단원을 반환 합니다 `array` 에 지정 된 origin을 있고, 선택적으로 하는 개체에 지정된 된 범위입니다.|
-|[view_as](#view_as)|반환 된 [array_view](array-view-class.md) 에서 생성 된 개체는 `array` 개체.|
+|[copy_to](#copy_to)|배열의 내용을 다른 배열에 복사 합니다.|
+|[data](#data)|배열의 원시 데이터에 대 한 포인터를 반환 합니다.|
+|[get_accelerator_view](#get_accelerator_view)|배열이 할당 된 위치를 나타내는 [accelerator_view](accelerator-view-class.md) 개체를 반환 합니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.|
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|`array` 개체를 인스턴스화하기 위해 준비 생성자를 호출할 때 매개 변수로 전달 되는 두 번째 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다.|
+|[get_cpu_access_type](#get_cpu_access_type)|배열의 [access_type](concurrency-namespace-enums-amp.md#access_type) 을 반환 합니다. 이 메서드는 CPU 에서만 액세스할 수 있습니다.|
+|[get_extent](#get_extent)|배열의 [익스텐트](extent-class.md) 개체를 반환 합니다.|
+|[reinterpret_as](#reinterpret_as)|`array` 개체의 모든 요소를 포함 하는 1 차원 배열을 반환 합니다.|
+|[section](#section)|지정 된 원점에 있고, 선택적으로 지정 된 범위를 갖는 `array` 개체의 하위 섹션을 반환 합니다.|
+|[view_as](#view_as)|`array` 개체에서 생성 된 [array_view](array-view-class.md) 개체를 반환 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[operator std::vector&lt;value_type&gt;](#operator_vec)|사용 하 여 `copy(*this, vector)` 변환할 암시적으로 배열 된 std::[벡터](../../../standard-library/vector-class.md) 개체입니다.|
+|[operator std:: vector&lt;value_type&gt;](#operator_vec)|는 `copy(*this, vector)`를 사용 하 여 배열을 std::[vector](../../../standard-library/vector-class.md) 개체로 암시적으로 변환 합니다.|
 |[operator()](#operator_call)|매개 변수로 지정 된 요소 값을 반환 합니다.|
-|[operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|
-|[operator=](#operator_eq)|지정 된 내용을 복사 `array` 을 여기에 개체입니다.|
+|[operator\[\]](#operator_at)|지정 된 인덱스에 있는 요소를 반환 합니다.|
+|[operator=](#operator_eq)|지정 된 `array` 개체의 내용을이 개체에 복사 합니다.|
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[rank 상수](#rank)|배열의 차수를 저장합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[accelerator_view](#accelerator_view)|가져옵니다 합니다 [accelerator_view](accelerator-view-class.md) 배열 할당 된 위치를 나타내는 개체입니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.|
-|[associated_accelerator_view](#associated_accelerator_view)|두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.|
-|[cpu_access_type](#cpu_access_type)|가져옵니다 합니다 [access_type](concurrency-namespace-enums-amp.md#access_type) CPU 배열의 저장소에 액세스 하는 방법을 나타내는입니다.|
-|[extent](#extent)|배열의 모양을 정의 하는 범위를 가져옵니다.|
+|[accelerator_view](#accelerator_view)|배열이 할당 된 위치를 나타내는 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.|
+|[associated_accelerator_view](#associated_accelerator_view)|`array` 개체를 인스턴스화하기 위해 준비 생성자를 호출할 때 매개 변수로 전달 되는 두 번째 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다.|
+|[cpu_access_type](#cpu_access_type)|CPU가 배열의 저장소에 액세스할 수 있는 방법을 나타내는 [access_type](concurrency-namespace-enums-amp.md#access_type) 를 가져옵니다.|
+|[extent](#extent)|배열의 셰이프를 정의 하는 범위를 가져옵니다.|
 
 ## <a name="remarks"></a>설명
 
-형식 `array<T,N>` 나타냅니다 밀도가 높고 일반적인 (가변 아님) *N*-액셀러레이터 또는 CPU와 같은 특정 위치에 있는 차원 배열입니다. 배열에서 요소의 데이터 형식이 `T`, 대상 액셀러레이터와 호환 되는 형식 이어야 합니다. 하지만 순위 `N`, (의 배열을 정적으로 결정 되며 형식의 일부, 배열의 범위는 런타임에 의해 결정 되며 클래스를 사용 하 여 표현 됩니다 `extent<N>`합니다.
+`array<T,N>` 형식은 액셀러레이터 또는 CPU와 같은 특정 위치에 있는 조밀한 및 일반 (부정형이 아님) *N*차원 배열을 나타냅니다. 배열에 있는 요소의 데이터 형식이 `T`되어 대상 액셀러레이터와 호환 되는 형식 이어야 합니다. 배열의 순위 (`N`)는 정적으로 결정 되 고 형식의 일부 이지만 배열의 범위는 런타임에 의해 결정 되며 클래스 `extent<N>`를 사용 하 여 표현 됩니다.
 
-배열 차원 개수에 관계 없이 가질 수 있는 몇 가지 기능에 특수화 되기 `array` 차수가 1, 2 또는 3을 사용 하 여 개체입니다. 차원 인수를 생략 하면 기본값은 1입니다.
+일부 기능은 차수가 1, 2, 3 인 개체 `array`에 대해 특수화 되어 있지만 배열에는 임의 개수의 차원을 포함할 수 있습니다. 차원 인수를 생략 하는 경우 기본값은 1입니다.
 
-배열 데이터는 연속적으로 메모리에 배치 합니다. 최하위 차원에서 차이가 있는 요소는 메모리 내에서 인접해 있습니다.
+배열 데이터는 메모리에 인접 하 게 배치 됩니다. 최하위 차원에서 1과 다른 요소는 메모리에서 인접해 있습니다.
 
-배열은은 배열이 다른 배열에 복사 하면 전체 복사를 수행 되기 때문에 논리적으로 값 형식으로 간주 됩니다. 두 배열이 동일한 데이터를 가리키지 않습니다.
+배열은 다른 배열로 복사 될 때 전체 복사가 수행 되므로 논리적으로는 값 형식으로 간주 됩니다. 두 배열이 동일한 데이터를 가리키지 않습니다.
 
 `array<T,N>` 형식은 여러 시나리오에서 사용 됩니다.
 
-- 액셀러레이터 키에 대 한 계산에 사용할 수 있는 데이터 컨테이너입니다.
+- 액셀러레이터 키를 계산 하는 데 사용할 수 있는 데이터 컨테이너입니다.
 
-- (사용할 수 있는 다른 배열에서 복사) 호스트 CPU에 대 한 메모리를 보유 하는 데이터 컨테이너입니다.
+- 호스트 CPU (다른 배열 간에 복사 하는 데 사용 될 수 있음)에 메모리를 보관 하는 데이터 컨테이너로 사용 됩니다.
 
-- 로 호스트-장치 복사 시에서 빠른 매개자 역할을 하는 스테이징 개체입니다.
+- 호스트-장치 복사본에서 fast 중개자 역할을 하는 스테이징 개체입니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `array`
 
@@ -123,27 +123,27 @@ friend class array;
 
 **네임스페이스:** 동시성
 
-##  <a name="dtor"></a> ~array
+## <a name="dtor"></a>~ 배열
 
-제거 된 `array` 개체입니다.
+`array` 개체를 소멸 시킵니다.
 
-```
+```cpp
 ~array() restrict(cpu);
 ```
 
-##  <a name="accelerator_view"></a> accelerator_view
+## <a name="accelerator_view"></a>accelerator_view
 
-가져옵니다 합니다 [accelerator_view](accelerator-view-class.md) 배열 할당 된 위치를 나타내는 개체입니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.
+배열이 할당 된 위치를 나타내는 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.
 
-```
+```cpp
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;
 ```
 
-##  <a name="ctor"></a> 배열
+## <a name="ctor"></a>배열과
 
-새 인스턴스를 초기화 합니다 [array 클래스](array-class.md)합니다. 에 대 한 기본 생성자가 없는 `array<T,N>`합니다. 모든 생성자는 cpu 에서만 실행 됩니다. 이러한 Direct3D 대상에서는 실행할 수 없습니다.
+[Array 클래스](array-class.md)의 새 인스턴스를 초기화 합니다. `array<T,N>`에 대 한 기본 생성자가 없습니다. 모든 생성자는 CPU 에서만 실행 됩니다. Direct3D 대상에서 실행할 수 없습니다.
 
-```
+```cpp
 explicit array(
     const Concurrency::extent<_Rank>& _Extent) restrict(cpu);
 
@@ -401,60 +401,60 @@ array(array&& _Other) restrict(cpu);
 ### <a name="parameters"></a>매개 변수
 
 *_Associated_Av*<br/>
-Accelerator_view는 배열의 기본 대상 위치를 지정 합니다.
+배열의 기본 대상 위치를 지정 하는 accelerator_view입니다.
 
 *_Av*<br/>
-[accelerator_view](accelerator-view-class.md) 배열의 위치를 지정 하는 개체입니다.
+배열의 위치를 지정 하는 [accelerator_view](accelerator-view-class.md) 개체입니다.
 
 *_Cpu_access_type*<br/>
-원하는 [access_type](concurrency-namespace-enums-amp.md#access_type) CPU에서 배열에 대 한 합니다. 이 매개 변수는 기본값은 `access_type_auto` 은 cpu `access_type` 런타임에 결정 합니다. 실제 CPU `access_type` 배열을 사용 하 여 쿼리할 수 있습니다에 대 한는 `get_cpu_access_type` 메서드.
+CPU의 배열에 대해 원하는 [access_type](concurrency-namespace-enums-amp.md#access_type) 입니다. 이 매개 변수에는 런타임에 CPU `access_type` 결정을 `access_type_auto` 하는 기본값이 있습니다. `get_cpu_access_type` 메서드를 사용 하 여 배열에 대 한 실제 CPU `access_type` 쿼리할 수 있습니다.
 
 *_Extent*<br/>
-배열의 각 차원의 범위입니다.
+배열의 각 차원에 대 한 범위입니다.
 
 *_E0*<br/>
-이 섹션의 범위의 가장 중요 한 구성 요소입니다.
+이 섹션 범위에서 가장 중요 한 구성 요소입니다.
 
 *_E1*<br/>
-이 섹션의 범위는 다음-에-가장 중요 한 구성 요소입니다.
+이 섹션 범위에서 가장 중요 한 구성 요소입니다.
 
 *_E2*<br/>
-이 섹션의 범위의 가장 중요 하지 않은 구성 요소입니다.
+이 섹션 범위에서 가장 중요 하지 않은 구성 요소입니다.
 
 *_InputIterator*<br/>
-입력된 반복기의 형식입니다.
+입력 반복기의 형식입니다.
 
 *_Src*<br/>
-복사할 대상 개체입니다.
+복사할 개체입니다.
 
 *_Src_first*<br/>
-소스 컨테이너에는 시작 반복기입니다.
+소스 컨테이너에 대 한 시작 반복기입니다.
 
 *_Src_last*<br/>
-소스 컨테이너에 사용 되는 끝 반복기입니다.
+소스 컨테이너에 대 한 종료 반복기입니다.
 
 *_Other*<br/>
-다른 데이터 원본입니다.
+기타 데이터 원본.
 
 *_Rank*<br/>
 섹션의 순위입니다.
 
 *value_type*<br/>
-복사 된 요소의 데이터 형식입니다.
+복사 되는 요소의 데이터 형식입니다.
 
-##  <a name="associated_accelerator_view"></a> associated_accelerator_view
+## <a name="associated_accelerator_view"></a>associated_accelerator_view
 
-두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.
+`array` 개체를 인스턴스화하기 위해 준비 생성자를 호출할 때 매개 변수로 전달 되는 두 번째 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to
+## <a name="copy_to"></a>copy_to
 
-내용을 복사 합니다 `array` 간 `array`합니다.
+`array` 내용을 다른 `array`에 복사 합니다.
 
-```
+```cpp
 void copy_to(
     array<value_type, _Rank>& _Dest) const ;
 
@@ -465,89 +465,89 @@ void copy_to(
 ### <a name="parameters"></a>매개 변수
 
 *_Dest*<br/>
-합니다 [array_view](array-view-class.md) 복사할 개체입니다.
+복사할 대상 [array_view](array-view-class.md) 개체입니다.
 
-##  <a name="cpu_access_type"></a> cpu_access_type
+## <a name="cpu_access_type"></a>cpu_access_type
 
-이 배열에 허용 되는 CPU access_type을 가져옵니다.
+이 배열에 허용 되는 CPU access_type를 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 ```
 
-##  <a name="data"></a> 데이터
+## <a name="data"></a>데이터로
 
-원시 데이터에 대 한 포인터를 반환 합니다 `array`합니다.
+`array`의 원시 데이터에 대 한 포인터를 반환 합니다.
 
-```
+```cpp
 value_type* data() restrict(amp, cpu);
 
 const value_type* data() const restrict(amp, cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 배열의 원시 데이터에 대 한 포인터입니다.
 
-##  <a name="extent"></a> 범위
+## <a name="extent"></a>됨으로써
 
-가져옵니다 합니다 [익스텐트](extent-class.md) 의 모양을 정의 하는 개체는 `array`합니다.
+`array`셰이프를 정의 하는 [익스텐트](extent-class.md) 개체를 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
 ```
 
-##  <a name="get_accelerator_view"></a> get_accelerator_view
+## <a name="get_accelerator_view"></a>get_accelerator_view
 
-반환 합니다 [accelerator_view](accelerator-view-class.md) 위치를 나타내는 개체 위치를 `array` 개체가 할당 되 합니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.
+`array` 개체가 할당 된 위치를 나타내는 [accelerator_view](accelerator-view-class.md) 개체를 반환 합니다. 이 속성은 CPU 에서만 액세스할 수 있습니다.
 
-```
+```cpp
 Concurrency::accelerator_view get_accelerator_view() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합니다 `accelerator_view` 위치를 나타내는 개체 위치를 `array` 개체가 할당 되 합니다.
+`array` 개체가 할당 된 위치를 나타내는 `accelerator_view` 개체입니다.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
-두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.
+`array` 개체를 인스턴스화하기 위해 준비 생성자를 호출할 때 매개 변수로 전달 되는 두 번째 [accelerator_view](accelerator-view-class.md) 개체를 가져옵니다.
 
-```
+```cpp
 Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-두 번째 [accelerator_view](accelerator-view-class.md) 스테이징 생성자에 전달 된 개체입니다.
+준비 생성자에 전달 되는 두 번째 [accelerator_view](accelerator-view-class.md) 개체입니다.
 
-##  <a name="get_cpu_access_type"></a> get_cpu_access_type
+## <a name="get_cpu_access_type"></a>get_cpu_access_type
 
 이 배열에 허용 되는 CPU access_type을 반환 합니다.
 
-```
+```cpp
 access_type get_cpu_access_type() const restrict(cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-##  <a name="get_extent"></a> get_extent
+## <a name="get_extent"></a>get_extent
 
-반환 합니다 [익스텐트](extent-class.md) 의 개체는 `array`합니다.
+`array`의 [익스텐트](extent-class.md) 개체를 반환 합니다.
 
-```
+```cpp
 Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합니다 `extent` 의 개체는 `array`합니다.
+`extent`의 `array` 개체입니다.
 
-##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt;
+## <a name="operator_vec"></a>operator std:: vector&lt;value_type&gt;
 
-사용 하 여 `copy(*this, vector)` 배열 std:: vector 개체를 암시적으로 변환할 합니다.
+는 `copy(*this, vector)`를 사용 하 여 배열을 std:: vector 개체로 암시적으로 변환 합니다.
 
-```
+```cpp
 operator std::vector<value_type>() const restrict(cpu);
 ```
 
@@ -556,15 +556,15 @@ operator std::vector<value_type>() const restrict(cpu);
 *value_type*<br/>
 벡터 요소의 데이터 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-형식의 개체 `vector<T>` 배열에 포함 된 데이터의 복사본이 포함 된 합니다.
+배열에 포함 된 데이터의 복사본을 포함 하는 `vector<T>` 형식의 개체입니다.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>연산자 ()
 
 매개 변수로 지정 된 요소 값을 반환 합니다.
 
-```
+```cpp
 value_type& operator() (const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator() (const index<_Rank>& _Index) cons  t restrict(amp,cpu);
@@ -588,26 +588,26 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 요소의 위치입니다.
 
 *_I0*<br/>
-이 단원의 원본의의 가장 중요 한 구성 요소입니다.
+이 섹션의 원본에 대 한 가장 중요 한 구성 요소입니다.
 
 *_I1*<br/>
-이 섹션의 원점을 다음-에-가장 중요 한 구성 요소입니다.
+이 섹션의 원본에 대 한 다음으로 중요 한 구성 요소입니다.
 
 *_I2*<br/>
-이 단원의 원본의의 가장 중요 하지 않은 구성 요소입니다.
+이 섹션의 원점에서 가장 중요 하지 않은 구성 요소입니다.
 
 *_I*<br/>
 요소의 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수로 지정 된 요소 값입니다.
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a> operator[]
 
-지정된 된 인덱스에 있는 요소를 반환 합니다.
+지정 된 인덱스에 있는 요소를 반환 합니다.
 
-```
+```cpp
 value_type& operator[](const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator[]
@@ -626,15 +626,15 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 *_I*<br/>
 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 인덱스에 있는 요소입니다.
+지정 된 인덱스에 있는 요소입니다.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>연산자 =
 
-지정 된 내용을 복사 `array` 개체입니다.
+지정 된 `array` 개체의 내용을 복사 합니다.
 
-```
+```cpp
 array& operator= (const array& _Other) restrict(cpu);
 
 array& operator= (array&& _Other) restrict(cpu);
@@ -646,30 +646,30 @@ array& operator= (
 ### <a name="parameters"></a>매개 변수
 
 *_Other*<br/>
-`array` 복사할 개체입니다.
+복사할 `array` 개체입니다.
 
 *_Src*<br/>
-`array` 복사할 개체입니다.
+복사할 `array` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이에 대 한 참조 `array` 개체입니다.
+이 `array` 개체에 대 한 참조입니다.
 
-##  <a name="rank"></a> 순위
+## <a name="rank"></a>배열
 
-차수를 저장 합니다 `array`합니다.
+`array`순위를 저장 합니다.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="reinterpret_as"></a> reinterpret_as
+## <a name="reinterpret_as"></a>reinterpret_as
 
-필요에 따라 소스 배열과 다른 값 형식을 가질 수 있는 1 차원 배열을 통해 배열을 다시 해석 합니다.
+선택적으로 소스 배열과 다른 값 형식을 가질 수 있는 1 차원 array_view를 통해 배열을 다시 해석 합니다.
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 template <typename _Value_type2>
 array_view<_Value_type2,1> reinterpret_as() restrict(amp,cpu);
 
@@ -680,16 +680,16 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ### <a name="parameters"></a>매개 변수
 
 *_Value_type2*<br/>
-반환된 된 데이터의 데이터 형식입니다.
+반환 된 데이터의 데이터 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Array_view 또는 T에서 ElementType을 1로 감소 n에서 순위 재해석 요소 형식이 배열 기반으로 하는 const array_view 개체입니다.
+요소 형식이 T에서 ElementType으로 다시 해석 하 고 순위가 N에서 1로 감소 하는 배열에 기반 하는 array_view 또는 const array_view 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-때때로 다차원 배열을 소스 배열과 다른 값 형식을 사용 하 여 수 있는 선형의 1 차원 배열에는 것 처럼 보려는 것이 유용 합니다. 이렇게 하려면이 메서드를 사용할 수 있습니다.
-**주의** 안전 하지 않은 작업이 다른 값 형식을 사용 하 여 배열 개체를 재해석 합니다. 이 기능을 신중 하 게 사용 하는 것이 좋습니다.
+경우에 따라 다차원 배열을 소스 배열과는 다른 값 형식을 사용 하는 선형의 1 차원 배열로 보는 것이 편리 합니다. 이 메서드를 사용 하 여이를 달성할 수 있습니다.
+**주의** 다른 값 형식을 사용 하 여 배열 개체를 reinterpeting 안전 하지 않은 작업입니다. 이 기능을 신중 하 게 사용 하는 것이 좋습니다.
 
 코드 예제는 다음과 같습니다.
 
@@ -702,11 +702,11 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```
 
-##  <a name="section"></a> 섹션
+## <a name="section"></a>여기서
 
-하위 단원을 반환 합니다 `array` 에 지정 된 origin을 있고, 선택적으로 하는 개체에 지정된 된 범위입니다.
+지정 된 원점에 있고, 선택적으로 지정 된 범위를 갖는 `array` 개체의 하위 섹션을 반환 합니다.
 
-```
+```cpp
 array_view<value_type,_Rank> section(
     const Concurrency::index<_Rank>& _Section_origin,
     const Concurrency::extent<_Rank>& _Section_extent) restrict(amp,cpu);
@@ -767,50 +767,50 @@ array_view<const value_type,3> section(
 ### <a name="parameters"></a>매개 변수
 
 *_E0*<br/>
-이 섹션의 범위의 가장 중요 한 구성 요소입니다.
+이 섹션 범위에서 가장 중요 한 구성 요소입니다.
 
 *_E1*<br/>
-이 섹션의 범위는 다음-에-가장 중요 한 구성 요소입니다.
+이 섹션 범위에서 가장 중요 한 구성 요소입니다.
 
 *_E2*<br/>
-이 섹션의 범위의 가장 중요 하지 않은 구성 요소입니다.
+이 섹션 범위에서 가장 중요 하지 않은 구성 요소입니다.
 
 *_Ext*<br/>
-합니다 [익스텐트](extent-class.md) 섹션의 범위를 지정 하는 개체입니다. 원래 값은 0입니다.
+섹션의 범위를 지정 하는 [익스텐트](extent-class.md) 개체입니다. 원점은 0입니다.
 
 *_Idx*<br/>
-합니다 [인덱스](index-class.md) 출처의 위치를 지정 하는 개체입니다. 하위 섹션에는 범위의 나머지입니다.
+원본 위치를 지정 하는 [index](index-class.md) 개체입니다. 하위 섹션은 범위의 나머지 부분입니다.
 
 *_I0*<br/>
-이 단원의 원본의의 가장 중요 한 구성 요소입니다.
+이 섹션의 원본에 대 한 가장 중요 한 구성 요소입니다.
 
 *_I1*<br/>
-이 섹션의 원점을 다음-에-가장 중요 한 구성 요소입니다.
+이 섹션의 원본에 대 한 다음으로 중요 한 구성 요소입니다.
 
 *_I2*<br/>
-이 단원의 원본의의 가장 중요 하지 않은 구성 요소입니다.
+이 섹션의 원점에서 가장 중요 하지 않은 구성 요소입니다.
 
 *_Rank*<br/>
 섹션의 순위입니다.
 
 *_Section_extent*<br/>
-합니다 [익스텐트](extent-class.md) 섹션의 범위를 지정 하는 개체입니다.
+섹션의 범위를 지정 하는 [익스텐트](extent-class.md) 개체입니다.
 
 *_Section_origin*<br/>
-합니다 [인덱스](index-class.md) 출처의 위치를 지정 하는 개체입니다.
+원본 위치를 지정 하는 [index](index-class.md) 개체입니다.
 
 *value_type*<br/>
-복사 된 요소의 데이터 형식입니다.
+복사 되는 요소의 데이터 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-하위 단원을 반환 합니다 `array` 에 지정 된 origin을 있고, 선택적으로 하는 개체에 지정된 된 범위입니다. 개체만 합니다 `index` 지정 된 경우 요소에 대 한 인덱스 보다 큰 인덱스가 있는 관련된 된 모눈의 모든 요소를 포함 하는 하위 섹션을 `index` 개체.
+지정 된 원점에 있고, 선택적으로 지정 된 범위를 갖는 `array` 개체의 하위 섹션을 반환 합니다. `index` 개체만 지정 된 경우 하위 섹션에는 연결 된 그리드에서 `index` 개체의 요소 인덱스 보다 큰 인덱스를 포함 하는 모든 요소가 포함 됩니다.
 
-##  <a name="view_as"></a> view_as
+## <a name="view_as"></a>view_as
 
-이 배열을 재해석를 [array_view](array-view-class.md) 다른 순위의 합니다.
+이 배열을 다른 순위 [array_view](array-view-class.md) 으로 다시 해석 합니다.
 
-```
+```cpp
 template <int _New_rank>
 array_view<value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) restrict(amp,cpu);
@@ -823,18 +823,18 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="parameters"></a>매개 변수
 
 *_New_rank*<br/>
-순위를 `extent` 개체를 매개 변수로 전달 합니다.
+매개 변수로 전달 되는 `extent` 개체의 순위입니다.
 
 *_View_extent*<br/>
-새 생성 하는 데 사용 되는 정도 [array_view](array-view-class.md) 개체입니다.
+새 [array_view](array-view-class.md) 개체를 생성 하는 데 사용 되는 범위입니다.
 
 *value_type*<br/>
-두 원본에 있는 요소의 데이터 형식 `array` 개체 및 반환 된 `array_view` 개체입니다.
+원본 `array` 개체와 반환 된 `array_view` 개체 모두에 있는 요소의 데이터 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합니다 [array_view](array-view-class.md) 생성 된 개체입니다.
+구성 된 [array_view](array-view-class.md) 개체입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

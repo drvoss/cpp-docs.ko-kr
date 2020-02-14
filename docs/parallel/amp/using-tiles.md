@@ -2,12 +2,12 @@
 title: 타일 사용
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518259"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126268"
 ---
 # <a name="using-tiles"></a>타일 사용
 
@@ -15,7 +15,7 @@ ms.locfileid: "76518259"
 
 - 변수를 `tile_static` 합니다. 바둑판식 배열의 주요 이점은 `tile_static` 액세스의 성능 향상입니다. `tile_static` 메모리의 데이터에 대 한 액세스는 전역 공간의 데이터에 액세스 하는 것 보다 훨씬 빠를 수 있습니다 (`array` 또는 `array_view` 개체). 각 타일에 대해 `tile_static` 변수의 인스턴스가 만들어지고, 타일의 모든 스레드는 변수에 액세스할 수 있습니다. 일반적인 바둑판식 알고리즘에서 데이터는 전역 메모리에서 한 번 `tile_static` 메모리에 복사 된 다음 `tile_static` 메모리에서 여러 번 액세스 됩니다.
 
-- [tile_barrier:: Wait 메서드](reference/tile-barrier-class.md#wait) `tile_barrier::wait`에 대 한 호출은 동일한 타일의 모든 스레드가 `tile_barrier::wait`호출에 도달할 때까지 현재 스레드의 실행을 일시 중단 합니다. 스레드가 실행 되는 순서를 보장할 수 없습니다. 모든 스레드가 호출에 도달할 때까지 `tile_barrier::wait`에 대 한 호출을 넘어 타일의 스레드가 실행 되지 않습니다. 즉, `tile_barrier::wait` 방법을 사용 하면 스레드 단위로 작업을 수행 하는 것이 아니라 타일 단위로 작업을 수행할 수 있습니다. 일반적인 바둑판식 배열 알고리즘에는 전체 타일에 대 한 `tile_static` 메모리를 초기화 하 고 `tile_barrer::wait`를 호출 하는 코드가 있습니다. `tile_barrier::wait` 뒤에 나오는 코드는 모든 `tile_static` 값에 액세스 해야 하는 계산을 포함 합니다.
+- [tile_barrier:: Wait 메서드](reference/tile-barrier-class.md#wait) `tile_barrier::wait`에 대 한 호출은 동일한 타일의 모든 스레드가 `tile_barrier::wait`호출에 도달할 때까지 현재 스레드의 실행을 일시 중단 합니다. 스레드가 실행 되는 순서를 보장할 수 없습니다. 모든 스레드가 호출에 도달할 때까지 `tile_barrier::wait`에 대 한 호출을 넘어 타일의 스레드가 실행 되지 않습니다. 즉, `tile_barrier::wait` 방법을 사용 하면 스레드 단위로 작업을 수행 하는 것이 아니라 타일 단위로 작업을 수행할 수 있습니다. 일반적인 바둑판식 배열 알고리즘에는 전체 타일에 대 한 `tile_static` 메모리를 초기화 하 고 `tile_barrier::wait`를 호출 하는 코드가 있습니다. `tile_barrier::wait` 뒤에 나오는 코드는 모든 `tile_static` 값에 액세스 해야 하는 계산을 포함 합니다.
 
 - 로컬 및 전역 인덱싱. 전체 `array_view` 또는 `array` 개체를 기준으로 하는 스레드 인덱스와 타일을 기준으로 하는 인덱스에 대 한 액세스 권한이 있습니다. 로컬 인덱스를 사용 하면 코드를 더 쉽게 읽고 디버그할 수 있습니다. 일반적으로 로컬 인덱싱을 사용 하 여 `tile_static` 변수에 액세스 하 고 전역 인덱싱을 사용 하 여 `array` 및 `array_view` 변수에 액세스 합니다.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C++ AMP(C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static 키워드](../../cpp/tile-static-keyword.md)

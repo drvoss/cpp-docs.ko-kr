@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45df744a9850510006e4bf887c8ed61b000a8e5c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301866"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139988"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 구조체
 
@@ -21,7 +21,7 @@ ms.locfileid: "62301866"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 struct IUMSScheduler : public IScheduler;
 ```
 
@@ -29,19 +29,19 @@ struct IUMSScheduler : public IScheduler;
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|할당을 `IUMSCompletionList` UMS 스레드 스케줄러에 대 한 인터페이스입니다.|
+|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|UMS 스레드 스케줄러에 `IUMSCompletionList` 인터페이스를 할당 합니다.|
 
 ## <a name="remarks"></a>설명
 
-구현을 제공 해야 리소스 관리자와 통신 하는 사용자 지정 스케줄러를 구현 하는 경우 대신 일반 Win32 스레드 스케줄러에 전달 될 UMS 스레드는 `IUMSScheduler` 인터페이스입니다. Scheduler 정책 키에 대 한 정책 값을 설정 해야 뿐만 `SchedulerKind` 되도록 `UmsThreadDefault`합니다. 정책을 UMS 스레드를 지정 하는 경우는 `IScheduler` 매개 변수로 전달 되는 인터페이스를 [iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler) 메서드 해야는 `IUMSScheduler` 인터페이스.
+리소스 관리자와 통신 하는 사용자 지정 스케줄러를 구현 하는 경우, 일반 Win32 스레드 대신에 UMS 스레드를 스케줄러에 전달 하려면 `IUMSScheduler` 인터페이스의 구현을 제공 해야 합니다. 또한 `UmsThreadDefault``SchedulerKind` 스케줄러 정책 키에 대 한 정책 값을 설정 해야 합니다. 정책에서 UMS 스레드를 지정 하는 경우 [Iresourcemanager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) 메서드에 매개 변수로 전달 되는 `IScheduler` 인터페이스는 `IUMSScheduler` 인터페이스 여야 합니다.
 
-Resource Manager는 UMS 기능을 운영 체제에만 UMS 스레드를 전달할 수 있습니다. 64 비트 운영 체제 Windows 7 이상 버전을 사용 하 여 UMS 스레드를 지원합니다. 스케줄러 정책을 사용 하 여 만든 경우 합니다 `SchedulerKind` 키 값으로 설정 `UmsThreadDefault` 기본 플랫폼 UMS의 값을 지원 하지 않습니다는 `SchedulerKind` 해당 정책에는 키 값으로 변경 됩니다 `ThreadScheduler`합니다. 항상 다시이 정책 값 하기 전에 읽어야 UMS 스레드를 수신 하도록 합니다.
+리소스 관리자은 ums 기능이 있는 운영 체제에만 UMS 스레드를 전달할 수 있습니다. Windows 7 이상 버전의 64 비트 운영 체제는 UMS 스레드를 지원 합니다. `SchedulerKind` 키가 `UmsThreadDefault` 값으로 설정 된 스케줄러 정책을 만들고 기본 플랫폼이 UMS를 지원 하지 않는 경우 해당 정책의 `SchedulerKind` 키 값이 `ThreadScheduler`값으로 변경 됩니다. UMS 스레드를 수신 하기 전에 항상이 정책 값을 읽어야 합니다.
 
-`IUMSScheduler` 인터페이스 양방향 스케줄러와 리소스 관리자 간의 통신 채널의 한쪽 끝입니다. 다른 쪽 end에 표시 됩니다는 `IResourceManager` 및 `ISchedulerProxy` Resource Manager에서 구현 되는 인터페이스입니다.
+`IUMSScheduler` 인터페이스는 스케줄러와 리소스 관리자 사이에서 양방향 통신 채널의 한쪽 끝입니다. 다른 end는 리소스 관리자에서 구현 하는 `IResourceManager` 및 `ISchedulerProxy` 인터페이스로 표시 됩니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [IScheduler](ischeduler-structure.md)
 
@@ -49,28 +49,28 @@ Resource Manager는 UMS 기능을 운영 체제에만 UMS 스레드를 전달할
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** concrtrm.h
+**헤더:** concrtrm. h
 
 **네임스페이스:** 동시성
 
-##  <a name="setcompletionlist"></a>  Iumsscheduler:: Setcompletionlist 메서드
+## <a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList 메서드
 
-할당을 `IUMSCompletionList` UMS 스레드 스케줄러에 대 한 인터페이스입니다.
+UMS 스레드 스케줄러에 `IUMSCompletionList` 인터페이스를 할당 합니다.
 
-```
+```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pCompletionList*<br/>
-스케줄러에 대 한 완성 목록 인터페이스입니다. 스케줄러 당 하나의 목록이 있습니다.
+*pCompletionList 목록*<br/>
+스케줄러에 대 한 완성 목록 인터페이스입니다. 스케줄러 당 단일 목록이 있습니다.
 
 ### <a name="remarks"></a>설명
 
-Resource Manager는 UMS 스레드 스케줄러 리소스 할당을 초기 요청한 후가 지정 하는 스케줄러에서이 메서드를 호출 합니다. 스케줄러를 사용할 수는 `IUMSCompletionList` UMS 스레드 프록시 차단이 해제 시기를 결정 하는 인터페이스입니다. UMS 스케줄러에 할당할 가상 프로세서 루트에서 실행 되는 스레드 프록시에서이 인터페이스에 액세스 하는 것만 유효 합니다.
+리소스 관리자는 스케줄러가 리소스의 초기 할당을 요청한 후에 UMS 스레드에 대해이 메서드를 호출 합니다. Scheduler는 `IUMSCompletionList` 인터페이스를 사용 하 여 UMS 스레드 프록시의 차단이 해제 된 시기를 확인할 수 있습니다. 이 인터페이스는 UMS 스케줄러에 할당 된 가상 프로세서 루트에서 실행 되는 스레드 프록시에서이 인터페이스에 액세스 하는 경우에만 유효 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임스페이스](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
