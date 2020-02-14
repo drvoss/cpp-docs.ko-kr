@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396160"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127727"
 ---
-# <a name="uint3-class"></a>uint_3 클래스
+# <a name="uint_3-class"></a>uint_3 클래스
 
-세 개의 부호 없는 정수 짧은 벡터를 나타냅니다.
+부호 없는 3 개의 정수에 대 한 짧은 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class uint_3;
 ```
 
@@ -93,19 +93,19 @@ class uint_3;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[uint_3 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[uint_3 생성자](#ctor)|오버로드됨. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
@@ -146,7 +146,7 @@ class uint_3;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |uint_3::operator--||
 |uint_3::operator%=||
@@ -158,20 +158,20 @@ class uint_3;
 |uint_3::operator~||
 |uint_3::operator++||
 |uint_3::operator+=||
-|uint_3::operator<\<=||
+|uint_3:: operator <\<=||
 |uint_3::operator=||
 |uint_3::operator-=||
 |uint_3::operator>>=||
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[상수 크기](#uint_3__size)||
+|[크기 상수](#uint_3__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |uint_3::b||
 |uint_3::bg||
@@ -204,21 +204,21 @@ class uint_3;
 |uint_3::zy||
 |uint_3::zyx||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `uint_3`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> uint_3
+## <a name="ctor"></a>uint_3
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 uint_3() restrict(amp,
     cpu);
 
@@ -260,26 +260,26 @@ explicit inline uint_3(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V2*<br/>
-2 요소를 초기화할 값입니다.
+요소 2를 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="uint_3__size"></a> 크기
+## <a name="uint_3__size"></a>크기가
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

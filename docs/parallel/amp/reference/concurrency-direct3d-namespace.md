@@ -10,66 +10,66 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405484"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127035"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 네임스페이스
 
-`direct3d` 네임 스페이스는 D3D 상호 운용성을 지 원하는 함수를 제공 합니다. 이 AMP 코드에서 계산을 위해 D3D 리소스를 원활 하 게 사용 하도록 설정 뿐만 아니라 D3D 코드의 중복 된 임시 사본을 만들지 않고도 AMP에서 만든 리소스의 사용을 허용 합니다. 사용 하 여 DirectX 응용 프로그램의 계산 집중적인 부분을 점차적으로 가속화할 수 있습니다 C++ AMP 및 AMP 계산에서 생성 된 데이터에 D3D API를 사용 합니다.
+`direct3d` 네임 스페이스는 D3D 상호 운용성을 지 원하는 함수를 제공 합니다. 이를 통해 AMP 코드에서 계산을 위해 D3D 리소스를 사용할 수 있습니다. 또한 중복 된 중간 복사본을 만들지 않고 D3D 코드의 AMP에서 만든 리소스를 사용할 수 있습니다. Amp를 사용 C++ 하 여 DirectX 응용 프로그램의 계산 집약적 섹션을 점차적으로 가속화 하 고 amp 계산에서 생성 된 데이터에 대해 D3D API를 사용할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 namespace direct3d;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="classes"></a>클래스
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[scoped_d3d_access_lock 클래스](scoped-d3d-access-lock-class.md)|D3D 액세스 잠금에 대 한 RAII 래퍼는 `accelerator_view` 개체입니다.|
+|[scoped_d3d_access_lock 클래스](scoped-d3d-access-lock-class.md)|`accelerator_view` 개체에 대 한 D3D 액세스 잠금에 대 한 RAII 래퍼입니다.|
 
-### <a name="structures"></a>구조체
+### <a name="structures"></a>구조
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[adopt_d3d_access_lock_t 구조체](adopt-d3d-access-lock-t-structure.md)|태그 형식은 나타내는 D3D 액세스 잠금을 채택 되지 않고 됩니다 획득 합니다.|
+|[adopt_d3d_access_lock_t 구조체](adopt-d3d-access-lock-t-structure.md)|D3D 액세스 잠금을 획득 하지 않고 채택 해야 함을 나타내는 태그 유형입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|인수의 절대값을 반환 합니다.|
-|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|오버로드됨. 지정 된 _Min 및 _Max 범위로 _X 범위로 제한|
-|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|_X에서 설정 비트의 개수|
-|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|만듭니다는 [accelerator_view 클래스](accelerator-view-class.md) Direct3D 장치 인터페이스에 대 한 포인터에서|
-|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Accelerator_view와 공유 되는 리소스에서 D3D 작업을 안전 하 게 수행할 목적으로 accelerator_view에 대 한 잠금을 획득 합니다.|
-|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|차단 하지 않고 accelerator_view에 대 한 D3D 액세스 잠금을 획득 하려고 시도 합니다.|
-|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|제공된 된 accelerator_view에 대 한 D3D 액세스 잠금 릴리스 합니다.|
-|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|가장 높은 순위의 비트에서 시작 아래쪽으로 작업 하 여 _x에서 첫 번째 설정 비트의 위치를 가져옵니다.|
-|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|가장 낮은 순위의 비트에서 시작 위쪽으로 작업 하 여 _x에서 첫 번째 설정 비트의 위치를 가져옵니다.|
-|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|배열 내부 D3D 버퍼 인터페이스를 가져옵니다.|
-|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|큰 값을 반환 하는 두 값을 비교 합니다.|
-|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|더 작은 값을 반환 하는 두 값을 비교 합니다.|
-|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|지정된 된 accelerator_view에 대 한 제한 시간이 비활성화 되었는지 하는 경우를 나타내는 부울 플래그를 반환 합니다.|
-|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|오버로드됨. 세 인수로 산술 곱하기/더하기 작업 수행: _X \* _Y + _Z|
+|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|인수의 절대 값을 반환 합니다.|
+|[클램프](concurrency-direct3d-namespace-functions-amp.md#clamp)|오버로드되었습니다. 지정 된 _Min 및 _Max 범위에 _X 범위로 제한|
+|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|_X에서 설정 비트 수를 계산 합니다.|
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Direct3D 장치 인터페이스에 대 한 포인터에서 [Accelerator_view 클래스](accelerator-view-class.md) 를 만듭니다.|
+|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Accelerator_view와 공유 되는 리소스에서 D3D 작업을 안전 하 게 수행 하기 위해 accelerator_view에 대 한 잠금을 획득 합니다.|
+|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|차단을 사용 하지 않고 accelerator_view에 대 한 D3D 액세스 잠금을 가져오려고 시도 합니다.|
+|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|지정 된 accelerator_view에 대 한 D3D 액세스 잠금을 해제 합니다.|
+|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|_X에서 첫 번째 설정 비트의 위치를 가져옵니다. 가장 높은 순서 비트부터 아래로 작동 합니다.|
+|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|가장 낮은 순서 비트에서 시작 하 여 위쪽으로 작업 하는 _X에서 첫 번째 설정 비트의 위치를 가져옵니다.|
+|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|배열을 기반으로 하는 D3D 버퍼 인터페이스를 가져옵니다.|
+|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|두 값을 비교 하 여 더 큰 값을 반환 합니다.|
+|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|두 값을 비교 하 여 더 작은 값을 반환 합니다.|
+|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|지정 된 accelerator_view에 대 한 제한 시간을 사용할 수 없는지 여부를 나타내는 부울 플래그를 반환 합니다.|
+|[mad.exe](concurrency-direct3d-namespace-functions-amp.md#mad)|오버로드되었습니다. 세 개의 인수 (_X \* _Y +에 대해 산술 곱하기/추가 연산을 수행 _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|D3D 버퍼 인터페이스 포인터에서 배열을 만듭니다.|
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Perlin 노이즈 알고리즘을 사용 하 여 임의 값을 생성|
-|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|_X 각도에서 라디안으로 변환|
-|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|인수의 역 신속 하 고 대략적인 수를 계산합니다.|
-|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|_X의 비트 순서를 반대로 바꿉니다.|
-|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|0 ~ 1의 범위 내에서 _X 범위로 제한|
-|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|오버로드됨. 인수의 부호를 반환합니다.|
-|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|_X가 [_Min, _Max] 범위에 있으면 0과 1 사이의 부드러운 Hermite 보간을 반환 합니다.|
-|[step](concurrency-direct3d-namespace-functions-amp.md#step)|더 큰 값에 기반한 0 또는 1을 반환 하는 두 값을 비교|
-|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|큰 값을 반환 하는 두 개의 부호 없는 값을 비교 합니다.|
-|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|더 작은 값을 반환 하는 두 개의 부호 없는 값을 비교 합니다.|
+|[노이즈](concurrency-direct3d-namespace-functions-amp.md#noise)|Perlin 노이즈 알고리즘을 사용 하 여 임의의 값을 생성 합니다.|
+|[각도](concurrency-direct3d-namespace-functions-amp.md#radians)|도에서 라디안으로 _X 변환 합니다.|
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|인수의 fast와 근사치를 계산 합니다.|
+|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|_X 비트의 순서를 반대로 바꿉니다.|
+|[용량](concurrency-direct3d-namespace-functions-amp.md#saturate)|범위로 제한 _X 범위는 0에서 1 사이입니다.|
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|오버로드되었습니다. 인수의 부호를 반환 합니다.|
+|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|_X [_Min, _Max] 범위에 있는 경우 0과 1 사이의 부드러운 Hermite 보간을 반환 합니다.|
+|[이동](concurrency-direct3d-namespace-functions-amp.md#step)|두 값을 비교 하 여 더 큰 값을 기준으로 0 또는 1을 반환 합니다.|
+|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|부호 없는 두 값을 비교 하 여 더 큰 값을 반환 합니다.|
+|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|부호 없는 두 값을 비교 하 여 더 작은 값을 반환 합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -77,6 +77,6 @@ namespace direct3d;
 
 **네임스페이스:** 동시성
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

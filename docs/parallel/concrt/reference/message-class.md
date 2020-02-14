@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343850"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139536"
 ---
 # <a name="message-class"></a>message 클래스
 
@@ -25,50 +25,50 @@ ms.locfileid: "64343850"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-메시지 페이로드의의 데이터 형식입니다.
+메시지 내 페이로드의 데이터 형식입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|`type`|에 대 한 형식 별칭을 `T`입니다.|
+|`type`|`T`에 대 한 형식 별칭입니다.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[message](#ctor)|오버로드됨. `message` 개체를 생성합니다.|
-|[~ message 소멸자](#dtor)|제거 된 `message` 개체입니다.|
+|[message](#ctor)|오버로드되었습니다. `message` 개체를 생성합니다.|
+|[~ 메시지 소멸자](#dtor)|`message` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[add_ref](#add_ref)|참조 횟수에 추가 된 `message` 개체입니다. 메시지 수명 결정 하기 위해 참조 가산을 해야 하는 메시지 블록에 사용 됩니다.|
-|[msg_id](#msg_id)|ID를 반환 합니다 `message` 개체입니다.|
-|[remove_ref](#remove_ref)|에 대 한 참조 개수에서 뺍니다는 `message` 개체입니다. 메시지 수명 결정 하기 위해 참조 가산을 해야 하는 메시지 블록에 사용 됩니다.|
+|[add_ref](#add_ref)|`message` 개체에 대 한 참조 횟수에를 추가 합니다. 메시지 수명을 확인 하기 위해 참조 계산이 필요한 메시지 블록에 사용 됩니다.|
+|[msg_id](#msg_id)|`message` 개체의 ID를 반환 합니다.|
+|[remove_ref](#remove_ref)|`message` 개체에 대 한 참조 횟수에서 뺍니다. 메시지 수명을 확인 하기 위해 참조 계산이 필요한 메시지 블록에 사용 됩니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[payload](#payload)|페이로드를 `message` 개체입니다.|
+|[payload](#payload)|`message` 개체의 페이로드입니다.|
 
 ## <a name="remarks"></a>설명
 
-자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.
+자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)을 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `message`
 
@@ -78,23 +78,23 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 **네임스페이스:** 동시성
 
-##  <a name="add_ref"></a> add_ref
+## <a name="add_ref"></a>add_ref
 
-참조 횟수에 추가 된 `message` 개체입니다. 메시지 수명 결정 하기 위해 참조 가산을 해야 하는 메시지 블록에 사용 됩니다.
+`message` 개체에 대 한 참조 횟수에를 추가 합니다. 메시지 수명을 확인 하기 위해 참조 계산이 필요한 메시지 블록에 사용 됩니다.
 
-```
+```cpp
 long add_ref();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 참조 횟수의 새 값입니다.
 
-##  <a name="ctor"></a> 메시지
+## <a name="ctor"></a>메시지
 
 `message` 개체를 생성합니다.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -118,52 +118,52 @@ message(
 이 메시지의 고유 ID입니다.
 
 *_Msg*<br/>
-참조 또는에 대 한 포인터를 `message` 개체입니다.
+`message` 개체에 대 한 참조 또는 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-에 대 한 포인터를 사용 하는 생성자는 `message` 인수로 throw 개체는 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_Msg` 는 `NULL`합니다.
+`message` 개체에 대 한 포인터를 인수로 사용 하는 생성자는 매개 변수 `_Msg` `NULL`경우 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외를 throw 합니다.
 
-##  <a name="dtor"></a> ~message
+## <a name="dtor"></a>~ 메시지
 
-제거 된 `message` 개체입니다.
+`message` 개체를 소멸 시킵니다.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-ID를 반환 합니다 `message` 개체입니다.
+`message` 개체의 ID를 반환 합니다.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합니다 `runtime_object_identity` 의 `message` 개체입니다.
+`runtime_object_identity` 개체의 `message`입니다.
 
-##  <a name="payload"></a> 페이로드
+## <a name="payload"></a>페이로드와
 
-페이로드를 `message` 개체입니다.
+`message` 개체의 페이로드입니다.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref
+## <a name="remove_ref"></a>remove_ref
 
-에 대 한 참조 개수에서 뺍니다는 `message` 개체입니다. 메시지 수명 결정 하기 위해 참조 가산을 해야 하는 메시지 블록에 사용 됩니다.
+`message` 개체에 대 한 참조 횟수에서 뺍니다. 메시지 수명을 확인 하기 위해 참조 계산이 필요한 메시지 블록에 사용 됩니다.
 
-```
+```cpp
 long remove_ref();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 참조 횟수의 새 값입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임스페이스](concurrency-namespace.md)

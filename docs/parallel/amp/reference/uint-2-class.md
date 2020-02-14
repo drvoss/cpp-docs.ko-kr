@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405536"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126212"
 ---
-# <a name="uint2-class"></a>uint_2 클래스
+# <a name="uint_2-class"></a>uint_2 클래스
 
-두 개의 부호 없는 정수 짧은 벡터를 나타냅니다.
+부호 없는 두 정수의 short 벡터를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class uint_2;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[uint_2 생성자](#ctor)|오버로드됨. 기본 생성자가 0 인 모든 요소를 초기화 합니다.|
+|[uint_2 생성자](#ctor)|오버로드되었습니다. 기본 생성자는 0으로 모든 요소를 초기화 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
@@ -78,7 +78,7 @@ class uint_2;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |uint_2::operator--||
 |uint_2::operator%=||
@@ -90,20 +90,20 @@ class uint_2;
 |uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
-|uint_2::operator<\<=||
+|uint_2:: operator <\<=||
 |uint_2::operator=||
 |uint_2::operator-=||
 |uint_2::operator>>=||
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[상수 크기](#uint_2__size)||
+|[크기 상수](#uint_2__size)||
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |uint_2::g||
 |uint_2::gr||
@@ -114,21 +114,21 @@ class uint_2;
 |uint_2::y||
 |uint_2::yx||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `uint_2`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a>uint_2
 
-기본 생성자가 0 인 모든 요소를 초기화 합니다.
+기본 생성자는 0으로 모든 요소를 초기화 합니다.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>매개 변수
 
 *_V0*<br/>
-요소 0 초기화 값입니다.
+요소 0을 초기화할 값입니다.
 
 *_V1*<br/>
-1 요소를 초기화할 값입니다.
+요소 1을 초기화할 값입니다.
 
 *_V*<br/>
 초기화에 대 한 값입니다.
 
 *_Other*<br/>
-초기화 하는 데 사용 하는 개체입니다.
+을 초기화 하는 데 사용 되는 개체입니다.
 
-##  <a name="uint_2__size"></a> 크기
+## <a name="uint_2__size"></a>크기가
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

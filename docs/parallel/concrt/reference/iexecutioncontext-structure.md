@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-ms.openlocfilehash: 8c49df5a8c7f214b574b4f6118d182b63fec5dca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d65a5e16121d39233c3ceb801933aa1f5a5f8e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262465"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138910"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 구조체
 
@@ -25,117 +25,117 @@ ms.locfileid: "62262465"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 struct IExecutionContext;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[IExecutionContext::Dispatch](#dispatch)|스레드 프록시는 특정 실행 컨텍스트를 실행 되기 시작 하면 호출 되는 메서드. 이 스케줄러에 대 한 주 작업자 루틴인 이어야 합니다.|
-|[IExecutionContext::GetId](#getid)|실행 컨텍스트에 대 한 고유 식별자를 반환합니다.|
-|[IExecutionContext::GetProxy](#getproxy)|이 컨텍스트에서 실행 되는 스레드 프록시 인터페이스를 반환 합니다.|
-|[IExecutionContext::GetScheduler](#getscheduler)|스케줄러에 인터페이스를 반환이 실행 컨텍스트에 속합니다.|
-|[IExecutionContext::SetProxy](#setproxy)|이 실행 컨텍스트를 사용 하 여 스레드 프록시를 연결합니다. 관련된 스레드 프록시 컨텍스트의 실행을 시작 하기 전에이 메서드를 오른쪽으로 호출 `Dispatch` 메서드.|
+|[IExecutionContext::D ispatch](#dispatch)|스레드 프록시가 특정 실행 컨텍스트를 실행 하기 시작할 때 호출 되는 메서드입니다. 스케줄러에 대 한 기본 작업자 루틴이 되어야 합니다.|
+|[IExecutionContext:: GetId](#getid)|실행 컨텍스트에 대 한 고유 식별자를 반환 합니다.|
+|[IExecutionContext:: GetProxy](#getproxy)|이 컨텍스트를 실행 하는 스레드 프록시에 대 한 인터페이스를 반환 합니다.|
+|[IExecutionContext:: GetScheduler](#getscheduler)|이 실행 컨텍스트가 속한 스케줄러에 대 한 인터페이스를 반환 합니다.|
+|[IExecutionContext:: SetProxy](#setproxy)|스레드 프록시를이 실행 컨텍스트에 연결 합니다. 연결 된 스레드 프록시는 컨텍스트의 `Dispatch` 메서드 실행을 시작 하기 바로 전에이 메서드를 호출 합니다.|
 
 ## <a name="remarks"></a>설명
 
-동시성 런타임의 리소스 관리자와 인터페이스 하는 사용자 지정 스케줄러를 구현 하는 경우 구현 해야 합니다는 `IExecutionContext` 인터페이스입니다. 리소스 관리자가 만든 스레드를 실행 하 여 스케줄러를 대신 하 여 작업을 수행 합니다 `IExecutionContext::Dispatch` 메서드.
+동시성 런타임의 리소스 관리자와 상호 작용 하는 사용자 지정 스케줄러를 구현 하는 경우에는 `IExecutionContext` 인터페이스를 구현 해야 합니다. 리소스 관리자에서 생성 된 스레드는 `IExecutionContext::Dispatch` 메서드를 실행 하 여 스케줄러를 대신 하 여 작업을 수행 합니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `IExecutionContext`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** concrtrm.h
+**헤더:** concrtrm. h
 
 **네임스페이스:** 동시성
 
-##  <a name="dispatch"></a>  Iexecutioncontext:: Dispatch 메서드
+## <a name="dispatch"></a>IExecutionContext::D ispatch 메서드
 
-스레드 프록시는 특정 실행 컨텍스트를 실행 되기 시작 하면 호출 되는 메서드. 이 스케줄러에 대 한 주 작업자 루틴인 이어야 합니다.
+스레드 프록시가 특정 실행 컨텍스트를 실행 하기 시작할 때 호출 되는 메서드입니다. 스케줄러에 대 한 기본 작업자 루틴이 되어야 합니다.
 
-```
+```cpp
 virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pDispatchState*<br/>
-이 실행 컨텍스트를 디스패치 하는 상태에 대 한 포인터입니다. 디스패치 상태에 대 한 자세한 내용은 참조 하세요. [DispatchState](dispatchstate-structure.md)합니다.
+이 실행 컨텍스트가 디스패치되는 상태에 대 한 포인터입니다. 디스패치 상태에 대 한 자세한 내용은 [Dispatchstate](dispatchstate-structure.md)를 참조 하세요.
 
-##  <a name="getid"></a>  IExecutionContext::GetId Method
+## <a name="getid"></a>IExecutionContext:: GetId 메서드
 
-실행 컨텍스트에 대 한 고유 식별자를 반환합니다.
+실행 컨텍스트에 대 한 고유 식별자를 반환 합니다.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-고유 정수 식별자입니다.
+고유한 정수 식별자입니다.
 
 ### <a name="remarks"></a>설명
 
-메서드를 사용 해야 `GetExecutionContextId` 구현 하는 개체에 대 한 고유 식별자를 가져오는 `IExecutionContext` 인터페이스, 메서드 매개 변수로 인터페이스를 사용 하기 전에 리소스 관리자에서 제공 합니다. 동일한 식별자를 반환 해야 하는 경우는 `GetId` 함수를 호출 합니다.
+리소스 관리자에서 제공 하는 메서드에 대 한 매개 변수로 인터페이스를 사용 하기 전에 메서드 `GetExecutionContextId`를 사용 하 여 `IExecutionContext` 인터페이스를 구현 하는 개체의 고유 식별자를 가져와야 합니다. `GetId` 함수가 호출 될 때 동일한 식별자를 반환할 것으로 예상 됩니다.
 
-다른 소스에서 가져온 식별자는 정의 되지 않은 동작이 발생할 수 있습니다.
+다른 소스에서 가져온 식별자로 인해 정의 되지 않은 동작이 발생할 수 있습니다.
 
-##  <a name="getproxy"></a>  Iexecutioncontext:: Getproxy 메서드
+## <a name="getproxy"></a>IExecutionContext:: GetProxy 메서드
 
-이 컨텍스트에서 실행 되는 스레드 프록시 인터페이스를 반환 합니다.
+이 컨텍스트를 실행 하는 스레드 프록시에 대 한 인터페이스를 반환 합니다.
 
-```
+```cpp
 virtual IThreadProxy* GetProxy() = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`IThreadProxy` 인터페이스입니다. 실행 컨텍스트의 스레드 프록시를 호출 하 여 초기화 되지 않은 경우 `SetProxy`, 함수 반환 해야 `NULL`합니다.
+`IThreadProxy` 인터페이스입니다. 실행 컨텍스트의 스레드 프록시가 `SetProxy`를 호출 하 여 초기화 되지 않은 경우 함수는 `NULL`를 반환 해야 합니다.
 
 ### <a name="remarks"></a>설명
 
-리소스 관리자를 호출 합니다는 `SetProxy` 메서드는 실행 컨텍스트를 사용 하 여는 `IThreadProxy` 인터페이스에 진입 하기 전에 매개 변수로 `Dispatch` 메서드를는 컨텍스트에 따라 합니다. 이 인수를 저장 하 고 호출에서 반환 해야 `GetProxy()`합니다.
+리소스 관리자는 컨텍스트의에 `Dispatch` 메서드를 입력 하기 전에 `IThreadProxy` 인터페이스를 매개 변수로 사용 하 여 실행 컨텍스트에서 `SetProxy` 메서드를 호출 합니다. 이 인수를 저장 하 고 `GetProxy()`에 대 한 호출에 반환 해야 합니다.
 
-##  <a name="getscheduler"></a>  Iexecutioncontext:: Getscheduler 메서드
+## <a name="getscheduler"></a>IExecutionContext:: GetScheduler 메서드
 
-스케줄러에 인터페이스를 반환이 실행 컨텍스트에 속합니다.
+이 실행 컨텍스트가 속한 스케줄러에 대 한 인터페이스를 반환 합니다.
 
-```
+```cpp
 virtual IScheduler* GetScheduler() = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `IScheduler` 인터페이스입니다.
 
 ### <a name="remarks"></a>설명
 
-유효한를 사용 하 여 실행 컨텍스트를 초기화 해야 `IScheduler` 인터페이스 메서드에 매개 변수로 사용 하기 전에 리소스 관리자에서 제공 합니다.
+올바른 `IScheduler` 인터페이스를 사용 하 여 실행 컨텍스트를 초기화 해야 리소스 관리자에서 제공 하는 메서드에 대 한 매개 변수로 사용할 수 있습니다.
 
-##  <a name="setproxy"></a>  Iexecutioncontext:: Setproxy 메서드
+## <a name="setproxy"></a>IExecutionContext:: SetProxy 메서드
 
-이 실행 컨텍스트를 사용 하 여 스레드 프록시를 연결합니다. 관련된 스레드 프록시 컨텍스트의 실행을 시작 하기 전에이 메서드를 오른쪽으로 호출 `Dispatch` 메서드.
+스레드 프록시를이 실행 컨텍스트에 연결 합니다. 연결 된 스레드 프록시는 컨텍스트의 `Dispatch` 메서드 실행을 시작 하기 바로 전에이 메서드를 호출 합니다.
 
-```
+```cpp
 virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pThreadProxy*<br/>
-입력에 있는 스레드 프록시에 대 한 인터페이스를 `Dispatch` 이 실행 컨텍스트에서 메서드.
+이 실행 컨텍스트에 `Dispatch` 메서드를 입력 하려고 하는 스레드 프록시에 대 한 인터페이스입니다.
 
 ### <a name="remarks"></a>설명
 
-매개 변수를 저장 해야 하는 `pThreadProxy` 에 대 한 호출에서 반환 된 `GetProxy` 메서드. 리소스 관리자는 실행 컨텍스트를 사용 하 여 연결 된 스레드 프록시 스레드 프록시가 실행 되는 동안 변경 되지 것입니다는 `Dispatch` 메서드.
+`pThreadProxy` 매개 변수를 저장 하 고 `GetProxy` 메서드에 대 한 호출을 통해 반환 해야 합니다. 리소스 관리자은 스레드 프록시가 `Dispatch` 메서드를 실행 하는 동안 실행 컨텍스트와 연결 된 스레드 프록시가 변경 되지 않도록 보장 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임스페이스](concurrency-namespace.md)<br/>
 [IScheduler 구조체](ischeduler-structure.md)<br/>

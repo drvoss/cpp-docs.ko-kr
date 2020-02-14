@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508937"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127909"
 ---
 # <a name="clipboard"></a>클립보드
 
@@ -21,7 +21,7 @@ ms.locfileid: "69508937"
 
 - 잘라내기, 복사, 붙여넣기 등의 표준 편집 메뉴 명령을 구현 합니다.
 
-- 끌어서 놓기 (OLE)를 사용 하 여 균일 한 데이터 전송 구현.
+- OLE 끌어서 놓기를 사용 하 여 균일 한 데이터 전송 구현.
 
 클립보드는 소스와 대상 간에 데이터를 전송 하는 표준 Windows 메서드입니다. OLE 작업에서 매우 유용할 수도 있습니다. OLE의 등장으로 Windows에는 두 개의 클립보드 메커니즘이 있습니다. 표준 Windows 클립보드 API는 계속 사용할 수 있지만 OLE 데이터 전송 메커니즘을 사용 하 여 보완 되었습니다. OLE UDT (uniform data transfer)는 클립보드와 끌어서 놓기를 사용 하 여 잘라내기, 복사 및 붙여넣기를 지원 합니다.
 
@@ -41,8 +41,8 @@ ms.locfileid: "69508937"
 
 - [Windows 클립보드](/windows/win32/dataxchg/clipboard)
 
-- [끌어서 놓기 구현 (OLE)](../mfc/drag-and-drop-ole.md)
+- [OLE 끌어서 놓기](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)

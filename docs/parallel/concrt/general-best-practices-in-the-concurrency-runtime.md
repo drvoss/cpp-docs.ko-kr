@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302226"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141771"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>동시성 런타임의 유용한 일반 정보
 
 이 문서에서는 동시성 런타임의 여러 영역에 적용 되는 모범 사례에 대해 설명 합니다.
 
-##  <a name="top"></a> 섹션
+## <a name="top"></a> 섹션
 
 이 문서는 다음 섹션으로 구성됩니다.
 
@@ -33,13 +33,13 @@ ms.locfileid: "75302226"
 
 - [공유 데이터 세그먼트에서 동시성 개체 사용 안 함](#shared-data)
 
-##  <a name="synchronization"></a>가능 하면 협조적 동기화 구문 사용
+## <a name="synchronization"></a>가능 하면 협조적 동기화 구문 사용
 
 동시성 런타임는 외부 동기화 개체를 요구 하지 않는 많은 동시성 안전 구문을 제공 합니다. 예를 들어 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 클래스는 동시성이 보장 되는 추가 및 요소 액세스 작업을 제공 합니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다. 그러나 리소스에 단독으로 액세스 해야 하는 경우 런타임은 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)및 [concurrency:: event](../../parallel/concrt/reference/event-class.md) 클래스를 제공 합니다. 이러한 형식은 협조적으로 동작 합니다. 따라서 작업 스케줄러는 첫 번째 태스크에서 데이터를 기다리는 동안 처리 리소스를 다른 컨텍스트에 다시 할당할 수 있습니다. 가능 하면 협조적으로 동작 하지 않는 Windows API에서 제공 하는 것과 같은 다른 동기화 메커니즘 대신 이러한 동기화 유형을 사용 합니다. 이러한 동기화 형식 및 코드 예제에 대 한 자세한 내용은 [동기화 데이터 구조](../../parallel/concrt/synchronization-data-structures.md) 및 [Windows API와 동기화 데이터 구조 비교](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)를 참조 하세요.
 
 [[맨 위로 이동](#top)]
 
-##  <a name="yield"></a>생성 되지 않는 긴 작업을 방지 합니다.
+## <a name="yield"></a>생성 되지 않는 긴 작업을 방지 합니다.
 
 작업 스케줄러는 협조적으로 동작 하기 때문에 작업 간에 공평 하 게 제공 되지 않습니다. 따라서 태스크가 다른 작업을 시작 하지 못하게 할 수 있습니다. 이는 일부 경우에 허용 되지만 교착 상태 또는 고갈를 일으킬 수 있는 경우도 있습니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "75302226"
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
@@ -55,7 +55,7 @@ ms.locfileid: "75302226"
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```Output
 1: 250000000
@@ -74,7 +74,7 @@ ms.locfileid: "75302226"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="oversubscription"></a>초과 구독을 사용 하 여 차단 또는 대기 시간이 긴 작업 오프셋
+## <a name="oversubscription"></a>초과 구독을 사용 하 여 차단 또는 대기 시간이 긴 작업 오프셋
 
 동시성 런타임는 [동시성:: critical_section](../../parallel/concrt/reference/critical-section-class.md)와 같은 동기화 기본 형식을 제공 하 여 작업을 협조적으로 차단 하 고 양보할 수 있게 합니다. 한 작업이 협조적으로 차단 하거나 생성 하는 경우 첫 번째 태스크에서 데이터를 기다리는 동안 작업 스케줄러가 다른 컨텍스트에 처리 리소스를 다시 할당할 수 있습니다.
 
@@ -88,7 +88,7 @@ ms.locfileid: "75302226"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="memory"></a>가능 하면 동시 메모리 관리 함수 사용
+## <a name="memory"></a>가능 하면 동시 메모리 관리 함수 사용
 
 수명이 비교적 짧은 작은 개체를 자주 할당 하는 세분화 된 작업이 있는 경우 [concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) 및 [Concurrency:: Free](reference/concurrency-namespace-functions.md#free)를 사용 하 여 메모리 관리 함수를 사용 합니다. 동시성 런타임는 실행 중인 각 스레드에 대해 별도의 메모리 캐시를 보유 합니다. `Alloc` 및 `Free` 함수는 잠금이나 메모리 장벽을 사용 하지 않고 이러한 캐시에서 메모리를 할당 하 고 해제 합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "75302226"
 
 [[맨 위로 이동](#top)]
 
-##  <a name="raii"></a>RAII를 사용 하 여 동시성 개체의 수명 관리
+## <a name="raii"></a>RAII를 사용 하 여 동시성 개체의 수명 관리
 
 동시성 런타임는 예외 처리를 사용 하 여 취소와 같은 기능을 구현 합니다. 따라서 런타임을 호출 하거나 런타임을 호출 하는 다른 라이브러리를 호출할 때 예외 로부터 안전한 코드를 작성 합니다.
 
@@ -128,7 +128,7 @@ RAII 패턴을 사용 하 여 동시성 개체의 수명을 관리 하는 추가
 
 [[맨 위로 이동](#top)]
 
-##  <a name="global-scope"></a>전역 범위에서 동시성 개체를 만들지 마십시오.
+## <a name="global-scope"></a>전역 범위에서 동시성 개체를 만들지 마십시오.
 
 전역 범위에서 동시성 개체를 만드는 경우 교착 상태나 메모리 액세스 위반 등의 문제가 애플리케이션에서 발생할 수 있습니다.
 
@@ -142,13 +142,13 @@ RAII 패턴을 사용 하 여 동시성 개체의 수명을 관리 하는 추가
 
 [[맨 위로 이동](#top)]
 
-##  <a name="shared-data"></a>공유 데이터 세그먼트에서 동시성 개체 사용 안 함
+## <a name="shared-data"></a>공유 데이터 세그먼트에서 동시성 개체 사용 안 함
 
 동시성 런타임은 공유 데이터 섹션에서 동시성 개체를 사용 하는 것을 지원 하지 않습니다. 예를 들어 [data_seg](../../preprocessor/data-seg.md)`#pragma` 지시문을 통해 생성 되는 데이터 섹션을 지원 하지 않습니다. 프로세스 경계에서 공유 되는 동시성 개체는 런타임에 일관 되지 않거나 유효 하지 않은 상태로 전환할 수 있습니다.
 
 [[맨 위로 이동](#top)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [동시성 런타임 유용한 정보](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [PPL(병렬 패턴 라이브러리)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

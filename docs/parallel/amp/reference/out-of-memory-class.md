@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: ab498935039fad584220a84c388e337ee090c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351185"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126450"
 ---
-# <a name="outofmemory-class"></a>out_of_memory 클래스
+# <a name="out_of_memory-class"></a>out_of_memory 클래스
 
-장치 또는 시스템 메모리 부족으로 인해 메서드가 실패할 때 throw 되는 예외입니다.
+시스템이 나 장치 메모리 부족으로 인해 메서드가 실패 하는 경우 throw 되는 예외입니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class out_of_memory : public runtime_exception;
 ```
 
@@ -29,11 +29,11 @@ class out_of_memory : public runtime_exception;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[out_of_memory 생성자](#ctor)|`out_of_memory` 클래스의 새 인스턴스를 초기화합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `exception`
 
@@ -43,16 +43,16 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amprt.h
+**헤더:** amprt. h
 
 **네임스페이스:** 동시성
-## <a name="ctor"></a> out_of_memory
+## <a name="ctor"></a>out_of_memory
 
 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 explicit out_of_memory(
     const char * _Message ) throw();
 
@@ -64,10 +64,10 @@ out_of_memory () throw();
 *_Message*<br/>
 오류에 대한 설명입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `out_of_memory` 클래스의 새 인스턴스입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518177"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034521"
 ---
 # <a name="q-options-low-level-operations"></a>/Q 옵션(하위 수준 작업)
 
-**/Q** 컴파일러 옵션을 사용하여 다음과 같은 저수준 컴파일러 작업을 수행할 수 있습니다.
+**/Q** 컴파일러 옵션을 사용 하 여 다음과 같은 하위 수준 컴파일러 작업을 수행할 수 있습니다.
 
 - [/Qfast_transcendentals (Force Fast 초월수 강제 적용)](qfast-transcendentals-force-fast-transcendentals.md): fast 초월수 강제 적용을 생성 합니다.
 
@@ -34,9 +34,13 @@ ms.locfileid: "76518177"
 
 - [/Qspectre](qspectre.md): 특정 스펙터 보안 취약성을 완화 하기 위한 지침을 생성 합니다.
 
+- [/Qspectre-load](qspectre-load.md): 로드를 기반으로 스펙터 보안 취약점을 완화 하는 명령을 생성 합니다.
+
+- [/Qspectre-load-cf](qspectre-load-cf.md): 로드 되는 제어 흐름 지침에 따라 스펙터 보안 취약점을 완화 하는 명령을 생성 합니다.
+
 - [/Qvec-report (자동 벡터화 계층 보고 수준)](qvec-report-auto-vectorizer-reporting-level.md): 자동 벡터화에 대 한 보고 수준을 사용 하도록 설정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

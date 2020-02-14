@@ -1,15 +1,15 @@
 ---
-title: Concurrency 네임 스페이스 연산자 (AMP)
+title: Concurrency 네임스페이스 연산자(AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180416"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126923"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Concurrency 네임 스페이스 연산자 (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>Concurrency 네임스페이스 연산자(AMP)
 
 ||||
 |-|-|-|
@@ -17,11 +17,11 @@ ms.locfileid: "62180416"
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[연산자==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  operator==
+## <a name="operator_eq_eq"></a>  operator==
 
-지정 된 인수를 같은지 여부를 결정 합니다.
+지정 된 인수가 같은지 여부를 확인 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -42,15 +42,15 @@ bool operator== (
 *_Rhs*<br/>
 비교할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 경우 튜플은 같고, 그렇지 않으면 **false**합니다.
+튜플이 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
-##  <a name="operator_neq"></a>  operator!=
+## <a name="operator_neq"></a>  operator!=
 
-지정 된 인수를가 같은지 여부를 결정 합니다.
+지정 된 인수가 같지 않은지 여부를 확인 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -71,15 +71,15 @@ bool operator!= (
 *_Rhs*<br/>
 비교할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 튜플이 아닌 경우 같고, 그렇지 않으면 **false**합니다.
+튜플이 다르면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a>  operator+
 
-지정한 인수의 구성 요소별 합을 계산합니다.
+지정 된 인수의 구성 요소 단위 합계를 계산 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -116,15 +116,15 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 *_Rhs*<br/>
 추가할 인수 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정한 인수의 구성 요소별 합입니다.
+지정 된 인수의 구성 요소 단위 합계입니다.
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>  operator-
 
-지정된 된 인수 사이의 구성 요소별 차이 계산합니다.
+지정 된 인수 사이의 구성 요소 단위 차이를 계산 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -161,15 +161,15 @@ _Tuple_type<_Rank>   operator-(
 *_Rhs*<br/>
 뺄 인수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 인수 사이의 구성 요소별 차이입니다.
+지정 된 인수 사이의 구성 요소 단위 차이입니다.
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a>  operator*
 
-지정한 인수의 구성 요소별 곱을 계산합니다.
+지정 된 인수의 구성 요소 단위 곱을 계산 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -198,15 +198,15 @@ _Tuple_type<_Rank>   operator*(
 *_Rhs*<br/>
 곱할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정한 인수의 구성 요소별 곱입니다.
+지정 된 인수의 구성 요소 단위 곱입니다.
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a>  operator/
 
-지정한 인수의 구성 요소별 몫을 계산합니다.
+지정 된 인수의 구성 요소별 몫을 계산 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -230,20 +230,20 @@ _Tuple_type<_Rank>   operator/(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-나누기 작업의 대상 튜플입니다.
+나눌 튜플입니다.
 
 *_Rhs*<br/>
-나눌에 사용할 튜플입니다.
+나눌 튜플입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정한 인수의 구성 요소별 몫입니다.
+지정 된 인수의 구성 요소별 몫입니다.
 
-##  <a name="operator_mod"></a>  operator%
+## <a name="operator_mod"></a>  operator%
 
-지정 된 두 번째 인수에 의해 지정 된 첫 번째 인수의 모듈러스를 계산 합니다.
+지정 된 두 번째 인수를 기준으로 지정 된 첫 번째 인수의 모듈러스를 계산 합니다.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -267,15 +267,15 @@ _Tuple_type<_Rank>   operator%(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-튜플의 나머지를 계산 합니다.
+모듈로 계산 되는 튜플입니다.
 
 *_Rhs*<br/>
-에 사용할 튜플 모듈로.
+모듈로 이동할 튜플입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-결과 첫 번째 지정 된 인수 모듈러스는 두 번째 지정 된 인수입니다.
+지정 된 첫 번째 인수 모듈러스의 결과는 두 번째 지정 된 인수입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[Namespace 동시성 ](concurrency-namespace-cpp-amp.md)
+[Concurrency 네임 스페이스](concurrency-namespace-cpp-amp.md)

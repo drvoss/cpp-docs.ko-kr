@@ -17,28 +17,28 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a38c84c5def629c7a42b2c05bf1ed04441593b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351536"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127779"
 ---
 # <a name="texture-class"></a>texture 클래스
 
-텍스처에 대 한 데이터 집계는 `accelerator_view` 범위 도메인에서 합니다. 범위 도메인에서 각 요소에 대 한 변수 컬렉션입니다. 각 변수는 해당 하는 값 C++ 기본 형식 ( `unsigned int`, `int`를 `float`를 `double`), 스칼라 형식 ( `norm`, 또는 `unorm`), 또는 short 벡터 형식입니다.
+질감은 익스텐트 도메인의 `accelerator_view`에 대 한 데이터 집계입니다. 익스텐트 도메인의 각 요소에 대 한 변수의 컬렉션입니다. 각 변수에는 기본 형식 (`unsigned int`C++ , `int`, `float`, `double`), 스칼라 형식 (`norm`또는 `unorm`) 또는 짧은 벡터 형식에 해당 하는 값이 포함 됩니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template <typename value_type,  int _Rank>
 class texture;
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *value_type*<br/>
-질감의 요소 형식입니다.
+질감에 있는 요소의 형식입니다.
 
 *_Rank*<br/>
 질감의 순위입니다.
@@ -47,53 +47,53 @@ class texture;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|`scalar_type`|스칼라 형식입니다.|
-|`value_type`|값 형식입니다.|
+|`scalar_type`|스칼라 형식.|
+|`value_type`|값 형식.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[질감 생성자](#ctor)|`texture` 클래스의 새 인스턴스를 초기화합니다.|
-|[~ texture 소멸자](#ctor)|제거 된 `texture` 개체입니다.|
+|[~ 텍스처 소멸자](#ctor)|`texture` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[copy_to](#copy_to)|복사본을 `texture` 전체 복사를 수행 하 여 대상 개체입니다.|
-|[data](#data)|이 질감의 원시 데이터에 대 한 CPU 포인터를 반환합니다.|
-|[get](#get)|지정된 된 인덱스에 있는 요소의 값을 반환합니다.|
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|반환 된 [accelerator_view](accelerator-view-class.md) 복사할이 질감에 대 한 기본 대상입니다.|
-|[get_depth_pitch](#get_depth_pitch)|3D 스테이징 텍스처 CPU에서 각 깊이 조각 사이의 바이트 수를 반환 합니다.|
-|[get_row_pitch](#get_row_pitch)|2D 또는 3D 스테이징 텍스처에서 CPU의 각 행 사이의 바이트 수를 반환 합니다.|
-|[set](#set)|지정된 된 인덱스에 요소 값을 설정합니다.|
+|[copy_to](#copy_to)|전체 복사를 수행 하 여 `texture` 개체를 대상에 복사 합니다.|
+|[data](#data)|이 질감의 원시 데이터에 대 한 CPU 포인터를 반환 합니다.|
+|[get](#get)|지정 된 인덱스에 있는 요소의 값을 반환 합니다.|
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|이 질감을 복사할 기본 대상인 [accelerator_view](accelerator-view-class.md) 반환 합니다.|
+|[get_depth_pitch](#get_depth_pitch)|CPU의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 반환 합니다.|
+|[get_row_pitch](#get_row_pitch)|CPU의 2D 또는 3D 스테이징 질감에서 각 행 사이의 바이트 수를 반환 합니다.|
+|[set](#set)|지정 된 인덱스에 있는 요소의 값을 설정 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[operator()](#operator_call)|매개 변수로 지정 된 요소 값을 반환 합니다.|
-|[operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|
-|[operator=](#operator_eq)|지정 된 복사 [질감](texture-class.md) 여기에 개체입니다.|
+|[operator\[\]](#operator_at)|지정 된 인덱스에 있는 요소를 반환 합니다.|
+|[operator=](#operator_eq)|지정 된 [텍스처](texture-class.md) 개체를이 개체에 복사 합니다.|
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[rank 상수](#rank)|차수를 가져옵니다는 `texture` 개체입니다.|
+|[rank 상수](#rank)|`texture` 개체의 순위를 가져옵니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[associated_accelerator_view](#associated_accelerator_view)|가져옵니다 합니다 [accelerator_view](accelerator-view-class.md) 복사할이 질감에 대 한 기본 대상입니다.|
-|[depth_pitch](#depth_pitch)|Cpu의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 가져옵니다.|
-|[row_pitch](#row_pitch)|스테이징 텍스처 CPU의 2D 또는 3D의 각 행 사이의 바이트 수를 가져옵니다.|
+|[associated_accelerator_view](#associated_accelerator_view)|이 질감을 복사할 기본 대상인 [accelerator_view](accelerator-view-class.md) 가져옵니다.|
+|[depth_pitch](#depth_pitch)|CPU의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 가져옵니다.|
+|[row_pitch](#row_pitch)|CPU의 2D 또는 3D 스테이징 질감에서 각 행 사이의 바이트 수를 가져옵니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `_Texture_base`
 
@@ -101,31 +101,31 @@ class texture;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_graphics.h
+**헤더:** amp_graphics. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="dtor"></a> ~texture
+## <a name="dtor"></a>~ 텍스처
 
-제거 된 `texture` 개체입니다.
+`texture` 개체를 소멸 시킵니다.
 
-```
+```cpp
 ~texture() restrict(cpu);
 ```
 
-##  <a name="associated_accelerator_view"></a> associated_accelerator_view
+## <a name="associated_accelerator_view"></a>associated_accelerator_view
 
-가져옵니다 합니다 [accelerator_view](accelerator-view-class.md) 복사할이 질감에 대 한 기본 대상입니다.
+이 질감을 복사할 기본 대상인 [accelerator_view](accelerator-view-class.md) 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to
+## <a name="copy_to"></a>copy_to
 
-복사본을 `texture` 전체 복사를 수행 하 여 대상 개체입니다.
+전체 복사를 수행 하 여 `texture` 개체를 대상에 복사 합니다.
 
-```
+```cpp
 void copy_to(texture& _Dest) const;
 void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 ```
@@ -139,35 +139,35 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 질감의 순위입니다.
 
 *value_type*<br/>
-질감의 요소 형식입니다.
+질감에 있는 요소의 형식입니다.
 
-##  <a name="data"></a> 데이터
+## <a name="data"></a>데이터로
 
-이 질감의 원시 데이터에 대 한 CPU 포인터를 반환합니다.
+이 질감의 원시 데이터에 대 한 CPU 포인터를 반환 합니다.
 
-```
+```cpp
 void* data() restrict(cpu);
 
 const void* data() const restrict(cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 질감의 원시 데이터에 대 한 포인터입니다.
 
-##  <a name="depth_pitch"></a> depth_pitch
+## <a name="depth_pitch"></a>depth_pitch
 
-Cpu의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 가져옵니다.
+CPU의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-##  <a name="get"></a> get
+## <a name="get"></a> get
 
-지정된 된 인덱스에 있는 요소의 값을 반환합니다.
+지정 된 인덱스에 있는 요소의 값을 반환 합니다.
 
-```
+```cpp
 const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ```
 
@@ -176,51 +176,51 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 *_Index*<br/>
 요소의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 인덱스에 있는 요소의 값입니다.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
-복사할이 질감에 대 한 기본 대상인 accelerator_view를 반환 합니다.
+이 질감을 복사할 기본 대상인 accelerator_view 반환 합니다.
 
-```
+```cpp
 Concurrency::accelerator_view get_associated_accelerator_view() const restrict(cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합니다 [accelerator_view](accelerator-view-class.md) 복사할이 질감에 대 한 기본 대상입니다.
+이 질감을 복사할 기본 대상인 [accelerator_view](accelerator-view-class.md) 입니다.
 
-##  <a name="get_depth_pitch"></a> get_depth_pitch
+## <a name="get_depth_pitch"></a>get_depth_pitch
 
-3D 스테이징 텍스처 CPU에서 각 깊이 조각 사이의 바이트 수를 반환 합니다.
+CPU의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수를 반환 합니다.
 
-```
+```cpp
 unsigned int get_depth_pitch() const restrict(cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-3D 스테이징 텍스처 CPU에서 각 깊이 조각 사이의 바이트 수입니다.
+CPU의 3D 스테이징 텍스처에서 각 깊이 조각 사이의 바이트 수입니다.
 
-##  <a name="get_row_pitch"></a> get_row_pitch
+## <a name="get_row_pitch"></a>get_row_pitch
 
-2 차원 스테이징 질감에서 각 행 사이의 또는 3 차원 스테이징 질감에서 깊이 조각의 각 행 사이의 바이트 수를 반환합니다.
+2 차원 스테이징 질감에서 각 행 사이의 바이트 수 또는 3 차원 스테이징 질감에서 깊이 조각의 각 행 사이의 바이트 수를 반환 합니다.
 
-```
+```cpp
 unsigned int get_row_pitch() const restrict(cpu);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-2 차원 스테이징 질감에서 각 행 사이의 또는 3 차원 스테이징 질감에서 깊이 조각의 각 행 사이의 바이트 수입니다.
+2 차원 스테이징 질감에서 각 행 사이의 바이트 수 또는 3 차원 스테이징 질감에서 깊이 조각의 각 행 사이의 바이트 수입니다.
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>연산자 ()
 
 매개 변수로 지정 된 요소 값을 반환 합니다.
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -246,23 +246,23 @@ const value_type operator() (
 인덱스의 가장 중요 한 구성 요소입니다.
 
 *_I1*<br/>
-다음-에-가장 중요 한 구성 요소 인덱스입니다.
+인덱스의 다음으로 중요 한 구성 요소입니다.
 
 *_I2*<br/>
-인덱스의 가장 중요 한 구성 요소입니다.
+인덱스의 가장 중요 하지 않은 구성 요소입니다.
 
 *_Rank*<br/>
 인덱스의 순위입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수로 지정 된 요소 값입니다.
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a> operator[]
 
-지정된 된 인덱스에 있는 요소를 반환 합니다.
+지정 된 인덱스에 있는 요소를 반환 합니다.
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -276,15 +276,15 @@ const value_type operator[] (int _I0) const restrict(amp);
 *_I0*<br/>
 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 인덱스에 있는 요소입니다.
+지정 된 인덱스에 있는 요소입니다.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>연산자 =
 
-지정 된 복사 [질감](texture-class.md) 여기에 개체입니다.
+지정 된 [텍스처](texture-class.md) 개체를이 개체에 복사 합니다.
 
-```
+```cpp
 texture& operator= (
     const texture& _Other);
 
@@ -295,33 +295,33 @@ texture& operator= (
 ### <a name="parameters"></a>매개 변수
 
 *_Other*<br/>
-`texture` 복사할 개체입니다.
+복사할 `texture` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이에 대 한 참조 `texture` 개체입니다.
+이 `texture` 개체에 대 한 참조입니다.
 
-##  <a name="rank"></a> 순위
+## <a name="rank"></a>배열
 
-차수를 가져옵니다는 `texture` 개체입니다.
+`texture` 개체의 순위를 가져옵니다.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="row_pitch"></a> row_pitch
+## <a name="row_pitch"></a>row_pitch
 
-스테이징 텍스처 CPU의 2D 또는 3D의 각 행 사이의 바이트 수를 가져옵니다.
+CPU의 2D 또는 3D 스테이징 질감에서 각 행 사이의 바이트 수를 가져옵니다.
 
-```
+```cpp
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-##  <a name="set"></a> 설정
+## <a name="set"></a>설정
 
-지정된 된 인덱스에 요소 값을 설정합니다.
+지정 된 인덱스에 있는 요소의 값을 설정 합니다.
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) restrict(amp);
@@ -338,11 +338,11 @@ void set(
 *값*<br/>
 요소의 새 값입니다.
 
-##  <a name="ctor"></a> 질감
+## <a name="ctor"></a>질감
 
 `texture` 클래스의 새 인스턴스를 초기화합니다.
 
-```
+```cpp
 texture(const Concurrency::extent<_Rank>& _Ext) restrict(cpu);
 
 texture(int _E0) restrict(cpu);
@@ -541,37 +541,37 @@ texture(
 ### <a name="parameters"></a>매개 변수
 
 *_Acc_view*<br/>
-합니다 [accelerator_view](accelerator-view-class.md) 텍스처의 위치를 지정 하는 합니다.
+질감의 위치를 지정 하는 [accelerator_view](accelerator-view-class.md) 입니다.
 
 *_Av*<br/>
-합니다 [accelerator_view](accelerator-view-class.md) 텍스처의 위치를 지정 하는 합니다.
+질감의 위치를 지정 하는 [accelerator_view](accelerator-view-class.md) 입니다.
 
 *_Associated_av*<br/>
-이 질감의 복사본에 대 한 기본 대상을 지정 하는 accelerator_view입니다.
+이 질감에 대 한 복사의 기본 대상을 지정 하는 accelerator_view입니다.
 
 *_Bits_per_scalar_element*<br/>
-텍스처의 기본 스칼라 형식의 각 스칼라 요소당 비트 수입니다. 일반적으로 지원 되는 값은 8, 16, 32 및 64입니다. 0을 지정 된 비트 수가 기본 scalar_type과 같습니다. 64 이중 기반 텍스처에만 유효합니다.
+질감의 기본 스칼라 형식에 있는 각 스칼라 요소 당 비트 수입니다. 일반적으로 지원 되는 값은 8, 16, 32 및 64입니다. 0을 지정 하면 비트 수는 기본 scalar_type와 동일 합니다. 64는 이중 기반 질감에만 유효 합니다.
 
 *_Ext*<br/>
-텍스처의 각 차원의 범위입니다.
+질감의 각 차원에 대 한 범위입니다.
 
 *_E0*<br/>
 질감의 가장 중요 한 구성 요소입니다.
 
 *_E1*<br/>
-질감의 다음-에-가장 중요 한 구성 요소입니다.
+질감의 다음으로 중요 한 구성 요소입니다.
 
 *_E2*<br/>
-텍스처 범위의 가장 중요 하지 않은 구성 요소입니다.
+질감의 범위에서 가장 중요 하지 않은 구성 요소입니다.
 
 *_Input_iterator*<br/>
-입력된 반복기의 형식입니다.
+입력 반복기의 형식입니다.
 
 *_Mipmap_levels*<br/>
-기본 질감의 밉 맵 수준 수입니다. 0을 지정 하는 경우 질감에 mip 맵 수준까지 지정된 된 범위에 대 한 가장 작은 크기의 전체 범위를 해야 합니다.
+기본 질감의 밉 맵 수준 수입니다. 0을 지정 하면 질감의 전체 범위는 지정 된 범위에 대 한 가능한 가장 작은 크기의 밉로 축소 됩니다.
 
 *_Rank*<br/>
-범위의 차수입니다.
+익스텐트의 순위입니다.
 
 *_Source*<br/>
 호스트 버퍼에 대 한 포인터입니다.
@@ -580,20 +580,20 @@ texture(
 복사할 질감입니다.
 
 *_Src_byte_size*<br/>
-소스 버퍼의 바이트 수입니다.
+원본 버퍼의 바이트 수입니다.
 
 *_Src_first*<br/>
-소스 컨테이너에는 시작 반복기입니다.
+소스 컨테이너에 대 한 시작 반복기입니다.
 
 *_Src_last*<br/>
-소스 컨테이너에 사용 되는 끝 반복기입니다.
+소스 컨테이너에 대 한 종료 반복기입니다.
 
 *_Other*<br/>
-다른 데이터 원본입니다.
+기타 데이터 원본.
 
 *_Rank*<br/>
 섹션의 순위입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)

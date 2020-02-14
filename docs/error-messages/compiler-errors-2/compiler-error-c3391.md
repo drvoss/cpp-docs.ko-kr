@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7590ba9431892c07a32c27fdc97604c8b005fe33
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328694"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912850"
 ---
 # <a name="compiler-error-c3391"></a>컴파일러 오류 C3391
 
-'type_arg': 제네릭 매개 변수 'param' 일반 'generic_type'의 잘못 된 형식 인수가 null이 아닌 값 형식 이어야 합니다.
+' type_arg ': 제네릭 ' generic_type '의 제네릭 매개 변수 ' param '에 대 한 형식 인수가 null을 허용 하지 않는 값 형식 이어야 합니다.
 
-제네릭 형식이 잘못 인스턴스화되었습니다. 형식 정의를 확인하세요. 자세한 내용은 <xref:System.Nullable> 하 고 [제네릭을](../../extensions/generics-cpp-component-extensions.md)합니다.
+제네릭 형식이 잘못 인스턴스화되었습니다. 형식 정의를 확인하세요. 자세한 내용은 <xref:System.Nullable> 및 [제네릭](../../extensions/generics-cpp-component-extensions.md)을 참조 하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-C +의 제네릭 형식을 제작 하는 경우 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만들려면 다음 샘플에서는 C# + CLI입니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
+다음 샘플에서는를 C# 사용 하 여/cli에서 C++제네릭 형식을 작성할 때 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만듭니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
 
-```cs
+```csharp
 // C3391.cs
 // Compile by using: csc /target:library C3391.cs
 // a C# program
@@ -31,7 +31,7 @@ public class GR<N>
 where N : struct {}
 ```
 
-C3391.dll 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3391을 생성 합니다.
+C3391 구성 요소를 사용할 수 있는 경우 다음 샘플에서는 C3391을 생성 합니다.
 
 ```cpp
 // C3391_b.cpp

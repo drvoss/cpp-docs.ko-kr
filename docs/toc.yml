@@ -702,6 +702,10 @@
                           href: build/reference/qsafe-fp-loads.md
                         - name: /Qspectre
                           href: build/reference/qspectre.md
+                        - name: /Qspectre-load
+                          href: build/reference/qspectre-load.md
+                        - name: /Qspectre-load-cf
+                          href: build/reference/qspectre-load-cf.md
                         - name: /Qvec-report(자동 벡터화 도우미 보고 수준)
                           href: build/reference/qvec-report-auto-vectorizer-reporting-level.md
                     - name: /RTC(런타임 오류 검사)
@@ -5891,7 +5895,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: 열거형 클래스
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: 이벤트(event)
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: 예외 처리
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -5934,7 +5938,7 @@
               href: extensions/nullptr-cpp-component-extensions.md
             - name: Override 지정자
               href: extensions/override-specifiers-cpp-component-extensions.md
-            - name: 재정의
+            - name: override
               href: extensions/override-cpp-component-extensions.md
             - name: 부분
               href: extensions/partial-cpp-component-extensions.md
@@ -6140,7 +6144,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: 의
+                - name: in
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md

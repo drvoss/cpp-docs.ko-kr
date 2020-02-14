@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351146"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126379"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits 구조체
+# <a name="short_vector_traits-structure"></a>short_vector_traits 구조체
 
-short_vector_traits는 기본 벡터 길이 및 짧은 벡터 형식의 스칼라 형식 또는 스칼라 형식 검색할 수 있게 합니다.
+short_vector_traits를 사용 하 여 짧은 벡터 형식 또는 스칼라 형식의 기본 벡터 길이와 스칼라 형식을 검색할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,7 +75,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 `T`
 
@@ -83,44 +83,44 @@ struct short_vector_traits<double_4>;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[short_vector_traits:: short_vector_traits 생성자](#ctor)||
 
 ### <a name="public-constants"></a>공용 상수
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[short_vector_traits:: size 상수](#size)||
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `short_vector_traits`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors.h
+**헤더:** amp_short_vectors. h
 
-**네임스페이스:** Concurrency:: graphics
+**네임 스페이스:** Concurrency:: graphics
 
-##  <a name="ctor"></a>  short_vector_traits:: short_vector_traits 생성자
+## <a name="ctor"></a>short_vector_traits:: short_vector_traits 생성자
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size Constant
+## <a name="size"></a>short_vector_traits:: size 상수
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
