@@ -1,18 +1,18 @@
 ---
 title: LIB 개요
 description: 라이브러리 도구인 lib.exe의 사용 및 옵션에 대 한 개요입니다.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685498"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257614"
 ---
 # <a name="overview-of-lib"></a>LIB 개요
 
@@ -35,7 +35,7 @@ LIB는 다음 모드에서 사용할 수 있습니다.
 |옵션|설명|
 |-|-|
 |**/DEF**|가져오기 라이브러리 및 내보내기 파일을 만듭니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|
-|**/ERRORREPORT**|   Lib.exe를 사용 하 여 내부 오류에 대 한 정보를 Microsoft에 보냅니다.<br/><br/>자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
+|**/ERRORREPORT**| 사용되지 않음. 자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
 |**/EXPORT**|   프로그램에서 함수를 내보냅니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|
 |**/EXTRACT**|   기존 라이브러리의 멤버 복사본을 포함 하는 개체 (.obj) 파일을 만듭니다.<br/><br/>자세한 내용은 [라이브러리 멤버 추출](extracting-a-library-member.md)을 참조 하세요.|
 |**/INCLUDE**|   기호 테이블에 기호를 추가 합니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|
@@ -54,10 +54,10 @@ LIB는 다음 모드에서 사용할 수 있습니다.
 |**/VERBOSE**|   추가 되는 .obj 파일의 이름을 포함 하 여 세션 진행률에 대 한 세부 정보를 표시 합니다.<br/><br/>자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
 |**/WX**|   경고를 오류로 처리 합니다.<br/><br/>자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[LIB 참조](lib-reference.md)<br/>
-[LIB 입력 파일](lib-input-files.md)<br/>
-[LIB 출력 파일](lib-output-files.md)<br/>
-[기타 LIB 출력](other-lib-output.md)<br/>
+[LIB 참조](lib-reference.md)\
+[LIB 입력 파일](lib-input-files.md)\
+[LIB 출력 파일](lib-output-files.md)\
+[기타 LIB 출력](other-lib-output.md)\
 [라이브러리 구조](structure-of-a-library.md)

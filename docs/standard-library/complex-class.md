@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688257"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257977"
 ---
 # <a name="complex-class"></a>complex 클래스
 
-클래스 템플릿은 `Type` 형식의 두 개체를 저장 하는 개체를 설명 합니다. 하나는 복소수의 실수부를 나타내고 다른 하나는 허수 부분을 나타냅니다.
+클래스 템플릿은 `Type`형식의 두 개체를 저장 하는 개체를 설명 합니다. 하나는 복소수의 실수부를 나타내고 다른 하나는 허수 부분을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>주의
 
-@No__t_0 클래스의 개체는 다음과 같습니다.
+`Type`클래스의 개체는 다음과 같습니다.
 
 - 기본 동작과 함께 공용 기본 생성자, 소멸자, 복사 생성자 및 대입 연산자를 포함합니다.
 
@@ -38,9 +38,9 @@ class complex
 
 - 필요에 따라 기본 동작으로 부동 소수점 형식을 위해 정의된 산술 연산자 및 수학 함수를 정의합니다.
 
-특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. @No__t_0 클래스의 개체에 대 한 작업은 예외를 throw 할 수 없습니다.
+특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. `Type` 클래스의 개체에 대 한 작업은 예외를 throw 할 수 없습니다.
 
-3 개의 부동 소수점 형식에 대 한 클래스 템플릿 복합의 명시적 특수화가 있습니다. 이 구현에서 `Type` 다른 형식의 값은 실제 계산에 대해 **double** 로 형식 캐스팅 `Type` 형식의 저장 된 개체에 **double** 결과가 다시 할당 됩니다.
+3 개의 부동 소수점 형식에 대 한 클래스 템플릿 복합의 명시적 특수화가 있습니다. 이 구현에서 `Type` 다른 형식의 값은 실제 계산에 대해 **double** 로 형식 캐스팅 `Type`형식의 저장 된 개체에 **double** 결과가 다시 할당 됩니다.
 
 ## <a name="members"></a>멤버
 
@@ -73,8 +73,6 @@ class complex
 |[operator/=](#op_div_eq)|대상 복소수를 제수로 나눕니다. 제수는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
 |[operator=](#op_eq)|대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
 
-
-
 ## <a name="complex"></a>하므로
 
 지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.
@@ -91,18 +89,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>매개 변수
 
-*_RealVal* \
+*_RealVal*\
 생성되고 있는 복소수를 초기화하는데 사용되는 실수 부분의 값입니다.
 
-*_Imagval* \
+*_ImagVal*\
 생성되고 있는 복소수를 초기화하는데 사용되는 허수 부분의 값입니다.
 
-*Complexnum* \
+*Complexnum*\
 해당 실수 및 허수 부분이 생성되고 있는 복소수를 초기화하는데 사용되는 복소수입니다.
 
 ### <a name="remarks"></a>주의
 
-첫 번째 생성자는 *\_RealVal* 저장 된 실제 부분을 초기화 하 고 *\_Imagval*저장 된 허수 부분을 초기화 합니다. 두 번째 생성자는 저장 된 실제 부분을 `complexNum.real()`로 초기화 하 고 저장 된 허수 부분을 `complexNum.imag()`로 초기화 합니다.
+첫 번째 생성자는 저장 된 실제 부분 *\_realval로,* 및 저장 된 허수 부분을 *\_imagval*로 초기화 합니다. 두 번째 생성자는 저장 된 실제 부분을 `complexNum.real()`로 초기화 하 고 저장 된 허수 부분을 `complexNum.imag()`로 초기화 합니다.
 
 이 구현에서 변환기가 멤버 템플릿 함수를 지원하지 않는 경우는 결과는 다음과 같습니다.
 
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 위 템플릿이 아래 템플릿으로 바뀝니다.
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -171,7 +169,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 허수 값을 추출할 복소수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -228,7 +226,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -313,7 +311,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -416,10 +414,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-*Complexnum* \
+*Complexnum*\
 대상 복소수에서 뺄 복소수입니다.
 
-*_RealPart* \
+*_RealPart*\
 대상 복소수에서 뺄 실수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -524,10 +522,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-*Complexnum* \
+*Complexnum*\
 대상 복소수에서 뺄 복소수입니다.
 
-*_RealPart* \
+*_RealPart*\
 대상 복소수에서 뺄 실수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -626,7 +624,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -703,7 +701,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 실수 값을 추출할 복소수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 복소수의 실수부와 허수부를 나타내는 데 사용되는 데이터 형식을 표시하는 형식입니다.
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

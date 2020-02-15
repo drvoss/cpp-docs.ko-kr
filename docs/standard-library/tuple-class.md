@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688872"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257106"
 ---
 # <a name="tuple-class"></a>튜플 클래스
 
@@ -20,7 +20,7 @@ ms.locfileid: "72688872"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>매개 변수
 
-*TN* \
+*TN*\
 N번째 튜플 요소의 형식입니다.
 
 ## <a name="remarks"></a>주의
 
-클래스 템플릿은 `T1`, `T2`, ..., `TN` 각각의 N 개 개체를 저장 하는 개체를 설명 합니다. 여기서 `0 <= N <= Nmax` 합니다. 튜플 인스턴스 `tuple<T1, T2, ..., TN>`의 범위는 해당 템플릿 인수의 `N` 수입니다. 템플릿 인수 `Ti` 및 해당 형식의 저장 된 해당 값의 인덱스는 `i - 1` 됩니다. 따라서이 설명서에서 1에서 N 사이의 형식으로 숫자를 표시 하는 동안 해당 인덱스 값의 범위는 0에서 N-1 사이입니다.
+클래스 템플릿은 `T1`, `T2`, ..., `TN`각각의 N 개 개체를 저장 하는 개체를 설명 합니다. 여기서 `0 <= N <= Nmax`합니다. 튜플 인스턴스 `tuple<T1, T2, ..., TN>`의 범위는 해당 템플릿 인수의 `N` 수입니다. 템플릿 인수 `Ti` 및 해당 형식의 저장 된 해당 값의 인덱스는 `i - 1`됩니다. 따라서이 설명서에서 1에서 N 사이의 형식으로 숫자를 표시 하는 동안 해당 인덱스 값의 범위는 0에서 N-1 사이입니다.
 
 ## <a name="example"></a>예제
 
@@ -137,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-@No__t_1 *취소*
+\ *취소*
 N번째 복사된 튜플 요소의 형식입니다.
 
-*오른쪽* \
+*오른쪽*\
 복사할 튜플입니다.
 
 ### <a name="remarks"></a>주의
@@ -209,10 +209,10 @@ template <class... Types>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽* \
+*왼쪽*\
 튜플 *오른쪽*의 요소와 교환할 요소를 포함 하는 튜플입니다.
 
-*오른쪽* \
+*오른쪽*\
 요소를 *왼쪽*튜플의 요소와 교환 해야 하는 튜플입니다.
 
 ### <a name="remarks"></a>주의
@@ -246,17 +246,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-@No__t_1 *취소*
+\ *취소*
 N번째 복사된 튜플 요소의 형식입니다.
 
-*오른쪽* \
+*오른쪽*\
 복사할 튜플입니다.
 
 ### <a name="remarks"></a>주의
 
 첫 번째 생성자는 요소가 기본 생성되는 개체를 생성합니다.
 
-두 번째 생성자는 요소가 각 `Pi`로 `i - 1` 인덱스의 요소를 초기화하여 `P1`, `P2`, ..., `PN` 인수에서 복사 생성되는 개체를 생성합니다.
+두 번째 생성자는 요소가 각 `P1`로 `P2` 인덱스의 요소를 초기화하여 `PN`, `Pi`, ..., `i - 1` 인수에서 복사 생성되는 개체를 생성합니다.
 
 세 번째 및 네 번째 생성자는 해당 요소가 *오른쪽*의 해당 요소에서 복사 생성 되는 개체를 생성 합니다.
 
