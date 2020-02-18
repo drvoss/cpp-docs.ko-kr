@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793791"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416098"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio의 C++
 
@@ -82,7 +82,7 @@ C++ 편집기의 생산성 기능을 사용하여 코드를 리팩터링, 탐색
 [네이티브 코드 디버그](/visualstudio/debugger/debugging-native-code)<br/>
 C++ 프로젝트에서 Visual Studio 디버거를 사용합니다.
 
-[C/C++용 코드 분석 개요](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++용 코드 분석 개요](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 SAL 주석 또는 C++ Core Guidelines 검사 프로그램을 사용하여 정적 분석을 수행합니다.
 
 [Visual Studio에서 C/C++에 대한 단위 테스트 작성](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
