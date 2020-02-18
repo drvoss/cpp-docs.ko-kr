@@ -2,18 +2,18 @@
 title: 의 특성C++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ed21b033c0e606d02d3aa845f09f72118a3c5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518298"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416069"
 ---
 # <a name="attributes-in-c"></a>의 특성C++
 
 표준 C++ 는 특성 집합을 정의 하 고, 컴파일러 공급 업체에서 고유한 특성 (공급 업체별 네임 스페이스 내)을 정의할 수 있지만, 표준에 정의 된 특성만 인식 하려면 컴파일러를 사용 해야 합니다.
 
-경우에 따라 표준 특성이 컴파일러 관련 declspec 매개 변수와 겹칩니다. 시각적 개체 C++에서 `declspec(deprecated)`를 사용 하는 대신 `[[deprecated]]` 특성을 사용할 수 있으며 특성은 규격 컴파일러에서 인식 됩니다. Dllimport 및 dllexport와 같은 다른 모든 declspec 매개 변수의 경우에도 특성에 해당 하는 특성이 없으므로 declspec 구문을 계속 사용 해야 합니다. 특성은 형식 시스템에 영향을 주지 않으며 프로그램의 의미를 변경 하지 않습니다. 컴파일러는 인식할 수 없는 특성 값을 무시 합니다.
+경우에 따라 표준 특성이 컴파일러 관련 declspec 매개 변수와 겹칩니다. 시각적 개체 C++에서 `declspec(deprecated)`를 사용 하는 대신 `[[deprecated]]` 특성을 사용할 수 있으며 특성은 준수 하는 컴파일러에서 인식 됩니다. Dllimport 및 dllexport와 같은 다른 모든 declspec 매개 변수의 경우에도 특성에 해당 하는 특성이 없으므로 declspec 구문을 계속 사용 해야 합니다. 특성은 형식 시스템에 영향을 주지 않으며 프로그램의 의미를 변경 하지 않습니다. 컴파일러는 인식할 수 없는 특성 값을 무시 합니다.
 
 **Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): 특성 목록의 범위에서 lambda-introducer를 **사용 하 여 단일를 사용 하** 는 모든 이름에 대해 네임 스페이스를 지정할 수 있습니다.
 
@@ -65,12 +65,12 @@ void Foo(int);
     ```cpp
     int main()
     {
-        int arr[10]; // GSL warning 26494 will be fired
-        int* p = arr; // GSL warning 26485 will be fired
+        int arr[10]; // GSL warning C26494 will be fired
+        int* p = arr; // GSL warning C26485 will be fired
         [[gsl::suppress(bounds.1)]] // This attribute suppresses Bounds rule #1
         {
-            int* q = p + 1; // GSL warning 26481 suppressed
-            p = q--; // GSL warning 26481 suppressed
+            int* q = p + 1; // GSL warning C26481 suppressed
+            p = q--; // GSL warning C26481 suppressed
         }
     }
     ```

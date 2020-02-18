@@ -2,12 +2,12 @@
 title: Visual Studio에서 C++ 코드 읽기 및 이해
 description: Visual Studio의 C++ 코드 편집기를 사용하여 코드를 서식 지정하고, 이해합니다.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303009"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416124"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Visual Studio에서 C++ 코드 읽기 및 이해
 
@@ -19,9 +19,9 @@ Visual Studio는 구문 요소에 색을 지정하여 언어 키워드, 형식 �
 
 ![코드 색 지정](../ide/media/code-outline-colorization.png "C++색상화")
 
- 사용되지 않는 코드(예: #if 0 아래의 코드)는 색에서 희미하게 표시됩니다.
+사용되지 않는 코드(예: #if 0 아래의 코드)는 색에서 희미하게 표시됩니다.
 
- ![비활성 코드](../ide/media/inactive-code-cpp.png "C++비활성 코드")
+![비활성 코드](../ide/media/inactive-code-cpp.png "C++비활성 코드")
 
 **빠른 실행**에서 "글꼴"을 입력한 다음, **글꼴 및 색**을 선택하여 색을 사용자 지정할 수 있습니다. **글꼴 및 색** 대화 상자에서 C/C++ 옵션으로 스크롤한 다음, 사용자 지정 글꼴 및/또는 색을 선택합니다.
 

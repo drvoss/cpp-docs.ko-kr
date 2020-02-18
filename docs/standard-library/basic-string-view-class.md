@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821898"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416177"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view 클래스
 
@@ -193,7 +193,7 @@ String_view에 저장 된 문자 형식입니다. 표준 C++ 라이브러리는�
 |-|-|
 |[basic_string_view](#basic_string_view)|비어 있거나 다른 문자열 개체 데이터의 전체 또는 일부 또는 C 스타일 문자 배열을 가리키는 string_view를 생성 합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |형식 이름|설명|
 |-|-|
@@ -289,7 +289,7 @@ constexpr const_reference at(size_type offset) const;
 
 자세한 내용은 [basic_string_view:: operator\[\]](#op_at) 를 참조 하세요.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ```cpp
 // basic_string_view_at.cpp
@@ -324,7 +324,7 @@ String_view 비어 있는 경우 예외를 throw 합니다.
 
 예를 들어 `remove_suffix`를 호출 하 여 string_view를 수정한 후에는이 함수에서 반환 된 요소가 더 이상 기본 데이터의 마지막 요소가 되지 않는다는 점에 유의 하세요.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 C 문자열 리터럴을 사용 하 여 생성 된 string_view에는 종료 null이 포함 되지 않으므로 다음 예제에서는 ' \ 0 '이 아닌 ' p '를 반환 `back`.
 
@@ -447,7 +447,7 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 
 `compare` 멤버 함수는 각 문자 시퀀스의 전체 또는 일부에 대 한 대/소문자를 구분 하는 비교를 수행 합니다. 
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ```cpp
 // basic_string_view_compare.cpp
@@ -568,7 +568,7 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 *ptr*\
 요소를 복사할 대상 문자 배열입니다.
 
-*count*\
+*개수*\
 원본 string_view에서 복사할 문자 수입니다.
 
 *오프셋*\
@@ -615,7 +615,7 @@ _ 원본 문자열부터 복사할 문자 수를 *계산* 합니다.
 
 Null 문자는 복사본의 끝에 추가되지 않습니다.
 
- 자세한 내용은 [c 런타임 라이브러리/보안](../c-runtime-library/security-features-in-the-crt.md)기능-crt를 참조 하세요.
+자세한 내용은 [c 런타임 라이브러리/보안](../c-runtime-library/security-features-in-the-crt.md)기능-crt를 참조 하세요.
 
 ## <a name="crbegin"></a>  basic_string_view::crbegin
 
@@ -716,7 +716,7 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 첫 번째 문자부터 앞으로 계산 되는 *ptr*의 문자 수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -748,7 +748,7 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) co
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -777,7 +777,7 @@ constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
 *str*\
@@ -812,7 +812,7 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) 
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 첫 번째 문자에서 앞으로 계산 되는 문자 수입니다 ( *ptr*).
 
 ### <a name="return-value"></a>반환 값
@@ -844,7 +844,7 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -893,7 +893,7 @@ String_view에 포함할 수 있는 최대 문자 수입니다.
 
 ### <a name="remarks"></a>주의
 
-작업에서 길이가 `max_size()` 보다 큰 string_view를 생성 하는 경우 [length_error](../standard-library/length-error-class.md) 형식의 예외가 throw 됩니다.
+작업에서 길이가 [ 보다 큰 string_view를 생성 하는 경우 ](../standard-library/length-error-class.md)length_error`max_size()` 형식의 예외가 throw 됩니다.
 
 ## <a name="op_eq"></a>  basic_string_view::operator=
 
@@ -902,7 +902,7 @@ String_view 또는 변환할 수 있는 문자열 개체를 다른 string_view�
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ```cpp
    string_view s = "Hello";
@@ -935,7 +935,7 @@ constexpr const_reference operator[](size_type offset) const;
 
 소유 하는 개체에서 기본 문자열 데이터를 수정 하거나 삭제 하는 경우 반환 되는 참조가 무효화 될 수 있습니다.
 
-1 또는 2로 설정된 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)로 컴파일하는 경우 문자열 경계 밖에서 요소에 액세스하려고 시도하면 런타임 오류가 발생합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
+\_반복기를 사용 하 여 컴파일할 때 [디버그\_수준](../standard-library/iterator-debug-level.md) 이 1 또는 2로 설정\_string_view 범위 밖의 요소에 액세스 하려고 하면 런타임 오류가 발생 합니다. 자세한 내용은 [Checked Iterators](../standard-library/checked-iterators.md)을 참조하세요.
 
 ## <a name="rbegin"></a>  basic_string_view::rbegin
 
@@ -1015,7 +1015,7 @@ constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 *ptr*\
 멤버 함수가 검색할 C 문자열입니다.
 
-*count*\
+*개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
 *str*\
@@ -1054,7 +1054,7 @@ constexpr basic_string_view substr(size_type offset = 0, size_type count = npos)
 *오프셋*\
 복사본이 생성 된 위치에서 요소를 찾는 인덱스 이며 기본값은 0입니다.
 
-*count*\
+*개수*\
 하위 문자열 (있는 경우)에 포함할 문자 수입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -1074,7 +1074,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *sv*\
 대상 string_view와 포인터 및 크기 값을 교환할 원본 string_view입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<string_view >](../standard-library/string-view.md)\
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
