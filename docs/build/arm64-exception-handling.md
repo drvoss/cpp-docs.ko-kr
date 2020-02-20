@@ -2,12 +2,12 @@
 title: ARM64 예외 처리
 description: ARM64의 windows에서 사용 하는 예외 처리 규칙 및 데이터에 대해 설명 합니다.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276839"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504487"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 예외 처리
 
@@ -23,7 +23,7 @@ Windows의 ARM64는 비동기 하드웨어 생성 예외 및 동기 소프트웨
 
    - 코드를 분석 하는 것은 복잡 합니다. 컴파일러는 해제기에서 디코딩할 수 있는 명령만 생성 하도록 주의 해야 합니다.
 
-   - 해제 코드를 사용 하 여 해제를 완전히 설명할 수 없는 경우, 경우에 따라 명령 디코딩으로 대체 해야 합니다. 이렇게 하면 전반적인 복잡성이 증가 하 고,이를 방지 하는 것이 좋습니다.
+   - 해제 코드를 사용 하 여 해제를 완전히 설명할 수 없는 경우, 경우에 따라 명령 디코딩으로 대체 해야 합니다. 이렇게 하면 전반적인 복잡성이 증가 하므로이를 피해 야 합니다.
 
 1. 중간 프롤로그 및 중간 에필로그에서 해제를 지원 합니다.
 
@@ -35,11 +35,11 @@ Windows의 ARM64는 비동기 하드웨어 생성 예외 및 동기 소프트웨
 
    - 해제 코드는 메모리에서 잠길 수 있으므로 작은 사용 공간은 로드 된 각 이진에 대해 최소한의 오버 헤드를 보장 합니다.
 
-## <a name="assumptions"></a>Assumptions
+## <a name="assumptions"></a>가정
 
 예외 처리 설명에 이러한 가정이 적용 됩니다.
 
-1. Prologs 및 에필로그는 다른 것을 미러링 하는 경향이 있습니다. 이러한 일반적인 특성을 활용 하 여 해제를 설명 하는 데 필요한 메타 데이터의 크기를 크게 줄일 수 있습니다. 함수 본문 내에서 프롤로그의 작업이 실행 취소 되는지 또는 에필로그의 작업이 앞으로 수행 되는지는 중요 하지 않습니다. 두 작업에서 모두 같은 결과가 생성됩니다.
+1. Prologs 및 에필로그는 서로 미러링 하는 경향이 있습니다. 이러한 일반적인 특성을 활용 하 여 해제를 설명 하는 데 필요한 메타 데이터의 크기를 크게 줄일 수 있습니다. 함수 본문 내에서 프롤로그의 작업이 실행 취소 되는지 또는 에필로그의 작업이 앞으로 수행 되는지는 중요 하지 않습니다. 두 작업에서 모두 같은 결과가 생성됩니다.
 
 1. 함수는 전체적으로 비교적 작은 경향이 있습니다. 공간에 대 한 몇 가지 최적화는이 팩트를 사용 하 여 가장 효율적인 데이터 압축을 구현 합니다.
 
@@ -216,7 +216,7 @@ ARM64에 대 한 각 .pdata 레코드의 길이는 8 바이트입니다. 각 레
 
    c. **X** 는 1 비트 필드입니다. 예외 데이터의 유무 (1) 또는 부재 (0)를 나타냅니다.
 
-   d. **E** 는 1 비트 필드입니다. 이는 단일 에필로그를 설명 하는 정보가 나중에 추가 범위 단어 (0)를 요구 하는 대신 헤더 (1)로 압축 됨을 나타냅니다.
+   . **E** 는 1 비트 필드입니다. 이는 단일 에필로그를 설명 하는 정보가 나중에 추가 범위 단어 (0)를 요구 하는 대신 헤더 (1)로 압축 됨을 나타냅니다.
 
    e. **에필로그 개수** 는 **E** 비트의 상태에 따라 두 가지 의미를 갖는 5 비트 필드입니다.
 
@@ -336,7 +336,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 압축 해제 데이터가 포함 된 .pdata 레코드의 형식은 다음과 같습니다.
 
-압축 된 해제 데이터를 ![포함 하는 .pdata 레코드 (](media/arm64-exception-handling-packed-unwind-data.png "압축 해제 데이터가 포함 된 .pdata 레코드") )
+![압축 된 해제 데이터가 있는 .pdata 레코드](media/arm64-exception-handling-packed-unwind-data.png "압축 된 해제 데이터가 있는 .pdata 레코드")
 
 필드는 다음과 같습니다.
 
@@ -375,14 +375,14 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **Regi** < = 10|RegI/2 + **regi** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **Regf** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 & &<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**Cr** = = 00 \|\| **cr**= = 01) & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**Cr** = = 00 \|\| **cr**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* **CR** = = 01이 고 **regi** 가 홀수인 경우 1 단계에서 2 단계와 마지막 save_rep를 하나의 save_regp 병합 합니다.
 

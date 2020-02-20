@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894348"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473855"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -93,7 +93,7 @@ en-US
 
 **_wsetlocale** 은 **setlocale**의 와이드 문자 버전입니다. **_wsetlocale** 의 *로캘* 인수 및 반환 값은 와이드 문자열입니다. **_wsetlocale** 와 **setlocale** 은 동일 하 게 작동 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -118,7 +118,7 @@ en-US
 
 `setlocale( LC_ALL, "C" );`
 
-*로캘* 인수는 로캘 이름, 언어 문자열, 언어 문자열 및 국가/지역 코드, 코드 페이지, 언어 문자열, 국가/지역 코드 및 코드 페이지를 사용할 수 있습니다. 사용 가능한 로캘 이름, 언어, 국가/지역 코드 및 코드 페이지의 집합에는 문자당 2바이트 이상을 필요로 하는 코드 페이지를 제외하고, Windows NLS API에서 지원하는 모든 항목이 포함됩니다(예: UTF-7 및 UTF-8). UTF-8 또는 u t f-8의 코드 페이지 값을 제공 하는 경우 **setlocale** 이 실패 하 고 **NULL**이 반환 됩니다. **Setlocale** 에서 지 원하는 로캘 이름 집합은 [로캘 이름, 언어 및 국가/지역 문자열](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)에 설명 되어 있습니다. **Setlocale** 에서 지 원하는 언어 및 국가/지역 문자열 집합은 [언어 문자열](../../c-runtime-library/language-strings.md) 및 [국가/지역 문자열](../../c-runtime-library/country-region-strings.md)에 나열 됩니다. 코드에 포함되거나 스토리지에 직렬화된 로캘 문자열의 성능과 유지 관리를 위해 로캘 이름 형식을 사용하는 것이 좋습니다. 로캘 이름 문자열은 언어와 국가/지역 이름 형식보다 운영 체제 업데이트에 의해 변경될 가능성이 적습니다.
+*로캘* 인수는 로캘 이름, 언어 문자열, 언어 문자열 및 국가/지역 코드, 코드 페이지, 언어 문자열, 국가/지역 코드 및 코드 페이지를 사용할 수 있습니다. 사용 가능한 로캘 이름, 언어, 국가/지역 코드 및 코드 페이지의 집합에는 Windows NLS API에서 지 원하는 모든 항목이 포함 됩니다. **Setlocale** 에서 지 원하는 로캘 이름 집합은 [로캘 이름, 언어 및 국가/지역 문자열](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)에 설명 되어 있습니다. **Setlocale** 에서 지 원하는 언어 및 국가/지역 문자열 집합은 [언어 문자열](../../c-runtime-library/language-strings.md) 및 [국가/지역 문자열](../../c-runtime-library/country-region-strings.md)에 나열 됩니다. 코드에 포함되거나 스토리지에 직렬화된 로캘 문자열의 성능과 유지 관리를 위해 로캘 이름 형식을 사용하는 것이 좋습니다. 로캘 이름 문자열은 언어와 국가/지역 이름 형식보다 운영 체제 업데이트에 의해 변경될 가능성이 적습니다.
 
 *로캘* 인수로 전달 되는 null 포인터는에 국제 환경을 설정 하는 대신 **setlocale** 을 쿼리하도록 지시 합니다. *로캘* 인수가 null 포인터인 경우 프로그램의 현재 로캘 설정은 변경 되지 않습니다. 대신 **setlocale** 은 스레드의 현재 로캘 *범주* 와 연결 된 문자열에 대 한 포인터를 반환 합니다. *Category* 인수가 **LC_ALL**경우 함수는 세미콜론으로 구분 된 각 범주의 현재 설정을 나타내는 문자열을 반환 합니다. 예: 호출 시퀀스
 
@@ -130,7 +130,7 @@ setlocale(LC_MONETARY, "fr-FR");
 printf("%s\n", setlocale(LC_ALL, NULL));
 ```
 
-반환 값
+returns
 
 ```Output
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
@@ -196,20 +196,20 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 `setlocale( LC_ALL, "English_United States.1252");`
 
-자세한 내용은 [C/C++ 전처리기 참조](../../preprocessor/c-cpp-preprocessor-reference.md)에서 [setlocale](../../preprocessor/setlocale.md) pragma 지시문을 참조하세요.
+자세한 내용은 [C/C++ 전처리기 참조](../../preprocessor/setlocale.md)에서 [setlocale](../../preprocessor/c-cpp-preprocessor-reference.md) pragma 지시문을 참조하세요.
 
 함수 [_configthreadlocale](configthreadlocale.md) 은 **setlocale** 이 프로그램의 모든 스레드 로캘 또는 호출 스레드의 로캘로 영향을 주는지 여부를 제어 하는 데 사용 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```C
 // crt_setlocale.c
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [로캘 이름, 언어 및 국가/지역 문자열](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
@@ -325,7 +325,7 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strcoll 함수](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
