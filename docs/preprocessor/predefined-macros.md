@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305473"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473854"
 ---
 # <a name="predefined-macros"></a>미리 정의된 매크로
 
@@ -477,6 +477,9 @@ MSVC는 미리 정의 된 추가 매크로를 지원 합니다.
    |Visual Studio 2019 버전 16.1|1921|
    |Visual Studio 2019 버전 16.2|1922|
    |Visual Studio 2019 버전 16.3|1923|
+   |Visual Studio 2019 버전 16.4|1924|
+   |Visual Studio 2019 버전 16.5|1925|
+   |Visual Studio 2019 버전 16.6|1926|
 
    지정 된 버전의 Visual Studio에서 컴파일러 릴리스 또는 업데이트를 테스트 하려면 `>=` 연산자를 사용 합니다. 조건부 지시문에서이 메서드를 사용 하 여 알려진 버전과 `_MSC_VER` 비교할 수 있습니다. 비교할 상호 배타적인 버전이 여러 개 있는 경우 비교를 버전 번호의 내림차순으로 정렬 합니다. 예를 들어이 코드는 Visual Studio 2017 이상에서 릴리스된 컴파일러를 확인 합니다. 그런 다음 Visual Studio 2015에서 또는 그 이후에 릴리스된 컴파일러를 확인 합니다. 그런 다음 Visual Studio 2015 이전에 릴리스된 모든 컴파일러를 확인 합니다.
 
