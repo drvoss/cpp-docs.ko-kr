@@ -17,7 +17,7 @@ ms.locfileid: "69631051"
 
 ::: moniker range=">=vs-2019"
 
-C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio에서 만든 항목이며 좀 더 어려운 문제인 계산기 앱을 살펴보겠습니다.
+C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio를 사용해 좀 더 어려운 문제인 계산기 앱을 개발해 보겠습니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -387,7 +387,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 ::: moniker range="<vs-2019"
 
-C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio에서 만든 항목이며 좀 더 어려운 문제인 계산기 앱을 살펴보겠습니다.
+C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio를 사용해 좀 더 어려운 문제인 계산기 앱을 개발해 보겠습니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
