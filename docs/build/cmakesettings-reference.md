@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518207"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600039"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 스키마 참조
 
@@ -31,7 +31,7 @@ IDE에서 구성을 추가 하거나 제거한 다음 JSON 파일에서 직접 �
 
 `configuration`에는 다음과 같은 속성이 있습니다.
 
-- `addressSDanitizerEnabled`: `true` Sanitizer (Windows에서 실험적) 주소를 사용 하 여 프로그램을 컴파일합니다. Linux에서 최상의 결과를 위해-fno-프레임 포인터 및 컴파일러 최적화 수준-Os 또는-Oo를 사용 하 여 컴파일합니다.
+- `addressSanitizerEnabled`: `true` Sanitizer (Windows에서 실험적) 주소를 사용 하 여 프로그램을 컴파일합니다. Linux에서 최상의 결과를 위해-fno-프레임 포인터 및 컴파일러 최적화 수준-Os 또는-Oo를 사용 하 여 컴파일합니다.
 - `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 환경 변수를 통해 AddressSanitizer에 전달 된 런타임 플래그입니다. Format: 플래그 1 = 값: 플래그 2 = value2
 - `buildCommandArgs`: --빌드 -- 후 CMake로 전달되는 네이티브 빌드 스위치를 지정합니다. 예를 들어 Ninja 생성기를 사용하는 경우 -v를 전달하면 Ninja에서 명령줄을 출력하도록 강제합니다. Ninja 명령에 대한 자세한 정보는 [Ninja 명령줄 인수](#ninja)를 참조하세요.
 - `buildRoot`: CMake가 선택한 생성기에 대한 빌드 스크립트를 생성하는 디렉터리를 지정합니다.  **-DCMAKE_BINARY_DIR** 스위치에 매핑되고 *cmakecache.txt* 를 만들 위치를 지정 합니다. 폴더가 없으면 해당 폴더가 만들어집니다. 지원되는 매크로에는 `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`이 포함됩니다.
@@ -43,8 +43,8 @@ IDE에서 구성을 추가 하거나 제거한 다음 JSON 파일에서 직접 �
 - `codeAnalysisRuleset`: 코드 분석을 실행할 때 사용할 규칙 집합을 지정합니다. 이는 Visual Studio에서 설치한 규칙 집합 파일의 전체 경로 또는 파일 이름이 될 수 있습니다.
 - `configurationType`: 선택한 생성기의 빌드 형식 구성을 지정합니다. 다음 중 하나일 수 있습니다.
 
-  - Debug
-  - Release
+  - 디버그
+  - 해제
   - MinSizeRel
   - RelWithDebInfo
   
@@ -211,7 +211,7 @@ CMakeLists .txt 파일에서 모든 환경 변수는 `$ENV{variable_name}`구문
 }
 ```
 
-다음 예제에서 x86 디버그 구성은 **BuildDir** 속성에 대한 자체 값을 정의합니다. 이 값은 **BuildRoot**가 `D:\custom-builddir\x86-Debug`로 평가하도록 글로벌 **BuildDir** 속성이 설정한 값을 재정의합니다.
+다음 예제에서 x86 디버그 구성은 **BuildDir** 속성에 대한 자체 값을 정의합니다. 이 값은 **BuildRoot**가 **로 평가하도록 글로벌** BuildDir`D:\custom-builddir\x86-Debug` 속성이 설정한 값을 재정의합니다.
 
 ```json
 {
@@ -255,7 +255,7 @@ CMakeLists .txt 파일에서 모든 환경 변수는 `$ENV{variable_name}`구문
 }
 ```
 
-## <a name="macros"></a>매크로
+## <a name="macros"></a>Macros
 
 *Cmakesettings*에서 다음 매크로를 사용할 수 있습니다. json:
 
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|옵션|설명|
+|옵션|Description|
 |--------------|------------|
 | --version  | Ninja 버전("1.7.1")을 출력합니다.|
 |   -C DIR   | 다른 작업을 수행하기 전에 DIR로 변경합니다.|
