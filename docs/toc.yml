@@ -2455,7 +2455,7 @@
 - name: Linux 개발
   href: linux/
 - name: 플랫폼 간 모바일 개발
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: C++/CLI를 사용한 .NET 개발
   expanded: false
   items:
