@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127511"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855543"
 ---
 # <a name="cview-class"></a>CView 클래스
 
@@ -69,17 +69,17 @@ ms.locfileid: "77127511"
 class AFX_NOVTABLE CView : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CView:: CView](#cview)|`CView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CView::D oPreparePrinting](#doprepareprinting)|인쇄 대화 상자를 표시 하 고 프린터 장치 컨텍스트를 만듭니다. `OnPreparePrinting` 멤버 함수를 재정의할 때를 호출 합니다.|
 |[CView:: GetDocument](#getdocument)|뷰와 연결 된 문서를 반환 합니다.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>보호된 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CView:: OnActivateFrame](#onactivateframe)|뷰를 포함 하는 프레임 창이 활성화 또는 비활성화 되 면 호출 됩니다.|
 |[CView:: OnActivateView](#onactivateview)|뷰가 활성화 될 때 호출 됩니다.|
@@ -533,7 +533,7 @@ virtual DROPEFFECT OnDropEx(
 사용자가 현재 키 상태를 기준으로 기본 drop 작업에 대해 선택한 효과입니다. DROPEFFECT_NONE 수 있습니다. Drop 효과는 설명 섹션에 설명 되어 있습니다.
 
 *dropList*<br/>
-Drop 소스가 지 원하는 drop 효과 목록입니다. Drop effect 값은 비트 or ( **&#124;**) 연산을 사용 하 여 결합할 수 있습니다. Drop 효과는 설명 섹션에 설명 되어 있습니다.
+Drop 소스가 지 원하는 drop 효과 목록입니다. Drop effect 값은 비트 or ( **&#124;** ) 연산을 사용 하 여 결합할 수 있습니다. Drop 효과는 설명 섹션에 설명 되어 있습니다.
 
 *point*<br/>
 뷰 클라이언트 영역을 기준으로 하는 현재 마우스 위치입니다.

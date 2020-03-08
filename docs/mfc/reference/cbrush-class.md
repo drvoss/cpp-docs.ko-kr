@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507430"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876050"
 ---
 # <a name="cbrush-class"></a>CBrush 클래스
 
@@ -41,17 +41,17 @@ Windows GDI(그래픽 디바이스 인터페이스) 브러시를 캡슐화합니
 class CBrush : public CGdiObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|`CBrush` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|[Logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush) 구조체에 지정 된 스타일, 색 및 패턴으로 브러시를 초기화 합니다.|
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|DIB (장치 독립적 비트맵)로 지정 된 패턴을 사용 하 여 브러시를 초기화 합니다.|
@@ -59,22 +59,22 @@ class CBrush : public CGdiObject
 |[CBrush::CreatePatternBrush](#createpatternbrush)|비트맵으로 지정 된 패턴을 사용 하 여 브러시를 초기화 합니다.|
 |[CBrush::CreateSolidBrush](#createsolidbrush)|지정 된 단색으로 브러시를 초기화 합니다.|
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|기본 시스템 색의 브러시를 만듭니다.|
-|[CBrush::FromHandle](#fromhandle)|`CBrush` Windows`HBRUSH` 개체에 대 한 핸들을 지정 하면 개체에 대 한 포인터를 반환 합니다.|
+|[CBrush::FromHandle](#fromhandle)|Windows `HBRUSH` 개체에 대 한 핸들을 지정 하는 경우 `CBrush` 개체에 대 한 포인터를 반환 합니다.|
 |[CBrush::GetLogBrush](#getlogbrush)|[Logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush) 구조체를 가져옵니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CBrush:: operator HBRUSH](#operator_hbrush)|`CBrush` 개체에 연결 된 Windows 핸들을 반환 합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CBrush` 개체를 사용 하려면 `CBrush` 개체를 생성 하 `CDC` 고 브러시를 필요로 하는 멤버 함수에 전달 합니다.
+`CBrush` 개체를 사용 하려면 `CBrush` 개체를 생성 하 고 브러시를 필요로 하는 모든 `CDC` 멤버 함수로 전달 합니다.
 
 브러시는 단색, 빗금 또는 패턴화 될 수 있습니다.
 
-에 대 `CBrush`한 자세한 내용은 [그래픽 개체](../../mfc/graphic-objects.md)를 참조 하세요.
+`CBrush`에 대 한 자세한 내용은 [그래픽 개체](../../mfc/graphic-objects.md)를 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
 
@@ -109,24 +109,24 @@ explicit CBrush(CBitmap* pBitmap);
 
 - HS_BDIAGONAL 하향 해치 (왼쪽에서 오른쪽)를 45도로
 
-- HS_CROSS 가로 및 세로 교차
+- HS_CROSS 가로 및 세로 교차 무늬
 
-- 45도의 HS_DIAGCROSS
+- 45도에서 교차 하는 HS_DIAGCROSS
 
-- HS_FDIAGONAL 상향 해치 (왼쪽에서 오른쪽) 45도
+- HS_FDIAGONAL 위쪽 해치 (왼쪽에서 오른쪽)를 45도로
 
 - HS_HORIZONTAL 가로 해치
 
 - HS_VERTICAL 세로 해치
 
 *pBitmap*<br/>
-브러시가 그리는 데 `CBitmap` 사용 되는 비트맵을 지정 하는 개체를 가리킵니다.
+브러시가 칠하는 비트맵을 지정 하는 `CBitmap` 개체를 가리킵니다.
 
 ### <a name="remarks"></a>설명
 
-`CBrush`에는 네 개의 오버 로드 된 생성자가 있습니다. 인수가 없는 생성자는 초기화 되지 않은 `CBrush` 개체를 생성 한 후에 사용할 수 있습니다.
+`CBrush`에는 오버 로드 된 생성자 4 개가 있습니다. 인수가 없는 생성자는 초기화 된 `CBrush` 개체를 구성 하 여 사용 하기 전에 초기화 해야 합니다.
 
-인수 없이 생성자를 사용 하는 경우 [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), `CBrush` [CreatePatternBrush](#createpatternbrush)또는 [를 사용 하 여 결과 개체를 초기화 해야 합니다. CreateDIBPatternBrush](#createdibpatternbrush). 인수를 사용 하는 생성자 중 하나를 사용 하는 경우 추가 초기화가 필요 하지 않습니다. 인수가 있는 생성자는 오류가 발생 하는 경우 예외를 throw 할 수 있지만 인수가 없는 생성자는 항상 성공 합니다.
+인수 없이 생성자를 사용 하는 경우 [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)또는 [CreateDIBPatternBrush](#createdibpatternbrush)를 사용 하 여 결과 `CBrush` 개체를 초기화 해야 합니다. 인수를 사용 하는 생성자 중 하나를 사용 하는 경우 추가 초기화가 필요 하지 않습니다. 인수가 있는 생성자는 오류가 발생 하는 경우 예외를 throw 할 수 있지만 인수가 없는 생성자는 항상 성공 합니다.
 
 단일 [Colorref](/windows/win32/gdi/colorref) 매개 변수가 있는 생성자는 지정 된 색을 사용 하 여 단색 브러시를 생성 합니다. 색은 RGB 값을 지정 하 고 WINDOWS의 RGB 매크로를 사용 하 여 생성할 수 있습니다. 넣기.
 
@@ -151,7 +151,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 *lpLogBrush*<br/>
 브러시에 대 한 정보를 포함 하는 [logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -185,16 +185,16 @@ BOOL CreateDIBPatternBrush(
 압축 된 DIB (장치 독립적 비트맵)를 포함 하는 전역 메모리 개체를 식별 합니다.
 
 *nUsage*<br/>
-[BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) 데이터 구조의 `bmiColors[]` 필드 ("압축 된 DIB"의 일부)에 명시적 RGB 값이나 인덱스가 현재 인식되는 논리 색상표에 포함되는지 여부를 지정합니다. 매개 변수는 다음 값 중 하나 여야 합니다.
+`bmiColors[]`BITMAPINFO[ 데이터 구조의 ](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) 필드 ("압축 된 DIB"의 일부)에 명시적 RGB 값이나 인덱스가 현재 인식되는 논리 색상표에 포함되는지 여부를 지정합니다. 매개 변수는 다음 값 중 하나 여야 합니다.
 
-- DIB_PAL_COLORS color 테이블은 16 비트 인덱스 배열로 구성 됩니다.
+- 색 테이블은 16 비트 인덱스 배열로 구성 됩니다 DIB_PAL_COLORS 합니다.
 
-- DIB_RGB_COLORS color 테이블은 리터럴 RGB 값을 포함 합니다.
+- 색상표 DIB_RGB_COLORS 리터럴 RGB 값을 포함 합니다.
 
 *lpPackedDIB*<br/>
-바로 뒤에 비트맵의 픽셀을 정의 `BITMAPINFO` 하는 바이트 배열로 구성 된 압축 된 DIB를 가리킵니다.
+비트맵의 픽셀을 정의 하는 바이트 배열로 바로 다음에 `BITMAPINFO` 구조체로 구성 된 압축 된 DIB를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -206,17 +206,17 @@ BOOL CreateDIBPatternBrush(
 
 - 첫 번째 버전에서 DIB에 대 한 핸들을 가져오려면 Windows `GlobalAlloc` 함수를 호출 하 여 전역 메모리 블록을 할당 한 다음 압축 된 DIB로 메모리를 채웁니다.
 
-- 두 번째 버전에서는를 호출 `GlobalAlloc` 하 여 압축 된 DIB에 대해 메모리를 할당할 필요가 없습니다.
+- 두 번째 버전에서는 압축 된 DIB에 대해 메모리를 할당 하기 위해 `GlobalAlloc`를 호출할 필요가 없습니다.
 
-압축 된 DIB는 비트맵의 `BITMAPINFO` 픽셀을 정의 하는 바이트 배열이 바로 뒤에 오는 데이터 구조로 구성 됩니다. 채우기 패턴으로 사용 되는 비트맵은 8 픽셀 x 픽셀 이어야 합니다. 비트맵이 큰 경우 Windows는 비트맵의 왼쪽 위 모퉁이에 있는 처음 8 개 행과 8 열 픽셀에 해당 하는 비트만 사용 하 여 채우기 패턴을 만듭니다.
+압축 된 DIB는 비트맵의 픽셀을 정의 하는 바이트 배열로 바로 다음에 `BITMAPINFO` 데이터 구조로 구성 됩니다. 채우기 패턴으로 사용 되는 비트맵은 8 픽셀 x 픽셀 이어야 합니다. 비트맵이 큰 경우 Windows는 비트맵의 왼쪽 위 모퉁이에 있는 처음 8 개 행과 8 열 픽셀에 해당 하는 비트만 사용 하 여 채우기 패턴을 만듭니다.
 
 응용 프로그램에서 단색 장치 컨텍스트로 2 색 DIB 패턴 브러시를 선택 하면 Windows에서 DIB에 지정 된 색을 무시 하 고 대신 장치 컨텍스트의 현재 텍스트와 배경색을 사용 하 여 패턴 브러시를 표시 합니다. 텍스트 색을 사용 하 여 DIB의 첫 번째 색 (DIB 색 테이블의 오프셋 0)에 매핑되는 픽셀을 표시 합니다. 배경색을 사용 하 여 두 번째 색으로 매핑되는 픽셀 (색 테이블의 오프셋 1)이 표시 됩니다.
 
 다음 Windows 함수를 사용 하는 방법에 대 한 자세한 내용은 Windows SDK를 참조 하세요.
 
-- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) 이 함수는 3.0 이전 버전의 Windows 용으로 작성 된 응용 프로그램과의 호환성을 위해서만 제공 됩니다 `CreateDIBPatternBrushPt` . 함수를 사용 합니다.
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) (이 함수는 3.0 이전 버전의 Windows 용으로 작성 된 응용 프로그램과의 호환성을 위해서만 제공 됩니다. `CreateDIBPatternBrushPt` 함수를 사용 하십시오.)
 
-- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) 이 함수는 Win32 기반 응용 프로그램에 사용 해야 합니다.
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) (이 함수는 Win32 기반 응용 프로그램에 사용 해야 합니다.)
 
 - [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
@@ -241,11 +241,11 @@ BOOL CreateHatchBrush(
 
 - HS_BDIAGONAL 하향 해치 (왼쪽에서 오른쪽)를 45도로
 
-- HS_CROSS 가로 및 세로 교차
+- HS_CROSS 가로 및 세로 교차 무늬
 
-- 45도의 HS_DIAGCROSS
+- 45도에서 교차 하는 HS_DIAGCROSS
 
-- HS_FDIAGONAL 상향 해치 (왼쪽에서 오른쪽) 45도
+- HS_FDIAGONAL 위쪽 해치 (왼쪽에서 오른쪽)를 45도로
 
 - HS_HORIZONTAL 가로 해치
 
@@ -254,7 +254,7 @@ BOOL CreateHatchBrush(
 *crColor*<br/>
 브러시의 전경색을 RGB 색 (해치 색)으로 지정 합니다. 자세한 내용은 Windows SDK의 [Colorref](/windows/win32/gdi/colorref) 를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -279,7 +279,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 *pBitmap*<br/>
 비트맵을 식별 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -312,7 +312,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 *crColor*<br/>
 브러시의 색을 지정 하는 [Colorref](/windows/win32/gdi/colorref) 구조체입니다. 색은 RGB 값을 지정 하 고 WINDOWS의 RGB 매크로를 사용 하 여 생성할 수 있습니다. 넣기.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -320,7 +320,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 
 이후에 브러시를 모든 장치 컨텍스트의 현재 브러시로 선택할 수 있습니다.
 
-응용 프로그램이에서 `CreateSolidBrush`만든 브러시를 사용 하 여 완료 되 면 장치 컨텍스트에서 브러시를 선택 해야 합니다.
+응용 프로그램이 `CreateSolidBrush`에서 만든 브러시를 사용 하 여 완료 되 면 장치 컨텍스트에서 브러시를 선택 해야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -339,7 +339,7 @@ BOOL CreateSysColorBrush(int nIndex);
 *nIndex*<br/>
 색 인덱스를 지정 합니다. 이 값은 21 개의 창 요소 중 하나를 칠하는 데 사용 되는 색에 해당 합니다. 값 목록은 Windows SDK의 [Getsyscolor](/windows/win32/api/winuser/nf-winuser-getsyscolor) 를 참조 하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -347,7 +347,7 @@ BOOL CreateSysColorBrush(int nIndex);
 
 이후에 브러시를 모든 장치 컨텍스트의 현재 브러시로 선택할 수 있습니다.
 
-응용 프로그램이에서 `CreateSysColorBrush`만든 브러시를 사용 하 여 완료 되 면 장치 컨텍스트에서 브러시를 선택 해야 합니다.
+응용 프로그램이 `CreateSysColorBrush`에서 만든 브러시를 사용 하 여 완료 되 면 장치 컨텍스트에서 브러시를 선택 해야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -355,7 +355,7 @@ BOOL CreateSysColorBrush(int nIndex);
 
 ##  <a name="fromhandle"></a>  CBrush::FromHandle
 
-Windows [hbrush](#operator_hbrush) 개체에 `CBrush` 대 한 핸들을 지정 하면 개체에 대 한 포인터를 반환 합니다.
+Windows [Hbrush](#operator_hbrush) 개체에 대 한 핸들을 지정 하는 경우 `CBrush` 개체에 대 한 포인터를 반환 합니다.
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -366,13 +366,13 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 *hBrush*<br/>
 Windows GDI 브러시에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 `CBrush` 개체에 대 한 포인터이 고, 그렇지 않으면 NULL입니다.
+성공 하는 경우 `CBrush` 개체에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-개체가 핸들에 아직 연결 되지 않은 경우 임시 `CBrush` 개체가 생성 되 고 연결 됩니다. `CBrush` 이 임시 `CBrush` 개체는 다음에 응용 프로그램이 이벤트 루프에서 유휴 시간을 초과할 때 까지만 유효 합니다. 지금은 모든 임시 그래픽 개체가 삭제 됩니다. 즉, 임시 개체는 하나의 창 메시지를 처리 하는 동안에만 유효 합니다.
+`CBrush` 개체가 핸들에 아직 연결 되지 않은 경우 임시 `CBrush` 개체가 만들어지고 연결 됩니다. 이 임시 `CBrush` 개체는 다음에 응용 프로그램의 이벤트 루프가 유휴 시간을 초과할 때 까지만 유효 합니다. 지금은 모든 임시 그래픽 개체가 삭제 됩니다. 즉, 임시 개체는 하나의 창 메시지를 처리 하는 동안에만 유효 합니다.
 
 그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 Windows SDK의 [그래픽 개체](/windows/win32/gdi/graphic-objects) 를 참조 하세요.
 
@@ -382,7 +382,7 @@ Windows GDI 브러시에 대 한 핸들입니다.
 
 ##  <a name="getlogbrush"></a>  CBrush::GetLogBrush
 
-`LOGBRUSH` 구조체를 검색 하려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 `LOGBRUSH` 구조체를 검색 합니다.
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -393,7 +393,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 *pLogBrush*<br/>
 브러시에 대 한 정보를 포함 하는 [logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하 고 *pLogBrush* 가 유효한 포인터인 경우 반환 값은 버퍼에 저장 된 바이트 수입니다.
 
@@ -403,9 +403,9 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 
 ### <a name="remarks"></a>설명
 
-구조체 `LOGBRUSH` 는 브러시의 스타일, 색 및 패턴을 정의 합니다.
+`LOGBRUSH` 구조체는 브러시의 스타일, 색 및 패턴을 정의 합니다.
 
-예를 들어를 `GetLogBrush` 호출 하 여 비트맵의 특정 색 또는 패턴을 일치 시킵니다.
+예를 들어 비트맵의 특정 색 또는 패턴과 일치 하도록 `GetLogBrush`를 호출 합니다.
 
 ### <a name="example"></a>예제
 
@@ -419,9 +419,9 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 operator HBRUSH() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 `CBrush` 개체가 나타내는 Windows GDI 개체에 대 한 핸들이 고, 그렇지 않으면 NULL입니다.
+성공 하면 `CBrush` 개체가 나타내는 Windows GDI 개체에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -433,7 +433,7 @@ operator HBRUSH() const;
 
 [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 클래스](../../mfc/reference/cgdiobject-class.md)<br/>

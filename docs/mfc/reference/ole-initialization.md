@@ -8,26 +8,26 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502020"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855694"
 ---
 # <a name="ole-initialization"></a>OLE 초기화
 
-응용 프로그램에서 OLE 시스템 서비스를 사용 하려면 OLE 시스템 Dll을 초기화 하 고 Dll이 올바른 버전 인지 확인 해야 합니다. 함수 `AfxOleInit` 는 OLE 시스템 dll을 초기화 합니다.
+응용 프로그램에서 OLE 시스템 서비스를 사용 하려면 OLE 시스템 Dll을 초기화 하 고 Dll이 올바른 버전 인지 확인 해야 합니다. `AfxOleInit` 함수는 OLE 시스템 Dll을 초기화 합니다.
 
 ### <a name="ole-initialization"></a>OLE 초기화
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|OLE 라이브러리를 초기화 합니다.|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|OLE 컨트롤의 포함을 지원할 수 있도록 `InitInstance` 응용 프로그램 개체의 함수에서이 함수를 호출 합니다.|
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|응용 프로그램 개체의 `InitInstance` 함수에서이 함수를 호출 하 여 OLE 컨트롤의 포함을 지원할 수 있습니다.|
 
-## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
 
-OLE 컨트롤의 포함을 지원할 수 있도록 `InitInstance` 응용 프로그램 개체의 함수에서이 함수를 호출 합니다.
+응용 프로그램 개체의 `InitInstance` 함수에서이 함수를 호출 하 여 OLE 컨트롤의 포함을 지원할 수 있습니다.
 
 ### <a name="syntax"></a>구문
 
@@ -43,7 +43,7 @@ OLE 컨트롤 (현재 ActiveX 컨트롤 이라고 함)에 대 한 자세한 내�
 
 **헤더:** afxdisp.h
 
-##  <a name="afxoleinit"></a>  AfxOleInit
+##  <a name="afxoleinit"></a>AfxOleInit
 
 응용 프로그램에 대 한 OLE 지원을 초기화 합니다.
 
@@ -51,7 +51,7 @@ OLE 컨트롤 (현재 ActiveX 컨트롤 이라고 함)에 대 한 자세한 내�
 BOOL AFXAPI AfxOleInit();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 초기화가 실패할 경우 0입니다. 잘못 된 버전의 OLE 시스템 Dll이 설치 되어 있기 때문일 수 있습니다.
 
@@ -67,12 +67,12 @@ MFC 응용 프로그램에 대 한 OLE 지원을 초기화 하려면이 함수�
 >  **AfxOleInit** 를 MFC DLL에서 호출 하는 경우 호출이 실패 합니다. 함수는 DLL에서 호출 되는 경우 호출 응용 프로그램에서 OLE 시스템을 이전에 초기화 한 것으로 가정 하므로 오류가 발생 합니다.
 
 > [!NOTE]
->  MFC 응용 프로그램을 STA (단일 스레드 아파트)로 초기화 해야 합니다. `InitInstance` 재정의에서 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 를 호출 하는 경우 COINIT_MULTITHREADED 대신 COINIT_APARTMENTTHREADED를 지정 합니다.
+>  MFC 응용 프로그램은 STA(단일 스레드 아파트)로 초기화해야 합니다. `InitInstance` 재정의에서 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 를 호출 하는 경우 COINIT_MULTITHREADED 아닌 COINIT_APARTMENTTHREADED를 지정 합니다.
 
 ### <a name="requirements"></a>요구 사항
 
 **헤더:** afxdisp.h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
