@@ -6,13 +6,13 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448722"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856698"
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 연산자
+# <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 연산자
 
 |||
 |-|-|
@@ -32,13 +32,13 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_map` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_map이 같지 않으면 **true**이고, hash_map이 같으면 **false**입니다.
 
@@ -46,7 +46,7 @@ hash_map이 같지 않으면 **true**이고, hash_map이 같으면 **false**입�
 
 hash_map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_map은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.
 
-[< Hash_map](hash-map.md) 의 멤버는 [Stdext 네임 스페이스](stdext-namespace.md)의 > 헤더 파일 hash_set > 및 [<](hash-set.md) 합니다.
+<의 멤버는 [stdext 네임 스페이스](stdext-namespace.md)의 hash_set 헤더 파일을 > 하 고 [<](hash-set.md) [hash_map](hash-map.md) 합니다.
 
 ### <a name="example"></a>예제
 
@@ -101,13 +101,13 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_map` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 hash_map이 연산자 우변의 hash_map과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -168,13 +168,13 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_multimap이 같지 않으면 **true**이고, hash_multimap이 같으면 **false**입니다.
 
@@ -235,13 +235,13 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 hash_multimap이 연산자 우변의 hash_multimap과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -289,6 +289,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<hash_map>](hash-map.md)

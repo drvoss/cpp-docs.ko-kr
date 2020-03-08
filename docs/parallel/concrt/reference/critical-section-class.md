@@ -15,11 +15,11 @@ helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
 ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143080"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867171"
 ---
 # <a name="critical_section-class"></a>critical_section 클래스
 
@@ -33,13 +33,13 @@ class critical_section;
 
 ## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 형식 정의
+### <a name="public-typedefs"></a>공용 Typedefs
 
 |속성|Description|
 |----------|-----------------|
 |`native_handle_type`|`critical_section` 개체에 대한 참조입니다.|
 
-### <a name="public-classes"></a>공용 클래스
+### <a name="public-classes"></a>public 클래스
 
 |속성|Description|
 |----------|-----------------|

@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454830"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873991"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 함수
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 함수
 
 |||
 |-|-|
@@ -34,22 +34,22 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*키인지*\
+*키*\
 키 형식입니다.
 
 *Ty*\
 매핑된 형식입니다.
 
-*해시로*\
+*해시*\
 해시 함수 개체 형식입니다.
 
 *Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*#C4*\
+*할당*\
 할당자 클래스입니다.
 
-*비어*\
+*왼쪽*\
 교환할 첫 번째 컨테이너입니다.
 
 *오른쪽*\
@@ -127,22 +127,22 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*키인지*\
+*키*\
 키 형식입니다.
 
 *Ty*\
 매핑된 형식입니다.
 
-*해시로*\
+*해시*\
 해시 함수 개체 형식입니다.
 
 *Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*#C4*\
+*할당*\
 할당자 클래스입니다.
 
-*비어*\
+*왼쪽*\
 교환할 첫 번째 컨테이너입니다.
 
 *오른쪽*\
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<unordered_map>](../standard-library/unordered-map.md)

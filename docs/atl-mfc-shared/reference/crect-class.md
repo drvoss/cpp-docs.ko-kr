@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821371"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866534"
 ---
 # <a name="crect-class"></a>CRect 클래스
 
@@ -730,9 +730,9 @@ void NormalizeRect() throw();
 사각형은 Windows에서 일반적으로 좌표에 사용 하는 네 번째 사분면 위치에 대해 정규화 됩니다. `NormalizeRect`는 위쪽 및 아래쪽 값을 비교 하 고 위쪽이 아래쪽 보다 크면 바꿉니다. 마찬가지로 왼쪽이 오른쪽 보다 큰 경우 왼쪽 및 오른쪽 값을 바꿉니다. 이 함수는 다양 한 매핑 모드와 반전 된 사각형을 처리할 때 유용 합니다.
 
 > [!NOTE]
-> 다음 `CRect` 멤버 함수는 정상적으로 작동 하려면 [Height](#height), [Width](#width), [Size](#size), [isUnionRect tempty](#isrectempty), [ptinrect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operator = =](#operator_eq_eq), [operator! =](#operator_neq), [연산자 &#124; ](#operator_or), operator [ &#124;=](#operator_or_eq), [operator &](#operator_amp)및 [operator & =](#operator_amp_eq)와 같이 정상적으로 작동 하기 위해 정규화 된 사각형이 필요 합니다.
+> 다음 `CRect` 멤버 함수는 정상적으로 작동 하기 위해 정규화 된 사각형이 필요 합니다. [Height](#height), [Width](#width), [Size](#size), [isrectempty](#isrectempty), [ptinrect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operator = =](#operator_eq_eq), [operator! =](#operator_neq), [연산자 &#124; ](#operator_or), [operator &#124;=](#operator_or_eq), [operator &](#operator_amp)및 [operator & =](#operator_amp_eq)입니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ```cpp
 CRect rect1(110, 100, 250, 310);

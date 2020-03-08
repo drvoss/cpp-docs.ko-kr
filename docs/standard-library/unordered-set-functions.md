@@ -6,11 +6,11 @@ f1_keywords:
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257769"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890749"
 ---
 # <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 함수
 
@@ -45,7 +45,7 @@ void swap(
 *오른쪽*\
 교환할 두 번째 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수는 `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`을 실행합니다.
 
@@ -133,7 +133,7 @@ void swap(
 *오른쪽*\
 교환할 두 번째 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수는 `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`을 실행합니다.
 

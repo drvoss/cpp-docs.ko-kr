@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567888"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855591"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 
@@ -1086,7 +1086,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: WindowFromPoint](#windowfrompoint)|지정된 점을 포함하는 창을 식별합니다.|
 |[CWnd:: WinHelp](#winhelp)|WinHelp 애플리케이션을 시작하기 위해 호출됩니다.|
 
-### <a name="protected-methods"></a>Protected 메서드
+### <a name="protected-methods"></a>보호된 메서드
 
 |속성|Description|
 |----------|-----------------|

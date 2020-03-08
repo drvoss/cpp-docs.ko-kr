@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140844"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867170"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock 클래스
 
@@ -32,25 +32,25 @@ ms.locfileid: "77140844"
 class reader_writer_lock;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-classes"></a>public 클래스
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[reader_writer_lock:: scoped_lock 클래스](#scoped_lock_class)|작성기로 `reader_writer_lock` 잠금 개체를 가져오는 데 사용할 수 있는 예외 안전 RAII 래퍼입니다.|
 |[reader_writer_lock:: scoped_lock_read 클래스](#scoped_lock_read_class)|판독기로 `reader_writer_lock` lock 개체를 가져오는 데 사용할 수 있는 예외 안전 RAII 래퍼입니다.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|새 `reader_writer_lock` 개체를 생성합니다.|
 |[~ reader_writer_lock 소멸자](#dtor)|`reader_writer_lock` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[lock](#lock)|작성기로 판독기-작성기 잠금을 가져옵니다.|
 |[lock_read](#lock_read)|판독기로 판독기-작성기 잠금을 가져옵니다. 작성기가 있는 경우 활성 판독기는 완료 될 때까지 기다려야 합니다. 판독기는 단순히 잠금에 관심을 등록 하 고 작성기가 잠금을 해제 하기를 기다립니다.|

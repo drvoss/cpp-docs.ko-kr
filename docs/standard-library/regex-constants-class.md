@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451666"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876145"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants 네임스페이스
+# <a name="regex_constants-namespace"></a>regex_constants 네임스페이스
 
 정규식 플래그에 대한 네임스페이스입니다.
 
@@ -115,7 +115,7 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<regex>
+**헤더:** \<regex >
 
 **네임스페이스:** std
 
@@ -288,13 +288,13 @@ enum syntax_option_type
 
 `collate` -- 일치 항목이 로캘을 구분하도록 함
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<regex>](../standard-library/regex.md)\
-[regex_error 클래스](../standard-library/regex-error-class.md)\
-[\<regex > 함수](../standard-library/regex-functions.md)\
-[regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
-[\<regex > 연산자](../standard-library/regex-operators.md)\
-[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)\
-[regex_traits 클래스](../standard-library/regex-traits-class.md)\
+[Regex_error 클래스](../standard-library/regex-error-class.md)\
+[regex > 함수를\<](../standard-library/regex-functions.md)\
+[Regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
+[regex > 연산자를\<](../standard-library/regex-operators.md)\
+[Regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 클래스](../standard-library/regex-traits-class.md)\
 [\<regex> 형식 정의](../standard-library/regex-typedefs.md)

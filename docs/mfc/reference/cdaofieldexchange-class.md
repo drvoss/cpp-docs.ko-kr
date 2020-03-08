@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303879"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872476"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 클래스
 
@@ -33,23 +33,23 @@ DAO는 Office 2013을 통해 지원 됩니다. DAO 3.6은 최종 버전이 며 �
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoFieldExchange:: IsValidOperation](#isvalidoperation)|현재 작업이 업데이트 되는 필드의 형식에 적합 한 경우 0이 아닌 값을 반환 합니다.|
 |[CDaoFieldExchange:: SetFieldType](#setfieldtype)|`SetFieldType`에 대 한 다음 호출이 발생할 때까지 DFX 함수에 대 한 모든 후속 호출로 표시 되는 레코드 집합 데이터 멤버 (열 또는 매개 변수)의 유형을 지정 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|레코드 집합의 `DoFieldExchange` 멤버 함수에 대 한 현재 호출에 의해 수행 되는 DFX 작업입니다.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|DFX 연산이 수행 되는 레코드 집합에 대 한 포인터입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `CDaoFieldExchange`에 기본 클래스가 없습니다.
 
@@ -85,11 +85,11 @@ class CDaoFieldExchange
 BOOL IsValidOperation();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 작업이 업데이트 되는 필드의 형식에 적합 한 경우 0이 아닙니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 DFX 메커니즘에서 수행 하는 일부 작업은 가능한 필드 형식 중 하나에만 적용 됩니다. 기존 DFX 함수의 모델을 따릅니다.
 
@@ -99,7 +99,7 @@ DFX 메커니즘에서 수행 하는 일부 작업은 가능한 필드 형식 �
 
 필드 교환 개체와 연결 된 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체에 대해 수행할 작업을 식별 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CDaoFieldExchange` 개체는 레코드 집합에 대 한 다양 한 DFX 작업의 컨텍스트를 제공 합니다.
 
@@ -108,7 +108,7 @@ DFX 메커니즘에서 수행 하는 일부 작업은 가능한 필드 형식 �
 
 `m_nOperation` 가능한 값은 다음과 같습니다.
 
-|연산|설명|
+|작업(Operation)|Description|
 |---------------|-----------------|
 |`AddToParameterList`|SQL 문의 **PARAMETERS** 절을 작성 합니다.|
 |`AddToSelectList`|SQL 문의 **SELECT** 절을 작성 합니다.|
@@ -130,7 +130,7 @@ DFX 메커니즘에서 수행 하는 일부 작업은 가능한 필드 형식 �
 
 `CDaoFieldExchange` 개체와 연결 된 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체에 대 한 포인터를 포함 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType
 
@@ -149,7 +149,7 @@ void SetFieldType(UINT nFieldType);
 
 - `CDaoFieldExchange::param`
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 일반적으로 클래스 마법사는이 호출을 작성 합니다. 사용자 고유의 함수를 작성 하 고 마법사를 사용 하 여 `DoFieldExchange` 함수를 작성 하는 경우 필드 맵 외부의 함수에 대 한 호출을 추가 합니다. 마법사를 사용 하지 않는 경우에는 필드 맵이 표시 되지 않습니다. 이 호출은 클래스의 각 필드 데이터 멤버에 대 한 DFX 함수 호출 보다 앞에 오고 필드 형식을 `CDaoFieldExchange::outputColumn`으로 식별 합니다.
 

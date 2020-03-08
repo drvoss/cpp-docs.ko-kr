@@ -11,17 +11,17 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301316"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856900"
 ---
 # <a name="storage-classes"></a>스토리지 클래스
 
 변수 선언 컨텍스트의 *저장소 클래스* 는 개체의 수명, 링크 및 메모리 위치를 제어 하는 형식 지정자입니다. C++ 주어진 개체에는 스토리지 클래스가 하나만 있을 수 있습니다. **Extern**, **static**또는 **thread_local** 지정자를 사용 하 여 지정 하지 않는 한 블록 내에 정의 된 변수에 자동 저장소가 있습니다. 자동 개체 및 변수는 링크가 없으며 블록 외부의 코드에 표시되지 않습니다. 블록이 종료 될 때 실행이 블록에 입력 되 고 할당 취소 되 면 메모리가 자동으로 할당 됩니다.
 
-**참고**
+**참고 사항**
 
 1. [Mutable](../cpp/mutable-data-members-cpp.md) 키워드는 저장소 클래스 지정자로 간주 될 수 있습니다. 하지만 클래스 정의의 멤버 목록에만 사용할 수 있습니다.
 
@@ -195,7 +195,7 @@ void DoSomething()
 
 Windows에서 **thread_local** 는 형식 정의에 **__declspec (스레드)** 를 적용할 수 있고 C 코드에서 유효 하다는 점을 제외 하 고는 [__declspec (thread)](../cpp/thread.md) 와 기능적으로 동일 합니다. 가능 하면 C++ 표준의 일부 이기 때문에 **thread_local** 를 사용 합니다. 따라서 이식성이 향상 됩니다.
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>레지스터
 
 **Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **register** 키워드는 더 이상 지원 되는 저장소 클래스가 아닙니다. 키워드는 나중에 사용 하기 위해 표준으로 예약 되어 있습니다.
 
@@ -286,6 +286,6 @@ Destroying: Static I3
 
 - 마지막으로 `I3`과 같은 정적 지역 변수는 프로그램 지속 시간 동안 값을 보유하지만 프로그램이 종료되면 제거됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [선언 및 정의](../cpp/declarations-and-definitions-cpp.md)

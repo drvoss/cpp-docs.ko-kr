@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
 ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257990"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865836"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 연산자
 
@@ -41,7 +41,7 @@ operator&(
 *오른쪽*\
 각각의 요소를 비트 `AND`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `AND` 연산을 수행한 결과인 bitset입니다.
 
@@ -89,11 +89,11 @@ basic_ostream<CharType, Traits>& operator<<(
 *오른쪽*\
 출력 스트림에 문자열로 삽입할 **bitset\<N>** 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `ostr`비트 시퀀스의 텍스트 표현입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수 오버 `operator<<`로드를 사용 하 여 bitset을 먼저 문자열로 변환 하지 않고 쓸 수 있습니다. 템플릿 함수는 다음을 효과적으로 실행합니다.
 
@@ -149,11 +149,11 @@ bitset에 삽입할 입력 스트림에 입력되는 문자열입니다.
 *오른쪽*\
 입력 스트림에서 비트를 수신하는 bitset입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 템플릿 함수는 *i_str*문자열을 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `operator>>` 템플릿 함수 오버 로드는 bitset에 `bitset(str)`값 `str` *오른쪽* 에 저장 합니다. 여기서는 *`< CharType, Traits, allocator< CharType > >&`* 에서 추출 된 [basic_string](basic-string-class.md) i_str 형식의 개체입니다.
 
@@ -234,7 +234,7 @@ operator^(
 *오른쪽*\
 각각의 요소를 비트 `EXCLUSIVE-OR`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.
 
@@ -286,7 +286,7 @@ operator|(
 *오른쪽*\
 각각의 요소를 비트 `OR`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `OR` 연산을 수행한 결과인 bitset입니다.
 

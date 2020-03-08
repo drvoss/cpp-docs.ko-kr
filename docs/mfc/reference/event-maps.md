@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855623"
 ---
 # <a name="event-maps"></a>이벤트 맵
 
@@ -19,7 +19,7 @@ MFC 라이브러리는 이벤트를 발생 시키는 데 최적화 된 프로그
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-매크로 `EVENT_STOCK_CLICK` 는 컨트롤에서 마우스 클릭을 검색할 때마다 스톡 click 이벤트를 발생 시 고 함을 나타냅니다. 다른 스톡 이벤트의 자세한 목록은 ActiveX 컨트롤 문서 [를 참조 하세요. 이벤트](../../mfc/mfc-activex-controls-events.md). 매크로를 사용 하 여 사용자 지정 이벤트를 나타낼 수도 있습니다.
+`EVENT_STOCK_CLICK` 매크로는 컨트롤에서 마우스 클릭을 검색할 때마다 스톡 Click 이벤트를 발생 시 고 함을 나타냅니다. 다른 스톡 이벤트의 자세한 목록은 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)문서를 참조 하세요. 매크로를 사용 하 여 사용자 지정 이벤트를 나타낼 수도 있습니다.
 
 이벤트 맵 매크로는 중요 하지만 일반적으로 직접 삽입 하지는 않습니다. 이는 이벤트 발생 함수를 이벤트에 연결 하는 데 사용 하는 경우 **속성** 창 ( **클래스 뷰**)이 자동으로 소스 파일에 이벤트 맵 항목을 만들기 때문입니다. 언제 든 지 이벤트 맵 항목을 편집 하거나 추가 하려면 **속성** 창을 사용할 수 있습니다.
 
@@ -49,9 +49,9 @@ MFC 라이브러리는 이벤트를 발생 시키는 데 최적화 된 프로그
 |[ON_OLEVERB](#on_oleverb)|OLE 컨트롤에서 처리 하는 사용자 지정 동사를 나타냅니다.|
 |[ON_STDOLEVERB](#on_stdoleverb)|OLE 컨트롤의 표준 동사 매핑을 재정의 합니다.|
 
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-프로그램 `COleControl`의 각 파생 클래스는 이벤트 맵을 제공 하 여 컨트롤에서 발생 하는 이벤트를 지정할 수 있습니다.
+프로그램의 각 `COleControl`파생 클래스는 이벤트 맵을 제공 하 여 컨트롤에서 발생 하는 이벤트를 지정할 수 있습니다.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,15 +59,15 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>설명
 
-클래스 선언 끝에 DECLARE_EVENT_MAP 매크로를 사용 합니다. 그런 다음 클래스의 멤버 함수를 정의 하는 .cpp 파일에서 BEGIN_EVENT_MAP 매크로, 각 컨트롤의 이벤트에 대 한 매크로 항목 및 END_EVENT_MAP 매크로를 사용 하 여 이벤트 목록의 끝을 선언 합니다.
+클래스 선언 끝에 DECLARE_EVENT_MAP 매크로를 사용 합니다. 그런 다음 클래스의 멤버 함수를 정의 하는 .cpp 파일에서 BEGIN_EVENT_MAP 매크로, 각 컨트롤의 이벤트에 대 한 매크로 항목, END_EVENT_MAP 매크로를 사용 하 여 이벤트 목록의 끝을 선언 합니다.
 
-이벤트 맵에 대 한 자세한 내용은 ActiveX 컨트롤 문서 [를 참조 하세요. 이벤트](../../mfc/mfc-activex-controls-events.md).
+이벤트 맵에 대 한 자세한 내용은 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)문서를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
 **헤더** afxctl
 
-## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
 이벤트 맵의 정의를 시작 합니다.
 
@@ -87,13 +87,13 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 클래스의 멤버 함수를 정의 하는 구현 파일 (.cpp)에서 BEGIN_EVENT_MAP 매크로를 사용 하 여 이벤트 맵을 시작한 다음 각 이벤트에 대 한 매크로 항목을 추가 하 고 END_EVENT_MAP 매크로를 사용 하 여 이벤트 맵을 완료 합니다.
 
-이벤트 맵과 BEGIN_EVENT_MAP 매크로에 대 한 자세한 내용은 ActiveX 컨트롤 문서 [를 참조 하세요. 이벤트](../../mfc/mfc-activex-controls-events.md).
+이벤트 맵과 BEGIN_EVENT_MAP 매크로에 대 한 자세한 내용은 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)문서를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
 **헤더** afxctl
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+##  <a name="end_event_map"></a>END_EVENT_MAP
 
 END_EVENT_MAP 매크로를 사용 하 여 이벤트 맵의 정의를 종료 합니다.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **헤더** afxctl
 
-## <a name="event_custom"></a>  EVENT_CUSTOM
+## <a name="event_custom"></a>EVENT_CUSTOM
 
 사용자 지정 이벤트에 대 한 이벤트 맵 항목을 정의 합니다.
 
@@ -126,15 +126,15 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="remarks"></a>설명
 
-*VtsParams* 매개 변수는 `VTS_` 상수에서 공백으로 구분 된 값 목록입니다. 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 예:
+*VtsParams* 매개 변수는 `VTS_` 상수에서 공백으로 구분 된 값 목록입니다. 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 OLE 글꼴 개체의 `IFontDisp` 인터페이스에 대 한 포인터를 포함 하는 목록을 지정 합니다.
+RGB 색 값을 나타내는 32 비트 정수를 포함 하는 목록을 지정 하 고 OLE 글꼴 개체의 `IFontDisp` 인터페이스에 대 한 포인터를 지정 합니다.
 
 `VTS_` 상수 및 해당 의미는 다음과 같습니다.
 
-|Symbol|매개 변수 유형|
+|기호|매개 변수 형식|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
@@ -143,7 +143,7 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 OLE 글꼴 개체
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|Currency|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __char\*__|
+|VTS_BSTR|**const** __문자\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -165,13 +165,13 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 OLE 글꼴 개체
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Variant 데이터 상수에 대 한 포인터를 제공 하는 VTS_FONT 및 VTS_PICTURE를 제외 하 고 모든 variant 형식에 대해 추가 변형 상수가 정의 되었습니다. 이러한 상수는 규칙을 `VTS_Pconstantname` 사용 하 여 명명 됩니다. 예를 들어 VTS_PCOLOR는 VTS_COLOR 상수에 대 한 포인터입니다.
+> Variant 데이터 상수에 대 한 포인터를 제공 하는 VTS_FONT 및 VTS_PICTURE를 제외 하 고 모든 variant 형식에 대해 추가 변형 상수가 정의 되었습니다. 이러한 상수는 `VTS_Pconstantname` 규칙을 사용 하 여 명명 됩니다. 예를 들어 VTS_PCOLOR은 VTS_COLOR 상수에 대 한 포인터입니다.
 
 ### <a name="requirements"></a>요구 사항
 
 **헤더** afxctl
 
-## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
 *Dispid*로 지정 된 디스패치 ID에 속하는 사용자 지정 이벤트에 대 한 이벤트 발생 함수를 정의 합니다.
 
@@ -199,11 +199,11 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>설명
 
-*VtsParams* 인수는 `VTS_` 상수에서 공백으로 구분 된 값 목록입니다. 공백이 아닌 공백으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 예:
+*VtsParams* 인수는 `VTS_` 상수에서 공백으로 구분 된 값 목록입니다. 공백이 아닌 공백으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 OLE 글꼴 개체의 `IFontDisp` 인터페이스에 대 한 포인터를 포함 하는 목록을 지정 합니다.
+RGB 색 값을 나타내는 32 비트 정수를 포함 하는 목록을 지정 하 고 OLE 글꼴 개체의 `IFontDisp` 인터페이스에 대 한 포인터를 지정 합니다.
 
 `VTS_` 상수 목록은 [EVENT_CUSTOM](#event_custom)를 참조 하세요.
 
@@ -211,7 +211,7 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 OLE 글꼴 개체
 
 **헤더** afxctl
 
-## <a name="on_oleverb"></a>  ON_OLEVERB
+## <a name="on_oleverb"></a>ON_OLEVERB
 
 이 매크로는 사용자 지정 동사를 컨트롤의 특정 멤버 함수에 매핑하는 메시지 맵 항목을 정의 합니다.
 
@@ -246,7 +246,7 @@ BOOL memberFxn(
 
 **헤더** afxole
 
-## <a name="on_stdoleverb"></a>  ON_STDOLEVERB
+## <a name="on_stdoleverb"></a>ON_STDOLEVERB
 
 이 매크로를 사용 하 여 표준 동사의 기본 동작을 재정의할 수 있습니다.
 
@@ -264,7 +264,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="remarks"></a>설명
 
-표준 동사 인덱스는 폼 `OLEIVERB_`이며 그 다음에는 작업을 수행 합니다. OLEIVERB_SHOW, OLEIVERB_HIDE 및 OLEIVERB_UIACTIVATE는 표준 동사의 몇 가지 예입니다.
+표준 동사 인덱스는 `OLEIVERB_`형식이 고 그 다음에 작업이 수행 됩니다. OLEIVERB_SHOW, OLEIVERB_HIDE 및 OLEIVERB_UIACTIVATE은 표준 동사의 몇 가지 예입니다.
 
 *MemberFxn* 매개 변수로 사용할 함수 프로토타입에 대 한 설명은 [ON_OLEVERB](#on_oleverb) 를 참조 하세요.
 
@@ -272,6 +272,6 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 **헤더** afxole
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

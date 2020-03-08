@@ -6,13 +6,13 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452028"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883848"
 ---
-# <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 연산자
+# <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 연산자
 
 ||||
 |-|-|-|
@@ -32,13 +32,13 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_set` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set이 같지 않으면 **true**이고, hash_set이 같으면 **false**입니다.
 
@@ -46,7 +46,7 @@ hash_set이 같지 않으면 **true**이고, hash_set이 같으면 **false**입�
 
 hash_set 개체 간의 비교는 해당 요소 간의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_set은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.
 
-[< Hash_map >](../standard-library/hash-map.md) 및 [< hash_set >](../standard-library/hash-set.md) 헤더 파일의 멤버는 [stdext 네임 스페이스](../standard-library/stdext-namespace.md)에 있습니다.
+[< Hash_map >](../standard-library/hash-map.md) 및 [< hash_set](../standard-library/hash-set.md) 헤더 파일의 멤버는 [stdext 네임 스페이스](../standard-library/stdext-namespace.md)에 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -100,13 +100,13 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_set` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 hash_set이 연산자 우변의 hash_set과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -166,13 +166,13 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_multiset` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_multiset이 같지 않으면 **true**이고, hash_multiset이 같으면 **false**입니다.
 
@@ -232,13 +232,13 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `hash_multiset` 형식의 개체입니다.
 
 *오른쪽*\
 `hash_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 hash_multiset이 연산자 우변의 hash_multiset과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<hash_set>](../standard-library/hash-set.md)

@@ -5,11 +5,11 @@ f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890170"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874833"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 연산자
 
@@ -56,23 +56,23 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ch* \
+*Ch*\
 단일 문자입니다.
 
 *Istr*\
 스트림입니다.
 
-*str* \
-문자열
+*str*\
+문자열입니다.
 
-*val* \
+*val*\
 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스트림
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `basic_istream` 클래스도 여러 가지 추출 연산자를 정의합니다. 자세한 내용은 [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt)를 참조하세요.
 
@@ -168,6 +168,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<istream>](../standard-library/istream.md)

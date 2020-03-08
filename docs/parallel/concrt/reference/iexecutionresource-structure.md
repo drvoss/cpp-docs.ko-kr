@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
 ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141284"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854191"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 구조체
 
@@ -28,11 +28,11 @@ ms.locfileid: "77141284"
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|이 실행 리소스가 나타내는 기본 하드웨어 스레드와 현재 연결 된 활성 외부 스레드 및 활성화 된 가상 프로세서 루트의 수를 반환 합니다.|
 |[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|이 실행 리소스가 나타내는 하드웨어 스레드의 고유 식별자를 반환 합니다.|

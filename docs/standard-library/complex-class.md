@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257977"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876206"
 ---
 # <a name="complex-class"></a>complex 클래스
 
@@ -28,7 +28,7 @@ template <class Type>
 class complex
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `Type`클래스의 개체는 다음과 같습니다.
 
@@ -42,7 +42,7 @@ class complex
 
 3 개의 부동 소수점 형식에 대 한 클래스 템플릿 복합의 명시적 특수화가 있습니다. 이 구현에서 `Type` 다른 형식의 값은 실제 계산에 대해 **double** 로 형식 캐스팅 `Type`형식의 저장 된 개체에 **double** 결과가 다시 할당 됩니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -50,13 +50,13 @@ class complex
 |-|-|
 |[complex](#complex)|지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[value_type](#value_type)|복소수의 실수부와 허수부를 나타내는 데 사용되는 데이터 형식을 표시하는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -98,7 +98,7 @@ constexpr complex(
 *Complexnum*\
 해당 실수 및 허수 부분이 생성되고 있는 복소수를 초기화하는데 사용되는 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 생성자는 저장 된 실제 부분 *\_realval로,* 및 저장 된 허수 부분을 *\_imagval*로 초기화 합니다. 두 번째 생성자는 저장 된 실제 부분을 `complexNum.real()`로 초기화 하 고 저장 된 허수 부분을 `complexNum.imag()`로 초기화 합니다.
 
@@ -172,11 +172,11 @@ T imag(const T& right);
 *오른쪽*\
 허수 값을 추출할 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 허수 부분입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 복소수 *a + bi*의 경우 허수 부분 또는 구성 요소는 *Im (a + bi) = b*입니다.
 
@@ -229,11 +229,11 @@ complex<Type>& operator*=(const complex<Type>& right);
 *오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수로 지정된 수와 곱한 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -314,11 +314,11 @@ complex<Type>& operator+=(const complex<Type>& right);
 *오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 추가되는 매개 변수로 지정된 숫자를 포함하는 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -420,11 +420,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 *_RealPart*\
 대상 복소수에서 뺄 실수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 뺄 매개 변수로 지정된 숫자를 포함하는 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -528,11 +528,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 *_RealPart*\
 대상 복소수에서 뺄 실수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수로 지정된 숫자로 나눈 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -627,11 +627,11 @@ complex<Type>& operator=(const Type& right);
 *오른쪽*\
 복소수 또는 대상 복소수의 매개 변수와 같은 형식의 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수로 지정된 숫자가 할당된 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -704,11 +704,11 @@ T real(const T& right);
 *오른쪽*\
 실수 값을 추출할 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 실수 부분입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 복소수 *a + bi*의 경우 실제 부분 또는 구성 요소는 *Re (a + bi) = a*입니다.
 
@@ -751,7 +751,7 @@ The imaginary part of c1 is c1.imag() = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `value_type`은 클래스 복합 `Type` 템플릿 매개 변수의 동의어입니다.
 

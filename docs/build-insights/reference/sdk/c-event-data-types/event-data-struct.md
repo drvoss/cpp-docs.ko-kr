@@ -13,8 +13,8 @@ ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335215"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857095"
 ---
 # <a name="event_data-structure"></a>EVENT_DATA 구조체
 
@@ -56,7 +56,7 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 |  |  |
 |--|--|
@@ -77,7 +77,7 @@ typedef struct EVENT_DATA_TAG
 | `EventName` | `EventId`으로 식별 되는 엔터티의 이름을 포함 하는 ANSI 문자열입니다. |
 | `EventWideName` | `EventId`으로 식별 되는 엔터티의 이름을 포함 하는 와이드 문자열입니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `EVENT_DATA`의 많은 필드가 틱 개수를 포함 합니다. C++Build Insights는 창의 성능 카운터를 틱의 원본으로 사용 합니다. 틱 개수는 `TickFrequency` 필드와 함께 사용 하 여 초와 같은 적절 한 시간 단위로 변환 해야 합니다. 이 변환을 수행 하려면 아래 예제를 참조 하세요. `EVENT_DATA`는 활동의 일반 틱 수에 대 한 필드를 포함 하지 않습니다. 이 값을 얻으려면 `StopTimestamp`에서 `StartTimestamp`을 뺍니다. `EVENT_DATA`은 C API 사용자가 사용 하는 구조입니다. API C++ 사용자의 경우 [이벤트](../cpp-event-data-types/event.md) 와 같은 클래스에서 시간 변환이 자동으로 수행 됩니다.
 

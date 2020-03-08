@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
 ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140325"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854189"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 구조체
 
@@ -30,11 +30,11 @@ ms.locfileid: "77140325"
 struct ISchedulerProxy;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[ISchedulerProxy:: BindContext](#bindcontext)|실행 컨텍스트가 이미 연결 되어 있지 않은 경우 스레드 프록시를 연결 합니다.|
 |[ISchedulerProxy:: Create과잉 구독자](#createoversubscriber)|기존 실행 리소스와 연결 된 하드웨어 스레드에 새 가상 프로세서 루트를 만듭니다.|

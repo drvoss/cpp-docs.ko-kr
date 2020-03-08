@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062047"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855356"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 
@@ -24,17 +24,17 @@ ms.locfileid: "71062047"
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|가 호출 될 때 `_Module.Term` 검색 되는 인터페이스 누수를 출력 창에 씁니다.|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|모든 호출을 `QueryInterface` 출력 창에 씁니다.|
-|[ATLASSERT](#atlassert)|C 런타임 라이브러리에 있는 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로와 동일한 기능을 수행 합니다.|
-|[IT 확인](#atlensure)|매개 변수 유효성 검사를 수행 합니다. 필요한 `AtlThrow` 경우 호출|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|`_Module.Term`가 호출 될 때 검색 되는 인터페이스 누수를 출력 창에 씁니다.|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|`QueryInterface`에 대 한 모든 호출을 출력 창에 씁니다.|
+|[가 나 어설션](#atlassert)|C 런타임 라이브러리에 있는 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로와 동일한 기능을 수행 합니다.|
+|[It 확인](#atlensure)|매개 변수 유효성 검사를 수행 합니다. 필요한 경우 `AtlThrow` 호출|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|지정 된 함수가 구현 되지 않은 메시지를 덤프 장치로 보냅니다.|
-|[ATLTRACE](#atltrace)|표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다. 이전 버전과의 호환성을 위해 포함 되었습니다.|
+|[이 추적](#atltrace)|표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다. 이전 버전과의 호환성을 위해 포함 되었습니다.|
 |[ATLTRACE2](#atltrace2)|표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다.|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-출력 창에 대 한 구성 요소 인터페이스에 대 한 모든 `AddRef` 및 `Release` 호출을 추적 하려면 ATL 헤더 파일을 포함 하기 전에이 매크로를 정의 합니다.
+모든 `AddRef` 추적 하 고, 구성 요소 인터페이스에 대 한 호출을 `Release` 출력 창에 포함 하기 전에이 매크로를 정의 합니다.
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -46,26 +46,26 @@ ms.locfileid: "71062047"
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-각 추적의 첫 번째 부분은 항상 `ATL: QIThunk`입니다. 다음은 사용 되는 특정 *인터페이스 썽크* 를 식별 하는 값입니다. 인터페이스 썽크는 참조 횟수를 유지 관리 하 고 여기에 사용 되는 추적 기능을 제공 하는 데 사용 되는 개체입니다. 인터페이스에 대 한 요청을 제외 하 고에 `QueryInterface` 대 한 모든 호출에 새 인터페이스 썽크를 만듭니다 .이 경우에는 COM의 id 규칙을 준수할 때마다 동일한 썽크를 반환 합니다. `IUnknown`
+각 추적의 첫 번째 부분은 항상 `ATL: QIThunk`됩니다. 다음은 사용 되는 특정 *인터페이스 썽크* 를 식별 하는 값입니다. 인터페이스 썽크는 참조 횟수를 유지 관리 하 고 여기에 사용 되는 추적 기능을 제공 하는 데 사용 되는 개체입니다. `IUnknown` 인터페이스에 대 한 요청을 제외 하 고 `QueryInterface`에 대 한 모든 호출에서 새 인터페이스 썽크를 만듭니다 .이 경우에는 COM의 id 규칙을 준수할 때마다 동일한 썽크를 반환 합니다.
 
-다음으로 호출 된 `AddRef` 메서드 `Release` 를 표시 하거나 표시 합니다. 다음에는 인터페이스 참조 개수가 변경 된 개체를 식별 하는 값이 표시 됩니다. 추적 되는 값은 개체의 **this** 포인터입니다.
+다음으로 호출 된 메서드를 나타내는 `AddRef` 또는 `Release` 표시 됩니다. 다음에는 인터페이스 참조 개수가 변경 된 개체를 식별 하는 값이 표시 됩니다. 추적 되는 값은 개체의 **this** 포인터입니다.
 
-추적 되는 참조 횟수는 또는 `AddRef` `Release` 가 호출 된 후 해당 썽크의 참조 횟수입니다. 이 참조 수는 개체에 대 한 참조 횟수와 일치 하지 않을 수 있습니다. 각 썽크는 COM의 참조 횟수 규칙을 완벽 하 게 준수할 수 있도록 자체 참조 횟수를 유지 관리 합니다.
+추적 되는 참조 횟수는 `AddRef` 또는 `Release`를 호출한 후 해당 썽크의 참조 횟수입니다. 이 참조 수는 개체에 대 한 참조 횟수와 일치 하지 않을 수 있습니다. 각 썽크는 COM의 참조 횟수 규칙을 완벽 하 게 준수할 수 있도록 자체 참조 횟수를 유지 관리 합니다.
 
 마지막으로 추적 되는 정보는 개체의 이름과 `AddRef` 또는 `Release` 호출의 영향을 받는 인터페이스입니다.
 
-서버가 종료 되 고 `_Module.Term` 가 호출 될 때 검색 되는 모든 인터페이스 누수는 다음과 같이 기록 됩니다.
+서버를 종료 하 고 `_Module.Term`를 호출할 때 검색 되는 인터페이스 누수는 다음과 같이 기록 됩니다.
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
 여기에 제공 된 정보는 이전 추적 문에 제공 된 정보에 직접 매핑되므로 인터페이스 썽크의 전체 수명 동안 참조 횟수를 검사할 수 있습니다. 또한 해당 인터페이스 썽크의 최대 참조 수를 나타냅니다.
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES는 소매 빌드에서 사용할 수 있습니다.
+> _ATL_DEBUG_INTERFACES는 소매점 빌드에서 사용할 수 있습니다.
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-모든 호출을 `QueryInterface` 출력 창에 씁니다.
+`QueryInterface`에 대 한 모든 호출을 출력 창에 씁니다.
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,13 +73,13 @@ ms.locfileid: "71062047"
 
 ### <a name="remarks"></a>설명
 
-에 대 `QueryInterface` 한 호출이 실패 하면 출력 창에 다음이 표시 됩니다.
+`QueryInterface`에 대 한 호출이 실패 하면 출력 창에 다음이 표시 됩니다.
 
 *인터페이스 이름* - `failed`
 
-##  <a name="atlassert"></a>  ATLASSERT
+##  <a name="atlassert"></a>가 나 어설션
 
-[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) assert 매크로는 C 런타임 라이브러리에 있는 것과 동일한 기능을 수행 합니다.
+C # ASSERT 매크로는 C 런타임 라이브러리에 있는 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로와 동일한 기능을 수행 합니다.
 
 ```
 ATLASSERT(booleanExpression);
@@ -98,7 +98,7 @@ ATLASSERT(booleanExpression);
 
 **헤더:**
 
-##  <a name="atlensure"></a>IT 확인
+##  <a name="atlensure"></a>It 확인
 
 이 매크로는 함수에 전달 된 매개 변수의 유효성을 검사 하는 데 사용 됩니다.
 
@@ -119,11 +119,11 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 이러한 매크로는 잘못 된 매개 변수 사용을 검색 하 고 사용자에 게 알리는 메커니즘을 제공 합니다.
 
-매크로가 호출 `AtlThrow`에 실패 하는 경우 매크로는이를 호출 합니다.
+매크로는이를 호출 하 고 조건이 실패 하면 `AtlThrow`호출 합니다.
 
-이 경우의 경우는 E_FAIL `AtlThrow` 을 사용 하 여 호출 됩니다.
+`AtlThrow`은 E_FAIL를 사용 하 여 호출 됩니다.
 
-ATLENSURE_THROW 경우 `AtlThrow` 에는 지정 된 HRESULT를 사용 하 여가 호출 됩니다.
+ATLENSURE_THROW 경우 지정 된 HRESULT를 사용 하 여 `AtlThrow`를 호출 합니다.
 
 이에 대 한 두 번째 ASSERT의 차이점은,이는 디버그 빌드에서 뿐만 아니라 릴리스 빌드에서 예외를 throw 한다는 것입니다.
 
@@ -137,7 +137,7 @@ ATLENSURE_THROW 경우 `AtlThrow` 에는 지정 된 HRESULT를 사용 하 여가
 
 ##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL
 
-ATL의 디버그 빌드에서는 덤프 장치에 " *funcname* 이 구현 되지 않았습니다" 라는 문자열을 보내고 E_NOTIMPL을 반환 합니다.
+ATL의 디버그 빌드에서는 덤프 장치에 " *funcname* 이 구현 되지 않았습니다" 라는 문자열을 보내고 E_NOTIMPL 반환 합니다.
 
 ```
 ATLTRACENOTIMPL(funcname);
@@ -150,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="remarks"></a>설명
 
-릴리스 빌드에서는 E_NOTIMPL만 반환 합니다.
+릴리스 빌드에서는 E_NOTIMPL 반환 하기만 합니다.
 
 ### <a name="example"></a>예제
 
@@ -160,7 +160,7 @@ ATLTRACENOTIMPL(funcname);
 
 **헤더:**
 
-##  <a name="atltrace"></a>  ATLTRACE
+##  <a name="atltrace"></a>이 추적
 
 표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다. 이전 버전과의 호환성을 위해 포함 되었습니다.
 
@@ -191,7 +191,7 @@ ATLTRACE(
 
 정보 추적에 대 한 설명은 [ATLTRACE2](#atltrace2) 를 참조 하십시오. 가 나 추적과 ATLTRACE2는 동일한 동작을 가지 며, 이전 버전과의 호환성을 위해이 추적 기능이 포함 되어 있습니다.
 
-##  <a name="atltrace2"></a>  ATLTRACE2
+##  <a name="atltrace2"></a>ATLTRACE2
 
 표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다.
 
@@ -216,7 +216,7 @@ ATLTRACE2(
 진행 보고할 추적 수준입니다. 자세한 내용은 설명 부분을 참조 하십시오.
 
 *lpszFormat*<br/>
-진행 `printf`덤프 장치로 보낼 문자열을 만드는 데 사용할 스타일 서식 문자열입니다.
+진행 덤프 장치로 보낼 문자열을 만드는 데 사용할 `printf`스타일 서식 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -226,7 +226,7 @@ ATLTRACE2의 약식 형태는 디버거의 출력 창에 문자열을 씁니다.
 
 ### <a name="atl-trace-flags"></a>ATL 추적 플래그
 
-|ATL 범주|설명|
+|ATL 범주|Description|
 |------------------|-----------------|
 |`atlTraceGeneral`|모든 ATL 응용 프로그램에 대 한 보고서입니다. 기본값입니다.|
 |`atlTraceCOM`|COM 메서드를 보고 합니다.|
@@ -244,7 +244,7 @@ ATLTRACE2의 약식 형태는 디버거의 출력 창에 문자열을 씁니다.
 
 ### <a name="mfc-trace-flags"></a>MFC 추적 플래그
 
-|MFC 범주|설명|
+|MFC 범주|Description|
 |------------------|-----------------|
 |`traceAppMsg`|일반적인 목적의 MFC 메시지입니다. 항상 권장 됩니다.|
 |`traceDumpContext`|[CDumpContext](../../mfc/reference/cdumpcontext-class.md)의 메시지입니다.|
@@ -257,23 +257,23 @@ ATLTRACE2의 약식 형태는 디버거의 출력 창에 문자열을 씁니다.
 |`traceDatabase`|MFC 데이터베이스 지원의 메시지입니다.|
 |`traceInternet`|MFC의 인터넷 지원 메시지입니다.|
 
-사용자 지정 추적 범주를 선언 하려면 `CTraceCategory` 클래스의 전역 인스턴스를 다음과 같이 선언 합니다.
+사용자 지정 추적 범주를 선언 하려면 다음과 같이 `CTraceCategory` 클래스의 전역 인스턴스를 선언 합니다.
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-이 예제에서 MY_CATEGORY 범주 이름은 *category* 매개 변수에 지정 하는 이름입니다. 첫 번째 매개 변수는 ATL/MFC 추적 도구에 표시 되는 범주 이름입니다. 두 번째 매개 변수는 기본 추적 수준입니다. 이 매개 변수는 선택 사항이 며 기본 추적 수준은 0입니다.
+이 예에서 MY_CATEGORY 범주 이름은 *category* 매개 변수에 지정 하는 이름입니다. 첫 번째 매개 변수는 ATL/MFC 추적 도구에 표시 되는 범주 이름입니다. 두 번째 매개 변수는 기본 추적 수준입니다. 이 매개 변수는 선택 사항이 며 기본 추적 수준은 0입니다.
 
 사용자 정의 범주를 사용 하려면 다음을 수행 합니다.
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-추적 메시지를 필터링 하도록 지정 하려면 `#include <atlbase.h>` 문 앞의 stdafx.h에 이러한 매크로에 대 한 정의를 삽입 합니다.
+추적 메시지를 필터링 하도록 지정 하려면 `#include <atlbase.h>` 문 앞의 Stdafx.h에 이러한 매크로에 대 한 정의를 삽입 합니다.
 
 또는 **속성 페이지** 대화 상자의 전처리기 지시문에서 필터를 설정할 수 있습니다. **전처리기** 탭을 클릭 한 다음 **전처리기 정의** 편집 상자에 전역을 삽입 합니다.
 
 이 기본 .h에는 ATLTRACE2 매크로의 기본 정의가 포함 되어 있으며,이 정의를 사용 하 여 이러한 기호를 정의 하지 않으면 해당 정의가 사용 됩니다.
 
-릴리스 빌드에서는 ATLTRACE2를로 `(void) 0`컴파일합니다.
+릴리스 빌드에서는 ATLTRACE2를 `(void) 0`으로 컴파일합니다.
 
 ATLTRACE2는 서식 지정 후 덤프 장치로 보낼 문자열의 내용을 1023 자 이하로 제한 합니다.
 
@@ -283,7 +283,7 @@ ATLTRACE2는 서식 지정 후 덤프 장치로 보낼 문자열의 내용을 10
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로](../../atl/reference/atl-macros.md)<br/>
 [디버깅 및 오류 보고 전역 함수](../../atl/reference/debugging-and-error-reporting-global-functions.md)

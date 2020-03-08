@@ -11,15 +11,15 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875894"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 함수
 
-\<array> 헤더에는 **배열** 개체에 대해 작동하는 두가지 비 맴버함수 `get`과 `swap`이 포함되어 있습니다.
+\<배열 > 헤더에는 **배열** 개체에 대해 작동 하는 멤버 함수 두 개 (`get` 및 `swap`)가 포함 되어 있습니다.
 
 |||
 |-|-|
@@ -42,7 +42,7 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-*Index*\
+*인덱스*\
 요소 오프셋입니다.
 
 *T*\
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-두 배열 개체를 교환 하는 `std::swap` 의 멤버가 아닌 템플릿 특수화입니다.
+두 **배열** 개체를 바꾸는 `std::swap`의 멤버가 아닌 템플릿 특수화입니다.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -103,15 +103,15 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *N*\
 배열의 크기입니다.
 
-*left*\
+*왼쪽*\
 교환할 첫 번째 배열입니다.
 
-*right*\
+*오른쪽*\
 교환할 두 번째 배열입니다.
 
 ### <a name="remarks"></a>설명
 
-이 템플릿 함수는 `left.swap(right)`를 실행합니다.
+이 템플릿 함수는 `left.swap(right)`을 실행합니다.
 
 ### <a name="example"></a>예제
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<array>](../standard-library/array.md)

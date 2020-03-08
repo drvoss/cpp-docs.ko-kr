@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821833"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865732"
 ---
 # <a name="eventsource-class"></a>EventSource 클래스
 
@@ -46,32 +46,32 @@ class EventSource;
 *TDelegateInterface*<br/>
 이벤트 처리기를 나타내는 대리자에 대 한 인터페이스입니다.
 
-## <a name="members"></a>Members
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| 이름                                     | 설명                                            |
+| 속성                                     | Description                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource::EventSource](#eventsource) | `EventSource` 클래스의 새 인스턴스를 초기화합니다. |
+| [EventSource:: EventSource](#eventsource) | `EventSource` 클래스의 새 인스턴스를 초기화합니다. |
 
 ### <a name="public-methods"></a>Public 메서드
 
-| 이름                                 | 설명                                                                                                                                                      |
+| 속성                                 | Description                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 `EventSource` 개체에 대 한 이벤트 처리기 집합에 추가 합니다.                     |
-| [EventSource::GetSize](#getsize)     | 현재 `EventSource` 개체와 연결 된 이벤트 처리기의 수를 검색 합니다.                                                                         |
-| [EventSource::InvokeAll](#invokeall) | 지정 된 인수 형식 및 인수를 사용 하 여 현재 `EventSource` 개체와 연결 된 각 이벤트 처리기를 호출 합니다.                                      |
-| [EventSource::Remove](#remove)       | 현재 `EventSource` 개체와 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다. |
+| [EventSource:: Add](#add)             | 지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 `EventSource` 개체에 대 한 이벤트 처리기 집합에 추가 합니다.                     |
+| [EventSource:: GetSize](#getsize)     | 현재 `EventSource` 개체와 연결 된 이벤트 처리기의 수를 검색 합니다.                                                                         |
+| [EventSource:: InvokeAll](#invokeall) | 지정 된 인수 형식 및 인수를 사용 하 여 현재 `EventSource` 개체와 연결 된 각 이벤트 처리기를 호출 합니다.                                      |
+| [EventSource:: Remove](#remove)       | 현재 `EventSource` 개체와 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다. |
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-| 이름                                                    | 설명                                                                                                                       |
+| 속성                                                    | Description                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | 이벤트 처리기를 추가, 제거 또는 호출할 때 [targets_](#targets) 배열에 대 한 액세스를 동기화 합니다.                          |
-| [EventSource::targets_](#targets)                       | 하나 이상의 이벤트 처리기 배열입니다.                                                                                           |
-| [EventSource::targetsPointerLock_](#targetspointerlock) | 이 EventSource의 이벤트 처리기를 추가, 삭제 또는 호출하는 동안에도 내부 데이터 멤버에 대한 액세스를 동기화합니다. |
+| [EventSource:: addRemoveLock_](#addremovelock)           | 이벤트 처리기를 추가, 제거 또는 호출할 때 [targets_](#targets) 배열에 대 한 액세스를 동기화 합니다.                          |
+| [EventSource:: targets_](#targets)                       | 하나 이상의 이벤트 처리기 배열입니다.                                                                                           |
+| [EventSource:: targetsPointerLock_](#targetspointerlock) | 이 EventSource의 이벤트 처리기를 추가, 삭제 또는 호출하는 동안에도 내부 데이터 멤버에 대한 액세스를 동기화합니다. |
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `EventSource`
 
@@ -81,7 +81,7 @@ class EventSource;
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="add"></a>EventSource::Add
+## <a name="add"></a>EventSource:: Add
 
 지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 `EventSource` 개체에 대 한 이벤트 처리기 집합에 추가 합니다.
 
@@ -97,14 +97,14 @@ HRESULT Add(
 *delegateInterface*<br/>
 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.
 
-*token*<br/>
+*토큰*<br/>
 이 작업이 완료 되 면 이벤트를 나타내는 핸들입니다. 이 토큰을 [Remove ()](#remove) 메서드에 대 한 매개 변수로 사용 하 여 이벤트 처리기를 삭제 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
 이벤트 처리기를 추가, 제거 또는 호출할 때 [targets_](#targets) 배열에 대 한 액세스를 동기화 합니다.
 
@@ -112,7 +112,7 @@ HRESULT Add(
 Wrappers::SRWLock addRemoveLock_;
 ```
 
-## <a name="eventsource"></a>EventSource::EventSource
+## <a name="eventsource"></a>EventSource:: EventSource
 
 `EventSource` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -120,7 +120,7 @@ Wrappers::SRWLock addRemoveLock_;
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource::GetSize
+## <a name="getsize"></a>EventSource:: GetSize
 
 현재 `EventSource` 개체와 연결 된 이벤트 처리기의 수를 검색 합니다.
 
@@ -128,11 +128,11 @@ EventSource();
 size_t GetSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Targets_](#targets)이벤트 처리기 수입니다.
 
-## <a name="invokeall"></a>EventSource::InvokeAll
+## <a name="invokeall"></a>EventSource:: InvokeAll
 
 지정 된 인수 형식 및 인수를 사용 하 여 현재 `EventSource` 개체와 연결 된 각 이벤트 처리기를 호출 합니다.
 
@@ -352,7 +352,7 @@ void InvokeAll(
 *arg9*<br/>
 아홉 번째 이벤트 처리기 인수입니다.
 
-## <a name="remove"></a>EventSource::Remove
+## <a name="remove"></a>EventSource:: Remove
 
 현재 `EventSource` 개체와 연결 된 이벤트 처리기 집합에서 지정 된 이벤트 등록 토큰이 나타내는 이벤트 처리기를 삭제 합니다.
 
@@ -364,18 +364,18 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>매개 변수
 
-*token*<br/>
+*토큰*<br/>
 이벤트 처리기를 나타내는 핸들입니다. 이 토큰은 [Add ()](#add) 메서드에서 이벤트 처리기를 등록할 때 반환 되었습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `EventRegistrationToken` 구조에 대 한 자세한 내용은 **Windows 런타임** 참조 설명서의 **Windows:: Foundation:: EventRegistrationToken structure** 항목을 참조 하세요.
 
-## <a name="targets"></a>EventSource::targets_
+## <a name="targets"></a>EventSource:: targets_
 
 하나 이상의 이벤트 처리기 배열입니다.
 
@@ -383,11 +383,11 @@ HRESULT Remove(
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 현재 `EventSource` 개체가 나타내는 이벤트가 발생 하면 이벤트 처리기가 호출 됩니다.
 
-## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
+## <a name="targetspointerlock"></a>EventSource:: targetsPointerLock_
 
 이 `EventSource`에 대 한 이벤트 처리기를 추가, 제거 또는 호출 하는 동안에도 내부 데이터 멤버에 대 한 액세스를 동기화 합니다.
 

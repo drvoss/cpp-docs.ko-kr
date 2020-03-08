@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690061"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875925"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; macros
 
@@ -36,9 +36,9 @@ ms.locfileid: "72690061"
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-매크로는 템플릿 정의 `template <class Type> class name {.....}`를 생성 하 고, 특수화 `template <> class name<void> {.....}`는 동기화 필터 `sync`를 사용 하는 할당자 클래스 템플릿 및 `cache` 형식의 캐시를 함께 정의 합니다.
+매크로는 템플릿 정의 `template <class Type> class name {.....}`를 생성 하 고, 특수화 `template <> class name<void> {.....}`는 동기화 필터 `sync`를 사용 하는 할당자 클래스 템플릿 및 `cache`형식의 캐시를 함께 정의 합니다.
 
 rebind를 컴파일할 수 있는 컴파일러의 경우, 결과 템플릿 정의는 다음과 같습니다.
 
@@ -76,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -86,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -106,10 +106,10 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 컴파일러가 단일 스레드 및 다중 스레드 애플리케이션 컴파일을 모두 지원하는 경우 단일 스레드 애플리케이션에 대해 매크로는 `stdext::allocators::sync_none`을 생성하고, 다른 모든 경우 `stdext::allocators::sync_shared`를 생성합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<allocators>](../standard-library/allocators-header.md)
