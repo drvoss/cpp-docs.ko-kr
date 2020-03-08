@@ -7,11 +7,11 @@ ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
 ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457588"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867086"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; enums
 
@@ -41,6 +41,6 @@ typedef enum memory_order {
 |`memory_order_acq_rel`|`memory_order_acquire` 및 `memory_order_release`를 결합합니다.|
 |`memory_order_seq_cst`|`memory_order_acquire` 및 `memory_order_release`를 결합합니다. `memory_order_seq_cst`로 표시된 메모리 액세스의 순서는 일관적이어야 합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<atomic>](../standard-library/atomic.md)
