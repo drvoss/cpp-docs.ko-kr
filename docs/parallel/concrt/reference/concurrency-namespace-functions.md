@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143251"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854194"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 네임스페이스 함수
 
@@ -1532,7 +1532,7 @@ inline void swap(
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 `_A`멤버 함수를 실행 하 `concurrent_vector` 컨테이너 클래스에서 특수화 된 알고리즘입니다. [concurrent_vector:: swap](concurrent-vector-class.md#swap)(`_B`). 이러한 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수 `template <class T> void swap(T&, T&)`의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
+템플릿 함수는 `_A`멤버 함수를 실행 하 `concurrent_vector` 컨테이너 클래스에서 특수화 된 알고리즘입니다. [concurrent_vector:: swap](concurrent-vector-class.md#swap)(`_B`). 이러한 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 템플릿 함수가 이러한 방식으로 오버로드되어 함수를 호출할 때 템플릿이 고유하게 일치하지 않으면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수 `template <class T> void swap(T&, T&)`의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
 
 이 메서드는 동시성이 보장 되지 않습니다. 이 메서드를 호출할 때 다른 스레드가 동시 벡터 중 하나에서 작업을 수행 하 고 있지 않은지 확인 해야 합니다.
 
@@ -1595,7 +1595,7 @@ void Trace_agents_register_name(
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-개체의 형식입니다. 일반적으로 메시지 블록 또는 에이전트입니다.
+개체의 유형. 일반적으로 메시지 블록 또는 에이전트입니다.
 
 *_PObject*<br/>
 추적에 명명된 에이전트 또는 메시지 블록에 대한 포인터입니다.
@@ -1692,7 +1692,7 @@ auto when_all(
 결과 작업으로 결합되는 요소 범위를 벗어나는 첫 번째 요소의 위치입니다.
 
 *_TaskOptions*<br/>
-`task_options` 개체
+`task_options` 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
