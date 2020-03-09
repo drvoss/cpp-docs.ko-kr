@@ -3,11 +3,11 @@ title: '포팅 가이드: Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627226"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890943"
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
 
@@ -43,7 +43,7 @@ Spy++에서 찾을 수 없는 파일 중 하나는 verstamp.h였습니다. 인�
 
 ##  <a name="linker_output_settings"></a> 3단계. 링커 OutputFile 설정
 
-이전 프로젝트는 업그레이드한 후 문제가 발생할 수 있는 위치에 파일이 배치된 경우가 있습니다. 이 경우 Visual Studio에서 프로젝트 폴더 중 하나가 아니라 여기에 배치된 일부 헤더 파일을 찾을 수 있도록 프로젝트 속성의 **포함** 경로에 `$(SolutionDir)`을 추가해야 합니다.
+이전 프로젝트는 업그레이드한 후 문제가 발생할 수 있는 위치에 파일이 배치된 경우가 있습니다. 이 경우 Visual Studio에서 프로젝트 폴더 중 하나가 아니라 여기에 배치된 일부 헤더 파일을 찾을 수 있도록 프로젝트 속성의 `$(SolutionDir)`포함**경로에**을 추가해야 합니다.
 
 MSBuild에서 **Link.OutputFile** 속성이 **TargetPath** 및 **TargetName** 값과 일치하지 않는다고 보고하고 MSB8012를 실행합니다.
 
@@ -53,7 +53,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 
 **Link.OutputFile**은 빌드 출력(예: EXE, DLL)이며, 일반적으로 `$(TargetDir)$(TargetName)$(TargetExt)`에서 생성되고 경로, 파일 이름 및 확장명을 제공합니다. 이는 이전 Visual C++ 빌드 도구(vcbuild.exe)에서 새 빌드 도구(MSBuild.exe)로 프로젝트를 마이그레이션하는 경우의 일반적인 오류입니다. Visual Studio 2010에서 빌드 도구가 변경되었으므로 2010 이전 프로젝트를 2010 이상 버전으로 마이그레이션할 때마다 이 문제가 발생할 수 있습니다. 기본적인 문제는 해당 값이 다른 프로젝트 설정을 기반으로 해야 하는지 확인할 수 없는 경우가 있기 때문에 프로젝트 마이그레이션 마법사가 **Link.OutputFile**을 업데이트하지 않는 것입니다. 따라서 일반적으로 수동으로 설정해야 합니다. 자세한 내용은 Visual C++ 블로그에서 이 [게시물](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)을 참조하세요.
 
-이 경우 변환된 프로젝트의 **Link.OutputFile** 속성이 구성에 따라 Spy++ 프로젝트에 대한 .\Debug\Spyxx.exe 및 .\Release\Spyxx.exe로 설정되었습니다. **모든 구성**에 대해 이러한 하드 코딩된 값을 `$(TargetDir)$(TargetName)$(TargetExt)`로 바꾸는 것이 가장 좋습니다. 이 방법이 효과가 없을 경우 여기서 사용자 지정하거나, 해당 값이 설정된 **일반** 섹션의 속성을 변경할 수 있습니다(속성은 **출력 디렉터리**, **대상 이름** 및 **대상 확장**임). 보려는 속성이 매크로를 사용하는 경우 드롭다운 목록에서 **편집**을 선택하여 매크로 대체가 수행된 최종 문자열을 보여 주는 대화 상자를 표시할 수 있습니다. **매크로** 단추를 선택하여 사용 가능한 모든 매크로 및 현재 값을 볼 수 있습니다.
+이 경우 변환된 프로젝트의 **Link.OutputFile** 속성이 구성에 따라 Spy++ 프로젝트에 대한 .\Debug\Spyxx.exe 및 .\Release\Spyxx.exe로 설정되었습니다. `$(TargetDir)$(TargetName)$(TargetExt)`모든 구성**에 대해 이러한 하드 코딩된 값을** 로 바꾸는 것이 가장 좋습니다. 이 방법이 효과가 없을 경우 여기서 사용자 지정하거나, 해당 값이 설정된 **일반** 섹션의 속성을 변경할 수 있습니다(속성은 **출력 디렉터리**, **대상 이름** 및 **대상 확장**임). 보려는 속성이 매크로를 사용하는 경우 드롭다운 목록에서 **편집**을 선택하여 매크로 대체가 수행된 최종 문자열을 보여 주는 대화 상자를 표시할 수 있습니다. **매크로** 단추를 선택하여 사용 가능한 모든 매크로 및 현재 값을 볼 수 있습니다.
 
 ##  <a name="updating_winver"></a> 4단계. 대상 Windows 버전 업데이트
 
@@ -130,13 +130,13 @@ mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No suc
 #include <iomanip>
 ```
 
-이렇게 변경하면 더 이상 사용되는 `ostrstream`에서 문제가 발생합니다. 적절한 대체 항목은 ostringstream입니다. 최소한 시작하면서 코드를 너무 많이 수정하지 않도록 `ostrstream`에 **typedef**를 추가하려고 합니다.
+이렇게 변경하면 더 이상 사용되는 `ostrstream`에서 문제가 발생합니다. 적절한 대체 항목은 ostringstream입니다. 최소한 시작하면서 코드를 너무 많이 수정하지 않도록 **에** typedef`ostrstream`를 추가하려고 합니다.
 
 ```cpp
 typedef std::basic_ostringstream<TCHAR> ostrstream;
 ```
 
-프로젝트는 현재 MBCS(멀티바이트 문자 집합)를 사용하여 빌드되므로 **char**가 적절한 문자 데이터 형식입니다. 그러나 코드를 UTF-16 유니코드로 업데이트하기 쉽도록 프로젝트 설정의 **문자 집합** 속성이 MBCS 또는 유니코드로 설정되었는지에 따라 **char** 또는 **wchar_t**로 확인되는 `TCHAR`로 업데이트합니다.
+프로젝트는 현재 MBCS(멀티바이트 문자 집합)를 사용하여 빌드되므로 **char**가 적절한 문자 데이터 형식입니다. 그러나 코드를 UTF-16 유니코드로 업데이트하기 쉽도록 프로젝트 설정의 `TCHAR`문자 집합**속성이 MBCS 또는 유니코드로 설정되었는지에 따라**char**또는**wchar_t**로 확인되는** 로 업데이트합니다.
 
 다른 몇 가지 코드 부분도 업데이트해야 합니다.  기본 클래스 `ios`를 `ios_base`로 바꾸고 ostream을 basic_ostream\<T>로 바꾸었습니다. 두 개의 추가 typedef를 추가하면 이 섹션이 컴파일됩니다.
 
@@ -159,7 +159,7 @@ error C2039: 'freeze': is not a member of 'std::basic_stringbuf<char,std::char_t
 //rdbuf()->freeze(0);
 ```
 
-인접한 줄에서 다음 두 오류가 발생했습니다. 첫 번째 오류는 문자열에 null 종결자를 추가하는 이전 `iostream` 라이브러리의 IO 조작자인 `ends`를 사용하는 방법에 대한 것입니다. 두 번째 오류는 `str` 메서드의 출력을 const 이외의 포인터에 할당할 수 없음을 설명합니다.
+인접한 줄에서 다음 두 오류가 발생했습니다. 첫 번째 오류는 문자열에 null 종결자를 추가하는 이전 `ends` 라이브러리의 IO 조작자인 `iostream`를 사용하는 방법에 대한 것입니다. 두 번째 오류는 `str` 메서드의 출력을 const 이외의 포인터에 할당할 수 없음을 설명합니다.
 
 ```cpp
 // Null terminate the string in the buffer and
@@ -187,7 +187,7 @@ MOUT << _T(" chUser:'") << chUser
 << _T("' (") << (INT)(UCHAR)chUser << _T(')');
 ```
 
-MOUT 매크로는 `mstream` 형식의 개체인 `*g_pmout`로 확인됩니다. `mstream` 클래스는 표준 출력 문자열 클래스 `std::basic_ostream<TCHAR>`에서 파생됩니다. 그러나 유니코드로 변환하기 위해 삽입한 문자열 리터럴 앞뒤의 \_T로 인해 **operator <<** 에 대한 오버로드 확인이 실패하고 다음 오류 메시지가 표시됩니다.
+MOUT 매크로는 `*g_pmout` 형식의 개체인 `mstream`로 확인됩니다. `mstream` 클래스는 표준 출력 문자열 클래스 `std::basic_ostream<TCHAR>`에서 파생됩니다. 그러나 유니코드로 변환하기 위해 삽입한 문자열 리터럴 앞뒤의 \_T로 인해 **operator <<** 에 대한 오버로드 확인이 실패하고 다음 오류 메시지가 표시됩니다.
 
 ```Output
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
@@ -406,7 +406,7 @@ DWORD dwWindowsVersion = GetVersion();
 
 [Operating system version changes in Windows 8.1 and Windows Server 2012 R2](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1)(Windows 8.1 및 Windows Server 2012 R2의 운영 체제 버전 변경 내용) 문서에서 이 상황을 설명합니다.
 
-`IsWindows9x`, `IsWindows4x` 및 `IsWindows5x` 운영 체제 버전을 쿼리하는 `CSpyApp` 클래스에 메서드가 있습니다. 이 오래된 애플리케이션에서 사용하는 기술과 관련해서 지원하려는 Windows 버전(Windows 7 이상)이 모두 Windows NT 5에 가깝다는 가정에서 시작하는 것이 좋습니다. 이러한 메서드는 이전 운영 체제의 제한 사항을 처리하는 데 사용됩니다. 따라서 `IsWindows5x`에 대해 TRUE를 반환하고 다른 값에 대해 FALSE를 반환하도록 해당 메서드를 변경했습니다.
+`CSpyApp`, `IsWindows9x` 및 `IsWindows4x` 운영 체제 버전을 쿼리하는 `IsWindows5x` 클래스에 메서드가 있습니다. 이 오래된 애플리케이션에서 사용하는 기술과 관련해서 지원하려는 Windows 버전(Windows 7 이상)이 모두 Windows NT 5에 가깝다는 가정에서 시작하는 것이 좋습니다. 이러한 메서드는 이전 운영 체제의 제한 사항을 처리하는 데 사용됩니다. 따라서 `IsWindows5x`에 대해 TRUE를 반환하고 다른 값에 대해 FALSE를 반환하도록 해당 메서드를 변경했습니다.
 
 ```cpp
 BOOL IsWindows9x() {/*return(m_bIsWindows9x);*/ return FALSE;  }
@@ -518,7 +518,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 이제 실제로 이전 MBCS(멀티바이트 문자 집합) 코드를 유니코드로 업데이트하겠습니다. Windows 데스크톱 플랫폼에 깊이 연결된 Windows 애플리케이션이므로 Windows에서 사용하는 UTF-16 유니코드로 포팅하겠습니다. 플랫폼 간 코드를 작성하거나 Windows 애플리케이션을 다른 플랫폼으로 포팅하는 경우 다른 운영 체제에서 널리 사용되는 UTF-8로 포팅하는 것이 좋습니다.
 
-UTF-16 유니코드로 포팅하는 경우 MBCS로 컴파일하는 옵션을 원하는지 여부를 결정해야 합니다.  MBCS를 지원하는 옵션을 포함하려는 경우 컴파일하는 동안 \_MBCS 또는 \_UNICODE가 정의되었는지에 따라 **char** 또는 **wchar_t**로 확인되는 TCHAR 매크로를 문자 형식으로 사용해야 합니다. **wchar_t** 및 관련된 API 대신 TCHAR 및 TCHAR 버전의 다양한 API로 전환하면 간단히 \_UNICODE 대신 \_MBCS 매크로를 정의하여 코드의 MBCS 버전으로 돌아갈 수 있습니다. TCHAR 외에도 널리 사용되는 typedef, 매크로 및 함수의 다양한 TCHAR 버전이 있습니다. 예를 들어 LPCSTR 대신 LPCTSTR을 사용합니다. 프로젝트 속성 대화 상자의 **구성 속성** 아래, **일반** 섹션에서 **문자 집합** 속성을 **MBCS 문자 집합 사용**에서 **유니코드 문자 집합 사용**으로 변경합니다. 이 설정은 컴파일하는 동안 미리 정의되는 매크로에 영향을 줍니다. UNICODE 매크로와 \_UNICODE 매크로가 둘 다 있습니다. 프로젝트 속성은 두 매크로에 일관되게 적용됩니다. Windows 헤더는 unicode를 사용하고 MFC와 같은 Visual C++ 헤더는 \_UNICODE를 사용하지만 하나가 정의될 때 다른 하나도 항상 정의됩니다.
+UTF-16 유니코드로 포팅하는 경우 MBCS로 컴파일하는 옵션을 원하는지 여부를 결정해야 합니다.  MBCS를 지원하는 옵션을 포함하려는 경우 컴파일하는 동안 **MBCS 또는** UNICODE가 정의되었는지에 따라 **char** 또는 \_wchar_t\_로 확인되는 TCHAR 매크로를 문자 형식으로 사용해야 합니다. **wchar_t** 및 관련된 API 대신 TCHAR 및 TCHAR 버전의 다양한 API로 전환하면 간단히 \_UNICODE 대신 \_MBCS 매크로를 정의하여 코드의 MBCS 버전으로 돌아갈 수 있습니다. TCHAR 외에도 널리 사용되는 typedef, 매크로 및 함수의 다양한 TCHAR 버전이 있습니다. 예를 들어 LPCSTR 대신 LPCTSTR을 사용합니다. 프로젝트 속성 대화 상자의 **구성 속성** 아래, **일반** 섹션에서 **문자 집합** 속성을 **MBCS 문자 집합 사용**에서 **유니코드 문자 집합 사용**으로 변경합니다. 이 설정은 컴파일하는 동안 미리 정의되는 매크로에 영향을 줍니다. UNICODE 매크로와 \_UNICODE 매크로가 둘 다 있습니다. 프로젝트 속성은 두 매크로에 일관되게 적용됩니다. Windows 헤더는 unicode를 사용하고 MFC와 같은 Visual C++ 헤더는 \_UNICODE를 사용하지만 하나가 정의될 때 다른 하나도 항상 정의됩니다.
 
 TCHAR를 사용하여 MBCS에서 UTF-16 유니코드로 포팅하는 방법에 대한 유용한 [가이드](/previous-versions/cc194801(v=msdn.10))가 있습니다. 이 경로를 선택합니다. 먼저, **문자 집합** 속성을 **유니코드 문자 집합 사용**으로 변경하고 프로젝트를 다시 빌드합니다.
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_T 매크로는 문자열 리터럴이 MBCS 또는 UNICODE 설정에 따라 **char** 문자열이나 **wchar_t** 문자열로 컴파일되게 하는 효과가 있습니다. Visual Studio에서 모든 문자열을 \_T로 바꾸려면 먼저 **빠른 바꾸기**(키보드: **Ctrl**+**F**) 상자 또는 **파일에서 바꾸기**(키보드: **Ctrl**+**Shift**+**H**)를 연 다음, **정규식 사용** 확인란을 선택합니다. `((\".*?\")|('.+?'))`를 검색 텍스트로 입력하고 `_T($1)`를 바꿀 텍스트로 입력합니다. \_T 매크로가 일부 문자열 앞뒤에 이미 있는 경우 이 절차에서 다시 추가하며, `#include`를 사용하는 경우와 같이 \_T를 원하지 않는 경우도 있으므로 **모두 바꾸기** 대신 **다음 바꾸기**를 사용하는 것이 가장 좋습니다.
+\_T 매크로는 문자열 리터럴이 MBCS 또는 UNICODE 설정에 따라 **char** 문자열이나 **wchar_t** 문자열로 컴파일되게 하는 효과가 있습니다. Visual Studio에서 모든 문자열을 \_T로 바꾸려면 먼저 **빠른 바꾸기**(키보드: **Ctrl**+**F**) 상자 또는 **파일에서 바꾸기**(키보드: **Ctrl**+**Shift**+**H**)를 연 다음, **정규식 사용** 확인란을 선택합니다. `((\".*?\")|('.+?'))`를 검색 텍스트로 입력하고 `_T($1)`를 바꿀 텍스트로 입력합니다. \_T 매크로가 일부 문자열 앞뒤에 이미 있는 경우 이 절차에서 다시 추가하며, \_를 사용하는 경우와 같이 `#include`T를 원하지 않는 경우도 있으므로 **모두 바꾸기** 대신 **다음 바꾸기**를 사용하는 것이 가장 좋습니다.
 
 이 특정 함수 [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw)는 실제로 Windows 헤더에서 정의되며, 해당 설명서에서 가능한 버퍼 오버런으로 인해 사용하지 않도록 권장합니다. `szTmp` 버퍼에 대한 크기가 지정되지 않으므로 함수에서 버퍼가 기록되는 모든 데이터를 포함할 수 있는지 확인할 방법이 없습니다. 보안 CRT로 포팅하는 방법에 대한 다음 섹션을 참조하세요. 여기서는 다른 유사한 문제를 해결합니다. 결국 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)로 바꾸었습니다.
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 원래 Visual C++ 6.0 코드에서 최신 컴파일러로 Spy++를 포팅하는 데 약 1주 동안 20시간의 코딩 시간이 소요되었습니다. Visual Studio 6.0에서 Visual Studio 2015로 8개 제품 릴리스가 직접 업그레이드되었습니다. 이 방법은 현재 큰 프로젝트와 작은 프로젝트의 업그레이드에 모두 권장되는 방법입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [포팅 및 업그레이드: 예제 및 사례 연구](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [이전 사례 연구: COM Spy](../porting/porting-guide-com-spy.md)

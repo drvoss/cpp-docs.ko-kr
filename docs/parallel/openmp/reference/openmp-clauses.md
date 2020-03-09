@@ -34,11 +34,11 @@ helpviewer_keywords:
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
 ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142511"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882914"
 ---
 # <a name="openmp-clauses"></a>OpenMP 절
 
@@ -48,7 +48,7 @@ OpenMP API에서 사용되는 절에 대한 링크를 제공합니다.
 
 일반 특성의 경우:
 
-|절|설명|
+|절|Description|
 |------|-----------|
 |[if](#if-openmp)|루프를 병렬로 실행할지 또는 순차적으로 실행할지를 지정 합니다.|
 |[num_threads](#num-threads)|스레드 팀의 스레드 수를 설정 합니다.|
@@ -58,7 +58,7 @@ OpenMP API에서 사용되는 절에 대한 링크를 제공합니다.
 
 데이터 공유 특성의 경우:
 
-|절|설명|
+|절|Description|
 |------|-----------|
 |[private](#private-openmp)|각 스레드가 변수의 고유한 인스턴스를 갖도록 지정 합니다.|
 |[firstprivate](#firstprivate)|각 스레드에 변수의 고유한 인스턴스가 있어야 하 고, 변수가 병렬 구문 앞에 있기 때문에 변수의 값을 사용 하 여 초기화 되어야 함을 지정 합니다.|

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253533"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890826"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 클래스
 
@@ -37,38 +37,38 @@ ms.locfileid: "62253533"
 class CDataPathProperty : public CAsyncMonikerFile
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|`CDataPathProperty` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CDataPathProperty::GetControl](#getcontrol)|연결 된 비동기 OLE 컨트롤을 검색 합니다 `CDataPathProperty` 개체입니다.|
-|[CDataPathProperty::GetPath](#getpath)|속성의 경로 이름을 검색합니다.|
-|[CDataPathProperty::Open](#open)|연결된 된 ActiveX (OLE) 컨트롤에 대 한 비동기 속성의 로드를 시작 합니다.|
-|[CDataPathProperty::ResetData](#resetdata)|호출 `CAsyncMonikerFile::OnDataAvailable` 컨트롤 속성을 변경 하는 컨테이너를 알립니다.|
-|[CDataPathProperty::SetControl](#setcontrol)|속성과 연결 된 비동기 (OLE) ActiveX 컨트롤을 설정 합니다.|
-|[CDataPathProperty::SetPath](#setpath)|속성의 경로 이름을 설정합니다.|
+|[CDataPathProperty:: GetControl](#getcontrol)|`CDataPathProperty` 개체와 연결 된 비동기 OLE 컨트롤을 검색 합니다.|
+|[CDataPathProperty:: GetPath](#getpath)|속성의 경로 이름을 검색 합니다.|
+|[CDataPathProperty:: Open](#open)|연결 된 ActiveX (OLE) 컨트롤의 비동기 속성 로드를 시작 합니다.|
+|[CDataPathProperty:: ResetData](#resetdata)|`CAsyncMonikerFile::OnDataAvailable`를 호출 하 여 컨트롤 속성이 변경 되었음을 컨테이너에 알립니다.|
+|[CDataPathProperty:: SetControl](#setcontrol)|속성과 연결 된 비동기 ActiveX (OLE) 컨트롤을 설정 합니다.|
+|[CDataPathProperty:: SetPath](#setpath)|속성의 경로 이름을 설정 합니다.|
 
 ## <a name="remarks"></a>설명
 
-동기 초기화 한 다음 비동기 속성이 로드 됩니다.
+비동기 속성은 동기 시작 후에 로드 됩니다.
 
-클래스 `CDataPathProperty` 에서 파생 된 `CAysncMonikerFile`합니다. OLE 컨트롤에 비동기 속성을 구현 하려면 클래스를 파생 `CDataPathProperty`를 재정의 하 고 [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)합니다.
+`CDataPathProperty` 클래스는 `CAysncMonikerFile`에서 파생 됩니다. OLE 컨트롤에서 비동기 속성을 구현 하려면 `CDataPathProperty`에서 클래스를 파생 하 고 [Ondataavailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)를 재정의 합니다.
 
 인터넷 응용 프로그램에서 비동기 모니커 및 ActiveX 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-- [인터넷 첫 번째 단계: ActiveX 컨트롤](../../mfc/activex-controls-on-the-internet.md)
+- [인터넷 우선 단계: ActiveX 컨트롤](../../mfc/activex-controls-on-the-internet.md)
 
-- [인터넷 첫 번째 단계: 비동기 모니커](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [인터넷 우선 단계: 비동기 모니커](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -84,9 +84,9 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxctl.h
+**헤더:** afxctl
 
-##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty
+##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty
 
 `CDataPathProperty` 개체를 생성합니다.
 
@@ -98,42 +98,42 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *pControl*<br/>
-이 연결 될 OLE 컨트롤 개체에 대 한 포인터 `CDataPathProperty` 개체입니다.
+이 `CDataPathProperty` 개체와 연결 될 OLE 컨트롤 개체에 대 한 포인터입니다.
 
 *lpszPath*<br/>
-경로 절대 또는 상대 수 있는 속성의 절대 실제 위치를 참조 하는 비동기 모니커를 만드는 데 했습니다. `CDataPathProperty` 하지 파일 이름, Url을 사용합니다. 하려는 경우는 `CDataPathProperty` 파일에 대 한 개체, 앞 `file://` 경로에 있습니다.
+절대 또는 상대 경로일 수 있는 경로는 속성의 실제 절대 위치를 참조 하는 비동기 모니커를 만드는 데 사용 됩니다. `CDataPathProperty`는 파일 이름이 아닌 Url을 사용 합니다. 파일에 대 한 `CDataPathProperty` 개체를 원하는 경우 경로에 `file://` 앞에 추가 합니다.
 
 ### <a name="remarks"></a>설명
 
-합니다 `COleControl` 가리키는 개체 *pControl* 에서 사용 하는 `Open` 파생된 클래스에서 검색 합니다. 하는 경우 *pControl* 가 null 인 경우 사용 하 여 사용 하는 컨트롤 `Open` 으로 설정 해야 `SetControl`합니다. 하는 경우 *lpszPath* 가 null 인 경우 경로 통해 전달할 수 있습니다 `Open` 사용 하 여 설정 하거나 `SetPath`합니다.
+*Pcontrol* 에서 가리키는 `COleControl` 개체는 `Open` 파생 클래스에서 검색 하는 데 사용 됩니다. *Pcontrol* 이 NULL 인 경우 `Open`와 함께 사용 되는 컨트롤을 `SetControl`로 설정 해야 합니다. *LpszPath* 가 NULL 인 경우 `Open`를 통해 경로를 전달 하거나 `SetPath`를 사용 하 여 설정할 수 있습니다.
 
-##  <a name="getcontrol"></a>  CDataPathProperty::GetControl
+##  <a name="getcontrol"></a>CDataPathProperty:: GetControl
 
-검색 하려면이 멤버 함수를 호출 합니다 `COleControl` 연관 된 개체는 `CDataPathProperty` 개체입니다.
+이 멤버 함수를 호출 하 여 `CDataPathProperty` 개체와 연결 된 `COleControl` 개체를 검색 합니다.
 
 ```
 COleControl* GetControl();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-와 연결 된 OLE 컨트롤에 대 한 포인터를 반환 합니다 `CDataPathProperty` 개체입니다. 컨트롤이 아닌 경우 NULL 연결 됩니다.
+`CDataPathProperty` 개체와 연결 된 OLE 컨트롤에 대 한 포인터를 반환 합니다. 컨트롤이 연결 되어 있지 않으면 NULL입니다.
 
-##  <a name="getpath"></a>  CDataPathProperty::GetPath
+##  <a name="getpath"></a>CDataPathProperty:: GetPath
 
-경로 검색, 경우에 설정 하려면이 멤버 함수를 호출 합니다 `CDataPathProperty` 개체 생성 되었거나에 지정 된 `Open`, 또는 이전 호출에서 지정 된는 `SetPath` 멤버 함수입니다.
+이 멤버 함수를 호출 하 여 경로를 검색 하거나, `CDataPathProperty` 개체가 생성 되거나 `Open`에서 지정 되거나 `SetPath` 멤버 함수에 대 한 이전 호출에서 지정 된 경우에 설정 합니다.
 
 ```
 CString GetPath() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-속성 자체에 경로 반환합니다. 지정 된 경로가 없는 경우 비어 있을 수 있습니다.
+속성 자체에 대 한 경로 이름을 반환 합니다. 경로가 지정 되지 않은 경우 비어 있을 수 있습니다.
 
-##  <a name="open"></a>  CDataPathProperty::Open
+##  <a name="open"></a>CDataPathProperty:: Open
 
-연결된 된 컨트롤에 대 한 비동기 속성의 로드를 시작 하려면이 멤버 함수를 호출 합니다.
+연결 된 컨트롤의 비동기 속성 로드를 시작 하려면이 멤버 함수를 호출 합니다.
 
 ```
 virtual BOOL Open(
@@ -155,31 +155,31 @@ virtual BOOL Open(CFileException* pError = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *pControl*<br/>
-이 연결 될 OLE 컨트롤 개체에 대 한 포인터 `CDataPathProperty` 개체입니다.
+이 `CDataPathProperty` 개체와 연결 될 OLE 컨트롤 개체에 대 한 포인터입니다.
 
 *pError*<br/>
-파일 예외에 대 한 포인터입니다. 오류가 발생 하면 원인에 설정할 수 됩니다.
+파일 예외에 대 한 포인터입니다. 오류가 발생 하면가 원인으로 설정 됩니다.
 
 *lpszPath*<br/>
-경로 절대 또는 상대 수 있는 속성의 절대 실제 위치를 참조 하는 비동기 모니커를 만드는 데 했습니다. `CDataPathProperty` 하지 파일 이름, Url을 사용합니다. 하려는 경우는 `CDataPathProperty` 파일에 대 한 개체, 앞 `file://` 경로에 있습니다.
+절대 또는 상대 경로일 수 있는 경로는 속성의 실제 절대 위치를 참조 하는 비동기 모니커를 만드는 데 사용 됩니다. `CDataPathProperty`는 파일 이름이 아닌 Url을 사용 합니다. 파일에 대 한 `CDataPathProperty` 개체를 원하는 경우 경로에 `file://` 앞에 추가 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-함수 가져오기를 시도 합니다 `IBindHost` 컨트롤에서 인터페이스입니다.
+함수는 컨트롤에서 `IBindHost` 인터페이스를 가져오려고 시도 합니다.
 
-호출 하기 전에 `Open` 경로 없이 속성의 경로 대 한 값을 설정 해야 합니다. 이 개체가 생성 또는 전화 800-659-3579 때 수행할 수 있습니다는 `SetPath` 멤버 함수입니다.
+경로 없이 `Open`를 호출 하기 전에 속성의 경로에 대 한 값을 설정 해야 합니다. 개체를 생성할 때 또는 `SetPath` 멤버 함수를 호출 하 여이 작업을 수행할 수 있습니다.
 
-호출 하기 전에 `Open` 컨트롤 없이 (이전의 OLE 컨트롤) ActiveX 컨트롤 개체를 사용 하 여 연결할 수 있습니다. 이 개체가 생성 또는 전화 800-659-3579 때 수행할 수 있습니다 `SetControl`합니다.
+컨트롤 없이 `Open`를 호출 하기 전에 ActiveX 컨트롤 (이전에는 OLE 컨트롤 이라고 함)을 개체와 연결할 수 있습니다. 개체를 생성할 때 또는 `SetControl`을 호출 하 여이 작업을 수행할 수 있습니다.
 
-모든 오버 로드 [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) 에서도 사용할 `CDataPathProperty`합니다.
+[CAsyncMonikerFile:: Open](../../mfc/reference/casyncmonikerfile-class.md#open) 의 모든 오버 로드도 `CDataPathProperty`에서 사용할 수 있습니다.
 
-##  <a name="resetdata"></a>  CDataPathProperty::ResetData
+##  <a name="resetdata"></a>CDataPathProperty:: ResetData
 
-이 함수를 호출 `CAsyncMonikerFile::OnDataAvailable` 컨트롤 속성을 변경 하 고 비동기적으로 로드 된 모든 정보를 더 이상 유용 하지는 컨테이너를 알립니다.
+이 함수를 호출 하 여 컨트롤 속성이 변경 되었음을 컨테이너에 알리는 `CAsyncMonikerFile::OnDataAvailable`를 가져오고, 비동기적으로 로드 된 모든 정보는 더 이상 유용 하지 않습니다.
 
 ```
 virtual void ResetData();
@@ -187,11 +187,11 @@ virtual void ResetData();
 
 ### <a name="remarks"></a>설명
 
-열기를 다시 시작 해야 합니다. 파생된 클래스는 다른 기본값에 대 한이 함수를 재정의할 수 있습니다.
+열기를 다시 시작 해야 합니다. 파생 클래스는 다른 기본값에 대해이 함수를 재정의할 수 있습니다.
 
-##  <a name="setcontrol"></a>  CDataPathProperty::SetControl
+##  <a name="setcontrol"></a>CDataPathProperty:: SetControl
 
-사용 하 여 비동기 OLE 컨트롤을 연결 하려면이 멤버 함수를 호출 합니다 `CDataPathProperty` 개체입니다.
+비동기 OLE 컨트롤을 `CDataPathProperty` 개체와 연결 하려면이 멤버 함수를 호출 합니다.
 
 ```
 void SetControl(COleControl* pControl);
@@ -200,11 +200,11 @@ void SetControl(COleControl* pControl);
 ### <a name="parameters"></a>매개 변수
 
 *pControl*<br/>
-비동기 OLE 컨트롤 속성을 사용 하 여 연결에 대 한 포인터입니다.
+속성과 연결할 비동기 OLE 컨트롤에 대 한 포인터입니다.
 
-##  <a name="setpath"></a>  CDataPathProperty::SetPath
+##  <a name="setpath"></a>CDataPathProperty:: SetPath
 
-속성의 경로 이름을 설정 하려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 속성의 경로 이름을 설정 합니다.
 
 ```
 void SetPath(LPCTSTR lpszPath);
@@ -213,9 +213,9 @@ void SetPath(LPCTSTR lpszPath);
 ### <a name="parameters"></a>매개 변수
 
 *lpszPath*<br/>
-경로 절대 또는 상대 비동기적으로 로드 되는 속성 일 수 있습니다. `CDataPathProperty` 하지 파일 이름, Url을 사용합니다. 하려는 경우는 `CDataPathProperty` 파일에 대 한 개체, 앞 `file://` 경로에 있습니다.
+비동기적으로 로드 되는 속성에 대 한 절대 경로 또는 상대 경로일 수 있는 경로입니다. `CDataPathProperty`는 파일 이름이 아닌 Url을 사용 합니다. 파일에 대 한 `CDataPathProperty` 개체를 원하는 경우 경로에 `file://` 앞에 추가 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 이미지](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile 클래스](../../mfc/reference/casyncmonikerfile-class.md)<br/>

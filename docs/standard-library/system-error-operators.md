@@ -6,15 +6,15 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246219"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876277"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 연산자
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 연산자
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 개체가 우변에 있는 개체와 같은지 테스트합니다.
 
@@ -37,7 +37,7 @@ bool operator==(const error_condition& left,
 *오른쪽*\
 같은지 테스트할 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.
 
@@ -64,9 +64,9 @@ bool operator!=(const error_condition& left, const error_condition& right);
 *오른쪽*\
 같지 않은지 테스트할 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** 에 전달 된 개체가 *왼쪽* 에 전달 된 개체와 같지 않은 *오른쪽*이 고 그렇지 않으면 **false**합니다.
+*왼쪽* 에 전달 된 개체가 *오른쪽*에 전달 된 개체와 같지 않으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -108,15 +108,15 @@ inline bool operator<(
 *오른쪽*\
 비교할 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 에 전달 된 개체가 *왼쪽* 에 전달 되는 개체 보다 작습니다 *오른쪽*; 그렇지 않으면 **false**합니다.
+*왼쪽* 에 전달 된 개체가 *오른쪽*에 전달 된 개체 보다 작은 경우 **true** 입니다. 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
 이 함수는 오류 순서를 테스트합니다.
 
-## <a name="op_ostream"></a> 연산자&lt;&lt;
+## <a name="op_ostream"></a>연산자&lt;&lt;
 
 ```cpp
 template <class charT, class traits> 
