@@ -7,11 +7,11 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459786"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866156"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 열거형
 
@@ -39,6 +39,6 @@ enum codecvt_mode {
 
 이러한 상수는 임의 조합에서 함께 OR 처리될 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<codecvt>](../standard-library/codecvt.md)

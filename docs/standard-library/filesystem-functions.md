@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898703"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875829"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 함수
 
@@ -105,7 +105,7 @@ path absolute(const path& pval, const path& base = current_path());
 
 1. `pval.has_root_name() && pval.has_root_directory()` 경우 함수는 *pval*을 반환 합니다.
 
-1. `pval.has_root_name() && !pval.has_root_directory()` 경우 함수는 `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / 를 반환 합니다.
+1. `pval.has_root_name() && !pval.has_root_directory()` 경우 함수는 `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / 를 반환 합니다.`pval.relative_path()`
 
 1. `!pval.has_root_name() && pval.has_root_directory()` 경우 함수가 `absolute(base).root_name()` / *pval*를 반환 합니다.
 
@@ -226,7 +226,7 @@ void copy_symlink(const path& from, const path& to);
 void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;
 ```
 
-`is_directory(from)`경우 함수는 `create_directory_symlink(from, to)`를 호출 합니다. 그렇지 않으면 `create_symlink(from, to)`를 호출 합니다.
+`is_directory(from)`경우 함수는 `create_directory_symlink(from, to)`를 호출 합니다. 그렇지 않으면 `create_symlink(from, to)`합니다.
 
 ## <a name="create_directories"></a>create_directories
 
