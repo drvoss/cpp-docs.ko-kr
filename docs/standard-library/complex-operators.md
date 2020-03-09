@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
 ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257964"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876098"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 
@@ -53,11 +53,11 @@ bool operator!=(
 *오른쪽*\
 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 숫자가 같지 않으면 **true**이고, 숫자가 같으면 **false**입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 복소수는 해당 실수 부분도 같고 해당 허수 부분도 같은 경우에만 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
@@ -192,11 +192,11 @@ complex<Type> operator*(
 *오른쪽*\
 두 복소수 중 두 번째 복소수 이거나 \* 연산을 통해 곱할 복소수의 매개 변수 형식에 해당 하는 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값과 형식이 매개 변수 입력으로 지정되는 두 숫자를 곱한 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -292,11 +292,11 @@ complex<Type> operator+(const complex<Type>& left);
 *오른쪽*\
 두 복소수 중 두 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값과 형식이 매개 변수 입력으로 지정되는 두 숫자를 더한 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다. 단항 연산자는 *left*를 반환 합니다.
 
@@ -432,11 +432,11 @@ complex<Type> operator-(const complex<Type>& left);
 *오른쪽*\
 두 복소수 중 두 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *왼쪽*에서 *오른쪽* 의 빼기로 생성 된 복소수입니다. 값이 매개 변수 입력으로 지정 되는 두 숫자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -571,11 +571,11 @@ complex<Type> operator*(
 *오른쪽*\
 복소수이거나 / 연산으로 분자를 나누는 데 사용할 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수 입력으로 지정되는 값인 분모로 분자를 나눈 복소수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.
 
@@ -681,11 +681,11 @@ basic_ostream<Elem, Traits>& operator<<(
 *오른쪽*\
 출력 스트림에 입력하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 복소수의 값을 데카르트 형식의 *Ostr* 에 씁니다. ( *실수, 허수 부분* )
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 출력 스트림이 오버로드어 모든 형태의 복소수를 허용하며 기본 출력 형식은 직각좌표 형식입니다.
 
@@ -753,11 +753,11 @@ bool operator==(
 *오른쪽*\
 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 숫자가 같으면 **true**이고, 숫자가 같지 않으면 **false**입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 복소수는 해당 실수 부분도 같고 해당 허수 부분도 같은 경우에만 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
@@ -882,11 +882,11 @@ basic_istream<Elem, Traits>& operator>>(
 *오른쪽*\
 입력 스트림에서 추출하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Istr* 에서 지정 된 복소수의 값을 읽어 *오른쪽*으로 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 유효한 입력 형식은 다음과 같습니다.
 

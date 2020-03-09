@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686100"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856735"
 ---
 # <a name="c-standard-library-containers"></a>C++ 표준 라이브러리 컨테이너
 
@@ -58,7 +58,7 @@ std::set<BigObject, std::less<>> myNewSet;
 
 기본 비교 연산자를 사용하는 경우 컨테이너는 C++11 이전의 경우와 똑같이 작동합니다.
 
-다음 예제에서는 `std::set` 사용자가 간단하게 각 개체의 `BigObject::id` 멤버와 비교할 수 있는 작은 문자열을 전달하여 조회를 수행할 수 있도록 `operator<`를 오버로드하는 방법을 보여 줍니다.
+다음 예제에서는 `operator<` 사용자가 간단하게 각 개체의 `std::set` 멤버와 비교할 수 있는 작은 문자열을 전달하여 조회를 수행할 수 있도록 `BigObject::id`를 오버로드하는 방법을 보여 줍니다.
 
 ```cpp
 #include <set>
@@ -121,7 +121,7 @@ int main()
 
 map, multimap, set 및 multiset의 다음 멤버 함수는 유형이 다른 조회를 지원하도록 오버로드되었습니다.
 
-1. find
+1. 찾기
 
 1. count
 
@@ -166,9 +166,9 @@ map, multimap, set 및 multiset의 다음 멤버 함수는 유형이 다른 조�
 
 ### <a name="comparing-dissimilar-containers-c14"></a>다른 종류의 컨테이너 비교(C++14)
 
-C + + 14 이상에서는 두 개의 전체 범위를 사용 하는 `std::equal`, `std::mismatch` 또는 `std::is_permutation` 함수 오버 로드 중 하나를 사용 하 여 다른 종류의 컨테이너 및/또는 서로 다른 요소 형식을 비교할 수 있습니다. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.
+C + + 14 이상에서는 두 개의 전체 범위를 사용 하는 `std::equal`, `std::mismatch`또는 `std::is_permutation` 함수 오버 로드 중 하나를 사용 하 여 다른 종류의 컨테이너 및/또는 서로 다른 요소 형식을 비교할 수 있습니다. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [컨테이너](../cpp/containers-modern-cpp.md)\
 [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)\

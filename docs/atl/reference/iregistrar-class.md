@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927762"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857150"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 인터페이스
 
@@ -36,26 +36,26 @@ typedef interface IRegistrar IRegistrar;
 
 자세한 내용은 [대체 가능한 매개 변수 (등록자의 전처리기) 사용](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 항목을 참조 하세요.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|리소스를 등록 합니다. |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 리소스 등록을 취소 합니다.|
-|[IRegistrar::FileRegister](#fileregister)|파일을 등록 합니다.|
-|[IRegistrar::FileUnregister](#fileunregister)|파일의 등록을 취소 합니다.|
-|[IRegistrar::StringRegister](#stringregister)|문자열을 등록 합니다.|
-|[IRegistrar::StringUnregister](#stringunregister)|문자열 등록 취소|
-|[IRegistrar::ResourceRegister](#resourceregister)|리소스를 등록 합니다.|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|리소스 등록을 취소 합니다.|
+|[IRegistrar:: ResourceRegisterSz](#resourceregistersz)|리소스를 등록 합니다. |
+|[IRegistrar:: ResourceUnregisterSz](#resourceunregistersz)| 리소스 등록을 취소 합니다.|
+|[IRegistrar:: FileRegister](#fileregister)|파일을 등록 합니다.|
+|[IRegistrar:: FileUnregister 취소](#fileunregister)|파일의 등록을 취소 합니다.|
+|[IRegistrar:: StringRegister](#stringregister)|문자열을 등록 합니다.|
+|[IRegistrar:: StringUnregister 취소](#stringunregister)|문자열 등록 취소|
+|[IRegistrar:: ResourceRegister](#resourceregister)|리소스를 등록 합니다.|
+|[IRegistrar:: ResourceUnregister 취소](#resourceunregister)|리소스 등록을 취소 합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** atlifase
 
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+##  <a name="resourceregistersz"></a>IRegistrar:: ResourceRegisterSz
 
 리소스를 등록 합니다.
 
@@ -66,7 +66,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+##  <a name="resourceunregistersz"></a>IRegistrar:: ResourceUnregisterSz
 
 리소스 등록을 취소 합니다.
 
@@ -77,7 +77,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>  IRegistrar::FileRegister
+##  <a name="fileregister"></a>IRegistrar:: FileRegister
 
 파일을 등록 합니다.
 
@@ -86,7 +86,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+##  <a name="fileunregister"></a>IRegistrar:: FileUnregister 취소
 
 파일의 등록을 취소 합니다.
 
@@ -95,7 +95,7 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister
+##  <a name="stringregister"></a>IRegistrar:: StringRegister
 
 지정 된 문자열 데이터를 등록 합니다.
 
@@ -104,7 +104,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar:: StringUnregister 취소
 
 지정 된 문자열 데이터의 등록을 취소 합니다.
 
@@ -113,7 +113,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+##  <a name="resourceregister"></a>IRegistrar:: ResourceRegister
 
 리소스를 등록 합니다.
 
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+##  <a name="resourceunregister"></a>IRegistrar:: ResourceUnregister 취소
 
 리소스 등록을 취소 합니다.
 
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [대체 가능 매개 변수 사용(등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)<br/>

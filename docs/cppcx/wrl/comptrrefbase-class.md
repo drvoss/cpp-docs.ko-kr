@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398643"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865823"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 클래스
 
@@ -34,34 +34,34 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-A [ComPtr\<T >](comptr-class.md) 형식 또는 형식에서 파생 하 여이 나타내는 인터페이스 뿐만 아니라는 `ComPtr`합니다.
+[ComPtr\<t >](comptr-class.md) 형식 또는이 형식에서 파생 된 형식으로, `ComPtr`표시 되는 인터페이스 일 뿐입니다.
 
 ## <a name="remarks"></a>설명
 
-에 대 한 기본 클래스를 나타냅니다 합니다 [ComPtrRef](comptrref-class.md) 클래스입니다.
+[Comptrref](comptrref-class.md) 클래스의 기본 클래스를 나타냅니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-이름            | 설명
+속성            | Description
 --------------- | -------------------------------------------------
-`InterfaceType` | 템플릿 매개 변수의 형식에 대 한 동의어 *T*합니다.
+`InterfaceType` | 템플릿 매개 변수 *T*형식의 동의어입니다.
 
 ### <a name="public-operators"></a>Public 연산자
 
-이름                                                                       | 설명
+속성                                                                       | Description
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[Comptrrefbase:: Operator IInspectable * *](#operator-iinspectable-star-star) | 현재 캐스팅 [ptr_](#ptr) 데이터 멤버는 포인터--a-포인터-을는 `IInspectable` 인터페이스입니다.
-[Comptrrefbase:: Operator IUnknown * *](#operator-iunknown-star-star)         | 현재 캐스팅 [ptr_](#ptr) 데이터 멤버는 포인터--a-포인터-을는 `IUnknown` 인터페이스입니다.
+[ComPtrRefBase:: operator IInspectable * *](#operator-iinspectable-star-star) | 현재 [ptr_](#ptr) 데이터 멤버를 `IInspectable` 인터페이스에 대 한 포인터 포인터로 캐스팅 합니다.
+[ComPtrRefBase:: operator IUnknown * *](#operator-iunknown-star-star)         | 현재 [ptr_](#ptr) 데이터 멤버를 `IUnknown` 인터페이스에 대 한 포인터 포인터로 캐스팅 합니다.
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-이름                        | 설명
+속성                        | Description
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase::ptr_](#ptr) | 현재 템플릿 매개 변수로 지정 된 형식에 대 한 포인터입니다.
+[ComPtrRefBase::p tr_](#ptr) | 현재 템플릿 매개 변수에 지정 된 형식에 대 한 포인터입니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `ComPtrRefBase`
 
@@ -69,9 +69,9 @@ A [ComPtr\<T >](comptr-class.md) 형식 또는 형식에서 파생 하 여이 �
 
 **헤더:** client.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: Operator IInspectable\* \* 연산자
+## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase:: operator IInspectable\*\* 연산자
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -81,13 +81,13 @@ operator IInspectable**() const;
 
 ### <a name="remarks"></a>설명
 
-현재 캐스팅 [ptr_](#ptr) 데이터 멤버는 포인터--a-포인터-을는 `IInspectable` 인터페이스입니다.
+현재 [ptr_](#ptr) 데이터 멤버를 `IInspectable` 인터페이스에 대 한 포인터 포인터로 캐스팅 합니다.
 
-오류가 발생 하는 경우에 내보내집니다 현재 `ComPtrRefBase` 에서 파생 되지 `IInspectable`합니다.
+현재 `ComPtrRefBase` `IInspectable`에서 파생 되지 않으면 오류가 발생 합니다.
 
-이 캐스트는 사용할 수 있는 경우에만 `__WRL_CLASSIC_COM__` 정의 됩니다.
+이 캐스트는 `__WRL_CLASSIC_COM__` 정의 된 경우에만 사용할 수 있습니다.
 
-## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: Operator IUnknown * * 연산자
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase:: operator IUnknown * * 연산자
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -97,11 +97,11 @@ operator IUnknown**() const;
 
 ### <a name="remarks"></a>설명
 
-현재 캐스팅 [ptr_](#ptr) 데이터 멤버는 포인터--a-포인터-을는 `IUnknown` 인터페이스입니다.
+현재 [ptr_](#ptr) 데이터 멤버를 `IUnknown` 인터페이스에 대 한 포인터 포인터로 캐스팅 합니다.
 
-오류가 발생 하는 경우에 내보내집니다 현재 `ComPtrRefBase` 에서 파생 되지 `IUnknown`합니다.
+현재 `ComPtrRefBase` `IUnknown`에서 파생 되지 않으면 오류가 발생 합니다.
 
-## <a name="ptr"></a>ComPtrRefBase::ptr_
+## <a name="ptr"></a>ComPtrRefBase::p tr_
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -111,4 +111,4 @@ T* ptr_;
 
 ### <a name="remarks"></a>설명
 
-현재 템플릿 매개 변수로 지정 된 형식에 대 한 포인터입니다. `ptr_` 보호 된 데이터 멤버가입니다.
+현재 템플릿 매개 변수에 지정 된 형식에 대 한 포인터입니다. `ptr_` 보호 된 데이터 멤버입니다.

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741636"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883665"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 클래스
 
@@ -45,28 +45,28 @@ ms.locfileid: "70741636"
 class COleDataObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[COleDataObject::COleDataObject](#coledataobject)|`COleDataObject` 개체를 생성합니다.|
+|[COleDataObject:: COleDataObject](#coledataobject)|`COleDataObject` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[COleDataObject::Attach](#attach)|지정 된 OLE 데이터 개체 `COleDataObject`를에 연결 합니다.|
-|[COleDataObject::AttachClipboard](#attachclipboard)|클립보드에 있는 데이터 개체를 연결 합니다.|
-|[COleDataObject::BeginEnumFormats](#beginenumformats)|하나 이상의 후속 `GetNextFormat` 호출을 준비 합니다.|
-|[COleDataObject::Detach](#detach)|연결 `IDataObject` 된 개체를 분리 합니다.|
-|[COleDataObject::GetData](#getdata)|지정 된 형식의 연결 된 OLE 데이터 개체에서 데이터를 복사 합니다.|
-|[COleDataObject::GetFileData](#getfiledata)|연결 된 OLE 데이터 개체 `CFile` 의 데이터를 지정 된 형식의 포인터로 복사 합니다.|
-|[COleDataObject::GetGlobalData](#getglobaldata)|연결 된 OLE 데이터 개체의 데이터를 지정 된 `HGLOBAL` 형식의로 복사 합니다.|
-|[COleDataObject::GetNextFormat](#getnextformat)|사용할 수 있는 다음 데이터 형식을 반환 합니다.|
-|[COleDataObject::IsDataAvailable](#isdataavailable)|지정 된 형식으로 데이터를 사용할 수 있는지 여부를 확인 합니다.|
-|[COleDataObject::Release](#release)|연결 `IDataObject` 된 개체를 분리 하 고 해제 합니다.|
+|[COleDataObject:: Attach](#attach)|`COleDataObject`에 지정 된 OLE 데이터 개체를 연결 합니다.|
+|[COleDataObject:: AttachClipboard](#attachclipboard)|클립보드에 있는 데이터 개체를 연결 합니다.|
+|[COleDataObject:: BeginEnumFormats](#beginenumformats)|하나 이상의 후속 `GetNextFormat` 호출을 준비 합니다.|
+|[COleDataObject::D etach](#detach)|연결 된 `IDataObject` 개체를 분리 합니다.|
+|[COleDataObject:: GetData](#getdata)|지정 된 형식의 연결 된 OLE 데이터 개체에서 데이터를 복사 합니다.|
+|[COleDataObject:: GetFileData](#getfiledata)|연결 된 OLE 데이터 개체의 데이터를 지정 된 형식의 `CFile` 포인터로 복사 합니다.|
+|[COleDataObject:: GetGlobalData](#getglobaldata)|연결 된 OLE 데이터 개체의 데이터를 지정 된 형식의 `HGLOBAL`에 복사 합니다.|
+|[COleDataObject:: GetNextFormat](#getnextformat)|사용할 수 있는 다음 데이터 형식을 반환 합니다.|
+|[COleDataObject:: IsDataAvailable](#isdataavailable)|지정 된 형식으로 데이터를 사용할 수 있는지 여부를 확인 합니다.|
+|[COleDataObject:: Release](#release)|연결 된 `IDataObject` 개체를 분리 하 고 해제 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -74,7 +74,7 @@ class COleDataObject
 
 이러한 종류의 데이터 전송에는 원본 및 대상이 포함 됩니다. 데이터 원본은 [Coledatasource](../../mfc/reference/coledatasource-class.md) 클래스의 개체로 구현 됩니다. 대상 응용 프로그램에 삭제 된 데이터가 있거나 클립보드에서 붙여넣기 작업을 수행 하 라는 메시지가 표시 될 때마다 `COleDataObject` 클래스의 개체를 만들어야 합니다.
 
-이 클래스를 사용 하면 데이터가 지정 된 형식으로 존재 하는지 여부를 확인할 수 있습니다. 사용 가능한 데이터 형식을 열거 하거나 지정 된 형식을 사용할 수 있는지 여부를 확인 한 다음 기본 형식으로 데이터를 검색할 수도 있습니다. 개체 검색은 [CFile](../../mfc/reference/cfile-class.md), HGLOBAL 또는 `STGMEDIUM` 구조체를 사용 하는 등 여러 가지 방법으로 수행할 수 있습니다.
+이 클래스를 사용 하면 데이터가 지정 된 형식으로 존재 하는지 여부를 확인할 수 있습니다. 사용 가능한 데이터 형식을 열거 하거나 지정 된 형식을 사용할 수 있는지 여부를 확인 한 다음 기본 형식으로 데이터를 검색할 수도 있습니다. 개체 검색은 [CFile](../../mfc/reference/cfile-class.md), HGLOBAL 또는 `STGMEDIUM` 구조를 사용 하는 등 여러 가지 방법으로 수행할 수 있습니다.
 
 자세한 내용은 Windows SDK [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 참조 하세요.
 
@@ -88,9 +88,9 @@ class COleDataObject
 
 **헤더:** afxole
 
-##  <a name="attach"></a>  COleDataObject::Attach
+##  <a name="attach"></a>COleDataObject:: Attach
 
-OLE 데이터 개체와 `COleDataObject` 개체를 연결 하려면이 함수를 호출 합니다.
+이 함수를 호출 하 여 `COleDataObject` 개체와 OLE 데이터 개체를 연결 합니다.
 
 ```
 void Attach(
@@ -104,13 +104,13 @@ void Attach(
 OLE 데이터 개체를 가리킵니다.
 
 *bAutoRelease*<br/>
-`COleDataObject` 개체가 소멸 될 때 OLE 데이터 개체를 해제 해야 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+`COleDataObject` 개체가 제거 될 때 OLE 데이터 개체를 해제 해야 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
 자세한 내용은 Windows SDK에서 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 을 참조 하세요.
 
-##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard
+##  <a name="attachclipboard"></a>COleDataObject:: AttachClipboard
 
 현재 클립보드에 있는 데이터 개체를 `COleDataObject` 개체에 연결 하려면이 함수를 호출 합니다.
 
@@ -118,18 +118,18 @@ OLE 데이터 개체를 가리킵니다.
 BOOL AttachClipboard();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
 > [!NOTE]
->  이 함수를 호출 하면이 데이터 개체가 해제 될 때까지 클립보드가 잠깁니다. 데이터 개체는의 소멸자 `COleDataObject`에 릴리스됩니다. 자세한 내용은 Win32 설명서의 [Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) 및 [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 를 참조 하세요.
+>  이 함수를 호출 하면이 데이터 개체가 해제 될 때까지 클립보드가 잠깁니다. 데이터 개체는 `COleDataObject`의 소멸자에 릴리스됩니다. 자세한 내용은 Win32 설명서의 [Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) 및 [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 를 참조 하세요.
 
-##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats
+##  <a name="beginenumformats"></a>COleDataObject:: BeginEnumFormats
 
-항목에서 데이터 형식 목록을 검색 하기 위해에 `GetNextFormat` 대 한 후속 호출을 준비 하려면이 함수를 호출 합니다.
+항목에서 데이터 형식 목록을 검색 하는 `GetNextFormat`에 대 한 후속 호출을 준비 하려면이 함수를 호출 합니다.
 
 ```
 void BeginEnumFormats();
@@ -137,13 +137,13 @@ void BeginEnumFormats();
 
 ### <a name="remarks"></a>설명
 
-를 `BeginEnumFormats`호출한 후이 데이터 개체에서 지 원하는 첫 번째 형식의 위치가 저장 됩니다. 에 대 한 `GetNextFormat` 후속 호출에서는 데이터 개체에서 사용 가능한 형식의 목록을 열거 합니다.
+`BeginEnumFormats`를 호출한 후이 데이터 개체에서 지 원하는 첫 번째 형식의 위치가 저장 됩니다. `GetNextFormat`에 대 한 후속 호출에서는 데이터 개체에서 사용 가능한 형식의 목록을 열거 합니다.
 
 지정 된 형식의 데이터 사용 가능 여부를 확인 하려면 [Coledataobject:: IsDataAvailable](#isdataavailable)를 사용 합니다.
 
 자세한 내용은 Windows SDK에서 [IDataObject:: enumformatetc 메서드의](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 를 참조 하세요.
 
-##  <a name="coledataobject"></a>  COleDataObject::COleDataObject
+##  <a name="coledataobject"></a>COleDataObject:: COleDataObject
 
 `COleDataObject` 개체를 생성합니다.
 
@@ -153,26 +153,26 @@ COleDataObject();
 
 ### <a name="remarks"></a>설명
 
-다른`COleDataObject` 함수를 호출 하기 전에 [coledataobject:: Attach](#attach) 또는 [coledataobject:: AttachClipboard](#attachclipboard) 를 호출 해야 합니다.
+다른 `COleDataObject` 함수를 호출 하기 전에 [Coledataobject:: Attach](#attach) 또는 [Coledataobject:: AttachClipboard](#attachclipboard) 를 호출 해야 합니다.
 
 > [!NOTE]
->  끌어서 놓기 처리기에 대 한 매개 변수 중 하나가에 대 `COleDataObject`한 포인터 이므로 끌어서 놓기를 지원 하기 위해이 생성자를 호출할 필요가 없습니다.
+>  끌어서 놓기 처리기에 대 한 매개 변수 중 하나가 `COleDataObject`에 대 한 포인터 이므로 끌어서 놓기를 지원 하기 위해이 생성자를 호출할 필요가 없습니다.
 
-##  <a name="detach"></a>  COleDataObject::Detach
+##  <a name="detach"></a>COleDataObject::D etach
 
-데이터 개체를 해제 하지 않고 `COleDataObject` 연결 된 OLE 데이터 개체에서 개체를 분리 하려면이 함수를 호출 합니다.
+데이터 개체를 해제 하지 않고 연결 된 OLE 데이터 개체에서 `COleDataObject` 개체를 분리 하려면이 함수를 호출 합니다.
 
 ```
 LPDATAOBJECT Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 분리 된 OLE 데이터 개체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdata"></a>  COleDataObject::GetData
+##  <a name="getdata"></a>COleDataObject:: GetData
 
 지정 된 형식의 항목에서 데이터를 검색 하려면이 함수를 호출 합니다.
 
@@ -194,7 +194,7 @@ BOOL GetData(
 *lpFormatEtc*<br/>
 데이터가 반환 되는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. NULL 인 경우 기본값은 `FORMATETC` 구조체의 다른 필드에 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -204,9 +204,9 @@ BOOL GetData(
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="getfiledata"></a>  COleDataObject::GetFileData
+##  <a name="getfiledata"></a>COleDataObject:: GetFileData
 
-`CFile` `CFile` 또는 파생개체를만들고지정된형식의데이터를포인터로검색하려면이함수를호출합니다.`CFile`
+`CFile` 또는 `CFile`파생 개체를 만들고 지정 된 형식의 데이터를 `CFile` 포인터로 검색 하려면이 함수를 호출 합니다.
 
 ```
 CFile* GetFileData(
@@ -222,22 +222,22 @@ CFile* GetFileData(
 *lpFormatEtc*<br/>
 데이터가 반환 되는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. NULL 인 경우 기본값은 `FORMATETC` 구조체의 다른 필드에 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 데이터를 `CFile` 포함 `CFile`하는 새 또는 파생 개체에 대 한 포인터이 고, 그렇지 않으면 NULL입니다.
+성공 하는 경우 데이터를 포함 하는 새 `CFile` 또는 `CFile`파생 개체에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-데이터가 저장 되는 미디어에 따라 반환 값이 가리키는 실제 형식은, `CFile` `CSharedFile`또는 `COleStreamFile`일 수 있습니다.
+데이터가 저장 되는 미디어에 따라 반환 값이 가리키는 실제 형식은 `CFile`, `CSharedFile`또는 `COleStreamFile`수 있습니다.
 
 > [!NOTE]
->  이 함수의 반환 값으로 액세스 되는 개체는호출자가소유합니다.`CFile` 호출자가 `CFile` 개체를 **삭제** 하 여 파일을 닫는 것은 책임입니다.
+>  이 함수의 반환 값으로 액세스 되는 `CFile` 개체는 호출자가 소유 합니다. 호출자가 `CFile` 개체를 **삭제** 하 여 파일을 닫는 것은 책임입니다.
 
 자세한 내용은 Windows SDK에서 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 을 참조 하세요.
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData
+##  <a name="getglobaldata"></a>COleDataObject:: GetGlobalData
 
 이 함수를 호출 하 여 전역 메모리 블록을 할당 하 고 지정 된 형식의 데이터를 HGLOBAL에 검색 합니다.
 
@@ -255,7 +255,7 @@ HGLOBAL GetGlobalData(
 *lpFormatEtc*<br/>
 데이터가 반환 되는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. NULL 인 경우 기본값은 `FORMATETC` 구조체의 다른 필드에 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 데이터를 포함 하는 전역 메모리 블록의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -265,7 +265,7 @@ HGLOBAL GetGlobalData(
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 
-##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat
+##  <a name="getnextformat"></a>COleDataObject:: GetNextFormat
 
 항목에서 데이터를 검색 하는 데 사용할 수 있는 모든 형식을 가져오려면이 함수를 반복적으로 호출 합니다.
 
@@ -278,19 +278,19 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 *lpFormatEtc*<br/>
 함수 호출이 반환 될 때 형식 정보를 받는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다른 형식을 사용할 수 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-[Coledataobject:: BeginEnumFormats](#beginenumformats)를 호출한 후이 데이터 개체에서 지 원하는 첫 번째 형식의 위치가 저장 됩니다. 에 대 한 `GetNextFormat` 후속 호출에서는 데이터 개체에서 사용 가능한 형식의 목록을 열거 합니다. 이러한 함수를 사용 하 여 사용 가능한 형식을 나열 합니다.
+[Coledataobject:: BeginEnumFormats](#beginenumformats)를 호출한 후이 데이터 개체에서 지 원하는 첫 번째 형식의 위치가 저장 됩니다. `GetNextFormat`에 대 한 후속 호출에서는 데이터 개체에서 사용 가능한 형식의 목록을 열거 합니다. 이러한 함수를 사용 하 여 사용 가능한 형식을 나열 합니다.
 
 지정 된 형식의 가용성을 확인 하려면 [Coledataobject:: IsDataAvailable](#isdataavailable)를 호출 합니다.
 
 자세한 내용은 Windows SDK의 [IEnumXXXX:: Next (다음](/previous-versions//ms695273\(v=vs.85\)) )를 참조 하세요.
 
-##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable
+##  <a name="isdataavailable"></a>COleDataObject:: IsDataAvailable
 
 OLE 항목에서 데이터를 검색 하는 데 특정 형식을 사용할 수 있는지 확인 하려면이 함수를 호출 합니다.
 
@@ -308,13 +308,13 @@ BOOL IsDataAvailable(
 *lpFormatEtc*<br/>
 원하는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려는 경우에만이 매개 변수에 대 한 값을 제공 합니다. NULL 인 경우 기본값은 `FORMATETC` 구조체의 다른 필드에 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 형식으로 데이터를 사용할 수 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는, 또는 `GetData` `GetGlobalData`를 `GetFileData`호출 하기 전에 유용 합니다.
+이 함수는 `GetData`, `GetFileData`또는 `GetGlobalData`를 호출 하기 전에 유용 합니다.
 
 자세한 내용은 Windows SDK에서 [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) 및 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 를 참조 하세요.
 
@@ -324,9 +324,9 @@ BOOL IsDataAvailable(
 
   [CRichEditView:: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)의 예제를 참조 하세요.
 
-##  <a name="release"></a>  COleDataObject::Release
+##  <a name="release"></a>COleDataObject:: Release
 
-이전에 `COleDataObject` 개체와 연결 된 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 개체의 소유권을 해제 하려면이 함수를 호출 합니다.
+`COleDataObject` 개체와 이전에 연결 된 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 개체의 소유권을 해제 하려면이 함수를 호출 합니다.
 
 ```
 void Release();
@@ -334,9 +334,9 @@ void Release();
 
 ### <a name="remarks"></a>설명
 
-는 `IDataObject` 또는 `COleDataObject` `Attach` 를 명시적으로또는프레임워크에서호출하여와연결되었습니다.`AttachClipboard` `IDataObject` 의 `Attach` *bAutoRelease* 매개 변수가 FALSE 이면 개체가 해제 되지 않습니다. 이 경우 호출자는 [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)를 호출 하 `IDataObject` 여를 해제 해야 합니다.
+`IDataObject`은 `Attach` 또는 `AttachClipboard`를 명시적으로 호출 하거나 프레임 워크를 사용 하 여 `COleDataObject`에 연결 되었습니다. `Attach`의 *bAutoRelease* 매개 변수가 FALSE 이면 `IDataObject` 개체가 해제 되지 않습니다. 이 경우 호출자는 [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)를 호출 하 여 `IDataObject`를 해제 해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 OCLIENT](../../overview/visual-cpp-samples.md)<br/>

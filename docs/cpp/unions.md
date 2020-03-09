@@ -1,5 +1,5 @@
 ---
-title: Unions
+title: 통합
 ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062052"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875736"
 ---
-# <a name="unions"></a>Unions
+# <a name="unions"></a>통합
 
 > [!NOTE]
 > C + + 17 이상에서 **std:: variant** 클래스는 공용 구조체에 대 한 형식 안전 대안입니다.
@@ -34,7 +34,7 @@ union [name]  { member-list };
 *name*<br/>
 공용 구조체에 지정된 형식 이름입니다.
 
-*member-list*<br/>
+*멤버 목록*<br/>
 공용 구조체에 포함할 수 있는 멤버입니다. 설명 부분을 참조하세요.
 
 ## <a name="remarks"></a>설명
@@ -654,9 +654,9 @@ union  {  member-list  }
 
 - 멤버 함수를 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 및 구조체(C++)](../cpp/classes-and-structs-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[클래스 및 구조체](../cpp/classes-and-structs-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [class](../cpp/class-cpp.md)<br/>
 [struct](../cpp/struct-cpp.md)

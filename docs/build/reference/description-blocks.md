@@ -8,11 +8,11 @@ helpviewer_keywords:
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
 ms.openlocfilehash: fb9cf4400c96b588e8704e972dd29ab27f41cae9
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144528"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856934"
 ---
 # <a name="description-blocks"></a>설명 블록
 
@@ -212,6 +212,6 @@ reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 
 대상 `reverse.exe`에는 하나의 종속 `retro.obj`있습니다. 중괄호로 묶인 목록은 두 개의 디렉터리를 지정 합니다. NMAKE는 현재 디렉터리에서 `retro.obj`를 먼저 검색 합니다. 해당 디렉터리가 없으면 NMAKE는 `\src\omega` 디렉터리를 검색 한 다음 `e:\repo\backwards` 디렉터리를 검색 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [NMAKE 참조](nmake-reference.md)

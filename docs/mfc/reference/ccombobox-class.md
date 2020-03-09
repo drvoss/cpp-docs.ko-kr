@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890813"
 ---
 # <a name="ccombobox-class"></a>CComboBox 클래스
 
@@ -125,31 +125,31 @@ Windows 콤보 상자의 기능을 제공합니다.
 class CComboBox : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|`CComboBox` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CComboBox::AddString](#addstring)|콤보 상자의 목록 상자 또는 CBS_SORT 스타일을 사용 하 여 목록 상자에 대 한 정렬 된 위치에 문자열을 추가 합니다.|
+|[CComboBox::AddString](#addstring)|콤보 상자의 목록 상자 또는 CBS_SORT 스타일이 있는 목록 상자의 정렬 된 위치에 문자열을 추가 합니다.|
 |[CComboBox::Clear](#clear)|편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (선택 취소) 합니다.|
 |[CComboBox::CompareItem](#compareitem)|정렬 된 소유자가 그린 콤보 상자에서 새 목록 항목의 상대 위치를 확인 하기 위해 프레임 워크에서 호출 됩니다.|
 |[CComboBox::Copy](#copy)|현재 선택 항목 (있는 경우)을 클립보드에 CF_TEXT 형식으로 복사 합니다.|
-|[CComboBox::Create](#create)|콤보 상자를 만들고 `CComboBox` 개체에 연결 합니다.|
-|[CComboBox::Cut](#cut)|편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (잘라내기) 하 고 삭제 된 텍스트를 CF_TEXT 형식으로 클립보드에 복사 합니다.|
+|[CComboBox::Create](#create)|콤보 상자를 만들어 `CComboBox` 개체에 연결 합니다.|
+|[CComboBox::Cut](#cut)|편집 컨트롤에서 현재 선택 영역을 삭제 (잘라내기) 하 고 삭제 된 텍스트를 클립보드에 CF_TEXT 형식으로 복사 합니다.|
 |[CComboBox::DeleteItem](#deleteitem)|소유자가 그린 콤보 상자에서 목록 항목이 삭제 될 때 프레임 워크에서 호출 됩니다.|
 |[CComboBox::DeleteString](#deletestring)|콤보 상자의 목록 상자에서 문자열을 삭제 합니다.|
 |[CComboBox::Dir](#dir)|콤보 상자의 목록 상자에 파일 이름 목록을 추가 합니다.|
 |[CComboBox::DrawItem](#drawitem)|소유자가 그린 콤보 상자의 시각적 측면이 변경 될 때 프레임 워크에서 호출 됩니다.|
 |[CComboBox::FindString](#findstring)|콤보 상자의 목록 상자에서 지정 된 접두사를 포함 하는 첫 번째 문자열을 찾습니다.|
 |[CComboBox::FindStringExact](#findstringexact)|콤보 상자에서 지정 된 문자열과 일치 하는 첫 번째 목록 상자 문자열을 찾습니다.|
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|개체에 대 한 `CComboBox` 정보를 검색 합니다.|
+|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|`CComboBox` 개체에 대 한 정보를 검색 합니다.|
 |[CComboBox::GetCount](#getcount)|콤보 상자의 목록 상자에 있는 항목 수를 검색 합니다.|
 |[CComboBox::GetCueBanner](#getcuebanner)|콤보 상자 컨트롤에 대해 표시 되는 큐 텍스트를 가져옵니다.|
 |[CComboBox::GetCurSel](#getcursel)|콤보 상자의 목록 상자에서 현재 선택 된 항목 (있는 경우)의 인덱스를 검색 합니다.|
@@ -178,7 +178,7 @@ class CComboBox : public CWnd
 |[CComboBox::SetCurSel](#setcursel)|콤보 상자의 목록 상자에서 문자열을 선택 합니다.|
 |[CComboBox::SetDroppedWidth](#setdroppedwidth)|콤보 상자의 드롭다운 목록 상자 부분에 허용 되는 최소 너비를 설정 합니다.|
 |[CComboBox::SetEditSel](#seteditsel)|콤보 상자의 편집 컨트롤에서 문자를 선택 합니다.|
-|[CComboBox::SetExtendedUI](#setextendedui)|CBS_DROPDOWN 또는 CBS_DROPDOWNLIST 스타일이 있는 콤보 상자의 기본 사용자 인터페이스 또는 확장 사용자 인터페이스를 선택 합니다.|
+|[CComboBox::SetExtendedUI](#setextendedui)|기본 사용자 인터페이스 또는 CBS_DROPDOWN 또는 CBS_DROPDOWNLIST 스타일을 포함 하는 콤보 상자의 확장 된 사용자 인터페이스 중 하나를 선택 합니다.|
 |[CComboBox::SetHorizontalExtent](#sethorizontalextent)|콤보 상자의 목록 상자 부분을 가로로 스크롤할 수 있는 너비 (픽셀)를 설정 합니다.|
 |[CComboBox::SetItemData](#setitemdata)|콤보 상자의 지정 된 항목과 연결 된 32 비트 값을 설정 합니다.|
 |[CComboBox::SetItemDataPtr](#setitemdataptr)|콤보 상자의 지정 된 항목과 연결 된 32 비트 포인터를 설정 합니다.|
@@ -196,65 +196,65 @@ class CComboBox : public CWnd
 
 다음 표에서는 세 개의 콤보 상자 [스타일](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)을 비교 합니다.
 
-|스타일|목록 상자가 표시 되는 경우|정적 또는 편집 컨트롤|
+|Style|목록 상자가 표시 되는 경우|정적 또는 편집 컨트롤|
 |-----------|-------------------------------|-----------------------------|
-|단순|항상|편집|
+|간단한|항상|편집|
 |Drop-down|삭제 된 경우|편집|
 |드롭다운 목록|삭제 된 경우|정적|
 
-대화 상자 템플릿이나 코드 `CComboBox` 에서 직접 개체를 만들 수 있습니다. 두 경우 모두, 먼저 `CComboBox` 생성자를 호출 하 여 `CComboBox` 개체를 생성 한 다음 [create](#create) member 함수를 호출 하 여 컨트롤을 만들고이를 `CComboBox` 개체에 연결 합니다.
+대화 상자 템플릿에서 또는 코드에서 직접 `CComboBox` 개체를 만들 수 있습니다. 두 경우 모두 `CComboBox` 생성자를 먼저 호출 하 여 `CComboBox` 개체를 생성 합니다. 그런 다음 [create](#create) member 함수를 호출 하 여 컨트롤을 만들고 `CComboBox` 개체에 연결 합니다.
 
-콤보 상자에서 부모 (일반적으로에서 `CDialog`파생 된 클래스)로 전송 되는 Windows 알림 메시지를 처리 하려면 각 메시지의 부모 클래스에 메시지 매핑 항목과 메시지 처리기 멤버 함수를 추가 합니다.
+콤보 상자에서 부모 (일반적으로 `CDialog`에서 파생 된 클래스)로 전송 되는 Windows 알림 메시지를 처리 하려면 각 메시지의 부모 클래스에 메시지 매핑 항목과 메시지 처리기 멤버 함수를 추가 합니다.
 
 각 메시지 맵 항목은 다음 형식을 사용 합니다.
 
-**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
+**\_** _알림_ **(** _id_, _memberFxn_ **)** 에서
 
-여기서 `id` 는 알림을 보내는 콤보 상자 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn` 는 알림을 처리 하기 위해 작성 한 부모 멤버 함수의 이름입니다.
+여기서 `id`는 알림을 보내는 콤보 상자 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn`는 알림을 처리 하기 위해 작성 한 부모 멤버 함수의 이름입니다.
 
 부모의 함수 프로토타입은 다음과 같습니다.
 
-**afx_msg** `void` `memberFxn` **( );**
+**afx_msg** `void` `memberFxn` **();**
 
-특정 알림이 전송 되는 순서를 예측할 수 없습니다. 특히 CBN_SELCHANGE 알림은 CBN_CLOSEUP 알림 전후에 발생할 수 있습니다.
+특정 알림이 전송 되는 순서를 예측할 수 없습니다. 특히 CBN_CLOSEUP 알림 전후에 CBN_SELCHANGE 알림이 발생할 수 있습니다.
 
 잠재적 메시지 맵 항목은 다음과 같습니다.
 
 - ON_CBN_CLOSEUP (Windows 3.1 이상) 콤보 상자의 목록 상자가 닫혔습니다. 이 알림 메시지는 [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자에 대해 전송 되지 않습니다.
 
-- ON_CBN_DBLCLK 사용자가 콤보 상자의 목록 상자에서 문자열을 두 번 클릭 합니다. 이 알림 메시지는 CBS_SIMPLE 스타일이 있는 콤보 상자에 대해서만 전송 됩니다. [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자의 경우 한 번 클릭으로 목록 상자를 숨기 므로 두 번 클릭이 발생 하지 않습니다.
+- 사용자가 콤보 상자의 목록 상자에서 문자열을 두 번 클릭 ON_CBN_DBLCLK 합니다. 이 알림 메시지는 CBS_SIMPLE 스타일이 있는 콤보 상자에 대해서만 전송 됩니다. [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자의 경우 한 번 클릭으로 목록 상자를 숨기 므로 두 번 클릭이 발생 하지 않습니다.
 
-- ON_CBN_DROPDOWN 콤보 상자의 목록 상자가 드롭다운 됩니다 (표시 됨). 이 알림 메시지는 CBS_DROPDOWN 또는 CBS_DROPDOWNLIST 스타일이 있는 콤보 상자에 대해서만 발생할 수 있습니다.
+- 콤보 상자의 목록 상자가 드롭다운 될 ON_CBN_DROPDOWN (표시 됨). 이 알림 메시지는 CBS_DROPDOWN 또는 CBS_DROPDOWNLIST 스타일이 있는 콤보 상자에 대해서만 발생할 수 있습니다.
 
-- ON_CBN_EDITCHANGE 사용자가 콤보 상자의 편집 컨트롤 부분에 있는 텍스트를 변경 했을 수 있는 작업을 수행 했습니다. CBN_EDITUPDATE 메시지와 달리이 메시지는 Windows에서 화면을 업데이트 한 후에 전송 됩니다. 콤보 상자에 CBS_DROPDOWNLIST 스타일이 있으면 전송 되지 않습니다.
+- 사용자가 콤보 상자의 편집 컨트롤 부분에 있는 텍스트를 변경 했을 수 있는 작업을 수행 ON_CBN_EDITCHANGE 합니다. CBN_EDITUPDATE 메시지와 달리이 메시지는 Windows에서 화면을 업데이트 한 후에 전송 됩니다. 콤보 상자에 CBS_DROPDOWNLIST 스타일이 있으면 전송 되지 않습니다.
 
-- ON_CBN_EDITUPDATE 콤보 상자의 편집 컨트롤 부분이 변경 된 텍스트를 표시 하려고 합니다. 이 알림 메시지는 컨트롤의 텍스트 서식이 지정 된 후 텍스트를 표시 하기 전에 전송 됩니다. 콤보 상자에 CBS_DROPDOWNLIST 스타일이 있으면 전송 되지 않습니다.
+- 콤보 상자의 편집 컨트롤 부분 ON_CBN_EDITUPDATE 변경 된 텍스트를 표시 하려고 합니다. 이 알림 메시지는 컨트롤의 텍스트 서식이 지정 된 후 텍스트를 표시 하기 전에 전송 됩니다. 콤보 상자에 CBS_DROPDOWNLIST 스타일이 있으면 전송 되지 않습니다.
 
 - ON_CBN_ERRSPACE 콤보 상자는 특정 요청을 충족 하는 데 충분 한 메모리를 할당할 수 없습니다.
 
-- ON_CBN_SELENDCANCEL (Windows 3.1 이상) 사용자의 선택이 취소 되어야 함을 나타냅니다. 사용자가 항목을 클릭 한 다음 다른 창이 나 컨트롤을 클릭 하 여 콤보 상자의 목록 상자를 숨깁니다. 이 알림 메시지는 사용자의 선택이 무시 됨을 나타내기 위해 CBN_CLOSEUP 알림 메시지 보다 먼저 전송 됩니다. CBN_SELENDCANCEL 또는 CBN_SELENDOK 알림 메시지는 CBN_CLOSEUP 알림 메시지가 전송 되지 않는 경우에도 전송 됩니다 (CBS_SIMPLE 스타일이 있는 콤보 상자의 경우와 같이).
+- ON_CBN_SELENDCANCEL (Windows 3.1 이상) 사용자의 선택이 취소 되어야 함을 나타냅니다. 사용자가 항목을 클릭 한 다음 다른 창이 나 컨트롤을 클릭 하 여 콤보 상자의 목록 상자를 숨깁니다. 이 알림 메시지는 사용자의 선택이 무시 됨을 나타내기 위해 CBN_CLOSEUP 알림 메시지 보다 먼저 전송 됩니다. CBN_SELENDCANCEL 또는 CBN_SELENDOK 알림 메시지는 CBN_CLOSEUP 알림 메시지가 전송 되지 않은 경우에도 전송 됩니다 (CBS_SIMPLE 스타일이 있는 콤보 상자의 경우와 같이).
 
-- ON_CBN_SELENDOK 사용자는 항목을 선택한 다음 ENTER 키를 누르거나 아래쪽 화살표 키를 클릭 하 여 콤보 상자의 목록 상자를 숨깁니다. 이 알림 메시지는 사용자의 선택이 유효한 것으로 간주 됨을 나타내기 위해 CBN_CLOSEUP 메시지 보다 먼저 전송 됩니다. CBN_SELENDCANCEL 또는 CBN_SELENDOK 알림 메시지는 CBN_CLOSEUP 알림 메시지가 전송 되지 않는 경우에도 전송 됩니다 (CBS_SIMPLE 스타일이 있는 콤보 상자의 경우와 같이).
+- 사용자는 항목을 선택한 다음 ENTER 키를 누르거나 아래쪽 화살표 키를 클릭 하 여 콤보 상자의 목록 상자를 숨깁니다. ON_CBN_SELENDOK 이 알림 메시지는 사용자의 선택이 유효한 것으로 간주 됨을 나타내기 위해 CBN_CLOSEUP 메시지 보다 먼저 전송 됩니다. CBN_SELENDCANCEL 또는 CBN_SELENDOK 알림 메시지는 CBN_CLOSEUP 알림 메시지가 전송 되지 않은 경우에도 전송 됩니다 (CBS_SIMPLE 스타일이 있는 콤보 상자의 경우와 같이).
 
-- ON_CBN_KILLFOCUS 콤보 상자에서 입력 포커스가 손실 됩니다.
+- 콤보 상자를 ON_CBN_KILLFOCUS 입력 포커스가 손실 됩니다.
 
-- ON_CBN_SELCHANGE 콤보 상자의 목록 상자에서 선택한 항목은 목록 상자를 클릭 하거나 화살표 키를 사용 하 여 선택 항목을 변경 하는 경우에 변경 됩니다. 이 메시지를 처리할 때 콤보 상자의 편집 컨트롤에 있는 텍스트는 또는 다른 유사한 기능을 통해서만 `GetLBText` 검색할 수 있습니다. `GetWindowText` 사용할 수 없습니다.
+- 콤보 상자의 목록 상자에서 선택한 항목은 목록 상자를 클릭 하거나 화살표 키를 사용 하 여 선택 항목을 변경 하는 경우에 변경 됩니다. ON_CBN_SELCHANGE 이 메시지를 처리할 때 콤보 상자의 편집 컨트롤에 있는 텍스트는 `GetLBText` 또는 다른 유사한 함수를 통해서만 검색할 수 있습니다. `GetWindowText` 사용할 수 없습니다.
 
-- ON_CBN_SETFOCUS 콤보 상자에서 입력 포커스를 받습니다.
+- 콤보 상자 ON_CBN_SETFOCUS 입력 포커스를 받습니다.
 
-대화 상자 내에서 `CComboBox` 개체를 만드는 경우 (대화 상자 리소스를 통해) `CComboBox` 사용자가 대화 상자를 닫으면 개체가 자동으로 소멸 됩니다.
+대화 상자에서 대화 상자 리소스를 사용 하 여 `CComboBox` 개체를 만드는 경우 사용자가 대화 상자를 닫으면 `CComboBox` 개체가 자동으로 소멸 됩니다.
 
-다른 창 개체 내 `CComboBox` 에 개체를 포함 하는 경우에는 삭제할 필요가 없습니다. 스택에서 `CComboBox` 개체를 만들면 자동으로 제거 됩니다. 새 함수를 사용 `CComboBox` 하 여 힙에서 개체를 만드는 경우 에는 개체에 대해 **delete** 를 호출 하 여 Windows 콤보 상자가 소멸 될 때 개체를 제거 해야 합니다.
+다른 창 개체에 `CComboBox` 개체를 포함 하는 경우에는 제거할 필요가 없습니다. 스택에서 `CComboBox` 개체를 만들면 자동으로 삭제 됩니다. **새** 함수를 사용 하 여 힙에서 `CComboBox` 개체를 만드는 경우에는 개체에 대해 **delete** 를 호출 하 여 Windows 콤보 상자가 소멸 될 때 개체를 제거 해야 합니다.
 
-**참고** WM_KEYDOWN 및 WM_CHAR 메시지를 처리 하려면 콤보 상자의 편집 및 목록 상자 컨트롤을 서브클래싱하 고, 및 `CEdit` `CListBox`에서 클래스를 파생 시키고, 이러한 메시지에 대 한 처리기를 파생 클래스에 추가 해야 합니다. 자세한 내용은 [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)를 참조 하세요.
+**참고** WM_KEYDOWN 및 WM_CHAR 메시지를 처리 하려면 콤보 상자의 편집 및 목록 상자 컨트롤을 서브클래싱하 고 `CEdit` 및 `CListBox`에서 클래스를 파생 시킨 다음 이러한 메시지에 대 한 처리기를 파생 클래스에 추가 해야 합니다. 자세한 내용은 [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[에서 파생되지 않은](../../mfc/reference/cwnd-class.md)
 
 `CComboBox`
 
@@ -275,13 +275,13 @@ int AddString(LPCTSTR lpszString);
 *lpszString*<br/>
 추가 될 null로 끝나는 문자열을 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값이 0 보다 크거나 같으면 목록 상자에 있는 문자열의 인덱스 (0부터 시작)입니다. 오류가 발생 하는 경우 반환 값은 CB_ERR입니다. 새 문자열을 저장 하는 데 사용할 수 있는 공간이 부족 한 경우 반환 값은 CB_ERRSPACE입니다.
 
 ### <a name="remarks"></a>설명
 
-[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하 여 목록 상자를 만들지 않은 경우에는 문자열이 목록의 끝에 추가 됩니다. 그렇지 않으면 문자열이 목록에 삽입 되 고 목록이 정렬 됩니다.
+[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일로 목록 상자를 만들지 않은 경우 문자열이 목록의 끝에 추가 됩니다. 그렇지 않으면 문자열이 목록에 삽입 되 고 목록이 정렬 됩니다.
 
 > [!NOTE]
 >  이 함수는 Windows `ComboBoxEx` 컨트롤에서 지원 되지 않습니다. 이 컨트롤에 대 한 자세한 내용은 [ComboBoxEx Controls](/windows/win32/Controls/comboboxex-controls) in the Windows SDK를 참조 하세요.
@@ -333,7 +333,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 *lpCompareItemStruct*<br/>
 [Compareitemstruct](/windows/win32/api/winuser/ns-winuser-compareitemstruct) 구조체에 대 한 긴 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `COMPAREITEMSTRUCT` 구조에 설명 된 두 항목의 상대 위치를 나타냅니다. 다음 값 중 하나일 수 있습니다.
 
@@ -343,7 +343,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 |0|항목 1과 항목 2는 동일 하 게 정렬 됩니다.|
 |1|항목 1은 항목 2 뒤에 정렬 됩니다.|
 
-에 대 한 설명은 `COMPAREITEMSTRUCT` [CWnd:: oncompareitem](../../mfc/reference/cwnd-class.md#oncompareitem) 을 참조 하십시오.
+`COMPAREITEMSTRUCT`에 대 한 설명은 [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 을 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
@@ -355,7 +355,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ##  <a name="copy"></a>  CComboBox::Copy
 
-콤보 상자의 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 CF_TEXT format으로 클립보드에 복사 합니다.
+콤보 상자의 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 CF_TEXT 형식으로 클립보드에 복사 합니다.
 
 ```
 void Copy();
@@ -367,7 +367,7 @@ void Copy();
 
 ##  <a name="create"></a>  CComboBox::Create
 
-콤보 상자를 만들고 `CComboBox` 개체에 연결 합니다.
+콤보 상자를 만들어 `CComboBox` 개체에 연결 합니다.
 
 ```
 virtual BOOL Create(
@@ -383,7 +383,7 @@ virtual BOOL Create(
 콤보 상자의 스타일을 지정 합니다. [콤보 상자 스타일](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 의 조합을 상자에 모두 적용 합니다.
 
 *rect*<br/>
-콤보 상자의 위치와 크기를 가리킵니다. 는 [RECT 구조](/windows/win32/api/windef/ns-windef-rect) 또는 `CRect` 개체 일 수 있습니다.
+콤보 상자의 위치와 크기를 가리킵니다. 는 [RECT 구조체](/windows/win32/api/windef/ns-windef-rect) 또는 `CRect` 개체 일 수 있습니다.
 
 *pParentWnd*<br/>
 콤보 상자의 부모 창 (일반적으로 `CDialog`)을 지정 합니다. NULL이 아니어야 합니다.
@@ -391,33 +391,33 @@ virtual BOOL Create(
 *nID*<br/>
 콤보 상자의 컨트롤 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-두 단계로 개체 `CComboBox` 를 구성 합니다. 먼저 생성자를 호출한 다음을 호출 `Create`하 여 Windows 콤보 상자를 만들고 `CComboBox` 개체에 연결 합니다.
+`CComboBox` 개체는 두 단계로 구성 합니다. 먼저 생성자를 호출한 다음 Windows 콤보 상자를 만들어 `CComboBox` 개체에 연결 하는 `Create`를 호출 합니다.
 
-가 `Create` 실행 되 면 Windows에서 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)및 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 메시지를 콤보 상자로 보냅니다.
+`Create` 실행 되 면 Windows는 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)및 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 메시지를 콤보 상자로 보냅니다.
 
-`CWnd` 이러한 메시지는 기본적으로 기본 클래스의 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)및 [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 멤버 함수에 의해 처리 됩니다. 기본 메시지 처리를 확장 하려면에서 `CComboBox`클래스를 파생 시키고, 메시지 맵을 새 클래스에 추가 하 고, 앞의 메시지 처리기 멤버 함수를 재정의 합니다. 예 `OnCreate`를 들어를 재정의 하 여 새 클래스에 필요한 초기화를 수행 합니다.
+이러한 메시지는 `CWnd` 기본 클래스의 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)및 [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 멤버 함수에 의해 기본적으로 처리 됩니다. 기본 메시지 처리를 확장 하려면 `CComboBox`에서 클래스를 파생 시키고 새 클래스에 메시지 맵을 추가 하 고 앞의 메시지 처리기 멤버 함수를 재정의 합니다. 예를 들어 `OnCreate`를 재정의 하 여 새 클래스에 대해 필요한 초기화를 수행 합니다.
 
 다음 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 을 콤보 상자 컨트롤에 적용 합니다. :
 
 - 항상 WS_CHILD
 
-- 일반적으로 WS_VISIBLE
+- WS_VISIBLE 일반적으로
 
-- 거의 WS_DISABLED
+- WS_DISABLED 거의 없음
 
-- WS_VSCROLL 콤보 상자의 목록 상자에 세로 스크롤을 추가 합니다.
+- 콤보 상자의 목록 상자에 세로 스크롤을 추가 하려면 WS_VSCROLL 합니다.
 
-- WS_HSCROLL 콤보 상자의 목록 상자에 가로 스크롤을 추가 합니다.
+- 콤보 상자의 목록 상자에 가로 스크롤을 추가 하려면 WS_HSCROLL 합니다.
 
-- WS_GROUP 컨트롤
+- 컨트롤을 그룹화 WS_GROUP
 
-- WS_TABSTOP 탭 이동 순서에 콤보 상자를 포함 하려면
+- 탭 순서에 콤보 상자를 포함 하려면 WS_TABSTOP 합니다.
 
 ### <a name="example"></a>예제
 
@@ -425,7 +425,7 @@ virtual BOOL Create(
 
 ##  <a name="cut"></a>  CComboBox::Cut
 
-콤보 상자 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (잘라내기) 하 고 삭제 된 텍스트를 CF_TEXT 형식으로 클립보드에 복사 합니다.
+콤보 상자 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (잘라내기) 하 고 삭제 된 텍스트를 클립보드에 CF_TEXT 형식으로 복사 합니다.
 
 ```
 void Cut();
@@ -473,7 +473,7 @@ int DeleteString(UINT nIndex);
 *nIndex*<br/>
 삭제할 문자열의 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값이 0 보다 크거나 같으면 목록에 남아 있는 문자열의 수입니다. *Nindex* 가 목록의 항목 수보다 많은 인덱스를 지정 하는 경우 반환 값은 CB_ERR입니다.
 
@@ -500,7 +500,7 @@ int Dir(
 *attr*<br/>
 는 [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) 에 설명 된 **열거형** 값의 조합 이거나 다음 값의 조합일 수 있습니다.
 
-- DDL_READWRITE 파일을 읽거나 쓸 수 있습니다.
+- DDL_READWRITE 파일은에서 읽거나 쓸 수 있습니다.
 
 - DDL_READONLY 파일은 읽을 수 있지만 쓸 수는 없습니다.
 
@@ -508,18 +508,18 @@ int Dir(
 
 - DDL_SYSTEM 파일은 시스템 파일입니다.
 
-- DDL_DIRECTORY *lpszWildCard* 에 지정 된 이름이 디렉터리를 지정 합니다.
+- *LpszWildCard* 에 지정 된 이름이 디렉터리를 지정 하는 DDL_DIRECTORY 합니다.
 
 - DDL_ARCHIVE 파일이 보관 되었습니다.
 
-- DDL_DRIVES *lpszWildCard*에 지정 된 이름과 일치 하는 모든 드라이브를 포함 합니다.
+- *LpszWildCard*으로 지정 된 이름과 일치 하는 모든 드라이브를 포함 DDL_DRIVES 합니다.
 
-- DDL_EXCLUSIVE Exclusive 플래그입니다. Exclusive 플래그가 설정 된 경우 지정 된 형식의 파일만 나열 됩니다. 그렇지 않으면 지정 된 형식의 파일이 "normal" 파일 외에 나열 됩니다.
+- DDL_EXCLUSIVE 배타 플래그입니다. Exclusive 플래그가 설정 된 경우 지정 된 형식의 파일만 나열 됩니다. 그렇지 않으면 지정 된 형식의 파일이 "normal" 파일 외에 나열 됩니다.
 
 *lpszWildCard*<br/>
-는 파일 사양 문자열을 가리킵니다. 문자열은 와일드 카드를 포함할 수 있습니다 (예:\**.).
+는 파일 사양 문자열을 가리킵니다. 문자열은 와일드 카드를 포함할 수 있습니다 (예: *.\*).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값이 0 보다 크거나 같으면 목록에 추가 된 마지막 파일 이름의 0부터 시작 하는 인덱스입니다. 오류가 발생 하는 경우 반환 값은 CB_ERR입니다. 새 문자열을 저장 하는 데 사용할 수 있는 공간이 부족 한 경우 반환 값은 CB_ERRSPACE입니다.
 
@@ -546,7 +546,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="remarks"></a>설명
 
-구조체의 멤버는 `itemAction` 수행할 그리기 작업을 정의 합니다. `DRAWITEMSTRUCT` 이 구조에 대 한 설명은 [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 를 참조 하세요.
+`DRAWITEMSTRUCT` 구조체의 `itemAction` 멤버는 수행할 그리기 작업을 정의 합니다. 이 구조에 대 한 설명은 [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 를 참조 하세요.
 
 기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 소유자 그리기 `CComboBox` 개체에 대 한 그리기를 구현 하려면이 멤버 함수를 재정의 합니다. 이 멤버 함수가 종료 되기 전에 응용 프로그램은 *Lpdrawitemstruct*에 제공 된 표시 컨텍스트에 대해 선택한 모든 GDI (그래픽 장치 인터페이스) 개체를 복원 해야 합니다.
 
@@ -572,9 +572,9 @@ int FindString(
 *lpszString*<br/>
 검색할 접두사를 포함 하는 null로 끝나는 문자열을 가리킵니다. 검색은 대/소문자를 구분 하지 않으므로이 문자열에는 대 문자와 소문자를 조합 하 여 사용할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-반환 값이 0 보다 크거나 같은 경우 일치 하는 항목의 인덱스 (0부터 시작)입니다. 검색에 실패 한 경우에는 CB_ERR입니다.
+반환 값이 0 보다 크거나 같은 경우 일치 하는 항목의 인덱스 (0부터 시작)입니다. 검색에 실패 한 경우 CB_ERR 됩니다.
 
 ### <a name="remarks"></a>설명
 
@@ -586,7 +586,7 @@ int FindString(
 
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact
 
-멤버 함수를 호출 하 여 lpszFind에 지정 된 문자열과 일치 하는 첫 번째 목록 상자 문자열 (콤보 상자)을 찾습니다. `FindStringExact`
+`FindStringExact` 멤버 함수를 호출 하 여 콤보 상자에서 *lpszFind*에 지정 된 문자열과 일치 하는 첫 번째 목록 상자 문자열을 찾습니다.
 
 ```
 int FindStringExact(
@@ -602,13 +602,13 @@ int FindStringExact(
 *lpszFind*<br/>
 검색할 null로 끝나는 문자열을 가리킵니다. 이 문자열에는 확장명을 포함 하 여 전체 파일 이름이 포함 될 수 있습니다. 검색은 대/소문자를 구분 하지 않으므로이 문자열에는 대 문자와 소문자를 조합 하 여 사용할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-일치 항목의 인덱스 (0부터 시작) 이거나, 검색에 실패 한 경우 CB_ERR입니다.
+일치 하는 항목의 인덱스 (0부터 시작) 이거나, 검색에 실패 한 경우 CB_ERR입니다.
 
 ### <a name="remarks"></a>설명
 
-콤보 상자를 소유자 그리기 스타일로 만들었지만 [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하지 않으면에서 `FindStringExact` 더블 워드 값을 *lpszFind*의 값과 일치 시 키 려 고 시도 합니다.
+콤보 상자를 소유자 그리기 스타일로 만들었지만 [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하지 않는 경우에는 `FindStringExact` *lpszFind*값과 비교 하 여 더블 워드 값을 찾으려고 시도 합니다.
 
 ### <a name="example"></a>예제
 
@@ -627,13 +627,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 *pcbi*<br/>
 [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) 메시지의 기능을 에뮬레이트합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) 메시지의 기능을 에뮬레이트합니다.
 
 ##  <a name="getcount"></a>  CComboBox::GetCount
 
@@ -643,9 +643,9 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-항목의 수입니다. 반환 된 개수는 마지막 항목의 인덱스 값 보다 하나 큽니다 (인덱스는 0부터 시작). 오류가 발생 하는 경우에는 CB_ERR입니다.
+항목 수입니다. 반환 된 개수는 마지막 항목의 인덱스 값 보다 하나 큽니다 (인덱스는 0부터 시작). 오류가 발생 하는 경우 CB_ERR 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -670,9 +670,9 @@ BOOL GetCueBanner(
 |*lpszText*|제한이 큐 배너 텍스트를 받는 버퍼에 대 한 포인터입니다.|
 |*cchText*|진행 *LpszText* 매개 변수가 가리키는 버퍼의 크기입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 오버 로드에서 큐 배너 텍스트가 있으면이를 포함 하는 [CString](../../atl-mfc-shared/using-cstring.md) 개체이 고, 그렇지 않으면입니다. 그렇지 않으면 길이가 0 인 개체입니다.`CString`
+첫 번째 오버 로드에서 큐 배너 텍스트가 있으면이를 포함 하는 [CString](../../atl-mfc-shared/using-cstring.md) 개체이 고, 그렇지 않으면입니다. 그렇지 않으면 길이가 0 인 `CString` 개체입니다.
 
 또는
 
@@ -682,7 +682,7 @@ BOOL GetCueBanner(
 
 큐 텍스트는 콤보 상자 컨트롤의 입력 영역에 표시 되는 프롬프트입니다. 사용자가 입력을 제공할 때까지 큐 텍스트가 표시 됩니다.
 
-이 메서드는 Windows SDK에 설명 된 [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) 메시지를 보냅니다.
 
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel
 
@@ -692,13 +692,13 @@ BOOL GetCueBanner(
 int GetCurSel() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콤보 상자의 목록 상자에서 현재 선택 된 항목의 0부터 시작 하는 인덱스 이거나, 선택 된 항목이 없는 경우 CB_ERR입니다.
 
 ### <a name="remarks"></a>설명
 
-`GetCurSel`인덱스를 목록에 반환 합니다.
+`GetCurSel`는 목록에 인덱스를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -729,7 +729,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 BOOL GetDroppedState() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 목록 상자가 표시 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -745,13 +745,13 @@ BOOL GetDroppedState() const;
 int GetDroppedWidth() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하는 경우 허용 되는 최소 너비 (픽셀)입니다. 그렇지 않으면 CB_ERR입니다.
+성공 하는 경우 허용 되는 최소 너비 (픽셀)입니다. 그렇지 않으면 CB_ERR 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자에만 적용 됩니다.
+이 함수는 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하는 콤보 상자에만 적용 됩니다.
 
 기본적으로 드롭다운 목록 상자에 허용 되는 최소 너비는 0입니다. 허용 되는 최소 너비는 [Setdroppedwidth](#setdroppedwidth)를 호출 하 여 설정할 수 있습니다. 콤보 상자의 목록 상자 부분이 표시 되 면 해당 너비는 허용 되는 최소 너비 또는 콤보 상자 너비 중 더 큰 값입니다.
 
@@ -767,9 +767,9 @@ int GetDroppedWidth() const;
 DWORD GetEditSel() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-하위 단어의 시작 위치를 포함 하는 32 비트 값 이며, 상위 단어에서 선택 영역 끝 다음의 첫 번째 nonselected 문자 위치입니다. 편집 컨트롤이 없는 콤보 상자에서이 함수를 사용 하면 CB_ERR이 반환 됩니다.
+하위 단어의 시작 위치를 포함 하는 32 비트 값 이며, 상위 단어에서 선택 영역 끝 다음의 첫 번째 nonselected 문자 위치입니다. 편집 컨트롤이 없는 콤보 상자에서이 함수를 사용 하면 CB_ERR 반환 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -783,7 +783,7 @@ DWORD GetEditSel() const;
 BOOL GetExtendedUI() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콤보 상자에 확장 사용자 인터페이스가 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -809,7 +809,7 @@ BOOL GetExtendedUI() const;
 UINT GetHorizontalExtent() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콤보 상자의 목록 상자 부분에 대 한 스크롤 가능한 너비 (픽셀)입니다.
 
@@ -834,13 +834,13 @@ DWORD_PTR GetItemData(int nIndex) const;
 *nIndex*<br/>
 콤보 상자의 목록 상자에 있는 항목의 0부터 시작 하는 인덱스를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-항목에 연결 된 32 비트 값 또는 오류가 발생 하는 경우 CB_ERR입니다.
+항목과 연결 된 32 비트 값 또는 오류가 발생 하는 경우 CB_ERR입니다.
 
 ### <a name="remarks"></a>설명
 
-32 비트 값은 [Setitemdata](#setitemdata) 멤버 함수 호출의 *dwItemData* 매개 변수를 사용 하 여 설정할 수 있습니다. 검색할 32 `GetItemDataPtr` 비트 값이 포인터 (**void** <strong>\*</strong>) 인 경우 멤버 함수를 사용 합니다.
+32 비트 값은 [Setitemdata](#setitemdata) 멤버 함수 호출의 *dwItemData* 매개 변수를 사용 하 여 설정할 수 있습니다. 검색할 32 비트 값이 포인터 (**void** <strong>\*</strong>) 인 경우 `GetItemDataPtr` 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -859,7 +859,7 @@ void* GetItemDataPtr(int nIndex) const;
 *nIndex*<br/>
 콤보 상자의 목록 상자에 있는 항목의 0부터 시작 하는 인덱스를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포인터를 검색 하거나, 오류가 발생 하면-1을 반환 합니다.
 
@@ -880,9 +880,9 @@ int GetItemHeight(int nIndex) const;
 *nIndex*<br/>
 높이를 검색할 콤보 상자의 구성 요소를 지정 합니다. *N index* 매개 변수가-1 이면 콤보 상자의 편집 컨트롤 (또는 정적 텍스트) 부분의 높이가 검색 됩니다. 콤보 상자에 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 경우 *n 인덱스* 는 해당 높이를 검색할 목록 항목의 인덱스 (0부터 시작)를 지정 합니다. 그렇지 않으면 *n 인덱스* 를 0으로 설정 해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-콤보 상자에서 지정 된 항목의 높이 (픽셀)입니다. 오류가 발생 하는 경우 반환 값은 CB_ERR입니다.
+콤보 상자에서 지정 된 항목의 높이 (픽셀)입니다. 오류가 발생할 경우 반환 값은 CB_ERR입니다.
 
 ### <a name="example"></a>예제
 
@@ -911,15 +911,15 @@ void GetLBText(
 는 문자열을 받을 버퍼를 가리킵니다. 버퍼에는 문자열과 종료 null 문자를 위한 충분 한 공간이 있어야 합니다.
 
 *rString*<br/>
-에 대 한 참조를 `CString`입니다.
+`CString`에 대한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 종료 null 문자를 제외한 문자열의 길이 (바이트)입니다. *Nindex* 가 유효한 인덱스를 지정 하지 않는 경우 반환 값은 CB_ERR입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수의 두 번째 형태는 개체를 `CString` 항목의 텍스트로 채웁니다.
+이 멤버 함수의 두 번째 폼은 `CString` 개체를 항목의 텍스트로 채웁니다.
 
 ### <a name="example"></a>예제
 
@@ -938,7 +938,7 @@ int GetLBTextLen(int nIndex) const;
 *nIndex*<br/>
 목록 상자 문자열의 인덱스 (0부터 시작)를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 종료 null 문자를 제외 하 고 문자열의 길이 (바이트)입니다. *Nindex* 가 유효한 인덱스를 지정 하지 않는 경우 반환 값은 CB_ERR입니다.
 
@@ -954,7 +954,7 @@ int GetLBTextLen(int nIndex) const;
 LCID GetLocale() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콤보 상자에 있는 문자열의 LCID (로캘 id) 값입니다.
 
@@ -974,13 +974,13 @@ LCID GetLocale() const;
 int GetMinVisible() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 드롭다운 목록에 표시 되는 최소 항목 수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) 메시지를 보냅니다.
 
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex
 
@@ -990,7 +990,7 @@ int GetMinVisible() const;
 int GetTopIndex() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 콤보 상자의 목록 상자 부분에 표시 되는 첫 번째 항목의 0부터 시작 하는 인덱스이 고, 그렇지 않으면 CB_ERR입니다.
 
@@ -1020,15 +1020,15 @@ int InitStorage(
 *nBytes*<br/>
 항목 문자열에 할당할 메모리 크기 (바이트)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 메모리를 다시 할당 하기 전에 콤보 상자의 목록 상자 부분에서 저장할 수 있는 최대 항목 수이 고, 그렇지 않으면 CB_ERRSPACE 사용 가능한 메모리가 부족 하다는 것을 의미 합니다.
+성공 하는 경우 메모리 재할당이 필요 하기 전에 콤보 상자의 목록 상자 부분에서 저장할 수 있는 최대 항목 수이 고, 그렇지 않으면 CB_ERRSPACE 사용 가능한 메모리가 부족 하다는 것을 의미 합니다.
 
 ### <a name="remarks"></a>설명
 
-의 목록 상자 부분에 많은 수의 항목을 추가 하기 전에이 함수를 호출 `CComboBox`합니다.
+`CComboBox`의 목록 상자 부분에 많은 수의 항목을 추가 하기 전에이 함수를 호출 합니다.
 
-Windows 95/98에만 해당: *WParam* 매개 변수는 16 비트 값으로 제한 됩니다. 즉, 목록 상자에는 32767 개 이상의 항목이 포함 될 수 없습니다. 항목 수가 제한 되지만 목록 상자에 있는 항목의 총 크기는 사용 가능한 메모리에 의해서만 제한 됩니다.
+Windows 95/98에만 해당: *wParam* 매개 변수는 16 비트 값으로 제한 됩니다. 즉, 목록 상자에는 32767 개 이상의 항목이 포함 될 수 없습니다. 항목 수가 제한 되지만 목록 상자에 있는 항목의 총 크기는 사용 가능한 메모리에 의해서만 제한 됩니다.
 
 이 함수는 항목 수가 많은 (100 이상) 목록 상자의 초기화 속도를 높이는 데 도움이 됩니다. 다음 [Addstring](#addstring), [Insertstring](#insertstring)및 [Dir](#dir) 함수에서 가장 짧은 시간을 사용 하도록 지정 된 메모리 양을 사전 할당 합니다. 매개 변수에 대 한 예상 값을 사용할 수 있습니다. 더 많이 추정 하면 몇 가지 추가 메모리가 할당 됩니다. 간과 하면 미리 할당 된 금액을 초과 하는 항목에 일반적인 할당이 사용 됩니다.
 
@@ -1054,9 +1054,9 @@ int InsertString(
 *lpszString*<br/>
 삽입할 null 종료 문자열을 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-문자열이 삽입된 위치의 0부터 시작하는 인덱스입니다. 오류가 발생 하는 경우 반환 값은 CB_ERR입니다. 새 문자열을 저장 하는 데 사용할 수 있는 공간이 부족 한 경우 반환 값은 CB_ERRSPACE입니다.
+문자열이 삽입된 위치의 0부터 시작하는 인덱스입니다. 오류가 발생할 경우 반환 값은 CB_ERR입니다. 공간이 부족하여 새 문자열을 저장할 수 없는 경우 반환 값은 CB_ERRSPACE입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1082,15 +1082,15 @@ BOOL LimitText(int nMaxChars);
 *nMaxChars*<br/>
 사용자가 입력할 수 있는 텍스트의 길이 (바이트)를 지정 합니다. 이 매개 변수가 0 이면 텍스트 길이가 65535 바이트로 설정 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 0이 아닌 값입니다. 스타일 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 를 사용 하 여 콤보 상자에 대해 호출 하거나 편집 컨트롤이 없는 콤보 상자에 대해 호출 하는 경우 반환 값은 CB_ERR입니다.
+성공 하면 0이 아닌 값입니다. 스타일 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 편집 컨트롤이 없는 콤보 상자의 콤보 상자에 대해 호출 하는 경우 반환 값은 CB_ERR 됩니다.
 
 ### <a name="remarks"></a>설명
 
 콤보 상자에 [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)스타일이 없으면 텍스트 제한을 편집 컨트롤의 크기 보다 크게 설정 해도 아무런 효과가 없습니다.
 
-`LimitText`사용자가 입력할 수 있는 텍스트만 제한 합니다. 메시지가 전송 될 때 편집 컨트롤에 이미 있는 텍스트에는 영향을 주지 않으며, 목록 상자에서 문자열을 선택할 때 편집 컨트롤에 복사 되는 텍스트의 길이에도 영향을 주지 않습니다.
+`LimitText`는 사용자가 입력할 수 있는 텍스트만 제한 합니다. 메시지가 전송 될 때 편집 컨트롤에 이미 있는 텍스트에는 영향을 주지 않으며, 목록 상자에서 문자열을 선택할 때 편집 컨트롤에 복사 되는 텍스트의 길이에도 영향을 주지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -1111,9 +1111,9 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="remarks"></a>설명
 
-기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 이 멤버 함수를 재정의 하 고 `MEASUREITEMSTRUCT` 구조를 채워서 콤보 상자의 목록 상자 크기를 창에 알립니다. [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하 여 콤보 상자를 만든 경우 프레임 워크는 목록 상자의 각 항목에 대해이 멤버 함수를 호출 합니다. 그렇지 않으면이 멤버는 한 번만 호출 됩니다.
+기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 이 멤버 함수를 재정의 하 고 `MEASUREITEMSTRUCT` 구조를 채워서 콤보 상자에서 목록 상자의 크기를 창에 알립니다. [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하 여 콤보 상자를 만든 경우 프레임 워크는 목록 상자의 각 항목에 대해이 멤버 함수를 호출 합니다. 그렇지 않으면이 멤버는 한 번만 호출 됩니다.
 
-의`CWnd` [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) 멤버 함수를 사용 하 여 만든 소유자 그리기 콤보 상자에 CBS_OWNERDRAWFIXED 스타일을 사용 하면 추가 프로그래밍 고려 사항이 포함 됩니다. [기술 참고 14](../../mfc/tn014-custom-controls.md)의 설명을 참조 하십시오.
+`CWnd`의 [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) 멤버 함수를 사용 하 여 만든 소유자 그리기 콤보 상자에 CBS_OWNERDRAWFIXED 스타일을 사용 하는 경우 추가 프로그래밍 고려 사항이 포함 됩니다. [기술 참고 14](../../mfc/tn014-custom-controls.md)의 설명을 참조 하십시오.
 
 `MEASUREITEMSTRUCT` 구조체에 대 한 설명은 [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 를 참조 하세요.
 
@@ -1167,15 +1167,15 @@ int SelectString(
 *lpszString*<br/>
 검색할 접두사를 포함 하는 null로 끝나는 문자열을 가리킵니다. 검색은 대/소문자를 구분 하지 않으므로이 문자열에는 대 문자와 소문자를 조합 하 여 사용할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-문자열을 찾은 경우 선택한 항목의 인덱스 (0부터 시작)입니다. 검색에 실패 한 경우 반환 값은 CB_ERR이 고 현재 선택은 변경 되지 않습니다.
+문자열을 찾은 경우 선택한 항목의 인덱스 (0부터 시작)입니다. 검색에 실패 한 경우 반환 값은 CB_ERR 되며 현재 선택 항목은 변경 되지 않습니다.
 
 ### <a name="remarks"></a>설명
 
 문자열은 처음 문자 (시작 지점)에서 접두사 문자열의 문자와 일치 하는 경우에만 선택 됩니다.
 
-및 멤버 함수는 모두 문자열을 찾았지만 멤버 함수는 `SelectString` 문자열도 선택 합니다. `FindString` `SelectString`
+`SelectString` 및 `FindString` 멤버 함수는 둘 다 문자열을 찾았지만 `SelectString` 멤버 함수는 문자열도 선택 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1195,7 +1195,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 |---------------|-----------------|
 |*lpszText*|진행 큐 텍스트를 포함 하는 null로 끝나는 버퍼에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1203,7 +1203,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 큐 텍스트는 콤보 상자 컨트롤의 입력 영역에 표시 되는 프롬프트입니다. 사용자가 입력을 제공할 때까지 큐 텍스트가 표시 됩니다.
 
-이 메서드는 Windows SDK에 설명 된 [CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
@@ -1230,9 +1230,9 @@ int SetCurSel(int nSelect);
 *nSelect*<br/>
 선택할 문자열의 인덱스 (0부터 시작)를 지정 합니다. -1 인 경우 목록 상자에서 현재 선택한 내용이 제거 되 고 편집 컨트롤이 지워집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메시지에 성공 하면 선택 된 항목의 0부터 시작 하는 인덱스입니다. *내보내세요* 가 목록의 항목 수보다 크거나 *내보내세요* 가-1로 설정 된 경우 반환 값은 CB_ERR입니다 .이는 선택을 취소 합니다.
+메시지에 성공 하면 선택 된 항목의 0부터 시작 하는 인덱스입니다. *내보내세요* 가 목록의 항목 수보다 크거나 *내보내세요* 이-1로 설정 된 경우 반환 값은 CB_ERR입니다 .이는 선택을 취소 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1255,13 +1255,13 @@ int SetDroppedWidth(UINT nWidth);
 *nWidth*<br/>
 콤보 상자의 목록 상자 부분에 허용 되는 최소 너비 (픽셀)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 목록 상자의 새 너비이 고, 그렇지 않으면 CB_ERR입니다.
+성공 하면 목록 상자의 새 너비이 고 CB_ERR 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자에만 적용 됩니다.
+이 함수는 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 사용 하는 콤보 상자에만 적용 됩니다.
 
 기본적으로 드롭다운 목록 상자에 허용 되는 최소 너비는 0입니다. 콤보 상자의 목록 상자 부분이 표시 되 면 해당 너비는 허용 되는 최소 너비 또는 콤보 상자 너비 중 더 큰 값입니다.
 
@@ -1287,7 +1287,7 @@ BOOL SetEditSel(
 *nEndChar*<br/>
 끝 위치를 지정 합니다. 끝 위치가-1로 설정 된 경우 편집 컨트롤에서 시작 위치부터 마지막 문자 까지의 모든 텍스트가 선택 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다. `CComboBox`이 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있거나 목록 상자가 없는 경우 CB_ERR입니다.
 
@@ -1315,7 +1315,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 *bExtended*<br/>
 콤보 상자에서 확장 된 사용자 인터페이스를 사용할지 아니면 기본 사용자 인터페이스를 사용할지를 지정 합니다. TRUE 값은 확장 사용자 인터페이스를 선택 합니다. FALSE 값은 표준 사용자 인터페이스를 선택 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업이 성공 하면 CB_OKAY이 고, 오류가 발생 하면 CB_ERR입니다.
 
@@ -1348,7 +1348,7 @@ void SetHorizontalExtent(UINT nExtent);
 
 ### <a name="remarks"></a>설명
 
-목록 상자의 너비가이 값 보다 작으면 가로 스크롤 막대가 목록 상자에서 항목을 가로로 스크롤합니다. 목록 상자의 너비가이 값 보다 크거나 같으면 가로 스크롤 막대가 숨겨지거나, 콤보 상자의 [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 사용 하지 않도록 설정 되어 있으면이 고, 그렇지 않으면입니다.
+목록 상자의 너비가이 값 보다 작으면 가로 스크롤 막대가 목록 상자에서 항목을 가로로 스크롤합니다. 목록 상자의 너비가이 값 보다 크거나 같으면 가로 스크롤 막대가 숨겨지거나, 콤보 상자에 [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 사용 되지 않는 경우에는이 고, 그렇지 않으면입니다.
 
 ### <a name="example"></a>예제
 
@@ -1372,13 +1372,13 @@ int SetItemData(
 *dwItemData*<br/>
 항목에 연결할 새 값을 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생 하면 CB_ERR입니다.
+오류가 발생 하면 CB_ERR 합니다.
 
 ### <a name="remarks"></a>설명
 
-32 비트 항목이 포인터인 경우 멤버함수를사용합니다.`SetItemDataPtr`
+32 비트 항목이 포인터인 경우 `SetItemDataPtr` 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1402,9 +1402,9 @@ int SetItemDataPtr(
 *pData*<br/>
 항목과 연결할 포인터를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생 하면 CB_ERR입니다.
+오류가 발생 하면 CB_ERR 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1416,7 +1416,7 @@ int SetItemDataPtr(
 
 ##  <a name="setitemheight"></a>  CComboBox::SetItemHeight
 
-`SetItemHeight` 멤버 함수를 호출 하 여 콤보 상자에 목록 항목의 높이를 설정 하거나 콤보 상자의 편집 컨트롤 (또는 정적 텍스트) 부분의 높이를 설정 합니다.
+`SetItemHeight` 멤버 함수를 호출 하 여 콤보 상자에 목록 항목의 높이를 설정 하거나 콤보 상자의 편집 컨트롤 (또는 정적 텍스트) 부분 높이를 설정 합니다.
 
 ```
 int SetItemHeight(
@@ -1429,16 +1429,16 @@ int SetItemHeight(
 *nIndex*<br/>
 콤보 상자의 편집 컨트롤 (또는 정적 텍스트) 부분 또는 목록 항목의 높이가 설정 되어 있는지 여부를 지정 합니다.
 
-콤보 상자에 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있으면 *nindex* 는 높이가 설정 될 목록 항목의 인덱스 (0부터 시작)를 지정 합니다. 그렇지 않으면 *Nindex* 가 0 이어야 하 고 모든 목록 항목의 높이가 설정 됩니다.
+콤보 상자에 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 경우 *n 인덱스* 는 높이가 설정 될 목록 항목의 인덱스 (0부터 시작)를 지정 합니다. 그렇지 않으면 *Nindex* 가 0 이어야 하 고 모든 목록 항목의 높이가 설정 됩니다.
 
 *Nindex* 가-1 이면 콤보 상자의 편집 컨트롤 또는 정적 텍스트 부분의 높이가 설정 됩니다.
 
 *cyItemHeight*<br/>
 *Nindex*로 식별 되는 콤보 상자 구성 요소의 높이 (픽셀 단위)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-인덱스 또는 높이가 잘못 된 경우 CB_ERR 그렇지 않으면 0입니다.
+인덱스 또는 높이가 잘못 된 경우를 CB_ERR 합니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1461,13 +1461,13 @@ LCID SetLocale(LCID nNewLocale);
 *nNewLocale*<br/>
 콤보 상자에 대해 설정할 새 LCID (로캘 id) 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 콤보 상자의 이전 로캘 식별자 (LCID) 값입니다.
 
 ### <a name="remarks"></a>설명
 
-가 `SetLocale` 호출 되지 않은 경우에는 시스템에서 기본 로캘을 가져옵니다. 이 시스템 기본 로캘은 제어판의 국가별 또는 국가별 응용 프로그램을 사용 하 여 수정할 수 있습니다.
+`SetLocale`를 호출 하지 않으면 시스템에서 기본 로캘을 가져옵니다. 이 시스템 기본 로캘은 제어판의 국가별 또는 국가별 응용 프로그램을 사용 하 여 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1487,13 +1487,13 @@ BOOL SetMinVisibleItems(int iMinVisible);
 |---------------|-----------------|
 |*iMinVisible*|진행 표시 되는 최소 항목 수를 지정 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
@@ -1520,7 +1520,7 @@ int SetTopIndex(int nIndex);
 *nIndex*<br/>
 목록 상자 항목의 인덱스 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 고, 오류가 발생 하면 CB_ERR입니다.
 
@@ -1555,7 +1555,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   [Ccombobox:: GetDroppedState](#getdroppedstate)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

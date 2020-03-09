@@ -12,11 +12,11 @@ f1_keywords:
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686276"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865923"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; 형식 정의
 
@@ -34,7 +34,7 @@ ms.locfileid: "72686276"
 typedef basic_istringstream<char> istringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **char**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_istringstream](../standard-library/basic-istringstream-class.md)의 동의어입니다.
 
@@ -46,7 +46,7 @@ typedef basic_istringstream<char> istringstream;
 typedef basic_ostringstream<char> ostringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **char**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)의 동의어입니다.
 
@@ -58,7 +58,7 @@ typedef basic_ostringstream<char> ostringstream;
 typedef basic_stringbuf<char> stringbuf;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **char**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)의 동의어입니다.
 
@@ -70,7 +70,7 @@ typedef basic_stringbuf<char> stringbuf;
 typedef basic_stringstream<char> stringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **char**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringstream](../standard-library/basic-stringstream-class.md)의 동의어입니다.
 
@@ -82,7 +82,7 @@ typedef basic_stringstream<char> stringstream;
 typedef basic_istringstream<wchar_t> wistringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **wchar_t**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_istringstream](../standard-library/basic-istringstream-class.md)의 동의어입니다.
 
@@ -94,7 +94,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 typedef basic_ostringstream<wchar_t> wostringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **wchar_t**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)의 동의어입니다.
 
@@ -106,7 +106,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 typedef basic_stringbuf<wchar_t> wstringbuf;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **wchar_t**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)의 동의어입니다.
 
@@ -118,10 +118,10 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 typedef basic_stringstream<wchar_t> wstringstream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 **wchar_t**형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringstream](../standard-library/basic-stringstream-class.md)의 동의어입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<sstream>](../standard-library/sstream.md)

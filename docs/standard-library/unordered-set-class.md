@@ -135,15 +135,15 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684109"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890747"
 ---
 # <a name="unordered_set-class"></a>unordered_set 클래스
 
-클래스 템플릿은 `const Key` 형식의 다양 한 길이 요소 시퀀스를 제어 하는 개체를 설명 합니다. 시퀀스는 해시 함수로 약하게 정렬됩니다. 즉, 시퀀스를 버킷이라고 하는 하위 시퀀스의 정렬된 집합으로 분할합니다. 비교 함수는 각 버킷 내에서 요소 쌍이 동일하게 정렬되었는지 여부를 확인합니다. 각 요소는 정렬 키와 값으로 사용됩니다. 시퀀스는 최소한 모든 버킷이 대략 동일한 크기일 경우 시퀀스의 요소 수와 상관없이 작업 수를 사용하여 임의 요소를 조회, 삽입, 제거하는 방식으로 나타냅니다(일정 시간). 모든 요소가 하나의 버킷에 있는 최악의 경우에는 작업 수가 시퀀스의 요소 수에 비례합니다(선형 시간). 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
+클래스 템플릿은 `const Key`형식의 다양 한 길이 요소 시퀀스를 제어 하는 개체를 설명 합니다. 시퀀스는 해시 함수로 약하게 정렬됩니다. 즉, 시퀀스를 버킷이라고 하는 하위 시퀀스의 정렬된 집합으로 분할합니다. 비교 함수는 각 버킷 내에서 요소 쌍이 동일하게 정렬되었는지 여부를 확인합니다. 각 요소는 정렬 키와 값으로 사용됩니다. 시퀀스는 최소한 모든 버킷이 대략 동일한 크기일 경우 시퀀스의 요소 수와 상관없이 작업 수를 사용하여 임의 요소를 조회, 삽입, 제거하는 방식으로 나타냅니다(일정 시간). 모든 요소가 하나의 버킷에 있는 최악의 경우에는 작업 수가 시퀀스의 요소 수에 비례합니다(선형 시간). 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -158,21 +158,21 @@ class unordered_set;
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 키 형식입니다.
 
-*해시* \
+*해시*\
 해시 함수 개체 형식입니다.
 
-*Pred* \
+*Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*할당* \
+*할당*\
 할당자 클래스입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -184,7 +184,7 @@ class unordered_set;
 |[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|
 |[hasher](#hasher)|해시 함수의 형식입니다.|
 |[iterator](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
-|[hasher 형식의](#key_equal)|비교 함수의 형식입니다.|
+|[key_equal](#key_equal)|비교 함수의 형식입니다.|
 |[key_type](#key_type)|정렬 키의 형식입니다.|
 |[local_iterator](#local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|
 |[pointer](#pointer)|요소에 대한 포인터의 형식입니다.|
@@ -192,7 +192,7 @@ class unordered_set;
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -230,15 +230,15 @@ class unordered_set;
 |-|-|
 |[unordered_set::operator=](#op_eq)|해시 테이블을 복사합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-개체는 두 개의 저장 된 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. 즉, [unordered_set:: hasher 형식의](#key_equal) 형식의 비교 함수 개체와 [unordered_set:: hasher](#hasher)형식의 해시 함수 개체를 호출 합니다. 멤버 함수 [unordered_set:: key_eq](#key_eq) `()`;를 호출 하 여 첫 번째 저장 된 개체에 액세스 합니다. 멤버 함수 [unordered_set:: hash_function](#hash) `()`를 호출 하 여 두 번째 저장 된 개체에 액세스 합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 클래스 템플릿 [Unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)와 달리 `unordered_set` 형식의 개체는 제어 되는 시퀀스의 두 요소에 대해 `key_eq()(X, Y)` 항상 false가 되도록 합니다. (키는 고유합니다.)
+개체는 두 개의 저장 된 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. [unordered_set:: key_equal](#key_equal) 형식의 비교 함수 개체와 [unordered_set:: hasher](#hasher)형식의 해시 함수 개체입니다. [Unordered_set:: key_eq](#key_eq)`()`; 멤버 함수를 호출 하 여 첫 번째 저장 된 개체에 액세스 합니다. [unordered_set:: hash_function](#hash)`()`멤버 함수를 호출 하 여 두 번째 저장 된 개체에 액세스할 수 있습니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 클래스 템플릿 [Unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)와 달리 `unordered_set` 형식의 개체는 제어 되는 시퀀스의 두 요소에 대해 `key_eq()(X, Y)` 항상 false가 되도록 합니다. (키는 고유합니다.)
 
-개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입할 때 [unordered_set:: load_factor](#load_factor) `()`이 최대 로드 비율을 초과 하면 컨테이너는 버킷 수를 늘리고 필요에 따라 해시 테이블을 다시 작성 합니다.
+개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입 하면 [unordered_set:: load_factor](#load_factor)`()` 최대 로드 비율을 초과 하는 경우 컨테이너는 버킷 수를 늘리고 필요에 따라 해시 테이블을 다시 작성 합니다.
 
 제어된 시퀀스의 실제 요소 순서는 해시 함수, 비교 함수, 삽입 순서, 최대 로드 비율, 현재 버킷 수에 따라 달라집니다. 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 하지만 동일하게 정렬된 요소의 하위 집합은 제어된 시퀀스에서 항상 인접해 있습니다.
 
-개체는 [unordered_set:: allocator_type](#allocator_type)형식의 저장 된 할당자 개체를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 이러한 할당자 개체에는 `allocator` 형식의 개체와 동일한 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.
+개체는 [unordered_set:: allocator_type](#allocator_type)형식의 저장 된 할당자 개체를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 이러한 할당자 개체에는 `allocator`형식의 개체와 동일한 외부 인터페이스가 있어야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.
 
 ## <a name="allocator_type"></a>  unordered_set::allocator_type
 
@@ -248,7 +248,7 @@ class unordered_set;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.
 
@@ -294,10 +294,10 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*nbucket* \
+*nbucket*\
 버킷 번호입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 처음 두 개의 멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *nbucket* 첫 번째 요소 (또는 빈 버킷의 끝 바로 다음)를 가리키는 전방 반복기를 반환 합니다.
 
@@ -367,10 +367,10 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*keyval* \
+*keyval*\
 매핑할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 현재 키 값 *keyval*에 해당 하는 버킷 번호를 반환 합니다.
 
@@ -420,7 +420,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 현재 버킷 수를 반환합니다.
 
@@ -507,10 +507,10 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*nbucket* \
+*nbucket*\
 버킷 번호입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 버킷 번호 *nbucket*크기를 반환 합니다.
 
@@ -560,11 +560,11 @@ bucket_size(7) == 1
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **const** 전방 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
@@ -586,11 +586,11 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위 끝의 바로 다음을 가리키는 **const** 전방 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
@@ -614,9 +614,9 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [unordered_set:: erase](#erase) `(` [unordered_set:: begin](#begin) `(),` [unordered_set:: end](#end) `())`를 호출 합니다.
+멤버 함수는 [unordered_set:: erase](#erase)`(` [unordered_set:: begin](#begin)`(),` [unordered_set:: end](#end)`())`를 호출 합니다.
 
 ### <a name="example"></a>예제
 
@@ -678,7 +678,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식 `T1`의 동의어로 설명됩니다.
 
@@ -720,7 +720,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 버킷의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식 `T5`의 동의어로 설명됩니다.
 
@@ -767,7 +767,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 상수 포인터로 사용될 수 있는 개체를 설명합니다.
 
@@ -812,7 +812,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 상수 참조로 사용될 수 있는 개체를 설명합니다.
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*keyval* \
+*keyval*\
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [unordered_set:: equal_range](#equal_range) `(keyval)`으로 구분 된 범위의 요소 수를 반환 합니다.
+멤버 함수는 [unordered_set:: equal_range](#equal_range)`(keyval)`으로 구분 된 범위의 요소 수를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -911,7 +911,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 부호 있는 정수 형식은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식 `T3`의 동의어로 설명됩니다.
 
@@ -972,16 +972,16 @@ Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-*args* \
+*args*\
 값이 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_set에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**부울** 구성 요소가 삽입이 수행 된 경우 true를 반환 하 고, `unordered_set` 해당 키가 순서 지정 시 동일한 값을 가지 며, 해당 반복기 구성 요소가 새 요소가 삽입 된 주소를 반환 하는 요소를 이미 포함 하 고 있는 경우에는 false를 반환 하는 `pair`입니다. 요소가 이미 있는입니다.
+**부울** 구성 요소가 삽입이 수행 된 경우 true를 반환 하 고, `unordered_set` 해당 키가 순서 지정 시 동일한 값을 가지 며, 반복기 구성 요소에서 새 요소가 삽입 되었거나 요소가 이미 있었던 주소를 반환 하는 요소가 이미 포함 된 경우에는 false를 반환 하는 `pair`입니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수가 반환 하 `pr` 쌍의 **bool** 구성 요소에 액세스 하려면 `pr.second`를 사용 합니다.
+이 구성원 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수가 반환 하 `pr` 쌍의 **bool** 구성 요소에 액세스 하려면 `pr.second`를 사용 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수는 반복기나 참조를 무효화 되지 않습니다.
 
@@ -991,7 +991,7 @@ Args&&... args);
 
 ## <a name="emplace_hint"></a>emplace_hint
 
-배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
+배치 힌트를 사용하여 생성된 요소를 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
 ```cpp
 template <class... Args>
@@ -1002,19 +1002,19 @@ Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-*args* \
+*args*\
 unordered_set가 해당 요소를 이미 포함하고 있지 않거나, 보다 일반적으로는 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 unordered_set에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.
 
-*where* \
+*where*\
 올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 삽입된 요소에 대한 반복기입니다.
 
 요소가 이미 있어서 삽입이 실패하면 기존 요소에 대한 반복기가 반환됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수는 반복기나 참조를 무효화 되지 않습니다.
 
@@ -1030,7 +1030,7 @@ unordered_set가 해당 요소를 이미 포함하고 있지 않거나, 보다 �
 bool empty() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다.
 
@@ -1102,10 +1102,10 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*nbucket* \
+*nbucket*\
 버킷 번호입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 처음 두 멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *n 버킷의*끝 바로 다음을 가리키는 전방 반복기를 반환 합니다.
 
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*keyval* \
+*keyval*\
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 *keyval*을 사용 하 여 동일한 순서로 정렬 된 제어 되는 시퀀스의 요소만 구분 `[X.first, X.second)`는 `X` 반복기 쌍을 반환 합니다. 이러한 요소가 없는 경우 두 반복기는 `end()`입니다.
+멤버 함수는 *keyval*을 사용 하 여 동일한 순서로 정렬 된 제어 되는 시퀀스의 요소만 구분`[X.first, X.second)`는 `X` 반복기 쌍을 반환 합니다. 이러한 요소가 없는 경우 두 반복기는 `end()`입니다.
 
 ### <a name="example"></a>예제
 
@@ -1236,25 +1236,25 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>매개 변수
 
-*Where* \
+*Where*\
 제거할 요소의 위치입니다.
 
-*첫 번째* \
+*첫 번째*\
 제거할 첫 번째 요소의 위치입니다.
 
-*마지막* \
+*마지막*\
 제거할 마지막 요소 바로 다음 위치입니다.
 
-*키* \
+*키*\
 제거할 요소의 키 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 처음 두 구성원 함수의 경우 제거된 요소 뒤에 남은 첫 번째 요소 또는 이러한 요소가 없을 경우 unordered_set의 끝에 있는 요소를 지정하는 양방향 반복기입니다.
 
 세 번째 구성원 함수의 경우 unordered_set에서 제거된 요소의 수를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 코드 예제를 보려면 [set::erase](../standard-library/set-class.md#erase)를 참조하세요.
 
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*keyval* \
+*keyval*\
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [unordered_set:: equal_range](#equal_range) `(keyval).first`을 반환 합니다.
+멤버 함수는 [unordered_set:: equal_range](#equal_range)`(keyval).first`를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1325,7 +1325,7 @@ find('b') == true: [b]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 저장된 할당자 개체를 반환합니다.
 
@@ -1363,7 +1363,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 저장된 해시 함수 개체를 반환합니다.
 
@@ -1401,7 +1401,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Hash`의 동의어입니다.
 
@@ -1460,44 +1460,44 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>매개 변수
 
-*Val* \
+*Val*\
 키가 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_set에 삽입되는 요소의 값입니다.
 
-*Where* \
+*Where*\
 올바른 삽입 지점 검색을 시작할 위치입니다.
 
-*Valty* \
-Unordered_set가 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 사용 하는 템플릿 매개 변수입니다.
+*Valty*\
+Unordered_set에서 [value_type](../standard-library/map-class.md#value_type)요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 사용 하는 템플릿 매개 변수입니다.
 
-*첫 번째* \
+*첫 번째*\
 복사할 첫 번째 요소의 위치입니다.
 
-*마지막* \
+*마지막*\
 복사할 마지막 요소 바로 다음 위치입니다.
 
-*Inputiterator* \
-[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.
+*Inputiterator*\
+[value_type](../standard-library/input-iterator-tag-struct.md) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/map-class.md#value_type)의 요구 사항을 충족하는 템플릿 함수 인수입니다.
 
-*IList* \
+*IList*\
 요소를 복사할 원본 [initializer_list](../standard-library/initializer-list.md)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-단일 요소 멤버 함수 (1) 및 (2)는 **부울** 구성 요소가 삽입 된 경우 true이 고 unordered_set에 지정 된 키의 값이 순서 대로 포함 된 요소가 이미 포함 되어 있는 경우 false 인 [쌍](../standard-library/pair-structure.md) 을 반환 합니다. **부울** 구성 요소가 true 인 경우 반환 값 쌍의 반복기 구성 요소는 새로 삽입 된 요소를 가리키거나 **bool** 구성 요소가 false 인 경우에는 기존 요소를 가리킵니다.
+단일 요소 멤버 함수 (1) 및 (2)는 **bool** 구성 요소가 삽입 된 경우 true이 고 unordered_set에 이미 키에 동일한 값이 있는 요소가 이미 포함 되어 있는 경우 false 인 [쌍](../standard-library/pair-structure.md) 을 반환 합니다. **부울** 구성 요소가 true 인 경우 반환 값 쌍의 반복기 구성 요소는 새로 삽입 된 요소를 가리키거나 **bool** 구성 요소가 false 인 경우에는 기존 요소를 가리킵니다.
 
 힌트가 있는 단일 요소 멤버 함수 (3) 및 (4)는 새 요소가 unordered_set에 삽입된 위치를 가리키는 반복기를 반환하고 동일한 키가 있는 요소가 존재하는 경우에는 기존 요소를 가리키는 반복기를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수는 반복기, 포인터 또는 참조를 무효화하지 않습니다.
 
 요소를 하나만 삽입하는 중 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너의 상태가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다. 여러 요소를 삽입하는 중 예외가 throw되면 컨테이너는 지정되지 않았으나 유효한 상태로 남아 있습니다.
 
-단일 요소 멤버 함수에서 반환 하는 `pair` `pr`의 반복기 구성 요소에 액세스 하려면 `pr.first`를 사용 합니다. 반환 된 쌍 내에서 반복기를 역참조 하려면 `*pr.first`를 사용 하 여 요소를 제공 합니다. **Bool** 구성 요소에 액세스 하려면 `pr.second`을 사용 합니다. 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.
+단일 요소 멤버 함수에서 반환 하는 `pair` `pr`의 반복기 구성 요소에 액세스 하려면 `pr.first`를 사용 합니다. 반환 된 쌍 내에서 반복기를 역참조 하려면`*pr.first`를 사용 하 여 요소를 제공 합니다. **Bool** 구성 요소에 액세스 하려면 `pr.second`을 사용 합니다. 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.
 
 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `unordered_set<V>::value_type`은 `const V` 형식입니다.
 
-범위 멤버 함수 (5)는 `[First, Last)` 범위에서 반복기가 주소를 지정 하는 각 요소에 해당 하는 unordered_set에 요소 값의 시퀀스를 삽입 합니다. 따라서 *Last* 는 삽입 되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.
+범위 멤버 함수 (5)는 `[First, Last)`범위에서 반복기가 주소를 지정 하는 각 요소에 해당 하는 unordered_set에 요소 값의 시퀀스를 삽입 합니다. 따라서 *Last* 는 삽입 되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.
 
 이니셜라이저 목록 멤버 함수 (6)는 [initializer_list](../standard-library/initializer-list.md) 을 사용 하 여 요소를 unordered_set에 복사 합니다.
 
@@ -1525,7 +1525,7 @@ typedef implementation-defined iterator;
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 저장된 비교 함수 개체를 반환합니다.
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>hasher 형식의
+## <a name="key_equal"></a>key_equal
 
 비교 함수의 형식입니다.
 
@@ -1565,7 +1565,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Pred`의 동의어입니다.
 
@@ -1605,7 +1605,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Key`의 동의어입니다.
 
@@ -1657,7 +1657,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 구성원 함수는 `(float)`[unordered_set::size](#size)`() / (float)`[unordered_set::bucket_count](#bucket_count)`()`(버킷당 평균 요소 수)를 반환합니다.
 
@@ -1742,7 +1742,7 @@ max_load_factor() == 0.1
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 버킷의 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식 `T4`의 동의어로 설명됩니다.
 
@@ -1789,7 +1789,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 현재 허용된 최대 버킷 개수를 반환합니다.
 
@@ -1878,10 +1878,10 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>매개 변수
 
-*요소* \
+*요소*\
 새로운 최대 로드 비율입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 저장된 최대 로드 비율을 반환합니다. 두 번째 멤버 함수는 저장 된 최대 로드 비율을 *인수로*바꿉니다.
 
@@ -1966,7 +1966,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 개체가 제어할 수 있는 가장 긴 시퀀스의 길이를 반환합니다.
 
@@ -2005,12 +2005,12 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
-@No__t_1 복사 되는 [unordered_set](../standard-library/unordered-set-class.md) 입니다.
+*오른쪽*\
+`unordered_set`에 복사 되는 [unordered_set](../standard-library/unordered-set-class.md) 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-@No__t_0의 기존 요소를 지운 후에 *는의 내용을* `unordered_set` 복사 하거나 이동 `operator=`.
+`unordered_set`의 기존 요소를 지운 후에 *는의 내용을* `unordered_set`복사 하거나 이동 `operator=`.
 
 ### <a name="example"></a>예제
 
@@ -2057,7 +2057,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 포인터로 사용될 수 있는 개체를 설명합니다.
 
@@ -2103,7 +2103,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 참조로 사용될 수 있는 개체를 설명합니다.
 
@@ -2151,10 +2151,10 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>매개 변수
 
-*nbuckets* \
+*nbuckets*\
 요청된 버킷 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 버킷 수를 최소한 *nbuckets* 변경 하 고 필요에 따라 해시 테이블을 다시 빌드합니다.
 
@@ -2226,7 +2226,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다.
 
@@ -2291,7 +2291,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식 `T2`의 동의어로 설명됩니다.
 
@@ -2329,12 +2329,12 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 교환할 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `*this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. [Unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()` 하는 경우 `Tr` 형식의 저장 된 특성 개체를 복사 하는 경우에만 예외를 throw 하 고,의 요소를 지정 하는 참조, 포인터 또는 반복기를 무효화 합니다. 두 개의 제어 되는 시퀀스입니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
+멤버 함수는 `*this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. [Unordered_set:: get_allocator](#get_allocator)`() == right.get_allocator()`하는 경우에는 `Tr`형식의 저장 된 특성 개체를 복사 하는 경우에만 예외를 throw 하 고, 두 개의 제어 된 시퀀스에서 요소를 지정 하는 참조, 포인터 또는 반복기를 무효화 하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
 
 ### <a name="example"></a>예제
 
@@ -2437,40 +2437,40 @@ unordered_set(
 
 ### <a name="parameters"></a>매개 변수
 
-*Inputiterator* \
+*Inputiterator*\
 반복기 형식입니다.
 
-*Al* \
+*Al*\
 저장할 할당자 개체입니다.
 
-*Comp* \
+*Comp*\
 저장할 비교 함수 개체입니다.
 
-*해시* \
+*해시*\
 저장할 해시 함수 개체입니다.
 
-*bucket_count* \
+*bucket_count*\
 최소 버킷 수입니다.
 
-*오른쪽* \
+*오른쪽*\
 복사할 컨테이너입니다.
 
-*IList* \
+*IList*\
 복사할 요소를 포함하는 initializer_list입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 생성자는 *Right*로 제어 되는 시퀀스의 복사본을 지정 합니다. 두 번째 생성자는 빈 제어 시퀀스를 지정합니다. 세 번째 생성자는 *오른쪽* 에서 여덟 번째까지 이동 하 여 시퀀스의 복사본을 지정 합니다. 네 번째 생성자는 initializer_list을 사용 하 여 복사할 요소를 지정 합니다. 아홉 번째 생성자는 `[first, last)` 요소 값의 시퀀스를 삽입합니다.
+첫 번째 생성자는 *Right*로 제어 되는 시퀀스의 복사본을 지정 합니다. 두 번째 생성자는 빈 제어 시퀀스를 지정합니다. 세 번째 생성자는 *오른쪽* 에서 여덟 번째까지 이동 하 여 시퀀스의 복사본을 지정 합니다 .이 생성자는 initializer_list를 사용 하 여 복사할 요소를 지정 합니다. 아홉 번째 생성자는 `[first, last)` 요소 값의 시퀀스를 삽입합니다.
 
 모든 생성자는 또한 여러 개의 저장된 값을 초기화합니다. 복사 생성자의 경우 값은 *오른쪽*에서 가져옵니다. 그렇지 않은 경우는 다음과 같습니다.
 
-최소 버킷 수는 *bucket_count*인수입니다 (있는 경우). 그렇지 않으면 여기에 설명 된 기본값은 `N0` 구현 정의 값으로 설명 됩니다.
+버킷 최소 수는 인수 *bucket_count*(있는 경우)입니다. 그렇지 않으면 여기에 설명 된 기본값은 `N0`구현 정의 값으로 설명 됩니다.
 
-해시 함수 개체는 인수 *해시*(있는 경우)입니다. 그렇지 않으면 `Hash()` 합니다.
+해시 함수 개체는 인수 *해시*(있는 경우)입니다. 그렇지 않으면 `Hash()`합니다.
 
-비교 함수 개체는 인수 *Comp*(있는 경우)입니다. 그렇지 않으면 `Comp()` 합니다.
+비교 함수 개체는 인수 *Comp*(있는 경우)입니다. 그렇지 않으면 `Comp()`합니다.
 
-할당자 개체는 *Al*인수입니다 (있는 경우). 그렇지 않으면 `Alloc()` 됩니다.
+할당자 개체는 *Al*인수입니다 (있는 경우). 그렇지 않으면 `Alloc()`됩니다.
 
 ## <a name="value_type"></a> value_type
 
@@ -2480,7 +2480,7 @@ unordered_set(
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 제어되는 시퀀스의 요소를 설명합니다.
 
