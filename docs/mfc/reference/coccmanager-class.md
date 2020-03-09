@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504494"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865940"
 ---
 # <a name="coccmanager-class"></a>COccManager 클래스
 
@@ -47,28 +47,28 @@ ms.locfileid: "69504494"
 class COccManager : public CNoTrackObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[COccManager::CreateContainer](#createcontainer)|`COleContainer` 개체를 만듭니다.|
-|[COccManager::CreateDlgControls](#createdlgcontrols)|연결 된 `COleContainer` 개체에 의해 호스팅되는 ActiveX 컨트롤을 만듭니다.|
-|[COccManager::CreateSite](#createsite)|`COleClientSite` 개체를 만듭니다.|
-|[COccManager::GetDefBtnCode](#getdefbtncode)|기본 단추의 코드를 검색 합니다.|
-|[COccManager::IsDialogMessage](#isdialogmessage)|대화 메시지의 대상을 결정 합니다.|
-|[COccManager::IsLabelControl](#islabelcontrol)|지정 된 컨트롤이 레이블 컨트롤 인지 여부를 확인 합니다.|
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|현재 니모닉이 지정 된 컨트롤의 니모닉과 일치 하는지 여부를 확인 합니다.|
-|[COccManager::OnEvent](#onevent)|지정 된 이벤트를 처리 하려고 시도 합니다.|
-|[COccManager::PostCreateDialog](#postcreatedialog)|대화 상자를 만드는 동안 할당 된 리소스를 해제 합니다.|
-|[COccManager::PreCreateDialog](#precreatedialog)|ActiveX 컨트롤에 대 한 대화 상자 템플릿을 처리 합니다.|
-|[COccManager::SetDefaultButton](#setdefaultbutton)|지정 된 컨트롤의 기본 상태를 설정/해제 합니다.|
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|지정 된 대화 상자 템플릿에서 기존 ActiveX 컨트롤을 공통 컨트롤에서 분리 합니다.|
+|[COccManager:: CreateContainer](#createcontainer)|`COleContainer` 개체를 만듭니다.|
+|[COccManager:: CreateDlgControls](#createdlgcontrols)|연결 된 `COleContainer` 개체에서 호스팅하는 ActiveX 컨트롤을 만듭니다.|
+|[COccManager:: CreateSite](#createsite)|`COleClientSite` 개체를 만듭니다.|
+|[COccManager:: GetDefBtnCode](#getdefbtncode)|기본 단추의 코드를 검색 합니다.|
+|[COccManager:: IsDialogMessage](#isdialogmessage)|대화 메시지의 대상을 결정 합니다.|
+|[COccManager:: IsLabelControl](#islabelcontrol)|지정 된 컨트롤이 레이블 컨트롤 인지 여부를 확인 합니다.|
+|[COccManager:: IsMatchingMnemonic](#ismatchingmnemonic)|현재 니모닉이 지정 된 컨트롤의 니모닉과 일치 하는지 여부를 확인 합니다.|
+|[COccManager:: OnEvent](#onevent)|지정 된 이벤트를 처리 하려고 시도 합니다.|
+|[COccManager::P ostCreateDialog](#postcreatedialog)|대화 상자를 만드는 동안 할당 된 리소스를 해제 합니다.|
+|[COccManager::P reCreateDialog](#precreatedialog)|ActiveX 컨트롤에 대 한 대화 상자 템플릿을 처리 합니다.|
+|[COccManager:: SetDefaultButton](#setdefaultbutton)|지정 된 컨트롤의 기본 상태를 설정/해제 합니다.|
+|[COccManager:: SplitDialogTemplate](#splitdialogtemplate)|지정 된 대화 상자 템플릿에서 기존 ActiveX 컨트롤을 공통 컨트롤에서 분리 합니다.|
 
 ## <a name="remarks"></a>설명
 
-기본 클래스 `CNoTrackObject`는 AFXTLS에 있는 문서화 되지 않은 기본 클래스입니다. H). MFC 프레임 워크에서 사용 하도록 디자인 된 `CNoTrackObject` 클래스에서 파생 된 클래스는 메모리 누수 검색에서 제외 됩니다. 에서 `CNoTrackObject`직접 파생 하지 않는 것이 좋습니다.
+기본 클래스 `CNoTrackObject`는 AFXTLS에 있는 문서화 되지 않은 기본 클래스입니다. H). MFC 프레임 워크에서 사용 하도록 디자인 된 `CNoTrackObject` 클래스에서 파생 된 클래스는 메모리 누수 검색에서 제외 됩니다. `CNoTrackObject`에서 직접 파생 하지 않는 것이 좋습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
 
@@ -80,7 +80,7 @@ class COccManager : public CNoTrackObject
 
 **헤더:** afxocc
 
-##  <a name="createcontainer"></a>  COccManager::CreateContainer
+##  <a name="createcontainer"></a>COccManager:: CreateContainer
 
 컨트롤 컨테이너를 만들기 위해 프레임 워크에서 호출 됩니다.
 
@@ -93,7 +93,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 *pWnd*<br/>
 사용자 지정 사이트 컨테이너와 연결 된 창 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 컨테이너에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -101,7 +101,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 사용자 지정 사이트를 만드는 방법에 대 한 자세한 내용은 [COleControlContainer:: AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)를 참조 하세요.
 
-##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls
+##  <a name="createdlgcontrols"></a>COccManager:: CreateDlgControls
 
 *Poccdialoginfo* 매개 변수로 지정 된 ActiveX 컨트롤을 만들려면이 함수를 호출 합니다.
 
@@ -128,14 +128,14 @@ virtual BOOL CreateDlgControls(
 *pOccDialogInfo*<br/>
 Dialog 개체를 만드는 데 사용 되는 대화 상자 템플릿에 대 한 포인터입니다.
 
-*lpResource*<br/>
+*L보도 Ource*<br/>
 리소스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤을 성공적으로 만들었으면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
-##  <a name="createsite"></a>  COccManager::CreateSite
+##  <a name="createsite"></a>COccManager:: CreateSite
 
 *PCtrlCont*가 가리키는 컨테이너에 의해 호스팅되는 컨트롤 사이트를 만들기 위해 프레임 워크에서 호출 됩니다.
 
@@ -148,7 +148,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 *pCtrlCont*<br/>
 새 컨트롤 사이트를 호스팅하는 컨트롤 컨테이너에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 컨트롤 사이트에 대 한 포인터입니다.
 
@@ -156,9 +156,9 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 
 [COleControlSite](../../mfc/reference/colecontrolsite-class.md)파생 클래스를 사용 하 여 사용자 지정 컨트롤 사이트를 만들려면이 함수를 재정의 합니다.
 
-각 컨트롤 컨테이너는 여러 사이트를 호스팅할 수 있습니다. 를 여러 번 호출 하 여 추가 `CreateSite`사이트를 만듭니다.
+각 컨트롤 컨테이너는 여러 사이트를 호스팅할 수 있습니다. `CreateSite`를 여러 번 호출 하 여 추가 사이트를 만듭니다.
 
-##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode
+##  <a name="getdefbtncode"></a>COccManager:: GetDefBtnCode
 
 컨트롤이 기본 푸시 단추 인지 여부를 확인 하려면이 함수를 호출 합니다.
 
@@ -171,17 +171,17 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 *pWnd*<br/>
 Button 컨트롤을 포함 하는 window 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-다음 값 중 하나입니다.
+해당 값은
 
 - DLGC_DEFPUSHBUTTON 컨트롤은 대화 상자의 기본 단추입니다.
 
-- DLGC_UNDEFPUSHBUTTON 컨트롤은 대화 상자에서 기본 단추가 아닙니다.
+- DLGC_UNDEFPUSHBUTTON 컨트롤이 대화 상자의 기본 단추가 아닙니다.
 
 - **0** 컨트롤은 단추가 아닙니다.
 
-##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage
+##  <a name="isdialogmessage"></a>COccManager:: IsDialogMessage
 
 지정 된 대화 상자에 대해 메시지를 사용 하는지 여부를 확인 하기 위해 프레임 워크에서 호출 되 고, 메시지를 처리 하는 경우에는 메시지를 처리 합니다.
 
@@ -197,19 +197,19 @@ virtual BOOL IsDialogMessage(
 메시지의 의도 한 대상 대화 상자에 대 한 포인터입니다.
 
 *lpMsg*<br/>
-확인할 메시지를 포함 `MSG` 하는 구조체에 대 한 포인터입니다.
+확인할 메시지를 포함 하는 `MSG` 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지가 처리 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-의 `IsDialogMessage` 기본 동작은 키보드 메시지를 확인 하 고 해당 대화 상자에 대 한 선택 항목으로 변환 하는 것입니다. 예를 들어 TAB 키를 누르면 다음 컨트롤이 나 컨트롤 그룹이 선택 됩니다.
+`IsDialogMessage`의 기본 동작은 키보드 메시지를 확인 하 고 해당 대화 상자에 대 한 선택 항목으로 변환 하는 것입니다. 예를 들어 TAB 키를 누르면 다음 컨트롤이 나 컨트롤 그룹이 선택 됩니다.
 
 지정 된 대화 상자로 보낸 메시지에 대 한 사용자 지정 동작을 제공 하려면이 함수를 재정의 합니다.
 
-##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl
+##  <a name="islabelcontrol"></a>COccManager:: IsLabelControl
 
 지정 된 컨트롤이 레이블 컨트롤 인지 여부를 확인 하려면이 함수를 호출 합니다.
 
@@ -223,7 +223,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 *pWnd*<br/>
 컨트롤을 포함 하는 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤이 레이블 이면 0이 아닌 값입니다. 그렇지 않으면 0
 
@@ -231,7 +231,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 레이블 컨트롤은 순서에서 옆에 있는 모든 컨트롤에 대 한 레이블 처럼 동작 합니다.
 
-##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic
+##  <a name="ismatchingmnemonic"></a>COccManager:: IsMatchingMnemonic
 
 이 함수를 호출 하 여 현재 니모닉이 컨트롤이 나타내는 것과 일치 하는지 확인 합니다.
 
@@ -253,13 +253,13 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 *lpMsg*<br/>
 일치 시킬 니모닉이 포함 된 메시지에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 니모닉이 컨트롤과 일치 하면 0이 아닌 값입니다. 그렇지 않으면 0
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onevent"></a>  COccManager::OnEvent
+##  <a name="onevent"></a>COccManager:: OnEvent
 
 지정 된 이벤트를 처리 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -274,7 +274,7 @@ virtual BOOL OnEvent(
 ### <a name="parameters"></a>매개 변수
 
 *pCmdTarget*<br/>
-이벤트를 처리 하려고 `CCmdTarget` 하는 개체에 대 한 포인터입니다.
+이벤트를 처리 하려고 하는 `CCmdTarget` 개체에 대 한 포인터입니다.
 
 *idCtrl*<br/>
 컨트롤의 리소스 ID입니다.
@@ -283,9 +283,9 @@ virtual BOOL OnEvent(
 처리 되는 이벤트입니다.
 
 *pHandlerInfo*<br/>
-NULL `OnEvent` 이 아닌 경우는 `pTarget` 명령을 발송 하 `pmf` 는 대신 및 `AFX_CMDHANDLERINFO` 구조체의 멤버를 채웁니다. 일반적으로이 매개 변수는 NULL 이어야 합니다.
+NULL이 아닌 경우 `OnEvent`는 `pTarget`를 채우고 명령을 발송 하는 대신 `AFX_CMDHANDLERINFO` 구조의 멤버를 `pmf` 합니다. 일반적으로이 매개 변수는 NULL 이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이벤트가 처리 된 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -293,7 +293,7 @@ NULL `OnEvent` 이 아닌 경우는 `pTarget` 명령을 발송 하 `pmf` 는 대
 
 기본 이벤트 처리 프로세스를 사용자 지정 하려면이 함수를 재정의 합니다.
 
-##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog
+##  <a name="precreatedialog"></a>COccManager::P reCreateDialog
 
 실제 대화 상자를 만들기 전에 ActiveX 컨트롤에 대 한 대화 상자 템플릿을 처리 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -306,22 +306,22 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ### <a name="parameters"></a>매개 변수
 
 *pOccDialogInfo*<br/>
-대화 상자 템플릿과 대화 상자에서 호스팅하는 ActiveX 컨트롤에 대 한 정보를 포함 하는 구조체입니다.`_AFX_OCC_DIALOG_INFO`
+대화 상자 템플릿과 대화 상자에서 호스팅하는 ActiveX 컨트롤에 대 한 정보를 포함 하는 `_AFX_OCC_DIALOG_INFO` 구조입니다.
 
-*pOrigTemplate*<br/>
+*폰 템플릿*<br/>
 대화 상자를 만드는 데 사용할 대화 상자 템플릿에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자를 만드는 데 사용 되는 대화 상자 템플릿 구조에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-기본 동작은에 대 `SplitDialogTemplate`한 호출을 수행 하 여 ActiveX 컨트롤이 있는지 확인 한 다음 결과 대화 상자 템플릿을 반환 합니다.
+기본 동작은 `SplitDialogTemplate`에 대 한 호출을 수행 하 여 ActiveX 컨트롤이 있는지 확인 한 다음 결과 대화 상자 템플릿을 반환 합니다.
 
 ActiveX 컨트롤을 호스팅하는 대화 상자를 만드는 프로세스를 사용자 지정 하려면이 함수를 재정의 합니다.
 
-##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog
+##  <a name="postcreatedialog"></a>COccManager::P ostCreateDialog
 
 대화 상자 템플릿에 할당 된 메모리를 해제 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -332,15 +332,15 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ### <a name="parameters"></a>매개 변수
 
 *pOccDialogInfo*<br/>
-대화 상자 템플릿과 대화 상자에서 호스팅하는 ActiveX 컨트롤에 대 한 정보를 포함 하는 구조체입니다.`_AFX_OCC_DIALOG_INFO`
+대화 상자 템플릿과 대화 상자에서 호스팅하는 ActiveX 컨트롤에 대 한 정보를 포함 하는 `_AFX_OCC_DIALOG_INFO` 구조입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메모리는에 대 `SplitDialogTemplate`한 호출로 할당 되었으며 대화 상자의 호스팅된 ActiveX 컨트롤에 사용 되었습니다.
+이 메모리는 `SplitDialogTemplate`에 대 한 호출로 할당 되었으며 대화 상자의 호스팅된 ActiveX 컨트롤에 사용 되었습니다.
 
 이 함수를 재정의 하 여 대화 상자 개체에서 사용 하는 리소스를 정리 하는 프로세스를 사용자 지정 합니다.
 
-##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton
+##  <a name="setdefaultbutton"></a>COccManager:: SetDefaultButton
 
 컨트롤을 기본 단추로 설정 하려면이 함수를 호출 합니다.
 
@@ -358,16 +358,16 @@ static void AFX_CDECL SetDefaultButton(
 *bDefault*<br/>
 컨트롤이 기본 단추가 되도록 하려면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
 > [!NOTE]
->  컨트롤에는 OLEMISC_ACTSLIKEBUTTON 상태 비트가 설정 되어 있어야 합니다. OLEMISC 플래그에 대 한 자세한 내용은 Windows SDK의 [olemisc](/windows/win32/api/oleidl/ne-oleidl-olemisc) 항목을 참조 하십시오.
+>  컨트롤에 OLEMISC_ACTSLIKEBUTTON 상태 비트가 설정 되어 있어야 합니다. OLEMISC 플래그에 대 한 자세한 내용은 Windows SDK의 [olemisc](/windows/win32/api/oleidl/ne-oleidl-olemisc) 항목을 참조 하십시오.
 
-##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate
+##  <a name="splitdialogtemplate"></a>COccManager:: SplitDialogTemplate
 
 공용 대화 상자 컨트롤에서 ActiveX 컨트롤을 분할 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -382,10 +382,10 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 *pTemplate*<br/>
 검사할 대화 상자 템플릿에 대 한 포인터입니다.
 
-*ppOleDlgItems*<br/>
+*Pcgedlgitems*<br/>
 ActiveX 컨트롤의 대화 상자 항목에 대 한 포인터 목록입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비 ActiveX 컨트롤만 포함 하는 대화 상자 템플릿 구조에 대 한 포인터입니다. ActiveX 컨트롤이 없는 경우 NULL이 반환 됩니다.
 
@@ -400,7 +400,7 @@ ActiveX 컨트롤을 찾은 경우 템플릿이 분석 되 고 ActiveX 컨트롤
 
 이 프로세스를 사용자 지정 하려면이 함수를 재정의 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [COleControlSite 클래스](../../mfc/reference/colecontrolsite-class.md)<br/>
