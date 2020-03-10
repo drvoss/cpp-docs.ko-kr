@@ -2,12 +2,12 @@
 title: 디버거 속성(Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821403"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883709"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ 디버깅 속성(Linux C++)
 
@@ -21,7 +21,7 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 속성 | 설명 | 선택 항목
 --- | ---| ---
-원격 디버깅 머신 | **Visual Studio 2019 버전 16.1**: 프로그램을 디버깅하려면 머신을 지정합니다. [일반](general-linux.md) 페이지에서 지정된 원격 빌드 머신과 다를 수 있습니다.
+원격 디버깅 머신 | **Visual Studio 2019 버전 16.1**: 프로그램을 디버깅하려면 머신을 지정합니다. [일반](general-linux.md) 페이지에서 지정된 원격 빌드 머신과 다를 수 있습니다. **도구** > **옵션** > **플랫폼 간** > **연결 관리자**를 사용하여 대상 머신 연결을 추가하거나 편집할 수 있습니다.
 사전 실행 명령 | 디버거 실행 전에 셸에서 실행되는 명령이며 디버깅 환경에 영향을 주기 위해 사용할 수 있습니다.
 프로그램 | 디버그할 프로그램에 대한 원격 시스템의 전체 경로입니다. 비워 두거나 변경하지 않으면 현재 프로젝트 출력이 기본값으로 설정됩니다.
 프로그램 인수 | 디버그 중인 프로그램에 전달할 명령줄 인수입니다.

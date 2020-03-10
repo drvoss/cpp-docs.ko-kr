@@ -3,12 +3,12 @@ title: 일반 속성(Linux C++ 프로젝트)
 description: Visual Studio의 일반 속성 페이지에서 설정할 수 있는 Linux 프로젝트 속성에 대해 설명합니다.
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: d6a69d9fd3091c885ebd708cbc4598533d2922b4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031341"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883982"
 ---
 # <a name="general-properties-linux-c"></a>일반 속성(Linux C++)
 
@@ -29,7 +29,7 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 정리할 때 삭제할 확장명 | 정리하거나 다시 빌드할 때 삭제할 중간 디렉터리에 있는 파일에 대한 세미콜론으로 구분된 와일드카드 규칙입니다.
 빌드 로그 파일 | 빌드 로깅을 사용하도록 설정된 경우 작성할 빌드 로그 파일을 지정합니다.
 플랫폼 도구 집합 | 현재 구성을 빌드하는 데 사용되는 도구 집합을 지정합니다. 설정하지 않으면 기본 도구 집합을 사용합니다.
-원격 빌드 컴퓨터 | 원격 빌드, 배포 및 디버그에 사용할 대상 컴퓨터 또는 디바이스입니다. **Visual Studio 2019 버전 16.1** 디버깅을 위해 [디버깅](debugging-linux.md) 페이지에서 다른 컴퓨터를 지정할 수 있습니다.
+원격 빌드 컴퓨터 | 원격 빌드, 배포 및 디버그에 사용할 대상 머신 또는 디바이스를 표시합니다. **도구** > **옵션** > **플랫폼 간** > **연결 관리자**를 사용하여 대상 머신 연결을 추가하거나 편집할 수 있습니다. **Visual Studio 2019 버전 16.1** 디버깅을 위해 [디버깅](debugging-linux.md) 페이지에서 다른 컴퓨터를 지정할 수 있습니다.
 원격 빌드 루트 디렉터리 | 원격 컴퓨터 또는 디바이스의 디렉터리에 대한 경로를 지정합니다.
 원격 빌드 프로젝트 디렉터리 | 원격 컴퓨터 또는 디바이스의 디렉터리에 대한 경로를 지정합니다.
 원격 배포 디렉터리 | **Visual Studio 2019 버전 16.1** 프로젝트를 배포할 원격 컴퓨터 또는 디바이스의의 디렉터리 경로를 지정합니다.
