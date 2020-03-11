@@ -1,5 +1,5 @@
 ---
-title: '&lt;string&gt; 함수'
+title: '&lt;string&gt; functions'
 ms.date: 11/04/2016
 f1_keywords:
 - string/std::getline
@@ -29,13 +29,13 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455606"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856620"
 ---
-# <a name="ltstringgt-functions"></a>&lt;string&gt; 함수
+# <a name="ltstringgt-functions"></a>&lt;string&gt; functions
 
 ||||
 |-|-|-|
@@ -79,7 +79,7 @@ basic_istream<Allocator, Traits>& getline(
 *is*\
 문자열을 추출할 입력 스트림입니다.
 
-*문자열*\
+*str*\
 입력 스트림에서 문자를 읽어들일 문자열입니다.
 
 *delim*\
@@ -91,25 +91,25 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="remarks"></a>설명
 
-에서 문자 추출으로 표시 `(1)` 된 함수 시그니처 쌍은 *delim* 가 발견 될 때까지 되어 *str*에 저장 *됩니다* .
+*에서 문자를 추출* `(1)` 표시 된 함수 시그니처 쌍은 *delim* 를 찾아 *str*에 저장 합니다.
 
-로 표시 `(2)` 된 함수 시그니처 쌍은 줄 바꿈 문자를 기본 줄 구분 기호로 사용 하 고 **getline**( `is`, `str`,)`is`으로 동작 합니다. `widen`(' `\n`'))으로 동작합니다.
+`(2)` 표시 된 함수 시그니처 쌍은 줄 바꿈 문자를 기본 줄 구분 기호로 사용 하 고 **getline**(`is`, `str`, `is`로 동작 합니다. `widen`(' `\n`'))으로 동작합니다.
 
 각 쌍의 두 번째 함수는 [value 참조](../cpp/lvalues-and-rvalues-visual-cpp.md)를 지원하기 위한 첫 번째 함수와 유사한 버전입니다.
 
 다음 중 하나가 발생하면 추출이 중지됩니다.
 
-- 파일의 끝에 있는 *경우의 내부* 상태 플래그가로 `ios_base::eofbit`설정 됩니다.
+- 파일의 끝에 있는 *경우의 내부 상태 플래그는 `ios_base::eofbit`* 로 설정 됩니다.
 
 - 함수가 `delim`과 비교 시 같은 요소를 추출하는 경우, 해당 요소는 제어된 시퀀스로 다시 돌아가지도 않고 제어된 시퀀스에 추가되지도 않습니다.
 
-- 함수가 [max_size](../standard-library/basic-string-class.md#max_size) 요소를 `str.`추출한 후에 *는의 내부* 상태 플래그가로 `ios_base::failbit`설정 됩니다.
+- 함수는 `str.`[max_size](../standard-library/basic-string-class.md#max_size) 요소를 추출 하 고, *이* 경우의 내부 상태 플래그는 `ios_base::failbit`로 설정 됩니다.
 
-- 이전에 나열 되지 않은 다른 오류가 발생 했습니다. *이* 경우의 내부 상태 플래그는로 설정 됩니다.`ios_base::badbit`
+- 이전에 나열 되지 않은 다른 오류가 발생 했습니다. *이* 경우의 내부 상태 플래그가로 설정 됩니다 `ios_base::badbit`
 
 내부 상태 플래그에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
 
-함수가 요소를 추출 하지 *않으면의 내부* 상태 플래그가로 `ios_base::failbit`설정 됩니다. 어떤 경우 `getline` 든 *은*를 반환 합니다.
+함수가 요소를 추출 하지 않으면의 내부 상태 플래그가 `ios_base::failbit`로 *설정 됩니다.* 어떤 경우 든 `getline` *는*를 반환 합니다.
 
 예외가 throw 되는 경우 *는이* 고 *str* 은 유효한 상태로 유지 됩니다.
 
@@ -173,7 +173,7 @@ double stod(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
@@ -184,7 +184,7 @@ double stod(
 
 ### <a name="remarks"></a>설명
 
-함수는를 호출 `val` `_Eptr`  `strtod( str.c_str(), _Eptr)`하는 것 처럼 *str* 의 요소 시퀀스를 double 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtod( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **double** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stof"></a>  stof
 
@@ -202,7 +202,7 @@ float stof(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
@@ -213,7 +213,7 @@ float 값입니다.
 
 ### <a name="remarks"></a>설명
 
-함수는를 호출 `val` `_Eptr`  `strtof( str.c_str(), _Eptr)`하는 것 처럼 *str* 의 요소 시퀀스를 float 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtof( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **float** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stoi"></a>  stoi
 
@@ -237,7 +237,7 @@ int stoi(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|반환 시 변환되지 않은 첫 번째 문자의 인덱스를 포함합니다.|
@@ -245,11 +245,11 @@ int stoi(
 
 ### <a name="remarks"></a>설명
 
-함수 `stoi` 는 *str* 의 문자 시퀀스를 **int** 형식의 값으로 변환 하 고 값을 반환 합니다. 예를 들어 문자 시퀀스 "10" 전달 시 `stoi`에서 반환하는 값은 정수 10입니다.
+함수 `stoi` *str* 의 문자 시퀀스를 **int** 형식의 값으로 변환 하 고 값을 반환 합니다. 예를 들어 문자 시퀀스 "10" 전달 시 `stoi`에서 반환하는 값은 정수 10입니다.
 
 `stoi`는 `strtol` 방식으로 호출하는 경우 싱글바이트 문자에 대해 `strtol( str.c_str(), _Eptr, idx)` 함수와 비슷하게 동작하고, `_Eptr` 방식으로 호출하는 경우에는 와이드 문자에 대해 `wcstol` 함수와 비슷하게 동작합니다. 여기서 `wcstol(Str.c_str(), _Eptr, idx)`은 함수 내부의 개체입니다. 자세한 내용은 [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)을 참조하세요.
 
-인 `str.c_str() == *_Eptr`경우 `stoi` 형식의`invalid_argument`개체를 throw 합니다. 이러한 호출을 설정 `errno`하거나 반환 된 값을 **int**형식의 개체로 나타낼 수 없는 경우 형식의 `out_of_range`개체가 throw 됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr - str.c_str()` `*idx`을 저장 합니다.
+`str.c_str() == *_Eptr`경우 `stoi` `invalid_argument`형식의 개체를 throw 합니다. 이러한 호출을 `errno`설정 하거나 반환 된 값을 **int**형식의 개체로 나타낼 수 없는 경우 `out_of_range`형식의 개체를 throw 합니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx`에 `*_Eptr - str.c_str()`을 저장 합니다.
 
 ## <a name="stol"></a>  stol
 
@@ -281,7 +281,7 @@ long 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
-함수는를 호출 `val` `_Eptr`  `strtol( str.c_str(), _Eptr, idx)`하는 것 처럼 *str* 의 요소 시퀀스를 long 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtol( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stold"></a>  stold
 
@@ -299,7 +299,7 @@ double stold(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
@@ -310,7 +310,7 @@ double stold(
 
 ### <a name="remarks"></a>설명
 
-함수는를 `_Eptr` 호출 `val`  `strtold( str.c_str(), _Eptr)`하는 것 처럼 str의 요소 시퀀스를 **long double** 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtold( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long double** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stoll"></a>  stoll
 
@@ -342,7 +342,7 @@ long long stoll(
 
 ### <a name="remarks"></a>설명
 
-함수는를 호출 `val` `_Eptr`  `strtoll( str.c_str(), _Eptr, idx)`하는 것 처럼 *str* 의 요소 시퀀스를 long 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtoll( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stoul"></a>  stoul
 
@@ -362,7 +362,7 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
@@ -374,7 +374,7 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>설명
 
-함수는를 `_Eptr` 호출 `val`  `strtoul( str.c_str(), _Eptr, idx)`하는 것 처럼 str의 요소 시퀀스를 **unsigned long** 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtoul( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **unsigned long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="stoull"></a>  stoull
 
@@ -394,7 +394,7 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
@@ -406,7 +406,7 @@ unsigned long long stoull(
 
 ### <a name="remarks"></a>설명
 
-함수는를 `_Eptr` 호출 `val`  `strtoull( str.c_str(), _Eptr, idx)`하는 것 처럼 str의 요소 시퀀스를 **부호 없는 long** 형식의 값으로 변환 합니다. 여기서은 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고, *idx* 이 null 포인터가 아닌 경우 함수는에 `*_Eptr -  str.c_str()` `*idx` 을 저장 하 고 `val`를 반환 합니다.
+함수는 `strtoull( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **부호 없는 long** 형식 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
 ## <a name="swap"></a>  swap
 
@@ -419,7 +419,7 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 요소를 다른 문자열의 요소와 교환할 단일 문자열입니다.
 
 *오른쪽*\
@@ -427,7 +427,7 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 특수 멤버 함수를 *왼쪽*으로 실행 합니다. [교환](../standard-library/basic-string-class.md#swap) (*right*) 문자열에 대해 일관 된 복잡성을 보장 합니다.
+템플릿 함수는 특수 멤버 함수를 *왼쪽*으로 실행 합니다. 문자열에 대해 [바꾸기](../standard-library/basic-string-class.md#swap)(*오른쪽*)-일관 된 복잡성을 보장 합니다.
 
 ### <a name="example"></a>예제
 
@@ -492,23 +492,23 @@ string to_string(long double Val);
 
 ### <a name="remarks"></a>설명
 
-함수는를 호출 `sprintf(Buf, Fmt, Val)`하는 것 처럼 함수를 내부 배열 개체 `Buf` 에 저장 된 요소 *시퀀스로 변환 합니다* . 여기서 `Fmt` 는입니다.
+함수는 `sprintf(Buf, Fmt, Val)`를 호출 하는 것 처럼 함수 내부 `Buf` 배열 개체에 저장 된 요소 *시퀀스로 변환 합니다* . 여기서 `Fmt`는입니다.
 
-- `"%d"`의 `Val` 형식이 **int** 인 경우
+- `Val`에 **int** 형식이 `"%d"`
 
-- `"%u"`에 `Val` **부호 없는 int** 형식이 있는 경우
+- `Val`에 **부호 없는 int** 형식이 `"%u"`
 
-- `"%ld"`의 `Val` 형식이 **long** 인 경우
+- `Val` **long** 형식 `"%ld"`
 
-- `"%lu"`의 `Val` 형식이 **unsigned long** 인 경우
+- `Val`의 **부호 없는 long** 형식 `"%lu"`
 
-- `"%lld"`의 long long 형식입니다.  `Val`
+- `Val` **long long** 형식 `"%lld"`
 
-- `"%llu"`의 `Val` 형식이 **unsigned long long** 인 경우
+- `Val`의 **부호 없는 long long** 형식 `"%llu"`
 
-- `"%f"`의 `Val` 형식이 **float** 또는 **double** 인 경우
+- `Val`에 **float** 또는 **double** 형식이 `"%f"`
 
-- `"%Lf"`의 `Val` 형식이 **long double** 인 경우
+- `Val` **길이가 long double** 형식 `"%Lf"`
 
 함수에서 `string(Buf)`을 반환합니다.
 
@@ -530,7 +530,7 @@ wstring to_wstring(long double Val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |`Val`|변환할 값입니다.|
 
@@ -542,24 +542,24 @@ wstring to_wstring(long double Val);
 
 이 함수는 `Val`가 있는 위치에서 `Buf`를 호출하는 것과 같이 `swprintf(Buf, Len, Fmt, Val)`을 함수 내부의 배열 개체 `Fmt`에 저장된 요소 시퀀스로 변환합니다.
 
-- `L"%d"`의 `Val` 형식이 **int** 인 경우
+- `Val`에 **int** 형식이 `L"%d"`
 
-- `L"%u"`에 `Val` **부호 없는 int** 형식이 있는 경우
+- `Val`에 **부호 없는 int** 형식이 `L"%u"`
 
-- `L"%ld"`의 `Val` 형식이 **long** 인 경우
+- `Val` **long** 형식 `L"%ld"`
 
-- `L"%lu"`의 `Val` 형식이 **unsigned long** 인 경우
+- `Val`의 **부호 없는 long** 형식 `L"%lu"`
 
-- `L"%lld"`의 long long 형식입니다.  `Val`
+- `Val` **long long** 형식 `L"%lld"`
 
-- `L"%llu"`의 `Val` 형식이 **unsigned long long** 인 경우
+- `Val`의 **부호 없는 long long** 형식 `L"%llu"`
 
-- `L"%f"`의 `Val` 형식이 **float** 또는 **double** 인 경우
+- `Val`에 **float** 또는 **double** 형식이 `L"%f"`
 
-- `L"%Lf"`의 `Val` 형식이 **long double** 인 경우
+- `Val` **길이가 long double** 형식 `L"%Lf"`
 
 함수에서 `wstring(Buf)`을 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<string>](../standard-library/string.md)

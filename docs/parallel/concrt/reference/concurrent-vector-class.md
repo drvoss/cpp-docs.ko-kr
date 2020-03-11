@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143143"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854193"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector 클래스
 
@@ -192,7 +192,7 @@ const_reference at(size_type _Index) const;
 *_Index*<br/>
 검색할 요소의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 인덱스에 있는 항목에 대 한 참조입니다.
 
@@ -212,7 +212,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동시 벡터의 마지막 요소에 대 한 참조 또는 `const` 참조입니다.
 
@@ -226,7 +226,7 @@ iterator begin();
 const_iterator begin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `iterator` 형식의 반복기 이거나 동시 벡터의 시작 부분에 `const_iterator` 합니다.
 
@@ -238,7 +238,7 @@ const_iterator begin() const;
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동시 벡터가 더 많은 메모리를 할당하지 않고도 확장할 수 있는 최대 크기입니다.
 
@@ -254,7 +254,7 @@ C++ 표준 라이브러리 `vector`와 달리 `concurrent_vector` 개체는 더 
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `const_iterator` 형식의 반복기는 동시 벡터의 시작 부분에 있습니다.
 
@@ -266,7 +266,7 @@ const_iterator cbegin() const;
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `const_iterator` 형식의 반복기는 동시 벡터의 끝에 있습니다.
 
@@ -374,7 +374,7 @@ concurrent_vector(_InputIterator _Begin,
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `const_reverse_iterator` 형식의 반복기는 동시 벡터의 시작 부분에 있습니다.
 
@@ -386,7 +386,7 @@ const_reverse_iterator crbegin() const;
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `const_reverse_iterator` 형식의 반복기는 동시 벡터의 끝에 있습니다.
 
@@ -398,7 +398,7 @@ const_reverse_iterator crend() const;
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 호출 될 때 벡터가 비어 있으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
 
@@ -412,7 +412,7 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `iterator` 또는 `const_iterator` 동시 벡터의 끝에 있는 형식의 반복기입니다.
 
@@ -426,7 +426,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동시 벡터의 첫 번째 요소에 대 한 참조 또는 `const` 참조입니다.
 
@@ -438,7 +438,7 @@ const_reference front() const;
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `concurrent_vector` 개체를 생성 하는 데 사용 되는 할당자의 복사본입니다.
 
@@ -463,7 +463,7 @@ iterator grow_by(
 *_Item*<br/>
 새 요소를 초기화할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 항목에 추가 된 반복기입니다.
 
@@ -484,7 +484,7 @@ iterator grow_to_at_least(size_type _N);
 *_N*<br/>
 `concurrent_vector` 개체의 새 최소 크기입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 추가 된 시퀀스의 시작을 가리키는 반복기 이거나, 추가 된 요소가 없는 경우 `_N` 인덱스에 있는 요소입니다.
 
@@ -496,7 +496,7 @@ iterator grow_to_at_least(size_type _N);
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `concurrent_vector` 개체가 보유할 수 있는 최대 요소 수입니다.
 
@@ -524,7 +524,7 @@ concurrent_vector& operator= (
 *_Vector*<br/>
 소스 `concurrent_vector` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 `concurrent_vector` 개체에 대 한 참조입니다.
 
@@ -543,7 +543,7 @@ const_reference operator[](size_type _index) const;
 *_Index*<br/>
 검색할 요소의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 인덱스에 있는 항목에 대 한 참조입니다.
 
@@ -568,7 +568,7 @@ iterator push_back(T&& _Item);
 *_Item*<br/>
 추가할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 추가 된 항목에 대 한 반복기입니다.
 
@@ -582,7 +582,7 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `reverse_iterator` 형식의 반복기 이거나 동시 벡터의 시작 부분에 `const_reverse_iterator` 합니다.
 
@@ -596,7 +596,7 @@ reverse_iterator rend();
 const_reverse_iterator rend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `reverse_iterator` 또는 `const_reverse_iterator` 동시 벡터의 끝에 있는 형식의 반복기입니다.
 
@@ -664,7 +664,7 @@ void shrink_to_fit();
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 `concurrent_vector` 개체의 요소 수입니다.
 

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127857"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855762"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 클래스
 
@@ -53,17 +53,17 @@ ms.locfileid: "77127857"
 class COleDataSource : public CCmdTarget
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|name|설명|
 |----------|-----------------|
 |[COleDataSource:: COleDataSource](#coledatasource)|`COleDataSource` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|name|설명|
 |----------|-----------------|
 |[COleDataSource:: CacheData](#cachedata)|`STGMEDIUM` 구조체를 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
 |[COleDataSource:: CacheGlobalData](#cacheglobaldata)|HGLOBAL를 사용 하 여 지정 된 형식의 데이터를 제공 합니다.|
@@ -292,7 +292,7 @@ DROPEFFECT DoDragDrop(
 *pDropSource*<br/>
 놓기 소스를 가리킵니다. NULL 이면 [Coledropsource](../../mfc/reference/coledropsource-class.md) 의 기본 구현이 사용 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 끌어서 놓기 작업에 의해 생성 된 삭제 효과입니다. 그렇지 않으면 사용자가 제공 된 사각형을 벗어나기 전에 마우스 단추를 놓았음을 작업을 시작 하지 않을 경우 DROPEFFECT_NONE 합니다.
 
@@ -346,7 +346,7 @@ static void PASCAL FlushClipboard();
 static COleDataSource* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 클립보드에 있는 데이터 소스 이거나, 클립보드에 아무 것도 없거나 호출 응용 프로그램에서 클립보드를 소유 하지 않은 경우 NULL입니다.
 
@@ -368,7 +368,7 @@ virtual BOOL OnRenderData(
 *lpStgMedium*<br/>
 데이터가 반환 되는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -400,7 +400,7 @@ virtual BOOL OnRenderFileData(
 *pFile*<br/>
 데이터가 렌더링 될 [CFile](../../mfc/reference/cfile-class.md) 개체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -430,7 +430,7 @@ virtual BOOL OnRenderGlobalData(
 *phGlobal*<br/>
 데이터가 반환 될 전역 메모리의 핸들을 가리킵니다. 아직 할당 되지 않은 경우이 매개 변수는 NULL 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -466,7 +466,7 @@ virtual BOOL OnSetData(
 *bRelease*<br/>
 함수 호출을 완료 한 후 저장소 미디어의 소유권이 있는 사용자를 나타냅니다. 호출자는 저장소 미디어를 대신해 할당 된 리소스를 해제할 책임이 있는 사용자를 결정 합니다. 호출자가 *bRelease*를 설정 하 여이를 수행 합니다. *BRelease* 가 0이 아닌 경우 데이터 원본은 소유권을 가지 며 사용이 끝나면 미디어를 해제 합니다. *BRelease* 가 0 이면 호출자가 소유권을 유지 하 고 데이터 소스는 호출 기간 동안만 저장소 미디어를 사용할 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 

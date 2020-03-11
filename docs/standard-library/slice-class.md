@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450354"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937452"
 ---
 # <a name="slice-class"></a>slice 클래스
 
@@ -39,7 +39,7 @@ slice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 인
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[slice](#slice)|동일한 거리만큼 떨어져 있고 지정된 요소에서 시작하는 많은 요소로 구성된 `valarray`의 하위 집합을 정의합니다.|
 
@@ -53,7 +53,7 @@ slice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 인
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<valarray>
+**헤더:** \<valarray >
 
 **네임스페이스:** std
 
@@ -142,12 +142,12 @@ slice(
 *_Len*\
 하위 집합의 요소 수입니다.
 
-*스트라이드*\
+*stride*\
 하위 집합의 요소 간 거리입니다.
 
 ### <a name="return-value"></a>반환 값
 
-기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자는 시작 인덱스에 대해 *_Startindex* 를 저장 하 고, 전체 길이에 대해 *_startindex* 을, stride에 대해 *stride* 를 저장 합니다.
+기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자는 시작 인덱스에 대 한 *_StartIndex* 를 저장 하 고, 전체 길이를 *_Len* 하 고, stride에 대해 *stride* 를 저장 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

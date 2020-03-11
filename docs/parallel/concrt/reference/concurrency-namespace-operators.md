@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143241"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883774"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 네임스페이스 연산자
 
@@ -56,7 +56,7 @@ inline task<void> operator||(
 *rhs*<br/>
 결과 작업으로 결합할 두 번째 작업입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 입력 작업 중 하나가 성공적으로 완료 되 면 완료 되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::vector<T>`가 됩니다. 입력 작업이 `void` 형식이면 이 함수의 출력 작업도 `task<void>`가 됩니다.
 
@@ -105,7 +105,7 @@ inline task<void>  operator&&(
 *rhs*<br/>
 결과 작업으로 결합할 두 번째 작업입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 두 입력 작업이 모두 성공적으로 완료되는 경우 완료되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::vector<T>>`가 됩니다. 입력 작업이 `void` 형식이면 이 함수의 출력 작업도 `task<void>`가 됩니다.
 
@@ -141,7 +141,7 @@ inline bool operator== (
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자 좌 변의 동시 벡터가 연산자 우변의 동시 벡터와 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -179,7 +179,7 @@ inline bool operator!= (
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동시 벡터가 같지 않으면 **true** 이 고, 동시 벡터가 같으면 **false** 입니다.
 
@@ -217,7 +217,7 @@ inline bool operator<(
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자 좌 변의 동시 벡터가 연산자 우변의 동시 벡터 보다 작은 경우 **true** 입니다. 그렇지 않으면 **false**입니다.
 
@@ -255,7 +255,7 @@ inline bool operator<= (
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자 좌 변의 동시 벡터가 연산자 우변의 동시 벡터 보다 작거나 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -293,7 +293,7 @@ inline bool operator>(
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자 좌 변의 동시 벡터가 연산자 우변의 동시 벡터 보다 크면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -331,7 +331,7 @@ inline bool operator>= (
 *_B*<br/>
 `concurrent_vector` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자 좌 변의 동시 벡터가 연산자 우변의 동시 벡터 보다 크거나 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 

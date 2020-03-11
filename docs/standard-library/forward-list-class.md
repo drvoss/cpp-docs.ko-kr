@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890198"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890874"
 ---
 # <a name="forward_list-class"></a>forward_list 클래스
 
@@ -103,19 +103,19 @@ class forward_list
 \* \을 입력 합니다.
 forward_list에 저장되는 요소 데이터 형식입니다.
 
-*할당자* \
-forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체입니다. 이 매개 변수는 선택적 요소입니다. 기본값은 allocator<`Type`>입니다.
+*할당자*\
+forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체입니다. 이 매개 변수는 선택적 요소입니다. 기본값은 할당자 <`Type`>입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`forward_list` 개체는 [할당자 클래스](../standard-library/allocator-class.md) (일반적으로 `std::allocator)`이라고 함)를 기반으로 하는 클래스 *할당자* 의 저장 된 개체를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 자세한 내용은 [할당자](../standard-library/allocators.md)를 참조하세요. 할당자 개체에는 `allocator` 형식의 개체와 동일한 외부 인터페이스가 있어야 합니다.
+`forward_list` 개체는 [할당자 클래스](../standard-library/allocator-class.md) (일반적으로 `std::allocator)`이라고 함)를 기반으로 하는 클래스 *할당자* 의 저장 된 개체를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 자세한 내용은 [할당자](../standard-library/allocators.md)를 참조하세요. 할당자 개체에는 `allocator`형식의 개체와 동일한 외부 인터페이스가 있어야 합니다.
 
 > [!NOTE]
 > 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.
 
 `forward_list`를 통해 제어되는 시퀀스의 요소를 지울 경우 반복기, 포인터 및 참조가 무효화될 수도 있습니다. `forward_list`를 통해 제어되는 시퀀스에서 수행되는 삽입 및 스플라이스는 반복기를 무효화하지 않습니다.
 
-제어되는 시퀀스에 대한 추가는 `Type(const  T&)` 생성자를 호출하는 유일한 멤버 함수인 [forward_list::insert_after](#insert_after)를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생 하면 `forward_list` 형식의 개체가 알려진 상태로 유지 됩니다.
+제어되는 시퀀스에 대한 추가는 [ 생성자를 호출하는 유일한 멤버 함수인 ](#insert_after)forward_list::insert_after`Type(const  T&)`를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생 하면 `forward_list` 형식의 개체가 알려진 상태로 유지 됩니다.
 
 ## <a name="members"></a>멤버
 
@@ -186,7 +186,7 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `allocator_type`은 템플릿 매개 변수 Allocator의 동의어입니다.
 
@@ -208,29 +208,29 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째* \
+*첫 번째*\
 대체 범위의 시작입니다.
 
-*마지막* \
+*마지막*\
 대체 범위의 끝입니다.
 
-*개수* \
+*개수*\
 할당할 요소 수입니다.
 
-*val* \
+*val*\
 각 요소에 할당할 값입니다.
 
-*형식* \
+*형식*\
 값의 형식입니다.
 
-*IList* \
+*IList*\
 복사할 initializer_list입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 forward_list가 정수 형식이면 첫 번째 멤버 함수는 `assign((size_type)First, (Type)Last)`와 동일하게 동작합니다. 그렇지 않으면 첫 번째 멤버 함수는 `*this`로 제어되는 시퀀스를 [ `First, Last)` 시퀀스로 바꿉니다. 대체 시퀀스는 초기 제어되는 시퀀스와 겹치면 안 됩니다.
 
-두 번째 멤버 함수는 `*this`로 제어되는 시퀀스를 `Val` 값의 `Count` 요소 반복으로 바꿉니다.
+두 번째 멤버 함수는 `*this`로 제어되는 시퀀스를 `Count` 값의 `Val` 요소 반복으로 바꿉니다.
 
 세 번째 멤버 함수는 initializer_list의 요소를 forward_list로 복사합니다.
 
@@ -247,7 +247,7 @@ iterator before_begin();
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="begin"></a>시작
 
@@ -262,7 +262,7 @@ iterator begin();
 
 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="cbefore_begin"></a>cbefore_begin
 
@@ -276,7 +276,7 @@ const_iterator cbefore_begin() const;
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="cbegin"></a>cbegin
 
@@ -290,7 +290,7 @@ const_iterator cbegin() const;
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **const** 전방 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
@@ -315,7 +315,7 @@ const_iterator cend() const;
 
 범위 끝의 바로 다음을 가리키는 정방향 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
@@ -339,7 +339,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 멤버 함수는 `erase_after(before_begin(), end()).`를 호출합니다.
 
@@ -351,7 +351,7 @@ void clear();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `const_iterator`는 제어되는 시퀀스의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.
 
@@ -364,7 +364,7 @@ typedef typename Allocator::const_pointer
     const_pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="const_reference"></a>const_reference
 
@@ -374,7 +374,7 @@ typedef typename Allocator::const_pointer
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="difference_type"></a>difference_type
 
@@ -384,7 +384,7 @@ typedef typename Allocator::const_reference const_reference;
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `difference_type`은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.
 
@@ -399,17 +399,17 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>매개 변수
 
-*Where* \
+*Where*\
 대상 정방향 목록에서 새 요소가 생성된 위치입니다.
 
-*val* \
+*val*\
 생성자 인수입니다.
 
 ### <a name="return-value"></a>반환 값
 
 새로 삽입된 요소를 지정하는 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 멤버 함수는 제어 *되* 는 시퀀스에서가 가리키는 요소 바로 뒤에 생성자 인수 *val* 을 사용 하 여 요소를 삽입 합니다. 그렇지 않으면 해당 동작은 [forward_list::insert_after](#insert_after)와 동일합니다.
 
@@ -424,10 +424,10 @@ template <class Type>
 
 ### <a name="parameters"></a>매개 변수
 
-*val* \
+*val*\
 정방향 목록의 시작에 추가된 요소입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 멤버 함수는 제어되는 시퀀스의 끝에 생성자 인수 `_ val`이 있는 요소를 삽입합니다.
 
@@ -469,20 +469,20 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>매개 변수
 
-*Where* \
+*Where*\
 대상 정방향 목록에서 요소가 지워진 위치입니다.
 
-*첫 번째* \
+*첫 번째*\
 지울 범위의 시작입니다.
 
-*마지막* \
+*마지막*\
 지울 범위의 끝입니다.
 
 ### <a name="return-value"></a>반환 값
 
 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#end)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 제어 되는 시퀀스의 요소를 *Where*바로 뒤에서 제거 합니다.
 
@@ -515,38 +515,38 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>매개 변수
 
-*Al* \
+*Al*\
 이 개체에 사용할 할당자 클래스입니다.
 
-*개수* \
+*개수*\
 생성된 목록의 요소 수입니다.
 
-*Val* \
+*Val*\
 생성된 목록에 있는 요소의 값입니다.
 
-*오른쪽* \
+*오른쪽*\
 생성된 목록이 복사본으로 지정될 목록입니다.
 
-*첫 번째* \
+*첫 번째*\
 복사할 요소의 범위에서 첫 번째 요소의 위치입니다.
 
-*마지막* \
+*마지막*\
 복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.
 
-*IList* \
+*IList*\
 복사할 initializer_list입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 생성자는 [할당자](../standard-library/allocator-class.md)를 저장하고 제어되는 시퀀스를 초기화합니다. 할당자 개체는 *Al*인수입니다 (있는 경우). 복사 생성자의 경우 ` right.get_allocator()`입니다. 그렇지 않으면 `Allocator()`입니다.
 
 처음 두 생성자는 빈 초기 제어되는 시퀀스를 지정합니다.
 
-세 번째 생성자는 `Type()` 값의 *Count* 요소 반복을 지정 합니다.
+세 번째 생성자는 `Type()`값의 *Count* 요소 반복을 지정 합니다.
 
 네 번째 및 다섯 번째 생성자는 값 *Val*의 *Count* 요소 반복을 지정 합니다.
 
-여섯 번째 생성자는 *Right*로 제어 되는 시퀀스의 복사본을 지정 합니다. `InputIterator`가 정수 형식이면 다음 두 생성자가 `(Type)Last` 값의 `(size_type)First` 요소 반복을 지정합니다. 그렇지 않으면 다음 두 생성자는 시퀀스 `[First, Last)`를 지정합니다.
+여섯 번째 생성자는 *Right*로 제어 되는 시퀀스의 복사본을 지정 합니다. `InputIterator`가 정수 형식이면 다음 두 생성자가 `(size_type)First` 값의 `(Type)Last` 요소 반복을 지정합니다. 그렇지 않으면 다음 두 생성자는 시퀀스 `[First, Last)`를 지정합니다.
 
 아홉 번째 및 열 번째 생성자는 여섯 번째와 같지만 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 참조를 포함합니다.
 
@@ -592,29 +592,29 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>매개 변수
 
-*Where* \
+*Where*\
 대상 정방향 목록에서 첫 번째 요소가 삽입된 위치입니다.
 
-*개수* \
+*개수*\
 삽입할 요소의 수입니다.
 
-*첫 번째* \
+*첫 번째*\
 삽입 범위의 시작입니다.
 
-*마지막* \
+*마지막*\
 삽입 범위의 끝입니다.
 
-*Val* \
+*Val*\
 정방향 목록에 추가된 요소입니다.
 
-*IList* \
+*IList*\
 삽입할 initializer_list입니다.
 
 ### <a name="return-value"></a>반환 값
 
 새로 삽입된 요소(첫 번째 및 마지막 멤버 함수만)를 지정하는 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 멤버 함수는 제어 되는 시퀀스의 Where가 가리키는 요소 바로 뒤에 삽입 됩니다. *여기* 에는 나머지 피연산자가 지정 하는 시퀀스가 있습니다.
 
@@ -640,7 +640,7 @@ template <class InputIterator>
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `iterator`는 제어되는 시퀀스의 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.
 
@@ -656,7 +656,7 @@ size_type max_size() const;
 
 개체가 제어할 수 있는 가장 긴 시퀀스의 길이입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="merge"></a>결합
 
@@ -670,17 +670,17 @@ template <class Predicate>
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 병합할 소스 정방향 목록입니다.
 
-*comp* \
+*comp*\
 요소를 정렬하는 데 사용되는 비교 함수 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `forward_list::merge` `forward_list` `right`에서 요소를 제거 하 고이 `forward_list`에 삽입 합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.
 
-위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서 대로 정렬 됩니다. 두 번째 멤버 함수는 `i < j` 될 때마다 `! comp(*Pj, *Pi)` 순서를 적용 합니다.
+위치 `Pi` 및 `Pj`에서 요소를 지정하는 반복기 `i` 및 `j`의 경우 첫 번째 멤버 함수는 `!(*Pj < *Pi)`가 실행될 때마다 순서 `i < j`를 적용합니다. 요소는 `ascending` 순서 대로 정렬 됩니다. 두 번째 멤버 함수는 `i < j`될 때마다 `! comp(*Pj, *Pi)` 순서를 적용 합니다.
 
 원래 제어되는 시퀀스의 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 결과 제어되는 시퀀스의 요소 쌍이 같은 것으로 확인되면(`!(*Pi < *Pj) && !(*Pj < *Pi)`) 원래 제어되는 시퀀스의 요소가 `right`에서 제어되는 시퀀스의 요소 앞에 나타납니다.
 
@@ -698,13 +698,13 @@ forward_list& operator=(forward_list&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 정방향 목록으로 복사되는 정방향 목록입니다.
 
-*IList* \
+*IList*\
 `Type` 형식 요소의 시퀀스처럼 동작하는 중괄호로 묶인 이니셜라이저 목록입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 연산자는 제어 되는 시퀀스를 *right*로 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
@@ -728,7 +728,7 @@ typedef typename Allocator::pointer pointer;
 void pop_front();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 비어 있지 않아야 하는 정방향 목록의 첫 번째 요소입니다.
 
@@ -745,10 +745,10 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>매개 변수
 
-*val* \
+*val*\
 정방향 목록의 시작에 추가된 요소입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.
 
@@ -770,12 +770,12 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-*val* \
+*val*\
 요소에 값이 있는 경우 목록에서 해당 요소가 제거됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `*P ==  val`인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.
+멤버 함수는 `P`인 경우 반복기 `*P ==  val`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.
 
 멤버 함수는 예외를 throw하지 않습니다.
 
@@ -790,12 +790,12 @@ template <class Predicate>
 
 ### <a name="parameters"></a>매개 변수
 
-*pred* \
+*pred*\
 요소로 충족된 경우 목록에서 요소가 삭제되는 단항 조건자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 ` pred(*P)`가 true인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.
+멤버 함수는 `P`가 true인 경우 반복기 ` pred(*P)`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.
 
 *Pred* 가 예외를 throw 하는 경우에만 예외가 발생 합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.
 
@@ -813,12 +813,12 @@ void resize(size_type _Newsize, const Type& val);
 *_Newsize*\
 크기 조정된 정방향 목록의 요소 수입니다.
 
-*val* \
+*val*\
 안쪽 여백에 사용할 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 예측이 목록의 요소 수가 *_Newsize*인지 확인 합니다. 제어 되는 시퀀스를 더 길게 만들어야 하는 경우 첫 번째 멤버 함수는 `Type()` 값을 가진 요소를 추가 하는 반면 두 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 추가 합니다 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.
+멤버 함수는 예측이 목록에 있는 요소 수가 *_Newsize*되는지 확인 합니다. 제어 되는 시퀀스를 더 길게 만들어야 하는 경우 첫 번째 멤버 함수는 `Type()`값을 가진 요소를 추가 하는 반면 두 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 추가 합니다 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.
 
 ## <a name="reverse"></a>되돌립니다
 
@@ -836,7 +836,7 @@ void reverse();
 typedef typename Allocator::size_type size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다.
 
@@ -852,14 +852,14 @@ void sort(Predicate pred);
 
 ### <a name="parameters"></a>매개 변수
 
-*pred* \
+*pred*\
 순서 지정 조건자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 멤버 함수는 모두 제어되는 시퀀스에서 요소의 순서를 아래 설명된 조건자별로 지정합니다.
 
-위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서 대로 정렬 됩니다. 멤버 템플릿 함수는 `i < j` 될 때마다 `! pred(*Pj, *Pi)` 순서를 적용 합니다. 원래 제어되는 시퀀스의 순서가 지정된 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 정렬이 안정적입니다.
+위치 `Pi` 및 `Pj`에서 요소를 지정하는 반복기 `i` 및 `j`의 경우 첫 번째 멤버 함수는 `!(*Pj < *Pi)`가 실행될 때마다 순서 `i < j`를 적용합니다. 요소는 `ascending` 순서 대로 정렬 됩니다. 멤버 템플릿 함수는 `i < j`될 때마다 `! pred(*Pj, *Pi)` 순서를 적용 합니다. 원래 제어되는 시퀀스의 순서가 지정된 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 정렬이 안정적입니다.
 
 *Pred* 가 예외를 throw 하는 경우에만 예외가 발생 합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.
 
@@ -892,22 +892,22 @@ void splice_after(
 
 ### <a name="parameters"></a>매개 변수
 
-*Where* \
+*Where*\
 대상 forward_list의 위치로, 이 위치 앞에서 삽입합니다.
 
 *Source*\
 대상 forward_list으로 삽입할 원본 forward_list입니다.
 
-*Iter* \
+*Iter*\
 원본 forward_list에서 삽입할 요소입니다.
 
-*첫 번째* \
+*첫 번째*\
 원본 forward_list에서 삽입할 범위 내 첫 번째 요소입니다.
 
-*마지막* \
+*마지막*\
 원본 forward_list에서 삽입할 범위를 벗어난 첫 번째 위치입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수의 첫 번째 쌍은 *원본* 으로 제어 되는 시퀀스를 Where가 가리키는 제어 *되*는 시퀀스의 요소 바로 뒤에 삽입 합니다. 또한 *소스*에서 모든 요소를 제거 합니다. `&Source`와 같지 않아야 합니다 **.**
 
@@ -1002,10 +1002,10 @@ void swap(forward_list& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 교환할 요소를 제공하는 정방향 목록입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `*this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. `get_allocator() ==  right.get_allocator()`인 경우 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
 
@@ -1021,14 +1021,14 @@ void unique(BinaryPredicate comp);
 
 ### <a name="parameters"></a>매개 변수
 
-*comp* \
+*comp*\
 연속 요소를 비교하는 데 사용되는 이진 조건자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 고유 요소의 첫 번째 요소를 유지하고 나머지를 제거합니다. 목록에서 동일한 값의 요소가 인접하도록 요소를 정렬해야 합니다.
 
-첫 번째 멤버 함수는 이전 요소와 같은 것으로 확인된 모든 요소를 제어되는 시퀀스에서 제거합니다. 위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 두번째 멤버 함수는 `i + 1 == j &&  comp(*Pi, *Pj)`에 해당하는 모든 요소를 제거합니다.
+첫 번째 멤버 함수는 이전 요소와 같은 것으로 확인된 모든 요소를 제어되는 시퀀스에서 제거합니다. 위치 `Pi` 및 `Pj`에서 요소를 지정하는 반복기 `i` 및 `j`의 경우 두번째 멤버 함수는 `i + 1 == j &&  comp(*Pi, *Pj)`에 해당하는 모든 요소를 제거합니다.
 
 길이가 `N`(> 0)인 제어되는 시퀀스의 경우 조건자 ` comp(*Pi, *Pj)`는 `N - 1`번 평가됩니다.
 
@@ -1042,6 +1042,6 @@ void unique(BinaryPredicate comp);
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507177"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865550"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 
@@ -57,40 +57,40 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|`CComboBoxEx` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[CComboBoxEx::Create](#create)|콤보 상자를 만들고 `CComboBoxEx` 개체에 연결 합니다.|
+|[CComboBoxEx::Create](#create)|콤보 상자를 만들어 `CComboBoxEx` 개체에 연결 합니다.|
 |[CComboBoxEx::CreateEx](#createex)|지정 된 Windows 확장 스타일을 사용 하 여 콤보 상자를 만들고 `ComboBoxEx` 개체에 연결 합니다.|
 |[CComboBoxEx::DeleteItem](#deleteitem)|`ComboBoxEx` 컨트롤에서 항목을 제거 합니다.|
 |[CComboBoxEx::GetComboBoxCtrl](#getcomboboxctrl)|자식 콤보 상자 컨트롤에 대 한 포인터를 검색 합니다.|
 |[CComboBoxEx::GetEditCtrl](#geteditctrl)|`ComboBoxEx` 컨트롤의 편집 컨트롤 부분에 대 한 핸들을 검색 합니다.|
 |[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|`ComboBoxEx` 컨트롤에 사용 되는 확장 스타일을 검색 합니다.|
 |[CComboBoxEx::GetImageList](#getimagelist)|`ComboBoxEx` 컨트롤에 할당 된 이미지 목록에 대 한 포인터를 검색 합니다.|
-|[CComboBoxEx::GetItem](#getitem)|지정 `ComboBoxEx` 된 항목에 대 한 항목 정보를 검색 합니다.|
+|[CComboBoxEx::GetItem](#getitem)|지정 된 `ComboBoxEx` 항목에 대 한 항목 정보를 검색 합니다.|
 |[CComboBoxEx::HasEditChanged](#haseditchanged)|사용자가를 입력 하 여 `ComboBoxEx` 편집 컨트롤의 콘텐츠를 변경 했는지 여부를 확인 합니다.|
 |[CComboBoxEx::InsertItem](#insertitem)|`ComboBoxEx` 컨트롤에 새 항목을 삽입 합니다.|
-|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|컨트롤 내에서 확장 스타일 `ComboBoxEx` 을 설정 합니다.|
+|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|`ComboBoxEx` 컨트롤 내에서 확장 스타일을 설정 합니다.|
 |[CComboBoxEx::SetImageList](#setimagelist)|`ComboBoxEx` 컨트롤의 이미지 목록을 설정 합니다.|
 |[CComboBoxEx::SetItem](#setitem)|`ComboBoxEx` 컨트롤의 항목에 대 한 특성을 설정 합니다.|
 |[CComboBoxEx::SetWindowTheme](#setwindowtheme)|확장 된 콤보 상자 컨트롤의 비주얼 스타일을 설정 합니다.|
 
 ## <a name="remarks"></a>설명
 
-를 사용 `CComboBoxEx` 하 여 콤보 상자 컨트롤을 만들면 더 이상 사용자 고유의 이미지 그리기 코드를 구현할 필요가 없습니다. 대신를 사용 `CComboBoxEx` 하 여 이미지 목록에서 이미지에 액세스 합니다.
+`CComboBoxEx`를 사용 하 여 콤보 상자 컨트롤을 만드는 경우에는 더 이상 고유한 이미지 그리기 코드를 구현할 필요가 없습니다. 대신 `CComboBoxEx`를 사용 하 여 이미지 목록에서 이미지에 액세스 합니다.
 
 ## <a name="image-list-support"></a>이미지 목록 지원
 
-표준 콤보 상자에서 콤보 상자의 소유자는 콤보 상자를 소유자 그리기 컨트롤로 만들어 이미지를 그릴 책임이 있습니다. 를 사용 `CComboBoxEx`하는 경우에는 CBS_OWNERDRAWFIXED 및 CBS_HASSTRINGS 그리기 스타일을 설정 하지 않아도 됩니다. 그렇지 않으면 그리기 작업을 수행 하는 코드를 작성 해야 합니다. 컨트롤 `CComboBoxEx` 은 항목 당 최대 3 개의 이미지 (선택 된 상태, 선택 되지 않은 상태, 오버레이 이미지용)를 지원 합니다.
+표준 콤보 상자에서 콤보 상자의 소유자는 콤보 상자를 소유자 그리기 컨트롤로 만들어 이미지를 그릴 책임이 있습니다. `CComboBoxEx`를 사용 하는 경우에는 CBS_OWNERDRAWFIXED 및 CBS_HASSTRINGS 그리기 스타일을 설정 하지 않아도 됩니다. 그렇지 않으면 그리기 작업을 수행 하는 코드를 작성 해야 합니다. `CComboBoxEx` 컨트롤은 항목당 최대 3 개의 이미지 (선택 된 상태, 선택 되지 않은 상태, 오버레이 이미지용)를 지원 합니다.
 
 ## <a name="styles"></a>스타일
 
-`CComboBoxEx`CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST 및 WS_CHILD 스타일을 지원 합니다. 창을 만들 때 전달 되는 다른 모든 스타일은 컨트롤에서 무시 됩니다. 창을 만든 후에는 `CComboBoxEx` [SetExtendedStyle](#setextendedstyle)멤버 함수를 호출 하 여 다른 콤보 상자 스타일을 제공할 수 있습니다. 이러한 스타일을 사용 하 여 다음을 수행할 수 있습니다.
+`CComboBoxEx`는 CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST 및 WS_CHILD 스타일을 지원 합니다. 창을 만들 때 전달 되는 다른 모든 스타일은 컨트롤에서 무시 됩니다. 창을 만든 후 `CComboBoxEx` 멤버 함수 [SetExtendedStyle](#setextendedstyle)를 호출 하 여 다른 콤보 상자 스타일을 제공할 수 있습니다. 이러한 스타일을 사용 하 여 다음을 수행할 수 있습니다.
 
 - 대/소문자를 구분 하려면 목록에서 문자열 검색을 설정 합니다.
 
@@ -108,13 +108,13 @@ class CComboBoxEx : public CComboBox
 
 개념에 대 한 자세한 내용은 [CComboBoxEx 사용](../../mfc/using-ccomboboxex.md)을 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[에서 파생되지 않은](../../mfc/reference/cwnd-class.md)
 
 [CComboBox](../../mfc/reference/ccombobox-class.md)
 
@@ -134,7 +134,7 @@ CComboBoxEx();
 
 ##  <a name="create"></a>  CComboBoxEx::Create
 
-콤보 상자를 만들고 `CComboBoxEx` 개체에 연결 합니다.
+콤보 상자를 만들어 `CComboBoxEx` 개체에 연결 합니다.
 
 ```
 virtual BOOL Create(
@@ -153,7 +153,7 @@ virtual BOOL Create(
 콤보 상자의 위치와 크기에 해당 하는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대 한 참조입니다.
 
 *pParentWnd*<br/>
-콤보 상자 (일반적으로 `CDialog`)의 부모 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
+콤보 상자 (일반적으로 [)의 부모 창인 ](../../mfc/reference/cwnd-class.md)CWnd`CDialog` 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
 
 *nID*<br/>
 콤보 상자의 컨트롤 ID를 지정 합니다.
@@ -164,13 +164,13 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>설명
 
-다음 두 `CComboBoxEx` 단계로 개체를 만듭니다.
+두 단계로 `CComboBoxEx` 개체를 만듭니다.
 
 1. [CComboBoxEx](#ccomboboxex) 를 호출 하 여 `CComboBoxEx` 개체를 생성 합니다.
 
 1. 확장 된 Windows 콤보 상자를 만들고 `CComboBoxEx` 개체에 연결 하는이 멤버 함수를 호출 합니다.
 
-를 호출할 `Create`때 MFC는 공용 컨트롤을 초기화 합니다.
+`Create`를 호출 하는 경우 MFC는 공용 컨트롤을 초기화 합니다.
 
 콤보 상자를 만들 때 다음 콤보 상자 스타일 중 일부 또는 모두를 지정할 수 있습니다.
 
@@ -184,9 +184,9 @@ virtual BOOL Create(
 
 - WS_CHILD
 
-창을 만들 때 전달 되는 다른 모든 스타일은 무시 됩니다. 또한 `ComboBoxEx` 이 컨트롤은 추가 기능을 제공 하는 확장 스타일을 지원 합니다. 이러한 스타일은 Windows SDK의 [ComboBoxEx 컨트롤 확장 스타일](/windows/win32/Controls/comboboxex-control-extended-styles)에 설명 되어 있습니다. [SetExtendedStyle](#setextendedstyle)을 호출 하 여 이러한 스타일을 설정 합니다.
+창을 만들 때 전달 되는 다른 모든 스타일은 무시 됩니다. 또한 `ComboBoxEx` 컨트롤은 추가 기능을 제공 하는 확장 스타일을 지원 합니다. 이러한 스타일은 Windows SDK의 [ComboBoxEx 컨트롤 확장 스타일](/windows/win32/Controls/comboboxex-control-extended-styles)에 설명 되어 있습니다. [SetExtendedStyle](#setextendedstyle)을 호출 하 여 이러한 스타일을 설정 합니다.
 
-컨트롤과 함께 확장 된 windows 스타일을 사용 하려는 경우 대신 `Create` [createex](#createex) 를 호출 합니다.
+컨트롤과 함께 확장 된 windows 스타일을 사용 하려면 `Create`대신 [Createex](#createex) 를 호출 합니다.
 
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx
 
@@ -224,9 +224,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>설명
 
-대신를 사용 `CreateEx`하 여 windows 확장 스타일 앞에 WS_EX_ 지정 된 확장 된 windows 스타일을 적용 합니다 `Create` .
+`Create` 대신 `CreateEx`를 사용 하 여 Windows 확장 스타일 앞에 **WS_EX_** 지정 된 확장 된 windows 스타일을 적용 합니다.
 
-`CreateEx`*Dwexstyle*로 지정 된 확장 된 Windows 스타일을 사용 하 여 컨트롤을 만듭니다. [SetExtendedStyle](#setextendedstyle)를 사용 하 여 확장 된 콤보 상자 컨트롤과 관련 된 확장 스타일을 설정 해야 합니다. 예를 들어를 `CreateEx` 사용 하 여 이러한 스타일을 WS_EX_CONTEXTHELP로 설정 `SetExtendedStyle` 하 고를 사용 하 여 이러한 스타일을 CBES_EX_CASESENSITIVE로 설정 합니다. 자세한 내용은 Windows SDK [ComboBoxEx 컨트롤 확장 스타일](/windows/win32/Controls/comboboxex-control-extended-styles) 항목에서 설명 하는 스타일을 참조 하세요.
+`CreateEx` *Dwexstyle*으로 지정 된 확장 된 Windows 스타일을 사용 하 여 컨트롤을 만듭니다. [SetExtendedStyle](#setextendedstyle)를 사용 하 여 확장 된 콤보 상자 컨트롤과 관련 된 확장 스타일을 설정 해야 합니다. 예를 들어 `CreateEx`를 사용 하 여 이러한 스타일을 WS_EX_CONTEXTHELP으로 설정 하지만 `SetExtendedStyle`를 사용 하 여 이러한 스타일을 CBES_EX_CASESENSITIVE로 설정 합니다. 자세한 내용은 Windows SDK [ComboBoxEx 컨트롤 확장 스타일](/windows/win32/Controls/comboboxex-control-extended-styles) 항목에서 설명 하는 스타일을 참조 하세요.
 
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem
 
@@ -247,11 +247,11 @@ int DeleteItem(int iIndex);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 메시지 [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem)의 기능을 구현 합니다. DeleteItem을 호출 하면 CBEN_DELETEITEM 알림이 포함 된 [WM_NOTIFY](/windows/win32/controls/wm-notify) 메시지가 부모 창으로 전송 됩니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem)메시지의 기능을 구현 합니다. DeleteItem을 호출 하면 CBEN_DELETEITEM 알림이 포함 된 [WM_NOTIFY](/windows/win32/controls/wm-notify) 메시지가 부모 창으로 전송 됩니다.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
-`CComboBoxEx` 개체 내의 콤보 상자 컨트롤에 대 한 포인터를 가져오려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 `CComboBoxEx` 개체 내에서 콤보 상자 컨트롤에 대 한 포인터를 가져옵니다.
 
 ```
 CComboBox* GetComboBoxCtrl();
@@ -263,9 +263,9 @@ CComboBox* GetComboBoxCtrl();
 
 ### <a name="remarks"></a>설명
 
-컨트롤 `CComboBoxEx` 은를 `CComboBox`캡슐화 하는 부모 창으로 구성 됩니다.
+`CComboBoxEx` 컨트롤은 `CComboBox`를 캡슐화 하는 부모 창으로 구성 됩니다.
 
-반환 값이 가리키는 개체는임시개체이며다음유휴처리시간중에제거됩니다.`CComboBox`
+반환 값이 가리키는 `CComboBox` 개체는 임시 개체 이며 다음 유휴 처리 시간 중에 제거 됩니다.
 
 ##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl
 
@@ -281,9 +281,9 @@ CEdit* GetEditCtrl();
 
 ### <a name="remarks"></a>설명
 
-CBS_DROPDOWN `CComboBoxEx` 스타일을 사용 하 여 컨트롤을 만들 때 컨트롤은 편집 상자를 사용 합니다.
+`CComboBoxEx` 컨트롤은 CBS_DROPDOWN 스타일을 사용 하 여 만들 때 편집 상자를 사용 합니다.
 
-반환 값이 가리키는 개체는임시개체이며다음유휴처리시간중에제거됩니다.`CEdit`
+반환 값이 가리키는 `CEdit` 개체는 임시 개체 이며 다음 유휴 처리 시간 중에 제거 됩니다.
 
 ##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle
 
@@ -315,11 +315,11 @@ CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>설명
 
-반환 값이 가리키는 개체는임시개체이며다음유휴처리시간중에제거됩니다.`CImageList`
+반환 값이 가리키는 `CImageList` 개체는 임시 개체 이며 다음 유휴 처리 시간 중에 제거 됩니다.
 
 ##  <a name="getitem"></a>  CComboBoxEx::GetItem
 
-지정 `ComboBoxEx` 된 항목에 대 한 항목 정보를 검색 합니다.
+지정 된 `ComboBoxEx` 항목에 대 한 항목 정보를 검색 합니다.
 
 ```
 BOOL GetItem(COMBOBOXEXITEM* pCBItem);
@@ -336,7 +336,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 메시지 [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem)의 기능을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem)메시지의 기능을 구현 합니다.
 
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged
 
@@ -352,7 +352,7 @@ BOOL HasEditChanged();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 메시지 [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged)의 기능을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged)메시지의 기능을 구현 합니다.
 
 ##  <a name="insertitem"></a>  CComboBoxEx::InsertItem
 
@@ -373,7 +373,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>설명
 
-를 호출 `InsertItem`하면 [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) 알림이 포함 된 [WM_NOTIFY](/windows/win32/controls/wm-notify) 메시지가 부모 창으로 전송 됩니다.
+`InsertItem`를 호출 하면 [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) 알림이 포함 된 [WM_NOTIFY](/windows/win32/controls/wm-notify) 메시지가 부모 창으로 전송 됩니다.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 
@@ -414,7 +414,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>매개 변수
 
 *pImageList*<br/>
-컨트롤과 함께 사용할 이미지 `CImageList` 를 포함 하는 개체에 대 한 포인터입니다. `CComboBoxEx`
+`CComboBoxEx` 컨트롤과 함께 사용할 이미지를 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -422,9 +422,9 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 메시지 [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist)의 기능을 구현 합니다. 기본 편집 컨트롤의 높이를 변경 하는 경우를 호출한 `SetImageList`후 Win32 함수 [setwindowpos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 를 호출 하 여 컨트롤의 크기를 조정 하거나 제대로 표시 되지 않습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist)메시지의 기능을 구현 합니다. 기본 편집 컨트롤의 높이를 변경 하는 경우 `SetImageList`호출한 후 Win32 함수 [Setwindowpos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 를 호출 하 여 컨트롤의 크기를 조정 하거나 제대로 표시 되지 않습니다.
 
-반환 값이 가리키는 개체는임시개체이며다음유휴처리시간중에제거됩니다.`CImageList`
+반환 값이 가리키는 `CImageList` 개체는 임시 개체 이며 다음 유휴 처리 시간 중에 제거 됩니다.
 
 ##  <a name="setitem"></a>  CComboBoxEx::SetItem
 
@@ -445,7 +445,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 메시지 [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem)의 기능을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem)메시지의 기능을 구현 합니다.
 
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme
 
@@ -466,9 +466,9 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK 설명 된 대로 [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) 메시지의 기능을 에뮬레이트합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) 메시지의 기능을 에뮬레이트합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox 클래스](../../mfc/reference/ccombobox-class.md)<br/>

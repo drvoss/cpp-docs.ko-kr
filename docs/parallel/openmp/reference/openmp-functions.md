@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141690"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882913"
 ---
 # <a name="openmp-functions"></a>OpenMP 함수
 
@@ -65,7 +65,7 @@ OpenMP 표준 C++ 의 시각적 구현에는 다음 함수 및 데이터 형식�
 
 환경 실행의 경우:
 
-|함수|Description|
+|Function|설명|
 |--------|-----------|
 |[omp_set_num_threads](#omp-set-num-threads)|[Num_threads](openmp-clauses.md#num-threads) 절에 의해 재정의 되지 않는 경우 예정 된 병렬 영역의 스레드 수를 설정 합니다.|
 |[omp_get_num_threads](#omp-get-num-threads)|병렬 영역의 스레드 수를 반환 합니다.|
@@ -80,7 +80,7 @@ OpenMP 표준 C++ 의 시각적 구현에는 다음 함수 및 데이터 형식�
 
 잠금:
 
-|함수|Description|
+|Function|설명|
 |--------|-----------|
 |[omp_init_lock](#omp-init-lock)|단순 잠금을 초기화 합니다.|
 |[omp_init_nest_lock](#omp-init-nest-lock)|잠금을 초기화 합니다.|
@@ -93,14 +93,14 @@ OpenMP 표준 C++ 의 시각적 구현에는 다음 함수 및 데이터 형식�
 |[omp_test_lock](#omp-test-lock)|잠금을 설정 하려고 시도 하지만 스레드 실행을 차단 하지 않습니다.|
 |[omp_test_nest_lock](#omp-test-nest-lock)|A.17 중첩 가능 잠금을 설정 하려고 시도 하지만 스레드 실행을 차단 하지 않습니다.|
 
-|데이터 형식|Description|
+|데이터 형식|설명|
 |---------|-----------|
 |`omp_lock_t`|잠금을 사용할 수 있는지 여부 또는 스레드가 잠금을 소유 하 고 있는지 여부에 대 한 잠금 상태를 포함 하는 형식입니다.|
 |`omp_nest_lock_t`|잠금 사용 가능 여부와 잠금 및 중첩 개수를 소유 하는 스레드의 id에 대 한 다음 정보 중 하나를 보유 하는 형식입니다.|
 
 타이밍 루틴의 경우:
 
-|함수|Description|
+|Function|설명|
 |--------|-----------|
 |[omp_get_wtime](#omp-get-wtime)|특정 지점에서 경과 된 시간 (초) 값을 반환 합니다.|
 |[omp_get_wtick](#omp-get-wtick)|프로세서 클록 틱 사이의 시간 (초)을 반환 합니다.|

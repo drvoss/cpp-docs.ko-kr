@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323598"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883995"
 ---
 # <a name="ctreeview-class"></a>CTreeView 클래스
 
-및 트리 컨트롤의 사용을 간소화 [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), MFC의 문서 뷰 아키텍처를 사용 하 여 트리 컨트롤 기능을 캡슐화 하는 클래스입니다.
+MFC의 문서 뷰 아키텍처를 사용 하 여 트리 컨트롤 및 트리 컨트롤 기능을 캡슐화 하는 클래스인 [CTreeCtrl](../../mfc/reference/ctreectrl-class.md)의 사용을 간소화 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,27 +31,27 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|`CTreeView` 개체를 생성합니다.|
+|[CTreeView:: CTreeView](#ctreeview)|`CTreeView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|뷰와 연결 된 트리 컨트롤을 반환 합니다.|
+|[CTreeView:: GetTreeCtrl](#gettreectrl)|뷰와 연결 된 트리 컨트롤을 반환 합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 아키텍처에 대 한 자세한 내용은 참조에 대 한 개요는 [CView](../../mfc/reference/cview-class.md) 클래스 및 있습니다 언급 상호 참조 합니다.
+이 아키텍처에 대 한 자세한 내용은 [CView](../../mfc/reference/cview-class.md) 클래스에 대 한 개요 및 여기에 언급 된 상호 참조를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[에서 파생되지 않은](../../mfc/reference/cwnd-class.md)
 
 [CView](../../mfc/reference/cview-class.md)
 
@@ -61,9 +61,9 @@ class CTreeView : public CCtrlView
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxcview.h
+**헤더:** afxcview
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView:: CTreeView
 
 `CTreeView` 개체를 생성합니다.
 
@@ -71,7 +71,7 @@ class CTreeView : public CCtrlView
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView:: GetTreeCtrl
 
 뷰와 연결 된 트리 컨트롤에 대 한 참조를 반환 합니다.
 
@@ -79,7 +79,7 @@ CTreeView();
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CCtrlView 클래스](../../mfc/reference/cctrlview-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

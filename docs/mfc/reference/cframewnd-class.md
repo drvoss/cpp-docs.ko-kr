@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506956"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866443"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 클래스
 
@@ -127,21 +127,21 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CFrameWnd::CFrameWnd](#cframewnd)|`CFrameWnd` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CFrameWnd::ActivateFrame](#activateframe)|사용자가 프레임을 표시 하 고 사용할 수 있도록 합니다.|
 |[CFrameWnd::BeginModalState](#beginmodalstate)|프레임 창을 모달로 설정 합니다.|
 |[CFrameWnd::Create](#create)|을 호출 하 여 `CFrameWnd` 개체와 연결 된 Windows 프레임 창을 만들고 초기화 합니다.|
-|[CFrameWnd::CreateView](#createview)|에서 `CView`파생 되지 않은 프레임 안에 뷰를 만듭니다.|
+|[CFrameWnd::CreateView](#createview)|`CView`에서 파생 되지 않은 프레임 안에 뷰를 만듭니다.|
 |[CFrameWnd::DockControlBar](#dockcontrolbar)|컨트롤 막대를 도킹 합니다.|
 |[CFrameWnd::EnableDocking](#enabledocking)|컨트롤 막대를 도킹할 수 있습니다.|
-|[CFrameWnd::EndModalState](#endmodalstate)|프레임 창의 모달 상태를 종료 합니다. 에서 `BeginModalState`사용 하지 않도록 설정 된 모든 창을 사용 하도록 설정 합니다.|
+|[CFrameWnd::EndModalState](#endmodalstate)|프레임 창의 모달 상태를 종료 합니다. `BeginModalState`에서 사용 하지 않도록 설정 된 모든 창을 사용 하도록 설정 합니다.|
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|컨트롤 막대를 부동 합니다.|
 |[CFrameWnd::GetActiveDocument](#getactivedocument)|활성 `CDocument` 개체를 반환 합니다.|
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|활성 `CFrameWnd` 개체를 반환 합니다.|
@@ -153,7 +153,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::GetMessageBar](#getmessagebar)|프레임 창에 속하는 상태 표시줄에 대 한 포인터를 반환 합니다.|
 |[CFrameWnd::GetMessageString](#getmessagestring)|명령 ID에 해당 하는 메시지를 검색 합니다.|
 |[CFrameWnd::GetTitle](#gettitle)|관련 컨트롤 막대의 제목을 검색 합니다.|
-|[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|프레임 창의 모든 뷰에 속하는 멤버함수를호출합니다.`OnInitialUpdate`|
+|[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|프레임 창의 모든 뷰에 속하는 `OnInitialUpdate` 멤버 함수를 호출 합니다.|
 |[CFrameWnd::InModalState](#inmodalstate)|프레임 창이 모달 상태 인지 여부를 나타내는 값을 반환 합니다.|
 |[CFrameWnd::IsTracking](#istracking)|분할자 막대가 현재 이동 되 고 있는지 여부를 확인 합니다.|
 |[CFrameWnd::LoadAccelTable](#loadacceltable)|을 호출 하 여 액셀러레이터 키 테이블을 로드 합니다.|
@@ -182,7 +182,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>보호된 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CFrameWnd::OnCreateClient](#oncreateclient)|프레임에 대 한 클라이언트 창을 만듭니다.|
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|현재 MFC 응용 프로그램의 메뉴가 숨겨지기 전에 호출 됩니다.|
@@ -190,14 +190,14 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|메뉴 항목에 대해 자동 사용 및 사용 안 함 기능을 제어 합니다.|
-|[CFrameWnd::rectDefault](#rectdefault)|창에서 창의 `CRect` 초기 크기와 위치를 선택할 `CFrameWnd` 수 있도록 개체를 만들 때이 정적를 매개 변수로 전달 합니다.|
+|[CFrameWnd::rectDefault](#rectdefault)|Windows에서 창의 초기 크기와 위치를 선택할 수 있도록 `CFrameWnd` 개체를 만들 때이 정적 `CRect`를 매개 변수로 전달 합니다.|
 
 ## <a name="remarks"></a>설명
 
-응용 프로그램에 대 한 유용한 프레임 창을 만들려면에서 `CFrameWnd`클래스를 파생 시킵니다. 파생 클래스에 멤버 변수를 추가 하 여 응용 프로그램에 특정 한 데이터를 저장 합니다. 파생 클래스에서 메시지 처리기 멤버 함수 및 메시지 맵을 구현하여 메시지가 창에 전달될 때 수행되는 작업을 지정합니다.
+응용 프로그램에 대 한 유용한 프레임 창을 만들려면 `CFrameWnd`에서 클래스를 파생 시킵니다. 파생 클래스에 멤버 변수를 추가 하 여 응용 프로그램에 특정 한 데이터를 저장 합니다. 파생 클래스에서 메시지 처리기 멤버 함수 및 메시지 맵을 구현하여 메시지가 창에 전달될 때 수행되는 작업을 지정합니다.
 
 다음 세 가지 방법으로 프레임 창을 생성할 수 있습니다.
 
@@ -207,41 +207,41 @@ class CFrameWnd : public CWnd
 
 - 문서 템플릿을 사용 하 여 간접적으로 구성 합니다.
 
-`Create` C++ 또는 를`LoadFrame`호출 하기 전에 **new** 연산자를 사용 하 여 힙에서 프레임 창 개체를 구성 해야 합니다. 를 호출 `Create`하기 전에 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) global 함수를 사용 하 여 창 클래스를 등록 하 여 프레임에 대 한 아이콘 및 클래스 스타일을 설정할 수도 있습니다.
+`Create` 또는 `LoadFrame`를 호출 하기 전에 C++ **new** 연산자를 사용 하 여 힙에서 프레임 창 개체를 구성 해야 합니다. `Create`를 호출 하기 전에 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) global 함수를 사용 하 여 창 클래스를 등록 하 여 프레임에 대 한 아이콘 및 클래스 스타일을 설정할 수도 있습니다.
 
 `Create` 멤버 함수를 사용 하 여 프레임의 생성 매개 변수를 즉각적인 인수로 전달 합니다.
 
-`LoadFrame`는 보다 `Create`작은 인수를 사용 하며, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 포함 하 여 리소스에서 대부분의 기본값을 검색 합니다. 에서 `LoadFrame`액세스할 수 있도록 하려면 모든 리소스에 동일한 리소스 ID (예: IDR_MAINFRAME)가 있어야 합니다.
+`LoadFrame`에는 `Create`보다 작은 인수가 필요 하며, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 비롯 한 리소스에서 대부분의 기본값을 검색 합니다. `LoadFrame`에서 액세스할 수 있도록 이러한 모든 리소스는 동일한 리소스 ID (예: IDR_MAINFRAME)를 가져야 합니다.
 
-개체는 `CFrameWnd` 뷰 및 문서를 포함 하는 경우 프로그래머가 직접 생성 하지 않고 프레임 워크에 의해 간접적으로 생성 됩니다. 개체 `CDocTemplate` 는 프레임 생성, 포함 하는 뷰의 생성 및 해당 문서에 대 한 뷰 연결을 오케스트레이션 합니다. `CDocTemplate` 생성자의 매개 변수는 관련 된 `CRuntimeClass` 세 가지 클래스 (문서, 프레임 및 뷰)의를 지정 합니다. 개체 `CRuntimeClass` 는 사용자가 지정 하는 경우 (예: 새 파일 명령 또는 MDI (다중 문서 인터페이스) 창 새 명령 사용) 프레임 워크에서 동적으로 새 프레임을 만드는 데 사용 됩니다.
+`CFrameWnd` 개체가 뷰 및 문서를 포함 하는 경우 프로그래머가 직접 생성 하는 대신 프레임 워크에 의해 간접적으로 생성 됩니다. `CDocTemplate` 개체는 프레임 생성, 포함 하는 뷰의 생성 및 해당 문서에 대 한 뷰 연결을 오케스트레이션 합니다. `CDocTemplate` 생성자의 매개 변수는 관련 된 세 가지 클래스 (문서, 프레임 및 뷰)의 `CRuntimeClass`를 지정 합니다. 사용자가 지정 하는 경우 (예: 새 파일 명령 또는 MDI (다중 문서 인터페이스) 창 새 명령 사용) 프레임 워크에서 `CRuntimeClass` 개체를 사용 하 여 동적으로 새 프레임을 만듭니다.
 
-위의 RUNTIME_CLASS 메커니즘이 제대로 작동 하려면에서 `CFrameWnd` 파생 된 프레임 창 클래스를 DECLARE_DYNCREATE로 선언 해야 합니다.
+위의 RUNTIME_CLASS 메커니즘이 제대로 작동 하려면 `CFrameWnd`에서 파생 된 프레임 창 클래스를 DECLARE_DYNCREATE으로 선언 해야 합니다.
 
-에 `CFrameWnd` 는 Windows 용 일반적인 응용 프로그램에서 기본 창에 대해 다음과 같은 기능을 수행 하는 기본 구현이 포함 되어 있습니다.
+`CFrameWnd`에는 Windows 용 일반적인 응용 프로그램에서 기본 창에 대해 다음과 같은 기능을 수행 하는 기본 구현이 포함 되어 있습니다.
 
-- `CFrameWnd` 프레임 창은 Windows 활성 창이 나 현재 입력 포커스와 무관 한 현재 활성 뷰를 추적 합니다. 프레임이 다시 활성화 되 면를 호출 `CView::OnActivateView`하 여 활성 보기에 알림 메시지를 표시 합니다.
+- `CFrameWnd` 프레임 창은 Windows 활성 창이 나 현재 입력 포커스와 무관 한 현재 활성 뷰를 추적 합니다. 프레임이 다시 활성화 되 면 `CView::OnActivateView`를 호출 하 여 활성 보기에 알림이 제공 됩니다.
 
-- 명령 메시지와의 `OnSetFocus` `OnVScroll` `OnHScroll`, 및 함수에 의해 처리 되는 메시지를 비롯 한 많은 일반적인 프레임 알림 메시지는 `CFrameWnd` 프레임 창에서 현재 활성 뷰로 위임 됩니다. `CWnd`
+- `CWnd`의 `OnSetFocus`, `OnHScroll`및 `OnVScroll` 기능으로 처리 되는 메시지를 포함 하 여 명령 메시지와 일반적인 프레임 알림 메시지는 모두 `CFrameWnd` 프레임 창에서 현재 활성 뷰로 위임 됩니다.
 
 - 현재 활성 뷰 (또는 MDI 프레임의 경우 현재 활성화 된 MDI 자식 프레임 창)는 프레임 창의 캡션을 결정할 수 있습니다. 프레임 창의 FWS_ADDTOTITLE 스타일 비트를 꺼서이 기능을 사용 하지 않도록 설정할 수 있습니다.
 
-- `CFrameWnd` 프레임 창은 프레임 창의 클라이언트 영역 내에서 컨트롤 막대, 뷰 및 기타 자식 창의 위치를 관리 합니다. 프레임 창에는 도구 모음 및 기타 컨트롤 막대 단추의 유휴 시간 업데이트도 수행 됩니다. 또한 `CFrameWnd` 프레임 창에는 도구 모음 및 상태 표시줄을 설정/해제 하는 명령에 대 한 기본 구현이 있습니다.
+- `CFrameWnd` 프레임 창은 프레임 창의 클라이언트 영역 내에서 컨트롤 막대, 뷰 및 기타 자식 창의 위치를 관리 합니다. 프레임 창에는 도구 모음 및 기타 컨트롤 막대 단추의 유휴 시간 업데이트도 수행 됩니다. `CFrameWnd` 프레임 창에는 도구 모음과 상태 표시줄을 설정/해제 하기 위한 명령의 기본 구현도 있습니다.
 
 - `CFrameWnd` 프레임 창은 주 메뉴 모음을 관리 합니다. 팝업 메뉴가 표시 되 면 프레임 창에서 UPDATE_COMMAND_UI 메커니즘을 사용 하 여 사용, 사용 안 함 또는 선택 해야 하는 메뉴 항목을 결정 합니다. 사용자가 메뉴 항목을 선택 하면 프레임 창에서 해당 명령에 대 한 메시지 문자열을 사용 하 여 상태 표시줄을 업데이트 합니다.
 
 - `CFrameWnd` 프레임 창에는 자동으로 키보드 액셀러레이터를 변환 하는 선택적 액셀러레이터 테이블이 있습니다.
 
-- 프레임 창에는 상황에 맞는 도움말에 사용 `LoadFrame` 되는 선택적 도움말 ID가로 설정 되어 있습니다. `CFrameWnd` 프레임 창은 상황에 맞는 도움말 (SHIFT + F1) 및 인쇄 미리 보기 모드와 같은 semimodal 상태의 기본 조정자입니다.
+- `CFrameWnd` 프레임 창에는 상황에 맞는 도움말에 사용 되는 `LoadFrame`로 설정 된 선택적 도움말 ID가 있습니다. 프레임 창은 상황에 맞는 도움말 (SHIFT + F1) 및 인쇄 미리 보기 모드와 같은 semimodal 상태의 기본 조정자입니다.
 
-- `CFrameWnd` 프레임 창이 파일 관리자에서 끌어온 파일을 열고 프레임 창에 끌어 놓으면 됩니다. 파일 확장명이 등록 되 고 응용 프로그램에 연결 된 경우 프레임 창은 사용자가 파일 관리자 `ShellExecute` 에서 데이터 파일을 열거나 Windows 함수를 호출할 때 발생 하는 DDE (동적 데이터 교환) 열기 요청에 응답 합니다.
+- `CFrameWnd` 프레임 창은 파일 관리자에서 끌어온 파일을 열고 프레임 창에 끌어 놓으면 됩니다. 파일 확장명이 등록 되 고 응용 프로그램에 연결 된 경우 프레임 창은 사용자가 파일 관리자에서 데이터 파일을 열거나 `ShellExecute` Windows 함수를 호출할 때 발생 하는 DDE (동적 데이터 교환) 열기 요청에 응답 합니다.
 
-- 프레임 창이 주 응용 프로그램 창 (즉, `CWinThread::m_pMainWnd`) 인 경우 사용자가 응용 프로그램을 닫으면 프레임 창에 사용자에 게 수정 된 문서를 저장 하 라는 메시지가 표시 됩니다 (및 `OnQueryEndSession`의 `OnClose` 경우).
+- 프레임 창이 주 응용 프로그램 창인 경우 (즉, `CWinThread::m_pMainWnd`) 사용자가 응용 프로그램을 닫으면 프레임 창에 사용자에 게 수정 된 문서를 저장 하 라는 메시지가 표시 됩니다 (`OnClose` 및 `OnQueryEndSession`).
 
 - 프레임 창이 주 응용 프로그램 창인 경우 프레임 창은 WinHelp를 실행 하기 위한 컨텍스트입니다. 프레임 창을 닫으면 WINHELP가 종료 됩니다. 실행 된 경우이 응용 프로그램에 대 한 도움말을 보려면 EXE를 실행 합니다.
 
-C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow`를 사용하세요. 를 `CFrameWnd` C++ 창이 소멸 될 때 개체가 삭제 됩니다.`PostNcDestroy` 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가를 호출 `DestroyWindow`합니다.
+C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow` 를 사용하세요. `PostNcDestroy`를 `CFrameWnd` 구현 하면 창이 소멸 될 C++ 때 개체를 삭제 합니다. 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가 `DestroyWindow`를 호출 합니다.
 
-에 대 `CFrameWnd`한 자세한 내용은 [프레임 창](../../mfc/frame-windows.md)을 참조 하세요.
+`CFrameWnd`에 대 한 자세한 내용은 [프레임 창](../../mfc/frame-windows.md)을 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
 
@@ -249,7 +249,7 @@ C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[에서 파생되지 않은](../../mfc/reference/cwnd-class.md)
 
 `CFrameWnd`
 
@@ -300,7 +300,7 @@ CFrameWnd();
 
 ### <a name="remarks"></a>설명
 
-을 `Create` 호출 하 여 표시 되는 창을 만듭니다.
+`Create`를 호출 하 여 표시 되는 창을 만듭니다.
 
 ##  <a name="create"></a>  CFrameWnd::Create
 
@@ -321,13 +321,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *lpszClassName*<br/>
-Windows 클래스의 이름을 나타내는 null로 끝나는 문자열을 가리킵니다. 클래스 이름은 `AfxRegisterWndClass` 전역 함수 `RegisterClass` 또는 Windows 함수에 등록 된 모든 이름일 수 있습니다. NULL 인 경우에는 미리 정의 `CFrameWnd` 된 기본 특성을 사용 합니다.
+Windows 클래스의 이름을 나타내는 null로 끝나는 문자열을 가리킵니다. 클래스 이름은 `AfxRegisterWndClass` 전역 함수 또는 `RegisterClass` Windows 함수에 등록 된 모든 이름일 수 있습니다. NULL 인 경우에는 미리 정의 된 기본 `CFrameWnd` 특성을 사용 합니다.
 
 *lpszWindowName*<br/>
 창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다. 제목 표시줄의 텍스트로 사용 됩니다.
 
 *dwStyle*<br/>
-창 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 특성을 지정 합니다. 제목 표시줄에 창에 표시 된 문서의 이름을 자동으로 표시 하려면 FWS_ADDTOTITLE 스타일을 포함 합니다.
+창 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 특성을 지정 합니다. 제목 표시줄에 창에 표시 되는 문서 이름이 자동으로 표시 되도록 하려면 FWS_ADDTOTITLE 스타일을 포함 합니다.
 
 *rect*<br/>
 창의 크기와 위치를 지정 합니다. *RectDefault* 값을 사용 하면 창에서 새 창의 크기와 위치를 지정할 수 있습니다.
@@ -350,13 +350,13 @@ Windows 클래스의 이름을 나타내는 null로 끝나는 문자열을 가�
 
 ### <a name="remarks"></a>설명
 
-두 단계로 `CFrameWnd` 개체를 생성 합니다. 먼저 `CFrameWnd` 개체를 생성 하는 생성자를 호출 하 고를 호출 `Create`하 여 Windows 프레임 창을 만들고 `CFrameWnd` 개체에 연결 합니다. `Create`창의 클래스 이름과 창 이름을 초기화 하 고 해당 스타일, 부모 및 연결 된 메뉴에 대 한 기본값을 등록 합니다.
+두 단계로 `CFrameWnd` 개체를 구성 합니다. 먼저 `CFrameWnd` 개체를 생성 하는 생성자를 호출 하 고 Windows 프레임 창을 만들어 `CFrameWnd` 개체에 연결 하는 `Create`를 호출 합니다. `Create` 창의 클래스 이름과 창 이름을 초기화 하 고 해당 스타일, 부모 및 연결 된 메뉴에 대 한 기본값을 등록 합니다.
 
-대신를 `LoadFrame` 사용 하여인수를지정하는대신리소스에서프레임창을로드합니다.`Create`
+`Create` 대신 `LoadFrame`를 사용 하 여 인수를 지정 하는 대신 리소스에서 프레임 창을 로드 합니다.
 
 ##  <a name="createview"></a>  CFrameWnd::CreateView
 
-을 `CreateView` 호출 하 여 프레임 내에서 뷰를 만듭니다.
+`CreateView`를 호출 하 여 프레임 내에서 뷰를 만듭니다.
 
 ```
 CWnd* CreateView(
@@ -374,11 +374,11 @@ CWnd* CreateView(
 
 ### <a name="return-value"></a>반환 값
 
-성공 하면 개체 `CWnd` 에 대 한 포인터이 고, 그렇지 않으면 NULL입니다.
+성공 하는 경우 `CWnd` 개체에 대 한 포인터 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수를 사용 하 여 프레임 내에서 파생 되지 `CView`않은 "뷰"를 만들 수 있습니다. 를 호출한 `CreateView`후에는 보기를 활성으로 수동으로 설정 하 고 표시 되도록 설정 해야 합니다. 이러한 작업은에서 `CreateView`자동으로 수행 되지 않습니다.
+이 멤버 함수를 사용 하 여 프레임 내에서 파생 `CView`되지 않은 "뷰"를 만들 수 있습니다. `CreateView`호출한 후에는 뷰를 활성으로 수동으로 설정 하 고 표시 되도록 설정 해야 합니다. 이러한 작업은 `CreateView`에서 자동으로 수행 되지 않습니다.
 
 ##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar
 
@@ -401,11 +401,11 @@ void DockControlBar(
 
 - 프레임 창의 위쪽에 도킹을 AFX_IDW_DOCKBAR_TOP 합니다.
 
-- AFX_IDW_DOCKBAR_BOTTOM를 프레임 창의 아래쪽에 도킹 합니다.
+- 프레임 창의 아래쪽에 도킹을 AFX_IDW_DOCKBAR_BOTTOM 합니다.
 
-- AFX_IDW_DOCKBAR_LEFT를 프레임 창의 왼쪽에 도킹 합니다.
+- 프레임 창의 왼쪽에 도킹을 AFX_IDW_DOCKBAR_LEFT 합니다.
 
-- AFX_IDW_DOCKBAR_RIGHT를 프레임 창의 오른쪽에 도킹 합니다.
+- 프레임 창의 오른쪽에 도킹을 AFX_IDW_DOCKBAR_RIGHT 합니다.
 
 0 인 경우에는 대상 프레임 창에서 도킹을 사용 하도록 설정 된 모든 쪽에 컨트롤 막대를 도킹할 수 있습니다.
 
@@ -429,15 +429,15 @@ void EnableDocking(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 컨트롤 막대의 도킹 사이트로 사용할 수 있는 프레임 창의 면을 지정 합니다. 다음 중 하나 이상이 될 수 있습니다.
 
-- CBRS_ALIGN_TOP를 사용 하면 클라이언트 영역의 맨 위에 도킹할 수 있습니다.
+- CBRS_ALIGN_TOP 클라이언트 영역의 맨 위에 도킹을 허용 합니다.
 
-- CBRS_ALIGN_BOTTOM를 사용 하면 클라이언트 영역의 아래쪽에 도킹할 수 있습니다.
+- 클라이언트 영역의 아래쪽에 도킹을 허용 CBRS_ALIGN_BOTTOM.
 
-- CBRS_ALIGN_LEFT는 클라이언트 영역의 왼쪽에 도킹할 수 있습니다.
+- CBRS_ALIGN_LEFT 클라이언트 영역의 왼쪽에 도킹할 수 있습니다.
 
-- CBRS_ALIGN_RIGHT는 클라이언트 영역의 오른쪽에 도킹할 수 있습니다.
+- CBRS_ALIGN_RIGHT 클라이언트 영역의 오른쪽에 도킹할 수 있습니다.
 
-- CBRS_ALIGN_ANY는 클라이언트 영역의 어느 쪽에 나 도킹할 수 있습니다.
+- CBRS_ALIGN_ANY은 클라이언트 영역의 어느 쪽에 나 도킹할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -457,7 +457,7 @@ virtual void EndModalState();
 
 ### <a name="remarks"></a>설명
 
-`EndModalState`[Beginmodalstate](#beginmodalstate)에서 사용 하지 않도록 설정 된 모든 창을 사용 하도록 설정 합니다.
+`EndModalState`는 [Beginmodalstate](#beginmodalstate)에서 사용 하지 않도록 설정 된 모든 창을 사용 하도록 설정 합니다.
 
 ##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar
 
@@ -481,13 +481,13 @@ void FloatControlBar(
 *dwStyle*<br/>
 새 프레임 창에서 컨트롤 막대를 가로 또는 세로로 맞출지 여부를 지정 합니다. 다음 중 하나일 수 있습니다.
 
-- CBRS_ALIGN_TOP 컨트롤 막대를 세로 방향으로 표시 합니다.
+- 컨트롤 막대의 방향을 세로로 CBRS_ALIGN_TOP 합니다.
 
-- CBRS_ALIGN_BOTTOM 컨트롤 막대를 세로 방향으로 표시 합니다.
+- 컨트롤 막대의 방향을 세로로 CBRS_ALIGN_BOTTOM 합니다.
 
-- CBRS_ALIGN_LEFT는 컨트롤 막대의 가로 방향을 표시 합니다.
+- 컨트롤 막대의 가로 방향을 CBRS_ALIGN_LEFT 합니다.
 
-- CBRS_ALIGN_RIGHT는 컨트롤 막대의 가로 방향을 표시 합니다.
+- 컨트롤 막대의 가로 방향을 CBRS_ALIGN_RIGHT 합니다.
 
 가로 및 세로 방향 모두를 지정 하 여 스타일을 전달 하는 경우 도구 모음의 가로 방향이 지정 됩니다.
 
@@ -499,7 +499,7 @@ void FloatControlBar(
 
 ##  <a name="getactivedocument"></a>  CFrameWnd::GetActiveDocument
 
-현재 활성 뷰에 연결 된 현재 `CDocument` 에 대 한 포인터를 가져오려면이 멤버 함수를 호출 합니다.
+현재 활성 뷰에 연결 된 현재 `CDocument`에 대 한 포인터를 가져오려면이 멤버 함수를 호출 합니다.
 
 ```
 virtual CDocument* GetActiveDocument();
@@ -527,7 +527,7 @@ virtual CFrameWnd* GetActiveFrame();
 
 ##  <a name="getactiveview"></a>  CFrameWnd::GetActiveView
 
-이 멤버 함수를 호출 하 여 프레임 창 `CFrameWnd`에 연결 된 활성 뷰 (있는 경우)에 대 한 포인터를 가져옵니다.
+이 멤버 함수를 호출 하 여 프레임 창에 연결 된 활성 뷰 (있는 경우)에 대 한 포인터를 가져옵니다 (`CFrameWnd`).
 
 ```
 CView* GetActiveView() const;
@@ -539,13 +539,13 @@ CView* GetActiveView() const;
 
 ### <a name="remarks"></a>설명
 
-이 함수는 MDI 주 프레임 창 ( `CMDIFrameWnd`)에 대해 호출 될 때 NULL을 반환 합니다. MDI 응용 프로그램에서 MDI 주 프레임 창에는 연결 된 뷰가 없습니다. 대신 각 개별 자식 창 ( `CMDIChildWnd`)에는 하나 이상의 관련 보기가 있습니다. MDI 응용 프로그램의 활성 뷰는 먼저 활성 MDI 자식 창을 찾은 다음 해당 자식 창에 대 한 활성 뷰를 찾는 방법으로 가져올 수 있습니다. 활성 MDI 자식 창은 함수 `MDIGetActive` 를 호출 하거나 `GetActiveFrame` 다음에서 보여 주는 것 처럼 찾을 수 있습니다.
+이 함수는 MDI 주 프레임 창 (`CMDIFrameWnd`)에 대해 호출 될 때 NULL을 반환 합니다. MDI 응용 프로그램에서 MDI 주 프레임 창에는 연결 된 뷰가 없습니다. 대신 각 개별 자식 창 (`CMDIChildWnd`)에는 하나 이상의 관련 보기가 있습니다. MDI 응용 프로그램의 활성 뷰는 먼저 활성 MDI 자식 창을 찾은 다음 해당 자식 창에 대 한 활성 뷰를 찾는 방법으로 가져올 수 있습니다. 다음에서 보여 주는 것 처럼 `MDIGetActive` 또는 `GetActiveFrame` 함수를 호출 하 여 활성 MDI 자식 창을 찾을 수 있습니다.
 
 [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]
 
 ##  <a name="getcontrolbar"></a>  CFrameWnd::GetControlBar
 
-를 `GetControlBar` 호출 하 여 ID와 연결 된 컨트롤 막대에 대 한 액세스 권한을 얻습니다.
+`GetControlBar`를 호출 하 여 ID와 연결 된 컨트롤 막대에 대 한 액세스 권한을 얻습니다.
 
 ```
 CControlBar* GetControlBar(UINT nID);
@@ -564,7 +564,7 @@ ID와 연결 된 컨트롤 막대에 대 한 포인터입니다.
 
 *NID* 매개 변수는 컨트롤 막대의 `Create` 메서드에 전달 되는 고유 식별자를 참조 합니다. 컨트롤 막대에 대 한 자세한 내용은 [컨트롤 막대](../../mfc/control-bars.md)에 대 한 항목을 참조 하세요.
 
-`GetControlBar`는 부동 이더라도 현재 프레임의 자식 창이 아닌 컨트롤 막대를 반환 합니다.
+`GetControlBar`은 부동 이더라도 현재 프레임의 자식 창이 아닌 컨트롤 막대를 반환 합니다.
 
 ##  <a name="getdockstate"></a>  CFrameWnd::GetDockState
 
@@ -581,7 +581,7 @@ void GetDockState(CDockState& state) const;
 
 ### <a name="remarks"></a>설명
 
-그런 다음 또는 `CDockState` `CDockState::SaveState` 을`Serialize`사용 하 여의 콘텐츠를 저장소에 쓸 수 있습니다. 나중에 컨트롤 막대를 이전 상태로 복원 하려면 또는 `CDockState::LoadState` `Serialize`를 사용 하 여 상태를 로드 한 다음를 호출 `SetDockState` 하 여 이전 상태를 프레임 창의 컨트롤 막대에 적용 합니다.
+그런 다음 `CDockState::SaveState` 또는 `Serialize`를 사용 하 여 `CDockState`의 내용을 저장소에 쓸 수 있습니다. 나중에 컨트롤 막대를 이전 상태로 복원 하려는 경우 `CDockState::LoadState` 또는 `Serialize`를 사용 하 여 상태를 로드 한 다음 `SetDockState`를 호출 하 여 이전 상태를 프레임 창의 컨트롤 모음에 적용 합니다.
 
 ##  <a name="getmenubarstate"></a>  CFrameWnd::GetMenuBarState
 
@@ -597,7 +597,7 @@ virtual DWORD GetMenuBarState();
 
 - AFX_MBS_VISIBLE (0x01)-메뉴가 표시 됩니다.
 
-- AFX_MBS_HIDDEN (0x02)-메뉴가 숨겨져 있습니다.
+- AFX_MBS_HIDDEN (0x02)-메뉴가 숨겨집니다.
 
 ### <a name="remarks"></a>설명
 
@@ -613,13 +613,13 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
 
 ### <a name="return-value"></a>반환 값
 
-이 메서드는 다음 값 중 하나를 반환 합니다.
+이 메서드는 다음 값 중 하나를 반환합니다.
 
 - AFX_MBV_KEEPVISIBLE (0x01)-메뉴가 항상 표시 되며 기본적으로 포커스가 포함 되지 않습니다.
 
 - AFX_MBV_DISPLAYONFOCUS (0x02)-메뉴는 기본적으로 숨겨져 있습니다. 메뉴가 숨겨진 경우 ALT 키를 눌러 메뉴를 표시 하 고 포커스를 제공 합니다. 메뉴가 표시 되 면 ALT 또는 ESC 키를 눌러 숨깁니다.
 
-- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) (비트 조합 (or))-메뉴는 기본적으로 숨겨져 있습니다. 메뉴가 숨겨진 경우 F10 키를 눌러 메뉴를 표시 하 고 포커스를 제공 합니다. 메뉴가 표시 되 면 F10 키를 눌러 메뉴에 포커스를 설정 하거나 해제 합니다. ALT 또는 ESC 키를 눌러 숨길 때까지 메뉴가 표시 됩니다.
+- DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) (비트 조합 (또는))-메뉴는 기본적으로 숨겨져 있습니다. AFX_MBV_ 메뉴가 숨겨진 경우 F10 키를 눌러 메뉴를 표시 하 고 포커스를 제공 합니다. 메뉴가 표시 되 면 F10 키를 눌러 메뉴에 포커스를 설정 하거나 해제 합니다. ALT 또는 ESC 키를 눌러 숨길 때까지 메뉴가 표시 됩니다.
 
 ### <a name="remarks"></a>설명
 
@@ -653,7 +653,7 @@ virtual void GetMessageString(
 원하는 메시지의 리소스 ID입니다.
 
 *rMessage*<br/>
-`CString`메시지를 저장할 개체입니다.
+메시지를 저장할 `CString` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -673,7 +673,7 @@ CString GetTitle() const;
 
 ##  <a name="initialupdateframe"></a>  CFrameWnd::InitialUpdateFrame
 
-를 `IntitialUpdateFrame` 사용 하 여 새 프레임을 `Create`만든 후를 호출 합니다.
+`Create`를 사용 하 여 새 프레임을 만든 후 `IntitialUpdateFrame`를 호출 합니다.
 
 ```
 void InitialUpdateFrame(
@@ -684,16 +684,16 @@ void InitialUpdateFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDoc*<br/>
-프레임 창이 연결 된 문서를 가리킵니다. NULL 일 수 있습니다.
+프레임 창이 연결 된 문서를 가리킵니다. NULL일 수 있습니다.
 
 *bMakeVisible*<br/>
 TRUE 이면 프레임이 표시 되 고 활성 상태가 되어야 함을 나타냅니다. FALSE 이면 하위 항목이 표시 되지 않습니다.
 
 ### <a name="remarks"></a>설명
 
-이렇게 하면 해당 프레임 창의 모든 뷰가 해당 `OnInitialUpdate` 호출을 수신 합니다.
+이렇게 하면 해당 프레임 창의 모든 뷰가 `OnInitialUpdate` 호출을 수신 합니다.
 
-또한 이전에 활성 뷰가 없는 경우에는 프레임 창의 기본 뷰가 활성화 됩니다. 기본 뷰는 자식 ID가 AFX_IDW_PANE_FIRST 인 뷰입니다. 마지막으로, *Bmakevisible* 이 0이 아닌 경우 프레임 창이 표시 됩니다. *Bmakevisible* 이 0 이면 프레임 창의 현재 포커스와 표시 상태는 변경 되지 않고 그대로 유지 됩니다. 새 파일 및 파일 열기의 프레임 워크 구현을 사용 하는 경우에는이 함수를 호출할 필요가 없습니다.
+또한 이전에 활성 뷰가 없는 경우에는 프레임 창의 기본 뷰가 활성화 됩니다. 기본 뷰는 AFX_IDW_PANE_FIRST의 자식 ID를 사용 하는 뷰입니다. 마지막으로, *Bmakevisible* 이 0이 아닌 경우 프레임 창이 표시 됩니다. *Bmakevisible* 이 0 이면 프레임 창의 현재 포커스와 표시 상태는 변경 되지 않고 그대로 유지 됩니다. 새 파일 및 파일 열기의 프레임 워크 구현을 사용 하는 경우에는이 함수를 호출할 필요가 없습니다.
 
 ##  <a name="inmodalstate"></a>  CFrameWnd::InModalState
 
@@ -742,7 +742,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 
 리소스에서 로드 되는 액셀러레이터 테이블은 응용 프로그램이 종료 될 때 자동으로 해제 됩니다.
 
-를 호출 `LoadFrame` 하 여 프레임 창을 만들 경우 프레임 워크는 메뉴 및 아이콘 리소스와 함께 액셀러레이터 키 테이블을 로드 하 고이 멤버 함수에 대 한 후속 호출을 필요 하지 않습니다.
+`LoadFrame`를 호출 하 여 프레임 창을 만드는 경우 프레임 워크는 메뉴 및 아이콘 리소스와 함께 액셀러레이터 키 테이블을 로드 하 고이 멤버 함수에 대 한 후속 호출을 필요 하지 않습니다.
 
 ##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState
 
@@ -761,7 +761,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
 
 복원 된 정보에는 표시 유형, 가로/세로 방향, 도킹 상태 및 컨트롤 막대 위치가 포함 됩니다.
 
-복원 하려는 설정은를 호출 `LoadBarState`하기 전에 레지스트리에 써야 합니다. [CWinApp:: SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey)를 호출 하 여 레지스트리에 정보를 씁니다. [Save바코드 상태](#savebarstate)를 호출 하 여 INI 파일에 정보를 씁니다.
+`LoadBarState`를 호출 하기 전에 복원 하려는 설정을 레지스트리에 써야 합니다. [CWinApp:: SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey)를 호출 하 여 레지스트리에 정보를 씁니다. [Save바코드 상태](#savebarstate)를 호출 하 여 INI 파일에 정보를 씁니다.
 
 ##  <a name="loadframe"></a>  CFrameWnd::LoadFrame
 
@@ -781,7 +781,7 @@ virtual BOOL LoadFrame(
 프레임 창과 연결 된 공유 리소스의 ID입니다.
 
 *dwDefaultStyle*<br/>
-프레임의 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)입니다. 제목 표시줄에 창에 표시 된 문서의 이름을 자동으로 표시 하려면 FWS_ADDTOTITLE 스타일을 포함 합니다.
+프레임의 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)입니다. 제목 표시줄에 창에 표시 되는 문서 이름이 자동으로 표시 되도록 하려면 FWS_ADDTOTITLE 스타일을 포함 합니다.
 
 *pParentWnd*<br/>
 프레임의 부모에 대 한 포인터입니다.
@@ -791,17 +791,17 @@ virtual BOOL LoadFrame(
 
 ### <a name="remarks"></a>설명
 
-두 단계로 `CFrameWnd` 개체를 생성 합니다. 먼저, `CFrameWnd` 개체를 생성 하는 생성자를 호출 하 고 Windows 프레임 `LoadFrame`창과 연결 된 리소스를 로드 하 고 프레임 창을 `CFrameWnd` 개체에 연결 하는을 호출 합니다. *NIDResource* 매개 변수는 메뉴, 액셀러레이터 키 테이블, 아이콘 및 프레임 창의 제목에 대 한 문자열 리소스를 지정 합니다.
+두 단계로 `CFrameWnd` 개체를 구성 합니다. 먼저 `CFrameWnd` 개체를 생성 하는 생성자를 호출 하 고 Windows 프레임 창과 관련 된 리소스를 로드 하 고 프레임 창을 `CFrameWnd` 개체에 연결 하는 `LoadFrame`를 호출 합니다. *NIDResource* 매개 변수는 메뉴, 액셀러레이터 키 테이블, 아이콘 및 프레임 창의 제목에 대 한 문자열 리소스를 지정 합니다.
 
-모든 프레임 `Create` 창의 생성 매개 변수 `LoadFrame` 를 지정 하려는 경우 대신 멤버 함수를 사용 합니다.
+모든 프레임 창의 생성 매개 변수를 지정 하려면 `LoadFrame` 대신 `Create` 멤버 함수를 사용 합니다.
 
-프레임 워크는 `LoadFrame` 문서 템플릿 개체를 사용 하 여 프레임 창을 만들 때를 호출 합니다.
+프레임 워크는 문서 템플릿 개체를 사용 하 여 프레임 창을 만들 때 `LoadFrame`를 호출 합니다.
 
-프레임 워크는 *pContext* 인수를 사용 하 여 포함 된 뷰 개체를 포함 하 여 프레임 창에 연결할 개체를 지정 합니다. 를 호출할 `LoadFrame`때 *pContext* 인수를 NULL로 설정할 수 있습니다.
+프레임 워크는 *pContext* 인수를 사용 하 여 포함 된 뷰 개체를 포함 하 여 프레임 창에 연결할 개체를 지정 합니다. `LoadFrame`를 호출할 때 *pContext* 인수를 NULL로 설정할 수 있습니다.
 
 ##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable
 
-이 데이터 멤버를 사용 하는 경우 (기본값) ON_UPDATE_COMMAND_UI 또는 ON_COMMAND 처리기가 없는 메뉴 항목은 사용자가 메뉴를 끌어올 때 자동으로 사용 하지 않도록 설정 됩니다.
+이 데이터 멤버를 사용 하는 경우 (기본값) 사용자가 메뉴를 아래로 이동 하면 ON_UPDATE_COMMAND_UI 또는 ON_COMMAND 처리기가 없는 메뉴 항목이 자동으로 비활성화 됩니다.
 
 ```
 BOOL m_bAutoMenuEnable;
@@ -814,7 +814,7 @@ ON_COMMAND 처리기가 있지만 ON_UPDATE_COMMAND_UI 처리기가 없는 메�
 이 데이터 멤버가 설정 되 면 도구 모음 단추를 사용 하는 것과 같은 방식으로 메뉴 항목이 자동으로 활성화 됩니다.
 
 > [!NOTE]
-> `m_bAutoMenuEnable`최상위 메뉴 항목에는 영향을 주지 않습니다.
+> `m_bAutoMenuEnable` 최상위 메뉴 항목에는 영향을 주지 않습니다.
 
 이 데이터 멤버는 현재 선택 항목에 따라 선택적 명령의 구현을 간소화 하 고 메뉴 항목을 사용 하거나 사용 하지 않도록 설정 하는 ON_UPDATE_COMMAND_UI 처리기를 작성 해야 하는 필요성을 줄입니다.
 
@@ -835,7 +835,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>매개 변수
 
 *nBorderCmd*<br/>
-에서 다음 값 중 하나를 포함 합니다 `enum BorderCmd`.
+`enum BorderCmd`의 다음 값 중 하나를 포함 합니다.
 
 - `borderGet` = 1
 
@@ -852,7 +852,7 @@ virtual BOOL NegotiateBorderSpace(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수 `CFrameWnd` 는 OLE 테두리 공간 협상의 구현입니다.
+이 멤버 함수는 OLE 테두리 공간 협상의 `CFrameWnd` 구현입니다.
 
 ##  <a name="onbarcheck"></a>  CFrameWnd::OnBarCheck
 
@@ -885,13 +885,13 @@ afx_msg void OnContextHelp();
 
 [!code-cpp[NVC_MFCDocViewSDI#16](../../mfc/codesnippet/cpp/cframewnd-class_4.cpp)]
 
-`CFrameWnd` 문을 클래스 메시지 맵에 추가 하 고이 멤버 함수를 사용 하기 위해 액셀러레이터-테이블 항목 (일반적으로 SHIFT + F1)도 추가 합니다.
+문을 `CFrameWnd` 클래스 메시지 맵에 추가 하 고 액셀러레이터 키 항목 (일반적으로 SHIFT + F1)을 추가 하 여이 멤버 함수를 사용할 수 있습니다.
 
-응용 프로그램이 OLE 컨테이너인 경우 프레임 창 개체 `OnContextHelp` 내에 포함 된 모든 내부 항목을 도움말 모드로 전환 합니다. 커서가 화살표와 물음표로 바뀌고 사용자는 마우스 포인터를 이동 하 고 마우스 왼쪽 단추를 눌러 대화 상자, 창, 메뉴 또는 명령 단추를 선택할 수 있습니다. 이 멤버 함수는 커서 아래에 `WinHelp` 있는 개체의 도움말 컨텍스트를 사용 하 여 Windows 함수를 호출 합니다.
+응용 프로그램이 OLE 컨테이너 인 경우 `OnContextHelp`는 프레임 창 개체 내에 포함 된 모든 내부 항목을 도움말 모드로 전환 합니다. 커서가 화살표와 물음표로 바뀌고 사용자는 마우스 포인터를 이동 하 고 마우스 왼쪽 단추를 눌러 대화 상자, 창, 메뉴 또는 명령 단추를 선택할 수 있습니다. 이 멤버 함수는 커서 아래에 있는 개체의 도움말 컨텍스트를 사용 하 여 `WinHelp` Windows 함수를 호출 합니다.
 
 ##  <a name="oncreateclient"></a>  CFrameWnd::OnCreateClient
 
-을 `OnCreate`실행 하는 동안 프레임 워크에서 호출 됩니다.
+`OnCreate`를 실행 하는 동안 프레임 워크에서 호출 됩니다.
 
 ```
 virtual BOOL OnCreateClient(
@@ -915,12 +915,12 @@ Windows [Createstruct](/windows/win32/api/winuser/ns-winuser-createstructw) 구�
 
 이 함수를 호출 하지 마세요.
 
-이 함수의 기본 구현은 가능 하면 *pContext*에 `CView` 제공 된 정보에서 개체를 만듭니다.
+이 함수의 기본 구현은 가능 하면 *pContext*에 제공 된 정보에서 `CView` 개체를 만듭니다.
 
-이 함수를 재정의 하 여 `CCreateContext` 개체에 전달 된 값을 재정의 하거나 프레임 창의 주 클라이언트 영역에 있는 컨트롤이 만들어지는 방식을 변경 합니다. 재정의할 수 있는 `CCreateContext`멤버는 [ccreatecontext](../../mfc/reference/ccreatecontext-structure.md) 클래스에서 설명합니다.
+`CCreateContext` 개체에 전달 된 값을 재정의 하거나 프레임 창의 주 클라이언트 영역에 있는 컨트롤을 만드는 방법을 변경 하려면이 함수를 재정의 합니다. 재정의할 수 있는 `CCreateContext`멤버는 [ccreatecontext](../../mfc/reference/ccreatecontext-structure.md) 클래스에서 설명합니다.
 
 > [!NOTE]
->  `CREATESTRUCT` 구조에 전달 된 값을 바꾸지 마십시오. 참조용 으로만 사용 됩니다. 예를 들어 초기 창 사각형을 재정의 하려면 `CWnd` [precreatewindow](../../mfc/reference/cwnd-class.md#precreatewindow)멤버 함수를 재정의 합니다.
+>  `CREATESTRUCT` 구조에 전달 된 값을 바꾸지 마십시오. 참조용 으로만 사용 됩니다. 예를 들어 초기 창 사각형을 재정의 하려면 [Precreatewindow](../../mfc/reference/cwnd-class.md#precreatewindow)`CWnd` 멤버 함수를 재정의 합니다.
 
 ##  <a name="onhidemenubar"></a>  CFrameWnd::OnHideMenuBar
 
@@ -981,7 +981,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>매개 변수
 
 *pCmdUI*<br/>
-업데이트 명령을 생성 한 메뉴를 나타내는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 개체에 대 한 포인터입니다. 업데이트 처리기는 *pCmdUI*을 통해 `CCmdUI`개체의 [Enable](../../mfc/reference/ccmdui-class.md#enable) member 함수를 호출하여 사용자 인터페이스를 업데이트합니다.
+업데이트 명령을 생성 한 메뉴를 나타내는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 개체에 대 한 포인터입니다. 업데이트 처리기는 [pCmdUI](../../mfc/reference/ccmdui-class.md#enable)을 통해 `CCmdUI`개체의 *Enable* member 함수를 호출하여 사용자 인터페이스를 업데이트합니다.
 
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
 
@@ -998,13 +998,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수의 기본 구현에서는 `CWnd` 멤버 함수 `RepositionBars` 를 호출 하 여 프레임 및 주 `CView` 클라이언트 창 (일반적으로 또는 MDICLIENT)에 있는 모든 컨트롤 막대의 위치를 변경 합니다.
+이 멤버 함수의 기본 구현에서는 `RepositionBars` `CWnd` 멤버 함수를 호출 하 여 프레임 및 주 클라이언트 창 (일반적으로 `CView` 또는 MDICLIENT)에 있는 모든 컨트롤 막대의 위치를 변경 합니다.
 
 프레임 창의 레이아웃이 변경 된 후에 컨트롤 막대의 모양과 동작을 제어 하려면이 멤버 함수를 재정의 합니다. 예를 들어, 컨트롤 막대를 설정 하거나 해제 하거나 다른 컨트롤 막대를 추가 하는 경우 호출 합니다.
 
 ##  <a name="rectdefault"></a>  CFrameWnd::rectDefault
 
-창에서 창의 `CRect` 초기 크기와 위치를 선택할 수 있도록 창을 만들 때이 정적를 매개 변수로 전달 합니다.
+Windows에서 창의 초기 크기와 위치를 선택할 수 있도록 창을 만들 때이 정적 `CRect`를 매개 변수로 전달 합니다.
 
 ```
 static AFX_DATA const CRect rectDefault;
@@ -1058,11 +1058,11 @@ void SetActiveView(
 [CView](../../mfc/reference/cview-class.md) 개체에 대 한 포인터를 지정 하거나 활성 뷰가 없는 경우 NULL을 지정 합니다.
 
 *bNotify*<br/>
-뷰에 활성화를 알릴지 여부를 지정 합니다. TRUE 이면 새 `OnActivateView` 뷰에 대해이 호출 되 고, FALSE 이면가 호출 되지 않습니다.
+뷰에 활성화를 알릴지 여부를 지정 합니다. TRUE 이면 새 뷰에 대해 `OnActivateView`가 호출 됩니다. FALSE 이면이 고, 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
-프레임 워크는 사용자가 프레임 창 내의 뷰로 포커스를 변경할 때이 함수를 자동으로 호출 합니다. 를 명시적으로 호출 `SetActiveView` 하 여 포커스를 지정 된 뷰로 변경할 수 있습니다.
+프레임 워크는 사용자가 프레임 창 내의 뷰로 포커스를 변경할 때이 함수를 자동으로 호출 합니다. 명시적으로 `SetActiveView`를 호출 하 여 포커스를 지정 된 뷰로 변경할 수 있습니다.
 
 ##  <a name="setdockstate"></a>  CFrameWnd::SetDockState
 
@@ -1079,7 +1079,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="remarks"></a>설명
 
-컨트롤 막대의 이전 상태를 복원 하려면 `CDockState::LoadState` 또는 `Serialize`를 사용 하 여 저장 된 상태를 로드 한 다음를 `SetDockState` 사용 하 여 프레임 창의 컨트롤 막대에 적용할 수 있습니다. 이전 상태는를 사용 하 여 `CDockState` 개체에 저장 됩니다.`GetDockState`
+컨트롤 막대의 이전 상태를 복원 하려면 `CDockState::LoadState` 또는 `Serialize`를 사용 하 여 저장 된 상태를 로드 한 다음 `SetDockState`를 사용 하 여 해당 컨트롤을 프레임 창의 컨트롤 막대에 적용 하면 됩니다. 이전 상태는를 사용 하 여 `CDockState` 개체에 저장 됩니다 `GetDockState`
 
 ##  <a name="setmenubarstate"></a>  CFrameWnd::SetMenuBarState
 
@@ -1155,7 +1155,7 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="parameters"></a>매개 변수
 
 *nProgressPos*<br/>
-설정할 위치를 지정 합니다. 로 `SetProgressBarRange`설정 된 범위 내에 있어야 합니다.
+설정할 위치를 지정 합니다. `SetProgressBarRange`에 의해 설정 된 범위 내에 있어야 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>매개 변수
 
 *tbpFlags*<br/>
-진행률 단추의 현재 상태를 제어 하는 플래그입니다. 모든 상태를 함께 사용할 수 없으므로 다음 플래그 중 하나만 지정 합니다. TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+진행률 단추의 현재 상태를 제어 하는 플래그입니다. 모든 상태가 함께 사용할 수 없으므로 TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED 플래그 중 하나만 지정 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1262,7 +1262,7 @@ TRUE 이면 컨트롤 막대를 표시 하는 지연입니다. FALSE 이면 컨�
 
 ##  <a name="showownedwindows"></a>  CFrameWnd::ShowOwnedWindows
 
-`CFrameWnd` 개체의 하위 항목인 모든 창을 표시 하려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 `CFrameWnd` 개체의 하위 항목인 모든 창을 표시 합니다.
 
 ```
 void ShowOwnedWindows(BOOL bShow);
@@ -1273,7 +1273,7 @@ void ShowOwnedWindows(BOOL bShow);
 *bShow*<br/>
 소유 된 창을 표시 하거나 숨길지 여부를 지정 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

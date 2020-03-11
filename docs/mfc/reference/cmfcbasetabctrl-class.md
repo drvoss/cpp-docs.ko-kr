@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505451"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866706"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -260,7 +260,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||
 |[CMFCBaseTabCtrl::AddTab](#addtab)|탭 창에 새 탭을 추가합니다.|
@@ -376,15 +376,15 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||
 
-### <a name="protected-methods"></a>Protected 메서드
+### <a name="protected-methods"></a>보호된 메서드
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|[에서 파생되지 않은](../../mfc/reference/cwnd-class.md) CWnd `CDockablePane`에서 파생된 개체에 대한 래퍼를 만듭니다. `CMFCBaseTabCtrl` 개체를 도킹하려면 포함된 모든 컨트롤이 `CDockablePane`에서 파생되었거나 이 컨트롤에 도킹 래퍼가 있어야 합니다.<br /><br /> `SetDockingBayWrapperRTC`를 사용하여 래퍼의 클래스를 설정합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|마우스 왼쪽 단추 클릭이나 마우스 오른쪽 단추 클릭 중 어느 것을 사용하여 탭을 선택할지를 지정합니다.|
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|탭에 포함된 창이 자동으로 소멸되는지 여부를 지정합니다.|
@@ -405,7 +405,7 @@ Visual Studio 2015부터 이 클래스는 Microsoft Active Accessibility를 지�
 
 - 탭 컨트롤에 탭을 추가하면 기본적으로 이 탭은 분리 가능한 상태입니다. [CMFCBaseTabCtrl::AddTab](#addtab)을 사용하여 분리 불가능한 탭을 추가할 수도 있습니다. 매개 변수 `bDetachable` 을 `FALSE`로 설정하는 경우 탭을 분리할 수 없습니다. [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)메서드를 호출하여 탭의 분리 가능 여부를 변경할 수도 있습니다.
 
-- [CWnd Class](../../mfc/reference/cwnd-class.md) 에서 파생되는 개체를 도킹 가능한 컨트롤 막대나 도킹 가능한 탭에 배치할 수 있습니다. 전체 컨트롤을 도킹하려면 `CWnd` 개체를 도킹 가능하도록 만들어야 합니다. 이를 위해 MFC는 래퍼 클래스를 사용합니다. 이 래퍼 클래스는 [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)입니다. 도킹 가능한 컨트롤 막대나 도킹 가능한 탭에 추가되는 `CWnd` 개체는 `CDockablePaneAdapter` 개체 내에 래핑됩니다. `m_bEnableWrapping` 개체의 매개 변수 `CMFCBaseTablCtrl` 을 `FALSE`로 설정하여 자동 래핑을 사용하지 않도록 설정할 수 있습니다. [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)메서드를 사용하여 애플리케이션에서 래퍼로 사용할 클래스를 변경할 수도 있습니다.
+- [CWnd 클래스](../../mfc/reference/cwnd-class.md) 에서 파생 된 개체는 도킹 가능한 컨트롤 막대나 도킹 가능한 탭에 배치할 수 있습니다. 전체 컨트롤을 도킹 하려면 `CWnd` 개체를 도킹 가능 하 게 설정 해야 합니다. 이를 위해 MFC는 래퍼 클래스를 사용합니다. 이 래퍼 클래스는 [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)입니다. 도킹 가능한 컨트롤 막대나 도킹 가능한 탭에 추가되는 `CWnd` 개체는 `CDockablePaneAdapter` 개체 내에 래핑됩니다. `m_bEnableWrapping` 개체의 매개 변수 `CMFCBaseTablCtrl` 을 `FALSE`로 설정하여 자동 래핑을 사용하지 않도록 설정할 수 있습니다. [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)메서드를 사용하여 애플리케이션에서 래퍼로 사용할 클래스를 변경할 수도 있습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
 
@@ -556,7 +556,7 @@ virtual CWnd* CreateWrapper(
 
 ### <a name="return-value"></a>반환 값
 
-`CreateWrapper`가 *pWndToWrap*의 래퍼 클래스를 성공적으로 만들면 `CDockablePane` 클래스에서 파생된 래퍼에 대한 포인터입니다. 메서드가 실패하면 *pWndToWrap*을 반환합니다.
+`CDockablePane`가 `CreateWrapper`pWndToWrap*의 래퍼 클래스를 성공적으로 만들면*  클래스에서 파생된 래퍼에 대한 포인터입니다. 메서드가 실패하면 *pWndToWrap*을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -564,7 +564,7 @@ virtual CWnd* CreateWrapper(
 
 기본적으로 `CMFCBaseTabCtrl`은 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)의 인스턴스를 만듭니다. 래퍼의 기본 클래스를 변경하려면 [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)를 호출합니다.
 
-`CDockablePane`에서 *pWndToWrap*이 파생되면 이 메서드가 래퍼를 만들지 않습니다. 대신 실패하고 *pWndToWrap*을 반환합니다.
+*에서* pWndToWrap`CDockablePane`이 파생되면 이 메서드가 래퍼를 만들지 않습니다. 대신 실패하고 *pWndToWrap*을 반환합니다.
 
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab
 
@@ -852,7 +852,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>반환 값
 
-[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체가 자동 탭 색상 지정에 사용하는 [COLORREF](/windows/win32/gdi/colorref) 값 배열에 대한 참조입니다.
+[CMFCBaseTabCtrl](/windows/win32/gdi/colorref) 개체가 자동 탭 색상 지정에 사용하는 [COLORREF](../../mfc/reference/cmfcbasetabctrl-class.md) 값 배열에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1277,7 +1277,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 ### <a name="return-value"></a>반환 값
 
-*iTab*이 지정하는 탭에 있는 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. *iTab*이 유효하지 않으면 NULL입니다.
+[iTab](../../mfc/reference/cwnd-class.md)이 지정하는 탭에 있는 *CWnd* 개체에 대한 포인터입니다. *iTab*이 유효하지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1304,7 +1304,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [CMFCBaseTabCtrl::AddTab](#addtab) 또는 [CMFCBaseTabCtrl::InsertTab](#inserttab) 메서드를 사용하여 추가한 `CWnd` 개체에 대한 직접 포인터를 검색합니다. `GetTabWndNoWrapper`는 프레임워크가 개체의 래퍼를 추가한 경우에도 추가된 `CWnd`에 대한 포인터를 검색합니다. 래퍼 및 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)에 대한 자세한 내용은 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)를 참조하세요.
+이 메서드는 `CWnd`CMFCBaseTabCtrl::AddTab[ 또는 ](#addtab)CMFCBaseTabCtrl::InsertTab[ 메서드를 사용하여 추가한 ](#inserttab) 개체에 대한 직접 포인터를 검색합니다. `GetTabWndNoWrapper`는 프레임워크가 개체의 래퍼를 추가한 경우에도 추가된 `CWnd`에 대한 포인터를 검색합니다. 래퍼 및 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)에 대한 자세한 내용은 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)를 참조하세요.
 
 래퍼 클래스를 무시하지 않으려면 [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) 메서드를 사용합니다.
 
@@ -1405,7 +1405,7 @@ virtual void InsertTab(
 
 ### <a name="remarks"></a>설명
 
-*pNewWnd*로 표시된 개체가 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)에서 파생되지 않았고 *bDetachable* 매개 변수가 TRUE인 경우, 프레임워크는 새 탭에 대한 특수 래퍼를 만듭니다. 기본적으로 래퍼는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)의 인스턴스입니다. [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) 메서드를 사용하여 다른 래퍼 클래스를 작성합니다. 사용자 정의 래퍼 클래스는 `CDockablePaneAdapter`에서 파생되어야 합니다.
+*PNewWnd* 로 표시 된 개체가 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 에서 파생 되지 않은 경우 *BDETACHABLE* 가능한 매개 변수가 TRUE 이면 프레임 워크는 새 탭에 대 한 특수 래퍼를 만듭니다. 기본적으로 래퍼는 [CDockablePaneAdapter 클래스](../../mfc/reference/cdockablepaneadapter-class.md)의 인스턴스입니다. [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) 메서드를 사용하여 다른 래퍼 클래스를 작성합니다. 사용자 정의 래퍼 클래스는 `CDockablePaneAdapter`에서 파생되어야 합니다.
 
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
 
@@ -2106,7 +2106,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 ### <a name="remarks"></a>설명
 
-아이콘 이미지 목록의 이미지는 탭 레이블과 함께 표시됩니다. 아이콘을 표시하려면 [CMFCBaseTabCtrl::AddTab](#addtab)을 호출할 때 해당 인덱스를 지정해야 합니다.
+아이콘 이미지 목록의 이미지는 탭의 레이블과 함께 표시 됩니다. 아이콘을 표시 하려면 [CMFCBaseTabCtrl:: AddTab](#addtab)을 호출할 때 해당 인덱스를 지정 해야 합니다.
 
 탭 컨트롤이 플랫 스타일로 생성된 경우 `SetImageList`가 실패합니다. 프레임워크가 *uiID*로 표시된 이미지를 로드할 수 없는 경우에도 실패합니다.
 
@@ -2177,7 +2177,7 @@ virtual BOOL SetTabHicon(
 ### <a name="parameters"></a>매개 변수
 
 *iTab*<br/>
-[in] 탭의 0부터 시작하는 인덱스입니다. 이 메서드는 이 탭의 아이콘을 변경합니다.
+진행 탭의 인덱스 (0부터 시작)입니다. 이 메서드는이 탭의 아이콘을 변경 합니다.
 
 *hIcon*<br/>
 [in] 아이콘에 대한 핸들입니다.
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

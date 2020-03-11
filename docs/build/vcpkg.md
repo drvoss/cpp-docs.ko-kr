@@ -5,15 +5,15 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869704"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857027"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS 용 C++ 패키지 관리자
 
-vcpkg는 C++ 용 명령줄 패키지 관리자입니다. vcpkg는 Windows, Linux 및 MacOS에서 타사 라이브러리 획득 및 설치를 크게 간소화합니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg Windows 카탈로그의 모든 라이브러리가 Visual Studio 2015, Visual Studio 2017 및 Visual Studio 2019와의 호환성 테스트를 거쳤습니다. vcpkg는 현재 Windows 및 Linux/MacOS 카탈로그 사이에서 1900개 이상의 라이브러리를 지원합니다. C++ 커뮤니티는 지속적으로 두 카탈로그에 더 많은 라이브러리를 추가하고 있습니다.
+vcpkg는 C++ 용 명령줄 패키지 관리자입니다. vcpkg는 Windows, Linux 및 MacOS에서 타사 라이브러리 획득 및 설치를 크게 간소화합니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg Windows 카탈로그의 모든 라이브러리가 isual Studio 2015, Visual Studio 2017 및 Visual Studio 2019와의 호환성 테스트를 거쳤습니다. vcpkg는 현재 Windows 및 Linux/MacOS 카탈로그 사이에서 1900개 이상의 라이브러리를 지원합니다. C++ 커뮤니티는 지속적으로 두 카탈로그에 더 많은 라이브러리를 추가하고 있습니다.
 
 ## <a name="simple-yet-flexible"></a>단순하면서도 유연한
 
@@ -25,7 +25,7 @@ Windows 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일<
 
 또한 포트 컬렉션에 프라이빗 라이브러리가 있는 vcpkg 클론을 만들 수 있습니다. 미리 작성된 이진 파일 및 헤더를 다운로드하는 포트를 추가합니다. 그런 다음 해당 파일을 기본 위치에 단순히 복사하는 portfile.cmake 파일을 작성합니다.
 
-<sup>1</sup> *참고: 일부 독점 라이브러리에서는 소스를 사용할 수 없습니다. 이러한 경우 vcpkg는 호환되는 미리 작성된 이진 파일을 다운로드합니다.*
+<sup>1</sup> *참고: 일부 소유 라이브러리에 대해서는 소스를 사용할 수 없습니다. 이러한 경우 vcpkg는 미리 빌드된 버전과 호환 되는 이진 파일을 다운로드 합니다.*
 
 ## <a name="installation"></a>설치
 
@@ -79,7 +79,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예:
+CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예들 들어 다음과 같습니다.
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -105,7 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="per-user"></a>사용자 단위
 
-**vcpkg integrate install**을 실행하여 사용자 단위로 모든 vcpkg 헤더 파일과 이진 파일을 찾도록 Visual Studio를 구성할 수 있습니다. VC++ 디렉터리 경로를 수동으로 편집할 필요가 없습니다. 클론이 여러 개 있는 경우 이 명령을 실행하는 클론이 새 기본 위치가 됩니다.
+**vcpkg integrate install**을 실행하여 사용자 단위로 모든 vcpkg 헤더 파일과 이진 파일을 찾도록 Visual Studio를 구성할 수 있습니다. VC + + 디렉터리 경로를 수동으로 편집할 필요가 없습니다. 클론이 여러 개 있는 경우 이 명령을 실행하는 클론이 새 기본 위치가 됩니다.
 
 이제 폴더/헤더를 입력하는 것만으로 헤더를 포함할 수 있으며 자동 완성이 도움이 됩니다. 라이브러리에 연결하거나 프로젝트 참조를 추가하는 추가 단계는 필요 없습니다. 다음 그림에서는 Visual Studio가 azure-storage-cpp 헤더를 찾는 방법을 보여 줍니다. vcpkg는 대상 플랫폼으로 분할된 **/installed** 하위 폴더에 헤더를 배치합니다. 다음 다이어그램에서는 라이브러리의 **/was** 하위 폴더에 있는 포함 파일의 목록을 보여줍니다.
 

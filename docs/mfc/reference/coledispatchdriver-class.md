@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504175"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855632"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 클래스
 
@@ -47,51 +47,51 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|`COleDispatchDriver` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[COleDispatchDriver::AttachDispatch](#attachdispatch)|개체에 대 한 `IDispatch` 연결을 `COleDispatchDriver` 연결 합니다.|
-|[COleDispatchDriver::CreateDispatch](#createdispatch)|연결을 만들고이 `COleDispatchDriver` 를 개체에 연결 합니다. `IDispatch`|
+|[COleDispatchDriver::AttachDispatch](#attachdispatch)|`COleDispatchDriver` 개체에 `IDispatch` 연결을 연결 합니다.|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|`IDispatch` 연결을 만들어 `COleDispatchDriver` 개체에 연결 합니다.|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|`IDispatch` 연결을 해제 하지 않고 분리 합니다.|
 |[COleDispatchDriver::GetProperty](#getproperty)|자동화 속성을 가져옵니다.|
 |[COleDispatchDriver::InvokeHelper](#invokehelper)|자동화 메서드를 호출 하는 도우미입니다.|
-|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|연결을 `IDispatch` 해제 합니다.|
+|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|`IDispatch` 연결을 해제 합니다.|
 |[COleDispatchDriver::SetProperty](#setproperty)|자동화 속성을 설정 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[COleDispatchDriver:: operator =](#operator_eq)|원본 값을 `COleDispatchDriver` 개체에 복사 합니다.|
+|[COleDispatchDriver:: operator =](#operator_eq)|`COleDispatchDriver` 개체에 소스 값을 복사 합니다.|
 |[COleDispatchDriver:: operator LPDISPATCH](#operator_lpdispatch)|기본 `IDispatch` 포인터에 액세스 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|또는 개체 소멸 `IDispatch` 중 `ReleaseDispatch` 에를 해제할 것인지 여부를 지정 합니다.|
-|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|`IDispatch` 이`COleDispatchDriver`에 연결 된 인터페이스에 대 한 포인터를 나타냅니다.|
+|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|`ReleaseDispatch` 또는 개체 소멸 중에 `IDispatch`를 해제할 것인지 여부를 지정 합니다.|
+|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|이 `COleDispatchDriver`에 연결 된 `IDispatch` 인터페이스에 대 한 포인터를 나타냅니다.|
 
 ## <a name="remarks"></a>설명
 
 `COleDispatchDriver`에 기본 클래스가 없습니다.
 
-OLE 디스패치 인터페이스는 개체의 메서드 및 속성에 대 한 액세스를 제공 합니다. `COleDispatchDriver` 형식의`IDispatch`디스패치 연결을 연결, 분리, 만들기 및 해제 하는 멤버 함수입니다. 다른 멤버 함수는 가변 인수 목록을 사용 하 여 `IDispatch::Invoke`호출을 단순화 합니다.
+OLE 디스패치 인터페이스는 개체의 메서드 및 속성에 대 한 액세스를 제공 합니다. 의 멤버 함수 `COleDispatchDriver` `IDispatch`유형의 디스패치 연결을 연결, 분리, 만들기 및 해제 합니다. 다른 멤버 함수는 가변 인수 목록을 사용 하 여 `IDispatch::Invoke`호출을 단순화 합니다.
 
-이 클래스는 직접 사용할 수 있지만 일반적으로 클래스 추가 마법사에서 만든 클래스 에서만 사용 됩니다. 형식 라이브러리를 가져와서 C++ 새 클래스를 만드는 경우 새 클래스는에서 `COleDispatchDriver`파생 됩니다.
+이 클래스는 직접 사용할 수 있지만 일반적으로 클래스 추가 마법사에서 만든 클래스 에서만 사용 됩니다. 형식 라이브러리를 가져와서 C++ 새 클래스를 만드는 경우 새 클래스는 `COleDispatchDriver`에서 파생 됩니다.
 
-사용 `COleDispatchDriver`에 대 한 자세한 내용은 다음 문서를 참조 하세요.
+`COleDispatchDriver`사용에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-- [자동화 클라이언트](../../mfc/automation-clients.md)
+- [Automation Clients](../../mfc/automation-clients.md)
 
 - [자동화 서버](../../mfc/automation-servers.md)
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `COleDispatchDriver`
 
@@ -101,7 +101,7 @@ OLE 디스패치 인터페이스는 개체의 메서드 및 속성에 대 한 �
 
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
 
-`AttachDispatch` 멤버 함수를 호출하여 `IDispatch` 개체에 대한 `COleDispatchDriver` 포인터를 연결합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
+`AttachDispatch` 멤버 함수를 호출하여 `IDispatch` 개체에 대한 `COleDispatchDriver` 포인터를 연결합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하세요.
 
 ```
 void AttachDispatch(
@@ -150,9 +150,9 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
 폼 `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**)은 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 인터페이스에 연결합니다.
 
-`COleDispatchDriver`Form ( **const**`COleDispatchDriver`& )은 기존`COleDispatchDriver` 개체를 복사 하 고 참조 횟수를 증가 시킵니다.`dispatchSrc`
+`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) 폼은 기존 `COleDispatchDriver` 개체를 복사 하 고 참조 횟수를 증가 시킵니다.
 
-폼 `COleDispatchDriver`()은 개체를 `COleDispatchDriver` 만들지만 인터페이스에 `IDispatch` 연결 하지는 않습니다. 인수 없이 `COleDispatchDriver`()를 사용 하기 전에 [coledispatchdriver:: createdispatch](#createdispatch) 또는 [coledispatchdriver:: AttachDispatch](#attachdispatch)를 사용 하 여 `IDispatch` 를 연결 해야 합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
+`COleDispatchDriver`() 폼은 `COleDispatchDriver` 개체를 만들지만 `IDispatch` 인터페이스에 연결 하지는 않습니다. 인수 없이 `COleDispatchDriver`()를 사용 하기 전에 [Coledispatchdriver:: CreateDispatch](#createdispatch) 또는 [Coledispatchdriver:: AttachDispatch](#attachdispatch)를 사용 하 여 `IDispatch`를 연결 해야 합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하세요.
 
 ### <a name="example"></a>예제
 
@@ -193,7 +193,7 @@ BOOL CreateDispatch(
 
 ##  <a name="detachdispatch"></a>  COleDispatchDriver::DetachDispatch
 
-이 개체에서 `IDispatch` 현재 연결을 분리 합니다.
+이 개체에서 현재 `IDispatch` 연결을 분리 합니다.
 
 ```
 LPDISPATCH DetachDispatch();
@@ -205,7 +205,7 @@ LPDISPATCH DetachDispatch();
 
 ### <a name="remarks"></a>설명
 
-는 `IDispatch` 해제 되지 않습니다.
+`IDispatch` 해제 되지 않습니다.
 
 LPDISPATCH 유형에 대 한 자세한 내용은 Windows SDK에서 [IDispatch 인터페이스 구현](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 을 참조 하세요.
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 호출할 메서드 또는 속성을 식별합니다.
 
 *wFlags*<br/>
-호출의 컨텍스트를 설명 하는 플래그 `IDispatch::Invoke`입니다. 을 선택합니다. 가능한 값 목록은 Windows SDK에서 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 의 *wflags* 매개 변수를 참조 하세요.
+`IDispatch::Invoke`에 대 한 호출의 컨텍스트를 설명 하는 플래그입니다. . 가능한 값 목록은 Windows SDK에서 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 의 *wflags* 매개 변수를 참조 하세요.
 
 *vtRet*<br/>
 반환 값 형식을 지정합니다. 가능한 값은 설명 섹션을 참조하세요.
@@ -296,7 +296,7 @@ void AFX_CDECL InvokeHelper(
 
 *Pbparaminfo* 인수는 공백으로 구분 된 **VTS_** 상수 목록입니다. 공백(쉼표가 아님)으로 구분된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정합니다. 가능한 값은 [EVENT_CUSTOM](event-maps.md#event_custom) 매크로를 통해 나열됩니다.
 
-이 함수는 매개 변수를 VARIANTARG 값으로 변환한 다음 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 메서드를 호출 합니다. `Invoke` 호출에 실패하면 이 함수가 예외를 throw합니다. 에서 `IDispatch::Invoke` 반환 된 (상태 코드)가 DISP_E_EXCEPTION 인 경우이 함수는 [coleexception](../../mfc/reference/coleexception-class.md) 개체를 throw 하 고, 그렇지 않으면 [coledispatchexception](../../mfc/reference/coledispatchexception-class.md)을 throw 합니다.
+이 함수는 매개 변수를 VARIANTARG 값으로 변환한 다음 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 메서드를 호출 합니다. `Invoke` 호출에 실패하면 이 함수가 예외를 throw합니다. `IDispatch::Invoke`에서 반환 된 (상태 코드)가 DISP_E_EXCEPTION 되는 경우이 함수는 [Coleexception](../../mfc/reference/coleexception-class.md) 개체를 throw 합니다. 그렇지 않은 경우에는 [Coledispatchexception](../../mfc/reference/coledispatchexception-class.md)을 throw 합니다.
 
 자세한 내용은 Windows SDK에서 [Idispatch 인터페이스 구현](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [Idispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)및 [COM 오류 코드 구조](/windows/win32/com/structure-of-com-error-codes) [VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant)를 참조 하세요.
 
@@ -306,7 +306,7 @@ void AFX_CDECL InvokeHelper(
 
 ##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
 
-TRUE 이면 [releasedispatch](#releasedispatch) 를 호출할 때 또는이 `COleDispatchDriver` 개체가 제거 될 때 [m_lpDispatch](#m_lpdispatch) 에서 액세스 하는 COM 개체가 자동으로 해제 됩니다.
+TRUE 이면 [Releasedispatch](#releasedispatch) 를 호출할 때 또는이 `COleDispatchDriver` 개체가 제거 될 때 [m_lpDispatch](#m_lpdispatch) 에서 액세스 하는 COM 개체가 자동으로 해제 됩니다.
 
 ```
 BOOL m_bAutoRelease;
@@ -314,7 +314,7 @@ BOOL m_bAutoRelease;
 
 ### <a name="remarks"></a>설명
 
-기본적으로 생성자 `m_bAutoRelease` 에서는 TRUE로 설정 됩니다.
+기본적으로 `m_bAutoRelease`는 생성자에서 TRUE로 설정 됩니다.
 
 COM 개체를 해제 하는 방법에 대 한 자세한 내용은 Windows SDK [참조 계산](/windows/win32/com/implementing-reference-counting) 및 [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 구현을 참조 하세요.
 
@@ -324,7 +324,7 @@ COM 개체를 해제 하는 방법에 대 한 자세한 내용은 Windows SDK [�
 
 ##  <a name="m_lpdispatch"></a>  COleDispatchDriver::m_lpDispatch
 
-`IDispatch` 이`COleDispatchDriver`에 연결 된 인터페이스에 대 한 포인터입니다.
+이 `COleDispatchDriver`에 연결 된 `IDispatch` 인터페이스에 대 한 포인터입니다.
 
 ```
 LPDISPATCH m_lpDispatch;
@@ -332,7 +332,7 @@ LPDISPATCH m_lpDispatch;
 
 ### <a name="remarks"></a>설명
 
-`m_lpDispatch` 데이터 멤버는 lpdispatch 형식의 공용 변수입니다.
+`m_lpDispatch` 데이터 멤버는 LPDISPATCH 형식의 공용 변수입니다.
 
 자세한 내용은 Windows SDK에서 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 를 참조 하세요.
 
@@ -342,7 +342,7 @@ LPDISPATCH m_lpDispatch;
 
 ##  <a name="operator_eq"></a>  COleDispatchDriver::operator =
 
-원본 값을 `COleDispatchDriver` 개체에 복사 합니다.
+`COleDispatchDriver` 개체에 소스 값을 복사 합니다.
 
 ```
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
@@ -355,7 +355,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 
 ##  <a name="operator_lpdispatch"></a>COleDispatchDriver:: operator LPDISPATCH
 
-개체의 기본 `IDispatch` 포인터에 액세스 합니다. `COleDispatchDriver`
+`COleDispatchDriver` 개체의 기본 `IDispatch` 포인터에 액세스 합니다.
 
 ```
 operator LPDISPATCH();
@@ -367,7 +367,7 @@ operator LPDISPATCH();
 
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch
 
-연결을 `IDispatch` 해제 합니다. 자세한 내용은 [IDispatch 인터페이스 구현](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 을 참조 하세요.
+`IDispatch` 연결을 해제 합니다. 자세한 내용은 [IDispatch 인터페이스 구현](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 을 참조 하세요.
 
 ```
 void ReleaseDispatch();
@@ -375,7 +375,7 @@ void ReleaseDispatch();
 
 ### <a name="remarks"></a>설명
 
-이 연결에 대해 자동 릴리스가 설정 된 경우이 함수는 인터페이스 `IDispatch::Release` 를 해제 하기 전에를 호출 합니다.
+이 연결에 대해 자동 릴리스가 설정 된 경우이 함수는 인터페이스를 해제 하기 전에 `IDispatch::Release`를 호출 합니다.
 
 ### <a name="example"></a>예제
 
@@ -406,7 +406,7 @@ void AFX_CDECL SetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 ACDUAL](../../overview/visual-cpp-samples.md)<br/>

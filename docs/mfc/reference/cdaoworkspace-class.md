@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883874"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 클래스
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|작업 영역 개체를 생성 합니다. 그런 다음 `Create` 또는 `Open`를 호출 합니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CDaoWorkspace::Append](#append)|새로 만든 작업 영역을 데이터베이스 엔진의 작업 영역 컬렉션에 추가 합니다.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|작업 영역에 열려 있는 모든 데이터베이스에 적용 되는 새 트랜잭션을 시작 합니다.|
@@ -120,11 +120,11 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|기본 DAO 작업 영역 개체를 가리킵니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 대부분의 경우에는 여러 작업 영역이 필요 하지 않으며 명시적 작업 영역 개체를 만들 필요가 없습니다. 데이터베이스 및 레코드 집합 개체를 열면 DAO의 기본 작업 영역을 사용 합니다. 그러나 필요한 경우 추가 작업 영역 개체를 만들어 한 번에 여러 세션을 실행할 수 있습니다. 각 작업 영역 개체는 자체 데이터베이스 컬렉션에 여러 개의 열려 있는 데이터베이스 개체를 포함할 수 있습니다. MFC에서 작업 영역은 주로 트랜잭션 관리자 이며, 같은 "트랜잭션 공간"에 열려 있는 데이터베이스 집합을 모두 지정 합니다.
 
@@ -165,7 +165,7 @@ MFC는 보안 제어에 사용 되는 DAO의 사용자 및 그룹 컬렉션을 �
 
 [Close](#close) 멤버 함수를 사용 하 여 작업 영역을 닫아 작업 영역 세션을 종료 합니다. `Close` 이전에 닫지 않은 데이터베이스를 모두 닫고 커밋되지 않은 트랜잭션을 롤백합니다.
 
-## <a name="transactions"></a>트랜잭션
+## <a name="transactions"></a>의
 
 DAO는 작업 영역 수준에서 트랜잭션을 관리 합니다. 따라서 열려 있는 여러 데이터베이스가 있는 작업 영역에서 트랜잭션은 모든 데이터베이스에 적용 됩니다. 예를 들어 두 데이터베이스에 커밋되지 않은 업데이트가 있고 [CommitTrans](#committrans)를 호출 하면 모든 업데이트가 커밋됩니다. 트랜잭션을 단일 데이터베이스로 제한 하려는 경우이에 대 한 별도의 작업 영역 개체가 필요 합니다.
 
@@ -201,7 +201,7 @@ DAO를 직접 호출 하는 방법과 DAO 보안에 대 한 자세한 내용은 
 virtual void Append();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `Append` 새로 만든 작업 영역 개체를 데이터베이스 엔진의 작업 영역 컬렉션에 추가 합니다. 작업 영역은 데이터베이스 엔진 세션 간에 지속 되지 않습니다. 메모리에만 저장 되 고 디스크에는 저장 되지 않습니다. 작업 영역을 추가할 필요는 없습니다. 그렇지 않은 경우에는 계속 사용할 수 있습니다.
 
@@ -217,7 +217,7 @@ virtual void Append();
 void BeginTrans();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `BeginTrans`호출한 후에는 트랜잭션을 커밋할 때 데이터 또는 데이터베이스 구조에 대 한 업데이트를 적용 합니다. 작업 영역에서 단일 트랜잭션 공간을 정의 하기 때문에 트랜잭션은 작업 영역에서 열려 있는 모든 데이터베이스에 적용 됩니다. 트랜잭션을 완료 하는 방법에는 두 가지가 있습니다.
 
@@ -237,7 +237,7 @@ void BeginTrans();
 CDaoWorkspace();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 C++ 개체를 생성 한 후에는 다음과 같은 두 가지 옵션을 사용할 수 있습니다.
 
@@ -257,7 +257,7 @@ C++ 개체를 생성 한 후에는 다음과 같은 두 가지 옵션을 사용�
 virtual void Close();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 열려 있는 작업 영역 개체를 닫으면 기본 DAO 개체가 해제 되 고 작업 영역이 작업 영역 컬렉션의 멤버인 경우 컬렉션에서 제거 됩니다. `Close`를 호출 하는 것이 좋은 프로그래밍 습관입니다.
 
@@ -276,7 +276,7 @@ virtual void Close();
 void CommitTrans();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 트랜잭션은 [BeginTrans](#begintrans)를 호출 하 여 데이터베이스의 데이터 또는 구조에 대 한 일련의 변경 내용으로 구성 됩니다. 트랜잭션을 완료 하면 커밋하거나 [롤백하여 롤백합니다 (](#rollback)변경 취소) 합니다. 기본적으로 트랜잭션을 사용 하지 않으면 레코드 업데이트가 즉시 커밋됩니다. `BeginTrans`를 호출 하면 `CommitTrans`를 호출할 때까지 업데이트 커밋이 지연 됩니다.
 
@@ -371,7 +371,7 @@ static void PASCAL CompactDatabase(
 > [!CAUTION]
 >  데이터베이스가 암호화 되지 않은 경우 사용자/암호 보안을 구현 하는 경우에도 데이터베이스를 구성 하는 이진 디스크 파일을 직접 읽을 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 데이터베이스에서 데이터를 변경 하면 데이터베이스 파일이 조각화 될 수 있으며 필요한 것 보다 더 많은 디스크 공간을 사용할 수 있습니다. 데이터베이스 파일을 조각 모음 하려면 정기적으로 데이터베이스를 압축 해야 합니다. 압축 된 데이터베이스는 일반적으로 더 작습니다. 또한 데이터베이스를 복사 하 고 압축 하는 동안 데이터 형식의 데이터 정렬, 암호화 또는 버전을 변경 하도록 선택할 수 있습니다.
 
@@ -403,9 +403,9 @@ virtual void Create(
 작업 영역 소유자의 사용자 이름입니다. 요구 사항은 *lpszDefaultUser* 매개 변수를 사용 하 여 [setdefaultuser](#setdefaultuser) 멤버 함수를 참조 하세요. 관련 정보는 DAO 도움말의 "UserName 속성" 항목을 참조 하십시오.
 
 *lpszPassword*<br/>
-새 작업 영역 개체에 대 한 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대소문자를 구분합니다. 관련 내용은 DAO 도움말에서 "Password 속성" 항목을 참조 하십시오.
+새 작업 영역 개체에 대 한 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자를 구별합니다. 관련 내용은 DAO 도움말에서 "Password 속성" 항목을 참조 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 전반적인 생성 프로세스는 다음과 같습니다.
 
@@ -429,7 +429,7 @@ short GetDatabaseCount();
 
 작업 영역에 열려 있는 데이터베이스의 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `GetDatabaseCount`는 작업 영역의 데이터베이스 컬렉션에 정의 된 모든 데이터베이스를 반복 해야 하는 경우에 유용 합니다. 컬렉션에서 지정 된 데이터베이스에 대 한 정보를 가져오려면 [Getdatabaseinfo](#getdatabaseinfo)를 참조 하세요. 일반적인 사용법은 열려 있는 데이터베이스 수에 대 한 `GetDatabaseCount`를 호출한 다음 `GetDatabaseInfo`에 대 한 반복 된 호출의 루프 인덱스로 해당 숫자를 사용 하는 것입니다.
 
@@ -469,7 +469,7 @@ void GetDatabaseInfo(
 *lpszName*<br/>
 이름으로 조회 하기 위한 데이터베이스 개체의 이름입니다. 이름은 새 작업 영역 개체의 이름을 고유 하 게 하는 최대 14 자의 문자열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 한 버전의 함수를 사용 하 여 인덱스를 기준으로 데이터베이스를 조회할 수 있습니다. 다른 버전에서는 이름을 기준으로 데이터베이스를 조회할 수 있습니다.
 
@@ -487,7 +487,7 @@ static CString PASCAL GetIniPath();
 
 레지스트리 위치를 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 위치를 사용 하 여 데이터베이스 엔진의 설정에 대 한 정보를 가져올 수 있습니다. 반환 되는 정보는 실제로 레지스트리 하위 키의 이름입니다.
 
@@ -505,7 +505,7 @@ BOOL GetIsolateODBCTrans();
 
 ODBC 트랜잭션이 격리 된 경우 0이 아닌 경우 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 경우에 따라 동일한 ODBC 데이터베이스에서 여러 개의 동시 트랜잭션을 보류 해야 할 수도 있습니다. 이렇게 하려면 각 트랜잭션에 대해 별도의 작업 영역을 열어야 합니다. 각 작업 영역에는 데이터베이스에 대 한 자체 ODBC 연결이 있을 수 있지만이로 인해 시스템 성능이 저하 된다는 점에 유의 하세요. 트랜잭션 격리는 일반적으로 필요 하지 않기 때문에 동일한 사용자가 연 여러 작업 영역 개체의 ODBC 연결은 기본적으로 공유 됩니다.
 
@@ -525,7 +525,7 @@ static short PASCAL GetLoginTimeout();
 
 ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전 까지의 시간 (초)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 값은 ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전 까지의 시간 (초)을 나타냅니다. 기본 LoginTimeout 설정은 20 초입니다. LoginTimeout을 0으로 설정 하면 시간 제한이 발생 하지 않으며 데이터 원본과의 통신이 응답 하지 않을 수 있습니다.
 
@@ -545,7 +545,7 @@ CString GetName();
 
 DAO 작업 영역 개체의 사용자 정의 이름을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이름은 데이터베이스 엔진의 작업 영역 컬렉션에서 이름을 기준으로 DAO 작업 영역 개체에 액세스 하는 데 유용 합니다.
 
@@ -563,7 +563,7 @@ CString GetUserName();
 
 작업 영역 개체의 소유자를 나타내는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 작업 영역 소유자에 대 한 사용 권한을 가져오거나 설정 하려면 DAO를 직접 호출 하 여 사용 권한 속성 설정을 확인 합니다. 사용자가 보유 한 사용 권한을 결정 합니다. 권한으로 작업 하려면 시스템이 필요 합니다. MDA 파일.
 
@@ -581,7 +581,7 @@ static CString PASCAL GetVersion();
 
 개체와 연결 된 데이터베이스 엔진의 버전을 나타내는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 반환 되는 값은 "major. minor" 형식의 버전 번호를 나타냅니다. 예를 들면 "3.0"입니다. 제품 버전 번호 (예: 3.0)는 버전 번호 (3), 마침표 및 릴리스 번호 (0)로 구성 됩니다.
 
@@ -599,7 +599,7 @@ short GetWorkspaceCount();
 
 작업 영역 컬렉션에서 열린 작업 영역 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 컬렉션에 추가 되지 않은 열려 있는 작업 영역은이 수에 포함 되지 않습니다. `GetWorkspaceCount`는 작업 영역 컬렉션에서 정의 된 모든 작업 영역을 반복 해야 하는 경우에 유용 합니다. 컬렉션에서 지정 된 작업 영역에 대 한 정보를 얻으려면 [GetWorkspaceInfo](#getworkspaceinfo)를 참조 하세요. 일반적인 사용법은 열린 작업 영역 수에 대 한 `GetWorkspaceCount`를 호출한 다음 `GetWorkspaceInfo`에 대 한 반복 된 호출의 루프 인덱스로 해당 숫자를 사용 하는 것입니다.
 
@@ -639,7 +639,7 @@ void GetWorkspaceInfo(
 *lpszName*<br/>
 이름으로 조회할 작업 영역 개체의 이름입니다. 이름은 새 작업 영역 개체의 이름을 고유 하 게 하는 최대 14 자의 문자열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Wkspcinfo*에 반환 되는 정보에 대 한 설명은 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 구조를 참조 하세요. 이 구조에는 위의 정보 항목에 해당 하는 멤버가 포함 되어 *있습니다.* 한 수준에서 정보를 요청 하면 이전 수준에 대 한 정보도 얻을 수 있습니다.
 
@@ -656,7 +656,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 *nAction*<br/>
 유휴 상태 처리 중에 수행할 작업입니다. 현재 유일 하 게 유효한 동작은 `dbFreeLocks`입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이는 대부분의 경우에는 레코드 집합의 모든 레코드를 최신 상태로 유지 하는 백그라운드 처리 시간이 충분 하지 않은 다중 사용자, 멀티태스킹 환경에서 주로 적용 됩니다.
 
@@ -681,7 +681,7 @@ BOOL IsOpen() const;
 
 작업 영역 개체가 열려 있으면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 열려 있는 상태의 작업 영역에 대 한 멤버 함수를 호출할 수 있습니다.
 
@@ -689,7 +689,7 @@ BOOL IsOpen() const;
 
 기본 DAO 작업 영역 개체에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 DAO 개체에 직접 액세스 해야 하는 경우이 데이터 멤버를 사용 합니다. 이 포인터를 통해 DAO 개체의 인터페이스를 호출할 수 있습니다.
 
@@ -708,7 +708,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 *lpszName*<br/>
 열려는 DAO 작업 영역 개체의 이름 (작업 영역 이름을 고유 하 게 하는 최대 14 자의 문자열)입니다. 기본 작업 영역을 명시적으로 열려면 NULL 값을 그대로 적용 합니다. 이름 지정 요구 사항은 [Create](#create) *lpszName* 매개 변수를 참조 하세요. 관련 내용은 DAO 도움말의 "이름 속성" 항목을 참조 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CDaoWorkspace` 개체를 생성 한 후 다음 중 하나를 수행 하려면이 멤버 함수를 호출 합니다.
 
@@ -739,7 +739,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 *lpszName*<br/>
 기존 Microsoft Jet 엔진 데이터베이스 파일의 경로 및 파일 이름입니다. 경로를 생략 하면 현재 디렉터리만 검색 됩니다. 시스템에서 UNC (uniform 명명 규칙)를 지 원하는 경우 다음과 같은 네트워크 경로를 지정할 수도 있습니다. "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". "\\"은 C++ 이스케이프 문자 이므로 경로 문자열에 이중 백슬래시가 필요 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 복구 하기 전에 *lpszName* 에서 지정한 데이터베이스를 닫아야 합니다. 다중 사용자 환경에서 다른 사용자는 복구 하는 동안 *lpszName* 를 열 수 없습니다. *LpszName* 가 닫혀 있지 않거나 단독 사용에 사용할 수 없는 경우 오류가 발생 합니다.
 
@@ -758,7 +758,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 void Rollback();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 > [!CAUTION]
 >  단일 작업 영역 개체 내에서 트랜잭션은 항상 작업 영역에 대해 전역적 이며 하나의 데이터베이스 또는 레코드 집합으로 제한 되지 않습니다. 작업 영역 트랜잭션 내에서 둘 이상의 데이터베이스 또는 레코드 집합에 대 한 작업을 수행 하는 경우 `Rollback`은 이러한 모든 데이터베이스 및 레코드 집합에 대 한 모든 작업을 복원 합니다.
@@ -779,9 +779,9 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ### <a name="parameters"></a>매개 변수
 
 *lpszPassword*<br/>
-기본 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대소문자를 구분합니다.
+기본 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자를 구별합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 설정 하는 기본 암호는 호출 후 만든 새 작업 영역에 적용 됩니다. 후속 작업 영역을 만들 때 [만들기](#create) 호출에서 암호를 지정할 필요가 없습니다.
 
@@ -810,7 +810,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 *lpszDefaultUser*<br/>
 기본 사용자 이름입니다. 사용자 이름은 1-20 자까지 입력할 수 있으며 알파벳 문자를 포함할 수 있습니다. 악센트 문자, 숫자, 공백 및 기호: "(따옴표),/(슬래시), \ (백슬래시), \[ \] (대괄호),: (콜론), &#124; (파이프), \< (보다 작음 부호), > (보다 큼 기호), + (더하기 기호), = (등호),; (세미콜론),, (쉼표), (물음표), \* (별표), 선행 공백 및 제어 문자 (ASCII 00 ~ ASCII 31). 관련 정보는 DAO 도움말의 "UserName 속성" 항목을 참조 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 설정한 기본 사용자 이름은 호출 후 만든 새 작업 영역에 적용 됩니다. 후속 작업 영역을 만들 때 [만들기](#create) 호출에서 사용자 이름을 지정할 필요가 없습니다.
 
@@ -839,7 +839,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 *lpszRegistrySubkey*<br/>
 설치 가능한 ISAM 데이터베이스에 필요한 Microsoft Jet 데이터베이스 엔진 설정 또는 매개 변수의 위치에 대 한 Windows 레지스트리 하위 키의 이름을 포함 하는 문자열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 특수 설정을 지정 해야 하는 경우에만 `SetIniPath`를 호출 합니다. 자세한 내용은 DAO 도움말의 "IniPath 속성" 항목을 참조 하십시오.
 
@@ -861,7 +861,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 *bIsolateODBCTrans*<br/>
 ODBC 트랜잭션 격리를 시작 하려면 TRUE를 전달 합니다. ODBC 트랜잭션 격리를 중지 하려면 FALSE를 전달 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 경우에 따라 동일한 ODBC 데이터베이스에서 여러 개의 동시 트랜잭션을 보류 해야 할 수도 있습니다. 이렇게 하려면 각 트랜잭션에 대해 별도의 작업 영역을 열어야 합니다. 각 작업 영역에는 데이터베이스에 대 한 자체 ODBC 연결이 있을 수 있지만이로 인해 시스템 성능이 저하 됩니다. 트랜잭션 격리는 일반적으로 필요 하지 않기 때문에 동일한 사용자가 연 여러 작업 영역 개체의 ODBC 연결은 기본적으로 공유 됩니다.
 
@@ -880,7 +880,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 *nSeconds*<br/>
 ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전 까지의 시간 (초)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 값은 ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전 까지의 시간 (초)을 나타냅니다. 기본 LoginTimeout 설정은 20 초입니다. LoginTimeout을 0으로 설정 하면 시간 제한이 발생 하지 않으며 데이터 원본과의 통신이 응답 하지 않을 수 있습니다.
 

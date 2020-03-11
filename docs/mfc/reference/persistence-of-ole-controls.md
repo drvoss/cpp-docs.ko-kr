@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502035"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855764"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
 
@@ -24,7 +24,7 @@ OLE 컨트롤의 한 가지 기능은 OLE 컨트롤에서 파일 또는 스트�
 |[PX_Bool](#px_bool)|**BOOL**형식의 컨트롤 속성을 교환 합니다.|
 |[PX_Color](#px_color)|컨트롤의 색 속성을 교환 합니다.|
 |[PX_Currency](#px_currency)|**CY**형식의 컨트롤 속성을 교환 합니다.|
-|[PX_DataPath](#px_datapath)|형식의 `CDataPathProperty`컨트롤 속성을 교환 합니다.|
+|[PX_DataPath](#px_datapath)|`CDataPathProperty`형식의 컨트롤 속성을 교환 합니다.|
 |[PX_Double](#px_double)|**Double**형식의 컨트롤 속성을 교환 합니다.|
 |[PX_Font](#px_font)|컨트롤의 글꼴 속성을 교환 합니다.|
 |[PX_Float](#px_float)|**Float**형식의 컨트롤 속성을 교환 합니다.|
@@ -37,11 +37,11 @@ OLE 컨트롤의 한 가지 기능은 OLE 컨트롤에서 파일 또는 스트�
 |[PXstring](#px_string)|문자열 컨트롤 속성을 교환 합니다.|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|VBX 컨트롤의 글꼴 관련 속성을 OLE 컨트롤 글꼴 속성으로 교환 합니다.|
 
-또한 typedesc와 `AfxOleTypeMatchGuid` 지정 된 GUID 사이에 일치 하는 항목을 테스트 하기 위해 전역 함수가 제공 됩니다.
+또한 `AfxOleTypeMatchGuid` global 함수를 제공 하 여 TYPEDESC와 지정 된 GUID 사이에 일치 하는 항목을 테스트 합니다.
 
 ##  <a name="px_blob"></a>  PX_Blob
 
-컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 하 여 BLOB (binary large object) 데이터를 저장 하는 속성을 직렬화 하거나 초기화 합니다.
+컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 하 여 BLOB (binary large object) 데이터를 저장 하는 속성을 serialize 또는 초기화 합니다.
 
 ```
 BOOL PX_Blob(
@@ -54,7 +54,7 @@ BOOL PX_Blob(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -71,7 +71,7 @@ BOOL PX_Blob(
 
 ### <a name="remarks"></a>설명
 
-속성의 값을 적절 하 게 *Hblob*에서 참조 하는 변수에서 읽거나 씁니다. 처음으로를 호출 `PX_Blob` 하기 전에이 변수를 NULL로 초기화 해야 합니다. 일반적으로이 작업은 컨트롤의 생성자에서 수행할 수 있습니다. *Hblobdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 초기화 또는 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
+속성의 값을 적절 하 게 *Hblob*에서 참조 하는 변수에서 읽거나 씁니다. 처음으로 `PX_Blob`를 호출 하기 전에이 변수를 NULL로 초기화 해야 합니다. 일반적으로 컨트롤의 생성자에서이 작업을 수행할 수 있습니다. *Hblobdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 초기화 또는 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
 *Hblob* 및 *hblobdefault* 핸들은 다음을 포함 하는 메모리 블록을 참조 합니다.
 
@@ -83,7 +83,7 @@ BOOL PX_Blob(
 
 ##  <a name="px_bool"></a>  PX_Bool
 
-BOOL 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
+BOOL 형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 `DoPropExchange` 멤버 함수에서이 함수를 호출 합니다.
 
 ```
 BOOL PX_Bool(
@@ -101,7 +101,7 @@ BOOL PX_Bool(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -122,7 +122,7 @@ BOOL PX_Bool(
 
 ##  <a name="px_color"></a>  PX_Color
 
-OLE_COLOR 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
+OLE_COLOR 형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 합니다.
 
 ```
 BOOL PX_Color(
@@ -140,7 +140,7 @@ BOOL PX_Color(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -179,7 +179,7 @@ BOOL PX_Currency(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -200,7 +200,7 @@ BOOL PX_Currency(
 
 ##  <a name="px_datapath"></a>  PX_DataPath
 
-[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) 형식의 데이터 경로 속성을 serialize 하거나 초기화하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서 이 함수를 호출합니다.
+`DoPropExchange`CDataPathProperty[ 형식의 데이터 경로 속성을 serialize 하거나 초기화하려면 컨트롤의 ](../../mfc/reference/cdatapathproperty-class.md) 멤버 함수 내에서 이 함수를 호출합니다.
 
 ```
 BOOL PX_DataPath(
@@ -216,7 +216,7 @@ BOOL PX_DataPath(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -234,7 +234,7 @@ BOOL PX_DataPath(
 
 ##  <a name="px_double"></a>  PX_Double
 
-Double 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를호출 합니다.
+컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 하 여 **double**형식의 속성을 serialize 또는 초기화 합니다.
 
 ```
 BOOL PX_Double(
@@ -252,7 +252,7 @@ BOOL PX_Double(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -287,19 +287,19 @@ BOOL PX_Font(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
 
 *font*<br/>
-글꼴 속성을 포함 `CFontHolder` 하는 개체에 대 한 참조입니다.
+Font 속성을 포함 하는 `CFontHolder` 개체에 대 한 참조입니다.
 
 *pFontDesc*<br/>
-PFontDispAmbient가 NULL 인 `FONTDESC` 경우 font 속성의 기본 상태를 초기화 하는 데 사용할 값을 포함 하는 구조체에 대 한 포인터입니다.
+*PFontDispAmbient* 가 NULL 인 경우 font 속성의 기본 상태를 초기화 하는 데 사용할 값을 포함 하는 `FONTDESC` 구조체에 대 한 포인터입니다.
 
 *pFontDispAmbient*<br/>
-글꼴 속성의 기본 `IFontDisp` 상태를 초기화 하는 데 사용할 글꼴의 인터페이스에 대 한 포인터입니다.
+글꼴 속성의 기본 상태를 초기화 하는 데 사용할 글꼴의 `IFontDisp` 인터페이스에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -307,11 +307,11 @@ PFontDispAmbient가 NULL 인 `FONTDESC` 경우 font 속성의 기본 상태를 �
 
 ### <a name="remarks"></a>설명
 
-속성의 값은 해당 하 `font` `CFontHolder` 는 경우 참조에서 읽거나 씁니다. *Pfontdesc* 및 *pFontDispAmbient* 가 지정 된 경우 필요한 경우 속성의 기본값을 초기화 하는 데 사용 됩니다. 이러한 값은 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우에 사용 됩니다. 일반적으로 *p글꼴 desc* 에 대해 NULL을 전달 하 고 *pFontDispAmbient*에 대해 `COleControl::AmbientFont` 에서 반환 된 앰비언트 값을 전달 합니다. 에서 `COleControl::AmbientFont` 반환 되는 글꼴 개체는 `IFontDisp::Release` 멤버 함수를 호출 하 여 해제 해야 합니다.
+속성의 값은 해당 하는 경우 `CFontHolder` 참조 `font`에서 읽거나 씁니다. *Pfontdesc* 및 *pFontDispAmbient* 가 지정 된 경우 필요한 경우 속성의 기본값을 초기화 하는 데 사용 됩니다. 이러한 값은 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우에 사용 됩니다. 일반적으로 *P글꼴 desc* 에 대해 NULL을 전달 하 고 *pFontDispAmbient*에 대해 `COleControl::AmbientFont`에서 반환 된 앰비언트 값을 전달 합니다. `COleControl::AmbientFont`에서 반환 되는 글꼴 개체는 `IFontDisp::Release` 멤버 함수를 호출 하 여 해제 해야 합니다.
 
 ##  <a name="px_float"></a>  PX_Float
 
-Float 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를호출 합니다.
+**부동**형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 합니다.
 
 ```
 BOOL PX_Float(
@@ -329,7 +329,7 @@ BOOL PX_Float(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -350,7 +350,7 @@ BOOL PX_Float(
 
 ##  <a name="px_iunknown"></a>  PX_IUnknown
 
-파생 인터페이스가 있는 `IUnknown`개체로 표시 되는 `DoPropExchange` 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
+컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 하 여 `IUnknown`파생 인터페이스가 있는 개체로 표시 되는 속성을 serialize 또는 초기화 합니다.
 
 ```
 BOOL PX_IUnknown(
@@ -364,7 +364,7 @@ BOOL PX_IUnknown(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -388,7 +388,7 @@ BOOL PX_IUnknown(
 
 ##  <a name="px_long"></a>  PX_Long
 
-Long 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를호출 합니다.
+**Long**형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 합니다.
 
 ```
 BOOL PX_Long(
@@ -406,7 +406,7 @@ BOOL PX_Long(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -445,7 +445,7 @@ BOOL PX_Picture(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -466,7 +466,7 @@ BOOL PX_Picture(
 
 ##  <a name="px_short"></a>  PX_Short
 
-Short 형식의 속성을 serialize 하거나 초기화 `DoPropExchange` 하려면 컨트롤의 멤버 함수 내에서이 함수를호출 합니다.
+컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 하 여 **short**형식의 속성을 serialize 또는 초기화 합니다.
 
 ```
 BOOL PX_Short(
@@ -484,7 +484,7 @@ BOOL PX_Short(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -523,7 +523,7 @@ BOOL PX_ULong(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -562,7 +562,7 @@ BOOL PX_UShort(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -601,7 +601,7 @@ BOOL PXstring(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *pszPropName*<br/>
 교환 되는 속성의 이름입니다.
@@ -622,7 +622,7 @@ BOOL PXstring(
 
 ##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
 
-VBX 컨트롤의 글꼴 관련 속성을 `DoPropExchange` 변환 하 여 글꼴 속성을 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
+VBX 컨트롤의 글꼴 관련 속성을 변환 하 여 글꼴 속성을 초기화 하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서이 함수를 호출 합니다.
 
 ```
 BOOL PX_VBXFontConvert(
@@ -633,7 +633,7 @@ BOOL PX_VBXFontConvert(
 ### <a name="parameters"></a>매개 변수
 
 *pPX*<br/>
-[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로에 `DoPropExchange`매개 변수로 전달 됨)에 대 한 포인터입니다.
+[Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체 (일반적으로 `DoPropExchange`에 대 한 매개 변수로 전달 됨)에 대 한 포인터입니다.
 
 *font*<br/>
 변환 된 VBX 글꼴 관련 속성을 포함 하는 OLE 컨트롤의 font 속성입니다.
@@ -644,13 +644,13 @@ BOOL PX_VBXFontConvert(
 
 ### <a name="remarks"></a>설명
 
-이 함수는 VBX 컨트롤에 대 한 직접 대체로 디자인 된 OLE 컨트롤 에서만 사용 해야 합니다. Visual Basic 개발 환경에서 VBX 컨트롤이 포함 된 폼을 변환 하 여 해당 하는 대체 OLE 컨트롤을 사용 하는 경우 VBX 컨트롤 `IDataObject::SetData` 의 속성 데이터를 포함 하는 속성 집합을 전달 하 여 컨트롤의 함수를 호출 합니다. 이 작업을 수행 하면 컨트롤의 `DoPropExchange` 함수가 호출 됩니다. `DoPropExchange`는를 `PX_VBXFontConvert` 호출 하 여 VBX 컨트롤의 글꼴 관련 속성 (예: "FontName", "FontSize" 등)을 OLE 컨트롤의 font 속성의 해당 구성 요소로 변환할 수 있습니다.
+이 함수는 VBX 컨트롤에 대 한 직접 대체로 디자인 된 OLE 컨트롤 에서만 사용 해야 합니다. Visual Basic 개발 환경에서 VBX 컨트롤이 포함 된 폼을 변환 하 여 해당 하는 대체 OLE 컨트롤을 사용 하는 경우 VBX 컨트롤의 속성 데이터를 포함 하는 속성 집합을 전달 하 여 컨트롤의 `IDataObject::SetData` 함수를 호출 합니다. 이 작업을 수행 하면 컨트롤의 `DoPropExchange` 함수가 호출 됩니다. `DoPropExchange` `PX_VBXFontConvert`를 호출 하 여 VBX 컨트롤의 글꼴 관련 속성 (예: "FontName", "FontSize" 등)을 OLE 컨트롤의 font 속성의 해당 구성 요소로 변환할 수 있습니다.
 
-`PX_VBXFontConvert`컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 예를 들어:
+`PX_VBXFontConvert`는 컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 예들 들어 다음과 같습니다.
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

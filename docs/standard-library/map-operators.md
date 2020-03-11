@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956951"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883965"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 연산자
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -562,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -630,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -695,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -760,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\

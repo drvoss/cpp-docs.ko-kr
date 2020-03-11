@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898836"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856555"
 ---
 # <a name="locale-class"></a>locale 클래스
 
@@ -38,7 +38,7 @@ ms.locfileid: "74898836"
 class locale;
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 패싯은 다음 형식의 공용 개체를 가진 [facet](#facet_class) 클래스에서 파생된 클래스 개체에 대한 포인터입니다.
 
@@ -48,7 +48,7 @@ static locale::id id;
 
 이러한 패싯의 개방형 집합을 정의할 수 있습니다. 또한 임의 수의 패싯을 지정하는 로캘 개체를 만들 수 있습니다.
 
-이러한 패싯의 미리 정의된 그룹은 일반적으로 `setlocale` 함수에 의해 표준 C 라이브러리에서 관리되는 [로캘 범주](#category)를 나타냅니다.
+이러한 패싯의 미리 정의된 그룹은 일반적으로 [ 함수에 의해 표준 C 라이브러리에서 관리되는 ](#category)로캘 범주`setlocale`를 나타냅니다.
 
 범주 `collate` (LC_COLLATE)에는 패싯이 포함 됩니다.
 
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|Operator|설명|
 |-|-|
 |[operator=](#op_eq)|로캘을 할당 합니다.|
 |[operator!=](#op_neq)|두 로캘이 다른지 테스트합니다.|
@@ -182,7 +182,7 @@ cout.imbue(loc);
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<locale>
+**헤더:** \<로캘 >
 
 **네임스페이스:** std
 
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 클래스 로캘로 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용할 수 있는 **int** 형식의 동의어입니다. 요소는 다음과 같습니다.
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 C 로캘에 대한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 클래식 C 로캘은 표준 C 라이브러리 내에서 미국 영어 ASCII 로캘입니다. 국제화 되지 않은 프로그램에서 암시적으로 사용 되는 로캘입니다.
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `facet`클래스의 개체를 복사 하거나 할당할 수 없습니다. `locale::facet` 클래스에서 파생된 개체는 생성하고 삭제할 수 있지만 기본 클래스 proper의 개체는 생성하고 삭제할 수 없습니다. 일반적으로에서와 같이 `locale`를 생성할 때 `facet`에서 파생 되는 개체 `_Myfac`를 생성 `locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ static locale global(const locale& new_default_locale);
 
 기본 로캘이 다시 설정되기 전의 이전 로캘입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 프로그램이 시작될 때는 전역 로캘이 클래식 로캘과 같습니다. `global()` 함수는 `setlocale( LC_ALL, loc.name. c_str())`을 호출하여 표준 C 라이브러리에서 일치하는 로캘을 설정합니다.
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. `id`클래스의 개체를 복사 하거나 할당할 수 없습니다.
 
@@ -452,7 +452,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 *new_facet*\
 생성된 로캘로 대체될 패싯입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째와 세 번째 생성자는 *locale_name*로캘 이름과 일관 된 동작을 갖도록 모든 로캘 범주를 초기화 합니다. 나머지 생성자는 다음과 같은 예외를 제외 하 고 *from_locale*복사 합니다.
 
@@ -576,7 +576,7 @@ bool operator!=(const locale& right) const;
 
 로캘이 동일한 로캘의 복사본이 아닌 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본 인 경우 **false** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 로캘이 동일한 로캘이 면, 하나는 다른 것이 고, 다른 하나는 다른 로캘 이거나 동일한 이름인 경우 동일 합니다.
 
@@ -649,7 +649,7 @@ bool operator()(
 
 - 시퀀스가 같은 경우, 0
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 다음을 효과적으로 실행합니다.
 
@@ -709,7 +709,7 @@ bool operator==(const locale& right) const;
 
 로캘이 동일한 로캘의 복사본 인 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본이 아닌 경우 **false** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 로캘이 동일한 로캘이 면, 하나는 다른 것이 고, 다른 하나는 다른 로캘 이거나 동일한 이름인 경우 동일 합니다.
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<locale>](../standard-library/locale.md)\
 [코드 페이지](../c-runtime-library/code-pages.md)\

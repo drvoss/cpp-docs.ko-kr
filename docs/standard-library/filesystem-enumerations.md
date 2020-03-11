@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303502"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875830"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 열거형
 
@@ -24,7 +24,7 @@ ms.locfileid: "74303502"
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<experimental/filesystem>
+**헤더:** \<실험적/파일 시스템 >
 
 **네임스페이스:** std::experimental::filesystem
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>값
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
 |`none`|기본 동작: 디렉터리에 대한 기호 링크를 무시합니다. 사용 권한이 거부됨은 오류입니다.|
 |`follow_directory_symlink`|디렉터리에 대한 기호화된 링크를 실제 디렉터리로 처리합니다.|
@@ -107,11 +107,11 @@ enum class file_type {
 
 ### <a name="values"></a>값
 
-|이름|값|설명|
+|name|값|설명|
 |----------|-----------|-----------------|
 |`not_found`|-1|존재하지 않는 파일을 나타냅니다.|
 |`none`|0|형식 특성이 없는 파일을 나타냅니다. (지원 안 됨)|
-|`regular`|1|기존 디스크 파일을 나타냅니다.|
+|`regular`|[1,1]|기존 디스크 파일을 나타냅니다.|
 |`directory`|2|디렉터리를 나타냅니다.|
 |`symlink`|3|기호화된 링크를 나타냅니다. (지원 안 됨)|
 |`block`|4|UNIX 기반 시스템의 블록 특수 파일을 나타냅니다. (지원 안 됨)|

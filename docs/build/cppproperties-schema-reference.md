@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556671"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856815"
 ---
 # <a name="cpppropertiesjson-reference"></a>Cppproperties.json 참조
 
@@ -131,7 +131,7 @@ Linux 워크로드가 설치되면 원격으로 Linux 및 WSL을 대상으로 �
 |`${projectRoot}`| Cppproperties.json가 배치 되는 폴더의 전체 경로입니다 *.*|
 |`${env.vsInstallDir}`| 실행 중인 Visual Studio 인스턴스가 설치 된 폴더의 전체 경로입니다.|
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 프로젝트에 포함 폴더가 있고 Windows SDK의 다른 공용 헤더 *도 포함 하는 경우* 다음과 같은 내용을 포함 하는 *cppproperties.json* 구성 파일을 업데이트할 수 있습니다.
 

@@ -10,15 +10,15 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688464"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875895"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 연산자
 
-\<array> 헤더에는 다음과 같은 **배열**의 비 멤버 템플릿 비교 함수가 포함됩니다.
+\<배열 > 헤더에는 이러한 **배열의** 비 멤버 비교 템플릿 함수가 포함 됩니다.
 
 ||||
 |-|-|-|
@@ -38,21 +38,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수가 `!(left == right)`을 반환합니다.
+템플릿 함수가 `!(left == right)`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -111,19 +111,19 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수 오버 로드는 클래스 템플릿 [배열 클래스](../standard-library/array-class-stl.md)의 두 개체를 비교 하는 `operator<` 합니다. 함수에서 `lexicographical_compare(left.begin(), left.end(), right.begin())`을 반환합니다.
 
@@ -184,21 +184,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수가 `!(right < left)`을 반환합니다.
+템플릿 함수가 `!(right < left)`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -257,19 +257,19 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수 오버 로드는 클래스 템플릿 [배열 클래스](../standard-library/array-class-stl.md)의 두 개체를 비교 하는 `operator==` 합니다. 함수에서 `equal(left.begin(), left.end(), right.begin())`을 반환합니다.
 
@@ -330,21 +330,21 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수가 `(right < left)`을 반환합니다.
+템플릿 함수가 `(right < left)`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -403,21 +403,21 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*Ty*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수가 `!(left < right)`을 반환합니다.
+템플릿 함수가 `!(left < right)`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<array>](../standard-library/array.md)

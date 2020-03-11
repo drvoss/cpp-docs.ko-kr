@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127048"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866313"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 네임스페이스 함수(AMP)
 
@@ -59,7 +59,7 @@ inline int abs(int _X) restrict(amp);
 *_X*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 절대 값을 반환 합니다.
 
@@ -90,7 +90,7 @@ inline int clamp(
 *_Max*<br/>
 고정 범위의 상한입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `_X`고정 값입니다.
 
@@ -107,7 +107,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 *_X*<br/>
 부호 없는 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 _X에서 설정 비트 수를 반환 합니다.
 
@@ -142,7 +142,7 @@ Direct3D 장치 인터페이스에 대 한 포인터입니다.
 *_Qmode*<br/>
 새로 만든 accelerator_view에 사용할 [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) 입니다. 이 매개 변수의 기본값은 `queuing_mode_automatic`입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 전달 된 Direct3D 장치 인터페이스에서 만든 `accelerator_view` 개체입니다.
 
@@ -180,7 +180,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 *_Av*<br/>
 잠글 accelerator_view입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 잠금을 획득 했으면 true이 고, 현재 다른 스레드에서 보유 하 고 있으면 false입니다.
 
@@ -210,7 +210,7 @@ inline int firstbithigh(int _X) restrict(amp);
 *_X*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 설정 비트의 위치입니다.
 
@@ -227,7 +227,7 @@ inline int firstbitlow(int _X) restrict(amp);
 *_X*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 설정 비트의 위치를 반환 합니다.
 
@@ -255,7 +255,7 @@ IUnknown *get_buffer(
 *_Array*<br/>
 Direct3D accelerator_view에서 기본 Direct3D 버퍼 인터페이스를 반환 하는 배열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 IUnknown 인터페이스 포인터는 배열을 기반으로 하는 Direct3D 버퍼에 해당 합니다.
 
@@ -294,7 +294,7 @@ inline int imax(
 *_Y*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 최대 숫자 값을 반환 합니다.
 
@@ -316,7 +316,7 @@ inline int imin(
 *_Y*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 최소 숫자 값을 반환 합니다.
 
@@ -333,7 +333,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 *_Accelerator_view*<br/>
 제한 시간 사용 안 함 설정이 쿼리 될 accelerator_view입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 accelerator_view에 대 한 제한 시간을 사용할 수 없는지 여부를 나타내는 부울 플래그입니다.
 
@@ -374,7 +374,7 @@ inline unsigned int mad(
 *_Z*<br/>
 세 번째 지정 된 인수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `_X` \* `_Y` + `_Z`의 결과입니다.
 
@@ -410,7 +410,7 @@ array<value_type, _Rank> make_array(
 *_D3D_buffer*<br/>
 배열을 만들 D3D 버퍼의 IUnknown 인터페이스 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제공 된 Direct3D 버퍼를 사용 하 여 만든 배열입니다.
 
@@ -427,7 +427,7 @@ inline float noise(float _X) restrict(amp);
 *_X*<br/>
 Perlin 노이즈를 생성하는 부동 소수점 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 -1과 1 사이의 범위 내에서 Perlin 노이즈 값을 반환합니다.
 
@@ -444,7 +444,7 @@ inline float radians(float _X) restrict(amp);
 *_X*<br/>
 부동 소수점 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 각도에서 라디안으로 변환한 _X를 반환합니다.
 
@@ -463,7 +463,7 @@ inline double rcp(double _X) restrict(amp);
 *_X*<br/>
 역을 계산할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 인수의 역 개수입니다.
 
@@ -480,7 +480,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 *_X*<br/>
 부호 없는 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 _X의 반대로 바뀐 비트 순서 값을 반환합니다.
 
@@ -497,7 +497,7 @@ inline float saturate(float _X) restrict(amp);
 *_X*<br/>
 부동 소수점 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 0 - 1의 범위 내로 제한된 _X를 반환합니다.
 
@@ -514,7 +514,7 @@ inline int sign(int _X) restrict(amp);
 *_X*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 부호입니다.
 
@@ -540,7 +540,7 @@ inline float smoothstep(
 *_X*<br/>
 부동 소수점 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 _X가 _Min보다 작은 경우 0을, _X가 _Max보다 큰 경우 1을 반환합니다. 그렇지 않으면, _X가 [_Min, _Max] 범위에 있는 경우 0과 1 사이의 값입니다.
 
@@ -562,7 +562,7 @@ inline float step(
 *_X*<br/>
 부동 소수점 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 _X가 _Y보다 큰 경우 1을 반환합니다. 그렇지 않으면, 0을 반환합니다.
 
@@ -584,7 +584,7 @@ inline unsigned int umax(
 *_Y*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 최대 숫자 값을 반환 합니다.
 
@@ -606,7 +606,7 @@ inline unsigned int umin(
 *_Y*<br/>
 정수 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수의 최소 숫자 값을 반환 합니다.
 

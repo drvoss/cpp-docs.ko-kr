@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142627"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884120"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group 클래스
 
@@ -93,7 +93,7 @@ void cancel();
 bool is_canceling();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `structured_task_group` 개체가 취소 중에 있는지 여부를 표시 하는 것을 나타냅니다.
 
@@ -158,7 +158,7 @@ task_group_status run_and_wait(const _Function& _Func);
 *_Func*<br/>
 작업 본문을 호출 하기 위해 호출 되는 함수입니다. `void operator()()`시그니처와 함께 함수 호출 연산자의 버전을 지 원하는 람다 또는 다른 개체 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 명시적 취소 작업이 나 작업 중 하나에서 throw 되는 예외로 인해 대기가 충족 되었거나 작업 그룹이 취소 되었는지 여부를 나타냅니다. 자세한 내용은 [task_group_status](concurrency-namespace-enums.md) 를 참조 하세요.
 
@@ -211,7 +211,7 @@ structured_task_group(cancellation_token _CancellationToken);
 task_group_status wait();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 명시적 취소 작업이 나 작업 중 하나에서 throw 되는 예외로 인해 대기가 충족 되었거나 작업 그룹이 취소 되었는지 여부를 나타냅니다. 자세한 내용은 [task_group_status](concurrency-namespace-enums.md) 를 참조 하세요.
 

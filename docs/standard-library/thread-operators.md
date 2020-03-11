@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458438"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876175"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 
@@ -45,7 +45,7 @@ bool operator>= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -71,7 +71,7 @@ bool operator> (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -97,7 +97,7 @@ bool operator<= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -123,7 +123,7 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -151,7 +151,7 @@ bool operator!= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -177,7 +177,7 @@ bool operator== (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
@@ -206,8 +206,8 @@ basic_ostream<Elem, Tr>& operator<<(
 *Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 개체입니다.
 
-*A-id*\
-`thread::id` 개체입니다.
+*Id*\
+데이터 개체의 시각화를 지정하는 `thread::id` 개체에 추가합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -219,6 +219,6 @@ basic_ostream<Elem, Tr>& operator<<(
 
 두 `thread::id` 개체가 비교 결과 같으면 해당 개체의 삽입된 텍스트 표현은 동일합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<thread>](../standard-library/thread.md)

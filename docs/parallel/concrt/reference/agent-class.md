@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142887"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882940"
 ---
 # <a name="agent-class"></a>에이전트 클래스
 
@@ -120,7 +120,7 @@ virtual ~agent();
 bool cancel();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에이전트가 취소 되었으면 **true** 이 고, 그렇지 않으면 **false** 입니다. 에이전트의 실행이 이미 시작 되었거나 이미 완료 된 경우에는 에이전트를 취소할 수 없습니다.
 
@@ -132,7 +132,7 @@ bool cancel();
 bool done();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에이전트가 `agent_done` 상태로 이동 하면 **true** 이 고, 그렇지 않으면 **false** 입니다. 취소 된 에이전트는 `agent_done` 상태로 이동할 수 없습니다.
 
@@ -160,7 +160,7 @@ virtual void run() = 0;
 bool start();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에이전트가 올바르게 시작 되었으면 **true** 이 고, 그렇지 않으면 **false** 입니다. 취소 된 에이전트는 시작할 수 없습니다.
 
@@ -172,7 +172,7 @@ bool start();
 agent_status status();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에이전트의 현재 상태를 반환 합니다. 반환 된 상태는 반환 된 후 즉시 변경 될 수 있습니다.
 
@@ -184,7 +184,7 @@ agent_status status();
 ISource<agent_status>* status_port();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에이전트의 현재 상태에 대 한 메시지를 보낼 수 있는 메시지 원본을 반환 합니다.
 
@@ -206,7 +206,7 @@ static agent_status __cdecl wait(
 *_Timeout*<br/>
 대기할 최대 시간 (밀리초)입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대기가 완료 되 면 에이전트의 `agent_status`입니다. `agent_canceled` 또는 `agent_done`수 있습니다.
 

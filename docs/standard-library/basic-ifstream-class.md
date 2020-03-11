@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865870"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream 클래스
+# <a name="basic_ifstream-class"></a>basic_ifstream 클래스
 
-문자 특성이 클래스 `Tr`에 의해 결정되는 `Elem` 형식의 요소가 있는 클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체에 대해 설명합니다.
+문자 특성이 클래스 [에 의해 결정되는 ](../standard-library/basic-filebuf-class.md) 형식의 요소가 있는 클래스 < basic_filebuf`Elem``Tr``Elem`, `Tr`>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체에 대해 설명합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,10 +36,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>매개 변수
 
-*E*\
+*Elem*\
 파일 버퍼의 기본 요소입니다.
 
-*비교한*\
+*Tr*\
 파일 버퍼 기본 요소의 특성(일반적으로 `char_traits`< `Elem`>)입니다.
 
 ## <a name="remarks"></a>설명
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>입력: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>입력: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -85,7 +85,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|`basic_ifstream` 개체의 새 인스턴스를 초기화합니다.|
 
@@ -101,13 +101,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|Operator|설명|
 |-|-|
 |[operator=](#op_eq)|이 스트림 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 `rvalue`와 관련된 이동 할당입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<fstream>
+**헤더:** \<fstream >
 
 **네임스페이스:** std
 
@@ -133,18 +133,18 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*파일 이름 (_s)* \
+*_Filename*\
 열어야 할 파일의 이름입니다.
 
-*모드 (_s)* \
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)의 열거형 중 하나입니다.
 
 *_Prot*\
-[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)의 `shflag` 매개 변수와 같은 기본 파일 열기 보호입니다.
+`shflag`_fsopen, _wfsopen[의 ](../c-runtime-library/reference/fsopen-wfsopen.md) 매개 변수와 같은 기본 파일 열기 보호입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 [basic_istream](../standard-library/basic-istream-class.md)( `sb`)를 호출하여 기본 클래스를 초기화합니다. 여기서 `sb`는 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 클래스의 저장된 개체입니다. 또한 `basic_filebuf`< `Elem`, `Tr`>을 호출하여 `sb`를 초기화합니다.
+첫 번째 생성자는 [basic_istream](../standard-library/basic-istream-class.md)( `sb`)를 호출하여 기본 클래스를 초기화합니다. 여기서 `sb`는 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 클래스의 저장된 개체입니다. 또한 `sb``basic_filebuf`< , `Elem`>을 호출하여 `Tr`를 초기화합니다.
 
 두 번째 및 세 번째 생성자는 `basic_istream`( `sb`)를 호출하여 기본 클래스를 초기화합니다. 또한 `sb`를 초기화하는데, 이번에는 [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`> 및 `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`)을 차례로 호출합니다. 후자 함수가 null 포인터를 반환하면 생성자는 **setstate**( `failbit`)를 호출합니다.
 
@@ -189,7 +189,7 @@ void close();
 
 ### <a name="example"></a>예제
 
-`close`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
+[의 사용 예제는 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`close`를 참조하세요.
 
 ## <a name="is_open"></a>  basic_ifstream::is_open
 
@@ -205,11 +205,11 @@ bool is_open() const;
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)를 반환 합니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)를 반환 합니다.
 
 ### <a name="example"></a>예제
 
-`is_open`을 사용하는 방법의 예는 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)을 참조하세요.
+[을 사용하는 방법의 예는 ](../standard-library/basic-filebuf-class.md#is_open)basic_filebuf::is_open`is_open`을 참조하세요.
 
 ## <a name="open"></a>  basic_ifstream::open
 
@@ -237,22 +237,22 @@ void open(
 
 ### <a name="parameters"></a>매개 변수
 
-*파일 이름 (_s)* \
+*_Filename*\
 열어야 할 파일의 이름입니다.
 
-*모드 (_s)* \
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)의 열거형 중 하나입니다.
 
 *_Prot*\
-[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)의 `shflag` 매개 변수와 같은 기본 파일 열기 보호입니다.
+`shflag`_fsopen, _wfsopen[의 ](../c-runtime-library/reference/fsopen-wfsopen.md) 매개 변수와 같은 기본 파일 열기 보호입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**)을 호출합니다. Open이 실패 하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)를 호출 하며,이 경우 ios_base:: failure 예외가 throw 될 수 있습니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base:: in**)을 호출 합니다. Open이 실패 하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)를 호출 하 여 ios_base:: failure 예외를 throw 할 수 있습니다.
 
 ### <a name="example"></a>예제
 
-을 사용 `open`하는 예제는 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 을 참조 하세요.
+`open`를 사용 하는 예제는 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 을 참조 하세요.
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -289,7 +289,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="example"></a>예제
 
-`rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
+[의 사용 예제는 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`rdbuf`를 참조하세요.
 
 ## <a name="swap"></a>  basic_ifstream::swap
 
@@ -308,7 +308,7 @@ void swap(basic_ifstream& right);
 
 멤버 함수는이 개체의 내용을 *오른쪽*의 내용으로 교환 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143073"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867139"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 클래스
 
@@ -103,7 +103,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 *_Placement*<br/>
 일정 그룹 내의 태스크가에서 실행 될 때 편향 되는 위치에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새로 만든 일정 그룹에 대 한 포인터입니다. 이 `ScheduleGroup` 개체에는 초기 참조 수가 배치 되어 있습니다.
 
@@ -139,7 +139,7 @@ static void __cdecl Detach();
 static Scheduler* __cdecl Get();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출 컨텍스트 (현재 스케줄러)와 연결 된 스케줄러에 대 한 포인터입니다.
 
@@ -155,7 +155,7 @@ static Scheduler* __cdecl Get();
 static unsigned int __cdecl GetNumberOfVirtualProcessors();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스케줄러가 호출 컨텍스트와 연결 된 경우 해당 스케줄러에 대 한 현재 가상 프로세서 수입니다. 그렇지 않으면 값이 `-1`됩니다.
 
@@ -173,7 +173,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
 static SchedulerPolicy __cdecl GetPolicy();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 스케줄러를 만든 정책의 복사본입니다.
 
@@ -189,7 +189,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 static unsigned int __cdecl Id();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스케줄러가 호출 컨텍스트와 연결 된 경우 해당 스케줄러에 대 한 고유 식별자입니다. 그렇지 않으면 값이 `-1`됩니다.
 
@@ -210,7 +210,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 *_Placement*<br/>
 현재 스케줄러를 쿼리하는 위치에 대한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `_Placement` 인수로 지정된 위치를 현재 스케줄러에서 사용할 수 있는지 여부를 나타냅니다.
 

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507705"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855527"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 
 MFC 라이브러리에는 세 가지 콜백 함수가 표시 됩니다. 이러한 콜백 함수는 Cdc: [: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [Cdc:: GrayString](../../mfc/reference/cdc-class.md#graystring)및 [cdc:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)에 전달 됩니다. 모든 콜백 함수는 콜백 경계에서 예외가 throw 될 수 없으므로 Windows로 반환 하기 전에 MFC 예외를 트래핑 해야 합니다. 예외에 대 한 자세한 내용은 [예외](../../mfc/exception-handling-in-mfc.md)문서를 참조 하세요.
 
-|이름||
+|name||
 |----------|-----------------|
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -46,11 +46,11 @@ int CALLBACK EXPORT ObjectFunc(
 개체의 논리적 특성에 대 한 정보를 포함 하는 [Logpen](/windows/win32/api/Wingdi/ns-wingdi-logpen) 또는 [logpen](/windows/win32/api/wingdi/ns-wingdi-logbrush) 데이터 구조를 가리킵니다.
 
 *lpData*<br/>
-`EnumObjects` 함수에 전달 되는 응용 프로그램 제공 데이터를 가리킵니다.
+`EnumObjects` 함수에 전달 된 응용 프로그램 제공 데이터를 가리킵니다.
 
 ### <a name="return-value"></a>반환 값
 
-콜백 함수는 **정수**를 반환 합니다. 이 반환 값은 사용자가 정의 합니다. 콜백 함수에서 0을 반환 하 `EnumObjects` 는 경우는 초기에 열거를 중지 합니다.
+콜백 함수는 **정수**를 반환 합니다. 이 반환 값은 사용자가 정의 합니다. 콜백 함수에서 0을 반환 하는 경우 `EnumObjects` 열거를 일찍 중지 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -72,7 +72,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>매개 변수
 
 *hDC*<br/>
-이상 `nWidth` 및 `nHeight` 에 지정된너비와높이의비트맵을사용하여메모리장치컨텍스트를식별합니다.`GrayString`
+하나 이상의 비트맵을 사용 하 여 `nWidth`에 지정 된 너비와 높이의 비트맵을 사용 하 여 `GrayString``nHeight`는 메모리 장치 컨텍스트를 식별 합니다.
 
 *lpData*<br/>
 그릴 문자열을 가리킵니다.
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 장치 컨텍스트를 식별 합니다.
 
-*코드*<br/>
-오류가 발생 했는지 여부를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. 현재 인쇄 관리자의 디스크 공간이 부족 하 여 응용 프로그램이 대기 하는 경우 더 많은 디스크 공간을 사용할 수 있게 되 면 SP_OUTOFDISK 됩니다. *코드가* SP_OUTOFDISK 경우 응용 프로그램은 인쇄 작업을 중단할 필요가 없습니다. 그렇지 않으면 `PeekMessage` 또는 `GetMessage` Windows 함수를 호출 하 여 인쇄 관리자에 게 양보 해야 합니다.
+*code*<br/>
+오류가 발생 했는지 여부를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. 현재 인쇄 관리자의 디스크 공간이 부족 하 고 응용 프로그램이 대기 하는 경우 더 많은 디스크 공간을 사용할 수 있게 되 면 SP_OUTOFDISK 됩니다. *코드가* SP_OUTOFDISK 경우에는 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 그렇지 않으면 `PeekMessage` 또는 `GetMessage` Windows 함수를 호출 하 여 인쇄 관리자에 게 양보 해야 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -116,9 +116,9 @@ BOOL CALLBACK EXPORT AbortFunc(
 
 [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)의 설명 섹션에 설명 된 대로 실제 이름을 내보내야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [구조체, 스타일, 콜백 및 메시지 맵](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
-[CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
-[CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
+[CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)

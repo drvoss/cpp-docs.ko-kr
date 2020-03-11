@@ -18,15 +18,15 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
 ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127740"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890917"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 연산자
 
-이러한 연산자를 사용 하 여 두 개의 string_view 개체, string_view 및 암시적 변환이 제공 되는 다른 문자열 개체 (예 [: std:: string](basic-string-class.md)또는 **char\***)를 비교 합니다. 
+이러한 연산자를 사용 하 여 두 개의 string_view 개체, string_view 및 암시적 변환이 제공 되는 다른 문자열 개체 (예 [: std:: string](basic-string-class.md)또는 **char\*** )를 비교 합니다. 
 
 ||||
 |-|-|-|
@@ -63,7 +63,7 @@ bool operator!=(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체와 사전순으로 않으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -102,7 +102,7 @@ bool operator==(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체와 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
 
@@ -141,7 +141,7 @@ bool operator<(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 사전순으로 면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -202,7 +202,7 @@ bool operator<=(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 작거나 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
 
@@ -228,7 +228,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 *Str*\
 출력 스트림에 입력 될 string_view입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 쓸 출력 스트림입니다.
 
@@ -265,7 +265,7 @@ bool operator>(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 string_view 개체 보다 사전순으로 면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -302,7 +302,7 @@ bool operator>=(
 *오른쪽*\
 변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 크거나 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
 

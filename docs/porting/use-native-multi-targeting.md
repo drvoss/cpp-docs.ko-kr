@@ -6,11 +6,11 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627156"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875873"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드
 
@@ -67,7 +67,7 @@ Visual Studio 2008에는 **VCBuild**라는 C++에 대한 자체 전용 빌드 �
 
 이러한 제품이 설치되면 **속성 페이지** 대화 상자의 **플랫폼 도구 집합** 속성 드롭다운이 사용 가능한 도구 집합을 표시하도록 자동으로 업데이트됩니다. 이제 최신 버전의 Visual Studio를 사용하여 이전 버전의 도구 집합을 위한 프로젝트를 변환하거나 업그레이드하지 않고 빌드할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [이전 버전의 Visual에서 프로젝트 업그레이드C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio의 C++ 규칙 향상](../overview/cpp-conformance-improvements.md)

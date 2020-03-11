@@ -13,8 +13,8 @@ ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334075"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857060"
 ---
 # <a name="irelogger-class"></a>IRelogger 클래스
 
@@ -52,7 +52,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 재정의 되지 않는 모든 함수의 기본 반환 값은 `AnalysisControl::CONTINUE`입니다. 자세한 내용은 [AnalysisControl](analysis-control-enum-class.md)를 참조 하세요.
 

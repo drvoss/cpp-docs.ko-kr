@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
 ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502802"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865433"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 클래스
 
@@ -61,43 +61,43 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[CPropertyPage::CPropertyPage](#cpropertypage)|`CPropertyPage` 개체를 생성합니다.|
+|[CPropertyPage:: CPropertyPage](#cpropertypage)|`CPropertyPage` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|name|설명|
 |----------|-----------------|
-|[CPropertyPage::CancelToClose](#canceltoclose)|모달 속성 시트의 페이지에서 복구할 수 없는 변경 후 취소 단추를 사용 하지 않도록 설정 하 여 확인 단추를 변경 합니다.|
-|[CPropertyPage::Construct](#construct)|`CPropertyPage` 개체를 생성합니다. 런타임에 `Construct` 매개 변수를 지정 하려면를 사용 하 고, 배열을 사용 하는 경우를 사용 합니다.|
-|[CPropertyPage::GetPSP](#getpsp)|`CPropertyPage` 개체와 연결 된 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체를 검색 합니다.|
-|[CPropertyPage::OnApply](#onapply)|지금 적용 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnCancel](#oncancel)|취소 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnKillActive](#onkillactive)|현재 페이지가 더 이상 활성 페이지가 아닌 경우 프레임 워크에서 호출 됩니다. 여기에서 데이터 유효성 검사를 수행 합니다.|
-|[CPropertyPage::OnOK](#onok)|확인, 지금 적용 또는 닫기 단추가 클릭 될 때 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnQueryCancel](#onquerycancel)|취소 단추를 클릭 한 후 취소가 수행 되기 전에 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnReset](#onreset)|취소 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnSetActive](#onsetactive)|페이지를 활성 페이지로 만들 때 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnWizardBack](#onwizardback)|마법사 형식의 속성 시트를 사용 하는 동안 뒤로 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnWizardFinish](#onwizardfinish)|마법사 유형 속성 시트를 사용 하는 동안 [마침] 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::OnWizardNext](#onwizardnext)|마법사 형식의 속성 시트를 사용 하는 동안 다음 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
-|[CPropertyPage::QuerySiblings](#querysiblings)|속성 시트의 각 페이지로 메시지를 전달 합니다.|
-|[CPropertyPage::SetModified](#setmodified)|을 호출 하 여 지금 적용 단추를 활성화 하거나 비활성화 합니다.|
+|[CPropertyPage:: CancelToClose](#canceltoclose)|모달 속성 시트의 페이지에서 복구할 수 없는 변경 후 취소 단추를 사용 하지 않도록 설정 하 여 확인 단추를 변경 합니다.|
+|[CPropertyPage:: 생성자](#construct)|`CPropertyPage` 개체를 생성합니다. 런타임에 매개 변수를 지정 하려는 경우 또는 배열을 사용 하는 경우 `Construct`를 사용 합니다.|
+|[CPropertyPage:: GetPSP](#getpsp)|`CPropertyPage` 개체와 연결 된 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체를 검색 합니다.|
+|[CPropertyPage:: OnApply](#onapply)|지금 적용 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnCancel](#oncancel)|취소 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnKillActive](#onkillactive)|현재 페이지가 더 이상 활성 페이지가 아닌 경우 프레임 워크에서 호출 됩니다. 여기에서 데이터 유효성 검사를 수행 합니다.|
+|[CPropertyPage:: OnOK](#onok)|확인, 지금 적용 또는 닫기 단추가 클릭 될 때 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnQueryCancel](#onquerycancel)|취소 단추를 클릭 한 후 취소가 수행 되기 전에 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnReset](#onreset)|취소 단추를 클릭할 때 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnSetActive](#onsetactive)|페이지를 활성 페이지로 만들 때 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnWizardBack](#onwizardback)|마법사 형식의 속성 시트를 사용 하는 동안 뒤로 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnWizardFinish](#onwizardfinish)|마법사 유형 속성 시트를 사용 하는 동안 [마침] 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: OnWizardNext](#onwizardnext)|마법사 형식의 속성 시트를 사용 하는 동안 다음 단추를 클릭 하면 프레임 워크에서 호출 됩니다.|
+|[CPropertyPage:: QuerySiblings](#querysiblings)|속성 시트의 각 페이지로 메시지를 전달 합니다.|
+|[CPropertyPage:: SetModified](#setmodified)|을 호출 하 여 지금 적용 단추를 활성화 하거나 비활성화 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|Description|
+|name|설명|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체입니다. 기본 속성 페이지 매개 변수에 대 한 액세스를 제공 합니다.|
+|[CPropertyPage:: m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체입니다. 기본 속성 페이지 매개 변수에 대 한 액세스를 제공 합니다.|
 
 ## <a name="remarks"></a>설명
 
-표준 대화 상자와 마찬가지로 속성 시트의 각 페이지에 `CPropertyPage` 대해에서 클래스를 파생 시킬 수 있습니다. 파생 개체 `CPropertyPage`를 사용 하려면 먼저 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) 개체를 만든 다음 속성 시트에서 이동 하는 각 페이지에 대 한 개체를 만듭니다. 시트의 각 페이지에 대해 [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) 를 호출한 다음 모달 속성 시트에 대 한 [CPropertySheet::D omodal](../../mfc/reference/cpropertysheet-class.md#domodal) 또는 모덜리스 속성 시트에 대 한 [CPropertySheet:: Create](../../mfc/reference/cpropertysheet-class.md#create) 를 호출 하 여 속성 시트를 표시 합니다.
+표준 대화 상자와 마찬가지로 속성 시트의 각 페이지에 대 한 `CPropertyPage`에서 클래스를 파생 시킬 수 있습니다. `CPropertyPage`파생 개체를 사용 하려면 먼저 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) 개체를 만든 다음 속성 시트에서 이동 하는 각 페이지에 대 한 개체를 만듭니다. 시트의 각 페이지에 대해 [CPropertySheet:: AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) 를 호출한 다음 모달 속성 시트에 대 한 [CPropertySheet::D omodal](../../mfc/reference/cpropertysheet-class.md#domodal) 또는 모덜리스 속성 시트에 대 한 [CPropertySheet:: Create](../../mfc/reference/cpropertysheet-class.md#create) 를 호출 하 여 속성 시트를 표시 합니다.
 
 마법사 라는 유형의 탭 대화 상자를 만들 수 있습니다 .이 대화 상자는 사용자가 장치를 설정 하거나 뉴스레터를 만드는 등의 작업 단계를 안내 하는 일련의 속성 페이지를 사용 하 여 속성 시트로 구성 됩니다. 마법사-형식 탭 대화 상자에서 속성 페이지에 탭이 없으며 한 번에 하나의 속성 페이지만 표시 됩니다. 또한 확인 및 지금 적용 단추 대신 마법사 유형 탭 대화 상자에 뒤로 단추, 다음 또는 마침 단추 및 취소 단추가 있습니다.
 
-속성 시트를 마법사로 설정 하는 방법에 대 한 자세한 내용은 [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)를 참조 하세요. 개체 사용 `CPropertyPage` 에 대 한 자세한 내용은 아티클 [속성 시트 및 속성 페이지](../../mfc/property-sheets-and-property-pages-in-mfc.md)를 참조 하세요.
+속성 시트를 마법사로 설정 하는 방법에 대 한 자세한 내용은 [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)를 참조 하세요. `CPropertyPage` 개체 사용에 대 한 자세한 내용은 아티클 [속성 시트 및 속성 페이지](../../mfc/property-sheets-and-property-pages-in-mfc.md)를 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
 
@@ -105,7 +105,7 @@ class CPropertyPage : public CDialog
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[에서 파생되지 않은](../../mfc/reference/cwnd-class.md)
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
@@ -115,7 +115,7 @@ class CPropertyPage : public CDialog
 
 **헤더:** afxdlgs
 
-##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose
+##  <a name="canceltoclose"></a>CPropertyPage:: CancelToClose
 
 모달 속성 시트의 페이지에 있는 데이터에 대해 복구할 수 없는 변경 내용이 발생 한 후이 함수를 호출 합니다.
 
@@ -127,15 +127,15 @@ void CancelToClose();
 
 이 함수는 취소 단추를 닫거나 사용 하지 않도록 설정 하는 확인 단추를 변경 합니다. 이 변경으로 인해 사용자에 게 변경 내용이 영구적이 고 수정 내용을 취소할 수 없다는 경고가 발생 합니다.
 
-모덜리스 `CancelToClose` 속성 시트에는 기본적으로 취소 단추가 없기 때문에 멤버 함수는 모덜리스 속성 시트에서 아무 작업도 수행 하지 않습니다.
+모덜리스 속성 시트에는 기본적으로 취소 단추가 없기 때문에 `CancelToClose` 멤버 함수는 모덜리스 속성 시트에서 아무 작업도 수행 하지 않습니다.
 
 ### <a name="example"></a>예제
 
   [CPropertyPage:: QuerySiblings](#querysiblings)의 예제를 참조 하세요.
 
-##  <a name="construct"></a>  CPropertyPage::Construct
+##  <a name="construct"></a>CPropertyPage:: 생성자
 
-개체를 `CPropertyPage` 생성 하려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 `CPropertyPage` 개체를 생성 합니다.
 
 ```
 void Construct(
@@ -186,15 +186,15 @@ void Construct(
 
 - 사용자가이 페이지를 선택 (탭) 합니다.
 
-다른 `Construct` 클래스 생성자 중 하나가 호출 되지 않은 경우를 호출 합니다. 멤버 `Construct` 함수는 매개 변수 문을 비워 두고 코드의 임의 위치에서 여러 매개 변수 및 생성을 지정할 수 있으므로 유연 합니다.
+다른 클래스 생성자 중 하나가 호출 되지 않은 경우 `Construct`를 호출 합니다. `Construct` 멤버 함수는 매개 변수 문을 비워 두고 코드의 임의 위치에서 여러 매개 변수 및 생성을 지정할 수 있으므로 유연 합니다.
 
-배열을 사용 하 `Construct` 여 작업할 때를 사용 해야 하며, 데이터 멤버 `Construct` 에 적절 한 값이 할당 되도록 배열의 각 멤버에 대해를 호출 해야 합니다.
+배열을 사용 하 여 작업할 때 `Construct`를 사용 해야 하며, 데이터 멤버에 적절 한 값이 할당 되도록 배열의 각 멤버에 대해 `Construct`를 호출 해야 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]
 
-##  <a name="cpropertypage"></a>  CPropertyPage::CPropertyPage
+##  <a name="cpropertypage"></a>CPropertyPage:: CPropertyPage
 
 `CPropertyPage` 개체를 생성합니다.
 
@@ -253,13 +253,13 @@ CPropertyPage(
 
 - 사용자가이 페이지를 선택 (탭) 합니다.
 
-배열을 사용 하는 경우와 같이 여러 매개 변수가 있는 경우 대신 `CPropertyPage` [CPropertySheet:: 구문을](../../mfc/reference/cpropertysheet-class.md#construct) 사용 합니다.
+여러 매개 변수가 있는 경우 (예: 배열을 사용 하는 경우) `CPropertyPage`대신 [CPropertySheet:: 구문을](../../mfc/reference/cpropertysheet-class.md#construct) 사용 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]
 
-##  <a name="getpsp"></a>  CPropertyPage::GetPSP
+##  <a name="getpsp"></a>CPropertyPage:: GetPSP
 
 `CPropertyPage` 개체와 연결 된 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체를 검색 합니다.
 
@@ -273,9 +273,9 @@ PROPSHEETPAGE& GetPSP();
 
 `PROPSHEETPAGE` 구조체에 대 한 참조입니다.
 
-##  <a name="m_psp"></a>  CPropertyPage::m_psp
+##  <a name="m_psp"></a>CPropertyPage:: m_psp
 
-`m_psp`는 해당 멤버가 [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)의 특성을 저장 하는 구조체입니다.
+`m_psp`은 해당 멤버가 [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)의 특징을 저장 하는 구조체입니다.
 
 ```
 PROPSHEETPAGE m_psp;
@@ -285,13 +285,13 @@ PROPSHEETPAGE m_psp;
 
 이 구조체를 사용 하 여 속성 페이지가 생성 된 후 해당 페이지의 모양을 초기화할 수 있습니다.
 
-멤버 목록을 포함 하 여이 구조에 대 한 자세한 내용은 Windows SDK을 참조 `PROPSHEETPAGE` 하세요.
+멤버 목록을 포함 하 여이 구조에 대 한 자세한 내용은 Windows SDK `PROPSHEETPAGE`을 참조 하세요.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]
 
-##  <a name="onapply"></a>  CPropertyPage::OnApply
+##  <a name="onapply"></a>CPropertyPage:: OnApply
 
 이 멤버 함수는 사용자가 확인 또는 지금 적용 단추를 선택할 때 프레임 워크에서 호출 됩니다.
 
@@ -305,19 +305,19 @@ virtual BOOL OnApply();
 
 ### <a name="remarks"></a>설명
 
-프레임 워크에서이 함수를 호출 하면 속성 시트의 모든 속성 페이지에서 변경한 내용이 수락 되 고, 속성 시트가 포커스를 유지 하 `OnApply` 고, TRUE (값 1)를 반환 합니다. 가 `OnApply` 프레임 워크에서 호출 될 수 있도록 하려면 [setmodified](#setmodified) 를 호출 하 고 매개 변수를 TRUE로 설정 해야 합니다. 이렇게 하면 사용자가 속성 페이지에서 변경 하는 즉시 적용 단추가 활성화 됩니다.
+프레임 워크에서이 함수를 호출 하면 속성 시트의 모든 속성 페이지에서 변경한 내용이 적용 되 고, 속성 시트가 포커스를 유지 하 고 `OnApply` TRUE (값 1)를 반환 합니다. 프레임 워크에서 `OnApply`를 호출 하려면 먼저 [Setmodified](#setmodified) 를 호출 하 고 매개 변수를 TRUE로 설정 해야 합니다. 이렇게 하면 사용자가 속성 페이지에서 변경 하는 즉시 적용 단추가 활성화 됩니다.
 
 사용자가 지금 적용 단추를 클릭할 때 프로그램에서 수행 하는 작업을 지정 하려면이 멤버 함수를 재정의 합니다. 을 재정의 하는 경우 함수는 변경 내용을 적용 하기 위해 TRUE를 반환 하 고 변경 내용을 적용 하지 않도록 하려면 FALSE를 반환 해야 합니다.
 
-`OnApply` 호출`OnOK`의 기본 구현입니다.
+`OnApply`의 기본 구현은 `OnOK`를 호출 합니다.
 
-사용자가 속성 시트에서 지금 적용 또는 확인 단추를 누를 때 전송 되는 알림 메시지에 대 한 자세한 내용은 Windows SDK의 [PSN_APPLY](/windows/win32/Controls/psn-apply) 를 참조 하세요.
+사용자가 속성 시트에서 지금 적용 또는 확인 단추를 누를 때 전송 되는 알림 메시지에 대 한 자세한 내용은 Windows SDK [PSN_APPLY](/windows/win32/Controls/psn-apply) 을 참조 하세요.
 
 ### <a name="example"></a>예제
 
   [CPropertyPage:: OnOK](#onok)의 예제를 참조 하세요.
 
-##  <a name="oncancel"></a>  CPropertyPage::OnCancel
+##  <a name="oncancel"></a>CPropertyPage:: OnCancel
 
 이 멤버 함수는 취소 단추를 선택할 때 프레임 워크에서 호출 됩니다.
 
@@ -333,7 +333,7 @@ virtual void OnCancel();
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
+##  <a name="onkillactive"></a>CPropertyPage:: OnKillActive
 
 이 멤버 함수는 페이지가 더 이상 활성 페이지가 아닌 경우 프레임 워크에서 호출 됩니다.
 
@@ -357,7 +357,7 @@ virtual BOOL OnKillActive();
 
 [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]
 
-##  <a name="onok"></a>  CPropertyPage::OnOK
+##  <a name="onok"></a>CPropertyPage:: OnOK
 
 이 멤버 함수는 프레임 워크에서 [OnKillActive](#onkillactive)를 호출한 직후에 사용자가 확인 또는 지금 적용 단추를 선택할 때 프레임 워크에서 호출 됩니다.
 
@@ -367,17 +367,17 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>설명
 
-사용자가 확인 또는 지금 적용 단추를 선택 하면 프레임 워크는 속성 페이지에서 [PSN_APPLY](/windows/win32/Controls/psn-apply) 알림을 받습니다. `OnOK` [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) 을 호출 하는 경우에 대 한 호출을 수행 하지 않습니다 .이 경우 속성 페이지에서 알림을 보내지 않기 때문입니다.
+사용자가 확인 또는 지금 적용 단추를 선택 하면 프레임 워크는 속성 페이지에서 [PSN_APPLY](/windows/win32/Controls/psn-apply) 알림을 받습니다. [CPropertySheet::P ressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) 을 호출 하는 경우에는 속성 페이지에서 알림을 보내지 않기 때문에 `OnOK`를 호출할 수 없습니다.
 
 사용자가 전체 속성 시트를 닫을 때 현재 활성화 된 페이지와 관련 된 추가 동작을 구현 하려면이 멤버 함수를 재정의 합니다.
 
-이 멤버 함수의 기본 구현은 페이지를 "clean"으로 표시 하 여 데이터를 `OnKillActive` 함수에서 업데이트 했음을 반영 합니다.
+이 멤버 함수의 기본 구현은 페이지를 "clean"으로 표시 하 여 `OnKillActive` 함수에서 데이터가 업데이트 된 것을 반영 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]
 
-##  <a name="onquerycancel"></a>  CPropertyPage::OnQueryCancel
+##  <a name="onquerycancel"></a>CPropertyPage:: OnQueryCancel
 
 이 멤버 함수는 사용자가 취소 단추를 클릭 한 후 취소 작업이 수행 되기 전에 프레임 워크에서 호출 됩니다.
 
@@ -393,13 +393,13 @@ virtual BOOL OnQueryCancel();
 
 사용자가 취소 단추를 클릭할 때 프로그램에서 수행 하는 동작을 지정 하려면이 멤버 함수를 재정의 합니다.
 
-의 `OnQueryCancel` 기본 구현에서는 TRUE를 반환 합니다.
+`OnQueryCancel`의 기본 구현에서는 TRUE를 반환 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]
 
-##  <a name="onreset"></a>  CPropertyPage::OnReset
+##  <a name="onreset"></a>CPropertyPage:: OnReset
 
 이 멤버 함수는 사용자가 취소 단추를 선택할 때 프레임 워크에서 호출 됩니다.
 
@@ -413,13 +413,13 @@ virtual void OnReset();
 
 사용자가 취소 단추를 클릭할 때 프로그램에서 수행 하는 작업을 지정 하려면이 멤버 함수를 재정의 합니다.
 
-의 `OnReset` 기본 구현은 아무 작업도 수행 하지 않습니다.
+`OnReset`의 기본 구현은 아무 작업도 수행 하지 않습니다.
 
 ### <a name="example"></a>예제
 
   [CPropertyPage:: OnCancel](#oncancel)의 예제를 참조 하세요.
 
-##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
+##  <a name="onsetactive"></a>CPropertyPage:: OnSetActive
 
 이 멤버 함수는 사용자가 페이지를 선택 하 고 활성 페이지가 될 때 프레임 워크에서 호출 됩니다.
 
@@ -441,7 +441,7 @@ virtual BOOL OnSetActive();
 
   [CPropertySheet:: Set 텍스트](../../mfc/reference/cpropertysheet-class.md#setfinishtext)의 예제를 참조 하세요.
 
-##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack
+##  <a name="onwizardback"></a>CPropertyPage:: OnWizardBack
 
 이 멤버 함수는 사용자가 마법사에서 뒤로 단추를 클릭할 때 프레임 워크에서 호출 됩니다.
 
@@ -463,7 +463,7 @@ virtual LRESULT OnWizardBack();
 
 [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]
 
-##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish
+##  <a name="onwizardfinish"></a>CPropertyPage:: OnWizardFinish
 
 이 멤버 함수는 사용자가 마법사에서 마침 단추를 클릭할 때 프레임 워크에서 호출 됩니다.
 
@@ -477,11 +477,11 @@ virtual BOOL OnWizardFinish();
 
 ### <a name="remarks"></a>설명
 
-사용자가 마법사에서 **마침** 단추를 클릭 하면 프레임 워크에서이 함수를 호출 합니다. 이 `OnWizardFinish` 0이 아닌 값을 반환 하면 속성 시트를 제거할 수 있지만 실제로는 제거 되지 않습니다. 을 `DestroyWindow` 호출 하 여 속성 시트를 제거 합니다. 에서를 `DestroyWindow` `OnWizardFinish`호출 하지 마십시오. 이렇게 하면 힙이 손상 되거나 다른 오류가 발생 합니다.
+사용자가 마법사에서 **마침** 단추를 클릭 하면 프레임 워크에서이 함수를 호출 합니다. `OnWizardFinish` TRUE (0이 아닌 값)를 반환 하면 속성 시트를 제거할 수 있지만 실제로는 제거 되지 않습니다. `DestroyWindow`를 호출 하 여 속성 시트를 제거 합니다. `OnWizardFinish`에서 `DestroyWindow`를 호출 하지 마십시오. 이렇게 하면 힙이 손상 되거나 다른 오류가 발생 합니다.
 
 이 멤버 함수를 재정의 하 여 마침 단추를 누를 때 사용자가 수행 해야 하는 동작을 지정할 수 있습니다. 이 함수를 재정의 하는 경우 FALSE를 반환 하 여 속성 시트가 제거 되지 않도록 합니다.
 
-사용자가 마법사 속성 시트에서 마침 단추를 누를 때 전송 되는 알림 메시지에 대 한 자세한 내용은 Windows SDK의 [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) 를 참조 하십시오.
+사용자가 마법사 속성 시트에서 마침 단추를 누를 때 전송 되는 알림 메시지에 대 한 자세한 내용은 Windows SDK [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) 을 참조 하세요.
 
 마법사 유형 속성 시트를 만드는 방법에 대 한 자세한 내용은 [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)를 참조 하세요.
 
@@ -495,7 +495,7 @@ virtual BOOL OnWizardFinish();
 
 [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]
 
-##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext
+##  <a name="onwizardnext"></a>CPropertyPage:: OnWizardNext
 
 이 멤버 함수는 사용자가 마법사에서 다음 단추를 클릭할 때 프레임 워크에서 호출 됩니다.
 
@@ -517,7 +517,7 @@ virtual LRESULT OnWizardNext();
 
 [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]
 
-##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings
+##  <a name="querysiblings"></a>CPropertyPage:: QuerySiblings
 
 이 멤버 함수를 호출 하 여 속성 시트의 각 페이지에 메시지를 전달 합니다.
 
@@ -551,7 +551,7 @@ LRESULT QuerySiblings(
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  CPropertyPage::SetModified
+##  <a name="setmodified"></a>CPropertyPage:: SetModified
 
 속성 페이지의 설정이 적절 한 외부 개체에 적용 되어야 하는지 여부에 따라 [지금 적용] 단추를 사용 하거나 사용 하지 않도록 설정 하려면이 멤버 함수를 호출 합니다.
 
@@ -561,18 +561,18 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>매개 변수
 
-*bChanged*<br/>
+*bChanged 됨*<br/>
 마지막으로 적용 된 이후에 속성 페이지 설정이 수정 되었음을 나타내려면 TRUE이 고, 속성 페이지 설정이 적용 되었거나 무시 되어야 함을 나타내려면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-프레임 워크는를 호출한 `SetModified( TRUE )`속성 페이지와 같은 "더티" 페이지를 추적 합니다. 페이지 중 하나에 대해를 호출 `SetModified( TRUE )` 하면 지금 적용 단추가 항상 사용 하도록 설정 됩니다. 페이지 중 하나에 대해를 호출할 `SetModified( FALSE )` 때 [지금 적용] 단추를 사용할 수 없습니다. 단, 다른 페이지에는 "더티"가 없는 경우에만 적용 됩니다.
+프레임 워크는 "더티", 즉 `SetModified( TRUE )`를 호출한 속성 페이지를 추적 합니다. 페이지 중 하나에 대해 `SetModified( TRUE )`를 호출 하면 지금 적용 단추가 항상 사용 하도록 설정 됩니다. 페이지 중 하나에 대해 `SetModified( FALSE )`를 호출할 때 [지금 적용] 단추를 사용할 수 없습니다. 단, 다른 페이지는 "더티" 상태 이면 안 됩니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>

@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890065"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856552"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 함수
 
@@ -75,14 +75,14 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 **bool** 형식의 변수는 1 또는 0으로 표시 됩니다.
 
@@ -127,14 +127,14 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 정수 변수는 10진으로 표시됩니다.
 
@@ -183,7 +183,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 *_Iosbase*\
 `ios_base` 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 조작자는 `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`를 효과적으로 호출한 다음 *iosbase*를 반환 합니다.
 
@@ -197,14 +197,14 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `fixed`은 부동 소수점 숫자에 대 한 기본 표시 표기법입니다. [scientific](../standard-library/ios-functions.md#scientific)은 과학적 표기법을 사용하여 부동 소수점 숫자를 표시하도록 합니다.
 
@@ -245,14 +245,14 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 정수 변수는 10진 표기법으로 표시됩니다. [dec](../standard-library/ios-functions.md#dec) 및 [oct](../standard-library/ios-functions.md#oct)도 정수 변수가 표시되는 방식을 변경합니다.
 
@@ -286,14 +286,14 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [showpos](../standard-library/ios-functions.md#showpos)는 양수에 대해 부호가 표시되도록 합니다.
 
@@ -344,14 +344,14 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 조작자는 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
@@ -399,14 +399,14 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 `noboolalpha`가 설정되어 있습니다.
 
@@ -416,7 +416,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="example"></a>예제
 
-`noboolalpha` 사용 예제는 [boolalpha](../standard-library/ios-functions.md#boolalpha)를 참조하세요.
+[ 사용 예제는 ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`를 참조하세요.
 
 ## <a name="noshowbase"></a>noshowbase
 
@@ -428,14 +428,14 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `noshowbase`는 기본적으로 설정되어 있습니다. [showbase](../standard-library/ios-functions.md#showbase)를 사용하여 숫자의 표기 기준을 나타냅니다.
 
@@ -443,7 +443,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="example"></a>예제
 
-`noshowbase`를 사용하는 방법에 대한 예제는 [showbase](../standard-library/ios-functions.md#showbase)를 참조하세요.
+[를 사용하는 방법에 대한 예제는 ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`를 참조하세요.
 
 ## <a name="noshowpoint"></a>noshowpoint
 
@@ -455,14 +455,14 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `noshowpoint`는 기본적으로 설정되어 있습니다. [showpoint](../standard-library/ios-functions.md#showpoint) 및 [precision](../standard-library/ios-base-class.md#precision)을 사용하여 소수점 뒤에 0을 표시합니다.
 
@@ -502,14 +502,14 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `noshowpos`는 기본적으로 설정되어 있습니다.
 
@@ -517,7 +517,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="example"></a>예제
 
-`noshowpos` 사용 예제는 [showpos](../standard-library/ios-functions.md#showpos)를 참조하세요.
+[ 사용 예제는 ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`를 참조하세요.
 
 ## <a name="noskipws"></a>noskipws
 
@@ -529,14 +529,14 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 [skipws](../standard-library/ios-functions.md#skipws)가 적용됩니다. 입력 스트림에서 공백을 읽으면 버퍼의 끝을 신호로 보냅니다.
 
@@ -571,14 +571,14 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf)는 버퍼가 비어 있지 않으면 처리되도록 합니다.
 
@@ -594,20 +594,20 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 조작자는 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
 ### <a name="example"></a>예제
 
-`nouppercase` 사용 예제는 [uppercase](../standard-library/ios-functions.md#uppercase)를 참조하세요.
+[ 사용 예제는 ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`를 참조하세요.
 
 ## <a name="oct"></a>진수로
 
@@ -619,14 +619,14 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 정수 변수는 10진 표기법으로 표시됩니다. [dec](../standard-library/ios-functions.md#dec) 및 [hex](../standard-library/ios-functions.md#hex)도 정수 변수가 표시되는 방식을 변경합니다.
 
@@ -646,14 +646,14 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [left](../standard-library/ios-functions.md#left)도 텍스트의 양쪽 맞춤을 수정합니다.
 
@@ -703,14 +703,14 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 [fixed](../standard-library/ios-functions.md#fixed) 표기법이 부동 소수점 숫자에 적용됩니다.
 
@@ -748,14 +748,14 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 숫자의 표기 기준은 [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) 또는 [hex](../standard-library/ios-functions.md#hex)를 사용하여 변경할 수 있습니다.
 
@@ -802,14 +802,14 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)가 적용됩니다.
 
@@ -817,7 +817,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="example"></a>예제
 
-`showpoint` 사용 예제는 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)를 참조하세요.
+[ 사용 예제는 ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`를 참조하세요.
 
 ## <a name="showpos"></a>showpos
 
@@ -829,14 +829,14 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos)가 기본값입니다.
 
@@ -874,14 +874,14 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 `skipws`가 설정되어 있습니다. [noskipws](../standard-library/ios-functions.md#noskipws)는 입력 스트림에서 공백을 읽도록 합니다.
 
@@ -926,14 +926,14 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `endl`도 버퍼를 플러시합니다.
 
@@ -951,14 +951,14 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로 [nouppercase](../standard-library/ios-functions.md#nouppercase)가 적용됩니다.
 

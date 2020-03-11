@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189417"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883814"
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
 
@@ -159,14 +159,14 @@ class array;
 |[size](#size)|요소 수를 계산합니다.|
 |[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|
 
-|연산자|설명|
+|Operator|설명|
 |-|-|
 |[array::operator=](#op_eq)|제어되는 시퀀스를 바꿉니다.|
 |[array:: operator\[\]](#op_at)|지정된 위치에 있는 요소에 액세스합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-형식에 기본 생성자 `array()`와 기본 대입 연산자 `operator=`가 있고 `aggregate`에 대한 요구 사항을 충족합니다. 따라서 집계 이니셜라이저를 사용하여 `array<Ty, N>` 형식의 개체를 초기화할 수 있습니다. 예를 들어 입니다.
+형식에 기본 생성자 `array()`와 기본 대입 연산자 `operator=`가 있고 `aggregate`에 대한 요구 사항을 충족합니다. 따라서 집계 이니셜라이저를 사용하여 `array<Ty, N>` 형식의 개체를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<array>
+**헤더:** \<배열 >
 
 **네임스페이스:** std
 
@@ -195,7 +195,7 @@ array(const array& right);
 *오른쪽*\
 삽입할 개체 또는 범위입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 생성자 `array()`는 제어되는 시퀀스를 초기화되지 않은 상태(또는 기본 시퀀스를 초기화된 상태)로 유지합니다. 초기화되지 않은 제어되는 시퀀스를 지정하려면 이 생성자를 사용합니다.
 
@@ -258,7 +258,7 @@ constexpr const_reference at(size_type off) const;
 *해제*\
 액세스할 요소의 위치입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 위치에서 제어 되는 시퀀스의 요소에 대 한 참조를 *반환 합니다.* 해당 위치가 잘못된 경우 함수는 `out_of_range` 클래스의 개체를 throw합니다.
 
@@ -299,7 +299,7 @@ reference back();
 constexpr const_reference back() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어된 시퀀스의 마지막 요소에 대한 참조를 반환합니다.
 
@@ -343,7 +343,7 @@ iterator begin() noexcept;
 const_iterator begin() const noexcept;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 임의 액세스 반복기를 반환합니다.
 
@@ -391,7 +391,7 @@ const_iterator cbegin() const noexcept;
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **상수** 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
@@ -417,7 +417,7 @@ const_iterator cend() const noexcept;
 
 범위 끝의 바로 다음을 가리키는 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
@@ -441,7 +441,7 @@ auto i2 = Container.cend();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 제어되는 시퀀스의 상수 임의 액세스 반복기로 사용될 수 있는 개체를 설명합니다.
 
@@ -489,7 +489,7 @@ it2: 0
 typedef const Ty *const_pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 시퀀스의 요소에 대한 상수 포인터로 사용될 수 있는 개체를 설명합니다.
 
@@ -533,7 +533,7 @@ int main()
 typedef const Ty& const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 상수 참조로 사용될 수 있는 개체를 설명합니다.
 
@@ -577,7 +577,7 @@ int main()
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 상수 역방향 반복기로 사용될 수 있는 개체를 설명합니다.
 
@@ -625,7 +625,7 @@ const_reverse_iterator crbegin() const;
 
 역방향 배열에서 첫 번째 요소의 주소를 지정하거나 정방향 배열에서 마지막 요소의 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 반환 값이 `crbegin`인 배열 개체는 수정할 수 없습니다.
 
@@ -669,7 +669,7 @@ const_reverse_iterator crend() const noexcept;
 
 역방향 배열에서 마지막 요소 다음의 위치(역방향이 해제된 배열의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `crend`는 배열에서 [array::cend](#cend)가 사용되는 것처럼 역방향 배열에 사용됩니다.
 
@@ -711,7 +711,7 @@ Ty *data();
 const Ty *data() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어되는 시퀀스에서 첫 번째 요소의 주소를 반환합니다.
 
@@ -755,7 +755,7 @@ int main()
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 부호 있는 정수 형식은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다. 이 형식은 `std::ptrdiff_t` 형식의 동의어입니다.
 
@@ -799,7 +799,7 @@ int main()
 constexpr bool empty() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `N == 0`인 경우에만 true를 반환합니다.
 
@@ -851,7 +851,7 @@ reference end();
 const_reference end() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다.
 
@@ -901,7 +901,7 @@ void fill(const Type& val);
 |-|-|
 |*val*|배열에 삽입되는 요소의 값입니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `fill`은 배열의 각 요소를 지정된 값으로 바꿉니다.
 
@@ -943,7 +943,7 @@ reference front();
 constexpr const_reference front() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -986,7 +986,7 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 임의 액세스 반복기로 사용될 수 있는 개체를 설명합니다.
 
@@ -1035,7 +1035,7 @@ it2: 0
 constexpr size_type max_size() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `N`를 반환합니다.
 
@@ -1085,7 +1085,7 @@ constexpr const_reference operator[](size_type off) const;
 *해제*\
 액세스할 요소의 위치입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 위치에서 제어 되는 시퀀스의 요소에 대 한 참조를 *반환 합니다.* 해당 위치가 유효하지 않을 경우 동작이 정의되지 않습니다.
 
@@ -1136,7 +1136,7 @@ array<Value> operator=(array<Value> right);
 *오른쪽*\
 복사할 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 연산자 *는의 각 요소를 제어* 되는 시퀀스의 해당 요소에 할당 한 다음 `*this`을 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
@@ -1186,7 +1186,7 @@ int main()
 typedef Ty *pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 시퀀스의 요소에 대한 포인터로 사용될 수 있는 개체를 설명합니다.
 
@@ -1231,7 +1231,7 @@ reverse_iterator rbegin()noexcept;
 const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어되는 시퀀스 끝의 바로 다음을 가리키는 역방향 반복기를 반환합니다. 따라서 역방향 시퀀스의 시작을 지정합니다.
 
@@ -1275,7 +1275,7 @@ int main()
 typedef Ty& reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 요소에 대한 참조로 사용될 수 있는 개체를 설명합니다.
 
@@ -1320,7 +1320,7 @@ reverse_iterator rend()noexcept;
 const_reverse_iterator rend() const noexcept;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 역방향 반복기를 반환합니다. 따라서 역방향 시퀀스의 끝을 지정합니다.
 
@@ -1364,7 +1364,7 @@ int main()
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어되는 시퀀스의 역방향 반복기로 사용될 수 있는 개체를 설명합니다.
 
@@ -1408,7 +1408,7 @@ int main()
 constexpr size_type size() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `N`를 반환합니다.
 
@@ -1451,7 +1451,7 @@ int main()
 typedef std::size_t size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다. 이 형식은 `std::size_t` 형식의 동의어입니다.
 
@@ -1500,7 +1500,7 @@ void swap(array& right);
 *오른쪽*\
 내용을 교환할 배열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `*this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. `N`에 비례하여 많은 요소 할당과 생성자 호출을 수행합니다.
 
@@ -1561,7 +1561,7 @@ int main()
 typedef Ty value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.
 

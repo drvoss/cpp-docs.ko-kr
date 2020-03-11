@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502000"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856380"
 ---
 # <a name="registering-ole-controls"></a>OLE 컨트롤 등록
 
@@ -28,9 +28,9 @@ ms.locfileid: "69502000"
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|등록 데이터베이스에서 컨트롤 클래스 또는 속성 페이지 클래스를 제거 합니다.|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|등록 데이터베이스에서 컨트롤의 형식 라이브러리를 제거 합니다.|
 
-`AfxOleRegisterTypeLib`는 일반적으로 컨트롤 DLL의 구현 `DllRegisterServer`에서 호출 됩니다. 마찬가지로는에 의해 `DllUnregisterServer`호출 됩니다. `AfxOleUnregisterTypeLib` `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`및 `AfxOleUnregisterClass` 는일반적으로컨트롤의클래스팩터리또는속성페이지의멤버함수에`UpdateRegistry` 의해 호출 됩니다.
+`AfxOleRegisterTypeLib`은 일반적으로 컨트롤 DLL의 `DllRegisterServer`구현에서 호출 됩니다. 마찬가지로 `AfxOleUnregisterTypeLib`은 `DllUnregisterServer`에 의해 호출 됩니다. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`및 `AfxOleUnregisterClass`은 일반적으로 컨트롤의 클래스 팩터리 또는 속성 페이지의 `UpdateRegistry` 멤버 함수에 의해 호출 됩니다.
 
-##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass
+##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
 
 Windows 등록 데이터베이스에 컨트롤 클래스를 등록 합니다.
 
@@ -68,16 +68,16 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *nRegFlags*<br/>
 다음 플래그 중 하나 이상을 포함 합니다.
 
-- `afxRegInsertable`OLE 개체에 대 한 개체 삽입 대화 상자에 컨트롤을 표시할 수 있습니다.
+- `afxRegInsertable`를 사용 하면 OLE 개체의 개체 삽입 대화 상자에 컨트롤을 표시할 수 있습니다.
 
-- `afxRegApartmentThreading`레지스트리의 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
+- `afxRegApartmentThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
 
-- `afxRegFreeThreading`레지스트리의 스레딩 모델을 ThreadingModel = Free로 설정 합니다.
+- `afxRegFreeThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = Free로 설정 합니다.
 
-   두 플래그 `afxRegApartmentThreading` 를 결합 하 고 `afxRegFreeThreading` ThreadingModel =를 설정할 수 있습니다. 스레딩 모델 등록에 대 한 자세한 내용은 Windows SDK의 [InprocServer32](/windows/win32/com/inprocserver32) 를 참조 하세요.
+   `afxRegApartmentThreading` 두 플래그를 결합 하 고 `afxRegFreeThreading` ThreadingModel = Both를 설정할 수 있습니다. 스레딩 모델 등록에 대 한 자세한 내용은 Windows SDK의 [InprocServer32](/windows/win32/com/inprocserver32) 를 참조 하세요.
 
 > [!NOTE]
->  MFC 4.2 이전 MFC 버전에서 **int** *nregflags* 매개 변수는 개체 삽입 대화 상자에서삽입할 컨트롤을 허용 하거나 허용 하지 않는 부울 매개 변수 binsertable입니다.
+>  MFC 4.2 이전 MFC 버전에서 **int** *nregflags* 매개 변수는 개체 삽입 대화 상자에서 삽입할 컨트롤을 허용 하거나 허용 하지 않는 부울 매개 변수 *binsertable*입니다.
 
 *dwMiscStatus*<br/>
 다음 상태 플래그 중 하나 이상을 포함 합니다. 플래그에 대 한 설명은 Windows SDK에서 OLEMISC 열거를 참조 하세요.
@@ -135,13 +135,13 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 ### <a name="remarks"></a>설명
 
-이렇게 하면 OLE 컨트롤을 인식 하는 컨테이너에서 컨트롤을 사용할 수 있습니다. `AfxOleRegisterControlClass`시스템의 컨트롤 이름과 위치를 사용 하 여 레지스트리를 업데이트 하 고 레지스트리에서 컨트롤에서 지 원하는 스레딩 모델도 설정 합니다. 자세한 내용은 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "OLE 컨트롤의 아파트 모델 스레딩" 및 Windows SDK의 [프로세스 및 스레드 정보](/windows/win32/ProcThread/about-processes-and-threads) 를 참조 하세요.
+이렇게 하면 OLE 컨트롤을 인식 하는 컨테이너에서 컨트롤을 사용할 수 있습니다. `AfxOleRegisterControlClass`는 레지스트리를 시스템의 컨트롤 이름과 위치로 업데이트 하 고 레지스트리에서 지 원하는 스레딩 모델도 설정 합니다. 자세한 내용은 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "OLE 컨트롤의 아파트 모델 스레딩" 및 Windows SDK의 [프로세스 및 스레드 정보](/windows/win32/ProcThread/about-processes-and-threads) 를 참조 하세요.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-위의 예제에서는를 사용 `AfxOleRegisterControlClass` 하 여를 호출 하는 방법을 보여 줍니다 .이 플래그를 사용 하 여 ORed의 플래그를 사용 하 여 여섯 번째 매개 변수를 만듭니다.
+위의 예제에서는 ORed 플래그를 사용 하 여 `AfxOleRegisterControlClass`를 호출 하는 방법과 아파트 모델에 대 한 플래그를 함께 사용 하 여 여섯 번째 매개 변수를 만드는 방법을 보여 줍니다.
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
@@ -151,7 +151,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
   **헤더** afxctl
 
-##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
+##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
 
 Windows 등록 데이터베이스에 속성 페이지 클래스를 등록 합니다.
 
@@ -177,7 +177,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *nRegFlags*<br/>
 플래그를 포함할 수 있습니다.
 
-- `afxRegApartmentThreading`레지스트리의 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
+- `afxRegApartmentThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
 
 > [!NOTE]
 >  MFC 4.2 이전 MFC 버전에서 **int** *nregflags* 매개 변수를 사용할 수 없습니다. 또한 `afxRegInsertable` 플래그는 속성 페이지에 대 한 올바른 옵션이 아니므로 MFC에서 어설션이 설정 된 경우이를 발생 시킵니다.
@@ -188,13 +188,13 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 
 ### <a name="remarks"></a>설명
 
-이렇게 하면 OLE 컨트롤을 인식 하는 컨테이너에서 속성 페이지를 사용할 수 있습니다. `AfxOleRegisterPropertyPageClass`레지스트리를 시스템의 속성 페이지 이름 및 해당 위치로 업데이트 하 고, 레지스트리에서 컨트롤에서 지 원하는 스레딩 모델도 설정 합니다. 자세한 내용은 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "OLE 컨트롤의 아파트 모델 스레딩" 및 Windows SDK의 [프로세스 및 스레드 정보](/windows/win32/ProcThread/about-processes-and-threads) 를 참조 하세요.
+이렇게 하면 OLE 컨트롤을 인식 하는 컨테이너에서 속성 페이지를 사용할 수 있습니다. `AfxOleRegisterPropertyPageClass`은 레지스트리를 시스템의 속성 페이지 이름 및 해당 위치로 업데이트 하 고, 레지스트리에서 컨트롤에서 지 원하는 스레딩 모델도 설정 합니다. 자세한 내용은 [기술 참고 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "OLE 컨트롤의 아파트 모델 스레딩" 및 Windows SDK의 [프로세스 및 스레드 정보](/windows/win32/ProcThread/about-processes-and-threads) 를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
   **헤더** afxctl
 
-##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib
+##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
 
 Windows 등록 데이터베이스에 형식 라이브러리를 등록하고 OLE 컨트롤을 인식하는 다른 컨테이너에서 형식 라이브러리를 사용할 수 있도록 허용합니다.
 
@@ -218,7 +218,7 @@ BOOL AfxOleRegisterTypeLib(
 컨트롤에 대해 지역화된 형식 라이브러리(.TLB) 파일의 선택적인 파일 이름을 가리킵니다.
 
 *pszHelpDir*<br/>
-형식 라이브러리에 대한 도움말 파일을 찾을 수 있는 디렉터리의 이름입니다. NULL 인 경우 도움말 파일은 형식 라이브러리 자체와 동일한 디렉터리에 있는 것으로 간주 됩니다.
+형식 라이브러리에 대한 도움말 파일을 찾을 수 있는 디렉터리의 이름입니다. NULL인 경우, 도움말 파일은 해당 형식 라이브러리 자체와 동일한 디렉터리에 있는 것으로 간주됩니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -238,7 +238,7 @@ BOOL AfxOleRegisterTypeLib(
 
   **헤더** afxdisp.h
 
-##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
+##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
 
 Windows 등록 데이터베이스에서 컨트롤 또는 속성 페이지 클래스 항목을 제거 합니다.
 
@@ -248,7 +248,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="parameters"></a>매개 변수
 
-*clsID*<br/>
+*가*<br/>
 컨트롤 또는 속성 페이지의 고유 클래스 ID입니다.
 
 *pszProgID*<br/>
@@ -262,7 +262,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
   **헤더** afxctl
 
-##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
+##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
 
 Windows 등록 데이터베이스에서 형식 라이브러리 항목을 제거 하려면이 함수를 호출 합니다.
 
@@ -287,6 +287,6 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
   **헤더** afxdisp.h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

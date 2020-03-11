@@ -6,11 +6,11 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458760"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874830"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 함수
 
@@ -36,7 +36,7 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 스트림입니다.
 
 *오른쪽*\
@@ -61,14 +61,14 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>설명
 
-이 조작자는 모든 `ch` 요소(이 요소의 경우 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true임)를 추출하고 삭제합니다.
+조작자는 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc))에 `ch` 모든 요소를 추출 하 고 삭제 합니다. **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true입니다.
 
-함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*을 반환 합니다.
+함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*를 반환 합니다.
 
 ### <a name="example"></a>예제
 
-`ws` 사용 예제는 [operator>>](../standard-library/istream-operators.md#op_gt_gt)를 참조하세요.
+[ 사용 예제는 ](../standard-library/istream-operators.md#op_gt_gt)operator>>`ws`를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<istream>](../standard-library/istream.md)

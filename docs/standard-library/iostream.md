@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257808"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856543"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "77257808"
 > [!NOTE]
 > \<iostream > 라이브러리는 `#include <ios>`, `#include <streambuf>`, `#include <istream>`및 `#include <ostream>` 문을 사용 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 개체는 다음 두 그룹으로 나뉩니다.
 
@@ -73,7 +73,7 @@ extern ostream cerr;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 오류 출력에 대한 버퍼링되지 않은 삽입을 바이트 스트림으로 제어합니다. 개체가 생성 되 면 식 `cerr.`[플래그](../standard-library/ios-base-class.md#flags) 는 `cerr.tie() == &cout`[buf](../standard-library/ios-functions.md#unitbuf) 는 0이 아니며 `&`.
 
@@ -119,7 +119,7 @@ extern istream cin;
 
 [istream](../standard-library/istream-typedefs.md#istream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 입력에서의 추출을 바이트 스트림으로 제어합니다. 개체가 생성되고 나면 `cin.`[tie](../standard-library/basic-ios-class.md#tie) 호출에서 `&`[cout](#cout)를 반환합니다.
 
@@ -170,7 +170,7 @@ extern ostream clog;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 오류 출력에 대한 버퍼링된 삽입을 바이트 스트림으로 제어합니다.
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 출력에 대한 삽입을 바이트 스트림으로 제어합니다.
 
@@ -210,7 +210,7 @@ extern wostream wcerr;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 오류 출력에 대한 버퍼링되지 않은 삽입을 와이드 스트림으로 제어합니다. 개체가 생성 되 면 식 `wcerr.`[플래그](../standard-library/ios-base-class.md#flags) 는 [0이 아닌 `&`.](../standard-library/ios-functions.md#unitbuf)
 
@@ -230,7 +230,7 @@ extern wistream wcin;
 
 [wistream](../standard-library/istream-typedefs.md#wistream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 입력에서의 추출을 와이드 스트림으로 제어합니다. 개체가 생성되고 나면 `wcin.`[tie](../standard-library/basic-ios-class.md#tie) 호출에서 `&`[wcout](#wcout)를 반환합니다.
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 표준 오류 출력에 대한 버퍼링된 삽입을 와이드 스트림으로 제어합니다.
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 개체는 넓은 스트림으로 표준 출력에 삽입을 제어합니다.
 
