@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78937452"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79094863"
 ---
 # <a name="slice-class"></a>slice 클래스
 
@@ -39,13 +39,13 @@ slice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 인
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[slice](#slice)|동일한 거리만큼 떨어져 있고 지정된 요소에서 시작하는 많은 요소로 구성된 `valarray`의 하위 집합을 정의합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[size](#size)|`valarray`의 조각에 있는 요소 수를 찾습니다.|
 |[start](#start)|`valarray`의 조각 시작 인덱스를 찾습니다.|
@@ -65,7 +65,7 @@ valarray의 조각에 있는 요소 수를 찾습니다.
 size_t size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray의 조각에 있는 요소의 수입니다.
 
@@ -145,7 +145,7 @@ slice(
 *stride*\
 하위 집합의 요소 간 거리입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자는 시작 인덱스에 대 한 *_StartIndex* 를 저장 하 고, 전체 길이를 *_Len* 하 고, stride에 대해 *stride* 를 저장 합니다.
 
@@ -202,7 +202,7 @@ valarray 조각의 시작 인덱스를 찾습니다.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray 조각의 시작 인덱스입니다.
 
@@ -260,7 +260,7 @@ valarray의 조각 내 요소 간 거리를 찾습니다.
 size_t stride() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray의 조각 내 요소 간 거리입니다.
 
