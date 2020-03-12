@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856583"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79129259"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 클래스
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Return Value
 
-파일 포인터가 null 포인터가 아닌 경우 **true** 입니다.
+파일 포인터가 null이 아닌 경우 **true** 입니다.
 
 ### <a name="example"></a>예제
 
@@ -413,7 +413,7 @@ _Fsopen의 *shflag* 매개 변수에 해당 하는 기본 파일 열기 보호�
 
 ### <a name="return-value"></a>Return Value
 
-파일 포인터가 null 포인터인 경우 함수는 null 포인터를 반환합니다. 아닌 경우 **this**를 반환합니다.
+버퍼가 이미 열려 있는 경우 또는 파일 포인터가 null 포인터인 경우 함수는 null 포인터를 반환 합니다. 아닌 경우 **this**를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
