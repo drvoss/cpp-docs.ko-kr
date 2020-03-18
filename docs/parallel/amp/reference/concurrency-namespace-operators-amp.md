@@ -3,11 +3,11 @@ title: Concurrency 네임스페이스 연산자(AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883731"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424922"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 네임스페이스 연산자(AMP)
 
@@ -42,7 +42,7 @@ bool operator== (
 *_Rhs*<br/>
 비교할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 튜플이 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -71,7 +71,7 @@ bool operator!= (
 *_Rhs*<br/>
 비교할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 튜플이 다르면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -116,7 +116,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 *_Rhs*<br/>
 추가할 인수 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 인수의 구성 요소 단위 합계입니다.
 
@@ -161,7 +161,7 @@ _Tuple_type<_Rank>   operator-(
 *_Rhs*<br/>
 뺄 인수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 인수 사이의 구성 요소 단위 차이입니다.
 
@@ -198,7 +198,7 @@ _Tuple_type<_Rank>   operator*(
 *_Rhs*<br/>
 곱할 튜플 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 인수의 구성 요소 단위 곱입니다.
 
@@ -235,7 +235,7 @@ _Tuple_type<_Rank>   operator/(
 *_Rhs*<br/>
 나눌 튜플입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 인수의 구성 요소별 몫입니다.
 
@@ -272,7 +272,7 @@ _Tuple_type<_Rank>   operator%(
 *_Rhs*<br/>
 모듈로 이동할 튜플입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 첫 번째 인수 모듈러스의 결과는 두 번째 지정 된 인수입니다.
 

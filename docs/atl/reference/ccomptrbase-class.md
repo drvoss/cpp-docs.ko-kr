@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864964"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423281"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 클래스
 
@@ -40,17 +40,17 @@ class CComPtrBase
 *T*<br/>
 스마트 포인터에서 참조할 개체 형식입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|`CComPtrBase`의 연결 지점과 클라이언트의 싱크 간에 연결을 만들려면이 메서드를 호출 합니다.|
 |[CComPtrBase:: Attach](#attach)|기존 포인터의 소유권을 사용 하려면이 메서드를 호출 합니다.|
@@ -64,7 +64,7 @@ class CComPtrBase
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComPtrBase:: operator T *](#operator_t_star)|캐스트 연산자입니다.|
 |[CComPtrBase:: operator!](#operator_not)|NOT 연산자입니다.|
@@ -76,7 +76,7 @@ class CComPtrBase
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|포인터 데이터 멤버 변수입니다.|
 
@@ -110,7 +110,7 @@ HRESULT Advise(
 *pdw*<br/>
 연결을 고유 하 게 식별 하는 쿠키에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
@@ -177,7 +177,7 @@ NULL 인 경우 개체가 집계의 일부로 생성 되지 않음을 나타냅�
 *rclsid*<br/>
 개체를 만드는 데 사용 되는 데이터 및 코드와 연결 된 CLSID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK를 반환 하거나, 오류 발생 시 REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING 또는 E_NOINTERFACE를 반환 합니다. 이러한 오류에 대 한 설명은 [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) 및 [Clsidfromprogid](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) 를 참조 하세요.
 
@@ -200,7 +200,7 @@ HRESULT CopyTo(T** ppT) throw();
 *.Ppt*<br/>
 `CComPtrBase` 포인터를 수신 하는 변수의 주소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK을 반환 하 고 실패 시 E_POINTER 반환 합니다.
 
@@ -218,7 +218,7 @@ HRESULT CopyTo(T** ppT) throw();
 T* Detach() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포인터의 복사본을 반환 합니다.
 
@@ -239,7 +239,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 *pOther*<br/>
 비교할 `IUnknown *`입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 같으면 true, 그렇지 않으면 false를 반환 합니다.
 
@@ -251,7 +251,7 @@ NOT 연산자입니다.
 bool operator!() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CComHeapPtr` 포인터가 NULL과 같으면 true, 그렇지 않으면 false를 반환 합니다.
 
@@ -263,7 +263,7 @@ bool operator!() const throw();
 T** operator&() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CComPtrBase` 개체가 가리키는 개체의 주소를 반환 합니다.
 
@@ -275,7 +275,7 @@ T** operator&() throw();
 T& operator*() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Ccomptrbase::p](#p);의 값을 반환 합니다. 즉, `CComPtrBase` 개체에서 참조 하는 개체에 대 한 포인터입니다.
 
@@ -294,7 +294,7 @@ bool operator== (T* pT) const throw();
 *pT*<br/>
 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CComPtrBase`와 *pT* 가 같은 개체를 가리키면 true, 그렇지 않으면 false를 반환 합니다.
 
@@ -306,7 +306,7 @@ bool operator== (T* pT) const throw();
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Ccomptrbase::p](#p) 데이터 멤버 변수의 값을 반환 합니다.
 
@@ -327,7 +327,7 @@ bool operator<(T* pT) const throw();
 *pT*<br/>
 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 개체에서 관리 하는 포인터가 비교할 포인터 보다 작은 경우 true를 반환 합니다.
 
@@ -372,7 +372,7 @@ template <class Q> HRESULT QueryInterface(Q
 *pp*<br/>
 요청 된 인터페이스 포인터를 받는 출력 변수의 주소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 E_NOINTERFACE을 반환 합니다.
 
@@ -407,7 +407,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 *punkParent*<br/>
 부모의 `IUnknown` 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 

@@ -1,19 +1,17 @@
 ---
 title: 범주별 기술 참고 사항
 ms.date: 11/04/2016
-f1_keywords:
-- vc.tables.mfc.technotes
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-ms.openlocfilehash: 7bd6ab2c035fe49a88bd12b62ca26e83e7d9072a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6fff9c1b95ec5d1cc3c28431a2732548fbf5163
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306550"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446803"
 ---
 # <a name="technical-notes-by-category"></a>범주별 기술 참고 사항
 
-기술 정보는 다음 범주로 구분 됩니다. 기술 정보를 나열 하는 숫자를 참조 하세요. [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)합니다.
+기술 정보는 다음과 같은 범주로 구분 됩니다. 기술 참고 사항에 대 한 자세한 내용은 [번호로 기술 참고 사항](../mfc/technical-notes-by-number.md)을 참조 하세요.
 
 ### <a name="mfc-and-windows"></a>MFC 및 Windows
 
@@ -43,7 +41,7 @@ ms.locfileid: "62306550"
 |[TN044: DBCS에 대한 MFC 지원](../mfc/tn044-mfc-support-for-dbcs.md)|
 |[TN046: MFC 클래스의 주석 처리 규칙](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|
 |[TN058: MFC 모듈 상태 구현](../mfc/tn058-mfc-module-state-implementation.md)|
-|[TN059: MFC/유니코드 변환 매크로 사용](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|
+|[TN059: MFC m b c s/유니코드 변환 매크로 사용](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|
 |[TN066: 일반적인 MFC 3.x에서 4.0으로의 이식 문제](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|
 
 ### <a name="mfc-controls"></a>MFC 컨트롤
@@ -61,10 +59,10 @@ ms.locfileid: "62306550"
 |-|
 |[TN042: ODBC 드라이버 개발자 권장 사항](../mfc/tn042-odbc-driver-developer-recommendations.md)|
 |[TN043: RFX 루틴](../mfc/tn043-rfx-routines.md)|
-|[TN045: Long Varchar/Varbinary에 대 한 c/데이터베이스 지원](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
+|[TN045: Long Varchar/Varbinary에 대 한 MFC/Database 지원](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
 |[TN047: 데이터베이스 트랜잭션 요구 사항 완화](../mfc/tn047-relaxing-database-transaction-requirements.md)|
 |[TN048: MFC 데이터베이스 애플리케이션에 대한 ODBC 설정 및 관리 프로그램 작성](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|
-|[TN053: MFC DAO 클래스로 마이그레이션에 대 한 사용자 지정 DFX 루틴](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|
+|[TN053: MFC DAO 클래스에 대 한 사용자 지정 DFX 루틴](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|
 |[TN054: MFC DAO 클래스를 사용하면서 직접 DAO 호출](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|
 |[TN055: MFC ODBC 데이터베이스 클래스 애플리케이션을 MFC DAO 클래스로 마이그레이션](../mfc/tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md)|
 |[TN068: Microsoft Access 7 ODBC 드라이버를 사용하여 트랜잭션 수행](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|
@@ -76,7 +74,7 @@ ms.locfileid: "62306550"
 |[TN011: DLL의 일부로 MFC 사용](../mfc/tn011-using-mfc-as-part-of-a-dll.md)|
 |[TN033: MFC의 DLL 버전](../mfc/tn033-dll-version-of-mfc.md)|
 |[TN056: 지역화된 MFC 구성 요소 설치](../mfc/tn056-installation-of-localized-mfc-components.md)|
-|[TN057: MFC 구성 요소의 지역화](../mfc/tn057-localization-of-mfc-components.md)|
+|[TN057: MFC 구성 요소 지역화](../mfc/tn057-localization-of-mfc-components.md)|
 
 ### <a name="mfc-ole"></a>MFC OLE
 
@@ -85,10 +83,10 @@ ms.locfileid: "62306550"
 |[TN038: MFC/OLE IUnknown 구현](../mfc/tn038-mfc-ole-iunknown-implementation.md)|
 |[TN039: MFC/OLE 자동화 구현](../mfc/tn039-mfc-ole-automation-implementation.md)|
 |[TN040: MFC/OLE 내부 크기 조정 및 확대/축소](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|
-|[TN041: MFC/OLE2로 mfc/ole1 마이그레이션](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|
-|[TN049: MFC/OLE MBCS에서 유니코드로 변환 계층 (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)|
+|[TN041: mfc/OLE2에 대 한 MFC/OLE1 마이그레이션](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|
+|[TN049: MFC/OLE MBCS에서 유니코드로의 변환 계층 (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)|
 |[TN050: MFC/OLE 일반 대화 상자 (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)|
-|[TN064: 아파트 모델 스레딩 OLE 컨트롤](../mfc/tn064-apartment-model-threading-in-activex-controls.md)|
+|[TN064: OLE 컨트롤의 아파트 모델 스레딩](../mfc/tn064-apartment-model-threading-in-activex-controls.md)|
 |[TN065: OLE 자동화 서버에 대한 이중 인터페이스 지원](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)|
 |[TN071: MFC IOleCommandTarget 구현](../mfc/tn071-mfc-iolecommandtarget-implementation.md)|
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857152"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423425"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 클래스
 
@@ -37,18 +37,18 @@ ms.locfileid: "78857152"
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAtlModule:: Cllmodule](#catlmodule)|생성자입니다.|
 |[CAtlModule:: ~ CAtlModule](#dtor)|소멸자입니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)|ATL 레지스트리 구성 요소 (등록자) 대체 맵에 매개 변수를 추가 하려면이 메서드를 재정의 합니다.|
 |[CAtlModule:: AddTermFunc](#addtermfunc)|모듈이 종료 될 때 호출할 새 함수를 추가 합니다.|
@@ -63,12 +63,12 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAtlModule:: m_libid](#m_libid)|현재 모듈의 GUID를 포함 합니다.|
 |[CAtlModule:: m_pGIT](#m_pgit)|전역 인터페이스 테이블에 대 한 포인터입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 클래스는 [CAtlDllModuleT 클래스](../../atl/reference/catldllmodulet-class.md), [CAtlExeModuleT 클래스](../../atl/reference/catlexemodulet-class.md)및 [CAtlServiceModuleT 클래스](../../atl/reference/catlservicemodulet-class.md) 에서 각각 DLL 응용 프로그램, EXE 응용 프로그램 및 Windows 서비스에 대 한 지원을 제공 하는 데 사용 됩니다.
 
@@ -97,13 +97,13 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 ### <a name="parameters"></a>매개 변수
 
 *pRegistrar*<br/>
-예약됨.
+예약되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 대체 가능 매개 변수를 사용 하 여 등록자의 클라이언트는 런타임 데이터를 지정할 수 있습니다. 이를 위해 등록자는 스크립트의 대체 가능 매개 변수와 연결 된 값이 입력 되는 대체 맵을 유지 관리 합니다. 등록자는 런타임에 이러한 항목을 만듭니다.
 
@@ -125,7 +125,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *dw*<br/>
 함수에 전달 되는 사용자 정의 데이터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
@@ -137,7 +137,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 데이터 멤버를 초기화 하 고 모듈의 스레드를 중심으로 임계 영역을 시작 합니다.
 
@@ -149,7 +149,7 @@ CAtlModule() throw();
 ~CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 데이터 멤버를 해제 합니다.
 
@@ -166,11 +166,11 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 *ppGIT*<br/>
 전역 인터페이스 테이블에 대 한 포인터를 수신 하는 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 반환 하거나 오류 발생 시 오류 코드를 반환 합니다. *Ppgit* 가 NULL과 같은 경우 E_POINTER 반환 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 전역 인터페이스 테이블 개체가 없으면 생성 되 고 해당 주소는 [Catlmodule:: m_pGIT](#m_pgit)멤버 변수에 저장 됩니다.
 
@@ -186,7 +186,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 virtual LONG GetLockCount() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠금 수를 반환 합니다. 이 값은 진단 및 디버깅에 유용할 수 있습니다.
 
@@ -198,7 +198,7 @@ virtual LONG GetLockCount() throw();
 virtual LONG Lock() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠금 수를 늘리고 업데이트 된 값을 반환 합니다. 이 값은 진단 및 디버깅에 유용할 수 있습니다.
 
@@ -226,7 +226,7 @@ IGlobalInterfaceTable* m_pGIT;
 void Term() throw();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 데이터 멤버를 해제 합니다. 이 메서드는 소멸자에서 호출 됩니다.
 
@@ -238,7 +238,7 @@ void Term() throw();
 virtual LONG Unlock() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠금 횟수를 감소 시키고 업데이트 된 값을 반환 합니다. 이 값은 진단 및 디버깅에 유용할 수 있습니다.
 
@@ -272,11 +272,11 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 *pMapEntries*<br/>
 스크립트의 대체 가능 매개 변수와 연결 된 값을 저장 하는 대체 맵에 대 한 포인터입니다. ATL은 자동 으로% MODULE%를 사용 합니다. 대체 가능한 추가 매개 변수를 사용 하려면 [Catlmodule:: AddCommonRGSReplacements](#addcommonrgsreplacements)를 참조 하세요. 그렇지 않으면 NULL 기본값을 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *LpszRes 또는 nResID*에 지정 된 리소스에 포함 된 스크립트를 실행 합니다. *BRegister* 가 TRUE 이면이 메서드는 시스템 레지스트리에 개체를 등록 합니다. 그렇지 않으면 레지스트리에서 개체를 제거 합니다.
 
@@ -306,11 +306,11 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 *pMapEntries*<br/>
 스크립트의 대체 가능 매개 변수와 연결 된 값을 저장 하는 대체 맵에 대 한 포인터입니다. ATL은 자동 으로% MODULE%를 사용 합니다. 대체 가능한 추가 매개 변수를 사용 하려면 [Catlmodule:: AddCommonRGSReplacements](#addcommonrgsreplacements)를 참조 하세요. 그렇지 않으면 NULL 기본값을 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 [UpdateRegistryFromResourceD](#updateregistryfromresourced)의 구현을 제공 합니다.
 
@@ -344,11 +344,11 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 *pMapEntries*<br/>
 스크립트의 대체 가능 매개 변수와 연결 된 값을 저장 하는 대체 맵에 대 한 포인터입니다. ATL은 자동 으로% MODULE%를 사용 합니다. 대체 가능한 추가 매개 변수를 사용 하려면 [Catlmodule:: AddCommonRGSReplacements](#addcommonrgsreplacements)를 참조 하세요. 그렇지 않으면 NULL 기본값을 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CAtlModule::UpdateRegistryFromResourceS`를 제외 하 고 [Catlmodule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) 와 마찬가지로 ATL 레지스트리 구성 요소 (등록자)에 대 한 정적 링크를 만듭니다.
 

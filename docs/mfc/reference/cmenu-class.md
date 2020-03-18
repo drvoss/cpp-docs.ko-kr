@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855639"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426242"
 ---
 # <a name="cmenu-class"></a>CMenu 클래스
 
@@ -101,17 +101,17 @@ Windows `HMENU`의 캡슐화입니다.
 class CMenu : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMenu:: CMenu](#cmenu)|`CMenu` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|이 메뉴의 끝에 새 항목을 추가 합니다.|
 |[CMenu:: Attach](#attach)|Windows 메뉴 핸들을 `CMenu` 개체에 연결 합니다.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMenu:: operator HMENU](#operator_hmenu)|메뉴 개체의 핸들을 검색 합니다.|
 |[CMenu:: operator! =](#operator_neq)|두 메뉴 개체가 같지 않은 지 여부를 확인 합니다.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMenu:: m_hMenu](#m_hmenu)|`CMenu` 개체에 연결 된 Windows 메뉴에 대 한 핸들을 지정 합니다.|
 
@@ -219,7 +219,7 @@ BOOL AppendMenu(
 *.Pbmp*<br/>
 메뉴 항목으로 사용 될 `CBitmap` 개체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -280,7 +280,7 @@ BOOL Attach(HMENU hMenu);
 *hMenu*<br/>
 Windows 메뉴에 대 한 핸들을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업이 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -312,7 +312,7 @@ UINT CheckMenuItem(
 *nCheck*<br/>
 메뉴 항목을 확인 하는 방법과 메뉴에서 항목의 위치를 확인 하는 방법을 지정 합니다. *N* 매개 변수는 MF_CHECKED 또는 MF_UNCHECKED MF_BYPOSITION 또는 MF_BYCOMMAND 플래그의 조합일 수 있습니다. 비트 OR 연산자를 사용 하 여 이러한 플래그를 결합할 수 있습니다. 이러한 작업에는 다음과 같은 의미가 있습니다.
 
-- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이 값이 기본값입니다.
+- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이것이 기본값입니다.
 
 - MF_BYPOSITION 매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.
 
@@ -320,7 +320,7 @@ UINT CheckMenuItem(
 
 - MF_UNCHECKED는 항목 옆에 있는 확인 표시를 제거 하는 MF_CHECKED으로 전환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항목의 이전 상태: MF_CHECKED 또는 MF_UNCHECKED 또는 메뉴 항목이 존재 하지 않는 경우 0xFFFFFFFF입니다.
 
@@ -365,7 +365,7 @@ BOOL CheckMenuRadioItem(
 |MF_BYCOMMAND|매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. MF_BYCOMMAND 또는 MF_BYPOSITION가 설정 되어 있지 않은 경우 기본값입니다.|
 |MF_BYPOSITION|매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 그렇지 않으면 0
 
@@ -407,7 +407,7 @@ CMenu();
 BOOL CreateMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴가 성공적으로 만들어졌으면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -431,7 +431,7 @@ BOOL CreateMenu();
 BOOL CreatePopupMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팝업 메뉴가 성공적으로 만들어진 경우에는 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -470,7 +470,7 @@ BOOL DeleteMenu(
 |MF_BYCOMMAND|매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. MF_BYCOMMAND 또는 MF_BYPOSITION가 설정 되어 있지 않은 경우 기본값입니다.|
 |MF_BYPOSITION|매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -508,7 +508,7 @@ static void PASCAL DeleteTempMap();
 BOOL DestroyMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴가 소멸 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -528,7 +528,7 @@ BOOL DestroyMenu();
 HMENU Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 Windows 메뉴에 대 한 HMENU 형식의 핸들 그렇지 않으면 NULL입니다.
 
@@ -583,7 +583,7 @@ UINT EnableMenuItem(
 *nEnable*<br/>
 수행할 동작을 지정 합니다. MF_BYCOMMAND 또는 MF_BYPOSITION와 MF_DISABLED, MF_ENABLED 또는 MF_GRAYED를 조합 하 여 사용할 수 있습니다. 비트 OR 연산자를 사용 하 여 이러한 값을 조합할 수 있습니다. 이러한 값에는 다음과 같은 의미가 있습니다.
 
-- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이 값이 기본값입니다.
+- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이것이 기본값입니다.
 
 - MF_BYPOSITION 매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.
 
@@ -593,7 +593,7 @@ UINT EnableMenuItem(
 
 - 메뉴 항목을 선택할 수 없도록 메뉴 항목을 사용 하지 않도록 MF_GRAYED 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 상태 (MF_DISABLED, MF_ENABLED 또는 MF_GRAYED) 이거나, 유효 하지 않은 경우-1입니다.
 
@@ -622,7 +622,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 *hMenu*<br/>
 메뉴에 대 한 창 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 임시 또는 영구 일 수 있는 `CMenu`에 대 한 포인터입니다.
 
@@ -659,7 +659,7 @@ UINT GetDefaultItem(
 *fByPos*<br/>
 메뉴 항목의 식별자 또는 해당 위치를 검색할지 여부를 지정 하는 값입니다. 이 매개 변수가 FALSE 이면 식별자가 반환 됩니다. 그렇지 않으면 위치가 반환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 반환 값은 메뉴 항목의 식별자 또는 위치입니다. 함수가 실패 하면 반환 값은-1입니다.
 
@@ -679,7 +679,7 @@ UINT GetDefaultItem(
 DWORD GetMenuContextHelpId() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 `CMenu`와 연결 된 컨텍스트 도움말 ID (있는 경우)입니다. 그렇지 않으면 0입니다.
 
@@ -700,7 +700,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 *lpcmi*<br/>
 메뉴에 대 한 정보를 포함 하는 [Menuinfo](/windows/win32/api/winuser/ns-winuser-menuinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 반환 값은 0입니다.
 
@@ -716,7 +716,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 UINT GetMenuItemCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하는 경우 메뉴의 항목 수입니다. 그렇지 않으면-1입니다.
 
@@ -737,7 +737,7 @@ UINT GetMenuItemID(int nPos) const;
 *nPos*<br/>
 ID를 검색할 메뉴 항목의 위치 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하는 경우 팝업 메뉴에서 지정 된 항목의 항목 ID입니다. 지정 된 항목이 팝업 메뉴에 있는 항목과 달리 팝업 메뉴 이면 반환 값은-1입니다. *Npos* 가 구분 기호 메뉴 항목에 해당 하는 경우 반환 값은 0입니다.
 
@@ -767,7 +767,7 @@ Windows SDK에 설명 된 대로 메뉴에 대 한 정보를 포함 하는 [MENU
 *fByPos*<br/>
 `nIDItem`의 의미를 지정 하는 값입니다. 기본적으로 `ByPos`는 uItem이 메뉴 항목 식별자 임을 나타내는 FALSE입니다. `ByPos` FALSE로 설정 되어 있지 않으면 메뉴 항목 위치를 나타냅니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값이 반환 됩니다. 함수가 실패하면 반환 값은 0입니다. 확장 오류 정보를 가져오려면 Windows SDK에 설명 된 대로 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 사용 합니다.
 
@@ -797,11 +797,11 @@ UINT GetMenuState(
 *nFlags*<br/>
 *NID*의 특성을 지정 합니다. 다음 값 중 하나일 수 있습니다.
 
-- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이 값이 기본값입니다.
+- MF_BYCOMMAND 매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. 이것이 기본값입니다.
 
 - MF_BYPOSITION 매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 항목이 없으면 0xFFFFFFFF 값입니다. *NId* 가 팝업 메뉴를 식별 하는 경우 상위 바이트는 팝업 메뉴의 항목 수를 포함 하 고 하위 바이트는 팝업 메뉴와 연결 된 메뉴 플래그를 포함 합니다. 그렇지 않으면 반환 값은 다음 목록에 있는 값의 마스크 (부울 또는)입니다 .이 마스크는 *nId* 에서 식별 하는 메뉴 항목의 상태를 설명 합니다.
 
@@ -864,7 +864,7 @@ int GetMenuString(
 |MF_BYCOMMAND|매개 변수가 기존 메뉴 항목의 명령 ID를 제공 하도록 지정 합니다. MF_BYCOMMAND 또는 MF_BYPOSITION가 설정 되어 있지 않은 경우 기본값입니다.|
 |MF_BYPOSITION|매개 변수가 기존 메뉴 항목의 위치를 제공 하도록 지정 합니다. 첫 번째 항목의 위치는 0입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Null 종결자를 포함 하지 않고 버퍼에 복사 된 실제 문자 수를 지정 합니다.
 
@@ -901,7 +901,7 @@ CMenu* GetSubMenu(int nPos) const;
 *nPos*<br/>
 메뉴에 포함 된 팝업 메뉴의 위치를 지정 합니다. 첫 번째 메뉴 항목의 위치 값은 0부터 시작 합니다. 이 함수에는 팝업 메뉴의 식별자를 사용할 수 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 위치에 팝업 메뉴가 있을 경우 해당 `m_hMenu` 멤버가 팝업 메뉴에 대 한 핸들을 포함 하는 `CMenu` 개체에 대 한 포인터입니다. 그렇지 않으면 NULL입니다. `CMenu` 개체가 없으면 임시 개체가 생성 됩니다. 반환 된 `CMenu` 포인터를 저장 하면 안 됩니다.
 
@@ -955,7 +955,7 @@ BOOL InsertMenu(
 *.Pbmp*<br/>
 메뉴 항목으로 사용 될 `CBitmap` 개체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -1016,7 +1016,7 @@ BOOL LoadMenu(UINT nIDResource);
 *nIDResource*<br/>
 로드할 메뉴 리소스의 메뉴 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴 리소스가 성공적으로 로드 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -1041,7 +1041,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 *lpMenuTemplate*<br/>
 메뉴 템플릿 (단일 [MENUITEMTEMPLATEHEADER](/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader) 구조체 및 하나 이상의 [menuitemtemplate](/windows/win32/api/winuser/ns-winuser-menuitemtemplate) 구조 컬렉션)을 가리킵니다. 이러한 두 구조에 대 한 자세한 내용은 Windows SDK를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴 리소스가 성공적으로 로드 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -1144,7 +1144,7 @@ BOOL ModifyMenu(
 *.Pbmp*<br/>
 메뉴 항목으로 사용 될 `CBitmap` 개체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -1168,7 +1168,7 @@ BOOL ModifyMenu(
 operator HMENU() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 `CMenu` 개체의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1233,7 +1233,7 @@ BOOL RemoveMenu(
 *nFlags*<br/>
 *N 위치* 를 해석 하는 방법을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -1265,7 +1265,7 @@ BOOL SetDefaultItem(
 *fByPos*<br/>
 *Uitem*의 의미를 지정 하는 값입니다. 이 매개 변수가 FALSE 이면 *Uitem* 은 메뉴 항목 식별자입니다. 그렇지 않으면 메뉴 항목 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값이 반환 됩니다. 함수가 실패하면 반환 값은 0입니다. 확장 오류 정보를 가져오려면 Windows SDK에 설명 된 대로 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 사용 합니다.
 
@@ -1290,7 +1290,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 *dwContextHelpId*<br/>
 `CMenu`와 연결할 컨텍스트 도움말 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 그렇지 않으면 0
 
@@ -1315,7 +1315,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 *lpcmi*<br/>
 메뉴에 대 한 정보를 포함 하는 [Menuinfo](/windows/win32/api/winuser/ns-winuser-menuinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 반환 값은 0입니다.
 
@@ -1354,7 +1354,7 @@ BOOL SetMenuItemBitmaps(
 *pBmpChecked*<br/>
 선택 된 메뉴 항목에 사용할 비트맵을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -1428,9 +1428,9 @@ BOOL TrackPopupMenu(
 팝업 메뉴를 소유 하는 창을 식별 합니다. TPM_NONOTIFY 플래그가 지정 된 경우에도이 매개 변수는 NULL 일 수 없습니다. 이 창은 메뉴에서 모든 WM_COMMAND 메시지를 받습니다. Windows 버전 3.1 이상에서는 `TrackPopupMenu`가 반환 될 때까지 창이 WM_COMMAND 메시지를 수신 하지 않습니다. Windows 3.0에서는 `TrackPopupMenu` 반환 되기 전에 창이 WM_COMMAND 메시지를 받습니다.
 
 *lpRect*<br/>
-무시됩니다.
+무시.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 Windows SDK [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) 호출 결과를 반환 합니다.
 
@@ -1472,7 +1472,7 @@ BOOL TrackPopupMenuEx(
 *lptpm*<br/>
 화면 영역을 지정 하는 [Tpmparams](/windows/win32/api/winuser/ns-winuser-tpmparams) 구조에 대 한 포인터입니다. 메뉴가 겹치지 않아야 합니다. 이 매개 변수는 NULL 일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *FuFlags* 매개 변수에서 TPM_RETURNCMD 지정 하는 경우 반환 값은 사용자가 선택한 항목의 메뉴 항목 식별자입니다. 사용자가 선택 하지 않고 메뉴를 취소 하거나 오류가 발생 하는 경우 반환 값은 0입니다.
 

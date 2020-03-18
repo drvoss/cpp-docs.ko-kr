@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855406"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427502"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>방법: parallel_invoke를 사용하여 병렬 정렬 루틴 작성
 
@@ -74,7 +74,7 @@ ms.locfileid: "78855406"
 
 [!code-cpp[concrt-parallel-bitonic-sort#8](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_8.cpp)]
 
-다음 샘플은 프로세서가 4개인 컴퓨터에 대한 출력입니다.
+프로세서가 4개인 컴퓨터의 샘플 출력은 다음과 같습니다.
 
 ```Output
 serial time: 4353

@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856958"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438645"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2단계 이름 조회를 사용하지 않도록 설정)
 
@@ -23,9 +22,9 @@ ms.locfileid: "74856958"
 
 ## <a name="syntax"></a>구문
 
-> **/Zc:twoPhase-**
+> **/Zc: twoPhase-**
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Visual Studio 2017 버전 15.3 이상: [/Permissive-](permissive-standards-conformance.md)에서 컴파일러는 템플릿 이름 확인을 위해 2 단계 이름 조회를 사용 합니다. **/Zc: twoPhase-** 도 지정 하는 경우 컴파일러는 이전의 비호환 클래스 템플릿과 함수 템플릿 이름 확인 및 대체 동작으로 되돌립니다. **/Permissive-** 가 지정 되지 않은 경우에는 순응 하지 않는 동작이 기본값입니다.
 
@@ -51,7 +50,7 @@ Visual Studio 2017 버전 15.3 이상: [/Permissive-](permissive-standards-confo
 
 이 동작의 또 다른 효과는 오버 로드 확인입니다. 비표준 동작은 인스턴스화 사이트에서 토큰 스트림이 확장 되는 방식 때문에 발생 합니다. 템플릿 선언에 표시 되지 않은 기호는 인스턴스화 시점에 표시 될 수 있습니다. 이는 오버 로드 확인에 참여할 수 있음을 의미 합니다. 표준에 따라 템플릿 정의에 표시 되지 않는 코드를 기반으로 템플릿 변경 동작을 찾을 수 있습니다.
 
-예를 들어 다음 코드를 고려합니다.
+다음 코드를 예로 들 수 있습니다.
 
 ```cpp
 // zctwophase.cpp
@@ -99,7 +98,7 @@ Microsoft one-phase
 
 2 단계 조회는 템플릿 정의 중에 종속 되지 않은 이름에 대 한 조회와 템플릿 인스턴스화 중에 종속 이름을 조회 하는 두 부분으로 구성 됩니다. **/Zc: twoPhase-** 에서 컴파일러는 정규화 되지 않은 조회와는 별도로 인수 종속 조회를 수행 하지 않습니다. 즉, 2 단계 조회를 수행 하지 않으므로 오버 로드 확인 결과가 다를 수 있습니다.
 
-또 다른 예를 들자면,
+다른 예제는 다음과 같습니다.
 
 ```cpp
 // zctwophase1.cpp
@@ -155,7 +154,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2 단계 규칙에 맞게 코드를 업데이트 합니다.
 
-이전 버전의 컴파일러에서는 `template` 키워드가 필요 하지 않으며 표준에 C++ 필요한 모든 곳에서 `typename`. 이러한 키워드는 컴파일러가 조회의 첫 번째 단계에서 종속 이름을 구문 분석 해야 하는 방법을 구분 하기 위해 일부 위치에서 필요 합니다. 예를 들면 다음과 같습니다.:
+이전 버전의 컴파일러에서는 `template` 키워드가 필요 하지 않으며 표준에 C++ 필요한 모든 곳에서 `typename`. 이러한 키워드는 컴파일러가 조회의 첫 번째 단계에서 종속 이름을 구문 분석 해야 하는 방법을 구분 하기 위해 일부 위치에서 필요 합니다. 다음은 그 예입니다.
 
 `T::Foo<a || b>(c);`
 
@@ -165,7 +164,7 @@ NS::func(NS::S)
 
 Visual Studio 2017 버전 15.3 이상에서 **/permissive-** 및 **/Zc: twoPhase가** 지정 된 경우 컴파일러는 `template` 키워드 없이이 코드를 허용 합니다. 이 코드는 제한 된 방식 으로만 템플릿을 구문 분석 하므로 `a || b`의 인수를 사용 하 여 코드를 함수 템플릿에 대 한 호출로 해석 합니다. 위의 코드는 첫 번째 단계에서는 구문 분석 되지 않습니다. 두 번째 단계에서는 `T::Foo`가 변수가 아니라 템플릿이 되도록 지시할 수 있는 충분 한 컨텍스트가 있으므로 컴파일러는 키워드 사용을 적용 하지 않습니다.
 
-이 동작은 함수 템플릿 본문의 이름 앞에 `typename` 키워드를 제거 하거나 이니셜라이저, 기본 인수 및 noexcept 인수를 제거 하 여 볼 수도 있습니다. 예를 들면 다음과 같습니다.:
+이 동작은 함수 템플릿 본문의 이름 앞에 `typename` 키워드를 제거 하거나 이니셜라이저, 기본 인수 및 noexcept 인수를 제거 하 여 볼 수도 있습니다. 다음은 그 예입니다.
 
 ```cpp
 template<typename T>
@@ -199,6 +198,6 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 1. **/Zc: twoPhase** 를 포함 하도록 **추가 옵션** 속성을 수정한 다음 **확인**을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [/Zc(규칙)](zc-conformance.md)

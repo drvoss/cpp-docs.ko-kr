@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869892"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425654"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator 클래스
 
@@ -52,13 +52,13 @@ null이 아닌 저장된 포인터를 사용하여 istream_iterator 클래스를
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[istream_iterator](#istream_iterator)|기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[char_type](#char_type)|`istream_iterator`의 문자 형식을 허용하는 형식입니다.|
 |[istream_type](#istream_type)|`istream_iterator`의 스트림 형식을 허용하는 형식입니다.|
@@ -66,7 +66,7 @@ null이 아닌 저장된 포인터를 사용하여 istream_iterator 클래스를
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[operator*](#op_star)|역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.|
 |[operator->](#op_arrow)|멤버의 값을 반환합니다(있는 경우).|
@@ -86,7 +86,7 @@ null이 아닌 저장된 포인터를 사용하여 istream_iterator 클래스를
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Chartype`의 동의어입니다.
 
@@ -141,7 +141,7 @@ istream_iterator(istream_type& _Istr);
 *_Istr*\
 `istream_iterator`를 초기화하기 위해 읽을 입력 스트림입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 생성자는 입력 스트림 포인터를 null 포인터로 초기화하고 스트림의 끝 반복기를 만듭니다. 두 번째 생성자는 *& _Istr*를 사용 하 여 입력 스트림 포인터를 초기화 한 다음 `Type`형식의 개체를 추출 하 고 저장 하려고 합니다.
 
@@ -189,7 +189,7 @@ int main( )
 typedef basic_istream<CharType, Traits> istream_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 `basic_istream`\< **chartype**> **특성**의 동의어입니다.
 
@@ -205,7 +205,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 const Type& operator*() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `Type`형식의 저장 된 개체입니다.
 
@@ -249,11 +249,11 @@ int main( )
 const Type* operator->() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버의 값입니다(있는 경우).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `i->m`는 `(*i).m`와 같습니다.
 
@@ -301,7 +301,7 @@ istream_iterator<Type, CharType, Traits, Distance>& operator++();
 istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 멤버 연산자는 입력 스트림에서 추출 된 `Type` 형식의 증가 된 개체에 대 한 참조를 반환 하 고 두 번째 멤버 함수는 개체의 복사본을 반환 합니다.
 
@@ -345,7 +345,7 @@ int main( )
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 *Traits*와 동일한 의미입니다.
 

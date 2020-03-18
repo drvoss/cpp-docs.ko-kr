@@ -179,11 +179,11 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: 1565a2eef681cbf36a0e166f59cde0320843e8aa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869905"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425912"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 클래스
 
@@ -195,11 +195,11 @@ ms.locfileid: "78869905"
 class CFrameWndEx : public CFrameWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFrameWndEx:: ActiveItemRecalcLayout](#activeitemrecalclayout)|OLE 클라이언트 항목의 레이아웃과 프레임의 클라이언트 영역을 조정 합니다.|
 |`CFrameWndEx::AddDockSite`|이 메서드가 사용되지 않습니다.|
@@ -340,7 +340,7 @@ BOOL AddPane(
 *bTail*<br/>
 진행 목록의 끝에 컨트롤 막대 창을 추가 하려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 성공적으로 등록 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -428,7 +428,7 @@ BOOL DockPaneLeftOf(
 *pLeftOf*<br/>
 진행 *Pbar*로 지정 된 창을 도킹할 왼쪽 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Pbar* 가 성공적으로 도킹 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -449,7 +449,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 진행 창을 도킹할 주 프레임 창의 측면을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *DwDockStyle*에 지정 된 프레임 창 쪽에 가로 막대 창이 도킹 된 경우 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -478,7 +478,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 *dwDockStyle*<br/>
 진행 창 막대가 도킹 되는 주 프레임 창의 측면을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 면에 가로 막대 창이 도킹 될 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -583,7 +583,7 @@ void EnablePaneMenu(
 CMFCPopupMenu* GetActivePopup() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 표시 된 팝업 메뉴에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -595,7 +595,7 @@ CMFCPopupMenu* GetActivePopup() const;
 UINT GetDefaultResId() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 워크에서 프레임 창을 로드할 때 사용자가 지정한 리소스 ID 값입니다. 프레임 창에 메뉴 모음이 없는 경우 0입니다.
 
@@ -607,7 +607,7 @@ UINT GetDefaultResId() const;
 CDockingManager* GetDockingManager();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CDockingManager 클래스](../../mfc/reference/cdockingmanager-class.md)에 대 한 포인터입니다.
 
@@ -623,7 +623,7 @@ CDockingManager* GetDockingManager();
 const CMFCMenuBar* GetMenuBar() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 창에 연결 된 메뉴 모음 개체에 대 한 포인터입니다.
 
@@ -640,7 +640,7 @@ CBasePane* GetPane(UINT nID);
 *nID*<br/>
 진행 컨트롤 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 ID가 있는 창에 대 한 포인터입니다. 이러한 창이 없으면 NULL입니다.
 
@@ -652,7 +652,7 @@ CBasePane* GetPane(UINT nID);
 CMFCRibbonBar* GetRibbonBar();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임의 [Cmfc리본 표시줄 클래스](../../mfc/reference/cmfcribbonbar-class.md) 에 대 한 포인터입니다.
 
@@ -666,7 +666,7 @@ CMFCRibbonBar* GetRibbonBar();
 const CObList& GetTearOffBars() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 분리 상태에 있는 창 개체에 대 한 포인터의 컬렉션을 포함 하는 `CObList` 개체에 대 한 참조입니다.
 
@@ -688,7 +688,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 *strTTText*<br/>
 진행 단추에 대해 표시할 도구 설명 텍스트입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -718,7 +718,7 @@ BOOL InsertPane(
 *bAfter*<br/>
 *Ptarget*뒤에 *pcontrolbar* 를 삽입 하려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 성공적으로 삽입 및 등록 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -734,7 +734,7 @@ BOOL InsertPane(
 BOOL IsFullScreen() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 창이 전체 화면 모드 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -750,7 +750,7 @@ BOOL IsFullScreen() const;
 BOOL IsMenuBarAvailable() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 창에 메뉴 모음이 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -776,7 +776,7 @@ BOOL IsPointNearDockSite(
 *bOuterEdge*<br/>
 제한이 점이 프레임 테두리 가까이에 있으면 TRUE이 고, 그렇지 않으면입니다. 요소가 클라이언트 영역에 있는 경우 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 맞춤 영역에 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -799,7 +799,7 @@ BOOL IsPointNearDockSite(
 BOOL IsPrintPreview();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 창이 인쇄 미리 보기 모드에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -831,7 +831,7 @@ virtual BOOL LoadFrame(
 *pContext*<br/>
 진행 응용 프로그램을 만드는 동안 프레임 워크에서 사용 하는 [Ccreatecontext 구조체](../../mfc/reference/ccreatecontext-structure.md) 클래스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -855,7 +855,7 @@ virtual BOOL NegotiateBorderSpace(
 *lpRectBorder*<br/>
 [in, out] 테두리의 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레이아웃을 다시 계산 해야 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -942,7 +942,7 @@ afx_msg LRESULT OnChangeVisualManager(
 *lParam*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
@@ -968,7 +968,7 @@ afx_msg void OnClose();
 virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 표시줄을 닫을 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -984,7 +984,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부동 미니 프레임 창을 닫을 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1035,7 +1035,7 @@ virtual BOOL OnCmdMsg(
 *pHandlerInfo*<br/>
 [in, out] 명령 처리기 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 명령 메시지가 처리 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1064,7 +1064,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 진행 새 프레임의 [Createstruct 구조체](/windows/win32/api/winuser/ns-winuser-createstructw) 에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0은 프레임 만들기를 계속 합니다. -1-프레임을 제거 합니다.
 
@@ -1104,7 +1104,7 @@ virtual BOOL OnDrawMenuImage(
 *rectImage*<br/>
 진행 이미지의 화면 위치와 크기를 지정 하는 `Rect` 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 워크가 이미지를 성공적으로 렌더링 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1156,7 +1156,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
 *lp*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
@@ -1180,7 +1180,7 @@ LRESULT OnExitSizeMove(
 *lp*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
@@ -1219,7 +1219,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 *lParam*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
@@ -1283,7 +1283,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pTI*<br/>
 제한이 도구 정보 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램이 *Pti* 매개 변수를 채우면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1313,7 +1313,7 @@ afx_msg LRESULT OnMenuChar(
 *pMenu*<br/>
 진행 메뉴에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상위 단어는 다음 값 중 하나 여야 합니다.
 
@@ -1356,7 +1356,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 *pFrame*<br/>
 진행 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md) 창 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 창이 도킹 되지 않은 경우 TRUE이 고, 창 창이 도킹 된 경우 FALSE입니다.
 
@@ -1375,7 +1375,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 *bActive*<br/>
 진행 프레임을 활성 상태로 그리려면 TRUE이 고, FALSE 이면 프레임을 비활성 상태로 그립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 처리를 계속 하려면 0이 아닌 값을 사용 합니다. 0-비클라이언트 영역이 비활성화 되지 않도록 합니다.
 
@@ -1414,7 +1414,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 *point*<br/>
 진행 화면 좌표에서 포인터의 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포인터 적중 열거형 값입니다. 가능한 값 목록은 [WM_NCHITTEST 알림](/windows/win32/inputdev/wm-nchittest)을 참조 하세요.
 
@@ -1463,7 +1463,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 *nID*<br/>
 진행 창의 컨트롤 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 명령이 처리 되었으면 TRUE이 고, 그렇지 않으면입니다. FALSE 이면 명령 처리를 계속 합니다.
 
@@ -1487,7 +1487,7 @@ afx_msg LRESULT OnPostPreviewFrame(
 *lParam*<br/>
 진행 프레임이 인쇄 미리 보기 모드에 있으면 TRUE이 고, 인쇄 미리 보기 모드가 off 이면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
@@ -1511,7 +1511,7 @@ afx_msg LRESULT OnPowerBroadcast(
 *lp*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 창 프로시저를 호출한 결과입니다.
 
@@ -1540,7 +1540,7 @@ BOOL OnSetMenu(HMENU hmenu);
 *hmenu*<br/>
 진행 새 프레임 창 메뉴에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 LRESULT는 기본 창 프로시저를 호출한 결과입니다.
 
@@ -1586,7 +1586,7 @@ afx_msg LRESULT OnSetText(
 *lParam*<br/>
 진행 창의 텍스트에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw)에 대 한 호출에서 값을 반환 합니다.
 
@@ -1610,7 +1610,7 @@ virtual BOOL OnShowCustomizePane(
 *uiToolbarID*<br/>
 진행 사용자 지정할 도구 모음의 컨트롤 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 항상 TRUE를 반환 합니다.
 
@@ -1631,7 +1631,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 *bShow*<br/>
 진행 응용 프로그램에 창이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 항상 FALSE를 반환 합니다.
 
@@ -1656,7 +1656,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 *pMenu*<br/>
 진행 팝업 메뉴에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팝업 메뉴가 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1736,7 +1736,7 @@ virtual BOOL OnTearOffMenu(
 *pBar*<br/>
 진행 분리 막대에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 분리 막대가 있는 팝업 메뉴가 활성화 되어 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1764,7 +1764,7 @@ afx_msg LRESULT OnToolbarContextMenu(
 *lp*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 1을 반환 합니다.
 
@@ -1788,7 +1788,7 @@ afx_msg LRESULT OnToolbarCreateNew(
 *lp*<br/>
 진행 도구 모음의 제목 표시줄에 대 한 텍스트 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새 도구 모음에 대 한 포인터입니다. 또는 도구 모음을 만들지 않은 경우 NULL입니다.
 
@@ -1812,7 +1812,7 @@ afx_msg LRESULT OnToolbarDelete(
 *lp*<br/>
 진행 도구 모음에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음이 삭제 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1913,7 +1913,7 @@ CBasePane* PaneFromPoint(
 *dwAlignment*<br/>
 제한이 성공 하는 경우이 매개 변수에는 지정 된 지점에 가장 가까운 컨트롤 막대의 측면이 포함 됩니다. 그렇지 않으면이 매개 변수는 초기화 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *점을*포함 하는 컨트롤 막대에 대 한 포인터입니다. 컨트롤을 찾을 수 없는 경우 NULL입니다.
 
@@ -1936,7 +1936,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 진행 처리할 메시지를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지를 처리 하 여 디스패치할 수 없으면 0이 아닙니다. 메시지가 처리 되지 않고 디스패치 되어야 하는 경우 0입니다.
 
@@ -2005,7 +2005,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>매개 변수
 
-*state*<br/>
+*상태*<br/>
 도킹 상태입니다. 이 매개 변수는 무시됩니다.
 
 ##  <a name="setprintpreviewframe"></a>CFrameWndEx:: SetPrintPreviewFrame

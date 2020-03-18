@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865110"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424478"
 ---
 # <a name="cdialog-class"></a>CDialog 클래스
 
@@ -57,17 +57,17 @@ ms.locfileid: "78865110"
 class CDialog : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|`CDialog` 개체를 생성합니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDialog::Create](#create)|`CDialog` 개체를 초기화합니다. 모덜리스 대화 상자를 만들어 `CDialog` 개체에 연결 합니다.|
 |[CDialog::CreateIndirect](#createindirect)|리소스 기반이 아닌 메모리의 대화 상자 템플릿에서 모덜리스 대화 상자를 만듭니다.|
@@ -86,12 +86,12 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|취소 단추 또는 ESC 키 동작을 수행 하려면를 재정의 합니다. 기본값은 대화 상자를 닫고 `DoModal` IDCANCEL를 반환 합니다.|
 |[CDialog::OnOK](#onok)|모달 대화 상자에서 확인 단추 작업을 수행 하려면를 재정의 합니다. 기본값은 대화 상자를 닫고 `DoModal` IDOK를 반환 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 대화 상자는 모달 및 모덜리스의 두 가지 유형이 있습니다. 응용 프로그램을 계속 하기 전에 사용자가 모달 대화 상자를 닫아야 합니다. 모덜리스 대화 상자를 사용 하면 사용자가 대화 상자를 표시 하 고 대화 상자를 취소 하거나 제거 하지 않고 다른 작업으로 돌아갈 수 있습니다.
 
@@ -166,7 +166,7 @@ CDialog();
 *pParentWnd*<br/>
 Dialog 개체가 속한 부모 또는 소유자 창 개체 ( [CWnd](../../mfc/reference/cwnd-class.md)형식)를 가리킵니다. NULL 인 경우에는 대화 상자 개체의 부모 창이 주 응용 프로그램 창으로 설정 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자의 한 형태는 템플릿 이름으로 대화 상자 리소스에 대 한 액세스를 제공 합니다. 다른 생성자는 일반적으로 **IDD_** 접두사 (예: IDD_DIALOG1)를 사용 하 여 템플릿 ID 번호로 액세스를 제공 합니다.
 
@@ -201,11 +201,11 @@ Dialog 개체가 속한 부모 창 개체 ( [CWnd](../../mfc/reference/cwnd-clas
 *nIDTemplate*<br/>
 대화 상자 템플릿 리소스의 ID 번호를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자 만들기 및 초기화에 성공 하면 두 폼 모두 0이 아닌 값을 반환 합니다. 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자 내부에 `Create` 호출을 추가 하거나 생성자가 호출 된 후 호출을 호출할 수 있습니다.
 
@@ -252,11 +252,11 @@ DLGINIT 리소스를 가리킵니다.
 *hDialogTemplate*<br/>
 대화 상자 템플릿을 포함 하는 전역 메모리에 대 한 핸들을 포함 합니다. 이 템플릿은 대화 상자의 각 컨트롤에 대 한 데이터와 `DLGTEMPLATE` 구조 형식으로 되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자가 성공적으로 생성 되 고 초기화 된 경우 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CreateIndirect` 멤버 함수는 대화 상자를 만든 후 즉시 반환 됩니다.
 
@@ -274,11 +274,11 @@ ActiveX 컨트롤을 포함 하는 대화 상자에는 DLGINIT 리소스에서 �
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자를 닫는 데 사용 되는 [CDialog:: EndDialog](#enddialog) 멤버 함수에 전달 된 *nresult* 매개 변수의 값을 지정 하는 **int** 값입니다. 함수가 대화 상자를 만들 수 없는 경우 반환 값은-1이 고, 다른 오류가 발생 한 경우 IDABORT입니다 .이 경우 출력 창에는 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)의 오류 정보가 포함 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 멤버 함수는 대화 상자가 활성화 되어 있는 동안 사용자와의 모든 상호 작용을 처리 합니다. 이를 통해 대화 상자를 모달로 만듭니다. 즉, 사용자가 대화 상자를 닫을 때까지 다른 창과 상호 작용할 수 없습니다.
 
@@ -304,7 +304,7 @@ void EndDialog(int nResult);
 *nResult*<br/>
 대화 상자에서 `DoModal`호출자에 게 반환 되는 값을 포함 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 멤버 함수는 *Nresult* 를 `DoModal`반환 값으로 반환 합니다. 모달 대화 상자를 만들 때마다 처리를 완료 하려면 `EndDialog` 함수를 사용 해야 합니다.
 
@@ -326,11 +326,11 @@ void EndDialog(int nResult);
 DWORD GetDefID() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 32 비트 값 (`DWORD`)입니다. 기본 누름 단추에 ID 값이 있으면 상위 단어에는 DC_HASDEFID 포함 되 고 하위 단어에는 ID 값이 포함 됩니다. 기본 누름 단추에 ID 값이 없는 경우 반환 값은 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이는 일반적으로 확인 단추입니다.
 
@@ -347,7 +347,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 *pWndCtrl*<br/>
 포커스를 받을 창 (컨트롤)을 식별 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *PWndCtrl*으로 전달할 컨트롤 (자식 창)에 대 한 포인터를 가져오려면 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대 한 포인터를 반환 하는 `CWnd::GetDlgItem` 멤버 함수를 호출 합니다.
 
@@ -384,11 +384,11 @@ Dialog 개체가 속한 부모 또는 소유자 창 개체 ( [CWnd](../../mfc/re
 *lpDialogInit*<br/>
 DLGINIT 리소스를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Dialog 개체가 성공적으로 생성 되 고 초기화 된 경우 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모달 대화 상자를 간접적으로 만들려면 먼저 메모리의 전역 블록을 할당 하 고 대화 상자 템플릿을 사용 하 여 채웁니다. 그런 다음 빈 `CDialog` 생성자를 호출 하 여 대화 상자 개체를 생성 합니다. 그런 다음 `InitModalIndirect`를 호출 하 여 핸들을 메모리 내 대화 상자 템플릿에 저장 합니다. Windows 대화 상자는 나중에 [DoModal](#domodal) 멤버 함수가 호출 될 때 생성 되 고 표시 됩니다.
 
@@ -407,7 +407,7 @@ void MapDialogRect(LPRECT lpRect) const;
 *lpRect*<br/>
 변환할 대화 상자 좌표를 포함 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 [crect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 대화 상자 단위는 대화 상자 텍스트에 사용 되는 글꼴의 평균 너비와 문자 높이에서 파생 된 현재 대화 상자 기본 단위를 기준으로 하 여 설명 됩니다. 하나의 가로 단위는 대화 상자 기본 너비 단위의 1/4이 고, 세로 단위 하나는 대화 상자 기본 높이 단위의 8-8입니다.
 
@@ -423,7 +423,7 @@ void MapDialogRect(LPRECT lpRect) const;
 void NextDlgCtrl() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 대화 상자의 마지막 컨트롤에 포커스가 있는 경우 첫 번째 컨트롤로 이동 합니다.
 
@@ -435,7 +435,7 @@ void NextDlgCtrl() const;
 virtual void OnCancel();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 사용자가 **취소** 를 클릭 하거나 ESC 키를 눌러 대화 상자를 닫을 때 이전 데이터 복원과 같은 작업을 수행 하려면이 메서드를 재정의 합니다. 기본값은 [EndDialog](#enddialog) 를 호출 하 여 [DoModal](#domodal) 이 IDCANCEL를 반환 하도록 하는 모달 대화 상자를 닫습니다.
 
@@ -456,11 +456,11 @@ virtual void OnCancel();
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램에서 대화 상자의 컨트롤 중 하나에 입력 포커스를 설정 했는지 여부를 지정 합니다. `OnInitDialog`에서 0이 아닌 값을 반환 하는 경우 Windows에서는 입력 포커스를 대화 상자의 첫 번째 컨트롤인 기본 위치로 설정 합니다. 응용 프로그램은 대화 상자의 컨트롤 중 하나에 명시적으로 입력 포커스를 설정한 경우에만 0을 반환할 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows에서는 대화 상자가 표시 되기 직전에 발생 하는 [Create](#create), [Createindirect](#createindirect)또는 [DoModal](#domodal) 호출 중에 대화 상자에 `WM_INITDIALOG` 메시지를 보냅니다.
 
@@ -483,7 +483,7 @@ Windows는 모든 MFC 라이브러리 대화 상자에 공통 된 표준 전역 
 virtual void OnOK();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **확인** 단추가 활성화 될 때 작업을 수행 하려면이 메서드를 재정의 합니다. 대화 상자에 자동 데이터 유효성 검사 및 교환이 포함 된 경우이 메서드의 기본 구현에서는 대화 상자 데이터의 유효성을 검사 하 고 응용 프로그램에서 적절 한 변수를 업데이트 합니다.
 
@@ -509,7 +509,7 @@ Virtual void OnSetFont(CFont* pFont);
 *pFont*<br/>
 진행 이 대화 상자의 모든 컨트롤에 대 한 기본 글꼴로 사용 되는 글꼴에 대 한 포인터를 지정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 대화 상자에는 지정 된 글꼴이 모든 컨트롤에 대 한 기본값으로 사용 됩니다.
 
@@ -526,7 +526,7 @@ Virtual void OnSetFont(CFont* pFont);
 void PrevDlgCtrl() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 포커스가 대화 상자의 첫 번째 컨트롤에 있으면 상자의 마지막 컨트롤로 이동 합니다.
 

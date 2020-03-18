@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869918"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447328"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 구조체
 
@@ -72,18 +72,18 @@ ms.locfileid: "78869918"
 struct AFX_GLOBAL_DATA
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|`AFX_GLOBAL_DATA` 구조를 생성합니다.|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: CleanUp](#cleanup)|브러시, 글꼴 및 DLL 등 프레임워크에 의해 할당되는 리소스를 해제합니다.|
 |[AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix](#d2d1makerotatematrix)|지정된 점을 기준으로 지정된 각도만큼 회전하는 회전 변환을 만듭니다.|
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: GetTextHeight](#gettextheight)|현재 글꼴에서 텍스트 문자의 높이를 검색합니다.|
 |[AFX_GLOBAL_DATA:: GetWICFactory](#getwicfactory)|글로벌 데이터에 저장된 `IWICImagingFactory` 인터페이스로 포인터를 반환합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.|
 |[AFX_GLOBAL_DATA:: GetWriteFactory](#getwritefactory)|글로벌 데이터에 저장된 `IDWriteFactory` 인터페이스로 포인터를 반환합니다. 인터페이스가 초기화되지 않은 경우 기본 매개 변수와 함께 인터페이스가 생성됩니다.|
-|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|`D2D`, `DirectWrite`및 `WIC` 팩터리를 초기화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.|
+|[AFX_GLOBAL_DATA:: InitD2D](#initd2d)|`D2D`, `DirectWrite`및 `WIC` 팩터리를 초기화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.|
 |[AFX_GLOBAL_DATA:: Is32BitIcons](#is32biticons)|미리 정의된 32비트 아이콘이 지원되는지 여부를 나타냅니다.|
 |[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|`D2D` 의 초기화 여부를 확인합니다.|
 |[AFX_GLOBAL_DATA:: IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) 메서드를 호출하는 간단한 방법을 제공합니다.|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>보호된 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: EnableAccessibilitySupport](#enableaccessibilitysupport)|Microsoft Active Accessibility 지원을 사용하거나 사용하지 않도록 설정합니다. Active Accessibility는 사용자 인터페이스 요소에 대한 정보를 노출하기 위한 신뢰할 수 있는 방법을 제공합니다.|
 |[AFX_GLOBAL_DATA:: IsAccessibilitySupport](#isaccessibilitysupport)|Microsoft Active Accessibility 지원이 활성화되어 있는지 여부를 나타냅니다.|
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|현재 운영 체제가 알파 혼합을 지원하는지 여부를 나타냅니다.|
 |[AFX_GLOBAL_DATA:: bIsWindows7](#biswindows7)|애플리케이션이 Windows 7 운영 체제 이상에서 실행되고 있는지 여부를 나타냅니다.|
@@ -188,7 +188,7 @@ HRESULT D2D1MakeRotateMatrix(
 ### <a name="parameters"></a>매개 변수
 
 *각도*<br/>
-시계 방향 회전 각도(도)입니다.
+시계 방향 회전 각도 (도)에서입니다.
 
 *중심과*<br/>
 회전할 점입니다.
@@ -196,7 +196,7 @@ HRESULT D2D1MakeRotateMatrix(
 *행렬*<br/>
 이 메서드가 반환 될 때 새 회전 변환을 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 S_OK을 반환 하 고 그렇지 않으면 오류 값을 반환 합니다.
 
@@ -222,7 +222,7 @@ BOOL DrawParentBackground(
 *lpRect*<br/>
 진행 그릴 영역을 제한 하는 사각형에 대 한 포인터입니다. 기본값은 NULL입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -276,7 +276,7 @@ BOOL DrawTextOnGlass(
 *clrText*<br/>
 진행 지정 된 텍스트가 그려지는 색입니다. 기본값은 기본 색입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 텍스트를 그리는 데 테마가 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -329,7 +329,7 @@ BOOL ExcludeTag(
 *bIsCharsList*<br/>
 진행 *Strtag* 매개 변수의 이스케이프 문자에 대 한 기호를 실제 이스케이프 문자로 변환 하려면 TRUE로 설정 합니다. 변환을 수행 하지 않을 경우 FALSE입니다. 기본값은 FALSE입니다. 자세한 내용은 설명 부분을 참조하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -339,7 +339,7 @@ XML 태그 쌍은 지정 된 버퍼에서 텍스트 실행의 시작과 끝을 �
 
 다음 표의 기호를 사용 하 여 지정 된 버퍼의 이스케이프 문자 집합을 인코딩합니다. *Strtag* 매개 변수에서 기호를 실제 이스케이프 문자로 변환 하려면 *BISCHARSLIST* 매개 변수에 TRUE를 지정 합니다. 다음 표에서는 [_T ()](../../c-runtime-library/data-type-mappings.md) 매크로를 사용 하 여 기호 및 이스케이프 문자열을 지정 합니다.
 
-|Symbol|이스케이프 문자|
+|기호|이스케이프 문자|
 |------------|----------------------|
 |_T ("\\\t")|_T("\t")|
 |_T ("\\\n")|_T ("\n")|
@@ -362,7 +362,7 @@ COLORREF GetColor(int nColor);
 *nColor*<br/>
 진행 색이 검색 되는 사용자 인터페이스 요소를 지정 하는 값입니다. 유효한 값 목록은 [Getsyscolor](/windows/win32/api/winuser/nf-winuser-getsyscolor) 메서드의 *nindex* 매개 변수를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 사용자 인터페이스 요소의 RGB 색 값입니다. 자세한 내용은 설명 부분을 참조하세요.
 
@@ -378,7 +378,7 @@ COLORREF GetColor(int nColor);
 ID2D1Factory* GetDirect2dFactory();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팩터리 생성에 성공 하는 경우 ID2D1Factory 인터페이스에 대 한 포인터이 고, 만들기가 실패 하거나 현재 작업 시스템에 D2D 지원이 없는 경우 NULL입니다.
 
@@ -390,7 +390,7 @@ ID2D1Factory* GetDirect2dFactory();
 HCURSOR GetHandCursor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 손 모양 커서의 핸들입니다.
 
@@ -407,7 +407,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 *info*<br/>
 [in, out] 최소화 되지 않은 창의 비클라이언트 영역과 관련 된 확장 가능한 메트릭을 포함 하는 [비 client메트릭](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) 구조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -424,7 +424,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 *bHorz*<br/>
 진행 텍스트를 가로로 실행할 때 문자 높이를 검색 하려면 TRUE로 설정 합니다. 텍스트가 세로로 실행 될 때 문자 높이를 검색 하려면 FALSE로 설정 합니다. 기본값은 TRUE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Ascender에서 디센더로 측정 되는 현재 글꼴의 높이입니다.
 
@@ -436,7 +436,7 @@ Ascender에서 디센더로 측정 되는 현재 글꼴의 높이입니다.
 IWICImagingFactory* GetWICFactory();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팩터리 생성에 성공 하는 경우 IWICImagingFactory 인터페이스에 대 한 포인터이 고, 만들기가 실패 하거나 현재 작업 시스템에 WIC 지원이 없는 경우 NULL입니다.
 
@@ -448,7 +448,7 @@ IWICImagingFactory* GetWICFactory();
 IDWriteFactory* GetWriteFactory();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팩터리 생성에 성공 하는 경우 IDWriteFactory 인터페이스에 대 한 포인터이 고, 만들기가 실패 하거나 현재 작업 시스템에 DirectWrite 지원이 없는 경우 NULL입니다.
 
@@ -470,7 +470,7 @@ D2D 팩터리의 스레딩 모델 및이 모델에서 만드는 리소스입니�
 *writeFactoryType*<br/>
 쓰기 팩터리 개체를 공유할지 아니면 격리할 지를 지정 하는 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팩터리가 intilalizrd 면 TRUE를 반환 하 고, 그렇지 않으면 FALSE를 반환 합니다.
 
@@ -482,7 +482,7 @@ D2D 팩터리의 스레딩 모델 및이 모델에서 만드는 리소스입니�
 BOOL Is32BitIcons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 미리 정의 된 32 비트 아이콘이 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -498,7 +498,7 @@ Microsoft Active Accessibility 지원이 활성화되어 있는지 여부를 나
 BOOL IsAccessibilitySupport() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 내게 필요한 옵션 지원 기능이 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -516,7 +516,7 @@ D2D가 초기화 되었는지 여부를 확인 합니다.
 BOOL IsD2DInitialized() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 D2D가 초기화 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -528,18 +528,19 @@ Windows [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompo
 BOOL IsDwmCompositionEnabled();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 DWM ( [바탕 화면 창 관리자](/windows/win32/dwm/dwm-overview) ) 컴퍼지션을 사용할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: IsHighContrastMode
 
 이미지가 현재 고대비로 표시되는지 여부를 나타냅니다.
+
 ```
 BOOL IsHighContrastMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이미지가 현재 검정색 또는 흰색 고대비 모드로 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -555,7 +556,7 @@ BOOL IsHighContrastMode() const;
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 계층화 된 창이 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -696,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 *lpszClassNamePrefix*<br/>
 진행 등록할 창 클래스의 이름입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하는 경우 등록 된 클래스의 정규화 된 이름입니다. 그렇지 않으면 [리소스 예외가 발생](exception-processing.md#afxthrowresourceexception)합니다.
 
@@ -712,7 +713,7 @@ Windows 테마 및 비주얼 스타일을 지원하는 메서드에 액세스하
 BOOL Resume();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다. 디버그 모드에서이 메서드는이 메서드가 실패 한 경우를 어설션 합니다.
 
@@ -746,7 +747,7 @@ BOOL SetLayeredAttrib(
 *dwFlags*<br/>
 진행 사용할 메서드 매개 변수를 지정 하는 플래그의 비트 조합 (OR)입니다. *Crkey* 매개 변수를 투명도 색으로 사용 하려면 LWA_COLORKEY를 지정 합니다. *BAlpha* 매개 변수를 사용 하 여 계층화 된 창의 불투명도를 결정 LWA_ALPHA를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -768,7 +769,7 @@ BOOL SetMenuFont(
 *bHorz*<br/>
 진행 텍스트를 가로로 실행 하도록 지정 하려면 TRUE로 설정 합니다. 텍스트를 세로로 실행 하도록 지정 하려면 FALSE로 설정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다. 디버그 모드에서이 메서드는이 메서드가 실패 한 경우를 어설션 합니다.
 
@@ -828,7 +829,7 @@ COLORREF clrInactiveCaptionGradient;
 ITaskbarList *GetITaskbarList();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 표시줄 목록 개체를 만들 때 성공 하면 `ITaskbarList` 인터페이스에 대 한 포인터입니다. 만들기가 실패 하거나 현재 작업 시스템이 Windows 7 보다 작은 경우 NULL입니다.
 
@@ -840,7 +841,7 @@ ITaskbarList *GetITaskbarList();
 ITaskbarList3 *GetITaskbarList3();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 표시줄 목록 개체를 만들 때 성공 하면 `ITaskbarList3` 인터페이스에 대 한 포인터입니다. 만들기가 실패 하거나 현재 작업 시스템이 Windows 7 보다 작은 경우 NULL입니다.
 
@@ -852,7 +853,7 @@ ITaskbarList3 *GetITaskbarList3();
 int GetShellAutohideBars();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 자동 숨기기 막대의 위치를 지정 하는 인코딩된 플래그를 포함 하는 정수 값입니다. AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT 값을 결합할 수 있습니다.
 
@@ -890,7 +891,7 @@ HRESULT ShellCreateItemFromParsingName(
 *ppv*<br/>
 제한이 이 함수가 반환 될 때 *riid*에서 요청 된 인터페이스 포인터를 포함 합니다. 이는 일반적으로 `IShellItem` 또는 `IShellItem2`입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 S_OK 반환 합니다. 그렇지 않으면 오류 값입니다.
 

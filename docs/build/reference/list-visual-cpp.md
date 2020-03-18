@@ -3,17 +3,16 @@ title: '&lt;목록 > (C++ 문서 주석)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305270"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439308"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -69,6 +68,6 @@ ms.locfileid: "62305270"
 class MyClass {};
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)

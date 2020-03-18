@@ -1,21 +1,19 @@
 ---
 title: Language Strings
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500070"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438257"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전에서 지원되는 언어 목록은 [MS-LCID]: Windows LCID(Language Code Identifier) 참조에서 [부록 A: 제품 동작](https://msdn.microsoft.com/library/cc233982.aspx)을 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 태그** 열에 있는 임의의 값일 수 있습니다. 사용 가능한 로캘 이름 및 관련 값을 열거하는 코드 예제는 [NLS: 이름 기반 API 샘플](/windows/win32/intl/nls--name-based-apis-sample)을 참조하세요.
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전별 지원되는 언어 목록은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)(부록 A: 제품 동작)를 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 태그** 열에 있는 임의의 값일 수 있습니다. 사용 가능한 로캘 이름 및 관련 값을 열거하는 코드 예제는 [NLS: 이름 기반 API 샘플](/windows/win32/intl/nls--name-based-apis-sample)을 참조하세요.
 
 ## <a name="additional-supported-language-strings"></a>지원되는 추가 언어 문자열
 
@@ -23,21 +21,21 @@ Microsoft C 런타임 라이브러리 구현은 다음 언어 문자열도 지�
 
 |언어 문자열|해당 로캘 이름|
 |---------------------|----------------------------|
-|american|en-US|
-|american english|en-US|
-|american-english|en-US|
-|australian|en-AU|
-|belgian|nl-BE|
-|canadian|en-CA|
+|아메리카|ko-KR|
+|american english|ko-KR|
+|american-english|ko-KR|
+|오스트레일리아|en-AU|
+|벨기에|nl-BE|
+|캐나다|en-CA|
 |chh|zh-HK|
 |chi|zh-SG|
-|chinese|zh|
+|중국|zh|
 |chinese-hongkong|zh-HK|
 |chinese-simplified|zh-CN|
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|en-US|
+|english-american|ko-KR|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -48,8 +46,8 @@ Microsoft C 런타임 라이브러리 구현은 다음 언어 문자열도 지�
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|en-US|
-|english-usa|en-US|
+|english-us|ko-KR|
+|english-usa|ko-KR|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -60,7 +58,7 @@ Microsoft C 런타임 라이브러리 구현은 다음 언어 문자열도 지�
 |german-swiss|de-CH|
 |irish-english|en-IE|
 |italian-swiss|it-CH|
-|norwegian|no|
+|노르웨이어|아니요|
 |norwegian-bokmal|nb-NO|
 |norwegian-nynorsk|nn-NO|
 |portuguese-brazilian|pt-BR|
@@ -84,10 +82,10 @@ Microsoft C 런타임 라이브러리 구현은 다음 언어 문자열도 지�
 |spanish-uruguay|es-UY|
 |spanish-venezuela|es-VE|
 |swedish-finland|sv-FI|
-|swiss|de-CH|
+|스위스|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|us|ko-KR|
+|usa|ko-KR|
 
 ## <a name="see-also"></a>참고 항목
 

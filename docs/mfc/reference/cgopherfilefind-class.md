@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
 ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875788"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424358"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 클래스
 
@@ -46,17 +46,17 @@ Gopher 서버의 인터넷 파일 검색에 유용합니다.
 class CGopherFileFind : public CFileFind
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CGopherFileFind:: CGopherFileFind](#cgopherfilefind)|`CGopherFileFind` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CGopherFileFind:: FindFile](#findfile)|Gopher 서버에서 파일을 찾습니다.|
 |[CGopherFileFind:: FindNextFile](#findnextfile)|[Findfile](#findfile)에 대 한 이전 호출에서 파일 검색을 계속 합니다.|
@@ -159,7 +159,7 @@ virtual BOOL FindFile(
 
 - 가능 하면 INTERNET_FLAG_USE_EXISTING 각 요청에 대 한 새 세션을 만드는 대신 서버에 대 한 기존 연결을 새 `FindFile` 요청에 다시 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다. 확장 오류 정보를 가져오려면 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출 합니다.
 
@@ -175,7 +175,7 @@ virtual BOOL FindFile(
 virtual BOOL FindNextFile();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일이 더 있는 경우 0이 아닙니다. 찾은 파일이 디렉터리의 마지막 파일 이거나 오류가 발생 한 경우 0입니다. 확장 오류 정보를 가져오려면 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출 합니다. 찾은 파일이 디렉터리의 마지막 파일이 고 일치 하는 파일을 찾을 수 없는 경우 `GetLastError` 함수는 ERROR_NO_MORE_FILES을 반환 합니다.
 
@@ -196,7 +196,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 실패 한 경우 0입니다. 이 `CGopherFileFind` 개체에서 [Findnextfile](#findnextfile) 이 호출 되지 않은 경우에만 `GetCreationTime` 0을 반환 합니다.
 
@@ -224,7 +224,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 *pTimeStamp*<br/>
 파일에 마지막으로 액세스 한 시간을 포함 하는 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 실패 한 경우 0입니다. 이 `CGopherFileFind` 개체에서 [Findnextfile](#findnextfile) 이 호출 되지 않은 경우에만 `GetLastAccessTime` 0을 반환 합니다.
 
@@ -252,7 +252,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 실패 한 경우 0입니다. 이 `CGopherFileFind` 개체에서 [Findnextfile](#findnextfile) 이 호출 되지 않은 경우에만 `GetLastWriteTime` 0을 반환 합니다.
 
@@ -271,7 +271,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 virtual ULONGLONG GetLength() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 찾은 파일의 길이 (바이트)입니다.
 
@@ -294,9 +294,9 @@ virtual ULONGLONG GetLength() const;
 CGopherLocator GetLocator() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-데이터 개체의 시각화를 지정하는 `CGopherLocator` 개체에 추가합니다.
+`CGopherLocator` 개체입니다.
 
 ##  <a name="getscreenname"></a>CGopherFileFind:: GetScreenName
 
@@ -306,7 +306,7 @@ CGopherLocator GetLocator() const;
 CString GetScreenName() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Gopher 화면의 이름입니다.
 
@@ -318,7 +318,7 @@ Gopher 화면의 이름입니다.
 virtual BOOL IsDots() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 찾은 파일의 이름이 "." 또는 "." 인 경우 0이 아닌 것으로,이는 찾은 파일이 실제로 디렉터리 임을 나타냅니다. 그렇지 않으면 0입니다.
 

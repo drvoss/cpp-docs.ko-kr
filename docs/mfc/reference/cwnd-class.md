@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855591"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426398"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 
@@ -1086,7 +1086,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: WindowFromPoint](#windowfrompoint)|지정된 점을 포함하는 창을 식별합니다.|
 |[CWnd:: WinHelp](#winhelp)|WinHelp 애플리케이션을 시작하기 위해 호출됩니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|
@@ -3388,7 +3388,7 @@ virtual HRESULT get_accHelpTopic(
 검색할 도움말 항목이 개체 또는 개체의 자식 요소 중 하나 인지 여부를 지정 합니다. 이 매개 변수는 CHILDID_SELF (개체에 대 한 도움말 항목을 가져오기 위해) 또는 자식 ID (개체의 자식 요소 중 하나에 대 한 도움말 항목을 가져올 수 있음) 일 수 있습니다.
 
 *pidTopic*<br/>
-지정 된 개체와 연결 된 도움말 파일 항목을 식별 합니다. Windows SDK 에서 pidTopic [:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 을 참조 하세요.
+지정 된 개체와 연결 된 도움말 파일 항목을 식별 합니다. Windows SDK *pidTopic* 에서 pidTopic [:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 을 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
@@ -3528,7 +3528,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ### <a name="parameters"></a>매개 변수
 
 *pvarChildren*<br/>
-선택한 하위 항목에 대 한 정보를 받습니다. Windows SDK 에서 pvarChildren [:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 을 참조 하세요.
+선택한 하위 항목에 대 한 정보를 받습니다. Windows SDK *pvarChildren* 에서 pvarChildren [:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 을 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
@@ -7969,7 +7969,7 @@ afx_msg void OnMouseHover(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10317,7 +10317,7 @@ afx_msg void OnXButtonDblClk(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10355,7 +10355,7 @@ afx_msg void OnXButtonDown(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10393,7 +10393,7 @@ afx_msg void OnXButtonUp(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10737,7 +10737,7 @@ BOOL RedrawWindow(
 
 - RDW_NOINTERNALPAINT은 보류 중인 내부 WM_PAINT 메시지를 표시 하지 않습니다. 이 플래그는 잘못 된 영역에서 발생 하는 WM_PAINT 메시지에 영향을 주지 않습니다.
 
-- LpRectUpdate 또는 *Pr* 의 유효성을 검사 하는 RDW_VALIDATE (하나만 NULL 일 수 있음) 둘 다 NULL 이면 전체 창의 유효성이 검사 됩니다. 이 플래그는 내부 WM_PAINT 메시지에 영향을 주지 않습니다.
+- LpRectUpdate 또는 *Pr* 의 유효성을 검사 하는 RDW_VALIDATE (하나만 NULL 일 수 있음) *prgnUpdate* 둘 다 NULL 이면 전체 창의 유효성이 검사 됩니다. 이 플래그는 내부 WM_PAINT 메시지에 영향을 주지 않습니다.
 
 다음 플래그는 다시 그리기를 수행 하는 경우를 제어 합니다. 이러한 비트 중 하나를 지정 하지 않으면 `RedrawWindow` 함수에서 그리기를 수행 하지 않습니다.
 

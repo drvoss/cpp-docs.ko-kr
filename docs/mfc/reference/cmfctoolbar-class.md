@@ -312,11 +312,11 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: d2af7a808e07e0368dd43ed920b6d8736a90b995
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870001"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425744"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 클래스
 
@@ -330,18 +330,18 @@ ms.locfileid: "78870001"
 class CMFCToolBar : public CMFCBaseToolBar
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|기본 생성자입니다.|
 |`CMFCToolBar::~CMFCToolBar`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCToolBar:: AddBasicCommand](#addbasiccommand)|사용자가 메뉴를 열 때 항상 표시 되는 명령 목록에 메뉴 명령을 추가 합니다.|
 |[CMFCToolBar:: AddCommandUsage](#addcommandusage)|지정 된 명령과 연결 된 카운터를 하나씩 늘립니다.|
@@ -461,7 +461,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar:: ResetAllImages](#resetallimages)|응용 프로그램의 모든 도구 모음 이미지 컬렉션을 지웁니다.|
 |[CMFCToolBar:: RestoreOriginalState](#restoreoriginalstate)|도구 모음의 원래 상태를 복원합니다.|
 |[CMFCToolBar:: SaveState](#savestate)|Windows 레지스트리에 도구 모음에 대 한 상태 정보를 저장 합니다. ( [Cpane:: SaveState](../../mfc/reference/cpane-class.md#savestate)를 재정의 합니다.)|
-|`CMFCToolBar::Serialize`|( `CBasePane::Serialize`을 재정의합니다.)|
+|`CMFCToolBar::Serialize`|(`CBasePane::Serialize`을 재정의함)|
 |[CMFCToolBar:: SetBasicCommands](#setbasiccommands)|사용자가 메뉴를 열 때 항상 표시 되는 명령 목록을 설정 합니다.|
 |[CMFCToolBar:: SetButtonInfo](#setbuttoninfo)|도구 모음 단추의 명령 ID, 스타일 및 이미지 ID를 설정 합니다.|
 |[CMFCToolBar:: SetButtonStyle](#setbuttonstyle)|지정 된 인덱스에 있는 도구 모음 단추의 스타일을 설정 합니다.|
@@ -491,9 +491,9 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar:: UpdateButton](#updatebutton)|지정 된 단추의 상태를 업데이트 합니다.|
 |[CMFCToolBar:: WrapToolBar](#wraptoolbar)|지정 된 크기 내에서 도구 모음 단추를 위치를 지정 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCToolBar:: AllowShowOnList](#allowshowonlist)|**사용자 지정** 대화 상자의 **도구** 모음 창에 있는 목록에 도구 모음이 표시 되는지 여부를 결정 합니다.|
 |[CMFCToolBar:: CalcMaxButtonHeight](#calcmaxbuttonheight)|도구 모음에 있는 단추의 최대 높이를 계산 합니다.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCToolBar:: m_bDontScaleImages](#m_bdontscaleimages)|높은 DPI 모드에서 도구 모음 이미지를 조정할지 여부를 지정 합니다.|
 |[CMFCToolBar:: m_dblLargeImageRatio](#m_dbllargeimageratio)|이미지의 크기 (높이 또는 너비)와 일반 이미지의 차원 간 비율을 지정 합니다.|
@@ -624,7 +624,7 @@ static BOOL __stdcall AddToolBarForImageCollection(
 *uiMenuDisabledResID*<br/>
 진행 비활성화 된 메뉴 이미지를 사용 하는 비트맵의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. *UiResID* 또는 *Uibmpresid* 가 유효한 리소스를 지정 하지 않거나 다른 오류가 발생 한 경우 FALSE입니다.
 
@@ -670,7 +670,7 @@ void AdjustSize();
 virtual BOOL AllowChangeTextLabels() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이미지 아래에 텍스트 레이블을 표시할 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -690,7 +690,7 @@ virtual BOOL AllowChangeTextLabels() const;
 virtual BOOL AllowShowOnList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 사용자 지정 페이지의 목록 상자에 toolbar 개체를 표시할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -708,7 +708,7 @@ virtual BOOL AllowShowOnList() const;
 BOOL AreTextLabels() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추에 이미지 아래에 텍스트 레이블이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -757,7 +757,7 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 *pButton*<br/>
 진행 도구 모음 단추 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 내부 목록에 있는 *Pbutton* 의 인덱스입니다. 지정 된 단추가이 도구 모음에 없으면-1입니다.
 
@@ -779,7 +779,7 @@ virtual CSize CalcFixedLayout(
 *bHorz*<br/>
 진행 도구 모음을 가로로 가로 방향으로 설정 하려면 TRUE로 설정 합니다. FALSE 이면 도구 모음을 세로 방향으로 설정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 크기를 지정 하는 `CSize` 개체입니다.
 
@@ -797,7 +797,7 @@ virtual CSize CalcFixedLayout(
 virtual int CalcMaxButtonHeight();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추의 최대 높이입니다.
 
@@ -820,7 +820,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 *bVertDock*<br/>
 진행 도구 모음이 세로로 도킹 되도록 지정 하려면 TRUE로 설정 합니다. FALSE-도구 모음을 가로로 도킹 하도록 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 있는 단추의 전체 크기를 지정 하는 `CSize` 개체입니다.
 
@@ -838,7 +838,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 virtual BOOL CanBeClosed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 도구 모음을 닫을 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -856,7 +856,7 @@ virtual BOOL CanBeClosed() const;
 virtual BOOL CanBeRestored() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램 리소스에서 도구 모음을 복원할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -878,7 +878,7 @@ virtual BOOL CanBeRestored() const;
 virtual BOOL CanFocus() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 FALSE를 반환 합니다.
 
@@ -894,7 +894,7 @@ Toolbar 개체가 포커스를 받을 수 없기 때문에이 메서드는 기�
 BOOL CanHandleSiblings();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 형제가 있고 도구 모음 및 해당 형제가 같은 창에 배치 되는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -946,7 +946,7 @@ int CommandToIndex(
 *iIndexFirst*<br/>
 진행 시작할 초기 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하는 경우 도구 모음 단추의 0부터 시작 하는 인덱스이 고, 그렇지 않으면입니다. 지정 된 ID의 단추가 없는 경우-1입니다.
 
@@ -978,7 +978,7 @@ virtual BOOL Create(
 *nID*<br/>
 진행 도구 모음에 있는 자식 창의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1019,7 +1019,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 진행 도구 모음에 있는 자식 창의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1097,7 +1097,7 @@ virtual BOOL DrawButton(
 *bDrawDisabledImages*<br/>
 진행 비활성화 된 단추가 흐리게 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 다시 그려져 있으면 TRUE이 고, 단추가 숨겨진 경우 FALSE입니다.
 
@@ -1274,7 +1274,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 *hwnd*<br/>
 진행 찾을 창 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 창 핸들을 포함 하는 `CMFCToolBar` 개체에 대 한 포인터 이거나, 해당 하는 `CMFCToolBar` 개체가 없는 경우 NULL입니다.
 
@@ -1290,7 +1290,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 const CObList& GetAllButtons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CMFCToolBarButton class](../../mfc/reference/cmfctoolbarbutton-class.md) 개체의 컬렉션을 포함 하는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체에 대 한 상수 참조입니다.
 
@@ -1302,7 +1302,7 @@ const CObList& GetAllButtons() const;
 static const CObList& GetAllToolbars();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CMFCToolBar` 개체의 컬렉션을 포함 하는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체에 대 한 const 참조입니다.
 
@@ -1314,7 +1314,7 @@ static const CObList& GetAllToolbars();
 static const CList<UINT,UINT>& GetBasicCommands();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 명령의 컬렉션을 포함 하는 [CList 클래스](../../mfc/reference/clist-class.md) 개체에 대 한 const 참조입니다.
 
@@ -1335,7 +1335,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 *iIndex*<br/>
 진행 반환할 단추의 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추에 대 한 포인터 (있는 경우) 해당 단추가 없는 경우 NULL입니다.
 
@@ -1379,7 +1379,7 @@ void GetButtonInfo(
 CSize GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 있는 각 단추의 크기를 지정 하는 [Csize 클래스](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
 
@@ -1400,7 +1400,7 @@ UINT GetButtonStyle(int nIndex) const;
 *nIndex*<br/>
 진행 도구 모음 단추의 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 스타일을 지정 하는 값입니다. . 가능한 스타일 목록은 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 을 참조 하세요.
 
@@ -1428,7 +1428,7 @@ void GetButtonText(
 *rString*<br/>
 제한이 도구 모음 단추의 레이블 텍스트입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 레이블 텍스트입니다.
 
@@ -1444,7 +1444,7 @@ void GetButtonText(
 static CMFCToolBarImages* GetColdImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콜드 도구 모음 단추 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1460,7 +1460,7 @@ static CMFCToolBarImages* GetColdImages();
 virtual int GetColumnWidth() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 너비를 지정 하는 값입니다.
 
@@ -1486,7 +1486,7 @@ static int GetCommandButtons(
 *listButtons*<br/>
 제한이 도구 모음 단추 목록을 수신 하는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령 ID를 가진 단추 수입니다.
 
@@ -1498,7 +1498,7 @@ static int GetCommandButtons(
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 있는 단추 및 구분 기호의 수입니다.
 
@@ -1510,7 +1510,7 @@ int GetCount() const;
 CMFCCustomizeButton* GetCustomizeButton();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음과 연결 된 `CMFCCustomizeButton` 개체에 대 한 포인터입니다.
 
@@ -1533,7 +1533,7 @@ static int GetDefaultImage(UINT uiID);
 *uiID*<br/>
 진행 단추의 명령 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 공유 이미지 목록에서 도구 모음 이미지의 인덱스입니다.
 
@@ -1549,7 +1549,7 @@ static int GetDefaultImage(UINT uiID);
 static CMFCToolBarImages* __stdcall GetDisabledImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비활성화 된 도구 모음 단추 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1565,7 +1565,7 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비활성화 된 메뉴 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1586,7 +1586,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 *pIndex*<br/>
 제한이 도구 모음 단추 컬렉션에서 단추의 인덱스를 받습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 하위 메뉴를 표시 하는 메뉴 단추 개체에 대 한 포인터 이거나, 해당 하위 메뉴가 표시 되지 않는 경우 NULL입니다.
 
@@ -1602,7 +1602,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 BOOL GetGrayDisabledButtons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비활성화 된 단추의 이미지를 흐리게 하려면 TRUE로 설정 합니다. 비활성화 된 이미지의 컬렉션에서 이미지를 가져오려면 FALSE입니다.
 
@@ -1618,7 +1618,7 @@ BOOL GetGrayDisabledButtons() const;
 CMFCToolBarButton* GetHighlightedButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추 개체에 대 한 포인터입니다. 또는 단추가 강조 표시 되지 않은 경우 NULL입니다.
 
@@ -1634,7 +1634,7 @@ CMFCToolBarButton* GetHighlightedButton() const;
 BOOL GetHotBorder() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추가 핫 추적 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1650,7 +1650,7 @@ BOOL GetHotBorder() const;
 static COLORREF GetHotTextColor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 강조 표시 된 현재 텍스트 색을 나타내는 [Colorref](/windows/win32/gdi/colorref) 값입니다.
 
@@ -1666,7 +1666,7 @@ static COLORREF GetHotTextColor();
 HWND GetHwndLastFocus() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전에 입력 포커스가 있었던 [Cmfcbasetoolbar 클래스](../../mfc/reference/cmfcbasetoolbar-class.md)에서 파생 되지 않은 창의 핸들입니다. 이러한 창이 없으면 NULL입니다.
 
@@ -1682,7 +1682,7 @@ HWND GetHwndLastFocus() const;
 BOOL GetIgnoreSetText() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 설정 단추 레이블에 대 한 호출이 무시 되는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1696,7 +1696,7 @@ BOOL GetIgnoreSetText() const;
 static CMFCToolBarImages* GetImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램의 모든 도구 모음에 대 한 기본 이미지의 컬렉션이 들어 있는 [Cmfctoolbars Images 클래스](../../mfc/reference/cmfctoolbarimages-class.md) 개체에 대 한 포인터입니다.
 
@@ -1712,7 +1712,7 @@ static CMFCToolBarImages* GetImages();
 CSize GetImageSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추 이미지의 현재 크기를 나타내는 [Csize 클래스](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
 
@@ -1724,7 +1724,7 @@ CSize GetImageSize() const;
 int GetImagesOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 이미지의 인덱스 오프셋입니다.
 
@@ -1771,7 +1771,7 @@ UINT GetItemID(int nIndex) const;
 *nIndex*<br/>
 진행 도구 모음 단추의 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 명령 ID입니다. 지정 된 인덱스가 있는 단추가 없으면 0이 반환 됩니다.
 
@@ -1812,7 +1812,7 @@ virtual void GetItemRect(
 static CMFCToolBarImages* GetLargeColdImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대량 콜드 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1828,7 +1828,7 @@ static CMFCToolBarImages* GetLargeColdImages();
 static CMFCToolBarImages* GetLargeDisabledImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비활성화 된 크게 도구 모음 단추 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1844,7 +1844,7 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 static CMFCToolBarImages* GetLargeImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 커다란 도구 모음 단추 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1860,7 +1860,7 @@ static CMFCToolBarImages* GetLargeImages();
 CMFCToolBarImages* GetLockedColdImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠긴 콜드 이미지의 컬렉션에 대 한 포인터 이거나, 도구 모음이 잠기지 않은 경우 NULL입니다.
 
@@ -1880,7 +1880,7 @@ CMFCToolBarImages* GetLockedColdImages();
 CMFCToolBarImages* GetLockedDisabledImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠긴 비활성 이미지의 컬렉션에 대 한 포인터 이거나, 도구 모음이 잠기지 않은 경우 NULL입니다.
 
@@ -1900,7 +1900,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
 CMFCToolBarImages* GetLockedImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠긴 도구 모음 단추 이미지의 컬렉션에 대 한 포인터 이거나, 도구 모음이 잠기지 않은 경우 NULL입니다.
 
@@ -1918,7 +1918,7 @@ CMFCToolBarImages* GetLockedImages();
 CSize GetLockedImageSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠긴 도구 모음 이미지의 크기를 지정 하는 `CSize` 구조체 이거나, 도구 모음이 잠기지 않은 경우 빈 `CSize` 구조입니다.
 
@@ -1938,7 +1938,7 @@ CSize GetLockedImageSize() const;
 CMFCToolBarImages* GetLockedMenuImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠긴 도구 모음 메뉴 이미지의 컬렉션에 대 한 포인터 이거나, 도구 모음이 잠기지 않은 경우 NULL입니다.
 
@@ -1958,7 +1958,7 @@ CMFCToolBarImages* GetLockedMenuImages();
 static CSize GetMenuButtonSize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴 단추의 크기 (픽셀)를 나타내는 `CSize` 개체입니다.
 
@@ -1976,7 +1976,7 @@ static CSize GetMenuButtonSize();
 static CMFCToolBarImages* GetMenuImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -1994,7 +1994,7 @@ static CMFCToolBarImages* GetMenuImages();
 static CSize GetMenuImageSize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴 이미지의 크기를 나타내는 `CSize` 개체입니다.
 
@@ -2010,7 +2010,7 @@ static CSize GetMenuImageSize();
 const CObList& GetOrigButtons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음의 사용자 지정 되지 않은 단추 목록에 대 한 참조입니다.
 
@@ -2028,7 +2028,7 @@ const CObList& GetOrigButtons() const;
 const CObList& GetOrigResetButtons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음의 사용자 지정 되지 않은 다시 설정 단추 목록에 대 한 참조입니다.
 
@@ -2046,7 +2046,7 @@ const CObList& GetOrigResetButtons() const;
 UINT GetResourceID() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음의 리소스 ID입니다.
 
@@ -2062,7 +2062,7 @@ UINT GetResourceID() const;
 BOOL GetRouteCommandsViaFrame();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 프레임이 도구 모음에 명령을 보내는 경우 0이 아닙니다. 소유자가 도구 모음에 명령을 보내는 경우 0입니다.
 
@@ -2080,7 +2080,7 @@ BOOL GetRouteCommandsViaFrame();
 virtual int GetRowHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추의 높이 (픽셀)입니다.
 
@@ -2096,7 +2096,7 @@ virtual int GetRowHeight() const;
 static BOOL GetShowTooltips();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추에 대 한 도구 설명이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2112,7 +2112,7 @@ static BOOL GetShowTooltips();
 CMFCToolBar* GetSiblingToolBar();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 형제 도구 모음에 대 한 포인터입니다.
 
@@ -2128,7 +2128,7 @@ CMFCToolBar* GetSiblingToolBar();
 static CMFCToolBarImages* GetUserImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램의 모든 도구 모음에 대 한 사용자 정의 도구 모음 단추 이미지의 컬렉션에 대 한 포인터입니다.
 
@@ -2149,7 +2149,7 @@ virtual int HitTest(CPoint point);
 *point*<br/>
 진행 테스트할 지점 (클라이언트 좌표)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 위치에 있는 단추의 인덱스 이거나, 해당 단추가 없는 경우-1입니다. 또는 단추가 구분 기호입니다.
 
@@ -2175,7 +2175,7 @@ virtual int InsertButton(
 *iInsertAt*<br/>
 진행 에서 단추를 삽입할 위치 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 삽입 된 위치입니다. 오류가 발생 하는 경우에는-1입니다.
 
@@ -2198,7 +2198,7 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 *iInsertAt*<br/>
 진행 구분 기호를 삽입할 위치 (0부터 시작)를 지정 합니다. 이 매개 변수는 0 보다 커야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 구분 기호가 삽입 된 위치입니다. 오류가 발생 하는 경우에는-1입니다.
 
@@ -2223,7 +2223,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 *nIndex*<br/>
 진행 도구 모음에 있는 단추의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 제공 된 인덱스에 있는 `CMFCToolBarButton` 개체에 대 한 포인터 이거나, 해당 개체가 없는 경우 NULL입니다.
 
@@ -2239,7 +2239,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 BOOL IsAddRemoveQuickCustomize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 사용자 **지정** 메뉴 옵션을 사용 하 여 도구 모음을 수정할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2253,7 +2253,7 @@ BOOL IsAddRemoveQuickCustomize();
 static BOOL __stdcall IsAltCustomizeMode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추를 끌기 위해 빠른 사용자 지정을 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2267,7 +2267,7 @@ static BOOL __stdcall IsAltCustomizeMode();
 static BOOL IsAutoGrayInactiveImages();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비활성 이미지를 자동으로 흐리게 하는 옵션을 사용할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2288,7 +2288,7 @@ static BOOL IsBasicCommand(UINT uiCmd);
 *uiCmd*<br/>
 진행 확인할 명령을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령이 기본 명령 목록에 속하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2304,7 +2304,7 @@ static BOOL IsBasicCommand(UINT uiCmd);
 virtual BOOL IsButtonExtraSizeAvailable() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 막대가 추가 테두리 크기의 단추를 표시할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2327,7 +2327,7 @@ BOOL IsButtonHighlighted(int iButton) const;
 *iButton*<br/>
 진행 도구 모음 단추의 인덱스를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 단추가 강조 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2346,7 +2346,7 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 *uiCmd*<br/>
 진행 확인할 명령을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령이 허용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2369,7 +2369,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 *uiCmd*<br/>
 진행 확인할 명령을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령이 드물게 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2395,7 +2395,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 static BOOL IsCustomizeMode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 워크가 사용자 지정 모드에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -2418,7 +2418,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 *pButton*<br/>
 진행 도구 모음 단추에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 단추를 끌고 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2432,7 +2432,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 BOOL IsExistCustomizeButton();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 **사용자 지정** 단추가 포함 되어 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2450,7 +2450,7 @@ BOOL IsExistCustomizeButton();
 virtual BOOL IsFloating() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음이 부동 인 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2462,7 +2462,7 @@ virtual BOOL IsFloating() const;
 static BOOL IsLargeIcons();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램에서 많은 아이콘을 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2485,7 +2485,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 *pButton*<br/>
 진행 단추에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Pbutton* 에서 지정 하는 단추에서 마지막 명령이 전송 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -2501,7 +2501,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 BOOL IsLocked() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음이 잠겨 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2519,7 +2519,7 @@ BOOL IsLocked() const;
 BOOL IsOneRowWithSibling();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 및 해당 형제가 동일한 행에 배치 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2535,7 +2535,7 @@ BOOL IsOneRowWithSibling();
 virtual BOOL IsResourceChanged() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2545,7 +2545,7 @@ virtual BOOL IsResourceChanged() const;
 BOOL IsSibling();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2557,7 +2557,7 @@ BOOL IsSibling();
 BOOL IsUserDefined() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 도구 모음을 만든 경우 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -2595,7 +2595,7 @@ virtual BOOL LoadBitmap(
 *uiMenuDisabledResID*<br/>
 진행 비활성화 된 메뉴 이미지를 참조 하는 비트맵의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -2618,7 +2618,7 @@ virtual BOOL LoadBitmapEx(
 진행 *params*<br/>
 진행 *차단 됨*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2632,7 +2632,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 진행 *lpszProfileName*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2649,7 +2649,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 *lpszProfileName*<br/>
 진행 Windows 레지스트리 키의 상대 경로를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -2681,7 +2681,7 @@ virtual BOOL LoadState(
 *uiID*<br/>
 진행 도구 모음의 리소스 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -2727,7 +2727,7 @@ virtual BOOL LoadToolBar(
 *uiHotResID*<br/>
 진행 핫 도구 모음 이미지를 참조 하는 비트맵의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -2764,7 +2764,7 @@ virtual BOOL LoadToolBarEx(
 *인해*<br/>
 진행 도구 모음이 잠겨 있는지 여부를 지정 하는 부울 값입니다. 이 매개 변수가 TRUE 이면 도구 모음이 잠깁니다. 그렇지 않으면 도구 모음이 잠기지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -2792,7 +2792,7 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 virtual BOOL NextMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2812,7 +2812,7 @@ virtual BOOL OnBeforeRemoveButton(
 *dropEffect*<br/>
 진행 사용 되지 않는.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2892,7 +2892,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 진행 *Lval*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2909,7 +2909,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 *pButton*<br/>
 진행 텍스트를 설정 하는 단추를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 TRUE로 설정 하면 텍스트가 성공적으로 복원 됩니다. 그렇지 않으면 FALSE입니다.
 
@@ -2937,7 +2937,7 @@ virtual BOOL OnUserToolTip(
 *strTTText*<br/>
 제한이 도구 설명의 텍스트를 받는 `CString` 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *StrTTText* 가 도구 설명 텍스트로 채워진 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2953,7 +2953,7 @@ virtual BOOL OnUserToolTip(
 virtual BOOL PrevMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -2970,7 +2970,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 *pButton*<br/>
 진행 도구 모음에 있는 단추에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 항상 TRUE를 반환 해야 합니다. MFC는 내부적으로 FALSE 값을 사용 합니다.
 
@@ -3005,7 +3005,7 @@ virtual BOOL RemoveButton(int iIndex);
 *iIndex*<br/>
 진행 제거할 단추의 인덱스 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 지정 된 인덱스가 유효 하지 않거나 인덱스에서 **사용자 지정** 단추를 참조 하면 FALSE입니다.
 
@@ -3037,7 +3037,7 @@ virtual BOOL RemoveStateFromRegistry(
 *uiID*<br/>
 진행 도구 모음의 리소스 ID입니다. 이 매개 변수가-1 인 경우이 메서드는 [CWnd:: GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) 메서드를 사용 하 여 리소스 ID를 검색 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -3069,7 +3069,7 @@ int ReplaceButton(
 *공을*<br/>
 진행 *Uicmd*로 지정 된 명령 ID를 가진 모든 단추를 바꿀지 여부를 지정 하는 부울 값입니다. 이 매개 변수가 TRUE 이면 지정 된 명령 ID를 가진 모든 단추가 바뀝니다. 그렇지 않으면 첫 번째 단추가 바뀝니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대체 된 단추 수입니다. 지정 된 명령 ID를 가진 단추가 도구 모음에 없으면이 메서드는 0을 반환 합니다.
 
@@ -3132,7 +3132,7 @@ virtual void RestoreFocus();
 virtual BOOL RestoreOriginalState();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 메서드가 실패 하거나 도구 모음이 사용자 정의 이면 FALSE입니다.
 
@@ -3152,7 +3152,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 진행 *lpszProfileName*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -3178,7 +3178,7 @@ virtual BOOL SaveState(
 *uiID*<br/>
 진행 도구 모음의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -3263,7 +3263,7 @@ virtual BOOL SetButtons(
 *bRemapImages*<br/>
 진행 기존 단추 이미지를 삽입 된 단추와 연결할지 여부를 지정 하는 부울 값입니다. 이 매개 변수가 TRUE 이면 이미지가 다시 매핑됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 0이 아니고, 실패하면 0입니다.
 
@@ -3313,7 +3313,7 @@ BOOL SetButtonText(
 *lpszText*<br/>
 진행 도구 모음 단추의 텍스트 레이블입니다. NULL이 아니어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -3339,7 +3339,7 @@ static BOOL SetCommandUsageOptions(
 *nMinUsagePercentage*<br/>
 진행 명령을 실행 하 여 최근에 사용한 명령으로 간주 해야 하는 시간 비율입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NMinUsagePercentage* 가 100 보다 크거나 같으면 false이 고, 그렇지 않으면 false입니다. 그렇지 않으면 TRUE입니다.
 
@@ -3362,7 +3362,7 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 *bSet*<br/>
 진행 사용자 지정 모드를 사용 하거나 사용 하지 않을 지 여부를 지정 하는 부울 값입니다. 사용자 지정 모드를 사용 하려면이 매개 변수를 TRUE로 설정 하 고, 그렇지 않으면 FALSE로 설정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드를 호출 하면 사용자 지정 모드가 변경 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -3412,7 +3412,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>매개 변수
 
-진행 고가<br/>
+진행 *bOn* 고가<br/>
 
 ### <a name="remarks"></a>설명
 
@@ -3426,7 +3426,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 진행 *Pmenubutton*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -3773,7 +3773,7 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 *pUserImages*<br/>
 진행 사용자 정의 이미지의 컬렉션에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 0이 아닌 값입니다. 지정 된 `CMFCToolBarImages` 개체가 유효 하지 않거나 도구 모음의 기본 이미지 크기와 다른 이미지 크기를 가진 경우 0입니다.
 
@@ -3805,7 +3805,7 @@ virtual CSize StretchPane(
 *bVert*<br/>
 진행 TRUE 이면 창을 세로로 늘립니다. FALSE 이면 창을 가로로 늘립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 클라이언트 영역의 크기를 지정 하는 `CSize` 개체입니다.
 
@@ -3828,7 +3828,7 @@ virtual BOOL TranslateChar(UINT nChar);
 *nChar*<br/>
 진행 가상 키 코드를 지정 합니다. 표준 가상 키 코드의 목록은 Winuser.h를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 키 코드가 인쇄할 수 없거나 유효한 바로 가기 키와 일치 하지 않으면 FALSE입니다. 지정 된 키 코드가 드롭다운 메뉴 옵션에 해당 하는 경우 TRUE입니다. 그렇지 않으면 [Cmfctoolbar의 반환 값::P rocesscommand](#processcommand).
 
@@ -3880,7 +3880,7 @@ int WrapToolBar(
 
 [in] m *Nrowheight* 단추 높이입니다. -1 인 경우 현재 높이가 사용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 있는 단추 행의 수입니다.
 

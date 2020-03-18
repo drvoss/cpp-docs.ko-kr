@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864962"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423305"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 클래스
 
@@ -122,7 +122,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 |S_OK  |이벤트 싱크 맵의 모든 컨트롤이 이벤트 원본에서 연결 되었거나 연결이 끊어졌습니다.|
 |E_FAIL  |이벤트 싱크 맵의 모든 컨트롤을 이벤트 원본에서 연결 하거나 연결을 끊을 수 없습니다.|
 |E_POINTER  |일반적으로이 오류는 컨트롤의 이벤트 싱크 맵에 있는 항목이 나 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스에서 사용 되는 템플릿 인수에 문제가 있음을 나타냅니다.|
-|CONNECT_E_ADVISELIMIT  |연결 지점에 이미 연결 한계에 도달 했습니다 및 더 이상 받아들일 수 없습니다.|
+|CONNECT_E_ADVISELIMIT  |연결 지점이 이미 연결 한계에 도달하여 더 이상 수용할 수 없습니다.|
 |CONNECT_E_CANNOTCONNECT  |싱크가이 연결 지점에 필요한 인터페이스를 지원 하지 않습니다.|
 |CONNECT_E_NOCONNECTION  |쿠키 값이 올바른 연결을 나타내지 않습니다. 일반적으로이 오류는 컨트롤의 이벤트 싱크 맵에 있는 항목이 나 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스에서 사용 되는 템플릿 인수에 문제가 있음을 나타냅니다.|
 

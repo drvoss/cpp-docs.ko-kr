@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866441"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426008"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -61,17 +61,17 @@ ms.locfileid: "78866441"
 class CControlBar : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CControlBar:: CControlBar](#ccontrolbar)|`CControlBar` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CControlBar:: CalcDynamicLayout](#calcdynamiclayout)|동적 컨트롤 막대의 크기를 [Csize](../../atl-mfc-shared/reference/csize-class.md) 개체로 반환 합니다.|
 |[CControlBar:: CalcFixedLayout](#calcfixedlayout)|컨트롤 막대의 크기를 [Csize](../../atl-mfc-shared/reference/csize-class.md) 개체로 반환 합니다.|
@@ -92,7 +92,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CControlBar:: m_bAutoDelete](#m_bautodelete)|0이 아니면 Windows 컨트롤 표시줄이 제거 될 때 `CControlBar` 개체가 삭제 됩니다.|
 |[CControlBar:: m_pInPlaceOwner](#m_pinplaceowner)|컨트롤 막대의 현재 위치의 소유자입니다.|
@@ -151,7 +151,7 @@ virtual CSize CalcDynamicLayout(
 |LM_LENGTHY|*Nlength* 가 너비 대신 높이 (Y 방향)를 나타내는 경우에 설정 합니다.|
 |LM_COMMIT|LM_MRUWIDTH를 부동 컨트롤 막대의 현재 너비로 다시 설정 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Csize](../../atl-mfc-shared/reference/csize-class.md) 개체의 컨트롤 막대 크기 (픽셀)입니다.
 
@@ -177,7 +177,7 @@ virtual CSize CalcFixedLayout(
 *bHorz*<br/>
 가로 또는 세로 방향으로 막대를 나타냅니다. 막대가 가로 방향인 경우 *Bhorz* 매개 변수는 0이 아니고 세로 방향인 경우 0입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CSize` 개체의 컨트롤 막대 크기 (픽셀)입니다.
 
@@ -191,8 +191,8 @@ virtual CSize CalcFixedLayout(
 |--------------|-----------|----------------|-----------------|--------------------------|
 |TRUE|TRUE|수평 확장|가로 방향|도킹 안 함|
 |TRUE|FALSE|수직 확장|세로 방향|도킹 안 함|
-|FALSE|TRUE|스트레치 사용 안 함|가로 방향|도킹|
-|FALSE|FALSE|스트레치 사용 안 함|세로 방향|도킹|
+|FALSE|TRUE|스트레치 사용 안 함|가로 방향|Docking|
+|FALSE|FALSE|스트레치 사용 안 함|세로 방향|Docking|
 
 ##  <a name="calcinsiderect"></a>CControlBar:: CalcInsideRect
 
@@ -328,7 +328,7 @@ void EnableDocking(DWORD dwDockStyle);
 DWORD GetBarStyle();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대에 대 한 현재 **CBRS_** (컨트롤 막대 스타일) 설정입니다. 사용 가능한 스타일의 전체 목록은 [Ccontrolbar:: Setbar style](#setbarstyle) 을 참조 하세요.
 
@@ -344,7 +344,7 @@ DWORD GetBarStyle();
 CRect GetBorders() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대 개체의 각 면에 대 한 현재 너비 (픽셀)를 포함 하는 `CRect` 개체입니다. 예를 들어, [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체의 *왼쪽* 멤버 값은 왼쪽 테두리의 너비입니다.
 
@@ -356,7 +356,7 @@ CRect GetBorders() const;
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CControlBar` 개체에 대 한 비-HWND 항목 수입니다. 이 함수는 [CDialogBar](../../mfc/reference/cdialogbar-class.md) 개체에 대해 0을 반환 합니다.
 
@@ -372,7 +372,7 @@ int GetCount() const;
 CFrameWnd* GetDockingFrame() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 프레임 창에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -390,7 +390,7 @@ CFrameWnd* GetDockingFrame() const;
 BOOL IsFloating() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 부동 인 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 

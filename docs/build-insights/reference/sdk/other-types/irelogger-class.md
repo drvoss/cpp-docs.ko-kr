@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857060"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422897"
 ---
 # <a name="irelogger-class"></a>IRelogger 클래스
 
@@ -56,13 +56,13 @@ public:
 
 재정의 되지 않는 모든 함수의 기본 반환 값은 `AnalysisControl::CONTINUE`입니다. 자세한 내용은 [AnalysisControl](analysis-control-enum-class.md)를 참조 하세요.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="destructor"></a>소멸자
 
 [~ IRelogger 거](#irelogger-destructor)
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 [Onbeginrelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\
@@ -89,7 +89,7 @@ virtual ~IRelogger();
 virtual AnalysisControl OnBeginRelogging();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -101,7 +101,7 @@ virtual AnalysisControl OnBeginRelogging();
 virtual AnalysisControl OnBeginReloggingPass();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -113,7 +113,7 @@ virtual AnalysisControl OnBeginReloggingPass();
 virtual AnalysisControl OnEndRelogging();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -125,7 +125,7 @@ virtual AnalysisControl OnEndRelogging();
 virtual AnalysisControl OnEndReloggingPass();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -142,7 +142,7 @@ virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 *Eventstack*\
 이 간단한 이벤트에 대 한 이벤트 스택입니다. 이벤트 스택에 대 한 자세한 내용은 [이벤트](../event-table.md)를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -159,7 +159,7 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 *Eventstack*\
 이 작업 시작 이벤트에 대 한 이벤트 스택입니다. 이벤트 스택에 대 한 자세한 내용은 [이벤트](../event-table.md)를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -176,7 +176,7 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 *Eventstack*\
 이 작업 중지 이벤트의 이벤트 스택입니다. 이벤트 스택에 대 한 자세한 내용은 [이벤트](../event-table.md)를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 
@@ -193,7 +193,7 @@ virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 *Traceinfo*\
 사용 중인 추적에 대 한 유용한 속성을 포함 하는 [Traceinfo](../cpp-event-data-types/trace-info.md) 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다음에 수행 해야 하는 작업을 설명 하는 [AnalysisControl](analysis-control-enum-class.md) 코드입니다.
 

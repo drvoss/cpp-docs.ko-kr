@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876193"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426146"
 ---
 # <a name="time_get-class"></a>time_get 클래스
 
@@ -71,20 +71,20 @@ class time_get : public time_base;
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[time_get](#time_get)|`time_get` 형식의 개체에 대한 생성자입니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[char_type](#char_type)|로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.|
 |[iter_type](#iter_type)|입력 반복기에 대해 설명하는 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[date_order](#date_order)|패싯에서 사용하는 날짜 순서를 반환합니다.|
 |[do_date_order](#do_date_order)|패싯에서 사용하는 날짜 순서를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|
@@ -127,7 +127,7 @@ typedef CharType char_type;
 dateorder date_order() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 패싯에서 사용하는 날짜 순서입니다.
 
@@ -187,7 +187,7 @@ English_United Kingdom.1252(day, month, year)
 virtual dateorder do_date_order() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 패싯에서 사용하는 날짜 순서입니다.
 
@@ -238,7 +238,7 @@ iter_type first,
 *mod*\
 선택적 한정자 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변환되지 않은 첫 번째 요소를 지정하는 반복기를 반환합니다. 변환 오류는 `state` `ios_base::failbit`를 설정 하 고 *먼저*반환 합니다.
 
@@ -325,7 +325,7 @@ virtual iter_type do_get_date(iter_type first,
 *ptm*\
 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -376,7 +376,7 @@ virtual iter_type do_get_monthname(iter_type first,
 *ptm*\
 월 정보를 저장할 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -419,7 +419,7 @@ virtual iter_type do_get_time(iter_type first,
 *ptm*\
 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -470,7 +470,7 @@ virtual iter_type do_get_weekday(iter_type first,
 *ptm*\
 요일 정보를 저장할 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -513,7 +513,7 @@ virtual iter_type do_get_year(iter_type first,
 *ptm*\
 연도 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -580,7 +580,7 @@ iter_type get(
 *fmt_last*\
 형식 지시문의 끝을 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `*ptm`시간 구조체를 할당 하는 데 사용 된 데이터 뒤의 첫 번째 문자에 대 한 반복기를 반환 합니다.
 
@@ -625,7 +625,7 @@ iter_type get_date(iter_type first,
 *ptm*\
 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -719,7 +719,7 @@ iter_type get_monthname(iter_type first,
 *ptm*\
 월 정보를 저장할 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -811,7 +811,7 @@ iter_type get_time(iter_type first,
 *ptm*\
 날짜 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -892,7 +892,7 @@ iter_type get_weekday(iter_type first,
 *ptm*\
 요일 정보를 저장할 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -969,7 +969,7 @@ iter_type get_year(iter_type first,
 *ptm*\
 연도 정보를 저장할 위치에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 필드를 벗어난 범위에 있는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
@@ -1041,7 +1041,7 @@ explicit time_get(size_t refs = 0);
 ### <a name="parameters"></a>매개 변수
 
 *refs*\
-개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.
+개체에 대한 메모리 관리의 유형을 지정하는 데 사용하는 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 

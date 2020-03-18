@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872477"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424538"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 클래스
 
@@ -183,17 +183,17 @@ ms.locfileid: "78872477"
 class CDaoRecordset : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoRecordset:: CDaoRecordset](#cdaorecordset)|`CDaoRecordset` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoRecordset:: AddNew](#addnew)|새 레코드를 추가할 준비를 합니다. [업데이트](#update) 를 호출 하 여 추가를 완료 합니다.|
 |[CDaoRecordset:: CanAppend](#canappend)|[AddNew](#addnew) 멤버 함수를 통해 레코드 집합에 새 레코드를 추가할 수 있는 경우 0이 아닌 값을 반환 합니다.|
@@ -270,7 +270,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoRecordset:: m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|필드를 자동으로 변경 된 것으로 표시할지 여부를 나타내는 플래그를 포함 합니다.|
 |[CDaoRecordset:: m_nFields](#m_nfields)|레코드 집합 클래스의 필드 데이터 멤버 수와 데이터 원본의 레코드 집합에서 선택한 열 수를 포함 합니다.|
@@ -377,7 +377,7 @@ virtual void AddNew();
 BOOL CanAppend() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합에서 새 레코드 추가를 허용 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 레코드 집합을 읽기 전용으로 연 경우 `CanAppend`는 0을 반환 합니다.
 
@@ -393,7 +393,7 @@ BOOL CanAppend() const;
 BOOL CanBookmark();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합에서 책갈피를 지원 하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -430,7 +430,7 @@ virtual void CancelUpdate();
 BOOL CanRestart();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `Requery`를 호출 하 여 레코드 집합의 쿼리를 다시 실행할 수 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -450,7 +450,7 @@ BOOL CanRestart();
 BOOL CanScroll() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드를 스크롤할 수 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -468,7 +468,7 @@ BOOL CanScroll() const;
 BOOL CanTransact();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 데이터 소스에서 트랜잭션을 지원 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -484,7 +484,7 @@ BOOL CanTransact();
 BOOL CanUpdate() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합을 업데이트 (추가, 업데이트 및 삭제) 할 수 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -667,7 +667,7 @@ virtual BOOL Find(
 ### <a name="parameters"></a>매개 변수
 
 *lFindType*<br/>
-원하는 찾기 작업의 유형을 나타내는 값입니다. 가능한 값은 다음과 같습니다.
+원하는 찾기 작업의 유형을 나타내는 값입니다. 사용 가능한 값은
 
 - AFX_DAO_NEXT 일치 하는 문자열의 다음 위치를 찾습니다.
 
@@ -678,11 +678,11 @@ virtual BOOL Find(
 - 일치 하는 문자열의 마지막 위치를 찾을 AFX_DAO_LAST.
 
 *lpszFilter*<br/>
-레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다. 예들 들어 다음과 같습니다.
+레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -710,7 +710,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -764,7 +764,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -806,7 +806,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -848,7 +848,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 *lpszFilter*<br/>
 레코드를 찾는 데 사용 되는 **where**라는 단어가 없는 SQL 문의 **where** 절과 같은 문자열 식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -885,7 +885,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 long GetAbsolutePosition();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0부터 레코드 집합의 레코드 수 까지의 정수입니다. 레코드 집합에서 현재 레코드의 서 수 위치에 해당 합니다.
 
@@ -911,7 +911,7 @@ long GetAbsolutePosition();
 COleVariant GetBookmark();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 레코드의 책갈피를 나타내는 값을 반환 합니다.
 
@@ -934,7 +934,7 @@ COleVariant GetBookmark();
 long GetCacheSize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ODBC 데이터 원본에서 로컬로 캐시할 데이터를 포함 하는 다이너셋 형식 레코드 집합의 레코드 수를 지정 하는 값입니다.
 
@@ -954,7 +954,7 @@ ODBC 데이터 원본에서 로컬로 캐시할 데이터를 포함 하는 다�
 COleVariant GetCacheStart();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 캐시 될 레코드 집합에서 첫 번째 레코드의 책갈피를 지정 하는 `COleVariant`입니다.
 
@@ -975,7 +975,7 @@ Microsoft Jet 데이터베이스 엔진은 캐시 범위 내에서 레코드를 
 CString GetCurrentIndex();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테이블 형식 레코드 집합에서 현재 사용 중인 인덱스의 이름을 포함 하는 `CString`입니다. 인덱스를 설정 하지 않은 경우 빈 문자열을 반환 합니다.
 
@@ -995,7 +995,7 @@ CString GetCurrentIndex();
 COleDateTime GetDateCreated();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 테이블을 만든 날짜와 시간을 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체입니다.
 
@@ -1013,7 +1013,7 @@ COleDateTime GetDateCreated();
 COleDateTime GetDateLastUpdated();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 테이블 구조 (스키마)가 마지막으로 업데이트 된 날짜와 시간을 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체입니다.
 
@@ -1031,7 +1031,7 @@ COleDateTime GetDateLastUpdated();
 virtual CString GetDefaultDBName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 레코드 집합이 파생 된 데이터베이스의 경로와 이름을 포함 하는 `CString`입니다.
 
@@ -1051,7 +1051,7 @@ virtual CString GetDefaultDBName();
 virtual CString GetDefaultSQL();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 SQL 문을 포함 하는 `CString`입니다.
 
@@ -1071,13 +1071,13 @@ virtual CString GetDefaultSQL();
 short GetEditMode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 레코드에 대 한 편집 상태를 나타내는 값을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`dbEditNone`|편집 작업이 진행 되 고 있지 않습니다.|
 |`dbEditInProgress`|`Edit`가 호출된 경우|
@@ -1093,7 +1093,7 @@ short GetEditMode();
 short GetFieldCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합의 필드 수입니다.
 
@@ -1135,7 +1135,7 @@ void GetFieldInfo(
 - 기본 및 보조 정보를 비롯 하 여 기본 값, 유효성 검사 규칙, 유효성 검사 텍스트 `AFX_DAO_ALL_INFO`
 
 *lpszName*<br/>
-필드의 이름입니다.
+필드 이름입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1173,7 +1173,7 @@ virtual COleVariant GetFieldValue(int nIndex);
 *nIndex*<br/>
 인덱스를 기준으로 조회 하기 위해 레코드 집합의 Fields 컬렉션에 있는 필드의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값을 반환 하는 두 가지 버전의 `GetFieldValue`는 필드 값을 포함 하는 [COleVariant](../../mfc/reference/colevariant-class.md) 개체를 반환 합니다.
 
@@ -1198,7 +1198,7 @@ virtual COleVariant GetFieldValue(int nIndex);
 short GetIndexCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테이블 형식 레코드 집합의 인덱스 수입니다.
 
@@ -1260,7 +1260,7 @@ void GetIndexInfo(
 COleVariant GetLastModifiedBookmark();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 가장 최근에 추가 되거나 변경 된 레코드를 나타내는 책갈피를 포함 하는 `COleVariant`입니다.
 
@@ -1280,7 +1280,7 @@ COleVariant GetLastModifiedBookmark();
 BOOL GetLockingMode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잠금 유형이 비관적 이면 0이 아닌 값이 고, 낙관적 레코드 잠금의 경우 0입니다.
 
@@ -1302,7 +1302,7 @@ ODBC 데이터 원본으로 작업할 때 잠금 모드는 항상 낙관적입�
 CString GetName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합의 이름을 포함 하는 `CString`입니다.
 
@@ -1329,7 +1329,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 *lpszName*<br/>
 원하는 값을 가진 매개 변수의 이름입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수의 값을 포함 하는 [COleVariant](../../mfc/reference/colevariant-class.md) 클래스의 개체입니다.
 
@@ -1347,7 +1347,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 float GetPercentPosition();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합의 레코드에 대 한 백분율을 기준으로 레코드 집합 개체에서 현재 레코드의 대략적인 위치를 나타내는 0에서 100 사이의 숫자입니다.
 
@@ -1367,7 +1367,7 @@ float GetPercentPosition();
 long GetRecordCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합 개체에서 액세스 한 레코드 수를 반환 합니다.
 
@@ -1395,7 +1395,7 @@ long GetRecordCount();
 CString GetSQL() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 SQL 문을 포함 하는 `CString`입니다.
 
@@ -1418,7 +1418,7 @@ SQL 문을 포함 하는 `CString`입니다.
 short GetType();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합의 유형을 나타내는 다음 값 중 하나입니다.
 
@@ -1440,7 +1440,7 @@ short GetType();
 CString GetValidationRule();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드의 데이터를 변경 하거나 테이블에 추가 하는 데 해당 데이터의 유효성을 검사 하는 값을 포함 하는 `CString` 개체입니다.
 
@@ -1460,7 +1460,7 @@ CString GetValidationRule();
 CString GetValidationText();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 필드 값이 내부 필드 개체의 유효성 검사 규칙을 충족 하지 않는 경우 표시 되는 메시지의 텍스트를 포함 하는 `CString` 개체입니다.
 
@@ -1476,7 +1476,7 @@ CString GetValidationText();
 BOOL IsBOF() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합이 레코드를 포함 하지 않거나 첫 번째 레코드 앞으로 스크롤한 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1500,10 +1500,10 @@ BOOL IsBOF() const;
 
 ||MoveFirst, MoveLast|MovePrev<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> Move > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 0이 아닌 값<br /><br /> `IsEOF`=0|Allowed|예외|예외|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 0이 아닌 값|Allowed|Allowed|예외|예외|
+|`IsBOF`= 0이 아닌 값<br /><br /> `IsEOF`=0|허용됨|예외|예외|허용됨|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 0이 아닌 값|허용됨|허용됨|예외|예외|
 |둘 다 0이 아닙니다.|예외|예외|예외|예외|
-|0 모두|Allowed|Allowed|Allowed|Allowed|
+|0 모두|허용됨|허용됨|허용됨|허용됨|
 
 이동 작업을 허용 하는 것은 작업에서 레코드를 성공적으로 찾으려고 한다는 의미는 아닙니다. 단지 지정 된 이동 작업을 수행 하려는 시도가 허용 되 고 예외를 생성 하지 않음을 나타냅니다. `IsBOF` 및 `IsEOF` 멤버 함수의 값은 시도한 이동의 결과로 변경 될 수 있습니다.
 
@@ -1526,7 +1526,7 @@ BOOL IsBOF() const;
 BOOL IsDeleted() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합을 삭제 된 레코드에 배치 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1549,7 +1549,7 @@ BOOL IsDeleted() const;
 BOOL IsEOF() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합이 레코드를 포함 하지 않거나 마지막 레코드를 넘어 스크롤 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1573,10 +1573,10 @@ BOOL IsEOF() const;
 
 ||MoveFirst, MoveLast|MovePrev<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> Move > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 0이 아닌 값<br /><br /> `IsEOF`=0|Allowed|예외|예외|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 0이 아닌 값|Allowed|Allowed|예외|예외|
+|`IsBOF`= 0이 아닌 값<br /><br /> `IsEOF`=0|허용됨|예외|예외|허용됨|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 0이 아닌 값|허용됨|허용됨|예외|예외|
 |둘 다 0이 아닙니다.|예외|예외|예외|예외|
-|0 모두|Allowed|Allowed|Allowed|Allowed|
+|0 모두|허용됨|허용됨|허용됨|허용됨|
 
 이동 작업을 허용 하는 것은 작업에서 레코드를 성공적으로 찾으려고 한다는 의미는 아닙니다. 단지 지정 된 이동 작업을 수행 하려는 시도가 허용 되 고 예외를 생성 하지 않음을 나타냅니다. `IsBOF` 및 `IsEOF` 멤버 함수의 값은 시도한 이동의 결과로 변경 될 수 있습니다.
 
@@ -1604,7 +1604,7 @@ BOOL IsFieldDirty(void* pv);
 *pv*<br/>
 상태를 확인할 필드 데이터 멤버에 대 한 포인터 이거나, 필드가 커밋되지 않았는지 여부를 확인 하는 NULL입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 필드 데이터 멤버가 커밋되지 않은 것으로 플래그가 지정 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1627,7 +1627,7 @@ BOOL IsFieldNull(void* pv);
 *pv*<br/>
 상태를 확인할 필드 데이터 멤버에 대 한 포인터 이거나, 필드가 Null 인지 여부를 확인 하는 NULL입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 필드 데이터 멤버가 Null로 플래그가 지정 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1656,7 +1656,7 @@ BOOL IsFieldNullable(void* pv);
 *pv*<br/>
 상태를 확인할 필드 데이터 멤버에 대 한 포인터 이거나, 필드가 Null 인지 여부를 확인 하는 NULL입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 필드 데이터 멤버를 Null로 설정할 수 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1672,7 +1672,7 @@ Null 일 수 없는 필드에는 값이 있어야 합니다. 레코드를 추가
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레코드 집합 개체의 `Open` 또는 `Requery` 멤버 함수가 이전에 호출 되었고 레코드 집합이 닫히지 않은 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1932,9 +1932,9 @@ virtual void Open(
 ### <a name="parameters"></a>매개 변수
 
 *nOpenType*<br/>
-다음 값 중 하나입니다.
+해당 값은
 
-- 양방향 스크롤이 포함 된 다이너셋 형식의 레코드 집합을 `dbOpenDynaset` 합니다. 이 값이 기본값입니다.
+- 양방향 스크롤이 포함 된 다이너셋 형식의 레코드 집합을 `dbOpenDynaset` 합니다. 이것이 기본값입니다.
 
 - 양방향 스크롤이 있는 테이블 형식 레코드 집합을 `dbOpenTable` 합니다.
 
@@ -1952,7 +1952,7 @@ virtual void Open(
 - 통과 쿼리입니다.
 
 *nOptions*<br/>
-아래에 나열 된 하나 이상의 옵션입니다. 기본값은 0입니다. 다음과 같은 값을 사용할 수 있습니다.
+아래에 나열 된 하나 이상의 옵션입니다. 기본값은 0입니다. 가능한 값은 다음과 같습니다.
 
 - `dbAppendOnly` 새 레코드를 추가할 수만 있습니다 (다이너셋 형식 레코드 집합에만 해당). 이 옵션은 레코드를 추가 하는 것만을 의미 합니다. MFC ODBC 데이터베이스 클래스에는 레코드를 검색 하 고 추가할 수 있는 추가 전용 옵션이 있습니다.
 
@@ -2084,7 +2084,7 @@ BOOL Seek(
 "<", "\<=", "=", "> =" 또는 ">" 문자열 식 중 하나입니다.
 
 *pKey1*<br/>
-인덱스의 첫 번째 필드에 해당 하는 값을 갖는 [COleVariant](../../mfc/reference/colevariant-class.md) 에 대 한 포인터입니다. 필수 요소.
+인덱스의 첫 번째 필드에 해당 하는 값을 갖는 [COleVariant](../../mfc/reference/colevariant-class.md) 에 대 한 포인터입니다. 필수 사항입니다.
 
 *pKey2*<br/>
 인덱스의 두 번째 필드 (있는 경우)에 해당 하는 값이 있는 `COleVariant`에 대 한 포인터입니다. 기본값은 NULL입니다.
@@ -2101,7 +2101,7 @@ BOOL Seek(
 > [!NOTE]
 >  키에 와일드 카드를 지정 하지 마십시오. 와일드 카드를 `Seek` 하면 일치 하는 레코드를 반환 하지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 하는 레코드가 있는 경우 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 

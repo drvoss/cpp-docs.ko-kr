@@ -101,11 +101,11 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883666"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426818"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 클래스
 
@@ -117,17 +117,17 @@ ms.locfileid: "78883666"
 class CRichEditView : public CCtrlView
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRichEditView:: CRichEditView](#cricheditview)|`CRichEditView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRichEditView:: AdjustDialogPosition](#adjustdialogposition)|현재 선택 영역을 가리지 않도록 대화 상자를 이동 합니다.|
 |[CRichEditView:: CanPaste](#canpaste)|Rich edit 뷰에 붙여 넣을 수 있는 데이터가 클립보드에 있는지 여부를 나타냅니다.|
@@ -162,9 +162,9 @@ class CRichEditView : public CCtrlView
 |[CRichEditView:: SetParaFormat](#setparaformat)|현재 선택 영역에 대 한 단락 서식 특성을 설정 합니다.|
 |[CRichEditView:: TextNotFound](#textnotfound)|컨트롤의 내부 검색 상태를 다시 설정 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRichEditView:: GetClipboardData](#getclipboarddata)|이 rich edit 뷰에서 범위에 대 한 클립보드 개체를 검색 합니다.|
 |[CRichEditView:: GetContextMenu](#getcontextmenu)|마우스 오른쪽 단추를 클릭 하 여 사용할 상황에 맞는 메뉴를 검색 합니다.|
@@ -181,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRichEditView:: m_nBulletIndent](#m_nbulletindent)|글머리 기호 목록의 들여쓰기 크기를 나타냅니다.|
 |[CRichEditView:: m_nWordWrap](#m_nwordwrap)|자동 줄 바꿈 제약 조건을 나타냅니다.|
@@ -235,7 +235,7 @@ void AdjustDialogPosition(CDialog* pDlg);
 BOOL CanPaste() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 rich edit 보기가 허용할 수 있는 형식의 데이터가 클립보드에 포함 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -301,7 +301,7 @@ BOOL FindText(
 *bNext*<br/>
 검색 방향을 나타냅니다. TRUE 이면 검색 방향이 버퍼의 끝 부분에 있습니다. FALSE 이면 검색 방향이 버퍼의 시작 부분을 향해 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *LpszFind* 텍스트가 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -339,7 +339,7 @@ BOOL FindTextSimple(
 *bNext*<br/>
 검색 방향을 나타냅니다. TRUE 이면 검색 방향이 버퍼의 끝 부분에 있습니다. FALSE 이면 검색 방향이 버퍼의 시작 부분을 향해 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *LpszFind* 텍스트가 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -355,7 +355,7 @@ BOOL FindTextSimple(
 CHARFORMAT2& GetCharFormatSelection();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 선택 영역의 문자 서식 특성을 포함 하는 [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) 구조체입니다.
 
@@ -403,7 +403,7 @@ Rich edit 컨트롤의 클립보드 데이터를 포함 하는 [IDataObject](/wi
 *lplpdataobj*<br/>
 *Lpchrg* 매개 변수에 지정 된 범위를 나타내는 `IDataObject` 개체의 주소를 받는 포인터 변수에 대 한 포인터입니다. 오류가 반환 되 면 *lplpdataobj* 의 값이 무시 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업의 성공 여부를 보고 하는 HRESULT 값입니다. HRESULT에 대 한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조](/windows/win32/com/structure-of-com-error-codes) 를 참조 하십시오.
 
@@ -437,7 +437,7 @@ virtual HMENU GetContextMenu(
 *lpchrg*<br/>
 현재 선택 영역을 포함 하는 [Charrange](/windows/win32/api/richedit/ns-richedit-charrange) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상황에 맞는 메뉴에 대 한 핸들입니다.
 
@@ -469,7 +469,7 @@ virtual HMENU GetContextMenu(
 CRichEditDoc* GetDocument() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CRichEditView` 개체와 연결 된 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 개체에 대 한 포인터입니다.
 
@@ -481,7 +481,7 @@ CRichEditDoc* GetDocument() const;
 CRichEditCntrItem* GetInPlaceActiveItem() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Rich edit 뷰의 단일 내부 활성 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 개체에 대 한 포인터입니다. 현재 내부 활성 상태인 OLE 항목이 없으면 NULL입니다.
 
@@ -493,7 +493,7 @@ Rich edit 뷰의 단일 내부 활성 [CRichEditCntrItem](../../mfc/reference/cr
 CRect GetMargins() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 MM_TWIPS 측정 된 인쇄에 사용 되는 여백입니다.
 
@@ -505,7 +505,7 @@ MM_TWIPS 측정 된 인쇄에 사용 되는 여백입니다.
 CRect GetPageRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 MM_TWIPS 측정 된 인쇄에 사용 되는 페이지의 범위입니다.
 
@@ -521,7 +521,7 @@ MM_TWIPS 측정 된 인쇄에 사용 되는 페이지의 범위입니다.
 CSize GetPaperSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인쇄에 사용 되는 용지 크기 이며 MM_TWIPS 측정 됩니다.
 
@@ -537,7 +537,7 @@ CSize GetPaperSize() const;
 PARAFORMAT2& GetParaFormatSelection();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 선택 영역에 대 한 단락 서식 특성을 포함 하는 [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) 구조체입니다.
 
@@ -553,7 +553,7 @@ PARAFORMAT2& GetParaFormatSelection();
 CRect GetPrintRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 MM_TWIPS 측정 된 인쇄에 사용 되는 이미지 영역의 경계입니다.
 
@@ -569,7 +569,7 @@ MM_TWIPS 측정 된 인쇄에 사용 되는 이미지 영역의 경계입니다.
 int GetPrintWidth() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 MM_TWIPS 측정 된 인쇄 영역의 너비입니다.
 
@@ -581,7 +581,7 @@ MM_TWIPS 측정 된 인쇄 영역의 너비입니다.
 CRichEditCtrl& GetRichEditCtrl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 뷰의 `CRichEditCtrl` 개체입니다.
 
@@ -597,7 +597,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 CRichEditCntrItem* GetSelectedItem() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CRichEditView` 개체에서 선택 된 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) 개체에 대 한 포인터입니다. 이 뷰에서 선택 된 항목이 없으면 NULL입니다.
 
@@ -609,7 +609,7 @@ CRichEditCntrItem* GetSelectedItem() const;
 long GetTextLength() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `CRichEditView` 개체에 있는 텍스트의 길이입니다.
 
@@ -631,7 +631,7 @@ long GetTextLengthEx(
 *uCodePage*<br/>
 변환에 대 한 코드 페이지 (ANSI 코드 페이지의 경우 CP_ACP, 유니코드의 경우 1200)
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 편집 컨트롤의 문자 또는 바이트 수입니다. *DwFlags*에 호환 되지 않는 플래그가 설정 된 경우이 멤버 함수는 E_INVALIDARG을 반환 합니다.
 
@@ -665,7 +665,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 *pItem*<br/>
 삽입할 항목에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 삽입의 성공 여부를 나타내는 HRESULT 값입니다.
 
@@ -686,7 +686,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 *cf*<br/>
 원하는 클립보드 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Cf* 가 서식 있는 편집 또는 텍스트 클립보드 형식이 면 0이 아닌 값입니다.
 
@@ -703,7 +703,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 *pDocItem*<br/>
 뷰의 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 선택 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -729,7 +729,7 @@ int m_nWordWrap;
 
 ### <a name="remarks"></a>설명
 
-다음 값 중 하나입니다.
+해당 값은
 
 - `WrapNone` 자동 줄 바꿈이 없음을 나타냅니다.
 
@@ -828,7 +828,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 *lpStg*<br/>
 [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.
 
@@ -851,7 +851,7 @@ void OnParaAlign(WORD wAlign);
 ### <a name="parameters"></a>매개 변수
 
 *wAlign*<br/>
-원하는 단락 맞춤입니다. 다음 값 중 하나입니다.
+원하는 단락 맞춤입니다. 해당 값은
 
 - 단락을 왼쪽 여백 PFA_LEFT 맞춥니다.
 
@@ -1019,7 +1019,7 @@ void OnUpdateParaAlign(
 [CCmdUI](../../mfc/reference/ccmdui-class.md) 개체에 대 한 포인터입니다.
 
 *wAlign*<br/>
-확인할 단락 맞춤입니다. 다음 값 중 하나입니다.
+확인할 단락 맞춤입니다. 해당 값은
 
 - 단락을 왼쪽 여백 PFA_LEFT 맞춥니다.
 
@@ -1061,7 +1061,7 @@ long PrintInsideRect(
 *bOutput*<br/>
 텍스트를 렌더링 해야 하는지 여부를 나타냅니다. FALSE 이면 텍스트를 측정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 출력 영역에 맞는 마지막 문자의 인덱스와 1을 더한 값입니다.
 
@@ -1095,7 +1095,7 @@ long PrintPage(
 *nIndexStop*<br/>
 서식을 지정할 마지막 문자의 0부터 시작 하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 페이지에 맞는 마지막 문자의 인덱스 + 1입니다.
 
@@ -1135,7 +1135,7 @@ virtual HRESULT QueryAcceptData(
 *hMetaFile 파일*<br/>
 항목의 아이콘을 그리는 데 사용 되는 메타 파일에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업의 성공 여부를 보고 하는 HRESULT 값입니다.
 
@@ -1229,7 +1229,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 *pf*<br/>
 새 기본 단락 서식 특성을 포함 하는 [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) 구조체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.
 

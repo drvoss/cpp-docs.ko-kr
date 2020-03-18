@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426704"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446451"
 ---
 # <a name="run-time-object-model-services"></a>런타임 개체 모델 서비스
 
@@ -340,11 +340,11 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *nFlags*<br/>
 다음 플래그 중 하나 이상을 포함 합니다.
 
-   - `afxRegInsertable`를 사용 하면 OLE 개체의 개체 삽입 대화 상자에 컨트롤을 표시할 수 있습니다.
-   - `afxRegApartmentThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
-   - `afxRegFreeThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = Free로 설정 합니다.
+- `afxRegInsertable`를 사용 하면 OLE 개체의 개체 삽입 대화 상자에 컨트롤을 표시할 수 있습니다.
+- `afxRegApartmentThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = 아파트로 설정 합니다.
+- `afxRegFreeThreading` 레지스트리에서 스레딩 모델을 ThreadingModel = Free로 설정 합니다.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+`afxRegApartmentThreading` 두 플래그를 결합 하 고 `afxRegFreeThreading` ThreadingModel = Both를 설정할 수 있습니다. 스레딩 모델 등록에 대 한 자세한 내용은 Windows SDK의 [InprocServer32](/windows/win32/com/inprocserver32) 를 참조 하세요.
 
 클래스 CLSID의 *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8* 구성 요소입니다.
 

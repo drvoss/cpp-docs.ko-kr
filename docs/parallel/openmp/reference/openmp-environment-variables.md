@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
 ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882912"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424130"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP 환경 변수
 
@@ -27,7 +27,7 @@ OpenMP API에서 사용되는 환경 변수에 대한 링크를 제공합니다.
 
 OpenMP 표준 C++ 의 시각적 구현에는 다음과 같은 환경 변수가 포함 됩니다. 이러한 환경 변수는 프로그램 시작 시에 읽을 수 있으며 해당 값에 대 한 수정 내용은 런타임에 무시 됩니다 (예: [_putenv _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)사용).
 
-|환경 변수|설명|
+|환경 변수|Description|
 |--------------------|-----------|
 |[OMP_SCHEDULE](#omp-schedule)|`for` 또는 `parallel for` 지시문에 `schedule(runtime)` 지정 된 경우 [schedule](openmp-clauses.md#schedule) 절의 동작을 수정 합니다.|
 |[OMP_NUM_THREADS](#omp-num-threads)|[Omp_set_num_threads](openmp-functions.md#omp-set-num-threads) 또는 [num_threads](openmp-clauses.md#num-threads)에 의해 재정의 되지 않는 한 병렬 영역에 있는 최대 스레드 수를 설정 합니다.|

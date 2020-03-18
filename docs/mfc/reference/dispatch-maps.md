@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856652"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426710"
 ---
 # <a name="dispatch-maps"></a>디스패치 맵
 
 OLE Automation은 메서드를 호출 하 고 응용 프로그램에서 속성에 액세스 하는 방법을 제공 합니다. 이러한 요청을 디스패치 하는 MFC 라이브러리에서 제공 하는 메커니즘은 "디스패치 맵" 이며, 개체 함수 및 속성의 내부 및 외부 이름과 속성 자체의 데이터 형식 및을 지정 합니다. 함수 인수입니다.
 
-|디스패치 맵 매크로|설명|
+|디스패치 맵 매크로|Description|
 |-|-|
 |[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|클래스의 메서드 및 속성을 노출 하는 데 디스패치 맵이 사용 됨을 선언 합니다 (클래스 선언에서 사용 되어야 함).|
 |[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|디스패치 맵의 정의를 시작 합니다.|
@@ -37,7 +37,7 @@ OLE Automation은 메서드를 호출 하 고 응용 프로그램에서 속성�
 DECLARE_DISPATCH_MAP()
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 클래스 선언 끝에 DECLARE_DISPATCH_MAP 매크로를 사용 합니다. 그런 다음에서를 클릭 합니다. 클래스의 멤버 함수를 정의 하는 .CPP 파일 BEGIN_DISPATCH_MAP 매크로를 사용 합니다. 그런 다음 클래스의 노출 된 메서드 및 속성 (DISP_FUNCTION, DISP_PROPERTY 등)에 대 한 매크로 항목을 포함 합니다. 마지막으로 END_DISPATCH_MAP 매크로를 사용 합니다.
 
@@ -70,7 +70,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 *baseClass*<br/>
 *Theclass*의 기본 클래스 이름을 지정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 클래스의 멤버 함수를 정의 하는 구현 파일 (.cpp)에서 BEGIN_DISPATCH_MAP 매크로를 사용 하 여 디스패치 맵을 시작 하 고, 각 디스패치 함수 및 속성에 대 한 매크로 항목을 추가 하 고, 디스패치 맵을 END_DISPATCH_ 하 여 완료 합니다. 지도 매크로입니다.
 
@@ -86,7 +86,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 END_DISPATCH_MAP()
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 BEGIN_DISPATCH_MAP와 함께 사용 해야 합니다.
 
@@ -124,7 +124,7 @@ DISP_FUNCTION(
 *vtsParams*<br/>
 함수의 매개 변수 목록을 지정 하는 하나 이상의 상수에 대 한 공백으로 구분 된 목록입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *VtRetVal* 인수는 VARTYPE 유형입니다. 이 인수에 대 한 가능한 다음 값은 `VARENUM` 열거형에서 가져옵니다.
 
@@ -144,7 +144,7 @@ DISP_FUNCTION(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams* 인수는 `VTS_*` 상수에서 공백으로 구분 된 값 목록입니다. 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 예를 들어 입니다.
+*VtsParams* 인수는 `VTS_*` 상수에서 공백으로 구분 된 값 목록입니다. 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
@@ -210,7 +210,7 @@ DISP_PROPERTY(
 *vtPropType*<br/>
 속성의 형식을 지정 하는 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *VtPropType* 인수는 **VARTYPE**유형입니다. 이 인수에 사용할 수 있는 값은 VARENUM 열거형에서 가져옵니다.
 
@@ -265,7 +265,7 @@ DISP_PROPERTY_EX(
 *vtPropType*<br/>
 속성의 형식을 지정 하는 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Memberget* 및 *MemberSet* 함수는 *vtPropType* 인수에 의해 결정 된 시그니처를 포함 합니다. *Memberget* 함수는 인수를 사용 하지 않고 *vtPropType*에서 지정한 형식의 값을 반환 합니다. *MemberSet* 함수는 *vtPropType* 에 의해 지정 된 형식의 인수를 사용 하 고 아무 것도 반환 하지 않습니다.
 
@@ -305,7 +305,7 @@ DISP_PROPERTY_NOTIFY(
 *vtPropType*<br/>
 속성의 형식을 지정 하는 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 DISP_PROPERTY으로 정의 된 속성과 달리 DISP_PROPERTY_NOTIFY으로 정의 된 속성은 속성이 변경 될 때 *pfnAfterSet* 에 지정 된 함수를 자동으로 호출 합니다.
 
@@ -364,7 +364,7 @@ DISP_PROPERTY_PARAM(
 *vtsParams*<br/>
 각 매개 변수에 대해 하나씩, variant 매개 변수 형식 `VTS_*` 공백으로 구분 된 문자열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 DISP_PROPERTY_EX 매크로와 달리이 매크로를 사용 하면 속성에 대 한 매개 변수 목록을 지정할 수 있습니다. 이는 인덱싱된 속성 또는 매개 변수화 된 속성을 구현 하는 데 유용 합니다.
 
@@ -406,7 +406,7 @@ DISP_DEFVALUE(theClass, pszName)
 *pszName*<br/>
 개체의 "값"을 나타내는 속성의 외부 이름입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본값을 사용하면 Visual Basic 애플리케이션에 대한 자동화 개체 프로그래밍을 더 간소화할 수 있습니다.
 

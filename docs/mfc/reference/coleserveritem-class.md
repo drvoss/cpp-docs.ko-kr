@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884107"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426482"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 클래스
 
@@ -132,7 +132,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::OnUpdateItems](#onupdateitems)|서버 문서에 있는 모든 항목의 프레젠테이션 캐시를 업데이트 하기 위해 호출 됩니다.|
 |[COleServerItem::SetItemName](#setitemname)|항목의 이름을 설정 합니다. 연결 된 항목에만 사용 됩니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|

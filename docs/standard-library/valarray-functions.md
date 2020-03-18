@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875616"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427610"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 함수
 
@@ -63,7 +63,7 @@ valarray<Type> abs(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray
 
@@ -118,7 +118,7 @@ valarray<Type> acos(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 아크코사인과 같은 valarray
 
@@ -191,7 +191,7 @@ valarray<Type> asin(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 아크사인과 같은 valarray
 
@@ -264,7 +264,7 @@ valarray<Type> atan(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 아크탄젠트와 같은 valarray
 
@@ -349,7 +349,7 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 *오른쪽*\
 해당 요소가 아크탄젠트 인수의 x좌표 값을 제공하는 입력 valarray 또는 상수 숫자 데이터 형식
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소 `I`가 다음의 아크탄젠트와 같은 valarray
 
@@ -441,7 +441,7 @@ valarray<Type> cos(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray
 
@@ -518,7 +518,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 쌍곡선 코사인과 같은 valarray
 
@@ -608,7 +608,7 @@ valarray<Type> exp(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 자연 지수와 같은 valarray
 
@@ -671,7 +671,7 @@ valarray<Type> log(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray
 
@@ -734,7 +734,7 @@ valarray<Type> log10(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 상용 로그와 같은 valarray
 
@@ -817,7 +817,7 @@ pow(
 *오른쪽*\
 해당 요소가 지수화할 각 요소의 거듭제곱을 제공하는 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소 `I`가 다음 항목과 같은 valarray
 
@@ -896,7 +896,7 @@ valarray<Type> sin(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 사인과 같은 valarray
 
@@ -973,7 +973,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 쌍곡선 사인과 같은 valarray
 
@@ -1056,7 +1056,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 제곱근과 같은 valarray
 
@@ -1133,7 +1133,7 @@ valarray<Type> tan(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 탄젠트와 같은 valarray
 
@@ -1210,7 +1210,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 *왼쪽*\
 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 입력 valarray 요소의 쌍곡선 코사인과 같은 valarray
 

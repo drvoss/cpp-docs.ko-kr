@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
 ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855921"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427496"
 ---
 # <a name="tile_barrier-class"></a>tile_barrier 클래스
 
@@ -29,17 +29,17 @@ ms.locfileid: "78855921"
 class tile_barrier;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[tile_barrier 생성자](#ctor)|`tile_barrier` 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[대기한](#wait)|타일의 모든 스레드가 대기를 완료할 때까지 스레드 그룹 (타일)에 있는 모든 스레드의 실행을 중지 하도록 지시 합니다.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|모든 메모리 액세스가 완료 되 고 타일의 모든 스레드가이 호출에 도달할 때까지 타일에 있는 모든 스레드의 실행을 차단 합니다.|

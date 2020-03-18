@@ -5,12 +5,12 @@ f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b56e9a1d575cc32f02724d1b54c43db0eb109043
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126177"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445831"
 ---
 # <a name="hashltstring_viewgt-specialization"></a>&gt; 특수화 string_view 해시&lt;
 
@@ -27,6 +27,7 @@ struct hash<basic_string_view<CharType, Traits>>
         noexcept;
 };
 ```
+
 ### <a name="remarks"></a>설명
 
 String_view 해시는 기본 문자열 개체의 해시와 같습니다.

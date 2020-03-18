@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856620"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425114"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; functions
 
@@ -85,7 +85,7 @@ basic_istream<Allocator, Traits>& getline(
 *delim*\
 줄 구분 기호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 스트림이 *인*경우
 
@@ -173,12 +173,12 @@ double stod(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **Double** 값입니다.
 
@@ -202,12 +202,12 @@ float stof(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 float 값입니다.
 
@@ -231,13 +231,13 @@ int stoi(
     int base = 10);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 정수 값입니다.
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|반환 시 변환되지 않은 첫 번째 문자의 인덱스를 포함합니다.|
@@ -269,13 +269,13 @@ long stol(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 |*base*|사용할 기수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 long 정수 값입니다.
 
@@ -299,12 +299,12 @@ double stold(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **Long double** 값입니다.
 
@@ -330,13 +330,13 @@ long long stoll(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 |*base*|사용할 기수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **Long long** 값입니다.
 
@@ -362,13 +362,13 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 |*base*|사용할 기수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부호 없는 long 정수 값입니다.
 
@@ -394,13 +394,13 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*str*|변환할 문자 시퀀스입니다.|
 |*idx*|변환되지 않은 첫 번째 문자의 인덱스 값입니다.|
 |*base*|사용할 기수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **부호 없는 long long** 값입니다.
 
@@ -482,11 +482,11 @@ string to_string(long double Val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*Val*|변환할 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값을 나타내는 `string`입니다.
 
@@ -530,11 +530,11 @@ wstring to_wstring(long double Val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |`Val`|변환할 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값을 나타내는 와이드 문자열입니다.
 

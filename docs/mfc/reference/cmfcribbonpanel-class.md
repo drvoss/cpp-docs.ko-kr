@@ -115,11 +115,11 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883605"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425768"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfc리본 패널 클래스
 
@@ -133,17 +133,17 @@ ms.locfileid: "78883605"
 class CMFCRibbonPanel : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[Cmfc리본 패널:: Cmfc리본 패널](#cmfcribbonpanel)|`CMFCRibbonPanel` 개체를 생성하고 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[Cmfc리본 패널:: 추가](#add)|패널에 리본 요소를 추가 합니다.|
 |[Cmfc리본 패널:: AddSeparator](#addseparator)|리본 패널에 구분 기호를 추가 합니다.|
@@ -274,7 +274,7 @@ UINT uiDisabledResID = 0);
 *uiDisabledResID*<br/>
 진행 도구 모음의 비활성화 된 이미지의 리소스 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널에 도구 모음을 추가 하려면이 메서드를 호출 합니다. 이 도구 모음은 [Cmfcribbon panel:: Add](#add)에 대 한 이전 호출에 의해 추가 된 리본 요소 옆에 추가 됩니다.
 
@@ -318,7 +318,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 *dwData*<br/>
 진행 리본 요소와 연결 된 데이터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 리본 요소에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -337,7 +337,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 *uiCmdID*<br/>
 진행 리본 요소의 명령 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령 ID로 식별 되는 리본 요소입니다. 지정 된 명령 ID로 식별 된 리본 요소가 없는 경우 NULL입니다.
 
@@ -349,7 +349,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널에 대 한 캡션의 높이 (픽셀)입니다.
 
@@ -363,7 +363,7 @@ int GetCaptionHeight() const;
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널에 포함 된 리본 요소의 수입니다.
 
@@ -375,7 +375,7 @@ int GetCount() const;
 DWORD_PTR GetData() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 패널과 연결 된 사용자 정의 데이터입니다.
 
@@ -387,7 +387,7 @@ DWORD_PTR GetData() const;
 CMFCRibbonButton& GetDefaultButton();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 기본 단추입니다.
 
@@ -403,7 +403,7 @@ CMFCRibbonButton& GetDefaultButton();
 CMFCRibbonBaseElement* GetDroppedDown() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팝업 메뉴가 삭제 된 리본 요소에 대 한 포인터입니다. 리본 요소에 팝업 메뉴가 없으면 NULL이 고, 그렇지 않으면 NULL입니다.
 
@@ -424,7 +424,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 *nIndex*<br/>
 진행 검색할 요소의 인덱스 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 위치 *n 인덱스* 에 있는 기본 리본 요소에 대 한 유효한 포인터 이거나, 지정 된 인덱스에 요소가 없는 경우 NULL입니다.
 
@@ -473,7 +473,7 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 CMFCRibbonBaseElement* GetHighlighted() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널에 강조 표시 된 리본 요소에 대 한 포인터입니다.
 
@@ -492,7 +492,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 *pElem*<br/>
 진행 리본 요소에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 지정 된 리본 요소의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -521,7 +521,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 LPCTSTR GetName() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 이름입니다.
 
@@ -533,7 +533,7 @@ LPCTSTR GetName() const;
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -545,7 +545,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
 CMFCRibbonCategory* GetParentCategory() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 리본 패널이 포함 된 리본 범주에 대 한 포인터입니다.
 
@@ -555,7 +555,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -572,7 +572,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 *rect*<br/>
 제한이 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 FALSE를 반환 합니다.
 
@@ -588,7 +588,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 CMFCRibbonBaseElement* GetPressed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 현재를 누르면 리본 요소에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -602,7 +602,7 @@ CMFCRibbonBaseElement* GetPressed() const;
 const CRect& GetRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 표시 사각형입니다.
 
@@ -621,7 +621,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 *pElem*<br/>
 진행 리본 요소에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널에 지정 된 리본 요소가 포함 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -665,7 +665,7 @@ BOOL bCheckPanelCaption = FALSE);
 *bCheckPanelCaption*<br/>
 진행 리본 패널 캡션을 테스트 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 점이 있는 경우 리본 요소에 대 한 포인터이 고, 그렇지 않으면입니다. 그렇지 않으면 NULL입니다.
 
@@ -686,7 +686,7 @@ virtual int HitTestEx(CPoint point) const;
 *point*<br/>
 진행 창의 왼쪽 위 모퉁이를 기준으로 하는 포인터의 x 및 y 좌표입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 점이 있는 리본 요소의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -712,7 +712,7 @@ int nIndex);
 *nIndex*<br/>
 진행 0부터 시작 하는 값 이며,-1부터 배열에 포함 된 리본 요소 수 까지의 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 요소가 성공적으로 삽입 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -733,7 +733,7 @@ virtual BOOL InsertSeparator(int nIndex);
 *nIndex*<br/>
 진행 구분 기호가 삽입 되는 인덱스 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 구분 기호가 성공적으로 삽입 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -749,7 +749,7 @@ virtual BOOL InsertSeparator(int nIndex);
 BOOL IsCenterColumnVert() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 요소의 세로 위치가 표시 사각형 안에 가운데 맞춤 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -761,7 +761,7 @@ BOOL IsCenterColumnVert() const;
 BOOL IsCollapsed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 세로 방향으로 리본 패널의 표시 크기를 최소화 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -777,7 +777,7 @@ BOOL IsCollapsed() const;
 BOOL IsHighlighted() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 표시가 강조 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -793,7 +793,7 @@ BOOL IsHighlighted() const;
 BOOL IsJustifyColumns() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 패널의 같은 열에 있는 리본 요소의 표시 치수가 같은 너비로 설정 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -805,7 +805,7 @@ BOOL IsJustifyColumns() const;
 virtual BOOL IsMainPanel() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 FALSE를 반환 합니다.
 
@@ -821,7 +821,7 @@ virtual BOOL IsMainPanel() const;
 BOOL IsMenuMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -835,7 +835,7 @@ virtual BOOL OnKey(UINT nChar);
 
 진행 *nChar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -879,7 +879,7 @@ BOOL bDelete = TRUE);
 *bDelete*<br/>
 진행 제거 되는 요소를 삭제 하려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 제거 되 고 삭제 되었으면 TRUE이 고 ( *bDelete* 가 TRUE 인 경우)입니다. 요소가 제거 되지 않았거나 *n 인덱스*에 리본 요소가 없는 경우 FALSE입니다.
 
@@ -917,7 +917,7 @@ CMFCRibbonBaseElement* pElem);
 *pElem*<br/>
 [in, out] 원래 요소를 대체 하는 요소에 대 한 유효한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 원래 리본 요소가 새 리본 요소에 의해 성공적으로 바뀐 경우 TRUE이 고, 리본 요소가 대체 되지 않거나 지정 된 인덱스에 요소가 없는 경우 FALSE입니다.
 
@@ -943,7 +943,7 @@ CMFCRibbonBaseElement* pElem);
 *pElem*<br/>
 [in, out] 원래 요소를 바꿀 요소에 대 한 유효한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 원래 리본 요소가 새 리본 요소에 의해 성공적으로 바뀐 경우 TRUE이 고, 리본 요소가 대체 되지 않은 경우 FALSE이 고, 지정 된 명령 ID를 가진 요소가 실제로 존재 하지 않는 경우입니다.
 
@@ -1018,7 +1018,7 @@ BOOL bRightAlign = FALSE);
 *uiMenuResID*<br/>
 진행 리본 패널에 추가할 메뉴의 리소스 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메뉴가 리본 요소에 할당 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1044,7 +1044,7 @@ CRuntimeClass* pRTC);
 *pRTC*<br/>
 [in, out] 리본 패널에 추가 되는 리본 요소에 대 한 런타임 클래스 정보에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 런타임 클래스 정보를 사용 하 여 만든 리본 요소입니다.
 
@@ -1070,7 +1070,7 @@ CRuntimeClass* pRTC);
 *pRTC*<br/>
 [in, out] 리본 패널에 추가 되는 리본 요소와 관련 된 런타임 클래스 정보에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 런타임 클래스 정보를 사용 하 여 만든 리본 요소입니다.
 
@@ -1151,7 +1151,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 *pButton*<br/>
 진행 리본 패널의 기본 단추에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 리본 패널의 팝업 메뉴에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -1197,7 +1197,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 리본에 Windows 7 모양이 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1228,7 +1228,7 @@ CMFCRibbonBaseElement*>& arElements);
 CRect GetGalleryRect();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 패널 내 갤러리 요소의 크기 및 위치입니다.
 
@@ -1242,7 +1242,7 @@ CRect GetGalleryRect();
 CMFCRibbonBaseElement* GetFocused() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포커스가 있는 요소 또는 NULL에 대 한 포인터입니다.
 

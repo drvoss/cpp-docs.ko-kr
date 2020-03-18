@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890872"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425258"
 ---
 # <a name="queue-class"></a>queue 클래스
 
@@ -64,7 +64,7 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 
 - [priority_queue 클래스](../standard-library/priority-queue-class.md)는 가장 큰 요소가 항상 최상위 위치에 있도록 요소를 정렬합니다. 이 클래스는 요소의 삽입과 최상위 요소의 검사 및 제거를 지원합니다. 나이, 키 또는 기타 조건을 기준으로 정렬된 줄을 선 사람들의 예로 이해할 수 있습니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -72,7 +72,7 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 |-|-|
 |[queue](#queue)|비어 있거나 기본 컨테이너 개체의 복사본인 `queue`을 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -80,7 +80,7 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 |[size_type](#size_type)|`queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
 |[value_type](#value_type)|`queue`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -101,7 +101,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 queue의 마지막 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.
 
@@ -163,7 +163,7 @@ queue가 비어 있는지 테스트합니다.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 queue가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
 
@@ -211,7 +211,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 큐의 첫 번째 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.
 
@@ -433,7 +433,7 @@ queue에 있는 요소 수를 반환합니다.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 queue의 현재 길이입니다.
 

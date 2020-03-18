@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 43154e1ec4c6b856ad203a4b9ac49e4f4bcf9576
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866566"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426764"
 ---
 # <a name="cwinthread-class"></a>CWinThread 클래스
 
@@ -67,17 +67,17 @@ ms.locfileid: "78866566"
 class CWinThread : public CCmdTarget
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CWinThread:: CWinThread](#cwinthread)|`CWinThread` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CWinThread:: CreateThread](#createthread)|`CWinThread` 개체의 실행을 시작 합니다.|
 |[CWinThread:: ExitInstance](#exitinstance)|스레드가 종료 될 때 정리 하도록 재정의 합니다.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CWinThread:: operator 핸들](#operator_handle)|`CWinThread` 개체의 핸들을 검색 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CWinThread:: m_bAutoDelete](#m_bautodelete)|스레드 종료 시 개체를 삭제할지 여부를 지정 합니다.|
 |[CWinThread:: m_hThread](#m_hthread)|현재 스레드에 대 한 핸들입니다.|
@@ -166,7 +166,7 @@ BOOL CreateThread(
 *lpSecurityAttrs*<br/>
 스레드에 대 한 보안 특성을 지정 하는 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스레드가 성공적으로 생성 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -194,7 +194,7 @@ CWinThread();
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스레드의 종료 코드입니다. 0은 오류가 없음을 나타내고 0 보다 큰 값은 오류를 나타냅니다. [Getexitcodethread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)를 호출 하 여이 값을 검색할 수 있습니다.
 
@@ -212,7 +212,7 @@ virtual int ExitInstance();
 virtual CWnd* GetMainWnd();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 함수는 두 가지 windows 형식 중 하나에 대 한 포인터를 반환 합니다. 스레드가 OLE 서버의 일부이 고 활성 컨테이너 내에서 내부 활성 상태인 개체를 포함 하는 경우이 함수는 `CWinThread` 개체의 [CWinApp:: m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) 데이터 멤버를 반환 합니다.
 
@@ -234,7 +234,7 @@ virtual CWnd* GetMainWnd();
 int GetThreadPriority();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 우선 순위 클래스 내의 현재 스레드 우선 순위 수준입니다. 반환 되는 값은 다음 중 하나 이며, 가장 높은 우선 순위에서 가장 낮은 값으로 나열 됩니다.
 
@@ -262,7 +262,7 @@ int GetThreadPriority();
 virtual BOOL InitInstance();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 초기화에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -285,7 +285,7 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
 *pMsg*<br/>
 현재 처리 중인 메시지를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지 처리 후 `OnIdle`를 호출 해야 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -385,7 +385,7 @@ virtual BOOL OnIdle(LONG lCount);
 *lCount*<br/>
 스레드의 메시지 큐가 비어 있을 때 `OnIdle`가 호출 될 때마다 카운터가 증가 합니다. 이 개수는 새 메시지가 처리 될 때마다 0으로 다시 설정 됩니다. *Lcount* 매개 변수를 사용 하 여 메시지를 처리 하지 않고 스레드가 유휴 상태로 유지 된 시간의 상대 길이를 확인할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0이 아니면 유휴 처리 시간을 더 받습니다. 유휴 처리 시간이 더 이상 필요 하지 않은 경우 0입니다.
 
@@ -409,7 +409,7 @@ virtual BOOL OnIdle(LONG lCount);
 operator HANDLE() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 스레드 개체의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -439,7 +439,7 @@ BOOL PostThreadMessage(
 *lParam*<br/>
 두 번째 메시지 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -463,7 +463,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 처리할 메시지를 포함 하는 [MSG 구조체](/windows/win32/api/winuser/ns-winuser-msg) 를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지가 `PreTranslateMessage`에서 완전히 처리 되었으며 더 이상 처리 되지 않아야 하는 경우 0이 아닙니다. 메시지를 일반적인 방식으로 처리 해야 하는 경우 0입니다.
 
@@ -489,7 +489,7 @@ virtual BOOL ProcessMessageFilter(
 *lpMsg*<br/>
 Windows [MSG 구조체](/windows/win32/api/winuser/ns-winuser-msg)에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지가 처리 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -517,7 +517,7 @@ virtual LRESULT ProcessWndProcException(
 *pMsg*<br/>
 프레임 워크에서 예외를 throw 한 windows 메시지에 대 한 정보를 포함 하는 [MSG 구조체](/windows/win32/api/winuser/ns-winuser-msg) 를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 WM_CREATE 예외가 생성 되 면-1입니다. 그렇지 않으면 0입니다.
 
@@ -558,7 +558,7 @@ virtual BOOL PumpMessage();
 DWORD ResumeThread();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 스레드의 이전 일시 중단 수입니다. 그렇지 않으면 `0xFFFFFFFF` 합니다. 반환 값이 0 이면 현재 스레드가 일시 중단 되지 않은 것입니다. 반환 값이 1 이면 스레드가 일시 중단 되지만 이제 다시 시작 됩니다. 반환 값이 1 보다 크면 스레드가 일시 중단 된 상태로 유지 됩니다.
 
@@ -574,7 +574,7 @@ DWORD ResumeThread();
 virtual int Run();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스레드에서 반환 하는 **정수** 값입니다. [Getexitcodethread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)를 호출 하 여이 값을 검색할 수 있습니다.
 
@@ -615,7 +615,7 @@ BOOL SetThreadPriority(int nPriority);
 
 이러한 우선 순위에 대 한 자세한 내용은 Windows SDK [Setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 를 참조 하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -631,7 +631,7 @@ BOOL SetThreadPriority(int nPriority);
 DWORD SuspendThread();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 스레드의 이전 일시 중단 수입니다. 그렇지 않으면 `0xFFFFFFFF` 합니다.
 

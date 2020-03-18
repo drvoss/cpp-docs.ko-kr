@@ -2,16 +2,15 @@
 title: norm 클래스
 ms.date: 11/04/2016
 f1_keywords:
-- norm
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b5740f33dea6aad79770f77f179803023432248a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126515"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447528"
 ---
 # <a name="norm-class"></a>norm 클래스
 
@@ -23,17 +22,17 @@ ms.locfileid: "77126515"
 class norm;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[일반 생성자](#ctor)|오버로드됨. 기본 생성자입니다. 0.0f로 초기화합니다.|
+|[일반 생성자](#ctor)|오버로드되었습니다. 기본 생성자입니다. 0\.0f로 초기화합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |norm::operator-||
 |norm::operator--||
@@ -57,7 +56,7 @@ class norm;
 
 ## <a name="ctor"></a>늦지
 
-기본 생성자입니다. 0.0f로 초기화합니다.
+기본 생성자입니다. 0\.0f로 초기화합니다.
 
 ```cpp
 norm(

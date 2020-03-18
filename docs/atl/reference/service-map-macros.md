@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862516"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422933"
 ---
 # <a name="service-map-macros"></a>서비스 맵 매크로
 
@@ -122,7 +122,7 @@ STDMETHOD(QueryService)(
 *ppvObj*<br/>
 제한이 요청 된 인터페이스에 대 한 간접 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 된 HRESULT 값은 다음 중 하나입니다.
 
@@ -140,7 +140,7 @@ STDMETHOD(QueryService)(
 
 `QueryService`를 호출 하는 경우 서비스 식별자 (*guidService*)와 인터페이스 식별자 (*riid*)를 모두 전달 합니다. *GuidService* 는 액세스 하려는 서비스를 지정 하 고, *riid* 는 서비스의 일부인 인터페이스를 식별 합니다. 반환 시 인터페이스에 대 한 간접 포인터를 받습니다.
 
-인터페이스를 구현 하는 개체는 다른 서비스의 일부인 인터페이스를 구현할 수도 있습니다. 다음 사항을 고려합니다.
+인터페이스를 구현 하는 개체는 다른 서비스의 일부인 인터페이스를 구현할 수도 있습니다. 다음을 고려해 보세요.
 
 - 이러한 인터페이스 중 일부는 선택 사항이 될 수 있습니다. 서비스 설명에 정의 된 모든 인터페이스는 서비스의 모든 구현 또는 반환 된 모든 개체에 반드시 있어야 하는 것은 아닙니다.
 

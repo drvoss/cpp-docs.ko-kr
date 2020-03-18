@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 6e23ccd6fcae03bcad40ea560356f4d1290dbcdd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866339"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427490"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL에서의 취소
 
@@ -23,7 +23,7 @@ ms.locfileid: "78866339"
 > [!NOTE]
 > 런타임에서는 예외 처리를 사용하여 취소를 구현합니다. 코드에서 이들 예외를 catch 또는 처리하지 마세요. 또한 작업에 대한 함수 본문에 예외로부터 안전한 코드를 작성하는 것이 좋습니다. 예를 들어 작업 본문에서 예외가 throw 될 때 리소스를 올바르게 처리 하기 위해 RAII ( *Resource Instance Initialization* ) 패턴을 사용할 수 있습니다. RAII 패턴을 사용 하 여 취소할 수 있는 작업에서 리소스를 정리 하는 전체 예제는 [연습: 사용자 인터페이스 스레드에서 작업 제거](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)를 참조 하세요.
 
-## <a name="key-points"></a>주요 사항
+## <a name="key-points"></a>요점
 
 - 취소는 공동 작업이고 취소를 요청하는 코드와 취소에 응답하는 작업 간의 조정을 포함합니다.
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[방법: 취소를 사용하여 병렬 루프 중단](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|취소를 사용하여 병렬 검색 알고리즘을 구현하는 방법을 보여 줍니다.|
 |[방법: 예외 처리를 사용하여 병렬 루프 중단](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|`task_group` 클래스를 사용하여 기본적인 트리 구조에 대한 검색 알고리즘을 작성하는 방법을 보여 줍니다.|

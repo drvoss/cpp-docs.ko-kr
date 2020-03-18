@@ -3,11 +3,11 @@ title: 4. 환경 변수
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
 ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882866"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424166"
 ---
 # <a name="4-environment-variables"></a>4. 환경 변수
 
@@ -37,7 +37,7 @@ DOS
 
 `runtime`이외의 일정 유형이 있는 `for` 및 `parallel for` 지시어의 경우 `OMP_SCHEDULE`는 무시 됩니다. 이 환경 변수의 기본값은 구현에서 정의 됩니다. 선택적 *chunk_size* 설정 된 경우 값은 양수 여야 합니다. *Chunk_size* 설정 되지 않은 경우 일정을 `static`하는 경우를 제외 하 고 값 1이 가정 됩니다. `static` 일정의 경우 기본 청크 크기는 루프에 적용 된 스레드 수로 나눈 루프 반복 공간으로 설정 됩니다.
 
-예:
+예제:
 
 ```csh
 setenv OMP_SCHEDULE "guided,4"
@@ -61,7 +61,7 @@ setenv OMP_SCHEDULE "dynamic"
 - 지정 된 값이 양의 정수가 아니거나
 - 값이 시스템에서 지원할 수 있는 최대 스레드 수보다 큽니다.
 
-예:
+예제:
 
 ```csh
 setenv OMP_NUM_THREADS 16
@@ -79,7 +79,7 @@ setenv OMP_NUM_THREADS 16
 
 `OMP_DYNAMIC`을 `TRUE`로 설정 하면 런타임 환경에서 병렬 영역을 실행 하는 데 사용 되는 스레드 수를 조정 하 여 시스템 리소스를 가장 효과적으로 사용할 수 있습니다.  `OMP_DYNAMIC`을 `FALSE`로 설정 하면 동적 조정을 사용할 수 없습니다. 기본 조건은 구현에서 정의 됩니다.
 
-예:
+예제:
 
 ```csh
 setenv OMP_DYNAMIC TRUE
@@ -94,7 +94,7 @@ setenv OMP_DYNAMIC TRUE
 
 `OMP_NESTED` 환경 변수는 `omp_set_nested` 라이브러리 루틴을 호출 하 여 중첩 된 병렬 처리를 사용 하거나 사용 하지 않도록 설정 하지 않는 한 중첩 된 병렬 처리를 활성화 하거나 비활성화 합니다 `OMP_NESTED`을 `TRUE`로 설정 하면 중첩 된 병렬 처리를 사용할 수 있습니다. `OMP_NESTED`을 `FALSE`로 설정 하면 중첩 된 병렬 처리를 사용할 수 없습니다. 기본값은 `FALSE`입니다.
 
-예:
+예제:
 
 ```csh
 setenv OMP_NESTED TRUE

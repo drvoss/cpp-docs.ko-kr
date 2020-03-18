@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSeparator 클래스
+title: Cmfc리본 구분 기호 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonSeparator
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65321cb80c80a5f4c6b3cf9c67e85b1bfb6f9d11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380236"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445593"
 ---
-# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 클래스
+# <a name="cmfcribbonseparator-class"></a>Cmfc리본 구분 기호 클래스
 
-리본 구분 기호를 구현합니다.
+리본 구분 기호를 구현 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,41 +39,41 @@ ms.locfileid: "62380236"
 class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
 |||
 |-|-|
-|이름|설명|
-|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|`CMFCRibbonSeparator` 개체를 생성합니다.|
+|속성|Description|
+|[Cmfc리본 구분 기호:: Cmfc리본 구분 기호](#cmfcribbonseparator)|`CMFCRibbonSeparator` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
 |||
 |-|-|
-|이름|설명|
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|구분 기호를 추가 합니다 **명령** 목록에 **사용자 지정** 대화 상자. (재정의 [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
+|속성|Description|
+|[Cmfc리본 구분 기호:: AddToListBox](#addtolistbox)|**사용자 지정** 대화 상자의 **명령** 목록에 구분 기호를 추가 합니다. [Cmfc리본 Baseelement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)를 재정의 합니다.|
 |`CMFCRibbonSeparator::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|
-|`CMFCRibbonSeparator::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|
+|`CMFCRibbonSeparator::GetThisClass`|프레임 워크에서이 클래스 형식과 연결 된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대 한 포인터를 가져오는 데 사용 됩니다.|
 
-### <a name="protected-methods"></a>Protected 메서드
+### <a name="protected-methods"></a>보호된 메서드
 
 |||
 |-|-|
-|이름|설명|
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|다른 개체에서 구분 기호의 멤버 변수를 설정 하는 복사 메서드.|
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|구분 기호의 크기를 반환합니다.|
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|구분 기호 인지 여부를 나타냅니다.|
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|탭 정지 인지 여부를 나타냅니다.|
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|리본 메뉴 또는 빠른 실행 도구 모음에서 구분 기호를 그리기 위해 시스템에서 호출 됩니다.|
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|구분 기호에 그릴 시스템에 의해 호출 된 **명령** 목록입니다.|
+|속성|Description|
+|[Cmfc리본 구분 기호:: CopyFrom](#copyfrom)|다른 개체에서 구분 기호의 멤버 변수를 설정 하는 복사 메서드입니다.|
+|[Cmfc리본 구분 기호:: GetRegularSize](#getregularsize)|구분 기호의 크기를 반환 합니다.|
+|[Cmfc리본 구분 기호:: IsSeparator](#isseparator)|구분 기호 인지 여부를 나타냅니다.|
+|[Cmfc리본 구분 기호:: IsTabStop](#istabstop)|탭 정지 인지 여부를 나타냅니다.|
+|[Cmfc리본 구분 기호:: OnDraw](#ondraw)|리본 또는 빠른 실행 도구 모음에 구분 기호를 그리기 위해 시스템에 의해 호출 됩니다.|
+|[Cmfc리본 구분 기호:: OnDrawOnList](#ondrawonlist)|**명령** 목록에 구분 기호를 그리기 위해 시스템에 의해 호출 됩니다.|
 
 ## <a name="remarks"></a>설명
 
-리본 구분 기호는 세로 또는 가로 줄이는 논리적으로 분리 리본 요소입니다. 리본 컨트롤을 기본 응용 프로그램 메뉴와 리본 상태 표시줄, 빠른 실행 도구 모음에 구분선을 그릴 수 있습니다.
+리본 구분 기호는 리본 요소를 논리적으로 구분 하는 세로 또는 가로 선입니다. 리본 컨트롤, 주 응용 프로그램 메뉴, 리본 상태 표시줄 및 빠른 실행 도구 모음에 구분 기호를 그릴 수 있습니다.
 
-응용 프로그램에서 구분 기호를 사용 하려면 새 개체를 생성 하 고 다음과 같이 기본 응용 프로그램 메뉴에 추가 합니다.
+응용 프로그램에서 구분 기호를 사용 하려면 다음과 같이 새 개체를 생성 하 고 주 응용 프로그램 메뉴에 추가 합니다.
 
 ```
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -83,23 +83,24 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```
-호출 [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) 리본 패널에 구분 기호를 추가 합니다. 구분 기호에 할당 되 고 내부적으로 추가 된 `AddSeparator` 메서드.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+[Cmfc리본 패널:: AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) 를 호출 하 여 리본 패널에 구분 기호를 추가 합니다. 구분 기호는 `AddSeparator` 메서드에서 내부적으로 할당 및 추가 됩니다.
+
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
+[Cmfc리본 구분 기호](../../mfc/reference/cmfcribbonseparator-class.md)
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** afxbaseribbonelement.h
 
-##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox
+##  <a name="addtolistbox"></a>Cmfc리본 구분 기호:: AddToListBox
 
-구분 기호를 추가 합니다 **명령** 목록에 **사용자 지정** 대화 상자.
+**사용자 지정** 대화 상자의 **명령** 목록에 구분 기호를 추가 합니다.
 
 ```
 virtual int AddToListBox(
@@ -110,16 +111,16 @@ virtual int AddToListBox(
 ### <a name="parameters"></a>매개 변수
 
 *pWndListBox*<br/>
-[in] 에 대 한 포인터를 **명령** 목록 구분 기호를 추가 하는 위치입니다.
+진행 구분 기호가 추가 된 **명령** 목록에 대 한 포인터입니다.
 
 *bDeep*<br/>
-[in] Ignored.
+진행 무시.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-0부터 시작 하 여 지정 된 목록 상자에서 문자열 인덱스 *pWndListBox*합니다.
+*PWndListBox*에 의해 지정 된 목록 상자의 문자열에 대 한 0부터 시작 하는 인덱스입니다.
 
-##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator
+##  <a name="cmfcribbonseparator"></a>Cmfc리본 구분 기호:: Cmfc리본 구분 기호
 
 `CMFCRibbonSeparator` 개체를 생성합니다.
 
@@ -130,7 +131,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ### <a name="parameters"></a>매개 변수
 
 *bIsHoriz*<br/>
-[in] 구분 기호는 가로; TRUE 인 경우 FALSE 인 경우에 구분 기호는 세로입니다.
+진행 TRUE 이면 구분 기호가 가로 방향입니다. FALSE 이면 구분 기호가 세로 방향입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -138,13 +139,13 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 
 ### <a name="example"></a>예제
 
-다음 예제에서는의 개체를 생성 하는 방법에 설명 합니다 `CMFCRibbonSeparator` 클래스입니다.
+다음 예제에서는 `CMFCRibbonSeparator` 클래스의 개체를 생성 하는 방법을 보여 줍니다.
 
 [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]
 
-##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom
+##  <a name="copyfrom"></a>Cmfc리본 구분 기호:: CopyFrom
 
-다른 개체에서 구분 기호의 멤버 변수를 설정 하는 복사 메서드.
+다른 개체에서 구분 기호의 멤버 변수를 설정 하는 복사 메서드입니다.
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -152,12 +153,12 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
-[in] 복사할 소스 리본 요소입니다.
+*소스*<br/>
+진행 복사할 원본 리본 요소입니다.
 
-##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
+##  <a name="getregularsize"></a>Cmfc리본 구분 기호:: GetRegularSize
 
-구분 기호의 크기를 반환합니다.
+구분 기호의 크기를 반환 합니다.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -166,13 +167,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 장치 내용에 대 한 포인터입니다.
+진행 장치 콘텐츠에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-크기 지정 된 디바이스 컨텍스트 구분 기호입니다.
+지정 된 장치 컨텍스트에서 구분 기호의 크기입니다.
 
-##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator
+##  <a name="isseparator"></a>Cmfc리본 구분 기호:: IsSeparator
 
 구분 기호 인지 여부를 나타냅니다.
 
@@ -180,11 +181,11 @@ virtual CSize GetRegularSize(CDC* pDC);
 virtual BOOL IsSeparator() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 클래스에 대해 항상 TRUE입니다.
+이 클래스의 경우 항상 TRUE입니다.
 
-##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop
+##  <a name="istabstop"></a>Cmfc리본 구분 기호:: IsTabStop
 
 탭 정지 인지 여부를 나타냅니다.
 
@@ -192,17 +193,17 @@ virtual BOOL IsSeparator() const;
 virtual BOOL IsTabStop() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 클래스에 대해 항상 FALSE입니다.
+이 클래스의 경우 항상 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-구분 기호를 리본 탭은 아닙니다.
+리본 구분 기호가 탭 중지가 아닙니다.
 
-##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw
+##  <a name="ondraw"></a>Cmfc리본 구분 기호:: OnDraw
 
-리본 메뉴 또는 빠른 실행 도구 모음에서 구분 기호를 그리기 위해 시스템에서 호출 됩니다.
+리본 또는 빠른 실행 도구 모음에 구분 기호를 그리기 위해 시스템에 의해 호출 됩니다.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -211,11 +212,11 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 장치 컨텍스트에 대 한 포인터입니다.
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList
+##  <a name="ondrawonlist"></a>Cmfc리본 구분 기호:: OnDrawOnList
 
-구분 기호에 그릴 시스템에 의해 호출 된 **명령** 목록입니다.
+**명령** 목록에 구분 기호를 그리기 위해 시스템에 의해 호출 됩니다.
 
 ```
 virtual void OnDrawOnList(
@@ -231,15 +232,15 @@ virtual void OnDrawOnList(
 
 |||
 |-|-|
-|매개 변수|설명|
-|*pDC*|[in] 장치 컨텍스트에 대 한 포인터입니다.|
-|*strText*|[in] 목록에 표시할 텍스트입니다.|
-|*nTextOffset*|[in] 텍스트 및 경계 사각형의 왼쪽 사이의 간격입니다.|
-|*rect*|[in] 경계 사각형을 지정합니다.|
-|*bIsSelected*|[in] Ignored.|
-|*bHighlighted*|[in] Ignored.|
+|매개 변수|Description|
+|*pDC*|진행 장치 컨텍스트에 대 한 포인터입니다.|
+|*strText*|진행 목록에 표시 되는 텍스트입니다.|
+|*nTextOffset*|진행 경계 사각형의 왼쪽 텍스트와 왼쪽 사이의 간격입니다.|
+|*rect*|진행 경계 사각형을 지정 합니다.|
+|*bIsSelected*|진행 무시.|
+|*bHighlighted 표시*|진행 무시.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

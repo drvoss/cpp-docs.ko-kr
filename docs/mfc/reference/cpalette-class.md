@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855536"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426974"
 ---
 # <a name="cpalette-class"></a>CPalette 클래스
 
@@ -43,17 +43,17 @@ Windows 색상표를 캡슐화합니다.
 class CPalette : public CGdiObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPalette:: CPalette](#cpalette)|연결 된 Windows 색상표를 사용 하 여 `CPalette` 개체를 생성 합니다. 초기화 멤버 함수 중 하나를 사용 하 여 `CPalette` 개체를 초기화 한 후에 야 사용할 수 있습니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPalette:: AnimatePalette](#animatepalette)|`CPalette` 개체로 식별 되는 논리 색상표의 항목을 바꿉니다. Windows는 새 항목을 시스템 팔레트에 즉시 매핑하기 때문에 응용 프로그램은 클라이언트 영역을 업데이트할 필요가 없습니다.|
 |[CPalette:: CreateHalftonePalette](#createhalftonepalette)|장치 컨텍스트에 대 한 하프톤 색상표를 만들어 `CPalette` 개체에 연결 합니다.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPalette:: operator HPALETTE](#operator_hpalette)|`CPalette`에 연결 된 HPALETTE를 반환 합니다.|
 
@@ -144,7 +144,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 *pDC*<br/>
 장치 컨텍스트를 식별 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -167,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 *lpLogPalette*<br/>
 논리 색상표의 색에 대 한 정보를 포함 하는 [Logpalette](/windows/win32/api/wingdi/ns-wingdi-logpalette) 구조를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -188,7 +188,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 *hPalette*<br/>
 Windows GDI 색상표에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 `CPalette` 개체에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -204,7 +204,7 @@ Windows GDI 색상표에 대 한 핸들입니다.
 int GetEntryCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 논리 색상표의 항목 수입니다.
 
@@ -221,7 +221,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 *crColor*<br/>
 일치 시킬 색을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 논리 색상표에 있는 항목의 인덱스입니다. 항목에는 지정 된 색과 가장 일치 하는 색이 포함 되어 있습니다.
 
@@ -247,7 +247,7 @@ UINT GetPaletteEntries(
 *lpPaletteColors*<br/>
 [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) 데이터 구조의 배열을 가리키면 색상표 항목이 수신 됩니다. 배열에는 적어도 *nNumEntries*에 지정 된 것과 같은 수의 데이터 구조가 포함 되어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 논리 색상표에서 검색 된 항목 수입니다. 함수가 실패 한 경우 0입니다.
 
@@ -259,7 +259,7 @@ UINT GetPaletteEntries(
 operator HPALETTE() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 `CPalette` 개체가 나타내는 Windows GDI 개체에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -282,7 +282,7 @@ BOOL ResizePalette(UINT nNumEntries);
 *nNumEntries*<br/>
 색상표의 크기를 조정한 후의 항목 수를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 색상표의 크기가 조정 되 면 0이 아닌 값으로 조정 됩니다. 그렇지 않으면 0입니다.
 
@@ -314,7 +314,7 @@ UINT SetPaletteEntries(
 *lpPaletteColors*<br/>
 [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) 데이터 구조의 배열을 가리키면 색상표 항목이 수신 됩니다. 배열에는 적어도 *nNumEntries*에 지정 된 것과 같은 수의 데이터 구조가 포함 되어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 논리 색상표에 설정 된 항목 수입니다. 함수가 실패 한 경우 0입니다.
 

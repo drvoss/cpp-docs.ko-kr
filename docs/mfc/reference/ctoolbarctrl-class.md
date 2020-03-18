@@ -183,11 +183,11 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856419"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426338"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 클래스
 
@@ -199,17 +199,17 @@ Windows의 도구 모음 공용 컨트롤의 기능을 제공합니다.
 class CToolBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|`CToolBarCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|도구 모음 컨트롤에 사용할 수 있는 단추 이미지 목록에 하나 이상의 비트맵 단추 이미지를 추가 합니다.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Toolbar 컨트롤에 단추를 하나 이상 추가 합니다.|
@@ -378,7 +378,7 @@ int AddBitmap(
 *pBitmap*<br/>
 추가할 단추 이미지를 포함 하는 `CBitmap` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 첫 번째 새 이미지의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -404,7 +404,7 @@ BOOL AddButtons(
 *lpButtons*<br/>
 추가할 단추에 대 한 정보를 포함 하는 `TBBUTTON` 구조체 배열의 주소입니다. 배열의 요소 수는 *Nnumbuttons*에 지정 된 단추와 동일 해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -486,7 +486,7 @@ int AddString(UINT nStringID);
 *nStringID*<br/>
 Toolbar 컨트롤의 문자열 목록에 추가할 문자열 리소스의 리소스 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 했을 때 추가 된 첫 번째 새 문자열의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -503,7 +503,7 @@ int AddStrings(LPCTSTR lpszStrings);
 *lpszStrings*<br/>
 도구 모음의 문자열 목록에 추가할 null로 끝나는 문자열을 하나 이상 포함 하는 버퍼의 주소입니다. 마지막 문자열은 두 개의 null 문자로 끝나야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 했을 때 추가 된 첫 번째 새 문자열의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -513,7 +513,7 @@ int AddStrings(LPCTSTR lpszStrings);
 
 [!code-cpp[NVC_MFCControlLadenDialog#72](../../mfc/codesnippet/cpp/ctoolbarctrl-class_1.cpp)]
 
-또는
+또는:
 
 [!code-cpp[NVC_MFCControlLadenDialog#73](../../mfc/codesnippet/cpp/ctoolbarctrl-class_2.cpp)]
 
@@ -543,12 +543,12 @@ BOOL ChangeBitmap(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*idButton*|진행 새 비트맵을 받는 단추의 명령 식별자입니다.|
 |*iBitmap*|진행 현재 도구 모음 컨트롤의 이미지 목록에 있는 이미지의 0부터 시작 하는 인덱스입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -582,7 +582,7 @@ BOOL CheckButton(
 *bCheck*<br/>
 단추를 선택 하려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -603,7 +603,7 @@ UINT CommandToIndex(UINT nID) const;
 *nID*<br/>
 단추 인덱스를 찾을 명령 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 명령 ID와 연결 된 단추에 대 한 0부터 시작 하는 인덱스입니다.
 
@@ -635,7 +635,7 @@ Toolbar 컨트롤의 부모 창을 지정 합니다. NULL이 아니어야 합니
 *nID*<br/>
 Toolbar 컨트롤의 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -689,7 +689,7 @@ Toolbar 컨트롤의 스타일을 지정 합니다. 도구 모음에는 항상 W
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -734,7 +734,7 @@ BOOL DeleteButton(int nIndex);
 *nIndex*<br/>
 삭제할 단추의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -758,7 +758,7 @@ BOOL EnableButton(
 *bEnable*<br/>
 단추를 사용 하려면 TRUE이 고, 그렇지 않으면입니다. FALSE 이면 단추를 사용 하지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -774,7 +774,7 @@ BOOL EnableButton(
 BOOL GetAnchorHighlight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0이 아니면 앵커 강조 표시를 사용 합니다. 0 인 경우 앵커 강조 표시를 사용할 수 없습니다.
 
@@ -795,7 +795,7 @@ int GetBitmap(int nID) const;
 *nID*<br/>
 비트맵 인덱스를 검색할 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 비트맵의 인덱스를 반환 하 고 그렇지 않으면 0을 반환 합니다.
 
@@ -811,7 +811,7 @@ Windows SDK에서 [TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap) 의 기�
 UINT GetBitmapFlags() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표시에서 크기가 높은 도구 모음 비트맵을 지원할 수 있는 경우 TBBF_LARGE 플래그가 설정 된 UINT입니다. 그렇지 않으면 선택을 취소 합니다.
 
@@ -837,7 +837,7 @@ BOOL GetButton(
 *lpButton*<br/>
 단추 정보의 복사본을 받을 `TBBUTTON` 구조의 주소입니다. `TBBUTTON` 구조체에 대 한 자세한 내용은 [CToolBarCtrl:: AddButtons](#addbuttons) 를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -849,7 +849,7 @@ BOOL GetButton(
 int GetButtonCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추의 개수입니다.
 
@@ -871,7 +871,7 @@ int GetButtonInfo(
 *ptbbi*<br/>
 단추 정보를 수신 하는 [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 단추의 0부터 시작 하는 인덱스이 고, 그렇지 않으면입니다. 그렇지 않으면-1입니다.
 
@@ -887,7 +887,7 @@ int GetButtonInfo(
 DWORD GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각각 LOWORD 및 WORD의 너비 및 높이 값을 포함 하는 DWORD 값입니다.
 
@@ -901,11 +901,11 @@ CString GetButtonText(int idButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*idButton*|진행 표시 텍스트가 검색 되는 단추의 식별자입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 단추의 표시 텍스트를 포함 하는 [CString](../../atl-mfc-shared/using-cstring.md) 입니다.
 
@@ -923,11 +923,11 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpColorScheme*|제한이 색 구성표 정보를 수신 하는 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 구조체에 대 한 포인터입니다. 이 메서드가 반환 될 때 구조체는 toolbar 컨트롤의 강조 색 및 그림자 색을 설명 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -943,7 +943,7 @@ Toolbar 컨트롤에서 사용 하지 않도록 설정 된 단추를 표시 하�
 CImageList* GetDisabledImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터 이거나, 사용 하지 않도록 설정 된 이미지 목록이 없는 경우 NULL입니다.
 
@@ -964,7 +964,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 *ppDropTarget*<br/>
 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) 인터페이스 포인터에 대 한 포인터입니다. 오류가 발생 하면이 주소에 NULL 포인터가 배치 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업의 성공 또는 실패를 나타내는 HRESULT 값을 반환 합니다.
 
@@ -980,7 +980,7 @@ Toolbar 컨트롤에 대 한 확장 스타일을 검색 합니다.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Toolbar 컨트롤에 현재 사용 중인 확장 스타일을 나타내는 DWORD입니다. 스타일 목록은 Windows SDK의 [도구 모음 확장 스타일](/windows/win32/Controls/toolbar-extended-styles)을 참조 하세요.
 
@@ -996,7 +996,7 @@ Toolbar 컨트롤에서 "핫" 단추를 표시 하는 데 사용 하는 이미�
 CImageList* GetHotImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터 이거나, 사용 하지 않도록 설정 된 이미지 목록이 없는 경우 NULL입니다.
 
@@ -1012,7 +1012,7 @@ CImageList* GetHotImageList() const;
 int GetHotItem() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에서 핫 항목의 인덱스 (0부터 시작)입니다.
 
@@ -1028,7 +1028,7 @@ Toolbar 컨트롤이 기본 상태로 단추를 표시 하는 데 사용 하는 
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터 이거나, 이미지 목록이 설정 되어 있지 않은 경우 NULL입니다.
 
@@ -1061,7 +1061,7 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
@@ -1087,7 +1087,7 @@ BOOL GetItemRect(
 *lpRect*<br/>
 경계 사각형의 좌표를 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체 또는 [crect](../../atl-mfc-shared/reference/crect-class.md) 개체의 주소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1108,7 +1108,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 *pSize*<br/>
 항목의 크기를 받는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1124,7 +1124,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 int GetMaxTextRows() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 단추에 표시 되는 최대 텍스트 행 수입니다.
 
@@ -1157,12 +1157,12 @@ BOOL GetPadding(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pnHorzPadding*|제한이 Toolbar 컨트롤의 가로 안쪽 여백을 픽셀 단위로 수신 하는 정수입니다.|
 |*pnVertPadding*|제한이 Toolbar 컨트롤의 세로 안쪽 여백을 픽셀 단위로 수신 하는 정수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1178,7 +1178,7 @@ BOOL GetPadding(
 CImageList* GetPressedImageList();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 컨트롤의 이미지 목록이 포함 된 [CImageList](../../mfc/reference/cimagelist-class.md) 에 대 한 포인터 이거나, 해당 이미지 목록이 설정 되어 있지 않으면 NULL입니다.
 
@@ -1204,7 +1204,7 @@ BOOL GetRect(
 *lpRect*<br/>
 경계 사각형 정보를 받을 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -1220,7 +1220,7 @@ Toolbar 컨트롤에서 현재 표시 되는 단추의 행 수를 검색 합니�
 int GetRows() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 현재 표시 되는 단추의 행 수입니다.
 
@@ -1241,7 +1241,7 @@ int GetState(int nID) const;
 *nID*<br/>
 정보를 검색할 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 단추 상태 정보이 고, 그렇지 않으면-1입니다. 단추 상태 정보는 [CToolBarCtrl:: AddButtons](#addbuttons)에 나열 된 값을 조합 하 여 사용할 수 있습니다.
 
@@ -1278,7 +1278,7 @@ int GetString(
 *str*<br/>
 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 문자열의 길이이 고, 그렇지 않으면-1입니다.
 
@@ -1294,7 +1294,7 @@ Toolbar 컨트롤에 현재 적용 된 스타일을 가져옵니다.
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Windows SDK에 설명 된 바와 같이 [toolbar 컨트롤 스타일](/windows/win32/Controls/toolbar-control-and-button-styles)의 조합을 포함 하는 DWORD입니다.
 
@@ -1306,7 +1306,7 @@ Windows SDK에 설명 된 바와 같이 [toolbar 컨트롤 스타일](/windows/w
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 도구 모음과 연결 된 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터 이거나, 도구 모음에 연결 된 도구 설명 컨트롤이 없으면 NULL입니다.
 
@@ -1327,7 +1327,7 @@ int HitTest(LPPOINT ppt) const;
 *ppt*<br/>
 `x` 멤버의 적중 테스트에 대 한 x 좌표와 `y` 멤버의 적중 테스트에 대 한 y 좌표를 포함 하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조체에 대 한 포인터입니다. 좌표는 도구 모음의 클라이언트 영역을 기준으로 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음에 있는 점의 위치를 나타내는 정수 값입니다. 값이 0 또는 양수 값 이면이 반환 값은 점이 있는 비 구분 기호 항목의 인덱스 (0부터 시작)입니다.
 
@@ -1355,7 +1355,7 @@ BOOL HideButton(
 *bHide*<br/>
 단추를 숨기려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1381,7 +1381,7 @@ BOOL Indeterminate(
 *bIndeterminate*<br/>
 지정 된 단추에 대해 비활성화 된 상태를 설정 하려면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1407,7 +1407,7 @@ BOOL InsertButton(
 *lpButton*<br/>
 삽입할 단추에 대 한 정보를 포함 하는 `TBBUTTON` 구조체의 주소입니다. `TBBUTTON` 구조체에 대 한 설명은 [CToolBarCtrl:: AddButtons](#addbuttons) 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1433,7 +1433,7 @@ BOOL InsertMarkHitTest(
 *ptbim*<br/>
 삽입 표시 정보를 수신 하는 [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1454,7 +1454,7 @@ BOOL IsButtonChecked(int nID) const;
 *nID*<br/>
 도구 모음에 있는 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 선택 되어 있으면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1475,7 +1475,7 @@ BOOL IsButtonEnabled(int nID) const;
 *nID*<br/>
 도구 모음에 있는 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추를 사용할 수 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1496,7 +1496,7 @@ BOOL IsButtonHidden(int nID) const;
 *nID*<br/>
 도구 모음에 있는 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 숨겨진 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1517,7 +1517,7 @@ BOOL IsButtonHighlighted(int nID) const;
 *nID*<br/>
 진행 도구 모음 단추의 명령 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 강조 표시 되 면 양의 정수이 고, 단추가 강조 표시 되지 않으면 0이 고, 오류가 발생 하면-1입니다.
 
@@ -1534,7 +1534,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 *nID*<br/>
 진행 도구 모음에 있는 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추가 결정 되지 않은 경우 양의 정수이 고, 단추가 비활성화 되지 않으면 0이 고, 오류가 발생 하면-1입니다.
 
@@ -1555,7 +1555,7 @@ BOOL IsButtonPressed(int nID) const;
 *nID*<br/>
 도구 모음에 있는 단추의 명령 식별자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추를 누르면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -1578,7 +1578,7 @@ void LoadImages(
 *iBitmapID*<br/>
 로드할 이미지를 포함 하는 비트맵의 ID입니다. 사용자 고유의 비트맵 리소스를 지정 하려면이 매개 변수를 비트맵 리소스의 ID로 설정 하 고 *hInst* 를 NULL로 설정 합니다. 비트맵 리소스는 이미지 목록에 단일 이미지로 추가 됩니다. *Hinst* 를 HINST_COMMCTRL 설정 하 고이 매개 변수를 다음 id 중 하나로 설정 하 여 표준 시스템 정의 비트맵을 추가할 수 있습니다.
 
-|비트맵 ID|설명|
+|비트맵 ID|Description|
 |---------------|-----------------|
 |IDB_HIST_LARGE_COLOR|큰 크기의 탐색기 비트맵|
 |IDB_HIST_SMALL_COLOR|작은 크기로 탐색기 비트맵|
@@ -1612,7 +1612,7 @@ BOOL MapAccelerator(
 *pIDBtn*<br/>
 *ChAccel*에 지정 된 액셀러레이터에 해당 하는 단추의 명령 식별자를 받는 UINT에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1638,7 +1638,7 @@ BOOL MarkButton(
 *fHighlight*<br/>
 설정할 강조 표시 상태를 지정 합니다. 기본적으로 TRUE입니다. FALSE로 설정 하면 단추가 기본 상태로 설정 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1664,7 +1664,7 @@ BOOL MoveButton(
 *nNewPos*<br/>
 단추 대상의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1688,7 +1688,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 *bPress*<br/>
 진행 지정 된 단추를 누르면 TRUE이 고, FALSE 이면 지정 된 단추를 해제 합니다. 기본값은 TRUE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1708,11 +1708,11 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pReplaceBitmap*|진행 대체할 비트맵 및 새 비트맵을 설명 하는 [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1799,7 +1799,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 *fAnchor*<br/>
 진행 앵커 강조 표시를 사용 하거나 사용 하지 않을 지 여부를 지정 합니다. 이 값이 0이 아니면 앵커 강조 표시를 사용 하도록 설정 됩니다. 이 값이 0 이면 앵커 강조 표시를 사용 하지 않도록 설정 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 앵커 설정입니다. 강조 표시를 사용 하는 경우이 값은 0이 아닙니다. 강조 표시를 사용 하도록 설정 하지 않은 경우이 값은 0입니다.
 
@@ -1820,7 +1820,7 @@ BOOL SetBitmapSize(CSize size);
 *size*<br/>
 비트맵 이미지의 너비와 높이 (픽셀)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1846,7 +1846,7 @@ BOOL SetButtonInfo(
 *ptbbi*<br/>
 단추 정보를 수신 하는 [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1867,7 +1867,7 @@ BOOL SetButtonSize(CSize size);
 *size*<br/>
 단추의 너비와 높이 (픽셀)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1916,7 +1916,7 @@ BOOL SetButtonWidth(
 *cxMax*<br/>
 최대 단추 너비 (픽셀)입니다. 단추 텍스트가 너무 넓은 경우 컨트롤에는 줄임표 점이 표시 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1942,7 +1942,7 @@ BOOL SetCmdID(
 *nID*<br/>
 선택한 단추를 설정할 명령 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값을 반환 합니다. 그렇지 않으면 0입니다.
 
@@ -1956,7 +1956,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpColorScheme*|진행 Toolbar 컨트롤의 강조 색 및 그림자 색을 설명 하는 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 구조체에 대 한 포인터입니다.|
 
@@ -1985,7 +1985,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 *pImageList*<br/>
 Toolbar 컨트롤에서 비활성화 된 단추 이미지를 표시 하는 데 사용할 이미지를 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Toolbar 컨트롤에서 사용 하지 않도록 설정 된 단추 이미지를 표시 하기 위해 이전에 사용한 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.
 
@@ -2011,7 +2011,7 @@ Win32 함수 [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)에 지�
 *dwDTFlags*<br/>
 Win32 함수 `DrawText`에 지정 된 하나 이상의 DT_ 플래그를 조합 하 여 단추 텍스트를 그리는 방법을 표시 합니다. 이 값은 단추 텍스트를 그릴 때 `DrawText` 전달 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 텍스트 그리기 플래그를 포함 하는 DWORD입니다.
 
@@ -2032,7 +2032,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 *dwExStyle*<br/>
 새 확장 스타일을 지정 하는 값입니다. 이 매개 변수는 도구 모음 확장 스타일의 조합일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 확장 스타일을 나타내는 DWORD입니다. 스타일 목록은 Windows SDK의 [도구 모음 확장 스타일](/windows/win32/Controls/toolbar-extended-styles)을 참조 하세요.
 
@@ -2053,7 +2053,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
 *pImageList*<br/>
 도구 모음 컨트롤에서 핫 단추 이미지를 표시 하는 데 사용할 이미지를 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 모음 컨트롤에서 핫 단추 이미지를 표시 하기 위해 이전에 사용한 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.
 
@@ -2076,7 +2076,7 @@ int SetHotItem(int nHot);
 *nHot*<br/>
 핫으로 만들 항목의 인덱스 번호 (0부터 시작)입니다. 이 값이-1 이면 항목이 활성 상태로 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 핫 항목의 인덱스 이거나, 활성 항목이 없으면-1입니다.
 
@@ -2097,7 +2097,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Toolbar 컨트롤에서 기본 상태로 단추 이미지를 표시 하는 데 사용할 이미지를 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Toolbar 컨트롤이 기본 상태로 단추 이미지를 표시 하기 위해 이전에 사용 했던 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.
 
@@ -2120,7 +2120,7 @@ BOOL SetIndent(int iIndent);
 *iIndent*<br/>
 들여쓰기 (픽셀)를 지정 하는 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2154,7 +2154,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 *clrNew*<br/>
 새 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
@@ -2175,7 +2175,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 *iMaxRows*<br/>
 설정할 최대 행 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2225,12 +2225,12 @@ DWORD SetPadding(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nHorzPadding*|진행 Toolbar 컨트롤의 가로 안쪽 여백을 픽셀 단위로 지정 합니다.|
 |*nVertPadding*|진행 Toolbar 컨트롤의 세로 안쪽 여백을 픽셀 단위로 지정 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 낮은 단어가 이전 가로 안쪽 여백 값을 포함 하 고 그 상위 단어가 이전 세로 안쪽 여백 값을 포함 하는 DWORD입니다. 안쪽 여백 값은 픽셀로 측정 됩니다.
 
@@ -2256,12 +2256,12 @@ CImagelist* SetPressedImageList(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iImageID*|진행 이미지 목록의 인덱스 (0부터 시작)입니다. 하나의 이미지 목록만 사용 하는 경우이 매개 변수를 0으로 설정 합니다.|
 |*pImageList*|진행 새 이미지 목록이 포함 된 [CImageList](../../mfc/reference/cimagelist-class.md) 에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 컨트롤의 이전 이미지 목록이 포함 된 [CImageList](../../mfc/reference/cimagelist-class.md) 에 대 한 포인터 이거나, 해당 이미지 목록이 설정 되지 않은 경우 NULL입니다.
 
@@ -2329,7 +2329,7 @@ BOOL SetState(
 *nState*<br/>
 상태 플래그입니다. [CToolBarCtrl:: addbuttons](#addbuttons)의 단추 상태에 대해 나열 된 값을 조합 하 여 사용할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2376,7 +2376,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 설정할 도구 모음 비주얼 스타일을 포함 하는 유니코드 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값은 사용 되지 않습니다.
 

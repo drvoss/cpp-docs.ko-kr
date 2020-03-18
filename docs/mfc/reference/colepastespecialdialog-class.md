@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855607"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426620"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 클래스
 
@@ -45,17 +45,17 @@ OLE 선택하여 붙여넣기 대화 상자에 사용합니다.
 class COlePasteSpecialDialog : public COleDialog
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|`COlePasteSpecialDialog` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: AddFormat](#addformat)|응용 프로그램에서 붙여 넣을 수 있는 형식 목록에 사용자 지정 형식을 추가 합니다.|
 |[COlePasteSpecialDialog:: AddLinkEntry](#addlinkentry)|지원 되는 클립보드 형식 목록에 새 항목을 추가 합니다.|
@@ -69,7 +69,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COlePasteSpecialDialog:: m_ps](#m_ps)|대화 상자의 함수를 제어 하는 OLEUIPASTESPECIAL 형식의 구조체입니다.|
 
@@ -170,7 +170,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 *cf*<br/>
 추가할 클립보드 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새 링크 항목에 대 한 정보를 포함 하는 [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) 구조체입니다.
 
@@ -217,7 +217,7 @@ COlePasteSpecialDialog(
 *dwFlags*<br/>
 생성 플래그에는 비트 or 연산자를 사용 하 여 결합 된 다음 플래그의 개수가 포함 됩니다.
 
-- PSF_SELECTPASTE 대화 상자를 호출할 때 붙여넣기 라디오 단추가 처음에 선택 되도록 지정 합니다. PSF_SELECTPASTELINK와 함께 사용할 수 없습니다. 이 값이 기본값입니다.
+- PSF_SELECTPASTE 대화 상자를 호출할 때 붙여넣기 라디오 단추가 처음에 선택 되도록 지정 합니다. PSF_SELECTPASTELINK와 함께 사용할 수 없습니다. 이것이 기본값입니다.
 
 - PSF_SELECTPASTELINK 대화 상자를 호출할 때 링크 붙여넣기 라디오 단추가 처음에 선택 되도록 지정 합니다. PSF_SELECTPASTE와 함께 사용할 수 없습니다.
 
@@ -248,9 +248,9 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>매개 변수
 
 *pNewItem*<br/>
-`COleClientItem` 인스턴스를 가리킵니다. NULL일 수 없습니다.
+`COleClientItem` 인스턴스를 가리킵니다. NULL이 될 수 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항목이 성공적으로 만들어진 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -266,9 +266,9 @@ OLE 붙여넣기 옵션 대화 상자를 표시 합니다.
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-대화 상자의 완료 상태입니다. 다음 값 중 하나입니다.
+대화 상자의 완료 상태입니다. 해당 값은
 
 - 대화 상자가 성공적으로 표시 되 면 IDOK입니다.
 
@@ -290,7 +290,7 @@ virtual INT_PTR DoModal();
 DVASPECT GetDrawAspect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체를 렌더링 하는 데 필요한 메서드입니다.
 
@@ -312,7 +312,7 @@ DVASPECT GetDrawAspect() const;
 HGLOBAL GetIconicMetafile() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **확인**을 선택 하 여 대화 상자를 닫을 때 아이콘으로 표시 확인란이 선택 된 경우 선택한 항목의 아이콘 측면을 포함 하는 메타 파일의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -324,7 +324,7 @@ HGLOBAL GetIconicMetafile() const;
 int GetPasteIndex() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 선택한 `OLEUIPASTEENTRY` 구조의 배열로 이루어진 인덱스입니다. 선택한 인덱스에 해당 하는 형식은 붙여넣기 작업을 수행할 때 사용 해야 합니다.
 
@@ -340,7 +340,7 @@ int GetPasteIndex() const;
 UINT GetSelectionType() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 선택 된의 유형을 반환 합니다.
 

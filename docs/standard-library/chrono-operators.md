@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865204"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427208"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 연산자
 
@@ -46,12 +46,12 @@ constexpr typename common_type<Duration1, Duration2>::type
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
 *시간*\
-데이터 개체의 시각화를 지정하는 `time_point` 개체에 추가합니다.
+`time_point` 개체입니다.
 
 *기간*\
-데이터 개체의 시각화를 지정하는 `duration` 개체에 추가합니다.
+`duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 간격 길이가 두 인수의 시간 간격 간 차이인 `duration` 개체를 반환합니다.
 
@@ -83,7 +83,7 @@ constexpr bool operator!=(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각 함수는 `!(Left == Right)`를 반환합니다.
 
@@ -109,12 +109,12 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 ### <a name="parameters"></a>매개 변수
 
 *기간*\
-데이터 개체의 시각화를 지정하는 `duration` 개체에 추가합니다.
+`duration` 개체입니다.
 
 *Mult*\
 정수 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각 함수는 간격 길이가 *Mult* 인 `duration` 개체를 반환 *합니다.*
 
@@ -143,7 +143,7 @@ constexpr typename common_type<Rep1, Rep2>::type
 ### <a name="parameters"></a>매개 변수
 
 *기간*\
-데이터 개체의 시각화를 지정하는 `duration` 개체에 추가합니다.
+`duration` 개체입니다.
 
 *Div*\
 정수 값입니다.
@@ -154,7 +154,7 @@ constexpr typename common_type<Rep1, Rep2>::type
 *오른쪽*\
 오른쪽 `duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 연산자는 기간 개체를 반환 합니다 .이 개체는 간격 *길이가 기간을* 값 *Div*로 나눈 값입니다.
 
@@ -195,12 +195,12 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
 *시간*\
-데이터 개체의 시각화를 지정하는 `time_point` 개체에 추가합니다.
+`time_point` 개체입니다.
 
 *기간*\
-데이터 개체의 시각화를 지정하는 `duration` 개체에 추가합니다.
+`duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 *왼쪽* 및 *오른쪽*간격의 합계와 동일한 시간 간격을 가진 `duration` 개체를 반환 합니다.
 
@@ -230,7 +230,7 @@ constexpr bool operator<(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 *남은* 간격 길이가 *오른쪽*의 간격 길이 보다 작은 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
 
@@ -260,7 +260,7 @@ constexpr bool operator<=(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각 함수는 `!(Right < Left)`를 반환합니다.
 
@@ -288,7 +288,7 @@ constexpr bool operator==(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 *Left* 와 *Right* 가 길이가 같은 시간 간격을 나타내는 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
 
@@ -318,7 +318,7 @@ constexpr bool operator>(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각 함수는 `Right < Left`를 반환합니다.
 
@@ -346,7 +346,7 @@ constexpr bool operator>=(
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각 함수는 `!(Left < Right)`를 반환합니다.
 
@@ -371,7 +371,7 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 ### <a name="parameters"></a>매개 변수
 
 *기간*\
-데이터 개체의 시각화를 지정하는 `duration` 개체에 추가합니다.
+`duration` 개체입니다.
 
 *Div*\
 정수 값입니다.
@@ -382,7 +382,7 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 *오른쪽*\
 오른쪽 `duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 간격 길이가 *기간* 모듈로 *Div*인 `duration` 개체를 반환 합니다.
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855632"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426632"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 클래스
 
@@ -43,17 +43,17 @@ OLE 자동화의 클라이언트 쪽을 구현합니다.
 class COleDispatchDriver
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|`COleDispatchDriver` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|`COleDispatchDriver` 개체에 `IDispatch` 연결을 연결 합니다.|
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|`IDispatch` 연결을 만들어 `COleDispatchDriver` 개체에 연결 합니다.|
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: operator =](#operator_eq)|`COleDispatchDriver` 개체에 소스 값을 복사 합니다.|
 |[COleDispatchDriver:: operator LPDISPATCH](#operator_lpdispatch)|기본 `IDispatch` 포인터에 액세스 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|`ReleaseDispatch` 또는 개체 소멸 중에 `IDispatch`를 해제할 것인지 여부를 지정 합니다.|
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|이 `COleDispatchDriver`에 연결 된 `IDispatch` 인터페이스에 대 한 포인터를 나타냅니다.|
@@ -183,7 +183,7 @@ BOOL CreateDispatch(
 *lpszProgID*<br/>
 디스패치 개체를 만들려는 자동화 개체의 프로그래밍 ID(예: "Excel.Document.5")에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아닌 값이고, 실패하면 0입니다.
 
@@ -199,7 +199,7 @@ BOOL CreateDispatch(
 LPDISPATCH DetachDispatch();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전에 연결 된 OLE `IDispatch` 개체에 대 한 포인터입니다.
 
@@ -276,9 +276,9 @@ void AFX_CDECL InvokeHelper(
 
 *Pbparaminfo* 매개 변수는 메서드나 속성에 전달 되는 매개 변수의 형식을 지정 합니다. 인수의 변수 목록은 구문 선언에서 **...** 로 표시됩니다.
 
-*Vtret* 인수의 가능한 값은 varenum 열거형에서 가져옵니다. 다음과 같은 값을 사용할 수 있습니다.
+*Vtret* 인수의 가능한 값은 varenum 열거형에서 가져옵니다. 가능한 값은 다음과 같습니다.
 
-|Symbol|반환 형식|
+|기호|반환 형식|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|

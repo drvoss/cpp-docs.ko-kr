@@ -2,18 +2,18 @@
 title: /LARGEADDRESSAWARE
 ms.date: 11/04/2016
 f1_keywords:
-- /largeaddressaware
+- /largeaddressaware_editbin
 helpviewer_keywords:
 - -LARGEADDRESSAWARE editbin option
 - /LARGEADDRESSAWARE editbin option
 - LARGEADDRESSAWARE editbin option
 ms.assetid: 5db58df3-4457-4808-adf7-2bee6ea97486
-ms.openlocfilehash: 1a96d8f5c0f0f0e8a011dffda1549760bcc5f0fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1a4c27830850cb74f705bfb9663303f465632bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269371"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439464"
 ---
 # <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
 
@@ -23,8 +23,8 @@ ms.locfileid: "62269371"
 
 ## <a name="remarks"></a>설명
 
-이 옵션은 이미지를 편집 응용 프로그램에서 2gb 보다 큰 주소 처리할 수 있습니다.
+이 옵션은 응용 프로그램에서 2gb 보다 큰 주소를 처리할 수 있음을 나타내기 위해 이미지를 편집 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [EDITBIN 옵션](editbin-options.md)

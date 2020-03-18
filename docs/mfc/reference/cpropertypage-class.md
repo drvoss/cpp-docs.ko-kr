@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
 ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865433"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426440"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 클래스
 
@@ -57,17 +57,17 @@ ms.locfileid: "78865433"
 class CPropertyPage : public CDialog
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPropertyPage:: CPropertyPage](#cpropertypage)|`CPropertyPage` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPropertyPage:: CancelToClose](#canceltoclose)|모달 속성 시트의 페이지에서 복구할 수 없는 변경 후 취소 단추를 사용 하지 않도록 설정 하 여 확인 단추를 변경 합니다.|
 |[CPropertyPage:: 생성자](#construct)|`CPropertyPage` 개체를 생성합니다. 런타임에 매개 변수를 지정 하려는 경우 또는 배열을 사용 하는 경우 `Construct`를 사용 합니다.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CPropertyPage:: m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) 구조체입니다. 기본 속성 페이지 매개 변수에 대 한 액세스를 제공 합니다.|
 
@@ -235,7 +235,7 @@ CPropertyPage(
 이 페이지의 탭에 배치할 이름의 ID입니다. 0 인 경우이 페이지에 대 한 대화 상자 템플릿에서 이름을 가져옵니다.
 
 *dwSize*<br/>
-*lpszTemplateName* 이 페이지의 템플릿 이름을 포함 하는 문자열을 가리킵니다. NULL일 수 없습니다.
+*lpszTemplateName* 이 페이지의 템플릿 이름을 포함 하는 문자열을 가리킵니다. NULL이 될 수 없습니다.
 
 *nIDHeaderTitle*<br/>
 속성 페이지 머리글의 제목 위치에 배치할 이름의 ID입니다.
@@ -269,7 +269,7 @@ const PROPSHEETPAGE& GetPSP() const;
 PROPSHEETPAGE& GetPSP();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `PROPSHEETPAGE` 구조체에 대 한 참조입니다.
 
@@ -299,7 +299,7 @@ PROPSHEETPAGE m_psp;
 virtual BOOL OnApply();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변경 내용이 수락 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -341,7 +341,7 @@ virtual void OnCancel();
 virtual BOOL OnKillActive();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 데이터가 성공적으로 업데이트 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -385,7 +385,7 @@ virtual void OnOK();
 virtual BOOL OnQueryCancel();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 취소 작업을 방지 하려면 FALSE를 반환 하 고, 허용 하려면 TRUE를 반환 합니다.
 
@@ -427,7 +427,7 @@ virtual void OnReset();
 virtual BOOL OnSetActive();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 페이지가 활성 상태로 설정 되 면 0이 아닌 값으로 설정 됩니다. 그렇지 않으면 0입니다.
 
@@ -449,7 +449,7 @@ virtual BOOL OnSetActive();
 virtual LRESULT OnWizardBack();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0은 자동으로 다음 페이지로 이동 합니다. -1은 페이지가 변경 되지 않도록 합니다. 다음 페이지로 이동 하려면 표시 되는 대화 상자의 식별자를 반환 합니다.
 
@@ -471,7 +471,7 @@ virtual LRESULT OnWizardBack();
 virtual BOOL OnWizardFinish();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 마법사가 완료 될 때 속성 시트가 제거 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -503,7 +503,7 @@ virtual BOOL OnWizardFinish();
 virtual LRESULT OnWizardNext();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0은 자동으로 다음 페이지로 이동 합니다. -1은 페이지가 변경 되지 않도록 합니다. 다음 페이지로 이동 하려면 표시 되는 대화 상자의 식별자를 반환 합니다.
 
@@ -535,7 +535,7 @@ LRESULT QuerySiblings(
 *lParam*<br/>
 추가 메시지 종속 정보를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 속성 시트의 페이지에서 0이 아닌 값을 반환 하거나, 모든 페이지가 값 0을 반환 하는 경우 0을 반환 합니다.
 

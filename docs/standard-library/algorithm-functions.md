@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854868"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427370"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 함수
 
@@ -3333,7 +3333,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>설명
 
-`swap`은 이전 버전과의 호환성을위해 C++ 표준에 포함 된 iter_swap에 사용 해야 합니다. `Fit1` 및 `Fit2` 전방 반복기 인 경우 `iter_swap( Fit1, Fit2 )`는 `swap( *Fit1, *Fit2 )`와 동일 합니다.
+`swap`은 이전 버전과의 호환성을 **iter_swap**위해 C++ 표준에 포함 된 iter_swap에 사용 해야 합니다. `Fit1` 및 `Fit2` 전방 반복기 인 경우 `iter_swap( Fit1, Fit2 )`는 `swap( *Fit1, *Fit2 )`와 동일 합니다.
 
 입력 정방향 반복기의 값 형식은 동일한 값을 가져야 합니다.
 

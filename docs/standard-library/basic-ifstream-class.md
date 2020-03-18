@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865870"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427238"
 ---
 # <a name="basic_ifstream-class"></a>basic_ifstream 클래스
 
@@ -85,23 +85,23 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|`basic_ifstream` 개체의 새 인스턴스를 초기화합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[close](#close)|파일을 닫습니다.|
 |[is_open](#is_open)|파일이 열려 있는지 확인합니다.|
-|[open](#open)|파일을 엽니다.|
+|[열기](#open)|파일을 엽니다.|
 |[rdbuf](#rdbuf)|저장된 스트림 버퍼 주소를 반환합니다.|
 |[swap](#swap)|이 `basic_ifstream`의 콘텐츠를 제공된 `basic_ifstream`의 콘텐츠로 교환합니다.|
 
 ### <a name="operators"></a>연산자
 
-|Operator|설명|
+|연산자|Description|
 |-|-|
 |[operator=](#op_eq)|이 스트림 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 `rvalue`와 관련된 이동 할당입니다.|
 
@@ -199,7 +199,7 @@ void close();
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일이 열린 경우 **true**, 아닌 경우 **false**입니다.
 
@@ -267,7 +267,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 *오른쪽*\
 `basic_ifstream` 개체에 대한 rvalue 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `*this`를 반환합니다.
 
@@ -283,7 +283,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 저장된 스트림 버퍼를 나타내는 [basic_filebuf](../standard-library/basic-filebuf-class.md) 개체에 대한 포인터입니다.
 

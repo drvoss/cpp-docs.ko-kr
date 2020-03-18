@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854192"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424256"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 구조체
 
@@ -28,11 +28,11 @@ ms.locfileid: "78854192"
 struct IThreadProxy;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[IThreadProxy:: GetId](#getid)|스레드 프록시에 대 한 고유 식별자를 반환 합니다.|
 |[IThreadProxy:: SwitchOut](#switchout)|내부 가상 프로세서 루트에서 컨텍스트의 연결을 끊습니다.|
@@ -61,7 +61,7 @@ struct IThreadProxy;
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 고유한 정수 식별자입니다.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856802"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425702"
 ---
 # <a name="mfc-library-versions"></a>MFC 라이브러리 버전
 
@@ -97,7 +97,7 @@ MFC에 대 한 정적 라이브러리는 다음 명명 규칙을 사용 합니�
 
 다음 표에 나열 된 모든 라이브러리는 지원 되는 빌드 아키텍처에 대 한 \atlmfc\lib 디렉터리에 미리 구성 되어 있습니다.
 
-|라이브러리|설명|
+|라이브러리|Description|
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 정적 링크 라이브러리, 릴리스 버전|
 |NAFXCWD.LIB|MFC 정적 링크 라이브러리, 디버그 버전|
@@ -114,7 +114,7 @@ MFC 공유 Dll도 구조화 된 명명 규칙을 따릅니다. 이렇게 하면 
 
 MFC Dll에는 이진 호환성을 나타내는 *버전* 번호가 있습니다. 다른 라이브러리와 동일한 버전의 MFC Dll 및 컴파일러 도구 집합을 사용 하 여 프로젝트 내에서 호환성을 보장 합니다.
 
-|DLL|설명|
+|DLL|Description|
 |---------|-----------------|
 |MFC*버전* GDIPLUS.DLL|MFC DLL, ANSI 또는 MBCS 릴리스 버전|
 |MFC*버전*.dll|MFC DLL, 유니코드 릴리스 버전|

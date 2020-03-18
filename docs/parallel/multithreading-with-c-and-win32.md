@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: 1764561e0b2b43b8a89d8a1eb2e85d84ce33c4fc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867055"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427358"
 ---
 # <a name="multithreading-with-c-and-win32"></a>C 및 Wind32를 사용한 다중 스레딩
 

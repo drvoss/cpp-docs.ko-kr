@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876033"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425354"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 클래스
 
@@ -125,7 +125,7 @@ template <class Type>
 |[max_digits10](#max_digits10)|형식의 두 고유 값에 고유 10진수 표현이 있는지 확인하는 데 필요한 10진수 자릿수를 반환합니다.|
 |[max_exponent](#max_exponent)|밑수 기수에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 양의 정수 지수를 반환합니다.|
 |[max_exponent10](#max_exponent10)|밑수 10에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 양의 정수 지수를 반환합니다.|
-|[분](#min)|형식에 대한 정규화된 최소값을 반환합니다.|
+|[min](#min)|형식에 대한 정규화된 최소값을 반환합니다.|
 |[min_exponent](#min_exponent)|밑수 기수에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 음의 정수 지수를 반환합니다.|
 |[min_exponent10](#min_exponent10)|밑수 10에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 음의 정수 지수를 반환합니다.|
 |[quiet_NaN](#quiet_nan)|형식에 대한 자동 NAN(숫자가 아님) 표현을 반환합니다.|
@@ -144,7 +144,7 @@ template <class Type>
 static constexpr Type denorm_min() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 0이 아닌 가장 작은 비정규화된 값입니다.
 
@@ -203,7 +203,7 @@ for long double objects is: 4.94066e-324
 static constexpr int digits = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 정밀도의 손실 없이 형식이 나타낼 수 있는 기수 자릿수입니다.
 
@@ -247,7 +247,7 @@ int main( )
 static constexpr int digits10 = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 정밀도의 손실 없이 형식이 나타낼 수 있는 10진수 자릿수입니다.
 
@@ -291,7 +291,7 @@ The float is; 100000000
 static constexpr Type epsilon() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 1과 데이터 형식에 대해 나타낼 수 있는 1보다 큰 가장 작은 값 사이의 차이입니다.
 
@@ -343,7 +343,7 @@ for long double objects is: 2.22045e-016
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식이 비정규화된 값을 허용하는지를 나타내는 **const**`float_denorm_style` 형식의 열거형 값입니다.
 
@@ -389,7 +389,7 @@ Whether long int objects allow denormalized values: 0
 static constexpr bool has_denorm_loss = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 정밀도 손실이 비정규화 손실로 검색되면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -435,7 +435,7 @@ Whether long int objects can detect denormalized loss: 0
 static constexpr bool has_infinity = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 양의 무한대 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -481,7 +481,7 @@ Whether long int objects have infinity: 0
 static constexpr bool has_quiet_NaN = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 **형식**에 자동 NAN의 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -527,7 +527,7 @@ Whether long int objects have quiet_NaN: 0
 static constexpr bool has_signaling_NaN = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 신호를 보내는 NAN 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -573,7 +573,7 @@ Whether long int objects have a signaling_NaN: 0
 static constexpr Type infinity() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식의 양의 무한대 표현(사용 가능한 경우)입니다.
 
@@ -627,7 +627,7 @@ The representation of infinity for type long double is: inf
 static constexpr bool is_bounded = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 경계가 지정된 나타낼 수 있는 값 집합이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -681,7 +681,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 static constexpr bool is_exact = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 계산에 반올림 오류가 없으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -735,7 +735,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 static constexpr bool is_iec559 = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식이 IEC 559 표준을 준수하면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -785,7 +785,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 static constexpr bool is_integer = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 정수 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -835,7 +835,7 @@ Whether unsigned char objects have an integral representation: 1
 static constexpr bool is_modulo = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 모듈로 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -885,7 +885,7 @@ Whether unsigned char objects have a modulo representation: 1
 static constexpr bool is_signed = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 부호 있는 표현이 있으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -935,7 +935,7 @@ Whether unsigned char objects have a signed representation: 0
 static constexpr bool is_specialized = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 클래스 템플릿에 정의 된 명시적 특수화가 있으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false** 입니다.
 
@@ -989,7 +989,7 @@ Whether int* objects have an explicit specialization in the class: 0
 static constexpr Type lowest() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 최대한의 음의 무한대 값을 반환합니다.
 
@@ -1005,7 +1005,7 @@ static constexpr Type lowest() throw();
 static constexpr Type max() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대한 유한 최대값입니다.
 
@@ -1047,7 +1047,7 @@ int main() {
 static constexpr int max_digits10 = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식의 두 고유 값에 고유 10진수 표현이 있는지 확인하는 데 필요한 10진수 자릿수를 반환합니다.
 
@@ -1063,7 +1063,7 @@ static constexpr int max_digits10 = 0;
 static constexpr int max_exponent = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식으로 표현할 수 있는 최대 정수 계열 기수 기반 지수입니다.
 
@@ -1109,7 +1109,7 @@ The maximum radix-based exponent for type long double is:  1024
 static constexpr int max_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식으로 표현할 수 있는 최대 정수 계열 상용 지수입니다.
 
@@ -1155,7 +1155,7 @@ The maximum base 10 exponent for type long double is:  308
 static constexpr Type min() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대한 정규화된 최소값입니다.
 
@@ -1205,7 +1205,7 @@ The minimum value for type short int is:  -32768
 static constexpr int min_exponent = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식으로 표현할 수 있는 최소 정수 계열 기수 기반 지수입니다.
 
@@ -1251,7 +1251,7 @@ The minimum radix-based exponent for type long double is:  -1021
 static constexpr int min_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식으로 표현할 수 있는 최소 정수 계열 상용 지수입니다.
 
@@ -1297,7 +1297,7 @@ The minimum base 10 exponent for type long double is:  -307
 static constexpr Type quiet_NaN() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대한 자동 NAN 표현입니다.
 
@@ -1343,7 +1343,7 @@ The quiet NaN for type long double is:  1.#QNAN
 static constexpr int radix = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식의 표현에 대한 정수 계열 밑수입니다.
 
@@ -1389,7 +1389,7 @@ The base for type long double is:  2
 static constexpr Type round_error() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대한 최대 반올림 오차입니다.
 
@@ -1431,7 +1431,7 @@ The maximum rounding error for type long double is:  0.5
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 반올림 스타일을 설명하는 `float_round_style` 열거형의 값입니다.
 
@@ -1478,7 +1478,7 @@ The rounding style for an int type is: 0
 static constexpr Type signaling_NaN() throw();
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대한 신호 NAN의 표현입니다.
 
@@ -1518,7 +1518,7 @@ int main( )
 static constexpr bool tinyness_before = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 반올림 하기 전에 형식이 작은 값을 검색할 수 있으면 **true** 입니다. 그렇지 않으면 **false** 입니다.
 
@@ -1568,7 +1568,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 static constexpr bool traps = false;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 형식에 대해 트래핑이 구현되면 **true**이고 그렇지 않으면 **false**입니다.
 

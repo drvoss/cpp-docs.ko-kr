@@ -1,27 +1,25 @@
 ---
 title: NAME (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- name
 helpviewer_keywords:
 - NAME directive
 ms.assetid: 7a7ab431-6ffe-4293-9b76-4a5e020c66da
-ms.openlocfilehash: be73811125df8467e555656459bdb7941557ce34
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 2bcfdd6500f5b6c09b6eabb3b2643e3dadbf5ad7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316748"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440702"
 ---
-# <a name="name"></a>이름
+# <a name="name"></a>NAME
 
-무시.
+무시됩니다.
 
 ## <a name="syntax"></a>구문
 
-> **Name**
+> **이름**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [지시문 참조](directives-reference.md)\
 [MASM BNF 문법](masm-bnf-grammar.md)

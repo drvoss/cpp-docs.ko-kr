@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,12 +452,12 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180149"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446285"
 ---
 # <a name="reference-concurrency-runtime"></a>참조(동시성 런타임)
 
@@ -474,4 +473,4 @@ ms.locfileid: "62180149"
 
 [std 네임 스페이스](std-namespace.md)
 
-[stdx namespace](stdx-namespace.md)
+[stdx 네임 스페이스](stdx-namespace.md)

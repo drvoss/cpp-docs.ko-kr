@@ -53,11 +53,11 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867016"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426494"
 ---
 # <a name="coledocument-class"></a>COleDocument 클래스
 
@@ -69,17 +69,17 @@ ms.locfileid: "78867016"
 class COleDocument : public CDocument
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|`COleDocument` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|문서에서 유지 관리 하는 항목 목록에 항목을 추가 합니다.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|문서의 모든 클라이언트 항목에 대 한 인쇄 대상 장치를 설정 합니다.|
@@ -95,9 +95,9 @@ class COleDocument : public CDocument
 |[COleDocument::RemoveItem](#removeitem)|문서에 의해 유지 관리 되는 항목 목록에서 항목을 제거 합니다.|
 |[COleDocument::UpdateModifiedFlag](#updatemodifiedflag)|포함 된 OLE 항목이 수정 된 경우 문서를 수정 된 것으로 표시 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|아이콘 변경 메뉴 명령에서 이벤트를 처리 합니다.|
 |[COleDocument::OnEditConvert](#oneditconvert)|포함 된 개체 또는 연결 된 개체를 한 형식에서 다른 형식으로 변환 하는 과정을 처리 합니다.|
@@ -169,7 +169,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ppd*<br/>
 새 인쇄 대상 장치에 대 한 정보를 포함 하는 `PRINTDLG` 데이터 구조에 대 한 포인터입니다. NULL일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -225,7 +225,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 *pWnd*<br/>
 컨테이너 문서를 표시 하는 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단일 내부 활성 OLE 항목에 대 한 포인터입니다. 현재 "내부 활성" 상태인 OLE 항목이 없으면 NULL입니다.
 
@@ -242,7 +242,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 *pos*<br/>
 `GetNextClientItem`에 대 한 이전 호출로 설정 된 위치 값에 대 한 참조입니다. 초기 값은 `GetStartPosition` 멤버 함수에 의해 반환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문서의 다음 클라이언트 항목에 대 한 포인터 이거나, 더 이상 클라이언트 항목이 없으면 NULL입니다.
 
@@ -267,7 +267,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 *pos*<br/>
 `GetNextItem`에 대 한 이전 호출로 설정 된 위치 값에 대 한 참조입니다. 초기 값은 `GetStartPosition` 멤버 함수에 의해 반환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 위치에 있는 문서 항목에 대 한 포인터입니다.
 
@@ -292,7 +292,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 *pos*<br/>
 `GetNextServerItem`에 대 한 이전 호출로 설정 된 위치 값에 대 한 참조입니다. 초기 값은 `GetStartPosition` 멤버 함수에 의해 반환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문서의 다음 서버 항목에 대 한 포인터 이거나, 더 이상 서버 항목이 없으면 NULL입니다.
 
@@ -317,7 +317,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 *pView*<br/>
 문서를 표시 하는 활성 뷰 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 선택한 단일 OLE 항목에 대 한 포인터입니다. 선택 된 OLE 항목이 없거나 둘 이상의를 선택한 경우 NULL입니다.
 
@@ -333,7 +333,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 virtual POSITION GetStartPosition() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문서 항목의 반복을 시작 하는 데 사용할 수 있는 위치 값입니다. 문서에 항목이 없으면 NULL입니다.
 
@@ -349,7 +349,7 @@ virtual POSITION GetStartPosition() const;
 BOOL HasBlankItems() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문서에 빈 항목이 포함 되어 있으면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 

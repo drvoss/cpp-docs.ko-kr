@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866705"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424298"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 클래스
 
@@ -180,7 +180,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |속성|Description|
 |----------|-----------------|
 |[CMDIFrameWndEx:: ActiveItemRecalcLayout](#activeitemrecalclayout)|활성 항목의 레이아웃을 다시 계산 합니다.|
-|`CMDIFrameWndEx::AddDockSite`|이 메서드는 사용 되지 않습니다.|
+|`CMDIFrameWndEx::AddDockSite`|이 메서드가 사용되지 않습니다.|
 |[CMDIFrameWndEx:: AddPane](#addpane)|도킹 관리자를 사용 하 여 창을 등록 합니다.|
 |[CMDIFrameWndEx:: AdjustClientArea](#adjustclientarea)|테두리를 허용 하도록 클라이언트 영역을 줄입니다.|
 |[CMDIFrameWndEx:: AdjustDockingLayout](#adjustdockinglayout)|도킹 된 모든 창의 레이아웃을 다시 계산 합니다.|

@@ -52,11 +52,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865715"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423653"
 ---
 # <a name="comptr-class"></a>ComPtr 클래스
 
@@ -86,24 +86,24 @@ friend class ComPtr;
 
 스마트 포인터에 대 한 자세한 내용은 MSDN Library에서 [Com 코딩 방법](/windows/win32/LearnWin32/com-coding-practices) 항목의 "Com 스마트 포인터" 하위 섹션을 참조 하십시오.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-name            | 설명
+속성            | Description
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T* 템플릿 매개 변수로 지정 된 형식의 동의어입니다.
 
 ### <a name="public-constructors"></a>Public 생성자
 
-name                             | 설명
+속성                             | Description
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr:: ComPtr](#comptr)        | `ComPtr` 클래스의 새 인스턴스를 초기화합니다. 오버로드는 기본, 복사, 이동 및 변환 생성자를 제공합니다.
 [ComPtr:: ~ ComPtr](#tilde-comptr) | `ComPtr`의 인스턴스를 초기화 하지 않습니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-name                                                      | 설명
+속성                                                      | Description
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtr:: As](#as)                                         | 지정 된 템플릿 매개 변수로 식별 되는 인터페이스를 나타내는 `ComPtr` 개체를 반환 합니다.
 [ComPtr:: AsIID](#asiid)                                   | 지정 된 인터페이스 ID로 식별 되는 인터페이스를 나타내는 `ComPtr` 개체를 반환 합니다.
@@ -117,16 +117,16 @@ name                                                      | 설명
 [ComPtr::Reset](#reset)                                   | 이 `ComPtr`와 연결 된 인터페이스에 대 한 포인터의 모든 참조를 해제 합니다.
 [ComPtr:: Swap](#swap)                                     | 현재 `ComPtr`에서 관리 하는 인터페이스를 지정 된 `ComPtr`에서 관리 하는 인터페이스와 교환 합니다.
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-name                                        | 설명
+속성                                        | Description
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr:: InternalAddRef](#internaladdref)   | 이 `ComPtr`와 연결 된 인터페이스의 참조 횟수를 늘립니다.
 [ComPtr:: InternalRelease](#internalrelease) | 이 `ComPtr`와 연결 된 인터페이스에서 COM 해제 작업을 수행 합니다.
 
 ### <a name="public-operators"></a>Public 연산자
 
-name                                                                                           | 설명
+속성                                                                                           | Description
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr:: operator &](#operator-ampersand)                                                       | 현재 `ComPtr`의 주소를 검색 합니다.
 [ComPtr:: operator->](#operator-arrow)                                                          | 현재 템플릿 매개 변수에 지정된 형식에 대한 포인터를 검색합니다.
@@ -137,7 +137,7 @@ name                                                                            
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-name                 | 설명
+속성                 | Description
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::p tr_](#ptr) | 이 `ComPtr`와 연결 되 고 관리 되는 인터페이스에 대 한 포인터를 포함 합니다.
 
@@ -187,7 +187,7 @@ HRESULT As(
 
 첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿은 [자동](../../cpp/auto-cpp.md) 형식 추론 키워드와 같은 C++ 언어 기능을 지원하는 내부 도우미 특수화입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -210,7 +210,7 @@ WRL_NOTHROW HRESULT AsIID(
 *p*<br/>
 개체에 ID가 *riid*인 인터페이스가 있는 경우에는 *riid* 매개 변수로 지정 된 인터페이스에 대 한 이중 간접 포인터입니다. 그렇지 않으면 `IUnknown`에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -229,7 +229,7 @@ HRESULT AsWeak(
 *pWeakRef*<br/>
 이 작업이 완료 되 면 약한 참조 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -292,7 +292,7 @@ WRL_NOTHROW ComPtr(
 *other*<br/>
 *U*형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -335,7 +335,7 @@ HRESULT CopyTo(
 *riid*<br/>
 인터페이스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 S_OK 합니다. 그렇지 않으면 암시적 `QueryInterface` 작업이 실패 한 이유를 나타내는 HRESULT입니다.
 
@@ -355,7 +355,7 @@ HRESULT CopyTo(
 T* Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `ComPtr` 개체가 나타내는 인터페이스에 대 한 포인터입니다.
 
@@ -367,7 +367,7 @@ T* Detach();
 T* Get() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `ComPtr`와 연결 된 인터페이스에 대 한 포인터입니다.
 
@@ -380,7 +380,7 @@ T* const* GetAddressOf() const;
 T** GetAddressOf();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변수의 주소입니다.
 
@@ -418,7 +418,7 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 `ComPtr`에 대 한 약한 참조입니다.
 
@@ -434,7 +434,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 템플릿 형식 이름으로 지정 된 형식에 대 한 포인터입니다.
 
@@ -481,7 +481,7 @@ WRL_NOTHROW ComPtr& operator=(
 *other*<br/>
 형식 또는 다른 `ComPtr`에 대 한 포인터, 참조 또는 rvalue 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 `ComPtr`에 대 한 참조입니다.
 
@@ -530,7 +530,7 @@ bool operator==(
 *b*<br/>
 다른 `ComPtr` 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 연산자는 개체 *a* 가 개체 *b*와 같은 경우 `true`를 생성 합니다. 그렇지 않으면 `false`합니다.
 
@@ -565,7 +565,7 @@ bool operator!=(
 *b*<br/>
 다른 `ComPtr` 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 연산자는 개체 *a* 가 개체 *b*와 같지 않은 경우 `true`를 생성 합니다. 그렇지 않으면 `false`합니다.
 
@@ -579,7 +579,7 @@ bool operator!=(
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인터페이스가이 `ComPtr`와 연결 된 경우 [BoolStruct:: Member](boolstruct-structure.md#member) 데이터 멤버의 주소를 사용 합니다. 그렇지 않으면 `nullptr`합니다.
 
@@ -603,7 +603,7 @@ InterfaceType *ptr_;
 T** ReleaseAndGetAddressOf();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `ComPtr`의 [ptr_](#ptr) 데이터 멤버 주소입니다.
 
@@ -615,7 +615,7 @@ T** ReleaseAndGetAddressOf();
 unsigned long Reset();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해제된 참조 수입니다(있는 경우).
 
@@ -636,5 +636,5 @@ void Swap(
 ### <a name="parameters"></a>매개 변수
 
 *r*<br/>
-`ComPtr`
+`ComPtr`입니다.
 

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 ms.openlocfilehash: 68a0a0f35d1a1f4519401080f9f207bf76c87079
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890792"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424334"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 클래스
 
@@ -49,17 +49,17 @@ ms.locfileid: "78890792"
 class CInternetFile : public CStdioFile
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CInternetFile::CInternetFile](#cinternetfile)|`CInternetFile` 개체를 생성합니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CInternetFile::Abort](#abort)|모든 경고 및 오류를 무시 하 고 파일을 닫습니다.|
 |[CInternetFile::Close](#close)|`CInternetFile`를 닫고 해당 리소스를 해제 합니다.|
@@ -75,17 +75,17 @@ class CInternetFile : public CStdioFile
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CInternetFile:: operator HINTERNET](#operator_hinternet)|인터넷 핸들의 캐스팅 연산자입니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CInternetFile::m_hFile](#m_hfile)|파일에 대 한 핸들입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [CHttpFile](../../mfc/reference/chttpfile-class.md) 및 [CGopherFile](../../mfc/reference/cgopherfile-class.md) 파일 클래스에 대 한 기본 클래스를 제공 합니다. `CInternetFile` 개체를 직접 만들지는 않습니다. 대신 [CGopherConnection:: system.windows.forms.openfiledialog.openfile](../../mfc/reference/cgopherconnection-class.md#openfile) 또는 [CHttpConnection:: openrequest](../../mfc/reference/chttpconnection-class.md#openrequest)를 호출 하 여 파생 클래스 중 하나의 개체를 만듭니다. [Csystem.windows.forms.openfiledialog.openfile connection::](../../mfc/reference/cftpconnection-class.md#openfile)를 호출 하 여 개체 `CInternetFile`를 만들 수도 있습니다.
 
@@ -115,7 +115,7 @@ class CInternetFile : public CStdioFile
 virtual void Abort();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 개체를 삭제 하기 전에 파일을 닫지 않은 경우 소멸자가 파일을 닫습니다.
 
@@ -164,7 +164,7 @@ CInternetFile(
 *dwContext*<br/>
 `CInternetFile` 개체에 대 한 컨텍스트 식별자입니다. 컨텍스트 식별자에 대 한 자세한 내용은 [WinInet 기본 사항](../../mfc/wininet-basics.md) 을 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CInternetFile` 개체를 직접 만들지는 않습니다. 대신 [CGopherConnection:: system.windows.forms.openfiledialog.openfile](../../mfc/reference/cgopherconnection-class.md#openfile) 또는 [CHttpConnection:: openrequest](../../mfc/reference/chttpconnection-class.md#openrequest)를 호출 하 여 파생 클래스 중 하나의 개체를 만듭니다. [Csystem.windows.forms.openfiledialog.openfile connection::](../../mfc/reference/cftpconnection-class.md#openfile)를 호출 하 여 개체 `CInternetFile`를 만들 수도 있습니다.
 
@@ -176,7 +176,7 @@ CInternetFile(
 virtual void Close();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 파일이 쓰기용으로 열려 있는 [경우에는](#flush) 모든 버퍼링 된 데이터를 호스트에 쓰도록 암시적 호출이 발생 합니다. 파일 사용을 마치면 `Close`를 호출 해야 합니다.
 
@@ -188,7 +188,7 @@ virtual void Close();
 virtual void Flush();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `Flush`를 사용 하 여 메모리의 모든 데이터가 실제로 대상 컴퓨터에 기록 되었는지와 호스트 컴퓨터에 대 한 트랜잭션이 완료 되었는지를 보장 합니다. `Flush`는 쓰기용으로 열린 `CInternetFile` 개체에만 적용 됩니다.
 
@@ -234,11 +234,11 @@ virtual UINT Read(
 *nCount*<br/>
 쓸 바이트 수 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 버퍼로 전송된 바이트 수입니다. 파일의 끝에 도달 하는 경우 반환 값은 *Ncount* 보다 적을 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 함수는 실제로 읽은 바이트 수를 반환 합니다 .이 수는 파일이 종료 되는 경우 *Ncount* 보다 적을 수 있습니다. 파일을 읽는 동안 오류가 발생 하는 경우 함수는 오류를 설명 하는 [Cinternetexception](../../mfc/reference/cinternetexception-class.md) 개체를 throw 합니다. 파일의 끝을 지나서 읽는 것은 오류로 간주되지 않으며 예외가 throw되지 않습니다.
 
@@ -267,13 +267,13 @@ virtual LPTSTR ReadString(
 *rString*<br/>
 읽기 줄을 받는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Cinternetfile](../../mfc/reference/cinternetfile-class.md) 개체에서 검색 된 일반 데이터를 포함 하는 버퍼에 대 한 포인터입니다. 이 메서드에 전달 된 버퍼의 데이터 형식에 관계 없이, 데이터에 대 한 조작을 수행 하지 않습니다 (예: 유니코드로의 변환). 따라서 **void** <strong>\*</strong> 형식이 반환 된 것 처럼 반환 된 데이터를 필요한 구조에 매핑해야 합니다.
 
 데이터를 읽지 않고 파일의 끝에 도달한 경우 NULL입니다. 또는 부울 인 경우 데이터를 읽지 않고 파일의 끝에 도달한 경우 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 함수는 *pstr* 매개 변수에서 참조 하는 메모리에 결과 줄을 배치 합니다. *N 일별 최대*로 지정 된 최대 문자 수에 도달 하면 문자 읽기를 중지 합니다. 버퍼는 항상 종료 null 문자를 받습니다.
 
@@ -303,11 +303,11 @@ virtual ULONGLONG Seek(
 
 - 파일의 끝에서 *lOff* 바이트 파일 포인터를 이동 `CFile::end` 합니다. 기존 파일을 검색 하려면 *lOff* 가 음수 여야 합니다. 양수 값은 파일의 끝을 지 나 검색 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요청 된 위치가 유효한 경우 파일의 시작 부분부터의 새 바이트 오프셋입니다. 그렇지 않으면 값이 정의 되지 않으며 [Cinternetexception](../../mfc/reference/cinternetexception-class.md) 개체가 throw 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `Seek` 함수는 포인터를 지정 된 양 (절대적 또는 상대적)으로 이동 하 여 파일 내용에 대 한 임의 액세스를 허용 합니다. 검색 하는 동안 실제로 데이터를 읽을 수 없습니다.
 
@@ -335,11 +335,11 @@ BOOL SetReadBufferSize(UINT nReadSize);
 *nReadSize*<br/>
 원하는 버퍼 크기(바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다. 호출에 실패 하면 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) 를 호출 하 여 오류의 원인을 확인할 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 WinInet Api는 버퍼링을 수행 하지 않으므로 읽을 데이터 양에 관계 없이 응용 프로그램이 데이터를 효율적으로 읽을 수 있도록 하는 버퍼 크기를 선택 합니다. 각 [읽기](#read) 에 대 한 각 호출에 일반적으로 많은 양의 데이터가 포함 된 경우 (예: 4kb 이상)에는 버퍼가 필요 하지 않습니다 aount. 그러나 `Read`를 호출 하 여 작은 데이터 청크를 가져오거나 [ReadString](#readstring) 를 사용 하 여 한 번에 개별 줄을 읽는 경우 읽기 버퍼를 사용 하면 응용 프로그램 성능이 향상 됩니다.
 
@@ -360,11 +360,11 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
 *nWriteSize*<br/>
 버퍼의 크기(바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다. 호출에 실패 하면 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) 를 호출 하 여 오류의 원인을 확인할 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 WinInet Api는 버퍼링을 수행 하지 않으므로 쓸 데이터 양에 관계 없이 응용 프로그램에서 데이터를 효율적으로 쓸 수 있는 버퍼 크기를 선택 합니다. [쓰기](#write) 에 대 한 각 호출에 일반적으로 많은 양의 데이터가 포함 된 경우 (예: 한 번에 4 개 이상) 버퍼가 필요 하지 않습니다. 그러나 [write](#write) 를 호출 하 여 작은 데이터 청크를 쓰는 경우 쓰기 버퍼를 통해 응용 프로그램의 성능이 향상 됩니다.
 
@@ -388,7 +388,7 @@ virtual void Write(
 *nCount*<br/>
 쓸 바이트 수를 지정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 데이터를 쓰는 동안 오류가 발생 하는 경우 함수는 오류를 설명 하는 [Cinternetexception](../../mfc/reference/cinternetexception-class.md) 개체를 throw 합니다.
 
@@ -405,7 +405,7 @@ virtual void WriteString(LPCTSTR pstr);
 *pstr*<br/>
 쓸 콘텐츠를 포함 하는 문자열에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 데이터를 쓰는 동안 오류가 발생 하는 경우 함수는 오류를 설명 하는 [Cinternetexception](../../mfc/reference/cinternetexception-class.md) 개체를 throw 합니다.
 

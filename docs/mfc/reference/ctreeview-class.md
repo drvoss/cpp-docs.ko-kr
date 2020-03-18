@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883995"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426776"
 ---
 # <a name="ctreeview-class"></a>CTreeView 클래스
 
@@ -27,17 +27,17 @@ MFC의 문서 뷰 아키텍처를 사용 하 여 트리 컨트롤 및 트리 컨
 class CTreeView : public CCtrlView
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CTreeView:: CTreeView](#ctreeview)|`CTreeView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CTreeView:: GetTreeCtrl](#gettreectrl)|뷰와 연결 된 트리 컨트롤을 반환 합니다.|
 

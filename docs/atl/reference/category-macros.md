@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864448"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423497"
 ---
 # <a name="category-macros"></a>범주 매크로
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>선택 된 스톡 범주
 
-|설명|Symbol|레지스트리 GUID|
+|Description|기호|레지스트리 GUID|
 |-----------------|------------|-------------------|
 |스크립팅에 안전|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |초기화 안전|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>선택 된 스톡 범주
 
-|설명|Symbol|레지스트리 GUID|
+|Description|기호|레지스트리 GUID|
 |-----------------|------------|-------------------|
 |스크립팅에 안전|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |초기화 안전|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

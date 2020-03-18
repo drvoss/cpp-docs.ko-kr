@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 ms.openlocfilehash: f5d655aa7fd2eb9e41c15c60a71492c24ba43c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883904"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424364"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 클래스
 
@@ -34,17 +34,17 @@ Gopher 인터넷 서버 연결을 관리합니다.
 class CGopherConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CGopherConnection::CGopherConnection](#cgopherconnection)|`CGopherConnection` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CGopherConnection:: CreateLocator](#createlocator)|Gopher 서버에서 파일을 찾기 위한 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체를 만듭니다.|
 |[CGopherConnection:: GetAttribute](#getattribute)|Gopher 개체에 대 한 특성 정보를 검색 합니다.|
@@ -116,7 +116,7 @@ FTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL 또는 ""|NULL 또는 ""|"anonymous"|사용자의 전자 메일 이름|
 |NULL이 아닌 문자열|NULL 또는 ""|*pstrUserName*|" "|
-|Null이 아닌 NULL 문자열입니다.|ERROR|ERROR||
+|Null이 아닌 NULL 문자열입니다.|오류|오류||
 |NULL이 아닌 문자열|NULL이 아닌 문자열|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -166,7 +166,7 @@ Gopher 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.
 *nPort*<br/>
 이 연결에 대 한 인터넷 포트를 식별 하는 번호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.
 
@@ -197,7 +197,7 @@ BOOL GetAttribute(
 *strResult*<br/>
 로케이터 형식을 받는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다. 호출에 실패 하면 Win32 함수 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) 를 호출 하 여 오류의 원인을 확인할 수 있습니다.
 
@@ -227,7 +227,7 @@ INTERNET_FLAG_ * 플래그의 조합입니다. INTERNET_FLAG_\* 플래그에 대
 *dwContext*<br/>
 열려는 파일의 컨텍스트 ID입니다. *Dwcontext*에 대 한 자세한 내용은 **설명** 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 열 [CGopherFile](../../mfc/reference/cgopherfile-class.md) 개체에 대 한 포인터입니다.
 

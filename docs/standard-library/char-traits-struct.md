@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856402"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427268"
 ---
 # <a name="char_traits-struct"></a>char_traits 구조체
 
@@ -54,9 +54,9 @@ struct char_traits;
 
 템플릿 구조체는 `CharType`형식에 대 한 다양 한 문자 특성을 설명 합니다. 클래스 템플릿 [basic_string](../standard-library/basic-string-class.md) 및 [basic_ios](../standard-library/basic-ios-class.md)를 비롯 한 여러 iostream 클래스 템플릿 `CharType`이 정보를 사용 하 여 형식의 요소를 조작 합니다. 이러한 요소 형식은 명시적 생성 또는 소멸을 요구하지 않아야 합니다. 기본 생성자, 복사 생성자 및 대입 연산자에 예상 의미 체계를 제공해야 합니다. 비트 복사는 할당과 동일한 효과가 있어야 합니다. char_traits 구조체의 멤버 함수는 예외를 발생시킬 수 없습니다.
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[char_type](#char_type)|문자 형식입니다.|
 |[int_type](#int_type)|`char_type` 형식의 문자 또는 EOF(파일 끝) 문자를 나타낼 수 있는 정수 형식입니다.|
@@ -66,11 +66,11 @@ struct char_traits;
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[assign](#assign)|한 문자 값을 다른 문자 값에 할당합니다.|
 |[compare](#compare)|두 문자열의 문자를 지정한 개수까지 비교합니다.|
-|[copy](#copy)|한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다. 더 이상 사용되지 않습니다. 대신 [char_traits::_Copy_s](#copy_s)를 사용합니다.|
+|[copy](#copy)|한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다. 사용되지 않습니다. 대신 [char_traits::_Copy_s](#copy_s)를 사용합니다.|
 |[_Copy_s](#copy_s)|한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다.|
 |[eof](#eof)|EOF(파일 끝) 문자를 반환합니다.|
 |[eq](#eq)|두 `char_type` 문자가 같은지 테스트합니다.|
@@ -78,7 +78,7 @@ struct char_traits;
 |[find](#find)|문자 범위에서 지정한 문자의 첫 번째 발생을 검색합니다.|
 |[length](#length)|문자열의 길이를 반환합니다.|
 |[lt](#lt)|한 문자가 다른 문자보다 작은지 테스트합니다.|
-|[move](#move)|한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다. 더 이상 사용되지 않습니다. 대신 [char_traits::_Move_s](#move_s)를 사용합니다.|
+|[move](#move)|한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다. 사용되지 않습니다. 대신 [char_traits::_Move_s](#move_s)를 사용합니다.|
 |[_Move_s](#move_s)|한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다.|
 |[not_eof](#not_eof)|문자가 EOF(파일 끝) 문자인지 테스트합니다.|
 |[to_char_type](#to_char_type)|`int_type` 문자를 해당하는 `char_type` 문자로 변환하고 결과를 반환합니다.|
@@ -116,7 +116,7 @@ static char_type *assign(char_type* strTo,
 *_Num*\
 값을 할당받을 예정인 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 번째 멤버 함수는 첫 번째 *_Num* 요소에 *_CharFrom*값이 할당 된 문자열에 대 한 포인터를 반환 합니다.
 
@@ -198,7 +198,7 @@ static int compare(const char_type* str1,
 *_Num*\
 비교할 문자열에 있는 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 문자열이 두 번째 문자열보다 작은 경우 음수 값, 두 문자열이 같은 경우 0, 첫 번째 문자열이 두 번째 문자열보다 큰 경우 양수 값입니다.
 
@@ -264,7 +264,7 @@ static char_type *copy(char_type* _To,
 *_Num*\
 복사할 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열로 복사되는 첫 번째 요소입니다.
 
@@ -329,7 +329,7 @@ static char_type *_Copy_s(
 *개수*\
 복사할 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열입니다.
 
@@ -376,7 +376,7 @@ EOF(파일 끝) 문자를 반환합니다.
 static int_type eof();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 EOF 문자입니다.
 
@@ -435,7 +435,7 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 *_Ch2*\
 같은지 테스트할 두 문자 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.
 
@@ -495,7 +495,7 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 *_Ch2*\
 `int_type`이 같은지 테스트할 두 문자 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.
 
@@ -585,7 +585,7 @@ static const char_type* find(const char_type* str,
 *_Ch*\
 범위에서 검색할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 일치 항목이 발견되는 경우 범위에서 지정된 문자 중 처음 나오는 문자에 대한 포인터입니다. 일치 항목이 발견되지 않으면 Null 포인터입니다.
 
@@ -660,7 +660,7 @@ static size_t length(const char_type* str);
 *str*\
 길이를 측정할 C 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 측정되는 시퀀스의 요소 수입니다(Null 종결자를 포함하지 않음).
 
@@ -706,7 +706,7 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 *_Ch2*\
 작은지 테스트할 두 문자 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 문자가 두 번째 문자보다 작으면 **true**이고, 작지 않으면 **false**입니다.
 
@@ -772,7 +772,7 @@ static char_type *move(char_type* _To,
 *_Num*\
 소스 문자열에서 복사할 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 요소는 복사 된 문자 시퀀스를 수신 하도록 지정 된 문자열 또는 문자 배열로 복사 *_To* 합니다.
 
@@ -852,7 +852,7 @@ static char_type *_Move_s(
 *개수*\
 소스 문자열에서 복사할 요소의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복사 된 문자 시퀀스를 수신 하도록 지정 된 대상 문자열 또는 문자 배열로 복사 되는 첫 *번째 요소입니다* .
 
@@ -919,7 +919,7 @@ static int_type not_eof(const int_type& _Ch);
 *_Ch*\
 EOF 문자인지 여부를 테스트할 `int_type`으로 표시된 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자 `int_type`가 EOF 문자의 값과 같지 않은 경우 테스트 된 문자의 `int_type` 표현입니다.
 
@@ -1027,7 +1027,7 @@ static char_type to_char_type(const int_type& _Ch);
 *_Ch*\
 `int_type`으로 나타낼 `char_type` 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `char_type` 문자에 해당하는 `int_type` 문자입니다.
 
@@ -1133,7 +1133,7 @@ static int_type to_int_type(const char_type& _Ch);
 *_Ch*\
 `char_type`으로 나타낼 `int_type` 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `int_type` 문자에 해당하는 `char_type` 문자입니다.
 

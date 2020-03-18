@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416065"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445787"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 클래스
 
@@ -31,21 +31,21 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 *T*<br/>
 현재 컬렉션에 있는 항목의 형식입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 BackInsertIterator 클래스는 [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md)에 필요한 규칙을 구현합니다.
 
-### <a name="members"></a>멤버
+### <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[BackInsertIterator:: BackInsertIterator](#ctor)|BackInsertIterator 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[BackInsertIterator::operator* 연산자](#operator-dereference)|현재 BackInsertIterator에 대한 참조를 검색합니다.|
 |[BackInsertIterator::operator++ 연산자](#operator-increment)|현재 BackInsertIterator에 대한 참조를 반환합니다. 반복기는 수정되지 않습니다.|
@@ -59,8 +59,8 @@ BackInsertIterator 클래스는 [back_insert_iterator Class](../standard-library
 
 **헤더:** collection.h
 
-<a name="namespace-platformcollections"></a>**네임스페이스:** Platform::Collections
----
+**네임스페이스:** Platform::Collections
+
 ## <a name="ctor"></a>BackInsertIterator:: BackInsertIterator 생성자
 
 `BackInsertIterator` 클래스의 새 인스턴스를 초기화합니다.
@@ -68,7 +68,6 @@ BackInsertIterator 클래스는 [back_insert_iterator Class](../standard-library
 ## <a name="syntax"></a>구문
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -78,7 +77,7 @@ explicit BackInsertIterator(
 *v*<br/>
 IVector\<T > 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `BackInsertIterator`는 `v` 매개 변수로 지정된 개체의 마지막 요소 뒤에 요소를 삽입합니다.
 
@@ -97,7 +96,7 @@ BackInsertIterator& operator=( const T& t);
 *t*<br/>
 현재 컬렉션에 추가할 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 BackInsertIterator에 대한 참조입니다.
 
@@ -111,11 +110,11 @@ BackInsertIterator& operator=( const T& t);
 BackInsertIterator& operator*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 BackInsertIterator에 대한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 연산자는 현재 컬렉션의 요소가 아닌 현재 BackInsertIterator에 대한 참조를 반환합니다.
 
@@ -126,17 +125,16 @@ BackInsertIterator& operator*();
 ## <a name="syntax"></a>구문
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 BackInsertIterator에 대한 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 의도적으로, 첫 번째 구문 예는 현재 BackInsertIterator를 사전에 증가시키고 두 번째 구문은 현재 BackInsertIterator를 사후에 증가시킵니다. 두 번째 구문의 `int` 형식은 실제 정수 연산자가 아니라 후위 증가 연산을 나타냅니다.
 

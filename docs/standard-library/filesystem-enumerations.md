@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875830"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427124"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 열거형
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>값
 
-|`Name`|설명|
+|`Name`|Description|
 |------------|-----------------|
 |`none`|작업의 기본 동작을 수행합니다.|
 |`skip_existing`|파일이 이미 있는 경우 복사하지 않고 오류를 보고하지 않습니다.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>값
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`none`|기본 동작: 디렉터리에 대한 기호 링크를 무시합니다. 사용 권한이 거부됨은 오류입니다.|
 |`follow_directory_symlink`|디렉터리에 대한 기호화된 링크를 실제 디렉터리로 처리합니다.|
@@ -107,11 +107,11 @@ enum class file_type {
 
 ### <a name="values"></a>값
 
-|name|값|설명|
+|속성|값|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|존재하지 않는 파일을 나타냅니다.|
 |`none`|0|형식 특성이 없는 파일을 나타냅니다. (지원 안 됨)|
-|`regular`|[1,1]|기존 디스크 파일을 나타냅니다.|
+|`regular`|1|기존 디스크 파일을 나타냅니다.|
 |`directory`|2|디렉터리를 나타냅니다.|
 |`symlink`|3|기호화된 링크를 나타냅니다. (지원 안 됨)|
 |`block`|4|UNIX 기반 시스템의 블록 특수 파일을 나타냅니다. (지원 안 됨)|

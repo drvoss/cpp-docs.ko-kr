@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnlpe
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: fe82d52418683d414ffbdd0f4fb0efd9bfd709cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4fd7275969120b35253bbc12098f8dc8f69a1fed
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947655"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442503"
 ---
 # <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -73,7 +72,7 @@ intptr_t _wspawnlpe(
 
 ### <a name="parameters"></a>매개 변수
 
-*모드*<br/>
+*mode*<br/>
 호출 프로세스의 실행 모드입니다.
 
 *cmdname*<br/>
@@ -85,9 +84,9 @@ intptr_t _wspawnlpe(
 *envp*<br/>
 환경 설정에 대한 포인터 배열입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_Spawnlpe** 또는 **_wspawnlpe** 에 지정 된 **_P_WAIT** *의 반환*값은 새 프로세스의 종료 상태입니다. 비동기 **_spawnlpe** 또는 **_wspawnlpe** ( *mode*에 지정 된 **_P_NOWAIT** 또는 **_P_NOWAITO** )의 반환 값은 프로세스 핸들입니다. 프로세스가 정상적으로 종료되는 경우 종료 상태는 0입니다. 생성 된 프로세스가 0이 아닌 인수를 사용 하 여 **종료** 루틴을 호출 하는 경우 종료 상태를 0이 아닌 값으로 설정할 수 있습니다. 새 프로세스가 양수 값의 종료 상태를 명시적으로 설정하지 않은 경우, 양수 값의 종료 상태는 중단 또는 인터럽트로 인한 비정상적인 종료를 나타냅니다. 반환 값-1은 오류를 나타냅니다 (새 프로세스가 시작 되지 않음). 이 경우 **errno** 는 다음 값 중 하나로 설정 됩니다.
+동기 **_spawnlpe** 또는 **_wspawnlpe** ( *모드*에 대해 지정 된 **_P_WAIT** )의 반환 값은 새 프로세스의 종료 상태입니다. 비동기 **_spawnlpe** 또는 **_wspawnlpe** ( *모드*에 지정 된 **_P_NOWAIT** 또는 **_P_NOWAITO** )의 반환 값은 프로세스 핸들입니다. 프로세스가 정상적으로 종료되는 경우 종료 상태는 0입니다. 생성 된 프로세스가 0이 아닌 인수를 사용 하 여 **종료** 루틴을 호출 하는 경우 종료 상태를 0이 아닌 값으로 설정할 수 있습니다. 새 프로세스가 양수 값의 종료 상태를 명시적으로 설정하지 않은 경우, 양수 값의 종료 상태는 중단 또는 인터럽트로 인한 비정상적인 종료를 나타냅니다. 반환 값-1은 오류를 나타냅니다 (새 프로세스가 시작 되지 않음). 이 경우 **errno** 는 다음 값 중 하나로 설정 됩니다.
 
 |||
 |-|-|
@@ -97,7 +96,7 @@ intptr_t _wspawnlpe(
 | **ENOEXEC** | 지정한 파일이 실행할 수 없거나 실행 파일 형식이 잘못되었습니다. |
 | **ENOMEM** | 메모리가 부족하여 새 프로세스를 실행할 수 없습니다. |
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
@@ -116,9 +115,9 @@ intptr_t _wspawnlpe(
 
 ## <a name="example"></a>예제
 
-[_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)의 예제를 참조하세요.
+[_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

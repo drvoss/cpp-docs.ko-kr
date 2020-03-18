@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855764"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426644"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
 
@@ -65,7 +65,7 @@ BOOL PX_Blob(
 *hBlobDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -112,7 +112,7 @@ BOOL PX_Bool(
 *bDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -151,7 +151,7 @@ BOOL PX_Color(
 *clrDefault*<br/>
 컨트롤 개발자가 정의한 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -190,7 +190,7 @@ BOOL PX_Currency(
 *cyDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -224,7 +224,7 @@ BOOL PX_DataPath(
 *dataPathProperty*<br/>
 속성이 저장 된 변수 (일반적으로 클래스의 멤버 변수)에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -263,7 +263,7 @@ BOOL PX_Double(
 *doubleDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -301,7 +301,7 @@ Font 속성을 포함 하는 `CFontHolder` 개체에 대 한 참조입니다.
 *pFontDispAmbient*<br/>
 글꼴 속성의 기본 상태를 초기화 하는 데 사용할 글꼴의 `IFontDisp` 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -340,7 +340,7 @@ BOOL PX_Float(
 *floatDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -378,7 +378,7 @@ BOOL PX_IUnknown(
 *pUnkDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -417,7 +417,7 @@ BOOL PX_Long(
 *lDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -456,7 +456,7 @@ BOOL PX_Picture(
 *pictDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -495,7 +495,7 @@ BOOL PX_Short(
 *sDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -534,7 +534,7 @@ BOOL PX_ULong(
 *ulDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -573,7 +573,7 @@ BOOL PX_UShort(
 *usDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -612,7 +612,7 @@ BOOL PXstring(
 *strDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -638,7 +638,7 @@ BOOL PX_VBXFontConvert(
 *font*<br/>
 변환 된 VBX 글꼴 관련 속성을 포함 하는 OLE 컨트롤의 font 속성입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -646,7 +646,7 @@ BOOL PX_VBXFontConvert(
 
 이 함수는 VBX 컨트롤에 대 한 직접 대체로 디자인 된 OLE 컨트롤 에서만 사용 해야 합니다. Visual Basic 개발 환경에서 VBX 컨트롤이 포함 된 폼을 변환 하 여 해당 하는 대체 OLE 컨트롤을 사용 하는 경우 VBX 컨트롤의 속성 데이터를 포함 하는 속성 집합을 전달 하 여 컨트롤의 `IDataObject::SetData` 함수를 호출 합니다. 이 작업을 수행 하면 컨트롤의 `DoPropExchange` 함수가 호출 됩니다. `DoPropExchange` `PX_VBXFontConvert`를 호출 하 여 VBX 컨트롤의 글꼴 관련 속성 (예: "FontName", "FontSize" 등)을 OLE 컨트롤의 font 속성의 해당 구성 요소로 변환할 수 있습니다.
 
-`PX_VBXFontConvert`는 컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 예들 들어 다음과 같습니다.
+`PX_VBXFontConvert`는 컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

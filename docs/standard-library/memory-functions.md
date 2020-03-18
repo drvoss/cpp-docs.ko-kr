@@ -78,11 +78,11 @@ helpviewer_keywords:
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
 ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856685"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425498"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 함수
 
@@ -109,7 +109,7 @@ const T* addressof(
 *value*\
 실제 주소를 가져올 개체 또는 함수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오버 로드 된 `operator&()` 있는 경우에도 *값*이 참조 하는 개체 또는 함수의 실제 주소입니다.
 
@@ -144,7 +144,7 @@ void* align(
 
 `align()` 실패 한 경우이 매개 변수는 수정 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요청 된 정렬 된 버퍼가 사용 가능한 공간에 맞지 않는 경우 null 포인터입니다. 그렇지 않으면 *ptr*의 새 값입니다.
 
@@ -435,7 +435,7 @@ void destroy_at(
     T* location);
 ```
 
-`location->~T()`와 동일합니다.
+`location->~T()`와 같습니다.
 
 ## <a name="destroy"></a>삭제
 
@@ -631,7 +631,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 *개수*\
 메모리를 할당하도록 요청한 최대 요소 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 구성 요소는 할당된 메모리에 대한 포인터이고, 두 번째 구성 요소는 저장할 수 있는 요소의 최대 수를 나타내는 버퍼의 크기를 제공하는 `pair`입니다.
 
@@ -1200,7 +1200,7 @@ ForwardIterator uninitialized_copy(
 *대상*\
 대상 범위에 있는 첫 번째 요소를 주소 지정하는 정방향 반복기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소스 범위가 비어 있지 않은 경우 대상 범위를 벗어난 첫 번째 위치를 주소 지정 하는 전방 반복기입니다.
 
@@ -1320,7 +1320,7 @@ ForwardIterator uninitialized_copy_n(
 *대상*\
 새 복사본의 위치를 참조하는 정방향 반복기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대상을 벗어나는 첫 번째 위치를 주소 지정하는 정방향 반복기입니다. 소스 범위가 비어 있는 경우 반복기는 *먼저*주소를 처리 합니다.
 
@@ -1411,7 +1411,7 @@ ForwardIterator uninitialized_default_construct_n(
 *개수*\
 생성할 대상 범위에 있는 요소 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소스 범위가 비어 있지 않은 경우 대상 범위를 벗어난 첫 번째 위치를 주소 지정 하는 전방 반복기입니다.
 

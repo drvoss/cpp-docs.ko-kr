@@ -1,19 +1,16 @@
 ---
 title: new 및 delete 연산자
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246443"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445452"
 ---
 # <a name="new-and-delete-operators"></a>new 및 delete 연산자
 
@@ -23,7 +20,7 @@ C++[new](new-operator-cpp.md) 및 [delete](delete-operator-cpp.md) 연산자를 
 
 C 런타임 라이브러리와 C++ 표준 라이브러리를 구성 하는 라이브러리 파일의 목록은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조 하세요.
 
-##  <a id="new_operator"></a> New 연산자
+##  <a id="new_operator"> </a> New 연산자
 
 프로그램에서 다음과 같은 문이 발견 되 면 함수 **operator new**에 대 한 호출로 변환 됩니다.
 
@@ -83,7 +80,7 @@ int main()
 Blanks *SomeBlanks = new Blanks;
 ```
 
-컴파일러는 클래스 선언에서 멤버 배열 **new** 및 **delete** 연산자를 지원 합니다. 예를 들면 다음과 같습니다.
+컴파일러는 클래스 선언에서 멤버 배열 **new** 및 **delete** 연산자를 지원 합니다. 다음은 그 예입니다.
 
 ```cpp
 class MyClass
@@ -124,7 +121,7 @@ int main() {
 
 실패 한 메모리 할당 요청을 처리 하는 또 다른 방법이 있습니다. 이러한 오류를 처리 하는 사용자 지정 복구 루틴을 작성 한 다음 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 런타임 함수를 호출 하 여 함수를 등록 합니다.
 
-##  <a id="delete_operator"></a> Delete 연산자
+##  <a id="delete_operator"> </a> Delete 연산자
 
 **New** 연산자를 사용 하 여 동적으로 할당 되는 메모리는 **delete** 연산자를 사용 하 여 해제할 수 있습니다. Delete 연산자는 사용 가능한 풀로 메모리를 다시 확보 하는 **operator delete** 함수를 호출 합니다. **Delete** 연산자를 사용 하면 클래스 소멸자 (있는 경우)도 호출 됩니다.
 
@@ -193,7 +190,7 @@ int main( int argc, char *argv[] ) {
 
 앞의 코드를 사용하여 "메모리 누수"를 검색할 수 있습니다. 메모리 누수는 사용 가능한 저장소에 할당되었지만 비워지지 않은 메모리를 의미합니다. 이 검색을 수행 하기 위해 global **new** 및 **delete** 연산자를 다시 정의 하 여 메모리 할당 및 할당 취소를 계산 합니다.
 
-컴파일러는 클래스 선언에서 멤버 배열 **new** 및 **delete** 연산자를 지원 합니다. 예를 들면 다음과 같습니다.
+컴파일러는 클래스 선언에서 멤버 배열 **new** 및 **delete** 연산자를 지원 합니다. 다음은 그 예입니다.
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856380"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426200"
 ---
 # <a name="registering-ole-controls"></a>OLE 컨트롤 등록
 
@@ -129,7 +129,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *wVerMinor*<br/>
 컨트롤 클래스의 부 버전 번호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 클래스가 등록 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -182,7 +182,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 > [!NOTE]
 >  MFC 4.2 이전 MFC 버전에서 **int** *nregflags* 매개 변수를 사용할 수 없습니다. 또한 `afxRegInsertable` 플래그는 속성 페이지에 대 한 올바른 옵션이 아니므로 MFC에서 어설션이 설정 된 경우이를 발생 시킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 클래스가 등록 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -220,7 +220,7 @@ BOOL AfxOleRegisterTypeLib(
 *pszHelpDir*<br/>
 형식 라이브러리에 대한 도움말 파일을 찾을 수 있는 디렉터리의 이름입니다. NULL인 경우, 도움말 파일은 해당 형식 라이브러리 자체와 동일한 디렉터리에 있는 것으로 간주됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 형식 라이브러리가 등록된 경우 0이 아닌 값이고, 그렇지 않으면 0입니다.
 
@@ -254,7 +254,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 *pszProgID*<br/>
 컨트롤 또는 속성 페이지의 고유한 프로그램 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 또는 속성 페이지 클래스가 성공적으로 등록 취소 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -275,7 +275,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 *tlID*<br/>
 형식 라이브러리의 고유 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 형식 라이브러리가 성공적으로 등록 취소 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 

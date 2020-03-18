@@ -195,11 +195,11 @@ helpviewer_keywords:
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 ms.openlocfilehash: 0c5f5aaacf96eef52b36421534b02f9d2a5fff6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854075"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426794"
 ---
 # <a name="styles-used-by-mfc"></a>MFC에서 사용하는 스타일
 
@@ -213,7 +213,7 @@ ms.locfileid: "78854075"
 
 다음 표에서는 단추 유형을 나열 합니다. 필요에 따라 다음 중 하나를 선택할 수 있습니다. 단추 유형을 지정 하지 않는 경우 기본값은 BS_PUSHBUTTON입니다.
 
-|형식|설명|
+|Type|Description|
 |----------|-----------------|
 |BS_3STATE|BST_CHECKED, BST_INDETERMINATE 및 BST_UNCHECKED의 세 가지 상태를 사용 하 여 확인란 단추를 만듭니다. 단추를 클릭 하면 소유자 창에 BN_CLICKED 알림이 전송 되지만 단추의 상태는 변경 되지 않습니다. 기본적으로 연결 된 텍스트는 확인란의 오른쪽에 표시 됩니다. 확인란 왼쪽에 텍스트를 표시 하려면 BS_LEFTTEXT 또는 BS_RIGHTBUTTON 스타일을 사용 합니다.|
 |BS_AUTO3STATE|BST_CHECKED, BST_INDETERMINATE 및 BST_UNCHECKED의 세 가지 상태를 사용 하 여 확인란 단추를 만듭니다. 단추를 클릭 하 여 소유자 창에 BN_CLICKED 알림을 보내고 단추의 상태를 변경 합니다. 단추는 BST_CHECKED, BST_INDETERMINATE 및 BST_UNCHECKED 순서로 순환 됩니다. 기본적으로 연결 된 텍스트는 확인란의 오른쪽에 표시 됩니다. 확인란 왼쪽에 텍스트를 표시 하려면 BS_LEFTTEXT 또는 BS_RIGHTBUTTON 스타일을 사용 합니다.|
@@ -235,7 +235,7 @@ ms.locfileid: "78854075"
 
 다음 표에서는 라디오 단추 및 확인란에 적용 되는 스타일을 보여 줍니다. 이러한 스타일은 다른 모든 단추 형식에서 무시 됩니다. 필요에 따라 다음 중 하나 이상을 선택할 수 있습니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |BS_LEFTTEXT|라디오 단추 또는 확인란 스타일과 함께 사용 하면 텍스트가 라디오 단추 또는 확인란의 왼쪽에 표시 됩니다.|
 |BS_RIGHTBUTTON|라디오 단추 또는 확인란 스타일과 함께 사용 하면 텍스트가 라디오 단추 또는 확인란의 왼쪽에 표시 됩니다. 이 스타일은 BS_LEFTTEXT 스타일과 동일 합니다.|
@@ -245,7 +245,7 @@ ms.locfileid: "78854075"
 
 다음 표에서는 가로 및 세로 텍스트 맞춤 옵션을 보여 줍니다. 필요에 따라 다음 중 하나를 선택할 수 있습니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |BS_LEFT|단추 사각형의 텍스트를 왼쪽에 맞춥니다. 그러나 단추가 BS_RIGHTBUTTON 스타일이 없는 확인란 또는 라디오 단추 이면 텍스트는 확인란 또는 라디오 단추 오른쪽에 왼쪽으로 맞춰집니다 .를 선택 합니다.|
 |BS_RIGHT|단추 사각형의 텍스트를 오른쪽에 맞춥니다. 그러나 단추가 BS_RIGHTBUTTON 스타일이 없는 확인란 또는 라디오 단추인 경우에는 확인란 또는 라디오 단추 오른쪽에 텍스트를 오른쪽에 맞춥니다.|
@@ -258,7 +258,7 @@ ms.locfileid: "78854075"
 
 다음 표에서는 단추에 표시 되는 항목을 나타내는 옵션을 보여 줍니다. 텍스트만 표시 하는 단추 유형은 이러한 스타일을 무시 합니다. 필요에 따라 다음 중 하나를 선택할 수 있습니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |BS_BITMAP|단추에 비트맵을 표시 하도록 지정 합니다.|
 |BS_ICON|단추에 아이콘을 표시 하도록 지정 합니다.|
@@ -268,7 +268,7 @@ ms.locfileid: "78854075"
 
 다음 표에서는 단추 형식에 사용할 수 있는 추가 옵션을 보여 줍니다. 필요에 따라 다음 중 하나 이상을 선택할 수 있습니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |BS_FLAT|3 차원 이미지를 만들기 위해 단추를 2 차원으로 지정 하 고 기본 음영으로 그리지 않도록 지정 합니다.|
 |BS_MULTILINE|텍스트 문자열이 너무 길어서 단추 사각형의 한 줄에 맞지 않는 경우 단추 텍스트를 여러 줄로 래핑합니다.|
@@ -278,7 +278,7 @@ ms.locfileid: "78854075"
 
 다음 콤보 상자 스타일을 MFC에서 사용할 수 있습니다. Windows의 콤보 상자 스타일에 대 한 자세한 내용은 [콤보 상자 스타일 (Windows)](/windows/win32/Controls/combo-box-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |CBS_AUTOHSCROLL|사용자가 줄의 끝에 문자를 입력 하면 편집 컨트롤의 텍스트가 자동으로 오른쪽으로 스크롤됩니다. 이 스타일을 설정하지 않으면 사각형 경계에 포함되는 텍스트만 허용됩니다.|
 |CBS_DISABLENOSCROLL|목록 상자에 스크롤할 충분 한 항목이 포함 되지 않은 경우 비활성화 된 세로 스크롤 막대가 표시 됩니다. 이 스타일을 사용하지 않으면 목록 상자에 충분한 항목이 포함되지 않은 경우 스크롤 막대가 숨겨집니다.|
@@ -298,7 +298,7 @@ ms.locfileid: "78854075"
 
 편집 스타일은 [CEdit 클래스](../../mfc/reference/cedit-class.md) 개체에 적용 됩니다. [CEdit:: Create](../../mfc/reference/cedit-class.md#create)의 *dwstyle* 매개 변수에 스타일 조합을 지정 합니다. Windows에서 컨트롤 스타일을 편집 하는 방법에 대 한 자세한 내용은 [컨트롤 스타일 편집 (Windows)](/windows/win32/Controls/edit-control-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |ES_AUTOHSCROLL|사용자가 줄의 끝에 문자를 입력할 때 텍스트를 자동으로 오른쪽으로 스크롤합니다. 사용자가 ENTER 키를 누를 때 컨트롤은 모든 텍스트를 위치 0으로 다시 스크롤합니다.|
 |ES_AUTOVSCROLL|사용자가 마지막 줄에서 ENTER 키를 누르면 자동으로 한 페이지씩 텍스트를 스크롤합니다.|
@@ -319,7 +319,7 @@ ms.locfileid: "78854075"
 
 프레임 창 스타일은 [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md) 개체에 적용 됩니다. [CFrameWnd:: Create](../../mfc/reference/cframewnd-class.md#create)의 *dwstyle* 매개 변수에 스타일 조합을 지정 합니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |FWS_ADDTOTITLE|프레임 창 제목의 끝에 추가할 정보를 지정 합니다. 예를 들어 "문서를 작성할 때 Microsoft 그리기-그리기"를 사용할 때입니다. 응용 프로그램 마법사의 문서 템플릿 문자열 탭에 표시 되는 문자열을 지정할 수 있습니다. 이 옵션을 해제 해야 하는 경우 `CWnd::PreCreateWindow` 멤버 함수를 재정의 합니다.|
 |FWS_PREFIXTITLE|프레임 창 제목의 응용 프로그램 이름 앞에 문서 이름을 표시 합니다. 예를 들면 "Document-WordPad"입니다. 응용 프로그램 마법사의 문서 템플릿 문자열 탭에 표시 되는 문자열을 지정할 수 있습니다. 이 옵션을 해제 해야 하는 경우 `CWnd::PreCreateWindow` 멤버 함수를 재정의 합니다.|
@@ -329,7 +329,7 @@ ms.locfileid: "78854075"
 
 목록 상자 스타일은 [CListBox 클래스](../../mfc/reference/clistbox-class.md) 개체에 적용 됩니다. [CListBox:: Create](../../mfc/reference/clistbox-class.md#create)의 *dwstyle* 매개 변수에 스타일 조합을 지정 합니다. Windows의 목록 상자 스타일에 대 한 자세한 내용은 [목록 상자 스타일 (Windows)](/windows/win32/Controls/list-box-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |LBS_DISABLENOSCROLL|목록 상자에 스크롤할 충분 한 항목이 포함 되지 않은 경우 비활성화 된 세로 스크롤 막대가 표시 됩니다. 이 스타일을 사용하지 않으면 목록 상자에 충분한 항목이 포함되지 않은 경우 스크롤 막대가 숨겨집니다.|
 |LBS_EXTENDEDSEL|사용자는 SHIFT 키와 마우스 또는 특수 키 조합을 사용 하 여 여러 항목을 선택할 수 있습니다.|
@@ -356,7 +356,7 @@ ms.locfileid: "78854075"
 
 ### <a name="message-box-types"></a>메시지 상자 유형
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |MB_ABORTRETRYIGNORE|메시지 상자에는 중단, 다시 시도 및 무시의 세 가지 누름 단추 있습니다.|
 |MB_OK|메시지 상자에는 누름: OK가 있습니다.|
@@ -367,7 +367,7 @@ ms.locfileid: "78854075"
 
 ### <a name="message-box-modality"></a>메시지 상자 모달
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |MB_APPLMODAL|현재 창에서 작업을 계속 하기 전에 사용자가 메시지 상자에 응답 해야 합니다. 그러나 사용자는 다른 응용 프로그램의 창으로 이동 하 여 해당 창에서 작업할 수 있습니다. MB_SYSTEMMODAL 또는 MB_TASKMODAL가 지정 되지 않은 경우 기본값은 MB_APPLMODAL입니다.|
 |MB_SYSTEMMODAL|모든 애플리케이션에는 사용자가 messagebox에 응답할 때까지 일시 중단 됩니다. 시스템 모달 메시지 상자는 즉각적인 주의가 필요한 치명적인 오류를 사용자에 게 알리는 데 사용 되며, 자주 사용 해야 합니다.|
@@ -375,7 +375,7 @@ ms.locfileid: "78854075"
 
 ### <a name="message-box-icons"></a>메시지 상자 아이콘
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |MB_ICONEXCLAMATION|메시지 상자에 느낌표 아이콘이 표시 됩니다.|
 |MB_ICONINFORMATION|원에 "I"로 구성 된 아이콘이 메시지 상자에 나타납니다.|
@@ -384,7 +384,7 @@ ms.locfileid: "78854075"
 
 ### <a name="message-box-default-buttons"></a>메시지 상자 기본 단추
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |MB_DEFBUTTON1|첫 번째 단추가 기본값입니다. MB_DEFBUTTON2 또는 MB_DEFBUTTON3 지정 되지 않은 경우 첫 번째 단추는 항상 기본값입니다.|
 |MB_DEFBUTTON2|두 번째 단추가 기본값입니다.|
@@ -394,7 +394,7 @@ ms.locfileid: "78854075"
 
 스크롤 막대 스타일은 [Cscrollbar 클래스](../../mfc/reference/cscrollbar-class.md) 개체에 적용 됩니다. [Cscrollbar:: Create](../../mfc/reference/cscrollbar-class.md#create)의 *dwstyle* 매개 변수에 스타일의 조합을 지정 합니다. 창의 스크롤 막대 컨트롤 스타일에 대 한 자세한 내용은 [Scroll Bar 컨트롤 스타일 (Windows)](/windows/win32/Controls/scroll-bar-control-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |SBS_BOTTOMALIGN|SBS_HORZ 스타일과 함께 사용 됩니다. 스크롤 막대의 아래쪽 가장자리를 `Create` 멤버 함수에 지정 된 사각형의 아래쪽 가장자리에 맞춥니다. 스크롤 막대는 시스템 스크롤 막대의 기본 높이를 가집니다.|
 |SBS_HORZ|가로 스크롤 막대를 지정 합니다. SBS_BOTTOMALIGN 또는 SBS_TOPALIGN 스타일이 지정 되지 않은 경우 스크롤 막대에는 `Create` 멤버 함수에 지정 된 높이, 너비 및 위치가 있습니다.|
@@ -411,7 +411,7 @@ ms.locfileid: "78854075"
 
 정적 스타일은 [Cstatic 클래스](../../mfc/reference/cstatic-class.md) 개체에 적용 됩니다. [Cstatic:: Create](../../mfc/reference/cstatic-class.md#create)의 *dwstyle* 매개 변수에 스타일의 조합을 지정 합니다. Windows의 정적 컨트롤 스타일에 대 한 자세한 내용은 [정적 컨트롤 스타일 (windows)](/windows/win32/Controls/static-control-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |SS_BITMAP|비트맵을 정적 컨트롤에 표시 하도록 지정 합니다. 지정 된 텍스트는 리소스 파일의 다른 곳에 정의 된 비트맵 (파일 이름 아님)의 이름입니다. 스타일은 nWidth 및 Nwidth 매개 변수를 무시 합니다. 컨트롤은 비트맵에 맞게 자동으로 크기를 조정 합니다.|
 |SS_BLACKFRAME|창 프레임과 동일한 색을 사용 하 여 그린 프레임의 상자를 지정 합니다. 기본값은 검정입니다.|
@@ -445,7 +445,7 @@ ms.locfileid: "78854075"
 
 창 스타일은 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 개체에 적용 됩니다. [Cwnd:: Create](../../mfc/reference/cwnd-class.md#create) 또는 [Cwnd:: Createex](../../mfc/reference/cwnd-class.md#createex)의 *dwstyle* 매개 변수에 스타일 조합을 지정 합니다. Windows의 창 스타일에 대 한 자세한 내용은 [창 스타일 (windows)](/windows/win32/winmsg/window-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |WS_BORDER|테두리가 있는 창을 만듭니다.|
 |WS_CAPTION|WS_BORDER 스타일을 암시 하는 제목 표시줄이 있는 창을 만듭니다. WS_DLGFRAME 스타일과 함께 사용할 수 없습니다.|
@@ -479,7 +479,7 @@ ms.locfileid: "78854075"
 
 확장 창 스타일은 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 개체에 적용 됩니다. [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)의 *dwexstyle* 매개 변수에 스타일의 조합을 지정 합니다. Windows의 확장 창 스타일에 대 한 자세한 내용은 [확장 창 스타일 (windows)](/windows/win32/winmsg/extended-window-styles)을 참조 하세요.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |WS_EX_ACCEPTFILES|이 스타일을 사용 하 여 만든 창에서 끌어서 놓기 파일을 허용 하도록 지정 합니다.|
 |WS_EX_APPWINDOW|창이 표시 될 때 작업 표시줄에 최상위 창을 강제로 적용 합니다.|
@@ -488,15 +488,15 @@ ms.locfileid: "78854075"
 |WS_EX_CONTROLPARENT|사용자가 TAB 키를 사용 하 여 창의 자식 창 간을 탐색할 수 있습니다.|
 |WS_EX_DLGMODALFRAME|*Dwstyle* 매개 변수에서 WS_CAPTION 스타일 플래그를 지정할 때 제목 표시줄을 사용 하 여 선택적으로 만들 수 있는 이중 테두리가 있는 창을 지정 합니다.|
 |WS_EX_LAYERED|창이 [계층화 된 창](/windows/win32/winmsg/window-features)입니다. 창에 CS_OWNDC 또는 CS_CLASSDC의 [클래스 스타일이](/windows/win32/winmsg/about-window-classes) 있으면이 스타일을 사용할 수 없습니다. 그러나 Microsoft Windows 8은 자식 창에 대 한 WS_EX_LAYERED 스타일을 지원 합니다. 여기서 이전 Windows 버전은 최상위 windows 에서만 지원 합니다.|
-|WS_EX_LEFT|창의 왼쪽에 맞춰진 왼쪽 맞춤 속성을 제공 합니다. 이 값이 기본값입니다.|
+|WS_EX_LEFT|창의 왼쪽에 맞춰진 왼쪽 맞춤 속성을 제공 합니다. 이것이 기본값입니다.|
 |WS_EX_LEFTSCROLLBAR|클라이언트 영역의 왼쪽에 세로 스크롤 막대를 배치 합니다.|
-|WS_EX_LTRREADING|왼쪽에서 오른쪽으로 읽는 순서 속성을 사용 하 여 창 텍스트를 표시 합니다. 이 값이 기본값입니다.|
+|WS_EX_LTRREADING|왼쪽에서 오른쪽으로 읽는 순서 속성을 사용 하 여 창 텍스트를 표시 합니다. 이것이 기본값입니다.|
 |WS_EX_MDICHILD|MDI 자식 창을 만듭니다.|
 |WS_EX_NOPARENTNOTIFY|자식 창이 만들어지거나 제거 될 때이 스타일을 사용 하 여 만든 자식 창에서 부모 창으로 WM_PARENTNOTIFY 메시지를 보내지 않도록 지정 합니다.|
 |WS_EX_OVERLAPPEDWINDOW|WS_EX_CLIENTEDGE 및 WS_EX_WINDOWEDGE 스타일을 결합 합니다.|
 |WS_EX_PALETTEWINDOW|WS_EX_WINDOWEDGE 및 WS_EX_TOPMOST 스타일을 결합 합니다.|
 |WS_EX_RIGHT|창에 대 한 일반 오른쪽 맞춤 속성을 제공 합니다. 이는 창 클래스에 따라 다릅니다.|
-|WS_EX_RIGHTSCROLLBAR|클라이언트 영역의 오른쪽에 세로 스크롤 막대 (있는 경우)를 배치 합니다. 이 값이 기본값입니다.|
+|WS_EX_RIGHTSCROLLBAR|클라이언트 영역의 오른쪽에 세로 스크롤 막대 (있는 경우)를 배치 합니다. 이것이 기본값입니다.|
 |WS_EX_RTLREADING|오른쪽에서 왼쪽으로 읽는 순서 속성을 사용 하 여 창 텍스트를 표시 합니다.|
 |WS_EX_STATICEDGE|사용자 입력을 허용 하지 않는 항목에 사용할 3 차원 테두리 스타일을 사용 하 여 창을 만듭니다.|
 |WS_EX_TOOLWINDOW|부동 도구 모음으로 사용 하기 위한 창인 도구 창을 만듭니다. 도구 창에는 일반 제목 표시줄보다 짧은 제목 표시줄이 있으며 창 제목은 더 작은 글꼴을 사용하여 그려집니다. 사용자가 Alt+Tab을 누를 때 나타나는 작업 표시줄이나 창에는 도구 창이 나타나지 않습니다.|

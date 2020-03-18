@@ -3,19 +3,18 @@ title: 이벤트 처리기 추가
 ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.eventhandler.overview
-- vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: HT
+ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328573"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447512"
 ---
 # <a name="add-an-event-handler"></a>이벤트 처리기 추가
 
@@ -41,7 +40,7 @@ ms.locfileid: "58328573"
 
 또는 [속성 창](/visualstudio/ide/reference/properties-window)에서 이벤트 처리기를 추가할 수 있습니다. 자세한 내용은 [대화 상자 컨트롤에 대한 이벤트 처리기 추가](../windows/adding-event-handlers-for-dialog-box-controls.md)를 참조하세요.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [이벤트 처리기 마법사](#event-handler-wizard)
 

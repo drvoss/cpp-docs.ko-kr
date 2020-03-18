@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883814"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427316"
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
 
@@ -116,14 +116,14 @@ class array;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |-|-|
 |`Ty`|요소의 형식입니다.|
 |`N`|요소의 수입니다.|
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-|형식 정의|설명|
+|형식 정의|Description|
 |-|-|
 |[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|
 |[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|
@@ -137,7 +137,7 @@ class array;
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[array](#array)|배열 개체를 생성합니다.|
 |[assign](#assign)|않게. `fill`를 사용 합니다.) 모든 요소를 바꿉니다.|
@@ -159,7 +159,7 @@ class array;
 |[size](#size)|요소 수를 계산합니다.|
 |[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|
 
-|Operator|설명|
+|연산자|Description|
 |-|-|
 |[array::operator=](#op_eq)|제어되는 시퀀스를 바꿉니다.|
 |[array:: operator\[\]](#op_at)|지정된 위치에 있는 요소에 액세스합니다.|
@@ -387,7 +387,7 @@ int main()
 const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **상수** 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
@@ -413,7 +413,7 @@ auto i2 = Container.cbegin();
 const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위 끝의 바로 다음을 가리키는 임의 액세스 반복기입니다.
 
@@ -621,7 +621,7 @@ int main()
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 배열에서 첫 번째 요소의 주소를 지정하거나 정방향 배열에서 마지막 요소의 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -665,7 +665,7 @@ The first element of the reversed array is 2.
 const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 배열에서 마지막 요소 다음의 위치(역방향이 해제된 배열의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -897,7 +897,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |-|-|
 |*val*|배열에 삽입되는 요소의 값입니다.|
 

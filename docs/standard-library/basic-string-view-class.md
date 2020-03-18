@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416177"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445841"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view 클래스
 
@@ -189,13 +189,13 @@ String_view에 저장 된 문자 형식입니다. 표준 C++ 라이브러리는�
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[basic_string_view](#basic_string_view)|비어 있거나 다른 문자열 개체 데이터의 전체 또는 일부 또는 C 스타일 문자 배열을 가리키는 string_view를 생성 합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |**const_iterator**|**Const** 요소를 읽을 수 있는 임의 액세스 반복기입니다.|
 |**const_pointer**|`using const_pointer = const value_type*;`|
@@ -213,14 +213,14 @@ String_view에 저장 된 문자 형식입니다. 표준 C++ 라이브러리는�
 
 ### <a name="member-operators"></a>멤버 연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[operator=](#op_eq)|String_view 또는 변환할 수 있는 문자열 개체를 다른 string_view에 할당 합니다.|
 |[operator\[\]](#op_at)|지정한 인덱스의 요소를 반환합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[at](#at)|지정 된 위치에 있는 요소에 대 한 const_reference를 반환 합니다.|
 |[back](#back)|마지막 요소에 대 한 const_reference를 반환 합니다.|
@@ -252,7 +252,7 @@ String_view에 저장 된 문자 형식입니다. 표준 C++ 라이브러리는�
 |[substr](#substr)|지정 된 인덱스에서 시작 하 여 지정 된 길이의 부분 문자열을 반환 합니다.|
 |[swap](#swap)|두 string_views의 내용을 교환 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 함수는 [max_size](#max_size) 요소보다 긴 시퀀스를 생성하라는 요청을 받으면 [length_error](../standard-library/length-error-class.md) 형식의 개체를 throw하여 길이 오류를 보고합니다.
 
@@ -277,11 +277,11 @@ constexpr const_reference at(size_type offset) const;
 *오프셋*\
 참조할 요소의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수 인덱스에 지정 된 위치에 있는 문자에 대 한 const_reference입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 요소의 인덱스는 0이 고 다음 요소는 양의 정수로 연속적으로 인덱싱됩니다. 따라서 길이 *n* 의 string_view n 번째 요소가 숫자 *n-* 1로 인덱싱된 *n*번째 요소가 있습니다. **에서** [연산자\[\]](#op_at)와 달리 잘못 된 인덱스에 대해 예외를 throw 합니다. 
 
@@ -314,11 +314,11 @@ int main()
 constexpr const_reference back() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 String_view의 마지막 요소에 대 한 const_reference입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 String_view 비어 있는 경우 예외를 throw 합니다.
 
@@ -361,7 +361,7 @@ constexpr basic_string_view(const charT* str, size_type len);
 *len*\
 뷰에 포함할 문자 수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 차트 * 매개 변수를 사용 하는 생성자는 입력이 null로 종료 된 것으로 가정 하지만 종료 null은 string_view에 포함 되지 않습니다.
 
@@ -375,7 +375,7 @@ constexpr basic_string_view(const charT* str, size_type len);
 constexpr const_iterator begin() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 첫 번째 요소를 주소 지정 하는 const_iterator을 반환 합니다.
 
 ## <a name="cbegin"></a>  basic_string_view::cbegin
@@ -386,7 +386,7 @@ constexpr const_iterator begin() const noexcept;
 constexpr const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **상수** 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
@@ -398,11 +398,11 @@ constexpr const_iterator cbegin() const noexcept;
 constexpr const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위 끝의 바로 다음을 가리키는 **const** 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
@@ -439,11 +439,11 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 *ptr*\
 이 string_view 비교할 C 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 string_view *strv* 또는 *ptr*보다 작은 경우 음수 값입니다. 두 문자 시퀀스가 같으면 0이 고, 그렇지 않으면 0입니다. 또는이 string_view *strv* 또는 *ptr*보다 큰 경우 양수 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `compare` 멤버 함수는 각 문자 시퀀스의 전체 또는 일부에 대 한 대/소문자를 구분 하는 비교를 수행 합니다. 
 
@@ -574,11 +574,11 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 *오프셋*\
 복사본을 만들 원본 string_view의 시작 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실제로 복사된 문자 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Null 문자는 복사본의 끝에 추가되지 않습니다.
 
@@ -607,11 +607,11 @@ _ 원본 문자열부터 복사할 문자 수를 *계산* 합니다.
 *_Off*\
 복사본을 만들 원본 문자열의 시작 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실제로 복사된 문자 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Null 문자는 복사본의 끝에 추가되지 않습니다.
 
@@ -625,7 +625,7 @@ Null 문자는 복사본의 끝에 추가되지 않습니다.
 constexpr const_reverse_iterator crbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 string_view에서 첫 번째 요소의 주소를 처리 하는 const_reverse_iterator입니다. 
 
@@ -637,7 +637,7 @@ constexpr const_reverse_iterator crbegin() const noexcept;
 constexpr const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 string_view의 끝을 지나서 주소를 const_reverse_iterator를 반환 합니다.
 
@@ -649,11 +649,11 @@ String_view를 생성 하는 데 사용 된 개체의 const 문자 시퀀스에 
 constexpr value_type *data() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자 시퀀스의 첫 번째 요소에 대 한 const 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 포인터는 문자를 수정할 수 없습니다.
 
@@ -667,11 +667,11 @@ String_view에 문자가 포함 되어 있는지 여부를 테스트 합니다.
 constexpr bool empty() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 string_view 개체에 문자가 포함 되어 있으면 **true** 이 고, 그렇지 않으면입니다. 하나 이상의 문자가 있는 경우 **false** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 [size](#size)() = = 0과 동일 합니다.
 
@@ -683,11 +683,11 @@ string_view 개체에 문자가 포함 되어 있으면 **true** 이 고, 그렇
 constexpr const_iterator end() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 마지막 요소를 지난 요소를 가리키는 임의 액세스 const_iterator을 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `end`은 const_iterator string_view의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
@@ -719,7 +719,7 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 *개수*\
 첫 번째 문자부터 앞으로 계산 되는 *ptr*의 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -751,7 +751,7 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) co
 *개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -783,7 +783,7 @@ constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 *str*\
 멤버 함수가 검색할 string_view입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -815,7 +815,7 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) 
 *개수*\
 첫 번째 문자에서 앞으로 계산 되는 문자 수입니다 ( *ptr*).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `string_view::npos`입니다.
 
@@ -847,7 +847,7 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 *개수*\
 멤버 함수가 검색할 C 문자열에서 첫 번째 문자부터 앞으로 계산 되는 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 검색되는 부분 문자열의 마지막 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -859,11 +859,11 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 constexpr const_reference front() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 요소에 대 한 const_reference입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 String_view 비어 있는 경우 예외를 throw 합니다.
 
@@ -875,7 +875,7 @@ String_view 비어 있는 경우 예외를 throw 합니다.
 constexpr size_type length() const noexcept;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 [size](#size)와 동일합니다.
 
@@ -887,11 +887,11 @@ String_view 포함할 수 있는 최대 문자 수를 반환 합니다.
 constexpr size_type max_size() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 String_view에 포함할 수 있는 최대 문자 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 작업에서 길이가 [ 보다 큰 string_view를 생성 하는 경우 ](../standard-library/length-error-class.md)length_error`max_size()` 형식의 예외가 throw 됩니다.
 
@@ -902,12 +902,14 @@ String_view 또는 변환할 수 있는 문자열 개체를 다른 string_view�
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
+
 ### <a name="example"></a>예제
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
+
 ## <a name="op_at"></a>  basic_string_view::operator[]
 
 지정 된 인덱스를 사용 하 여 문자에 대 한 const_reference를 제공 합니다.
@@ -921,11 +923,11 @@ constexpr const_reference operator[](size_type offset) const;
 *오프셋*\
 참조할 요소의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수 인덱스에 지정 된 위치에 있는 문자에 대 한 const_reference입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 요소의 인덱스는 0이 고, 다음 요소는 양의 정수로 연속적으로 인덱싱됩니다. 따라서 길이 *n* 의 string_view *n 번째 요소가*숫자 *n* -1로 인덱싱됩니다.
 
@@ -945,11 +947,11 @@ constexpr const_reference operator[](size_type offset) const;
 constexpr const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 string_view의 첫 번째 요소에 대 한 임의 액세스 반복기를 반환 하 여 해당 하는 역방향이 해제 된 string_view에서 마지막 요소가 될 항목을 해결 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 string_view에서 [begin](#begin) 이 사용 되는 것 처럼 `rbegin`는 역방향 string_view와 함께 사용 됩니다. `rbegin`를 사용 하 여 반복을 뒤로 초기화할 수 있습니다.
 
@@ -961,7 +963,7 @@ string_view에서 [begin](#begin) 이 사용 되는 것 처럼 `rbegin`는 역�
 constexpr void remove_prefix(size_type n);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 데이터를 변경 되지 않은 상태로 유지 합니다. String_view 포인터를 n 요소로 앞으로 이동 하 고 개인 `size` 데이터 멤버를 크기-n으로 설정 합니다.
 
@@ -973,7 +975,7 @@ constexpr void remove_prefix(size_type n);
 constexpr void remove_suffix(size_type n);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 데이터와 포인터를 변경 하지 않고 그대로 둡니다. Private `size` 데이터 멤버를 size-n으로 설정 합니다.
 
@@ -985,11 +987,11 @@ constexpr void remove_suffix(size_type n);
 constexpr reverse_iterator rend() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 string_view에서 마지막 요소를 지난 요소를 가리키는 const 역방향 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 string_view에서 [end](#end) 가 사용 되는 것 처럼 `rend`는 역방향 string_view와 함께 사용 됩니다. `rend`는 역방향 반복기가 string_view 끝에 도달 했는지 여부를 테스트 하는 데 사용할 수 있습니다. `rend`에서 반환한 값은 역참조되지 않아야 합니다.
 
@@ -1021,7 +1023,7 @@ constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 *str*\
 멤버 함수가 검색할 string_view입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공할 경우 하위 문자열의 첫 번째 문자 인덱스입니다. 그렇지 않으면 `npos`합니다.
 
@@ -1033,11 +1035,11 @@ String_view의 요소 수를 반환 합니다.
 constexpr size_type size() const noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 String_view의 길이입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 예를 들어 string_view `remove_prefix` 및 `remove_suffix`등의 길이를 수정할 수 있습니다. 이는 기본 문자열 데이터를 수정 하지 않으므로 string_view의 크기는 기본 데이터의 크기가 아닐 수도 있습니다.
 
@@ -1057,7 +1059,7 @@ constexpr basic_string_view substr(size_type offset = 0, size_type count = npos)
 *개수*\
 하위 문자열 (있는 경우)에 포함할 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 요소 하위 시퀀스를 나타내는 string_view 개체입니다.
 

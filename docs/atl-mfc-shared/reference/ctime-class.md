@@ -2,7 +2,6 @@
 title: CTime 클래스
 ms.date: 10/18/2018
 f1_keywords:
-- CTime
 - ATLTIME/ATL::CTime
 - ATLTIME/ATL::CTime::CTime
 - ATLTIME/ATL::CTime::Format
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: daf2a0d884a6b7a74b5edde2ed7db3b6aeea368d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d62cca42e3110974b07dae143bafcf807fed7e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491569"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440493"
 ---
 # <a name="ctime-class"></a>CTime 클래스
 
@@ -42,32 +41,32 @@ ms.locfileid: "69491569"
 class CTime
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CTime::CTime](#ctime)|여러 `CTime` 가지 방법으로 개체를 생성 합니다.|
+|[CTime::CTime](#ctime)|`CTime` 개체를 다양 한 방식으로 생성 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CTime::Format](#format)|로컬 표준 `CTime` 시간대를 기준으로 개체를 형식이 지정 된 문자열로 변환 합니다.|
-|[CTime::FormatGmt](#formatgmt)|UTC를 `CTime` 기준으로 개체를 형식이 지정 된 문자열로 변환 합니다.|
-|[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|`CTime` 개체에 저장 된 시간 정보를 Win32 호환 dbtimestamp 구조체로 변환 합니다.|
+|[CTime::Format](#format)|현지 표준 시간대를 기준으로 `CTime` 개체를 형식이 지정 된 문자열로 변환 합니다.|
+|[CTime::FormatGmt](#formatgmt)|UTC를 기준으로 `CTime` 개체를 형식이 지정 된 문자열로 변환 합니다.|
+|[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|`CTime` 개체에 저장 된 시간 정보를 Win32 호환 DBTIMESTAMP 구조체로 변환 합니다.|
 |[CTime::GetAsSystemTime](#getassystemtime)|`CTime` 개체에 저장 된 시간 정보를 Win32 호환 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체로 변환 합니다.|
-|[CTime::GetCurrentTime](#getcurrenttime)|현재 시간 `CTime` (정적 멤버 함수)을 나타내는 개체를 만듭니다.|
+|[CTime::GetCurrentTime](#getcurrenttime)|현재 시간 (정적 멤버 함수)을 나타내는 `CTime` 개체를 만듭니다.|
 |[CTime::GetDay](#getday)|`CTime` 개체에 의해 표시 되는 일을 반환 합니다.|
 |[CTime::GetDayOfWeek](#getdayofweek)|`CTime` 개체가 나타내는 요일을 반환 합니다.|
-|[CTime::GetGmtTm](#getgmttm)|UTC를 기준 `CTime` 으로 개체를 구성 요소로 분할 합니다.|
+|[CTime::GetGmtTm](#getgmttm)|UTC를 기준으로 `CTime` 개체를 구성 요소로 분할 합니다.|
 |[CTime::GetHour](#gethour)|`CTime` 개체가 나타내는 시간을 반환 합니다.|
-|[CTime::GetLocalTm](#getlocaltm)|로컬 표준 시간대 `CTime` 를 기준으로 개체를 구성 요소로 분할 합니다.|
+|[CTime::GetLocalTm](#getlocaltm)|로컬 표준 시간대에 따라 `CTime` 개체를 구성 요소로 분할 합니다.|
 |[CTime::GetMinute](#getminute)|`CTime` 개체가 나타내는 분을 반환 합니다.|
 |[CTime::GetMonth](#getmonth)|`CTime` 개체가 나타내는 월을 반환 합니다.|
 |[CTime::GetSecond](#getsecond)|`CTime` 개체가 나타내는 두 번째를 반환 합니다.|
-|[CTime::GetTime](#gettime)|지정`CTime` 된 개체에 대 한 **__time64_t** 값을 반환 합니다.|
+|[CTime::GetTime](#gettime)|지정 된 `CTime` 개체에 대 한 **__time64_t** 값을 반환 합니다.|
 |[CTime::GetYear](#getyear)|`CTime` 개체가 나타내는 연도를 반환 합니다.|
 |[CTime::Serialize64](#serialize64)|보관 파일에서 데이터를 직렬화 합니다.|
 
@@ -75,7 +74,7 @@ class CTime
 
 |||
 |-|-|
-|[operator +-](#operator_add_-)|이러한 연산자는 및 개체 `CTimeSpan` 를 `CTime` 추가 하 고 뺍니다.|
+|[operator +-](#operator_add_-)|이러한 연산자는 `CTimeSpan` 및 `CTime` 개체를 추가 하 고 뺍니다.|
 |[operator + =,-=](#operator_add_eq_-_eq)|이러한 연산자는 `CTimeSpan` 개체를 추가 하 고이 `CTime` 개체에서 뺍니다.|
 |[operator =](#operator_eq)|할당 연산자입니다.|
 |[operator ==, < , etc.](#ctime_comparison_operators)|비교 연산자.|
@@ -84,21 +83,21 @@ class CTime
 
 `CTime`에 기본 클래스가 없습니다.
 
-`CTime`값은 UTC (협정 세계시)를 기반으로 하며 협정 세계시 (그리니치 표준시, GMT)와 동일 합니다. 표준 시간대를 결정 하는 방법에 대 한 자세한 내용은 [시간 관리](../../c-runtime-library/time-management.md) 를 참조 하세요.
+`CTime` 값은 협정 세계시 (그리니치 표준시, GMT)와 동일한 UTC (협정 세계시)를 기반으로 합니다. 표준 시간대를 결정 하는 방법에 대 한 자세한 내용은 [시간 관리](../../c-runtime-library/time-management.md) 를 참조 하세요.
 
-개체를 `CTime` 만들 때 `nDST` 매개 변수를 0으로 설정 하 여 표준 시간이 적용 되 고 있음을 나타내거나 0 보다 큰 값으로 설정 하 여 일광 절약 시간이 적용 되 고 있는지 또는 0 보다 작은 값으로 설정 하 여 C 런타임 라이브러리 코드를 포함 합니다. e 표준 시간 또는 일광 절약 시간이 적용 되는지 여부입니다. `tm_isdst`는 필수 필드입니다. 설정 하지 않으면 해당 값이 정의 되지 않고 [mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) 의 반환 값을 예측할 수 없습니다. `timeptr`가 [asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md) 또는 [localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)에 대한 이전 호출에서 반환된 tm 구조를 가리키면 `tm_isdst`필드에 올바른 값이 포함됩니다.
+`CTime` 개체를 만들 때 `nDST` 매개 변수를 0으로 설정 하 여 표준 시간이 적용 되 고 있음을 나타내거나 0 보다 큰 값으로 설정 하 여 일광 절약 시간이 적용 되 고 있음을 나타내거나 0 보다 작은 값으로 설정 하 여 표준 시간 또는 일광 절약 시간이 적용 되는지 여부를 C 런타임 라이브러리 코드에서 계산 하도록 지정 합니다. `tm_isdst`는 필수 필드입니다. 설정 하지 않으면 해당 값이 정의 되지 않고 [mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) 의 반환 값을 예측할 수 없습니다. `timeptr`가 [asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md) 또는 [localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)에 대한 이전 호출에서 반환된 tm 구조를 가리키면 `tm_isdst`필드에 올바른 값이 포함됩니다.
 
 동반 클래스인 [Ctimespan](../../atl-mfc-shared/reference/ctimespan-class.md)은 시간 간격을 나타냅니다.
 
-`CTime` 및`CTimeSpan` 클래스는 파생을 위해 디자인 되지 않았습니다. 가상 함수가 없으므로 및 `CTime` `CTimeSpan` 개체의 크기는 정확히 8 바이트입니다. 대부분의 멤버 함수는 인라인 함수입니다.
+`CTime` 및 `CTimeSpan` 클래스는 파생을 위해 디자인 되지 않았습니다. 가상 함수가 없기 때문에 `CTime` 및 `CTimeSpan` 개체의 크기는 정확히 8 바이트입니다. 대부분의 멤버 함수는 인라인 함수입니다.
 
 > [!NOTE]
 >  상한 날짜 제한은 12/31/3000입니다. 한도는 오전 1/1/1970 12:00:00 시 GMT입니다.
 
-사용 `CTime`에 대 한 자세한 내용은 런타임 라이브러리 참조의 [날짜 및 시간](../../atl-mfc-shared/date-and-time.md)및 [시간 관리](../../c-runtime-library/time-management.md) 문서를 참조 하세요.
+`CTime`사용에 대 한 자세한 내용은 런타임 라이브러리 참조의 [날짜 및 시간](../../atl-mfc-shared/date-and-time.md)및 [시간 관리](../../c-runtime-library/time-management.md) 문서를 참조 하세요.
 
 > [!NOTE]
->  `CTime` 구조가 mfc 7.1에서 mfc 8.0로 변경 되었습니다. Mfc 8.0 이상 버전 `CTime` 의 **< < 연산자** 를 사용 하 여 구조체를 serialize 하는 경우 이전 버전의 mfc에서는 결과 파일을 읽을 수 없습니다.
+>  `CTime` 구조가 MFC 7.1에서 MFC 8.0로 변경 되었습니다. MFC 8.0 이상 버전에서 **연산자 < <** 를 사용 하 여 `CTime` 구조를 serialize 하는 경우 이전 버전의 mfc에서는 결과 파일을 읽을 수 없습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -122,7 +121,7 @@ bool operator>=(CTime time) const throw();
 *time*<br/>
 비교할 `CTime` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이러한 연산자는 두 개의 절대 시간을 비교 하 고 조건이 true 이면 TRUE를 반환 합니다. 그렇지 않으면 FALSE입니다.
 
@@ -132,7 +131,7 @@ bool operator>=(CTime time) const throw();
 
 ##  <a name="ctime"></a>  CTime::CTime
 
-지정 된 시간 `CTime` 을 사용 하 여 초기화 된 새 개체를 만듭니다.
+지정 된 시간을 사용 하 여 초기화 된 새 `CTime` 개체를 만듭니다.
 
 ```
 CTime() throw();
@@ -148,13 +147,13 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ### <a name="parameters"></a>매개 변수
 
 *timeSrc*<br/>
-이미 존재 `CTime` 하는 개체를 나타냅니다.
+이미 존재 하는 `CTime` 개체를 나타냅니다.
 
 *time*<br/>
-`__time64_t` 시간 값입니다 .이 값은 1970 UTC 이후의 시간 (초)입니다. 이는 현지 시간으로 조정 됩니다. 예를 들어 뉴욕에 있는 경우 0의 매개 변수를 `CTime` 전달 하 여 개체를 만들면 [CTime:: GetMonth](#getmonth) 는 12를 반환 합니다.
+`__time64_t` 시간 값입니다 .이 값은 1970 UTC 이후의 시간 (초)입니다. 이는 현지 시간으로 조정 됩니다. 예를 들어 뉴욕에 있는 경우 매개 변수 0을 전달 하 여 `CTime` 개체를 만들면 [CTime:: GetMonth](#getmonth) 는 12를 반환 합니다.
 
 *nYear*, *nMonth*, *nDay*, *nHour*, *nMin*, *nSec*<br/>
-새 `CTime` 개체에 복사할 날짜 및 시간 값을 나타냅니다.
+새 `CTime` 개체로 복사할 날짜 및 시간 값을 나타냅니다.
 
 *nDST*<br/>
 일광 절약 시간이 적용 되는지 여부를 나타냅니다. 다음 세 가지 값 중 하나를 사용할 수 있습니다.
@@ -169,10 +168,10 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 날짜/시간 값으로 변환 되 고 새 `CTime` 개체로 복사 되는 MS-DOS 날짜 및 시간 값입니다.
 
 *st*<br/>
-날짜/시간 값으로 변환되고 새 `CTime`개체로 복사되는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체입니다.
+날짜/시간 값으로 변환되고 새 [개체로 복사되는 ](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)SYSTEMTIME`CTime` 구조체입니다.
 
 *ft*<br/>
-날짜/시간 값으로 변환되고 새 `CTime` 개체로 복사 되는 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 구조체입니다.
+날짜/시간 값으로 변환되고 새 [ 개체로 복사 되는 ](/windows/win32/api/minwinbase/ns-minwinbase-filetime)FILETIME`CTime` 구조체입니다.
 
 *dbts*<br/>
 현재 현지 시간을 포함 하는 DBTIMESTAMP 구조체에 대 한 참조입니다.
@@ -181,13 +180,13 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 
 각 생성자에 대 한 설명은 다음과 같습니다.
 
-- `CTime();`초기화 되지 않은 `CTime` 개체를 생성 합니다. 이 생성자를 사용 하 여 `CTime` 개체 배열을 정의할 수 있습니다. 를 사용 하기 전에 유효한 시간으로 이러한 배열을 초기화 해야 합니다.
+- `CTime();` 초기화 되지 않은 `CTime` 개체를 생성 합니다. 이 생성자를 사용 하면 `CTime` 개체 배열을 정의할 수 있습니다. 를 사용 하기 전에 유효한 시간으로 이러한 배열을 초기화 해야 합니다.
 
-- `CTime( const CTime& );``CTime` 다른`CTime` 값에서 개체를 생성 합니다.
+- `CTime( const CTime& );` 다른 `CTime` 값에서 `CTime` 개체를 생성 합니다.
 
-- `CTime( __time64_t );``CTime` **__Time64_t** 형식에서 개체를 생성 합니다. 이 생성자는 UTC 시간이 필요 하며 결과를 저장 하기 전에 결과를 현지 시간으로 변환 합니다.
+- `CTime( __time64_t );` **__time64_t** 형식에서 `CTime` 개체를 생성 합니다. 이 생성자는 UTC 시간이 필요 하며 결과를 저장 하기 전에 결과를 현지 시간으로 변환 합니다.
 
-- `CTime( int, int, ...);`각 구성 `CTime` 요소를 다음 범위로 제한 하는 로컬 시간 구성 요소에서 개체를 생성 합니다.
+- `CTime( int, int, ...);`는 각 구성 요소를 다음 범위로 제한 하는 현지 시간 구성 요소에서 `CTime` 개체를 생성 합니다.
 
    |구성 요소|범위|
    |---------------|-----------|
@@ -200,14 +199,14 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 
    이 생성자는 UTC로의 적절 한 변환을 수행 합니다. 하나 이상의 시간 구성 요소가 범위를 벗어난 경우 MFC 라이브러리의 디버그 버전에서 어설션 합니다. 를 호출 하기 전에 인수의 유효성을 검사 해야 합니다. 이 생성자에는 현지 시간이 필요 합니다.
 
-- `CTime( WORD, WORD );`지정 된 `CTime` MS-DOS 날짜 및 시간 값에서 개체를 생성 합니다. 이 생성자에는 현지 시간이 필요 합니다.
+- `CTime( WORD, WORD );` 지정 된 MS-DOS 날짜 및 시간 값에서 `CTime` 개체를 생성 합니다. 이 생성자에는 현지 시간이 필요 합니다.
 
-- `CTime( const SYSTEMTIME& );`구조체에서 개체를 `CTime` 생성 합니다. `SYSTEMTIME` 이 생성자에는 현지 시간이 필요 합니다.
+- `CTime( const SYSTEMTIME& );` `SYSTEMTIME` 구조체에서 `CTime` 개체를 생성 합니다. 이 생성자에는 현지 시간이 필요 합니다.
 
-- `CTime( const FILETIME& );`구조체에서 개체를 `CTime` 생성 합니다. `FILETIME` 초기화는 직접 사용 `CTime FILETIME` 하지 않을 가능성이 높습니다. 개체를 `CFile` 사용 하 여 `CFile::GetStatus` 파일을 조작 하는 경우는 `FILETIME` 구조체를 사용 하 여 초기화 된 `CTime` 개체를 통해 파일 타임 스탬프를 검색 합니다. 이 생성자는 UTC를 기준으로 시간을 가정 하 고 결과를 저장 하기 전에 값을 현지 시간으로 자동으로 변환 합니다.
+- `CTime( const FILETIME& );` `FILETIME` 구조체에서 `CTime` 개체를 생성 합니다. `CTime FILETIME` 초기화를 직접 사용 하지 않을 가능성이 높습니다. `CFile` 개체를 사용 하 여 파일을 조작 하는 경우 `CFile::GetStatus`는 `FILETIME` 구조를 사용 하 여 초기화 된 `CTime` 개체를 통해 파일 타임 스탬프를 검색 합니다. 이 생성자는 UTC를 기준으로 시간을 가정 하 고 결과를 저장 하기 전에 값을 현지 시간으로 자동으로 변환 합니다.
 
    > [!NOTE]
-   > 매개 변수를 `DBTIMESTAMP` 사용 하는 생성자는 OLEDB가 포함 된 경우에만 사용할 수 있습니다.
+   > `DBTIMESTAMP` 매개 변수를 사용 하는 생성자는 OLEDB가 포함 된 경우에만 사용할 수 있습니다.
 
 자세한 내용은 Windows SDK [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 및 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 구조를 참조 하세요. 또한 Windows SDK의 [MS-DOS 날짜 및 시간](/windows/win32/SysInfo/ms-dos-date-and-time) 항목을 참조 하세요.
 
@@ -227,12 +226,12 @@ CString Format(UINT nFormatID) const;
 ### <a name="parameters"></a>매개 변수
 
 *pszFormat*<br/>
-`printf` 서식 지정 문자열과 유사한 형식 문자열입니다. 백분율 (`%`) 기호가 앞에 나오는 서식 지정 코드는 해당 `CTime` 구성 요소로 대체 됩니다. 서식 문자열의 다른 문자는 변경 되지 않은 상태로 반환 된 문자열에 복사 됩니다. 형식 지정 코드 목록은 런타임 함수 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 을 참조 하세요.
+`printf` 서식 문자열과 유사한 형식 문자열입니다. 백분율 (`%`) 기호가 앞에 나오는 서식 지정 코드는 해당 `CTime` 구성 요소로 대체 됩니다. 서식 문자열의 다른 문자는 변경 되지 않은 상태로 반환 된 문자열에 복사 됩니다. 형식 지정 코드 목록은 런타임 함수 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 을 참조 하세요.
 
 *nFormatID*<br/>
 이 형식을 식별 하는 문자열의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 형식이 지정 된 시간을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -258,12 +257,12 @@ CString FormatGmt(UINT nFormatID) const;
 ### <a name="parameters"></a>매개 변수
 
 *pszFormat*<br/>
-`printf` 서식 지정 문자열과 유사한 형식 지정 문자열을 지정 합니다. 자세한 내용은 런타임 함수 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 을 참조 하세요.
+`printf` 서식 문자열과 유사한 형식 지정 문자열을 지정 합니다. 자세한 내용은 런타임 함수 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 을 참조 하세요.
 
 *nFormatID*<br/>
 이 형식을 식별 하는 문자열의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 형식이 지정 된 시간을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -279,7 +278,7 @@ CString FormatGmt(UINT nFormatID) const;
 
 ##  <a name="getasdbtimestamp"></a>  CTime::GetAsDBTIMESTAMP
 
-`CTime` 개체에 저장 된 시간 정보를 Win32 호환 dbtimestamp 구조체로 변환 하려면이 멤버 함수를 호출 합니다.
+`CTime` 개체에 저장 된 시간 정보를 Win32 호환 DBTIMESTAMP 구조체로 변환 하려면이 멤버 함수를 호출 합니다.
 
 ```
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
@@ -290,13 +289,13 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 *dbts*<br/>
 현재 현지 시간을 포함 하는 DBTIMESTAMP 구조체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-결과 시간을 참조 되는 *dbts* 구조체에 저장 합니다. 이 `DBTIMESTAMP` 함수에 의해 초기화 되는 데이터 구조의 `fraction` 멤버는 0으로 설정 됩니다.
+결과 시간을 참조 되는 *dbts* 구조체에 저장 합니다. 이 함수에 의해 초기화 된 `DBTIMESTAMP` 데이터 구조의 `fraction` 멤버가 0으로 설정 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -315,13 +314,13 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 *timeDest*<br/>
 `CTime` 개체의 변환 된 날짜/시간 값을 보유 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-`GetAsSystemTime`결과 시간을 참조 된 *Timedest* 구조에 저장 합니다. 이 `SYSTEMTIME` 함수에 의해 초기화 되는 데이터 구조의 `wMilliseconds` 멤버는 0으로 설정 됩니다.
+`GetAsSystemTime`은 결과 시간을 참조 된 *Timedest* 구조에 저장 합니다. 이 함수에 의해 초기화 된 `SYSTEMTIME` 데이터 구조의 `wMilliseconds` 멤버가 0으로 설정 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -329,7 +328,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ##  <a name="getcurrenttime"></a>  CTime::GetCurrentTime
 
-현재 시간 `CTime` 을 나타내는 개체를 반환 합니다.
+현재 시간을 나타내는 `CTime` 개체를 반환 합니다.
 
 ```
 static CTime WINAPI GetCurrentTime() throw();
@@ -351,13 +350,13 @@ static CTime WINAPI GetCurrentTime() throw();
 int GetDay() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 1에서 31 사이의 날짜를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -371,13 +370,13 @@ int GetDay() const throw();
 int GetDayOfWeek() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 요일을 반환 합니다. 1 = 일요일, 2 = 월요일, 7 = 토요일
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -385,7 +384,7 @@ int GetDayOfWeek() const throw();
 
 ##  <a name="getgmttm"></a>  CTime::GetGmtTm
 
-이`CTime` 개체에 포함 된 시간의 분해를 포함 하는 **struct tm** 을 가져옵니다.
+이 `CTime` 개체에 포함 된 시간의 분해를 포함 하는 **struct tm** 을 가져옵니다.
 
 ```
 struct tm* GetGmtTm(struct tm* ptm) const;
@@ -396,15 +395,15 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 *ptm*<br/>
 는 시간 데이터를 수신 하는 버퍼를 가리킵니다. 이 포인터가 NULL 이면 예외가 throw 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-포함 파일 시간에 정의 된 대로 채워진 **struct tm** 에 대 한 포인터입니다. 넣기. 구조 레이아웃은 [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 를 참조 하세요.
+포함 파일 시간에 정의 된 대로 채워진 **struct tm** 에 대 한 포인터입니다. 넣기. 구조 레이아웃에 대해서는 [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 을 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-`GetGmtTm`UTC를 반환 합니다.
+`GetGmtTm`은 UTC를 반환 합니다.
 
-*ptm* 은 NULL 일 수 없습니다. 정적으로 할당 된 내부 버퍼를 사용 해야 함을 나타내기 위해 *ptm* 이 NULL 일 수 있는 이전 동작으로 되돌리려면 _SECURE_ATL
+*ptm* 은 NULL 일 수 없습니다. 정적으로 할당 된 내부 버퍼를 사용 해야 함을 나타내기 위해 *ptm* 이 NULL 일 수 있는 이전 동작으로 되돌리려면 _SECURE_ATL를 해제 합니다.
 
 ### <a name="example"></a>예제
 
@@ -418,13 +417,13 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 int GetHour() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 0에서 23 사이의 시간을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -432,7 +431,7 @@ int GetHour() const throw();
 
 ##  <a name="getlocaltm"></a>  CTime::GetLocalTm
 
-이`CTime` 개체에 포함 된 시간의 분해를 포함 하는 **struct tm** 을 가져옵니다.
+이 `CTime` 개체에 포함 된 시간의 분해를 포함 하는 **struct tm** 을 가져옵니다.
 
 ```
 struct tm* GetLocalTm(struct tm* ptm) const;
@@ -443,15 +442,15 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 *ptm*<br/>
 는 시간 데이터를 수신 하는 버퍼를 가리킵니다. 이 포인터가 NULL 이면 예외가 throw 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-포함 파일 시간에 정의 된 대로 채워진 **struct tm** 에 대 한 포인터입니다. 넣기. 구조 레이아웃은 [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 를 참조 하세요.
+포함 파일 시간에 정의 된 대로 채워진 **struct tm** 에 대 한 포인터입니다. 넣기. 구조 레이아웃에 대해서는 [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 을 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-`GetLocalTm`현지 시간을 반환 합니다.
+`GetLocalTm`은 현지 시간을 반환 합니다.
 
-*ptm* 은 NULL 일 수 없습니다. 정적으로 할당 된 내부 버퍼를 사용 해야 함을 나타내기 위해 *ptm* 이 NULL 일 수 있는 이전 동작으로 되돌리려면 _SECURE_ATL
+*ptm* 은 NULL 일 수 없습니다. 정적으로 할당 된 내부 버퍼를 사용 해야 함을 나타내기 위해 *ptm* 이 NULL 일 수 있는 이전 동작으로 되돌리려면 _SECURE_ATL를 해제 합니다.
 
 ### <a name="example"></a>예제
 
@@ -465,13 +464,13 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 int GetMinute() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 0에서 59 사이의 분을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -485,13 +484,13 @@ int GetMinute() const throw();
 int GetMonth() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 1부터 12 까지의 시간 (1 = 1 월)을 기준으로 월을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -505,13 +504,13 @@ int GetMonth() const throw();
 int GetSecond() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현지 시간을 기준으로 0에서 59 사이의 두 번째를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -519,15 +518,15 @@ int GetSecond() const throw();
 
 ##  <a name="gettime"></a>  CTime::GetTime
 
-지정`CTime` 된 개체에 대 한 **__time64_t** 값을 반환 합니다.
+지정 된 `CTime` 개체에 대 한 **__time64_t** 값을 반환 합니다.
 
 ```
 __time64_t GetTime() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`GetTime`는 현재 `CTime` 개체와 1970 년 1 월 1 일 사이의 시간 (초)을 반환 합니다.
+`GetTime`은 현재 `CTime` 개체와 1970 년 1 월 1 일 사이의 시간 (초)을 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -541,13 +540,13 @@ __time64_t GetTime() const throw();
 int GetYear();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 1970 년 1 월 1 일부 터 2038 (포함) 사이의 현지 시간을 기준으로 연도를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `GetLocalTm`정적으로 할당 된 내부 버퍼를 사용 하는를 호출 합니다. 다른 `CTime` 멤버 함수에 대 한 호출로 인해이 버퍼의 데이터를 덮어씁니다.
+이 함수는 정적으로 할당 된 내부 버퍼를 사용 하는 `GetLocalTm`를 호출 합니다. 다른 `CTime` 멤버 함수를 호출 하 여이 버퍼의 데이터를 덮어씁니다.
 
 ### <a name="example"></a>예제
 
@@ -566,17 +565,17 @@ CTime& operator=(__time64_t time) throw();
 *time*<br/>
 새 날짜/시간 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 `CTime` 된 개체입니다.
+업데이트 된 `CTime` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-이 오버 로드 된 할당 연산자는 소스 시간을 `CTime` 이 개체에 복사 합니다. `CTime` 개체의 내부 시간 저장소는 표준 시간대에 독립적입니다. 할당 하는 동안 표준 시간대 변환은 필요 하지 않습니다.
+이 오버 로드 된 할당 연산자는 소스 시간을이 `CTime` 개체로 복사 합니다. `CTime` 개체의 내부 시간 저장소는 표준 시간대에 독립적입니다. 할당 하는 동안 표준 시간대 변환은 필요 하지 않습니다.
 
 ##  <a name="operator_add_-"></a>  CTime::operator +, -
 
-이러한 연산자는 및 개체 `CTimeSpan` 를 `CTime` 추가 하 고 뺍니다.
+이러한 연산자는 `CTimeSpan` 및 `CTime` 개체를 추가 하 고 뺍니다.
 
 ```
 CTime operator+(CTimeSpan timeSpan) const throw();
@@ -587,18 +586,18 @@ CTimeSpan operator-(CTime time) const throw();
 ### <a name="parameters"></a>매개 변수
 
 *timeSpan*<br/>
-추가 하거나 뺄 개체입니다. `CTimeSpan`
+추가 하거나 뺄 `CTimeSpan` 개체입니다.
 
 *time*<br/>
 뺄 `CTime` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-작업의 `CTimeSpan` 결과를 나타내는 또는개체입니다.`CTime`
+작업의 결과를 나타내는 `CTime` 또는 `CTimeSpan` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-`CTime`개체는 절대 시간을 `CTimeSpan` 나타내고 개체는 상대 시간을 나타냅니다. 처음 두 연산자를 사용 하면 개체를 개체에 `CTimeSpan` 추가 하 고 개체 `CTime` 에서 뺄 수 있습니다. 세 번째 연산자를 사용 하면 한 `CTime` 개체를 다른 개체에서 빼서 `CTimeSpan` 개체를 생성할 수 있습니다.
+`CTime` 개체는 절대 시간을 나타내며 `CTimeSpan` 개체는 상대 시간을 나타냅니다. 처음 두 연산자를 사용 하면 `CTimeSpan` 개체를 추가 하 고 `CTime` 개체에서 뺄 수 있습니다. 세 번째 연산자를 사용 하면 한 `CTime` 개체에서 다른 개체를 빼서 `CTimeSpan` 개체를 생성할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -616,15 +615,15 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="parameters"></a>매개 변수
 
 *span*<br/>
-추가 하거나 뺄 개체입니다. `CTimeSpan`
+추가 하거나 뺄 `CTimeSpan` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 `CTime` 된 개체입니다.
+업데이트 된 `CTime` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-이러한 연산자를 사용 하 여 개체를이 `CTimeSpan` 개체에 추가 하 고 `CTime` 이 개체에서 뺄 수 있습니다.
+이러한 연산자를 사용 하 여이 `CTime` 개체에서 `CTimeSpan` 개체를 추가 하 고 뺄 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -644,13 +643,13 @@ CArchive& Serialize64(CArchive& ar);
 ### <a name="parameters"></a>매개 변수
 
 *ar*<br/>
-업데이트 `CArchive` 하려는 개체입니다.
+업데이트 하려는 `CArchive` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 `CArchive` 된 개체입니다.
+업데이트 된 `CArchive` 개체입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)<br/>
 [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)<br/>

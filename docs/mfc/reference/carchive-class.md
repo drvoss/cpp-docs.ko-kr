@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855337"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424628"
 ---
 # <a name="carchive-class"></a>CArchive 클래스
 
@@ -69,17 +69,17 @@ ms.locfileid: "78855337"
 class CArchive
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CArchive::CArchive](#carchive)|`CArchive` 개체를 만듭니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CArchive::Abort](#abort)|예외를 throw 하지 않고 아카이브를 닫습니다.|
 |[CArchive::Close](#close)|기록 되지 않은 데이터를 플러시하고 `CFile`의 연결을 끊습니다.|
@@ -105,14 +105,14 @@ class CArchive
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CArchive:: operator &lt;&lt;](#operator_lt_lt)|개체 및 기본 형식을 보관 파일에 저장 합니다.|
 |[CArchive:: operator &gt;&gt;](#operator_gt_gt)|보관 파일에서 개체 및 기본 형식을 로드 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CArchive::m_pDocument](#m_pdocument)||
 
@@ -246,7 +246,7 @@ void Flush();
 CFile* GetFile() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용 중인 `CFile` 개체에 대 한 상수 포인터입니다.
 
@@ -266,7 +266,7 @@ CFile* GetFile() const;
 UINT GetObjectSchema();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Deserialization을 수행 하는 동안 읽을 개체의 버전입니다.
 
@@ -288,7 +288,7 @@ Deserialization을 수행 하는 동안 읽을 개체의 버전입니다.
 BOOL IsBufferEmpty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 보관의 버퍼가 비어 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -308,7 +308,7 @@ BOOL IsBufferEmpty() const;
 BOOL IsLoading() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 보관 파일이 현재 로드에 사용 되 고 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -328,7 +328,7 @@ BOOL IsLoading() const;
 BOOL IsStoring() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 보관이 현재 저장에 사용 되 고 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -435,7 +435,7 @@ CArchive& operator<<(ULONGLONG dwdw);
 CArchive& operator<<(LONGLONG dwdw);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 한 줄에 여러 삽입 연산자를 사용할 수 있도록 하는 `CArchive` 참조입니다.
 
@@ -515,7 +515,7 @@ CArchive& operator>>(ULONGLONG& dwdw);
 CArchive& operator>>(LONGLONG& dwdw);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 한 줄에 여러 추출 연산자를 사용할 수 있도록 하는 `CArchive` 참조입니다.
 
@@ -555,7 +555,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *nMax*<br/>
 보관 파일에서 읽을 바이트 수를 지정 하는 부호 없는 정수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실제로 읽은 바이트 수를 포함 하는 부호 없는 정수입니다. 반환 값이 요청 된 수보다 적으면 파일의 끝에 도달 했습니다. 파일 끝 조건에서는 예외가 throw 되지 않습니다.
 
@@ -591,7 +591,7 @@ CRuntimeClass* ReadClass(
 *pObTag*<br/>
 개체의 고유 태그를 참조 하는 숫자입니다. [ReadObject](#readobject)구현에서 내부적으로 사용 됩니다. 고급 프로그래밍에만 노출 됩니다. *Pobtag* 는 일반적으로 NULL 이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 구조체에 대 한 포인터입니다.
 
@@ -622,7 +622,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 *pClass*<br/>
 읽을 것으로 간주 되는 개체에 해당 하는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 구조체에 대 한 상수 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Cobject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)를 사용 하 여 올바른 파생 클래스로 안전 하 게 캐스팅 해야 하는 [cobject](../../mfc/reference/cobject-class.md) 포인터입니다.
 
@@ -656,7 +656,7 @@ Null로 종료 되는 텍스트 문자열을 받을 사용자 제공 버퍼에 �
 *nMax*<br/>
 읽을 최대 문자 수를 지정 합니다. 는 *lpsz* 버퍼의 크기 보다 하나 작아야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 BOOL을 반환 하는 버전에서 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 

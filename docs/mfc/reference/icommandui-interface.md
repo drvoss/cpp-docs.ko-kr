@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866583"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445698"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 인터페이스
 
@@ -60,6 +60,7 @@ MFC에서 사용자 인터페이스 명령을 관리 하는 방법에 대 한 �
 ## <a name="check"></a>ICommandUI:: Check
 
 이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ property UICheckState Check;
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 현재 메시지를 처리기 체인으로 계속 라우팅하는 명령 라우팅 메커니즘에 지시 합니다.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ FALSE를 반환 하는 ON_COMMAND_EX 처리기와 함께 사용 해야 하는 �
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
 이 명령에 대 한 사용자 인터페이스 항목을 사용 하거나 사용 하지 않도록 설정 합니다.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ property bool Enabled;
 ## <a name="id"></a>ICommandUI:: ID
 
 ICommandUI 개체가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ property unsigned int ID;
 ## <a name="index"></a>ICommandUI:: Index
 
 ICommandUI 개체가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ property unsigned int Index;
 ## <a name="radio"></a>ICommandUI:: Radio
 
 이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ property bool Radio;
 ## <a name="text"></a>ICommandUI:: Text
 
 이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다.
+
 ```
 property String^ Text;
 ```

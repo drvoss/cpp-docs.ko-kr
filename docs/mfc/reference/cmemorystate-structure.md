@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855347"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426140"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 구조체
 
@@ -25,24 +25,24 @@ ms.locfileid: "78855347"
 struct CMemoryState
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMemoryState:: CMemoryState](#cmemorystate)|메모리 검사점을 제어 하는 클래스와 비슷한 구조를 생성 합니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMemoryState:: Checkpoint](#checkpoint)|현재 메모리 상태의 스냅숏 (검사점)을 가져옵니다.|
 |[CMemoryState::D ifference](#difference)|`CMemoryState`형식의 두 개체 간의 차이를 계산 합니다.|
 |[CMemoryState::D umpAllObjectsSince](#dumpallobjectssince)|이전 검사점 이후 현재 할당 된 모든 개체의 요약을 덤프 합니다.|
 |[CMemoryState::D umpStatistics](#dumpstatistics)|`CMemoryState` 개체에 대 한 메모리 할당 통계를 인쇄 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `CMemoryState` 구조체 이며 기본 클래스가 없습니다.
 
@@ -83,7 +83,7 @@ struct CMemoryState
 void Checkpoint();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `CMemoryState` 멤버 함수 [차이점](#difference) 및 [DumpAllObjectsSince](#dumpallobjectssince) 이 스냅숏 데이터를 사용 합니다.
 
@@ -121,11 +121,11 @@ BOOL Difference(
 *newState*<br/>
 `CMemoryState` 검사점에 정의 된 새 메모리 상태입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 메모리 상태가 서로 다르면 0이 아닙니다. 그렇지 않으면 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 개의 메모리 상태 매개 변수에 대해 [검사점](#checkpoint) 이 호출 되어야 합니다.
 
@@ -141,7 +141,7 @@ BOOL Difference(
 void DumpAllObjectsSince() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 초기화 되지 않은 `CMemoryState` 개체를 사용 하 여 `DumpAllObjectsSince`를 호출 하면 현재 메모리에 있는 모든 개체를 덤프 합니다.
 
@@ -157,7 +157,7 @@ void DumpAllObjectsSince() const;
 void DumpStatistics() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [AfxDump](diagnostic-services.md#afxdump) 장치에 인쇄 되는 보고서에는 다음이 표시 됩니다.
 

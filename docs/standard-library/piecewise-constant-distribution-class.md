@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455241"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446205"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 클래스
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 클래스
 
 각 간격의 확률이 균일하고 폭이 다양한 간격이 있는 부분 일정 분포를 생성합니다.
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:** \<무작위 >
 
 **네임스페이스:** std
 
@@ -248,19 +248,19 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*firstI*\
+*Firsti*\
 대상 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
-*lastI*\
+*Lasti*\
 대상 범위에 있는 마지막 요소의 입력 반복기입니다.
 
-*firstW*\
+*Firstw*\
 가중치 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
-*구간*\
+*간격*\
 분포의 간격이 있는 [initializer_list](../cpp/initializers.md)입니다.
 
-*수*\
+*개수*\
 분포 범위의 요소 수입니다.
 
 *xmin*\
@@ -280,6 +280,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
 기본 생성자는 저장된 매개 변수를 설정합니다. 따라서 확률 밀도가 1인 0~1 간격이 하나 있습니다.
 
 반복기 범위 생성자
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 시퀀스 [ `firstI`, `lastI`)에 대한 반복기의 간격과 `firstW`에서 시작하는 일치하는 가중치 시퀀스를 사용하여 분포 개체를 생성합니다.
 
 다음 이니셜라이저 목록 생성자는
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 이니셜라이저 목록 *간격* 및 *weightfunc*함수에서 생성 된 가중치에서 간격을 사용 하 여 분포 개체를 생성 합니다.
 
 다음과 같이 정의된 생성자는
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-*weightfunc*함수에 따라 각  간격 가중치를 할당 하는 `xmin,xmax`[]에 균일 하 게 분포 된 개수 간격을 사용 하 여 분포 개체를 생성 하 고 *weightfunc* 는 하나의 매개 변수를 사용 하 고 반환을 포함 해야 합니다. 값으로 변환할 `double`수 있습니다. **사전 조건:** `xmin < xmax`
+weightfunc 함수에 따라 각 간격 가중치를 할당 하 고 *weightfunc*함수에 따라 각 간격 가중치를 할당 하 고, *weightfunc* 는 단일 매개 변수를 사용 하 고 반환 값을 사용 하 여 `double`로 변환할 `xmin,xmax`*수* 있는 배포 개체를 생성 합니다. **사전 조건:** `xmin < xmax`
 
 다음과 같이 정의된 생성자는
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -344,7 +348,7 @@ struct param_type {
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

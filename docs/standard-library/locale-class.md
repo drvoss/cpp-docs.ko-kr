@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856555"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425552"
 ---
 # <a name="locale-class"></a>locale 클래스
 
@@ -140,19 +140,19 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[locale](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[category](#category)|표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[combine](#combine)|지정된 로캘의 패싯을 대상 로캘로 삽입합니다.|
 |[name](#name)|저장된 로캘 이름을 반환합니다.|
@@ -161,21 +161,21 @@ cout.imbue(loc);
 
 |||
 |-|-|
-|[classic](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
+|[기존](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
 |[global](#global)|프로그램에 대한 기본 로컬을 다시 설정합니다.|
 
 ### <a name="operators"></a>연산자
 
-|Operator|설명|
+|연산자|Description|
 |-|-|
 |[operator=](#op_eq)|로캘을 할당 합니다.|
 |[operator!=](#op_neq)|두 로캘이 다른지 테스트합니다.|
-|[operator( )](#op_call)|두 `basic_string` 개체를 비교합니다.|
+|[operator( )](#op_call)|두 개의 `basic_string` 개체를 비교합니다.|
 |[연산자==](#op_eq_eq)|두 로캘이 같은지 테스트합니다.|
 
 ### <a name="classes"></a>클래스
 
-|클래스|설명|
+|클래스|Description|
 |-|-|
 |[facet](#facet_class)|모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.|
 |[`id`](#id_class)|멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.|
@@ -234,7 +234,7 @@ static const int none = 0;
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 C 로캘에 대한 참조입니다.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 대상 로캘에 삽입할 패싯을 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수는 *source_locale*에 나열 된 패싯 `Facet`를 **\*** 를 대체 하거나 추가 하는 로캘 개체를 반환 합니다.
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 프로그램에서 기본 로캘로 사용할 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 로캘이 다시 설정되기 전의 이전 로캘입니다.
 
@@ -520,7 +520,7 @@ int main( ) {
 string name() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로캘의 이름을 지정하는 문자열입니다.
 
@@ -572,7 +572,7 @@ bool operator!=(const locale& right) const;
 *오른쪽*\
 같지 않음을 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로캘이 동일한 로캘의 복사본이 아닌 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본 인 경우 **false** 입니다.
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="op_call"></a>  locale::operator()
 
-두 `basic_string` 개체를 비교합니다.
+두 개의 `basic_string` 개체를 비교합니다.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -639,7 +639,7 @@ bool operator()(
 *오른쪽*\
 오른쪽 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수는 다음을 반환합니다.
 
@@ -705,7 +705,7 @@ bool operator==(const locale& right) const;
 *오른쪽*\
 같은지 여부를 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로캘이 동일한 로캘의 복사본 인 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본이 아닌 경우 **false** 입니다.
 

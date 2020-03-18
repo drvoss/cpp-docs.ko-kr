@@ -95,11 +95,11 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
 ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883934"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426884"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 클래스
 
@@ -139,11 +139,11 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx:: InsertPane](#insertpane)||
 |[COleIPFrameWndEx:: Ismenu 사용 가능](#ismenubaravailable)|메뉴 모음 개체에 대한 포인터가 `NULL`이 아닌지 여부를 확인합니다.|
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx:: LoadFrame](#loadframe)|( `COleIPFrameWnd::LoadFrame`을 재정의합니다.)|
+|[COleIPFrameWndEx:: LoadFrame](#loadframe)|(`COleIPFrameWnd::LoadFrame`을 재정의함)|
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
 |[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx:: OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`을 재정의합니다.)|
+|[COleIPFrameWndEx:: OnCmdMsg](#oncmdmsg)|(`CFrameWnd::OnCmdMsg`을 재정의함)|
 |[COleIPFrameWndEx:: OnDrawMenuImage](#ondrawmenuimage)|메뉴 항목과 연결된 이미지를 그릴 때 프레임워크에서 호출됩니다.|
 |[COleIPFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)개체에서 WM_PAINT 메시지를 처리할 때 프레임워크에서 호출됩니다.|
 |[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)개체에서 WM_NCHITTEST 메시지를 처리할 때 프레임워크에서 호출됩니다.|
@@ -154,15 +154,15 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|팝업 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
 |[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|분리 막대가 있는 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
 |[COleIPFrameWndEx::P aneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::P reTranslateMessage](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`을 재정의합니다.)|
-|[COleIPFrameWndEx:: RecalcLayout](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`을 재정의합니다.)|
+|[COleIPFrameWndEx::P reTranslateMessage](#pretranslatemessage)|(`COleIPFrameWnd::PreTranslateMessage`을 재정의함)|
+|[COleIPFrameWndEx:: RecalcLayout](#recalclayout)|(`COleIPFrameWnd::RecalcLayout`을 재정의함)|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
 |[COleIPFrameWndEx::SetDockState](#setdockstate)|프레임 창에 속해 있는 창에 지정된 도킹 상태를 적용합니다.|
 |[COleIPFrameWndEx:: Setup 메뉴](#setuptoolbarmenu)|더미 항목을 검색하고 지정된 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.|
 |[COleIPFrameWndEx:: ShowPane](#showpane)||
 |[COleIPFrameWndEx:: WinHelpA](#winhelpa)|WinHelp 애플리케이션 또는 상황에 맞는 도움말을 시작하기 위해 프레임워크에서 호출됩니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883874"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425972"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 클래스
 
@@ -79,17 +79,17 @@ ms.locfileid: "78883874"
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|작업 영역 개체를 생성 합니다. 그런 다음 `Create` 또는 `Open`를 호출 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoWorkspace::Append](#append)|새로 만든 작업 영역을 데이터베이스 엔진의 작업 영역 컬렉션에 추가 합니다.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|작업 영역에 열려 있는 모든 데이터베이스에 적용 되는 새 트랜잭션을 시작 합니다.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|기본 DAO 작업 영역 개체를 가리킵니다.|
 
@@ -147,7 +147,7 @@ class CDaoWorkspace : public CObject
 
 MFC는 보안 제어에 사용 되는 DAO의 사용자 및 그룹 컬렉션을 구현 하지 않습니다. DAO의 이러한 측면이 필요한 경우 DAO 인터페이스에 대 한 직접 호출을 통해 직접 프로그래밍 해야 합니다. 자세한 내용은 [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)을 참조 하세요.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 클래스 `CDaoWorkspace`를 사용 하 여 다음을 수행할 수 있습니다.
 
@@ -165,7 +165,7 @@ MFC는 보안 제어에 사용 되는 DAO의 사용자 및 그룹 컬렉션을 �
 
 [Close](#close) 멤버 함수를 사용 하 여 작업 영역을 닫아 작업 영역 세션을 종료 합니다. `Close` 이전에 닫지 않은 데이터베이스를 모두 닫고 커밋되지 않은 트랜잭션을 롤백합니다.
 
-## <a name="transactions"></a>의
+## <a name="transactions"></a>트랜잭션
 
 DAO는 작업 영역 수준에서 트랜잭션을 관리 합니다. 따라서 열려 있는 여러 데이터베이스가 있는 작업 영역에서 트랜잭션은 모든 데이터베이스에 적용 됩니다. 예를 들어 두 데이터베이스에 커밋되지 않은 업데이트가 있고 [CommitTrans](#committrans)를 호출 하면 모든 업데이트가 커밋됩니다. 트랜잭션을 단일 데이터베이스로 제한 하려는 경우이에 대 한 별도의 작업 영역 개체가 필요 합니다.
 
@@ -403,7 +403,7 @@ virtual void Create(
 작업 영역 소유자의 사용자 이름입니다. 요구 사항은 *lpszDefaultUser* 매개 변수를 사용 하 여 [setdefaultuser](#setdefaultuser) 멤버 함수를 참조 하세요. 관련 정보는 DAO 도움말의 "UserName 속성" 항목을 참조 하십시오.
 
 *lpszPassword*<br/>
-새 작업 영역 개체에 대 한 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자를 구별합니다. 관련 내용은 DAO 도움말에서 "Password 속성" 항목을 참조 하십시오.
+새 작업 영역 개체에 대 한 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대소문자를 구분합니다. 관련 내용은 DAO 도움말에서 "Password 속성" 항목을 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
@@ -425,7 +425,7 @@ virtual void Create(
 short GetDatabaseCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 영역에 열려 있는 데이터베이스의 수입니다.
 
@@ -483,7 +483,7 @@ void GetDatabaseInfo(
 static CString PASCAL GetIniPath();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 레지스트리 위치를 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -501,7 +501,7 @@ static CString PASCAL GetIniPath();
 BOOL GetIsolateODBCTrans();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ODBC 트랜잭션이 격리 된 경우 0이 아닌 경우 그렇지 않으면 0입니다.
 
@@ -521,7 +521,7 @@ Microsoft SQL Server와 같은 일부 ODBC 서버는 단일 연결에서 동시 
 static short PASCAL GetLoginTimeout();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전 까지의 시간 (초)입니다.
 
@@ -541,7 +541,7 @@ Microsoft SQL Server와 같은 ODBC 데이터베이스에 로그인을 시도 �
 CString GetName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 DAO 작업 영역 개체의 사용자 정의 이름을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -559,7 +559,7 @@ DAO 작업 영역 개체의 사용자 정의 이름을 포함 하는 [CString](.
 CString GetUserName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 영역 개체의 소유자를 나타내는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -577,7 +577,7 @@ DAO를 직접 호출 하는 방법에 대 한 자세한 내용은 [Technical Not
 static CString PASCAL GetVersion();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체와 연결 된 데이터베이스 엔진의 버전을 나타내는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -595,7 +595,7 @@ static CString PASCAL GetVersion();
 short GetWorkspaceCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 영역 컬렉션에서 열린 작업 영역 수입니다.
 
@@ -677,7 +677,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업 영역 개체가 열려 있으면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -723,7 +723,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ||||
 |-|-|-|
 |[만들기](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[유휴 상태](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase
@@ -779,7 +779,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ### <a name="parameters"></a>매개 변수
 
 *lpszPassword*<br/>
-기본 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자를 구별합니다.
+기본 암호입니다. 암호는 최대 14 자까지 가능 하며 ASCII 0 (null)을 제외한 모든 문자를 포함할 수 있습니다. 암호는 대소문자를 구분합니다.
 
 ### <a name="remarks"></a>설명
 

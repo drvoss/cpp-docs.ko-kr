@@ -1,20 +1,18 @@
 ---
 title: CSpinButtonCtrl 사용
 ms.date: 11/04/2016
-f1_keywords:
-- CSpinButtonCtrl
 helpviewer_keywords:
 - up-down controls [MFC], spin button control
 - up-down controls
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 775668426cd11e20a4c863f07a964935d0d5420f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513471"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447181"
 ---
 # <a name="using-cspinbuttonctrl"></a>CSpinButtonCtrl 사용
 
@@ -35,6 +33,6 @@ Spin 컨트롤 및 편집 컨트롤 버디 창을 만들려면 Visual Studio에�
 
 - [스핀 단추 멤버 함수](../mfc/spin-button-member-functions.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컨트롤](../mfc/controls-mfc.md)

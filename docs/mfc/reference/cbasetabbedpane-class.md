@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883673"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424604"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 클래스
 
@@ -79,17 +79,17 @@ ms.locfileid: "78883673"
 class CBaseTabbedPane : public CDockablePane
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`CBaseTabbedPane::CBaseTabbedPane`|기본 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CBaseTabbedPane:: AddTab](#addtab)|탭 창에 새 탭을 추가 합니다.|
 |[CBaseTabbedPane:: AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|빈 탭 창을 제거할 수 있는지 여부를 지정 합니다.|
@@ -170,7 +170,7 @@ virtual BOOL AddTab(
 ### <a name="parameters"></a>매개 변수
 
 *pNewBar*<br/>
-[in, out] 추가할 창에 대 한 포인터입니다. 이 메서드를 호출한 후에는이 포인터가 유효 하지 않게 될 수 있습니다. 자세한 내용은 설명 섹션을 참조하세요.
+[in, out] 추가할 창에 대 한 포인터입니다. 이 메서드를 호출한 후에는이 포인터가 유효 하지 않게 될 수 있습니다. 자세한 내용은 주의 섹션을 참조하세요.
 
 *bVisible*<br/>
 진행 탭을 표시 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
@@ -181,9 +181,9 @@ virtual BOOL AddTab(
 *bDetachable*<br/>
 진행 탭을 분리할 수 있도록 설정 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창이 탭으로 성공적으로 추가 되 고 프로세스에서 제거 되지 않은 경우 TRUE입니다. 추가 되는 창이 `CBaseTabbedPane`형식의 개체 이면 FALSE입니다. 자세한 내용은 설명 섹션을 참조하세요.
+창이 탭으로 성공적으로 추가 되 고 프로세스에서 제거 되지 않은 경우 TRUE입니다. 추가 되는 창이 `CBaseTabbedPane`형식의 개체 이면 FALSE입니다. 자세한 내용은 주의 섹션을 참조하세요.
 
 ### <a name="remarks"></a>설명
 
@@ -197,7 +197,7 @@ virtual BOOL AddTab(
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빈 탭 창을 제거할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다. 기본 구현에서는 항상 TRUE를 반환 합니다.
 
@@ -230,7 +230,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 virtual BOOL CanFloat() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 부동 상태로 만들 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -242,7 +242,7 @@ virtual BOOL CanFloat() const;
 virtual BOOL CanSetCaptionTextToTabName() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 창의 캡션 텍스트가 활성 탭의 텍스트로 설정 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -281,7 +281,7 @@ virtual BOOL DetachPane(
 *bHide*<br/>
 진행 프레임 워크가 분리 된 후 프레임 워크에서 창을 숨길지 여부를 지정 하는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임 워크가 창을 분리 했으면 TRUE이 고, 그렇지 않으면입니다. *Pbar* 가 NULL 이거나 탭 창에 없는 창을 참조 하면 FALSE입니다.
 
@@ -327,7 +327,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 *U바 Id*<br/>
 진행 찾을 창의 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창에 대 한 포인터 (있는 경우)입니다. 그렇지 않으면 NULL입니다.
 
@@ -353,7 +353,7 @@ virtual CWnd* FindBarByTabNumber(
 *bGetWrappedBar*<br/>
 진행 창 자체 대신 창의 기본 (래핑된) 창을 반환 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다. 이는 [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)에서 파생 된 창에만 적용 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 있으면 검색 되는 창에 대 한 올바른 포인터가 반환 됩니다. 그렇지 않으면 NULL입니다.
 
@@ -382,12 +382,12 @@ virtual BOOL FloatTab(
 진행 탭의 인덱스 (0부터 시작)를 부동으로 지정 합니다.
 
 *dockMethod*<br/>
-진행 창을 부동으로 만드는 데 사용할 메서드를 지정 합니다. 자세한 내용은 설명 섹션을 참조하세요.
+진행 창을 부동으로 만드는 데 사용할 메서드를 지정 합니다. 자세한 내용은 주의 섹션을 참조하세요.
 
 *bHide*<br/>
 진행 창을 부동 소수점 앞으로 숨기려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 부동이 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -405,7 +405,7 @@ virtual BOOL FloatTab(
 const CArray<int,int>& GetDefaultTabsOrder();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창에 있는 탭의 기본 순서를 지정 하는 `CArray` 개체입니다.
 
@@ -426,7 +426,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 *iTabNum*<br/>
 진행 정수에 대 한 참조입니다. 이 메서드는 표시 된 첫 번째 탭의 인덱스 (0부터 시작)를이 매개 변수에 쓰고, 표시 된 탭이 없는 경우-1을 씁니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 첫 번째 표시 된 탭에 대 한 포인터이 고, 그렇지 않으면 NULL입니다.
 
@@ -512,7 +512,7 @@ virtual void GetTabArea(
 virtual int GetTabsNum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 창에 있는 탭 수입니다.
 
@@ -524,7 +524,7 @@ virtual int GetTabsNum() const;
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 탭 창에 대 한 포인터입니다.
 
@@ -536,7 +536,7 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 virtual int GetVisibleTabsNum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0 보다 크거나 같은 표시 되는 탭 수입니다.
 
@@ -552,7 +552,7 @@ virtual int GetVisibleTabsNum() const;
 virtual BOOL HasAutoHideMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 자동 숨기기 모드로 전환할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -568,7 +568,7 @@ virtual BOOL HasAutoHideMode() const;
 virtual BOOL IsHideSingleTab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표시 탭이 하나만 있는 경우 탭 창이 표시 되지 않으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -589,7 +589,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 *pBar*<br/>
 [in, out] 탭 창에서 제거할 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 창에서 창이 성공적으로 제거 되 고 탭 창이 여전히 유효한 경우 TRUE입니다. 탭 창에서 마지막 창이 제거 되 고 탭 창이 소멸 되려고 하면 FALSE입니다. 반환 값이 FALSE 이면 탭 창을 더 이상 사용 하지 마십시오.
 
@@ -640,7 +640,7 @@ virtual BOOL ShowTab(
 *bActivate*<br/>
 진행 탭을 활성 탭으로 설정 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭이 표시 되거나 숨겨져 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -688,7 +688,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *bUseTimer*<br/>
 진행 사용자가 창을 자동 숨기기 모드로 전환 하거나 창을 즉시 숨길 때 자동 숨기기 효과를 사용할지 여부를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 자동 숨기기 모드로 전환할 때 만들어지는 자동 숨기기 도구 모음에 대 한 포인터 이거나, 도구 모음이 생성 되지 않은 경우 NULL입니다.
 

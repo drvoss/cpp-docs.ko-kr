@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426800"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447443"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 클래스
 
@@ -131,7 +131,7 @@ class CSplitterWnd : public CWnd
 |[CSplitterWnd:: SplitColumn](#splitcolumn)|프레임 창이 세로로 분할 되는 위치를 나타냅니다.|
 |[CSplitterWnd:: SplitRow](#splitrow)|프레임 창이 가로로 분할 되는 위치를 나타냅니다.|
 
-### <a name="protected-methods"></a>Protected 메서드
+### <a name="protected-methods"></a>보호된 메서드
 
 |속성|Description|
 |----------|-----------------|
@@ -522,17 +522,17 @@ virtual BOOL DoScroll(
 *nScrollCode*<br/>
 사용자의 스크롤 요청을 나타내는 스크롤 막대 코드입니다. 이 매개 변수는 두 부분으로 구성 됩니다. 즉, 가로로 발생 하는 스크롤의 유형을 결정 하는 하위 바이트와 세로로 발생 하는 스크롤의 유형을 결정 하는 상위 바이트입니다.
 
-    - SB_BOTTOM 아래쪽으로 스크롤됩니다.
+- SB_BOTTOM 아래쪽으로 스크롤됩니다.
 
-    - SB_LINEDOWN 한 줄 아래로 스크롤합니다.
+- SB_LINEDOWN 한 줄 아래로 스크롤합니다.
 
-    - SB_LINEUP 한 줄 위로 스크롤합니다.
+- SB_LINEUP 한 줄 위로 스크롤합니다.
 
-    - SB_PAGEDOWN 한 페이지 아래로 스크롤합니다.
+- SB_PAGEDOWN 한 페이지 아래로 스크롤합니다.
 
-    - SB_PAGEUP 한 페이지를 위로 스크롤합니다.
+- SB_PAGEUP 한 페이지를 위로 스크롤합니다.
 
-    - SB_TOP 맨 위로 스크롤합니다.
+- SB_TOP 맨 위로 스크롤합니다.
 
 *bDoScroll*<br/>
 지정 된 스크롤 동작이 발생 하는지 여부를 확인 합니다. *Bdoscroll* 이 TRUE 이면 (즉, 자식 창이 있고 분할 창에 스크롤 범위가 있으면) 지정 된 스크롤 동작이 수행 될 수 있습니다. *Bdoscroll* 이 FALSE 이면 (즉, 자식 창이 없거나 분할 뷰에 스크롤 범위가 없는 경우) 스크롤이 수행 되지 않습니다.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 성공 하는 경우 다음 windows 스타일 플래그 중 하나 이상입니다.
 
-    - 분할자에서 현재 공유 가로 스크롤 막대를 관리 하는지 여부를 WS_HSCROLL 합니다.
+- 분할자에서 현재 공유 가로 스크롤 막대를 관리 하는지 여부를 WS_HSCROLL 합니다.
 
-    - 분할자에서 현재 공유 세로 스크롤 막대를 관리 하는지 여부를 WS_VSCROLL 합니다.
+- 분할자에서 현재 공유 세로 스크롤 막대를 관리 하는지 여부를 WS_VSCROLL 합니다.
 
 0 인 경우 분할자 창은 현재 공유 스크롤 막대를 관리 하지 않습니다.
 
@@ -810,13 +810,13 @@ virtual void OnDrawSplitter(
 *nType*<br/>
 `enum ESplitType`값으로, 다음 중 하나일 수 있습니다.
 
-    - 분할자 끌어서 상자를 `splitBox` 합니다.
+- 분할자 끌어서 상자를 `splitBox` 합니다.
 
-    - 두 분할 창 사이에 표시 되는 막대를 `splitBar` 합니다.
+- 두 분할 창 사이에 표시 되는 막대를 `splitBar` 합니다.
 
-    - 분할 창의 교집합을 `splitIntersection` 합니다. 이 요소는 Windows 95/98에서 실행 될 때 호출 되지 않습니다.
+- 분할 창의 교집합을 `splitIntersection` 합니다. 이 요소는 Windows 95/98에서 실행 될 때 호출 되지 않습니다.
 
-    - 분할 창 테두리를 `splitBorder` 합니다.
+- 분할 창 테두리를 `splitBorder` 합니다.
 
 *rect*<br/>
 분할 창의 크기와 모양을 지정 하는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체에 대 한 참조입니다.
@@ -1030,7 +1030,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-디바이스 컨텍스트에 대한 포인터입니다.
+장치 컨텍스트에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
