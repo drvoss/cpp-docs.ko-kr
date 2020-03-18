@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426752"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446207"
 ---
 # <a name="diagnostic-services"></a>진단 서비스
 
@@ -109,6 +109,7 @@ _AFX_SECURE_NO_WARNINGS 정의 되지 않은 경우이 코드 샘플에서 컴�
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - 데 필요한 IMAGEHLP.DLL 파일입니다. DLL은 경로에 있어야 합니다. 이 DLL이 없으면 함수는 오류 메시지를 표시 합니다. 데 필요한 IMAGEHLP.DLL에서 제공 하는 함수 집합에 대 한 자세한 내용은 [이미지 도움말 라이브러리](/windows/win32/Debug/image-help-library) 를 참조 하세요.
 
 - 스택에 프레임이 있는 모듈에는 디버깅 정보가 포함 되어야 합니다. 디버깅 정보가 포함 되어 있지 않은 경우 함수는 스택 추적을 생성 하지만 추적은 더 자세히 설명 하지 않습니다.
-  ### <a name="requirements"></a>요구 사항
+
+### <a name="requirements"></a>요구 사항
 
 **헤더:** afx.h
 

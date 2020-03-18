@@ -4,16 +4,12 @@ ms.date: 10/09/2018
 f1_keywords:
 - _abnormal_termination_cpp
 - _exception_code_cpp
-- EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
 - _except
-- EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
 - _exception_info_cpp
-- EXCEPTION_EXECUTE_HANDLER
-- _abnormal_termination
 helpviewer_keywords:
 - __try keyword [C++]
 - EXCEPTION_CONTINUE_EXECUTION macro
@@ -26,12 +22,12 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 7d3a92aa8c6d1f77a1795eabde0ae1e575bb5770
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245171"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444123"
 ---
 # <a name="try-except-statement"></a>try-except 문
 
@@ -50,7 +46,7 @@ ms.locfileid: "74245171"
 > &nbsp;&nbsp;&nbsp;&nbsp;//예외 처리기 코드<br/>
 > }
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **Try except** 문은 일반적으로 프로그램 실행을 종료 하는 이벤트가 발생 C++ 하는 경우 대상 응용 프로그램에서 제어할 수 있는 C 및 언어의 Microsoft 확장입니다. 이러한 이벤트를 *예외*라고 하 고, 예외를 처리 하는 메커니즘을 SEH ( *구조적 예외 처리* ) 라고 합니다.
 
@@ -67,7 +63,7 @@ ms.locfileid: "74245171"
 
 1. 보호 된 섹션을 실행 하는 동안 예외가 발생 하지 않는 경우 **__except** 절 다음의 문에서 실행이 계속 됩니다.
 
-1. 보호 된 섹션을 실행 하는 동안 또는 보호 된 섹션에서 호출 하는 루틴에서 예외가 발생 하는 경우에는 **__except** *식* ( *필터* 식 이라고 함)이 평가 되 고 값은 예외 처리 방법을 결정 합니다. 다음과 같은 3가지 값이 가능합니다.
+1. 보호 된 섹션을 실행 하는 동안 또는 보호 된 섹션에서 호출 하는 루틴에서 예외가 발생 하는 경우에는 **__except** *식* ( *필터* 식 이라고 함)이 평가 되 고 값은 예외 처리 방법을 결정 합니다. 세 가지 값을 사용할 수 있습니다.
 
    - EXCEPTION_CONTINUE_EXECUTION (-1) 예외를 해제 합니다. 예외가 발생한 지점에서 계속 실행합니다.
 
@@ -187,5 +183,5 @@ world
 ## <a name="see-also"></a>참고 항목
 
 [예외 처리기 작성](../cpp/writing-an-exception-handler.md)<br/>
-[구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [키워드](../cpp/keywords-cpp.md)

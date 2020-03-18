@@ -1,28 +1,26 @@
 ---
 title: LIB 출력 파일
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aeb46b0249ddf4155277866f7d8537bbfa98244
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269702"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439382"
 ---
 # <a name="lib-output-files"></a>LIB 출력 파일
 
-LIB에서 생성 된 출력 파일 표에 표시 된 것 처럼가 사용 되 고 있는 모드에 따라 달라 집니다.
+LIB에서 생성 되는 출력 파일은 다음 표에 나와 있는 것 처럼 사용 되는 모드에 따라 달라 집니다.
 
-|모드|출력|
+|Mode|출력|
 |----------|------------|
-|기본값 (빌드 또는 라이브러리를 수정 합니다.)|COFF 라이브러리 (.lib)|
-|/EXTRACT을 사용 하 여 멤버 추출|개체 (.obj) 파일|
-|내보내기 파일을 빌드하고 /def 라이브러리 가져오기|라이브러리 (.lib) 및 내보내기 (.exp) 파일 가져오기|
+|기본값 (라이브러리 작성 또는 수정)|COFF 라이브러리 (.lib)|
+|/EXTRACT를 사용 하 여 멤버 추출|개체 (.obj) 파일|
+|/DEF를 사용 하 여 내보내기 파일 작성 및 라이브러리 가져오기|가져오기 라이브러리 (.lib) 및 내보내기 (.exp) 파일|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [LIB 개요](overview-of-lib.md)

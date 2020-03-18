@@ -1,8 +1,6 @@
 ---
 title: LINK 출력
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - mapfiles [C++]
 - ILK files
@@ -17,40 +15,40 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-ms.openlocfilehash: 183f83501d930188032ec4209623ef7cf1a30efa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8323723f2049d3db469e874c91b99f4cfb561c72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269178"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439318"
 ---
 # <a name="link-output"></a>LINK 출력
 
-Link 출력.exe 파일, Dll, 맵 파일, 및 메시지를 포함합니다.
+링크 출력에는 .exe 파일, Dll, mapfiles 및 메시지가 포함 됩니다.
 
-##  <a name="_core_output_files"></a> 출력 파일
+##  <a name="_core_output_files"></a>출력 파일
 
-링크에서 기본 출력 파일은.exe 파일입니다. 경우는 [/DLL](dll-build-a-dll.md) 옵션을 지정 하면 링크.dll 파일을 빌드합니다. 출력 파일 이름을 사용 하 여 제어할 수 있습니다.는 [출력 파일 이름 (/out)](out-output-file-name.md) 옵션입니다.
+링크의 기본 출력 파일은 .exe 파일입니다. [/Dll](dll-build-a-dll.md) 옵션을 지정 하면 LINK에서 .dll 파일을 빌드합니다. 출력 파일 이름 [(/out)](out-output-file-name.md) 옵션을 사용 하 여 출력 파일 이름을 제어할 수 있습니다.
 
-증분 모드에서는 링크 프로그램의 후속 증분 빌드에 대 한 상태 정보를 저장 하는.ilk 파일을 만듭니다. .Ilk 파일에 대 한 자세한 내용은 참조 하세요 [.ilk 파일](dot-ilk-files-as-linker-input.md)합니다. 증분 링크에 대 한 자세한 내용은 참조는 [증분 링크 (/incremental)](incremental-link-incrementally.md) 옵션입니다.
+증분 모드에서 링크는 프로그램의 이후 증분 빌드에 대 한 상태 정보를 저장 하는 .ilk 파일을 만듭니다. .Ilk 파일에 대 한 자세한 내용은 [.Ilk 파일](dot-ilk-files-as-linker-input.md)을 참조 하세요. 증분 링크에 대 한 자세한 내용은 증분 [링크 (/INCREMENTAL)](incremental-link-incrementally.md) 옵션을 참조 하십시오.
 
-링크를 만들 때 포함 하는 프로그램 내보내기 (대개 DLL), 빌드에서.exp 파일을 사용한 경우가 아니면.lib 파일을 빌드합니다. 가져오기 라이브러리 파일 이름을 사용 하 여 제어할 수 있습니다.는 [/IMPLIB](implib-name-import-library.md) 옵션입니다.
+LINK가 내보내기 (일반적으로 DLL)를 포함 하는 프로그램을 만드는 경우 빌드에서 .exp 파일을 사용 하지 않으면 .lib 파일도 빌드됩니다. [/IMPLIB](implib-name-import-library.md) 옵션을 사용 하 여 가져오기 라이브러리 파일 이름을 제어할 수 있습니다.
 
-경우는 [맵 파일 생성 (/map)](map-generate-mapfile.md) 옵션을 지정 하면 링크 맵 파일을 만듭니다.
+[맵 파일 생성 (/map)](map-generate-mapfile.md) 옵션을 지정 하면 LINK에서 맵 파일을 만듭니다.
 
-경우는 [디버그 정보 생성 (/debug)](debug-generate-debug-info.md) 옵션을 지정 하면 링크는 프로그램에 대 한 디버깅 정보를 포함 하는 PDB를 만듭니다.
+[디버그 정보 생성 (/debug)](debug-generate-debug-info.md) 옵션이 지정 된 경우 LINK에서는 프로그램에 대 한 디버깅 정보를 포함 하는 PDB를 만듭니다.
 
-##  <a name="_core_other_output"></a> 다른 출력
+##  <a name="_core_other_output"></a>기타 출력
 
-입력 하는 경우 `link` 다른 명령줄 입력 하지 않고 링크는 해당 옵션을 요약 usage 문을 표시 합니다.
+다른 명령줄 입력 없이 `link`를 입력 하면 LINK에서 해당 옵션을 요약 하는 사용 문을 표시 합니다.
 
-링크 버전과 저작권 메시지를 표시 하 고 않은 경우 명령 파일 입력을 에코 합니다 [시작 배너 표시 안 함 (/ NOLOGO)](nologo-suppress-startup-banner-linker.md) 옵션을 사용 합니다.
+링크를 사용 하면 저작권 및 버전 메시지가 표시 되 고, [/nologo (시작 배너 표시 안 함)](nologo-suppress-startup-banner-linker.md) 옵션을 사용 하지 않는 한 명령 파일 입력이 에코 됩니다.
 
-사용할 수는 [인쇄 진행 메시지 (/verbose)](verbose-print-progress-messages.md) 빌드에 대 한 추가 정보를 표시 하는 옵션입니다.
+[진행률 메시지 인쇄 (/verbose)](verbose-print-progress-messages.md) 옵션을 사용 하 여 빌드에 대 한 추가 정보를 표시할 수 있습니다.
 
-링크 형식 LNK 오류 및 경고 메시지를 발급*nnnn*합니다. 이 오류 접두사 및 숫자 범위 LIB, DUMPBIN, EDITBIN로도 사용 됩니다.
+.LNK*nnnn*의 형식으로 문제 오류 및 경고 메시지를 연결 합니다. 이 오류 접두사 및 숫자 범위는 LIB, DUMPBIN 및 EDITBIN에도 사용 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)

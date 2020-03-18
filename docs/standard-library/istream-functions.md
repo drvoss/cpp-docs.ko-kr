@@ -6,11 +6,11 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874830"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425684"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 함수
 
@@ -55,7 +55,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 *_Istr*\
 스트림입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스트림입니다.
 

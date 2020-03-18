@@ -39,11 +39,11 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865888"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426488"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 클래스
 
@@ -55,17 +55,17 @@ ms.locfileid: "78865888"
 class AFX_NOVTABLE COlePropertyPage : public CDialog
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|`COlePropertyPage` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|사용자가 컨트롤의 값을 수정 했는지 여부를 나타냅니다.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|속성 페이지에서 편집 중인 개체의 배열을 반환 합니다.|
@@ -142,7 +142,7 @@ BOOL GetControlStatus(UINT nID);
 *nID*<br/>
 속성 페이지 컨트롤의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 값이 수정 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -159,7 +159,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 *pnObjects*<br/>
 페이지에서 편집 중인 개체의 수를 수신 하는 부호 없는 정수 (long)에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 속성 페이지에서 각 컨트롤의 속성에 액세스 하는 데 사용 되는 `IDispatch` 포인터의 배열에 대 한 포인터입니다. 호출자는 이러한 인터페이스 포인터를 해제 하면 안 됩니다.
 
@@ -175,7 +175,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 LPPROPERTYPAGESITE GetPageSite();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 속성 페이지의 `IPropertyPageSite` 인터페이스에 대 한 포인터입니다.
 
@@ -208,7 +208,7 @@ void IgnoreApply(UINT nID);
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 속성 페이지가 수정 되었으면 TRUE입니다.
 
@@ -225,7 +225,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 *dispid*<br/>
 편집 중인 속성의 디스패치 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 구현에서는 FALSE를 반환 합니다. 이 함수의 재정의는 TRUE를 반환 해야 합니다.
 
@@ -246,7 +246,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 *lpszHelpDir*<br/>
 속성 페이지의 도움말 파일을 포함 하는 디렉터리입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 구현에서는 FALSE를 반환 합니다.
 
@@ -262,7 +262,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 구현에서는 FALSE를 반환 합니다.
 
@@ -314,7 +314,7 @@ BOOL SetControlStatus(
 *bDirty*<br/>
 속성 페이지의 필드가 수정 되었는지 여부를 지정 합니다. 필드가 수정 되었으면 TRUE로 설정 하 고, 수정 되지 않은 경우에는 FALSE로 설정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 컨트롤이 설정 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 

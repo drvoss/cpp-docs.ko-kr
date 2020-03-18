@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871656"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426422"
 ---
 # <a name="crecordset-class"></a>CRecordset 클래스
 
@@ -920,7 +920,7 @@ WORD GetRowStatus(WORD wRow) const;
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|행이 변경 되지 않았습니다.|
 |SQL_ROW_UPDATED|행이 업데이트 되었습니다.|
-|SQL_ROW_DELETED|행 삭제 되었습니다.|
+|SQL_ROW_DELETED|행이 삭제된 경우|
 |SQL_ROW_ADDED|행이 추가 되었습니다.|
 |SQL_ROW_ERROR|오류로 인해 행이 unretrievable 됩니다.|
 |SQL_ROW_NOROW|*Wrow*에 해당 하는 행이 없습니다.|

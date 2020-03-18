@@ -2,17 +2,15 @@
 title: LIB 개요
 description: 라이브러리 도구인 lib.exe의 사용 및 옵션에 대 한 개요입니다.
 ms.date: 02/09/2020
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 4ed725f383d956adf7abcf1c68002dee51703013
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257614"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439006"
 ---
 # <a name="overview-of-lib"></a>LIB 개요
 
@@ -32,10 +30,10 @@ LIB는 다음 모드에서 사용할 수 있습니다.
 
 다음 표에서는 lib.exe의 옵션을 나열 하 고 자세한 정보에 대 한 링크를 제공 합니다.
 
-|옵션|설명|
+|옵션|Description|
 |-|-|
 |**/DEF**|가져오기 라이브러리 및 내보내기 파일을 만듭니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|
-|**/ERRORREPORT**| 사용되지 않음. 자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
+|**/ERRORREPORT**| 사용되지 않습니다. 자세한 내용은 [LIB 실행](running-lib.md)을 참조하세요.|
 |**/EXPORT**|   프로그램에서 함수를 내보냅니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|
 |**/EXTRACT**|   기존 라이브러리의 멤버 복사본을 포함 하는 개체 (.obj) 파일을 만듭니다.<br/><br/>자세한 내용은 [라이브러리 멤버 추출](extracting-a-library-member.md)을 참조 하세요.|
 |**/INCLUDE**|   기호 테이블에 기호를 추가 합니다.<br/><br/>자세한 내용은 [가져오기 라이브러리 및 내보내기 파일 작성](building-an-import-library-and-export-file.md)을 참조 하세요.|

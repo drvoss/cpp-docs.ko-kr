@@ -189,11 +189,11 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883696"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425774"
 ---
 # <a name="cmfcribbonbar-class"></a>Cmfc리본 표시줄 클래스
 
@@ -207,17 +207,17 @@ ms.locfileid: "78883696"
 class CMFCRibbonBar : public CPane
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`CMFCRibbonBar::CMFCRibbonBar`|기본 생성자입니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[Cmfc리본 표시줄:: ActivateContextCategory](#activatecontextcategory)|이미 표시된 컨텍스트 범주를 활성화합니다.|
 |[Cmfc리본 표시줄:: AddCategory](#addcategory)|리본 메뉴에 새 리본 범주를 추가합니다.|
@@ -311,7 +311,7 @@ class CMFCRibbonBar : public CPane
 |[Cmfc리본 표시줄:: ToggleMimimizeState](#togglemimimizestate)|리본 표시줄을 최소화 상태 또는 최대화 상태로 표시합니다.|
 |[Cmfc리본 표시줄:: TranslateChar](#translatechar)||
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Microsoft에서는 Microsoft Office 2007을 릴리스할 때 동시에 Office Fluent 리본을 도입했습니다. 이 리본 표시줄은 단순한 새 컨트롤이 아니라 새로운 사용자 인터페이스 패러다임을 나타냅니다. 리본은 범주라는 탭 집합을 포함하는 창입니다. 각 범주는 논리적으로 리본 패널로 구분되고 각 패널에는 다양한 컨트롤과  명령 단추가 포함됩니다.
 
@@ -352,7 +352,7 @@ BOOL ActivateContextCategory(UINT uiContextID);
 *uiContextID*<br/>
 진행 컨텍스트 범주 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *UiContextID* 를 사용 하는 컨텍스트 범주를 찾아 활성화 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -396,11 +396,11 @@ CMFCRibbonCategory* AddCategory(
 *pRTI*<br/>
 진행 런타임에 리본 범주를 동적으로 만드는 [Cmfcribbon Category 클래스](../../mfc/reference/cmfcribboncategory-class.md) 런타임 클래스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 새 리본 범주에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Prti* 매개 변수가 NULL이 아닌 경우 새 리본 범주는 런타임 클래스를 사용 하 여 동적으로 만들어집니다.
 
@@ -458,11 +458,11 @@ CMFCRibbonCategory* AddContextCategory(
 *pRTI*<br/>
 진행 런타임 클래스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 범주에 대 한 포인터 이거나, *Prti* 의 `CreateObject` 메서드에서 지정 된 범주를 만들 수 없는 경우 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수를 사용 하 여 컨텍스트 범주를 추가 합니다. 컨텍스트 범주는 현재 응용 프로그램 컨텍스트에 따라 런타임에 표시 하거나 숨길 수 있는 특수 한 종류의 범주입니다. 예를 들어 사용자가 개체를 선택 하면 선택한 특정 개체를 변경 하는 데 사용 하는 컨텍스트 범주가 있는 특수 탭을 표시할 수 있습니다.
 
@@ -516,11 +516,11 @@ CMFCRibbonMainPanel* AddMainCategory(
 *sizeLargeImage*<br/>
 진행 큰 이미지의 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 새 주 리본 범주에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 리본 범주가 이미 있는 경우 삭제 됩니다.
 
@@ -538,11 +538,11 @@ CMFCRibbonMainPanel* AddMainCategory(
 CMFCRibbonCategory* AddPrintPreviewCategory();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 새 리본 범주에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 인쇄 미리 보기를 제공 하기 위해 리본 범주와 필요한 컨트롤을 만듭니다.
 
@@ -569,11 +569,11 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 *sizeSmallImage*<br/>
 진행 범주의 리본 요소에 대 한 이미지 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 새 범주에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 빠른 실행 도구 모음 리본 범주는 빠른 액세스 도구 모음 사용자 지정 대화 상자 에서만 사용 됩니다.
 
@@ -590,7 +590,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 *pElement*<br/>
 진행 리본 요소에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 리본 요소가 시스템 단추 앞에 배치 됩니다.
 
@@ -607,7 +607,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 *bReplaceFrameCaption*<br/>
 진행 리본 표시줄에서 주 프레임 창의 캡션을 바꾸려면 TRUE로 설정 합니다. FALSE 이면 주 프레임 창의 캡션 아래에 리본 표시줄을 찾습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="create"></a>Cmfc리본 표시줄:: 만들기
 
@@ -631,11 +631,11 @@ BOOL Create(
 *nID*<br/>
 진행 새 창의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 만들어졌으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -669,11 +669,11 @@ BOOL CreateEx(
 *nID*<br/>
 진행 새 창의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 만들어졌으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="deactivatekeyboardfocus"></a>Cmfc리본 표시줄::D eactivateKeyboardFocus
 
@@ -688,7 +688,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 *bSetFocus*<br/>
 진행 포커스를 리본 표시줄의 부모 창으로 설정 하려면 TRUE로 설정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="drawmenuimage"></a>Cmfc리본 표시줄::D rawMenuImage
 
@@ -712,11 +712,11 @@ BOOL DrawMenuImage(
 *rectImage*<br/>
 진행 메뉴 단추의 표시 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이미지를 그린 경우 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="dwmcompositionchanged"></a>Cmfc리본 표시줄::D WMCompositionChanged
 
@@ -726,7 +726,7 @@ DWM (바탕 화면 창 관리자) 컴퍼지션을 사용 하거나 사용 하지
 virtual void DWMCompositionChanged();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="enablekeytips"></a>Cmfc리본 표시줄:: EnableKeyTips
 
@@ -741,7 +741,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 진행 키 설명이 기능을 사용 하도록 설정 하려면 TRUE로 설정 합니다. FALSE-키 기능을 사용 하지 않도록 설정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 기능을 사용 하도록 설정 하면 사용자가 ALT 또는 F10 단추를 누를 때 키 팁이 표시 됩니다. 사용자가 ALT 키를 누르면 키 팁이 200 밀리초 지연와 함께 표시 됩니다. 이러한 지연 시간을 사용 하면 누른 ALT 키가 ALT 키를 포함 하는 다른 조합을 방해 하지 않도록 바로 가기를 실행할 수 있습니다.
 
@@ -758,7 +758,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 *bEnable*<br/>
 진행 **인쇄 미리 보기** 기능을 사용 하려면 TRUE로 설정 합니다. **인쇄 미리 보기** 기능을 사용 하지 않으려면 FALSE로 설정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Benable* 이 FALSE이 고 인쇄 미리 보기 범주가 있는 경우 삭제 됩니다.
 
@@ -782,7 +782,7 @@ void EnableToolTips(
 *bEnableDescr*<br/>
 진행 도구 설명에 대 한 도구 설명 설명을 사용 하려면 TRUE로 설정 합니다. FALSE 이면 도구 설명에 대 한 도구 설명 설명을 사용 하지 않습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Benable* 매개 변수는 마우스로 리본 요소를 가리킬 때 도구 설명이 표시 되는지 여부를 결정 합니다. *BEnableDescr* 매개 변수는 추가 설명 텍스트가 도구 설명 텍스트와 함께 표시 되는지 여부를 결정 합니다.
 
@@ -804,11 +804,11 @@ CMFCRibbonBaseElement* FindByData(
 *bVisibleOnly*<br/>
 진행 표시 되는 리본 요소만 검색 하려면 TRUE이 고, FALSE 이면 모든 리본 요소를 검색 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 데이터와 표시 유형이 있는 경우 리본 요소에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 리본 요소는 리본 단추, 리본 범주 또는 리본 슬라이더와 같은 리본 메뉴에 추가할 수 있는 모든 컨트롤입니다.
 
@@ -834,11 +834,11 @@ CMFCRibbonBaseElement* FindByID(
 *bExcludeQAT*<br/>
 진행 검색에서 빠른 액세스 도구 모음 요소를 제외 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 명령 ID와 검색 값이 있는 경우 리본 요소에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 리본 요소는 리본 단추, 리본 범주 또는 리본 슬라이더와 같은 리본 메뉴에 추가할 수 있는 모든 리본 컨트롤입니다.
 
@@ -857,7 +857,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 *dwData*<br/>
 진행 리본 범주와 연결 된 데이터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 리본 범주의 0부터 시작 하는 인덱스이 고, 그렇지 않으면입니다. 그렇지 않으면-1입니다.
 
@@ -869,7 +869,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 void ForceRecalcLayout();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getactivecategory"></a>Cmfc리본 표시줄:: GetActiveCategory
 
@@ -879,11 +879,11 @@ void ForceRecalcLayout();
 CMFCRibbonCategory* GetActiveCategory() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 리본 범주에 대 한 포인터입니다. 또는 활성 범주가 없는 경우 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 포커스가 있는 경우 범주가 활성 상태입니다. 기본적으로 활성 범주는 리본 표시줄 왼쪽의 첫 번째 범주입니다.
 
@@ -897,7 +897,7 @@ CMFCRibbonCategory* GetActiveCategory() const;
 CMFCRibbonApplicationButton* GetApplicationButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 응용 프로그램 단추에 대 한 포인터입니다. 또는 단추가 설정 되지 않은 경우 NULL입니다.
 
@@ -909,11 +909,11 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄의 캡션 영역 높이 (픽셀)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getcategory"></a>Cmfc리본 표시줄:: GetCategory
 
@@ -928,7 +928,7 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 *nIndex*<br/>
 진행 리본 표시줄에 포함 된 리본 범주 목록에서 리본 범주에 대 한 0부터 시작 하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 인덱스에 있는 리본 범주에 대 한 포인터입니다. 그렇지 않으면 *n 인덱스가* 범위를 벗어난 경우 NULL입니다.
 
@@ -940,7 +940,7 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 int GetCategoryCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄의 리본 범주 번호입니다.
 
@@ -952,11 +952,11 @@ int GetCategoryCount() const;
 int GetCategoryHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범주의 높이입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 범주 높이는 범주 탭의 높이를 포함 합니다.
 
@@ -973,7 +973,7 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 *pCategory*<br/>
 진행 리본 범주에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Pcategory*로 지정 된 리본 범주의 인덱스 (0부터 시작)입니다. 리본 범주를 찾을 수 없으면-1입니다.
 
@@ -995,7 +995,7 @@ BOOL GetContextName(
 *strName*<br/>
 제한이 컨텍스트 범주 캡션의 이름입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 *uiContextID* 가 0 이거나 컨텍스트 범주 캡션이 없는 경우 FALSE입니다.
 
@@ -1007,11 +1007,11 @@ BOOL GetContextName(
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 삭제 된 리본 요소입니다. 리본 요소가 현재 삭제 되지 않은 경우에는 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getelementsbyid"></a>Cmfc리본 표시줄:: GetElementsByID
 
@@ -1031,7 +1031,7 @@ void GetElementsByID(
 *arButtons*<br/>
 제한이 리본 요소에 대 한 포인터의 배열입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 일부 리본 요소는 빠른 실행 도구 모음에 복사할 수 있기 때문에 여러 리본 요소에 동일한 명령 ID가 있을 수 있습니다.
 
@@ -1043,11 +1043,11 @@ void GetElementsByID(
 DWORD GetHideFlags() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄의 표시 크기를 나타내는 플래그입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 다음 표에서는 반환 값에 대 한 플래그의 가능한 조합을 보여 줍니다.
 
@@ -1073,7 +1073,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 *bHiddenOnly*<br/>
 진행 표시 되는 리본 요소를 제외 하려면 TRUE로 설정 합니다. 리본 표시줄에 모든 리본 요소를 포함 하려면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getkeyboardnavigationlevel"></a>Cmfc리본 표시줄:: GetKeyboardNavigationLevel
 
@@ -1083,7 +1083,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 int GetKeyboardNavigationLevel() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 리본 표시줄에 포함 된 키의 키를 누를 때 사용 되는 현재 탐색 수준입니다. 다음 표에서는 가능한 반환 값을 보여 줍니다.
 
@@ -1093,7 +1093,7 @@ int GetKeyboardNavigationLevel() const;
 |0|키 설명이 표시 됩니다.|
 |1|사용자가 표시 된 keytip을 눌렀습니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getkeyboardnavlevelcurrent"></a>Cmfc리본 표시줄:: GetKeyboardNavLevelCurrent
 
@@ -1103,11 +1103,11 @@ int GetKeyboardNavigationLevel() const;
 CObject* GetKeyboardNavLevelCurrent() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄의 현재 키보드 탐색 개체입니다. 현재 개체에 키 설명이 표시 되지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 현재 키를 표시 하는 개체는 현재 키보드 탐색 개체입니다.
 
@@ -1119,11 +1119,11 @@ CObject* GetKeyboardNavLevelCurrent() const;
 CObject* GetKeyboardNavLevelParent() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄의 부모 키보드 탐색 개체입니다. 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 사용자가 리본 표시줄에서 keytip을 누르면 현재 키보드 탐색 개체가 부모 키보드 탐색 개체가 됩니다.
 
@@ -1135,11 +1135,11 @@ CObject* GetKeyboardNavLevelParent() const;
 CMFCRibbonCategory* GetMainCategory() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 리본 범주에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본 리본 범주에는 기본 리본 패널이 포함 되어 있습니다.
 
@@ -1151,11 +1151,11 @@ CMFCRibbonCategory* GetMainCategory() const;
 CRect GetQATCommandsLocation() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빠른 실행 도구 모음에 있는 명령 섹션의 표시 사각형입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 표시 사각형의 commands 섹션에는 사용자 지정 단추가 포함 되지 않습니다.
 
@@ -1167,11 +1167,11 @@ CRect GetQATCommandsLocation() const;
 CMFCRibbonBaseElement* GetQATDroppedDown();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 팝업 메뉴가 삭제 된 빠른 실행 도구 모음의 리본 요소에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="getquickaccesscommands"></a>Cmfc리본 표시줄:: GetQuickAccessCommands
 
@@ -1186,7 +1186,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 *lstCommands*<br/>
 제한이 빠른 실행 도구 모음의 리본 요소에 대 한 명령 Id 목록입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 컨트롤 구분 기호를 포함 하는 리본 요소가 목록에 없습니다.
 
@@ -1198,11 +1198,11 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 CRect GetQuickAccessToolbarLocation() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빠른 실행 도구 모음의 표시 사각형입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="gettabtrancateratio"></a>Cmfc리본 표시줄:: GetTabTrancateRatio
 
@@ -1212,11 +1212,11 @@ CRect GetQuickAccessToolbarLocation() const;
 int GetTabTrancateRatio() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범주 탭의 표시 너비로 표시 되는 백분율 크기 감소입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 리본 표시줄에 너비가 충분 하지 않으면 범주 탭의 너비가 줄어듭니다.
 
@@ -1228,11 +1228,11 @@ int GetTabTrancateRatio() const;
 int GetTooltipFixedWidthLargeImage() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명 너비의 큰 크기 (픽셀)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 도구 설명 너비의 큰 크기가 0 이면 너비가 달라 집니다.
 
@@ -1244,11 +1244,11 @@ int GetTooltipFixedWidthLargeImage() const;
 int GetTooltipFixedWidthRegular() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명 너비의 일반 크기 (픽셀)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 도구 설명 너비의 일반 크기가 0 이면 너비가 달라 집니다.
 
@@ -1260,11 +1260,11 @@ int GetTooltipFixedWidthRegular() const;
 int GetVisibleCategoryCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄에 표시 되는 범주 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="hideallcontextcategories"></a>Cmfc리본 표시줄:: HideAllContextCategories
 
@@ -1274,11 +1274,11 @@ int GetVisibleCategoryCount() const;
 BOOL HideAllContextCategories();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 하나 이상의 컨텍스트 범주가 숨겨져 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 컨텍스트 범주가 활성 상태인 경우 범주 목록에서 활성 범주가 표시 되는 첫 번째 범주로 다시 설정 됩니다.
 
@@ -1290,7 +1290,7 @@ BOOL HideAllContextCategories();
 void HideKeyTips();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="hittest"></a>Cmfc리본 표시줄:: System.windows.media.visualtreehelper.hittest
 
@@ -1312,13 +1312,13 @@ virtual CMFCRibbonBaseElement* HitTest(
 진행 활성 범주를 검색 하려면 TRUE로 설정 합니다. FALSE 이면 활성 범주를 검색 하지 않습니다.
 
 *bCheckPanelCaption*<br/>
-진행 리본 패널에 있는 점을 사용 하 여 리본 패널의 캡션을 테스트 하려면 TRUE로 설정 합니다. FALSE 이면 리본 패널의 캡션을 테스트 하는 데 사용 되지 않습니다. 자세한 내용은 설명 섹션을 참조하십시오.
+진행 리본 패널에 있는 점을 사용 하 여 리본 패널의 캡션을 테스트 하려면 TRUE로 설정 합니다. FALSE 이면 리본 패널의 캡션을 테스트 하는 데 사용 되지 않습니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 지점에 있는 리본 요소에 대 한 포인터입니다. 요소가 리본 요소에 없으면 NULL이 고, 그렇지 않으면 NULL입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *BCheckActiveCategory* 매개 변수가 TRUE가 아니면 리본 패널에 있는 점을 포함 하는 리본 패널의 캡션이 테스트 되지 않습니다.
 
@@ -1330,7 +1330,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 BOOL IsKeyTipEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 키 설명이 사용 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1342,11 +1342,11 @@ BOOL IsKeyTipEnabled() const;
 virtual BOOL IsMainRibbonBar() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 TRUE를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로이 메서드는 항상 TRUE를 반환 합니다. 리본 표시줄이 기본 리본 모음 인지 여부를 나타내려면이 메서드를 재정의 합니다.
 
@@ -1358,7 +1358,7 @@ virtual BOOL IsMainRibbonBar() const;
 BOOL IsPrintPreviewEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **인쇄 미리 보기** 기능을 사용할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1370,11 +1370,11 @@ BOOL IsPrintPreviewEnabled() const;
 BOOL IsQATEmpty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빠른 실행 도구 모음에 명령 단추가 포함 되어 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="isquickaccesstoolbarontop"></a>Cmfc리본 표시줄:: IsQuickAccessToolbarOnTop
 
@@ -1384,7 +1384,7 @@ BOOL IsQATEmpty() const;
 BOOL IsQuickAccessToolbarOnTop() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빠른 실행 도구 모음이 리본 표시줄 위에 있는 경우 TRUE입니다. 빠른 실행 도구 모음이 리본 표시줄 아래에 있는 경우 FALSE입니다.
 
@@ -1396,7 +1396,7 @@ BOOL IsQuickAccessToolbarOnTop() const;
 BOOL IsReplaceFrameCaption() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄이 주 프레임 창의 캡션을 대체 하면 TRUE이 고, 리본 표시줄이 주 프레임 창의 캡션 아래에 있으면 FALSE이 고,
 
@@ -1413,11 +1413,11 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 *pGroup*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 FALSE를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로이 메서드는 항상 FALSE를 반환 합니다. 리본 표시줄에 있는 단추 그룹에 그룹 테두리를 표시할지 여부를 나타내려면이 메서드를 재정의 합니다.
 
@@ -1429,11 +1429,11 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 BOOL IsToolTipDescrEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명 설명을 사용할 수 있으면 TRUE입니다. 도구 설명 설명을 사용할 수 없으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 도구 설명 설명은 도구 설명 텍스트와 함께 표시 되는 추가 설명 텍스트입니다.
 
@@ -1445,7 +1445,7 @@ BOOL IsToolTipDescrEnabled() const;
 BOOL IsToolTipEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명을 사용할 수 있으면 TRUE입니다. 도구 설명을 사용할 수 없으면 FALSE입니다.
 
@@ -1457,11 +1457,11 @@ Windows Aero 색 구성표에 대해 디스플레이가 설정 되어 있는지 
 BOOL IsTransparentCaption() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 색 구성표가 Windows Aero 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onclickbutton"></a>Cmfc리본 표시줄:: On클릭 단추
 
@@ -1481,7 +1481,7 @@ virtual void OnClickButton(
 *point*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="oneditcontextmenu"></a>Cmfc리본 표시줄:: OnEditContextMenu
 
@@ -1496,7 +1496,7 @@ virtual void OnEditContextMenu(
 진행 *Pedit*<br/>
 진행 *point*<br/>
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onrtlchanged"></a>Cmfc리본 표시줄:: OnRTLChanged
 
@@ -1511,7 +1511,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 *bIsRTL*<br/>
 진행 레이아웃이 오른쪽에서 왼쪽 이면 TRUE입니다. 레이아웃이 왼쪽에서 오른쪽 이면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 리본 표시줄에서 새 레이아웃 방향에 대 한 모든 컨트롤의 레이아웃을 조정 합니다.
 
@@ -1527,11 +1527,11 @@ BOOL OnSetAccData(long lVal);
 
 long *Lval* 액세스 가능 개체의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 실패하면 FALSE 또는 S_FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onshowribboncontextmenu"></a>Cmfc리본 표시줄:: Onshow리본 Contextmenu
 
@@ -1550,9 +1550,9 @@ virtual BOOL OnShowRibbonContextMenu(
 진행 *y*<br/>
 진행 *Phit*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onshowribbonqatmenu"></a>Cmfc리본 표시줄:: OnShowRibbonQATMenu
 
@@ -1571,9 +1571,9 @@ virtual BOOL OnShowRibbonQATMenu(
 진행 *y*<br/>
 진행 *Phit*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onsyskeydown"></a>Cmfc리본 표시줄:: OnSysKeyDown
 
@@ -1597,11 +1597,11 @@ BOOL OnSysKeyDown(
 *lParam*<br/>
 진행 키를 눌렀을 때 키보드 상태 플래그입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 키 입력 이벤트가 처리 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="onsyskeyup"></a>Cmfc리본 표시줄:: OnSysKeyUp
 
@@ -1625,11 +1625,11 @@ BOOL OnSysKeyUp(
 *lParam*<br/>
 진행 이 매개 변수는 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 키 입력 이벤트가 처리 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="poptooltip"></a>Cmfc리본 표시줄::P opTooltip
 
@@ -1639,7 +1639,7 @@ BOOL OnSysKeyUp(
 void PopTooltip();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="pretranslatemessage"></a>Cmfc리본 표시줄::P reTranslateMessage
 
@@ -1654,11 +1654,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 진행 메시지에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄에서 메시지를 처리 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="recalclayout"></a>Cmfc리본 표시줄:: RecalcLayout
 
@@ -1668,7 +1668,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 virtual void RecalcLayout();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 레이아웃을 조정한 후에는 리본 표시줄의 표시를 업데이트 합니다.
 
@@ -1680,7 +1680,7 @@ virtual void RecalcLayout();
 void RemoveAllCategories();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 메모리 및 범주 목록에서 모든 리본 범주를 삭제 합니다.
 
@@ -1692,7 +1692,7 @@ void RemoveAllCategories();
 void RemoveAllFromTabs();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [Cmfc리본 bar::](#addtotabs) 기능 및 탭 메서드를 사용 하 여 탭 영역에 추가한 모든 요소를 제거 하려는 경우이 함수를 사용 합니다.
 
@@ -1709,11 +1709,11 @@ BOOL RemoveCategory(int nIndex);
 *nIndex*<br/>
 진행 리본 표시줄에 포함 된 리본 범주 목록에서 범주의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 리본 범주가 삭제 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 지정 된 리본 범주는 메모리 및 범주 목록에서 삭제 됩니다.
 
@@ -1735,11 +1735,11 @@ BOOL SetActiveCategory(
 *bForceRestore*<br/>
 진행 최소화 된 경우 리본 표시줄을 최대화 하려면 TRUE로 설정 하 고, FALSE 이면 리본 표시줄이 최소화 된 경우 팝업 창에 활성 범주가 표시 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 범주가 활성 범주로 설정 된 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 주 리본 범주는 활성 범주가 될 수 없습니다.
 
@@ -1758,7 +1758,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 *pWnd*<br/>
 진행 MDI 자식 창에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="setapplicationbutton"></a>Cmfc리본 표시줄:: SetApplicationButton
 
@@ -1778,7 +1778,7 @@ void SetApplicationButton(
 *sizeButton*<br/>
 진행 응용 프로그램 리본 단추의 크기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 응용 프로그램 리본 단추는 리본 컨트롤의 왼쪽 위 모퉁이에 있는 매우 둥근 단추입니다.
 
@@ -1810,11 +1810,11 @@ BOOL SetElementKeys(
 *lpszMenuKeys*<br/>
 진행 메뉴 keytip입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 하나 이상의 리본 요소에 대 한 키 설명이 설정 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 선택적 메뉴 keytip은 팝업 메뉴를 여는 분할 단추가 있는 리본 요소에 대 한 것입니다.
 
@@ -1836,7 +1836,7 @@ void SetKeyboardNavigationLevel(
 *bSetFocus*<br/>
 진행 리본 표시줄에 키보드 포커스를 설정 하려면 TRUE로 설정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 사용자가 ALT 또는 F10 키를 누르면 리본 표시줄의 키보드 탐색이 시작 됩니다. 사용자는 리본 표시줄에서 keytip을 눌러 다음 탐색 수준을 선택 합니다. 사용자는 esc 키를 눌러 이전 탐색 수준으로 돌아갈 수 있습니다.
 
@@ -1858,7 +1858,7 @@ void SetMaximizeMode(
 *pWnd*<br/>
 진행 리본 표시줄의 주 프레임 창에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 MDI 자식 창이 최대화 된 경우 리본 표시줄에는 탭 행의 MDI 자식 창에 대 한 시스템 단추가 표시 됩니다.
 
@@ -1896,10 +1896,10 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 ### <a name="parameters"></a>매개 변수
 
-*state*<br/>
+*상태*<br/>
 진행 빠른 실행 도구 모음 기본 상태입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 빠른 실행 도구 모음 상태에는 명령 목록과 표시 유형이 포함 됩니다.
 
@@ -1940,7 +1940,7 @@ void SetTooltipFixedWidth(
 *nWidthLargeImage*<br/>
 진행 크기가 큰 고정 도구 설명의 너비 (픽셀)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 매개 변수를 0으로 설정 하면 해당 너비가 달라 집니다.
 
@@ -1988,7 +1988,7 @@ void ShowContextCategories(
 void ShowKeyTips();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="togglemimimizestate"></a>Cmfc리본 표시줄:: ToggleMimimizeState
 
@@ -1998,7 +1998,7 @@ void ShowKeyTips();
 void ToggleMimimizeState();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 메서드 이름의 맞춤법 오류는 알려진 문제입니다.
 
@@ -2017,11 +2017,11 @@ virtual BOOL TranslateChar(UINT nChar);
 *nChar*<br/>
 진행 사용자 키 입력 문자 코드입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 표시줄에서 문자 코드를 처리 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 키 기능을 사용 하면 사용자가 키보드를 사용 하 여 리본 표시줄을 탐색할 수 있습니다.
 
@@ -2033,11 +2033,11 @@ virtual BOOL TranslateChar(UINT nChar);
 virtual CMFCRibbonBaseElement* GetFocused();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포커스가 있는 요소 또는 NULL에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="iswindows7look"></a>Cmfc리본 표시줄:: IsWindows7Look
 
@@ -2047,11 +2047,11 @@ virtual CMFCRibbonBaseElement* GetFocused();
 BOOL IsWindows7Look() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본에 Windows 7이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="loadfromresource"></a>Cmfc리본 표시줄:: LoadFromResource
 
@@ -2083,11 +2083,11 @@ virtual BOOL LoadFromResource(
 *lpszXMLResID*<br/>
 리본 표시줄 정보를 사용 하 여 리소스 ID를 문자열 형식으로 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="savetoxmlbuffer"></a>Cmfc리본 표시줄:: SaveToXMLBuffer
 
@@ -2102,11 +2102,11 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 *ppBuffer*<br/>
 이 함수가 반환 될 때 *Ppbuffer* 는이 메서드에 의해 할당 된 버퍼를 가리키며 XML 형식의 리본 표시줄 정보를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="savetoxmlfile"></a>Cmfc리본 표시줄:: SaveToXMLFile
 
@@ -2121,11 +2121,11 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 *lpszFilePath*<br/>
 출력 파일을 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ##  <a name="setwindows7look"></a>Cmfc리본 표시줄:: SetWindows7Look
 
@@ -2145,7 +2145,7 @@ TRUE로 설정 하면 Windows 7이 표시 됩니다. 그렇지 않으면 FALSE�
 *bRecalc 계산*<br/>
 TRUE 이면 리본 레이아웃을 다시 계산 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="see-also"></a>참고 항목
 

@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856552"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426932"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 함수
 
@@ -78,7 +78,7 @@ ios_base& boolalpha(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -130,7 +130,7 @@ ios_base& dec(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -200,7 +200,7 @@ ios_base& fixed(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -248,7 +248,7 @@ ios_base& hex(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -289,7 +289,7 @@ ios_base& internal(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -347,7 +347,7 @@ ios_base& left(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -402,7 +402,7 @@ ios_base& noboolalpha(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -431,13 +431,13 @@ ios_base& noshowbase(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-`noshowbase`는 기본적으로 설정되어 있습니다. [showbase](../standard-library/ios-functions.md#showbase)를 사용하여 숫자의 표기 기준을 나타냅니다.
+`noshowbase` 는 기본적으로 설정되어 있습니다. [showbase](../standard-library/ios-functions.md#showbase)를 사용하여 숫자의 표기 기준을 나타냅니다.
 
 조작자는 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
@@ -458,7 +458,7 @@ ios_base& noshowpoint(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -505,13 +505,13 @@ ios_base& noshowpos(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-`noshowpos`는 기본적으로 설정되어 있습니다.
+`noshowpos` 는 기본적으로 설정되어 있습니다.
 
 조작자는 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
@@ -532,7 +532,7 @@ ios_base& noskipws(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -574,7 +574,7 @@ ios_base& nounitbuf(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -597,7 +597,7 @@ ios_base& nouppercase(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -622,7 +622,7 @@ ios_base& oct(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -649,7 +649,7 @@ ios_base& right(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -706,7 +706,7 @@ ios_base& scientific(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -751,7 +751,7 @@ ios_base& showbase(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -805,7 +805,7 @@ ios_base& showpoint(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -832,7 +832,7 @@ ios_base& showpos(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -877,7 +877,7 @@ ios_base& skipws(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -929,7 +929,7 @@ ios_base& unitbuf(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 
@@ -954,7 +954,7 @@ ios_base& uppercase(ios_base& str);
 *str*\
 [ios_base](../standard-library/ios-base-class.md) 형식의 개체에 대한 참조 또는 `ios_base`에서 상속되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Str* 이 파생 되는 개체에 대 한 참조입니다.
 

@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855543"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426896"
 ---
 # <a name="cview-class"></a>CView 클래스
 
@@ -95,7 +95,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView:: OnScroll](#onscroll)|OLE 항목을 뷰의 테두리 밖으로 끌 때 호출 됩니다.|
 |[CView:: OnScrollBy](#onscrollby)|활성 내부 OLE 항목을 포함 하는 뷰가 스크롤될 때 호출 됩니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|

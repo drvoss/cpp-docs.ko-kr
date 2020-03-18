@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78937440"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427604"
 ---
 # <a name="valarray-class"></a>valarray 클래스
 
@@ -55,7 +55,7 @@ ms.locfileid: "78937440"
 
 특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. `Type` 클래스의 개체에 대 한 작업은 예외를 throw 할 수 없습니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -63,13 +63,13 @@ ms.locfileid: "78937440"
 |-|-|
 |[valarray](#valarray)|다른 `valarray`의 복사본 또는 다른 `valarray`의 하위 집합으로서 특정 크기, 특정 값의 요소가 있는 `valarray`를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[value_type](#value_type)|`valarray`에 저장된 요소의 형식을 나타내는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "78937440"
 |[cshift](#cshift)|`valarray`에 있는 모든 요소를 주기적으로 지정된 위치 수만큼 이동합니다.|
 |[free](#free)|`valarray`에서 사용하는 메모리를 비웁니다.|
 |[max](#max)|`valarray`에서 가장 큰 요소를 찾습니다.|
-|[분](#min)|`valarray`에서 가장 작은 요소를 찾습니다.|
+|[min](#min)|`valarray`에서 가장 작은 요소를 찾습니다.|
 |[resize](#resize)|필요에 따라 요소를 추가 또는 제거하여 `valarray`의 요소 수를 지정된 수로 변경합니다.|
 |[shift](#shift)|`valarray`에 있는 모든 요소를 지정된 위치 수만큼 이동합니다.|
 |[size](#size)|`valarray`의 요소 수를 찾습니다.|
@@ -123,7 +123,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 *_Func (Const 형식 &)* \
 피연산자 valarray의 각 요소에 적용할 const의 함수 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray의 요소 전체에 `_Func`를 적용했던 valarray
 
@@ -194,7 +194,7 @@ valarray<Type> cshift(int count) const;
 *개수*\
 요소를 앞으로 이동할 위치 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 위치를 기준으로 모든 요소가 이동 된 *count* 위치를 valarray 앞으로 주기적는 새 valarray입니다.
 
@@ -269,7 +269,7 @@ void free();
 
 ### <a name="remarks"></a>설명
 
-이 비표준 함수를 사용하는 경우의 결과는 빈 valarray를 할당하는 것과 같습니다. 예들 들어 다음과 같습니다.
+이 비표준 함수를 사용하는 경우의 결과는 빈 valarray를 할당하는 것과 같습니다. 다음은 그 예입니다.
 
 ```cpp
 valarray<T> v;
@@ -286,7 +286,7 @@ valarray에서 가장 큰 요소를 찾습니다.
 Type max() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 요소 최대값입니다.
 
@@ -339,7 +339,7 @@ valarray에서 가장 작은 요소를 찾습니다.
 Type min() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 요소 최소값입니다.
 
@@ -391,7 +391,7 @@ valarray에 있는 각 요소의 논리적 **NOT** 값을 가져오는 단항 �
 valarray<bool> operator!() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 요소 값에 대한 부정인 부울 값의 valarray
 
@@ -457,7 +457,7 @@ valarray<Type>& operator%=(const Type& right);
 *오른쪽*\
 요소 전체에서 피연산자 valarray를 나눌 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray의 요소 단위 나누기의 나머지가 되는 valarray
 
@@ -524,7 +524,7 @@ valarray<Type>& operator&=(const Type& right);
 *오른쪽*\
 요소 단위로 결합 될 피연산자 valarray와 피연산자 valarray를 사용 하는 논리적 `AND`의 요소 전체에 해당 하는 요소 형식의 값 또는 valarray입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray의 요소 수준 논리적 `AND` 인 valarray
 
@@ -597,7 +597,7 @@ valarray<Type>& operator>>=(const Type& right);
 *오른쪽*\
 오른쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 오른쪽 이동 크기를 나타내는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 *오른쪽*에 지정 된 크기 만큼 오른쪽으로 이동 된 valarray
 
@@ -668,7 +668,7 @@ valarray<Type>& operator<<=(const Type& right);
 *오른쪽*\
 왼쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 왼쪽 이동 크기를 나타내는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 *오른쪽*에 지정 된 크기 만큼 왼쪽으로 이동 된 valarray
 
@@ -741,7 +741,7 @@ valarray<Type>& operator*=(const Type& right);
 *오른쪽*\
 요소 전체에서 피연산자 valarray를 곱할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray 및 *right*의 요소 전체 곱 인 valarray
 
@@ -800,7 +800,7 @@ valarray의 각 요소에 +를 적용하는 단항 연산자입니다.
 valarray<Type> operator+() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 배열 요소에 +가 적용된 valarray
 
@@ -860,7 +860,7 @@ valarray<Type>& operator+=(const Type& right);
 *오른쪽*\
 요소 전체에서 피연산자 valarray를 더할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray와 *right*의 요소 전체 합계인 valarray입니다.
 
@@ -920,7 +920,7 @@ valarray의 각 요소에 -를 적용하는 단항 연산자입니다.
 valarray<Type> operator-() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 배열 요소에 -가 적용된 valarray
 
@@ -980,7 +980,7 @@ valarray<Type>& operator-=(const Type& right);
 *오른쪽*\
 요소 전체에서 피연산자 valarray에서 뺄 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray와 *right*의 요소 전체 차 인 valarray
 
@@ -1047,7 +1047,7 @@ valarray<Type>& operator/=(const Type& right);
 *오른쪽*\
 요소 전체에서 피연산자 valarray로 나눌 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray의 요소 전체 몫 인 valarray를 *오른쪽*으로 나눈 값입니다.
 
@@ -1139,7 +1139,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 *_Indarray*\
 피연산자 valarray에 복사할 indirect_array
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 멤버 연산자는 제어 되는 시퀀스를 *right*로 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
@@ -1252,7 +1252,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 *_Indarray*\
 선택하거나 새 valarray로 반환할 하위 집합을 지정하는 valarray의 indirect_array
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 인덱스 또는 지정된 하위 집합에서 요소 또는 그 값에 대한 참조
 
@@ -1281,7 +1281,7 @@ valarray<Type>& operator|=(const Type& right);
 *오른쪽*\
 요소 전체에서 배타적 논리 **XOR**을 통해 피연산자 valarray와 결합할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray 및 *right*의 요소 전체 배타적 논리적 **XOR** 인 valarray
 
@@ -1356,7 +1356,7 @@ valarray<Type>& operator|=(const Type& right);
 *오른쪽*\
 요소 전체에서 비트 `OR`을 통해 피연산자 valarray와 결합할 피연산자 valarray의 요소 형식과 동일한 요소 형식의 값 또는 valarray
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 해당 요소가 피연산자 valarray의 요소 단위 비트 `OR` 인 valarray *입니다.*
 
@@ -1432,7 +1432,7 @@ Valarray에 있는 각 요소의 비트 `NOT` 값을 가져오는 단항 연산�
 valarray<Type> operator~() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 요소 값에 대 한 비트 `NOT` 부울 값의 valarray입니다.
 
@@ -1612,7 +1612,7 @@ valarray<Type> shift(int count) const;
 *개수*\
 요소를 앞으로 이동할 위치 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 위치와 관련 하 여 모든 요소가 valarray 앞 *으로 이동 하* 는 새 valarray입니다.
 
@@ -1682,7 +1682,7 @@ valarray에 있는 요소 수를 찾습니다.
 size_t size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray에 있는 요소 수입니다.
 
@@ -1759,7 +1759,7 @@ The number of elements in the valarray va2 is still: 12.
 Type sum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 피연산자 valarray의 요소 합입니다.
 

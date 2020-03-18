@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855527"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424760"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 
 MFC 라이브러리에는 세 가지 콜백 함수가 표시 됩니다. 이러한 콜백 함수는 Cdc: [: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [Cdc:: GrayString](../../mfc/reference/cdc-class.md#graystring)및 [cdc:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)에 전달 됩니다. 모든 콜백 함수는 콜백 경계에서 예외가 throw 될 수 없으므로 Windows로 반환 하기 전에 MFC 예외를 트래핑 해야 합니다. 예외에 대 한 자세한 내용은 [예외](../../mfc/exception-handling-in-mfc.md)문서를 참조 하세요.
 
-|name||
+|속성||
 |----------|-----------------|
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -48,7 +48,7 @@ int CALLBACK EXPORT ObjectFunc(
 *lpData*<br/>
 `EnumObjects` 함수에 전달 된 응용 프로그램 제공 데이터를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콜백 함수는 **정수**를 반환 합니다. 이 반환 값은 사용자가 정의 합니다. 콜백 함수에서 0을 반환 하는 경우 `EnumObjects` 열거를 일찍 중지 합니다.
 
@@ -80,7 +80,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 *nCount*<br/>
 출력할 문자 수를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 여부를 나타내려면 콜백 함수의 반환 값은 TRUE 여야 합니다. 그렇지 않으면 FALSE입니다.
 
@@ -108,7 +108,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *code*<br/>
 오류가 발생 했는지 여부를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. 현재 인쇄 관리자의 디스크 공간이 부족 하 고 응용 프로그램이 대기 하는 경우 더 많은 디스크 공간을 사용할 수 있게 되 면 SP_OUTOFDISK 됩니다. *코드가* SP_OUTOFDISK 경우에는 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 그렇지 않으면 `PeekMessage` 또는 `GetMessage` Windows 함수를 호출 하 여 인쇄 관리자에 게 양보 해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 중단 처리기 함수의 반환 값은 인쇄 작업을 계속 진행 하는 경우 0이 아니고 취소 된 경우 0입니다.
 

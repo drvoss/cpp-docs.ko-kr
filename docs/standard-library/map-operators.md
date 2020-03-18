@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883965"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425522"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 연산자
 
@@ -43,7 +43,7 @@ bool operator!=(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 map이 같지 않으면 **true**이고, map이 같으면 **false**입니다.
 
@@ -108,7 +108,7 @@ bool operator<(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -173,7 +173,7 @@ bool operator<=(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -241,7 +241,7 @@ bool operator==(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -306,7 +306,7 @@ bool operator>(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -370,7 +370,7 @@ bool operator>=(
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -438,7 +438,7 @@ bool operator!=(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 multimap이 같지 않으면 **true**이고 multimap이 같으면 **false**입니다.
 
@@ -503,7 +503,7 @@ bool operator<(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -568,7 +568,7 @@ bool operator<=(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -636,7 +636,7 @@ bool operator==(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -701,7 +701,7 @@ bool operator>(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -766,7 +766,7 @@ bool operator>=(
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 

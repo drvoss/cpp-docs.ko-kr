@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949763"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443730"
 ---
 # <a name="_putw"></a>_putw
 
@@ -56,15 +55,15 @@ int _putw(
 *stream*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 작성된 값을 반환합니다. **EOF** 의 반환 값은 오류를 나타낼 수 있습니다. **EOF** 도 올바른 정수 값 이므로 **ferror** 를 사용 하 여 오류를 확인 합니다. *Stream* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EOF**를 반환 합니다.
 
-이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이러한 오류 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_Putw** 함수는 **int** 형식의 이진 값을 스트림의 현재 위치에 씁니다 *.* **_putw** 는 스트림의 항목 맞춤에 영향을 주지 않으며 특수 한 맞춤도 가정 하지 않습니다. **_putw** 는 주로 이전 라이브러리와의 호환성을 위해 사용 됩니다. **Int의 크기와** **int** 내 바이트의 순서가 시스템 마다 다르기 때문에 이식성 문제가 **_putw** 와 함께 발생할 수 있습니다.
+**_Putw** 함수는 **int** 형식의 이진 값을 스트림의 현재 위치에 씁니다 *.* **_putw** 은 스트림의 항목 맞춤에 영향을 주지 않으며 특수 한 맞춤을 가정 하지도 않습니다. **_putw** 는 주로 이전 라이브러리와의 호환성을 위해 사용 됩니다. **Int** 의 크기와 **int** 내 바이트의 순서가 시스템 마다 다르기 때문에 **_putw** 에서 이식성 문제가 발생할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -116,7 +115,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

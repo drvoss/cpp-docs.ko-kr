@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874052"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424664"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator 클래스
 
@@ -39,20 +39,20 @@ class insert_iterator;
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[insert_iterator](#insert_iterator)|컨테이너의 지정된 위치에 요소를 삽입하는 `insert_iterator`를 만듭니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[container_type](#container_type)|일반 삽입 대상인 컨테이너를 나타내는 형식입니다.|
 |[reference](#reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|
 
 ### <a name="operators"></a>연산자
 
-|Operator|설명|
+|연산자|Description|
 |-|-|
 |[operator*](#op_star)|일반 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용된 역참조 연산자입니다.|
 |[operator++](#op_add_add)|값을 저장할 다음 위치에 `insert_iterator`를 증가시킵니다.|
@@ -180,7 +180,7 @@ After the insertions, the list L is:
 insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수는 주소가 지정된 요소의 값을 반환합니다.
 
@@ -313,7 +313,7 @@ insert_iterator<Container>& operator=(
 *val*\
 컨테이너에 할당할 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨테이너에 삽입된 요소에 대한 참조입니다.
 

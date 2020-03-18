@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945915"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443753"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -83,13 +82,13 @@ wint_t _ungetwch_nolock(
 *c*<br/>
 푸시할 문자 수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공할 경우 두 함수는 모두 문자 *c* 를 반환 합니다. 오류가 발생 하면 **_ungetch** 는 **EOF** 값을 반환 하 고 **_Ungetwch** 는 **weof**를 반환 합니다.
+성공할 경우 두 함수는 모두 문자 *c* 를 반환 합니다. 오류가 발생 하는 경우 **_ungetch** 은 **EOF** 값을 반환 하 고 **_ungetwch** 는 **weof**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-이러한 함수는 *c* 문자를 콘솔에 다시 푸시하여 *c* 가 **_getch** 또는 **_getche** (또는 **_getwch** 또는 **_getwche**)에서 읽은 다음 문자가 되도록 합니다. 다음 읽기 전에 두 번 이상 호출 되는 경우 **_ungetch** 및 **_ungetwch** fail이 실패 합니다. *C* 인수는 **EOF** (또는 **weof**) 일 수 없습니다.
+이러한 함수는 *c* 문자를 콘솔에 다시 푸시하여 *c* 가 **_getch** 또는 **_getche** (또는 **_getwch** 또는 **_getwche**)에서 읽은 다음 문자가 되도록 합니다. **_ungetch** 및 **_ungetwch** 는 다음 읽기 전에 두 번 이상 호출 된 경우 실패 합니다. *C* 인수는 **EOF** (또는 **weof**) 일 수 없습니다.
 
 **_nolock** 접미사가 있는 버전은 다른 스레드에 의한 간섭에서 보호되지 않는 점을 제외하면 동일합니다. 이러한 버전에서는 다른 스레드를 잠그는 오버헤드가 발생하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
 
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- rmtmp
 - _rmtmp
 helpviewer_keywords:
 - removing temporary files
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949157"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442784"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -48,7 +47,7 @@ ms.locfileid: "70949157"
 int _rmtmp( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_rmtmp** 는 닫히고 삭제 된 임시 파일의 수를 반환 합니다.
 
@@ -72,7 +71,7 @@ int _rmtmp( void );
 
 [tmpfile](tmpfile.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

@@ -1,20 +1,18 @@
 ---
 title: 텍스트 및 이진 모드의 유니코드 스트림 I/O
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - stream I/O routines
 - I/O [CRT], unicode stream
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: 10f77c7142c707d4df841899b50be2807b1b9c7f
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: b41818bbb625a8c875771e86e3d82b74f4291e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376266"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444512"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>텍스트 및 이진 모드의 유니코드 스트림 I/O
 
@@ -24,7 +22,7 @@ ms.locfileid: "68376266"
 
 - 캐리지 리턴 - 줄 바꿈(CR-LF) 변환. 이 변환은 MBCS에서 유니코드로 변환(유니코드 스트림 입력 함수) 전 및 유니코드에서 MBCS로 변환(유니코드 스트림 출력 함수) 이후에 발생합니다. 입력하는 동안 각 캐리지 리턴 - 줄 바꿈 조합은 단일 줄 바꿈 문자로 변환됩니다. 출력하는 동안 각 줄 바꿈 문자는 캐리지 리턴 - 줄 바꿈 조합으로 변환됩니다.
 
-그러나 유니코드 스트림 I/O 함수가 이진 모드에서 작동하는 경우 파일은 유니코드로 간주되며 입력 또는 출력하는 동안 CR-LF 변환 또는 문자 변환이 발생합니다. 유니코드 텍스트 파일에서 `wcin`을 올바르게 사용하려면 `_setmode( _fileno( stdin ), _O_BINARY );` 명령을 사용합니다.
+그러나 유니코드 스트림 I/O 함수가 이진 모드에서 작동하는 경우 파일은 유니코드로 간주되며 입력 또는 출력하는 동안 CR-LF 변환 또는 문자 변환이 발생합니다. 유니코드 텍스트 파일에서 `_setmode( _fileno( stdin ), _O_BINARY );`을 올바르게 사용하려면 `wcin` 명령을 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

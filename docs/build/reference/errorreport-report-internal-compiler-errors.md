@@ -4,17 +4,16 @@ description: Microsoft C/C++ 컴파일러/errorReport 명령줄 옵션에 대 �
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
-- /errorreport
 helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257652"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439890"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport(내부 컴파일러 오류 보고)
 
@@ -25,7 +24,7 @@ ms.locfileid: "77257652"
 
 > **/errorReport:** \[**none** \| **프롬프트** \| **queue** \| **send** ]
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 컴파일러에서 소스 코드 파일을 처리할 수 없는 경우 ICE (내부 컴파일러 오류)가 발생 합니다. ICE가 발생 하면 컴파일러는 출력 파일 또는 코드를 수정 하는 데 사용할 수 있는 유용한 진단을 생성 하지 않습니다.
 

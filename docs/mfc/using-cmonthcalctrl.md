@@ -1,17 +1,15 @@
 ---
 title: CMonthCalCtrl 사용
 ms.date: 11/04/2016
-f1_keywords:
-- CMonthCalCtrl
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: f13532b67fa129d0fed402deef2696c0bc25f585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631673"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441940"
 ---
 # <a name="using-cmonthcalctrl"></a>CMonthCalCtrl 사용
 
@@ -30,6 +28,6 @@ Month calendar 컨트롤 ([Cmonthcalctrl](../mfc/reference/cmonthcalctrl-class.m
 
 - [Month Calendar 컨트롤의 일 상태 설정](../mfc/setting-the-day-state-of-a-month-calendar-control.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컨트롤](../mfc/controls-mfc.md)

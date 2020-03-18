@@ -23,7 +23,6 @@ topic_type:
 f1_keywords:
 - _spawnvpe
 - wspawnvpe
-- spawnvpe
 - _wspawnvpe
 helpviewer_keywords:
 - _wspawnvpe function
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 65a3eaa9fb88ccd1d674f1ebf1bccea01f684b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ea71f5d7a9cd640e3d314eb48846bca995dca5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957840"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442703"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -67,21 +66,21 @@ intptr_t _wspawnvpe(
 
 ### <a name="parameters"></a>매개 변수
 
-*모드*<br/>
+*mode*<br/>
 호출 프로세스의 실행 모드입니다.
 
 *cmdname*<br/>
 실행할 파일의 경로입니다.
 
-*argv*<br/>
+*마다*<br/>
 인수에 대한 포인터 배열입니다. 인수 *argv*[0]은 일반적으로 리얼 모드의 경로 또는 보호 모드의 프로그램 이름에 대 한 포인터 *이 고, argv [* 1] ~ *argv*[**n**]은 새 인수 목록을 형성 하는 문자열에 대 한 포인터입니다. 인수 *argv*[**n** + 1]은 인수 목록의 끝을 표시 하는 **NULL** 포인터 여야 합니다.
 
 *envp*<br/>
 환경 설정에 대한 포인터 배열입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_Spawnvpe** 또는 **_wspawnvpe** 에 지정 된 **_P_WAIT** *의 반환*값은 새 프로세스의 종료 상태입니다. 비동기 **_spawnvpe** 또는 **_wspawnvpe** ( *mode*에 지정 된 **_P_NOWAIT** 또는 **_P_NOWAITO** )의 반환 값은 프로세스 핸들입니다. 프로세스가 정상적으로 종료되는 경우 종료 상태는 0입니다. 생성 된 프로세스가 0이 아닌 인수를 사용 하 여 **종료** 루틴을 특별히 호출 하는 경우 종료 상태를 0이 아닌 값으로 설정할 수 있습니다. 새 프로세스가 양수 값의 종료 상태를 명시적으로 설정하지 않은 경우, 양수 값의 종료 상태는 중단되거나 인터럽트된 비정상적인 종료를 나타냅니다. 반환 값-1은 오류를 나타냅니다 (새 프로세스가 시작 되지 않음). 이 경우 **errno** 는 다음 값 중 하나로 설정 됩니다.
+동기 **_spawnvpe** 또는 **_wspawnvpe** ( *모드*에 대해 지정 된 **_P_WAIT** )의 반환 값은 새 프로세스의 종료 상태입니다. 비동기 **_spawnvpe** 또는 **_wspawnvpe** ( *모드*에 지정 된 **_P_NOWAIT** 또는 **_P_NOWAITO** )의 반환 값은 프로세스 핸들입니다. 프로세스가 정상적으로 종료되는 경우 종료 상태는 0입니다. 생성 된 프로세스가 0이 아닌 인수를 사용 하 여 **종료** 루틴을 특별히 호출 하는 경우 종료 상태를 0이 아닌 값으로 설정할 수 있습니다. 새 프로세스가 양수 값의 종료 상태를 명시적으로 설정하지 않은 경우, 양수 값의 종료 상태는 중단되거나 인터럽트된 비정상적인 종료를 나타냅니다. 반환 값-1은 오류를 나타냅니다 (새 프로세스가 시작 되지 않음). 이 경우 **errno** 는 다음 값 중 하나로 설정 됩니다.
 
 |||
 |-|-|
@@ -110,9 +109,9 @@ intptr_t _wspawnvpe(
 
 ## <a name="example"></a>예제
 
-[_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)의 예제를 참조하세요.
+[_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [abort](abort.md)<br/>
 [atexit](atexit.md)<br/>

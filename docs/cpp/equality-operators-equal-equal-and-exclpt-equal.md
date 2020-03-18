@@ -2,7 +2,6 @@
 title: '같음 연산자: == 및 !='
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392171"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444405"
 ---
 # <a name="equality-operators--and-"></a>같음 연산자: == 및 !=
 
@@ -36,11 +35,11 @@ expression != expression
 
 같음 연산자에는 같음(`==`)과 같지 않음(`!=`)이 있으며 이러한 연산자는 관계형 연산자보다 우선 순위가 낮지만 비슷하게 동작합니다. 이러한 연산자의 결과 형식은 **bool**입니다.
 
-같음 연산자(`==`)는 두 피연산자의 값이 같으면 **true** (1)을 반환하고, 그렇지 않으면 **false** (0)을 반환합니다. 같지 않음 연산자(`!=`)는 두 피연산자의 값이 같지 않으면 **true**를 반환하고, 그렇지 않으면 **false**를 반환합니다.
+같음 연산자 (`==`)는 두 피연산자의 값이 같으면 **true** (1)를 반환 합니다. 그렇지 않으면 **false** (0)를 반환 합니다. 같지 않음 연산자 (`!=`)는 피연산자의 값이 같지 않으면 **true** 를 반환 하 고, 그렇지 않으면 **false**를 반환 합니다.
 
 ## <a name="operator-keyword-for-"></a>!=에 대한 연산자 키워드
 
-`not_eq` 연산자는 `!=`에 해당하는 텍스트입니다. 프로그램에서 `not_eq` 연산자에 액세스하는 두 가지 방법이 있습니다. 헤더 파일 `iso646.h`를 포함하거나 [/Za](../build/reference/za-ze-disable-language-extensions.md)(언어 확장 사용 안 함) 컴파일러 옵션으로 컴파일하는 것입니다.
+`not_eq` 연산자는 `!=`에 해당하는 텍스트입니다. 프로그램에서 `not_eq` 연산자에 액세스 하는 방법에는 헤더 파일 `iso646.h`포함 하거나 [/za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장 사용 안 함) 컴파일러 옵션으로 컴파일하는 두 가지 방법이 있습니다.
 
 ## <a name="example"></a>예제
 

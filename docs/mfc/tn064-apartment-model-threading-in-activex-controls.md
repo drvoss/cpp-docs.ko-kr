@@ -1,8 +1,6 @@
 ---
 title: 'TN064: ActiveX 컨트롤의 아파트 모델 스레딩'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.controls.activex
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f490e82e179da4614eea345136a9edfb1d320705
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513329"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442107"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: ActiveX 컨트롤의 아파트 모델 스레딩
 
@@ -40,7 +38,7 @@ ms.locfileid: "69513329"
 
 ## <a name="protecting-shared-data"></a>공유 데이터 보호
 
-컨트롤이 정적 멤버 변수와 같은 공유 데이터를 사용 하는 경우 두 개 이상의 스레드가 동시에 데이터를 수정 하는 것을 방지 하기 위해 해당 데이터에 대 한 액세스를 임계 영역으로 보호 해야 합니다. 이 목적을 위해 임계 영역을 설정 하려면 컨트롤의 클래스에서 클래스 `CCriticalSection` 의 정적 멤버 변수를 선언 합니다. 코드가 공유 데이터 `Unlock` 에 액세스 하는 경우이 임계 영역 개체의 및멤버함수를사용합니다.`Lock`
+컨트롤이 정적 멤버 변수와 같은 공유 데이터를 사용 하는 경우 두 개 이상의 스레드가 동시에 데이터를 수정 하는 것을 방지 하기 위해 해당 데이터에 대 한 액세스를 임계 영역으로 보호 해야 합니다. 이 목적을 위해 임계 영역을 설정 하려면 컨트롤의 클래스에서 `CCriticalSection` 클래스의 정적 멤버 변수를 선언 합니다. 코드가 공유 데이터에 액세스 하는 경우이 임계 영역 개체의 `Lock` 및 `Unlock` 멤버 함수를 사용 합니다.
 
 예를 들어 모든 인스턴스에서 공유 하는 문자열을 유지 해야 하는 컨트롤 클래스를 생각해 보겠습니다. 이 문자열은 정적 멤버 변수에서 유지 관리 되 고 임계 영역으로 보호 될 수 있습니다. 컨트롤의 클래스 선언에는 다음이 포함 됩니다.
 
@@ -60,7 +58,7 @@ int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-그런 다음, `_strShared` 정적 멤버에 대 한 액세스를 중요 섹션으로 보호할 수 있습니다.
+그런 다음 `_strShared` 정적 멤버에 대 한 액세스를 중요 섹션으로 보호할 수 있습니다.
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -76,7 +74,7 @@ if (_strShared.Empty())
 
 ## <a name="registering-an-apartment-model-aware-control"></a>아파트 모델 인식 컨트롤 등록
 
-아파트 모델 스레딩을 지 원하는 컨트롤은 클래스 id 레지스트리 항목의 클래스 ID 레지스트리 항목 \\  **에 "ThreadingModel" 값을 사용 하 여 명명 된 값 ""를 추가 하 여 레지스트리에이 기능을 표시 해야 합니다. InprocServer32** 키입니다. 컨트롤에 대해이 키가 자동으로 등록 되도록 하려면 여섯 번째 매개 변수의 *afxRegApartmentThreading* 플래그를에 `AfxOleRegisterControlClass`전달 합니다.
+아파트 모델 스레딩을 지 원하는 컨트롤은 클래스 *id*\\**InprocServer32** key 아래의 클래스 id 레지스트리 항목에서 "아파트" 값을 가진 명명 된 값 "ThreadingModel"를 추가 하 여 레지스트리에이 기능을 표시 해야 합니다. 컨트롤에 대해이 키가 자동으로 등록 되도록 하려면 여섯 번째 매개 변수에 *afxRegApartmentThreading* 플래그를 전달 하 여 `AfxOleRegisterControlClass`합니다.
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
@@ -107,7 +105,7 @@ Visual C++ 4.1 이상 버전의 ControlWizard에서 컨트롤 프로젝트를 �
 
 컨트롤이 아파트 모델 스레딩 규칙을 따르지 않는 경우에는이 매개 변수에 *afxRegApartmentThreading* 를 전달 하면 안 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

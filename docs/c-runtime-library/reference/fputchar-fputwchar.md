@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956928"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442978"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -63,7 +62,7 @@ wint_t _fputwchar(
 *c*<br/>
 쓸 문자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 기록된 문자를 반환합니다. **_Fputchar**의 경우 **EOF** 의 반환 값은 오류를 나타냅니다. **_Fputwchar**의 경우 **weof** 반환 값은 오류를 나타냅니다. C가 **NULL**인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 예외를 생성 합니다. 계속 해 서 실행 하도록 허용한 경우 **EOF** (또는 **weof**)를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
@@ -71,7 +70,7 @@ wint_t _fputwchar(
 
 ## <a name="remarks"></a>설명
 
-이 두 함수는 단일 문자 *c* 를 **stdout** 에 쓰고 표시기를 적절히 앞으로 이동 합니다. **_fputchar** 는와 동일 `fputc( stdout )`합니다. **Putchar**와 동일 하지만 함수 및 매크로가 아닌 함수로만 구현 됩니다. **Fputc** 및 **putchar**와 달리 이러한 함수는 ANSI 표준과 호환 되지 않습니다.
+이 두 함수는 단일 문자 *c* 를 **stdout** 에 쓰고 표시기를 적절히 앞으로 이동 합니다. **_fputchar** 은 `fputc( stdout )`와 동일 합니다. **Putchar**와 동일 하지만 함수 및 매크로가 아닌 함수로만 구현 됩니다. **Fputc** 및 **putchar**와 달리 이러한 함수는 ANSI 표준과 호환 되지 않습니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
@@ -81,7 +80,7 @@ wint_t _fputwchar(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> 또는 \<wchar.h>|
@@ -113,7 +112,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

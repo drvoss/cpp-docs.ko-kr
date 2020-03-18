@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890874"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424808"
 ---
 # <a name="forward_list-class"></a>forward_list 클래스
 
@@ -104,7 +104,7 @@ class forward_list
 forward_list에 저장되는 요소 데이터 형식입니다.
 
 *할당자*\
-forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체입니다. 이 매개 변수는 선택적 요소입니다. 기본값은 할당자 <`Type`>입니다.
+forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체입니다. 이 매개 변수는 선택 사항입니다. 기본값은 할당자 <`Type`>입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -117,7 +117,7 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 
 제어되는 시퀀스에 대한 추가는 [ 생성자를 호출하는 유일한 멤버 함수인 ](#insert_after)forward_list::insert_after`Type(const  T&)`를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생 하면 `forward_list` 형식의 개체가 알려진 상태로 유지 됩니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -125,7 +125,7 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 |-|-|
 |[forward_list](#forward_list)|`forward_list` 형식의 개체를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -140,7 +140,7 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.|
 |[value_type](#value_type)|정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -221,7 +221,7 @@ void assign(InputIterator First, InputIterator Last);
 각 요소에 할당할 값입니다.
 
 *형식*\
-값의 형식입니다.
+값의 유형입니다.
 
 *IList*\
 복사할 initializer_list입니다.
@@ -243,7 +243,7 @@ const_iterator before_begin() const;
 iterator before_begin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
@@ -258,7 +258,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기입니다.
 
@@ -272,7 +272,7 @@ iterator begin();
 const_iterator cbefore_begin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
@@ -286,7 +286,7 @@ const_iterator cbefore_begin() const;
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **const** 전방 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
@@ -311,7 +311,7 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 범위 끝의 바로 다음을 가리키는 정방향 액세스 반복기입니다.
 
@@ -405,7 +405,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 *val*\
 생성자 인수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 삽입된 요소를 지정하는 반복기입니다.
 
@@ -441,7 +441,7 @@ template <class Type>
 bool empty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 전방 목록이 비어 있으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -454,7 +454,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 시퀀스의 끝 바로 다음을 가리키는 정방향 반복기입니다.
 
@@ -478,7 +478,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 *마지막*\
 지울 범위의 끝입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#end)입니다.
 
@@ -561,7 +561,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조입니다.
 
@@ -573,7 +573,7 @@ const_reference front() const;
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 저장된 [할당자](../standard-library/allocator-class.md) 개체입니다.
 
@@ -610,7 +610,7 @@ template <class InputIterator>
 *IList*\
 삽입할 initializer_list입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 삽입된 요소(첫 번째 및 마지막 멤버 함수만)를 지정하는 반복기입니다.
 
@@ -652,7 +652,7 @@ typedef implementation-defined iterator;
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 제어할 수 있는 가장 긴 시퀀스의 길이입니다.
 
@@ -895,7 +895,7 @@ void splice_after(
 *Where*\
 대상 forward_list의 위치로, 이 위치 앞에서 삽입합니다.
 
-*Source*\
+*원본*\
 대상 forward_list으로 삽입할 원본 forward_list입니다.
 
 *Iter*\

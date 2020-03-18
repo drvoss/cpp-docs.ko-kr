@@ -1,20 +1,18 @@
 ---
 title: 범주별 유버니설 C 런타임 루틴
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499583"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444814"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>범주별 유버니설 C 런타임 루틴
 

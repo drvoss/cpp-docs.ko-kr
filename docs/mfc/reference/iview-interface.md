@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426254"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445672"
 ---
 # <a name="iview-interface"></a>IView 인터페이스
 
@@ -54,6 +54,7 @@ Windows Forms 사용에 대 한 자세한 내용은 [MFC에서 Windows Form 사�
 ## <a name="onactivateview"></a>IView:: OnActivateView
 
 뷰가 활성화 또는 비활성화 될 때 MFC에서 호출 됩니다.
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ void OnActivateView(bool activate);
 ## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
 뷰가 문서에 처음 연결 된 후 뷰가 처음 표시 되기 전에 프레임 워크에서 호출 됩니다.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView:: OnUpdate
 
 뷰의 문서가 수정 된 후에 MFC에서 호출 됩니다.
+
 ```
 void OnUpdate();
 ```

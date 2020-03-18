@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: 표준 C++ 라이브러리의 filesystem 헤더에 있는 클래스, 함수 및 형식을 설명 합니다.
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725684"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441715"
 ---
 # &lt;filesystem&gt;
 
@@ -42,7 +37,7 @@ using namespace std::experimental::filesystem::v1;
 
 이 헤더는 Microsoft Windows 및 POSIX의 광범위 한 두 호스트 운영 체제 클래스 중 하나에 대 한 파일 시스템을 지원 합니다.
 
-대부분의 기능이 두 운영 체제에서 공통되지만 이 문서에서는 차이가 있는 위치를 식별합니다. 예를 들면 다음과 같습니다.:
+대부분의 기능이 두 운영 체제에서 공통되지만 이 문서에서는 차이가 있는 위치를 식별합니다. 다음은 그 예입니다.
 
 - Windows에서는 `c:` 또는 `\\network_name`와 같은 여러 루트 이름을 지원 합니다. 파일 시스템은 트리의 포리스트로 구성 되며, 각각에는 고유한 루트 디렉터리 (예: `c:\` 또는 `\\network_name\`)가 있으며 상대 경로 이름 (절대 경로 이름 아님)을 완료 하는 데 고유한 현재 디렉터리가 있습니다.
 
@@ -86,7 +81,7 @@ using namespace std::experimental::filesystem::v1;
 
 - 부모 경로가 `c:/abc/xyz`되었습니다.
 
-- 파일 이름이 `def.ext`합니다.
+- 파일 이름이 `def.ext`인 경우
 
 - 스템가 `def`됩니다.
 
@@ -98,7 +93,7 @@ using namespace std::experimental::filesystem::v1;
 
 자세한 내용 및 코드 예제는 [파일 시스템 탐색C++()](../standard-library/file-system-navigation.md)을 참조 하세요.
 
-## <a name="members"></a>Members
+## <a name="members"></a>구성원
 
 ### <a name="classes"></a>클래스
 
@@ -111,13 +106,13 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator 클래스](../standard-library/recursive-directory-iterator-class.md)|파일 시스템 디렉터리에서 파일 이름을 통해 시퀀스되는 입력 반복기에 대해 설명합니다. 이 반복기는 하위 디렉터리로도 상속됩니다.|
 |[file_status 클래스](../standard-library/file-status-class.md)|`file_type`을 래핑합니다.|
 
-### <a name="structs"></a>Structs
+### <a name="structs"></a>구조체
 
 |||
 |-|-|
 |[space_info 구조체](../standard-library/space-info-structure.md)|볼륨에 대한 정보를 보관합니다.|
 
-## <a name="functions"></a>함수
+## <a name="functions"></a>Functions
 
 [\<filesystem> 함수](../standard-library/filesystem-functions.md)
 
@@ -129,12 +124,12 @@ using namespace std::experimental::filesystem::v1;
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) 과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file)과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|디렉터리 반복기에 대한 옵션을 지정하는 열거형입니다.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|파일 형식에 대한 열거형입니다.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| `permissions` 함수에 대 한 옵션을 열거 합니다. |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|사용 권한 및 사용 권한에 대한 옵션을 전달하는 데 사용되는 비트 마스크 형식입니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)

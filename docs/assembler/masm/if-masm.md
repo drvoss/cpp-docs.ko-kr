@@ -1,17 +1,15 @@
 ---
 title: IF (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- if
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 38d366a3a41e7b08759594899cdcbb2cb84dfbfa
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 6e63f5c8075b3c94370ad8863d224c097cf0ecdf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317294"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440755"
 ---
 # <a name="if"></a>IF
 
@@ -19,7 +17,7 @@ ms.locfileid: "75317294"
 
 ## <a name="syntax"></a>구문
 
-> *Expression1*\
+> **IF** *Expression1*\
 > *if 문*\
 > ⟦**ELSEIF** *식*\
 > *elseif-문*⟧ \
@@ -27,11 +25,11 @@ ms.locfileid: "75317294"
 > *else 문*⟧ \
 > **ENDIF**
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음 지시문은 [ELSEIF](elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**및 **ELSEIFNDEF**로 대체 될 수 있습니다. 필요에 따라 이전 식이 false 인 경우 *else 문을* 어셈블합니다. 식은 어셈블리 시간에 계산 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [지시문 참조](directives-reference.md)\
 [MASM BNF 문법](masm-bnf-grammar.md)

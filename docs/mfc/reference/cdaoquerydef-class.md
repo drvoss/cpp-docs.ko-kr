@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883891"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424544"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 클래스
 
@@ -83,17 +83,17 @@ ms.locfileid: "78883891"
 class CDaoQueryDef : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|`CDaoQueryDef` 개체를 생성합니다. 다음 호출에는 요구 사항에 따라 `Open` 또는 `Create`.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoQueryDef:: Append](#append)|쿼리 정의를 데이터베이스의 쿼리 정의 컬렉션에 저장 된 쿼리로 추가 합니다.|
 |[CDaoQueryDef::CanUpdate](#canupdate)|쿼리에서 데이터베이스를 업데이트할 수 있는 경우 0이 아닌 값을 반환 합니다.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDaoQueryDef:: m_pDAOQueryDef](#m_pdaoquerydef)|기본 DAO querydef 개체의 OLE 인터페이스에 대 한 포인터입니다.|
 |[CDaoQueryDef:: m_pDatabase](#m_pdatabase)|Querydef가 연결 된 `CDaoDatabase` 개체에 대 한 포인터입니다. 쿼리 정의는 데이터베이스에 저장 될 수도 있고 그렇지 않을 수도 있습니다.|
@@ -137,7 +137,7 @@ Querydef는 쿼리를 설명 하는 SQL 문 및 해당 속성 (예: "작성일" 
 > [!NOTE]
 >  DAO 데이터베이스 클래스는 ODBC (Open Database Connectivity)를 기반으로 하는 MFC 데이터베이스 클래스와는 다릅니다. 모든 DAO 데이터베이스 클래스 이름에는 "CDao" 접두사가 있습니다. 여전히 DAO 클래스를 사용 하 여 ODBC 데이터 원본에 액세스할 수 있습니다. 일반적으로 DAO 기반의 MFC 클래스는 ODBC를 기반으로 하는 MFC 클래스 보다 더 사용할 수 있습니다. DAO 기반 클래스는 자체 데이터베이스 엔진을 통해 ODBC 드라이버를 포함 하 여 데이터에 액세스할 수 있습니다. 또한 dao 기반 클래스는 DAO를 직접 호출 하지 않고도 클래스를 통해 테이블을 추가 하는 등의 DDL (데이터 정의 언어) 작업을 지원 합니다.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 기존에 저장 된 쿼리로 작업 하거나 새 저장 된 쿼리 또는 임시 쿼리를 만들려면 쿼리 정의 개체를 사용 합니다.
 
@@ -213,7 +213,7 @@ virtual void Append();
 BOOL CanUpdate();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef를 수정할 수 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -345,7 +345,7 @@ Querydef 개체의 [GetRecordsAffected](#getrecordsaffected) 멤버 함수를 �
 CString GetConnect();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쿼리 정의에 대 한 연결 문자열을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 입니다.
 
@@ -366,7 +366,7 @@ CString GetConnect();
 COleDateTime GetDateCreated();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef를 만든 날짜와 시간을 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체입니다.
 
@@ -382,7 +382,7 @@ Querydef를 만든 날짜와 시간을 포함 하는 [COleDateTime](../../atl-mf
 COleDateTime GetDateLastUpdated();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef가 마지막으로 업데이트 된 날짜와 시간을 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체입니다.
 
@@ -398,7 +398,7 @@ Querydef가 마지막으로 업데이트 된 날짜와 시간을 포함 하는 [
 short GetFieldCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쿼리에 정의 된 필드 수입니다.
 
@@ -454,7 +454,7 @@ void GetFieldInfo(
 CString GetName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쿼리의 이름입니다.
 
@@ -470,7 +470,7 @@ ODBC 데이터 원본에 대 한 쿼리 시간이 초과 되기 전에 현재 �
 short GetODBCTimeout();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다.
 
@@ -489,7 +489,7 @@ short GetODBCTimeout();
 short GetParameterCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쿼리에 정의 된 매개 변수의 수입니다.
 
@@ -554,7 +554,7 @@ virtual COleVariant GetParamValue(int nIndex);
 *nIndex*<br/>
 인덱스를 기준으로 조회 하기 위해 querydef의 Parameters 컬렉션에 있는 매개 변수의 인덱스 (0부터 시작)입니다. [Getparametercount](#getparametercount) 및 [GetParameterInfo](#getparameterinfo)에 대 한 호출을 사용 하 여이 값을 가져올 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수의 값을 포함 하는 [COleVariant](../../mfc/reference/colevariant-class.md) 클래스의 개체입니다.
 
@@ -572,7 +572,7 @@ virtual COleVariant GetParamValue(int nIndex);
 long GetRecordsAffected();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 영향을 받은 레코드 수입니다.
 
@@ -590,7 +590,7 @@ long GetRecordsAffected();
 BOOL GetReturnsRecords();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef가 레코드를 반환 하는 쿼리를 기반으로 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -608,7 +608,7 @@ Querydef가 레코드를 반환 하는 쿼리를 기반으로 하는 경우 0이
 CString GetSQL();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef의 기반이 되는 쿼리를 정의 하는 SQL 문입니다.
 
@@ -626,7 +626,7 @@ Querydef의 기반이 되는 쿼리를 정의 하는 SQL 문입니다.
 short GetType();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Querydef에서 정의한 쿼리 유형입니다. 값은 주의를 참조 하세요.
 
@@ -669,7 +669,7 @@ SQL 문자열에 대 한 자세한 내용은 [Getsql](#getsql)을 참조 하세�
 BOOL IsOpen() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CDaoQueryDef` 개체가 현재 열려 있으면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 

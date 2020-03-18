@@ -47,11 +47,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865472"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424952"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math 네임스페이스 함수
 
@@ -360,7 +360,7 @@ inline float exp2(float _X) restrict(amp);
 
 ### <a name="return-value"></a>Return Value
 
-인수의 밑이 2인 지수 값을 반환합니다.
+인수의 밑이 2인 지수를 반환합니다.
 
 ## <a name="exp2f"></a>exp2f
 
@@ -377,7 +377,7 @@ inline float exp2f(float _X) restrict(amp);
 
 ### <a name="return-value"></a>Return Value
 
-인수의 밑이 2인 지수 값을 반환합니다.
+인수의 밑이 2인 지수를 반환합니다.
 
 ## <a name="expf"></a>expf
 

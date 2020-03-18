@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 20d74030cdc90ed2e1a7809c121967e74db21b4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866565"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424304"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 클래스
 
@@ -51,17 +51,17 @@ ms.locfileid: "78866565"
 class CMDIFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMDIFrameWnd:: CMDIFrameWnd](#cmdiframewnd)|`CMDIFrameWnd`를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMDIFrameWnd:: CreateClient](#createclient)|이 `CMDIFrameWnd`에 대 한 Windows MDICLIENT 창을 만듭니다. `CWnd`의 `OnCreate` 멤버 함수에 의해 호출 됩니다.|
 |[CMDIFrameWnd:: CreateNewChild](#createnewchild)|새 자식 창을 만듭니다.|
@@ -111,7 +111,7 @@ class CMDIFrameWnd : public CFrameWnd
 
 - MDI 프레임 창에는 현재 문서에 새 프레임과 뷰를 만드는 ID_WINDOW_NEW의 구현도 있습니다. 응용 프로그램은 이러한 기본 명령 구현을 재정의 하 여 MDI 창 처리를 사용자 지정할 수 있습니다.
 
-C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow` 를 사용하세요. `PostNcDestroy`를 `CFrameWnd` 구현 하면 창이 소멸 될 C++ 때 개체를 삭제 합니다. 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가 `DestroyWindow`를 호출 합니다.
+C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow`를 사용하세요. `PostNcDestroy`를 `CFrameWnd` 구현 하면 창이 소멸 될 C++ 때 개체를 삭제 합니다. 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가 `DestroyWindow`를 호출 합니다.
 
 `CMDIFrameWnd`에 대 한 자세한 내용은 [프레임 창](../../mfc/frame-windows.md)을 참조 하세요.
 
@@ -165,7 +165,7 @@ virtual BOOL CreateClient(
 *pWindowMenu*<br/>
 창 팝업 메뉴에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -224,7 +224,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 *hMenuBar*<br/>
 현재 메뉴 모음입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 팝업 메뉴가 있으면이 메뉴를 표시 합니다. 그렇지 않으면 NULL입니다.
 
@@ -299,7 +299,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 *P최대화*<br/>
 BOOL 반환 값에 대 한 포인터입니다. 창이 최대화 된 경우 반환에 대해 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 MDI 자식 창에 대 한 포인터입니다.
 
@@ -409,7 +409,7 @@ CMenu* MDISetMenu(
 *pWindowMenu*<br/>
 새 창 팝업 메뉴의 메뉴를 지정 합니다. NULL 인 경우에는 메뉴가 변경 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메시지로 바뀐 프레임 창 메뉴에 대 한 포인터입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
