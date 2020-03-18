@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424742"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441632"
 ---
 # <a name="hash_map-class"></a>hash_map 클래스
 
@@ -124,7 +124,7 @@ hash_map에 저장되는 요소 데이터 형식입니다.
 두 요소 값을 정렬 키로 비교하여 상대 순서를 확인할 수 있는 클래스 비교 중 하나와 요소의 키 값을 `size_t` 형식의 부호 없는 정수에 매핑하는 단항 조건자인 해시 함수의 두 개체를 포함하는 형식입니다. 이 인수는 선택 사항이며 hash_compare<`Key`, less<`Key`> >가 기본값입니다.
 
 *할당자*\
-hash_map의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 allocator<pair <const `Key`, `Type`>>입니다.
+hash_map의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 할당자\<pair < const `Key``Type`> >입니다.
 
 ## <a name="remarks"></a>설명
 

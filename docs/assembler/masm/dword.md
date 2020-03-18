@@ -1,17 +1,15 @@
 ---
 title: DWORD
 ms.date: 12/17/2019
-f1_keywords:
-- DWORD
 helpviewer_keywords:
 - DWORD directive
 ms.assetid: 20efd7c6-1ee6-45a1-9feb-86ce7978142a
-ms.openlocfilehash: 173700a73e311a1256db8dc4b28c77497dc74384
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 430a8ed36ab581b7e1476812875a7d9258ea8455
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318178"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440935"
 ---
 # <a name="dword"></a>DWORD
 
@@ -21,11 +19,11 @@ ms.locfileid: "75318178"
 
 > ⟦*name*⟧ **DWORD** *이니셜라이저* ⟦ __,__ *이니셜라이저가* 있습니다. ⟧
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 형식이 유효한 모든 곳에서 형식을 형식 지정자로 사용할 수도 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [지시문 참조](directives-reference.md)\
 [Sdword](sdword.md)\

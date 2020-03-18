@@ -4,7 +4,6 @@ description: Lib.exe에서 사용할 수 있는 명령줄 옵션에 대해 설�
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
-- Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
 helpviewer_keywords:
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 871b92809f38b4dcbf84de802b1ac9940ea6f1e9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257561"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438945"
 ---
 # <a name="running-lib"></a>LIB 실행
 
@@ -60,7 +59,7 @@ LIB를 실행 하려면 `lib`명령을 입력 한 다음 LIB를 사용 하 고 �
 
 다음 옵션은 LIB의 모든 모드에 적용 됩니다.
 
-> **/ERRORREPORT** \[**없음** &#124; **메시지** &#124; 큐 &#124; **송신**]
+> **/ERRORREPORT** \[**없음** &#124; **메시지** &#124; **QUEUE** 큐 &#124; **송신**]
 
 /ERRORREPORT 옵션은 사용 되지 않습니다. Windows Vista부터 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다.
 

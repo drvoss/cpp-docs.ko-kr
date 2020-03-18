@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141801"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445114"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP 앱에 대 C++ 한에서 비동기 작업 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "77141801"
 
 - `create_async` 함수의 동작은 이 함수에 전달된 작업 함수의 반환 형식에 따라 달라집니다. 작업( `task<T>` 또는 `task<void>`)을 반환하는 작업 함수는 `create_async`를 호출한 컨텍스트에서 동기적으로 실행됩니다. `T` 또는 `void` 를 반환하는 작업 함수는 임의의 컨텍스트에서 실행됩니다.
 
-- [concurrency::task::then](reference/task-class.md#then) 메서드를 사용하여 차례로 실행되는 작업의 체인을 만들 수 있습니다. UWP 앱에서 작업의 연속에 대 한 기본 컨텍스트는 해당 작업이 생성 된 방식에 따라 달라 집니다. 비동기 동작을 작업 생성자에 전달하거나 비동기 동작을 반환하는 람다 식을 전달하여 작업을 만든 경우 해당 작업의 모든 연속에 대한 기본 컨텍스트는 현재 컨텍스트입니다. 비동기 동작에서 작업을 생성하지 않은 경우에는 임의의 컨텍스트가 작업의 연속에 기본적으로 사용됩니다. 기본 컨텍스트는 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 클래스를 사용하여 재정의할 수 있습니다.
+- [concurrency::task::then](reference/task-class.md#then) 메서드를 사용하여 차례로 실행되는 작업의 체인을 만들 수 있습니다. UWP 앱에서 작업의 연속에 대 한 기본 컨텍스트는 해당 작업이 생성 된 방식에 따라 달라 집니다. 비동기 동작을 작업 생성자에 전달하거나 비동기 동작을 반환하는 람다 식을 전달하여 작업을 만든 경우 해당 작업의 모든 연속에 대한 기본 컨텍스트는 현재 컨텍스트입니다. 태스크가 비동기 작업에서 생성 되지 않은 경우에는 기본적으로 작업의 연속에 대해 임의 컨텍스트가 사용 됩니다. 기본 컨텍스트는 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 클래스를 사용하여 재정의할 수 있습니다.
 
 ## <a name="in-this-document"></a>이 문서의 내용
 
@@ -90,7 +90,7 @@ Windows 런타임를 사용 하 여 다양 한 프로그래밍 언어의 가장 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a> 예: C++ Windows 런타임 구성 요소를 만들어 C#에서 이를 사용
+## <a name="example-component"></a>예: C++ Windows 런타임 구성 요소 만들기 및 C\#에서 사용
 
 XAML을 사용 하 고 C# UI 및 C++ Windows 런타임 구성 요소를 정의 하 여 계산 집약적인 작업을 수행 하는 응용 프로그램을 고려 합니다. 이 예에서 C++ 구성 요소는 지정된 범위에서 소수인 수를 계산합니다. 네 Windows 런타임 가지 비동기 작업 인터페이스의 차이점을 보여 주기 위해 Visual Studio에서 **빈 솔루션** 을 만들고 `Primes`이름을 지정 하 여 시작 합니다. 그런 다음 솔루션에 **Windows 런타임 구성 요소** 프로젝트를 추가하고 이름을 `PrimesLibrary`로 지정합니다. 생성된 C++ 헤더 파일에 다음 코드를 추가합니다(이 예에서는 Class1.h의 이름을 Primes.h로 변경). 각 `public` 메서드는 네 가지 비동기 인터페이스 중 하나를 정의합니다. 값을 반환 하는 메서드는 [Windows:: Foundation:: Collections:: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) 개체를 반환 합니다. 진행률을 보고하는 메서드는 완료된 전체 작업의 백분율을 정의하는 `double` 값을 생성합니다.
 
@@ -188,7 +188,7 @@ MainPage.cpp에서 `MainPage::MakeWordList`, `MainPage::FindCommonWords`및 `Mai
 
 ![Windows 런타임 CommonWords 앱](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 런타임 CommonWords 앱")
 
-이 예에서는 `task` 를 지원하는 `create_async` 개체가 암시적 취소 토큰을 사용하기 때문에 취소를 지원할 수 있습니다. 작업이 협조적으로 취소에 응답해야 하는 경우 `cancellation_token` 개체를 사용하도록 작업 함수를 정의합니다. PPL에서의 취소에 대한 자세한 내용은 [Cancellation in the PPL](cancellation-in-the-ppl.md)을 참조하세요.
+이 예제에서는 `create_async`를 지 원하는 `task` 개체가 암시적 취소 토큰을 사용 하기 때문에 취소를 지원할 수 있습니다. 작업이 협조적으로 취소에 응답해야 하는 경우 `cancellation_token` 개체를 사용하도록 작업 함수를 정의합니다. PPL에서의 취소에 대한 자세한 내용은 [Cancellation in the PPL](cancellation-in-the-ppl.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

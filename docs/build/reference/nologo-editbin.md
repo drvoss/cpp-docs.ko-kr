@@ -2,18 +2,18 @@
 title: /NOLOGO(EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /nologo
+- /nologo_editbin
 helpviewer_keywords:
 - -NOLOGO editbin option
 - /NOLOGO editbin option
 - NOLOGO editbin option
 ms.assetid: 909a1909-0c99-4bce-8013-bf161d645f19
-ms.openlocfilehash: 994b896172725873d69120262f045764b278f17d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b28a816876629143e8f8b4c5b33834fce649675
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320398"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439245"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO(EDITBIN)
 
@@ -23,8 +23,8 @@ ms.locfileid: "62320398"
 
 ## <a name="remarks"></a>설명
 
-이 옵션은 EDITBIN 저작권 메시지와 버전 번호를 표시를 하지 않습니다.
+이 옵션을 선택 하면 EDITBIN 저작권 메시지와 버전 번호가 표시 되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [EDITBIN 옵션](editbin-options.md)

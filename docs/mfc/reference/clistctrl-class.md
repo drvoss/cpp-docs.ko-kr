@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424442"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442688"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 클래스
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>예제
 
 다음 코드 예제는 `GetGroupInfoByIndex` 메서드. 이 코드 예제의 이전 섹션에서는 보고서 뷰에 "ClientID" 및 "Grade" 라는 두 개의 열을 표시 하는 목록 뷰 컨트롤을 만들었습니다. 다음 코드 예에서는 인덱스가 0 인 그룹에 대 한 정보 (있는 경우)를 검색 합니다.
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ BOOL GetGroupRect(
 ### <a name="example"></a>예제
 
 다음 코드 예제에서는 현재 목록 뷰 컨트롤에 액세스 하는 데 사용 되는 변수 `m_listCtrl`를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 첫 번째 항목이 두 번째 항목 앞에와 야 하는 경우 비교 함수는 음수 값을 반환 하 고 첫 번째 항목이 두 번째 항목을 따라야 하는 경우 양수 값을 반환 하 고, 두 항목이 같으면 0을 반환 해야 합니다.
 
 *LParam1* 매개 변수는 비교 되는 첫 번째 항목과 연결 된 32 비트 값이 고, *lParam2* 매개 변수는 두 번째 항목에 연결 된 값입니다. 이러한 값은 항목을 목록에 삽입 했을 때 항목의 [Lvitem](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 구조에서 *lParam* 멤버에 지정 된 값입니다. *Lparamsort* 매개 변수는 *dwdata* 값과 동일 합니다.
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 이 메시지는 비교 함수에 전달 된 정보 유형을 제외 하 고 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)와 유사 합니다. [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)에서 *lParam1* 및 *lParam2* 은 비교할 항목의 값입니다. [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)에서 *lParam1* 는 비교할 첫 번째 항목의 현재 인덱스이 고 *lParam2* 은 두 번째 항목의 현재 인덱스입니다. 항목에 대 한 자세한 정보를 검색 하는 [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) 메시지를 보낼 수 있습니다.
 
 첫 번째 항목이 두 번째 항목 앞에와 야 하는 경우 비교 함수는 음수 값을 반환 하 고 첫 번째 항목이 두 번째 항목을 따라야 하는 경우 양수 값을 반환 하 고, 두 항목이 같으면 0을 반환 해야 합니다.

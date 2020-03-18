@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426716"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447312"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 및 CDaoRecordView에 대한 대화 상자 데이터 교환 함수
 
@@ -476,7 +476,8 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
+
 `DDX_FieldSlider` 함수는 레코드 뷰 및 레코드 뷰와 연결 된 레코드 집합의 **int** 필드 데이터 멤버 (또는 매핑할 정수 변수)에 있는 슬라이더 컨트롤의 thumb 위치를 동기화 합니다.
 
 ### <a name="syntax"></a>구문

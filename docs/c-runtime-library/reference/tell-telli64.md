@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946266"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443681"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -57,20 +56,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>매개 변수
 
-*handle*<br/>
+*처리*<br/>
 열려 있는 파일을 참조하는 파일 설명자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 파일 포인터의 현재 위치입니다. 검색을 수행할 수 없는 디바이스에서는 반환 값이 정의되지 않습니다.
 
 반환 값-1L은 오류를 나타냅니다. *핸들이* 잘못 된 파일 설명자 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **ebadf** 로 설정 하 고-1l을 반환 합니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 을 참조하세요.
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_Atata** 함수는 *핸들* 인수와 연결 된 파일 포인터 (있는 경우)의 현재 위치를 가져옵니다. 위치는 파일의 시작 부분에서 바이트 수로 표현됩니다. **_Telli64** 함수의 경우이 값은 64 비트 정수로 표현 됩니다.
+**_Tell** 함수는 *핸들* 인수와 연결 된 파일 포인터 (있는 경우)의 현재 위치를 가져옵니다. 위치는 파일의 시작 부분에서 바이트 수로 표현됩니다. **_Telli64** 함수의 경우이 값은 64 비트 정수로 표현 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -126,7 +125,7 @@ Line two.
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

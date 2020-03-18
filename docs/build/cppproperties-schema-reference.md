@@ -3,12 +3,12 @@ title: Cppproperties.json 참조
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422843"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442560"
 ---
 # <a name="cpppropertiesjson-reference"></a>Cppproperties.json 참조
 
@@ -28,7 +28,7 @@ CMake를 사용 하지 않는 Open Folder 프로젝트는 *cppproperties.json* �
 |`forcedInclude`|모든 컴파일 단위에 자동으로 포함될 헤더(MSVC에서 /FI에 매핑되거나 clang에서 -include에 매핑됨)|
 |`undefines`|정의되지 않은 매크로 목록(MSVC에서 /U에 매핑됨)|
 |`intelliSenseMode`|사용할 IntelliSense 엔진. MSVC, gcc 또는 Clang에 대해 미리 정의 된 아키텍처 관련 변형 중 하나를 지정할 수 있습니다.|
-|`environments`|명령 프롬프트에서 환경 변수 처럼 동작 하 고 $ {env.<VARIABLE>}를 사용 하 여 액세스 하는 사용자 정의 변수 집합 매크로나.|
+|`environments`|명령 프롬프트에서 환경 변수 처럼 동작 하며 $ {env\<변수 >} 매크로를 사용 하 여 액세스 하는 사용자 정의 변수 집합입니다.|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode 값
 

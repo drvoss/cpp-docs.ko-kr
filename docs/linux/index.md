@@ -3,16 +3,18 @@ layout: LandingPage
 title: Linux 개발을 위한 C++ 관련 설명서
 description: Linux에서 실행되는 애플리케이션을 만들고 디버그합니다.
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216109"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441514"
 ---
 # <a name="linux-development-with-c-documentation"></a>Linux 개발을 위한 C++ 관련 설명서
 
 Visual Studio 2017 이상을 사용하여 Linux 원격 머신 또는 Linux용 Windows 하위 시스템에서 실행되는 애플리케이션을 만들고 디버깅합니다.
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>
@@ -57,7 +59,7 @@ Visual Studio 2017 이상을 사용하여 Linux 원격 머신 또는 Linux용 Wi
 
 ---
 
-<h2>참조</h2>
+<h2>참고</h2>
 
 <ul class="panelContent cardsW">
     <li>

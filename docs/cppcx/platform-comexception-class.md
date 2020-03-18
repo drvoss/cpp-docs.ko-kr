@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500542"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444301"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 클래스
 
@@ -26,7 +26,7 @@ ms.locfileid: "69500542"
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="members"></a>멤버
+### <a name="members"></a>구성원
 
 COMException 클래스는 Object 클래스 및 IException, IPrintable 및 IEquatable 인터페이스에서 상속합니다.
 
@@ -34,7 +34,7 @@ COMException에는 다음 형식의 멤버도 있습니다.
 
 **생성자**
 
-|멤버|설명|
+|멤버|Description|
 |------------|-----------------|
 |[COMException](#ctor)|COMException 클래스의 새 인스턴스를 초기화합니다.|
 
@@ -46,16 +46,16 @@ COMException 클래스는 [Platform::Object Class](../cppcx/platform-object-clas
 
 COMException 클래스에는 다음과 같은 속성이 있습니다.
 
-|멤버|설명|
+|멤버|Description|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|예외에 해당하는 HRESULT입니다.|
-|[Exception::Message](#message)|예외를 설명하는 메시지입니다.|
+|[예외:: HResult](#hresult)|예외에 해당하는 HRESULT입니다.|
+|[예외:: Message](#message)|예외를 설명하는 메시지입니다.|
 
 ## <a name="derived-exceptions"></a>파생된 예외
 
 다음과 같은 미리 정의된 예외는 COMException에서 파생됩니다. COMException과 이름, 생성자 이름 및 내부 HRESULT 값만 다릅니다.
 
-|이름|내부 HRESULT|설명|
+|속성|내부 HRESULT|Description|
 |----------|------------------------|-----------------|
 |COMException|*사용자 정의 hresult*|COM 메서드 호출에서 인식할 수 없는 HRESULT가 반환되는 경우에 throw됩니다.|
 |AccessDeniedException|E_ACCESSDENIED|리소스 또는 기능에 대한 액세스가 거부된 경우 throw됩니다.|
@@ -77,7 +77,7 @@ COMException 클래스에는 다음과 같은 속성이 있습니다.
 
 **지원 되는 최소 서버:** Windows Server 2012
 
-**네임스페이스:** 플랫폼
+**네임스페이스:** Platform
 
 **메타데이터:** platform.winmd
 
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 예외에 대한 설명입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Platform 네임스페이스](../cppcx/platform-namespace-c-cx.md)

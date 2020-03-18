@@ -1,17 +1,15 @@
 ---
 title: CListCtrl 사용
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512909"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441984"
 ---
 # <a name="using-clistctrl"></a>CListCtrl 사용
 
@@ -52,6 +50,6 @@ ms.locfileid: "69512909"
 
 - [목록 컨트롤 제거](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컨트롤](../mfc/controls-mfc.md)
