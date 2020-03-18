@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323309"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426290"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 클래스
 
@@ -27,43 +27,43 @@ Windows Forms 컨트롤을 MFC 뷰로 호스팅하기 위한 일반 기능을 �
 class CWinFormsView : public CView;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CWinFormsView::CWinFormsView](#cwinformsview)|`CWinFormsView` 개체를 생성합니다.|
+|[CWinFormsView:: CWinFormsView](#cwinformsview)|`CWinFormsView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CWinFormsView::GetControl](#getcontrol)|Windows Forms 컨트롤에 대 한 포인터를 검색합니다.|
+|[CWinFormsView:: GetControl](#getcontrol)|Windows Forms 컨트롤에 대 한 포인터를 검색 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름||
+|속성||
 |----------|-|
-|[CWinFormsView::operator 컨트롤 ^](#operator_control)|Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.|
+|[CWinFormsView:: operator 컨트롤 ^](#operator_control)|Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅 합니다.|
 
 ## <a name="remarks"></a>설명
 
-MFC를 사용 하는 `CWinFormsView` 을 MFC 뷰로 내에서.NET Framework Windows Forms 컨트롤을 호스트 하는 클래스입니다. 기본 뷰의 자식 컨트롤과 MFC 뷰로의 전체 클라이언트 영역을 차지 합니다. 결과 비슷합니다는 `CFormView` 보기를 다양 한 폼 기반 보기를 만들 수 있는 런타임 및 Windows Forms 디자이너를 사용할 수 있습니다.
+MFC는 `CWinFormsView` 클래스를 사용 하 여 MFC 뷰 내에서 .NET Framework Windows Forms 컨트롤을 호스팅합니다. 컨트롤은 네이티브 뷰의 자식 이며 MFC 뷰의 전체 클라이언트 영역을 차지 합니다. 결과는 `CFormView` 뷰와 비슷하며 Windows Forms 디자이너와 런타임을 활용 하 여 풍부한 폼 기반 보기를 만들 수 있습니다.
 
-Windows Forms를 사용 하 여 자세한 내용은 [MFC에서 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)입니다.
-
-> [!NOTE]
->  MFC Windows Forms 통합 MFC를 사용 하 여 동적으로 링크 하는 프로젝트 에서만 작동 합니다 (프로젝트의 AFXDLL 정의 되어 있는 경우).
+Windows Forms 사용에 대 한 자세한 내용은 [MFC에서 Windows Form 사용자 정의 컨트롤 사용](../../dotnet/using-a-windows-form-user-control-in-mfc.md)을 참조 하세요.
 
 > [!NOTE]
->  CWinFormsView MFC 분할기 창을 지원 하지 않습니다 ( [CSplitterWnd 클래스](../../mfc/reference/csplitterwnd-class.md)). 현재만 Windows Forms 분할자 컨트롤 지원 됩니다.
+>  MFC Windows Forms 통합은 MFC (AFXDLL가 정의 된 프로젝트)와 동적으로 연결 되는 프로젝트 에서만 작동 합니다.
+
+> [!NOTE]
+>  CWinFormsView는 MFC 분할자 창 ( [CSplitterWnd 클래스](../../mfc/reference/csplitterwnd-class.md))을 지원 하지 않습니다. 현재는 Windows Forms Splitter 컨트롤만 지원 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxwinforms.h
+**헤더:** afxwinforms
 
-##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView
+##  <a name="cwinformsview"></a>CWinFormsView:: CWinFormsView
 
 `CWinFormsView` 개체를 생성합니다.
 
@@ -78,31 +78,31 @@ Windows Forms 사용자 정의 컨트롤의 데이터 형식에 대 한 포인�
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 `CUserView` 클래스에서 상속 `CWinFormsView` 유형을 전달 하 고 `UserControl1` 에 `CWinFormsView` 생성자. `UserControl1` ControlLibrary1.dll에서 사용자 지정 컨트롤이입니다.
+다음 예제에서는 `CUserView` 클래스가 `CWinFormsView`에서 상속 하 고 `UserControl1` 형식을 `CWinFormsView` 생성자에 전달 합니다. `UserControl1`는 ControlLibrary1에서 사용자가 빌드한 컨트롤입니다.
 
 [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]
 
 [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]
 
-##  <a name="getcontrol"></a>  CWinFormsView::GetControl
+##  <a name="getcontrol"></a>CWinFormsView:: GetControl
 
-Windows Forms 컨트롤에 대 한 포인터를 검색합니다.
+Windows Forms 컨트롤에 대 한 포인터를 검색 합니다.
 
 ```
 System::Windows::Forms::Control^ GetControl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `System.Windows.Forms.Control` 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-Windows Forms를 사용 하는 방법의 예제를 참조 하세요 [MFC에서 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)입니다.
+Windows Forms를 사용 하는 방법에 대 한 예제는 [MFC에서 Windows Form 사용자 정의 컨트롤 사용](../../dotnet/using-a-windows-form-user-control-in-mfc.md)을 참조 하세요.
 
-##  <a name="operator_control"></a>  CWinFormsView::operator Control^
+##  <a name="operator_control"></a>CWinFormsView:: operator 컨트롤 ^
 
-Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.
+Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅 합니다.
 
 ```
 operator System::Windows::Forms::Control^() const;
@@ -110,13 +110,13 @@ operator System::Windows::Forms::Control^() const;
 
 ### <a name="remarks"></a>설명
 
-이 연산자를 사용 하면 전달 하는 `CWinFormsView` 뷰 형식의 Windows Forms 컨트롤에 대 한 포인터를 허용 하는 함수를 <xref:System.Windows.Forms.Control>입니다.
+이 연산자를 사용 하면 <xref:System.Windows.Forms.Control>형식의 Windows Forms 컨트롤에 대 한 포인터를 허용 하는 함수에 `CWinFormsView` 뷰를 전달할 수 있습니다.
 
 ### <a name="example"></a>예제
 
-  참조 [CWinFormsView::GetControl](#getcontrol)합니다.
+  [CWinFormsView:: GetControl](#getcontrol)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CWinFormsControl 클래스](../../mfc/reference/cwinformscontrol-class.md)<br/>

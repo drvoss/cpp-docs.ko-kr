@@ -345,11 +345,11 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866708"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425738"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 클래스
 
@@ -2872,7 +2872,7 @@ virtual void OnDrawRibbonCaptionButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-장치 컨텍스트에 대한 포인터입니다.
+디바이스 컨텍스트에 대한 포인터입니다.
 
 *pButton*<br/>
 `CMFCRibbonCaptionButton` 클래스에 대 한 포인터입니다. 프레임 워크는이 캡션 단추를 그립니다.
@@ -3530,7 +3530,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-장치 컨텍스트에 대한 포인터입니다.
+디바이스 컨텍스트에 대한 포인터입니다.
 
 *pWndRibbonBar*<br/>
 [Cmfc리본 표시줄](../../mfc/reference/cmfcribbonbar-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 표시줄의 프레임을 그립니다.

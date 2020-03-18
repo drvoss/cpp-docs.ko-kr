@@ -141,11 +141,11 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866704"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425750"
 ---
 # <a name="cmfctoolbarimages-class"></a>Cmfc, Images 클래스
 
@@ -234,7 +234,7 @@ class CMFCToolBarImages : public CObject
 |[CmfcSmoothResize Images::](#smoothresize)|밑줄로 표시 되는 이미지의 크기를 부드럽게 조정 합니다.|
 |[Cmfc작업 이미지:: UpdateImage](#updateimage)|비트맵에서 사용자 정의 도구 모음 이미지를 업데이트 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|

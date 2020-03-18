@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
 ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856315"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423563"
 ---
 # <a name="cstringt-class"></a>CStringT 클래스
 
@@ -130,18 +130,18 @@ class CStringT :
 
    클래스는 CRT 지원이 필요 하지 않으며 표준 MFC 검색 알고리즘을 사용 하 여 리소스 문자열을 검색 합니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|여러 가지 방법으로 `CStringT` 개체를 생성 합니다.|
 |[CStringT::~CStringT](#_dtorcstringt)|`CStringT` 개체를 제거합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CStringT::AllocSysString](#allocsysstring)|`CStringT` 데이터에서 BSTR을 할당 합니다.|
 |[CStringT::AnsiToOem](#ansitooem)|ANSI 문자 집합에서 OEM 문자 집합으로의 내부 변환을 수행 합니다.|
@@ -251,7 +251,7 @@ ATL_CSTRING_NO_CRT 정의 되지 않은 프로젝트에서 사용할 수 있는 
 
 `CStringT`는 템플릿 인수를 사용 하 여 지원 되는 문자 형식 ( [wchar_t](../../c-runtime-library/standard-types.md) 또는 [char](../../c-runtime-library/standard-types.md))을 정의 하기 때문에 메서드 매개 변수 형식이 때때로 복잡할 수 있습니다. 이 문제를 간소화 하기 위해 미리 정의 된 형식 집합이 `CStringT` 클래스 전체에서 정의 되 고 사용 됩니다. 다음 표에서는 다양 한 유형을 나열 합니다.
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`XCHAR`|`CStringT` 개체와 동일한 문자 형식을 사용 하는 단일 문자 ( **wchar_t** 또는 **char**)입니다.|
 |`YCHAR`|`CStringT` 개체와 반대 문자 형식을 사용 하는 단일 문자 ( **wchar_t** 또는 **char**)입니다.|
@@ -271,7 +271,7 @@ ATL_CSTRING_NO_CRT 정의 되지 않은 프로젝트에서 사용할 수 있는 
 
 ## <a name="requirements"></a>요구 사항
 
-|Header|용도|
+|헤더|용도|
 |------------|-------------|
 |cstringt.h|MFC 전용 문자열 개체|
 |atlstr.h|비 MFC 문자열 개체|
@@ -284,7 +284,7 @@ BSTR 형식의 자동화 호환 문자열을 할당 하 고 종료 null 문자�
 BSTR AllocSysString() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 할당 된 문자열입니다.
 
@@ -359,7 +359,7 @@ int Collate(PCXSTR psz) const throw();
 *psz*<br/>
 비교에 사용 되는 다른 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열이 동일한 경우 0,이 `CStringT` 개체가 *psz*보다 작은 경우 0 <이 고, `CStringT` 개체가 *psz*보다 크면 0을 > 합니다.
 
@@ -380,7 +380,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 *psz*<br/>
 비교에 사용 되는 다른 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열이 동일한 경우 (대/소문자 무시) 0 <이 `CStringT` 개체가 *psz* (대/소문자 무시) 보다 작은 경우 0을 반환 하 고,이 `CStringT` 개체가 *psz* (대/소문자 무시) 보다 큰 경우에는 0을 > 합니다.
 
@@ -405,7 +405,7 @@ int Compare(PCXSTR psz) const;
 *psz*<br/>
 비교에 사용 되는 다른 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열이 동일한 경우 0,이 `CStringT` 개체가 *psz*보다 작은 경우 0 <이 고, `CStringT` 개체가 *psz*보다 크면 0을 > 합니다.
 
@@ -434,7 +434,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 *psz*<br/>
 비교에 사용 되는 다른 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열이 동일한 경우 (대/소문자 무시) 0 <이 `CStringT` 개체가 *psz* (대/소문자 무시) 보다 작은 경우 0을 반환 하 고,이 `CStringT` 개체가 *psz* (대/소문자 무시) 보다 큰 경우에는 0을 > 합니다.
 
@@ -616,7 +616,7 @@ int Delete(int iIndex, int nCount = 1);
 *nCount*<br/>
 제거할 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변경 된 문자열의 길이입니다.
 
@@ -655,7 +655,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 *ch*<br/>
 검색할 단일 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `CStringT` 개체에서 요청 된 부분 문자열 또는 문자와 일치 하는 첫 번째 문자의 0부터 시작 하는 인덱스입니다. 부분 문자열이 나 문자를 찾을 수 없으면-1입니다.
 
@@ -680,7 +680,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 *pszCharSet*<br/>
 일치 하는 문자를 포함 하는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *PszCharSet*에도 있는이 문자열에 있는 첫 번째 문자의 0부터 시작 하는 인덱스입니다. 일치 하는 항목이 없으면-1입니다.
 
@@ -823,7 +823,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 *pszVar*<br/>
 환경 변수를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -855,7 +855,7 @@ int Insert(int iIndex, XCHAR ch);
 *ch*<br/>
 삽입할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변경 된 문자열의 길이입니다.
 
@@ -880,7 +880,7 @@ CStringT Left(int nCount) const;
 *nCount*<br/>
 이 `CStringT` 개체에서 추출할 문자의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 문자 범위의 복사본을 포함하는 `CStringT` 개체입니다. 반환된 `CStringT` 개체가 비어 있을 수 있습니다.
 
@@ -915,7 +915,7 @@ Windows 문자열 리소스 ID입니다.
 *wLanguageID*<br/>
 문자열 리소스의 언어입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리소스 로드가 성공한 경우 0이 아님 그렇지 않으면 0입니다.
 
@@ -935,7 +935,7 @@ Windows 문자열 리소스 ID입니다.
 CStringT& MakeLower();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 결과 소문자 문자열입니다.
 
@@ -951,7 +951,7 @@ CStringT& MakeLower();
 CStringT& MakeReverse();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 결과의 반전 된 문자열입니다.
 
@@ -967,7 +967,7 @@ CStringT& MakeReverse();
 CStringT& MakeUpper();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 결과 대문자 문자열입니다.
 
@@ -994,7 +994,7 @@ CStringT Mid(int iFirst) const;
 *nCount*<br/>
 이 `CStringT` 개체에서 추출할 문자의 수입니다. 이 매개 변수를 지정 하지 않으면 문자열의 나머지가 추출 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 문자 범위의 복사본을 포함하는 `CStringT` 개체입니다. 반환 된 `CStringT` 개체는 비어 있을 수 있습니다.
 
@@ -1424,7 +1424,7 @@ int Remove(XCHAR chRemove);
 *chRemove*<br/>
 문자열에서 제거할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열에서 제거 되는 문자 수입니다. 문자열이 변경 되지 않은 경우 0입니다.
 
@@ -1459,7 +1459,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 *chNew*<br/>
 *Chold*문자를 바꾸는 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 는 문자 또는 부분 문자열의 대체 된 인스턴스 수를 반환 하 고, 문자열이 변경 되지 않은 경우에는 0을 반환 합니다.
 
@@ -1478,7 +1478,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |_UNICODE|와이드 문자|
 |_MBCS|멀티 바이트 문자|
 |Neither|싱글바이트 문자|
-|Both|Undefined|
+|모두|정의되지 않음|
 
 ### <a name="example"></a>예제
 
@@ -1497,7 +1497,7 @@ int ReverseFind(XCHAR ch) const throw();
 *ch*<br/>
 검색할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 `CStringT` 개체에서 요청 된 문자와 일치 하는 마지막 문자의 0부터 시작 하는 인덱스이 고, 문자가 없으면-1입니다.
 
@@ -1522,7 +1522,7 @@ CStringT Right(int nCount) const;
 *nCount*<br/>
 이 `CStringT` 개체에서 추출할 문자의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 문자 범위의 복사본을 포함하는 `CStringT` 개체입니다. 반환 된 `CStringT` 개체는 비어 있을 수 있습니다.
 
@@ -1549,7 +1549,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 *pbstr*<br/>
 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새 문자열입니다.
 
@@ -1576,7 +1576,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 문자 집합으로 해석 되는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자열의 첫 번째 문자로 시작 하 여 *pszCharSet* 에 있는 첫 번째 문자로 끝나는 문자열의 문자를 포함 하는 부분 문자열입니다. 즉, 문자열의 첫 번째 문자부터 시작 하 여 *pszCharSet*에 있는 첫 번째 문자부터 시작 하 여 *pszCharSet*발견 되는 문자열의 첫 번째 문자를 제외 합니다. *PszCharSet* 의 문자가 문자열에 없는 경우 전체 문자열을 반환 합니다.
 
@@ -1601,7 +1601,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 문자 집합으로 해석 되는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *PszCharSet*에 있는 문자열의 문자를 포함 하는 부분 문자열입니다 .이 문자열의 첫 번째 문자부터 시작 하 여 *pszCharSet*에 없는 문자열에 문자가 있는 경우 끝납니다. 문자열의 첫 번째 문자가 지정 된 집합에 없는 경우 `SpanIncluding`는 빈 부분 문자열을 반환 합니다.
 
@@ -1629,7 +1629,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 *iStart*<br/>
 검색을 시작할 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 토큰 값을 포함 하는 `CStringT` 개체입니다.
 
@@ -1671,7 +1671,7 @@ CStringT& Trim();
 *pszTargets*<br/>
 트리밍할 대상 문자를 포함 하는 문자열에 대 한 포인터입니다. *PszTarget* 의 모든 선행 및 후행 문자는 `CStringT` 개체에서 잘립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잘린 문자열을 반환 합니다.
 
@@ -1716,7 +1716,7 @@ CStringT& TrimLeft();
 *pszTargets*<br/>
 트리밍할 대상 문자를 포함 하는 문자열에 대 한 포인터입니다. *PszTarget* 의 모든 선행 문자는 `CStringT` 개체에서 잘립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잘린 결과 문자열입니다.
 
@@ -1752,7 +1752,7 @@ CStringT& TrimRight();
 *pszTargets*<br/>
 트리밍할 대상 문자를 포함 하는 문자열에 대 한 포인터입니다. *PszTarget* 의 후행 문자는 모두 `CStringT` 개체에서 잘립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 잘린 문자열을 포함 하는 `CStringT` 개체를 반환 합니다.
 

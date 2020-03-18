@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863209"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423023"
 ---
 # <a name="object-map-macros"></a>개체 맵 매크로
 
@@ -68,7 +68,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 진행 C++ *클래스 라는 클래스*에서 구현 하는 COM 클래스의 CLSID입니다.
 
 *class*<br/>
-진행 Clsid가 나타내는 COM C++ 클래스를 구현 하는 클래스의이름입니다.
+진행 Clsid가 나타내는 COM C++ 클래스를 구현 하는 클래스의 *clsid*이름입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -100,7 +100,7 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 진행 C++ *클래스 라는 클래스*에서 구현 하는 COM 클래스의 CLSID입니다.
 
 *class*<br/>
-진행 Clsid가 나타내는 COM C++ 클래스를 구현 하는 클래스의이름입니다.
+진행 Clsid가 나타내는 COM C++ 클래스를 구현 하는 클래스의 *clsid*이름입니다.
 
 ### <a name="remarks"></a>설명
 

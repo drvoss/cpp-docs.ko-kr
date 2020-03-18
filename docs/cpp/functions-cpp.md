@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301511"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423755"
 ---
 # <a name="functions-c"></a>함수(C++)
 
@@ -41,7 +41,7 @@ int main()
 
 클래스 범위에서 정의되는 함수는 멤버 함수라고 합니다. 다른 언어와 달리 C++에서는 네임스페이스 범위(암시적 전역 네임스페이스 포함)에서 함수를 정의할 수도 있습니다. 이러한 함수를 *free 함수* 또는 비멤버 *함수*라고 합니다. 표준 라이브러리에서 광범위 하 게 사용 됩니다.
 
-함수는 *오버 로드*될 수 있습니다. 즉, 다른 버전의 함수가 형식 매개 변수의 번호 및/또는 형식에 따라 다른 경우 동일한 이름을 공유할 수 있습니다. 자세한 내용은 [함수 오버 로딩](../cpp/function-overloading.md)을 참조하십시오.
+함수는 *오버 로드*될 수 있습니다. 즉, 다른 버전의 함수가 형식 매개 변수의 번호 및/또는 형식에 따라 다른 경우 동일한 이름을 공유할 수 있습니다. 자세한 내용은 [함수 오버 로드](../cpp/function-overloading.md)를 참조 하세요.
 
 ## <a name="parts-of-a-function-declaration"></a>함수 선언의 요소
 
@@ -117,11 +117,11 @@ int sum(int a, int b)
 
 1. (멤버 함수만 해당) 함수가 **const** 또는 **volatile**인지 여부를 지정 하는 cv 한정자입니다.
 
-1. (멤버 함수만 해당) **가상**, `override`또는 `final`. **virtual** 은 함수가 파생 클래스에서 재정의 될 수 있도록 지정 합니다. `override`는 파생 클래스의 함수가 가상 함수를 재정의하고 있음을 의미합니다. `final`은 이후 파생 클래스에서 함수를 재정의할 수 없음을 의미합니다. 자세한 내용은 [가상 함수](../cpp/virtual-functions.md)를 참조하세요.
+1. (멤버 함수만 해당) **가상**, `override`또는 `final`. **virtual** 은 함수가 파생 클래스에서 재정의 될 수 있도록 지정 합니다. `override`는 파생 클래스의 함수가 가상 함수를 재정의하고 있음을 의미합니다. `final`은 이후 파생 클래스에서 함수를 재정의할 수 없음을 의미합니다. 자세한 내용은 [가상 함수](../cpp/virtual-functions.md)를 참조 하세요.
 
 1. (멤버 함수만 해당) 멤버가 멤버 함수 **에 적용 되** 는 것은 함수가 클래스의 개체 인스턴스와 연결 되어 있지 않음을 의미 합니다.
 
-1. (비정적 멤버 함수에만 해당) Ref-한정자는 암시적 개체 매개 변수 (\*this)가 rvalue 참조와 lvalue 참조 일 때 선택할 함수의 오버 로드를 컴파일러에 지정 합니다. 자세한 내용은 [함수 오버 로딩](function-overloading.md#ref-qualifiers)을 참조하십시오.
+1. (비정적 멤버 함수에만 해당) Ref-한정자는 암시적 개체 매개 변수 (\*this)가 rvalue 참조와 lvalue 참조 일 때 선택할 함수의 오버 로드를 컴파일러에 지정 합니다. 자세한 내용은 [함수 오버 로드](function-overloading.md#ref-qualifiers)를 참조 하세요.
 
 다음 그림에서는 함수 정의의 일부분을 보여 줍니다. 음영 처리된 영역은 함수 본문입니다.
 
@@ -159,7 +159,7 @@ int sum(int a, int b)
 
 ## <a name="const-and-constexpr-functions"></a>const 및 constexpr 함수
 
-멤버 함수를 **const** 로 선언 하 여 함수가 클래스에 있는 모든 데이터 멤버의 값을 변경할 수 없도록 지정할 수 있습니다. 멤버 함수를 **const**로 선언 하면 컴파일러에서 *const 정확도*를 적용 하는 데 도움이 됩니다. 사용자가 **const**로 선언 된 함수를 사용 하 여 실수로 개체를 수정 하려고 하면 컴파일러 오류가 발생 합니다. 자세한 내용은 [const](const-cpp.md)를 참조하세요.
+멤버 함수를 **const** 로 선언 하 여 함수가 클래스에 있는 모든 데이터 멤버의 값을 변경할 수 없도록 지정할 수 있습니다. 멤버 함수를 **const**로 선언 하면 컴파일러에서 *const 정확도*를 적용 하는 데 도움이 됩니다. 사용자가 **const**로 선언 된 함수를 사용 하 여 실수로 개체를 수정 하려고 하면 컴파일러 오류가 발생 합니다. 자세한 내용은 [const](const-cpp.md)를 참조 하세요.
 
 생성 된 값을 컴파일 시간에 확인할 수 있는 경우 함수를 `constexpr`으로 선언 합니다. 일반적으로 constexpr 함수는 일반 함수 보다 더 빠르게 실행 됩니다. 자세한 내용은 [constexpr](constexpr-cpp.md)을 참조 하세요.
 
@@ -202,7 +202,7 @@ void DoSomething(const std::string& input){...}
 void DoSomething(const std::string&& input){...}
 ```
 
-매개 변수 선언 목록에서 단일 키워드 **void** 로 선언 된 함수는 **void** 키워드가 인수 선언 목록의 첫 번째 및 유일한 멤버인 경우 인수를 사용 하지 않습니다. 목록의 다른 위치에서 **void** 형식의 인수는 오류를 생성 합니다. 예를 들면 다음과 같습니다.:
+매개 변수 선언 목록에서 단일 키워드 **void** 로 선언 된 함수는 **void** 키워드가 인수 선언 목록의 첫 번째 및 유일한 멤버인 경우 인수를 사용 하지 않습니다. 목록의 다른 위치에서 **void** 형식의 인수는 오류를 생성 합니다. 다음은 그 예입니다.
 
 ```cpp
 
@@ -408,7 +408,7 @@ template<typename F, typename Tuple = tuple<T...>,
 
 C++은 C 언어와 동일한 방식으로 함수 포인터를 지원합니다. 그러나 일반적으로 함수 개체를 사용하면 형식이 보다 더 안전합니다.
 
-함수 포인터 형식을 반환 하는 함수를 선언 하는 경우 **typedef** 를 사용 하 여 함수 포인터 형식에 대 한 별칭을 선언 하는 것이 좋습니다.  예
+함수 포인터 형식을 반환 하는 함수를 선언 하는 경우 **typedef** 를 사용 하 여 함수 포인터 형식에 대 한 별칭을 선언 하는 것이 좋습니다.  예를 들면 다음과 같습니다.
 
 ```cpp
 typedef int (*fp)(int);
@@ -423,7 +423,7 @@ int (*myFunction(char* s))(int);
 
 앞의 선언은 위에서 typedef를 사용한 선언과 같습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [함수 오버로드](../cpp/function-overloading.md)<br/>
 [가변 인수 목록을 사용하는 함수](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>

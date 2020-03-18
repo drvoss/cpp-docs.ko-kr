@@ -19,11 +19,11 @@ helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
 ms.openlocfilehash: 1e1674bad1164e640939d430a860beac7a6e4208
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855668"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423287"
 ---
 # <a name="com_interface_entry-macros"></a>COM_INTERFACE_ENTRY 매크로
 
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-COM 맵의 첫 번째 항목은 COM 맵을 포함 하는 개체의 인터페이스 여야 합니다. 따라서 COM_INTERFACE_ENTRY_CHAIN를 사용 하 여 COM 맵 항목을 시작할 수 없습니다. 그러면 **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** 가 개체의 com 맵에 표시 되는 지점에서 다른 개체의 com 맵이 검색 됩니다. 다른 개체의 COM 맵을 먼저 검색 하려면 `IUnknown`에 대 한 인터페이스 항목을 COM 맵에 추가 하 고 다른 개체의 COM 맵을 연결 합니다. 예들 들어 다음과 같습니다.
+COM 맵의 첫 번째 항목은 COM 맵을 포함 하는 개체의 인터페이스 여야 합니다. 따라서 COM_INTERFACE_ENTRY_CHAIN를 사용 하 여 COM 맵 항목을 시작할 수 없습니다. 그러면 **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** 가 개체의 com 맵에 표시 되는 지점에서 다른 개체의 com 맵이 검색 됩니다. 다른 개체의 COM 맵을 먼저 검색 하려면 `IUnknown`에 대 한 인터페이스 항목을 COM 맵에 추가 하 고 다른 개체의 COM 맵을 연결 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

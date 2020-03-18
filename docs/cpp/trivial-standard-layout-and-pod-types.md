@@ -3,11 +3,11 @@ title: Trivial, 표준 레이아웃, POD 및 리터럴 형식
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865787"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423707"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, 표준 레이아웃, POD 및 리터럴 형식
 
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-이 예제에서 `Base`에 비정적 데이터 멤버가 없기 때문에 `Derived`는 표준 레이아웃입니다.
+이 예제에서 `Derived`에 비정적 데이터 멤버가 없기 때문에 `Base`는 표준 레이아웃입니다.
 
 ```cpp
 struct Base
@@ -188,11 +188,11 @@ int main()
 리터럴 형식은 컴파일 타임에 해당 레이아웃이 결정될 수 있는 형식입니다. 다음은 리터럴 형식입니다.
 
 - void
-- 스칼라 형식
+- 스칼라 유형
 - 참조
 - void, 스칼라 형식 또는 참조의 배열
 - trivial 소멸자 및 이동 또는 복사 생성자가 아닌 constexpr 생성자를 하나 이상 포함하는 클래스입니다. 또한 해당 비정적 데이터 멤버 및 기본 클래스가 모두 리터럴 형식이고 volatile이 아니어야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [기본 개념](../cpp/basic-concepts-cpp.md)

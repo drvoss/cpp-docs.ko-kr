@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
 ms.openlocfilehash: 7083924f137fa9283da40404c7d15183e59c0b1c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872531"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422831"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Visual Studio에서 C/C++ DLL 빌드
 
@@ -121,7 +121,7 @@ MFC에 포함된 DLL 및 라이브러리가 구조적 명명 규칙을 지키는
 [Visual Basic 응용 프로그램에서 DLL 함수 호출](calling-dll-functions-from-visual-basic-applications.md)\
 Visual Basic 애플리케이션에서 DLL 함수를 호출하는 방법에 대해 설명합니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [DLL의 일부로 MFC 사용](../mfc/tn011-using-mfc-as-part-of-a-dll.md)\
 Windows 동적 연결 라이브러리의 일부로 MFC 라이브러리를 사용할 수 있도록 하는 일반적인 MFC Dll에 대해 설명 합니다.

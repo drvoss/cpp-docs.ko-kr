@@ -65,11 +65,11 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871589"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424340"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 클래스
 
@@ -81,17 +81,17 @@ Windows의 공용 헤더 컨트롤의 기능을 제공합니다.
 class CHeaderCtrl : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CHeaderCtrl:: CHeaderCtrl](#cheaderctrl)|`CHeaderCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CHeaderCtrl:: ClearAllFilters](#clearallfilters)|헤더 컨트롤에 대 한 모든 필터를 지웁니다.|
 |[CHeaderCtrl:: ClearFilter](#clearfilter)|헤더 컨트롤에 대 한 필터를 지웁니다.|
@@ -176,7 +176,7 @@ CHeaderCtrl();
 BOOL ClearAllFilters();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -201,7 +201,7 @@ BOOL ClearFilter(int nColumn);
 *nColumn*<br/>
 지울 필터를 나타내는 열 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -239,7 +239,7 @@ virtual BOOL Create(
 *nID*<br/>
 헤더 컨트롤의 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -330,7 +330,7 @@ CImageList* CreateDragImage(int nIndex);
 *nIndex*<br/>
 헤더 컨트롤에 있는 항목의 인덱스 (0부터 시작)입니다. 이 항목에 할당 된 이미지는 투명 이미지의 기반이 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다. 그렇지 않으면 NULL입니다. 반환 된 목록에는 하나의 이미지만 포함 됩니다.
 
@@ -353,7 +353,7 @@ BOOL DeleteItem(int nPos);
 *nPos*<br/>
 삭제할 항목의 인덱스 (0부터 시작)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -406,7 +406,7 @@ BOOL EditFilter(
 
 사용자가 변경한 내용을 취소 하려면 TRUE를 지정 하 고, 사용자가 변경한 내용을 적용 하려면 FALSE를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -426,7 +426,7 @@ BOOL EditFilter(
 int GetBitmapMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비트맵 여백의 너비 (픽셀)입니다.
 
@@ -446,7 +446,7 @@ int GetBitmapMargin() const;
 int GetFocusedItem() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 포커스가 있는 헤더 항목의 인덱스 (0부터 시작)입니다.
 
@@ -474,7 +474,7 @@ int GetFocusedItem() const;
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.
 
@@ -504,7 +504,7 @@ BOOL GetItem(
 *pHeaderItem*<br/>
 새 항목을 받는 [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 구조체에 대 한 포인터입니다. 이 구조체는 `InsertItem` 및 `SetItem` 멤버 함수와 함께 사용 됩니다. `mask` 요소에 설정 된 플래그는 반환 될 때 해당 요소의 값을 올바르게 채우도록 합니다. `mask` 요소를 0으로 설정 하면 다른 구조체 요소의 값이 의미가 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -520,7 +520,7 @@ BOOL GetItem(
 int GetItemCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 헤더 컨트롤 항목 수 그렇지 않으면-1입니다.
 
@@ -540,12 +540,12 @@ BOOL GetItemDropDownRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iItem*|진행 HDF_SPLITBUTTON 스타일이 있는 헤더 항목의 인덱스 (0부터 시작)입니다. 자세한 내용은 [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 구조체의 `fmt` 멤버를 참조 하십시오.|
 |*lpRect*|제한이 경계 사각형 정보를 수신 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 함수가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -583,7 +583,7 @@ BOOL GetItemRect(
 *lpRect*<br/>
 경계 사각형 정보를 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체의 주소에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -609,7 +609,7 @@ BOOL GetOrderArray(
 *iCount*<br/>
 헤더 제어 항목 수입니다. 음수가 아니어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -631,11 +631,11 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpRect*|제한이 경계 사각형 정보를 수신 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 함수가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -667,11 +667,11 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*phdhti*|[in, out] 테스트의 결과를 확인 하 고 받을 지점을 지정 하는 [Hdhittestinfo](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 위치에서 헤더 항목 (있는 경우)의 인덱스 (0부터 시작)입니다. 그렇지 않으면-1입니다.
 
@@ -709,7 +709,7 @@ int InsertItem(
 *phdi*<br/>
 삽입할 항목에 대 한 정보를 포함 하는 [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 새 항목의 인덱스입니다. 그렇지 않으면-1입니다.
 
@@ -730,7 +730,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 *pHeaderLayout*<br/>
 헤더 컨트롤의 크기와 위치를 설정 하는 데 사용 되는 정보를 포함 하는 [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -755,7 +755,7 @@ int OrderToIndex(int nOrder) const;
 *n 순서*<br/>
 항목이 머리글 컨트롤에서 왼쪽에서 오른쪽으로 표시 되는 순서 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 헤더 컨트롤의 순서에 따라 항목의 인덱스입니다. 인덱스는 0부터 시작 하 여 왼쪽에서 오른쪽으로 계산 됩니다.
 
@@ -776,7 +776,7 @@ int SetBitmapMargin(int nWidth);
 *nWidth*<br/>
 기존 헤더 컨트롤 내에서 비트맵을 둘러싼 여백의 너비 (픽셀)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 비트맵 여백의 너비 (픽셀)입니다.
 
@@ -801,7 +801,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 *dwTimeOut*<br/>
 시간 제한 값 (밀리초)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 수정 되는 필터 컨트롤의 인덱스입니다.
 
@@ -823,11 +823,11 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iItem*|진행 헤더 항목의 인덱스 (0부터 시작)입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -864,7 +864,7 @@ int SetHotDivider(int nIndex);
 *nIndex*<br/>
 강조 표시 된 구분선의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 강조 표시 된 구분선의 인덱스입니다.
 
@@ -889,7 +889,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 헤더 컨트롤에 할당할 이미지 목록을 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전에 헤더 컨트롤에 할당 된 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.
 
@@ -919,7 +919,7 @@ BOOL SetItem(
 *pHeaderItem*<br/>
 새 항목에 대 한 정보를 포함 하는 [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -945,7 +945,7 @@ BOOL SetOrderArray(
 *piArray*<br/>
 왼쪽에서 오른쪽으로 표시 되는 순서 대로 header 컨트롤에 있는 항목의 인덱스 값을 받는 버퍼의 주소에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 

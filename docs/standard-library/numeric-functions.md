@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856363"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425366"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 함수
 
@@ -242,7 +242,7 @@ ForwardIterator2 adjacent_difference(
 
 입력 범위에서 *1,* *a*2, 3의 값 시퀀스에 대해 첫 번째 템플릿 함수는 대상 범위에 연속 `adjacent_difference` *값 1,* 2- *a* *1,* a3- *a* *2를 저장*합니다.
 
-입력 범위에서 1, *a*2, 3의 값시퀀스에 대해 두 번째 템플릿 함수는 연속 `adjacent_difference` 값 1, 2 *binary_op* 1 *,* *3*binary_op *2를*대상 범위에 저장 합니다.
+입력 범위에서 1, *a* *a*2, 3의 값 *a*시퀀스에 대해 두 번째 템플릿 함수는 연속 `adjacent_difference` 값 1, 2 *binary_op* 1 *,* *3*binary_op *2를*대상 범위에 저장 합니다. *binary_op* *a* *a*
 
 적용 되는 작업의 순서가 지정 되어 있으므로 이항 연산 *binary_op* 는 결합형 또는 교환 일 필요가 없습니다.
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856543"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424646"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -69,7 +69,7 @@ ms.locfileid: "78856543"
 extern ostream cerr;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
@@ -115,7 +115,7 @@ int main( )
 extern istream cin;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [istream](../standard-library/istream-typedefs.md#istream) 개체입니다.
 
@@ -166,7 +166,7 @@ int main()
 extern ostream clog;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
@@ -186,7 +186,7 @@ extern ostream clog;
 extern ostream cout;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 개체입니다.
 
@@ -206,7 +206,7 @@ extern ostream cout;
 extern wostream wcerr;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 
@@ -226,7 +226,7 @@ extern wostream wcerr;
 extern wistream wcin;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [wistream](../standard-library/istream-typedefs.md#wistream) 개체입니다.
 
@@ -246,7 +246,7 @@ extern wistream wcin;
 extern wostream wclog;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 
@@ -266,7 +266,7 @@ extern wostream wclog;
 extern wostream wcout;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 개체입니다.
 

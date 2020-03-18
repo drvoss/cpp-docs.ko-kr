@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866706"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426068"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -256,11 +256,11 @@ ms.locfileid: "78866706"
 class CMFCBaseTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||
 |[CMFCBaseTabCtrl::AddTab](#addtab)|탭 창에 새 탭을 추가합니다.|
@@ -376,15 +376,15 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|[에서 파생되지 않은](../../mfc/reference/cwnd-class.md) CWnd `CDockablePane`에서 파생된 개체에 대한 래퍼를 만듭니다. `CMFCBaseTabCtrl` 개체를 도킹하려면 포함된 모든 컨트롤이 `CDockablePane`에서 파생되었거나 이 컨트롤에 도킹 래퍼가 있어야 합니다.<br /><br /> `SetDockingBayWrapperRTC`를 사용하여 래퍼의 클래스를 설정합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|마우스 왼쪽 단추 클릭이나 마우스 오른쪽 단추 클릭 중 어느 것을 사용하여 탭을 선택할지를 지정합니다.|
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|탭에 포함된 창이 자동으로 소멸되는지 여부를 지정합니다.|
@@ -554,7 +554,7 @@ virtual CWnd* CreateWrapper(
 *bDetachable*<br/>
 [in] 창이 분리되는지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CDockablePane`가 `CreateWrapper`pWndToWrap*의 래퍼 클래스를 성공적으로 만들면*  클래스에서 파생된 래퍼에 대한 포인터입니다. 메서드가 실패하면 *pWndToWrap*을 반환합니다.
 
@@ -588,7 +588,7 @@ virtual BOOL DetachTab(
 *bHide*<br/>
 [in] 프레임워크가 분리된 탭을 숨길지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -640,7 +640,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 [in] 사용자 지정 도구 설명 사용 여부를 결정하는 부울입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -687,7 +687,7 @@ virtual BOOL EnableTabDetach(
 *bEnable*<br/>
 [in] 탭 분리 가능 여부를 나타내는 부울입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -721,7 +721,7 @@ virtual BOOL EnsureVisible(int iTab);
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -752,7 +752,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 *pt*<br/>
 [in] [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체의 클라이언트 영역 좌표를 사용하여 정의된 지점입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공할 경우 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -782,7 +782,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 [in] *nNewTab*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -794,7 +794,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 virtual int GetActiveTab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 탭의 0부터 시작하는 인덱스입니다. 활성 탭이 없는 경우 -1입니다.
 
@@ -806,7 +806,7 @@ virtual int GetActiveTab() const;
 virtual COLORREF GetActiveTabColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 탭의 배경색을 지정하는 [COLORREF](/windows/win32/gdi/colorref) 값입니다.
 
@@ -822,7 +822,7 @@ virtual COLORREF GetActiveTabColor() const;
 virtual COLORREF GetActiveTabTextColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 탭의 텍스트 색을 지정하는 [COLORREF](/windows/win32/gdi/colorref) 값입니다.
 
@@ -838,7 +838,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 virtual CWnd* GetActiveWnd() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창에 대한 포인터입니다.
 
@@ -850,7 +850,7 @@ virtual CWnd* GetActiveWnd() const;
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CMFCBaseTabCtrl](/windows/win32/gdi/colorref) 개체가 자동 탭 색상 지정에 사용하는 [COLORREF](../../mfc/reference/cmfcbasetabctrl-class.md) 값 배열에 대한 참조입니다.
 
@@ -878,7 +878,7 @@ virtual CWnd* GetFirstVisibleTab(
 *iStartFrom*<br/>
 [in] 확인할 첫 번째 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공할 경우 첫 번째로 표시되는 탭에 대한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -894,7 +894,7 @@ virtual CWnd* GetFirstVisibleTab(
 virtual int GetFirstVisibleTabNum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -906,7 +906,7 @@ virtual int GetFirstVisibleTabNum() const;
 int GetHighlightedTab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 강조 표시된 탭의 0부터 시작하는 인덱스입니다.
 
@@ -916,7 +916,7 @@ int GetHighlightedTab() const;
 virtual const CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -926,7 +926,7 @@ virtual const CImageList* GetImageList() const;
 virtual CSize GetImageSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -940,7 +940,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 [in] *iTabNum*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -952,7 +952,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 Location GetLocation() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 영역의 위치입니다.
 
@@ -966,7 +966,7 @@ Location GetLocation() const;
 virtual CSize GetMaxWindowSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1007,7 +1007,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 탭의 배경색을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 값입니다. *iTab*이 범위를 벗어나는 경우 -1입니다.
 
@@ -1019,7 +1019,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 virtual int GetTabBorderSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 테두리의 크기(픽셀)입니다.
 
@@ -1037,10 +1037,10 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
+*id*<br/>
 [in] 탭 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭이 있는 경우 0부터 시작하는 인덱스입니다. 탭 ID를 찾을 수 없는 경우 -1입니다.
 
@@ -1054,7 +1054,7 @@ virtual int GetTabByID(int id) const;
 CRect GetTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1071,7 +1071,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 *hwnd*<br/>
 [in] 창 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공한 경우 탭의 0부터 시작하는 인덱스입니다. 탭에 *hwnd*가 없으면 -1입니다.
 
@@ -1088,7 +1088,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 *pt*<br/>
 [in] 탭 컨트롤의 클라이언트 좌표에 있는 지점입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *pt*를 포함하는 탭의 인덱스입니다. 탭에 *pt*가 없는 경우 -1입니다.
 
@@ -1102,7 +1102,7 @@ virtual int GetTabFullWidth(int iTab) const;
 
 [in] *iTab*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1119,7 +1119,7 @@ virtual HICON GetTabHicon(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공한 경우 탭 레이블과 연관된 HICON입니다. HICON이 없거나 메서드가 실패하는 경우에는 NULL입니다.
 
@@ -1136,7 +1136,7 @@ virtual UINT GetTabIcon(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공한 경우 지정된 탭의 아이콘 ID입니다. 인덱스가 유효하지 않은 경우 -1입니다.
 
@@ -1157,7 +1157,7 @@ int GetTabID(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *iTab*이 범위를 벗어나는 경우 탭의 ID 또는 -1입니다.
 
@@ -1179,7 +1179,7 @@ virtual BOOL GetTabLabel(
 *strLabel*<br/>
 [out] `CString` 개체에 대한 참조입니다. 이 메서드는 이 매개 변수에 탭의 레이블을 저장합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1207,7 +1207,7 @@ virtual BOOL GetTabRect(
 *rect*<br/>
 [out] `CRect` 개체에 대한 참조입니다. 이 메서드는 이 매개 변수에 탭의 크기와 위치를 저장합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 탭 인덱스가 유효하지 않은 경우 FALSE입니다.
 
@@ -1217,7 +1217,7 @@ virtual BOOL GetTabRect(
 virtual int GetTabsHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1229,7 +1229,7 @@ virtual int GetTabsHeight() const;
 virtual int GetTabsNum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 컨트롤의 탭 수입니다.
 
@@ -1258,7 +1258,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 탭의 텍스트 색을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다. *iTab*이 범위를 벗어났을 경우 -1입니다.
 
@@ -1275,7 +1275,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [iTab](../../mfc/reference/cwnd-class.md)이 지정하는 탭에 있는 *CWnd* 개체에 대한 포인터입니다. *iTab*이 유효하지 않으면 NULL입니다.
 
@@ -1298,7 +1298,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 탭에 있는 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다.*iTab*이 잘못된 경우 NULL입니다.
 
@@ -1316,7 +1316,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 CToolTipCtrl& GetToolTipCtrl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도구 설명 컨트롤에 대한 참조입니다.
 
@@ -1328,7 +1328,7 @@ CToolTipCtrl& GetToolTipCtrl() const;
 virtual int GetVisibleTabsNum() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표시되는 탭의 수입니다.
 
@@ -1342,7 +1342,7 @@ virtual BOOL HasImage(int iTab) const;
 
 [in] *iTab*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1425,7 +1425,7 @@ void InvalidateTab(int iTab);
 virtual BOOL IsActiveTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1437,7 +1437,7 @@ virtual BOOL IsActiveTabCloseButton() const;
 BOOL IsAutoColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 컨트롤이 autocolor 모드에 있으면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1451,7 +1451,7 @@ BOOL IsAutoColor() const;
 BOOL IsAutoDestroyWindow() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1461,7 +1461,7 @@ BOOL IsAutoDestroyWindow() const;
 virtual BOOL IsColored() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1471,7 +1471,7 @@ virtual BOOL IsColored() const;
 BOOL IsDialogControl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1481,7 +1481,7 @@ BOOL IsDialogControl() const;
 BOOL IsDrawNoPrefix() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1493,7 +1493,7 @@ BOOL IsDrawNoPrefix() const;
 virtual BOOL IsFlatFrame() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 컨트롤 프레임이 플랫 스타일로 렌더링되는 경우 TRUE이고, 프레임이 3D 스타일로 렌더링되는 경우 FALSE입니다.
 
@@ -1509,7 +1509,7 @@ Outlook 스타일을 사용하는 탭 컨트롤은 플랫 프레임으로 렌더
 virtual BOOL IsFlatTab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1521,7 +1521,7 @@ virtual BOOL IsFlatTab() const;
 virtual BOOL IsHideSingleTab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭이 한 개 있는 경우 탭 컨트롤이 탭 레이블을 숨기면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1543,7 +1543,7 @@ BOOL IsIconAdded(
 
 [in] *iIcon*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1555,7 +1555,7 @@ BOOL IsIconAdded(
 virtual BOOL IsInPlaceEdit() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 위치 내 편집이 사용되는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1569,7 +1569,7 @@ virtual BOOL IsInPlaceEdit() const;
 virtual BOOL IsLeftRightRounded() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1579,7 +1579,7 @@ virtual BOOL IsLeftRightRounded() const;
 BOOL IsMDITab() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1591,7 +1591,7 @@ BOOL IsMDITab() const;
 virtual BOOL IsOneNoteStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Microsoft OneNote의 스타일에 탭이 표시되면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1614,7 +1614,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 *point*<br/>
 [in] 테스트할 지점입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지점이 탭 영역에 있는 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -1628,7 +1628,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 BOOL IsTabCloseButtonHighlighted() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1638,7 +1638,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 BOOL IsTabCloseButtonPressed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1655,7 +1655,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 *iTab*<br/>
 [in] 확인할 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭이 분리 가능한 경우 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1676,7 +1676,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 탭 레이블에 아이콘만 있는 경우 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1692,7 +1692,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 BOOL IsTabSwapEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 탭 위치를 변경할 수 있는 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -1713,7 +1713,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 *iTab*<br/>
 [in] 확인할 탭의 0부터 시작하는 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 탭이 표시되는 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -1723,7 +1723,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 virtual BOOL IsVS2005Style() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1796,7 +1796,7 @@ virtual BOOL OnDrop(
 
 [in] *CPoint*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1817,7 +1817,7 @@ virtual DROPEFFECT OnDragOver(
 
 [in] *CPoint*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1846,7 +1846,7 @@ virtual DROPEFFECT OnDragEnter(
 
 [in] *CPoint*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1862,7 +1862,7 @@ virtual BOOL OnRenameTab(int, CString&);
 
 [in] *CString&*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1876,7 +1876,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 [in] *pMsg*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1922,7 +1922,7 @@ virtual BOOL RemoveTab(
 *bRecalcLayout*<br/>
 [in] 탭의 레이아웃을 다시 계산할지 여부를 지정하는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 탭을 성공적으로 제거하면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -1936,7 +1936,7 @@ virtual BOOL RemoveTab(
 virtual BOOL RenameTab();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -1973,7 +1973,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 *iTab*<br/>
 [in] 탭의 0부터 시작하는 인덱스입니다. `SetActiveTab`은 이 인덱스가 있는 탭을 활성화합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -2100,7 +2100,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *hImageList*<br/>
 [in] 사전 로드된 이미지 목록에 대한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -2142,7 +2142,7 @@ virtual BOOL SetTabBkColor(
 *color*<br/>
 [in] 설정할 색상입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -2182,7 +2182,7 @@ virtual BOOL SetTabHicon(
 *hIcon*<br/>
 [in] 아이콘에 대한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -2204,7 +2204,7 @@ virtual BOOL SetTabIcon(
 *uiIcon*<br/>
 [in] 새 아이콘의 아이콘 ID입니다. 이 ID는 내부 [CImageList](../../mfc/reference/cimagelist-class.md) 개체를 참조합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -2230,7 +2230,7 @@ virtual BOOL SetTabIconOnly(
 *bShowTooltipAlways*<br/>
 [in] 프레임워크에 아이콘만 표시하는 탭 레이블에 대한 도구 설명 표시 여부를 결정하는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -2256,7 +2256,7 @@ virtual BOOL SetTabLabel(
 *strLabel*<br/>
 [in] 탭 레이블에 대한 새 텍스트를 포함하는 문자열에 대한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -2281,7 +2281,7 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 *arOrder*<br/>
 [in] 새 탭 순서를 정의한 0부터 시작하는 인덱스 배열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 그렇지 않으면 FAIL입니다.
 
@@ -2307,7 +2307,7 @@ virtual BOOL SetTabTextColor(
 *color*<br/>
 [in] 새 텍스트 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하는 경우 0이 아닌 값입니다. 그렇지 않은 경우 0입니다.
 
@@ -2337,7 +2337,7 @@ virtual BOOL ShowTab(
 *bActivate*<br/>
 [in] *iTab*으로 지정된 탭을 선택할지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2355,7 +2355,7 @@ virtual BOOL StartRenameTab(int iTab);
 
 [in] *iTab*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 

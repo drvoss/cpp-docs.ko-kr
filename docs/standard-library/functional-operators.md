@@ -8,11 +8,11 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876350"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424766"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 연산자
 
@@ -39,7 +39,7 @@ template <class Fty>
 *npc*\
 null 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있는 경우에만 둘 다 true를 반환합니다.
 
@@ -98,7 +98,7 @@ template <class Fty>
 *npc*\
 null 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연산자는 둘 다 `function` 개체에 대한 참조인 인수와 null 포인터 상수인 인수를 사용합니다. `function` 개체가 비어 있지 않은 경우에만 둘 다 true를 반환합니다.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857353"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423407"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 
@@ -30,18 +30,18 @@ ms.locfileid: "78857353"
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAtlWinModule:: CAtlWinModule](#catlwinmodule)|생성자입니다.|
 |[CAtlWinModule:: ~ CAtlWinModule](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAtlWinModule:: AddCreateWndData](#addcreatewnddata)|데이터 개체를 추가 합니다.|
 |[CAtlWinModule:: ExtractCreateWndData](#extractcreatewnddata)|창 모듈 데이터 개체에 대 한 포인터를 반환 합니다.|
@@ -112,7 +112,7 @@ CAtlWinModule();
 void* ExtractCreateWndData();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [AddCreateWndData](#addcreatewnddata)를 사용 하 여 이전에 추가 된 `_AtlCreateWndData` 구조체에 대 한 포인터를 반환 하거나, 사용할 수 있는 개체가 없으면 NULL을 반환 합니다.
 

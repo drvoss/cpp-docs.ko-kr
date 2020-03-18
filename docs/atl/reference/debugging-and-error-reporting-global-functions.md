@@ -9,11 +9,11 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864889"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423137"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>디버깅 및 오류 보고 전역 함수
 
@@ -24,7 +24,7 @@ ms.locfileid: "78864889"
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|HRESULT 형식으로 `GetLastError` 오류 코드를 반환 합니다.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Win32 오류 코드 HRESULT로 변환합니다.|
 |[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|클라이언트에 오류 정보를 제공 하 `IErrorInfo`를 설정 합니다.|
-|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|`CAtlException`를 throw합니다.|
+|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|`CAtlException`을 throw합니다.|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Windows 함수 `GetLastError`의 결과에 따라 오류를 표시하려면 이 함수를 호출합니다.|
 
 ##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError
@@ -35,7 +35,7 @@ ms.locfileid: "78864889"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `AtlHresultFromLastError`는 `GetLastError`를 호출 하 여 마지막 오류를 가져오고 HRESULT_FROM_WIN32 매크로를 사용 하 여 HRESULT로 변환한 후 오류를 반환 합니다.
 
@@ -56,7 +56,7 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 변환할 오류 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 HRESULT_FROM_WIN32 매크로를 사용 하 여 Win32 오류 코드를 HRESULT로 변환 합니다.
 
@@ -143,11 +143,11 @@ HRESULT WINAPI AtlReportError(
 *hInst*<br/>
 진행 리소스에 대 한 핸들입니다. 기본적으로이 매개 변수는 `__AtlBaseModuleModule::GetResourceInstance`입니다. 여기서 `__AtlBaseModuleModule`은이 모듈의 전역 인스턴스이거나이 [모듈](../../atl/reference/catlbasemodule-class.md) 에서 파생 된 클래스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Hres* 매개 변수가 0이 아니면 *hres*의 값을 반환 합니다. *Hres* 가 0 이면 처음 네 버전의 `AtlReportError` DISP_E_EXCEPTION를 반환 합니다. 마지막 두 버전은 매크로 **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)** 의 결과를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *LpszDesc* 문자열은 오류에 대 한 텍스트 설명으로 사용 됩니다. 클라이언트가 `AtlReportError`에서 반환 하는 *Hres* 를 수신 하면 클라이언트는 오류에 대 한 세부 정보를 위해 `IErrorInfo` 구조에 액세스할 수 있습니다.
 
@@ -175,7 +175,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *hr*<br/>
 표준 HRESULT 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수는 오류 조건이 발생 하는 경우 ATL 및 MFC 코드에서 사용 됩니다. 사용자의 코드에서 호출할 수도 있습니다. 이 함수의 기본 구현은 프로젝트, MFC 또는 ATL의 형식 _ATL_NO_EXCEPTIONS 기호 정의에 따라 달라 집니다.
 
@@ -207,7 +207,7 @@ Windows 함수 `GetLastError`의 결과에 따라 오류를 표시하려면 이 
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수는 `GetLastError`의 결과를 디버거로 추적 합니다.
 

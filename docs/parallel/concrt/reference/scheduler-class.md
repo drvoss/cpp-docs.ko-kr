@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867138"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427352"
 ---
 # <a name="scheduler-class"></a>Scheduler 클래스
 
@@ -38,18 +38,18 @@ ms.locfileid: "78867138"
 class Scheduler;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[Scheduler](#ctor)|`Scheduler` 클래스의 개체는 팩터리 메서드를 사용 하거나 암시적 으로만 만들 수 있습니다.|
 |[~ Scheduler 소멸자](#dtor)|`Scheduler` 클래스의 개체는 모든 외부 참조가 존재 하지 않는 경우 암시적으로 제거 됩니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[연결](#attach)|스케줄러를 호출 컨텍스트에 연결 합니다. 이 메서드가 반환 된 후에는 호출 컨텍스트가 스케줄러에 의해 관리 되 고 스케줄러는 현재 스케줄러가 됩니다.|
 |[만들기](#create)|`_Policy` 매개 변수에서 동작을 설명 하는 새 스케줄러를 만들고, 스케줄러에 초기 참조를 배치 하 고,이에 대 한 포인터를 반환 합니다.|
@@ -65,7 +65,7 @@ class Scheduler;
 |[ScheduleTask](#scheduletask)|오버로드되었습니다. 스케줄러 내에서 경량 작업을 예약 합니다. 간단한 작업은 런타임에 의해 결정되는 일정 그룹에 배치됩니다. `_Placement` 매개 변수를 사용하는 버전은 작업이 지정된 위치에서 실행되도록 합니다.|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|사용자 정의 정책을 사용 하 여 기본 스케줄러를 만들 수 있습니다. 이 메서드는 프로세스 내에 기본 스케줄러가 없는 경우에만 호출할 수 있습니다. 기본 정책이 설정 된 후에는 `SetDefaultSchedulerPolicy` 또는 [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) 메서드에 대 한 다음 유효한 호출이 나타날 때까지 적용 된 상태로 유지 됩니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 동시성 런타임 scheduler는 응용 프로그램에서 큐에 대기 중인 작업을 실행 하기 위해 스레드와 같은 운영 체제 실행 컨텍스트에 매핑되는 실행 컨텍스트를 사용 합니다. 언제 든 지 스케줄러의 동시성 수준은 리소스 관리자에 의해 부여 된 가상 프로세서의 수와 동일 합니다. 가상 프로세서는 처리 리소스에 대 한 추상화 이며 기본 시스템의 하드웨어 스레드에 매핑됩니다. 단일 스케줄러 컨텍스트는 지정 된 시간에 가상 프로세서에서 실행할 수 있습니다.
 
@@ -89,7 +89,7 @@ class Scheduler;
 virtual void Attach() = 0;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 스케줄러를 연결 하면 암시적으로 스케줄러에 참조가 배치 됩니다.
 
@@ -112,11 +112,11 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 새로 만든 스케줄러의 동작을 설명 하는 스케줄러 정책입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 스케줄러에 대 한 포인터입니다. 이 `Scheduler` 개체에는 초기 참조 수가 배치 되어 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `Create` 메서드를 사용 하 여 스케줄러를 만든 후에는 앞의 특정 시점에서 `Release` 메서드를 호출 하 여 초기 참조 횟수를 제거 하 고 스케줄러를 종료할 수 있도록 해야 합니다.
 
@@ -139,11 +139,11 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 *_Placement*<br/>
 일정 그룹 내의 태스크가에서 실행 되는 것에 해당 하는 위치에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 일정 그룹에 대 한 포인터입니다. 이 `ScheduleGroup` 개체에는 초기 참조 수가 배치 되어 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 작업 예약을 완료 한 후에는 일정 그룹에서 [Release](schedulegroup-class.md#release) 메서드를 호출 해야 합니다. 스케줄러는 대기 중인 모든 작업이 완료 되 면 일정 그룹을 삭제 합니다.
 
@@ -157,7 +157,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스케줄러에 대 한 현재 가상 프로세서 수입니다.
 
@@ -169,7 +169,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스케줄러를 만든 정책의 복사본입니다.
 
@@ -181,7 +181,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스케줄러에 대 한 고유 식별자입니다.
 
@@ -198,11 +198,11 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 *_Placement*<br/>
 스케줄러를 쿼리 하는 위치에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `_Placement` 인수로 지정 된 위치를 스케줄러에서 사용할 수 있는지 여부를 나타냅니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 반환 값은 지정된 위치를 사용할 수 있는지 여부의 순간 샘플링입니다. 여러 스케줄러가 있으면 동적 자원 관리에서 어느 시점에 스케줄러의 리소스를 추가하거나 제거할 수 있습니다. 이 경우 지정된 위치의 가용성이 변경될 수 있습니다.
 
@@ -214,11 +214,11 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 virtual unsigned int Reference() = 0 ;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 증가 된 참조 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이는 일반적으로 컴퍼지션에 대 한 스케줄러의 수명을 관리 하는 데 사용 됩니다. 스케줄러의 참조 횟수가 0이 되면 스케줄러가 종료되고 스케줄러의 모든 작업이 완료된 후 자체적으로 소멸합니다.
 
@@ -245,11 +245,11 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 감소 한 참조 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이는 일반적으로 컴퍼지션에 대 한 스케줄러의 수명을 관리 하는 데 사용 됩니다. 스케줄러의 참조 횟수가 0이 되면 스케줄러가 종료되고 스케줄러의 모든 작업이 완료된 후 자체적으로 소멸합니다.
 
@@ -261,7 +261,7 @@ virtual unsigned int Release() = 0;
 static void __cdecl ResetDefaultSchedulerPolicy();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 프로세스 내에 기본 스케줄러가 있는 동안 호출 될 수 있습니다. 기존 기본 스케줄러의 정책에는 영향을 주지 않습니다. 그러나 기본 스케줄러를 종료 하 고 나중에 새 기본값을 만들어야 하는 경우 새 스케줄러는 런타임 기본 정책 설정을 사용 합니다.
 
@@ -273,7 +273,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 Scheduler();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 스케줄러를 호출 컨텍스트에 연결 해야 하는 다양 한 런타임 함수를 활용할 때 프로세스의 기본 스케줄러가 암시적으로 생성 됩니다. `CurrentScheduler` 클래스 내의 메서드와 PPL 및 에이전트 계층의 기능은 일반적으로 암시적 첨부 파일을 수행 합니다.
 
@@ -326,7 +326,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 기본 스케줄러 정책으로 설정할 정책입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 프로세스 내에 기본 스케줄러가 이미 있을 때 `SetDefaultSchedulerPolicy` 메서드를 호출 하면 런타임에서 [default_scheduler_exists](default-scheduler-exists-class.md) 예외가 throw 됩니다.
 

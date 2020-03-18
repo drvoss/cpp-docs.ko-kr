@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857027"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422759"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS 용 C++ 패키지 관리자
 
@@ -25,7 +25,7 @@ Windows 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일<
 
 또한 포트 컬렉션에 프라이빗 라이브러리가 있는 vcpkg 클론을 만들 수 있습니다. 미리 작성된 이진 파일 및 헤더를 다운로드하는 포트를 추가합니다. 그런 다음 해당 파일을 기본 위치에 단순히 복사하는 portfile.cmake 파일을 작성합니다.
 
-<sup>1</sup> *참고: 일부 소유 라이브러리에 대해서는 소스를 사용할 수 없습니다. 이러한 경우 vcpkg는 미리 빌드된 버전과 호환 되는 이진 파일을 다운로드 합니다.*
+<sup>1</sup> *참고: 일부 독점 라이브러리에서는 소스를 사용할 수 없습니다. 이러한 경우 vcpkg는 호환되는 미리 작성된 이진 파일을 다운로드합니다.*
 
 ## <a name="installation"></a>설치
 
@@ -79,7 +79,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예들 들어 다음과 같습니다.
+CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예를 들어:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)

@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865037"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423527"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 텍스트 인코딩 함수
 
@@ -79,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 *chIn*<br/>
 16 진수 문자 ' 0 '-' 9 ', ' 으로만 구성-'F ' 또는 ' 으로만 구성-'F '입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 16 진수로 해석 된 입력 문자의 숫자 값입니다. 예를 들어 ' 0 '의 입력은 값 0을 반환 하 고 ' A ' 입력은 값 10을 반환 합니다. 입력 문자가 16 진수가 아니면이 함수는-1을 반환 합니다.
 
@@ -96,7 +96,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 *되지만*<br/>
 예약 된 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컴파일하거나 실행 중인 ATL 라이브러리 버전의 DWORD 정수 값을 반환 합니다.
 
@@ -136,7 +136,7 @@ inline BOOL AtlHexDecode(
 *pnDestLen*<br/>
 *Pdest*의 길이 (바이트)를 포함 하는 변수에 대 한 포인터입니다. 함수가 성공 하면 변수가 버퍼에 쓴 바이트 수를 받습니다. 함수가 실패 하면 변수는 버퍼의 필요한 길이 (바이트)를 받습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -153,7 +153,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 인코딩된 문자열의 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* 문자의 디코딩된 문자열을 보유할 수 있는 버퍼에 필요한 바이트 수입니다.
 
@@ -183,7 +183,7 @@ int * pnDestLen) throw();
 *pnDestLen*<br/>
 *Szdest*의 문자 길이를 포함 하는 변수에 대 한 포인터입니다. 함수가 성공 하면 변수가 버퍼에 쓴 문자 수를 받습니다. 함수가 실패 하면 변수는 버퍼의 문자에 필요한 길이를 받습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -204,7 +204,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 인코딩할 데이터의 바이트 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* bytes의 인코딩된 데이터를 보유할 수 있는 버퍼에 필요한 문자 수입니다.
 
@@ -221,7 +221,7 @@ inline short AtlHexValue(char chIn) throw();
 *chIn*<br/>
 16 진수 문자 ' 0 '-' 9 ', ' 으로만 구성-'F ' 또는 ' 으로만 구성-'F '입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 16 진수로 해석 된 입력 문자의 숫자 값입니다. 예를 들어 ' 0 '의 입력은 값 0을 반환 하 고 ' A ' 입력은 값 10을 반환 합니다. 입력 문자가 16 진수가 아니면이 함수는-1을 반환 합니다.
 
@@ -251,7 +251,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 *nDest*<br/>
 버퍼의 길이 (바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변환 된 문자열의 문자 수를 반환 합니다.
 
@@ -289,7 +289,7 @@ inline BOOL BEncode(
 *pszCharSet*<br/>
 변환에 사용할 문자 집합입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -313,7 +313,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 *nCharsetLen*<br/>
 변환에 사용할 문자 집합의 문자 길이입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* bytes의 인코딩된 데이터를 보유할 수 있는 버퍼에 필요한 문자 수입니다.
 
@@ -354,7 +354,7 @@ inline int EscapeXML(
 - 기본 동작을 ATL_ESC_FLAG_NONE 합니다. 따옴표와 아포스트로피는 변환 되지 않습니다.
 - ATL_ESC_FLAG_ATTR 인용 부호와 아포스트로피는 각각 `&quot;` 및 `&apos;`로 변환 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변환 된 문자열의 문자 길이입니다.
 
@@ -386,7 +386,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 *nSrcLen*<br/>
 문자열의 길이 (문자)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [IsExtendedChar](#isextendedchar)에 의해 결정 된 대로 문자열 내에서 발견 된 확장 문자 수를 반환 합니다.
 
@@ -403,7 +403,7 @@ inline int IsExtendedChar(char ch) throw();
 *ch*<br/>
 테스트할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 문자가 확장 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -441,7 +441,7 @@ inline BOOL QEncode(
 *pnNumEncoded*<br/>
 반환 시 변환 해야 하는 안전 하지 않은 문자 수를 포함 하는 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -465,7 +465,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 *nCharsetLen*<br/>
 변환에 사용할 문자 집합의 문자 길이입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* bytes의 인코딩된 데이터를 보유할 수 있는 버퍼에 필요한 문자 수입니다.
 
@@ -503,7 +503,7 @@ inline BOOL QPDecode(
 *dwFlags*<br/>
 진행 변환을 수행 하는 방법을 설명 하는 ATLSMTP_QPENCODE 플래그입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -524,7 +524,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 *nSrcLen*<br/>
 인코딩된 문자열의 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* 문자의 디코딩된 문자열을 보유할 수 있는 버퍼에 필요한 바이트 수입니다.
 
@@ -568,7 +568,7 @@ inline BOOL QPEncode(
 
 따옴표로 묶은 인쇄 가능한 인코딩 체계는 [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt)에 설명 되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -589,7 +589,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 인코딩할 데이터의 바이트 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* bytes의 인코딩된 데이터를 보유할 수 있는 버퍼에 필요한 문자 수입니다.
 
@@ -623,7 +623,7 @@ inline BOOL UUDecode(
 *pnDestLen*<br/>
 *Pdest*의 길이 (바이트)를 포함 하는 변수에 대 한 포인터입니다. 함수가 성공 하면 변수가 버퍼에 쓴 바이트 수를 받습니다. 함수가 실패 하면 변수는 버퍼의 필요한 길이 (바이트)를 받습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -644,7 +644,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 인코딩된 문자열의 문자 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* 문자의 디코딩된 문자열을 보유할 수 있는 버퍼에 필요한 바이트 수입니다.
 
@@ -692,7 +692,7 @@ ATLSMTP_UUENCODE_HEADER이 *dwFlags*에 지정 된 경우 헤더에 추가할 �
 
 - ATLSMTP_UUENCODE_DOT 데이터 stuffing 수행 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -713,7 +713,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 *nSrcLen*<br/>
 인코딩할 데이터의 바이트 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *NSrcLen* bytes의 인코딩된 데이터를 보유할 수 있는 버퍼에 필요한 문자 수입니다.
 

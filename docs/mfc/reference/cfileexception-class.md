@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855378"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424418"
 ---
 # <a name="cfileexception-class"></a>CFileException 클래스
 
@@ -41,17 +41,17 @@ ms.locfileid: "78855378"
 class CFileException : public CException
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFileException:: CFileException](#cfileexception)|`CFileException` 개체를 생성합니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFileException:: ErrnoToException](#errnotoexception)|런타임 오류 번호에 해당 하는 코드를 반환 합니다.|
 |[CFileException:: GetErrorMessage](#geterrormessage)|예외를 설명 하는 메시지를 검색 합니다.|
@@ -61,13 +61,13 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFileException:: m_cause](#m_cause)|예외 원인에 해당 하는 이식 가능한 코드를 포함 합니다.|
 |[CFileException:: m_lOsError](#m_loserror)|관련 된 운영 체제 오류 번호를 포함 합니다.|
 |[CFileException:: m_strFileName](#m_strfilename)|이 예외에 대 한 파일 이름을 포함 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `CFileException` 클래스에는 이식 가능한 원인 코드 및 운영 체제별 오류 번호를 포함 하는 공용 데이터 멤버가 포함 되어 있습니다. 또한 클래스는 파일 예외를 throw 하 고 운영 체제 오류 및 C 런타임 오류에 대 한 원인 코드를 반환 하는 정적 멤버 함수를 제공 합니다.
 
@@ -107,7 +107,7 @@ CFileException(
 *lpszArchiveName*<br/>
 예외를 발생 시킨 `CFile` 개체의 이름을 포함 하는 문자열을 가리킵니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 생성자는 직접 사용 하지 말고 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)전역 함수를 호출 합니다.
 
@@ -127,11 +127,11 @@ static int PASCAL ErrnoToException(int nErrno);
 *nErrno*<br/>
 런타임 include 파일 ERRNO에 정의 된 정수 오류 코드입니다. 넣기.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 런타임 라이브러리 오류 값에 해당 하는 열거형 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 가능한 열거형 값 목록은 [Cfileexception:: m_cause](#m_cause) 를 참조 하세요.
 
@@ -161,11 +161,11 @@ virtual BOOL GetErrorMessage(
 *pnHelpContext*<br/>
 [in, out] 도움말 컨텍스트 ID를 받는 부호 없는 정수에 대 한 포인터입니다. `NULL`경우 ID가 반환 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 지정 된 버퍼가 너무 작으면 오류 메시지가 잘립니다.
 
@@ -183,7 +183,7 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 데이터 멤버는 **int**형식의 공용 변수입니다. 열거자와 해당 의미는 다음과 같습니다.
 
@@ -235,7 +235,7 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 오류 코드 목록은 운영 체제 기술 설명서를 참조 하세요. 이 데이터 멤버는 LONG 형식의 공용 변수입니다.
 
@@ -260,7 +260,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 *lOsError*<br/>
 운영 체제 관련 오류 코드입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 운영 체제 오류 값에 해당 하는 열거 값입니다.
 

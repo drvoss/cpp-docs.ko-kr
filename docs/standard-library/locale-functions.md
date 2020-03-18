@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856625"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425570"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 함수
 
@@ -65,7 +65,7 @@ bool has_facet(const locale& Loc);
 *Loc*\
 패싯이 있는지 테스트할 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로캘에 테스트된 패싯이 있으면 **true**이고, 없으면 **false**입니다.
 
@@ -111,7 +111,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 영숫자 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 영숫자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -178,7 +178,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 영문자 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 영문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -243,7 +243,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 제어 문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -308,7 +308,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 숫자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -373,7 +373,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 영숫자 또는 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -438,7 +438,7 @@ bool islower(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 소문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -503,7 +503,7 @@ bool isprint(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 인쇄 가능하면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -567,7 +567,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 문장 부호 문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -632,7 +632,7 @@ bool isspace(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 공백 문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -697,7 +697,7 @@ bool isupper(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 대문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -762,7 +762,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 테스트된 요소가 16진수를 나타내는 데 사용된 문자이면 **true**이고, 그렇지 않으면 **false**입니다.
 
@@ -829,7 +829,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 *Loc*\
 변환할 문자를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소문자로 변환된 문자입니다.
 
@@ -878,7 +878,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 *Loc*\
 변환할 문자를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대문자로 변환된 문자입니다.
 
@@ -924,7 +924,7 @@ const Facet& use_facet(const locale& Loc);
 *Loc*\
 참조되는 패싯의 형식을 포함하는 const 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인수 로캘 내에 포함된 `Facet` 클래스의 패싯에 대한 참조입니다.
 

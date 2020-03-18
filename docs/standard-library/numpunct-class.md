@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856634"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425312"
 ---
 # <a name="numpunct-class"></a>numpunct 클래스
 
@@ -59,20 +59,20 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 형식의 개체에 대한 생성자입니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[char_type](#char_type)|로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.|
 |[string_type](#string_type)|`CharType` 형식의 문자가 포함된 문자열을 설명하는 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[decimal_point](#decimal_point)|소수점으로 사용할 로캘별 요소를 반환합니다.|
 |[do_decimal_point](#do_decimal_point)|소수점으로 사용할 로캘별 요소를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|
@@ -111,7 +111,7 @@ typedef CharType char_type;
 CharType decimal_point() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소수점으로 사용할 로캘별 요소입니다.
 
@@ -154,7 +154,7 @@ German_Germany.1252 thousands separator .
 virtual CharType do_decimal_point() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소수점으로 사용할 로캘별 요소입니다.
 
@@ -170,7 +170,7 @@ virtual CharType do_decimal_point() const;
 virtual string_type do_falsename() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **false** 값을 텍스트로 표현하는 데 사용할 시퀀스가 포함된 문자열입니다.
 
@@ -190,7 +190,7 @@ virtual string_type do_falsename() const;
 virtual string do_grouping() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.
 
@@ -210,7 +210,7 @@ virtual string do_grouping() const;
 virtual CharType do_thousands_sep() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 1000 단위 구분 기호로 사용할 로캘별 요소를 반환합니다.
 
@@ -248,7 +248,7 @@ virtual string_type do_truename() const;
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **False**값을 텍스트로 표현 하는 데 사용할 `CharType`의 시퀀스를 포함 하는 문자열입니다.
 
@@ -297,7 +297,7 @@ French_France.1252 falsename false
 string grouping() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.
 
@@ -346,7 +346,7 @@ explicit numpunct(size_t _Refs = 0);
 ### <a name="parameters"></a>매개 변수
 
 *_Refs*\
-개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.
+개체에 대한 메모리 관리의 유형을 지정하는 데 사용하는 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -382,7 +382,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 CharType thousands_sep() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 1000 단위 구분 기호로 사용할 로캘별 요소입니다.
 
@@ -425,7 +425,7 @@ German_Germany.1252 thousands separator .
 string_type falsename() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **true** 값을 텍스트로 표현하기 위해 사용할 문자열입니다.
 

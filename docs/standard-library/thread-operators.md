@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876175"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426170"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 
@@ -51,7 +51,7 @@ bool operator>= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Left < Right)`
 
@@ -77,7 +77,7 @@ bool operator> (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `Right < Left`
 
@@ -103,7 +103,7 @@ bool operator<= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Right < Left)`
 
@@ -129,7 +129,7 @@ bool operator<(
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 전체 순서에서 *왼쪽* 이 *오른쪽* 앞에 오면 **true** 이 고, 그렇지 않으면 **false**입니다.
 
@@ -157,7 +157,7 @@ bool operator!= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Left == Right)`
 
@@ -183,7 +183,7 @@ bool operator== (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 개체가 동일한 실행 스레드를 나타내면 **true** 이 고, 두 개체가 모두 실행 스레드를 나타내지 않으면입니다. 그렇지 않으면 **false**입니다.
 
@@ -207,9 +207,9 @@ basic_ostream<Elem, Tr>& operator<<(
 [basic_ostream](../standard-library/basic-ostream-class.md) 개체입니다.
 
 *Id*\
-데이터 개체의 시각화를 지정하는 `thread::id` 개체에 추가합니다.
+`thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Ostr*.
 

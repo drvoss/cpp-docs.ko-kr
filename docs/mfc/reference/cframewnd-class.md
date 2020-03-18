@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866443"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424400"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 클래스
 
@@ -123,17 +123,17 @@ ms.locfileid: "78866443"
 class CFrameWnd : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFrameWnd::CFrameWnd](#cframewnd)|`CFrameWnd` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFrameWnd::ActivateFrame](#activateframe)|사용자가 프레임을 표시 하 고 사용할 수 있도록 합니다.|
 |[CFrameWnd::BeginModalState](#beginmodalstate)|프레임 창을 모달로 설정 합니다.|
@@ -175,14 +175,14 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::SetProgressBarPosition](#setprogressbarposition)|작업 표시줄에 표시 되는 Windows 7 진행률 표시줄의 현재 위치를 설정 합니다.|
 |[CFrameWnd::SetProgressBarRange](#setprogressbarrange)|작업 표시줄에 표시 되는 Windows 7 진행률 표시줄의 범위를 설정 합니다.|
 |[CFrameWnd::SetProgressBarState](#setprogressbarstate)|작업 표시줄 단추에 표시 되는 진행률 표시기의 유형 및 상태를 설정 합니다.|
-|[CFrameWnd::SetTaskbarOverlayIcon](#settaskbaroverlayicon)|오버로드됨. 작업 표시줄 단추에 오버레이를 적용 하 여 응용 프로그램 상태 또는 사용자에 게 알림을 표시 합니다.|
+|[CFrameWnd::SetTaskbarOverlayIcon](#settaskbaroverlayicon)|오버로드되었습니다. 작업 표시줄 단추에 오버레이를 적용 하 여 응용 프로그램 상태 또는 사용자에 게 알림을 표시 합니다.|
 |[CFrameWnd::SetTitle](#settitle)|관련 컨트롤 막대의 제목을 설정 합니다.|
 |[CFrameWnd::ShowControlBar](#showcontrolbar)|을 호출 하 여 컨트롤 막대를 표시 합니다.|
 |[CFrameWnd::ShowOwnedWindows](#showownedwindows)|`CFrameWnd` 개체의 하위 항목인 모든 창을 표시 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFrameWnd::OnCreateClient](#oncreateclient)|프레임에 대 한 클라이언트 창을 만듭니다.|
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|현재 MFC 응용 프로그램의 메뉴가 숨겨지기 전에 호출 됩니다.|
@@ -190,7 +190,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|메뉴 항목에 대해 자동 사용 및 사용 안 함 기능을 제어 합니다.|
 |[CFrameWnd::rectDefault](#rectdefault)|Windows에서 창의 초기 크기와 위치를 선택할 수 있도록 `CFrameWnd` 개체를 만들 때이 정적 `CRect`를 매개 변수로 전달 합니다.|
@@ -239,7 +239,7 @@ class CFrameWnd : public CWnd
 
 - 프레임 창이 주 응용 프로그램 창인 경우 프레임 창은 WinHelp를 실행 하기 위한 컨텍스트입니다. 프레임 창을 닫으면 WINHELP가 종료 됩니다. 실행 된 경우이 응용 프로그램에 대 한 도움말을 보려면 EXE를 실행 합니다.
 
-C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow` 를 사용하세요. `PostNcDestroy`를 `CFrameWnd` 구현 하면 창이 소멸 될 C++ 때 개체를 삭제 합니다. 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가 `DestroyWindow`를 호출 합니다.
+C++ **Delete** 연산자를 사용 하 여 프레임 창을 제거 하지 마십시오. 대신 `CWnd::DestroyWindow`를 사용하세요. `PostNcDestroy`를 `CFrameWnd` 구현 하면 창이 소멸 될 C++ 때 개체를 삭제 합니다. 사용자가 프레임 창을 닫으면 기본 `OnClose` 처리기가 `DestroyWindow`를 호출 합니다.
 
 `CFrameWnd`에 대 한 자세한 내용은 [프레임 창](../../mfc/frame-windows.md)을 참조 하세요.
 
@@ -344,7 +344,7 @@ Windows 클래스의 이름을 나타내는 null로 끝나는 문자열을 가�
 *pContext*<br/>
 [Ccreatecontext](../../mfc/reference/ccreatecontext-structure.md) 구조체에 대 한 포인터를 지정 합니다. 이 매개 변수는 NULL 일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 초기화에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -372,7 +372,7 @@ CWnd* CreateView(
 *nID*<br/>
 뷰의 ID 번호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 `CWnd` 개체에 대 한 포인터 그렇지 않으면 NULL입니다.
 
@@ -505,7 +505,7 @@ void FloatControlBar(
 virtual CDocument* GetActiveDocument();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 [CDocument](../../mfc/reference/cdocument-class.md)에 대 한 포인터입니다. 현재 문서가 없으면 NULL을 반환 합니다.
 
@@ -517,7 +517,7 @@ MDI 프레임 창의 활성 MDI (다중 문서 인터페이스) 자식 창에 �
 virtual CFrameWnd* GetActiveFrame();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 활성 MDI 자식 창에 대 한 포인터입니다. 응용 프로그램이 SDI 응용 프로그램 이거나 MDI 프레임 창에 활성 문서가 없으면 암시적 **this** 포인터가 반환 됩니다.
 
@@ -533,7 +533,7 @@ virtual CFrameWnd* GetActiveFrame();
 CView* GetActiveView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 [CView](../../mfc/reference/cview-class.md)에 대 한 포인터입니다. 현재 보기가 없으면 NULL을 반환 합니다.
 
@@ -556,7 +556,7 @@ CControlBar* GetControlBar(UINT nID);
 *nID*<br/>
 컨트롤 막대의 ID 번호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ID와 연결 된 컨트롤 막대에 대 한 포인터입니다.
 
@@ -576,7 +576,7 @@ void GetDockState(CDockState& state) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*state*<br/>
+*상태*<br/>
 반환 될 때 프레임 창에 있는 컨트롤 막대의 현재 상태를 포함 합니다.
 
 ### <a name="remarks"></a>설명
@@ -591,7 +591,7 @@ void GetDockState(CDockState& state) const;
 virtual DWORD GetMenuBarState();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값은 다음 값을 가질 수 있습니다.
 
@@ -611,7 +611,7 @@ virtual DWORD GetMenuBarState();
 virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 다음 값 중 하나를 반환합니다.
 
@@ -633,7 +633,7 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
 virtual CWnd* GetMessageBar();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상태 표시줄 창에 대 한 포인터입니다.
 
@@ -667,7 +667,7 @@ virtual void GetMessageString(
 CString GetTitle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 개체의 현재 제목을 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.
 
@@ -703,7 +703,7 @@ TRUE 이면 프레임이 표시 되 고 활성 상태가 되어야 함을 나타
 BOOL InModalState() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 예 이면 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -715,7 +715,7 @@ BOOL InModalState() const;
 BOOL IsTracking() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 분할자 작업이 진행 중인 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -732,7 +732,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 액셀러레이터 키 리소스의 이름을 식별 합니다. 리소스가 정수 ID로 식별 되는 경우 MAKEINTRESOURCE를 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 액셀러레이터 키 테이블이 성공적으로 로드 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -846,7 +846,7 @@ virtual BOOL NegotiateBorderSpace(
 *lpRectBorder*<br/>
 테두리의 좌표를 지정 하는, [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 [crect](../../atl-mfc-shared/reference/crect-class.md) 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -867,7 +867,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 *nID*<br/>
 표시 되는 컨트롤 막대의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -907,7 +907,7 @@ Windows [Createstruct](/windows/win32/api/winuser/ns-winuser-createstructw) 구�
 *pContext*<br/>
 [Ccreatecontext](../../mfc/reference/ccreatecontext-structure.md) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1074,7 +1074,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>매개 변수
 
-*state*<br/>
+*상태*<br/>
 저장 된 상태를 프레임 창의 컨트롤 막대에 적용 합니다.
 
 ### <a name="remarks"></a>설명
@@ -1091,11 +1091,11 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nState*|진행 메뉴를 표시 하거나 숨길지 여부를 지정 합니다. *Nstate* 매개 변수는 다음 값을 가질 수 있습니다.<br /><br />-AFX_MBS_VISIBLE (0x01)-메뉴가 숨겨져 있지만 표시 되는 경우 효과가 없는 메뉴를 표시 합니다.<br />-AFX_MBS_HIDDEN (0x02)-메뉴가 표시 되는 경우 메뉴를 숨기고, 숨겨진 경우에는 효과가 없습니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 메뉴 상태를 성공적으로 변경 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1113,7 +1113,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nStyle*|진행 메뉴를 기본적으로 숨길지 아니면 표시 하 고 포커스를 표시할지 여부를 지정 합니다. *Nstyle* 매개 변수는 다음 값을 가질 수 있습니다.<br /><br />-AFX_MBV_KEEPVISIBLE (0x01)-<br />     메뉴는 항상 표시 되며 기본적으로 포커스는 표시 되지 않습니다.<br />-AFX_MBV_DISPLAYONFOCUS (0x02)-<br />     메뉴는 기본적으로 숨겨져 있습니다. 메뉴가 숨겨진 경우 ALT 키를 눌러 메뉴를 표시 하 고 포커스를 제공 합니다. 메뉴가 표시 되 면 ALT 또는 ESC 키를 눌러 메뉴를 숨깁니다.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (비트 조합 (OR))-메뉴는 기본적으로 숨겨져 있습니다. 메뉴가 숨겨진 경우 F10 키를 눌러 메뉴를 표시 하 고 포커스를 제공 합니다. 메뉴가 표시 되 면 F10 키를 눌러 메뉴에 포커스를 설정 하거나 해제 합니다. ALT 또는 ESC 키를 눌러 숨길 때까지 메뉴가 표시 됩니다.|
 
@@ -1196,7 +1196,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 
 ##  <a name="settaskbaroverlayicon"></a>  CFrameWnd::SetTaskbarOverlayIcon
 
-오버로드됨. 작업 표시줄 단추에 오버레이를 적용 하 여 응용 프로그램 상태를 표시 하거나 사용자에 게 알립니다.
+오버로드되었습니다. 작업 표시줄 단추에 오버레이를 적용 하 여 응용 프로그램 상태를 표시 하거나 사용자에 게 알립니다.
 
 ```
 BOOL SetTaskbarOverlayIcon(
@@ -1219,7 +1219,7 @@ BOOL SetTaskbarOverlayIcon(
 *hIcon*<br/>
 오버레이로 사용할 아이콘 핸들입니다. 이 아이콘은 16x16 픽셀을 96 dpi (인치당 도트 수)로 측정 하는 작은 아이콘 이어야 합니다. 작업 표시줄 단추에 오버레이 아이콘이 이미 적용 된 경우 기존 오버레이가 바뀝니다. 이 값은 NULL 일 수 있습니다. NULL 값이 처리 되는 방법은 작업 표시줄 단추가 단일 창이 나 창의 그룹을 나타내는지 여부에 따라 달라 집니다. 더 이상 필요 하지 않은 경우에는 호출 응용 프로그램에서 *Hicon* 을 해제 해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE입니다. OS 버전이 Windows 7 보다 작거나 아이콘을 설정 하는 동안 오류가 발생 하면 FALSE입니다.
 

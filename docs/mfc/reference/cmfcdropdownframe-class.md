@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869066"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425834"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 클래스
 
@@ -58,7 +58,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="remarks"></a>설명
 
-이 클래스는 코드에서 직접 사용할 수 없습니다.
+이 클래스는 사용자 코드에서 직접 사용할 수 없습니다.
 
 프레임 워크는이 클래스를 사용 하 여 `CMFCDropDownToolbar` 및 `CMFCDropDownToolbarButton` 클래스에 프레임 동작을 제공 합니다. 이러한 클래스에 대 한 자세한 내용은 [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 및 [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)를 참조 하세요.
 

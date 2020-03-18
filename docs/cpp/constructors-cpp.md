@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546395"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423797"
 ---
 # <a name="constructors-c"></a>생성자 (C++)
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-파생 클래스 생성자는 항상 기본 클래스 생성자를 호출하므로, 완전히 생성된 기본 클래스를 통해서만 다른 작업을 수행할 수 있습니다. 기본 클래스 생성자는 파생 순서 대로 호출 됩니다. 예를 들어, `ClassC`에서 파생 된 `ClassB`에서 파생 된 `ClassA` 경우 `ClassC` 생성자가 먼저 호출 된 다음 `ClassB` 생성자가 호출 됩니다.
+파생 클래스 생성자는 항상 기본 클래스 생성자를 호출하므로, 완전히 생성된 기본 클래스를 통해서만 다른 작업을 수행할 수 있습니다. 기본 클래스 생성자는 파생 순서 대로 호출 됩니다. 예를 들어, `ClassC`에서 파생 된 `ClassB`에서 파생 된 `ClassA` 경우 `ClassC` 생성자가 먼저 호출 된 다음 `ClassB` 생성자가 호출 됩니다.`ClassA`
 
 기본 클래스에 기본 생성자가 없는 경우 파생 클래스 생성자에 기본 클래스 생성자 매개 변수를 제공해야 합니다.
 
@@ -692,12 +692,12 @@ int main(){
 }
 ```
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [복사 생성자 및 복사 할당 연산자](copy-constructors-and-copy-assignment-operators-cpp.md)
 - [이동 생성자 및 이동 할당 연산자](move-constructors-and-move-assignment-operators-cpp.md)
 - [생성자 위임](delegating-constructors.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [클래스 및 구조체](classes-and-structs-cpp.md)

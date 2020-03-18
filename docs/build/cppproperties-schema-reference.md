@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856815"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422843"
 ---
 # <a name="cpppropertiesjson-reference"></a>Cppproperties.json 참조
 
@@ -64,7 +64,7 @@ CMake를 사용 하지 않는 Open Folder 프로젝트는 *cppproperties.json* �
 
 Visual Studio에서는 해당 개발자 명령 프롬프트에 매핑되는 다음과 C++ 같은 미리 정의 된 환경을 Microsoft에 제공 합니다. 이러한 환경 중 하나를 상속 하는 경우 전역 속성 `env`를 사용 하 여 모든 환경 변수를 참조할 수 있습니다. $ {env\<VARIABLE >}.
 
-|변수 이름|설명|
+|변수 이름|Description|
 |-----------|-----------------|
 |vsdev|기본 Visual Studio 환경|
 |msvc_x86|x86 도구를 사용하여 x86용으로 컴파일|
@@ -77,7 +77,7 @@ Visual Studio에서는 해당 개발자 명령 프롬프트에 매핑되는 다�
 
 Linux 워크로드가 설치되면 원격으로 Linux 및 WSL을 대상으로 지정하는 데 사용할 수 있는 환경은 다음과 같습니다.
 
-|변수 이름|설명|
+|변수 이름|Description|
 |-----------|-----------------|
 |linux_x86|원격으로 x86 Linux를 대상 지정|
 |linux_x64|원격으로 x64 Linux를 대상 지정|

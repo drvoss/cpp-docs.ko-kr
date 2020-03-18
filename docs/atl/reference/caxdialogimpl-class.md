@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865058"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423395"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 클래스
 
@@ -46,11 +46,11 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 *TBase*<br/>
 `CDialogImplBaseT`에 대 한 기본 창 클래스입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAxDialogImpl:: AdviseSinkMap](#advisesinkmap)|개체의 싱크 맵 이벤트 맵에 모든 항목을 advise 하거나 unadvise 하려면이 메서드를 호출 합니다.|
 |[CAxDialogImpl:: Create](#create)|모덜리스 대화 상자를 만들려면이 메서드를 호출 합니다.|
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CAxDialogImpl:: m_bModal](#m_bmodal)|디버그 빌드에서만 존재 하 고 대화 상자가 모달 인 경우 true로 설정 된 변수입니다.|
 
@@ -114,7 +114,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 *bAdvise*<br/>
 모든 싱크 항목을 advise 하려면 true로 설정 합니다. 모든 싱크 항목이 advise 되지 않으면 false입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
@@ -138,7 +138,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 *RECT &*<br/>
 이 매개 변수는 사용되지 않습니다. 이 매개 변수는 `CComControl`에 의해 전달 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 대화 상자에 대 한 핸들입니다.
 
@@ -156,7 +156,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 BOOL DestroyWindow();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 성공적으로 제거 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -182,7 +182,7 @@ INT_PTR DoModal(
 *dwInitParam*<br/>
 진행 WM_INITDIALOG 메시지의 *lParam* 매개 변수에서 대화 상자에 전달할 값을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 [EndDialog](#enddialog)호출에 지정 된 *nRetCode* 매개 변수의 값입니다. 그렇지 않으면-1입니다.
 
@@ -205,7 +205,7 @@ BOOL EndDialog(int nRetCode);
 *nRetCode*<br/>
 진행 [DoModal](#domodal)에서 반환 하는 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자가 소멸 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -224,7 +224,7 @@ BOOL EndDialog(int nRetCode);
 virtual DLGPROC GetDialogProc();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `DialogProc` 콜백 함수에 대 한 포인터를 반환 합니다.
 
@@ -240,7 +240,7 @@ virtual DLGPROC GetDialogProc();
 int GetIDD();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대화 상자 템플릿 리소스 ID를 반환 합니다.
 
@@ -257,7 +257,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 *pMsg*<br/>
 확인할 메시지를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메시지가 처리 되었으면 TRUE를 반환 하 고, 그렇지 않으면 FALSE를 반환 합니다.
 

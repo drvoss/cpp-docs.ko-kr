@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883935"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425954"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 클래스
 
@@ -177,11 +177,11 @@ ms.locfileid: "78883935"
 class CDockingManager : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|도킹 창을 만들어 컨트롤 막대 목록에 추가 합니다.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|숨겨진 MDI 탭 모음 창 목록에 막대 창에 핸들을 추가 합니다.|
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|도킹 관리자가 OLE 컨테이너 모드에서 창을 숨길지 여부를 지정 합니다.|
 |[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|전역 도킹 모드를 지정 합니다.|
@@ -324,7 +324,7 @@ BOOL AddDockSite(
 *ppDockBar*<br/>
 제한이 새 도킹 창에 대 한 포인터에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 창이 성공적으로 만들어졌으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -367,7 +367,7 @@ BOOL AddPane(
 *bInsertForOuterEdge*<br/>
 진행 내부용 으로만 사용 됩니다. 항상 기본값 FALSE를 사용 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 도킹 관리자에 성공적으로 등록 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -403,7 +403,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 *pWnd*<br/>
 진행 프레임에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임이 미니 프레임 목록에 없고 성공적으로 추가 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -435,7 +435,7 @@ virtual BOOL AdjustRectToClientArea(
 *dwAlignment*<br/>
 진행 `CRect` 개체의 맞춤입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CRect` 개체의 맞춤이 조정 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -487,7 +487,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 *pCurrAutoHideToolBar*<br/>
 진행 자동 숨기기 도구 모음에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 자동 숨기기 도구 모음을 만들지 않은 경우 NULL입니다. 그렇지 않으면 새 도구 모음에 대 한 포인터입니다.
 
@@ -574,7 +574,7 @@ BOOL Create(CFrameWnd* pParentWnd);
 *pParentWnd*<br/>
 진행 도킹 관리자의 부모 프레임에 대 한 포인터입니다. 이 값은 NULL이 아니어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 TRUE입니다.
 
@@ -612,7 +612,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 *P바 Todock*<br/>
 진행 도킹 된 창입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 상태입니다.
 
@@ -684,7 +684,7 @@ BOOL DockPaneLeftOf(
 *pTargetBar*<br/>
 진행 대상 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 성공적으로 도킹 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -701,7 +701,7 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 *dwStyle*<br/>
 진행 도킹 맞춤입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 창이 성공적으로 만들어졌으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -718,7 +718,7 @@ BOOL EnableDocking(DWORD dwStyle);
 *dwStyle*<br/>
 진행 도킹 맞춤입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 창이 성공적으로 만들어졌으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -793,7 +793,7 @@ virtual CDockSite* FindDockSite(
 *bOuter*<br/>
 진행 TRUE 이면 컨트롤 막대 목록에서 위쪽 위치의 막대를 검색 합니다. 그렇지 않으면 컨트롤 막대 목록에서 꼬리 위치의 막대를 검색 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 맞춤이 지정 된 도킹 창 그렇지 않으면 NULL입니다.
 
@@ -815,7 +815,7 @@ virtual CBasePane* FindPaneByID(
 *Bsearch미니 프레임*<br/>
 진행 검색에 모든 부동 창을 포함 하려면 TRUE로 설정 합니다. FALSE 이면 도킹 된 창만 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 컨트롤 ID를 가진 [Cbasepane](../../mfc/reference/cbasepane-class.md) 개체 이거나, 지정 된 창을 찾을 수 없는 경우 NULL입니다.
 
@@ -834,7 +834,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 *pTargetBar*<br/>
 진행 대상 막대 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 대상 막대 창의 id가 있는 막대 창 이러한 막대 창이 없으면 NULL입니다.
 
@@ -872,7 +872,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
 *bFloatMultiOnly*<br/>
 진행 `CMultiPaneFrameWnd`인스턴스가 아닌 프레임을 제외 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 지점을 포함 하는 프레임입니다. 그렇지 않으면 NULL입니다.
 
@@ -891,7 +891,7 @@ void GetClientAreaBounds(CRect& rcClient);
 *rcClient*<br/>
 제한이 클라이언트 영역의 경계를 포함 하는 사각형에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 클라이언트 영역의 경계를 포함 하는 사각형입니다.
 
@@ -903,7 +903,7 @@ void GetClientAreaBounds(CRect& rcClient);
 static AFX_DOCK_TYPE GetDockingMode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 도킹 모드를 나타내는 열거자 값입니다. 다음 값 중 하나일 수 있습니다.
 
@@ -925,7 +925,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 CFrameWnd* GetDockSiteFrameWnd() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 창 프레임에 대 한 포인터입니다.
 
@@ -937,7 +937,7 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 DWORD GetEnabledAutoHideAlignment() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 CBRS_ALIGN_ 플래그의 비트 조합 이거나, 자동 숨기기 창이 사용 되지 않는 경우 0입니다. 자세한 내용은 [CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)를 참조 하세요.
 
@@ -953,7 +953,7 @@ CBRS_ALIGN_ 플래그의 비트 조합 이거나, 자동 숨기기 창이 사용
 const CObList& GetMiniFrames() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 관리자에 속하는 컨트롤 막대를 포함 하는 미니 프레임의 목록입니다.
 
@@ -965,7 +965,7 @@ const CObList& GetMiniFrames() const;
 CRect GetOuterEdgeBounds() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 프레임의 바깥쪽 가장자리를 포함 하는 사각형입니다.
 
@@ -1009,7 +1009,7 @@ void GetPaneList(
 CSmartDockingManager* GetSmartDockingManager();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스마트 도킹 관리자에 대 한 포인터입니다.
 
@@ -1021,7 +1021,7 @@ CSmartDockingManager* GetSmartDockingManager();
 CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스마트 도킹 관리자에 대 한 포인터입니다.
 
@@ -1033,7 +1033,7 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 static CSmartDockingInfo& GetSmartDockingParams();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 도킹 관리자의 스마트 도킹 매개 변수를 포함 하는 클래스입니다. 자세한 내용은 [CSmartDockingInfo 클래스](../../mfc/reference/csmartdockinginfo-class.md)를 참조 하세요.
 
@@ -1079,7 +1079,7 @@ BOOL InsertDockSite(
 *ppDockBar*<br/>
 제한이 도킹 창에 대 한 포인터에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 창이 성공적으로 만들어졌으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1105,7 +1105,7 @@ BOOL InsertPane(
 *bAfter*<br/>
 진행 대상 창의 위치 뒤에 창을 삽입 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 창이 컨트롤 막대 목록에 성공적으로 추가 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1121,7 +1121,7 @@ BOOL InsertPane(
 static BOOL IsDockSiteMenu();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 사이트 메뉴가 모든 도킹 창의 캡션에 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1137,7 +1137,7 @@ static BOOL IsDockSiteMenu();
 BOOL IsInAdjustLayout() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 모든 창의 레이아웃이 조정 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1149,7 +1149,7 @@ BOOL IsInAdjustLayout() const;
 BOOL IsOLEContainerMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 관리자가 OLE 컨테이너 모드에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1179,7 +1179,7 @@ BOOL IsPointNearDockSite(
 *bOuterEdge*<br/>
 제한이 지점이 dock 사이트의 외부 테두리 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지점이 dock 사이트 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1191,7 +1191,7 @@ BOOL IsPointNearDockSite(
 BOOL IsPrintPreviewValid() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인쇄 미리 보기 모드가 설정 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1213,7 +1213,7 @@ virtual BOOL LoadState(
 *uiID*<br/>
 진행 도킹 관리자의 id입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 도킹 관리자 상태가 성공적으로 로드 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1332,7 +1332,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 *pFrame*<br/>
 진행 미니 프레임 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1388,12 +1388,12 @@ virtual CBasePane* PaneFromPoint(
 진행 표시 되는 창만 확인 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
 
 *dwAlignment*<br/>
-제한이 지정 된 지점에 창이 있으면이 매개 변수에는 지정 된 지점에 가장 가까운 창의 측면이 포함 됩니다. 자세한 내용은 설명 섹션을 참조하세요.
+제한이 지정 된 지점에 창이 있으면이 매개 변수에는 지정 된 지점에 가장 가까운 창의 측면이 포함 됩니다. 자세한 내용은 주의 섹션을 참조하세요.
 
 *pBarToIgnore*<br/>
 진행 NULL이 아닌 경우이 메서드는이 매개 변수로 지정 된 창을 무시 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 지점을 포함 하는 [Cbasepane](../../mfc/reference/cbasepane-class.md)파생 개체 이거나, 창이 없는 경우 NULL입니다.
 
@@ -1427,7 +1427,7 @@ BOOL ProcessPaneContextMenuCommand(
 *pHandlerInfo*<br/>
 진행 정보 구조체에 대 한 포인터입니다. 이 매개 변수는 사용되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Pextra* 가 NULL이 아니고 *ncode* 가 CN_UPDATE_COMMAND_UI와 일치 하는 경우 TRUE이 고, 지정 된 *nID*가 있는 컨트롤 모음이 있으면 TRUE입니다.
 
@@ -1478,7 +1478,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 *pWnd*<br/>
 진행 제거할 프레임에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 프레임이 제거 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1530,7 +1530,7 @@ BOOL ReplacePane(
 *pNewBar*<br/>
 진행 원본 창을 대체 하는 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 성공적으로 교체 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1560,7 +1560,7 @@ virtual BOOL SaveState(
 *uiID*<br/>
 진행 도킹 관리자 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상태가 성공적으로 저장 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1590,7 +1590,7 @@ BOOL SendMessageToMiniFrames(
 *lParam*<br/>
 진행 추가 메시지 종속 정보입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 TRUE입니다.
 
@@ -1637,7 +1637,7 @@ static void SetDockingMode(
 ### <a name="parameters"></a>매개 변수
 
 *dockMode*<br/>
-새 도킹 모드를 지정 합니다. 자세한 내용은 설명 섹션을 참조하세요.
+새 도킹 모드를 지정 합니다. 자세한 내용은 주의 섹션을 참조하세요.
 
 *테마*<br/>
 스마트 도킹 표식에 사용할 테마를 지정 합니다. AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008 열거 된 값 중 하나일 수 있습니다.
@@ -1725,7 +1725,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 *bShow*<br/>
 진행 창을 표시 하려면 TRUE로 설정 합니다. 창을 숨기려면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 FALSE
 
@@ -1758,7 +1758,7 @@ void StopSDocking();
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008 열거 된 값 중 하나를 반환 합니다.
 

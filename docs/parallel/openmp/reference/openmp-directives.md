@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882915"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424154"
 ---
 # <a name="openmp-directives"></a>OpenMP 지시문
 
@@ -44,7 +44,7 @@ OpenMP API에서 사용되는 지시문에 대한 링크를 제공합니다.
 
 병렬 작업 공유:
 
-|지시문|설명|
+|지시문|Description|
 |---------|-----------|
 |[parallel](#parallel)|여러 스레드에서 동시에 실행 되는 코드 인 병렬 영역을 정의 합니다.|
 |[for](#for-openmp)|병렬 영역 내의 `for` 루프에서 수행 되는 작업을 스레드 간에 분할할 수 있습니다.|
@@ -53,10 +53,10 @@ OpenMP API에서 사용되는 지시문에 대한 링크를 제공합니다.
 
 Master 및 synchronization의 경우:
 
-|지시문|설명|
+|지시문|Description|
 |---------|-----------|
 |[master](#master)|마스터 스레드만 프로그램의 특정 섹션을 실행 하도록 지정 합니다.|
-|[critical](#critical)|코드를 한 번에 하나의 스레드에서만 실행 하도록 지정 합니다.|
+|[중요](#critical)|코드를 한 번에 하나의 스레드에서만 실행 하도록 지정 합니다.|
 |[barrier](#barrier)|팀의 모든 스레드를 동기화 합니다. 모든 스레드는 모든 스레드가 장벽을 실행할 때까지 장벽에서 일시 중지 됩니다.|
 |[atomic](#atomic)|원자 단위로 업데이트 되는 메모리 위치를 지정 합니다.|
 |[flush](#flush-openmp)|모든 스레드가 모든 공유 개체에 대해 동일한 메모리 뷰를 갖도록 지정 합니다.|
@@ -64,7 +64,7 @@ Master 및 synchronization의 경우:
 
 데이터 환경:
 
-|지시문|설명|
+|지시문|Description|
 |---------|-----------|
 |[threadprivate](#threadprivate)|변수가 스레드에 전용 임을 지정 합니다.|
 
@@ -716,7 +716,7 @@ write output
 
 프로세스 시작 시 정적으로 로드 되는 DLL의 `threadprivate`를 사용할 수 있지만 [/DELAYLOAD (지연 로드 가져오기)](../../../build/reference/delayload-delay-load-import.md)와 함께 로드 되는 dll과 같은 [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) 를 통해 로드 되는 dll의 `threadprivate`를 사용 하 여 `LoadLibrary`를 사용할 수 없습니다.
 
-*소멸 가능한* 형식의 `threadprivate` 변수는 해당 소멸자를 호출 하는 것이 보장 되지 않습니다. 예들 들어 다음과 같습니다.
+*소멸 가능한* 형식의 `threadprivate` 변수는 해당 소멸자를 호출 하는 것이 보장 되지 않습니다. 다음은 그 예입니다.
 
 ```cpp
 struct MyType

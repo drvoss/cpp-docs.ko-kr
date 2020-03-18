@@ -6,11 +6,11 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876032"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425612"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 열거형
 
@@ -25,7 +25,7 @@ enum float_denorm_style {
     denorm_present = 1    };
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 열거형은 다음을 반환합니다.
 
@@ -52,7 +52,7 @@ enum float_round_style {
     round_toward_neg_infinity = 3    };
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 열거형은 다음을 반환합니다.
 

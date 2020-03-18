@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856578"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424694"
 ---
 # <a name="ios_base-class"></a>ios_base 클래스
 
@@ -135,7 +135,7 @@ Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 �
 
 Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)형식의 개체 및 콜백 스택도 저장 합니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -143,7 +143,7 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 |-|-|
 |[ios_base](#ios_base)|`ios_base` 개체를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -176,7 +176,7 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 |[end](#seekdir)|시퀀스의 끝을 기준으로 한 검색을 지정합니다.|
 |[eofbit](#iostate)|스트림에서 추출할 때 파일 끝을 기록합니다.|
 |[failbit](#iostate)|스트림에서 유효한 필드를 추출하지 못하는 경우를 기록합니다.|
-|[fixed](#fmtflags)|고정 소수점 형식(지수 필드 없음)의 부동 소수점 값을 삽입하도록 지정합니다.|
+|[고정](#fmtflags)|고정 소수점 형식(지수 필드 없음)의 부동 소수점 값을 삽입하도록 지정합니다.|
 |[floatfield](#fmtflags)|`fixed` &#124; `scientific`으로 정의된 비트 마스크입니다.|
 |[goodbit](#iostate)|모든 상태 비트를 지웁니다.|
 |[hex](#fmtflags)|16진수 형식의 정수 값을 삽입 또는 추출하도록 지정합니다.|
@@ -195,7 +195,7 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 |[unitbuf](#fmtflags)|각 삽입 후 출력이 플러시되도록 합니다.|
 |[uppercase](#fmtflags)|특정 삽입의 소문자에 해당하는 대문자를 삽입하도록 지정합니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -205,7 +205,7 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 |[imbue](#imbue)|로캘을 변경합니다.|
 |[Init](#init)|생성 될 때 표준 `iostream` 개체를 만듭니다.|
 |[iword](#iword)|`iword`로 저장할 수 있는 값을 할당합니다.|
-|[precision](#precision)|부동 소수점 숫자에 표시할 자릿수를 지정합니다.|
+|[전체 자릿수](#precision)|부동 소수점 숫자에 표시할 자릿수를 지정합니다.|
 |[pword](#pword)|`pword`로 저장할 수 있는 값을 할당합니다.|
 |[register_callback](#register_callback)|콜백 함수를 지정합니다.|
 |[setf](#setf)|지정된 플래그를 설정합니다.|
@@ -347,7 +347,7 @@ fmtflags flags(fmtflags fmtfl);
 *fmtfl*\
 새 `fmtflags` 설정입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 또는 현재 `fmtflags` 설정입니다.
 
@@ -463,7 +463,7 @@ public:
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 저장된 로캘 개체입니다.
 
@@ -498,7 +498,7 @@ locale imbue(const locale& _Loc);
 *_Loc*\
 새 로캘 설정입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 로캘입니다.
 
@@ -650,7 +650,7 @@ ios_base& operator=(const ios_base& right);
 *오른쪽*\
 `ios_base` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당 중인 개체입니다.
 
@@ -674,7 +674,7 @@ streamsize precision(streamsize _Prec);
 *_Prec*\
 표시할 유효 자릿수 또는 고정 표기법에서 소수점 뒤의 자릿수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 멤버 함수는 저장된 [표시 자릿수](../standard-library/ios-base-class.md)를 반환합니다. 두 번째 멤버 함수는 *_Prec* 를 표시 전체 자릿수에 저장 하 고 이전에 저장 된 값을 반환 합니다.
 
@@ -910,7 +910,7 @@ fmtflags setf(
 *_Unset*\
 해제할 플래그입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 형식 플래그입니다.
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 *_Sync*\
 모든 스트림이 `stdio`와 동기화 되어 있는지 여부를 나타냅니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 함수에 대 한 이전 설정입니다.
 
@@ -1004,7 +1004,7 @@ streamsize width(
 *_Wide*\
 출력 스트림의 원하는 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 너비 설정입니다.
 
@@ -1041,7 +1041,7 @@ int main( ) {
 static int xalloc( );
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 정적 멤버 함수는 각 호출에서 증가 하는 저장 된 정적 값을 반환 합니다.
 

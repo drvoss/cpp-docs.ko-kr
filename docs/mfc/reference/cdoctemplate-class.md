@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855520"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426074"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 클래스
 
@@ -63,17 +63,17 @@ ms.locfileid: "78855520"
 class CDocTemplate : public CCmdTarget
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDocTemplate:: CDocTemplate](#cdoctemplate)|`CDocTemplate` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDocTemplate:: AddDocument](#adddocument)|템플릿에 문서를 추가 합니다.|
 |[CDocTemplate:: CloseAllDocuments](#closealldocuments)|이 템플릿과 연결 된 모든 문서를 닫습니다.|
@@ -165,7 +165,7 @@ CDocTemplate (
 *nIDResource*<br/>
 문서 유형과 함께 사용 되는 리소스의 ID를 지정 합니다. 여기에는 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스가 포함 될 수 있습니다.
 
-문자열 리소스는 ' \n ' 문자로 구분 된 최대 7 개의 부분 문자열로 구성 됩니다. 부분 문자열이 포함 되지 않은 경우 ' \n ' 문자는 자리 표시자로 필요 하지만 후행 ' \n ' 문자는 필요 하지 않습니다. 이러한 부분 문자열은 문서 유형을 설명 합니다. 부분 문자열에 대 한 자세한 내용은 [Getdocstring](#getdocstring)을 참조 하십시오. 이 문자열 리소스는 응용 프로그램의 리소스 파일에 있습니다. 예들 들어 다음과 같습니다.
+문자열 리소스는 ' \n ' 문자로 구분 된 최대 7 개의 부분 문자열로 구성 됩니다. 부분 문자열이 포함 되지 않은 경우 ' \n ' 문자는 자리 표시자로 필요 하지만 후행 ' \n ' 문자는 필요 하지 않습니다. 이러한 부분 문자열은 문서 유형을 설명 합니다. 부분 문자열에 대 한 자세한 내용은 [Getdocstring](#getdocstring)을 참조 하십시오. 이 문자열 리소스는 응용 프로그램의 리소스 파일에 있습니다. 다음은 그 예입니다.
 
 ```RC
 // MYCALC.RC
@@ -217,7 +217,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 virtual CDocument* CreateNewDocument();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 문서에 대 한 포인터 이거나, 오류가 발생 하는 경우 NULL입니다.
 
@@ -239,7 +239,7 @@ virtual CFrameWnd* CreateNewFrame(
 *pOther*<br/>
 새 프레임 창이 기반으로 하는 프레임 창입니다. NULL일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 만든 프레임 창에 대 한 포인터 이거나, 오류가 발생 하는 경우 NULL입니다.
 
@@ -271,7 +271,7 @@ CFrameWnd* CreateOleFrame(
 *bCreateView*<br/>
 뷰가 프레임과 함께 생성 되는지 여부를 결정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 프레임 창에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -311,7 +311,7 @@ virtual BOOL GetDocString(
 
 - 등록 데이터베이스에 저장 될 문서 형식의 `CDocTemplate::regFileTypeName` 이름입니다. 이 문자열은 등록 데이터베이스에 액세스 하는 응용 프로그램의 대화 상자 (예: "Microsoft Excel 워크시트")에 표시 될 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 부분 문자열이 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -329,7 +329,7 @@ virtual BOOL GetDocString(
 virtual POSITION GetFirstDocPosition() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 문서 템플릿과 관련 된 문서 목록을 반복 하는 데 사용할 수 있는 위치 값입니다. 목록이 비어 있으면 NULL입니다.
 
@@ -347,7 +347,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 템플릿과 연결 된 문서 목록의 다음 문서에 대 한 포인터입니다.
 
@@ -422,7 +422,7 @@ virtual Confidence MatchDocType(
 *rpDocMatch*<br/>
 *LpszPathName* 로 지정 된 파일이 이미 열려 있는 경우 일치 하는 문서가 할당 된 문서에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 **신뢰도** 열거형의 값으로, 다음과 같이 정의 됩니다.
 
@@ -470,7 +470,7 @@ virtual CDocument* OpenDocumentFile(
 *bAddToMRU*<br/>
 진행 TRUE는 문서가 가장 최근 파일 중 하나 임을 나타냅니다. FALSE는 문서가 가장 최근 파일 중 하나가 아님을 나타냅니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *LpszPathName*로 이름이 지정 된 파일의 문서에 대 한 포인터입니다. 실패 한 경우 NULL입니다.
 
@@ -503,7 +503,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 virtual BOOL SaveAllModified();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값을 반환 합니다. 그렇지 않으면 0입니다.
 
@@ -593,7 +593,7 @@ CFrameWnd* CreatePreviewFrame(
 *pDoc*<br/>
 콘텐츠를 미리 볼 수 있는 문서 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CFrameWnd` 개체에 대 한 유효한 포인터 이거나, 만들기가 실패 한 경우 NULL입니다.
 

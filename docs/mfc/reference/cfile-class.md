@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855389"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424466"
 ---
 # <a name="cfile-class"></a>CFile 클래스
 
@@ -77,17 +77,17 @@ MFC 파일 클래스의 기본 클래스입니다.
 class CFile : public CObject
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFile:: CFile](#cfile)|경로 또는 파일 핸들에서 `CFile` 개체를 생성 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFile:: Abort](#abort)|모든 경고 및 오류를 무시 하는 파일을 닫습니다.|
 |[CFile:: Close](#close)|파일을 닫고 개체를 삭제 합니다.|
@@ -115,20 +115,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFile:: operator 핸들](#operator_handle)|`CFile` 개체에 대 한 핸들입니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFile:: hFileNull](#hfilenull)|`CFile` 개체에 유효한 핸들이 있는지 여부를 확인 합니다.|
 |[CFile:: m_hFile](#m_hfile)|일반적으로 운영 체제 파일 핸들을 포함 합니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CFile:: m_pTM](#m_ptm)|`CAtlTransactionManager` 개체에 대한 포인터입니다.|
 
@@ -213,7 +213,7 @@ CAtlTransactionManager 개체에 대한 포인터
 
 다음 파일 액세스 모드 옵션 중 하나만 선택해야 합니다. 기본 파일 액세스 모드는 `CFile::modeRead`(읽기 전용)입니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::modeRead`|읽기 권한만 요청합니다.|
 |`CFile::modeWrite`|쓰기 권한만 요청합니다.|
@@ -221,7 +221,7 @@ CAtlTransactionManager 개체에 대한 포인터
 
 다음 문자 모드 옵션 중 하나를 선택합니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::typeBinary`|이진 모드를 설정합니다(파생 클래스에만 사용됨).|
 |`CFile::typeText`|캐리지 리턴-줄 바꿈 쌍에 대 한 특수 처리를 사용 하 여 텍스트 모드를 설정 합니다 (파생 클래스에만 사용 됨).|
@@ -229,7 +229,7 @@ CAtlTransactionManager 개체에 대한 포인터
 
 다음 파일 공유 모드 옵션 중 하나만 선택해야 합니다. 기본 파일 공유 모드는 `CFile::shareExclusive`(단독)입니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|공유 제한이 없습니다.|
 |`CFile::shareDenyRead`|다른 모든 사용자에 대해 읽기 권한을 거부합니다.|
@@ -238,14 +238,14 @@ CAtlTransactionManager 개체에 대한 포인터
 
 다음 파일 만들기 모드 옵션 중 첫 번째 옵션 또는 두 옵션을 모두 선택합니다. 기본 만들기 모드는 `CFile::modeNoTruncate`(기존 파일 열기)입니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::modeCreate`|파일이 없으면 새 파일을 만듭니다. 파일이 이미 있으면 덮어쓴 후 처음에 길이가 0으로 설정 됩니다.|
 |`CFile::modeNoTruncate`|파일이 없으면 새 파일을 만듭니다. 그렇지 않은 경우 파일이 이미 있으면 `CFile` 개체에 연결 됩니다.|
 
 설명에 따라 다음 파일 캐싱 옵션을 선택합니다. 기본적으로 시스템은 옵션으로 사용할 수 없는 범용 캐싱 구성표를 사용 합니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|시스템에서 파일에 대해 중간 캐시를 사용 하지 않습니다. 이 옵션은 다음 2개 옵션을 취소합니다.|
 |`CFile::osRandomAccess`|임의 액세스를 위해 파일 캐시가 최적화됩니다. 이 옵션과 순차 검색 옵션을 모두 사용 하지 마십시오.|
@@ -254,7 +254,7 @@ CAtlTransactionManager 개체에 대한 포인터
 
 파일 핸들이 상속되지 않도록 하려면 다음 보안 옵션을 선택합니다. 기본적으로 새 자식 프로세스는 파일 핸들을 사용할 수 있습니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|자식 프로세스가 파일 핸들을 사용하지 못하도록 차단합니다.|
 
@@ -298,7 +298,7 @@ virtual void Close();
 virtual CFile* Duplicate() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 중복 `CFile` 개체에 대 한 포인터입니다.
 
@@ -330,9 +330,9 @@ virtual void Flush();
 virtual CString GetFileName() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-파일의 이름입니다.
+파일 이름입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -354,7 +354,7 @@ virtual CString GetFileName() const;
 virtual CString GetFilePath() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 파일의 전체 경로입니다.
 
@@ -376,7 +376,7 @@ virtual CString GetFilePath() const;
 virtual CString GetFileTitle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 내부 파일의 제목입니다.
 
@@ -398,7 +398,7 @@ virtual CString GetFileTitle() const;
 virtual ULONGLONG GetLength() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일의 길이입니다.
 
@@ -414,7 +414,7 @@ virtual ULONGLONG GetLength() const;
 virtual ULONGLONG GetPosition() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일 포인터입니다.
 
@@ -458,7 +458,7 @@ static BOOL PASCAL GetStatus(
 *pTM*<br/>
 CAtlTransactionManager 개체에 대한 포인터
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 파일에 대 한 상태 정보를 성공적으로 가져온 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -557,7 +557,7 @@ CAtlTransactionManager* m_pTM;
 
 ##  <a name="open"></a>CFile:: Open
 
-오버로드됨. `Open`는 기본 `CFile` 생성자와 함께 사용 하도록 설계 되었습니다.
+오버로드되었습니다. `Open`는 기본 `CFile` 생성자와 함께 사용 하도록 설계 되었습니다.
 
 ```
 virtual BOOL Open(
@@ -586,7 +586,7 @@ virtual BOOL Open(
 *pTM*<br/>
 CAtlTransactionManager 개체에 대한 포인터
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 열기에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다. *PError* 매개 변수는 0이 반환 되는 경우에만 의미가 있습니다.
 
@@ -600,10 +600,10 @@ CAtlTransactionManager 개체에 대한 포인터
 
 |`pError`|오류가 발생 했습니다.|반환 값|CFileException 콘텐츠|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|아니요|TRUE|N/A|
-|`CFileException`에 대 한 ptr|아니요|TRUE|변경 안 됨|
-|NULL|예|FALSE|N/A|
-|`CFileException`에 대 한 ptr|예|FALSE|오류를 설명 하기 위해 초기화 됨|
+|NULL|예|TRUE|해당 없음|
+|`CFileException`에 대 한 ptr|예|TRUE|변경 안 됨|
+|NULL|yes|FALSE|해당 없음|
+|`CFileException`에 대 한 ptr|yes|FALSE|오류를 설명 하기 위해 초기화 됨|
 
 ### <a name="example"></a>예제
 
@@ -637,7 +637,7 @@ virtual UINT Read(
 *nCount*<br/>
 파일에서 읽을 최대 바이트 수입니다. 텍스트 모드 파일의 경우 캐리지 리턴-줄 바꿈 쌍은 단일 문자로 계산 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 버퍼로 전송된 바이트 수입니다. 모든 `CFile` 클래스에 대해 파일의 끝에 도달 하면 반환 값이 *Ncount* 보다 적을 수 있습니다.
 
@@ -723,7 +723,7 @@ UINT nFrom);
 *nFrom*<br/>
 검색할 위치입니다. 가능한 값은 설명 섹션을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공한 경우 파일 포인터의 위치입니다. 그렇지 않으면 반환 값이 정의 되지 않고 `CFileException` 예외에 대 한 포인터가 throw 됩니다.
 
@@ -731,7 +731,7 @@ UINT nFrom);
 
 다음 표에서는 *Nfrom* 매개 변수의 가능한 값을 보여 줍니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`CFile::begin`|파일의 시작 부분에서 검색 합니다.|
 |`CFile::current`|파일 포인터의 현재 위치에서 검색 합니다.|
@@ -757,7 +757,7 @@ void SeekToBegin();
 
 ### <a name="remarks"></a>설명
 
-`SeekToBegin()`는 `Seek( 0L, CFile::begin )`와 같습니다.
+`SeekToBegin()`은 `Seek( 0L, CFile::begin )`와 동등합니다.
 
 ### <a name="example"></a>예제
 
@@ -771,13 +771,13 @@ void SeekToBegin();
 ULONGLONG SeekToEnd();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일의 길이(바이트)입니다.
 
 ### <a name="remarks"></a>설명
 
-`SeekToEnd()`는 `CFile::Seek( 0L, CFile::end )`와 같습니다.
+`SeekToEnd()`은 `CFile::Seek( 0L, CFile::end )`와 동등합니다.
 
 ### <a name="example"></a>예제
 
@@ -843,7 +843,7 @@ static void PASCAL SetStatus(
 *lpszFileName*<br/>
 원하는 파일의 경로인 문자열입니다. 경로는 상대적 이거나 절대적일 수 있으며 네트워크 이름을 포함할 수 있습니다.
 
-*상태*<br/>
+*status*<br/>
 새 상태 정보를 포함 하는 버퍼입니다. `GetStatus` 멤버 함수를 호출 하 여 `CFileStatus` 구조체를 현재 값으로 미리 채운 다음 필요에 따라 변경 합니다. 값이 0 이면 해당 상태 항목이 업데이트 되지 않습니다. `CFileStatus` 구조체에 대 한 설명은 [GetStatus](#getstatus) member 함수를 참조 하세요.
 
 *pTM*<br/>

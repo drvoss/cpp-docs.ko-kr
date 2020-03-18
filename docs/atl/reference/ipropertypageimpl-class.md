@@ -32,11 +32,11 @@ helpviewer_keywords:
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
 ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864985"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423071"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 클래스
 
@@ -57,17 +57,17 @@ class IPropertyPageImpl
 *T*<br/>
 `IPropertyPageImpl`에서 파생 된 클래스입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|생성자입니다.|
 
-### <a name="public-methods"></a>공용 방법
+### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[IPropertyPageImpl:: Activate](#activate)|속성 페이지에 대 한 대화 상자 창을 만듭니다.|
 |[IPropertyPageImpl:: Apply](#apply)|`SetObjects`를 통해 지정 된 기본 개체에 현재 속성 페이지 값을 적용 합니다. ATL 구현은 S_OK 반환 합니다.|
@@ -84,7 +84,7 @@ class IPropertyPageImpl
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[IPropertyPageImpl:: m_bDirty](#m_bdirty)|속성 페이지의 상태가 변경 되었는지 여부를 지정 합니다.|
 |[IPropertyPageImpl:: m_dwDocString](#m_dwdocstring)|속성 페이지를 설명 하는 텍스트 문자열과 연결 된 리소스 식별자를 저장 합니다.|
@@ -96,7 +96,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl:: m_ppUnk](#m_ppunk)|속성 페이지와 연결 된 개체에 대 한 `IUnknown` 포인터의 배열을 가리킵니다.|
 |[IPropertyPageImpl:: m_size](#m_size)|속성 페이지 대화 상자의 높이와 너비를 픽셀 단위로 저장 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) 인터페이스를 사용 하면 개체는 속성 시트 내의 특정 속성 페이지를 관리할 수 있습니다. 클래스 `IPropertyPageImpl`는이 인터페이스의 기본 구현을 제공 하 고 디버그 빌드에서 덤프 장치로 정보를 전송 하 여 `IUnknown`을 구현 합니다.
 
@@ -123,7 +123,7 @@ HRESULT Activate(
     BOOL bModal);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 기본적으로이 대화 상자는 *Bmodal* 매개 변수의 값에 관계 없이 항상 모덜리스입니다.
 
@@ -137,11 +137,11 @@ Windows SDK에서 [IPropertyPage:: Activate](/windows/win32/api/ocidl/nf-ocidl-i
 HRESULT Apply();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 S_OK를 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK [IPropertyPage:: Apply](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-apply) 를 참조 하세요.
 
@@ -153,7 +153,7 @@ Windows SDK [IPropertyPage:: Apply](/windows/win32/api/ocidl/nf-ocidl-ipropertyp
 HRESULT Deactivate();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [IPropertyPage::D eactivate](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-deactivate) in Windows SDK를 참조 하세요.
 
@@ -165,7 +165,7 @@ HRESULT Deactivate();
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `GetPageInfo` [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile)및 [m_dwTitle](#m_dwtitle)연결 된 문자열 리소스를 로드 합니다.
 
@@ -179,7 +179,7 @@ Windows SDK [IPropertyPage:: GetPageInfo](/windows/win32/api/ocidl/nf-ocidl-ipro
 HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK [IPropertyPage:: Help](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-help) 를 참조 하세요.
 
@@ -191,7 +191,7 @@ Windows SDK [IPropertyPage:: Help](/windows/win32/api/ocidl/nf-ocidl-ipropertypa
 IPropertyPageImpl();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 데이터 멤버를 초기화 합니다.
 
@@ -203,7 +203,7 @@ IPropertyPageImpl();
 HRESULT IsPageDirty(void);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 페이지가 활성화 된 후 변경 된 경우 `IsPageDirty` S_OK를 반환 합니다.
 
@@ -287,7 +287,7 @@ SIZE m_size;
 HRESULT Move(LPCRECT pRect);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK [IPropertyPage:: Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) 를 참조 하세요.
 
@@ -304,7 +304,7 @@ void SetDirty(BOOL bDirty);
 *bDirty*<br/>
 진행 TRUE 이면 속성 페이지의 상태가 변경 됨으로 표시 됩니다. 그렇지 않으면 변경 되지 않은 것으로 표시 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 필요한 경우 `SetDirty`는 속성 페이지가 변경 되었음을 프레임에 알립니다.
 
@@ -316,7 +316,7 @@ void SetDirty(BOOL bDirty);
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK [IPropertyPage:: SetObjects](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setobjects) 를 참조 하세요.
 
@@ -328,7 +328,7 @@ Windows SDK [IPropertyPage:: SetObjects](/windows/win32/api/ocidl/nf-ocidl-iprop
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK [IPropertyPage:: SetPageSite](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setpagesite) 를 참조 하세요.
 
@@ -340,7 +340,7 @@ Windows SDK [IPropertyPage:: SetPageSite](/windows/win32/api/ocidl/nf-ocidl-ipro
 HRESULT Show(UINT nCmdShow);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK에서 [IPropertyPage:: Show](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-show) 를 참조 하세요.
 
@@ -352,7 +352,7 @@ Windows SDK에서 [IPropertyPage:: Show](/windows/win32/api/ocidl/nf-ocidl-iprop
 HRESULT TranslateAccelerator(MSG* pMsg);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows SDK에서 [IPropertyPage:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) 를 참조 하세요.
 

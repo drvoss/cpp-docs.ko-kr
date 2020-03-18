@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856569"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424028"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf 클래스
 
@@ -457,7 +457,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>설명
 
-*\_Meta* 이 **traits_type:: eof**와 비교 하지 않는 경우 보호 된 가상 멤버 함수는 시도한 ( *\_Meta*)[to_char_type](../standard-library/char-traits-struct.md#to_char_type)traits_type 요소를 출력 스트림에 삽입 하는 작업을 수행 합니다. 함수는 여러 가지 방식으로 이 삽입을 수행할 수 있습니다.
+*\_Meta* 이 **traits_type:: eof**와 비교 하지 않는 경우 보호 된 가상 멤버 함수는 시도한 ( *\_Meta*) **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)traits_type 요소를 출력 스트림에 삽입 하는 작업을 수행 합니다. 함수는 여러 가지 방식으로 이 삽입을 수행할 수 있습니다.
 
 - `write position`이 사용 가능한 경우 요소를 쓰기 위치에 저장하고 출력 버퍼에 대해 다음 포인터를 증가시킬 수 있습니다.
 
@@ -782,7 +782,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 버퍼에 대한 포인터입니다.
 
 *개수*\
-버퍼의 크기입니다.
+버퍼 크기입니다.
 
 ### <a name="return-value"></a>Return Value
 

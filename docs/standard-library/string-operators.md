@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890904"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425054"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
 
@@ -109,7 +109,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 *오른쪽*\
 연결할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 문자열의 연결인 문자열입니다.
 
@@ -198,7 +198,7 @@ bool operator!=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체와 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -289,7 +289,7 @@ bool operator==(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체와 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -380,7 +380,7 @@ bool operator<(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 작으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -476,7 +476,7 @@ bool operator<=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -569,7 +569,7 @@ basic_ostream<CharType, Traits>& operator<<(
 *str*\
 출력 스트림에 입력할 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 문자열의 값을 출력 스트림에 *_Ostr*씁니다.
 
@@ -606,7 +606,7 @@ bool operator>(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -709,7 +709,7 @@ bool operator>=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -802,7 +802,7 @@ basic_istream<CharType, Traits>& operator>>(
 *오른쪽*\
 입력 스트림에서 추출되는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *_Istr* 에서 지정 된 문자열의 값을 읽고 *오른쪽*으로 반환 합니다.
 

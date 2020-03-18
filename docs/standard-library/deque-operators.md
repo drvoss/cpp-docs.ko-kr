@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883813"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424832"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 연산자
 
@@ -41,7 +41,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 deque 개체가 같지 않으면 **true**이고, deque 개체가 같으면 **false**입니다.
 
@@ -92,7 +92,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 deque가 연산자 우변의 deque보다 작으며 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -147,7 +147,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 deque가 연산자 우변의 deque보다 작거나 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -202,7 +202,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 deque가 연산자 우변의 deque와 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -260,7 +260,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 deque가 연산자 우변의 deque보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -316,7 +316,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 *오른쪽*\
 `deque` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 deque가 연산자 우변의 deque보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 

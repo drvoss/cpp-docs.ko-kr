@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953511"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438096"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -54,13 +53,13 @@ ms.locfileid: "70953511"
 int _kbhit( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_kbhit** 는 키를 누른 경우 0이 아닌 값을 반환 합니다. 그렇지 않으면 0을 반환합니다.
+키를 누른 경우 **_kbhit** 은 0이 아닌 값을 반환 합니다. 그렇지 않으면 0을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**_Kbhit** 함수는 콘솔에서 최근의 키 입력을 확인 합니다. 이 함수가 0이 아닌 값을 반환하면 키 입력이 버퍼에서 대기 중인 것입니다. 그러면 프로그램에서 **_getch** 또는 **_getche** 를 호출 하 여 키 입력을 가져올 수 있습니다.
+**_Kbhit** 함수는 콘솔에서 최근 키 입력을 확인 합니다. 이 함수가 0이 아닌 값을 반환하면 키 입력이 버퍼에서 대기 중인 것입니다. 그러면 프로그램이 **_getch** 또는 **_getche** 를 호출 하 여 키 입력을 가져올 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -106,6 +105,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>

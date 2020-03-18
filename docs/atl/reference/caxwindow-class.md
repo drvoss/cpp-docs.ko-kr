@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864749"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423389"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 클래스
 
@@ -36,7 +36,7 @@ ms.locfileid: "78864749"
 class CAxWindow : public CWindow
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="methods"></a>메서드
 
@@ -90,7 +90,7 @@ HRESULT AttachControl(
 *ppUnkContainer*<br/>
 제한이 호스트의 `IUnknown`에 대 한 포인터입니다 (`AxWin` 개체).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -154,7 +154,7 @@ HRESULT CreateControl(
 *dwResID*<br/>
 HTML 리소스의 리소스 ID입니다. 지정 된 리소스를 사용 하 여 WebBrowser 컨트롤이 만들어지고 로드 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -230,7 +230,7 @@ HRESULT CreateControlEx(
 *dwResID*<br/>
 진행 HTML 리소스의 리소스 ID입니다. 지정 된 리소스를 사용 하 여 WebBrowser 컨트롤이 만들어지고 로드 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -252,7 +252,7 @@ HRESULT CreateControlEx(
 static LPCTSTR GetWndClassName();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용이 허가 되지 않은 ActiveX 컨트롤을 호스팅할 수 있는 창 클래스의 이름을 포함 하는 문자열에 대 한 포인터입니다.
 
@@ -269,7 +269,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 *hWnd*<br/>
 기존 창에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 `CAxWindow` 개체에 대 한 참조를 반환 합니다.
 
@@ -294,7 +294,7 @@ HRESULT QueryControl(Q** ppUnk);
 *Q*<br/>
 진행 쿼리 되는 인터페이스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -319,7 +319,7 @@ HRESULT QueryHost(Q** ppUnk);
 *Q*<br/>
 진행 쿼리 되는 인터페이스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -340,7 +340,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 *pDisp*<br/>
 진행 `IDispatch` 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
@@ -357,7 +357,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 *pUIHandler*<br/>
 진행 `IDocHostUIHandlerDispatch` 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 

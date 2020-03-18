@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866442"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426824"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 클래스
 
@@ -61,17 +61,17 @@ ms.locfileid: "78866442"
 class CToolBar : public CControlBar
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CToolBar:: CToolBar](#ctoolbar)|`CToolBar` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CToolBar:: CommandToIndex](#commandtoindex)|지정 된 명령 ID를 가진 단추의 인덱스를 반환 합니다.|
 |[CToolBar:: Create](#create)|Windows 도구 모음을 만들어 `CToolBar` 개체에 연결 합니다.|
@@ -172,7 +172,7 @@ int CommandToIndex(UINT nIDFind) const;
 *nIDFind*<br/>
 도구 모음 단추의 명령 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추의 인덱스 이거나, 지정 된 명령 ID를 가진 단추가 없는 경우-1입니다.
 
@@ -216,7 +216,7 @@ virtual BOOL Create(
 *nID*<br/>
 도구 모음의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -262,7 +262,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 도구 모음의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -333,7 +333,7 @@ UINT GetButtonStyle(int nIndex) const;
 *nIndex*<br/>
 검색할 도구 모음 단추 또는 구분 기호 스타일의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Nindex*로 지정 된 단추나 구분 기호의 스타일입니다.
 
@@ -361,7 +361,7 @@ void GetButtonText(
 *rString*<br/>
 검색할 텍스트를 포함 하는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 단추 텍스트를 포함 하는 `CString` 개체입니다.
 
@@ -382,7 +382,7 @@ UINT GetItemID(int nIndex) const;
 *nIndex*<br/>
 ID를 검색할 항목의 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *Nindex*로 지정 된 단추나 구분 기호의 명령 ID입니다.
 
@@ -426,7 +426,7 @@ virtual void GetItemRect(
 CToolBarCtrl& GetToolBarCtrl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CToolBarCtrl` 개체에 대한 참조입니다.
 
@@ -457,7 +457,7 @@ BOOL LoadBitmap(UINT nIDResource);
 *nIDResource*<br/>
 로드할 비트맵의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -485,7 +485,7 @@ BOOL LoadToolBar(UINT nIDResource);
 *nIDResource*<br/>
 로드할 도구 모음의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -510,7 +510,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 *hbmImageWell*<br/>
 도구 모음과 연결 된 비트맵 이미지의 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -587,7 +587,7 @@ BOOL SetButtons(
 *nIDCount*<br/>
 *Lpidarray*가 가리키는 배열의 요소 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -660,7 +660,7 @@ BOOL SetButtonText(
 *lpszText*<br/>
 단추에 설정할 텍스트를 가리킵니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 

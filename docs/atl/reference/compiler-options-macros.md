@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857173"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423209"
 ---
 # <a name="compiler-options-macros"></a>컴파일러 옵션 매크로
 
@@ -51,7 +51,7 @@ ms.locfileid: "78857173"
 
 ### <a name="remarks"></a>설명
 
-Visual .Net C++ 2002 이전에는 ATL에서 많은 경고를 사용 하지 않도록 설정 하 고, 사용자 코드에 표시 되지 않도록 사용 하지 않도록 설정 했습니다. 구체적으로는 다음과 같습니다.
+Visual .Net C++ 2002 이전에는 ATL에서 많은 경고를 사용 하지 않도록 설정 하 고, 사용자 코드에 표시 되지 않도록 사용 하지 않도록 설정 했습니다. 특히 다음에 대한 내용을 설명합니다.
 
 - C4127 조건식이 상수입니다.
 

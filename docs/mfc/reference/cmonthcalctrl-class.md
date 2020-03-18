@@ -91,11 +91,11 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: 963aecfed4f6eb67a0ab227df06fce98c0778f7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866392"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425726"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 클래스
 
@@ -107,17 +107,17 @@ ms.locfileid: "78866392"
 class CMonthCalCtrl : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMonthCalCtrl:: CMonthCalCtrl](#cmonthcalctrl)|`CMonthCalCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMonthCalCtrl:: Create](#create)|Month calendar 컨트롤을 만들어 `CMonthCalCtrl` 개체에 연결 합니다.|
 |[CMonthCalCtrl:: GetCalendarBorder](#getcalendarborder)|현재 month calendar 컨트롤의 테두리 너비를 검색 합니다.|
@@ -238,7 +238,7 @@ Month calendar 컨트롤의 부모 창인 [CWnd](../../mfc/reference/cwnd-class.
 *nID*<br/>
 Monthcalendar 컨트롤의 컨트롤 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -268,7 +268,7 @@ Monthcalendar 컨트롤의 컨트롤 ID를 지정 합니다.
 int GetCalendarBorder() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 테두리의 너비 (픽셀)입니다.
 
@@ -284,7 +284,7 @@ int GetCalendarBorder() const;
 int GetCalendarCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Month calendar 컨트롤에 현재 표시 된 달력의 수입니다. 허용 되는 최대 달력 수는 12입니다.
 
@@ -302,11 +302,11 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pmcGridInfo*|제한이 현재 month calendar 컨트롤에 대 한 정보를 수신 하는 [Mcgridinfo](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) 구조체에 대 한 포인터입니다. 호출자는이 구조체를 할당 하 고 초기화 해야 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -334,7 +334,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 CALID GetCalID() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [달력 식별자](/windows/win32/Intl/calendar-identifiers) 상수 중 하나입니다.
 
@@ -357,7 +357,7 @@ COLORREF GetColor(int nRegion) const;
 *nRegion*<br/>
 색을 검색할 month calendar 컨트롤의 지역입니다. 값 목록은 [Setcolor](#setcolor)의 *nregion* 매개 변수를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 month calendar 컨트롤의 부분과 관련 된 색을 지정 하는 [Colorref](/windows/win32/gdi/colorref) 값입니다. 그렇지 않으면이 멤버 함수는-1을 반환 합니다.
 
@@ -369,7 +369,7 @@ COLORREF GetColor(int nRegion) const;
 DWORD GetCurrentView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 뷰로, 다음 값 중 하나로 표시 됩니다.
 
@@ -414,7 +414,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 *pDateTime*<br/>
 현재 선택 된 날짜 정보를 수신 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 0이 아닌 값 otherwize 0.
 
@@ -440,7 +440,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 *Plocal*<br/>
 부울 값에 대 한 포인터입니다. 값이 0이 아닌 경우 컨트롤의 설정이 제어판의 설정과 일치 하지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 주의 첫째 요일을 나타내는 정수 값입니다. 이러한 정수가 나타내는 내용에 대 한 자세한 내용은 **설명 부분** 을 참조 하십시오.
 
@@ -450,8 +450,8 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 |값|요일|
 |-----------|---------------------|
-|0|Monday|
-|[1,1]|화요일|
+|0|월요일|
+|1|화요일|
 |2|수요일|
 |3|목요일|
 |4|금요일|
@@ -470,7 +470,7 @@ Month calendar 컨트롤에서 선택할 수 있는 현재 최대 일 수를 검
 int GetMaxSelCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤에 대해 선택할 수 있는 총 일 수를 나타내는 정수 값입니다.
 
@@ -490,7 +490,7 @@ int GetMaxSelCount() const;
 DWORD GetMaxTodayWidth() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 "오늘" 문자열의 너비 (픽셀)입니다.
 
@@ -525,7 +525,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 *pRect*<br/>
 경계 사각형 정보를 수신 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면이 멤버 함수는 0이 아닌 값을 반환 하 고 `lpRect`는 적용 가능한 경계 정보를 받습니다. 실패 하면 멤버 함수는 0을 반환 합니다.
 
@@ -541,7 +541,7 @@ Monthcalendar 컨트롤의 스크롤 주기를 검색 합니다.
 int GetMonthDelta() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Month calendar 컨트롤의 스크롤 빈도입니다. 스크롤 비율은 사용자가 스크롤 단추를 한 번 클릭 하면 컨트롤이 표시를 이동 하는 월 수입니다.
 
@@ -592,7 +592,7 @@ int GetMonthRange(
 |GMR_DAYSTATE|부분적 으로만 표시 되는 표시 된 범위의 선행 및 후행 월을 포함 합니다.|
 |GMR_VISIBLE|완전히 표시 되는 월만 포함 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 및 두 번째 버전에서 *refMinRange* 및 *refMaxRange* 로 표시 되는 두 제한에 따라 범위를 지정 하는 정수 이며 세 번째 버전의 *pMinRange* 및 *pMaxRange* 입니다.
 
@@ -630,7 +630,7 @@ DWORD GetRange(
 *pMaxRange*<br/>
 범위의 최고 끝에 있는 날짜를 포함 하는 `COleDateTime` 개체, `CTime` 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 0 (제한이 설정 되지 않음) 이거나 제한 정보를 지정 하는 다음 값의 조합일 수 있는 DWORD입니다.
 
@@ -679,7 +679,7 @@ BOOL GetSelRange(
 *pMaxRange*<br/>
 범위의 최고 끝에 있는 날짜를 포함 하는 `SYSTEMTIME` 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -707,7 +707,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 *pDateTime*<br/>
 날짜 정보를 수신 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -732,7 +732,7 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 *pMCHitTest*<br/>
 Month calendar 컨트롤의 적중 테스트 지점이 포함 된 [Mchittestinfo](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 DWORD 값입니다. `MCHITTESTINFO` 구조체의 **Uhit** 멤버와 동일 합니다.
 
@@ -748,7 +748,7 @@ DWORD 값입니다. `MCHITTESTINFO` 구조체의 **Uhit** 멤버와 동일 합�
 BOOL IsCenturyView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 보기가 세기 뷰 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -764,7 +764,7 @@ BOOL IsCenturyView() const;
 BOOL IsDecadeView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 뷰가 10 년 뷰입니다 경우 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -780,7 +780,7 @@ BOOL IsDecadeView() const;
 BOOL IsMonthView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 보기가 월 보기 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -796,7 +796,7 @@ BOOL IsMonthView() const;
 BOOL IsYearView() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 뷰가 연도 보기 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -814,7 +814,7 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*cxyBorder*|진행 테두리의 너비 (픽셀)입니다.|
 
@@ -860,11 +860,11 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*calid*|진행 [달력 식별자](/windows/win32/Intl/calendar-identifiers) 상수 중 하나입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -894,7 +894,7 @@ BOOL SetCalID(CALID calid);
 BOOL SetCenturyView();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -929,7 +929,7 @@ COLORREF SetColor(
 *ref*<br/>
 Month calendar 컨트롤의 지정 된 부분에 대 한 새 색 설정의 COLORREF 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 month calendar 컨트롤의 지정 된 부분에 대 한 이전 색 설정을 나타내는 COLORREF 값입니다. 그렇지 않으면이 메시지는-1을 반환 합니다.
 
@@ -951,11 +951,11 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwNewView*|진행 월별, 연간, 10 또는 세기 뷰를 지정 하는 다음 값 중 하나입니다.<br /><br /> MCMV_MONTH: 월별 보기<br /><br /> MCMV_YEAR: 연간 보기<br /><br /> MCMV_DECADE: 10 년 뷰<br /><br /> MCMV_CENTURY: 세기 뷰|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -981,7 +981,7 @@ BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 *pDateTime*<br/>
 현재 선택 항목으로 설정할 날짜를 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1011,7 +1011,7 @@ BOOL SetDayState(
 *pStates*<br/>
 Monthcalendar 컨트롤에서 각 날짜를 표시 하는 방법을 정의 하는 값의 [Monthdaystate](/windows/win32/Controls/monthdaystate) 배열에 대 한 포인터입니다. MONTHDAYSTATE 데이터 형식은 비트 필드입니다. 여기서 각 비트 (1-31)는 한 달의 일 상태를 나타냅니다. 비트가 켜져 있으면 해당 날짜가 굵게 표시 됩니다. 그렇지 않으면 강조 표시 되지 않고 표시 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1031,7 +1031,7 @@ Monthcalendar 컨트롤에서 각 날짜를 표시 하는 방법을 정의 하�
 BOOL SetDecadeView();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1057,7 +1057,7 @@ BOOL SetFirstDayOfWeek(
 *lpnOld*<br/>
 이전에 설정한 주의 첫째 요일을 나타내는 정수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 값이 0이 아닌 값으로 설정 된 경우에는 0이 아닌 값으로 설정 되 고,이 값은 제어판 설정에 표시 되는 일 LOCALE_IFIRSTDAYOFWEEK입니다. 그렇지 않으면이 함수는 0을 반환 합니다.
 
@@ -1082,7 +1082,7 @@ BOOL SetMaxSelCount(int nMax);
 *nMax*<br/>
 선택할 수 있는 최대 날짜 수를 나타내도록 설정 되는 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1107,7 +1107,7 @@ int SetMonthDelta(int iDelta);
 *iDelta*<br/>
 컨트롤의 스크롤 비율로 설정할 월 수입니다. 이 값이 0 이면 월 델타는 컨트롤에 표시 되는 월 수 인 기본값으로 다시 설정 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 스크롤 율입니다. 스크롤 비율이 이전에 설정 되지 않은 경우 반환 값은 0입니다.
 
@@ -1123,7 +1123,7 @@ int SetMonthDelta(int iDelta);
 BOOL SetMonthView();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1169,7 +1169,7 @@ BOOL SetRange(
 *pMaxRange*<br/>
 범위의 최고 끝에 있는 날짜를 포함 하는 `COleDateTime` 개체, `CTime` 개체 또는 `SYSTEMTIME` 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1207,7 +1207,7 @@ BOOL SetSelRange(
 *pMaxRange*<br/>
 범위의 최고 끝에 있는 날짜를 포함 하는 `COleDateTime` 개체, `CTime` 개체 또는 `SYSTEMTIME` 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1249,7 +1249,7 @@ void SetToday(const LPSYSTEMTIME pDateTime);
 BOOL SetYearView();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1270,7 +1270,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 *bRepaint*<br/>
 컨트롤을 다시 그릴지 여부를 지정 합니다. 기본적으로 TRUE입니다. FALSE 이면 다시 그려야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 Month calendar 컨트롤의 크기가 최소로 조정 되 면 0이 아닌 값으로 조정 됩니다. 그렇지 않으면 0입니다.
 
@@ -1288,11 +1288,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpRect*|진행 원하는 달력 수를 포함 하는 사각형을 정의 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 *LpRect* 매개 변수에 의해 정의 된 사각형 보다 작거나 같은 크기의 사각형을 정의 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 포인터입니다.
 

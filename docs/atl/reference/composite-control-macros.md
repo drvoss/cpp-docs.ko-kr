@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857121"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423203"
 ---
 # <a name="composite-control-macros"></a>복합 컨트롤 매크로
 
@@ -80,7 +80,7 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
+*id*<br/>
 진행 컨트롤을 식별 합니다.
 
 *dispid*<br/>
@@ -108,7 +108,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
+*id*<br/>
 진행 컨트롤을 식별 합니다.
 
 *iid*<br/>
@@ -142,7 +142,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
+*id*<br/>
 진행 이벤트 소스를 식별 하는 부호 없는 정수입니다. 이 값은 관련 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) 기본 클래스에서 사용 된 *nID* 템플릿 매개 변수와 일치 해야 합니다.
 
 *iid*<br/>

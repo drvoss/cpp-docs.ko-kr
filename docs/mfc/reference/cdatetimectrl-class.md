@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866936"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424448"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 클래스
 
@@ -57,17 +57,17 @@ ms.locfileid: "78866936"
 class CDateTimeCtrl : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CDateTimeCtrl](#cdatetimectrl)|`CDateTimeCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CloseMonthCal](#closemonthcal)|현재 날짜 및 시간 선택 컨트롤을 닫습니다.|
 |[CDateTimeCtrl:: Create](#create)|날짜 및 시간 선택 컨트롤을 만들어 `CDateTimeCtrl` 개체에 연결 합니다.|
@@ -166,7 +166,7 @@ virtual BOOL Create(
 *nID*<br/>
 날짜 및 시간 선택 컨트롤의 컨트롤 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 생성에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -194,11 +194,11 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pDateTimePickerInfo*|제한이 현재 날짜 및 시간 선택 컨트롤에 대 한 설명을 수신 하는 [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) 구조체에 대 한 포인터입니다.<br /><br /> 호출자는이 구조체를 할당 해야 합니다. 그러나이 메서드는 구조체의 *Cbsize* 멤버를 초기화 합니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -231,7 +231,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 *iColor*<br/>
 검색할 월 달력의 색 영역을 지정 하는 **정수 값입니다** . 값 목록은 [Setmonthcalcolor](#setmonthcalcolor)에 대 한 *iColor* 매개 변수를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 month calendar 컨트롤의 지정 된 부분에 대 한 색 설정을 나타내는 COLORREF 값입니다. 실패 한 경우 함수는-1을 반환 합니다.
 
@@ -251,7 +251,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 CMonthCalCtrl* GetMonthCalCtrl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Cmonthcalctrl](../../mfc/reference/cmonthcalctrl-class.md) 개체에 대 한 포인터 또는 실패 한 경우 NULL 이거나 창이 표시 되지 않는 경우 NULL입니다.
 
@@ -271,7 +271,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 CFont* GetMonthCalFont() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Cfont](../../mfc/reference/cfont-class.md) 개체에 대 한 포인터 이거나, 실패 한 경우 NULL입니다.
 
@@ -287,7 +287,7 @@ CFont* GetMonthCalFont() const;
 DWORD GetMonthCalStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 날짜 및 시간 선택 컨트롤 스타일의 비트 조합 (또는) 인 드롭다운 월 달력 컨트롤의 스타일입니다. 자세한 내용은 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles)을 참조 하세요.
 
@@ -317,9 +317,9 @@ DWORD GetRange(
 *pMaxRange*<br/>
 `CDateTimeCtrl` 개체에 허용 되는 마지막 시간을 포함 하는 `COleDateTime` 개체 또는 `CTime` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-설정 되는 범위를 나타내는 플래그를 포함 하는 DWORD 값입니다. 조건
+설정 되는 범위를 나타내는 플래그를 포함 하는 DWORD 값입니다. 다음과 같은 경우
 
 `return value & GDTR_MAX` == 0
 
@@ -355,7 +355,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 *pTimeDest*<br/>
 시스템 시간 정보를 수신 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다. NULL이 아니어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 버전에서는 시간이 `COleDateTime` 개체에 성공적으로 기록 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 두 번째 및 세 번째 버전에서 DWORD 값은 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) 구조체에 설정 된 *dwflag* 멤버와 동일 합니다. 자세한 내용은 아래 **설명** 부분을 참조 하세요.
 
@@ -379,11 +379,11 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*psize*|제한이 컨트롤의 이상적인 크기를 포함 하는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값은 항상 TRUE입니다.
 
@@ -416,7 +416,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 *pstrFormat*<br/>
 원하는 표시를 정의 하는 0으로 끝나는 형식 문자열에 대 한 포인터입니다. 이 매개 변수를 NULL로 설정 하면 컨트롤이 현재 스타일의 기본 형식 문자열로 다시 설정 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -458,7 +458,7 @@ COLORREF SetMonthCalColor(
 *ref*<br/>
 월 달력의 지정 된 영역에 대해 설정 되는 색을 나타내는 COLORREF 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 month calendar 컨트롤의 지정 된 부분에 대 한 이전 색 설정을 나타내는 COLORREF 값입니다. 그렇지 않으면-1이 반환 됩니다.
 
@@ -509,11 +509,11 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwStyle*|진행 월 달력 컨트롤 스타일의 비트 조합 (또는) 인 새 month calendar 컨트롤 스타일입니다. 자세한 내용은 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles)을 참조 하세요.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 드롭다운 월 달력 컨트롤의 이전 스타일입니다.
 
@@ -555,7 +555,7 @@ BOOL SetRange(
 *pMaxRange*<br/>
 `CDateTimeCtrl` 개체에 허용 되는 마지막 시간을 포함 하는 `COleDateTime` 개체 또는 `CTime` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -585,7 +585,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 *Ptia*<br/>
 위의 두 번째 버전에서 컨트롤이 설정 될 시간을 포함 하는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 포인터입니다. 위의 세 번째 버전에서 컨트롤이 설정 될 시간을 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 

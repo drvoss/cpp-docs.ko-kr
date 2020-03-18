@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883626"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424568"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 클래스
 
@@ -43,11 +43,11 @@ ms.locfileid: "78883626"
 class CCmdUI
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CCmdUI:: ContinueRouting](#continuerouting)|현재 메시지를 처리기 체인으로 계속 라우팅하는 명령 라우팅 메커니즘에 지시 합니다.|
 |[CCmdUI:: Enable](#enable)|이 명령에 대 한 사용자 인터페이스 항목을 사용 하거나 사용 하지 않도록 설정 합니다.|
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CCmdUI:: m_nID](#m_nid)|사용자 인터페이스 개체의 ID입니다.|
 |[CCmdUI:: m_nIndex](#m_nindex)|사용자 인터페이스 개체의 인덱스입니다.|
@@ -79,10 +79,10 @@ class CCmdUI
 
 |사용자 인터페이스 항목|사용|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
-|Menu item|사용 또는 사용 안 함|검사 또는 취소|점을 사용 하 여 확인|항목 텍스트를 설정 합니다.|
-|도구 모음 단추|사용 또는 사용 안 함|선택, 선택 취소 또는 확정 되지 않음|`SetCheck`과 같음|(해당 없음)|
-|상태 표시줄 창|텍스트를 표시 하거나 숨깁니다.|팝아웃 또는 표준 테두리를 설정 합니다.|`SetCheck`과 같음|창 텍스트를 설정 합니다.|
-|`CDialogBar`의 일반 단추|사용 또는 사용 안 함|검사 또는 선택 취소 확인란|`SetCheck`과 같음|단추 텍스트를 설정 합니다.|
+|메뉴 항목|사용 또는 사용 안 함|검사 또는 취소|점을 사용 하 여 확인|항목 텍스트를 설정 합니다.|
+|도구 모음 단추|사용 또는 사용 안 함|선택, 선택 취소 또는 확정 되지 않음|`SetCheck`과 동일|(해당 없음)|
+|상태 표시줄 창|텍스트를 표시 하거나 숨깁니다.|팝아웃 또는 표준 테두리를 설정 합니다.|`SetCheck`과 동일|창 텍스트를 설정 합니다.|
+|`CDialogBar`의 일반 단추|사용 또는 사용 안 함|검사 또는 선택 취소 확인란|`SetCheck`과 동일|단추 텍스트를 설정 합니다.|
 |`CDialogBar`의 일반 컨트롤|사용 또는 사용 안 함|(해당 없음)|(해당 없음)|창 텍스트를 설정 합니다.|
 
 이 클래스를 사용 하는 방법에 대 한 자세한 내용은 [사용자 인터페이스 개체를 업데이트 하는 방법](../../mfc/how-to-update-user-interface-objects.md)을 참조 하세요.

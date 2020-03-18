@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865550"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425990"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 
@@ -53,17 +53,17 @@ ms.locfileid: "78865550"
 class CComboBoxEx : public CComboBox
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|`CComboBoxEx` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComboBoxEx::Create](#create)|콤보 상자를 만들어 `CComboBoxEx` 개체에 연결 합니다.|
 |[CComboBoxEx::CreateEx](#createex)|지정 된 Windows 확장 스타일을 사용 하 여 콤보 상자를 만들고 `ComboBoxEx` 개체에 연결 합니다.|
@@ -158,7 +158,7 @@ virtual BOOL Create(
 *nID*<br/>
 콤보 상자의 컨트롤 ID를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 성공적으로 만들어진 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -218,7 +218,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -241,7 +241,7 @@ int DeleteItem(int iIndex);
 *iIndex*<br/>
 제거할 항목의 인덱스 (0부터 시작)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤에 남아 있는 항목의 수입니다. *Iindex* 가 잘못 된 경우 함수는 CB_ERR을 반환 합니다.
 
@@ -257,7 +257,7 @@ int DeleteItem(int iIndex);
 CComboBox* GetComboBoxCtrl();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CComboBox` 개체에 대한 포인터입니다.
 
@@ -275,7 +275,7 @@ CComboBox* GetComboBoxCtrl();
 CEdit* GetEditCtrl();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CEdit](../../mfc/reference/cedit-class.md) 개체에 대 한 포인터입니다.
 
@@ -293,7 +293,7 @@ CEdit* GetEditCtrl();
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 콤보 상자 컨트롤에 사용 되는 확장 스타일을 포함 하는 DWORD 값입니다.
 
@@ -309,7 +309,7 @@ DWORD GetExtendedStyle() const;
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다. 실패 하면이 멤버 함수는 NULL을 반환 합니다.
 
@@ -330,7 +330,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 항목 정보를 수신 하는 [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업이 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -346,7 +346,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 BOOL HasEditChanged();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 컨트롤의 편집 상자에 입력 한 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -367,7 +367,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 항목 정보를 수신 하는 [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) 구조체에 대 한 포인터입니다. 이 구조체는 항목에 대 한 콜백 플래그 값을 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하는 경우 새 항목이 삽입 된 인덱스입니다. 그렇지 않으면-1입니다.
 
@@ -393,7 +393,7 @@ DWORD SetExtendedStyle(
 *dwExStyles*<br/>
 컨트롤에 대해 설정할 콤보 상자 컨트롤 확장 스타일을 포함 하는 DWORD 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤에 이전에 사용 된 확장 스타일을 포함 하는 DWORD 값입니다.
 
@@ -416,7 +416,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 `CComboBoxEx` 컨트롤과 함께 사용할 이미지를 포함 하는 `CImageList` 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CComboBoxEx` 컨트롤에서 이전에 사용한 이미지를 포함 하는 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다. 이전에 설정 된 이미지 목록이 없는 경우 NULL입니다.
 
@@ -439,7 +439,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 *pCBItem*<br/>
 항목 정보를 수신 하는 [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 작업이 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -460,7 +460,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 설정할 확장 된 콤보 상자 비주얼 스타일을 포함 하는 유니코드 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값은 사용 되지 않습니다.
 

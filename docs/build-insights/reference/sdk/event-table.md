@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: 2ccc8a4ef707942963b85edc6db9e21e05610b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857015"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422963"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>C++Build Insights SDK: 이벤트 테이블
 

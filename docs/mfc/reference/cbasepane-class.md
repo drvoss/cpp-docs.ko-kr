@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866707"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426050"
 ---
 # <a name="cbasepane-class"></a>CBasePane 클래스
 
@@ -183,18 +183,18 @@ MFC의 모든 창에 대 한 기본 클래스입니다.
 class CBasePane : public CWnd
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`CBasePane::CBasePane`|기본 생성자입니다.|
 |`CBasePane::~CBasePane`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`CBasePane::accHitTest`|화면의 지정된 지점에서 자식 요소나 자식 개체를 검색하기 위해 프레임워크에서 호출됩니다. ( [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest)를 재정의 합니다.)|
 |`CBasePane::accLocation`|지정 된 개체의 현재 화면 위치를 검색 하기 위해 프레임 워크에서 호출 됩니다. ( [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation)을 재정의 합니다.)|
@@ -300,9 +300,9 @@ class CBasePane : public CWnd
 |[CBasePane:: StretchPane](#stretchpane)|창을 가로 또는 세로로 확장합니다.|
 |[CBasePane:: UndockPane](#undockpane)|도킹 사이트, 기본 슬라이더 또는 현재 도킹 된 미니 프레임 창에서 창을 제거 합니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[CBasePane::D oPaint](#dopaint)|창의 배경을 채웁니다.|
 
@@ -441,7 +441,7 @@ virtual CSize CalcFixedLayout(
 *bHorz*<br/>
 진행 가로 또는 세로 방향으로 막대를 나타냅니다. 막대가 가로 방향인 경우 *Bhorz* 매개 변수는 0이 아니고 세로 방향인 경우 0입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CSize` 개체의 컨트롤 막대 크기 (픽셀)입니다.
 
@@ -462,7 +462,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 *pBar*<br/>
 진행 도킹할 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 다른 창을 허용할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -482,7 +482,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 virtual BOOL CanAutoHide() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 창에서 자동 숨기기 모드를 지원 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -502,7 +502,7 @@ virtual BOOL CanAutoHide() const;
 virtual BOOL CanBeAttached() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 다른 창이 나 프레임 창에 도킹할 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -518,7 +518,7 @@ virtual BOOL CanBeAttached() const;
 virtual BOOL CanBeClosed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 닫을 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -543,7 +543,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 *pDockBar*<br/>
 진행 다른 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 창을 다른 창에 도킹할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -563,7 +563,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 virtual BOOL CanBeResized() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창의 크기를 조정할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -579,7 +579,7 @@ virtual BOOL CanBeResized() const;
 virtual BOOL CanBeTabbedDocument() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 탭 문서로 변환할 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다. `CBasePane::CanBeTabbedDocument` 항상 FALSE를 반환 합니다.
 
@@ -595,7 +595,7 @@ virtual BOOL CanBeTabbedDocument() const;
 virtual BOOL CanFloat() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창을 부동 상태로 만들 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -618,7 +618,7 @@ virtual BOOL CanFloat() const;
 virtual BOOL CanFocus() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 포커스를 받을 수 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -658,7 +658,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 *rectInitial*<br/>
 진행 미니 프레임 창의 초기 좌표를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새 미니 프레임 창에 대 한 포인터 이거나, 만들지 못한 경우 NULL입니다.
 
@@ -714,7 +714,7 @@ virtual BOOL CreateEx(
 *pContext*<br/>
 진행 `CcreateContext`에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 성공적으로 생성 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -726,7 +726,7 @@ virtual BOOL CreateEx(
 
 라이브러리는 창에 대 한 여러 가지 새 스타일을 추가 합니다. 다음 표에서는 새 스타일에 대해 설명 합니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|창을 부동으로 만들 수 있습니다.|
 |AFX_CBRS_AUTOHIDE|창에서 자동 숨기기 모드를 지원 합니다.|
@@ -760,7 +760,7 @@ virtual BOOL DockPane(
 *dockMethod*<br/>
 진행 도킹 방법을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 성공적으로 도킹 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -817,7 +817,7 @@ virtual BOOL DockToFrameWindow(
 *bOuterEdge*<br/>
 진행 TRUE이 고 *Dwalignment*로 지정 된 측면에 도킹 가능한 다른 창이 있으면 창이 다른 창 외부에 도킹 되어 부모 프레임의 가장자리에 더 가깝게 배치 됩니다. FALSE 이면 창이 클라이언트 영역의 가운데에 더 가깝게 도킹 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -833,7 +833,7 @@ virtual BOOL DockToFrameWindow(
 virtual BOOL DoesAllowDynInsertBefore() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 다른 창을 삽입할 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -924,7 +924,7 @@ virtual BOOL FloatPane(
 *bShow*<br/>
 진행 부동 창이 표시 되는지 (TRUE) 또는 숨겨지는지 (FALSE)를 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 성공적으로 부동 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -954,7 +954,7 @@ virtual HRESULT get_accHelpTopic(
 *pidTopic*<br/>
 진행 지정 된 개체와 연결 된 **도움말** 파일 항목을 식별 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CBasePane`에서이 메서드를 구현 하지 않습니다. 따라서 `CBasePane::get_accHelpTopic`는 항상 S_FALSE를 반환 합니다.
 
@@ -975,7 +975,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 *pvarChildren*<br/>
 진행 선택한 자식을 식별 하는 정보를 받습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CBasePane`에서이 메서드를 구현 하지 않습니다. *PvarChildren* 가 NULL 인 경우이 메서드는 E_INVALIDARG을 반환 합니다. 그렇지 않으면이 메서드는 DISP_E_MEMBERNOTFOUND 반환 합니다.
 
@@ -991,7 +991,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 virtual int GetCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 캡션 높이입니다.
 
@@ -1003,7 +1003,7 @@ virtual int GetCaptionHeight() const;
 virtual DWORD GetControlBarStyle() const
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 AFX_CBRS_ 플래그의 비트 OR 조합입니다.
 
@@ -1011,7 +1011,7 @@ AFX_CBRS_ 플래그의 비트 OR 조합입니다.
 
 반환 값은 다음과 같은 가능한 값의 조합입니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|컨트롤 막대를 부동으로 만듭니다.|
 |AFX_CBRS_AUTOHIDE|자동 숨기기 모드를 사용 하도록 설정 합니다.|
@@ -1026,7 +1026,7 @@ AFX_CBRS_ 플래그의 비트 OR 조합입니다.
 virtual DWORD GetCurrentAlignment() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대의 현재 맞춤입니다. 다음 표에서는 가능한 값을 보여 줍니다.
 
@@ -1045,7 +1045,7 @@ virtual DWORD GetCurrentAlignment() const;
 virtual AFX_DOCK_TYPE GetDockingMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 끌기를 화면에서 끌기 사각형으로 표시 하는 경우에 DT_STANDARD 합니다. 창의 내용을 끌 때 DT_IMMEDIATE 합니다.
 
@@ -1065,7 +1065,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 virtual CWnd* GetDockSiteFrameWnd() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창의 dock 사이트에 대 한 포인터입니다.
 
@@ -1081,7 +1081,7 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 virtual DWORD GetEnabledAlignment() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 CBRS_ALIGN_ 스타일의 조합입니다. 다음 표에서는 가능한 스타일을 보여 줍니다.
 
@@ -1107,7 +1107,7 @@ MFC에 특정 한 창 스타일을 반환 합니다.
 virtual DWORD GetMFCStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 라이브러리 특정 (AFX_CBRS_) 창 스타일의 조합입니다.
 
@@ -1124,7 +1124,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 *bBigIcon*<br/>
 진행 TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경우 16 x 16 픽셀 아이콘을 지정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 아이콘에 대 한 핸들입니다. 실패 한 경우 NULL을 반환 합니다.
 
@@ -1140,7 +1140,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 CDockingPanesRow* GetPaneRow();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 도킹 된 경우 `CDockingPanesRow`에 대 한 포인터 이거나 부동 인 경우 NULL입니다.
 
@@ -1156,7 +1156,7 @@ CDockingPanesRow* GetPaneRow();
 virtual DWORD GetPaneStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 만들 때 [Cbasepane:: SetPaneStyle](#setpanestyle) 메서드에 의해 설정 된 컨트롤 막대 스타일 (CBRS_ 스타일 포함)의 조합입니다.
 
@@ -1168,7 +1168,7 @@ virtual DWORD GetPaneStyle() const;
 virtual CDockSite* GetParentDockSite() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 도크 사이트입니다.
 
@@ -1185,7 +1185,7 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 *bNoAssert*<br/>
 진행 TRUE 이면이 메서드는 유효 하지 않은 포인터를 확인 하지 않습니다. 응용 프로그램이 종료 될 때이 메서드를 호출 하는 경우이 매개 변수를 TRUE로 설정 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 부동 인 경우 부모 미니 프레임 창에 대 한 유효한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -1203,7 +1203,7 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 CBaseTabbedPane* GetParentTabbedPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 탭 창이 있으면 해당 창에 대 한 포인터이 고, 그렇지 않으면입니다. 그렇지 않으면 NULL입니다.
 
@@ -1220,7 +1220,7 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 *hWndTab*<br/>
 제한이 반환 값이 NULL이 아닌 경우이 매개 변수는 부모 탭 창에 대 한 핸들을 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 부모 탭 창 또는 NULL에 대 한 유효한 포인터입니다.
 
@@ -1236,7 +1236,7 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 virtual BOOL GetRecentVisibleState() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 최근 표시 상태를 지정 하는 부울입니다. TRUE 이면 창이 serialize 될 때 표시 되 고 복원 될 때 표시 됩니다. FALSE 이면 창이 serialize 될 때 숨겨지고 복원 시 숨겨야 합니다.
 
@@ -1248,7 +1248,7 @@ virtual BOOL GetRecentVisibleState() const;
 virtual BOOL HideInPrintPreviewMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 인쇄 미리 보기에 표시 되지 않으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1278,7 +1278,7 @@ BOOL InsertPane(
 *bAfter*<br/>
 진행 TRUE 이면 *Pcontrolbar* 가 *ptarget*뒤에 삽입 됩니다. FALSE 이면 *Pcontrolbar* 가 *ptarget*앞에 삽입 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1290,7 +1290,7 @@ BOOL InsertPane(
 virtual BOOL IsAccessibilityCompatible();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창에서 Active Accessibility을 지원 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1302,7 +1302,7 @@ virtual BOOL IsAccessibilityCompatible();
 virtual BOOL IsAutoHideMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 자동 숨기기 모드에 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1318,7 +1318,7 @@ virtual BOOL IsAutoHideMode() const;
 BOOL IsDialogControl() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 대화 상자 컨트롤 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1334,7 +1334,7 @@ BOOL IsDialogControl() const;
 virtual BOOL IsDocked() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창의 부모가 미니 프레임이 아니거나 창이 다른 창에 있는 미니 프레임에서 부동 상태 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1346,7 +1346,7 @@ virtual BOOL IsDocked() const;
 virtual BOOL IsFloating() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 부동 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1362,7 +1362,7 @@ virtual BOOL IsFloating() const;
 virtual BOOL IsHorizontal() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 가로로 도킹 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1378,7 +1378,7 @@ virtual BOOL IsHorizontal() const;
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 다중 창 프레임 창에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1394,7 +1394,7 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 virtual BOOL IsMDITabbed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 MDI 자식 창에 탭 문서로 추가 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1406,7 +1406,7 @@ virtual BOOL IsMDITabbed() const;
 BOOL IsPaneVisible() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 WS_VISIBLE 설정 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1436,7 +1436,7 @@ BOOL IsPointNearDockSite(
 *bOuterEdge*<br/>
 제한이 지점이 dock 사이트의 외부 테두리 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지점이 dock 사이트 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1452,7 +1452,7 @@ BOOL IsPointNearDockSite(
 virtual BOOL IsResizable() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 사용자가 창을 조정할 수 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1470,7 +1470,7 @@ virtual BOOL IsResizable() const;
 virtual BOOL IsRestoredFromRegistry() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 레지스트리에서 복원 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1482,7 +1482,7 @@ virtual BOOL IsRestoredFromRegistry() const;
 virtual BOOL IsTabbed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤 막대가 탭 창의 탭에 삽입 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1498,7 +1498,7 @@ virtual BOOL IsTabbed() const;
 virtual BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창이 표시 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1530,7 +1530,7 @@ virtual BOOL LoadState(
 *uiID*<br/>
 진행 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 창 상태가 성공적으로 로드 되었으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -1560,7 +1560,7 @@ virtual HDWP MoveWindow(
 *hdwp*<br/>
 진행 지연 된 창 위치 구조체에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지연 된 창 위치 구조체 또는 NULL에 대 한 핸들입니다.
 
@@ -1692,7 +1692,7 @@ virtual BOOL OnSetAccData(long lVal);
 *lVal*<br/>
 진행 사용 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 메서드는 항상 TRUE를 반환 합니다.
 
@@ -1724,7 +1724,7 @@ CBasePane* PaneFromPoint(
 *Prtc바 형식*<br/>
 진행 NULL이 아닌 경우 메서드는 지정 된 형식의 요소만 검색 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 지점을 포함 하는 `CBasePane`파생 개체 이거나, 창이 없는 경우 NULL입니다.
 
@@ -1788,7 +1788,7 @@ virtual BOOL SaveState(
 *uiID*<br/>
 진행 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상태가 성공적으로 저장 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -1809,7 +1809,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 *pDC*<br/>
 진행 장치 컨텍스트입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 [Cfont 클래스](../../mfc/reference/cfont-class.md) 개체에 대 한 포인터입니다.
 
@@ -1826,7 +1826,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 *dwNewStyle*<br/>
 진행 다음 가능한 값의 비트 OR 조합입니다.
 
-|스타일|설명|
+|Style|Description|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|컨트롤 막대를 부동으로 만듭니다.|
 |AFX_CBRS_AUTOHIDE|자동 숨기기 모드를 사용 하도록 설정 합니다.|
@@ -1937,7 +1937,7 @@ virtual HDWP SetWindowPos(
 *hdwp*<br/>
 진행 하나 이상의 창에 대 한 크기 및 위치 정보를 포함 하는 구조체에 대 한 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 업데이트 된 지연 된 창 위치 구조 또는 NULL에 대 한 핸들입니다.
 
@@ -1991,7 +1991,7 @@ virtual CSize StretchPane(
 *bVert*<br/>
 진행 TRUE 이면 창을 세로로 늘립니다. FALSE 이면 창을 가로로 늘립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 확대 된 창의 크기입니다.
 

@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876097"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423974"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 함수
 
@@ -65,7 +65,7 @@ Type abs(const complex<Type>& complexNum);
 *Complexnum*\
 모듈러스를 결정해야 하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 모듈러스입니다.
 
@@ -164,7 +164,7 @@ Type arg(const complex<Type>& complexNum);
 *Complexnum*\
 인수를 결정해야 하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 인수입니다.
 
@@ -275,7 +275,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 *Complexnum*\
 켤레 복소수가 반환되는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 켤레 복소수입니다.
 
@@ -350,7 +350,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 *Complexnum*\
 코사인을 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 코사인인 복소수입니다.
 
@@ -441,7 +441,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 *Complexnum*\
 쌍곡 코사인을 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 쌍곡 코사인인 복소수입니다.
 
@@ -532,7 +532,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 *Complexnum*\
 지수를 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 지수인 복소수입니다.
 
@@ -603,7 +603,7 @@ Type imag(const complex<Type>& complexNum);
 *Complexnum*\
 실수 부분을 추출할 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 전역 함수인 복소수 허수 부분입니다.
 
@@ -655,7 +655,7 @@ complex<Type> log(const complex<Type>& complexNum);
 *Complexnum*\
 자연 로그를 결정하고 있는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 자연 로그인 복소수입니다.
 
@@ -725,7 +725,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 *Complexnum*\
 상용 로그를 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 상용 로그인 복소수입니다.
 
@@ -795,7 +795,7 @@ Type norm(const complex<Type>& complexNum);
 *Complexnum*\
 기준을 결정해야 하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 기준입니다.
 
@@ -881,7 +881,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 *_Argument*\
 입력되는 복소수의 인수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 극좌표 형식으로 지정된 복소수의 직각좌표 형식입니다.
 
@@ -967,7 +967,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 *_Power*\
 정수 또는 복소수이거나 멤버 함수에 의한 밑의 거듭제곱인 복소수의 매개 변수 형식을 가진 숫자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정된 밑을 지정된 만큼 거듭제곱하여 얻은 복소수입니다.
 
@@ -1106,7 +1106,7 @@ Type real(const complex<Type>& complexNum);
 *Complexnum*\
 실수 부분을 추출할 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 전역 함수인 복소수의 실수 부분입니다.
 
@@ -1158,7 +1158,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 *Complexnum*\
 사인을 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 사인인 복소수입니다.
 
@@ -1249,7 +1249,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 *Complexnum*\
 쌍곡 사인을 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 쌍곡 사인인 복소수입니다.
 
@@ -1340,7 +1340,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 *Complexnum*\
 제곱근을 구할 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 복소수의 제곱근입니다.
 
@@ -1417,7 +1417,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 *Complexnum*\
 탄젠트를 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 탄젠트인 복소수입니다.
 
@@ -1506,7 +1506,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 *Complexnum*\
 쌍곡 탄젠트를 결정하는 복소수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 입력 복소수의 쌍곡 탄젠트인 복소수입니다.
 
