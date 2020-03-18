@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127382"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509381"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>그리기 코드 변경(ATL 자습서, 4부)
 
@@ -40,7 +40,7 @@ ms.locfileid: "77127382"
     public CComControl<CPolyCtl>
     ```
 
-    다음 문자열로 바꾸세요.
+    다음과 같이 바꿉니다.
 
     ```cpp
     public CComControl<CPolyCtl>,
@@ -106,17 +106,20 @@ ms.locfileid: "77127382"
 
 ### <a name="to-use-the-activex-control-test-container"></a>ActiveX 컨트롤 테스트 컨테이너를 사용 하려면
 
-1. ActiveX 컨트롤 테스트 컨테이너를 빌드하고 시작 합니다. [TSTCON 샘플: GitHub에서 ActiveX 컨트롤 테스트 컨테이너](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon)를 찾을 수 있습니다.
+1. ActiveX 컨트롤 테스트 컨테이너를 빌드하고 시작 합니다. [TSTCON 샘플: ActiveX 컨트롤 테스트 컨테이너](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) 는 GitHub에서 찾을 수 있습니다.
 
     > [!NOTE]
     > `ATL::CW2AEX`관련 된 오류의 경우 node.js에서 줄 `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );`를 `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`로 바꾸고 줄 `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );`을 `TRACE( "Source Text: %s\n", bstrSourceLineText );`으로 바꿉니다.<br/>
     > `HMONITOR`관련 된 오류의 경우 `TCProps` 프로젝트에서 Stdafx.h를 열고를 바꿉니다.
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
-    > 다음 문자열로 바꾸세요.
+    >
+    > 다음과 같이 바꿉니다.
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500
@@ -154,7 +157,7 @@ ms.locfileid: "77127382"
 
 다음 단계에서는 이벤트를 추가 합니다.
 
-[3단계로 돌아가기](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [5단계로 이동합니다.](../atl/adding-an-event-atl-tutorial-part-5.md)
+[Back to Step 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [5 단계에서](../atl/adding-an-event-atl-tutorial-part-5.md) 3 단계로 돌아갑니다.
 
 ## <a name="see-also"></a>참고 항목
 

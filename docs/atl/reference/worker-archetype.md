@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495262"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509343"
 ---
 # <a name="worker-archetype"></a>작업자 원형
 
@@ -19,13 +19,13 @@ ms.locfileid: "69495262"
 
 이 원형을 준수 하는 클래스를 구현 하려면 클래스에서 다음 기능을 제공 해야 합니다.
 
-|메서드|Description|
+|방법|Description|
 |------------|-----------------|
 |[Initialize](#initialize)|요청을 [실행](#execute)하기 위해 요청을 전달 하기 전에 worker 개체를 초기화 하기 위해 호출 됩니다.|
 |[실행](#execute)|작업 항목을 처리 하기 위해 호출 됩니다.|
 |[Terminate](#terminate)|모든 요청이 [실행](#execute)되도록 전달 된 후 작업자 개체의 초기화를 취소 하기 위해 호출 됩니다.|
 
-|Typedef|Description|
+|형식 정의|Description|
 |-------------|-----------------|
 |[RequestType](#requesttype)|Worker 클래스에서 처리할 수 있는 작업 항목의 형식에 대 한 typedef입니다.|
 
@@ -45,16 +45,16 @@ ms.locfileid: "69495262"
 
 이러한 템플릿 매개 변수는 클래스가이 원형을 준수 하는 것으로 간주 합니다.
 
-|매개 변수 이름|사용 주체|
+|매개 변수 이름|사용 대상|
 |--------------------|-------------|
-|*Worker*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*Worker*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*전문*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
+|*전문*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>요구 사항
 
 **헤더:**
 
-## <a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype:: Execute
 
 작업 항목을 처리 하기 위해 호출 됩니다.
 
@@ -67,18 +67,19 @@ void Execute(
 
 #### <a name="parameters"></a>매개 변수
 
-*request*<br/>
-처리할 작업 항목입니다. 작업 항목의 형식이와 `RequestType`동일 합니다.
+*요청*<br/>
+처리할 작업 항목입니다. 작업 항목의 형식이 `RequestType`와 동일 합니다.
 
 *pvWorkerParam*<br/>
-Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Initialize` 및`Terminate`에도 전달 됩니다.
+Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Initialize` 및 `Terminate`에도 전달 됩니다.
 
 *pOverlapped*<br/>
 작업 항목이 큐에 대기 된 큐를 만드는 데 사용 되는 [겹쳐진](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) 구조체에 대 한 포인터입니다.
 
-## <a name="initialize"></a> WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype:: Initialize
 
-요청을에 `WorkerArchetype::Execute`전달 하기 전에 작업자 개체를 초기화 하기 위해 호출 됩니다.
+`WorkerArchetype::Execute`에 요청을 전달 하기 전에 작업자 개체를 초기화 하기 위해 호출 됩니다.
+
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -86,13 +87,13 @@ BOOL Initialize(void* pvParam) throw();
 #### <a name="parameters"></a>매개 변수
 
 *pvParam*<br/>
-Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Terminate` 및`WorkerArchetype::Execute`에도 전달 됩니다.
+Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Terminate` 및 `WorkerArchetype::Execute`에도 전달 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
-## <a name="requesttype"></a> WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype:: RequestType
 
 Worker 클래스에서 처리할 수 있는 작업 항목의 형식에 대 한 typedef입니다.
 
@@ -102,11 +103,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>설명
 
-이 형식은의 `WorkerArchetype::Execute` 첫 번째 매개 변수로 사용 되어야 하며 ULONG_PTR에서 캐스팅할 수 있어야 합니다.
+이 형식은 `WorkerArchetype::Execute`의 첫 번째 매개 변수로 사용 해야 하며 ULONG_PTR와 캐스팅할 수 있어야 합니다.
 
-## <a name="terminate"></a> WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype:: Terminate
 
-모든 요청이에 `WorkerArchetype::Execute`전달 된 후 작업자 개체의 초기화를 취소 하기 위해 호출 됩니다.
+모든 요청이 `WorkerArchetype::Execute`)에 전달 된 후 작업자 개체의 초기화를 취소 하기 위해 호출 됩니다.
 
 ```
 void Terminate(void* pvParam) throw();
@@ -115,9 +116,9 @@ void Terminate(void* pvParam) throw();
 #### <a name="parameters"></a>매개 변수
 
 *pvParam*<br/>
-Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Initialize` 및`WorkerArchetype::Execute`에도 전달 됩니다.
+Worker 클래스가 이해 하는 사용자 지정 매개 변수입니다. `WorkerArchetype::Initialize` 및 `WorkerArchetype::Execute`에도 전달 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [개념](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)
