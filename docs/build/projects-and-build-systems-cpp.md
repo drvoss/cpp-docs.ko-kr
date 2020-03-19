@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274736"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509453"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio의 C/C++ 프로젝트 및 빌드 시스템
 
@@ -23,11 +23,11 @@ Visual Studio를 사용 하 여 코드를 Visual Studio 프로젝트로 변환 C
 
 ## <a name="c-compilation"></a>C++ 컴파일
 
-C++ 프로그램을 *만들려면* 하나 이상의 파일에서 소스 코드를 컴파일한 다음 해당 파일을 실행 파일(.exe), 동적 부하 라이브러리(.dll) 또는 정적 라이브러리(.lib)로 링크해야 합니다. 
+프로그램 *build* 을 빌드하 C++ 는 것은 하나 이상의 파일에서 소스 코드를 컴파일한 다음 해당 파일을 실행 파일 (.exe), 동적 로드 라이브러리 (.dll) 또는 정적 라이브러리 (.lib)에 연결 하는 것을 의미 합니다. 
 
 기본 C++ 컴파일에는 세 가지 주요 단계가 포함됩니다.
 
-- C++ 전처리기는 각 소스 파일에서 모든 #directives 및 매크로 정의를 변환합니다. 이는 *변환 단위*를 생성합니다.
+- C++ 전처리기는 각 소스 파일에서 모든 #directives 및 매크로 정의를 변환합니다. 그러면 *변환 단위가*생성 됩니다.
 - C++ 컴파일러는 설정된 컴파일러 옵션을 적용하여 각 변환 단위를 개체 파일(.obj)로 컴파일합니다.
 - *링커에서* 는 설정 된 링커 옵션을 적용 하 여 개체 파일을 단일 실행 파일로 병합 합니다. 
 
@@ -40,11 +40,12 @@ Microsoft C++ 컴파일러, 링커, 표준 라이브러리 및 관련 유틸리�
 ```cmd
 cl /EHsc hello.cpp
 ```
-여기서 컴파일러(cl.exe)는 자동으로 C++ 전처리기와 링커를 호출하여 최종 출력 파일을 생성합니다.  자세한 내용은 [명령줄에서 빌드](building-on-the-command-line.md)를 참조합니다.
+
+여기서 컴파일러(cl.exe)는 자동으로 C++ 전처리기와 링커를 호출하여 최종 출력 파일을 생성합니다.  자세한 내용은 [명령줄에서 빌드](building-on-the-command-line.md)를 참조 하세요.
 
 ## <a name="build-systems-and-projects"></a>빌드 시스템 및 프로젝트
 
-대부분의 실제 프로그램에서는 몇 가지 종류의 *빌드 시스템* 을 사용 하 여 여러 구성 (예: 디버그 및 릴리스), 여러 플랫폼 (x86, X64, ARM 등), 사용자 지정 빌드 단계, 심지어 여러 소스 파일을 컴파일하는 복잡 한 작업을 관리 합니다. 특정 순서로 컴파일해야 하는 실행 파일입니다. 빌드 구성 파일에서 설정을 만들고 빌드 시스템에서 컴파일러를 호출 하기 전에 해당 파일을 입력으로 받아들입니다. 실행 파일을 빌드하는 데 필요한 소스 코드 파일 및 빌드 구성 파일 집합을 *프로젝트*라고 합니다. 
+대부분의 실제 프로그램에서는 일종의 *빌드 시스템* 을 사용 하 여 여러 구성 (예: 디버그 및 릴리스), 여러 플랫폼 (x86, X64, ARM 등), 사용자 지정 빌드 단계 및 특정 순서로 컴파일되어야 하는 여러 실행 파일에 대해 여러 소스 파일을 컴파일하는 복잡 한 작업을 관리 합니다. 빌드 구성 파일에서 설정을 만들고 빌드 시스템에서 컴파일러를 호출 하기 전에 해당 파일을 입력으로 받아들입니다. 실행 파일을 빌드하는 데 필요한 소스 코드 파일 및 빌드 구성 파일 집합을 *프로젝트*라고 합니다. 
 
 다음은 C++ Visual Studio 프로젝트에 대한 다양한 옵션을 보여줍니다.
 
@@ -64,26 +65,26 @@ cl /EHsc hello.cpp
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[Visual Studio 프로젝트](creating-and-managing-visual-cpp-projects.md)는 해당 네이티브 빌드 시스템(MSBuild)을 사용하여 Visual Studio에서 C++ 프로젝트를 작성, 구성 및 빌드하는 방법을 보여줍니다.
+[Visual Studio 프로젝트](creating-and-managing-visual-cpp-projects.md) MSBuild (네이티브 빌드 시스템)를 사용 C++ 하 여 Visual Studio에서 프로젝트를 만들고, 구성 하 고, 빌드하는 방법입니다.
 
 [Cmake 프로젝트](cmake-projects-in-visual-studio.md) Visual Studio에서 CMake 프로젝트를 코딩, 빌드 및 배포 하는 방법을 설명 합니다.
 
-[오픈 폴더 프로젝트](open-folder-projects-cpp.md) Visual Studio를 사용하여 임의의 빌드 시스템을 기반으로 또는 빌드 시스템 없이 C++ 프로젝트를 코딩, 빌드 및 배포하는 방법입니다. 전혀. 
+[폴더 프로젝트 열기](open-folder-projects-cpp.md) Visual Studio를 사용 하 여 임의의 빌드 시스템 또는 빌드 C++ 시스템을 기반으로 프로젝트를 코딩, 빌드 및 배포 하는 방법입니다. 전혀. 
 
 [릴리스 빌드](release-builds.md) 최종 사용자에 게 배포할 수 있도록 최적화 된 릴리스 빌드를 만들고 문제를 해결 하는 방법입니다.
 
 [명령줄에서 MSVC 도구 집합 사용](building-on-the-command-line.md)<br/>
 Visual Studio IDE를 사용하지 않고 명령줄에서 직접 C/C++ 컴파일러 및 빌드 도구를 사용하는 방법을 설명합니다.
 
-[Visual Studio에서 DLL 빌드](dlls-in-visual-cpp.md) Visual Studio에서 C/C++ DLL(공유 라이브러리)을 만들고, 디버그하고 배포하는 방법입니다.
+[Visual Studio에서 Dll 빌드](dlls-in-visual-cpp.md) Visual Studio에서 C/C++ dll (공유 라이브러리)을 만들고 디버그 하 고 배포 하는 방법입니다.
 
-[연습: 정적 라이브러리](walkthrough-creating-and-using-a-static-library-cpp.md) 를 만들고 사용 하 여 .lib 이진 파일을 만드는 방법을 설명 합니다.
+[연습: 정적 라이브러리 만들기 및 사용](walkthrough-creating-and-using-a-static-library-cpp.md) .Lib 이진 파일을 만드는 방법
 
-[C/C++ 격리된 응용 프로그램 및 side-by-side 어셈블리 빌드](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) 격리된 응용 프로그램 및 side-by-side 어셈블리에 대한 아이디어를 기반으로 Windows 데스크톱 응용 프로그램의 배포 모델을 설명합니다.
+[C/C++ 격리 된 응용 프로그램 및 side-by-side 어셈블리 빌드](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) 격리 된 응용 프로그램 및 side-by-side 어셈블리의 개념에 따라 Windows 데스크톱 응용 프로그램의 배포 모델에 대해 설명 합니다.
 
-[64 비트, x64 대상 C++ 프로젝트 구성](configuring-programs-for-64-bit-visual-cpp.md) MSVC 빌드 도구로 64 비트 x64 하드웨어를 대상으로 지정하는 방법입니다.
+[64 C++ 비트, x64 대상에 대 한 프로젝트 구성](configuring-programs-for-64-bit-visual-cpp.md) MSVC build 도구를 사용 하 여 64 비트 x64 하드웨어를 대상으로 하는 방법입니다.
 
-[ARM 프로세서용 C++ 프로젝트 구성](configuring-programs-for-arm-processors-visual-cpp.md) MSVC 빌드 도구를 사용 하 여 ARM 하드웨어를 대상으로 지정하는 방법입니다.
+[ARM C++ 프로세서에 대 한 프로젝트 구성](configuring-programs-for-arm-processors-visual-cpp.md) MSVC build 도구를 사용 하 여 ARM 하드웨어를 대상으로 하는 방법입니다.
 
 [코드 최적화](optimizing-your-code.md) 프로그램 기반 최적화를 비롯 한 다양 한 방법으로 코드를 최적화 하는 방법입니다.
 
