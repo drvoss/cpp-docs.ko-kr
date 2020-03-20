@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515678"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545458"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal(C++/CLI 및 C++/CX)
 
@@ -92,7 +92,7 @@ public ref struct A {
 
 C#으로 작성된 다음 샘플은 이전 샘플에서 만든 메타데이터를 참조하고 **literal** 및 **static const** 변수의 영향을 보여 줍니다.
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404392"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544882"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>방법: 네이티브 함수에서 참조 클래스 수정
 
-CLR 배열 참조 클래스는 네이티브 함수에 전달 하 고 PInvoke 서비스를 사용 하 여 클래스를 수정할 수 있습니다.
+CLR 배열과 함께 참조 클래스를 네이티브 함수에 전달 하 고 PInvoke 서비스를 사용 하 여 클래스를 수정할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 네이티브 라이브러리를 컴파일하십시오.
+다음 네이티브 라이브러리를 컴파일합니다.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -49,9 +49,9 @@ extern "C"  {
 
 ## <a name="example"></a>예제
 
-다음 어셈블리를 컴파일하십시오.
+다음 어셈블리를 컴파일합니다.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -89,6 +89,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

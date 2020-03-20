@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153240"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544834"
 ---
-# <a name="lockwhen-enum"></a>lock_when 열거형
+# <a name="lock_when-enum"></a>lock_when 열거형
 
-지연 된 잠금을 지정합니다.
+지연 된 잠금을 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,15 +28,15 @@ enum lock_when {
 };
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-에 전달 될 때 [lock::lock](../dotnet/lock-lock.md), `lock_later` 잠금을 이제 수행할 필요가 임을 지정 합니다.
+[Lock:: lock](../dotnet/lock-lock.md)에 전달 되는 경우 `lock_later` 잠금이 현재 수행 되지 않도록 지정 합니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 여러 스레드에서 클래스의 단일 인스턴스를 사용 합니다.  클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 되도록 합니다.  주 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드가 여전히 존재 하며 일까 지 모든 작업자 스레드가 끝나기를 대기 요소가 해당 작업을 완료 하는 클래스의 동일한 인스턴스에서 잠금을 사용 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 일치 하는지 확인 합니다.  주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 모든 작업자 스레드가 존재 하는지 정기적으로 확인 하 고 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -126,8 +126,8 @@ All threads completed.
 
 **헤더 파일** \<msclr\lock.h >
 
-**Namespace** msclr
+Msclr **네임 스페이스**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [lock](../dotnet/lock.md)

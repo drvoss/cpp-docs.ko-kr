@@ -1,5 +1,5 @@
 ---
-title: '방법: PInvoke를 사용 하 여 관리 되는 코드에서 네이티브 Dll 호출'
+title: '방법: PInvoke를 사용하여 관리 코드로부터 네이티브 DLL 호출'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eb5d5669c49dd49a411c275f8845dbbab989df3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222813"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545092"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>방법: PInvoke를 사용 하 여 관리 되는 코드에서 네이티브 Dll 호출
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>방법: PInvoke를 사용하여 관리 코드로부터 네이티브 DLL 호출
 
-플랫폼 호출 (P/Invoke) 기능을 사용 하 여 관리 코드에서 관리 되지 않는 Dll에서 구현 되는 함수를 호출할 수 있습니다. DLL에 대 한 소스 코드를 사용할 수 없는 경우 P/Invoke 상호 운용에 대 한 유일한 옵션입니다. 그러나 Visual 다른.NET 언어와 달리 C++ P/Invoke를 대안을 제공 합니다. 자세한 내용은 [사용 C++ (암시적 PInvoke) Interop](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.
+관리 되지 않는 Dll에서 구현 되는 함수는 플랫폼 호출 (P/Invoke) 기능을 사용 하 여 관리 코드에서 호출할 수 있습니다. DLL에 대 한 소스 코드를 사용할 수 없는 경우에는 P/Invoke가 상호 운용을 위한 유일한 옵션입니다. 그러나 다른 .NET 언어와 달리 시각적 개체 C++ 는 P/Invoke에 대 한 대안을 제공 합니다. 자세한 내용은 [Interop 사용 C++ (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) 현재 픽셀의 화면 해상도 검색 하는 함수입니다.
+다음 코드 예제에서는 Win32 [Getsystemmetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) 함수를 사용 하 여 화면의 현재 해상도 (픽셀)를 검색 합니다.
 
-내장 형식만 인수로 사용할 값을 반환 하는 함수에 대 한 추가 작업 없이 필요 합니다. 함수 포인터, 배열 및 구조와 같은 다른 데이터 형식에 적절 한 데이터 마샬링이 되도록 추가 특성을 필요 합니다.
+인수 및 반환 값으로 내장 형식만 사용 하는 함수의 경우 추가 작업이 필요 하지 않습니다. 함수 포인터, 배열 및 구조와 같은 기타 데이터 형식에는 적절 한 데이터 마샬링을 보장 하기 위해 추가 특성이 필요 합니다.
 
-필요한 경우에 것이 좋습니다이 예제에서 설명한 대로 전역 네임 스페이스에 존재 하지 않는 있도록 P/Invoke 선언 값 클래스의 정적 멤버를 확인 합니다.
+반드시 필요한 것은 아니지만,이 예제에서 보여 주는 것 처럼 전역 네임 스페이스에 존재 하지 않도록 P/Invoke 선언에 값 클래스의 정적 멤버를 설정 하는 것이 좋습니다.
 
-```
+```cpp
 // pinvoke_basic.cpp
 // compile with: /clr
 using namespace System;
@@ -52,6 +52,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++에서 명시적 PInvoke 사용(DllImport 특성)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

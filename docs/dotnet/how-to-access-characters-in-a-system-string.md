@@ -1,5 +1,5 @@
 ---
-title: '방법: system:: string의 문자 액세스'
+title: '방법: System::String의 문자에 액세스'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222938"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545344"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>방법: system:: string의 문자 액세스
+# <a name="how-to-access-characters-in-a-systemstring"></a>방법: System::String의 문자에 액세스
 
-문자에 액세스할 수 있습니다는 <xref:System.String> 관리 되지 않는 고성능 호출에 대 한 개체 사용 하는 함수의 `wchar_t*` 문자열입니다. 메서드 생성의 첫 번째 문자는 내부 포인터는 <xref:System.String> 개체입니다. 이 포인터 수 직접 조작 또는 고정 되며 일반적인 필요한 함수에 전달 된 `wchar_t` 문자열입니다.
+`wchar_t*` 문자열을 사용 하는 관리 되지 않는 함수에 대 한 고성능 호출을 위해 <xref:System.String> 개체의 문자에 액세스할 수 있습니다. 메서드는 <xref:System.String> 개체의 첫 번째 문자에 대 한 내부 포인터를 생성 합니다. 이 포인터는 직접 조작 하거나 고정 하 고 일반 `wchar_t` 문자열이 필요한 함수에 전달할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-`PtrToStringChars` 반환을 <xref:System.Char>, 내부 포인터는 (라고도 `byref`). 따라서 가비지 수집의 대상이 됩니다. 네이티브 함수에 전달 하려는 경우가 아니면이 포인터를 고정할 필요가 없습니다.
+`PtrToStringChars`는 내부 포인터 (`byref`라고도 함) 인 <xref:System.Char>을 반환 합니다. 따라서 가비지 수집의 영향을 받습니다. 네이티브 함수에 전달 하지 않는 한이 포인터를 고정할 필요가 없습니다.
 
-다음과 같은 코드를 생각해 볼 수 있습니다.  고정 하기 때문에 필요 하지 않습니다 `ppchar` 내부 포인터 이며 업데이트도 가비지 수집기가 가리키는 문자열을 이동 하면 `ppchar`합니다. 없이 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)코드가 작동 하 고 잠재적인 성능 저하 인해 발생할 수 없습니다를 고정 하 여 합니다.
+다음과 같은 코드를 생각해 볼 수 있습니다.  `ppchar`는 내부 포인터이 고, 가비지 수집기가 가리키는 문자열을 이동 하는 경우 `ppchar`도 업데이트 하므로 고정이 필요 하지 않습니다. [Pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md)를 사용 하지 않으면 코드가 작동 하 고 고정으로 인 한 잠재적인 성능 저하가 발생 하지 않습니다.
 
-전달 하는 경우 `ppchar` 네이티브 함수에 다음을 고정 포인터 여야; 가비지 수집기가 관리 되지 않는 스택 프레임에 포인터를 업데이트할 수 없습니다.
+`ppchar`를 네이티브 함수에 전달 하는 경우 고정 포인터 여야 합니다. 가비지 수집기는 관리 되지 않는 스택 프레임의 포인터를 업데이트할 수 없습니다.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>예제
 
-이 예제에서는 고정이 필요한 위치를 표시 합니다.
+이 예제에서는 고정이 필요한 위치를 보여 줍니다.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>예제
 
-내부 포인터를 네이티브의 모든 속성에 C++ 포인터입니다. 예를 들어, 연결 된 데이터 구조를 탐색 하 고 삽입 및 하나의 포인터를 사용 하 여 삭제를 수행 하려면 사용할 수 있습니다.
+내부 포인터는 네이티브 C++ 포인터의 모든 속성을 포함 합니다. 예를 들어이 메서드를 사용 하 여 연결 된 데이터 구조를 탐색 하 고 하나의 포인터만 사용 하 여 삽입 및 삭제를 수행할 수 있습니다.
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

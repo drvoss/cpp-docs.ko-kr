@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: c5446e5e84491ff7d736ce3b3af49dacd471c010
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515648"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "79544413"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new(vtable의 새 슬롯)(C++/CLI 및 C++/CX)
 
@@ -40,7 +40,7 @@ Windows 런타임에서는 지원되지 않습니다.
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 샘플에서는 **new**의 결과를 보여 줍니다.
 
@@ -106,5 +106,4 @@ E::f() called
 ## <a name="see-also"></a>참고 항목
 
 [.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
-
 [Override 지정자](override-specifiers-cpp-component-extensions.md)

@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: cdfc278225ce4ab418dfaaf41fb413d088ad77df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970800968733a285929c3bfa42594360203e573a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188410"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545170"
 ---
 # <a name="initonly-ccli"></a>initonly(C++/CLI)
 
-**initonly** 해당 변수 할당을 표시 하는 상황에 맞는 키워드는 선언 또는 동일한 클래스의 정적 생성자에서의 일부로 서만 발생할 수 있습니다.
+**initonly** 는 동일한 클래스의 정적 생성자 또는 선언의 일부로만 변수 할당이 발생할 수 있음을 나타내는 상황에 맞는 키워드입니다.
 
 다음 예제에서는 `initionly`을 사용하는 방법을 보여 줍니다.
 
-```
+```cpp
 // mcpp_initonly.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -36,6 +36,6 @@ ref struct Y1 {
 };
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 및 구조체(C++)](../extensions/classes-and-structs-cpp-component-extensions.md)
+[클래스 및 구조체](../extensions/classes-and-structs-cpp-component-extensions.md)

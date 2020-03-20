@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4db75653251a558d6f43f5be63098fbb26e1e6ff
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515958"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545464"
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
 
@@ -49,7 +49,7 @@ int main() {
 3
 ```
 
-## <a name="code-example"></a>코드 예제
+## <a name="code-example"></a>코드 예
 
 다음 예제에서는 가변 개수의 인수를 사용하는 Visual C++ 함수를 C#에서 호출하는 방법을 보여 줍니다.
 
@@ -68,7 +68,7 @@ public:
 
 C#에서 `ParamArray` 매개 변수에 전달된 인수를 가변 개수의 인수로 호출할 수 있습니다. 다음 코드 샘플은 C#으로 작성되었습니다.
 
-```cs
+```csharp
 // mcppv2_paramarray3.cs
 // compile with: /r:mcppv2_paramarray2.dll
 // a C# program

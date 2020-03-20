@@ -1,15 +1,15 @@
 ---
 title: 단순 소비자 구현
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707527"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544707"
 ---
 # <a name="implementing-a-simple-consumer"></a>단순 소비자 구현
 
@@ -33,7 +33,7 @@ Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 �
 > [!NOTE]
 > `MyProv`([단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)에 설명된 공급자와 같음)를 테스트할 소비자 애플리케이션을 빌드하려면 [소비자에 책갈피 지원 추가](#bookmark)에 설명된 대로 책갈피 지원을 포함해야 합니다.
 
-## <a name="retrieve" ></a> 소비자를 사용하여 데이터 검색
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> 소비자를 사용하여 데이터 검색
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>OLE DB 소비자를 사용하도록 콘솔 애플리케이션을 수정하려면 다음을 수행합니다.
 
@@ -42,7 +42,7 @@ Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 �
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,7 +64,7 @@ Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 �
     }
     ```
 
-## <a name="bookmark" ></a> 소비자에 책갈피 지원 추가
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> 소비자에 책갈피 지원 추가
 
 책갈피는 테이블에서 행을 고유하게 식별하는 열입니다. 일반적으로 키 열이지만 항상 그런 것은 아니며, 공급자별로 다릅니다. 이 섹션에서는 책갈피 지원을 추가하는 방법을 보여 줍니다. 책갈피 지원을 추가하려면 사용자 레코드 클래스에서 다음 단계를 수행해야 합니다.
 

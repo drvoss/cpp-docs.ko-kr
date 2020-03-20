@@ -1,34 +1,34 @@
 ---
-title: '방법: STL/CLR 컨테이너에서.NET 컬렉션으로 변환'
+title: '방법: STL/CLR 컨테이너에서 .NET 컬렉션으로 변환'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: cf67e362751dd164916cc94cd644d55110d88a5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7539b10ca6c503aede61d19de3d14fb9dcee8be
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387528"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545308"
 ---
-# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>방법: STL/CLR 컨테이너에서.NET 컬렉션으로 변환
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>방법: STL/CLR 컨테이너에서 .NET 컬렉션으로 변환
 
-이 항목에서는 STL/CLR 컨테이너는 해당.NET 컬렉션으로 변환 하는 방법을 보여 줍니다. 예를 들어, STL/CLR을 변환 하는 방법을 알아보겠습니다 [벡터](../dotnet/vector-stl-clr.md) .net <xref:System.Collections.Generic.ICollection%601> 및 STL/CLR을 변환 하는 방법 [지도](../dotnet/map-stl-clr.md) .net <xref:System.Collections.Generic.IDictionary%602>, 모든 컬렉션에 대 한 비슷한 절차 이지만 및 컨테이너입니다.
+이 항목에서는 STL/CLR 컨테이너를 해당 하는 .NET 컬렉션으로 변환 하는 방법을 보여 줍니다. 예를 들어 STL/CLR [벡터](../dotnet/vector-stl-clr.md) 를 .net <xref:System.Collections.Generic.ICollection%601>로 변환 하는 방법과 STL/clr [맵을](../dotnet/map-stl-clr.md) .net <xref:System.Collections.Generic.IDictionary%602>로 변환 하는 방법을 보여 주지만 프로시저는 모든 컬렉션 및 컨테이너와 유사 합니다.
 
 ### <a name="to-create-a-collection-from-a-container"></a>컨테이너에서 컬렉션을 만들려면
 
-1. 다음 방법 중 하나를 사용 합니다.
+1. 다음 방법 중 하나를 사용합니다.
 
-   - 컨테이너의 일부를 변환 하려면 호출을 [make_collection](../dotnet/make-collection-stl-clr.md) 함수 및.NET 컬렉션에 복사 될 시작 반복기 및 STL/CLR 컨테이너의 끝 반복기를 전달 합니다. 이 템플릿 함수는 템플릿 인수로 STL/CLR 반복기를 사용합니다. 이 메서드는 첫 번째 예제입니다.
+   - 컨테이너의 일부를 변환 하려면 [make_collection](../dotnet/make-collection-stl-clr.md) 함수를 호출 하 고, STL/CLR 컨테이너의 시작 반복기와 끝 반복기를 전달 하 여 .net 컬렉션에 복사 합니다. 이 템플릿 함수는 STL/CLR 반복기를 템플릿 인수로 사용 합니다. 첫 번째 예제에서는이 메서드를 보여 줍니다.
 
-   - 전체 컨테이너를으로 변환 하려면 적절 한.NET 컬렉션 인터페이스 또는 인터페이스 컬렉션 컨테이너를 캐스팅 합니다. 이 메서드는 두 번째 예제입니다.
+   - 전체 컨테이너를 변환 하려면 컨테이너를 적절 한 .NET 컬렉션 인터페이스 또는 인터페이스 컬렉션으로 캐스팅 합니다. 두 번째 예제에서는이 메서드를 보여 줍니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 STL/CLR 만듭니다 `vector` 5 요소를 추가 합니다. 그런 다음 호출 하 여.NET 컬렉션을 만들겠습니다는 `make_collection` 함수입니다. 마지막으로 새로 만든된 컬렉션의 내용을 표시 합니다.
+이 예제에서는 STL/CLR `vector` 만들고 요소 5 개를 추가 합니다. 그런 다음 `make_collection` 함수를 호출 하 여 .NET 컬렉션을 만듭니다. 마지막으로 새로 만든 컬렉션의 내용을 표시 합니다.
 
-```
+```cpp
 // cliext_convert_vector_to_icollection.cpp
 // compile with: /clr
 
@@ -70,9 +70,9 @@ The contents of the System::Collections::Generic::ICollection are:
 
 ## <a name="example"></a>예제
 
-이 예제에서는 STL/CLR 만듭니다 `map` 5 요소를 추가 합니다. .NET을 만들겠습니다. 그런 다음 <xref:System.Collections.Generic.IDictionary%602> 할당 된 `map` 직접. 마지막으로 새로 만든된 컬렉션의 내용을 표시 합니다.
+이 예제에서는 STL/CLR `map` 만들고 요소 5 개를 추가 합니다. 그런 다음 .NET <xref:System.Collections.Generic.IDictionary%602> 만들고 `map`를 직접 할당 합니다. 마지막으로 새로 만든 컬렉션의 내용을 표시 합니다.
 
-```
+```cpp
 // cliext_convert_map_to_idictionary.cpp
 // compile with: /clr
 
@@ -111,7 +111,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)<br/>
 [방법: .NET 컬렉션에서 STL/CLR 컨테이너로 변환](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>

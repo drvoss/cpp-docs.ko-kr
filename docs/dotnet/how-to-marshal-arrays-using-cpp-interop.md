@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용 하 여 배열 마샬링 C++ Interop'
+title: '방법: C++ Interop를 사용하여 배열 마샬링'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324924"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544948"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>방법: 사용 하 여 배열 마샬링 C++ Interop
+# <a name="how-to-marshal-arrays-using-c-interop"></a>방법: C++ Interop를 사용하여 배열 마샬링
 
-이 항목에서는 시각적 개체의 한 측면을 보여 줍니다. C++ 상호 운용성. 자세한 내용은 [사용 C++ (암시적 PInvoke) Interop](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.
+이 항목에서는 시각적 C++ 상호 운용성의 한 가지 측면을 보여 줍니다. 자세한 내용은 [Interop 사용 C++ (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)을 참조 하세요.
 
-다음 코드 예제에서 사용 된 [관리 되는, 관리 되지 않는](../preprocessor/managed-unmanaged.md) 구현 #pragma 지시문 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수에서 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.
+다음 코드 예제에서는 관리 되는 관리 [되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 사용 하 여 동일한 파일에서 관리 되는 함수 및 관리 되지 않는 함수를 구현 하지만 이러한 함수는 별도의 파일에 정의 된 경우와 동일한 방식으로 상호 운용 됩니다 관리 되지 않는 함수만 포함 하는 파일은 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 사용 하 여 컴파일할 필요가 없습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 관리 되는 배열을 관리 되지 않는 함수에 전달 하는 방법에 설명 합니다. 관리 되는 함수를 사용 하 여 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) 배열에 대 한 관리 되지 않는 함수를 호출 하기 전에 가비지 수집 하지 않으려면입니다. 관리 되지 않는 함수 포인터로 고정 된 GC 힙에 제공 함으로써 배열의 복사본을 만드는 오버 헤드를 방지할 수 있습니다. 관리 되지 않는 함수에는 GC 힙 메모리에 액세스 하는, 배열의 내용을 수정 및 변경 내용이 설명 하기 위해 관리 되는 컨트롤을 다시 시작할 때를 반영 합니다.
+다음 예제에서는 관리 되는 배열을 관리 되지 않는 함수에 전달 하는 방법을 보여 줍니다. 관리 되는 함수는 관리 되지 않는 함수를 호출 하기 전에 [pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md) 를 사용 하 여 배열에 대 한 가비지 수집을 억제 합니다. 관리 되지 않는 함수에 GC 힙에 고정 된 포인터를 제공 하면 배열의 복사본을 만드는 오버 헤드를 피할 수 있습니다. 관리 되지 않는 함수가 GC 힙 메모리에 액세스 함을 보여 주기 위해 배열의 내용을 수정 하 고 관리 되는 함수가 제어를 다시 시작할 때 변경 내용이 반영 됩니다.
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 관리 되는 함수에 관리 되지 않는 배열을 전달 하는 방법을 보여 줍니다. 컨트롤을 회복 될 때 관리 되지 않는 함수에 적용 하는 데 관리 되는 함수에 의해 변경 내용을 허용 하는 직접 (달리 관리 되는 배열을 만들고 배열 콘텐츠를 복사), 배열의 메모리를 액세스 하는 관리 되는 함수입니다.
+다음 예제에서는 관리 되는 함수에 관리 되지 않는 배열을 전달 하는 방법을 보여 줍니다. 관리 되는 함수는 관리 되는 배열을 만들고 배열 콘텐츠를 복사 하는 것과는 반대로 배열 메모리에 직접 액세스 하 여 관리 되는 함수가 제어를 다시 설정할 때 관리 되지 않는 함수에 반영 되도록 합니다.
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>
@@ -129,6 +129,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

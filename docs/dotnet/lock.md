@@ -3,21 +3,21 @@ title: lock
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- lock
+- msclr/lock
 helpviewer_keywords:
 - lock
 - synchronization
 ms.assetid: 48c90da6-d6fb-4710-9c7c-2b9c9344bda1
-ms.openlocfilehash: 5776baa222cacd9ab4a2824261425fdc077c4fc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6d7dc28fc840a99fe0f3f05f92252e996b37944
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153387"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545854"
 ---
 # <a name="lock"></a>lock
 
-정의된 `lock` 자동화 개체에 대한 액세스를 동기화하는 클래스입니다.
+개체에 대 한 액세스 동기화를 자동화 하는 `lock` 클래스를 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,7 +25,7 @@ ms.locfileid: "62153387"
 #include <msclr\lock.h>
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이 헤더 파일의 내용:
 
@@ -33,6 +33,6 @@ ms.locfileid: "62153387"
 
 [lock_when 열거형](../dotnet/lock-when-enum.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 지원 라이브러리](../dotnet/cpp-support-library.md)

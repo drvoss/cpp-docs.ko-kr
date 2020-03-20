@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516518"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544653"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>플랫폼, 기본값 및 cli 네임스페이스(C++/CLI 및 C++/CX)
 
@@ -26,7 +26,7 @@ Visual Studio에서는 프로젝트를 만들 때 프로젝트의 기본 네임�
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-자세한 내용은 [네임스페이스 및 형식 표시 유형(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx)을 참조하세요.
+자세한 내용은 [네임스페이스 및 형식 표시 유형(C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)을 참조하세요.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -58,7 +58,7 @@ C++/CLI에서는 **cli** 네임스페이스를 지원합니다. `/clr`로 컴파
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 **cli** 네임스페이스의 기호를 코드에서 사용자 정의 기호로 사용할 수 있음을 보여 줍니다.  그러나 사용자 정의 기호로 사용한 경우 같은 이름의 **cli** 언어 요소에 대한 참조를 명시적 또는 암시적으로 한정해야 합니다.
 

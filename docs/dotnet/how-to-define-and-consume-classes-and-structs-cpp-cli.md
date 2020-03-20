@@ -6,17 +6,17 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856369"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79545542"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>방법: 클래스 및 구조체 정의 및 사용(C++/CLI)
 
 이 문서에서는/Cli에서 C++사용자 정의 참조 형식 및 값 형식을 정의 하 고 사용 하는 방법을 보여 줍니다.
 
-##  <a name="BKMK_Contents"></a> 목차
+##  <a name="contents"></a><a name="BKMK_Contents"></a> Contents
 
 [개체 인스턴스화](#BKMK_Object_instantiation)
 
@@ -38,7 +38,7 @@ ms.locfileid: "78856369"
 
 [소멸자 및 종료자](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a>개체 인스턴스화
+##  <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>개체 인스턴스화
 
 참조 (ref) 형식은 스택 또는 네이티브 힙이 아닌 관리 되는 힙에서만 인스턴스화할 수 있습니다. 값 형식은 스택이나 관리 되는 힙에서 인스턴스화할 수 있습니다.
 
@@ -93,7 +93,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a>암시적 추상 클래스
+##  <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>암시적 추상 클래스
 
 *암시적 추상 클래스* 는 인스턴스화할 수 없습니다. 클래스의 기본 형식이 인터페이스이며 클래스가 인터페이스의 모든 멤버 함수를 구현하지 않는 경우 클래스는 암시적 추상입니다.
 
@@ -121,7 +121,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a>형식 표시 유형
+##  <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>형식 표시 유형
 
 어셈블리가 참조된 경우 어셈블리의 형식이 어셈블리 외부에서 표시되거나 표시되지 않도록 CLR(공용 언어 런타임)의 표시 유형을 제어할 수 있습니다.
 
@@ -218,18 +218,18 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a>멤버 표시 유형
+##  <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>멤버 표시 유형
 
 `public`, `protected` 및 `private` 액세스 지정자 쌍을 사용하여 어셈블리 외부에서 public 클래스의 멤버에 액세스하는 것과 다르게 동일한 어셈블리 내에서 public 클래스의 멤버에 액세스할 수 있습니다.
 
 이 표에서는 다양한 액세스 지정자의 효과를 요약하여 보여 줍니다.
 
-|지정자|효과|
+|지정자|영향|
 |---------------|------------|
 |public|멤버는 어셈블리 내부 및 외부에서 액세스할 수 있습니다.  자세한 내용은 [public](../cpp/public-cpp.md) 을 참조 하십시오.|
-|private|멤버는 어셈블리 내부 및 외부 모두에서 액세스할 수 없습니다.  자세한 내용은 [private](../cpp/private-cpp.md) 을 참조 하십시오.|
-|protected|멤버는 파생된 형식에 한해 어셈블리 내부 및 외부에서 액세스할 수 있습니다.  자세한 내용은 [보호](../cpp/protected-cpp.md) 를 참조 하세요.|
-|internal|멤버는 어셈블리 내부에서 public 이지만 어셈블리 외부에서는 private입니다.  `internal`는 상황에 맞는 키워드입니다.  자세한 내용은 [상황에 맞는 키워드](../extensions/context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요.|
+|프라이빗|멤버는 어셈블리 내부 및 외부 모두에서 액세스할 수 없습니다.  자세한 내용은 [private](../cpp/private-cpp.md) 을 참조 하십시오.|
+|보호된|멤버는 파생된 형식에 한해 어셈블리 내부 및 외부에서 액세스할 수 있습니다.  자세한 내용은 [보호](../cpp/protected-cpp.md) 를 참조 하세요.|
+|내부|멤버는 어셈블리 내부에서 public 이지만 어셈블리 외부에서는 private입니다.  `internal`는 상황에 맞는 키워드입니다.  자세한 내용은 [상황에 맞는 키워드](../extensions/context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요.|
 |public protected 또는 protected public|멤버는 어셈블리 내부에서 public이지만 어셈블리 외부에서는 protected입니다.|
 |개인 보호 또는 보호 된 개인|멤버는 어셈블리 내부에서 protected이지만 어셈블리 외부에서는 private입니다.|
 
@@ -406,7 +406,7 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a>Public 및 private 네이티브 클래스
+##  <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>Public 및 private 네이티브 클래스
 
 네이티브 형식은 관리되는 형식에서 참조될 수 있습니다.  예를 들어 관리되는 형식의 함수는 네이티브 구조체 형식의 매개 변수를 사용할 수 있습니다.  관리되는 형식과 함수가 어셈블리 내에서 public이면 네이티브 형식도 public이어야 합니다.
 
@@ -445,7 +445,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a> 정적 생성자
+##  <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a> 정적 생성자
 
 클래스나 구조체 같은 CLR 형식은 정적 데이터 멤버를 초기화하는 데 사용할 수 있는 정적 생성자를 보유할 수 있습니다.  정적 생성자는 한 번만 호출되며 형식의 정적 멤버가 처음으로 액세스하기 전에 호출됩니다.
 
@@ -491,13 +491,13 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>This 포인터의 의미 체계
+##  <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>This 포인터의 의미 체계
 
 Visual C++를 사용하여 형식을 정의하는 경우 참조 형식에서 `this` 포인터는 "핸들" 형식입니다. 값 형식에서 `this` 포인터는 "내부 포인터" 형식입니다.
 
 이러한 서로 다른 의미 체계의 `this` 포인터는 기본 인덱서가 호출될 때 예기치 않은 동작이 발생할 수 있습니다. 다음 예제에서는 참조 형식과 값 형식 모두에서 기본 인덱서에 액세스하는 올바른 방법을 보여 줍니다.
 
-자세한 내용은 다음 항목을 참조하세요.
+자세한
 
 - [개체 연산자에 대한 핸들(^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
@@ -546,7 +546,7 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a>서명 숨기기 함수
+##  <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>서명 숨기기 함수
 
 표준 C++에서 기본 클래스의 함수는 파생 클래스 함수에 동일하지 않은 매개 변수의 수나 종류가 있는 경우에도 파생 클래스에서 동일한 이름을 가진 함수에 의해 숨겨져 있습니다. 이를 *이름으로 숨기기* 의미 체계 라고 합니다. 참조 형식에서 기본 클래스의 함수는 이름 및 매개 변수의 목록이 모두 동일한 경우 파생 클래스의 함수에 의해서만 숨겨질 수 있습니다. 이를 *서명 숨기기* 의미 체계 라고 합니다.
 
@@ -654,7 +654,7 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a>복사 생성자
+##  <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>복사 생성자
 
 C++ 표준에 따르면 복사 생성자는 개체가 동일한 주소에서 생성되고 제거되는 것처럼 개체가 이동하면 호출됩니다.
 
@@ -719,7 +719,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a>소멸자 및 종료자
+##  <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>소멸자 및 종료자
 
 참조 형식에서 소멸자는 리소스의 명확한 정리를 수행합니다. 종료자는 관리되지 않는 리소스를 정리하고 소멸자에 의해 명확하게 호출되거나 가비지 수집기에 의해 불명확하게 호출될 수 있습니다. 표준 C++의 소멸자에 대 한 자세한 내용은 [소멸자](../cpp/destructors-cpp.md)를 참조 하세요.
 

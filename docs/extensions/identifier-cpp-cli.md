@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515788"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545470"
 ---
-# <a name="identifier-ccli"></a>__identifier(C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier(C++/CLI)
 
 C++ 키워드를 식별자로 사용할 수 있습니다.
 
@@ -37,13 +37,13 @@ __identifier(C++_keyword)
 
 컴파일러 옵션: `/ZW`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 **예제**
 
 다음 예제에서는 C#으로 **template** 클래스를 만들고 DLL로 배포합니다. **template** 클래스를 사용하는 C++/CLI 프로그램에서, **__identifier** 키워드는 **template**이 표준 C++ 키워드라는 팩트를 숨깁니다.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -71,11 +71,11 @@ int main() {
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 C#으로 **template** 클래스를 만들고 DLL로 배포합니다. **template** 클래스를 사용하는 C++/CLI 프로그램에서, **__identifier** 키워드는 **template**이 표준 C++ 키워드라는 팩트를 숨깁니다.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
