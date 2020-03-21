@@ -14,12 +14,12 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177348"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078285"
 ---
 # <a name="resources-property-page"></a>리소스 속성 페이지
 
@@ -35,7 +35,7 @@ ms.locfileid: "70177348"
 
 기호 정의를 해제 합니다. /u
 
-## <a name="culture"></a>Culture
+## <a name="culture"></a>문화권
 
 리소스에 사용 되는 문화권 (예: 미국 영어 또는 이탈리아어)을 나열 합니다. (/l [num])
 
@@ -59,10 +59,10 @@ ms.locfileid: "70177348"
 
 리소스 파일의 이름을 지정 합니다 (/fo [file]).
 
-## <a name="null-terminate-strings"></a>Null 종료 문자열 
+## <a name="null-terminate-strings"></a>Null 종료 문자열
 
 문자열 테이블의 모든 문자열에 null을 추가 합니다. /n
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)
+[C++프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)

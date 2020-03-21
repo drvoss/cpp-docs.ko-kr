@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422711"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078054"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>형식 사양 구문: printf 및 wprintf 함수
 
-다양한 `printf` 및 `wprintf` 함수는 형식 문자열 및 선택적 인수를 사용하고 출력에 대해 형식이 지정된 시퀀스를 생성합니다. 형식 문자열에는 출력용 리터럴 문자이거나 출력에서 인수에 형식을 지정하는 방법을 설명하는 인코드된 *변환 사양*인 *지시문*이 없거나 하나 이상 포함되어 있습니다. 이 문서에서는 형식 문자열에서 변환 사양을 인코딩하는 데 사용되는 구문을 설명합니다. 이러한 함수의 목록을 보려면 [스트림 I/O](../c-runtime-library/stream-i-o.md)를 참조하세요. 
+다양한 `printf` 및 `wprintf` 함수는 형식 문자열 및 선택적 인수를 사용하고 출력에 대해 형식이 지정된 시퀀스를 생성합니다. 형식 문자열에는 출력용 리터럴 문자이거나 출력에서 인수에 형식을 지정하는 방법을 설명하는 인코드된 *변환 사양*인 *지시문*이 없거나 하나 이상 포함되어 있습니다. 이 문서에서는 형식 문자열에서 변환 사양을 인코딩하는 데 사용되는 구문을 설명합니다. 이러한 함수의 목록을 보려면 [스트림 I/O](../c-runtime-library/stream-i-o.md)를 참조하세요.
 
 다음 양식에서 변환 사양은 선택적 필드 및 필수 필드로 이루어져 있습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "79422711"
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2015에서는 `printf` 및 `scanf` 함수 패밀리가 **인라인으로** 선언 되었으며 `<stdio.h>` 및 `<conio.h>` 헤더로 이동 했습니다. 이전 코드를 마이그레이션하는 경우 이러한 함수와의 연결에 *LNK2019* 가 표시 될 수 있습니다. 자세한 내용은 [Visual C++ change history 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)를 참조 하세요.
 
 ## <a name="type-conversion-specifier"></a>형식 변환 지정자
@@ -118,7 +118,7 @@ Visual Studio 2015 이전에는 CRT에서 제한 없음, 무한 및 NAN 값의 �
 
 ### <a name="flag-characters"></a>플래그 문자
 
-|플래그|의미|기본값|
+|플래그|의미|기본|
 |----------|-------------|-------------|
 |**-**|지정한 필드 너비 내에서 결과를 왼쪽에 맞춰 표시합니다.|오른쪽에 맞춰 표시합니다.|
 |**+**|부호 있는 형식에는 기호(+ 또는 –)를 사용하여 출력 값에 접두사를 추가합니다.|부호 있는 음수 값(-)에 대해서만 기호가 표시됩니다.|
@@ -160,7 +160,7 @@ Visual Studio 2015 이전에는 CRT에서 제한 없음, 무한 및 NAN 값의 �
 
 ### <a name="how-precision-values-affect-type"></a>전체 자릿수 값이 형식에 영향을 주는 방식
 
-|Type|의미|기본값|
+|형식|의미|기본|
 |----------|-------------|-------------|
 |**a**, **A**|정밀도는 소수점 뒤의 자릿수를 지정합니다.|기본 전체 자릿수는 13입니다. 전체 자릿수가 0인 경우 **#** 플래그를 사용하지 않으면 소수점이 인쇄되지 않습니다.|
 |**c**, **C**|전체 자릿수가 적용되지 않습니다.|문자가 출력됩니다.|

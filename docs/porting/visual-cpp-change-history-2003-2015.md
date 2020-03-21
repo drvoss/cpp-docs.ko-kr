@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076861"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 
@@ -36,9 +36,9 @@ ms.locfileid: "79422681"
 
 - [동시성 런타임 주요 변경 내용](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual Studio 2015 규칙 변경 내용
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Visual Studio 2015 규칙 변경 내용
 
-###  <a name="BK_CRT"></a> CRT(C 런타임 라이브러리)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> CRT(C 런타임 라이브러리)
 
 #### <a name="general-changes"></a>일반 변경 내용
 
@@ -78,7 +78,7 @@ ms.locfileid: "79422681"
 
 - **부동 소수점 적합성**
 
-   NaN 및 무한대와 같은 특수한 경우 입력과 관련된 IEEE-754 및 C11 Annex F 사양에 대한 적합성을 향상하고자 수식 라이브러리가 많이 변경되었습니다. 예를 들어 이전 라이브러리 버전에서 종종 오류로 처리되었던 자동 NaN 입력은 더 이상 오류로 처리되지 않습니다. [IEEE 754 표준](https://standards.ieee.org/standard/754-2008.html) (영문) 및 [C11 표준](http://www.iso-9899.info/wiki/The_Standard)(영문)의 부록 F를 참조하세요.
+   NaN 및 무한대와 같은 특수한 경우 입력과 관련된 IEEE-754 및 C11 Annex F 사양에 대한 적합성을 향상하고자 수식 라이브러리가 많이 변경되었습니다. 예를 들어 이전 라이브러리 버전에서 종종 오류로 처리되었던 자동 NaN 입력은 더 이상 오류로 처리되지 않습니다. [IEEE 754 표준](https://standards.ieee.org/standard/754-2008.html) (영문) 및 [C11 표준](https://www.iso.org/standard/57853.html)(영문)의 부록 F를 참조하세요.
 
    이 변경 내용 때문에 컴파일 시간 오류가 발생하지 않지만, 프로그램이 표준에 따라 다르고 더 올바르게 동작할 수 있습니다.
 
@@ -106,7 +106,7 @@ ms.locfileid: "79422681"
 
    이제 C++ 코드를 컴파일할 때 [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)는 컴파일 시간에 전달된 인수가 참조 형식이 아닌지 유효성을 검사합니다. 참조 형식 인수는 C++ 표준에 따라 금지됩니다.
 
-#### <a name="stdio_and_conio"></a>\<stdio.h > 및 \<conio. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h > 및 \<conio. h >
 
 - **printf 및 scanf 함수 패밀리는 현재 인라인으로 정의됩니다.**
 
@@ -303,7 +303,7 @@ ms.locfileid: "79422681"
 
    현재 CLOCKS_PER_SEC 매크로는 C 언어에 필요한 형식 `clock_t`의 정수로 확장됩니다.
 
-####  <a name="BK_STL"></a> C++ 표준 라이브러리
+####  <a name="c-standard-library"></a><a name="BK_STL"></a> C++ 표준 라이브러리
 
 새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전을 포함 하는 매크로입니다. 예를 들어 Visual Studio 2013의 경우 1800입니다. 이 검사에서는 DLL 혼합을 감지할 수 없으며 Visual Studio 2008이 하를 포함 하는 혼합을 감지할 수 없습니다.
 
@@ -385,7 +385,7 @@ ms.locfileid: "79422681"
 
    비표준 `launch::any` 및 `launch::sync` 정책이 제거되었습니다. 대신 `launch::any`의 경우 `launch:async | launch:deferred`를 사용합니다. `launch::sync`의 경우 `launch::deferred`을 사용합니다. [launch 열거형](../standard-library/future-enums.md#launch)을 참조하세요.
 
-####  <a name="BK_MFC"></a> MFC 및 ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a> MFC 및 ATL
 
 - **MFC(Microsoft Foundation Class)**
 
@@ -393,7 +393,7 @@ ms.locfileid: "79422681"
 
    Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.
 
-####  <a name="BK_ConcRT"></a> 동시성 런타임
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> 동시성 런타임
 
 - **concurrency::Context::Yield와 충돌하는 Windows.h의 Yield 매크로**
 
@@ -421,7 +421,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - [업데이트 3의 규칙 향상](#VS_Update3)
 
-###  <a name="VS_RTM"></a> Visual Studio 2015의 규칙 향상
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Visual Studio 2015의 규칙 향상
 
 - /Zc:forScope- 옵션
 
@@ -658,11 +658,11 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     enum class my_type : size_t {};
     ```
 
-   그런 다음, **대신 이 형식을 두 번째 인수로 사용하도록**placement new**및**delete`size_t`의 정의를 변경합니다. placement new에 대한 호출을 업데이트하여 새 형식을 전달하고(예: `static_cast<my_type>`을 사용하여 정수 값에서 변환) **new** 및 **delete**의 정의를 업데이트하여 다시 정수 형식으로 캐스팅해야 합니다. 여기에 **열거형**을 사용할 필요가 없고 `size_t` 멤버가 있는 클래스 형식도 사용할 수 있습니다.
+   그런 다음, **대신 이 형식을 두 번째 인수로 사용하도록**placement new**및**delete`size_t`의 정의를 변경합니다. 또한 새 형식을 전달 하 고 (예: 정수 값에서 변환 하는 데 `static_cast<my_type>`를 사용 하 여) **new 및** **delete** 의 정의를 업데이트 하 여 다시 정수 형식으로 캐스팅 해야 합니다. 이에 대 한 **열거형** 을 사용할 필요가 없습니다. `size_t` 멤버를 포함 하는 클래스 형식도 작동 합니다.
 
    또 다른 솔루션은 **placement new**를 함께 제거하는 것입니다. 코드에서 **placement new**를 사용하여 placement 인수가 할당되거나 삭제되는 개체 크기와 같은 메모리 풀을 구현하면 사용자 지정 메모리 풀 코드를 바꾸는 데는 크기 지정된 할당 해제 기능이 적합할 수 있고, placement 함수를 제거하고, placement 함수 대신 인수가 두 개인 **delete** 연산자만 사용할 수 있습니다.
 
-   코드를 바로 업데이트하지 않으려면 컴파일러 옵션 `/Zc:sizedDealloc-`를 사용하여 이전 동작으로 되돌릴 수 있습니다. 이 옵션을 사용하면 인수가 두 개인 delete 함수가 존재하지 않으므로 **placement delete** 연산자와 충돌하지 않습니다.
+   코드를 바로 업데이트하지 않으려면 컴파일러 옵션 `/Zc:sizedDealloc-`를 사용하여 이전 동작으로 되돌릴 수 있습니다. 이 옵션을 사용 하면 인수가 두 개인 delete 함수가 존재 하지 않으며 **placement delete** 연산자와 충돌 하지 않습니다.
 
 - **공용 구조체 데이터 멤버**
 
@@ -1697,7 +1697,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     C c;
     ```
 
-###  <a name="VS_Update1"></a> 업데이트 1의 규칙 향상
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> 업데이트 1의 규칙 향상
 
 - **개인 가상 기본 클래스 및 간접 상속**
 
@@ -2201,7 +2201,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-###  <a name="VS_Update2"></a> 업데이트 2의 규칙 향상
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> 업데이트 2의 규칙 향상
 
 - **SFINAE 식에 대한 부분 지원으로 인해 추가 경고 및 오류가 발생할 수 있습니다.**
 
@@ -2463,7 +2463,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    이러한 방식으로 작성된 코드를 수정하려면 연산자 정의를 헤더 파일에서 해당하는 소스 파일로 이동해야 합니다.
 
-###  <a name="VS_Update3"></a> 업데이트 3의 규칙 향상
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> 업데이트 3의 규칙 향상
 
 - **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)
 
@@ -2854,7 +2854,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    Visual Studio 2012에서 `E1` 식의 `E1::b`는 글로벌 범위에서 `::E1`로 확인되었습니다. Visual Studio 2013에서 `E1` 식의 `E1::b`는 `typedef E2`의 `main()` 정의로 확인되며 `::E2` 형식을 갖습니다.
 
-- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. **가상** 함수가 있지만 **가상** 함수가 포함된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 **가상** 함수 테이블에 포인터를 삽입합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
+- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 가상 **함수가 있지만** **가상** 함수가 포함 된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 **가상** 함수 테이블에 포인터를 삽입 합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   코드에서 이전 릴리스가 최적화 하려고 했던 위치를 찾으려면 해당 릴리스의 컴파일러를 `/W3` 컴파일러 옵션과 함께 사용 하 고 경고 C4370를 설정 합니다. 다음은 그 예입니다.
+   코드에서 이전 릴리스가 최적화 하려고 했던 위치를 찾으려면 해당 릴리스의 컴파일러를 `/W3` 컴파일러 옵션과 함께 사용 하 고 경고 C4370를 설정 합니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     #pragma warning(default:4370)
@@ -2932,7 +2932,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - `#include <algorithm>` 또는 `std::min()`를 호출하는 경우 `std::max()`을 사용해야 합니다.
 
-- 기존 코드에서 이전 릴리스의 시뮬레이트된 범위가 지정된 열거형을 사용하는 경우(범위가 지정되지 않은 일반적인 열거형이 네임스페이스에 래핑됨) 이를 변경해야 합니다. 예를 들어 `std::future_status::future_status` 형식을 참조한 경우 이제는 `std::future_status`로 지정해야 합니다. 그러나 대부분의 코드는 영향을 받지 않습니다. 예를 들어 `std::future_status::ready`는 계속 컴파일됩니다.
+- 기존 코드에서 이전 릴리스의 시뮬레이션 된 범위가 지정 된 열거형을 사용 하는 경우 (네임 스페이스로 래핑된 기존의 범위가 지정 되지 않은 열거형) 변경 해야 합니다. 예를 들어 `std::future_status::future_status` 형식을 참조한 경우 이제는 `std::future_status`로 지정해야 합니다. 그러나 대부분의 코드는 영향을 받지 않습니다. 예를 들어 `std::future_status::ready`는 계속 컴파일됩니다.
 
 - `explicit operator bool()`이 operator unspecified-bool-type()보다 더 엄격합니다. `explicit operator bool()`은 bool로의 명시적 변환(예: `shared_ptr<X> sp`의 경우 `static_cast<bool>(sp)` 및 `bool b(sp)`가 유효함)을 허용할 뿐만 아니라 bool로의 부울 테스트 가능한 "컨텍스트 변환"(예: `if (sp)`, `!sp`, `sp &&`)도 허용합니다. 그러나 `explicit operator bool()`은 bool로의 암시적 변환을 금지하므로 `bool b = sp;`로 지정할 수 없으며 bool 반환 형식의 경우 `return sp`로 지정할 수 없습니다.
 
@@ -3058,7 +3058,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="crt"></a>CRT
 
-- new 및 malloc()에 사용되는 C 런타임(CRT) 힙은 더 이상 private가 아닙니다. 이제 CRT에서 프로세스 힙을 사용합니다. 즉, DLL을 언로드할 때 힙이 삭제되지 않으므로 CRT에 정적으로 연결하는 DLL은 DLL 코드에 의해 할당된 메모리가 언로드되기 전에 정리되도록 해야 합니다.
+- new 및 malloc()에 사용되는 C 런타임(CRT) 힙은 더 이상 private가 아닙니다. 이제 CRT에서 프로세스 힙을 사용합니다. 즉, DLL이 언로드될 때 힙이 소멸 되지 않으므로 CRT에 정적으로 연결 되는 Dll은 DLL 코드에 의해 할당 된 메모리가 언로드되기 전에 정리 되었는지 확인 해야 합니다.
 
 - `iscsymf()` 함수는 음수 값으로 어설션됩니다.
 

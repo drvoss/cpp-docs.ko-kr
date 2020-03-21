@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 68dbd0b5b2e9d4fc04821a7e7e0193840b55e312
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500502"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077135"
 ---
 # <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper 함수
 
@@ -42,11 +42,10 @@ void** IID_PPV_ARGS_Helper(
 
 인수 *pp* 를 **void**포인터로 캐스팅 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-템플릿 매개 변수 *T* 가에서 `IUnknown`파생 되지 않으면 컴파일 시간 오류가 발생 합니다.
+템플릿 매개 변수 *T* 가 `IUnknown`에서 파생 되지 않으면 컴파일 시간 오류가 발생 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** client.h
-

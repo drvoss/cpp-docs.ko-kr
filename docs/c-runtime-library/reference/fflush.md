@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940942"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077334"
 ---
 # <a name="fflush"></a>fflush
 
@@ -55,15 +55,15 @@ int fflush(
 버퍼가 성공적으로 플러시되 면 **fflush** 는 0을 반환 합니다. 지정된 스트림에 버퍼가 없거나 해당 스트림이 읽기 전용으로 열린 경우에도 값 0이 반환됩니다. **EOF** 의 반환 값은 오류를 나타냅니다.
 
 > [!NOTE]
-> **Fflush** 가 **EOF**를 반환 하는 경우 쓰기 오류로 인해 데이터가 손실 되었을 수 있습니다. 심각한 오류 처리기를 설정 하는 경우 **setvbuf** 함수를 사용 하 여 버퍼링을 해제 하거나 스트림 i/o 함수 대신 **_open**, **_close**및 **_close** 와 같은 하위 수준 i/o 루틴을 사용 하는 것이 가장 안전 합니다.
+> **Fflush** 가 **EOF**를 반환 하는 경우 쓰기 오류로 인해 데이터가 손실 되었을 수 있습니다. 심각한 오류 처리기를 설정 하는 경우 **setvbuf** 함수를 사용 하 여 버퍼링을 해제 하거나 스트림 i/o 함수 대신 **_open**, **_close**및 **_write** 와 같은 하위 수준 i/o 루틴을 사용 하는 것이 가장 안전 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Fflush** 함수는 스트림 *스트림을*플러시합니다. 스트림이 쓰기 모드에서 열렸거나 업데이트 모드에서 열리고 마지막 작업이 쓰기였던 경우 스트림 버퍼의 콘텐츠가 기본 파일 또는 디바이스에 기록되고 버퍼가 삭제됩니다. 스트림이 읽기 모드에서 열리거나 스트림에 버퍼가 없는 경우 **fflush** 에 대 한 호출은 아무런 효과가 없으며 모든 버퍼가 유지 됩니다. **Fflush** 에 대 한 호출은 스트림의 **ungetc** 에 대 한 이전 호출의 결과를 부정 합니다. 스트림은 호출 후에 열려 있습니다.
 
 *Stream* 이 **NULL**이면 각 열린 스트림에 대해 **fflush** 를 호출 하는 것과 동작이 동일 합니다. 쓰기 모드로 열린 모든 스트림과 마지막 작업이 쓰기인 업데이트 모드로 열린 모든 스트림이 플러시됩니다. 이 호출은 다른 스트림에 영향을 미치지 않습니다.
 
-버퍼는 보통 운영 체제에서 유지 관리됩니다. 운영 체제에서는 버퍼가 가득 찼을 때, 스트림이 닫혀 있을 때, 스트림을 닫지 않고 프로그램이 정상적으로 종료될 때 등 디스크에 데이터를 자동으로 쓰는 최적의 시간을 결정합니다. 런타임 라이브러리의 디스크에 커밋 기능을 사용하면 중요한 데이터가 운영 체제 버퍼 대신 디스크에 직접 기록되어 있는지 확인할 수 있습니다. 기존 프로그램을 다시 작성하지 않고 프로그램의 개체 파일을 COMMODE.OBJ에 연결하여 이 기능을 사용할 수 있습니다. 결과 실행 파일에서 **_flushall** 호출 하면 모든 버퍼의 내용이 디스크에 작성 됩니다. **_Flushall** 및 **FFLUSH** 는 commode .obj의 영향을 받습니다.
+버퍼는 보통 운영 체제에서 유지 관리됩니다. 운영 체제에서는 버퍼가 가득 찼을 때, 스트림이 닫혀 있을 때, 스트림을 닫지 않고 프로그램이 정상적으로 종료될 때 등 디스크에 데이터를 자동으로 쓰는 최적의 시간을 결정합니다. 런타임 라이브러리의 디스크에 커밋 기능을 사용하면 중요한 데이터가 운영 체제 버퍼 대신 디스크에 직접 기록되어 있는지 확인할 수 있습니다. 기존 프로그램을 다시 작성하지 않고 프로그램의 개체 파일을 COMMODE.OBJ에 연결하여 이 기능을 사용할 수 있습니다. 결과 실행 파일에서를 호출 하면 모든 버퍼의 내용이 디스크에 기록 **_flushall** . **_Flushall** 및 **FFLUSH** 만 commode .obj의 영향을 받습니다.
 
 디스크에 커밋 기능을 제어하는 방법에 대한 자세한 내용은 [스트림 I/O](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) 및 [_fdopen](fdopen-wfdopen.md)을 참조하세요.
 
@@ -71,7 +71,7 @@ int fflush(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }
@@ -127,7 +127,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

@@ -2,20 +2,20 @@
 title: '연습: 매트릭스 곱'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518493"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075712"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>연습: 매트릭스 곱
 
 이 단계별 연습에서는 AMP를 사용 C++ 하 여 행렬 곱셈의 실행을 가속화 하는 방법을 보여 줍니다. 바둑판식으로 배열 하지 않고 바둑판식 배열을 표시 하는 두 개의 알고리즘이 표시 됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
-시작하기 전에
+시작하기 전 주의 사항:
 
 - [ C++ AMP 개요](../../parallel/amp/cpp-amp-overview.md)를 읽어 보세요.
 
@@ -33,7 +33,7 @@ ms.locfileid: "76518493"
 
 1. 메뉴 모음에서 **파일** > **새** > **프로젝트** 를 선택 하 여 **새 프로젝트 만들기** 대화 상자를 엽니다.
 
-1. 대화 상자 맨 위에서 **언어**를 **C++** 로 설정하고 **플랫폼**을 **Windows**로 설정하고 **프로젝트 형식**을 **콘솔**로 설정합니다. 
+1. 대화 상자 맨 위에서 **언어**를 **C++** 로 설정하고 **플랫폼**을 **Windows**로 설정하고 **프로젝트 형식**을 **콘솔**로 설정합니다.
 
 1. 필터링 된 프로젝트 형식 목록에서 **빈 프로젝트** 를 선택 하 고 **다음**을 선택 합니다. 다음 페이지에서 **이름** 상자에 *MatrixMultiply* 를 입력 하 여 프로젝트 이름을 지정 하 고 원하는 경우 프로젝트 위치를 지정 합니다.
 
@@ -203,7 +203,7 @@ A는 3 x 2 행렬 이며 B는 2/3 행렬입니다. A를 B로 곱한 곱은 다�
 
 ![4&#45;x&#45;4 행렬 A B&#45;x 2로&#45;분할 된 2&#45;개 하위 행렬](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;x&#45;4 행렬 A B&#45;x 2로&#45;분할 된 2&#45;개 하위 행렬")
 
-행렬 `a` `h`를 통해 2x2 행렬 이기 때문에 모든 제품 및 합계는 2x2 매트릭스 이기도 합니다. 또한 A와 B의 제품이 예상 대로 4x4 행렬 임을 따르고 있습니다. 알고리즘을 신속 하 게 확인 하려면 제품에서 첫 번째 행의 첫 번째 열에 있는 요소의 값을 계산 합니다. 이 예에서는 `ae + bg`의 첫 번째 행과 첫 번째 열에 있는 요소의 값입니다. 각 용어에 대 한 첫 번째 열, `ae` 첫 번째 행 및 `bg` 계산 해야 합니다. `ae`에 대 한 해당 값은 `(1 * 1) + (2 * 5) = 11`입니다. 에 대 한 값 `bg` 는 `(3 * 1) + (4 * 5) = 23`합니다. 최종 값은 `11 + 23 = 34`입니다.
+행렬 `a` `h`를 통해 2x2 행렬 이기 때문에 모든 제품 및 합계는 2x2 매트릭스 이기도 합니다. 또한 A와 B의 제품이 예상 대로 4x4 행렬 임을 따르고 있습니다. 알고리즘을 신속 하 게 확인 하려면 제품에서 첫 번째 행의 첫 번째 열에 있는 요소의 값을 계산 합니다. 이 예에서는 `ae + bg`의 첫 번째 행과 첫 번째 열에 있는 요소의 값입니다. 각 용어에 대 한 첫 번째 열, `ae` 첫 번째 행 및 `bg` 계산 해야 합니다. `ae`에 대 한 해당 값은 `(1 * 1) + (2 * 5) = 11`입니다. `bg`의 값이 `(3 * 1) + (4 * 5) = 23`인 경우 최종 값은 `11 + 23 = 34`입니다.
 
 이 알고리즘을 구현 하려면 코드는 다음과 같습니다.
 
@@ -320,7 +320,7 @@ A는 3 x 2 행렬 이며 B는 2/3 행렬입니다. A를 B로 곱한 곱은 다�
 
 1. 응용 프로그램을 종료 하려면 **공간** 표시줄을 누릅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C++ AMP(C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [연습: C++ AMP 애플리케이션 디버깅](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

@@ -1,35 +1,35 @@
 ---
-title: 전처리기 문법 요약 (C/C++)
+title: 전처리기 문법 요약(C/C++)
 description: MSVC (Microsoft C/C++ 컴파일러) 전처리기 문법 구문을 정의 하 고 설명 합니다.
 ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302187"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076869"
 ---
-# <a name="preprocessor-grammar-summary-cc"></a>전처리기 문법 요약 (C/C++)
+# <a name="preprocessor-grammar-summary-cc"></a>전처리기 문법 요약(C/C++)
 
 이 문서에서는 C 및 C++ 전처리기의 공식 문법을 설명 합니다. 전처리 지시문 및 연산자의 구문에 대해 설명 합니다. 자세한 내용은 [전처리기](../preprocessor/preprocessor.md) 및 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)를 참조 하세요.
 
-## <a name="definitions"></a>문법 요약에 대 한 정의
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>문법 요약에 대 한 정의
 
-구문 정의에서 단말은 엔드포인트입니다. 다른 확인은 가능하지 않습니다. 단말에는 예약어와 사용자 정의 식별자의 집합이 포함됩니다.
+터미널은 구문 정의에서 끝점입니다. 다른 방법은 없습니다. 터미널에는 예약어와 사용자 정의 식별자가 포함됩니다.
 
-비단말은 구문에서 자리 표시자입니다. 대부분 이 구문 요약의 다른 곳에서 정의되어 있습니다. 정의는 재귀적일 수 있습니다. 다음 넌터미널 함수는 *C++ 언어 레퍼런스*의 [어휘 규칙](../cpp/lexical-conventions.md) 섹션에 정의되어 있습니다:
+넌터미널은 구문에서 자리를 표시합니다. 대부분은 이 구문 요약의 다른 곳에서 정의되어 있습니다. 정의는 재귀적일 수 있습니다. 다음 비 터미널은  *C++ 언어 참조*의 [어휘 규칙](../cpp/lexical-conventions.md) 섹션에서 정의 됩니다.
 
 *상수*, *상수 식*, *식별자*, *키워드*, *연산자*, *punctuator*
 
 선택적 구성 요소는 첨자 <sub>opt</sub>로 나타냅니다. 예를 들어 다음 구문은 중괄호로 묶인 선택적 식을 나타냅니다.
 
-**{** *표현식*<sub></sub> **}**
+**{** *expression*<sub>opt</sub> **}**
 
-## <a name="conventions"></a>문서 규칙
+## <a name="document-conventions"></a><a name="conventions"></a>문서 규칙
 
 규칙은 구문의 여러 구성 요소에 대해 여러 글꼴 특성을 사용합니다. 기호 및 글꼴은 다음과 같습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "75302187"
 
 코드 구문 블록에서 쉼표 (`,`), 마침표 (`.`), 세미 콜론 (`;`), 콜론 (`:`), 괄호 (`( )`), 큰따옴표 (`"`) 및 작은따옴표 (`'`)는 리터럴입니다.
 
-## <a name="grammar"></a>전처리기 문법
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>전처리기 문법
 
 *제어 줄*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#define** *식별자* *토큰-문자열*<sub>opt</sub>\
@@ -62,7 +62,7 @@ ms.locfileid: "75302187"
 &nbsp;&nbsp;&nbsp;&nbsp; **#line** *숫자 시퀀스* **"** _파일 이름_ **"** <sub>opt</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#undef** *식별자*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#error** *토큰 문자열*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *토큰 문자열*
 
 *상수-식*: \
 &nbsp;&nbsp;&nbsp;&nbsp;**정의 된 (** *식별자* **)** \
@@ -70,25 +70,25 @@ ms.locfileid: "75302187"
 다른 상수 식 &nbsp;&nbsp;&nbsp;&nbsp;
 
 *조건*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+&nbsp;&nbsp; *&nbsp;&nbsp;* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif 줄*
 
 *-part*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*한 줄* *텍스트*
 
 *if-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#if** *상수 식*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *식별자*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *식별자*
 
 *elif-파트*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 줄* *텍스트*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif* - *줄* *텍스트*
 
 *elif 줄*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *상수 식*
 
 *else-파트*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*다른 줄* *텍스트*
 
 *else 줄*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
@@ -100,7 +100,7 @@ ms.locfileid: "75302187"
 &nbsp;&nbsp;&nbsp;&nbsp;*자릿수*\
 &nbsp;&nbsp;&nbsp;&nbsp;*숫자-시퀀스* *자릿수*
 
-*digit*: \ 중 하나\
+*digit*: \ 중 하나
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
 *토큰 문자열*: \
@@ -125,7 +125,6 @@ ms.locfileid: "75302187"
 > [!NOTE]
 > 다음 비 터미널은  *C++ 언어 참조*의 [어휘 규칙](../cpp/lexical-conventions.md) 섹션에서 *상수*, *상수 식*, *식별자*, *키워드*, *연산자*및 *punctuator*로 확장 됩니다.
 
-
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C/C++ 전처리기 참조](../preprocessor/c-cpp-preprocessor-reference.md)

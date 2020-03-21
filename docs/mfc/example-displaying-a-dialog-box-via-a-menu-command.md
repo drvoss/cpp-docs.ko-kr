@@ -1,5 +1,5 @@
 ---
-title: '예제: 메뉴 명령을 통해 대화 상자 표시'
+title: '예: 메뉴 명령을 통해 대화 상자 표시'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095927"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078834"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>예제: 메뉴 명령을 통해 대화 상자 표시
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>예: 메뉴 명령을 통해 대화 상자 표시
 
 이 항목에는 다음 절차가 포함 되어 있습니다.
 
@@ -31,8 +31,8 @@ ms.locfileid: "71095927"
 
 |항목|이름 또는 값|
 |----------|-------------------|
-|애플리케이션|DisplayDialog|
-|메뉴 명령|보기 메뉴의 테스트 명령 명령 ID = ID_VIEW_TEST|
+|응용 프로그램|DisplayDialog|
+|메뉴 명령입니다.|보기 메뉴의 테스트 명령 명령 ID = ID_VIEW_TEST|
 |대화 상자|테스트 대화 상자 Class = CTestDialog; 헤더 파일 = TestDialog .h; Variable = testdlg, ptestdlg|
 |명령 처리기|OnViewTest|
 
@@ -44,7 +44,7 @@ ms.locfileid: "71095927"
 
 1. 대화 상자에 대 한 클래스를 추가 합니다. 자세한 내용은 [클래스 추가를](../ide/adding-a-class-visual-cpp.md) 참조 하세요.
 
-1. **클래스 뷰**에서 문서 클래스 (CDisplayDialogDoc)를 선택 합니다. **속성** 창에서 **이벤트** 단추를 클릭합니다. 메뉴 명령의 ID (ID_VIEW_TEST)를 두 번 클릭 합니다. 그런 다음 아래쪽 화살표를 클릭 하 고  **\<추가 > onviewtest**를 선택 합니다.
+1. **클래스 뷰**에서 문서 클래스 (CDisplayDialogDoc)를 선택 합니다. **속성** 창에서 **이벤트** 단추를 클릭합니다. 메뉴 명령의 ID (ID_VIEW_TEST)를 두 번 클릭 합니다. 그런 다음 아래쪽 화살표를 클릭 하 고 **\<추가 > OnViewTest**를 선택 합니다.
 
    MDI 응용 프로그램의 메인프레임에 메뉴 명령을 추가한 경우 응용 프로그램 클래스 (CDisplayDialogApp)를 대신 선택 합니다.
 
@@ -54,11 +54,11 @@ ms.locfileid: "71095927"
    #include "TestDialog.h"
    ```
 
-1. 다음 코드를에 `OnViewTest` 추가 하 여 함수를 구현 합니다.
+1. 다음 코드를 추가 하 여 함수를 구현 `OnViewTest` 합니다.
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>모덜리스 대화 상자를 표시 하려면
@@ -99,7 +99,7 @@ ms.locfileid: "71095927"
    delete m_pTestDlg;
    ```
 
-   - 다음 코드를에 `OnViewTest` 추가 하 여 함수를 구현 합니다.
+   - 다음 코드를 추가 하 여 함수를 구현 `OnViewTest` 합니다.
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ ms.locfileid: "71095927"
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [대화 상자](../mfc/dialog-boxes.md)<br/>
 [모달 및 모덜리스 대화 상자](../mfc/modal-and-modeless-dialog-boxes.md)

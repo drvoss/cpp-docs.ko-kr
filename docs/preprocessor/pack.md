@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965251"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079973"
 ---
 # <a name="pack-pragma"></a>pack pragma
 
@@ -35,7 +35,7 @@ ms.locfileid: "73965251"
 필드 현재 압축 맞춤 값을 내부 컴파일러 스택에 푸시하고 현재 압축 맞춤 값을 *n*으로 설정 합니다. *N* 을 지정 하지 않으면 현재 압축 맞춤 값이 푸시됩니다.
 
 **pop**\
-필드 내부 컴파일러 스택의 맨 위에서 레코드를 제거 합니다. **Pop**에 *n* 을 지정 하지 않으면 스택의 맨 위에 있는 결과 레코드와 연결 된 압축 값이 새로운 압축 맞춤 값입니다. *N* 이 지정 된 경우 (예: `#pragma pack(pop, 16)`) *n* 은 새 압축 맞춤 값이 됩니다. 예를 들어 `#pragma pack(pop, r1)`*식별자*를 사용 하 여 팝 하는 경우에는 *식별자* 가 있는 레코드를 찾을 때까지 스택의 모든 레코드를 팝 합니다. 해당 레코드가 팝 되 고 스택 맨 위에 있는 결과 레코드와 연결 된 압축 값이 새로운 압축 맞춤 값입니다. 스택의 레코드에 없는 *식별자* 를 사용 하 여 팝 하는 경우 **pop** 는 무시 됩니다. 
+필드 내부 컴파일러 스택의 맨 위에서 레코드를 제거 합니다. **Pop**에 *n* 을 지정 하지 않으면 스택의 맨 위에 있는 결과 레코드와 연결 된 압축 값이 새로운 압축 맞춤 값입니다. *N* 이 지정 된 경우 (예: `#pragma pack(pop, 16)`) *n* 은 새 압축 맞춤 값이 됩니다. 예를 들어 `#pragma pack(pop, r1)`*식별자*를 사용 하 여 팝 하는 경우에는 *식별자* 가 있는 레코드를 찾을 때까지 스택의 모든 레코드를 팝 합니다. 해당 레코드가 팝 되 고 스택 맨 위에 있는 결과 레코드와 연결 된 압축 값이 새로운 압축 맞춤 값입니다. 스택의 레코드에 없는 *식별자* 를 사용 하 여 팝 하는 경우 **pop** 는 무시 됩니다.
 
 문 `#pragma pack (pop, r1, 2)`은 `#pragma pack (pop, r1)` 뒤에 `#pragma pack(2)`와 동일 합니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "73965251"
    > [!WARNING]
    > Visual Studio 2015 이상에서는 `__alignof` 및 `declspec( align )`와 달리 컴파일러 간에 이식 가능한 표준 **alignas** 및 **alignof** 연산자를 사용할 수 있습니다. 표준 C++ 는 압축을 처리 하지 않으므로 **pack** 또는 다른 컴파일러의 해당 확장을 사용 하 여 대상 아키텍처의 단어 크기 보다 작은 맞춤을 지정 해야 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 샘플에서는 **pack** pragma를 사용 하 여 구조체의 맞춤을 변경 하는 방법을 보여 줍니다.
 
@@ -120,6 +120,6 @@ int main() {
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

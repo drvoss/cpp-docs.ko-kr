@@ -4,12 +4,12 @@ description: 에서 원시 포인터를 사용 하는 방법C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250687"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077140"
 ---
 # <a name="raw-pointers-c"></a>원시 포인터 (C++)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74250687"
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 Const가 아닌 포인터에 대해 특정 산술 연산을 수행 하 여 새 메모리 위치를 가리키도록 할 수 있습니다. **++** , **+=** , **-=** 및 **--** 연산자를 사용 하 여 포인터를 증가 및 감소 시킬 수 있습니다. 이 기술은 배열에서 사용할 수 있으며 형식화 되지 않은 데이터의 버퍼에서 특히 유용 합니다. **Void\*** **char** 크기 (1 바이트) 만큼 증가 합니다. 형식화 된 포인터는 포인터가 가리키는 형식의 크기 만큼 증가 합니다.
 
-다음 예제에서는 포인터 산술 연산을 사용 하 여 Windows에서 비트맵의 개별 픽셀에 액세스 하는 방법을 보여 줍니다. **New** 및 **delete**를 사용 하 고 역참조 연산자를 사용 합니다. 
+다음 예제에서는 포인터 산술 연산을 사용 하 여 Windows에서 비트맵의 개별 픽셀에 액세스 하는 방법을 보여 줍니다. **New** 및 **delete**를 사용 하 고 역참조 연산자를 사용 합니다.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * 포인터
 
-**Void** 에 대 한 포인터는 단순히 원시 메모리 위치를 가리킵니다. 코드와 C 함수를 전달 하는 경우와 같이 **void\*** 포인터를 사용 해야 하는 경우도 있습니다. C++ 
+**Void** 에 대 한 포인터는 단순히 원시 메모리 위치를 가리킵니다. 코드와 C 함수를 전달 하는 경우와 같이 **void\*** 포인터를 사용 해야 하는 경우도 있습니다. C++
 
 형식화 된 포인터가 void 포인터로 캐스팅 되 면 메모리 위치의 내용이 변경 되지 않지만, 증가 또는 감소 작업을 수행할 수 없도록 형식 정보가 손실 됩니다. 예를 들어 MyClass *에서 void *로, 다시 MyClass *로 다시 변환 하는 등의 방법으로 메모리 위치를 캐스팅할 수 있습니다. 이러한 작업은 기본적으로 오류가 발생 하기 쉬우며 오류가 발생 하지 않도록 주의 해야 합니다. 현재 C++ 는 반드시 필요한 경우를 제외 하 고는 void 포인터 사용을 사용 하지 않습니다.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>함수에 대 한 포인터
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>함수에 대 한 포인터
 
 C 스타일 프로그래밍에서 함수 포인터는 주로 함수를 다른 함수에 전달 하는 데 사용 됩니다. 이 시나리오에서 호출자는 함수를 수정 하지 않고 동작의 동작을 사용자 지정할 수 있습니다. 현대 C++에서 [람다 식은](lambda-expressions-in-cpp.md) 형식 안전 성과 기타 이점을 가진 동일한 기능을 제공 합니다.
 

@@ -3,16 +3,16 @@ title: 맞춤
 description: 데이터 맞춤이 최신 C++에서 지정 되는 방식입니다.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443660"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076121"
 ---
 # <a name="alignment"></a>맞춤
 
-C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 최대한 활용하기 위해 메모리 내 개체의 정확한 맞춤을 지정하는 기능입니다. 기본적으로 컴파일러는 크기 값에 대 한 클래스 및 구조체 멤버를 정렬 합니다. `bool` 및 `char` 1 바이트 경계, 2 바이트 경계에 `short` 2 바이트 경계, `int`, `long`, `float` 4 바이트 경계, `long long`, `double`, `long double` 8 바이트 경계에 합니다. 
+C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 최대한 활용하기 위해 메모리 내 개체의 정확한 맞춤을 지정하는 기능입니다. 기본적으로 컴파일러는 크기 값에 대 한 클래스 및 구조체 멤버를 정렬 합니다. `bool` 및 `char` 1 바이트 경계, 2 바이트 경계에 `short` 2 바이트 경계, `int`, `long`, `float` 4 바이트 경계, `long long`, `double`, `long double` 8 바이트 경계에 합니다.
 
 대부분의 시나리오에서는 기본 맞춤이 이미 최적 이므로 맞춤을 걱정 하지 않아도 됩니다. 그러나 경우에 따라 데이터 구조에 대 한 사용자 지정 맞춤을 지정 하 여 상당한 성능 향상 이나 메모리 절감 효과를 얻을 수 있습니다. Visual Studio 2015 이전에는 Microsoft 전용 키워드 `__alignof` 사용 하 고 `declspec(alignas)` 하 여 기본값 보다 큰 맞춤을 지정할 수 있습니다. Visual Studio 2015부터 최대 코드 이식성을 위해 c + + 11 표준 키워드인 **alignof** 및 **alignas** 를 사용 해야 합니다. 새 키워드는 Microsoft 전용 확장과 동일한 방식으로 동작 합니다. 이러한 확장에 대 한 설명서는 새 키워드에도 적용 됩니다. 자세한 내용은 [__Alignof 연산자](../cpp/alignof-operator.md) 및 [맞춤](../cpp/align-cpp.md)을 참조 하세요. 표준 C++ 에서는 대상 플랫폼에 대 한 컴파일러 기본값 보다 작은 경계에 맞춤에 대 한 압축 동작을 지정 하지 않으므로이 경우에도 Microsoft #pragma [pack](../preprocessor/pack.md) 을 사용 해야 합니다.
 

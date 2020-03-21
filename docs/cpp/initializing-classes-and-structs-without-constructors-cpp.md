@@ -3,12 +3,12 @@ title: 클래스, 구조체 및 공용 구조체에 대 한 중괄호 초기화
 description: 모든 C++ 클래스, 구조체 또는 공용 구조체에 중괄호 초기화 사용
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652626"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075875"
 ---
 # <a name="brace-initialization"></a>중괄호 초기화
 
@@ -167,8 +167,7 @@ string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
 
-
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)<br/>
 [생성자](../cpp/constructors-cpp.md)

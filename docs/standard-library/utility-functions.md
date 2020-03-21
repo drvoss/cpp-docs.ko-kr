@@ -14,33 +14,33 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427682"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075593"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 함수
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
 template <class T> void as_const(const T&&) = delete;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *T*를 반환 합니다.
 
-## <a name="declval"></a>declval
+## <a name="declval"></a><a name="declval"></a>declval
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>교환의
+## <a name="exchange"></a><a name="exchange"></a>교환의
 
 **(C++14)** 개체에 새 값을 할당하고 이전 값을 반환합니다.
 
@@ -57,7 +57,7 @@ new_val의 값을 받는 개체입니다.
 *new_val*\
 값이 val로 복사되거나 이동되는 개체입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 복합 형식에서 `exchange`는 이동 생성자를 사용할 수 있는 경우 이전 값의 복사를 방지하고, 임시 개체이거나 이동된 경우 새 값의 복사를 방지하며, 사용 가능한 변환 대입 연산자를 통해 모든 형식을 새 값으로 받아들입니다. Exchange 함수는 왼쪽 인수가 오른쪽 인수로 이동 되거나 복사 되지 않는다는 점에서 [std:: swap](../standard-library/algorithm-functions.md#swap) 과 다릅니다.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>전환
+## <a name="forward"></a><a name="forward"></a>전환
 
 인수가 rvalue 또는 rvalue 참조인 경우 rvalue 참조에 대한 해당 인수를 조건적으로 캐스팅합니다. 그러면 인수의 rvalue 특성이 전달 함수로 복원되어 완벽하게 전달됩니다.
 
@@ -115,11 +115,11 @@ Arg에 전달 된 값의 형식 *으로,* *arg*의 형식과 다를 수 있습�
 *Arg*\
 캐스팅할 인수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *인수* 에 전달 된 값이 원래 rvalue 이거나 rvalue에 대 한 참조 인 경우 *인수* 에 대 한 rvalue 참조를 반환 합니다. 그렇지 않으면 해당 형식을 수정 하지 않고 *Arg* 를 반환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `forward`를 호출하려면 명시적 템플릿 인수를 지정해야 합니다.
 
@@ -127,19 +127,19 @@ Arg에 전달 된 값의 형식 *으로,* *arg*의 형식과 다를 수 있습�
 
 인수의 원래 값의 rvalue 특성을 복원 하 여 오버 로드 확인을 수행 하는 것을 *완벽 한 전달*이라고 합니다. 완벽한 전달을 사용하면 템플릿 함수에서 참조 형식의 인수를 허용하고 올바른 오버로드 해결을 위해 필요할 때 rvalue 특성을 복원할 수 있습니다. 완벽한 전달을 수행하면 rvalue에 대해 이동 의미 체계를 보존하고 인수의 참조 형식만 다른 함수의 오버로드를 제공하지 않아도 됩니다.
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a> get
+## <a name="get"></a><a name="get"></a> get
 
 인덱스 위치 또는 형식을 기준으로 `pair` 개체에서 요소를 가져옵니다.
 
@@ -198,7 +198,7 @@ template <class T2, class T1>
 *pr*\
 선택할 쌍입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 각각의 템플릿 함수는 `pair` 인수의 요소에 대한 참조를 반환합니다.
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 `pair` 형식의 개체를 만드는 데 사용할 수 있는 템플릿 함수. 여기서 구성 요소 형식은 매개 변수로 전달된 데이터 형식을 기준으로 자동 선택됩니다.
 
@@ -289,11 +289,11 @@ template <class T, class U>
 *Val2*\
 `pair`의 두 번째 요소를 초기화하는 값
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 생성 된 쌍 개체: `pair`<`T`,`U`> (`Val1`).`Val2`
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `make_pair`는 [reference_wrapper Class](../standard-library/reference-wrapper-class.md) 형식의 개체를 참조 형식으로 변환하고 감소하는 배열 및 함수를 포인터로 변환합니다.
 
@@ -313,7 +313,7 @@ template <class T, class U>
 
 도우미 함수 `make_pair`를 사용하여 쌍을 선언하고 초기화하는 방법을 알아보려면 [pair 구조체](../standard-library/pair-structure.md)를 참조하세요.
 
-## <a name="move"></a>옮기고
+## <a name="move"></a><a name="move"></a>옮기고
 
 무조건 인수를 rvalue 참조로 캐스트합니다. 따라서 형식이 이동 가능할 경우 이동 가능하다는 신호를 줍니다.
 
@@ -330,11 +330,11 @@ template <class Type>
 *Arg*\
 캐스팅할 인수입니다. *Arg* 형식이 rvalue 참조로 지정 되는 것 처럼 보이지만 lvalue 참조가 rvalue 참조에 바인딩될 수 있기 때문에 `move` lvalue 인수도 허용 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 형식과 상관없이, rvalue 참조로서의 `Arg`는 참조 형식입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 템플릿 인수 *형식은* 명시적으로 지정 되지 않고 *Arg*에 전달 된 값의 형식에서 추론 됩니다. *형식의* 형식은 참조 축소 규칙에 따라 추가 조정 됩니다.
 
@@ -342,13 +342,13 @@ template <class Type>
 
 *Arg* 에 전달 된 값이 lvalue 인 경우, 즉 이름이 있거나 주소를 가져올 수 있는 경우, 이동이 발생 하면 무효화 됩니다. 인수를 이동한 후 이름 또는 주소로 *인수* 에 전달 된 값을 참조 하지 마세요.
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 두 개의 형식 또는 [쌍 구조](../standard-library/pair-structure.md) 개체의 요소를 교환 합니다.
 
@@ -369,25 +369,25 @@ template <class T, class U>
 *오른쪽*\
 `pair`형식 또는 형식의 개체입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `swap`의 이점 중 하나는 저장 되는 개체 형식이 컴파일러에 의해 자동으로 결정 되며 명시적으로 지정 하지 않아도 된다는 것입니다. `swap`를 사용할 때 `swap<int, int>(1, 2)`와 같은 명시적 템플릿 인수를 사용 하지 마세요 .이는 컴파일 오류를 일으킬 수 있는 복잡 한 rvalue 참조 문제를 추가 하는 것입니다.
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `[first, last)`범위를 채워 값을 문자열로 변환 합니다. 여기서 `[first, last)`은 올바른 범위 여야 합니다.

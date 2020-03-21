@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927686"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079494"
 ---
 # <a name="manifest-tool-property-pages"></a>매니페스트 도구 속성 페이지
 
-이러한 페이지를 사용 하 여 [mt.exe](/windows/win32/sbscs/mt-exe)에 대 한 일반 옵션을 지정할 수 있습니다. 이러한 페이지는 **프로젝트** > **속성** > **구성 속성** > **매니페스트 도구**아래에 있습니다.
+이러한 페이지를 사용 하 여 [mt.exe](/windows/win32/sbscs/mt-exe)에 대 한 일반 옵션을 지정할 수 있습니다. 이러한 페이지는 **프로젝트** > **속성** > **구성 속성** > **매니페스트 도구**에서 찾을 수 있습니다.
 
 ## <a name="general-property-page"></a>일반 속성 페이지
 
@@ -49,9 +49,9 @@ ms.locfileid: "70927686"
 
 /Identity 옵션을 사용하여 [\<assemblyIdentity> 요소](/visualstudio/deployment/assemblyidentity-element-clickonce-application)의 특성을 구성하는 ID 문자열을 지정합니다. ID 문자열은 `name` 특성 값으로 시작하고, *특성* = *값* 쌍이 뒤에 옵니다. ID 문자열의 특성은 쉼표로 구분됩니다.
 
-다음은 id 문자열의 예입니다.`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+다음은 id 문자열의 예입니다. `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>입력 및 출력 속성 페이지     
+## <a name="input-and-output-property-page"></a>입력 및 출력 속성 페이지
 
 ###  <a name="additional-manifest-files"></a>추가 매니페스트 파일
 
@@ -59,7 +59,7 @@ ms.locfileid: "70927686"
 
 ###  <a name="input-resource-manifests"></a>입력 리소스 매니페스트
 
-**/inputresource** 옵션을 사용하여 매니페스트 도구에 입력할 RT_MANIFEST 형식의 리소스 전체 경로를 지정합니다. 경로 다음에 지정된 리소스 ID가 올 수 있습니다. 예를 들어:
+**/inputresource** 옵션을 사용하여 매니페스트 도구에 입력할 RT_MANIFEST 형식의 리소스 전체 경로를 지정합니다. 경로 다음에 지정된 리소스 ID가 올 수 있습니다. 예를 들면 다음과 같습니다.
 
 `dll_with_manifest.dll;#1`
 
@@ -97,7 +97,7 @@ ms.locfileid: "70927686"
 
 애플리케이션이 DPI를 인식하는지 여부를 지정합니다. 기본적으로 MFC 프로젝트는 **예**로 설정되고, 다른 프로젝트는 **아니요**로 설정됩니다. MFC 프로젝트에만 DPI 인식 기능이 내장되어 있기 때문입니다. 다른 DPI 설정을 처리하는 코드를 추가하는 경우, 이 설정을 **예**로 재정의할 수 있습니다. 애플리케이션이 DPI를 인식하지 않는데 인식하는 것으로 설정할 경우 애플리케이션이 흐릿하게 또는 작게 표시될 수 있습니다.
 
-**시**
+**Choices**
 
 - **없음**
 - **높은 DPI 인식**
@@ -105,7 +105,7 @@ ms.locfileid: "70927686"
 
 ## <a name="isolated-com-property-page"></a>격리 COM 속성 페이지
 
-격리 된 COM에 대 한 자세한 내용은 [격리 된 응용 프로그램](/windows/win32/SbsCs/isolated-applications) 및 [방법: COM 구성 요소](../how-to-build-isolated-applications-to-consume-com-components.md)를 사용 하는 격리 된 응용 프로그램을 빌드합니다.
+격리 된 COM에 대 한 자세한 내용은 [격리 된 응용 프로그램](/windows/win32/SbsCs/isolated-applications) 및 [방법: COM 구성 요소를 사용 하는 격리 된 응용 프로그램 빌드](../how-to-build-isolated-applications-to-consume-com-components.md)를 참조 하세요.
 
 ###  <a name="type-library-file"></a>형식 라이브러리 파일
 
@@ -137,7 +137,6 @@ File 요소에 지정 된 파일의 해시를 계산 하 고이 값을 사용 �
 
 추가 옵션
 
+## <a name="see-also"></a>참고 항목
 
-## <a name="see-also"></a>참고자료
-
-[C++ 프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)
+[C++프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)

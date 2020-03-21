@@ -2,12 +2,12 @@
 title: Visual Studio에서 C++ 코드 탐색
 description: Visual Studio의 다양한 도구를 사용하여 C++ 코드 베이스를 탐색할 수 있습니다.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446658"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079087"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Visual Studio에서 C++ 코드 탐색
 
@@ -31,7 +31,7 @@ Visual Studio는 코드 베이스를 신속하고 효과적으로 탐색할 수 
 
 ## <a name="go-to"></a>이동
 
-**이동**은 사용자가 지정하는 필터에 따라 각각 특정 유형의 결과를 제공하는 탐색 기능 세트를 참조합니다. 
+**이동**은 사용자가 지정하는 필터에 따라 각각 특정 유형의 결과를 제공하는 탐색 기능 세트를 참조합니다.
 
 **Ctrl+,** 키를 눌러 **이동**을 열 수 있습니다. 그러면 편집 중인 문서 위에 검색창이 나타납니다.
 
@@ -82,7 +82,7 @@ Visual Studio는 코드 베이스를 신속하고 효과적으로 탐색할 수 
 
 ![C&#43; &#43; 찾기](../ide/media/find-cpp.png "찾기")
 
-**파일에서 찾기**는 **찾기**의 보다 강력한 버전으로 **찾기 결과** 창에 결과를 표시합니다. 외부 코드 종속성을 검색하고, 파일 형식으로 필터링하는 등의 작업이 가능합니다. 
+**파일에서 찾기**는 **찾기**의 보다 강력한 버전으로 **찾기 결과** 창에 결과를 표시합니다. 외부 코드 종속성을 검색하고, 파일 형식으로 필터링하는 등의 작업이 가능합니다.
 
 ![C&#43; &#43; 파일에서 찾기](../ide/media/find-in-files-cpp.png "파일에서 찾기")
 

@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
-ms.translationtype: HT
+ms.openlocfilehash: cb77b2ce74f962df0a4c7472b037cb7a73effc2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907485"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077704"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>코드 마법사로 기능 추가(C++)
 
@@ -26,7 +26,6 @@ ms.locfileid: "70907485"
 - MFC ODBC 소비자
 - ActiveX 컨트롤의 MFC 클래스
 - TypeLib의 MFC 클래스
-
 
 > [!NOTE]
 >  메시지 처리기를 추가하고, 메시지를 이러한 메시지에 매핑하고, [MFC 클래스 마법사](../mfc/reference/mfc-class-wizard.md)를 사용하여 MFC 가상 함수를 재정의할 수 있습니다.
@@ -58,7 +57,7 @@ C++ 코드 마법사에 액세스할 수 있는 세 가지 위치가 있습니�
 - [클래스 뷰 창](/visualstudio/ide/viewing-the-structure-of-code)에서 적절한 노드를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **추가**를 클릭하면, 함수, 변수, 클래스, 속성, 메서드, 이벤트, 인터페이스, 연결 지점 또는 다른 코드를 프로젝트에 추가할 수 있습니다.
 
    > [!NOTE]
-   > Visual Studio에서는 프로젝트에 인터페이스를 추가하는 마법사를 제공하지 않습니다. [ATL 단순 개체 마법사](../atl/reference/atl-simple-object-wizard.md)로 간단한 개체를 추가하여 ATL 프로젝트에 인터페이스를 추가하거나 [MFC 프로젝트에 ATL 지원을 추가](../mfc/reference/adding-atl-support-to-your-mfc-project.md)할 수 있습니다. 또는 프로젝트의.idl 파일을 열고 다음을 입력하여 인터페이스를 만듭니다.
+   > Visual Studio에서는 프로젝트에 인터페이스를 추가하는 마법사를 제공하지 않습니다. [ATL 단순 개체 마법사](../mfc/reference/adding-atl-support-to-your-mfc-project.md)로 간단한 개체를 추가하여 ATL 프로젝트에 인터페이스를 추가하거나 [MFC 프로젝트에 ATL 지원을 추가](../atl/reference/atl-simple-object-wizard.md)할 수 있습니다. 또는 프로젝트의.idl 파일을 열고 다음을 입력하여 인터페이스를 만듭니다.
 
     ```IDL
     interface IMyInterface {

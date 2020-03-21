@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422861"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078716"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 스키마 참조
 
@@ -21,13 +21,13 @@ CMake 프로젝트는 Visual Studio 2017 이상에서 지원 됩니다.
 
 ::: moniker range=">=vs-2017"
 
-**Cmakesettings. json** 파일에는 Visual Studio에서 IntelliSense에 사용 하는 정보가 포함 되어 있으며, 지정 된 *구성* 및 컴파일러 *환경*에 대해 cmage.exe에 전달 하는 명령줄 인수를 생성 합니다. 구성에서는 특정 플랫폼 및 빌드 형식 (예: `x86-Debug` 또는 `Linux-Release`에 적용 되는 속성을 지정 합니다. 각 구성은 컴파일러 도구 집합에 대 한 정보 (예: MSVC, GCC 또는 Clang)를 캡슐화 하는 환경을 지정 합니다. CMake는 명령줄 인수를 사용 하 여 프로젝트에 대 한 루트 *cmakecache.txt* 파일 및 기타 프로젝트 파일을 다시 생성 합니다. *Cmakelists .txt* 파일에서 값을 재정의할 수 있습니다. 
+**Cmakesettings. json** 파일에는 Visual Studio에서 IntelliSense에 사용 하는 정보가 포함 되어 있으며, 지정 된 *구성* 및 컴파일러 *환경*에 대해 cmage.exe에 전달 하는 명령줄 인수를 생성 합니다. 구성에서는 특정 플랫폼 및 빌드 형식 (예: `x86-Debug` 또는 `Linux-Release`에 적용 되는 속성을 지정 합니다. 각 구성은 컴파일러 도구 집합에 대 한 정보 (예: MSVC, GCC 또는 Clang)를 캡슐화 하는 환경을 지정 합니다. CMake는 명령줄 인수를 사용 하 여 프로젝트에 대 한 루트 *cmakecache.txt* 파일 및 기타 프로젝트 파일을 다시 생성 합니다. *Cmakelists .txt* 파일에서 값을 재정의할 수 있습니다.
 
 IDE에서 구성을 추가 하거나 제거한 다음 JSON 파일에서 직접 편집 하거나 **Cmake 설정 편집기** (Visual Studio 2019 이상)를 사용할 수 있습니다. IDE에서 구성 간을 쉽게 전환 하 여 다양 한 프로젝트 파일을 생성할 수 있습니다. 자세한 내용은 [Visual Studio에서 cmake 빌드 설정 사용자 지정](customize-cmake-settings.md) 을 참조 하세요.
 
 ## <a name="configurations"></a>구성
 
-`configurations` 배열에는 CMake의 모든 구성이 포함 됩니다. 미리 정의 된 구성에 대 한 자세한 내용은 [미리 정의 된 Cmake 구성 참조](cmake-predefined-configuration-reference.md) 를 참조 하세요. 파일에 미리 정의 된 구성 또는 사용자 지정 구성을 원하는 개수 만큼 추가할 수 있습니다. 
+`configurations` 배열에는 CMake의 모든 구성이 포함 됩니다. 미리 정의 된 구성에 대 한 자세한 내용은 [미리 정의 된 Cmake 구성 참조](cmake-predefined-configuration-reference.md) 를 참조 하세요. 파일에 미리 정의 된 구성 또는 사용자 지정 구성을 원하는 개수 만큼 추가할 수 있습니다.
 
 `configuration`에는 다음과 같은 속성이 있습니다.
 
@@ -44,7 +44,7 @@ IDE에서 구성을 추가 하거나 제거한 다음 JSON 파일에서 직접 �
 - `configurationType`: 선택한 생성기의 빌드 형식 구성을 지정합니다. 다음 중 하나일 수 있습니다.
 
   - 디버그
-  - 해제
+  - 릴리스
   - MinSizeRel
   - RelWithDebInfo
   
@@ -148,7 +148,7 @@ Visual Studio 2019에서 Visual Studio 생성기를 지정 하려면 **솔루션
 `"type"`를 정의 하지 않으면 `"STRING"` 형식이 기본적으로 가정 됩니다.
 - `remoteCopyOptimizations`: 원격 대상에 대 한 소스 복사를 제어 하기 위한 **Visual Studio 2019 버전 16.5 이상** 속성입니다. 최적화는 기본적으로 사용 하도록 설정 되어 있습니다. `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs` 및 `remoteCopySourcesMaxSmallChange`를 포함합니다.
 
-## <a name="environments"></a>에서는
+## <a name="environments"></a><a name="environments"></a>에서는
 
 *환경은* Visual Studio에서 cmake를 호출 하는 데 사용 하는 프로세스에 설정 된 환경 변수를 캡슐화 합니다. MSVC 프로젝트의 경우 변수는 특정 플랫폼에 대 한 [개발자 명령 프롬프트](building-on-the-command-line.md) 에서 설정 되는 변수입니다. 예를 들어 `msvc_x64_x64` 환경은 vs **2017에 대 한 개발자 명령 프롬프트** 를 실행 하는 것과 동일 하며, **-아치 = amd64-host_arch = AMD64** 인수와 함께 **vs 2019에 개발자 명령 프롬프트** 합니다. 예를 들어 폴더에 대 한 경로를 생성 하는 등의 개별 환경 변수를 참조 하는 *Cmakesettings* 의 `env.{<variable_name>}` 구문을 사용할 수 있습니다.  다음과 같은 미리 정의 된 환경이 제공 됩니다.
 
@@ -175,7 +175,7 @@ CMakeLists .txt 파일에서 모든 환경 변수는 `$ENV{variable_name}`구문
 - `namespace`: `namespace.variable` 형식의 구성에서 해당 변수가 참조될 수 있도록 환경 이름을 지정합니다. 기본 환경 개체는 `env` 이라고 하며 `%USERPROFILE%`를 비롯 한 특정 시스템 환경 변수로 채워집니다.
 - `environment`: 이 변수 그룹을 고유하게 식별합니다. 그룹이 나중에 `inheritEnvironments` 항목에 상속되도록 허용합니다.
 - `groupPriority`: 변수를 계산할 때 이러한 변수의 우선 순위를 지정 하는 정수입니다. 숫자가 높은 항목이 먼저 계산됩니다.
-- `inheritEnvironments`:이 그룹이 상속 하는 환경 집합을 지정 하는 값의 배열입니다. 이 기능을 사용하면 기본 환경을 상속하고, 실행될 때 CMake.exe에 전달되는 사용자 지정 환경 변수를 만들 수 있습니다. 
+- `inheritEnvironments`:이 그룹이 상속 하는 환경 집합을 지정 하는 값의 배열입니다. 이 기능을 사용하면 기본 환경을 상속하고, 실행될 때 CMake.exe에 전달되는 사용자 지정 환경 변수를 만들 수 있습니다.
 
 **Visual Studio 2019 버전 16.4 이상:** 디버그 대상은 *Cmakesettings. json*에서 지정 하는 환경에서 자동으로 시작 됩니다. [시작. json](launch-vs-schema-reference-cpp.md) 및 [작업 및 json](tasks-vs-json-schema-reference-cpp.md)과 비교 하 여 대상이 나 작업 별로 환경 변수를 재정의 하거나 추가할 수 있습니다.
 
@@ -269,7 +269,7 @@ CMakeLists .txt 파일에서 모든 환경 변수는 `$ENV{variable_name}`구문
 
 *Cmakesettings. json* 의 매크로 및 환경 변수에 대 한 모든 참조는 cmage.exe 명령줄로 전달 되기 전에 확장 됩니다.
 
-## <a name="ninja"></a> Ninja 명령줄 인수
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Ninja 명령줄 인수
 
 대상이 지정되지 않으면 'default(기본)' 대상을 빌드합니다.
 
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|옵션|Description|
+|옵션|설명|
 |--------------|------------|
 | --version  | Ninja 버전("1.7.1")을 출력합니다.|
 |   -C DIR   | 다른 작업을 수행하기 전에 DIR로 변경합니다.|

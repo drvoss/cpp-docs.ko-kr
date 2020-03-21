@@ -4,12 +4,12 @@ description: Visual Studio의 C++ 코드 편집기를 사용하여 코드를 서
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438158"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077840"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Visual Studio에서 C++ 코드 편집 및 리팩터링
 
@@ -60,8 +60,8 @@ Visual Studio 2017에서는 IntelliCode가 Visual Studio Marketplace에 확장�
 이전 스크린샷은 드롭다운 목록 아래에 있는 여러 단추를 보여줍니다. 이러한 단추를 통해 다양한 종류의 결과에 IntelliSense 필터를 사용할 수 있습니다.
 
 - 변수와 상수
-- Functions
-- 유형
+- 함수
+- 형식
 - Macros
 - 열거형
 - 네임스페이스
@@ -70,15 +70,15 @@ Visual Studio 2017에서는 IntelliCode가 Visual Studio Marketplace에 확장�
 
 ## <a name="template-intellisense"></a>템플릿 IntelliSense
 
-템플릿 정의 내에 캐럿이 있는 경우 IntelliSense의 샘플 템플릿 인수를 제공할 수 있는 **템플릿 표시줄**이 나타납니다. 
+템플릿 정의 내에 캐럿이 있는 경우 IntelliSense의 샘플 템플릿 인수를 제공할 수 있는 **템플릿 표시줄**이 나타납니다.
 
 ![C&#43; &#43; 템플릿 IntelliSense에서 기존 인스턴스화 표시](../ide/media/template-intellisense-cpp-1.png "템플릿 IntelliSense에서 기존 인스턴스화 표시")
 
-**\<t >** 아이콘을 클릭 하 여 **템플릿 표시줄**을 확장/축소 합니다. 연필 아이콘을 클릭하거나 **템플릿 표시줄**을 두 번 클릭하면 **편집** 창이 열립니다. 
+**\<t >** 아이콘을 클릭 하 여 **템플릿 표시줄**을 확장/축소 합니다. 연필 아이콘을 클릭하거나 **템플릿 표시줄**을 두 번 클릭하면 **편집** 창이 열립니다.
 
 ![C&#43; &#43; 템플릿 IntelliSense](../ide/media/template-intellisense-cpp-3.png "템플릿 IntelliSense")
 
-이 창에서 편집하는 내용은 소스 코드에 바로 적용되므로 편집 효과를 실시간으로 확인할 수 있습니다. 
+이 창에서 편집하는 내용은 소스 코드에 바로 적용되므로 편집 효과를 실시간으로 확인할 수 있습니다.
 
 템플릿 표시줄은 코드의 인스턴스화에 따라 후보를 자동으로 채울 수 있습니다. **모든 기존 인스턴스화 추가**를 클릭하면 코드 베이스 전체에서 템플릿 인스턴스화에 사용된 모든 구체적 인수 목록을 볼 수 있습니다.
 
@@ -94,13 +94,13 @@ Visual Studio 2017에서는 IntelliCode가 Visual Studio Marketplace에 확장�
 
 편집기는 코드에서 문제를 발견하면 해당 문제 아래에 색이 있는 오류 표시선을 추가합니다. 빨간색 오류 표시선은 컴파일되지 않는 코드를 나타냅니다. 녹색 오류 표시선은 중대한 오류일 수도 있는 다른 종류의 문제를 나타냅니다. **오류 목록** 창을 열면 문제에 대한 자세한 정보를 볼 수 있습니다.
 
-일부 오류와 일반적인 코딩 패턴의 경우 편집기에서 오류 표시선 위로 마우스 커서를 이동하면 전구 모양의 형태로 **빠른 수정**이 제공됩니다. 아래쪽 화살표를 클릭하면 제안 사항을 볼 수 있습니다. 
+일부 오류와 일반적인 코딩 패턴의 경우 편집기에서 오류 표시선 위로 마우스 커서를 이동하면 전구 모양의 형태로 **빠른 수정**이 제공됩니다. 아래쪽 화살표를 클릭하면 제안 사항을 볼 수 있습니다.
 
 다음 예제에서는 `vector`가 선언되었지만 정의를 찾을 수 없으므로 편집기는 다음과 같은 필요한 헤더 파일을 포함할 것을 제안합니다.
 
 ![C&#43; &#43; 빠른 수정](../ide/media/quick-fix-for-header-cpp.png "C++빠른 수정")
 
-또한 편집기는 일부 리팩터링 기회에 빠른 픽스를 제공합니다. 예를 들어 헤더 파일에서 클래스를 선언하면 Visual Studio는 별도의 .cpp 파일에 해당 클래스에 대한 정의를 만들 것을 제안합니다. 
+또한 편집기는 일부 리팩터링 기회에 빠른 픽스를 제공합니다. 예를 들어 헤더 파일에서 클래스를 선언하면 Visual Studio는 별도의 .cpp 파일에 해당 클래스에 대한 정의를 만들 것을 제안합니다.
 
 ![C&#43; &#43; 빠른 수정](../ide/media/quick-fix.png "C++빠른 수정")
 
@@ -134,7 +134,7 @@ Visual Studio 2017에서는 IntelliCode가 Visual Studio Marketplace에 확장�
 
 ##  <a name="refactoring"></a>리팩터링
 
-리팩터링은 빠른 작업 상황에 맞는 메뉴 아래에서 또는 편집기에서 [전구](/visualstudio/ide/perform-quick-actions-with-light-bulbs)를 클릭하여 사용할 수 있습니다.  일부는 **편집 > 리팩터링** 메뉴에 있습니다.  이러한 기능으로는 다음이 포함됩니다.
+리팩터링은 빠른 작업 상황에 맞는 메뉴 아래에서 또는 편집기에서 [전구](/visualstudio/ide/perform-quick-actions-with-light-bulbs)를 클릭하여 사용할 수 있습니다.  일부는 **편집 > 리팩터링** 메뉴에 있습니다.  해당하는 기능에는
 
 * [이름 바꾸기](refactoring/rename.md)
 * [함수 추출](refactoring/extract-function.md)

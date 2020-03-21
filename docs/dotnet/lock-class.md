@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153442"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080039"
 ---
 # <a name="lock-class"></a>lock 클래스
 
-이 클래스는 여러 스레드에서 개체에 대 한 액세스를 동기화 하는 것에 대 한 잠금을 자동화 합니다.  생성 될 때 잠금을 획득 릴리스를 제거 하는 경우 및 잠금.
+이 클래스는 여러 스레드에서 개체에 대 한 액세스를 동기화 하기 위한 잠금을 자동화 합니다.  생성 된 경우 잠금을 획득 하 고 제거 되 면 잠금을 해제 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,11 +31,11 @@ ms.locfileid: "62153442"
 ref class lock;
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-`lock` CLR 개체에 대해서만 사용할 수 있고 CLR 코드에만 사용할 수 있습니다.
+`lock`는 CLR 개체에만 사용할 수 있으며 CLR 코드 에서만 사용할 수 있습니다.
 
-잠금 클래스는 내부적으로 <xref:System.Threading.Monitor> 액세스를 동기화 합니다. 자세한 내용은 참조 된 문서를 참조 하세요.
+내부적으로 lock 클래스는 <xref:System.Threading.Monitor>을 사용 하 여 액세스를 동기화 합니다. 자세한 내용은 참조 된 문서를 참조 하세요.
 
 ## <a name="members"></a>멤버
 
@@ -43,23 +43,23 @@ ref class lock;
 
 |이름|설명|
 |---------|-----------|
-|[lock::lock](#lock)|생성을 `lock` 또는 전혀 사용 하지 않을 경우의 지정된 된 시간에 대 한 잠금을 영구적으로 획득 하려고 대기 하는 선택적 개체입니다.|
-|[lock::~lock](#tilde-lock)|소멸을 `lock` 개체입니다.|
+|[lock::lock](#lock)|지정 된 시간 동안 또는 지정 된 시간 동안 잠금 상태를 영구적으로 얻기 위해 대기 하는 `lock` 개체를 생성 합니다.|
+|[lock::~lock](#tilde-lock)|`lock` 개체를 Destructs 합니다.|
 
 ### <a name="public-methods"></a>public 메서드
 
 |이름|설명|
 |---------|-----------|
-|[lock::acquire](#acquire)|지정 된 시간 또는 전혀 사용 하지 않을 경우의 잠금을 영구적으로 획득 하려고 대기 하는 필요에 따라 개체에 대 한 잠금을 획득 합니다.|
-|[lock::is_locked](#is-locked)|잠금이 열리는지 여부를 나타냅니다.|
-|[lock::release](#release)|잠금을 해제합니다.|
-|[lock::try_acquire](#try-acquire)|지정된 된 시간 동안 대기 하 고 반환 개체에 대 한 잠금을 획득을 `bool` 예외를 throw 하는 대신 취득의 성공 여부를 보고 합니다.|
+|[lock::acquire](#acquire)|개체에 대 한 잠금을 획득 하 고, 선택적으로 잠금을 획득 하기 위해 대기 하는 경우 지정 된 시간 동안 또는 전혀 발생 하지 않도록 대기 합니다.|
+|[lock::is_locked](#is-locked)|잠금을 보유 하 고 있는지 여부를 나타냅니다.|
+|[lock::release](#release)|잠금을 해제 합니다.|
+|[lock::try_acquire](#try-acquire)|지정 된 시간 동안 기다린 후 예외를 throw 하는 대신 획득의 성공을 보고 하는 `bool`을 반환 하는 개체에 대 한 잠금을 가져옵니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
 |이름|설명|
 |---------|-----------|
-|[lock::operator&nbsp;bool](#operator-bool)|연산자를 사용 하 여 `lock` 조건식에서입니다.|
+|[lock:: operator&nbsp;bool](#operator-bool)|조건식에 `lock`을 사용 하기 위한 연산자입니다.|
 |[lock::operator==](#operator-equality)|같음 연산자입니다.|
 |[lock::operator!=](#operator-inequality)|같지 않음 연산자입니다.|
 
@@ -67,13 +67,11 @@ ref class lock;
 
 **헤더 파일** \<msclr\lock.h >
 
-**Namespace** msclr
+Msclr **네임 스페이스**
 
+## <a name="locklock"></a><a name="lock"></a>lock:: lock
 
-
-## <a name="lock"></a>lock::lock
-
-생성을 `lock` 또는 전혀 사용 하지 않을 경우의 지정된 된 시간에 대 한 잠금을 영구적으로 획득 하려고 대기 하는 선택적 개체입니다.
+지정 된 시간 동안 또는 지정 된 시간 동안 잠금 상태를 영구적으로 얻기 위해 대기 하는 `lock` 개체를 생성 합니다.
 
 ```cpp
 template<class T> lock(
@@ -96,28 +94,28 @@ template<class T> lock(
 ### <a name="parameters"></a>매개 변수
 
 *_object*<br/>
-개체를 잠글 수입니다.
+잠글 개체입니다.
 
 *_timeout*<br/>
-시간 (밀리초) 또는 시간 제한 값을 <xref:System.TimeSpan>입니다.
+시간 제한 값 (밀리초) 또는 <xref:System.TimeSpan>입니다.
 
 ### <a name="exceptions"></a>예외
 
-Throw <xref:System.ApplicationException> 잠금 획득 시간 제한 전에 발생 하지 않습니다.
+제한 시간이 초과 되기 전에 잠금 획득이 발생 하지 않는 경우 <xref:System.ApplicationException>을 throw 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-생성자의 처음 세 개의 폼에서 잠금을 획득 하려고 `_object` 지정된 된 제한 시간 내에서 (또는 <xref:System.Threading.Timeout.Infinite> 지정 되지 않은 경우).
+생성자의 처음 세 형태는 지정 된 시간 제한 기간 (또는 지정 되지 않은 경우 <xref:System.Threading.Timeout.Infinite>) 내에서 `_object`에 대 한 잠금을 가져오려고 시도 합니다.
 
-네 번째 형식의 생성자에서 잠금을 획득 하지 `_object`합니다. `lock_later` 구성원임을 확인 합니다 [lock_when 열거형](../dotnet/lock-when-enum.md)합니다. 사용 하 여 [lock::acquire](../dotnet/lock-acquire.md) 하거나 [lock::try_acquire](../dotnet/lock-try-acquire.md) 잠금을 획득 하기 위해이 경우.
+생성자의 네 번째 형태는 `_object`에 대 한 잠금을 획득 하지 않습니다. `lock_later`은 [lock_when 열거형](../dotnet/lock-when-enum.md)의 멤버입니다. Lock [:: 얻으려고](../dotnet/lock-acquire.md) 또는 [lock:: try_acquire](../dotnet/lock-try-acquire.md) 을 사용 하 여이 경우 잠금을 가져옵니다.
 
-소멸자가 호출 될 때에 자동으로 잠금이 해제 됩니다.
+소멸자가 호출 되 면 잠금이 자동으로 해제 됩니다.
 
-`_object` 일 수 없습니다 <xref:System.Threading.ReaderWriterLock>합니다.  이 경우 컴파일러 오류가 발생 합니다.
+`_object`를 <xref:System.Threading.ReaderWriterLock>수 없습니다.  인 경우 컴파일러 오류가 발생 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오. 기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 그러면 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다. 주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 그러면 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -205,21 +203,21 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="tilde-lock"></a>lock::~lock
+## <a name="locklock"></a><a name="tilde-lock"></a>lock:: ~ lock
 
-소멸을 `lock` 개체입니다.
+`lock` 개체를 Destructs 합니다.
 
 ```cpp
 ~lock();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-소멸자 호출 [lock::release](../dotnet/lock-release.md)합니다.
+소멸자는 [lock:: release](../dotnet/lock-release.md)를 호출 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오.  기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 그러면 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다.  주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 그러면 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -307,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="acquire"></a>lock::acquire
+## <a name="lockacquire"></a><a name="acquire"></a>lock:: 획득
 
-지정 된 시간 또는 전혀 사용 하지 않을 경우의 잠금을 영구적으로 획득 하려고 대기 하는 필요에 따라 개체에 대 한 잠금을 획득 합니다.
+개체에 대 한 잠금을 획득 하 고, 선택적으로 잠금을 획득 하기 위해 대기 하는 경우 지정 된 시간 동안 또는 전혀 발생 하지 않도록 대기 합니다.
 
 ```cpp
 void acquire();
@@ -324,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>매개 변수
 
 *_timeout*<br/>
-시간 (밀리초) 또는 시간 제한 값을 <xref:System.TimeSpan>입니다.
+제한 시간 값 (밀리초) 또는 <xref:System.TimeSpan>입니다.
 
 ### <a name="exceptions"></a>예외
 
-Throw <xref:System.ApplicationException> 잠금 획득 시간 제한 전에 발생 하지 않습니다.
+제한 시간이 초과 되기 전에 잠금 획득이 발생 하지 않는 경우 <xref:System.ApplicationException>을 throw 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-기본 제한 시간은 시간 제한 값을 제공 되지 않는 경우 <xref:System.Threading.Timeout.Infinite>합니다.
+시간 제한 값을 제공 하지 않으면 기본 시간 제한이 <xref:System.Threading.Timeout.Infinite>됩니다.
 
-잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지.
+잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지 않습니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오. 기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 그러면 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다. 주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 그러면 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -426,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="is-locked"></a>lock::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>lock:: is_locked
 
-잠금이 열리는지 여부를 나타냅니다.
+잠금을 보유 하 고 있는지 여부를 나타냅니다.
 
 ```cpp
 bool is_locked();
@@ -436,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 잠금이 유지 되는 경우 `false` 그렇지 않은 경우.
+잠금이 유지 되는 경우 `true` `false` 그렇지 않으면입니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오.  주 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드가 여전히 존재 하며 일까 지 모든 작업자 스레드가 끝나기를 대기 요소가 해당 작업을 완료 하는 클래스의 동일한 인스턴스에서 잠금을 사용 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다.  주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 모든 작업자 스레드가 존재 하는지 정기적으로 확인 하 고 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -529,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-bool"></a>lock::operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock:: operator bool
 
-연산자를 사용 하 여 `lock` 조건식에서입니다.
+조건식에 `lock`을 사용 하기 위한 연산자입니다.
 
 ```cpp
 operator bool();
@@ -539,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 잠금이 유지 되는 경우 `false` 그렇지 않은 경우.
+잠금이 유지 되는 경우 `true` `false` 그렇지 않으면입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 연산자를 실제로 변환 `_detail_class::_safe_bool` 는 보다 안전한 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.
+이 연산자는 정수 계열 형식으로 변환할 수 없기 때문에 `bool` 보다 안전한 `_detail_class::_safe_bool`로 변환 됩니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오. 기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다. 주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -636,23 +634,23 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="release"></a>lock::release
+## <a name="lockrelease"></a><a name="release"></a>lock:: release
 
-잠금을 해제합니다.
+잠금을 해제 합니다.
 
 ```cpp
 void release();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-잠금이 열리는지 경우 `release` 아무 작업도 수행 합니다.
+잠금을 보유 하 고 있지 않으면 `release` 아무 작업도 수행 하지 않습니다.
 
-이 함수를 명시적으로 호출할 필요가 없습니다. 경우는 `lock` 개체 소멸자 호출 범위를 벗어나면 `release`합니다.
+이 함수는 명시적으로 호출할 필요가 없습니다. `lock` 개체가 범위를 벗어나면 소멸자는 `release`를 호출 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오. 기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 그러면 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다. 주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 그러면 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_release.cpp
@@ -740,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="try-acquire"></a>lock::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock:: try_acquire
 
-지정된 된 시간 동안 대기 하 고 반환 개체에 대 한 잠금을 획득을 `bool` 예외를 throw 하는 대신 취득의 성공 여부를 보고 합니다.
+지정 된 시간 동안 기다린 후 예외를 throw 하는 대신 획득의 성공을 보고 하는 `bool`을 반환 하는 개체에 대 한 잠금을 가져옵니다.
 
 ```cpp
 bool try_acquire(
@@ -756,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>매개 변수
 
 *_timeout*<br/>
-시간 (밀리초) 또는 시간 제한 값을 <xref:System.TimeSpan>입니다.
+제한 시간 값 (밀리초) 또는 <xref:System.TimeSpan>입니다.
 
 ### <a name="return-value"></a>반환 값
 
-`true` 잠금을 획득 하는 경우 `false` 그렇지 않은 경우.
+잠금을 획득 한 경우 `true` `false` 그렇지 않으면입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지.
+잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지 않습니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스 자체에 잠금을 사용 하 여 내부 데이터에 대 한 액세스는 각 스레드에 대해 일치 하는지 확인 하십시오. 기본 응용 프로그램 스레드는 주기적으로 모든 작업자 스레드가 여전히 존재 하는지 확인 하려면 클래스의 동일한 인스턴스에서 잠금을 사용 합니다. 그러면 주 응용 프로그램 종료 모든 작업자 스레드가 해당 태스크를 완료 될 때까지 대기 합니다.
+이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다. 클래스는 자체에 대 한 잠금을 사용 하 여 내부 데이터에 대 한 액세스가 각 스레드에 대해 일치 하는지 확인 합니다. 주 응용 프로그램 스레드는 클래스의 동일한 인스턴스에 대 한 잠금을 사용 하 여 작업자 스레드가 아직 있는지 여부를 주기적으로 확인 합니다. 그러면 주 응용 프로그램은 모든 작업자 스레드가 작업을 완료할 때까지 종료 될 때까지 기다립니다.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -856,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="operator-equality"></a>lock::operator==
+## <a name="lockoperator"></a><a name="operator-equality"></a>lock:: operator = =
 
 같음 연산자입니다.
 
@@ -873,7 +871,7 @@ template<class T> bool operator==(
 
 ### <a name="return-value"></a>반환 값
 
-반환 `true` 하는 경우 `t` 잠금의 개체와 같은지 `false` 그렇지 않은 경우.
+`t` 잠금의 개체와 같으면 `true`을 반환 하 고, 그렇지 않으면 `false`를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -899,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="operator-inequality"></a>lock::operator!=
+## <a name="lockoperator"></a><a name="operator-inequality"></a>lock:: operator! =
 
 같지 않음 연산자입니다.
 
@@ -916,7 +914,7 @@ template<class T> bool operator!=(
 
 ### <a name="return-value"></a>반환 값
 
-반환 `true` 하는 경우 `t` 잠금의 개체에서 다른 `false` 그렇지 않은 경우.
+`t` 잠금의 개체와 다른 경우 `false` `true`를 반환 합니다.
 
 ### <a name="example"></a>예제
 

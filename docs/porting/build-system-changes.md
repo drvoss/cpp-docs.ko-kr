@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626610"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076941"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild vs MSBuild: Visual Studio 2010의 빌드 시스템 변경 내용
 
@@ -47,7 +47,7 @@ Visual Studio 2008 이전 버전에서 **$ (Inherit)** 매크로는 프로젝트
 
 Visual Studio 2010에서는 하나 이상의 리터럴 값 및 속성 매크로의 연결로 속성의 값을 지정 하 여 상속이 지원 됩니다. **$(Inherit)** 및 **$(NoInherit)** 매크로는 지원되지 않습니다.
 
-다음 예제에서는 세미콜론으로 구분된 목록이 속성 페이지의 속성으로 할당됩니다. 이 목록은 매크로 표기법 **$(** <em>MyProperty</em> **)** 를 사용해서 액세스되는 `MyProperty` 속성 값 및 *\<value>* 리터럴의 연결로 구성됩니다.
+다음 예제에서는 세미콜론으로 구분된 목록이 속성 페이지의 속성으로 할당됩니다. 이 목록은 매크로 표기법 *$(\<* MyProperty`MyProperty` **)** 를 사용해서 액세스되는 <em>속성 값 및</em>**value>** 리터럴의 연결로 구성됩니다.
 
 ```
 Property=<value>;$(MyProperty)
@@ -63,7 +63,7 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vc-directories-settings"></a>VC + + 디렉터리 설정
 
-Visual C++ 디렉터리 설정은 [VC++ 디렉터리 속성 페이지](../ide/vcpp-directories-property-page.md)에 지정됩니다. Visual Studio 2008 및 이전 버전에서 디렉터리 설정은 사용자별로 적용 되며 제외 된 디렉터리 목록은 *sysincl* 파일에 지정 됩니다. 
+Visual C++ 디렉터리 설정은 [VC++ 디렉터리 속성 페이지](../ide/vcpp-directories-property-page.md)에 지정됩니다. Visual Studio 2008 및 이전 버전에서 디렉터리 설정은 사용자별로 적용 되며 제외 된 디렉터리 목록은 *sysincl* 파일에 지정 됩니다.
 
 명령줄에서 [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe)를 실행하면 VC++ 디렉터리 설정을 변경할 수 없습니다. 또한 **도구** 메뉴를 열어 **가져오기 및 내보내기 설정**를 클릭한 다음, **모든 설정 다시 설정** 옵션을 선택하면 설정을 변경할 수 없습니다.
 
@@ -73,6 +73,6 @@ Visual C++ 디렉터리 설정은 [VC++ 디렉터리 속성 페이지](../ide/vc
 2. **선택한 환경 설정 가져오기** 를 선택 합니다.
 3. 마법사의 지시를 따릅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [명령줄의 MSBuild - C++](../build/msbuild-visual-cpp.md)

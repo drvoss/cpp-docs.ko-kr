@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423755"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076153"
 ---
 # <a name="functions-c"></a>함수(C++)
 
@@ -202,7 +202,7 @@ void DoSomething(const std::string& input){...}
 void DoSomething(const std::string&& input){...}
 ```
 
-매개 변수 선언 목록에서 단일 키워드 **void** 로 선언 된 함수는 **void** 키워드가 인수 선언 목록의 첫 번째 및 유일한 멤버인 경우 인수를 사용 하지 않습니다. 목록의 다른 위치에서 **void** 형식의 인수는 오류를 생성 합니다. 다음은 그 예입니다.
+매개 변수 선언 목록에서 단일 키워드 **void** 로 선언 된 함수는 **void** 키워드가 인수 선언 목록의 첫 번째 및 유일한 멤버인 경우 인수를 사용 하지 않습니다. 목록의 다른 위치에서 **void** 형식의 인수는 오류를 생성 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 
@@ -261,7 +261,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 C++에서는 지역 변수를 정적으로 선언할 수 있습니다. 이 변수는 함수 본문 내에만 표시되지만 함수의 모든 인스턴스에 대해 변수의 단일 복사본이 존재합니다. 로컬 정적 개체는 `atexit`로 지정된 종료 중에 소멸됩니다. 프로그램의 제어 흐름이 정적 개체의 선언을 건너뛰었기 때문에 정적 개체가 생성되지 않은 경우에는 해당 개체를 소멸하려고 하지 않습니다.
 
-##  <a name="type_deduction"></a>반환 형식에 대 한 형식 추론 (c + + 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>반환 형식에 대 한 형식 추론 (c + + 14)
 
 C + + 14에서는 **auto** 를 사용 하 여 컴파일러가 후행 반환 형식을 제공 하지 않고도 함수 본문에서 반환 형식을 유추 하도록 지시할 수 있습니다. **Auto** 는 항상 반환 값으로 추론 합니다. `auto&&`를 사용하여 참조를 추론하도록 컴파일러에 지시합니다.
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 **Auto** 는 추론 형식의 const를 유지 하지 않습니다. 반환 값이 해당 인수의 const 또는 참조를 유지 해야 하는 전달 함수의 경우 **decltype 형식 유추 규칙을 사용** 하 고 모든 형식 정보를 유지 하는 **decltype (auto)** 키워드를 사용할 수 있습니다. **decltype (auto)** 은 왼쪽에서 일반 반환 값으로 사용 되거나 후행 반환 값으로 사용 될 수 있습니다.
 
-다음 예제 ( [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)의 코드 기반)에서는 템플릿이 인스턴스화될 때까지 알려지지 않은 반환 형식에서 함수 인수를 완벽 하 게 전달할 수 있도록 하는 데 사용 되는 **decltype (auto)** 을 보여 줍니다.
+다음 예제 ( [N3493](https://wg21.link/n3493)의 코드 기반)에서는 템플릿이 인스턴스화될 때까지 알려지지 않은 반환 형식에서 함수 인수를 완벽 하 게 전달할 수 있도록 하는 데 사용 되는 **decltype (auto)** 을 보여 줍니다.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>함수에서 여러 값 반환
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>함수에서 여러 값 반환
 
 여러 가지 방법으로 함수에서 두 개 이상의 값을 반환할 수 있습니다.
 

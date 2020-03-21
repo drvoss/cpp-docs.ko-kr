@@ -2,12 +2,12 @@
 title: 정적 라이브러리(C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302940"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077974"
 ---
 # <a name="static-libraries-ccx"></a>정적 라이브러리(C++/CX)
 
@@ -15,16 +15,15 @@ UWP (유니버설 Windows 플랫폼) 앱에서 사용 되는 정적 라이브러
 
 ## <a name="creating-static-libraries"></a>정적 라이브러리 만들기
 
-
 새 프로젝트를 만드는 방법에 대 한 지침은 설치한 Visual Studio 버전에 따라 다릅니다. 왼쪽 위의 버전 선택기를 올바른 버전으로 설정 했는지 확인 합니다.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Visual Studio 2019에서 UWP 정적 라이브러리를 만들려면
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 **새 프로젝트 만들기** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **파일** > **새** > **프로젝트** 를 선택 하 여 **새 프로젝트 만들기** 대화 상자를 엽니다.
 
-1. 대화 상자 위쪽에서 **언어** **C++** 를로 설정 하 고, **플랫폼** 을 **Windows**로 설정 하 고, **프로젝트 형식** 을 **UWP**로 설정 합니다. 
+1. 대화 상자 위쪽에서 **언어** **C++** 를로 설정 하 고, **플랫폼** 을 **Windows**로 설정 하 고, **프로젝트 형식** 을 **UWP**로 설정 합니다.
 
 1. 필터링 된 프로젝트 형식 목록에서 **정적 라이브러리 (유니버설 Windows- C++/cx)** 를 선택한 후 **다음**을 선택 합니다. 다음 페이지에서 프로젝트에 이름을 지정 하 고 원하는 경우 프로젝트 위치를 지정 합니다.
 

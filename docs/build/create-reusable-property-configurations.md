@@ -3,16 +3,16 @@ title: Visual Studio 프로젝트 설정 공유 또는 다시 사용-C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303215"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078701"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Visual Studio 프로젝트 설정 공유 또는 재사용
 
-다른 사용자와 공유 하거나 여러 프로젝트에서 다시 사용할 수 있는 사용자 지정 설정 그룹을 만들려면 **속성 관리자** 를 사용 하 여 *속성 시트* (props 파일)를 만들어 다시 사용 하거나 다른 사용자와 공유할 수 있도록 하려는 각 프로젝트 종류에 대 한 설정을 저장 합니다. 속성 시트를 사용 하면 "전역" 설정을 만드는 다른 방법 보다 훨씬 더 오류가 발생 하기 쉽습니다. 
+다른 사용자와 공유 하거나 여러 프로젝트에서 다시 사용할 수 있는 사용자 지정 설정 그룹을 만들려면 **속성 관리자** 를 사용 하 여 *속성 시트* (props 파일)를 만들어 다시 사용 하거나 다른 사용자와 공유할 수 있도록 하려는 각 프로젝트 종류에 대 한 설정을 저장 합니다. 속성 시트를 사용 하면 "전역" 설정을 만드는 다른 방법 보다 훨씬 더 오류가 발생 하기 쉽습니다.
 
 > [!IMPORTANT]
 > **.user 파일 및 이 파일이 문제가 되는 이유**

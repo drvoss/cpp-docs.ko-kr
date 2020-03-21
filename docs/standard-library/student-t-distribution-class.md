@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685864"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076378"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution 클래스
 
@@ -64,7 +64,7 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* \
+*RealType*\
 부동 소수점 결과 형식으로, 기본적으로 **double**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>주의
@@ -78,9 +78,9 @@ public:
 
 속성 함수 `n()`은 저장된 분포 매개 변수 `n`의 값을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-Student의 *t* 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Student의 t 분포](http://mathworld.wolfram.com/Studentst-Distribution.html)를 참조하세요.
+Student의 *t* 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Student의 t 분포](https://mathworld.wolfram.com/Studentst-Distribution.html)를 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:** \<무작위 >
 
 **네임스페이스:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 분포를 생성합니다.
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 `n` 분포 매개 변수입니다.
 
-*parm* \
+*parm*\
 분포를 생성하는 데 사용되는 매개 변수 패키지입니다.
 
 ### <a name="remarks"></a>주의
@@ -188,7 +188,7 @@ explicit student_t_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 분포의 모든 매개 변수를 저장합니다.
 
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 `n` 분포 매개 변수입니다.
 
-*오른쪽* \
+*오른쪽*\
 이 매개 변수와 비교할 `param_type` 개체입니다.
 
 ### <a name="remarks"></a>주의
@@ -217,6 +217,6 @@ struct param_type {
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<random>](../standard-library/random.md)

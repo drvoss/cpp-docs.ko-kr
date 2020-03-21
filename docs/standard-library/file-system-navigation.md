@@ -2,16 +2,16 @@
 title: 파일 시스템 탐색
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518506"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076538"
 ---
 # <a name="file-system-navigation"></a>파일 시스템 탐색
 
-\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)`은 항상 Windows에서 **false** 를 반환 합니다.
+\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)`은 항상 Windows에서 **false** 를 반환 합니다.
 
 ## <a name="overview"></a>개요
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-두 경로를 연결하기 위해 `/` 및 `/=` 의 `+` 및 `+=` 연산자와 유사한 오버로드된 `std::string` 및 `std::wstring`연산자를 사용할 수 있습니다. 구분 기호를 제공하지 않을 경우 `path` 개체가 편리하게 제공합니다.
+두 경로를 연결하기 위해 `/` 및 `/=` 의 `+` 및 `+=` 연산자와 유사한 오버로드된 `std::string` 및 `std::wstring`연산자를 사용할 수 있습니다. 원하지 않는 경우 `path` 개체는 구분 기호를 편리 하 게 제공 합니다.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

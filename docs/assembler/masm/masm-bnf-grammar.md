@@ -4,12 +4,12 @@ description: X 64 용 MASM에 대 한 BNF 설명입니다.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322825"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075460"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft 매크로 어셈블러 BNF 문법
 
@@ -142,7 +142,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;**POPCONTEXT** *contextitemlist* ;;
 
 *Contextitem*\
-&nbsp;&nbsp;&nbsp;&nbsp; | **CPU** | 모두 **나열** |  | **기** 하는 **것으로 가정** 합니다.
+&nbsp;&nbsp;&nbsp;&nbsp; | **CPU** | 모두 **나열** |  | **기** 하는 **것으로 가정** 합니다. **ALL**
 
 *Contextitemlist*\
 &nbsp;&nbsp;&nbsp;&nbsp;*contextitem* | *contextitemlist* , *contextitem*
@@ -204,7 +204,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 
 \ *수*
 &nbsp;&nbsp; *&nbsp;&nbsp;\*
-&nbsp;&nbsp;&nbsp;&nbsp;| *바이트 수*
+&nbsp;&nbsp;&nbsp;&nbsp;| *바이트 수* *decdigit*
 
 *구분 기호*\
 *whiteSpaceCharacter* 를 제외한 모든 문자를 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -256,7 +256,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;| **SEG** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **Lroffset** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **TYPE** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;**이** *e10* | 
+&nbsp;&nbsp;&nbsp;&nbsp;**이** *e10* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *e09* **PTR** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *e09* : *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *e10*
@@ -282,7 +282,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;| *id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **$**\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *등록*
+&nbsp;&nbsp;&nbsp;&nbsp;| *등록*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ST**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ST** ( *expr* )
 
@@ -451,7 +451,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;a | b | c | d | e | f | A | B | C | D | E | 350
 
 *id*\
-식별자의 첫 번째 문자를 &nbsp;&nbsp;&nbsp;대문자 (`[A–Za-z]`) 또는 이러한 네 문자 중 하나를 사용할 수 있습니다. 나머지 문자는 같은 문자 또는 10 진수 (`@ _ $ ?`)를 사용할 수 있습니다. &nbsp; 최대 길이는 247 자입니다.
+식별자의 첫 번째 문자를 &nbsp;&nbsp;&nbsp;대문자 (`[A–Za-z]`) 또는 이러한 네 문자 중 하나를 사용할 수 있습니다. 나머지 문자는 같은 문자 또는 10 진수 (`@ _ $ ?`)를 사용할 수 있습니다. &nbsp;`[0–9]` 최대 길이는 247 자입니다.
 
 *Idlist*\
 &nbsp;&nbsp;&nbsp;&nbsp;*id* | *idlist* , *id*
@@ -569,7 +569,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*localdir* | *localtlist* *localdir*
 
 *Locallist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*localdef* | *localdef 목록*
+&nbsp;&nbsp;&nbsp;&nbsp;*localdef* | *localdef 목록* *localDef*
 
 *macroArg*\
  % *constExpr*\
@@ -634,7 +634,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*지시문* 을 \
 &nbsp;&nbsp;&nbsp;&nbsp;| *exitmDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;| : *macroLabel*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **GOTO**
+&nbsp;&nbsp;&nbsp;&nbsp;| **GOTO**\
 &nbsp;&nbsp;&nbsp;&nbsp;*macroLabel*
 
 *macroStmtList*\
@@ -676,7 +676,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*id* ;; \
 
 *nearfar*\
-&nbsp;&nbsp;&nbsp;&nbsp;**근처** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**근처** | **FAR**
 
 *nestedStruct*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structHdr* ⟦ *id* ⟧;; \
@@ -690,7 +690,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp; **&nbsp;&nbsp; | ** **ORG** *immExpr* | **ALIGN** ⟦ *constExpr* ⟧
 
 *offsetType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**그룹** | **세그먼트** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**그룹** | **세그먼트** | **FLAT**
 
 *oldRecordFieldList*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *oldRecordFieldList* , ⟦ *constExpr* ⟧
@@ -812,7 +812,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*Pubdef* | *pubdef* , ⟦;; ⟧ *Pubdef*
 
 *purgeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; *macroIdList* 제거
+&nbsp;&nbsp;&nbsp;&nbsp;**PURGE** *macroIdList* 제거
 
 *qualifiedType*\
 &nbsp;&nbsp;&nbsp;&nbsp;*유형* | ⟦ *distance* ⟧ **PTR** ⟦ *qualifiedType* ⟧
@@ -853,7 +853,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*id*
 
 \ *등록*
-&nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *Qwordregister* |  *fpuRegister* |  *segmentRegister | *
+&nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *Qwordregister* |  *fpuRegister* | *SIMDRegister* *segmentRegister | *
 
 *Reglist*\
 &nbsp;&nbsp; *&nbsp;&nbsp;등록* | *reglist* *등록*
@@ -872,10 +872,10 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp;*Initvalue* | *scalarInstList* , ⟦;; ⟧ *Initvalue*
 
 *segAlign*\
-&nbsp;&nbsp;&nbsp;&nbsp;**바이트** | **WORD** |  ** | **  |  **페이지**
+&nbsp;&nbsp;&nbsp;&nbsp;**바이트** | **WORD** |  ** | **  | **PARA** **페이지**
 
 *segAttrib*\
-&nbsp;&nbsp;&nbsp;&nbsp;**공용** | **스택** * |  | * **에서** **일반적인** | **메모리** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**공용** | **스택** * |  | * **에서** **PRIVATE** **일반적인** | **메모리** | 
 
 *segDir*\
 &nbsp;&nbsp;&nbsp;&nbsp; **. 코드**\
@@ -942,7 +942,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 
 *specialChars*\
  : | . | ⟦ | ⟧ | ( | ) | < | > | { | } \
-&nbsp;&nbsp;&nbsp;&nbsp;| + | - | / | * | & | % | !\
+&nbsp;&nbsp;&nbsp;&nbsp;| + | - | / | * | &AMP; | % | !\
 &nbsp;&nbsp;&nbsp;&nbsp;| ' | \ | = | ; | , | "\
 &nbsp;&nbsp;&nbsp;&nbsp;| *whiteSpaceCharacter*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *endOfLine*
@@ -1058,7 +1058,7 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 &nbsp;&nbsp;&nbsp;&nbsp; **. .UNTILCXZ** ⟦ *cxzexpr* ⟧;;
 
 *\*
-&nbsp;&nbsp;&nbsp;&nbsp; *reglist* 사용
+&nbsp;&nbsp;&nbsp;&nbsp;**USES** *reglist* 사용
 
 *whileBlock*\
 &nbsp;&nbsp;&nbsp;&nbsp; **.\**
@@ -1071,4 +1071,3 @@ BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어,
 
 *Xmmregister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | ~ XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

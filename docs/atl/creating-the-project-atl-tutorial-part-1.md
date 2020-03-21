@@ -3,12 +3,12 @@ title: 프로젝트 만들기(ATL 자습서, 1부)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509397"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075340"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>프로젝트 만들기(ATL 자습서, 1부)
 
@@ -45,14 +45,14 @@ ms.locfileid: "79509397"
 
     소스 코드의 위치는 일반적으로 기본적으로 \Users\\\<username > \source\repos이 고 새 폴더는 자동으로 만들어집니다.
 
-1. Visual Studio 2019에서 기본값을 그대로 적용 하 고 **확인**을 클릭 합니다. 
+1. Visual Studio 2019에서 기본값을 그대로 적용 하 고 **확인**을 클릭 합니다.
    Visual Studio 2017에서 **확인** 을 클릭 하 여 **ATL 프로젝트** 마법사를 엽니다. **응용 프로그램 설정** 을 클릭 하 여 사용할 수 있는 옵션을 확인 합니다. 이 프로젝트는 컨트롤을 만들지만 컨트롤이 in-process 서버 여야 하므로 **응용 프로그램 유형을** DLL로 그대로 둡니다. **확인**을 클릭합니다.
 
 Visual Studio에서 여러 파일을 생성 하 여 프로젝트를 만듭니다. **솔루션 탐색기** 에서 `Polygon` 개체를 확장 하 여 이러한 파일을 볼 수 있습니다. 파일은 다음과 같습니다.
 
 ::: moniker range="<=vs-2017"
 
-|파일|Description|
+|파일|설명|
 |----------|-----------------|
 |Polygon .cpp|`DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`및 `DllUnregisterServer`의 구현을 포함 합니다. 프로젝트의 ATL 개체의 목록인 개체 맵의 포함 됩니다. 이 옵션은 처음에 비어 있습니다.|
 |Polygon .def|이 모듈 정의 파일은 링커에게 DLL에서 필요로 하는 내보내기에 대한 정보를 제공합니다.|
@@ -68,7 +68,7 @@ Visual Studio에서 여러 파일을 생성 하 여 프로젝트를 만듭니다
 
 ::: moniker range=">=vs-2019"
 
-|파일|Description|
+|파일|설명|
 |----------|-----------------|
 |Polygon .cpp|`DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`및 `DllUnregisterServer`의 구현을 포함 합니다. 프로젝트의 ATL 개체의 목록인 개체 맵의 포함 됩니다. 이 옵션은 처음에 비어 있습니다.|
 |Polygon .def|이 모듈 정의 파일은 링커에게 DLL에서 필요로 하는 내보내기에 대한 정보를 제공합니다.|

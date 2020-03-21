@@ -3,12 +3,12 @@ title: x64 호출 규칙
 description: 기본 x64 ABI 호출 규칙의 세부 정보입니다.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422705"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078077"
 ---
 # <a name="x64-calling-convention"></a>x64 호출 규칙
 
@@ -147,7 +147,7 @@ RAX, RCX, RDX, R8, R 9, R10, R 11, XMM0-5의 레지스터와 형식인 경우 YM
 레지스터 RBX, RBP, RBP, RBP, RSP, R12, R13, R14, R15 및 XMM6-15는 비휘발성로 간주 되며이를 사용 하는 함수를 사용 하 여 저장 하 고 복원 해야 합니다.
 
 ## <a name="function-pointers"></a>함수 포인터
- 
+
 함수 포인터는 각 함수의 레이블에 대한 단순한 포인터입니다. 함수 포인터에 적용되는 TOC(목차) 요구 사항은 없습니다.
 
 ## <a name="floating-point-support-for-older-code"></a>이전 코드에 대 한 부동 소수점 지원

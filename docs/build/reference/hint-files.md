@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189001"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075199"
 ---
 # <a name="hint-files"></a>힌트 파일
 
@@ -150,12 +150,12 @@ Visual Studio 2017 버전 15.8부터 방해가 되는 매크로를 식별할 수
 
 |구문|의미|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|새 힌트를 정의하거나 기존 힌트를 다시 정의하는 전처리기 지시문입니다. 지시문 뒤에 나오는 전처리기에서 소스 코드에 있는 *hint-name*의 각 항목을 *replacement-string*으로 바꿉니다.<br /><br /> 두 번째 구문 형식은 함수와 비슷한 힌트를 정의합니다. 소스 코드에서 함수와 비슷한 힌트가 발생하면 전처리기에서 *replacement-string*의 각 *parameter*를 소스 코드의 해당 인수로 바꾼 다음, *hint-name*을 *replacement-string*으로 바꿉니다.|
+|`#define` *힌트-이름* *바꾸기-문자열*<br /><br /> `#define` *힌트-name* `(` *parameter*, ...`)`*대체 문자열*|새 힌트를 정의하거나 기존 힌트를 다시 정의하는 전처리기 지시문입니다. 지시문 뒤에 나오는 전처리기에서 소스 코드에 있는 *hint-name*의 각 항목을 *replacement-string*으로 바꿉니다.<br /><br /> 두 번째 구문 형식은 함수와 비슷한 힌트를 정의합니다. 소스 코드에서 함수와 비슷한 힌트가 발생하면 전처리기에서 *replacement-string*의 각 *parameter*를 소스 코드의 해당 인수로 바꾼 다음, *hint-name*을 *replacement-string*으로 바꿉니다.|
 |`@<`|맵 요소 집합의 시작을 나타내는 힌트 파일 특정 *replacement-string*입니다.|
 |`@=`|중간 맵 요소를 나타내는 힌트 파일 특정 *replacement-string*입니다. 맵에는 여러 개의 맵 요소가 있을 수 있습니다.|
 |`@>`|맵 요소 집합의 끝을 나타내는 힌트 파일 특정 *replacement-string*입니다.|
-|`#undef` *hint-name*|기존 힌트를 삭제하는 전처리기 지시문입니다. 힌트의 이름은 *hint-name* 식별자로 제공됩니다.|
-|`//` *comment*|한 줄 주석문입니다.|
+|`#undef` *힌트-이름*|기존 힌트를 삭제하는 전처리기 지시문입니다. 힌트의 이름은 *hint-name* 식별자로 제공됩니다.|
+|`//` *주석*|한 줄 주석문입니다.|
 |`/*` *comment* `*/`|여러 줄 주석입니다.|
 
 ## <a name="example"></a>예제
@@ -248,4 +248,3 @@ Visual Studio 2017 버전 15.8부터 방해가 되는 매크로를 식별할 수
 [#define 지시문(C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef 지시문(C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 주석](../../c-runtime-library/sal-annotations.md)<br>
-

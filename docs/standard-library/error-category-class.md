@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 308fa1a2309ddfda1a02fe6a687360185c1e7c6e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245847"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076610"
 ---
-# <a name="errorcategory-class"></a>error_category 클래스
+# <a name="error_category-class"></a>error_category 클래스
 
 오류 코드 범주를 설명하는 개체에 대한 추상, 공통 기본을 나타냅니다.
 
@@ -37,13 +37,13 @@ virtual ~error_category();
 error_category(const error_category&) = delete
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-미리 정의된 두 개의 [generic_category](../standard-library/system-error-functions.md#generic_category) 및 [system_category](../standard-library/system-error-functions.md#system_category) 개체가 `error_category`를 구현합니다.
+미리 정의된 두 개의 `error_category`generic_category[ 및 ](../standard-library/system-error-functions.md#generic_category)system_category[ 개체가 ](../standard-library/system-error-functions.md#system_category)를 구현합니다.
 
 ## <a name="members"></a>멤버
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -69,7 +69,7 @@ error_category(const error_category&) = delete
 |[operator!=](#op_neq)|`error_category` 개체가 같지 않은지 테스트합니다.|
 |[operator<](#op_lt)|[error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.|
 
-## <a name="default_error_condition"></a> default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
 오류 조건 개체에 대한 오류 코드 값을 저장합니다.
 
@@ -86,9 +86,9 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 `error_condition(_Errval, *this)`를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-### <a name="equivalent"></a> 해당
+### <a name="equivalent"></a><a name="equivalent"></a>상응
 
 오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.
 
@@ -108,26 +108,26 @@ virtual bool equivalent(const error_code& _Code,
 *_Cond*\
 비교할 [error_condition](../standard-library/error-condition-class.md) 개체입니다.
 
-*(_C)* \
+*_Code*\
 비교할 [error_code](../standard-library/error-code-class.md) 개체입니다.
 
 #### <a name="return-value"></a>반환 값
 
-**true 이면** 범주 및 값 같으면이 고, 그렇지 않으면 **false**합니다.
+범주와 값이 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
-첫 번째 멤버 함수는 `*this == _Cond.category() && _Cond.value() == _Errval`을 반환합니다.
+첫 번째 구성원 함수는 `*this == _Cond.category() && _Cond.value() == _Errval`를 반환합니다.
 
 두 번째 구성원 함수는 `*this == _Code.category() && _Code.value() == _Errval`를 반환합니다.
 
-### <a name="generic"></a> generic_category
+### <a name="generic_category"></a><a name="generic"></a>generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a> 메시지
+### <a name="message"></a><a name="message"></a>메시지
 
 지정된 오류 코드의 이름을 반환합니다.
 
@@ -142,11 +142,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="return-value"></a>반환 값
 
-오류 코드의 설명이 포함 된 이름을 반환 *val* 범주에 대 한 합니다.
+범주에 대 한 오류 코드 *val* 의 설명이 포함 된 이름을 반환 합니다.
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
-### <a name="name"></a> 이름
+### <a name="name"></a><a name="name"></a>이름의
 
 범주 이름을 반환합니다.
 
@@ -158,14 +158,13 @@ virtual const char *name() const = 0;
 
 범주 이름을 null 종료 바이트 문자열로 반환합니다.
 
-### <a name="op_as"></a> 연산자 =
+### <a name="operator"></a><a name="op_as"></a>연산자 =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-
-### <a name="op_eq_eq"></a> 연산자 = =
+### <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 `error_category` 개체가 같은지 테스트합니다.
 
@@ -182,11 +181,11 @@ bool operator==(const error_category& right) const;
 
 개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
 이 구성원 연산자는 `this == &right`를 반환합니다.
 
-### <a name="op_neq"></a> operator!=
+### <a name="operator"></a><a name="op_neq"></a> operator!=
 
 `error_category` 개체가 같지 않은지 테스트합니다.
 
@@ -201,13 +200,13 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>반환 값
 
-**true** 경우는 `error_category` 개체와 같지 않습니다. 합니다 `error_category` 개체가 전달 *오른쪽*이 고 그렇지 않으면 **false**합니다.
+`error_category` 개체가 *오른쪽*에 전달 된 `error_category` 개체와 같지 않으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
 멤버 연산자는 `(!*this == right)`을 반환합니다.
 
-### <a name="op_lt"></a> 연산자&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
 
 [error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.
 
@@ -222,19 +221,19 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>반환 값
 
-`error_category` 개체가 비교를 위해 전달된 `error_category` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.
+**개체가 비교를 위해 전달된** 개체보다 작으면 `error_category`true`error_category`이고, 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
 멤버 연산자는 `this < &right`을 반환합니다.
 
-### <a name="system"></a> system_category
+### <a name="system_category"></a><a name="system"></a>system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 저장된 오류 코드 값을 나타내는 형식입니다.
 
@@ -242,6 +241,6 @@ const error_category& system_category();
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>설명
+#### <a name="remarks"></a>주의
 
-이 형식 정의 대 한 동의어가 **int**합니다.
+이 형식 정의는 **int**의 동의어입니다.

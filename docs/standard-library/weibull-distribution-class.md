@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688505"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075523"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution 클래스
 
@@ -70,7 +70,7 @@ class weibull_distribution
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* \
+*RealType*\
 부동 소수점 결과 형식으로, 기본적으로 **double**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>주의
@@ -84,7 +84,7 @@ class weibull_distribution
 
 속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 *a* 및 *b* 각각에 대한 값을 반환합니다.
 
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
+속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
 `min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.
 
@@ -92,9 +92,9 @@ class weibull_distribution
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-와이블 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [와이블 분포](http://mathworld.wolfram.com/WeibullDistribution.html)를 참조하세요.
+와이블 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [와이블 분포](https://mathworld.wolfram.com/WeibullDistribution.html)를 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>출력
 
 첫 번째 실행:
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:** \<무작위 >
 
 **네임스페이스:** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -225,10 +225,10 @@ explicit weibull_distribution(const param_type& parm);
 *\*
 `a` 분포 매개 변수입니다.
 
-*b* \
+*b*\
 `b` 분포 매개 변수입니다.
 
-*parm* \
+*parm*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>주의
@@ -239,7 +239,7 @@ explicit weibull_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
 
 분포의 매개 변수를 저장합니다.
 
@@ -260,10 +260,10 @@ struct param_type {
 *\*
 `a` 분포 매개 변수입니다.
 
-*b* \
+*b*\
 `b` 분포 매개 변수입니다.
 
-*오른쪽* \
+*오른쪽*\
 이 매개 변수와 비교할 `param_type` 개체입니다.
 
 ### <a name="remarks"></a>주의
@@ -272,6 +272,6 @@ struct param_type {
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<random>](../standard-library/random.md)

@@ -2,12 +2,12 @@
 title: Android 및 iOS에서 OpenGL ES 애플리케이션 빌드
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470078"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079664"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android 및 iOS에서 OpenGL ES 애플리케이션 빌드
 
@@ -109,7 +109,7 @@ IOS 앱을 빌드 및 테스트 하려면 Mac 컴퓨터가 필요 합니다. 설
 
    생성 된 Android Native Activity 앱 및 라이브러리 프로젝트는 공유 C++ 코드를 동적 라이브러리에 저장 합니다. Android 플랫폼과 인터페이스 하기 위한 "글 루" 코드를 포함 합니다. 대부분의 앱 코드는 라이브러리에 있습니다. 매니페스트, 리소스 및 빌드 지침은 패키징 프로젝트에 있습니다. 공유 코드는 NativeActivity 프로젝트의 main.cpp에서 호출됩니다. Android NativeActivity를 프로그래밍하는 방법에 대한 자세한 내용은 Android 개발자 NDK [개념](https://developer.android.com/ndk/guides/concepts.html) 페이지를 참조하세요.
 
-   Visual Studio는 Android NDK를 사용 하 여 Android Native Activity 프로젝트를 빌드합니다. 플랫폼 도구 집합으로 Clang을 사용 합니다. Visual Studio는 프로젝트의 속성을 대상 플랫폼에서 컴파일, 연결 및 디버그 명령에 매핑합니다. 자세한 내용을 보려면 MyOpenGLESApp.Android.NativeActivity 프로젝트에 대한 **속성 페이지** 대화 상자를 엽니다. 명령줄 스위치에 대한 자세한 내용은 [Clang 컴파일러 사용자 설명서](http://clang.llvm.org/docs/UsersManual.html)를 참조하세요.
+   Visual Studio는 Android NDK를 사용 하 여 Android Native Activity 프로젝트를 빌드합니다. 플랫폼 도구 집합으로 Clang을 사용 합니다. Visual Studio는 프로젝트의 속성을 대상 플랫폼에서 컴파일, 연결 및 디버그 명령에 매핑합니다. 자세한 내용을 보려면 MyOpenGLESApp.Android.NativeActivity 프로젝트에 대한 **속성 페이지** 대화 상자를 엽니다. 명령줄 스위치에 대한 자세한 내용은 [Clang 컴파일러 사용자 설명서](https://clang.llvm.org/docs/UsersManual.html)를 참조하세요.
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>iOS 디바이스에서 iOS 앱 빌드 및 실행
 

@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209232"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078959"
 ---
 # <a name="comptr-class"></a>com::ptr 클래스
 
-CLR 클래스의 멤버로 사용할 수 있는 COM 개체에 대한 래퍼입니다.  이 래퍼는 또한 COM 개체의 수명 주기 관리를 자동화하여 소멸자가 호출될 때 개체에서 모든 소유 참조를 해제합니다. 비슷합니다 [CComPtr 클래스](../atl/reference/ccomptr-class.md)합니다.
+CLR 클래스의 멤버로 사용할 수 있는 COM 개체에 대한 래퍼입니다.  이 래퍼는 또한 COM 개체의 수명 주기 관리를 자동화하여 소멸자가 호출될 때 개체에서 모든 소유 참조를 해제합니다. [CComPtr 클래스](../atl/reference/ccomptr-class.md)와 유사 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,13 +39,13 @@ ref class ptr;
 *_interface_type*<br/>
 COM 인터페이스.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 또한 `com::ptr`은 로컬 함수 변수로 사용하여 여러 COM 작업을 간소화하고 수명 주기 관리를 자동화할 수 있습니다.
 
-A `com::ptr` 함수 매개 변수로 직접 사용할 수 없습니다; 사용을 [추적 참조 연산자](../extensions/tracking-reference-operator-cpp-component-extensions.md) 또는 [개체 연산자 (^)에 대 한 핸들](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) 대신 합니다.
+`com::ptr`는 함수 매개 변수로 직접 사용할 수 없습니다. [추적 참조 연산자](../extensions/tracking-reference-operator-cpp-component-extensions.md) 또는 [개체 연산자 (^)에 대 한 핸들](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) 을 대신 사용 합니다.
 
-`com::ptr` 함수에서 직접 반환 될 수 없습니다; 대신 핸들을 사용 합니다.
+`com::ptr`는 함수에서 직접 반환 될 수 없습니다. 대신 핸들을 사용 하십시오.
 
 ## <a name="example"></a>예제
 
@@ -167,42 +167,40 @@ int main() {
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|생성 된 `com::ptr` COM 개체를 래핑할 합니다.| 
-|[ptr::~ptr](#tilde-ptr)|소멸을 `com::ptr`입니다.| 
+|이름|설명|
+|---------|-----------|
+|[ptr::ptr](#ptr)|COM 개체를 래핑하 `com::ptr`를 생성 합니다.|
+|[ptr::~ptr](#tilde-ptr)|`com::ptr`Destructs.|
 
 ### <a name="public-methods"></a>public 메서드
 
 |이름|설명|
-|---------|-----------| 
-|[ptr::Attach](#attach)|COM 개체를 연결 된 `com::ptr`합니다.| 
-|[ptr::CreateInstance](#createInstance)|내에서 COM 개체의 인스턴스를 만듭니다를 `com::ptr`입니다.| 
-|[ptr::Detach](#detach)|개체에 대 한 포인터를 반환 하는 COM 개체의 소유권을 포기 합니다.| 
-|[ptr::GetInterface](#getInterface)|내에서 COM 개체의 인스턴스를 만듭니다를 `com::ptr`입니다.| 
-|[ptr::QueryInterface](#queryInterface)|인터페이스에 대 한 소유 COM 개체를 쿼리하고 결과를 다른 연결 `com::ptr`합니다.| 
-|[ptr::Release](#release)|COM 개체에 대 한 모든 소유 참조를 해제합니다.|
+|---------|-----------|
+|[ptr::Attach](#attach)|COM 개체를 `com::ptr`에 연결 합니다.|
+|[ptr::CreateInstance](#createInstance)|`com::ptr`내에 COM 개체의 인스턴스를 만듭니다.|
+|[ptr::Detach](#detach)|COM 개체의 소유권을 부여 하 여 개체에 대 한 포인터를 반환 합니다.|
+|[ptr::GetInterface](#getInterface)|`com::ptr`내에 COM 개체의 인스턴스를 만듭니다.|
+|[ptr::QueryInterface](#queryInterface)|소유 하 고 있는 COM 개체를 쿼리하여 인터페이스에 대 한 결과를 다른 `com::ptr`에 연결 합니다.|
+|[ptr::Release](#release)|COM 개체에서 소유 된 모든 참조를 해제 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
 |이름|설명|
-|---------|-----------| 
-|[ptr::operator-&gt;](#operator-arrow)|멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.| 
-|[ptr::operator=](#operator-assign)|COM 개체를 연결 된 `com::ptr`합니다.| 
-|[ptr::operator&nbsp;bool](#operator-bool)|연산자를 사용 하 여 `com::ptr` 조건식에서입니다.| 
-|[ptr::operator!](#operator-logical-not)|소유 하는 COM 개체 잘못 인지 확인 하는 연산자입니다.| 
+|---------|-----------|
+|[ptr:: operator-&gt;](#operator-arrow)|소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 되는 멤버 액세스 연산자입니다.|
+|[ptr::operator=](#operator-assign)|COM 개체를 `com::ptr`에 연결 합니다.|
+|[ptr:: operator&nbsp;bool](#operator-bool)|조건식에 `com::ptr`을 사용 하기 위한 연산자입니다.|
+|[ptr::operator!](#operator-logical-not)|소유 하는 COM 개체가 잘못 되었는지 여부를 확인 하는 연산자입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더 파일** \<msclr\com\ptr.h >
 
-**Namespace** msclr:: com
+**네임 스페이스** msclr:: com
 
- 
+## <a name="ptrptr"></a><a name="ptr"></a>ptr::p tr
 
-## <a name="ptr"></a>ptr::ptr
-
-소유 COM 개체에 대 한 포인터를 반환합니다.
+소유 하는 COM 개체에 대 한 포인터를 반환 합니다.
 
 ```cpp
 ptr();
@@ -216,17 +214,17 @@ ptr(
 *P*<br/>
 COM 인터페이스 포인터.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-인수 없는 생성자 할당 `nullptr` 기본 개체 핸들입니다. 미래에 대 한 호출을 `com::ptr` 내부 개체의 유효성을 검사 하며 자동으로 개체를 만들거나 연결 될 때까지 실패 합니다.
+인수가 없는 생성자는 `nullptr`를 기본 개체 핸들에 할당 합니다. 이후 `com::ptr` 호출은 내부 개체의 유효성을 검사 하 고 개체가 만들어지거나 연결 될 때까지 자동으로 실패 합니다.
 
-단일 인수 생성자는 COM 개체에 대 한 참조를 추가 하지만 호출자에 게 호출 해야 하므로 호출자의 참조를 배출 하지 않는 `Release` 에서 COM 개체를 완전히 제어를 포기 합니다. 경우는 `com::ptr`의 소멸자가 호출 COM 개체의 참조를 자동으로 해제 됩니다.
+단일 인수 생성자는 COM 개체에 대 한 참조를 추가 하지만 호출자의 참조를 해제 하지 않으므로 호출자가 COM 개체에 대 한 `Release`를 호출 하 여 컨트롤을 실제로 지정 해야 합니다. `com::ptr`의 소멸자가 호출 되 면 COM 개체에 대 한 참조가 자동으로 해제 됩니다.
 
-전달 `NULL` 이 생성자에 인수가 없는 버전을 호출 하는 것과 같습니다.
+이 생성자에 `NULL`를 전달 하는 것은 인수가 없는 버전을 호출 하는 것과 같습니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 생성자의 두 버전의 사용을 보여 줍니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 이 예제에서는 두 가지 버전의 생성자를 모두 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 // comptr_ptr.cpp
@@ -287,21 +285,21 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>ptr::~ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr:: ~ ptr
 
-소멸을 `com::ptr`입니다.
+`com::ptr`Destructs.
 
 ```cpp
 ~ptr();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-소멸 된 `com::ptr` 해당 COM 개체를 소유 하는 모든 참조를 해제 합니다. COM 개체를 보유 하는 다른 참조를 가정 COM 개체가 삭제 되 고 해당 메모리를 해제 합니다.
+소멸 시 `com::ptr`는 소유 하 고 있는 모든 참조를 COM 개체에 해제 합니다. COM 개체에 대 한 다른 참조가 없다는 가정 하에 COM 개체가 삭제 되 고 해당 메모리가 확보 됩니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  에 `main` 함수, 두 개의 `XmlDocument` 개체 소멸자의 범위를 벗어날 때 호출 되는 `try` 블록 내부에서 결과 `com::ptr` 소멸자가 호출 되 COM에 대 한 모든 소유 참조를 해제 개체입니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `main` 함수에서 두 `XmlDocument` 개체의 소멸자는 `try` 블록의 범위를 벗어날 때 호출 되며,이로 인해 기본 `com::ptr` 소멸자가 호출 되어 COM 개체에 대 한 모든 소유 된 참조가 해제 됩니다.
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr:: Attach
 
-COM 개체를 연결 된 `com::ptr`합니다.
+COM 개체를 `com::ptr`에 연결 합니다.
 
 ```cpp
 void Attach(
@@ -379,17 +377,17 @@ void Attach(
 
 ### <a name="exceptions"></a>예외
 
-경우는 `com::ptr` COM 개체에 대 한 참조를 이미 소유 `Attach` throw <xref:System.InvalidOperationException>합니다.
+`com::ptr` COM 개체에 대 한 참조를 이미 소유 하 고 있으면 `Attach` <xref:System.InvalidOperationException>throw 됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-에 대 한 호출 `Attach` COM 개체를 참조 하지만에 대 한 호출자의 참조를 해제 하지 않습니다.
+`Attach`에 대 한 호출은 COM 개체를 참조 하지만 해당 개체에 대 한 호출자 참조는 해제 하지 않습니다.
 
-전달 `NULL` 에 `Attach` 취해 아무 동작도 수행 합니다.
+`Attach`에 `NULL`를 전달 하면 아무 작업도 수행 되지 않습니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `ReplaceDocument` 멤버 함수에 대 한 첫 번째 호출 `Release` 에서 이전에 소유한 개체와 호출 `Attach` 새 문서를 연결 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `ReplaceDocument` 멤버 함수는 먼저 이전에 소유한 개체에서 `Release`를 호출한 다음 `Attach`를 호출 하 여 새 문서 개체를 연결 합니다.
 
 ```cpp
 // comptr_attach.cpp
@@ -463,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>ptr::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr:: CreateInstance
 
-내에서 COM 개체의 인스턴스를 만듭니다를 `com::ptr`입니다.
+`com::ptr`내에 COM 개체의 인스턴스를 만듭니다.
 
 ```cpp
 void CreateInstance(
@@ -512,27 +510,27 @@ void CreateInstance(
 `ProgID` 문자열입니다.
 
 *pouter*<br/>
-집계 개체의 IUnknown 인터페이스 (controlling IUnknown)에 대 한 포인터입니다. 하는 경우 `pouter` 를 지정 하지 않으면 `NULL` 사용 됩니다.
+집계 개체의 IUnknown 인터페이스에 대 한 포인터입니다 (IUnknown 제어). `pouter` 지정 하지 않으면 `NULL` 사용 됩니다.
 
 *cls_context*<br/>
-새로 만든된 개체를 관리 하는 코드가 실행 되는 컨텍스트. 값을 가져옵니다는 `CLSCTX` 열거형입니다. 경우 `cls_context` 를 지정 하지 않으면 CLSCTX_ALL 사용 되는 값입니다.
+새로 만든 개체를 관리 하는 코드가 실행 되는 컨텍스트입니다. 값은 `CLSCTX` 열거형에서 가져옵니다. `cls_context` 지정 하지 않으면 CLSCTX_ALL 값이 사용 됩니다.
 
 *rclsid*<br/>
-`CLSID` 데이터 및 개체를 만드는 데 사용할 코드를 사용 하 여 연결 합니다.
+개체를 만드는 데 사용 되는 데이터 및 코드와 연결 된 `CLSID`입니다.
 
 ### <a name="exceptions"></a>예외
 
-경우는 `com::ptr` COM 개체에 대 한 참조를 이미 소유 `CreateInstance` throw <xref:System.InvalidOperationException>합니다.
+`com::ptr` COM 개체에 대 한 참조를 이미 소유 하 고 있으면 `CreateInstance` <xref:System.InvalidOperationException>throw 됩니다.
 
-이 함수 호출 `CoCreateInstance` 사용 하 여 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> 오류 변환할 `HRESULT` 적절 한 예외에 합니다.
+이 함수는 `CoCreateInstance`를 호출 하 고 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>를 사용 하 여 오류 `HRESULT`를 적절 한 예외로 변환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-`CreateInstance` 사용 하 여 `CoCreateInstance` ProgID 또는 CLSID에서 식별 된 지정된 된 개체의 새 인스턴스를 만들려고 합니다. `com::ptr` 새로 만든된 개체를 참조 하 고 소멸 시 모든 소유 참조를 자동으로 해제 됩니다.
+`CreateInstance`은 `CoCreateInstance`를 사용 하 여 ProgID 또는 CLSID에서 식별 된 지정 된 개체의 새 인스턴스를 만듭니다. `com::ptr`는 새로 만든 개체를 참조 하 고 소멸 될 때 소유 된 모든 참조를 자동으로 해제 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 클래스 생성자에 사용할 두 가지 다른 형태의 `CreateInstance` ProgID 또는 CLSID plus는 CLSCTX에서 문서 개체를 만들려고 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 클래스 생성자는 두 가지 형식의 `CreateInstance`를 사용 하 여 ProgID 또는 CLSID와 CLSCTX에서 문서 개체를 만듭니다.
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr::D etach
 
-개체에 대 한 포인터를 반환 하는 COM 개체의 소유권을 포기 합니다.
+COM 개체의 소유권을 부여 하 여 개체에 대 한 포인터를 반환 합니다.
 
 ```cpp
 _interface_type * Detach();
@@ -593,19 +591,19 @@ _interface_type * Detach();
 
 COM 개체에 대 한 포인터입니다.
 
-개체가 없는 소유 하는 경우에 NULL이 반환 됩니다.
+소유 하는 개체가 없는 경우 NULL이 반환 됩니다.
 
 ### <a name="exceptions"></a>예외
 
-내부적으로 `QueryInterface` 소유 COM 개체 및 모든 오류 라고 `HRESULT` 하 여 예외를 변환할 때 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.
+내부적으로는 소유 된 COM 개체에서 `QueryInterface`를 호출 하 고 모든 오류 `HRESULT` <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>하 여 예외로 변환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-`Detach` 먼저 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 다음 소유 하는 모든 참조를 해제 합니다 `com::ptr`합니다.  호출자에 게 궁극적으로 반환된 된 개체 삭제를 릴리스해야 합니다.
+`Detach` 먼저 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가한 다음 `com::ptr`소유 하는 모든 참조를 해제 합니다.  호출자는 궁극적으로 반환 된 개체를 해제 하 여 제거 해야 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  합니다 `DetachDocument` 멤버 함수 호출 `Detach` COM 개체의 소유권을 호출자에 대 한 포인터를 반환 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `DetachDocument` 멤버 함수는 `Detach`를 호출 하 여 COM 개체의 소유권을 부여 하 고 호출자에 게 포인터를 반환 합니다.
 
 ```cpp
 // comptr_detach.cpp
@@ -686,9 +684,9 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr:: GetInterface
 
-소유 COM 개체에 대 한 포인터를 반환합니다.
+소유 하는 COM 개체에 대 한 포인터를 반환 합니다.
 
 ```cpp
 _interface_type * GetInterface();
@@ -696,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>반환 값
 
-소유 COM 개체에 대 한 포인터입니다.
+소유 된 COM 개체에 대 한 포인터입니다.
 
 ### <a name="exceptions"></a>예외
 
-내부적으로 `QueryInterface` 소유 COM 개체 및 모든 오류 라고 `HRESULT` 하 여 예외를 변환할 때 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.
+내부적으로는 소유 된 COM 개체에서 `QueryInterface`를 호출 하 고 모든 오류 `HRESULT` <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>하 여 예외로 변환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-`com::ptr` 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 COM 개체에 대 한 자체 참조를 유지 합니다. 호출자에 게 반환된 된 개체에 대 한 참조를 릴리스해야 궁극적으로 또는 소멸 되지 않습니다.
+`com::ptr`는 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 COM 개체에 대 한 참조도 유지 합니다. 호출자는 궁극적으로 반환 된 개체에 대 한 참조를 해제 해야 합니다. 그렇지 않으면 소멸 되지 않습니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 합니다 `GetDocument` 멤버 함수를 사용 하 여 `GetInterface` COM 개체에 대 한 포인터를 반환 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `GetDocument` 멤버 함수는 `GetInterface`를 사용 하 여 COM 개체에 대 한 포인터를 반환 합니다.
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr:: QueryInterface
 
-인터페이스에 대 한 소유 COM 개체를 쿼리하고 결과를 다른 연결 `com::ptr`합니다.
+소유 하 고 있는 COM 개체를 쿼리하여 인터페이스에 대 한 결과를 다른 `com::ptr`에 연결 합니다.
 
 ```cpp
 template<class _other_type>
@@ -842,19 +840,19 @@ void QueryInterface(
 ### <a name="parameters"></a>매개 변수
 
 *other*<br/>
-`com::ptr` 는 인터페이스를 받습니다.
+인터페이스를 가져올 `com::ptr`입니다.
 
 ### <a name="exceptions"></a>예외
 
-내부적으로 `QueryInterface` 소유 COM 개체 및 모든 오류 라고 `HRESULT` 하 여 예외를 변환할 때 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.
+내부적으로는 소유 된 COM 개체에서 `QueryInterface`를 호출 하 고 모든 오류 `HRESULT` <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>하 여 예외로 변환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-현재 래퍼를 소유 하는 COM 개체의 다른 인터페이스에 대 한 COM 래퍼를 만들려면이 메서드를 사용 합니다. 이 메서드를 호출 `QueryInterface` COM의 특정 인터페이스에 대 한 포인터를 요청 하려면 소유 COM 개체를 통해 개체 및 전달 기능에 대 한 반환 된 인터페이스 포인터를 연결 `com::ptr`합니다.
+이 메서드를 사용 하 여 현재 래퍼가 소유 하는 COM 개체의 다른 인터페이스에 대 한 COM 래퍼를 만들 수 있습니다. 이 메서드는 소유 된 COM 개체를 통해 `QueryInterface`를 호출 하 여 COM 개체의 특정 인터페이스에 대 한 포인터를 요청 하 고 반환 된 인터페이스 포인터를 전달 된 `com::ptr`에 연결 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteTopLevelNode` 멤버 함수를 사용 하 여 `QueryInterface` 로컬에 맞게 `com::ptr` 사용 하 여를 `IXMLDOMNode` 다음 전달는 `com::ptr` (추적 참조)에서 노드의 이름 및 텍스트 속성을 콘솔에 작성 하는 private 멤버 함수에 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteTopLevelNode` 멤버 함수는 `QueryInterface`를 사용 하 여 로컬 `com::ptr`를 `IXMLDOMNode` 채운 다음, 노드의 이름과 텍스트 속성을 콘솔에 쓰는 전용 멤버 함수에 `com::ptr` (추적 참조)를 전달 합니다.
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,21 +957,21 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>ptr::Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr:: Release
 
-COM 개체에 대 한 모든 소유 참조를 해제합니다.
+COM 개체에서 소유 된 모든 참조를 해제 합니다.
 
 ```cpp
 void Release();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-COM 개체에서 모든 소유 참조를 해제 하 고 COM 개체에 내부 핸들을 설정 합니다.이 함수를 호출 `nullptr`합니다.  COM 개체에 다른 참조가 있으면 제거 됩니다.
+이 함수를 호출 하면 COM 개체에 대 한 모든 소유 된 참조가 해제 되 고 COM 개체에 대 한 내부 핸들이 `nullptr`설정 됩니다.  COM 개체에 대 한 다른 참조가 없으면 소멸 됩니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수를 사용 하 여 `Release` 새 문서에 연결 하기 전에 모든 이전 문서 개체를 해제 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수는 새 문서를 연결 하기 전에 `Release`를 사용 하 여 이전 문서 개체를 모두 해제 합니다.
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>ptr::operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr:: operator-&gt;
 
-멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.
+소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 되는 멤버 액세스 연산자입니다.
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>반환 값
 
-`smart_com_ptr` COM 개체에 있습니다.
+COM 개체에 대 한 `smart_com_ptr`입니다.
 
 ### <a name="exceptions"></a>예외
 
-내부적으로 `QueryInterface` 소유 COM 개체 및 모든 오류 라고 `HRESULT` 하 여 예외를 변환할 때 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.
+내부적으로는 소유 된 COM 개체에서 `QueryInterface`를 호출 하 고 모든 오류 `HRESULT` <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>하 여 예외로 변환 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 연산자를 사용 하면 소유 COM 개체의 메서드를 호출할 수 있습니다. 임시 반환 `smart_com_ptr` 자동으로 처리 하는 자체 `AddRef` 고 `Release`입니다.
+이 연산자를 사용 하면 소유 된 COM 개체의 메서드를 호출할 수 있습니다. 자체 `AddRef` 및 `Release`를 자동으로 처리 하는 임시 `smart_com_ptr`을 반환 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 합니다 `WriteDocument` 함수는 `operator->` 를 호출 하는 `get_firstChild` 문서 개체의 멤버입니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteDocument` 함수는 `operator->`를 사용 하 여 문서 개체의 `get_firstChild` 멤버를 호출 합니다.
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>ptr::operator=
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr:: operator =
 
-COM 개체를 연결 된 `com::ptr`합니다.
+COM 개체를 `com::ptr`에 연결 합니다.
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1206,21 +1204,21 @@ ptr<_interface_type> % operator=(
 
 ### <a name="return-value"></a>반환 값
 
-에 대 한 추적 참조는 `com::ptr`합니다.
+`com::ptr`에 대 한 추적 참조입니다.
 
 ### <a name="exceptions"></a>예외
 
-경우는 `com::ptr` COM 개체에 대 한 참조를 이미 소유 `operator=` throw <xref:System.InvalidOperationException>합니다.
+`com::ptr` COM 개체에 대 한 참조를 이미 소유 하 고 있으면 `operator=` <xref:System.InvalidOperationException>throw 됩니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-COM 개체를 할당 한 `com::ptr` COM 개체를 참조 하지만에 대 한 호출자의 참조를 해제 하지 않습니다.
+COM 개체를 `com::ptr`에 할당 하는 것은 COM 개체를 참조 하지만 해당 개체에 대 한 호출자 참조는 해제 하지 않습니다.
 
-이 연산자는 것과 동일한 효과가 `Attach`합니다.
+이 연산자는 `Attach`와 동일한 효과를 가집니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수에 대 한 첫 번째 호출 `Release` 에 소유 했던 개체와 사용 하 여 `operator=` 새 문서를 연결 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수는 먼저 이전에 소유한 개체에서 `Release`를 호출한 다음 `operator=`를 사용 하 여 새 문서 개체를 연결 합니다.
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> ptr::operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr:: operator bool
 
-연산자를 사용 하 여 `com::ptr` 조건식에서입니다.
+조건식에 `com::ptr`을 사용 하기 위한 연산자입니다.
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 소유 COM 개체가 잘못 되었습니다. `false` 그렇지 않은 경우.
+소유 하는 COM 개체가 유효한 지 여부를 `true` 합니다. 그렇지 않으면 `false` 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-소유 COM 개체가 없는 경우 올바른 `nullptr`합니다.
+소유 된 COM 개체는 `nullptr`되지 않은 경우 유효 합니다.
 
-이 연산자를 변환 `_detail_class::_safe_bool` 는 보다 안전한 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.
+이 연산자는 정수 계열 형식으로 변환할 수 없기 때문에 `bool` 보다 안전한 `_detail_class::_safe_bool`로 변환 됩니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 합니다 `CreateInstance` 멤버 함수를 사용 하 여 `operator bool` 경우 유효 하 고 콘솔에 작성 하는 경우를 확인 하려면 새 문서 개체를 만든 후 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `CreateInstance` 멤버 함수는 새 문서 개체를 만든 후 `operator bool`를 사용 하 여 유효한 지 확인 하 고, 있는 경우 콘솔에 씁니다.
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>ptr::operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr:: operator!
 
-소유 하는 COM 개체 잘못 인지 확인 하는 연산자입니다.
+소유 하는 COM 개체가 잘못 되었는지 여부를 확인 하는 연산자입니다.
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 소유 COM 개체가 잘못 된 경우 `false` 그렇지 않은 경우.
+소유 하는 COM 개체가 잘못 된 경우 `true` 합니다. 그렇지 않으면 `false` 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-소유 COM 개체가 없는 경우 올바른 `nullptr`합니다.
+소유 된 COM 개체는 `nullptr`되지 않은 경우 유효 합니다.
 
 ### <a name="example"></a>예제
 
-이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  합니다 `CreateInstance` 멤버 함수를 사용 하 여 `operator!` 문서 개체를 이미 소유 및 개체가 유효 하지 않은 경우에 새 인스턴스를 만듭니다를 판단 합니다.
+이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `CreateInstance` 멤버 함수는 `operator!`를 사용 하 여 문서 개체가 이미 소유 되었는지 여부를 확인 하 고 개체가 잘못 된 경우에만 새 인스턴스를 만듭니다.
 
 ```cpp
 // comptr_op_not.cpp

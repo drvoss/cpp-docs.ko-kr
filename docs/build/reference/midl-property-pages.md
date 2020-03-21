@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927691"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076126"
 ---
 # <a name="midl-property-pages"></a>MIDL 속성 페이지
 
@@ -62,15 +62,15 @@ MIDL 속성 페이지는에서 항목 속성으로 사용할 수 있습니다. C
 
 ### <a name="preprocessor-definitions"></a>전처리기 정의
 
-MIDL 매크로 ([/d](/windows/win32/midl/-d))\[매크로\]를 포함 한 하나 이상의 정의를 지정 합니다.
+MIDL 매크로 ([/d](/windows/win32/midl/-d))\[매크로\])를 포함 하 여 하나 이상의 정의를 지정 합니다.
 
 ### <a name="additional-include-directories"></a>추가 포함 디렉터리
 
-포함 경로 ([/i](/windows/win32/midl/-i)\[경로\])에 추가할 하나 이상의 디렉터리를 지정 합니다.
+포함 경로에 추가할 하나 이상의 디렉터리를 지정 합니다 ([/i](/windows/win32/midl/-i)\[경로\]).
 
 ### <a name="additional-metadata-directories"></a>추가 메타 데이터 디렉터리
 
-파일 경로([/Metadata_dir](/windows/win32/midl/-metadata-dir) \[경로\])를 포함 하는 디렉터리를 지정합니다.
+창이 포함 된 디렉터리를 지정 합니다 ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[경로\]).
 
 ### <a name="enable-windows-runtime"></a>Windows 런타임 사용
 
@@ -88,7 +88,7 @@ Mktyplib 버전 2.03 ([/mktyplib203](/windows/win32/midl/-mktyplib203))와의 �
 
 MIDL 코드 오류 ([/w](/windows/win32/midl/-w))의 엄격 성을를 선택 합니다.
 
-**시**
+**Choices**
 
 - **1**
 - **1**
@@ -96,7 +96,7 @@ MIDL 코드 오류 ([/w](/windows/win32/midl/-w))의 엄격 성을를 선택 합
 - **3**
 - **4**
 
-### <a name="treat-warnings-as-errors"></a>경고를 오류로 처리
+### <a name="treat-warnings-as-errors"></a>경고를 오류로 취급
 
 MIDL에서 모든 경고를 오류 ([/wx](/windows/win32/midl/-wx))로 처리할 수 있습니다.
 
@@ -108,7 +108,7 @@ MIDL에서 모든 경고를 오류 ([/wx](/windows/win32/midl/-wx))로 처리할
 
 생성 된 코드를 컴파일하는 데 사용 되는 C 컴파일러의 기본 문자 형식을 지정 합니다. ([/문자](/windows/win32/midl/-char) signed | unsigned | ascii7).
 
-**시**
+**Choices**
 
 - **서명** 된 서명
 - **Unsigned** -unsigned
@@ -118,7 +118,7 @@ MIDL에서 모든 경고를 오류 ([/wx](/windows/win32/midl/-wx))로 처리할
 
 대상으로 지정할 환경을 지정 합니다 ([/env](/windows/win32/midl/-env) arm32 | win32 | ia64 | x64).
 
-**시**
+**Choices**
 
 - **설정 안 함** -Win32
 - **Microsoft Windows 32 비트** -Win32
@@ -133,11 +133,11 @@ MIDL에서 모든 경고를 오류 ([/wx](/windows/win32/midl/-wx))로 처리할
 
 ### <a name="suppress-compiler-warnings"></a>컴파일러 경고 표시 안 함
 
-컴파일러 경고 메시지 ([/no_l](/windows/win32/midl/-no-warn))를 표시 하지 않습니다.
+컴파일러 경고 메시지 ([/no_warn](/windows/win32/midl/-no-warn))를 표시 하지 않습니다.
 
 ### <a name="application-configuration-mode"></a>응용 프로그램 구성 모드
 
-IDL 파일 ([/app_config](/windows/win32/midl/-app-config))에서 선택한 ACF 특성을 허용 합니다.
+IDL 파일에서 선택한 ACF 특성을 허용 합니다 ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>로캘 ID
 
@@ -185,7 +185,7 @@ DLLDATA.C 파일 ([/dlldata](/windows/win32/midl/-dlldata) filename)의 이름�
 
 클라이언트 스텁 파일만 생성 합니다 ([/client](/windows/win32/midl/-client) [stub | none]).
 
-**시**
+**Choices**
 
 - **스텁** 스텁
 - **없음** -없음
@@ -194,7 +194,7 @@ DLLDATA.C 파일 ([/dlldata](/windows/win32/midl/-dlldata) filename)의 이름�
 
 서버 스텁 파일만 생성 합니다 ([/server](/windows/win32/midl/-server) [stub | none]).
 
-**시**
+**Choices**
 
 - **스텁** 스텁
 - **없음** -없음
@@ -211,7 +211,7 @@ DLLDATA.C 파일 ([/dlldata](/windows/win32/midl/-dlldata) filename)의 이름�
 
 형식 라이브러리 파일 형식을 지정 합니다 ([/old.tlb |/stts]).
 
-**시**
+**Choices**
 
 - **Newformat** -새 형식
 - **Oldformat** -이전 형식
@@ -230,7 +230,7 @@ MIDL 매크로 ([/u](/windows/win32/midl/-U) [macros])를 포함 하 여 하나 
 
 오류 검사 옵션 ([/오류 모두 | 없음])을 선택 합니다.
 
-**시**
+**Choices**
 
 - **EnableCustom** -모두
 - **모두** -모두
@@ -242,7 +242,7 @@ MIDL 매크로 ([/u](/windows/win32/midl/-U) [macros])를 포함 하 여 하나 
 
 ### <a name="check-bounds"></a>범위 확인
 
-크기 vs 전송 길이 사양 확인 ([/error](/windows/win32/midl/-error) bounds_check)을 참조 하십시오.
+크기 vs 전송 길이 사양 확인 ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>열거형 범위 검사
 
@@ -254,7 +254,7 @@ MIDL 매크로 ([/u](/windows/win32/midl/-U) [macros])를 포함 하 여 하나 
 
 ### <a name="check-stub-data"></a>스텁 데이터 검사
 
-서버 쪽 스텁 데이터 유효성에 대 한 추가 검사를 내보냅니다 ([/error](/windows/win32/midl/-error) stub_data).
+서버 쪽 스텁 데이터 유효성에 대 한 추가 검사를 내보냅니다 ([/오류](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>' ABI ' 네임 스페이스 앞에 추가
 
@@ -262,13 +262,13 @@ MIDL 매크로 ([/u](/windows/win32/midl/-U) [macros])를 포함 하 여 하나 
 
 ### <a name="validate-parameters"></a>매개 변수 유효성 검사
 
-매개 변수의 유효성을 검사 하는 추가 정보를 생성 합니다([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+매개 변수의 유효성을 검사 하는 추가 정보를 생성 합니다 ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>구조체 멤버 맞춤
 
 대상 시스템 (/ZpN)에서 구조의 압축 수준을 지정 합니다.
 
-**시**
+**Choices**
 
 - **설정** 안 함-설정 안 함
 - **1 바이트** -Zp1
@@ -283,6 +283,3 @@ MIDL 매크로 ([/u](/windows/win32/midl/-U) [macros])를 포함 하 여 하나 
 ### <a name="minimum-target-system"></a>최소 대상 시스템
 
 최소 대상 시스템 ([/Target](/windows/win32/midl/-target) 문자열)을 설정 합니다.
-
-
-

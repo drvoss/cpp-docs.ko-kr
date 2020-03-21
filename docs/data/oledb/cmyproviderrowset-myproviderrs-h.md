@@ -9,22 +9,22 @@ helpviewer_keywords:
 - CMyProviderRowset class in MyProviderRS.H
 - CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-ms.openlocfilehash: 2c84ff359bdbb39f281928fa0135edd40b1f7d20
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8e90db287bc7ac8994914766045eb210446dfd48
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545806"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079788"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset(CustomRS.H)
 
 이 마법사는 행 집합 개체에 대 한 항목을 생성 합니다. 이 경우 `CCustomRowset`라고 합니다. `CCustomRowset` 클래스는 행 집합 개체에 필요한 모든 인터페이스를 구현 하는 `CRowsetImpl`이라는 OLE DB 공급자 클래스에서 상속 됩니다. 다음 코드는 `CRowsetImpl`의 상속 체인을 보여 줍니다.
 
 ```cpp
-template <class T, class Storage, class CreatorClass, 
+template <class T, class Storage, class CreatorClass,
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 

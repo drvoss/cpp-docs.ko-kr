@@ -5,12 +5,12 @@ description: Visual Studio C++ 프로젝트의 필터 파일을 사용 하 여�
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686925"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078269"
 ---
 # <a name="vcxprojfilters-files"></a>.Vcxproj 파일 필터
 
@@ -26,7 +26,7 @@ Visual Studio에서이 파일을 자동으로 만듭니다. 데스크톱 응용 
 
 다음 예제에서는 앞에서 보여 주는 예제에 대 한 필터 파일을 보여 줍니다. 여기에는 플랫 계층이 있습니다. 즉, 중첩 된 논리적 폴더가 없습니다. `UniqueIdentifier` 노드는 선택 사항입니다. 이를 통해 Visual Studio 자동화 인터페이스에서 필터를 찾을 수 있습니다. `Extensions`도 선택적입니다. 프로젝트에 새 파일이 추가 되 면 파일 확장명이 일치 하는 최상위 필터에 추가 됩니다. 특정 필터에 파일을 추가 하려면 필터를 마우스 오른쪽 단추로 클릭 하 고 **새 항목 추가**를 선택 합니다.
 
-`ClInclude` 노드를 포함 하는 `ItemGroup`는 프로젝트가 처음 시작 될 때 생성 됩니다. 사용자 고유의 .vcxproj 파일을 생성 하는 경우 모든 프로젝트 항목에도 필터 파일에 항목이 있는지 확인 합니다. `ClInclude` 노드의 값은 파일 확장명에 따라 기본 필터링을 재정의 합니다. Visual Studio를 사용 하 여 프로젝트에 새 항목을 추가 하는 경우 IDE는 필터 파일에 개별 파일 항목을 추가 합니다. 파일의 확장명을 변경 하는 경우 필터가 자동으로 다시 할당 되지 않습니다. 
+`ClInclude` 노드를 포함 하는 `ItemGroup`는 프로젝트가 처음 시작 될 때 생성 됩니다. 사용자 고유의 .vcxproj 파일을 생성 하는 경우 모든 프로젝트 항목에도 필터 파일에 항목이 있는지 확인 합니다. `ClInclude` 노드의 값은 파일 확장명에 따라 기본 필터링을 재정의 합니다. Visual Studio를 사용 하 여 프로젝트에 새 항목을 추가 하는 경우 IDE는 필터 파일에 개별 파일 항목을 추가 합니다. 파일의 확장명을 변경 하는 경우 필터가 자동으로 다시 할당 되지 않습니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Visual Studio에서이 파일을 자동으로 만듭니다. 데스크톱 응용 
     </Filter>
   </ItemGroup>
 ```
-

@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509434"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078760"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 미리 정의된 빌드 구성
 
@@ -34,7 +34,6 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - MinGW 릴리스
 
 구성을 선택 하면 프로젝트의 루트 폴더에 있는 *Cmakesettings. json* 파일에 추가 됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다. 구성 속성에 대 한 자세한 내용은 [Cmakesettings 참조](cmakesettings-reference.md)를 참조 하세요.
-
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 미리 정의된 빌드 구성:
 
@@ -381,7 +380,6 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - Clang
 
 구성을 선택하면 프로젝트의 루트 폴더에 있는 CMakeSettings.json 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다.
-
 
 ```json
 {

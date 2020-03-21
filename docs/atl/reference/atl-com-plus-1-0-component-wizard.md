@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707028"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075277"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 구성 요소 마법사
 
@@ -74,18 +74,18 @@ Visual Studio 2008부터, 이 마법사에서 생성된 등록 스크립트는 �
 > [!NOTE]
 >  특성을 사용하여 프로젝트를 만들거나 이 마법사 페이지에서 COM+ 1.0 구성 요소에 특성이 사용된다고 지정한 경우, ATL에는 `coclass` 특성이 없기 때문에 이 옵션을 변경할 수 없습니다.
 
-- **Type**
+- **형식**
 
    레지스트리에 표시되는 개체 설명을 설정합니다.
 
-- **Interface**
+- **인터페이스**
 
    개체에 대해 만드는 인터페이스를 설정합니다. 이 인터페이스에는 사용자 지정 메서드가 포함됩니다.
 
 - **ProgID**
 
    컨테이너에서 개체의 CLSID 대신 사용할 수 있는 이름을 설정합니다.
-   
+
 ::: moniker-end
 
 ## <a name="see-also"></a>참고 항목

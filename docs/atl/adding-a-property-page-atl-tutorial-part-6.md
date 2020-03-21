@@ -3,16 +3,16 @@ title: 속성 페이지 추가(ATL 자습서, 6부)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078765"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>속성 페이지 추가(ATL 자습서, 6부)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 이상에서는 ATL OLE DB 공급자 마법사를 사용할 수 없습니다.
 
 속성 페이지는 필요한 경우 공유할 수 있는 별도의 COM 개체로 구현됩니다. 이 단계에서는 다음 작업을 수행하여 컨트롤에 속성 페이지를 추가하겠습니다.
@@ -35,7 +35,7 @@ ms.locfileid: "65524693"
 
 1. 템플릿 목록에서 **ATL** > **ATL 속성 페이지**를 선택하고 **추가**를 클릭합니다.
 
-1. **ATL 속성 페이지 마법사**가 표시되면 **짧은 이름**으로 *PolyProp*을 입력합니다.
+1. **ATL 속성 페이지 마법사**가 표시되면 *짧은 이름*으로 **PolyProp**을 입력합니다.
 
 1. **문자열**을 클릭하여 **문자열** 페이지를 열고 **제목**으로 **&Polygon**을 입력합니다.
 
@@ -71,13 +71,13 @@ ms.locfileid: "65524693"
 
 1. **리소스 뷰**에서 `Dialog` 노드를 확장하고 `IDD_POLYPROP`을 두 번 클릭합니다. 여기에 컨트롤을 삽입하라고 알리는 레이블을 제외하고 비어 있는 대화 상자가 표시됩니다.
 
-1. 해당 레이블을 선택하고 **속성** 창의 **캡션** 텍스트를 변경하여 `Sides:`로 변경합니다.
+1. 해당 레이블을 선택하고 `Sides:`속성**창의**캡션**텍스트를 변경하여**로 변경합니다.
 
 1. 텍스트 크기에 맞게 레이블 상자의 크기를 조정합니다.
 
 1. **도구 상자**에서 레이블의 오른쪽으로 **편집 컨트롤**을 끕니다.
 
-1. 최종적으로, **속성** 창을 사용하여 편집 컨트롤의 **ID**를 `IDC_SIDES`로 변경합니다.
+1. 최종적으로, **속성** 창을 사용하여 편집 컨트롤의 `IDC_SIDES`ID**를** 로 변경합니다.
 
 속성 페이지 리소스를 만드는 프로세스를 완료했습니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65524693"
 
 속성 페이지 리소스를 만들었으므로, 이제 구현 코드를 작성해야 합니다.
 
-먼저, **적용** 단추를 누르면 `CPolyProp` 클래스에서 개체의 면 수를 설정할 수 있도록 합니다.
+먼저, `CPolyProp`적용**단추를 누르면** 클래스에서 개체의 면 수를 설정할 수 있도록 합니다.
 
 ### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>면 수를 설정하도록 Apply 함수를 수정하려면 다음을 수행합니다.
 
@@ -93,7 +93,7 @@ ms.locfileid: "65524693"
 
     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]
 
-한 번에 둘 이상의 클라이언트를 속성 페이지에 연결할 수 있으므로, `Apply` 함수는 편집 상자에서 검색한 값을 사용하여 각 클라이언트에서 `put_Sides`를 반복적으로 호출합니다. [CComQIPtr](../atl/reference/ccomqiptr-class.md) 클래스를 사용하고 있습니다. 이 클래스는 각 개체에서 `QueryInterface`를 수행하여 `IUnknown` 인터페이스의 `m_ppUnk` 배열에 저장된 `IPolyCtl` 인터페이스를 가져옵니다.
+한 번에 둘 이상의 클라이언트를 속성 페이지에 연결할 수 있으므로, `Apply` 함수는 편집 상자에서 검색한 값을 사용하여 각 클라이언트에서 `put_Sides`를 반복적으로 호출합니다. [CComQIPtr](../atl/reference/ccomqiptr-class.md) 클래스를 사용하고 있습니다. 이 클래스는 각 개체에서 `QueryInterface`를 수행하여 `IPolyCtl` 인터페이스의 `IUnknown` 배열에 저장된 `m_ppUnk` 인터페이스를 가져옵니다.
 
 이제 코드에서 `Sides` 속성 설정이 실제로 실행되었는지 확인합니다. 실패한 경우 코드에서 `IErrorInfo` 인터페이스의 오류 정보를 표시하는 메시지 상자가 표시됩니다. 일반적으로, 컨테이너는 `ISupportErrorInfo` 인터페이스에 대한 개체를 요청하고 `InterfaceSupportsErrorInfo`를 먼저 호출하여 개체가 오류 정보 설정을 지원하는지 확인합니다. 이 작업은 건너뛰어도 됩니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "65524693"
 
     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]
 
-`IDC_SIDES` 컨트롤에 대한 `EN_CHANGE` 알림과 함께 `WM_COMMAND` 메시지가 전송되면 `OnEnChangeSides`가 호출됩니다. 그런 다음, `OnEnChangeSides`에서 `SetDirty`를 호출하고 TRUE를 전달하여 현재 속성 페이지가 변경되었으며 **적용** 단추가 활성화되어야 함을 나타냅니다.
+`OnEnChangeSides` 컨트롤에 대한 `WM_COMMAND` 알림과 함께 `EN_CHANGE` 메시지가 전송되면 `IDC_SIDES`가 호출됩니다. 그런 다음, `OnEnChangeSides`에서 `SetDirty`를 호출하고 TRUE를 전달하여 현재 속성 페이지가 변경되었으며 **적용** 단추가 활성화되어야 함을 나타냅니다.
 
 ## <a name="adding-the-property-page-to-the-control"></a>컨트롤에 속성 페이지 추가
 
