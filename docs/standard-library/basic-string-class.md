@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9d00ba8161e204661077848f213043bf2b275c15
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427292"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076725"
 ---
 # <a name="basic_string-class"></a>basic_string 클래스
 
@@ -147,13 +147,13 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[basic_string](#basic_string)|비어 있거나 특정 문자로 초기화된 문자열 또는 다른 문자열 개체나 C 문자열 일부 또는 전체의 복사본인 문자열을 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
 |[allocator_type](#allocator_type)|문자열 개체의 `allocator` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|문자열의 **const** 요소를 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
@@ -172,7 +172,7 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|Description|
+|멤버 함수|설명|
 |-|-|
 |[append](#append)|문자열 끝에 문자를 추가합니다.|
 |[assign](#assign)|문자열의 내용에 새 문자 값을 할당합니다.|
@@ -185,7 +185,7 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 |[cend](#cend)|문자열에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 const 반복기를 반환합니다.|
 |[clear](#clear)|문자열의 모든 요소를 지웁니다.|
 |[compare](#compare)|문자열을 지정된 문자열과 비교하여 두 문자열이 같은지 아니면 한 문자열이 다른 문자열보다 사전순으로 더 작은지를 확인합니다.|
-|[copy](#copy)|소스 문자열의 인덱싱된 위치에서 지정한 수까지의 문자를 대상 문자 배열에 복사합니다. 사용되지 않습니다. 대신 [basic_string::_Copy_s](#copy_s)를 사용합니다.|
+|[copy](#copy)|소스 문자열의 인덱싱된 위치에서 지정한 수까지의 문자를 대상 문자 배열에 복사합니다. 사용되지 않음. 대신 [basic_string::_Copy_s](#copy_s)를 사용합니다.|
 |[crbegin](#crbegin)|역방향 문자열에서 첫 번째 요소의 주소를 지정하는 const 반복기를 반환합니다.|
 |[crend](#crend)|역방향 문자열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.|
 |[_Copy_s](#copy_s)|소스 문자열의 인덱싱된 위치에서 지정한 수까지의 문자를 대상 문자 배열에 복사합니다.|
@@ -218,13 +218,13 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[operator+=](#op_add_eq)|문자열에 문자를 추가합니다.|
 |[operator=](#op_eq)|문자열의 내용에 새 문자 값을 할당합니다.|
 |[operator&#91;&#93;](#op_at)|문자열에서 지정된 인덱스에 있는 문자에 대한 참조를 제공합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 함수는 [max_size](#max_size) 요소보다 긴 시퀀스를 생성하라는 요청을 받으면 [length_error](../standard-library/length-error-class.md) 형식의 개체를 throw하여 길이 오류를 보고합니다.
 
@@ -236,7 +236,7 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 
 **네임스페이스:** std
 
-## <a name="allocator_type"></a>  basic_string::allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>  basic_string::allocator_type
 
 문자열 개체의 할당자 클래스를 나타내는 형식입니다.
 
@@ -244,7 +244,7 @@ Basic_string 특수화의 `CharType` 요소에 대 한 다양 한 중요 한 속
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 형식은 템플릿 매개 변수 `Allocator`의 동의어입니다.
 
@@ -267,7 +267,7 @@ int main( )
 }
 ```
 
-## <a name="append"></a>  basic_string::append
+## <a name="basic_stringappend"></a><a name="append"></a>  basic_string::append
 
 문자열 끝에 문자를 추가합니다.
 
@@ -328,11 +328,11 @@ basic_string<CharType, Traits, Allocator>& append(
 *마지막*\
 추가할 범위에 있는 마지막 요소의 다음 요소 위치를 주소 지정하는 입력 반복기, const_pointer 또는 const_iterator입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수에 의해 전달된 문자가 추가되는 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 [연산자 + =](#op_add_eq) 또는 멤버 함수 `append` 또는 [push_back](#push_back)를 사용 하 여 문자열에 문자를 추가할 수 있습니다. `operator+=`는 단일 인수 값을 추가 하는 반면, 다중 인수 `append` 멤버 함수를 사용 하면 문자열의 특정 부분을 추가 하도록 지정할 수 있습니다.
 
@@ -428,7 +428,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="assign"></a>  basic_string::assign
+## <a name="basic_stringassign"></a><a name="assign"></a>  basic_string::assign
 
 문자열의 내용에 새 문자 값을 할당합니다.
 
@@ -489,11 +489,11 @@ basic_string<CharType, Traits, Allocator>& assign(
 *해제*\
 새 문자의 할당을 시작할 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수에 의해 새 문자가 할당되는 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 문자열에 새 문자 값을 할당할 수 있습니다. 새 값은 문자열과 C 문자열 또는 단일 문자일 수 있습니다. 새 값을 단일 매개 변수로 설명할 수 있는 경우 [operator =](#op_eq) 를 사용할 수 있습니다. 그렇지 않으면 여러 매개 변수가 있는 멤버 함수 `assign`를 사용 하 여 대상 문자열에 할당할 문자열 부분을 지정할 수 있습니다.
 
@@ -589,7 +589,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="at"></a>  basic_string::at
+## <a name="basic_stringat"></a><a name="at"></a>  basic_string::at
 
 문자열에서 지정된 인덱스에 있는 문자에 대한 참조를 제공합니다.
 
@@ -604,11 +604,11 @@ reference at(size_type offset);
 *오프셋*\
 참조할 요소 위치의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 매개 변수 인덱스로 지정된 위치에 있는 문자열의 문자에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 문자열의 첫 번째 요소는 인덱스가 0이 고 다음 요소는 양의 정수로 연속적으로 인덱싱됩니다. 따라서 길이가 *n* 인 문자열에는 *n 번째 요소가 n* *-* 1로 인덱싱되는 요소가 있습니다.
 
@@ -657,7 +657,7 @@ int main( )
 }
 ```
 
-## <a name="back"></a>  basic_string::back
+## <a name="basic_stringback"></a><a name="back"></a>  basic_string::back
 
 문자열의 마지막 요소에 대한 참조를 반환합니다.
 
@@ -667,13 +667,13 @@ const_reference back() const;
 reference back();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 비어 있지 않아야 하는 문자열의 마지막 요소에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-## <a name="basic_string"></a>  basic_string::basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>  basic_string::basic_string
 
 비어 있거나 특정 문자로 초기화된 문자열 또는 다른 문자열 개체나 C 스타일(null 종료) 문자열 일부 또는 전체의 복사본인 문자열을 생성합니다.
 
@@ -771,11 +771,11 @@ basic_string(
 *마지막*\
 삽입할 소스 범위에 있는 마지막 요소의 다음 요소 위치를 주소 지정하는 입력 반복기, const_pointer 또는 const_iterator입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 생성자에 의해 생성되는 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 모든 생성자는 [basic_string::allocator_type](#allocator_type)을 저장하고 제어되는 시퀀스를 초기화합니다. 할당자 개체는 `al` 인수입니다(있는 경우). 복사 생성자의 경우 [basic_string:: get_allocator](#get_allocator)`()``right.`합니다. 그렇지 않으면 할당자는 `Alloc()`됩니다.
 
@@ -830,7 +830,7 @@ int main( )
 }
 ```
 
-## <a name="begin"></a>  basic_string::begin
+## <a name="basic_stringbegin"></a><a name="begin"></a>  basic_string::begin
 
 문자열의 첫 번째 요소 주소를 지정하는 반복기를 반환합니다.
 
@@ -840,7 +840,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 임의 액세스 반복기입니다.
 
@@ -880,7 +880,7 @@ int main( ) {
 }
 ```
 
-## <a name="c_str"></a>  basic_string::c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a>  basic_string::c_str
 
 문자열의 내용을 C 스타일의 null로 종료되는 문자열로 변환합니다.
 
@@ -888,11 +888,11 @@ int main( ) {
 const value_type *c_str() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출하는 문자열의 C 스타일의 버전에 대한 포인터입니다.  소멸자를 포함 하 여 개체의 basic_string 클래스에서 비 const 함수를 호출한 후에는 포인터 값이 유효 하지 않습니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 \<char > basic_string 클래스 템플릿에 속하는 문자열 형식의 개체가 null로 종료 될 필요는 없습니다. Null 문자 ' \0 '은 C 문자열에서 특수 문자로 사용되어 문자열의 끝을 표시하지만, 문자열 형식의 개체에서는 특별한 의미가 없으며 다른 문자와 마찬가지로 문자열의 일부가 될 수 있습니다. **Const char** <strong>\*</strong> 에서 문자열로 자동 변환 되지만, 문자열 클래스는 C 스타일 문자열에서 **basic_string\<char >** 형식의 개체로의 자동 변환을 제공 하지 않습니다.
 
@@ -944,7 +944,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="capacity"></a>  basic_string::capacity
+## <a name="basic_stringcapacity"></a><a name="capacity"></a>  basic_string::capacity
 
 문자열의 메모리 할당을 늘리지 않고도 문자열에 저장할 수 있는 요소의 최대 수를 반환합니다.
 
@@ -952,11 +952,11 @@ The length of C-style string str1 = 11
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열을 보관하기 위해 현재 메모리에 할당된 스토리지의 크기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수는 제어된 시퀀스를 유지하기 위해 현재 할당된 스토리지를 반환하며, 최소 [크기](#size)의 값을 반환합니다.
 
@@ -1014,7 +1014,7 @@ int main( )
 }
 ```
 
-## <a name="cbegin"></a>  basic_string::cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a>  basic_string::cbegin
 
 범위의 첫 번째 요소를 주소 처리 하는 **const** 반복기를 반환 합니다.
 
@@ -1022,11 +1022,11 @@ int main( )
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **상수** 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
@@ -1040,7 +1040,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  basic_string::cend
+## <a name="basic_stringcend"></a><a name="cend"></a>  basic_string::cend
 
 범위에서 마지막 요소 바로 다음 위치의 주소를 나타내는 **const** 반복기를 반환 합니다.
 
@@ -1048,11 +1048,11 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 범위 끝의 바로 다음을 가리키는 **const** 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
@@ -1068,7 +1068,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환 된 값은 역참조 되지 않아야 합니다.
 
-## <a name="clear"></a>  basic_string::clear
+## <a name="basic_stringclear"></a><a name="clear"></a>  basic_string::clear
 
 문자열의 모든 요소를 지웁니다.
 
@@ -1076,7 +1076,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수가 호출된 문자열은 비어 있게 됩니다.
 
@@ -1119,7 +1119,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="compare"></a>  basic_string::compare
+## <a name="basic_stringcompare"></a><a name="compare"></a>  basic_string::compare
 
 지정된 문자열과 대/소문자를 구분한 비교를 수행하여 두 문자열이 같은지 아니면 한 문자열이 다른 문자열보다 사전순으로 더 작은지를 확인합니다.
 
@@ -1177,11 +1177,11 @@ int compare(
 *ptr*\
 피연산자 문자열과 비교할 C 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 피연산자 문자열이 매개 변수 문자열보다 작은 경우 음수 값, 두 문자열이 같은 경우 0, 피연산자 문자열이 매개 변수 문자열보다 큰 경우 양수 값입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `compare` 멤버 함수는 사용 된에 따라 매개 변수 및 피연산자 문자열의 전체 또는 일부를 비교 합니다.
 
@@ -1380,7 +1380,7 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="const_iterator"></a>  basic_string::const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>  basic_string::const_iterator
 
 문자열의 **const** 요소를 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -1388,7 +1388,7 @@ the first 3 characters of the parameter C-string.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `const_iterator` 형식은 문자의 값을 수정하는 데 사용할 수 없으며, 문자열을 정방향으로 반복하는 데 사용됩니다.
 
@@ -1396,7 +1396,7 @@ typedef implementation-defined const_iterator;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#begin)begin`const_iterator`의 예제를 참조하세요.
 
-## <a name="const_pointer"></a>  basic_string::const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>  basic_string::const_pointer
 
 문자열에서 **const** 요소에 대한 포인터를 제공하는 형식입니다.
 
@@ -1404,7 +1404,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 형식은 `allocator_type::const_pointer`의 동의어입니다.
 
@@ -1436,7 +1436,7 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="const_reference"></a>  basic_string::const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>  basic_string::const_reference
 
 **const** 작업을 읽고 수행하기 위해 문자열에 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -1444,7 +1444,7 @@ The C-string cstr1c is: Out There.
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `const_reference` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
@@ -1454,7 +1454,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#at)at`const_reference`의 예제를 참조하세요.
 
-## <a name="const_reverse_iterator"></a>  basic_string::const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>  basic_string::const_reverse_iterator
 
 문자열의 모든 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -1462,7 +1462,7 @@ typedef typename allocator_type::const_reference const_reference;
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `const_reverse_iterator` 형식은 문자열 값을 수정할 수 없으며 문자열을 역방향으로 반복하는 데 사용됩니다.
 
@@ -1470,7 +1470,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#rbegin)rbegin`const_reverse_iterator`의 예제를 참조하세요.
 
-## <a name="copy"></a>  basic_string::copy
+## <a name="basic_stringcopy"></a><a name="copy"></a>  basic_string::copy
 
 소스 문자열의 인덱싱된 위치에서 지정한 수까지의 문자를 대상 문자 배열에 복사합니다.
 
@@ -1493,11 +1493,11 @@ size_type copy(
 *오프셋*\
 복사본을 만들 원본 문자열의 시작 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 실제로 복사된 문자 수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 Null 문자는 복사본의 끝에 추가 되지 않습니다.
 
@@ -1550,7 +1550,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="crbegin"></a>  basic_string::crbegin
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>  basic_string::crbegin
 
 역방향 문자열에서 첫 번째 요소의 주소를 지정하는 const 반복기를 반환합니다.
 
@@ -1558,11 +1558,11 @@ The copied characters array2 is: World
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열 끝의 바로 다음을 가리키는 임의 역방향 반복기입니다. 이 위치는 역방향 문자열의 시작을 지정합니다.
 
-## <a name="crend"></a>  basic_string::crend
+## <a name="basic_stringcrend"></a><a name="crend"></a>  basic_string::crend
 
 역방향 문자열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.
 
@@ -1570,13 +1570,13 @@ const_reverse_iterator crbegin() const;
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 문자열에서 마지막 요소 다음의 위치(역방향이 해제된 문자열의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-## <a name="copy_s"></a>  basic_string::_Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a>  basic_string::_Copy_s
 
 소스 문자열의 인덱싱된 위치에서 지정한 수까지의 문자를 대상 문자 배열에 복사합니다.
 
@@ -1601,11 +1601,11 @@ size_type _Copy_s(
 *오프셋*\
 복사본을 만들 원본 문자열의 시작 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 실제로 복사된 문자 수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 Null 문자는 복사본의 끝에 추가 되지 않습니다.
 
@@ -1656,7 +1656,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="data"></a>  basic_string::data
+## <a name="basic_stringdata"></a><a name="data"></a>  basic_string::data
 
 문자열의 내용을 null로 끝나는 문자 배열로 변환 합니다.
 
@@ -1665,15 +1665,15 @@ const value_type *data() const noexcept;
 value_type *data() noexcept;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열의 내용을 포함 하는 null로 끝나는 배열의 첫 번째 요소에 대 한 포인터입니다. 빈 문자열의 경우 포인터는 `value_type()`와 같은 단일 null 문자를 가리킵니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `data`에서 반환 하는 포인터는 유효한 범위 `[data(), data() + size()]`를 가리킵니다. 범위의 각 요소는 문자열의 현재 데이터에 해당 합니다. 즉, 범위의 모든 유효한 오프셋 *n* 에 대해 `data() + n == addressof(operator[](n))`합니다.
 
-`data`의 **const** 오버 로드에서 반환 된 문자열의 내용을 수정 하는 경우 동작이 정의 되지 않습니다. 또한 터미널 null 문자를 다른 값으로 변경 하면 정의 되지 않은 동작이 발생 합니다. 문자열에 대 한 비 const 참조가 표준 라이브러리 함수로 전달 되는 경우 반환 된 포인터가 무효화 될 수 있습니다. Const가 아닌 멤버 함수를 호출 하 여 무효화 될 수도 있습니다. 멤버 `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`, `operator[]`에 대 한 호출은 포인터를 무효화 하지 않습니다. 
+`data`의 **const** 오버 로드에서 반환 된 문자열의 내용을 수정 하는 경우 동작이 정의 되지 않습니다. 또한 터미널 null 문자를 다른 값으로 변경 하면 정의 되지 않은 동작이 발생 합니다. 문자열에 대 한 비 const 참조가 표준 라이브러리 함수로 전달 되는 경우 반환 된 포인터가 무효화 될 수 있습니다. Const가 아닌 멤버 함수를 호출 하 여 무효화 될 수도 있습니다. 멤버 `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`, `operator[]`에 대 한 호출은 포인터를 무효화 하지 않습니다.
 
 C + + 11 이전에는 `data` 반환 된 문자열이 null로 종료 되었음을 보장 하지 않았습니다. C + + 11, `data` 및 `c_str`는 모두 null로 끝나는 문자열을 반환 하므로 사실상 동일 합니다.
 
@@ -1725,7 +1725,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="difference_type"></a>  basic_string::difference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>  basic_string::difference_type
 
 동일한 문자열 내의 요소를 참조하는 두 반복기 사이의 차이를 제공하는 형식입니다.
 
@@ -1733,7 +1733,7 @@ The length of C-style string str1 = 11
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 부호 있는 정수 형식은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.
 
@@ -1773,7 +1773,7 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="empty"></a>  basic_string::empty
+## <a name="basic_stringempty"></a><a name="empty"></a>  basic_string::empty
 
 문자열에 문자가 있는지 테스트합니다.
 
@@ -1781,11 +1781,11 @@ The difference is: 6.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열 개체에 문자가 하나도 포함되지 않은 경우 **true**, 하나라도 포함된 경우 **false**입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수는 [size](#size) == 0과 등가입니다.
 
@@ -1821,7 +1821,7 @@ int main() {
 }
 ```
 
-## <a name="end"></a>  basic_string::end
+## <a name="basic_stringend"></a><a name="end"></a>  basic_string::end
 
 문자열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.
 
@@ -1831,11 +1831,11 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 임의 액세스 반복기를 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `end`는 반복기가 문자열의 끝에 도달 했는지 여부를 테스트 하는 데 주로 사용 됩니다. `end`에서 반환 된 값은 역참조 되지 않아야 합니다.
 
@@ -1894,7 +1894,7 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="erase"></a>  basic_string::erase
+## <a name="basic_stringerase"></a><a name="erase"></a>  basic_string::erase
 
 문자열에서 지정된 위치의 요소 또는 요소 범위를 제거합니다.
 
@@ -1928,11 +1928,11 @@ basic_string<CharType, Traits, Allocator>& erase(
 *개수*\
 *오프셋*으로 시작 하는 문자열의 범위가 많은 경우 제거 되는 요소 수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 처음 두 멤버 함수의 경우, 멤버 함수에 의해 제거된 마지막 문자 이후 첫 번째 문자의 주소를 지정하는 반복기입니다. 세 번째 멤버 함수의 경우, 요소가 지워진 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 세 번째 멤버 함수는 **\*this**를 반환합니다.
 
@@ -1997,7 +1997,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="find"></a>  basic_string::find
+## <a name="basic_stringfind"></a><a name="find"></a>  basic_string::find
 
 문자열에서 지정된 문자 시퀀스와 일치하는 첫 번째 하위 문자열을 정방향으로 검색합니다.
 
@@ -2037,7 +2037,7 @@ size_type find(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -2172,7 +2172,7 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="find_first_not_of"></a>  basic_string::find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>  basic_string::find_first_not_of
 
 문자열에서 지정 된 문자열의 요소가 아닌 첫 번째 문자를 검색 합니다.
 
@@ -2212,7 +2212,7 @@ size_type find_first_not_of(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -2360,7 +2360,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="find_first_of"></a>  basic_string::find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>  basic_string::find_first_of
 
 문자열에서 지정된 문자열의 요소와 일치하는 첫 번째 문자를 검색합니다.
 
@@ -2400,7 +2400,7 @@ size_type find_first_of(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -2547,7 +2547,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
 문자열에서 지정 된 문자열의 요소가 아닌 마지막 문자를 검색 합니다.
 
@@ -2587,7 +2587,7 @@ size_type find_last_not_of(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 검색되는 부분 문자열의 첫 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -2736,7 +2736,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="find_last_of"></a>  basic_string::find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>  basic_string::find_last_of
 
 문자열에서 지정된 문자열의 요소와 일치하는 마지막 문자를 검색합니다.
 
@@ -2776,7 +2776,7 @@ size_type find_last_of(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 검색되는 부분 문자열의 마지막 문자 인덱스이고, 그렇지 않으면 `npos`입니다.
 
@@ -2910,7 +2910,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="front"></a>  basic_string::front
+## <a name="basic_stringfront"></a><a name="front"></a>  basic_string::front
 
 문자열의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -2920,13 +2920,13 @@ const_reference front() const;
 reference front();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 비어 있지 않아야 하는 문자열의 첫 번째 요소에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-## <a name="get_allocator"></a>  basic_string::get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>  basic_string::get_allocator
 
 문자열을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.
 
@@ -2934,11 +2934,11 @@ reference front();
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열에서 사용되는 할당자입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수는 저장된 할당자 개체를 반환합니다.
 
@@ -2969,7 +2969,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  basic_string::insert
+## <a name="basic_stringinsert"></a><a name="insert"></a>  basic_string::insert
 
 요소 하나 또는 여러 개나 요소의 범위를 문자열의 지정된 위치에 삽입합니다.
 
@@ -3055,7 +3055,7 @@ void insert(
 *마지막*\
 삽입할 소스 범위에 있는 마지막 요소의 다음 요소 위치를 주소 지정하는 입력 반복기, const_pointer 또는 const_iterator입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수에 의해 새 문자가 할당되는 문자열 개체에 대한 참조 또는 개별 문자 삽입의 경우 특정 멤버 함수에 따라 삽입된 문자의 위치를 주소 지정하는 반복기나 없음입니다.
 
@@ -3148,7 +3148,7 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="iterator"></a>  basic_string::iterator
+## <a name="basic_stringiterator"></a><a name="iterator"></a>  basic_string::iterator
 
 문자열의 **const** 요소를 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -3156,7 +3156,7 @@ The string with a character inserted from a range is: ABCDeeeHIJ
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 문자 값을 수정 하는 데 사용할 수 `iterator` 형식으로, 문자열을 정방향으로 반복 하는 데 사용 됩니다.
 
@@ -3164,7 +3164,7 @@ typedef implementation-defined iterator;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#begin)begin`iterator`의 예제를 참조하세요.
 
-## <a name="length"></a>  basic_string::length
+## <a name="basic_stringlength"></a><a name="length"></a>  basic_string::length
 
 문자열의 현재 요소 수를 반환합니다.
 
@@ -3172,7 +3172,7 @@ typedef implementation-defined iterator;
 size_type length() const;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수는 [size](#size)와 동일합니다.
 
@@ -3230,7 +3230,7 @@ int main( )
 }
 ```
 
-## <a name="max_size"></a>  basic_string::max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a>  basic_string::max_size
 
 문자열이 포함할 수 있는 최대 문자 수를 반환합니다.
 
@@ -3238,11 +3238,11 @@ int main( )
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열이 포함할 수 있는 최대 문자 수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 연산의 결과 최대 크기보다 긴 길이의 문자열이 생성되면 [length_error 클래스](../standard-library/length-error-class.md) 형식의 예외가 throw됩니다.
 
@@ -3300,7 +3300,7 @@ int main( )
 }
 ```
 
-## <a name="npos"></a>  basic_string::npos
+## <a name="basic_stringnpos"></a><a name="npos"></a>  basic_string::npos
 
 검색 함수가 실패할 때 "찾을 수 없음" 또는 "모든 나머지 문자"를 나타내는-1로 초기화 된 부호 없는 정수 값입니다.
 
@@ -3308,7 +3308,7 @@ int main( )
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 반환 값이 `npos` 값에 대해 확인 되는 경우 반환 값이 **int** 또는 **unsigned**가 아닌 [size_type](#size_type) 형식인 경우에만 작동 하지 않을 수 있습니다.
 
@@ -3316,7 +3316,7 @@ static const size_type npos = -1;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#find)find`npos`의 예제를 참조하세요.
 
-## <a name="op_add_eq"></a>  basic_string::operator+=
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>  basic_string::operator+=
 
 문자열에 문자를 추가합니다.
 
@@ -3342,11 +3342,11 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 *오른쪽*\
 추가할 문자열의 문자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수에 의해 전달된 문자가 추가되는 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `operator+=` 또는 멤버 함수 [append](#append)나 [push_back](#push_back)을 사용하여 문자열에 문자를 추가할 수 있습니다. `operator+=`을 사용하면 단일 인수 값을 추가할 수 있는 반면 다중 인수 append 멤버 함수를 사용하면 문자열의 특정 부분을 추가하도록 지정할 수 있습니다.
 
@@ -3405,7 +3405,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="op_eq"></a>  basic_string::operator=
+## <a name="basic_stringoperator"></a><a name="op_eq"></a>  basic_string::operator=
 
 문자열의 내용에 새 문자 값을 할당합니다.
 
@@ -3434,11 +3434,11 @@ basic_string<CharType, Traits, Allocator>& operator=(
 *오른쪽*\
 문자를 대상 문자열에 할당할 소스 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수에 의해 새 문자가 할당되는 문자열 개체에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 문자열에 새 문자 값을 할당할 수 있습니다. 새 값은 문자열과 C 문자열 또는 단일 문자일 수 있습니다. 새 값을 단일 매개 변수로 설명할 수 있는 경우 `operator=`을 사용할 수 있습니다. 아닌 경우 여러 매개 변수가 있는 멤버 함수 [assign](#assign)을 사용하여 문자열의 어느 부분을 대상 문자열에 할당할지를 지정할 수 있습니다.
 
@@ -3499,7 +3499,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="op_at"></a>  basic_string::operator[]
+## <a name="basic_stringoperator"></a><a name="op_at"></a>  basic_string::operator[]
 
 문자열에서 지정된 인덱스에 있는 문자에 대한 참조를 제공합니다.
 
@@ -3513,11 +3513,11 @@ reference operator[](size_type offset);
 *오프셋*\
 참조할 요소 위치의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 매개 변수 인덱스로 지정된 위치에 있는 문자열의 문자에 대한 참조입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 문자열의 첫 번째 요소는 인덱스가 0이고 다음 요소부터 연속적으로 양의 정수로 인덱스가 지정되므로 길이가 *n*인 문자열에서 *n*번째 요소의 인덱스 번호는 *n* - 1입니다.
 
@@ -3568,7 +3568,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  basic_string::pointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a>  basic_string::pointer
 
 문자열 또는 문자 배열의 문자 요소에 대한 포인터를 제공하는 형식입니다.
 
@@ -3576,7 +3576,7 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 형식은 `allocator_type::pointer`의 동의어입니다.
 
@@ -3605,7 +3605,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="pop_back"></a>  basic_string::pop_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a>  basic_string::pop_back
 
 문자열의 마지막 요소를 지웁니다.
 
@@ -3613,11 +3613,11 @@ The C-string cstr1b is: Out There.
 void pop_back();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 멤버 함수는 실제로 `erase(size() - 1)`를 호출하여 비어 있지 않아야 하는 시퀀스의 마지막 요소를 지웁니다.
 
-## <a name="push_back"></a>  basic_string::push_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a>  basic_string::push_back
 
 문자열 끝에 요소를 추가합니다.
 
@@ -3630,7 +3630,7 @@ void push_back(value_type char_value);
 *char_value*\
 문자열의 끝에 추가할 문자입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 멤버 함수는 실제로 [insert](#insert)( [end](#end), *char_value* )를 호출 합니다.
 
@@ -3672,7 +3672,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="rbegin"></a>  basic_string::rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a>  basic_string::rbegin
 
 역방향 문자열에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.
 
@@ -3682,11 +3682,11 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향이 해제된 해당 문자열에서 무엇이 마지막 요소가 될지를 확인하면서, 임의 액세스 반복기를 역순 문자열의 첫 번째 요소로 반환합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `rbegin`begin[이 문자열과 사용되는 것처럼 ](#begin)은 역방향 문자열과 사용됩니다.
 
@@ -3748,7 +3748,7 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="reference"></a>  basic_string::reference
+## <a name="basic_stringreference"></a><a name="reference"></a>  basic_string::reference
 
 문자열에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -3756,7 +3756,7 @@ The string str2 is empty.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `reference` 형식을 사용 하 여 요소의 값을 수정할 수 있습니다.
 
@@ -3768,7 +3768,7 @@ typedef typename allocator_type::reference reference;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#at)at`reference`의 예제를 참조하세요.
 
-## <a name="rend"></a>  basic_string::rend
+## <a name="basic_stringrend"></a><a name="rend"></a>  basic_string::rend
 
 역순 문자열에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.
 
@@ -3778,11 +3778,11 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 문자열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 역방향 임의 액세스 반복기입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `rend`end[가 문자열과 사용되는 것처럼 ](#end)은 역방향 문자열과 사용됩니다.
 
@@ -3846,7 +3846,7 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="replace"></a>  basic_string::replace
+## <a name="basic_stringreplace"></a><a name="replace"></a>  basic_string::replace
 
 문자열에서 지정된 위치의 요소를 다른 범위 또는 문자열이나 C 문자열에서 복사한 문자 또는 지정된 문자로 바꿉니다.
 
@@ -3960,7 +3960,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 *개수*\
 *Char_value* 피연산자 문자열로 복사 되는 횟수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대체된 피연산자 문자열입니다.
 
@@ -4143,7 +4143,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="reserve"></a>  basic_string::reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a>  basic_string::reserve
 
 문자열의 용량을 최소한 지정된 숫자보다 크게 설정합니다.
 
@@ -4156,7 +4156,7 @@ void reserve(size_type count = 0);
 *개수*\
 메모리가 예약되는 문자 수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 다시 할당은 시간이 오래 걸리는 프로세스이고 문자열의 문자를 참조하는 모든 참조, 포인터 및 반복기를 무효화하기 때문에 용량을 충분히 확보하는 것이 중요합니다.
 
@@ -4233,7 +4233,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="resize"></a>  basic_string::resize
+## <a name="basic_stringresize"></a><a name="resize"></a>  basic_string::resize
 
 문자열의 새 크기를 지정하고 필요에 따라 요소를 추가하거나 지웁니다.
 
@@ -4254,7 +4254,7 @@ void resize(
 *char_value*\
 추가 요소가 필요한 경우 추가된 문자를 초기화할 값입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 결과 크기가 최대 문자 수를 초과하면 양식에서 `length_error`를 throw합니다.
 
@@ -4343,7 +4343,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="reverse_iterator"></a>  basic_string::reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>  basic_string::reverse_iterator
 
 문자열에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -4351,7 +4351,7 @@ The capacity of downsized string str1 is: 47.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `reverse_iterator` 형식은 문자열 값을 수정하는 데 사용할 수 있으며 문자열을 역방향으로 반복하는 데 사용됩니다.
 
@@ -4359,7 +4359,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 [를 선언하고 사용하는 방법에 대한 예제는 ](#rbegin)rbegin`reverse_iterator`의 예제를 참조하세요.
 
-## <a name="rfind"></a>  basic_string::rfind
+## <a name="basic_stringrfind"></a><a name="rfind"></a>  basic_string::rfind
 
 문자열에서 지정된 문자 시퀀스와 일치하는 첫 번째 하위 문자열을 역방향으로 검색합니다.
 
@@ -4399,7 +4399,7 @@ size_type rfind(
 *str*\
 멤버 함수가 검색할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공할 경우 부분 문자열에서 첫 번째 문자의 마지막 발생(역방향으로 검색 시)의 인덱스입니다. 실패할 경우 `npos`입니다.
 
@@ -4534,7 +4534,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="shrink_to_fit"></a>  basic_string::shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>  basic_string::shrink_to_fit
 
 문자열의 초과 용량을 삭제합니다.
 
@@ -4542,11 +4542,11 @@ The index of the 1st element of 'clear' in str4 is: 17
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 멤버 함수는 컨테이너에서 불필요한 스토리지를 모두 제거합니다.
 
-## <a name="size"></a>  basic_string::size
+## <a name="basic_stringsize"></a><a name="size"></a>  basic_string::size
 
 문자열의 현재 요소 수를 반환합니다.
 
@@ -4554,7 +4554,7 @@ void shrink_to_fit();
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열의 길이입니다.
 
@@ -4612,7 +4612,7 @@ int main( )
 }
 ```
 
-## <a name="size_type"></a>  basic_string::size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a>  basic_string::size_type
 
 문자열에서 요소 수와 인덱스를 표현할 수 있는 부호 없는 정수 형식입니다.
 
@@ -4620,7 +4620,7 @@ int main( )
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `allocator_type::size_type`와 동일 합니다.
 
@@ -4655,7 +4655,7 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="substr"></a>  basic_string::substr
+## <a name="basic_stringsubstr"></a><a name="substr"></a>  basic_string::substr
 
 지정된 위치부터 시작하여 문자열의 하위 문자열을 최대 특정 문자 수만큼 복사합니다.
 
@@ -4673,7 +4673,7 @@ basic_string<CharType, Traits, Allocator> substr(
 *개수*\
 문자가 있는 경우 복사될 문자의 수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 인수에 의해 지정된 위치에서 시작하는 문자열 피연산자 요소의 복사본인 부분 문자열 개체입니다.
 
@@ -4714,7 +4714,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="swap"></a>  basic_string::swap
+## <a name="basic_stringswap"></a><a name="swap"></a>  basic_string::swap
 
 두 문자열의 내용을 교환합니다.
 
@@ -4728,7 +4728,7 @@ void swap(
 *str*\
 대상 문자열의 요소와 교환할 요소가 있는 소스 문자열입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 교환되는 문자열에 동일한 할당자 개체가 있으면 `swap` 멤버 함수는:
 
@@ -4775,7 +4775,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="traits_type"></a>  basic_string::traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>  basic_string::traits_type
 
 문자열에 저장된 요소의 문자 특성 형식입니다.
 
@@ -4783,7 +4783,7 @@ The basic_string s2 = Tweedledee.
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 형식은 두 번째 템플릿 매개 변수 `Traits`의 동의어입니다.
 
@@ -4793,7 +4793,7 @@ typedef Traits traits_type;
 
 [을 선언하고 사용하는 방법에 대한 예제는 ](../standard-library/char-traits-struct.md#copy)copy`traits_type`의 예제를 참조하세요.
 
-## <a name="value_type"></a>  basic_string::value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a>  basic_string::value_type
 
 문자열에 저장된 문자의 형식을 나타내는 형식입니다.
 
@@ -4801,7 +4801,7 @@ typedef Traits traits_type;
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 `traits_type::char_type`와 동일 하며 `string`형식의 개체에 대해 **char** 와 동일 합니다.
 
