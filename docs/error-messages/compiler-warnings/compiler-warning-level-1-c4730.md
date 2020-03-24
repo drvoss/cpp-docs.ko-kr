@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4730
+title: 컴파일러 경고(수준 1) C4730
 ms.date: 11/04/2016
 f1_keywords:
 - C4730
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: ba6d305a414e99bd22ca603aaac2615994780c7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051333"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185765"
 ---
-# <a name="compiler-warning-level-1-c4730"></a>컴파일러 경고 (수준 1) C4730
+# <a name="compiler-warning-level-1-c4730"></a>컴파일러 경고(수준 1) C4730
 
 ' main ': _m64와 부동 소수점 식을 함께 지정 하면 잘못 된 코드가 생성 될 수 있습니다.
 

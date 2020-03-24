@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9476c0c446463c04084f46ed17a8ada7fb01fd7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330468"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188131"
 ---
-# <a name="tilestatic-keyword"></a>tile_static 키워드
+# <a name="tile_static-keyword"></a>tile_static 키워드
 
-합니다 **tile_static** 키워드 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언 하는 데 사용 됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 타일](../parallel/amp/using-tiles.md)합니다.
+**Tile_static** 키워드는 스레드 타일의 모든 스레드가 액세스할 수 있는 변수를 선언 하는 데 사용 됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 [타일 사용](../parallel/amp/using-tiles.md)을 참조 하세요.
 
-합니다 **tile_static** 키워드는 다음과 같은 제한이 있습니다.
+**Tile_static** 키워드에는 다음과 같은 제한 사항이 있습니다.
 
 - `restrict(amp)` 한정자가 있는 함수 내의 변수에만 사용할 수 있습니다.
 
 - 포인터 또는 참조 형식인 변수에 사용할 수 없습니다.
 
-- A **tile_static** 변수에 이니셜라이저를 사용할 수 없습니다. 기본 생성자 및 소멸자가 자동으로 호출되지 않습니다.
+- **Tile_static** 변수에는 이니셜라이저가 있을 수 없습니다. 기본 생성자 및 소멸자가 자동으로 호출되지 않습니다.
 
-- 초기화 되지 않은 값 **tile_static** 변수가 정의 되지 않았습니다.
+- 초기화 되지 않은 **tile_static** 변수의 값이 정의 되지 않았습니다.
 
-- 경우는 **tile_static** 루트에 대 한 비 타일 호출에 있는 호출 그래프에서 변수가 선언 된 `parallel_for_each`경고가 생성 되 고 변수의 동작이 정의 되지 않습니다.
+- `parallel_for_each`에 대 한 바둑판식으로 배열 되지 않은 호출을 기반으로 하는 호출 그래프에 **tile_static** 변수가 선언 된 경우 경고가 생성 되 고 변수의 동작이 정의 되지 않습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 어떻게를 **tile_static** 타일에서 여러 스레드 간에 데이터를 누적 하는 변수를 사용할 수 있습니다.
+다음 예제에서는 **tile_static** 변수를 사용 하 여 타일의 여러 스레드 간에 데이터를 누적 하는 방법을 보여 줍니다.
 
 ```cpp
 // Sample data:
@@ -144,9 +144,9 @@ for (int i = 0; i < 4; i++) {
 // 5 5 2 2 4 4
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)<br/>
 [C++ AMP 개요](../parallel/amp/cpp-amp-overview.md)<br/>
 [parallel_for_each 함수 (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)<br/>
-[연습: 행렬 곱](../parallel/amp/walkthrough-matrix-multiplication.md)
+[연습: 매트릭스 곱](../parallel/amp/walkthrough-matrix-multiplication.md)

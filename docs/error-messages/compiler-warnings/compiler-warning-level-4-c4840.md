@@ -5,26 +5,26 @@ f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360010"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185206"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>컴파일러 경고 (수준 4) C4840
 
-> 클래스의 비 휴대용 활용*형식*' variadic 함수에 인수로 서
+> variadic 함수의 인수로 서 '*type*' 클래스를 이식 불가능 하 게 사용 합니다.
 
 ## <a name="remarks"></a>설명
 
-Variadic 함수에 전달 되는 클래스 또는 구조체는 일반적으로 복사 가능 해야 합니다. 해당 개체를 전달할 때 컴파일러는 비트 복사본을 만들기만 하고 생성자 또는 소멸자를 호출하지 않습니다.
+Variadic 함수에 전달 되는 클래스 또는 구조체는 일반적으로 copyable 이어야 합니다. 해당 개체를 전달할 때 컴파일러는 비트 복사본을 만들기만 하고 생성자 또는 소멸자를 호출하지 않습니다.
 
 이 경고는 Visual Studio 2017부터 사용할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C4840 생성 및이 해결 하는 방법을 보여 줍니다.
+다음 샘플에서는 C4840를 생성 하 고 수정 하는 방법을 보여 줍니다.
 
 ```cpp
 // C4840.cpp
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-빌드 및 사용 하 여 관리 되는 문자열에 대 한 `CStringW`에 제공 된 `operator LPCWSTR()` 캐스트를 사용 해야는 `CStringW` 형식 문자열에 필요한 C 스타일 문자열 포인터에 대 한 개체:
+`CStringW`를 사용 하 여 작성 및 관리 되는 문자열의 경우 제공 된 `operator LPCWSTR()`를 사용 하 여 `CStringW` 개체를 서식 문자열에 필요한 C 스타일 문자열 포인터로 캐스팅 해야 합니다.
 
 ```cpp
     CStringW str1;

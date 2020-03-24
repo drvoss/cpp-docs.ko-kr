@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-ms.openlocfilehash: 5cfc99f446499201a0f54c8e5b1dcc2d7152445c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b497c3c9eb1b30074c9b7286c438d0077525e05b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188040"
 ---
 # <a name="true-c"></a>true (C++)
 
@@ -24,7 +24,7 @@ bool-expression logical-operator true ;
 
 ## <a name="remarks"></a>설명
 
-이 키워드는 [bool](../cpp/bool-cpp.md) 형식의 변수 또는 조건식의 값 2개 중 하나입니다. 이제 조건식이 부울 식입니다. `i`가 **bool** 형식이면 `i = true;`문이 `i`에 **true**를 할당합니다.
+이 키워드는 [bool](../cpp/bool-cpp.md) 형식의 변수 또는 조건식의 두 값 중 하나입니다. 조건식은 이제 진정한 부울 식입니다. `i` **부울**형식이 면 문은 `i`에 **true** 를 할당 `i = true;`.
 
 ## <a name="example"></a>예제
 
@@ -45,6 +45,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

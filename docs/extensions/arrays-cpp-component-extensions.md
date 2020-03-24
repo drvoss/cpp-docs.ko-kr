@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182242"
 ---
 # <a name="arrays-ccli-and-ccx"></a>배열(C++/CLI 및 C++/CX)
 
@@ -70,7 +70,7 @@ C++/CX의 `Platform::Array<T>` 형식이나 C++/CLI의 **array** 키워드는 �
 *initialization-list*<br/>
 (선택 사항) 배열의 요소를 초기화하는, 중괄호 안의 쉼표로 구분된 값 목록입니다. 예를 들어 *rank-size-list*가 3개의 요소로 이루어진 1차원 배열을 선언하는 `(3)`이면 *initialization list*는 `{1,2,3}`일 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 컴파일 시간에 `__is_ref_array(type)`을 사용하여 형식이 참조 횟수가 계산되는 배열인지 여부를 검색할 수 있습니다. 자세한 내용은 [형식 특성에 대한 컴파일러 지원](compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하세요.
 
@@ -78,7 +78,7 @@ C++/CX의 `Platform::Array<T>` 형식이나 C++/CLI의 **array** 키워드는 �
 
 컴파일러 옵션: `/ZW`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 100개의 요소로 이루어진 1차원 배열을 만듭니다.
 
@@ -131,7 +131,7 @@ int main() {
 
 예를 들어 *rank-size-list*가 3개의 요소로 이루어진 1차원 배열을 선언하는 `(3)`이면 *initialization list*는 `{1,2,3}`일 수 있습니다. *rank-size-list*가 첫 번째 차원에는 3개 요소, 두 번째 차원에는 2개 요소, 세 번째 차원에는 4개 요소가 포함된 3차원 배열을 선언하는 `(3,2,4)`이면 *initialization-list*는 `{{1,2,3},{0,0},{-5,10,-21,99}}`일 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **array**는 [Platform, default 및 cli 네임스페이스](platform-default-and-cli-namespaces-cpp-component-extensions.md)에 있습니다.
 
@@ -149,7 +149,7 @@ int main() {
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 100개의 요소로 이루어진 1차원 배열과 첫 번째 차원에는 3개 요소, 두 번째 차원에는 5개 요소, 세 번째 차원에는 6개 요소가 있는 3차원 배열을 만듭니다.
 

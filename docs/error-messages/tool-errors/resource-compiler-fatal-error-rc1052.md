@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC1052
 ms.assetid: 59803673-492b-44fa-80fa-df93b8aaf9fb
-ms.openlocfilehash: 2ab9dd48420ca263abbf3da22da878a3e74a2151
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad0fe23b20870610c5979d6ad85fce55b4e506d3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182558"
 ---
 # <a name="resource-compiler-fatal-error-rc1052"></a>리소스 컴파일러 심각한 오류 RC1052
 
@@ -21,4 +21,4 @@ ms.locfileid: "62297296"
 
 이 오류는 전처리기 지시문을 사용하는 포함 파일에 의해 발생할 수 있습니다.
 
-이 문제를 해결하려면 리소스 파일에서 중첩된 `#if` 및 `#ifdef` 지시문의 수를 줄입니다. 리소스 파일에 포함된 헤더 파일에 의해 문제가 발생하는 경우 헤더 파일에 중첩된 `#if` 및 `#ifdef` 지시문의 수를 줄입니다. 이렇게 할 수 없는 경우에는 포함된 기존 헤더 파일에서 전처리기를 실행하여 새 헤더 파일을 만든 다음 리소스 파일에 포함할 수 있습니다. 자세한 내용은 참조는 [/P (파일로 전처리)](../../build/reference/p-preprocess-to-a-file.md) 컴파일러 옵션입니다.
+이 문제를 해결하려면 리소스 파일에서 중첩된 `#if` 및 `#ifdef` 지시문의 수를 줄입니다. 리소스 파일에 포함된 헤더 파일에 의해 문제가 발생하는 경우 헤더 파일에 중첩된 `#if` 및 `#ifdef` 지시문의 수를 줄입니다. 이렇게 할 수 없는 경우에는 포함된 기존 헤더 파일에서 전처리기를 실행하여 새 헤더 파일을 만든 다음 리소스 파일에 포함할 수 있습니다. 자세한 내용은 [/p (파일로 전처리)](../../build/reference/p-preprocess-to-a-file.md) 컴파일러 옵션을 참조 하세요.
