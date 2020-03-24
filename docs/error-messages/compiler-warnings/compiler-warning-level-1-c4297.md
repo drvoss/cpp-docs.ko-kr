@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4297
+title: 컴파일러 경고(수준 1) C4297
 ms.date: 11/04/2016
 f1_keywords:
 - C4297
 helpviewer_keywords:
 - C4297
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
-ms.openlocfilehash: 48ae909b9484fd0581f4691059272c5a488ea5fe
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 31deba2f421b461ba56d13810b5064b353a0e602
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626613"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175677"
 ---
-# <a name="compiler-warning-level-1-c4297"></a>컴파일러 경고 (수준 1) C4297
+# <a name="compiler-warning-level-1-c4297"></a>컴파일러 경고(수준 1) C4297
 
 'function': 함수는 예외를 throw하지 않도록 지정되었으나 예외를 throw했습니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "73626613"
 
 예외 사양에 대 한 자세한 내용은 [예외 사양 (throw)](../../cpp/exception-specifications-throw-cpp.md)을 참조 하세요. 또한 컴파일 시간에 예외 처리 동작을 수정 하는 방법에 대 한 자세한 내용은 [/Ceh (예외 처리 모델)](../../build/reference/eh-exception-handling-model.md) 를 참조 하세요.
 
-Extern "C"로 표시 된 __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) 함수에 대해서도 C++ 이 경고가 생성 됩니다.
+이 경고는 C++ 함수 이더라도 Extern "C"로 표시 되는 __declspec ([dllexport](../../cpp/dllexport-dllimport.md)) 함수에 대해서도 생성 됩니다.
 
 다음 샘플에서는 C4297 오류가 발생하는 경우를 보여 줍니다.
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: efaaacc46f63ac1a702ab2110d35fe80727ead1d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b13007211857d84e4f3b33c80ed6b5beaf6f0bcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857517"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178239"
 ---
 # <a name="inline-functions-c"></a>인라인 함수(C++)
 
@@ -108,7 +108,7 @@ inline int max( int a , int b ) {
 
 클래스의 멤버 함수는 **인라인** 키워드를 사용 하거나 클래스 정의 내에 함수 정의를 배치 하 여 인라인으로 선언할 수 있습니다.
 
-### <a name="example-2"></a>예제 2
+### <a name="example-2"></a>예 2
 
 ```cpp
 // inline_keyword2.cpp
@@ -207,7 +207,7 @@ int main()
 
 - 기존 스택 프레임 복원
 
-- 반환
+- 반환 값
 
 ## <a name="inline-functions-vs-macros"></a>인라인 함수와 매크로 비교
 
@@ -265,7 +265,7 @@ Sample Input: a
 Sample Output: A
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [noinline](../cpp/noinline.md)<br/>
 [auto_inline](../preprocessor/auto-inline.md)

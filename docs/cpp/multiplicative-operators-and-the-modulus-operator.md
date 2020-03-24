@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6359d3d7d2045d44af07f80b3e101da356d4b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179356"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>곱하기 연산자 및 나머지 연산자
 
@@ -38,19 +38,19 @@ expression % expression
 
 - 곱하기 (<strong>\*</strong>)
 
-- 나누기 (**/**)
+- 나누기 ( **/** )
 
-- 모듈러스 (나누기의 나머지) (**%**)
+- 모듈러스 (나누기의 나머지) ( **%** )
 
 이 이항 연산자는 왼쪽에서 오른쪽으로 연결됩니다.
 
-곱하기 연산자는 산술 형식의 피연산자를 사용합니다. 나머지 연산자 (**%**)에 보다 엄격한 요구 사항이 해당 피연산자는 정수 계열 형식 이어야 합니다. (을 부동 소수점 나누기의 나머지 부분을 가져오려면 런타임 함수를 사용 하 여 [fmod](../c-runtime-library/reference/fmod-fmodf.md).) 설명 하는 변환은 [표준 변환](standard-conversions.md) 피연산자에 적용 되 고 결과 변환 된 형식입니다.
+곱하기 연산자는 산술 형식의 피연산자를 사용합니다. 모듈러스 연산자 ( **%** )는 해당 피연산자가 정수 계열 형식 이어야 한다는 요구 사항이 더 엄격 합니다. 부동 소수점 나누기의 나머지 부분을 가져오려면 런타임 함수 [fmod](../c-runtime-library/reference/fmod-fmodf.md)를 사용 합니다. [표준 변환](standard-conversions.md) 에서 설명 하는 변환은 피연산자에 적용 되며 결과는 변환 된 형식입니다.
 
 곱하기 연산자는 첫 번째 피연산자와 두 번째 피연산자를 곱한 결과를 구합니다.
 
 나누기 연산자는 첫 번째 피연산자를 두 번째 피연산자로 나눈 결과를 구합니다.
 
-나머지 연산자 다음 식에서 제공한 나머지를 생성 합니다. 여기서 *e1* 첫 번째 피연산자 인 및 *e2* 은 두 번째: *e1* -(*e1*  /  *e2*) \* *e2*, 두 피연산자가 정수 계열 형식입니다.
+모듈러스 연산자는 다음 식으로 지정 된 나머지를 생성 합니다. *여기서 e1* 은 첫 번째 피연산자이 고 *e2* 는 두 번째 (e1 * / * *e2*) \* *e2* *입니다. 여기서* 두 피연산자는 모두 정수 계열 형식입니다.
 
 0으로 나누기는 나누기 또는 모듈러스 식에 정의되지 않았으며 런타임 오류를 생성합니다. 따라서 다음 식에서는 정의되지 않은 잘못된 결과가 생성됩니다.
 
@@ -70,13 +70,13 @@ Microsoft C++에서 모듈러스 식의 결과가 항상 첫 번째 피연산자
 
 **Microsoft 전용 종료**
 
-두 정수의 나누기 계산이 정확하지 않고 피연산자가 한 개만 음수일 경우 나누기 연산에서 구하는 정확한 값보다 작은 최대 정수(부호에 관계 없는 크기)가 결과가 됩니다. 예를 들어-11의 계산된 값-3.666666666 / 3입니다. 정수 나누기의 결과-3입니다.
+두 정수의 나누기 계산이 정확하지 않고 피연산자가 한 개만 음수일 경우 나누기 연산에서 구하는 정확한 값보다 작은 최대 정수(부호에 관계 없는 크기)가 결과가 됩니다. 예를 들어-11/3의 계산 된 값은-3.666666666입니다. 해당 정수 부분의 결과는-3입니다.
 
-곱셈 연산자 간의 관계를 지정 하 여 id (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*합니다.
+곱하기 연산자 간의 관계는 id (*e1* / *e2*) \* *e2* + *e1* % *e2* == *e1*에 의해 제공 됩니다.
 
 ## <a name="example"></a>예제
 
-다음 프로그램은 곱셈 연산자를 보여 줍니다. 두 피연산자 중 하나가 `10 / 3` 형식으로 명시적으로 캐스팅 해야 **float** 형식의 두 피연산자가 있도록 잘리지 않도록 하려면 **float** 나누기 앞입니다.
+다음 프로그램은 곱셈 연산자를 보여 줍니다. 두 피연산자가 나누기 전에 **float** 형식이 되도록 자르기를 방지 하려면 `10 / 3`의 피연산자 중 하나를 **float** 형식으로 명시적으로 캐스팅 해야 합니다.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp
@@ -92,7 +92,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

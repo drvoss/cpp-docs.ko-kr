@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178549"
 ---
 # <a name="storage-classes"></a>스토리지 클래스
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447323"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>정적인
+## <a name="static"></a><a name="static"></a>정적인
 
 **Static** 키워드는 전역 범위, 네임 스페이스 범위 및 클래스 범위에서 변수와 함수를 선언 하는 데 사용할 수 있습니다. 정적 변수는 로컬 범위에서 선언할 수도 있습니다.
 
@@ -155,11 +155,11 @@ var == value
 
 C++11부터 정적 지역 변수 초기화는 스레드로부터 안전이 보장됩니다. 이 기능을 *매직 정적*이 라고도 합니다. 그러나 다중 스레드 애플리케이션에서는 모든 후속 할당을 동기화해야 합니다. CRT에 대 한 종속성을 방지 하기 위해 [/zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) 플래그를 사용 하 여 스레드로부터 안전한 정적 초기화 기능을 사용 하지 않도록 설정할 수 있습니다.
 
-## <a name="extern"></a>시키거나
+## <a name="extern"></a><a name="extern"></a>시키거나
 
 **Extern** 으로 선언 된 개체와 변수는 다른 변환 단위에 정의 되거나 바깥쪽 범위에서 외부 링크가 있는 개체를 선언 합니다. 자세한 내용은 [extern](extern-cpp.md) and [Translation unit and 링크](program-and-linkage-cpp.md)를 참조 하세요.
 
-## <a name="thread_local"></a>thread_local (c + + 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (c + + 11)
 
 **Thread_local** 지정자를 사용 하 여 선언 된 변수는 해당 변수가 만들어진 스레드에서만 액세스할 수 있습니다. 변수는 스레드를 만들 때 생성되고 스레드를 제거할 때 제거됩니다. 각 스레드에 변수의 자체 복사본이 있습니다. Windows에서 **thread_local** 은 Microsoft 전용 [__declspec (thread)](../cpp/thread.md) 특성과 기능적으로 동일 합니다.
 
@@ -194,7 +194,7 @@ void DoSomething()
 
 Windows에서 **thread_local** 는 형식 정의에 **__declspec (스레드)** 를 적용할 수 있고 C 코드에서 유효 하다는 점을 제외 하 고는 [__declspec (thread)](../cpp/thread.md) 와 기능적으로 동일 합니다. 가능 하면 C++ 표준의 일부 이기 때문에 **thread_local** 를 사용 합니다. 따라서 이식성이 향상 됩니다.
 
-##  <a name="register"></a>레지스터
+##  <a name="register"></a><a name="register"></a>레지스터
 
 **Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **register** 키워드는 더 이상 지원 되는 저장소 클래스가 아닙니다. 키워드는 나중에 사용 하기 위해 표준으로 예약 되어 있습니다.
 

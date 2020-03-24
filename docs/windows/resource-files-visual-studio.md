@@ -24,17 +24,17 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167877"
 ---
 # <a name="resource-files-c"></a>리소스 파일(C++)
 
 > [!NOTE]
-> .NET 프로그래밍 언어의 프로젝트는 리소스 스크립트 파일을 사용하지 않으므로 **솔루션 탐색기**에서 리소스를 열어야 합니다. 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](../windows/image-editor-for-icons.md) 및 [바이너리 편집기](binary-editor.md) 를 사용 합니다.
+> 를 참조하세요. .NET 프로그래밍 언어의 프로젝트는 리소스 스크립트 파일을 사용하지 않으므로 **솔루션 탐색기**를 참조하세요. 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](../windows/image-editor-for-icons.md) 및 [바이너리 편집기](binary-editor.md) 를 사용 합니다.
 >
 > 편집할 관리되는 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함된 리소스를 편집할 수 없습니다.
 
@@ -46,11 +46,11 @@ ms.locfileid: "69513651"
 
 - 독립형 파일로 존재 하는 개별 리소스 이 형식에는 .rc 파일에서 참조 되는 비트맵, 아이콘 또는 커서 파일이 포함 됩니다.
 
-- 개발 환경에서 생성 된 헤더 파일입니다. 이 형식에 `Resource.h`는 .rc 파일에서 참조 되는이 포함 됩니다.
+- 개발 환경에서 생성 된 헤더 파일입니다. 이 형식에는 .rc 파일에서 참조 되는 `Resource.h`포함 됩니다.
 
 .Exe, .dll 및 .res 파일과 같은 다른 파일 형식에서 발견 된 리소스를 *리소스*라고 합니다.
 
-프로젝트 내에서 *리소스 파일* 및 *리소스* 를 사용할 수 있습니다. 현재 프로젝트에 포함 되지 않거나 Visual Studio의 개발 환경 외부에서 만들어진 작업을 수행할 수도 있습니다. 예를 들어 다음 작업을 할 수 있습니다.
+프로젝트 내에서 *리소스 파일* 및 *리소스* 를 사용할 수 있습니다. 현재 프로젝트에 포함 되지 않거나 Visual Studio의 개발 환경 외부에서 만들어진 작업을 수행할 수도 있습니다. 예를 들어, 다음을 수행할 수 있습니다.
 
 - 중첩되어 조건부로 포함된 리소스 파일에 대한 작업
 
@@ -82,7 +82,7 @@ ms.locfileid: "69513651"
 
 리소스를 편집할 때 Visual Studio 환경은와 함께 작동 하며 다음 파일에 영향을 줍니다.
 
-| 파일 이름 | Description |
+| 파일 이름 | 설명 |
 |---|---|
 | Resource.h | 기호 정의를 포함 하는 개발 환경에서 생성 된 헤더 파일입니다.<br/><br/>이 파일을 소스 제어에 포함 합니다. |
 | Filename.aps | 빠른 로드에 사용 되는 현재 리소스 스크립트 파일의 이진 버전입니다.<br /><br /> 리소스 편집기는 .rc 또는 resource.h 파일을 직접 읽을 필요가 없습니다. 리소스 컴파일러는 리소스 편집기에서 사용 하는. p a x 파일로 컴파일합니다. 이 파일은 컴파일 단계이며 기호화된 데이터만 저장합니다.<br/><br/>일반적인 컴파일 프로세스와 마찬가지로 주석 달기와 같이 기호화 되지 않은 정보는 컴파일 프로세스 중에 삭제 됩니다.<br/><br/>. P a c 파일이 .rc 파일과 동기화 되지 않을 때마다 .rc 파일이 다시 생성 됩니다. 예를 들어를 **저장**하면 리소스 편집기에서 .rc 파일 및 resource.h 파일을 덮어씁니다. 리소스 자체에 대 한 모든 변경 내용은 .rc 파일에 통합 된 상태로 유지 되지만, .rc 파일을 덮어쓰면 주석이 항상 손실 됩니다. 주석을 유지 하는 방법에 대 한 자세한 내용은 [컴파일 타임에 리소스 포함](../windows/how-to-include-resources-at-compile-time.md)을 참조 하세요.<br/><br/>일반적으로 소스 제어에는 aps 파일을 포함 하면 안 됩니다. |
@@ -108,7 +108,7 @@ ms.locfileid: "69513651"
 </dependency>
 ```
 
-Windows XP 또는 Windows Vista 응용 프로그램의 경우 매니페스트 리소스는 응용 프로그램에서 사용할 최신 버전의 Windows 공용 컨트롤을 지정 해야 합니다. 위의 예제에서는 `6.0.0.0` [syslink 컨트롤](/windows/win32/Controls/syslink-overview)을 지 원하는 버전을 사용 합니다.
+Windows XP 또는 Windows Vista 응용 프로그램의 경우 매니페스트 리소스는 응용 프로그램에서 사용할 최신 버전의 Windows 공용 컨트롤을 지정 해야 합니다. 위의 예제에서는 [Syslink 컨트롤](/windows/win32/Controls/syslink-overview)을 지 원하는 버전 `6.0.0.0`을 사용 합니다.
 
 > [!NOTE]
 > 모듈별로 매니페스트 리소스를 하나만 사용할 수 있습니다.
@@ -129,7 +129,7 @@ Windows XP 또는 Windows Vista 응용 프로그램의 경우 매니페스트 �
 
 Win32
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [리소스 파일 작업](../windows/working-with-resource-files.md)<br/>
 [리소스 식별자(기호)](../windows/symbols-resource-identifiers.md)<br/>

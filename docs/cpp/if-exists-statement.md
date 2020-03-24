@@ -8,16 +8,16 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea136ac0312b78519fe2d8ea88ace4d8b0d69946
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178420"
 ---
-# <a name="ifexists-statement"></a>__if_exists 문
+# <a name="__if_exists-statement"></a>__if_exists 문
 
-합니다 **__if_exists** 문은 지정된 된 식별자가 있는지 여부를 테스트 합니다. 식별자가 있는 경우 지정된 문 블록이 실행됩니다.
+**__If_exists** 문은 지정 된 식별자가 있는지 여부를 테스트 합니다. 식별자가 있는 경우 지정된 문 블록이 실행됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,22 +32,22 @@ statements
 |매개 변수|설명|
 |---------------|-----------------|
 |*identifier*|존재 여부를 테스트할 식별자입니다.|
-|*statements*|경우 실행할 하나 이상의 문이 *식별자* 존재 합니다.|
+|*할당문*|*식별자* 가 있는 경우 실행할 하나 이상의 문입니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 > [!CAUTION]
->  가장 안정적인 결과 달성 하려면 사용 합니다 **__if_exists** 다음 제약 조건에 따라 문입니다.
+>  가장 안정적인 결과를 얻으려면 다음 제약 조건에 **__if_exists** 문을 사용 합니다.
 
-- 적용 된 **__if_exists** 문, 템플릿이 아니라 단순 형식에만 합니다.
+- **__If_exists** 문을 템플릿이 아닌 단순 형식에만 적용 합니다.
 
-- 적용 된 **__if_exists** 문을 내부 또는 외부 클래스 식별자입니다. 적용 되지 않습니다 합니다 **__if_exists** 지역 변수에 문입니다.
+- **__If_exists** 문을 클래스 내부 또는 외부의 식별자에 적용 합니다. 지역 변수에 **__if_exists** 문을 적용 하지 마십시오.
 
-- 사용 된 **__if_exists** 문은 함수의 본문에만. 함수 본문 외부에서 **__if_exists** 문은 완전히 정의 된 형식만 테스트할 수 있습니다.
+- 함수 본문 에서만 **__if_exists** 문을 사용 합니다. 함수 본문 외부에서 **__if_exists** 문은 완전히 정의 된 형식만 테스트할 수 있습니다.
 
 - 오버로드된 함수에 대해 테스트할 때 특정 양식의 오버로드를 테스트할 수 없습니다.
 
-보완 하는 **__if_exists** 문이 합니다 [__if_not_exists](../cpp/if-not-exists-statement.md) 문입니다.
+**__If_exists** 문의 보수는 [__if_not_exists](../cpp/if-not-exists-statement.md) 문입니다.
 
 ## <a name="example"></a>예제
 
@@ -121,8 +121,8 @@ g_bFlag = 1
 C::f exists
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[선택 문(C++)](../cpp/selection-statements-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[선택 문](../cpp/selection-statements-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [__if_not_exists 문](../cpp/if-not-exists-statement.md)

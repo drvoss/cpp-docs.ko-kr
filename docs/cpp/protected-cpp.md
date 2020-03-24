@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29f57eac7201ac0647275c70c539f9b2f28eb81b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179252"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +26,7 @@ protected base-class
 
 ## <a name="remarks"></a>설명
 
-**보호** 키워드의 클래스 멤버에 대 한 액세스를 지정 합니다 *멤버 목록* 까지 다음 액세스 지정자 (**공용** 또는 **개인**) 또는 클래스 정의의 끝입니다. 로 선언 된 클래스 멤버 **보호** 다음 에서만 사용할 수 있습니다.
+**Protected** 키워드는 다음 액세스 지정자 (**공용** 또는 **전용**) 또는 클래스 정의의 끝까지 *멤버 목록의* 클래스 멤버에 대 한 액세스를 지정 합니다. Protected로 선언 **된** 클래스 멤버는 다음 에서만 사용할 수 있습니다.
 
 - 원래 이 멤버를 선언한 클래스의 멤버 함수
 
@@ -36,20 +36,20 @@ protected base-class
 
 - 보호된 멤버에 대해 전용 액세스 권한이 있으며 전용으로 직접 파생된 클래스
 
-이름 앞에 오는 기본 클래스의 경우는 **보호** 키워드는 기본 클래스의 public 및 protected 멤버는 파생된 클래스의 protected 멤버를 지정 합니다.
+기본 클래스의 이름 앞에 있는 **protected** 키워드는 기본 클래스의 공용 및 보호 된 멤버가 파생 클래스의 보호 된 멤버 임을 지정 합니다.
 
-보호 된 멤버 만큼 전용 되지 **사설** 선언 된 있지만 만큼 공용도 없는 클래스의 멤버에만 액세스할 수 있는 멤버 **공용** 멤버에 액세스할 수 있는 모든 함수입니다.
+Protected 멤버는 선언 된 클래스의 멤버에만 액세스할 수 있는 **전용** 멤버로 서 private이 아니라 모든 함수에서 액세스할 수 있는 **공용** 멤버로 public이 아닙니다.
 
-보호 된으로 선언 된 멤버 **정적** 모든 파생된 클래스의 friend 나 멤버 함수에 액세스할 수 있습니다. 으로 선언 되지 않은 멤버를 보호 **정적** friend와 멤버 함수 포인터, 참조 또는 파생된 클래스의 개체를 통해서만 파생된 클래스에서 액세스할 수 있습니다.
+**Static** 으로도 선언 된 보호 된 멤버는 파생 클래스의 friend 또는 멤버 함수에서 액세스할 수 있습니다. **Static** 으로 선언 되지 않은 보호 된 멤버는 파생 클래스의 포인터, 참조 또는 개체에 대 한 포인터를 통해서만 파생 된 클래스의 friend 및 멤버 함수에 액세스할 수 있습니다.
 
-관련 정보를 참조 하세요 [friend](../cpp/friend-cpp.md), [공용](../cpp/public-cpp.md)를 [개인](../cpp/private-cpp.md), 및 멤버 액세스 테이블 [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md) .
+관련 정보는 [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md)및 [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md)의 멤버 액세스 테이블을 참조 하세요.
 
 ## <a name="clr-specific"></a>/clr 관련
 
-CLR 형식에는 C++ 액세스 지정자 키워드 (**공용**를 **개인**, 및 **보호**) 형식 및 어셈블리와 관련 된 메서드 표시 여부에 영향을 줄 수 있습니다. 자세한 내용은 [멤버 Access Control](member-access-control-cpp.md)합니다.
+CLR 형식에서 액세스 지정자 C++ 키워드 (**public**, **private**및 **protected**)는 어셈블리와 관련 하 여 형식 및 메서드의 표시 여부에 영향을 줄 수 있습니다. 자세한 내용은 [Member Access Control](member-access-control-cpp.md)를 참조 하세요.
 
 > [!NOTE]
->  파일을 컴파일하면 [/LN](../build/reference/ln-create-msil-module.md) 이 동작의 영향을 받지 않습니다. 이 경우 관리되는 클래스(공용 또는 전용)가 모두 표시됩니다.
+>  [/LN](../build/reference/ln-create-msil-module.md) 로 컴파일된 파일은이 동작의 영향을 받지 않습니다. 이 경우 관리되는 클래스(공용 또는 전용)가 모두 표시됩니다.
 
 ## <a name="end-clr-specific"></a>END /clr 관련
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 멤버에 대한 액세스 제어](member-access-control-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

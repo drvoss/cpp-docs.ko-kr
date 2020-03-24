@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214788"
 ---
 # <a name="length_is"></a>length_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "69514533"
 *expression*<br/>
 하나 이상의 C 언어 식입니다. 빈 인수 슬롯을 사용할 수 있습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Length_is** C++ 특성은 [length_is](/windows/win32/Midl/length-is) MIDL 특성과 동일한 기능을 포함 합니다.
+**Length_is** C++ 특성에는 [length_is](/windows/win32/Midl/length-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -49,7 +49,7 @@ ms.locfileid: "69514533"
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>
