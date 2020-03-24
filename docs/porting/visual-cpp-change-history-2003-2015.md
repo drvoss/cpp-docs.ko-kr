@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150760"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 
@@ -2883,7 +2883,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   코드에서 이전 릴리스가 최적화 하려고 했던 위치를 찾으려면 해당 릴리스의 컴파일러를 `/W3` 컴파일러 옵션과 함께 사용 하 고 경고 C4370를 설정 합니다. 예를 들면 다음과 같습니다.
+   코드에서 이전 릴리스가 최적화 하려고 했던 위치를 찾으려면 해당 릴리스의 컴파일러를 `/W3` 컴파일러 옵션과 함께 사용 하 고 경고 C4370를 설정 합니다. 다음은 그 예입니다.
 
     ```cpp
     #pragma warning(default:4370)
@@ -3040,7 +3040,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="standard-library"></a>표준 라이브러리
 
-- C++98/03 및 C++11 표준 간의 주요 변경 내용에 따라 명시적 템플릿 인수를 사용하여 `make_pair()`를 호출하는 경우(예: `make_pair<int, int>(x, y)`) 일반적으로 Visual Studio 2012의 Visual C++에서 컴파일되지 않습니다. 해결 방법은 `make_pair() `와 같이 항상 명시적 템플릿 인수 없이 `make_pair(x, y)`를 호출하는 것입니다. 명시적 템플릿 인수를 제공하면 이 함수의 목적에서 벗어납니다. 결과 형식을 정밀하게 제어해야 하는 경우 `pair`와 같이 `make_pair` 대신 `pair<short, short>(int1, int2)`를 사용합니다.
+- C++98/03 및 C++11 표준 간의 주요 변경 내용에 따라 명시적 템플릿 인수를 사용하여 `make_pair()`를 호출하는 경우(예: `make_pair<int, int>(x, y)`) 일반적으로 Visual Studio 2012의 Visual C++에서 컴파일되지 않습니다. 이 솔루션은 `make_pair(x, y)`와 같이 명시적 템플릿 인수 없이 항상 `make_pair()`를 호출 하는 것입니다. 명시적 템플릿 인수를 제공하면 이 함수의 목적에서 벗어납니다. 결과 형식을 정밀하게 제어해야 하는 경우 `pair`와 같이 `make_pair` 대신 `pair<short, short>(int1, int2)`를 사용합니다.
 
 - C + + 98/03과 c + + 11 표준 간의 또 다른 주요 변경 내용: A가 B로 암시적으로 변환 되 고 B가 암시적으로 C로 변환할 수 있지만, A가 c, c + + 98/03 및 Visual Studio 2010로 암시적으로 변환할 수 없는 경우 `pair<C, X>`로 변환 (암시적 또는 명시적으로) 될 수 `pair<A, X>`. 다른 형식 X는 여기에 관심이 없으며 쌍의 첫 번째 형식과 관련이 없습니다. Visual C++ Studio 2012의 컴파일러는가 C로 암시적으로 변환할 수 없음을 감지 하 고 오버 로드 확인에서 쌍 변환을 제거 합니다. 이 변경은 다양한 시나리오에서 유용합니다. 예를 들어 `func(const pair<int, int>&)` 및 `func(const pair<string, string>&)`을 오버로드하고 `func()`에서 `pair<const char *, const char *>`을 호출하면 이 변경 내용으로 컴파일합니다. 그러나 이 변경으로 인해 적극적인 쌍 변환을 사용한 코드가 손상됩니다. 일반적으로 이러한 코드는 `make_pair(static_cast<B>(a), x)`가 필요한 함수에 `pair<C, X>` 전달 등의 방법으로 변환의 일부를 명시적으로 수행하여 수정할 수 있습니다.
 

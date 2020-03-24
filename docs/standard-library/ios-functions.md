@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150631"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 함수
 
-## <a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
 [bool](../cpp/bool-cpp.md) 형식의 변수가 스트림에서 **true** 또는 **false**로 표시되도록 지정합니다.
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>dec
+## <a name="dec"></a><a name="dec"></a>dec
 
 정수 변수가 밑수 10 표기법으로 표시되도록 지정합니다.
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
 
 부동 소수점 값에 기본 표시 형식을 사용하도록 `ios_base` 개체의 플래그를 구성합니다.
 
@@ -187,7 +187,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 조작자는 `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`를 효과적으로 호출한 다음 *iosbase*를 반환 합니다.
 
-## <a name="fixed"></a>고정
+## <a name="fixed"></a><a name="fixed"></a>고정
 
 부동 소수점 숫자가 고정 Decimal 표기법으로 표시되도록 지정합니다.
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>16 진수
+## <a name="hex"></a><a name="hex"></a>16 진수
 
 정수 변수가 16진 표기법으로 표시되도록 지정합니다.
 
@@ -262,13 +262,13 @@ ios_base& hex(ios_base& str);
 
 `hex`사용 방법에 대 한 예제는 [dec](../standard-library/ios-functions.md#dec) 를 참조 하세요.
 
-## <a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>사내
+## <a name="internal"></a><a name="internal"></a>사내
 
 숫자의 부호를 왼쪽에 맞추고 숫자를 오른쪽에 맞춥니다.
 
@@ -297,7 +297,7 @@ ios_base& internal(ios_base& str);
 
 [showpos](../standard-library/ios-functions.md#showpos)는 양수에 대해 부호가 표시되도록 합니다.
 
-조작자는 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
+조작자는 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>비어
+## <a name="left"></a><a name="left"></a>비어
 
 너비가 출력 너비보다 작은 텍스트를 왼쪽에 여백을 두고 스트림 플러시에 표시합니다.
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
 
 [bool](../cpp/bool-cpp.md) 형식의 변수가 스트림에서 1 또는 0으로 표시되도록 지정합니다.
 
@@ -418,7 +418,7 @@ ios_base& noboolalpha(ios_base& str);
 
 [ 사용 예제는 ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`를 참조하세요.
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
 숫자가 표시되는 표기법 밑수 표시를 해제합니다.
 
@@ -445,7 +445,7 @@ ios_base& noshowbase(ios_base& str);
 
 [를 사용하는 방법에 대한 예제는 ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`를 참조하세요.
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
 소수 부분이 0인 부동 소수점 숫자의 정수 부분만 표시합니다.
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
 양수에 명시적으로 부호가 지정되지 않습니다.
 
@@ -519,7 +519,7 @@ ios_base& noshowpos(ios_base& str);
 
 [ 사용 예제는 ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`를 참조하세요.
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 입력 스트림이 공백을 읽습니다.
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
 출력이 버퍼링되고 버퍼가 가득 차면 처리되도록 합니다.
 
@@ -584,7 +584,7 @@ ios_base& nounitbuf(ios_base& str);
 
 조작자는 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
 
 16진수 숫자와 과학적 표기법의 지수가 소문자로 표시되도록 지정합니다.
 
@@ -609,7 +609,7 @@ ios_base& nouppercase(ios_base& str);
 
 [ 사용 예제는 ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`를 참조하세요.
 
-## <a name="oct"></a>진수로
+## <a name="oct"></a><a name="oct"></a>진수로
 
 정수 변수가 밑수 8 표기법으로 표시되도록 지정합니다.
 
@@ -636,7 +636,7 @@ ios_base& oct(ios_base& str);
 
 `oct`사용 방법에 대 한 예제는 [dec](../standard-library/ios-functions.md#dec) 를 참조 하세요.
 
-## <a name="right"></a>오른쪽
+## <a name="right"></a><a name="right"></a>오른쪽
 
 너비가 출력 너비보다 작은 텍스트를 오른쪽에 여백을 두고 스트림 플러시에 표시합니다.
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>과학
+## <a name="scientific"></a><a name="scientific"></a>과학
 
 과학적 표기법을 사용하여 부동 소수점 숫자가 표시되도록 합니다.
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>showbase
 
 숫자가 표시되는 표기법 밑수를 표시합니다.
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 소수 부분이 0인 경우에도 부동 소수점 숫자의 정수 부분과 소수점 이하 자릿수를 표시합니다.
 
@@ -819,7 +819,7 @@ ios_base& showpoint(ios_base& str);
 
 [ 사용 예제는 ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`를 참조하세요.
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 양수에 명시적으로 부호가 지정됩니다.
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 입력 스트림이 공백을 읽지 않습니다.
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 버퍼가 비어 있지 않으면 출력이 처리됩니다.
 
@@ -941,7 +941,7 @@ ios_base& unitbuf(ios_base& str);
 
 조작자는 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: dbuf](../standard-library/ios-base-class.md#fmtflags)`)`를 효과적으로 호출한 다음 *str*을 반환 합니다.
 
-## <a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
 
 16진수 숫자와 과학적 표기법의 지수가 대문자로 표시되도록 지정합니다.
 

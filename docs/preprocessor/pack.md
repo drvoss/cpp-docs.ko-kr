@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 335289802b6c370158fc655646b710914a07a3f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079973"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160335"
 ---
 # <a name="pack-pragma"></a>pack pragma
 
@@ -45,7 +45,7 @@ ms.locfileid: "80079973"
 *n*\
 필드 압축에 사용할 값 (바이트)을 지정 합니다. 컴파일러 옵션 [/zp](../build/reference/zp-struct-member-alignment.md) 가 모듈에 대해 설정 되지 않은 경우 *n* 의 기본값은 8입니다. 유효한 값은 1, 2, 4, 8 및 16입니다. 멤버의 맞춤은 *n*의 배수 또는 멤버 크기의 배수 중 더 작은 경계에 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 클래스를 *압축* 하려면 해당 멤버를 메모리에서 서로 직접 추가 합니다. 이는 대상 아키텍처의 기본 맞춤 보다 작은 경계에 일부 또는 모든 멤버를 정렬할 수 있음을 의미할 수 있습니다. **pack** 은 데이터 선언 수준에서 컨트롤을 제공 합니다. 모듈 수준 제어만 제공 하는 컴파일러 옵션 [/zp](../build/reference/zp-struct-member-alignment.md)와는 다릅니다. pragma가 표시 된 후에는 첫 번째 **구조체**, **공용 구조체**또는 **클래스** 선언에서 **pack** 이 적용 됩니다. **pack** 은 정의에 영향을 주지 않습니다. 인수가 없는 **pack** 을 호출 하면 *n* 은 컴파일러 옵션 `/Zp`설정 된 값으로 설정 됩니다. 컴파일러 옵션이 설정 되지 않은 경우 기본값은 8입니다.
 

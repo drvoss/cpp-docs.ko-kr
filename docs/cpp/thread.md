@@ -1,5 +1,5 @@
 ---
-title: 스레드
+title: 스레드(thread)
 ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301290"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160699"
 ---
-# <a name="thread"></a>스레드
+# <a name="thread"></a>스레드(thread)
 
 **Microsoft 전용**
 
@@ -26,7 +26,7 @@ ms.locfileid: "75301290"
 
 **__declspec (스레드)** *선언 자*
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 TLS(스레드 로컬 스토리지)는 다중 스레드 프로세스의 각 스레드가 스레드 데이터를 위한 스토리지를 할당하는 메커니즘입니다. 표준 다중 스레드 프로그램에서 데이터는 지정된 프로세스의 모든 스레드에서 공유되지만 스레드 로컬 스토리지는 스레드별 데이터를 할당하기 위한 메커니즘입니다. 스레드에 대 한 자세한 내용은 [다중 스레딩](../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조 하세요.
 
@@ -71,7 +71,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- 표준 C에서는 비정적 개체에 한 해 자신에 대 한 참조를 포함 하는 식을 사용 하 여 개체 또는 변수를 초기화할 수 있습니다. 는 C++ 일반적으로 자신에 대 한 참조를 포함 하는 식으로 개체를 동적으로 초기화할 수 있도록 허용 하지만 스레드 로컬 개체에는이 형식의 초기화가 허용 되지 않습니다. 예를 들면 다음과 같습니다.:
+- 표준 C에서는 비정적 개체에 한 해 자신에 대 한 참조를 포함 하는 식을 사용 하 여 개체 또는 변수를 초기화할 수 있습니다. 는 C++ 일반적으로 자신에 대 한 참조를 포함 하는 식으로 개체를 동적으로 초기화할 수 있도록 허용 하지만 스레드 로컬 개체에는이 형식의 초기화가 허용 되지 않습니다. 다음은 그 예입니다.
 
    ```cpp
    // declspec_thread_3.cpp
@@ -85,8 +85,8 @@ __declspec( thread ) int tls_i = 1;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [__declspec](../cpp/declspec.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [TLS(스레드 로컬 스토리지)](../parallel/thread-local-storage-tls.md)

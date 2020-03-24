@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150747"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 연산자
 
@@ -19,7 +19,7 @@ ms.locfileid: "79424730"
 |[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[연산자==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>  operator!=
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>  operator==
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! = (hash_multimap)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.

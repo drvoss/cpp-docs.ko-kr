@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160777"
 ---
 # <a name="templates-c"></a>템플릿 (C++)
 
@@ -57,7 +57,7 @@ int minimum(const int& lhs, const int& rhs)
 
 컴파일러가 함수 템플릿에서 형식 추론을 수행 하는 방법에 대 한 규칙은 일반 함수에 대 한 규칙을 기반으로 합니다. 자세한 내용은 [함수 템플릿 호출의 오버 로드 확인](../cpp/overload-resolution-of-function-template-calls.md)을 참조 하세요.
 
-## <a id="type_parameters"></a>형식 매개 변수
+## <a name="type-parameters"></a><a id="type_parameters"></a>형식 매개 변수
 
 위의 `minimum` 템플릿에서 형식 매개 변수 *t* 는 const 및 참조 한정자가 추가 되는 함수 호출 매개 변수에 사용 될 때까지 정규화 되지 않습니다.
 
@@ -151,7 +151,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a id="template_parameters"></a>템플릿 매개 변수로 서의 템플릿
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>템플릿 매개 변수로 서의 템플릿
 
 템플릿은 템플릿 매개 변수가 될 수 있습니다. 이 예제에서 MyClass2에는 두 개의 템플릿 매개 변수, 즉 typename 매개 변수 *T* 와 템플릿 매개 변수 *Arr*이 있습니다.
 

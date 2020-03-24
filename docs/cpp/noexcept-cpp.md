@@ -4,12 +4,12 @@ ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: cc669a43ff9acbb98ce970c21cba5ac9cdc5b732
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161050"
 ---
 # <a name="noexcept-c"></a>noexcept(C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "74245622"
 *상수 식*<br/>
 잠재적 예외 형식 집합이 비어 있는지 여부를 나타내는 **bool** 형식의 상수 식입니다. 비 조건부 버전은 `noexcept(true)`와 동일 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *Noexcept 식은* 함수를 종료 하는 모든 예외에 대 한 예외 처리기에 의해 일치 될 수 있는 형식 집합을 나타내는 함수 선언에 대 한 접미사 인 *예외 사양의*일종입니다. 단항 조건 연산자 `noexcept(`*constant_expression*`)`에서 *constant_expression* 를 **생성 하 고, 무조건**동의어 **noexcept**함수를 종료할 수 있는 잠재적인 예외 형식 집합이 비어 있음을 지정 합니다. 즉, 함수는 예외를 throw 하지 않으며 예외를 범위 외부에서 전파 하지 않습니다. 연산자는 *constant_expression* **false**를 생성 하거나, 예외 사양이 소멸자 또는 할당 취소 함수를 제외 하는`)` *constant_expression* `noexcept(`함수를 종료할 수 있는 잠재적인 예외 집합이 모든 형식의 집합 임을 나타냅니다.
 

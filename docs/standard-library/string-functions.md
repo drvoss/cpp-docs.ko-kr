@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: MT
+ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425114"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150605"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; functions
 
@@ -44,7 +44,7 @@ ms.locfileid: "79425114"
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
 |[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>  getline
 
 입력 스트림에서 문자열을 한 줄씩 추출합니다.
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-## <a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>  stod
 
 문자 시퀀스를 **double**로 변환 합니다.
 
@@ -184,9 +184,9 @@ double stod(
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtod( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **double** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtod( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **double** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>  stof
 
 문자 시퀀스를 float로 변환합니다.
 
@@ -213,9 +213,9 @@ float 값입니다.
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtof( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **float** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtof( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **float** 형식의 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>  stoi
 
 문자 시퀀스를 정수로 변환합니다.
 
@@ -251,7 +251,7 @@ int stoi(
 
 `str.c_str() == *_Eptr`경우 `stoi` `invalid_argument`형식의 개체를 throw 합니다. 이러한 호출을 `errno`설정 하거나 반환 된 값을 **int**형식의 개체로 나타낼 수 없는 경우 `out_of_range`형식의 개체를 throw 합니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx`에 `*_Eptr - str.c_str()`을 저장 합니다.
 
-## <a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>  stol
 
 문자 시퀀스를 **long**으로 변환 합니다.
 
@@ -281,9 +281,9 @@ long 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtol( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtol( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>  stold
 
 문자 시퀀스를 **long double**로 변환 합니다.
 
@@ -310,9 +310,9 @@ double stold(
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtold( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long double** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtold( str.c_str(), _Eptr)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long double** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>  stoll
 
 문자 시퀀스를 **long long**으로 변환 합니다.
 
@@ -342,9 +342,9 @@ long long stoll(
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtoll( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtoll( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>  stoul
 
 문자 시퀀스를 부호 없는 long으로 변환합니다.
 
@@ -374,9 +374,9 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtoul( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **unsigned long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtoul( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **unsigned long** 형식의 값 `val`으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>  stoull
 
 문자 시퀀스를 **부호 없는 long long**으로 변환 합니다.
 
@@ -406,9 +406,9 @@ unsigned long long stoull(
 
 ### <a name="remarks"></a>설명
 
-함수는 `strtoull( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **부호 없는 long** 형식 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. ` str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
+함수는 `strtoull( str.c_str(), _Eptr, idx)`를 호출 하는 것 처럼 *str* 의 요소 시퀀스를 **부호 없는 long** 형식 `val` 값으로 변환 합니다. 여기서 `_Eptr`는 함수 내부의 개체입니다. `str.c_str() == *_Eptr`인 경우 `invalid_argument` 형식의 개체가 throw됩니다. 이러한 호출에서 `errno`를 설정하는 경우에는 `out_of_range` 형식의 개체가 throw됩니다. 그렇지 않고 *idx* 가 null 포인터가 아닌 경우 함수는 `*idx` `*_Eptr -  str.c_str()`를 저장 하 고 `val`반환 합니다.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>  swap
 
 두 문자열의 문자 배열을 교환합니다.
 
@@ -464,7 +464,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>  to_string
 
 값을 `string`로 변환합니다.
 
@@ -512,7 +512,7 @@ string to_string(long double Val);
 
 함수에서 `string(Buf)`을 반환합니다.
 
-## <a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
 
 값을 와이드 문자열로 변환합니다.
 

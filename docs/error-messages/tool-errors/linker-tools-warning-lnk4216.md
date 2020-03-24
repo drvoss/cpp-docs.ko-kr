@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4216
 ms.assetid: 68512095-acbc-47aa-96bf-9eb0e73b24a3
-ms.openlocfilehash: 102e8721b35012c72ad0568c759b7956d670a2f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9907ebef5711c61321d8ce2da8b330602c63f0a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165115"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193851"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>링커 도구 경고 LNK4216
 
-내보낸된 항목 지점
+내보낸 진입점 항목
 
-진입점은 DLL에서 내보내지 않았습니다. DLL의 진입점을 내보낼 필요가 없습니다.
+진입점을 DLL에서 내보냈습니다. DLL의 진입점은 내보낼 필요가 없습니다.

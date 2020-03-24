@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9b4492f10e2871792d8e1870fcfea37775dc7bde
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427346"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150851"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 클래스
 
@@ -233,7 +233,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **네임스페이스:** std
 
-## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
 `basic_filebuf` 형식의 개체를 생성합니다.
 
@@ -249,7 +249,7 @@ basic_filebuf(basic_filebuf&& right);
 
 두 번째 생성자는 rvalue 참조로 처리 되는 *오른쪽*의 내용을 사용 하 여 개체를 초기화 합니다.
 
-## <a name="char_type"></a>  basic_filebuf::char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a>  basic_filebuf::char_type
 
 형식 이름을 `Char_T` 템플릿 매개 변수와 연결합니다.
 
@@ -257,7 +257,7 @@ basic_filebuf(basic_filebuf&& right);
 typedef Char_T char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::close
+## <a name="basic_filebufclose"></a><a name="close"></a>  basic_filebuf::close
 
 파일을 닫습니다.
 
@@ -324,7 +324,7 @@ s
 1
 ```
 
-## <a name="int_type"></a>  basic_filebuf::int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a>  basic_filebuf::int_type
 
 `basic_filebuf` 범위 내에서이 형식을 `Tr` 범위에 있는 동일한 이름의 형식과 동일 하 게 설정 합니다.
 
@@ -332,7 +332,7 @@ s
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a>  basic_filebuf::is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a>  basic_filebuf::is_open
 
 파일이 열려 있는지 여부를 나타냅니다.
 
@@ -368,7 +368,7 @@ false
 true
 ```
 
-## <a name="off_type"></a>  basic_filebuf::off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a>  basic_filebuf::off_type
 
 `basic_filebuf` 범위 내에서이 형식을 `Tr` 범위에 있는 동일한 이름의 형식과 동일 하 게 설정 합니다.
 
@@ -376,7 +376,7 @@ true
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a>  basic_filebuf::open
+## <a name="basic_filebufopen"></a><a name="open"></a>  basic_filebuf::open
 
 파일을 엽니다.
 
@@ -417,7 +417,7 @@ _Fsopen의 *shflag* 매개 변수에 해당 하는 기본 파일 열기 보호�
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`를 호출 하 여 이름이 *filename*인 파일을 엽니다. `strmode`은 `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`에서 결정 됩니다.
+멤버 함수는 [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`를 호출 하 여 이름이 *filename*인 파일을 엽니다. `strmode`은 `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`에서 결정 됩니다.
 
 - `ios_base::in` `"r"` 됩니다 (읽기용으로 기존 파일 열기).
 
@@ -441,7 +441,7 @@ _Fsopen의 *shflag* 매개 변수에 해당 하는 기본 파일 열기 보호�
 
 `open`를 사용 하는 예제는 [`basic_filebuf::close`](#close) 를 참조 하세요.
 
-## <a name="op_eq"></a>  basic_filebuf::operator=
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a>  basic_filebuf::operator=
 
 이 스트림 버퍼 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 rvalue와 관련 된 이동 할당입니다.
 
@@ -462,7 +462,7 @@ __* This__를 반환 합니다.
 
 멤버 연산자는 rvalue 참조로 처리 되는 *오른쪽*의 내용을 사용 하 여 개체의 내용을 바꿉니다. 자세한 내용은 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조 하세요.
 
-## <a name="overflow"></a>  basic_filebuf::overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a>  basic_filebuf::overflow
 
 가득 찬 버퍼에 새 문자를 삽입할 때 호출됩니다.
 
@@ -489,7 +489,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 - 출력 버퍼에서 보류 중인 모든 출력을 변환 하 고, 필요에 따라 파일 변환 패싯 `fac`를 사용 하 여 `fac.out`를 호출 하 여 `ch`수 있습니다. *문자* 형식의 `ch` 생성 된 각 요소는 `fputc(ch, fp)`폼의 후속 호출로 인 한 것 처럼 `fp` 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다. 변환 또는 쓰기가 실패하면 함수가 성공하지 못합니다.
 
-## <a name="pbackfail"></a>  basic_filebuf::pbackfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>  basic_filebuf::pbackfail
 
 요소를 입력 스트림에 다시 넣은 후 다음 포인터에서 가리키는 현재 요소로 설정하려고 합니다.
 
@@ -516,7 +516,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 함수가 입력 스트림에 요소를 다시 푸시할 수 있는 경우 **char**형식의 요소에 대해 `ungetc`를 호출 하는 등의 작업을 수행할 수 있습니다.
 
-## <a name="pos_type"></a>  basic_filebuf::pos_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>  basic_filebuf::pos_type
 
 `basic_filebuf` 범위 내에서이 형식을 `Tr` 범위에 있는 동일한 이름의 형식과 동일 하 게 설정 합니다.
 
@@ -524,7 +524,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_filebuf::seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>  basic_filebuf::seekoff
 
 제어된 스트림의 현재 위치를 변경하려고 합니다.
 
@@ -558,7 +558,7 @@ virtual pos_type seekoff(
 
 `fp` 파일 포인터가 null 포인터인 경우 함수가 실패 합니다. 그렇지 않으면 `fseek(fp, _Off, _Way)`를 호출 하 여 스트림 위치를 변경 하려고 합니다. 해당 함수가 성공 하 고 결과 위치 `fposn` `fgetpos(fp, &fposn)`를 호출 하 여 확인할 수 있는 경우 함수가 성공 합니다. 함수가 성공 하면 `fposn`를 포함 하 `pos_type` 형식의 값을 반환 합니다. 실패하면 잘못된 스트림 위치를 반환합니다.
 
-## <a name="seekpos"></a>  basic_filebuf::seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>  basic_filebuf::seekpos
 
 제어된 스트림의 현재 위치를 변경하려고 합니다.
 
@@ -588,7 +588,7 @@ virtual pos_type seekpos(
 
 와이드 스트림의 경우 스트림이 열린 이후 또는 `streampos`에 대한 마지막 호출 이후 삽입이 발생하면 함수는 [overflow](#overflow)를 호출합니다. 또한 필요에 따라 `fac.unshift`를 호출 하 `fac` 파일 변환 패싯을 사용 하 여 초기 변환 상태를 복원 하는 데 필요한 모든 시퀀스를 삽입 합니다. **문자** 형식의 `byte` 생성 된 각 요소는 `fputc(byte, fp)`폼의 후속 호출로 인 한 것 처럼 `fp` 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다. `fac.unshift` 또는 쓰기에 대 한 호출이 실패 하면 함수는 성공 하지 않습니다.
 
-## <a name="setbuf"></a>  basic_filebuf::setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>  basic_filebuf::setbuf
 
 파생된 각 스트림 버퍼와 관련된 작업을 수행합니다.
 
@@ -614,7 +614,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 `setbuf` `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`를 호출 하 여 *_Buffer* 에서 시작 하는 `count` 요소의 배열을 스트림의 버퍼로 제공 합니다. 해당 함수가 0이 아닌 값을 반환하는 경우 이 함수는 null 포인터를 반환합니다. 아닌 경우 성공을 알리기 위해 **this**를 반환합니다.
 
-## <a name="swap"></a>  basic_filebuf::swap
+## <a name="basic_filebufswap"></a><a name="swap"></a>  basic_filebuf::swap
 
 이 `basic_filebuf`의 내용을 제공된 `basic_filebuf`의 내용으로 교환합니다.
 
@@ -627,7 +627,7 @@ void swap(basic_filebuf& right);
 *오른쪽*\
 다른 `basic_filebuf`에 대 한 lvalue 참조입니다.
 
-## <a name="sync"></a>  basic_filebuf::sync
+## <a name="basic_filebufsync"></a><a name="sync"></a>  basic_filebuf::sync
 
 제어된 스트림을 연결된 외부 스트림과 동기화하려고 합니다.
 
@@ -639,7 +639,7 @@ virtual int sync();
 
 `fp` 파일 포인터가 null 포인터인 경우 0을 반환 합니다. 그렇지 않으면 [오버플로](#overflow) 를 모두 호출 하 `fflush(fp)` 고 보류 중인 모든 출력을 스트림으로 플러시하는 경우에만 0을 반환 합니다.
 
-## <a name="traits_type"></a>  basic_filebuf::traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>  basic_filebuf::traits_type
 
 형식 이름을 `Tr` 템플릿 매개 변수와 연결합니다.
 
@@ -647,7 +647,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a>  basic_filebuf::underflow
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a>  basic_filebuf::underflow
 
 입력 스트림에서 현재 요소를 추출합니다.
 

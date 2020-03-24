@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150789"
 ---
 # <a name="basic_istream-class"></a>basic_istream 클래스
 
@@ -169,7 +169,7 @@ setstate(state);
 
 **네임스페이스:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 `basic_istream` 형식의 개체를 생성합니다.
 
@@ -202,7 +202,7 @@ basic_istream(basic_istream&& right);
 
 입력 스트림에 대한 자세한 내용은 [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream)에 대한 예제를 참조하세요.
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 서식이 지정되지 않은 마지막 입력 동안 읽은 문자 수를 반환합니다.
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 입력 스트림에서 하나 이상의 문자를 읽습니다.
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 입력 스트림에서 한 줄을 가져옵니다.
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 현재 읽기 위치에서 많은 요소를 건너뜁니다.
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>  basic\_istream::operator>>
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>  basic\_istream::operator>>
 
 입력 스트림에 대해 함수를 호출하거나 입력 스트림에서 형식이 지정된 데이터를 읽습니다.
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 이 개체에 연산자의 오른쪽에 있는 `basic_istream`을 할당합니다. 복사본을 남기지 않는 `rvalue` 참조와 관련 된 이동 할당입니다.
 
@@ -595,7 +595,7 @@ __* This__를 반환 합니다.
 
 멤버 연산자는 `swap(right)`를 호출 합니다.
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 읽을 다음 문자를 반환합니다.
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 지정된 문자를 스트림에 넣습니다.
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 스트림에서 지정된 개수의 문자를 읽고 배열에 저장합니다.
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 지정한 개수의 문자 값을 읽습니다.
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 스트림에서 읽기 위치를 이동합니다.
 
@@ -838,7 +838,7 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > 표준 C++는 텍스트 파일에서 상대 검색을 지원하지 않으므로 두 번째 멤버 함수를 텍스트 파일과 함께 사용하지 마세요.
 
-[`fail`](../standard-library/basic-ios-class.md#fail) false 이면 첫 번째 멤버 함수는`pubseekpos`임시 개체`(pos)`에 대해 `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) [`->``pos_type` `newpos`를](../standard-library/basic-streambuf-class.md#pubseekpos) 호출 합니다. `fail` false 인 경우 두 번째 함수는 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`를 호출 합니다. 두 경우 모두 `(off_type)newpos == (off_type)(-1)` (위치 지정 작업이 실패 하는 경우) 함수는 `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`를 호출 합니다. 두 함수는 모두 __* this__를 반환 합니다.
+[`fail`](../standard-library/basic-ios-class.md#fail) false 이면 첫 번째 멤버 함수는`pubseekpos`임시 개체`(pos)`에 대해 `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) [`->``pos_type` `newpos`를](../standard-library/basic-streambuf-class.md#pubseekpos) 호출 합니다. `fail` false 인 경우 두 번째 함수는 `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`를 호출 합니다. 두 경우 모두 `(off_type)newpos == (off_type)(-1)` (위치 지정 작업이 실패 하는 경우) 함수는 `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`를 호출 합니다. 두 함수는 모두 __* this__를 반환 합니다.
 
 [`fail`](../standard-library/basic-ios-class.md#fail) true 이면 멤버 함수는 아무 작업도 수행 하지 않습니다.
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 중첩된 클래스는 선언에서 형식이 지정된 입력 함수 및 형식이 지정되지 않은 입력 함수를 구성하는 개체를 설명합니다.
 
@@ -883,11 +883,11 @@ class sentry {
 
 - `_Istr.tie`가 null 포인터가 아닌 경우 `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) 를 호출 합니다.
 
-- `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`](../standard-library/ios-functions.md#skipws) 이 0이 아니면 [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`를 효과적으로 호출 합니다.
+- `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws) 이 0이 아니면 [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`를 효과적으로 호출 합니다.
 
 이러한 준비를 수행한 후 `_Istr.good` false 이면 생성자 `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`를 호출 합니다. 어떤 경우 든 생성자는 `_Istr.good`에서 반환 된 값을 `status`에 저장 합니다. `operator bool`에 대 한 이후 호출은이 저장 된 값을 제공 합니다.
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 두 `basic_istream` 개체의 내용을 교환합니다.
 
@@ -904,7 +904,7 @@ void swap(basic_istream& right);
 
 멤버 함수는 [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`를 호출 합니다. 또한 추출 개수를 *오른쪽*의 추출 개수로 교환 합니다.
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 스트림의 연결 된 입력 장치를 스트림 버퍼와 동기화 합니다.
 
@@ -916,7 +916,7 @@ int sync();
 
 [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) null 포인터인 경우 함수는-1을 반환 합니다. 그렇지 않으면 `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync)를 호출 합니다. 해당 호출에서-1을 반환 하는 경우 함수는`(badbit)` [`setstate`](../standard-library/basic-ios-class.md#setstate) 를 호출 하 고-1을 반환 합니다. 아닌 경우 함수는 0을 반환합니다.
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 스트림에서 현재 읽기 위치를 보고합니다.
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 가장 최근에 읽은 문자를 다시 스트림에 넣습니다.
 

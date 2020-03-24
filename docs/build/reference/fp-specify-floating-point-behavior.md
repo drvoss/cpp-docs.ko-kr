@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 402b59c4aee34a413a08235aab2327ca64e7db39
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c90a35bbaf967ecf50977987865d6a768b019fe3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439688"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150791"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp(부동 소수점 동작 지정)
 
@@ -270,4 +270,3 @@ float casting(float a, float b)
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>
- 

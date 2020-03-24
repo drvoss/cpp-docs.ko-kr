@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8932459a9add2334c04053242f6eccfca1830536
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150981"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 
@@ -970,7 +970,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: GetScrollPos](#getscrollpos)|스크롤 상자의 현재 위치를 검색합니다.|
 |[CWnd:: GetScrollRange](#getscrollrange)|지정된 스크롤 막대에 대해 현재 최소 및 최대 스크롤 막대 위치를 복사합니다.|
 |[CWnd:: GetStyle](#getstyle)|현재 창 스타일을 반환합니다.|
-|[CWnd:: GetSystemMenu](#getsystemmenu)|애플리케이션에서 복사 및 수정을 위해 컨트롤 메뉴에 액세스할 수 있도록 합니다.|
+|[CWnd:: GetSystemMenu](#getsystemmenu)|응용 프로그램에서 복사 및 수정을 위해 컨트롤 메뉴에 액세스할 수 있도록 합니다.|
 |[CWnd:: GetTitleBarInfo](#gettitlebarinfo)|지정된 제목 표시줄에 대한 정보를 검색합니다.|
 |[CWnd:: GetTopLevelFrame](#gettoplevelframe)|창의 최상위 프레임 창을 검색합니다.|
 |[CWnd:: GetTopLevelOwner](#gettoplevelowner)|최상위 창을 검색합니다.|
@@ -991,7 +991,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: GetWindowTextLength](#getwindowtextlength)|창의 텍스트 또는 캡션 제목의 길이를 반환합니다.|
 |[CWnd:: HideCaret](#hidecaret)|디스플레이 화면에서 제거하여 캐럿을 숨깁니다.|
 |[CWnd:: HiliteMenuItem](#hilitemenuitem)|최상위(메뉴 모음) 메뉴 항목에서 강조 표시하거나 강조 표시를 제거합니다.|
-|[CWnd:: HtmlHelp](#htmlhelp)|HTMLHelp 애플리케이션을 시작하기 위해 호출됩니다.|
+|[CWnd:: HtmlHelp](#htmlhelp)|HTMLHelp 응용 프로그램을 시작하기 위해 호출됩니다.|
 |[CWnd:: 무효화할](#invalidate)|전체 클라이언트 영역을 무효화합니다.|
 |[CWnd:: InvalidateRect](#invalidaterect)|현재 업데이트 영역에 지정된 사각형을 추가하여 해당 사각형 내에서 클라이언트 영역을 무효화합니다.|
 |[CWnd:: InvalidateRgn](#invalidatergn)|현재 업데이트 영역에 지정된 영역을 추가하여 해당 영역 내에서 클라이언트 영역을 무효화합니다.|
@@ -1009,21 +1009,21 @@ class CWnd : public CCmdTarget
 |[CWnd:: KillTimer](#killtimer)|시스템 타이머를 종료합니다.|
 |[CWnd:: LockWindowUpdate](#lockwindowupdate)|지정된 창에서 그리기를 사용하지 않거나 다시 사용하도록 설정합니다.|
 |[CWnd:: MapWindowPoints](#mapwindowpoints)|`CWnd`의 좌표 공간에서 다른 창의 좌표 공간으로 점 집합(맵)을 변환합니다.|
-|[CWnd:: MessageBox](#messagebox)|애플리케이션에서 제공하는 메시지 및 캡션을 포함하는 창을 만들고 표시합니다.|
+|[CWnd:: MessageBox](#messagebox)|응용 프로그램에서 제공하는 메시지 및 캡션을 포함하는 창을 만들고 표시합니다.|
 |[CWnd:: ModifyStyle](#modifystyle)|현재 창 스타일을 수정합니다.|
 |[CWnd:: ModifyStyleEx](#modifystyleex)|창의 확장된 스타일을 수정합니다.|
 |[CWnd:: MoveWindow](#movewindow)|`CWnd`의 위치 및 크기를 변경합니다.|
 |[CWnd:: NotifyWinEvent](#notifywinevent)|미리 정의된 이벤트가 발생한 시스템에 신호를 보냅니다.|
 |[CWnd:: OnAmbientProperty](#onambientproperty)|앰비언트 속성 값을 구현합니다.|
-|[CWnd:: OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Windows 7 탭 미리 보기 또는 애플리케이션 피킹(Peeking)용 클라이언트에 표시할 비트맵을 가져와야 하는 경우 프레임워크에서 호출됩니다.|
-|[CWnd:: OnHelp](#onhelp)|현재 컨텍스트를 사용하여 애플리케이션 내에서 F1 도움말을 처리합니다.|
+|[CWnd:: OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Windows 7 탭 미리 보기 또는 응용 프로그램 피킹(Peeking)용 클라이언트에 표시할 비트맵을 가져와야 하는 경우 프레임워크에서 호출됩니다.|
+|[CWnd:: OnHelp](#onhelp)|현재 컨텍스트를 사용하여 응용 프로그램 내에서 F1 도움말을 처리합니다.|
 |[CWnd:: OnHelpFinder](#onhelpfinder)|ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리 합니다.|
 |[CWnd:: OnHelpIndex](#onhelpindex)|ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.|
 |[CWnd:: OnHelpUsing](#onhelpusing)|ID_HELP_USING 명령을 처리 합니다.|
 |[CWnd:: OnToolHitTest](#ontoolhittest)|점이 지정된 도구의 경계 사각형에 있는지 여부를 확인하고 도구에 대한 정보를 검색합니다.|
 |[CWnd:: OpenClipboard](#openclipboard)|클립보드를 엽니다. 다른 응용 프로그램은 Windows [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 함수를 호출할 때까지 클립보드를 수정할 수 없습니다.|
 |[CWnd::P aintWindowlessControls](#paintwindowlesscontrols)|컨트롤 컨테이너에서 창 없는 컨트롤을 그립니다.|
-|[CWnd::P ostMessage](#postmessage)|애플리케이션 큐에 메시지를 배치한 다음 창에서 메시지를 처리할 때까지 기다리지 않고 반환합니다.|
+|[CWnd::P ostMessage](#postmessage)|응용 프로그램 큐에 메시지를 배치한 다음 창에서 메시지를 처리할 때까지 기다리지 않고 반환합니다.|
 |[CWnd::P reCreateWindow](#precreatewindow)|이 `CWnd` 개체에 연결된 Windows 창을 만들기 전에 호출됩니다.|
 |[CWnd::P reSubclassWindow](#presubclasswindow)|[SubclassWindow](#subclasswindow) 를 호출 하기 전에 다른 필요한 서브클래싱을 수행 하도록 허용 합니다.|
 |[CWnd::P reTranslateMessage](#pretranslatemessage)|`CWinApp` 및 `TranslateMessage` Windows 함수로 디스패치되기 전에 `DispatchMessage`에서 창 메시지를 필터링하는 데 사용됩니다.|
@@ -1032,7 +1032,7 @@ class CWnd : public CCmdTarget
 |[CWnd::P rintWindow](#printwindow)|지정된 디바이스 컨텍스트(일반적으로 프린터 DC)에 시각적 창을 복사합니다.|
 |[CWnd:: RedrawWindow](#redrawwindow)|클라이언트 영역에서 지정된 사각형 또는 영역을 업데이트합니다.|
 |[CWnd:: RegisterTouchWindow](#registertouchwindow)|창 Windows Touch 지원을 등록/등록 취소합니다.|
-|[CWnd:: ReleaseDC](#releasedc)|클라이언트 및 창 디바이스 컨텍스트를 해제하여 다른 애플리케이션에서 사용하도록 확보합니다.|
+|[CWnd:: ReleaseDC](#releasedc)|클라이언트 및 창 디바이스 컨텍스트를 해제하여 다른 응용 프로그램에서 사용하도록 확보합니다.|
 |[CWnd:: RepositionBars](#repositionbars)|클라이언트 영역에서 컨트롤 막대의 위치를 변경합니다.|
 |[CWnd:: RunModalLoop](#runmodalloop)|모달 상태에 있는 창에 대한 메시지를 검색, 변환 또는 디스패치합니다.|
 |[CWnd:: ScreenToClient](#screentoclient)|디스플레이에 있는 지정된 점 또는 사각형의 화면 좌표를 클라이언트 좌표로 변환합니다.|
@@ -1084,22 +1084,22 @@ class CWnd : public CCmdTarget
 |[CWnd:: ValidateRect](#validaterect)|현재 업데이트 영역에서 사각형을 제거하여 지정된 사각형 내에서 클라이언트 영역의 유효성을 검색합니다.|
 |[CWnd:: ValidateRgn](#validatergn)|현재 업데이트 영역에서 영역을 제거하여 지정된 영역 내에서 클라이언트 영역의 유효성을 검사합니다.|
 |[CWnd:: WindowFromPoint](#windowfrompoint)|지정된 점을 포함하는 창을 식별합니다.|
-|[CWnd:: WinHelp](#winhelp)|WinHelp 애플리케이션을 시작하기 위해 호출됩니다.|
+|[CWnd:: WinHelp](#winhelp)|WinHelp 응용 프로그램을 시작하기 위해 호출됩니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
 |속성|Description|
 |----------|-----------------|
-|[CWnd::D e)](#default)|기본 창 프로시저를 호출하여 애플리케이션에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
-|[CWnd::D efWindowProc](#defwindowproc)|기본 창 프로시저를 호출하여 애플리케이션에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
+|[CWnd::D e)](#default)|기본 창 프로시저를 호출하여 응용 프로그램에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
+|[CWnd::D efWindowProc](#defwindowproc)|기본 창 프로시저를 호출하여 응용 프로그램에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
 |[CWnd::D oDataExchange](#dodataexchange)|대화 상자 데이터 교환 및 유효성 검사용입니다. `UpdateData`에 의해 호출됩니다.|
 |[CWnd:: GetCurrentMessage](#getcurrentmessage)|이 창에서 현재 처리 중인 메시지에 대한 포인터를 반환합니다. `On`*메시지* 메시지 처리기 멤버 함수에 있는 경우에만 호출 해야 합니다.|
 |[CWnd:: InitDynamicLayout](#initdynamiclayout)|창에 대한 동적 레이아웃을 초기화하기 위해 프레임워크에서 호출됩니다.|
 |[CWnd:: LoadDynamicLayoutResource](#loaddynamiclayoutresource)|리소스 파일에서 동적 레이아웃 정보를 로드합니다.|
 |[CWnd:: OnActivate](#onactivate)|`CWnd`가 활성화되거나 비활성화되고 있을 때 호출됩니다.|
-|[CWnd:: Ono 앱](#onactivateapp)|애플리케이션이 활성화되거나 비활성화되려고 할 때 호출됩니다.|
-|[CWnd:: OnAppCommand](#onappcommand)|사용자가 애플리케이션 명령 이벤트를 생성할 때 호출됩니다.|
-|[CWnd:: OnAskCbFormatName](#onaskcbformatname)|클립보드 소유자가 클립보드 내용을 표시할 때 클립보드 뷰어 애플리케이션에서 호출됩니다.|
+|[CWnd:: Ono 앱](#onactivateapp)|응용 프로그램이 활성화되거나 비활성화되려고 할 때 호출됩니다.|
+|[CWnd:: OnAppCommand](#onappcommand)|사용자가 응용 프로그램 명령 이벤트를 생성할 때 호출됩니다.|
+|[CWnd:: OnAskCbFormatName](#onaskcbformatname)|클립보드 소유자가 클립보드 내용을 표시할 때 클립보드 뷰어 응용 프로그램에서 호출됩니다.|
 |[CWnd:: OnCancelMode](#oncancelmode)|`CWnd`에서 마우스 캡처와 같은 내부 모드를 취소할 수 있도록 허용하기 위해 호출됩니다.|
 |[CWnd:: OnCaptureChanged](#oncapturechanged)|마우스 캡처가 손실되고 있는 창에 메시지를 보냅니다.|
 |[CWnd:: OnChangeCbChain](#onchangecbchain)|지정된 창이 체인에서 제거됨을 알립니다.|
@@ -1116,21 +1116,21 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCompareItem](#oncompareitem)|정렬된 소유자 그리기 자식 콤보 상자 또는 목록 상자에서 새 항목의 상대 위치를 확인하기 위해 호출됩니다.|
 |[CWnd:: OnCompositionChanged](#oncompositionchanged)|DWM(바탕 화면 창 관리자) 컴퍼지션을 사용하거나 사용하지 않도록 설정할 때 모든 최상위 창에 대해 호출됩니다.|
 |[CWnd:: OnContextMenu](#oncontextmenu)|사용자가 창에서 오른쪽 마우스 단추를 클릭할 때 호출됩니다.|
-|[CWnd:: OnCopyData](#oncopydata)|애플리케이션 간에 데이터를 복사합니다.|
+|[CWnd:: OnCopyData](#oncopydata)|응용 프로그램 간에 데이터를 복사합니다.|
 |[CWnd:: OnCreate](#oncreate)|창 만들기의 일부로 호출됩니다.|
 |[CWnd:: OnCtlColor](#onctlcolor)|컨트롤을 그리려고 할 때 `CWnd`가 컨트롤의 부모인 경우 호출됩니다.|
 |[CWnd:: OnDeadChar](#ondeadchar)|키 입력이 비시스템 데드 문자(예: 악센트 문자)로 변환될 때 호출됩니다.|
 |[CWnd::OnDeleteItem](#ondeleteitem)|소유자 그리기 자식 목록 상자 또는 콤보 상자가 제거되거나 컨트롤에서 항목이 제거될 때 호출됩니다.|
 |[CWnd:: OnDestroy](#ondestroy)|`CWnd`가 제거되고 있을 때 호출됩니다.|
 |[CWnd:: OnDestroyClipboard](#ondestroyclipboard)|Windows [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) 함수를 호출 하 여 클립보드를 비울 때 호출 됩니다.|
-|[CWnd:: OnDeviceChange](#ondevicechange)|디바이스 또는 컴퓨터의 하드웨어 구성 변경을 애플리케이션 또는 디바이스 드라이버에 알립니다.|
-|[CWnd:: OnDevModeChange](#ondevmodechange)|사용자가 디바이스 모드 설정을 변경할 때 모든 최상위 창에 대해 호출됩니다.|
+|[CWnd:: OnDeviceChange](#ondevicechange)|장치 또는 컴퓨터의 하드웨어 구성 변경을 응용 프로그램 또는 장치 드라이버에 알립니다.|
+|[CWnd:: OnDevModeChange](#ondevmodechange)|사용자가 장치 모드 설정을 변경할 때 모든 최상위 창에 대해 호출됩니다.|
 |[CWnd:: OnDrawClipboard](#ondrawclipboard)|클립보드의 내용이 변경될 때 호출됩니다.|
 |[CWnd::OnDrawItem](#ondrawitem)|소유자 그리기 자식 단추 컨트롤, 콤보 상자 컨트롤, 목록 상자 컨트롤 또는 메뉴의 시각적 측면을 그려야 할 때 호출됩니다.|
 |[CWnd:: OnDropFiles](#ondropfiles)|삭제된 파일의 수신자로 자신을 등록한 창에 대해 사용자가 왼쪽 마우스 단추를 놓을 때 호출됩니다.|
 |[CWnd:: OnEnable](#onenable)|`CWnd`가 사용하거나 사용하지 않도록 설정될 때 호출됩니다.|
 |[CWnd:: OnEndSession](#onendsession)|세션이 종료되고 있을 때 호출됩니다.|
-|[CWnd:: OnEnterIdle](#onenteridle)|모달 대화 상자 또는 메뉴가 유휴 상태로 전환하고 있음을 애플리케이션의 주 창 프로시저에 알리기 위해 호출됩니다.|
+|[CWnd:: OnEnterIdle](#onenteridle)|모달 대화 상자 또는 메뉴가 유휴 상태로 전환하고 있음을 응용 프로그램의 주 창 프로시저에 알리기 위해 호출됩니다.|
 |[CWnd:: OnEnterMenuLoop](#onentermenuloop)|메뉴 모달 루프가 시작된 경우 호출됩니다.|
 |[CWnd:: OnEnterSizeMove](#onentersizemove)|영향을 받는 창이 모달 루프의 이동 또는 크기 조정을 시작한 후 호출됩니다.|
 |[CWnd:: OnEraseBkgnd](#onerasebkgnd)|창 배경을 지워야 하는 경우 호출됩니다.|
@@ -1146,8 +1146,8 @@ class CWnd : public CCmdTarget
 |[CWnd:: OnIconEraseBkgnd](#oniconerasebkgnd)|`CWnd`가 최소화(아이콘)되고 아이콘을 그리기 전에 아이콘의 배경을 채워야 하는 경우 호출됩니다.|
 |[CWnd:: OnInitMenu](#oninitmenu)|메뉴가 활성화되려고 할 때 호출됩니다.|
 |[CWnd:: OnInitMenuPopup](#oninitmenupopup)|팝업 메뉴가 활성화되려고 할 때 호출됩니다.|
-|[CWnd:: OnInputDeviceChange](#oninputdevicechange)|시스템에서 I/O 디바이스를 추가하거나 제거할 때 호출됩니다.|
-|[CWnd:: OnInputLangChange](#oninputlangchange)|애플리케이션의 입력 언어가 변경된 후 호출됩니다.|
+|[CWnd:: OnInputDeviceChange](#oninputdevicechange)|시스템에서 I/O 장치를 추가하거나 제거할 때 호출됩니다.|
+|[CWnd:: OnInputLangChange](#oninputlangchange)|응용 프로그램의 입력 언어가 변경된 후 호출됩니다.|
 |[CWnd:: OnInputLangChangeRequest](#oninputlangchangerequest)|사용자가 새 입력 언어를 선택할 때 호출됩니다.|
 |[CWnd:: OnKeyDown](#onkeydown)|시스템 키 이외의 키를 누를 때 호출됩니다.|
 |[CWnd:: OnKeyUp](#onkeyup)|시스템 키 이외의 키를 놓을 때 호출됩니다.|
@@ -1201,7 +1201,7 @@ class CWnd : public CCmdTarget
 |[CWnd:: OnPaint](#onpaint)|창의 일부를 다시 그리기 위해 호출됩니다.|
 |[CWnd:: OnPaintClipboard](#onpaintclipboard)|클립보드 뷰어의 클라이언트 영역을 다시 그려야 할 때 호출됩니다.|
 |[CWnd:: OnPaletteChanged](#onpalettechanged)|색상표를 사용하는 창에서 논리 팔레트를 나타내고 해당 클라이언트 영역을 업데이트하도록 허용하기 위해 호출됩니다.|
-|[CWnd:: OnPaletteIsChanging](#onpaletteischanging)|애플리케이션에서 논리 팔레트를 나타내려고 하는 경우 다른 애플리케이션에 알립니다.|
+|[CWnd:: OnPaletteIsChanging](#onpaletteischanging)|응용 프로그램에서 논리 팔레트를 나타내려고 하는 경우 다른 응용 프로그램에 알립니다.|
 |[CWnd:: OnParentNotify](#onparentnotify)|자식 창을 만들거나 제거할 때 또는 커서가 자식 창 위에 있는 동안 사용자가 마우스 단추를 클릭할 때 호출됩니다.|
 |[CWnd:: OnPowerBroadcast](#onpowerbroadcast)|전원 관리 이벤트가 발생할 때 호출됩니다.|
 |[CWnd:: OnQueryDragIcon](#onquerydragicon)|사용자가 최소화(아이콘)된 `CWnd`를 끌려고 할 때 호출됩니다.|
@@ -1213,9 +1213,9 @@ class CWnd : public CCmdTarget
 |[CWnd:: OnRButtonDblClk](#onrbuttondblclk)|사용자가 오른쪽 마우스 단추를 두 번 클릭할 때 호출됩니다.|
 |[CWnd:: OnRButtonDown](#onrbuttondown)|사용자가 오른쪽 마우스 단추를 누를 때 호출됩니다.|
 |[CWnd:: OnRButtonUp](#onrbuttonup)|사용자가 오른쪽 마우스 단추를 놓을 때 호출됩니다.|
-|[CWnd:: OnRenderAllFormats](#onrenderallformats)|소유자 애플리케이션이 제거되고 있고 모든 형식을 렌더링해야 하는 경우 호출됩니다.|
+|[CWnd:: OnRenderAllFormats](#onrenderallformats)|소유자 응용 프로그램이 제거되고 있고 모든 형식을 렌더링해야 하는 경우 호출됩니다.|
 |[CWnd:: OnRenderFormat](#onrenderformat)|렌더링이 지연된 특정 형식을 렌더링해야 하는 경우 클립보드 소유자에 대해 호출됩니다.|
-|[CWnd:: OnSessionChange](#onsessionchange)|세션 상태의 변경을 애플리케이션에 알리기 위해 호출됩니다.|
+|[CWnd:: OnSessionChange](#onsessionchange)|세션 상태의 변경을 응용 프로그램에 알리기 위해 호출됩니다.|
 |[CWnd:: OnSetCursor](#onsetcursor)|마우스 입력이 캡처되지 않고 마우스로 창 내에서 커서를 이동하는 경우 호출됩니다.|
 |[CWnd:: OnSetFocus](#onsetfocus)|`CWnd`가 입력 포커스를 얻은 후 호출됩니다.|
 |[CWnd:: OnSettingChange](#onsettingchange)|Win32 `SystemParametersInfo` 함수가 시스템 차원 설정을 변경할 때 호출됩니다.|
@@ -1299,7 +1299,7 @@ Microsoft Foundation Class 라이브러리 내에서 추가 클래스를 `CWnd`�
 
 **헤더:** afxwin.h
 
-##  <a name="accdodefaultaction"></a>CWnd:: accDoDefaultAction
+##  <a name="cwndaccdodefaultaction"></a><a name="accdodefaultaction"></a>CWnd:: accDoDefaultAction
 
 개체의 기본 동작을 수행하기 위해 프레임워크에서 호출됩니다.
 
@@ -1322,7 +1322,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 `CWnd`파생 클래스에서이 함수를 재정의 하 여 개체의 기본 작업을 수행 합니다. 자세한 내용은 Windows SDK에서 [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 를 참조 하세요.
 
-##  <a name="acchittest"></a>CWnd:: accHitTest
+##  <a name="cwndacchittest"></a><a name="acchittest"></a>CWnd:: accHitTest
 
 화면의 지정된 지점에서 자식 요소나 자식 개체를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -1356,7 +1356,7 @@ virtual HRESULT accHitTest(
 
 자세한 내용은 Windows SDK에서 [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) 를 참조 하세요.
 
-##  <a name="acclocation"></a>CWnd:: accLocation
+##  <a name="cwndacclocation"></a><a name="acclocation"></a>CWnd:: accLocation
 
 지정된 개체의 현재 화면 위치를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -1396,7 +1396,7 @@ virtual HRESULT accLocation(
 
 자세한 내용은 Windows SDK `IAccessible::accLocation`을 참조 하세요.
 
-##  <a name="accnavigate"></a>CWnd:: accNavigate
+##  <a name="cwndaccnavigate"></a><a name="accnavigate"></a>CWnd:: accNavigate
 
 컨테이너 내에서 다른 사용자 인터페이스 요소로 트래버스하고 가능할 경우 개체를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -1430,7 +1430,7 @@ virtual HRESULT accNavigate(
 
 자세한 내용은 Windows SDK에서 [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) 를 참조 하세요.
 
-##  <a name="accselect"></a>CWnd:: accSelect
+##  <a name="cwndaccselect"></a><a name="accselect"></a>CWnd:: accSelect
 
 선택 영역을 수정하거나 지정된 개체의 키보드 포커스를 이동하기 위해 프레임워크에서 호출됩니다.
 
@@ -1460,7 +1460,7 @@ virtual HRESULT accSelect(
 
 자세한 내용은 Windows SDK에서 [IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) 를 참조 하세요.
 
-##  <a name="animatewindow"></a>CWnd:: AnimateWindow
+##  <a name="cwndanimatewindow"></a><a name="animatewindow"></a>CWnd:: AnimateWindow
 
 창을 표시 하거나 숨길 때 특수 한 효과를 생성 합니다.
 
@@ -1486,7 +1486,7 @@ BOOL AnimateWindow(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)의 기능을 에뮬레이트합니다.
 
-##  <a name="arrangeiconicwindows"></a>CWnd:: ArrangeIconicWindows
+##  <a name="cwndarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWnd:: ArrangeIconicWindows
 
 모든 최소화된(아이콘) 자식 창을 정렬합니다.
 
@@ -1508,7 +1508,7 @@ MDI 클라이언트 창에서 아이콘 MDI 자식 창을 정렬 하려면 [CMDI
 
 [!code-cpp[NVC_MFCWindowing#66](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]
 
-##  <a name="attach"></a>CWnd:: Attach
+##  <a name="cwndattach"></a><a name="attach"></a>CWnd:: Attach
 
 Windows 창을 `CWnd` 개체에 연결 합니다.
 
@@ -1535,7 +1535,7 @@ Windows 창에 대 한 핸들을 지정 합니다.
 
 [!code-cpp[NVC_MFCWindowing#69](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]
 
-##  <a name="beginmodalstate"></a>CWnd:: BeginModalState
+##  <a name="cwndbeginmodalstate"></a><a name="beginmodalstate"></a>CWnd:: BeginModalState
 
 프레임 창을 모달로 만들기 위해 이 멤버 함수를 호출합니다.
 
@@ -1543,7 +1543,7 @@ Windows 창에 대 한 핸들을 지정 합니다.
 virtual void BeginModalState();
 ```
 
-##  <a name="beginpaint"></a>CWnd:: BeginPaint
+##  <a name="cwndbeginpaint"></a><a name="beginpaint"></a>CWnd:: BeginPaint
 
 그리기에 대 한 정보를 사용 하 여 `PAINTSTRUCT` 데이터 구조를 칠하고 채울 `CWnd` 준비 합니다.
 
@@ -1572,7 +1572,7 @@ Paint 구조에는 업데이트 지역을 완전히 둘러싸는 가장 작은 �
 
 [!code-cpp[NVC_MFCWindowing#70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]
 
-##  <a name="binddefaultproperty"></a>CWnd:: BindDefaultProperty
+##  <a name="cwndbinddefaultproperty"></a><a name="binddefaultproperty"></a>CWnd:: BindDefaultProperty
 
 형식 라이브러리에 표시 된 대로 호출 하는 개체의 기본 단순 바인딩된 속성 (예: 편집 컨트롤)을 데이터 원본 컨트롤의 DataSource, UserName, Password 및 SQL 속성으로 정의 된 기본 커서에 바인딩합니다.
 
@@ -1608,7 +1608,7 @@ void BindDefaultProperty(
 
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
 
-##  <a name="bindproperty"></a>CWnd:: BindProperty
+##  <a name="cwndbindproperty"></a><a name="bindproperty"></a>CWnd:: BindProperty
 
 데이터 바인딩된 컨트롤 (예: grid 컨트롤)의 커서 바인딩된 속성을 데이터 소스 컨트롤에 바인딩하고 MFC 바인딩 관리자와 해당 관계를 등록 합니다.
 
@@ -1636,7 +1636,7 @@ void BindProperty(
 
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
 
-##  <a name="bringwindowtotop"></a>CWnd:: BringWindowToTop
+##  <a name="cwndbringwindowtotop"></a><a name="bringwindowtotop"></a>CWnd:: BringWindowToTop
 
 `CWnd`를 겹치는 창 스택의 맨 위로 이동합니다.
 
@@ -1654,7 +1654,7 @@ void BringWindowToTop();
 
 [!code-cpp[NVC_MFCWindowing#71](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]
 
-##  <a name="calcwindowrect"></a>CWnd:: CalcWindowRect
+##  <a name="cwndcalcwindowrect"></a><a name="calcwindowrect"></a>CWnd:: CalcWindowRect
 
 지정 된 클라이언트 사각형을 포함할 수 있는 창 사각형을 계산 합니다.
 
@@ -1682,7 +1682,7 @@ virtual void CalcWindowRect(
 
 [!code-cpp[NVC_MFCWindowing#72](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]
 
-##  <a name="canceltooltips"></a>CWnd:: CancelToolTips
+##  <a name="cwndcanceltooltips"></a><a name="canceltooltips"></a>CWnd:: CancelToolTips
 
 도구 설명이 현재 표시 되어 있는 경우 화면에서 도구 설명을 제거 하려면이 멤버 함수를 호출 합니다.
 
@@ -1704,7 +1704,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 
 [!code-cpp[NVC_MFCWindowing#73](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]
 
-##  <a name="centerwindow"></a>CWnd:: 가운데 창
+##  <a name="cwndcenterwindow"></a><a name="centerwindow"></a>CWnd:: 가운데 창
 
 부모를 기준으로 창을 가운데 맞춤합니다.
 
@@ -1725,7 +1725,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 
 [!code-cpp[NVC_MFCWindowing#74](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]
 
-##  <a name="changeclipboardchain"></a>CWnd:: ChangeClipboardChain
+##  <a name="cwndchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWnd:: ChangeClipboardChain
 
 클립보드 뷰어 체인에서 `CWnd`를 제거 하 고 *hWndNext* 에서 지정 된 창을 체인에 있는 `CWnd` 상위 항목의 하위 항목으로 만듭니다.
 
@@ -1742,7 +1742,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
-##  <a name="checkdlgbutton"></a>CWnd:: CheckDlgButton
+##  <a name="cwndcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWnd:: CheckDlgButton
 
 (옆에 확인 표시를 배치)를 선택 하거나 단추를 지우거 나 (확인 표시 제거), 3 단계 단추의 상태를 변경 합니다.
 
@@ -1768,7 +1768,7 @@ void CheckDlgButton(
 
 [!code-cpp[NVC_MFCWindowing#75](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]
 
-##  <a name="checkradiobutton"></a>CWnd:: CheckRadioButton
+##  <a name="cwndcheckradiobutton"></a><a name="checkradiobutton"></a>CWnd:: CheckRadioButton
 
 그룹의 지정 된 라디오 단추를 선택 (확인 표시에 추가) 하 고 그룹에 있는 다른 모든 라디오 단추를 선택 취소 합니다.
 
@@ -1798,7 +1798,7 @@ void CheckRadioButton(
 
 [!code-cpp[NVC_MFCWindowing#76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]
 
-##  <a name="childwindowfrompoint"></a>CWnd:: ChildWindowFromPoint
+##  <a name="cwndchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWnd:: ChildWindowFromPoint
 
 지정 된 지점에 포함 된 `CWnd`에 속하는 자식 창의 수를 결정 합니다.
 
@@ -1839,7 +1839,7 @@ CWnd* ChildWindowFromPoint(
 
 [!code-cpp[NVC_MFCWindowing#77](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]
 
-##  <a name="clienttoscreen"></a>CWnd:: ClientToScreen
+##  <a name="cwndclienttoscreen"></a><a name="clienttoscreen"></a>CWnd:: ClientToScreen
 
 디스플레이에서 지정된 점이나 사각형의 클라이언트 좌표를 화면 좌표로 변환합니다.
 
@@ -1865,7 +1865,7 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 [!code-cpp[NVC_MFCWindowing#78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]
 
-##  <a name="closewindow"></a>CWnd:: CloseWindow
+##  <a name="cwndclosewindow"></a><a name="closewindow"></a>CWnd:: CloseWindow
 
 창을 최소화합니다.
 
@@ -1877,7 +1877,7 @@ void CloseWindow();
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [Closewindow](/windows/win32/api/winuser/nf-winuser-closewindow)의 기능을 에뮬레이트합니다.
 
-##  <a name="continuemodal"></a>CWnd:: ContinueModal
+##  <a name="cwndcontinuemodal"></a><a name="continuemodal"></a>CWnd:: ContinueModal
 
 이 멤버 함수는 [Runmodalloop](#runmodalloop) 에서 호출 되어 모달 상태를 종료 해야 하는 시기를 결정 합니다.
 
@@ -1893,7 +1893,7 @@ virtual BOOL ContinueModal();
 
 기본적으로 `EndModalLoop`가 호출 될 때까지 0이 아닌 값을 반환 합니다.
 
-##  <a name="create"></a>CWnd:: Create
+##  <a name="cwndcreate"></a><a name="create"></a>CWnd:: Create
 
 지정 된 자식 창을 만들어 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 연결 합니다.
 
@@ -1950,7 +1950,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCWindowing#79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]
 
-##  <a name="createaccessibleproxy"></a>CWnd:: CreateAccessibleProxy
+##  <a name="cwndcreateaccessibleproxy"></a><a name="createaccessibleproxy"></a>CWnd:: CreateAccessibleProxy
 
 지정된 개체에 대해 Active Accessibility 프록시를 만듭니다.
 
@@ -1980,7 +1980,7 @@ Active Accessibility 프록시가 액세스 하는 개체를 식별 합니다. �
 
 지정된 개체에 대해 Active Accessibility 프록시를 만듭니다.
 
-##  <a name="createcaret"></a>CWnd:: CreateCaret
+##  <a name="cwndcreatecaret"></a><a name="createcaret"></a>CWnd:: CreateCaret
 
 시스템 캐럿에 대 한 새 셰이프를 만들고 캐럿의 소유권을 클레임 합니다.
 
@@ -2005,7 +2005,7 @@ void CreateCaret(CBitmap* pBitmap);
 
 [!code-cpp[NVC_MFCWindowing#80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]
 
-##  <a name="createcontrol"></a>CWnd:: CreateControl
+##  <a name="cwndcreatecontrol"></a><a name="createcontrol"></a>CWnd:: CreateControl
 
 이 멤버 함수를 사용 하 여 `CWnd` 개체에 의해 MFC 프로그램에 표시 되는 ActiveX 컨트롤을 만듭니다.
 
@@ -2107,7 +2107,7 @@ Windows 스타일. 사용 가능한 스타일은 설명 아래에 나열 됩니�
 
 [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]
 
-##  <a name="createex"></a>CWnd:: CreateEx
+##  <a name="cwndcreateex"></a><a name="createex"></a>CWnd:: CreateEx
 
 지정 된 창을 만들어 `CWnd` 개체에 연결 합니다.
 
@@ -2203,7 +2203,7 @@ virtual BOOL CreateEx(
 
 [!code-cpp[NVC_MFCWindowing#82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]
 
-##  <a name="creategraycaret"></a>CWnd:: CreateGrayCaret
+##  <a name="cwndcreategraycaret"></a><a name="creategraycaret"></a>CWnd:: CreateGrayCaret
 
 시스템 캐럿에 대해 회색 사각형을 만들고 캐럿의 소유권을 클레임 합니다.
 
@@ -2237,7 +2237,7 @@ void CreateGrayCaret(
 
 [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]
 
-##  <a name="createsolidcaret"></a>CWnd:: CreateSolidCaret
+##  <a name="cwndcreatesolidcaret"></a><a name="createsolidcaret"></a>CWnd:: CreateSolidCaret
 
 시스템 캐럿에 대 한 solid 사각형을 만들고 캐럿의 소유권을 클레임 합니다.
 
@@ -2271,7 +2271,7 @@ void CreateSolidCaret(
 
 [!code-cpp[NVC_MFCWindowing#84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]
 
-##  <a name="cwnd"></a>CWnd:: CWnd
+##  <a name="cwndcwnd"></a><a name="cwnd"></a>CWnd:: CWnd
 
 `CWnd` 개체를 생성합니다.
 
@@ -2283,7 +2283,7 @@ CWnd();
 
 [Createex](#createex) 또는 [Create](#create) 멤버 함수를 호출할 때까지 Windows 창이 생성 되 고 연결 되지 않습니다.
 
-##  <a name="default"></a>CWnd::D e)
+##  <a name="cwnddefault"></a><a name="default"></a>CWnd::D e)
 
 기본 창 프로시저를 호출 합니다.
 
@@ -2303,7 +2303,7 @@ LRESULT Default();
 
 [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]
 
-##  <a name="defwindowproc"></a>CWnd::D efWindowProc
+##  <a name="cwnddefwindowproc"></a><a name="defwindowproc"></a>CWnd::D efWindowProc
 
 응용 프로그램에서 처리 하지 않는 창 메시지에 대 한 기본 처리를 제공 하는 기본 창 프로시저를 호출 합니다.
 
@@ -2333,7 +2333,7 @@ virtual LRESULT DefWindowProc(
 
 이 멤버 함수는 모든 메시지가 처리 되도록 합니다. 창 프로시저에서 받은 것과 동일한 매개 변수를 사용 하 여 호출 해야 합니다.
 
-##  <a name="deletetempmap"></a>CWnd::D eleteTempMap
+##  <a name="cwnddeletetempmap"></a><a name="deletetempmap"></a>CWnd::D eleteTempMap
 
 `CWinApp` 개체의 유휴 시간 처리기에 의해 자동으로 호출 됩니다.
 
@@ -2349,7 +2349,7 @@ static void PASCAL DeleteTempMap();
 
 [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]
 
-##  <a name="destroywindow"></a>CWnd::D estroyWindow
+##  <a name="cwnddestroywindow"></a><a name="destroywindow"></a>CWnd::D estroyWindow
 
 `CWnd` 개체에 연결 된 Windows 창을 소멸 시킵니다.
 
@@ -2379,7 +2379,7 @@ virtual BOOL DestroyWindow();
 
 [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]
 
-##  <a name="detach"></a>CWnd::D etach
+##  <a name="cwnddetach"></a><a name="detach"></a>CWnd::D etach
 
 `CWnd` 개체에서 Windows 핸들을 분리하고 핸들을 반환합니다.
 
@@ -2395,7 +2395,7 @@ Windows 개체에 대 한 HWND입니다.
 
   [CWnd:: Attach](#attach)의 예제를 참조 하세요.
 
-##  <a name="dlgdirlist"></a>CWnd::D lgDirList
+##  <a name="cwnddlgdirlist"></a><a name="dlgdirlist"></a>CWnd::D lgDirList
 
 파일 또는 디렉터리 목록으로 목록 상자를 채웁니다.
 
@@ -2463,7 +2463,7 @@ int DlgDirList(
 
 [!code-cpp[NVC_MFCWindowing#88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]
 
-##  <a name="dlgdirlistcombobox"></a>CWnd::D lgDirListComboBox
+##  <a name="cwnddlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWnd::D lgDirListComboBox
 
 파일 또는 디렉터리 목록으로 콤보 상자의 목록 상자를 채웁니다.
 
@@ -2531,7 +2531,7 @@ int DlgDirListComboBox(
 
 [!code-cpp[NVC_MFCWindowing#89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]
 
-##  <a name="dlgdirselect"></a>CWnd::D lgDirSelect
+##  <a name="cwnddlgdirselect"></a><a name="dlgdirselect"></a>CWnd::D lgDirSelect
 
 목록 상자에서 현재 선택 영역을 검색합니다.
 
@@ -2563,7 +2563,7 @@ BOOL DlgDirSelect(
 
 목록 상자에서 두 개 이상의 파일 이름을 반환 하는 것은 허용 되지 않습니다. 목록 상자는 다중 선택 목록 상자가 아니어야 합니다.
 
-##  <a name="dlgdirselectcombobox"></a>CWnd::D lgDirSelectComboBox
+##  <a name="cwnddlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWnd::D lgDirSelectComboBox
 
 콤보 상자의 목록 상자에서 현재 선택 영역을 검색합니다.
 
@@ -2595,7 +2595,7 @@ BOOL DlgDirSelectComboBox(
 
 콤보 상자에서 두 개 이상의 파일 이름을 반환 하는 것을 허용 하지 않습니다.
 
-##  <a name="dodataexchange"></a>CWnd::D oDataExchange
+##  <a name="cwnddodataexchange"></a><a name="dodataexchange"></a>CWnd::D oDataExchange
 
 대화 상자 데이터를 교환 하 고 유효성을 검사 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -2622,7 +2622,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 대화 상자 데이터 교환 및 유효성 검사에 대 한 자세한 내용은 [폼의 데이터 표시 및 조작](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) 및 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)를 참조 하세요. 변수 추가 마법사에서 생성 된 DDX_ 및 DDV_ 매크로에 대 한 설명은 [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md)을 참조 하십시오.
 
-##  <a name="dragacceptfiles"></a>CWnd::D ragAcceptFiles
+##  <a name="cwnddragacceptfiles"></a><a name="dragacceptfiles"></a>CWnd::D ragAcceptFiles
 
 응용 프로그램의 [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 함수에서 `CWnd` 포인터를 사용 하 여 창 내에서이 멤버 함수를 호출 하 여 창이 Windows 파일 관리자나 파일 탐색기에서 삭제 된 파일을 허용 함을 표시 합니다.
 
@@ -2641,7 +2641,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 끌어 온 파일 받기를 중단 하려면 *Baccept* 가 FALSE로 설정 된 멤버 함수를 호출 합니다.
 
-##  <a name="dragdetect"></a>CWnd::D ragDetect
+##  <a name="cwnddragdetect"></a><a name="dragdetect"></a>CWnd::D ragDetect
 
 마우스를 캡처하고 사용자가 왼쪽 단추를 놓거나, Esc 키를 누르거나, 지정된 점 주위의 끌기 사각형 밖으로 마우스를 이동할 때까지 이동을 추적합니다.
 
@@ -2664,7 +2664,7 @@ BOOL DragDetect(POINT pt) const;
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [Dragdetect](/windows/win32/api/winuser/nf-winuser-dragdetect)함수 기능을 에뮬레이트합니다.
 
-##  <a name="drawanimatedrects"></a>CWnd::D rawAnimatedRects
+##  <a name="cwnddrawanimatedrects"></a><a name="drawanimatedrects"></a>CWnd::D rawAnimatedRects
 
 와이어프레임 사각형을 그리고 애니메이션하여 아이콘 열기 또는 창의 최소화나 최대화를 나타냅니다.
 
@@ -2694,7 +2694,7 @@ BOOL DrawAnimatedRects(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [DrawAnimatedRects](/windows/win32/api/winuser/nf-winuser-drawanimatedrects)의 기능을 에뮬레이트합니다.
 
-##  <a name="drawcaption"></a>CWnd::D rawCaption
+##  <a name="cwnddrawcaption"></a><a name="drawcaption"></a>CWnd::D rawCaption
 
 창 캡션을 그립니다.
 
@@ -2708,7 +2708,7 @@ BOOL DrawCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-디바이스 컨텍스트에 대한 포인터입니다. 함수는이 장치 컨텍스트에 창 캡션을 그립니다.
+장치 컨텍스트에 대한 포인터입니다. 함수는이 장치 컨텍스트에 창 캡션을 그립니다.
 
 *lprc*<br/>
 창 캡션에 대 한 경계 사각형을 지정 하는 RECT 구조체에 대 한 포인터입니다.
@@ -2724,7 +2724,7 @@ BOOL DrawCaption(
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 함수 [Drawcaption](/windows/win32/api/winuser/nf-winuser-drawcaption)의 기능을 에뮬레이트합니다.
 
-##  <a name="drawmenubar"></a>CWnd::D rawMenuBar
+##  <a name="cwnddrawmenubar"></a><a name="drawmenubar"></a>CWnd::D rawMenuBar
 
 메뉴 모음을 다시 그립니다.
 
@@ -2740,7 +2740,7 @@ Windows에서 창을 만든 후에 메뉴 모음이 변경 된 경우이 함수�
 
   [CWnd:: GetMenu](#getmenu)의 예제를 참조 하세요.
 
-##  <a name="enableactiveaccessibility"></a>CWnd:: EnableActiveAccessibility
+##  <a name="cwndenableactiveaccessibility"></a><a name="enableactiveaccessibility"></a>CWnd:: EnableActiveAccessibility
 
 사용자 정의 Active Accessibility 함수를 사용 하도록 설정 합니다.
 
@@ -2752,7 +2752,7 @@ void EnableActiveAccessibility();
 
 ActiveX 컨트롤을 비롯 한 표준 창과 컨트롤의 경우 MFC의 기본 Active Accessibility 지원이 충분 합니다. 그러나 `CWnd`파생 클래스에 비-창 사용자 인터페이스 요소가 포함 된 경우 MFC는 이러한 요소에 대해 알 수 없습니다. 이 경우 클래스에서 적절 한 [Active Accessibility 멤버 함수](/windows/win32/winauto/sdk-components) 를 재정의 해야 하며 클래스의 생성자에서 `EnableActiveAccessibility`를 호출 해야 합니다.
 
-##  <a name="enabledynamiclayout"></a>CWnd:: EnableDynamicLayout
+##  <a name="cwndenabledynamiclayout"></a><a name="enabledynamiclayout"></a>CWnd:: EnableDynamicLayout
 
 동적 레이아웃 관리자를 사용하거나 사용하지 않도록 설정합니다. 동적 레이아웃을 사용하는 경우 사용자가 창의 크기를 조정하면 자식 창의 위치 및 크기가 동적으로 조정됩니다.
 
@@ -2769,7 +2769,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 동적 레이아웃을 사용하도록 설정하려는 경우 이 메서드를 호출하기만 하면 됩니다. 창의 컨트롤이 크기 변경에 대응하는 방식을 지정하는 동적 레이아웃 정보도 제공해야 합니다. 리소스 편집기에서 또는 프로그래밍 방식으로 각 컨트롤에 대해 이 정보를 지정할 수 있습니다. [동적 레이아웃](../../mfc/dynamic-layout.md)을 참조 하세요.
 
-##  <a name="enabled2dsupport"></a>CWnd:: EnableD2DSupport
+##  <a name="cwndenabled2dsupport"></a><a name="enabled2dsupport"></a>CWnd:: EnableD2DSupport
 
 D2D 지원을 사용하거나 사용하지 않도록 설정합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.
 
@@ -2785,9 +2785,9 @@ void EnableD2DSupport(
 D2D 지원을 설정 또는 해제할지를 지정합니다.
 
 *bUseDCRenderTarget*<br/>
-DC(디바이스 컨텍스트) 렌더 대상, CDCRenderTarget을 사용할지를 지정합니다. FALSE이면 CHwndRenderTarget이 사용됩니다.
+DC(장치 컨텍스트) 렌더 대상, CDCRenderTarget을 사용할지를 지정합니다. FALSE이면 CHwndRenderTarget이 사용됩니다.
 
-##  <a name="enablescrollbar"></a>CWnd:: EnableScrollBar
+##  <a name="cwndenablescrollbar"></a><a name="enablescrollbar"></a>CWnd:: EnableScrollBar
 
 스크롤 막대의 화살표 하나 또는 둘 다를 사용하거나 사용하지 않도록 설정합니다.
 
@@ -2823,7 +2823,7 @@ BOOL EnableScrollBar(
 
 지정 된 대로 화살표를 사용 하거나 사용 하지 않도록 설정 하는 경우 0이 아닙니다. 그렇지 않으면 0이 고 화살표가 이미 요청 된 상태에 있거나 오류가 발생 했음을 나타냅니다.
 
-##  <a name="enablescrollbarctrl"></a>CWnd:: EnableScrollBarCtrl
+##  <a name="cwndenablescrollbarctrl"></a><a name="enablescrollbarctrl"></a>CWnd:: EnableScrollBarCtrl
 
 이 창의 스크롤 막대를 사용 하거나 사용 하지 않도록 설정 합니다.
 
@@ -2845,7 +2845,7 @@ void EnableScrollBarCtrl(
 
 창에 형제 스크롤 막대 컨트롤이 있으면 스크롤 막대가 사용 됩니다. 그렇지 않으면 창의 자체 스크롤 막대가 사용 됩니다.
 
-##  <a name="enabletooltips"></a>CWnd:: EnableToolTips
+##  <a name="cwndenabletooltips"></a><a name="enabletooltips"></a>CWnd:: EnableToolTips
 
 지정 된 창에 대 한 도구 설명을 사용 하도록 설정 합니다.
 
@@ -2881,7 +2881,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 [!code-cpp[NVC_MFCWindowing#92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]
 
-##  <a name="enabletrackingtooltips"></a>CWnd:: EnableTrackingToolTips
+##  <a name="cwndenabletrackingtooltips"></a><a name="enabletrackingtooltips"></a>CWnd:: EnableTrackingToolTips
 
 추적 도구 설명을 사용 하거나 사용 하지 않도록 설정 합니다.
 
@@ -2902,7 +2902,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 추적 도구 설명은 화면에서 동적으로 배치할 수 있는 도구 설명 창입니다. 위치를 빠르게 업데이트 하면 도구 설명 창이 부드럽게 이동 하거나 "추적" 하는 것 처럼 보입니다. 이 기능은 포인터의 위치를 따라 이동 하는 도구 설명 텍스트가 필요한 경우에 유용할 수 있습니다.
 
-##  <a name="enablewindow"></a>CWnd:: EnableWindow
+##  <a name="cwndenablewindow"></a><a name="enablewindow"></a>CWnd:: EnableWindow
 
 마우스 및 키보드 입력을 사용하거나 사용하지 않도록 설정합니다.
 
@@ -2937,7 +2937,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]
 
-##  <a name="endmodalloop"></a>CWnd:: EndModalLoop
+##  <a name="cwndendmodalloop"></a><a name="endmodalloop"></a>CWnd:: EndModalLoop
 
 `RunModalLoop`에 대 한 호출을 종료 합니다.
 
@@ -2954,7 +2954,7 @@ virtual void EndModalLoop(int nResult);
 
 *Nresult* 매개 변수는 `RunModalLoop`의 반환 값으로 전파 됩니다.
 
-##  <a name="endmodalstate"></a>CWnd:: EndModalState
+##  <a name="cwndendmodalstate"></a><a name="endmodalstate"></a>CWnd:: EndModalState
 
 프레임 창을 모달에서 모덜리스로 변경하려면 이 멤버 함수를 호출합니다.
 
@@ -2962,7 +2962,7 @@ virtual void EndModalLoop(int nResult);
 virtual void EndModalState();
 ```
 
-##  <a name="endpaint"></a>CWnd:: EndPaint
+##  <a name="cwndendpaint"></a><a name="endpaint"></a>CWnd:: EndPaint
 
 지정 된 창에서 그리기의 끝을 표시 합니다.
 
@@ -2985,7 +2985,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 
   [CWnd:: BeginPaint](#beginpaint)의 예제를 참조 하세요.
 
-##  <a name="executedlginit"></a>CWnd:: ExecuteDlgInit
+##  <a name="cwndexecutedlginit"></a><a name="executedlginit"></a>CWnd:: ExecuteDlgInit
 
 대화 상자 리소스를 시작합니다.
 
@@ -3010,7 +3010,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 `ExecuteDlgInit`는 실행 중인 모듈에 바인딩된 리소스나 다른 소스의 리소스를 사용 합니다. 이를 위해 `ExecuteDlgInit` `AfxFindResourceHandle`를 호출 하 여 리소스 핸들을 찾습니다. MFC 응용 프로그램에서 공유 DLL (MFCx0 [U] [D])을 사용 하지 않는 경우 DLL) `AfxFindResourceHandle` 호출 하 여 실행 파일에 대 한 현재 리소스 핸들을 반환 하는 [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle)를 호출 합니다. MFCx0 [U] [D]를 사용 하는 MFC 응용 프로그램의 경우 `AfxFindResourceHandle` DLL은 올바른 리소스 핸들을 찾기 위해 공유 및 MFC 확장명 Dll의 `CDynLinkLibrary` 개체 목록을 트래버스 합니다.
 
-##  <a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage
+##  <a name="cwndfiltertooltipmessage"></a><a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage
 
 도구 설명 메시지를 표시 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -3029,7 +3029,7 @@ void FilterToolTipMessage(MSG* pMsg);
 
 그러나 일부 ActiveX 컨트롤의 경우와 같이 특정 응용 프로그램에서는 프레임 워크에서 이러한 메서드를 호출할 수 없으며 직접 FilterToolTipMessage를 호출 해야 합니다. 자세한 내용은 [도구 설명을 만드는 방법](../../mfc/methods-of-creating-tool-tips.md)을 참조 하세요.
 
-##  <a name="findwindow"></a>CWnd:: FindWindow
+##  <a name="cwndfindwindow"></a><a name="findwindow"></a>CWnd:: FindWindow
 
 *LpszClassName* 에서 window 클래스를 제공 하 고 *lpszWindowName*에서 지정 하는 창 이름 또는 제목을 포함 하는 최상위 `CWnd`를 반환 합니다.
 
@@ -3061,7 +3061,7 @@ static CWnd* PASCAL FindWindow(
 
 [!code-cpp[NVC_MFCWindowing#94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]
 
-##  <a name="findwindowex"></a>CWnd:: FindWindowEx
+##  <a name="cwndfindwindowex"></a><a name="findwindowex"></a>CWnd:: FindWindowEx
 
 클래스 이름과 창 이름이 지정 된 문자열과 일치 하는 window 개체를 검색 합니다.
 
@@ -3095,7 +3095,7 @@ static CWnd* FindWindowEx(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [FindWindowEx](/windows/win32/api/winuser/nf-winuser-findwindowexw)의 기능을 에뮬레이트합니다.
 
-##  <a name="flashwindow"></a>CWnd:: FlashWindow
+##  <a name="cwndflashwindow"></a><a name="flashwindow"></a>CWnd:: FlashWindow
 
 지정 된 창을 한 번 깜박입니다.
 
@@ -3126,7 +3126,7 @@ BOOL FlashWindow(BOOL bInvert);
 
 [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]
 
-##  <a name="flashwindowex"></a>CWnd:: FlashWindowEx
+##  <a name="cwndflashwindowex"></a><a name="flashwindowex"></a>CWnd:: FlashWindowEx
 
 지정 된 창을 깜박입니다.
 
@@ -3156,7 +3156,7 @@ BOOL FlashWindowEx(
 
 이 메서드는 Windows SDK 설명 된 대로 함수 [FlashWindowEx](/windows/win32/api/winuser/nf-winuser-flashwindowex)의 기능을 에뮬레이트합니다.
 
-##  <a name="fromhandle"></a>CWnd:: FromHandle
+##  <a name="cwndfromhandle"></a><a name="fromhandle"></a>CWnd:: FromHandle
 
 창에 핸들을 지정한 경우 `CWnd` 개체에 대한 포인터를 반환합니다. `CWnd` 개체가 핸들에 연결되지 않은 경우 임시 `CWnd` 개체를 만들어 연결합니다.
 
@@ -3175,7 +3175,7 @@ Windows 창의 HWND입니다.
 
 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
-##  <a name="fromhandlepermanent"></a>CWnd:: FromHandlePermanent
+##  <a name="cwndfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CWnd:: FromHandlePermanent
 
 창에 핸들을 지정한 경우 `CWnd` 개체에 대한 포인터를 반환합니다.
 
@@ -3198,7 +3198,7 @@ Windows 창의 HWND입니다.
 
 [Fromhandle](#fromhandle)과 달리이 함수는 임시 개체를 만들지 않습니다.
 
-##  <a name="get_accchild"></a>CWnd:: get_accChild
+##  <a name="cwndget_accchild"></a><a name="get_accchild"></a>CWnd:: get_accChild
 
 지정된 자식의 `IDispatch` 인터페이스 주소를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3228,7 +3228,7 @@ virtual HRESULT get_accChild(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) 를 참조 하세요.
 
-##  <a name="get_accchildcount"></a>CWnd:: get_accChildCount
+##  <a name="cwndget_accchildcount"></a><a name="get_accchildcount"></a>CWnd:: get_accChildCount
 
 이 개체에 속하는 자식 수를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3253,7 +3253,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 를 참조 하세요.
 
-##  <a name="get_accdefaultaction"></a>CWnd:: get_accDefaultAction
+##  <a name="cwndget_accdefaultaction"></a><a name="get_accdefaultaction"></a>CWnd:: get_accDefaultAction
 
 개체의 기본 작업을 설명하는 문자열을 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3283,7 +3283,7 @@ virtual HRESULT get_accDefaultAction(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 를 참조 하세요.
 
-##  <a name="get_accdescription"></a>CWnd:: get_accDescription
+##  <a name="cwndget_accdescription"></a><a name="get_accdescription"></a>CWnd:: get_accDescription
 
 지정한 개체의 모양을 설명하는 문자열을 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3313,7 +3313,7 @@ virtual HRESULT get_accDescription(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 를 참조 하세요.
 
-##  <a name="get_accfocus"></a>CWnd:: get_accFocus
+##  <a name="cwndget_accfocus"></a><a name="get_accfocus"></a>CWnd:: get_accFocus
 
 키보드 포커스가 있는 개체를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3338,7 +3338,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 를 참조 하세요.
 
-##  <a name="get_acchelp"></a>CWnd:: get_accHelp
+##  <a name="cwndget_acchelp"></a><a name="get_acchelp"></a>CWnd:: get_accHelp
 
 개체의 **도움말** 속성 문자열을 검색 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -3368,7 +3368,7 @@ virtual HRESULT get_accHelp(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 를 참조 하세요.
 
-##  <a name="get_acchelptopic"></a>CWnd:: get_accHelpTopic
+##  <a name="cwndget_acchelptopic"></a><a name="get_acchelptopic"></a>CWnd:: get_accHelpTopic
 
 지정 된 개체와 연결 된 **WinHelp** 파일의 전체 경로와 해당 파일 내에서 해당 항목의 식별자를 검색 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -3402,7 +3402,7 @@ virtual HRESULT get_accHelpTopic(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 를 참조 하세요.
 
-##  <a name="get_acckeyboardshortcut"></a>CWnd:: get_accKeyboardShortcut
+##  <a name="cwndget_acckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CWnd:: get_accKeyboardShortcut
 
 지정된 개체의 바로 가기 키 또는 선택키를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3432,7 +3432,7 @@ virtual HRESULT get_accKeyboardShortcut(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 를 참조 하세요.
 
-##  <a name="get_accname"></a>CWnd:: get_accName
+##  <a name="cwndget_accname"></a><a name="get_accname"></a>CWnd:: get_accName
 
 지정된 개체의 이름을 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3462,7 +3462,7 @@ virtual HRESULT get_accName(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) 를 참조 하세요.
 
-##  <a name="get_accparent"></a>CWnd:: get_accParent
+##  <a name="cwndget_accparent"></a><a name="get_accparent"></a>CWnd:: get_accParent
 
 개체 부모의 `IDispatch` 인터페이스를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3487,7 +3487,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) 를 참조 하세요.
 
-##  <a name="get_accrole"></a>CWnd:: get_accRole
+##  <a name="cwndget_accrole"></a><a name="get_accrole"></a>CWnd:: get_accRole
 
 지정된 개체의 역할을 설명하는 정보를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3517,7 +3517,7 @@ virtual HRESULT get_accRole(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) 를 참조 하세요.
 
-##  <a name="get_accselection"></a>CWnd:: get_accSelection
+##  <a name="cwndget_accselection"></a><a name="get_accselection"></a>CWnd:: get_accSelection
 
 이 개체의 선택된 자식 개체를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3542,7 +3542,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 를 참조 하세요.
 
-##  <a name="get_accstate"></a>CWnd:: get_accState
+##  <a name="cwndget_accstate"></a><a name="get_accstate"></a>CWnd:: get_accState
 
 지정된 개체의 현재 상태를 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3572,7 +3572,7 @@ virtual HRESULT get_accState(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) 를 참조 하세요.
 
-##  <a name="get_accvalue"></a>CWnd:: get_accValue
+##  <a name="cwndget_accvalue"></a><a name="get_accvalue"></a>CWnd:: get_accValue
 
 지정된 개체의 값을 검색하기 위해 프레임워크에서 호출됩니다.
 
@@ -3602,7 +3602,7 @@ virtual HRESULT get_accValue(
 
 자세한 내용은 Windows SDK의 [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 를 참조 하세요.
 
-##  <a name="getactivewindow"></a>CWnd:: GetActiveWindow
+##  <a name="cwndgetactivewindow"></a><a name="getactivewindow"></a>CWnd:: GetActiveWindow
 
 활성 창에 대 한 포인터를 검색 합니다.
 
@@ -3618,7 +3618,7 @@ static CWnd* PASCAL GetActiveWindow();
 
 활성 창은 현재 입력 포커스가 있는 창 이거나 [SetActiveWindow](#setactivewindow) 멤버 함수에 의해 명시적으로 활성화 된 창입니다.
 
-##  <a name="getancestor"></a>CWnd:: GetAncestor
+##  <a name="cwndgetancestor"></a><a name="getancestor"></a>CWnd:: GetAncestor
 
 지정된 창의 상위 창 개체를 검색합니다.
 
@@ -3639,7 +3639,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [Getancestor](/windows/win32/api/winuser/nf-winuser-getancestor)함수의 기능을 에뮬레이트합니다.
 
-##  <a name="getcapture"></a>CWnd:: GetCapture
+##  <a name="cwndgetcapture"></a><a name="getcapture"></a>CWnd:: GetCapture
 
 마우스 캡처가 있는 창을 검색 합니다.
 
@@ -3657,7 +3657,7 @@ static CWnd* PASCAL GetCapture();
 
 지정 된 시간에 한 창에만 마우스 캡처가 있습니다. [Setcapture](#setcapture) 멤버 함수가 호출 되 면 창에서 마우스 캡처를 수신 합니다. 이 창은 커서가 테두리 내에 있는지 여부에 관계 없이 마우스 입력을 수신 합니다.
 
-##  <a name="getcaretpos"></a>CWnd:: GetCaretPos
+##  <a name="cwndgetcaretpos"></a><a name="getcaretpos"></a>CWnd:: GetCaretPos
 
 캐럿의 현재 위치에 대 한 클라이언트 좌표를 검색 하 여 `CPoint`로 반환 합니다.
 
@@ -3673,7 +3673,7 @@ static CPoint PASCAL GetCaretPos();
 
 캐럿 위치는 `CWnd` 창의 클라이언트 좌표에서 제공 됩니다.
 
-##  <a name="getcheckedradiobutton"></a>CWnd:: GetCheckedRadioButton
+##  <a name="cwndgetcheckedradiobutton"></a><a name="getcheckedradiobutton"></a>CWnd:: GetCheckedRadioButton
 
 지정 된 그룹에서 현재 확인란이 선택 된 라디오 단추의 ID를 검색 합니다.
 
@@ -3695,7 +3695,7 @@ int GetCheckedRadioButton(
 
 선택 된 라디오 단추의 ID 이거나, 선택 된 항목이 없는 경우 0입니다.
 
-##  <a name="getclientrect"></a>CWnd:: GetClientRect
+##  <a name="cwndgetclientrect"></a><a name="getclientrect"></a>CWnd:: GetClientRect
 
 `CWnd` 클라이언트 영역의 클라이언트 좌표를 *lpRect*가 가리키는 구조에 복사 합니다.
 
@@ -3716,7 +3716,7 @@ void GetClientRect(LPRECT lpRect) const;
 
   [CWnd:: IsIconic](#isiconic)의 예제를 참조 하세요.
 
-##  <a name="getclipboardowner"></a>CWnd:: GetClipboardOwner
+##  <a name="cwndgetclipboardowner"></a><a name="getclipboardowner"></a>CWnd:: GetClipboardOwner
 
 클립보드의 현재 소유자를 검색 합니다.
 
@@ -3734,7 +3734,7 @@ static CWnd* PASCAL GetClipboardOwner();
 
 현재 소유 하 고 있지 않은 경우에도 클립보드에 데이터를 계속 포함할 수 있습니다.
 
-##  <a name="getclipboardviewer"></a>CWnd:: GetClipboardViewer
+##  <a name="cwndgetclipboardviewer"></a><a name="getclipboardviewer"></a>CWnd:: GetClipboardViewer
 
 클립보드 뷰어 체인에서 첫 번째 창을 검색 합니다.
 
@@ -3748,7 +3748,7 @@ static CWnd* PASCAL GetClipboardViewer();
 
 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
-##  <a name="getcontrolunknown"></a>CWnd:: GetControlUnknown
+##  <a name="cwndgetcontrolunknown"></a><a name="getcontrolunknown"></a>CWnd:: GetControlUnknown
 
 이 멤버 함수를 호출 하 여 알 수 없는 OLE 컨트롤에 대 한 포인터를 검색 합니다.
 
@@ -3770,7 +3770,7 @@ LPUNKNOWN GetControlUnknown();
 
 [!code-cpp[NVC_MFCWindowing#96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]
 
-##  <a name="getcurrentmessage"></a>CWnd:: GetCurrentMessage
+##  <a name="cwndgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWnd:: GetCurrentMessage
 
 이 창에서 현재 처리 중인 메시지에 대한 포인터를 반환합니다. **On**<em>message</em> 메시지 처리기 멤버 함수의 경우에만 호출 해야 합니다.
 
@@ -3786,7 +3786,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
   [CMDIFrameWnd:: MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade)의 예제를 참조 하세요.
 
-##  <a name="getdc"></a>CWnd:: GetDC
+##  <a name="cwndgetdc"></a><a name="getdc"></a>CWnd:: GetDC
 
 `CWnd`에 대해 지정 된 클래스 스타일에 따라 클라이언트 영역의 공용, 클래스 또는 개인 장치 컨텍스트에 대 한 포인터를 검색 합니다.
 
@@ -3806,7 +3806,7 @@ CDC* GetDC();
 
 `CWnd` 클래스에 속하는 장치 컨텍스트는 클래스가 등록 될 때 CS_PARENTDC 구조체에서 CS_CLASSDC, CS_OWNDC 또는 `WNDCLASS` 스타일로 지정 된 경우 `GetDC` 멤버 함수에서 반환 됩니다.
 
-##  <a name="getdcex"></a>CWnd:: GetDCEx
+##  <a name="cwndgetdcex"></a><a name="getdcex"></a>CWnd:: GetDCEx
 
 `CWnd` 된 창에 대 한 장치 컨텍스트의 핸들을 검색 합니다.
 
@@ -3858,7 +3858,7 @@ CDC* GetDCEx(
 
 이러한 특성에 대 한 자세한 내용은 Windows SDK `WNDCLASS` 구조에 대 한 설명을 참조 하십시오.
 
-##  <a name="getdcrendertarget"></a>CWnd:: GetDCRenderTarget
+##  <a name="cwndgetdcrendertarget"></a><a name="getdcrendertarget"></a>CWnd:: GetDCRenderTarget
 
 `CWnd` 창에 대한 DC(디바이스 컨텍스트) 렌더링 대상을 검색합니다.
 
@@ -3872,7 +3872,7 @@ CDCRenderTarget* GetDCRenderTarget();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdescendantwindow"></a>CWnd:: GetDescendantWindow
+##  <a name="cwndgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWnd:: GetDescendantWindow
 
 지정 된 ID로 지정 된 하위 창을 찾으려면이 멤버 함수를 호출 합니다.
 
@@ -3898,7 +3898,7 @@ CWnd* GetDescendantWindow(
 
 이 멤버 함수는 직계 자식인 창이 아니라 자식 창의 전체 트리를 검색 합니다.
 
-##  <a name="getdesktopwindow"></a>CWnd:: GetDesktopWindow
+##  <a name="cwndgetdesktopwindow"></a><a name="getdesktopwindow"></a>CWnd:: GetDesktopWindow
 
 Windows 바탕 화면 창을 반환 합니다.
 
@@ -3914,7 +3914,7 @@ Windows 바탕 화면 창을 식별 합니다. 이 포인터는 일시적일 수
 
 바탕 화면 창은 전체 화면을 포함 하며 모든 아이콘 및 기타 창이 그려지는 영역입니다.
 
-##  <a name="getdlgctrlid"></a>CWnd:: GetDlgCtrlID
+##  <a name="cwndgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWnd:: GetDlgCtrlID
 
 대화 상자에 있는 컨트롤이 아니라 자식 창에 대 한 창 또는 컨트롤 ID 값을 반환 합니다.
 
@@ -3934,7 +3934,7 @@ int GetDlgCtrlID() const;
 
   [CWnd:: OnCtlColor](#onctlcolor)의 예제를 참조 하세요.
 
-##  <a name="getdlgitem"></a>CWnd:: GetDlgItem
+##  <a name="cwndgetdlgitem"></a><a name="getdlgitem"></a>CWnd:: GetDlgItem
 
 대화 상자 또는 다른 창에서 지정 된 컨트롤 또는 자식 창에 대 한 포인터를 검색 합니다.
 
@@ -3968,7 +3968,7 @@ void GetDlgItem(
 
 [!code-cpp[NVC_MFCWindowing#97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]
 
-##  <a name="getdlgitemint"></a>CWnd:: GetDlgItemInt
+##  <a name="cwndgetdlgitemint"></a><a name="getdlgitemint"></a>CWnd:: GetDlgItemInt
 
 *NID*로 식별 되는 컨트롤의 텍스트를 검색 합니다.
 
@@ -4006,7 +4006,7 @@ UINT GetDlgItemInt(
 
 컨트롤에 [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) 메시지를 보냅니다.
 
-##  <a name="getdlgitemtext"></a>CWnd:: GetDlgItemText
+##  <a name="cwndgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWnd:: GetDlgItemText
 
 대화 상자에서 컨트롤과 연결 된 제목 또는 텍스트를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4043,7 +4043,7 @@ int GetDlgItemText(
 
 `GetDlgItemText` 멤버 함수는 텍스트를 *lpStr* 가 가리키는 위치로 복사 하 고 복사 하는 바이트 수를 반환 합니다.
 
-##  <a name="getdsccursor"></a>CWnd:: GetDSCCursor
+##  <a name="cwndgetdsccursor"></a><a name="getdsccursor"></a>CWnd:: GetDSCCursor
 
 이 멤버 함수를 호출 하 여 데이터 소스 컨트롤의 DataSource, UserName, Password 및 SQL 속성으로 정의 된 기본 커서에 대 한 포인터를 검색 합니다.
 
@@ -4063,7 +4063,7 @@ IUnknown* GetDSCCursor();
 
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
 
-##  <a name="getdynamiclayout"></a>CWnd:: GetDynamicLayout
+##  <a name="cwndgetdynamiclayout"></a><a name="getdynamiclayout"></a>CWnd:: GetDynamicLayout
 
 동적 레이아웃 관리자 개체에 대한 포인터를 검색합니다.
 
@@ -4079,7 +4079,7 @@ CMFCDynamicLayout* GetDynamicLayout();
 
 창 개체는 반환된 포인터의 수명을 소유하고 관리하므로 개체에 액세스할 때만 사용해야 합니다. 포인터를 삭제하거나 포인터를 영구적으로 저장하지 마세요.
 
-##  <a name="getexstyle"></a>CWnd:: GetExStyle
+##  <a name="cwndgetexstyle"></a><a name="getexstyle"></a>CWnd:: GetExStyle
 
 창의 확장된 스타일을 반환합니다.
 
@@ -4091,7 +4091,7 @@ DWORD GetExStyle() const;
 
 창의 확장 스타일입니다. MFC에서 사용 되는 확장 창 스타일에 대 한 자세한 내용은 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)을 참조 하세요.
 
-##  <a name="getfocus"></a>CWnd:: GetFocus
+##  <a name="cwndgetfocus"></a><a name="getfocus"></a>CWnd:: GetFocus
 
 현재 입력 포커스가 있는 `CWnd`에 대 한 포인터를 검색 합니다.
 
@@ -4105,7 +4105,7 @@ static CWnd* PASCAL GetFocus();
 
 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
-##  <a name="getfont"></a>CWnd:: GetFont
+##  <a name="cwndgetfont"></a><a name="getfont"></a>CWnd:: GetFont
 
 현재 글꼴을 검색 하기 위해 WM_GETFONT 메시지를 창으로 보냅니다.
 
@@ -4121,7 +4121,7 @@ CFont* GetFont() const;
 
 창이 WM_GETFONT 메시지를 처리 하지 않는 한이 메서드는 영향을 주지 않습니다. `CWnd`에서 파생 되는 대부분의 MFC 클래스는 WM_GETFONT 메시지의 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 되어 있으므로이 메시지를 처리 합니다. 이 메서드를 사용 하려면 `CWnd`에서 파생 되는 클래스가 WM_GETFONT 메시지의 메서드 처리기를 정의 해야 합니다.
 
-##  <a name="getforegroundwindow"></a>CWnd:: GetForegroundWindow
+##  <a name="cwndgetforegroundwindow"></a><a name="getforegroundwindow"></a>CWnd:: GetForegroundWindow
 
 전경 창 (사용자가 현재 작업 중인 창)에 대 한 포인터를 반환 합니다.
 
@@ -4137,7 +4137,7 @@ static CWnd* PASCAL GetForegroundWindow();
 
 전경 창은 최상위 창 (프레임 창 또는 대화 상자)에만 적용 됩니다.
 
-##  <a name="geticon"></a>CWnd:: GetIcon
+##  <a name="cwndgeticon"></a><a name="geticon"></a>CWnd:: GetIcon
 
 이 멤버 함수를 호출 하 여 *Bbigicon*에 표시 된 대로 큰 (32x32) 또는 작은 (16x16) 아이콘에 대 한 핸들을 가져옵니다.
 
@@ -4154,7 +4154,7 @@ TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경�
 
 아이콘에 대한 핸들입니다. 실패 한 경우 NULL을 반환 합니다.
 
-##  <a name="getlastactivepopup"></a>CWnd:: GetLastActivePopup
+##  <a name="cwndgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWnd:: GetLastActivePopup
 
 `CWnd`가 소유한 팝업 창이 가장 최근에 활성화되었는지 확인합니다.
 
@@ -4178,7 +4178,7 @@ CWnd* GetLastActivePopup() const;
 
   [CWnd:: FindWindow](#findwindow)의 예제를 참조 하세요.
 
-##  <a name="getlayeredwindowattributes"></a>CWnd:: GetLayeredWindowAttributes
+##  <a name="cwndgetlayeredwindowattributes"></a><a name="getlayeredwindowattributes"></a>CWnd:: GetLayeredWindowAttributes
 
 계층적 창의 불투명도 및 투명도 색상 키를 검색합니다.
 
@@ -4208,7 +4208,7 @@ BOOL GetLayeredWindowAttributes(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)의 기능을 에뮬레이트합니다.
 
-##  <a name="getmenu"></a>CWnd:: GetMenu
+##  <a name="cwndgetmenu"></a><a name="getmenu"></a>CWnd:: GetMenu
 
 이 창의 메뉴에 대 한 포인터를 검색 합니다.
 
@@ -4230,7 +4230,7 @@ CMenu* GetMenu() const;
 
 [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]
 
-##  <a name="getmenubarinfo"></a>CWnd:: Getmenu 정보
+##  <a name="cwndgetmenubarinfo"></a><a name="getmenubarinfo"></a>CWnd:: Getmenu 정보
 
 지정 된 메뉴 모음에 대 한 정보를 검색 합니다.
 
@@ -4260,7 +4260,7 @@ BOOL GetMenuBarInfo(
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [Getmenu ](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)함수 함수를 에뮬레이트합니다.
 
-##  <a name="getnextdlggroupitem"></a>CWnd:: GetNextDlgGroupItem
+##  <a name="cwndgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWnd:: GetNextDlgGroupItem
 
 대화 상자의 컨트롤 그룹에서 이전 또는 다음 컨트롤을 검색 합니다.
 
@@ -4305,7 +4305,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 |창 없는 ActiveX 컨트롤|HWND를 포함 하지 않습니다. `COleControlSiteOrWnd`의 `m_pSite` 멤버가 컨트롤의 `COleControlSite`을 가리키고 `m_hWnd` 멤버가 NULL 인 경우|
 |표준 창|에는 HWND만 포함 됩니다. `COleControlSiteOrWnd`의 `m_hWnd` 멤버가 창의 HWND로 설정 되 고 `m_pSite` 멤버가 NULL 인 경우|
 
-##  <a name="getnextdlgtabitem"></a>CWnd:: GetNextDlgTabItem
+##  <a name="cwndgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWnd:: GetNextDlgTabItem
 
 [WS_TABSTOP](styles-used-by-mfc.md#window-styles) 스타일을 사용 하 여 만들어졌으며 지정 된 컨트롤 앞 이나 뒤에 있는 첫 번째 컨트롤에 대 한 포인터를 검색 합니다.
 
@@ -4338,7 +4338,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 
 `COleControlSiteOrWnd`에 대 한 자세한 내용은 [CWnd:: GetNextDlgGroupItem](#getnextdlggroupitem)를 참조 하세요.
 
-##  <a name="getnextwindow"></a>CWnd:: GetNextWindow
+##  <a name="cwndgetnextwindow"></a><a name="getnextwindow"></a>CWnd:: GetNextWindow
 
 창 관리자의 목록에서 다음 (또는 이전) 창을 검색 합니다.
 
@@ -4363,7 +4363,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 `CWnd` 최상위 창인 경우 함수는 다음 (또는 이전) 최상위 창을 검색 합니다. `CWnd` 자식 창인 경우 함수는 다음 (또는 이전) 자식 창을 검색 합니다.
 
-##  <a name="getolecontrolsite"></a>CWnd:: GetOleControlSite
+##  <a name="cwndgetolecontrolsite"></a><a name="getolecontrolsite"></a>CWnd:: GetOleControlSite
 
 지정된 ActiveX 컨트롤에 대한 사용자 지정 사이트를 검색합니다.
 
@@ -4376,7 +4376,7 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
 *idControl*<br/>
 ActiveX 컨트롤의 ID입니다.
 
-##  <a name="getopenclipboardwindow"></a>CWnd:: GetOpenClipboardWindow
+##  <a name="cwndgetopenclipboardwindow"></a><a name="getopenclipboardwindow"></a>CWnd:: GetOpenClipboardWindow
 
 현재 클립보드가 열려 있는 창의 핸들을 검색 합니다.
 
@@ -4388,7 +4388,7 @@ static CWnd* PASCAL GetOpenClipboardWindow();
 
 함수가 성공 하면 현재 클립보드가 열려 있는 창의 핸들입니다. 그렇지 않으면 NULL입니다.
 
-##  <a name="getowner"></a>CWnd:: GetOwner
+##  <a name="cwndgetowner"></a><a name="getowner"></a>CWnd:: GetOwner
 
 창의 소유자에 대 한 포인터를 검색 합니다.
 
@@ -4406,7 +4406,7 @@ CWnd* GetOwner() const;
 
 이 함수의 소유권 개념은 [Getwindow](/windows/win32/api/winuser/nf-winuser-getwindow)의 소유권 개념과 다릅니다.
 
-##  <a name="getparent"></a>CWnd:: GetParent
+##  <a name="cwndgetparent"></a><a name="getparent"></a>CWnd:: GetParent
 
 자식 창의 부모 창에 대 한 포인터를 가져오려면이 함수를 호출 합니다 (있는 경우).
 
@@ -4422,7 +4422,7 @@ Windows SDK의 [Getparent](/windows/win32/api/winuser/nf-winuser-getparent) 에�
 
 `GetParent` 함수는 직계 부모 (있는 경우)에 대 한 포인터를 반환 합니다. 이와 대조적으로 [GetParentOwner](#getparentowner) 함수는 자식 창이 아닌 가장 직접적인 부모 또는 소유자 창에 대 한 포인터를 반환 합니다 (WS_CHILD 스타일이 없음). 자식 창에 `GetParent` 자식 창이 있는 경우 `GetParentOwner` 다른 결과를 반환할 수 있습니다.
 
-##  <a name="getparentframe"></a>CWnd:: GetParentFrame
+##  <a name="cwndgetparentframe"></a><a name="getparentframe"></a>CWnd:: GetParentFrame
 
 부모 프레임 창을 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4438,7 +4438,7 @@ CFrameWnd* GetParentFrame() const;
 
 멤버 함수는 [CFrameWnd](../../mfc/reference/cframewnd-class.md) (또는 파생 클래스) 개체를 찾을 때까지 부모 체인을 검색 합니다.
 
-##  <a name="getparentowner"></a>CWnd:: GetParentOwner
+##  <a name="cwndgetparentowner"></a><a name="getparentowner"></a>CWnd:: GetParentOwner
 
 이 멤버 함수를 호출 하 여 자식 창의 부모 창 또는 소유자 창에 대 한 포인터를 가져옵니다.
 
@@ -4456,7 +4456,7 @@ CWnd* GetParentOwner() const;
 
 반대로 [getparent](#getparent) 함수는 자식 창 인지 여부에 관계 없이 직계 부모에 대 한 포인터를 반환 합니다. 자식 창에 `GetParent` 자식 창이 있는 경우 `GetParentOwner` 다른 결과를 반환할 수 있습니다.
 
-##  <a name="getproperty"></a>CWnd:: GetProperty
+##  <a name="cwndgetproperty"></a><a name="getproperty"></a>CWnd:: GetProperty
 
 이 멤버 함수를 호출 하 여 *Dwdispid*로 지정 된 ActiveX 컨트롤 속성을 가져옵니다.
 
@@ -4487,7 +4487,7 @@ void GetProperty(
 
 ActiveX 컨트롤 컨테이너에서이 멤버 함수를 사용 하는 방법에 대 한 자세한 내용은 activex 컨트롤 컨테이너 [: Activex 컨트롤 컨테이너에서 Activex 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)문서를 참조 하세요.
 
-##  <a name="getrendertarget"></a>CWnd:: GetRenderTarget
+##  <a name="cwndgetrendertarget"></a><a name="getrendertarget"></a>CWnd:: GetRenderTarget
 
 이 창에 연결된 렌더링 대상을 가져옵니다.
 
@@ -4499,7 +4499,7 @@ CHwndRenderTarget* GetRenderTarget();
 
 렌더링 대상 또는 NULL에 대 한 포인터입니다.
 
-##  <a name="getsafehwnd"></a>CWnd:: GetSafeHwnd
+##  <a name="cwndgetsafehwnd"></a><a name="getsafehwnd"></a>CWnd:: GetSafeHwnd
 
 는 `m_hWnd`을 반환 하 고, **this** 포인터가 NULL 이면 null을 반환 합니다.
 
@@ -4515,7 +4515,7 @@ HWND GetSafeHwnd() const;
 
   [CWnd:: SubclassWindow](#subclasswindow)의 예제를 참조 하세요.
 
-##  <a name="getsafeowner"></a>CWnd:: GetSafeOwner
+##  <a name="cwndgetsafeowner"></a><a name="getsafeowner"></a>CWnd:: GetSafeOwner
 
 이 멤버 함수를 호출 하 여 대화 상자 또는 다른 모달 창에 사용 해야 하는 소유자 창을 검색 합니다.
 
@@ -4544,7 +4544,7 @@ Safe 소유자는 *Pparent*의 첫 번째 비 자식 부모 창입니다. *Ppare
 > [!NOTE]
 > 프레임 워크 자체는이 함수를 사용 하 여 소유자가 지정 되지 않은 대화 상자 및 속성 시트에 대 한 올바른 소유자 창을 결정 합니다.
 
-##  <a name="getscrollbarctrl"></a>CWnd:: GetScrollBarCtrl
+##  <a name="cwndgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CWnd:: GetScrollBarCtrl
 
 이 멤버 함수를 호출 하 여 지정 된 형제 스크롤 막대나 분할자 창에 대 한 포인터를 가져옵니다.
 
@@ -4569,7 +4569,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 이 멤버 함수는 창을 만드는 동안 WS_HSCROLL 또는 WS_VSCROLL 비트가 설정 될 때 생성 되는 스크롤 막대에서 작동 하지 않습니다. 이 함수의 `CWnd` 구현은 단순히 NULL을 반환 합니다. `CView`와 같은 파생 클래스는 설명 된 기능을 구현 합니다.
 
-##  <a name="getscrollbarinfo"></a>CWnd:: GetScrollBarInfo
+##  <a name="cwndgetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CWnd:: GetScrollBarInfo
 
 지정한 스크롤 막대에 대한 정보를 검색합니다.
 
@@ -4595,7 +4595,7 @@ BOOL GetScrollBarInfo(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)의 기능을 에뮬레이트합니다.
 
-##  <a name="getscrollinfo"></a>CWnd:: GetScrollInfo
+##  <a name="cwndgetscrollinfo"></a><a name="getscrollinfo"></a>CWnd:: GetScrollInfo
 
 이 멤버 함수를 호출 하 여 `SCROLLINFO` 구조가 스크롤 막대에 대해 유지 관리 하는 정보를 검색 합니다.
 
@@ -4635,7 +4635,7 @@ BOOL GetScrollInfo(
 
 스크롤 막대 위치 [CWnd:: OnHScroll](#onhscroll) 및 [Cwnd:: ONHSCROLL](#onvscroll)을 나타내는 MFC Windows 메시지 처리기는 16 비트 위치 데이터를 제공 합니다. `GetScrollInfo` 및 `SetScrollInfo`는 스크롤 막대 위치 데이터 32 비트를 제공 합니다. 따라서 응용 프로그램은 `CWnd::OnHScroll` 또는 `CWnd::OnVScroll`를 처리 하는 동안 `GetScrollInfo`를 호출 하 여 32 비트 스크롤 막대 위치 데이터를 가져올 수 있습니다.
 
-##  <a name="getscrolllimit"></a>CWnd:: GetScrollLimit
+##  <a name="cwndgetscrolllimit"></a><a name="getscrolllimit"></a>CWnd:: GetScrollLimit
 
 스크롤 막대의 최대 스크롤 위치를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4656,7 +4656,7 @@ int GetScrollLimit(int nBar);
 
 성공 하는 경우 스크롤 막대의 최대 위치를 지정 합니다. 그렇지 않으면 0입니다.
 
-##  <a name="getscrollpos"></a>CWnd:: GetScrollPos
+##  <a name="cwndgetscrollpos"></a><a name="getscrollpos"></a>CWnd:: GetScrollPos
 
 스크롤 막대의 스크롤 상자에 대 한 현재 위치를 검색 합니다.
 
@@ -4681,7 +4681,7 @@ int GetScrollPos(int nBar) const;
 
 현재 위치는 현재 스크롤 범위에 따라 달라 지는 상대 값입니다. 예를 들어 스크롤 범위가 50에서 100이 고 스크롤 상자가 가로 막대의 가운데에 있는 경우 현재 위치는 75입니다.
 
-##  <a name="getscrollrange"></a>CWnd:: GetScrollRange
+##  <a name="cwndgetscrollrange"></a><a name="getscrollrange"></a>CWnd:: GetScrollRange
 
 지정 된 스크롤 막대의 현재 최소 및 최대 스크롤 막대 위치를 *Lpminpos* 및 *lpminpos*로 지정 된 위치에 복사 합니다.
 
@@ -4713,7 +4713,7 @@ void GetScrollRange(
 
 표준 스크롤 막대의 기본 범위는 0에서 100입니다. 스크롤 막대 컨트롤의 기본 범위는 비어 있습니다 (두 값 모두 0).
 
-##  <a name="getstyle"></a>CWnd:: GetStyle
+##  <a name="cwndgetstyle"></a><a name="getstyle"></a>CWnd:: GetStyle
 
 현재 창 스타일을 반환합니다.
 
@@ -4725,9 +4725,9 @@ DWORD GetStyle() const;
 
 창의 스타일입니다. MFC에 사용 되는 창 스타일에 대 한 자세한 내용은 [창 스타일](styles-used-by-mfc.md#window-styles)을 참조 하세요.
 
-##  <a name="getsystemmenu"></a>CWnd:: GetSystemMenu
+##  <a name="cwndgetsystemmenu"></a><a name="getsystemmenu"></a>CWnd:: GetSystemMenu
 
-애플리케이션에서 복사 및 수정을 위해 컨트롤 메뉴에 액세스할 수 있도록 합니다.
+응용 프로그램에서 복사 및 수정을 위해 컨트롤 메뉴에 액세스할 수 있도록 합니다.
 
 ```
 CMenu* GetSystemMenu(BOOL bRevert) const;
@@ -4758,7 +4758,7 @@ Windows에서 자동으로 항목을 표준 컨트롤 메뉴에서 사용할 수
 
 [!code-cpp[NVC_MFCWindowing#99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]
 
-##  <a name="gettitlebarinfo"></a>CWnd:: GetTitleBarInfo
+##  <a name="cwndgettitlebarinfo"></a><a name="gettitlebarinfo"></a>CWnd:: GetTitleBarInfo
 
 지정된 제목 표시줄에 대한 정보를 검색합니다.
 
@@ -4775,7 +4775,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [GetTitleBarInfo](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo)의 기능을 에뮬레이트합니다.
 
-##  <a name="gettoplevelframe"></a>CWnd:: GetTopLevelFrame
+##  <a name="cwndgettoplevelframe"></a><a name="gettoplevelframe"></a>CWnd:: GetTopLevelFrame
 
 창의 최상위 프레임 창을 검색 하려면이 멤버 함수를 호출 합니다 (있는 경우).
 
@@ -4793,7 +4793,7 @@ CFrameWnd* GetTopLevelFrame() const;
 
 `CWnd`에 연결 된 창이 없거나 최상위 부모가 [CFrameWnd](../../mfc/reference/cframewnd-class.md)파생 개체가 아닌 경우이 함수는 NULL을 반환 합니다.
 
-##  <a name="gettoplevelowner"></a>CWnd:: GetTopLevelOwner
+##  <a name="cwndgettoplevelowner"></a><a name="gettoplevelowner"></a>CWnd:: GetTopLevelOwner
 
 최상위 창을 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4809,7 +4809,7 @@ CWnd* GetTopLevelOwner() const;
 
 최상위 창은 바탕 화면의 자식인 창입니다. `CWnd`에 연결 된 창이 없으면이 함수는 NULL을 반환 합니다.
 
-##  <a name="gettoplevelparent"></a>CWnd:: GetTopLevelParent
+##  <a name="cwndgettoplevelparent"></a><a name="gettoplevelparent"></a>CWnd:: GetTopLevelParent
 
 창의 최상위 부모를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4827,7 +4827,7 @@ CWnd* GetTopLevelParent() const;
 
 `GetTopLevelParent`은 [GetTopLevelFrame](#gettoplevelframe) 및 [GetTopLevelOwner](#gettoplevelowner)와 유사 합니다. 그러나 현재 소유자 창으로 설정 된 값은 무시 됩니다.
 
-##  <a name="gettopwindow"></a>CWnd:: GetTopWindow
+##  <a name="cwndgettopwindow"></a><a name="gettopwindow"></a>CWnd:: GetTopWindow
 
 `CWnd`에 속하는 최상위 자식 창을 검색 합니다.
 
@@ -4845,7 +4845,7 @@ CWnd* GetTopWindow() const;
 
 `CWnd`에 자식이 없는 경우이 함수는 NULL을 반환 합니다.
 
-##  <a name="getupdaterect"></a>CWnd:: GetUpdateRect
+##  <a name="cwndgetupdaterect"></a><a name="getupdaterect"></a>CWnd:: GetUpdateRect
 
 업데이트 영역을 완전히 둘러싸는 가장 작은 사각형의 좌표를 검색 합니다.
 
@@ -4881,7 +4881,7 @@ CS_OWNDC 스타일을 사용 하 여 `CWnd`를 만들었으며 매핑 모드를 
 
 `BeginPaint` 멤버 함수는 업데이트 영역에 대 한 유효성을 자동으로 검사 하므로 `BeginPaint` 호출 후 바로 `GetUpdateRect`를 호출 하면 빈 업데이트 영역이 검색 됩니다.
 
-##  <a name="getupdatergn"></a>CWnd:: GetUpdateRgn
+##  <a name="cwndgetupdatergn"></a><a name="getupdatergn"></a>CWnd:: GetUpdateRgn
 
 *PRgn*로 식별 되는 지역으로 업데이트 지역을 검색 합니다.
 
@@ -4917,7 +4917,7 @@ int GetUpdateRgn(
 
 [Beginpaint](#beginpaint) 멤버 함수는 업데이트 영역의 유효성을 자동으로 검사 하 여 `BeginPaint`에 대 한 호출 직후에 수행 된 `GetUpdateRgn` 호출은 빈 업데이트 영역을 검색 합니다.
 
-##  <a name="getwindow"></a>CWnd:: GetWindow
+##  <a name="cwndgetwindow"></a><a name="getwindow"></a>CWnd:: GetWindow
 
 요청 된 창에 대 한 포인터를 반환 하거나, 없으면 NULL을 반환 합니다.
 
@@ -4946,7 +4946,7 @@ CWnd* GetWindow(UINT nCmd) const;
 
 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
-##  <a name="getwindowcontexthelpid"></a>CWnd:: GetWindowContextHelpId
+##  <a name="cwndgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWnd:: GetWindowContextHelpId
 
 창과 연결 된 도움말 컨텍스트 식별자 (있는 경우)를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4958,7 +4958,7 @@ DWORD GetWindowContextHelpId() const;
 
 도움말 컨텍스트 식별자입니다. 창에이 없으면 0을 반환 합니다.
 
-##  <a name="getwindowedchildcount"></a>CWnd:: GetWindowedChildCount
+##  <a name="cwndgetwindowedchildcount"></a><a name="getwindowedchildcount"></a>CWnd:: GetWindowedChildCount
 
 연결 된 자식 창의 수를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -4970,7 +4970,7 @@ long GetWindowedChildCount();
 
 `CWnd` 개체와 연결 된 자식 창의 수입니다.
 
-##  <a name="getwindowdc"></a>CWnd:: GetWindowDC
+##  <a name="cwndgetwindowdc"></a><a name="getwindowdc"></a>CWnd:: GetWindowDC
 
 캡션 표시줄, 메뉴 및 스크롤 막대를 포함 하 여 전체 창의 표시 컨텍스트를 검색 합니다.
 
@@ -4996,7 +4996,7 @@ CDC* GetWindowDC();
 
 그리기가 완료 된 후에는 [Releasedc](#releasedc) 구성원 함수를 호출 하 여 표시 컨텍스트를 해제 해야 합니다. 표시 컨텍스트를 해제 하는 데 실패 하면 동시에 열 수 있는 장치 컨텍스트 수에 대 한 제한으로 인해 응용 프로그램에서 요청한 그리기에 심각한 영향을 미칩니다.
 
-##  <a name="getwindowinfo"></a>CWnd:: GetWindowInfo
+##  <a name="cwndgetwindowinfo"></a><a name="getwindowinfo"></a>CWnd:: GetWindowInfo
 
 창에 대 한 정보를 검색 합니다.
 
@@ -5013,7 +5013,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [GetWindowInfo](/windows/win32/api/winuser/nf-winuser-getwindowinfo)의 기능을 에뮬레이트합니다.
 
-##  <a name="getwindowlesschildcount"></a>CWnd:: GetWindowlessChildCount
+##  <a name="cwndgetwindowlesschildcount"></a><a name="getwindowlesschildcount"></a>CWnd:: GetWindowlessChildCount
 
 연결 된 창 없는 자식 창의 수를 검색 합니다.
 
@@ -5025,7 +5025,7 @@ long GetWindowlessChildCount();
 
 `CWnd` 개체와 연결 된 창 없는 자식 창의 수입니다.
 
-##  <a name="getwindowplacement"></a>CWnd:: GetWindowPlacement
+##  <a name="cwndgetwindowplacement"></a><a name="getwindowplacement"></a>CWnd:: GetWindowPlacement
 
 창의 표시 상태와 일반(복원됨), 최소화 및 최대화 위치를 검색합니다.
 
@@ -5046,7 +5046,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 이 함수에서 검색 한 [Windowplacement](/windows/win32/api/winuser/ns-winuser-windowplacement) 구조체의 `flags` 멤버는 항상 0입니다. `CWnd` 최대화 된 경우 `WINDOWPLACEMENT`의 `showCmd` 멤버가 SW_SHOWMAXIMIZED 됩니다. 창이 최소화 된 경우 SW_SHOWMINIMIZED 됩니다. 그렇지 않으면 SW_SHOWNORMAL 합니다.
 
-##  <a name="getwindowrect"></a>CWnd:: GetWindowRect
+##  <a name="cwndgetwindowrect"></a><a name="getwindowrect"></a>CWnd:: GetWindowRect
 
 `CWnd` 개체의 경계 사각형의 크기를 *lpRect*가 가리키는 구조에 복사 합니다.
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 
 크기는 화면 좌표에서 표시 화면의 왼쪽 위 모퉁이를 기준으로 지정 됩니다. 캡션, 테두리 및 스크롤 막대의 크기 (있는 경우)가 포함 됩니다.
 
-##  <a name="getwindowrgn"></a>CWnd:: GetWindowRgn
+##  <a name="cwndgetwindowrgn"></a><a name="getwindowrgn"></a>CWnd:: GetWindowRgn
 
 창의 창 영역을 가져오려면이 멤버 함수를 호출 합니다.
 
@@ -5096,7 +5096,7 @@ int GetWindowRgn(HRGN hRgn)const;
 
 창의 창 영역을 설정 하려면 [CWnd:: SetWindowRgn](#setwindowrgn)를 호출 합니다.
 
-##  <a name="getwindowtext"></a>CWnd:: GetWindowText
+##  <a name="cwndgetwindowtext"></a><a name="getwindowtext"></a>CWnd:: GetWindowText
 
 *LpszStringBuf* 또는 대상 문자열 *rstring*에 의해 가리키는 버퍼에 `CWnd` 캡션 제목 (있는 경우)을 복사 합니다.
 
@@ -5134,7 +5134,7 @@ void GetWindowText(
 
   [CWnd:: SetWindowText](#setwindowtext)의 예제를 참조 하세요.
 
-##  <a name="getwindowtextlength"></a>CWnd:: GetWindowTextLength
+##  <a name="cwndgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWnd:: GetWindowTextLength
 
 `CWnd` 개체 캡션 제목의 길이를 반환 합니다.
 
@@ -5156,7 +5156,7 @@ int GetWindowTextLength() const;
 
   [CWnd:: SetWindowText](#setwindowtext)의 예제를 참조 하세요.
 
-##  <a name="hidecaret"></a>CWnd:: HideCaret
+##  <a name="cwndhidecaret"></a><a name="hidecaret"></a>CWnd:: HideCaret
 
 디스플레이 화면에서 제거하여 캐럿을 숨깁니다.
 
@@ -5170,7 +5170,7 @@ void HideCaret();
 
 숨기기는 누적 됩니다. 행에서 `HideCaret`를 5 번 호출한 경우에는 `ShowCaret` 멤버 함수를 5 번 호출 해야 캐럿이 표시 됩니다.
 
-##  <a name="hilitemenuitem"></a>CWnd:: HiliteMenuItem
+##  <a name="cwndhilitemenuitem"></a><a name="hilitemenuitem"></a>CWnd:: HiliteMenuItem
 
 최상위 (메뉴 모음) 메뉴 항목에서 강조 표시 하거나 제거 합니다.
 
@@ -5208,7 +5208,7 @@ BOOL HiliteMenuItem(
 
 MF_HILITE 및 MF_UNHILITE 플래그는이 멤버 함수 에서만 사용할 수 있습니다. [CMenu:: ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) 멤버 함수에서 사용할 수 없습니다.
 
-##  <a name="htmlhelp"></a>CWnd:: HtmlHelp
+##  <a name="cwndhtmlhelp"></a><a name="htmlhelp"></a>CWnd:: HtmlHelp
 
 이 멤버 함수를 호출 하 여 HTMLHelp 응용 프로그램을 호출 합니다.
 
@@ -5230,7 +5230,7 @@ virtual void HtmlHelp(
 
 자세한 내용은 [CWinApp:: HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) 를 참조 하세요.
 
-##  <a name="initdynamiclayout"></a>CWnd:: InitDynamicLayout
+##  <a name="cwndinitdynamiclayout"></a><a name="initdynamiclayout"></a>CWnd:: InitDynamicLayout
 
 창의 동적 레이아웃을 초기화하기 위해 프레임워크에서 호출됩니다.
 
@@ -5242,7 +5242,7 @@ void InitDynamicLayout();
 
 이 메서드를 직접 호출하지 마세요.
 
-##  <a name="invalidate"></a>CWnd:: 무효화할
+##  <a name="cwndinvalidate"></a><a name="invalidate"></a>CWnd:: 무효화할
 
 `CWnd`의 전체 클라이언트 영역을 무효화 합니다.
 
@@ -5267,7 +5267,7 @@ void Invalidate(BOOL bErase = TRUE);
 
   [CWnd:: UpdateWindow](#updatewindow)의 예제를 참조 하세요.
 
-##  <a name="invalidaterect"></a>CWnd:: InvalidateRect
+##  <a name="cwndinvalidaterect"></a><a name="invalidaterect"></a>CWnd:: InvalidateRect
 
 `CWnd` 업데이트 영역에 해당 사각형을 추가 하 여 지정 된 사각형 내의 클라이언트 영역을 무효화 합니다.
 
@@ -5293,7 +5293,7 @@ void InvalidateRect(
 
 `CWnd` 업데이트 지역이 비어 있지 않고 해당 창에 대 한 응용 프로그램 큐에 다른 메시지가 없는 경우 Windows에서 [WM_PAINT](#onpaint) 메시지를 보냅니다.
 
-##  <a name="invalidatergn"></a>CWnd:: InvalidateRgn
+##  <a name="cwndinvalidatergn"></a><a name="invalidatergn"></a>CWnd:: InvalidateRgn
 
 지정 된 영역 내에서 클라이언트 영역을 `CWnd`의 현재 업데이트 영역에 추가 하 여 무효화 합니다.
 
@@ -5321,7 +5321,7 @@ void InvalidateRgn(
 
 지정 된 지역은 지역 함수 중 하나에서 이전에 생성 된 것 이어야 합니다.
 
-##  <a name="invokehelper"></a>CWnd:: InvokeHelper
+##  <a name="cwndinvokehelper"></a><a name="invokehelper"></a>CWnd:: InvokeHelper
 
 *Wflags*에 지정 된 컨텍스트에서 *dwdispid*로 지정 된 ActiveX 컨트롤 메서드 또는 속성을 호출 하려면이 멤버 함수를 호출 합니다.
 
@@ -5366,7 +5366,7 @@ void AFX_CDECL InvokeHelper(
 
 ActiveX 컨트롤 컨테이너에서이 멤버 함수를 사용 하는 방법에 대 한 자세한 내용은 activex 컨트롤 컨테이너 [: Activex 컨트롤 컨테이너에서 Activex 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)문서를 참조 하세요.
 
-##  <a name="ischild"></a>CWnd:: IsChild
+##  <a name="cwndischild"></a><a name="ischild"></a>CWnd:: IsChild
 
 *PWnd* 에 의해 지정 된 창이 자식 창 인지 아니면 `CWnd`의 다른 직계 하위 항목 인지를 나타냅니다.
 
@@ -5387,7 +5387,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 자식 창은 `CWnd` 개체가 부모 창에서 자식 창으로 이어지는 부모 창 체인에 있는 경우 `CWnd`의 직계 하위 항목입니다.
 
-##  <a name="isd2dsupportenabled"></a>CWnd:: IsD2DSupportEnabled
+##  <a name="cwndisd2dsupportenabled"></a><a name="isd2dsupportenabled"></a>CWnd:: IsD2DSupportEnabled
 
 D2D 지원을 사용할 수 있는지 여부를 확인 합니다.
 
@@ -5399,7 +5399,7 @@ BOOL IsD2DSupportEnabled();
 
 기능이 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-##  <a name="isdialogmessage"></a>CWnd:: IsDialogMessage
+##  <a name="cwndisdialogmessage"></a><a name="isdialogmessage"></a>CWnd:: IsDialogMessage
 
 지정 된 메시지가 모덜리스 대화 상자 인지 여부를 확인 하려면이 멤버 함수를 호출 합니다. 인 경우이 함수는 메시지를 처리 합니다.
 
@@ -5424,7 +5424,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 `IsDialogMessage`에서 처리 한 메시지는 이미 처리 되었으므로 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 또는 [dispatchmessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 함수로 전달 하면 안 됩니다.
 
-##  <a name="isdlgbuttonchecked"></a>CWnd:: IsDlgButtonChecked
+##  <a name="cwndisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWnd:: IsDlgButtonChecked
 
 단추 컨트롤 옆에 확인 표시가 있는지 여부를 확인 합니다.
 
@@ -5445,7 +5445,7 @@ Button 컨트롤의 정수 식별자를 지정 합니다.
 
 단추가 3 가지 상태 컨트롤인 경우 멤버 함수는이를 흐리게, 확인 또는 둘 다 수행할지 여부를 결정 합니다.
 
-##  <a name="isdynamiclayoutenabled"></a>CWnd:: IsDynamicLayoutEnabled
+##  <a name="cwndisdynamiclayoutenabled"></a><a name="isdynamiclayoutenabled"></a>CWnd:: IsDynamicLayoutEnabled
 
 이 창에서 동적 레이아웃이 사용되는지 여부를 확인합니다. 동적 레이아웃이 사용되는 경우 사용자가 부모 창의 크기를 조정하면 자식 창의 위치 및 크기가 변경될 수 있습니다.
 
@@ -5459,7 +5459,7 @@ BOOL IsDynamicLayoutEnabled() const;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isiconic"></a>CWnd:: IsIconic
+##  <a name="cwndisiconic"></a><a name="isiconic"></a>CWnd:: IsIconic
 
 `CWnd` 최소화 되는지 여부를 지정 합니다 (아이콘).
 
@@ -5475,7 +5475,7 @@ BOOL IsIconic() const;
 
 [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]
 
-##  <a name="istouchwindow"></a>CWnd:: IsTouchWindow
+##  <a name="cwndistouchwindow"></a><a name="istouchwindow"></a>CWnd:: IsTouchWindow
 
 `CWnd`가 터치를 지원하는지 여부를 지정합니다.
 
@@ -5489,7 +5489,7 @@ BOOL IsTouchWindow() const;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="iswindowenabled"></a>CWnd:: IsWindowEnabled
+##  <a name="cwndiswindowenabled"></a><a name="iswindowenabled"></a>CWnd:: IsWindowEnabled
 
 마우스 및 키보드 입력에 `CWnd`을 사용할 수 있는지 여부를 지정 합니다.
 
@@ -5505,7 +5505,7 @@ BOOL IsWindowEnabled() const;
 
 [!code-cpp[NVC_MFCWindowing#102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]
 
-##  <a name="iswindowvisible"></a>CWnd:: IsWindowVisible
+##  <a name="cwndiswindowvisible"></a><a name="iswindowvisible"></a>CWnd:: IsWindowVisible
 
 지정 된 창의 표시 상태를 확인 합니다.
 
@@ -5527,7 +5527,7 @@ BOOL IsWindowVisible() const;
 
 [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]
 
-##  <a name="iszoomed"></a>CWnd:: IsZoomed
+##  <a name="cwndiszoomed"></a><a name="iszoomed"></a>CWnd:: IsZoomed
 
 `CWnd` 최대화 되었는지 여부를 확인 합니다.
 
@@ -5539,7 +5539,7 @@ BOOL IsZoomed() const;
 
 `CWnd` 최대화 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
-##  <a name="killtimer"></a>CWnd:: KillTimer
+##  <a name="cwndkilltimer"></a><a name="killtimer"></a>CWnd:: KillTimer
 
 *NIDEvent* 로 식별 되는 타이머 이벤트를 이전 호출에서 `SetTimer`종료 합니다.
 
@@ -5564,7 +5564,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 
   [CWnd:: SetTimer](#settimer)의 예제를 참조 하세요.
 
-##  <a name="loaddynamiclayoutresource"></a>CWnd:: LoadDynamicLayoutResource
+##  <a name="cwndloaddynamiclayoutresource"></a><a name="loaddynamiclayoutresource"></a>CWnd:: LoadDynamicLayoutResource
 
 프레임워크에서 호출되어 리소스 파일에서 동적 레이아웃 정보를 로드합니다.
 
@@ -5585,7 +5585,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 
 이 메서드를 직접 호출하지 마세요.
 
-##  <a name="lockwindowupdate"></a>CWnd:: LockWindowUpdate
+##  <a name="cwndlockwindowupdate"></a><a name="lockwindowupdate"></a>CWnd:: LockWindowUpdate
 
 지정 된 창에서 그리기를 사용 하지 않도록 설정 합니다.
 
@@ -5607,7 +5607,7 @@ BOOL LockWindowUpdate();
 
 `LockWindowUpdate` 멤버 함수는 지정 된 창을 보이지 않도록 설정 하 고 [WS_VISIBLE](styles-used-by-mfc.md#window-styles) 스타일 비트를 지우지 않습니다.
 
-##  <a name="m_hwnd"></a>CWnd:: m_hWnd
+##  <a name="cwndm_hwnd"></a><a name="m_hwnd"></a>CWnd:: m_hWnd
 
 이 `CWnd`에 연결 된 Windows 창의 핸들입니다.
 
@@ -5619,7 +5619,7 @@ HWND m_hWnd;
 
 `m_hWnd` 데이터 멤버는 HWND 형식의 공용 변수입니다.
 
-##  <a name="mapwindowpoints"></a>CWnd:: MapWindowPoints
+##  <a name="cwndmapwindowpoints"></a><a name="mapwindowpoints"></a>CWnd:: MapWindowPoints
 
 `CWnd`의 좌표 공간에서 다른 창의 좌표 공간으로 점 집합(맵)을 변환합니다.
 
@@ -5648,7 +5648,7 @@ void MapWindowPoints(
 *nCount*<br/>
 *Lppoint*가 가리키는 배열의 `POINT` 구조 수를 지정 합니다.
 
-##  <a name="messagebox"></a>CWnd:: MessageBox
+##  <a name="cwndmessagebox"></a><a name="messagebox"></a>CWnd:: MessageBox
 
 응용 프로그램에서 제공 하는 메시지 및 캡션과 [메시지 상자 스타일](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) 목록에 설명 된 미리 정의 된 아이콘 및 누름 단추의 조합을 포함 하는 창을 만들고 표시 합니다.
 
@@ -5691,7 +5691,7 @@ int MessageBox(
 
 [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]
 
-##  <a name="modifystyle"></a>CWnd:: ModifyStyle
+##  <a name="cwndmodifystyle"></a><a name="modifystyle"></a>CWnd:: ModifyStyle
 
 창의 스타일을 수정 하려면이 멤버 함수를 호출 합니다.
 
@@ -5740,7 +5740,7 @@ BOOL ModifyStyle(
 
 [!code-cpp[NVC_MFCWindowing#105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]
 
-##  <a name="modifystyleex"></a>CWnd:: ModifyStyleEx
+##  <a name="cwndmodifystyleex"></a><a name="modifystyleex"></a>CWnd:: ModifyStyleEx
 
 창의 확장 스타일을 수정 하려면이 멤버 함수를 호출 합니다.
 
@@ -5786,7 +5786,7 @@ BOOL ModifyStyleEx(
 
 [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]
 
-##  <a name="movewindow"></a>CWnd:: MoveWindow
+##  <a name="cwndmovewindow"></a><a name="movewindow"></a>CWnd:: MoveWindow
 
 위치와 차원을 변경 합니다.
 
@@ -5833,7 +5833,7 @@ void MoveWindow(
 
   [CWnd:: ClientToScreen](#clienttoscreen)의 예제를 참조 하세요.
 
-##  <a name="notifywinevent"></a>CWnd:: NotifyWinEvent
+##  <a name="cwndnotifywinevent"></a><a name="notifywinevent"></a>CWnd:: NotifyWinEvent
 
 미리 정의된 이벤트가 발생한 시스템에 신호를 보냅니다. 클라이언트 응용 프로그램에서 이벤트에 대 한 후크 함수를 등록 한 경우 시스템은 클라이언트의 후크 함수를 호출 합니다.
 
@@ -5859,7 +5859,7 @@ void NotifyWinEvent(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [NotifyWinEvent](/windows/win32/api/winuser/nf-winuser-notifywinevent)의 기능을 에뮬레이트합니다.
 
-##  <a name="onactivate"></a>CWnd:: OnActivate
+##  <a name="cwndonactivate"></a><a name="onactivate"></a>CWnd:: OnActivate
 
 `CWnd` 개체가 활성화 또는 비활성화 되는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -5896,7 +5896,7 @@ TRUE 이면 `CWnd` 활성화 됩니다. 그렇지 않은 경우 비활성화 됩
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onactivateapp"></a>CWnd:: Ono 앱
+##  <a name="cwndonactivateapp"></a><a name="onactivateapp"></a>CWnd:: Ono 앱
 
 프레임 워크는 활성화 되는 작업의 모든 최상위 창과 비활성화 되는 작업의 모든 최상위 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -5919,7 +5919,7 @@ afx_msg void OnActivateApp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onambientproperty"></a>CWnd:: OnAmbientProperty
+##  <a name="cwndonambientproperty"></a><a name="onambientproperty"></a>CWnd:: OnAmbientProperty
 
 프레임 워크는이 멤버 함수를 호출 하 여 OLE 컨트롤이 포함 된 창에서 앰비언트 속성 값을 가져옵니다.
 
@@ -5949,7 +5949,7 @@ virtual BOOL OnAmbientProperty(
 
 OLE 컨트롤 컨테이너에서 반환 되는 기본 앰비언트 속성 값을 해당 컨트롤에 맞게 변경 하려면이 함수를 재정의 합니다. 재정의 함수에서 처리 되지 않는 앰비언트 속성 요청은 기본 클래스 구현으로 전달 되어야 합니다.
 
-##  <a name="onappcommand"></a>CWnd:: OnAppCommand
+##  <a name="cwndonappcommand"></a><a name="onappcommand"></a>CWnd:: OnAppCommand
 
 프레임 워크는 사용자가 응용 프로그램 명령 이벤트를 생성할 때이 멤버 함수를 호출 합니다. 이러한 이벤트는 사용자가 응용 프로그램 명령 단추를 클릭 하거나 응용 프로그램 명령 키를 입력 하는 경우에 발생 합니다.
 
@@ -5977,7 +5977,7 @@ afx_msg void OnAppCommand(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onaskcbformatname"></a>CWnd:: OnAskCbFormatName
+##  <a name="cwndonaskcbformatname"></a><a name="onaskcbformatname"></a>CWnd:: OnAskCbFormatName
 
 클립보드에 CF_OWNERDISPLAY 형식에 대 한 데이터 핸들 (즉, 클립보드 소유자가 클립보드 내용을 표시 하는 경우)이 포함 된 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6004,7 +6004,7 @@ afx_msg void OnAskCbFormatName(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncancelmode"></a>CWnd:: OnCancelMode
+##  <a name="cwndoncancelmode"></a><a name="oncancelmode"></a>CWnd:: OnCancelMode
 
 프레임 워크는이 멤버 함수를 호출 하 여 내부 모드를 취소 `CWnd`에 알립니다.
 
@@ -6018,7 +6018,7 @@ afx_msg void OnCancelMode();
 
 기본 구현은 [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) Windows 함수를 호출 하 여 응답 합니다. 다른 모드를 처리 하려면 파생 클래스에서이 멤버 함수를 재정의 합니다.
 
-##  <a name="oncapturechanged"></a>CWnd:: OnCaptureChanged
+##  <a name="cwndoncapturechanged"></a><a name="oncapturechanged"></a>CWnd:: OnCaptureChanged
 
 프레임 워크는이 멤버 함수를 호출 하 여 마우스 캡처가 손실 되 고 있음을 창에 알립니다.
 
@@ -6040,7 +6040,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onchangecbchain"></a>CWnd:: OnChangeCbChain
+##  <a name="cwndonchangecbchain"></a><a name="onchangecbchain"></a>CWnd:: OnChangeCbChain
 
 프레임 워크는 클립보드 뷰어 체인의 각 창에 대해이 멤버 함수를 호출 하 여 창이 체인에서 제거 되 고 있음을 알립니다.
 
@@ -6065,7 +6065,7 @@ afx_msg void OnChangeCbChain(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onchangeuistate"></a>CWnd:: OnChangeUIState
+##  <a name="cwndonchangeuistate"></a><a name="onchangeuistate"></a>CWnd:: OnChangeUIState
 
 UI(사용자 인터페이스) 상태를 변경해야 할 때 호출됩니다.
 
@@ -6099,7 +6099,7 @@ afx_msg void OnChangeUIState(
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate) 메시지의 기능을 에뮬레이트합니다.
 
-##  <a name="onchar"></a>CWnd:: OnChar
+##  <a name="cwndonchar"></a><a name="onchar"></a>CWnd:: OnChar
 
 키 입력이 비시스템 문자로 변환 될 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6142,7 +6142,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onchartoitem"></a>CWnd:: OnCharToItem
+##  <a name="cwndonchartoitem"></a><a name="onchartoitem"></a>CWnd:: OnCharToItem
 
 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일이 있는 목록 상자가 [WM_CHAR](#onchar) 메시지에 응답 하 여 소유자 [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) 메시지를 보낼 때 호출 됩니다.
 
@@ -6173,7 +6173,7 @@ afx_msg int OnCharToItem(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onchildactivate"></a>CWnd:: OnChildActivate
+##  <a name="cwndonchildactivate"></a><a name="onchildactivate"></a>CWnd:: OnChildActivate
 
 `CWnd` 개체가 MDI (다중 문서 인터페이스) 자식 창인 경우에는 사용자가 창의 제목 표시줄을 클릭 하거나 창이 활성화, 이동 또는 크기 조정 될 때 프레임 워크에서 `OnChildActivate`를 호출 합니다.
 
@@ -6181,7 +6181,7 @@ afx_msg int OnCharToItem(
 afx_msg void OnChildActivate();
 ```
 
-##  <a name="onchildnotify"></a>CWnd:: OnChildNotify
+##  <a name="cwndonchildnotify"></a><a name="onchildnotify"></a>CWnd:: OnChildNotify
 
 이 멤버 함수는이 창에 적용 되는 알림 메시지를 받을 때이 창의 부모 창에서 호출 됩니다.
 
@@ -6219,7 +6219,7 @@ virtual BOOL OnChildNotify(
 
 컨트롤이 알림 메시지에 응답 하는 방식을 확장 하려면이 멤버 함수를 재정의 합니다.
 
-##  <a name="onclipboardupdate"></a>CWnd:: OnClipboardUpdate
+##  <a name="cwndonclipboardupdate"></a><a name="onclipboardupdate"></a>CWnd:: OnClipboardUpdate
 
 프레임 워크는 클립보드의 내용이 변경 될 때이 멤버 함수를 호출 합니다.
 
@@ -6227,7 +6227,7 @@ virtual BOOL OnChildNotify(
 afx_msg void OnClipboardUpdate();
 ```
 
-##  <a name="onclose"></a>CWnd:: OnClose
+##  <a name="cwndonclose"></a><a name="onclose"></a>CWnd:: OnClose
 
 프레임 워크는 `CWnd` 또는 응용 프로그램을 종료 하는 신호로이 멤버 함수를 호출 합니다.
 
@@ -6239,7 +6239,7 @@ afx_msg void OnClose();
 
 기본 구현에서는 `DestroyWindow`를 호출 합니다.
 
-##  <a name="oncolorizationcolorchanged"></a>CWnd:: OnColorizationColorChanged
+##  <a name="cwndoncolorizationcolorchanged"></a><a name="oncolorizationcolorchanged"></a>CWnd:: OnColorizationColorChanged
 
 비클라이언트 영역에 대 한 렌더링 정책이 변경 된 경우 프레임 워크는이 멤버를 호출 합니다.
 
@@ -6263,7 +6263,7 @@ afx_msg void OnColorizationColorChanged(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncommand"></a>CWnd:: OnCommand
+##  <a name="cwndoncommand"></a><a name="oncommand"></a>CWnd:: OnCommand
 
 프레임 워크는 사용자가 메뉴에서 항목을 선택 하거나, 자식 컨트롤이 알림 메시지를 보내거나, 액셀러레이터 키 입력이 변환 될 때이 멤버 함수를 호출 합니다.
 
@@ -6294,7 +6294,7 @@ virtual BOOL OnCommand(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncompacting"></a>CWnd:: OnCompacting
+##  <a name="cwndoncompacting"></a><a name="oncompacting"></a>CWnd:: OnCompacting
 
 Windows에서 30-60 초 간격을 초과 하는 시스템 시간의 12.5% 이상이 메모리를 압축 하는 것을 감지 하는 경우 프레임 워크는 모든 최상위 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -6316,7 +6316,7 @@ afx_msg void OnCompacting(UINT nCpuTime);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncompareitem"></a>CWnd:: OnCompareItem
+##  <a name="cwndoncompareitem"></a><a name="oncompareitem"></a>CWnd:: OnCompareItem
 
 프레임 워크는이 멤버 함수를 호출 하 여 자식 정렬 된 소유자 그리기 콤보 또는 목록 상자에서 새 항목의 상대 위치를 지정 합니다.
 
@@ -6355,7 +6355,7 @@ Combo 또는 list 상자의 두 항목은 *Lpcompareitemstruct*가 가리키는 
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncompositionchanged"></a>CWnd:: OnCompositionChanged
+##  <a name="cwndoncompositionchanged"></a><a name="oncompositionchanged"></a>CWnd:: OnCompositionChanged
 
 이 프레임 워크는 바탕 화면 창 관리자 (DWM) 컴퍼지션을 사용 하거나 사용 하지 않도록 설정할 때 모든 최상위 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -6370,7 +6370,7 @@ afx_msg void OnCompositionChanged();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncontextmenu"></a>CWnd:: OnContextMenu
+##  <a name="cwndoncontextmenu"></a><a name="oncontextmenu"></a>CWnd:: OnContextMenu
 
 사용자가 창에서 오른쪽 마우스 단추 (마우스 오른쪽 단추 클릭)를 클릭 했을 때 프레임 워크에서 호출 됩니다.
 
@@ -6394,7 +6394,7 @@ afx_msg void OnContextMenu(
 
 상황에 맞는 메뉴를 표시 하지 않는 경우이 메시지를 [DefWindowProc](#defwindowproc) 함수에 전달 해야 합니다. 창이 자식 창인 경우 `DefWindowProc`는 부모에 게 메시지를 보냅니다. 그렇지 않으면 지정 된 위치가 창의 캡션에 있으면 `DefWindowProc` 기본 상황에 맞는 메뉴를 표시 합니다.
 
-##  <a name="oncopydata"></a>CWnd:: OnCopyData
+##  <a name="cwndoncopydata"></a><a name="oncopydata"></a>CWnd:: OnCopyData
 
 이 멤버 함수는 한 응용 프로그램에서 다른 응용 프로그램으로 데이터를 복사 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -6429,7 +6429,7 @@ afx_msg BOOL OnCopyData(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oncreate"></a>CWnd:: OnCreate
+##  <a name="cwndoncreate"></a><a name="oncreate"></a>CWnd:: OnCreate
 
 응용 프로그램에서 [Create](#create) 또는 [createex](#createex) 멤버 함수를 호출 하 여 Windows 창을 만들도록 요청할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6457,7 +6457,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onctlcolor"></a>CWnd:: OnCtlColor
+##  <a name="cwndonctlcolor"></a><a name="onctlcolor"></a>CWnd:: OnCtlColor
 
 프레임 워크는 자식 컨트롤이 그려질 때이 멤버 함수를 호출 합니다.
 
@@ -6514,7 +6514,7 @@ afx_msg HBRUSH OnCtlColor(
 
 [!code-cpp[NVC_MFCWindowing#107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]
 
-##  <a name="ondeadchar"></a>CWnd:: OnDeadChar
+##  <a name="cwndondeadchar"></a><a name="ondeadchar"></a>CWnd:: OnDeadChar
 
 [OnKeyUp](#onkeyup) 멤버 함수 및 [OnKeyDown](#onkeydown) 멤버 함수가 호출 될 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6559,7 +6559,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ondeleteitem"></a>CWnd:: OnDeleteItem
+##  <a name="cwndondeleteitem"></a><a name="ondeleteitem"></a>CWnd:: OnDeleteItem
 
 프레임 워크는이 멤버 함수를 호출 하 여 목록 상자 또는 콤보 상자가 소멸 되거나 항목이 [ccombobox::D eletestring](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox::D eletestring](../../mfc/reference/clistbox-class.md#deletestring), [ccombobox:: ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent)또는 [CListBox:: resetcontent](../../mfc/reference/clistbox-class.md#resetcontent)에 의해 제거 되었음을 소유자 그리기 목록 상자 또는 콤보 상자의 소유자에 게 알립니다.
 
@@ -6584,7 +6584,7 @@ WM_DELETEITEM 메시지를 보낸 컨트롤의 식별자입니다.
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ondestroy"></a>CWnd:: OnDestroy
+##  <a name="cwndondestroy"></a><a name="ondestroy"></a>CWnd:: OnDestroy
 
 프레임 워크는이 멤버 함수를 호출 하 여 `CWnd` 개체가 제거 중임을 알립니다.
 
@@ -6600,7 +6600,7 @@ afx_msg void OnDestroy();
 
 소멸 되는 `CWnd` 개체가 클립보드 뷰어 체인의 일부 ( [SetClipboardViewer](#setclipboardviewer) 멤버 함수를 호출 하 여 설정) 인 경우 `CWnd` `OnDestroy` 함수에서 반환 하기 전에 [ChangeClipboardChain](#changeclipboardchain) 멤버 함수를 호출 하 여 클립보드 뷰어 체인에서 자신을 제거 해야 합니다.
 
-##  <a name="ondestroyclipboard"></a>CWnd:: OnDestroyClipboard
+##  <a name="cwndondestroyclipboard"></a><a name="ondestroyclipboard"></a>CWnd:: OnDestroyClipboard
 
 [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows 함수를 호출 하 여 클립보드를 비울 때 프레임 워크는 클립보드 소유자에 대해이 멤버 함수를 호출 합니다.
 
@@ -6608,7 +6608,7 @@ afx_msg void OnDestroy();
 afx_msg void OnDestroyClipboard();
 ```
 
-##  <a name="ondevicechange"></a>CWnd:: OnDeviceChange
+##  <a name="cwndondevicechange"></a><a name="ondevicechange"></a>CWnd:: OnDeviceChange
 
 프레임 워크는이 멤버 함수를 호출 하 여 장치 또는 컴퓨터의 하드웨어 구성에 대 한 변경 내용을 응용 프로그램 또는 장치 드라이버에 알립니다.
 
@@ -6653,7 +6653,7 @@ afx_msg BOOL OnDeviceChange(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ondevmodechange"></a>CWnd:: OnDevModeChange
+##  <a name="cwndondevmodechange"></a><a name="ondevmodechange"></a>CWnd:: OnDevModeChange
 
 사용자가 장치 모드 설정을 변경 하는 경우 프레임 워크는 모든 최상위 `CWnd` 개체에 대해이 멤버 함수를 호출 합니다.
 
@@ -6675,7 +6675,7 @@ WM_DEVMODECHANGE 메시지를 처리 하는 응용 프로그램은 장치 모드
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ondrawclipboard"></a>CWnd:: OnDrawClipboard
+##  <a name="cwndondrawclipboard"></a><a name="ondrawclipboard"></a>CWnd:: OnDrawClipboard
 
 프레임 워크는 클립보드의 내용이 변경 될 때 클립보드 뷰어 체인의 각 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -6689,9 +6689,9 @@ afx_msg void OnDrawClipboard();
 
 `OnDrawClipboard` 호출을 받는 각 창은 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 함수를 호출 하 여 클립보드 뷰어 체인의 다음 창에 [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) 메시지를 전달 해야 합니다. [SetClipboardViewer](#setclipboardviewer) 멤버 함수에서 다음 창의 핸들을 반환 합니다. [Onchangecbchain](#onchangecbchain) 멤버 함수 호출에 대 한 응답으로 수정할 수 있습니다.
 
-##  <a name="ondrawiconicthumbnailorlivepreview"></a>CWnd:: OnDrawIconicThumbnailOrLivePreview
+##  <a name="cwndondrawiconicthumbnailorlivepreview"></a><a name="ondrawiconicthumbnailorlivepreview"></a>CWnd:: OnDrawIconicThumbnailOrLivePreview
 
-Windows 7 탭 미리 보기 또는 애플리케이션 피킹(Peeking)용 클라이언트에 표시할 비트맵을 가져와야 하는 경우 프레임워크에서 호출됩니다.
+Windows 7 탭 미리 보기 또는 응용 프로그램 피킹(Peeking)용 클라이언트에 표시할 비트맵을 가져와야 하는 경우 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawIconicThumbnailOrLivePreview(
@@ -6723,7 +6723,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 미리 보기 및 피킹 (peeking)을 사용자 지정 하기 위해 파생 클래스에서이 메서드를 재정의 하 고 지정 된 장치 컨텍스트에 그립니다. *Bthumbnail* 이 TRUE 이면 *szRequiredThumbnailSize* 을 무시할 수 있습니다. 이 경우 전체 크기의 비트맵 (즉, 전체 클라이언트 영역을 포함 하는 비트맵)을 그리는 것을 알고 있어야 합니다. *Dc*(장치 컨텍스트)는 선택한 32 비트 비트맵과 함께 제공 됩니다. 기본 구현에서는 PRF_CLIENT, PRF_CHILDREN 및 PRF_NONCLIENT 플래그를 사용 하 여이 창에 WM_PRINT을 보냅니다.
 
-##  <a name="ondrawitem"></a>CWnd:: OnDrawItem
+##  <a name="cwndondrawitem"></a><a name="ondrawitem"></a>CWnd:: OnDrawItem
 
 컨트롤 또는 메뉴의 시각적 측면이 변경 된 경우 프레임 워크는 소유자 그리기 단추 컨트롤, 콤보 상자 컨트롤, 목록 상자 컨트롤 또는 메뉴의 소유자에 대해이 멤버 함수를 호출 합니다.
 
@@ -6752,7 +6752,7 @@ WM_DRAWITEM 메시지를 보낸 컨트롤의 식별자를 포함 합니다. 메�
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ondropfiles"></a>CWnd:: OnDropFiles
+##  <a name="cwndondropfiles"></a><a name="ondropfiles"></a>CWnd:: OnDropFiles
 
 프레임 워크는 사용자가 끌어 놓은 파일의 수신자로 등록 된 창에서 마우스 왼쪽 단추를 놓을 때이 멤버 함수를 호출 합니다.
 
@@ -6772,7 +6772,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onenable"></a>CWnd:: OnEnable
+##  <a name="cwndonenable"></a><a name="onenable"></a>CWnd:: OnEnable
 
 응용 프로그램에서 `CWnd` 개체의 활성화 상태를 변경할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6792,7 +6792,7 @@ afx_msg void OnEnable(BOOL bEnable);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onendsession"></a>CWnd:: OnEndSession
+##  <a name="cwndonendsession"></a><a name="onendsession"></a>CWnd:: OnEndSession
 
 `CWnd` 개체가 [Onqueryendsession](#onqueryendsession) 멤버 함수 호출에서 0이 아닌 값을 반환한 후 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -6816,7 +6816,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onenteridle"></a>CWnd:: OnEnterIdle
+##  <a name="cwndonenteridle"></a><a name="onenteridle"></a>CWnd:: OnEnterIdle
 
 프레임 워크는이 멤버 함수를 호출 하 여 모달 대화 상자 또는 메뉴가 유휴 상태로 들어가는 응용 프로그램의 주 창 프로시저를 알립니다.
 
@@ -6845,7 +6845,7 @@ afx_msg void OnEnterIdle(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onentermenuloop"></a>CWnd:: OnEnterMenuLoop
+##  <a name="cwndonentermenuloop"></a><a name="onentermenuloop"></a>CWnd:: OnEnterMenuLoop
 
 프레임 워크는 메뉴 모달 루프가 입력 될 때이 멤버 함수를 호출 합니다.
 
@@ -6863,7 +6863,7 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onentersizemove"></a>CWnd:: OnEnterSizeMove
+##  <a name="cwndonentersizemove"></a><a name="onentersizemove"></a>CWnd:: OnEnterSizeMove
 
 프레임 워크는 영향을 받은 창이 이동 또는 크기 조정 모달 루프를 시작한 후 한 번이 멤버 함수를 호출 합니다.
 
@@ -6880,7 +6880,7 @@ afx_msg void OnEnterSizeMove();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onerasebkgnd"></a>CWnd:: OnEraseBkgnd
+##  <a name="cwndonerasebkgnd"></a><a name="onerasebkgnd"></a>CWnd:: OnEraseBkgnd
 
 프레임 워크는 `CWnd` 개체 배경을 지워야 하는 경우 (예: 크기를 조정 하는 경우)이 멤버 함수를 호출 합니다.
 
@@ -6912,7 +6912,7 @@ Windows에서는 MM_TEXT 매핑 모드를 사용 하 여 배경을 계산 한다
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onexitmenuloop"></a>CWnd:: OnExitMenuLoop
+##  <a name="cwndonexitmenuloop"></a><a name="onexitmenuloop"></a>CWnd:: OnExitMenuLoop
 
 프레임 워크는 메뉴 모달 루프가 종료 될 때이 멤버 함수를 호출 합니다.
 
@@ -6930,7 +6930,7 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onexitsizemove"></a>CWnd:: OnExitSizeMove
+##  <a name="cwndonexitsizemove"></a><a name="onexitsizemove"></a>CWnd:: OnExitSizeMove
 
 프레임 워크는 영향을 받은 창이 이동 또는 크기 조정 모달 루프를 종료 한 후 한 번이 멤버 함수를 호출 합니다.
 
@@ -6947,7 +6947,7 @@ afx_msg void OnExitSizeMove();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onfontchange"></a>CWnd:: On글꼴 변경
+##  <a name="cwndonfontchange"></a><a name="onfontchange"></a>CWnd:: On글꼴 변경
 
 시스템의 모든 최상위 창은 응용 프로그램에서 글꼴 리소스의 풀을 변경한 후 프레임 워크에서 `OnFontChange` 호출을 받습니다.
 
@@ -6961,7 +6961,7 @@ afx_msg void OnFontChange();
 
 이 메시지를 보내려면 *hWnd* 매개 변수를 HWND_BROADCAST 설정 하 여 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 함수를 사용 합니다.
 
-##  <a name="ongetdlgcode"></a>CWnd:: OnGetDlgCode
+##  <a name="cwndongetdlgcode"></a><a name="ongetdlgcode"></a>CWnd:: OnGetDlgCode
 
 컨트롤에서 화살표 키 및 Tab 키 입력 자체를 처리할 수 있도록 컨트롤에 대해 호출됩니다.
 
@@ -7001,7 +7001,7 @@ afx_msg UINT OnGetDlgCode();
 
 미리 정의 된 컨트롤 클래스의 기본 `OnGetDlgCode` 함수는 각 클래스에 적합 한 코드를 반환 합니다.
 
-##  <a name="ongetminmaxinfo"></a>CWnd:: OnGetMinMaxInfo
+##  <a name="cwndongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CWnd:: OnGetMinMaxInfo
 
 프레임 워크는 Windows에서 최대화 된 위치나 크기 또는 최소 또는 최대 추적 크기를 알아야 할 때마다이 멤버 함수를 호출 합니다.
 
@@ -7023,9 +7023,9 @@ Windows는 다양 한 위치 및 차원에 대 한 기본값을 지정 하는 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onhelp"></a>CWnd:: OnHelp
+##  <a name="cwndonhelp"></a><a name="onhelp"></a>CWnd:: OnHelp
 
-현재 컨텍스트를 사용하여 애플리케이션 내에서 F1 도움말을 처리합니다.
+현재 컨텍스트를 사용하여 응용 프로그램 내에서 F1 도움말을 처리합니다.
 
 ```
 afx_msg void OnHelp();
@@ -7035,7 +7035,7 @@ afx_msg void OnHelp();
 
 자세한 내용은 [CWinApp:: OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) 를 참조 하세요.
 
-##  <a name="onhelpfinder"></a>CWnd:: OnHelpFinder
+##  <a name="cwndonhelpfinder"></a><a name="onhelpfinder"></a>CWnd:: OnHelpFinder
 
 ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리 합니다.
 
@@ -7047,7 +7047,7 @@ afx_msg void OnHelpFinder();
 
 자세한 내용은 [CWinApp:: OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder) 를 참조 하세요.
 
-##  <a name="onhelpindex"></a>CWnd:: OnHelpIndex
+##  <a name="cwndonhelpindex"></a><a name="onhelpindex"></a>CWnd:: OnHelpIndex
 
 ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.
 
@@ -7059,7 +7059,7 @@ afx_msg void OnHelpIndex();
 
 자세한 내용은 [CWinApp:: OnHelpIndex](../../mfc/reference/cwinapp-class.md#onhelpindex) 를 참조 하세요.
 
-##  <a name="onhelpinfo"></a>CWnd:: OnHelpInfo
+##  <a name="cwndonhelpinfo"></a><a name="onhelpinfo"></a>CWnd:: OnHelpInfo
 
 사용자가 F1 키를 누를 때 프레임워크에서 호출됩니다.
 
@@ -7080,7 +7080,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 
 F1 키를 누르면 메뉴가 활성화 되 면 메뉴와 연결 된 창에 WM_HELP 전송 됩니다. 그렇지 않으면 키보드 포커스가 있는 창에 WM_HELP 전송 됩니다. 창에 키보드 포커스가 없는 경우 WM_HELP 현재 활성 창으로 전송 됩니다.
 
-##  <a name="onhelpusing"></a>CWnd:: OnHelpUsing
+##  <a name="cwndonhelpusing"></a><a name="onhelpusing"></a>CWnd:: OnHelpUsing
 
 ID_HELP_USING 명령을 처리 합니다.
 
@@ -7092,7 +7092,7 @@ afx_msg void OnHelpUsing();
 
 자세한 내용은 [CWinApp:: OnHelpUsing](../../mfc/reference/cwinapp-class.md#onhelpusing) 을 참조 하세요.
 
-##  <a name="onhotkey"></a>CWnd:: OnHotKey
+##  <a name="cwndonhotkey"></a><a name="onhotkey"></a>CWnd:: OnHotKey
 
 사용자가 시스템 전체 핫 키를 누를 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7118,7 +7118,7 @@ afx_msg void OnHotKey(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onhscroll"></a>CWnd:: OnHScroll
+##  <a name="cwndonhscroll"></a><a name="onhscroll"></a>CWnd:: OnHScroll
 
 프레임 워크는 사용자가 창의 가로 스크롤 막대를 클릭할 때이 멤버 함수를 호출 합니다.
 
@@ -7171,7 +7171,7 @@ afx_msg void OnHScroll(
 
 [!code-cpp[NVC_MFCWindowing#108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]
 
-##  <a name="onhscrollclipboard"></a>CWnd:: OnHScrollClipboard
+##  <a name="cwndonhscrollclipboard"></a><a name="onhscrollclipboard"></a>CWnd:: OnHScrollClipboard
 
 클립보드 소유자의 `OnHScrollClipboard` 멤버 함수는 클립보드 데이터가 `CF_OWNERDISPLAY` 형식이 고 클립보드 뷰어의 가로 스크롤 막대에 이벤트가 있는 경우 클립보드 뷰어에서 호출 됩니다.
 
@@ -7216,7 +7216,7 @@ afx_msg void OnHScrollClipboard(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oniconerasebkgnd"></a>CWnd:: OnIconEraseBkgnd
+##  <a name="cwndoniconerasebkgnd"></a><a name="oniconerasebkgnd"></a>CWnd:: OnIconEraseBkgnd
 
 아이콘을 그리기 전에 아이콘의 배경을 채워야 할 때 프레임 워크는 최소화 된 (아이콘) `CWnd` 개체에 대해이 멤버 함수를 호출 합니다.
 
@@ -7238,7 +7238,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oninitmenu"></a>CWnd:: OnInitMenu
+##  <a name="cwndoninitmenu"></a><a name="oninitmenu"></a>CWnd:: OnInitMenu
 
 프레임 워크는 메뉴가 활성화 될 때이 멤버 함수를 호출 합니다.
 
@@ -7260,7 +7260,7 @@ afx_msg void OnInitMenu(CMenu* pMenu);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oninitmenupopup"></a>CWnd:: OnInitMenuPopup
+##  <a name="cwndoninitmenupopup"></a><a name="oninitmenupopup"></a>CWnd:: OnInitMenuPopup
 
 이 프레임 워크는 팝업 메뉴가 활성화 될 때이 멤버 함수를 호출 합니다.
 
@@ -7289,7 +7289,7 @@ afx_msg void OnInitMenuPopup(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oninputdevicechange"></a>CWnd:: OnInputDeviceChange
+##  <a name="cwndoninputdevicechange"></a><a name="oninputdevicechange"></a>CWnd:: OnInputDeviceChange
 
 시스템에서 i/o 장치를 추가 하거나 제거할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7310,7 +7310,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oninputlangchange"></a>CWnd:: OnInputLangChange
+##  <a name="cwndoninputlangchange"></a><a name="oninputlangchange"></a>CWnd:: OnInputLangChange
 
 응용 프로그램의 입력 언어가 변경 된 후 프레임 워크는 영향을 받는 최상위 창에 대해이 멤버를 호출 합니다.
 
@@ -7334,7 +7334,7 @@ afx_msg void OnInputLangChange(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="oninputlangchangerequest"></a>CWnd:: OnInputLangChangeRequest
+##  <a name="cwndoninputlangchangerequest"></a><a name="oninputlangchangerequest"></a>CWnd:: OnInputLangChangeRequest
 
 프레임 워크는 사용자가 새 입력 언어를 선택할 때 포커스가 있는 창에 대해이 멤버를 호출 합니다.
 
@@ -7358,7 +7358,7 @@ afx_msg void OnInputLangChangeRequest(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onkeydown"></a>CWnd:: OnKeyDown
+##  <a name="cwndonkeydown"></a><a name="onkeydown"></a>CWnd:: OnKeyDown
 
 키가 아닌 키를 누르면 프레임 워크가이 멤버 함수를 호출 합니다.
 
@@ -7403,7 +7403,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onkeyup"></a>CWnd:: OnKeyUp
+##  <a name="cwndonkeyup"></a><a name="onkeyup"></a>CWnd:: OnKeyUp
 
 키가 아닌 키가 릴리스되면 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7446,7 +7446,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onkillfocus"></a>CWnd:: OnKillFocus
+##  <a name="cwndonkillfocus"></a><a name="onkillfocus"></a>CWnd:: OnKillFocus
 
 프레임 워크는 입력 포커스가 손실 되기 직전에이 멤버 함수를 호출 합니다.
 
@@ -7466,7 +7466,7 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onlbuttondblclk"></a>CWnd:: OnLButtonDblClk
+##  <a name="cwndonlbuttondblclk"></a><a name="onlbuttondblclk"></a>CWnd:: OnLButtonDblClk
 
 프레임 워크는 사용자가 왼쪽 마우스 단추를 두 번 클릭할 때이 멤버 함수를 호출 합니다.
 
@@ -7501,7 +7501,7 @@ CS_DBLCLKS [예: wndclassa](/windows/win32/api/winuser/ns-winuser-wndclassw) 스
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onlbuttondown"></a>CWnd:: OnLButtonDown
+##  <a name="cwndonlbuttondown"></a><a name="onlbuttondown"></a>CWnd:: OnLButtonDown
 
 사용자가 마우스 왼쪽 단추를 누를 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7534,7 +7534,7 @@ afx_msg void OnLButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onlbuttonup"></a>CWnd:: OnLButtonUp
+##  <a name="cwndonlbuttonup"></a><a name="onlbuttonup"></a>CWnd:: OnLButtonUp
 
 사용자가 마우스 왼쪽 단추를 놓을 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7565,7 +7565,7 @@ afx_msg void OnLButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmbuttondblclk"></a>CWnd:: OnMButtonDblClk
+##  <a name="cwndonmbuttondblclk"></a><a name="onmbuttondblclk"></a>CWnd:: OnMButtonDblClk
 
 사용자가 마우스 가운데 단추를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -7600,7 +7600,7 @@ CS_DBLCLKS [예: wndclassa](/windows/win32/api/winuser/ns-winuser-wndclassw) 스
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmbuttondown"></a>CWnd:: OnMButtonDown
+##  <a name="cwndonmbuttondown"></a><a name="onmbuttondown"></a>CWnd:: OnMButtonDown
 
 사용자가 마우스 가운데 단추를 누를 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7633,7 +7633,7 @@ afx_msg void OnMButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmbuttonup"></a>CWnd:: OnMButtonUp
+##  <a name="cwndonmbuttonup"></a><a name="onmbuttonup"></a>CWnd:: OnMButtonUp
 
 사용자가 마우스 가운데 단추를 놓을 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7664,7 +7664,7 @@ afx_msg void OnMButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmdiactivate"></a>CWnd:: OnMDIActivate
+##  <a name="cwndonmdiactivate"></a><a name="onmdiactivate"></a>CWnd:: OnMDIActivate
 
 프레임 워크는 비활성화 되는 자식 창 및 활성화 되는 자식 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -7693,7 +7693,7 @@ Mdi 자식 창은 MDI 프레임 창과 별개로 활성화 됩니다. 프레임�
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmeasureitem"></a>CWnd:: OnMeasureItem
+##  <a name="cwndonmeasureitem"></a><a name="onmeasureitem"></a>CWnd:: OnMeasureItem
 
 프레임 워크는 컨트롤을 만들 때 소유자 그리기 단추, 콤보 상자, 목록 상자 또는 메뉴 항목의 소유자에 대 한 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -7725,7 +7725,7 @@ Windows에서는 [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) 메시지�
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmenuchar"></a>CWnd:: OnMenuChar
+##  <a name="cwndonmenuchar"></a><a name="onmenuchar"></a>CWnd:: OnMenuChar
 
 사용자가 현재 메뉴에 있는 미리 정의 된 니모닉과 일치 하지 않는 메뉴 니모닉 문자를 누를 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7766,7 +7766,7 @@ afx_msg LRESULT OnMenuChar(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmenudrag"></a>CWnd:: OnMenuDrag
+##  <a name="cwndonmenudrag"></a><a name="onmenudrag"></a>CWnd:: OnMenuDrag
 
 프레임 워크는 사용자가 메뉴 항목을 끌기 시작할 때 현재 끌어서 놓기 메뉴의이 멤버 함수를 호출 합니다.
 
@@ -7797,7 +7797,7 @@ afx_msg UINT OnMenuDrag(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmenugetobject"></a>CWnd:: OnMenuGetObject
+##  <a name="cwndonmenugetobject"></a><a name="onmenugetobject"></a>CWnd:: OnMenuGetObject
 
 이 프레임 워크는 마우스 커서가 메뉴 항목으로 들어가거나 항목의 가운데에서 항목의 위쪽 이나 아래쪽으로 이동할 때 현재 끌어서 놓기 메뉴의이 멤버 함수를 호출 합니다.
 
@@ -7825,7 +7825,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmenurbuttonup"></a>CWnd:: OnMenuRButtonUp
+##  <a name="cwndonmenurbuttonup"></a><a name="onmenurbuttonup"></a>CWnd:: OnMenuRButtonUp
 
 이 프레임 워크는 커서가 메뉴 항목에 있는 동안 마우스 오른쪽 단추를 놓을 때이 멤버 함수를 호출 합니다.
 
@@ -7849,7 +7849,7 @@ afx_msg void OnMenuRButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmenuselect"></a>CWnd:: OnMenuSelect
+##  <a name="cwndonmenuselect"></a><a name="onmenuselect"></a>CWnd:: OnMenuSelect
 
 `CWnd` 개체가 메뉴와 연결 된 경우 사용자가 메뉴 항목을 선택할 때 프레임 워크에서 `OnMenuSelect`를 호출 합니다.
 
@@ -7896,7 +7896,7 @@ afx_msg void OnMenuSelect(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmouseactivate"></a>CWnd:: OnMouseActivate
+##  <a name="cwndonmouseactivate"></a><a name="onmouseactivate"></a>CWnd:: OnMouseActivate
 
 이 프레임 워크는 커서가 비활성 창에 있을 때 사용자가 마우스 단추를 누를 때이 멤버 함수를 호출 합니다.
 
@@ -7943,7 +7943,7 @@ afx_msg int OnMouseActivate(
 
 [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]
 
-##  <a name="onmousehover"></a>CWnd:: OnMouseHover
+##  <a name="cwndonmousehover"></a><a name="onmousehover"></a>CWnd:: OnMouseHover
 
 [커서가 trackmouseevent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)에 대 한 이전 호출에 지정 된 기간 동안 커서가 창의 클라이언트 영역을 가리킬 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -7969,7 +7969,7 @@ afx_msg void OnMouseHover(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -7979,7 +7979,7 @@ afx_msg void OnMouseHover(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmousehwheel"></a>CWnd:: OnMouseHWheel
+##  <a name="cwndonmousehwheel"></a><a name="onmousehwheel"></a>CWnd:: OnMouseHWheel
 
 현재 창이 DWM (바탕 화면 창 관리자)으로 구성 되 고 해당 창이 최대화 된 경우 프레임 워크는이 멤버를 호출 합니다.
 
@@ -8005,7 +8005,7 @@ afx_msg void OnMouseHWheel(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmouseleave"></a>CWnd:: OnMouseLeave
+##  <a name="cwndonmouseleave"></a><a name="onmouseleave"></a>CWnd:: OnMouseLeave
 
 [커서가 trackmouseevent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)에 대 한 이전 호출에 지정 된 창의 클라이언트 영역을 벗어날 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8020,7 +8020,7 @@ afx_msg void OnMouseLeave();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmousemove"></a>CWnd:: OnMouseMove
+##  <a name="cwndonmousemove"></a><a name="onmousemove"></a>CWnd:: OnMouseMove
 
 프레임 워크는 마우스 커서가 이동할 때이 멤버 함수를 호출 합니다.
 
@@ -8055,7 +8055,7 @@ afx_msg void OnMouseMove(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmousewheel"></a>CWnd:: OnMouseWheel
+##  <a name="cwndonmousewheel"></a><a name="onmousewheel"></a>CWnd:: OnMouseWheel
 
 사용자가 마우스 휠을 회전 하 고 휠의 다음 노치를 발견할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8104,7 +8104,7 @@ afx_msg BOOL OnMouseWheel(
 > [!NOTE]
 > `OnMouseWheel`는 Windows NT 4.0 이상 버전에 대 한 메시지를 처리 합니다. Windows 95/98 또는 Windows NT 3.51 메시지 처리의 경우 [OnRegisteredMouseWheel](#onregisteredmousewheel)를 사용 합니다.
 
-##  <a name="onmove"></a>CWnd:: OnMove
+##  <a name="cwndonmove"></a><a name="onmove"></a>CWnd:: OnMove
 
 `CWnd` 개체가 이동한 후 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8127,7 +8127,7 @@ afx_msg void OnMove(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onmoving"></a>CWnd:: OnMoving
+##  <a name="cwndonmoving"></a><a name="onmoving"></a>CWnd:: OnMoving
 
 사용자가 `CWnd` 개체를 이동 하는 동안 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8150,7 +8150,7 @@ afx_msg void OnMoving(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncactivate"></a>CWnd:: OnNcActivate
+##  <a name="cwndonncactivate"></a><a name="onncactivate"></a>CWnd:: OnNcActivate
 
 활성 또는 비활성 상태를 나타내기 위해 비클라이언트 영역을 변경 해야 하는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8174,7 +8174,7 @@ Windows에서 기본 처리를 계속 해야 하는 경우 0이 아님 캡션 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnccalcsize"></a>CWnd:: OnNcCalcSize
+##  <a name="cwndonnccalcsize"></a><a name="onnccalcsize"></a>CWnd:: OnNcCalcSize
 
 클라이언트 영역의 크기와 위치를 계산 해야 하는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8205,7 +8205,7 @@ afx_msg void OnNcCalcSize(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnccreate"></a>CWnd:: OnNcCreate
+##  <a name="cwndonnccreate"></a><a name="onnccreate"></a>CWnd:: OnNcCreate
 
 프레임 워크는 `CWnd` 개체를 처음 만들 때 [WM_CREATE](#oncreate) 메시지 보다 먼저이 멤버 함수를 호출 합니다.
 
@@ -8227,7 +8227,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncdestroy"></a>CWnd:: OnNcDestroy
+##  <a name="cwndonncdestroy"></a><a name="onncdestroy"></a>CWnd:: OnNcDestroy
 
 비클라이언트 영역이 제거 될 때 프레임 워크에서 호출 되며, Windows 창이 제거 될 때 호출 되는 마지막 멤버 함수입니다.
 
@@ -8241,7 +8241,7 @@ afx_msg void OnNcDestroy();
 
 이 작업을 **삭제** 하는 등 고유한 정리 작업을 수행 하려면 `PostNcDestroy`를 재정의 합니다. `OnNcDestroy`를 재정의 하는 경우 해당 창에 내부적으로 할당 된 모든 메모리가 해제 되도록 기본 클래스의 `OnNcDestroy`를 호출 해야 합니다.
 
-##  <a name="onnchittest"></a>CWnd:: OnNcHitTest
+##  <a name="cwndonnchittest"></a><a name="onnchittest"></a>CWnd:: OnNcHitTest
 
 프레임 워크는 마우스가 이동 될 때마다 커서 (또는 [setcapture](#setcapture) 멤버 함수를 사용 하 여 마우스 입력을 캡처하기 위해 사용 하는 `CWnd` 개체)를 포함 하는 `CWnd` 개체에 대해이 멤버 함수를 호출 합니다.
 
@@ -8263,7 +8263,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnclbuttondblclk"></a>CWnd:: OnNcLButtonDblClk
+##  <a name="cwndonnclbuttondblclk"></a><a name="onnclbuttondblclk"></a>CWnd:: OnNcLButtonDblClk
 
 커서가 `CWnd`의 비클라이언트 영역 내에 있는 동안 사용자가 왼쪽 마우스 단추를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8288,7 +8288,7 @@ afx_msg void OnNcLButtonDblClk(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnclbuttondown"></a>CWnd:: OnNcLButtonDown
+##  <a name="cwndonnclbuttondown"></a><a name="onnclbuttondown"></a>CWnd:: OnNcLButtonDown
 
 이 프레임 워크는 커서가 `CWnd` 개체의 비클라이언트 영역 내에 있는 동안 사용자가 왼쪽 마우스 단추를 누를 때이 멤버 함수를 호출 합니다.
 
@@ -8313,7 +8313,7 @@ afx_msg void OnNcLButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달 되는 매개 변수는 메시지를 받을 때 프레임 워크에서 받은 매개 변수를 반영 합니다. 이 함수의 기본 클래스 구현을 호출 하는 경우 해당 구현은 원래 메시지와 함께 전달 되는 매개 변수를 사용 하 고 함수에 제공 하는 매개 변수를 사용 하지 않습니다.
 
-##  <a name="onnclbuttonup"></a>CWnd:: OnNcLButtonUp
+##  <a name="cwndonnclbuttonup"></a><a name="onnclbuttonup"></a>CWnd:: OnNcLButtonUp
 
 이 프레임 워크는 커서가 비클라이언트 영역 내에 있는 동안 사용자가 왼쪽 마우스 단추를 놓으면이 멤버 함수를 호출 합니다.
 
@@ -8338,7 +8338,7 @@ afx_msg void OnNcLButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmbuttondblclk"></a>CWnd:: OnNcMButtonDblClk
+##  <a name="cwndonncmbuttondblclk"></a><a name="onncmbuttondblclk"></a>CWnd:: OnNcMButtonDblClk
 
 커서가 비클라이언트 영역 내에 있는 동안 사용자가 마우스 가운데 단추를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8361,7 +8361,7 @@ afx_msg void OnNcMButtonDblClk(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmbuttondown"></a>CWnd:: OnNcMButtonDown
+##  <a name="cwndonncmbuttondown"></a><a name="onncmbuttondown"></a>CWnd:: OnNcMButtonDown
 
 커서가 비클라이언트 영역 내에 있는 동안 사용자가 마우스 가운데 단추를 누르면 프레임 워크가이 멤버 함수를 호출 합니다.
 
@@ -8384,7 +8384,7 @@ afx_msg void OnNcMButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmbuttonup"></a>CWnd:: OnNcMButtonUp
+##  <a name="cwndonncmbuttonup"></a><a name="onncmbuttonup"></a>CWnd:: OnNcMButtonUp
 
 이 프레임 워크는 커서가 비클라이언트 영역 내에 있는 동안 사용자가 가운데 마우스 단추를 놓을 때이 멤버 함수를 호출 합니다.
 
@@ -8407,7 +8407,7 @@ afx_msg void OnNcMButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmousehover"></a>CWnd:: Onncmousese가리킴
+##  <a name="cwndonncmousehover"></a><a name="onncmousehover"></a>CWnd:: Onncmousese가리킴
 
 [커서가 trackmouseevent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)에 대 한 이전 호출에 지정 된 기간 동안 커서가 창의 비클라이언트 영역을 가리킬 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8431,7 +8431,7 @@ afx_msg void OnNcMouseHover(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmouseleave"></a>CWnd:: OnNcMouseLeave
+##  <a name="cwndonncmouseleave"></a><a name="onncmouseleave"></a>CWnd:: OnNcMouseLeave
 
 [커서가 trackmouseevent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)에 대 한 이전 호출에 지정 된 창의 비클라이언트 영역에서 커서가 나올 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8446,7 +8446,7 @@ afx_msg void OnNcMouseLeave();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncmousemove"></a>CWnd:: OnNcMouseMove
+##  <a name="cwndonncmousemove"></a><a name="onncmousemove"></a>CWnd:: OnNcMouseMove
 
 프레임 워크는 커서가 비클라이언트 영역 내에서 이동할 때이 멤버 함수를 호출 합니다.
 
@@ -8471,7 +8471,7 @@ afx_msg void OnNcMouseMove(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncpaint"></a>CWnd:: OnNcPaint
+##  <a name="cwndonncpaint"></a><a name="onncpaint"></a>CWnd:: OnNcPaint
 
 프레임 워크는 비클라이언트 영역을 그려야 할 때이 멤버 함수를 호출 합니다.
 
@@ -8485,7 +8485,7 @@ afx_msg void OnNcPaint();
 
 응용 프로그램은이 호출을 재정의 하 고 고유한 사용자 지정 창 프레임을 그릴 수 있습니다. 프레임의 모양이 변경 되는 경우에도 클리핑 영역은 항상 사각형입니다.
 
-##  <a name="onncrbuttondblclk"></a>CWnd:: OnNcRButtonDblClk
+##  <a name="cwndonncrbuttondblclk"></a><a name="onncrbuttondblclk"></a>CWnd:: OnNcRButtonDblClk
 
 커서가 `CWnd`의 비클라이언트 영역 내에 있는 동안 사용자가 오른쪽 마우스 단추를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8508,7 +8508,7 @@ afx_msg void OnNcRButtonDblClk(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncrbuttondown"></a>CWnd:: OnNcRButtonDown
+##  <a name="cwndonncrbuttondown"></a><a name="onncrbuttondown"></a>CWnd:: OnNcRButtonDown
 
 커서가 비클라이언트 영역 내에 있는 동안 사용자가 마우스 오른쪽 단추를 누르면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8531,7 +8531,7 @@ afx_msg void OnNcRButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncrbuttonup"></a>CWnd:: OnNcRButtonUp
+##  <a name="cwndonncrbuttonup"></a><a name="onncrbuttonup"></a>CWnd:: OnNcRButtonUp
 
 이 프레임 워크는 커서가 비클라이언트 영역 내에 있는 동안 사용자가 마우스 오른쪽 단추를 놓을 때이 멤버 함수를 호출 합니다.
 
@@ -8554,7 +8554,7 @@ afx_msg void OnNcRButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncrenderingchanged"></a>CWnd:: OnNcRenderingChanged
+##  <a name="cwndonncrenderingchanged"></a><a name="onncrenderingchanged"></a>CWnd:: OnNcRenderingChanged
 
 비클라이언트 영역에 대 한 렌더링 정책이 변경 된 경우 프레임 워크는이 멤버를 호출 합니다.
 
@@ -8575,7 +8575,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncxbuttondblclk"></a>CWnd:: OnNcXButtonDblClk
+##  <a name="cwndonncxbuttondblclk"></a><a name="onncxbuttondblclk"></a>CWnd:: OnNcXButtonDblClk
 
 커서는 창의 비클라이언트 영역에 있는 동안 사용자가 XBUTTON1 또는 있는를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8601,7 +8601,7 @@ void OnNcXButtonDblClk(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncxbuttondown"></a>CWnd:: OnNcXButtonDown
+##  <a name="cwndonncxbuttondown"></a><a name="onncxbuttondown"></a>CWnd:: OnNcXButtonDown
 
 커서는 창의 비클라이언트 영역에 있는 동안 사용자가 마우스의 XBUTTON1 또는 있는를 누를 때 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8627,7 +8627,7 @@ afx_msg void OnNcXButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onncxbuttonup"></a>CWnd:: OnNcXButtonUp
+##  <a name="cwndonncxbuttonup"></a><a name="onncxbuttonup"></a>CWnd:: OnNcXButtonUp
 
 커서는 창의 비클라이언트 영역에 있는 동안 사용자가 마우스의 XBUTTON1 또는 있는를 해제할 때 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -8653,7 +8653,7 @@ afx_msg void OnNcXButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnextmenu"></a>CWnd:: OnNextMenu
+##  <a name="cwndonnextmenu"></a><a name="onnextmenu"></a>CWnd:: OnNextMenu
 
 오른쪽 또는 왼쪽 화살표 키를 사용 하 여 메뉴 모음과 시스템 메뉴 간을 전환할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8677,7 +8677,7 @@ afx_msg void OnNextMenu(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onnotify"></a>CWnd:: OnNotify
+##  <a name="cwndonnotify"></a><a name="onnotify"></a>CWnd:: OnNotify
 
 프레임 워크는이 멤버 함수를 호출 하 여 컨트롤에서 이벤트가 발생 했거나 컨트롤에 특정 종류의 정보가 필요 함을 컨트롤의 부모 창에 알립니다.
 
@@ -8711,7 +8711,7 @@ WM_NOTIFY 메시지를 처리 하려면 파생 클래스에서이 멤버 함수�
 
 WM_NOTIFY 메시지에 대 한 자세한 내용은 기술 정보 61 (TN061), [ON_NOTIFY 및 WM_NOTIFY 메시지](../../mfc/tn061-on-notify-and-wm-notify-messages.md)를 참조 하세요. 또한 [컨트롤 항목](../../mfc/controls-mfc.md)에 설명 된 관련 항목 및 [Windows 컨트롤용 TN062 (메시지 리플렉션](../../mfc/tn062-message-reflection-for-windows-controls.md))에 관심이 있을 수 있습니다.
 
-##  <a name="onnotifyformat"></a>CWnd:: OnNotifyFormat
+##  <a name="cwndonnotifyformat"></a><a name="onnotifyformat"></a>CWnd:: OnNotifyFormat
 
 프레임 워크는이 멤버 함수를 호출 하 여 현재 창이 WM_NOTIFY 알림 메시지의 ANSI 또는 유니코드 구조를 허용 하는지 확인 합니다.
 
@@ -8743,7 +8743,7 @@ afx_msg UINT OnNotifyFormat(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onpaint"></a>CWnd:: OnPaint
+##  <a name="cwndonpaint"></a><a name="onpaint"></a>CWnd:: OnPaint
 
 Windows 또는 응용 프로그램에서 응용 프로그램 창의 일부를 다시 그려야 하는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8769,7 +8769,7 @@ WM_PAINT 메시지가 잘못 된 영역과 RDW_INTERNALPAINT 플래그 집합을
 
 - [WM_PAINT 메시지 사용](/windows/win32/gdi/using-the-wm-paint-message)
 
-##  <a name="onpaintclipboard"></a>CWnd:: OnPaintClipboard
+##  <a name="cwndonpaintclipboard"></a><a name="onpaintclipboard"></a>CWnd:: OnPaintClipboard
 
 클립보드 소유자가 클립보드에 데이터를 CF_OWNERDISPLAY 형식으로 배치 하 고 클립보드 뷰어의 클라이언트 영역을 다시 그려야 하는 경우 클립보드 소유자의 `OnPaintClipboard` 멤버 함수를 클립보드 뷰어에 의해 호출 됩니다.
 
@@ -8782,7 +8782,7 @@ afx_msg void OnPaintClipboard(
 ### <a name="parameters"></a>매개 변수
 
 *pClipAppWnd*<br/>
-클립보드 애플리케이션 창에 대한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
+클립보드 응용 프로그램 창에 대한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
 *hPaintStruct*<br/>
 그릴 클라이언트 영역을 정의하는 [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) 데이터 구조를 식별합니다.
@@ -8796,7 +8796,7 @@ afx_msg void OnPaintClipboard(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onpalettechanged"></a>CWnd:: OnPaletteChanged
+##  <a name="cwndonpalettechanged"></a><a name="onpalettechanged"></a>CWnd:: OnPaletteChanged
 
 이 프레임 워크는 입력 포커스가 있는 창이 논리적 색상표를 인식 한 후에 시스템 팔레트를 변경 하 여 모든 최상위 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -8820,7 +8820,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onpaletteischanging"></a>CWnd:: OnPaletteIsChanging
+##  <a name="cwndonpaletteischanging"></a><a name="onpaletteischanging"></a>CWnd:: OnPaletteIsChanging
 
 프레임 워크는이 멤버 함수를 호출 하 여 응용 프로그램에서 논리 색상표를 실현할 것임을 응용 프로그램에 알립니다.
 
@@ -8837,7 +8837,7 @@ afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 
 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onparentnotify"></a>CWnd:: OnParentNotify
+##  <a name="cwndonparentnotify"></a><a name="onparentnotify"></a>CWnd:: OnParentNotify
 
 부모 `OnParentNotify` 멤버 함수는 자식 창이 만들어지거나 소멸 될 때 또는 사용자가 커서가 자식 창 위에 있는 동안 마우스 단추를 클릭할 때 프레임 워크에서 호출 됩니다.
 
@@ -8876,7 +8876,7 @@ afx_msg void OnParentNotify(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onpowerbroadcast"></a>CWnd:: OnPowerBroadcast
+##  <a name="cwndonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CWnd:: OnPowerBroadcast
 
 이 프레임 워크는 전원 관리 이벤트가 발생할 때이 멤버 함수를 호출 합니다.
 
@@ -8906,7 +8906,7 @@ afx_msg UINT OnPowerBroadcast(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onquerydragicon"></a>CWnd:: OnQueryDragIcon
+##  <a name="cwndonquerydragicon"></a><a name="onquerydragicon"></a>CWnd:: OnQueryDragIcon
 
 프레임 워크는 해당 클래스에 대해 정의 된 아이콘이 없는 최소화 된 (아이콘) 창으로이 멤버 함수를 호출 합니다.
 
@@ -8922,7 +8922,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 
 사용자가 최소화 된 창을 끄는 동안 커서가 표시 되도록 시스템에서이 호출을 수행 합니다. 응용 프로그램에서 아이콘이 나 커서의 핸들을 반환 하는 경우 시스템에서이를 검정 및 흰색으로 변환 합니다. 응용 프로그램이 핸들을 반환 하는 경우 핸들은 디스플레이 드라이버의 해상도와 호환 되는 단색 커서 또는 아이콘을 식별 해야 합니다. 응용 프로그램은 [cwinapp:: LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor) 또는 [Cwinapp:: loadcursor](../../mfc/reference/cwinapp-class.md#loadicon) 멤버 함수를 호출 하 여 해당 실행 파일의 리소스에서 커서 또는 아이콘을 로드 하 고이 핸들을 가져올 수 있습니다.
 
-##  <a name="onqueryendsession"></a>CWnd:: OnQueryEndSession
+##  <a name="cwndonqueryendsession"></a><a name="onqueryendsession"></a>CWnd:: OnQueryEndSession
 
 사용자가 Windows 세션을 종료 하거나 응용 프로그램이 [exitwindows](/windows/win32/api/winuser/nf-winuser-exitwindows) windows 함수를 호출할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8938,7 +8938,7 @@ afx_msg BOOL OnQueryEndSession();
 
 응용 프로그램에서 0을 반환 하는 경우 Windows 세션이 종료 되지 않습니다. Windows는 한 응용 프로그램에서 0을 반환 하 고 0이 아닌 값이 이미 반환 된 모든 응용 프로그램에 대해 매개 변수 값이 FALSE 인 [WM_ENDSESSION](#onendsession) 메시지를 전송 하는 즉시 `OnQueryEndSession` 호출을 중지 합니다.
 
-##  <a name="onquerynewpalette"></a>CWnd:: OnQueryNewPalette
+##  <a name="cwndonquerynewpalette"></a><a name="onquerynewpalette"></a>CWnd:: OnQueryNewPalette
 
 `CWnd` 개체가 입력 포커스를 받을 때 프레임 워크는이 멤버 함수를 호출 하 여 포커스를 받을 때 논리 색상표를 실현할 수 있는 기회를 `CWnd` 제공 합니다.
 
@@ -8950,7 +8950,7 @@ afx_msg BOOL OnQueryNewPalette();
 
 `CWnd` 논리 색상표를 인식 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
-##  <a name="onqueryopen"></a>CWnd:: OnQueryOpen
+##  <a name="cwndonqueryopen"></a><a name="onqueryopen"></a>CWnd:: OnQueryOpen
 
 `CWnd` 개체가 최소화 되 고 사용자가 미리 최소화 된 크기 및 위치로 `CWnd`를 복원 하도록 요청 하면 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -8966,7 +8966,7 @@ afx_msg BOOL OnQueryOpen();
 
 `OnQueryOpen`중에는 활성화 또는 포커스 변경을 발생 시키는 작업 (예: 대화 상자 만들기)을 수행 하면 `CWnd`.
 
-##  <a name="onqueryuistate"></a>CWnd:: OnQueryUIState
+##  <a name="cwndonqueryuistate"></a><a name="onqueryuistate"></a>CWnd:: OnQueryUIState
 
 창에 대한 UI(사용자 인터페이스) 상태를 검색 하기 위해 호출됩니다.
 
@@ -8988,7 +8988,7 @@ afx_msg UINT OnQueryUIState();
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [WM_QUERYUISTATE](/windows/win32/menurc/wm-queryuistate) 메시지의 기능을 에뮬레이트합니다.
 
-##  <a name="onrawinput"></a>CWnd:: OnRawInput
+##  <a name="cwndonrawinput"></a><a name="onrawinput"></a>CWnd:: OnRawInput
 
 현재 창이 원시 입력을 가져오는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9012,7 +9012,7 @@ afx_msg void OnRawInput(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onrbuttondblclk"></a>CWnd:: OnRButtonDblClk
+##  <a name="cwndonrbuttondblclk"></a><a name="onrbuttondblclk"></a>CWnd:: OnRButtonDblClk
 
 사용자가 마우스 오른쪽 단추를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -9047,7 +9047,7 @@ CS_DBLCLKS [예: wndclassa](/windows/win32/api/winuser/ns-winuser-wndclassw) 스
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onrbuttondown"></a>CWnd:: OnRButtonDown
+##  <a name="cwndonrbuttondown"></a><a name="onrbuttondown"></a>CWnd:: OnRButtonDown
 
 사용자가 마우스 오른쪽 단추를 누르면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -9079,7 +9079,7 @@ afx_msg void OnRButtonDown(
 
 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onrbuttonup"></a>CWnd:: OnRButtonUp
+##  <a name="cwndonrbuttonup"></a><a name="onrbuttonup"></a>CWnd:: OnRButtonUp
 
 사용자가 마우스 오른쪽 단추를 놓을 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9109,7 +9109,7 @@ afx_msg void OnRButtonUp(
 
 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onregisteredmousewheel"></a>CWnd:: OnRegisteredMouseWheel
+##  <a name="cwndonregisteredmousewheel"></a><a name="onregisteredmousewheel"></a>CWnd:: OnRegisteredMouseWheel
 
 사용자가 마우스 휠을 회전 하 고 휠의 다음 노치를 발견할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9140,7 +9140,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 > [!NOTE]
 > `OnRegisteredMouseWheel`는 Windows 95/98 및 Windows NT 3.51에 대 한 메시지를 처리 합니다. Windows NT 4.0 메시지 처리의 경우 [Onmousewheel](#onmousewheel)을 사용 합니다.
 
-##  <a name="onrenderallformats"></a>CWnd:: OnRenderAllFormats
+##  <a name="cwndonrenderallformats"></a><a name="onrenderallformats"></a>CWnd:: OnRenderAllFormats
 
 소유자 응용 프로그램이 소멸 될 때 프레임 워크에서 클립보드 소유자의 `OnRenderAllFormats` 멤버 함수를 호출 합니다.
 
@@ -9152,7 +9152,7 @@ afx_msg void OnRenderAllFormats();
 
 클립보드 소유자는 생성할 수 있는 모든 형식으로 데이터를 렌더링 하 고 [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 함수를 호출 하 여 각 형식에 대 한 데이터 핸들을 클립보드에 전달 해야 합니다. 이렇게 하면 데이터를 렌더링 한 응용 프로그램이 소멸 되더라도 클립보드에 유효한 데이터가 포함 됩니다. 응용 프로그램은 [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) windows 함수를 호출 하기 전에 [openclipboard](#openclipboard) 멤버 함수를 호출 하 고 나중에 [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) windows 함수를 호출 해야 합니다.
 
-##  <a name="onrenderformat"></a>CWnd:: OnRenderFormat
+##  <a name="cwndonrenderformat"></a><a name="onrenderformat"></a>CWnd:: OnRenderFormat
 
 지연 렌더링을 사용 하는 특정 형식을 렌더링 해야 하는 경우 클립보드 소유자의 `OnRenderFormat` 멤버 함수는 프레임 워크에서 호출 됩니다.
 
@@ -9174,7 +9174,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsessionchange"></a>CWnd:: OnSessionChange
+##  <a name="cwndonsessionchange"></a><a name="onsessionchange"></a>CWnd:: OnSessionChange
 
 프레임 워크는이 멤버 함수를 호출 하 여 세션 상태의 변경 내용을 응용 프로그램에 알립니다.
 
@@ -9200,7 +9200,7 @@ afx_msg void OnSessionChange(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsetcursor"></a>CWnd:: OnSetCursor
+##  <a name="cwndonsetcursor"></a><a name="onsetcursor"></a>CWnd:: OnSetCursor
 
 마우스 입력이 캡처되지 않고 마우스가 `CWnd` 개체 내에서 커서 이동을 발생 시키는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9239,7 +9239,7 @@ afx_msg BOOL OnSetCursor(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsetfocus"></a>CWnd:: OnSetFocus
+##  <a name="cwndonsetfocus"></a><a name="onsetfocus"></a>CWnd:: OnSetFocus
 
 프레임 워크는 입력 포커스를 얻는 후이 멤버 함수를 호출 합니다.
 
@@ -9259,7 +9259,7 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsettingchange"></a>CWnd:: OnSettingChange
+##  <a name="cwndonsettingchange"></a><a name="onsettingchange"></a>CWnd:: OnSettingChange
 
 Win32 SystemParametersInfo 함수가 시스템 차원의 설정을 변경 하는 경우 프레임 워크는 모든 최상위 창에 대해 `OnSettingChange`를 호출 합니다.
 
@@ -9289,7 +9289,7 @@ ON_WM_SETTINGCHANGE 메시지는 ON_WM_WININICHANGE 메시지와 유사 하지�
 
 메시지 맵에는 이러한 매크로 중 하나만 있어야 합니다. Windows 95/98 및 Windows NT 4.0 둘 다에서 작동 하는 프로그램을 작성 하려면 ON_WM_SETTINGCHANGE에 대 한 처리기를 작성 합니다. Windows NT 3.51에서 처리기는 `OnSettingChange` 및 *Uflags* 에 의해 호출 되며 항상 0이 됩니다.
 
-##  <a name="onshowwindow"></a>CWnd:: OnShowWindow
+##  <a name="cwndonshowwindow"></a><a name="onshowwindow"></a>CWnd:: OnShowWindow
 
 `CWnd` 개체가 숨겨지거나 표시 될 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9318,7 +9318,7 @@ afx_msg void OnShowWindow(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsize"></a>CWnd:: OnSize
+##  <a name="cwndonsize"></a><a name="onsize"></a>CWnd:: OnSize
 
 프레임 워크는 창의 크기가 변경 된 후이 멤버 함수를 호출 합니다.
 
@@ -9361,7 +9361,7 @@ afx_msg void OnSize(
 
 [!code-cpp[NVC_MFCWindowing#109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]
 
-##  <a name="onsizeclipboard"></a>CWnd:: OnSizeClipboard
+##  <a name="cwndonsizeclipboard"></a><a name="onsizeclipboard"></a>CWnd:: OnSizeClipboard
 
 클립보드 소유자의 `OnSizeClipboard` 멤버 함수는 클립보드에 `CF_OWNERDISPLAY` 특성의 데이터가 포함 되어 있고 클립보드 뷰어 창의 클라이언트 영역 크기가 변경 된 경우 클립보드 뷰어에서 호출 됩니다.
 
@@ -9388,7 +9388,7 @@ afx_msg void OnSizeClipboard(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsizing"></a>CWnd:: OnSizing 조정
+##  <a name="cwndonsizing"></a><a name="onsizing"></a>CWnd:: OnSizing 조정
 
 프레임 워크는이 멤버 함수를 호출 하 여 사용자가 사각형의 크기를 조정 하 고 있음을 표시 합니다.
 
@@ -9417,7 +9417,7 @@ afx_msg void OnSizing(
 
 [!code-cpp[NVC_MFCWindowing#110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]
 
-##  <a name="onspoolerstatus"></a>CWnd:: OnSpoolerStatus
+##  <a name="cwndonspoolerstatus"></a><a name="onspoolerstatus"></a>CWnd:: OnSpoolerStatus
 
 프레임 워크는 인쇄 관리자 큐에서 작업이 추가 되거나 제거 될 때마다 인쇄 관리자에서이 멤버 함수를 호출 합니다.
 
@@ -9442,7 +9442,7 @@ SP_JOBSTATUS 플래그를 지정 합니다.
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onstylechanged"></a>CWnd:: OnStyleChanged
+##  <a name="cwndonstylechanged"></a><a name="onstylechanged"></a>CWnd:: OnStyleChanged
 
 [Setwindowlong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 함수에서 하나 이상의 창 스타일을 변경한 후 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9469,7 +9469,7 @@ afx_msg void OnStyleChanged(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onstylechanging"></a>CWnd:: OnStyleChanging
+##  <a name="cwndonstylechanging"></a><a name="onstylechanging"></a>CWnd:: OnStyleChanging
 
 [Setwindowlong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 함수가 하나 이상의 창 스타일을 변경 하려고 할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9496,7 +9496,7 @@ afx_msg void OnStyleChanging(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsyschar"></a>CWnd:: OnSysChar
+##  <a name="cwndonsyschar"></a><a name="onsyschar"></a>CWnd:: OnSysChar
 
 `CWnd` 입력 포커스가 있고 [WM_SYSKEYUP](#onsyskeyup) 및 [WM_SYSKEYDOWN](#onsyskeydown) 메시지가 변환 되는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9539,7 +9539,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsyscolorchange"></a>CWnd:: OnSysColorChange
+##  <a name="cwndonsyscolorchange"></a><a name="onsyscolorchange"></a>CWnd:: OnSysColorChange
 
 시스템 색 설정이 변경 되 면 프레임 워크는 모든 최상위 창에 대해이 멤버 함수를 호출 합니다.
 
@@ -9553,7 +9553,7 @@ Windows에서는 시스템 색 변경의 영향을 받는 모든 창에 대 한 
 
 기존 시스템 색을 사용 하는 브러시가 있는 응용 프로그램은 해당 브러시를 삭제 하 고 새 시스템 색을 사용 하 여 다시 만들어야 합니다.
 
-##  <a name="onsyscommand"></a>CWnd:: OnSysCommand
+##  <a name="cwndonsyscommand"></a><a name="onsyscommand"></a>CWnd:: OnSysCommand
 
 프레임 워크는 사용자가 컨트롤 메뉴에서 명령을 선택 하거나 최대화 또는 최소화 단추를 선택할 때이 멤버 함수를 호출 합니다.
 
@@ -9620,7 +9620,7 @@ WM_SYSCOMMAND 메시지에서 *nID* 매개 변수의 네 개의 하위 비트가
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsysdeadchar"></a>CWnd:: OnSysDeadChar
+##  <a name="cwndonsysdeadchar"></a><a name="onsysdeadchar"></a>CWnd:: OnSysDeadChar
 
 [Onsyskeyup](#onsyskeyup) 또는 [onsyskeyup](#onsyskeydown) 멤버 함수가 호출 될 때 `CWnd` 개체에 입력 포커스가 있는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -9659,7 +9659,7 @@ afx_msg void OnSysDeadChar(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsyskeydown"></a>CWnd:: OnSysKeyDown
+##  <a name="cwndonsyskeydown"></a><a name="onsyskeydown"></a>CWnd:: OnSysKeyDown
 
 `CWnd` 개체에 입력 포커스가 있는 경우 사용자가 ALT 키를 누르고 다른 키를 누르면 프레임 워크에서 `OnSysKeyDown` 멤버 함수가 호출 됩니다.
 
@@ -9706,7 +9706,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onsyskeyup"></a>CWnd:: OnSysKeyUp
+##  <a name="cwndonsyskeyup"></a><a name="onsyskeyup"></a>CWnd:: OnSysKeyUp
 
 `CWnd` 개체에 포커스가 있는 경우에는 사용자가 ALT 키를 누르고 있는 동안 누른 키를 놓을 때 프레임 워크에서 `OnSysKeyUp` 멤버 함수가 호출 됩니다.
 
@@ -9760,7 +9760,7 @@ IBM 고급 101-및 102 키 키보드의 경우 확장 된 키는 키보드의 �
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="ontcard"></a>CWnd:: OnTCard
+##  <a name="cwndontcard"></a><a name="ontcard"></a>CWnd:: OnTCard
 
 사용자가 만들 수 있는 단추를 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -9806,7 +9806,7 @@ afx_msg void OnTCard(
 
 이 함수는 응용 프로그램이 Windows 도움말을 사용 하 여 학습 카드를 시작한 경우에만 호출 됩니다. 응용 프로그램은 [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 함수 호출에 HELP_TCARD 명령을 지정 하 여 학습 카드를 시작 합니다.
 
-##  <a name="ontimechange"></a>CWnd:: OnTimeChange
+##  <a name="cwndontimechange"></a><a name="ontimechange"></a>CWnd:: OnTimeChange
 
 프레임 워크는 시스템 시간이 변경 된 후이 멤버 함수를 호출 합니다.
 
@@ -9818,7 +9818,7 @@ afx_msg void OnTimeChange();
 
 시스템 시간을 변경 하는 모든 응용 프로그램에이 메시지를 모든 최상위 창으로 보냅니다. 모든 최상위 창에 WM_TIMECHANGE 메시지를 보내기 위해 응용 프로그램은 *hwnd* 매개 변수가 HWND_BROADCAST로 설정 된 상태에서 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) windows 함수를 사용할 수 있습니다.
 
-##  <a name="ontimer"></a>CWnd:: OnTimer
+##  <a name="cwndontimer"></a><a name="ontimer"></a>CWnd:: OnTimer
 
 프레임 워크는 타이머를 설치 하는 데 사용 되는 [Settimer](#settimer) 멤버 함수에 지정 된 각 간격 후에이 멤버 함수를 호출 합니다.
 
@@ -9842,7 +9842,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
   [CWnd:: SetTimer](#settimer)의 예제를 참조 하세요.
 
-##  <a name="ontoolhittest"></a>CWnd:: OnToolHitTest
+##  <a name="cwndontoolhittest"></a><a name="ontoolhittest"></a>CWnd:: OnToolHitTest
 
 프레임 워크는이 멤버 함수를 호출 하 여 지정 된 도구의 경계 사각형에 점이 있는지 여부를 확인 합니다.
 
@@ -9882,7 +9882,7 @@ Tooltip 컨트롤을 찾은 경우 창 컨트롤 ID입니다. 도구 설명 컨�
 
 구조체에 대 한 자세한 내용은 Windows SDK의 [Toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)를 참조 하십시오.
 
-##  <a name="ontouchinput"></a>CWnd:: OnTouchInput
+##  <a name="cwndontouchinput"></a><a name="ontouchinput"></a>CWnd:: OnTouchInput
 
 Windows Touch에서 단일 입력을 처리합니다.
 
@@ -9914,7 +9914,7 @@ TOUCHINPUT 구조체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ontouchinputs"></a>CWnd:: OnTouchInputs
+##  <a name="cwndontouchinputs"></a><a name="ontouchinputs"></a>CWnd:: OnTouchInputs
 
 Windows touch의 입력을 처리 합니다.
 
@@ -9938,7 +9938,7 @@ TOUCHINPUT의 배열입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onunichar"></a>CWnd:: OnUniChar
+##  <a name="cwndonunichar"></a><a name="onunichar"></a>CWnd:: OnUniChar
 
 프레임 워크는 키를 누를 때이 멤버 함수를 호출 합니다. 즉, 현재 창에 키보드 포커스가 있고 [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) 메시지가 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 함수에 의해 변환 됩니다.
 
@@ -9964,7 +9964,7 @@ afx_msg void OnUniChar(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onuninitmenupopup"></a>CWnd:: OnUnInitMenuPopup
+##  <a name="cwndonuninitmenupopup"></a><a name="onuninitmenupopup"></a>CWnd:: OnUnInitMenuPopup
 
 프레임 워크는 드롭다운 메뉴 또는 하위 메뉴가 제거 될 때이 멤버 함수를 호출 합니다.
 
@@ -9988,7 +9988,7 @@ afx_msg void OnUnInitMenuPopup(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onupdateuistate"></a>CWnd:: OnUpdateUIState
+##  <a name="cwndonupdateuistate"></a><a name="onupdateuistate"></a>CWnd:: OnUpdateUIState
 
 지정된 창 및 모든 자식 창에 대한 UI(사용자 인터페이스) 상태를 변경하기 위해 호출됩니다.
 
@@ -10022,7 +10022,7 @@ afx_msg void OnUpdateUIState(
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate) 메시지의 기능을 에뮬레이트합니다.
 
-##  <a name="onuserchanged"></a>CWnd:: OnUserChanged
+##  <a name="cwndonuserchanged"></a><a name="onuserchanged"></a>CWnd:: OnUserChanged
 
 사용자가 로그온 하거나 로그 오프 한 후 프레임 워크는이 멤버를 모든 창에 대해 호출 합니다.
 
@@ -10037,7 +10037,7 @@ afx_msg void OnUserChanged();
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onvkeytoitem"></a>CWnd:: OnVKeyToItem
+##  <a name="cwndonvkeytoitem"></a><a name="onvkeytoitem"></a>CWnd:: OnVKeyToItem
 
 `CWnd` 개체가 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일의 목록 상자를 소유 하는 경우 목록 상자는 WM_KEYDOWN 메시지에 대 한 응답으로 WM_VKEYTOITEM 메시지를 보냅니다.
 
@@ -10070,7 +10070,7 @@ afx_msg int OnVKeyToItem(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onvscroll"></a>CWnd:: OnVScroll
+##  <a name="cwndonvscroll"></a><a name="onvscroll"></a>CWnd:: OnVScroll
 
 프레임 워크는 사용자가 창의 세로 스크롤 막대를 클릭할 때이 멤버 함수를 호출 합니다.
 
@@ -10119,7 +10119,7 @@ afx_msg void OnVScroll(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onvscrollclipboard"></a>CWnd:: OnVScrollClipboard
+##  <a name="cwndonvscrollclipboard"></a><a name="onvscrollclipboard"></a>CWnd:: OnVScrollClipboard
 
 클립보드 소유자의 `OnVScrollClipboard` 멤버 함수는 클립보드 데이터가 CF_OWNERDISPLAY 형식이 고 클립보드 뷰어의 세로 스크롤 막대에 이벤트가 있는 경우 클립보드 뷰어에서 호출 됩니다.
 
@@ -10164,7 +10164,7 @@ afx_msg void OnVScrollClipboard(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onwindowmaximizedchanged"></a>CWnd:: OnWindowMaximizedChanged
+##  <a name="cwndonwindowmaximizedchanged"></a><a name="onwindowmaximizedchanged"></a>CWnd:: OnWindowMaximizedChanged
 
 프레임 워크는 현재 창이 최대화 될 때이 멤버를 호출 하 고 창은 DWM (바탕 화면 창 관리자)으로 구성 됩니다.
 
@@ -10185,7 +10185,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onwindowposchanged"></a>CWnd:: OnWindowPosChanged
+##  <a name="cwndonwindowposchanged"></a><a name="onwindowposchanged"></a>CWnd:: OnWindowPosChanged
 
 [Setwindowpos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 멤버 함수 또는 다른 창 관리 함수 호출의 결과로 크기, 위치 또는 Z 순서가 변경 되 면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -10205,7 +10205,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onwindowposchanging"></a>CWnd:: OnWindowPosChanging
+##  <a name="cwndonwindowposchanging"></a><a name="onwindowposchanging"></a>CWnd:: OnWindowPosChanging
 
 [Setwindowpos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 멤버 함수 또는 다른 창 관리 함수 호출의 결과로 크기, 위치 또는 Z 순서가 변경 되려고 하는 경우 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -10227,7 +10227,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onwininichange"></a>CWnd:: OnWinIniChange
+##  <a name="cwndonwininichange"></a><a name="onwininichange"></a>CWnd:: OnWinIniChange
 
 Windows 초기화 파일 WIN을 변경한 후 프레임 워크는이 멤버 함수를 호출 합니다. WIN.INI.
 
@@ -10253,7 +10253,7 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onwndmsg"></a>CWnd:: OnWndMsg
+##  <a name="cwndonwndmsg"></a><a name="onwndmsg"></a>CWnd:: OnWndMsg
 
 이 멤버 함수는 `WindowProc`에서 호출 되거나 메시지를 리플렉션 하는 동안 호출 됩니다.
 
@@ -10289,7 +10289,7 @@ virtual BOOL OnWndMsg(
 
 메시지 리플렉션에 대 한 자세한 내용은 반영 되는 [메시지 처리](../../mfc/handling-reflected-messages.md)를 참조 하세요.
 
-##  <a name="onxbuttondblclk"></a>CWnd:: OnXButtonDblClk
+##  <a name="cwndonxbuttondblclk"></a><a name="onxbuttondblclk"></a>CWnd:: OnXButtonDblClk
 
 커서가 창의 클라이언트 영역에 있는 동안 사용자가 XBUTTON1 또는 있는를 두 번 클릭 하면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -10317,7 +10317,7 @@ afx_msg void OnXButtonDblClk(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10327,7 +10327,7 @@ afx_msg void OnXButtonDblClk(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onxbuttondown"></a>CWnd:: OnXButtonDown
+##  <a name="cwndonxbuttondown"></a><a name="onxbuttondown"></a>CWnd:: OnXButtonDown
 
 커서가 창의 클라이언트 영역에 있는 동안 사용자가 XBUTTON1 또는 있는를 누르면 프레임 워크에서이 멤버 함수를 호출 합니다.
 
@@ -10355,7 +10355,7 @@ afx_msg void OnXButtonDown(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10365,7 +10365,7 @@ afx_msg void OnXButtonDown(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="onxbuttonup"></a>CWnd:: OnXButtonUp
+##  <a name="cwndonxbuttonup"></a><a name="onxbuttonup"></a>CWnd:: OnXButtonUp
 
 커서가 창의 클라이언트 영역에 있는 동안 사용자가 XBUTTON1 또는 있는를 해제할 때 프레임 워크는이 멤버 함수를 호출 합니다.
 
@@ -10393,7 +10393,7 @@ afx_msg void OnXButtonUp(
 |한정자 키|Description|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
-|MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
+|MK_LBUTTON|마우스 왼쪽된 단추가 눌러져 있습니다.|
 |MK_MBUTTON|마우스 가운데 단추가 눌러져 있습니다.|
 |MK_RBUTTON|마우스 오른쪽 단추가 눌러져 있습니다.|
 |MK_SHIFT|SHIFT 키를 눌렀습니다.|
@@ -10403,7 +10403,7 @@ afx_msg void OnXButtonUp(
 > [!NOTE]
 > 이 멤버 함수는 애플리케이션에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.
 
-##  <a name="openclipboard"></a>CWnd:: OpenClipboard
+##  <a name="cwndopenclipboard"></a><a name="openclipboard"></a>CWnd:: OpenClipboard
 
 클립보드를 엽니다.
 
@@ -10425,7 +10425,7 @@ BOOL OpenClipboard();
 
 [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]
 
-##  <a name="operator_hwnd"></a>CWnd:: operator HWND
+##  <a name="cwndoperator-hwnd"></a><a name="operator_hwnd"></a>CWnd:: operator HWND
 
 이 연산자를 사용 하 여 `CWnd` 개체에 대 한 핸들을 가져옵니다.
 
@@ -10433,7 +10433,7 @@ BOOL OpenClipboard();
 operator HWND() const;
 ```
 
-##  <a name="operator_neq"></a>CWnd:: operator! =
+##  <a name="cwndoperator-"></a><a name="operator_neq"></a>CWnd:: operator! =
 
 두 `CWnd` 개체를 비교 하 여 동일한 [m_hWnd](#m_hwnd)가 있는지 확인 합니다.
 
@@ -10450,7 +10450,7 @@ BOOL operator!=(const CWnd& wnd) const;
 
 같으면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
-##  <a name="operator_eq_eq"></a>CWnd:: operator = =
+##  <a name="cwndoperator-"></a><a name="operator_eq_eq"></a>CWnd:: operator = =
 
 두 `CWnd` 개체를 비교 하 여 동일한 [m_hWnd](#m_hwnd)있는지 확인 합니다.
 
@@ -10467,7 +10467,7 @@ BOOL operator==(const CWnd& wnd) const;
 
 같으면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
-##  <a name="paintwindowlesscontrols"></a>CWnd::P aintWindowlessControls
+##  <a name="cwndpaintwindowlesscontrols"></a><a name="paintwindowlesscontrols"></a>CWnd::P aintWindowlessControls
 
 컨트롤 컨테이너에서 창 없는 컨트롤을 그립니다.
 
@@ -10484,7 +10484,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 컨트롤 컨테이너가 있고 창 없는 컨트롤을 성공적으로 그리면 TRUE를, 그렇지 않으면 FALSE를 반환 합니다.
 
-##  <a name="postmessage"></a>CWnd::P ostMessage
+##  <a name="cwndpostmessage"></a><a name="postmessage"></a>CWnd::P ostMessage
 
 메시지를 창의 메시지 큐에 배치한 다음 해당 창에서 메시지를 처리할 때까지 기다리지 않고을 반환 합니다.
 
@@ -10520,7 +10520,7 @@ Windows [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew) 함수
 
   [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)의 예제를 참조 하세요.
 
-##  <a name="postncdestroy"></a>CWnd::P ostNcDestroy
+##  <a name="cwndpostncdestroy"></a><a name="postncdestroy"></a>CWnd::P ostNcDestroy
 
 창이 소멸 된 후 기본 [OnNcDestroy](#onncdestroy) 멤버 함수에 의해 호출 됩니다.
 
@@ -10532,7 +10532,7 @@ virtual void PostNcDestroy();
 
 파생 클래스는 **이** 포인터를 삭제 하는 등의 사용자 지정 정리에이 함수를 사용할 수 있습니다.
 
-##  <a name="precreatewindow"></a>CWnd::P reCreateWindow
+##  <a name="cwndprecreatewindow"></a><a name="precreatewindow"></a>CWnd::P reCreateWindow
 
 이 `CWnd` 개체에 연결 된 Windows 창을 만들기 전에 프레임 워크에서 호출 됩니다.
 
@@ -10568,7 +10568,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 [!code-cpp[NVC_MFCWindowing#112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]
 
-##  <a name="presubclasswindow"></a>CWnd::P reSubclassWindow
+##  <a name="cwndpresubclasswindow"></a><a name="presubclasswindow"></a>CWnd::P reSubclassWindow
 
 이 멤버 함수는 창이 서브클래싱 되기 전에 다른 필요한 서브클래싱이 발생 하도록 프레임 워크에서 호출 됩니다.
 
@@ -10580,7 +10580,7 @@ virtual void PreSubclassWindow();
 
 이 멤버 함수를 재정의 하면 컨트롤의 동적 서브 클래스를 사용할 수 있습니다. 이는 고급 재정의 가능입니다.
 
-##  <a name="pretranslatemessage"></a>CWnd::P reTranslateMessage
+##  <a name="cwndpretranslatemessage"></a><a name="pretranslatemessage"></a>CWnd::P reTranslateMessage
 
 창 메시지가 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 및 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) Windows 함수로 디스패치되기 전에 [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 클래스가 이 메시지를 해석하는 데 사용됩니다.
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 메시지를 변환 하 여 디스패치할 수 없으면 0이 아닙니다. 메시지가 변환 되지 않고 디스패치 되어야 하는 경우 0입니다.
 
-##  <a name="print"></a>CWnd::P rint
+##  <a name="cwndprint"></a><a name="print"></a>CWnd::P rint
 
 이 멤버 함수를 호출 하 여 지정 된 장치 컨텍스트에서 현재 창을 그립니다 .이는 프린터 장치 컨텍스트에 가장 일반적입니다.
 
@@ -10610,7 +10610,7 @@ void Print(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-디바이스 컨텍스트에 대한 포인터입니다.
+장치 컨텍스트에 대한 포인터입니다.
 
 *dwFlags*<br/>
 그리기 옵션을 지정 합니다. 이 매개 변수는 다음 플래그 중 하나 이상이 될 수 있습니다.
@@ -10643,7 +10643,7 @@ void Print(
 
 - PRF_OWNED 설정 된 경우 표시 되는 각 소유 창을 WM_PRINT 메시지로 보냅니다.
 
-##  <a name="printclient"></a>CWnd::P rintClient
+##  <a name="cwndprintclient"></a><a name="printclient"></a>CWnd::P rintClient
 
 이 멤버 함수를 호출 하 여 지정 된 장치 컨텍스트에서 창을 그립니다 (일반적으로 프린터 장치 컨텍스트).
 
@@ -10656,7 +10656,7 @@ void PrintClient(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-디바이스 컨텍스트에 대한 포인터입니다.
+장치 컨텍스트에 대한 포인터입니다.
 
 *dwFlags*<br/>
 그리기 옵션을 지정 합니다. 이 매개 변수는 다음 플래그 중 하나 이상이 될 수 있습니다.
@@ -10673,7 +10673,7 @@ void PrintClient(
 
 - 소유 하 고 있는 모든 창을 PRF_OWNED 그립니다.
 
-##  <a name="printwindow"></a>CWnd::P rintWindow
+##  <a name="cwndprintwindow"></a><a name="printwindow"></a>CWnd::P rintWindow
 
 지정된 디바이스 컨텍스트(일반적으로 프린터 DC)에 시각적 창을 복사합니다.
 
@@ -10699,7 +10699,7 @@ BOOL PrintWindow(
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 함수 [Printwindow](/windows/win32/api/winuser/nf-winuser-printwindow)의 기능을 에뮬레이트합니다.
 
-##  <a name="redrawwindow"></a>CWnd:: RedrawWindow
+##  <a name="cwndredrawwindow"></a><a name="redrawwindow"></a>CWnd:: RedrawWindow
 
 지정 된 창의 클라이언트 영역에서 지정 된 사각형이 나 영역을 업데이트 합니다.
 
@@ -10759,7 +10759,7 @@ BOOL RedrawWindow(
 
 `RedrawWindow` 멤버 함수를 사용 하 여 바탕 화면 창의 일부를 무효화할 경우 해당 창에 [WM_PAINT](/windows/win32/gdi/wm-paint) 메시지가 표시 되지 않습니다. 데스크톱을 다시 그리려면 응용 프로그램에서 Cwnd: [: ValidateRgn](#validatergn), [Cwnd:: InvalidateRgn](#invalidatergn), [cwnd:: updatewindow](#updatewindow)또는 [redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) 를 사용 해야 합니다.
 
-##  <a name="reflectchildnotify"></a>CWnd:: ReflectChildNotify
+##  <a name="cwndreflectchildnotify"></a><a name="reflectchildnotify"></a>CWnd:: ReflectChildNotify
 
 이 메시지 함수는 [Onchildnotify](#onchildnotify)의 프레임 워크에서 호출 됩니다.
 
@@ -10797,7 +10797,7 @@ BOOL ReflectChildNotify(
 
 메시지 리플렉션에 대 한 자세한 내용은 반영 되는 [메시지 처리](../../mfc/handling-reflected-messages.md)를 참조 하세요.
 
-##  <a name="reflectlastmsg"></a>CWnd:: ReflectLastMsg
+##  <a name="cwndreflectlastmsg"></a><a name="reflectlastmsg"></a>CWnd:: ReflectLastMsg
 
 이 멤버 함수는 자식 창에 마지막 메시지를 반영 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -10825,7 +10825,7 @@ static BOOL PASCAL ReflectLastMsg(
 
 메시지 리플렉션에 대 한 자세한 내용은 반영 되는 [메시지 처리](../../mfc/handling-reflected-messages.md)를 참조 하세요.
 
-##  <a name="releasedc"></a>CWnd:: ReleaseDC
+##  <a name="cwndreleasedc"></a><a name="releasedc"></a>CWnd:: ReleaseDC
 
 장치 컨텍스트를 해제 하 고 다른 응용 프로그램에서 사용할 수 있도록 해제 합니다.
 
@@ -10848,7 +10848,7 @@ int ReleaseDC(CDC* pDC);
 
 응용 프로그램은 [Getwindowdc](#getwindowdc) 멤버 함수를 호출할 때마다 [GetDC](#getdc) 멤버 함수를 호출할 때마다 `ReleaseDC` 멤버 함수를 호출 해야 합니다.
 
-##  <a name="repositionbars"></a>CWnd:: RepositionBars
+##  <a name="cwndrepositionbars"></a><a name="repositionbars"></a>CWnd:: RepositionBars
 
 창의 클라이언트 영역에서 컨트롤 막대의 위치를 변경 하 고 크기를 조정 하기 위해 호출 됩니다.
 
@@ -10895,7 +10895,7 @@ void RepositionBars(UINT nIDFirst,
 
 *NIDFirst* 및 *nIDLast* 매개 변수는 클라이언트 영역에서 위치를 변경할 컨트롤 막대 id의 범위를 정의 합니다. *NIDLeftOver* 매개 변수는 자식 창 (일반적으로 뷰)의 ID를 지정 하 여 컨트롤 막대가 채워지지 않는 나머지 클라이언트 영역을 채우도록 변경 하 고 크기를 조정 합니다.
 
-##  <a name="runmodalloop"></a>CWnd:: RunModalLoop
+##  <a name="cwndrunmodalloop"></a><a name="runmodalloop"></a>CWnd:: RunModalLoop
 
 [ContinueModal](#continuemodal) 가 FALSE를 반환할 때까지 메시지를 검색, 변환 또는 디스패치 하려면이 멤버 함수를 호출 합니다.
 
@@ -10922,7 +10922,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 기본적으로 `ContinueModal`는 `EndModalLoop`가 호출 된 후 FALSE를 반환 합니다. `EndModalLoop`에서 *Nresult* 로 제공 된 값을 반환 합니다.
 
-##  <a name="screentoclient"></a>CWnd:: ScreenToClient
+##  <a name="cwndscreentoclient"></a><a name="screentoclient"></a>CWnd:: ScreenToClient
 
 디스플레이에 있는 지정된 점 또는 사각형의 화면 좌표를 클라이언트 좌표로 변환합니다.
 
@@ -10946,7 +10946,7 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
   [CListCtrl:: GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect)의 예제를 참조 하세요.
 
-##  <a name="scrollwindow"></a>CWnd:: ScrollWindow
+##  <a name="cwndscrollwindow"></a><a name="scrollwindow"></a>CWnd:: ScrollWindow
 
 현재 `CWnd` 개체의 클라이언트 영역 내용을 스크롤합니다.
 
@@ -10982,7 +10982,7 @@ void ScrollWindow(
 
 *LpRect* 가 NULL이 아닌 경우 자식 창의 위치는 변경 되지 않으며 `CWnd`의 잘못 된 영역은 오프셋 되지 않습니다. *LpRect* 가 NULL이 아닐 때 업데이트 문제를 방지 하려면 `ScrollWindow`를 호출 하기 전에 `UpdateWindow` 멤버 함수를 호출 하 여 `CWnd`를 다시 그립니다.
 
-##  <a name="scrollwindowex"></a>CWnd:: ScrollWindowEx
+##  <a name="cwndscrollwindowex"></a><a name="scrollwindowex"></a>CWnd:: ScrollWindowEx
 
 창 클라이언트 영역의 내용을 스크롤합니다.
 
@@ -11042,7 +11042,7 @@ int ScrollWindowEx(
 
 *LpRectScroll*, *lpRectClip*, *lpRectUpdate*및 *pr 업데이트*에 대 한 모든 입력 및 출력 좌표는 창에 CS_OWNDC 또는 CS_CLASSDC 클래스 스타일이 있는지 여부에 관계 없이 클라이언트 좌표에 있는 것으로 간주 됩니다. 필요한 경우 [Lptodp](/windows/win32/api/wingdi/nf-wingdi-lptodp) 및 [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) Windows 함수를 사용 하 여 논리적 좌표로 변환 합니다.
 
-##  <a name="sendchildnotifylastmsg"></a>CWnd:: SendChildNotifyLastMsg
+##  <a name="cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a>CWnd:: SendChildNotifyLastMsg
 
 이 멤버 함수는 부모 창에서 자식 창에 알림 메시지를 제공 하기 위해 프레임 워크에서 호출 되므로 자식 창에서 작업을 처리할 수 있습니다.
 
@@ -11065,7 +11065,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 
 메시지 리플렉션에 대 한 자세한 내용은 반영 되는 [메시지 처리](../../mfc/handling-reflected-messages.md)를 참조 하세요.
 
-##  <a name="senddlgitemmessage"></a>CWnd:: SendDlgItemMessage
+##  <a name="cwndsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWnd:: SendDlgItemMessage
 
 컨트롤에 메시지를 보냅니다.
 
@@ -11105,7 +11105,7 @@ LRESULT SendDlgItemMessage(
 
 [!code-cpp[NVC_MFCWindowing#113](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]
 
-##  <a name="sendmessage"></a>CWnd:: SendMessage
+##  <a name="cwndsendmessage"></a><a name="sendmessage"></a>CWnd:: SendMessage
 
 지정 된 메시지를이 창으로 보냅니다.
 
@@ -11139,7 +11139,7 @@ LRESULT SendMessage(
 
 [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]
 
-##  <a name="sendmessagetodescendants"></a>CWnd:: SendMessageToDescendants
+##  <a name="cwndsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWnd:: SendMessageToDescendants
 
 지정 된 Windows 메시지를 모든 하위 창에 보내려면이 멤버 함수를 호출 합니다.
 
@@ -11179,7 +11179,7 @@ void SendMessageToDescendants(
 
 [!code-cpp[NVC_MFCWindowing#114](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]
 
-##  <a name="sendnotifymessage"></a>CWnd:: SendNotifyMessage
+##  <a name="cwndsendnotifymessage"></a><a name="sendnotifymessage"></a>CWnd:: SendNotifyMessage
 
 지정 된 메시지를 창으로 보냅니다.
 
@@ -11209,7 +11209,7 @@ BOOL SendNotifyMessage(
 
 호출 스레드에서 창을 만든 경우 `SendNotifyMessage`는 창에 대 한 창 프로시저를 호출 하 고 창 프로시저에서 메시지를 처리할 때까지 반환 되지 않습니다. 창이 다른 스레드에 의해 만들어진 경우 `SendNotifyMessage`는 창 프로시저에 메시지를 전달 하 고 즉시 반환 됩니다. 창 프로시저에서 메시지 처리를 마칠 때까지 기다리지 않습니다.
 
-##  <a name="setactivewindow"></a>CWnd:: SetActiveWindow
+##  <a name="cwndsetactivewindow"></a><a name="setactivewindow"></a>CWnd:: SetActiveWindow
 
 활성 창 `CWnd`를 만듭니다.
 
@@ -11227,7 +11227,7 @@ CWnd* SetActiveWindow();
 
 `SetActiveWindow` 멤버 함수는 응용 프로그램이 임의의 활성 창과 입력 포커스를 임의로 사용할 수 있도록 하기 때문에 주의 해 서 사용 해야 합니다. 일반적으로 Windows는 모든 정품 인증을 처리 합니다.
 
-##  <a name="setcapture"></a>CWnd:: SetCapture
+##  <a name="cwndsetcapture"></a><a name="setcapture"></a>CWnd:: SetCapture
 
 커서의 위치에 관계 없이 모든 후속 마우스 입력이 현재 `CWnd` 개체로 전송 되도록 합니다.
 
@@ -11245,7 +11245,7 @@ CWnd* SetCapture();
 
 마우스 입력이 캡처되면 WM_NCHITTEST 또는 WM_SETCURSOR 메시지가 활성 창으로 전송 되지 않습니다.
 
-##  <a name="setcaretpos"></a>CWnd:: SetCaretPos
+##  <a name="cwndsetcaretpos"></a><a name="setcaretpos"></a>CWnd:: SetCaretPos
 
 캐럿의 위치를 설정 합니다.
 
@@ -11268,7 +11268,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 [!code-cpp[NVC_MFCWindowing#115](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]
 
-##  <a name="setclipboardviewer"></a>CWnd:: SetClipboardViewer
+##  <a name="cwndsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWnd:: SetClipboardViewer
 
 클립보드의 내용이 변경 될 때마다 WM_DRAWCLIPBOARD 메시지를 사용 하 여 알림이 표시 된 windows 체인에이 창을 추가 합니다.
 
@@ -11288,7 +11288,7 @@ HWND SetClipboardViewer();
 
 클립보드 뷰어 체인에서 자신을 제거 하려면 응용 프로그램이 [ChangeClipboardChain](#changeclipboardchain) 멤버 함수를 호출 해야 합니다.
 
-##  <a name="setdlgctrlid"></a>CWnd:: SetDlgCtrlID
+##  <a name="cwndsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWnd:: SetDlgCtrlID
 
 창에 대 한 창 ID 또는 컨트롤 ID를 새 값으로 설정 합니다.
 
@@ -11309,7 +11309,7 @@ int SetDlgCtrlID(int nID);
 
 창은 대화 상자의 컨트롤이 아니라 모든 자식 창이 될 수 있습니다. 최상위 창으로 사용할 수 없습니다.
 
-##  <a name="setdlgitemint"></a>CWnd:: SetDlgItemInt
+##  <a name="cwndsetdlgitemint"></a><a name="setdlgitemint"></a>CWnd:: SetDlgItemInt
 
 대화 상자에서 지정 된 컨트롤의 텍스트를 지정 된 정수 값의 문자열 표현으로 설정 합니다.
 
@@ -11339,7 +11339,7 @@ void SetDlgItemInt(
 
   [CWnd:: SetDlgItemText](#setdlgitemtext)의 예제를 참조 하세요.
 
-##  <a name="setdlgitemtext"></a>CWnd:: SetDlgItemText
+##  <a name="cwndsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWnd:: SetDlgItemText
 
 창이 나 대화 상자에서 소유 하는 컨트롤의 캡션이나 텍스트를 설정 합니다.
 
@@ -11365,7 +11365,7 @@ void SetDlgItemText(
 
 [!code-cpp[NVC_MFCWindowing#116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]
 
-##  <a name="setforegroundwindow"></a>CWnd:: SetForegroundWindow
+##  <a name="cwndsetforegroundwindow"></a><a name="setforegroundwindow"></a>CWnd:: SetForegroundWindow
 
 창을 만든 스레드를 전경으로 전환하고 창을 활성화합니다.
 
@@ -11385,7 +11385,7 @@ BOOL SetForegroundWindow();
 
   [CWnd:: FindWindow](#findwindow)의 예제를 참조 하세요.
 
-##  <a name="setfocus"></a>CWnd:: SetFocus
+##  <a name="cwndsetfocus"></a><a name="setfocus"></a>CWnd:: SetFocus
 
 입력 포커스를 클레임합니다.
 
@@ -11405,7 +11405,7 @@ CWnd* SetFocus();
 
 현재 창이 활성 상태 이지만 포커스가 없는 경우 (즉, 창이 포커스를 갖지 않는 경우) 누른 키는 [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown)또는 [WM_SYSKEYUP](#onsyskeyup)메시지를 생성 합니다.
 
-##  <a name="setfont"></a>CWnd:: SetFont
+##  <a name="cwndsetfont"></a><a name="setfont"></a>CWnd:: SetFont
 
 지정 된 글꼴을 사용 하 여 WM_SETFONT 메시지를 창으로 보냅니다.
 
@@ -11427,7 +11427,7 @@ void SetFont(
 
 창이 WM_SETFONT 메시지를 처리 하지 않는 한이 메서드는 영향을 주지 않습니다. `CWnd`에서 파생 되는 대부분의 MFC 클래스는 WM_SETFONT 메시지의 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 되어 있으므로이 메시지를 처리 합니다. 이 메서드를 사용 하려면 `CWnd`에서 파생 되는 클래스가 WM_SETFONT 메시지의 메서드 처리기를 정의 해야 합니다.
 
-##  <a name="seticon"></a>CWnd:: SetIcon
+##  <a name="cwndseticon"></a><a name="seticon"></a>CWnd:: SetIcon
 
 이 멤버 함수를 호출 하 여 *Hicon*으로 식별 된 특정 아이콘에 대 한 핸들을 설정 합니다.
 
@@ -11457,7 +11457,7 @@ TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경�
 
   [CWnd:: GetSystemMenu](#getsystemmenu)의 예제를 참조 하세요.
 
-##  <a name="setlayeredwindowattributes"></a>CWnd:: SetLayeredWindowAttributes
+##  <a name="cwndsetlayeredwindowattributes"></a><a name="setlayeredwindowattributes"></a>CWnd:: SetLayeredWindowAttributes
 
 계층적 창의 불투명도 및 투명도 색상 키를 설정합니다.
 
@@ -11487,7 +11487,7 @@ BOOL SetLayeredWindowAttributes(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 함수 [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)의 기능을 에뮬레이트합니다.
 
-##  <a name="setmenu"></a>CWnd:: SetMenu
+##  <a name="cwndsetmenu"></a><a name="setmenu"></a>CWnd:: SetMenu
 
 현재 메뉴를 지정 된 메뉴로 설정 합니다.
 
@@ -11514,7 +11514,7 @@ BOOL SetMenu(CMenu* pMenu);
 
   [CMenu:: LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu)의 예제를 참조 하세요.
 
-##  <a name="setowner"></a>CWnd:: SetOwner
+##  <a name="cwndsetowner"></a><a name="setowner"></a>CWnd:: SetOwner
 
 현재 창의 소유자를 지정 된 창 개체로 설정 합니다.
 
@@ -11535,7 +11535,7 @@ void SetOwner(CWnd* pOwnerWnd);
 
 이 함수의 소유권 개념은 [Getwindow](/windows/win32/api/winuser/nf-winuser-getwindow)의 소유권 개념과 다릅니다.
 
-##  <a name="setparent"></a>CWnd:: SetParent
+##  <a name="cwndsetparent"></a><a name="setparent"></a>CWnd:: SetParent
 
 자식 창의 부모 창을 변경 합니다.
 
@@ -11556,7 +11556,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 자식 창이 표시 되 면 Windows에서 적절 한 다시 그리기 및 다시 그리기를 수행 합니다.
 
-##  <a name="setproperty"></a>CWnd:: SetProperty
+##  <a name="cwndsetproperty"></a><a name="setproperty"></a>CWnd:: SetProperty
 
 *Dwdispid*로 지정 된 OLE 컨트롤 속성을 설정 하려면이 멤버 함수를 호출 합니다.
 
@@ -11584,7 +11584,7 @@ void AFX_CDECL SetProperty(
 
 OLE 컨트롤 컨테이너에서이 멤버 함수를 사용 하는 방법에 대 한 자세한 내용은 activex 컨트롤 컨테이너 [: Activex 컨트롤 컨테이너에서 Activex 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)문서를 참조 하세요.
 
-##  <a name="setredraw"></a>CWnd:: SetRedraw 그리기
+##  <a name="cwndsetredraw"></a><a name="setredraw"></a>CWnd:: SetRedraw 그리기
 
 응용 프로그램은 변경 내용을 다시 그릴 수 있도록 하거나 변경 내용을 다시 그릴 수 없도록 `SetRedraw` 호출 합니다.
 
@@ -11605,7 +11605,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 
 [!code-cpp[NVC_MFCWindowing#117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]
 
-##  <a name="setscrollinfo"></a>CWnd:: SetScrollInfo
+##  <a name="cwndsetscrollinfo"></a><a name="setscrollinfo"></a>CWnd:: SetScrollInfo
 
 이 멤버 함수를 호출 하 여 `SCROLLINFO` 구조가 스크롤 막대에 대해 유지 관리 하는 정보를 설정 합니다.
 
@@ -11646,7 +11646,7 @@ BOOL SetScrollInfo(
 > [!NOTE]
 > [CWnd:: GetScrollInfo](#getscrollinfo) 를 사용 하면 응용 프로그램에서 32 비트 스크롤 막대 위치를 사용할 수 있습니다.
 
-##  <a name="setscrollpos"></a>CWnd:: SetScrollPos
+##  <a name="cwndsetscrollpos"></a><a name="setscrollpos"></a>CWnd:: SetScrollPos
 
 스크롤 상자의 현재 위치를 설정 하 고, 요청 된 경우 스크롤 막대를 다시 그려서 스크롤 상자의 새 위치를 반영 합니다.
 
@@ -11680,7 +11680,7 @@ int SetScrollPos(
 
 *BRedraw* 를 FALSE로 설정 하면 다른 함수에 대 한 후속 호출에서 스크롤 막대를 다시 그릴 때마다 유용 합니다.
 
-##  <a name="setscrollrange"></a>CWnd:: SetScrollRange
+##  <a name="cwndsetscrollrange"></a><a name="setscrollrange"></a>CWnd:: SetScrollRange
 
 지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.
 
@@ -11720,7 +11720,7 @@ void SetScrollRange(
 
 표준 스크롤 막대의 기본 범위는 0에서 100 까지입니다. Scroll bar 컨트롤의 기본 범위는 비어 있습니다 ( *Nminpos* 및 *nminpos* 값은 모두 0). *Nminpos* 및 *nminpos* 에 지정 된 값의 차이는 INT_MAX 보다 크지 않아야 합니다.
 
-##  <a name="settimer"></a>CWnd:: SetTimer
+##  <a name="cwndsettimer"></a><a name="settimer"></a>CWnd:: SetTimer
 
 시스템 타이머를 설치 합니다.
 
@@ -11769,7 +11769,7 @@ void CALLBACK TimerProc(
 
 [!code-cpp[NVC_MFCWindowing#118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]
 
-##  <a name="setwindowcontexthelpid"></a>CWnd:: SetWindowContextHelpId
+##  <a name="cwndsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWnd:: SetWindowContextHelpId
 
 도움말 컨텍스트 식별자를 지정 된 창과 연결 하려면이 멤버 함수를 호출 합니다.
 
@@ -11794,7 +11794,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 
 [!code-cpp[NVC_MFCWindowing#119](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]
 
-##  <a name="setwindowplacement"></a>CWnd:: SetWindowPlacement
+##  <a name="cwndsetwindowplacement"></a><a name="setwindowplacement"></a>CWnd:: SetWindowPlacement
 
 창의 표시 상태와 일반(복원됨), 최소화 및 최대화 위치를 설정합니다.
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
-##  <a name="setwindowpos"></a>CWnd:: SetWindowPos
+##  <a name="cwndsetwindowpos"></a><a name="setwindowpos"></a>CWnd:: SetWindowPos
 
 자식, 팝업 및 최상위 창의 크기, 위치 및 Z 순서를 변경 합니다.
 
@@ -11917,7 +11917,7 @@ Z 순서에 WS_EX_TOPMOST 스타일의 창이 포함 된 경우 **& wndTopMost**
 
 [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]
 
-##  <a name="setwindowrgn"></a>CWnd:: SetWindowRgn
+##  <a name="cwndsetwindowrgn"></a><a name="setwindowrgn"></a>CWnd:: SetWindowRgn
 
 창의 영역을 설정 하려면이 멤버 함수를 호출 합니다.
 
@@ -11945,7 +11945,7 @@ TRUE 이면 영역을 설정한 후 운영 체제에서 창을 다시 그립니�
 
 `SetWindowRgn`에 대 한 호출이 성공적으로 완료 되 면 운영 체제는 지역 핸들 *hRgn*에서 지정한 지역을 소유 합니다. 운영 체제는 지역 사본을 만들지 않으므로이 영역 핸들을 사용 하 여 추가 함수 호출을 수행 하지 않고이 영역 핸들을 닫지 않습니다.
 
-##  <a name="setwindowtext"></a>CWnd:: SetWindowText
+##  <a name="cwndsetwindowtext"></a><a name="setwindowtext"></a>CWnd:: SetWindowText
 
 창의 제목을 지정 된 텍스트로 설정 합니다.
 
@@ -11968,7 +11968,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 [!code-cpp[NVC_MFCWindowing#121](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]
 
-##  <a name="showcaret"></a>CWnd:: ShowCaret
+##  <a name="cwndshowcaret"></a><a name="showcaret"></a>CWnd:: ShowCaret
 
 캐럿의 현재 위치에 있는 화면에 캐럿을 표시 합니다.
 
@@ -11990,7 +11990,7 @@ void ShowCaret();
 
   [CWnd:: CreateCaret](#createcaret)의 예제를 참조 하세요.
 
-##  <a name="showownedpopups"></a>CWnd:: ShowOwnedPopups
+##  <a name="cwndshowownedpopups"></a><a name="showownedpopups"></a>CWnd:: ShowOwnedPopups
 
 이 창이 소유 하는 모든 팝업 창을 표시 하거나 숨깁니다.
 
@@ -12007,7 +12007,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
   [CWnd:: SetWindowPos](#setwindowpos)의 예제를 참조 하세요.
 
-##  <a name="showscrollbar"></a>CWnd:: ShowScrollBar
+##  <a name="cwndshowscrollbar"></a><a name="showscrollbar"></a>CWnd:: ShowScrollBar
 
 스크롤 막대를 표시 하거나 숨깁니다.
 
@@ -12035,7 +12035,7 @@ void ShowScrollBar(
 
 스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면 응용 프로그램에서 `ShowScrollBar`를 호출 하면 안 됩니다.
 
-##  <a name="showwindow"></a>CWnd:: ShowWindow
+##  <a name="cwndshowwindow"></a><a name="showwindow"></a>CWnd:: ShowWindow
 
 창의 표시 상태를 설정 합니다.
 
@@ -12080,7 +12080,7 @@ BOOL ShowWindow(int nCmdShow);
 
   [CWnd:: CalcWindowRect](#calcwindowrect)의 예제를 참조 하세요.
 
-##  <a name="subclassdlgitem"></a>CWnd:: SubclassDlgItem
+##  <a name="cwndsubclassdlgitem"></a><a name="subclassdlgitem"></a>CWnd:: SubclassDlgItem
 
 이 멤버 함수를 호출 하 여 대화 상자 템플릿에서 만든 컨트롤을 "동적으로 서브클래싱하" 하 고이 `CWnd` 개체에 연결 합니다.
 
@@ -12112,7 +12112,7 @@ BOOL SubclassDlgItem(
 
 [!code-cpp[NVC_MFCWindowing#122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]
 
-##  <a name="subclasswindow"></a>CWnd:: SubclassWindow
+##  <a name="cwndsubclasswindow"></a><a name="subclasswindow"></a>CWnd:: SubclassWindow
 
 이 멤버 함수를 호출 하 여 창을 "동적으로 서브클래싱하" 하 고이 `CWnd` 개체에 연결 합니다.
 
@@ -12142,7 +12142,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 [!code-cpp[NVC_MFCWindowing#123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]
 
-##  <a name="unlockwindowupdate"></a>CWnd:: UnlockWindowUpdate
+##  <a name="cwndunlockwindowupdate"></a><a name="unlockwindowupdate"></a>CWnd:: UnlockWindowUpdate
 
 `CWnd::LockWindowUpdate`로 잠긴 창의 잠금을 해제 하려면이 멤버 함수를 호출 합니다.
 
@@ -12154,7 +12154,7 @@ void UnlockWindowUpdate();
 
 `LockWindowUpdate`를 사용 하 여 한 번에 하나의 창만 잠글 수 있습니다. Windows 잠금에 대 한 자세한 내용은 [CWnd:: lockwindowupdate](#lockwindowupdate) 또는 Win32 함수 [lockwindowupdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) 를 참조 하십시오.
 
-##  <a name="unsubclasswindow"></a>CWnd:: UnsubclassWindow
+##  <a name="cwndunsubclasswindow"></a><a name="unsubclasswindow"></a>CWnd:: UnsubclassWindow
 
 이 멤버 함수를 호출 하 여 `WndProc`를 원래 값으로 다시 설정 하 고 HWND로 식별 된 창을 `CWnd` 개체에서 분리 합니다.
 
@@ -12170,7 +12170,7 @@ HWND UnsubclassWindow();
 
   [CWnd:: SubclassWindow](#subclasswindow)의 예제를 참조 하세요.
 
-##  <a name="updatedata"></a>CWnd:: UpdateData
+##  <a name="cwndupdatedata"></a><a name="updatedata"></a>CWnd:: UpdateData
 
 대화 상자에서 데이터를 초기화 하거나 대화 상자 데이터를 검색 하 고 유효성을 검사 하려면이 멤버 함수를 호출 합니다.
 
@@ -12191,7 +12191,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)의 기본 구현에서 모달 대화 상자를 만들 때 프레임 워크는 *Bsaveandvalidate* 가 FALSE로 설정 된 `UpdateData`를 자동으로 호출 합니다. 대화 상자가 표시 되기 전에 호출이 발생 합니다. [CDialog:: OnOK](../../mfc/reference/cdialog-class.md#onok) 의 기본 구현에서는 데이터를 검색 하기 위해 *Bsaveandvalidate* 를 TRUE로 설정 하 여이 멤버 함수를 호출 하 고 성공 하면 대화 상자를 닫습니다. 대화 상자에서 취소 단추를 클릭 하면 검색 되는 데이터를 제외 하 고 대화 상자가 닫힙니다.
 
-##  <a name="updatedialogcontrols"></a>CWnd:: UpdateDialogControls
+##  <a name="cwndupdatedialogcontrols"></a><a name="updatedialogcontrols"></a>CWnd:: UpdateDialogControls
 
 이 멤버 함수를 호출 하 여 대화 상자 또는 대화 상자에서 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 콜백 메커니즘을 사용 하는 다른 컨트롤의 상태를 업데이트 합니다.
 
@@ -12215,7 +12215,7 @@ void UpdateDialogControls(
 
 프레임 워크는 응용 프로그램의 유휴 처리의 일부로 대화 상자 모음 또는 도구 모음에 있는 컨트롤에 대해이 멤버 함수를 호출 합니다.
 
-##  <a name="updatelayeredwindow"></a>CWnd:: UpdateLayeredWindow
+##  <a name="cwndupdatelayeredwindow"></a><a name="updatelayeredwindow"></a>CWnd:: UpdateLayeredWindow
 
 계층적 창의 위치, 크기, 모양, 내용 및 투명도를 업데이트합니다.
 
@@ -12271,7 +12271,7 @@ BOOL UpdateLayeredWindow(
 
 이 멤버 함수는 Windows SDK 설명 된 대로 [Updatelayeredwindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)함수의 기능을 에뮬레이트합니다.
 
-##  <a name="updatewindow"></a>CWnd:: UpdateWindow
+##  <a name="cwndupdatewindow"></a><a name="updatewindow"></a>CWnd:: UpdateWindow
 
 업데이트 지역이 비어 있지 않은 경우 [WM_PAINT](/windows/win32/gdi/wm-paint) 메시지를 전송 하 여 클라이언트 영역을 업데이트 합니다.
 
@@ -12287,7 +12287,7 @@ void UpdateWindow();
 
 [!code-cpp[NVC_MFCWindowing#124](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]
 
-##  <a name="validaterect"></a>CWnd:: ValidateRect
+##  <a name="cwndvalidaterect"></a><a name="validaterect"></a>CWnd:: ValidateRect
 
 창의 업데이트 영역에서 사각형을 제거 하 여 지정 된 사각형 내의 클라이언트 영역에 대 한 유효성을 검사 합니다.
 
@@ -12306,7 +12306,7 @@ void ValidateRect(LPCRECT lpRect);
 
 Windows에서는 현재 업데이트 영역의 유효성을 검사할 때까지 WM_PAINT 메시지를 계속 생성 합니다.
 
-##  <a name="validatergn"></a>CWnd:: ValidateRgn
+##  <a name="cwndvalidatergn"></a><a name="validatergn"></a>CWnd:: ValidateRgn
 
 창의 현재 업데이트 영역에서 영역을 제거 하 여 지정 된 영역 내에서 클라이언트 영역의 유효성을 검사 합니다.
 
@@ -12325,7 +12325,7 @@ void ValidateRgn(CRgn* pRgn);
 
 [Beginpaint](#beginpaint) 멤버 함수는 전체 클라이언트 영역의 유효성을 자동으로 검사 합니다. 다음 [WM_PAINT](/windows/win32/gdi/wm-paint) 메시지를 생성 하기 전에 업데이트 영역의 일부를 확인 해야 하는 경우 [ValidateRect](#validaterect) 또는 `ValidateRgn` 멤버 함수를 호출 하지 않아야 합니다.
 
-##  <a name="windowfrompoint"></a>CWnd:: WindowFromPoint
+##  <a name="cwndwindowfrompoint"></a><a name="windowfrompoint"></a>CWnd:: WindowFromPoint
 
 지정 된 지점을 포함 하는 창을 검색 합니다. *point* 는 화면에서 지점의 화면 좌표를 지정 해야 합니다.
 
@@ -12346,7 +12346,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 `WindowFromPoint`은 창이 창 내에 있더라도 숨겨진 창이 나 사용 하지 않도록 설정 된 창을 검색 하지 않습니다. 응용 프로그램은 비 제한적인 검색에 대해 [Childwindowfrompoint](#childwindowfrompoint) 멤버 함수를 사용 해야 합니다.
 
-##  <a name="windowproc"></a>CWnd:: WindowProc
+##  <a name="cwndwindowproc"></a><a name="windowproc"></a>CWnd:: WindowProc
 
 `CWnd` 개체에 대 한 Windows 프로시저 (`WindowProc`)를 제공 합니다.
 
@@ -12376,9 +12376,9 @@ virtual LRESULT WindowProc(
 
 창의 메시지 맵을 통해 메시지를 디스패치합니다.
 
-##  <a name="winhelp"></a>CWnd:: WinHelp
+##  <a name="cwndwinhelp"></a><a name="winhelp"></a>CWnd:: WinHelp
 
-WinHelp 애플리케이션을 시작하기 위해 호출됩니다.
+WinHelp 응용 프로그램을 시작하기 위해 호출됩니다.
 
 ```
 virtual void WinHelp(
@@ -12398,7 +12398,7 @@ virtual void WinHelp(
 
 자세한 내용은 [CWinApp:: WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 를 참조 하세요.
 
-##  <a name="registertouchwindow"></a>CWnd:: RegisterTouchWindow
+##  <a name="cwndregistertouchwindow"></a><a name="registertouchwindow"></a>CWnd:: RegisterTouchWindow
 
 Windows touch 지원을 등록 하거나 등록 취소 합니다.
 
@@ -12422,7 +12422,7 @@ TRUE 이면 Windows touch 지원 등록을 나타냅니다. 그렇지 않으면 
 
 ### <a name="remarks"></a>설명
 
-##  <a name="resizedynamiclayout"></a>CWnd:: ResizeDynamicLayout
+##  <a name="cwndresizedynamiclayout"></a><a name="resizedynamiclayout"></a>CWnd:: ResizeDynamicLayout
 
 창에 대해 동적 레이아웃을 사용하도록 설정한 경우 창 크기가 변경되면 자식 창의 레이아웃을 조정하기 위해 프레임워크에서 호출됩니다.
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160829"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Microsoft 전용**
 
@@ -29,11 +29,11 @@ __super::member_function();
 
 액세스할 수 있는 모든 기본 클래스 메서드가 오버로드 확인 단계에서 고려되고 가장 일치하는 함수가 호출되는 함수입니다.
 
-**__super**는 멤버 함수의 본문 내에서만 나타날 수 있습니다.
+**__super** 는 멤버 함수의 본문 내에만 나타날 수 있습니다.
 
-**__super**는 using 선언과 함께 사용할 수 없습니다. 자세한 내용은 [선언 사용](../cpp/using-declaration.md)을 참조하십시오.
+**__super** 는 using 선언과 함께 사용할 수 없습니다. 자세한 내용은 [선언 사용](../cpp/using-declaration.md) 을 참조 하세요.
 
-코드를 삽입하는 [특성](../windows/attributes/attributes-alphabetical-reference.md)이 도입되면서 이름을 모를 수도 있지만 호출하려는 메서드를 포함하는 하나 이상의 기본 클래스가 코드에 포함될 수도 있습니다.
+코드를 삽입 하는 [특성](../windows/attributes/attributes-alphabetical-reference.md) 의 도입으로, 코드에는 이름이 몰라도 호출할 메서드를 포함 하는 기본 클래스를 하나 이상 포함할 수 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -62,4 +62,4 @@ struct D : B1, B2 {
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)
