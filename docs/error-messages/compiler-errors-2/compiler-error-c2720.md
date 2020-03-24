@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-ms.openlocfilehash: c6499fd3f279099ea7c5b31860e70bdaa285e3f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f4329ee631eafc7c2670d9ebf28609c22e7592
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383050"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202137"
 ---
 # <a name="compiler-error-c2720"></a>컴파일러 오류 C2720
 
-> '*식별자*': '*지정자*' 멤버에 잘못 된 저장소 클래스 지정자
+> '*identifier*': 멤버에는 '*지정자*' 저장소 클래스 지정자를 사용할 때 안 됩니다.
 
-선언 외부의 클래스 멤버에서 스토리지 클래스를 사용할 수 없습니다. 이 오류를 해결 하려면 불필요 한 제거 [저장소 클래스](../../cpp/storage-classes-cpp.md) 클래스 선언 외부 멤버의 정의에서 지정자입니다.
+선언 외부의 클래스 멤버에서 스토리지 클래스를 사용할 수 없습니다. 이 오류를 해결 하려면 클래스 선언 외부의 멤버 정의에서 불필요 한 [저장소 클래스](../../cpp/storage-classes-cpp.md) 지정자를 제거 합니다.
 
 ## <a name="example"></a>예제
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C3134
 ms.assetid: f887e4d2-7740-49e4-9972-7edceb8fa77b
-ms.openlocfilehash: 54728e7da0b74b45c7900958df0813bd4241088c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe393f82739de8cf62d7684bf74956165774864d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176613"
 ---
 # <a name="compiler-error-c3134"></a>컴파일러 오류 C3134
 
-'value': '특성' 없는 유효한 ' type' 특성 인수의 값
+' value ': 특성 인수 ' attribute '의 값은 ' type ' 형식이 잘못 되었습니다.
 
-값 특성에 할당 된 구문 오류가 발생 했습니다.
+값을 특성에 할당 하는 동안 구문 오류가 발생 했습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [용도별 특성](../../windows/attributes/attributes-by-usage.md)

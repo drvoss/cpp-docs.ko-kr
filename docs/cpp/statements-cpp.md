@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59eb1ef2cbb9046a8ed9ea134a0c37aba6c37ba3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178615"
 ---
 # <a name="statements-c"></a>문 (C++)
 
@@ -22,7 +22,7 @@ C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요
 
 - 명령문 범주
 
-   - [식 문](../cpp/expression-statement.md). 이 명령문은 식의 부작용 또는 해당 반환 값에 대해 평가합니다.
+   - [식 문](../cpp/expression-statement.md). 이 명령문은 식의 부작용 또는 해당 반환 값을 계산합니다.
 
    - [Null 문](../cpp/null-statement.md). 이 명령문은 C++ 구문에 필요하지만 별도의 작업이 필요하지 않은 명령문에 제공할 수 있습니다.
 
@@ -34,9 +34,9 @@ C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요
 
    - [점프 문](../cpp/jump-statements-cpp.md). 이 명령문은 함수의 다른 위치로 제어를 즉시 전달하거나 함수로부터의 제어를 반환합니다.
 
-   - [선언문](declarations-and-definitions-cpp.md). 선언은 프로그램에 이름을 제공합니다.
+   - [선언 문](declarations-and-definitions-cpp.md). 선언은 프로그램에 이름을 제공합니다.
 
-예외 처리문에 대한 내용은 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참고하십시오.
+예외 처리 문에 대 한 자세한 내용은 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

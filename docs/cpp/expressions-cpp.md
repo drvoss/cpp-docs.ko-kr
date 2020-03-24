@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179941"
 ---
 # <a name="expressions-c"></a>식 (C++)
 
@@ -22,13 +22,13 @@ ms.locfileid: "62184018"
 
 - "의도하지 않은 결과"를 생성합니다. 의도하지 않은 결과는 예를 들어 개체의 값을 수정하는 등 식의 평가 이외의 모든 작업입니다.
 
-C++에서는 연산자를 오버로드할 수 있으며 해당 의미는 사용자 정의할 수 있습니다. 하지만 우선 순위와 피연산자의 수를 수정할 수 없습니다. 이 단원에서는 오버로드가 아니라 언어로 제공되기 때문에 연산자의 문법과 의미론을 설명합니다. [식의 형식](../cpp/types-of-expressions.md) 및 [식의 의미 체계](../cpp/semantics-of-expressions.md) 외에 다음 항목이 설명되어 있습니다.
+C++에서는 연산자를 오버로드할 수 있으며 해당 의미는 사용자 정의할 수 있습니다. 하지만 우선 순위와 피연산자의 수를 수정할 수 없습니다. 이 섹션에서는 오버로드가 아니라 언어로 제공되기 때문에 연산자의 문법과 의미론을 설명합니다. 식 [형식](../cpp/types-of-expressions.md) 및 [식의 의미 체계](../cpp/semantics-of-expressions.md)외에도 다음 항목을 다룹니다.
 
 - [기본 식](../cpp/primary-expressions.md)
 
 - [범위 결정 연산자](../cpp/scope-resolution-operator.md)
 
-- [후위 식](../cpp/postfix-expressions.md)
+- [후 위 식](../cpp/postfix-expressions.md)
 
 - [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)
 
@@ -46,9 +46,9 @@ C++에서는 연산자를 오버로드할 수 있으며 해당 의미는 사용�
 
 - [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-- [오버로드된 연산자](../cpp/operator-overloading.md)
+- [오버 로드 된 연산자](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/cli)
 
     > [!NOTE]
     >  기본 제공 형식에 대한 연산자를 오버 로드할 수 없으며 해당 동작은 미리 정의되어 있습니다.

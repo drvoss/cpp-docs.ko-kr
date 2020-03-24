@@ -2,12 +2,12 @@
 title: 로컬로 선언된 이름에 대한 이름 확인
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 91ed065a6c8aca6c7f740f0236cb13c8133fc96f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 2c75c09308f6ba07039de4d2811b9bedaba71e44
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177900"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>로컬로 선언된 이름에 대한 이름 확인
 
@@ -162,6 +162,6 @@ Base
 1
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[템플릿 및 이름 확인](../cpp/templates-and-name-resolution.md)
+[이름 확인](../cpp/templates-and-name-resolution.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: ba17c9a633b7b18cad2881dfef90fde7c2074319
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b5c99d19be3461b10a1126dea3a45d308c0fc558
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181293"
 ---
 # <a name="bitwise-and-operator-amp"></a>비트 and 연산자: &amp;
 
@@ -21,7 +21,7 @@ ms.locfileid: "79446143"
 expression & expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 식은 다른 and 식이거나 아래에서 설명한 형식 제한에 따라 같음 식, 관계식, 더하기 식, 곱하기 식, 멤버 포인터 식, 캐스트 식, 단항 식, 후위 식 또는 기본 식일 수 있습니다.
 

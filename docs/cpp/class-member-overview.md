@@ -7,40 +7,40 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 8edfadefdacf94685952d31f2eaf83e8593eaef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7847de072b2c0d5b95597e88f9ebf7e2ad63e180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386111"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180955"
 ---
 # <a name="class-member-overview"></a>클래스 멤버 개요
 
-클래스 또는 구조체는 멤버로 구성됩니다. 클래스가 수행하는 작업은 해당 멤버 함수에 의해 수행됩니다. 클래스가 유지하는 상태는 해당 데이터 멤버에 저장됩니다. 생성자 및 메모리와 같은 정리 작업에서 멤버의 초기화가 수행 하 고 소멸자에서 이루어지는 리소스 해제 합니다. C++11 이상에서는 선언 지점에 데이터 멤버를 초기화할 수 있으며 일반적으로 초기화해야 합니다.
+클래스 또는 구조체는 멤버로 구성됩니다. 클래스가 수행하는 작업은 해당 멤버 함수에 의해 수행됩니다. 클래스가 유지하는 상태는 해당 데이터 멤버에 저장됩니다. 멤버 초기화는 생성자에 의해 수행 되며 메모리 해제 및 리소스 해제와 같은 정리 작업은 소멸자에 의해 수행 됩니다. C++11 이상에서는 선언 지점에 데이터 멤버를 초기화할 수 있으며 일반적으로 초기화해야 합니다.
 
 ## <a name="kinds-of-class-members"></a>클래스 멤버 종류
 
 멤버 범주 전체 목록은 다음과 같습니다.
 
-- [특수 멤버 함수](special-member-functions.md)
+- [특수 멤버 함수](special-member-functions.md)입니다.
 
 - [멤버 함수 개요](overview-of-member-functions.md)
 
-- 기본 제공 형식 및 다른 사용자 정의 형식을 포함한 [데이터 멤버](static-members-cpp.md)
+- 기본 제공 형식 및 기타 사용자 정의 형식을 포함 하는 [데이터 멤버](static-members-cpp.md)
 
 - 연산자
 
-- [중첩 클래스 선언](nested-class-declarations.md)
+- [중첩 클래스 선언](nested-class-declarations.md) 및)
 
 - [공용 구조체](unions.md)
 
-- [열거형](../cpp/enumerations-cpp.md)
+- [열거](../cpp/enumerations-cpp.md).
 
-- [비트 필드](../cpp/cpp-bit-fields.md)
+- [비트 필드](../cpp/cpp-bit-fields.md).
 
-- [Friend](../cpp/friend-cpp.md)
+- [친구](../cpp/friend-cpp.md).
 
-- [별칭 및 typedef](../cpp/aliases-and-typedefs-cpp.md)
+- [별칭 및 형식 정의](../cpp/aliases-and-typedefs-cpp.md).
 
     > [!NOTE]
     >  Friends는 클래스 선언에 포함되므로 앞의 목록에 포함됩니다. 그러나 클래스 범위에 속하지 않으므로 true 클래스 멤버가 아닙니다.
@@ -92,11 +92,11 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>멤버 접근성
 
-클래스의 멤버는 멤버 목록에 선언됩니다. 액세스 지정자라고 하는 키워드를 사용하여 클래스 멤버 목록을 원하는 수의 **private**, **protected** 및 **public** 섹션으로 나눌 수 있습니다.  액세스 지정자 뒤에 콜론(**:**)이 와야 합니다.  이 섹션은 인접해 있을 필요가 없으므로 이 키워드가 멤버 목록에서 여러 번 나올 수 있습니다.  다음 액세스 지정자나 닫는 중괄호가 나올 때까지 키워드가 모든 멤버의 액세스를 지정합니다. 자세한 내용은 [멤버 액세스 제어(C++)](../cpp/member-access-control-cpp.md)를 참조하세요.
+클래스의 멤버는 멤버 목록에 선언됩니다. 클래스의 멤버 목록은 액세스 지정자 라는 키워드를 사용 하 여 원하는 수의 **private**, **protected** 및 **public** 섹션으로 나눌 수 있습니다.  콜론 **:** 액세스 지정자 뒤에와 야 합니다.  이 섹션은 인접해 있을 필요가 없으므로 이 키워드가 멤버 목록에서 여러 번 나올 수 있습니다.  다음 액세스 지정자나 닫는 중괄호가 나올 때까지 키워드가 모든 멤버의 액세스를 지정합니다. 자세한 내용은 [Member Access Control (C++)](../cpp/member-access-control-cpp.md)를 참조 하세요.
 
 ## <a name="static-members"></a>정적 멤버
 
-데이터 멤버는 정적 멤버로 선언할 수 있습니다. 이 경우 클래스의 모든 개체가 동일한 복사본에 액세스할 수 있게 됩니다. 멤버 함수를 정적 함수로 선언할 수 있습니다. 이 경우 멤버 함수는 클래스의 정적 데이터 멤버에만 액세스할 수 있습니다( *this* 포인터 없음). 자세한 내용은 [정적 데이터 멤버](../cpp/static-members-cpp.md)를 참조하세요.
+데이터 멤버는 정적 멤버로 선언할 수 있습니다. 이 경우 클래스의 모든 개체가 동일한 복사본에 액세스할 수 있게 됩니다. 멤버 함수는 static으로 선언 될 수 있으며,이 경우 클래스의 정적 데이터 멤버에만 액세스할 수 있고 *this* 포인터는 없습니다. 자세한 내용은 [정적 데이터 멤버](../cpp/static-members-cpp.md)를 참조 하세요.
 
 ## <a name="special-member-functions"></a>특수 멤버 함수
 
@@ -104,17 +104,17 @@ int TestRun::_instances{ 0 };
 
 1. 기본 생성자
 
-1. 복사 생성자
+1. 복사 생성자입니다.
 
-1. **(C++11)** 이동 생성자
+1. **(C + + 11)** 생성자 이동
 
 1. 복사 할당 연산자
 
-1. **(C++11)** 이동 할당 연산자
+1. **(C + + 11)** 이동 할당 연산자
 
 1. 소멸자
 
-자세한 내용은 [특수 멤버 함수](../cpp/special-member-functions.md)를 참조하세요.
+자세한 내용은 [특수 멤버 함수](../cpp/special-member-functions.md)를 참조 하세요.
 
 ## <a name="memberwise-initialization"></a>멤버 수준 초기화
 
@@ -142,7 +142,7 @@ int main()
 
 생성자서 멤버에 값이 할당되는 경우 이 값은 선언 시점에 멤버를 초기화할 때 사용된 값을 덮어씁니다.
 
-주어진 클래스 형식의 모든 개체에 대해 정적 데이터 멤버의 공유 복사본이 한 개만 있습니다. 정적 데이터 멤버를 정의해야 하며 파일 범위에서 초기화할 수 있습니다. 정적 데이터 멤버에 대한 자세한 내용은 [정적 데이터 멤버](../cpp/static-members-cpp.md)를 참조하세요. 다음 예제에서는 이 초기화를 수행하는 방법을 보여 줍니다.
+주어진 클래스 형식의 모든 개체에 대해 정적 데이터 멤버의 공유 복사본이 한 개만 있습니다. 정적 데이터 멤버를 정의해야 하며 파일 범위에서 초기화할 수 있습니다. 정적 데이터 멤버에 대 한 자세한 내용은 [정적 데이터 멤버](../cpp/static-members-cpp.md)를 참조 하세요. 다음 예에서는 이러한 초기화를 수행 하는 방법을 보여 줍니다.
 
 ```cpp
 // class_members2.cpp
@@ -172,4 +172,4 @@ int CanInit2::j = i;
 
 ## <a name="see-also"></a>참고 항목
 
-[클래스 및 구조체(C++)](../cpp/classes-and-structs-cpp.md)
+[클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

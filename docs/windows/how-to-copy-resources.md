@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426578"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215217"
 ---
 # <a name="how-to-manage-resources-c"></a>방법: 리소스 관리 (C++)
 
@@ -46,7 +46,7 @@ ms.locfileid: "79426578"
 기존 리소스 또는 실행 파일에서 현재 리소스 파일로 리소스를 쉽게 복사할 수 있습니다. 리소스를 복사 하려면 리소스를 포함 하는 두 파일을 동시에 열고 한 파일에서 다른 파일로 항목을 끌거나 두 파일 간에 복사 하 여 붙여 넣습니다. 이 메서드는 리소스 스크립트 (.rc) 파일 및 리소스 템플릿 (.rct) 파일 및 실행 파일 (.exe)로 작동 합니다.
 
 > [!NOTE]
-> 시각적 C++ 개체에는 응용 프로그램에서 사용할 수 있는 샘플 리소스 파일이 포함 되어 있습니다. 자세한 내용은 [클립 아트: 공용 리소스](https://github.com/Microsoft/VCSamples)를 참조 하세요.
+> 시각적 C++ 개체에는 응용 프로그램에서 사용할 수 있는 샘플 리소스 파일이 포함 되어 있습니다. 자세한 내용은 [클립 아트: 공용 리소스](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)를 참조 하세요.
 
 프로젝트의 리소스 파일 (**리소스 뷰**)과 독립 실행형 .rc 파일 사이를 끌어서 놓거나, 복사 하거나, 잘라내거나, 붙여 넣을 수는 없습니다. 이전 버전의 제품에서이 작업을 수행할 수 있습니다. 프로젝트 외부에서 열리는 .rc 파일 간에만 끌어서 놓기 메서드를 사용 합니다.
 
@@ -130,4 +130,4 @@ Win32
 
 [리소스 파일](../windows/resource-files-visual-studio.md)<br/>
 [방법: 리소스 만들기](../windows/how-to-create-a-resource-script-file.md)<br/>
-[방법: 컴파일 타임에 리소스 포함](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[방법: 컴파일 타임에 리소스 포함](../windows/how-to-include-resources-at-compile-time.md)

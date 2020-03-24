@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4291
+title: 컴파일러 경고(수준 1) C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175716"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>컴파일러 경고 (수준 1) C4291
+# <a name="compiler-warning-level-1-c4291"></a>컴파일러 경고(수준 1) C4291
 
 ' 선언 ': 일치 하는 operator delete를 찾을 수 없습니다. 초기화에서 예외가 throw 되 면 메모리가 해제 되지 않습니다.
 
@@ -23,7 +23,7 @@ Placement [delete](../../cpp/delete-operator-cpp.md)가 없는 경우 placement 
 
 추가 인수 없이 **new** 연산자를 사용 하 고 [/gx](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md)또는/eha 옵션으로 컴파일하여 예외 처리를 사용 하는 경우 생성자가 예외를 throw 하면 컴파일러가 **delete** 연산자를 호출 하는 코드를 생성 합니다.
 
-**새** 연산자의 배치 형태 (할당 크기 외에 인수를 포함 하는 폼)를 사용 하 고 개체의 생성자가 예외를 throw 하는 경우 컴파일러는 operator **delete**를 호출 하는 코드를 계속 생성 합니다. 하지만 operator **delete** 의 배치 형식이 메모리를 할당 한 **new** 연산자의 배치 형식과 일치 하는 경우에만이 작업을 수행할 수 있습니다. 예를 들면,
+**새** 연산자의 배치 형태 (할당 크기 외에 인수를 포함 하는 폼)를 사용 하 고 개체의 생성자가 예외를 throw 하는 경우 컴파일러는 operator **delete**를 호출 하는 코드를 계속 생성 합니다. 하지만 operator **delete** 의 배치 형식이 메모리를 할당 한 **new** 연산자의 배치 형식과 일치 하는 경우에만이 작업을 수행할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // C4291.cpp

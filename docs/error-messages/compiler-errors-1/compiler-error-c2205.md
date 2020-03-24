@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2205
 ms.assetid: bfc19840-4a48-4da5-8e69-7069989f1d2c
-ms.openlocfilehash: 0ebbb5ef51e3fce5dc38f4a0b06a43e2007ebc2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 111f67aac9ec07692c5c1ff759eaff6f67dd4050
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206728"
 ---
 # <a name="compiler-error-c2205"></a>컴파일러 오류 C2205
 
-'identifier': 블록 범위를 사용 하 여 extern 변수를 초기화할 수 없습니다.
+' identifier ': 블록 범위를 사용 하 여 extern 변수를 초기화할 수 없습니다.
 
-`extern` 함수에서 변수를 초기화할 수 없습니다.
+함수에서 `extern` 변수를 초기화할 수 없습니다.
