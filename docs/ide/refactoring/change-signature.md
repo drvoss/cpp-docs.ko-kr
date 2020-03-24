@@ -2,12 +2,12 @@
 title: 시그니처 변경
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171907"
 ---
 # <a name="change-signature"></a>시그니처 변경
 
@@ -35,7 +35,7 @@ ms.locfileid: "52281950"
 
    ![시그니처 변경 대화 상자](images/changesignature_dialog.png)
 
-   | 단추 | 설명
+   | 단추 | Description
    | ------ | ---
    | **위쪽/아래쪽**    | 선택한 매개 변수를 목록에서 위아래로 이동합니다.
    | **추가**        | 목록에 새 매개 변수 추가
@@ -53,9 +53,9 @@ ms.locfileid: "52281950"
 
    여기에서 다음 작업을 수행할 수 있습니다.
 
-   | 입력 | 설명
+   | 항목 | Description
    | ----- | ---
-   | **Type**               | 매개 변수의 형식(int, double, float 등)
+   | **형식**               | 매개 변수의 형식(int, double, float 등)
    | **이름**               | 매개 변수의 이름입니다.
    | **선택적 매개 변수** | 필요에 따라 매개 변수를 지정합니다.
    | **삽입된 값**     | 매개 변수를 지정하지 않은 함수에 대한 모든 호출에 삽입된 값입니다(**추가**의 경우에만 유효).

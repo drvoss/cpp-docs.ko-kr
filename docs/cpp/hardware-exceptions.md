@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188678"
 ---
 # <a name="hardware-exceptions"></a>하드웨어 예외
 
@@ -43,4 +43,4 @@ Windows에서 인식하는 하드웨어 예외는 다음 표에 요약되어 있
 ## <a name="see-also"></a>참고 항목
 
 [예외 처리기 작성](../cpp/writing-an-exception-handler.md)<br/>
-[구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

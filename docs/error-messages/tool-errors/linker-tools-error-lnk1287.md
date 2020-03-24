@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1287
 ms.assetid: 48dc379d-370c-42f6-8028-5bbcf1cc88bd
-ms.openlocfilehash: 342c3a8b8d70f910cca9a0210efbb213c80cc20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffa1d79237061c2c0aaad9da344dafc9f718c2cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183620"
 ---
 # <a name="linker-tools-error-lnk1287"></a>링커 도구 오류 LNK1287
 
-잘못 된 관리 되는 진입점 함수
+관리 되는 진입점 함수가 잘못 되었습니다.
 
-진입점 관리 되는 이미지에 적합 하지 않습니다. 관리 되는 진입점 함수의 반환 유형은 가능 `void` 또는 `int`합니다. 관리 되는 진입점 함수의 매개 변수 형식의 수만 `void` 또는 `String []`합니다.
+진입점이 관리 되는 이미지에 적합 하지 않습니다. 관리 되는 진입점 함수의 반환 형식은 `void` 또는 `int`만 가능 합니다. 관리 되는 진입점 함수의 매개 변수 형식은 `void` 또는 `String []`만 가능 합니다.

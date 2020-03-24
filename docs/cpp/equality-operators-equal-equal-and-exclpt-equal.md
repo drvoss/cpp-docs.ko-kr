@@ -13,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a0c08f438528caeaac6d5e52e806a36fe56dd25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444405"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189249"
 ---
 # <a name="equality-operators--and-"></a>같음 연산자: == 및 !=
 
@@ -29,7 +29,7 @@ expression == expression
 expression != expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이항 같음 연산자는 피연산자를 비교하여 완전히 같은지 아니면 같지 않은지를 확인합니다.
 
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-같음 연산자는 동일한 형식의 멤버에 대한 포인터를 비교할 수 있습니다. 이러한 비교에서는 멤버 포인터 변환(멤버 포인터 변환 참조)이 수행됩니다. 멤버에 대한 포인터를 0으로 계산하는 상수 식과 비교할 수도 있습니다.
+같음 연산자는 동일한 형식의 멤버에 대한 포인터를 비교할 수 있습니다. 이러한 비교에서는 멤버 포인터 변환(멤버 포인터 변환 참조)이 수행됩니다. 멤버에 대한 포인터를 0으로 계산되는 상수 식과 비교할 수도 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

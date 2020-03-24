@@ -1,5 +1,5 @@
 ---
-title: 가변 인수 목록 사용 하 여 함수 (C++)
+title: 가변 인수 목록을 사용 하는C++함수 ()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], variable number of
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f456f31dec631f7d9340563a93dfafeea49a72b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153855"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178446"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>가변 인수 목록 사용 하 여 함수 (C++)
+# <a name="functions-with-variable-argument-lists--c"></a>가변 인수 목록을 사용 하는C++함수 ()
 
-마지막 멤버가 줄임표(...)인 함수 선언에서는 여러 가지 인수를 사용할 수 있습니다. 이러한 경우 C++에서는 명시적으로 선언된 인수에만 형식 검사를 제공합니다. 인수의 수와 형식까지 변경될 수 있는 정도의 일반적인 수준으로 함수를 만들어야 하는 경우 가변 인수 목록을 사용할 수 있습니다. 함수 패밀리는 가변 인수 목록을 사용 하는 함수의 예입니다. `printf` *인수 선언 목록*
+마지막 멤버가 줄임표(...)인 함수 선언에서는 여러 가지 인수를 사용할 수 있습니다. 이러한 경우 C++에서는 명시적으로 선언된 인수에만 형식 검사를 제공합니다. 인수의 수와 형식까지 변경될 수 있는 정도의 일반적인 수준으로 함수를 만들어야 하는 경우 가변 인수 목록을 사용할 수 있습니다. 함수 패밀리는 가변 인수 목록을 사용 하는 함수의 예입니다.`printf`*인수-선언-목록*
 
 ## <a name="functions-with-variable-arguments"></a>가변 인수를 사용하는 함수
 
-선언 된 후 인수에 액세스 하려면 표준 포함 파일에 포함 된 매크로 사용 하 여 \<stdarg.h > 아래에서 설명 합니다.
+선언 된 후 인수에 액세스 하려면 아래 설명 된 대로 표준 포함 파일 \<> stdarg.h에 포함 된 매크로를 사용 합니다.
 
 **Microsoft 전용**
 
@@ -32,11 +32,11 @@ Microsoft C++에서는 줄임표가 마지막 인수이고 줄임표 앞에 쉼�
 
 일정하지 않은 수의 인수를 사용하는 함수의 선언에는 사용하지 않더라도 최소한 하나의 자리 표시자 인수가 있어야 합니다. 이 자리 표시자 인수가 제공되지 않은 경우 나머지 인수에 액세스할 수 있는 방법은 없습니다.
 
-때 형식 인수 **char** 전달 되는 가변 인수로 형식으로 변환 됩니다 **int**합니다. 마찬가지로, 형식 인수 **float** 전달 됩니다 가변 인수로 형식으로 변환 됩니다 **double**합니다. 다른 형식의 인수에는 일반적인 정수 계열 및 부동 소수점 확장이 적용됩니다. 참조 [표준 변환](standard-conversions.md) 자세한 내용은 합니다.
+**Char** 형식의 인수가 가변 인수로 전달 되 면 **int**형식으로 변환 됩니다. 마찬가지로 **float** 형식의 인수가 가변 인수로 전달 되는 경우 **double**형식으로 변환 됩니다. 다른 형식의 인수에는 일반적인 정수 계열 및 부동 소수점 확장이 적용됩니다. 자세한 내용은 [표준 변환](standard-conversions.md) 을 참조 하세요.
 
-변수 목록이 필요한 함수는 인수 목록에서 줄임표(...)를 사용하여 선언합니다. 형식과에 설명 된 매크로 사용 합니다 \<stdarg.h > 변수 목록으로 전달 되는 액세스 인수에는 파일을 포함 합니다. 이러한 매크로 대 한 자세한 내용은 참조 하세요. [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)합니다. 참조하세요.
+변수 목록이 필요한 함수는 인수 목록에서 줄임표(...)를 사용하여 선언합니다. \<stdarg.h > include 파일에 설명 된 형식과 매크로를 사용 하 여 변수 목록으로 전달 되는 인수에 액세스 합니다. 이러한 매크로에 대 한 자세한 내용은 [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)를 참조 하세요. 참조하세요.
 
-다음 예제에서는 매크로 형식과 함께 작동 하는 방법을 보여 줍니다 (에 선언 된 \<stdarg.h >):
+다음 예제에서는 매크로를 형식과 함께 사용 하는 방법을 보여 줍니다 (\<stdarg.h >에 선언 됨).
 
 ```cpp
 // variable_argument_lists.cpp

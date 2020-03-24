@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180591"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Microsoft 전용**
 
-호출 `IErrorInfo::GetHelpContext` 함수입니다.
+`IErrorInfo::GetHelpContext` 함수를 호출 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,16 +25,16 @@ ms.locfileid: "62155087"
 DWORD HelpContext( ) const throw( );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-결과 반환 합니다 `IErrorInfo::GetHelpContext` 에 대 한는 `IErrorInfo` 내에 기록 된 개체는 `_com_error` 개체입니다. 없으면 `IErrorInfo` 개체는 기록, 0을 반환 합니다.
+`_com_error` 개체 내에 기록 된 `IErrorInfo` 개체의 `IErrorInfo::GetHelpContext` 결과를 반환 합니다. 기록 된 `IErrorInfo` 개체가 없으면 0이 반환 됩니다.
 
 ## <a name="remarks"></a>설명
 
-호출 하는 동안 모든 오류를 `IErrorInfo::GetHelpContext` 메서드는 무시 됩니다.
+`IErrorInfo::GetHelpContext` 메서드를 호출 하는 동안 발생 하는 모든 오류는 무시 됩니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_error 클래스](../cpp/com-error-class.md)

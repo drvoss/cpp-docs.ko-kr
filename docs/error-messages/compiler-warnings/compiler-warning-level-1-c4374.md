@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4374
+title: 컴파일러 경고(수준 1) C4374
 ms.date: 11/04/2016
 f1_keywords:
 - C4374
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187039"
 ---
-# <a name="compiler-warning-level-1-c4374"></a>컴파일러 경고 (수준 1) C4374
+# <a name="compiler-warning-level-1-c4374"></a>컴파일러 경고(수준 1) C4374
 
 ' function1 ': 인터페이스 메서드는 비가상 메서드 ' function2 '에 의해 구현 되지 않습니다.
 

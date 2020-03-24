@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - WCode method [C++]
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
-ms.openlocfilehash: f33871634b516723c94fead847f64ef20d25513f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92dffbdbe034ef55be04c1b7d204be6880d8d4b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399319"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190198"
 ---
-# <a name="comerrorwcode"></a>_com_error::WCode
+# <a name="_com_errorwcode"></a>_com_error::WCode
 
 **Microsoft 전용**
 
@@ -27,15 +27,15 @@ WORD WCode ( ) const throw( );
 
 ## <a name="return-value"></a>반환 값
 
-HRESULT 0x80040200 ~ 0x8004FFFF 이면 범위 안에 있는 경우는 `WCode` 에서 0x80040200 뺀 값에 HRESULT를 반환 하는 메서드, 그렇지 않으면 0을 반환 합니다.
+HRESULT가 0x80040200 범위 내에 있는 경우 `WCode` 메서드는 HRESULT를 0x8004FFFF 0x80040200;를 반환 합니다. 그렇지 않으면 0을 반환 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-`WCode` 메서드 COM 지원 코드에서 발생 하는 매핑을 실행 취소를 사용 합니다. 에 대 한 래퍼를 `dispinterface` 속성 또는 메서드 호출 인수 및 호출을 패키지 하는 지원 루틴 `IDispatch::Invoke`합니다. 경우 오류 HRESULT가 반환 될 때의 `DISP_E_EXCEPTION` 반환 되 면 오류 정보에서 검색 되는 `EXCEPINFO` 구조에 전달 `IDispatch::Invoke`합니다. 오류 코드 수에 저장 하는 16 비트 값을 `wCode` 의 멤버는 `EXCEPINFO` 구조 또는 전체 32 비트 값을 `scode` 소속을 `EXCEPINFO` 구조. 경우는 16 비트 `wCode` 반환 되 면 먼저 32 비트 오류 HRESULT에 매핑할 수 해야 합니다.
+`WCode` 메서드는 COM 지원 코드에서 발생 하는 매핑을 실행 취소 하는 데 사용 됩니다. `dispinterface` 속성 또는 메서드에 대 한 래퍼는 인수를 패키지 하 고 `IDispatch::Invoke`를 호출 하는 지원 루틴을 호출 합니다. 반환 시 `DISP_E_EXCEPTION`의 오류 HRESULT가 반환 되 면 `IDispatch::Invoke`전달 된 `EXCEPINFO` 구조에서 오류 정보가 검색 됩니다. 오류 코드는 `EXCEPINFO` 구조의 `wCode` 멤버에 저장 된 16 비트 값 이거나 `EXCEPINFO` 구조의 `scode` 멤버에 있는 전체 32 비트 값일 수 있습니다. 16 비트 `wCode` 반환 되는 경우 먼저 32 비트 오류 HRESULT에 매핑되어야 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)<br/>
 [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)<br/>

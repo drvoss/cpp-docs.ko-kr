@@ -8,20 +8,20 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189028"
 ---
 # <a name="explicit-overrides-c"></a>명시적 재정의 (C++)
 
 **Microsoft 전용**
 
-두 개 이상에서 사용 하는 동일한 가상 함수가 선언 된 경우 [인터페이스](../cpp/interface.md) 클래스는 이러한 인터페이스에서 파생 하는 경우 각 가상 함수 명시적으로 재정의할 수 있습니다.
+둘 이상의 [인터페이스](../cpp/interface.md) 에서 동일한 가상 함수를 선언 하 고 클래스가 이러한 인터페이스에서 파생 되는 경우 각 가상 함수를 명시적으로 재정의할 수 있습니다.
 
-C +를 사용 하 여 관리 코드에서 명시적 재정의에 대 한 내용은 + CLI 참조 [명시적으로 재정의](../extensions/explicit-overrides-cpp-component-extensions.md)합니다.
+/Cli를 사용 하 여 C++관리 코드의 명시적 재정의에 대 한 자세한 내용은 [명시적 재정의](../extensions/explicit-overrides-cpp-component-extensions.md)를 참조 하세요.
 
 **Microsoft 전용 종료**
 
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [상속](../cpp/inheritance-cpp.md)

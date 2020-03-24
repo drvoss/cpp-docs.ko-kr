@@ -7,12 +7,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181696"
 ---
 # <a name="abstract-classes-c"></a>추상 클래스 (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "62385091"
 
 순수 가상 함수가 하나 이상 포함된 클래스는 추상 클래스로 간주됩니다. 추상 클래스에서 파생된 클래스는 순수 가상 함수를 구현해야 합니다. 이렇게 하지 않으면 파생된 클래스도 추상 클래스가 됩니다.
 
-예제에 표시 되는 것이 좋습니다 [가상 함수](../cpp/virtual-functions.md)합니다. `Account` 클래스의 용도는 일반적인 기능을 제공하는 것이지만, `Account` 형식의 개체는 너무 일반적이어서 유용하게 사용하기가 어렵습니다. 따라서 `Account`는 적합한 추상 클래스 후보입니다.
+[가상 함수](../cpp/virtual-functions.md)에 제공 된 예제를 참조 하세요. `Account` 클래스의 용도는 일반적인 기능을 제공하는 것이지만, `Account` 형식의 개체는 너무 일반적이어서 유용하게 사용하기가 어렵습니다. 따라서 `Account`는 적합한 추상 클래스 후보입니다.
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -53,9 +53,9 @@ private:
 
 순수 가상 함수에 대한 추상 클래스를 정의할 수 있지만 직접 호출하려면 반드시 다음의 구문을 사용해야 합니다.
 
-*abstract-class-name*::*function-name*()
+*추상-클래스-이름*::*함수 이름*()
 
-개체를 제거하는 과정에서 기본 클래스 소멸자가 항상 호출되기 때문에 기본 클래스가 순수 가상 소멸자를 포함하는 클래스 계층 구조를 설계할 때 도움이 됩니다. 다음 예제를 참조하세요.
+개체를 제거하는 과정에서 기본 클래스 소멸자가 항상 호출되기 때문에 기본 클래스가 순수 가상 소멸자를 포함하는 클래스 계층 구조를 설계할 때 도움이 됩니다. 다음과 같은 예제를 참조하세요.
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.
@@ -86,6 +86,6 @@ int main() {
 > [!NOTE]
 > 앞의 예제에서 순수 가상 함수인 `base::~base`는 `derived::~derived`에서 암시적으로 호출됩니다. 명시적으로 전체 정규화된 멤버 함수 이름을 사용하여 순수 가상 함수를 호출할 수도 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [상속](../cpp/inheritance-cpp.md)

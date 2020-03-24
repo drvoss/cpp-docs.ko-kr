@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501612"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167046"
 ---
 # <a name="export"></a>내보내기
 
@@ -29,7 +29,7 @@ ms.locfileid: "69501612"
 
 클래스에 public 멤버만 있는 경우에도 ( **구조체**에 해당) **내보내기** 특성을 클래스에 적용할 수 없습니다.
 
-명명 되지 않은 **열거형** 또는 **구조체**를 내보내는 경우 **__unnamed**<em>x</em>로 시작 하는 이름이 지정 됩니다. 여기서 *x* 는 일련 번호입니다.
+명명 되지 않은 **열거형** 또는 **구조체**를 내보내는<em>경우 x</em> **__unnamed**로 시작 하는 이름이 지정 됩니다. 여기서 *x* 는 일련 번호입니다.
 
 내보내기에 유효한 typedef는 기본 형식, 구조체, 공용 구조체, 열거형 또는 형식 식별자입니다.  자세한 내용은 [typedef](/windows/win32/Midl/typedef) 를 참조 하십시오.
 
@@ -55,13 +55,13 @@ struct MyStruct {
 |||
 |-|-|
 |**적용 대상**|**union**, **typedef**, **enum**, **struct**또는 **interface**|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)

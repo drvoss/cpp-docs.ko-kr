@@ -13,12 +13,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: b3764e95846d48d293991d69d04bc71c6b3aed90
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181540"
 ---
 # <a name="__alignof-operator"></a>__alignof 연산자
 
@@ -34,9 +34,9 @@ C + + 11에는 지정 된 형식의 맞춤 (바이트)을 반환 하는 **aligno
   __alignof( type )
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 |식|값|
 |----------------|-----------|

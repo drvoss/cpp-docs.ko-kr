@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171978"
 ---
 # <a name="property--ccli-and-ccx"></a>property(C++/CLI 및 C++/CX)
 
@@ -122,7 +122,7 @@ raise 메서드에 대한 매개 변수는 대리자의 서명과 일치해야 �
 *index_list*<br/>
 대괄호(아래 첨자 연산자, ([])) 안에 지정된 인덱스 하나 이상의 쉼표로 구분된 목록입니다. 각 인덱스의 경우 형식 및 선택적으로 속성 메서드 본문에서 사용할 수 있는 식별자를 지정합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 구문 예제에서는 *및* 메서드를 둘 다 암시적으로 선언하는 ‘단순 속성’을 보여 줍니다.`set``get` 컴파일러에서는 속성 값을 저장할 전용 필드를 자동으로 만듭니다.
 

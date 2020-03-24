@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling conventions, examples [C++]
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
-ms.openlocfilehash: cbe9ee16db502c9e27dcbd74da4ef6a85f00960f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c41d7679be8b7faa3c8df1368d14815a1b840284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857634"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190172"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>호출 예제: 함수 프로토타입 및 호출
 
@@ -37,10 +37,10 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);
 ```
 
-자세한 내용은 [호출 결과 예](../cpp/results-of-calling-example.md)를 참고하세요.
+자세한 내용은 [호출 예제 결과](../cpp/results-of-calling-example.md)를 참조 하세요.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [호출 규칙](../cpp/calling-conventions.md)

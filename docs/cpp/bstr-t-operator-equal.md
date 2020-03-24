@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181072"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
 **Microsoft 전용**
 
@@ -47,8 +47,8 @@ _bstr_t& operator=(const _variant_t& var);
 
 ## <a name="example"></a>예제
 
-참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제에 대 한 **연산자 =** 합니다.
+**Operator =** 를 사용 하는 예제는 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 을 참조 하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_bstr_t 클래스](../cpp/bstr-t-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168059"
 ---
 # <a name="id"></a>id
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501414"
 *dispid*<br/>
 인터페이스 메서드의 디스패치 ID입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Id** C++ 특성에는 [id](/windows/win32/Midl/id) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "69501414"
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>

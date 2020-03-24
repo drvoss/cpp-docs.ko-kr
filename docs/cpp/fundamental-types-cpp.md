@@ -46,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188616"
 ---
 # <a name="built-in-types-c"></a>기본 제공 형식 (C++)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79445317"
 
 ### <a name="built-in-type-size-restrictions"></a>기본 제공 형식 크기 제한
 
-|Category|Type|콘텐츠|
+|범주|형식|목차|
 |--------------|----------|--------------|
 |정수 계열|**char**|**Char** 형식은 일반적으로 기본 실행 문자 집합의 멤버를 포함 하는 정수 계열 형식입니다. 기본적으로 MICROSOFT C++에서는 ASCII입니다.<br /><br /> 컴파일러 C++ 는 **char**, **signed char**및 **unsigned char** 형식의 변수를 서로 다른 형식으로 처리 합니다. /J 컴파일 옵션을 사용 하지 않는 한 **char** 형식의 변수는 기본적으로 **signed char** 형식으로 지정 된 **int** 로 승격 됩니다. 이 경우 **부호 없는 char** 형식으로 처리 되 고 부호 확장 없이 **int** 로 승격 됩니다.|
 ||**bool**|**Bool** 형식은 **true** 또는 **false**의 두 값 중 하나를 가질 수 있는 정수 계열 형식입니다. 크기는 지정되지 않습니다.|
@@ -89,7 +89,7 @@ ms.locfileid: "79445317"
 
 ### <a name="sizes-of-built-in-types"></a>기본 제공 형식의 크기
 
-|Type|크기|
+|형식|크기|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1바이트|
 |**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2bytes|

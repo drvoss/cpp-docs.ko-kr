@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171296"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -63,7 +63,7 @@ long double acos( long double x );   // C++ only
 *x*<br/>
 아크코사인 (역 코사인)을 계산 하는-1과 1 사이의 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **Acos** 함수는 0 ~ π 라디안 범위의 *x* 아크코사인을 반환 합니다.
 
@@ -72,7 +72,7 @@ long double acos( long double x );   // C++ only
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|없음|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>설명
@@ -81,9 +81,9 @@ long double acos( long double x );   // C++ only
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|
+|루틴|필수 헤더|선택적 헤더|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**acos**, **acosf**, **acosf**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>예제
 
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

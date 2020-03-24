@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187429"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -56,7 +56,7 @@ C# Volatile 키워드 C++ 를 알고 있거나 이전 버전의 Microsoft 컴파
 
 **Microsoft 전용**
 
-**/Volatile: ms** 컴파일러 옵션을 사용 하는 경우 (기본적으로 ARM 이외의 아키텍처가 대상으로 지정 된 경우) 컴파일러는 다른 전역 개체에 대 한 참조 순서를 유지 하는 것 외에도 휘발성 개체에 대 한 참조 간의 순서를 유지 하기 위해 추가 코드를 생성 합니다. 특히 다음과 같습니다.
+**/Volatile: ms** 컴파일러 옵션을 사용 하는 경우 (기본적으로 ARM 이외의 아키텍처가 대상으로 지정 된 경우) 컴파일러는 다른 전역 개체에 대 한 참조 순서를 유지 하는 것 외에도 휘발성 개체에 대 한 참조 간의 순서를 유지 하기 위해 추가 코드를 생성 합니다. 특히 다음 사항에 주의하십시오.
 
 - volatile 개체 쓰기(volatile 쓰기)는 Release 의미 체계를 사용합니다. 즉 명령 시퀀스에서 volatile 개체에 쓰기 전에 발생하는 전역 또는 정적 개체에 대한 참조는 컴파일된 이진 파일에서 volatile 쓰기 전에 발생합니다.
 
@@ -69,8 +69,8 @@ C# Volatile 키워드 C++ 를 알고 있거나 이전 버전의 Microsoft 컴파
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>
 [const 및 volatile 포인터](../cpp/const-and-volatile-pointers.md)

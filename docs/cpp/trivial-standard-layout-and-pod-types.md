@@ -2,12 +2,12 @@
 title: Trivial, 표준 레이아웃, POD 및 리터럴 형식
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b31fefd31b32a5fc4aa3f655b90d39f60a524ca4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188066"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Trivial, 표준 레이아웃, POD 및 리터럴 형식
 
@@ -183,7 +183,7 @@ int main()
 }
 ```
 
-## <a name="literal_types"></a> 리터럴 형식
+## <a name="literal-types"></a><a name="literal_types"></a> 리터럴 형식
 
 리터럴 형식은 컴파일 타임에 해당 레이아웃이 결정될 수 있는 형식입니다. 다음은 리터럴 형식입니다.
 

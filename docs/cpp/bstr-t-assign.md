@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190644"
 ---
-# <a name="bstrtassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Microsoft 전용**
 
-복사본을 `BSTR` 에 `BSTR` 래핑되는 **_**`bstr_t`합니다.
+**_** `bstr_t`로 래핑된 `BSTR`에 `BSTR`를 복사 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>설명
 
-**할당** 는 이진 복사, 즉, 전체 길이 `BSTR` 내용에 관계 없이 복사 됩니다.
+**Assign** 는 이진 복사를 수행 합니다. 즉, 콘텐츠에 관계 없이 `BSTR` 전체 길이가 복사 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -111,6 +111,6 @@ bstrWrapper2 = some text
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_bstr_t 클래스](../cpp/bstr-t-class.md)

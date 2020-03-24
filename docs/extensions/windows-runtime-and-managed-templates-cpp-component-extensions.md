@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: a8cc429763d042ba262d5543f4a2d85bbf8aa29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515968"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171829"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 런타임 및 관리형 템플릿(C++/CLI 및 C++/CX)
 
@@ -38,7 +38,7 @@ ms.locfileid: "65515968"
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 관리되는 형식 템플릿 매개 변수로 제네릭 형식을 인스턴스화할 수 있지만 제네릭 형식 템플릿 매개 변수로 관리되는 템플릿을 인스턴스화할 수 없습니다. 이는 제네릭 형식이 런타임에 확인되기 때문입니다. 자세한 내용은 [제네릭 및 템플릿(C++/CLI)](generics-and-templates-visual-cpp.md)을 참조하세요.
 

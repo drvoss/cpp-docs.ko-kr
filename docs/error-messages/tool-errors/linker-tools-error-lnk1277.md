@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-ms.openlocfilehash: 137aa15dd9dad4b08d52af55da60a9cdf8b58055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c00fb32e4b36eff119195efbb34d536d80df6a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183659"
 ---
 # <a name="linker-tools-error-lnk1277"></a>링커 도구 오류 LNK1277
 
-pgd (filename)에서 찾을 수 없는 개체 레코드
+pgd (파일 이름)에서 개체 레코드를 찾을 수 없습니다.
 
-사용 하는 경우 [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)을 하나 입력된.lib, def, 또는.obj 파일의 경로 경로 /ltcg: pginstrument 중 발견 된는 다릅니다. 이 /ltcg: pginstrument 후 LIB 환경 변수 변경으로 설명 될 수 있습니다. 입력 파일의 전체 경로.pgd 파일에 저장 됩니다.
+[/Ltcg: PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)를 사용 하는 경우 입력 .lib, def 또는 .obj 파일 중 하나의 경로가/LTCG: pginstrument 때 발견 된 경로와 다릅니다. 이는/LTCG: PGINSTRUMENT 후 LIB 환경 변수를 변경 하 여 설명할 수 있습니다. 입력 파일에 대 한 전체 경로는 .pgd 파일에 저장 됩니다.
 
-/Ltcg: pgoptimize에서는 입력 /ltcg: pginstrument 단계와 동일 합니다.
+/LTCG: PGOPTIMIZE를 사용 하려면 입력이/LTCG: PGINSTRUMENT 단계와 동일 해야 합니다.
 
 이 경고를 해결 하려면 다음 중 하나를 수행 합니다.
 
-- /Ltcg: pginstrument 실행, 모든 테스트 실행을 다시 실행 하 고 /ltcg: pgoptimize를 실행 합니다.
+- /LTCG: PGINSTRUMENT를 실행 하 고 모든 테스트 실행을 다시 실행 한 다음/LTCG: PGOPTIMIZE를 실행 합니다.
 
-- /Ltcg: pginstrument 실행 한 때에 LIB 환경 변수를 변경 합니다.
+- LIB 환경 변수를/LTCG: PGINSTRUMENT 때의 정의로 변경 합니다.
 
-/Ltcg: pgupdate를 사용 하 여 LNK1277을 해결 하는 권장 되지 않습니다.
+/LTCG: PGUPDATE를 사용 하 여 LNK1277를 해결 하는 것은 권장 되지 않습니다.

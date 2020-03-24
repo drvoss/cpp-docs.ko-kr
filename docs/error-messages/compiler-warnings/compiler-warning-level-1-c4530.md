@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4530
+title: 컴파일러 경고(수준 1) C4530
 ms.date: 11/04/2016
 f1_keywords:
 - C4530
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: 3139d321bca64b9938badebdabccd3ca1eb96d11
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 69ca60e2cba338bf1bd1ac3470e583739e72a68e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186454"
 ---
-# <a name="compiler-warning-level-1-c4530"></a>컴파일러 경고 (수준 1) C4530
+# <a name="compiler-warning-level-1-c4530"></a>컴파일러 경고(수준 1) C4530
 
 C++예외 처리기를 사용 했지만 해제 의미 체계가 활성화 되지 않았습니다. /EHsc 지정
 

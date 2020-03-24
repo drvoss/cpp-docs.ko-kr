@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180916"
 ---
 # <a name="class-templates"></a>클래스 템플릿
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>중첩된 클래스 템플릿
+## <a name="nested-class-templates"></a>중첩 된 클래스 템플릿
 
-클래스 또는 클래스 템플릿 안에 템플릿을 정의할 수 있으며 이 경우 멤버 템플릿이라고 합니다. 클래스인 멤버 템플릿은 중첩된 클래스 템플릿이라고 합니다. 함수인 멤버 템플릿에 대해서는 [멤버 함수 템플릿](../cpp/member-function-templates.md)에서 설명합니다.
+클래스 또는 클래스 템플릿 안에 템플릿을 정의할 수 있으며 이 경우 멤버 템플릿이라고 합니다. 클래스인 멤버 템플릿은 중첩된 클래스 템플릿이라고 합니다. 함수에 해당 하는 멤버 템플릿은 [멤버 함수 템플릿에서](../cpp/member-function-templates.md)설명 합니다.
 
 중첩된 클래스 템플릿은 바깥쪽 클래스의 범위 안에 클래스 템플릿으로 선언되며 바깥쪽 클래스 안이나 밖에 정의할 수 있습니다.
 
@@ -193,9 +193,9 @@ X<T>::Y<U>::~Y()
 
 지역 클래스에는 멤버 템플릿이 허용되지 않습니다.
 
-## <a name="template-friends"></a>템플릿 friend
+## <a name="template-friends"></a>템플릿 친구
 
-클래스 템플릿에는 [friends](friend-cpp.md)가 있을 수 있습니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.
+클래스 템플릿에는 [친구가](friend-cpp.md)있을 수 있습니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.
 
 다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다. 이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다. 이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.
 
@@ -413,7 +413,7 @@ a
 
 ## <a name="reuse-of-template-parameters"></a>템플릿 매개 변수 다시 사용
 
-템플릿 매개 변수 목록에서 템플릿 매개 변수를 재사용할 수 있습니다. 예를 들어 다음 코드는 허용됩니다.
+템플릿 매개 변수는 템플릿 매개 변수 목록에서 다시 사용할 수 있습니다. 예를 들어 다음 코드는 허용됩니다.
 
 ```cpp
 // template_specifications2.cpp

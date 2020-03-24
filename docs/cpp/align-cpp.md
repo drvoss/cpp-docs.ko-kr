@@ -1,5 +1,5 @@
 ---
-title: 맞춤 (C++)
+title: align(C++)
 ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227053fbfa4190dc6227ba7096a7c76aef30bb54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181553"
 ---
-# <a name="align-c"></a>맞춤 (C++)
+# <a name="align-c"></a>align(C++)
 
-Visual Studio 2015 이상 버전에서는 사용할 C + + 11 표준 `alignas` 지정자 맞춤을 제어 합니다. 자세한 내용은 [맞춤](../cpp/alignment-cpp-declarations.md)합니다.
+Visual Studio 2015 이상에서 c + + 11 표준 `alignas` 지정자를 사용 하 여 맞춤을 제어 합니다. 자세한 내용은 [맞춤](../cpp/alignment-cpp-declarations.md)을 참조 하십시오.
 
 **Microsoft 전용**
 
@@ -24,23 +24,23 @@ Visual Studio 2015 이상 버전에서는 사용할 C + + 11 표준 `alignas` �
 
 ## <a name="syntax"></a>구문
 
-> **__declspec( align(** *#* **) )** *declarator*
+> **__declspec (align (** *#* **))** *선언 자*
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 최신 프로세서 명령을 사용하는 애플리케이션을 작성할 경우 몇 가지 새로운 제약 조건과 문제가 생깁니다. 특히 새로운 명령을 사용할 때 데이터를 16바이트 경계에 맞춰야 하는 경우가 많습니다. 또한 자주 사용하는 데이터를 특정 프로세서의 캐시 줄 크기에 맞춤으로써 캐시 성능이 향상됩니다. 예를 들어 크기가 32바이트 미만인 구조체를 정의할 경우 해당 구조체 형식의 개체가 효과적으로 캐시되도록 이 구조체를 32바이트에 맞출 수 있습니다.
 
-\# 맞춤 값이입니다. 유효한 항목은 2, 4, 8, 16, 32 또는 64와 같이 1에서 8192(바이트) 사이에 속하는 2의 정수 제곱입니다. `declarator`는 aligned로 선언하는 데이터입니다.
+\#는 맞춤 값입니다. 유효한 항목은 2, 4, 8, 16, 32 또는 64와 같이 1에서 8192(바이트) 사이에 속하는 2의 정수 제곱입니다. `declarator`는 aligned로 선언하는 데이터입니다.
 
-형식의 값을 반환 하는 방법에 대 한 자세한 `size_t` 형식의 맞춤 요구 사항인를 참조 하십시오 [__alignof](../cpp/alignof-operator.md)합니다. 64 비트 프로세서를 대상으로 하는 경우 정렬 되지 않은 포인터를 선언 하는 방법에 대 한 자세한 내용은 [__unaligned](../cpp/unaligned.md)합니다.
+형식의 맞춤 요구 사항인 `size_t` 형식의 값을 반환 하는 방법에 대 한 자세한 내용은 [__alignof](../cpp/alignof-operator.md)을 참조 하세요. 64 비트 프로세서를 대상으로 하는 경우 정렬 되지 않은 포인터를 선언 하는 방법에 대 한 자세한 내용은 [__unaligned](../cpp/unaligned.md)를 참조 하세요.
 
-사용할 수 있습니다 `__declspec(align(#))` 정의 하는 경우는 **구조체**를 **union**, 또는 **클래스**, 변수를 선언 하는 경우 또는 합니다.
+**구조체**, **공용 구조체**또는 **클래스**를 정의할 때 또는 변수를 선언할 때 `__declspec(align(#))`를 사용할 수 있습니다.
 
-컴파일러는 복사 또는 데이터 변형 작업 중에 데이터의 맞춤 특성 보존을 보장하거나 시도하지 않습니다. 예를 들어 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 사용 하 여 선언 된 구조체를 복사할 수 `__declspec(align(#))` 모든 위치에 있습니다. 일반 할당자-예를 들어 [malloc](../c-runtime-library/reference/malloc.md), C++ [new 연산자](new-operator-cpp.md), 및 Win32 할당자-일반적으로 충분히에 맞추지 않은 메모리 반환 `__declspec(align(#))` 구조 또는 구조체의 배열입니다. 복사 또는 데이터 변환 작업의 대상을 올바르게 정렬 될을 보장 하기 위해 사용 하 여 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), 하거나 고유한 할당자를 작성 합니다.
+컴파일러는 복사 또는 데이터 변형 작업 중에 데이터의 맞춤 특성 보존을 보장하거나 시도하지 않습니다. 예를 들어, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 는 `__declspec(align(#))`로 선언 된 구조체를 임의의 위치로 복사할 수 있습니다. [Malloc](../c-runtime-library/reference/malloc.md), C++ [operator new](new-operator-cpp.md)및 Win32 할당자와 같은 일반 할당자는 일반적으로 `__declspec(align(#))` 구조체 또는 구조체의 배열에 대해 충분히 정렬 되지 않은 메모리를 반환 합니다. 복사 또는 데이터 변환 작업의 대상이 올바르게 정렬 되도록 하려면 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)를 사용 하거나 할당자를 직접 작성 합니다.
 
 함수 매개 변수의 맞춤을 지정할 수 없습니다. 맞춤 특성을 포함하는 데이터가 스택의 값에 의해 전달되면 해당 맞춤은 호출 규칙을 통해 제어됩니다. 호출된 함수에서 데이터 맞춤이 중요한 경우에는 사용 전에 매개 변수를 올바르게 맞춰진 메모리로 복사합니다.
 
-없이 `__declspec(align(#))`, 컴파일러는 대상 프로세서와 32 비트 프로세서에서 4 바이트 경계 최대 데이터 크기에 따라 자연 경계 및 64 비트 프로세서에서 8 바이트 경계에 데이터를 일반적으로 맞춥니다. 클래스 또는 구조체의 데이터는 최소한의 자연 맞춤 및 현재의 압축 설정(#pragma `pack` 또는 `/Zp` 컴파일러 옵션에서)으로 클래스나 구조체에 맞춰집니다.
+`__declspec(align(#))`하지 않으면 일반적으로 컴파일러는 대상 프로세서와 데이터 크기 (32 비트 프로세서에서는 최대 4 바이트 경계, 64 비트 프로세서에서는 8 바이트 경계)를 기반으로 하는 자연 경계에 데이터를 정렬 합니다. 클래스 또는 구조체의 데이터는 최소한의 자연 맞춤 및 현재의 압축 설정(#pragma `pack` 또는 `/Zp` 컴파일러 옵션에서)으로 클래스나 구조체에 맞춰집니다.
 
 이 예제에서는 `__declspec(align(#))`의 사용을 보여 줍니다.
 
@@ -50,9 +50,9 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-현재 이 형식에는 32비트 맞춤 특성이 포함되어 있습니다. 즉, 모든 정적 및 자동 인스턴스가 32바이트 경계에서 시작됩니다. 멤버로이 형식으로 선언 된 추가 구조체 형식은이 형식의 맞춤 특성 보존, 즉, 모든 구조체 `Str1` 요소는 32 이상의 맞춤 특성을 포함 하는 대로 합니다.
+현재 이 형식에는 32비트 맞춤 특성이 포함되어 있습니다. 즉, 모든 정적 및 자동 인스턴스가 32바이트 경계에서 시작됩니다. 이 형식으로 선언 된 추가 구조체 형식은이 형식의 맞춤 특성을 유지 합니다. 즉, `Str1` 요소로 구성 된 모든 구조체의 맞춤 특성은 32 이상입니다.
 
-`sizeof(struct Str1)`는 32입니다. 즉, Str1 개체 배열을 만드는 경우 배열의 기준을 32바이트로 맞추면 배열의 각 멤버도 32바이트로 맞춰집니다. 동적 메모리에 해당 기준이 올바르게 맞춰진 배열을 만들려면 사용 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), 하거나 고유한 할당자를 작성 합니다.
+`sizeof(struct Str1)`는 32입니다. 즉, Str1 개체 배열을 만드는 경우 배열의 기준을 32바이트로 맞추면 배열의 각 멤버도 32바이트로 맞춰집니다. 동적 메모리에서 기본이 올바르게 정렬 된 배열을 만들려면 [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)를 사용 하거나 할당자를 직접 작성 합니다.
 
 구조체의 `sizeof` 값은 최종 멤버의 오프셋에 해당 멤버의 크기를 더하여 최대 멤버 맞춤 값 또는 전체 구조체 맞춤 값 중 더 큰 값의 가장 근사한 배수로 반올림한 값입니다.
 
@@ -70,17 +70,17 @@ __declspec(align(32)) struct Str1{
 
 자세한 내용은 다음을 참조하세요.
 
-- [align 예제](#vclrfalignexamples)
+- [맞춤 예](#vclrfalignexamples)
 
-- [__Declspec(align(#))를 사용 하 여 새 형식 정의](#vclrf_declspecaligntypedef)
+- [__Declspec를 사용 하 여 새 형식 정의 (align (#))](#vclrf_declspecaligntypedef)
 
 - [스레드 로컬 저장소에서 데이터 정렬](#vclrfthreadlocalstorageallocation)
 
-- [데이터 압축과 함께 작동을 정렬 하는 방법](#vclrfhowalignworkswithdatapacking)
+- [Align이 데이터 압축으로 작동 하는 방식](#vclrfhowalignworkswithdatapacking)
 
-- [구조체 맞춤 예제](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 전용)
+- [구조 맞춤 예](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 특정)
 
-## <a name="vclrfalignexamples"></a> align 예제
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a>맞춤 예
 
 다음 예제에서는 `__declspec(align(#))`가 데이터 구조체의 크기 및 맞춤에 영향을 주는 방식을 보여 줍니다. 예제에서는 다음과 같은 정의를 가정합니다.
 
@@ -89,7 +89,7 @@ __declspec(align(32)) struct Str1{
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-이 예제에서는 `S1`를 사용하여 `__declspec(align(32))` 구조체를 정의합니다. 변수 정의에 대해 또는 기타 형식 선언에서 사용되는 모든 `S1`은 32바이트로 맞춰집니다. `sizeof(struct S1)`는 32를 반환하고 `S1`은 16바이트 뒤에 정수 4개에 필요한 16 패딩 바이트를 둡니다. 각 **int** 멤버에는 4 바이트 맞춤이 필요 하지만 구조체 자체의 맞춤은 32로 선언 됩니다. 따라서 전체 맞춤은 32입니다.
+이 예제에서는 `S1`를 사용하여 `__declspec(align(32))` 구조체를 정의합니다. 변수 정의에 대해 또는 기타 형식 선언에서 사용되는 모든 `S1`은 32바이트로 맞춰집니다. `sizeof(struct S1)`는 32를 반환하고 `S1`은 16바이트 뒤에 정수 4개에 필요한 16 패딩 바이트를 둡니다. 각 **int** 멤버에 4 바이트 맞춤이 필요 하지만 구조체 자체의 맞춤은 32로 선언 됩니다. 따라서 전체 맞춤은 32입니다.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -169,22 +169,22 @@ void fn() {
 }
 ```
 
-메모리가 힙에 할당된 경우 호출되는 할당 함수에 따라 맞춤이 결정됩니다.  예를 들어, `malloc`를 사용할 경우 피연산자 크기에 따라 결과가 결정됩니다. 하는 경우 *arg* > = 8 이면 반환 되는 메모리는 8 바이트에 맞춰집니다. 하는 경우 *arg* < 8, 반환 되는 메모리의 맞춤은 2의 첫 번째 거듭제곱이 미만 *arg*합니다. 예를 들어 malloc(7)를 사용하는 경우의 맞춤은 4바이트입니다.
+메모리가 힙에 할당된 경우 호출되는 할당 함수에 따라 맞춤이 결정됩니다.  예를 들어, `malloc`를 사용할 경우 피연산자 크기에 따라 결과가 결정됩니다. *Arg* > = 8 이면 반환 되는 메모리는 8 바이트로 정렬 됩니다. *Arg* < 8 인 경우 반환 되는 메모리의 맞춤은 *arg*보다 작은 2의 첫 번째 거듭제곱입니다. 예를 들어 malloc(7)를 사용하는 경우의 맞춤은 4바이트입니다.
 
-## <a name="vclrf_declspecaligntypedef"></a> __Declspec(align(#))를 사용 하 여 새 형식 정의
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>__Declspec를 사용 하 여 새 형식 정의 (align (#))
 
 맞춤 특성을 사용하여 형식을 정의할 수 있습니다.
 
-예를 들어 정의할 수 있습니다는 `struct` 맞춤을 사용 하 여 이러한 방식으로 값:
+예를 들어 다음과 같이 맞춤 값을 사용 하 여 `struct`을 정의할 수 있습니다.
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-이제 `aType` 하 고 `bType` 동일한 크기 (8 바이트)는 형식의 변수에 `bType` 32 바이트 맞춤 됩니다.
+이제 `aType`와 `bType`는 크기가 같지만 (8 바이트) `bType` 형식의 변수는 32 바이트로 정렬 됩니다.
 
-## <a name="vclrfthreadlocalstorageallocation"></a> 스레드 로컬 저장소에서 데이터 정렬
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>스레드 로컬 저장소에서 데이터 정렬
 
 `__declspec(thread)` 특성으로 만들어 이미지의 TLS 섹션에 넣은 정적 TLS(스레드 로컬 스토리지)는 보통의 정적 데이터와 똑같은 맞춤으로 작동합니다. 운영 체제에서는 TLS 데이터를 만들기 위해 메모리에 TLS 섹션의 크기를 할당하고 TLS 섹션 맞춤 특성을 고려합니다.
 
@@ -207,9 +207,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-## <a name="vclrfhowalignworkswithdatapacking"></a> 데이터 압축과 함께 작동을 정렬 하는 방법
+## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>Align이 데이터 압축으로 작동 하는 방식
 
-합니다 `/Zp` 컴파일러 옵션 및 `pack` pragma는 구조체 및 공용 구조체 멤버에 대 한 데이터를 압축 하는 중입니다. 이 예제에서는 어떻게 `/Zp` 및 `__declspec(align(#))` 함께 사용:
+`/Zp` 컴파일러 옵션과 `pack` pragma는 구조체 및 공용 구조체 멤버에 대 한 데이터를 압축 하는 효과가 있습니다. 이 예에서는 `/Zp`와 `__declspec(align(#))`를 함께 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 struct S {
@@ -224,12 +224,12 @@ struct S {
 
 다음 테이블에서는 여러 `/Zp`(또는 #pragma `pack`)에 속한 각 멤버의 오프셋을 나열하고 둘 사이의 상호 작용 방식을 보여 줍니다.
 
-|변수|/Zp1|/Zp2|/Zp4|/Zp8|
+|Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
 |a|0|0|0|0|
 |b|1|2|2|2|
 |c|3|4|4|8|
-|일|32|32|32|32|
+|d|32|32|32|32|
 |e|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
@@ -240,7 +240,7 @@ struct S {
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 규칙 개요](../build/overview-of-arm-abi-conventions.md)<br/>

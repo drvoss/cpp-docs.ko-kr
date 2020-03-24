@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181670"
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 
@@ -28,43 +28,43 @@ expression + expression
 expression - expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 가감 연산자는 다음과 같습니다.
 
-- 더하기 (**+**)
+- 추가 ( **+** )
 
-- 빼기 (**-**)
+- 빼기 ( **-** )
 
 이 이항 연산자는 왼쪽에서 오른쪽으로 연결됩니다.
 
-가감 연산자는 산술 또는 포인터 형식의 피연산자를 사용합니다. 더하기 연산의 결과 (**+**) 연산자는 피연산자의 합계입니다. 뺄셈 결과 (**-**) 연산자는 피연산자 간의 차이입니다. 피연산자 중 하나 이상이 포인터인 경우 함수가 아닌 개체에 대한 포인터여야 합니다. 피연산자가 둘 다 포인터인 경우 둘 다 동일한 배열의 개체에 대한 포인터가 아니면 결과는 의미가 없습니다.
+가감 연산자는 산술 또는 포인터 형식의 피연산자를 사용합니다. 더하기 ( **+** ) 연산자의 결과는 피연산자의 합계입니다. 빼기 ( **-** ) 연산자의 결과는 피연산자 간의 차이입니다. 피연산자 중 하나 이상이 포인터인 경우 함수가 아닌 개체에 대한 포인터여야 합니다. 피연산자가 둘 다 포인터인 경우 둘 다 동일한 배열의 개체에 대한 포인터가 아니면 결과는 의미가 없습니다.
 
-가감 연산자의 피연산자 *산술*를 *정수*, 및 *스칼라* 형식입니다. 이러한 형식은 다음 표에 정의되어 있습니다.
+가감 연산자는 *산술*, *정수 계열*및 *스칼라* 형식의 피연산자를 사용 합니다. 이러한 형식은 다음 표에 정의되어 있습니다.
 
 ### <a name="types-used-with-additive-operators"></a>가감 연산자와 함께 사용되는 형식
 
 |형식|의미|
 |----------|-------------|
-|*arithmetic*|정수 계열 및 부동 형식을 전체적으로 "산술" 형식이라고 합니다.|
-|*integral*|모든 크기(long, short)의 char 및 int 형식과 열거형은 "정수 계열" 형식입니다.|
-|*scalar*|스칼라 피연산자는 산술 또는 포인터 형식의 피연산자입니다.|
+|*산술*|정수 계열 및 부동 형식을 전체적으로 "산술" 형식이라고 합니다.|
+|*비정*|모든 크기(long, short)의 char 및 int 형식과 열거형은 "정수 계열" 형식입니다.|
+|*스칼라*|스칼라 피연산자는 산술 또는 포인터 형식의 피연산자입니다.|
 
 이러한 연산자의 올바른 조합은 다음과 같습니다.
 
-*arithmetic* + *arithmetic*
+*산술* + *산술* 연산
 
-*scalar* + *integral*
+*스칼라* + *정수*
 
-*integral* + *scalar*
+*정수 계열* + *스칼라*
 
-*arithmetic* - *arithmetic*
+*산술* - *산술* 연산
 
-*scalar* - *scalar*
+*스칼라* - *스칼라*
 
 더하기와 빼기는 동등한 연산이 아닙니다.
 
-설명한 변환이 피연산자 모두 산술 형식인 경우 [표준 변환](standard-conversions.md) 피연산자에 적용 되 고 결과 변환 된 형식입니다.
+두 피연산자가 모두 산술 형식이 면 [표준 변환](standard-conversions.md) 에서 설명 하는 변환이 피연산자에 적용 되며 결과는 변환 된 형식입니다.
 
 ## <a name="example"></a>예제
 
@@ -109,11 +109,11 @@ for( int i = 0; i < 10; ++i )
 
 ## <a name="pointer-subtraction"></a>포인터 빼기
 
-두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식 형식의 부호 있는 정수 계열 결과 `ptrdiff_t` (표준 포함 파일에 정의 된 \<stddef.h >).
+두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 `ptrdiff_t` 형식 (표준 포함 파일 \<stddef >)의 부호 있는 정수 계열 결과를 생성 합니다.
 
-피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기의 값이에 대 한 포인터는 (*n* - *있나요*) 번째 배열 요소에 있는 *n* 이 요소가 가리키는 원래 포인터와 *있습니까* 두 번째 피연산자의 정수 값입니다.
+피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은 (*n* - *i*) 번째 배열 요소에 대 한 포인터입니다. 여기서 *n* 은 원래 포인터가 가리키는 요소이 고 *i* 는 두 번째 피연산자의 정수 계열 값입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

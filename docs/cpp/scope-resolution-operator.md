@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178888"
 ---
 # <a name="scope-resolution-operator-"></a>범위 해결 연산자: ::
 
-범위 결정 연산자 **::** 식별 하 고 다양 한 범위에서 사용 되는 식별자를 구분 하는 데 사용 됩니다. 범위에 대 한 자세한 내용은 참조 하세요. [범위](../cpp/scope-visual-cpp.md)합니다.
+범위 확인 연산자 **::** 는 여러 범위에서 사용 되는 식별자를 식별 하 고 구분 하는 데 사용 됩니다. 범위에 대 한 자세한 내용은 [범위](../cpp/scope-visual-cpp.md)를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ enum class :: identifier
 enum struct :: identifier
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 `identifier`에는 변수, 함수 또는 열거형 값이 해당됩니다.
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>범위가 지정된 열거형에 사용
 
-범위 확인 연산자를 범위가 지정 된 열거형의 값을 사용 하 여 에서도 [Enumeration Declarations](../cpp/enumerations-cpp.md)다음 예제와 같이:
+범위가 지정 된 확인 연산자는 다음 예제와 같이 범위가 지정 된 열거형 [열거형](../cpp/enumerations-cpp.md)의 값에도 사용 됩니다.
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [네임스페이스](../cpp/namespaces-cpp.md)

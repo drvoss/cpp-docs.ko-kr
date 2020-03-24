@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316160"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171634"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>XML 문서 생성기 도구 속성 페이지
 
@@ -22,7 +22,7 @@ XML 문서 생성기 도구 속성 페이지는 xdcmake.exe의 기능을 제공�
 > [!NOTE]
 >  개발 환경(속성 페이지)의 xdcmake.exe 옵션은 xdcmake.exe가 명령줄에서 사용될 때의 옵션과 다릅니다. 명령줄에서 xdcmake.exe를 사용하는 방법에 대한 자세한 내용은 [XDCMake 참조](xdcmake-reference.md)를 참조하세요.
 
-## <a name="uielement-list"></a>UI 요소 목록
+## <a name="uielement-list"></a>UIElement 목록
 
 - **시작 배너 표시 안 함**
 
@@ -34,12 +34,12 @@ XML 문서 생성기 도구 속성 페이지는 xdcmake.exe의 기능을 제공�
 
 - **출력 문서 파일**
 
-   .xml 출력 파일의 이름과 디렉터리 위치. 참조 [명령 및 속성에 대 한 일반 매크로 빌드](common-macros-for-build-commands-and-properties.md) 매크로 사용 하 여 디렉터리 위치를 지정 하는 정보에 대 한 합니다.
+   .xml 출력 파일의 이름과 디렉터리 위치. 매크로를 사용 하 여 디렉터리 위치를 지정 하는 방법에 대 한 자세한 내용은 [빌드 명령 및 속성에 대 한 일반 매크로](common-macros-for-build-commands-and-properties.md)
 
 - **문서 라이브러리 종속성**
 
    프로젝트가 솔루션의 .lib 프로젝트에 종속되어 있는 경우 .lib 프로젝트의 .xdc 파일을 현재 프로젝트의 .xml 파일로 처리할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)
+[C++프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)

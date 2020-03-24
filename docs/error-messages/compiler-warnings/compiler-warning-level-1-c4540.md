@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4540
+title: 컴파일러 경고(수준 1) C4540
 ms.date: 11/04/2016
 f1_keywords:
 - C4540
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 8e514f4f3cf0cc3ee95ff709eda307b143ab3b1c
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 859ff75bbd4b3fe248d9658495e64c0c039fbb40
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965694"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186415"
 ---
-# <a name="compiler-warning-level-1-c4540"></a>컴파일러 경고 (수준 1) C4540
+# <a name="compiler-warning-level-1-c4540"></a>컴파일러 경고(수준 1) C4540
 
 을 (를) 액세스할 수 없거나 모호한 기본으로 변환 하는 데 사용 dynamic_cast. 런타임 테스트가 실패 합니다 (' type1 '에서 ' type2 ' (으)로).
 

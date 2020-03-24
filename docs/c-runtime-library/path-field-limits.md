@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171400"
 ---
 # <a name="path-field-limits"></a>경로 필드 제한
 
@@ -39,7 +39,7 @@ ms.locfileid: "50477534"
 
 이러한 상수는 경로 및 경로 내 개별 필드의 최대 길이를 정의합니다.
 
-|상수|의미|
+|지속적임|의미|
 |--------------|-------------|
 |`_MAX_DIR`|디렉터리 구성 요소의 최대 길이입니다.|
 |`_MAX_DRIVE`|드라이브 구성 요소의 최대 길이입니다.|

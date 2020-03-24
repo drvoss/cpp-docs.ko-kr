@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857283"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178543"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -21,7 +21,7 @@ ms.locfileid: "74857283"
 
 ## <a name="syntax"></a>구문
 
-> *return-type* **\_\_stdcall** *function-name*[ **(** *argument-list* **)** ]
+> *반환 형식* **\_\_stdcall** *[* **(** *인수 목록* **)** ]
 
 ## <a name="remarks"></a>주의
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857283"
 |인수 전달 규칙|포인터 또는 참조 형식이 전달되지 않는 경우 값으로 전달|
 |스택 유지 관리 책임|호출된 함수가 스택에서 자신의 인수를 꺼냅니다.|
 |이름 데코레이션 규칙|밑줄(_)이 이름 앞에 붙습니다. 이름 뒤에는 기호(@)가 오고 그 위에 인수 목록의 바이트 수(10진수)가 옵니다. 따라서 `int func( int a, double b )`로 선언된 함수는 `_func@12`로 데코레이팅됩니다.|
-|대/소문자 변환 규칙|None|
+|대/소문자 변환 규칙|없음|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션은 다른 호출 규칙을 사용 하 여 명시적으로 선언 되지 않은 모든 함수에 대해 **__stdcall** 를 지정 합니다.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+이
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -74,7 +74,7 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167188"
 ---
 # <a name="default-c"></a>default(C++)
 
@@ -43,7 +43,7 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 기본 프로그래밍 인터페이스로 지정할 `ICustomDispatch` coclass의 정의에 기본값을 사용 하는 방법을 보여 줍니다.
+다음 코드에서는 coclass의 정의에 **기본값** 을 사용 하 여 `ICustomDispatch`를 기본 프로그래밍 인터페이스로 지정 하는 방법을 보여 줍니다.
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -100,13 +100,13 @@ int main() {
 |||
 |-|-|
 |**적용 대상**|**클래스**, **구조체**, 데이터 멤버|
-|**반복 가능**|아니요|
+|**반복 가능**|예|
 |**필수 특성**|**coclass** ( **클래스** 또는 **구조체**에 적용 된 경우)|
-|**잘못된 특성**|없음|
+|**잘못된 특성**|None|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [클래스 특성](class-attributes.md)<br/>

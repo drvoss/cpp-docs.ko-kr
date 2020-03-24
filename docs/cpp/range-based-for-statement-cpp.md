@@ -2,12 +2,12 @@
 title: 범위 기반 for 문(C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188352"
 ---
 # <a name="range-based-for-statement-c"></a>범위 기반 for 문(C++)
 
@@ -20,7 +20,7 @@ for ( for-range-declaration : expression )
    statement
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 범위 기반 **for** 문을 사용 하 여 "범위"를 통해 실행 되어야 하는 루프를 생성할 수 있습니다. "범위"는 `std::vector`또는 범위가 `begin()` 및 `end()`정의 된 다른 C++ 표준 라이브러리 시퀀스와 같이 반복 될 수 있는 것으로 정의 됩니다. `for-range-declaration` 부분에 선언 된 이름은 **for** 문에 로컬 이며 `expression` 또는 `statement`에서 다시 선언할 수 없습니다. 문의 `for-range-declaration` 부분에 [auto](../cpp/auto-cpp.md) 키워드가 기본 설정 되어 있는지 확인 합니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189583"
 ---
 # <a name="conditional-operator-quest-"></a>조건 연산자: &quest;:
 
@@ -23,7 +23,7 @@ ms.locfileid: "72276813"
 expression ? expression : expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 조건 연산자 ( **?:** )는 3 개의 피연산자를 사용 하는 삼항 연산자입니다. 조건 연산자는 다음과 같이 사용됩니다.
 
