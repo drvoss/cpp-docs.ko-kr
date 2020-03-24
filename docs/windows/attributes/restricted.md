@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514068"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166369"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,7 +27,7 @@ ms.locfileid: "69514068"
 
 ### <a name="parameters"></a>매개 변수
 
-*interfaces*<br/>
+*인터페이스로*<br/>
 COM 개체에서 임의로 호출할 수 없는 하나 이상의 인터페이스입니다. 이 매개 변수는 클래스에 적용 된 경우에만 유효 합니다.
 
 ## <a name="remarks"></a>설명
@@ -68,13 +68,13 @@ class c : public a, public b
 |||
 |-|-|
 |**적용 대상**|인터페이스 메서드, **인터페이스**, **클래스**, **구조체**|
-|**반복 가능**|아니요|
+|**반복 가능**|예|
 |**필수 특성**|**coclass** ( **클래스** 또는 **구조체**에 적용 된 경우)|
-|**잘못된 특성**|없음|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)<br/>

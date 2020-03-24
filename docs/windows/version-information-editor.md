@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513646"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214372"
 ---
 # <a name="version-information-editor-c"></a>버전 정보 편집기 (C++)
 
@@ -50,11 +50,11 @@ ms.locfileid: "69513646"
 
 항목을 한 번 선택 하 여 선택 하 고 다시 편집을 시작 합니다. **버전 정보** 테이블에서 직접 변경 하거나 [속성 창](/visualstudio/ide/reference/properties-window)합니다. 변경 내용은 두 위치에 모두 반영됩니다.
 
-`FILEFLAGS` **버전 정보 편집기**에서 키를 편집할 때 .rc 파일에 대 한 **속성** 창에서 **디버그**, **개인 빌드**또는 **특수 빌드** 속성을 설정할 수 없습니다.
+**버전 정보 편집기**에서 `FILEFLAGS` 키를 편집할 때 .rc 파일에 대 한 **속성** 창에서 **디버그**, **개인 빌드**또는 **특수 빌드** 속성을 설정할 수 없습니다.
 
-   - **버전 정보 편집기** 는 `_DEBUG` 빌드 플래그에 따라 리소스 스크립트 `#ifdef` 의를 사용 하 여 **디버그** 속성을 설정 합니다.
+- **버전 정보 편집기** 는 `_DEBUG` 빌드 플래그에 따라 리소스 스크립트의 `#ifdef`를 사용 하 여 **디버그** 속성을 설정 합니다.
 
-  - `FILEFLAGS` 키에 버전 정보 테이블에 설정 된 값이 있는 경우 키에 대 한 속성 창에 해당 하는 개인 빌드 속성이 True가 됩니다. `Private Build` **값** 이 비어 있으면 속성이 **False**가 됩니다. 마찬가지로 **버전 정보** 테이블의 `FILEFLAGS` **특수 빌드** 키는 키에 대 한 **특수 빌드** 속성에 연결 됩니다.
+- `Private Build` 키에 **버전 정보** 테이블에 설정 된 **값** 이 있는 경우에는 `FILEFLAGS` 키에 대 한 **속성** 창에 해당 하는 **개인 빌드** 속성이 **True**가 됩니다. **값** 이 비어 있으면 속성이 **False**가 됩니다. 마찬가지로 **버전 정보** 테이블의 **특수 빌드** 키는 `FILEFLAGS` 키에 대 한 **특수 빌드** 속성에 연결 됩니다.
 
 **키** 또는 **값** 열 머리글 중 하나를 선택 하 여 문자열 블록의 정보 시퀀스를 정렬할 수 있습니다. 이들 머리글은 정보를 선택한 시퀀스로 자동으로 다시 정렬합니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "69513646"
 
 Win32
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [리소스 편집기](../windows/resource-editors.md)<br/>
 [메뉴 및 기타 리소스](/windows/win32/menurc/resources)<br/>

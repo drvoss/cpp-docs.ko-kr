@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411801"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167604"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++의 텍스트 및 문자열
 
@@ -37,13 +37,13 @@ ms.locfileid: "62411801"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[유니코드 및 MBCS](../text/unicode-and-mbcs.md)<br/>
+[유니코드 및 멀티바이트 문자 집합(MBCS)](../text/unicode-and-mbcs.md)<br/>
 Visual C++이 지원하는 유니코드 및 MBCS 프로그래밍 관련 내용을 설명합니다.
 
 [유니코드 지원](../text/support-for-unicode.md)<br/>
 단일 바이트로 표현할 수 없는 문자 집합을 포함한 모든 문자 집합을 지원하는 사양인 유니코드에 대해 설명합니다.
 
-[멀티 바이트 문자 집합 (MBCS)에 대 한 지원](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
+[MBCS (멀티 바이트 문자 집합) 지원](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 유니코드에 대한 대안으로, 단일 바이트로 표현할 수 없는 일본어, 중국어 등과 같은 문자 집합을 지원하는 멀티 바이트 문자 집합(MBCS)에 대해 설명합니다.
 
 [tchar.h의 제네릭 텍스트 매핑](../text/generic-text-mappings-in-tchar-h.md)<br/>
@@ -52,13 +52,13 @@ Visual C++이 지원하는 유니코드 및 MBCS 프로그래밍 관련 내용�
 [방법: 다양한 문자열 형식 간 변환](../text/how-to-convert-between-various-string-types.md)<br/>
 Visual C++에서 다양한 문자열 형식을 다른 문자열로 변환하는 방법에 대해 설명합니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [국제화](../c-runtime-library/internationalization.md)<br/>
-C 런타임 라이브러리의 다국어 기능 지원에 설명 합니다.
+C 런타임 라이브러리의 국가별 지원에 대해 설명 합니다.
 
-[국가별 샘플](https://github.com/Microsoft/VCSamples)<br/>
+[국가별 샘플](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
 Visual C++에서 국제화에 대한 예제의 링크를 제공합니다.
 
 [언어 및 국가/지역 문자열](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-C 런타임 라이브러리의 언어 및 국가/지역 문자열을 제공합니다.
+C 런타임 라이브러리의 언어 및 국가/지역 문자열을 제공 합니다.

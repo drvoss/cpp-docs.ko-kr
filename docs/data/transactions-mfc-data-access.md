@@ -6,12 +6,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: e3dc5b9319a8745ddb446ae7dbe895bfcd446c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 742e95d896d107fb89b3d65f0eeb6d418f1b2057
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209068"
 ---
 # <a name="transactions--mfc-data-access"></a>트랜잭션  (MFC Data Access)
 
@@ -23,18 +23,18 @@ ms.locfileid: "62152659"
 
 트랜잭션은 ACID 속성을 포함해야 합니다. 여기서 ACID는 다음을 의미합니다.
 
-- **원자성** 작업 하거나 아무것도으로 트랜잭션 작업의 원자 단위 이며 정확히 한 번 실행 합니다.
+- **원자성** 트랜잭션은 작업의 원자성 단위 이며 한 번만 실행 됩니다. 모든 작업을 수행 하거나 모든 작업을 수행 하지는 않습니다.
 
-- **일관성** 트랜잭션 데이터의 다른 일관 된 상태로 데이터의 일관 된 상태를 변환 하 여 데이터의 일관성을 유지 합니다. 즉, 트랜잭션으로 바인딩된 데이터의 의미 체계가 유지되어야 합니다.
+- **일관성** 트랜잭션은 데이터의 일관성을 유지 하 고 일관 된 데이터 상태를 데이터의 다른 일관 된 상태로 변환 합니다. 즉, 트랜잭션으로 바인딩된 데이터의 의미 체계가 유지되어야 합니다.
 
-- **격리** 개별적이 고 동시 트랜잭션과 독립적으로 발생 하는 각 및 트랜잭션은 격리 단위입니다. 트랜잭션은 다른 트랜잭션의 중간 단계를 확인할 수 없습니다.
+- **격리** 트랜잭션은 격리 단위 이며 각각은 동시 트랜잭션과 독립적으로 발생 합니다. 트랜잭션은 다른 트랜잭션의 중간 단계를 확인할 수 없습니다.
 
 - **내구성** 트랜잭션은 복구 단위입니다. 트랜잭션이 성공하면 시스템이 충돌하거나 종료되어도 해당 업데이트는 유지됩니다. 트랜잭션이 실패하면 시스템은 트랜잭션을 커밋하기 전의 상태로 유지됩니다.
 
-OLE DB에서 트랜잭션을 지원할 수 있습니다 (참조 [OLE DB에서 지 원하는 트랜잭션](../data/oledb/supporting-transactions-in-ole-db.md)) 또는 ODBC (참조 [트랜잭션 (ODBC)](../data/odbc/transaction-odbc.md)).
+OLE DB ( [OLE DB의 트랜잭션 지원](../data/oledb/supporting-transactions-in-ole-db.md)참조) 또는 ODBC ( [트랜잭션 (ODBC)](../data/odbc/transaction-odbc.md)참조)에서 트랜잭션을 지원할 수 있습니다.
 
-분산 트랜잭션은 분산된 데이터, 즉 네트워크로 연결된 둘 이상의 컴퓨터 시스템에 있는 데이터를 업데이트하는 트랜잭션입니다. 분산된 시스템을 통해 트랜잭션을 지원 하려는 경우 OLE DB 트랜잭션 지원이 아닌 ADO.NET을 사용 해야 합니다.
+분산 트랜잭션은 분산된 데이터, 즉 네트워크로 연결된 둘 이상의 컴퓨터 시스템에 있는 데이터를 업데이트하는 트랜잭션입니다. 분산 시스템을 통해 트랜잭션을 지원 하려면 OLE DB 트랜잭션 지원 대신 ADO.NET를 사용 해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[데이터 액세스 프로그래밍 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[데이터 액세스 프로그래밍(MFC/ATL)](../data/data-access-programming-mfc-atl.md)

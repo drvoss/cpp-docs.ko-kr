@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4383
+title: 컴파일러 경고(수준 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
 - C4383
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 1c4a7ca806430c73c8e8396e596782253cc06f09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966169"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162740"
 ---
-# <a name="compiler-warning-level-1-c4383"></a>컴파일러 경고 (수준 1) C4383
+# <a name="compiler-warning-level-1-c4383"></a>컴파일러 경고(수준 1) C4383
 
 ' instance_dereference_operator ': 사용자 정의 ' operator ' 연산자가 있는 경우 핸들 역참조의 의미가 변경 될 수 있습니다. 피연산자에 대해 명시적으로 연산자를 정적 함수로 작성 합니다.
 

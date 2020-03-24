@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline assembly [C++], about inline assembly
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-ms.openlocfilehash: ecf1598ec90a8600e1fa9aae565724c254dc11e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e634f78eca753487cf122ac95df55828bb64625
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169658"
 ---
 # <a name="advantages-of-inline-assembly"></a>인라인 어셈블리의 장점
 
@@ -33,6 +33,6 @@ ms.locfileid: "62167402"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - compl function
 ms.assetid: e03f6fb5-cb8b-4afa-99c0-905f4105fb34
-ms.openlocfilehash: b44290df1a0127ac56bb6fb09e211230a63d0846
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ae1924ba8cdbcdeb9a06c241bc1fadfc66efd613
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170309"
 ---
 # <a name="compl"></a>compl
 
@@ -42,7 +42,7 @@ ms.locfileid: "70939061"
 #define compl ~
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 매크로가 ~ 연산자를 생성합니다.
 
@@ -74,4 +74,4 @@ int main( )
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<iso646.h>
+**헤더:** \<iso646 >

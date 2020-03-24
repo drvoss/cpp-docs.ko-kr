@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166343"
 ---
 # <a name="retval"></a>retval
 
@@ -40,13 +40,13 @@ ms.locfileid: "69514053"
 |||
 |-|-|
 |**적용 대상**|인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|아니요|
+|**반복 가능**|예|
 |**필수 특성**|**out**|
 |**잘못된 특성**|**in**|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [매개 변수 특성](parameter-attributes.md)<br/>

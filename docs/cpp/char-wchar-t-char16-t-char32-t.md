@@ -2,12 +2,12 @@
 title: char, wchar_t, char16_t, char32_t
 ms.date: 02/14/2018
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: a518f24973aaddff59b97f104d9d912e4a2bedce
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8d109ec452df33b774848229837ed3e2eae80dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447162"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181020"
 ---
 # <a name="char-wchar_t-char16_t-char32_t"></a>char, wchar_t, char16_t, char32_t
 
@@ -22,7 +22,7 @@ char16_t ch3{ u'a' };
 char32_t ch4{ U'a' };
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **문자** 형식은 C 및 C++의 원래 문자 형식입니다. 형식 **부호 없는 문자** 는에서 C++기본 제공 형식이 아닌 *바이트*를 나타내는 데 사용 되는 경우가 많습니다. **Char** 형식은 ASCII 문자 집합 또는 ISO-8859 문자 집합의 문자를 저장 하는 데 사용할 수 있으며, Shift-jis 또는 유니코드 문자 집합의 utf-8 인코딩과 같은 멀티 바이트 문자의 개별 바이트를 저장 하는 데 사용할 수 있습니다. **문자** 형식의 문자열은 여러 바이트 문자를 인코딩하는 데 사용 되는 경우에도 *좁은* 문자열 이라고 합니다. Microsoft 컴파일러에서 **char** 는 8 비트 형식입니다.
 

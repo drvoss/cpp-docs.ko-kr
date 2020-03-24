@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170343"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -51,17 +51,17 @@ double _cabs(
 *-*<br/>
 복소수입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 성공 하면 **_cabs** 는 인수의 절대값을 반환 합니다. 오버플로 시 **_cabs** **HUGE_VAL** 를 반환 하 고 **errno** 를 **ERANGE**로 설정 합니다. [_matherr](matherr.md)을 사용하여 오류 처리를 변경할 수 있습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **_Cabs** 함수는 [_complex](../../c-runtime-library/standard-types.md)형식의 구조 여야 하는 복소수의 절대값을 계산 합니다. 구조체 *z* 는 실제 구성 요소 *x* 및 허수 구성 요소 *y*로 구성 됩니다. **_Cabs** 에 대 한 호출은 식 `sqrt( z.x * z.x + z.y * z.y )`의 값과 동일한 값을 생성 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 

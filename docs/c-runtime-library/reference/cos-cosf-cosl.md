@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170257"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -69,18 +69,18 @@ long double cos( long double x );  // C++ only
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|없음|**_DOMAIN**|
-|± INF|**INVALID**|**_DOMAIN**|
+|± QNAN, IND|none|**_DOMAIN**|
+|± INF|**올바르지 않음**|**_DOMAIN**|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **cos** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **cos** 는 항상 **double**을 사용 하 고 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
+|루틴|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**cos**, **cosh**, **cosh**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -88,7 +88,7 @@ long double cos( long double x );  // C++ only
 
 [Sin, sinf, sinf](sin-sinf-sinl.md)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

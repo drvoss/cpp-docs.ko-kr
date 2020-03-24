@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e1255578883c8d2bc278184a02575a0a51ed9b6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204960"
 ---
 # <a name="fatal-error-c1001"></a>심각한 오류 C1001
 
-> 내부 컴파일러 ERROR(compiler file *file*, line *number*)
+> 내부 컴파일러 오류 (컴파일러 파일 *파일*, 줄 *번호*)
 
-컴파일러는 구문 분석 중에 특정 식 및 최적화 옵션 또는 문제의 조합으로 인해 종종 구문에 대해 올바른 코드를 생성할 수 없습니다. 나열 된 컴파일러 파일 utc 또는 C2 경로 세그먼트가 있으면 최적화 오류 때문일 수 있습니다. 파일 msc1.cpp 아니고 cxxfe 또는 c1xx 경로 세그먼트를 파서 오류 때문일 수 있습니다. Cl.exe 라는 파일을 사용 하는 경우 다른 정보가 없는 사용할 수 있습니다.
+컴파일러는 특정 식과 최적화 옵션의 조합 또는 구문 분석 문제 때문에 구문에 대 한 올바른 코드를 생성할 수 없습니다. 나열 된 컴파일러 파일에 utc 또는 C2 경로 세그먼트가 있는 경우 최적화 오류일 수 있습니다. 파일에 cxxfe 또는 c1xx 경로 세그먼트가 있거나이 msc1 인 경우 파서 오류일 수 있습니다. 이름이 cl.exe 인 파일이 cl.exe 인 경우에는 다른 정보를 사용할 수 없습니다.
 
-종종 하나 이상의 최적화 옵션을 제거 하 여 최적화 문제를 해결할 수 있습니다. 잘못 된 옵션을 확인, 오류 메시지를 지금까지 시간과 recompile 옵션 하나를 제거 합니다. 가장 일반적으로 담당 하는 옵션은 [/Og (전역 최적화)](../../build/reference/og-global-optimizations.md) 하 고 [/Oi (내장 함수 생성)](../../build/reference/oi-generate-intrinsic-functions.md)합니다. 원인이 되는 최적화 옵션을 결정 한 후 사용 하 여 오류가 발생 하는 함수 주위 비활성화할 수 있습니다 합니다 [최적화](../../preprocessor/optimize.md) pragma, 모듈의 나머지 부분에 대 한 옵션을 사용 하 여 계속 합니다. 최적화 옵션에 대 한 자세한 내용은 참조 하세요. [최적화에 대 한 유용한 정보](../../build/optimization-best-practices.md)합니다.
+하나 이상의 최적화 옵션을 제거 하 여 최적화 문제를 해결할 수 있는 경우가 많습니다. 오류에 해당 하는 옵션을 확인 하려면 한 번에 하나씩 옵션을 제거 하 고 오류 메시지가 사라질 때까지 다시 컴파일하십시오. 가장 일반적으로 발생 하는 옵션은 [/og (전역 최적화)](../../build/reference/og-global-optimizations.md) 및 [/Oi (내장 함수 생성)](../../build/reference/oi-generate-intrinsic-functions.md)입니다. 담당 하는 최적화 옵션을 결정 한 후에는 [optimize](../../preprocessor/optimize.md) pragma를 사용 하 여 오류가 발생 하는 함수를 사용 하지 않도록 설정 하 고 나머지 모듈에 옵션을 계속 사용할 수 있습니다. 최적화 옵션에 대 한 자세한 내용은 [최적화 모범 사례](../../build/optimization-best-practices.md)를 참조 하세요.
 
-최적화 된 오류가 발생 한 경우 오류가 보고 된 줄 또는 여러 줄의 코드가 해당 줄 주위를 다시 작성 하십시오. 컴파일러가 전처리 후 표시 되는 방법은 코드를 보려면를 사용할 수 있습니다 합니다 [/P (파일로 전처리)](../../build/reference/p-preprocess-to-a-file.md) 옵션입니다.
+오류가 발생 하지 않을 경우에는 오류가 보고 되는 줄을 다시 작성 하거나 해당 줄을 둘러싼 몇 줄의 코드를 다시 작성 합니다. 전처리 후 컴파일러가이를 확인 하는 방식으로 코드를 보려면 [/p (파일로 전처리)](../../build/reference/p-preprocess-to-a-file.md) 옵션을 사용할 수 있습니다.
 
-오류 원인을 격리 하는 방법 및 Microsoft에 내부 컴파일러 오류를 보고 하는 방법에 대 한 자세한 내용은 참조 하세요. [시각적 개체를 사용 하 여 문제를 보고 하는 방법 C++ 도구 집합](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)합니다.
+오류의 출처를 격리 하는 방법과 내부 컴파일러 오류를 Microsoft에 보고 하는 방법에 대 한 자세한 내용은 [시각적 C++ 도구 집합을 사용](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)하 여 문제를 보고 하는 방법을 참조 하세요.

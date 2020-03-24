@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404496"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209551"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>공급자에서 자유 스레딩 지원
 
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-임계 섹션을 보호 하는 방법에 대 한 자세한 내용은 `Lock` 하 고 `Unlock`를 참조 하세요 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.
+`Lock` 및 `Unlock`를 사용 하 여 중요 한 섹션을 보호 하는 방법에 대 한 자세한 내용은 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)을 참조 하세요.
 
-재정의한 메서드(예: `Execute`)가 모두 스레드로부터 안전한지도 확인해야 합니다.
+재정의 하는 메서드 (예: `Execute`)가 스레드로부터 안전 하 게 보호 되는지 확인 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿을 사용하여 작업](../../data/oledb/working-with-ole-db-provider-templates.md)

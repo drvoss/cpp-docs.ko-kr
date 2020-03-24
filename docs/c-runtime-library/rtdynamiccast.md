@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957336"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170074"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -70,10 +70,10 @@ PVOID __RTDynamicCast (
 
 ## <a name="remarks"></a>설명
 
-`inptr`을 `TargetType` 형식의 개체로 변환합니다. `TargetType`이 포인터인 경우 `inptr`의 형식은 포인터여야 하며 `TargetType`이 참조인 경우에는 l 값이어야 합니다. `TargetType`은 포인터, 이전에 정의한 클래스 형식에 대한 참조 또는 void에 대한 포인터여야 합니다.
+`inptr`을 `TargetType` 형식의 개체로 변환합니다. `inptr`이 포인터인 경우 `TargetType`의 형식은 포인터여야 하며 `TargetType`이 참조인 경우에는 l 값이어야 합니다. `TargetType`은 포인터, 이전에 정의한 클래스 형식에 대한 참조 또는 void에 대한 포인터여야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |__RTDynamicCast|rtti.h|

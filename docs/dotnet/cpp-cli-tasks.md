@@ -2,12 +2,12 @@
 title: C++/CLI 작업
 ms.date: 11/04/2016
 ms.assetid: 5851b113-91f9-4062-9427-c0669f333636
-ms.openlocfilehash: a3cd7ef99511c3ad2dc6e14d0d5374a86ab3a85f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb11d774557a72c167639e2e809c115bd66374cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208856"
 ---
 # <a name="ccli-tasks"></a>C++/CLI 작업
 
@@ -28,10 +28,10 @@ ms.locfileid: "62209156"
 - [방법: C++/CLI에서 열거형 정의 및 사용](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 - [방법: C++/CLI에서 이벤트 사용](../dotnet/how-to-use-events-in-cpp-cli.md)
 - [방법: 인터페이스 정적 생성자 정의(C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
-- [방법: 네이티브 컴파일에 override 지정자 선언(C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
+- [방법: 네이티브 컴파일에 재정의 지정자 선언(C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
 - [방법: C++/CLI에서 속성 사용](../dotnet/how-to-use-properties-in-cpp-cli.md)
 - [방법: C++/CLI에서 safe_cast 사용](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 - [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

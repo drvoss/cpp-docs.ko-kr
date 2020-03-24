@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 2) C4302
+title: 컴파일러 경고(수준 2) C4302
 ms.date: 11/04/2016
 f1_keywords:
 - C4302
 helpviewer_keywords:
 - C4302
 ms.assetid: f5e1c939-e134-4cca-ba1e-9b15a81549ae
-ms.openlocfilehash: 68143499c3e22316b443a4c1b55cac6e142552cb
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 98a489e92633af5cb8e125bfd7bafc4d872baebd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161947"
 ---
-# <a name="compiler-warning-level-2-c4302"></a>컴파일러 경고 (수준 2) C4302
+# <a name="compiler-warning-level-2-c4302"></a>컴파일러 경고(수준 2) C4302
 
 ' conversion ': ' type 1 '에서 ' type 2 ' (으)로 잘림
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2302
 ms.assetid: 74a54bab-9d5c-446e-9b1f-c92fb57090a8
-ms.openlocfilehash: 284a5e641d7145c7ec3c2220448daa3a7b11b997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7af55597229add40c120d1b6e6f94e5cc1256237
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206299"
 ---
 # <a name="compiler-error-c2302"></a>컴파일러 오류 C2302
 
 '.~identifier' 왼쪽에는 클래스/구조체/공용 구조체 형식이 있어야 합니다.
 
-마침표 (.) 연산자의 왼쪽에 식이 클래스, 구조체 또는 공용 구조체 않습니다.
+마침표 (.) 연산자의 왼쪽에 있는 식은 클래스, 구조체 또는 공용 구조체가 아닙니다.

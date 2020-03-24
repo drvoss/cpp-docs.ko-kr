@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201944"
 ---
 # <a name="compiler-error-c2827"></a>컴파일러 오류 C2827
 
-단항 형식을 사용 하 여 'operator o p를 전역으로 재정의할 수 없습니다.
+' operator operator '는 단항 형식으로 전역으로 재정의할 수 없습니다.
 
-연산자는 단항 폼 개체 외부에서 사용할 수 없습니다.
+연산자는 개체 외부에 단항 형식을 사용할 수 없습니다.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>다음 해결 방법을 사용하여 수정하려면
 
-1. 개체로 로컬 오버 로드 된 연산자를 확인 합니다.
+1. 오버 로드 된 연산자를 개체의 로컬으로 만듭니다.
 
-1. 적절 한 단항 연산자 오버 로드를 선택 합니다.
+1. 오버 로드할 적절 한 단항 연산자를 선택 합니다.

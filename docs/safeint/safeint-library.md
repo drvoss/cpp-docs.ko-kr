@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries, SafeInt
 - SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-ms.openlocfilehash: 39f50fc9076b033ecb20a585ec139ec240145252
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8791fa9b512d9aa18b91f90de0b716280d6df913
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168631"
 ---
 # <a name="safeint-library"></a>SafeInt 라이브러리
 
@@ -19,7 +19,7 @@ ms.locfileid: "79545686"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-|섹션|설명|
+|섹션|Description|
 |-------------|-----------------|
 |[SafeInt 클래스](../safeint/safeint-class.md)|이 클래스는 정수 오버플로를 방지합니다.|
 |[SafeInt 함수](../safeint/safeint-functions.md)|**SafeInt** 개체를 만들지 않고도 사용할 수 있는 함수입니다.|
@@ -27,6 +27,6 @@ ms.locfileid: "79545686"
 
 ## <a name="related-sections"></a>관련 섹션
 
-|섹션|설명|
+|섹션|Description|
 |-------------|-----------------|
 |[C++ 언어 참조](../cpp/cpp-language-reference.md)|C++ 언어에 대한 참조 및 개념 콘텐츠입니다.|

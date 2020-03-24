@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167890"
 ---
 # <a name="resource-editors-c"></a>리소스 편집기 (C++)
 
@@ -35,12 +35,12 @@ ms.locfileid: "72444999"
 리소스를 만들거나 열면 적절한 편집기가 자동으로 열립니다.
 
 > [!NOTE]
-> 관리 되는 프로젝트는 리소스 스크립트 파일을 사용 하지 않으므로 **솔루션 탐색기**에서 리소스를 열어야 합니다. 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](../windows/image-editor-for-icons.md) 및 [바이너리 편집기](binary-editor.md) 를 사용할 수 있습니다. 편집하고자 하는 관리되는 모든 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함된 리소스를 편집할 수 없습니다.
+> 관리 되는 프로젝트는 리소스 스크립트 파일을 사용 하지 않으므로 **솔루션 탐색기**에서 리소스를 열어야 합니다. 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](../windows/image-editor-for-icons.md) 및 [바이너리 편집기](binary-editor.md) 를 사용할 수 있습니다. 편집할 관리되는 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함된 리소스를 편집할 수 없습니다.
 
 |사용...|편집...|
 |----------------|----------------|
 |[액셀러레이터 키 편집기](../windows/accelerator-editor.md)|Visual Studio C++ 프로젝트의 액셀러레이터 키 테이블입니다.|
-|[바이너리 편집기](binary-editor.md)|Visual C++, Visual Basic 또는 Visual C# 프로젝트의 이진 데이터 정보 및 사용자 지정 리소스입니다.|
+|[Binary Editor](binary-editor.md)|Visual C++, Visual Basic 또는 Visual C# 프로젝트의 이진 데이터 정보 및 사용자 지정 리소스입니다.|
 |[대화 상자 편집기](../windows/dialog-editor.md)|Visual Studio C++ 프로젝트의 대화 상자.|
 |[이미지 편집기](../windows/image-editor-for-icons.md)|Visual C++, Visual Basic 또는 Visual C# 프로젝트의 비트맵, 아이콘, 커서 및 기타 이미지 파일입니다.|
 |[메뉴 편집기](../windows/menu-editor.md)|Visual Studio C++ 프로젝트의 메뉴 리소스입니다.|

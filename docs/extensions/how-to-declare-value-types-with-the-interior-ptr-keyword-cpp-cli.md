@@ -6,14 +6,14 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172284"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
 
 **interior_ptr**은 값 형식에 사용할 수 있습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "65515758"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 다음 C++/CLI 샘플에서는 값 형식에 **interior_ptr**을 사용하는 방법을 보여 줍니다.
 
@@ -67,7 +67,7 @@ int main() {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 값 형식에서 **this** 포인터는 interior_ptr로 계산됩니다.
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 다음 샘플은 정적 멤버에 주소 연산자를 사용하는 방법을 보여 줍니다.
 
