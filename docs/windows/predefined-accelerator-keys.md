@@ -8,12 +8,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215152"
 ---
 # <a name="accelerator-keys-c"></a>액셀러레이터 키 (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "79445406"
 
 Windows 애플리케이션 프로젝트에 포함될 수 있는 미리 정의된 많은 액셀러레이터 키가 있습니다. 이러한 가상 키 중 일부는 Windows 환경을 위한 것입니다. 다른 사용자는 브라우저나 유니코드 응용 프로그램을 지원 합니다. 모든 액셀러레이터에 이러한 키 중 하나를 사용할 수 있습니다.
 
-|키|Description|
+|Key|설명|
 |---------|-----------------|
 |VK_ACCEPT|(IME) 수락|
 |VK_BROWSER_BACK|Windows 브라우저, **뒤로** 키|

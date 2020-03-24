@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214931"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM 및 .NET의 C++ 특성
 
@@ -78,11 +78,11 @@ class CMyReceiver
 
 또한 Visual C++ 링커는 모든 IDL 관련 특성 정보를 단일 MIDL 파일로 출력 합니다. 단일 프로젝트에서 두 개의 형식 라이브러리를 생성 하는 방법은 없습니다.
 
-## <a name="contexts"></a>특성 컨텍스트
+## <a name="attribute-contexts"></a><a name="contexts"></a>특성 컨텍스트
 
 C++특성은 네 가지 기본 필드를 사용 하 여 설명할 수 있습니다. 즉, 적용할 수 있는 대상 (**에 적용**됨), 반복 가능한 상태 (**반복**가능한 경우), 다른 특성의 필수 항목 (**필수 특성**) 및 기타 특성과의 비호환 (**잘못 된 특성**)을 사용 합니다. 이러한 필드는 각 특성의 참조 항목에서 함께 제공 되는 테이블에 나열 됩니다. 이러한 각 필드에 대해서는 아래에서 설명 합니다.
 
-### <a name="applies-to"></a>적용 대상
+### <a name="applies-to"></a>적용
 
 이 필드는 지정된 된 특성에 대 한 법적 대상이 여러 C++ 언어 요소를 설명 합니다. 예를 들어, 특성이 **적용 대상** 필드에서 "클래스"를 지정 하는 경우이는 특성을 올바른 C++ 클래스에만 적용할 수 있음을 나타냅니다. 특성이 클래스의 멤버 함수에 적용 되는 경우 구문 오류가 발생 합니다.
 

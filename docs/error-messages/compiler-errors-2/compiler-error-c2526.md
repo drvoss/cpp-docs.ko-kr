@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2526
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
-ms.openlocfilehash: 909f1d0d9b2d0ad16948f07a086f29ab194731e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3267b84aa913ec8b8d070fdc0a206abfa0c5a636
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202607"
 ---
 # <a name="compiler-error-c2526"></a>컴파일러 오류 C2526
 
-' identifier1': C 링크 함수에서 반환할 수 없습니다 C++ 'identifier2' 클래스
+' identifier1 ': C 링크 함수는 ' C++ identifier2 ' 클래스를 반환할 수 없습니다.
 
-C 링크가 있는 정의 된 함수는 사용자 정의 형식을 반환할 수 없습니다.
+C 링크로 정의 된 함수는 사용자 정의 형식을 반환할 수 없습니다.

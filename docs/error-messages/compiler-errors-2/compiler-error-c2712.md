@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a25c59fa5c9ba0102666f6c8922a61b063e7627a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202308"
 ---
 # <a name="compiler-error-c2712"></a>컴파일러 오류 C2712
 
 > 개체 해제 기능이 사용되는 함수에서는 __try를 사용할 수 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-사용 하는 경우 C2712 오류가 발생할 수 있습니다 [/EHsc](../../build/reference/eh-exception-handling-model.md), 구조적된 예외 처리에 사용 하는 함수에 해제 (소멸)를 필요로 하는 개체 및 합니다.
+[/Ehsc](../../build/reference/eh-exception-handling-model.md)를 사용 하 고 구조화 된 예외 처리를 사용 하는 함수에 해제 (소멸)가 필요한 개체가 있는 경우 오류 C2712 발생할 수 있습니다.
 
 가능한 해결 방법:
 
@@ -29,11 +29,11 @@ ms.locfileid: "62386793"
 
 - /EHsc 없이 컴파일합니다.
 
-사용 하 여 선언 된 메서드를 호출 하는 경우에 C2712 오류가 발생할 수 있습니다 합니다 [__event](../../cpp/event.md) 키워드입니다. 다중 스레드 환경에서 이벤트를 사용할 수 있으므로 컴파일러는 내부 이벤트 개체의 조작을 차단 생성 한 다음 생성된 된 코드를 seh에서는 코드를 생성 하는 [try-finally 문](../../cpp/try-finally-statement.md)합니다. 따라서 이벤트 메서드를 호출하고 해당 형식에 소멸자가 포함된 인수를 값으로 전달하는 경우 C2712 오류가 발생합니다. 이 경우 한 가지 해결 방법은 인수를 상수 참조로 전달하는 것입니다.
+[__Event](../../cpp/event.md) 키워드를 사용 하 여 선언 된 메서드를 호출 하는 경우에도 오류 C2712 발생할 수 있습니다. 이 이벤트는 다중 스레드 환경에서 사용 될 수 있기 때문에 컴파일러는 기본 이벤트 개체를 조작할 수 없도록 하는 코드를 생성 한 다음 생성 된 코드를 SEH [try-finally 문으로](../../cpp/try-finally-statement.md)묶습니다. 따라서 이벤트 메서드를 호출하고 해당 형식에 소멸자가 포함된 인수를 값으로 전달하는 경우 C2712 오류가 발생합니다. 이 경우 한 가지 해결 방법은 인수를 상수 참조로 전달하는 것입니다.
 
-로 컴파일하는 경우에 C2712 발생할 수 있습니다 **/clr: pure** 의 함수 포인터의 정적 배열을 선언 하는 `__try` 블록. 정적 멤버 아래에서 동적 초기화를 사용 하도록 컴파일러에 필요한 **/clr: pure**, 즉 C++ 예외 처리 합니다. 그러나 C++ 예외 처리는 `__try` 블록에서 허용되지 않습니다.
+C2712는 **/clr: pure** 를 사용 하 여 컴파일하고 `__try` 블록에서 함수에 대 한 포인터의 정적 배열을 선언 하는 경우에도 발생할 수 있습니다. 정적 멤버를 사용 하려면 컴파일러가 예외 처리를 의미 C++ 하는 **/clr: pure**에서 동적 초기화를 사용 해야 합니다. 그러나 C++ 예외 처리는 `__try` 블록에서 허용되지 않습니다.
 
-**/clr: pure** 및 **/clr: safe** Visual Studio 2015에서 사용 되지 않고 Visual Studio 2017에서 지원 되지 않는 컴파일러 옵션입니다.
+**/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
 ## <a name="example"></a>예제
 

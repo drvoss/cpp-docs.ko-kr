@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205246"
 ---
 # <a name="compiler-error-c2457"></a>컴파일러 오류 C2457
 
-> '*매크로*': 미리 정의 된 매크로 함수 본문 외부에서 사용할 수 없습니다
+> '*macro*': 미리 정의 된 매크로는 함수 본문 외부에 나타날 수 없습니다.
 
-와 같은 미리 정의 된 매크로 사용 하려는 [ &#95; &#95;함수&#95;&#95;](../../preprocessor/predefined-macros.md), 전역 공간에서입니다.
+전역 공간에서 [ &#95; &#95;함수&#95;](../../preprocessor/predefined-macros.md)등의 미리 정의 된 매크로를 사용 하려고 했습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C2457 생성 하 고 또한 올바른 사용법을 보여 줍니다.
+다음 샘플에서는 C2457를 생성 하 고 올바른 사용법도 보여 줍니다.
 
 ```cpp
 // C2457.cpp

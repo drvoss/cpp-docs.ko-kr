@@ -63,16 +63,16 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d06a92fea9a702633216e3244879687b66f97d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208730"
 ---
 # <a name="functional-stlclr"></a>functional(STL/CLR)
 
-STL/CLR 헤더를 포함 `<cliext/functional>` 정의 하는 다양 한 템플릿 클래스 및 관련된 템플릿은 대리자 함수입니다.
+STL/CLR 헤더 `<cliext/functional>`를 포함 하 여 많은 템플릿 클래스와 관련 된 템플릿 대리자 및 함수를 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -84,51 +84,51 @@ STL/CLR 헤더를 포함 `<cliext/functional>` 정의 하는 다양 한 템플�
 
 **헤더:** \<cliext/기능 >
 
-**Namespace:** cliext
+**네임 스페이스:** cliext
 
 ## <a name="declarations"></a>선언
 
 |대리자|설명|
 |--------------|-----------------|
 |[binary_delegate(STL/CLR)](#binary_delegate)|두 인수 대리자입니다.|
-|[binary_delegate_noreturn(STL/CLR)](#binary_delegate_noreturn)|두 인수 대리자 반환 **void**합니다.|
+|[binary_delegate_noreturn(STL/CLR)](#binary_delegate_noreturn)|**Void**를 반환 하는 두 인수 대리자입니다.|
 |[unary_delegate(STL/CLR)](#unary_delegate)|단일 인수 대리자입니다.|
-|[unary_delegate_noreturn(STL/CLR)](#unary_delegate_noreturn)|반환 되는 단일 인수 대리자 **void**합니다.|
+|[unary_delegate_noreturn(STL/CLR)](#unary_delegate_noreturn)|**Void**를 반환 하는 1 인수 대리자입니다.|
 
 |클래스|설명|
 |-----------|-----------------|
-|[binary_negate(STL/CLR)](#binary_negate)|인수가 두 개인 함수인 부정할 함수입니다.|
-|[binder1st(STL/CLR)](#binder1st)|첫 번째 인수는 두 인수 함수인 바인딩할 함수입니다.|
-|[binder2nd(STL/CLR)](#binder2nd)|두 번째 인수는 두 인수 함수인 바인딩할 함수입니다.|
-|[divides(STL/CLR)](#divides)|함수를 나눕니다.|
+|[binary_negate(STL/CLR)](#binary_negate)|두 인수 함수를 부정 하는 함수입니다.|
+|[binder1st(STL/CLR)](#binder1st)|첫 번째 인수를 두 인수 함수에 바인딩하는 함수입니다.|
+|[binder2nd(STL/CLR)](#binder2nd)|두 번째 인수를 두 인수 함수에 바인딩하는 함수입니다.|
+|[divides(STL/CLR)](#divides)|나누기 함수|
 |[equal_to(STL/CLR)](#equal_to)|같음 비교 함수입니다.|
-|[greater(STL/CLR)](#greater)|큰 비교 함수입니다.|
-|[greater_equal(STL/CLR)](#greater_equal)|Greater 또는 equal 비교 함수입니다.|
-|[less(STL/CLR)](#less)|Less 비교 함수입니다.|
+|[greater(STL/CLR)](#greater)|비교 함수를 더 합니다.|
+|[greater_equal(STL/CLR)](#greater_equal)|크거나 같음 비교 함수입니다.|
+|[less(STL/CLR)](#less)|Less 비교 함수.|
 |[less_equal(STL/CLR)](#less_equal)|작거나 같음 비교 함수입니다.|
-|[logical_and(STL/CLR)](#logical_and)|논리 AND 함수입니다.|
-|[logical_not(STL/CLR)](#logical_not)|논리 함수 없습니다.|
-|[logical_or(STL/CLR)](#logical_or)|논리 OR 함수입니다.|
-|[minus(STL/CLR)](#minus)|함수를 뺍니다.|
-|[modulus(STL/CLR)](#modulus)|모듈러스 함수입니다.|
+|[logical_and(STL/CLR)](#logical_and)|논리적 AND 함수|
+|[logical_not(STL/CLR)](#logical_not)|논리적 NOT 함수입니다.|
+|[logical_or(STL/CLR)](#logical_or)|논리적 OR 함수입니다.|
+|[minus(STL/CLR)](#minus)|빼기 함수|
+|[modulus(STL/CLR)](#modulus)|모듈러스 함수.|
 |[multiplies(STL/CLR)](#multiplies)|곱하기 함수입니다.|
-|[negate(STL/CLR)](#negate)|부정 해당 인수를 반환 하는 함수입니다.|
+|[negate(STL/CLR)](#negate)|인수를 반환 하는 함수입니다.|
 |[not_equal_to(STL/CLR)](#not_equal_to)|같지 않음 비교 함수입니다.|
 |[plus(STL/CLR)](#plus)|함수를 추가 합니다.|
 |[unary_negate(STL/CLR)](#unary_negate)|단일 인수 함수를 부정 하는 함수입니다.|
 
 |함수|설명|
 |--------------|-----------------|
-|[bind1st(STL/CLR)](#bind1st)|인수 및 함수 binder1st를 생성합니다.|
-|[bind2nd(STL/CLR)](#bind2nd)|인수 및 함수 binder2nd를 생성합니다.|
-|[not1(STL/CLR)](#not1)|함수에 대 한 unary_negate를 생성합니다.|
-|[not2(STL/CLR)](#not2)|함수에 대 한 binary_negate를 생성합니다.|
+|[bind1st(STL/CLR)](#bind1st)|인수 및 함수에 대 한 binder1st를 생성 합니다.|
+|[bind2nd(STL/CLR)](#bind2nd)|인수 및 함수에 대 한 binder2nd를 생성 합니다.|
+|[not1(STL/CLR)](#not1)|함수에 대 한 unary_negate를 생성 합니다.|
+|[not2(STL/CLR)](#not2)|함수에 대 한 binary_negate를 생성 합니다.|
 
 ## <a name="members"></a>멤버
 
-## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
 
-Genereic 클래스에는 두 인수 대리자를 설명합니다. 사용 하 여 해당 인수 및 반환 형식 기준으로 대리자를 지정 합니다.
+Genereic 클래스는 두 인수 대리자를 설명 합니다. 이를 사용 하 여 해당 인수 및 반환 형식에 따라 대리자를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -150,23 +150,23 @@ generic<typename Arg1,
 *결과*<br/>
 반환 형식입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-Genereic 대리자는 두 인수 함수를 설명합니다.
+Genereic 대리자는 2 인수 함수를 설명 합니다.
 
-note:
+다음에 유의 하십시오.
 
 `binary_delegate<int, int, int> Fun1;`
 
 `binary_delegate<int, int, int> Fun2;`
 
-형식을 `Fun1` 고 `Fun2` 은 동의어 이며에 대 한 동안:
+`Fun1` 및 `Fun2` 형식은 동의어이 고,의 경우에는 다음과 같습니다.
 
 `delegate int Fun1(int, int);`
 
 `delegate int Fun2(int, int);`
 
-동일한 형식 하지 않습니다.
+동일한 형식이 아닙니다.
 
 ### <a name="example"></a>예제
 
@@ -202,9 +202,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
 
-Genereic 클래스를 반환 하는 두 인수 대리자 설명 **void**합니다. 사용 하 여 해당 인수를 기준으로 대리자를 지정 합니다.
+Genereic 클래스는 **void**를 반환 하는 두 인수 대리자를 설명 합니다. 이를 사용 하 여 인수를 기준으로 대리자를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -222,23 +222,23 @@ generic<typename Arg1,
 *Arg2*<br/>
 두 번째 인수의 형식입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-Genereic 대리자에 반환 하는 두 인수 함수에 설명 **void**합니다.
+Genereic 대리자는 **void**를 반환 하는 두 인수 함수를 설명 합니다.
 
-note:
+다음에 유의 하십시오.
 
 `binary_delegate_noreturn<int, int> Fun1;`
 
 `binary_delegate_noreturn<int, int> Fun2;`
 
-형식을 `Fun1` 고 `Fun2` 은 동의어 이며에 대 한 동안:
+`Fun1` 및 `Fun2` 형식은 동의어이 고,의 경우에는 다음과 같습니다.
 
 `delegate void Fun1(int, int);`
 
 `delegate void Fun2(int, int);`
 
-동일한 형식 하지 않습니다.
+동일한 형식이 아닙니다.
 
 ### <a name="example"></a>예제
 
@@ -272,9 +272,9 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate"></a> binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
 
-템플릿 클래스를 설명 하는 함수인은 호출 된 경우 반환 논리 구조으로 저장된 하는 두 인수 함수는 아닙니다. 사용 하 여 해당 저장된 함수를 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 저장 된 두 인수 함수의 논리적 NOT을 반환 하는 함수에 대해 설명 합니다. 이를 사용 하 여 저장 된 함수를 기준으로 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -302,33 +302,33 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Fun*<br/>
-형식 저장된 함수입니다.
+*있*<br/>
+저장 된 함수 형식입니다.
 
 ## <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
-|stored_function_type|함수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
+|stored_function_type|함수 유형입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|binary_negate|함수를 생성합니다.|
+|binary_negate|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|operator delegate_type^()|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^ ()|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 다른 두 인수 함수를 저장 하는 두 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 논리적 반환 개체 함수로 호출 되 면 있도록 두 개의 인수를 사용 하 여 호출 저장된 함수는 아닙니다.
+이 템플릿 클래스는 다른 두 인수 함수를 저장 하는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 두 인수를 사용 하 여 호출 된 저장 된 함수의 논리적 NOT을 반환 하도록 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -386,9 +386,9 @@ int main()
 1 0
 ```
 
-## <a name="bind1st"></a> bind1st (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
 
-생성 된 `binder1st` 인수 및 함수.
+인수 및 함수에 대 한 `binder1st`를 생성 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -401,23 +401,23 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>템플릿 매개 변수
 
-*Arg*<br/>
+*인수가*<br/>
 인수 형식입니다.
 
-*Fun*<br/>
-함수의 형식입니다.
+*있*<br/>
+함수 유형입니다.
 
 #### <a name="function-parameters"></a>함수 매개 변수
 
-*functor*<br/>
+*함수*<br/>
 래핑할 함수입니다.
 
 *left*<br/>
 래핑할 첫 번째 인수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수 [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`합니다. 두 번째 인수를 사용 하 여 호출 하는 단일 인수 함수에서 인수가 두 개인 함수 및 첫 번째 인수를 래핑하는 편리한 방법으로 사용 합니다.
+템플릿 함수는 [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`를 반환 합니다. 두 인수 함수를 래핑하는 편리한 방법으로 사용 하 고 두 번째 인수를 사용 하 여 호출 하는 단일 인수 함수에서 첫 번째 인수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -467,9 +467,9 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd"></a> bind2nd (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
 
-생성 된 `binder2nd` 인수 및 함수.
+인수 및 함수에 대 한 `binder2nd`를 생성 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -482,23 +482,23 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>템플릿 매개 변수
 
-*Arg*<br/>
+*인수가*<br/>
 인수 형식입니다.
 
-*Fun*<br/>
-함수의 형식입니다.
+*있*<br/>
+함수 유형입니다.
 
 #### <a name="function-parameters"></a>함수 매개 변수
 
-*functor*<br/>
+*함수*<br/>
 래핑할 함수입니다.
 
 *right*<br/>
 래핑할 두 번째 인수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수 [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`합니다. 첫 번째 인수를 사용 하 여 호출 하는 단일 인수 함수에서 인수가 두 개인 함수 및 두 번째 인수를 래핑하는 편리한 방법으로 사용 합니다.
+템플릿 함수는 [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`를 반환 합니다. 이 함수를 사용 하 여 두 인수 함수 및 두 번째 인수를 첫 번째 인수를 사용 하 여 호출 하는 단일 인수 함수에서 래핑하는 편리한 방법으로 사용할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -548,9 +548,9 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st"></a> binder1st (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st (STL/CLR)
 
-단일 인수 함수를 설명 하는 템플릿 클래스는 호출 된 경우 첫 번째 인수로 저장된 및 제공 된 두 번째 인수를 사용 하 여 호출 하는 저장된 두 인수 함수를 반환 합니다. 사용 하 여 해당 저장된 함수를 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 된 경우 저장 된 첫 번째 인수 및 제공 된 두 번째 인수를 사용 하 여 라는 저장 된 두 인수 함수를 반환 하는 단일 인수 함수를 설명 합니다. 이를 사용 하 여 저장 된 함수를 기준으로 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -577,33 +577,33 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Fun*<br/>
-형식 저장된 함수입니다.
+*있*<br/>
+저장 된 함수 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
-|stored_function_type|함수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
+|stored_function_type|함수 유형입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|binder1st|함수를 생성합니다.|
+|binder1st|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|operator delegate_type^()|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^ ()|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수인 및 첫 번째 인수를 저장 하는 단일 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 되도록 저장된 첫 번째 인수 및 제공 된 두 번째 인수를 사용 하 여 저장된 함수를 호출 하는 결과 반환 합니다.
+이 템플릿 클래스는 두 인수 함수 및 첫 번째 인수를 저장 하는 하나의 인수 함수를 설명 합니다. 개체를 함수로 호출할 때 저장 된 함수를 저장 된 첫 번째 인수와 제공 된 두 번째 인수를 사용 하 여 호출한 결과를 반환 하도록 `operator()` 멤버 연산자를 정의 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -653,9 +653,9 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd"></a> binder2nd (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd (STL/CLR)
 
-단일 인수 함수를 설명 하는 템플릿 클래스는 호출 된 경우 제공 된 첫 번째 인수 및 해당 저장 된 두 번째 인수를 사용 하 여 호출 하는 저장된 두 인수 함수를 반환 합니다. 사용 하 여 해당 저장된 함수를 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 제공 된 첫 번째 인수와 저장 된 두 번째 인수를 사용 하 여 이라는 저장 된 두 인수 함수를 반환 하는 하나의 인수 함수를 설명 합니다. 이를 사용 하 여 저장 된 함수를 기준으로 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -682,33 +682,33 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Fun*<br/>
-형식 저장된 함수입니다.
+*있*<br/>
+저장 된 함수 형식입니다.
 
 ## <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
-|stored_function_type|함수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
+|stored_function_type|함수 유형입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|binder2nd|함수를 생성합니다.|
+|binder2nd|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|operator delegate_type^()|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^ ()|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수인 및 두 번째 인수를 저장 하는 단일 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 되도록 제공 된 첫 번째 인수 및 저장 된 두 번째 인수를 사용 하 여 저장된 함수를 호출 하는 결과 반환 합니다.
+이 템플릿 클래스는 두 인수 함수 및 두 번째 인수를 저장 하는 하나의 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 제공 된 첫 번째 인수와 저장 된 두 번째 인수를 사용 하 여 저장 된 함수를 호출한 결과를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -758,9 +758,9 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> divides (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a>나누기 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 두 번째 피연산자로 나눈 첫 번째 인수를 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 되는 경우 첫 번째 인수를 두 번째 인수로 나눈 값을 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -787,32 +787,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수 및 반환 값입니다.
+*인수가*<br/>
+인수 및 반환 값의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|divides|함수를 생성합니다.|
+|divides|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|operator delegate_type^()|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^ ()|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 두 번째 피연산자로 나눈 첫 번째 인수를 개체 함수로 호출 되 면 반환 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수를 두 번째 인수로 나눈 값을 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -859,9 +859,9 @@ int main()
 2 3
 ```
 
-## <a name="equal_to"></a> equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수가 두 번째 경우에 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수와 동일한 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -888,32 +888,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|equal_to|함수를 생성합니다.|
+|equal_to|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|operator delegate_type^()|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^ ()|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 첫 번째 인수가 두 번째 경우.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수와 동일한 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -960,9 +960,9 @@ int main()
 1 0
 ```
 
-## <a name="greater"></a> 큰 (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a>큼 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수는 두 번째 보다 큰 경우에 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수 보다 큰 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -989,32 +989,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|greater|함수를 생성합니다.|
+|greater|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 하는 경우 첫 번째 인수가 두 번째 보다 큽니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수 보다 크면 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1061,9 +1061,9 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal"></a> greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 합니다만 첫 번째 인수가 두 번째 보다 크거나 같은 경우 인지 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수 보다 크거나 같은 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1090,32 +1090,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|greater_equal|함수를 생성합니다.|
+|greater_equal|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 첫 번째 인수가 두 번째 보다 크거나 같은 경우 인지 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수 보다 크거나 같은 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1162,9 +1162,9 @@ int main()
 1 0
 ```
 
-## <a name="less"></a> less (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수는 작은 경우에 두 번째 인스턴스보다 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수 보다 작은 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1191,32 +1191,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|less|함수를 생성합니다.|
+|less|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 하는 경우 첫 번째 인수는 작은 두 번째 인스턴스보다 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수 보다 작은 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1263,9 +1263,9 @@ int main()
 0 1
 ```
 
-## <a name="less_equal"></a> less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
 
-템플릿 클래스를 설명 하는 함수인은 호출 되 면 true를 반환 합니다만 첫 번째 인수가 두 번째 보다 작거나 같은 경우입니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수 보다 작거나 같은 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1292,32 +1292,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|less_equal|함수를 생성합니다.|
+|less_equal|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 하는 경우 첫 번째 인수가 두 번째 보다 작거나 같은 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수 보다 작거나 같은 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1364,9 +1364,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_and"></a> logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 첫 번째 인수와 두 번째 테스트는 모두 true 하는 경우에 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수와 두 번째 테스트가 모두 true 인 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1393,32 +1393,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|logical_and|함수를 생성합니다.|
+|logical_and|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 첫 번째 인수와 두 번째 테스트는 모두 true입니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수와 두 번째 테스트가 모두 true 인 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1465,9 +1465,9 @@ int main()
 1 0
 ```
 
-## <a name="logical_not"></a> logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하거나 경우에 해당 인수를 false로 테스트 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 인수를 false로 테스트 하는 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1492,31 +1492,31 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
-|argument_type|형식 함수 인수입니다.|
+|argument_type|함수 인수의 형식입니다.|
 |delegate_type|제네릭 대리자의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|logical_not|함수를 생성합니다.|
+|logical_not|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 단일 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 해당 인수를 false로 테스트 하는 경우.
+이 템플릿 클래스는 하나의 인수 함수를 설명 합니다. 개체를 함수로 호출할 때 인수가 false로 테스트 되는 경우에만 true를 반환 하도록 `operator()` 멤버 연산자를 정의 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1555,9 +1555,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_or"></a> logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 true 첫 번째 인수 또는으로 두 번째 테스트 하는 경우에 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수나 두 번째 조건이 true 인 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1584,32 +1584,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|logical_or|함수를 생성합니다.|
+|logical_or|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 첫 번째 인수 또는으로 두 번째 테스트 true입니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수 또는 두 번째 조건이 true 인 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1656,9 +1656,9 @@ int main()
 1 0
 ```
 
-## <a name="minus"></a> minus (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a>빼기 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 첫 번째 인수가 두 번째 뺀 값을 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수에서 두 번째 인수를 뺀 값을 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1685,32 +1685,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수 및 반환 값입니다.
+*인수가*<br/>
+인수 및 반환 값의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|minus|함수를 생성합니다.|
+|빼기|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 첫 번째 인수가 두 번째 빼기를 개체 함수로 호출 되 면 반환 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수를 뺀 값을 뺀 값을 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1757,9 +1757,9 @@ int main()
 2 2
 ```
 
-## <a name="modulus"></a> modulus (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a>모듈러스 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 두 번째 모듈로 첫 번째 인수를 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수 모듈로 반환 하는 함수에 대해 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1786,32 +1786,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수 및 반환 값입니다.
+*인수가*<br/>
+인수 및 반환 값의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|나머지|함수를 생성합니다.|
+|나머지|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 첫 번째 인수가 두 번째 모듈로 개체 함수로 호출 되 면를 반환 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수 모듈로 반환 되도록 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1858,9 +1858,9 @@ int main()
 1 0
 ```
 
-## <a name="multiplies"></a> multiplies (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a>곱하기 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 첫 번째 인수가 두 번째 시간을 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 두 번째 인수를 반환 하는 함수에 대해 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1887,32 +1887,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수 및 반환 값입니다.
+*인수가*<br/>
+인수 및 반환 값의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|multiplies|함수를 생성합니다.|
+|multiplies|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 첫 번째 인수가 두 번째 시간 개체 함수로 호출 되 면를 반환 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수를 두 번째로 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1959,9 +1959,9 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> negate (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a>부정 (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 부정 해당 인수를 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 인수를 부정 하 게 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1986,31 +1986,31 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
-|argument_type|형식 함수 인수입니다.|
+|argument_type|함수 인수의 형식입니다.|
 |delegate_type|제네릭 대리자의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|negate|함수를 생성합니다.|
+|negate|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 단일 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 부정 인수로 반환 개체를 함수로 호출 될 때에 있도록 합니다.
+이 템플릿 클래스는 하나의 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 해당 인수를 부정 하 게 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2049,9 +2049,9 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수가 두 번째 경우에 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수가 두 번째 인수와 같지 않은 경우에만 true를 반환 하는 함수를 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2078,32 +2078,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수입니다.
+*인수가*<br/>
+인수의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|not_equal_to|함수를 생성합니다.|
+|not_equal_to|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 되 면 있도록만 true를 반환 하는 경우 첫 번째 인수가 두 번째 아닙니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수가 두 번째 인수와 같지 않은 경우에만 true를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2150,9 +2150,9 @@ int main()
 0 1
 ```
 
-## <a name="not1"></a> not1 (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
 
-생성 된 `unary_negate` 있는 함수에 대 한 합니다.
+함수에 대 한 `unary_negate`를 생성 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2163,17 +2163,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>템플릿 매개 변수
 
-*Fun*<br/>
-함수의 형식입니다.
+*있*<br/>
+함수 유형입니다.
 
 #### <a name="function-parameters"></a>함수 매개 변수
 
-*functor*<br/>
+*함수*<br/>
 래핑할 함수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수 [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`합니다. 해당 논리 NOT을 제공 하는 함수에서 단일 인수 함수를 래핑하는 편리한 방법으로 사용 합니다.
+템플릿 함수는 [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`를 반환 합니다. 논리 NOT을 전달 하는 함수에서 단일 인수 함수를 래핑하는 편리한 방법으로 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2222,9 +2222,9 @@ int main()
 1 0
 ```
 
-## <a name="not2"></a> not2 (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
 
-생성 된 `binary_negate` 있는 함수에 대 한 합니다.
+함수에 대 한 `binary_negate`를 생성 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2235,17 +2235,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>템플릿 매개 변수
 
-*Fun*<br/>
-함수의 형식입니다.
+*있*<br/>
+함수 유형입니다.
 
 #### <a name="function-parameters"></a>함수 매개 변수
 
-*functor*<br/>
+*함수*<br/>
 래핑할 함수입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 함수 [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`합니다. 해당 논리 NOT을 제공 하는 함수에 인수가 두 개인 함수를 래핑하는 편리한 방법으로 사용 합니다.
+템플릿 함수는 [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`를 반환 합니다. 논리적 NOT을 전달 하는 함수에서 두 인수 함수를 래핑하는 편리한 방법으로 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2303,9 +2303,9 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> plus (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a>plus (STL/CLR)
 
-함수를 설명 하는 템플릿 클래스는 호출 된 경우 첫 번째 인수 및 두 번째 반환 합니다. 사용 하 여 해당 인수 형식 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 될 때 첫 번째 인수와 두 번째 인수를 반환 하는 함수에 대해 설명 합니다. 이를 사용 하 여 인수 형식 측면에서 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2332,32 +2332,32 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
-형식 인수 및 반환 값입니다.
+*인수가*<br/>
+인수 및 반환 값의 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
 |delegate_type|제네릭 대리자의 형식입니다.|
-|first_argument_type|첫 번째 함수 인수의 형식입니다.|
+|first_argument_type|함수 첫 번째 인수의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
-|second_argument_type|두 번째 함수 인수의 형식입니다.|
+|second_argument_type|함수 두 번째 인수의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|plus|함수를 생성합니다.|
+|더하기|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|연산자 delegate_type ^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 두 인수 함수를 설명합니다. 멤버 연산자 정의 `operator()` 첫 번째 인수 및 두 번째 반환 개체를 함수로 호출 될 때에 있도록 합니다.
+이 템플릿 클래스는 두 인수 함수를 설명 합니다. `operator()` 멤버 연산자를 정의 하 여 개체가 함수로 호출 될 때 첫 번째 인수와 두 번째 인수를 반환 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2404,9 +2404,9 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
 
-Genereic 클래스는 단일 인수 대리자를 설명합니다. 사용 하 여 해당 인수 및 반환 형식 기준으로 대리자를 지정 합니다.
+Genereic 클래스는 단일 인수 대리자를 설명 합니다. 이를 사용 하 여 해당 인수 및 반환 형식에 따라 대리자를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2418,29 +2418,29 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
+*인수가*<br/>
 인수 형식입니다.
 
 *결과*<br/>
 반환 형식입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-Genereic 대리자는 단일 인수 함수를 설명합니다.
+Genereic 대리자는 하나의 인수 함수를 설명 합니다.
 
-note:
+다음에 유의 하십시오.
 
 `unary_delegare<int, int> Fun1;`
 
 `unary_delegare<int, int> Fun2;`
 
-형식을 `Fun1` 고 `Fun2` 은 동의어 이며에 대 한 동안:
+`Fun1` 및 `Fun2` 형식은 동의어이 고,의 경우에는 다음과 같습니다.
 
 `delegate int Fun1(int);`
 
 `delegate int Fun2(int);`
 
-동일한 형식 하지 않습니다.
+동일한 형식이 아닙니다.
 
 ### <a name="example"></a>예제
 
@@ -2470,9 +2470,9 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
 
-Genereic 클래스를 반환 하는 단일 인수 대리자 설명 **void**합니다. 사용 하 여 해당 인수 형식 측면에서 대리자를 지정 합니다.
+Genereic 클래스는 **void**를 반환 하는 단일 인수 대리자를 설명 합니다. 이 메서드를 사용 하 여 해당 인수 형식의 측면에서 대리자를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2483,26 +2483,26 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>매개 변수
 
-*Arg*<br/>
+*인수가*<br/>
 인수 형식입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-Genereic 대리자에 반환 하는 단일 인수 함수에 설명 **void**합니다.
+Genereic 대리자는 **void**를 반환 하는 단일 인수 함수를 설명 합니다.
 
-note:
+다음에 유의 하십시오.
 
 `unary_delegare_noreturn<int> Fun1;`
 
 `unary_delegare_noreturn<int> Fun2;`
 
-형식을 `Fun1` 고 `Fun2` 은 동의어 이며에 대 한 동안:
+`Fun1` 및 `Fun2` 형식은 동의어이 고,의 경우에는 다음과 같습니다.
 
 `delegate void Fun1(int);`
 
 `delegate void Fun2(int);`
 
-동일한 형식 하지 않습니다.
+동일한 형식이 아닙니다.
 
 ### <a name="example"></a>예제
 
@@ -2533,9 +2533,9 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate"></a> unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
 
-템플릿 클래스를 설명 하는 함수인은 호출 된 경우 반환 논리적 해당 저장 된 단일 인수 함수는 아닙니다. 사용 하 여 해당 저장된 함수를 기준으로 함수 개체를 지정 합니다.
+이 템플릿 클래스는 호출 되는 경우 저장 된 단일 인수 함수에 대해 논리 NOT을 반환 하는 함수를 설명 합니다. 이를 사용 하 여 저장 된 함수를 기준으로 함수 개체를 지정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2561,31 +2561,31 @@ public:
 
 #### <a name="parameters"></a>매개 변수
 
-*Fun*<br/>
-형식 저장된 함수입니다.
+*있*<br/>
+저장 된 함수 형식입니다.
 
 ### <a name="member-functions"></a>멤버 함수
 
 |형식 정의|설명|
 |---------------------|-----------------|
-|argument_type|형식 함수 인수입니다.|
+|argument_type|함수 인수의 형식입니다.|
 |delegate_type|제네릭 대리자의 형식입니다.|
 |result_type|함수 결과의 형식입니다.|
 
 |멤버|설명|
 |------------|-----------------|
-|unary_negate|함수를 생성합니다.|
+|unary_negate|함수를 생성 합니다.|
 
 |연산자|설명|
 |--------------|-----------------|
-|operator()|원하는 함수를 계산합니다.|
-|delegate_type^|대리자에 함수를 캐스팅합니다.|
+|operator()|원하는 함수를 계산 합니다.|
+|delegate_type^|함수를 대리자로 캐스팅 합니다.|
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-템플릿 클래스는 다른 단일 인수 함수를 저장 하는 단일 인수 함수를 설명 합니다. 멤버 연산자 정의 `operator()` 논리적 반환 개체 함수로 호출 되 면 있도록의 저장 된 함수 인수를 사용 하 여 호출 합니다.
+이 템플릿 클래스는 또 하나의 인수 함수를 저장 하는 하나의 인수 함수를 설명 합니다. 개체를 함수로 호출 하는 경우 인수를 사용 하 여 호출 된 저장 된 함수의 논리적 NOT을 반환 하도록 `operator()` 멤버 연산자를 정의 합니다.
 
-함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.
+개체를 `delegate_type^` 형식이 며 적절 하 게 변환 되는 함수 인수로 전달할 수도 있습니다.
 
 ### <a name="example"></a>예제
 

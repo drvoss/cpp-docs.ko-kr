@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213449"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>레코드 스크롤에 대한 명령 처리기  (MFC Data Access)
 
-합니다 [CRecordView](../mfc/reference/crecordview-class.md) 클래스는 기본 명령에는 다음 표준 명령에 대 한 처리를 제공 합니다.
+[CRecordView](../mfc/reference/crecordview-class.md) 클래스는 다음 표준 명령에 대 한 기본 명령 처리를 제공 합니다.
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,11 +25,11 @@ ms.locfileid: "62398047"
 
 - ID_RECORD_MOVE_PREV
 
-`OnMove` 멤버 함수는 기본 명령 이동할 레코드에 있는 모든 네 가지 명령에 대 한 처리를 제공 합니다. 이러한 명령을 실행하면 RFX 또는 DFX는 새 레코드를 레코드 집합의 필드에 로드하고 DDX는 레코드 폼의 컨트롤로 값을 이동합니다. RFX에 대 한 정보를 참조 하세요 [Exchange RFX (레코드 필드)](../data/odbc/record-field-exchange-rfx.md)합니다.
+`OnMove` 멤버 함수는 레코드에서 레코드로 이동 하는 네 개의 모든 명령에 대 한 기본 명령 처리를 제공 합니다. 이러한 명령을 실행하면 RFX 또는 DFX는 새 레코드를 레코드 집합의 필드에 로드하고 DDX는 레코드 폼의 컨트롤로 값을 이동합니다. RFX에 대 한 자세한 내용은 [rfx (레코드 필드 교환)](../data/odbc/record-field-exchange-rfx.md)를 참조 하세요.
 
 > [!NOTE]
 >  표준 레코드 탐색 명령과 연결된 모든 사용자 인터페이스 개체에 대해 이러한 표준 명령 ID를 사용해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[레코드 뷰에서의 탐색 지원](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+[레코드 뷰에서 탐색 지원](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

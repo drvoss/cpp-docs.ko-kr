@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214277"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 열거형
 
@@ -28,8 +28,8 @@ enum class CallbackContext {};
 
 |형식 코드|설명|
 |---------------|-----------------|
-|임의의 값|콜백 함수가 모든 스레드 컨텍스트에서 실행될 수 있습니다.|
-|왼쪽과 같음|콜백 함수가 비동기 작업을 시작한 스레드 컨텍스트에서만 실행될 수 있습니다.|
+|Any|콜백 함수가 모든 스레드 컨텍스트에서 실행될 수 있습니다.|
+|동일|콜백 함수가 비동기 작업을 시작한 스레드 컨텍스트에서만 실행될 수 있습니다.|
 
 ### <a name="requirements"></a>요구 사항
 
@@ -37,6 +37,6 @@ enum class CallbackContext {};
 
 **지원 되는 최소 서버:** Windows Server 2012
 
-**네임스페이스:** 플랫폼
+**네임스페이스:** Platform
 
 **메타데이터:** platform.winmd

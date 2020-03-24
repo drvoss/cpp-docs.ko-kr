@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213969"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 함수
 
-검색을 [ModuleBase](modulebase-class.md) 포인터의 참조 횟수를 증가 및 감소를 허용 하는 [RuntimeClass](runtimeclass-class.md) 개체입니다.
+[RuntimeClass](runtimeclass-class.md) 개체의 참조 횟수를 증가 및 감소 시키는 데 사용할 수 있는 [modulebase](modulebase-class.md) 포인터를 검색 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,18 +26,18 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 `ModuleBase` 개체에 대한 포인터입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 함수는 데 내부적으로 증가 및 감소 개체 참조를 계산 합니다.
+이 함수는 개체 참조 횟수를 증가 및 감소 시키기 위해 내부적으로 사용 됩니다.
 
-호출 하 여 참조 횟수를 제어 하려면이 함수를 사용할 수 있습니다 [modulebase:: Incrementobjectcount](modulebase-class.md#incrementobjectcount) 하 고 [modulebase:: Decrementobjectcount](modulebase-class.md#decrementobjectcount)합니다.
+이 함수를 사용 하 여 [Modulebase:: IncrementObjectCount](modulebase-class.md#incrementobjectcount) 및 [modulebase::D ecrementobjectcount](modulebase-class.md#decrementobjectcount)를 호출 하 여 참조 횟수를 제어할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

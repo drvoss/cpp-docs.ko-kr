@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3500
 ms.assetid: 77336f16-04f5-4943-bfc0-faba4cd8bb51
-ms.openlocfilehash: 5dd969ae3fdc54e9ae65ee86532a3fc51116a272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf09381f36731a4c8eda125699f473616ef4cf11
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200840"
 ---
 # <a name="compiler-error-c3500"></a>컴파일러 오류 C3500
 
 invalid ProgID 'progid'
 
-잘못 된 progid와 지정 된는 `#import` 문입니다. 지정 하는 유효한 되도록 Windows 레지스트리를 확인 합니다. progid입니다.
+`#import` 문에 잘못 된 progid가 지정 되었습니다. Windows 레지스트리를 확인 하 여 올바른 progid를 지정 하는지 확인 합니다.
