@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f0a23fcfd949843e3548354f52970b10b6d63b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167028"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169489"
 ---
-# <a name="defining-asm-blocks-as-c-macros"></a>__asm 블록을 C 매크로로 정의
+# <a name="defining-__asm-blocks-as-c-macros"></a>__asm 블록을 C 매크로로 정의
 
 **Microsoft 전용**
 
@@ -47,14 +47,14 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
 
 중괄호도 필요합니다. 중괄호를 생략하면 동일한 줄의 매크로 호출 오른쪽에 있는 C 또는 C++ 문 때문에 컴파일러에 혼동이 있을 수 있습니다. 닫는 중괄호가 없으면 컴파일러가 어셈블리 코드가 중지되는 위치를 알 수 없으며, `__asm` 블록 뒤에 있는 C 또는 C++ 문을 어셈블리 명령으로 인식합니다.
 
-세미콜론을 사용 하 여 시작 하는 어셈블리 스타일 주석 (**;**) 줄의 끝까지 계속 합니다. 컴파일러는 논리 줄의 끝까지 주석 이후의 모든 항목을 무시하므로 매크로에서 문제가 발생합니다. 한 줄로 된 C 또는 C++ 주석도 마찬가지입니다(`// comment`). 오류를 방지하려면 매크로로 정의된 `/* comment */` 블록에 이전 스타일 C 주석(`__asm`)을 사용하십시오.
+세미콜론 ( **;** )으로 시작 하는 어셈블리 스타일 주석은 줄의 끝까지 계속 됩니다. 컴파일러는 논리 줄의 끝까지 주석 이후의 모든 항목을 무시하므로 매크로에서 문제가 발생합니다. 한 줄로 된 C 또는 C++ 주석도 마찬가지입니다(`// comment`). 오류를 방지하려면 매크로로 정의된 `/* comment */` 블록에 이전 스타일 C 주석(`__asm`)을 사용하십시오.
 
 C 매크로로 작성된 `__asm` 블록은 인수를 사용할 수 있습니다. 그러나 일반 C 매크로와 달리 `__asm` 매크로는 값을 반환할 수 없습니다. 따라서 C 또는 C++ 식에 이러한 매크로를 사용할 수 없습니다.
 
-이 형식의 매크로를 무차별적으로 호출하지 않도록 하십시오. 예를 들어, `__fastcall` 규칙으로 선언된 함수에서 어셈블리 언어 매크로를 호출하면 예기치 않은 결과가 발생할 수 있습니다. (참조 [인라인 어셈블리에서 레지스터 사용 및 유지](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)
+이 형식의 매크로를 무차별적으로 호출하지 않도록 하십시오. 예를 들어, `__fastcall` 규칙으로 선언된 함수에서 어셈블리 언어 매크로를 호출하면 예기치 않은 결과가 발생할 수 있습니다. [인라인 어셈블리에서 레지스터 사용 및 유지](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)를 참조 하세요.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172388"
 ---
 # <a name="event--ccli-and-ccx"></a>event(C++/CLI 및 C++/CX)
 
@@ -55,7 +55,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (선택 사항) `raise`delegate*매개 변수의 시그니처와 일치하는* 메서드의 매개 변수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이벤트는 대리자와 이벤트 트리거에 응답하는 멤버 함수(이벤트 처리기) 간의 연결이고 이를 통해 모든 클래스의 클라이언트가 기본 대리자의 서명 및 반환 형식을 준수하는 메서드를 등록할 수 있습니다.
 
@@ -73,7 +73,7 @@ modifiereventdelegate^ event_name
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 [이벤트(C++/CX)](../cppcx/events-c-cx.md)를 참조하세요.
 
@@ -119,7 +119,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (선택 사항) `raise`delegate*매개 변수의 시그니처와 일치하는* 메서드의 매개 변수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이벤트는 대리자와 이벤트 트리거에 응답하는 멤버 함수(이벤트 처리기) 간의 연결이고 이를 통해 모든 클래스의 클라이언트가 기본 대리자의 서명 및 반환 형식을 준수하는 메서드를 등록할 수 있습니다.
 

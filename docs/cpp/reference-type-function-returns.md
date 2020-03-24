@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188300"
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 
@@ -23,9 +23,9 @@ ms.locfileid: "62403440"
 
 - 함수가 반환할 때 참조 개체는 범위를 벗어나지 않습니다.
 
-큰 개체를 전달할 더 효율적일 수와 마찬가지로 *하* 함수를도 수 많은 개체를 반환 하는 것이 효율적 *에서* 함수. 참조 반환 프로토콜을 사용하면 반환하기 전에 개체를 임시 위치로 복사할 필요가 없어집니다.
+함수를 참조로 함수 *에* 전달 하는 것이 더 효율적일 수 있는 것과 마찬가지로 함수 *에서* 참조로 긴 개체를 반환 하는 것이 더 효율적일 수도 있습니다. 참조 반환 프로토콜을 사용하면 반환하기 전에 개체를 임시 위치로 복사할 필요가 없어집니다.
 
-함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 대입 연산자가 이 범주에 속합니다. 오버 로드 된 연산자에 나와 [오버 로드 된 연산자](../cpp/operator-overloading.md)합니다.
+함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 대입 연산자가 이 범주에 속합니다. 오버 로드 된 연산자는 [오버 로드 된 연산자](../cpp/operator-overloading.md)에서 다룹니다.
 
 ## <a name="example"></a>예제
 
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-이 경우에 경고를 컴파일러가: `warning C4172: returning address of local variable or temporary`합니다. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.
+이 경우 컴파일러에서 경고를 발생 시킵니다. `warning C4172: returning address of local variable or temporary`. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [참조](../cpp/references-cpp.md)

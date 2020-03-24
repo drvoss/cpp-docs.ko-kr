@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - M6101
 ms.assetid: 8c8d5097-d725-4a2c-92e9-fcf28c871d74
-ms.openlocfilehash: a32378b12586141b844dc5d631f0f83ba6e8faf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b120b069a329cb1158b26574b935b6374661bf67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173779"
 ---
 # <a name="math-error-m6101"></a>수학 오류 M6101
 
-잘못된
+잘못됨
 
-잘못 된 작업입니다.
+잘못된 작업입니다.
 
-이 오류는 무한대 또는 NaN (숫자가 아님)는 피연산자가 발생할 수 있습니다.
+이 오류는 피연산자가 NaN (숫자가 아님) 이거나 무한대 일 때 발생할 수 있습니다.
 
-프로그램은 129 종료 코드로 종료 됩니다.
+프로그램이 종료 코드 129를 사용 하 여 종료 됩니다.

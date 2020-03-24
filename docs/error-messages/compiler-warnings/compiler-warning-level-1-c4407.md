@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4407
+title: 컴파일러 경고(수준 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
 - C4407
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8dd78872d4edf82fb61c8ab93639dbcd93085754
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162545"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>컴파일러 경고 (수준 1) C4407
+# <a name="compiler-warning-level-1-c4407"></a>컴파일러 경고(수준 1) C4407
 
 멤버 표현에 대 한 다른 포인터 간에 캐스트 하는 경우 컴파일러에서 잘못 된 코드를 생성할 수 있습니다.
 

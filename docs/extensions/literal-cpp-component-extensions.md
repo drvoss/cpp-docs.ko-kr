@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "79545458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172141"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal(C++/CLI 및 C++/CX)
 
@@ -21,13 +21,13 @@ ms.locfileid: "79545458"
 
 ## <a name="all-platforms"></a>모든 플랫폼
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 (이 언어 기능에는 모든 런타임에 적용되는 설명이 없습니다.)
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)
 
@@ -37,7 +37,7 @@ ms.locfileid: "79545458"
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **literal**로 표시된 데이터 멤버는 선언할 때 초기화해야 하며, 값이 상수 정수, 열거형 또는 문자열 형식이어야 합니다. 초기화 식의 형식에서 정적 const 데이터 멤버의 형식으로 변환하는 데 사용자 정의 변환이 필요 없어야 합니다.
 

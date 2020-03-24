@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetString method [C++]
 ms.assetid: 816b08e5-6830-46ca-b3d7-7689308b3be3
-ms.openlocfilehash: d07e995be0ecd99974356a7516e7c4deee677637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd300a09c29668c496d93109d1bc862947e948c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403271"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187559"
 ---
-# <a name="varianttsetstring"></a>_variant_t::SetString
+# <a name="_variant_tsetstring"></a>_variant_t::SetString
 
 **Microsoft 전용**
 
@@ -27,7 +27,7 @@ void SetString(const char* pSrc);
 
 #### <a name="parameters"></a>매개 변수
 
-*pSrc*<br/>
+*.Psrc*<br/>
 문자열에 대한 포인터입니다.
 
 ## <a name="remarks"></a>설명
@@ -36,6 +36,6 @@ ANSI 문자열을 유니코드 `BSTR` 문자열로 변환하고 이 `_variant_t`
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

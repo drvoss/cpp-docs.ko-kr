@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516178"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172648"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>특성 매개 변수 형식(C++/CLI 및 C++/CX)
 
@@ -67,7 +67,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 특성을 지정할 때 명명되지 않은 모든 (위치) 인수는 모든 명명된 인수 앞에 와야 합니다.
 
@@ -101,7 +101,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 특성 매개 변수는 이전 형식의 1차원 배열일 수 있습니다.
 

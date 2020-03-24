@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179213"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
 **Microsoft 전용**
 
-**__ptr32**는 32비트 시스템의 네이티브 포인터를 나타내는 반면 **__ptr64**는 64비트 시스템의 네이티브 포인터를 나타냅니다.
+**__ptr32** 는 32 비트 시스템의 네이티브 포인터를 나타내며 **__ptr64** 는 64 비트 시스템의 네이티브 포인터를 나타냅니다.
 
 다음 예제에서는 이러한 포인터 형식 각각을 선언하는 방법을 보여 줍니다.
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-32비트 시스템에서 **__ptr64**로 선언한 포인터는 32비트 포인터로 잘립니다. 64비트 시스템에서 **__ptr32**로 선언한 포인터는 64비트 포인터로 강제 변환됩니다.
+32 비트 시스템에서 **__ptr64** 로 선언 된 포인터는 32 비트 포인터로 잘립니다. 64 비트 시스템에서 **__ptr32** 로 선언 된 포인터는 64 비트 포인터로 강제 변환 됩니다.
 
 > [!NOTE]
-> **/clr: pure** 옵션을 사용하여 컴파일할 경우 **__ptr32**나 **__ptr64**를 사용할 수 없습니다. 사용시 C2472 컴파일러 오류가 발생합니다. **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 지원 중단 예정이고 Visual Studio 2017에서는 지원되지 않습니다.
+> **/Clr: pure**를 사용 하 여 컴파일하는 경우 **__ptr32** 또는 **__ptr64** 를 사용할 수 없습니다. 사용시 C2472 컴파일러 오류가 발생합니다. **/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-이전 버전과의 호환성을 위해 **_ptr32**와 **_ptr64**는 **__ptr32**와 **__ptr64**의 동의어입니다. 단, 컴파일러 옵션 [/Za \(언어 확장 사용안함)](../build/reference/za-ze-disable-language-extensions.md)를 사용하면 둘은 구분됩니다.
+이전 버전과의 호환성을 위해 **_ptr32** 및 **_ptr64** 는 컴파일러 옵션 [/Za \(언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 고 **__ptr32** 및 **__ptr64** 의 동의어입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-다음 예제에는 **__ptr32**와 **__ptr64**를 사용하여 포인터를 선언하고 할당하는 방법을 보여줍니다.
+다음 예제에서는 **__ptr32** 및 **__ptr64** 키워드를 사용 하 여 포인터를 선언 하 고 할당 하는 방법을 보여 줍니다.
 
 ```cpp
 #include <cstdlib>
@@ -75,6 +75,6 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [기본 제공 형식](../cpp/fundamental-types-cpp.md)

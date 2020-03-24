@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171452"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-파일 I/O 연산에 대한 기본 *파일 변환 모드*를 지정하는 `_fmode` 전역 변수에 대한 포인터입니다.
+파일 I/O 연산에 대한 기본 `_fmode`파일 변환 모드*를 지정하는*  전역 변수에 대한 포인터입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -47,10 +47,10 @@ int* __p__fmode(
 
 `__p__fmode` 함수는 내부용이며 사용자 코드에서 호출할 수 없습니다.
 
-파일 변환 모드는 [_open](../c-runtime-library/reference/open-wopen.md) 및 [_pipe](../c-runtime-library/reference/pipe.md) I/O 연산에 대한 `binary` 또는 `text` 변환을 지정합니다. 자세한 내용은 [_fmode](../c-runtime-library/fmode.md)를 참조하세요.
+파일 변환 모드는 `binary`_open`text` 및 [_pipe](../c-runtime-library/reference/open-wopen.md) I/O 연산에 대한 [ 또는 ](../c-runtime-library/reference/pipe.md) 변환을 지정합니다. 자세한 내용은 [_fmode](../c-runtime-library/fmode.md)를 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |__p\__fmode|stdlib.h|

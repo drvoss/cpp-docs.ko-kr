@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244506"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179174"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 이벤트의 호출 사이트를 강조합니다.
 
@@ -26,9 +26,9 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>설명
 
-관리 코드에서 이벤트가 정의된 클래스 내에서만 이벤트를 발생시킬 수 있습니다. 자세한 내용은 [이벤트](../extensions/event-cpp-component-extensions.md)를 참조하십시오.
+관리 코드에서 이벤트가 정의된 클래스 내에서만 이벤트를 발생시킬 수 있습니다. 자세한 내용은 [이벤트](../extensions/event-cpp-component-extensions.md) 를 참조 하세요.
 
-비 이벤트를 호출할 경우 **__raise** 키워드를 사용하면 오류가 발생합니다.
+**__Raise** 키워드는 비 이벤트를 호출 하면 오류가 발생 합니다.
 
 > [!NOTE]
 >  템플릿 기반 클래스 또는 구조체에 event를 포함시킬 수 없습니다.
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [키워드](../cpp/keywords-cpp.md)<br/>
 [이벤트 처리](../cpp/event-handling.md)<br/>

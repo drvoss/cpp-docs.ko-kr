@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075135"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185869"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>컴파일러 경고(수준 1) C4727
 
@@ -50,7 +50,7 @@ C4727는 **/yc**를 사용 하 여 여러 compilands을 컴파일하는 경우�
 
 ::: moniker-end
 
-자세한
+자세한 내용은 다음을 참조하세요.
 
 - [/Yc(미리 컴파일된 헤더 파일 만들기)](../../build/reference/yc-create-precompiled-header-file.md)
 

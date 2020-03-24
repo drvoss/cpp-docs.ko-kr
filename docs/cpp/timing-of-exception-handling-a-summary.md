@@ -11,12 +11,12 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188118"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리 타이밍: 요약
 
@@ -50,4 +50,4 @@ ms.locfileid: "74246338"
 ## <a name="see-also"></a>참고 항목
 
 [종료 처리기 작성](../cpp/writing-a-termination-handler.md)<br/>
-[구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
