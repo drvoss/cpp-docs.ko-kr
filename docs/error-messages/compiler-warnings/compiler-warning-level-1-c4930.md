@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4930
+title: 컴파일러 경고(수준 1) C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 6c012e484bddeb204601265f9d56efb7bbee7e96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199318"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>컴파일러 경고 (수준 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>컴파일러 경고(수준 1) C4930
 
 ' prototype ': 프로토타입화 된 함수를 호출 하지 않았습니다 (변수 정의가 의도 되었습니까?).
 

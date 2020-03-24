@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172480"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)
 
@@ -41,9 +41,9 @@ where type-parameter: constraint list
 
 제네릭 매개 변수를 제약 조건으로 지정할 수도 있습니다. 제한된 형식에 대해 제공되는 형식 인수는 제약 조건의 형식이거나 제약 조건의 형식에서 파생되어야 합니다. 이를 naked 형식 제약 조건이라고 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-제약 조건 절은 **where**, 형식 매개 변수, 콜론(**:**), 형식 매개 변수에 대한 제한 특성을 지정하는 제약 조건을 순서대로 결합하여 구성합니다. **where**는 상황에 맞는 키워드입니다. 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. **where** 절이 여러 개이면 공백으로 구분합니다.
+제약 조건 절은 **where**, 형식 매개 변수, 콜론( **:** ), 형식 매개 변수에 대한 제한 특성을 지정하는 제약 조건을 순서대로 결합하여 구성합니다. **where**는 상황에 맞는 키워드입니다. 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. **where** 절이 여러 개이면 공백으로 구분합니다.
 
 제약 조건은 제네릭 형식 또는 메서드의 인수로 사용할 수 있는 형식에 대한 제한을 배치하기 위해 형식 매개 변수에 적용됩니다.
 
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-형식 매개 변수가 여러 개이면, 형식 매개 변수마다 하나의 **where** 절을 사용합니다. 예:
+형식 매개 변수가 여러 개이면, 형식 매개 변수마다 하나의 **where** 절을 사용합니다. 다음은 그 예입니다.
 
 ```cpp
 // generics_constraints_3.cpp
@@ -100,7 +100,7 @@ ref class Dictionary {};
 
 - 제약 조건은 추상 기본 클래스와 같은 클래스 형식일 수도 있습니다. 그러나 제약 조건은 값 형식 또는 sealed 클래스일 수 없습니다.
 
-- 제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 예:
+- 제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 다음은 그 예입니다.
 
     ```cpp
     // generics_constraints_4.cpp

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172570"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 및 ref struct(C++/CLI 및 C++/CX)
 
@@ -57,7 +57,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 자세한 내용은 Windows 런타임 및 공용 언어 런타임 섹션에서 이 매개 변수에 대한 언어별 설명을 참조하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **ref class** 또는 **value class**를 사용하여 선언된 개체의 기본 멤버 접근성은 **private**입니다. 또한 **ref struct** 또는 **value struct**를 사용하여 선언된 개체의 기본 멤버 접근성은 **public**입니다.
 
@@ -85,7 +85,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [Ref 클래스 및 구조체](../cppcx/ref-classes-and-structs-c-cx.md) 및 [값 클래스 및 구조체](../cppcx/value-classes-and-structs-c-cx.md)를 참조하세요.
 
@@ -104,7 +104,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 다음 표에는 C++/CLI와 관련된, **모든 런타임** 섹션에 표시된 구문과의 차이점이 나와 있습니다.
 

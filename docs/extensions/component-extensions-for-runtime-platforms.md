@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "79544762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172467"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>.NET 및 UWP용 구성 요소 확장
 
@@ -39,13 +39,13 @@ C++/CX 확장은 C++/CLI의 하위 집합입니다. 확장 구문은 대부분�
 
 |키워드|상황에 맞는지 여부|목적|참조|
 |-------------|-----------------------|-------------|---------------|
-|**ref class**<br /><br /> **ref struct**|아니요|클래스를 선언합니다.|[클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)|
-|**value class**<br /><br /> **value struct**|아니요|값 클래스를 선언합니다.|[클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)|
-|**인터페이스 클래스**<br /><br /> **interface struct**|아니요|인터페이스를 선언합니다.|[인터페이스 클래스](interface-class-cpp-component-extensions.md)|
-|**Enum 클래스**<br /><br /> **enum struct**|아니요|열거형을 선언합니다.|[Enum 클래스](enum-class-cpp-component-extensions.md)|
-|**property**|예|속성을 선언합니다.|[property](property-cpp-component-extensions.md)|
-|**delegate**|예|대리자를 선언합니다.|[위임(C++/CLI 및 C++/CX)](delegate-cpp-component-extensions.md)|
-|**event**|예|이벤트를 선언합니다.|[event](event-cpp-component-extensions.md)|
+|**ref class**<br /><br /> **ref struct**|예|클래스를 선언합니다.|[클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)|
+|**value class**<br /><br /> **value struct**|예|값 클래스를 선언합니다.|[클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)|
+|**인터페이스 클래스**<br /><br /> **interface struct**|예|인터페이스를 선언합니다.|[인터페이스 클래스](interface-class-cpp-component-extensions.md)|
+|**Enum 클래스**<br /><br /> **enum struct**|예|열거형을 선언합니다.|[Enum 클래스](enum-class-cpp-component-extensions.md)|
+|**property**|yes|속성을 선언합니다.|[property](property-cpp-component-extensions.md)|
+|**delegate**|yes|대리자를 선언합니다.|[위임(C++/CLI 및 C++/CX)](delegate-cpp-component-extensions.md)|
+|**event**|yes|이벤트를 선언합니다.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Override 지정자
 
@@ -53,10 +53,10 @@ C++/CX 확장은 C++/CLI의 하위 집합입니다. 확장 구문은 대부분�
 
 |키워드|상황에 맞는지 여부|목적|참조|
 |-------------|-----------------------|-------------|---------------|
-|**abstract**|예|함수 또는 클래스가 추상임을 나타냅니다.|[abstract](abstract-cpp-component-extensions.md)|
-|**신규**|아니요|함수가 기본 클래스 버전의 재정의가 아님을 나타냅니다.|[new(vtable의 new 슬롯)](new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**override**|예|메서드가 기본 클래스 버전의 재정의이어야 함을 나타냅니다.|[override](override-cpp-component-extensions.md)|
-|**sealed**|예|클래스를 기본 클래스로 사용할 수 없도록 합니다.|[sealed](sealed-cpp-component-extensions.md)|
+|**abstract**|yes|함수 또는 클래스가 추상임을 나타냅니다.|[abstract](abstract-cpp-component-extensions.md)|
+|**신규**|예|함수가 기본 클래스 버전의 재정의가 아님을 나타냅니다.|[new(vtable의 new 슬롯)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**override**|yes|메서드가 기본 클래스 버전의 재정의이어야 함을 나타냅니다.|[override](override-cpp-component-extensions.md)|
+|**sealed**|yes|클래스를 기본 클래스로 사용할 수 없도록 합니다.|[sealed](sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>제네릭에 대한 키워드
 
@@ -64,8 +64,8 @@ C++/CX 확장은 C++/CLI의 하위 집합입니다. 확장 구문은 대부분�
 
 |키워드|상황에 맞는지 여부|목적|
 |-------------|-----------------------|-------------|
-|**generic**|아니요|제네릭 형식을 선언합니다.|
-|**where**|예|제네릭 형식 매개 변수에 적용되는 제약 조건을 지정합니다.|
+|**generic**|예|제네릭 형식을 선언합니다.|
+|**where**|yes|제네릭 형식 매개 변수에 적용되는 제약 조건을 지정합니다.|
 
 ## <a name="miscellaneous-keywords"></a>기타 키워드
 
@@ -73,13 +73,13 @@ C++/CX 확장은 C++/CLI의 하위 집합입니다. 확장 구문은 대부분�
 
 |키워드|상황에 맞는지 여부|목적|참조|
 |-------------|-----------------------|-------------|---------------|
-|**finally**|예|기본 예외 처리 동작을 나타냅니다.|[예외 처리](exception-handling-cpp-component-extensions.md)|
-|**for each, in**|아니요|컬렉션의 요소를 열거합니다.|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|아니요|가비지 수집 힙에 형식을 할당합니다. **new** 및 **delete** 대신 사용합니다.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**ref new**|예|Windows 런타임 형식을 할당합니다. **new** 및 **delete** 대신 사용합니다.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**initonly**|예|선언 또는 정적 생성자에서만 멤버를 초기화할 수 있음을 나타냅니다.|[initonly(C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**literal**|예|리터럴 변수를 만듭니다.|[literal](literal-cpp-component-extensions.md)|
-|**nullptr**|아니요|핸들 또는 포인터가 개체를 가리키지 않음을 나타냅니다.|[nullptr](nullptr-cpp-component-extensions.md)|
+|**finally**|yes|기본 예외 처리 동작을 나타냅니다.|[예외 처리](exception-handling-cpp-component-extensions.md)|
+|**for each, in**|예|컬렉션의 요소를 열거합니다.|[for each, in](../dotnet/for-each-in.md)|
+|**gcnew**|예|가비지 수집 힙에 형식을 할당합니다. **new** 및 **delete** 대신 사용합니다.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**ref new**|yes|Windows 런타임 형식을 할당합니다. **new** 및 **delete** 대신 사용합니다.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|yes|선언 또는 정적 생성자에서만 멤버를 초기화할 수 있음을 나타냅니다.|[initonly(C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**literal**|yes|리터럴 변수를 만듭니다.|[literal](literal-cpp-component-extensions.md)|
+|**nullptr**|예|핸들 또는 포인터가 개체를 가리키지 않음을 나타냅니다.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>템플릿 구문
 
@@ -106,7 +106,7 @@ C++/CX 확장은 C++/CLI의 하위 집합입니다. 확장 구문은 대부분�
 
 이 섹션에서는 추가 프로그래밍 구문 및 CLR과 관련된 항목을 나열합니다.
 
-|항목|설명|
+|항목|Description|
 |-----------|-----------------|
 |[__identifier(C++/CLI)](identifier-cpp-cli.md)|(Windows 런타임 및 CLR) 키워드를 식별자로 사용할 수 있습니다.|
 |[가변 인수 목록(...)(C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows 런타임 및 CLR) 함수에서 가변 개수의 인수를 사용할 수 있습니다.|
