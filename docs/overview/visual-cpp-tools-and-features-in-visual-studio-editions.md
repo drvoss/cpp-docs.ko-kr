@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400634"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079245"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 버전의 C++ 도구 및 기능
 
-
 ::: moniker range=">=vs-2019"
-
 
 다음 C++ 기능은 Visual Studio 2019에서 사용할 수 있습니다. 별도로 명시되지 않는 한 모든 기능은 모든 버전에서 사용할 수 있습니다. Visual Studio Community, Visual Studio Professional 및 Visual Studio Enterprise. 일부 기능에는 Visual Studio 설치 관리자를 사용하여 설치할 수 있는 특정 워크로드 또는 선택적 구성 요소가 필요합니다.
 
@@ -35,7 +33,7 @@ ms.locfileid: "67400634"
 - Clang/LLVM
   - Windows의 경우 x86 또는 x64를 대상으로 하는 Clang/LLVM 7.0(CMake 지원에만 해당). 다른 Clang 버전도 작동하지만 공식적으로 지원되지 않습니다.
   - Linux의 경우 배포판에서 지원되는 모든 Clang/LLVM 설치.
- 
+
 ## <a name="c-workloads"></a>C++ 워크로드
 
 Visual Studio에는 C++ 개발을 위한 다음과 같은 워크로드가 포함되어 있습니다. .NET 데스크톱 개발, Python 개발, Azure 개발, Visual Studio 확장 개발 등과 같은 다른 워크로드와 함께 이러한 워크로드 중 일부 또는 모두를 설치할 수 있습니다.
@@ -81,7 +79,7 @@ Included:
 ### <a name="universal-windows-platform-development"></a>유니버설 Windows 플랫폼 개발
 
 Included:
-- Blend for Visual Studio
+- Visual Studio용 Blend
 - .NET 네이티브 및 .NET Standard
 - NuGet 패키지 관리자
 - 유니버설 Windows 플랫폼 도구
@@ -135,7 +133,6 @@ Included:
 - Android NDK(R16B)(32비트)
 - C++ iOS 개발 도구
 - IncrediBuild - 빌드 가속화
-
 
 ## <a name="individual-components"></a>개별 구성 요소
 
@@ -198,11 +195,11 @@ Windows 데스크톱:
 - 새 응용 프로그램
 - DirectX 11 및 XAML 앱
 - DirectX 11 앱
-- DirectX 12 앱 
-- 단위 테스트 앱 
-- DLL 
-- Windows 런타임 구성 요소 
-- 정적 라이브러리 
+- DirectX 12 앱
+- 단위 테스트 앱
+- DLL
+- Windows 런타임 구성 요소
+- 정적 라이브러리
 - Windows 애플리케이션 패키징 프로젝트
 
 Linux:
@@ -291,7 +288,7 @@ Linux:
 - Microsoft Fakes(단위 테스트 격리)(Enterprise만 해당)
 - 코드 검사(Enterprise만 해당)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio 설치](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)<br/>
@@ -459,7 +456,7 @@ Linux:
 |코드 맵 및 종속성 그래프|||읽기 전용|X|
 |코드 맵 디버깅||||X|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio 설치](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)<br/>

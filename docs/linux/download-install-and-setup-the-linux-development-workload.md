@@ -3,12 +3,12 @@ title: Visual Studio에서 C++ Linux 워크로드 설치
 description: Visual Studio에서 C++에 대한 Linux 워크로드를 다운로드하고, 설치하고, 설정하는 방법을 설명합니다.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966206"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077635"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux 워크로드 다운로드, 설치 및 설정
 
@@ -20,11 +20,11 @@ Linux 프로젝트는 Visual Studio 2017 이상에서 지원됩니다.
 
 ::: moniker range=">=vs-2017"
 
-Windows에서 Visual Studio IDE를 사용하여 원격 Linux 시스템, 가상 머신 또는 [Linux용 Windows 하위 시스템](/windows/wsl/about)에서 실행되는 C++ 프로젝트를 작성, 편집 및 디버그할 수 있습니다. 
+Windows에서 Visual Studio IDE를 사용하여 원격 Linux 시스템, 가상 머신 또는 [Linux용 Windows 하위 시스템](/windows/wsl/about)에서 실행되는 C++ 프로젝트를 작성, 편집 및 디버그할 수 있습니다.
 
-CMake를 Visual Studio 프로젝트로 변환할 필요 없이 CMake를 사용하는 기존 코드 베이스에서 작업할 수 있습니다. 코드 베이스가 플랫폼 간 기반인 경우 Visual Studio 내에서 Windows와 Linux를 모두 대상으로 할 수 있습니다. 예를 들어 Visual Studio를 사용하여 Windows에서 코드를 편집하고, 빌드하고, 디버그한 다음, 신속하게 Linux용 프로젝트의 대상을 변경하여 Linux 환경에서 빌드하고 디버그할 수 있습니다. Linux 헤더 파일은 Visual Studio에서 전체 IntelliSense를 지원하기 위해 해당 파일을 사용하는 로컬 컴퓨터에 자동으로 복사됩니다(문 완성, 정의로 이동 등). 
- 
-이러한 시나리오에서는 **C++를 사용한 Linux 개발** 워크로드가 필요합니다. 
+CMake를 Visual Studio 프로젝트로 변환할 필요 없이 CMake를 사용하는 기존 코드 베이스에서 작업할 수 있습니다. 코드 베이스가 플랫폼 간 기반인 경우 Visual Studio 내에서 Windows와 Linux를 모두 대상으로 할 수 있습니다. 예를 들어 Visual Studio를 사용하여 Windows에서 코드를 편집하고, 빌드하고, 디버그한 다음, 신속하게 Linux용 프로젝트의 대상을 변경하여 Linux 환경에서 빌드하고 디버그할 수 있습니다. Linux 헤더 파일은 Visual Studio에서 전체 IntelliSense를 지원하기 위해 해당 파일을 사용하는 로컬 컴퓨터에 자동으로 복사됩니다(문 완성, 정의로 이동 등).
+
+이러한 시나리오에서는 **C++를 사용한 Linux 개발** 워크로드가 필요합니다.
 
 ::: moniker-end
 

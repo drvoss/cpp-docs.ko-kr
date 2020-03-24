@@ -3,12 +3,12 @@ title: Visual Studio에서 Linux CMake 프로젝트 만들기 및 구성
 description: Visual Studio에서 Linux CMake 프로젝트를 만들고, 구성, 편집 및 컴파일하는 방법
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429189"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077659"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 만들기 및 구성
 
@@ -37,14 +37,14 @@ Visual Studio의 CMake 지원에 관한 일반적인 내용은 [Visual Studio의
 
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항
 
-먼저 CMake 구성 요소를 비롯한 **C++를 사용한 Linux 개발** 워크로드가 설치되었는지 확인합니다. [Visual Studio에서 C++ Linux 워크로드 설치](download-install-and-setup-the-linux-development-workload.md)를 참조하세요. 
+먼저 CMake 구성 요소를 비롯한 **C++를 사용한 Linux 개발** 워크로드가 설치되었는지 확인합니다. [Visual Studio에서 C++ Linux 워크로드 설치](download-install-and-setup-the-linux-development-workload.md)를 참조하세요.
 
-Linux 시스템에서 다음이 설치되어 있는지 확인합니다. 
+Linux 시스템에서 다음이 설치되어 있는지 확인합니다.
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
-Linux용 Windows 하위 시스템을 대상으로 지정하려면 주 도구 모음의 구성 드롭다운에서 **구성 관리**를 클릭합니다. **구성 추가** 단추를 누른 다음 GCC를 사용하는 경우 **WSL-Debug** 또는 **WSL-Release**를 선택하고, Clang/LLVM 도구 집합을 사용하는 경우 Clang 변형을 선택합니다. 
+Linux용 Windows 하위 시스템을 대상으로 지정하려면 주 도구 모음의 구성 드롭다운에서 **구성 관리**를 클릭합니다. **구성 추가** 단추를 누른 다음 GCC를 사용하는 경우 **WSL-Debug** 또는 **WSL-Release**를 선택하고, Clang/LLVM 도구 집합을 사용하는 경우 Clang 변형을 선택합니다.
 
 **Visual Studio 2019 버전 16.1** WSL을 대상으로 하는 경우 Linux의 컴파일러가 소스 파일이 있는 Windows 파일 시스템에 직접 액세스할 수 있으므로 소스 또는 헤더를 복사할 필요가 없습니다. Windows 버전 1903 이상에서는 Windows 애플리케이션도 Linux 헤더 파일에 직접 액세스할 수 있지만, Visual Studio는 아직 이 기능을 활용하지 않습니다.
 
@@ -102,13 +102,13 @@ Linux용 Windows 하위 시스템을 대상으로 지정하려면 주 도구 모
 
 원격 Linux 대상을 지정하면 원격 시스템에 원본이 복사됩니다.
 
-대상을 선택하면 CMake는 프로젝트에 대한 CMake 캐시를 생성하도록 Linux 시스템에서 자동으로 실행됩니다. 
+대상을 선택하면 CMake는 프로젝트에 대한 CMake 캐시를 생성하도록 Linux 시스템에서 자동으로 실행됩니다.
 
 ![Linux에서 CMake 캐시 생성](media/cmake-linux-1.png "Linux에서 CMake 캐시 생성")
 
 원격 Linux 시스템의 헤더에 IntelliSense 지원을 제공하기 위해 Visual Studio는 Linux 머신에서 로컬 Windows 머신의 디렉터리에 IntelliSense를 자동으로 복사합니다. 자세한 내용은 [원격 헤더를 위한 IntelliSense](configure-a-linux-project.md#remote_intellisense)를 참조하세요.
 
-## <a name="debug_cmake_project"></a> CMake 프로젝트 디버그
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> CMake 프로젝트 디버그
 
 지정된 디버그 대상 시스템에서 코드를 디버그하려면 중단점을 설정하고, 프로젝트 설정 옆의 도구 모음 메뉴에서 CMake 대상을 시작 항목으로 선택하고, 도구 모음에서 **&#x23f5; 시작**을 선택하거나 F5 키를 누릅니다.
 
@@ -125,13 +125,13 @@ Linux용 Windows 하위 시스템을 대상으로 지정하려면 주 도구 모
 
 추가 인수를 지정하려면 `args` JSON 배열에 추가합니다. 자세한 내용은 [C++용 폴더 열기 프로젝트](../build/open-folder-projects-cpp.md) 및 [CMake 디버깅 세션 구성](../build/configure-cmake-debugging-sessions.md)을 참조하세요.
 
-## <a name="configure_cmake_linux"></a> Linux용 CMake 설정 구성
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> Linux용 CMake 설정 구성
 
-CMake Linux 프로젝트에 있는 CMakeSettings.json 파일은 [CMake 사용자 지정 설정](../build/customize-cmake-settings.md)에 나열된 모든 속성 및 원격 Linux 머신의 빌드 설정을 제어하는 추가 속성도 지정할 수 있습니다. 
+CMake Linux 프로젝트에 있는 CMakeSettings.json 파일은 [CMake 사용자 지정 설정](../build/customize-cmake-settings.md)에 나열된 모든 속성 및 원격 Linux 머신의 빌드 설정을 제어하는 추가 속성도 지정할 수 있습니다.
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019의 기본 CMake 설정을 변경하려면 주 도구 모음에서 **구성** 드롭다운을 열고 **구성 관리**를 선택합니다. 
+Visual Studio 2019의 기본 CMake 설정을 변경하려면 주 도구 모음에서 **구성** 드롭다운을 열고 **구성 관리**를 선택합니다.
 
 ![CMake 구성 관리](../build/media/vs2019-cmake-manage-configurations.png "CMake 구성 드롭다운")
 
@@ -202,10 +202,10 @@ Visual Studio 2019 버전 16.1 이상의 기본 Linux-Debug 구성은 다음과 
   ]
 }
 ```
+
 ::: moniker-end
 
 이러한 설정에 대한 자세한 내용은 [CMakeSettings.json 참조](../build/cmakesettings-reference.md)를 참조하세요.
-
 
 ## <a name="optional-settings"></a>선택적 설정
 
@@ -220,8 +220,6 @@ Visual Studio 2019 버전 16.1 이상의 기본 Linux-Debug 구성은 다음과 
 ```
 
 이러한 옵션을 사용하면 빌드하기 전후 및 CMake 생성 전에 Linux 시스템에서 명령을 실행할 수 있습니다. 값은 원격 시스템에서 유효한 모든 명령일 수 있습니다. 출력은 Visual Studio로 다시 파이핑됩니다.
-
-
 
 ## <a name="see-also"></a>참조
 
