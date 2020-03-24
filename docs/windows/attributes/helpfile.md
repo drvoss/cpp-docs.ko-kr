@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166980"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -43,13 +43,13 @@ ms.locfileid: "69501547"
 |||
 |-|-|
 |**적용 대상**|**인터페이스**, **typedef**, **클래스**, 메서드, **속성**|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)<br/>

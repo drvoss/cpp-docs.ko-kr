@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168709"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -70,8 +70,8 @@ long double tan( long double x );  // C++ only
 
 |입력|SEH 예외|**Matherr** 발생할|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|없음|_DOMAIN|
-|± INF|**INVALID**|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|± INF|**올바르지 않음**|_DOMAIN|
 
 ## <a name="remarks"></a>설명
 
@@ -79,9 +79,9 @@ long double tan( long double x );  // C++ only
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
+|루틴|필수 헤더(C)|필수 헤더(C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**황갈색**, **tanf**, **tanl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

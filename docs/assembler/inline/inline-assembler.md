@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169373"
 ---
 # <a name="inline-assembler"></a>인라인 어셈블러
 
@@ -24,7 +24,7 @@ ms.locfileid: "62166947"
 > [!NOTE]
 >  인라인 어셈블러 코드를 포함하는 프로그램은 다른 하드웨어 플랫폼에 완벽하게 이식할 수 없습니다. 이식성을 위해 디자인할 경우 인라인 어셈블러를 사용하지 마십시오.
 
-인라인 어셈블리는 ARM 및 x64 지원 되지 않습니다 프로세서.  다음 항목에서는 x86 프로세서에서 Visual C/C++ 인라인 어셈블러를 사용하는 방법을 설명합니다.
+ARM 및 x64 프로세서에서는 인라인 어셈블리가 지원 되지 않습니다.  다음 항목에서는 x86 프로세서에서 Visual C/C++ 인라인 어셈블러를 사용하는 방법을 설명합니다.
 
 - [인라인 어셈블러 개요](../../assembler/inline/inline-assembler-overview.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "62166947"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[컴파일러 내장 및 어셈블리 언어](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
+[컴파일러 내장 함수 및 어셈블리 언어](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
 [C++ 언어 참조](../../cpp/cpp-language-reference.md)<br/>

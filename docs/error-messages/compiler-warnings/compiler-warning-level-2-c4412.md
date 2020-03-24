@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161791"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>컴파일러 경고(수준 2) C4412
 
-> '*함수*': 함수 시그니처에 형식 '*형식*'; C++ 개체는 순수 코드 간에 전달 하는 안전 하지 않은 혼합형 / 네이티브 합니다.
+> '*function*': 함수 시그니처에 '*type*' 형식이 포함 되어 있습니다. C++ 개체는 순수형 코드와 mixed 또는 native 간에 전달 하기에 안전 하지 않습니다.
 
 ## <a name="remarks"></a>설명
 
-**/clr: pure** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다. 순수 해야 하는 코드가 있는 경우에 포팅하는 것이 좋습니다 C#입니다.
+**/Clr: pure** 컴파일러 옵션은 visual studio 2015에서는 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다. 순수 해야 하는 코드가 있는 경우로 C#이식 하는 것이 좋습니다.
 
-컴파일러에서 런타임 오류를 초래 하는 안전 하지 않은 경우를 발견 했습니다: 호출에서 수행 되는 **/clr: 순수** dllimport 및 함수 시그니처를 통해 가져온 함수가 있는 안전 하지 않은 형식 . 멤버 함수를 포함 하거나 포함 된 데이터 멤버는 안전 하지 않은 형식 이거나 안전 하지 않은 형식에 간접 참조 하는 경우에 형식이 안전 하지 않습니다.
+컴파일러가 잠재적으로 안전 하지 않은 상황을 발견 하 여 런타임 오류가 발생할 수 있습니다. **/clr: pure** compiland에서 dllimport를 통해 가져온 함수로의 호출을 수행 하 고 있으며 함수 시그니처에 unsafe 형식이 포함 되어 있습니다. 멤버 함수가 포함 되어 있거나 안전 하지 않은 형식 또는 안전 하지 않은 형식에 대 한 간접 참조 인 데이터 멤버가 있는 경우 형식이 안전 하지 않습니다.
 
-이 기본 호출 규칙 순수형 및 네이티브 코드 간의 차이로 인해은 안전 하지 않습니다 (또는 혼합 네이티브 및 관리). 가져올 때 (통해 `dllimport`)에 함수를 **/clr: 순수** 컴파일 대상 서명에 있는 각 형식의 선언 함수 내보내는 (특히 주의 컴파일 대상의 동일 되는지 확인 암시적 호출 규칙 차이점)입니다.
+이는 순수 코드와 네이티브 코드 (또는 혼합 네이티브 및 관리) 간의 기본 호출 규칙의 차이로 인해 안전 하지 않습니다. 함수를 **/clr: pure** compiland로 `dllimport`가져올 때 시그니처의 각 형식 선언이 함수를 내보내는 compiland의 선언과 동일한 지 확인 합니다. 특히 암시적 호출 규칙의 차이점에 주의 해야 합니다.
 
-가상 멤버 함수는 특히에서 예기치 않은 결과가 발생 하기 쉽습니다.  그러나는 비가상 함수에도 올바른 결과 얻을 수 있도록 테스트 되어야 합니다. 올바른 결과 얻을 수 있는지 인 경우이 경고를 무시할 수 있습니다.
+가상 멤버 함수는 예기치 않은 결과를 제공 하는 데 특히 취약 합니다.  그러나 비가상 함수를 테스트 하 여 올바른 결과를 얻을 수 있는지 확인 해야 합니다. 올바른 결과를 얻는 것이 확실 한 경우이 경고를 무시 해도 됩니다.
 
-C4412는 기본적으로 해제 되어 있습니다. 참조 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 하 고 [dllexport, dllimport](../../cpp/dllexport-dllimport.md) 자세한 내용은 합니다.
+C4412은 기본적으로 해제 되어 있습니다. 자세한 내용은 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 및 [dllexport, dllimport를](../../cpp/dllexport-dllimport.md) 참조 하세요.
 
 이 경고를 해결 하려면 형식에서 모든 함수를 제거 합니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C4412를 생성합니다.
+다음 샘플에서는 C4412를 생성 합니다.
 
 ```cpp
 // C4412.cpp
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>예제
 
-다음 샘플은 두 가지 형식을 선언 하는 헤더 파일입니다. `Unsafe` 멤버 함수를 있기 때문에 형식은 안전 하지 않습니다.
+다음 샘플은 두 개의 형식을 선언 하는 헤더 파일입니다. `Unsafe` 형식은 멤버 함수를 포함 하기 때문에 안전 하지 않습니다.
 
 ```cpp
 // C4412.h
@@ -98,9 +98,9 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>예제
 
-기본 호출 규칙는 **/clr: 순수** 컴파일이 네이티브 컴파일의 경우와 다릅니다.  C4412.h 포함 되 면 `Test` 기본값으로 `__clrcall`합니다. 컴파일 및이 프로그램을 실행 하는 경우 (사용 하지 마세요 **/c**), 프로그램에 예외가 throw 됩니다.
+**/Clr: pure** 컴파일의 기본 호출 규칙은 네이티브 컴파일과 다릅니다.  C4412이 포함 된 경우 `Test` 기본값은 `__clrcall`입니다. 이 프로그램을 컴파일 및 실행 하는 경우 ( **/c**를 사용 하지 않음) 프로그램에서 예외를 throw 합니다.
 
-다음 샘플 C4412를 생성합니다.
+다음 샘플에서는 C4412를 생성 합니다.
 
 ```cpp
 // C4412_3.cpp

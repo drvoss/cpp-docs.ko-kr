@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168241"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501620"
 [dispinterface]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **dispinterface** C++ 특성이 인터페이스 앞에 오면, 생성된 .idl 파일에서 인터페이스가 라이브러리 블록 내부에 배치됩니다.
 
@@ -55,7 +55,7 @@ dispinterface helloPro
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [용도별 특성](attributes-by-usage.md)<br/>
