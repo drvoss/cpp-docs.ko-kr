@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857842"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170217"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -61,11 +61,11 @@ int _fpclassf(
 *x*<br/>
 테스트할 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_Fpclass** 및 **_fpclassf** 함수는 인수 *x*의 부동 소수점 분류를 나타내는 정수 값을 반환 합니다. 분류는 \<float.h>에 정의된 다음 값 중 하나를 가질 수 있습니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|신호 NaN|
 |**_FPCLASS_QNAN**|자동 NaN|
@@ -78,19 +78,19 @@ int _fpclassf(
 |**_FPCLASS_PN**|정규화된 0이 아닌 양수 값|
 |**_FPCLASS_PINF**|양수 무한대(+INF)|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **_Fpclass** 및 **_Fpclassf** 함수는 Microsoft 전용입니다. [fpclassify](fpclassify.md)와 비슷하지만 인수에 대한 더 자세한 정보를 반환합니다. **_Fpclassf** 함수는 x64 플랫폼용으로 컴파일된 경우에만 사용할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fpclass**, **_fpclassf**|\<float.h>|
 
 호환성 및 규칙에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

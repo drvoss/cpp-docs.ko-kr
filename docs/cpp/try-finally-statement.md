@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188079"
 ---
 # <a name="try-finally-statement"></a>try-finally 문
 
@@ -45,7 +45,7 @@ ms.locfileid: "74246296"
 ## <a name="grammar"></a>문법
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\_\_ **마지막** *복합 문을* **사용해 보세요** .\_\_
+&nbsp;&nbsp;&nbsp;&nbsp;\_\_*compound-statement* **마지막** *복합 문을* **사용해 보세요** .\_\_
 
 **Try finally** 문은 코드 블록 실행이 중단 될 때 대상 응용 프로그램이 C++ 정리 코드의 실행을 보장할 수 있도록 하는 C 및 언어의 Microsoft 확장입니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. **Try finally** 문은 루틴에서 중간에 반환 될 수 있는 오류에 대 한 검사가 수행 되는 여러 위치가 있는 루틴에 특히 유용 합니다.
 
@@ -95,6 +95,6 @@ Try [jmp](../c-runtime-library/reference/longjmp.md) 런타임 함수를 사용 
 ## <a name="see-also"></a>참고 항목
 
 [종료 처리기 작성](../cpp/writing-a-termination-handler.md)<br/>
-[구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [키워드](../cpp/keywords-cpp.md)<br/>
 [종료 처리기 구문](/windows/win32/Debug/termination-handler-syntax)

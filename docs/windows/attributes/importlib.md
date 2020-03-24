@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514616"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166811"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ ms.locfileid: "69514616"
 
 ## <a name="remarks"></a>설명
 
-**Importlib** C++ 특성은 생성 된 .idl 파일의 라이브러리 블록에 문을배치합니다.`importlib` **Importlib** 특성은 [importlib](/windows/win32/Midl/importlib) MIDL 특성과 동일한 기능을 포함 합니다.
+**Importlib** C++ 특성은 `importlib` 문이 생성 된 .idl 파일의 라이브러리 블록에 배치 되도록 합니다. **Importlib** 특성은 [importlib](/windows/win32/Midl/importlib) MIDL 특성과 동일한 기능을 포함 합니다.
 
 ## <a name="example"></a>예제
 
@@ -50,13 +50,13 @@ ms.locfileid: "69514616"
 |||
 |-|-|
 |**적용 대상**|원하는 위치|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
 [독립 실행형 특성](stand-alone-attributes.md)<br/>

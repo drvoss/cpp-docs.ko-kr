@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4219
 ms.assetid: 363fedf4-b10c-4985-811a-55a9fba688d6
-ms.openlocfilehash: 7407537b55525bf622fc11cdbdb8e00244e51c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4488539a4f7282180048f1e3530e62e35c3b339e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183100"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>링커 도구 경고 LNK4219
 
-픽스업 이름 픽스업 오버플로입니다. 대상 '대상 symbol name' 범위를 벗어난 썽크가 삽입
+픽스업 이름 픽스업 오버플로가 발생 했습니다. 대상 ' 대상 기호 이름 '이 범위를 벗어났습니다. 썽크를 삽입 하 고 있습니다.
 
-링커 주소 또는 offset가 수 없었던 대상 기호 명령 위치에서 너무 멀리 떨어진 곳 이므로, 지정 된 명령에 맞게 상황에서 썽크를 삽입 합니다.
+대상 기호가 명령 위치에서 너무 멀리 떨어져 있기 때문에 링커가 지정 된 명령에 주소 또는 오프셋이 맞지 않는 경우에 썽크를 삽입 했습니다.
 
-이미지를 다시 정렬 하는 것이 좋습니다 (사용 하는 [/](../../build/reference/order-put-functions-in-order.md) 옵션, 예를 들어) 추가 수준의 간접 참조를 방지 하려면.
+불필요 한 간접 참조 수준을 방지 하려면 예를 들어 [/order](../../build/reference/order-put-functions-in-order.md) 옵션을 사용 하 여 이미지의 순서를 변경 하는 것이 좋습니다.

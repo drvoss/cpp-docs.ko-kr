@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: fb657719c69445ce23d36ccf04ac4a14db0955e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182944"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>링커 도구 경고 LNK4227
 
 > 메타 데이터 작업 경고 (*HRESULT*): *warning_message*
 
-링커가 병합할 때 메타 데이터 차이 검색 합니다.
+병합할 때 링커는 메타 데이터 차이를 검색 했습니다.
 
-- 현재 구축 중인 어셈블리를 사용 하 여 하나 이상의 참조 된 어셈블리입니다.
+- 현재 빌드되는 어셈블리를 포함 하는 하나 이상의 참조 된 어셈블리입니다.
 
-- 하나 이상의 소스 코드 파일을 컴파일에 합니다.
+- 컴파일에서 하나 이상의 소스 코드 파일입니다.
 
-예를 들어 LNK4227 것일 수 있습니다 이름은 같지만 다른 방식으로 선언 된 매개 변수 정보를 사용 하 여 두 가지 전역 함수가 있는 경우 (즉, 선언이 모든 컴파일 대상에 일치 하지 않습니다). /TEXT ildasm.exe를 사용 하 여 /METADATA *object_file* 형식을 어떻게 다른 지 확인 하려면 각.obj 파일에 있습니다.
+예를 들어 이름이 같지만 매개 변수 정보를 다르게 선언 (즉, 모든 compilands에서 선언이 일치 하지 않는) 두 개의 전역 함수가 있는 경우 LNK4227이 발생할 수 있습니다. 각 .obj 파일에 ildasm.exe/TEXT/METADATA *object_file* 를 사용 하 여 형식이 어떻게 다른 지 확인 합니다.
 
-다른 도구를 사용 하 여 발생 하는 문제를 보고 하려면 LNK4227도 사용 됩니다. 자세한 내용은 경고 메시지를 검색 합니다.
+LNK4227는 다른 도구를 사용 하 여 발생 하는 문제를 보고 하는 데도 사용 됩니다. 자세한 내용은 경고 메시지를 검색 하십시오.
 
 경고를 해결 하려면 메타 데이터 문제를 수정 해야 합니다.
 
 ## <a name="example"></a>예제
 
-참조 된 어셈블리를 참조 하는 어셈블리와 다르게 서명한 LNK4227 생성 됩니다.
+LNK4227는 참조 된 어셈블리가 해당 어셈블리를 참조 하는 어셈블리와 다르게 서명 된 경우에 생성 됩니다.
 
-다음 샘플에서는 LNK4227 오류가 생성 됩니다.
+다음 샘플에서는 LNK4227를 생성 합니다.
 
 ```cpp
 // LNK4227.cpp
@@ -64,9 +64,9 @@ ref class MyClass
 
 ## <a name="example"></a>예제
 
-잘못 된 형식으로 버전 번호는 어셈블리 특성에 전달 될 때 LNK4227도 생성할 수 있습니다.  ' *' 표기법에 따라 다릅니다은 `AssemblyVersionAttribute`합니다.  이 경고를 해결 하려면 사용 하 여만의 숫자 버전 특성 이외의 `AssemblyVersionAttribute`합니다.
+잘못 된 형식의 버전 번호를 어셈블리 특성에 전달 하는 경우에도 LNK4227을 생성할 수 있습니다.  ' * ' 표기법은 `AssemblyVersionAttribute`에만 적용 됩니다.  이 경고를 해결 하려면 `AssemblyVersionAttribute`이외의 버전 특성에 숫자만 사용 합니다.
 
-다음 샘플에서는 LNK4227 오류가 생성 됩니다.
+다음 샘플에서는 LNK4227를 생성 합니다.
 
 ```cpp
 // LNK4227e.cpp

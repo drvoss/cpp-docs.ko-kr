@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190692"
 ---
 # <a name="resource-compiler-error-rw2002"></a>리소스 컴파일러 오류 RW2002
 
@@ -69,7 +69,7 @@ ms.locfileid: "71230414"
 
 1. **컨트롤 클래스 이름이 필요 합니다.**
 
-   DIALOG `class` 문에서 **CONTROL** 문의 필드는 다음 형식 중 하나 여야 합니다. 단추, 콤보 상자, 편집, 목록 상자, 스크롤 막대, 정적 또는 사용자 정의입니다. 클래스의 철자가 정확한 지 확인 합니다.
+   **DIALOG** 문에서 **CONTROL** 문의 `class` 필드는 BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC 또는 사용자 정의 형식 중 하나 여야 합니다. 클래스의 철자가 정확한 지 확인 합니다.
 
 1. **글꼴 이름이 필요 합니다.**
 
@@ -85,7 +85,7 @@ ms.locfileid: "71230414"
 
 1. **숫자 명령 값이 필요 합니다.**
 
-   리소스 컴파일러에서 **액셀러레이터 키** 에 숫자 *idvalue* 필드가 필요 합니다. 상수를 `#define` 사용 하 여 값을 지정 했는지와 상수의 철자가 정확한 지 확인 합니다.
+   리소스 컴파일러에서 **액셀러레이터 키** 에 숫자 *idvalue* 필드가 필요 합니다. `#define` 상수를 사용 하 여 값을 지정 했는지와 상수의 철자가 정확한 지 확인 합니다.
 
 1. **문자열 테이블에 숫자 상수가 필요 합니다.**
 
@@ -109,7 +109,7 @@ ms.locfileid: "71230414"
 
 1. **ID에 숫자가 필요 합니다.**
 
-   `id` **DIALOG** 문의 control 문 필드에는 숫자가 필요 합니다. 컨트롤 ID에 대해 숫자나 `#define` 문이 있는지 확인 합니다.
+   **DIALOG** 문에서 control 문의 `id` 필드에는 숫자가 필요 합니다. 컨트롤 ID에 대해 숫자나 `#define` 문이 있는지 확인 합니다.
 
 1. **대화 상자 클래스에 따옴표 붙은 문자열이 필요 합니다.**
 
@@ -141,7 +141,7 @@ ms.locfileid: "71230414"
 
 1. **컨트롤 형식이 잘못 되었습니다.**
 
-   **DIALOG** 문의 각 제어 문은 다음 중 하나 여야 합니다. CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, 누름, RADIOBUTTON, RTEXT, SCROLLBAR. 이러한 제어 문의 철자가 올바른지 확인 합니다.
+   **DIALOG** 문의 각 제어 문은 CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, 누름, RADIOBUTTON, RTEXT, SCROLLBAR 중 하나 여야 합니다. 이러한 제어 문의 철자가 올바른지 확인 합니다.
 
 1. **잘못 된 형식**
 

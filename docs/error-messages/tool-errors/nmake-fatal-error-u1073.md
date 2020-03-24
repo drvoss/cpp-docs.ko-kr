@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1073
 ms.assetid: d46bf2dd-400a-4802-9db2-f832e1c97f02
-ms.openlocfilehash: 2aa02fd86906bd545373a313fa5e6e409ffb3cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97d44594540d18bf008757506a9e36e6d16d2cd7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366935"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182697"
 ---
 # <a name="nmake-fatal-error-u1073"></a>NMAKE 심각한 오류 U1073
 
-'targetname'를 확인 하는 방법을 몰라도합니다
+' targetname '을 만드는 방법을 모릅니다.
 
-지정된 된 대상 없고 실행할 명령 또는 유추 규칙을 적용 하지 않습니다.
+지정 된 대상이 존재 하지 않습니다. 실행할 명령이 나 적용할 유추 규칙이 없습니다.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>다음 해결 방법을 사용하여 수정하려면
 
 1. 대상 이름의 철자를 확인 합니다.
 
-1. 하는 경우 *targetname* 는 의사는 다른 설명 블록에 대상으로 지정 합니다.
+1. Targetname이 의사 ( *targetname* ) 인 경우 다른 설명 블록의 대상으로 지정 합니다.
 
-1. 하는 경우 *targetname* 는 매크로 호출을 null 문자열로 확장 되지 않고 해야 합니다.
+1. *Targetname* 이 매크로 호출이 면 null 문자열로 확장 되지 않아야 합니다.

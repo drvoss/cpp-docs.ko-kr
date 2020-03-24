@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516578"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182125"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>예외 처리(C++/CLI 및 C++/CX)
 
@@ -41,7 +41,7 @@ Finally 키워드를 사용하는 방법을 설명합니다.
 [방법: 전역 예외 처리기 정의 및 설치](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 처리되지 않은 예외를 catch하는 방법을 보여 줍니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)<br/>
 표준 C++의 예외 처리에 대해 설명합니다.

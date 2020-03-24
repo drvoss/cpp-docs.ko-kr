@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187988"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Try, Throw 및 Catch 문(C++)
 
@@ -72,7 +72,7 @@ MyData GetNetworkResource()
 }
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **Try** 절 뒤의 코드는 보호 된 코드 섹션입니다. **Throw** 식이 예외를 *throw*하는 경우 (즉, 발생) **Catch** 절 다음의 코드 블록은 예외 처리기입니다. **Throw** 및 **catch** 식의 형식이 호환 되는 경우 throw 되는 예외를 *catch* 하는 처리기입니다. **Catch** 블록에서 형식 일치를 제어 하는 규칙 목록은 [Catch 블록을 평가 하는 방법](../cpp/how-catch-blocks-are-evaluated-cpp.md)을 참조 하세요. **Catch** 문이 형식 대신 줄임표 (...)를 지정 하는 경우 **catch** 블록은 모든 형식의 예외를 처리 합니다. [/Eha](../build/reference/eh-exception-handling-model.md) 옵션을 사용 하 여 컴파일하면 C 구조적 예외 및 시스템 생성 또는 응용 프로그램에서 생성 된 비동기 예외 (예: 메모리 보호, 0으로 나누기 및 부동 소수점 위반)가 포함 될 수 있습니다. **Catch** 블록은 프로그램 순서에 따라 일치 하는 형식을 찾기 때문에 연결 된 **try** 블록의 마지막 처리기 여야 합니다. `catch(...)`를 주의해서 사용하십시오. catch 블록이 catch되는 특정 예외를 처리하는 방법을 알고 있는 경우가 아니면 프로그램을 계속 실행하지 마십시오. 일반적으로 `catch(...)` 블록은 오류를 기록하고 프로그램 실행을 중지하기 전에 특별한 정리 작업을 수행하는 데 사용합니다.
 

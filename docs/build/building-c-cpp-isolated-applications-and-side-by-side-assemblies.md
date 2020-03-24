@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169879"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 격리된 애플리케이션 및 side-by-side 어셈블리 빌드
 
@@ -26,9 +26,9 @@ C/C++ 프로그램을 격리된 애플리케이션으로 빌드하면 여러 가
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[격리된 응용 프로그램 및 side-by-side 어셈블리 개념](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[격리된 애플리케이션 및 side-by-side 어셈블리 개념](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[ 격리된 응용 프로그램 빌드](building-c-cpp-isolated-applications.md)
+[ 격리된 애플리케이션 빌드](building-c-cpp-isolated-applications.md)
 
 [ side-by-side 어셈블리 빌드](building-c-cpp-side-by-side-assemblies.md)
 
@@ -38,10 +38,10 @@ C/C++ 프로그램을 격리된 애플리케이션으로 빌드하면 여러 가
 
 [ 프로그램의 매니페스트 생성 이해](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[ 격리된 응용 프로그램 및 side-by-side 어셈블리 문제 해결](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[ 격리된 애플리케이션 및 side-by-side 어셈블리 문제 해결](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
-[격리된 응용 프로그램 및 side-by-side 어셈블리](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
+[격리된 애플리케이션 및 side-by-side 어셈블리](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
-[데스크톱 응용 프로그램 배포](../windows/deploying-native-desktop-applications-visual-cpp.md)
+[데스크톱 애플리케이션 배포](../windows/deploying-native-desktop-applications-visual-cpp.md)

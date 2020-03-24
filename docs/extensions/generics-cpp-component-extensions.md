@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181995"
 ---
 # <a name="generics--ccli-and-ccx"></a>제네릭(C++/CLI 및 C++/CX)
 
@@ -49,7 +49,7 @@ C++/CLI에서 다른 언어로 작성되었을 수 있는 .NET 어셈블리에 �
 [제네릭 클래스(C++/CLI)](generic-classes-cpp-cli.md)<br/>
 제네릭 클래스의 정의 및 사용에 대한 정보.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [방법: for each로 제네릭 컬렉션 반복](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 제네릭 컬렉션에서 [for each, in](../dotnet/for-each-in.md) 키워드 사용.
