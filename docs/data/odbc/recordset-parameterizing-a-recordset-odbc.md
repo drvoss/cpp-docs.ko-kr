@@ -7,16 +7,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec4198c283700daa2e02e2507b9874eaf02858e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075815"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212812"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>레코드 집합: 레코드 집합 매개 변수화(ODBC)
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
 계산하거나 최종 사용자로부터 획득한 정보를 사용하여 런타임에 레코드를 선택할 수 있으면 좋겠다고 생각할 때가 간혹 있습니다. 레코드 집합 매개 변수를 사용하면 바로 그런 작업을 할 수 있습니다.
 

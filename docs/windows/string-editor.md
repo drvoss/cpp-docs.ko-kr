@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514721"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214411"
 ---
 # <a name="string-editor-c"></a>문자열 편집기 (C++)
 
@@ -58,7 +58,7 @@ ms.locfileid: "69514721"
 
 1. [리소스 뷰](how-to-create-a-resource-script-file.md#create-resources)에서 해당 아이콘을 두 번 클릭 하 여 문자열 테이블을 엽니다.
 
-1. 메뉴로 이동 하 여**찾기 및 바꾸기** 를 **편집** > 하 고 **찾기**를 선택 합니다.
+1. 메뉴로 이동 하 여 **찾기 및 바꾸기** ** > 하** 고 **찾기**를 선택 합니다.
 
 1. **찾을 내용** 상자의 드롭다운 목록에서 이전 검색 문자열을 선택 하거나 찾으려는 문자열의 캡션 텍스트 또는 리소스 식별자를 입력 합니다.
 
@@ -69,13 +69,13 @@ ms.locfileid: "69514721"
 >
 > 패턴과 일치 하는 정규식을 입력 하거나 **찾을 내용** 상자 오른쪽에 있는 단추를 선택 하 여 일반 검색 식의 목록을 표시 합니다. 이 목록에서 식을 선택 하면 **찾을 내용** 상자에 검색 텍스트로 대체 됩니다.
 >
-> 정규식을 사용 하는 경우 다음을 사용 **해야 합니다.**  정규식 확인란을 선택 합니다.
+> 정규식을 사용 하는 경우 **use: Regular expressions** 확인란을 선택 해야 합니다.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>문자열 리소스를 추가 또는 삭제 하려면
 
 **문자열 편집기**를 사용 하 여 문자열 테이블에 항목을 빠르게 삽입 하거나 삭제할 수 있습니다. 새 문자열은 테이블의 끝에 배치 되 고 다음으로 사용할 수 있는 식별자를 제공 합니다. 필요에 따라 [속성 창](/visualstudio/ide/reference/properties-window) 에서 **ID**, **값**또는 **캡션** 속성을 편집할 수 있습니다.
 
-**문자열 편집기** 는 이미 사용 중인 ID를 사용 하지 않도록 합니다. 이미 사용 중인 ID를 선택 하는 경우 **문자열 편집기** 에서 사용자에 게 알리고 예를 들어 `IDS_STRING58113`일반 고유 ID를 할당 합니다.
+**문자열 편집기** 는 이미 사용 중인 ID를 사용 하지 않도록 합니다. 이미 사용 중인 ID를 선택 하는 경우 **문자열 편집기** 에서 사용자에 게 알리고 `IDS_STRING58113`와 같은 일반 고유 id를 할당 합니다.
 
 #### <a name="to-add-a-string-table-entry"></a>문자열 테이블 항목을 추가 하려면
 
@@ -83,7 +83,7 @@ ms.locfileid: "69514721"
 
 1. 문자열 테이블 내에서 마우스 오른쪽 단추를 클릭 하 고 **새 문자열**을 선택 합니다.
 
-1. **문자열 편집기**의 **id** 드롭다운 목록에서 id를 선택 하거나 직접 *id* 를 입력 합니다.
+1. **문자열 편집기**의 **id** 드롭다운 **목록에서 Id를 선택** 하거나 직접 *id* 를 입력 합니다.
 
 1. 필요한 경우 **값**을 편집 합니다.
 
@@ -128,7 +128,7 @@ ms.locfileid: "69514721"
 
 1. 편집할 문자열을 선택 하 고 **ID**, **값**또는 **캡션** 열을 두 번 클릭 한 후 다음을 수행할 수 있습니다.
 
-   - Id 드롭다운 목록에서 **id** 를 선택 하거나 직접 *id* 를 입력 합니다.
+   - **Id 드롭다운 목록** 에서 **id** 를 선택 하거나 직접 *id* 를 입력 합니다.
 
    - **값** 열에 다른 숫자를 입력 합니다.
 
@@ -154,7 +154,7 @@ ms.locfileid: "69514721"
 
    |이를 가져오려면|입력 ...|
    |-----------------|---------------|
-   | 줄 바꿈 | \\n |
+   | 새 줄 | \\n |
    | 캐리지 리턴 | \\r |
    | 탭 | \\t |
    | 백슬래시(\\) | \\\\ |
@@ -168,7 +168,7 @@ ms.locfileid: "69514721"
 
 Win32
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [리소스 편집기](../windows/resource-editors.md)
 [문자열](/windows/win32/menurc/strings)<br/>

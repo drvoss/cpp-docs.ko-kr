@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: b6e7f4456b5ff29cec854d1b4818fda965e04b96
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec5731e7e5058206e210c5a9a5bb1a189c940c91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212942"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>레코드 집합: 테이블에 대한 클래스 선언(ODBC)
 
 > [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 수동으로 소비자를 만들 수는 있습니다.
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
 가장 일반적인 레코드 집합 클래스는 단일 테이블을 엽니다. 단일 테이블에 대한 레코드 집합 클래스를 선언하려면 [클래스 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)에서 **MFC ODBC 소비자 마법사**를 사용하고 해당 레코드 집합 필드 데이터 멤버 이름을 지정하여 원하는 각 열을 선택합니다.
 

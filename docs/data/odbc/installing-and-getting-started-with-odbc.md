@@ -5,12 +5,12 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e4c9bc1e4ba418ec588e054654e544b6fd3e239
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213181"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC 설치 및 시작
 
@@ -18,10 +18,10 @@ ms.locfileid: "62395861"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-- [Visual C++ 제공 ODBC 드라이버 설치](../../data/odbc/odbc-administrator.md)
+- [시각적 개체와 함께 제공 되는 ODBC 드라이버 설치C++](../../data/odbc/odbc-administrator.md)
 
-- [고객에게 ODBC 구성 요소 재배포](../../data/odbc/odbc-basics.md)
+- [고객에 게 ODBC 구성 요소 재배포](../../data/odbc/odbc-basics.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [ODBC(Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

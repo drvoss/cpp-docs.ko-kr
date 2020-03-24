@@ -8,19 +8,19 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212955"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>레코드 집합: 미리 정의된 쿼리에 대한 클래스 선언(ODBC)
 
 > [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 수동으로 소비자를 만들 수는 있습니다.
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
 이 항목에서는 미리 정의된 쿼리(Microsoft SQL Server에서 처럼 저장 프로시저라고도 함)에 대한 레코드 집합 클래스를 만드는 방법을 설명합니다.
 

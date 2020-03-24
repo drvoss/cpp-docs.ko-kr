@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513919"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214489"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -28,9 +28,9 @@ ms.locfileid: "69513919"
 *type*<br/>
 클라이언트와 서버 간에 전송 되는 데이터 형식을 지정 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Transmit_as** C++ 특성은 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 특성과 동일한 기능을 포함 합니다.
+**Transmit_as** C++ 특성에는 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -77,7 +77,7 @@ struct _TREE_NODE_TYPE * right;
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>

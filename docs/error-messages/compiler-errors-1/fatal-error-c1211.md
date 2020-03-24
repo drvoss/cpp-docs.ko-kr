@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e01f75877169225d0e6c20b8a36ce55e3c15c4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397512"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203374"
 ---
 # <a name="fatal-error-c1211"></a>심각한 오류 C1211
 
@@ -23,4 +23,4 @@ ms.locfileid: "62397512"
 
 C1211을 해결하려면 사용 중인 컴파일러와 함께 제공되는 공용 언어 런타임을 설치합니다.
 
-자세한 내용은 [형식 전달 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)합니다.
+자세한 내용은 [형식 전달 (C++/cli)](../../extensions/type-forwarding-cpp-cli.md)을 참조 하세요.

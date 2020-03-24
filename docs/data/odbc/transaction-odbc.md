@@ -10,43 +10,43 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49fc0e244dd4f63bd7a69d963ff2a9fbc00ddb6c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329922"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212604"
 ---
 # <a name="transaction-odbc"></a>트랜잭션(ODBC)
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
-트랜잭션이 그룹 또는 일괄 처리를 일련의 업데이트를 하는 방법은 [데이터 원본](../../data/odbc/data-source-odbc.md) 한 번에 커밋된 모두 또는 트랜잭션을 롤백하는 경우 커밋된 모두가 있도록 합니다. 트랜잭션을 사용 하지 않는 데이터 원본의 변경 내용이 필요할 때 커밋되는 대신 자동으로 커밋됩니다.
-
-> [!NOTE]
->  일부 ODBC 데이터베이스 드라이버는 트랜잭션을 지원 합니다. 호출 된 `CanTransact` 멤버 함수에 [CDatabase](../../mfc/reference/cdatabase-class.md) 또는 [CRecordset](../../mfc/reference/crecordset-class.md) 드라이버 지정된 된 데이터베이스에 대 한 트랜잭션을 지원 하는지 여부를 결정 하는 개체입니다. `CanTransact` 알려주지 않습니다 데이터 원본 전체 트랜잭션 지원을 제공 하는지 여부입니다. 도 호출 해야 합니다 `CDatabase::GetCursorCommitBehavior` 하 고 `CDatabase::GetCursorRollbackBehavior` 후 `CommitTrans` 하 고 `Rollback` 열기 트랜잭션의 효과를 확인 `CRecordset` 개체입니다.
-
-에 대 한 호출을 `AddNew` 및 `Edit` 의 멤버 함수는 `CRecordset` 영향을 호출 하는 경우 즉시 데이터 원본 개체 `Update`합니다. `Delete` 호출도 즉시 적용 됩니다. 반면에 대 한 여러 호출로 구성 된 트랜잭션을 사용할 수 있습니다 `AddNew`, `Edit`를 `Update`, 및 `Delete`를 호출할 때까지 커밋되지 않은 수행 되는 `CommitTrans` 명시적으로 합니다. 트랜잭션을 설정 하 여 해당 사용자에 게 롤백할 수 있는 기능을 유지 하면서 일련의 이러한 호출을 실행할 수 있습니다. 중요 한 리소스를 사용할 수 없는 경우 다른 상황으로 인해 완료 되 고 전체 트랜잭션을 롤백할 수 있습니다 트랜잭션을 커밋하는 대신 합니다. 이 경우 데이터 원본에 영향을 트랜잭션에 속하는 변경 내용은 없습니다.
+트랜잭션은 모든 [데이터 원본](../../data/odbc/data-source-odbc.md) 에 대 한 일련의 업데이트를 그룹화 하거나 일괄 처리 하는 방법으로, 트랜잭션을 롤백하는 경우 모든 항목이 한 번에 커밋되거나 none이 커밋됩니다. 트랜잭션을 사용 하지 않는 경우 데이터 원본에 대 한 변경 내용은 요청 시 커밋되지 않고 자동으로 커밋됩니다.
 
 > [!NOTE]
->  현재 클래스 `CRecordset` 대량 행 페치를 구현한 경우 데이터 원본에 대 한 업데이트를 지원 하지 않습니다. 즉, 호출을 만들 수 없습니다 `AddNew`, `Edit`하십시오 `Delete`, 또는 `Update`. 그러나 업데이트를 수행 하 고 다음 지정 된 트랜잭션 내에서 해당 함수를 호출 하려면 함수를 직접 있습니다 것을 작성할 수 있습니다. 대량 행 페치에 대 한 자세한 내용은 참조 하세요. [레코드 집합: (ODBC) 대량 레코드 페치](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.
+>  일부 ODBC 데이터베이스 드라이버도 트랜잭션을 지원 하지 않습니다. [CDatabase](../../mfc/reference/cdatabase-class.md) 또는 [CRecordset](../../mfc/reference/crecordset-class.md) 개체의 `CanTransact` 멤버 함수를 호출 하 여 드라이버가 지정 된 데이터베이스에 대 한 트랜잭션을 지원 하는지 여부를 확인 합니다. `CanTransact`는 데이터 원본이 전체 트랜잭션 지원을 제공 하는지 여부를 알 수 없습니다. 또한 `CDatabase::GetCursorCommitBehavior`를 호출 하 고 `CommitTrans` 하 고 `Rollback` 후에 `CDatabase::GetCursorRollbackBehavior` 여는 `CRecordset` 개체의 트랜잭션 효과를 확인 해야 합니다.
+
+`CRecordset` 개체의 `AddNew` 및 `Edit` 멤버 함수 호출은 `Update`를 호출할 때 데이터 소스에 즉시 영향을 줍니다. 또한 `Delete` 호출은 즉시 적용 됩니다. 반대로 `AddNew`, `Edit`, `Update`및 `Delete`에 대 한 여러 호출로 구성 된 트랜잭션을 사용할 수 있습니다 .이는 수행 되지만 명시적으로 `CommitTrans`를 호출할 때까지 커밋되지 않습니다. 트랜잭션을 설정 하면 해당 호출을 롤백하는 기능을 유지 하면서 일련의 이러한 호출을 실행할 수 있습니다. 중요 한 리소스를 사용할 수 없거나 다른 조건으로 인해 전체 트랜잭션이 완료 되지 않는 경우 트랜잭션을 커밋하는 대신 롤백할 수 있습니다. 이 경우 트랜잭션에 속하는 변경 내용이 데이터 원본에 영향을 주지 않습니다.
 
 > [!NOTE]
->  트랜잭션 레코드 집합에 영향을 미치는 외에도 ODBC를 사용으로 직접 실행 하는 SQL 문에 영향을 **HDBC** 연관 하 `CDatabase` 개체나 ODBC **HSTMT** 기반 **HDBC**합니다.
-
-트랜잭션은 동시에 업데이트 해야 하는 여러 레코드가 있는 경우 특히 유용 합니다. 이 경우 마지막 업데이트가 적용 되기 전에 예외가 발생 하는 경우 발생할 수 있는 것과 같은 절반만 완료 된 트랜잭션을 방지 하려고 합니다. 업데이트로 트랜잭션으로 그룹화 변경 으로부터 복구 (롤백) 되 고 트랜잭션 이전의 상태로 레코드를 반환 합니다. 예를 들어 계정 B에서 A money를 전송 하는 은행, 하는 경우 모두 b에서 A와 deposit 출금 금액을 올바르게 처리 하는 데 성공 해야 합니다 또는 전체 거래가 실패 해야 합니다.
-
-데이터베이스 클래스를 통해 트랜잭션을 수행 `CDatabase` 개체입니다. A `CDatabase` 개체가 나타내는 데이터 원본에 연결 하 고 하나 이상의 레코드와 연결 된 `CDatabase` 레코드 집합 멤버 함수를 통해 데이터베이스의 테이블에서 개체를 실행 합니다.
+>  현재 `CRecordset` 클래스는 대량 행 페치를 구현한 경우 데이터 소스에 대 한 업데이트를 지원 하지 않습니다. 즉, `AddNew`, `Edit`, `Delete`또는 `Update`에 대 한 호출을 수행할 수 없습니다. 그러나 사용자 고유의 함수를 작성 하 여 업데이트를 수행한 다음 지정 된 트랜잭션 내에서 해당 함수를 호출할 수 있습니다. 대량 행 페치에 대 한 자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)를 참조 하세요.
 
 > [!NOTE]
->  트랜잭션의 수준이 하나만 지원 됩니다. 트랜잭션을 중첩할 수 없습니다 또는 여러 데이터베이스 개체가 확장할 수 있습니다.
+>  레코드 집합에 영향을 주는 것 외에도 트랜잭션은 `CDatabase` 개체와 연결 된 ODBC **HDBC** 또는 해당 **HDBC**를 기반으로 하는 odbc **HSTMT** 를 사용 하는 경우 직접 실행 하는 SQL 문에 영향을 줍니다.
 
-트랜잭션을 수행 하는 방법에 대 한 자세한 정보를 제공 하는 다음 항목:
+트랜잭션은 여러 레코드를 동시에 업데이트 해야 하는 경우에 특히 유용 합니다. 이 경우 마지막 업데이트를 수행 하기 전에 예외가 throw 된 경우에 발생할 수 있는 경우와 같이 반 완료 된 트랜잭션을 방지 하려고 합니다. 이러한 업데이트를 트랜잭션으로 그룹화 하면 변경 내용 으로부터 복구 (롤백) 하 고 레코드를 pretransaction 상태로 되돌립니다. 예를 들어 은행이 계정 A에서 계정 B로 비용을 전송 하는 경우 A의 출금 및 B에 대 한 입금은 모두 자금을 올바르게 처리 하는 데 성공 하거나 전체 트랜잭션이 실패 해야 합니다.
+
+데이터베이스 클래스에서 `CDatabase` 개체를 통해 트랜잭션을 수행 합니다. `CDatabase` 개체는 데이터 원본에 대 한 연결을 나타내며 해당 `CDatabase` 개체와 연결 된 하나 이상의 레코드 집합이 레코드 집합 멤버 함수를 통해 데이터베이스의 테이블에 대해 작동 합니다.
+
+> [!NOTE]
+>  한 수준의 트랜잭션만 지원 됩니다. 트랜잭션을 중첩할 수 없으며 트랜잭션이 여러 데이터베이스 개체에 걸쳐 있을 수도 없습니다.
+
+다음 항목에서는 트랜잭션이 수행 되는 방법에 대 한 자세한 정보를 제공 합니다.
 
 - [트랜잭션: 레코드 집합에서 트랜잭션 수행(ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 - [트랜잭션: 트랜잭션이 업데이트에 미치는 영향(ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [ODBC(Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

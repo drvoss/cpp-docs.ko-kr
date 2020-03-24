@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214437"
 ---
 # <a name="unique-c"></a>unique(C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514905"
 [unique]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Unique** C++ 특성에는 [고유한](/windows/win32/Midl/unique) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69514905"
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>

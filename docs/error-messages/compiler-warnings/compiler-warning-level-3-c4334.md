@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 3) C4334
+title: 컴파일러 경고(수준 3) C4334
 ms.date: 11/04/2016
 f1_keywords:
 - C4334
 helpviewer_keywords:
 - C4334
 ms.assetid: d845857f-bc95-4faf-a079-626a0cf935ba
-ms.openlocfilehash: ebebfe9994be3dd136e3924cb2aea60c0c901926
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 38b93c83f822bc5b856a46f0dd62ea275d2bf207
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198720"
 ---
-# <a name="compiler-warning-level-3-c4334"></a>컴파일러 경고 (수준 3) C4334
+# <a name="compiler-warning-level-3-c4334"></a>컴파일러 경고(수준 3) C4334
 
 ' operator ': 32 비트 시프트 결과가 64 비트로 암시적으로 변환 됩니다 (64 비트 이동 의도?).
 

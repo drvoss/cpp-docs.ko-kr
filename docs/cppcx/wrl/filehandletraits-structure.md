@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c20bad1b67719a9fcfb8ea9fa1dfede1feb42ddf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213995"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits 구조체
 
-파일 핸들의 특성을 정의합니다.
+파일 핸들의 특징을 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,7 +26,7 @@ struct FileHandleTraits : HANDLETraits;
 
 ## <a name="members"></a>멤버
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `HANDLETraits`
 
@@ -36,8 +36,8 @@ struct FileHandleTraits : HANDLETraits;
 
 **헤더:** corewrappers.h
 
-**네임스페이스:** Microsoft::WRL::Wrappers::HandleTraits
+**네임 스페이스:** Microsoft:: WRL:: 래퍼:: 핸드
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Wrappers::HandleTraits 네임스페이스](microsoft-wrl-wrappers-handletraits-namespace.md)

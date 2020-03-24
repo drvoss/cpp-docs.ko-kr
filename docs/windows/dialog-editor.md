@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215256"
 ---
 # <a name="dialog-editor-c"></a>대화 상자 편집기C++()
 
@@ -92,7 +92,7 @@ MFC 응용 프로그램에서 대화 상자 컨트롤을 두 번 클릭 하 여 
 
 다음은 **대화 상자 편집기** 명령에 대 한 기본 액셀러레이터 키입니다.  
 
-|명령|키|설명|
+|명령|Keys|설명|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **Shift** + **아래쪽 화살표**|선택한 컨트롤의 아래쪽 가장자리를 기준 컨트롤과 맞춥니다.|
 |Format.AlignCenters|**Shift** + **F9**|선택한 컨트롤의 세로 가운데를 기준 컨트롤에 맞춥니다.|

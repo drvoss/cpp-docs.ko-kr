@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215113"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>구조체, 스타일, 콜백 및 메시지 맵
 
@@ -32,10 +32,10 @@ MFC 라이브러리에 나타나는 콜백 함수에 대한 링크를 제공합�
 [메시지 맵](../../mfc/reference/message-maps-mfc.md)<br/>
 메시지 매핑 매크로와 `CWnd` 메시지 맵 항목을 설명합니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [클래스 라이브러리 개요](../../mfc/class-library-overview.md)<br/>
 범주에 따라 MFC 라이브러리의 클래스를 나열합니다.
 
-[MFC 샘플](../../overview/visual-cpp-samples.md)<br/>
+[MFC 샘플](../../overview/visual-cpp-samples.md#mfc-samples)<br/>
 MFC 라이브러리를 사용하는 방법을 보여 주는 샘플에 대한 링크를 제공합니다.

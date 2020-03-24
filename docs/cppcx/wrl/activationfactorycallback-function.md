@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303879"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214216"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 함수
 
@@ -33,24 +33,24 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 런타임 클래스 이름을 지정 하는 문자열에 대 한 핸들입니다.
 
 *ppFactory*<br/>
-이 작업이 완료 되 면 매개 변수에 해당 하는 활성화 팩터리 *activationId*합니다.
+이 작업이 완료 되 면 매개 변수 *activationId*에 해당 하는 활성화 팩터리가 활성화 됩니다.
 
 ## <a name="return-value"></a>반환 값
 
-성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 가능한 실패 Hresult는 CLASS_E_CLASSNOTAVAILABLE 및 E_INVALIDARG입니다.
+성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 오류 Hresult는 CLASS_E_CLASSNOTAVAILABLE E_INVALIDARG 됩니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 지정 된 활성화 ID에 대 한 활성화 팩터리를 가져옵니다.
 
-Windows 런타임 런타임 클래스 이름을 사용 하 여 지정 된 개체를 요청 하려면이 콜백 함수를 호출 합니다.
+Windows 런타임는이 콜백 함수를 호출 하 여 해당 런타임 클래스 이름으로 지정 된 개체를 요청 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** module .h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2413
 ms.assetid: d0403952-f41e-4b21-840d-ab4e44171838
-ms.openlocfilehash: 3c29b3ebdb6cca1ff5fcc9f84348f4b9950ae128
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 251818f0dbdf0a73c7c30bf20c1944b5b1087453
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205741"
 ---
 # <a name="compiler-error-c2413"></a>컴파일러 오류 C2413
 
-'token': 맞춤 크기가 잘못 되었습니다
+' token ': 맞춤 크기가 잘못 되었습니다.
 
-사용 하 여 사용 되는 크기는 `ALIGN` 지시문이 없습니다. 또는 유효한 범위를 벗어납니다.
+`ALIGN` 지시문에 사용 된 크기가 잘못 되었거나 잘못 된 범위 밖에 있습니다.

@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 3) C4287
+title: 컴파일러 경고(수준 3) C4287
 ms.date: 11/04/2016
 f1_keywords:
 - C4287
 helpviewer_keywords:
 - C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
-ms.openlocfilehash: b37e0692a63f02dc96dec8717d4defd64d7183ac
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 9ea192dddf570d0b41b6531181f4a2fbf51664c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198915"
 ---
-# <a name="compiler-warning-level-3-c4287"></a>컴파일러 경고 (수준 3) C4287
+# <a name="compiler-warning-level-3-c4287"></a>컴파일러 경고(수준 3) C4287
 
 ' operator ': 부호 없는 상수 또는 음의 상수가 일치 하지 않습니다.
 

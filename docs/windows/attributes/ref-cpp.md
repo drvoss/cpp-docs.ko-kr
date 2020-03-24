@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214593"
 ---
 # <a name="ref-c"></a>ref(C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514119"
 [ref]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Ref** C++ 특성에는 [ref](/windows/win32/Midl/ref) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -56,7 +56,7 @@ __interface IFireTabCtrl
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>

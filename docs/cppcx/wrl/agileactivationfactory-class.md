@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214203"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 클래스
 
-구현 하는 아파트 활성화 팩터리를 나타냅니다 [FtmBase](ftmbase-class.md)합니다.
+[FtmBase](ftmbase-class.md)을 구현 하는 아파트 친화적인 활성화 팩터리를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,11 +36,11 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** module .h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)<br/>
 [ActivationFactory 클래스](activationfactory-class.md)

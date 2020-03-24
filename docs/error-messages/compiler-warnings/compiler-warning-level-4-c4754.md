@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198135"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>컴파일러 경고(수준 4) C4754
 
@@ -19,11 +19,11 @@ ms.locfileid: "62388581"
 
 비교 결과가 항상 동일하기 때문에 C4754 경고가 발생합니다. 이는 연결된 정수 식이 올바르지 않기 때문에 조건 분기 중 하나가 결코 실행되지 않음을 나타냅니다. 이러한 코드 감지는 64비트 아키텍처에서 잘못된 정수 오버플로 검사 시에 자주 발생합니다.
 
-정수 변환 규칙은 복잡하고 많은 미묘한 문제가 있습니다. 각 C4754 경고를 해결 하는 대신, 사용 하도록 코드를 업데이트할 수 있습니다 합니다 [SafeInt 라이브러리](../../safeint/safeint-library.md)합니다.
+정수 변환 규칙은 복잡하고 많은 미묘한 문제가 있습니다. 각 C4754 경고를 수정 하는 대신 [SafeInt 라이브러리](../../safeint/safeint-library.md)를 사용 하도록 코드를 업데이트할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 C4754를 생성합니다.
+이 샘플에서는 C4754를 생성 합니다.
 
 ```cpp
 // C4754a.cpp
@@ -96,7 +96,7 @@ Warning C4754: Conversion rules for arithmetic operations in the comparison at C
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**참고** 컴파일러 경고에서 참조 하는 줄 번호는 문의 마지막 줄. 여러 줄에 걸쳐 있는 복잡한 조건 문에 대한 경고 메시지에서, 코드 결함을 포함하는 줄은 보고된 줄 이전의 여러 줄일 수 있습니다. 예를 들어:
+**참고** 컴파일러 경고에서 참조 되는 줄 번호는 문의 마지막 줄입니다. 여러 줄에 걸쳐 있는 복잡한 조건 문에 대한 경고 메시지에서, 코드 결함을 포함하는 줄은 보고된 줄 이전의 여러 줄일 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 unsigned long a;

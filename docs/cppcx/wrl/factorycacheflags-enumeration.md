@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 8cf4af2ac0b4557fc6b175b84c47f83dd8a6e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 250c8c8e7ade72bd1a9cd63f0b515774058f0723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398461"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214008"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 열거형
 
@@ -22,9 +22,9 @@ ms.locfileid: "62398461"
 enum FactoryCacheFlags;
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-기본적으로 팩터리 캐싱 정책은로 지정 합니다 [ModuleType](moduletype-enumeration.md) 만들 때 템플릿 매개 변수를 [모듈](module-class.md) 개체입니다. 이 정책을 재정의 하려면 지정 된 **FactoryCacheFlags** 팩터리 개체를 만들 때 값입니다.
+기본적으로 팩터리 캐싱 정책은 [Module](module-class.md) 개체를 만들 때 [ModuleType](moduletype-enumeration.md) 템플릿 매개 변수로 지정 됩니다. 이 정책을 재정의 하려면 팩터리 개체를 만들 때 **FactoryCacheFlags** 값을 지정 합니다.
 
 |||
 |-|-|
@@ -34,10 +34,10 @@ enum FactoryCacheFlags;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

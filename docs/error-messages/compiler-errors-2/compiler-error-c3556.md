@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200579"
 ---
 # <a name="compiler-error-c3556"></a>컴파일러 오류 C3556
 
-> '*식*': 'decltype' 인수가 잘못 되었습니다.
+> '*expression*': ' decltype '의 인수가 잘못 되었습니다.
 
 컴파일러가 `decltype(`*expression*`)` 형식 지정자의 인수인 식의 형식을 추론할 수 없습니다.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 `myFunction` 이 오버로드되어 컴파일러가 `myFunction` 인수의 형식을 추론할 수 없습니다. 이 문제를 해결 하려면 사용할 수 있습니다 `static_cast` 특정에 대 한 포인터의 인스턴스를 만드는 오버 로드 된 함수에서 지정 하는 `decltype` 식입니다.
+다음 코드 예제에서는 `myFunction` 이 오버로드되어 컴파일러가 `myFunction` 인수의 형식을 추론할 수 없습니다. 이 문제를 해결 하려면 `static_cast`를 사용 하 여 `decltype` 식에 지정 하기 위해 오버 로드 된 특정 함수에 대 한 포인터의 인스턴스를 만들 수 있습니다.
 
 ```cpp
 // C3556.cpp

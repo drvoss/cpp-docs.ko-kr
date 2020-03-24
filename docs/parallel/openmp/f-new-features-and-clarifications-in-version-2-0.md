@@ -1,40 +1,40 @@
 ---
-title: F. 버전 2.0에서에서 새 기능 및 설명
+title: F. Version 2.0에서 새 기능 및 설명
 ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cd82000992ab957bf2c41f11deccd65e2e6ea8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362716"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215035"
 ---
-# <a name="f-new-features-and-clarifications-in-version-20"></a>F. 버전 2.0에서에서 새 기능 및 설명
+# <a name="f-new-features-and-clarifications-in-version-20"></a>F. Version 2.0에서 새 기능 및 설명
 
-이 부록 요약 OpenMP C에 대 한 주요 변경 사항 /C++ 사양 버전 1.0에서에서 2.0 버전으로 이동 합니다. 다음 항목은 사양에 추가 하는 새로운 기능:
+이 부록에서는 버전 1.0에서 버전 2.0로 이동 하는C++ OpenMP C/사양의 주요 변경 내용에 대해 간략하게 설명 합니다. 다음 항목은 사양에 추가 된 새로운 기능입니다.
 
-- Openmp에서 쉼표 수 [지시문](2-directives.md#21-directive-format)합니다.
+- OpenMP [지시문](2-directives.md#21-directive-format)에는 쉼표를 사용할 수 있습니다.
 
-- 추가 된 `num_threads` 절. 이 절을 사용 하면 사용자에 대 한 스레드 수는 특정 요청을 [병렬 구문](2-directives.md#23-parallel-construct)합니다.
+- `num_threads` 절 추가 이 절을 사용 하면 사용자가 [병렬 구문](2-directives.md#23-parallel-construct)에 대해 특정 개수의 스레드를 요청할 수 있습니다.
 
-- 합니다 [threadprivate](2-directives.md#271-threadprivate-directive) 지시문 정적 블록 범위 변수를 허용 하도록 확장 되었습니다.
+- [Threadprivate](2-directives.md#271-threadprivate-directive) 지시문이 정적 블록 범위 변수를 허용 하도록 확장 되었습니다.
 
-- C99 가변 길이 배열 완전 한 형식이 및 지정할 수 있습니다 어디서 나 전체 형식은 허용 등에서 목록의 `private`, `firstprivate`, 및 `lastprivate` 절 (참조 [2.7.2 섹션](2-directives.md#272-data-sharing-attribute-clauses)).
+- C99 가변 길이 배열은 전체 형식이 며 `private`, `firstprivate`및 `lastprivate` 절 목록에서와 같이 전체 형식이 허용 되는 위치에 지정할 수 있습니다 ( [2.7.2 섹션](2-directives.md#272-data-sharing-attribute-clauses)참조).
 
-- 병렬 영역에서 전용 변수를 표시할 수 있습니다 [개인](2-directives.md#2721-private) 중첩 된 지시문에서 다시 합니다.
+- 병렬 영역의 private 변수는 중첩 지시문에서 다시 [비공개로](2-directives.md#2721-private) 표시 될 수 있습니다.
 
-- `copyprivate` 절이 추가 되었습니다. 다른 구성원에 게 팀의 한 멤버에서 값을 브로드캐스트 개인 변수를 사용 하는 메커니즘을 제공 합니다. 경우에 공유 변수를 제공 (예를 들어, 각 수준에서 서로 다른 변수를 요구 하는 재귀)에서 어려운 값에 대 한 공유 변수를 사용 하는 대신 것입니다. 합니다 [copyprivate](2-directives.md#2728-copyprivate) 절 에서만 나타날 수 있습니다는 `single` 지시문입니다.
+- `copyprivate` 절이 추가 되었습니다. Private 변수를 사용 하 여 팀의 한 멤버에서 다른 멤버로 값을 브로드캐스트하는 메커니즘을 제공 합니다. 이러한 공유 변수를 제공할 때 값에 공유 변수를 사용 하는 대신 사용 하는 것이 더 어려울 수 있습니다. 예를 들어 각 수준에서 다른 변수를 요구 하는 재귀가 발생할 수 있습니다. [Copyprivate](2-directives.md#2728-copyprivate) 절은 `single` 지시어에만 나타날 수 있습니다.
 
-- 또한 타이밍 루틴 [omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) 및 [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) MPI 루틴 비슷합니다. 이러한 함수는 클록 타이밍 벽 수행 해야 합니다.
+- [Omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) 및 [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) 에 대 한 타이밍 루틴 추가는 MPI 루틴과 비슷합니다. 이러한 함수는 벽면 클록 타이밍을 수행 하는 데 필요 합니다.
 
-- 목록이 포함 된 부록도 [구현에서 정의 된 동작](e-implementation-defined-behaviors-in-openmp-c-cpp.md) OpenMP c에서 /C++ 추가 되었습니다. 구현을 정의 하 고 이러한 경우 해당 동작을 문서에 필요 합니다.
+- OpenMP C/C++ 의 [구현 정의 동작](e-implementation-defined-behaviors-in-openmp-c-cpp.md) 목록이 포함 된 부록이 추가 되었습니다. 이러한 경우에는 해당 동작을 정의 하 고 문서화 하는 데 구현이 필요 합니다.
 
-- 다음과 같이 변경 명확 하거나 C에 대 한 이전 OpenMP API 사양에 기능을 수정 하는 역할 /C++:
+- 다음 변경 내용은 C/C++:에 대 한 이전 OpenMP API 사양의 기능을 명확 하 게 하거나 수정 하기 위해 제공 됩니다.
 
-  - 된다고의 동작 [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) 하 고 [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) 때 `omp_in_parallel` 0이 아닌 반환이 정의 되지 않습니다.
+  - 0이 아닌 값을 반환 하는 [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) 및 `omp_in_parallel` [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) 의 동작이 정의 되지 않았습니다.
 
-  - 설명이 명시 되었습니다 [지시문 중첩](2-directives.md#29-directive-nesting) 중첩 된 병렬을 사용 하는 경우.
+  - 중첩 된 parallel을 사용할 때 [지시문 중첩](2-directives.md#29-directive-nesting) 이 설명 되었습니다.
 
-  - 합니다 [초기화 잠금](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) 하 고 [소멸 잠금](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) 병렬 영역에서 함수를 호출할 수 있습니다.
+  - 병렬 영역에서 [잠금 초기화](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) 및 [잠금 소멸](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) 함수를 호출할 수 있습니다.
 
-  - 새 예제에 추가 되었습니다 [부록 A](a-examples.md)합니다.
+  - 새로운 예제가 [부록 a](a-examples.md)에 추가 되었습니다.

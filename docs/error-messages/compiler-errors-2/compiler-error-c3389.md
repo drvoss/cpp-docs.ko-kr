@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402582"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201138"
 ---
 # <a name="compiler-error-c3389"></a>컴파일러 오류 C3389
 
-> __declspec (*키워드*) /clr을 사용 하 여 사용할 수 없습니다: pure 또는 /clr: safe
+> /clr: pure 또는/clr: safe에는 __declspec (*키워드*)를 사용할 수 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**/clr: pure** 및 **/clr: safe** Visual Studio 2015에서 사용 되지 않고 Visual Studio 2017에서 지원 되지 않는 컴파일러 옵션입니다.
+**/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-A [__declspec](../../cpp/declspec.md) 사용 되는 한정자 의미를 프로세스 상태에 따라 합니다.  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md) 의미는 당 [appdomain](../../cpp/appdomain.md) 상태입니다.  따라서 사용 하 여 변수를 선언 합니다 `keyword` **__declspec** 한정자 및 사용 하 여 컴파일 **/clr: 순수** 허용 되지 않습니다.
+사용 되는 [__declspec](../../cpp/declspec.md) 한정자는 프로세스별 상태별를 의미 합니다.  [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md) 는 [appdomain](../../cpp/appdomain.md) 당 상태별를 의미 합니다.  따라서 `keyword` **__declspec** 한정자를 사용 하 여 변수를 선언 하 고 **/clr: pure** 를 사용 하 여 컴파일하는 것은 허용 되지 않습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플에서는 C3389 오류가 생성 됩니다.
+다음 샘플에서는 C3389를 생성 합니다.
 
 ```cpp
 // C3389.cpp

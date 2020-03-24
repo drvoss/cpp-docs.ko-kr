@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408994"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210693"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 클래스
 
-구현을 제공 합니다 [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) 인터페이스입니다.
+[가 iconverttype](/previous-versions/windows/desktop/ms715926(v=vs.85)) 인터페이스의 구현을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +36,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-클래스에서 파생 된 `IConvertTypeImpl`합니다.
+`IConvertTypeImpl`에서 파생 된 클래스입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -48,15 +48,15 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|명령 또는 행 집합에서 형식 변환의 가용성에 대 한 정보를 제공합니다.|
+|[CanConvert](#canconvert)|명령 또는 행 집합에 대 한 형식 변환의 가용성에 대 한 정보를 제공 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 인터페이스는 명령, 행 집합 및 인덱스 행 집합에 필수입니다. `IConvertTypeImpl` OLE DB에서 제공 된 변환 개체에 위임 하 여 인터페이스를 구현 합니다.
+이 인터페이스는 명령, 행 집합 및 인덱스 행 집합에 필수적입니다. `IConvertTypeImpl` OLE DB에서 제공 하는 변환 개체에 위임 하 여 인터페이스를 구현 합니다.
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl:: CanConvert
 
-명령 또는 행 집합에서 형식 변환의 가용성에 대 한 정보를 제공합니다.
+명령 또는 행 집합에 대 한 형식 변환의 가용성에 대 한 정보를 제공 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [가 iconverttype:: canconvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 를 참조 하세요.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-OLE DB 데이터 변환을 사용 하 여 `MSADC.DLL`입니다.
+`MSADC.DLL`에서 OLE DB 데이터 변환을 사용 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 4b446d69651cb3cf52bd6c15899d85ed76b319da
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 252d17fc56c13415f1068d6b16ed8b1ee663b5f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079805"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212890"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>레코드 집합: 레코드 집합의 레코드 선택 방법(ODBC)
 
 > [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 수동으로 소비자를 만들 수는 있습니다.
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
 이 항목에서는 다음 내용을 설명합니다.
 

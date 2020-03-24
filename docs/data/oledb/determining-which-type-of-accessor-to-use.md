@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210992"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>사용할 접근자 형식 결정
 
@@ -28,7 +28,7 @@ ms.locfileid: "80079650"
 |`CDynamicAccessor`|자동.|No.|행 집합의 데이터 형식을 알 수 없는 경우에 유용합니다.|
 |`CDynamicParameterAccessor`|자동이지만, [재정의](../../data/oledb/overriding-a-dynamic-accessor.md)할 수 있습니다.|예(공급자가 `ICommandWithParameters`를 지원하는 경우). 매개 변수가 자동으로 바인딩됩니다.|`CDynamicAccessor`보다 느리지만, 제네릭 저장 프로시저를 호출하는 데 유용합니다.|
 |`CDynamicStringAccessor[A,W]`|자동.|No.|데이터 저장소에서 액세스된 데이터를 문자열 데이터로 검색합니다.|
-|`CManualAccessor`|수동(`AddBindEntry` 사용).|수동(`AddParameterEntry` 사용).|빠르고, 매개 변수와 열이 한 번만 바인딩됩니다. 사용할 데이터 형식을 직접 결정합니다. 예는 [DBVIEWER](https://github.com/Microsoft/VCSamples) 샘플을 참조 하세요. `CDynamicAccessor` 또는 `CAccessor`보다 더 많은 코드가 필요 합니다. OLE DB를 직접 호출하는 것과 같습니다.|
+|`CManualAccessor`|수동(`AddBindEntry` 사용).|수동(`AddParameterEntry` 사용).|빠르고, 매개 변수와 열이 한 번만 바인딩됩니다. 사용할 데이터 형식을 직접 결정합니다. 예는 [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) 샘플을 참조 하세요. `CDynamicAccessor` 또는 `CAccessor`보다 더 많은 코드가 필요 합니다. OLE DB를 직접 호출하는 것과 같습니다.|
 |`CXMLAccessor`|자동.|No.|데이터 저장소에서 액세스된 데이터를 문자열 데이터로 검색하고, XML 태그 데이터로 서식을 지정합니다.|
 
 ## <a name="see-also"></a>참고 항목

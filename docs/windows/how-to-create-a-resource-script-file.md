@@ -35,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 93bee6319d356128f56c1886d395cf25db372e80
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5527b7c46b728a4a009a56fca3fea52bf5ef9bf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214424"
 ---
 # <a name="how-to-create-resources-c"></a>방법: 리소스 만들기 (C++)
 
@@ -114,7 +114,7 @@ ms.locfileid: "79443878"
 
 Windows 데스크톱 응용 프로그램 프로젝트에 C++ 리소스를 추가 하는 다음 속성이 포함 된 **리소스 추가** 대화 상자가 **리소스 뷰** 창에 포함 되어 있습니다.
 
-| 속성 | Description |
+| 속성 | 설명 |
 |---|---|
 | **리소스 종류** | 만들려는 리소스의 종류를 지정 합니다.<br/><br/>커서 및 대화 상자 리소스 범주를 확장 하 여에 있는 추가 리소스를 표시할 수 *있습니다. \Microsoft Visual Studio \<version\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. .Rct 파일을 추가 해야 하는 경우 여기에 배치 하거나 다른 [포함 경로](../windows/how-to-specify-include-directories-for-resources.md)를 지정 합니다. 트리 컨트롤의 최상위 수준에 표시 되는 리소스는 Visual Studio에서 제공 하는 기본 리소스입니다. .Rct 파일의 리소스는 해당 범주의 두 번째 수준에 나타납니다. 추가할 수 있는 .rct 파일의 수에는 미리 설정 된 제한이 없습니다.<br/><br/> |
 | **새로 만들기** | **리소스 유형** 상자에서 선택한 유형을 기반으로 리소스를 만들고 해당 편집기에서 리소스를 엽니다.<br/><br/>예를 들어, 대화 상자 리소스를 만들면 [대화 상자 편집기](../windows/dialog-editor.md)에서 리소스를 엽니다. |

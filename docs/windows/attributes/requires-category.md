@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214554"
 ---
-# <a name="requirescategory"></a>requires_category
+# <a name="requires_category"></a>requires_category
 
-대상 클래스의 필수 구성 요소 범주를 지정합니다.
+대상 클래스의 필수 구성 요소 범주를 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,17 +27,17 @@ ms.locfileid: "62407369"
 ### <a name="parameters"></a>매개 변수
 
 *requires_category*<br/>
-필요한 범주의 ID입니다.
+필수 범주의 ID입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-합니다 **requires_category** C++ 특성 대상 클래스에 필요한 구성 요소 범주를 지정 합니다. 자세한 내용은 [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)합니다.
+**Requires_category** C++ 특성은 대상 클래스에 필요한 구성 요소 범주를 지정 합니다. 자세한 내용은 [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)를 참조 하세요.
 
 이 특성을 사용하려면 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드는 개체 컨트롤 범주를 구현 하는 필요 합니다.
+다음 코드에서는 개체가 컨트롤 범주를 구현 해야 합니다.
 
 ```cpp
 // cpp_attr_ref_requires_category.cpp
@@ -59,14 +59,14 @@ class CMyClass {};
 
 |||
 |-|-|
-|**적용 대상**|**class**, **struct**|
+|**적용 대상**|**클래스**, **구조체**|
 |**반복 가능**|아니요|
-|**필수 특성**|다음 중 하나 이상의: `coclass`, `progid`, 또는 `vi_progid`합니다.|
+|**필수 특성**|`coclass`, `progid`또는 `vi_progid`중 하나 이상입니다.|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [COM 특성](com-attributes.md)<br/>
 [implements_category](implements-category.md)

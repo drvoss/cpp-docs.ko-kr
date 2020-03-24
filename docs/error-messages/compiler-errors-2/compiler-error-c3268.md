@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365665"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201463"
 ---
 # <a name="compiler-error-c3268"></a>컴파일러 오류 C3268
 
-> '*함수*': 제네릭 함수 또는 제네릭 클래스의 멤버 함수는 가변 매개 변수 목록을 사용할 수 없습니다
+> '*function*': 제네릭 함수 또는 제네릭 클래스의 멤버 함수에는 가변 매개 변수 목록을 사용할 수 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**/clr: pure** 및 **/clr: safe** Visual Studio 2015에서 사용 되지 않고 Visual Studio 2017에서 지원 되지 않는 컴파일러 옵션입니다.
+**/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-참조 [제네릭](../../extensions/generics-cpp-component-extensions.md) 자세한 내용은 합니다.
+자세한 내용은 [제네릭](../../extensions/generics-cpp-component-extensions.md) 을 참조 하세요.
 
 ## <a name="example"></a>예제
 

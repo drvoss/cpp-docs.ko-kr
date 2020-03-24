@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214567"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514085"
 [requestedit]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Requestedit** C++ 특성에는 [requestedit](/windows/win32/Midl/requestedit) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69514085"
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>

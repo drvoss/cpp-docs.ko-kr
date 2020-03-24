@@ -8,16 +8,16 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 5647d0fec4c2add57329ad09a2374953dcd118fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456d999a056abc4c15f2dcf3b8774dfc86182272
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212929"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>레코드 집합: 데이터 열 동적 바인딩(ODBC)
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 항목은 MFC ODBC 클래스에 적용됩니다.
 
 레코드 집합은 디자인 시간에 지정하는 테이블 열의 바인딩을 관리하지만 디자인 시간에 알려지지 않은 열을 바인딩하려는 경우가 있습니다. 이 항목에서는 다음 내용을 설명합니다.
 

@@ -2,12 +2,12 @@
 title: B. 런타임 라이브러리 함수의 스텁
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215061"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 런타임 라이브러리 함수의 스텁
 
