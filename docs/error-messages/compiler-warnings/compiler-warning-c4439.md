@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: 7cab2e55fca640438051fbb79ac933e83d5f3cbb
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c125fa84119c62e3090611c9a841f46eee759711
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165212"
 ---
 # <a name="compiler-warning-c4439"></a>컴파일러 경고 C4439
 
 ' function ': 시그니처에 관리 되는 형식이 있는 함수 정의에는 __clrcall 호출 규칙이 있어야 합니다.
 
-컴파일러는 호출 규칙을 [__clrcall](../../cpp/clrcall.md)으로 암시적으로 대체 했습니다. 이 경고를 해결 하려면 `__cdecl` 또는 `__stdcall` 호출 규칙을 제거 합니다.
+컴파일러는 호출 규칙을 [__clrcall](../../cpp/clrcall.md)로 암시적으로 바꿉니다. 이 경고를 해결 하려면 `__cdecl` 또는 `__stdcall` 호출 규칙을 제거 합니다.
 
 C4439는 항상 오류로 실행 됩니다. `#pragma warning` 또는 **/wd**를 사용 하 여이 경고를 해제할 수 있습니다. 자세한 내용은 [warning](../../preprocessor/warning.md) 또는 [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/wd,/we,/wo,/Wv,/Wx (경고 수준)](../../build/reference/compiler-option-warning-level.md) 를 참조 하세요.
 

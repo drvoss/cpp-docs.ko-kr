@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170893"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -65,16 +65,16 @@ long double rint( long double x );  // C++ only
 
 |입력|SEH 예외|**_matherr** 발생할|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|없음|없음|
-|Denormals|EXCEPTION_FLT_UNDERFLOW|없음|
+|± ∞, QNAN, IND|none|none|
+|Denormals|EXCEPTION_FLT_UNDERFLOW|none|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **rint** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **rint** 은 항상 **double**을 사용 하 고 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

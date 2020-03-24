@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 6d973ad444f719b905af5a33e47ef28f4895111f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167851"
 ---
 # <a name="how-to-edit-an-image"></a>방법: 이미지 편집
 
@@ -204,7 +204,7 @@ ms.locfileid: "79447296"
 
 1. **속성** 창에서 이미지의 속성을 변경 하거나 모든 속성을 변경 합니다.
 
-   |속성|Description|
+   |속성|설명|
    |--------------|-----------------|
    |**색**|이미지에 대 한 색 구성표를 지정 합니다. **단색**, **16**또는 **256**또는 **트루 색**을 선택 합니다.<br/><br/>16 색 색상표를 사용 하 여 이미지를 이미 그린 경우 **단색** 을 선택 하면 이미지의 색에 대해 검정과 흰색이 대체 됩니다. 대비는 항상 유지 되지 않습니다. 예를 들어 빨간색 및 녹색의 인접 영역은 모두 검정색으로 변환 됩니다.|
    |**Filename**|이미지 파일의 이름을 지정 합니다.<br/><br/>기본적으로 Visual Studio는 기본 리소스 식별자 (IDB_BITMAP1)에서 처음 4 개 문자 ("IDB_")를 제거 하 고 적절 한 확장을 추가 하 여 만든 기본 파일 이름을 할당 합니다. 이 예제에서 이미지의 파일 이름은 *BITMAP1*입니다. *MYBITMAP1*의 이름을 바꿀 수 있습니다.|
@@ -216,7 +216,7 @@ ms.locfileid: "79447296"
 
 ## <a name="requirements"></a>요구 사항
 
-None
+없음
 
 ## <a name="see-also"></a>참고 항목
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ea949653c7e62f39ab9d1b181c419cf51fe3cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209835"
 ---
 # <a name="provider-support-for-bookmarks"></a>공급자의 책갈피 지원
 
-이 항목의 예제를 추가 합니다 `IRowsetLocate` 인터페이스는 `CCustomRowset` 클래스. 대부분의 경우 기존 COM 개체에 인터페이스를 추가 하 여 시작 합니다. 소비자 템플릿은에서 더 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에 나오는 방법:
+이 항목의 예제에서는 `CCustomRowset` 클래스에 `IRowsetLocate` 인터페이스를 추가 합니다. 거의 모든 경우에 기존 COM 개체에 인터페이스를 추가 하 여 시작 합니다. 그런 다음 소비자 템플릿에서 더 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에서는 다음을 수행 하는 방법을 보여 줍니다.
 
 - 공급자에 인터페이스를 추가 합니다.
 
@@ -25,9 +25,9 @@ ms.locfileid: "62283822"
 
 - 책갈피 지원을 추가 합니다.
 
-`IRowsetLocate` 인터페이스는 `IRowset` 인터페이스에서 상속됩니다. 추가 하는 `IRowsetLocate` 인터페이스를 상속할 `CCustomRowset` 에서 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)합니다.
+`IRowsetLocate` 인터페이스는 `IRowset` 인터페이스에서 상속됩니다. `IRowsetLocate` 인터페이스를 추가 하려면 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)에서 `CCustomRowset`를 상속 합니다.
 
-추가 된 `IRowsetLocate` 인터페이스는 대부분의 인터페이스에서 약간 다릅니다. 확인 vtable, OLE DB 공급자 템플릿 경우 파생된 된 인터페이스를 처리 하는 템플릿 매개 변수 다음 코드에는 새 상속 목록을 보여 줍니다.
+`IRowsetLocate` 인터페이스를 추가 하는 것은 대부분의 인터페이스와 약간 다릅니다. VTABLEs를 설정 하기 위해 OLE DB 공급자 템플릿에는 파생 된 인터페이스를 처리 하는 템플릿 매개 변수가 있습니다. 다음 코드에서는 새 상속 목록을 보여 줍니다.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -40,9 +40,9 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-네 번째, 다섯 번째 및 여섯 번째 매개 변수 모두 추가 됩니다. 이 예제에서는 기본값을 사용 하 여 네 번째 및 다섯 번째 매개 변수를 지정 하지만 `IRowsetLocateImpl` 여섯 번째 매개 변수로 합니다. `IRowsetLocateImpl` 두 개의 템플릿 매개 변수를 사용 하는 OLE DB 템플릿 클래스: 이러한 후크 합니다 `IRowsetLocate` 인터페이스는 `CCustomRowset` 클래스. 대부분의 인터페이스를 추가 하려면이 단계를 건너뛸 하 수 다음 노드로 이동 합니다. 만 `IRowsetLocate` 및 `IRowsetScroll` 인터페이스에서 이러한 방식으로 처리 해야 합니다.
+네 번째, 다섯 번째 및 여섯 번째 매개 변수가 모두 추가 됩니다. 이 예에서는 네 번째 및 다섯 번째 매개 변수의 기본값을 사용 하지만 `IRowsetLocateImpl`을 여섯 번째 매개 변수로 지정 합니다. `IRowsetLocateImpl`는 두 개의 템플릿 매개 변수를 사용 하는 OLE DB 템플릿 클래스입니다 .이 클래스는 `IRowsetLocate` 인터페이스를 `CCustomRowset` 클래스에 연결 합니다. 대부분의 인터페이스를 추가 하려면이 단계를 건너뛰고 다음 단계를 진행할 수 있습니다. `IRowsetLocate` 및 `IRowsetScroll` 인터페이스만 이러한 방식으로 처리 해야 합니다.
 
-다음 알려 주어 야 합니다 `CCustomRowset` 호출 `QueryInterface` 에 대 한는 `IRowsetLocate` 인터페이스입니다. 줄 추가 `COM_INTERFACE_ENTRY(IRowsetLocate)` 맵에 있습니다. 에 대해 인터페이스 맵을 `CCustomRowset` 다음 코드와 같이 표시 됩니다.
+그런 다음 `CCustomRowset`에 게 `IRowsetLocate` 인터페이스에 대 한 `QueryInterface`를 호출 하도록 지시 해야 합니다. 지도에 `COM_INTERFACE_ENTRY(IRowsetLocate)` 줄을 추가 합니다. `CCustomRowset`에 대 한 인터페이스 맵은 다음 코드와 같이 표시 됩니다.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-지도에 연결 해야 합니다 `CRowsetImpl` 클래스입니다. 에 연결할 COM_INTERFACE_ENTRY_CHAIN 매크로의 추가 `CRowsetImpl` 맵. 또한 호출 형식 정의 만들 `RowsetBaseClass` 상속 정보 구성 됩니다. 이 형식 정의 임의 이며 무시할 수 있습니다.
+또한 맵을 `CRowsetImpl` 클래스에 연결 해야 합니다. COM_INTERFACE_ENTRY_CHAIN 매크로에를 추가 하 여 `CRowsetImpl` 맵에 후크 합니다. 또한 상속 정보로 구성 된 `RowsetBaseClass` 라는 typedef를 만듭니다. 이 typedef는 임의 이며 무시 해도 됩니다.
 
-마지막으로 처리 된 `IColumnsInfo::GetColumnsInfo` 호출 합니다. 이렇게 하려면 일반적으로 PROVIDER_COLUMN_ENTRY 매크로 사용할 수 있습니다. 그러나 소비자 책갈피를 사용 하려고 합니다. 소비자는 책갈피를 요청 하는 여부에 따라 공급자를 반환 하는 열을 변경할 수 있어야 합니다.
+마지막으로 `IColumnsInfo::GetColumnsInfo` 호출을 처리 합니다. 일반적으로 PROVIDER_COLUMN_ENTRY 매크로를 사용 하 여이 작업을 수행 합니다. 그러나 소비자는 책갈피를 사용 하는 것이 좋습니다. 소비자가 책갈피를 요청 하는지 여부에 따라 공급자가 반환 하는 열을 변경할 수 있어야 합니다.
 
-처리 하는 `IColumnsInfo::GetColumnsInfo` 호출에서 PROVIDER_COLUMN 맵을 삭제 합니다 `CTextData` 클래스입니다. 함수를 정의 하는 PROVIDER_COLUMN_MAP 매크로 `GetColumnInfo`합니다. 사용자가 정의할 `GetColumnInfo` 함수입니다. 함수 선언은 다음과 같습니다.
+`IColumnsInfo::GetColumnsInfo` 호출을 처리 하려면 `CTextData` 클래스에서 PROVIDER_COLUMN map을 삭제 합니다. PROVIDER_COLUMN_MAP 매크로는 `GetColumnInfo`함수를 정의 합니다. 사용자 고유의 `GetColumnInfo` 함수를 정의 합니다. 함수 선언은 다음과 같습니다.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-그런 다음 구현 된 `GetColumnInfo` 함수는 *사용자 지정*RS.cpp 다음과 같이 파일:
+그런 다음 *사용자 지정*RS .cpp 파일에서 다음과 같이 `GetColumnInfo` 함수를 구현 합니다.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +148,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo` 속성을 호출 하는지 여부를 확인 하려면 첫 번째 검사 `DBPROP_IRowsetLocate` 설정 됩니다. OLE DB에 각각의 선택적 인터페이스 행 집합 개체에 대 한 속성이 있습니다. 소비자가 이러한 선택적 인터페이스 중 하나를 사용 하려는 경우에 속성이 true로 설정 합니다. 그런 다음 공급자를이 속성을 확인 하 고 기반으로 하는 특별 한 조치를 취할 수 있습니다.
+`GetColumnInfo` 먼저 `DBPROP_IRowsetLocate` 라는 속성이 설정 되어 있는지 확인 합니다. OLE DB에는 행 집합 개체의 각 선택적 인터페이스에 대 한 속성이 있습니다. 소비자가 이러한 선택적 인터페이스 중 하나를 사용 하려는 경우 속성을 true로 설정 합니다. 그런 다음 공급자는이 속성을 확인 하 고이 속성을 기반으로 특별 한 작업을 수행할 수 있습니다.
 
-구현에서 명령 개체에 대 한 포인터를 사용 하 여 속성을 가져옵니다. `pThis` 포인터는 행 집합이 나 명령 클래스를 나타냅니다. 으로이 작업에 전달 해야 하는 템플릿을 사용 하므로 여기에 **void** 포인터 또는 코드는 컴파일되지 않습니다.
+구현에서 명령 개체에 대 한 포인터를 사용 하 여 속성을 가져옵니다. `pThis` 포인터는 행 집합 또는 명령 클래스를 나타냅니다. 여기에서 템플릿을 사용 하므로이를 **void** 포인터로 전달 하거나 코드가 컴파일되지 않습니다.
 
-열 정보를 보유할 정적 배열을 지정 합니다. 소비자는 책갈피 열을 표시 하려고 하지 않습니다, 배열의 항목 낭비 됩니다. 이 배열에 동적으로 할당할 수 있습니다 하지만을 제대로 삭제 되도록 해야 합니다. 이 예제에서는 정의 하 고 정보 배열에 삽입할 ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX 매크로 사용 합니다. 매크로를 추가할 수 있습니다 합니다 *사용자 지정*RS 합니다. 다음 코드 에서처럼 H 파일:
+열 정보를 저장할 정적 배열을 지정 합니다. 소비자가 책갈피 열을 원하지 않는 경우 배열의 항목이 낭비 됩니다. 이 배열을 동적으로 할당할 수 있지만 제대로 소멸 해야 합니다. 이 예제에서는 매크로 ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX를 사용 하 여 배열에 정보를 삽입 합니다. *사용자 지정*RS에 매크로를 추가할 수 있습니다. 다음 코드와 같이 H 파일을 표시 합니다.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
 ```
 
-소비자에서 코드를 테스트 하려면 몇 가지 변경 하 여 `OnRun` 처리기입니다. 함수에 첫 번째 변경 속성이 속성 집합에 추가 하는 코드를 추가 하는 경우 코드 집합을 `DBPROP_IRowsetLocate` 속성을 true로 따라서 공급자 책갈피 열 한다고 지시 합니다. `OnRun` 처리기 코드는 다음과 같이 표시 됩니다.
+소비자의 코드를 테스트 하려면 `OnRun` 처리기를 몇 가지 변경 해야 합니다. 함수를 처음 변경 하면 속성 집합에 속성을 추가 하는 코드를 추가 하는 것입니다. 이 코드는 `DBPROP_IRowsetLocate` 속성을 true로 설정 하 여 책갈피 열을 제공 하도록 공급자에 게 지시 합니다. `OnRun` 처리기 코드는 다음과 같이 표시 되어야 합니다.
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -235,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-**하는 동안** 루프를 호출 하도록 코드를 포함 합니다 `Compare` 에서 메서드를 `IRowsetLocate` 인터페이스입니다. 정확히 동일한 책갈피를 비교 하는 때문에 항상 코드를 전달 해야 합니다. 또한 한 책갈피를 임시 변수에 저장 후 사용할 수 있도록 합니다 **하는 동안** 호출 완료 루프는 `MoveToBookmark` 소비자 템플릿에 함수. 합니다 `MoveToBookmark` 함수 호출을 `GetRowsAt` 에서 메서드 `IRowsetLocate`합니다.
+**While** 루프에는 `IRowsetLocate` 인터페이스에서 `Compare` 메서드를 호출 하는 코드가 포함 되어 있습니다. 정확히 동일한 책갈피를 비교 하 고 있으므로 항상 코드를 전달 해야 합니다. 또한 **while** 루프가 완료 된 후 소비자 템플릿에서 `MoveToBookmark` 함수를 호출 하는 데 사용할 수 있도록 임시 변수에 하나의 책갈피를 저장 합니다. `MoveToBookmark` 함수는 `IRowsetLocate`의 `GetRowsAt` 메서드를 호출 합니다.
 
-소비자에서 사용자 레코드를 업데이트 해야 합니다. 책갈피 및 COLUMN_MAP에 항목을 처리 하는 클래스에 항목을 추가 합니다.
+또한 소비자의 사용자 레코드를 업데이트 해야 합니다. 클래스에 항목을 추가 하 여 COLUMN_MAP에서 책갈피와 항목을 처리 합니다.
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -262,8 +262,8 @@ END_ACCESSOR_MAP()
 };
 ```
 
-빌드 및 사용 하 여 공급자를 실행할 수 있어야 코드를 업데이트 한 경우는 `IRowsetLocate` 인터페이스입니다.
+코드를 업데이트 하면 `IRowsetLocate` 인터페이스를 사용 하 여 공급자를 빌드하고 실행할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [고급 공급자 기술](../../data/oledb/advanced-provider-techniques.md)

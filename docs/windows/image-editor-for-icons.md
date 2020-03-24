@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 47798b5d628484482dffdc963d6e8c7a809f42ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168018"
 ---
 # <a name="image-editor-for-icons-c"></a>아이콘 (C++)에 대 한 이미지 편집기
 
@@ -55,7 +55,7 @@ ms.locfileid: "79443758"
 > [!NOTE]
 > **이미지 편집기**를 사용 하 여 32 비트 이미지를 볼 수 있지만 편집할 수는 없습니다.
 
-또한 **이미지 편집기** 와 [바이너리 편집기](binary-editor.md) 를 사용 하 여 관리 되는 프로젝트의 리소스 파일 작업을 수행할 수 있습니다. 편집하고자 하는 관리되는 모든 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함 된 리소스 편집을 지원 하지 않습니다.
+또한 **이미지 편집기** 와 [바이너리 편집기](binary-editor.md) 를 사용 하 여 관리 되는 프로젝트의 리소스 파일 작업을 수행할 수 있습니다. 편집할 관리되는 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함 된 리소스 편집을 지원 하지 않습니다.
 
 새 그래픽 리소스를 만들 뿐 아니라 편집용으로 [기존 이미지를 가져온](../windows/how-to-copy-resources.md#import-and-export-resources) 다음 프로젝트에 추가할 수 있습니다. 프로젝트의 일부가 아닌 이미지를 열고 편집 하 여 [독립 실행형 이미지를 편집할](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)수도 있습니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "79443758"
 
 이미지 **편집기** 가 활성화 된 경우에만 표시 되는 **이미지** 메뉴에는 이미지 편집, 색상표 관리 및 **이미지 편집기** 창 옵션 설정에 대 한 명령이 있습니다. 또한 아이콘 및 커서로 작업할 때 장치 이미지를 사용 하기 위한 명령을 사용할 수 있습니다.
 
-|명령|Description|
+|명령|설명|
 |---|---|
 |**색 반전**|색을 반전 합니다.|
 |**좌우 대칭**|이미지나 선택 영역을 좌우 대칭 이동합니다.|
@@ -90,7 +90,7 @@ ms.locfileid: "79443758"
 
 **그리드 설정** 대화 상자를 사용 하 여 이미지에 대 한 그리드 설정을 지정 하 고 편집 된 이미지 위에 눈금선을 표시할 수 있습니다. 선은 이미지를 편집 하는 데 유용 하지만 이미지 자체의 일부로 저장 되지 않습니다.
 
-|속성|Description|
+|속성|설명|
 |---|---|
 |**픽셀 그리드**|이 확인란을 선택 하면 **이미지 편집기**에서 각 픽셀 주위에 표가 표시 됩니다.<br/><br/>표는 4 × 이상 해상도로만 표시 됩니다.|
 |**타일 그리드**|이를 선택 하면 표 간격 값으로 지정 된 **이미지 편집기**의 픽셀 블록 주위에 표가 표시 됩니다.|
@@ -136,7 +136,7 @@ ms.locfileid: "79443758"
 
 이 대화 상자에 액세스 하려면 **텍스트 도구** 대화 상자에서 **글꼴** 단추를 선택 합니다. 사용할 수 있는 속성은 다음과 같습니다.
 
-|속성|Description|
+|속성|설명|
 |---|---|
 |**글꼴**|사용 가능한 글꼴을 나열 합니다.|
 |**글꼴 스타일**|지정 된 글꼴에 사용할 수 있는 스타일을 나열 합니다.|
@@ -212,7 +212,7 @@ Windows 응용 프로그램의 아이콘에 텍스트를 추가 하 고 텍스�
 
 ## <a name="requirements"></a>요구 사항
 
-None
+없음
 
 ## <a name="see-also"></a>참고 항목
 

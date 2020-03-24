@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169333"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>인라인 어셈블리에서 레이블로 점프
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-때문에 **종료** 이름인 C 라이브러리 함수의이 코드 이동 발생할 수 있습니다 합니다 **종료** 함수 대신 원하는 위치로 합니다.
+**Exit** 는 C 라이브러리 함수의 이름이 기 때문에이 코드로 인해 원하는 위치가 아닌 **종료** 함수로 이동할 수 있습니다.
 
 MASM 프로그램에서 달러 기호(`$`)는 현재 위치 카운터의 역할을 합니다. 이는 현재 어셈블리 되고 있는 명령에 대한 레이블로서 `__asm` 블록에서 긴 조건 점프를 만드는 데 주로 사용됩니다.
 
@@ -81,6 +81,6 @@ farlabel:
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

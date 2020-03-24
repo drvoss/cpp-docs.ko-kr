@@ -6,18 +6,18 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170581"
 ---
 # <a name="c-constant-expressions"></a>C++ 상수 식
 
-*상수* 값은 변경되지 않는 값입니다. C++에서는 개체를 수정할 수 없음을 나타내는 의도를 표현하고 해당 의도를 적용할 수 있는 두 가지 키워드를 제공합니다.
+*상수* 값은 변경 되지 않습니다. C++에서는 개체를 수정할 수 없음을 나타내는 의도를 표현하고 해당 의도를 적용할 수 있는 두 가지 키워드를 제공합니다.
 
-C++에서는 다음 선언에 대해 상수 식(상수로 계산되는 식)이 필요합니다.
+C ++에서는 다음 선언에 대해 상수 식(상수로 계산되는 식)이 필요합니다.
 
 - 배열 범위
 
@@ -35,7 +35,7 @@ C++에서는 다음 선언에 대해 상수 식(상수로 계산되는 식)이 �
 
 - 상수 식을 사용하여 초기화되며 const로 선언된 값
 
-- **sizeof** expressions
+- **sizeof** 식
 
 비정수 상수는 명시적이거나 암시적으로 상수 식에 사용할 수 있는 정수 계열 형식으로 변환해야 합니다. 따라서 다음 코드를 사용할 수 있습니다.
 
@@ -44,7 +44,7 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-상수 식에서는 정수 계열 형식에 대한 명시적 변환이 적합합니다. **sizeof** 연산자의 피연산자로 사용되는 경우를 제외하고 다른 모든 형식과 파생 형식은 적합하지 않습니다.
+상수 식에서는 정수 계열 형식에 대 한 명시적 변환이 적합 합니다. **sizeof** 연산자의 피연산자로 사용 되는 경우를 제외 하 고 다른 모든 형식과 파생 형식은 적합 하지 않습니다.
 
 쉼표 연산자와 할당 연산자를 상수 식에 사용할 수 없습니다.
 

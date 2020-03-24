@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 5694c5175ff23952c601884243b428a842278b7d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6caf5283aea848186c8bd6f9dd2009bb8d8ee8b5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167630"
 ---
 # <a name="deprecated-pragma"></a>deprecated pragma
 
@@ -29,7 +29,7 @@ ms.locfileid: "79446481"
 
 컴파일러가 **사용 되지 않는** pragma로 지정 된 식별자를 발견 하면 컴파일러 경고 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)이 발생 합니다.
 
-매크로 이름을 사용하지 않을 수 있습니다. 매크로 이름을 따옴표로 감싸면 매크로가 적용됩니다.
+매크로 이름을 사용하지 않을 수 있습니다. 매크로 이름을 따옴표로 묶지 않으면 매크로 확장이 발생합니다.
 
 **사용 되지** 않는 pragma는 일치 하는 모든 식별자에 대해 작동 하 고 서명을 고려 하지 않으므로 오버 로드 된 함수의 사용 중단 특정 버전을 사용 하는 것이 가장 적합 한 옵션이 아닙니다. 범위 안에 함수 이름이 일치한다면 경고가 발생합니다.
 
@@ -56,7 +56,7 @@ int main() {
 }
 ```
 
-다음 샘플에서는 클래스X를 사용하지 말것을 권장하는 방법을 보여 줍니다.
+다음 샘플에서는 클래스를 사용하지 않는 방법을 보여 줍니다.
 
 ```cpp
 // pragma_directive_deprecated2.cpp

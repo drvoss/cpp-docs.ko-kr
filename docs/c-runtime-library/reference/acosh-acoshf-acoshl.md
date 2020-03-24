@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170360"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -64,20 +64,20 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>반환 값
 
-**Acosh** 함수는 *x*의 역 하이퍼볼릭 코사인 (원호 하이퍼볼릭 코사인)을 반환 합니다. 이러한 함수는 도메인 *x* ≥ 1에서 유효 합니다. *X* 가 1 `errno` 보다 작은 경우는로 `EDOM` 설정 되 고 결과는 quiet NaN입니다. *X* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
+**Acosh** 함수는 *x*의 역 하이퍼볼릭 코사인 (원호 하이퍼볼릭 코사인)을 반환 합니다. 이러한 함수는 도메인 *x* ≥ 1에서 유효 합니다. *X* 가 1 보다 작은 경우 `errno` `EDOM`로 설정 되 고 결과가 자동 NaN이 됩니다. *X* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
 
 |입력|SEH 예외|`_matherr` 예외|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|없음|없음|
-|*x* < 1|없음|없음|
+|± QNAN, IND, INF|none|none|
+|*x* < 1|none|none|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 를 사용 하 C++는 경우 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **acosh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **acosh** 는 항상 **double**을 사용 하 고 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
@@ -111,7 +111,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>

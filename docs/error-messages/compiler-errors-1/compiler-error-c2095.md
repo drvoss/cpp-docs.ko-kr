@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2095
 ms.assetid: 44f8ada1-974f-4e81-a408-33ac6695aa53
-ms.openlocfilehash: 192e6b4de596ddffb39ba20f60217904cd335c9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 327f4406be241f3aff89fd357fc103398401ea8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207664"
 ---
 # <a name="compiler-error-c2095"></a>컴파일러 오류 C2095
 
-'function': 실제 매개 변수는 'void' 형식: 'number' 매개 변수
+' function ': 실제 매개 변수의 형식은 ' void '입니다. ' number ' 매개 변수를 포함 합니다.
 
-함수에 전달 된 매개 변수는 형식 `void`, 허용 되지 않습니다. Void에 대 한 포인터를 사용 하 여 ( `void *`) 대신 합니다.
+함수에 전달 된 매개 변수가 허용 되지 않는 형식 `void`입니다. 대신 void (`void *`)에 대 한 포인터를 사용 합니다.
 
-합니다 `number` 매개 변수를 나타내는 `void`합니다.
+`number`는 `void`매개 변수를 나타냅니다.

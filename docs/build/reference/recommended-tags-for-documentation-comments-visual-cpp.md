@@ -1,17 +1,17 @@
 ---
-title: 문서 주석에 대 한 권장 태그 (C++ 문서 주석)
+title: 문서 주석에 대 한 권장 태그C++ (문서 주석)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168865"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>문서 주석에 대한 권장 태그
 
-MSVC 컴파일러는 코드에서 문서 주석을 처리할 만들고 각 컴파일 대상에 대 한.xdc 파일 및 xdcmake.exe.xdc 파일을.xml 파일로 처리 됩니다. 문서를 만들기 위해 .xml 파일을 처리하는 것은 사이트에서 구현해야 하는 세부 사항입니다.
+MSVC 컴파일러는 코드의 문서 주석을 처리 하 고 각 compiland에 대해 .xdc 파일을 만들며, xdcmake은 .xdc 파일을 .xml 파일로 처리 합니다. 문서를 만들기 위해 .xml 파일을 처리하는 것은 사이트에서 구현해야 하는 세부 사항입니다.
 
 태그는 형식, 형식 멤버와 같은 구문에서 처리됩니다.
 
@@ -33,8 +33,8 @@ MSVC 컴파일러는 코드에서 문서 주석을 처리할 만들고 각 컴�
 
 1. 컴파일러가 구문을 확인합니다.
 
-현재 릴리스에서 MSVC 컴파일러를 지원 하지 않습니다 `<paramref>`, 다른 Visual Studio 컴파일러에서 지원 되는 태그입니다. Visual C++는 이후 릴리스에서 `<paramref>`를 지원할 수 있습니다.
+현재 릴리스에서는 MSVC 컴파일러는 다른 Visual Studio 컴파일러에서 지 원하는 태그 `<paramref>`지원 하지 않습니다. Visual C++는 이후 릴리스에서 `<paramref>`를 지원할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)
