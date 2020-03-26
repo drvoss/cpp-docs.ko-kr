@@ -30,12 +30,12 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168801"
 ---
 # <a name="c-assignment-operators"></a>C 할당 연산자
 
@@ -45,10 +45,10 @@ ms.locfileid: "50657030"
 
 *assignment-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*단항 식* *대입 연산자* *대입 식*
 
 *assignment-operator*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=%=** **+=-=** **\<\<** **=** **>>=** **&=** **>>=&=** **^=** **|=**
 
 C의 할당 연산자는 단일 연산에서 값을 변형 및 할당할 수 있습니다. C에서는 다음과 같은 할당 연산자를 제공합니다.
 
