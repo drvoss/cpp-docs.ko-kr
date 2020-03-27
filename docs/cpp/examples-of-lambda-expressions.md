@@ -4,22 +4,22 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 07c0f6b12c3c6a5dd0c3273acccbaacbc0db08a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189041"
 ---
 # <a name="examples-of-lambda-expressions"></a>람다 식의 예
 
-이 문서에서는 프로그램에 람다 식을 사용하는 방법을 보여 줍니다. 람다 식의 개요를 보려면 [람다 식](../cpp/lambda-expressions-in-cpp.md)합니다. 람다 식의 구조에 대 한 자세한 내용은 참조 하세요. [람다 식 구문](../cpp/lambda-expression-syntax.md)합니다.
+이 문서에서는 프로그램에 람다 식을 사용하는 방법을 보여 줍니다. 람다 식에 대 한 개요는 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조 하세요. 람다 식의 구조에 대 한 자세한 내용은 [람다 식 구문](../cpp/lambda-expression-syntax.md)을 참조 하세요.
 
-##  <a name="declaringLambdaExpressions"></a> 람다 식 선언
+##  <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>람다 식 선언
 
-### <a name="example-1"></a>예제 1
+### <a name="example-1"></a>예 1
 
-람다 식을 입력 하기 때문에 할당할 수 있습니다 하는 **자동** 변수 또는 [함수](../standard-library/function-class.md) 다음과 같이 개체:
+람다 식이 형식화 되어 있기 때문에 다음과 같이 **auto** 변수나 [함수](../standard-library/function-class.md) 개체에 할당할 수 있습니다.
 
 ### <a name="code"></a>코드
 
@@ -53,15 +53,15 @@ int main()
 7
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-자세한 내용은 [자동](../cpp/auto-cpp.md), [function 클래스](../standard-library/function-class.md), 및 [함수를 호출할](../cpp/function-call-cpp.md)합니다.
+자세한 내용은 [auto](../cpp/auto-cpp.md), [Function 클래스](../standard-library/function-class.md)및 [함수 호출](../cpp/function-call-cpp.md)을 참조 하세요.
 
 람다 식은 함수의 본문에서 대부분 선언되지만 변수를 초기화할 수 있는 어느 곳에서나 선언할 수 있습니다.
 
-### <a name="example-2"></a>예제 2
+### <a name="example-2"></a>예 2
 
-Microsoft C++ 식을 호출할 때 대신 식을 선언할 때 컴파일러는 캡처된 변수에 람다 식을 바인딩합니다. 다음 예제에서는 변수 지역 변수 `i`값과 참조로서 변수 `j`를 캡처하는 람다 식을 보여 줍니다. 람다 식은 `i`를 값으로 캡처하기 때문에 프로그램에서 `i` 이상을 다시 할당하면 식의 결과에 영향을 주지 않습니다. 그러나 람다 식을 `j`를 참조로 캡처하기 때문에 `j`를 다시 할당하면 식의 결과에 영향을 주지 않습니다.
+식이 호출 C++ 될 때 대신 식이 선언 될 때 Microsoft 컴파일러는 람다 식을 캡처된 변수에 바인딩합니다. 다음 예제에서는 변수 지역 변수 `i`값과 참조로서 변수 `j`를 캡처하는 람다 식을 보여 줍니다. 람다 식은 `i`를 값으로 캡처하기 때문에 프로그램에서 `i` 이상을 다시 할당하면 식의 결과에 영향을 주지 않습니다. 그러나 람다 식을 `j`를 참조로 캡처하기 때문에 `j`를 다시 할당하면 식의 결과에 영향을 주지 않습니다.
 
 ### <a name="code"></a>코드
 
@@ -99,11 +99,11 @@ int main()
 
 [[이 문서의 내용](#top)]
 
-##  <a name="callingLambdaExpressions"></a> 람다 식 호출
+##  <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>람다 식 호출
 
-다음 코드 조각과 같이 람다 식을 즉시 호출할 수 있습니다. 두 번째 조각은 람다에 인수로 전달 하는 방법을 보여 줍니다 C++ 와 같은 표준 라이브러리 알고리즘 `find_if`합니다.
+다음 코드 조각과 같이 람다 식을 즉시 호출할 수 있습니다. 두 번째 코드 조각에서는 람다를 `find_if`와 같은 표준 라이브러리 알고리즘 C++ 에 인수로 전달 하는 방법을 보여 줍니다.
 
-### <a name="example-1"></a>예제 1
+### <a name="example-1"></a>예 1
 
 이 예제에서는 두 정수의 합을 반환하고 식 인수를 사용하여 인수 `5` 및 `4`로 식을 즉시 호출하는 람다 식을 선언합니다.
 
@@ -128,9 +128,9 @@ int main()
 9
 ```
 
-### <a name="example-2"></a>예제 2
+### <a name="example-2"></a>예 2
 
-이 예제에서는 람다 식을 `find_if` 함수에 대한 인수로 전달합니다. 람다 식을 반환 **true** 해당 매개 변수가 짝수 이면 합니다.
+이 예제에서는 람다 식을 `find_if` 함수에 대한 인수로 전달합니다. 람다 식의 매개 변수 값이 짝수가 면 **true** 를 반환 합니다.
 
 ### <a name="code"></a>코드
 
@@ -173,13 +173,13 @@ int main()
 The first even number in the list is 42.
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-에 대 한 자세한 내용은 합니다 `find_if` 함수를 참조 하세요 [find_if](../standard-library/algorithm-functions.md#find_if)합니다. 에 대 한 자세한 내용은 C++ 공용 알고리즘을 수행 하는 표준 라이브러리 함수를 참조 하세요 [ \<알고리즘 >](../standard-library/algorithm.md)합니다.
+`find_if` 함수에 대 한 자세한 내용은 [find_if](../standard-library/algorithm-functions.md#find_if)을 참조 하세요. 일반적인 알고리즘을 수행 하 C++ 는 표준 라이브러리 함수에 대 한 자세한 내용은 [\<algorithm >](../standard-library/algorithm.md)을 참조 하세요.
 
 [[이 문서의 내용](#top)]
 
-##  <a name="nestingLambdaExpressions"></a> 람다 식 중첩
+##  <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>람다 식 중첩
 
 ### <a name="example"></a>예제
 
@@ -211,17 +211,17 @@ int main()
 13
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 이 예제에서 `[](int y) { return y * 2; }`는 중첩된 람다 식입니다.
 
 [[이 문서의 내용](#top)]
 
-##  <a name="higherOrderLambdaExpressions"></a> 고차 람다 함수
+##  <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>고차 람다 함수
 
 ### <a name="example"></a>예제
 
-대부분의 프로그래밍 언어의 개념을 지원 한 *고차 함수입니다.* 고차 함수는 람다 식으로, 다른 람다 식을 인수로 취하거나 람다 식을 반환합니다. 사용할 수는 [함수](../standard-library/function-class.md) 클래스를 사용 하는 C++ 동작에 람다 식을 같은 고차 함수입니다. 다음 예제에서는 `function` 개체를 반환하는 람다 식과 인수로서 `function` 개체를 취하는 람다 식을 보여 줍니다.
+많은 프로그래밍 언어에서 고차 함수의 개념을 지원 *합니다.* 고차 함수는 람다 식으로, 다른 람다 식을 인수로 취하거나 람다 식을 반환합니다. [함수](../standard-library/function-class.md) 클래스를 사용 하 여 C++ 람다 식이 상위 함수 처럼 동작 하도록 할 수 있습니다. 다음 예제에서는 `function` 개체를 반환하는 람다 식과 인수로서 `function` 개체를 취하는 람다 식을 보여 줍니다.
 
 ### <a name="code"></a>코드
 
@@ -266,14 +266,14 @@ int main()
 
 [[이 문서의 내용](#top)]
 
-##  <a name="methodLambdaExpressions"></a> 함수에서 람다 식 사용
+##  <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>함수에서 람다 식 사용
 
 ### <a name="example"></a>예제
 
-함수의 본문에서 람다 식을 사용할 수 있습니다. 람다 식은 바깥쪽 함수에서 액세스할 수 있는 모든 함수 또는 데이터 멤버에 액세스할 수 있습니다. 명시적 또는 암시적으로 캡처할 수는 **이** 포인터 바깥쪽 클래스의 함수 및 데이터 멤버에 대 한 액세스를 제공 합니다.
-**Visual Studio 2017 버전 15.3 이상** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 캡처 **이렇게** 값별로 (`[*this]`) 람다를 사용할 경우 비동기 또는 병렬 작업의 원본 개체 범위를 벗어난 후 코드를 실행할 수 있습니다 위치 합니다.
+함수의 본문에서 람다 식을 사용할 수 있습니다. 람다 식은 바깥쪽 함수에서 액세스할 수 있는 모든 함수 또는 데이터 멤버에 액세스할 수 있습니다. 바깥쪽 클래스의 함수 및 데이터 멤버에 대 한 액세스를 제공 하기 위해 **이** 포인터를 명시적 또는 암시적으로 캡처할 수 있습니다.
+**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): 원래 개체가 범위를 벗어난 후 코드가 실행 될 수 있는 비동기 또는 병렬 작업에서 람다를 사용 하는 경우 값으로 **이** 를 캡처합니다 (`[*this]`).
 
-사용할 수는 **이** 포인터를 함수를 다음과 같이 명시적으로:
+다음과 같이 함수에서 명시적으로 **이** 포인터를 사용할 수 있습니다.
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-캡처할 수도 있습니다는 **이** 포인터 암시적으로:
+**이** 포인터를 암시적으로 캡처할 수도 있습니다.
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -353,17 +353,17 @@ int main()
 12
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-`ApplyScale` 함수는 람다 식을 사용하여 `vector` 개체에서 스케일 값 및 각 요소의 곱을 인쇄합니다. 람다 식에서 암시적으로 캡처합니다 **이** 액세스할 수 있도록는 `_scale` 멤버입니다.
+`ApplyScale` 함수는 람다 식을 사용하여 `vector` 개체에서 스케일 값 및 각 요소의 곱을 인쇄합니다. 람다 식은 `_scale` 멤버에 액세스할 수 있도록 **이** 를 암시적으로 캡처합니다.
 
 [[이 문서의 내용](#top)]
 
-##  <a name="templateLambdaExpressions"></a> 템플릿이 있는 람다 식 사용
+##  <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>템플릿에 람다 식 사용
 
 ### <a name="example"></a>예제
 
-람다 식이 형식화되기 때문에 C++ 템플릿과 함께 사용할 수 있습니다. 다음 예제에서는 `negate_all` 및 `print_all` 함수를 보여 줍니다. `negate_all` 함수를 단항 적용 **operator-** 의 각 요소에는 `vector` 개체입니다. `print_all` 함수는 `vector` 개체의 각 요소를 콘솔에 인쇄합니다.
+람다 식이 형식화되기 때문에 C++ 템플릿과 함께 사용할 수 있습니다. 다음 예제에서는 `negate_all` 및 `print_all` 함수를 보여 줍니다. `negate_all` 함수는 `vector` 개체의 각 요소에 단항 **연산자** 를 적용 합니다. `print_all` 함수는 `vector` 개체의 각 요소를 콘솔에 인쇄합니다.
 
 ### <a name="code"></a>코드
 
@@ -417,17 +417,17 @@ After negate_all():
 -56
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-에 대 한 자세한 내용은 C++ 을 참조 하십시오 [템플릿](../cpp/templates-cpp.md)합니다.
+템플릿에 대 한 C++ 자세한 내용은 [템플릿](../cpp/templates-cpp.md)을 참조 하세요.
 
 [[이 문서의 내용](#top)]
 
-##  <a name="ehLambdaExpressions"></a> 예외 처리
+##  <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>예외 처리
 
 ### <a name="example"></a>예제
 
-람다 식의 본문은 SEH(구조적 예외 처리)와 C++ 예외 처리에 대한 규칙을 따릅니다. 람다 식의 본문에는 양각된 예외를 처리하거나 예외 처리를 포함하는 범위를 지연시킬 수 있습니다. 다음 예제에서는 합니다 **for_each** 함수 및 람다 식을 입력을 `vector` 다른 값을 사용 하 여 개체입니다. 사용 된 **시도**/**catch** 첫 번째 벡터에 대 한 잘못 된 액세스를 처리 하는 블록입니다.
+람다 식의 본문은 SEH(구조적 예외 처리)와 C++ 예외 처리에 대한 규칙을 따릅니다. 람다 식의 본문에는 양각된 예외를 처리하거나 예외 처리를 포함하는 범위를 지연시킬 수 있습니다. 다음 예제에서는 **for_each** 함수 및 람다 식을 사용 하 여 `vector` 개체를 다른 값으로 채웁니다. **Try**/**catch** 블록을 사용 하 여 첫 번째 벡터에 대 한 잘못 된 액세스를 처리 합니다.
 
 ### <a name="code"></a>코드
 
@@ -473,13 +473,13 @@ int main()
 Caught 'invalid vector<T> subscript'.
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-예외 처리에 대 한 자세한 내용은 참조 하세요. [예외 처리](../cpp/exception-handling-in-visual-cpp.md)합니다.
+예외 처리에 대 한 자세한 내용은 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조 하세요.
 
 [[이 문서의 내용](#top)]
 
-##  <a name="managedLambdaExpressions"></a> 관리 되는 형식으로 람다 식을 사용 하 여 (C++/CLI)
+##  <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>관리 되는 형식으로 람다 식C++사용 (/cli)
 
 ### <a name="example"></a>예제
 
@@ -510,16 +510,16 @@ int main()
 Hello!
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-STL/CLR 라이브러리에서 람다 식을 사용할 수도 있습니다. 자세한 내용은 [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)합니다.
+STL/CLR 라이브러리에서 람다 식을 사용할 수도 있습니다. 자세한 내용은 [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)를 참조 하세요.
 
 > [!IMPORTANT]
->  람다 식에서 이러한 공용 언어 런타임 (CLR) 관리 되는 엔터티에서 지원 되지 않습니다: **ref 클래스**, **ref 구조체**를 **값 클래스**, 및 **값 구조체**.
+>  이러한 CLR (공용 언어 런타임)의 관리 되는 엔터티에서는 람다 식이 지원 되지 않습니다. **ref 클래스**, **ref 구조체**, **값 클래스**및 **값 구조체**.
 
 [[이 문서의 내용](#top)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [람다 식](../cpp/lambda-expressions-in-cpp.md)<br/>
 [람다 식 구문](../cpp/lambda-expression-syntax.md)<br/>
