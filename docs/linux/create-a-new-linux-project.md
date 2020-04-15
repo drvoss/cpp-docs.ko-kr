@@ -3,12 +3,12 @@ title: Visual Studio에서 새로운 C++ Linux 프로젝트 만들기
 ms.date: 10/24/2019
 description: Visual Studio에서 새로운 MSBuild 기반 Linux 프로젝트를 만듭니다.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 5d5fa67566d86edb2ed0389fdbe38866b47e2211
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1e79dd50756b71aabae7ccec75e57178898e7720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364346"
 ---
 # <a name="create-a-new-linux-project"></a>새 Linux 프로젝트 만들기
 

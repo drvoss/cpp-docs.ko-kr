@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079245"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366792"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 버전의 C++ 도구 및 기능
 
@@ -41,9 +41,11 @@ Visual Studio에는 C++ 개발을 위한 다음과 같은 워크로드가 포함
 ### <a name="desktop-development-with-c"></a>C++를 사용한 데스크톱 개발
 
 Included:
+
 - C++ 핵심 데스크톱 기능
 
 선택적 구성 요소:
+
 - MSVC v142 - VS 2019 C++ x64/x86 빌드 도구(v14.21)
 - Windows 10 SDK(10.0.17763.0)
 - Just-In-Time 디버거
@@ -68,17 +70,20 @@ Included:
 ### <a name="linux-development-with-c"></a>C++를 사용한 Linux 개발
 
 Included:
+
 - C++ 핵심 기능
 - Windows 유니버설 C 런타임
 - Linux 개발용 C++
 
 선택적 구성 요소:
+
 - Linux용 C++ CMake 도구
 - Embedded 및 IoT 개발 도구
 
 ### <a name="universal-windows-platform-development"></a>유니버설 Windows 플랫폼 개발
 
 Included:
+
 - Visual Studio용 Blend
 - .NET 네이티브 및 .NET Standard
 - NuGet 패키지 관리자
@@ -86,6 +91,7 @@ Included:
 - Windows 10 SDK(10.0.17763.0)
 
 선택적 구성 요소:
+
 - IntelliCode
 - IntelliTrace(Enterprise만 해당)
 - USB 디바이스 연결
@@ -100,12 +106,14 @@ Included:
 ### <a name="c-game-development"></a>C++ 게임 개발
 
 Included:
+
 - C++ 핵심 기능
 - Windows 유니버설 C 런타임
 - C++ 2019 재배포 가능 업데이트
 - MSVC v142 - VS 2019 C++ x64/x86 빌드 도구(v14.21)
 
 선택적 구성 요소:
+
 - C++ 프로파일링 도구
 - Windows 10 SDK(10.0.17763.0)
 - IntelliCode
@@ -120,10 +128,12 @@ Included:
 ### <a name="mobile-development-with-c"></a>C++를 사용한 모바일 개발
 
 Included:
+
 - C++ 핵심 기능
 - Android SDK 설치(API 레벨 25)(C++를 통해 모바일 개발을 할 수 있도록 로컬 설치)
 
 선택적 구성 요소:
+
 - Android NDK(R16B)
 - Apache Ant(1.9.3)
 - C++ Android 개발 도구
@@ -172,6 +182,7 @@ Included:
 설치한 워크로드에 따라 다음 프로젝트 템플릿을 사용할 수 있습니다.
 
 Windows 데스크톱:
+
 - 빈 프로젝트
 - 콘솔 앱
 - Windows 데스크톱 마법사
@@ -192,6 +203,7 @@ Windows 데스크톱:
 - Google Test
 
 유니버설 Windows 플랫폼(C++/CX):
+
 - 새 응용 프로그램
 - DirectX 11 및 XAML 앱
 - DirectX 11 앱
@@ -203,6 +215,7 @@ Windows 데스크톱:
 - Windows 애플리케이션 패키징 프로젝트
 
 Linux:
+
 - 콘솔 앱(Linux)
 - 빈 프로젝트(Linux)
 - Raspberry Pi Blink
