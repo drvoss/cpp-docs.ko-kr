@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509442"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316622"
 ---
 # <a name="contributing"></a>참여
 
@@ -14,11 +14,11 @@ Visual C++ 설명서에 기여하는 데 관심을 가져주셔서 감사합니�
 
 이 항목에서는 다음을 다룹니다.
 
-* [기여하는 프로세스](#process-for-contributing)
-* [권고 및 금지](#dos-and-donts)
-* [문서 빌드](#building-the-docs)
-* [샘플에 기여](#contributing-to-samples)
-* [기여자 라이선스 계약](#contributor-license-agreement)
+- [기여하는 프로세스](#process-for-contributing)
+- [권고 및 금지](#dos-and-donts)
+- [문서 빌드](#building-the-docs)
+- [샘플에 기여](#contributing-to-samples)
+- [기여자 라이선스 계약](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>기여하는 프로세스
 
