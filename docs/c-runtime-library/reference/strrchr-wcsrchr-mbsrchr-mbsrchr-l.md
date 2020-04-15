@@ -1,11 +1,13 @@
 ---
 title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
+- _o__mbsrchr
+- _o__mbsrchr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0aaa670cb6aa5af9e6f8a28234ba5c442d2f633
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365052"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -117,37 +120,39 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*Str*<br/>
 검색할 Null 종료 문자열입니다.
 
-*c*<br/>
+*C*<br/>
 찾을 문자입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-*Str*에서 *c* 의 마지막 항목에 대 한 포인터를 반환 하거나 *c* 를 찾을 수 없는 경우 NULL을 반환 합니다.
+*c를*찾을 수 없는 경우 str 에서 *c* 또는 NULL의 마지막 발생에 대 한 *포인터를* 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-함수 `strrchr` 는 *str*에서 *c* ( **char**로 변환)의 마지막 항목을 찾습니다. 검색에는 종료형 null 문자를 포함합니다.
+함수는 `strrchr` str에서 **c(char로**변환)의 마지막 발생을 *찾습니다.* *c* 검색에는 종료형 null 문자를 포함합니다.
 
 `wcsrchr` 및 `_mbsrchr` 는 `strrchr`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcsrchr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsrchr`의 인수와 반환 값은 멀티바이트 문자열입니다.
 
-C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 취하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. _CRT_CONST_CORRECT_OVERLOADS 매크로는 이러한 함수의 **const** 및 비**const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. 두 C++ 오버 로드에 대 한 비**const** 동작이 필요한 경우 _CONST_RETURN 기호를 정의 합니다.
+C에서 이러한 함수는 첫 번째 인수에 대한 **const** 포인터를 취합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **const에** 포인터를 취하는 오버로드는 **const에**대한 포인터를 반환합니다. 비**const에** 포인터를 소요 하는 버전은 비**const에**대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS 이러한 함수의 **const** 및**non-const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. C++ 오버로드 모두에 대해**const가** 아닌 동작이 필요한 경우 _CONST_RETURN 기호를 정의합니다.
 
-`_mbsrchr`는 매개 변수의 유효성을 검사합니다. *Str* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 `errno` 실행 하도록 허용한 경우는 EINVAL로 설정 되 `_mbsrchr` 고는 0을 반환 합니다. `strrchr` 및 `wcsrchr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`_mbsrchr`는 매개 변수의 유효성을 검사합니다. *str이* NULL이면 매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 `errno` 경우 EINVAL로 `_mbsrchr` 설정되고 0을 반환합니다. `strrchr` 및 `wcsrchr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-출력 값은 로캘의 LC_CTYPE 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 LC_CTYPE 범주 설정설정의 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하십시오. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
-|**n/a**|**n/a**|`_mbsrchr_l`|**n/a**|
+|**해당 /a**|**해당 /a**|`_mbsrchr_l`|**해당 /a**|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -157,17 +162,17 @@ C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 
 |`wcsrchr`|\<string.h> 또는 \<wchar.h>|
 |`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 `strrchr` 사용 예제는 [strchr](strchr-wcschr-mbschr-mbschr-l.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

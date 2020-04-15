@@ -6,42 +6,42 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8002c16d1cdf5e0683b642001409b6da9c260660
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366467"
 ---
 # <a name="using-image-lists-with-header-controls"></a>이미지 목록과 헤더 컨트롤 함께 사용
 
-헤더 항목에는 머리글 항목에 있는 이미지를 표시할 수가 있습니다. 연결 된 이미지 목록에 저장 된이 이미지는 16 x 16 픽셀 및 목록 뷰 컨트롤에 사용 되는 아이콘 이미지와 동일한 특성이 있습니다. 이 동작을 성공적으로 구현 하려면 먼저 만듭니다 및 이미지 목록을 초기화, 헤더 컨트롤과 목록 연결 하며 다음 이미지를 표시 하는 헤더 항목의 특성을 수정 합니다.
+헤더 항목에는 헤더 항목 내에 이미지를 표시할 수 있습니다. 연결된 이미지 목록에 저장된 이 이미지는 16 x 16 픽셀이며 목록 보기 컨트롤에 사용되는 아이콘 이미지와 동일한 특성을 가짐입니다. 이 동작을 성공적으로 구현하려면 먼저 이미지 목록을 만들고 초기화하고 목록을 헤더 컨트롤과 연결한 다음 이미지를 표시할 헤더 항목의 특성을 수정해야 합니다.
 
-다음 절차에서는 헤더 컨트롤에 대 한 포인터를 사용 하 여 세부 정보를 보여 줍니다 (`m_pHdrCtrl`) 및 이미지 목록에 대 한 포인터 (`m_pHdrImages`).
+다음 절차에서는 헤더 컨트롤()에 대한 포인터와`m_pHdrCtrl`이미지 목록()에`m_pHdrImages`대한 포인터를 사용하여 세부 정보를 보여 줍니다.
 
-### <a name="to-display-an-image-in-a-header-item"></a>헤더 항목의 이미지를 표시 하려면
+### <a name="to-display-an-image-in-a-header-item"></a>헤더 항목에 이미지를 표시하려면
 
-1. 새 이미지 목록을 생성 (또는 기존 이미지 목록 개체를 사용 하 여)를 사용 하는 [CImageList](../mfc/reference/cimagelist-class.md) 결과 포인터를 저장 하는 생성자입니다.
+1. [CImageList](../mfc/reference/cimagelist-class.md) 생성자 사용 하 여 새 이미지 목록을 구성 (또는 기존 이미지 목록 개체를 사용 하 여) 결과 포인터를 저장 합니다.
 
-1. 호출 하 여 새 이미지 목록 개체를 초기화 [CImageList::Create](../mfc/reference/cimagelist-class.md#create)합니다. 다음 코드는이 호출의 한 가지 예입니다.
+1. [CImageList::Create를](../mfc/reference/cimagelist-class.md#create)호출하여 새 이미지 목록 개체를 초기화합니다. 다음 코드는 이 호출의 한 예입니다.
 
    [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
-1. 각 헤더 항목에 대 한 이미지를 추가 합니다. 다음 코드는 두 개의 미리 정의 된 이미지를 추가 합니다.
+1. 각 헤더 항목에 대한 이미지를 추가합니다. 다음 코드는 미리 정의된 두 개의 이미지를 추가합니다.
 
    [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
-1. 헤더 컨트롤에 대 한 호출을 사용 하 여 이미지 목록을 연관 [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)합니다.
+1. 이미지 목록을 헤더 컨트롤과 연결하여 [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)에 대한 호출을 호출합니다.
 
-1. 연결 된 이미지 목록의 이미지를 표시 하려면 머리글 항목을 수정 합니다. 다음 예제에서 첫 번째 이미지를 할당 `m_phdrImages`를 첫 번째 헤더 항목에 `m_pHdrCtrl`입니다.
+1. 헤더 항목을 수정하여 연결된 이미지 목록에서 이미지를 표시합니다. 다음 예제에서는 `m_phdrImages`에서 첫 번째 헤더 항목에 첫 `m_pHdrCtrl`번째 이미지를 할당합니다.
 
    [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
-사용 된 매개 변수 값에 대 한 자세한 내용은 참조는 관련 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)합니다.
+사용되는 매개 변수 값에 대한 자세한 내용은 해당 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)을 참조하십시오.
 
 > [!NOTE]
->  여러 컨트롤 같은 이미지 목록을 사용 하 여는 것이 가능 합니다. 예를 들어 표준 목록 뷰 컨트롤에 있을 수 있습니다 (16 x 16 픽셀 이미지)의 목록 뷰 컨트롤의 작은 아이콘 보기 및 목록 뷰 컨트롤의 헤더 항목에 사용 되는 이미지 목록입니다.
+> 동일한 이미지 목록을 사용하여 여러 컨트롤을 가질 수 있습니다. 예를 들어 표준 목록 보기 컨트롤에는 목록 보기 컨트롤의 작은 아이콘 보기와 목록 뷰 컨트롤의 헤더 항목 모두에서 사용되는 이미지 목록(16 x 16 픽셀 이미지)이 있을 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CHeaderCtrl 사용](../mfc/using-cheaderctrl.md)

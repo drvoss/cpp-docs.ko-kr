@@ -1,10 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957529"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362621"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
-하이퍼볼릭 탄젠트를 계산 합니다.
+쌍곡선 접선을 계산합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -64,23 +66,25 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>반환 값
 
-**Tanh** 함수는 *x*의 하이퍼볼릭 탄젠트를 반환 합니다. 반환되는 오류가 없습니다.
+**탄** 함수는 *x의*쌍곡선 접선을 반환합니다. 반환되는 오류가 없습니다.
 
-|입력|SEH 예외|**Matherr** 발생할|
+|입력|SEH 예외|**마테르 (동음이의)** 예외|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|없음|_DOMAIN|
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **tanh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **tanh** 은 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** 값을 가져가고 반환하는 **tanh의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **tanh는** 항상 **두 배를**가져 와서 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**탄,** **탄프,** **탄흘**|\<math.h>|\<cmath> 또는 \<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -110,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

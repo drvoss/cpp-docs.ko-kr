@@ -5,23 +5,23 @@ helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8901b974d1fb9c9fca434b13700211aab74b60b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444007"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366528"
 ---
 # <a name="using-cheaderctrl"></a>CHeaderCtrl 사용
 
-[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)클래스에서 나타내는 헤더 컨트롤을 사용 하 여 열 형식 목록에 대 한 열 머리글을 표시 합니다. 예를 들어, 헤더 컨트롤은 스프레드시트에서 열 컨트롤을 구현 하는 데 유용 합니다.
+[클래스 CHeaderCtrl로](../mfc/reference/cheaderctrl-class.md)표시되는 헤더 컨트롤을 사용하여 열 목록에 대한 열 헤더를 표시합니다. 예를 들어 헤더 컨트롤은 스프레드시트에서 열 컨트롤을 구현하는 데 유용합니다.
 
-헤더 컨트롤은 일반적으로 "헤더 항목" 이라는 일부로 구분 되며, 각각은 텍스트 또는 숫자의 관련 열에 대 한 제목을 베어링 합니다. 사용자가 설정 하는 스타일에 따라 사용자가 헤더 항목을 조작 하는 데 필요한 다양 한 방법을 제공할 수 있습니다.
+헤더 컨트롤은 일반적으로 "헤더 항목"이라고 하는 부분으로 나뉘며 각 항목은 텍스트 또는 숫자의 관련 열에 대한 제목을 지정합니다. 설정한 스타일에 따라 사용자가 헤더 항목을 조작할 수 있는 여러 가지 직접적인 방법을 제공할 수 있습니다.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) 는 포함 헤더 컨트롤을 제공 하 고 [CListView](../mfc/reference/clistview-class.md) 는 MFC 클래스에서 `CListCtrl`를 캡슐화 합니다. 일반적으로 `CHeaderCtrl`를 사용 하 여 직접 그리려는 목록에 레이블을 추가할 수 있습니다.
+> [CListCtrl은](../mfc/reference/clistctrl-class.md) 포함된 헤더 컨트롤을 제공하며 [CListView는](../mfc/reference/clistview-class.md) MFC 클래스에 캡슐화합니다. `CListCtrl` 일반적으로 직접 그릴 `CHeaderCtrl` 목록에 레이블을 지정하는 데 사용하는 것이 좋습니다.
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>더 알고 싶으신가요?
 
 - [헤더 컨트롤 및 목록 컨트롤](../mfc/header-control-and-list-control.md)
 
@@ -37,7 +37,7 @@ ms.locfileid: "79444007"
 
 - [소유자가 그린 헤더 컨트롤 만들기](../mfc/making-owner-drawn-header-controls.md)
 
-- [헤더 컨트롤 사용](../mfc/working-with-a-header-control.md)
+- [헤더 컨트롤 작업](../mfc/working-with-a-header-control.md)
 
 - [헤더 컨트롤 만들기](../mfc/creating-the-header-control.md)
 

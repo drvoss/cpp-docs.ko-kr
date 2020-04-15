@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459982"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368026"
 ---
 # <a name="time_point-class"></a>time_point 클래스
 
@@ -33,7 +33,7 @@ class time_point;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |`time_point::clock`|템플릿 매개 변수 `Clock`과 동일한 의미입니다.|
 |`time_point::duration`|템플릿 매개 변수 `Duration`과 동일한 의미입니다.|
@@ -42,32 +42,32 @@ class time_point;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[time_point](#time_point)|`time_point` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[max](#max)|`time_point::ref`의 상한을 지정합니다.|
-|[min](#min)|`time_point::ref`의 하한을 지정합니다.|
+|[최대](#max)|`time_point::ref`의 상한을 지정합니다.|
+|[분](#min)|`time_point::ref`의 하한을 지정합니다.|
 |[time_since_epoch](#time_since_epoch)|저장된 `duration` 값을 반환합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[time_point::operator+=](#op_add_eq)|저장된 기간에 지정된 값을 더합니다.|
+|[time_point::연산자+=](#op_add_eq)|저장된 기간에 지정된 값을 더합니다.|
 |[time_point::operator-=](#operator-_eq)|저장된 기간에서 지정된 값을 뺍니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<chrono>
+**헤더:** \<크로노>
 
 **네임스페이스:** std::chrono
 
-## <a name="max"></a>  time_point::max
+## <a name="time_pointmax"></a><a name="max"></a>time_point:최대
 
 형식 `time_point::ref`의 값에 대한 상한을 반환하는 정적 메서드입니다.
 
@@ -75,11 +75,11 @@ class time_point;
 static constexpr time_point max();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실제로 `time_point(duration::max())`를 반환합니다.
 
-## <a name="min"></a>  time_point::min
+## <a name="time_pointmin"></a><a name="min"></a>time_point:분
 
 `time_point::ref` 형식의 값에 대한 하한값을 반환하는 정적 메서드입니다.
 
@@ -87,11 +87,11 @@ static constexpr time_point max();
 static constexpr time_point min();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실제로 `time_point(duration::min())`를 반환합니다.
 
-## <a name="op_add_eq"></a>  time_point::operator+=
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point::연산자+=
 
 저장된 [duration](../standard-library/duration-class.md) 값에 지정된 값을 더합니다.
 
@@ -104,11 +104,11 @@ time_point& operator+=(const duration& Dur);
 *Dur*\
 `duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 더하기가 수행된 후의 `time_point` 개체입니다.
 
-## <a name="operator-_eq"></a>  time_point::operator-=
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point::연산자-=
 
 저장된 [duration](../standard-library/duration-class.md) 값에서 지정된 값을 뺍니다.
 
@@ -121,11 +121,11 @@ time_point& operator-=(const duration& Dur);
 *Dur*\
 `duration` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 빼기가 수행된 후의 `time_point` 개체입니다.
 
-## <a name="time_point"></a>  time_point::time_point 생성자
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>time_point::time_point 생성자
 
 `time_point` 개체를 생성합니다.
 
@@ -150,11 +150,11 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 첫 번째 생성자는 저장된 `duration` 값이 [duration::zero](../standard-library/duration-class.md#zero)와 같은 개체를 생성합니다.
 
-두 번째 생성자는 저장 된 duration 값이 *기간*에 해당 하는 개체를 생성 합니다. 가 `is_convertible<Duration2, duration>` true가 아닌 경우 두 번째 생성자는 오버 로드 확인에 참여 하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
+두 번째 생성자는 저장된 기간 값이 *Dur와*같은 개체를 생성합니다. true가 아닌 경우 `is_convertible<Duration2, duration>` 두 번째 생성자는 오버로드 해결에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
 세 번째 생성자는 `Tp.time_since_epoch()`를 사용하여 `duration` 값을 초기화합니다.
 
-## <a name="time_since_epoch"></a>  time_point::time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point:time_since_epoch
 
 저장된 [duration](../standard-library/duration-class.md) 값을 검색합니다.
 
@@ -162,7 +162,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 constexpr duration time_since_epoch() const;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[\<chrono>](../standard-library/chrono.md)
+[\<크로노>](../standard-library/chrono.md)

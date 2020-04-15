@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364979"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; macros
 
@@ -28,9 +28,9 @@ ms.locfileid: "79424082"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-할당자 클래스 템플릿을 생성 합니다.
+할당자 클래스 템플릿을 생성합니다.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "79424082"
 
 ### <a name="remarks"></a>설명
 
-매크로는 템플릿 정의 `template <class Type> class name {.....}`를 생성 하 고, 특수화 `template <> class name<void> {.....}`는 동기화 필터 `sync`를 사용 하는 할당자 클래스 템플릿 및 `cache`형식의 캐시를 함께 정의 합니다.
+매크로는 `template <class Type> class name {.....}` 동기화 필터와 `template <> class name<void> {.....}` `sync` 형식의 `cache`캐시를 사용하는 할당자 클래스 템플릿을 함께 정의하는 템플릿 정의 및 특수화를 생성합니다.
 
 rebind를 컴파일할 수 있는 컴파일러의 경우, 결과 템플릿 정의는 다음과 같습니다.
 
@@ -68,9 +68,9 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>  CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
-`stdext::allocators::cache_chunklist<sizeof(Type)>`를 생성합니다.
+`stdext::allocators::cache_chunklist<sizeof(Type)>`을 생성합니다.
 
 ```cpp
 #define CACHE_CHUNKLIST <cache_class>
@@ -78,9 +78,9 @@ public:
 
 ### <a name="remarks"></a>설명
 
-## <a name="cache_freelist"></a>  CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
-`stdext::allocators::cache_freelist<sizeof(Type), max>`를 생성합니다.
+`stdext::allocators::cache_freelist<sizeof(Type), max>`을 생성합니다.
 
 ```cpp
 #define CACHE_FREELIST(max) <cache_class>
@@ -88,9 +88,9 @@ public:
 
 ### <a name="remarks"></a>설명
 
-## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
-`stdext::allocators::cache_suballoc<sizeof(Type)>`를 생성합니다.
+`stdext::allocators::cache_suballoc<sizeof(Type)>`을 생성합니다.
 
 ```cpp
 #define CACHE_SUBALLOC <cache_class>
@@ -98,7 +98,7 @@ public:
 
 ### <a name="remarks"></a>설명
 
-## <a name="sync_default"></a>  SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
 동기화 필터를 생성합니다.
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>참고 항목
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<할당자>](../standard-library/allocators-header.md)
