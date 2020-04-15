@@ -1,10 +1,13 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949420"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332872"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -59,24 +63,26 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 분자입니다.
 
-*y*<br/>
+*Y*<br/>
 분모입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-*X* / *y*의 부동 소수점 나머지입니다. *Y* 값이 0.0 이면 **나머지가** 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf, _printf_l, wprintf, _printf_l](printf-printf-l-wprintf-wprintf-l.md)을 참조 하세요.
+*부동* / 점 나머지 x*y.* *y* 값이 0.0이면 **나머지는** 조용한 NaN을 반환합니다. **printf** 패밀리에 의한 조용한 NaN의 표현에 대한 자세한 내용은 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
-**나머지** 함수 *는 x* =  / *n* *y r 인*x y의 부동 소수점 나머지 *r* 을 계산 합니다. 여기서 n +  \* -  *x* /  &#124; &#124;y에 대 한 값에 가장 가까운 정수 이며 n x y = 1/2 인 경우에도 마찬가지입니다. /  *R* = 0 인 경우 *r* 은 *x*와 동일한 부호를 가집니다.
+**나머지** *y* 함수는 *x* = *n*  - *x* /  *x* /  \* n *y* + *r과*같이 x y의 부동 점 나머지 *r을* *계산하며,* 여기서 *n은* *x* / y에 가장 가까운 정수이고 *n은*&#124; *n*x*y* &#124; = 1/2일 에도 마찬가지입니다. *r* = 0인 경우 *r은* *x와*동일한 기호를 가짐을 가짐입니다.
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **나머지** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **나머지** 는 항상 두 개의 **double** 인수를 사용 하 고 **double**을 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** 값을 가져가서 반환하는 **나머지** 의 오버로드를 호출할 수 있습니다. C 프로그램에서 **나머지는** 항상 두 개의 **이중** 인수를 취하고 **double**을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |함수|필수 헤더(C)|필수 헤더(C++)|
 |--------------|---------------------|-|
-|**remainder**, **remainderf**, **remainderl**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**나머지,** **나머지,** **나머지, 나머지**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -102,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

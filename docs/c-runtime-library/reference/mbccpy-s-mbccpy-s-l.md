@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08df395c6978c84b3f53ed0b07ce988afd0249f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341240"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -85,44 +88,46 @@ errno_t _mbccpy_s_l(
 *dest*<br/>
 복사 대상입니다.
 
-*buffSizeInBytes*<br/>
+*버프크기인바이트*<br/>
 대상 버퍼의 크기입니다.
 
-*pCopied*<br/>
-복사된 바이트 수로 채워집니다(성공할 경우 1 또는 2). 숫자에 대해 걱정 하지 않는 경우 **NULL** 을 전달 합니다.
+*p복사*<br/>
+복사된 바이트 수로 채워집니다(성공할 경우 1 또는 2). 숫자에 신경 쓰지 않으면 **NULL을** 통과하십시오.
 
-*src*<br/>
+*Src*<br/>
 복사할 멀티바이트 문자입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 시 0이고, 실패 시 오류 코드입니다. *Src* 또는 *dest* 가 **NULL**이거나 **buffSizeinBytes** 바이트를 초과 하는 바이트를 *Dest*로 복사 하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 은 **EINVAL**로 설정 됩니다.
+성공 시 0이고, 실패 시 오류 코드입니다. *src* 또는 *dest가* **NULL이거나** **buffSizeinBytes** 바이트 이상이 *dest에*복사되는 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 함수는 **EINVAL을** 반환하고 **errno는** **EINVAL로**설정됩니다.
 
 ## <a name="remarks"></a>설명
 
-**_Mbccpy_s** 함수는 *src* 에서 *dest*로 하나의 멀티 바이트 문자를 복사 합니다. *Src* 가 [_ismbblead](ismbblead-ismbblead-l.md)에 대 한 암시적 호출에 의해 결정 된 멀티 바이트 문자의 선행 바이트를 가리키지 않는 경우 *src* 가 가리키는 단일 바이트가 복사 됩니다. *Src* 에서 선행 바이트를 가리키지만 다음 바이트가 0 이므로 유효 하지 않으면 0이 *dest*로 복사 되 고 **errno** 가 **eilseq**로 설정 되며 함수는 **eilseq**를 반환 합니다.
+**_mbccpy_s** 함수는 *src에서* *dest까지*하나의 멀티바이트 문자를 복사합니다. *src가* [_ismbblead](ismbblead-ismbblead-l.md)대한 암시적 호출에 의해 결정된 다중 바이트 문자의 리드 바이트를 가리키지 않으면 *src가* 가리키는 단일 바이트가 복사됩니다. *src가* 리드 바이트를 가리키지만 다음 바이트가 0이므로 유효하지 않은 경우 0이 *dest로*복사되고 **errno가** **EILSEQ로**설정되고 함수가 **EILSEQ를**반환합니다.
 
-**_mbccpy_s** 는 null 종결자를 추가 하지 않습니다. 그러나 *src* 가 null 문자를 가리키는 경우 null이 *dest* 로 복사 됩니다 (일반 싱글바이트 복사본 임).
+**_mbccpy_s** null 종결자도 부속하지 않습니다. 그러나 *src가* null 문자를 가리키면 null이 *dest에* 복사됩니다 (이것은 일반 단일 바이트 복사본일 뿐입니다).
 
-*Pcopied* 의 값은 복사 된 바이트 수로 채워집니다. 연산이 성공할 경우 가능한 값은 1과 2입니다. **NULL** 이 전달 되 면이 매개 변수는 무시 됩니다.
+*pCopyd의* 값은 복사된 바이트 수로 채워져 있습니다. 연산이 성공할 경우 가능한 값은 1과 2입니다. **NULL이** 전달되면 이 매개 변수는 무시됩니다.
 
-|*src*|*대상* 에 복사 됨|*pCopied*|반환 값|
+|*Src*|*dest에* 복사|*p복사*|반환 값|
 |-----------|----------------------|---------------|------------------|
 |비선행 바이트|비선행 바이트|1|0|
 |0|0|1|0|
 |선행 바이트와 그 뒤의 0이 아닌 값|선행 바이트와 그 뒤의 0이 아닌 값|2|0|
 |선행 바이트와 그 뒤의 0|0|1|**EILSEQ**|
 
-두 번째 행은 첫 번째 행의 특수 사례일 뿐입니다. 또한 테이블에서는 *buffSizeInBytes* >= *pcopied*를 가정 합니다.
+두 번째 행은 첫 번째 행의 특수 사례일 뿐입니다. 또한 표는 *버프SizeInBytes가* >= 복사된 것으로*가정합니다.*
 
-**_mbccpy_s** 는 로캘 종속 동작에 대해 현재 로캘을 사용 합니다. **_mbccpy_s_l** 는 로캘 종속 동작에 대해 전달 된 **로캘을 사용 한다는** 점을 제외 하 고 **_mbccpy_s** 와 동일 합니다.
+**_mbccpy_s** 모든 로캘 종속 동작에 현재 로캘을 사용합니다. **_mbccpy_s_l** **_mbccpy_s_l** 모든 로캘 종속 동작에 전달된 로캘을 사용하는 것을 제외하고는 **_mbccpy_s** 동일합니다.
 
-C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -135,10 +140,10 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _get_pgmptr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_pgmptr
+- _o__get_pgmptr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: 4f9a3b19cc7eb1870b87ec46b7923987ec646e32
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: efcac6a64c01bee38a3753bdec378dae625db35e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955760"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345017"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
-**_Pgmptr** 전역 변수의 현재 값을 가져옵니다.
+**_pgmptr** 전역 변수의 현재 값을 가져옵니다.
 
 ## <a name="syntax"></a>구문
 
@@ -50,15 +52,17 @@ errno_t _get_pgmptr(
 ### <a name="parameters"></a>매개 변수
 
 *pValue*<br/>
-**_Pgmptr** 변수의 현재 값으로 채울 문자열에 대 한 포인터입니다.
+**_pgmptr** 변수의 현재 값으로 채워질 문자열에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. *Pvalue* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
+성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. *pValue가* **NULL이면**매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **EINVAL**을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-프로그램에 **main ()** 또는 **WinMain ()** 과 같은 좁은 진입점이 있는 경우에만 **_get_pgmptr** 를 호출 합니다. **_Pgmptr** 전역 변수는 프로세스와 연결 된 실행 파일의 전체 경로를 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.
+프로그램에 **main()** 또는 **WinMain()과**같은 좁은 진입점이 있는 경우에만 **_get_pgmptr 호출합니다.** **_pgmptr** 전역 변수에는 프로세스와 연관된 실행 수에 대한 전체 경로가 포함됩니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -66,8 +70,8 @@ errno_t _get_pgmptr(
 |-------------|---------------------|
 |**_get_pgmptr**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_get_wpgmptr](get-wpgmptr.md)<br/>

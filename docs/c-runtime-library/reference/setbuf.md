@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332072"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,17 +49,19 @@ void setbuf(
 
 ### <a name="parameters"></a>매개 변수
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
-*buffer*<br/>
+*버퍼*<br/>
 사용자가 할당한 버퍼입니다.
 
 ## <a name="remarks"></a>설명
 
-**Setbuf** 함수는 *스트림에*대 한 버퍼링을 제어 합니다. *Stream* 인수는 읽거나 쓰지 않은 열려 있는 파일을 참조 해야 합니다. *Buffer* 인수가 **NULL**이면 스트림은 버퍼링 되지 않습니다. 그렇지 않은 경우 버퍼는 길이가 **BUFSIZ**인 문자 배열을 가리켜야 합니다. 여기서 **BUFSIZ** 은 stdio.h에 정의 된 버퍼 크기입니다. 넣기. 지정된 스트림에 대한 기본 시스템 할당 버퍼 대신 사용자 지정 버퍼가 I/O 버퍼링에 사용됩니다. **Stderr** 스트림은 기본적으로 버퍼링 되지 않지만 **setbuf** 를 사용 하 여 버퍼를 **stderr**에 할당할 수 있습니다.
+**setbuf** 함수는 스트림에 대한 버퍼링을 *제어합니다.* *스트림* 인수는 읽거나 쓰지 않은 열린 파일을 참조해야 합니다. *버퍼* 인수가 **NULL이면**스트림이 버퍼링되지 않습니다. 그렇지 않은 경우 버퍼는 **BUFSIZ가** STDIO에 정의된 버퍼 크기인 길이 **BUFSIZ의**문자 배열을 가리키야 합니다. H. 지정된 스트림에 대한 기본 시스템 할당 버퍼 대신 사용자 지정 버퍼가 I/O 버퍼링에 사용됩니다. **stderr** 스트림은 기본적으로 버퍼링되지 않지만 **setbuf를** 사용하여 **stderr**에 버퍼를 할당할 수 있습니다.
 
-**setbuf** 는 새 코드에 기본 설정 된 루틴 인 [setvbuf](setvbuf.md)로 대체 되었습니다. **Setvbuf**와 달리 **setbuf** 에는 오류를 보고 하는 방법이 없습니다. 또한 **setvbuf** 를 사용 하면 버퍼링 모드와 버퍼 크기를 모두 제어할 수 있습니다. **setbuf** 는 기존 코드와의 호환성을 위해 존재 합니다.
+**setbuf는** 새 코드에 대 한 기본 [루틴setvbuf로](setvbuf.md)대체 되었습니다. **setvbuf와**달리 **setbuf는** 오류를 보고할 방법이 없습니다. **setvbuf를** 사용하면 버퍼링 모드와 버퍼 크기를 모두 제어할 수 있습니다. **setbuf는** 기존 코드와의 호환성을 위해 존재합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -65,7 +69,7 @@ void setbuf(
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -106,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

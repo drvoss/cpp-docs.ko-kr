@@ -1,8 +1,9 @@
 ---
 title: _get_timezone
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_timezone
+- _o__get_timezone
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344899"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -48,18 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>매개 변수
 
-*seconds*<br/>
+*초*<br/>
 UTC와 현지 시간 사이의 차이(초)입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 하면 0이 고, 오류가 발생 하면 **errno** 값입니다.
+성공하면 0, 오류가 발생하면 **errno** 값입니다.
 
 ## <a name="remarks"></a>설명
 
-**_Get_timezone** 함수는 UTC와 현지 시간 사이의 차이 (초)를 정수로 검색 합니다. 기본값은 태평양 표준시(UTC보다 8시간 뒤)에 대해 28,800초입니다.
+**_get_timezone** 함수는 UTC와 현지 시간 사이의 차이를 정수로 검색합니다. 기본값은 태평양 표준시(UTC보다 8시간 뒤)에 대해 28,800초입니다.
 
-*초가* **NULL**이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
+*초가* **NULL이면**매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **EINVAL**을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -69,7 +73,7 @@ UTC와 현지 시간 사이의 차이(초)입니다.
 
 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

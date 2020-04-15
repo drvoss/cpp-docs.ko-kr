@@ -1,10 +1,12 @@
 ---
 title: _strdup, _wcsdup, _mbsdup
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
+- _o__strdup
+- _o__wcsdup
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7ad28633844c49ce5b86c8f71f4502c62eba1216
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359700"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 문자열을 복제합니다.
 
 > [!IMPORTANT]
-> Windows 런타임에서 실행 되는 응용 프로그램에서는 **_mbsdup** 를 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원 되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조 하세요.
+> **_mbsdup** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수를](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -75,28 +78,30 @@ unsigned char *_mbsdup(
 
 ### <a name="parameters"></a>매개 변수
 
-*strSource*<br/>
+*스트소스 (것)스*<br/>
 Null 종료 소스 문자열입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-이러한 각 함수는 복사 된 문자열의 저장소 위치에 대 한 포인터를 반환 하거나, 저장소를 할당할 수 없는 경우 **NULL** 을 반환 합니다.
+이러한 각 함수는 저장소를 할당할 수 없는 경우 복사된 문자열 또는 **NULL의** 저장소 위치에 대한 포인터를 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**_Strdup** 함수는 [malloc](malloc.md) 를 호출 하 여 *strsource* 의 복사본에 대 한 저장소 공간을 할당 한 다음 *strsource* 를 할당 된 공간에 복사 합니다.
+**_strdup** 함수는 [malloc을](malloc.md) 호출하여 *strSource* 복사본에 대한 저장 공간을 할당한 다음 할당된 공간에 *strSource를* 복사합니다.
 
-**_wcsssand** **_mbsdup** 는 **_strdup**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsdup** 의 인수와 반환 값은 와이드 문자 문자열입니다. **_mbsdup** 의 해당 문자는 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_wcsdup** **_mbsdup** **_strdup**와이드 문자 및 멀티 바이트 문자 버전입니다. **_wcsdup** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsdup** 그 다중 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-**_Strdup** 는 **malloc** 를 호출 하 여 *strsource*의 복사본에 대 한 저장소 공간을 할당 하기 때문에 **_strdup**에 대 한 호출에서 반환 되는 포인터에 대해 항상 [무료](free.md) 루틴을 호출 하 여이 메모리를 해제 하는 것이 좋습니다.
+**_strdup** *strSource의*복사본에 대 한 저장소 공간을 할당 하는 **malloc를** 호출 하기 때문에 _strdup 호출에 의해 반환 되는 포인터에 [사용 가능한](free.md) 루틴을 호출 하 여 이 메모리를 해제 하는 것이 좋습니다. **_strdup**
 
-**_Debug** 및 **_CRTDBG_MAP_ALLOC** 가 정의 된 경우 메모리 할당 디버깅을 허용 하는 **_strdup_dbg** 및 **_wcsdup_dbg** 에 대 한 호출로 **_strdup** 및 **_wcsdup** 를 대체 합니다. 자세한 내용은 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)을 참조하세요.
+**_DEBUG** 및 **_CRTDBG_MAP_ALLOC** 정의되면 **_strdup** 및 **_wcsdup** **_strdup_dbg** 호출로 대체되고 **메모리** 할당을 _wcsdup_dbg. 자세한 내용은 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)를 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -106,7 +111,7 @@ Null 종료 소스 문자열입니다.
 |**_wcsdup**|\<string.h> 또는 \<wchar.h>|
 |**_mbsdup**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -132,7 +137,7 @@ Original: This is the buffer text
 Copy:     This is the buffer text
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: BottomUp 클래스
-description: C++ BUILD Insights SDK BottomUp 클래스 참조입니다.
+title: 바텀업 클래스
+description: C++ 빌드 인사이트 SDK BottomUp 클래스 참조.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fa26acfdf25acc3b78de71fd21b20cbf5a0df66b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1cfe25aaa5736b9e2ba55a577e64958a6b9f113b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335011"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325211"
 ---
-# <a name="bottomup-class"></a>BottomUp 클래스
+# <a name="bottomup-class"></a>바텀업 클래스
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK는 Visual Studio 2017 이상 버전과 호환 됩니다. 이러한 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2017 또는 Visual studio 2019로 설정 합니다.
+C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`BottomUp` 클래스는 [Matchevent](../functions/match-event.md), [matcheventinmemberfunction](../functions/match-event-in-member-function.md), [Matcheventstack](../functions/match-event-stack.md)및 [matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md) 함수와 함께 사용 됩니다. 이를 사용 하 여 [BOTTOM_UP](../event-table.md#bottom-up) 이벤트를 일치 시킵니다.
+클래스는 `BottomUp` [매치 이벤트,](../functions/match-event.md) [매치 이벤트인멤버기능,](../functions/match-event-in-member-function.md) [매치이벤트스택](../functions/match-event-stack.md)및 [매치이벤트스택](../functions/match-event-stack-in-member-function.md) 기능과 함께 사용된다. [BOTTOM_UP](../event-table.md#bottom-up) 이벤트를 일치시키기 위해 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>멤버
 
-[작업](activity.md) 기본 클래스의 상속 된 멤버와 함께 `BottomUp` 클래스에는 다음 멤버가 포함 됩니다.
+[활동](activity.md) 기본 클래스의 상속된 멤버와 `BottomUp` 함께 클래스에는 다음 멤버가 포함됩니다.
 
 ### <a name="constructors"></a>생성자
 
-[BottomUp](#bottom-up)
+[상향식](#bottom-up)
 
-## <a name="bottom-up"></a>BottomUp
+## <a name="bottomup"></a><a name="bottom-up"></a>상향식
 
 ```cpp
 BottomUp(const RawEvent& event);
@@ -53,7 +53,7 @@ BottomUp(const RawEvent& event);
 
 ### <a name="parameters"></a>매개 변수
 
-*event*\
-[BOTTOM_UP](../event-table.md#bottom-up) 이벤트입니다.
+*이벤트*\
+[BOTTOM_UP](../event-table.md#bottom-up) 이벤트.
 
 ::: moniker-end

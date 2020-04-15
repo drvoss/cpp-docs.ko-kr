@@ -1,9 +1,11 @@
 ---
 title: _getch, _getwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getch
 - _getwch
+- _o__getch
+- _o__getwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 122892945e8542afa7f9f944f984387db7c5ec8a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344740"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -53,17 +56,19 @@ int _getch( void );
 wint_t _getwch( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 읽은 문자를 반환합니다. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-**_Getch** 및 **_getwch** 함수는 문자를 에코 하지 않고 콘솔에서 단일 문자를 읽습니다. 이 중 어느 것도, CTRL + C를 읽을 수 없습니다. 화살표 키 또는 기능 키를 읽을 때, 각 함수는 두 번 호출되어야 합니다. 0 또는 0xE0를 첫 번째 호출에서 반환하고 실제 키 코드를 두 번째 호출에서 반환합니다.
+**_getch** 및 **_getwch** 기능은 문자를 에코하지 않고 콘솔에서 단일 문자를 읽습니다. 이 중 어느 것도, CTRL + C를 읽을 수 없습니다. 화살표 키 또는 기능 키를 읽을 때, 각 함수는 두 번 호출되어야 합니다. 0 또는 0xE0를 첫 번째 호출에서 반환하고 실제 키 코드를 두 번째 호출에서 반환합니다.
 
 이러한 함수는 호출 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md)을 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -76,7 +81,7 @@ wint_t _getwch( void );
 |**_getch**|\<conio.h>|
 |**_getwch**|\<conio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -114,7 +119,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>

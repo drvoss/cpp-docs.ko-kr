@@ -1,5 +1,5 @@
 ---
-title: MFC 데스크톱 응용 프로그램
+title: MFC 데스크톱 애플리케이션
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178459"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359347"
 ---
-# <a name="mfc-desktop-applications"></a>MFC 데스크톱 응용 프로그램
+# <a name="mfc-desktop-applications"></a>MFC 데스크톱 애플리케이션
 
-MFC(Microsoft Foundation Class) 라이브러리는 많은 Win32 및 COM API에 대한 개체 지향 래퍼를 제공합니다. 간단한 데스크톱 애플리케이션을 만드는 데도 사용되지만, 여러 컨트롤 간의 매우 복잡한 사용자 인터페이스를 개발해야 하는 경우에도 매우 유용합니다. MFC를 사용하여 Office 스타일의 사용자 인터페이스를 제공하는 애플리케이션을 만들 수 있습니다. Windows 플랫폼 자체에 대 한 설명서는 [windows 설명서](/windows/index)를 참조 하십시오. MFC 없이에서 C++ windows 응용 프로그램을 빌드하는 방법에 대 한 자세한 내용은 [Win32 API를 사용 하 여 데스크톱 windows 앱 빌드](/windows/win32/index)를 참조 하세요.
+MFC(Microsoft Foundation Class) 라이브러리는 많은 Win32 및 COM API에 대한 개체 지향 래퍼를 제공합니다. 간단한 데스크톱 애플리케이션을 만드는 데도 사용되지만, 여러 컨트롤 간의 매우 복잡한 사용자 인터페이스를 개발해야 하는 경우에도 매우 유용합니다. MFC를 사용하여 Office 스타일의 사용자 인터페이스를 제공하는 애플리케이션을 만들 수 있습니다. Windows 플랫폼 자체에 대한 설명서에는 [Windows 설명서를](/windows/index)참조하십시오. MFC 없이 C++에서 Windows 응용 프로그램을 빌드하는 방법에 대한 자세한 내용은 [Win32 API를 사용하여 데스크톱 Windows 앱 빌드를](/windows/win32/index)참조하십시오.
 
 MFC 참조는 MFC 라이브러리를 구성하는 매크로, 전역 변수, 전역 함수 및 클래스를 포함합니다.
 
@@ -28,9 +28,9 @@ MFC 참조는 MFC 라이브러리를 구성하는 매크로, 전역 변수, 전�
 공용 및 보호된 클래스 멤버는 일반적으로 애플리케이션 또는 파생된 클래스에서 사용될 경우에만 기술됩니다. 전체 클래스 멤버 목록을 보려면 클래스 헤더 파일을 참조하십시오.
 
 > [!IMPORTANT]
->  MFC 클래스 및 해당 멤버는 Windows 런타임 환경에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> MFC 클래스와 해당 멤버는 Windows 런타임 환경에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 >
->  MBC(멀티바이트 문자 인코딩)용 MFC 라이브러리(DLL)은 Visual Studio에 더 이상 포함되지 않지만 Visual Studio 추가 기능으로 사용할 수 있습니다. 자세한 내용은 [MFC MBCS DLL 추가 기능](mfc-mbcs-dll-add-on.md)을 참조 하세요.
+> MBC(멀티바이트 문자 인코딩)용 MFC 라이브러리(DLL)은 Visual Studio에 더 이상 포함되지 않지만 Visual Studio 추가 기능으로 사용할 수 있습니다. 자세한 내용은 [MFC MBCS DLL 애드온](mfc-mbcs-dll-add-on.md)을 참조하십시오.
 
 ## <a name="in-this-section"></a>섹션 내용
 
@@ -46,7 +46,7 @@ MFC 항목에 대한 개념 문서입니다.
 [연습](walkthroughs-mfc.md)<br/>
 MFC 라이브러리 기능과 관련된 다양한 작업을 안내하는 문서가 포함되어 있습니다.
 
-[기술 참고 사항](mfc-technical-notes.md)<br/>
+[기술 노트](mfc-technical-notes.md)<br/>
 MFC 개발 팀에서 클래스 라이브러리에 대해 작성한 전문 항목에 대한 링크를 제공합니다.
 
 [MFC에 대한 사용자 지정](customization-for-mfc.md)<br/>
@@ -70,7 +70,7 @@ Visual Studio에서 MFC 애플리케이션을 만드는 기능을 안내하는 �
 [리소스 파일 작업](../windows/working-with-resource-files.md)<br/>
 리소스 파일을 사용하여 UI 문자열 및 대화 상자 레이아웃과 같은 정적 사용자 인터페이스 데이터를 관리하는 방법입니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
 
 [계층 구조 차트 범주](hierarchy-chart-categories.md)<br/>
 범주별 MFC 계층 구조 차트에 대해 설명합니다.

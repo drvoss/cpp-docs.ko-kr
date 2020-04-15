@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360734"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 구조체
 
-일반적인 특성 정의 `Semaphore` 개체입니다.
+개체의 공통 특성을 정의합니다. `Semaphore`
 
 ## <a name="syntax"></a>구문
 
@@ -30,9 +30,9 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                               | 설명
+속성                               | Description
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | 공유 리소스의 릴리스 컨트롤입니다.
+[세마포어해협::잠금 해제](#unlock) | 공유 리소스의 컨트롤을 해제합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -42,13 +42,13 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** corewrappers.h
+**헤더:** 코어래퍼.h
 
-**네임스페이스:** Microsoft::WRL::Wrappers::HandleTraits
+**네임스페이스:** 마이크로소프트::WRL::래퍼::핸들 트레이츠
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>세마포어해협::잠금 해제
 
-공유 리소스의 릴리스 컨트롤입니다.
+공유 리소스의 컨트롤을 해제합니다.
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>매개 변수
 
-*h*<br/>
-에 대 한 핸들을 `Semaphore` 개체입니다.
+*H*<br/>
+개체에 `Semaphore` 핸들을 보입니다.
 
 ### <a name="remarks"></a>설명
 
-잠금 해제 작업이 성공적 이면 `Unlock()` 실패의 원인을 나타내는 오류를 생성 합니다.
+잠금 해제 작업이 실패하면 오류의 원인을 나타내는 오류가 `Unlock()` 발생합니다.

@@ -1,6 +1,6 @@
 ---
-title: FileOutput 클래스
-description: C++ BUILD Insights SDK fileoutput 클래스 참조입니다.
+title: 파일 출력 클래스
+description: C++ 빌드 인사이트 SDK 파일 출력 클래스 참조.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1c4053d0378ddb9d5dd061bbc9889c454dc9b52c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324811"
 ---
-# <a name="fileoutput-class"></a>FileOutput 클래스
+# <a name="fileoutput-class"></a>파일 출력 클래스
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK는 Visual Studio 2017 이상 버전과 호환 됩니다. 이러한 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2017 또는 Visual studio 2019로 설정 합니다.
+C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FileOutput` 클래스는 [Matchevent](../functions/match-event.md), [matcheventinmemberfunction](../functions/match-event-in-member-function.md), [Matcheventstack](../functions/match-event-stack.md)및 [matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md) 함수와 함께 사용 됩니다. 이를 사용 하 여 [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)또는 [OBJ_OUTPUT](../event-table.md#obj-output) 이벤트를 일치 시킬 수 있습니다.
+클래스는 `FileOutput` [매치 이벤트,](../functions/match-event.md) [매치 이벤트인멤버기능,](../functions/match-event-in-member-function.md) [매치이벤트스택](../functions/match-event-stack.md)및 [매치이벤트스택](../functions/match-event-stack-in-member-function.md) 기능과 함께 사용된다. [EXECUTABLE_IMAGE_OUTPUT,](../event-table.md#executable-image-output) [EXP_OUTPUT,](../event-table.md#exp-output) [IMP_LIB_OUTPUT,](../event-table.md#imp-lib-output) [LIB_OUTPUT](../event-table.md#lib-output)또는 [OBJ_OUTPUT](../event-table.md#obj-output) 이벤트를 일치시려면 이 방법을 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>멤버
 
-[SimpleEvent](simple-event.md) 기본 클래스에서 상속 된 멤버와 함께 `FileOutput` 클래스에는 다음 멤버가 포함 됩니다.
+[SimpleEvent](simple-event.md) 기본 클래스에서 상속된 멤버와 `FileOutput` 함께 클래스에는 다음 멤버가 포함됩니다.
 
 ### <a name="constructors"></a>생성자
 
-[FileOutput](#file-output)
+[파일 출력](#file-output)
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 [경로](#path)
-[형식](#type)
+[유형](#type)
 
-## <a name="file-output"></a>FileOutput
+## <a name="fileoutput"></a><a name="file-output"></a>파일 출력
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,27 +71,27 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>매개 변수
 
-*event*\
+*이벤트*\
 [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)또는 [OBJ_OUTPUT](../event-table.md#obj-output) 이벤트입니다.
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>경로
 
 ```cpp
 const wchar_t Path() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-출력 파일의 절대 경로입니다.
+출력 파일에 대한 절대 경로입니다.
 
-## <a name="type"></a>입력할
+## <a name="type"></a><a name="type"></a> 형식
 
 ```cpp
 Type Type() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-출력 파일의 형식을 설명 하는 코드입니다.
+출력 파일의 형식을 설명하는 코드입니다.
 
 ::: moniker-end
