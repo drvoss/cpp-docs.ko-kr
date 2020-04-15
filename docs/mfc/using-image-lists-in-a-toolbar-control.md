@@ -6,37 +6,37 @@ helpviewer_keywords:
 - image lists [MFC], toolbar controls
 - CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
-ms.openlocfilehash: d027f7834c67ad0ed51d1b7fda5b2704972efe38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81468528c15300a7e9ace6b20fd9fb34818f1928
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411567"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366492"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>도구 모음 컨트롤에서 이미지 목록 사용
 
-기본적으로 사용 하는 도구 모음 컨트롤에서 단추 이미지는 단일 비트맵으로 저장 됩니다. 그러나 단추 이미지 일련의 이미지 목록에도 저장할 수 있습니다. 도구 모음 컨트롤 개체는 최대 3 개의 별도 이미지 목록을 사용할 수 있습니다.
+기본적으로 도구 모음 컨트롤의 단추에서 사용하는 이미지는 단일 비트맵으로 저장됩니다. 그러나 단추 이미지를 이미지 목록 집합에 저장할 수도 있습니다. 도구 모음 컨트롤 개체는 최대 세 개의 개별 이미지 목록을 사용할 수 있습니다.
 
-- 현재 사용할 수 있는 도구 모음 단추에 대 한 이미지 목록 포함 이미지를 사용할 수 있습니다.
+- 사용 가능한 이미지 목록 현재 활성화된 도구 모음 단추에 대한 이미지가 포함되어 있습니다.
 
-- 이미지 목록 현재 해제 되어 있는 도구 모음 단추에 대 한 이미지를 포함 하는 사용 하지 않도록 설정 합니다.
+- 사용 안 함 이미지 목록 현재 사용 안 함 의 도구 모음 단추에 대 한 이미지를 포함 합니다.
 
-- 현재 강조 표시 되는 도구 모음 단추에 대 한 이미지 목록 포함 이미지를 강조 표시 합니다. 이 이미지 목록 도구 모음 TBSTYLE_FLAT 스타일을 사용 하는 경우에 사용 됩니다.
+- 강조 표시된 이미지 목록 현재 강조 표시된 도구 모음 단추에 대한 이미지가 포함되어 있습니다. 이 이미지 목록은 도구 모음에서 TBSTYLE_FLAT 스타일을 사용하는 경우에만 사용됩니다.
 
-사용 하 여 연결 하는 경우 이러한 이미지 목록 도구 모음 컨트롤에서 사용 되는 `CToolBarCtrl` 개체입니다. 호출 하 여이 연결이 이루어집니다 [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist)를 [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), 및 [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)합니다.
+이러한 이미지 목록은 `CToolBarCtrl` 도구 모음 컨트롤에서 개체와 연결할 때 사용됩니다. 이 연결은 [CToolBarCtrl::SetImageList,](../mfc/reference/ctoolbarctrl-class.md#setimagelist) [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)및 [SetHotImageList를](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)호출하여 수행됩니다.
 
-MFC는 기본적으로 다음을 사용 합니다.는 `CToolBar` MFC 응용 프로그램 도구 모음을 구현 하는 클래스입니다. 그러나 합니다 `GetToolBarCtrl` 멤버 함수는 포함 된 검색에 사용할 수 있습니다 `CToolBarCtrl` 개체입니다. 다음에 대 한 호출 가능 `CToolBarCtrl` 반환된 된 개체를 사용 하 여 멤버 함수입니다.
+기본적으로 MFC는 클래스를 `CToolBar` 사용하여 MFC 응용 프로그램 도구 모음을 구현합니다. 그러나 멤버 `GetToolBarCtrl` 함수를 사용하여 포함된 `CToolBarCtrl` 개체를 검색할 수 있습니다. 그런 다음 반환된 `CToolBarCtrl` 개체를 사용하여 멤버 함수를 호출할 수 있습니다.
 
-다음 예제에서는 할당을 사용 하도록 설정 하 여이 기술을 보여 줍니다 (`m_ToolBarImages`)과 사용 안 함 (`m_ToolBarDisabledImages`) 이미지 목록에는 `CToolBarCtrl` 개체 (`m_ToolBarCtrl`).
+`m_ToolBarImages`다음 예제에서는 개체()에`m_ToolBarDisabledImages` `CToolBarCtrl` `m_ToolBarCtrl`사용 () 및 사용 안 함() 이미지 목록을 할당 하여 이 기술을 보여 줍니다.
 
 [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]
 
 > [!NOTE]
->  도구 모음 개체에 의해 사용 되는 이미지 목록에는 영구 개체 여야 합니다. 따라서이 일반적으로 MFC 클래스의 데이터 멤버 이 예제에서는 주 프레임 창 클래스입니다.
+> 도구 모음 개체에서 사용하는 이미지 목록은 영구 객체여야 합니다. 이러한 이유로 일반적으로 MFC 클래스의 데이터 멤버입니다. 이 예제에서는 주 프레임 창 클래스입니다.
 
-이미지 목록 연관 되 면를 `CToolBarCtrl` 개체, 프레임 워크는 적절 한 단추 이미지를 자동으로 표시 합니다.
+이미지 목록이 `CToolBarCtrl` 개체와 연결되면 프레임워크에 적절한 단추 이미지가 자동으로 표시됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CToolBarCtrl 사용](../mfc/using-ctoolbarctrl.md)<br/>
 [컨트롤](../mfc/controls-mfc.md)

@@ -10,22 +10,22 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366413"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 연산자
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
+|[연산자!=](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;=](#op_gt_eq)|
+|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|[연산자&lt;=](#op_lt_eq)|
 |[연산자==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 다양한 개체가 같지 않은지 비교합니다.
 
@@ -66,22 +66,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(left == right)`를 반환합니다.
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 다양한 개체가 보다 작은지 비교합니다.
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-각 템플릿 연산자는 해당 인수를 문자열 형식으로 변환 하 고, *왼쪽* 의 변환 된 값이 *오른쪽*의 변환 된 값 보다 작음을 비교 하는 경우에만 true를 반환 합니다.
+각 템플릿 연산자는 인수를 문자열 유형으로 변환하고 *왼쪽의* 변환된 값이 *오른쪽의*변환된 값보다 작은 값인 경우에만 true를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
 
 스트림에 sub_match를 삽입합니다.
 
@@ -266,25 +266,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem* \
+*Elem*\
 요소 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*os* \
+*Os*\
 출력 스트림입니다.
 
-*오른쪽* \
+*오른쪽*\
 삽입할 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 연산자는 `os << right.str()`을 반환합니다.
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 다양한 개체가 작거나 같은지 비교합니다.
 
@@ -351,22 +351,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(right < left)`를 반환합니다.
 
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 다양한 개체가 같은지 비교합니다.
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 해당 인수를 각각 문자열 형식으로 변환하고 변환된 개체가 같은지를 비교한 결과를 반환합니다.
 
 템플릿 연산자는 해당 인수를 문자열 형식으로 변환할 때 적용되는 다음 변환 중 첫 번째 변환을 사용합니다.
 
-형식이 클래스 템플릿 `match_results` 또는 `sub_match`의 특수화 인 인수는 `str` 멤버 함수를 호출 하 여 변환 됩니다.
+형식이 클래스 템플릿의 `match_results` 전문화또는 `sub_match` `str` 멤버 함수를 호출하여 변환되는 인수입니다.
 
-형식이 클래스 템플릿 `basic_string`의 특수화 인 인수는 변경 되지 않습니다.
+클래스 템플릿의 `basic_string` 전문화 된 형식은 변경 되지 않습니다 인수입니다.
 
-다른 모든 인수 형식은 `basic_string` 클래스 템플릿의 적절 한 특수화에 대 한 생성자에 인수 값을 전달 하 여 변환 됩니다.
+다른 모든 인수 형식은 클래스 템플릿의 `basic_string`적절한 특수화를 위해 인수 값을 생성자로 전달하여 변환됩니다.
 
 ### <a name="example"></a>예제
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 다양한 개체가 보다 큰지 비교합니다.
 
@@ -588,22 +588,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `right < left`를 반환합니다.
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 다양한 개체가 크거나 같은지 비교합니다.
 
@@ -698,22 +698,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 반복기 형식입니다.
 
-*Iotraits* \
+*이오트레이스*\
 문자열 특성 클래스입니다.
 
-*할당* \
+*Alloc*\
 할당자 클래스입니다.
 
-*왼쪽* \
+*왼쪽*\
 비교할 왼쪽 개체입니다.
 
-*오른쪽* \
+*오른쪽*\
 비교할 오른쪽 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 템플릿 연산자는 `!(left < right)`를 반환합니다.
 
@@ -771,13 +771,13 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants 클래스](../standard-library/regex-constants-class.md) \
-[Regex_error 클래스](../standard-library/regex-error-class.md) \
-[> 함수를 \<regex](../standard-library/regex-functions.md) \
-[Regex_iterator 클래스](../standard-library/regex-iterator-class.md) \
-[Regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md) \
-[Regex_traits 클래스](../standard-library/regex-traits-class.md) \
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)
+[\<정규식>](../standard-library/regex.md)\
+[regex_constants 클래스](../standard-library/regex-constants-class.md)\
+[regex_error 클래스](../standard-library/regex-error-class.md)\
+[\<정규식> 함수](../standard-library/regex-functions.md)\
+[regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 클래스](../standard-library/regex-traits-class.md)\
+[\<정규식> 타입defs](../standard-library/regex-typedefs.md)

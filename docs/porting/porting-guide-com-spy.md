@@ -2,12 +2,12 @@
 title: '포팅 가이드: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: HT
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368454"
 ---
 # <a name="porting-guide-com-spy"></a>포팅 가이드: COM Spy
 
@@ -17,7 +17,8 @@ ms.locfileid: "66451177"
 
 COMSpy는 컴퓨터에서 서비스 구성 요소의 활동을 모니터링 및 기록하는 프로그램입니다. 서비스 구성 요소는 시스템에서 실행되며 동일한 네트워크의 컴퓨터에서 사용할 수 있는 COM+ 구성 요소입니다. Windows 제어판의 구성 요소 서비스 기능으로 관리됩니다.
 
-### <a name="step-1-converting-the-project-file"></a>1단계: 프로젝트 파일 변환
+### <a name="step-1-converting-the-project-file"></a>1단계. 프로젝트 파일 변환
+
 프로젝트 파일은 쉽게 변환되며 마이그레이션 보고서를 생성합니다. 보고서에는 처리해야 할 수도 있는 문제를 알려주는 몇 개의 항목이 있습니다. 다음은 보고되는 문제 중 하나입니다(이 항목 전체에서 오류 메시지는 때때로 전체 경로를 제거하는 등 읽기 쉽도록 축약됨).
 
 ```Output
@@ -27,6 +28,7 @@ ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Deskt
 프로젝트를 업그레이드할 때 자주 발생하는 문제 중 하나는 프로젝트 속성 대화 상자의 **링커 OutputFile** 설정을 검토해야 할 수도 있다는 것입니다. Visual Studio 2010 이전 프로젝트에서 OutputFile은 비표준 값으로 설정할 경우 자동 변환 마법사에서 문제가 발생하는 설정 중 하나입니다. 이 경우 출력 파일의 경로가 비표준 폴더인 XP32_DEBUG로 설정되었습니다. 이 오류에 대해 자세히 알아보기 위해, 중요한 변경 내용인 vcbuild에서 msbuild로의 변경을 포함하는 업그레이드인 Visual Studio 2010 프로젝트 업그레이드와 관련된 [블로그 게시물](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)을 참조했습니다. 이 정보에 따라 새 프로젝트를 만들 때 **출력 파일** 설정의 기본값은 `$(OutDir)$(TargetName)$(TargetExt)`이지만, 변환된 프로젝트에서 모두 올바른지 확인할 수 없기 때문에 변환 중에는 설정되지 않았습니다. 그러나 OutputFile에 대해 이 값을 설정하고 작동하는지 살펴보겠습니다.  작동하므로 계속 진행할 수 있습니다. 비표준 출력 폴더를 사용할 특별한 이유가 없는 경우 표준 위치를 사용하는 것이 좋습니다. 이 경우 포팅 및 업그레이드 프로세스 중에 출력 위치를 비표준 폴더로 그대로 두었습니다. `$(OutDir)`은 **디버그** 구성의 XP32_DEBUG 폴더 및 **릴리스** 구성의 ReleaseU 폴더로 확인됩니다.
 
 ### <a name="step-2-getting-it-to-build"></a>2단계. 빌드
+
 포팅된 프로젝트를 빌드하면 다양한 오류와 경고가 발생합니다.
 
 다음 컴파일러 오류로 인해 `ComSpyCtl`이 컴파일되지 않습니다.
@@ -67,6 +69,7 @@ error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\Co
 이 빌드 후 등록 명령은 더 이상 필요하지 않습니다. 대신, 사용자 지정 빌드 명령을 제거하고 **링커** 설정에서 출력을 등록하도록 지정합니다.
 
 ### <a name="dealing-with-warnings"></a>경고 처리
+
 프로젝트에서 다음과 같은 링커 경고를 생성합니다.
 
 ```Output
@@ -122,6 +125,7 @@ for (i=0;i<static_cast<UINT>(lCount);i++)
 이러한 경고는 동일한 이름의 매개 변수가 있는 함수에서 변수가 선언되어 잠재적으로 코드가 모호해질 수 있는 경우입니다. 지역 변수의 이름을 변경하여 이 문제를 해결했습니다.
 
 ### <a name="step-3-testing-and-debugging"></a>3단계. 테스트 및 디버깅
+
 먼저 다양한 메뉴 및 명령을 실행한 후 애플리케이션을 닫아 앱을 테스트했습니다. 발견된 문제는 앱을 닫을 때 발생하는 디버그 어설션뿐이었습니다. 이 문제는 애플리케이션의 기본 COM 구성 요소인 `CSpyCon` 개체의 기본 클래스인 `CWindowImpl`의 소멸자에서 나타났습니다. atlwin.h의 다음 코드에서 어설션 오류가 발생했습니다.
 
 ```cpp
@@ -139,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd`는 일반적으로 `WindowProc` 함수에서 0으로 설정되지만 창을 닫는 Windows 메시지(WM_SYSCOMMAND)에 대해 기본 `WindowProc` 대신 사용자 지정 처리기가 호출되었기 때문에 0으로 설정되지 않았습니다. 사용자 지정 처리기에서 `hWnd`를 0으로 설정하지 않았습니다. MFC의 `CWnd` 클래스에서 유사한 코드를 살펴보면 창을 삭제할 때 `OnNcDestroy`가 호출되고, MFC의 설명서에서 `CWnd::OnNcDestroy`를 재정의할 때 창에서 창 핸들을 분리하는 작업, 즉 `hWnd`를 0으로 설정하는 작업을 포함하여 올바른 정리 작업이 수행되도록 기본 `NcDestroy`를 호출해야 한다고 조언합니다. 동일한 어설션 코드가 이전 버전의 atlwin.h에 있었기 때문에 원래 버전의 샘플에서도 이 어설션이 트리거되었을 수 있습니다.
 
-앱의 기능을 테스트하기 위해 ATL 프로젝트 템플릿을 사용하여 **서비스 구성 요소**를 만들고 ATL 프로젝트 마법사에서 COM+ 지원을 추가하도록 선택했습니다. 이전에 서비스 구성 요소로 작업한 적이 없는 경우에도 어렵지 않게 새로 만들고 다른 앱이 사용할 수 있도록 시스템 또는 네트워크에 등록 및 제공할 수 있습니다. COM Spy 앱은 진단 보조 기능으로 서비스 구성 요소의 활동을 모니터링하도록 설계되었습니다.
+앱의 기능을 테스트하기 위해 ATL 프로젝트 템플릿을 사용하여 **서비스 구성 요소**를 만들고 ATL 프로젝트 마법사에서 COM+ 지원을 추가하도록 선택했습니다. 이전에 서비스 구성 요소로 작업하지 않은 경우 하나를 만들고 다른 앱에서 사용할 수 있도록 시스템 또는 네트워크에서 등록하고 사용할 수 있도록 하는 것이 어렵지 않습니다. COM Spy 앱은 진단 보조 기능으로 서비스 구성 요소의 활동을 모니터링하도록 설계되었습니다.
 
 그런 다음, 클래스를 추가하고, ATL 개체를 선택하고, `Dog`라는 개체 이름을 지정했습니다. 그런 다음 dog.h 및 dog.cpp에서 구현을 추가했습니다.
 
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-빌드 및 등록하고(관리자 권한으로 Visual Studio를 실행하려면 필요함), Windows 제어판의 **서비스 구성 요소** 애플리케이션을 사용하여 활성화했습니다. C# Windows Forms 프로젝트를 만들고 도구 상자에서 폼으로 단추를 끌어다 놓은 다음 click 이벤트 처리기에 대해 단추를 두 번 클릭했습니다. 다음 코드를 추가하여 `Dog` 구성 요소를 인스턴스화했습니다.
+다음으로 Visual Studio를 관리자로 실행해야 하며 Windows 제어판의 **Serviced 구성 요소** 응용 프로그램을 사용하여 빌드및 등록했습니다. C# Windows Forms 프로젝트를 만들고 도구 상자에서 폼으로 단추를 끌어다 놓은 다음 click 이벤트 처리기에 대해 단추를 두 번 클릭했습니다. 다음 코드를 추가하여 `Dog` 구성 요소를 인스턴스화했습니다.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -166,6 +170,6 @@ private void button1_Click(object sender, EventArgs e)
 
 ## <a name="see-also"></a>참고 항목
 
-[이식 및 업그레이드: 예제 및 사례 연구](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[포팅 및 업그레이드: 예제 및 사례 연구](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [다음 예제: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [이전 예제: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

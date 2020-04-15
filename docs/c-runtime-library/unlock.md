@@ -23,19 +23,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365693"
 ---
 # <a name="_unlock"></a>_unlock
 
 다중 스레드 잠금을 해제합니다.
 
 > [!IMPORTANT]
->  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
+> 이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 

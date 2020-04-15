@@ -1,9 +1,11 @@
 ---
 title: wctomb, _wctomb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_l
 - wctomb
+- _o__wctomb_l
+- _o_wctomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367410"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -59,21 +62,23 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*mbchar*<br/>
+*mbc하르*<br/>
 멀티바이트 문자의 주소입니다.
 
-*wchar*<br/>
+*Wchar*<br/>
 와이드 문자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Wctomb** 는 와이드 문자를 멀티 바이트 문자로 변환 하는 경우 와이드 문자의 바이트 수 ( **MB_CUR_MAX**보다 크지 않음)를 반환 합니다. *Wchar* 가 와이드 문자 null 문자 (L ' \ 0 ') 이면 **wctomb** 는 1을 반환 합니다. 대상 포인터 *mbchar* 가 **NULL**인 경우 **wctomb** 는 0을 반환 합니다. 현재 로캘에서 변환할 수 없는 경우 **wctomb** 는-1을 반환 하 고 **Errno** 는 **eilseq**로 설정 됩니다.
+**wctomb이** 와이드 문자를 다바이트 문자로 변환하는 경우 와이드 문자에서 바이트 **수(MB_CUR_MAX**보다 크지 않습니다)를 반환합니다. *wchar가* 와이드 문자 null 문자(L'\0')인 경우 **wctomb은** 1을 반환합니다. 대상 포인터 *mbchar가* **NULL이면** **wctomb은** 0을 반환합니다. 현재 로캘에서 변환이 불가능한 경우 **wctomb은** -1을 반환하고 **errno는** **EILSEQ로**설정됩니다.
 
 ## <a name="remarks"></a>설명
 
-**Wctomb** 함수는 *wchar* 인수를 해당 멀티 바이트 문자로 변환 하 고 결과를 *mbchar*에 저장 합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다. **wctomb** 는 로캘 종속 동작에 대해 현재 로캘을 사용 합니다. **_wctomb_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고 **wctomb** 와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**wctomb** 함수는 *해당 다중* 바이트 문자로 wchar 인수를 변환하고 결과를 *mbchar에*저장합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다. **wctomb는** 모든 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_wctomb_l** 대신 전달된 로캘을 사용한다는 점을 제외하면 **wctomb과** 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-**wctomb** 은 매개 변수의 유효성을 검사 합니다. *Mbchar* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는-1을 반환 합니다.
+**wctomb는** 매개 변수의 유효성을 검사합니다. *mbchar가* **NULL인**경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 -1을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -81,7 +86,7 @@ int _wctomb_l(
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -113,7 +118,7 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>
