@@ -4,10 +4,10 @@ description: Visual Studio의 일반 속성 페이지에서 설정할 수 있는
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
 ms.openlocfilehash: 832f10ca2c95e40ff7ece23462105fa49014aa5d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446170"
 ---
 # <a name="general-properties-linux-c"></a>일반 속성(Linux C++)

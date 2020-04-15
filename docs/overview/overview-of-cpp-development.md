@@ -7,10 +7,10 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77415705"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio의 C++ 개발 개요

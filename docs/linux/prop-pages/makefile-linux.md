@@ -3,10 +3,10 @@ title: 일반 속성(Linux C++ 메이크파일 프로젝트)| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446155"
 ---
 # <a name="makefile-project-properties-linux-c"></a>메이크파일 프로젝트 속성(Linux C++)
