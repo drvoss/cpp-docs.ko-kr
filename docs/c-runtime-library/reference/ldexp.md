@@ -1,11 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953497"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342239"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -78,24 +80,26 @@ long double ldexpl(
 *x*<br/>
 부동 소수점 값입니다.
 
-*exp*<br/>
+*특급*<br/>
 정수 지수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Ldexp** 함수는 성공한 경우 *x* \* 2<sup>*exp*</sup> 의 값을 반환 합니다. 오버플로 시와 *x*의 부호에 따라 **ldexp** 는 +/- **HUGE_VAL**;을 반환 합니다. **errno** 값은 **ERANGE**로 설정 됩니다.
+**ldexp** 함수는 성공하면 *x* \* 2<sup>*exp의*</sup> 값을 반환합니다. 오버플로에, 그리고 *x의*기호에 따라, **ldexp** 반환 +/- **HUGE_VAL;** **errno** 값은 **ERANGE로**설정됩니다.
 
-**Errno** 및 가능한 오류 반환 값에 대 한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조 하세요.
+**errno** 및 가능한 오류 반환 값에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하는 **ldexp** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **ldexp** 는 항상 **double** 과 **int** 를 사용 하 고 **double**을 반환 합니다.
+C++는 오버로드를 허용하므로 **부동** 또는 **긴** **이중** 형식을 취하는 **ldexp의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **ldexp는** 항상 **이중** 및 **int를** 취하고 **double을**반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp,** **ldexpf,** **ldexpl**|\<math.h>|\<cmath>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -123,7 +127,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

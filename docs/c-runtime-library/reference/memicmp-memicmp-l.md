@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333230"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -59,36 +62,38 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer1*<br/>
+*버퍼1*<br/>
 첫 번째 버퍼입니다.
 
-*buffer2*<br/>
+*버퍼2*<br/>
 두 번째 버퍼입니다.
 
 *count*<br/>
 문자 수입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 반환 값은 부분 문자열 간의 관계를 나타냅니다.
 
 |반환 값|buf1 및 buf2의 첫 번째 count 바이트의 관계|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* 보다 작음 *buffer2*.|
-|0|*buffer1* 는 *buffer2*와 동일 합니다.|
-|> 0|*buffer1* *buffer2*보다 큽니다.|
+|< 0|*버퍼1이* *버퍼2*보다 적습니다.|
+|0|*버퍼1은* *버퍼2와*동일합니다.|
+|> 0|*버퍼1이* *버퍼2보다*큽합니다.|
 |**_NLSCMPERROR**|오류가 발생했습니다.|
 
 ## <a name="remarks"></a>설명
 
-**_Memicmp** 함수는 두 버퍼 *buffer1* 및 *buffer2* 바이트의 첫 번째 *count* 문자를 바이트 단위로 비교 합니다. 대/소문자를 구분하지 않고 비교합니다.
+**_memicmp** 함수는 두 버퍼 *버퍼1* 및 *buffer2* 바이트바이트의 첫 번째 *카운트* 문자를 바이트별로 비교합니다. 대/소문자를 구분하지 않고 비교합니다.
 
-*Buffer1* 또는 *buffer2* 가 null 포인터인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **_NLSCMPERROR** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+*buffer1* 또는 *buffer2가* null 포인터인 경우 이 함수는 매개 변수 유효성 검사에 설명된 대로 잘못된 매개 변수 처리기를 [호출합니다.](../../c-runtime-library/parameter-validation.md) 실행을 계속할 수 있는 경우 함수는 **_NLSCMPERROR** 반환하고 **errno를** **EINVAL로**설정합니다.
 
-**_memicmp** 는 로캘 종속 동작에 현재 로캘을 사용 합니다. **_memicmp_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_memicmp** 로캘 종속 동작에 현재 로캘을 사용합니다. **_memicmp_l** 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -97,7 +102,7 @@ int _memicmp_l(
 |**_memicmp**|\<memory.h> 또는 \<string.h>|
 |**_memicmp_l**|\<memory.h> 또는 \<string.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -134,7 +139,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

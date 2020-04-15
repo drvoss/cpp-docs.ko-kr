@@ -1,9 +1,11 @@
 ---
 title: isleadbyte, _isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954308"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343831"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -54,22 +57,24 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>매개 변수
 
-*c*<br/>
+*C*<br/>
 테스트할 정수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**isleadbyte** 는 인수가 테스트 조건을 충족 하는 경우 0이 아닌 값을 반환 하 고 그렇지 않으면 0을 반환 합니다. "C" 로캘과 SBCS (싱글바이트 문자 집합) 로캘에서 **isleadbyte** 는 항상 0을 반환 합니다.
+**isleadbyte는** 인수가 테스트 조건을 만족하는 경우 비영값을 반환하거나 그렇지 않은 경우 0을 반환합니다. "C" 로캘과 SBCS(단일 바이트 문자 집합)에서 **isleadbyte는** 항상 0을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**Isleadbyte** 매크로는 인수가 멀티 바이트 문자의 첫 번째 바이트인 경우 0이 아닌 값을 반환 합니다. **isleadbyte** 는-1 (**EOF**)에서 **UCHAR_MAX** (0xff) (포함) 사이의 모든 정수 인수에 대해 의미 있는 결과를 생성 합니다.
+**isleadbyte** 매크로는 인수가 다중 바이트 문자의 첫 번째 바이트인 경우 비영값을 반환합니다. **isleadbyte는** -1 **(EOF)에서** **UCHAR_MAX** (0xFF)까지모든 정수 인수에 대해 의미있는 결과를 생성합니다.
 
-**Isleadbyte** 의 예상 인수 형식은 **int**입니다. 부호 있는 문자가 전달 되는 경우 컴파일러는 부호 확장을 통해 정수로 변환 하 여 예측할 수 없는 결과를 생성 합니다.
+**isleadbyte의** 예상 인수 유형은 **int;** 서명된 문자가 전달되면 컴파일러는 사인 확장을 통해 정수로 변환하여 예기치 않은 결과를 얻을 수 있습니다.
 
-**_L** 접미사가 있는이 함수의 버전은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다.
+**_l** 접미사가 있는 이 함수의 버전은 로캘 종속 동작에 대해 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -82,9 +87,9 @@ int _isleadbyte_l( int c );
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>

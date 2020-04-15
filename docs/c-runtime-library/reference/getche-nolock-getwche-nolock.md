@@ -1,9 +1,11 @@
 ---
 title: _getche_nolock, _getwche_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getche_nolock
 - _getwche_nolock
+- _o__getche_nolock
+- _o__getwche_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: 23f16199314ef1c9834e559631b7299dd1c55c2e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a4553f1615e1c53e638900f3a7ab6d66cd4beb8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344485"
 ---
 # <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock, _getwche_nolock
 
@@ -58,13 +61,15 @@ int _getche_nolock( void );
 wint_t _getwche_nolock( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 읽은 문자를 반환합니다. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-**_getche_nolock** 및 **_getwche_nolock** 는 다른 스레드의 간섭 으로부터 보호 되지 않는다는 점을 제외 하 고 **_getche** 및 **_getwche** 와 동일 합니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
+**_getche_nolock** **_getwche_nolock** 다른 스레드의 간섭으로부터 보호되지 않는다는 점을 제외하면 **_getche** **및 _getwche** 동일합니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -79,7 +84,7 @@ wint_t _getwche_nolock( void );
 |**_getche_nolock**|\<conio.h>|
 |**_getwche_nolock**|\<conio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -117,7 +122,7 @@ abcdefy
 Type 'Y' when finished typing keys: abcdefyY
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>

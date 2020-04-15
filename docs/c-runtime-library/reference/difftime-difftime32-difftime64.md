@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348127"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -56,25 +59,27 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ### <a name="parameters"></a>매개 변수
 
-*timeEnd*<br/>
+*시간 종료*<br/>
 종료 시간입니다.
 
-*timeStart*<br/>
+*시간 시작*<br/>
 시작 시간입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**difftime** 은 *Timestart* 에서 *timestart*까지 경과 된 시간 (초)을 반환 합니다. 반환되는 값은 배정밀도 부동 소수점 숫자입니다. 반환 값은 오류를 나타내는 0일 수 있습니다.
+**difftime** *시간시작에서* *시간End까지*초 단위로 경과된 시간을 반환합니다. 반환되는 값은 배정밀도 부동 소수점 숫자입니다. 반환 값은 오류를 나타내는 0일 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**Difftime** 함수는 제공 된 두 시간 값 *Timestart* 와 *timestart*사이의 차이를 계산 합니다.
+**difftime** 함수는 제공된 두 시간 값 *timeStart* 및 *timeEnd*간의 차이를 계산합니다.
 
-제공 된 시간 값은 **time_t**범위에 맞아야 합니다. **time_t** 는 64 비트 값입니다. 따라서 범위의 끝은 2038년 1월 18일 23:59:59(UTC)에서 3000년 12월 31일 23:59:59로 확장되었습니다. **Time_t** 의 낮은 범위는 여전히 1970 년 1 월 1 일 자정입니다.
+제공된 시간 값은 **time_t**범위 내에 있어야 합니다. **time_t** 64비트 값입니다. 따라서 범위의 끝은 2038년 1월 18일 23:59:59(UTC)에서 3000년 12월 31일 23:59:59로 확장되었습니다. **time_t** 낮은 범위는 여전히 1970년 1월 1일 자정입니다.
 
-**difftime** 은 **_USE_32BIT_TIME_T** 가 정의 되었는지 여부에 따라 **_difftime32** 또는 **_difftime32** 로 계산 되는 인라인 함수입니다. _difftime32 및 _difftime64는 시간 형식의 특정 크기를 강제로 사용하도록 직접 사용될 수 있습니다.
+**difftime은** **_USE_32BIT_TIME_T** 정의되었는지 여부에 따라 **_difftime32** 또는 **_difftime64** 평가하는 인라인 함수입니다. _difftime32 및 _difftime64는 시간 형식의 특정 크기를 강제로 사용하도록 직접 사용될 수 있습니다.
 
-이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 매개 변수가 0 또는 음수인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 0을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 매개 변수가 0 또는 음수인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 0을 반환하고 **errno를** **EINVAL로**설정합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -84,7 +89,7 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -142,7 +147,7 @@ Multiplying 2 floating point numbers 100 million times...
 Program takes      3 seconds.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [시간 관리](../../c-runtime-library/time-management.md)<br/>

@@ -1,48 +1,49 @@
 ---
-title: / SOURCELINK (Sourcelink 포함 파일 PDB)
-ms.date: 08/20/2018
+title: /SOURCELINK(PDB에 Sourcelink 파일 포함)
+description: Microsoft C++의 /SOURCELINK 링커 옵션에 대한 참조 가이드입니다.
+ms.date: 03/31/2020
 f1_keywords:
 - /sourcelink
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde55c401e17f7b3c84ffcdad29dda2badcc260b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336062"
 ---
-# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (PDB에 소스 링크 포함 파일)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK(PDB에 소스 링크 파일 포함)
 
-링커에 의해 생성 되는 PDB 파일에 포함할 원본 연결 구성 파일을 지정 합니다.
+링커에서 생성된 PDB 파일에 포함하도록 소스 링크 구성 파일을 지정합니다.
 
 ## <a name="syntax"></a>구문
 
-> **/ SOURCELINK:**_파일 이름_
+> **`/SOURCELINK:`**_`filename`_
 
 ## <a name="arguments"></a>인수
 
-*filename*<br/>
-JSON 형식의 구성 파일을 지정 로컬 파일 경로를 Url의 간단한 매핑을 포함 하는 소스 파일을 검색할 수 있는 디버거에 의해 표시 합니다. 이 파일의 형식에 자세한 내용은 참조 [소스 링크 JSON 스키마](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)합니다.
+*파일*<br/>
+디버거에 표시할 소스 파일에 대한 URL에 로컬 파일 경로의 간단한 매핑이 포함된 JSON 형식의 구성 파일을 지정합니다. 이 파일의 형식에 대한 자세한 내용은 [소스 링크 JSON 스키마](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md#source-link-json-schema)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
-소스 링크는 소스 이진 파일에 대 한 디버깅을 제공 하기 위한 언어 및 소스 제어 알 수 없는 시스템. 네이티브에 대 한 소스 링크가 지원 됩니다 C++ Visual Studio 2017 버전 15.8에서에서 시작 하는 이진 파일. 소스 링크의 개요를 보려면 [소스 링크](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)합니다. 프로젝트에서 소스 링크를 사용 하는 방법 및 프로젝트의 일부로 SourceLink 파일을 생성 하는 방법에 대 한 내용은 참조 하세요 [소스 링크를 사용 하 여](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)입니다.
+소스 링크는 바이너리에 대한 소스 디버깅을 제공하기 위한 언어 및 소스 제어 불가지론 시스템입니다. 소스 링크는 Visual Studio 2017 버전 15.8에서 시작하는 기본 C++ 바이너리에 대해 지원됩니다. 소스 링크에 대한 개요는 [소스 링크를](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md)참조하십시오. 프로젝트에서 소스 링크를 사용하는 방법과 프로젝트의 일부로 SourceLink 파일을 생성하는 방법에 대한 자세한 내용은 [소스 링크 사용을](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)참조하십시오.
 
-### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Visual Studio에서 /SOURCELINK 링커 옵션을 설정 하려면
+### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>비주얼 스튜디오에서 /SOURCELINK 링커 옵션을 설정하려면
 
-1. 엽니다는 **속성 페이지** 프로젝트에 대 한 대화 상자. 자세한 내용은 [Visual Studio에서 설정 C++ 컴파일러 및 빌드 속성](../working-with-project-properties.md)합니다.
+1. 프로젝트에 대한 **속성 페이지** 대화 상자를 엽니다. 자세한 정보는 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
 
-1. 선택 된 **구성 속성** > **링커** > **명령줄** 속성 페이지.
+1. 구성 **속성** > **링커** > 명령줄 속성 페이지를**선택합니다.**
 
-1. 에 **추가 옵션** 상자에서 추가 **/SOURCELINK:**_filename_ 를 선택한 후 **확인** 또는 **적용**변경 내용을 저장 합니다.
+1. 추가 **옵션** **`/SOURCELINK:`** _`filename`_ 상자에서 확인 **또는** **적용을** 추가하여 변경 내용을 저장합니다.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면
 
-- 이 옵션에 프로그래밍 방식으로 해당 하는 없습니다.
+- 이 옵션에는 프로그래밍 방식과 동등한 것이 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)
