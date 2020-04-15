@@ -1,8 +1,9 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdrives
+- _o__getdrives
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 0733cc00523bb3a7bb019453cc94183a5c2b87e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344288"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -47,9 +49,13 @@ ms.locfileid: "70955069"
 unsigned long _getdrives( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-함수가 성공하는 경우 반환 값은 현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크입니다. 비트 위치 0(최하위 비트)은 드라이브 A, 비트 위치 1은 드라이브 B, 비트 위치 2는 드라이브 C 등입니다. 함수가 실패하면 반환 값은 0입니다. 확장 오류 정보를 가져오려면 **GetLastError**를 호출 합니다.
+함수가 성공하는 경우 반환 값은 현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크입니다. 비트 위치 0(최하위 비트)은 드라이브 A, 비트 위치 1은 드라이브 B, 비트 위치 2는 드라이브 C 등입니다. 함수가 실패하면 반환 값은 0입니다. 확장 오류 정보를 얻으려면 **GetLastError**를 호출합니다.
+
+## <a name="remarks"></a>설명
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -57,7 +63,7 @@ unsigned long _getdrives( void );
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -105,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>

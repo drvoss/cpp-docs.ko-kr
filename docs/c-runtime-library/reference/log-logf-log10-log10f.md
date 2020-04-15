@@ -1,6 +1,6 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341871"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -77,9 +80,9 @@ long double log10( long double x );  // C++ only
 *x*<br/>
 로그가 있는 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 하는 경우 **로그** 함수는 *x* 의 자연 로그 (밑 *e*)를 반환 합니다. **Log10** 함수는 상용 로그를 반환 합니다. *X* 가 음수인 경우 이러한 함수는 기본적으로 무한 (IND)을 반환 합니다. *X* 가 0 이면 무한대 (INF)를 반환 합니다.
+**로그** 함수는 성공하면 *x의* 자연 로그(기본 *e)를*반환합니다. **log10** 함수는 기본-10 로거리헴을 반환합니다. *x가* 음수이면 이러한 함수는 기본적으로 IND(무기한)를 반환합니다. *x가* 0이면 무한대(INF)를 반환합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
@@ -87,19 +90,21 @@ long double log10( long double x );  // C++ only
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**로그** 및 **LOG10** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
+**로그** 및 **log10에는** 스트리밍 SIMD 확장 2(SSE2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-C++는 오버 로드를 허용 하므로 **float** 또는 **long double** 값을 사용 하 고 반환 하는 **로그** 및 **log10** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **log** 및 **log10** 는 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 또는 **긴 이중** 값을 가져가고 반환하는 **로그** 및 **log10의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **로그** 및 **log10은** 항상 **double을**가져 와서 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**로그**, **로그**, **로그**, **log10**, **log10f**, **log10l**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -156,7 +161,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

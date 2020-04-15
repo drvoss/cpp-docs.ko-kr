@@ -1,10 +1,11 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957152"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346666"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -68,27 +70,29 @@ long double floorl(
 *x*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Floor** 함수는 *x*보다 작거나 같은 가장 큰 정수를 나타내는 부동 소수점 값을 반환 합니다. 반환되는 오류가 없습니다.
+**바닥** 함수는 *x보다*크거나 같은 가장 큰 정수값을 나타내는 부동 점 값을 반환합니다. 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|없음|_DOMAIN|
 
-**floor** 는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현을 포함 합니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
+**플로어에는** 스트리밍 SIMD 확장 2(SSE2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-C++는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **바닥** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **floor** 는 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 및 **긴** **이중** 값을 가져가고 반환하는 **바닥의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **바닥은** 항상 **이중을**가져와 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
-|**floor**, **floorf**, **floorl**|\<math.h>|
+|**바닥,** **바닥,** **바닥**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -125,7 +129,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

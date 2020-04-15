@@ -1,9 +1,11 @@
 ---
 title: _get_daylight
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __daylight
 - _get_daylight
+- _o___daylight
+- _o__get_daylight
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0abab77b1429b263c7e5d84a6d395f0411ebf8a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345312"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -47,20 +50,22 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>매개 변수
 
-*시간*<br/>
+*hours*<br/>
 일관 절약 시간의 오프셋(시간)입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 하면 0이 고, 오류가 발생 하면 **errno** 값입니다.
+성공하면 0, 오류가 발생하면 **errno** 값입니다.
 
 ## <a name="remarks"></a>설명
 
-**_Get_daylight** 함수는 일광 절약 시간의 시간 수를 정수로 검색 합니다. 일광 절약 시간이 적용 중인 경우 몇몇 지역에서 2시간 오프셋을 따르고 있더라도 기본 오프셋은 1시간입니다.
+**_get_daylight** 함수는 일광 절약 시간제의 시간을 정수로 검색합니다. 일광 절약 시간이 적용 중인 경우 몇몇 지역에서 2시간 오프셋을 따르고 있더라도 기본 오프셋은 1시간입니다.
 
-*Hours* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
+*시간이* **NULL이면**매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **EINVAL**을 반환합니다.
 
-매크로 **_ro** 또는 사용 되지 않는 함수 **__daylight**에서 대신이 함수를 사용 하는 것이 좋습니다.
+매크로 **_daylight** 또는 더 이상 사용되지 __daylight **기능**대신 이 함수를 사용하는 것이 좋습니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -70,7 +75,7 @@ error_t _get_daylight( int* hours );
 
 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: _putch, _putwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch
 - _putch
+- _o__putch
+- _o__putwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338417"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -60,20 +63,22 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>매개 변수
 
-*c*<br/>
+*C*<br/>
 출력할 문자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되면 *c*를 반환합니다. **_Putch** 가 실패할 경우 **EOF**를 반환 합니다. **_putwch** 가 실패할 경우 **weof**를 반환 합니다.
+정상적으로 실행되면 *c*를 반환합니다. **_putch** 실패하면 **EOF를**반환합니다. **_putwch** 실패하면 **WEOF**.
 
 ## <a name="remarks"></a>설명
 
-이러한 함수는 *c* 문자를 버퍼링 하지 않고 콘솔에 직접 씁니다. Windows NT에서 **_putwch**는 현재 콘솔 로캘 설정을 사용하여 유니코드 문자를 씁니다.
+이러한 함수는 버퍼링 없이 콘솔에 문자 *c를* 직접 씁니다. Windows NT에서 **_putwch**는 현재 콘솔 로캘 설정을 사용하여 유니코드 문자를 씁니다.
 
-**_nolock** 접미사가 있는 버전은 다른 스레드에 의한 간섭에서 보호되지 않는 점을 제외하면 동일합니다. 자세한 내용은 **_putch_nolock**, **_putwch_nolock**을 참조 하세요.
+**_nolock** 접미사가 있는 버전은 다른 스레드에 의한 간섭에서 보호되지 않는 점을 제외하면 동일합니다. 자세한 내용은 **_putch_nolock**, **_putwch_nolock**.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -86,7 +91,7 @@ wint_t _putwch(
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -96,7 +101,7 @@ wint_t _putwch(
 
 [_getch](getch-getwch.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

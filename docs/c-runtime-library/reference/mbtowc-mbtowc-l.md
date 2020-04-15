@@ -1,9 +1,11 @@
 ---
 title: mbtowc, _mbtowc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbtowc
 - _mbtowc_l
+- _o__mbtowc_l
+- _o_mbtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 99659def42cba4e832c26b1535706ea576931969
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338792"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -58,25 +61,27 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*wchar*<br/>
-와이드 문자 ( **wchar_t**형식)의 주소입니다.
+*Wchar*<br/>
+와이드 문자의 주소(유형 **wchar_t).**
 
-*mbchar*<br/>
+*mbc하르*<br/>
 바이트 시퀀스(멀티바이트 문자)의 주소입니다.
 
 *count*<br/>
 검사할 바이트 수입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Mbchar** 가 **NULL** 이 아니고 *mbchar* 이 가리키는 개체가 유효한 멀티 바이트 문자를 형성 하는 경우 **mbtowc** 는 멀티 바이트 문자의 길이 (바이트)를 반환 합니다. *Mbchar* 가 **NULL** 이거나 가리키는 개체가 와이드 문자 NULL 문자 (L ' \ 0 ') 이면 함수는 0을 반환 합니다. *Mbchar* 가 가리키는 개체가 첫 번째 *카운트* 문자 내에서 유효한 멀티 바이트 문자를 구성 하지 않는 경우-1을 반환 합니다.
+**mbchar가** **NULL이** 아니고 *mbchar가* 가리키는 개체가 유효한 다중 바이트 문자를 형성하는 경우 **mbtowc는** 다중 바이트 문자의 길이를 반환합니다. *mbchar가* **NULL이거나** 가리키는 개체가 와이드 문자 null 문자(L'\0')인 경우 함수는 0을 반환합니다. *mbchar가* 가리키는 개체가 첫 번째 *카운트* 문자 내에서 유효한 다중 바이트 문자를 형성하지 않으면 -1을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**Mbtowc** 함수는 Mbchar가 **NULL**이 *아닌 경우* *mbchar*가 가리키는 바이트 *수* 를 해당 하는 와이드 문자로 변환 합니다. **mbtowc** 은 Wchar가 **NULL**이 *아닌 경우 결과* 와이드 문자를 *wchar* 에 저장 합니다. **mbtowc** 는 **MB_CUR_MAX** 바이트를 초과 하 여 검사 하지 않습니다. **mbtowc** 는 로캘 종속 동작에 현재 로캘을 사용 합니다. **_mbtowc_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**mbtowc** 함수는 *mbchar가*가리키는 *바이트* 수를 더 적게 변환하며, *mbchar가* **NULL이**아닌 경우 해당 와이드 문자로 변환합니다. **mbtowc는** *wchar가* **NULL이**아닌 경우 결과 와이드 문자를 *wchar에* 저장합니다. **mbtowc는** **MB_CUR_MAX** 바이트 이상을 검사하지 않습니다. **mbtowc는** 로캘 종속 동작에 현재 로캘을 사용합니다. **_mbtowc_l** 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -85,7 +90,7 @@ int _mbtowc_l(
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -147,12 +152,12 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

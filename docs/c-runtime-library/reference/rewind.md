@@ -1,8 +1,9 @@
 ---
 title: rewind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338100"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,30 +50,32 @@ void rewind(
 
 ### <a name="parameters"></a>매개 변수
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
 ## <a name="remarks"></a>설명
 
-**되감기** 함수는 *스트림과* 연결 된 파일 포인터의 위치를 파일의 시작 부분으로 다시 바꿉니다. **rewind**에 대한 호출은 다음과 유사합니다.
+**되감기** 함수는 *스트림과* 연결된 파일 포인터를 파일의 시작 부분으로 재배치합니다. **rewind**에 대한 호출은 다음과 유사합니다.
 
-**(void) fseek(** _stream_ **, 0L, SEEK_SET );**
+**(무효) fseek** _(스트림,_**0L, SEEK_SET);**
 
-그러나 [fseek](fseek-fseeki64.md)와는 달리 **되감기** 는 파일의 끝 표시기 뿐만 아니라 스트림의 오류 표시기를 지웁니다. 또한 [fseek](fseek-fseeki64.md)와 달리 **되감기** 는 포인터가 성공적으로 이동 했는지 여부를 나타내는 값을 반환 하지 않습니다.
+그러나 [fseek와](fseek-fseeki64.md)달리 **되감기는** 스트림의 오류 표시기와 파일 끝 표시기를 지웁히 지웁습니다. 또한 [fseek와](fseek-fseeki64.md)달리 **되감기는** 포인터가 성공적으로 이동되었는지 여부를 나타내는 값을 반환하지 않습니다.
 
-키보드 버퍼를 지우려면 기본적으로 키보드와 연결 되는 stream **stdin**과 함께 **되감기** 를 사용 합니다.
+키보드 버퍼를 지우려면 기본적으로 키보드와 연결된 스트림 **stdin을**사용하여 **되감기를** 사용합니다.
 
-Stream이 **NULL** 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는를 반환 하 고 **errno** 는 **EINVAL**로 설정 됩니다.
+스트림이 **NULL** 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있으면 이 함수가 반환되고 **errno가** **EINVAL로**설정됩니다.
 
-이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**되감기**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -117,6 +121,6 @@ The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340925"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,41 +50,43 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>매개 변수
 
-*wchar*<br/>
-변환 된 와이드 문자열 ( **wchar_t**형식)을 받을 와이드 문자의 주소입니다. 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
+*Wchar*<br/>
+변환된 와이드 문자 문자열(wchar_t 입력)을 **wchar_t**수신하는 와이드 문자의 주소입니다. 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
 
-*mbchar*<br/>
+*mbc하르*<br/>
 바이트 시퀀스(멀티바이트 문자)의 주소입니다.
 
 *count*<br/>
 검사할 바이트 수입니다.
 
 *mbstate*<br/>
-변환 상태 개체에 대한 포인터입니다. 이 값이 null 포인터이면 함수는 정적 내부 변환 상태 개체를 사용합니다. 내부 **mbstate_t** 개체는 스레드로부터 안전 하지 않으므로 항상 고유한 *mbstate* 인수를 전달 하는 것이 좋습니다.
+변환 상태 개체에 대한 포인터입니다. 이 값이 null 포인터이면 함수는 정적 내부 변환 상태 개체를 사용합니다. 내부 **mbstate_t** 개체는 스레드에서 안전하지 않으므로 항상 고유한 *mbstate* 인수를 전달하는 것이 좋습니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-다음 값 중 하나입니다.
+해당 값은
 
-0 다음 *개수* 이하의 바이트가 null 와이드 문자를 나타내는 멀티 바이트 문자를 완성 합니다 .이 문자는 wchar로 저장 되며 wchar *는 null* 포인터가 아닌 *경우에 저장*됩니다.
+0 다음 *개수* 또는 그 이하의 바이트는 *wchar에*저장되는 널 와이드 문자를 *wchar* 나타내는 다바이트 문자를 완료합니다.
 
-1- *개수*, 포함 하는 다음 *개수* 이하의 바이트가 올바른 멀티 바이트 문자를 완성 합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다. 해당 하는 와이드 문자는 wchar이 null 포인터가 *아닌 경우* *wchar*에 저장 됩니다.
+1을 *계산하고*포함다음 *개수* 또는 더 적은 바이트가 유효한 다중 바이트 문자를 완료합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다. 와이드 문자 등가 *wchar,* *wchar* null 포인터가 아닌 경우 에 저장 됩니다.
 
-(size_t) (-1) 인코딩 오류가 발생 했습니다. 다음 *개수* 이하의 바이트는 완전 하 고 유효한 멀티 바이트 문자에 영향을 주지 않습니다. 이 경우 **errno** 가 EILSEQ로 설정 되 고 *mbstate* 의 변환 이동 상태가 지정 되지 않습니다.
+(size_t) (-1) 인코딩 오류가 발생했습니다. 다음 *개수* 또는 그 이하의 바이트는 완전하고 유효한 다중 바이트 문자에 기여하지 않습니다. 이 경우 **errno는** EILSEQ로 설정되고 *mbstate의* 변환 시프트 상태는 지정되지 않습니다.
 
-(size_t) (-2) 다음 *카운트* 바이트는 불완전 하지만 잠재적으로 유효한 멀티 바이트 문자에 영향을 주지만 모든 바이트 *수* 를 처리 했습니다. *Wchar*에는 값이 저장 되지 않지만 함수를 다시 시작 하도록 *mbstate* 가 업데이트 됩니다.
+(size_t) (-2) 다음 *바이트* 수는 불완전하지만 잠재적으로 유효한 다바이트 문자에 기여하며 모든 *개수* 바이트가 처리되었습니다. 값은 *wchar에*저장되지 않지만 *mbstate는* 함수를 다시 시작하도록 업데이트됩니다.
 
 ## <a name="remarks"></a>설명
 
-*Mbchar* 가 null 포인터인 경우 함수는 호출에 해당 합니다.
+*mbchar가* null 포인터인 경우 함수는 호출과 동일합니다.
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-이 경우 *wchar* 및 *count* 인수의 값은 무시 됩니다.
+이 경우 *인수 wchar* 및 *개수의* 값은 무시됩니다.
 
-*Mbchar* 가 null 포인터가 아닌 경우 함수는 *mbchar* 의 *count* 바이트를 검사 하 여 다음 멀티 바이트 문자를 완료 하는 데 필요한 바이트 수를 확인 합니다. 다음 문자가 올바르면 해당 하는 멀티 바이트 문자는 null 포인터가 아닌 경우 *wchar* 에 저장 됩니다. 문자가 해당 하는 와이드 null 문자인 경우 *mbstate* 의 결과 상태는 초기 변환 상태입니다.
+*mbchar가* null 포인터가 아닌 경우 함수는 *mbchar의* *바이트 수를* 검사하여 다음 다바이트 문자를 완료하는 데 필요한 바이트 수를 결정합니다. 다음 문자가 유효한 경우 해당 멀티바이트 문자는 null 포인터가 아닌 경우 *wchar에* 저장됩니다. 문자가 해당 와이드 null 문자인 경우 *mbstate의* 결과 상태는 초기 변환 상태입니다.
 
-**Mbrtowc** 함수는 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) by 다시 시작할와 다릅니다. 동일 하거나 다른 다시 시작 가능 함수에 대 한 후속 호출의 경우 변환 상태가 *mbstate* 에 저장 됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어 **wcstombs**대신 **wcsrtombs** 에 대 한 후속 호출을 사용 하는 경우 응용 프로그램은 **wcslen** 대신 **wcsrlen** 을 사용 해야 합니다.
+**mbrtowc** 기능은 [mbtowc와 다르며, 재시동가능성에 _mbtowc_l.](mbtowc-mbtowc-l.md) 변환 상태는 동일하거나 다른 다시 시작 가능한 함수에 대한 후속 호출에 대해 *mbstate에* 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어, **wcsrtombs 대신 wcsrtombs에** 대한 후속 호출이 사용되는 경우 응용 프로그램은 **wcsrlen** 대신 wcsrlen을 사용해야 **합니다.** **wcsrlen**
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -209,8 +213,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

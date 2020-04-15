@@ -1,9 +1,11 @@
 ---
 title: _mbbtombc, _mbbtombc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtombc_l
 - _mbbtombc
+- _o__mbbtombc
+- _o__mbbtombc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341424"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
@@ -59,23 +62,25 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*c*<br/>
+*C*<br/>
 변환할 싱글바이트 문자입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_Mbbtombc** 가 *c*를 성공적으로 변환 하는 경우 멀티 바이트 문자를 반환 합니다. 그렇지 않으면 *c*를 반환 합니다.
+**_mbbtombc** *c를*성공적으로 변환하면 다바이트 문자를 반환합니다. 그렇지 않으면 *c*.
 
 ## <a name="remarks"></a>설명
 
-**_Mbbtombc** 함수는 지정 된 싱글바이트 멀티 바이트 문자를 해당 더블 바이트 멀티 바이트 문자로 변환 합니다. 문자는 변환 될 0x20-0x7E 또는 0xA1-0Xa1 범위 내에 있어야 합니다.
+**_mbbtombc** 함수는 지정된 단일 바이트 멀티바이트 다바이트 문자를 해당 이중 바이트 멀티바이트 문자로 변환합니다. 문자는 변환할 범위 0x20 - 0x7E 또는 0xA1 - 0xDF 내에 있어야 합니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale을](setlocale-wsetlocale.md) 참조 하세요. **_Mbbtombc** 는이 로캘 종속 동작에 현재 로캘을 사용 하 고 **_mbbtombc_l** 는 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고이 함수의 버전은 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정설정의 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](setlocale-wsetlocale.md) 를 참조하십시오. 이 함수의 버전은 _mbbtombc 이 로캘 종속 동작에 대해 현재 로캘을 **사용하고** **_mbbtombc_l** 대신 전달된 로캘 매개 변수를 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-이전 버전에서 **_mbbtombc** 의 이름은 **hantozen**입니다. 새 코드의 경우 **_mbbtombc**를 사용 합니다.
+이전 버전에서는 **_mbbtombc** **한토젠으로**명명되었습니다. 새 코드의 경우 **_mbbtombc.**
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -84,9 +89,9 @@ unsigned int _mbbtombc_l(
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

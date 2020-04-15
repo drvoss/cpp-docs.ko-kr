@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock
+- _o__fread_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97b37b4fee85a827faa4b309741afe56d8d0cbb9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346104"
 ---
 # <a name="_fread_nolock"></a>_fread_nolock
 
@@ -53,35 +55,37 @@ size_t _fread_nolock(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 데이터의 스토리지 위치입니다.
 
-*size*<br/>
+*크기*<br/>
 항목 크기(바이트)입니다.
 
 *count*<br/>
 읽힐 항목의 최대 수입니다.
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 [fread](fread.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-이 함수는 **fread**의 잠기지 않은 버전입니다. 다른 스레드의 간섭 으로부터 보호 되지 않는다는 점을 제외 하 고는 **fread** 와 동일 합니다. 이는 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 호출 범위에서 이미 스레드 격리를 처리하는 경우에만 이 함수를 사용합니다.
+이 함수는 **fread의**비 잠금 버전입니다. 다른 스레드의 간섭으로부터 보호되지 않는다는 점을 제외하면 **fread와** 동일합니다. 이는 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 호출 범위에서 이미 스레드 격리를 처리하는 경우에만 이 함수를 사용합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fread_nolock**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: qsort_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort_s
+- _o_qsort_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6013098199e1b69d03dc9cf2780cbf4376abcc0d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332969"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -57,20 +59,20 @@ void qsort_s(
 대상 배열의 시작 부분입니다.
 
 *number*<br/>
-요소의 배열 길이입니다.
+요소의 배열 크기입니다.
 
 *width*<br/>
 요소 크기(바이트)입니다.
 
-*compare*<br/>
-비교 함수입니다. 첫 번째 인수는 *컨텍스트* 포인터입니다. 두 번째 인수는 검색 *키* 에 대 한 포인터입니다. 세 번째 인수는 *키*와 비교할 배열 요소에 대 한 포인터입니다.
+*비교*<br/>
+비교 함수입니다. 첫 번째 인수는 *컨텍스트* 포인터입니다. 두 번째 인수는 *검색키에* 대한 포인터입니다. 세 번째 인수는 *키와*비교할 배열 요소에 대한 포인터입니다.
 
 *context*<br/>
-*비교* 루틴이 액세스 해야 하는 개체 일 수 있는 컨텍스트에 대 한 포인터입니다.
+*비교* 루틴이 액세스해야 하는 모든 개체일 수 있는 컨텍스트에 대한 포인터입니다.
 
 ## <a name="remarks"></a>설명
 
-**Qsort_s** 함수는 빠른 정렬 알고리즘을 구현 하 여 각각 *width* 바이트의 *숫자* 요소 배열을 정렬 합니다. 인수 *밑* 은 정렬할 배열의 기준에 대 한 포인터입니다. **qsort_s** 는 정렬 된 요소로이 배열을 덮어씁니다. 인수 *비교* 는 두 배열 요소를 비교 하 고 해당 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. **qsort_s** 는 정렬 하는 동안 *비교* 루틴을 한 번 이상 호출 하 여 각 호출에서 두 배열 요소에 포인터를 전달 합니다.
+**qsort_s** 함수는 빠른 정렬 알고리즘을 구현하여 각 *너비* 바이트의 *숫자* 요소 배열을 정렬합니다. 인수 *베이스는* 정렬할 배열의 기본에 대한 포인터입니다. **qsort_s** 정렬된 요소로 이 배열을 덮어씁니다. 인수 *비교는* 두 배열 요소를 비교하고 해당 관계를 지정하는 값을 반환하는 사용자 제공 루틴에 대한 포인터입니다. **qsort_s** 정렬 하는 동안 *비교* 루틴을 하나 이상 호출 하 여 각 호출에 두 개의 배열 요소에 포인터를 전달 합니다.
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -78,26 +80,28 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 루틴은 요소를 비교한 후에 다음 값 중 하나를 반환해야 합니다.
 
-|반환 값|설명|
+|반환 값|Description|
 |------------------|-----------------|
-|< 0|**elem1** 보다 작음 **elem2**|
-|0|**elem2** 에 해당 하는 **elem1**|
-|> 0|**elem1** **elem2** 보다 큼|
+|< 0|**elem1** **elem2** 미만|
+|0|**elem2에** 해당하는 **elem1**|
+|> 0|**elem1** **elem2보다** 큰|
 
 비교 함수에 정의된 대로 배열은 오름차순으로 정렬됩니다. 배열을 내림차순으로 정렬하려면 비교 함수에서 "보다 큼"과 "보다 작음"의 의미를 반전하면 됩니다.
 
-함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는를 반환 하 고 **errno** 는 **EINVAL**로 설정 됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있으면 함수가 반환되고 **errno가** **EINVAL로**설정됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|key|base|compare|num|너비|errno|
+|key|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|<= 0|**EINVAL**|
-|any|any|**NULL**|any|any|**EINVAL**|
+|**Null**|any|any|any|any|**아인발 ()에인발 (것)**|
+|any|**Null**|any|!= 0|any|**아인발 ()에인발 (것)**|
+|any|any|any|any|<= 0|**아인발 ()에인발 (것)**|
+|any|any|**Null**|any|any|**아인발 ()에인발 (것)**|
 
-**qsort_s** 는 **qsort** 와 동일한 동작을 갖지만 *컨텍스트* 매개 변수를 포함 하며 **errno**를 설정 합니다. 비교 함수는 *컨텍스트* 매개 변수를 전달 하 여 개체 포인터를 사용 하 여 요소 포인터를 통해 액세스할 수 없는 개체 기능 또는 기타 정보에 액세스할 수 있습니다. *컨텍스트 매개 변수* 를 추가 하면 정적 변수를 사용 하 여 *비교* 함수에서 공유 정보를 사용할 수 있도록 하는 재진입 버그를 방지 하기 위해 *컨텍스트* 를 사용할 수 있으므로 **qsort_s** 더 안전 합니다.
+**qsort_s** **qsort와** 동일한 동작을 가지고 있지만 *컨텍스트* 매개 변수를 가지고 **errno를**설정합니다. 비교 함수는 *컨텍스트* 매개 변수를 전달하여 개체 포인터를 사용하여 요소 포인터를 통해 액세스할 수 없는 개체 기능 또는 기타 정보에 액세스할 수 있습니다. *컨텍스트* 매개 변수를 추가하면 정적 변수를 사용하여 *비교* 함수에서 공유 정보를 사용할 수 있도록 컨텍스트가 다시 발생버그를 방지하는 데 사용할 수 있으므로 *컨텍스트를* **qsort_s** 더 안전합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -105,13 +109,13 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> 및 \<search.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-**라이브러리인** 모든 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.
+**라이브러리:** 모든 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 **qsort_s** 함수에서 *컨텍스트* 매개 변수를 사용 하는 방법을 보여 줍니다. *Context* 매개 변수를 사용 하 여 스레드로부터 안전한 정렬을 더 쉽게 수행할 수 있습니다. 스레드 안전을 보장 하기 위해 동기화 해야 하는 정적 변수를 사용 하는 대신 각 정렬에서 다른 *컨텍스트* 매개 변수를 전달 합니다. 이 예제에서는 로캘 개체가 *컨텍스트* 매개 변수로 사용 됩니다.
+다음 예제에서는 **qsort_s** 함수에서 *컨텍스트* 매개 변수를 사용 하는 방법을 보여 줍니다. *컨텍스트* 매개 변수를 사용하면 스레드 안전 정렬을 더 쉽게 수행할 수 있습니다. 스레드 안전을 보장하기 위해 동기화해야 하는 정적 변수를 사용하는 대신 각 정렬에서 다른 *컨텍스트* 매개 변수를 전달합니다. 이 예제에서는 로캘 개체가 *컨텍스트* 매개 변수로 사용됩니다.
 
 ```cpp
 // crt_qsort_s.cpp
@@ -263,7 +267,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

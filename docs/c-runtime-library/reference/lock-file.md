@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953309"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342105"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-파일 개체에 동시에 액세스 **하는 스레드에** 대 한 일관성을 유지 하기 위해 **파일** 개체를 잠급니다.
+**FILE** 개체에 동시에 액세스하는 스레드의 일관성을 보장하기 위해 **FILE** 개체를 잠그십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>매개 변수
 
-*file*<br/>
+*파일*<br/>
 파일 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
-**_Lockrxa** 함수는 *file*로 지정 된 **파일** 개체를 잠급니다. 기본 파일은 **_lockrla**에 의해 잠겨 있지 않습니다. 파일에 대한 잠금을 해제하려면 [_unlock_file](unlock-file.md)을 사용합니다. **_Lock **\\u**nununununununununununununununununununununun**\
+**_lock_file** 함수는 *파일로*지정된 **FILE** 개체를 잠그습니다. 기본 파일은 **_lock_file.** 파일에 대한 잠금을 해제하려면 [_unlock_file](unlock-file.md)을 사용합니다. **_lock_file** 및 **_unlock_file** 대한 호출은 스레드에서 일치해야 합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -59,7 +63,7 @@ void _lock_file( FILE* file );
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

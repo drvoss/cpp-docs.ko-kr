@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341661"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,30 +112,32 @@ long long int llrintl(
 *x*<br/>
 반올림할 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 하면 *x*의 반올림 된 정수 값을 반환 합니다.
+성공하면 *x의*반올림된 정수 값을 반환합니다.
 
-|문제|반환|
+|문제|반환 값|
 |-----------|------------|
-|*x* 가 반환 형식 범위를 벗어났습니다.<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID** 발생 하 고 0을 반환 합니다.|
+|*x가* 반환 유형의 범위를 벗어났습니다.<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID** 올리고 0(0)을 반환합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하는 **lrint** 및 **llrint** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **lrint** 및 **llrint** 는 항상 **double**을 사용 합니다.
+C++는 오버로드를 허용하므로 **플로트와** **긴** **이중** 형식을 취하는 **린트와 린트의** 오버로드를 호출할 수 있습니다. **llrint** C 프로그램에서, **린트와** **린트는** 항상 **두 배를**.
 
-*X* 가 정수 계열 값에 해당 하는 부동 소수점 값을 나타내지 않는 경우 이러한 함수는 **FE_INEXACT**을 발생 시킵니다.
+*x가* 정수값의 부동 점 등가물을 나타내지 않으면 이러한 함수는 **FE_INEXACT.**
 
-**Microsoft**전용: 결과가 반환 형식 범위를 벗어났거나 매개 변수가 NaN 또는 무한대 인 경우 반환 값은 정의 된 구현입니다. Microsoft 컴파일러는 0 값을 반환합니다.
+**Microsoft 별**: 결과가 반환 형식의 범위를 벗어나거나 매개 변수가 NaN 또는 무한대인 경우 반환 값이 구현정의됩니다. Microsoft 컴파일러는 0 값을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**린트,** **린티스트,** **린틀**, **린트,** **린트,** **린틀**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>

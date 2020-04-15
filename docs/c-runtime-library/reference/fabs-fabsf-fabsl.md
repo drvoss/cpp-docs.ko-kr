@@ -1,10 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941488"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347545"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -71,9 +73,9 @@ long double fabsl(
 *x*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Fabs** 함수는 인수 *x*의 절대값을 반환 합니다. 반환되는 오류가 없습니다.
+fabs 함수는 인수 *x의*절대 값을 **반환합니다.** 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
@@ -81,21 +83,23 @@ long double fabsl(
 
 ## <a name="remarks"></a>설명
 
-C++에서는 오버 로드를 허용 하므로 cmath > 헤더를 포함 하는 \<경우 fabs의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fabs** 은 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 cmath> 헤더를 \<포함하는 경우 팹의 오버로드를 호출할 수 **있습니다.** C 프로그램에서 **fabs는** 항상 **double을**가져와 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |함수|필수 C 헤더|필수 C++ 헤더|
 |--------------|-----------------------|---------------------------|
-|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**팹,** **팹스프,** **팹슬**|\<math.h>|\<cmath> 또는 \<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [abs](abs-labs-llabs-abs64.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

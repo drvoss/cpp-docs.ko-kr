@@ -1,10 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346549"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -73,23 +75,25 @@ long double fmodl(
 *x*, *y*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**fmod** 는 *x* / *y*의 부동 소수점 나머지를 반환 합니다. *Y* 값이 0.0 이면 **fmod** 가 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf](printf-printf-l-wprintf-wprintf-l.md)를 참조 하세요.
+**fmod는** *x y의* / *y*부동 점 나머지를 반환합니다. *y* 값이 0.0이면 **fmod는** 조용한 NaN을 반환합니다. **printf** 패밀리에 의한 조용한 NaN 표현에 대한 자세한 내용은 [printf](printf-printf-l-wprintf-wprintf-l.md)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
-**Fmod** 함수는 *x* /  i =  xy와같이xy의부동소수점나머지f를계산합니다\* . 여기서 i는 +  는 정수이 고, *f* 는 *x*와 동일한 부호를 가지 며, *f* 의 절대값은 *y*의 절대값 보다 낮습니다.
+*x* / *y* **fmod** *x*함수는 = x*i* \* *y* +  *f* *f,* *정수,* *f는* *x와*동일한 부호를 가지며 *f의* 절대 값은 *y의*절대 값보다 낮습니다.
 
-C++는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **fmod** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fmod** 는 항상 두 개의 **double** 인수를 사용 하 고 **double**을 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 및 **긴** **이중** 값을 가져가고 반환하는 **fmod의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **fmod는** 항상 두 개의 **이중** 인수를 취하고 **double**을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**fmod,** **fmodf,** **fmodl**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -113,7 +117,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

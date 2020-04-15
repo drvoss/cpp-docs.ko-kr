@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy, _mbsnbcpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
+- _o__mbsnbcpy
+- _o__mbsnbcpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340669"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-문자열의 **n** 바이트를 대상 문자열에 복사 합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)을 참조하세요.
+대상 문자열에 문자열의 **n** 바이트를 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)을 참조하세요.
 
 > [!IMPORTANT]
 > 이 API는 Windows 런타임에서 실행되는 애플리케이션에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
@@ -80,36 +83,38 @@ unsigned char * _mbsnbcpy_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*strDest*<br/>
+*스트레스트*<br/>
 복사할 문자열의 대상입니다.
 
-*strSource*<br/>
+*스트소스 (것)스*<br/>
 복사할 문자열입니다.
 
 *count*<br/>
 복사할 바이트 수입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_mbsnbcpy** 는 대상 문자열에 대 한 포인터를 반환 합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
+**_mbsnbcpy** 대상 문자 문자열에 대한 포인터를 반환합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**_Mbsnbcpy** 함수는 *Strsource* 에서 *strsource*의 *카운트* 바이트를 복사 합니다. *Count* 가 *strdest* 의 크기를 초과 하거나 원본 및 대상 문자열이 겹치면 **_mbsnbcpy** 의 동작이 정의 되지 않습니다.
+**_mbsnbcpy** 함수는 *strSource에서* *strDest까지*바이트를 *계산합니다.* *개수가* *strDest* 의 크기를 초과하거나 소스 및 대상 문자열이 겹치는 경우 **_mbsnbcpy** 동작은 정의되지 않습니다.
 
-*Strsource* 또는 *strsource* 가 null 포인터인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 함수는 **NULL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+*strSource* 또는 *strDest가* null 포인터인 경우 이 함수는 매개 변수 유효성 검사에 설명된 대로 잘못된 매개 변수 처리기를 [호출합니다.](../../c-runtime-library/parameter-validation.md) 실행을 계속할 수 있는 경우 함수는 **NULL을** 반환하고 **errno를** **EINVAL로**설정합니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale를](setlocale-wsetlocale.md) 참조 하세요. **_L** 접미사가 없는 함수는 현재 로캘을 사용 하 고 **_l** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고 이러한 함수의 버전은 동일 합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정설정의 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](setlocale-wsetlocale.md) 를 참조하십시오. 이러한 함수의 버전은 **동일하지만 _l** 접미사가 없는 버전은 현재 로캘을 사용하고 **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 > [!IMPORTANT]
 > 이러한 함수는 버퍼 오버런 위협에 노출될 수 있습니다. 버퍼 오버런은 보증되지 않은 권한 승격을 초래하거나 시스템을 위태롭게 하는 임의의 공격자 코드를 실행하기 위해 사용될 수 있습니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하십시오.
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -123,7 +128,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 |**_mbsnbcpy**|\<mbstring.h>|
 |**_mbsnbcpy_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
