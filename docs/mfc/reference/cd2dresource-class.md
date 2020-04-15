@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e747eda42e625d0f4cf65859e471933bbb043ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369090"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 클래스
 
-만들고 브러시, 레이어 및 텍스트와 같은 D2D 리소스를 관리 하기 위한 인터페이스를 제공 하는 추상 클래스입니다.
+브러시, 레이어 및 텍스트와 같은 D2D 리소스를 만들고 관리하기 위한 인터페이스를 제공하는 추상 클래스입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -43,32 +43,32 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DResource::CD2DResource](#cd2dresource)|CD2DResource 개체를 생성합니다.|
-|[CD2DResource::~CD2DResource](#_dtorcd2dresource)|소멸자입니다. D2D 리소스 개체를 소멸 될 때 호출 됩니다.|
+|[CD2D자원::CD2D자원](#cd2dresource)|CD2DResource 개체를 생성합니다.|
+|[CD2D자원::~CD2D자원](#_dtorcd2dresource)|소멸자입니다. D2D 리소스 개체가 소멸될 때 호출됩니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DResource::Create](#create)|CD2DResource를 만듭니다.|
-|[CD2DResource::Destroy](#destroy)|CD2DResource 개체를 제거합니다.|
-|[CD2DResource::IsValid](#isvalid)|리소스 유효성 검사|
+|[CD2D리소스:만들기](#create)|CD2DResource를 만듭니다.|
+|[CD2D자원::D에스트로이](#destroy)|CD2DResource 개체를 삭제합니다.|
+|[CD2D리소스:유효하지 않음](#isvalid)|리소스 유효성 검사|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DResource::IsAutoDestroy](#isautodestroy)|자동 검사 플래그를 삭제 합니다.|
-|[CD2DResource::ReCreate](#recreate)|CD2DResource를 다시 만듭니다.|
+|[CD2D자원::IsAutoDestroy](#isautodestroy)|자동 파괴 플래그를 확인합니다.|
+|[CD2D리소스:재현](#recreate)|CD2DResource를 다시 만듭니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|리소스는 소유자 (CRenderTarget)를 통해 제거 됩니다.|
-|[CD2DResource::m_pParentTarget](#m_pparenttarget)|CRenderTarget 부모에 대 한 포인터)|
+|[CD2D리소스:m_bIsAutoDestroy](#m_bisautodestroy)|소유자는 리소스를 파괴합니다(CRenderTarget)|
+|[CD2D리소스:m_pParentTarget](#m_pparenttarget)|부모 CRenderTarget에 대한 포인터)|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -80,15 +80,15 @@ class CD2DResource : public CObject;
 
 **헤더:** afxrendertarget.h
 
-##  <a name="_dtorcd2dresource"></a>  CD2DResource::~CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2D자원::~CD2D자원
 
-소멸자입니다. D2D 리소스 개체를 소멸 될 때 호출 됩니다.
+소멸자입니다. D2D 리소스 개체가 소멸될 때 호출됩니다.
 
 ```
 virtual ~CD2DResource();
 ```
 
-##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2D자원::CD2D자원
 
 CD2DResource 개체를 생성합니다.
 
@@ -100,13 +100,13 @@ CD2DResource(
 
 ### <a name="parameters"></a>매개 변수
 
-*pParentTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p부모 대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-*bAutoDestroy*<br/>
-개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.
+*b오토파괴*<br/>
+개체가 소유자(pParentTarget)에 의해 소멸됨을 나타냅니다.
 
-##  <a name="create"></a>  CD2DResource::Create
+## <a name="cd2dresourcecreate"></a><a name="create"></a>CD2D리소스:만들기
 
 CD2DResource를 만듭니다.
 
@@ -116,34 +116,34 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 
 ### <a name="parameters"></a>매개 변수
 
-*pRenderTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p렌더대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-##  <a name="destroy"></a>  CD2DResource::Destroy
+## <a name="cd2dresourcedestroy"></a><a name="destroy"></a>CD2D자원::D에스트로이
 
-CD2DResource 개체를 제거합니다.
+CD2DResource 개체를 삭제합니다.
 
 ```
 virtual void Destroy() = 0;
 ```
 
-##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy
+## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2D자원::IsAutoDestroy
 
-자동 검사 플래그를 삭제 합니다.
+자동 파괴 플래그를 확인합니다.
 
 ```
 BOOL IsAutoDestroy() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-개체 소유자;에 의해 소멸 되 면 TRUE 그렇지 않으면 FALSE입니다.
+TRUE 개체가 소유자에 의해 파괴되는 경우 그렇지 않으면 거짓.
 
-##  <a name="isvalid"></a>  CD2DResource::IsValid
+## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a>CD2D리소스:유효하지 않음
 
 리소스 유효성 검사
 
@@ -151,27 +151,27 @@ BOOL IsAutoDestroy() const;
 virtual BOOL IsValid() const = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리소스 유효 하면 TRUE 그렇지 않으면 FALSE입니다.
+TRUE 리소스가 유효한 경우; 그렇지 않으면 거짓.
 
-##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
+## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a>CD2D리소스:m_bIsAutoDestroy
 
-리소스는 소유자 (CRenderTarget)를 통해 제거 됩니다.
+소유자는 리소스를 파괴합니다(CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;
 ```
 
-##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget
+## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a>CD2D리소스:m_pParentTarget
 
-CRenderTarget 부모에 대 한 포인터)
+부모 CRenderTarget에 대한 포인터)
 
 ```
 CRenderTarget* m_pParentTarget;
 ```
 
-##  <a name="recreate"></a>  CD2DResource::ReCreate
+## <a name="cd2dresourcerecreate"></a><a name="recreate"></a>CD2D리소스:재현
 
 CD2DResource를 다시 만듭니다.
 
@@ -181,13 +181,13 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>매개 변수
 
-*pRenderTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p렌더대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스](../../mfc/reference/mfc-classes.md)
