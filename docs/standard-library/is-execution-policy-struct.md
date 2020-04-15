@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - is_execution_policy class
 - is_execution_policy struct
-ms.openlocfilehash: b1be749d731f15b465f74e68d9cfa922017bf629
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 899e14dcbae4f734867260af934ce0c8724ecaa6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268975"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371624"
 ---
-# <a name="isexecutionpolicy-struct"></a>is_execution_policy 구조체
+# <a name="is_execution_policy-struct"></a>is_execution_policy 구조체
 
-함수 시그니처를 제외 하 고 그렇지 않은 경우 모호한 오버 로드 확인 참가 하기 위해 실행 정책을 검색 합니다.
+그렇지 않으면 모호한 오버로드 해결 참여에서 함수 서명을 제외하기 위한 실행 정책을 검색합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template<class T> struct is_execution_policy { see below };
 ```

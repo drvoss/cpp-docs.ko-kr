@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373858"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 클래스
 
-CFolderPickerDialog 클래스 폴더 선택 모드에서 CFileDialog를 구현합니다.
+CFolderPicker Dialog 클래스는 폴더 선택 모드에서 CFileDialog를 구현합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -29,10 +29,10 @@ class CFolderPickerDialog : public CFileDialog;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|소멸자|
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|생성자입니다.|
+|[CFolder피커디아로그::~CFolder피커디아로그](#_dtorcfolderpickerdialog)|소멸자|
+|[CFolder피커디아로그::CFolder피커디아로그](#cfolderpickerdialog)|생성자입니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -56,7 +56,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 **헤더:** afxdlgs.h
 
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolder피커디아로그::CFolder피커디아로그
 
 생성자입니다.
 
@@ -70,21 +70,21 @@ explicit CFolderPickerDialog(
 
 ### <a name="parameters"></a>매개 변수
 
-*lpszFolder*<br/>
+*lpsz폴더*<br/>
 초기 폴더입니다.
 
 *dwFlags*<br/>
-대화 상자를 사용자 지정할 수 있도록 하는 하나 이상의 플래그의 조합입니다.
+대화 상자를 사용자 지정할 수 있는 하나 이상의 플래그의 조합입니다.
 
 *pParentWnd*<br/>
-대화 상자 개체의 부모 또는 소유자 창에 대 한 포인터입니다.
+대화 상자 개체의 부모 또는 소유자 창에 대한 포인터입니다.
 
 *dwSize*<br/>
-OPENFILENAME 구조체의 크기입니다.
+OPENFILENAME 구조의 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolder피커디아로그::~CFolder피커디아로그
 
 소멸자
 
@@ -94,6 +94,6 @@ virtual ~CFolderPickerDialog();
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스](../../mfc/reference/mfc-classes.md)

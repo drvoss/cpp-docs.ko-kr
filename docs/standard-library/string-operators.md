@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376644"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[연산자==](#op_eq_eq)|
+|[연산자!=](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;&gt;](#op_gt_gt)|
+|[연산자&gt;=](#op_gt_eq)|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|
+|[연산자&lt;=](#op_lt_eq)|[연산자+](#op_add)|[연산자==](#op_eq_eq)|
 
-## <a name="op_add"></a>  operator+
+## <a name="operator"></a><a name="op_add"></a>연산자+
 
 두 문자열 개체를 연결합니다.
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>설명
 
-각 오버 로드 함수 `operator+` 클래스 템플릿 [Basic_string 클래스](../standard-library/basic-string-class.md)의 두 개체를 연결 합니다. 는 모두 `basic_string< CharType, Traits, Allocator>(Left).append(right)`를 효과적으로 반환 합니다. 자세한 내용은 [append](../standard-library/basic-string-class.md#append)를 참조 하세요.
+함수각 오버로드 `operator+` 클래스 템플릿의 두 개체를 basic_string [클래스.](../standard-library/basic-string-class.md) 모든 효과적으로 `basic_string< CharType, Traits, Allocator>(Left).append(right)`반환 . 자세한 내용은 [추가](../standard-library/basic-string-class.md#append)를 참조하십시오.
 
 ### <a name="example"></a>예제
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.
 
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같은지 테스트합니다.
 
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작은지 테스트합니다.
 
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작거나 같은지 테스트합니다.
 
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
 
 문자열을 출력 스트림에 기록하는 템플릿 함수입니다.
 
@@ -566,18 +566,18 @@ basic_ostream<CharType, Traits>& operator<<(
 *_Ostr*\
 문자열이 기록되는 출력 스트림입니다.
 
-*str*\
+*Str*\
 출력 스트림에 입력할 문자열입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정 된 문자열의 값을 출력 스트림에 *_Ostr*씁니다.
+_Ostr 출력 *스트림에*지정된 문자열의 값을 씁니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수 오버 로드 **연산자는 < <** 하 여 클래스 템플릿 [basic_string](../standard-library/basic-string-class.md) 의 개체 *Str* 를 스트림 *\_ostr*에 삽입 합니다. 함수는 `_Ostr.write( str.c_str, str.size )`를 효과적으로 반환 합니다.
+템플릿 함수는 **<<함수를** 오버로드하여 클래스 템플릿의 개체 *str을* * \_스트림 Ostr에* [basic_string.](../standard-library/basic-string-class.md) 이 함수는 `_Ostr.write( str.c_str, str.size )`효과적으로 반환합니다.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 큰지 테스트합니다.
 
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 크거나 같은지 테스트합니다.
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>연산자&gt;&gt;
 
 입력 스트림에서 문자열을 읽는 템플릿 함수입니다.
 
@@ -804,23 +804,23 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="return-value"></a>Return Value
 
-*_Istr* 에서 지정 된 문자열의 값을 읽고 *오른쪽*으로 반환 합니다.
+*_Istr* 지정된 문자열의 값을 읽고 *오른쪽으로*반환합니다.
 
 ### <a name="remarks"></a>설명
 
 `skipws` 플래그가 설정된 경우가 아니면 연산자는 선행 공백을 건너뜁니다. 그리고 다음 문자가 공백이거나 파일의 끝에 도달할 때까지 뒤에 오는 모든 문자를 읽습니다.
 
-템플릿 함수 오버 로드 **연산자는 > >** 하 여 *right* 로 제어 되는 시퀀스를 스트림 *_Istr*에서 추출 된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.
+템플릿 함수는>>**운영자에게** *오른쪽으로* 제어되는 시퀀스를 *_Istr*스트림에서 추출된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.
 
-- 파일의 끝에 도달하는 경우
+- 파일의 끝.
 
 - 함수가 `_Istr`을 추출한 후 값이 0이 아닌 경우 **width** 요소
 
 함수가 `_Istr`을 추출한 후 [max_size](../standard-library/basic-string-class.md#max_size) 요소
 
-- 함수는 [use_facet](../standard-library/basic-filebuf-class.md#open)< **Ctype**\< **chartype**> > (`getloc` *)를 추출 하는 요소를* 추출 합니다. **is**( **Ctype**\< **chartype**>:: **space**, *ch*)는 true 이며,이 경우 문자는 다시 배치 됩니다.
+- 함수가 *ch* 요소를 추출한 후 이 요소의 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`), **is**( **ctype**\< **CharType**>:: **space**, *ch*)가 true이면 문자가 되돌려집니다.
 
-함수가 요소를 추출 하지 않으면 [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`)를 호출 합니다. 어떤 경우든 **istr**. **width**(0) **및 \* 반환**합니다.
+함수가 요소를 추출하지 않으면 [setstate](../standard-library/basic-ios-class.md#setstate)`ios_base::failbit`()를 호출합니다. 어떤 경우든 **istr**. **width**(0)을 호출하고 \* **this**를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>참고 항목
 
-[\<string>](../standard-library/string.md)
+[\<문자열>](../standard-library/string.md)

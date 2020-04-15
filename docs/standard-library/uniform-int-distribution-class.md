@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367292"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution 클래스
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*Inttype* \
-정수 결과 형식으로, 기본적으로 **int**로 설정 됩니다. 가능한 형식은 [\<random >](../standard-library/random.md)를 참조 하세요.
+*IntType*\
+정수 결과 유형, 기본값은 **int.** 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿에서는 분포를 사용 하 여 사용자 지정 정수 형식의 값을 생성 하는 포함-포함 분포를 설명 하므로 모든 값이 동일 하 게 될 수 있습니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+클래스 템플릿은 모든 값이 동일하게 발생할 수 있도록 분포가 있는 사용자 지정 정수 형식의 값을 생성하는 포괄적인 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -179,7 +179,7 @@ Distribution for 200 samples:
 
 **네임스페이스:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:uniform_int_distribution
 
 분포를 생성합니다.
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*\*
+*a.*\
 난수 값의 하한으로, 하한 값도 포함됩니다.
 
-*b* \
+*B*\
 난수 값의 상한으로, 상한 값도 포함됩니다.
 
-*parm* \
+*파름 ()와*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-**사전 조건:** `a ≤ b`
+**사전 조건:**`a ≤ b`
 
-첫 번째 생성자 *는 값을 저장 하* 고 저장 된 *b* 값이 *b*값을 보유 하 고 있는 *개체를 생성* 합니다.
+첫 번째 생성자는 *저장된* 값이 *a* 값을 보유하고 저장된 *b* 값이 *b*값을 보유하는 개체를 생성합니다.
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p아람_타입
 
 분포의 매개 변수를 저장합니다.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
-*\*
+*a.*\
 난수 값의 하한으로, 하한 값도 포함됩니다.
 
-*b* \
+*B*\
 난수 값의 상한으로, 상한 값도 포함됩니다.
 
-*오른쪽* \
+*오른쪽*\
 이 매개 변수와 비교할 `param_type` 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-**사전 조건:** `a ≤ b`
+**사전 조건:**`a ≤ b`
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<random>](../standard-library/random.md)
+[\<임의>](../standard-library/random.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398162"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374277"
 ---
 # <a name="synclockt-class"></a>SyncLockT 클래스
 
@@ -37,42 +37,42 @@ class SyncLockT;
 
 ### <a name="parameters"></a>매개 변수
 
-*SyncTraits*<br/>
-리소스의 소유권을 가져올 수 있는 형식입니다.
+*싱크특성*<br/>
+리소스의 소유권을 가져갈 수 있는 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-단독으로 사용할 수 있는 형식을 나타내는 또는 리소스의 소유권을 공유 합니다.
+리소스의 단독 또는 공유 소유권을 취할 수 있는 형식을 나타냅니다.
 
-합니다 `SyncLockT` 클래스가 사용 되며, 예를 들어 구현할 수 있도록 합니다 [SRWLock](srwlock-class.md) 클래스입니다.
+예를 `SyncLockT` 들어 [SRWLock](srwlock-class.md) 클래스를 구현하는 데 클래스가 사용됩니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                                      | 설명
+속성                                      | Description
 ----------------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt)        | `SyncLockT` 클래스의 새 인스턴스를 초기화합니다.
-[SyncLockT::~SyncLockT](#tilde-synclockt) | 인스턴스를 초기화 해제는 `SyncLockT` 클래스입니다.
+[동기화 잠금::동기화 잠금](#synclockt)        | `SyncLockT` 클래스의 새 인스턴스를 초기화합니다.
+[동기화 잠금: :~동기화 잠금](#tilde-synclockt) | 클래스의 인스턴스를 초기화합니다. `SyncLockT`
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-이름                               | 설명
+속성                               | Description
 ---------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt) | `SyncLockT` 클래스의 새 인스턴스를 초기화합니다.
+[동기화 잠금::동기화 잠금](#synclockt) | `SyncLockT` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                             | 설명
+속성                             | Description
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[SyncLockT::IsLocked](#islocked) | 나타냅니다 여부 현재 `SyncLockT` 리소스를 소유 하는 개체입니다. 즉, `SyncLockT` 개체가 *잠겨*합니다.
-[SyncLockT::Unlock](#unlock)     | 현재 보유 한 리소스의 제어권을 해제 `SyncLockT` 개체에 있는 경우.
+[동기화잠금::잠금](#islocked) | 현재 `SyncLockT` 개체가 리소스를 소유하고 있는지 여부를 나타냅니다. 즉, 개체가 `SyncLockT` *잠겨*있습니다.
+[동기화 잠금::잠금 해제](#unlock)     | 현재 `SyncLockT` 개체가 보유한 리소스(있는 경우)의 제어를 해제합니다.
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-이름                      | 설명
+속성                      | Description
 ------------------------- | -------------------------------------------------------------------
-[SyncLockT::sync_](#sync) | 표시 되는 기본 리소스를 보유 합니다 `SyncLockT` 클래스입니다.
+[동기화잠금: sync_](#sync) | 클래스로 표시되는 기본 `SyncLockT` 리소스를 보유합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -80,11 +80,11 @@ class SyncLockT;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** corewrappers.h
+**헤더:** 코어래퍼.h
 
-**네임스페이스:** Microsoft::WRL::Wrappers::Details
+**네임스페이스:** 마이크로소프트::WRL::래퍼::D
 
-## <a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>동기화 잠금: :~동기화 잠금
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -94,11 +94,11 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 
 ### <a name="remarks"></a>설명
 
-인스턴스를 초기화 해제는 `SyncLockT` 클래스입니다.
+클래스의 인스턴스를 초기화합니다. `SyncLockT`
 
-이 소멸자에는 또한 현재 잠금 해제 `SyncLockT` 인스턴스.
+이 소멸자는 현재 `SyncLockT` 인스턴스의 잠금을 해제합니다.
 
-## <a name="islocked"></a>SyncLockT::IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a>동기화잠금::잠금
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -106,15 +106,15 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 bool IsLocked() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** 경우는 `SyncLockT` 개체가 고, 그렇지 않으면 잠긴 **false**합니다.
+개체가 `SyncLockT` 잠겨 있는 경우 **true입니다.** 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
-나타냅니다 여부 현재 `SyncLockT` 리소스를 소유 하는 개체입니다. 즉, `SyncLockT` 개체가 *잠겨*합니다.
+현재 `SyncLockT` 개체가 리소스를 소유하고 있는지 여부를 나타냅니다. 즉, 개체가 `SyncLockT` *잠겨*있습니다.
 
-## <a name="sync"></a>SyncLockT::sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>동기화잠금: sync_
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -124,9 +124,9 @@ typename SyncTraits::Type sync_;
 
 ### <a name="remarks"></a>설명
 
-표시 되는 기본 리소스를 보유 합니다 `SyncLockT` 클래스입니다.
+클래스로 표시되는 기본 `SyncLockT` 리소스를 보유합니다.
 
-## <a name="synclockt"></a>SyncLockT::SyncLockT
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>동기화 잠금::동기화 잠금
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -142,19 +142,19 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>매개 변수
 
-*other*<br/>
-다른 rvalue 참조 `SyncLockT` 개체입니다.
+*다른*<br/>
+다른 `SyncLockT` 개체에 대한 rvalue 참조입니다.
 
-*sync*<br/>
-다른 참조 `SyncLockWithStatusT` 개체입니다.
+*동기화*<br/>
+다른 `SyncLockWithStatusT` 개체에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
 `SyncLockT` 클래스의 새 인스턴스를 초기화합니다.
 
-첫 번째 생성자는 현재 `SyncLockT` 간에 개체 `SyncLockT` 매개 변수로 지정 된 개체 *다른*를 무효화 하는 다른 및 `SyncLockT` 개체입니다. 두 번째 생성자는 `protected`, 현재 초기화 `SyncLockT` 유효 하지 않은 상태로 개체입니다.
+첫 번째 생성자는 *다른* `SyncLockT` 매개 변수에 의해 지정된 다른 `SyncLockT` 개체에서 현재 `SyncLockT` 개체를 초기화한 다음 다른 개체를 무효화합니다. 두 번째 생성자는 `protected`은 현재 `SyncLockT` 개체를 잘못된 상태로 초기화합니다.
 
-## <a name="unlock"></a>SyncLockT::Unlock
+## <a name="synclocktunlock"></a><a name="unlock"></a>동기화 잠금::잠금 해제
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -164,4 +164,4 @@ void Unlock();
 
 ### <a name="remarks"></a>설명
 
-현재 보유 한 리소스의 제어권을 해제 `SyncLockT` 개체에 있는 경우.
+현재 `SyncLockT` 개체가 보유한 리소스(있는 경우)의 제어를 해제합니다.

@@ -10,93 +10,93 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1901100996a776244b57efe0951795ceec3c630a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377257"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>방법: 형식이 안전한 컬렉션 만들기
 
-이 문서에서는 사용자 지정 데이터 형식에 대 한 형식이 안전한 컬렉션을 확인 하는 방법에 설명 합니다. 다루는 주제는 다음과 같습니다.
+이 문서에서는 사용자 고유의 데이터 형식에 대해 형식 이 안전한 컬렉션을 만드는 방법을 설명합니다. 다룰 주제는 다음과 같습니다.
 
-- [형식 안전성에 대 한 템플릿 기반 클래스를 사용 하 여](#_core_using_template.2d.based_classes_for_type_safety)
+- [형식 안전성에 템플릿 기반 클래스 사용](#_core_using_template.2d.based_classes_for_type_safety)
 
-- [도우미 함수를 구현합니다.](#_core_implementing_helper_functions)
+- [도우미 기능 구현](#_core_implementing_helper_functions)
 
-- [비템플릿 컬렉션 클래스를 사용 하 여](#_core_using_nontemplate_collection_classes)
+- [템플릿이 아닌 컬렉션 클래스 사용](#_core_using_nontemplate_collection_classes)
 
-Microsoft Foundation Class 라이브러리를 기반으로 하는 미리 정의 된 형식이 안전한 컬렉션을 제공 C++ 템플릿. 템플릿 것 이므로 이러한 클래스를 형식 안전성 및 형식 변환 및이 목적을 위해 비템플릿 클래스 사용과 관련 된 기타 추가 작업 없이 사용 편의성을 제공 합니다. MFC 샘플 [수집](../overview/visual-cpp-samples.md) MFC 응용 프로그램에서 템플릿 기반 컬렉션 클래스의 사용을 보여 줍니다. 일반적으로 새 컬렉션 코드를 작성 하 든 지 이러한 클래스를 사용 합니다.
+Microsoft 재단 클래스 라이브러리는 C++ 템플릿을 기반으로 미리 정의된 형식 안전 컬렉션을 제공합니다. 템플릿이기 때문에 이러한 클래스는 형식 캐스팅 및 이 목적을 위해 비템플릿 클래스를 사용하는 데 관련된 기타 추가 작업 없이 형식 안전성과 사용 편의성을 제공하는 데 도움이 됩니다. MFC 샘플 [COLLECT는](../overview/visual-cpp-samples.md) MFC 응용 프로그램에서 템플릿 기반 컬렉션 클래스의 사용을 보여 줍니다. 일반적으로 새 컬렉션 코드를 작성할 때마다 이러한 클래스를 사용합니다.
 
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 형식 안전성에 대 한 템플릿 기반 클래스를 사용 하 여
+## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a>형식 안전을 위해 템플릿 기반 클래스 사용
 
-#### <a name="to-use-template-based-classes"></a>템플릿 기반 클래스를 사용 하려면
+#### <a name="to-use-template-based-classes"></a>템플릿 기반 클래스를 사용하려면
 
-1. 컬렉션 클래스 형식의 변수를 선언 합니다. 예를 들어:
+1. 컬렉션 클래스 형식의 변수를 선언합니다. 다음은 그 예입니다.
 
    [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
-1. 멤버 컬렉션 개체의 함수를 호출 합니다. 예를 들어:
+1. 컬렉션 개체의 멤버 함수를 호출합니다. 다음은 그 예입니다.
 
    [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
-1. 필요한 경우 구현 된 [도우미 함수](../mfc/reference/collection-class-helpers.md) 하 고 [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)합니다. 이러한 함수를 구현에 대 한 자세한 내용은 [도우미 함수 구현](#_core_implementing_helper_functions)합니다.
+1. 필요한 경우 [도우미 함수및](../mfc/reference/collection-class-helpers.md) [직렬화요소를](../mfc/reference/collection-class-helpers.md#serializeelements)구현합니다. 이러한 함수 구현에 대한 자세한 내용은 [도우미 기능 구현을](#_core_implementing_helper_functions)참조하십시오.
 
-이 예제에서는 정수 목록을 선언을 보여 줍니다. 1 단계에서 첫 번째 매개 변수는 목록의 요소로 저장 된 데이터의 형식입니다. 두 번째 매개 변수 지정에 전달 되어 같은 컬렉션 클래스의 멤버 함수에서 반환 된 데이터가 어떻게 `Add` 고 `GetAt`입니다.
+이 예제에서는 정수 목록의 선언을 보여 주십습니다. 1단계의 첫 번째 매개 변수는 목록의 요소로 저장된 데이터 유형입니다. 두 번째 매개 변수는 데이터를 컬렉션 클래스의 멤버 함수(예: `Add` 및)에 `GetAt`전달하고 반환하는 방법을 지정합니다.
 
-##  <a name="_core_implementing_helper_functions"></a> 도우미 함수를 구현합니다.
+## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a>도우미 기능 구현
 
-템플릿 기반 컬렉션 클래스가 `CArray`, `CList`, 및 `CMap` 파생된 컬렉션 클래스에 대 한 필요에 따라 사용자 지정할 수 있는 5 가지 전역 도우미 함수를 사용 합니다. 이러한 도우미 함수에 대 한 자세한 내용은 [컬렉션 클래스 도우미](../mfc/reference/collection-class-helpers.md) 에 *MFC 참조*합니다. Serialization 함수 구현은 대부분의 템플릿 기반 컬렉션 클래스를 사용 하는 데 필요한 합니다.
+템플릿 기반 컬렉션 `CArray` `CList`클래스는 `CMap` 파생 컬렉션 클래스에 필요에 따라 사용자 지정할 수 있는 5개의 전역 도우미 함수를 사용합니다. 이러한 도우미 기능에 대한 자세한 내용은 *MFC 참조의* [컬렉션 클래스 도우미를](../mfc/reference/collection-class-helpers.md) 참조하십시오. 템플릿 기반 컬렉션 클래스의 대부분의 용도에 는 직렬화 함수의 구현이 필요합니다.
 
-###  <a name="_core_serializing_elements"></a> 요소를 직렬화 하는 작업
+### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a>요소 직렬화
 
-합니다 `CArray`, `CList`, 및 `CMap` 호출을 클래스 `SerializeElements` 컬렉션 요소를 저장 하거나 보관 파일에서 읽을.
+의 `CArray` `CList`에서 `CMap` 및 `SerializeElements` 클래스는 컬렉션 요소를 저장하거나 아카이브에서 읽도록 호출합니다.
 
-기본 구현 된 `SerializeElements` 도우미 함수 개체에서 보관 저장소에는 비트 쓰기를 수행 하거나 비트 보관 파일에서 개체에 저장 되는 여부에 따라 개체를 읽거나 보관 파일에서 검색 합니다. 재정의 `SerializeElements` 이 작업에 적합 하지 않은 경우.
+`SerializeElements` 도우미 함수의 기본 구현은 개체에서 아카이브로 비트를 쓰거나 개체가 아카이브에서 저장되거나 아카이브에서 검색되는지 여부에 따라 아카이브에서 개체로 비트 읽기를 수행합니다. 이 `SerializeElements` 작업이 적절하지 않은 경우 재정의합니다.
 
-컬렉션에서 파생 된 개체를 저장 하는 경우 `CObject` 사용 하 여 `IMPLEMENT_SERIAL` 컬렉션 요소 클래스의 구현에서 매크로에 내장 된 serialization 기능을 활용을 걸릴 수 있습니다 `CArchive` 및 `CObject`:
+컬렉션에서 `CObject` 파생된 개체를 저장하고 `IMPLEMENT_SERIAL` 컬렉션 요소 클래스의 구현에서 매크로를 사용하는 경우 다음과 같은 `CArchive` `CObject`기능을 기본으로 하는 직렬화 기능을 활용할 수 있습니다.
 
 [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]
 
-에 대 한 오버 로드 된 삽입 연산자 `CArchive` 호출 `CObject::Serialize` (또는 해당 함수를 재정의 하는) 각 `CPerson` 개체입니다.
+각 `CArchive` `CPerson` 개체에 대해 호출(또는 `CObject::Serialize` 해당 함수의 재정의)에 대한 오버로드된 삽입 연산자입니다.
 
-##  <a name="_core_using_nontemplate_collection_classes"></a> 비템플릿 컬렉션 클래스를 사용 하 여
+## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>템플릿이 아닌 컬렉션 클래스 사용
 
-MFC는 또한 MFC 버전 1.0 사용 하 여 도입 된 컬렉션 클래스를 지원 합니다. 이러한 클래스는 하지 템플릿을 기반으로 합니다. 지원 되는 형식의 데이터를 포함 하도록 사용할 수 있습니다 `CObject*`, `UINT`를 `DWORD`, 및 `CString`합니다. 이러한 미리 정의 된 컬렉션을 사용할 수 있습니다 (같은 `CObList`)에서 파생 된 모든 개체의 컬렉션을 보관 하 `CObject`합니다. MFC와 같은 기본 형식을 보유 하는 다른 미리 정의 된 컬렉션 해줍니다 `UINT` 포인터를 void 및 (`void`*). 그러나 일반적으로 경우가 보다 구체적인 클래스 및 파생 개체를 보유 하는 고유한 형식이 안전한 컬렉션을 정의 하는 데 유용 합니다. 하지 컬렉션 클래스를 사용 하 여 이렇게 템플릿을 기반으로 하는 템플릿 기반 클래스를 사용 하 여 보다 더 많은 작업이 됩니다.
+MFC는 MFC 버전 1.0에 도입된 컬렉션 클래스도 지원합니다. 이러한 클래스는 템플릿을 기반으로 하지 않습니다. 지원되는 `CObject*`형식 의 데이터를 포함하는 `UINT`데 `DWORD`사용할 `CString`수 있습니다. 이러한 미리 정의된 컬렉션(예: `CObList`)을 사용하여 `CObject`에서 파생된 모든 개체의 컬렉션을 보유할 수 있습니다. MFC는 또한 `UINT` *와 같은 기본 형식 및 void 포인터를`void`보유하는 다른 미리 정의된 컬렉션을 제공합니다. 그러나 일반적으로 보다 구체적인 클래스와 해당 파생 상품의 개체를 보유하도록 고유한 형식 안전 컬렉션을 정의하는 것이 유용한 경우가 많습니다. 템플릿을 기반으로 하지 않는 컬렉션 클래스를 사용하면 템플릿 기반 클래스를 사용하는 것보다 더 많은 작업이 수행됩니다.
 
-두 가지 방법으로 비템플릿 컬렉션을 사용 하 여 형식이 안전한 컬렉션을 만들 수 있습니다.
+템플릿이 아닌 컬렉션을 사용하여 형식 이용성 컬렉션을 만드는 방법에는 두 가지가 있습니다.
 
-1. 비템플릿 컬렉션 형식 캐스팅 필요한 경우 사용 합니다. 이 방법은 쉽습니다.
+1. 필요한 경우 형식 캐스팅과 함께 템플릿이 아닌 컬렉션을 사용합니다. 이것은 더 쉬운 방법입니다.
 
-1. 파생 하 고 비템플릿 형식이 안전한 컬렉션을 확장 합니다.
+1. 템플릿이 아닌 형식 이안전 컬렉션에서 파생및 확장합니다.
 
-#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>형식 캐스팅을 사용 하 여 비템플릿 컬렉션 사용 기준
+#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>형식 캐스팅이 있는 템플릿이 아닌 컬렉션을 사용하려면
 
-1. 비템플릿 클래스 중 하나를 같은 사용 `CWordArray`, 직접.
+1. 에 직접 와 같은 `CWordArray`템플릿이 아닌 클래스 중 하나를 사용합니다.
 
-   예를 들어, 만들 수는 `CWordArray` 를 32 비트 값을 추가 하 고 검색 합니다. 작업이 수행 하 여 더 이상 없습니다. 방금 미리 정의 된 기능을 사용 합니다.
+   예를 들어 32비트 `CWordArray` 값을 만들고 추가한 다음 검색할 수 있습니다. 더 이상 할 일은 없습니다. 미리 정의된 기능만 사용합니다.
 
-   미리 정의 된 컬렉션을 같은 이용할 수 있습니다 `CObList`에서 파생 된 모든 개체를 저장할 `CObject`합니다. A `CObList` 컬렉션에 대 한 포인터를 보유 하기 위해 정의 `CObject`합니다. 이후 적절 한 형식으로 결과 캐스트 해야 목록에서 개체를 검색 하는 경우는 `CObList` 함수에 대 한 포인터를 반환 합니다. `CObject`합니다. 예를 들어, 저장 하는 경우 `CPerson` 개체를 `CObList` 캐스팅에 대 한 포인터로 요소를 검색된 해야 하는 컬렉션을 `CPerson` 개체입니다. 다음 예제에서는 한 `CObList` 를 보유할 컬렉션 `CPerson` 개체:
+   에서 파생된 모든 개체를 보유하는 것과 같이 `CObList`미리 `CObject`정의된 컬렉션을 사용할 수도 있습니다. 컬렉션은 `CObList` `CObject`에 대한 포인터를 보유하도록 정의됩니다. 목록에서 개체를 검색할 때 `CObList` 함수가 포인터를 에 반환하기 때문에 결과를 적절한 유형으로 캐스팅해야 할 `CObject`수 있습니다. 예를 들어 컬렉션에 `CPerson` 개체를 `CObList` 저장하는 경우 개체에 대한 포인터로 `CPerson` 검색된 요소를 캐스팅해야 합니다. 다음 예제에서는 `CObList` 컬렉션을 사용하여 `CPerson` 개체를 보유합니다.
 
    [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-   이 기술을 미리 정의 된 컬렉션 형식을 사용 하 여 필요에 따라 캐스트 및 컬렉션 요구의 대부분에 대 한 적절 한 수 있습니다. 추가 기능이 나 자세한 형식 안전성을 해야 하는 경우 템플릿 기반 클래스를 사용 하거나 다음 절차를 수행 합니다.
+   미리 정의된 컬렉션 형식을 사용하고 필요에 따라 캐스팅하는 이 기술은 많은 컬렉션 요구에 적합할 수 있습니다. 추가 기능 또는 더 많은 형식 안전이 필요한 경우 템플릿 기반 클래스를 사용하거나 다음 절차를 따르십시오.
 
-#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>파생 시켜 비템플릿 형식이 안전한 컬렉션을 확장 하려면
+#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>템플릿이 아닌 형식 이안전 컬렉션을 파생하고 확장하려면
 
-1. 미리 정의 된 비템플릿 클래스 중 하나에서 사용자 고유의 컬렉션 클래스를 파생 시킵니다.
+1. 미리 정의된 비템플릿 클래스 중 하나에서 사용자 고유의 컬렉션 클래스를 파생합니다.
 
-   클래스를 파생 하는 경우에 기존 함수에 형식이 안전한 인터페이스를 제공 하는 형식이 안전한 래퍼 함수를 추가할 수 있습니다.
+   클래스를 파생할 때 형식이 안전한 래퍼 함수를 추가하여 기존 함수에 형식이 안전한 인터페이스를 제공할 수 있습니다.
 
-   예를 들어, 목록에서를 파생 하는 경우 `CObList` 보유할 `CPerson` 개체에 래퍼 함수를 추가할 수 있습니다 `AddHeadPerson` 및 `GetHeadPerson`아래 표시 된 것 처럼 합니다.
+   예를 들어 개체를 `CObList` 보유할 `CPerson` 목록에서 목록을 파생한 경우 아래와 `AddHeadPerson` 같이 `GetHeadPerson`래퍼 함수 및 을 추가할 수 있습니다.
 
    [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-   이러한 래퍼 함수를 추가 하 고 검색 하는 형식이 안전한 방법을 제공 `CPerson` 파생 목록의 개체입니다. 에 대 한 알 수 있습니다는 `GetHeadPerson` 함수 형식 캐스팅을 캡슐화 하 고 있는 하기만 하면 됩니다.
+   이러한 래퍼 함수는 파생 된 목록에서 개체를 `CPerson` 추가 하 고 검색 하는 형식 안전 방법을 제공 합니다. 함수의 `GetHeadPerson` 경우 형식 캐스팅을 캡슐화하는 것만으로 볼 수 있습니다.
 
-   형식이 안전한 래퍼에 기존 기능을 래핑하는 대신 컬렉션의 기능을 확장 하는 새 함수를 정의 하 여 새 기능을 추가할 수도 있습니다. 예를 들어,이 문서 [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md) 목록에 포함 된 모든 개체를 삭제 하는 함수에 설명 합니다. 이 함수는 멤버 함수로 파생된 클래스에 추가할 수 없습니다.
+   또한 형식이 안전한 래퍼에서 기존 기능을 래핑하는 대신 컬렉션의 기능을 확장하는 새 기능을 정의하여 새 기능을 추가할 수도 있습니다. 예를 들어 [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md) 문서에서는 목록에 포함된 모든 개체를 삭제하는 함수를 설명합니다. 이 함수는 파생 클래스에 멤버 함수로 추가할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컬렉션](../mfc/collections.md)

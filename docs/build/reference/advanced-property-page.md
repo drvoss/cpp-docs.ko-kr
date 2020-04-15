@@ -1,15 +1,15 @@
 ---
-title: 고급 속성 페이지 (프로젝트)
+title: 고급 속성 페이지(프로젝트)
 ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: fae3c76d4a62e3b0409664b3630ad76ab601c52b
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 8ce62b768f5cda30501e791bcd040a40b18bfb23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328419"
 ---
 # <a name="advanced-property-page"></a>고급 속성 페이지
 
@@ -19,9 +19,9 @@ ms.locfileid: "68315532"
 
 ## <a name="advanced-properties"></a>고급 속성
 
-- **대상 파일 확장명**
+- **대상 파일 확장자**
 
-   빌드 출력에 사용할 파일 확장명을 지정 합니다. 기본값은 응용 프로그램의 경우 **.exe** , 정적 라이브러리의 경우 **.lib** , dll의 경우 **.dll** 입니다.
+   빌드 출력에 사용할 파일 확장프로그램을 지정합니다. 기본값은 응용 프로그램의 **경우 .exe,** 정적 라이브러리의 **경우 .lib,** DLL의 **경우 .dll로** 설정됩니다.
 
 - **정리할 때 삭제할 확장명**
 
@@ -33,19 +33,19 @@ ms.locfileid: "68315532"
 
    프로젝트를 빌드할 때마다 생성되는 로그 파일에 대해 기본값이 아닌 위치를 지정할 수 있습니다. 기본 위치는 매크로 $(IntDir)$(MSBuildProjectName).log에서 지정됩니다.
 
-   프로젝트 매크로를 사용하여 디렉터리 위치를 변경할 수 있습니다. [빌드 명령 및 속성에 대 한 일반 매크로](common-macros-for-build-commands-and-properties.md)를 참조 하세요.
+   프로젝트 매크로를 사용하여 디렉터리 위치를 변경할 수 있습니다. [빌드 명령 및 속성에 대한 일반적인 매크로를](common-macros-for-build-commands-and-properties.md)참조하십시오.
 
-- **기본 설정 빌드 도구 아키텍처**
+- **기본 빌드 도구 아키텍처**
 
-   X86 또는 x64 빌드 도구를 사용할지 여부를 지정 합니다.
+   x86 또는 x64 빌드 도구를 사용할지 여부를 지정합니다.
 
 - **디버그 라이브러리 사용**
 
-   디버그 또는 릴리스 빌드를 만들지 여부를 지정 합니다.
+   디버그 또는 릴리스 빌드를 만들지 여부를 지정합니다.
 
-- **Unity (점보) 빌드 사용**
+- **유니티(JUMBO) 빌드 사용**
 
-   빌드 성능을 향상 시키기 위해 컴파일하기 C++ 전에 많은 소스 파일이 하나 이상의 "unity" 파일에 결합 된 빌드 프로세스를 사용 하도록 설정 합니다. Unity 게임 엔진과 관련이 없습니다.
+   컴파일하기 전에 많은 C++ 원본 파일이 하나 이상의 "unity" 파일로 결합되어 빌드 성능을 향상시키는 빌드 프로세스를 활성화합니다. 유니티 게임 엔진과 관련이 없습니다.
 
 - **MFC 사용**
 
@@ -63,9 +63,9 @@ ms.locfileid: "68315532"
 
    [/GL](gl-whole-program-optimization.md) 컴파일러 옵션 및 [/LTCG](ltcg-link-time-code-generation.md) 링커 옵션을 지정합니다. 기본적으로 디버그 구성에 대해 비활성화되고 소매 구성에 대해 활성화됩니다.
 
-- **MSVC 도구 집합 버전**
+- **MSVC 도구 세트 버전**
 
-   프로젝트를 빌드하는 데 사용 되는 MSVC 도구 집합의 전체 버전을 지정 합니다. 여러 가지 업데이트 및 미리 보기 버전의 도구 집합을 설치한 경우 여기에서 사용할 항목을 지정할 수 있습니다.
+   프로젝트를 빌드하는 데 사용할 MSVC 도구 집합의 전체 버전을 지정합니다. 도구 집합의 다양한 업데이트 및 미리 보기 버전이 설치된 경우 여기에서 사용할 도구중 하나를 지정할 수 있습니다.
 
 ## <a name="ccli-properties"></a>C++/CLI 속성
 

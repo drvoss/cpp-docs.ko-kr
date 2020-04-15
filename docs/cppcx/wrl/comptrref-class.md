@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: 281e02d85e70a84530e6980d31669a73091448d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372629"
 ---
 # <a name="comptrref-class"></a>ComPtrRef 클래스
 
@@ -46,37 +46,37 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-A [ComPtr\<T >](comptr-class.md) 형식 또는 형식에서 파생 하 여이 나타내는 인터페이스 뿐만 아니라는 `ComPtr`합니다.
+[ComPtr\<T>](comptr-class.md) 형식 또는 이 형식에서 파생된 형식은 단순히 `ComPtr`에서 표시되는 인터페이스가 아닙니다.
 
 ## <a name="remarks"></a>설명
 
-형식의 개체에 대 한 참조를 나타내는 `ComPtr<T>`합니다.
+형식의 `ComPtr<T>`개체에 대한 참조를 나타냅니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                               | 설명
+속성                               | Description
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ComPtrRef::ComPtrRef](#comptrref) | 새 인스턴스를 초기화 합니다 `ComPtrRef` 지정 된 포인터를 클래스 `ComPtrRef` 개체입니다.
+[컴프트레프:콤프트레프](#comptrref) | 지정된 포인터에서 다른 `ComPtrRef` `ComPtrRef` 개체로 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                                         | 설명
+속성                                                         | Description
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::GetAddressOf](#getaddressof)                     | 현재이 나타내는 인터페이스에 대 한 포인터의 주소를 검색 `ComPtrRef` 개체입니다.
-[ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | 현재 삭제 `ComPtrRef` 개체 및 포인터-에-a-포인터를 반환에서 나타내는 인터페이스를 `ComPtrRef` 개체입니다.
+[컴프트레프::겟주소](#getaddressof)                     | 현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터의 주소를 검색합니다.
+[컴프트레프::릴리즈앤겟주소](#releaseandgetaddressof) | 현재 `ComPtrRef` 개체를 삭제 하 고 개체에 의해 표현 된 인터페이스에 `ComPtrRef` 포인터-대-포인터를 반환 합니다.
 
 ### <a name="public-operators"></a>Public 연산자
 
-이름                                                                     | 설명
+속성                                                                     | Description
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Comptrref:: Operator InterfaceType * *](#operator-interfacetype-star-star) | 현재 삭제 `ComPtrRef` 개체 및 포인터-에-a-포인터를 반환에서 나타내는 인터페이스를 `ComPtrRef` 개체입니다.
-[Comptrref:: Operator T *](#operator-t-star)                               | 값을 반환 합니다 [ptr_](comptrrefbase-class.md#ptr) 현재 ComPtrRef 개체의 데이터 멤버입니다.
-[Comptrref:: Operator void * *](#operator-void-star-star)                   | 현재 삭제 `ComPtrRef` 개체에서 나타내는 인터페이스에 대 한 포인터 캐스팅, 합니다 `ComPtrRef` 개체에 대 한 포인터--포인터-을 `void`, cast 포인터를 반환 합니다.
-[ComPtrRef::operator*](#operator-star)                                   | 현재이 나타내는 인터페이스에 포인터를 검색 `ComPtrRef` 개체입니다.
-[ComPtrRef::operator==](#operator-equality)                              | 두 `ComPtrRef` 개체가 같은지를 나타냅니다.
-[ComPtrRef::operator!=](#operator-inequality)                            | 두 `ComPtrRef` 개체가 같지 않은지를 나타냅니다.
+[컴프트레프::연산자 인터페이스유형**](#operator-interfacetype-star-star) | 현재 `ComPtrRef` 개체를 삭제 하 고 개체에 의해 표현 된 인터페이스에 `ComPtrRef` 포인터-대-포인터를 반환 합니다.
+[컴프트레프:연산자 T*](#operator-t-star)                               | 현재 ComPtrRef 개체의 [ptr_](comptrrefbase-class.md#ptr) 데이터 멤버의 값을 반환 합니다.
+[컴프트레프::연산자 무효**](#operator-void-star-star)                   | 현재 `ComPtrRef` 개체를 삭제하고 개체가 포인터-대 포인터-로 `ComPtrRef` 표시된 인터페이스에 포인터를 캐스팅한 다음 cast 포인터를 반환합니다. `void`
+[컴프트레프:연산자*](#operator-star)                                   | 현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터를 검색합니다.
+[컴프트레프::연산자==](#operator-equality)                              | 두 `ComPtrRef` 개체가 같은지를 나타냅니다.
+[컴프트레프::연산자!=](#operator-inequality)                            | 두 `ComPtrRef` 개체가 같지 않은지를 나타냅니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -88,9 +88,9 @@ A [ComPtr\<T >](comptr-class.md) 형식 또는 형식에서 파생 하 여이 �
 
 **헤더:** client.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="comptrref"></a>ComPtrRef::ComPtrRef
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>컴프트레프:콤프트레프
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -102,14 +102,14 @@ ComPtrRef(
 
 ### <a name="parameters"></a>매개 변수
 
-*ptr*<br/>
-다른 기본 값 `ComPtrRef` 개체입니다.
+*Ptr*<br/>
+다른 `ComPtrRef` 개체의 기본 값입니다.
 
 ### <a name="remarks"></a>설명
 
-새 인스턴스를 초기화 합니다 `ComPtrRef` 지정 된 포인터를 클래스 `ComPtrRef` 개체입니다.
+지정된 포인터에서 다른 `ComPtrRef` `ComPtrRef` 개체로 클래스의 새 인스턴스를 초기화합니다.
 
-## <a name="getaddressof"></a>ComPtrRef::GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>컴프트레프::겟주소
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -117,15 +117,15 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 InterfaceType* const * GetAddressOf() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재이 나타내는 인터페이스에 대 한 포인터의 주소 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터의 주소입니다.
 
 ### <a name="remarks"></a>설명
 
-현재이 나타내는 인터페이스에 대 한 포인터의 주소를 검색 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터의 주소를 검색합니다.
 
-## <a name="operator-equality"></a>ComPtrRef::operator==
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>컴프트레프::연산자==
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -158,25 +158,25 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*a*<br/>
+*a.*<br/>
 `ComPtrRef` 개체에 대한 참조입니다.
 
-*b*<br/>
-다른에 대 한 참조가 `ComPtrRef` 개체 또는 무명 형식에 대 한 포인터 (`void*`).
+*B*<br/>
+다른 `ComPtrRef` 개체에 대한 참조 또는 익명 형식()에`void*`대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 연산자 생성 **true** 하는 경우 개체 *는* 개체와 동일한 지 *b*고, 그렇지 않으면 **false**합니다.
+첫 번째 연산자는 개체 *a가* 개체 *b와*같으면 **true를** 산출합니다. 그렇지 **않으면, 거짓**.
 
-두 번째와 세 번째 연산자에서 생성 **true** 하는 경우 개체 *는* 값과 같음 **nullptr**고, 그렇지 않으면 **false**합니다.
+두 번째 및 세 번째 연산자는 개체 *a가* **nullptr과**같으면 **true를** 산출합니다. 그렇지 **않으면, 거짓**.
 
-네 번째와 다섯 번째 연산자에서 생성 **true** 경우 개체 *는* 개체와 동일한 지 *b*고, 그렇지 않으면 **false**합니다.
+네 번째 및 다섯 번째 연산자는 개체 *a가* 개체 *b와*같으면 **true를** 산출합니다. 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
 두 `ComPtrRef` 개체가 같은지를 나타냅니다.
 
-## <a name="operator-inequality"></a>ComPtrRef::operator!=
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>컴프트레프::연산자!=
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -209,25 +209,25 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*a*<br/>
+*a.*<br/>
 `ComPtrRef` 개체에 대한 참조입니다.
 
-*b*<br/>
-다른에 대 한 참조가 `ComPtrRef` 개체 또는 익명 개체에 대 한 포인터 (`void*`).
+*B*<br/>
+다른 `ComPtrRef` 개체에 대한 참조 또는 익명 개체에 대한 포인터()입니다.`void*`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 연산자 생성 **true** 하는 경우 개체 *는* 개체와 같지 않은 *b*고, 그렇지 않으면 **false**합니다.
+첫 번째 연산자는 개체 *a가* 개체 *b와*같지 않은 경우 **true를** 생성합니다. 그렇지 **않으면, 거짓**.
 
-두 번째 및 세 번째 연산자를 생성 **true** 경우 개체 *는* 같지 **nullptr**고, 그렇지 않으면 **false**합니다.
+두 번째 및 세 번째 연산자는 개체 *a가* **nullptr과**같지 않은 경우 **true를** 산출합니다. 그렇지 **않으면, 거짓**.
 
-네 번째와 다섯 번째 연산자에서 생성 **true** 하는 경우 개체 *는* 개체와 같지 않은 *b*고, 그렇지 않으면 **false**합니다.
+네 번째 및 다섯 번째 연산자는 개체 *a가* 개체 *b와*같지 않은 경우 **true를** 산출합니다. 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
 두 `ComPtrRef` 개체가 같지 않은지를 나타냅니다.
 
-## <a name="operator-interfacetype-star-star"></a>Comptrref:: Operator InterfaceType * *
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>컴프트레프::연산자 인터페이스유형**
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -237,9 +237,9 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>설명
 
-현재 삭제 `ComPtrRef` 개체 및 포인터-에-a-포인터를 반환에서 나타내는 인터페이스를 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체를 삭제 하 고 개체에 의해 표현 된 인터페이스에 `ComPtrRef` 포인터-대-포인터를 반환 합니다.
 
-## <a name="operator-star"></a>ComPtrRef::operator*
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>컴프트레프:연산자*
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -247,15 +247,15 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 InterfaceType* operator *();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재이 나타내는 인터페이스에 대 한 포인터 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-현재이 나타내는 인터페이스에 포인터를 검색 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체로 표시되는 인터페이스에 대한 포인터를 검색합니다.
 
-## <a name="operator-t-star"></a>Comptrref:: Operator T *
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>컴프트레프:연산자 T*
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -265,9 +265,9 @@ operator T*();
 
 ### <a name="remarks"></a>설명
 
-값을 반환 합니다 [ptr_](comptrrefbase-class.md#ptr) 현재 데이터 멤버 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체의 [ptr_](comptrrefbase-class.md#ptr) 데이터 멤버의 값을 반환합니다.
 
-## <a name="operator-void-star-star"></a>Comptrref:: Operator void\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>컴프트레프:연산자 무효\*\*
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -277,9 +277,9 @@ operator void**() const;
 
 ### <a name="remarks"></a>설명
 
-현재 삭제 `ComPtrRef` 개체에서 나타내는 인터페이스에 대 한 포인터 캐스팅, 합니다 `ComPtrRef` 개체에 대 한 포인터--포인터-을 `void`, cast 포인터를 반환 합니다.
+현재 `ComPtrRef` 개체를 삭제하고 개체가 포인터-대 포인터-로 `ComPtrRef` 표시된 인터페이스에 포인터를 캐스팅한 다음 cast 포인터를 반환합니다. `void`
 
-## <a name="releaseandgetaddressof"></a>ComPtrRef::ReleaseAndGetAddressOf
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>컴프트레프::릴리즈앤겟주소
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -287,10 +287,10 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 InterfaceType** ReleaseAndGetAddressOf();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-나타내는 인터페이스에 대 한 포인터를 삭제 하 여 `ComPtrRef` 개체입니다.
+삭제된 `ComPtrRef` 개체로 표시된 인터페이스에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-현재 삭제 `ComPtrRef` 개체 및 포인터-에-a-포인터를 반환에서 나타내는 인터페이스를 `ComPtrRef` 개체입니다.
+현재 `ComPtrRef` 개체를 삭제 하 고 개체에 의해 표현 된 인터페이스에 `ComPtrRef` 포인터-대-포인터를 반환 합니다.

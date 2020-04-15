@@ -1,28 +1,28 @@
 ---
-title: '방법: Override 지정자 선언 (C++/CLI)'
+title: '방법: 재지정 지정자 선언(C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374445"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>방법: 네이티브 컴파일에 Override 지정자 선언 (C++/CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>방법: 네이티브 컴파일에 override 지정자 선언(C++/CLI)
 
-[봉인](../extensions/sealed-cpp-component-extensions.md), [추상](../extensions/abstract-cpp-component-extensions.md), 및 [재정의](../extensions/override-cpp-component-extensions.md) 사용 하지 않는 컴파일에 사용할 **/ZW** 또는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.
+[sealed](../extensions/sealed-cpp-component-extensions.md), [[편집]](../extensions/abstract-cpp-component-extensions.md) **/ZW** 또는 [/clr를](../build/reference/clr-common-language-runtime-compilation.md)사용하지 않는 컴파일에서 사용할 수 있습니다. [override](../extensions/override-cpp-component-extensions.md)
 
 > [!NOTE]
->  ISO C + + 11 표준 언어에는 [재정의](../cpp/override-specifier.md) 식별자와 [최종](../cpp/final-specifier.md) 식별자와 Visual Studio 사용에서을 지 `final` 대신 `sealed` 는 코드에서 네이티브 전용으로 컴파일됩니다.
+> ISO C++11 표준 언어에는 [재정의](../cpp/override-specifier.md) 식별자와 [최종](../cpp/final-specifier.md) 식별자가 있으며 둘 다 `final` 네이티브 `sealed` 전용으로 컴파일되는 코드 대신 Visual Studio Use에서 지원됩니다.
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
-다음 예에서는 `sealed` 네이티브 컴파일에 유효 합니다.
+다음 예제에서는 `sealed` 네이티브 컴파일에서 유효한 것을 보여 주며 있습니다.
 
 ### <a name="code"></a>코드
 
@@ -49,9 +49,9 @@ public:
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
-다음 예에서는 `override` 네이티브 컴파일에 유효 합니다.
+다음 예제에서는 `override` 네이티브 컴파일에서 유효한 것을 보여 주며 있습니다.
 
 ### <a name="code"></a>코드
 
@@ -71,9 +71,9 @@ public:
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
-이 예에서는 `abstract` 네이티브 컴파일에 유효 합니다.
+이 예제에서는 `abstract` 네이티브 컴파일에서 유효한 것을 보여 주며 있습니다.
 
 ### <a name="code"></a>코드
 
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Override 지정자](../extensions/override-specifiers-cpp-component-extensions.md)

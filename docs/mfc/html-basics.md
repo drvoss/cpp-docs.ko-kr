@@ -4,89 +4,89 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377242"
 ---
 # <a name="html-basics"></a>HTML 기초
 
-대부분의 브라우저는 검색 중인 페이지의 HTML 소스를 검사 하는 기능이 있습니다. HTML (Hypertext markup language) 태그 수가 표시 됩니다는 소스를 보면 텍스트를 사용 하 여 섞어서 꺾쇠 괄호 (<>) 둘러싸여 있습니다.
+대부분의 브라우저에는 탐색하는 페이지의 HTML 소스를 검사하는 기능이 있습니다. 소스를 보면 텍스트와 함께 산재된 각도 대괄호(<>)로 둘러싸인 여러 HTML(하이퍼텍스트 태그 언어) 태그가 표시됩니다.
 
-간단한 웹 페이지 작성을 HTML 태그를 사용 하는 다음 단계를 수행 합니다. 이 단계에서는 있습니다에서는 메모장에서 파일에 일반 텍스트를 입력, 몇 가지 변경, 파일을 저장 및 변경 사항을 확인 하려면 브라우저에서 페이지를 다시 로드 합니다.
+아래 단계는 HTML 태그를 사용하여 간단한 웹 페이지를 빌드합니다. 이 단계에서는 메모장의 파일에 일반 텍스트를 입력하고, 몇 가지 변경 사항을 변경하고, 파일을 저장하고, 브라우저에서 페이지를 다시 로드하여 변경 내용을 확인합니다.
 
 #### <a name="to-create-an-html-file"></a>HTML 파일을 만들려면
 
-1. 메모장 또는 일반 텍스트 편집기를 엽니다.
+1. 메모장 또는 일반 텍스트 편집기 열기.
 
-1. **파일** 메뉴 선택 **새로 만들기**합니다.
+1. **파일** 메뉴에서 새 을 **선택합니다.**
 
-1. 다음 줄을 입력 합니다.
+1. 다음 줄을 입력합니다.
 
-```
-<HTML>
-<HEAD>
-<TITLE>Top HTML Tags</TITLE>
-</HEAD>
-</HTML>
-```
+    ```html
+    <HTML>
+    <HEAD>
+    <TITLE>Top HTML Tags</TITLE>
+    </HEAD>
+    </HTML>
+    ```
 
-1. 합니다 **파일** 메뉴에서 선택 **저장**, c:\webpages\First.htm로 파일을 저장 합니다. 파일을 편집기에서 열어 둡니다.
+1. **파일** 메뉴에서 **저장을**선택하고 파일을 c:\webpages\First.htm으로 저장합니다. 편집기에서 파일을 열어 둡니다.
 
-1. 브라우저와 스위치를 **파일** 메뉴 선택 **열기**, 또는 형식 *file://C:/webpages/first.htm* 브라우저의 URL 편집 상자에 합니다. 창 캡션에 "최상위 HTML 태그입니다."를 사용 하 여 빈 페이지가 표시 됩니다.
+1. 브라우저로 전환하고 **파일** 메뉴에서 **열기를**선택하거나 브라우저의 URL 편집 상자에서 *file://C:/webpages/first.htm* 입력합니다. "맨 위 HTML 태그"라는 창 캡션이 있는 빈 페이지가 표시됩니다.
 
-   태그 쌍 및 꺾쇠 괄호에 포함시킬지 확인 합니다. 태그는 대/소문자를 구분 하지 않지만 대/소문자가 태그를 강조 하기 위해 종종 사용 됩니다.
+   태그가 페어링되어 있으며 각도 대괄호에 포함되어 있습니다. 태그는 대/소문자를 구분하지 않지만 태그를 돋보이게 하는 데 대소문자를 사용하는 경우가 많습니다.
 
-   태그 \<HTML > 태그와 문서 시작 \</HTML > 종료 합니다. 끝 태그 (항상 필수는 아님) 시작 태그와 동일 하지만 태그 앞에 슬래시 (/)가 있습니다. 꺾쇠 괄호 (<) 및 태그의 시작 부분 사이 공백이 없어야 합니다.
+   태그 \<HTML> 문서를 시작 하 \<고 태그/HTML> 종료 합니다. 종료 태그(항상 필요한 것은 아님)는 시작 태그와 동일하지만 태그 앞에 앞으로 슬래시(/)가 있습니다. 각도 대괄호(<)와 태그 시작 사이에 공백이 없어야 합니다.
 
-1. 메모장으로 전환한 후는 \<헤드/> 줄을 입력 합니다.
+1. 메모장으로 다시 전환하고 /HEAD> 줄 다음에 다음을 \<입력합니다.
 
-```
-<BODY>
-    HTML is swell.
-    Life is good.
-</BODY>
-```
+    ```html
+    <BODY>
+        HTML is swell.
+        Life is good.
+    </BODY>
+    ```
 
-1. **파일** 메뉴 선택 **저장**합니다.
+1. **파일** 메뉴에서 **저장을**선택합니다.
 
-1. 브라우저가로 다시 전환 하 고 페이지를 새로 고칩니다.
+1. 브라우저로 다시 전환하고 페이지를 새로 고칩니다.
 
-   브라우저 창의 클라이언트 영역에 표시 됩니다. 에 캐리지 리턴는 무시 됩니다. 줄 바꿈을 할 경우에 포함 해야는 `<BR>` 이후 첫 번째 줄은 태그입니다.
+   단어는 브라우저 창의 클라이언트 영역에 나타납니다. 캐리지 반납은 무시됩니다. 줄 바그(줄 바그)를 지정하려면 첫 번째 줄 옆에 `<BR>` 태그를 포함해야 합니다.
 
-   에 따라, 사이 아무 곳 이나 텍스트를 삽입 하는 모든 단계에 대 한 \<본문 > 및  \< /B > 문서의 본문에 추가 합니다.
+   다음의 모든 단계에 대해 BODY> \</BODY \<> 사이의 아무 곳에나 텍스트를 삽입하여 문서 본문에 추가합니다.
 
-9. 헤더를 추가 합니다.
+1. 헤더 추가:
 
-```
-<H3>Here's the big picture</H3>
-```
+    ```html
+    <H3>Here's the big picture</H3>
+    ```
 
-10. 페이지와 같은 디렉터리에 저장 하는.gif 파일을 사용 하 여 이미지를 추가 합니다.
+1. 페이지와 동일한 디렉터리에 저장된 .gif 파일을 사용하여 이미지를 추가합니다.
 
-```
-<IMG src="yourfile.gif">
-```
+    ```html
+    <IMG src="yourfile.gif">
+    ```
 
-11. 목록을 추가 합니다.
+1. 목록 추가:
 
-```
-<UL>Make me an unordered list.
-<LI>One programmer</LI>
-<LI>Ten SDKs</LI>
-<LI>Great Internet Apps</LI>
-</UL>
-```
+    ```html
+    <UL>Make me an unordered list.
+    <LI>One programmer</LI>
+    <LI>Ten SDKs</LI>
+    <LI>Great Internet Apps</LI>
+    </UL>
+    ```
 
-12. 목록 대신 숫자를 사용 하 여 쌍을 이루는 \<OL > 및 \</o L > 자리에 태그를 \<u L > 및  \< /u L > 태그입니다.
+1. 대신 목록에 번호를 매기려면 \< \< \<UL> 및 \</UL> 태그 대신 페어링된 OL> 및 /OL> 태그를 사용합니다.
 
-시작 가져와야 합니다. 웹 페이지에 매우 유용한 기능을 표시 하는 경우 HTML 소스를 검사 하 여 만들어진 방법 확인할 수 있습니다. Microsoft 프런트 페이지와 같은 HTML 편집기 간단 하 고 고급 페이지를 만드는 데 사용할 수 있습니다.
+즉, 당신이 시작해야합니다. 웹 페이지에 훌륭한 기능이 표시되면 HTML 소스를 검사하여 이 기능이 어떻게 만들어졌는지 확인할 수 있습니다. Microsoft 프론트 페이지와 같은 HTML 편집기를 사용하여 단순 및 고급 페이지를 만들 수 있습니다.
 
-구축한 경험이 파일의 전체 HTML 소스는 다음과 같습니다.
+빌드한 파일의 전체 HTML 소스는 다음과 같습니다.
 
-```
+```html
 <HTML>
 <HEAD>
 <TITLE>Top HTML Tags</TITLE>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-태그, 특성 및 확장의 전체 내용은 (HTML) 사양을 참조 하십시오.
+태그, 특성 및 확장에 대한 전체 설명은 HTML(하이퍼텍스트 태그 언어) 사양을 참조하십시오.
 
-[HTML의 최신 게시 된 버전](https://www.w3.org/TR/html/) W3C.org에서.
+W3C.org [HTML의 최신 게시 버전.](https://www.w3.org/TR/html/)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 인터넷 프로그래밍 기본 사항](../mfc/mfc-internet-programming-basics.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450284"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376556"
 ---
-# <a name="syncpercontainer-class"></a>sync_per_container 클래스
+# <a name="sync_per_container-class"></a>sync_per_container 클래스
 
-각 할당자 개체에 대해 별도의 캐시 개체를 제공하는 [동기화 필터](../standard-library/allocators-header.md)를 설명합니다.
+각 할당자 개체에 대해 별도의 캐시 개체를 제공하는 [동기화 필터에](../standard-library/allocators-header.md) 대해 설명합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **네임스페이스:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::같음
 
 두 캐시가 같은지 비교합니다.
 
@@ -59,12 +59,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 |*캐시*|동기화 필터의 캐시 개체입니다.|
 |*기타*|같은지 비교할 캐시 개체입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-멤버 함수는 항상 **false**를 반환 합니다.
+멤버 함수는 항상 **false**를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<할당자>](../standard-library/allocators-header.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446205"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372095"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 클래스
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType*\
-부동 소수점 결과 형식으로, 기본적으로 **double**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*실제 유형*\
+부동점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
@@ -98,7 +98,7 @@ public:
 
 속성 함수 `densities()`는 각 간격 집합에 대해 저장된 밀도와 함께 `vector<result_type>`을 반환합니다. 이러한 밀도는 생성자 매개 변수에서 제공하는 가중치에 따라 계산됩니다.
 
-속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
+속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
 `min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<무작위 >
+**헤더:** \<random>
 
 **네임스페이스:** std
 
-## <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_상수_분포
 
 분포를 생성합니다.
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*Firsti*\
+*첫 번째 I*\
 대상 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
-*Lasti*\
+*라스트I*\
 대상 범위에 있는 마지막 요소의 입력 반복기입니다.
 
-*Firstw*\
+*첫 번째W*\
 가중치 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
 *간격*\
 분포의 간격이 있는 [initializer_list](../cpp/initializers.md)입니다.
 
-*개수*\
+*횟수*\
 분포 범위의 요소 수입니다.
 
 *xmin*\
 분포 범위의 가장 작은 값입니다.
 
-*xmax*\
+*엑스 맥스*\
 분포 범위의 가장 큰 값입니다. *xmin*보다 커야 합니다.
 
-*weightfunc*\
-분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 **double**로 변환할 수 있어야 합니다.
+*웨이트 펀크*\
+분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값을 모두 **두 배로**변환할 수 있어야 합니다.
 
-*parm*\
+*파름 ()와*\
 분포를 생성하는 데 사용되는 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-이니셜라이저 목록 *간격* 및 *weightfunc*함수에서 생성 된 가중치에서 간격을 사용 하 여 분포 개체를 생성 합니다.
+이니셜자 목록 *간격과* 함수 *weightfunc에서*생성된 가중치의 간격으로 분포 개체를 구성합니다.
 
 다음과 같이 정의된 생성자는
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-weightfunc 함수에 따라 각 간격 가중치를 할당 하 고 *weightfunc*함수에 따라 각 간격 가중치를 할당 하 고, *weightfunc* 는 단일 매개 변수를 사용 하 고 반환 값을 사용 하 여 `double`로 변환할 `xmin,xmax`*수* 있는 배포 개체를 생성 합니다. **사전 조건:** `xmin < xmax`
+`xmin,xmax`[]에 균일하게 분포된 *카운트* 간격이 있는 분포 객체를 구성하고, 함수 *weightfunc에*따라 각 간격 가중치를 할당하고 *weightfunc은* 하나의 `double`매개 변수를 수락하고 반환 값을 가져야 하며 둘 다 변환할 수 있습니다. **사전 조건:**`xmin < xmax`
 
 다음과 같이 정의된 생성자는
 
@@ -316,9 +316,9 @@ weightfunc 함수에 따라 각 간격 가중치를 할당 하 고 *weightfunc*�
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-*parm* 를 저장 된 매개 변수 구조로 사용 하 여 분포 개체를 생성 합니다.
+은 *parm을* 저장된 매개 변수 구조로 사용하여 배포 개체를 구성합니다.
 
-## <a name="param_type"></a>  piecewise_constant_distribution::param_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p아람_타입
 
 분포의 모든 매개 변수를 저장합니다.
 
@@ -344,11 +344,11 @@ struct param_type {
 
 ### <a name="remarks"></a>설명
 
-**사전 조건:** `xmin < xmax`
+**사전 조건:**`xmin < xmax`
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[\<random>](../standard-library/random.md)\
+[\<임의>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
