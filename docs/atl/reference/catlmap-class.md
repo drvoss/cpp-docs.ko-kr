@@ -37,16 +37,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321436"
 ---
 # <a name="catlmap-class"></a>CAtlMap 클래스
 
-이 클래스를 만들고 지도 개체를 관리 하기 위한 메서드를 제공 합니다.
+이 클래스는 맵 개체를 만들고 관리하는 메서드를 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -61,103 +61,103 @@ class CAtlMap
 #### <a name="parameters"></a>매개 변수
 
 *K*<br/>
-Key 요소 형식입니다.
+키 요소 유형입니다.
 
-*V*<br/>
+*Ⅴ*<br/>
 값 요소 형식입니다.
 
-*KTraits*<br/>
-복사 하거나 주요 요소를 이동 하는 데 사용 되는 코드입니다. 참조 [CElementTraits 클래스](../../atl/reference/celementtraits-class.md) 대 한 자세한 내용은 합니다.
+*크트레이스*<br/>
+키 요소를 복사하거나 이동하는 데 사용되는 코드입니다. 자세한 내용은 [CElementTraits 클래스를](../../atl/reference/celementtraits-class.md) 참조하십시오.
 
-*VTraits*<br/>
-값 요소 이동 하거나 복사 하는 데 사용 되는 코드입니다.
+*브이트레이스*<br/>
+값 요소를 복사하거나 이동하는 데 사용되는 코드입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlMap::KINARGTYPE](#kinargtype)|키를 입력 인수로 전달 될 때 사용 되는 형식|
-|[CAtlMap::KOUTARGTYPE](#koutargtype)|키 출력 인수로 반환 될 때 사용 되는 형식입니다.|
-|[CAtlMap::VINARGTYPE](#vinargtype)|값 입력 인수로 전달 될 때 사용 되는 형식입니다.|
-|[CAtlMap::VOUTARGTYPE](#voutargtype)|값을 출력 인수로 전달 될 때 사용 되는 형식입니다.|
+|[카틀맵::키나르그타입](#kinargtype)|키가 입력 인수로 전달될 때 사용되는 형식|
+|[카틀맵::쿠타르그타입](#koutargtype)|키가 출력 인수로 반환될 때 사용되는 형식입니다.|
+|[카틀맵::비나르그타입](#vinargtype)|값이 입력 인수로 전달될 때 사용되는 형식입니다.|
+|[카틀맵::부타르그타입](#voutargtype)|값이 출력 인수로 전달될 때 사용되는 형식입니다.|
 
 ### <a name="public-classes"></a>public 클래스
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlMap::CPair 클래스](#cpair_class)|키 및 값 요소를 포함 하는 클래스입니다.|
+|[카틀맵::CPair 클래스](#cpair_class)|키 및 값 요소를 포함하는 클래스입니다.|
 
 ### <a name="cpair-data-members"></a>CPair 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CPair::m_key](#m_key)|키 요소에 저장 하는 데이터 멤버입니다.|
-|[CPair::m_value](#m_value)|Value 요소 저장 데이터 멤버입니다.|
+|[CPair::m_key](#m_key)|키 요소를 저장하는 데이터 멤버입니다.|
+|[CPair::m_value](#m_value)|값 요소를 저장하는 데이터 멤버입니다.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlMap::CAtlMap](#catlmap)|생성자입니다.|
-|[CAtlMap::~CAtlMap](#dtor)|소멸자입니다.|
+|[카틀맵:::카틀맵](#catlmap)|생성자입니다.|
+|[카틀맵::~카틀맵](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlMap::AssertValid](#assertvalid)|경우 어설션이 발생할이 메서드를 호출 합니다 `CAtlMap` 올바르지 않습니다.|
-|[CAtlMap::DisableAutoRehash](#disableautorehash)|자동 해싱하여 사용 하지 않도록 설정 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::EnableAutoRehash](#enableautorehash)|자동 해싱하여 사용 하도록 설정 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
-|[CAtlMap::GetAt](#getat)|맵에서 지정된 된 위치에 있는 요소를 반환 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::GetCount](#getcount)|Map의 요소 수를 검색 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::GetHashTableSize](#gethashtablesize)|지도의 해시 테이블에서 bin의 수를 확인 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::GetKeyAt](#getkeyat)|지정된 된 위치에 저장 된 키를 검색 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::GetNext](#getnext)|쌍에 저장 된 다음 요소에 대 한 포인터를 가져오려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
-|[CAtlMap::GetNextAssoc](#getnextassoc)|반복에 대 한 다음 요소를 가져옵니다.|
-|[CAtlMap::GetNextKey](#getnextkey)|다음 키를 검색 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::GetNextValue](#getnextvalue)|다음 값을 가져오려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
-|[CAtlMap::GetStartPosition](#getstartposition)|맵 반복을 시작 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::GetValueAt](#getvalueat)|지정 된 위치에 저장 된 값을 검색 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::InitHashTable](#inithashtable)|해시 테이블을 초기화 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::IsEmpty](#isempty)|이 메서드는 빈 map 개체에 대 한 테스트를 호출 합니다.|
-|[CAtlMap::Lookup](#lookup)|키 또는 값을 조회 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::Rehash](#rehash)|Rehash 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::RemoveAll](#removeall)|모든 요소를 제거 하려면이 메서드는 `CAtlMap` 개체입니다.|
-|[CAtlMap::RemoveAtPos](#removeatpos)|지정된 된 위치에 있는 요소를 제거 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
-|[CAtlMap::RemoveKey](#removekey)|요소를 제거 하려면이 메서드를 호출 합니다 `CAtlMap` 키를 지정 된 개체입니다.|
-|[CAtlMap::SetAt](#setat)|Map에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.|
-|[CAtlMap::SetOptimalLoad](#setoptimalload)|최적의 부하를 설정 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
-|[CAtlMap::SetValueAt](#setvalueat)|지정 된 위치에 저장 된 값을 변경 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.|
+|[카틀맵::어설션 유효](#assertvalid)|이 메서드가 유효하지 않은 `CAtlMap` 경우 ASSERT를 발생시도록 호출합니다.|
+|[카틀맵::D가능오토리해시](#disableautorehash)|이 메서드를 호출하여 개체의 자동 `CAtlMap` 해시를 사용하지 않도록 설정합니다.|
+|[카틀맵::인에이블오토리해시](#enableautorehash)|이 메서드를 호출하여 개체를 자동으로 `CAtlMap` 다시 해시할 수 있습니다.|
+|[카틀맵::GetAt](#getat)|맵에서 지정된 위치에 요소를 반환하려면 이 메서드를 호출합니다.|
+|[카틀맵::겟카운트](#getcount)|맵의 요소 수를 검색하려면 이 메서드를 호출합니다.|
+|[카틀맵::겟해시테이블사이즈](#gethashtablesize)|이 메서드를 호출하여 맵의 해시 테이블에서 저장소 수를 확인합니다.|
+|[카틀맵::겟키앳](#getkeyat)|이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 키를 검색합니다.|
+|[카틀맵::GetNext](#getnext)|이 메서드를 호출하여 개체에 저장된 다음 `CAtlMap` 요소 쌍에 대한 포인터를 가져옵니다.|
+|[카틀맵::겟넥스트아소크](#getnextassoc)|반복에 대한 다음 요소를 가져옵니다.|
+|[카틀맵::겟넥스트키](#getnextkey)|이 메서드를 호출하여 개체에서 `CAtlMap` 다음 키를 검색합니다.|
+|[카틀맵::GetNextValue](#getnextvalue)|개체에서 다음 값을 얻으려면이 `CAtlMap` 메서드를 호출 합니다.|
+|[카틀맵::GetStart포지션](#getstartposition)|이 메서드를 호출하여 맵 반복을 시작합니다.|
+|[카틀맵::겟밸류앳](#getvalueat)|이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 값을 검색합니다.|
+|[카틀맵::이니티해시테이블](#inithashtable)|이 메서드를 호출하여 해시 테이블을 초기화합니다.|
+|[카틀맵::비어 있음](#isempty)|빈 맵 개체를 테스트하려면 이 메서드를 호출합니다.|
+|[카틀맵::조회](#lookup)|이 메서드를 호출하여 개체의 `CAtlMap` 키 또는 값을 찾습니다.|
+|[카틀맵::리해시](#rehash)|이 메서드를 호출하여 `CAtlMap` 개체를 다시 해시합니다.|
+|[카틀맵::모두 제거](#removeall)|이 메서드를 호출하여 개체에서 모든 요소를 제거합니다. `CAtlMap`|
+|[카틀맵::리크아포스](#removeatpos)|이 메서드를 호출하여 개체의 지정된 `CAtlMap` 위치에서 요소를 제거합니다.|
+|[카틀맵::리무브키](#removekey)|키가 주어지면 이 메서드를 `CAtlMap` 호출하여 개체에서 요소를 제거합니다.|
+|[카틀맵::세팅](#setat)|이 메서드를 호출하여 요소 쌍을 맵에 삽입합니다.|
+|[카틀맵::최적 로드 설정](#setoptimalload)|이 메서드를 호출하여 개체의 `CAtlMap` 최적 로드를 설정합니다.|
+|[카틀맵::셋밸류At](#setvalueat)|이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 값을 변경합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|새 요소를 추가 하거나이 대체 합니다 `CAtlMap`합니다.|
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|`CAtlMap`에 새 요소를 바꾸거나 추가합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CAtlMap` 관리 키 요소와 연결 된 값의 순서가 지정 되지 않은 배열을 지정 된 형식의 매핑 배열의 지원을 제공 합니다. (키 및 값 구성) 하는 요소는 많은 양의 데이터를 효율적으로 저장 하 고 검색할 수 있도록 해싱 알고리즘을 사용 하 여 저장 됩니다.
+`CAtlMap`는 지정된 형식의 매핑 배열에 대한 지원을 제공하여 키 요소및 관련 값의 정렬되지 않은 배열을 관리합니다. 키와 값으로 구성된 요소(키와 값으로 구성)는 해시 알고리즘을 사용하여 저장되므로 많은 양의 데이터를 효율적으로 저장하고 검색할 수 있습니다.
 
-합니다 *KTraits* 하 고 *VTraits* 매개 변수는 복사 하거나 요소를 이동 하는 데 필요한 추가 코드를 포함 traits 클래스입니다.
+*KTraits* 및 *VTraits* 매개 변수는 요소를 복사하거나 이동하는 데 필요한 추가 코드를 포함하는 특성 클래스입니다.
 
-대 안으로 `CAtlMap` 에서 제공 합니다 [CRBMap](../../atl/reference/crbmap-class.md) 클래스입니다. `CRBMap` 또한 키/값 쌍을 저장 하지만 다양 한 성능 특성을 나타냅니다. 키를 삭제 하거나 항목을 삽입 하는 데 걸리는 시간을 키 조회는 `CRBMap` 주문의 개체가 *log(n)* 여기서 *n* 요소입니다. 에 대 한 `CAtlMap`, 이러한 모든 작업 일반적으로 상수 시간이 걸릴 최악의 시나리오 주문의 수 있긴 *n*합니다. 일반적인 경우에 따라서 `CAtlMap` 더 빠릅니다.
+`CAtlMap` [CRBMap](../../atl/reference/crbmap-class.md) 클래스에서 제공하는 대안입니다. `CRBMap`또한 키/값 쌍을 저장하지만 성능 특성이 다릅니다. 항목을 삽입하거나, 키를 찾거나, `CRBMap` 개체에서 키를 삭제하는 데 걸린 시간은 순서 *log(n)이며*여기서 *n은* 요소 수입니다. 에 `CAtlMap`대 한 이러한 모든 작업은 일반적으로 일정 한 시간이 걸릴, 최악의 시나리오 순서 *n*일 수 있지만 . 따라서 일반적인 경우에는 `CAtlMap` 더 빠릅니다.
 
-또 다른 차이점 `CRBMap` 고 `CAtlMap` 저장된 요소를 통해 반복 하는 경우에 잘 드러납니다. 에 `CRBMap`, 정렬된 된 순서 대로 방문 하는 요소입니다. 에 `CAtlMap`, 요소는 정렬 되지 않는 및 순서 없이 유추할 수 있습니다.
+저장된 요소를 `CRBMap` 반복할 때와 `CAtlMap` 다른 차이점이 분명해집니다. 에서 `CRBMap`요소는 정렬된 순서로 방문합니다. 에서 `CAtlMap`요소는 정렬되지 않으며 순서를 유추할 수 없습니다.
 
-적은 수의 요소를 저장 해야 하는 경우 사용을 고려 합니다 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 대신 합니다.
+소수의 요소를 저장해야 하는 경우 대신 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 사용하는 것이 좋습니다.
 
-자세한 내용은 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.
+자세한 내용은 [ATL 컬렉션 클래스를](../../atl/atl-collection-classes.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlcoll.h
+**헤더:** 아틀콜.h
 
-##  <a name="assertvalid"></a>  CAtlMap::AssertValid
+## <a name="catlmapassertvalid"></a><a name="assertvalid"></a>카틀맵::어설션 유효
 
-경우 어설션이 발생할이 메서드를 호출 합니다 `CAtlMap` 개체가 잘못 되었습니다.
+개체가 유효하지 않은 경우 `CAtlMap` ASSERT를 발생시키기 위해 이 메서드를 호출합니다.
 
 ```
 void AssertValid() const;
@@ -165,13 +165,13 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>설명
 
-디버그 빌드에서이 메서드를 ASSERT 경우 발생 합니다 `CAtlMap` 개체가 잘못 되었습니다.
+디버그 빌드에서 이 메서드는 개체가 `CAtlMap` 유효하지 않은 경우 ASSERT를 발생시게 됩니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="catlmap"></a>  CAtlMap::CAtlMap
+## <a name="catlmapcatlmap"></a><a name="catlmap"></a>카틀맵:::카틀맵
 
 생성자입니다.
 
@@ -187,41 +187,41 @@ CAtlMap(
 ### <a name="parameters"></a>매개 변수
 
 *nBins*<br/>
-저장 된 요소에 대 한 포인터를 제공 하는 bin의 수입니다. Bin에 대 한 설명은이 항목의 뒷부분에 나오는 설명을 참조 하세요.
+저장된 요소에 대한 포인터를 제공하는 저장소 수입니다. 저장소에 대한 설명은 이 항목의 후반부에서 설명을 참조하십시오.
 
-*fOptimalLoad*<br/>
-최적의 부하 비율입니다.
+*f최적 로드*<br/>
+최적의 하중 비율.
 
-*fLoThreshold*<br/>
-부하 비율에 대 한 임계값입니다.
+*fLo 임계값*<br/>
+부하 비율에 대한 낮은 임계값입니다.
 
-*fHiThreshold*<br/>
-부하 비율에 대 한 상한 임계값입니다.
+*fHi임계값*<br/>
+부하 비율에 대한 상위 임계값입니다.
 
 *nBlockSize*<br/>
-블록 크기입니다.
+블록의 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-`CAtlMap` 첫 번째 키에 해시 알고리즘을 사용 하 여 인덱스를 만들어 모든 저장 된 요소를 참조 합니다. 이 인덱스는 저장 된 요소에 대 한 포인터를 포함 하는 "bin"를 참조 합니다. 휴지통에 이미 사용 중인 경우 후속 요소에 액세스 하는 연결 목록 만들어집니다. 올바른 요소에 직접 액세스 하는 보다 느립니다 목록을 트래버스 하며 따라서 맵 구조 성능에 대 한 저장소 요구 사항이 균형을 유지 합니다. 기본 매개 변수는 대부분의 경우에서 좋은 결과 제공 하도록 선택 되어 있습니다.
+`CAtlMap`먼저 키에 해시 알고리즘을 사용하여 인덱스를 만들어 저장된 모든 요소를 참조합니다. 이 인덱스는 저장된 요소에 대한 포인터를 포함하는 "bin"을 참조합니다. 저장소가 이미 사용 중이면 후속 요소에 액세스하기 위해 링크된 목록이 만들어집니다. 목록을 트래버스하는 것은 올바른 요소에 직접 액세스하는 것보다 느리므로 맵 구조는 저장소 요구 사항과 성능의 균형을 유지해야 합니다. 대부분의 경우 좋은 결과를 제공하기 위해 기본 매개 변수가 선택되었습니다.
 
-부하는 map 개체에 저장 된 요소의 수는 bin의 수의 비율이입니다. 맵 구조를 다시 계산할 때 합니다 *fOptimalLoad* 필요한 bin의 수를 계산 하려면 매개 변수 값이 사용 됩니다. 사용 하 여이 값을 변경할 수 있습니다 합니다 [CAtlMap::SetOptimalLoad](#setoptimalload) 메서드.
+하중 비율은 저장소 수와 맵 오브젝트에 저장된 요소 수의 비율입니다. 맵 구조를 다시 계산하면 *fOptimalLoad* 매개변수 값이 필요한 저장소 수를 계산하는 데 사용됩니다. 이 값은 [CAtlMap::SetOptimalLoad 메서드를](#setoptimalload) 사용하여 변경할 수 있습니다.
 
-합니다 *fLoThreshold* 매개 변수는 로드 비율을 하기 전에 연결할 수 있는 더 낮은 값 `CAtlMap` 맵의 최적의 크기를 다시 계산 됩니다.
+*fLoThreshold* 매개 변수는 로드 비율이 도달하기 전에 `CAtlMap` 도달할 수 있는 낮은 값으로 맵의 최적 크기를 다시 계산합니다.
 
-*fHiThreshold* 매개 변수는 로드 비율을 하기 전에 연결할 수 있는 상한 값을 `CAtlMap` 개체에는 map의 최적 크기 다시 계산 됩니다.
+*fHiThreshold* 매개 변수는 `CAtlMap` 오브젝트가 맵의 최적 크기를 다시 계산하기 전에 하중 비율이 도달할 수 있는 상한값입니다.
 
-이 다시 계산 프로세스 (해싱하여 라고 함)는 기본적으로 사용 됩니다. 많은 양의 데이터가 한 번에 호출을 입력 하는 경우 아마도이 프로세스를 사용 하지 않으려는 경우 합니다 [CAtlMap::DisableAutoRehash](#disableautorehash) 메서드. 사용 하 여 다시 활성화 합니다 [CAtlMap::EnableAutoRehash](#enableautorehash) 메서드.
+이 재계산 프로세스(재해싱이라고 함)는 기본적으로 활성화되어 있습니다. 한 번에 많은 데이터를 입력할 때 이 프로세스를 사용하지 않도록 설정하려면 [CAtlMap::DAutoRehash](#disableautorehash) 메서드를 호출합니다. [CAtlMap::EnableAutoRehash](#enableautorehash) 메서드를 사용하여 다시 활성화합니다.
 
-합니다 *nBlockSize* 매개 변수는 새 요소가 필요한 경우 할당 된 메모리 양 측정 한 것입니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 합니다.
+*nBlockSize* 매개 변수는 새 요소가 필요할 때 할당된 메모리 양을 측정한 값입니다. 블록 크기가 클수록 메모리 할당 루틴에 대한 호출이 줄어들지만 더 많은 리소스를 사용합니다.
 
-호출 하 여 해시 테이블을 초기화 해야 하는 모든 데이터를 저장할 수 있습니다, 전에 [CAtlMap::InitHashTable](#inithashtable)합니다.
+데이터를 저장하기 전에 [CAtlMap::InitHashTable](#inithashtable)을 호출하여 해시 테이블을 초기화해야 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap::~CAtlMap
+## <a name="catlmapcatlmap"></a><a name="dtor"></a>카틀맵::~카틀맵
 
 소멸자입니다.
 
@@ -231,11 +231,11 @@ CAtlMap(
 
 ### <a name="remarks"></a>설명
 
-할당 된 리소스를 해제 합니다.
+할당된 리소스를 해제합니다.
 
-##  <a name="cpair_class"></a>  CAtlMap::CPair 클래스
+## <a name="catlmapcpair-class"></a><a name="cpair_class"></a>카틀맵::CPair 클래스
 
-키 및 값 요소를 포함 하는 클래스입니다.
+키 및 값 요소를 포함하는 클래스입니다.
 
 ```
 class CPair : public __POSITION
@@ -243,11 +243,11 @@ class CPair : public __POSITION
 
 ### <a name="remarks"></a>설명
 
-이 클래스는 메서드를 사용한 [CAtlMap::GetNext](#getnext) 하 고 [CAtlMap::Lookup](#lookup) 매핑 구조에 저장 된 키 및 값 요소에 액세스 하려면.
+이 클래스는 매핑 구조에 저장된 키 및 값 요소에 액세스하기 위해 [CAtlMap::GetNext](#getnext) 및 [CAtlMap:조회](#lookup) 메서드에서 사용됩니다.
 
-##  <a name="disableautorehash"></a>  CAtlMap::DisableAutoRehash
+## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a>카틀맵::D가능오토리해시
 
-자동 해싱하여 사용 하지 않도록 설정 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 자동 `CAtlMap` 해시를 사용하지 않도록 설정합니다.
 
 ```
 void DisableAutoRehash() throw();
@@ -255,13 +255,13 @@ void DisableAutoRehash() throw();
 
 ### <a name="remarks"></a>설명
 
-자동 해싱하여 사용 하는 경우 (기본적으로 상태)는 해시 테이블에서 데이터 저장소 수가 자동으로 다시 계산 됩니다 (배열에 저장 된 요소의 수는 bin의 수의 비율)에 값 로드 최대값 또는 최소값 값을 초과 하는 경우 맵이 만들어진 시점에 지정 합니다.
+자동 재해시가 활성화되면(기본적으로) 로드 값(배열에 저장된 요소 수에 대한 bin 수의 비율)이 맵을 만들 때 지정된 최대 값 또는 최소 값을 초과하는 경우 해시 테이블의 저장소 수가 자동으로 다시 계산됩니다.
 
-`DisableAutoRehash` 가장 유용한 경우 한 번에 많은 수의 요소를 지도에 추가 됩니다. 제한을 초과 하는 때마다 rehashing 프로세스를 트리거하기, 대신 것이 효율적으로 호출할 `DisableAutoRehash`요소를 추가 하 고 마지막으로 호출 [CAtlMap::EnableAutoRehash](#enableautorehash)합니다.
+`DisableAutoRehash`많은 수의 요소가 한 번에 맵에 추가될 때 가장 유용합니다. 제한을 초과할 때마다 다시 해싱 프로세스를 트리거하는 대신 호출하고 `DisableAutoRehash`요소를 추가하고 마지막으로 [CAtlMap::EnableAutoRehash를](#enableautorehash)호출하는 것이 더 효율적입니다.
 
-##  <a name="enableautorehash"></a>  CAtlMap::EnableAutoRehash
+## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a>카틀맵::인에이블오토리해시
 
-자동 해싱하여 사용 하도록 설정 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체를 자동으로 `CAtlMap` 다시 해시할 수 있습니다.
 
 ```
 void EnableAutoRehash() throw();
@@ -269,13 +269,13 @@ void EnableAutoRehash() throw();
 
 ### <a name="remarks"></a>설명
 
-자동 해싱하여 사용 하는 경우 (기본적으로 상태)는 해시 테이블에서 데이터 저장소 수가 자동으로 다시 계산 됩니다 (배열에 저장 된 요소의 수는 bin의 수의 비율)에 값 로드 최대값 또는 최소값 값을 초과 하는 경우 지도 만들 때에 지정 합니다.
+자동 재해시가 활성화되면(기본적으로) 로드 값(배열에 저장된 요소 수에 대한 bin 수의 비율)이 맵을 만들 때 지정된 최대 값 또는 최소 값을 초과하는 경우 해시 테이블의 저장소 수가 자동으로 다시 계산됩니다.
 
-`EnableAutoRefresh` 호출한 후에 가장 자주 [CAtlMap::DisableAutoRehash](#disableautorehash)합니다.
+`EnableAutoRefresh`가장 자주 [CAtlMap에](#disableautorehash)대 한 호출 후 사용::D
 
-##  <a name="getat"></a>  CAtlMap::GetAt
+## <a name="catlmapgetat"></a><a name="getat"></a>카틀맵::GetAt
 
-맵에서 지정된 된 위치에 있는 요소를 반환 하려면이 메서드를 호출 합니다.
+맵에서 지정된 위치에 요소를 반환하려면 이 메서드를 호출합니다.
 
 ```
 void GetAt(
@@ -288,54 +288,54 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-*key*<br/>
-템플릿 매개 변수 맵의 키의 형식을 지정 합니다.
+*키*<br/>
+맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
-*값*<br/>
-템플릿 매개 변수 맵의 값의 형식을 지정 합니다.
+*value*<br/>
+맵 값의 유형을 지정하는 템플릿 매개변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 map에 저장 된 키/값 요소의 쌍에 대 한 포인터를 반환 합니다.
+맵에 저장된 키/값 요소의 현재 쌍에 대한 포인터를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-디버그 빌드에서 어설션 오류가 발생 하는 경우 *pos* NULL과 같습니다.
+디버그 빌드에서 *pos가* NULL과 같으면 어설션 오류가 발생합니다.
 
-##  <a name="getcount"></a>  CAtlMap::GetCount
+## <a name="catlmapgetcount"></a><a name="getcount"></a>카틀맵::겟카운트
 
-Map의 요소 수를 검색 하려면이 메서드를 호출 합니다.
+맵의 요소 수를 검색하려면 이 메서드를 호출합니다.
 
 ```
 size_t GetCount() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Map 개체의 요소 수를 반환합니다. 단일 요소는 키/값 쌍입니다.
+맵 오브젝트의 요소 수를 반환합니다. 단일 요소는 키/값 쌍입니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="gethashtablesize"></a>  CAtlMap::GetHashTableSize
+## <a name="catlmapgethashtablesize"></a><a name="gethashtablesize"></a>카틀맵::겟해시테이블사이즈
 
-지도의 해시 테이블에서 bin의 수를 확인 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 맵의 해시 테이블에서 저장소 수를 확인합니다.
 
 ```
 UINT GetHashTableSize() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-해시 테이블의 bin의 수를 반환합니다. 참조 [CAtlMap::CAtlMap](#catlmap) 설명 합니다.
+해시 테이블의 저장소 수를 반환합니다. 설명은 [CAtlMap::CAtlMap을](#catlmap) 참조하십시오.
 
-##  <a name="getkeyat"></a>  CAtlMap::GetKeyAt
+## <a name="catlmapgetkeyat"></a><a name="getkeyat"></a>카틀맵::겟키앳
 
-지정된 된 위치에 저장 된 키를 검색 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 키를 검색합니다.
 
 ```
 const K& GetKeyAt(POSITION pos) const throw();
@@ -343,20 +343,20 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 위치에 저장 된 키에 대 한 참조를 반환 합니다 `CAtlMap` 개체입니다.
+개체의 지정된 위치에 저장된 키에 대한 `CAtlMap` 참조를 반환합니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="getnext"></a>  CAtlMap::GetNext
+## <a name="catlmapgetnext"></a><a name="getnext"></a>카틀맵::GetNext
 
-쌍에 저장 된 다음 요소에 대 한 포인터를 가져오려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체에 저장된 다음 `CAtlMap` 요소 쌍에 대한 포인터를 가져옵니다.
 
 ```
 CPair* GetNext(POSITION& pos) throw();
@@ -365,16 +365,16 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Map에 저장 된 키/값 요소의 다음 쌍에 대 한 포인터를 반환 합니다. 합니다 *pos* 위치 카운터는 각 호출 후 업데이트 됩니다. 검색된 된 요소 맵에서 마지막 이면 *pos* NULL로 설정 됩니다.
+맵에 저장된 키/값 요소의 다음 쌍에 대한 포인터를 반환합니다. *pos* 위치 카운터는 각 호출 후 업데이트됩니다. 검색된 요소가 맵의 마지막 요소인 경우 *pos는* NULL로 설정됩니다.
 
-##  <a name="getnextassoc"></a>  CAtlMap::GetNextAssoc
+## <a name="catlmapgetnextassoc"></a><a name="getnextassoc"></a>카틀맵::겟넥스트아소크
 
-반복에 대 한 다음 요소를 가져옵니다.
+반복에 대한 다음 요소를 가져옵니다.
 
 ```
 void GetNextAssoc(
@@ -385,22 +385,22 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-*key*<br/>
-템플릿 매개 변수 맵의 키의 형식을 지정 합니다.
+*키*<br/>
+맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
-*값*<br/>
-템플릿 매개 변수 맵의 값의 형식을 지정 합니다.
+*value*<br/>
+맵 값의 유형을 지정하는 템플릿 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-합니다 *pos* 위치 카운터는 각 호출 후 업데이트 됩니다. 검색된 된 요소 맵에서 마지막 이면 *pos* NULL로 설정 됩니다.
+*pos* 위치 카운터는 각 호출 후 업데이트됩니다. 검색된 요소가 맵의 마지막 요소인 경우 *pos는* NULL로 설정됩니다.
 
-##  <a name="getnextkey"></a>  CAtlMap::GetNextKey
+## <a name="catlmapgetnextkey"></a><a name="getnextkey"></a>카틀맵::겟넥스트키
 
-다음 키를 검색 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체에서 `CAtlMap` 다음 키를 검색합니다.
 
 ```
 const K& GetNextKey(POSITION& pos) const throw();
@@ -408,20 +408,20 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-맵에서 다음 키에 대 한 참조를 반환합니다.
+맵의 다음 키에 대한 참조를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-현재 위치 카운터를 업데이트 *pos*합니다. 지도에 엔트리를 더 이상 없으면 위치 카운터가 NULL로 설정 됩니다.
+현재 위치 카운터, *pos를*업데이트합니다. 맵에 더 이상 항목이 없는 경우 위치 카운터가 NULL로 설정됩니다.
 
-##  <a name="getnextvalue"></a>  CAtlMap::GetNextValue
+## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a>카틀맵::GetNextValue
 
-다음 값을 가져오려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+개체에서 다음 값을 얻으려면이 `CAtlMap` 메서드를 호출 합니다.
 
 ```
 V& GetNextValue(POSITION& pos) throw();
@@ -430,47 +430,47 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-맵에서 다음 값에 대 한 참조를 반환합니다.
+맵의 다음 값에 대한 참조를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-현재 위치 카운터를 업데이트 *pos*합니다. 지도에 엔트리를 더 이상 없으면 위치 카운터가 NULL로 설정 됩니다.
+현재 위치 카운터, *pos를*업데이트합니다. 맵에 더 이상 항목이 없는 경우 위치 카운터가 NULL로 설정됩니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="getstartposition"></a>  CAtlMap::GetStartPosition
+## <a name="catlmapgetstartposition"></a><a name="getstartposition"></a>카틀맵::GetStart포지션
 
-맵 반복을 시작 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 맵 반복을 시작합니다.
 
 ```
 POSITION GetStartPosition() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Map이 비어 있으면 반환은 시작 위치 또는 NULL을 반환 합니다.
+시작 위치를 반환하거나 맵이 비어 있으면 NULL이 반환됩니다.
 
 ### <a name="remarks"></a>설명
 
-호출 된 위치를 반환 하 여 맵 반복을 시작 하려면이 메서드는 값을 전달할 수는 `GetNextAssoc` 메서드.
+메서드에 전달할 수 있는 POSITION 값을 반환 하 여 `GetNextAssoc` 맵 반복을 시작 하려면이 메서드를 호출 합니다.
 
 > [!NOTE]
->  반복 시퀀스를 예측할 수 없는 경우
+> 반복 시퀀스를 예측할 수 없습니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="getvalueat"></a>  CAtlMap::GetValueAt
+## <a name="catlmapgetvalueat"></a><a name="getvalueat"></a>카틀맵::겟밸류앳
 
-지정 된 위치에 저장 된 값을 검색 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 값을 검색합니다.
 
 ```
 V& GetValueAt(POSITION pos) throw();
@@ -479,16 +479,16 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 위치에 저장 된 값에 대 한 참조를 반환 합니다 `CAtlMap` 개체입니다.
+개체의 지정된 위치에 저장된 값에 대한 `CAtlMap` 참조를 반환합니다.
 
-##  <a name="inithashtable"></a>  CAtlMap::InitHashTable
+## <a name="catlmapinithashtable"></a><a name="inithashtable"></a>카틀맵::이니티해시테이블
 
-해시 테이블을 초기화 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 해시 테이블을 초기화합니다.
 
 ```
 bool InitHashTable(
@@ -499,56 +499,56 @@ bool InitHashTable(
 ### <a name="parameters"></a>매개 변수
 
 *nBins*<br/>
-해시 테이블에서 사용 하는 bin의 수입니다. 참조 [CAtlMap::CAtlMap](#catlmap) 설명 합니다.
+해시 테이블에서 사용하는 저장소 수입니다. 설명은 [CAtlMap::CAtlMap을](#catlmap) 참조하십시오.
 
 *bAllocNow*<br/>
-메모리를 할당 해야 하는 경우 플래그 나타냅니다.
+메모리를 할당해야 하는 경우 플래그 표시입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공적인 초기화에 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.
+성공적인 초기화시 TRUE를 반환하고 실패시 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`InitHashTable` 요소는 해시 테이블에 저장 되기 전에 호출 해야 합니다.  이 메서드를 명시적으로 호출 하지 않으면, 호출 됩니다 자동으로 하면 요소가 지정 된 bin 개수를 사용 하 여 추가 되어 처음으로 `CAtlMap` 생성자입니다.  지정 된 새 bin 개수를 사용 하 여 지도 초기화이 고, 그렇지 합니다 *nBins* 매개 변수입니다.
+`InitHashTable`모든 요소가 해시 테이블에 저장되기 전에 호출해야 합니다.  이 메서드가 명시적으로 호출되지 않으면 `CAtlMap` 생성자가 지정한 bin 수를 사용하여 요소가 처음 추가될 때 자동으로 호출됩니다.  그렇지 않으면 *nBins* 매개 변수에 의해 지정된 새 bin 수를 사용하여 맵이 초기화됩니다.
 
-경우는 *bAllocNow* 매개 변수가 false 인, 해시 테이블에 필요한 메모리는 필요한 먼저 될 때까지 할당 되지 것입니다. 이 지도 사용할 경우 특정 경우에 유용할 수 있습니다.
+*bAllocNow* 매개 변수가 false이면 해시 테이블에 필요한 메모리가 처음 필요할 때까지 할당되지 않습니다. 이 기능은 맵이 사용될지 확실하지 않은 경우에 유용할 수 있습니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="isempty"></a>  CAtlMap::IsEmpty
+## <a name="catlmapisempty"></a><a name="isempty"></a>카틀맵::비어 있음
 
-이 메서드는 빈 map 개체에 대 한 테스트를 호출 합니다.
+빈 맵 개체를 테스트하려면 이 메서드를 호출합니다.
 
 ```
 bool IsEmpty() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지도 경우 비어 있는 경우 FALSE이 고, 그렇지 TRUE를 반환 합니다.
+그렇지 않으면 맵이 비어 있는 경우 TRUE를 반환합니다.
 
-##  <a name="kinargtype"></a>  CAtlMap::KINARGTYPE
+## <a name="catlmapkinargtype"></a><a name="kinargtype"></a>카틀맵::키나르그타입
 
-키를 입력 인수로 전달 될 때 사용 되는 형식입니다.
+키가 입력 인수로 전달될 때 사용되는 형식입니다.
 
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
-##  <a name="koutargtype"></a>  CAtlMap::KOUTARGTYPE
+## <a name="catlmapkoutargtype"></a><a name="koutargtype"></a>카틀맵::쿠타르그타입
 
-키 출력 인수로 반환 될 때 사용 되는 형식입니다.
+키가 출력 인수로 반환될 때 사용되는 형식입니다.
 
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-##  <a name="lookup"></a>  CAtlMap::Lookup
+## <a name="catlmaplookup"></a><a name="lookup"></a>카틀맵::조회
 
-키 또는 값을 조회 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 `CAtlMap` 키 또는 값을 찾습니다.
 
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const;
@@ -558,23 +558,23 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-조회 요소를 식별 하는 키를 지정 합니다.
+*키*<br/>
+조회할 요소를 식별하는 키를 지정합니다.
 
-*값*<br/>
-조회 값을 수신 하는 변수입니다.
+*value*<br/>
+조회된 값을 받는 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드의 첫 번째 형태는 키 발견 되 면 true, 그렇지 않으면 false를 반환 합니다. 두 번째 및 세 번째 폼에 대 한 포인터를 반환 된 [CPair](#cpair_class) 사용할 수 있는 위치로 대 한 호출 [CAtlMap::GetNext](#getnext) 등.
+메서드의 첫 번째 형식은 키가 발견되면 true를 반환합니다(그렇지 않으면 false). 두 번째 및 세 번째 양식은 [CAtlMap::GetNext](#getnext) 등을 호출하는 위치로 사용할 수 있는 [CPair에](#cpair_class) 대한 포인터를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`Lookup` 해시 알고리즘을를 사용 하 여 신속 하 게 정확 하 게 제공된 된 키 매개 변수와 일치 하는 키가 포함 된 지도 요소를 찾습니다.
+`Lookup`해시 알고리즘을 사용하여 지정된 키 매개 변수와 정확히 일치하는 키가 포함된 맵 요소를 빠르게 찾습니다.
 
-##  <a name="operator_at"></a>  CAtlMap::operator \[\]
+## <a name="catlmapoperator-"></a><a name="operator_at"></a>CAtlMap::연산자\[\]
 
-새 요소를 추가 하거나이 대체 합니다 `CAtlMap`합니다.
+`CAtlMap`에 새 요소를 바꾸거나 추가합니다.
 
 ```
 V& operator[](kinargtype key) throw();
@@ -582,20 +582,20 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-키를 추가 하거나 바꿀 요소입니다.
+*키*<br/>
+추가하거나 바꿀 요소의 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정된 된 키와 연결 된 값에 대 한 참조를 반환 합니다.
+지정된 키와 연결된 값에 대한 참조를 반환합니다.
 
 ### <a name="example"></a>예제
 
-키가 이미 있는 경우 요소가 바뀝니다. 키가 없으면 새 요소가 추가 됩니다. 예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+키가 이미 있으면 요소가 대체됩니다. 키가 없으면 새 요소가 추가됩니다. [CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="rehash"></a>  CAtlMap::Rehash
+## <a name="catlmaprehash"></a><a name="rehash"></a>카틀맵::리해시
 
-Rehash 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 `CAtlMap` 개체를 다시 해시합니다.
 
 ```
 void Rehash(UINT nBins = 0);
@@ -604,15 +604,15 @@ void Rehash(UINT nBins = 0);
 ### <a name="parameters"></a>매개 변수
 
 *nBins*<br/>
-새 해시 테이블에서 사용 하는 bin 수입니다. 참조 [CAtlMap::CAtlMap](#catlmap) 설명 합니다.
+해시 테이블에서 사용할 새 저장소 수입니다. 설명은 [CAtlMap::CAtlMap을](#catlmap) 참조하십시오.
 
 ### <a name="remarks"></a>설명
 
-하는 경우 *nBins* 가 0 이면 `CAtlMap` 된 데이터베이스 맵 및 최적의 부하 설정의 요소 수에 따라 적절 한 수를 계산 합니다. 일반적으로 rehashing 프로세스는 자동으로 경우에 [CAtlMap::DisableAutoRehash](#disableautorehash) 되었습니다 호출이 메서드는 필요한 크기를 조정 수행 됩니다.
+*nBin이* 0이면 `CAtlMap` 맵의 요소 수와 최적의 부하 설정에 따라 적절한 숫자를 계산합니다. 일반적으로 다시 해싱 프로세스는 자동으로 수행되지만 [CAtlMap::DisableAutoRehash가](#disableautorehash) 호출된 경우 이 메서드는 필요한 크기 조정을 수행합니다.
 
-##  <a name="removeall"></a>  CAtlMap::RemoveAll
+## <a name="catlmapremoveall"></a><a name="removeall"></a>카틀맵::모두 제거
 
-모든 요소를 제거 하려면이 메서드는 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체에서 모든 요소를 제거합니다. `CAtlMap`
 
 ```
 void RemoveAll() throw();
@@ -620,11 +620,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>설명
 
-지웁니다는 `CAtlMap` 개체에 요소를 저장 하는 데 사용 된 메모리를 해제 합니다.
+개체를 `CAtlMap` 지우고 요소를 저장하는 데 사용되는 메모리를 해제합니다.
 
-##  <a name="removeatpos"></a>  CAtlMap::RemoveAtPos
+## <a name="catlmapremoveatpos"></a><a name="removeatpos"></a>카틀맵::리크아포스
 
-지정된 된 위치에 있는 요소를 제거 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 지정된 `CAtlMap` 위치에서 요소를 제거합니다.
 
 ```
 void RemoveAtPos(POSITION pos) throw();
@@ -632,16 +632,16 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
 ### <a name="remarks"></a>설명
 
-지정된 된 위치에 저장 된 키/값 쌍을 제거 합니다. 요소를 저장 하는 데 메모리 해제 됩니다. 참조 하는 위치 *pos* 무효화 되 고 맵의 다른 요소의 위치 유효한 반드시 수행 하는 동안 동일한 순서를 유지 합니다.
+지정된 위치에 저장된 키/값 쌍을 제거합니다. 요소를 저장하는 데 사용되는 메모리가 해제됩니다. *pos에서* 참조하는 위치는 유효하지 않으며 맵의 다른 요소의 위치는 유효하지만 반드시 동일한 순서를 유지하지는 않습니다.
 
-##  <a name="removekey"></a>  CAtlMap::RemoveKey
+## <a name="catlmapremovekey"></a><a name="removekey"></a>카틀맵::리무브키
 
-요소를 제거 하려면이 메서드를 호출 합니다 `CAtlMap` 키를 지정 된 개체입니다.
+키가 주어지면 이 메서드를 `CAtlMap` 호출하여 개체에서 요소를 제거합니다.
 
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -649,20 +649,20 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-제거 하려는 키에 해당 하는 요소 쌍입니다.
+*키*<br/>
+제거할 요소 쌍에 해당하는 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-키가 발견 및 제거, 실패 시 FALSE 경우 TRUE를 반환 합니다.
+키가 발견되고 제거되면 TRUE를 반환합니다( 오류 시 FALSE).
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [CAtlMap::CAtlMap](#catlmap)합니다.
+[CAtlMap::CAtlMap](#catlmap)에 대한 예제를 참조하십시오.
 
-##  <a name="setat"></a>  CAtlMap::SetAt
+## <a name="catlmapsetat"></a><a name="setat"></a>카틀맵::세팅
 
-Map에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 요소 쌍을 맵에 삽입합니다.
 
 ```
 POSITION SetAt(
@@ -672,23 +672,23 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-추가할 키 값을 `CAtlMap` 개체입니다.
+*키*<br/>
+개체에 추가할 키 `CAtlMap` 값입니다.
 
-*값*<br/>
-에 추가할 값을 `CAtlMap` 개체입니다.
+*value*<br/>
+개체에 추가할 값입니다. `CAtlMap`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-에 있는 키/값 요소 쌍의 위치를 반환 합니다 `CAtlMap` 개체입니다.
+개체에서 키/값 요소 쌍의 위치를 `CAtlMap` 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`SetAt` 일치 하는 키가 있을 경우 기존 요소를 바꿉니다. 키가 없는 경우 새 키/값 쌍이 생성 됩니다.
+`SetAt`일치하는 키가 발견되면 기존 요소를 대체합니다. 키가 없는 경우 새 키/값 쌍이 만들어집니다.
 
-##  <a name="setoptimalload"></a>  CAtlMap::SetOptimalLoad
+## <a name="catlmapsetoptimalload"></a><a name="setoptimalload"></a>카틀맵::최적 로드 설정
 
-최적의 부하를 설정 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 `CAtlMap` 최적 로드를 설정합니다.
 
 ```
 void SetOptimalLoad(
@@ -700,25 +700,25 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>매개 변수
 
-*fOptimalLoad*<br/>
-최적의 부하 비율입니다.
+*f최적 로드*<br/>
+최적의 하중 비율.
 
-*fLoThreshold*<br/>
-부하 비율에 대 한 임계값입니다.
+*fLo 임계값*<br/>
+부하 비율에 대한 낮은 임계값입니다.
 
-*fHiThreshold*<br/>
-부하 비율에 대 한 상한 임계값입니다.
+*fHi임계값*<br/>
+부하 비율에 대한 상위 임계값입니다.
 
 *bRehashNow*<br/>
-해시 테이블을 다시 계산 해야 하는 경우를 나타내는 플래그입니다.
+해시 테이블을 다시 계산해야 하는지 나타내는 플래그입니다.
 
 ### <a name="remarks"></a>설명
 
-최적의 부하 값을 다시 정의 `CAtlMap` 개체입니다. 참조 [CAtlMap::CAtlMap](#catlmap) 여러 매개 변수에 대 한 내용은 합니다. 하는 경우 *bRehashNow* 가 true 이면 요소 수는 최소 및 최대 값을 외부를 해시 테이블을 다시 계산 됩니다.
+이 메서드는 `CAtlMap` 개체에 대 한 최적의 하중 값을 재정의 합니다. 다양한 매개 변수에 대한 설명은 [CAtlMap::CAtlMap을](#catlmap) 참조하십시오. *bRehashNowtrue이고* 요소 수가 최소 값 및 최대 값 밖에 있으면 해시 테이블이 다시 계산됩니다.
 
-##  <a name="setvalueat"></a>  CAtlMap::SetValueAt
+## <a name="catlmapsetvalueat"></a><a name="setvalueat"></a>카틀맵::셋밸류At
 
-지정 된 위치에 저장 된 값을 변경 하려면이 메서드를 호출 합니다 `CAtlMap` 개체입니다.
+이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 값을 변경합니다.
 
 ```
 void SetValueAt(
@@ -728,35 +728,35 @@ void SetValueAt(
 
 ### <a name="parameters"></a>매개 변수
 
-*pos*<br/>
-에 대 한 이전 호출에서 반환 되는 위치 카운터 [CAtlMap::GetNextAssoc](#getnextassoc) 하거나 [CAtlMap::GetStartPosition](#getstartposition)합니다.
+*Pos*<br/>
+[CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-*값*<br/>
-에 추가할 값을 `CAtlMap` 개체입니다.
+*value*<br/>
+개체에 추가할 값입니다. `CAtlMap`
 
 ### <a name="remarks"></a>설명
 
-지정된 된 위치에 저장 된 값 요소를 변경 합니다 `CAtlMap` 개체입니다.
+개체의 지정된 위치에 저장된 값 `CAtlMap` 요소를 변경합니다.
 
-##  <a name="vinargtype"></a>  CAtlMap::VINARGTYPE
+## <a name="catlmapvinargtype"></a><a name="vinargtype"></a>카틀맵::비나르그타입
 
-값 입력 인수로 전달 될 때 사용 되는 형식입니다.
+값이 입력 인수로 전달될 때 사용되는 형식입니다.
 
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
-##  <a name="voutargtype"></a>  CAtlMap::VOUTARGTYPE
+## <a name="catlmapvoutargtype"></a><a name="voutargtype"></a>카틀맵::부타르그타입
 
-값을 출력 인수로 전달 될 때 사용 되는 형식입니다.
+값이 출력 인수로 전달될 때 사용되는 형식입니다.
 
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-##  <a name="m_key"></a>  CAtlMap::CPair::m_key
+## <a name="catlmapcpairm_key"></a><a name="m_key"></a>카틀맵::C페어::m_key
 
-키 요소에 저장 하는 데이터 멤버입니다.
+키 요소를 저장하는 데이터 멤버입니다.
 
 ```
 const K m_key;
@@ -765,11 +765,11 @@ const K m_key;
 ### <a name="parameters"></a>매개 변수
 
 *K*<br/>
-Key 요소 형식입니다.
+키 요소 유형입니다.
 
-##  <a name="m_value"></a>  CAtlMap::CPair::m_value
+## <a name="catlmapcpairm_value"></a><a name="m_value"></a>카틀맵::C페어::m_value
 
-Value 요소 저장 데이터 멤버입니다.
+값 요소를 저장하는 데이터 멤버입니다.
 
 ```
 V  m_value;
@@ -777,11 +777,11 @@ V  m_value;
 
 ### <a name="parameters"></a>매개 변수
 
-*V*<br/>
+*Ⅴ*<br/>
 값 요소 형식입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[움직이는 텍스트 샘플](../../overview/visual-cpp-samples.md)<br/>
-[UpdatePV 샘플](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
+[선택 윤곽 샘플](../../overview/visual-cpp-samples.md)<br/>
+[업데이트PV 샘플](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

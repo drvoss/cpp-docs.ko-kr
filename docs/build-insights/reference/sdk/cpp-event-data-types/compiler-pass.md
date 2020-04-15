@@ -1,6 +1,6 @@
 ---
-title: CompilerPass 클래스
-description: C++ BUILD Insights SDK CompilerPass 클래스 참조입니다.
+title: 컴파일러패스 클래스
+description: C++ 빌드 인사이트 SDK 컴파일러패스 클래스 참조.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3c2fa1c2c4be8aaf5bec77b383f93a4b033ca8e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 11af981b647d5183f88dad024d90c0ef4f8a28bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334957"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325037"
 ---
-# <a name="compilerpass-class"></a>CompilerPass 클래스
+# <a name="compilerpass-class"></a>컴파일러패스 클래스
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK는 Visual Studio 2017 이상 버전과 호환 됩니다. 이러한 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2017 또는 Visual studio 2019로 설정 합니다.
+C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`CompilerPass` 클래스는 [Matchevent](../functions/match-event.md), [matcheventinmemberfunction](../functions/match-event-in-member-function.md), [Matcheventstack](../functions/match-event-stack.md)및 [matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md) 함수와 함께 사용 됩니다. 이를 사용 하 여 [BACK_END_PASS](../event-table.md#back-end-pass) 또는 [FRONT_END_PASS](../event-table.md#front-end-pass) 이벤트를 일치 시킵니다.
+클래스는 `CompilerPass` [매치 이벤트,](../functions/match-event.md) [매치 이벤트인멤버기능,](../functions/match-event-in-member-function.md) [매치이벤트스택](../functions/match-event-stack.md)및 [매치이벤트스택](../functions/match-event-stack-in-member-function.md) 기능과 함께 사용된다. [BACK_END_PASS](../event-table.md#back-end-pass) 또는 [FRONT_END_PASS](../event-table.md#front-end-pass) 이벤트와 일치하는 데 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,28 +49,28 @@ public:
 
 ## <a name="members"></a>멤버
 
-[작업](activity.md) 기본 클래스의 상속 된 멤버와 함께 `CompilerPass` 클래스에는 다음 멤버가 포함 됩니다.
+[활동](activity.md) 기본 클래스의 상속된 멤버와 `CompilerPass` 함께 클래스에는 다음 멤버가 포함됩니다.
 
 ### <a name="constructors"></a>생성자
 
-[CompilerPass](#compiler-pass)
+[컴파일러 패스](#compiler-pass)
 
 ### <a name="enums"></a>열거형
 
-#### <a name="passcode"></a>적음
+#### <a name="passcode"></a>암호
 
 |||
 |-|-|
-|FRONT_END|프런트 엔드 패스입니다.|
-|BACK_END|백 엔드 패스입니다.|
+|FRONT_END|프론트 엔드 패스.|
+|BACK_END|백 엔드 패스.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
-[Inputsourcepath](#input-source-path)\
-[OutputObjectPath](#output-object-path)\
+[입력 소스 패스](#input-source-path)\
+[출력 개체 경로](#output-object-path)\
 [암호](#pass-code)\
 
-## <a name="compiler-pass"></a>CompilerPass
+## <a name="compilerpass"></a><a name="compiler-pass"></a>컴파일러 패스
 
 ```cpp
 CompilerPass(const RawEvent& event);
@@ -78,37 +78,37 @@ CompilerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>매개 변수
 
-*event*\
+*이벤트*\
 [BACK_END_PASS](../event-table.md#back-end-pass) 또는 [FRONT_END_PASS](../event-table.md#front-end-pass) 이벤트입니다.
 
-## <a name="input-source-path"></a>InputSourcePath
+## <a name="inputsourcepath"></a><a name="input-source-path"></a>입력 소스 패스
 
 ```cpp
 const wchar_t* InputSourcePath() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 컴파일러 통과에서 처리 한 입력 소스 파일의 절대 경로입니다.
+이 컴파일러에서 처리하는 입력 소스 파일에 대한 절대 경로입니다.
 
-## <a name="output-object-path"></a>OutputObjectPath
+## <a name="outputobjectpath"></a><a name="output-object-path"></a>출력 개체 경로
 
 ```cpp
 const wchar_t* OutputObjectPath() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 컴파일러에서 생성 된 출력 개체 파일의 절대 경로입니다.
+이 컴파일러 패스에서 생성된 출력 개체 파일에 대한 절대 경로입니다.
 
-## <a name="pass-code"></a>적음
+## <a name="passcode"></a><a name="pass-code"></a>암호
 
 ```cpp
 PassCode PassCode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 CompilerPass 개체가 나타내는 컴파일러 pass를 나타내는 코드입니다.
+이 컴파일러패스 개체로 표시되는 컴파일러 패스를 나타내는 코드입니다.
 
 ::: moniker-end

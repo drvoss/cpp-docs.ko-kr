@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318662"
 ---
 # <a name="platformarray-class"></a>Platform::Array 클래스
 
@@ -28,43 +28,43 @@ private ref class Array<TArg, 1> :
     public IBoxArray<TArg>
 ```
 
-### <a name="members"></a>구성원
+### <a name="members"></a>멤버
 
-Platform:: Array는 platform:: [WriteOnlyArray 클래스](../cppcx/platform-writeonlyarray-class.md) 의 모든 메서드를 상속 하 고 [Platform:: Iboxarray 인터페이스](../cppcx/platform-iboxarray-interface.md)의 `Value` 속성을 구현 합니다.
+플랫폼::배열은 [플랫폼::WriteOnlyArray 클래스에서](../cppcx/platform-writeonlyarray-class.md) 모든 메서드를 `Value` 상속 하 고 [플랫폼::IBoxArray 인터페이스의](../cppcx/platform-iboxarray-interface.md)속성을 구현 합니다.
 
 ### <a name="public-constructors"></a>Public 생성자
 
 |속성|Description|
 |----------|-----------------|
-|[Array 생성자](#ctor)|클래스 템플릿 매개 변수 *T*로 지정 된, 수정 가능한 1 차원 형식 배열을 초기화 합니다.|
+|[Array 생성자](#ctor)|클래스 템플릿 매개 변수 *T에*의해 지정된 형식의 1차원 수정 가능한 배열을 초기화합니다.|
 
 ### <a name="methods"></a>메서드
 
-[Platform:: WriteOnlyArray 클래스](../cppcx/platform-writeonlyarray-class.md)를 참조 하세요.
+[플랫폼:::WriteOnlyArray 클래스](../cppcx/platform-writeonlyarray-class.md)를 참조하십시오.
 
 ### <a name="properties"></a>속성
 
 |||
 |-|-|
-|[Array:: Value](#value)|현재 배열에 대한 핸들을 검색합니다.|
+|[배열 ::값](#value)|현재 배열에 대한 핸들을 검색합니다.|
 
 ### <a name="remarks"></a>설명
 
 Array 클래스는 봉인되므로 상속할 수 없습니다.
 
-Windows 런타임 형식 시스템은 가변 배열의 개념을 지원 하지 않으므로 IVector < Platform:: Array\<T > >를 반환 값 또는 메서드 매개 변수로 전달할 수 없습니다. ABI 전반에서 가변 배열 또는 시퀀스의 시퀀스를 전달하려면 `IVector<IVector<T>^>`를 사용합니다.
+Windows 런타임 형식 시스템은 들쭉날쭉한 배열의 개념을 지원하지 않으므로 IVector<\<플랫폼::배열 T>> 반환 값 또는 메서드 매개 변수로 전달할 수 없습니다. ABI 전반에서 가변 배열 또는 시퀀스의 시퀀스를 전달하려면 `IVector<IVector<T>^>`를 사용합니다.
 
-Platform:: Array를 사용 하는 시기 및 방법에 대 한 자세한 내용은 [array 및 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)를 참조 하세요.
+플랫폼:::Array를 사용하는 시기와 방법에 대한 자세한 내용은 [배열 및 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)를 참조하십시오.
 
-이 클래스는 컴파일러가 자동으로 포함하는 vccorlib.h 헤더에 정의됩니다. IntelliSense에는 표시 되지만 개체 브라우저에는 표시 되지 않습니다 .이는 플랫폼별에 정의 된 공용 형식이 아니기 때문입니다.
+이 클래스는 컴파일러가 자동으로 포함하는 vccorlib.h 헤더에 정의됩니다. IntelliSense에는 표시되지만 platform.winmd에 정의된 공용 형식이 아니기 때문에 개체 브라우저에서는 볼 수 없습니다.
 
 ### <a name="requirements"></a>요구 사항
 
 컴파일러 옵션: **/ZW**
 
-## <a name="ctor"></a>배열 생성자
+## <a name="array-constructors"></a><a name="ctor"></a>배열 생성자
 
-클래스 템플릿 매개 변수 *T*로 지정 된, 수정 가능한 1 차원 형식 배열을 초기화 합니다.
+클래스 템플릿 매개 변수 *T에*의해 지정된 형식의 1차원 수정 가능한 배열을 초기화합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -78,17 +78,17 @@ Array(T* data, unsigned int size);
 *T*<br/>
 클래스 템플릿 매개 변수입니다.
 
-*size*<br/>
+*크기*<br/>
 배열의 요소 수입니다.
 
-*data*<br/>
+*데이터*<br/>
 이 Array 개체를 초기화하는 데 사용되는 `T` 형식 데이터의 배열에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-Platform:: Array 인스턴스를 만드는 방법에 대 한 자세한 내용은 [array 및 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)를 참조 하세요.
+플랫폼::배열의 인스턴스를 만드는 방법에 대한 자세한 내용은 [배열 및 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)를 참조하십시오.
 
-## <a name="get"></a>Array:: get 메서드
+## <a name="arrayget-method"></a><a name="get"></a>배열 ::get 방법
 
 지정된 인덱스 위치에서 배열 요소에 대한 참조를 검색합니다.
 
@@ -101,13 +101,13 @@ T& get(unsigned int index)  const;
 #### <a name="parameters"></a>매개 변수
 
 *index*<br/>
-배열에서 요소를 식별하는 0부터 시작하는 인덱스를 확인합니다. 최소 인덱스는 0이 고, 최대 인덱스는 [배열 생성자](#ctor)의 `size` 매개 변수에 지정 된 값입니다.
+배열에서 요소를 식별하는 0부터 시작하는 인덱스를 확인합니다. 최소 인덱스는 0이고 최대 인덱스는 Array `size` [생성자의](#ctor)매개 변수에 의해 지정된 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
 `index` 매개 변수로 지정된 배열 요소입니다.
 
-## <a name="value"></a>Array:: Value 속성
+## <a name="arrayvalue-property"></a><a name="value"></a>배열::값 속성
 
 현재 배열에 대한 핸들을 검색합니다.
 

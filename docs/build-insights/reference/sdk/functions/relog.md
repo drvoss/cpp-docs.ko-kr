@@ -1,6 +1,6 @@
 ---
 title: 다시 기록할
-description: C++ BUILD Insights SDK Relog 함수 참조입니다.
+description: C++ 빌드 인사이트 SDK Relog 함수 참조.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1ce09101deebd957de4b9305762dc37f38b53f4e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334285"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323785"
 ---
 # <a name="relog"></a>다시 기록할
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK는 Visual Studio 2017 이상 버전과 호환 됩니다. 이러한 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2017 또는 Visual studio 2019로 설정 합니다.
+C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`Relog` 함수는 ETW (ETW(Windows용 이벤트 추적)) 추적에서 MSVC 이벤트를 읽고 수정 된 새 ETW 추적에 기록 하는 데 사용 됩니다.
+이 `Relog` 함수는 ETW(Windows용 이벤트 추적) 추적에서 MSVC 이벤트를 읽고 수정된 새 ETW 추적에 기록하는 데 사용됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>매개 변수
 
-*TAnalyzerGroupMembers*\
-이 매개 변수는 항상 추론 됩니다.
+*T분석기 그룹구성원*\
+이 매개 변수는 항상 추론됩니다.
 
-*TReloggerGroupMembers*\
-이 매개 변수는 항상 추론 됩니다.
+*트레로거 그룹 회원*\
+이 매개 변수는 항상 추론됩니다.
 
-*Inputlogfile*\
-이벤트를 읽으려고 하는 입력 ETW 추적입니다.
+*입력로그파일*\
+이벤트를 읽으려는 입력 ETW 추적입니다.
 
-*Outputlogfile*\
-새 이벤트를 쓸 파일입니다.
+*출력로그파일*\
+새 이벤트를 작성할 파일입니다.
 
-*numberOfAnalysisPasses*\
-입력 추적에서 실행할 분석 패스의 수입니다. Trace는 제공 된 분석기 그룹을 분석 통과 당 한 번씩 전달 합니다.
+*숫자분석패스*\
+입력 추적에서 실행되는 분석 패스 수입니다. 트레이스는 분석 패스당 한 번 제공된 분석기 그룹을 통과합니다.
 
-*systemEventsRetentionFlags*\
-Relogged 추적에 유지할 시스템 ETW 이벤트를 지정 하는 비트 마스크입니다. 자세한 내용은 [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)를 참조 하세요.
+*시스템이벤트보존플래그*\
+다시 기록된 추적에 보관할 시스템 ETW 이벤트를 지정하는 비트 마스크입니다. 자세한 내용은 [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)를 참조하십시오.
 
-*analyzerGroup*\
-Relogging 세션의 분석 단계에 사용 되는 분석기 그룹입니다. [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) 를 호출 하 여 분석기 그룹을 만듭니다. [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md)에서 가져온 동적 분석기 그룹을 사용 하려면 먼저 해당 주소를 `MakeStaticAnalyzerGroup`으로 전달 하 여 정적 분석기 그룹 내에 캡슐화 합니다.
+*분석기 그룹*\
+리로깅 세션의 분석 단계에 사용되는 분석기 그룹입니다. [MakeStaticAnalyzerGroup에](make-static-analyzer-group.md) 전화하여 분석기 그룹을 만듭니다. [MakeDynamicAnalyzerGroup에서](make-dynamic-analyzer-group.md)얻은 동적 분석기 그룹을 사용하려면 먼저 주소를 에 전달하여 정적 분석기 `MakeStaticAnalyzerGroup`그룹 내부에 캡슐화합니다.
 
-*reloggerGroup*\
-*Outputlogfile*에 지정 된 추적 파일에 이벤트를 다시 기록 하는 재로 거 group입니다. [MakeStaticReloggerGroup](make-static-relogger-group.md) 를 호출 하 여 재로 거 거 그룹을 만듭니다. [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md)에서 가져온 동적 재로 거 거 그룹을 사용 하려면 먼저 해당 주소를 `MakeStaticReloggerGroup`으로 전달 하 여 정적 재로 거 그룹 내에 캡슐화 합니다.
+*리로거 그룹*\
+*outputLogFile에*지정된 추적 파일로 이벤트를 다시 기록하는 relogger 그룹 . 다시 로거 [그룹을 만들려면 정적 Relogger 그룹 확인을](make-static-relogger-group.md) 호출합니다. [MakeDynamicReloggerGroup에서](make-dynamic-relogger-group.md)얻은 동적 리로거 그룹을 사용하려면 먼저 주소를 에 전달하여 정적 리로거 `MakeStaticReloggerGroup`그룹 내부에 캡슐화합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [RESULT_CODE](../other-types/result-code-enum.md) 열거형의 결과 코드입니다.
 
 ### <a name="remark"></a>설명
 
-입력 추적은 *numberOfAnalysisPasses* 번 분석기 그룹을 통해 전달 됩니다. 다시 로깅 패스에는 유사한 옵션이 없습니다. 모든 분석 단계가 완료 된 후에 다시 trough가 다시 전달 됩니다.
+입력 추적은 분석기 그룹 번호를 통해 *전달됩니다OfAnalysisPasses* 시간. 패스를 다시 기록하는 데는 유사한 옵션이 없습니다. 모든 분석 패스가 완료된 후 추적은 relogger 그룹을 한 번만 전달합니다.
 
-Relogging 거 클래스 내에서 CPU 샘플과 같은 시스템 이벤트의 재 로깅은 지원 되지 않습니다. *SystemEventsRetentionFlags* 매개 변수를 사용 하 여 출력 추적에 유지할 시스템 이벤트를 결정 합니다.
+relogger 클래스 내에서 CPU 샘플 과 같은 시스템 이벤트의 리로깅은 지원되지 않습니다. *시스템이벤트RetentionFlags* 매개 변수를 사용하여 출력 추적에 유지할 시스템 이벤트를 결정합니다.
 
 ::: moniker-end

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2843c0c25a5c104ffbdff72255ac5d85cf53b1ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495664"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329454"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl 클래스
 
-이 클래스는 `IUnknown` 를 구현 하 고 [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) 인터페이스의 기본 구현을 제공 합니다.
+이 클래스는 `IUnknown` [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) 인터페이스의 기본 구현을 구현하고 제공합니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,25 +40,25 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-에서 `IRunnableObjectImpl`파생 된 클래스입니다.
+에서 파생된 클래스입니다. `IRunnableObjectImpl`
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|실행 중인 컨트롤의 CLSID를 반환 합니다. ATL 구현은 CLSID를 GUID_NULL로 설정 하 고 E_UNEXPECTED를 반환 합니다.|
-|[IRunnableObjectImpl::IsRunning](#isrunning)|컨트롤이 실행 중인지 여부를 확인 합니다. ATL 구현에서 TRUE를 반환 합니다.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|컨트롤을 실행 상태로 잠급니다. ATL 구현은 S_OK를 반환 합니다.|
-|[IRunnableObjectImpl::Run](#run)|컨트롤을 강제로 실행 합니다. ATL 구현은 S_OK를 반환 합니다.|
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|컨트롤이 포함 되어 있음을 나타냅니다. ATL 구현은 S_OK를 반환 합니다.|
+|[IRunnableObjectImpl::GetRunning클래스](#getrunningclass)|실행 중인 컨트롤의 CLSID를 반환합니다. ATL 구현은 CLSID를 GUID_NULL 설정하고 E_UNEXPECTED 반환합니다.|
+|[IRunnable개체임플::실행 중](#isrunning)|컨트롤이 실행 되고 있는지 확인 합니다. ATL 구현TRUE를 반환합니다.|
+|[IRunnable개체임플::잠금 실행](#lockrunning)|컨트롤을 실행 중인 상태로 잠그습니다. ATL 구현은 S_OK 반환합니다.|
+|[IRunnable개체임플::실행](#run)|컨트롤을 강제로 실행합니다. ATL 구현은 S_OK 반환합니다.|
+|[IRunnable 개체 임플::집합포함 개체](#setcontainedobject)|컨트롤이 포함되어 있음을 나타냅니다. ATL 구현은 S_OK 반환합니다.|
 
 ## <a name="remarks"></a>설명
 
-[IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) 인터페이스를 사용 하면 컨테이너에서 컨트롤이 실행 중인지 여부를 확인 하 고 실행 하거나 실행 상태로 잠글 수 있습니다. 클래스 `IRunnableObjectImpl` 는이 인터페이스의 기본 구현을 제공 하 고 `IUnknown` 디버그 빌드에서 정보를 덤프 장치로 전송 하 여를 구현 합니다.
+[IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) 인터페이스를 사용하면 컨테이너가 컨트롤이 실행 중인지 확인하거나 강제로 실행하거나 실행 중인 상태로 잠글 수 있습니다. 클래스는 `IRunnableObjectImpl` 디버그 빌드에서 덤프 `IUnknown` 장치에 정보를 전송하여 이 인터페이스및 구현의 기본 구현을 제공합니다.
 
-**관련 문서** Atl [자습서](../../atl/active-template-library-atl-tutorial.md), [atl 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)
+**관련 기사** [ATL 자습서,](../../atl/active-template-library-atl-tutorial.md) [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -68,89 +68,89 @@ class IRunnableObjectImpl
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** 없음 ctl. h
+**헤더:** atlctl.h
 
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+## <a name="irunnableobjectimplgetrunningclass"></a><a name="getrunningclass"></a>IRunnableObjectImpl::GetRunning클래스
 
-실행 중인 컨트롤의 CLSID를 반환 합니다.
+실행 중인 컨트롤의 CLSID를 반환합니다.
 
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ATL 구현은 \* *lpclsid* 를 GUID_NULL로 설정 하 고 E_UNEXPECTED를 반환 합니다.
+ATL 구현은 \* *lpClsid를* GUID_NULL 설정하고 E_UNEXPECTED 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IRunnableObject:: GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) 를 참조 하세요.
+[IRunnable 개체::GetRunning클래스](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) Windows SDK에서 를 참조하십시오.
 
-##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
+## <a name="irunnableobjectimplisrunning"></a><a name="isrunning"></a>IRunnable개체임플::실행 중
 
-컨트롤이 실행 중인지 여부를 확인 합니다.
+컨트롤이 실행 되고 있는지 확인 합니다.
 
 ```
 virtual BOOL IsRunning();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ATL 구현에서 TRUE를 반환 합니다.
+ATL 구현TRUE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IRunnableObject:: IsRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) 을 참조 하세요.
+[IRunnable 개체::Windows](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) SDK에서 실행 중입니다.
 
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+## <a name="irunnableobjectimpllockrunning"></a><a name="lockrunning"></a>IRunnable개체임플::잠금 실행
 
-컨트롤을 실행 상태로 잠급니다.
+컨트롤을 실행 중인 상태로 잠그습니다.
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ATL 구현은 S_OK를 반환 합니다.
+ATL 구현은 S_OK 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [실행 되는 IRunnableObject:: lockrunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) 을 참조 하세요.
+[IRunnable개체::Windows](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) SDK에서 잠금 실행 을 참조하십시오.
 
-##  <a name="run"></a>  IRunnableObjectImpl::Run
+## <a name="irunnableobjectimplrun"></a><a name="run"></a>IRunnable개체임플::실행
 
-컨트롤을 강제로 실행 합니다.
+컨트롤을 강제로 실행합니다.
 
 ```
 HRESULT Run(LPBINDCTX lpbc);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ATL 구현은 S_OK를 반환 합니다.
+ATL 구현은 S_OK 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IRunnableObject:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) 을 참조 하십시오.
+[IRunnable개체::Windows](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) SDK에서 실행을 참조하십시오.
 
-##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
+## <a name="irunnableobjectimplsetcontainedobject"></a><a name="setcontainedobject"></a>IRunnable 개체 임플::집합포함 개체
 
-컨트롤이 포함 되어 있음을 나타냅니다.
+컨트롤이 포함되어 있음을 나타냅니다.
 
 ```
 HRESULT SetContainedObject(BOOL fContained);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ATL 구현은 S_OK를 반환 합니다.
+ATL 구현은 S_OK 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IRunnableObject:: SetContainedObject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) 를 참조 하세요.
+[IRunnable 개체::집합포함된 개체](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) 를 Windows SDK에서 참조 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CComControl 클래스](../../atl/reference/ccomcontrol-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: OptRef 클래스
-description: C++ BUILD Insights SDK OptRef 클래스 참조입니다.
+title: 옵트레프 클래스
+description: C++ 빌드 인사이트 SDK OptRef 클래스 참조.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c2abad6489012250862bc0721663572d03261bd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324438"
 ---
-# <a name="optref-class"></a>OptRef 클래스
+# <a name="optref-class"></a>옵트레프 클래스
 
 ::: moniker range="<=vs-2015"
 
-C++ BUILD Insights SDK는 Visual Studio 2017 이상 버전과 호환 됩니다. 이러한 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2017 또는 Visual studio 2019로 설정 합니다.
+C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OptRef` 클래스는 [Matchevent](../functions/match-event.md), [matcheventinmemberfunction](../functions/match-event-in-member-function.md), [Matcheventstack](../functions/match-event-stack.md)및 [matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md) 함수와 함께 사용 됩니다. 이를 사용 하 여 [OPT_REF](../event-table.md#opt-ref) 이벤트와 일치 시킵니다.
+클래스는 `OptRef` [매치 이벤트,](../functions/match-event.md) [매치 이벤트인멤버기능,](../functions/match-event-in-member-function.md) [매치이벤트스택](../functions/match-event-stack.md)및 [매치이벤트스택](../functions/match-event-stack-in-member-function.md) 기능과 함께 사용된다. [OPT_REF](../event-table.md#opt-ref) 이벤트와 일치하는 데 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>멤버
 
-[작업](activity.md) 기본 클래스의 상속 된 멤버와 함께 `OptRef` 클래스에는 다음 멤버가 포함 됩니다.
+[활동](activity.md) 기본 클래스의 상속된 멤버와 `OptRef` 함께 클래스에는 다음 멤버가 포함됩니다.
 
 ### <a name="constructors"></a>생성자
 
-[OptRef](#opt-ref)
+[옵트레프](#opt-ref)
 
-## <a name="opt-ref"></a>OptRef
+## <a name="optref"></a><a name="opt-ref"></a>옵트레프
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>매개 변수
 
-*event*\
+*이벤트*\
 [OPT_REF](../event-table.md#opt-ref) 이벤트입니다.
 
 ::: moniker-end

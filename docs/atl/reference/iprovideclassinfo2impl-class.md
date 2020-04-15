@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: f0ff3607002d32b4e21f7fc2199cc5da3662af8b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0d1ee9acc1cfabc71ecf33fcb5919d826899c671
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329565"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 클래스
 
-이 클래스는 [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) 및 [마샬러가 iprovideclassinfo2.getguid](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) 메서드의 기본 구현을 제공 합니다.
+이 클래스는 [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) 및 [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) 메서드의 기본 구현을 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,13 +38,13 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 #### <a name="parameters"></a>매개 변수
 
 *pcoclsid*<br/>
-Coclass의 식별자에 대 한 포인터입니다.
+공동 클래스의 식별자에 대한 포인터입니다.
 
 *psrcid*<br/>
-Coclass의 기본 나가는 서 수에 대 한 식별자에 대 한 포인터입니다.
+공동 클래스의 기본 나가는 인터페이스에 대한 식별자포인터입니다.
 
 *plibid*<br/>
-인터페이스에 대 한 정보를 포함 하는 형식 라이브러리의 LIBID에 대 한 포인터입니다. 기본적으로 서버 수준 형식 라이브러리가 전달 됩니다.
+인터페이스에 대한 정보가 포함된 형식 라이브러리의 LIBID에 대한 포인터입니다. 기본적으로 서버 수준 형식 라이브러리가 전달됩니다.
 
 *wMajor*<br/>
 형식 라이브러리의 주 버전입니다. 기본값은 1입니다.
@@ -53,34 +53,34 @@ Coclass의 기본 나가는 서 수에 대 한 식별자에 대 한 포인터입
 형식 라이브러리의 부 버전입니다. 기본값은 0입니다.
 
 *tihclass*<br/>
-Coclass의 형식 정보를 관리 하는 데 사용 되는 클래스입니다. 기본값은 `CComTypeInfoHolder`입니다.
+공동 클래스의 형식 정보를 관리하는 데 사용되는 클래스입니다. 기본값은 `CComTypeInfoHolder`입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="constructors"></a>생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Coclass의 형식 정보에 대 한 포인터를검색합니다.`ITypeInfo`|
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|개체의 나가는 개체에 대 한 GUID를 검색 합니다.|
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|공동 클래스의 `ITypeInfo` 형식 정보에 대한 포인터를 검색합니다.|
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|개체의 나가는 인터페이스에 대한 GUID를 검색합니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::_tih](#_tih)|Coclass에 대 한 형식 정보를 관리 합니다.|
+|[IProvideClassInfo2Impl::_tih](#_tih)|공동 클래스의 형식 정보를 관리합니다.|
 
 ## <a name="remarks"></a>설명
 
-마샬러가 [iprovideclassinfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) 인터페이스는 `GetGUID` 메서드를 추가하여 [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)를 확장합니다. 클라이언트는이 메서드를 사용 하 여 기본 이벤트 집합에 대 한 개체의 송신 인터페이스 IID를 검색할 수 있습니다. 클래스 `IProvideClassInfo2Impl` 는 `IProvideClassInfo` 및 메서드의기본구현을제공합니다.`IProvideClassInfo2`
+마샬러가 [iprovideclassinfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) 인터페이스는 `GetGUID` 메서드를 추가하여 [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)를 확장합니다. 이 메서드를 사용 하면 클라이언트기본 이벤트 집합에 대 한 개체의 나가는 인터페이스 IID를 검색할 수 있습니다. 클래스는 `IProvideClassInfo2Impl` 및 `IProvideClassInfo` `IProvideClassInfo2` 메서드의 기본 구현을 제공합니다.
 
-`IProvideClassInfo2Impl`coclass에 대 한 형식 정보 `CComTypeInfoHolder` 를 관리 하는 형식의 정적 멤버를 포함 합니다.
+`IProvideClassInfo2Impl`에는 coclass에 `CComTypeInfoHolder` 대한 형식 정보를 관리하는 형식의 정적 멤버가 포함되어 있습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -90,11 +90,11 @@ Coclass의 형식 정보를 관리 하는 데 사용 되는 클래스입니다. 
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:**
+**헤더:** atlcom.h
 
-##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
+## <a name="iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo
 
-Coclass의 형식 정보에 대 한 포인터를검색합니다.`ITypeInfo`
+공동 클래스의 `ITypeInfo` 형식 정보에 대한 포인터를 검색합니다.
 
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
@@ -102,11 +102,11 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 
 ### <a name="remarks"></a>설명
 
-Windows SDK [IProvideClassInfo:: GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) 를 참조 하세요.
+[IProvideClassInfo::GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) 윈도우 SDK에서 참조.
 
-##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
+## <a name="iprovideclassinfo2implgetguid"></a><a name="getguid"></a>IProvideClassInfo2Impl::GetGUID
 
-개체의 나가는 개체에 대 한 GUID를 검색 합니다.
+개체의 나가는 인터페이스에 대한 GUID를 검색합니다.
 
 ```
 STDMETHOD(GetGUID)(
@@ -116,9 +116,9 @@ STDMETHOD(GetGUID)(
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [마샬러가 iprovideclassinfo2.getguid:: GetGUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) 를 참조 하세요.
+[IProvideClassInfo2::GetGUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) 윈도우 SDK를 참조하십시오.
 
-##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
+## <a name="iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl:::IProvideClassInfo2Impl
 
 생성자입니다.
 
@@ -128,11 +128,11 @@ IProvideClassInfo2Impl();
 
 ### <a name="remarks"></a>설명
 
-`AddRef` [_Tih](#_tih) 멤버에서를 호출 합니다. 이 소멸자는 `Release`을 호출합니다.
+`AddRef` [_tih](#_tih) 멤버를 호출합니다. 이 소멸자는 `Release`을 호출합니다.
 
-##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
+## <a name="iprovideclassinfo2impl_tih"></a><a name="_tih"></a>IProvideClassInfo2Impl::_tih
 
-이 정적 데이터 멤버는 기본적으로 인 `CComTypeInfoHolder` *tihclass*클래스 템플릿 매개 변수의 인스턴스입니다.
+이 정적 데이터 멤버는 기본적으로 는 클래스 템플릿 매개 변수 `CComTypeInfoHolder`인 *tihclass의*인스턴스입니다.
 
 ```
 static  tihclass
@@ -141,8 +141,8 @@ static  tihclass
 
 ### <a name="remarks"></a>설명
 
-`_tih`coclass에 대 한 형식 정보를 관리 합니다.
+`_tih`는 공동 클래스의 형식 정보를 관리합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../../atl/atl-class-overview.md)

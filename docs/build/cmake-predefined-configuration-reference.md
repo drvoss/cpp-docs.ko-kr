@@ -4,24 +4,25 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322994"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 미리 정의된 빌드 구성
 
 ::: moniker range="vs-2015"
 
-CMake 프로젝트는 Visual Studio 2017 이상에서 지원 됩니다.
+CMake 프로젝트는 Visual Studio 2017 이상에서 지원됩니다.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
 CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩니다. 주 도구 모임의 빌드 구성 드롭다운에서 **구성 관리**를 선택하면 Visual Studio에서 사용할 수 있는 기본 CMake 구성을 보여주는 대화 상자가 나타납니다.
+
 - x86 디버그
 - x86 릴리스
 - x64 디버그
@@ -33,7 +34,7 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - MinGW 디버그
 - MinGW 릴리스
 
-구성을 선택 하면 프로젝트의 루트 폴더에 있는 *Cmakesettings. json* 파일에 추가 됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다. 구성 속성에 대 한 자세한 내용은 [Cmakesettings 참조](cmakesettings-reference.md)를 참조 하세요.
+구성을 선택하면 프로젝트의 루트 폴더에 있는 *CMakeSettings.json* 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다. 구성 속성에 대한 자세한 내용은 [CMakeSettings 참조를](cmakesettings-reference.md)참조하십시오.
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 미리 정의된 빌드 구성:
 
@@ -360,24 +361,24 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - x86 디버그
 - x86 Clang 디버그
 - x86 릴리스
-- x86 Clang 릴리스
+- x86 Clang 릴리즈
 - x64 디버그
 - x64 Clang 디버그
 - x64 릴리스
-- x64 Clang 릴리스
+- x64 클라인 릴리즈
 - Linux-디버그
 - Linux-릴리스
-- Clang-디버그
-- Clang-릴리스
-- 기존 캐시 (원격)
+- 리눅스-Clang-디버그
+- 리눅스-Clang-릴리스
+- 기존 캐시(원격)
 - 기존 캐시
 - MinGW 디버그
 - MinGW 릴리스
 - WSL 디버그
 - WSL 릴리스
-- WSL Clang Debug
-- WSL Clang Release
-- Clang
+- WSL 클랑 디버그
+- WSL 클랑 릴리스
+- 쿨랑 (주)
 
 구성을 선택하면 프로젝트의 루트 폴더에 있는 CMakeSettings.json 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다.
 
@@ -694,9 +695,10 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio의 CMake 프로젝트](cmake-projects-in-visual-studio.md)<br/>
+[비주얼 스튜디오에서 CMake 프로젝트](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake 프로젝트 구성](../linux/cmake-linux-project.md)<br/>
 [원격 Linux 컴퓨터에 연결](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake 디버깅 세션 구성](configure-cmake-debugging-sessions.md)<br/>

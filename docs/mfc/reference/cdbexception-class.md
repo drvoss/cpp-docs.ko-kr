@@ -1,5 +1,5 @@
 ---
-title: CDBException 클래스
+title: CDB예외 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CDBException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: bdfb9bd0b45fd241de4378a2caa19e7dd9f9bdf2
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 1ab7daeb3af55c92985c951c632b1d4050681474
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321900"
 ---
-# <a name="cdbexception-class"></a>CDBException 클래스
+# <a name="cdbexception-class"></a>CDB예외 클래스
 
 데이터베이스 클래스에서 발생하는 예외 상태를 나타냅니다.
 
@@ -33,24 +33,24 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CDBException::m_nRetCode](#m_nretcode)|ODBC Open Database Connectivity () 반환 코드, RETCODE 형식의 포함합니다.|
-|[CDBException::m_strError](#m_strerror)|영숫자 측면에서 오류를 설명 하는 문자열을 포함 합니다.|
-|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|ODBC에서 반환 된 오류 코드를 기준으로 오류를 설명 하는 문자열을 포함 합니다.|
+|[CDB예외:m_nRetCode](#m_nretcode)|형식 RETCODE의 개방형 데이터베이스 연결(ODBC) 반환 코드를 포함합니다.|
+|[CDB예외:m_strError](#m_strerror)|상숫자 용어로 오류를 설명하는 문자열이 포함되어 있습니다.|
+|[CDB예외:m_strStateNativeOrigin](#m_strstatenativeorigin)|ODBC에서 반환하는 오류 코드측면에서 오류를 설명하는 문자열이 포함되어 있습니다.|
 
 ## <a name="remarks"></a>설명
 
-클래스는 예외를 발생 시킨을 확인 하거나 예외를 설명 하는 텍스트 메시지를 표시 하려면를 사용할 수 있는 두 공용 데이터 멤버를 포함 합니다. `CDBException` 개체 생성 되며 데이터베이스 클래스의 멤버 함수에 의해 throw 됩니다.
+클래스에는 예외의 원인을 확인하거나 예외를 설명하는 문자 메시지를 표시하는 데 사용할 수 있는 두 개의 공용 데이터 멤버가 포함됩니다. `CDBException`개체는 데이터베이스 클래스의 멤버 함수에 의해 생성되고 throw됩니다.
 
 > [!NOTE]
->  이 클래스는 MFC의 ODBC Open Database Connectivity () 클래스 중 하나입니다. 대신 최신 데이터 액세스 개체 (DAO) 클래스를 사용할 경우 사용 하 여 [CDaoException](../../mfc/reference/cdaoexception-class.md) 대신 합니다. 모든 DAO 클래스 이름에는 접두사로 "CDao"에 있습니다. 자세한 내용은 문서를 참조 하세요. [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.
+> 이 클래스는 MFC의 ODBC(개방형 데이터베이스 연결) 클래스 중 하나입니다. 대신 최신 DAO(데이터 액세스 개체) 클래스를 사용하는 경우 [대신 CDaoException을](../../mfc/reference/cdaoexception-class.md) 사용합니다. 모든 DAO 클래스 이름에는 접두사로 "CDao"가 있습니다. 자세한 내용은 [문서 개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)을 참조하십시오.
 
-예외는 외부 데이터 원본 등의 프로그램의 컨트롤 상태와 관련 된 비정상적인 실행의 경우 또는 네트워크 I/O 오류입니다. 정상적인 프로그램 실행 중에 예상 하는 오류는 일반적으로 간주 되지 예외.
+예외는 데이터 원본 또는 네트워크 I/O 오류와 같이 프로그램의 제어 외부 조건과 관련된 비정상적인 실행의 경우입니다. 프로그램을 실행하는 일반적인 과정에서 발생할 수 있는 오류는 일반적으로 예외로 간주되지 않습니다.
 
-범위 내에서 이러한 개체에 액세스할 수 있습니다는 **CATCH** 식입니다. Throw 할 수 있습니다 `CDBException` 사용 하 여 사용자 고유의 코드에서 개체를 `AfxThrowDBException` 전역 함수입니다.
+**CATCH** 식의 범위 내에서 이러한 개체에 액세스할 수 있습니다. 전역 함수를 `CDBException` 통해 사용자 고유의 `AfxThrowDBException` 코드에서 개체를 throw할 수도 있습니다.
 
-일반적으로 되었거나 곧에서 예외 처리에 대 한 자세한 내용은 `CDBException` 문서를 참조 하는 개체를 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md) 및 [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)합니다.
+일반적으로 예외 처리 또는 개체에 `CDBException` 대한 자세한 내용은 [MFC(예외 처리)](../../mfc/exception-handling-in-mfc.md) 및 [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)문서를 참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -64,99 +64,99 @@ class CDBException : public CException
 
 **헤더:** afxdb.h
 
-##  <a name="m_nretcode"></a>  CDBException::m_nRetCode
+## <a name="cdbexceptionm_nretcode"></a><a name="m_nretcode"></a>CDB예외:m_nRetCode
 
-ODBC 응용 프로그램 프로그래밍 인터페이스 (API) 함수에서 반환 된 RETCODE 형식의 ODBC 오류 코드를 포함 합니다.
+ODBC 응용 프로그램 프로그래밍 인터페이스(API) 함수에서 반환되는 RETCODE 형식의 ODBC 오류 코드를 포함합니다.
 
 ### <a name="remarks"></a>설명
 
-이 형식은 ODBC에서 정의 된 접두사가 있는 SQL 코드 및 데이터베이스 클래스에서 정의 된 접두사가 있는 AFX_SQL 코드를 포함 합니다. 에 대 한는 `CDBException`를이 멤버는 다음 값 중 하나가 포함 됩니다.
+이 형식에는 ODBC에 의해 정의된 SQL 접두사 코드와 데이터베이스 클래스에서 정의한 AFX_SQL 접두사 코드가 포함됩니다. 에 `CDBException`대 한 이 멤버는 다음 값 중 하나를 포함 합니다.
 
-- AFX_SQL_ERROR_API_CONFORMANCE 드라이버에는 `CDatabase::OpenEx` 또는 `CDatabase::Open` 호출 필요한 ODBC API 적합성 수준 (SQL_OAC_LEVEL1) 1에 맞지 않습니다.
+- AFX_SQL_ERROR_API_CONFORMANCE `CDatabase::OpenEx` 또는 `CDatabase::Open` 호출에 대한 드라이버가 필요한 ODBC API 준수 수준 1(SQL_OAC_LEVEL1)을 준수하지 않습니다.
 
-- 데이터 원본에 AFX_SQL_ERROR_CONNECT_FAIL 연결 하지 못했습니다. NULL을 전달`CDatabase` 생성자를 레코드 집합 및 연결을 만드는 후속 시도에 대 한 포인터 기반 `GetDefaultConnect` 실패 했습니다.
+- AFX_SQL_ERROR_CONNECT_FAIL 데이터 원본에 대한 연결이 실패했습니다. 레코드 집합`CDatabase` 생성자 및 `GetDefaultConnect` 실패에 따라 연결을 만들려는 후속 시도에 NULL 포인터를 전달했습니다.
 
-- 에 대 한 저장소를 제공 하는 것 보다 더 많은 데이터를 요청 AFX_SQL_ERROR_DATA_TRUNCATED 있습니다. 제공 된 데이터 저장소에 대 한 증가 하는 방법은 `CString` 또는 `CByteArray` 데이터 형식 참조를 `nMaxLength` 인수에 대 한 [RFX_Text](record-field-exchange-functions.md#rfx_text) 및 [RFX_Binary](record-field-exchange-functions.md#rfx_binary) 아래 "매크로 및 전역입니다. "
+- AFX_SQL_ERROR_DATA_TRUNCATED 저장소를 제공한 것보다 더 많은 데이터를 요청했습니다. `CString` 제공된 데이터 저장소 또는 `CByteArray` 데이터 형식의 증가에 `nMaxLength` 대한 자세한 내용은 ["매크로](record-field-exchange-functions.md#rfx_text) 및 전역"에서 RFX_Text 및 [RFX_Binary](record-field-exchange-functions.md#rfx_binary) 대한 인수를 참조하십시오.
 
-- AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED 호출 `CRecordset::Open` 다이너셋 요청 하지 못했습니다. 다이너셋은 드라이버에서 지원 되지 않습니다.
+- AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED 다이너셋 `CRecordset::Open` 을 요청하는 호출이 실패했습니다. 다이너셋은 드라이버에서 지원되지 않습니다.
 
-- AFX_SQL_ERROR_EMPTY_COLUMN_LIST 하려는 테이블을 엽니다 (제공한 어떤를 식별할 수 없는 프로시저 호출으로 또는 또는 **선택** 문) 레코드 필드 교환 (RFX () 함수 호출에서 식별 된 열이 없는 되지만 프로그램 `DoFieldExchange` 재정의 합니다.
+- AFX_SQL_ERROR_EMPTY_COLUMN_LIST 테이블을 열려고 시도했지만(또는 프로시저 호출 또는 **SELECT** 문으로 식별할 수 없음) `DoFieldExchange` 재정의에서 레코드 필드 교환(RFX) 함수 호출에서 식별된 열이 없습니다.
 
-- 함수는 RFX 유형의 AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH 프로그램 `DoFieldExchange` 재정의 레코드 집합의 열 데이터 형식이 호환 되지 않습니다.
+- AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH `DoFieldExchange` 재정의에서 RFX 함수 유형이 레코드 집합의 열 데이터 형식과 호환되지 않습니다.
 
-- AFX_SQL_ERROR_ILLEGAL_MODE 있습니다 호출 `CRecordset::Update` 이전에 호출 하지 않고 `CRecordset::AddNew` 또는 `CRecordset::Edit`합니다.
+- AFX_SQL_ERROR_ILLEGAL_MODE 이전에 `CRecordset::Update` 호출하거나 `CRecordset::AddNew` `CRecordset::Edit`.
 
-- ODBC 드라이버에 잠금을 지원 하지 않으므로 AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED 레코드 업데이트에 대 한 잠금 요청을 수행할 수 없습니다.
+- AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED ODBC 드라이버가 잠금을 지원하지 않으므로 업데이트에 대한 레코드 잠금 요청을 이행할 수 없습니다.
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED 있습니다 호출 `CRecordset::Update` 또는 `Delete` 없는 고유 키를 사용 하 여 테이블에 대 한 여러 레코드를 변경 합니다.
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED 고유 `CRecordset::Update` `Delete` 키가 없는 테이블을 호출하거나 여러 레코드를 변경했습니다.
 
-- AFX_SQL_ERROR_NO_CURRENT_RECORD 있습니다 편집 하거나 이전에 삭제 된 레코드를 삭제 했습니다. 삭제 한 후 새 현재 레코드로 스크롤해야 합니다.
+- AFX_SQL_ERROR_NO_CURRENT_RECORD 이전에 삭제된 레코드를 편집하거나 삭제하려고 시도한 것입니다. 삭제 한 후 새 현재 레코드로 스크롤해야합니다.
 
-- 위치 지정 업데이트를 AFX_SQL_ERROR_NO_POSITIONED_UPDATES ODBC 드라이버를 지원 하지 않으므로 다이너셋에 대 한 요청을 수행할 수 없습니다.
+- AFX_SQL_ERROR_NO_POSITIONED_UPDATES ODBC 드라이버가 위치 업데이트를 지원하지 않으므로 다이너셋에 대한 요청을 이행할 수 없습니다.
 
-- AFX_SQL_ERROR_NO_ROWS_AFFECTED 없습니다 호출 `CRecordset::Update` 또는 `Delete`, 하지만 작업을 시작 하는 경우 레코드를 더 이상 찾을 수 없습니다.
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED `CRecordset::Update` 또는 `Delete`, 하지만 작업이 시작되면 레코드를 더 이상 찾을 수 없습니다.
 
-- AFX_SQL_ERROR_ODBC_LOAD_FAILED ODBC를 로드 하려고 합니다. DLL에 실패 했습니다. Windows를 찾을 수 없거나이 DLL을 로드할 수 없습니다. 이 오류는 치명적입니다.
+- AFX_SQL_ERROR_ODBC_LOAD_FAILED ODBC를 로드하려고 합니다. DLL이 실패했습니다. Windows에서 이 DLL을 찾을 수 없거나 로드할 수 없습니다. 이 오류는 치명적입니다.
 
-- AFX_SQL_ERROR_ODBC_V2_REQUIRED 수준 2-규격 ODBC 드라이버를 필수적 요소 이므로 다이너셋에 대 한 요청을 수행할 수 없습니다.
+- AFX_SQL_ERROR_ODBC_V2_REQUIRED 레벨 2를 준수하는 ODBC 드라이버가 필요하기 때문에 다이너셋에 대한 요청을 이행할 수 없습니다.
 
-- 데이터 원본에서 이전 버전과 스크롤을 지원 하지 않으므로 AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY 스크롤해야 시도가 실패 했습니다.
+- AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY 데이터 원본이 뒤로 스크롤을 지원하지 않기 때문에 스크롤 시도가 성공하지 못했습니다.
 
-- AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED 호출 `CRecordset::Open` 스냅숏을 요청 하지 못했습니다. 스냅숏은은 드라이버에서 지원 되지 않습니다. (이 이루어져야 경우 ODBC 커서 라이브러리 ODBCCURS 합니다. DLL 나타나지 않습니다.)
+- AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED 스냅숏 `CRecordset::Open` 요청에 대한 호출이 실패했습니다. 스냅샷은 드라이버에서 지원되지 않습니다. 이 문제는 ODBC 커서 라이브러리 ODBCCURS 경우에만 발생합니다. DLL이 없습니다.)
 
-- AFX_SQL_ERROR_SQL_CONFORMANCE 드라이버에는 `CDatabase::OpenEx` 또는 `CDatabase::Open` 호출 "최소" (SQL_OSC_MINIMUM)의 필요한 ODBC SQL 적합성 수준에 맞지 않습니다.
+- AFX_SQL_ERROR_SQL_CONFORMANCE `CDatabase::OpenEx` 또는 `CDatabase::Open` 호출에 대한 드라이버가 필요한 ODBC SQL 준수 수준 "최소"(SQL_OSC_MINIMUM)를 준수하지 않습니다.
 
-- AFX_SQL_ERROR_SQL_NO_TOTAL The ODBC 드라이버의 총 크기를 지정할 수 없습니다. 한 `CLongBinary` 데이터 값입니다. 아마도 작업이 전역 메모리 블록을 미리 할당 하지 못했습니다 실패 했습니다.
+- AFX_SQL_ERROR_SQL_NO_TOTAL ODBC 드라이버가 `CLongBinary` 데이터 값의 총 크기를 지정할 수 없습니다. 전역 메모리 블록을 할당할 수 없기 때문에 작업이 실패했을 수 있습니다.
 
-- AFX_SQL_ERROR_RECORDSET_READONLY 하려는 읽기 전용 레코드 집합을 업데이트 하거나 데이터 원본 읽기 전용입니다. Update 작업이 이루어지지 레코드 집합을 사용 하 여 수행할 수 있습니다 또는 `CDatabase` 연관 된 개체입니다.
+- AFX_SQL_ERROR_RECORDSET_READONLY 읽기 전용 레코드 집합을 업데이트하려고 했거나 데이터 원본이 읽기 전용인 AFX_SQL_ERROR_RECORDSET_READONLY. 레코드 집합 또는 연결된 `CDatabase` 개체를 사용하면 업데이트 작업을 수행할 수 없습니다.
 
-- SQL_ERROR 함수가 실패 했습니다. ODBC 함수에서 반환 된 오류 메시지 `SQLError` 에 저장 되는 `m_strError` 데이터 멤버입니다.
+- SQL_ERROR 함수가 실패했습니다. ODBC 함수에서 `SQLError` 반환되는 오류 메시지가 `m_strError` 데이터 멤버에 저장됩니다.
 
-- SQL_INVALID_HANDLE 함수는 잘못 된 환경 핸들, 연결 핸들 또는 문 핸들 인해 실패 했습니다. 이 프로그래밍 오류를 나타냅니다. 추가 정보 없이 ODBC 함수에서 사용할 수 있는 `SQLError`합니다.
+- SQL_INVALID_HANDLE 잘못된 환경 핸들, 연결 핸들 또는 명령문 핸들로 인해 함수가 실패했습니다. 프로그래밍 오류를 나타냅니다. ODBC 함수에서 `SQLError`추가 정보를 사용할 수 없습니다.
 
-SQL 맨 앞에 나오는 코드는 ODBC에서 정의 됩니다. AFX 맨 앞에 나오는 코드는 AFXDB에서 정의 됩니다. H, MFC\INCLUDE에서 찾을 수 있습니다.
+SQL 접두사 코드는 ODBC에 의해 정의됩니다. AFX 접두사 코드는 AFXDB에 정의되어 있습니다. H, MFC\INCLUDE에서 발견.
 
-##  <a name="m_strerror"></a>  CDBException::m_strError
+## <a name="cdbexceptionm_strerror"></a><a name="m_strerror"></a>CDB예외:m_strError
 
 예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.
 
 ### <a name="remarks"></a>설명
 
-영숫자 측면에서 오류를 설명 하는 문자열입니다. 자세한 내용 및 예제를 참조 하세요. `m_strStateNativeOrigin`합니다.
+문자열은 상숫자 용어로 오류를 설명합니다. 자세한 정보 및 예제는 `m_strStateNativeOrigin`을 참조하십시오.
 
-##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin
+## <a name="cdbexceptionm_strstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDB예외:m_strStateNativeOrigin
 
 예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.
 
 ### <a name="remarks"></a>설명
 
-문자열의 폼 "상태 %s, 네이티브 %ld, 원본 %s"를 순서 대로 형식 코드를 설명 하는 값으로 대체 됩니다 여기서 다음과 같습니다:::.
+문자열은 "State:%s,Native:%ld,Origin:%s"라는 형식의 형식 코드순서대로 다음을 설명하는 값으로 대체됩니다.
 
-- SQLSTATE, 5 문자 오류 코드가 포함 된 null로 끝나는 문자열을 반환 합니다 *szSqlState* ODBC 함수의 매개 변수가 `SQLError`합니다. 부록 A에서에서 SQLSTATE 값 나와 [ODBC 오류 코드](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)를 *ODBC 프로그래머 참조*합니다. 예제: "S0022".
+- SQLSTATE, ODBC 함수의 `SQLError` *szSqlState* 매개 변수에 반환 된 5 자 오류 코드를 포함 하는 null-종료 된 문자열 . SQLSTATE 값은 ODBC *프로그래머의 참조에*부록 A, [ODBC 오류 코드에](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)나열됩니다. 예: "S0022".
 
-- 에 반환 된 원시 오류 코드, 데이터 원본에 특정 합니다 *pfNativeError* 의 매개 변수는 `SQLError` 함수입니다. 예제: 207.
+- 함수의 *pfNativeError* 매개 변수에서 반환되는 데이터 원본과 `SQLError` 관련된 기본 오류 코드입니다. 예: 207.
 
-- 반환 된 오류 메시지 텍스트를 *szErrorMsg* 의 매개 변수는 `SQLError` 함수입니다. 이 메시지는 여러 개의 대괄호로 묶은 이름을 이루어져 있습니다. 오류가 사용자에 해당 원본에서 전달 되는, 각 ODBC 구성 요소 (데이터 원본, 드라이버, 드라이버 관리자)는 고유 이름을 추가 합니다. 이 정보는 오류의 출처를 정확 하 게 찾을 수 있습니다. 예: [Microsoft] [ODBC SQL Server Driver] [SQL Server]
+- 함수의 *szErrorMsg* 매개 변수에 반환 `SQLError` 된 오류 메시지 텍스트입니다. 이 메시지는 여러 괄호로 묶인 이름으로 구성됩니다. 오류가 소스에서 사용자에게 전달되면 각 ODBC 구성 요소(데이터 원본, 드라이버, 드라이버 관리자)가 자체 이름을 추가합니다. 이 정보는 오류의 원인을 정확히 파악하는 데 도움이 됩니다. 예: [마이크로소프트][ODBC SQL 서버 드라이버][SQL 서버]
 
-프레임 워크가 오류 문자열을 해석 하 고 해당 구성 요소에 배치 `m_strStateNativeOrigin`같으면 `m_strStateNativeOrigin` 정보가 둘 이상의 오류를 오류 줄 바꿈 문자로 구분 됩니다. 프레임 워크에는 영숫자 오류 텍스트를 배치 `m_strError`합니다.
+프레임워크는 오류 문자열을 해석하고 해당 `m_strStateNativeOrigin`구성 요소를 에 넣습니다. 둘 `m_strStateNativeOrigin` 이상의 오류에 대한 정보가 포함된 경우 오류는 줄 바호로 구분됩니다. 프레임워크는 에 참숫자 오류 `m_strError`텍스트를 넣습니다.
 
-이 문자열을 구성 하는 데 코드에 대 한 자세한 내용은 참조는 [SQLError](/sql/odbc/reference/syntax/sqlerror-function) 함수는 *ODBC 프로그래머 참조*합니다.
+이 문자열을 구성하는 데 사용되는 코드에 대한 자세한 내용은 *ODBC 프로그래머의 참조에서* [SQLError](/sql/odbc/reference/syntax/sqlerror-function) 함수를 참조하십시오.
 
 ### <a name="example"></a>예제
 
-ODBC에서: "상태: S0022, 네이티브: 207, 원본:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] 'ColName' 잘못 된 열 이름"
+ODBC에서:\["상태:S00222,네이티브:207,출처:\[마이크로소프트] ODBC\[SQL 서버 드라이버] SQL 서버] 잘못 된 열 이름 '콜 네임'"
 
-`m_strStateNativeOrigin`의 경우 "State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]"
+`m_strStateNativeOrigin`에서 : "상태 : S0022,기본 :\[기원\[: 마이크로 소프트\[] ODBC SQL 서버 드라이버 ] SQL 서버]"
 
-`m_strError`의 경우 "잘못 된 열 이름 'ColName'"
+`m_strError`에서 : "잘못된 열 이름 'ColName'"
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CException 클래스](../../mfc/reference/cexception-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
-[CDatabase 클래스](../../mfc/reference/cdatabase-class.md)<br/>
-[CRecordset 클래스](../../mfc/reference/crecordset-class.md)<br/>
-[CFieldExchange 클래스](../../mfc/reference/cfieldexchange-class.md)<br/>
-[CRecordset::Update](../../mfc/reference/crecordset-class.md#update)<br/>
-[CRecordset::Delete](../../mfc/reference/crecordset-class.md#delete)<br/>
+[C데이터베이스 클래스](../../mfc/reference/cdatabase-class.md)<br/>
+[C레코드 집합 클래스](../../mfc/reference/crecordset-class.md)<br/>
+[C필드익스체인지 클래스](../../mfc/reference/cfieldexchange-class.md)<br/>
+[C레코드 집합::업데이트](../../mfc/reference/crecordset-class.md#update)<br/>
+[C레코드 집합::D](../../mfc/reference/crecordset-class.md#delete)<br/>
 [CException 클래스](../../mfc/reference/cexception-class.md)

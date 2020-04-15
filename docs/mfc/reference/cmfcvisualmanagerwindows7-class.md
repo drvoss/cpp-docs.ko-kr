@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows7 클래스
+title: CMFC비주얼매니저윈도우7 클래스
 ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6686afecc2b8ef97ea24ef45ff5225433677a954
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319842"
 ---
-# <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 클래스
+# <a name="cmfcvisualmanagerwindows7-class"></a>CMFC비주얼매니저윈도우7 클래스
 
-`CMFCVisualManagerWindows7` 응용 프로그램을 Windows 7 응용 프로그램의 모양을 제공 합니다.
+는 `CMFCVisualManagerWindows7` 응용 프로그램에 윈도우 7 응용 프로그램의 모양을 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,83 +31,83 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|기본 생성자입니다.|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|기본 소멸자입니다.|
+|[CMFC비주얼매니저윈도우7::CMFC비주얼매니저윈도우7](#cmfcvisualmanagerwindows7)|기본 생성자입니다.|
+|[CMFC비주얼매니저윈도우7::~CMFC비주얼매니저윈도우7](#_dtorcmfcvisualmanagerwindows7)|기본 소멸자.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|`CMFCVisualManagerWindows7::CleanStyle`|현재 비주얼 스타일을 지우고 기본 비주얼 스타일을 다시 설정 합니다.|
-|`CMFCVisualManagerWindows7::CleanUp`|사용자 인터페이스에 개체를 모두 지우고 메뉴를 다시 설정 합니다.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|프레임에 비클라이언트 영역에서 단추를 그립니다. 그리도록이 메서드를 최소화 하는 프레임 워크 사용을 최대화 하 고 닫은 복원 단추 창 프레임의 오른쪽 위 모퉁이에서. 이 메서드는 프로그램을 사용 하는 경우에 호출을 `Aero` 테마입니다.|
-|`CMFCVisualManagerWindows7::DrawNcText`|프레임에 비클라이언트 영역에서 텍스트를 그립니다. 이 메서드를 사용 하 여 프레임 창의 맨 위에 있는 제목 표시줄에 응용 프로그램 제목을 그릴 프레임 워크입니다.|
-|`CMFCVisualManagerWindows7::DrawSeparator`|에 구분 기호를 그립니다 합니다 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)합니다.|
-|`CMFCVisualManagerWindows7::GetRibbonBar`|검색 된 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md) 사용자 인터페이스를 사용 하 여 연결 합니다.|
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|리본 편집 상자 배경 색을 가져옵니다.|
-|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Overrides [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Overrides [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|재정의 [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|재정의 [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
-|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|재정의 [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|확인 여부를 `CMFCRibbonBar` 존재 하 고 표시 됩니다.|
-|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|재정의 [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|재정의 [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
-|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|재정의 [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|재정의 [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
-|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|재정의 [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
-|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|재정의 [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
-|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|재정의 [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|재정 `CMFCVisualManager::OnDrawRadioButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|재정의 [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|재정의 [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|재정의 [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|재정의 [CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|재정의 [CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|재정의 [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|재정의 [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|재정의 [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|재정 `CMFCVisualManager::OnDrawRibbonLaunchButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|재정의 [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|재정의 [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|재정의 [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|재정의 [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|Overrides [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|재정의 [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|재정의 [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|재정의 [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|재정의 [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|재정의 [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|재정의 [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
-|`CMFCVisualManagerWindows7::OnFillBarBackground`|재정의 [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
-|`CMFCVisualManagerWindows7::OnFillButtonInterior`|재정의 [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|프레임 워크는 주변 메뉴 항목 이미지 영역을 채우도록 하는 경우이 메서드를 호출 합니다.|
-|`CMFCVisualManagerWindows7::OnFillRibbonButton`|재정의 [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|재정의 [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|재정의 [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
-|`CMFCVisualManagerWindows7::OnNcActivate`|재정의 [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
-|`CMFCVisualManagerWindows7::OnNcPaint`|재정의 [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|재정의 [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
-|`CMFCVisualManagerWindows7::SetResourceHandle`|비주얼 관리자의 특성을 설명 하는 리소스 핸들을 설정 합니다.|
-|`CMFCVisualManagerWindows7::SetStyle`|설정의 색 구성표를 `CMFCVisualManagerWindows7` GUI입니다.|
+|`CMFCVisualManagerWindows7::CleanStyle`|현재 시각적 스타일을 지우고 기본 시각적 스타일을 재설정합니다.|
+|`CMFCVisualManagerWindows7::CleanUp`|사용자 인터페이스의 모든 개체를 지우고 메뉴를 재설정합니다.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|프레임의 클라이언트가 아닌 영역에 단추를 그립니다. 프레임워크는 이 메서드를 사용하여 창 프레임의 오른쪽 상단 모서리에 있는 단추를 최소화, 최대화, 닫기 및 복원합니다. 이 메서드는 프로그램이 테마를 `Aero` 사용하는 경우에만 호출됩니다.|
+|`CMFCVisualManagerWindows7::DrawNcText`|프레임의 클라이언트가 아닌 영역에 텍스트를 그립니다. 프레임워크는 이 메서드를 사용하여 프레임 창 맨 위에 있는 제목 표시줄에 응용 프로그램 제목을 그립니다.|
+|`CMFCVisualManagerWindows7::DrawSeparator`|[CMFCToolBar 클래스에](../../mfc/reference/cmfctoolbar-class.md)구분 기호를 그립니다.|
+|`CMFCVisualManagerWindows7::GetRibbonBar`|사용자 인터페이스와 연결된 [CMFC리본바 클래스를](../../mfc/reference/cmfcribbonbar-class.md) 검색합니다.|
+|[CMFC비주얼매니저윈도우7::Get리본편집백컬러](#getribboneditbackgroundcolor)|리본 편집 상자 배경색을 가져옵니다.|
+|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|[재정의 CMFC비주얼 매니저::GetRibbonPopup국경 크기](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|[재정의 CMFC비주얼 매니저::Get리본빠른액세스툴바셰브론오프셋](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|[재정의 CMFC비주얼 매니저::Get리본빠른액세스툴바라이트마진](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|[재정의 CMFC비주얼 매니저윈도우::이하이라이트전체메뉴항목](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
+|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|[재정의 CMFC비주얼 매니저::IsOwner드로우메뉴체크](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|a가 `CMFCRibbonBar` 존재하고 표시되는지 여부를 결정합니다.|
+|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|[CMFC비주얼매니저윈도우 재정의::온드로우버튼보더](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|[재정의 CMFC비주얼매니저윈도우::온드로우체크박스엑스](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
+|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|[재정의 CMFC비주얼 매니저윈도우::온드로우컴보드롭버튼](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|[CMFC 비주얼 관리자 재정의::온드로우디폴드리본이미지](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
+|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|[재정의 CMFC비주얼 매니저윈도우::온드로우메뉴보더](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
+|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|[재정의 CMFC비주얼 매니저::온드로우 메뉴체크](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
+|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|[CMFC 비주얼 관리자 재정의::온드로우 메뉴라벨](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|`CMFCVisualManager::OnDrawRadioButton`를 재정의합니다.|
+|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|[CMFC VisualManager 재정의::온드로우리본응용 프로그램 단추](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|[CMFC 비주얼 관리자 재정의::온드로우리본단추테두리](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|[CMFC 비주얼 관리자 재정의::온드로우리본 캡션](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|[CMFC 비주얼 관리자 재정의::온드로우리본 캡션버튼](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|[CMFC 비주얼 관리자 재정의::온드로우리본카테고리](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|[CMFC 비주얼 관리자 재정의::온드로우리본카테고리탭](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|[CMFC 비주얼 관리자 재정의::온드로우리본기본판 버튼](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|[CMFC 비주얼 관리자 재정의::온드로우리본 갤러리 단추](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|`CMFCVisualManager::OnDrawRibbonLaunchButton`를 재정의합니다.|
+|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|[재정의 CMFC 비주얼 관리자::에 그리기 리본 메뉴체크프레임](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|[CMFC 비주얼 관리자 재정의::온드로우리본패널](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|[CMFC 비주얼 관리자 재정의::온드로우리본패널캡션](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|[CMFC 비주얼 관리자 재정의::온드로우리본진행바](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|[재정의 CMFC 비주얼 관리자::에 그리기리본최근파일프레임](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|[CMFC 비주얼 매니저 재정의::온드로우리본 슬라이더 채널](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|[CMFC 비주얼 관리자 재정의::온드로우리본슬라이더엄지](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|[CMFC 비주얼 관리자 재정의::에 그리기 리본 슬라이더 줌 버튼](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|[재정의 CMFC비주얼 매니저::에 그리기리본 상태바파인](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|[CMFC 비주얼 관리자 재정의::온드로우리본탭프레임](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|[재정의 CMFC비주얼 매니저윈도우::에드로인상태바사이즈박스](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
+|`CMFCVisualManagerWindows7::OnFillBarBackground`|[재정의 CMFC비주얼매니저윈도우::온필바백](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
+|`CMFCVisualManagerWindows7::OnFillButtonInterior`|[재정의 CMFC비주얼 매니저윈도우::온필 버튼인테리어](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
+|[CMFC비주얼매니저윈도우7::온필메뉴이미지렉트](#onfillmenuimagerect)|프레임워크는 메뉴 항목 이미지 주위에 영역을 채울 때 이 메서드를 호출합니다.|
+|`CMFCVisualManagerWindows7::OnFillRibbonButton`|[CMFC 비주얼 관리자 재정의::온필리본 버튼](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|[재정의 CMFC비주얼 매니저::에필리본퀵액세스툴바팝업](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|[재정의 CMFC비주얼 매니저윈도우::에 하이라이트 메뉴항목](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
+|`CMFCVisualManagerWindows7::OnNcActivate`|[CMFC 비주얼 관리자 재정의::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
+|`CMFCVisualManagerWindows7::OnNcPaint`|[CMFC비주얼매니저 재정의::온씨페인트](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|[재정의 CMFC비주얼 매니저윈도우::온업데이트시스템색상](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
+|`CMFCVisualManagerWindows7::SetResourceHandle`|시각적 관리자의 특성을 설명하는 리소스 핸들을 설정합니다.|
+|`CMFCVisualManagerWindows7::SetStyle`|`CMFCVisualManagerWindows7` GUI의 색 구성표를 설정합니다.|
 
 ## <a name="remarks"></a>설명
 
-사용 된 `CMFCVisualManagerWindows7` 기본 Windows 7 응용 프로그램을 모방 하기 위해 응용 프로그램의 모양을 변경 하는 클래스입니다. 이 클래스는 응용 프로그램은 Windows 7 이전 버전의 Windows에서 실행 중인 경우에 유효 하지 않을 수 있습니다. 이 시나리오에서는 응용 프로그램에 정의 된 기본 비주얼 관리자를 사용 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)합니다.
+클래스를 `CMFCVisualManagerWindows7` 사용하여 기본 Windows 7 응용 프로그램을 모방하도록 응용 프로그램의 모양을 변경합니다. 응용 프로그램이 Windows 7 이전 버전의 Windows에서 실행 중인 경우 이 클래스가 유효하지 않을 수 있습니다. 이 시나리오에서 응용 프로그램은 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)에 정의된 기본 시각적 관리자를 사용합니다.
 
-CMFCVisualManagerWindows7를 둘 다에서 여러 메서드를 상속 합니다 [CMFCVisualManagerWindows 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md) 및 `CMFCVisualManager` 클래스입니다. 이전 섹션에 나열 된 메서드는 메서드를 처음 사용 하 여 `CMFCVisualManagerWindows7` 클래스입니다.
+CMFCVisualManagerWindows7은 [CMFCVisualManagerWindows 클래스와](../../mfc/reference/cmfcvisualmanagerwindows-class.md) 클래스 모두에서 여러 `CMFCVisualManager` 메서드를 상속합니다. 이전 섹션에 나열된 메서드는 클래스에 `CMFCVisualManagerWindows7` 새로 접하는 메서드입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFC베이스비주얼매니저](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFC비주얼매니저오피스XP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
@@ -117,15 +117,15 @@ CMFCVisualManagerWindows7를 둘 다에서 여러 메서드를 상속 합니다 
 
 **헤더:** afxvisualmanagerwindows7.h
 
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFC비주얼매니저윈도우7::~CMFC비주얼매니저윈도우7
 
-기본 소멸자입니다.
+기본 소멸자.
 
 ```
 virtual ~CMFCVisualManagerWindows7();
 ```
 
-##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFC비주얼매니저윈도우7::CMFC비주얼매니저윈도우7
 
 기본 생성자입니다.
 
@@ -133,7 +133,7 @@ virtual ~CMFCVisualManagerWindows7();
 CMFCVisualManagerWindows7();
 ```
 
-##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
+## <a name="cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFC비주얼매니저윈도우7::Get리본편집백컬러
 
 리본 편집 상자의 배경색을 가져옵니다.
 
@@ -147,27 +147,27 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 
 ### <a name="parameters"></a>매개 변수
 
-*pEdit*<br/>
-[in] 편집 컨트롤에 대 한 포인터입니다. 이 값은 NULL 일 수 없습니다.
+*Pedit*<br/>
+【인】 편집 컨트롤에 대한 포인터입니다. 이 값은 NULL일 수 없습니다.
 
-*bIsHighlighted*<br/>
-[out] 리본 상자 강조 표시 되어 있는지 여부를 반환 합니다.
+*비스하이라이트*<br/>
+【아웃】 리본 상자가 강조 표시되어 있는지 여부를 반환합니다.
 
-*bIsPaneHighlighted*<br/>
-[out] 포함 하는 리본 패널 하는 경우 TRUE를 반환 *pEdit* 강조 표시 됩니다.
+*비스파인 강조 표시*<br/>
+【아웃】 *pEdit이* 포함된 리본 패널이 강조 표시되면 TRUE를 반환합니다.
 
-*bIsDisabled*<br/>
-[out] 반환 여부 *pEdit* 을 사용할 수 없습니다.
+*isdisabled*<br/>
+【아웃】 *pEdit이* 비활성화되었는지 여부를 반환합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-입력란의 배경색 *pEdit*합니다.
+편집 상자의 배경 색 *pEdit*.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect
+## <a name="cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFC비주얼매니저윈도우7::온필메뉴이미지렉트
 
-프레임 워크 메뉴 항목 이미지를 중심으로 한 영역을 채우도록 하는 경우이 메서드를 호출 합니다.
+프레임워크는 메뉴 항목 이미지 주위의 영역을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillMenuImageRect(
@@ -180,22 +180,22 @@ virtual void OnFillMenuImageRect(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 장치 컨텍스트 메뉴 단추에 대 한 포인터입니다.
+【인】 메뉴 단추의 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-[in] 에 대 한 포인터를 `CMFCToolBarButton`입니다. 프레임 워크는이 단추에 대 한 배경을 채웁니다.
+*p 버튼*<br/>
+【인】 에 대한 `CMFCToolBarButton`포인터입니다. 프레임워크는 이 단추의 배경을 채웁니다.
 
-*rectangle*<br/>
-[in] 메뉴 단추 이미지 영역 경계를 지정 하는 사각형입니다.
+*사각형*<br/>
+【인】 메뉴 단추 이미지 영역의 경계를 지정하는 사각형입니다.
 
-*state*<br/>
-[in] 단추 상태입니다.
+*상태*<br/>
+【인】 단추 상태입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[CMFCVisualManagerWindows 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[CMFC비주얼매니저 클래스](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[CMFC비주얼매니저윈도우 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

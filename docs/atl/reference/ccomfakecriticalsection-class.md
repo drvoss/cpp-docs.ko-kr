@@ -1,5 +1,5 @@
 ---
-title: CComFakeCriticalSection 클래스
+title: CComFake임계 섹션 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327848"
 ---
-# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 클래스
+# <a name="ccomfakecriticalsection-class"></a>CComFake임계 섹션 클래스
 
-이 클래스와 같은 방법으로 제공 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) 하지만 임계 영역을 제공 하지 않습니다.
+이 클래스는 [CComCriticalSection과](../../atl/reference/ccomcriticalsection-class.md) 동일한 메서드를 제공하지만 중요한 섹션을 제공하지는 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,71 +32,71 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.|
-|[CComFakeCriticalSection::Lock](#lock)|가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.|
-|[CComFakeCriticalSection::Term](#term)|가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.|
-|[CComFakeCriticalSection::Unlock](#unlock)|가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.|
+|[CComFake 임계 섹션::init](#init)|임계 섹션이 없기 때문에 아무 것도 하지 않습니다.|
+|[CComFake임계 섹션::잠금](#lock)|임계 섹션이 없기 때문에 아무 것도 하지 않습니다.|
+|[CComFake임계 섹션::용어](#term)|임계 섹션이 없기 때문에 아무 것도 하지 않습니다.|
+|[CComFake임계 섹션::잠금 해제](#unlock)|임계 섹션이 없기 때문에 아무 것도 하지 않습니다.|
 
 ## <a name="remarks"></a>설명
 
-`CComFakeCriticalSection` 메서드를 있는 반영 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComFakeCriticalSection` ; 임계 영역을 제공 하지 않습니다 따라서 해당 메서드는 아무것도 수행 합니다.
+`CComFakeCriticalSection`[CComCriticalSection에](../../atl/reference/ccomcriticalsection-class.md)있는 메서드를 미러합니다. 그러나 `CComFakeCriticalSection` 중요한 섹션은 제공하지 않습니다. 따라서 메서드는 아무 것도 수행하지 않습니다.
 
-일반적으로 사용 `CComFakeCriticalSection` 를 통해를 `typedef` 하거나, 이름을 `AutoCriticalSection` 또는 `CriticalSection`. 사용 하는 경우 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 하거나 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), 둘 다 `typedef` 참조 이름을 `CComFakeCriticalSection`입니다. 사용 하는 경우 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)를 참조 하는 [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) 고 `CComCriticalSection`, 각각.
+`CComFakeCriticalSection` 일반적으로 `typedef` 이름을 `AutoCriticalSection` 사용하거나 `CriticalSection`. [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 또는 [CComMultiThreadModelNoCS를](../../atl/reference/ccommultithreadmodelnocs-class.md)사용하는 `typedef` 경우 `CComFakeCriticalSection`이러한 두 이름 모두 참조를 참조합니다. [CComMultiThreadModel을](../../atl/reference/ccommultithreadmodel-class.md)사용하는 경우 각각 [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) 및 `CComCriticalSection`을 참조합니다.
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFake 임계 섹션::init
 
-가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.
+임계 섹션이 없기 때문에 아무 것도 하지 않습니다.
 
 ```
 HRESULT Init() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 반환 합니다.
+S_OK 반환합니다.
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFake임계 섹션::잠금
 
-가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.
+임계 섹션이 없기 때문에 아무 것도 하지 않습니다.
 
 ```
 HRESULT Lock() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 반환 합니다.
+S_OK 반환합니다.
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFake임계 섹션::용어
 
-가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.
+임계 섹션이 없기 때문에 아무 것도 하지 않습니다.
 
 ```
 HRESULT Term() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 반환 합니다.
+S_OK 반환합니다.
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFake임계 섹션::잠금 해제
 
-가 아무 작업도 수행 되기 때문에 중요 한 섹션이 없습니다.
+임계 섹션이 없기 때문에 아무 것도 하지 않습니다.
 
 ```
 HRESULT Unlock() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 반환 합니다.
+S_OK 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../../atl/atl-class-overview.md)

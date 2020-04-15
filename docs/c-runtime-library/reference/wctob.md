@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944938"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320438"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>매개 변수
 
-*wchar*<br/>
+*Wchar*<br/>
 변환할 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Wctob** 가 와이드 문자를 성공적으로 변환 하는 경우 멀티 바이트 문자의 길이가 정확히 1 바이트 인 경우에만 멀티 바이트 문자 표현을 반환 합니다. **Wctob** 가 멀티 바이트 문자로 변환할 수 없는 와이드 문자를 발견 하거나 멀티 바이트 문자의 길이가 정확히 1 바이트는 아닌 경우-1을 반환 합니다.
+**wctob가** 넓은 문자를 성공적으로 변환하는 경우 다중 바이트 문자가 정확히 1바이트 길이인 경우에만 다중 바이트 문자 표현을 반환합니다. **wctob이** 넓은 문자를 만나면 멀티바이트 문자로 변환할 수 없거나 다바이트 문자가 정확히 1바이트 길이가 아닌 경우 -1을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**Wctob** 함수는 멀티 바이트 문자의 길이가 정확히 1 바이트 이면 *wchar* 에 포함 된 와이드 문자를 return **int** 값으로 전달 된 해당 멀티 바이트 문자로 변환 합니다.
+**wctob** 함수는 *wchar에* 포함된 넓은 문자를 반환 **int** 값으로 전달되는 해당 멀티바이트 문자로 변환합니다(다중바이트 문자가 정확히 1바이트 길이인 경우).
 
-**Wctob** 이 실패 하 고 해당 하는 멀티 바이트 문자를 찾을 수 없는 경우 함수는 **Errno** 를 **eilseq** 로 설정 하 고-1을 반환 합니다.
+**wctob가** 실패하고 해당 다바이트 문자가 발견되지 않은 경우 함수는 **errno를** **EILSEQ로** 설정하고 -1을 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -66,7 +70,7 @@ int wctob(
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -102,7 +106,7 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>

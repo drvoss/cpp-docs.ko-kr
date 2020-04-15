@@ -20,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ccd01bc4d48dc088538f4799b595cce3fb910ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246932"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321363"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 클래스
 
-이 클래스는 풍부한 미리 보기에 대 한 셸을 제공 하는 호스 창에 배치 되는 창의 ATL 구현 합니다.
+이 클래스는 리치 미리 보기에 대 한 셸에서 제공 하는 호스트 창에 배치 되는 창의 ATL 구현입니다.
 
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,42 +44,42 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|미리 보기 컨트롤 개체를 destructs 합니다.|
-|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|미리 보기 컨트롤 개체를 생성합니다.|
+|[CAtl프리뷰CtrlImpl:::~CAtl프리뷰CtrlImpl](#dtor)|미리 보기 컨트롤 개체를 소멸합니다.|
+|[CAtl프리뷰CtrlImpl::CAtl프리뷰CtrlImpl](#catlpreviewctrlimpl)|미리 보기 컨트롤 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::Create](#create)|Windows 창을 만들기 위해 다양 한 미리 보기 처리기에서 호출 됩니다.|
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|이 컨트롤을 제거 해야 할 경우 다양 한 미리 보기 처리기에서 호출 됩니다.|
-|[CAtlPreviewCtrlImpl::Focus](#focus)|입력이 컨트롤에 포커스를 설정 합니다.|
-|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|WM_PAINT 메시지를 처리 합니다.|
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|이 컨트롤을 다시 그리게 알려 줍니다.|
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|이 컨트롤에 대 한 새 부모를 설정합니다.|
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 경우 콘텐츠입니다.|
-|[CAtlPreviewCtrlImpl::SetRect](#setrect)|이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.|
+|[CAtl프리뷰CtrlImpl::만들기](#create)|리치 미리 보기 처리기에 의해 호출되어 Windows 창을 만듭니다.|
+|[카틀프프렉트릴임플::D에스트로이](#destroy)|이 컨트롤을 삭제해야 할 때 리치 미리 보기 처리기에 의해 호출됩니다.|
+|[CAtl프리뷰CtrlImpl::포커스](#focus)|이 컨트롤에 입력 포커스를 설정합니다.|
+|[카틀프프렉트릴임플::온페인트](#onpaint)|WM_PAINT 메시지를 처리합니다.|
+|[CAtl프리뷰CtrlImpl::다시 그리기](#redraw)|이 컨트롤을 다시 그리도록 지시합니다.|
+|[CAtl프리뷰CtrlImpl::SetHost](#sethost)|이 컨트롤에 대한 새 부모를 설정합니다.|
+|[CAtl프리뷰CtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|리치 미리 보기 콘텐츠의 시각적 개체를 설정해야 하는 경우 리치 미리 보기 처리기에 의해 호출됩니다.|
+|[CAtl프리뷰CtrlImpl::SetRect](#setrect)|이 컨트롤에 대한 새 경계 사각형을 설정합니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|미리 보기를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.|
+|[카틀프프렉트릴임플::D오페인트](#dopaint)|미리 보기를 렌더링하는 프레임워크에서 호출됩니다.|
 
-### <a name="protected-constants"></a>보호 된 상수
+### <a name="protected-constants"></a>보호상수
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다.|
+|[CAtl프리뷰CtrlImpl::m_plf](#m_plf)|미리 보기 창에 텍스트를 표시하는 데 사용되는 글꼴입니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|미리 보기 창의 배경색입니다.|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|미리 보기 창의 텍스트 색입니다.|
+|[CAtl프리뷰CtrlImpl::m_clrBack](#m_clrback)|미리 보기 창의 배경 색입니다.|
+|[CAtl프리뷰CtrlImpl::m_clrText](#m_clrtext)|미리 보기 창의 텍스트 색상입니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
+[ATL:::CWindowImpl\<카틀프프렌플임>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -101,9 +101,9 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlpreviewctrlimpl.h
+**헤더:** 아틀프클리프틀.h
 
-##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtl프리뷰CtrlImpl::CAtl프리뷰CtrlImpl
 
 미리 보기 컨트롤 개체를 생성합니다.
 
@@ -114,9 +114,9 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>설명
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtl프리뷰CtrlImpl:::~CAtl프리뷰CtrlImpl
 
-미리 보기 컨트롤 개체를 destructs 합니다.
+미리 보기 컨트롤 개체를 소멸합니다.
 
 ```
 virtual ~CAtlPreviewCtrlImpl(void);
@@ -124,9 +124,9 @@ virtual ~CAtlPreviewCtrlImpl(void);
 
 ### <a name="remarks"></a>설명
 
-##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create
+## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a>CAtl프리뷰CtrlImpl::만들기
 
-Windows 창을 만들기 위해 다양 한 미리 보기 처리기에서 호출 됩니다.
+리치 미리 보기 처리기에 의해 호출되어 Windows 창을 만듭니다.
 
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
@@ -134,21 +134,21 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>매개 변수
 
-*hWndParent*<br/>
-셸에서에서 제공 하는 다양 한 미리 보기에 대 한 호스트 창 핸들입니다.
+*hWnd부모*<br/>
+리치 미리 보기에 대해 셸에서 제공하는 호스트 창에 대한 핸들입니다.
 
-*prc*<br/>
-초기 크기와 창의 위치를 지정 합니다.
+*Prc*<br/>
+창의 초기 크기와 위치를 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy
+## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a>카틀프프렉트릴임플::D에스트로이
 
-이 컨트롤을 제거 해야 할 경우 다양 한 미리 보기 처리기에서 호출 됩니다.
+이 컨트롤을 삭제해야 할 때 리치 미리 보기 처리기에 의해 호출됩니다.
 
 ```
 virtual void Destroy();
@@ -156,9 +156,9 @@ virtual void Destroy();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint
+## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>카틀프프렉트릴임플::D오페인트
 
-미리 보기를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.
+미리 보기를 렌더링하는 프레임워크에서 호출됩니다.
 
 ```
 virtual void DoPaint(HDC hdc);
@@ -166,14 +166,14 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>매개 변수
 
-*hdc*<br/>
-그리기에 대 한 장치 컨텍스트 핸들입니다.
+*Hdc*<br/>
+페인팅을 위한 장치 컨텍스트에 대한 핸들입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus
+## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtl프리뷰CtrlImpl::포커스
 
-입력이 컨트롤에 포커스를 설정 합니다.
+이 컨트롤에 입력 포커스를 설정합니다.
 
 ```
 virtual void Focus();
@@ -181,9 +181,9 @@ virtual void Focus();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack
+## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a>CAtl프리뷰CtrlImpl::m_clrBack
 
-미리 보기 창의 배경색입니다.
+미리 보기 창의 배경 색입니다.
 
 ```
 COLORREF m_clrBack;
@@ -191,9 +191,9 @@ COLORREF m_clrBack;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText
+## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a>CAtl프리뷰CtrlImpl::m_clrText
 
-미리 보기 창의 텍스트 색입니다.
+미리 보기 창의 텍스트 색상입니다.
 
 ```
 COLORREF m_clrText;
@@ -201,9 +201,9 @@ COLORREF m_clrText;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf
+## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a>CAtl프리뷰CtrlImpl::m_plf
 
-미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다.
+미리 보기 창에 텍스트를 표시하는 데 사용되는 글꼴입니다.
 
 ```
 const LOGFONTW* m_plf;
@@ -211,9 +211,9 @@ const LOGFONTW* m_plf;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint
+## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>카틀프프렉트릴임플::온페인트
 
-WM_PAINT 메시지를 처리 합니다.
+WM_PAINT 메시지를 처리합니다.
 
 ```
 LRESULT OnPaint(
@@ -226,7 +226,7 @@ LRESULT OnPaint(
 ### <a name="parameters"></a>매개 변수
 
 *nMsg*<br/>
-WM_PAINT로 설정 합니다.
+WM_PAINT 설정합니다.
 
 *wParam*<br/>
 이 매개 변수는 사용되지 않습니다.
@@ -235,17 +235,17 @@ WM_PAINT로 설정 합니다.
 이 매개 변수는 사용되지 않습니다.
 
 *bHandled*<br/>
-이 함수는 반환 될 때 TRUE를 포함 합니다.
+이 함수가 반환되면 TRUE가 포함됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 항상 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw
+## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtl프리뷰CtrlImpl::다시 그리기
 
-이 컨트롤을 다시 그리게 알려 줍니다.
+이 컨트롤을 다시 그리도록 지시합니다.
 
 ```
 virtual void Redraw();
@@ -253,9 +253,9 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost
+## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtl프리뷰CtrlImpl::SetHost
 
-이 컨트롤에 대 한 새 부모를 설정합니다.
+이 컨트롤에 대한 새 부모를 설정합니다.
 
 ```
 virtual void SetHost(HWND hWndParent);
@@ -263,14 +263,14 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>매개 변수
 
-*hWndParent*<br/>
-새 부모 창 핸들입니다.
+*hWnd부모*<br/>
+새 상위 창에 대한 핸들입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals
+## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtl프리뷰CtrlImpl::SetPreviewVisuals
 
-호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 경우 콘텐츠입니다.
+리치 미리 보기 콘텐츠의 시각적 개체를 설정해야 하는 경우 리치 미리 보기 처리기에 의해 호출됩니다.
 
 ```
 virtual void SetPreviewVisuals(
@@ -282,19 +282,19 @@ virtual void SetPreviewVisuals(
 ### <a name="parameters"></a>매개 변수
 
 *clrBack*<br/>
-미리 보기 창의 배경색입니다.
+미리 보기 창의 배경 색입니다.
 
 *clrText*<br/>
-미리 보기 창의 텍스트 색입니다.
+미리 보기 창의 텍스트 색상입니다.
 
-*plf*<br/>
-미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다.
+*Plf*<br/>
+미리 보기 창에 텍스트를 표시하는 데 사용되는 글꼴입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect
+## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtl프리뷰CtrlImpl::SetRect
 
-이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.
+이 컨트롤에 대한 새 경계 사각형을 설정합니다.
 
 ```
 virtual void SetRect(const RECT* prc, BOOL bRedraw);
@@ -302,14 +302,14 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>매개 변수
 
-*prc*<br/>
-새 크기와 미리 보기 컨트롤의 위치를 지정 합니다.
+*Prc*<br/>
+미리 보기 컨트롤의 새 크기와 위치를 지정합니다.
 
 *bRedraw*<br/>
-컨트롤을 그려야 하는지 여부를 지정 합니다.
+컨트롤을 다시 그려야 하는지 여부를 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)
