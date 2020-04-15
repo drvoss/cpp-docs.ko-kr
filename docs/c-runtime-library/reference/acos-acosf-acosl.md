@@ -1,10 +1,11 @@
 ---
 title: acos, acosf, acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171296"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348969"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -61,29 +63,31 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>매개 변수
 
 *x*<br/>
-아크코사인 (역 코사인)을 계산 하는-1과 1 사이의 값입니다.
+arccosine (역 코신)을 계산하는 -1과 1 사이의 값입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**Acos** 함수는 0 ~ π 라디안 범위의 *x* 아크코사인을 반환 합니다.
+**acos** 함수는 범위 0에서 π radians에 *x의* arccosine를 반환합니다.
 
-기본적으로 *x* 가-1 보다 작거나 1 보다 큰 경우 **acos** 는 무한을 반환 합니다.
+기본적으로 *x가* -1 보다 작거나 1보다 크면 **acos는 무기한반환합니다.**
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|없음|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **acos** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **acos** 은 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 및 **긴** **이중** 형식을 가져가서 반환하는 **acos의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **acos는** 항상 **이중을**가져와 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|선택적 헤더|
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosf**|\<math.h>|\<errno.h>|
+|**아코스,** **아코스프,** **아코스**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>예제
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374187"
 ---
 # <a name="compiler-error-c2552"></a>컴파일러 오류 C2552
 
@@ -19,19 +19,19 @@ ms.locfileid: "74740808"
 
 집합체 식별자가 잘못 초기화되었습니다.
 
-[집계](../../c-language/initializing-aggregate-types.md) 는 다음과 같이 정의 됩니다.
+[집계는](../../c-language/initializing-aggregate-types.md) 다음과 같이 정의됩니다.
 
 - 배열
 
 - 다음을 갖지 않은 클래스, 구조체 및 공용 구조체
 
-   - 생성자
+  - 생성자
 
-   - 전용 또는 보호된 멤버
+  - 전용 또는 보호된 멤버
 
-   - 기본 클래스
+  - 기본 클래스
 
-   - 가상 함수
+  - 가상 함수
 
 또한 Visual C++는 생성자를 포함하는 집합체에서 데이터 형식을 허용하지 않습니다.
 

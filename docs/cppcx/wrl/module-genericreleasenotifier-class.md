@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371302"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 클래스
 
@@ -40,21 +40,21 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                                                                                                     | 설명
+속성                                                                                                     | Description
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | `Module::GenericReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
+[모듈:::일반 릴리스 어미::일반 릴리스](#genericreleasenotifier-genericreleasenotifier) | `Module::GenericReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                                                     | 설명
+속성                                                                     | Description
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::Invoke](#genericreleasenotifier-invoke) | 현재 연결 된 이벤트 처리기를 호출 `Module::GenericReleaseNotifier` 개체입니다.
+[모듈:::일반 릴리스 공보::호출](#genericreleasenotifier-invoke) | 현재 `Module::GenericReleaseNotifier` 개체와 연결된 이벤트 처리기를 호출합니다.
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-이름                                                                          | 설명
+속성                                                                          | Description
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | 람다, 함수 또는 함수 포인터 이벤트 처리기에 연결 된 현재 보유 `Module::GenericReleaseNotifier` 개체입니다.
+[모듈:::일반 릴리스 어이티피어::callback_](#genericreleasenotifier-callback) | 현재 `Module::GenericReleaseNotifier` 개체와 연결된 람다, 펑터 또는 포인터-함수 이벤트 처리기를 보유합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -64,19 +64,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** 모듈.h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>모듈:::일반 릴리스 어이티피어::callback_
 
-람다, 함수 또는 함수 포인터 이벤트 처리기에 연결 된 현재 보유 `Module::GenericReleaseNotifier` 개체입니다.
+현재 `Module::GenericReleaseNotifier` 개체와 연결된 람다, 펑터 또는 포인터-함수 이벤트 처리기를 보유합니다.
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>모듈:::일반 릴리스 어미::일반 릴리스
 
 `Module::GenericReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>매개 변수
 
-*callback*<br/>
-람다, 함수 또는 괄호 함수 연산자를 사용 하 여 호출할 수 있는 함수에 대 한 포인터 이벤트 처리기 (`()`).
+*콜백(callback)*<br/>
+괄호 함수 연산자 ()를`()`사용하여 호출할 수 있는 람다, 펑터 또는 함수 간 포인터 이벤트 처리기입니다.
 
-*release*<br/>
-지정할 `true` 내부 호출을 사용 하도록 설정 하려면 [모듈:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) 메서드를 지정이 고, 그렇지 `false`합니다.
+*릴리스*<br/>
+기본 `true` [모듈::ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) 메서드를 호출하도록 지정합니다. 그렇지 않으면 `false`을 지정합니다.
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier::Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>모듈:::일반 릴리스 공보::호출
 
-현재 연결 된 이벤트 처리기를 호출 `Module::GenericReleaseNotifier` 개체입니다.
+현재 `Module::GenericReleaseNotifier` 개체와 연결된 이벤트 처리기를 호출합니다.
 
 ```cpp
 void Invoke();
