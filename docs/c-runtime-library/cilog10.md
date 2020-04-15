@@ -1,8 +1,9 @@
 ---
 title: _CIlog10
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog10
+- _o__CIlog10
 api_location:
 - msvcr100.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: c99fdab859acf280afc8a595696a17b2d03a47e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: f5212ea575de2756506fef007fa339f8b0cca02b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944608"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349477"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
@@ -45,6 +47,8 @@ void __cdecl _CIlog10();
 이 버전의 `log10` 함수는 컴파일러가 이해할 수 있는 특별한 호출 규칙을 가집니다. 이 함수는 복사본이 생성되지 않도록 하며 레지스터 할당을 돕기 때문에 실행 속도를 높입니다.
 
 결과 값이 스택의 맨 위에 푸시됩니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 

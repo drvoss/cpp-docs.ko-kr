@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b3899a0c4a49aa7fb1bd82af330f5f1cc7329c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329802"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 클래스
 
-이중 인터페이스 `IDispatch` 파트에 대 한 기본 구현을 제공 합니다.
+이중 인터페이스의 일부에 `IDispatch` 대한 기본 구현을 제공합니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -43,53 +43,53 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-진행 이중 인터페이스입니다.
+【인】 듀얼 인터페이스.
 
 *piid*<br/>
-진행 *T*의 IID에 대 한 포인터입니다.
+【인】 *T.*
 
 *plibid*<br/>
-진행 인터페이스에 대 한 정보를 포함 하는 형식 라이브러리의 LIBID에 대 한 포인터입니다. 기본적으로 서버 수준 형식 라이브러리가 전달 됩니다.
+【인】 인터페이스에 대한 정보가 포함된 형식 라이브러리의 LIBID에 대한 포인터입니다. 기본적으로 서버 수준 형식 라이브러리가 전달됩니다.
 
 *wMajor*<br/>
-진행 형식 라이브러리의 주 버전입니다. 기본적으로이 값은 1입니다.
+【인】 형식 라이브러리의 주 버전입니다. 기본적으로 값은 1입니다.
 
 *wMinor*<br/>
-진행 형식 라이브러리의 부 버전입니다. 기본적으로이 값은 0입니다.
+【인】 형식 라이브러리의 부 버전입니다. 기본적으로 값은 0입니다.
 
 *tihclass*<br/>
-진행 *T*의 형식 정보를 관리 하는 데 사용 되는 클래스입니다. 기본적으로 이 값은 `CComTypeInfoHolder`입니다.
+【인】 *T에*대 한 형식 정보를 관리 하는 데 사용 하는 클래스입니다. 기본적으로 값은 은입니다. `CComTypeInfoHolder`
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|생성자입니다. 이중 `AddRef` 인터페이스에 대 한 형식 정보를 관리 하는 보호 된 멤버 변수를 호출 합니다. 이 소멸자는 `Release`을 호출합니다.|
+|[I디스패치임플::I디스패치임플](#idispatchimpl)|생성자입니다. 이중 `AddRef` 인터페이스에 대한 형식 정보를 관리하는 보호된 멤버 변수를 호출합니다. 이 소멸자는 `Release`을 호출합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|이름 집합을 해당하는 디스패치 식별자 집합에 매핑합니다.|
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|이중 인터페이스에 대 한 형식 정보를 검색 합니다.|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|이중 인터페이스에 사용할 수 있는 형식 정보가 있는지 여부를 확인 합니다.|
-|[IDispatchImpl::Invoke](#invoke)|이중 인터페이스에 의해 노출 되는 메서드 및 속성에 대 한 액세스를 제공 합니다.|
+|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|이중 인터페이스에 대한 형식 정보를 검색합니다.|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|이중 인터페이스에 사용할 수 있는 형식 정보가 있는지 여부를 결정합니다.|
+|[IDispatchImpl::호출](#invoke)|이중 인터페이스에서 노출되는 메서드 및 속성에 대한 액세스를 제공합니다.|
 
 ## <a name="remarks"></a>설명
 
-`IDispatchImpl`개체의 이중 인터페이스 `IDispatch` 부분에 대 한 기본 구현을 제공 합니다. 이중 인터페이스는에서 `IDispatch` 파생 되 고 자동화 호환 형식만 사용 합니다. 인터페이스와 마찬가지로 이중 인터페이스는 초기 바인딩과 런타임에 바인딩을 지원 합니다. 그러나 이중 인터페이스는 vtable 바인딩도 지원 합니다.
+`IDispatchImpl`은 개체의 모든 `IDispatch` 이중 인터페이스 부분에 대한 기본 구현을 제공합니다. 이중 인터페이스는 자동화 `IDispatch` 호환 형식에서 파생되고 사용됩니다. dispinterface와 마찬가지로 이중 인터페이스는 초기 바인딩 및 후기 바인딩을 지원합니다. 그러나 이중 인터페이스는 vtable 바인딩도 지원합니다.
 
 다음 예제에서는 일반적인 구현은 `IDispatchImpl`합니다.
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-기본적으로 클래스는 `IDispatchImpl` 레지스트리의 *T* 에 대 한 형식 정보를 조회 합니다. 등록 되지 않은 인터페이스를 구현 하려면 미리 정의 된 `IDispatchImpl` 버전 번호를 사용 하 여 레지스트리에 액세스 하지 않고도 클래스를 사용할 수 있습니다. 0xffff가 wmajor `IDispatchImpl` 및 0xffff 값으로 wmajor의 값 으로 포함 된 개체를 만드는 경우 클래스는 `IDispatchImpl` 레지스트리 대신 .dll 파일에서 형식 라이브러리를 검색 합니다.
+기본적으로 클래스는 `IDispatchImpl` 레지스트리에서 *T에* 대한 형식 정보를 찾습니다. 등록되지 않은 인터페이스를 구현하려면 `IDispatchImpl` 미리 정의된 버전 번호를 사용하여 레지스트리에 액세스하지 않고 클래스를 사용할 수 있습니다. *wMajor* 및 `IDispatchImpl` 0xFFFF의 값으로 0xFFFF가 있는 개체를 *wMinor값으로* `IDispatchImpl` 만드는 경우 클래스는 레지스트리 대신 .dll 파일에서 형식 라이브러리를 검색합니다.
 
-`IDispatchImpl`이중 인터페이스에 대 한 형식 `CComTypeInfoHolder` 정보를 관리 하는 형식의 정적 멤버를 포함 합니다. 동일한 이중 인터페이스를 구현 하는 개체가 여러 개 있는 경우 하나의 인스턴스만 `CComTypeInfoHolder` 사용 됩니다.
+`IDispatchImpl`에는 이중 인터페이스에 `CComTypeInfoHolder` 대한 형식 정보를 관리하는 형식의 정적 멤버가 포함되어 있습니다. 동일한 이중 인터페이스를 구현하는 개체가 여러 개인 `CComTypeInfoHolder` 경우 하나의 인스턴스만 사용됩니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `T`
 
@@ -97,9 +97,9 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:**
+**헤더:** atlcom.h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+## <a name="idispatchimplgetidsofnames"></a><a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames
 
 이름 집합을 해당하는 디스패치 식별자 집합에 매핑합니다.
 
@@ -114,11 +114,11 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IDispatch:: idispatch.getidsofnames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 를 참조 하세요.
+[IDispatch::GetIDsName](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK에서 참조 합니다.
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+## <a name="idispatchimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo
 
-이중 인터페이스에 대 한 형식 정보를 검색 합니다.
+이중 인터페이스에 대한 형식 정보를 검색합니다.
 
 ```
 STDMETHOD(GetTypeInfo)(
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) 를 참조 하세요.
+[IDispatch::GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) Windows SDK를 참조하십시오.
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+## <a name="idispatchimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount
 
-이중 인터페이스에 사용할 수 있는 형식 정보가 있는지 여부를 확인 합니다.
+이중 인터페이스에 사용할 수 있는 형식 정보가 있는지 여부를 결정합니다.
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,19 +141,19 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>설명
 
-Windows SDK `IDispatch::GetTypeInfoCount` 에서을 참조 하세요.
+윈도우 `IDispatch::GetTypeInfoCount` SDK에서 참조하십시오.
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+## <a name="idispatchimplidispatchimpl"></a><a name="idispatchimpl"></a>I디스패치임플::I디스패치임플
 
-생성자입니다. 이중 `AddRef` 인터페이스에 대 한 형식 정보를 관리 하는 보호 된 멤버 변수를 호출 합니다. 이 소멸자는 `Release`을 호출합니다.
+생성자입니다. 이중 `AddRef` 인터페이스에 대한 형식 정보를 관리하는 보호된 멤버 변수를 호출합니다. 이 소멸자는 `Release`을 호출합니다.
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+## <a name="idispatchimplinvoke"></a><a name="invoke"></a>IDispatchImpl::호출
 
-이중 인터페이스에 의해 노출 되는 메서드 및 속성에 대 한 액세스를 제공 합니다.
+이중 인터페이스에서 노출되는 메서드 및 속성에 대한 액세스를 제공합니다.
 
 ```
 STDMETHOD(Invoke)(
@@ -169,8 +169,8 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 를 참조 하세요.
+[IDispatch::Windows](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) SDK에서 호출을 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../../atl/atl-class-overview.md)
