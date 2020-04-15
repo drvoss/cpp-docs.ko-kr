@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5f304fd163c2ba1c57a4daee8c2a3307d8ba870a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348959"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-문자열을 double ( **_atodbl**), long double ( **_atoldbl**) 또는 float ( **_atoldbl**)로 변환 합니다.
+문자열을 두**배(_atodbl),** 긴**이중(_atoldbl)** 또는**float(_atoflt)로**변환합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -79,29 +86,31 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 문자열을 부동 소수점 값으로 변환하여 생성되는 double, long double 또는 float 값입니다. 이러한 값은 구조체에서 래핑됩니다.
 
-*str*<br/>
+*Str*<br/>
 부동 소수점 값으로 변환하기 위해 구문 분석할 문자열입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공하면 0을 반환합니다. 가능한 오류 코드는 **_underflow** 또는 **_underflow**이며 헤더 파일 \<>에 정의 되어 있습니다.
+정상적으로 실행되는 경우 0을 반환합니다. 가능한 오류 코드는 헤더 파일 \<math.h> 정의된 **_UNDERFLOW** 또는 **_OVERFLOW.**
 
 ## <a name="remarks"></a>설명
 
-이러한 함수는 문자열을 부동 소수점 값으로 변환합니다. 이러한 함수와 **atof** 함수 패밀리의 차이점은 이러한 함수는 부동 소수점 코드를 생성 하지 않으며 하드웨어 예외를 발생 시 키 지 않습니다. 대신 오류 조건은 오류 코드로 보고됩니다.
+이러한 함수는 문자열을 부동 소수점 값으로 변환합니다. 이러한 함수와 **atof** 함수 제품군의 차이점은 이러한 함수가 부동 지점 코드를 생성하지 않고 하드웨어 예외를 일으키지 않는다는 것입니다. 대신 오류 조건은 오류 코드로 보고됩니다.
 
-문자열에 부동 소수점 값으로 유효한 해석이 없으면 *값* 이 0으로 설정 되 고 반환 값은 0이 됩니다.
+문자열에 부동 지점 값으로 유효한 해석이 없는 경우 *값은* 0으로 설정되고 반환 값은 0입니다.
 
-**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 *로캘* 매개 변수를 사용 한다는 점을 제외 하 고 접미사가 없는 버전과 동일 합니다.
+**_l** 접미사가 있는 이러한 함수의 버전은 현재 스레드 로캘 대신 전달되는 *로캘* 매개 변수를 사용한다는 점을 제외하면 접미사가 없는 버전과 동일합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴|필수 헤더|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**, **_atoldbl,** **_atoflt**<br /><br /> **_atodbl_l,** **_atoldbl_l,** **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>예제
 
@@ -159,7 +168,7 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>

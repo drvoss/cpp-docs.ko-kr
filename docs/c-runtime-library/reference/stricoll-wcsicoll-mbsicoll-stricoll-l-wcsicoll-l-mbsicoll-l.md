@@ -1,6 +1,6 @@
 ---
 title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsicoll_l
 - _stricoll_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
+- _o__mbsicoll
+- _o__mbsicoll_l
+- _o__stricoll
+- _o__stricoll_l
+- _o__wcsicoll
+- _o__wcsicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -54,19 +61,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355334"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 로캘별 정보를 사용하여 문자열을 비교합니다.
 
 > [!IMPORTANT]
-> **_mbsicoll** 및 **_mbsicoll_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsicoll** 및 **_mbsicoll_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -102,34 +109,36 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*string1*, *string2*<br/>
+*문자열1,* *문자열2*<br/>
 비교할 Null 종료 문자열입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-이러한 각 함수는 다음과 같이 *문자열* 1과 *문자열 2*의 관계를 나타내는 값을 반환 합니다.
+이러한 각 함수는 다음과 같이 *string1과* *string2의*관계를 나타내는 값을 반환합니다.
 
 |반환 값|문자열 1과 문자열 2의 관계|
 |------------------|----------------------------------------|
-|< 0|*문자열* *2* 보다 작음|
-|0|*문자열* *2* 와 같음|
-|> 0|*문자열* *2* 보다 큼|
+|< 0|*문자열1보다* *문자열2*|
+|0|*문자열1과* *문자열2*|
+|> 0|*문자열1이* *문자열2보다* 큽|
 |**_NLSCMPERROR**|오류가 발생했습니다.|
 
-이러한 각 함수는 **_NLSCMPERROR**을 반환 합니다. _NLSCMPERROR를 사용 하려면또는 \< \<mbstring >를 > 포함 합니다. *string1 또는 string1* 에 정렬 시퀀스의 도메인 외부 *에 있는 와이드* 문자 코드가 포함 된 경우 **_wcsicoll** 가 실패할 수 있습니다. 오류가 발생 하면 **_wcsicoll** 가 **errno** 를 **EINVAL**로 설정할 수 있습니다. **_Wcsicoll**에 대 한 호출에서 오류를 확인 하려면 **errno** 를 0으로 설정 하 고 **_wcsicoll**를 호출한 후 **errno** 를 확인 합니다.
+이러한 각 함수는 **_NLSCMPERROR**반환합니다. **_NLSCMPERROR**사용하려면 \<string.h> \<또는 mbstring.h> 포함하십시오. *_wcsicoll string1* 또는 *string2에* 정렬 시퀀스의 도메인 외부의 와이드 문자 코드가 포함되어 있으면 실패할 **수** 있습니다. 오류가 발생하면 **_wcsicoll** **errno를** **EINVAL로**설정할 수 있습니다. **_wcsicoll**호출시 오류를 확인하려면 **errno를** 0으로 설정한 다음 **_wcsicoll**호출한 후 **errno를** 확인합니다.
 
 ## <a name="remarks"></a>설명
 
-이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 *문자열* 1과 *문자열 2* 의 대/소문자를 구분 하지 않는 비교를 수행 합니다. 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용해야 합니다.
+이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 *string1과* *string2의* 대/소문자를 구분하지 않음 비교를 수행합니다. 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용해야 합니다.
 
-**_stricmp** 는 **_stricmp** 비교가 **LC_CTYPE**의 영향을 받으며, **_stricoll** 비교는의 **LC_CTYPE** 및 **LC_COLLATE** 범주에 따라 결정 된다는 점에서 **_stricoll** 와 다릅니다. 로캘을. **LC_COLLATE** 범주에 대 한 자세한 내용은 [Setlocale](setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_stricmp** **_stricmp** 비교가 **LC_CTYPE**영향을 받는 반면 **_stricoll** 비교는 로캘의 **LC_CTYPE** 및 **LC_COLLATE** 범주에 따라 달라지는 점에서 **_stricoll** 다릅니다. **LC_COLLATE** 범주에 대한 자세한 내용은 [setlocale](setlocale-wsetlocale.md) 및 [로캘 범주를](../../c-runtime-library/locale-categories.md)참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *String1* 또는 *문자열* 1이 **NULL** 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **_NLSCMPERROR** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *string1* 또는 *string2가* **NULL** 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 **_NLSCMPERROR** 반환하고 **errno를** **EINVAL로**설정합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -140,16 +149,16 @@ int _mbsicoll_l(
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_stricoll**, **_stricoll_l**|\<string.h>|
-|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
+|**_wcsicoll,** **_wcsicoll_l**|\<wchar.h>, \<string.h>|
 |**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [로캘](../../c-runtime-library/locale.md)<br/>
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll 함수](../../c-runtime-library/strcoll-functions.md)<br/>
+[스트콜 함수](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

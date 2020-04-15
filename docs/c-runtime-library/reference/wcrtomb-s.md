@@ -1,8 +1,9 @@
 ---
 title: wcrtomb_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb_s
+- _o_wcrtomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328176"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -62,35 +64,37 @@ errno_t wcrtomb_s(
 *pReturnValue*<br/>
 기록된 바이트 수를 반환하거나, 오류가 발생하면 -1을 반환합니다.
 
-*mbchar*<br/>
+*mbc하르*<br/>
 멀티바이트로 변환된 결과 문자입니다.
 
-*sizeOfmbchar*<br/>
-*Mbchar* 변수의 크기 (바이트)입니다.
+*크기Ofmbchar*<br/>
+바이트로 *mbchar* 변수의 크기입니다.
 
-*wchar*<br/>
+*Wchar*<br/>
 변환할 와이드 문자입니다.
 
 *mbstate*<br/>
-**Mbstate_t** 개체에 대 한 포인터입니다.
+**mbstate_t** 개체에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-오류가 발생 하는 경우 0 또는 **errno** 값을 반환 합니다.
+오류가 발생하면 0 또는 **errno** 값을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**Wcrtomb_s** 함수는 *mbstate*에 포함 된 지정 된 변환 상태에서 시작 하 여 *wchar*에 포함 된 값에서 *mbstate*로 표시 되는 주소로 와이드 문자를 변환 합니다. *PReturnValue* 값은 변환 된 바이트 수 이지만 **MB_CUR_MAX** 바이트를 초과 하지 않습니다. 오류가 발생 한 경우에는-1입니다.
+**wcrtomb_s** 함수는 *mbstate에*포함된 지정된 변환 상태에서 시작하여 *wchar에*포함된 값에서 *mbchar로*표시되는 주소로 넓은 문자를 변환합니다. *pReturnValue* 값은 변환된 바이트 수이지만 **MB_CUR_MAX** 바이트 또는 오류가 발생한 경우 -1을 넘지 않습니다.
 
-*Mbstate* 가 null 이면 내부 **mbstate_t** 변환 상태가 사용 됩니다. *Wchar* 에 포함 된 문자에 해당 하는 멀티 바이트 문자가 없으면 *pReturnValue* 값은-1이 고 함수는 **eilseq**의 **errno** 값을 반환 합니다.
+*mbstate가* null이면 내부 **mbstate_t** 변환 상태가 사용됩니다. *wchar에* 포함된 문자에 해당 다중 바이트 문자가 없는 경우 *pReturnValue* 값은 -1이 되고 함수는 **EILSEQ의** **errno** 값을 반환합니다.
 
-**Wcrtomb_s** 함수는 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) by 다시 시작할와 다릅니다. 동일 하거나 다른 다시 시작 가능 함수에 대 한 후속 호출의 경우 변환 상태가 *mbstate* 에 저장 됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 **wcstombs_s**대신 **wcsrtombs_s** 에 대 한 후속 호출을 사용 하는 경우 응용 프로그램은 **wcslen**대신 **wcsrlen** 을 사용 합니다.
+**wcrtomb_s** 함수는 wctomb_s 다르며 재시작 가능성에 [_wctomb_s_l.](wctomb-s-wctomb-s-l.md) 변환 상태는 동일하거나 다른 다시 시작 가능한 함수에 대한 후속 호출에 대해 *mbstate에* 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 응용 프로그램은 wcstombs_s 대신 **wcsrtombs_s** 대한 후속 호출이 사용된 경우 **wcslen 대신 wcsrlen을**사용합니다. **wcsrlen** **wcstombs_s**
 
-C++에서는 템플릿 오버로드로 인해 이러한 함수를 간편하게 사용할 수 있습니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서는 템플릿 오버로드로 인해 이러한 함수를 간편하게 사용할 수 있습니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="exceptions"></a>예외
 
-**Wcrtomb_s** 함수는 현재 스레드의 함수가 **setlocale** 을 호출 하 고이 함수가 실행 되 고 *mbstate* 가 null 인 경우에는 다중 스레드 안전을 보장 합니다.
+**wcrtomb_s** 함수는 이 함수가 실행되고 *mbstate가* null인 동안 현재 스레드에서 **setlocale를** 호출하는 함수가 없는 한 다중 스레드안전입니다.
 
 ## <a name="example"></a>예제
 
@@ -142,9 +146,9 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 |-------------|---------------------|
 |**wcrtomb_s**|\<wchar.h>|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 82cc5ffa3f50196fc5f518b8bb5b2080ff14fd8d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349608"
 ---
 # <a name="try-finally-statement-c"></a>try-finally 문 (C)
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
 `try-finally` 문은 코드 블록 실행이 중단될 때 애플리케이션에서 정리 코드가 실행되도록 보장하는 C 언어에 대한 Microsoft 확장입니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. `try-finally` 문은 루틴으로부터 중간에 반환되게 만들 수 있는 오류가 있는지 확인하기 위해 검사가 수행되는 위치가 많은 루틴에 특히 유용합니다.
 
@@ -41,10 +41,10 @@ ms.locfileid: "56151834"
 `try-finally` 문을 실행하는 동안 프로세스가 종료될 경우에는 종료 처리기가 호출되지 않습니다.
 
 > [!NOTE]
->  구조적 예외 처리는 C 및 C++ 소스 파일에서 작동합니다. 특별히 C++용으로 설계되지는 않았습니다. C++ 예외 처리를 사용하여 코드의 이식성이 향상되는지 확인할 수 있습니다. 또한 C++ 예외 처리 메커니즘은 모든 형식의 예외를 처리할 수 있다는 점에서 훨씬 유연합니다.
+> 구조적 예외 처리는 C 및 C++ 소스 파일에서 작동합니다. 특별히 C++용으로 설계되지는 않았습니다. C++ 예외 처리를 사용하여 코드의 이식성이 향상되는지 확인할 수 있습니다. 또한 C++ 예외 처리 메커니즘은 모든 형식의 예외를 처리할 수 있다는 점에서 훨씬 유연합니다.
 
 > [!NOTE]
->  C++ 프로그램의 경우 구조적 예외 처리 대신 C++ 예외 처리를 사용해야 합니다. 자세한 내용은 *C++ 언어 참조*의 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조하세요.
+> C++ 프로그램의 경우 구조적 예외 처리 대신 C++ 예외 처리를 사용해야 합니다. 자세한 내용은 *C++ 언어 참조*의 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조하세요.
 
 `try-finally` 문이 작동하는 방법을 보려면 [try-except 문](../c-language/try-except-statement-c.md)의 예제를 참조하세요.
 

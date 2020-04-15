@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744559"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361129"
 ---
 # <a name="secure-template-overloads"></a>안전한 템플릿 오버로드
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 매크로 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`는 `strncpy`와 같이 개수를 세는 함수에 영향을 주지 않습니다. 개수 함수에 대한 템플릿 오버로드를 사용하도록 설정하려면 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`를 1로 정의합니다. 그러나 이러한 작업을 수행하기 전에 코드가 버퍼의 크기가 아닌(일반적인 실수) 문자 개수를 전달하는지 확인해야 합니다. 또한 안전한 변형이 호출되는 경우 함수 호출 이후 명시적으로 버퍼의 끝에 null 종결자를 쓰는 코드는 필요하지 않습니다. 잘라내기 동작이 필요한 경우 [_TRUNCATE](../c-runtime-library/truncate.md)를 참조하세요.
 
 > [!NOTE]
->  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 매크로의 경우 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`도 1로 정의되어야 합니다. `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`가 1로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`가 0으로 정의되는 경우 애플리케이션은 템플릿 오버로드를 수행하지 않습니다.
+> `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 매크로의 경우 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`도 1로 정의되어야 합니다. `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT`가 1로 정의되고 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`가 0으로 정의되는 경우 애플리케이션은 템플릿 오버로드를 수행하지 않습니다.
 
 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`를 1로 정의하면 안전한 변형(“_s”로 끝나는 이름)의 템플릿 오버로드가 사용하도록 설정됩니다. 이 경우 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES`가 1이면 원본 코드에서 작은 변경 작업이 하나 수행되어야 합니다.
 

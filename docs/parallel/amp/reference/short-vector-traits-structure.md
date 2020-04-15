@@ -7,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126379"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374740"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits 구조체
 
-short_vector_traits를 사용 하 여 짧은 벡터 형식 또는 스칼라 형식의 기본 벡터 길이와 스칼라 형식을 검색할 수 있습니다.
+short_vector_traits 짧은 벡터 유형 또는 스칼라 유형의 기본 벡터 길이 및 스칼라 유형을 검색할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -83,39 +83,39 @@ struct short_vector_traits<double_4>;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits 생성자](#ctor)||
+|[short_vector_traits::short_vector_traits 생성자](#ctor)||
 
 ### <a name="public-constants"></a>공용 상수
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[short_vector_traits:: size 상수](#size)||
+|[short_vector_traits::size 상수](#size)||
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `short_vector_traits`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_short_vectors. h
+**헤더:** amp_short_vectors.h
 
-**네임 스페이스:** Concurrency:: graphics
+**네임스페이스:** 동시성::그래픽
 
-## <a name="ctor"></a>short_vector_traits:: short_vector_traits 생성자
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits 생성자
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="size"></a>short_vector_traits:: size 상수
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::크기 상수
 
 ```cpp
 static int const size = 1;

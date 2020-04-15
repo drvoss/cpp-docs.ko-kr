@@ -23,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944362"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349336"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 
 출력 형식 플래그의 현재 값을 가져옵니다.
 
 > [!IMPORTANT]
->  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
+> 이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -61,7 +61,7 @@ unsigned int _get_output_format();
 
 ## <a name="see-also"></a>참고 항목
 
-[형식 사양 구문: printf 및 wprintf 함수](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[형식 사양 구문: 인쇄및 wprintf 함수](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_set_output_format](../c-runtime-library/set-output-format.md)

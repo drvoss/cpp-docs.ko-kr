@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152328"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349738"
 ---
 # <a name="try-except-statement-c"></a>try-except 문 (C)
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
 **try-except** 문은 정상적으로 실행을 종료시키는 이벤트가 발생하는 경우 애플리케이션이 프로그램의 제어를 얻을 수 있도록 하는 C 언어에 대한 Microsoft 확장입니다. 이러한 이벤트를 예외라고 하고 예외를 처리하는 메커니즘은 구조적 예외 처리라고 합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "56152328"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *expression*  **)**  *compound-statement*
+**__except***(식)***)***컴파운드 문*      
 
 `__try` 절 뒤의 복합 문은 보호된 섹션입니다. `__except` 절 뒤에 오는 복합 문은 예외 처리기입니다. 처리기는 보호된 섹션을 실행하는 동안 예외가 발생하는 경우 수행할 일련의 작업을 지정합니다. 다음과 같이 실행됩니다.
 
@@ -48,10 +48,10 @@ ms.locfileid: "56152328"
 `__except` 식은 C 식으로 계산되므로 단일 값, 조건식 연산자 또는 쉼표 연산자로 제한됩니다. 더 광범위한 처리가 필요한 경우 식은 위에 나열된 세 값 중 하나를 반환하는 루틴을 호출할 수 있습니다.
 
 > [!NOTE]
->  구조적 예외 처리는 C 및 C++ 소스 파일에서 작동합니다. 특별히 C++용으로 설계되지는 않았습니다. C++ 예외 처리를 사용하여 코드의 이식성이 향상되는지 확인할 수 있습니다. 또한 C++ 예외 처리 메커니즘은 모든 형식의 예외를 처리할 수 있다는 점에서 훨씬 유연합니다.
+> 구조적 예외 처리는 C 및 C++ 소스 파일에서 작동합니다. 특별히 C++용으로 설계되지는 않았습니다. C++ 예외 처리를 사용하여 코드의 이식성이 향상되는지 확인할 수 있습니다. 또한 C++ 예외 처리 메커니즘은 모든 형식의 예외를 처리할 수 있다는 점에서 훨씬 유연합니다.
 
 > [!NOTE]
->  C++ 프로그램의 경우 구조적 예외 처리 대신 C++ 예외 처리를 사용해야 합니다. 자세한 내용은 *C++ 언어 참조*의 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조하세요.
+> C++ 프로그램의 경우 구조적 예외 처리 대신 C++ 예외 처리를 사용해야 합니다. 자세한 내용은 *C++ 언어 참조*의 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조하세요.
 
 애플리케이션의 각 루틴에는 자체 예외 처리기가 있을 수 있습니다. `__except` 식은 `__try` 본문의 범위에서 실행됩니다. 즉, 이 범위에서 선언된 모든 지역 변수에 액세스할 수 있습니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "56152328"
 
 `longjmp` 런타임 함수를 사용하여 **try-except** 문을 종료하는 것은 비정상 종료로 간주됩니다. `__try` 문 안으로 이동할 수 없지만 이 문 밖으로 이동할 수는 있습니다. **try-except** 문을 실행하는 도중에 프로세스가 강제로 종료되는 경우 예외 처리기가 호출되지 않습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음은 예외 처리기와 종료 처리기의 예제입니다. 종료 처리기에 대한 자세한 내용은 [try-finally 문](../c-language/try-finally-statement-c.md)을 참조하세요.
 

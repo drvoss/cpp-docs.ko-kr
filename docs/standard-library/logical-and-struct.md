@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821618"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351683"
 ---
 # <a name="logical_and-struct"></a>logical_and 구조체
 
-인수에서 논리적 결합 작업 (`operator&&`)을 수행 하는 미리 정의 된 함수 개체입니다.
+인수에서 논리적 연결 작업()`operator&&`을 수행하는 미리 정의된 함수 개체입니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,24 +39,24 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*, *T*, *U*\
+*유형*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator&&`를 지원하는 모든 형식입니다.
 
-*Left*\
-논리곱 연산의 왼쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *T*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
+*왼쪽*\
+논리곱 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 type *type.* 특수화된 템플릿은 유추된 형식 *T의*lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
 
-*Right*\
-논리곱 연산의 오른쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *U*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
+*오른쪽*\
+논리곱 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 type *type.* 특수화된 템플릿은 유추U 형식 *U의*lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 `Left && Right`의 결과입니다. 특수화된 템플릿은 `operator&&`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 사용자 정의 형식의 경우 피연산자 평가의 단락(short-circuiting)이 없습니다. 두 인수 모두 `operator&&`로 평가됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```cpp
 // functional_logical_and.cpp

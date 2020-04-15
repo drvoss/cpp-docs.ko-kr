@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 335deefc04a80f47151c5d5e71486e30f9918abd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356623"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 인터페이스
 
-사용자 인터페이스 명령을 관리 합니다.
+사용자 인터페이스 명령을 관리합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,35 +31,35 @@ ms.locfileid: "79445698"
 interface class ICommandUI
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="public-methods"></a>Public 메서드
 
 |속성|Description|
 |----------|-----------------|
-|[icommandui__Check](#check)|이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.|
-|[ICommandUI::ContinueRouting](#continuerouting)|현재 메시지를 처리기 체인으로 계속 라우팅하는 명령 라우팅 메커니즘에 지시 합니다.|
-|[ICommandUI:: Enabled](#enabled)|이 명령에 대 한 사용자 인터페이스 항목을 사용 하거나 사용 하지 않도록 설정 합니다.|
-|[ICommandUI:: ID](#id)|`ICommandUI` 개체가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다.|
-|[ICommandUI:: Index](#index)|`ICommandUI` 개체가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다.|
-|[ICommandUI:: Radio](#radio)|이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.|
-|[ICommandUI:: Text](#text)|이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다.|
+|[icommandui__Check](#check)|이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다.|
+|[ICommandUI::계속 라우팅](#continuerouting)|명령 라우팅 메커니즘에 현재 메시지를 처리기 체인 아래로 계속 라우팅하도록 지시합니다.|
+|[ICommandUI::사용](#enabled)|이 명령에 대한 사용자 인터페이스 항목을 활성화하거나 사용하지 않도록 설정합니다.|
+|[ICommandUI:::ID](#id)|개체로 표시되는 사용자 인터페이스 개체의 `ICommandUI` ID를 가져옵니다.|
+|[ICommandUI::인덱스](#index)|개체로 표시되는 사용자 인터페이스 개체의 `ICommandUI` 인덱스를 가져옵니다.|
+|[ICommandUI::라디오](#radio)|이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다.|
+|[ICommandUI:::텍스트](#text)|이 명령에 대한 사용자 인터페이스 항목의 텍스트를 설정합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 인터페이스는 사용자 인터페이스 명령을 관리 하는 메서드와 속성을 제공 합니다. `ICommandUI`는 .NET 구성 요소와 상호 운용 되는 MFC 응용 프로그램에 `ICommandUI`를 사용 한다는 점을 제외 하 고는 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)와 유사 합니다.
+이 인터페이스는 사용자 인터페이스 명령을 관리하는 메서드 및 속성을 제공합니다. `ICommandUI`.NET 구성 요소와 상호 운용하는 MFC 응용 프로그램에 사용되는 것을 `ICommandUI` 제외하면 [CCmdUI 클래스와](../../mfc/reference/ccmdui-class.md)유사합니다.
 
-`ICommandUI`는 [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)파생 클래스의 ON_UPDATE_COMMAND_UI 처리기 내에서 사용 됩니다. 응용 프로그램의 사용자가 메뉴를 활성화 (선택 또는 클릭) 하면 각 메뉴 항목이 사용 또는 사용 안 함으로 표시 됩니다. 각 메뉴 명령의 대상은 ON_UPDATE_COMMAND_UI 처리기를 구현 하 여이 정보를 제공 합니다. 응용 프로그램의 각 명령 사용자 인터페이스 개체에 대해 [클래스 마법사](mfc-class-wizard.md) 를 사용 하 여 각 처리기에 대 한 메시지 맵 항목 및 함수 프로토타입을 만듭니다.
+`ICommandUI`[iCommandTarget-파생](../../mfc/reference/icommandtarget-interface.md)클래스의 ON_UPDATE_COMMAND_UI 처리기 내에서 사용됩니다. 응용 프로그램 사용자가 메뉴를 활성화(선택 또는 클릭)하면 각 메뉴 항목이 사용 설정 또는 비활성화된 것으로 표시됩니다. 각 메뉴 명령의 대상은 ON_UPDATE_COMMAND_UI 처리기를 구현하여 이 정보를 제공합니다. 응용 프로그램의 각 명령 사용자 인터페이스 개체에 대해 [클래스 마법사를](mfc-class-wizard.md) 사용하여 각 처리기에 대한 메시지 맵 항목 및 함수 프로토타입을 만듭니다.
 
-명령 라우팅에서 `ICommandUI` 인터페이스를 사용 하는 방법에 대 한 자세한 내용은 [방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)를 참조 하세요.
+명령 라우팅에서 인터페이스가 `ICommandUI` 사용되는 방법에 대한 자세한 내용은 Windows 양식 [컨트롤에 명령 라우팅 추가 방법을](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)참조하십시오.
 
-Windows Forms 사용에 대 한 자세한 내용은 [MFC에서 Windows Form 사용자 정의 컨트롤 사용](../../dotnet/using-a-windows-form-user-control-in-mfc.md)을 참조 하세요.
+Windows 양식 사용에 대한 자세한 내용은 [MFC의 Windows 양식 사용자 컨트롤 사용을](../../dotnet/using-a-windows-form-user-control-in-mfc.md)참조하십시오.
 
-MFC에서 사용자 인터페이스 명령을 관리 하는 방법에 대 한 자세한 내용은 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)를 참조 하세요.
+MFC에서 사용자 인터페이스 명령을 관리하는 방법에 대한 자세한 내용은 [CCmdUI 클래스를](../../mfc/reference/ccmdui-class.md)참조하십시오.
 
-## <a name="check"></a>ICommandUI:: Check
+## <a name="icommanduicheck"></a><a name="check"></a>ICommandUI::확인
 
-이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.
+이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다.
 
 ```
 property UICheckState Check;
@@ -67,14 +67,15 @@ property UICheckState Check;
 
 ## <a name="remarks"></a>설명
 
-이 속성은이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다. Check를 다음 값으로 설정 합니다.
+이 속성은 이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다. 검사를 다음 값으로 설정합니다.
+
 - 0 선택 취소
-- 1 개 검사
-- 2 설정 미정
+- 1 확인
+- 2 세트 확정되지 않음
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::계속 라우팅
 
-현재 메시지를 처리기 체인으로 계속 라우팅하는 명령 라우팅 메커니즘에 지시 합니다.
+명령 라우팅 메커니즘을 지시하여 현재 메시지를 처리기 체인 아래로 계속 라우팅합니다.
 
 ```
 void ContinueRouting();
@@ -82,11 +83,11 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>설명
 
-FALSE를 반환 하는 ON_COMMAND_EX 처리기와 함께 사용 해야 하는 고급 멤버 함수입니다. 자세한 내용은 기술 참고 TN006: 메시지 맵을 참조 하세요.
+FALSE를 반환 하는 ON_COMMAND_EX 처리기와 함께 사용 해야 하는 고급 멤버 함수입니다. 자세한 내용은 기술 참고 TN006: 메시지 맵을 참조하십시오.
 
-## <a name="enabled"></a>ICommandUI:: Enabled
+## <a name="icommanduienabled"></a><a name="enabled"></a>ICommandUI::사용
 
-이 명령에 대 한 사용자 인터페이스 항목을 사용 하거나 사용 하지 않도록 설정 합니다.
+이 명령에 대한 사용자 인터페이스 항목을 활성화하거나 사용하지 않도록 설정합니다.
 
 ```
 property bool Enabled;
@@ -94,11 +95,11 @@ property bool Enabled;
 
 ## <a name="remarks"></a>설명
 
-이 속성은이 명령에 대 한 사용자 인터페이스 항목을 사용 하거나 사용 하지 않도록 설정 합니다. 사용을 TRUE로 설정 하 여 항목을 사용 하도록 설정 합니다. 그렇지 않으면 FALSE로 설정 합니다.
+이 속성은 이 명령에 대한 사용자 인터페이스 항목을 사용 하거나 사용하지 않도록 설정합니다. 항목을 활성화하려면 TRUE로 설정, FALSE를 비활성화합니다.
 
-## <a name="id"></a>ICommandUI:: ID
+## <a name="icommanduiid"></a><a name="id"></a>ICommandUI:::ID
 
-ICommandUI 개체가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다.
+ICommandUI 개체로 표시되는 사용자 인터페이스 개체의 ID를 가져옵니다.
 
 ```
 property unsigned int ID;
@@ -106,11 +107,11 @@ property unsigned int ID;
 
 ## <a name="remarks"></a>설명
 
-이 속성은 ICommandUI 개체가 나타내는 메뉴 항목, 도구 모음 단추 또는 기타 사용자 인터페이스 개체의 ID (핸들)를 가져옵니다.
+이 속성은 메뉴 항목, 도구 모음 단추 또는 ICommandUI 개체로 표시되는 다른 사용자 인터페이스 개체의 ID(핸들)를 가져옵니다.
 
-## <a name="index"></a>ICommandUI:: Index
+## <a name="icommanduiindex"></a><a name="index"></a>ICommandUI::인덱스
 
-ICommandUI 개체가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다.
+ICommandUI 개체로 표시되는 사용자 인터페이스 개체의 인덱스를 가져옵니다.
 
 ```
 property unsigned int Index;
@@ -118,11 +119,11 @@ property unsigned int Index;
 
 ## <a name="remarks"></a>설명
 
-이 속성은 ICommandUI 개체가 나타내는 메뉴 항목, 도구 모음 단추 또는 기타 사용자 인터페이스 개체의 인덱스 (핸들)를 가져옵니다.
+이 속성은 메뉴 항목, 도구 모음 단추 또는 ICommandUI 개체로 표시되는 다른 사용자 인터페이스 개체의 인덱스(핸들)를 가져옵니다.
 
-## <a name="radio"></a>ICommandUI:: Radio
+## <a name="icommanduiradio"></a><a name="radio"></a>ICommandUI::라디오
 
-이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다.
+이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다.
 
 ```
 property bool Radio;
@@ -130,11 +131,11 @@ property bool Radio;
 
 ## <a name="remarks"></a>설명
 
-이 속성은이 명령에 대 한 사용자 인터페이스 항목을 적절 한 검사 상태로 설정 합니다. 항목을 사용 하도록 설정 하려면 Radio를 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
+이 속성은 이 명령에 대한 사용자 인터페이스 항목을 적절한 검사 상태로 설정합니다. 항목을 활성화하려면 라디오를 TRUE로 설정합니다. 그렇지 않으면 거짓.
 
-## <a name="text"></a>ICommandUI:: Text
+## <a name="icommanduitext"></a><a name="text"></a>ICommandUI:::텍스트
 
-이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다.
+이 명령에 대한 사용자 인터페이스 항목의 텍스트를 설정합니다.
 
 ```
 property String^ Text;
@@ -142,11 +143,11 @@ property String^ Text;
 
 ## <a name="remarks"></a>설명
 
-이 속성은이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다. 텍스트를 텍스트 문자열 핸들로 설정 합니다.
+이 속성은 이 명령에 대한 사용자 인터페이스 항목의 텍스트를 설정합니다. 텍스트를 텍스트 문자열 핸들로 설정합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxwinforms (어셈블리 atlmfc\lib\mfcmifc80.dll에 정의 됨)
+**헤더:** afxwinforms.h (어셈블리 atlmfc\lib\mfcmifc80.dll에 정의)
 
 ## <a name="see-also"></a>참고 항목
 

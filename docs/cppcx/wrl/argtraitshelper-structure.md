@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: fbba6d96106cc95910ccd9d0029cb3e9c254d7d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398838"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360774"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 구조체
 
@@ -34,22 +34,22 @@ struct ArgTraitsHelper;
 
 ## <a name="remarks"></a>설명
 
-대리자 인수의 공통 된 특징을 정의할 수 있습니다.
+대리자 인수의 일반적인 특성을 정의하는 데 도움이 됩니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-이름         | 설명
+속성         | Description
 ------------ | ------------------------------------------------------
 `methodType` | `decltype(&TDelegateInterface::Invoke)`의 동의어입니다.
 `Traits`     | `ArgTraits<methodType>`의 동의어입니다.
 
 ### <a name="public-constants"></a>공용 상수
 
-이름                           | 설명
+속성                           | Description
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[ArgTraitsHelper::args](#args) | 데 도움이 됩니다 [argtraits:: Args](#args) 매개 변수 개수를 유지는 `Invoke` 대리자 인터페이스의 메서드입니다.
+[아르그트레이어헬어::아르그](#args) | [ArgTraits::args](#args) 대리자 인터페이스의 `Invoke` 메서드에 매개 변수 의 수를 유지 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -59,9 +59,9 @@ struct ArgTraitsHelper;
 
 **헤더:** event.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="args"></a>ArgTraitsHelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a>아르그트레이어헬어::아르그
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -71,4 +71,4 @@ static const int args = Traits::args;
 
 ### <a name="remarks"></a>설명
 
-데 도움이 됩니다 `ArgTraitsHelper::args` 매개 변수 개수를 유지는 `Invoke` 대리자 인터페이스의 메서드입니다.
+대리자 인터페이스의 `ArgTraitsHelper::args` `Invoke` 메서드에서 매개 변수 수를 유지하는 데 도움이 됩니다.

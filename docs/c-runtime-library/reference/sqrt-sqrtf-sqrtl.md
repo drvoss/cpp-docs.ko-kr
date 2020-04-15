@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355577"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -72,13 +74,15 @@ long double sqrtl(
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하는 **sqrt** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **sqrt** 는 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **부동 부동** 또는 **긴** **이중** 형식을 취하는 **sqrt의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **sqrt는** 항상 **두 배를**가져와 반환합니다.
 
-## <a name="return-value"></a>반환 값
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
-**Sqrt** 함수는 *x*의 제곱근을 반환 합니다. 기본적으로 *x* 가 음수 이면 **Sqrt** 가 무한 NaN을 반환 합니다.
+## <a name="return-value"></a>Return Value
 
-|입력|SEH 예외|**_matherr** 발생할|
+**sqrt** 함수는 *x의*제곱근을 반환합니다. 기본적으로 *x가* 음수인 경우 **sqrt는** 무기한 NaN을 반환합니다.
+
+|입력|SEH 예외|**_matherr** 예외|
 |-----------|-------------------|--------------------------|
 |± QNAN,IND|없음|_DOMAIN|
 |- ∞|없음|_DOMAIN|
@@ -86,9 +90,9 @@ long double sqrtl(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt,** **sqrtf,** **sqrtl**|\<math.h>|\<cmath>|
 
 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376315"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 런타임 및 관리형 템플릿(C++/CLI 및 C++/CX)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-C++/CLI 언어 구문으로 참조된 어셈블리에 정의된 템플릿을 액세스할 수 없지만 리플렉션을 사용할 수 있습니다. 템플릿을 인스턴스화하지 않으면 메타데이터로 내보낼 수 없습니다. 템플릿을 인스턴스화할 경우 참조된 멤버 함수만 메타데이터에 표시됩니다.
+C++/CLI 언어 구문으로 참조된 어셈블리에 정의된 템플릿을 액세스할 수 없지만 리플렉션을 사용할 수 있습니다. 템플릿이 인스턴스화되지 않으면 메타데이터에서 내보내지지 않습니다. 템플릿을 인스턴스화할 경우 참조된 멤버 함수만 메타데이터에 표시됩니다.
 
 ```cpp
 // managed_templates_3.cpp

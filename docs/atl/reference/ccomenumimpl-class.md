@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 7d26c59a38bfe43e49215fbb6108453e10ca6dea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 965e0a8bf6c890882754b60e2785832933d1c52c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497180"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327858"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 클래스
 
-이 클래스는 열거 되는 항목이 배열에 저장 되는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다.
+이 클래스는 열거되는 항목이 배열에 저장되는 COM 열거자 인터페이스에 대한 구현을 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,61 +39,61 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>매개 변수
 
-*하단*<br/>
-COM 열거자 인터페이스입니다. 예는 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 을 참조 하세요.
+*기본*<br/>
+COM 열거자 인터페이스입니다. 예는 [IEnumString을](/windows/win32/api/objidl/nn-objidl-ienumstring) 참조하십시오.
 
 *piid*<br/>
-열거자 인터페이스의 인터페이스 ID에 대 한 포인터입니다.
+열거자 인터페이스의 인터페이스 ID에 대한 포인터입니다.
 
 *T*<br/>
-열거자 인터페이스에 의해 노출 되는 항목의 형식입니다.
+열거자 인터페이스에서 노출되는 항목의 유형입니다.
 
 *복사*<br/>
-유형이 같은 [복사 정책 클래스](../../atl/atl-copy-policy-classes.md)입니다.
+균일 한 [복사 정책 클래스입니다.](../../atl/atl-copy-policy-classes.md)
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|생성자입니다.|
-|[CComEnumImpl::~CComEnumImpl](#dtor)|소멸자입니다.|
+|[CComEnumImpl:::~CComEnumImpl](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CComEnumImpl::Clone](#clone)|**Clone** 열거 인터페이스 메서드의 구현입니다.|
+|[CComEnumImpl::클론](#clone)|**복제** 인터페이스 메서드의 구현입니다.|
 |[CComEnumImpl::Init](#init)|열거자를 초기화합니다.|
-|[CComEnumImpl::Next](#next)|**다음**의 구현입니다.|
-|[CComEnumImpl::Reset](#reset)|**Reset**의 구현입니다.|
-|[CComEnumImpl::Skip](#skip)|**Skip**의 구현입니다.|
+|[CComEnumImpl::다음](#next)|**다음**의 구현 .|
+|[CComEnumImpl::재설정](#reset)|**재설정**의 구현 .|
+|[CComEnumImpl::건너뛰기](#skip)|**건너뛰기**의 구현 .|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CComEnumImpl::m_begin](#m_begin)|배열의 첫 번째 항목에 대 한 포인터입니다.|
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|를 통해 `Init`전달 된 복사 플래그입니다.|
-|[CComEnumImpl::m_end](#m_end)|배열의 마지막 항목 바로 다음 위치에 대 한 포인터입니다.|
-|[CComEnumImpl::m_iter](#m_iter)|배열의 현재 항목에 대 한 포인터입니다.|
-|[CComEnumImpl::m_spUnk](#m_spunk)|열거 되는 컬렉션을 제공 하는 개체의 포인터입니다.`IUnknown`|
+|[CComEnumImpl::m_begin](#m_begin)|배열의 첫 번째 항목에 대한 포인터입니다.|
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|를 통과한 `Init`복사 플래그입니다.|
+|[CComEnumImpl::m_end](#m_end)|배열의 마지막 항목 바로 너머의 위치에 대한 포인터입니다.|
+|[CComEnumImpl::m_iter](#m_iter)|배열의 현재 항목에 대한 포인터입니다.|
+|[CComEnumImpl::m_spUnk](#m_spunk)|수집을 제공하는 개체의 `IUnknown` 포인터가 포함됩니다.|
 
 ## <a name="remarks"></a>설명
 
-메서드 구현에 대 한 예제는 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 를 참조 하세요. `CComEnumImpl`열거 되는 항목이 배열에 저장 되는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다. 이 클래스는 C++ 표준 라이브러리 컨테이너 `IEnumOnSTLImpl` 를 기반으로 하는 열거자 인터페이스의 구현을 제공 하는 클래스와 유사 합니다.
+메서드 구현의 예는 [IEnumString을](/windows/win32/api/objidl/nn-objidl-ienumstring) 참조하십시오. `CComEnumImpl`은 열거되는 항목이 배열에 저장되는 COM 열거체 인터페이스에 대한 구현을 제공합니다. 이 클래스는 C++ 표준 라이브러리 컨테이너를 `IEnumOnSTLImpl` 기반으로 열거자 인터페이스의 구현을 제공하는 클래스와 유사합니다.
 
 > [!NOTE]
->  `CComEnumImpl` 및`IEnumOnSTLImpl`간의 추가 차이점에 대 한 자세한 내용은 [CComEnumImpl:: Init](#init)를 참조 하세요.
+> 및 `CComEnumImpl` `IEnumOnSTLImpl`의 추가 차이점에 대한 자세한 내용은 [CComEnumImpl::Init](#init)을 참조하십시오.
 
-일반적으로이 인터페이스 구현에서 파생 하 여 사용자 고유의 열거자 클래스를 만들 필요는 *없습니다* . 배열에 따라 ATL 제공 열거자를 사용 하려는 경우 [CComEnum](../../atl/reference/ccomenum-class.md)의 인스턴스를 만드는 것이 더 일반적입니다.
+일반적으로 이 인터페이스 구현에서 파생하여 고유한 열거자 클래스를 만들 필요가 *없습니다.* 배열을 기반으로 ATL 제공 열거체를 사용하려는 경우 [CComEnum](../../atl/reference/ccomenum-class.md)의 인스턴스를 만드는 것이 더 일반적입니다.
 
-그러나 사용자 지정 열거자를 제공 해야 하는 경우 (예: 열거자 인터페이스 외에 인터페이스를 노출 하는 경우)이 클래스에서 파생 될 수 있습니다. 이 경우 사용자 고유의 구현을 제공 하기 위해 [CComEnumImpl:: Clone](#clone) 메서드를 재정의 해야 할 수 있습니다.
+그러나 사용자 지정 열거자(예: 열거자 인터페이스 외에 인터페이스를 노출하는 열거체)를 제공해야 하는 경우 이 클래스에서 파생할 수 있습니다. 이 경우 자체 구현을 제공 하려면 [CComEnumImpl::복제](#clone) 메서드를 재정의 해야 합니다.
 
-자세한 내용은 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)를 참조 하세요.
+자세한 내용은 [ATL 컬렉션 및 열거자를](../../atl/atl-collections-and-enumerators.md)참조하십시오.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `Base`
 
@@ -101,9 +101,9 @@ COM 열거자 인터페이스입니다. 예는 [IEnumString](/windows/win32/api/
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:**
+**헤더:** atlcom.h
 
-##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
 
 생성자입니다.
 
@@ -111,7 +111,7 @@ COM 열거자 인터페이스입니다. 예는 [IEnumString](/windows/win32/api/
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:::~CComEnumImpl
 
 소멸자입니다.
 
@@ -119,9 +119,9 @@ CComEnumImpl();
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  CComEnumImpl::Init
+## <a name="ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init
 
-열거자 인터페이스에 대 한 포인터를 클라이언트에 다시 전달 하기 전에이 메서드를 호출 해야 합니다.
+모든 클라이언트에 다시 열거자 인터페이스에 포인터를 전달 하기 전에이 메서드를 호출 해야 합니다.
 
 ```
 HRESULT Init(
@@ -133,29 +133,29 @@ HRESULT Init(
 
 ### <a name="parameters"></a>매개 변수
 
-*begin*<br/>
-열거할 항목을 포함 하는 배열의 첫 번째 요소에 대 한 포인터입니다.
+*시작*<br/>
+열거할 항목을 포함하는 배열의 첫 번째 요소에 대한 포인터입니다.
 
 *end*<br/>
-열거할 항목이 들어 있는 배열의 마지막 요소 바로 다음 위치에 대 한 포인터입니다.
+열거할 항목을 포함하는 배열의 마지막 요소를 벗어난 위치에 대한 포인터입니다.
 
 *pUnk*<br/>
-진행 열거자의 수명 동안 유지 해야 하는 개체의 포인터입니다.`IUnknown` 이러한 개체가 없는 경우 NULL을 전달 합니다.
+【인】 열거자의 수명 동안 살아 있어야 하는 개체의 `IUnknown` 포인터입니다. 이러한 개체가 없는 경우 NULL을 전달합니다.
 
-*flags*<br/>
-열거자가 배열의 소유권을 가져와야 하는지 아니면 복사를 만들지를 지정 하는 플래그입니다. 가능한 값은 아래에 설명 되어 있습니다.
+*플래그*<br/>
+열거자가 배열의 소유권을 가져가거나 복사본을 만들어야 하는지 여부를 지정하는 플래그입니다. 가능한 값은 아래에 설명되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 한 번만 호출 합니다. 즉, 열거자를 초기화 하 고 사용한 다음이를 throw 합니다.
+이 메서드를 한 번만 호출합니다 - 열거체를 초기화하고 사용한 다음 버리지 않습니다.
 
-다른 개체에 보관 된 배열의 항목에 대 한 포인터를 전달 하 고 데이터를 복사 하도록 열거자에 요청 하지 않는 경우 *pUnk* 매개 변수를 사용 하 여 열거자에 필요한 경우에만 개체와 해당 개체를 사용할 수 있도록 합니다. 열거자는 개체에 대 한 COM 참조를 보유 하 여 활성 상태로 유지 합니다. COM 참조는 열거자가 제거 될 때 자동으로 해제 됩니다.
+다른 개체에 있는 배열의 항목에 대한 포인터를 전달하는 경우(열거체에게 데이터를 복사하도록 요청하지 않는 경우) *pUnk* 매개 변수를 사용하여 열거자가 필요로 하는 한 해당 개체와 배열을 사용할 수 있도록 할 수 있습니다. 열거자는 단순히 살아 있는 상태로 유지하기 위해 개체에 COM 참조를 보유합니다. COM 참조는 열거자가 소멸되면 자동으로 해제됩니다.
 
-*Flags* 매개 변수를 사용 하면 열거자가 전달 된 배열 요소를 처리 하는 방법을 지정할 수 있습니다. *플래그* 는 아래에 표시 된 `CComEnumFlags` 열거형의 값 중 하나를 사용할 수 있습니다.
+*플래그* 매개 변수를 사용하면 열거자가 전달된 배열 요소를 처리하는 방법을 지정할 수 있습니다. *플래그는* 아래 `CComEnumFlags` 열거형의 값 중 하나를 취할 수 있습니다.
 
 ```
 enum CComEnumFlags
@@ -166,18 +166,18 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy`는 배열의 수명이 열거자에 의해 제어 되지 않음을 의미 합니다. 이 경우 배열이 정적 이거나 *pUnk* 으로 식별 되는 개체가 더 이상 필요 하지 않을 때 배열을 해제 해야 합니다.
+`AtlFlagNoCopy`즉, 배열의 수명이 열거형에 의해 제어되지 않음을 의미합니다. 이 경우 배열이 정적이거나 *pUnk로* 식별된 개체가 더 이상 필요하지 않을 때 배열을 해제해야 합니다.
 
-`AtlFlagTakeOwnership`는 열거자가 배열의 소멸을 제어 함을 의미 합니다. 이 경우 배열은 **새**를 사용 하 여 동적으로 할당 되어야 합니다. 열거자가 해당 소멸자에서 배열을 삭제 합니다. 일반적으로 *pUnk*에 대해 NULL을 전달 합니다. 그러나 어떤 이유로 든 열거자 소멸에 대 한 알림이 필요한 경우에도 유효한 포인터를 전달할 수 있습니다.
+`AtlFlagTakeOwnership`즉, 배열의 소멸은 열거자가 제어해야 한다는 것을 의미합니다. 이 경우 배열은 **새**을 사용하여 동적으로 할당되어 있어야 합니다. 열거자는 소멸자에서 배열을 삭제합니다. 일반적으로 어떤 이유로 열거자의 파괴에 대한 알림을 받아야하는 경우 유효한 포인터를 통과 할 수 있지만 *pUnk에*대해 NULL을 전달합니다.
 
-`AtlFlagCopy`로 `Init`전달 된 배열을 복사 하 여 새 배열을 만들 수 있음을 의미 합니다. 새 배열의 수명은 열거자에 의해 제어 됩니다. 열거자가 해당 소멸자에서 배열을 삭제 합니다. 일반적으로 *pUnk*에 대해 NULL을 전달 합니다. 그러나 어떤 이유로 든 열거자 소멸에 대 한 알림이 필요한 경우에도 유효한 포인터를 전달할 수 있습니다.
+`AtlFlagCopy`에 전달된 배열을 복사하여 새 배열을 `Init`만들어야 한다는 의미입니다. 새 배열의 수명은 열거자가 제어해야 합니다. 열거자는 소멸자에서 배열을 삭제합니다. 일반적으로 어떤 이유로 열거자의 파괴에 대한 알림을 받아야하는 경우 유효한 포인터를 통과 할 수 있지만 *pUnk에*대해 NULL을 전달합니다.
 
 > [!NOTE]
->  이 메서드의 프로토타입은 배열 요소를 형식 `T`으로 지정 합니다. 여기서는 `T` 클래스에 대 한 템플릿 매개 변수로 정의 됩니다. 이는 COM 인터페이스 메서드 [CComEnumImpl:: Next](#next)를 통해 노출 되는 형식과 동일 합니다. 이는 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)와 달리이 클래스는 다른 저장소 및 노출 된 데이터 형식을 지원 하지 않는다는 의미입니다. 배열에 있는 요소의 데이터 형식은 COM 인터페이스를 통해 노출 되는 데이터 형식과 동일 해야 합니다.
+> 이 메서드의 프로토타입은 배열 요소를 클래스에 `T`대한 `T` 템플릿 매개 변수로 정의된 형식의 요소로 지정합니다. 이것은 COM 인터페이스 방법 [CComEnumImpl::Next를](#next)통해 노출되는 것과 동일한 형식입니다. 이는 [IEnumOnSTLImpl과](../../atl/reference/ienumonstlimpl-class.md)달리 이 클래스는 다른 저장소 및 노출된 데이터 형식을 지원하지 않는다는 의미입니다. 배열의 요소의 데이터 형식은 COM 인터페이스를 통해 노출된 데이터 형식과 같아야 합니다.
 
-##  <a name="clone"></a>  CComEnumImpl::Clone
+## <a name="ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::클론
 
-이 메서드는 형식의 `CComEnum`개체를 만들고 현재 개체에서 사용 하는 동일한 배열 및 반복기를 사용 하 여 초기화 한 다음 새로 만든 개체에 대 한 인터페이스를 반환 하 여 **Clone** 메서드의 구현을 제공 합니다.
+이 메서드는 형식의 **Clone** `CComEnum`개체를 만들고 현재 개체에서 사용하는 동일한 배열 및 반복기로 초기화하고 새로 만든 개체에서 인터페이스를 반환하여 복제 메서드의 구현을 제공합니다.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -186,59 +186,59 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>매개 변수
 
 *ppEnum*<br/>
-제한이 현재 열거자에서 복제 된 새로 만든 개체의 열거자 인터페이스입니다.
+【아웃】 새로 생성된 개체의 열거자 인터페이스가 현재 열거체에서 복제되었습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-복제 된 열거자는 원래 열거자에서 사용 하는 데이터의 자체 복사본을 만들거나 소유권을 받지 않습니다. 필요한 경우 복제 된 열거자는 원본 열거자를 활성 상태로 유지 하 여 (COM 참조 사용) 데이터를 필요할 때까지 사용할 수 있도록 합니다.
+복제된 열거자는 원래 열거자가 사용하는 데이터의 자체 복사본(또는 소유권을 가져가지 않습니다)을 만들지 않습니다. 필요한 경우 복제된 열거자는 원래 열거자를 COM 참조를 사용하여 살아 있게 유지하여 필요한 기간 동안 데이터를 사용할 수 있도록 합니다.
 
-##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk
+## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk
 
-이 스마트 포인터는 [CComEnumImpl:: Init](#init)에 전달 된 개체에 대 한 참조를 유지 관리 하 여 열거자의 수명 동안 활성 상태로 유지 되도록 합니다.
+이 스마트 포인터는 [CComEnumImpl::Init에](#init)전달된 개체에 대한 참조를 유지관리하여 열거자의 수명 동안 살아 있게 합니다.
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a>CComEnumImpl::m_begin
 
-열거할 항목이 들어 있는 배열의 마지막 요소 바로 다음 위치에 대 한 포인터입니다.
+열거할 항목을 포함하는 배열의 마지막 요소를 벗어난 위치에 대한 포인터입니다.
 
 ```
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+## <a name="ccomenumimplm_end"></a><a name="m_end"></a>CComEnumImpl::m_end
 
-열거할 항목을 포함 하는 배열의 첫 번째 요소에 대 한 포인터입니다.
+열거할 항목을 포함하는 배열의 첫 번째 요소에 대한 포인터입니다.
 
 ```
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a>CComEnumImpl::m_iter
 
-열거할 항목을 포함 하는 배열의 현재 요소에 대 한 포인터입니다.
+열거할 항목을 포함하는 배열의 현재 요소에 대한 포인터입니다.
 
 ```
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags
+## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags
 
-[CComEnumImpl:: Init](#init)에 전달 된 플래그입니다.
+플래그는 [CComEnumImpl에 전달 ::Init](#init).
 
 ```
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>  CComEnumImpl::Next
+## <a name="ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::다음
 
-이 메서드는 **다음** 메서드의 구현을 제공 합니다.
+이 메서드는 **Next** 메서드의 구현을 제공합니다.
 
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,33 +247,33 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="parameters"></a>매개 변수
 
 *celt*<br/>
-진행 요청 된 요소의 수입니다.
+【인】 요청된 요소 수입니다.
 
 *rgelt*<br/>
-제한이 요소로 채워질 배열입니다.
+【아웃】 요소로 채워질 배열입니다.
 
 *pceltFetched*<br/>
-제한이 *Rgelt*에서 실제로 반환 된 요소의 수입니다. *Celt* 요소가 목록에 남아 있는 경우 *celt* 보다 적을 수 있습니다.
+【아웃】 실제로 *rgelt로*반환된 요소의 수입니다. 켈트 원소보다 적은 수의 *셀트* 원소가 목록에 남아 있는 경우 이는 *셀트보다* 적을 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
-##  <a name="reset"></a>  CComEnumImpl::Reset
+## <a name="ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::재설정
 
-이 메서드는 **Reset** 메서드의 구현을 제공 합니다.
+이 메서드는 **재설정** 메서드의 구현을 제공합니다.
 
 ```
 STDMETHOD(Reset)(void);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
-##  <a name="skip"></a>  CComEnumImpl::Skip
+## <a name="ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::건너뛰기
 
-이 메서드는 **Skip** 메서드의 구현을 제공 합니다.
+이 메서드는 **건너뛰기** 메서드의 구현을 제공합니다.
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -282,17 +282,17 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>매개 변수
 
 *celt*<br/>
-진행 건너뛸 요소의 수입니다.
+【인】 건너뛸 요소 의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-*Celt* 가 0 인 경우 E_INVALIDARG를 반환 하 고, *celt* 개 미만의 요소가 반환 되 면 S_FALSE를 반환 하 고, 그렇지 않으면 S_OK를 반환 합니다.
+*셀트가* 0이면 E_INVALIDARG 반환되고, *셀트* 원보다 S_FALSE 반환되고, 그렇지 않으면 반환S_OK 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IEnumOnSTLImpl 클래스](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [CComEnum 클래스](../../atl/reference/ccomenum-class.md)<br/>

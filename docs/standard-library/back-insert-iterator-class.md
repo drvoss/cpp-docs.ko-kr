@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376906"
 ---
-# <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
+# <a name="back_insert_iterator-class"></a>back_insert_iterator 클래스
 
 출력 반복기의 요구 사항을 충족하는 반복기 어댑터에 대해 설명합니다. 반복기 어댑터는 요소를 덮어쓰는 것이 아니라, 시퀀스 끝 부분에 요소를 삽입하므로 C++ 시퀀스 컨테이너의 반복기가 제공한 덮어쓰기 의미 체계와 다른 의미 체계를 제공합니다. `back_insert_iterator` 클래스는 컨테이너 형식에 대해 템플릿화됩니다.
 
@@ -39,32 +39,32 @@ class back_insert_iterator;
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |형식 이름|Description|
 |-|-|
 |[container_type](#container_type)|`back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.|
-|[reference](#reference)|`back_insert_iterator`에 대한 참조를 제공하는 형식입니다.|
+|[참조](#reference)|`back_insert_iterator`에 대한 참조를 제공하는 형식입니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[operator*](#op_star)|뒤로 삽입을 \* 위해 출력 반복기 식을 `i`  =  `x` 구현 하는 데 사용 되는 역참조 연산자입니다.|
-|[operator++](#op_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|뒤로 삽입을 \* 위해 출력 반복기 식을 `i`  =  `x` 구현 하는 데 사용 되는 할당 연산자입니다.|
+|[연산자*](#op_star)|역참조 연산자는 역삽입을 위한 출력 이터레이터 \* `i`  =  `x` 식을 구현하는 데 사용됩니다.|
+|[연산자++](#op_add_add)|값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.|
+|[연산자 =](#op_eq)|할당 연산자는 역삽입에 대한 \* `i`  =  `x` 출력 이터레이터 식을 구현하는 데 사용됩니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**: \<iterator>
+**헤더** \<: 이터레이터>
 
 **네임스페이스:** std
 
-## <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator::back_insert_iterator
 
 컨테이너의 마지막 요소 다음에 요소를 삽입하는 `back_insert_iterator`를 만듭니다.
 
@@ -74,10 +74,10 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>매개 변수
 
-*_ 계속*\
+*_Cont*\
 `back_insert_iterator`가 요소를 삽입할 컨테이너입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수 컨테이너에 대한 `back_insert_iterator`입니다.
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="container_type"></a>  back_insert_iterator::container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:container_type
 
 `back_insert_iterator`에 대한 컨테이너를 제공하는 형식입니다.
 
@@ -183,21 +183,21 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator::연산자\*
 
-출력 반복기 식 \* *i* = *x*을 구현하는 데 사용되는 역참조 연산자입니다.
+출력 \* 이터레이터 식 *i* = *x를*구현하는 데 사용되는 역참조 연산자 .
 
 ```cpp
 back_insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨테이너의 뒤쪽에 삽입된 요소에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
+출력 이터레이터 식 =  ** \*Iter****값을**구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="op_add_add"></a>  back_insert_iterator::operator++
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator::연산자++
 
 값을 저장할 다음 위치에 `back_insert_iterator`를 증가시킵니다.
 
@@ -252,7 +252,7 @@ back_insert_iterator<Container>& operator++();
 back_insert_iterator<Container> operator++(int);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 값을 저장할 수 있는 다음 위치의 주소를 지정하는 `back_insert_iterator`입니다.
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="op_eq"></a>  back_insert_iterator::operator=
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator::연산자=
 
 컨테이너의 백 엔드에 값을 추가하거나 푸시합니다.
 
@@ -315,10 +315,10 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>매개 변수
 
-*짧은*\
+*발*\
 컨테이너에 삽입할 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨테이너의 뒤쪽에 삽입된 마지막 요소에 대한 참조입니다.
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="reference"></a>  back_insert_iterator::reference
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator::참조
 
 `back_insert_iterator`에 대한 참조를 제공하는 형식입니다.
 
@@ -421,8 +421,8 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<>](../standard-library/iterator.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

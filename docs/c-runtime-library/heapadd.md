@@ -24,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351326"
 ---
 # <a name="_heapadd"></a>_heapadd
 
 힙에 메모리를 추가합니다.
 
 > [!IMPORTANT]
->  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
+> 이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -52,7 +52,7 @@ int _heapadd(
 *memblock*<br/>
 힙 메모리에 대한 포인터입니다.
 
-*size*<br/>
+*크기*<br/>
 추가할 메모리 크기(바이트)입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -76,7 +76,7 @@ Visual C++ 버전 4.0부터 새 디버깅 기능을 지원하기 위해 기본 �
 ## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../c-runtime-library/memory-allocation.md)<br/>
-[free](../c-runtime-library/reference/free.md)<br/>
+[무료](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

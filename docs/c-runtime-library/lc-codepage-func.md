@@ -1,8 +1,9 @@
 ---
 title: ___lc_codepage_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_codepage_func
+- _o____lc_codepage_func
 api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: dbadf8239652f5c96e7177dedd91d340e545b9fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944918"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351229"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -49,6 +51,8 @@ UINT ___lc_codepage_func(void);
 *코드 페이지*는 개별 문자에 대한 싱글바이트 또는 더블바이트 코드의 매핑입니다. 여러 코드 페이지에는 일반적으로 언어 또는 언어 그룹에 대해 사용자 지정된 여러 특수 문자가 들어 있습니다. 코드 페이지에 대한 자세한 내용은 [Code Pages](../c-runtime-library/code-pages.md)를 참조하세요.
 
 내부 CRT 함수는 구현과 관련되어 있으며 각 릴리스 시 변경될 수 있습니다. 따라서 사용자 코드에는 사용하지 않는 것이 좋습니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 

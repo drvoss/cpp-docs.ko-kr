@@ -5,20 +5,20 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425174"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373390"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; 연산자
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[연산자==](#op_eq_eq)|
+|[연산자!=](#op_neq)|[연산자==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 두 `scoped_allocator_adaptor` 개체가 다른지 비교합니다.
 
@@ -41,7 +41,7 @@ bool operator!=(
 
 `!(left == right)`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 두 `scoped_allocator_adaptor` 개체가 같은지 테스트합니다.
 

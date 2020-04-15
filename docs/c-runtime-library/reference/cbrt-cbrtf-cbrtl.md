@@ -1,10 +1,12 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333576"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -66,25 +69,27 @@ long double cbrtl(
 *x*<br/>
 부동 소수점 값
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Cbrt** 함수는 *x*의 큐브 루트를 반환 합니다.
+**cbrt** 함수는 *x의*큐브 루트를 반환합니다.
 
-|입력|SEH 예외|**_matherr** 발생할|
+|입력|SEH 예외|**_matherr** 예외|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|없음|없음|
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하는 **cbrt** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **cbrt** 는 항상 **double**을 사용 하 고 반환 합니다.
+C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** 형식을 취하는 **cbrt의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **cbrt는** 항상 **두 배를**가져와 반환합니다.
+
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt,** **cbrtf,** **cbrtl**|\<math.h>|\<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -110,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

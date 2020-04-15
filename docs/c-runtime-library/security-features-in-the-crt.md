@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361003"
 ---
 # <a name="security-features-in-the-crt"></a>CRT의 보안 기능
 
@@ -52,7 +52,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`를 1로 정의하면 `strcpy` 호출이 버퍼 오버런을 방지하는 `strcpy_s`로 변경되어 경고가 제거됩니다. 자세한 내용은 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`를 1로 정의하면 `strcpy` 호출이 버퍼 오버런을 방지하는 `strcpy_s`로 변경되어 경고가 제거됩니다. 자세한 내용은 [안전한 템플릿 오버로드](../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
 사용되지 않는 함수 중 안전한 템플릿 오버로드가 없는 함수의 경우 안전한 버전을 사용하도록 수동으로 코드를 업데이트해야 합니다.
 
@@ -62,13 +62,13 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 다음은 보안 기능 중 일부입니다.
 
-- `Parameter Validation`. 안전한 함수와 많은 기존 버전의 함수에서 모두 CRT 함수에 전달되는 매개 변수의 유효성이 검사됩니다. 이러한 유효성 검사 시에는 다음이 확인됩니다.
+- `Parameter Validation`. 안전한 함수와 많은 기존 버전의 함수에서 모두 CRT 함수에 전달되는 매개 변수의 유효성이 검사됩니다. 이러한 유효성 검사는 다음과 같습니다.
 
-   - 함수에 전달된 **NULL** 값
+  - 함수에 전달된 **NULL** 값
 
-   - 열거형 값의 유효성
+  - 열거형 값의 유효성
 
-   - 정수 계열 값이 유효 범위 내에 있는지 여부
+  - 정수 계열 값이 유효 범위 내에 있는지 여부
 
 - 자세한 내용은 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)를 참조하세요.
 
