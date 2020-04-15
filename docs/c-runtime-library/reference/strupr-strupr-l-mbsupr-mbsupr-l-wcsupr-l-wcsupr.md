@@ -1,6 +1,6 @@
 ---
 title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsupr_l
 - _mbsupr
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr
 - _wcsupr_l
 - _strupr
+- _o__mbsupr
+- _o__mbsupr_l
+- _o__strupr
+- _o__strupr_l
+- _o__wcsupr
+- _o__wcsupr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 8078bddd022032196c0e10cd54b0ad68d9c71419
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957576"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362887"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 문자열을 대문자로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **_mbsupr** 및 **_mbsupr_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsupr** 및 **_mbsupr_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -132,27 +139,29 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*Str*<br/>
 대문자로 변환할 문자열입니다.
 
-*locale*<br/>
+*로캘*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 변경된 문자열에 대한 포인터를 반환합니다. 수정은 현재 위치에서 수행되므로 반환되는 포인터는 입력 인수로 전달되는 포인터와 같습니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**_Strupr** 함수는 *str* 의 각 소문자를 대문자로 변환 합니다. 변환은 로캘의 **LC_CTYPE** 범주 설정에 따라 결정 됩니다. 다른 문자는 영향을 받지 않습니다. **LC_CTYPE**에 대 한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_strupr** 함수는 *str의* 각 소문자가 대문자로 변환됩니다. 변환은 로캘의 **LC_CTYPE** 범주 설정에 의해 결정됩니다. 다른 문자는 영향을 받지 않습니다. **LC_CTYPE**대한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)를 참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-**_wcsupr** 및 **_mbsupr** 는 **_strupr**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsupr** 의 인수와 반환 값은 와이드 문자 문자열입니다. **_mbsupr** 의 해당 문자는 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_wcsupr** **_mbsupr** **_strupr**와이드 문자 및 멀티 바이트 문자 버전입니다. **_wcsupr** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsupr** 그 다중 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-*Str* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 원래 문자열을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+*str이* null 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 원래 문자열을 반환하고 **errno를** **EINVAL로**설정합니다.
 
-C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -165,15 +174,15 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 |-------------|---------------------|
 |**_strupr**, **_strupr_l**|\<string.h>|
 |**_wcsupr**, **_wcsupr_l**|\<string.h> 또는 \<wchar.h>|
-|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
+|**_mbsupr,** **_mbsupr_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [로캘](../../c-runtime-library/locale.md)<br/>
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
