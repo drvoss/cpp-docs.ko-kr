@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: '방법: 대상 프레임워크 및 플랫폼 도구 집합 수정'
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: '연습: 정적 라이브러리 만들기 및 사용(C++)'
+    - name: '연습: 정적 라이브러리 만들기 및 사용 (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: Visual Studio에서 C++ DLL 빌드
       expanded: false
@@ -6193,7 +6193,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: 문자열
+            - name: String
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: CRT 초기화
                   href: c-runtime-library/crt-initialization.md
+                - name: CRT의 전역 상태
+                  href: c-runtime-library/global-state.md
             - name: 범주별 유버니설 C 런타임 루틴
               expanded: false
               items:
