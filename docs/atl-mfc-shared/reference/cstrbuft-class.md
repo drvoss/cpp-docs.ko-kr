@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 84c67aa8ea819f420368a72a2374f800f3d89055
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71d7b6f7d53e9613b1ac26013d73c1dbd1ef0aab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317642"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746932"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 클래스
 
@@ -196,7 +196,7 @@ GetBuffer 시간에 문자열 개체의 길이를 설정합니다.
 
 문자 버퍼의 길이를 설정합니다.
 
-```
+```cpp
 void SetLength(int nLength);
 ```
 
@@ -224,7 +224,7 @@ typedef CSimpleStringT<TCharType> StringType;
 
 `TCharType`은 클래스 템플릿을 전문으로 하는 데 사용되는 문자 유형입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 공유 클래스](../../atl-mfc-shared/atl-mfc-shared-classes.md)

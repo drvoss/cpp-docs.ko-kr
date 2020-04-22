@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330060"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746006"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 클래스
 
@@ -37,7 +37,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |||
 |-|-|
 |[할당](#allocate)|메모리 블록을 할당하려면 이 메서드를 호출합니다.|
-|[무료](#free)|메모리 블록을 해제하려면 이 메서드를 호출합니다.|
+|[Free](#free)|메모리 블록을 해제하려면 이 메서드를 호출합니다.|
 |[GetSize](#getsize)|할당된 메모리 블록의 크기를 검색하려면 이 메서드를 호출합니다.|
 |[재할당](#reallocate)|메모리 블록을 재할당하려면 이 메서드를 호출합니다.|
 
@@ -60,7 +60,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 메모리 블록을 할당하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ void* Allocate(size_t nBytes) throw();
 
 메모리 블록을 해제하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ size_t GetSize(void* p) throw();
 
 이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 
@@ -967,6 +967,6 @@ STDMETHOD(CreateControlLicEx)(
 
 을 사용하는 `IAxWinHostWindowLic::CreateControlLicEx`샘플은 [ATL AXHost를 사용하여 ActiveX 컨트롤 호스팅을](../../atl/hosting-activex-controls-using-atl-axhost.md) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

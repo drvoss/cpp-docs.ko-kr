@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317491"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746599"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 클래스
 
@@ -39,7 +39,7 @@ __interface IAtlStringMgr
 |-|-|
 |[할당](#allocate)|새 문자열 데이터 구조를 할당 하려면이 메서드를 호출 합니다.|
 |[복제](#clone)|이 메서드를 호출하여 포인터를 새 문자열 관리자로 `CSimpleStringT`반환하여 의 다른 인스턴스와 함께 사용할 수 있습니다.|
-|[무료](#free)|문자열 데이터 구조를 해제하려면 이 메서드를 호출합니다.|
+|[Free](#free)|문자열 데이터 구조를 해제하려면 이 메서드를 호출합니다.|
 |[게닐스트링](#getnilstring)|빈 문자열 `CStringData` 개체에서 사용되는 개체에 대한 포인터를 반환합니다.|
 |[재할당](#reallocate)|문자열 데이터 구조를 재할당하려면 이 메서드를 호출합니다.|
 
@@ -108,7 +108,7 @@ IAtlStringMgr* Clone() throw();
 
 문자열 데이터 구조를 해제합니다.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 
@@ -181,7 +181,7 @@ CStringData* Reallocate(
 > [!NOTE]
 > 사용 예제는 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 공유 클래스](../../atl-mfc-shared/atl-mfc-shared-classes.md)

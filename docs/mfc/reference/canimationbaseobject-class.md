@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 9581ea142c6f87ae12665374a483abc00763ad97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1874ddfdd26b8dd371e32f7e68ea8f668c47d8e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371126"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750213"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 클래스
 
@@ -246,7 +246,7 @@ TRUE 전환이 성공적으로 생성된 경우 그렇지 않으면 거짓.
 
 상위 애니메이션 컨트롤러에서 애니메이션 개체를 분리합니다.
 
-```
+```cpp
 void DetachFromController();
 ```
 
@@ -425,7 +425,7 @@ CAnimationController* m_pParentController;
 
 전환을 자동으로 삭제하는 플래그를 설정합니다.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bValue);
 ```
 
@@ -442,7 +442,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 
 새 아이디를 설정합니다.
 
-```
+```cpp
 void SetID(
     UINT32 nObjectID,
     UINT32 nGroupID = 0);
@@ -476,7 +476,7 @@ virtual void SetParentAnimationObjects();
 
 사용자 정의 데이터를 설정합니다.
 
-```
+```cpp
 void SetUserData (DWORD dwUserData);
 ```
 
@@ -489,6 +489,6 @@ void SetUserData (DWORD dwUserData);
 
 이 메서드를 사용하여 사용자 지정 데이터를 애니메이션 개체와 연결합니다. 이 데이터는 GetUserData에 의해 런타임에 나중에 검색될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

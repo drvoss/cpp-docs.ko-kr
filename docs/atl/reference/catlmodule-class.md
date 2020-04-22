@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 378c8634e00935c622f0bf5d06a4f6c50cc60cb6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfc11a95a8d5d9354279f4c71698a6bc35c7aca7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321432"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748626"
 ---
 # <a name="catlmodule-class"></a>카틀 모듈 클래스
 
@@ -222,7 +222,7 @@ IGlobalInterfaceTable* m_pGIT;
 
 모든 데이터 멤버를 해제합니다.
 
-```
+```cpp
 void Term() throw();
 ```
 
@@ -352,7 +352,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 [CAtlModule::업데이트레지스트리FromResourceD](#updateregistryfromresourced) ATL `CAtlModule::UpdateRegistryFromResourceS` 레지스트리 구성 요소에 정적 링크를 만듭니다 (레지스트라).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)<br/>

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: f3604f95c8217c7407c100671265140bbadbab78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326736"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747675"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStateless워커 클래스
 
@@ -67,7 +67,7 @@ class CNonStatelessWorker
 
 [Worker아키 유형 구현::Execute](worker-archetype.md#execute).
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
@@ -110,7 +110,7 @@ typedef Worker::RequestType RequestType;
 
 [WorkerArchetype 의 구현::종료](worker-archetype.md#terminate).
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 
@@ -118,7 +118,7 @@ void Terminate(void* /* pvParam */) throw();
 
 이 클래스에서는 정리를 수행하지 `Terminate`않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C스레드풀 클래스](../../atl/reference/cthreadpool-class.md)<br/>
 [작업자 아키타입](../../atl/reference/worker-archetype.md)<br/>

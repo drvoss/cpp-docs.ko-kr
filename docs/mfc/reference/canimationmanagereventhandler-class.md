@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: a4e97c2a1188071b5bde0781630d0dfe52e8a72f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369716"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750111"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 클래스
 
@@ -127,7 +127,7 @@ Visual Studio 2010 SP1이 필요합니다.
 
 애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -136,6 +136,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *p애니메이션 컨트롤러*<br/>
 이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

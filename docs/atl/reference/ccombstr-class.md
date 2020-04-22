@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: adaad47c49a64c6654b70fa60ef5514e104c50a5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1448a5638b263a87403edf0baca170f0f952e26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321048"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748144"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 클래스
 
@@ -242,13 +242,13 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 *src에* [m_str](#m_str) 멤버를 설정 하 여 `CComBSTR` 개체에 BSTR을 연결 합니다.
 
-```
+```cpp
 void Attach(BSTR src) throw();
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 개체에 연결할 BSTR입니다.
 
 ### <a name="remarks"></a>설명
@@ -326,10 +326,10 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *pSrc*<br/>
 [in] 복사할 문자열입니다. 유니코드 버전은 LPCOLESTR을 지정합니다. ANSI 버전은 LPCSTR을 지정합니다.
 
-*Src*<br/>
+*src*<br/>
 [in] `CComBSTR` 개체입니다.
 
-*Guid*<br/>
+*guid*<br/>
 【인】 구조에 대한 `GUID` 참조입니다.
 
 ### <a name="remarks"></a>설명
@@ -424,7 +424,7 @@ BSTR Detach() throw();
 
 [m_str](#m_str) 멤버를 해제합니다.
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -761,7 +761,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 [!code-cpp[NVC_ATL_Utilities#45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)<br/>
 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)

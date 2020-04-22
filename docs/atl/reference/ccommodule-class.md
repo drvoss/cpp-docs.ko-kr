@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 652c5f078ddbaf8d3e333f7003d6515a94dd8f83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327755"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747935"
 ---
 # <a name="ccommodule-class"></a>CComModule 클래스
 
@@ -465,7 +465,7 @@ HRESULT RevokeClassObjects() throw();
 
 ATL 7.0은 `CComModule` 더 이상 사용되지 않습니다: 자세한 내용은 [ATL 모듈 클래스를](../../atl/atl-module-classes.md) 참조하십시오.
 
-```
+```cpp
 void Term() throw();
 ```
 
@@ -688,6 +688,6 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 대체 가능한 매개 변수 및 스크립팅에 대한 자세한 내용은 [ATL 레지스트리 구성 요소(등록기관)](../../atl/atl-registry-component-registrar.md)문서를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

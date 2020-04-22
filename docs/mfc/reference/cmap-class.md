@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370090"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749080"
 ---
 # <a name="cmap-class"></a>CMap 클래스
 
@@ -211,7 +211,7 @@ UINT GetHashTableSize() const;
 
 에서 `rNextPosition`맵 요소를 검색한 `rNextPosition` 다음 업데이트하여 맵의 다음 요소를 참조합니다.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ POSITION GetStartPosition() const;
 
 해시 테이블을 초기화합니다.
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 *키* 값의 형식을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 조회할 요소를 식별하는 키를 지정합니다.
 
 *값*<br/>
@@ -375,7 +375,7 @@ VALUE& operator[](arg_key key);
 *ARG_KEY*<br/>
 키 값의 형식을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 맵에서 값을 검색하는 데 사용되는 키입니다.
 
 ### <a name="remarks"></a>설명
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 요소에 대한 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -466,7 +466,7 @@ CPair* PLookup(ARG_KEY key);
 
 전역 도우미 함수를 `DestructElements`호출하여 이 맵에서 모든 값을 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 키 의 형식을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 제거할 요소에 대한 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -510,7 +510,7 @@ BOOL RemoveKey(ARG_KEY key);
 
 기본 은 맵에 요소를 삽입하는 것을 의미합니다.
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 
@@ -519,7 +519,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 *키* 매개 변수의 형식을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 새 요소의 키를 지정합니다.
 
 *ARG_VALUE*<br/>
@@ -536,7 +536,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 
 [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

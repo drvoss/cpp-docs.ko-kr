@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330725"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746421"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 클래스
 
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW 항목을 도구 모음 보기 메뉴 또는 결과 창 컨텍스트 메뉴의 보기 하위 메뉴에 삽입할 수 있습니다.
 
-*종류*<br/>
+*type*<br/>
 【인】 개체 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.
 
 - 범위 창 컨텍스트에 대한 데이터 개체를 CCT_SCOPE.
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 【인】 메뉴 항목의 명령 식별자를 지정합니다.
 
-*종류*<br/>
+*type*<br/>
 【인】 개체 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.
 
 - 범위 창 컨텍스트에 대한 데이터 개체를 CCT_SCOPE.
@@ -189,7 +189,7 @@ CreatePropertyPages(
 *pUnk*<br/>
 【인】 노드에 `IExtendPropertySheet` 대한 컨텍스트 정보를 포함하는 개체의 인터페이스에 대한 포인터입니다.
 
-*종류*<br/>
+*type*<br/>
 【인】 개체 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.
 
 - 범위 창 컨텍스트에 대한 데이터 개체를 CCT_SCOPE.
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *p 컴포넌트*<br/>
 【아웃】 을 구현하는 개체에 대한 `IComponent`포인터입니다. 이 매개 변수는 에서 알림이 전달되지 않는 경우 `IComponent::Notify`NULL입니다.
 
-*종류*<br/>
+*type*<br/>
 【인】 개체 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.
 
 - 범위 창 컨텍스트에 대한 데이터 개체를 CCT_SCOPE.
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 이 함수를 호출하여 스냅인 개체에 대해 *pInsertionAllowed로*지정된 메뉴 삽입 플래그를 수정합니다.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ void SetMenuInsertionFlags(
 
 이 함수를 호출하여 도구 모음을 작성하기 전에 스냅인 오브젝트의 도구 모음 단추 스타일을 수정합니다.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 스냅인 개체의 컨텍스트 메뉴에 삽입하기 전에 이 함수를 호출하여 메뉴 항목을 수정합니다.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -530,6 +530,6 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 - 단추 를 누른 버튼을 누른 중입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

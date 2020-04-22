@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: ac8fcb3b8b2bd0f876cf28d58e195000112373f4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 154bfb5beb258ff26649f44f0bd4c23fb8708977
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329582"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745869"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 클래스
 
@@ -295,7 +295,7 @@ HRESULT Move(LPCRECT pRect);
 
 *bDirty*의 값에 따라 속성 페이지의 상태를 변경또는 변경되지 않은 상태로 플래그를 표시합니다.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -356,7 +356,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 [IPropertyPage::Windows](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) SDK에서 번역가속기를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [IPropertyPage2Impl 클래스](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [아이퍼프로퍼티브라우징임플 클래스](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>

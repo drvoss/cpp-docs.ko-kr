@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318938"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748744"
 ---
 # <a name="catllist-class"></a>CAtlList 클래스
 
@@ -153,7 +153,7 @@ POSITION AddHead(INARGTYPE element);
 
 이 메서드를 호출하여 목록의 헤드에 기존 목록을 추가합니다.
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ POSITION AddTail(INARGTYPE element);
 
 이 메서드를 호출하여 이 목록의 꼬리에 기존 목록을 추가합니다.
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 목록이 유효한지 확인하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ bool IsEmpty() const throw();
 
 지정된 요소를 목록의 헤드로 이동하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ void MoveToHead(POSITION pos) throw();
 
 지정된 요소를 목록의 꼬리로 이동하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ void MoveToTail(POSITION pos) throw();
 
 이 메서드를 호출하여 목록에서 모든 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll() throw();
 
 이 메서드를 호출하여 목록에서 단일 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ E RemoveHead();
 
 값을 반환하지 않고 목록의 헤드에 있는 요소를 제거하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ tail 요소가 목록에서 삭제되고 메모리가 해제됩니다. 요소의
 
 값을 반환하지 않고 목록의 꼬리에 있는 요소를 제거하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ tail 요소가 목록에서 삭제되고 메모리가 해제됩니다. 디버그
 
 이 메서드를 호출하여 목록의 지정된 위치에 요소 값을 설정합니다.
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 이 메서드를 호출하여 목록의 요소를 바꿉꿉입니다.
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 
@@ -796,7 +796,7 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CList 클래스](../../mfc/reference/clist-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

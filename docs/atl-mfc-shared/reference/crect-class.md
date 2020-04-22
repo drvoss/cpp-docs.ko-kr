@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: c59ed587e2c8e51f5c08a026a7ee0b9d0af25168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317711"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747061"
 ---
 # <a name="crect-class"></a>트렉트 클래스
 
@@ -242,7 +242,7 @@ void CMyDlg::OnPaint()
 
 사각형을 `lpSrcRect` 로 복사합니다. `CRect`
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
@@ -291,10 +291,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *ℓ*<br/>
 의 `CRect`왼쪽 위치를 지정합니다.
 
-*T*<br/>
+*t*<br/>
 의 맨 위를 `CRect`지정합니다.
 
-*R*<br/>
+*r*<br/>
 의 올바른 위치를 지정합니다. `CRect`
 
 *B*<br/>
@@ -309,7 +309,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *지점*<br/>
 사각형을 생성할 원점을 지정합니다. 왼쪽 위 모서리에 해당합니다.
 
-*크기*<br/>
+*size*<br/>
 생성할 사각형의 왼쪽 위 모서리에서 오른쪽 아래 모서리로 변위를 지정합니다.
 
 *topLeft*<br/>
@@ -366,7 +366,7 @@ ASSERT(rect5 == rect4);
 
 `DeflateRect`측면을 중심으로 `CRect` 이동하여 수축합니다.
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -381,7 +381,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *Y*<br/>
 `CRect`의 위쪽과 아래쪽을 수축할 단위 수를 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 [수축할](/windows/win32/api/windef/ns-windef-size) 단위 수를 지정하는 크기 또는 `CRect` [CSize입니다.](csize-class.md) 값은 `cx` 왼쪽 과 오른쪽면을 수축하는 단위 수를 지정하고 `cy` 값은 상단과 하단을 수축할 단위 수를 지정합니다.
 
 *Lprect*<br/>
@@ -390,10 +390,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *ℓ*<br/>
 의 왼쪽을 수축할 단위 수를 지정합니다. `CRect`
 
-*T*<br/>
+*t*<br/>
 의 맨 위를 수축할 단위 수를 `CRect`지정합니다.
 
-*R*<br/>
+*r*<br/>
 `CRect`의 오른쪽을 수축할 단위 수를 지정합니다.
 
 *B*<br/>
@@ -492,7 +492,7 @@ ASSERT(nHt == 40);
 
 `InflateRect`측면을 중심에서 멀리 `CRect` 이동하여 팽창시됩니다.
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -507,7 +507,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *Y*<br/>
 `CRect`의 위쪽과 아래쪽을 팽창시키는 단위 수를 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 [팽창할](/windows/win32/api/windef/ns-windef-size) 단위 수를 지정하는 크기 또는 `CRect` [CSize입니다.](csize-class.md) 값은 `cx` 왼쪽과 오른쪽을 팽창시키는 단위 수를 지정하고 값은 `cy` 위쪽과 아래쪽을 팽창시키는 단위 수를 지정합니다.
 
 *Lprect*<br/>
@@ -516,10 +516,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *ℓ*<br/>
 `CRect`의 왼쪽을 팽창할 단위 수를 지정합니다.
 
-*T*<br/>
+*t*<br/>
 의 맨 위를 팽창할 단위 수를 지정합니다. `CRect`
 
-*R*<br/>
+*r*<br/>
 `CRect`의 오른쪽을 팽창할 단위 수를 지정합니다.
 
 *B*<br/>
@@ -647,7 +647,7 @@ ASSERT(!rectNotNull.IsRectNull());
 
 이 함수를 호출하여 사각형을 *x로*지정된 절대 x 좌표로 이동합니다.
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
@@ -670,7 +670,7 @@ ASSERT(rect == CRect(10, 0, 110, 100));
 
 이 함수를 호출하여 사각형을 지정된 절대 x- 및 y 좌표로 이동합니다.
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
@@ -699,7 +699,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 
 이 함수를 호출하여 사각형을 *y로*지정된 절대 y 좌표로 이동합니다.
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
@@ -721,7 +721,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 높이와 `CRect` 너비가 모두 양수이되도록 정규화합니다.
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
@@ -746,7 +746,7 @@ ASSERT(rect1 == rect2);
 
 지정된 `CRect` 오프셋으로 이동합니다.
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -763,7 +763,7 @@ void OffsetRect(SIZE size) throw();
 *지점*<br/>
 이동할 [두](/windows/win32/api/windef/ns-windef-point) 차원을 지정하는 POINT 구조 또는 [CPoint](cpoint-class.md) 객체를 포함합니다.
 
-*크기*<br/>
+*size*<br/>
 이동할 [두](/windows/win32/api/windef/ns-windef-size) 차원을 지정하는 SIZE 구조 또는 [CSize](csize-class.md) 개체가 포함되어 있습니다.
 
 ### <a name="remarks"></a>설명
@@ -810,7 +810,7 @@ operator LPRECT() throw();
 
 *srcRect를* 에 `CRect`할당합니다.
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
@@ -913,7 +913,7 @@ ASSERT(rect3 != test);
 
 처음 두 오버로드는 지정된 오프셋에 의해 이동합니다. `CRect`
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -924,7 +924,7 @@ void operator+=(LPCRECT lpRect) throw();
 *지점*<br/>
 사각형을 이동할 단위 수를 지정하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조 또는 [CPoint](cpoint-class.md) 개체입니다.
 
-*크기*<br/>
+*size*<br/>
 사각형을 이동할 단위 수를 지정하는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](csize-class.md) 개체입니다.
 
 *Lprect*<br/>
@@ -951,7 +951,7 @@ ASSERT(rect1 == rect2);
 
 처음 두 오버로드는 지정된 오프셋에 의해 이동합니다. `CRect`
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -962,7 +962,7 @@ void operator-=(LPCRECT lpRect) throw();
 *지점*<br/>
 사각형을 이동할 단위 수를 지정하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조 또는 [CPoint](cpoint-class.md) 개체입니다.
 
-*크기*<br/>
+*size*<br/>
 사각형을 이동할 단위 수를 지정하는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](csize-class.md) 개체입니다.
 
 *Lprect*<br/>
@@ -989,7 +989,7 @@ ASSERT(rect1 == rectResult);
 
 의 `CRect` 교차와 같게 `rect`설정합니다. `CRect`
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
@@ -1013,7 +1013,7 @@ void operator&=(const RECT& rect) throw();
 
 의 `CRect` 결합과 `CRect` `rect`같음을 설정합니다.
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
@@ -1055,7 +1055,7 @@ CRect operator+(SIZE size) const throw();
 *지점*<br/>
 반환 값을 이동할 단위 수를 지정하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조 또는 [CPoint](cpoint-class.md) 개체입니다.
 
-*크기*<br/>
+*size*<br/>
 반환 값을 이동할 단위 수를 지정하는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](csize-class.md) 개체입니다.
 
 *Lprect*<br/>
@@ -1098,7 +1098,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 *지점*<br/>
 반환 값을 이동할 단위 수를 지정하는 [점](/windows/win32/api/windef/ns-windef-point) 구조 또는 `CPoint` 개체입니다.
 
-*크기*<br/>
+*size*<br/>
 반환 값을 이동할 단위 수를 지정하는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체 또는 `CSize` 개체입니다.
 
 *Lprect*<br/>
@@ -1255,7 +1255,7 @@ ASSERT(rect.PtInRect(pt));
 
 지정된 좌표로 `CRect` 치수를 설정합니다.
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
@@ -1285,7 +1285,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 모든 `CRect` 좌표를 0으로 설정하여 null 사각형을 만듭니다.
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C포인트 클래스](cpoint-class.md)<br/>
 [C사이즈 클래스](csize-class.md)<br/>

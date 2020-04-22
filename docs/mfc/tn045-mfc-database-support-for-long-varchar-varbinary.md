@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365503"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750288"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Long Varchar/Varbinary에 대한 MFC/데이터베이스 지원
 
@@ -45,7 +45,7 @@ ODBC **SQL_LONG_VARCHAR** 및 **SQL_LONGBINARY** 데이터 유형(긴 데이터 
 
 RFX함수는 데이터 `CString` `CByteArray` 열에 대해 검색된 값을 보유하도록 할당된 메모리의 기본 크기를 재정의할 수 있는 추가 인수를 가지고 있습니다. 다음 함수 선언에서 nMaxLength 인수를 참고하십시오.
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,
@@ -116,7 +116,7 @@ ClassWizard는 **SQL_LONGVARCHAR** 또는 **SQL_LONGVARBINARY** `CLongBinary` �
 > [!NOTE]
 > 긴 데이터 열은 프레임워크에 의해 바인딩되지 않으므로 변경 내용은 `CRecordset::Update` 호출로 처리되지 않습니다. 필요한 SQL **INSERT** 및 **UPDATE** 문을 직접 만들고 보내야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [숫자별 기술 노트](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

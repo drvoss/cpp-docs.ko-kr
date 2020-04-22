@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746026"
 ---
 # <a name="cwindow-class"></a>C윈도우 클래스
 
@@ -394,7 +394,7 @@ UINT ArrangeIconicWindows() throw();
 
 *hWnd로* 식별된 창을 개체에 `CWindow` 연결합니다.
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Windows SDK의 [ClientToScreen을](/windows/win32/api/winuser/nf-winuser-clienttoscreen) 참조하십시오.
 
-이 메서드의 두 번째 버전에서는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 좌표를 변환할 수 있습니다.
+이 메서드의 두 번째 버전에서는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 좌표를 변환할 수 있습니다.
 
 ## <a name="cwindowcreate"></a><a name="create"></a>C창::만들기
 
@@ -771,7 +771,7 @@ BOOL DlgDirSelectComboBox(
 
 창에서 드래그된 파일을 허용하는지 여부를 등록합니다.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Windows SDK에서 [인에이블윈도우를](/windows/win32/api/winuser/nf-winus
 
 그리기의 끝을 표시합니다.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ WORD GetWindowWord(int nIndex) const throw();
 
 대화 상자의 컨트롤에 키보드 포커스를 설정합니다.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Windows SDK에서 [무효화를](/windows/win32/api/winuser/nf-winuser-invalidat
 
 지정된 영역 내의 클라이언트 영역을 무효화합니다.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 윈도우 SDK의 [Map창점을](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) 참조하십시오.
 
-이 메서드의 두 번째 버전에서는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 좌표를 변환할 수 있습니다.
+이 메서드의 두 번째 버전에서는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 좌표를 변환할 수 있습니다.
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>C창::메시지 상자
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 최상위 창 개체의 경우 x 및 y 매개변수는 화면의 왼쪽 위 모서리를 기준으로 합니다. 자식 창 개체의 경우 부모 창의 클라이언트 영역의 왼쪽 위 모서리를 기준으로 합니다.
 
-이 메서드의 두 번째 버전에서는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조를 사용하여 창의 새 위치, 너비 및 높이를 결정합니다.
+이 메서드의 두 번째 버전에서는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조를 사용하여 창의 새 위치, 너비 및 높이를 결정합니다.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>C윈도우::넥스트딜트르
 
 대화 상자의 다음 컨트롤에 키보드 포커스를 설정합니다.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Windows SDK에서 [포스트 메시지를](/windows/win32/api/winuser/nf-winuser
 
 대화 상자에서 키보드 포커스를 이전 컨트롤로 설정합니다.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Windows SDK에서 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 참조하
 
 지정된 장치 컨텍스트에서 자신을 그리도록 요청하는 [WM_PRINT](/windows/win32/gdi/wm-print) 메시지를 창에 보냅니다.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 지정된 장치 컨텍스트에서 클라이언트 영역을 그리도록 요청하는 [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) 메시지를 창에 보냅니다.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Windows SDK의 [ScreenToClient를](/windows/win32/api/winuser/nf-winuser-screentoclient) 참조하십시오.
 
-이 메서드의 두 번째 버전에서는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 좌표를 변환할 수 있습니다.
+이 메서드의 두 번째 버전에서는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 좌표를 변환할 수 있습니다.
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>C창::스크롤 창
 
@@ -2216,7 +2216,7 @@ Windows SDK에서 [보내기 메시지를](/windows/win32/api/winuser/nf-winuser
 
 지정된 메시지를 `CWindow` 개체의 모든 즉시 자식에게 보냅니다.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 【인】 보낼 메시지입니다.
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ Windows SDK의 [설정 포커스를](/windows/win32/api/winuser/nf-winuser-setfo
 
 WM_SETFONT [메시지를](/windows/win32/winmsg/wm-setfont) 창에 전송하여 창의 현재 글꼴을 변경합니다.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Windows SDK에서 [설정 부모를](/windows/win32/api/winuser/nf-winuser-setpa
 
 창에 [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) 메시지를 전송하여 다시 그리기 플래그를 설정하거나 지웁습니다.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Windows SDK의 [SetWindowPos를](/windows/win32/api/winuser/nf-winuser-setwindowpos) 참조하십시오.
 
-이 메서드의 두 번째 버전에서는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조를 사용하여 창의 새 위치, 너비 및 높이를 설정합니다.
+이 메서드의 두 번째 버전에서는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조를 사용하여 창의 새 위치, 너비 및 높이를 설정합니다.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>C창::세트윈도우Rgn
 
@@ -2770,6 +2770,6 @@ BOOL WinHelp(
 
 Windows SDK에서 [WinHelp를](/windows/win32/api/winuser/nf-winuser-winhelpw) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

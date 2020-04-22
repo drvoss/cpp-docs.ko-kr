@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317604"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746844"
 ---
 # <a name="cstringdata-class"></a>CStringData 클래스
 
@@ -47,7 +47,7 @@ struct CStringData
 |[IsLocked](#islocked)|연결된 문자열 개체의 버퍼가 잠겨 있는지 확인합니다.|
 |[IsShared](#isshared)|연결된 문자열 개체의 버퍼가 현재 공유되는지 확인합니다.|
 |[잠금](#lock)|연결된 문자열 개체의 버퍼를 잠그습니다.|
-|[해제](#release)|지정된 문자열 개체를 해제합니다.|
+|[릴리스](#release)|지정된 문자열 개체를 해제합니다.|
 |[잠금을 해제](#unlock)|연결된 문자열 개체의 버퍼를 잠금 해제합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
@@ -91,7 +91,7 @@ struct CStringData
 
 문자열 개체의 참조 수를 증가시입니다.
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ void AddRef() throw();
 
 문자열 개체의 character 버퍼에 대한 포인터를 반환합니다.
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ bool IsShared() const throw();
 
 연결된 문자열 개체의 문자 버퍼를 잠급전고 있습니다.
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ IAtlStringMgr* pStringMgr;
 
 문자열 데이터 개체의 참조 수를 줄입니다.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ void Release() throw();
 
 연결된 문자열 개체의 문자 버퍼를 잠금 해제합니다.
 
-```
+```cpp
 void Unlock() throw();
 ```
 
@@ -249,7 +249,7 @@ void Unlock() throw();
 
 잠금 및 잠금 해제는 개발자가 문자열 데이터를 공유하지 않도록 해야 하는 경우에 사용됩니다. 잠금의 좋은 예는 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) 및 [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) 의 `CSimpleStringT`메서드에서 설명합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 공유 클래스](../../atl-mfc-shared/atl-mfc-shared-classes.md)

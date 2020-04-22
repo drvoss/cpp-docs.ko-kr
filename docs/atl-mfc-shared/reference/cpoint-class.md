@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317728"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747091"
 ---
 # <a name="cpoint-class"></a>C포인트 클래스
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 및 의 멤버에 값을 추가합니다. `CPoint` `x` `y`
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -156,7 +156,7 @@ void Offset(SIZE size) throw();
 *지점*<br/>
 을 오프셋할 [양(POINT](/windows/win32/api/windef/ns-windef-point) 또는)을 `CPoint`지정합니다. `CPoint`
 
-*크기*<br/>
+*size*<br/>
 을 오프셋할 [양(크기](/windows/win32/api/windef/ns-windef-size) 또는 [CSize)을](../../atl-mfc-shared/reference/csize-class.md)지정합니다. `CPoint`
 
 ### <a name="example"></a>예제
@@ -209,14 +209,14 @@ BOOL operator!=(POINT point) const throw();
 
 첫 번째 오버로드는 `CPoint`에 크기를 추가합니다.
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체를 포함합니다.
 
 *지점*<br/>
@@ -238,14 +238,14 @@ void operator+=(POINT point) throw();
 
 첫 번째 오버로드는 `CPoint`에서 크기를 뺍니다.
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체를 포함합니다.
 
 *지점*<br/>
@@ -275,7 +275,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체를 포함합니다.
 
 *지점*<br/>
@@ -314,7 +314,7 @@ CPoint operator-() const throw();
 *지점*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
-*크기*<br/>
+*size*<br/>
 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
 
 *Lprect*<br/>
@@ -340,7 +340,7 @@ unary 연산자에서 점을 부정합니다. 예를 들어 포인트가 `CPoint
 
 [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MDI](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

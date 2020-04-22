@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746514"
 ---
 # <a name="cregkey-class"></a>CRegKey 클래스
 
@@ -137,7 +137,7 @@ class CRegKey
 
 m_hKey 멤버 핸들을 hKey에 `CRegKey` 설정하여 [m_hKey](#m_hkey) 개체에 HKEY를 연결하려면 이 메서드를 *호출합니다.*
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -221,7 +221,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 `CRegKey` 개체에 대한 참조입니다.
 
 *hKey*<br/>
@@ -488,7 +488,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 복사할 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1056,7 +1056,7 @@ false이면 문자열이 형식 REG_SZ 나타냅니다. true이면 문자열이 
 
 세 번째 메서드는 [RegSetValueEx를](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [DCOM 샘플](../../overview/visual-cpp-samples.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

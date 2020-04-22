@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 1e9d21c59eb5efabf036fbc938a40de2c4b7a0b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330558"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746385"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 클래스
 
@@ -81,7 +81,7 @@ Windows의 액세스 제어 모델에 대한 자세한 내용은 Windows SDK의 
 
 개체에 `CSid` a `TOKEN_GROUPS` 또는 `CTokenGroups` 기존 구조를 추가합니다.
 
-```
+```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
@@ -153,7 +153,7 @@ SID(보안 식별자) 및 특성을 제거해야 하는 [CSid](../../atl/referen
 
 개체에서 `CSid` 모든 개체 및 관련 `CTokenGroups` 특성을 삭제합니다.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -197,7 +197,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 개체를 `CSid` 검색하고(선택적으로) `CTokenGroups` 개체에 속하는 특성을 검색합니다.
 
-```
+```cpp
 void GetSidsAndAttributes(
     CSid::CSidArray* pSids,
     CAtlArray<DWORD>* pAttributes = NULL) const throw(...);
@@ -271,7 +271,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 구조에 대한 포인터에 값을 캐스팅합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [보안 샘플](../../overview/visual-cpp-samples.md)<br/>
 [CSid 클래스](../../atl/reference/csid-class.md)<br/>

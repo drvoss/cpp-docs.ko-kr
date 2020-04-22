@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321167"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748168"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 클래스
 
@@ -171,7 +171,7 @@ HRESULT FinalConstruct();
 
 개체 소멸 중에 호출되는 이 메서드는 [m_contained](#m_contained) 멤버를 해제합니다.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -233,7 +233,7 @@ STDMETHOD_(ULONG, Release)();
 
 디버그 빌드에서 `Release` 진단 또는 테스트에 유용할 수 있는 값을 반환합니다. 디버그가 아닌 빌드에서는 `Release` 항상 0을 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CComObject 클래스](../../atl/reference/ccomobject-class.md)<br/>
 [CComPolyObject 클래스](../../atl/reference/ccompolyobject-class.md)<br/>

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330538"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747353"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 클래스
 
@@ -166,7 +166,7 @@ WINNT에 정의된 대로 권한의 이름을 지정하는 null-종단 문자열
 
 `CTokenPrivileges` 액세스 토큰 개체에서 모든 권한을 삭제합니다.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ void DeleteAll() throw();
 
 액세스 토큰 개체에 포함된 권한에 `CTokenPrivileges` 대한 표시 이름을 검색합니다.
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ UINT GetLength() const throw();
 
 개체에서 로컬 고유 식별자(LUI)와 특성 플래그를 검색합니다. `CTokenPrivileges`
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ DWORD 개체의 배열에 대한 포인터입니다. 이 매개 변수를 생략
 
 개체에서 이름 및 특성 `CTokenPrivileges` 플래그를 검색합니다.
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -330,7 +330,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 TOKEN_PRIVILEGES [구조에](/windows/win32/api/winnt/ns-winnt-token_privileges) 대한 포인터에 값을 캐스팅합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [보안 샘플](../../overview/visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>

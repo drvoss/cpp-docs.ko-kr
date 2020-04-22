@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369137"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750310"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 클래스
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ operator ID2D1RadialGradientBrush*();
 
 브러시좌표 공간에서 그라데이션 타원의 중심을 지정합니다.
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ void SetCenter(CD2DPointF point);
 
 그라데이션 타원의 중심을 기준으로 그라데이션 원점의 간격띄우기를 지정합니다.
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 
 브러시의 좌표 공간에서 그라데이션 타원의 x 반지름을 지정합니다.
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ void SetRadiusX(FLOAT radiusX);
 
 브러시의 좌표 공간에서 그라데이션 타원의 y 반지름을 지정합니다.
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 
@@ -351,6 +351,6 @@ void SetRadiusY(FLOAT radiusY);
 *반경*<br/>
 그라데이션 타원의 y 반지름입니다. 이 값은 브러시의 좌표 공간에 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

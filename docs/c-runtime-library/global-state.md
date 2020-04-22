@@ -3,12 +3,12 @@ title: CRT의 글로벌 상태
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377601"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745355"
 ---
 # <a name="global-state-in-the-crt"></a>CRT의 글로벌 상태
 
@@ -20,8 +20,8 @@ UCRT의 전역 상태는 응용 프로그램과 OS 간에 공유되지 않습니
 
 UCRT에서 전역 상태와 상호 작용하는 함수에는 에 접두사된 `_o_`"트윈" 함수가 있습니다. 다음은 그 예입니다.
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`앱과 관련된 전역 상태에 영향을 줍니다.
+- `_o_setlocale()`앱이 아닌 모든 OS 구성 요소가 공유하는 전역 상태에 영향을 줍니다.
 
 이러한 "트윈" 함수간의 유일한 차이점은 전역 CRT 상태를 읽음/쓸 때 OS 관련 버전(즉, 시작하는 `_o_`버전)이 앱의 전역 상태 복사본 대신 전역 상태의 OS 복사본을 사용한다는 것입니다.
 
@@ -53,6 +53,6 @@ UCRT에서 전역 상태와 상호 작용하는 함수에는 에 접두사된 `_
 - [fmode] (text-and-binary-mode-file-i-o.md)
 - [표준 시간대 정보](time-management.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 런타임 라이브러리 참조](c-run-time-library-reference.md)

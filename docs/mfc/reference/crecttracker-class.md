@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 4d262ab5f88481d56de1c236effb66fcbf6a706a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3600bc5a945c24e91269bc280b4b8e99c54d4c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368383"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750448"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 클래스
 
@@ -174,7 +174,7 @@ CRectTracker(
 
 이 함수를 호출하여 사각형의 외부 선과 내부 영역을 그립니다.
 
-```
+```cpp
 void Draw(CDC* pDC) const;
 ```
 
@@ -247,7 +247,7 @@ virtual UINT GetHandleMask() const;
 
 이 함수를 호출하여 사각형의 좌표를 검색합니다.
 
-```
+```cpp
 void GetTrueRect(LPRECT lpTrueRect) const;
 ```
 
@@ -479,7 +479,7 @@ TRUE인 경우 사각형은 x축 또는 y축을 따라 반전될 수 있습니�
 
 추적은 오른쪽 아래 핸들에서 고무 밴드 형 선택으로 수행됩니다. 반전이 허용되는 경우 사각형의 크기를 위쪽과 왼쪽 또는 아래쪽으로 드래그하여 크기를 조정할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 트래커](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 드로클리](../../overview/visual-cpp-samples.md)<br/>

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: a20a02a467d74a89e3cda176a6a15961be4ffd61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33edd8f2483bc21ea6cf8b68f80a2501c37d1a40
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318981"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748753"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT 클래스
 
@@ -298,7 +298,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 이 메서드는 메시지 루프를 실행 합니다.
 
-```
+```cpp
 void RunMessageLoop() throw();
 ```
 
@@ -351,7 +351,7 @@ int WinMain(int nShowCmd) throw();
 
 이 메서드를 재정의할 수 있습니다. [CAtlExeModuleT::PreMessageLoop,](#premessageloop) [CAtlExeModuleT::PostMessageLoop,](#postmessageloop)또는 [CAtlExeModuleT:::RunMessageLoop가](#runmessageloop) 충분한 유연성을 제공하지 않는 경우 이 `WinMain` 메서드를 사용하여 함수를 재정의할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [ATL덕 샘플](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT 클래스](../../atl/reference/catlmodulet-class.md)<br/>

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 40385fd592563837546b483bb80978cde6a56555
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e131ca1b4eb6e320d533ad1292c23add6ffa46e5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321268"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748558"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 
@@ -64,7 +64,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 이 메서드는 구조를 초기화 하고 추가 합니다. `_AtlCreateWndData`
 
-```
+```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
@@ -108,7 +108,7 @@ CAtlWinModule();
 
 이 메서드는 구조체에 대한 포인터를 반환합니다. `_AtlCreateWndData`
 
-```
+```cpp
 void* ExtractCreateWndData();
 ```
 
@@ -116,7 +116,7 @@ void* ExtractCreateWndData();
 
 `_AtlCreateWndData` [CAtlWinModule::AddCreateWndData](#addcreatewnddata)및 사용할 수 있는 개체가 없는 경우 NULL로 이전에 추가된 구조에 대한 포인터를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)<br/>

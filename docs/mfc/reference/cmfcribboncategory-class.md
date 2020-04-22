@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375271"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749547"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFC리본카테고리 클래스
 
@@ -260,7 +260,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 지정된 리본 요소를 사용자 지정 대화 상자에 표시되는 리본 요소 배열에 추가합니다.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -357,7 +357,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 소스 `CMFCRibbonCategory` 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -475,7 +475,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
 
 리본 범주의 모든 리본 요소를 검색합니다.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ void GetElements(
 
 지정된 명령 ID와 연결된 모든 리본 요소를 검색합니다.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 
 리본 범주에 포함된 리본 요소에 대한 명령 아이디를 검색합니다.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ int GetTextTopLine() const;
 
 리본 범주에 속하는 모든 표시되는 요소를 검색합니다.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 리본 범주의 리본 패널이 축소되는 순서를 정의합니다.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 리본 범주와 연결될 사용자 정의 데이터를 설정합니다.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 리본 범주에 키팁을 할당합니다.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ void SetKeys(LPCTSTR lpszKeys);
 
 리본 범주에 이름과 키팁을 할당합니다.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ void SetName(LPCTSTR lpszName);
 
 리본 범주의 색상을 설정합니다.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 
@@ -1439,7 +1439,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 - AFX_CategoryColor_Violet
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317596"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746704"
 ---
 # <a name="cstringt-class"></a>CStringT 클래스
 
@@ -306,7 +306,7 @@ Windows의 OLE 할당 기능에 대한 자세한 내용은 Windows SDK의 [SysAl
 
 ANSI 문자 집합에서 OEM 문자 집합으로 이 `CStringT` 개체의 모든 문자를 변환합니다.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ _UNICODE 정의된 경우 이 함수를 사용할 수 없습니다.
 
 서식이 지정된 데이터를 기존 `CStringT` 개체에 추가합니다.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -335,7 +335,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *nFormatID*<br/>
 형식 제어 문자열을 포함하는 문자열 리소스 식별자입니다.
 
-*argument*<br/>
+*인수*<br/>
 선택적 인수입니다.
 
 ### <a name="remarks"></a>설명
@@ -696,7 +696,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 [Sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)가 데이터를 C 스타일 문자 배열로 서식 지정 하는 것과 동일한 방식으로 `CStringT`에 형식이 지정된 데이터를 씁니다.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -709,7 +709,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 *pszFormat*<br/>
 형식 제어 문자열입니다.
 
-*argument*<br/>
+*인수*<br/>
 선택적 인수입니다.
 
 ### <a name="remarks"></a>설명
@@ -730,7 +730,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 메시지 문자열의 서식을 지정합니다.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -743,7 +743,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 *pszFormat*<br/>
 형식 제어 문자열을 가리킵니다. 삽입을 위해 스캔하고 그에 따라 포맷합니다. 형식 문자열은 매개 변수를 임의의 순서로 삽입할 수 있는 경우를 제외하고 런타임 함수 *printf-style*형식 문자열과 유사합니다.
 
-*argument*<br/>
+*인수*<br/>
 선택적 인수입니다.
 
 ### <a name="remarks"></a>설명
@@ -763,7 +763,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 변수 인수 목록을 사용하여 메시지 문자열을 서식을 지정합니다.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 변수 인수 목록을 사용하여 메시지 문자열을 서식을 지정합니다.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ CStringT Mid(int iFirst) const;
 
 OEM 문자 집합에서 `CStringT` ANSI 문자 집합으로 이 개체의 모든 문자를 변환합니다.
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1056,7 +1056,7 @@ CStringT& operator=(const VARIANT& var);
 *BaseType*<br/>
 문자열 기본 형식입니다.
 
-*Var*<br/>
+*var*<br/>
 이 문자열에 할당할 변형 개체입니다.
 
 *채널*<br/>
@@ -1150,7 +1150,7 @@ CStringT& operator+=(const VARIANT& var);
 *BaseType*<br/>
 문자열 기본 형식입니다.
 
-*Var*<br/>
+*var*<br/>
 이 문자열에 연결할 변형 개체입니다.
 
 *채널*<br/>
@@ -1778,7 +1778,7 @@ CStringT& TrimRight();
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 공유 클래스](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>

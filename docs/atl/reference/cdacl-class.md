@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1540c90e3538d763708e161ba6c1a5e459bb2bdf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327146"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747732"
 ---
 # <a name="cdacl-class"></a>CDacl 클래스
 
@@ -235,7 +235,7 @@ DACL(임의 액세스 제어 목록)만 이 함수에 전달해야 합니다. �
 
 개체에서 특정 ACE(액세스 제어 항목)를 제거합니다. `CDacl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -252,7 +252,7 @@ void RemoveAce(UINT nIndex) throw();
 
 개체에 포함된 모든 AC(액세스 제어 항목)를 `CDacl` 제거합니다.
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 
@@ -260,7 +260,7 @@ void RemoveAllAces() throw();
 
 개체의 `ACE` 모든(액세스 제어 항목) 구조(있는 `CDacl` 경우)를 제거합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [보안 샘플](../../overview/visual-cpp-samples.md)<br/>
 [카클 클래스](../../atl/reference/cacl-class.md)<br/>

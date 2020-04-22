@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369760"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750182"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 클래스
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 애니메이션이 예약되었을 때 그룹을 정리하기 위해 프레임워크에서 호출합니다.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 애니메이션 컨트롤러에서 모든 애니메이션 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ void RemoveAllAnimationGroups();
 
 애니메이션 컨트롤러에서 지정된 ID가 있는 애니메이션 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 애니메이션 컨트롤러에서 애니메이션 개체를 제거합니다.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ void RemoveAnimationObject(
 
 지정된 그룹에 속한 애니메이션 개체에서 전환을 제거합니다.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ TRUE 애니메이션이 성공적으로 예약된 경우 False 스토리보드�
 
 애니메이션 컨트롤러와 창 간의 관계를 설정합니다.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 
@@ -1129,6 +1129,6 @@ virtual void UpdateAnimationManager();
 
 이 메서드를 호출하면 애니메이션 관리자가 현재 시간으로 진행되어 필요에 따라 스토리보드의 상태를 변경하고 애니메이션 변수를 적절한 보간된 값으로 업데이트합니다. 내부적으로이 메서드는 IUIAnimationTimer::GetTime (timeNow) 및 IUIAnimationManager::Update(timeNow)를 호출합니다. 파생 클래스에서 이 메서드를 재정의하여 이 동작을 사용자 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

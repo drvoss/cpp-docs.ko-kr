@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 5aa3d7688046b0c1b04983f2d27fe5579dd7c680
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d66a92e4801f7a13c62e2d83fdb94411d077ff53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369049"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750263"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 클래스
 
@@ -103,7 +103,7 @@ virtual ~CD2DSolidColorBrush();
 
 기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1SolidColorBrush* pResource);
 ```
 
@@ -241,7 +241,7 @@ operator ID2D1SolidColorBrush*();
 
 이 단색 브러시의 색상을 지정합니다.
 
-```
+```cpp
 void SetColor(D2D1_COLOR_F color);
 ```
 
@@ -250,6 +250,6 @@ void SetColor(D2D1_COLOR_F color);
 *색*<br/>
 이 단색 브러쉬의 색상
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

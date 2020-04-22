@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: ae790cf1248c78ff9aa70c0e586f86af6c8f3b9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16eebfff4330a47888d1b60eaa993ee87d120f72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318949"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748289"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 클래스
 
@@ -129,7 +129,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 파일 매핑 개체에서 데이터를 가져옵니다이 메서드를 호출 합니다.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
@@ -316,7 +316,7 @@ HRESULT Unmap() throw();
 
 자세한 내용은 Windows SDK의 [MapViewOfFile 해제를](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CAtlFileMapping 클래스](../../atl/reference/catlfilemapping-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

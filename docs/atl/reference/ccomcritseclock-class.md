@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 24d141c5b0ec703feadcd7db96da33f9de940dda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327959"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748078"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 클래스
 
@@ -108,7 +108,7 @@ HRESULT Lock() throw();
 
 이 메서드를 호출하여 임계 섹션 개체의 잠금을 해제합니다.
 
-```
+```cpp
 void Unlock() throw();
 ```
 
@@ -116,7 +116,7 @@ void Unlock() throw();
 
 개체가 이미 잠금 해제된 경우 디버그 빌드에서 ASSERT 오류가 발생합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CComCriticalsection 클래스](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection 클래스](../../atl/reference/ccomautocriticalsection-class.md)

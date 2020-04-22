@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327210"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747751"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 클래스
 
@@ -214,7 +214,7 @@ HWND Create(
 【인】 상위 또는 소유자 창에 대한 핸들입니다.
 
 *rect*<br/>
-【인】 창의 위치를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조입니다. 포인터 `RECT` 또는 참조로 전달할 수 있습니다.
+【인】 창의 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조입니다. 포인터 `RECT` 또는 참조로 전달할 수 있습니다.
 
 *szWindowName*<br/>
 【인】 창의 이름을 지정합니다. 기본값은 NULL입니다.
@@ -390,7 +390,7 @@ TRUE 창이 성공적으로 하위 분류된 경우; 그렇지 않으면 false�
 
 포함된 창의 메시지를 처리하는 데 사용할 메시지 맵을 변경합니다.
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 
@@ -460,7 +460,7 @@ static LRESULT CALLBACK WindowProc(
 
 `WindowProc`m_dwMsgMapID [식별된](#m_dwmsgmapid)메시지 맵으로 메시지를 배달합니다. 필요한 경우 `WindowProc` 추가 메시지 처리를 위해 [DefWindowProc에](#defwindowproc) 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C윈도우 클래스](../../atl/reference/cwindow-class.md)<br/>
 [크윈도우임플 클래스](../../atl/reference/cwindowimpl-class.md)<br/>

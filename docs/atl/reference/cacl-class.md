@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 87bf903220a584798ea59c5f1c701fc35049e901
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321665"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748778"
 ---
 # <a name="cacl-class"></a>카클 클래스
 
@@ -186,7 +186,7 @@ virtual UINT GetAceCount() const throw() = 0;
 
 개체에서 액세스 제어 목록(ACL) 항목을 `CAcl` 검색합니다.
 
-```
+```cpp
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
@@ -220,7 +220,7 @@ ACE 유형 및 플래그에 대한 자세한 내용은 [ACE_HEADER](/windows/win
 
 ACL(액세스 제어 목록)의 항목에 대한 모든 정보를 검색합니다.
 
-```
+```cpp
 void GetAclEntry(
     UINT nIndex,
     CSid* pSid,
@@ -341,7 +341,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 개체에서 특정 ACE(액세스 제어 항목)를 제거합니다. `CAcl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -371,7 +371,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 개체를 `CAcl` 비어 있는 것으로 표시합니다.
 
-```
+```cpp
 void SetEmpty() throw();
 ```
 
@@ -383,7 +383,7 @@ void SetEmpty() throw();
 
 개체를 `CAcl` NULL로 표시합니다.
 
-```
+```cpp
 void SetNull() throw();
 ```
 
@@ -391,7 +391,7 @@ void SetNull() throw();
 
 빈 `CAcl` 또는 NULL로 설정할 수 있습니다: 두 상태는 구별됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)<br/>
 [보안 글로벌 기능](../../atl/reference/security-global-functions.md)

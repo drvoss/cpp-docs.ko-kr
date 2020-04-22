@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331245"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746583"
 ---
 # <a name="crbtree-class"></a>CRBTree 클래스
 
@@ -50,7 +50,7 @@ class CRBTree
 
 #### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키 요소 유형입니다.
 
 *Ⅴ*<br/>
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -185,7 +185,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *Pos*<br/>
 위치 값입니다.
 
-*키*<br/>
+*key*<br/>
 키를 받는 변수입니다.
 
 *value*<br/>
@@ -276,7 +276,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 맵에 저장된 요소의 키와 값을 얻고 위치를 다음 요소로 진행하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,7 +288,7 @@ void GetNextAssoc(
 *Pos*<br/>
 [CRBTree::GetHeadPosition](#getheadposition) 또는 [CRBTree::FindFirstKeyAfter와](#findfirstkeyafter)같은 메서드에 대한 이전 호출에 의해 반환된 위치 카운터입니다.
 
-*키*<br/>
+*key*<br/>
 트리 키의 형식을 지정하는 템플릿 매개 변수입니다.
 
 *value*<br/>
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 이 메서드를 호출하여 개체에서 모든 요소를 제거합니다. `CRBTree`
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ void RemoveAll() throw();
 
 이 메서드를 호출하여 개체의 지정된 `CRBTree` 위치에서 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ void RemoveAt(POSITION pos) throw();
 
 이 메서드를 호출하여 개체의 지정된 위치에 `CRBTree` 저장된 값을 변경합니다.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 
@@ -490,6 +490,6 @@ typedef VTraits::INARGTYPE VINARGTYPE;
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358301"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745314"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 클래스
 
@@ -99,7 +99,7 @@ int GetTwipSize() const;
 
 지정된 글꼴의 모든 유효한 크기로 글꼴 크기 콤보 상자를 채웁니다.
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ void RebuildFontSizes(const CString& strFontName);
 
 지정된 크기(트윕)를 포인트의 가장 가까운 크기로 반올림한 다음 콤보 상자에서 선택한 크기를 해당 값으로 설정합니다.
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 
@@ -129,7 +129,7 @@ void SetTwipSize(int nSize);
 
 [나중에 CMFCToolBarFontFontSizeComboBox::GetTwipSize](#gettwipsize) 메서드를 호출하여 이전 유효한 글꼴 크기를 검색할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

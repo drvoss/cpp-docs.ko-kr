@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327104"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747726"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReport후크 클래스
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *보고서유형*<br/>
 보고서 유형(_CRT_WARN, _CRT_ERROR 또는 _CRT_ASSERT).
 
-*메시지*<br/>
+*message*<br/>
 메시지 문자열입니다.
 
 *반환값*<br/>
@@ -127,7 +127,7 @@ static int __cdecl CDebugReportHookProc(
 
 이 메서드를 호출하여 명명된 파이프에 디버그 보고서를 보내는 것을 중지하고 이전 보고서 후크를 복원합니다.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ void RemoveHook() throw();
 
 이 메서드를 호출하여 명명된 파이프에 디버그 보고서를 보내기 시작합니다.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ BOOL SetPipeName(
 
 이 메서드를 호출하여 이 클래스가 명명된 파이프를 사용할 수 있게 될 때까지 기다릴 시간을 밀리초 단위로 설정합니다.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 
@@ -182,6 +182,6 @@ void SetTimeout(DWORD dwTimeout);
 *dw타임아웃*<br/>
 이 클래스가 명명된 파이프를 사용할 수 있게 될 때까지 기다리는 시간(밀리초)입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../atl/reference/atl-classes.md)

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e247b4f488411ffdcde5d1d9016436c9c36fe793
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326897"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747685"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 클래스
 
@@ -107,7 +107,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 이 메서드를 호출하여 기존 포인터의 소유권을 가져가 십시오.
 
-```
+```cpp
 void Attach(T* pData) throw();
 ```
 
@@ -154,7 +154,7 @@ T* Detach() throw();
 
 이 메서드를 호출하여 을 가리키는 `CHeapPtrBase`개체를 삭제합니다.
 
-```
+```cpp
 void Free() throw();
 ```
 
@@ -231,7 +231,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 그렇지 않으면 메모리가 성공적으로 할당된 경우 true를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CHeapPtr 클래스](../../atl/reference/cheapptr-class.md)<br/>
 [CComHeapPtr 클래스](../../atl/reference/ccomheapptr-class.md)<br/>

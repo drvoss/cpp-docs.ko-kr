@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317818"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747173"
 ---
 # <a name="cimage-class"></a>C이미지 클래스
 
@@ -258,7 +258,7 @@ BOOL AlphaBlend(
 소스 및 대상 비트맵에 대한 알파 혼합 함수, 전체 소스 비트맵에 적용할 전역 알파 값 및 소스 비트맵에 대한 형식 정보입니다. 소스 및 대상 블렌드 함수는 현재 AC_SRC_OVER 제한됩니다.
 
 *pointDest*<br/>
-논리적 단위로 대상 사각형의 왼쪽 위 모서리를 식별하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 참조입니다.
+논리적 단위로 대상 사각형의 왼쪽 위 모서리를 식별하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 참조입니다.
 
 *nDestWidth*<br/>
 대상 사각형의 논리적 단위로 너비입니다.
@@ -279,7 +279,7 @@ BOOL AlphaBlend(
 소스 사각형의 논리적 단위로 높이입니다.
 
 *rectDest*<br/>
-대상을 식별하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+대상을 식별하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *rectSrc*<br/>
 소스를 식별하는 `RECT` 구조에 대한 참조입니다.
@@ -298,7 +298,7 @@ BOOL AlphaBlend(
 
 *개체에 hBitmap을* 연결합니다. `CImage`
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ BOOL BitBlt(
 수행될 래스터 조작. 래스터 작업 코드는 소스, 대상 및 패턴(현재 선택된 브러시에 의해 정의된 대로)의 비트를 결합하여 대상을 형성하는 방법을 정확하게 정의합니다. 다른 래스터 작업 코드 및 설명 목록은 Windows SDK의 [BitBlt를](/windows/win32/api/wingdi/nf-wingdi-bitblt) 참조하십시오.
 
 *pointDest*<br/>
-대상 사각형의 왼쪽 위 모서리를 나타내는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조입니다.
+대상 사각형의 왼쪽 위 모서리를 나타내는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조입니다.
 
 *nDestWidth*<br/>
 대상 사각형의 논리적 단위로 너비입니다.
@@ -383,7 +383,7 @@ BOOL BitBlt(
 소스 사각형의 왼쪽 위 모서리의 논리적 y 좌표입니다.
 
 *rectDest*<br/>
-대상 사각형을 나타내는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조입니다.
+대상 사각형을 나타내는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조입니다.
 
 *pointSrc*<br/>
 소스 `POINT` 사각형의 왼쪽 위 모서리를 나타내는 구조입니다.
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 형식은 압축되지 않고 색상 표는 각 픽셀의 빨간색, 녹색 및 파란색 구성 요소를 각각 지정하는 세 개의 DWORD 색상 마스크로 구성됩니다. 이 방법은 16bpp 및 32bpp 비트맵과 함께 사용할 때 유효합니다.
 
 *pdwBitfields*<br/>
-*eCompression가* BI_BITFIELDS 설정된 경우에만 사용되며, 그렇지 않으면 NULL이어야 합니다. 색상의 빨간색, 녹색 및 파란색 구성 요소에 각각 사용되는 각 픽셀의 비트를 지정하는 세 개의 DWORD 비트 마스크 배열에 대한 포인터입니다. 비트 필드에 대한 제한에 대한 자세한 내용은 Windows SDK의 [BITMAPINFOHEADER를](/previous-versions//dd183376\(v=vs.85\)) 참조하십시오.
+*eCompression가* BI_BITFIELDS 설정된 경우에만 사용되며, 그렇지 않으면 NULL이어야 합니다. 색상의 빨간색, 녹색 및 파란색 구성 요소에 각각 사용되는 각 픽셀의 비트를 지정하는 세 개의 DWORD 비트 마스크 배열에 대한 포인터입니다. 비트 필드에 대한 제한에 대한 자세한 내용은 Windows SDK의 [BITMAPINFOHEADER를](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) 참조하십시오.
 
 *dwFlags*<br/>
 비트맵 개체에 알파 채널이 있는지 지정합니다. 다음 값 중 0 이상을 조합할 수 있습니다.
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 개체에서 비트맵을 `CImage` 분리하고 비트맵을 삭제합니다.
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ BOOL Draw(
 소스 사각형의 논리적 단위로 높이입니다.
 
 *rectDest*<br/>
-대상을 식별하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+대상을 식별하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *rectSrc*<br/>
 소스를 식별하는 `RECT` 구조에 대한 참조입니다.
 
 *pointDest*<br/>
-논리적 단위로 대상 사각형의 왼쪽 위 모서리를 식별하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 참조입니다.
+논리적 단위로 대상 사각형의 왼쪽 위 모서리를 식별하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 참조입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -617,7 +617,7 @@ BOOL Draw(
 
 비트맵에서 지정된 픽셀의 실제 비트 값에 대한 포인터를 검색합니다.
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ int GetBPP() const throw();
 
 이 값은 각 픽셀을 정의하는 비트 수와 비트맵의 최대 색상 수를 결정합니다.
 
-픽셀당 비트는 일반적으로 1, 4, 8, 16, 24 또는 32입니다. 이 `biBitCount` 값에 대한 자세한 내용은 Windows SDK의 [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) 멤버를 참조하십시오.
+픽셀당 비트는 일반적으로 1, 4, 8, 16, 24 또는 32입니다. 이 `biBitCount` 값에 대한 자세한 내용은 Windows SDK의 [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) 멤버를 참조하십시오.
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>C이미지::겟컬러테이블
 
 DIB 섹션의 팔레트에 있는 항목 범위에서 빨간색, 녹색, 파란색(RGB) 색상 값을 검색합니다.
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -923,7 +923,7 @@ COLORREF GetPixel(int x, int y) const throw();
 
 픽셀의 정확한 주소를 검색합니다.
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
@@ -1076,7 +1076,7 @@ HRESULT Load(IStream* pStream) throw();
 
 BITMAP 리소스에서 이미지를 로드합니다.
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ BOOL PlgBlt(
 흑백 비트맵의 왼쪽 위 모서리의 y 좌표입니다.
 
 *rectSrc*<br/>
-소스 사각형의 좌표를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+소스 사각형의 좌표를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pointMask*<br/>
-마스크 비트맵의 왼쪽 위 모서리를 나타내는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조입니다.
+마스크 비트맵의 왼쪽 위 모서리를 나타내는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1278,7 +1278,7 @@ BOOL PlgBlt(
 
 장치 컨텍스트를 해제합니다.
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ void ReleaseDC() const throw();
 
 GDI+에서 사용하는 리소스를 릴리스합니다.
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ HRESULT Save(
 
 DIB 섹션의 팔레트에 있는 항목 범위에 대해 빨간색, 녹색, 파란색(RGB) 색상 값을 설정합니다.
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,7 +1372,7 @@ void SetColorTable(
 
 비트맵의 지정된 위치에서 픽셀의 색상을 설정합니다.
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
@@ -1395,7 +1395,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 픽셀 색상을 색상 팔레트의 *iIndex에* 있는 색상으로 설정합니다.
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
@@ -1414,7 +1414,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 *x* 및 *y로* 지정된 위치에서 픽셀을 *빨간색,* 녹색, 파란색(RGB) 이미지에서 r, *g*및 *b로*표시된 색상으로 설정합니다.
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1431,7 +1431,7 @@ void SetPixelRGB(
 *Y*<br/>
 설정할 픽셀의 세로 위치입니다.
 
-*R*<br/>
+*r*<br/>
 빨간색의 강도입니다.
 
 *G*<br/>
@@ -1519,7 +1519,7 @@ BOOL StretchBlt(
 수행될 래스터 조작. 래스터 작업 코드는 소스, 대상 및 패턴(현재 선택된 브러시에 의해 정의된 대로)의 비트를 결합하여 대상을 형성하는 방법을 정확하게 정의합니다. 다른 래스터 작업 코드 및 설명 목록은 Windows SDK의 [BitBlt를](/windows/win32/api/wingdi/nf-wingdi-bitblt) 참조하십시오.
 
 *rectDest*<br/>
-대상을 식별하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+대상을 식별하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *xSrc*<br/>
 소스 사각형의 왼쪽 위 모서리의 논리적 단위로 x 좌표입니다.
@@ -1602,7 +1602,7 @@ BOOL TransparentBlt(
 투명으로 처리할 소스 비트맵의 색상입니다. 기본적으로 CLR_INVALID 현재 이미지의 투명 색상으로 설정된 색상을 사용해야 합니다.
 
 *rectDest*<br/>
-대상을 식별하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+대상을 식별하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *xSrc*<br/>
 소스 사각형의 왼쪽 위 모서리의 논리적 단위로 x 좌표입니다.
@@ -1656,7 +1656,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MMXSwarm 샘플](../../overview/visual-cpp-samples.md)<br/>
 [심플이미지 샘플](../../overview/visual-cpp-samples.md)<br/>

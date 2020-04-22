@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: 72b5c9fee3868286f9e4a0917f46aeb732349c62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5a060555901361ef6c70c6a4f801605eafd92cf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330998"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746556"
 ---
 # <a name="csacl-class"></a>CSacl 클래스
 
@@ -194,7 +194,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 개체에서 특정 ACE(액세스 제어 항목)를 제거합니다. `CSacl`
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -211,7 +211,7 @@ void RemoveAce(UINT nIndex) throw();
 
 개체에 포함된 모든 액세스 제어 항목(AC)을 `CSacl` 제거합니다.
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 
@@ -219,7 +219,7 @@ void RemoveAllAces() throw();
 
 개체의 `ACE` 모든 구조(있는 경우)를 제거합니다. `CSacl`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [카클 클래스](../../atl/reference/cacl-class.md)<br/>
 [ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>

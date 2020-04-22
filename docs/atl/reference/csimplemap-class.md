@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eed41c2250728d257b6d303e79c3afd36a543dbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330803"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747647"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 클래스
 
@@ -114,7 +114,7 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키입니다.
 
 *발*<br/>
@@ -178,7 +178,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -266,7 +266,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -283,7 +283,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -294,7 +294,7 @@ BOOL Remove(const TKey& key);
 
 모든 키와 값을 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -346,7 +346,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키입니다.
 
 *발*<br/>
@@ -372,7 +372,7 @@ BOOL SetAtIndex(
 *nIndex*<br/>
 변경할 키와 값 쌍을 참조하는 인덱스입니다.
 
-*키*<br/>
+*key*<br/>
 새 키입니다.
 
 *발*<br/>
@@ -386,6 +386,6 @@ BOOL SetAtIndex(
 
 *nIndex*.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

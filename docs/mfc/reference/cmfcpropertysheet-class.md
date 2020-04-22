@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361799"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750069"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFC프로퍼티시트 클래스
 
@@ -142,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 속성 시트에 페이지를 추가합니다.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ void AddPage(CPropertyPage* pPage);
 
 트리 컨트롤에 새 속성 페이지를 추가합니다.
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ CMFCPropertySheet(
 
 각 페이지 위쪽에서 사용자 지정 머리글을 그릴 공간을 예약합니다.
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 트리 컨트롤에서 노드를 제거합니다.
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 
 속성 시트에서 속성 페이지를 제거합니다.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 속성 시트의 모양을 지정합니다.
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);
@@ -516,7 +516,7 @@ void SetLook(
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|각 속성 페이지에 대해 Microsoft OneNote 스타일로 탭을 표시합니다. 프레임워크는 속성 시트 의 맨 위에 탭을 표시하고 단일 행에 맞는 탭이 더 많은 경우 스크롤 화살표를 표시합니다.|
 |`CMFCPropertySheet::PropSheetLook_List`|속성 시트의 왼쪽에 목록을 표시합니다. 각 목록 항목은 속성 페이지에 해당합니다. 목록의 가시 영역에 맞는 것보다 많은 목록 항목이 있는 경우 프레임워크에 스크롤 화살표가 표시됩니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

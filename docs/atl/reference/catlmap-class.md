@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321436"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748658"
 ---
 # <a name="catlmap-class"></a>CAtlMap 클래스
 
@@ -60,7 +60,7 @@ class CAtlMap
 
 #### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키 요소 유형입니다.
 
 *Ⅴ*<br/>
@@ -159,7 +159,7 @@ class CAtlMap
 
 개체가 유효하지 않은 경우 `CAtlMap` ASSERT를 발생시키기 위해 이 메서드를 호출합니다.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ class CPair : public __POSITION
 
 이 메서드를 호출하여 개체의 자동 `CAtlMap` 해시를 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ void DisableAutoRehash() throw();
 
 이 메서드를 호출하여 개체를 자동으로 `CAtlMap` 다시 해시할 수 있습니다.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ void EnableAutoRehash() throw();
 
 맵에서 지정된 위치에 요소를 반환하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,7 +291,7 @@ CPair* GetAt(POSITION& pos) throw();
 *Pos*<br/>
 [CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-*키*<br/>
+*key*<br/>
 맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
 *value*<br/>
@@ -376,7 +376,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 반복에 대한 다음 요소를 가져옵니다.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,7 +388,7 @@ void GetNextAssoc(
 *Pos*<br/>
 [CAtlMap::GetNextAssoc](#getnextassoc) 또는 [CAtlMap::GetStartPosition에](#getstartposition)대한 이전 호출로 반환된 위치 카운터.
 
-*키*<br/>
+*key*<br/>
 맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
 *value*<br/>
@@ -558,7 +558,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 조회할 요소를 식별하는 키를 지정합니다.
 
 *value*<br/>
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 추가하거나 바꿀 요소의 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -597,7 +597,7 @@ V& operator[](kinargtype key) throw();
 
 이 메서드를 호출하여 `CAtlMap` 개체를 다시 해시합니다.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ void Rehash(UINT nBins = 0);
 
 이 메서드를 호출하여 개체에서 모든 요소를 제거합니다. `CAtlMap`
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ void RemoveAll() throw();
 
 이 메서드를 호출하여 개체의 지정된 `CAtlMap` 위치에서 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 제거할 요소 쌍에 해당하는 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -672,7 +672,7 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 개체에 추가할 키 `CAtlMap` 값입니다.
 
 *value*<br/>
@@ -690,7 +690,7 @@ POSITION SetAt(
 
 이 메서드를 호출하여 개체의 `CAtlMap` 최적 로드를 설정합니다.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ void SetOptimalLoad(
 
 이 메서드를 호출하여 개체의 지정된 위치에 `CAtlMap` 저장된 값을 변경합니다.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -764,7 +764,7 @@ const K m_key;
 
 ### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키 요소 유형입니다.
 
 ## <a name="catlmapcpairm_value"></a><a name="m_value"></a>카틀맵::C페어::m_value
@@ -780,7 +780,7 @@ V  m_value;
 *Ⅴ*<br/>
 값 요소 형식입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선택 윤곽 샘플](../../overview/visual-cpp-samples.md)<br/>
 [업데이트PV 샘플](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

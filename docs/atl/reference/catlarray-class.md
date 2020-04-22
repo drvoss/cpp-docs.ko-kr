@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321569"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748786"
 ---
 # <a name="catlarray-class"></a>카틀어레이어리 클래스
 
@@ -69,7 +69,7 @@ class CAtlArray
 |[GetData](#getdata)|이 메서드를 호출하여 배열의 첫 번째 요소에 대한 포인터를 반환합니다.|
 |[삽입배열At](#insertarrayat)|한 배열을 다른 배열에 삽입하려면 이 메서드를 호출합니다.|
 |[삽입](#insertat)|이 메서드를 호출하여 새 요소(또는 요소의 여러 복사본)를 배열 개체에 삽입합니다.|
-|[IsEmpty](#isempty)|배열이 비어 있는지 테스트하려면 이 메서드를 호출합니다.|
+|[Isempty](#isempty)|배열이 비어 있는지 테스트하려면 이 메서드를 호출합니다.|
 |[Removeall](#removeall)|배열 개체에서 모든 요소를 제거 하려면이 메서드를 호출 합니다.|
 |[RemoveAt](#removeat)|배열에서 하나 이상의 요소를 제거 하려면이 메서드를 호출 합니다.|
 |[셋 앳](#setat)|배열 개체에서 요소의 값을 설정 하려면이 메서드를 호출 합니다.|
@@ -162,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 이 메서드를 호출하여 배열 개체가 유효한지 확인합니다.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ CAtlArray() throw();
 
 한 배열의 요소를 다른 배열로 복사하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 배열에서 빈 요소를 제거 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 한 배열을 다른 배열에 삽입하려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 이 메서드를 호출하여 새 요소(또는 요소의 여러 복사본)를 배열 개체에 삽입합니다.
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 배열 개체에서 모든 요소를 제거 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ void RemoveAll() throw();
 
 배열에서 하나 이상의 요소를 제거 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 배열 개체에서 요소의 값을 설정 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 이 메서드를 호출하여 배열 개체에서 요소의 값을 설정하고 필요에 따라 배열을 확장합니다.
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 
@@ -547,7 +547,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MMXSwarm 샘플](../../overview/visual-cpp-samples.md)<br/>
 [동적 소비자 샘플](../../overview/visual-cpp-samples.md)<br/>

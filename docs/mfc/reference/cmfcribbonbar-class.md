@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361437"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749757"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFC리본바 클래스
 
@@ -581,7 +581,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 지정된 리본 요소를 리본 막대의 탭 행에 추가합니다.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ TRUE 창이 만들어진 경우 그렇지 않으면 거짓.
 
 리본 막대의 모든 키팁 컨트롤을 닫습니다.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 리본 막대의 키팁 기능을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 미리 보기 인쇄 기능을 활성화하거나 사용하지 않도록 **설정합니다.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 리본 막대에서 도구 설명 및 선택적 도구 설명 설명을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 리본 막대 및 상위 창에서 모든 항목의 레이아웃을 조정하고 전체 창을 다시 그립니다.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 특정 명령 ID가 있는 모든 리본 요소에 대한 포인터 배열을 검색합니다.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ DWORD GetHideFlags() const;
 
 리본 막대에서 지정된 리본 요소 컬렉션에 대한 명령 코드를 검색합니다.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 빠른 액세스 도구 모음에서 리본 요소에 대한 명령 아이디 목록을 검색합니다.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ TRUE 하나 이상의 컨텍스트 범주가 숨겨져 있는 경우; 그렇지 
 
 리본 막대의 모든 키 팁을 숨깁니다.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ BOOL OnSysKeyUp(
 
 뷰에서 도구 설명이 제거됩니다.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ virtual void RecalcLayout();
 
 리본 막대에서 모든 리본 범주를 삭제합니다.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ void RemoveAllCategories();
 
 탭 영역에서 모든 리본 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ TRUE 지정된 범주가 활성 범주로 설정된 경우 그렇지 않으면 �
 
 MDI(다중 문서 인터페이스) 자식 창에 속하는 리본 막대의 시스템 단추를 지정된 MDI 자식 창에 연결합니다.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 리본 표시줄에 애플리케이션 리본 단추를 할당합니다.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ BOOL SetElementKeys(
 
 사용자가 리본 막대에 포함된 키 팁을 누르면 키보드 탐색 수준을 설정합니다.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ void SetKeyboardNavigationLevel(
 
 다중 문서 인터페이스(MDI) 자식 창의 창 크기가 최대화된 상태로 들어가거나 나오면 리본 막대를 조정합니다.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ void SetMaximizeMode(
 
 빠른 실행 도구 모음에 하나 이상의 리본 요소를 추가합니다.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,7 +1890,7 @@ void SetQuickAccessCommands(
 
 빠른 액세스 도구 모음을 기본 상태로 설정합니다.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
@@ -1913,7 +1913,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 빠른 액세스 도구 모음이 리본 막대 위 또는 아래에 배치됩니다.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 리본 막대에 대한 일반 및 큰 크기의 tooltip 고정 너비를 설정합니다.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ void SetTooltipFixedWidth(
 
 지정된 리본 범주를 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 지정된 ID를 가진 컨텍스트 범주를 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 리본 막대의 각 리본 요소에 대한 키 팁을 표시합니다.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 리본 표시줄을 최소화 상태 또는 최대화 상태로 표시합니다.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 리본에 대한 Windows 7 모양 (작은 직사각형 응용 프로그램 버튼)을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);
@@ -2147,7 +2147,7 @@ TRUE는 리본 레이아웃을 다시 계산합니다. 그렇지 않으면 거�
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

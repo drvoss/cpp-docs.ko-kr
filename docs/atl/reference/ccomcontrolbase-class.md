@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320778"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748115"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 클래스
 
@@ -548,7 +548,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>매개 변수
 
-*lcid*<br/>
+*Lcid*<br/>
 숙소는 DISPID_AMBIENT_LOCALEID.
 
 ### <a name="return-value"></a>Return Value
@@ -606,7 +606,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 *디스피드 (것)들*<br/>
 검색할 컨테이너 속성의 식별자입니다.
 
-*Var*<br/>
+*var*<br/>
 속성을 받을 변수입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -794,7 +794,7 @@ m_bRequiresSave 데이터 [멤버](#m_brequiressave)의 값을 반환합니다.
 
 현재 편집을 위해 활성화된 컨트롤에 대해 분자 및 확대/축소 계수의 분모의 x 및 y 값을 검색합니다.
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ TRUE인 경우 키보드 포커스를 호출 컨트롤로 설정합니다. FALSE
 
 데이터 멤버를 `m_bRequiresSave` *bDirty*의 값으로 설정합니다.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
@@ -1566,7 +1566,7 @@ void SetDirty(BOOL bDirty);
 
 `SetDirty(TRUE)`컨트롤이 마지막으로 저장된 이후 변경되었음을 플래그로 표시하도록 호출해야 합니다. 의 `m_bRequiresSave` 값은 [CComControlBase::GetDirty](#getdirty).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CComControl 클래스](../../atl/reference/ccomcontrol-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

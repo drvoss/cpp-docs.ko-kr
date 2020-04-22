@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 40dbfb822e71309e9675aba14d46d333ffa4ee06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747193"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 클래스
 
@@ -354,7 +354,7 @@ TYPE RemoveTail();
 
 이 멤버 `BASE_CLASS`함수는 **::SetAt 를 호출합니다.**
 
-```
+```cpp
 void SetAt(POSITION pos, TYPE newElement);
 ```
 
@@ -377,7 +377,7 @@ POSITION 값이 목록에서 유효한 위치를 나타내는지 확인해야 �
 
 더 자세한 설명은 [CObList::SetAt](../../mfc/reference/coblist-class.md#setat)를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

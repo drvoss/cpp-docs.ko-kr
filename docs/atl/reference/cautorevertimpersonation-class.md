@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 813b6f0dd33bdfa85476b816086217a7892f4476
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea119436fd36d0814c05f1b48380028ad3f63f0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318787"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748247"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 클래스
 
@@ -61,7 +61,7 @@ Windows의 액세스 제어 모델에 대한 자세한 내용은 Windows SDK의 
 
 액세스 토큰의 가장 회귀를 자동화합니다.
 
-```
+```cpp
 void Attach(const CAccessToken* pAT) throw();
 ```
 
@@ -135,7 +135,7 @@ const CAccessToken* GetAccessToken() throw();
 
 개체의 가장을 다시 전환하는 것을 포함하는 목적으로 이 메서드를 `CAccessToken` 호출하는 경우 대신 [Detach](#detach) 메서드를 사용해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [ATL보안 샘플](../../overview/visual-cpp-samples.md)<br/>
 [토큰 액세스](/windows/win32/SecAuthZ/access-tokens)<br/>

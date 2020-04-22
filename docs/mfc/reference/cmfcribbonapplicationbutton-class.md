@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 0debd40825990b647cd5b1df9a144e3abd450de3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361601"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749935"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFC리본응용프로그램버튼 클래스
 
@@ -90,7 +90,7 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 응용 프로그램 단추에 이미지를 할당합니다.
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```
@@ -107,7 +107,7 @@ void SetImage(HBITMAP hBmp);
 
 단추를 만든 후 리본 응용 프로그램 단추에 새 이미지를 할당하려면 이 메서드를 사용합니다. 응용 프로그램 단추는 응용 프로그램 창의 왼쪽 위 모서리에 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

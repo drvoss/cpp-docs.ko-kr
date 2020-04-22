@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747586"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 클래스
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 복구할 수 없는 변경이 모달 속성 시트 페이지의 데이터에 대해 변경된 후 이 함수를 호출합니다.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ TRUE를 반환하는 `OnApply` 기본 구현입니다.
 
 이 멤버 함수는 사용자가 속성 페이지에 대한 **도움말** 단추를 클릭할 때 호출됩니다.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ TRUE를 반환하는 `OnQueryCancel` 기본 구현입니다.
 
 이 멤버 함수는 사용자가 **취소** 단추를 클릭할 때 호출됩니다.
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 속성 페이지의 설정을 적절한 외부 개체에 적용해야 하는지 여부에 따라 이 멤버 함수를 호출하여 **지금 적용** 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 
@@ -347,6 +347,6 @@ void SetModified(BOOL bChanged = TRUE);
 
 속성 시트는 호출한 속성 페이지즉"인 페이지를 `SetModified( TRUE )`추적합니다. 페이지 **Apply Now** 중 하나를 호출하면 `SetModified( TRUE )` 지금 적용 버튼이 항상 활성화됩니다. **페이지** 중 하나를 호출할 `SetModified( FALSE )` 때 지금 적용 단추는 비활성화되지만 다른 페이지중 어느 페이지도 "더럽지 않은" 경우에만 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)

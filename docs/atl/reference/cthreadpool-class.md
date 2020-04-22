@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e52868f23883836919b96be9aec1815bc1c17b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330563"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747455"
 ---
 # <a name="cthreadpool-class"></a>C스레드풀 클래스
 
@@ -333,7 +333,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 스레드 풀을 종료 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void Shutdown(DWORD dwMaxWait = 0) throw();
 ```
 
@@ -346,7 +346,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 이 메서드는 풀의 모든 스레드에 종료 요청을 게시합니다. 시간 지정이 만료되면 이 메서드는 종료되지 않은 모든 스레드에서 [TerminateThread를](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 호출합니다. 이 메서드는 클래스의 소멸자에서 자동으로 호출 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [IThreadPool구성 인터페이스](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
 [기본 스레드 특성](atl-typedefs.md#defaultthreadtraits)<br/>

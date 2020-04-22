@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368339"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747203"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 클래스
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 기존 렌더 대상 인터페이스를 오브젝트에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 
 이 렌더 대상에 그리기를 시작합니다.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 드로잉 영역을 지정된 색상으로 지웁습니다.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ BOOL CreateCompatibleRenderTarget(
 *원하는 형식*<br/>
 새 렌더 대상 또는 NULL의 원하는 픽셀 형식 및 알파 모드입니다. 픽셀 형식이 DXGI_FORMAT_UNKNOWN 설정하거나 이 매개 변수가 null인 경우 새 렌더 대상은 원래 렌더링 대상과 동일한 픽셀 형식을 사용합니다. 알파 모드가 D2D1_ALPHA_MODE_UNKNOWN 또는 이 매개 변수가 NULL인 경우 새 렌더 대상의 알파 모드는 D2D1_ALPHA_MODE_PREMULTIPLIED 기본값입니다. 지원되는 픽셀 형식에 대한 자세한 내용은 지원되는 픽셀 형식 및 알파 모드를 참조하세요.
 
-*옵션*<br/>
+*options*<br/>
 새 렌더 대상이 GDI와 호환되어야 하는지 여부를 지정하는 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -362,7 +362,7 @@ ID2D1RenderTarget* Detach ();
 
 지정된 IDWriteTextLayout 개체에서 설명하는 서식이 지정된 텍스트를 그립니다.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ void DrawBitmap(
 
 지정된 스트로크 스타일을 사용하여 지정된 타원의 윤곽선을 그립니다.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ void DrawEllipse(
 
 지정된 선 스타일을 사용하여 지정된 형상의 윤곽선을 그립니다.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ void DrawGeometry(
 
 지정된 글리프를 그립니다.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ void DrawGlyphRun(
 
 지정된 선 스타일을 사용하여 지정된 점 사이에 선을 그립니다.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ void DrawLine(
 
 지정된 치수 및 획 스타일이 있는 사각형의 윤곽선을 그립니다.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ void DrawRectangle(
 
 지정된 선 스타일을 사용하여 지정된 둥근 사각형의 윤곽선을 그립니다.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ void DrawRoundedRectangle(
 
 IDWriteTextFormat 개체에서 제공하는 형식 정보를 사용하여 지정된 텍스트를 그립니다.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ void DrawText(
 *textFormat*<br/>
 글꼴, 글꼴 크기 및 흐름 방향과 같이 그릴 텍스트의 서식 세부 정보를 설명하는 개체입니다.
 
-*옵션*<br/>
+*options*<br/>
 텍스트를 픽셀 경계에 스냅할지 여부와 텍스트를 레이아웃 사각형으로 잘라야 하는지 여부를 나타내는 값입니다. 기본값은 D2D1_DRAW_TEXT_OPTIONS_NONE 텍스트가 픽셀 경계에 스냅되어야 하며 레이아웃 사각형으로 잘려서는 안 됨을 나타냅니다.
 
 *측정 모드*<br/>
@@ -586,7 +586,7 @@ void DrawText(
 
 지정된 IDWriteTextLayout 개체에서 설명하는 서식이 지정된 텍스트를 그립니다.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ textLayout로 설명된 텍스트의 왼쪽 위 모서리가 그려지는 장치
 *p브러쉬포그라운드*<br/>
 텍스트에 텍스트를 그리는 데 사용되는 브러시아직 그리기 효과로 연결된 브러시가없는 레이아웃 (IDWriteTextLayout:SetDrawingEffect 방법에 의해 지정).
 
-*옵션*<br/>
+*options*<br/>
 텍스트를 픽셀 경계에 스냅할지 여부와 텍스트를 레이아웃 사각형으로 잘라야 하는지 여부를 나타내는 값입니다. 기본값은 D2D1_DRAW_TEXT_OPTIONS_NONE 텍스트가 픽셀 경계에 스냅되어야 하며 레이아웃 사각형으로 잘려서는 안 됨을 나타냅니다.
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::끝 그리기
@@ -624,7 +624,7 @@ HRESULT EndDraw();
 
 지정된 타원의 내부를 페인트합니다.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ void FillEllipse(
 
 지정된 형상의 내부를 페인트합니다.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ void FillGeometry(
 
 지정된 메시의 내부를 페인트합니다.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ void FillMesh(
 
 지정된 비트맵에서 설명한 불투명도 마스크를 브러시에 적용하고 해당 브러시를 사용하여 렌더 대상의 영역을 페인팅합니다.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -699,7 +699,7 @@ void FillOpacityMask(
 *p브러시*<br/>
 대상에 의해 지정된 렌더 대상의 영역을 페인트하는 데 사용되는 브러시Rectangle.
 
-*콘텐츠*<br/>
+*content*<br/>
 불투명도 마스크에 포함된 콘텐츠 유형입니다. 이 값은 불투명도 마스크가 혼합되는 색상 공간을 결정하는 데 사용됩니다.
 
 *rectDest*<br/>
@@ -712,7 +712,7 @@ void FillOpacityMask(
 
 지정된 사각형의 내부를 페인트합니다.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ void FillRectangle(
 
 지정된 둥근 사각형의 내부를 페인트합니다.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ void FillRoundedRectangle(
 
 보류 중인 모든 그리기 명령을 실행합니다.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ CD2DSizeF GetSize() const;
 
 후속 그리기 작업에 대한 레이블을 가져옵니다.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 렌더 대상의 현재 텍스트 렌더링 옵션을 검색합니다.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 
 렌더 대상의 현재 변환을 가져옵니다.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ operator ID2D1RenderTarget*();
 
 렌더 대상에서 마지막 축 정렬 클립을 제거합니다. 이 메서드를 호출한 후에는 클립이 후속 그리기 작업에 더 이상 적용되지 않습니다.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 마지막 PushLayer 호출에 의해 지정된 도면 작업리디렉션을 중지합니다.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 렌더 대상에서 마지막 축 정렬 클립을 제거합니다. 이 메서드를 호출한 후에는 클립이 후속 그리기 작업에 더 이상 적용되지 않습니다.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ void PushAxisAlignedClip(
 
 PopLayer가 호출될 때까지 모든 후속 그리기 작업을 수신하도록 지정된 레이어를 렌더 대상에 추가합니다.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ void PushLayer(
 
 렌더 대상의 그리기 상태를 지정된 ID2D1DrawingStateBlock의 로 설정합니다.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 
 현재 도면 상태를 지정된 ID2D1DrawingStateBlock에 저장합니다.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 
 렌더 대상의 안티 앨리어싱 모드를 설정합니다. 안티 앨리어싱 모드는 텍스트 및 문자 모양 그리기 작업을 제외한 모든 후속 그리기 작업에 적용됩니다.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 
 렌더 대상의 인치당 점(DPI)을 설정합니다.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 
 후속 그리기 작업에 대한 레이블을 지정합니다.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ void SetTags(
 
 후속 텍스트 및 문자 그림 그리기 작업에 사용할 안티 앨리어싱 모드를 지정합니다.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 
 이후의 모든 텍스트 및 문자 그림 그리기 작업에 적용할 텍스트 렌더링 옵션을 지정합니다.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 
 지정된 변환을 기존 변환을 대체하여 렌더 대상에 적용합니다. 이후의 모든 그리기 작업은 변환된 공간에서 발생합니다.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```
@@ -1146,6 +1146,6 @@ CD2DResource 개체에 대한 포인터입니다.
 
 TRUE가 유효한 경우 개체입니다. 그렇지 않으면 거짓.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

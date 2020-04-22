@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376164"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745150"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFC툴바메뉴버튼 클래스
 
@@ -217,7 +217,7 @@ CMFCToolBarMenuButton(
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 이 `CMFCToolBarMenuButton` `CMFCToolBarMenuButton` 개체에 복사할 기존 개체입니다.
 
 *uiID*<br/>
@@ -328,7 +328,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 메뉴 단추에 문서 아이콘을 그립니다.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ void DrawDocumentIcon(
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBar메뉴버튼::인에이블퀵커스터마이즈
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ const CObList& GetCommands() const;
 
 단추 이미지에 대 한 경계 사각형을 검색합니다.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ virtual BOOL SetACCData(
 
 단추에 유효한 명령 ID와 하위 메뉴가 모두 있는 경우 단추를 메뉴 단추 또는 분할 단추로 그려둘지 지정합니다.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ void SetMenuOnly(BOOL bMenuOnly);
 
 드롭다운 메뉴가 팔레트 모드에 있는지 여부를 지정합니다.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ void SetMenuPaletteMode(
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBar 메뉴 버튼::설정 메시지 Wnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 
@@ -874,7 +874,7 @@ virtual void SetTearOff(UINT uiBarID);
 
 [CWinAppEx::EnableTearOffMenus를](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) 호출하여 응용 프로그램에서 메뉴 기능을 해제할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

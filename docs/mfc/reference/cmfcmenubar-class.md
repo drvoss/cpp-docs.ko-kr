@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369700"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749626"
 ---
 # <a name="cmfcmenubar-class"></a>CMFC메뉴바 클래스
 
@@ -430,7 +430,7 @@ virtual void CreateFromMenu(
 
 메뉴 모음의 오른쪽에 있는 **도움말** 콤보 상자를 활성화합니다.
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ virtual BOOL SaveState (
 
 리소스 ID를 기반으로 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체의 기본 메뉴를 설정합니다.
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ void SetDefaultMenuResId(UINT uiResId);
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFC메뉴바::셋포스다운로우
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 MDI가 표시 모드를 변경하고 메뉴 막대를 업데이트해야 할 때 프레임워크는 이 메서드를 호출합니다.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ MDI 자식 창이 최대화되면 MDI 기본 프레임 창에 연결된 메뉴 �
 
 사용자가 메뉴 단추를 만들 때 프레임워크에서 사용하는 런타임 클래스 정보를 설정합니다.
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 
@@ -1082,7 +1082,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 메뉴에 모든 메뉴 명령이 표시되지 않으면 거의 사용되지 않는 명령을 숨깁니다. 메뉴 명령 표시에 대한 자세한 내용은 [CMFCMenuBar 클래스를](../../mfc/reference/cmfcmenubar-class.md)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

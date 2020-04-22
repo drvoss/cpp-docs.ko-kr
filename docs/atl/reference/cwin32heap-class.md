@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: fbdb77e7f52e858401c87e1cd8782b59cc6ebcea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2d79de308b1afb3059cf04ad40b63b6e603073c8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330469"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746039"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 클래스
 
@@ -108,7 +108,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 힙 개체를 기존 힙에 연결합니다.
 
-```
+```cpp
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```
 
@@ -267,7 +267,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 *p가* NULL이면 메모리 블록이 아직 할당되지 않았고 [CWin32Heap::할당이](#allocate) *호출되고 nBytes*인수가 호출됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)<br/>
 [IAtlMemMgr 클래스](../../atl/reference/iatlmemmgr-class.md)<br/>

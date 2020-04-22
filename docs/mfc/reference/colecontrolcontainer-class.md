@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: b1737b2ac114181a4245fff027b756ca30b64129
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366181"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749020"
 ---
 # <a name="colecontrolcontainer-class"></a>콜레컨트롤컨테이너 클래스
 
@@ -359,7 +359,7 @@ Windows *dwStyle* 플래그의 하위 집합만 `CreateControl`다음에서 지�
 
 OLE 글꼴을 만듭니다.
 
-```
+```cpp
 void CreateOleFont(CFont* pFont);
 ```
 
@@ -389,7 +389,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 컨테이너가 연결된 제어 사이트의 이벤트를 무시하거나 수락할지 여부를 결정합니다.
 
-```
+```cpp
 void FreezeAllEvents(BOOL bFreeze);
 ```
 
@@ -543,7 +543,7 @@ virtual BOOL HandleWindowlessMessage(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 Windows에서 제공하는 창 메시지의 식별자입니다.
 
 *wParam*<br/>
@@ -760,7 +760,7 @@ virtual LRESULT SendDlgItemMessage(
 *nID*<br/>
 메시지를 수신하는 컨트롤의 식별자를 지정합니다.
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -809,7 +809,7 @@ virtual void SetDlgItemText(
 *lpszString*<br/>
 컨트롤의 텍스트에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

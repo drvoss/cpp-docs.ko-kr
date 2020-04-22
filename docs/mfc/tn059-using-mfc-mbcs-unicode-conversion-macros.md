@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366584"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749433"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: MFC MBCS/유니코드 변환 매크로 사용
 
@@ -114,7 +114,7 @@ OLE2T   (LPCOLESTR) -> (LPCSTR)
 
 좁은 루프에서 매크로를 사용하지 마십시오. 예를 들어 다음과 같은 종류의 코드를 작성하지 않으려고 합니다.
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 위의 코드는 문자열의 `lpsz` 내용에 따라 스택에 메가 바이트의 메모리를 할당 할 수 있습니다! 또한 루프의 각 반복에 대한 문자열을 변환하는 데 시간이 걸립니다. 대신 이러한 상수 변환을 루프 밖으로 이동합니다.
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 문자열이 일정하지 않으면 메서드 호출을 함수에 캡슐화합니다. 이렇게 하면 매번 변환 버퍼를 해제할 수 있습니다. 다음은 그 예입니다.
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -192,7 +192,7 @@ return lpszT; // CString makes copy
 
 매크로는 사용하기 쉽고 코드에 삽입하기 쉽지만 위의 주의 사항에서 알 수 있듯이 매크로를 사용할 때주의해야합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [숫자별 기술 노트](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368371"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750511"
 ---
 # <a name="crecordset-class"></a>C레코드 집합 클래스
 
@@ -331,7 +331,7 @@ BOOL CanBookmark() const;
 
 데이터 원본이 진행 중인 비동기 작업 또는 두 번째 스레드의 프로세스를 취소해 달라는 요청입니다.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ MFC ODBC 클래스는 더 이상 비동기 처리를 사용하지 않습니다. 
 
 [업데이트가](#update) 호출되기 전에 [편집](#edit) 또는 [AddNew](#addnew) 작업으로 인해 발생하는 보류 중인 업데이트를 취소합니다.
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ BOOL FlushResultSet();
 
 현재 레코드의 책갈피 값을 가져옵니다.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ ClassWizard를 사용 하 여 레코드 집합 클래스를 선언 하 여 기�
 
 현재 레코드에서 필드 데이터를 검색합니다.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ short GetODBCFieldCount() const;
 
 레코드 집합의 필드에 대한 정보를 가져옵니다.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ WORD GetRowStatus(WORD wRow) const;
 
 레코드 집합에서 현재 레코드의 인덱스와 마지막 레코드가 보였는지 여부를 결정합니다.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ virtual void Move(
 
 첫 번째 행 집합의 첫 번째 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ void MoveFirst();
 
 마지막 전체 행 집합의 첫 번째 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ void MoveLast();
 
 다음 행 집합의 첫 번째 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ void MoveNext();
 
 이전 행 집합의 첫 번째 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ virtual BOOL Open(
 
 현재 행 집합의 행에 대한 데이터와 상태를 업데이트합니다.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ virtual BOOL Requery();
 
 지정된 레코드 번호에 해당하는 레코드의 레코드 집합을 배치합니다.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ ODBC 레코드 집합의 경우 절대 위치 설정이 1이면 레코드 집합
 
 지정된 책갈피를 포함하는 레코드의 레코드 집합을 배치합니다.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 
 레코드 집합의 필드 데이터 멤버를 변경된 것으로 또는 변경되지 않은 것으로 플래그를 표시합니다.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ TRUE 필드 데이터 멤버를 "더티"(변경됨)로 플래그를 지정하는
 
 레코드 집합의 필드 데이터 멤버를 Null(특히 값이 없음)으로 플래그를 표시하거나 Null이 아닌 것으로 플래그를 표시합니다.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 잠금 모드를 "낙관적" 잠금(기본값) 또는 "비관적" 잠금으로 설정합니다. 업데이트에 대해 레코드가 잠기는 방법을 결정합니다.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ void SetLockingMode(UINT nMode);
 
 매개 변수를 Null(특히 값이 없음)으로 플래그를 표시하거나 Null이 아닌 것으로 플래그를 표시합니다.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ TRUE(기본값)이면 매개 변수가 Null로 플래그가 지정됩니다. 그
 
 커서를 현재 행 집합 내의 행으로 이동합니다.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
@@ -1957,7 +1957,7 @@ virtual BOOL Update();
 
 문서 [트랜잭션: 레코드 집합(ODBC)에서 트랜잭션 수행 을](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

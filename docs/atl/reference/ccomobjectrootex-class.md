@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327597"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747908"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObject루트텍스 클래스
 
@@ -155,7 +155,7 @@ HRESULT FinalConstruct();
 
 파생 클래스에서 이 메서드를 재정의하여 개체에 필요한 정리를 수행할 수 있습니다.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ ULONG InternalRelease();
 
 스레드 모델이 다중 스레드인 경우 이 메서드는 Win32 API 함수 [EnterCriticalSection을](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)호출하여 스레드가 개인 데이터 멤버를 통해 얻은 중요한 섹션 개체의 소유권을 가져올 때까지 기다립니다.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ ULONG OuterRelease();
 
 스레드 모델이 다중 스레드인 경우 이 메서드는 개인 데이터 멤버를 통해 얻은 임계 섹션 개체의 소유권을 해제하는 Win32 API 함수 [LeaveCriticalSection을](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)호출합니다.
 
-```
+```cpp
 void Unlock();
 ```
 
@@ -369,7 +369,7 @@ void Unlock();
 
 스레드 모델이 단일 스레드인 경우 이 메서드는 아무 것도 수행하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CComAggObject 클래스](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject 클래스](../../atl/reference/ccomobject-class.md)<br/>

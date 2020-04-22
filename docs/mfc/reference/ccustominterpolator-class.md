@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359263"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749167"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 클래스
 
@@ -111,7 +111,7 @@ CCustomInterpolator(
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 전환 기간입니다.
 
 *finalValue*
@@ -156,7 +156,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 출력 전환 기간(초)입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -184,7 +184,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 기간 및 최종 값을 초기화합니다.
 
-```
+```cpp
 void Init(
     UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);
@@ -192,7 +192,7 @@ void Init(
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 전환 기간입니다.
 
 *finalValue*<br/>
@@ -294,7 +294,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 전환 기간입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -323,6 +323,6 @@ virtual BOOL SetInitialValueAndVelocity(
 
 기본 구현은 항상 TRUE를 반환합니다. 이벤트에 실패하려면 재정의된 구현에서 FALSE를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

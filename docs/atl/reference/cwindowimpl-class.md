@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330289"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745989"
 ---
 # <a name="cwindowimpl-class"></a>크윈도우임플 클래스
 
@@ -147,7 +147,7 @@ HWND Create(
 【인】 상위 또는 소유자 창에 대한 핸들입니다.
 
 *rect*<br/>
-【인】 창의 위치를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조입니다. 포인터 `RECT` 또는 참조로 전달할 수 있습니다.
+【인】 창의 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조입니다. 포인터 `RECT` 또는 참조로 전달할 수 있습니다.
 
 *szWindowName*<br/>
 【인】 창의 이름을 지정합니다. 기본값은 NULL입니다.
@@ -375,7 +375,7 @@ static LRESULT CALLBACK WindowProc(
 
 메시지를 처리하기 `WindowProc` 위한 다른 메커니즘을 제공하기 위해 재정의할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [CComControl 클래스](../../atl/reference/ccomcontrol-class.md)<br/>

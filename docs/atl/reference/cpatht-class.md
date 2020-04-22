@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331482"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746589"
 ---
 # <a name="cpatht-class"></a>CPathT 클래스
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>매개 변수
 
-*문자열 유형*<br/>
+*StringType*<br/>
 경로에 사용할 ATL/MFC 문자열 [클래스입니다(CStringT](../../atl-mfc-shared/reference/cstringt-class.md)참조).
 
 ## <a name="members"></a>멤버
@@ -166,7 +166,7 @@ class CPathT
 
 이 메서드를 호출하여 문자열 끝에 백슬래시를 추가하여 경로에 대한 올바른 구문을 만듭니다. 경로에 후행 백슬래시가 이미 있는 경우 백슬래시가 추가되지 않습니다.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ BOOL Append(PCXSTR pszMore);
 
 지정된 드라이브 번호에서 루트 경로를 만들려면 이 메서드를 호출합니다.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ void BuildRoot(int iDrive);
 
 이 메서드를 호출하여 경로를 표준 형식으로 변환합니다.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ void Canonicalize();
 
 이 메서드를 호출하여 디렉터리 이름을 나타내는 문자열과 파일 경로 이름을 나타내는 문자열을 하나의 경로로 연결합니다.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath*<br/>
 경로 문자열에 대한 포인터입니다.
 
-*경로*<br/>
+*path*<br/>
 경로 문자열입니다.
 
 ## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::파일 존재
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 공백이 포함된 경우 이 메서드를 호출하여 따옴표로 패스를 둘러싸습니다.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ BOOL RelativePathTo(
 
 이 메서드를 호출하여 경로에서 명령줄 인수를 제거합니다.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ void RemoveArgs();
 
 이 메서드를 호출하여 경로에서 후행 백슬래시를 제거합니다.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ void RemoveBackslash();
 
 이 메서드를 호출하여 경로에서 모든 행간 및 후행 공백을 제거합니다.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ void RemoveBlanks();
 
 이 메서드를 호출하여 파일 확장명이 있는 경우 경로에서 파일 확장프로그램을 제거합니다.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ int SkipRoot() const;
 
 이 메서드를 호출하여 정규화된 경로 및 파일 이름의 경로 부분을 제거합니다.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ BOOL StripToRoot();
 
 이 메서드를 호출하여 경로의 시작과 끝에서 따옴표를 제거합니다.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 
@@ -907,7 +907,7 @@ typedef StringType::XCHAR XCHAR;
 
 `StringType`은 에 대한 `CPathT`템플릿 매개 변수입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../atl/reference/atl-classes.md)<br/>
 [CStringT 클래스](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369635"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749614"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFC아웃아웃바파네 클래스
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Outlook 막대 창의 이미지에서 사용하는 리소스를 해제합니다.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ virtual BOOL EnableContextMenuItems(
 
 Outlook 막대 창의 스크롤 화살표가 단추 페이지 별로 또는 단추별로 단추 목록을 진행할지 여부를 지정합니다.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ TRUE 단추를 성공적으로 제거한 경우 지정된 명령 ID가 유효하
 
 Outlook 막대의 배경색을 설정합니다.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Outlook 막대의 현재 배경 색을 설정하려면 이 함수를 호출합�
 
 배경 이미지를 설정합니다.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Outlook 막대의 배경 이미지를 설정하려면 이 메서드를 호출합
 
 Outlook 막대 창을 원래 단추 집합으로 재설정합니다.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ void SetDefaultState();
 
 Outlook 막대 창의 단추 주위에 사용되는 패딩 픽셀 수를 설정합니다.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Outlook 막대 창에서 일반 텍스트와 강조 표시된 텍스트의 색상을 설정합니다.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Outlook 막대 창의 투명 색상을 설정합니다.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 
@@ -480,7 +480,7 @@ void SetTransparentColor(COLORREF color);
 
 투명 한 이미지를 표시 하려면 투명 한 색상이 필요 합니다. 이미지에서 이 색상이 발생하면 대신 배경 색으로 그려집니다.  배경 및 전경 이미지의 혼합은 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321331"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748598"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 클래스
 
@@ -147,7 +147,7 @@ CAtlServiceModuleT() throw();
 
 서비스에 대한 처리기 루틴입니다.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ BOOL IsInstalled() throw();
 
 이벤트 로그에 씁니다.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ TCHAR [256] m_szServiceName;
 
 서비스를 계속하려면 이 메서드를 재정의합니다.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 이 메서드를 재정의하여 서비스를 인터로게이지합니다.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 이 메서드를 재정의하여 서비스를 일시 중지합니다.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 이 메서드를 재정의하여 서비스를 종료합니다.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 이 메서드를 재정의하여 서비스를 중지합니다.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 서비스에 대한 알 수 없는 요청을 처리하려면 이 메서드를 재정의합니다.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 이 메서드는 서비스 제어 관리자에서 호출합니다.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ SCM 호출 `ServiceMain`후 서비스는 SCM에 처리기 함수를 제공해야
 
 이 메서드는 서비스 상태를 업데이트합니다.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 
@@ -563,7 +563,7 @@ int WinMain(int nShowCmd) throw();
 
 이 메서드는 [명령줄(CAtlServiceModuleT::ParseCommandLine](#parsecommandline)사용)을 처리한 다음 서비스를 [시작합니다(CAtlServiceModuleT::Start](#start)사용).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CAtlExeModuleT 클래스](../../atl/reference/catlexemodulet-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

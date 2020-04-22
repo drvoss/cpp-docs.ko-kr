@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370159"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749143"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 클래스
 
@@ -584,7 +584,7 @@ BOOL Arrange(UINT nCode);
 
 항목 텍스트 편집 작업을 취소합니다.
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 목록 컨트롤의 스타일을 지정합니다. 목록 컨트롤 스타일의 조합을 컨트롤에 적용합니다. 이러한 스타일의 전체 목록은 Windows SDK의 [창 보기](/windows/win32/Controls/list-view-window-styles) 목록을 참조하십시오. [SetExtendedStyle을](#setextendedstyle)사용하여 컨트롤에 특정확장 스타일을 설정합니다.
 
 *rect*<br/>
-목록 컨트롤의 크기와 위치를 지정합니다. `CRect` 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+목록 컨트롤의 크기와 위치를 지정합니다. `CRect` 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 목록 컨트롤의 부모 창(일반적으로)을 `CDialog`지정합니다. NULL이 아니어야 합니다.
@@ -666,7 +666,7 @@ virtual BOOL CreateEx(
 목록 컨트롤의 스타일을 지정합니다. 목록 컨트롤 스타일의 조합을 컨트롤에 적용합니다. 이러한 스타일의 전체 목록은 Windows SDK의 [창 보기 목록 보기를](/windows/win32/Controls/list-view-window-styles) 참조하십시오.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 드래그 이미지 목록을 만들 항목의 인덱스입니다.
 
 *lpPoint*<br/>
-뷰 좌표에서 이미지의 왼쪽 위 모서리의 초기 위치를 수신하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조의 주소입니다.
+뷰 좌표에서 이미지의 왼쪽 위 모서리의 초기 위치를 수신하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1355,7 +1355,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iIndex*|【인】 그룹의 0기반 인덱스입니다.|
 |*pGroup*|【아웃】 *iIndex* 매개 변수에 의해 지정된 그룹에 대한 정보를 수신하는 [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) 구조에 대한 포인터입니다.<br /><br /> 호출자는 [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) 구조의 멤버를 초기화할 책임이 있습니다. 멤버를 `cbSize` 구조의 크기로 설정하고 `mask` 검색할 정보를 지정할 멤버의 플래그를 설정합니다.|
@@ -1413,7 +1413,7 @@ public:
 
 그룹의 메트릭을 검색합니다.
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1439,10 +1439,10 @@ BOOL GetGroupRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iGroupId*|【인】 그룹을 지정합니다.|
-|*Lprect*|【인, 아웃】 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 이 메서드가 성공하면 구조체는 *iGroupId에*의해 지정된 그룹의 사각형 좌표를 받습니다.|
+|*Lprect*|【인, 아웃】 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 이 메서드가 성공하면 구조체는 *iGroupId에*의해 지정된 그룹의 사각형 좌표를 받습니다.|
 |*iCoords*|【인】 검색할 사각형 좌표를 지정합니다. 다음 값 중 하나를 사용합니다.<br /><br /> - LVGGR_GROUP - (기본값) 전체 확장 그룹의 좌표.<br />- LVGGR_HEADER - 헤더 (축소 된 그룹)의 좌표.<br />- LVGGR_SUBSETLINK - 하위 집합 링크(마크업 하위 집합)의 좌표입니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>설명
 
-호출자는 *pRect* 매개 변수로 가리키는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조를 할당합니다.
+호출자는 *pRect* 매개 변수로 가리키는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조를 할당합니다.
 
 이 메서드는 Windows SDK에 설명 된 [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect) 메시지를 보냅니다.
 
@@ -1496,7 +1496,7 @@ UINT GetGroupState(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iGroupId*|【인】 그룹의 0기반 인덱스입니다.|
 |*dwMask*|【인】 지정된 그룹에 대해 검색할 상태 값을 지정하는 마스크입니다. 자세한 내용은 `mask` [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) 구조의 멤버를 참조하십시오.|
@@ -1786,12 +1786,12 @@ BOOL GetItemIndexRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pItemIndex*|【인】 하위 항목의 상위 항목에 대한 [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) 구조에 대한 포인터입니다.<br /><br /> 호출자는 [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) 구조의 멤버를 할당하고 설정할 책임이 있습니다. 이 매개 변수는 NULL일 수 없습니다.|
 |*iColumn*|【인】 컨트롤의 열에 대한 0기반 인덱스입니다.|
 |*rectType*|【인】 경계 사각형이 검색되는 목록 보기 하위 항목의 일부입니다. 다음 값 중 하나를 지정합니다.<br /><br /> LVIR_BOUNDS - 아이콘과 레이블을 포함하여 전체 하위 항목의 경계 사각형을 반환합니다.<br /><br /> LVIR_ICON - 하위 항목의 아이콘 또는 작은 아이콘의 경계 사각형을 반환합니다.<br /><br /> LVIR_LABEL - 하위 항목 텍스트의 경계 사각형을 반환합니다.|
-|*pRect*|【아웃】 하위 항목의 경계 사각형에 대한 정보를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.<br /><br /> 호출자는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조를 할당할 책임이 있습니다. 이 매개 변수는 NULL일 수 없습니다.|
+|*pRect*|【아웃】 하위 항목의 경계 사각형에 대한 정보를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.<br /><br /> 호출자는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조를 할당할 책임이 있습니다. 이 매개 변수는 NULL일 수 없습니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 위치를 검색할 항목의 인덱스입니다.
 
 *lpPoint*<br/>
-뷰 좌표에서 항목의 왼쪽 위 모서리의 위치를 받는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조의 주소입니다.
+뷰 좌표에서 항목의 왼쪽 위 모서리의 위치를 받는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 위치를 검색할 항목의 인덱스입니다.
 
 *Lprect*<br/>
-경계 사각형을 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 주소입니다.
+경계 사각형을 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 주소입니다.
 
 *nCode*<br/>
 경계 사각형을 검색할 목록 뷰 항목의 일부입니다. 다음 값 중 하나일 수 있습니다.
@@ -1954,7 +1954,7 @@ BOOL GetItemSpacing(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*fSmall*|【인】 항목 간격을 검색할 보기를 확인합니다. 작은 아이콘 보기에 는 TRUE를 지정하거나 아이콘 보기에 는 FALSE를 지정합니다.|
 |*pnHorzSpacing*|【아웃】 항목 간의 가로 간격을 포함합니다.|
@@ -2092,7 +2092,7 @@ BOOL GetNextItemIndex(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pItemIndex*|【인, 아웃】 검색이 시작되는 항목을 설명하는 [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) 구조에 대한 포인터 또는 -1을 사용하여 *nFlags* 매개 변수의 플래그와 일치하는 첫 번째 항목을 찾습니다.<br /><br /> 이 메서드가 성공하면 `LVITEMINDEX` 구조는 검색에서 찾은 항목을 설명합니다.|
 |*nFlags*|【인】 검색을 수행하는 방법을 지정하는 플래그의 비트 조합(OR)입니다.<br /><br /> 검색은 대상 항목의 인덱스, 상태 또는 모양 또는 *pItemIndex* 매개 변수에 의해 지정된 항목에 대한 대상 항목의 실제 위치에 따라 달라질 수 있습니다. 자세한 내용은 [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) 메시지의 *flags* 매개 변수를 참조하십시오.|
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>매개 변수
 
 *lpPoint*<br/>
-뷰 원점을 수신하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조의 주소입니다.
+뷰 원점을 수신하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>매개 변수
 
 *Lprect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 주소입니다.
+[RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2546,7 +2546,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 목록 보기 컨트롤의 현재 작업 영역을 검색합니다.
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>매개 변수
 
 *pPoint*<br/>
-목록 컨트롤의 클라이언트 영역을 기준으로 적중 테스트 좌표를 포함하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 포인터입니다.
+목록 컨트롤의 클라이언트 영역을 기준으로 적중 테스트 좌표를 포함하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 포인터입니다.
 
 *plvim*<br/>
 점 매개변수에 의해 정의된 좌표에 가장 가까운 삽입 점을 지정하는 [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) 구조에 대한 포인터입니다.
@@ -2874,7 +2874,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*index*|【인】 현재 목록 보기 컨트롤에서 항목의 0기반 인덱스입니다.|
 
@@ -2896,7 +2896,7 @@ UINT MapIDToIndex(UINT id) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*id*|【인】 항목의 고유 ID입니다.|
 
@@ -2922,7 +2922,7 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*index*|【인】 항목의 0기반 인덱스입니다.|
 
@@ -3008,7 +3008,7 @@ LRESULT MoveGroup(
 
 지정된 항목을 지정된 그룹으로 이동합니다.
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ BOOL RedrawItems(
 
 목록 보기 컨트롤에서 모든 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3098,7 +3098,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 가로 `CSize` 및 세로 스크롤양을 픽셀 단위로 지정하는 개체입니다. `y` *크기* 멤버는 목록 뷰 컨트롤의 선의 높이, 픽셀 단위로 나누고 컨트롤은 결과 줄 수로 스크롤됩니다.
 
 ### <a name="return-value"></a>Return Value
@@ -3387,7 +3387,7 @@ int SetGroupInfo(
 
 목록 보기 컨트롤의 그룹 메트릭을 설정합니다.
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3497,7 +3497,7 @@ x축의 아이콘 사이의 거리(픽셀 단위)입니다.
 *Cy*<br/>
 y축의 아이콘 사이의 거리(픽셀 단위)입니다.
 
-*크기*<br/>
+*size*<br/>
 x- 및 y 축의 아이콘 사이의 거리(픽셀)를 지정하는 `CSize` 개체입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -3693,7 +3693,7 @@ Windows SDK에 설명된 대로 새 항목 특성을 포함하는 [LVITEM](/wind
 
 많은 수의 항목을 추가하기 위한 목록 보기 컨트롤을 준비합니다.
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3821,7 +3821,7 @@ BOOL SetItemIndexState(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pItemIndex*|【인】 항목을 설명하는 [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) 구조에 대한 포인터입니다. 호출자는 이 구조를 할당하고 멤버를 설정합니다.|
 |*dwState*|【인】 [목록 보기 항목 상태의](/windows/win32/Controls/list-view-item-states)비트 조합인 항목을 설정하는 상태입니다. 재설정할 0또는 설정할 상태를 지정합니다.|
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 위치를 설정할 항목의 인덱스입니다.
 
 *pt*<br/>
-항목의 왼쪽 위 모서리의 뷰 좌표에서 새 위치를 지정하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조입니다.
+항목의 왼쪽 위 모서리의 뷰 좌표에서 새 위치를 지정하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -4156,7 +4156,7 @@ DWORD SetView(int iView);
 
 목록 보기 컨트롤에 아이콘을 표시할 수 있는 영역을 설정합니다.
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);
@@ -4283,7 +4283,7 @@ BOOL SortItemsEx(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pfnCompare*|【인】 응용 프로그램 정의 비교 함수의 주소입니다.<br /><br /> 정렬 작업은 두 목록 항목의 상대 순서를 결정해야 할 때마다 비교 함수를 호출합니다. 비교 함수는 클래스의 정적 멤버이거나 클래스의 멤버가 아닌 독립 실행형 함수여야 합니다.|
 |*dwData*|【인】 응용 프로그램 정의 값이 비교 함수에 전달되었습니다.|
@@ -4423,7 +4423,7 @@ BOOL Update(int nItem);
 
 [CListCtrl::GetselectedCount에](#getselectedcount)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 행 목록](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](cwnd-class.md)<br/>

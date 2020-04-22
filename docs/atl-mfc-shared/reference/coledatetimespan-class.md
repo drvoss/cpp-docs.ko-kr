@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7173fa0b6261ea718a02d399d944a1b5bb98b9f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f6a26c2724146f8723dee3ddce60ddce6995ec8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317737"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747155"
 ---
 # <a name="coledatetimespan-class"></a>콜레데이트타임스팬 클래스
 
@@ -678,7 +678,7 @@ operator double() const throw();
 
 이 날짜/시간 범위 값의 값을 설정합니다.
 
-```
+```cpp
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
@@ -715,7 +715,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 이 `COleDateTimeSpan` 개체의 상태(유효성)를 설정합니다.
 
-```
+```cpp
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 
@@ -751,7 +751,7 @@ enum DateTimeSpanStatus{
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [콜레데이트타임 클래스](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [CTime 클래스](../../atl-mfc-shared/reference/ctime-class.md)<br/>

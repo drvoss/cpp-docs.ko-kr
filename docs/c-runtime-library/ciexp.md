@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: b694479c7a69ec2c4da82a584e55398771536df6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a85a9a90ee922c6100649f2aebb9eb4c68696a0d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334238"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745776"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -38,7 +38,7 @@ ms.locfileid: "81334238"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void __cdecl _CIexp();
 ```
 
@@ -54,7 +54,7 @@ void __cdecl _CIexp();
 
 **플랫폼:** x86
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

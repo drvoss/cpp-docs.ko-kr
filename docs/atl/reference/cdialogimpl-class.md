@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 900a312c97d7b83eac93a372be39a006b3c4344d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327057"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747712"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 클래스
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWnd부모*<br/>
 【인】 소유자 창에 대한 핸들입니다.
 
-**RECT&** *rect* [in] 대화 상자의 크기와 위치를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조입니다.
+**RECT&** *rect* [in] 대화 상자의 크기와 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조입니다.
 
 *dwInitParam*<br/>
 【인】 WM_INITDIALOG 메시지의 *lParam* 매개 변수에서 대화 상자에 전달할 값을 지정합니다.
@@ -324,7 +324,7 @@ static LRESULT CALLBACK StartDialogProc(
 
 에 대한 초기 `StartDialogProc` `DialogProc` 호출 이후에는 대화 상자 프로시저로 설정되고 추가 호출이 진행됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

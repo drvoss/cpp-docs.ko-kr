@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 43f914a52666788fc0bf394d9d14830b28f5adc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 019b90c932de144d05fbf05f3ca339f4e5d6edd1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748095"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 클래스
 
@@ -146,7 +146,7 @@ HRESULT FinalConstruct();
 
 > `m_contained::FinalRelease` 개체를 `m_contained` `CComContainedObject` <  `contained` 무료로 호출합니다.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -203,7 +203,7 @@ STDMETHOD_(ULONG, Release)();
 
 디버그가 아닌 빌드에서는 항상 0을 반환합니다. 디버그 빌드에서 진단 또는 테스트에 유용할 수 있는 값을 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C컴티어오프오브젝트 클래스](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [CComObject루트텍스 클래스](../../atl/reference/ccomobjectrootex-class.md)<br/>

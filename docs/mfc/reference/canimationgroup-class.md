@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369738"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750156"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 클래스
 
@@ -135,7 +135,7 @@ class CAnimationGroup;
 
 스토리보드에 키프레임을 추가하는 도우미입니다.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 
 스토리보드에 전환을 추가하는 도우미입니다.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ BOOL Animate(
 
 애니메이션 개체에 전환을 적용합니다.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 애니메이션 그룹에 속한 모든 키프레임을 제거하고 선택적으로 삭제합니다.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ m_bAutodestroyKeyframes 멤버가 TRUE이면 키프레임이 제거되고 소멸
 
 애니메이션 그룹에 속한 애니메이션 개체에서 전환을 제거합니다.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -374,7 +374,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 
 그룹에 속한 모든 애니메이션 오브젝트가 자동으로 전환을 삭제하도록 지시합니다.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -387,6 +387,6 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 
 스택에 전환을 할당하는 경우에만 이 값을 FALSE로 설정합니다. 기본값은 TRUE이므로 새 연산자 new를 사용하여 전환 개체를 할당하는 것이 좋습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

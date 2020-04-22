@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329342"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747349"
 ---
 # <a name="worker-archetype"></a>작업자 아키타입
 
@@ -19,10 +19,10 @@ ms.locfileid: "81329342"
 
 이 아키타입에 맞는 클래스를 구현하려면 클래스는 다음 기능을 제공해야 합니다.
 
-|메서드|Description|
+|방법|Description|
 |------------|-----------------|
 |[Initialize](#initialize)|요청이 [Execute로](#execute)전달되기 전에 worker 개체를 초기화하기 위해 호출됩니다.|
-|[Execute](#execute)|작업 항목을 처리하기 위해 호출됩니다.|
+|[실행](#execute)|작업 항목을 처리하기 위해 호출됩니다.|
 |[Terminate](#terminate)|모든 요청이 [Execute로](#execute)전달된 후 worker 개체를 초기화하기 위해 호출됩니다.|
 
 |형식 정의|Description|
@@ -58,7 +58,7 @@ ms.locfileid: "81329342"
 
 작업 항목을 처리하기 위해 호출됩니다.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -109,7 +109,7 @@ typedef MyRequestType RequestType;
 
 모든 요청이 )로 전달된 후 worker `WorkerArchetype::Execute`개체를 초기화하기 위해 호출됩니다.
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 
@@ -118,7 +118,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 worker 클래스에서 이해하는 사용자 지정 매개 변수입니다. 또한 에 `WorkerArchetype::Initialize` `WorkerArchetype::Execute`전달 하 고 .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [개념](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)

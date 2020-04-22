@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: cc8aa9216fd0d4dcc169830fb745134ceb5c65fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c2f9ac1658f50f0ec5bd9e2f53d270c09bfcb6a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318406"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750328"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 클래스
 
@@ -212,7 +212,7 @@ CShellManager();
 
 항목 목록을 삭제합니다.
 
-```
+```cpp
 void FreeItem(LPITEMIDLIST pidl);
 ```
 
@@ -324,7 +324,7 @@ HRESULT ItemFromPath(
 
 성공하면 NOERROR를 반환합니다. OLE 정의 오류 값입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

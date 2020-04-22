@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 474e2707ba1936082bb6abc1be2109a27924f1d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376202"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745156"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFC툴바이미지 클래스
 
@@ -270,7 +270,7 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCToolBar이미지::적응색상
 
-```
+```cpp
 void AdaptColors(
     COLORREF clrBase,
     COLORREF clrTone);
@@ -349,7 +349,7 @@ static void __stdcall CleanUp();
 
 [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) 개체가 할당된 시스템 리소스를 해제합니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -545,7 +545,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) [CMFCToolBarImages::Draw를](#draw)호출하여 도구 모음 이미지를 그린 후 할당된 시스템 리소스를 해제합니다.
 
-```
+```cpp
 void EndDrawImage(CAfxDrawState& ds);
 ```
 
@@ -1068,7 +1068,7 @@ BOOL MirrorVert();
 
 ## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolBar 이미지::온시스컬러체인지
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1161,7 +1161,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 
 ## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCToolBar 이미지::설정항상빛
 
-```
+```cpp
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
@@ -1204,7 +1204,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 각 도구 모음 이미지의 크기(소스 크기)를 설정합니다.
 
-```
+```cpp
 void SetImageSize(
     SIZE sizeImage,
     BOOL bUpdateCount=FALSE);
@@ -1221,7 +1221,7 @@ void SetImageSize(
 
 ## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFCToolBar 이미지::설정라이트백분율
 
-```
+```cpp
 void SetLightPercentage(int nValue);
 ```
 
@@ -1233,7 +1233,7 @@ void SetLightPercentage(int nValue);
 
 ## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolBar 이미지::셋맵토3D색상
 
-```
+```cpp
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```
 
@@ -1245,7 +1245,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolBar 이미지::세트사전배합자동검사
 
-```
+```cpp
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```
 
@@ -1257,7 +1257,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFCToolBar 이미지::세트싱글이미지
 
-```
+```cpp
 void SetSingleImage();
 ```
 
@@ -1382,7 +1382,7 @@ BOOL SmoothResize(double dblImageScale);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

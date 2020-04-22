@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: e45c9b3fd778aacd3a3e2d5d3696661afa0c6fb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330907"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746479"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 클래스
 
@@ -97,7 +97,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>매개 변수
 
-*T*<br/>
+*t*<br/>
 배열에 추가할 요소입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -119,7 +119,7 @@ CSimpleArray();
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 기존 `CSimpleArray` 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -148,7 +148,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*T*<br/>
+*t*<br/>
 검색할 요소입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -216,7 +216,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 복사할 배열입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -241,7 +241,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>매개 변수
 
-*T*<br/>
+*t*<br/>
 배열에서 제거할 요소입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -256,7 +256,7 @@ BOOL Remove(const T& t);
 
 배열에서 모든 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -300,13 +300,13 @@ BOOL SetAtIndex(
 *nIndex*<br/>
 변경할 요소의 인덱스입니다.
 
-*T*<br/>
+*t*<br/>
 지정된 요소에 할당할 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
 인덱스가 유효하지 않은 경우 TRUE, FALSE를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 개요](../../atl/atl-class-overview.md)
