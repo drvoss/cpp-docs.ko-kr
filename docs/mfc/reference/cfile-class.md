@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373914"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755007"
 ---
 # <a name="cfile-class"></a>CFile 클래스
 
@@ -751,7 +751,7 @@ UINT nFrom);
 
 파일 포인터의 값을 파일의 시작 부분으로 설정합니다.
 
-```
+```cpp
 void SeekToBegin();
 ```
 
@@ -916,7 +916,7 @@ virtual void Write(
 
 또한 [CFile::CFile](#cfile) 및 [CFile::open](#open)에 대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 드로클리](../../overview/visual-cpp-samples.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

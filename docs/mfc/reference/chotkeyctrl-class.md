@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366882"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750807"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 클래스
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 단축키 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용합니다. 자세한 내용은 Windows SDK의 [일반 제어 스타일을](/windows/win32/Controls/common-control-styles) 참조하십시오.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -254,7 +254,7 @@ static CString GetKeyName(
 
 바로 가기 키 컨트롤의 바로 가기를 설정합니다.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ void SetHotKey(
 
 이 함수를 호출하여 잘못된 조합과 핫 키 컨트롤에 대한 기본 수정자 조합을 정의합니다.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);
@@ -319,7 +319,7 @@ void SetRules(
 
 사용자가 *wInvalidComb에*지정된 플래그에 의해 정의된 대로 잘못된 키 조합을 입력하면 시스템은 OR 연산자를 사용하여 사용자가 입력한 키를 *wModifiers에*지정된 플래그와 결합합니다. 결과 키 조합은 문자열로 변환된 다음 단축키 컨트롤에 표시됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

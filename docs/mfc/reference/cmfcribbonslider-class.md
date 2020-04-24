@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304581371c68817c6031153c3cec227137771c5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368839"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754066"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFC리본슬라이더 클래스
 
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 슬라이더 컨트롤의 현재 위치를 설정합니다.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw=TRUE);
@@ -230,7 +230,7 @@ void SetPos(
 
 슬라이더 컨트롤의 값 범위를 설정합니다.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -252,7 +252,7 @@ void SetRange(
 
 확대/축소 단추를 표시하거나 숨깁니다.
 
-```
+```cpp
 void SetZoomButtons(BOOL bSet=TRUE);
 ```
 
@@ -264,7 +264,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 슬라이더 컨트롤의 확대/축소를 설정합니다.
 
-```
+```cpp
 void SetZoomIncrement(int nZoomIncrement);
 ```
 
@@ -273,7 +273,7 @@ void SetZoomIncrement(int nZoomIncrement);
 *nZoomIncrement*<br/>
 【인】 슬라이더 컨트롤의 확대/축소를 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

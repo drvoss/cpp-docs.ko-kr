@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369728"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755145"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 클래스
 
@@ -102,7 +102,7 @@ CAnimationPoint 클래스는 두 개의 CAnimationVariable 개체를 캡슐화�
 
 X 및 Y 좌표에 대한 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -270,7 +270,7 @@ C애니메이션포인트의 현재 값입니다.
 
 CAnimationPoint에 ptSrc를 할당합니다.
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
@@ -287,7 +287,7 @@ CAnimationPoint에 ptSrc를 할당합니다. 이 연산자는 설정됨값(SetDe
 
 기본값을 설정합니다.
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 
@@ -300,6 +300,6 @@ void SetDefaultValue(const POINT& ptDefault);
 
 이 함수를 사용하여 기본값을 애니메이션 오브젝트로 설정합니다. 이 메서드는 애니메이션 점의 X 및 Y 좌표에 기본값을 할당합니다. 또한 기본 COM 개체가 생성된 경우 다시 만듭니다. 이 애니메이션 개체를 이벤트에 구독한 경우(ValueChanged 또는 IntegerValueChanged) 이러한 이벤트를 다시 활성화해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

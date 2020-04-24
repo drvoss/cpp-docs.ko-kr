@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373759"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752920"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 클래스
 
@@ -316,7 +316,7 @@ class CFrameWndEx : public CFrameWnd
 
 OLE 클라이언트 항목의 레이아웃과 프레임의 클라이언트 영역을 조정합니다.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 지정된 창을 프레임 창에 도킹합니다.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 전체 화면 모드에서 주 메뉴를 표시하거나 숨깁니다.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 프레임 창에 대한 전체 화면 모드를 활성화합니다.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 도킹 상태의 로드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 창 메뉴의 자동 처리를 활성화하거나 비활성화합니다.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 시스템 색상이 변경될 때 프레임워크에서 호출합니다.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 창을 등록 취소하고 도킹 관리자에서 제거합니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,7 +1999,7 @@ void RemovePaneFromDockManager(
 
 도킹 레이아웃을 레지스트리에 저장된 도킹 상태로 복원합니다.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -2012,7 +2012,7 @@ void SetDockState(const CDockState& state);
 
 인쇄 미리 보기 프레임 창을 설정합니다.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 사용자 정의 명령을 도구 모음 메뉴에 삽입합니다.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ void SetupToolbarMenu(
 
 메인 프레임을 전체 화면 모드와 일반 모드 로 전환합니다.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 지정된 창을 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 창 프레임 캡션을 업데이트하는 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -2113,7 +2113,7 @@ nCmd 매개 변수에 종속된 *데이터입니다.* 가능한 값 목록은 [W
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

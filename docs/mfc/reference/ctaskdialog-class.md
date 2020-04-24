@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366641"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752291"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ CTaskDialog 샘플
 
 에 새 명령 단추 `CTaskDialog`컨트롤을 추가합니다.
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ void AddCommandControl(
 
 `CTaskDialog`에 라디오 단추를 추가합니다.
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ TRUE 컴퓨터가 다음을 `CTaskDialog`지원하는 경우; 그렇지 않으�
 
 문자열 테이블의 데이터를 사용하여 명령 단추 컨트롤을 추가합니다.
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ void LoadCommandControls(
 
 문자열 테이블의 데이터를 사용하여 라디오 단추 컨트롤을 추가합니다.
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 에서 모든 명령 단추 컨트롤을 `CTaskDialog`제거합니다.
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 `CTaskDialog`에서 모든 라디오 단추를 제거합니다.
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 에서 명령 단추 컨트롤을 업데이트합니다. `CTaskDialog`
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ void SetCommandControlOptions(
 
 사용할 공통 단추의 하위 집합을 업데이트하고 UAC 높이를 요구합니다.
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ void SetCommonButtonOptions(
 
 `CTaskDialog`에 공통 단추를 추가합니다.
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ void SetCommonButtons(
 
 의 내용을 업데이트합니다. `CTaskDialog`
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ void SetContent(const CString& strContent);
 
 기본 명령 단추 컨트롤을 지정합니다.
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 기본 라디오 단추를 지정합니다.
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 의 너비를 조정합니다. `CTaskDialog`
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ void SetDialogWidth(int nWidth = 0);
 
 의 확장 영역을 `CTaskDialog`업데이트합니다.
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ void SetExpansionArea(
 
 의 바닥글 아이콘을 `CTaskDialog`업데이트합니다.
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ A는 `CTaskDialog` `HICON` 바닥글 `LPCWSTR` 아이콘으로만 허용할 수 
 
 의 바닥글에 있는 텍스트를 `CTaskDialog`업데이트합니다.
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ void SetFooterText(const CString& strFooterText);
 
 의 기본 아이콘을 `CTaskDialog`업데이트합니다.
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ A는 `CTaskDialog` `HICON` 또는 `LPCWSTR` 주 아이콘으로만 허용할 수
 
 의 기본 지침을 `CTaskDialog`업데이트합니다.
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ void SetMainInstruction(const CString& strInstructions);
 
 에 대한 옵션을 `CTaskDialog`구성합니다.
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ void SetOptions(int nOptionFlag);
 
 에 대한 선택 윤곽 `CTaskDialog` 막대를 구성하고 대화 상자에 추가합니다.
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ void SetProgressBarMarquee(
 
 진행률 표시줄의 위치를 조정합니다.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 진행률 표시줄의 범위를 조정합니다.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ void SetProgressBarRange(
 
 진행률 표시줄의 상태를 설정하고 `CTaskDialog`에 표시합니다.
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 라디오 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ void SetRadioButtonOptions(
 
 확인 확인란의 선택된 상태를 설정합니다.
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 확인 확인란의 오른쪽에 표시되는 텍스트를 설정합니다.
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 의 제목을 `CTaskDialog`설정합니다.
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 
@@ -1618,7 +1618,7 @@ HRESULT TaskDialogCallback(
 |TDN_HELP|사용되지 않습니다.|사용되지 않습니다.|
 |TDN_EXPANDO_BUTTON_CLICKED|확장 영역이 축소된 경우 0; 확장 텍스트가 표시되는 경우 0이 아닙니다.|사용되지 않습니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

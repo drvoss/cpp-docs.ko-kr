@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: c7b60d9e695351e0c1d97b6629ff19664fcd6d05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2021a2069885c6314859a65d528cf03712c524b6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369934"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751741"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 클래스
 
@@ -153,7 +153,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 바로 가기 키를 다시 설정합니다.
 
-```
+```cpp
 void ResetKey();
 ```
 
@@ -161,7 +161,7 @@ void ResetKey();
 
 이 함수는 편집 제어 텍스트를 지웁히 바웁습니다. 여기에는 사용자가 누른 모든 바로 가기 키가 포함됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

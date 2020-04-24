@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353033"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753023"
 ---
 # <a name="casyncsocket-class"></a>CAsync소켓 클래스
 
@@ -815,26 +815,26 @@ BOOL GetSockOpt(
 |SO_DEBUG|BOOL|디버깅이 활성화되어 있습니다.|
 |SO_DONTLINGER|BOOL|true이면 SO_LINGER 옵션이 비활성화됩니다.|
 |SO_DONTROUTE|BOOL|라우팅이 비활성화되었습니다.|
-|SO_ERROR|**Int**|오류 상태를 검색하고 지우기.|
+|SO_ERROR|**int**|오류 상태를 검색하고 지우기.|
 |SO_KEEPALIVE|BOOL|Keep-alives가 전송되고 있습니다.|
 |SO_LINGER|`struct LINGER`|현재 느린 옵션을 반환합니다.|
 |SO_OOBINLINE|BOOL|대역 외 데이터가 일반 데이터 스트림에서 수신되고 있습니다.|
 |SO_RCVBUF|int|수신에 대한 버퍼 크기입니다.|
 |SO_REUSEADDR|BOOL|소켓은 이미 사용 중인 주소에 바인딩할 수 있습니다.|
-|SO_SNDBUF|**Int**|송신의 버퍼 크기입니다.|
-|SO_TYPE|**Int**|소켓의 유형(예: SOCK_STREAM)입니다.|
+|SO_SNDBUF|**int**|송신의 버퍼 크기입니다.|
+|SO_TYPE|**int**|소켓의 유형(예: SOCK_STREAM)입니다.|
 |Tcp_nodelay|BOOL|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|
 
 지원되지 않는 버클리 소프트웨어 배포(BSD) 옵션은 다음과 같습니다. `GetSockOpt`
 
 |값|Type|의미|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**Int**|낮은 워터 마크를 받습니다.|
-|SO_RCVTIMEO|**Int**|시간 시간을 받습니다.|
-|SO_SNDLOWAT|**Int**|낮은 워터 마크를 보냅니다.|
-|SO_SNDTIMEO|**Int**|시간 시간을 보냅니다.|
+|SO_RCVLOWAT|**int**|낮은 워터 마크를 받습니다.|
+|SO_RCVTIMEO|**int**|시간 시간을 받습니다.|
+|SO_SNDLOWAT|**int**|낮은 워터 마크를 보냅니다.|
+|SO_SNDTIMEO|**int**|시간 시간을 보냅니다.|
 |IP_OPTIONS||IP 헤더에서 옵션을 가져옵니다.|
-|TCP_MAXSEG|**Int**|TCP 최대 세그먼트 크기를 가져옵니다.|
+|TCP_MAXSEG|**int**|TCP 최대 세그먼트 크기를 가져옵니다.|
 
 지원되지 않는 옵션을 호출하면 `GetSockOpt` WSAENOPROTOOPT에서 오류 코드가 `GetLastError`반환됩니다.
 
@@ -1112,7 +1112,7 @@ virtual void OnSend(int nErrorCode);
 
 개체에 새 값을 `CAsyncSocket` 할당합니다.
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 
@@ -1724,9 +1724,9 @@ TCP_NODELAY 옵션은 Nagle 알고리즘을 사용하지 않도록 설정합니�
 |SO_KEEPALIVE|BOOL|keep-alives를 보내십시오.|
 |SO_LINGER|`struct LINGER`|보내지 `Close` 않은 데이터가 있는 경우 계속 남아 있습니다.|
 |SO_OOBINLINE|BOOL|일반 데이터 스트림에서 대역 외 데이터를 수신합니다.|
-|SO_RCVBUF|**Int**|수신에 대한 버퍼 크기를 지정합니다.|
+|SO_RCVBUF|**int**|수신에 대한 버퍼 크기를 지정합니다.|
 |SO_REUSEADDR|BOOL|소켓을 이미 사용 중인 주소에 바인딩할 수 있습니다. (바인딩 [Bind](#bind)참조.)|
-|SO_SNDBUF|**Int**|송신에 대한 버퍼 크기를 지정합니다.|
+|SO_SNDBUF|**int**|송신에 대한 버퍼 크기를 지정합니다.|
 |Tcp_nodelay|BOOL|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|
 
 지원되지 않는 버클리 소프트웨어 배포(BSD) 옵션은 다음과 같습니다. `SetSockOpt`
@@ -1734,12 +1734,12 @@ TCP_NODELAY 옵션은 Nagle 알고리즘을 사용하지 않도록 설정합니�
 |값|Type|의미|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|소켓이 대기 중입니다.|
-|SO_ERROR|**Int**|오류 상태를 얻고 지우십시오.|
-|SO_RCVLOWAT|**Int**|낮은 워터 마크를 받습니다.|
-|SO_RCVTIMEO|**Int**|수신 시간 제한|
-|SO_SNDLOWAT|**Int**|낮은 워터 마크를 보냅니다.|
-|SO_SNDTIMEO|**Int**|시간 시간을 보냅니다.|
-|SO_TYPE|**Int**|소켓의 유형입니다.|
+|SO_ERROR|**int**|오류 상태를 얻고 지우십시오.|
+|SO_RCVLOWAT|**int**|낮은 워터 마크를 받습니다.|
+|SO_RCVTIMEO|**int**|수신 시간 제한|
+|SO_SNDLOWAT|**int**|낮은 워터 마크를 보냅니다.|
+|SO_SNDTIMEO|**int**|시간 시간을 보냅니다.|
+|SO_TYPE|**int**|소켓의 유형입니다.|
 |IP_OPTIONS||IP 헤더의 옵션 필드를 설정합니다.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsync소켓::종료
@@ -1835,7 +1835,7 @@ BOOL Socket(
 
 이 메서드는 소켓 핸들을 할당합니다. [CAsyncSocket::바인딩을](#bind) 호출하지 않으므로 지정된 주소에 소켓을 바인딩하려면 `Bind` 나중에 호출하여 지정된 주소에 소켓을 바인딩해야 합니다. [CAsyncSocket::SetSockOpt를](#setsockopt) 사용하여 바인딩되기 전에 소켓 옵션을 설정할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366139"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753930"
 ---
 # <a name="colecurrency-class"></a>코레커런시 클래스
 
@@ -159,7 +159,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 
 - LOCALE_NOUSEROVERRIDE 사용자 지정 사용자 설정이 아닌 시스템 기본 로캘 설정을 사용합니다.
 
-*lcid*<br/>
+*Lcid*<br/>
 변환에 사용할 로캘 ID를 나타냅니다.
 
 ### <a name="return-value"></a>Return Value
@@ -469,7 +469,7 @@ throw(COleException*);
 
 - LOCALE_NOUSEROVERRIDE 사용자 지정 사용자 설정이 아닌 시스템 기본 로캘 설정을 사용합니다.
 
-*lcid*<br/>
+*Lcid*<br/>
 변환에 사용할 로캘 ID를 나타냅니다.
 
 ### <a name="return-value"></a>Return Value
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 이 멤버 함수를 호출하여 이 `COleCurrency` 개체의 단위 및 소수 부분을 설정합니다.
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,7 +542,7 @@ void SetCurrency(
 
 이 멤버 함수를 호출하여 이 `COleCurrency` 개체의 상태(유효성)를 설정합니다.
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 
@@ -574,7 +574,7 @@ enum CurrencyStatus {
 > [!CAUTION]
 > 이 함수는 고급 프로그래밍 상황에 적합합니다. 이 함수는 이 개체의 데이터를 변경하지 않습니다. 상태를 null 또는 유효하지 않은 상태로 설정하는 데 가장 자주 사용됩니다. 할당 연산자 [(연산자 =](#operator_eq)) 및 [SetCurrency는](#setcurrency) 소스 값에 따라 개체의 상태를 설정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [COle변형 클래스](../../mfc/reference/colevariant-class.md)

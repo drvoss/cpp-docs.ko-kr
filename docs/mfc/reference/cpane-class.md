@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364170"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753658"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -340,7 +340,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 
 테두리와 그리퍼를 포함하여 창의 내부 사각형을 계산합니다.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ void CalcInsideRect(
 
 최근에 도킹된 사각형을 계산합니다.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 【아웃】 허용되는 `CSize` 최소 크기로 채워진 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -890,7 +890,7 @@ virtual void GetPaneName(CString& strName) const;
 
 창의 *가상 사각형을* 검색합니다.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 창의 테두리 값을 설정합니다.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ void SetBorders(LPCRECT lpRect);
 
 창의 *핫스폿을* 설정합니다.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 
 창에 허용되는 최소 크기를 설정합니다.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 【인】 창에 허용되는 최소 크기를 포함하는 `CSize` 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 창의 *가상 사각형을* 설정합니다.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ void SetVirtualRect(
 
 기본 미니 프레임 창에 대한 런타임 클래스 정보를 설정합니다.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 가상 사각형을 업데이트합니다.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);
@@ -1604,7 +1604,7 @@ void UpdateVirtualRect(CSize sizeNew);
 
 세 번째 오버로드는 창의 현재 위치와 *sizeNew로*지정된 크기를 사용하여 가상 사각형을 설정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

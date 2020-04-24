@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367577"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752412"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFC비활성화메뉴애니메이션 클래스
 
@@ -75,7 +75,7 @@ class CMFCDisableMenuAnimation
 
 프레임워크가 팝업 메뉴를 표시하는 데 사용한 이전 애니메이션을 복원합니다.
 
-```
+```cpp
 void Restore ();
 ```
 
@@ -83,7 +83,7 @@ void Restore ();
 
 이 메서드는 `CMFCDisableMenuAnimation` 소멸자에서 호출하여 프레임워크가 팝업 메뉴를 표시하는 데 사용한 이전 애니메이션을 복원합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

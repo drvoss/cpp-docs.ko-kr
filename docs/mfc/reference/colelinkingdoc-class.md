@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: f9f184542aaceb206d3eae110d3a088d5fbc95cf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374948"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753845"
 ---
 # <a name="colelinkingdoc-class"></a>코올링싱독 클래스
 
@@ -181,7 +181,7 @@ OLE 팩터리 개체에 대한 포인터(NULL일 수 있음).
 
 OLE 시스템 DLL에 문서가 더 이상 열려 있지 않다는 것을 알립니다.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -191,7 +191,7 @@ void Revoke();
 
 명명된 파일을 닫을 때이 함수를 호출해야하지만 일반적으로 직접 호출 할 필요는 없습니다. `Revoke`의 구현에 `COleLinkingDoc`의해 당신을 `OnCloseDocument`위해 `OnNewDocument` `OnOpenDocument`호출됩니다 `OnSaveDocument`.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 클라이언트](../../overview/visual-cpp-samples.md)<br/>
 [콜레문서 클래스](../../mfc/reference/coledocument-class.md)<br/>

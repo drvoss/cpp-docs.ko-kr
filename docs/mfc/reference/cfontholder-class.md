@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373809"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754988"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 클래스
 
@@ -170,7 +170,7 @@ HFONT GetFontHandle(
 
 `CFontHolder` 개체를 초기화합니다.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 개체로 표시되는 실제 글꼴에 `CFontHolder` 대한 정보를 검색합니다.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 
 이 함수는 `CFontHolder` 개체의 `IFont` 인터페이스연결을 끊습니다.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ CFont* Select(
 
 기존 글꼴을 해제하고 `CFontHolder` 개체를 `IFont` 인터페이스에 연결합니다.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
@@ -264,7 +264,7 @@ void SetFont(LPFONT pNewFont);
 *p뉴폰트*<br/>
 새 `IFont` 인터페이스에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [프롭익스체인지 클래스](../../mfc/reference/cpropexchange-class.md)

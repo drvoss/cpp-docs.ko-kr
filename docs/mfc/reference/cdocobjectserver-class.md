@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: ccd8ddc9f4981b3d9f7f4e1decdf6790cd05b98b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f415df35b13e50eee092f87eca0627e5cf143720
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375487"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753288"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 클래스
 
@@ -81,7 +81,7 @@ DocObjects에 대한 자세한 내용은 *MFC 참조의* [CDocObjectServerItem](
 
 이 함수를 호출하여 문서 개체 서버를 활성화(표시되지는 않음)합니다.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -167,7 +167,7 @@ virtual void OnSaveViewState(CArchive& ar);
 
 뷰의 `OnSaveViewState` 상태와 관련된 영구 정보를 저장하는 데 사용할 수 있습니다. 정보를 저장하기 `OnSaveViewState` 위해 재정의하는 경우 해당 `OnApplyViewState` 정보를 읽고 새로 활성화될 때 뷰에 적용하도록 재정의할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

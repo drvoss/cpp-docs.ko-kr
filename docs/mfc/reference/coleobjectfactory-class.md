@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 9f3d86cf735c02b6021441c66d9fd64547f6d6c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 165ba7c1918c3ccc5d5d7e0bc067fba86678a3e7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374901"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753811"
 ---
 # <a name="coleobjectfactory-class"></a>콜레오브젝트팩토리 클래스
 
@@ -281,7 +281,7 @@ static BOOL PASCAL RegisterAll();
 
 OLE 시스템 DLL을 사용 하 고이 개체 팩터리의 등록을 취소 합니다.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -317,7 +317,7 @@ static BOOL PASCAL UnregisterAll();
 
 응용 프로그램의 모든 개체 팩터리를 OLE 시스템 레지스트리에 등록합니다.
 
-```
+```cpp
 void UpdateRegistry(LPCTSTR lpszProgID = NULL);
 virtual BOOL UpdateRegistry(BOOL bRegister);
 ```
@@ -398,7 +398,7 @@ virtual BOOL VerifyUserLicense();
 
 디자인 타임 라이센스가 유효한 경우 비영; 그렇지 않으면 0.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

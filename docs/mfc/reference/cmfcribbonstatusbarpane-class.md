@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368789"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753507"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFC리본상태바파네 클래스
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 잘린 상태에서 상태 표시줄 창에 표시할 수 있는 가장 긴 텍스트를 정의합니다.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 
 상태 표시줄 창에 애니메이션에 사용할 수 있는 이미지 목록을 연결합니다.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ TRUE 이미지 목록이 상태 표시줄 창에 성공적으로 첨부된 경�
 
 상태 표시줄 창의 레이블의 텍스트 정렬을 설정합니다.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 창에 할당한 애니메이션을 시작합니다.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,11 +355,11 @@ void StartAnimation(
 
 상태 표시줄 창에 할당한 애니메이션을 중지합니다.
 
-```
+```cpp
 void StopAnimation();
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

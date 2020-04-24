@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 05ad60855cd03115cf88ab2b51e56e6a26822035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74b07dc8144e853714ea73c8235f1259538a0c12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352441"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752760"
 ---
 # <a name="cbutton-class"></a>CButton 클래스
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpszNote*|【아웃】 호출자는 할당 및 할당 지정을 담당하는 버퍼에 대한 포인터입니다. 반환 값이 TRUE이면 버퍼에는 현재 명령 링크 컨트롤과 연결된 메모 텍스트가 포함됩니다. 그렇지 않으면 버퍼가 변경되지 않습니다.|
 |*cchNote*|【인, 아웃】 서명되지 않은 정수 변수에 대한 포인터입니다.<br /><br /> 이 메서드가 호출될 때 변수에는 *lpszNote* 매개 변수가 지정한 버퍼의 크기가 포함됩니다.<br /><br /> 이 메서드가 반환 하는 경우 반환 값이 TRUE 경우 변수는 현재 명령 링크 컨트롤과 관련 된 메모의 크기를 포함 합니다. 반환 값이 FALSE인 경우 변수에는 메모를 포함하는 데 필요한 버퍼 크기가 포함됩니다.|
@@ -506,7 +506,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pInfo*|【아웃】 현재 분할 단추 컨트롤에 대한 정보를 수신하는 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 구조에 대한 포인터입니다. 호출자는 구조를 할당할 책임이 있습니다.|
 
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pSize*|【아웃】 사각형에 대한 설명을 받는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조에 대한 포인터입니다.|
 
@@ -664,7 +664,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 단추의 스타일을 변경합니다.
 
-```
+```cpp
 void SetButtonStyle(
     UINT nStyle,
     BOOL bRedraw = TRUE);
@@ -690,7 +690,7 @@ void SetButtonStyle(
 
 라디오 단추 또는 확인란의 확인 상태를 설정하거나 재설정합니다.
 
-```
+```cpp
 void SetCheck(int nCheck);
 ```
 
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*fDropDown*|【인】 true는 BST_DROPDOWNPUSHED 상태를 설정합니다. 그렇지 않으면 false입니다.|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*fElevationRequired*|【인】 TRUE 는 `elevation required` 상태를 설정합니다. 그렇지 않으면 false입니다.|
 
@@ -882,7 +882,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpszNote*|【인】 명령 링크 컨트롤의 메모 텍스트로 설정된 유니코드 문자열에 대한 포인터입니다.|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*chGlyph*|【인】 분할 단추 드롭다운 화살표로 사용할 문자를 지정하는 문자입니다.|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pSplitImageList*|【인】 현재 분할 단추 컨트롤에 할당할 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대한 포인터입니다.|
 
@@ -968,7 +968,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pInfo*|【인】 현재 분할 단추 컨트롤을 정의하는 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 구조에 대한 포인터입니다.|
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pSize*|【인】 경계 사각형을 설명하는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조에 대한 포인터입니다.|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*uSplitStyle*|【인】 분할 단추 스타일의 비트 조합입니다. 자세한 내용은 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) `uSplitStyle` 구조의 멤버를 참조하십시오.|
 
@@ -1074,7 +1074,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 단추 컨트롤이 강조 표시될지 여부를 설정합니다.
 
-```
+```cpp
 void SetState(BOOL bHighlight);
 ```
 
@@ -1114,7 +1114,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 이 멤버 함수는 Windows SDK의 [단추](/windows/win32/controls/buttons) 섹션에 설명된 대로 BCM_SETTEXTMARGIN 메시지의 기능을 에뮬레이트합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

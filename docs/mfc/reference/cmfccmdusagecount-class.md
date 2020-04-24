@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367748"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752585"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 클래스
 
@@ -90,7 +90,7 @@ class CMFCCmdUsageCount : public CObject
 
 지정된 명령과 연결된 카운터를 하나씩 증분합니다.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
@@ -98,7 +98,7 @@ void AddCmd(UINT uiCmd);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*uiCmd*|【인】 명령 카운터가 증분하도록 지정합니다.|
 
 ### <a name="remarks"></a>설명
@@ -125,7 +125,7 @@ UINT GetCount(UINT uiCmd) const;
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*uiCmd*|【인】 검색할 명령 카운터의 ID입니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -162,7 +162,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*uiCmd*|【인】 검사할 명령을 지정합니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -179,7 +179,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 모든 명령의 사용 수를 지웁습니다.
 
-```
+```cpp
 void Reset();
 ```
 
@@ -199,7 +199,7 @@ virtual void Serialize(CArchive& ar);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*ar*|【인】 에서 `CArchive` 또는 에 직렬화할 개체입니다.|
 
 ### <a name="remarks"></a>설명
@@ -222,7 +222,7 @@ static BOOL __stdcall SetOptions(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*n스타트카운트*|【인】 추적된 모든 명령의 새 초기 개수입니다.|
 |*nMinUsage백분율*|【인】 새 최소 사용률입니다.|
 
@@ -236,7 +236,7 @@ TRUE 메서드가 성공하면 false *if nMinUsagePercentage* 매개 변수가 1
 
 디버그 빌드에서 이 메서드는 *nMinUsagePercentage* 매개 변수가 100보다 크거나 같으면 어설션 오류를 생성합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

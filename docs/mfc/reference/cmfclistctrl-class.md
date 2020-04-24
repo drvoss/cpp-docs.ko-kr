@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370765"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754236"
 ---
 # <a name="cmfclistctrl-class"></a>CMFC리스트Ctrl 클래스
 
@@ -94,7 +94,7 @@ class CMFCListCtrl : public CListCtrl
 
 정렬된 열을 다른 배경색으로 표시합니다.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 목록 컨트롤의 데이터 행을 여러 열로 정렬할 수 있습니다.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ virtual COLORREF OnGetCellTextColor(
 
 정렬 열을 정렬 열 목록에서 제거합니다.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ void RemoveSortColumn(int iColumn);
 
 현재 정렬된 열과 정렬 순서를 설정합니다.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,
@@ -338,7 +338,7 @@ virtual void Sort(
 *bAdd*<br/>
 【인】 이 메서드가 *iColumn으로* 표시된 열을 정렬 열 목록에 추가하는지 여부를 지정하는 부울입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

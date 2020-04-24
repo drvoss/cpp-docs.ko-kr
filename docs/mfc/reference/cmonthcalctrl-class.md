@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319749"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752825"
 ---
 # <a name="cmonthcalctrl-class"></a>C월칼Ctrl 클래스
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 월 달력 컨트롤에 적용된 Windows 스타일의 조합을 지정합니다. 스타일에 대한 자세한 내용은 Windows SDK의 [월 캘린더 제어 스타일을](/windows/win32/Controls/month-calendar-control-styles) 참조하십시오.
 
 *rect*<br/>
-[RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다. 월 달력 컨트롤의 위치와 크기를 포함합니다.
+[RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다. 월 달력 컨트롤의 위치와 크기를 포함합니다.
 
 *pt*<br/>
-월 달력 컨트롤의 위치를 식별하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 참조입니다.
+월 달력 컨트롤의 위치를 식별하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 월 달력 컨트롤의 부모 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
@@ -302,7 +302,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pmcGridInfo*|【아웃】 현재 월 달력 컨트롤에 대한 정보를 수신하는 [MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) 구조에 대한 포인터입니다. 호출자는 이 구조를 할당하고 초기화할 책임이 있습니다.|
 
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>매개 변수
 
 *pRect*<br/>
-경계 사각형 정보를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 이 매개 변수는 유효한 주소여야 하며 NULL일 수 없습니다.
+경계 사각형 정보를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 이 매개 변수는 유효한 주소여야 하며 NULL일 수 없습니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -808,13 +808,13 @@ BOOL IsYearView() const;
 
 현재 월 달력 컨트롤의 테두리 너비를 설정합니다.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*cxyBorder*|【인】 테두리의 너비(픽셀)입니다.|
 
@@ -840,7 +840,7 @@ void SetCalendarBorder(int cxyBorder);
 
 현재 월 달력 컨트롤의 테두리의 기본 너비를 설정합니다.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -860,7 +860,7 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*칼ID*|【인】 [달력 식별자](/windows/win32/Intl/calendar-identifiers) 상수 중 하나입니다.|
 
@@ -951,7 +951,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwNewView*|【인】 월별, 연간, 10년 또는 세기 보기를 지정하는 다음 값 중 하나입니다.<br /><br /> MCMV_MONTH: 월간 보기<br /><br /> MCMV_YEAR: 연간 보기<br /><br /> MCMV_DECADE: 10년 전망<br /><br /> MCMV_CENTURY: 센추리 뷰|
 
@@ -1219,7 +1219,7 @@ BOOL SetSelRange(
 
 현재 날짜의 달력 컨트롤을 설정합니다.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1288,13 +1288,13 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
-|*Lprect*|【인】 원하는 수의 달력을 포함하는 사각형을 정의하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.|
+|*Lprect*|【인】 원하는 수의 달력을 포함하는 사각형을 정의하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.|
 
 ### <a name="return-value"></a>Return Value
 
-크기가 [lpRect](/previous-versions/dd162897\(v=vs.85\)) 매개 변수에 의해 정의된 사각형보다 작거나 같은 사각형을 정의하는 *RECT* 구조에 대한 포인터입니다.
+크기가 [lpRect](/windows/win32/api/windef/ns-windef-rect) 매개 변수에 의해 정의된 사각형보다 작거나 같은 사각형을 정의하는 *RECT* 구조에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1302,7 +1302,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 이 메서드는 Windows SDK에 설명 된 [MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin) 메시지를 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

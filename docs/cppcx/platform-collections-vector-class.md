@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354380"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032124"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 클래스
 
-개별적으로 인덱스에 의해 액세스될 수 있는 개체의 순차적인 컬렉션을 나타냅니다. [Windows:::Foundation::컬렉션::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) XAML [데이터 바인딩에](/windows/uwp/data-binding/data-binding-in-depth)대 한 도움말을 구현 합니다.
+개별적으로 인덱스에 의해 액세스될 수 있는 개체의 순차적인 컬렉션을 나타냅니다. [Windows:::Foundation::컬렉션::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) XAML [데이터 바인딩에](/windows/uwp/data-binding/data-binding-in-depth)대 한 도움말을 구현 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -61,9 +61,9 @@ Vector 개체에 포함된 요소의 형식입니다.
 
 1. public enum 클래스
 
-**벡터** 클래스는 [Windows:::Foundation::Collection::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) 인터페이스의 C++ 구체적인 구현입니다.
+**벡터** 클래스는 [Windows:::Foundation::Collection::IVector](/uwp/api/windows.foundation.collections.ivector-1) 인터페이스의 C++ 구체적인 구현입니다.
 
-공용 반환 값 또는 매개 변수에서 **Vector** 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수나 반환 값 형식을 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)로 변경하여 오류를 수정할 수 있습니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
+공용 반환 값 또는 매개 변수에서 **Vector** 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수나 반환 값 형식을 [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)로 변경하여 오류를 수정할 수 있습니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
 
 ### <a name="members"></a>멤버
 
@@ -96,7 +96,7 @@ Vector 개체에 포함된 요소의 형식입니다.
 |||
 |-|-|
 |속성|Description|
-|이벤트 [윈도우::파운데이션::컬렉션::벡터변경이벤트핸들러\<T>^ 벡터 변경](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector가 변경될 때 발생합니다.|
+|이벤트 [윈도우::파운데이션::컬렉션::벡터변경이벤트핸들러\<T>^ 벡터 변경](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Vector가 변경될 때 발생합니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -372,7 +372,7 @@ Vector(std::initializer_list<T> il);
 *N*<br/>
 현재 Vector를 초기화하는 데 사용되는 개체 컬렉션의 요소 수입니다.
 
-*크기*<br/>
+*size*<br/>
 Vector의 요소 수입니다.
 
 *value*<br/>
@@ -390,7 +390,7 @@ Vector의 요소 수입니다.
 *마지막*<br/>
 현재 Vector를 초기화하는 데 사용되는 개체 시퀀스의 마지막 요소입니다. *마지막의* 유형은 완벽한 전달을 통해 *전달됩니다.* 자세한 내용은 [RValue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [컬렉션(C++/CX)](collections-c-cx.md)<br/>
 [플랫폼 네임스페이스](platform-namespace-c-cx.md)<br/>

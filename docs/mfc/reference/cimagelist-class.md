@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752691"
 ---
 # <a name="cimagelist-class"></a>CImageList 클래스
 
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 그려질 이미지의 0기반 인덱스입니다.
 
 *pt*<br/>
-이미지가 그려질 x- 및 y-좌표를 포함하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조입니다.
+이미지가 그려질 x- 및 y-좌표를 포함하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조입니다.
 
 *Sz*<br/>
 그릴 이미지의 크기를 나타내는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조입니다.
 
 *ptOrigin*<br/>
-이미지 자체에 대해 드로잉 작업의 왼쪽 위 모서리를 지정하는 x-및 y 좌표를 포함하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조입니다. x 좌표의 왼쪽과 y 좌표 위에 있는 이미지의 픽셀은 그려지지 않습니다.
+이미지 자체에 대해 드로잉 작업의 왼쪽 위 모서리를 지정하는 x-및 y 좌표를 포함하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조입니다. x 좌표의 왼쪽과 y 좌표 위에 있는 이미지의 픽셀은 그려지지 않습니다.
 
 *f스타일*<br/>
 드로잉 스타일과 선택적으로 오버레이 이미지를 지정하는 플래그를 지정합니다. 오버레이 이미지에 대한 자세한 내용은 비고 섹션을 참조하십시오. ILD_NORMAL MFC 기본 구현은 이미지 목록의 배경색을 사용하여 이미지를 그립니다. 배경색이 CLR_NONE 값인 경우 마스크를 사용하여 이미지가 투명하게 그려집니다.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>매개 변수
 
 *lpPoint*<br/>
-현재 드래그 위치를 받는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조의 주소입니다.
+현재 드래그 위치를 받는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조의 주소입니다.
 
 *lp포인트핫스팟*<br/>
 드래그 위치를 `POINT` 기준으로 드래그 이미지의 오프셋을 받는 구조의 주소입니다.
@@ -1191,7 +1191,7 @@ BOOL Write(CArchive* pArchive);
 
 [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

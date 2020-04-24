@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376473"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754633"
 ---
 # <a name="cdatabase-class"></a>C데이터베이스 클래스
 
@@ -186,7 +186,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 이 멤버 함수를 호출하여 데이터 원본이 진행 중인 비동기 작업 또는 두 번째 스레드의 프로세스를 취소하도록 요청합니다.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ BOOL CommitTrans();
 
 SQL 명령을 직접 실행해야 하는 경우 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ All `CRecordset` `AddNew` `Edit`, `Delete`및 `Update` 마지막 [BeginTrans](#b
 
 이 멤버 함수를 호출하기 `Open` 전에 또는 호출하기 `OpenEx` 전에 시도된 데이터 원본 연결 시간이 초과되기 전에 허용되는 기본 초 수를 재정의합니다.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 
 연결된 데이터 원본 시간 초과에 대한 후속 작업이 시작되기 전에 허용하도록 기본 초 수를 재정의하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
@@ -640,7 +640,7 @@ void SetQueryTimeout(DWORD dwSeconds);
 
 쿼리 시간 설정의 기본값은 15초입니다. 모든 데이터 원본이 쿼리 시간 시간 값을 설정하는 기능을 지원하지는 않습니다. 쿼리 시간 지정 값을 0으로 설정하면 시간 지정이 발생하지 않습니다. 데이터 원본과의 통신이 응답하지 않을 수 있습니다. 이 동작은 개발 중에 유용할 수 있습니다. 데이터 원본이 시간 시간을 지원하지 않는 경우 추적 출력을 얻지만 예외는 아닙니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

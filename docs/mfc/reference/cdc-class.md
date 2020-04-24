@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375705"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753436"
 ---
 # <a name="cdc-class"></a>CDC 클래스
 
@@ -1354,7 +1354,7 @@ Windows 장치 컨텍스트입니다.
 
 HIMETRIC 크기를 OLE로 제공하여 픽셀을 HIMETRIC으로 변환할 때 이 기능을 사용합니다.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 
 장치 단위를 논리 단위로 변환합니다.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ void DPtoLP(LPSIZE lpSize) const;
 
 이 멤버 함수를 호출하여 3차원 사각형을 그립니다.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1452,7 +1452,7 @@ void Draw3dRect(
 
 이 멤버 함수를 반복적으로 호출하여 드래그 사각형을 다시 그립니다.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *Lprect*<br/>
 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 사각형의 논리적 좌표를 지정하는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.이 경우 다시 그려지는 사각형의 끝 위치입니다.
 
-*크기*<br/>
+*size*<br/>
 외부 테두리의 왼쪽 위 모서리에서 사각형의 내부 테두리의 왼쪽 위 모서리(즉, 테두리두께)까지의 변위를 지정합니다.
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ int DrawEscape(
 
 사각형에 포커스가 있음을 나타내는 데 사용되는 스타일로 사각형을 그립니다.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *pt*<br/>
 이미지의 위치를 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 이미지 크기를 지정합니다.
 
 *hBitmap*<br/>
@@ -2345,7 +2345,7 @@ BOOL FillPath();
 
 지정된 브러시를 사용하여 지정된 사각형을 채우려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ BOOL FillRgn(
 
 지정된 사각형을 지정된 단색으로 채우려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2492,7 +2492,7 @@ BOOL FloodFill(
 
 *lpRect에*의해 지정된 사각형 주위에 테두리를 그립니다.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -4123,7 +4123,7 @@ virtual BOOL GrayString(
 
 HIMETRIC 크기를 OLE에서 픽셀로 변환할 때 이 기능을 사용합니다.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 
 이 함수를 호출하여 HIMETRIC 단위를 논리 단위로 변환합니다.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI는 모든 후속 출력을 새 경계 내에 맞게 클립합니다. 너비�
 
 지정된 사각형의 내용을 반전합니다.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4297,7 +4297,7 @@ BOOL LineTo(POINT point);
 
 논리 단위를 장치 단위로 변환합니다.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ void LPtoDP(LPSIZE lpSize) const;
 
 논리 단위를 HIMETRIC 단위로 변환하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4516,7 +4516,7 @@ int OffsetClipRgn(SIZE size);
 *Y*<br/>
 위 또는 아래로 이동할 논리 단위 수를 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 오프셋할 양을 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -5610,7 +5610,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 
 ### <a name="return-value"></a>Return Value
 
-대체되는 개체에 대한 포인터입니다. 이 포인터는 사용되는 함수 버전에 따라 (와 같은)에서 `CGdiObject` `CPen`파생된 클래스 중 하나의 개체에 대한 포인터입니다. 오류가 있는 경우 반환 값은 NULL입니다. 이 함수는 임시 개체에 대한 포인터를 반환할 수 있습니다. 이 임시 개체는 하나의 Windows 메시지를 처리하는 동안에만 유효합니다. 자세한 내용은 `CGdiObject::FromHandle`을 참조하세요.
+대체되는 개체에 대한 포인터입니다. 이 포인터는 사용되는 함수 버전에 따라 (와 같은)에서 `CGdiObject` `CPen`파생된 클래스 중 하나의 개체에 대한 포인터입니다. 오류가 있는 경우 반환 값은 NULL입니다. 이 함수는 임시 개체에 대한 포인터를 반환할 수 있습니다. 이 임시 개체는 하나의 Windows 메시지를 처리하는 동안에만 유효합니다. 자세한 내용은 `CGdiObject::FromHandle`를 참조하세요.
 
 영역 매개 변수를 수행하는 멤버 함수 버전은 `SelectClipRgn` 멤버 함수와 동일한 작업을 수행합니다. 반환 값은 다음 중 어느 한 개일 수 있습니다.
 
@@ -6493,7 +6493,7 @@ CSize SetViewportExt(SIZE size);
 *Cy*<br/>
 장치 단위에서 뷰포트의 y 범위를 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 장치 단위에서 뷰포트의 x- 및 y 익스텐을 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -6574,7 +6574,7 @@ CSize SetWindowExt(SIZE size);
 *Cy*<br/>
 창의 y-익스텐션(논리 단위)을 지정합니다.
 
-*크기*<br/>
+*size*<br/>
 창의 x- 및 y-익스텐션(논리 단위)을 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -7029,7 +7029,7 @@ BOOL TransparentBlt(
 
 클라이언트 영역의 현재 색상을 픽셀 단위로 시스템 팔레트에 일치시켜 장치 컨텍스트의 클라이언트 영역을 업데이트합니다.
 
-```
+```cpp
 void UpdateColors();
 ```
 
@@ -7057,7 +7057,7 @@ BOOL WidenPath();
 
 이 함수는 현재 펜이 두 번째 버전의 `CreatePen` 멤버 함수에 의해 생성된 기하학적 펜이거나 펜이 첫 번째 버전으로 만들어지고 장치 단위의 `CreatePen` 너비가 1보다 큰 경우에만 성공합니다. 장치 컨텍스트에는 닫힌 경로가 포함되어야 합니다. 경로의 모든 Bzier 곡선은 확대된 곡선을 근사화하는 직선 시퀀스로 변환됩니다. 따라서 호출된 후 `WidenPath` 경로에 Bzier 곡선이 남아 있지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

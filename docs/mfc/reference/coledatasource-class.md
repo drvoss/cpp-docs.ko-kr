@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753902"
 ---
 # <a name="coledatasource-class"></a>콜레데이터소스 클래스
 
@@ -104,7 +104,7 @@ OLE 데이터 원본을 직접 만들 수 있습니다. 또는 [COleClientItem](
 
 이 함수를 호출하여 데이터 전송 작업 중에 데이터가 제공되는 형식을 지정합니다.
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ void CacheData(
 
 이 함수를 호출하여 데이터 전송 작업 중에 데이터가 제공되는 형식을 지정합니다.
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 이 함수를 호출하여 데이터 전송 작업 중에 데이터가 제공되는 형식을 지정합니다.
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ void DelayRenderData(
 
 이 함수를 호출하여 데이터 전송 작업 중에 데이터가 제공되는 형식을 지정합니다.
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ void DelayRenderFileData(
 
 이 함수를 호출하여 데이터 원본의 내용 변경을 지원합니다.
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ DROPEFFECT DoDragDrop(
 
 이 함수를 호출하여 데이터 개체를 비웁습니다. `COleDataSource`
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,11 +482,11 @@ virtual BOOL OnSetData(
 
 다음 함수 중 `COleDataSource` 하나를 호출한 후 클립보드의 개체에 포함된 데이터를 [캐시데이터,](#cachedata) [캐시글로벌데이터,](#cacheglobaldata) [DelayRenderData](#delayrenderdata)또는 [DelayRenderFileData](#delayrenderfiledata).
 
-```
+```cpp
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 클라이언트](../../overview/visual-cpp-samples.md)<br/>

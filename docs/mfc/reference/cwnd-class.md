@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365939"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751717"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 
@@ -1576,7 +1576,7 @@ WM_PAINT 메시지에 `BeginPaint` 대한 응답을 제외하고 멤버 [WM_PAIN
 
 형식 라이브러리에 표시된 것처럼 호출 하는 개체의 기본 단순 바인딩된 속성(예: 편집 컨트롤)을 DataSource, UserName, 암호 및 데이터 원본 컨트롤의 SQL 속성에 의해 정의 된 기본 커서에 바인딩합니다.
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ void BindDefaultProperty(
 
 데이터 바인딩 컨트롤(예: 그리드 컨트롤)에 커서 바인딩 속성을 데이터 원본 컨트롤에 바인딩하고 MFC 바인딩 관리자와의 관계를 등록합니다.
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ void BindProperty(
 
 `CWnd`를 겹치는 창 스택의 맨 위로 이동합니다.
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ TRUE 키를 누를 때 도구 팁을 취소하고 상태 표시줄 텍스트를 
 
 부모를 기준으로 창을 가운데 맞춤합니다.
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 단추를 선택(옆에 확인 표시 배치)하거나 단추를 지우거나(확인 표시를 제거) 3상태 단추의 상태를 변경합니다.
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ void CheckDlgButton(
 
 그룹에서 지정된 라디오 단추를 선택하고 그룹의 다른 모든 라디오 단추를 선택(확인 표시를 제거)합니다.
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ CWnd* ChildWindowFromPoint(
 
 디스플레이에서 지정된 점이나 사각형의 클라이언트 좌표를 화면 좌표로 변환합니다.
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 창을 최소화합니다.
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ virtual HRESULT CreateAccessibleProxy(
 
 시스템 캐리트에 대한 새 모양을 만들고 카포트의 소유권을 주장합니다.
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2207,7 +2207,7 @@ virtual BOOL CreateEx(
 
 시스템 캐리트에 대한 회색 사각형을 만들고 캐리트의 소유권을 주장합니다.
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ void CreateGrayCaret(
 
 시스템 캐리트에 대한 견고한 사각형을 만들고 캐리트의 소유권을 주장합니다.
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2316,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 처리할 Windows 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -2373,7 +2373,7 @@ virtual BOOL DestroyWindow();
 
 멤버 `DestroyWindow` 함수는 [CDialog::Create에서](../../mfc/reference/cdialog-class.md#create)만든 모덜리스 대화 상자도 삭제합니다.
 
-소멸되는 것이 자식 창이고 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 스타일 집합이 없는 경우 WM_PARENTNOTIFY 메시지가 부모에게 전송됩니다. [WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) `CWnd`
+소멸되는 것이 자식 창이고 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 스타일 집합이 없는 경우 WM_PARENTNOTIFY 메시지가 부모에게 전송됩니다. [WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) `CWnd`
 
 ### <a name="example"></a>예제
 
@@ -2626,7 +2626,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 응용 프로그램의 `CWnd` [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 함수에서 포인터를 사용하여 창 내에서 이 멤버 함수를 호출하여 창이 Windows 파일 관리자 또는 파일 탐색기에서 삭제된 파일을 수락함을 나타냅니다.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 애니메이션 유형을 지정합니다. IDANI_CAPTION 지정하면 창 캡션이 *lprcFrom에서* 지정한 위치에서 *lprcTo에*의해 지정된 위치로 애니메이션됩니다. 이 효과는 창을 최소화하거나 최대화하는 것과 유사합니다.
 
 *lprcFrom*<br/>
-아이콘 또는 최소화된 창의 위치와 크기를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.
+아이콘 또는 최소화된 창의 위치와 크기를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.
 
 *lprcTo*<br/>
-복원된 창의 위치와 크기를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터
+복원된 창의 위치와 크기를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터
 
 ### <a name="return-value"></a>Return Value
 
@@ -2728,7 +2728,7 @@ BOOL DrawCaption(
 
 메뉴 모음을 다시 그립니다.
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ Windows에서 창을 만든 후 메뉴 모음이 변경된 경우 이 함수를 
 
 사용자 정의 활성 접근성 기능을 활성화합니다.
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ MFC의 기본 활성 접근성 지원은 ActiveX 컨트롤을 포함한 표준 �
 
 동적 레이아웃 관리자를 사용하거나 사용하지 않도록 설정합니다. 동적 레이아웃을 사용하는 경우 사용자가 창의 크기를 조정하면 자식 창의 위치 및 크기가 동적으로 조정됩니다.
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 D2D 지원을 사용하거나 사용하지 않도록 설정합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ BOOL EnableScrollBar(
 
 이 창의 스크롤 막대를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 지정된 창에서 페인팅의 끝을 표시합니다.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 도구 팁 메시지를 표시 하기 위해 프레임 워크에 의해 호출 됩니다.
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ int GetCheckedRadioButton(
 
 `CWnd` 클라이언트 영역의 클라이언트 좌표를 *lpRect로*가리키는 구조로 복사합니다.
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -4460,7 +4460,7 @@ CWnd* GetParentOwner() const;
 
 *dwDispID에*의해 지정된 ActiveX 컨트롤 속성을 얻으려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ int GetScrollPos(int nBar) const;
 
 지정된 스크롤 막대의 현재 최소 및 최대 스크롤 막대 위치를 *lpMinPos* 및 *lpMaxPos에서*지정한 위치로 복사합니다.
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 `CWnd` *lpRect로*가리키는 구조에 개체의 경계 사각형의 치수를 복사합니다.
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ null 종료 문자를 포함하지 않고 문자길이를 지정합니다. 이�
 
 디스플레이 화면에서 제거하여 캐럿을 숨깁니다.
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ virtual void HtmlHelp(
 
 창의 동적 레이아웃을 초기화하기 위해 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ void InitDynamicLayout();
 
 의 `CWnd`전체 클라이언트 영역을 무효화합니다.
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ Windows는 [WM_PAINT](#onpaint) 업데이트 영역이 `CWnd` 비어 있지 않�
 
 업데이트 영역에 해당 사각형을 추가하여 지정된 사각형 내의 클라이언트 `CWnd` 영역을 무효화합니다.
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ Windows는 [WM_PAINT](#onpaint) 업데이트 영역이 `CWnd` 비어 있지 않�
 
 `CWnd`의 현재 업데이트 영역에 추가하여 지정된 영역 내의 클라이언트 영역을 무효화합니다.
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ Windows는 [WM_PAINT](#onpaint) 업데이트 영역이 `CWnd` 비어 있지 않�
 
 wFlags에 의해 지정된 컨텍스트에서 *dwDispID에*의해 지정된 ActiveX Control 메서드 또는 속성을 호출하려면 이 멤버 함수를 *호출합니다.*
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ HWND m_hWnd;
 
 `CWnd`의 좌표 공간에서 다른 창의 좌표 공간으로 점 집합(맵)을 변환합니다.
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ BOOL ModifyStyleEx(
 
 위치와 치수를 변경합니다.
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5837,7 +5837,7 @@ void MoveWindow(
 
 미리 정의된 이벤트가 발생한 시스템에 신호를 보냅니다. 클라이언트 응용 프로그램이 이벤트에 대한 후크 함수를 등록한 경우 시스템은 클라이언트의 후크 함수를 호출합니다.
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -5963,7 +5963,7 @@ afx_msg void OnAppCommand(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pWnd*|【인】 사용자가 명령 `CWnd` 단추를 클릭하거나 명령 키를 누른 창을 나타내는 개체에 대한 포인터입니다. 이 창은 메시지를 받는 창의 자식 창일 수 있습니다.|
 |*nCmd*|【인】 응용 프로그램 명령을 나타냅니다. 가능한 값 목록은 [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand) *lParam* 매개 변수의 *cmd* 섹션 아래의 명령을 참조하십시오.|
@@ -6195,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 부모 창으로 전송된 Windows 메시지 번호입니다.
 
 *wParam*<br/>
@@ -6251,7 +6251,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dw색화색상*|【인】 새 색상 색상을 지정합니다.<br /><br /> 색상 형식은 0xARRGGBB 양식의 헥사데임의 수이며, 여기서 네 가지 구성 요소 각각은 0x00에서 0xFF사이입니다. AA 구성 요소는 알파 값이고 RR은 빨간색이고 GG는 녹색이고 BB는 파란색입니다.|
 |*bOpacity*|【인】 새 색상이 불투명도와 혼합된 경우 TRUE; false가 아닌 경우.|
@@ -7105,7 +7105,7 @@ afx_msg void OnHotKey(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nHotKeyId*|【인】 메시지를 생성한 바로 키에 대한 식별자입니다. 시스템 정의 단축키로 메시지가 생성된 경우 이 매개 변수는 다음 값 중 하나가 됩니다.<br /><br /> - IDHOT_SNAPDESKTOP - 스냅 데스크톱 핫 키를 눌렀습니다.<br />- IDHOT_SNAPWINDOW - 스냅 창 단축 키를 눌렀습니다.|
 |*nKey1*|【인】 *nKey2* 매개 변수에 의해 지정된 키와 함께 누른 키를 나타내는 플래그의 비트 조합(OR)입니다. 사용 가능한 값은<br /><br /> - MOD_ALT - ALT 키가 모두 유지되었습니다.<br />- MOD_CONTROL - CTRL 키가 모두 유지되었습니다.<br />- MOD_SHIFT - SHIFT 키가 모두 유지되었습니다.<br />- MOD_WIN - WINDOWS 키가 모두 유지되었습니다. 이러한 키는 Microsoft Windows 로고로 레이블이 지정되어 있습니다.|
@@ -7299,7 +7299,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*uFlag*|【인】 이 플래그에는 다음 값이 포함될 수 있습니다.<br /><br /> - GIDC_ARRIVAL - 새 장치가 시스템에 추가되었습니다.<br />- GIDC_REMOVAL - 장치가 시스템에서 제거되었습니다.|
 
@@ -7322,7 +7322,7 @@ afx_msg void OnInputLangChange(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nCharSet*|【인】 새 로캘의 문자 집합입니다. 자세한 내용은 [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) 구조의 *lfCharSet* 매개 변수를 참조하십시오.|
 |*n 로컬리드*|【인】 입력 로캘 식별자입니다. 자세한 내용은 [언어 식별자 상수 및 문자열을](/windows/win32/Intl/language-identifier-constants-and-strings)참조하십시오.|
@@ -7346,7 +7346,7 @@ afx_msg void OnInputLangChangeRequest(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 새 로캘을 나타내는 비트(OR) 플래그 조합은 설치된 로캘 목록에서 이전 또는 다음 로캘에서 선택되었거나 새 입력 로캘의 키보드 레이아웃을 시스템 문자 집합과 함께 사용할 수 있음입니다.<br /><br /> 가능한 값은 INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD 및 INPUTLANGCHANGE_SYSCHARSET.|
 |*n 로컬리드*|【인】 입력 로캘 식별자입니다. 자세한 내용은 [언어 식별자 상수 및 문자열을](/windows/win32/Intl/language-identifier-constants-and-strings)참조하십시오.|
@@ -7751,7 +7751,7 @@ afx_msg LRESULT OnMenuChar(
 
 return 값의 높은 순서 단어에는 다음 명령 코드 중 하나가 포함되어야 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |0|Windows에서 사용자가 누른 문자를 삭제하도록 지시하고 시스템 스피커에서 짧은 비프음을 만듭니다.|
 |1|Windows에 현재 메뉴를 닫으라고 지시합니다.|
@@ -7837,7 +7837,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*Npos*|【인】 오른쪽 마우스 버튼이 해제되었을 때 메뉴 항목의 인덱스 위치입니다.|
 |*p메뉴*|【인】 메뉴 항목이 포함된 [CMenu](../../mfc/reference/cmenu-class.md) 개체에 대한 포인터입니다.|
@@ -7915,7 +7915,7 @@ afx_msg int OnMouseActivate(
 *n히트 테스트*<br/>
 [적중 테스트](#onnchittest) 영역 코드를 지정합니다. 적중 테스트는 커서의 위치를 결정하는 테스트입니다.
 
-*메시지*<br/>
+*message*<br/>
 마우스 메시지 번호를 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -7955,7 +7955,7 @@ afx_msg void OnMouseHover(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.|
 |*지점*|【인】 클라이언트 영역의 왼쪽 위 모서리를 기준으로 커서의 *x* 및 *y* 좌표를 지정하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.|
@@ -7992,7 +7992,7 @@ afx_msg void OnMouseHWheel(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.<br /><br /> 플래그 목록은 [마우스 입력 에](/windows/win32/inputdev/about-mouse-input)있는 "메시지 매개 변수" 부제목을 참조하십시오.|
 |*z델타*|【인】 휠이 회전하는 거리를 나타내며, 120인 WHEEL_DELTA 배수 또는 분할로 표현됩니다. 양수 값은 휠이 오른쪽으로 회전했음을 나타냅니다. 음수 값은 휠이 왼쪽으로 회전했음을 나타냅니다.|
@@ -8419,7 +8419,7 @@ afx_msg void OnNcMouseHover(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n히트 테스트*|【인】 [cWnd::DefWindowProc](#defwindowproc) 함수에서 반환된 적중 테스트 값은 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 메시지를 처리한 결과입니다.|
 |*지점*|【인】 화면의 왼쪽 위 모서리를 기준으로 커서의 *x* 및 *y* 좌표를 지정하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.|
@@ -8564,7 +8564,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*비스 렌더링*|【인】 TRUE 경우 DWM(데스크톱 창 관리자) 렌더링이 창의 비클라이언트 영역에 대해 활성화되어 있습니다. false 렌더링을 사용할 수 없습니다.|
 
@@ -8579,7 +8579,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 커서가 창의 비클라이언트 영역에 있는 동안 사용자가 XBUTTON1 또는 XBUTTON2를 두 번 클릭할 때 프레임워크는 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -8588,7 +8588,7 @@ void OnNcXButtonDblClk(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n히트 테스트*|【인】 [cWnd::DefWindowProc](#defwindowproc) 함수에서 반환된 적중 테스트 값은 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 메시지를 처리한 결과입니다.|
 |*nButton*|【인】 첫 번째 Microsoft Intellimouse X 버튼을 두 번 클릭한 경우 XBUTTON1 값, 두 번째 X 단추를 두 번 클릭하면 XBUTTON2의 값입니다.|
@@ -8614,7 +8614,7 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n히트 테스트*|【인】 [cWnd::DefWindowProc](#defwindowproc) 함수에서 반환된 적중 테스트 값은 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 메시지를 처리한 결과입니다.|
 |*nButton*|【인】 첫 번째 마우스 X 버튼을 누르면 XBUTTON1 값, 두 번째 X 버튼을 누르면 XBUTTON2값입니다.|
@@ -8640,7 +8640,7 @@ afx_msg void OnNcXButtonUp(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n히트 테스트*|【인】 [cWnd::DefWindowProc](#defwindowproc) 함수에서 반환된 적중 테스트 값은 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 메시지를 처리한 결과입니다.|
 |*nButton*|【인】 첫 번째 마우스 X 버튼이 해제된 경우 XBUTTON1 값, 두 번째 X 버튼이 해제된 경우 XBUTTON2값입니다.|
@@ -8665,7 +8665,7 @@ afx_msg void OnNextMenu(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nKey*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.<br /><br /> 플래그 목록은 [마우스 입력 에](/windows/win32/inputdev/about-mouse-input)있는 "메시지 매개 변수" 부제목을 참조하십시오.|
 |*lpMdi다음메뉴*|【인】 활성화할 메뉴에 대한 정보가 포함된 [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) 구조에 대한 포인터입니다.|
@@ -8723,7 +8723,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pWnd*|【인】 [WM_NOTIFY](/windows/win32/controls/wm-notify) 메시지를 `CWnd` 보내는 창을 나타내는 개체에 대한 포인터입니다.<br /><br /> 이 매개 변수는 *nCommand* 매개 변수가 NF_QUERY 경우 컨트롤에 대한 포인터이거나 *nCommand가* NF_REQUERY 경우 컨트롤의 부모 창에 대한 포인터입니다.|
 |*n 명령*|【인】 WM_NOTIFY 메시지를 전문으로 하는 명령 값입니다. 사용 가능한 값은<br /><br /> - NF_QUERY -<br />     이 메시지는 anSI 또는 유니코드 구조를 WM_NOTIFY 메시지에 사용해야 하는지 여부를 결정하는 쿼리입니다. 이 메시지는 컨트롤을 만드는 동안 및 이 메시지의 NF_REQUERY 형식에 대한 응답으로 컨트롤에서 부모 창으로 전송됩니다.<br />- NF_REQUERY -<br />     메시지는 이 메시지의 NF_QUERY 형식을 부모 창으로 보내는 컨트롤에 대한 요청입니다. 이 요청은 부모 창에서 전송되며 WM_NOTIFY 메시지에 사용할 구조 유형에 대해 부모를 다시 쿼리하도록 컨트롤에 요청합니다. *nCommand* 매개 변수가 NF_REQUERY 경우 반환 값은 다시 쿼리 작업의 결과입니다.|
@@ -8849,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 부모에게 알림되는 이벤트와 하위 창의 식별자를 지정합니다. 이벤트는 *메시지의*낮은 순서 단어입니다. 이벤트가 WM_CREATE 또는 WM_DESTROY 경우 높은 순서의 *메시지* 단어는 자식 창의 식별자입니다. 그렇지 않으면 높은 순서의 단어가 정의되지 않습니다. 이벤트(메시지의 낮은 순서 *message*단어)는 다음 값 중 어느 중 일 수 있습니다.
 
 - WM_CREATE 자식 창이 만들어지고 있습니다.
@@ -8888,7 +8888,7 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n파워 이벤트*|【인】 전원 관리 이벤트입니다.|
 |*n이벤트데이터*|【인】 이벤트별 데이터입니다.|
@@ -9000,7 +9000,7 @@ afx_msg void OnRawInput(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n입력 코드*|【인】 응용 프로그램이 포그라운드에 있는 동안 입력이 발생했는지 여부를 나타내는 입력 코드입니다. 두 경우 모두 응용 프로그램은 [CWnd::DefWindowProc를](#defwindowproc) 호출하여 시스템이 정리를 수행할 수 있도록 해야 합니다.<br /><br /> 이 매개 변수는 다음 값 중 하나일 수 있습니다.<br /><br /> - RIM_INPUT - 응용 프로그램이 전경에 있는 동안 입력이 발생했습니다.<br />- RIM_INPUTSINK - 응용 프로그램이 전경에 없는 동안 입력이 발생했습니다.|
 |*hRaw입력*|【인】 장치의 원시 입력을 포함하는 [RAWINPUT](/windows/win32/api/winuser/ns-winuser-rawinput) 구조를 처리합니다.|
@@ -9186,7 +9186,7 @@ afx_msg void OnSessionChange(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*n세션 상태*|【인】 상태 코드는 세션 상태 변경을 설명합니다.|
 |*Nid*|【인】 세션 식별자입니다.|
@@ -9219,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 *n히트 테스트*<br/>
 [적중 테스트](#onnchittest) 영역 코드를 지정합니다. 적중 테스트는 커서의 위치를 결정합니다.
 
-*메시지*<br/>
+*message*<br/>
 마우스 메시지 번호를 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -9951,7 +9951,7 @@ afx_msg void OnUniChar(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*Nchar*|【인】 누른 키의 문자 코드를 지정합니다.|
 |*nRepCnt*|【인】 현재 메시지에 대한 반복 수를 지정합니다. 이 값은 사용자가 키를 누를 때 키 입력이 자동으로 반복되는 횟수입니다. 키 입력이 충분히 오래 유지되면 여러 메시지가 전송됩니다. 그러나 반복 수는 누적되지 않습니다.|
@@ -9976,7 +9976,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*p메뉴*|【인】 메뉴 또는 하위 메뉴를 나타내는 [CMenu](../../mfc/reference/cmenu-class.md) 개체에 대한 포인터입니다.|
 |*nFlags*|【인】 파괴된 메뉴입니다. 현재는 MF_SYSMENU 창 메뉴일 수 있습니다.|
@@ -10174,7 +10174,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*비스 극대화*|【인】 현재 창이 최대화되면 TRUE이고 그렇지 않은 경우 FALSE입니다.|
 
@@ -10267,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -10302,7 +10302,7 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.|
 |*nButton*|【인】 첫 번째 Microsoft Intellimouse X 버튼을 두 번 클릭한 경우 XBUTTON1 값, 두 번째 X 단추를 두 번 클릭하면 XBUTTON2의 값입니다.|
@@ -10340,7 +10340,7 @@ afx_msg void OnXButtonDown(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.|
 |*nButton*|【인】 첫 번째 Microsoft Intellimouse X 단추를 클릭한 경우 XBUTTON1 값, 또는 두 번째 X 단추를 클릭한 경우 XBUTTON2의 값입니다.|
@@ -10378,7 +10378,7 @@ afx_msg void OnXButtonUp(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nFlags*|【인】 누른 수정자 키를 나타내는 플래그의 비트 조합(OR)입니다. 예를 들어 MK_CONTROL 플래그는 CTRL 키가 눌리고 있음을 나타냅니다.|
 |*nButton*|【인】 첫 번째 Microsoft Intellimouse X 버튼을 두 번 클릭한 경우 XBUTTON1 값, 두 번째 X 버튼을 두 번 클릭한 경우 XBUTTON2값입니다.|
@@ -10497,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 게시할 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -10601,7 +10601,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 이 멤버 함수를 호출하여 프린터 장치 컨텍스트에서 가장 일반적으로 지정된 장치 컨텍스트에서 현재 창을 그립니다.
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ void Print(
 
 지정된 장치 컨텍스트(일반적으로 프린터 장치 컨텍스트)에서 창을 그리려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10773,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 메시지가 반영될 지 지정합니다.
 
 *wParam*<br/>
@@ -10852,7 +10852,7 @@ int ReleaseDC(CDC* pDC);
 
 창의 클라이언트 영역에서 컨트롤 막대의 위치를 조정하고 크기를 조정하도록 호출됩니다.
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 디스플레이에 있는 지정된 점 또는 사각형의 화면 좌표를 클라이언트 좌표로 변환합니다.
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 현재 `CWnd` 개체의 클라이언트 영역의 내용을 스크롤합니다.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11082,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 메시지를 수신할 대화 상자 컨트롤의 식별자를 지정합니다.
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -11118,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -11143,7 +11143,7 @@ LRESULT SendMessage(
 
 지정된 Windows 메시지를 모든 하위 창에 보내려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11154,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -11192,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 보낼 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -11313,7 +11313,7 @@ int SetDlgCtrlID(int nID);
 
 대화 상자에서 지정된 컨트롤의 텍스트를 지정된 정수 값의 문자열 표현으로 설정합니다.
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ void SetDlgItemInt(
 
 창 또는 대화 상자가 소유한 컨트롤의 캡션 또는 텍스트를 설정합니다.
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ CWnd* SetFocus();
 
 지정된 글꼴을 사용하도록 WM_SETFONT 메시지를 창으로 보냅니다.
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ BOOL SetMenu(CMenu* pMenu);
 
 현재 창의 소유자를 지정된 창 개체로 설정합니다.
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 *dwDispID에*의해 지정된 OLE 제어 속성을 설정하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ OLE 제어 컨테이너를 사용하여 이 멤버 함수를 사용하는 것에
 
 응용 프로그램은 `SetRedraw` 변경 내용을 다시 그릴 수 있도록 허용하거나 변경 내용이 다시 그려지지 않도록 하기 위해 호출됩니다.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ int SetScrollPos(
 
 지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ UINT_PTR SetTimer(
 
 *lpfnTimer* 콜백 함수의 이름을 `TimerProc`지정할 필요는 없지만 정적으로 선언하고 다음과 같이 정의해야 합니다.
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11949,7 +11949,7 @@ TRUE이면 운영 체제는 영역을 설정한 후 창을 다시 그립니다. 
 
 창의 제목을 지정된 텍스트로 설정합니다.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 화면에 캐리트의 현재 위치를 표시합니다.
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ void ShowCaret();
 
 이 창이 소유한 모든 팝업 창을 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 스크롤 막대를 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 이 멤버 함수를 호출하여 잠근 `CWnd::LockWindowUpdate`창의 잠금을 해제합니다.
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 이 멤버 함수를 호출하여 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 콜백 메커니즘을 사용하는 대화 상자 또는 창에서 대화 상자 또는 기타 컨트롤의 상태를 업데이트합니다.
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ BOOL UpdateLayeredWindow(
 
 업데이트 영역이 비어 있지 않은 경우 [WM_PAINT](/windows/win32/gdi/wm-paint) 메시지를 보내 클라이언트 영역을 업데이트합니다.
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ void UpdateWindow();
 
 창의 업데이트 영역에서 사각형을 제거하여 지정된 사각형 내의 클라이언트 영역의 유효성을 검사합니다.
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ Windows는 현재 업데이트 영역의 유효성이 검사될 때까지 WM_PAI
 
 창의 현재 업데이트 영역에서 영역을 제거하여 지정된 영역 내의 클라이언트 영역의 유효성을 검사합니다.
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 
@@ -12359,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 처리할 Windows 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

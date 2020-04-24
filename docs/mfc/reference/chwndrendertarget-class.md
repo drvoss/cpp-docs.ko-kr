@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1669d89183cd971e1afe0f05a1bad040f6b07df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372461"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752708"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 클래스
 
@@ -92,7 +92,7 @@ class CHwndRenderTarget : public CRenderTarget;
 
 기존 렌더 대상 인터페이스를 오브젝트에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```
 
@@ -226,13 +226,13 @@ BOOL Resize(const CD2DSizeU& size);
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 장치 픽셀의 렌더 대상의 새 크기
 
 ### <a name="return-value"></a>Return Value
 
 메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

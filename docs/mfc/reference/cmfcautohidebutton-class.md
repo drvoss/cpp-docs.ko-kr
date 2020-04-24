@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 84f17896cc3c4f5cd6099a9ccf7e4e000f43b1f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3ea6ce13b8cca7e0130fe14459a832b476391b0c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369918"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751679"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFC자동숨기기버튼 클래스
 
@@ -122,7 +122,7 @@ class CMFCAutoHideButton : public CObject
 
 ## <a name="cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFC자동숨기기버튼:BringToTop
 
-```
+```cpp
 void BringToTop();
 ```
 
@@ -379,7 +379,7 @@ virtual void OnFillBackground(
 
 연결된 [CDockablePane 클래스를](../../mfc/reference/cdockablepane-class.md)표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowAttachedWindow(BOOL bShow);
 ```
 
@@ -403,7 +403,7 @@ virtual void ShowButton(BOOL bShow);
 
 ## <a name="cmfcautohidebuttonmove"></a><a name="move"></a>CMFC자동숨기기버튼::이동
 
-```
+```cpp
 void Move(int nOffset);
 ```
 
@@ -415,7 +415,7 @@ void Move(int nOffset);
 
 ## <a name="cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFC자동 숨기기 버튼::교체판
 
-```
+```cpp
 void ReplacePane(CDockablePane* pNewBar);
 ```
 
@@ -469,7 +469,7 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

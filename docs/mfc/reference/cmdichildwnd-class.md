@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370079"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754568"
 ---
 # <a name="cmdichildwnd-class"></a>CMDI차일드 클래스
 
@@ -207,7 +207,7 @@ MDI 부모 프레임 창에 대한 포인터입니다.
 
 MDI 프레임 창과 독립적으로 MDI 자식 창을 활성화하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ void MDIActivate();
 
 이 멤버 함수를 호출하여 MDI 자식 창을 삭제합니다.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ void MDIDestroy();
 
 이 멤버 함수를 호출하여 MDI 자식 창을 최대화합니다.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ void MDIMaximize();
 
 이 멤버 함수를 호출하여 MDI 자식 창을 최대화 또는 최소화된 크기에서 복원합니다.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 메뉴 및 가속기 리소스에 대한 핸들을 설정합니다.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);
@@ -285,7 +285,7 @@ void SetHandles(
 
 이 함수를 호출하여 MDI 자식 창 개체에서 사용하는 메뉴 및 가속기 리소스를 설정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

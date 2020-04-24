@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367766"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752576"
 ---
 # <a name="cmfccolorbar-class"></a>CMFC컬러바 클래스
 
@@ -370,7 +370,7 @@ CMFCColorBar(
 *p부모Btn*<br/>
 【인】 상위 단추에 대한 포인터입니다.
 
-*Src*<br/>
+*src*<br/>
 【인】 새 `CMFCColorBar` `CMFCColorBar` 개체에 복사할 기존 개체입니다.
 
 *uiCommandID*<br/>
@@ -380,7 +380,7 @@ CMFCColorBar(
 
 색상 막대 컨트롤의 단추를 포함하는 데 필요한 수직 및 수평 여백을 계산하고 해당 단추의 위치를 조정합니다.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -388,7 +388,7 @@ void ContextToSize(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*b스퀘어 버튼*|【인】 TRUE는 색상 막대 컨트롤의 단추 모양이 정사각형임을 지정합니다. 그렇지 않으면 false입니다. 기본값은 TRUE입니다.|
 |*b가운데 버튼*|【인】 TRUE는 색상 막대 컨트롤 버튼의 면에 있는 내용이 가운데에 있도록 지정하는 데; 그렇지 않으면 false입니다. 기본값은 TRUE입니다.|
@@ -491,7 +491,7 @@ static BOOL CreatePalette(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*arColors*|【인】 색상의 배열입니다.|
 |*색상표(palette)*|【인】 색상 팔레트입니다.|
@@ -504,7 +504,7 @@ static BOOL CreatePalette(
 
 자동 단추를 표시하거나 숨깁니다.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ void EnableAutomaticButton(
 
 사용자가 더 많은 색상을 선택할 수 있는 대화 상자의 표시를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -574,7 +574,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*b버독*|【인】 수직으로 도킹된 컬러 바 컨트롤에 대한 계산을 수행하는 TRUE; 그렇지 않으면 수평 도킹 된 컨트롤에 대 한 계산을 수행 합니다.|
 
@@ -608,7 +608,7 @@ int GetExtraHeight(int nNumColumns) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nNumColumns*|【인】 색상 막대 컨트롤에 문서 색상이 포함된 경우 문서 색상 표에 표시할 열 수가 포함됩니다. 그렇지 않으면 이 값이 사용되지 않습니다.|
 
@@ -666,7 +666,7 @@ static int InitColors(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pPalette*|【인】 팔레트 개체 또는 NULL에 대한 포인터입니다. 이 매개 변수가 NULL인 경우 이 메서드는 운영 체제의 기본 팔레트를 사용합니다.|
 |*arColors*|【인】 색상의 배열입니다.|
@@ -718,7 +718,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*p 버튼*|【인】 도구 모음에 있는 컨트롤에 대한 포인터입니다.|
 
@@ -790,7 +790,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pDC*|【인】 현재 색상 막대 컨트롤의 부모 단추의 장치 컨텍스트에 대한 포인터입니다.|
 
@@ -802,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 현재 선택된 색상을 설정합니다.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ static void SetColorName(
 
 색상 막대 컨트롤에 대한 새 명령 ID를 설정합니다.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ void SetCommandID(UINT nCommandID);
 
 현재 문서에 사용되는 색상 목록을 설정합니다.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 왼쪽 또는 오른쪽 색상 셀과 클라이언트 영역의 경계 사이의 공간인 수평 여백을 설정합니다.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,13 +897,13 @@ void SetHorzMargin(int nHorzMargin);
 
 보호된 `m_pWndPropList` 데이터 멤버를 지정된 포인터로 속성 그리드 컨트롤로 설정합니다.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pWndList*|【인】 속성 그리드 제어 개체에 대한 포인터입니다.|
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 상하 색상 셀과 클라이언트 영역 경계 사이의 공간인 수직 여백을 설정합니다.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 
@@ -941,7 +941,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 이 메서드는 WM_SETMESSAGESTRING 메시지를 색상 막대 컨트롤의 소유자에게 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

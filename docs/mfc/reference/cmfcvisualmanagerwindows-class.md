@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: d1231df8fa6287e5983327784283c37c2f0eb6ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 05b4d6129f5c398df7f3e1efc249cf51c2326914
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319854"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752829"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFC비주얼매니저윈도우 클래스
 
@@ -1477,7 +1477,7 @@ virtual void OnUpdateSystemColors();
 
 ## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a>CMFC비주얼매니저윈도우::셋오피스스타일메뉴
 
-```
+```cpp
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```
 
@@ -1487,7 +1487,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

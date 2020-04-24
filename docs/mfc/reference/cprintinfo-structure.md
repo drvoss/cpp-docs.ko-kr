@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: cf0a1e6b7e742e950663f1ed9cc9ff2ddabd9d6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b081b0728514c0fca2eb31462e1bcd9e91a47aa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364020"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753018"
 ---
 # <a name="cprintinfo-structure"></a>C프린트정보 구조
 
@@ -281,7 +281,7 @@ DocObject 인쇄 작업을 지정 하는 플래그의 조합을 포함 합니다
 
 이 함수를 호출하여 문서의 마지막 페이지 수를 지정합니다.
 
-```
+```cpp
 void SetMaxPage(UINT nMaxPage);
 ```
 
@@ -302,7 +302,7 @@ void SetMaxPage(UINT nMaxPage);
 
 이 함수를 호출하여 문서의 첫 번째 페이지 수를 지정합니다.
 
-```
+```cpp
 void SetMinPage(UINT nMinPage);
 ```
 
@@ -315,7 +315,7 @@ void SetMinPage(UINT nMinPage);
 
 페이지 번호는 일반적으로 1부터 시작합니다. 이 값은 멤버가 `CPrintDialog` 참조하는 `m_pPD` 개체에 저장됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 디브룩](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

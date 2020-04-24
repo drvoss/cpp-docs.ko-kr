@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366831"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750678"
 ---
 # <a name="cwinapp-class"></a>CWinApp 클래스
 
@@ -377,7 +377,7 @@ Microsoft Foundation 클래스를 사용하는 각 응용 프로그램에는 `CW
 
 이 멤버 함수를 호출하여 응용 프로그램에서 유지 관리하는 사용 가능한 문서 템플릿 목록에 문서 템플릿을 추가합니다.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 종료하기 전에 열려 있는 모든 문서를 닫도록 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ D2D 지원이 활성화된 경우 TRUE를 반환하고 FALSE - 그렇지 않으�
 
 `CWinApp`응용 프로그램의 도움을 위해 HTMLHelp를 사용 하려면 -derived 클래스의 생성자 내에서이 멤버 함수를 호출 합니다.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 일반적으로 `InitInstance` 재정의에서 이 함수를 호출하여 응용 프로그램의 사용자가 Windows 파일 관리자 내에서 파일을 두 번 클릭할 때 데이터 파일을 열 수 있도록 합니다.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ HKEY GetSectionKey(
 
 열려 있는 문서를 닫기 전에 응용 프로그램을 숨기려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 [InitInstance](#initinstance) 멤버 함수 내에서 이 멤버 함수를 호출하여 가장 최근에 사용한(MRU) 파일 및 마지막 미리 보기 상태의 목록을 활성화하고 로드합니다.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ virtual CDocument* OpenDocumentFile(
 
 이 멤버 함수를 호출하여 명령줄을 구문 분석하고 매개 변수를 한 번에 하나씩 [CCommandLineInfo::ParseParam로](../../mfc/reference/ccommandlineinfo-class.md#parseparam)보냅니다.
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>매개 변수
 
-*코드*<br/>
+*code*<br/>
 후크 코드를 지정합니다. 이 멤버 함수는 코드를 사용하여 *lpMsg를* 처리하는 방법을 결정합니다.
 
 *lpMsg*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Register();
 
 이 멤버 함수를 호출하여 응용 프로그램의 모든 문서 유형을 Windows 파일 관리자에 등록합니다.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -1962,7 +1962,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*b레지스터리커버콜백*|【인】 TRUE는 응용 프로그램의 이 인스턴스가 복구 콜백 함수를 사용했음을 나타냅니다. FALSE는 그렇지 않음을 나타냅니다. 프레임워크는 응용 프로그램이 예기치 않게 종료될 때 복구 콜백 함수를 호출합니다. 자세한 내용은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)을 참조하십시오.|
 |*strRestart식별자*|【인】 다시 시작 관리자의 이 인스턴스를 식별하는 고유 문자열입니다. 다시 시작 관리자 식별자는 응용 프로그램의 각 인스턴스에 대해 고유합니다.|
 |*pwzCommandLineArgs*|【인】 명령줄에서 추가 인수를 포함 하는 문자열입니다.|
@@ -2108,7 +2108,7 @@ virtual BOOL SaveAllModified();
 
 이 멤버 함수를 호출하여 특정 프린터를 선택하고 인쇄 대화 상자에서 이전에 선택한 프린터를 놓습니다.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ void SelectPrinter(
 
 응용 프로그램의 도움말 유형을 설정합니다.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 응용 프로그램 설정을 INI 파일 대신 레지스트리에 저장합니다.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ virtual BOOL Unregister();
 
 이 멤버 함수를 호출하여 Windows 파일 관리자를 사용하여 응용 프로그램의 모든 문서 유형을 등록 취소합니다.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ BOOL WriteProfileString(
 
 응용 프로그램에 대한 응용 프로그램 사용자 모델 ID를 명시적으로 설정합니다. 이 메서드는 사용자에게 사용자 인터페이스가 표시되기 전에 호출해야 합니다(가장 좋은 장소는 응용 프로그램 생성자).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 
@@ -2391,7 +2391,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWinThread 클래스](../../mfc/reference/cwinthread-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

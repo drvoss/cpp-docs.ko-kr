@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364016"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751131"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 클래스
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - PBS_SMOOTH 진행률 표시줄 컨트롤에서 점진적, 원활한 채우기를 표시합니다. 이 플래그가 없으면 컨트롤이 블록으로 채워집니다.
 
 *rect*<br/>
-진행률 표시줄 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다. 컨트롤은 자식 창이어야 하므로 지정된 좌표는 *pParentWnd의*클라이언트 영역을 기준으로 합니다.
+진행률 표시줄 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다. 컨트롤은 자식 창이어야 하므로 지정된 좌표는 *pParentWnd의*클라이언트 영역을 기준으로 합니다.
 
 *pParentWnd*<br/>
 진행률 표시줄 컨트롤의 부모 창(일반적으로 `CDialog`을 지정합니다.) NULL이 아니어야 합니다.
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 진행률 표시줄 컨트롤의 스타일을 지정합니다. Windows SDK의 [CreateWindow에](/windows/win32/api/winuser/nf-winuser-createwindoww) 설명된 창 스타일의 조합을 적용합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -263,7 +263,7 @@ int GetPos();
 
 진행률 표시줄 컨트롤의 현재 하한 및 상한 또는 범위를 가져옵니다.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -380,7 +380,7 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*클러바*|【인】 진행률 표시줄의 새 색상을 지정하는 [COLORREF](/windows/win32/gdi/colorref) 값입니다. 진행률 표시줄이 기본 색상을 사용하도록 CLR_DEFAULT 지정합니다.|
 
@@ -439,7 +439,7 @@ BOOL SetMarquee(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*fMarqueeMode 모드*|【인】 선택 윤곽 모드를 켜거나 FALSE를 사용하여 선택 윤곽 모드를 끕니다.|
 |*n간격*|【인】 선택 윤곽 애니메이션 업데이트 사이의 시간(밀리초)입니다.|
@@ -495,7 +495,7 @@ int SetPos(int nPos);
 
 진행률 표시줄 컨트롤 범위의 상한및 하한을 설정하고 새 범위를 반영하도록 막대를 다시 그립니다.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);
@@ -531,7 +531,7 @@ int SetState(int iState);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*아이 스테이트*|【인】 진행률 표시줄을 설정하는 상태입니다. 다음 값 중 하나를 사용합니다.<br /><br /> - PBST_NORMAL - 진행 중<br />- PBST_ERROR - 오류<br />- PBST_PAUSED - 일시 중지|
 
@@ -602,7 +602,7 @@ int StepIt();
 
 [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

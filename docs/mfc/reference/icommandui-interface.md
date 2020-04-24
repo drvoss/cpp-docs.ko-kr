@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 335deefc04a80f47151c5d5e71486e30f9918abd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b75509beb7287fad5e51dc9d15fc3e47cacf6854
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356623"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751313"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 인터페이스
 
@@ -77,7 +77,7 @@ property UICheckState Check;
 
 명령 라우팅 메커니즘을 지시하여 현재 메시지를 처리기 체인 아래로 계속 라우팅합니다.
 
-```
+```cpp
 void ContinueRouting();
 ```
 
@@ -149,6 +149,6 @@ property String^ Text;
 
 **헤더:** afxwinforms.h (어셈블리 atlmfc\lib\mfcmifc80.dll에 정의)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)

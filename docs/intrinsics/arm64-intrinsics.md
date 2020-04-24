@@ -1,6 +1,6 @@
 ---
 title: ARM64 내장 함수
-description: Microsoft C++ 컴파일러에서 지원하는 ARM64 내장 함수 목록입니다.
+description: 비주얼 스튜디오에서 Microsoft C++ 컴파일러에서 지원하는 ARM64 내장 함수의 참조 목록입니다.
 f1_keywords:
 - __break
 - __addx18byte
@@ -83,15 +83,97 @@ f1_keywords:
 - __writex18word
 - __writex18dword
 - __writex18qword
+helpviewer_keywords:
+- __break ARM64 intrinsic
+- __addx18byte ARM64 intrinsic
+- __addx18word ARM64 intrinsic
+- __addx18dword ARM64 intrinsic
+- __addx18qword ARM64 intrinsic
+- __cas8 ARM64 intrinsic
+- __cas16 ARM64 intrinsic
+- __cas32 ARM64 intrinsic
+- __cas64 ARM64 intrinsic
+- __casa8 ARM64 intrinsic
+- __casa16 ARM64 intrinsic
+- __casa32 ARM64 intrinsic
+- __casa64 ARM64 intrinsic
+- __casl8 ARM64 intrinsic
+- __casl16 ARM64 intrinsic
+- __casl32 ARM64 intrinsic
+- __casl64 ARM64 intrinsic
+- __casal8 ARM64 intrinsic
+- __casal16 ARM64 intrinsic
+- __casal32 ARM64 intrinsic
+- __casal64 ARM64 intrinsic
+- __crc32b ARM64 intrinsic
+- __crc32h ARM64 intrinsic
+- __crc32w ARM64 intrinsic
+- __crc32d ARM64 intrinsic
+- __crc32cb ARM64 intrinsic
+- __crc32ch ARM64 intrinsic
+- __crc32cw ARM64 intrinsic
+- __crc32cd ARM64 intrinsic
+- __getReg ARM64 intrinsic
+- __getRegFp ARM64 intrinsic
+- __getCallerReg ARM64 intrinsic
+- __getCallerRegFp ARM64 intrinsic
+- __hlt ARM64 intrinsic
+- __incx18byte ARM64 intrinsic
+- __incx18word ARM64 intrinsic
+- __incx18dword ARM64 intrinsic
+- __incx18qword ARM64 intrinsic
+- __ldar8 ARM64 intrinsic
+- __ldar16 ARM64 intrinsic
+- __ldar32 ARM64 intrinsic
+- __ldar64 ARM64 intrinsic
+- __ldapr8 ARM64 intrinsic
+- __ldapr16 ARM64 intrinsic
+- __ldapr32 ARM64 intrinsic
+- __ldapr64 ARM64 intrinsic
+- __prefetch2 ARM64 intrinsic
+- __readx18byte ARM64 intrinsic
+- __readx18word ARM64 intrinsic
+- __readx18dword ARM64 intrinsic
+- __readx18qword ARM64 intrinsic
+- __setReg ARM64 intrinsic
+- __setRegFp ARM64 intrinsic
+- __setCallerReg ARM64 intrinsic
+- __setCallerRegFp ARM64 intrinsic
+- __stlr8 ARM64 intrinsic
+- __stlr16 ARM64 intrinsic
+- __stlr32 ARM64 intrinsic
+- __stlr64 ARM64 intrinsic
+- __swp8 ARM64 intrinsic
+- __swp16 ARM64 intrinsic
+- __swp32 ARM64 intrinsic
+- __swp64 ARM64 intrinsic
+- __swpa8 ARM64 intrinsic
+- __swpa16 ARM64 intrinsic
+- __swpa32 ARM64 intrinsic
+- __swpa64 ARM64 intrinsic
+- __swpl8 ARM64 intrinsic
+- __swpl16 ARM64 intrinsic
+- __swpl32 ARM64 intrinsic
+- __swpl64 ARM64 intrinsic
+- __swpal8 ARM64 intrinsic
+- __swpal16 ARM64 intrinsic
+- __swpal32 ARM64 intrinsic
+- __swpal64 ARM64 intrinsic
+- __sys ARM64 intrinsic
+- __svc ARM64 intrinsic
+- __writex18byte ARM64 intrinsic
+- __writex18word ARM64 intrinsic
+- __writex18dword ARM64 intrinsic
+- __writex18qword ARM64 intrinsic
 author: sigatrev
 ms.author: magardn
 ms.date: 11/14/2019
-ms.openlocfilehash: 196518439445824ddf5a7a841b30eb816251ba60
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27325df55d128337a45e76bbf5387508a523f57c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368209"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754528"
 ---
 # <a name="arm64-intrinsics"></a>ARM64 내장 함수
 
@@ -340,15 +422,15 @@ Interlocked 내장 함수는 원자성 읽기-수정-쓰기 작업을 수행하�
 
 ||8|16|32|64|128|P|
 |-|-------|--------|--------|--------|-------|-------|
-|추가|없음|없음|전체|전체|없음|없음|
-|그리고|전체|전체|전체|전체|없음|없음|
+|추가|None|None|전체|전체|None|None|
+|그리고|전체|전체|전체|전체|None|None|
 |CompareExchange|전체|전체|전체|전체|전체|전체|
-|감소|없음|전체|전체|전체|없음|없음|
-|Exchange|전체|전체|전체|전체|없음|전체|
-|ExchangeAdd|전체|전체|전체|전체|없음|없음|
-|ID 증가값|없음|전체|전체|전체|없음|없음|
-|Or|전체|전체|전체|전체|없음|없음|
-|Xor|전체|전체|전체|전체|없음|없음|
+|감소|None|전체|전체|전체|None|None|
+|Exchange|전체|전체|전체|전체|None|전체|
+|ExchangeAdd|전체|전체|전체|전체|None|None|
+|ID 증가값|None|전체|전체|전체|None|None|
+|Or|전체|전체|전체|전체|None|None|
+|Xor|전체|전체|전체|전체|None|None|
 
 키:
 
@@ -532,7 +614,7 @@ Interlocked 내장 함수는 원자성 읽기-수정-쓰기 작업을 수행하�
 
 [[맨 위로 돌아가기]](#top)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [컴파일러 내장](../intrinsics/compiler-intrinsics.md)\
 [ARM 내장](arm-intrinsics.md)\

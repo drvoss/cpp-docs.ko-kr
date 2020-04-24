@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: c3742db7475e626b18e9c073a0b7417a8034863f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93901f6f92ee79bd893b2ec0d1e341e77749d951
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373948"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753185"
 ---
 # <a name="cexception-class"></a>CException 클래스
 
@@ -105,7 +105,7 @@ explicit CException(BOOL bAutoDelete);
 
 이 함수는 개체가 `CException` 힙에 만들어졌는지 확인하고, 이 경우 개체의 **delete** 연산자호출합니다.
 
-```
+```cpp
 void Delete();
 ```
 
@@ -226,7 +226,7 @@ else
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](cobject-class.md)<br/>
 [계층 구조 차트](../hierarchy-chart.md)<br/>

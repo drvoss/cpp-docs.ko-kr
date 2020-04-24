@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361810"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754094"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFC프로퍼티그리드프로퍼티 클래스
 
@@ -400,7 +400,7 @@ virtual void AdjustInPlaceEditRect(
 
 속성을 편집 가능하거나 읽기 전용으로 만듭니다.
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 
 속성을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 속성 값을 수정하는 데 사용되는 스핀 단추 컨트롤을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ void EnableSpinControl(
 
 하위 속성을 포함하는 속성을 확장하거나 축소합니다.
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -651,7 +651,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*b숨겨진 포함*|【인】 카운트에 숨겨진 하위 항목을 포함하는 TRUE; 그렇지 않으면 false입니다. 기본값은 TRUE입니다.|
 
@@ -912,7 +912,7 @@ CMFCPropertyGridProperty* HitTest(
 
 속성 개체를 초기화하기 위해 프레임워크에서 호출합니다.
 
-```
+```cpp
 void Init();
 ```
 
@@ -1146,7 +1146,7 @@ virtual void OnClickName(CPoint C);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*C*|【인】 클라이언트 좌표의 한 점입니다.|
 
@@ -1396,7 +1396,7 @@ virtual BOOL OnKillFocus(CWnd*);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*CWnd*|【인】 (사용되지 않음) 창에 대한 포인터입니다.|
 
@@ -1446,7 +1446,7 @@ virtual void OnRClickName(CPoint C);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*C*|【인】 클라이언트 좌표의 한 점입니다.|
 
@@ -1466,7 +1466,7 @@ virtual void OnRClickValue(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*C*|【인】 클라이언트 좌표의 한 점입니다.|
 |*B*|【인】 부울.|
@@ -1556,7 +1556,7 @@ virtual BOOL PushChar(UINT nChar);
 
 속성을 다시 그립니다.
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 속성에서 모든 옵션(항목)을 제거합니다.
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 DWORD 값을 속성과 연결합니다.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ void SetData(DWORD_PTR dwData);
 
 현재 속성을 설명하는 텍스트를 지정합니다.
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 속성의 이름을 설정합니다.
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 속성을 표시하거나 숨깁니다.
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);
@@ -1710,7 +1710,7 @@ void Show(
 *bAdjust레이아웃*<br/>
 【인】 TRUE는 속성의 레이블과 값을 그린 다음 속성을 그리는 방법을 다시 계산합니다. FALSE는 기존 계산을 사용하여 속성을 그립니다. 기본값은 TRUE입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

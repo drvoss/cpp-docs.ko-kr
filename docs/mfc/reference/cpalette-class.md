@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 83cd125fa7ab64aa39c606bc048022400d158e72
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f5740b3b073c4f564f9cac0fa04e5687ce1d8f00
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374766"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753681"
 ---
 # <a name="cpalette-class"></a>C팔레트 클래스
 
@@ -95,7 +95,7 @@ class CPalette : public CGdiObject
 
 개체에 연결된 논리 팔레트의 항목을 `CPalette` 바꿉습니다.
 
-```
+```cpp
 void AnimatePalette(
     UINT nStartIndex,
     UINT nNumEntries,
@@ -324,7 +324,7 @@ UINT SetPaletteEntries(
 
 자세한 내용은 Windows SDK의 [팔레트 항목을](/previous-versions/dd162769\(v=vs.85\)) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 디브룩](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 클래스](../../mfc/reference/cgdiobject-class.md)<br/>

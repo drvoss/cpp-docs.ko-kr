@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752067"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 클래스
 
@@ -129,7 +129,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 *유형*<br/>
 기본 클래스 배열에 저장된 요소의 형식입니다.
 
-*Src*<br/>
+*src*<br/>
 배열에 추가할 요소의 소스입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -144,7 +144,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 이 멤버 `BASE_CLASS`함수는 **::Copy**를 호출합니다.
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
@@ -156,7 +156,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 *유형*<br/>
 기본 클래스 배열에 저장된 요소의 형식입니다.
 
-*Src*<br/>
+*src*<br/>
 배열에 복사할 요소의 소스입니다.
 
 ### <a name="remarks"></a>설명
@@ -215,7 +215,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 이 멤버 `BASE_CLASS`함수는 **::InsertAt 를 호출합니다.**
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -280,7 +280,7 @@ TYPE operator[ ](int_ptr nindex) const;
 
 이 멤버 `BASE_CLASS`함수는 **::SetAt 를 호출합니다.**
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -305,7 +305,7 @@ nIndex의 배열에 삽입할 요소에 대한 포인터입니다. NULL 값이 �
 
 이 멤버 `BASE_CLASS`함수는 **::SetAtGrow**를 호출합니다.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);
@@ -326,7 +326,7 @@ void SetAtGrow(
 
 더 자세한 설명은 [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

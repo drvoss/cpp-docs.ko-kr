@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: 72b6e5d8d9d4823795a1fb053c5f2374cb80fba4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320007"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755098"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 클래스
 
@@ -126,7 +126,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -135,6 +135,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *p애니메이션 컨트롤러*<br/>
 이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

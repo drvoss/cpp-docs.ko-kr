@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 0a6b0cf39861ba995acff71fc40cf44ae5114642
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5140d02c5acbbc430c3b4d175da1933c79c702b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367455"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752346"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -130,7 +130,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 현재 헤더 컨트롤에 대해 *여러 열 정렬* 모드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```
 
@@ -295,7 +295,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 정렬 열 목록에서 지정된 열을 제거합니다.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -308,7 +308,7 @@ void RemoveSortColumn(int iColumn);
 
 헤더 컨트롤에서 지정된 열의 정렬 순서를 설정합니다.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending=TRUE,
@@ -336,7 +336,7 @@ FALSE를 먼저 정렬 열 목록에서 모든 열을 제거한 다음 지정된
 
 이 메서드를 사용하여 열의 정렬 순서를 설정합니다. 필요한 경우 이 메서드는 정렬 열 목록에 열을 추가합니다. 헤더 컨트롤은 정렬 순서를 사용하여 위 또는 아래를 가리키는 정렬 화살표를 그립니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366160"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753952"
 ---
 # <a name="colecontrolsite-class"></a>콜레컨트롤사이트 클래스
 
@@ -454,7 +454,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 컨트롤 사이트에서 컨트롤에서 발생한 이벤트를 처리하거나 무시할지 여부를 지정합니다.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ void FreezeEvents(BOOL bFreeze);
 
 컨트롤의 키보드 비니모닉 및 키보드 동작에 대한 정보를 검색합니다.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -1017,7 +1017,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 
 컨트롤을 기본 단추로 설정합니다.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1215,7 +1215,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 
 창이 이전에 표시되면 0이 아닙니다. 창이 이전에 숨겨져 있는 경우 0입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

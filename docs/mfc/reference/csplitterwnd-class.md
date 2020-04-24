@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371688"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753070"
 ---
 # <a name="csplitterwnd-class"></a>C스플리터Wnd 클래스
 
@@ -619,7 +619,7 @@ int GetColumnCount() const;
 
 지정된 열에 대한 정보를 반환합니다.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ int GetRowCount() const;
 
 지정된 행에 대한 정보를 반환합니다.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ virtual void SetActivePane(
 
 호출하여 지정된 열 정보를 설정합니다.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ void SetColumnInfo(
 
 호출하여 지정된 행 정보를 설정합니다.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ void SetRowInfo(
 
 스플리터 창의 공유 스크롤 막대 지원에 대한 새 스크롤 스타일을 지정합니다.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 
@@ -1034,7 +1034,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 뷰렉스](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

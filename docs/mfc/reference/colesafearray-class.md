@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374872"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753763"
 ---
 # <a name="colesafearray-class"></a>콜레세이프어레이어레이 클래스
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 배열 데이터에 대한 포인터를 검색합니다.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ void AccessData(void** ppvData);
 
 안전한 배열에 메모리를 할당합니다.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ void AllocData();
 
 안전 배열의 설명자에 메모리를 할당합니다.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ void AllocDescriptor(DWORD dwDims);
 
 `COleSafeArray` 기존 `VARIANT` 배열의 데이터를 개체에 제어합니다.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ void Attach(VARIANT& varSrc);
 
 안전 배열을 지웁습니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ COleSafeArray(const COleVariant& varSrc);
 
 기존 안전 배열의 복사본을 만듭니다.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ void Copy(LPSAFEARRAY* ppsa);
 
 배열에 대한 데이터를 할당하고 초기화합니다.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ void Create(
 
 새 1차원 `COleSafeArray` 개체를 만듭니다.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ void CreateOneDim(
 
 기존 배열 설명자와 배열의 모든 데이터를 삭제합니다.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ void Destroy();
 
 안전한 배열의 모든 데이터를 삭제합니다.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ void DestroyData();
 
 안전 배열의 설명자가 삭제됩니다.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ VARIANT Detach();
 
 안전 배열의 내용을 `CByteArray`에 복사합니다.
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ DWORD GetDim();
 
 안전 배열의 단일 요소를 검색합니다.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ DWORD GetElemSize();
 
 개체의 모든 차원에 대해 `COleSafeArray` 하한을 반환합니다.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ DWORD GetOneDimSize();
 
 안전 배열의 모든 차원에 대한 상한을 반환합니다.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ void GetUBound(
 
 배열의 잠금 수를 증분하고 배열 설명자의 배열 데이터에 대한 포인터를 배치합니다.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 인덱스 값에 의해 지정 된 요소에 대 한 포인터를 반환 합니다.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ void PtrOfIndex(
 
 단일 요소를 배열에 할당합니다.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ void PutElement(
 
 안전 배열의 가장 중요하지 않은(가장 오른쪽) 바인딩을 변경합니다.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 1차원 `COleSafeArray` 개체의 요소 수를 변경합니다.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ void ResizeOneDim(DWORD dwElements);
 
 배열의 잠금 수를 삭제하고 `AccessData`에서 검색한 포인터를 무효화합니다.
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ void UnaccessData();
 
 배열을 해제하거나 크기를 조정할 수 있도록 배열의 잠금 수를 감소시입니다.
 
-```
+```cpp
 void Unlock();
 ```
 
@@ -750,7 +750,7 @@ void Unlock();
 
 이 함수는 배열의 데이터에 대한 액세스가 완료된 후 호출됩니다. 오류시 [COleException](../../mfc/reference/coleexception-class.md).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [COle변형 클래스](../../mfc/reference/colevariant-class.md)<br/>

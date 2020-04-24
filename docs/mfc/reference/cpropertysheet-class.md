@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363943"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750978"
 ---
 # <a name="cpropertysheet-class"></a>CProperty시트 클래스
 
@@ -165,7 +165,7 @@ class CPropertySheet : public CWnd
 
 제공된 페이지를 속성 시트에 가장 오른쪽 탭으로 추가합니다.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ void AddPage(CPropertyPage* pPage);
 
 `CPropertySheet` 개체를 생성합니다.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ IDOK 또는 IDCANCEL 함수가 성공한 경우; 그렇지 않으면 0 또는 -1
 
 속성 시트에 탭 행을 스택할지 여부를 나타냅니다.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 속성 시트를 종료합니다.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ CTabCtrl* GetTabControl() const;
 
 사각형의 대화 상자 단위를 화면 단위로 변환합니다.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *Lprect*<br/>
-변환할 대화 상자 좌표를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.
+변환할 대화 상자 좌표를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.
 
 ### <a name="remarks"></a>설명
 
@@ -641,7 +641,7 @@ virtual BOOL OnInitDialog();
 
 속성 시트에서 지정된 단추의 선택을 시뮬레이션합니다.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Windows SDK 프레스 버튼 메시지에 대한 자세한 내용은 [PSM_PRESSB
 
 속성 시트에서 페이지를 제거하고 연결된 창을 삭제합니다.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 [완료 명령] 단추에서 텍스트를 설정합니다.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 속성 시트의 캡션(프레임 창의 제목 표시줄에 표시되는 텍스트)을 지정합니다.
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ void SetTitle(
 
 마법사 속성 시트에서 뒤로, 다음 또는 완료 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 속성 페이지를 마법사로 설정합니다.
 
-```
+```cpp
 void SetWizardMode();
 ```
 
@@ -828,7 +828,7 @@ void SetWizardMode();
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>

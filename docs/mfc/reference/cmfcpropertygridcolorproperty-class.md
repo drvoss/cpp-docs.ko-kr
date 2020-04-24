@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375324"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751835"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFC프로퍼티그리드컬러프로퍼티 클래스
 
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 색상 선택 대화 상자의 *자동* 단추를 활성화합니다. (표준 자동 버튼은 **자동으로**레이블이 지정됩니다.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 색상 선택 대화 상자의 *다른* 단추를 활성화합니다. (표준 다른 버튼에는 **더 많은 색상이**레이블이 지정됩니다.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ RGB 색상 값입니다.
 
 속성에 대한 새로운 색을 설정합니다.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 현재 색 속성 표의 열 수를 지정합니다.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
@@ -226,7 +226,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) 메서드를 사용하여 편집된 속성의 원래 값을 재설정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

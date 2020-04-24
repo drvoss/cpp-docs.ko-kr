@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 95de66a66d9c1a6f3abf992c5a9cd64ee1fe91ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352209"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752343"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 클래스
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM FONTNAME 명령 ID를](/previous-versions/aa769880\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_FONTNAME 명령 ID를](/previous-versions/aa769880\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize
 
@@ -2100,7 +2100,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 HTML 글꼴 크기(1-7)입니다. 값이 0이면 글꼴 크기가 1로 설정됩니다.
 
 ### <a name="return-value"></a>Return Value
@@ -2109,7 +2109,7 @@ HTML 글꼴 크기(1-7)입니다. 값이 0이면 글꼴 크기가 1로 설정됩
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM FONTSIZE 명령 ID를](/previous-versions/aa769881\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_FONTSIZE 명령 ID를](/previous-versions/aa769881\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>CHtmlEditCtrlBase:::세트포어컬러
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM FORECOLOR 명령 ID를](/previous-versions/aa769882\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_FORECOLOR 명령 ID를](/previous-versions/aa769882\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ TRUE인 경우 모든 붙여넣기 작업이 Internet Explorer 5와 호환됩니
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM IE50_PASTE_MODE 명령 ID를](/previous-versions/aa769923\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_IE50_PASTE_MODE 명령 ID를](/previous-versions/aa769923\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ TRUE인 경우 크기 조정 또는 이동 작업 중에 WebBrowser가 요소의
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM LIVERESIZE 명령 ID를](/previous-versions/aa769928\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_LIVERESIZE 명령 ID를](/previous-versions/aa769928\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>CHtmlEditCtrlBase::세트멀티셀렉트
 
@@ -2197,7 +2197,7 @@ TRUE인 경우 사용자가 SHIFT 또는 CTRL 키를 보유할 때 한 번에 �
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM MULTIPLESELECTION 명령 ID를](/previous-versions/aa769929\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_MULTIPLESELECTION 명령 ID를](/previous-versions/aa769929\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>CHtmlEditCtrlBase::세트오버라이드커서
 
@@ -2218,7 +2218,7 @@ TRUE이면 WebBrowser는 마우스 포인터를 변경하지 않습니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM OVERRIDE_CURSOR 명령 ID를](/previous-versions/aa769932\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_OVERRIDE_CURSOR 명령 ID를](/previous-versions/aa769932\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>CHtmlEditCtrlBase::세트오버쓰기 모드
 
@@ -2239,7 +2239,7 @@ TRUE인 경우 텍스트 입력 모드가 덮어씁니다. FALSE인 경우 텍�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM OVERWRITE 명령 ID를](/previous-versions/aa770016\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_OVERWRITE 명령 ID를](/previous-versions/aa770016\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ TRUE이면 가시성이 "숨김" 또는 속성 표시로 설정된 요소가 "�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM RESPECTVISIBILITY_INDESIGN 명령 ID를](/previous-versions/aa770023\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_RESPECTVISIBILITY_INDESIGN 명령 ID를](/previous-versions/aa770023\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShow정렬사이트태그
 
@@ -2281,7 +2281,7 @@ TRUE인 경우 속성이 있는 모든 요소에 `styleFloat` 대한 글리프�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWALIGNEDSITETAGS 명령 ID를](/previous-versions/aa769947\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWALIGNEDSITETAGS 명령 ID를](/previous-versions/aa769947\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ TRUE인 경우 문서에 있는 모든 태그의 위치를 표시하는 글리�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWALLTAGS 명령 ID를](/previous-versions/aa769948\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWALLTAGS 명령 ID를](/previous-versions/aa769948\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ TRUE이면 모든 영역 태그에 대한 글리프가 표시됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWAREATAGS 명령 ID를](/previous-versions/aa769949\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWAREATAGS 명령 ID를](/previous-versions/aa769949\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ TRUE인 경우 모든 br 태그에 대한 글리프가 표시됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWWBRTAGS 명령 ID를](/previous-versions/aa769956\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWWBRTAGS 명령 ID를](/previous-versions/aa769956\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShow댓글태그
 
@@ -2365,7 +2365,7 @@ TRUE인 경우 모든 주석 태그에 대한 글리프가 표시됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWCOMMENTTAGS 명령 ID를](/previous-versions/aa769950\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWCOMMENTTAGS 명령 ID를](/previous-versions/aa769950\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ TRUE인 경우 Microsoft 인터넷 익스플로러 4.0에 표시된 모든 태�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWMISCTAGS 명령 ID를](/previous-versions/aa769952\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWMISCTAGS 명령 ID를](/previous-versions/aa769952\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>CHtmlEditCtrlBase::세트쇼스크립트태그
 
@@ -2407,7 +2407,7 @@ TRUE인 경우 모든 스크립트 태그에 대한 문자 표시가 표시됩�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWSCRIPTTAGS 명령 ID를](/previous-versions/aa769953\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWSCRIPTTAGS 명령 ID를](/previous-versions/aa769953\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShow스타일태그
 
@@ -2428,7 +2428,7 @@ TRUE인 경우 모든 스타일 태그에 대한 글리프가 표시됩니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWSTYLETAGS 명령 ID를](/previous-versions/aa769954\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWSTYLETAGS 명령 ID를](/previous-versions/aa769954\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShow알 수 없는 태그
 
@@ -2449,7 +2449,7 @@ TRUE인 경우 알 수 없는 모든 태그에 대한 글리프가 표시됩니�
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM SHOWUNKNOWNTAGS 명령 ID를](/previous-versions/aa769955\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_SHOWUNKNOWNTAGS 명령 ID를](/previous-versions/aa769955\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>CHtmlEditCtrlBase::텍스트 영역
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM TEXTAREA 명령 ID를](/previous-versions/aa769986\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_TEXTAREA 명령 ID를](/previous-versions/aa769986\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>CHtmlEditCtrlBase::텍스트 상자
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM TEXTBOX 명령 ID를](/previous-versions/aa769980\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_TEXTBOX 명령 ID를](/previous-versions/aa769980\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>CHtmlEditCtrlBase::책갈피 해제
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM UNBOOKMARK 명령 ID를](/previous-versions/aa770034\(v=vs.85\)) 웹 브라우저 컨트롤에 보냅니다.
+이 메서드는 [IDM_UNBOOKMARK 명령 ID를](/previous-versions/aa770034\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>CHtmlEditCtrlBase::밑줄
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM UNDERLINE 명령 ID를](/previous-versions/aa770035\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_UNDERLINE 명령 ID를](/previous-versions/aa770035\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>CHtmlEditCtrlBase::연결 해제
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM UNLINK 명령 ID를](/previous-versions/aa770037\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_UNLINK 명령 ID를](/previous-versions/aa770037\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
 ## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>CHtmlEditCtrlBase::순서 목록 해제
 
@@ -2560,9 +2560,9 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [IDM UNORDERLIST 명령 ID를](/previous-versions/aa769987\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
+이 메서드는 [IDM_UNORDERLIST 명령 ID를](/previous-versions/aa769987\(v=vs.85\)) WebBrowser 컨트롤에 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [HTML편집 샘플](../../overview/visual-cpp-samples.md)

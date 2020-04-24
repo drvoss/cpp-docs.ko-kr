@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 8f262d0139b6dffe54e16748ffda4938ba43fc08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 024fbad44af2fb11e967141fc8e7ccc0aad0ccbe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366051"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753472"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFC스테이바 클래스
 
@@ -269,7 +269,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 상태 표시줄에서 마우스를 두 번 클릭하면 사용할 수 없거나 비활성화합니다.
 
-```
+```cpp
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```
 
@@ -286,7 +286,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 지정된 창에 진행률 표시줄을 표시합니다.
 
-```
+```cpp
 void EnablePaneProgressBar(
     int nIndex,
     long nTotal=100,
@@ -376,7 +376,7 @@ UINT GetItemID(int nIndex) const;
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>CMFC 상태 표시줄::GetItemRect
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -391,7 +391,7 @@ void GetItemRect(
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CMFC 상태 표시줄:::GetPaneInfo
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -438,7 +438,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>CMFC 상태 표시줄::GetPaneText
 
-```
+```cpp
 void GetPaneText(
     int nIndex,
     CString& s) const;
@@ -493,7 +493,7 @@ CString GetTipText(int nIndex) const;
 
 상태 표시줄 창을 무효화하고 내용을 다시 그립니다.
 
-```
+```cpp
 void InvalidatePaneContent(int nIndex);
 ```
 
@@ -546,7 +546,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>CMFC 상태 표시줄::세트드로우확장지역
 
-```
+```cpp
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
@@ -577,7 +577,7 @@ BOOL SetIndicators(
 
 지정된 창에 애니메이션을 할당합니다.
 
-```
+```cpp
 void SetPaneAnimation(
     int nIndex,
     HIMAGELIST hImageList,
@@ -607,7 +607,7 @@ void SetPaneAnimation(
 
 상태 표시줄 창의 배경색을 설정합니다.
 
-```
+```cpp
 void SetPaneBackgroundColor(
     int nIndex,
     COLORREF clrBackground=(COLORREF)-1,
@@ -629,7 +629,7 @@ void SetPaneBackgroundColor(
 
 상태 표시줄 창의 아이콘을 설정합니다.
 
-```
+```cpp
 void SetPaneIcon(
     int nIndex,
     HICON hIcon,
@@ -667,7 +667,7 @@ HICON 또는 HBITMAP을 투명 한 색상과 함께 전달하여 창의 이미�
 
 ## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>CMFC 상태 표시줄:::세트파네정보
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -688,7 +688,7 @@ void SetPaneInfo(
 
 지정된 창에 대한 진행률 표시줄의 현재 진행률 표시기를 설정합니다.
 
-```
+```cpp
 void SetPaneProgress(
     int nIndex,
     long nCurr,
@@ -714,7 +714,7 @@ void SetPaneProgress(
 
 ## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>CMFC 상태 표시줄::세트파인 스타일
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
@@ -750,7 +750,7 @@ virtual BOOL SetPaneText(
 
 지정된 창의 텍스트 색상을 설정합니다.
 
-```
+```cpp
 void SetPaneTextColor(
     int nIndex,
     COLORREF clrText=(COLORREF)-1,
@@ -772,7 +772,7 @@ void SetPaneTextColor(
 
 상태 표시줄 창의 너비를 설정합니다.
 
-```
+```cpp
 void SetPaneWidth(
     int nIndex,
     int cx);
@@ -790,7 +790,7 @@ void SetPaneWidth(
 
 상태 표시줄 창의 도구 설명 텍스트를 설정합니다.
 
-```
+```cpp
 void SetTipText(
     int nIndex,
     LPCTSTR pszTipText);
@@ -804,7 +804,7 @@ void SetTipText(
 *pszTip텍스트*<br/>
 【인】 새 도구 설명 텍스트입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

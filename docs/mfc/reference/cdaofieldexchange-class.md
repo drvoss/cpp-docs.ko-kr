@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: e1ce6e13b9c6045881cc0bb4114a6e11d58365c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86f12f78338d1c60e3dd13614ccedc2868f28d81
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368986"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754713"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoField익스체인지 클래스
 
@@ -136,7 +136,7 @@ DFX 메커니즘에 의해 수행되는 일부 작업은 가능한 필드 유형
 
 클래스의 `DoFieldExchange` `CDaoRecordset` 재정의를 요청합니다. `SetFieldType`
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
@@ -157,7 +157,7 @@ void SetFieldType(UINT nFieldType);
 
 일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결된 DFX 함수 호출의 각 그룹에 대한 호출 앞에 있어야 `SetFieldType`합니다. 각 `SetFieldType` 호출의 `SetFieldType` *nFieldType* 매개 변수는 호출 다음에 DFX 함수 호출로 표시되는 데이터 멤버의 형식을 식별합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CDao레코드 집합 클래스](../../mfc/reference/cdaorecordset-class.md)

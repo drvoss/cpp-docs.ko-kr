@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a814618d3bda27d5b4ace12209dd93343ef2eef9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369920"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751785"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 클래스
 
@@ -88,7 +88,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 
 ACCEL 구조를 연결된 문자열 값으로 변환합니다.
 
-```
+```cpp
 void Format(CString& str) const;
 ```
 
@@ -105,7 +105,7 @@ void Format(CString& str) const;
 
 [CMFCAcceleratorKey 키](../../mfc/reference/cmfcacceleratorkey-class.md) 개체의 바로 가기 키를 설정합니다.
 
-```
+```cpp
 void SetAccelerator(LPACCEL lpAccel);
 ```
 
@@ -118,7 +118,7 @@ void SetAccelerator(LPACCEL lpAccel);
 
 을 만들 때 바로 가기 키를 제공하지 않은 `CMFCAcceleratorKey` 경우 에 대한 바로 `CMFCAcceleratorKey`가기 키를 설정하려면 이 메서드를 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

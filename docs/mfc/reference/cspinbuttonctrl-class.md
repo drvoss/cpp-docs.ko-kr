@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318121"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753116"
 ---
 # <a name="cspinbuttonctrl-class"></a>C스핀버튼Ctrl 클래스
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 스핀 버튼 컨트롤의 스타일을 지정합니다. 스핀 버튼 컨트롤 스타일의 조합을 컨트롤에 적용합니다. 이러한 스타일은 Windows SDK의 [업다운 컨트롤 스타일에](/windows/win32/Controls/up-down-control-styles) 설명되어 있습니다.
 
 *rect*<br/>
-스핀 버튼 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+스핀 버튼 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 스핀 단추 컨트롤의 부모 창에 대한 `CDialog`포인터( 일반적으로 ). NULL이 아니어야 합니다.
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 스핀 버튼 컨트롤의 스타일을 지정합니다. 스핀 버튼 컨트롤 스타일의 조합을 컨트롤에 적용합니다. 이러한 스타일은 Windows SDK의 [업다운 컨트롤 스타일에](/windows/win32/Controls/up-down-control-styles) 설명되어 있습니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -375,7 +375,7 @@ int SetPos32(int nPos);
 
 스핀 버튼 컨트롤의 상한 및 하한(범위)을 설정합니다.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);
@@ -397,7 +397,7 @@ void SetRange32(
 > [!NOTE]
 > 스핀 버튼의 기본 범위에는 최대 값이 0(0)으로 설정되고 최소 값이 100으로 설정됩니다. 최대값이 최소값보다 적기 때문에 위쪽 화살표를 클릭하면 위치가 줄어들고 아래쪽 화살표를 클릭하면 화살표가 증가합니다. 이러한 `CSpinButtonCtrl::SetRange` 값을 조정하는 데 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

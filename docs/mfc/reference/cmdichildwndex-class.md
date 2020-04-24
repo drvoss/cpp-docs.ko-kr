@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370063"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754564"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 
@@ -249,7 +249,7 @@ BOOL AddPane(
 
 탭된 창을 추가합니다.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ TRUE 창을 **Windows** 대화 상자에 표시할 수 있는 경우; 그렇지 
 
 창을 도킹합니다.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 도킹 관리자에서 창을 제거합니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::세트 관련 탭 그룹
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::쇼파인
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Windows 7 작업 표시줄 탭에 표시할 아이콘의 핸들입니다.
 
 Windows 7 작업 표시줄 탭에서 MDI 자식을 제거합니다.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 Windows 7 작업 표시줄 탭에 대한 속성을 설정합니다.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ STPFLAG 값의 조합입니다. 자세한 내용은 [ITaskbarList4:SetTabPropert
 
 Windows 7 작업 표시줄 탭에서 지정된 창 앞에 MDI 자식을 삽입합니다.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 
 해당 Windows 7 작업 표시줄 탭을 활성화합니다.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *n히트 테스트*<br/>
 적중 테스트 영역 코드를 지정합니다. 적중 테스트는 커서의 위치를 결정하는 테스트입니다.
 
-*메시지*<br/>
+*message*<br/>
 마우스 메시지 번호를 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -1146,7 +1146,7 @@ Windows 7 `CMDITabProxyWnd` 작업 표시줄 탭에 등록된 개체에 대한 �
 
 창의 클라이언트 영역 일부를 자동으로 선택하거나 비활성화하여 작업 표시줄에 해당 창의 축소판으로 표시합니다.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 
@@ -1183,7 +1183,7 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

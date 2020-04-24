@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25a375f8bf5769a4a118318eac272db93062cbf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752508"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFC리본버튼 클래스
 
@@ -250,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 단추와 연결되는 메뉴 항목을 팝업 메뉴에 추가합니다.
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
@@ -803,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 팝업 메뉴에서 모든 메뉴 항목을 제거합니다.
 
-```
+```cpp
 void RemoveAllSubItems();
 ```
 
@@ -852,7 +852,7 @@ virtual BOOL SetACCData(
 
 사용자가 단추를 축소하면 단추가 큰 이미지나 작은 이미지 중 어느 것을 표시하는지를 지정합니다.
 
-```
+```cpp
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```
 
@@ -865,7 +865,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 리본 단추에 대한 기본 명령을 사용하도록 설정합니다.
 
-```
+```cpp
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```
 
@@ -894,7 +894,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 단추 이미지에 인덱스를 할당합니다.
 
-```
+```cpp
 void SetImageIndex(
     int nIndex,
     BOOL bLargeImage);
@@ -912,7 +912,7 @@ void SetImageIndex(
 
 리본 단추에 팝업 메뉴를 할당합니다.
 
-```
+```cpp
 void SetMenu(
     HMENU hMenu,
     BOOL bIsDefaultCommand=FALSE,
@@ -958,7 +958,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 팝업 메뉴를 단추 가장자리에 정렬합니다.
 
-```
+```cpp
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```
 
@@ -979,7 +979,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

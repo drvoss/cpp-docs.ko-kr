@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318221"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751268"
 ---
 # <a name="csliderctrl-class"></a>C슬라이더Ctrl 클래스
 
@@ -169,7 +169,7 @@ class CSliderCtrl : public CWnd
 
 슬라이더 컨트롤에서 현재 선택 영역을 지웁봅을 선택합니다.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 
 슬라이더 컨트롤에서 현재 눈금 표시를 제거합니다.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 슬라이더 컨트롤의 스타일을 지정합니다. Windows SDK에 설명된 [슬라이더 컨트롤 스타일의](/windows/win32/Controls/trackbar-control-styles)조합을 컨트롤에 적용합니다.
 
 *rect*<br/>
-슬라이더 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+슬라이더 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 슬라이더 컨트롤의 부모 창(일반적으로 )을 `CDialog`지정합니다. NULL이 아니어야 합니다.
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 슬라이더 컨트롤의 스타일을 지정합니다. Windows SDK에 설명된 [슬라이더 컨트롤 스타일의](/windows/win32/Controls/trackbar-control-styles)조합을 컨트롤에 적용합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -304,7 +304,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 
 슬라이더 컨트롤의 채널에 대한 경계 사각형의 크기와 위치를 검색합니다.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ int GetPos() const;
 
 슬라이더 컨트롤에서 슬라이더의 최대 및 최소 위치를 검색합니다.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ int GetRangeMin() const;
 
 슬라이더 컨트롤에서 현재 선택 영역의 시작 및 끝 위치를 검색합니다.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ int GetThumbLength() const;
 
 슬라이더 컨트롤에서 슬라이더(엄지 손가락)에 대한 경계 사각형의 크기와 위치를 검색합니다.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ int SetPageSize(int nSize);
 
 슬라이더 컨트롤에서 슬라이더의 현재 위치를 설정합니다.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ void SetPos(int nPos);
 
 슬라이더 컨트롤에서 슬라이더의 범위(최소 및 최대 위치)를 설정합니다.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ void SetRange(
 
 슬라이더 컨트롤에서 슬라이더의 최대 범위를 설정합니다.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ void SetRangeMax(
 
 슬라이더 컨트롤에서 슬라이더의 최소 범위를 설정합니다.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ void SetRangeMin(
 
 슬라이더 컨트롤에서 현재 선택 영역의 시작 및 끝 위치를 설정합니다.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,13 +697,13 @@ void SetSelection(
 
 현재 트랙바 컨트롤에서 슬라이더의 길이를 설정합니다.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nLength*|【인】 슬라이더의 길이(픽셀 단위)입니다.|
 
@@ -746,7 +746,7 @@ BOOL SetTic(int nTic);
 
 눈금 표시가 슬라이더에 표시되는 빈도를 설정합니다.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ int SetTipSide(int nLocation);
 
 도구 설명 컨트롤을 슬라이더 컨트롤에 할당합니다.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
@@ -799,7 +799,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 이 멤버 함수는 Windows SDK에 설명된 대로 TBM_SETTOOLTIPS Win32 [메시지의](/windows/win32/Controls/tbm-settooltips)동작을 구현합니다. TBS_TOOLTIPS 스타일로 슬라이더 컨트롤을 만들면 슬라이더 옆에 슬라이더의 현재 위치가 표시되는 기본 도구 설명 컨트롤이 만들어집니다. 슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

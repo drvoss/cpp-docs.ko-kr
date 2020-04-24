@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367729"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752553"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFC컬러버튼 클래스
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 색상 선택기 컨트롤의 "자동" 버튼을 활성화 또는 비활성화하고 자동(기본) 색상을 설정합니다.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 일반 색상 버튼 아래에 나타나는 "기타" 버튼을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,13 +335,13 @@ virtual void OnShowColorPopup();
 
 보호된 데이터 `m_pPalette` 멤버를 지정된 팔레트 또는 기본 시스템 팔레트로 초기화합니다.
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pPal*|【인】 논리 팔레트 또는 NULL에 대한 포인터입니다. NULL이면 기본 시스템 팔레트가 사용됩니다.|
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 단추의 색상을 지정합니다.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ static void SetColorName(
 
 사용자의 색상 선택 프로세스 중에 사용자에게 표시되는 색상 테이블에 표시되는 열 수를 정의합니다.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ void SetColumnsNumber(int nColumns);
 
 색상 집합과 집합 이름을 지정합니다. [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 개체를 사용하여 색상 집합이 표시됩니다.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ void SetDocumentColors(
 
 팝업 색상 막대에 표시할 표준 색상을 지정합니다.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -472,7 +472,7 @@ virtual void UpdateColor(COLORREF color);
 
 이 `UpdateColor` 함수는 현재 선택한 단추의 색상을 변경하고 표준 알림이 BN_CLICKED WM_COMMAND 메시지를 보내 부모에게 알리고 있습니다. [CMFCColorButton::GetColor](#getcolor) 메서드를 사용하여 선택한 색상을 검색합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

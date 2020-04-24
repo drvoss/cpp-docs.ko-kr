@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318527"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754407"
 ---
 # <a name="cscrollbar-class"></a>C스크롤바 클래스
 
@@ -287,7 +287,7 @@ int GetScrollPos() const;
 
 지정된 스크롤 막대의 현재 최소 및 최대 스크롤 막대 위치를 *lpMinPos* 및 *lpMaxPos에서*지정한 위치로 복사합니다.
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ int SetScrollPos(
 
 지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ void SetScrollRange(
 
 스크롤 막대를 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 
@@ -428,7 +428,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 
   [CScrollBar::만들기에](#create)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

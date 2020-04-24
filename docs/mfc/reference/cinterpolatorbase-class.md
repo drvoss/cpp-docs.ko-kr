@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e5294aabc42301e2f874d5b8328d648f4deeb3c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372362"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754953"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 클래스
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 출력 전환 기간(초)입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -217,7 +217,7 @@ IFACEMETHOD(InterpolateVelocity)(
 
 이벤트를 처리할 사용자 지정 보간기에 대한 포인터를 저장합니다.
 
-```
+```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*<br/>
+*duration*<br/>
 전환 기간입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -265,6 +265,6 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 메서드가 성공하면 S_OK가 반환되고, CCustomInterpolator가 설정되지 않은 경우 E_FAIL 반환하거나 사용자 지정 구현은 SetInitialValueAndVelocity 메서드에서 FALSE를 반환합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

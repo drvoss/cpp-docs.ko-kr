@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375084"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754086"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFC리본미니툴바 클래스
 
@@ -86,7 +86,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 도구 모음에 표시되는 명령의 목록을 설정합니다.
 
-```
+```cpp
 void SetCommands(
     CMFCRibbonBar* pRibbonBar,
     const CList<UINT,UINT>& lstCommands);
@@ -190,7 +190,7 @@ virtual BOOL IsRibbonMiniToolBar() const;
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

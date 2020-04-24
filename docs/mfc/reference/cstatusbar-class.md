@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376256"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753047"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 클래스
 
@@ -271,7 +271,7 @@ ID를 검색할 표시기의 인덱스입니다.
 
 *lpRect에*의해 가리키는 구조에 *nIndex에* 의해 지정 된 표시기의 좌표를 복사 합니다.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 사각형 좌표를 검색할 표기의 인덱스입니다.
 
 *Lprect*<br/>
-*nIndex에서*지정한 표시기의 좌표를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.
+*nIndex에서*지정한 표시기의 좌표를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체를 가리킵니다.
 
 ### <a name="remarks"></a>설명
 
@@ -293,7 +293,7 @@ void GetItemRect(
 
 *nIndex에서*지정한 위치에서 표시기 창의 ID, 스타일 및 너비에 *nID,* *nStyle*및 *cxWidth를* 설정합니다.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ BOOL SetIndicators(
 
 지정된 표시기 창을 새 ID, 스타일 및 너비로 설정합니다.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ void SetPaneInfo(
 
 이 멤버 함수를 호출하여 상태 표시줄창의 스타일을 설정합니다.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
@@ -504,7 +504,7 @@ TRUE이면 텍스트를 설정한 후 창이 무효화됩니다.
 
 [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>

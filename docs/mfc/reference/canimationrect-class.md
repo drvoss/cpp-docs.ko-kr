@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373332"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755127"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 클래스
 
@@ -125,7 +125,7 @@ CAnimationRect 클래스는 4개의 CAnimationVariable 개체를 캡슐화하며
 
 왼쪽, 위쪽, 오른쪽 및 아래쪽 좌표에 대한 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -405,7 +405,7 @@ operator RECT();
 
 CAnimationRect에 정사각형을 할당합니다.
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
@@ -422,7 +422,7 @@ void operator=(const RECT& rect);
 
 기본값을 설정합니다.
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 
@@ -435,6 +435,6 @@ void SetDefaultValue(const CRect& rect);
 
 이 함수를 사용하여 기본값을 애니메이션 오브젝트로 설정합니다. 이 메서드는 사각형의 경계에 기본값을 할당합니다. 또한 기본 COM 개체가 생성된 경우 다시 만듭니다. 이 애니메이션 개체를 이벤트에 구독한 경우(ValueChanged 또는 IntegerValueChanged) 이러한 이벤트를 다시 활성화해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

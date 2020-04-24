@@ -1,15 +1,15 @@
 ---
-title: Ellipses 및 Variadic 템플릿
+title: 타원 및 변종 템플릿
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366333"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031526"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Ellipses 및 Variadic 템플릿
+# <a name="ellipsis-and-variadic-templates"></a>타원 및 변종 템플릿
 
 이 문서에서는 C++ variadic 템플릿을 사용하여 타원()을`...`사용하는 방법을 보여 주며, 타원은 C와 C ++에서 많은 용도를 가졌습니다. 여기에는 함수에 대한 변수 인수 목록이 포함됩니다. C `printf()` 런타임 라이브러리의 함수는 가장 잘 알려진 예제 중 하나입니다.
 

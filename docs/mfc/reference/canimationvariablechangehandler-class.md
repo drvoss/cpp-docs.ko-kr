@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377089"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755048"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 클래스
 
@@ -93,7 +93,7 @@ IFACEMETHOD(OnValueChanged) (
 
 애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -102,6 +102,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *p애니메이션 컨트롤러*<br/>
 이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

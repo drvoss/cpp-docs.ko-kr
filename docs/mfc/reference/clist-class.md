@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 253cf12033af497115ad600e457630ae834cc69c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc065687f0c2c40b7e66326ff9d1e6210a6962c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372240"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754137"
 ---
 # <a name="clist-class"></a>CList 클래스
 
@@ -583,7 +583,7 @@ BOOL IsEmpty() const;
 
 이 목록에서 모든 요소를 제거하고 연결된 메모리를 해제합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -599,7 +599,7 @@ void RemoveAll();
 
 이 목록에서 지정된 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
@@ -670,7 +670,7 @@ TYPE RemoveTail();
 
 위치 형식의 변수는 목록의 키입니다.
 
-```
+```cpp
 void SetAt(POSITION pos, ARG_TYPE newElement);
 ```
 
@@ -695,7 +695,7 @@ POSITION 값이 목록에서 유효한 위치를 나타내는지 확인해야 �
 
 [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

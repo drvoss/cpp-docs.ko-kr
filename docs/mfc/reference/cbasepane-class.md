@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352933"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752983"
 ---
 # <a name="cbasepane-class"></a>CBasePane 클래스
 
@@ -370,14 +370,14 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 ### <a name="parameters"></a>매개 변수
 
-*Int*<br/>
+*int*<br/>
 【인】 사용되지 않습니다.
 
 ## <a name="cbasepaneaddpane"></a><a name="addpane"></a>CBasePane::애드파인
 
 도킹 관리자에 창을 추가합니다.
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ virtual BOOL DockPane(
 
 런타임 형식 정보를 사용하여 창을 도킹합니다.
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 창을 등록 취소하고 도킹 관리자의 목록에서 창이 제거됩니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 창에 대한 도킹 모드를 설정합니다.
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
@@ -2014,7 +2014,7 @@ TRUE이면 도킹 레이아웃이 즉시 다시 계산되지 않습니다.
 
 이 창을 계속 사용하려면 이 메서드를 호출하기 전에 [CBasePane::DockPane](#dockpane) 또는 [CBasePane::FloatPane를](#floatpane) 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

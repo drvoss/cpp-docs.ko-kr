@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375679"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753377"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 클래스
 
@@ -348,7 +348,7 @@ virtual BOOL CreateControlSite(
 
 HTML 페이지에서 멤버 변수와 ActiveX 컨트롤의 속성 값 간에 데이터를 교환합니다.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ ActiveX 컨트롤에 대 한 HTML 소스에서 개체 태그의 ID 매개 변수
 *szPropName*<br/>
 속성의 이름입니다.
 
-*Var*<br/>
+*var*<br/>
 ActiveX 제어 속성과 교환된 값을 보유하는 VARIANT 형식, [COleVariant](../../mfc/reference/colevariant-class.md)또는 [CComVariant의](../../atl/reference/ccomvariant-class.md)데이터 멤버입니다.
 
 ### <a name="example"></a>예제
@@ -387,7 +387,7 @@ ActiveX 제어 속성과 교환된 값을 보유하는 VARIANT 형식, [COleVari
 
 HTML 페이지의 멤버 변수와 확인란 간에 데이터를 교환합니다.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.
 
 HTML 페이지에서 멤버 변수와 모든 HTML 요소 속성 간에 데이터를 교환합니다.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.
 
 HTML 페이지에서 멤버 변수와 라디오 단추 간에 데이터를 교환합니다.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.
 
 HTML 페이지에서 목록 상자의 인덱스를 가져옵니다.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ HTML 컨트롤의 매개 변수에 대해 `id` 지정한 값입니다.
 
 HTML 페이지에서 목록 상자 항목(현재 인덱스 기준)의 표시 텍스트를 가져옵니다.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.
 
 HTML 페이지에서 목록 상자 항목(현재 인덱스 기준)의 값을 가져옵니다.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.
 
 `CDHtmlDialog` 모덜리스 대화 상자를 개체에서 분리하고 오브젝트를 파괴합니다.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ ActiveX 컨트롤의 `IDispatch` 포인터입니다.
 
 현재 문서와 연결된 URL(균일 리소스 로케이터)을 검색합니다.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 *lpszURL에*의해 지정된 URL로 식별된 리소스로 이동합니다.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ E_NOTIMPL을 반환합니다.
 
 ActiveX 컨트롤의 속성을 새 값으로 설정합니다.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ ActiveX 컨트롤의 `IDispatch` 인터페이스에 대한 포인터입니다.
 
 HTML `innerHTML` 요소의 속성을 설정합니다.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ HTML `IUnknown` 요소의 포인터입니다.
 
 HTML 요소의 속성을 설정합니다.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ HTML 요소의 ID입니다.
 
 HTML `innerText` 요소의 속성을 설정합니다.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ HTML `IUnknown` 요소의 포인터입니다.
 
 호스트의 `IDispatch` 인터페이스를 설정합니다.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 호스트 UI 플래그를 설정합니다.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 
@@ -1522,7 +1522,7 @@ E_NOTIMPL을 반환합니다.
 
 이 멤버 함수는 Windows SDK에 설명된 대로 CDHtmlDialog의 [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))구현입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 DHtmlExplore](../../overview/visual-cpp-samples.md)<br/>
 [DDX_DHtml 도우미 매크로](#ddx_dhtml_helper_macros)<br/>

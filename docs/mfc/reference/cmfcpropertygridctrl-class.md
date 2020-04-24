@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361937"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754150"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFC프로퍼티그리드트럴 클래스
 
@@ -380,7 +380,7 @@ virtual void AdjustLayout();
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::항상쇼유저툴팁
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ TRUE 메서드가 성공한 경우; 그렇지 않으면 false입니다.
 
 속성 그리드 컨트롤의 속성 목록 아래에 표시되는 설명 영역을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 속성 그리드 컨트롤의 맨 위에 있는 헤더 컨트롤을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 
 속성 그리드 컨트롤을 스크롤하고 지정된 속성이 표시될 때까지 속성 항목을 확장합니다.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 모든 속성 그리드 제어 노드를 확장하거나 축소합니다.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 속성 그리드 컨트롤 요소에 대해 현재 정의된 사용자 지정 색상을 검색합니다.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ True 속성 그리드 컨트롤이 Visual Studio .NET 스타일인 경우 그렇
 
 수정된 속성을 표시하는 방법을 지정합니다.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1253,7 +1253,7 @@ virtual void OnChangeSelection(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*p뉴셀*|【인】 새로 선택한 속성에 대한 포인터입니다.|
 |*폴젤 (것)과 함께*|【인】 이전에 선택한 속성에 대한 포인터입니다.|
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 콤보 상자 컨트롤을 포함 하는 속성을 선택 하는 경우 프레임 워크에 의해 호출 됩니다.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 속성 그리드 컨트롤에서 모든 속성 개체를 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 모든 속성의 원래 값을 복원합니다.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 알파벳 모드를 설정하거나 재설정합니다.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 부울 레이블의 텍스트를 지정합니다.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 속성 그리드 컨트롤에서 속성을 선택합니다.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ void SetCurSel(
 
 속성 그리드 컨트롤의 다양한 요소에 대한 사용자 지정 색상을 지정합니다.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ void SetCustomColors(
 
 현재 속성 그리드 컨트롤의 설명 섹션에 표시할 행 수를 지정합니다.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 현재 속성 그리드 컨트롤의 속성 그룹에 대한 범주 이름의 전체 너비를 표시할지 여부를 지정합니다.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ void SetGroupNameFullWidth(
 
 속성 값 목록에서 구분 기호로 사용되는 문자를 정의합니다.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ void SetListDelimiter(TCHAR c);
 
 사용자가 열 크기를 조정할 때 프레임워크가 현재 속성 그리드 컨트롤의 이름 및 값 열을 다시 그릴지 여부를 지정합니다.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 
 속성 그리드 컨트롤의 모양을 Visual Studio .NET에서 사용되는 스타일로 설정합니다.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 
@@ -1625,7 +1625,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pProp*|【인】 속성에 대한 포인터입니다. 이 매개 변수는 사용되지 않습니다.|
 
@@ -1639,7 +1639,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 이 메서드를 재정의하는 경우 지정된 속성 데이터가 유효한 경우 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환하며, 이 경우 프레임워크는 속성을 업데이트하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

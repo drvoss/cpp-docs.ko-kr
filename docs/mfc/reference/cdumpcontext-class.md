@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374013"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753205"
 ---
 # <a name="cdumpcontext-class"></a>C덤프컨텍스트 클래스
 
@@ -145,7 +145,7 @@ CDumpContext& DumpAsHex(WORD w);
 
 버퍼에 남아 있는 모든 데이터를 덤프 컨텍스트에 연결된 파일에 기록하도록 강제합니다.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -173,7 +173,7 @@ int GetDepth() const;
 
 헥사데피수 숫자로 서식이 지정된 바이트 배열을 덤프합니다.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -249,7 +249,7 @@ CDumpContext& operator<<(HFONT h);
 
 덤프의 깊이를 설정합니다.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 
@@ -269,7 +269,7 @@ void SetDepth(int nNewDepth);
 
 [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CFile 클래스](../../mfc/reference/cfile-class.md)<br/>

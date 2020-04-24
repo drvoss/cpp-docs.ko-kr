@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373963"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753192"
 ---
 # <a name="ceditview-class"></a>CEditView 클래스
 
@@ -259,7 +259,7 @@ CFont* GetPrinterFont() const;
 
 선택 `GetSelectedText` 영역의 끝또는 `CString` 선택 영역의 첫 번째 캐리지 반환 문자 앞에 있는 문자까지 선택한 텍스트를 개체에 복사하는 호출입니다.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ UINT PrintInsideRect(
 
 개체를 `SerializeRaw` `CArchive` 읽거나 `CEditView` 개체의 텍스트를 텍스트 파일에 쓰도록 호출합니다.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ void SerializeRaw(CArchive& ar);
 
 프린터 `SetPrinterFont` 글꼴을 pFont에서 지정한 글꼴로 설정하려면 *호출합니다.*
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ void SetPrinterFont(CFont* pFont);
 
 이 함수를 호출하여 표시 및 인쇄에 사용되는 탭 정지를 설정합니다.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ void SetTabStops(int nTabStops);
 
 이 멤버 함수를 호출하여 버퍼의 잠금을 해제합니다.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 
@@ -490,7 +490,7 @@ void UnlockBuffer() const;
 
 LockBuffer에서 반환된 포인터 사용을 완료한 후 `UnlockBuffer` [호출합니다.](#lockbuffer)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 슈퍼패드](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView 클래스](../../mfc/reference/cctrlview-class.md)<br/>

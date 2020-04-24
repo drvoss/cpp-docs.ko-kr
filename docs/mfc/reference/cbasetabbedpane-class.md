@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: ce7c48263ed511545757c94d61552e6206e74a00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3ae0d69c385ba89cf75d682ce12c6f1f4e5112f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352864"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752974"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 클래스
 
@@ -306,7 +306,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 내부 탭 순서를 기본 상태로 복원합니다.
 
-```
+```cpp
 void FillDefaultTabsOrderArray();
 ```
 
@@ -440,7 +440,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 【아웃】 허용되는 `CSize` 최소 크기로 채워진 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -457,7 +457,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 【아웃】 허용되는 `CSize` 최소 크기로 채워진 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -601,7 +601,7 @@ TRUE 탭창에서 창이 성공적으로 제거되었고 탭된 창이 여전히
 
 탭된 컨트롤 막대가 자동으로 소멸될지 여부를 결정합니다.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -700,7 +700,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 
 이 메서드를 호출하여 탭된 창을 프로그래밍 방식으로 자동 숨기기 모드로 전환합니다. 창은 기본 프레임 창에 도킹되어야 [합니다(CDockablePane:GetDefaultPaneDivider는](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) [CPaneDivider에](../../mfc/reference/cpanedivider-class.md)유효한 포인터를 반환해야 합니다).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

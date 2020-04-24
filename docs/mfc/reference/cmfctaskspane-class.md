@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375877"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753414"
 ---
 # <a name="cmfctaskspane-class"></a>CMFC태스크스팬 클래스
 
@@ -340,7 +340,7 @@ class CMFCTasksPane : public CDockablePane
 
 1. `CMFCTasksPane` 개체를 주 프레임 창 클래스에 포함합니다.
 
-1. WM_CREATE 메시지를 처리할 때 `Create` 메서드를 호출합니다. 일반 [CControlBar](../../mfc/reference/ccontrolbar-class.md) 스타일을 사용할 수 있습니다. 자세한 내용은 `CControlBar::Create`을 참조하세요.
+1. WM_CREATE 메시지를 처리할 때 `Create` 메서드를 호출합니다. 일반 [CControlBar](../../mfc/reference/ccontrolbar-class.md) 스타일을 사용할 수 있습니다. 자세한 내용은 `CControlBar::Create`를 참조하세요.
 
 1. 다양한 그룹을 추가하는 [CMFCTasksPane::AddGroup](#addgroup) 메서드를 호출합니다.
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFC작업대::축소모든 그룹
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ HMENU CreateMenu() const;
 
 작업 그룹이 확장되거나 축소될 때 발생하는 애니메이션을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 사용자가 작업 그룹을 축소할 수 있는지 여부를 지정합니다.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 **다음** 및 **이전** 탐색 단추에서 드롭다운 메뉴를 활성화합니다.
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 탐색 도구 모음을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ void EnableNavigationToolbar(
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFC작업대::인에이블오프셋사용자 정의 컨트롤
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 스크롤 막대 대신 스크롤 단추를 활성화합니다.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 레이블의 텍스트에 대한 단어 래핑을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 작업의 텍스트에 대한 단어 래핑을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ int GetHorzMargin() const;
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFC작업대::겟넥스트페이지
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ int GetPagesCount() const;
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFC작업대::Get이전페이지
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFC태스크스파인::리캘크 레이아웃
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 지정된 페이지에서 모든 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ void RemoveAllGroups(int nPageIdx = 0);
 
 기본(첫 번째) 페이지를 제외한 모든 페이지를 작업 창에서 제거합니다.
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 지정된 그룹에서 모든 작업을 제거합니다.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ void RemoveGroup(int nGroup);
 
 작업 창에서 지정된 페이지를 제거합니다.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 작업 창에서 지정된 페이지를 활성화합니다.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ void SetActivePage(int nPageIdx);
 
 작업 창의 캡션 이름을 설정합니다.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,13 +1643,13 @@ void SetCaption(LPCTSTR lpszName);
 
 그룹 캡션의 높이를 설정합니다.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 캡션 높이를 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -1662,26 +1662,26 @@ void SetGroupCaptionHeight(int n = -1);
 
 그룹 캡션의 가로 오프셋을 설정합니다.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 그룹 캡션의 수평 오프셋을 지정합니다.
 
 ## <a name="cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a>CMFC태스크파인::SetGroup캡션Vertoffset
 
 그룹 캡션의 세로 오프셋을 설정합니다.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 그룹 캡션의 세로 간격띄우기(픽셀)를 지정합니다.
 
 ## <a name="cmfctaskspanesetgroupname"></a><a name="setgroupname"></a>CMFC작업대: :세트 그룹 이름
@@ -1736,13 +1736,13 @@ TRUE 그룹 텍스트 색상이 성공적으로 변경된 경우; 그렇지 않�
 
 그룹에 대한 세로 오프셋을 설정합니다.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 수직 간격띄우기는 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -1755,13 +1755,13 @@ void SetGroupVertOffset(int n = -1);
 
 수평 여백을 설정합니다.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 여백을 픽셀 단위로 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -1807,7 +1807,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 작업 창 페이지에 대한 캡션 텍스트를 설정합니다.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,13 +1855,13 @@ TRUE 작업 이름이 성공적으로 설정된 경우 그렇지 않으면 false
 
 작업에 대한 수평 오프셋을 설정합니다.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 수평 간격띄우기는 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -1874,7 +1874,7 @@ void SetTasksHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFC태스크파인::셋태스크아이콘호즈오프셋
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFC태스크스팬::셋태스크아이콘버트오프셋
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,13 +1930,13 @@ TRUE 작업의 텍스트 색상이 성공적으로 설정된 경우 그렇지 �
 
 세로 여백을 설정합니다.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 설정할 수직 여백을 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -2069,7 +2069,7 @@ virtual void Update();
 
 프레임워크가 작업 창을 새로 고칠 때 사용자 지정 코드를 실행하기 위해 파생 클래스에서 이 메서드를 재정의합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

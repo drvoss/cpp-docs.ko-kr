@@ -9,22 +9,22 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160465"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750722"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
-`_variant_t` 개체의 형식을 지정 된 `VARTYPE`로 변경 합니다.
+`_variant_t` 개체의 유형을 표시된 `VARTYPE`으로 변경합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL
@@ -33,18 +33,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>매개 변수
 
-*vartype*<br/>
-이 `_variant_t` 개체에 대 한 `VARTYPE`입니다.
+*Vartype*<br/>
+이 `VARTYPE` `_variant_t` 개체에 대한 입니다.
 
-*.Psrc*<br/>
-변환할 `_variant_t` 개체의 포인터입니다. 이 값이 NULL 이면 변환이 대신 수행 됩니다.
+*pSrc*<br/>
+변환할 `_variant_t` 개체의 포인터입니다. 이 값이 NULL이면 변환이 수행됩니다.
 
 ## <a name="remarks"></a>설명
 
-이 멤버 함수는 `_variant_t` 개체를 표시 된 `VARTYPE`변환 합니다. *Psrc* 가 NULL 인 경우 변환이 수행 됩니다. 그렇지 않으면이 `_variant_t` 개체가 *psrc* 에서 복사 된 후 변환 됩니다.
+이 멤버 함수는 `_variant_t` 개체를 `VARTYPE`표시된 으로 변환합니다. *pSrc가* NULL이면 변환이 수행되고 그렇지 `_variant_t` 않으면 이 개체가 *pSrc에서* 복사된 다음 변환됩니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367696"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752529"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFC컬러피커Ctrl 클래스
 
@@ -184,7 +184,7 @@ COLORREF GetColor() const;
 
 사용자가 선택한 색상의 색조, 휘도 및 채도 값을 검색합니다.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ double GetSaturation() const;
 
 현재 색상을 지정된 RGB 색상 구성 요소 또는 지정된 셀 육각형에 의해 정의된 색상으로 설정합니다.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -292,7 +292,7 @@ BOOL SelectCellHexagon(
 
 현재 색상을 지정된 RGB 색상 값으로 설정합니다.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 현재 색상을 지정된 HLS 색상 값으로 설정합니다.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 현재 선택한 색상의 색조가 변경됩니다.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 현재 선택한 색상의 휘도가 변경됩니다.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 색상 선택기 컨트롤에서 휘도 막대의 너비를 설정합니다.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*W*<br/>
+*w*<br/>
 【인】 픽셀단위로 측정된 휘도 막대의 너비입니다.
 
 ### <a name="remarks"></a>설명
@@ -382,7 +382,7 @@ void SetLuminanceBarWidth(int w);
 
 선택한 초기 색상을 설정합니다.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ void SetOriginalColor(COLORREF ref);
 
 현재 색상 팔레트를 설정합니다.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ void SetPalette(CPalette* pPalette);
 
 현재 선택한 색상의 채도를 변경합니다.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 표시할 색상 선택기 컨트롤의 유형을 설정합니다.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 
@@ -446,7 +446,7 @@ void SetType(COLORTYPE colorType);
 
 색상 선택기 컨트롤 유형을 지정하려면 Windows 컨트롤을 생성하기 전에 이 메서드를 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

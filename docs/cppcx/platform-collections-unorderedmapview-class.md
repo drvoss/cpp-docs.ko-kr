@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354389"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031487"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 클래스
 
@@ -28,7 +28,7 @@ ref class UnorderedMapView sealed;
 
 #### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키/값 쌍의 키 형식입니다.
 
 *Ⅴ*<br/>
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>설명
 
-정렬되지 않은 MapView는 [Windows::Foundation::Collection::IMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 인터페이스의 구체적인 C++ 구현으로 응용 프로그램 바이너리 인터페이스(ABI)를 통해 전달됩니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
+정렬되지 않은 MapView는 [Windows::Foundation::Collection::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) 인터페이스의 구체적인 C++ 구현으로 응용 프로그램 바이너리 인터페이스(ABI)를 통해 전달됩니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
 
 ### <a name="members"></a>멤버
 
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>정렬되지 않은 MapView::첫 번째 방법
 
-첫 번째 [Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) 순서가 지정되지 않은 맵의 요소를 지정하는 이터레이터를 반환합니다.
+첫 번째 [Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 순서가 지정되지 않은 맵의 요소를 지정하는 이터레이터를 반환합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 요소를 찾는 데 사용되는 키입니다. 유형은 `key` *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 UnorderedMapView에서 요소를 찾는 데 사용되는 키입니다. 유형은 `key` *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -129,7 +129,7 @@ UnorderedMapView에서 요소를 찾는 데 사용되는 키입니다. 유형은
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>정렬되지 않은 MapView::크기 방법
 
-[Windows::Foundation:컬렉션::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) 정렬되지 않은 MapView의 요소를 반환합니다.
+[Windows::Foundation:컬렉션::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 정렬되지 않은 MapView의 요소를 반환합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -218,7 +218,7 @@ UnorderedMapView(
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 공간을 미리 할당할 요소의 수입니다.
 
 *Init*<br/>
@@ -239,7 +239,7 @@ UnorderedMapView를 초기화하는 데 사용되는 요소 범위에서 첫 번
 *마지막*<br/>
 UnorderedMapView를 초기화하는 데 사용되는 요소 범위 다음의 첫 번째 요소의 입력 반복기입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Platform::Collections 네임스페이스](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

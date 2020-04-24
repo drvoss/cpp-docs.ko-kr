@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367806"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754881"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 클래스
 
@@ -101,7 +101,7 @@ class CMFCBaseVisualManager: public CObject
 
 에서 `CloseThemeData` `UpdateSystemColors`얻은 모든 핸들에 대한 호출
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -218,7 +218,7 @@ virtual BOOL DrawComboDropButton(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pDC*|【인】 장치 컨텍스트에 대한 포인터입니다.|
 |*rect*|【인】 콤보 상자 드롭다운 버튼의 경계 사각형입니다.|
@@ -400,7 +400,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 창, 도구 모음, 단추 등 다양한 컨트롤을 그리기 위한 핸들을 얻기 위한 호출입니다. `OpenThemeData`
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 
@@ -408,7 +408,7 @@ void UpdateSystemColors();
 
 내부 전용입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

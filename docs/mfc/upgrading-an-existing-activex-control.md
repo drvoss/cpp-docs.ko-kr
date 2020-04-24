@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 802640d5132c28dbda564afcb63c12d8a4133042
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfee42369b698956f4f91ab61a1f37e0ef06d9f1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353554"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754511"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>기존 ActiveX 컨트롤 업그레이드
 
@@ -46,7 +46,7 @@ ms.locfileid: "81353554"
 
 ## <a name="packaging-code-for-downloading"></a><a name="_core_packaging_code_for_downloading"></a>다운로드를 위한 패키징 코드
 
-이 주제에 대한 자세한 내용은 [ActiveX 컨트롤 패키징을](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)참조하십시오.
+이 주제에 대한 자세한 내용은 [ActiveX 컨트롤 패키징을](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)참조하십시오.
 
 ### <a name="the-codebase-tag"></a>코드베이스 태그
 
@@ -270,7 +270,7 @@ OCX 96 지침에 따라 컨트롤은 항상 백그라운드에서 해당 팔레�
 
 - 스크립팅 및 지속성은 경고 없이 발생합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 인터넷 프로그래밍 작업](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC 인터넷 프로그래밍 기본 사항](../mfc/mfc-internet-programming-basics.md)<br/>

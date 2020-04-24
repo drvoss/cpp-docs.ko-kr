@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 72ab4027880285a3c4cd24d586e163e1e01b98f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368300"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754484"
 ---
 # <a name="crgn-class"></a>CRgn 클래스
 
@@ -805,7 +805,7 @@ typedef struct tagRECT {
 
 사각형 영역을 만듭니다.
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,
@@ -838,7 +838,7 @@ void SetRectRgn(LPCRECT lpRect);
 
 로컬 메모리 관리자에 `CreateRectRgn` 대한 호출을 방지하려면 멤버 함수 대신 이 함수를 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

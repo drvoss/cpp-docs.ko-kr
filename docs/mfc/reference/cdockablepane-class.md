@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375602"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753341"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ virtual void DrawCaption(
 
 이 창과 컨테이너의 다른 창에 대해 자동 숨기기 모드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 프레임워크는 창이 도킹 해제될 때 이 메서드를 호출합니다.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ BOOL ReplacePane(
 
 창이 역직렬화되면 프레임워크는 이 메서드를 호출하여 기본 창 구분을 복원합니다.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 
 창에 대한 자동 숨기기 단추 및 자동 숨기기 도구 모음을 설정합니다.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,13 +1542,13 @@ void SetAutoHideParents(
 
 창이 해당 컨테이너에서 차지하는 공간의 백분율을 설정합니다.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*N*<br/>
+*n*<br/>
 【인】 창이 컨테이너에서 차지하는 공간의 백분율을 지정하는 **int입니다.**
 
 ### <a name="remarks"></a>설명
@@ -1559,7 +1559,7 @@ void SetLastPercentInPaneContainer(int n);
 
 복원된 기본 창 구분을 설정합니다.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 두 창이 함께 도킹될 때 생성되는 탭된 창에 대한 런타임 클래스 정보를 설정합니다.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 
@@ -1682,7 +1682,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 프레임워크는 파기되기 전에 창의 도킹을 자동으로 해제합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

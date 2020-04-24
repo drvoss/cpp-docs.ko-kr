@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369419"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754810"
 ---
 # <a name="ccontextmenumanager-class"></a>C컨텍스트 메뉴관리자 클래스
 
@@ -187,7 +187,7 @@ HMENU GetMenuByName(
 
 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)에 추가된 메뉴 이름 목록을 반환합니다.
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 [CContextMenuManager새](../../mfc/reference/ccontextmenumanager-class.md) 팝업 메뉴를 표시할 때 활성 팝업 메뉴를 닫는지 여부를 제어합니다.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -372,7 +372,7 @@ virtual UINT TrackPopupMenu(
 
 이 메서드는 바로 가기 메뉴를 표시 하는 모달 호출으로 작동 합니다. 사용자가 바로 가기 메뉴를 닫거나 명령을 선택할 때까지 응용 프로그램은 코드에서 다음 줄로 계속되지 않습니다. 바로 가기 메뉴를 표시하는 데 사용할 수있는 다른 방법은 [CContextMenuManager ::ShowPopupMenu](#showpopupmenu). 이 메서드는 모달 호출이 아니며 선택한 명령의 ID를 반환하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

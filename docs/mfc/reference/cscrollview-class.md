@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318496"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754412"
 ---
 # <a name="cscrollview-class"></a>C스크롤뷰 클래스
 
@@ -124,7 +124,7 @@ class CScrollView : public CView
 
 이 멤버 함수를 호출하여 스크롤 보기에 가로 및 세로 막대가 있는지 확인합니다.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ CScrollView();
 
 스크롤 `FillOutsideRect` 영역 외부에 나타나는 뷰 영역을 채우기 위해 호출합니다.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ CPoint GetDeviceScrollPosition() const;
 
 `GetDeviceScrollSizes`스크롤 가능한 보기의 현재 매핑 모드, 총 크기 및 선 및 페이지 크기를 가져옵니다.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ CSize GetTotalSize() const;
 
 호출을 `ResizeParentToFit` 통해 뷰 크기가 프레임 창의 크기를 지정하도록 합니다.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ MDI 자식 프레임 창의 보기에만 권장됩니다. 파생 `ResizeParentTo
 
 호출하여 `ScrollToPosition` 뷰의 지정된 지점으로 스크롤합니다.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ void ScrollToPosition(POINT pt);
 
 뷰포트 크기를 현재 창 크기로 자동으로 배율 조정하려는 경우 호출합니다. `SetScaleToFitSize`
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 
 뷰가 업데이트될 때 호출합니다. `SetScrollSizes`
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,
@@ -374,7 +374,7 @@ void SetScrollSizes(
 
 [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 디브룩](../../overview/visual-cpp-samples.md)<br/>
 [CView 클래스](../../mfc/reference/cview-class.md)<br/>

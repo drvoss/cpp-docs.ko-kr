@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377110"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754671"
 ---
 # <a name="cdaoworkspace-class"></a>CDao워크스페이스 클래스
 
@@ -213,7 +213,7 @@ virtual void Append();
 
 트랜잭션을 시작 하려면이 멤버 함수를 호출 합니다.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ virtual void Close();
 
 이 멤버 함수를 호출하여 트랜잭션을 커밋합니다 - 편집 및 업데이트 그룹을 작업 영역에서 하나 이상의 데이터베이스에 저장합니다.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ short GetDatabaseCount();
 
 이 멤버 함수를 호출하여 작업 영역에서 열린 데이터베이스에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ short GetWorkspaceCount();
 
 이 멤버 함수를 호출하여 세션에서 열린 작업 영역에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 이 멤버 함수를 호출하여 현재 트랜잭션을 종료하고 트랜잭션이 시작되기 전에 작업 영역의 모든 데이터베이스를 해당 상태로 복원합니다.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 
 이 멤버 함수를 호출하여 작업 영역에 대한 DAO IsolateODBCTrans 속성의 값을 설정합니다.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 
@@ -888,7 +888,7 @@ Microsoft SQL Server와 같은 ODBC 데이터베이스에 로그인하려고 하
 
 관련 정보는 DAO 도움말의 "로그인 시간 부족 속성" 항목을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

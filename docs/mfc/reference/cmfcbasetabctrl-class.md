@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367824"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754903"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -425,7 +425,7 @@ Visual Studio 2015부터 이 클래스는 Microsoft Active Accessibility를 지�
 
 보호된 `CMap m_mapAddedIcons` 멤버의 아이콘 목록에 아이콘을 추가합니다.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFC베이스탭트rl::오토파괴윈도우
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ virtual BOOL DetachTab(
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFC베이스탭트rl::인에이블액티브액티브
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 탭을 그릴 때 프레임워크가 자동 배경색을 사용하는지 여부를 제어합니다.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ virtual BOOL EnableTabDetach(
 
 사용자가 마우스를 사용하여 탭 순서를 변경할 수 있습니다.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ virtual BOOL EnsureVisible(int iTab);
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFC베이스탭트rl::엔터드래그모드
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ virtual void InsertTab(
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::무효화탭
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)의 인스턴스에 대한 이미지 목록을 재설정합니다.
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 프레임워크가 자동 색상 모드에서 사용하는 탭 컨트롤의 색상을 설정합니다.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ autocolor 모드를 사용하도록 설정하려면 [CMFCBaseTabCtrl::EnableAuto
 
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)에서 파생되지 않은 개체에 사용되는 래퍼 클래스를 설정합니다.
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 
 탭 레이블의 접두사 처리를 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);
@@ -2375,7 +2375,7 @@ virtual void SwapTabs(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352044"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752665"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 클래스
 
@@ -390,7 +390,7 @@ Windows 클래스의 이름을 지정하는 null 종료된 문자 문자열을 �
 창 스타일 특성을 지정합니다. 기본적으로 WS_VISIBLE 및 WS_CHILD Windows 스타일이 설정됩니다.
 
 *rect*<br/>
-창의 크기와 위치를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다. *rectDefault* 값을 사용하면 Windows에서 새 창의 크기와 위치를 지정할 수 있습니다.
+창의 크기와 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다. *rectDefault* 값을 사용하면 Windows에서 새 창의 크기와 위치를 지정할 수 있습니다.
 
 *pParentWnd*<br/>
 컨트롤의 상위 창에 대한 포인터입니다.
@@ -469,7 +469,7 @@ HRESULT ExecFormsCommand(
 
 WebBrowser 또는 Internet Explorer에서 명령을 실행하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ long GetWidth() const;
 
 기록 목록에서 한 항목을 뒤로 이동합니다.
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 기록 목록에서 하나의 항목을 앞으로 이동합니다.
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Internet Explorer 인터넷 옵션 대화 상자 또는 제어판을 통해 액세스하는 인터넷 속성 대화 상자에서 지정된 현재 홈페이지 또는 시작 페이지로 이동합니다.
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 제어판에서 액세스한 Internet Explorer 인터넷 옵션 대화 상자 또는 인터넷 속성 대화 상자에 지정된 대로 현재 검색 페이지로 이동합니다.
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 URL로 식별된 리소스로 이동합니다.
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 URL로 식별된 리소스 또는 전체 경로로 식별된 파일로 이동합니다.
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ virtual void OnVisible(BOOL bVisible);
 
 지정된 개체와 연결된 속성을 설정하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 웹 브라우저가 현재 표시하고 있는 URL 또는 파일을 다시 로드합니다.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 Internet Explorer가 현재 표시중인 파일을 다시 로드합니다.
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 Internet Explorer 개체의 주소 표시줄을 표시하거나 숨깁니다.
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ void SetAddressBar(BOOL bNewValue);
 
 이 멤버 함수를 호출하여 Internet Explorer를 전체 화면 또는 일반 창 모드로 설정합니다.
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ void SetFullScreen(BOOL bNewValue);
 
 이 멤버 함수를 호출하여 Internet Explorer 기본 창의 높이를 설정합니다.
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 Internet Explorer 주 창의 가로 위치를 설정합니다.
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ void SetLeft(long nNewValue);
 
 이 멤버 함수를 호출하여 Internet Explorer 메뉴 모음을 표시하거나 숨깁니다.
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ void SetMenuBar(BOOL bNewValue);
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤이 현재 오프라인 모드에서 작동하는지 여부를 나타내는 값을 설정합니다.
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤이 대상 이름 확인을 위한 최상위 브라우저로 등록되어 있는지 여부를 나타내는 값을 설정합니다.
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤이 탐색을 위한 삭제 대상으로 등록되어 있는지 여부를 나타내는 값을 설정합니다.
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 대화 상자를 표시할 수 있는지 여부를 나타내는 값을 설정합니다.
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 상태 표시줄을 표시하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ void SetStatusBar(BOOL bNewValue);
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤이 극장 모드에 있는지 여부를 나타내는 값을 설정합니다.
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 Internet Explorer 도구 모음을 표시하거나 숨깁니다.
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ void SetToolBar(int nNewValue);
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤의 내부 상단 가장자리와 해당 컨테이너의 위쪽 가장자리 사이의 거리를 설정합니다.
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 이 멤버 함수를 호출하여 WebBrowser 컨트롤의 가시성 상태를 설정합니다.
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Internet Explorer 및 WebBrowser에 적용됩니다.
 
 Internet Explorer 주 창의 너비를 설정합니다.
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ void SetWidth(long nNewValue);
 
 보류 중인 탐색 또는 다운로드 작업을 취소하고 배경 소리 및 애니메이션과 같은 동적 페이지 요소를 중지하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void Stop();
 ```
 
@@ -2231,7 +2231,7 @@ void Stop();
 
 Internet Explorer 및 WebBrowser에 적용됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CFormView 클래스](../../mfc/reference/cformview-class.md)<br/>

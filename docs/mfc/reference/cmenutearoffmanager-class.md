@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: f41937179dc055213f3af093e107bcb08c8a8fcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6aef644cb7364184df91a6e8caee18cac65af4cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369969"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751802"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOff관리자 클래스
 
@@ -86,7 +86,7 @@ class CMenuTearOffManager : public CObject
 
 ## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOff관리자::빌드
 
-```
+```cpp
 void Build(
     UINT uiTearOffBarID,
     CString& strText);
@@ -182,7 +182,7 @@ UINT Parse(CString& str);
 
 ## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOff관리자::재설정
 
-```
+```cpp
 void Reset(HMENU hmenu);
 ```
 
@@ -194,7 +194,7 @@ void Reset(HMENU hmenu);
 
 ## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>CMenuTearOff관리자::세팅유스
 
-```
+```cpp
 void SetInUse(
     UINT uiCmdId,
     BOOL bUse = TRUE);
@@ -210,7 +210,7 @@ void SetInUse(
 
 ## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOff관리자::셋업티어오프메뉴
 
-```
+```cpp
 void SetupTearOffMenus(HMENU hMenu);
 ```
 
@@ -220,7 +220,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

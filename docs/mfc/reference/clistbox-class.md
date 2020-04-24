@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372227"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753584"
 ---
 # <a name="clistbox-class"></a>클리스박스 클래스
 
@@ -717,7 +717,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 지정된 목록 상자 항목과 연결된 응용 프로그램에서 제공한 32비트 값을**포인터(void)로** <strong>\*</strong>검색합니다.
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 목록 상자에서 모든 항목을 제거합니다.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ int SelItemRange(
 
 확장 된 선택을 시작 하려면 여러 선택 목록 상자에 앵커를 설정 합니다.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ int SetCaretIndex(
 
 다중 열 목록 [상자(LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일로 작성됨)에서 모든 열의 픽셀로 너비를 설정합니다.
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ int SetCurSel(int nSelect);
 
 목록 상자를 가로로 스크롤할 수 있는 너비를 픽셀 단위로 설정합니다.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ int SetSel(
 
 목록 상자에서 탭 중지 위치를 설정합니다.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 
@@ -1537,7 +1537,7 @@ WM_VKEYTOITEM 메시지는 WM_KEYDOWN 메시지를 받을 때 목록 상자에�
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

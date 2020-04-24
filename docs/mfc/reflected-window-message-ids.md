@@ -46,12 +46,12 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 5b44a1b4e96d92d9ddd150a5b5f68cf83863f8db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372846"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754398"
 ---
 # <a name="reflected-window-message-ids"></a>리플렉션된 창 메시지 ID
 
@@ -78,13 +78,13 @@ ActiveX 컨트롤 또는 기타 특수화된 컨트롤을 만드는 빠른 방�
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[Wm_notify](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
 > 컨트롤이 Win32 시스템에서 실행되는 경우 받을 수\* 있는 WM_CTLCOLOR 메시지의 여러 유형이 있습니다. 자세한 내용은 WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC ActiveX 컨트롤: Windows 컨트롤 서브클래싱](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
 [TN062: Windows 컨트롤에 대한 메시지 리플렉션](../mfc/tn062-message-reflection-for-windows-controls.md)

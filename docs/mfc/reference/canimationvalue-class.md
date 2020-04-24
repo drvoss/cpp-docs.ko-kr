@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321970"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755081"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 클래스
 
@@ -94,7 +94,7 @@ CAnimationValue 클래스는 단일 CAnimationVariable 개체를 캡슐화하고
 
 값에 적용할 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ CAnimationValue와 INT32 간의 변환을 제공합니다. 이 메서드는 내�
 
 CAnimationValue에 DOUBLE 값을 할당합니다.
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ CAnimationValue에 DOUBLE 값을 할당합니다. 이 값은 캡슐화된 애니
 
 기본값을 설정합니다.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -273,6 +273,6 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 이 메서드를 사용하여 기본값을 설정합니다. 애니메이션이 시작되지 않았거나 기본 COM 개체가 만들어지지 않은 경우 기본값이 응용 프로그램에 반환됩니다. CAnimationVarible에 캡슐화된 기본 COM 개체가 이미 생성된 경우 이 메서드가 다시 만들어지므로 EnableValueChanged/EnableIntegerValueChanged 메서드를 다시 호출해야 할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

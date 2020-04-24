@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375640"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753369"
 ---
 # <a name="cdialog-class"></a>클리언로그 클래스
 
@@ -295,7 +295,7 @@ virtual INT_PTR DoModal();
 
 이 멤버 함수를 호출하여 모달 대화 상자를 종료합니다.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ DWORD GetDefID() const;
 
 대화 상자에서 지정된 컨트롤로 포커스를 이동합니다.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ ActiveX 컨트롤이 포함된 대화 상자에는 DLGINIT 리소스에 제공�
 
 호출을 사용하여 사각형의 대화 상자 단위를 화면 단위로 변환합니다.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ Windows `GetDialogBaseUnits` 함수는 시스템 글꼴에 대한 크기 정보�
 
 대화 상자의 다음 컨트롤로 포커스를 이동합니다.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Virtual void OnSetFont(CFont* pFont);
 
 대화 상자에서 이전 컨트롤에 포커스를 설정합니다.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ void PrevDlgCtrl() const;
 
 대화 상자에 대한 기본 푸시 버튼 컨트롤을 변경합니다.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ void SetDefID(UINT nID);
 
 대화 상자에 대한 컨텍스트 구분 도움말 ID를 설정합니다.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 
@@ -556,7 +556,7 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 상황에 맞는 도움말 ID를 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>

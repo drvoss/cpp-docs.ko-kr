@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751107"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 클래스
 
@@ -119,7 +119,7 @@ class CPropertyPage : public CDialog
 
 복구할 수 없는 변경이 모달 속성 시트 페이지의 데이터에 대해 변경된 후 이 함수를 호출합니다.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ void CancelToClose();
 
 이 멤버 함수를 `CPropertyPage` 호출하여 개체를 생성합니다.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ LRESULT QuerySiblings(
 
 속성 페이지의 설정을 적절한 외부 개체에 적용해야 하는지 여부에 따라 이 멤버 함수를 호출하여 지금 적용 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 
@@ -572,7 +572,7 @@ TRUE는 속성 페이지 설정이 마지막으로 적용된 이후 수정되었
 
 [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>

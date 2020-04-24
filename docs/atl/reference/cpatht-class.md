@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746589"
+ms.locfileid: "82032136"
 ---
 # <a name="cpatht-class"></a>CPathT 클래스
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375578"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753331"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 클래스
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>매개 변수
 
-*info*<br/>
+*정보*<br/>
 【인】 도크 창 정렬이 포함된 정보 구조에 대한 참조입니다.
 
 *ppDockBar*<br/>
@@ -332,7 +332,7 @@ BOOL AddDockSite(
 
 숨겨진 MDI 탭 바 창 목록에 막대 창에 핸들을 추가합니다.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ TRUE 개체의 정렬이 `CRect` 조정된 경우; 그렇지 않으면 거짓.
 
 도킹 영역으로 둘러싸인 프레임 클라이언트 영역의 전체 너비 또는 높이를 차지하므로 자동 숨기기 모드에서 도킹 창의 크기를 조정합니다.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 지정된 정렬이 있는 도킹된 막대를 맨 위에 가져옵니다.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 도킹 창 및 도구 모음의 이름을 메뉴에 추가합니다.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 도킹된 창의 예상 사각형을 계산합니다.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 레지스트리에서 도킹 레이아웃 로드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 창을 다른 창이나 프레임 창에 도킹합니다.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 사용자가 오른쪽 마우스 단추를 클릭하고 라이브러리에서 WM_CONTEXTMENU 메시지를 처리할 때 응용 프로그램 도구 모음 및 도킹 창 목록이 있는 특수 컨텍스트 메뉴를 표시하도록 라이브러리에 지시합니다.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ CRect GetOuterEdgeBounds() const;
 
 도킹 관리자에 속한 창 목록을 반환합니다. 여기에는 모든 부동 창이 포함됩니다.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 자동 숨기기 모드에 있는 창을 숨깁니다.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>매개 변수
 
-*info*<br/>
+*정보*<br/>
 【인】 도크 창에 대한 정렬 정보가 포함된 구조입니다.
 
 *dwAlignTo인더*<br/>
@@ -1221,7 +1221,7 @@ virtual BOOL LoadState(
 
 지정된 창을 잠그습니다.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 창 목록이 있는 메뉴를 빌드할 때 프레임워크에서 호출합니다.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 빈 창 컨테이너를 해제합니다.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 지정된 숨겨진 막대 창을 제거합니다.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ TRUE 지정된 프레임이 제거된 경우; 그렇지 않으면 거짓.
 
 창을 등록 취소하고 도킹 관리자의 목록에서 창이 제거됩니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ BOOL ReplacePane(
 
 미니 프레임 목록에 프레임을 리조트.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ BOOL SendMessageToMiniFrames(
 
 도킹 관리자를 아카이브에 씁니다.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ void Serialize(CArchive& ar);
 
 컨트롤 막대와 지정된 창의 크기, 너비 및 높이를 설정합니다.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 인쇄 미리 보기에 표시되는 막대의 인쇄 미리 보기 모드를 설정합니다.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 
 미니 프레임의 창을 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 스마트 도킹 관리자의 정렬에 따라 지정된 창의 스마트 도킹을 시작합니다.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 스마트 도킹을 중지합니다.
 
-```
+```cpp
 void StopSDocking();
 ```
 
@@ -1764,7 +1764,7 @@ AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008 다음 내큐어된 값 중 하�
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

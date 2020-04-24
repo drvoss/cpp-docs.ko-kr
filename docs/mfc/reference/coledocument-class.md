@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 51169de521997890190aab52e4afd02ed383af3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1500035cb8be3036678090918154829aace48d2f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375040"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753866"
 ---
 # <a name="coledocument-class"></a>콜레문서 클래스
 
@@ -195,7 +195,7 @@ COleDocument();
 
 복합 파일 형식을 사용하여 문서를 저장하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```
 
@@ -542,7 +542,7 @@ virtual void UpdateModifiedFlag();
 
 이렇게 하면 문서의 기본 데이터가 수정되지 않은 경우에도 프레임워크에서 닫기 전에 문서를 저장하라는 메시지를 표시할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 컨테이너](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 MFCBIND](../../overview/visual-cpp-samples.md)<br/>

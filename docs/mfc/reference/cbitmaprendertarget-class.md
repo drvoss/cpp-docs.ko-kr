@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: 6249c121f7bcca0675a8138baef0e2cdc9e632d8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba8c8819b47185315d67d732fc90ab2ffc0ad0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352593"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752939"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 클래스
 
@@ -80,7 +80,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 기존 렌더 대상 인터페이스를 오브젝트에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```
 
@@ -158,6 +158,6 @@ operator ID2D1BitmapRenderTarget*();
 
 개체가 아직 초기화되지 않은 경우 ID2D1BitmapRenderTarget 인터페이스 또는 NULL에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

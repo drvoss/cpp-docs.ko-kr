@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 8ca8d3b2cb4ce3c5b070d883e0a418ebec3665b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0e80e80d61104a4d8cb5f1cfd4e26a64c42249
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352378"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752735"
 ---
 # <a name="cchecklistbox-class"></a>C체크리스트박스 클래스
 
@@ -209,7 +209,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 이 함수를 호출하여 확인란 확인란 항목을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void Enable(
     int nIndex,
     BOOL bEnabled = TRUE);
@@ -326,7 +326,7 @@ virtual CRect OnGetCheckPosition(
 
 지정된 확인란의 상태를 설정합니다.
 
-```
+```cpp
 void SetCheck(
     int nIndex,
     int nCheck);
@@ -354,7 +354,7 @@ void SetCheck(
 
 이 함수를 호출하여 확인란의 확인란 스타일을 설정합니다.
 
-```
+```cpp
 void SetCheckStyle(UINT nStyle);
 ```
 
@@ -377,7 +377,7 @@ void SetCheckStyle(UINT nStyle);
 
 이러한 스타일에 대한 자세한 내용은 [단추 스타일을](../../mfc/reference/styles-used-by-mfc.md#button-styles)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [클리스박스 클래스](../../mfc/reference/clistbox-class.md)<br/>

@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354441"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032449"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 클래스
 
-키/값 쌍의 컬렉션인 *맵*을 나타냅니다. [Windows:::Foundation::컬렉션::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) XAML [데이터 바인딩에](/windows/uwp/data-binding/data-binding-in-depth)대 한 도움말을 구현 합니다.
+키/값 쌍의 컬렉션인 *맵*을 나타냅니다. [Windows:::Foundation::컬렉션::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) XAML [데이터 바인딩에](/windows/uwp/data-binding/data-binding-in-depth)대 한 도움말을 구현 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키/값 쌍의 키 형식입니다.
 
 *Ⅴ*<br/>
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - public enum 클래스
 
-Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 래퍼입니다. [Windows::Foundation::컬렉션:IMap<Windows:::Foundation::컬렉션::IKeyValuePair\<K, V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) 및 공용 Windows 런타임 인터페이스를 통해 전달되는 [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) 형식의 C++ 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::Map` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수의 형식을 변경 하 여 오류를 해결 하거나 [Windows::Foundation::컬렉션:::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)값을 반환 할 수 있습니다.
+Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 래퍼입니다. [Windows::Foundation::컬렉션:IMap<Windows:::Foundation::컬렉션::IKeyValuePair\<K, V>>](/uwp/api/windows.foundation.collections.imap-2) 및 공용 Windows 런타임 인터페이스를 통해 전달되는 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 형식의 C++ 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::Map` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수의 형식을 변경 하 여 오류를 해결 하거나 [Windows::Foundation::컬렉션:::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2)값을 반환 할 수 있습니다.
 
 자세한 내용은 [컬렉션 을](../cppcx/collections-c-cx.md)참조하십시오.
 
@@ -136,7 +136,7 @@ First()에서 반환되는 이터레이터를 유지하는 편리한 방법은 *
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>지도::GetView 방법
 
-현재 맵의 읽기 전용 보기를 반환합니다. 즉, [플랫폼::컬렉션::MapView 클래스,](../cppcx/platform-collections-mapview-class.md)[Windows:::Foundation::컬렉션::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 인터페이스를 구현합니다.
+현재 맵의 읽기 전용 보기를 반환합니다. 즉, [플랫폼::컬렉션::MapView 클래스,](../cppcx/platform-collections-mapview-class.md) [Windows:::Foundation::컬렉션::IMapView\<K,V>인터페이스를](/uwp/api/windows.foundation.collections.imapview-2) 구현 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 Map 요소를 찾는 데 사용되는 키입니다. *키의* 유형은 *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키-값 쌍의 키 부분입니다. *키의* 유형은 *K*.
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 지도에서 요소를 찾는 데 사용되는 키입니다. *키의* 유형은 *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>속성 값/반환 값
 
-이벤트를 발생시킨 개체 및 발생한 변경 종류에 대한 정보가 포함된 [MapChangedEventHandler\<K,V>.](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 또한 [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) 및 [컬렉션변경 열거.](/uwp/api/windows.foundation.collections.collectionchange)
+이벤트를 발생시킨 개체 및 발생한 변경 종류에 대한 정보가 포함된 [MapChangedEventHandler\<K,V>.](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) 또한 [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) 및 [컬렉션변경 열거.](/uwp/api/windows.foundation.collections.collectionchange)
 
 ## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키-값 쌍의 키 부분입니다. *키의* 유형은 *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>지도::크기 방법
 
-[Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) 맵 요소 수를 반환합니다.
+[Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 맵 요소 수를 반환합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 Map의 요소 수입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [컬렉션(C++/CX)](collections-c-cx.md)<br/>
 [플랫폼 네임스페이스](platform-namespace-c-cx.md)<br/>

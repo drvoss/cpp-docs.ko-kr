@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: a8a789f4dba06ffe376d8a8e955b026bb23af924
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 935d7870d68554d702e2ad762e83343cb518b2b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369006"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754733"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 클래스
 
@@ -138,7 +138,7 @@ short GetErrorCount();
 
 오류 컬렉션의 특정 오류 개체에 대한 오류 정보를 반환합니다.
 
-```
+```cpp
 void GetErrorInfo(int nIndex);
 ```
 
@@ -211,7 +211,7 @@ OLE 코드입니다. 거의 모든 경우에 다른 `CDaoException` 데이터 �
 
 SCODE에 대한 자세한 내용은 Windows SDK에서 [OLE 오류 코드의 구성](/windows/win32/com/structure-of-com-error-codes) 항목을 참조하십시오. SCODE 데이터 형식은 HRESULT 데이터 형식에 매핑됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CException 클래스](../../mfc/reference/cexception-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d05a2e186f001a69310e99cec013193a4d1bff3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1394a1b47a86022e37b11e032b87ee2a2a369862
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319729"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752802"
 ---
 # <a name="cmousemanager-class"></a>C마우스관리자 클래스
 
@@ -184,7 +184,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 
 등록된 모든 뷰 이름 목록을 검색합니다.
 
-```
+```cpp
 void GetViewNames(CStringList& listOfNames) const;
 ```
 
@@ -247,7 +247,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 사용자 지정 명령을 마우스 관리자에 처음 등록된 뷰와 연결합니다.
 
-```
+```cpp
 void SetCommandForDblClk(
     int iViewId,
     UINT uiCmd);
@@ -267,7 +267,7 @@ void SetCommandForDblClk(
 
 *uiCmd가* 0으로 설정되면 지정된 뷰가 더 이상 명령과 연결되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

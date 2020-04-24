@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fd1bce7de7ac323dc3099ab4938306768eb95a35
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321960"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754627"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 클래스
 
@@ -107,7 +107,7 @@ TRUE이면 이 개체는 데이터의 유효성을 검사한 다음 컨트롤의
 
 대화 상자 데이터 유효성 검사(DDV) 작업이 실패할 때 프레임워크는 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void Fail();
 ```
 
@@ -228,7 +228,7 @@ OLE 제어 사이트에 대한 포인터입니다.
 
 사용자 고유의 DDX 및 DDV 루틴 작성에 대한 자세한 내용은 [기술 참고 26을](../../mfc/tn026-ddx-and-ddv-routines.md)참조하십시오. DDX 및 DDV에 대한 개요는 [대화 상자 교환 및 유효성 검사 및](../../mfc/dialog-data-exchange-and-validation.md) 대화 상자 [항목을](../../mfc/dialog-boxes.md)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 뷰렉스](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

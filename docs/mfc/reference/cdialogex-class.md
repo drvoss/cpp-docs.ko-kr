@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: b34c441ac63b023ae6272a1646151aad4be1bfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 717e560035d42957c16168097577d0c8c589e3c7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375631"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753357"
 ---
 # <a name="cdialogex-class"></a>클리클로덱스 클래스
 
@@ -105,7 +105,7 @@ CDialogEx(
 
 대화 상자의 배경 색을 설정합니다.
 
-```
+```cpp
 void SetBackgroundColor(
     COLORREF color,
     BOOL bRepaint=TRUE);
@@ -125,7 +125,7 @@ void SetBackgroundColor(
 
 대화 상자의 배경 이미지를 설정합니다.
 
-```
+```cpp
 void SetBackgroundImage(
     HBITMAP hBitmap,
     BackgroundLocation location=BACKGR_TILE,
@@ -146,7 +146,7 @@ BOOL SetBackgroundImage(
 *uiBmpResId*<br/>
 【인】 배경 이미지의 리소스 ID입니다.
 
-*위치*<br/>
+*location*<br/>
 【인】 이미지의 `CDialogEx::BackgroundLocation` 위치를 지정하는 값 중 하나입니다. 유효한 값에는 BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT 및 BACKGR_BOTTOMRIGHT 포함됩니다. 기본값은 BACKGR_TILE.
 
 *b오토파괴*<br/>
@@ -163,7 +163,7 @@ BOOL SetBackgroundImage(
 
 지정한 이미지는 대화 상자 클라이언트 영역에 맞게 늘어나지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

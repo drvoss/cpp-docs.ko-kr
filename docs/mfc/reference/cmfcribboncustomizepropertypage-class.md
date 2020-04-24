@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: c77e2fed1067091c139eee664fb291b83742eb54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375191"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754168"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 클래스
 
@@ -83,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 명령 콤보 상자에 사용자 지정 **범주를 추가합니다.**
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);
@@ -93,7 +93,7 @@ void AddCustomCategory(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*lpszName*|【인】 사용자 지정 범주 이름을 지정합니다.|
 |*lstIDS*|【인】 사용자 지정 범주에 표시할 리본 명령 아이디를 포함합니다.|
 
@@ -126,7 +126,7 @@ virtual void OnOK();
 
 기본 구현은 **사용자 지정** 대화 상자에서 선택한 옵션을 빠른 액세스 도구 모음에 적용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

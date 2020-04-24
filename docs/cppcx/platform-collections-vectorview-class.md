@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363801"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032228"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 클래스
 
@@ -40,7 +40,7 @@ template <typename T, typename E>
 
 ### <a name="remarks"></a>설명
 
-클래스는 `VectorView` [Windows::Foundation::컬렉션::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) 인터페이스 및 표준 템플릿 라이브러리 이터레이터에 대 한 지원을 구현 합니다.
+클래스는 `VectorView` [Windows::Foundation::컬렉션::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) 인터페이스 및 표준 템플릿 라이브러리 이터레이터에 대 한 지원을 구현 합니다.
 
 ### <a name="members"></a>멤버
 
@@ -250,7 +250,7 @@ VectorView(
 *N*<br/>
 현재 VectorView를 초기화하는 데 사용되는 개체 컬렉션의 요소 수입니다.
 
-*크기*<br/>
+*size*<br/>
 VectorView의 요소 수입니다.
 
 *value*<br/>
@@ -274,7 +274,7 @@ VectorView의 요소 수입니다.
 *마지막*<br/>
 현재 VectorView를 초기화하는 데 사용되는 개체 시퀀스의 마지막 요소입니다. 유형은 `last` 완벽한 전달을 통해 *전달됩니다.* 자세한 내용은 [RValue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [플랫폼 네임스페이스](platform-namespace-c-cx.md)<br/>
 [C++로 Windows Runtime 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

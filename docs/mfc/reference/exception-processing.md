@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365708"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751607"
 ---
 # <a name="exception-processing"></a>예외 처리
 
@@ -307,7 +307,7 @@ THROW_LAST()
 
 아카이브 예외를 throw합니다.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 파일 예외를 throw합니다.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ void AfxThrowFileException(
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ void AfxThrowInvalidArgException( );
 
 메모리 예외를 throw합니다.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ void AfxThrowMemoryException();
 
 지원되지 않는 기능에 대한 요청의 결과인 예외를 throw합니다.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 리소스 예외를 throw합니다.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ void  AfxThrowResourceException();
 
 최종 사용자 작업을 중지하는 예외를 throw합니다.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ void AfxThrowUserException();
 
 이 함수를 사용하여 OLE 자동화 함수 내에서 예외를 throw합니다.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 형식의 `COleException` 개체를 만들고 예외를 throw합니다.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ HRESULT를 인수로 하는 버전은 결과 코드를 해당 SCODE로 변환합
 
 이 함수를 호출하여 사용자 고유의 코드에서 [CDaoException](../../mfc/reference/cdaoexception-class.md) 형식의 예외를 throw합니다.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ MFC DAO 클래스와 관련된 예외에 대한 `CDaoException` 자세한 내용
 
 이 함수를 호출하여 사용자 `CDBException` 고유의 코드에서 형식 예외를 throw합니다.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ ODBC에서 정의한 RETCODE 값에 대한 자세한 내용은 Windows SDK의 "�
 
 MFC에서 제공하는 기본 종료 함수입니다.
 
-```
+```cpp
 void  AfxAbort();
 ```
 
@@ -578,7 +578,7 @@ void  AfxAbort();
 
   **헤더** afx.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](mfc-macros-and-globals.md)<br/>
 [CException 클래스](cexception-class.md)<br/>

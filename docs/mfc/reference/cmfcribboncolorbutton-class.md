@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 8cf92d8d4b1b113f751bee85ac2a7df6eb06afea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375248"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754850"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton 클래스
 
@@ -116,7 +116,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 일반 색 영역에 색 그룹을 추가합니다.
 
-```
+```cpp
 void AddColorsGroup(
     LPCTSTR lpszName,
     const CList<COLORREF,COLORREF>& lstColors,
@@ -188,7 +188,7 @@ CMFCRibbonColorButton(
 
 **자동** 단추를 사용할지 여부를 지정합니다.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -222,7 +222,7 @@ void EnableAutomaticButton(
 
 **기타** 단추를 사용하도록 설정합니다.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     LPCTSTR lpszToolTip=NULL);
@@ -310,7 +310,7 @@ COLORREF GetHighlightedColor() const;
 
 일반 색 영역에서 모든 색 그룹을 제거합니다.
 
-```
+```cpp
 void RemoveAllColorGroups();
 ```
 
@@ -318,7 +318,7 @@ void RemoveAllColorGroups();
 
 일반 색 영역에서 색을 선택합니다.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -331,7 +331,7 @@ void SetColor(COLORREF color);
 
 색 막대에 표시되는 모든 색 요소의 크기를 설정합니다.
 
-```
+```cpp
 void SetColorBoxSize(CSize sizeBox);
 ```
 
@@ -366,7 +366,7 @@ static void __stdcall SetColorName(
 
 사용자의 색상 선택 프로세스 중에 사용자에게 표시되는 색상 표에 표시되는 열 수를 설정합니다.
 
-```
+```cpp
 void SetColumns(int nColumns);
 ```
 
@@ -381,7 +381,7 @@ void SetColumns(int nColumns);
 
 문서 색 영역에 표시할 RGB 값의 목록을 지정합니다.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -399,7 +399,7 @@ void SetDocumentColors(
 
 색상 단추에 표시되는 색상 표에 표시할 표준 색상을 지정합니다.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -414,7 +414,7 @@ void SetPalette(CPalette* pPalette);
 
 사용자가 색상 단추를 클릭할 때 표시되는 색상 표에서 색상을 선택할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void UpdateColor(COLORREF color);
 ```
 
@@ -427,7 +427,7 @@ void UpdateColor(COLORREF color);
 
 메서드는 `CMFCRibbonColorButton::UpdateColor` 현재 선택한 단추의 색상을 변경 하 고 BN_CLICKED 표준 알림과 함께 WM_COMMAND 메시지를 보내 부모에 게 알림합니다. [CMFC리본색상 단추::GetColor](#getcolor) 메서드를 사용하여 선택한 색상을 검색합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

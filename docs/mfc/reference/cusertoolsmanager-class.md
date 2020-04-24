@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: c1f14657350c08679868299ce4878cca2ae10eec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1e9be5d7cb81f2769b98d9baeae786873f5fa73d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373232"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751987"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager 클래스
 
@@ -460,7 +460,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 
 **파일 열기** 대화 [상자(CFileDialog 클래스)가](../../mfc/reference/cfiledialog-class.md) **사용자 지정** 대화 상자의 **도구** 탭의 **명령** 필드에 사용하는 기본 확장자를 지정합니다.
 
-```
+```cpp
 void SetDefExt(const CString& strDefExt);
 ```
 
@@ -477,7 +477,7 @@ void SetDefExt(const CString& strDefExt);
 
 **사용자 지정** 대화 상자의 **도구** 탭에서 명령 필드에 파일 **열기** 대화 상자(CFileDialog [클래스)가](../../mfc/reference/cfiledialog-class.md)사용하는 **파일** 필터를 지정합니다.
 
-```
+```cpp
 void SetFilter(const CString& strFilter);
 ```
 
@@ -486,7 +486,7 @@ void SetFilter(const CString& strFilter);
 *스트필터*<br/>
 【인】 필터를 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

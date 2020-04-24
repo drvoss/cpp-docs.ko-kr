@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 468d947947fc89f9ebc832cda722d854bb8b4be2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367659"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752469"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 클래스
 
@@ -75,7 +75,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 속성 페이지의 색상 구성 요소를 설정합니다.
 
-```
+```cpp
 void Setup(
     BYTE R,
     BYTE G,
@@ -86,7 +86,7 @@ void Setup(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*R*|【인】 RGB 값의 빨간색 구성 요소입니다.|
 |*G*|【인】 RGB 값의 녹색 구성 요소입니다.|
 |*B*|【인】 RGB 값의 파란색 구성 요소입니다.|
@@ -95,7 +95,7 @@ void Setup(
 
 이 메서드는 속성 페이지의 현재 RGB 및 관련 HLS(색조, 가벼움 및 채도) 색상 값을 업데이트합니다. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) 메서드는 프레임워크가 색상 대화 상자를 초기화하거나 사용자가 왼쪽 마우스 단추를 누를 때 이 메서드를 호출합니다. 자세한 `CMFCColorDialog`내용은 [CMFCColorDialog 클래스를](../../mfc/reference/cmfccolordialog-class.md)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

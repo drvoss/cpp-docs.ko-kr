@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 6c488d66962f26b6ca9b8c63cb387fc75191085a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d87cdae5c24eae391be8db2fcdd04f91d592e427
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369193"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753163"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 클래스
 
@@ -111,7 +111,7 @@ virtual ~CD2DLinearGradientBrush();
 
 기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```
 
@@ -267,7 +267,7 @@ operator ID2D1LinearGradientBrush*();
 
 브러시의 좌표 공간에서 선형 그라데이션의 끝 좌표 설정
 
-```
+```cpp
 void SetEndPoint(CD2DPointF point);
 ```
 
@@ -280,7 +280,7 @@ void SetEndPoint(CD2DPointF point);
 
 브러시좌표 공간에서 선형 그라데이션의 시작 좌표 설정
 
-```
+```cpp
 void SetStartPoint(CD2DPointF point);
 ```
 
@@ -289,6 +289,6 @@ void SetStartPoint(CD2DPointF point);
 *지점*<br/>
 브러시의 좌표 공간에서 선형 그라데이션의 시작 2차원 좌표
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

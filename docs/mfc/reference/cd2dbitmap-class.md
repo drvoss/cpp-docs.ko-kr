@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: ce4fe49e8af85c4b63be31bf10e9f196f85c019f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a3cabb00ded7dbc5f9c396a1de767058443a4436
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369313"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754213"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 클래스
 
@@ -149,7 +149,7 @@ virtual ~CD2DBitmap();
 
 기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1Bitmap* pResource);
 ```
 
@@ -214,7 +214,7 @@ CD2DBitmap(
 
 개체를 초기화합니다.
 
-```
+```cpp
 void CommonInit();
 ```
 
@@ -473,6 +473,6 @@ operator ID2D1Bitmap*();
 
 개체가 아직 초기화되지 않은 경우 ID2D1Bitmap 인터페이스 또는 NULL에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

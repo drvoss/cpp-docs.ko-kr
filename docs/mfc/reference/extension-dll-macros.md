@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365698"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751592"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>DLL 관리를 위한 매크로 및 기능
 
@@ -91,7 +91,7 @@ MFC에 동적으로 연결된 일반 MFC DLL의 `CWinApp::InitInstance` OLE 지�
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ MFC에 동적으로 연결된 일반 MFC DLL의 MFC 소켓 지원의 경우 일�
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -244,7 +244,7 @@ MFC 확장 DLL은 함수에서 `DllMain` 두 가지 작업을 수행해야 합�
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,7 +279,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
@@ -333,7 +333,7 @@ MFC 확장 DLL은 [에서 AfxInitExtensionModule을](#afxinitextensionmodule) �
 
 **헤더:** afxdll_.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](mfc-macros-and-globals.md)<br/>
 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>

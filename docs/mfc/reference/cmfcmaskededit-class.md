@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365291"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754228"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFC마스크편집클래스
 
@@ -113,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 
 사용자 입력의 유효성을 검사하지 않습니다.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ void DisableMask();
 
 메서드가 `GetWindowText` 마스크된 문자만 검색하는지 여부를 지정합니다.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 마스크된 편집 컨트롤을 초기화합니다.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ void EnableMask(
 
 마스크된 편집 컨트롤을 통해 사용자가 특정 그룹 입력또는 모든 입력을 선택할 수 있는지 여부를 지정합니다.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
 
 텍스트가 마스크된 문자에 대해서만 유효성을 검사하는지 또는 전체 마스크에 대해 유효성을 검사하는지 지정합니다.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ virtual BOOL IsMaskedChar(
 
 사용자가 입력할 수 있는 유효한 문자 문자열을 지정합니다.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 마스크된 편집 컨트롤에 프롬프트를 표시합니다.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -336,7 +336,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 이 메서드는 [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)를 재정의합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372991"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751148"
 ---
 # <a name="property-pages-mfc"></a>속성 페이지(MFC)
 
@@ -49,7 +49,7 @@ ms.locfileid: "81372991"
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 정수 속성의 값을 속성 페이지의 콤보 상자에 있는 현재 선택 항목의 인덱스와 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ void AFXAPI DDP_CBIndex(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 페이지의 콤보 상자에서 현재 선택 항목과 string 속성 값을 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ void AFXAPI DDP_CBString(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 페이지의 콤보 상자에서 현재 선택 항목과 정확히 일치하는 문자열 속성의 값을 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ void AFXAPI DDP_CBStringExact(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 값을 연결된 속성 페이지 확인란 컨트롤과 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ void AFXAPI DDP_Check(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 정수 속성의 값을 속성 페이지의 목록 상자에 있는 현재 선택 항목의 인덱스와 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ void AFXAPI DDP_LBIndex(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 string 속성의 값과 속성 페이지의 목록 상자의 현재 선택 영역을 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ void AFXAPI DDP_LBString(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 페이지의 목록 상자에서 현재 선택 항목과 정확히 일치하는 문자열 속성의 값을 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ void AFXAPI DDP_LBStringExact(
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 값이 저장될 때 속성 페이지에서 컨트롤로 속성 값의 전송을 완료합니다.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 컨트롤 함수에서 `DoPropExchange` 이 함수를 호출하여 속성 값을 연결된 속성 페이지 라디오 단추 컨트롤과 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ void AFXAPI DDP_Radio(
 
 컨트롤의 `DoDataExchange` 함수에서 이 함수를 호출하여 속성 값을 연결된 속성 페이지 컨트롤과 동기화합니다.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,
@@ -480,6 +480,6 @@ PROPPAGEID(clsid)
 
   **헤더** afxctl.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363676"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752877"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 구조체
 
@@ -170,7 +170,7 @@ TRUE는 알파 블렌딩이 지원된다는 것을 나타냅니다. 그렇지 �
 
 브러시, 글꼴 및 DLL 등 프레임워크에 의해 할당되는 리소스를 해제합니다.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ TRUE 테마를 사용하여 지정된 텍스트를 그리는 경우 그렇지 �
 
 Microsoft Active Accessibility 지원을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>매개 변수
 
-*info*<br/>
+*정보*<br/>
 【인, 아웃】 최소화되지 않은 창의 비클라이언트 영역과 관련된 확장 가능한 메트릭을 포함하는 [비CLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) 구조입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -676,7 +676,7 @@ int  m_nDragFrameThicknessFloat;
 
 데스크톱 메뉴 애니메이션의 현재 상태 및 작업 표시줄 자동 숨기기 기능을 탐지합니다.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ BOOL SetMenuFont(
 
 프레임워크에서 사용하는 논리 글꼴을 다시 초기화합니다.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ void UpdateFonts();
 
 프레임워크에서 사용하는 색, 색 농도, 브러시, 펜 및 이미지를 초기화합니다.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ int GetShellAutohideBars();
 
 `GetITaskbarList` 및 `GetITaskbarList3` 메서드를 통해 얻은 인터페이스를 해제합니다.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 
@@ -895,7 +895,7 @@ HRESULT ShellCreateItemFromParsingName(
 
 성공하면 S_OK 반환합니다. 그렇지 않으면 오류 값입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../hierarchy-chart.md)<br/>
 [구조체, 스타일, 콜백 및 메시지 맵](structures-styles-callbacks-and-message-maps.md)<br/>

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 218ed24ccf56854622e20936299fcc2e8a3d0fa9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3664149ef0d7476b460ef06cddaf2b8145ade701
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374784"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753693"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 클래스
 
@@ -253,7 +253,7 @@ CString GetDriverName() const;
 
 프린터 장치 드라이버의 `DoModal` 여백을 검색하려면 호출 후 이 함수를 호출합니다.
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;
@@ -403,7 +403,7 @@ virtual UINT PreDrawPage(
 
 이 함수를 재정의하여 이미지 드로잉을 사용자 지정합니다. 이 함수를 재정의하고 TRUE를 반환하는 경우 전체 이미지를 그려야 합니다. 이 함수를 재정의하고 FALSE를 반환하면 전체 기본 이미지가 프레임워크에 의해 그려집니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 워드패드](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)<br/>

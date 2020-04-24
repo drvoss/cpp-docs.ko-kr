@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365081"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752175"
 ---
 # <a name="ctooltipmanager-class"></a>C툴팁매니저 클래스
 
@@ -128,7 +128,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 지정된 Windows 컨트롤 유형에 대한 도구 설명 컨트롤의 모양을 사용자 지정합니다.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,13 +198,13 @@ static void SetTooltipText(
 
 자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

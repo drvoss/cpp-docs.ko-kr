@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373899"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753143"
 ---
 # <a name="cfiledialog-class"></a>CFile Dialog 클래스
 
@@ -409,7 +409,7 @@ HRESULT AddMenu(
 
 사용자가 항목을 열거나 저장할 수 있는 장소 목록에 폴더를 추가합니다.
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ HRESULT AddText(
 
 데이터 구조에 저장된 값을 기반으로 [CFileDialog의](../../mfc/reference/cfiledialog-class.md) `m_ofn` 현재 상태를 업데이트합니다.
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>설명
 
-Windows Vista 이전의 Windows 버전에서는 [멤버 OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) 데이터 구조가 `CFileDialog`의 상태와 지속적으로 동기화되었습니다. [m_ofn](#m_ofn) 멤버 변수에 대한 모든 변경 사항은 대화 상자의 상태에 즉시 반영되었습니다. 또한 대화 상자의 상태가 변경되면 멤버 변수가 즉시 업데이트됩니다. `m_ofn`
+Windows Vista 이전의 Windows 버전에서는 [멤버 OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) 데이터 구조가 `CFileDialog`의 상태와 지속적으로 동기화되었습니다. [m_ofn](#m_ofn) 멤버 변수에 대한 모든 변경 사항은 대화 상자의 상태에 즉시 반영되었습니다. 또한 대화 상자의 상태가 변경되면 멤버 변수가 즉시 업데이트됩니다. `m_ofn`
 
 Windows Vista 이상에서는 `m_ofn` 멤버 변수및 상태의 `CFileDialog` 값이 동기화되지 않는다고 보장할 수 없습니다. 이 함수는 `CFileDialog` `m_ofn` 구조와 일치하도록 업데이트할 상태를 강제로 합니다. Windows는 [CFileDialog::DoModal](#domodal)동안 이 기능을 자동으로 호출합니다.
 
@@ -1029,7 +1029,7 @@ POSITION GetStartPosition() const;
 
 이 멤버 함수를 호출하여 탐색기 스타일 열기 또는 공통 대화 상자로 저장에서 지정된 컨트롤을 숨깁니다.
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ CDCONTROLSTATE 열거형에서 컨트롤의 현재 상태를 나타내는 하나
 
 탐색기 스타일 **열기** 또는 **대화 상자로 저장** 에서 지정된 컨트롤에 대 한 텍스트를 설정 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ void SetControlText(
 
 이 함수를 호출하여 탐색기 스타일 열기 또는 공통 대화 상자로 저장에 대한 기본 파일 이름 확장명을 설정합니다.
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ HRESULT SetSelectedControlItem(
 
 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 개체에 대한 대화 상자 템플릿을 설정합니다.
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ HRESULT StartVisualGroup(
 
 내부 `m_ofn` 개체의 현재 상태를 기반으로 [CFileDialog의](../../mfc/reference/cfiledialog-class.md) 데이터 구조를 업데이트합니다.
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>설명
 
-Windows Vista 이전의 Windows 버전에서는 [멤버 OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) 데이터 구조가 `CFileDialog`의 상태와 지속적으로 동기화되었습니다. [m_ofn](#m_ofn) 멤버 변수에 대한 모든 변경 사항은 대화 상자의 상태에 직접적인 영향을 미칩니다. 또한 대화 상자의 상태가 변경되면 m_ofn 멤버 변수가 즉시 업데이트되었습니다.
+Windows Vista 이전의 Windows 버전에서는 [멤버 OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) 데이터 구조가 `CFileDialog`의 상태와 지속적으로 동기화되었습니다. [m_ofn](#m_ofn) 멤버 변수에 대한 모든 변경 사항은 대화 상자의 상태에 직접적인 영향을 미칩니다. 또한 대화 상자의 상태가 변경되면 m_ofn 멤버 변수가 즉시 업데이트되었습니다.
 
 Windows Vista 이상에서는 `m_ofn` 데이터 구조가 자동으로 업데이트되지 않습니다. 멤버 변수의 데이터의 정확성을 `m_ofn` 보장하려면 데이터에 액세스하기 전에 `UpdateOFNFromShellDialog` 함수를 호출해야 합니다. Windows는 [IFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)를 처리하는 동안 이 함수를 자동으로 호출합니다.
 
@@ -1638,7 +1638,7 @@ Windows Vista 에서 또는 `CFileDialog` 나중에 클래스를 사용하는 �
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

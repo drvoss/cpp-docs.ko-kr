@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352073"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752326"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 클래스
 
@@ -106,7 +106,7 @@ Windows 클래스의 이름을 지정하는 null 종료된 문자 문자열을 �
 창 스타일 특성을 지정합니다. 기본적으로 WS_VISIBLE 및 WS_CHILD Windows 스타일이 설정됩니다.
 
 *rect*<br/>
-창의 크기와 위치를 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다. *rectDefault* 값을 사용하면 Windows에서 새 창의 크기와 위치를 지정할 수 있습니다.
+창의 크기와 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다. *rectDefault* 값을 사용하면 Windows에서 새 창의 크기와 위치를 지정할 수 있습니다.
 
 *pParentWnd*<br/>
 컨트롤의 상위 창에 대한 포인터입니다.
@@ -142,7 +142,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [HTML편집 샘플](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

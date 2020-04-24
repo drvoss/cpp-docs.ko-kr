@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375368"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751936"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFC팝메뉴 클래스
 
@@ -375,7 +375,7 @@ MENUAREA_TYPE 매개 변수는 다음 값 중 하나를 가질 수 있습니다.
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFC팝업 메뉴::닫기 메뉴
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 팝업 메뉴의 로고를 초기화합니다.
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFC팝업메뉴::인에이블리사이즈
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFC팝업메뉴::인에이블스크롤
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFC팝업메뉴::인에이블버트리사이즈
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -1089,7 +1089,7 @@ BOOL IsShown() const;
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFC팝업메뉴::무브토
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 팝업 메뉴에서 모든 항목을 지웁습니다.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>매개 변수
 
-*종류*<br/>
+*type*<br/>
 【인】 애니메이션 유형을 지정하는 열거된 데이터 형식입니다.
 
 ### <a name="remarks"></a>설명
@@ -1259,7 +1259,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFC팝업 메뉴::세트오토토토토토
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 팝업 메뉴의 기본 명령을 설정합니다.
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ static void SetForceShadow(BOOL bValue);
 
 팝업 메뉴의 최대 너비를 설정합니다.
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ void SetMaxWidth(int iMaxWidth);
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFC팝업메뉴::세트메시지
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFC팝업 메뉴::세트부모리본요소
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFC팝업 메뉴::SetQuick사용자 정의 유형
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFC팝업메뉴::셋퀵모드
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 팝업 메뉴의 메뉴 정렬을 설정합니다.
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 팝업 메뉴를 강제로 사용하여 모든 명령을 표시합니다.
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ void ShowAllCommands();
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFC팝업메뉴:트리거 리사이즈
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 
 팝업 메뉴의 그림자를 업데이트합니다.
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 
@@ -1469,7 +1469,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 
 그림자가 있는 팝업 메뉴가 애니메이션 이미지와 겹치는 경우 이 메서드를 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

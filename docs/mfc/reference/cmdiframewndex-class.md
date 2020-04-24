@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754532"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 클래스
 
@@ -296,7 +296,7 @@ MDI 응용 프로그램에서 확장된 사용자 지정 기능을 활용하려�
 
 활성 항목의 레이아웃을 다시 계산합니다.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 지정된 창을 프레임 창에 도킹합니다.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 전체 화면 모드에서 주 메뉴를 표시하거나 숨깁니다.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 프레임 창에 대해 전체 화면 모드를 활성화합니다.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 도킹 상태의 로드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 프레임 창에 대한 MDI 탭 그룹 기능을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ MDI 탭 그룹을 사용하는 방법에 대한 자세한 내용은 [MDI 탭 그
 
 MDI 프레임 창에 대한 MDI 탭 기능을 활성화하거나 사용하지 않도록 설정합니다. 활성화하면 프레임 창에 각 MDI 자식 창에 대한 탭이 표시됩니다.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTab닫기 버튼*<br/>
 탭 닫기 단추를 표시할지 여부를 지정합니다.
 
-*스타일*<br/>
+*style*<br/>
 탭 스타일을 지정합니다. 일반 탭에 STYLE_3D_SCROLLED 사용하거나 Microsoft OneNote 탭의 STYLE_3D_ONENOTE 사용합니다.
 
 *bTab사용자 정의도구 팁*<br/>
@@ -746,7 +746,7 @@ MDI 프레임 창에 대한 MDI 탭 기능을 활성화하거나 비활성화하
 
 사용자가 현재 탭을 닫을 때 마지막 활성 탭을 열지 여부를 지정합니다.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 응용 프로그램 창 목록을 표시하는 팝업 창 메뉴의 자동 생성 및 관리를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ void EnablePaneMenu(
 
 명령 ID가 [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자를 호출하는 메뉴 항목을 삽입합니다.
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ MDI 탭 및 그룹 및 열린 문서 목록을 로드하거나 저장하려면 �
 
 활성 탭을 현재 활성 탭 창에서 다음 또는 이전 탭 그룹으로 이동합니다.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 단일 창이 있는 새 탭그룹을 만듭니다.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 창을 등록 취소하고 도킹 관리자에서 제거합니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ MDI 탭 및 그룹 및 열린 문서 목록을 로드하거나 저장하려면 �
 
 인쇄 미리 보기 프레임 창을 설정합니다.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 더미 항목을 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 메인 프레임을 일반 모드에서 전체 화면 모드로 전환합니다.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 지정된 창을 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ void ShowPane(
 
 [CMFCWindowsManager대화 상자를](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 만들고 엽니다.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ TRUE 메서드가 성공한 경우 FALSE 실패시입니다.
 
 창 프레임 캡션을 업데이트하는 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 각 MDI 탭 창에 대한 아이콘을 설정합니다.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 이 메서드는 [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)를 재정의합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

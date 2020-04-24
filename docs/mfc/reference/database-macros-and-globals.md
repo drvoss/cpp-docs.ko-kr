@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 4e9700311bbc20ea017675357a91a56813cc4bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d8bd56c0bfe4f9b35e34d067dd1042ed11066d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376955"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751664"
 ---
 # <a name="database-macros-and-globals"></a>데이터베이스 매크로 및 전역
 
@@ -47,7 +47,7 @@ MFC 에 동적으로 연결된 일반 MFC DLL의 MFC 데이터베이스(또는 D
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AFXAPI AfxDbInitModule( );
 ```
 
@@ -164,6 +164,6 @@ MFC에서 현재 사용 중인 ODBC 환경에 대한 핸들입니다. 사용 `SQ
 
   **헤더** afxdb.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

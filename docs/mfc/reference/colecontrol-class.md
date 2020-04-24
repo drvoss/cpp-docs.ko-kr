@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366191"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753933"
 ---
 # <a name="colecontrol-class"></a>콜레컨트롤 클래스
 
@@ -781,7 +781,7 @@ BOOL AmbientUserMode();
 
 바인딩된 속성 값이 변경되었음을 나타냅니다.
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ COleControl();
 
 컨트롤에서 지원하는 니모닉 집합이 변경되면 이 함수를 호출합니다.
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ virtual void DisplayError(
 
 컨트롤에서 마우스 클릭 동작을 시뮬레이션합니다.
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 Windows 컨트롤에서 하위 클래스가 된 OLE 컨트롤을 다시 그립니다.
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ void DoSuperclassPaint(
 
 컨트롤의 모양을 업데이트해야 하는 경우 프레임워크에서 호출합니다.
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ void DrawContent(
 
 메타파일 장치 컨텍스트가 사용 중일 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 OLE 컨트롤에 대한 간단한 프레임 특성을 활성화합니다.
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 컨트롤의 스톡 속성 상태를 직렬화하거나 초기화합니다.
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ BOOL ExchangeVersion(
 
 활성 컨트롤을 통해 마우스를 클릭할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ Click 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵에 �
 
 활성 컨트롤을 통해 마우스를 두 번 클릭할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ DblClick 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵에
 
 주식 오류 이벤트를 발생시면 됩니다.
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ OLE 컨트롤의 주식 오류 이벤트의 구현은 SCODE 값을 사용합니�
 
 선택적 인수의 수와 컨트롤에서 사용자 정의 이벤트를 발생 합니다.
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ void AFX_CDECL FireEvent(
 
 컨트롤이 활성화되어 있는 동안 키를 누를 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ void FireKeyDown(
 
 사용자 지정 컨트롤이 컨테이너 내에서 UI 활성인 동안 키를 누르고 해제할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ void FireKeyPress(USHORT* pnChar);
 
 사용자 지정 컨트롤이 컨테이너 내에서 UI 활성인 동안 키가 해제될 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ KeyUp 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵에 �
 
 활성 사용자 지정 컨트롤을 통해 마우스 단추를 누를 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1335,7 +1335,7 @@ MouseDown 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵�
 
 커서가 활성 사용자 지정 컨트롤을 통해 이동될 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1379,7 +1379,7 @@ MouseMove 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵�
 
 활성 사용자 지정 컨트롤을 통해 마우스 단추를 해제할 때 프레임워크에서 호출됩니다.
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1423,7 +1423,7 @@ MouseUp 이벤트가 자동으로 발생하려면 컨트롤의 이벤트 맵에 
 
 제어 준비 상태의 현재 값으로 이벤트를 발생시입니다.
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ OLE 컨트롤의 `GetControlFlags` 기타 최적화에 대한 자세한 내용�
 
 OLE 컨트롤 창의 크기를 검색합니다.
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ LPFONTDISP GetFont();
 
 컨트롤이 소유한 모든 `CFontHolder` 개체에 대한 텍스트 메트릭을 측정합니다.
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ virtual void GetMessageString(
 
 사용자가 컨트롤의 속성 값에 액세스할 수 없도록 합니다.
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 [SelectStockFont](#selectstockfont) 함수로 선택할 수 있는 컨트롤의 스톡 Font 속성에 대한 텍스트 메트릭을 측정합니다.
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 컨트롤이 사용할 IID의 기본 클래스를 알립니다.
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ const CString& InternalGetText();
 
 컨트롤의 준비 상태를 설정합니다.
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ void InternalSetReadyState(long lNewReadyState);
 
 컨트롤이 강제로 다시 그려지도록 합니다.
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ void InvalidateControl(
 
 지정된 지역 내의 컨테이너 창의 클라이언트 영역을 무효화합니다.
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ OLE 컨트롤이 Windows 컨트롤을 하위 클래스로 지정하는 경우 �
 
 비동기적으로 로드된 이전 데이터를 재설정하고 컨트롤의 비동기 속성에 대한 새 로드를 시작합니다.
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 - 모든 투명 하거나 불규칙 한 부분을 덮는 사각형을 DVASPECT_TRANSPARENT.
 
 *pRect*<br/>
-객체를 그려야 하는 사각형을 지정하는 [RECTL](/previous-versions/dd162907\(v=vs.85\)) 구조를 가리킵니다. 이 매개변수는 오브젝트의 위치 지정 및 스트레칭을 제어합니다.
+객체를 그려야 하는 사각형을 지정하는 [RECTL](/windows/win32/api/windef/ns-windef-rectl) 구조를 가리킵니다. 이 매개변수는 오브젝트의 위치 지정 및 스트레칭을 제어합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -3513,7 +3513,7 @@ virtual UINT ParentToClient(
 
 모달 대화 상자가 닫혔다는 것을 컨테이너에 알게 합니다.
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 
 모달 대화 상자가 표시될 컨테이너에 알신합니다.
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 
 컨트롤의 창을 삭제하고 다시 만듭니다.
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ void RecreateControlWindow();
 
 OLE 컨트롤을 다시 그립니다.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ virtual void ReparentControlWindow(
 
 `COleControl` 주식 속성의 상태를 기본값으로 초기화합니다.
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ void ResetStockProps();
 
 버전 번호를 지정된 값으로 초기화합니다.
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 창 없는 OLE 개체가 화면의 내부 활성 이미지 내에서 영역을 스크롤할 수 있습니다.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 컨트롤에 할당된 디스플레이 공간의 상태를 직렬화하거나 초기화합니다.
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ void SerializeExtent(CArchive& ar);
 
 `COleControl` 모양, 백컬러, 테두리 스타일, 캡션, 사용 설정, 글꼴, ForeColor 및 텍스트 : 스톡 속성의 상태를 직렬화하거나 초기화합니다.
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ DWORD SerializeVersion(
 
 컨트롤의 주식 모양 속성 값을 설정합니다.
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ void SetAppearance (short sAppearance);
 
 컨트롤의 Stock BackColor 속성 값을 설정합니다.
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 컨트롤의 스톡 BorderStyle 속성 값을 설정합니다.
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ BOOL SetControlSize(int cx, int cy);
 
 컨트롤의 주식 사용 속성 값을 설정합니다.
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ CWnd* SetFocus();
 
 컨트롤의 스톡 Font 속성을 설정합니다.
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ void SetFont(LPFONTDISP pFontDisp);
 
 컨트롤의 주식 ForeColor 속성 값을 설정합니다.
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ virtual void SetInitialDataFormats();
 
 컨테이너에 처음 표시될 때 OLE 컨트롤의 크기를 설정합니다.
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ OLE 컨트롤의 초기 높이를 픽셀 단위로 제어합니다.
 
 컨트롤의 수정된 상태를 변경합니다.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 편집 요청이 실패했음을 나타냅니다.
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ void SetNotPermitted();
 
 사용자가 컨트롤의 속성 값을 수정하지 못하도록 합니다.
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 컨트롤의 스톡 캡션 또는 텍스트 속성 값을 설정합니다.
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ void SetText(LPCTSTR pszText);
 
 컨트롤에서 오류가 발생했음을 나타냅니다.
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ void ThrowError(
 
 HIMETRIC 단위와 컨테이너의 기본 단위 사이의 좌표 값을 변환합니다.
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,
@@ -4190,7 +4190,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 처리할 Windows 메시지를 지정합니다.
 
 *wParam*<br/>
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 이 함수를 호출하여 컨트롤의 메시지 맵을 통해 특정 메시지를 디스패치합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 테스트도움말](../../overview/visual-cpp-samples.md)<br/>

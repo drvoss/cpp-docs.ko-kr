@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376971"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753709"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 클래스
 
@@ -146,10 +146,10 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwStyle*|【인】 컨트롤에 적용할 [창 스타일과](../../mfc/reference/styles-used-by-mfc.md#window-styles) [호출기 컨트롤 스타일의](/windows/win32/Controls/pager-control-styles) 비트 조합(OR)입니다.|
-|*rect*|【인】 클라이언트 좌표에서 컨트롤의 위치와 크기를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.|
+|*rect*|【인】 클라이언트 좌표에서 컨트롤의 위치와 크기를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.|
 |*pParentWnd*|【인】 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. 이 매개 변수는 NULL일 수 없습니다.|
 |*nID*|【인】 컨트롤의 ID입니다.|
 
@@ -182,11 +182,11 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwExStyle*|【인】 컨트롤에 적용할 확장 된 스타일의 비트 조합입니다. 자세한 내용은 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 함수의 *dwExStyle* 매개 변수를 참조하십시오.|
 |*dwStyle*|【인】 컨트롤에 적용할 [창 스타일과](../../mfc/reference/styles-used-by-mfc.md#window-styles) [호출기 컨트롤 스타일의](/windows/win32/Controls/pager-control-styles) 비트 조합(OR)입니다.|
-|*rect*|【인】 클라이언트 좌표에서 컨트롤의 위치와 크기를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.|
+|*rect*|【인】 클라이언트 좌표에서 컨트롤의 위치와 크기를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.|
 |*pParentWnd*|【인】 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. 이 매개 변수는 NULL일 수 없습니다.|
 |*nID*|【인】 컨트롤의 ID입니다.|
 
@@ -202,13 +202,13 @@ virtual BOOL CreateEx(
 
 현재 호출기 컨트롤에 포함된 WM_MOUSEMOVE [메시지를](/windows/win32/inputdev/wm-mousemove) 창으로 전달하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*b앞으로*|【인】 TRUE는 마우스 메시지를 전달하거나 FALSE는 마우스 메시지를 전달하지 않습니다.|
 
@@ -288,7 +288,7 @@ DWORD GetButtonState(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -350,7 +350,7 @@ BOOL IsButtonDepressed(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -372,7 +372,7 @@ BOOL IsButtonGrayed(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -394,7 +394,7 @@ BOOL IsButtonHot(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -416,7 +416,7 @@ BOOL IsButtonInvisible(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -446,7 +446,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iButton*|【인】 상태가 검색되는 단추를 나타냅니다. 호출기 컨트롤 스타일이 PGS_HORZ 경우 왼쪽 단추에 PGB_TOPORLEFT 지정하고 오른쪽 단추의 PGB_BOTTOMORRIGHT 지정합니다. 호출기 컨트롤 스타일이 PGS_VERT 경우 위쪽 단추의 PGB_TOPORLEFT 지정하고 아래쪽 단추의 PGB_BOTTOMORRIGHT. 자세한 내용은 [페이저 제어 스타일을](/windows/win32/Controls/pager-control-styles)참조하십시오.|
 
@@ -462,7 +462,7 @@ TRUE 지정된 단추가 정상 상태인 경우 그렇지 않으면 false입니
 
 현재 호출기 컨트롤이 포함된 창의 크기를 다시 계산하도록 합니다.
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -492,7 +492,7 @@ COLORREF SetBkColor(COLORREF clrBk);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*clrBk*|【인】 호출기 컨트롤의 새 배경 색을 포함 하는 [COLORREF](/windows/win32/gdi/colorref) 값입니다.|
 
@@ -520,7 +520,7 @@ int SetBorder(int iBorder);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*아이 보더*|【인】 픽셀 단위로 측정된 새 테두리 크기입니다. *iBorder* 매개 변수가 음수이면 테두리 크기가 0으로 설정됩니다.|
 
@@ -548,7 +548,7 @@ int SetButtonSize(int iButtonSize);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*아이 버튼 사이즈*|【인】 픽셀 단위로 측정된 새 단추 크기입니다.|
 
@@ -572,13 +572,13 @@ int SetButtonSize(int iButtonSize);
 
 현재 호출기 컨트롤에 대해 포함된 창을 설정합니다.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*hwndChild*|【인】 포함할 창에 핸들을 보입니다.|
 
@@ -598,13 +598,13 @@ void SetChild(HWND hwndChild);
 
 현재 호출기 컨트롤의 스크롤 위치를 설정합니다.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*Ipos*|【인】 픽셀 단위로 측정된 새 스크롤 위치입니다.|
 
@@ -612,7 +612,7 @@ void SetScrollPos(int iPos);
 
 이 메서드는 Windows SDK에 설명 된 [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) 메시지를 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376278"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753966"
 ---
 # <a name="coleclientitem-class"></a>COle클라이언트항목 클래스
 
@@ -310,7 +310,7 @@ OLE 항목은 포함되거나 링크될 수 있습니다. 포함된 경우 해�
 
 예외가 throw될 때 사용자 고유의 처리를 수행할 수 있도록 [DoVerb](#doverb) 대신 지정된 동사를 실행하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ virtual BOOL ActivateAs(
 
 이 함수를 호출하여 OLE 항목의 데이터에 액세스하기 위해 [COleDataObject를](../../mfc/reference/coledataobject-class.md) 초기화합니다.
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ static BOOL PASCAL CanPasteLink();
 
 이 함수를 호출하여 OLE 항목의 상태를 실행 중인 상태에서 로드된 상태로 변경합니다.
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 
 이 함수를 호출하여 OLE 항목을 클립보드에 복사합니다.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ OLE 항목을 만들 때 캐시할 클립보드 데이터 형식을 지정합니
 
 이 함수를 호출하여 OLE 항목을 비활성화하고 관련 리소스를 해제합니다.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ void Deactivate();
 
 사용자가 활성화된 항목을 비활성화할 때 이 함수를 호출합니다.
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ void DeactivateUI();
 
 이 함수를 호출하여 컨테이너 문서에서 OLE 항목을 삭제합니다.
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ BOOL GetCachedExtent(
 
 항목의 클래스 ID를 *pClassID로*가리키는 메모리로 반환합니다.
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ void GetClassID(CLSID* pClassID) const;
 
 CopyToClipboard 멤버 함수를 호출하여 `COleDataSource`클립보드에 배치되는 모든 데이터를 포함 하는 개체를 가져오려면 이 함수를 [호출](#copytoclipboard)합니다.
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ OLE_OBJTYPE GetType() const;
 
 이 함수를 호출하여 "Word document"와 같이 OLE 항목의 형식을 설명하는 사용자가 볼 수 있는 문자열을 가져옵니다.
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ BOOL Reload();
 
 이 항목과 연결된 응용 프로그램을 실행합니다.
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ DVASPECT 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나�
 
 이 함수를 호출하여 OLE 항목에 사용할 수 있는 공간의 양을 지정합니다.
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 크기 정보가 포함된 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
 
 *nDrawAspect*<br/>
@@ -2040,7 +2040,7 @@ Microsoft Foundation 클래스 라이브러리를 사용하여 서버 응용 프
 
 이 함수를 호출하여 컨테이너 응용 프로그램의 이름과 포함된 OLE 항목에 대한 컨테이너 이름을 지정합니다.
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ BOOL SetItemRects(
 
 이 함수를 호출하여 지정된 링크된 항목의 표시에 대한 링크 업데이트 옵션을 설정합니다.
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 
@@ -2185,7 +2185,7 @@ BOOL UpdateLink();
 
 자세한 내용은 [IOleLink::Windows](/windows/win32/api/oleidl/nf-oleidl-iolelink-update) SDK의 업데이트를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 클라이언트](../../overview/visual-cpp-samples.md)<br/>

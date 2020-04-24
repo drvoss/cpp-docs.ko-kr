@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367361"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753457"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 현재 탭 컨트롤의 지정된 탭을 표시하고 해당 탭에 포커스를 설정합니다.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 탭 컨트롤의 사용자 인터페이스 요소가 변경될 때 프레임워크가 모든 탭 컨트롤 창의 클라이언트 영역 크기를 조정할지 여부를 지정합니다.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>매개 변수
 
-*스타일*<br/>
+*style*<br/>
 【인】 탭 컨트롤의 스타일입니다. 자세한 내용은 설명 부분을 참조하세요.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 【인】 탭 컨트롤의 ID입니다.
 
-*위치*<br/>
+*location*<br/>
 【인】 탭의 위치입니다. 기본값은 LOCATION_BOTTOM. 자세한 내용은 설명 부분을 참조하세요.
 
 *bCloseBtn*<br/>
@@ -381,7 +381,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 활성 탭에서 닫기 **단추(X)를**표시하거나 숨깁니다.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 두 개의 단추를 사용하여 창 탭을 스크롤하는 사용자 인터페이스와 탭된 창의 팝업 메뉴를 표시하는 인터페이스 간에 전환됩니다.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ STYLE_FLAT_SHARED_HORZ_SCROLL 스타일을 사용하여 탭 컨트롤을 만들�
 
 탭 컨트롤의 위쪽 또는 아래쪽에 있는 탭 레이블 영역의 경계 사각형을 검색합니다.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 현재 탭 컨트롤의 클라이언트 영역 경계를 검색합니다.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 활성 창에서 가로 스크롤 막대(있는 경우)를 숨깁니다.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ void HideActiveWindowHorzScrollBar();
 
 프레임워크에 비활성 탭 컨트롤 창이 표시되는지 여부를 지정합니다.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 탭이 없는 경우 탭 영역의 그리기를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>매개 변수
 
-*스타일*<br/>
+*style*<br/>
 【인】 탭 컨트롤의 모양을 지정하는 열거형 값 중 하나입니다. 자세한 내용은 비고의 표를 참조하십시오.
 
 ### <a name="return-value"></a>Return Value
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 탭 컨트롤의 현재 탭을 여러 문서 인터페이스 탭 그룹의 활성 탭으로 설정합니다.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ TRUE 지정된 탭이 활성화된 경우 지정된 *iTab* 매개 변수 값이 
 
 활성 탭에서 굵은 글꼴 사용을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 프레임 사각형이 포함된 막대 주위에 그려지는지 여부를 지정합니다.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 탭 영역 주위에 플랫 또는 3D 프레임을 그릴지 여부를 지정합니다.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 현재 탭 컨트롤의 크기를 조정한 다음 컨트롤을 다시 표시하는 방법을 지정합니다.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 탭된 창에서 최대 탭 너비를 지정합니다.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 
 탭 컨트롤에서 현재 크기 조정 작업을 종료합니다.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 
@@ -1135,7 +1135,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 이 메서드는 플랫 탭을 표시 하는 탭 컨트롤만 영향을 줍니다. 스크롤 막대는 모든 탭에 동시에 영향을 미칩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

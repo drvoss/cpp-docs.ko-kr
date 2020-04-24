@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377160"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754675"
 ---
 # <a name="cdaorecordset-class"></a>CDao레코드 집합 클래스
 
@@ -626,7 +626,7 @@ virtual void Edit();
 
 이 멤버 함수를 호출하여 레코드 집합에서 지정된 수의 레코드를 캐시합니다.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ short GetFieldCount();
 
 레코드 집합의 필드에 대한 정보를 가져오려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ short GetIndexCount();
 
 이 멤버 함수를 호출하여 레코드 집합의 기본 기본 기본 테이블에 정의된 인덱스에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ virtual void Move(long lRows);
 
 이 멤버 함수를 호출하여 레코드 집합(있는 경우)의 첫 번째 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ SQL 쿼리 `MoveLast` 또는 쿼리 def를 기반으로 레코드 집합 개체�
 
 이 멤버 함수를 호출하여 레코드의 마지막 레코드(있는 경우)를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ SQL 쿼리 `MoveLast` 또는 쿼리 def를 기반으로 레코드 집합 개체�
 
 이 멤버 함수를 호출하여 레코드 집합의 다음 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ void MoveNext();
 
 이 멤버 함수를 호출하여 레코드 집합의 이전 레코드를 현재 레코드로 만듭니다.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ UNICODE 레코드 집합을 만들지 않는 경우 `COleVariant` 개체를 ANSI
 
 레코드 집합 개체의 현재 레코드의 상대 레코드 번호를 설정합니다.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ void SetAbsolutePosition(long lPosition);
 
 이 멤버 함수를 호출하여 지정된 책갈피를 포함하는 레코드에 레코드 집합을 배치합니다.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ UNICODE 레코드 집합을 만들지 않는 경우 `COleVariant` 개체를 ANSI
 
 이 멤버 함수를 호출하여 캐시할 레코드 수를 설정합니다.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ void SetCacheSize(long lSize);
 
 이 멤버 함수를 호출하여 캐시할 레코드 집합의 첫 번째 레코드의 책갈피를 지정합니다.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ UNICODE 레코드 집합을 만들지 않는 경우 `COleVariant` 개체를 ANSI
 
 테이블 형식 레코드 집합에 인덱스를 설정 하려면이 멤버 함수를 호출 합니다.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 이 멤버 함수를 호출하여 레코드 집합의 필드 데이터 멤버를 변경된 것으로 또는 변경되지 않은 상태로 플래그를 표시합니다.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ TRUE 필드 데이터 멤버를 "더티"(변경됨)로 플래그를 지정하는
 
 이 멤버 함수를 호출하여 레코드 집합의 필드 데이터 멤버를 Null(특히 값이 없음)으로 플래그를 정하거나 Null이 아닌 것으로 플래그를 표시합니다.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ UNICODE 레코드 집합을 만들지 않는 경우 `SetFieldValue` `COleVariant
 
 이 멤버 함수를 호출하여 필드를 Null 값으로 설정합니다.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ C++ NULL은 Null과 같지 않으며 데이터베이스 용어에서 "값이 없
 
 이 멤버 함수를 호출하여 레코드 집합에 대한 잠금 유형을 설정합니다.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 querydef의 매개 변수 컬렉션에서 매개 변수의 숫자 위치입니다.
 
-*Var*<br/>
+*var*<br/>
 설정할 값; 비고를 참조하십시오.
 
 *lpszName*<br/>
@@ -2458,7 +2458,7 @@ querydef의 매개 변수 컬렉션에서 매개 변수의 숫자 위치입니�
 
 이 멤버 함수를 호출하여 매개 변수를 Null 값으로 설정합니다.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL은 Null과 같지 않으며 데이터베이스 용어에서 "값이 없
 
 이 멤버 함수를 호출하여 레코드 집합의 레코드 백분율을 기준으로 레코드 집합 개체에서 현재 레코드의 대략적인 위치를 변경하는 값을 설정합니다.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 
@@ -2525,7 +2525,7 @@ virtual void Update();
 
 관련 정보는 DAO 도움말의 "새 새 메서드 추가", "취소 업데이트 메서드", "메서드 삭제", "마지막으로 수정된 속성", "업데이트 방법" 및 "편집 모드 속성"을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

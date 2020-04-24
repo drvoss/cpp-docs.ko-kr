@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373981"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753227"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ int CharFromPos(CPoint pt) const;
 
 편집 컨트롤에서 현재 선택 항목(있는 경우)을 삭제(지우기)하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ void Clear();
 
 편집 컨트롤의 현재 선택 영역(있는 경우)을 클립보드 형식으로 CF_TEXT 이 함수를 호출합니다.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ virtual BOOL Create(
 
 편집 컨트롤의 현재 선택 항목(있는 경우)을 삭제(잘라내기)하고 삭제된 텍스트를 클립보드에 CF_TEXT 형식으로 복사하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ void Cut();
 
 이 함수를 호출하여 편집 컨트롤의 취소 플래그를 재설정(지우기)합니다.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -547,7 +547,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*피치 스타트*|【아웃】 강조 표시된 텍스트 범위의 첫 번째 문자의 0기반 인덱스입니다.|
 |*피치 엔드*|【아웃】 강조 표시된 텍스트 범위의 마지막 문자의 0기반 인덱스입니다.|
@@ -720,7 +720,7 @@ ES_PASSWORD 스타일로 편집 컨트롤을 만드는 경우 컨트롤을 지�
 
 이 함수를 호출하여 편집 컨트롤의 서식 지정 사각형을 가져옵니다.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ BOOL HideBalloonTip();
 
 이 함수를 호출하여 사용자가 편집 컨트롤에 입력할 수 있는 텍스트의 길이를 제한합니다.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ TCHAR 형식에 대한 자세한 내용은 [Windows 데이터 형식의](/window
 
 이 함수를 호출하여 여러 줄 편집 컨트롤의 텍스트를 스크롤합니다.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ void LineScroll(
 
 이 함수를 호출하여 클립보드의 `CEdit` 데이터를 삽입 지점에 삽입합니다.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 편집 컨트롤의 현재 선택 영역을 *lpszNewText로*지정한 텍스트로 바꾸려면 이 함수를 호출합니다.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ TRUE 메서드가 성공하면 그렇지 않으면 거짓.
 
 이 함수를 호출하여 핸들을 여러 줄 편집 컨트롤에서 사용할 로컬 메모리로 설정합니다.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ DS_LOCALEDIT 스타일 플래그 집합으로 대화 상자를 만든 경우에�
 
 현재 편집 컨트롤에 표시되는 텍스트 범위를 강조 표시합니다.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1098,7 +1098,7 @@ void SetHighlight(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*아이치스타트*|【인】 강조 표시할 텍스트 범위의 첫 번째 문자의 0기반 인덱스입니다.|
 |*아이치엔드*|【인】 강조 표시할 텍스트 범위의 마지막 문자의 0기반 인덱스입니다.|
@@ -1111,7 +1111,7 @@ void SetHighlight(
 
 이 개체에 대한 텍스트 제한을 `CEdit` 설정하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ void SetLimitText(UINT nMax);
 
 이 메서드를 호출하여 이 편집 컨트롤의 왼쪽 및 오른쪽 여백을 설정합니다.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ void SetMargins(
 
 편집 컨트롤에 대해 수정된 플래그를 설정하거나 지우려면 이 함수를 호출합니다.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ TRUE 값은 텍스트가 수정되었음을 나타내고 FALSE 값은 수정되�
 
 사용자가 텍스트를 입력할 때 편집 컨트롤에 표시되는 암호 문자를 설정하거나 제거하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 지정된 좌표를 사용하여 사각형의 치수를 설정하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ void SetRect(LPCRECT lpRect);
 
 이 함수를 호출하여 다중 줄 편집 컨트롤의 서식 지정 사각형을 설정합니다.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ void SetRectNP(LPCRECT lpRect);
 
 이 함수를 호출하여 편집 컨트롤에서 문자 범위를 선택합니다.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ void SetSel(
 
 이 함수를 호출하여 여러 줄 편집 컨트롤에서 탭 중지를 설정합니다.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 
@@ -1398,7 +1398,7 @@ BOOL ShowBalloonTip(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pEdit풍선팁*|【인】 풍선 팁을 설명하는 [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) 구조에 대한 포인터입니다.|
 |*lpszTitle*|【인】 풍선 팁의 제목을 포함하는 유니코드 문자열에 대한 포인터입니다.|
@@ -1447,7 +1447,7 @@ BOOL Undo();
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>

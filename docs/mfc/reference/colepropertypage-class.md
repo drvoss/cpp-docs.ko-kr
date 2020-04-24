@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374883"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753794"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 클래스
 
@@ -187,7 +187,7 @@ LPPROPERTYPAGESITE GetPageSite();
 
 적용 단추를 사용하지 않는 컨트롤을 결정합니다.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ TRUE, 지정된 컨트롤이 설정된 경우; 그렇지 않으면 거짓.
 
 속성 페이지의 대화 상자 리소스를 설정합니다.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ void SetDialogResource(HGLOBAL hDialog);
 
 도구 설명 정보, 도움말 파일 이름 및 속성 페이지에 대한 도움말 컨텍스트를 지정합니다.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ void SetHelpInfo(
 
 사용자가 속성 페이지를 수정했는지 여부를 나타냅니다.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 속성 페이지의 이름을 설정합니다.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 속성 페이지의 이름이 포함된 문자열에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 테스트도움말](../../overview/visual-cpp-samples.md)<br/>

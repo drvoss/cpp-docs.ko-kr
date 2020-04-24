@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369506"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754839"
 ---
 # <a name="ccombobox-class"></a>CComboBox 클래스
 
@@ -308,7 +308,7 @@ CComboBox();
 
 콤보 상자의 편집 컨트롤에서 현재 선택 영역(있는 경우)을 삭제(지우기)합니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 콤보 상자의 편집 컨트롤에서 현재 선택 영역(있는 경우)을 CF_TEXT 형식으로 클립보드에 복사합니다.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 
 콤보 상자 편집 컨트롤에서 현재 선택 영역(있는 경우)을 삭제(잘라내며)하고 삭제된 텍스트를 CF_TEXT 형식으로 클립보드에 복사합니다.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -665,7 +665,7 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpszText*|【아웃】 큐 배너 텍스트를 받는 버퍼에 대한 포인터입니다.|
 |*cchText*|【인】 *lpszText* 매개 변수가 가리키는 버퍼의 크기입니다.|
@@ -708,7 +708,7 @@ int GetCurSel() const;
 
 멤버 `GetDroppedControlRect` 함수를 호출하여 드롭다운 콤보 상자의 표시되는(드롭다운) 목록 상자의 화면 좌표를 검색합니다.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 지정된 콤보 상자 항목과 연결된 응용 프로그램에서 제공한 32비트 값을**포인터(void)로** <strong>\*</strong>검색합니다.
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 현재 커서 위치에서 콤보 상자의 편집 컨트롤에 클립보드의 데이터를 삽입합니다.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ void Paste();
 
 목록 상자에서 모든 항목을 제거하고 콤보 상자의 컨트롤을 편집합니다.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1191,7 +1191,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpszText*|【인】 큐 텍스트를 포함하는 null 종료 버퍼에 대한 포인터입니다.|
 
@@ -1337,7 +1337,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 콤보 상자의 목록 상자 부분을 가로로 스크롤할 수 있는 너비를 픽셀 단위로 설정합니다.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1483,7 +1483,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iMinVisible*|【인】 표시되는 항목의 최소 수를 지정합니다.|
 
@@ -1536,7 +1536,7 @@ int SetTopIndex(int nIndex);
 
 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자의 목록 상자를 표시하거나 숨깁니다.
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 
@@ -1555,7 +1555,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   [CComboBox::GetDroppedState](#getdroppedstate)에 대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

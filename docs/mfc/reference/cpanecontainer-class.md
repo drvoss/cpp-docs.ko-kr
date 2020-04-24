@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: 316a144cf043c9732b5f3ab943aa120100d9ee32
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65a37230b4889b32c42d48525f10a3164da33b63
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364141"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753655"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 클래스
 
@@ -245,7 +245,7 @@ CDockablePane* AddPane(CDockablePane* pBar);
 
 ## <a name="cpanecontaineraddref"></a><a name="addref"></a>CPane 컨테이너::AddRef
 
-```
+```cpp
 void AddRef();
 ```
 
@@ -308,7 +308,7 @@ virtual CSize CalcAvailableSpace(
 
 ## <a name="cpanecontainercalculaterecentsize"></a><a name="calculaterecentsize"></a>CPane 컨테이너:계산최근 크기
 
-```
+```cpp
 void CalculateRecentSize();
 ```
 
@@ -316,7 +316,7 @@ void CalculateRecentSize();
 
 ## <a name="cpanecontainercheckpanedividervisibility"></a><a name="checkpanedividervisibility"></a>CPaneContainer::체크파인 분배자 가시성
 
-```
+```cpp
 void CheckPaneDividerVisibility();
 ```
 
@@ -692,7 +692,7 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ## <a name="cpanecontainerondeletehidepane"></a><a name="ondeletehidepane"></a>CPane 컨테이너::에삭제하이드파인
 
-```
+```cpp
 void OnDeleteHidePane(
     CDockablePane* pBar,
     BOOL bHide);
@@ -749,7 +749,7 @@ DWORD Release();
 
 ## <a name="cpanecontainerreleaseemptypanecontainer"></a><a name="releaseemptypanecontainer"></a>CPaneContainer::릴리스빈파인컨테이너
 
-```
+```cpp
 void ReleaseEmptyPaneContainer();
 ```
 
@@ -757,7 +757,7 @@ void ReleaseEmptyPaneContainer();
 
 ## <a name="cpanecontainerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 컨테이너::제거비유효파인
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
@@ -834,7 +834,7 @@ virtual void ResizePartOfPaneContainer(
 
 ## <a name="cpanecontainerserialize"></a><a name="serialize"></a>CPaneContainer::직렬화
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -846,7 +846,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanecontainersetpane"></a><a name="setpane"></a>CPane 컨테이너::세파인
 
-```
+```cpp
 void SetPane(
     CDockablePane* pBar,
     BOOL bLeft);
@@ -861,7 +861,7 @@ void SetPane(
 
 ## <a name="cpanecontainersetpanecontainer"></a><a name="setpanecontainer"></a>CPaneContainer::세파네 컨테이너
 
-```
+```cpp
 void SetPaneContainer(
     CPaneContainer* pContainer,
     BOOL bLeft);
@@ -876,7 +876,7 @@ void SetPaneContainer(
 
 ## <a name="cpanecontainersetpanedivider"></a><a name="setpanedivider"></a>CPane 컨테이너::세파네 디바이더
 
-```
+```cpp
 void SetPaneDivider(CPaneDivider* pSlider);
 ```
 
@@ -888,7 +888,7 @@ void SetPaneDivider(CPaneDivider* pSlider);
 
 ## <a name="cpanecontainersetparentpanecontainer"></a><a name="setparentpanecontainer"></a>CPaneContainer::SetParentPaneContainer
 
-```
+```cpp
 void SetParentPaneContainer(CPaneContainer* p);
 ```
 
@@ -900,7 +900,7 @@ void SetParentPaneContainer(CPaneContainer* p);
 
 ## <a name="cpanecontainersetrecentpercent"></a><a name="setrecentpercent"></a>CPane 컨테이너::SetRecent퍼센트
 
-```
+```cpp
 void SetRecentPercent(int nRecentPercent);
 ```
 
@@ -962,7 +962,7 @@ virtual int StretchPaneContainer(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

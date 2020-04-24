@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352974"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753006"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDock사이트 클래스
 
@@ -110,7 +110,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pBar*|【인】 프레임워크가 테스트하는 기본 창입니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -136,7 +136,7 @@ virtual void DockPane(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pWnd*|【인】 프레임워크가 도킹하는 창입니다.|
 |*dockMethod*|【인】 창에 대한 도킹 옵션입니다.|
 |*Lprect*|【인】 도킹된 창의 경계를 지정하는 사각형입니다.|
@@ -151,7 +151,7 @@ virtual void DockPane(
 
 화면 좌표에서 도크 사이트의 크기를 검색합니다.
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*rect*|【인】 사각형에 대한 참조입니다. 메서드는 이 사각형에 도크 사이트의 크기를 저장합니다.|
 
 ### <a name="remarks"></a>설명
@@ -182,7 +182,7 @@ a가 `CMFCAutoHideBar` 에 `CAutoHideDockSite`도킹된 경우 전체 도크 사
 
 도킹 바의 왼쪽에 여백을 설정합니다.
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ void SetOffsetLeft(int nOffset);
 
 도킹 바의 오른쪽에 여백을 설정합니다.
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -224,7 +224,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*정류뉴클라이언트에어리어*|【인】 예약된 값입니다.|
 
 ### <a name="remarks"></a>설명
@@ -235,7 +235,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 도크 사이트의 개체에 대해 [CMFCAutoHideBar::UnSetAutoHideMode를](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) 호출합니다.
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 
@@ -243,14 +243,14 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pAutoHide도구모음*|【인】 에 있는 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 개체 창에 `CAutoHideDockSite`대한 포인터입니다.|
 
 ### <a name="remarks"></a>설명
 
 이 메서드는 *pAutoHideToolbar를*포함 하는 행을 검색합니다. 해당 `CMFCAutoHideBar.UnSetAutoHideMode` 행의 `CMFCAutoHideBar` 모든 개체를 호출합니다. *pAutoHideToolbar를* 찾을 수 없거나 NULL인 경우 `CMFCAutoHideBar.UnSetAutoHideMode` 이 `CMFCAutoHideBar` 메서드는 `CAutoHideDockSite`의 모든 개체를 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

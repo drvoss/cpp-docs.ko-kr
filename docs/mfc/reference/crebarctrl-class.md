@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367441"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750639"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 클래스
 
@@ -223,7 +223,7 @@ class CReBarCtrl : public CWnd
 
 Windows SDK에 설명된 대로 RB_BEGINDRAG Win32 [메시지의](/windows/win32/Controls/rb-begindrag)동작을 구현합니다.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 컨트롤에 적용된 철근 컨트롤 스타일 조합을 지정합니다. 지원되는 스타일 목록은 Windows SDK의 [철근 제어 스타일을](/windows/win32/Controls/rebar-control-styles) 참조하십시오.
 
 *rect*<br/>
-철근 컨트롤의 위치와 크기인 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+철근 컨트롤의 위치와 크기인 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 철근 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 컨트롤에 적용된 철근 컨트롤 스타일 조합을 지정합니다. 지원되는 스타일 목록은 Windows SDK의 [철근 컨트롤 스타일을](/windows/win32/Controls/rebar-control-styles) 참조하십시오.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -356,7 +356,7 @@ BOOL DeleteBand(UINT uBand);
 
 Windows SDK에 설명된 대로 RB_DRAGMOVE Win32 [메시지의](/windows/win32/Controls/rb-dragmove)동작을 구현합니다.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 
 Windows SDK에 설명된 대로 [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)Win32 메시지의 동작을 구현합니다.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Windows SDK에 설명된 대로 RB_GETBANDBORDERS Win32 [메시지의](/windows/win32/Controls/rb-getbandborders)동작을 구현합니다.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 테두리가 검색되는 밴드의 0기반 인덱스입니다.
 
 *Prc*<br/>
-밴드 테두리를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 철근 컨트롤에 RBS_BANDBORDERS 스타일이 있는 경우 이 구조의 각 멤버는 경계를 구성하는 밴드의 해당 측면에 픽셀 수를 받게 됩니다. 단고수 바 컨트롤에 RBS_BANDBORDERS 스타일이 없는 경우 이 구조체의 왼쪽 멤버만 유효한 정보를 받습니다. 철근 컨트롤 스타일에 대한 설명은 Windows SDK의 [철근 컨트롤 스타일을](/windows/win32/Controls/rebar-control-styles) 참조하십시오.
+밴드 테두리를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 철근 컨트롤에 RBS_BANDBORDERS 스타일이 있는 경우 이 구조의 각 멤버는 경계를 구성하는 밴드의 해당 측면에 픽셀 수를 받게 됩니다. 단고수 바 컨트롤에 RBS_BANDBORDERS 스타일이 없는 경우 이 구조체의 왼쪽 멤버만 유효한 정보를 받습니다. 철근 컨트롤 스타일에 대한 설명은 Windows SDK의 [철근 컨트롤 스타일을](/windows/win32/Controls/rebar-control-styles) 참조하십시오.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ BOOL GetBandInfo(
 
 밴드의 여백을 검색합니다.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 철근 컨트롤에서 밴드의 제로 기반 인덱스입니다.
 
 *Prc*<br/>
-철근 밴드의 경계를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.
+철근 밴드의 경계를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -723,7 +723,7 @@ BOOL InsertBand(
 
 철근 컨트롤의 밴드의 크기를 가장 큰 크기로 조정합니다.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Windows SDK에 설명된 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeba
 
 철근 컨트롤의 밴드의 크기를 가장 작은 크기로 조정합니다.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ BOOL MoveBand(
 
 Windows SDK에 설명된 대로 RB_PUSHCHEVRON Win32 [메시지의](/windows/win32/Controls/rb-pushchevron)동작을 구현합니다.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ void PushChevron(
 
 철근 컨트롤의 밴드의 크기를 이상적인 크기로 조정합니다.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -860,7 +860,7 @@ BOOL SetBandWidth(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*uBand*|【인】 철근 밴드의 제로 기반 인덱스입니다.|
 |*cxWidth*|【인】 보철근 밴드의 새 너비(픽셀 단위)입니다.|
@@ -931,7 +931,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 단고막대 컨트롤의 단추에 대한 색 구성표를 설정합니다.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -956,7 +956,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwMask*|【인】 *dwStyleEx* 매개 변수에 적용할 플래그를 지정하는 플래그의 비트 조합(OR)입니다. 다음 값 중 하나 이상을 사용합니다.<br /><br /> RBS_EX_SPLITTER: 기본적으로 가로 모드의 하단과 오른쪽수직 모드의 스플리터를 표시합니다.<br /><br /> RBS_EX_TRANSPARENT: [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) 메시지를 부모 창으로 전달합니다.|
 |*dwStyleEx*|【인】 적용할 스타일을 지정하는 플래그의 비트 조합(OR)입니다. 스타일을 설정하려면 *dwMask* 매개 변수에 사용되는 것과 동일한 플래그를 지정합니다. 스타일을 재설정하려면 이진 0을 지정합니다.|
@@ -1056,7 +1056,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 공구 팁 컨트롤을 철근 컨트롤과 연결합니다.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 
@@ -1133,7 +1133,7 @@ BOOL SizeToRect(CRect& rect);
 
 이 멤버 함수는 `CRect` `RECT` 객체를 구조체가 아닌 매개 변수로 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

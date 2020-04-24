@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370113"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754586"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 클래스
 
@@ -201,7 +201,7 @@ UINT GetHashTableSize() const;
 
 *rNextPosition에서*맵 요소를 검색한 다음 *rNextPosition를* 업데이트하여 맵의 다음 요소를 참조합니다.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -329,7 +329,7 @@ UINT HashKey(LPCTSTR key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 해시 값을 계산할 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -353,7 +353,7 @@ UINT HashKey(LPCTSTR key) const;
 
 해시 테이블을 초기화합니다.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -423,7 +423,7 @@ BOOL Lookup(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 조회할 요소를 식별하는 문자열 키를 지정합니다.
 
 *Rvalue*<br/>
@@ -466,7 +466,7 @@ BOOL LookupKey(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 조회할 요소를 식별하는 문자열 키를 지정합니다.
 
 *rKey*<br/>
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 이 맵에서 모든 요소를 제거하고 키 `CString` 오브젝트를 파괴합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -571,7 +571,7 @@ BOOL RemoveKey(LPCTSTR key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 맵 조회에 사용되는 문자열을 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 기본 은 맵에 요소를 삽입하는 것을 의미합니다.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -620,7 +620,7 @@ void SetAt(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 새 요소의 키인 문자열을 지정합니다.
 
 *newValue*<br/>
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

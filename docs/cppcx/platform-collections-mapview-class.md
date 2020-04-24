@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354434"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750603"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 클래스
 
@@ -35,7 +35,7 @@ ref class MapView sealed;
 
 #### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키/값 쌍의 키 형식입니다.
 
 *Ⅴ*<br/>
@@ -108,7 +108,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 MapView 요소를 찾는 데 사용되는 키입니다. *키의* 유형은 *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -127,7 +127,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 MapView에서 요소를 찾는 데 사용되는 키입니다. 유형은 `key` *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -197,7 +197,7 @@ virtual property unsigned int Size;
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,
@@ -217,6 +217,6 @@ void Split(
 
 이 메서드는 작동하지 않으며, 아무 작업도 수행하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [플랫폼 네임스페이스](platform-namespace-c-cx.md)

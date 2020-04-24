@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374042"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753250"
 ---
 # <a name="cdocument-class"></a>C문서 클래스
 
@@ -260,7 +260,7 @@ class CDocument : public CCmdTarget
 
 이 함수를 호출하여 문서에 뷰를 연결합니다.
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,10 +372,10 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Guid*<br/>
+*guid*<br/>
 찾을 청크의 GUID를 지정합니다.
 
-*pid*<br/>
+*Pid*<br/>
 찾을 청크의 PID를 지정합니다.
 
 ### <a name="return-value"></a>Return Value
@@ -765,7 +765,7 @@ virtual void OnDrawThumbnail(
 
 첨부 파일로 첨부 된 상주 메일 호스트 (있는 경우)를 통해 메시지를 보냅니다.
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 메일 지원(MAPI)이 있는 경우 ID_FILE_SEND_MAIL 명령을 활성화합니다.
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ virtual void RemoveChunk(
 
 이 함수를 호출하여 문서에서 뷰를 분리합니다.
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 
 문서가 수정된 후 이 함수를 호출합니다.
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,
@@ -1252,7 +1252,7 @@ void UpdateAllViews(
 
 [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 스냅폭스](../../overview/visual-cpp-samples.md)<br/>

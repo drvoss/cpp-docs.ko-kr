@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376121"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753781"
 ---
 # <a name="coleserverdoc-class"></a>콜레서버독 클래스
 
@@ -192,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 연결된 DocObject 문서를 활성화합니다.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ COleServerItem* GetEmbeddedItem();
 
 멤버 `GetItemClipRect` 함수를 호출하여 편집 중인 항목의 클리핑-사각형 좌표를 가져옵니다.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 
 멤버 `GetItemPosition` 함수를 호출하여 편집 중인 항목의 좌표를 가져옵니다.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ BOOL IsInPlaceActive() const;
 
 이 함수를 호출하여 문서에 연결된 모든 연결된 항목에 문서가 변경되었음을 알립니다.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ void NotifyChanged();
 
 이 함수를 호출하여 컨테이너에 문서가 닫혔다는 것을 알립니다.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ void NotifyClosed();
 
 사용자가 서버 문서의 이름을 바꾼 후 이 함수를 호출합니다.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 
 사용자가 서버 문서를 저장한 후 이 함수를 호출합니다.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ virtual BOOL OnUpdateDocument();
 
 컨테이너 응용 프로그램이 항목의 위치를 변경하도록 하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 
 이 함수를 호출하여 컨테이너 응용 프로그램에 포함된 개체를 저장하도록 지시합니다.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 이 함수를 호출하여 문서에 연결된 모든 연결된 항목에 문서가 변경되었음을 알립니다.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,
@@ -941,7 +941,7 @@ void UpdateAllItems(
 
 이 함수는 `OnUpdate` 송신 항목, *전달 pHint, lHint*및 *nDrawAspect를*제외한 각 문서 항목에 대한 멤버 *함수를*호출합니다. 이러한 매개 변수를 사용하여 문서에 대한 수정 사항에 대한 정보를 항목에 전달합니다. *lHint를* 사용하여 정보를 인코딩하거나 -derived 클래스를 `CObject`정의하여 수정 사항에 대한 정보를 저장하고 *pHint를*사용하여 해당 클래스의 개체를 전달할 수 있습니다. -derived `OnUpdate` 클래스의 멤버 함수를 재정의하여 프레젠테이션이 변경되었는지 여부에 따라 각 항목의 업데이트를 최적화합니다. `COleServerItem`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [코올링싱독 클래스](../../mfc/reference/colelinkingdoc-class.md)<br/>

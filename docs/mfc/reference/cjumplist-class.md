@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372328"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754942"
 ---
 # <a name="cjumplist-class"></a>점프리스트 클래스
 
@@ -99,7 +99,7 @@ class CJumpList;
 
 커밋하지 않고 목록 작성 트랜잭션을 중단합니다.
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -158,7 +158,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>매개 변수
 
-*범주*<br/>
+*category*<br/>
 알려진 범주 유형을 지정합니다. KDC_RECENT 또는 KDC_KNOWN 수 있습니다.
 
 ### <a name="return-value"></a>Return Value
@@ -256,7 +256,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 
 `CJumpList` 지금까지의 현재 인스턴스에 추가된 모든 작업과 대상을 제거합니다.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ void ClearAll();
 
 지금까지 CJumpList의 현재 인스턴스에 추가된 모든 대상을 제거합니다.
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ BOOL InitializeList();
 
 빌드할 목록에 대한 응용 프로그램 사용자 모델 ID를 설정합니다.
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 
@@ -359,6 +359,6 @@ void SetAppID(LPCTSTR strAppID);
 *스트라피드*<br/>
 응용 프로그램 사용자 모델 ID를 지정하는 문자열입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

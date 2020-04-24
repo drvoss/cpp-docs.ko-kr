@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 5d0f544943cc8584960bb2668ee7ce326547e2fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8053ab33a2b49eb2c447cdaa1cb2b9e356bc696
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372323"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754922"
 ---
 # <a name="ckeyboardmanager-class"></a>C키보드관리자 클래스
 
@@ -171,7 +171,7 @@ static BOOL __stdcall IsKeyHandled(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*nKey*|【인】 확인할 키입니다.|
 |*fVirt*|【인】 바로 가기 키의 동작을 지정합니다. 가능한 값 목록은 [ACCEL 구조를](/windows/win32/api/winuser/ns-winuser-accel)참조하십시오.|
 |*pWnd프레임*|【인】 프레임 창입니다. 이 메서드는 바로 가기 키가 이 프레임에서 처리되는지 여부를 결정합니다.|
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*Nchar*|【인】 이 메서드가 검사하는 문자입니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -256,7 +256,7 @@ BOOL LoadState(
 
 응용 프로그램 리소스에서 바로 가기 키 테이블을 다시 로드합니다.
 
-```
+```cpp
 void ResetAll();
 ```
 
@@ -375,7 +375,7 @@ BOOL UpdateAccelTable(
 
 이 함수를 사용하여 기존 바로 가기 테이블을 여러 프레임 창 개체에 대한 새 바로 가기 키로 바꿉습니다. 이 함수는 지정된 문서 템플릿에 연결된 모든 프레임 창 개체에 대한 액세스를 얻기 위한 매개 변수로 문서 템플릿을 수신합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

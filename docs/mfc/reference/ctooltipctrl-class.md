@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365097"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752192"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ class CToolTipCtrl : public CWnd
 
 이 함수를 호출하여 공구 팁 컨트롤을 활성화하거나 비활성화합니다.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 도구의 텍스트가 포함된 문자열 리소스의 ID입니다.
 
 *lpRectTool*<br/>
-도구의 경계 사각형좌표를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 좌표는 *pWnd로*식별된 창의 클라이언트 영역의 왼쪽 위 모서리를 기준으로 합니다.
+도구의 경계 사각형좌표를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 좌표는 *pWnd로*식별된 창의 클라이언트 영역의 왼쪽 위 모서리를 기준으로 합니다.
 
 *니드툴*<br/>
 도구의 ID입니다.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>매개 변수
 
 *lprc*<br/>
-도구 팁 창 사각형 또는 텍스트 표시 사각형을 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.
+도구 팁 창 사각형 또는 텍스트 표시 사각형을 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.
 
 *bLarger*<br/>
 TRUE인 경우 *lprc는* 텍스트 표시 사각형을 지정하는 데 사용되며 해당 창 사각형을 수신합니다. FALSE인 경우 *lprc는* 창 사각형을 지정하는 데 사용되며 해당 텍스트 표시 사각형을 수신합니다.
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 도구 팁 컨트롤에서 지원하는 도구 컬렉션에서 *pWnd* 및 *nIDTool에서* 지정한 도구를 제거합니다.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -397,7 +397,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpToolInfo*|【아웃】 현재 도구 설명 창에 대한 정보를 받는 [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) 구조에 대한 포인터입니다.|
 
@@ -446,14 +446,14 @@ int GetDelayTime(DWORD dwDuration) const;
 
 도구 설명 창에 대해 설정된 위쪽, 왼쪽, 아래쪽 및 오른쪽 여백을 검색합니다.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *lprc*<br/>
-여백 `RECT` 정보를 수신하는 구조의 주소입니다. [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 멤버는 경계 사각형을 정의하지 않습니다. 이 메시지의 목적에 따라 구조 멤버는 다음과 같이 해석됩니다.
+여백 `RECT` 정보를 수신하는 구조의 주소입니다. [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 멤버는 경계 사각형을 정의하지 않습니다. 이 메시지의 목적에 따라 구조 멤버는 다음과 같이 해석됩니다.
 
 |멤버|표시|
 |------------|--------------------|
@@ -486,7 +486,7 @@ int GetMaxTipWidth() const;
 
 도구 설명 컨트롤이 도구에 대해 유지 관리하는 텍스트를 검색합니다.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,13 +544,13 @@ COLORREF GetTipTextColor() const;
 
 현재 도구 설명 컨트롤의 제목을 검색합니다.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pttgt*|【아웃】 ToolTip 컨트롤에 대한 정보가 포함된 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) 구조에 대한 포인터입니다. 이 메서드가 반환 하면 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) 구조의 *pszTitle* 멤버는 제목의 텍스트를 가리킵니다.|
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 뷰에서 표시된 도구 설명 창을 제거합니다.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ void Pop();
 
 현재 도구 설명 컨트롤이 마지막 마우스 메시지의 좌표에 표시됩니다.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ void Popup();
 
 처리를 위해 마우스 메시지를 도구 설명 컨트롤에 전달합니다.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ void RelayEvent(LPMSG lpMsg);
 
 공구 팁 컨트롤의 지연 시간을 설정합니다.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ void SetDelayTime(
 
 공구 팁 창의 상단, 왼쪽, 아래쪽 및 오른쪽 여백을 설정합니다.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ int SetMaxTipWidth(int iWidth);
 
 도구 설명 창에서 배경색을 설정합니다.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ void SetTipBkColor(COLORREF clr);
 
 도구 설명 창에서 텍스트 색상을 설정합니다.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Windows SDK의 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) *아이콘�
 
 도구 설명이 도구에 대해 유지 관리하는 정보를 설정합니다.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 도구에 대한 새 경계 사각형을 설정합니다.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ void SetToolRect(
 도구의 ID입니다.
 
 *Lprect*<br/>
-새 경계 사각형을 지정하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.
+새 경계 사각형을 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::세트윈도우테임
 
@@ -894,7 +894,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 현재 도구를 다시 그려야 합니다.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 이 컨트롤의 도구에 대한 도구 설명 텍스트를 업데이트합니다.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,
@@ -928,7 +928,7 @@ void UpdateTipText(
 *니디텍스트*<br/>
 도구의 텍스트가 포함된 문자열 리소스의 ID입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

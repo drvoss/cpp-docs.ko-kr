@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754695"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 클래스
 
@@ -300,7 +300,7 @@ tabledef라는 이름을 지정하면 [부가 를](#append) 호출하여 데이�
 
 이 멤버 함수를 호출하여 테이블에 필드를 추가합니다.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 테이블에 인덱스를 추가하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ FALSE로 설정된 경우 나머지 멤버는 무시됩니다. 또한 인덱스�
 
 이 멤버 함수를 호출하여 필드를 제거하고 액세스할 수 없게 만듭니다.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ void DeleteField(int nIndex);
 
 이 멤버 함수를 호출하여 기본 테이블의 인덱스를 삭제합니다.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ short GetFieldCount();
 
 이 멤버 함수를 호출하여 tabledef에 정의된 필드에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ short GetIndexCount();
 
 이 멤버 함수를 호출하여 tabledef에 정의된 인덱스에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ virtual void Open(LPCTSTR lpszName);
 
 연결된 테이블에 대한 연결 정보를 업데이트하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ void RefreshLink();
 
 개체의 하나 이상의 특성을 나타내는 `CDaoTableDef` 값을 설정합니다.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ void SetAttributes(long lAttributes);
 
 연결된 `CDaoTableDef` 테이블을 나타내는 개체의 경우 문자열 개체는 하나 또는 두 개의 부분(데이터베이스 형식 지정자 및 데이터베이스 경로)으로 구성됩니다.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -876,7 +876,7 @@ ODBC 또는 설치 가능한 ISAM 드라이버에 전달할 추가 매개 변수
 |HTML 가져오기|"HTML 가져오기;"|" `drive`\\\ :*경로*\ *파일 이름*"|
 |HTML 내보내기|"HTML 내보내기;"|" `drive`\\\ :*경로*"|
 |텍스트|"텍스트;"|"드라이브:\\\경로"|
-|ODBC|"ODBC; 데이터베이스= `database`; UID = *사용자*; PWD = *암호;* DSN = *데이터 원본 이름;* 로그인 시간 시간 = *초;*" (모든 서버에 대한 전체 연결 문자열이 아닐 수도 있습니다. 매개 변수 사이에 공백을 두지 않는 것이 매우 중요합니다.|없음|
+|ODBC|"ODBC; 데이터베이스= `database`; UID = *사용자*; PWD = *암호;* DSN = *데이터 원본 이름;* 로그인 시간 시간 = *초;*" (모든 서버에 대한 전체 연결 문자열이 아닐 수도 있습니다. 매개 변수 사이에 공백을 두지 않는 것이 매우 중요합니다.|None|
 |Exchange|"교환;<br /><br /> MAPILEVEL = *폴더 경로;*<br /><br /> [테이블타이핑={0 &#124; 1};]<br /><br /> [프로필 = *프로필;]*<br /><br /> [PWD = *암호;]*<br /><br /> [데이터베이스 `database`= ;]"|*"드라이브*\\\ :*경로*\\\ *파일 이름*. MDB"|
 
 > [!NOTE]
@@ -894,7 +894,7 @@ ODBC 또는 설치 가능한 ISAM 드라이버에 전달할 추가 매개 변수
 
 이 멤버 함수를 호출하여 테이블에 대한 사용자 정의 이름을 설정합니다.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ void SetName(LPCTSTR lpszName);
 
 이 멤버 함수를 호출하여 연결된 테이블의 이름 또는 `CDaoTableDef` 개체의 기반이 되는 기본 테이블의 이름을 데이터의 원래 원본에 있는 대로 지정합니다.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 
 이 멤버 함수를 호출하여 tabledef에 대한 유효성 검사 규칙을 설정합니다.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 
 이 멤버 함수를 호출하여 Microsoft Jet 데이터베이스 `CDaoTableDef` 엔진에서 지원하는 기본 기본 테이블이 있는 개체에 대한 유효성 검사 규칙의 예외 텍스트를 설정합니다.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 
@@ -972,7 +972,7 @@ void SetValidationText(LPCTSTR lpszValidationText);
 
 관련 정보는 DAO 도움말의 "유효성 검사텍스트 속성" 항목을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

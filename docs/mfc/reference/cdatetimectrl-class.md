@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321908"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754617"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 클래스
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 현재 날짜 및 시간 선택기 컨트롤을 닫습니다.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 날짜 시간 제어 스타일의 조합을 지정합니다. 날짜 및 시간 선택기 스타일에 대한 자세한 내용은 Windows SDK의 [날짜 및 시간 선택기 제어 스타일을](/windows/win32/Controls/date-and-time-picker-control-styles) 참조하십시오.
 
 *rect*<br/>
-날짜 및 시간 선택기 컨트롤의 위치와 크기인 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+날짜 및 시간 선택기 컨트롤의 위치와 크기인 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 날짜 및 시간 선택기 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
@@ -194,7 +194,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pDate시간 선택기정보*|【아웃】 현재 날짜 및 시간 선택기 컨트롤에 대한 설명을 수신하는 [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) 구조에 대한 포인터입니다.<br /><br /> 호출자는 이 구조를 할당할 책임이 있습니다. 그러나 이 메서드는 구조체의 *cbSize* 멤버를 초기화합니다.|
 
@@ -379,7 +379,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*크기 조정*|【아웃】 컨트롤에 이상적인 크기를 포함하는 [SIZE](/windows/win32/api/windef/ns-windef-size) 구조에 대한 포인터입니다.|
 
@@ -474,7 +474,7 @@ COLORREF SetMonthCalColor(
 
 날짜 및 시간 선택기 컨트롤의 자식 월 달력 컨트롤에서 사용할 글꼴을 설정합니다.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);
@@ -509,7 +509,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwStyle*|【인】 월 캘린더 제어 스타일의 비트 조합(OR)인 새 월 달력 제어 스타일입니다. 자세한 내용은 [월 캘린더 제어 스타일을](/windows/win32/Controls/month-calendar-control-styles)참조하십시오.|
 
@@ -597,7 +597,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

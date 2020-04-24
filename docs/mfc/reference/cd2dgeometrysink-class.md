@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369236"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754768"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 클래스
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 경로 형상에 단일 호 추가
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 현재 점과 지정된 끝점 간에 입방형 3차원 곡선을 만듭니다.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 입방 베지어 곡선의 시퀀스를 만들고 지오메트리 싱크에 추가합니다.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ void AddBeziers(
 
 현재 점과 지정된 끝점 사이에 선 세그먼트를 작성하여 형상 싱크에 추가합니다.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ void AddLine(CD2DPointF point);
 
 지정된 점을 사용하여 선 시퀀스를 작성하고 지오메트리 싱크에 추가합니다.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ void AddLines(
 
 현재 점과 지정된 끝점 간에 정방형 3차원 곡선을 만듭니다.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 단일 호출에서 이차 Bezier 세그먼트 시퀀스를 배열로 추가합니다.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ void AddQuadraticBeziers(
 
 지정된 점에서 새 그림을 시작합니다.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ BOOL Close();
 
 현재 그림을 종료합니다. 선택적으로 닫습니다.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ operator ID2D1GeometrySink*();
 
 이 지오메트리 싱크에서 설명하는 형상 내부에 있는 점과 외부에 있는 점을 결정하는 데 사용되는 방법을 지정합니다.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 
 형상 싱크에 추가된 새 세그먼트에 적용할 획 및 결합 옵션을 지정합니다.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 
@@ -334,6 +334,6 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 *정점 플래그*<br/>
 지오메트리 싱크에 추가된 새 세그먼트에 적용할 획 및 결합 옵션을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 41d9a14e379c566f001eda8b10b2669b95beb171
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f5856e92c2aca1d23ee6a37b99ea9700ea6db0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376138"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753438"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFC쉘트리트럴 클래스
 
@@ -96,7 +96,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 바로 가기 메뉴를 활성화합니다.
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
@@ -221,7 +221,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 
 [CMFCShellTreeCtrl을](../../mfc/reference/cmfcshelltreectrl-class.md)새로 고치고 다시 칠합니다.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -254,7 +254,7 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 
 트리 컨텍스트를 필터링하는 플래그를 설정합니다.
 
-```
+```cpp
 void SetFlags(
     DWORD dwFlags,
     BOOL bRefresh = TRUE);
@@ -276,7 +276,7 @@ void SetFlags(
 
 [CMFC쉘리스트Ctrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체를 [CMFC쉘트리Ctrl](../../mfc/reference/cmfcshelltreectrl-class.md) 개체와 연결합니다.
 
-```
+```cpp
 void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```
 
@@ -291,7 +291,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 
 [CMFCShellTreeCtrl](#getrelatedlist) 메서드를 `CMFCShellTreeCtrl`사용하여:GetRelatedList를 `CMFCShellListCtrl` 사용하여 와 관련된 을 검색합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: aa6fb313bfcc2983f167936e5ad4f78be1e17a44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 30025d6097e439c07202d144a6e549845b78ffa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369209"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754750"
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 클래스
 
@@ -98,7 +98,7 @@ virtual ~CD2DLayer();
 
 기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1Layer* pResource);
 ```
 
@@ -218,6 +218,6 @@ operator ID2D1Layer* ();
 
 개체가 아직 초기화되지 않은 경우 ID2D1Layer 인터페이스 또는 NULL에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

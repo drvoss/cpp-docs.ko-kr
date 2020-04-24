@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: d62d5ecb0962f74a5dac1658c207cfb08cf12588
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09a2f3fe66abb86a8f220dbdf6744813ad9db0d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367618"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752398"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFC드롭다운툴버튼 클래스
 
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 복사할 소스 단추에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
@@ -525,7 +525,7 @@ virtual void Serialize(CArchive& ar);
 
 사용자가 단추를 클릭할 때 프레임워크에서 사용하는 기본 명령을 설정합니다.
 
-```
+```cpp
 void SetDefaultCommand(UINT uiCmd);
 ```
 
@@ -538,7 +538,7 @@ void SetDefaultCommand(UINT uiCmd);
 
 사용자가 단추를 클릭할 때 프레임워크가 실행되는 기본 명령을 지정하려면 이 메서드를 호출합니다. *uiCmd가* 지정한 명령 ID가 있는 항목은 상위 드롭다운 도구 모음에 있어야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

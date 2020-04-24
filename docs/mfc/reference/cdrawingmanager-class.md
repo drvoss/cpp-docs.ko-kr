@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374021"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753230"
 ---
 # <a name="cdrawingmanager-class"></a>C그리기 관리자 클래스
 
@@ -156,8 +156,8 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 |||
 |-|-|
-|매개 변수|설명|
-|*크기*|【인】 비트맵의 크기를 나타내는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 매개 변수입니다.|
+|매개 변수|Description|
+|*size*|【인】 비트맵의 크기를 나타내는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 매개 변수입니다.|
 |*비트*|【아웃】 DIB의 비트 값의 위치를 수신하는 데이터 포인터에 대한 포인터입니다.|
 |*비트맵*|원래 비트맵에 대한 핸들|
 |*clr투명*|원래 비트맵의 투명한 색상을 지정하는 RGB 값입니다.|
@@ -174,7 +174,7 @@ DIB 비트맵을 만드는 방법에 대한 자세한 내용은 [CreateDIBSectio
 
 투명 또는 반투명 픽셀이 있는 비트맵을 표시합니다.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ void DrawAlpha(
 
 제공된 채우기 및 테두리 색상으로 타원을 그립니다.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ BOOL DrawGradientRing(
 
 선을 그립니다.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -296,7 +296,7 @@ void DrawLineA(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*x1*|【인】 선이 시작되는 좌표입니다.|
 |*y1*|【인】 선이 시작되는 y 좌표입니다.|
 |*x2*|【인】 선이 끝나는 좌표입니다.|
@@ -311,7 +311,7 @@ void DrawLineA(
 
 제공된 채우기 및 테두리 색상이 있는 사각형을 그립니다.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ BOOL DrawShadow(
 
 직사각형 영역을 두 개의 색상 그라데이션으로 채웁니다.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ void Fill4ColorsGradient(
 
 지정된 색상 그라데이션으로 직사각형 영역을 채웁니다.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ void FillGradient(
 
 지정된 색상 그라데이션으로 직사각형 영역을 채웁니다.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -668,7 +668,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*H*|【인】 0에서 360 사이의 숫자로 색조의 색조를 나타냅니다.|
 |*S*|【인】 색상의 채도를 나타내는 0에서 1 사이의 숫자입니다.|
 |*Ⅴ*|【인】 0에서 1 사이의 숫자로 색상 값을 나타냅니다.|
@@ -737,7 +737,7 @@ HSV 또는 HSL 색상을 RGB 표현으로 변환하려면 다음 방법 중 하�
 
 직사각형 영역을 뒤집습니다.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -856,7 +856,7 @@ static void __stdcall RGBtoHSL(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*Rgb*|【인】 RGB 값의 색상입니다.|
 |*H*|【아웃】 메서드가 색상의 색조를 저장하는 이중포인터입니다.|
 |*S*|【아웃】 메서드가 색상의 채도를 저장하는 이중포인터입니다.|
@@ -966,7 +966,7 @@ static void __stdcall SetPixel(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*비트*|【인】 비트맵의 비트 값에 대한 포인터입니다.|
 |*Cx*|【인】 비트맵의 총 너비입니다.|
 |*Cy*|【인】 비트맵의 총 높이입니다.|
@@ -991,7 +991,7 @@ static COLORREF __stdcall SmartMixColors(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*색상1*|【인】 혼합 하는 첫 번째 색상입니다.|
 |*색상2*|【인】 혼합 할 두 번째 색상.|
 |*dblLumRatio*|【인】 새 색상의 광도에 대한 비율입니다. `SmartMixColors`최종 색상을 결정하기 전에 혼합 색상의 광도에 이 비율을 곱합니다.|
@@ -1012,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
 
 지정된 사각형 내부의 소스 DC 콘텐츠를 90도 회전합니다.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,
@@ -1032,7 +1032,7 @@ TRUE는 회전 +90도를 나타냅니다. FALSE는 -90도 회전을 나타냅니
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: c052f913f68d1890a470ed8a6aae2882ed181863
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df21591dec1da5861125d7e9480fb9345aaad061
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352712"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752954"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 클래스
 
@@ -214,7 +214,7 @@ BOOL LoadBitmaps(
 
 이 함수를 호출하여 비트맵 단추의 크기를 비트맵 크기로 조정합니다.
 
-```
+```cpp
 void SizeToContent();
 ```
 
@@ -222,7 +222,7 @@ void SizeToContent();
 
 [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CButton 클래스](../../mfc/reference/cbutton-class.md)<br/>

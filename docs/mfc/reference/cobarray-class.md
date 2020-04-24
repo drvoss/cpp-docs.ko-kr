@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360453"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754466"
 ---
 # <a name="cobarray-class"></a>CObArray 클래스
 
@@ -185,7 +185,7 @@ INT_PTR Append(const CObArray& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 배열에 추가할 요소의 소스입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -219,13 +219,13 @@ INT_PTR Append(const CObArray& src);
 
 이 멤버 함수를 호출하여 동일한 형식의 다른 배열의 요소로 지정된 배열의 요소를 덮어씁니다.
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 배열에 복사할 요소의 소스입니다.
 
 ### <a name="remarks"></a>설명
@@ -316,7 +316,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 
 배열이 커짐동안 할당된 추가 메모리를 해제합니다.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -516,7 +516,7 @@ INT_PTR GetUpperBound() const;
 
 지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -626,7 +626,7 @@ CObject* operator[](int_ptr nindex) const;
 
 이 배열에서 모든 포인터를 제거하지만 실제로 `CObject` 개체를 삭제하지는 않습니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll();
 
 배열의 지정된 인덱스에서 시작하는 하나 이상의 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -707,7 +707,7 @@ RemoveAt example: A CObArray with 1 elements
 
 지정된 인덱스에서 배열 요소를 설정합니다.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -756,7 +756,7 @@ SetAt example: A CObArray with 2 elements
 
 지정된 인덱스에서 배열 요소를 설정합니다.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -805,7 +805,7 @@ SetAtGrow example: A CObArray with 4 elements
 
 빈 배열 또는 기존 배열의 크기를 설정합니다. 필요한 경우 메모리를 할당합니다.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);
@@ -842,7 +842,7 @@ void SetSize(
 
   [CObArray::GetData에](#getdata)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

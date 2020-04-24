@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: a5e95efe1880f1177490d55988ca1fe42c606b15
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 508b27acd0a2004b1b8f75fde0bddcdf91194948
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367547"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752435"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFC드롭다운프레임 클래스
 
@@ -102,7 +102,7 @@ virtual BOOL Create(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pWndParent*|【인】 드롭다운 프레임의 상위 창입니다.|
 |*x*|【인】 다운 다운 프레임의 위치에 대한 수평 화면 좌표입니다.|
 |*Y*|【인】 다운다운 프레임의 위치에 대한 수직 화면 좌표입니다.|
@@ -162,7 +162,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*bNotify*|【인】 하지 않는.|
 
 ### <a name="remarks"></a>설명
@@ -173,7 +173,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 하위 드롭다운 도구 모음 창이 자동으로 소멸되는지 여부를 설정합니다.
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -186,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 *bAutoDestroyTRUE이면* `CMFCDropDownFrame` 소멸자가 연결된 드롭다운 도구 모음 창을 파괴합니다. 기본값은 TRUE입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

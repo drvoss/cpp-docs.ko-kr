@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 5d6b964543a5cbd8a8896fe768e2d57a098ead97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e96740ba6755f489be07fbf8996cfa8b049314a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372210"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754032"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 클래스
 
@@ -424,7 +424,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 복사할 소스 단추에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
@@ -1683,7 +1683,7 @@ virtual void SetRadio();
 
 단추의 경계 사각형을 설정합니다.
 
-```
+```cpp
 void SetRect(const CRect rect);
 ```
 
@@ -1717,7 +1717,7 @@ virtual void SetStyle(UINT nStyle);
 
 단추를 볼 수 있는지 여부를 지정합니다.
 
-```
+```cpp
 void SetVisible(BOOL bShow=TRUE);
 ```
 
@@ -1734,7 +1734,7 @@ void SetVisible(BOOL bShow=TRUE);
 
 단추를 표시하거나 숨깁니다.
 
-```
+```cpp
 void Show(BOOL bShow);
 ```
 
@@ -1751,7 +1751,7 @@ void Show(BOOL bShow);
 
 이 메서드는 단추의 가시성 상태를 업데이트한 후 [CMFCToolBarButton::OnShow](#onshow) 메서드를 호출합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

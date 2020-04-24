@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374832"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753716"
 ---
 # <a name="colevariant-class"></a>COle변형 클래스
 
@@ -93,7 +93,7 @@ class COleVariant : public tagVARIANT
 
 이 함수를 호출하여 지정된 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) `COleVariant` 개체를 현재 개체에 연결합니다.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ SCODE에 대한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조를]
 
 이 `COleVariant` 개체에서 변형 값의 형식을 변환합니다.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 `VARIANT`을 지웁니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ VARIANT Detach();
 
 기존 변형 배열에서 바이트 배열을 검색합니다.
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 문자열을 특정 유형으로 설정합니다.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 
@@ -399,6 +399,6 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 
 UNICODE가 아닌 빌드의 DAO 레코드 집합은 문자열이 ANSI가 될 것으로 예상합니다. 따라서 개체를 `COleVariant` 사용하는 DAO 함수의 경우 UNICODE 레코드 집합을 만들지 않는 경우 **cOleVariant::COleVariant(lpszSrc** *lpszSrc* **,** *vtSrc)* **)** 생성자 형식을 사용하여 VT_BSTRT(ANSI)로 설정하거나 anSI 문자열을 만들기 위해 VT_BSTRT *vtSrc* 를 사용하여 설정합니다. *vtSrc* `SetString` 예를 들어 `CDaoRecordset` 함수 [CDaoRecordset::검색](../../mfc/reference/cdaorecordset-class.md#seek) 및 [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) 매개 변수로 개체를 사용 합니다. `COleVariant` DAO 레코드 집합이 유니코드가 아닌 경우 이러한 개체는 ANSI여야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

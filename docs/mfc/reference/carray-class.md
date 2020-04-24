@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377018"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753972"
 ---
 # <a name="carray-class"></a>CArray 클래스
 
@@ -172,7 +172,7 @@ INT_PTR Append(const CArray& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 배열에 추가할 요소의 소스입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -209,13 +209,13 @@ CArray();
 
 이 멤버 함수를 사용하여 한 배열의 요소를 다른 배열로 복사합니다.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 배열에 복사할 요소의 소스입니다.
 
 ### <a name="remarks"></a>설명
@@ -258,7 +258,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 
 배열이 커짐동안 할당된 추가 메모리를 해제합니다.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ INT_PTR GetUpperBound() const;
 
 첫 번째 `InsertAt` 버전의 요소는 배열의 지정된 인덱스에 하나의 요소(또는 요소의 여러 복사본)를 삽입합니다.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 
 이 배열의 모든 요소를 반환합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ void RemoveAll();
 
 배열의 지정된 인덱스에서 시작하는 하나 이상의 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ void RemoveAt(
 
 지정된 인덱스에서 배열 요소를 설정합니다.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
 지정된 인덱스에서 배열 요소를 설정합니다.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 
 빈 배열 또는 기존 배열의 크기를 설정합니다. 필요한 경우 메모리를 할당합니다.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);
@@ -628,7 +628,7 @@ void SetSize(
 
   [GetData](#getdata)에 대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367641"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752453"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 새 애니메이션 속도를 설정합니다.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,13 +408,13 @@ void SetAnimationSpeed(UINT nSpeed);
 
 애니메이션 유형을 설정합니다.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*종류*<br/>
+*type*<br/>
 【인】 애니메이션 유형을 지정합니다.
 
 ### <a name="remarks"></a>설명
@@ -435,7 +435,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 자동 닫기 시간 시간을 설정합니다.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ void SetAutoCloseTime(int nTime);
 
 작은 캡션과 일반 크기 캡션 간에 전환합니다.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 
 팝업 창의 투명도 수준을 설정합니다.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 
@@ -492,7 +492,7 @@ virtual CSize GetDialogSize();
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

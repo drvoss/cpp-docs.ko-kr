@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369991"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752607"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 구조체
 
@@ -79,7 +79,7 @@ struct CMemoryState
 
 메모리의 스냅샷 요약을 만들고 이 `CMemoryState` 개체에 저장합니다.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ BOOL Difference(
 
 마지막 `Dump` [Checkpoint에서](#checkpoint) 이 `CMemoryState` 개체를 호출한 `CObject` 이후 할당된 클래스에서 파생된 형식의 모든 개체에 대해 함수를 호출합니다.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ void DumpAllObjectsSince() const;
 
 `CMemoryState` [Difference](#difference) 멤버 함수로 채워진 개체에서 간결한 메모리 통계 보고서를 인쇄합니다.
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 
@@ -195,6 +195,6 @@ void DumpStatistics() const;
 
 이제 디버그 모드에서 프로그램을 실행하여 함수의 출력을 `DumpStatistics` 볼 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

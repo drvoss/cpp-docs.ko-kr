@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375069"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754037"
 ---
 # <a name="cmfctoolbar-class"></a>CMFC툴바 클래스
 
@@ -652,7 +652,7 @@ virtual void AdjustLayout();
 
 도구 모음의 크기를 다시 계산합니다.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ static void CMFCToolBar::CleanUpImages();
 
 잠긴 도구 모음 이미지에 할당된 시스템 리소스를 해제합니다.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ virtual void DrawSeparator(
 
 도구 모음에 나타나는 사용자 지정 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 도구 모음 단추에서 큰 아이콘을 사용하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 명령 반사를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 도구 모음 단추 이미지 에서 텍스트 레이블을 사용 하거나 사용하지 않도록 설정 합니다.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 
 지정된 인덱스에서 단추의 명령 ID, 스타일 및 이미지 인덱스를 반환합니다.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 
 도구 모음 단추의 명령 ID, 스타일 및 이미지 ID를 설정합니다.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ TRUE 이 메서드를 호출하면 사용자 지정 모드가 변경됩니다. �
 
 도구 모음에서 사용할 수 없는 단추를 흐리게 하는지 또는 단추를 사용할 수 없는 이미지를 사용할지 여부를 지정합니다.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 
 도구 모음의 높이를 설정합니다.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 도구 모음 단추를 핫 트래킹할지 여부를 지정합니다.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFC툴바::세트무시세트텍스트
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 
 도구 모음에서 잠긴 단추 및 잠긴 이미지의 크기를 설정합니다.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ void SetLockedSizes(
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFC툴바::셋마스크모드
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 도구 모음과 해당 형제를 동일한 행에 배치합니다.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ void SetOneRowWithSibling();
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFC툴바::세터리버튼
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 사용자가 도구 모음을 닫을 수 있는지 여부를 지정합니다.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ void SetPermament(BOOL bPermament=TRUE);
 
 상위 프레임 또는 소유자가 도구 모음에 명령을 보낼지 여부를 지정합니다.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ static void SetShowTooltips(BOOL bValue);
 
 도구 모음의 형제를 지정합니다.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ static void __stdcall SetSizes(
 
 도구 모음에 있는 단추의 속성을 지정합니다.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ void SetToolBarBtnText(
 
 도구 모음과 해당 형제를 별도의 행에 배치합니다.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 지정된 단추의 상태를 업데이트합니다.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 
@@ -3898,7 +3898,7 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7cbddbd4fca8379562b762fadbb3d2bda44f166
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368856"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753538"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFC리본진행률
 
@@ -203,7 +203,7 @@ virtual void OnDraw(CDC* pDC);
 
 진행률 표시줄을 무한 모드에서 작동하도록 설정합니다.
 
-```
+```cpp
 void SetInfiniteMode(BOOL bSet = TRUE);
 ```
 
@@ -220,7 +220,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 
 진행률 표시줄의 현재 위치를 설정합니다.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw = TRUE);
@@ -242,7 +242,7 @@ void SetPos(
 
 진행률 표시줄의 최소값과 최대값을 설정합니다.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -260,7 +260,7 @@ void SetRange(
 
 이 메서드를 사용 하 여 최소 및 최대 값을 설정 하 여 진행률 막대의 범위를 정의 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

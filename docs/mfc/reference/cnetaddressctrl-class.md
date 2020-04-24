@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363307"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752779"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 클래스
 
@@ -124,10 +124,10 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwStyle*|【인】 컨트롤에 적용할 스타일의 비트 조합입니다. 자세한 내용은 [스타일 편집](../../mfc/reference/styles-used-by-mfc.md#edit-styles)을 참조하십시오.|
-|*rect*|【인】 컨트롤의 위치와 크기를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.|
+|*rect*|【인】 컨트롤의 위치와 크기를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.|
 |*pParentWnd*|【인】 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 null이 아닌 포인터입니다.|
 |*nID*|【인】 컨트롤의 ID입니다.|
 
@@ -150,11 +150,11 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwExStyle*|【인】 컨트롤에 적용할 확장 된 스타일의 비트 조합(OR)입니다. 자세한 내용은 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 함수의 *dwExStyle* 매개 변수를 참조하십시오.|
 |*dwStyle*|【인】 컨트롤에 적용할 스타일의 비트 조합(OR)입니다. 자세한 내용은 [스타일 편집](../../mfc/reference/styles-used-by-mfc.md#edit-styles)을 참조하십시오.|
-|*rect*|【인】 컨트롤의 위치와 크기를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.|
+|*rect*|【인】 컨트롤의 위치와 크기를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.|
 |*pParentWnd*|【인】 컨트롤의 상위 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 null이 아닌 포인터입니다.|
 |*nID*|【인】 컨트롤의 ID입니다.|
 
@@ -231,7 +231,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwAddrMask*|【인】 네트워크 주소 제어가 지원할 수 있는 주소 유형을 지정하는 플래그의 비트 조합(OR)입니다. 자세한 내용은 [NET_STRING](/windows/win32/shell/net-string)를 참조하십시오.|
 
@@ -245,7 +245,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 이 메시지는 Windows SDK에 설명된 [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) 매크로를 호출합니다. 이 매크로는 NCM_SETALLOWTYPE 메시지를 보냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CNetAddressCtrl 클래스](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

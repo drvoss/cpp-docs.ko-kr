@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354415"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031500"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 클래스
 
@@ -29,7 +29,7 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>매개 변수
 
-*K*<br/>
+*K (주)*<br/>
 키/값 쌍의 키 형식입니다.
 
 *Ⅴ*<br/>
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - public enum 클래스
 
-**정렬되지 않은 Map은** 기본적으로 Windows 런타임 형식의 저장소를 지원하는 [std:unordered_map](../standard-library/unordered-map-class.md) 래퍼입니다. 공용 Windows 런타임 인터페이스를 통해 전달되는 [Windows::Foundation::Collection::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) 및 [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) 형식의 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::UnorderedMap` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수나 반환 값 형식을 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)으로 변경하여 오류를 수정할 수 있습니다.
+**정렬되지 않은 Map은** 기본적으로 Windows 런타임 형식의 저장소를 지원하는 [std:unordered_map](../standard-library/unordered-map-class.md) 래퍼입니다. 공용 Windows 런타임 인터페이스를 통해 전달되는 [Windows::Foundation::Collection::IMap](/uwp/api/windows.foundation.collections.imap-2) 및 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 형식의 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::UnorderedMap` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수나 반환 값 형식을 [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)으로 변경하여 오류를 수정할 수 있습니다.
 
 자세한 내용은 [컬렉션 을](../cppcx/collections-c-cx.md)참조하십시오.
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>정렬되지 않은 맵::첫 번째 방법
 
-첫 번째 [Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) 순서가 지정되지 않은 맵의 요소를 지정하는 이터레이터를 반환합니다.
+첫 번째 [Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 순서가 지정되지 않은 맵의 요소를 지정하는 이터레이터를 반환합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -126,7 +126,7 @@ First()에서 반환되는 이터레이터를 유지하는 편리한 방법은 *
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>정렬되지 않은 맵::GetView 방법
 
-현재 정렬되지 않은 맵의 읽기 전용 보기를 반환합니다. 즉, [플랫폼::컬렉션::정렬되지 않은 MapView 클래스](../cppcx/platform-collections-unorderedmapview-class.md) [Windows::Foundation::컬렉션::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 인터페이스를 구현합니다.
+현재 정렬되지 않은 맵의 읽기 전용 보기를 반환합니다. 즉, [플랫폼::컬렉션:::정렬되지 않은 MapView 클래스는](../cppcx/platform-collections-unorderedmapview-class.md) [Windows:::Foundation::Collection::IMapView::IMapView 인터페이스를 구현합니다.](/uwp/api/windows.foundation.collections.imapview-2)
 
 ### <a name="syntax"></a>구문
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 UnorderedMap 요소를 찾는 데 사용되는 키입니다. *키의* 유형은 *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -174,7 +174,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키-값 쌍의 키 부분입니다. *키의* 유형은 *K*.
 
 *value*<br/>
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 UnorderedMap에서 요소를 찾는 데 사용되는 키입니다. *키의* 유형은 *K*.
 
 ### <a name="return-value"></a>Return Value
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>속성 값/반환 값
 
-이벤트를 발생시킨 개체 및 발생한 변경 종류에 대한 정보가 포함된 [MapChangedEventHandler\<K,V>.](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 또한 [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) 및 [컬렉션변경 열거.](/uwp/api/windows.foundation.collections.collectionchange)
+이벤트를 발생시킨 개체 및 발생한 변경 종류에 대한 정보가 포함된 [MapChangedEventHandler\<K,V>.](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) 또한 [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) 및 [컬렉션변경 열거.](/uwp/api/windows.foundation.collections.collectionchange)
 
 ## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 키-값 쌍의 키 부분입니다. *키의* 유형은 *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>정렬되지 않은 맵::크기 방법
 
-[Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) 정렬되지 않은 맵의 요소를 반환합니다.
+[Windows::Foundation::컬렉션::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 정렬되지 않은 맵의 요소를 반환합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -361,7 +361,7 @@ UnorderedMap(
 *마지막*<br/>
 현재 UnorderedMap을 초기화하는 데 사용되는 요소 범위 다음의 첫 번째 요소의 입력 반복기입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [플랫폼 네임스페이스](platform-namespace-c-cx.md)<br/>
 [Platform::Collections 네임스페이스](../cppcx/platform-collections-namespace.md)<br/>

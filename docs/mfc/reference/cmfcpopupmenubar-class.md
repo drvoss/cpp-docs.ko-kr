@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: b4693e316fd78948cfae262433fee8ca8b6ab23c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c0ba90246d19e8dd07c856eec6a518a8513ee665
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375356"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751928"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 클래스
 
@@ -411,7 +411,7 @@ virtual void SetButtonStyle(
 
 팝업 메뉴 모음의 행 오프셋을 설정합니다.
 
-```
+```cpp
 void SetOffset(int iOffset);
 ```
 
@@ -426,7 +426,7 @@ void SetOffset(int iOffset);
 
 지정된 지연된 팝업 메뉴 단추에 대한 타이머를 시작합니다.
 
-```
+```cpp
 void StartPopupMenuTimer(
     CMFCToolBarMenuButton* pMenuButton,
     int nDelayFactor = 1);
@@ -442,7 +442,7 @@ void StartPopupMenuTimer(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

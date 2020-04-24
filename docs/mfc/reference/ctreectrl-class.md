@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373301"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752119"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 트리 뷰 컨트롤의 스타일을 지정합니다. [CreateWindow에](/windows/win32/api/winuser/nf-winuser-createwindoww)설명된 창 스타일과 Windows SDK에 설명된 [트리 뷰 컨트롤 스타일의](/windows/win32/Controls/tree-view-control-window-styles) 조합을 적용합니다.
 
 *rect*<br/>
-트리 뷰 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+트리 뷰 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 트리 뷰 컨트롤의 상위 창(일반적으로 을 `CDialog`지정합니다.) NULL이 아니어야 합니다.
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 트리 뷰 컨트롤의 스타일을 지정합니다. [CreateWindow에](/windows/win32/api/winuser/nf-winuser-createwindoww)설명된 창 스타일과 Windows SDK에 설명된 [트리 뷰 컨트롤 스타일의](/windows/win32/Controls/tree-view-control-window-styles) 조합을 적용합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -482,7 +482,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*fCancelWithoutSave*|【인】 TRUE는 편집 작업을 종료하기 전에 트리 뷰 항목에 대한 변경 내용을 삭제하거나 작업을 종료하기 전에 트리 뷰 항목에 대한 변경 내용을 저장하는 FALSE입니다.|
 
@@ -806,7 +806,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
 
@@ -883,11 +883,11 @@ BOOL GetItemPartRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
 |*nPart*|【인】 부품의 식별자입니다. TVGIPR_BUTTON 설정해야 합니다.|
-|*Lprect*|【아웃】 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 이 메서드가 성공하면 구조체는 *hItem* 및 *nPart에*의해 지정된 부품의 사각형 좌표를 받습니다.|
+|*Lprect*|【아웃】 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 이 메서드가 성공하면 구조체는 *hItem* 및 *nPart에*의해 지정된 부품의 사각형 좌표를 받습니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 트리 뷰 컨트롤 항목의 핸들입니다.
 
 *Lprect*<br/>
-경계 사각형을 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다. 좌표는 트리 뷰 컨트롤의 왼쪽 위 모서리를 기준으로 합니다.
+경계 사각형을 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 좌표는 트리 뷰 컨트롤의 왼쪽 위 모서리를 기준으로 합니다.
 
 *b텍스트전용*<br/>
 이 매개변수가 0이 아닌 경우 경계 사각형에는 항목의 텍스트만 포함됩니다. 그렇지 않으면 트리 뷰 컨트롤에서 항목이 차지하는 전체 선이 포함됩니다.
@@ -977,7 +977,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
 
@@ -1495,7 +1495,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*uAccId*|【인】 트리 뷰 항목의 요소에 대한 내게 필요한 옵션 식별자입니다.|
 
@@ -1531,7 +1531,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 컨트롤의 트리 뷰 항목의 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 *hItem* 멤버를 참조하십시오.|
 
@@ -1676,7 +1676,7 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*uPixelsPerSec*|【인】 스크롤할 초당 픽셀 수입니다.|
 |*uUpdateTime*|【인】 컨트롤 업데이트 사이의 시간 간격입니다.|
@@ -1772,7 +1772,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*dwExMask*|【인】 현재 트리 뷰 컨트롤에서 어떤 스타일을 지정하는 비트 마스크는 이 메서드의 영향을 받습니다. 이 매개변수가 0이면 무시되고 *dwExStyles* 매개 변수의 값이 트리 뷰 컨트롤에 할당됩니다.<br /><br /> 트리 뷰 제어 확장 스타일에 설명된 스타일의 0 또는 비트 조합(OR)을 [지정합니다.](/windows/win32/Controls/tree-view-control-window-extended-styles)|
 |*dwExStyles*|【인】 현재 트리 뷰 컨트롤에서 설정하거나 지울 스타일을 지정하는 비트 마스크입니다.<br /><br /> 스타일 조합을 설정하려면 트리 뷰 컨트롤 확장 스타일에 설명된 스타일의 비트 조합(OR)을 [지정합니다.](/windows/win32/Controls/tree-view-control-window-extended-styles) 스타일 세트를 지우려면 0을 지정합니다.|
@@ -1833,7 +1833,7 @@ CImageList* SetImageList(
 
 이 함수를 호출하여 트리 뷰 컨트롤의 들여쓰기 너비를 설정하고 새 너비를 반영하도록 컨트롤을 다시 그립니다.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -1992,7 +1992,7 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
 |*iExpandedImage*|【인】 지정된 항목이 확장된 상태에 있을 때 표시할 이미지의 인덱스입니다.|
@@ -2122,7 +2122,7 @@ BOOL SetItemStateEx(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
 |*uStateEx*|【인】 항목의 확장된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 멤버를 참조하십시오.|
@@ -2269,13 +2269,13 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 현재 트리 뷰 컨트롤에서 지정된 항목에 대한 정보 팁을 표시합니다.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*h항목*|【인】 컨트롤의 트리 뷰 항목에 대한 핸들입니다. 자세한 내용은 `hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 멤버를 참조하십시오.|
 
@@ -2339,7 +2339,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

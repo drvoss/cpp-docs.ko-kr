@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 41fa3204712749a3b1123a20d31b01ba8b5fbaa4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ebac4e18f65d789d5196266d57184744ad5ad28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364111"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753620"
 ---
 # <a name="cpanedivider-class"></a>크파네 디바이더 클래스
 
@@ -194,7 +194,7 @@ class CPaneDivider : public CBasePane
 
 ## <a name="cpanedividersetautohidemode"></a><a name="setautohidemode"></a>크파네 디바이더::SetAutoHideMode
 
-```
+```cpp
 void SetAutoHideMode(BOOL bMode);
 ```
 
@@ -206,7 +206,7 @@ void SetAutoHideMode(BOOL bMode);
 
 ## <a name="cpanedividersetpanecontainermanager"></a><a name="setpanecontainermanager"></a>CPane 분배기::SetPane컨테이너 관리자
 
-```
+```cpp
 void SetPaneContainerManager(CPaneContainerManager* p);
 ```
 
@@ -433,7 +433,7 @@ const CBasePane* GetFirstPane() const;
 
 [CPaneContainer 클래스에](../../mfc/reference/cpanecontainer-class.md)있는 창 분할자 목록을 반환합니다. 이 메서드는 기본 창 구분에 대해서만 호출해야 합니다.
 
-```
+```cpp
 void GetPaneDividers(CObList& lstSliders);
 ```
 
@@ -460,7 +460,7 @@ DWORD GetPaneDividerStyle() const;
 
 [CPaneContainer 클래스에](../../mfc/reference/cpanecontainer-class.md)있는 창 목록을 반환합니다. 이 메서드는 기본 창 구분값을 검색하기 위해서만 호출해야 합니다.
 
-```
+```cpp
 void GetPanes(CObList& lstBars);
 ```
 
@@ -495,7 +495,7 @@ int GetWidth() const;
 
 ## <a name="cpanedividerinit"></a><a name="init"></a>크파네 디바이더::이니트
 
-```
+```cpp
 void Init(
     BOOL bDefaultSlider = FALSE,
     CWnd* pParent = NULL);
@@ -632,7 +632,7 @@ virtual void OnShowPane(
 
 ## <a name="cpanedividerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPane 분배기::릴리스빈파인 컨테이너
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -684,7 +684,7 @@ virtual void RepositionPanes(
 
 ## <a name="cpanedividerserialize"></a><a name="serialize"></a>CPane Divider::직렬화
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -696,7 +696,7 @@ void Serialize(CArchive& ar);
 
 ## <a name="cpanedividershowwindow"></a><a name="showwindow"></a>크파네 디바이더::쇼윈도우
 
-```
+```cpp
 void ShowWindow(int nCmdShow);
 ```
 
@@ -708,7 +708,7 @@ void ShowWindow(int nCmdShow);
 
 ## <a name="cpanedividerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPane Divider:::스토어최근독사이트정보
 
-```
+```cpp
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```
 
@@ -720,7 +720,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ## <a name="cpanedividerstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPane 분배기:::저장소최근탭관련정보
 
-```
+```cpp
 void StoreRecentTabRelatedInfo(
     CDockablePane* pDockingBar,
     CDockablePane* pTabbedBar);
@@ -733,7 +733,7 @@ void StoreRecentTabRelatedInfo(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

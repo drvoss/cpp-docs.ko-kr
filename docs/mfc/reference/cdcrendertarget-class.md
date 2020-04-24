@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c07962c017d160cb3ce5841a75f1ae8a8761641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375701"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753385"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 클래스
 
@@ -83,7 +83,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 기존 렌더 대상 인터페이스를 오브젝트에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1DCRenderTarget* pTarget);
 ```
 
@@ -183,6 +183,6 @@ operator ID2D1DCRenderTarget*();
 
 개체가 아직 초기화되지 않은 경우 ID2D1DCRenderTarget 인터페이스 또는 NULL에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

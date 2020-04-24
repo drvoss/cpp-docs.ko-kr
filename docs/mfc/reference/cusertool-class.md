@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 203adeac9783da8ea49a8385dad9786865c8a225
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183b30961e4a7d3079fa0d035a4ddc38bc2eebac
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373216"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752024"
 ---
 # <a name="cusertool-class"></a>CUserTool 클래스
 
@@ -112,7 +112,7 @@ BOOL CopyIconToClipboard();
 
 지정된 사각형의 가운데에 사용자 도구 아이콘을 그립니다.
 
-```
+```cpp
 void DrawToolIcon(
     CDC* pDC,
     const CRect& rectImage);
@@ -234,7 +234,7 @@ virtual void Serialize(CArchive& ar);
 
 사용자 도구가 실행되는 응용 프로그램을 설정합니다.
 
-```
+```cpp
 void SetCommand(LPCTSTR lpszCmd);
 ```
 
@@ -263,7 +263,7 @@ virtual HICON SetToolIcon();
 
 메뉴 항목에 표시할 아이콘을 로드하려면 이 메서드를 호출합니다. 이 메서드는 도구에서 사용하는 실행 파일의 아이콘을 검색합니다. 기본 아이콘이 없는 경우 [CUserTool::LoadDefaultIcon에서](#loaddefaulticon) 제공하는 아이콘이 대신 사용됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

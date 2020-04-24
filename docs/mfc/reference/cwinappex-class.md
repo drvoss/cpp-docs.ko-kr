@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 1e022f09986f5d49ab2bba44c62cb716ce939a0c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b630a588d6c7ec81a22a9665deb0fa7517f90dc8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369609"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750654"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 클래스
 
@@ -283,7 +283,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 
 응용 프로그램이 레지스트리에서 주 프레임 창의 초기 크기와 위치를 로드할지 여부를 지정합니다.
 
-```
+```cpp
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 
@@ -1527,7 +1527,7 @@ BOOL WriteString(
 
 *lspzEntry에서* 지정한 키가 없으면 이 메서드가 해당 키를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

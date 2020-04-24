@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377060"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753110"
 ---
 # <a name="carchive-class"></a>CArchive 클래스
 
@@ -146,7 +146,7 @@ class CArchive
 
 예외를 throw 하지 않고 아카이브를 닫도록 이 함수를 호출합니다.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ CArchive(
 
 버퍼에 남아 있는 데이터를 플러시하고, 아카이브를 닫고, 파일에서 아카이브를 분리합니다.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ void Close();
 
 아카이브 버퍼에 남아 있는 모든 데이터를 파일에 기록하도록 강제합니다.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ BOOL IsStoring() const;
 
 이 멤버 함수를 호출하여 실제로 파일에 직렬화되지는 않지만 하위 개체가 참조할 수 있는 객체를 맵에 배치합니다.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ BOOL을 반환 하는 버전에서, TRUE 성공 하는 경우; 그렇지 않으�
 
 기본 클래스의 버전 정보를 저장하고 로드하려는 경우 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 
 아카이브에서 많은 수의 `SetLoadParams` `CObject`-파생 개체를 읽으려고 할 때 호출합니다.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 
 이 멤버 함수를 호출하여 아카이브 개체에 저장된 개체 스키마를 *nSchema로*설정합니다.
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ void SetObjectSchema(UINT nSchema);
 
 많은 `SetStoreParams` 수의 `CObject`-파생 개체를 아카이브에 저장할 때 사용합니다.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 
 지정된 수의 바이트를 아카이브에 씁니다.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ void Write(const void* lpBuf, INT nMax);
 
 파생 `WriteClass` 클래스를 직렬화하는 동안 기본 클래스의 버전 및 클래스 정보를 저장하는 데 사용합니다.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 지정된 `CObject` 것을 아카이브에 저장합니다.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ void WriteObject(const CObject* pOb);
 
 이 멤버 함수를 사용하여 버퍼의 데이터를 개체와 `CArchive` 연결된 파일에 기록합니다.
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 
@@ -879,7 +879,7 @@ null 문자('\0')를 종료하는 문자는 파일에 기록되지 않습니다.
 
 [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CFile 클래스](../../mfc/reference/cfile-class.md)<br/>

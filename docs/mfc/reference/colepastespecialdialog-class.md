@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376983"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753822"
 ---
 # <a name="colepastespecialdialog-class"></a>콜레파페스 스페셜디아로그 클래스
 
@@ -105,7 +105,7 @@ OLE 관련 대화 상자에 대한 자세한 내용은 [OLE의 대화 상자](..
 
 이 함수를 호출하여 붙여넣기 특수 작업에서 응용 프로그램에서 지원할 수 있는 형식 목록에 새 형식을 추가합니다.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -178,7 +178,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 이 함수를 호출하여 응용 프로그램이 붙여넣기 특수 작업에서 지원할 수 있는 형식 목록에 다음 클립보드 형식을 추가합니다.
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 
@@ -381,7 +381,7 @@ OLEUIPASTESPECIAL m_ps;
 
 자세한 내용은 Windows SDK의 [OLEUIPASTESPECIAL](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) 구조를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 클라이언트](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog 클래스](../../mfc/reference/coledialog-class.md)<br/>

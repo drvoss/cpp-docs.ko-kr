@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366125"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753916"
 ---
 # <a name="coledataobject-class"></a>콜레데이터오브젝트 클래스
 
@@ -92,7 +92,7 @@ class COleDataObject
 
 이 함수를 호출하여 개체를 `COleDataObject` OLE 데이터 개체와 연결합니다.
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ BOOL AttachClipboard();
 
 이 함수를 호출하여 항목에서 데이터 형식 목록을 검색하기 `GetNextFormat` 위한 후속 호출을 준비합니다.
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 지정된 형식의 가용성을 확인하려면 [COleDataObject::IsDataAvailable](#isdataavailable).
 
-자세한 내용은 [IEnumXXXX::다음](/previous-versions//ms695273\(v=vs.85\)) Windows SDK를 참조하십시오.
+자세한 내용은 [IEnumXXXX::다음](/previous-versions/ms695273\(v=vs.85\)) Windows SDK를 참조하십시오.
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>콜레데이터오브젝트::데이터 사용 가능
 
@@ -328,7 +328,7 @@ BOOL IsDataAvailable(
 
 이 함수를 호출하여 이전에 개체와 연결되었던 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 개체의 소유권을 해제합니다. `COleDataObject`
 
-```
+```cpp
 void Release();
 ```
 
@@ -336,7 +336,7 @@ void Release();
 
 을 `IDataObject` 호출하거나 `COleDataObject` `Attach` 명시적으로 또는 `AttachClipboard` 프레임워크에 의해 연결되었습니다. 의 *bAutoRelease* 매개 `Attach` 변수가 `IDataObject` FALSE이면 개체가 해제되지 않습니다. 이 경우 호출자는 `IDataObject` [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)를 호출하여 해제할 책임이 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 클라이언트](../../overview/visual-cpp-samples.md)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365790"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751650"
 ---
 # <a name="diagnostic-services"></a>진단 서비스
 
@@ -124,7 +124,7 @@ MFC 응용 프로그램의 디버그 버전 실행시 `AfxDebugBreak`이 함수�
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ MFC가 디버깅하는 동안 개체의 상태를 덤프하는 데 사용하는 
 
 ### <a name="syntax"></a>구문
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 이 함수는 통과된 SCODE를 테스트하여 오류인지 확인합니다.
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ BOOL  AfxCheckMemory();
 
 디버거에서 이 함수를 호출하여 디버깅하는 동안 개체의 상태를 덤프합니다.
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ void AfxDump(const CObject* pOb);
 
 이 전역 함수는 현재 스택의 이미지를 생성하는 데 사용할 수 있습니다.
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ AFXAPI 호출 규칙은 호출이 스택에서 매개 변수를 제거해야 함
 
 응용 프로그램의 메모리 공간에서 모든 `CObject`직렬화 가능한 파생 클래스에 대해 지정된 반복 함수를 호출합니다.
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ AFXAPI AfxDoForAllClasses(
 
 새 로 할당된 개체에서 파생된 `CObject` 모든 개체에 **new**대해 지정된 반복 함수를 실행합니다.
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);
@@ -921,7 +921,7 @@ void AfxDoForAllObjects(
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](mfc-macros-and-globals.md)<br/>
 [CObject::Dump](cobject-class.md#dump)

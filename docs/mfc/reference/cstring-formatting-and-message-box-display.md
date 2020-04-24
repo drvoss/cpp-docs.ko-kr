@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: d30d26ecf0e72ee33affe3df5b88c438ff83bb6b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366003"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752678"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 서식 지정 및 메시지 상자 표시
 
@@ -78,7 +78,7 @@ TRUE 함수가 제공된 인덱스에서 서브스트링을 성공적으로 추�
 
 *nIDS로*식별된 템플릿 문자열 리소스에서 문자 "%1"의 인스턴스에 대해 *lpsz1로* 가리키는 문자열을 대체합니다.
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -114,7 +114,7 @@ void  AfxFormatString1(
 
 *nIDS로*식별된 템플릿 문자열 리소스에서 문자 "%1"의 인스턴스에 대해 *lpsz1로* 가리키는 문자열과 문자 "%2"의 모든 인스턴스에 대해 *lpsz2로* 가리키는 문자열을 대체합니다.
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,
@@ -212,7 +212,7 @@ int AFXAPI AfxMessageBox(
 
 [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CStringT 클래스](../../atl-mfc-shared/reference/cstringt-class.md)

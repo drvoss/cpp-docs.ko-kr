@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376459"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754656"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPath속성 클래스
 
@@ -193,7 +193,7 @@ virtual void ResetData();
 
 이 멤버 함수를 호출하여 비동기 OLE `CDataPathProperty` 컨트롤을 개체와 연결합니다.
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -206,7 +206,7 @@ void SetControl(COleControl* pControl);
 
 이 멤버 함수를 호출하여 속성의 pathname을 설정합니다.
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 
@@ -215,7 +215,7 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 비동기적으로 로드되는 속성에 대한 절대 또는 상대적 일 수 있는 경로입니다. `CDataPathProperty`는 파일 이름이 아닌 URL을 사용합니다. 파일에 대한 `CDataPathProperty` 객체를 원하는 경우 `file://` 경로에 미리 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 이미지](../../overview/visual-cpp-samples.md)<br/>
 [CAsync모니커파일 클래스](../../mfc/reference/casyncmonikerfile-class.md)<br/>

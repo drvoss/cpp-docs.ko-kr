@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368946"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754705"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 클래스
 
@@ -410,7 +410,7 @@ short GetFieldCount();
 
 이 멤버 함수를 호출하여 querydef에 정의된 필드에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ short GetParameterCount();
 
 이 멤버 함수를 호출하여 querydef에 정의된 매개 변수에 대한 정보를 가져옵니다.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 이 멤버 함수를 호출하여 querydef 개체의 연결 문자열을 설정합니다.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ ODBC 데이터 원본에 대한 SQL 통과 쿼리를 나타내는 쿼리 def를 
 
 임시가 아닌 querydef의 이름을 변경하려는 경우 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Querydef 이름은 고유한 사용자 정의 이름입니다. querydef `SetName
 
 이 멤버 함수를 호출하여 ODBC 데이터 원본에 대한 쿼리 시간이 초과되기 전에 시간 제한을 설정합니다.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ querydef의 매개 변수 컬렉션에서 매개 변수의 서수 위치입니�
 
 외부 데이터베이스에 SQL 통과 쿼리를 설정하는 프로세스의 일부로 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 이 멤버 함수를 호출하여 querydef가 실행하는 SQL 문을 설정합니다.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 
@@ -835,7 +835,7 @@ void SetSQL(LPCTSTR lpszSQL);
 
 일반적으로 SQL `SetSQL` 통과 쿼리에 사용할 쿼리def 개체를 설정하는 것이 일반적입니다. 대상 DBMS에 대한 SQL 통과 쿼리 구문은 DBMS에 대한 설명서를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

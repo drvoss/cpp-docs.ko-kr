@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367698"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752523"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFC컬러메뉴버튼 클래스
 
@@ -166,7 +166,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 복사할 소스 단추입니다.
 
 ### <a name="remarks"></a>설명
@@ -193,7 +193,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 일반 색상 버튼 위에 배치된 "자동" 버튼을 활성화하고 비활성화합니다. (표준 시스템 자동 버튼은 **자동으로**레이블이 지정됩니다.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ void EnableAutomaticButton(
 
 시스템 색상 대신 문서별 색상을 표시할 수 있습니다.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ void EnableDocumentColors(
 
 일반 색상 버튼 아래에 배치된 "기타" 버튼을 활성화하고 비활성화합니다. (표준 시스템 "기타" 버튼에는 **더 많은 색상으로**레이블이 지정됩니다.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 색상 창을 분리하는 기능을 활성화합니다.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 색상 선택 [컨트롤(CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) 개체)에 표시할 열 수를 설정합니다.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -544,7 +544,7 @@ void SetColumnsNumber(int nColumns);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

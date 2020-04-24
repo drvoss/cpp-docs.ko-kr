@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367789"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752623"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 클래스
 
@@ -227,7 +227,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 캡션 표시줄의 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ virtual void OnDrawText(
 
 캡션 표시줄에서 비트맵 이미지를 제거합니다.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 캡션 표시줄에서 단추를 제거합니다.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ void RemoveButton();
 
 캡션 표시줄에서 아이콘을 제거합니다.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 캡션 표시줄에서 텍스트 레이블을 제거합니다.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 캡션 막대의 비트맵 이미지를 설정합니다.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ void SetBitmap(
 
 캡션 막대의 테두리 크기를 설정합니다.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 캡션 막대의 단추를 설정합니다.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ TRUE 단추에 드롭다운 화살표가 표시되면 FALSE가 표시됩니다.
 
 단추를 계속 누른 상태로 유지되는지 여부를 지정합니다.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ TRUE 단추의 누른 상태를 유지 하는 경우 TRUE, FALSE 그렇지 않�
 
 단추의 도구 설명입니다.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 캡션 막대의 테두리 스타일을 설정합니다.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 캡션 막대의 아이콘을 설정합니다.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ void SetIcon(
 
 캡션 막대에서 이미지의 도구 설명입니다.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 설정합니다.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 캡션 막대의 텍스트 레이블을 설정합니다.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);
@@ -729,7 +729,7 @@ void SetText(
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

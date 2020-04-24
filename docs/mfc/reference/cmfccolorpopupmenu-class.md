@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: bcdf60c974ecdc437b90891d2b46a5eec94859d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367674"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752500"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 클래스
 
@@ -198,7 +198,7 @@ virtual CPane* CreateTearOffBar(
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pWndMain*|【인】 찢어짐 막대의 상위 창에 대한 포인터입니다.|
 |*uiID*|【인】 찢어짐 막대의 명령 ID입니다.|
 |*lpszName*|【인】 찢어짐 막대의 창 텍스트입니다.|
@@ -231,7 +231,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 포함된 `CMFCColorBar` 개체의 속성 그리드 제어 개체를 설정합니다.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -240,7 +240,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 *pWndList*<br/>
 【인】 속성 그리드 제어 개체에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

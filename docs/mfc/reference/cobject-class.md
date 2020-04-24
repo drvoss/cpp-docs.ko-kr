@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: cea4d09a1c1a4680b095a40fa0619287959ff4ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66d76e0062d13b2bd5a16d9b07f99db9e989805a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360419"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753985"
 ---
 # <a name="cobject-class"></a>CObject 클래스
 
@@ -275,7 +275,7 @@ BOOL IsSerializable() const;
 
 라이브러리의 릴리스 버전에 대 한 연산자 **삭제** 연산자 **새**에 의해 할당 된 메모리를 해제 합니다.
 
-```
+```cpp
 void PASCAL operator delete(void* p);
 
 void PASCAL operator delete(
@@ -312,7 +312,7 @@ void PASCAL operator delete(
 
 라이브러리의 릴리스 버전에 대해 연산자 **new는** `malloc`와 유사한 방식으로 최적의 메모리 할당을 수행합니다.
 
-```
+```cpp
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
 
@@ -374,6 +374,6 @@ virtual void Serialize(CArchive& ar);
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366026"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753040"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 클래스
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 상태 표시줄 컨트롤의 스타일을 지정합니다. Windows SDK의 [공통 제어](/windows/win32/Controls/common-control-styles) 스타일에 나열된 상태 표시줄 컨트롤 스타일의 조합을 적용합니다. 이 매개변수에는 WS_CHILD 스타일이 포함되어야 합니다. 또한 WS_VISIBLE 스타일을 포함해야 합니다.
 
 *rect*<br/>
-상태 표시줄 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+상태 표시줄 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 상태 표시줄 컨트롤의 부모 창(일반적으로 `CDialog`을 지정합니다.) NULL이 아니어야 합니다.
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 상태 표시줄 컨트롤의 스타일을 지정합니다. Windows SDK의 [공통 제어](/windows/win32/Controls/common-control-styles) 스타일에 나열된 상태 표시줄 컨트롤 스타일의 조합을 적용합니다. 이 매개변수에는 WS_CHILD 스타일이 포함되어야 합니다. 또한 WS_VISIBLE 스타일을 포함해야 합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -272,7 +272,7 @@ HICON GetIcon(int iPart) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*아이 파트*|【인】 검색할 아이콘이 포함된 부품의 0기반 인덱스입니다. 이 매개 변수가 -1이면 상태 표시줄은 단순 모드 상태 표시줄로 가정합니다.|
 
@@ -344,7 +344,7 @@ BOOL GetRect(
 경계 사각형을 검색할 부품의 0기반 인덱스입니다.
 
 *Lprect*<br/>
-경계 사각형을 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 주소입니다.
+경계 사각형을 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -530,7 +530,7 @@ BOOL SetIcon(
 
 상태 표시줄 컨트롤의 도면 영역의 최소 높이를 설정합니다.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ BOOL SetText(
 
 상태 표시줄에서 창에 대한 도구 설명 텍스트를 설정합니다.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);
@@ -654,7 +654,7 @@ void SetTipText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

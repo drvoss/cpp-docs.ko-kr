@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370054"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754552"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 클래스
 
@@ -242,7 +242,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 
 다른 MDI 자식 창을 활성화합니다.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ void MDIActivate(CWnd* pWndActivate);
 
 모든 MDI 자식 창을 계단식 형식으로 정렬합니다.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ BOOL 반환 값에 대한 포인터입니다. 창이 최대화되면 반환 시 
 
 최소화된 모든 문서 자식 창을 정렬합니다.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ void MDIIconArrange();
 
 지정된 MDI 자식 창을 최대화합니다.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ void MDIMaximize(CWnd* pWnd);
 
 현재 활성 하위 창 바로 뒤에 자식 창을 활성화하고 현재 활성 하위 창을 다른 모든 하위 창 뒤에 배치합니다.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ void MDINext();
 
 이전 하위 창을 활성화하고 현재 활성 하위 창을 바로 뒤에 배치합니다.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ void MDIPrev();
 
 MDI 자식 창을 최대화 또는 최소화된 크기에서 복원합니다.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ MDI 자식 창이 최대화되고 이 호출이 MDI 프레임 창 메뉴를 대�
 
 모든 자식 창을 타일 형식으로 정렬합니다.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```
@@ -457,7 +457,7 @@ void MDITile(int nType);
 
 [CMDIFrameWnd::MDICascade에](#mdicascade)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

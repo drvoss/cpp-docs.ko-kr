@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372912"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032397"
 ---
 # <a name="styles-used-by-mfc"></a>MFC에서 사용하는 스타일
 
@@ -504,7 +504,7 @@ ms.locfileid: "81372912"
 |WS_EX_TRANSPARENT|이 스타일로 만든 창이 투명하도록 지정합니다. 즉, 이 창 아래에 있는 모든 창은 이 창에 의해 가려지지 않습니다. 이 스타일로 만든 창은 WM_PAINT 메시지 아래에 있는 모든 형제 창이 업데이트된 후에만 메시지를 수신합니다.|
 |WS_EX_WINDOWEDGE|창에 가장자리가 위온인 테두리가 있는지 지정합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 클래스 개요](../../mfc/class-library-overview.md)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>

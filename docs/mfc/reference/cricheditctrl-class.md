@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368280"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754437"
 ---
 # <a name="cricheditctrl-class"></a>리치에이트Ctrl 클래스
 
@@ -377,7 +377,7 @@ int CharFromPos(CPoint pt) const;
 
 리치 편집 컨트롤에서 현재 선택 영역(있는 경우)을 삭제(지우기)합니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ void Clear();
 
 리치 편집 컨트롤의 현재 선택 영역(있는 경우)을 클립보드에 복사합니다.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 편집 컨트롤의 스타일을 지정합니다. Windows SDK에 설명된 컨트롤 만들기 [및](#create) 편집 스타일 작성 및 편집 **섹션에** 나열된 창 [스타일](/windows/win32/Controls/edit-control-styles)조합을 적용합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -525,7 +525,7 @@ CRichEditCtrl();
 
 리치 편집 컨트롤의 현재 선택 영역(있는 경우)을 삭제(잘라내)하고 삭제된 텍스트를 클립보드에 복사합니다.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 
 이 풍부한 편집 컨트롤의 취소 플래그를 재설정(지우기)합니다.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Windows SDK에 설명된 대로 [문장 부호 구조에](/windows/win32/api/ric
 
 이 `CRichEditCtrl` 개체의 서식 지정 사각형을 검색합니다.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ UNDONAMEID GetRedoName() const;
 
 이 `CRichEditCtrl` 개체에서 현재 선택 영역의 경계를 검색합니다.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ UINT GetWordWrapMode() const;
 
 선택 영역의 가시성을 변경합니다.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ void HideSelection(
 
 사용자가 편집 컨트롤에 입력할 수 있는 텍스트의 길이를 제한합니다.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ int LineLength(int nLine = -1) const;
 
 다중 줄 편집 컨트롤의 텍스트를 스크롤합니다.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ void LineScroll(
 
 클립보드의 `CRichEditCtrl` 데이터를 삽입 지점, 캐리트의 위치에 삽입합니다.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ void Paste();
 
 특정 클립보드 형식으로 데이터를 이 `CRichEditCtrl` 개체에 붙여넣습니다.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ BOOL Redo();
 
 이 `CRichEditCtrl` 개체의 현재 선택 영역을 지정된 텍스트로 바꿉습니다.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ void ReplaceSel(
 
 이 `CRichEditCtrl` 개체를 강제로 부모 창에 EN_REQUESTRESIZE 알림 메시지를 보냅니다.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 
 편집 컨트롤에 대해 수정된 플래그를 설정하거나 지웁습니다.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 
 이 `CRichEditCtrl` 개체에 대한 옵션을 설정합니다.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 이 `CRichEditCtrl` 개체의 서식 지정 사각형을 설정합니다.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ void SetRect(LPCRECT lpRect);
 
 이 `CRichEditCtrl` 개체 내에서 선택 항목을 설정합니다.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 
 컨트롤이 현재 실행 취소 작업에 추가 입력 작업을 수집하지 못하도록 합니다.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 
@@ -2196,7 +2196,7 @@ BOOL Undo();
 
   [CanUndo에](#canundo)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 워드패드](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

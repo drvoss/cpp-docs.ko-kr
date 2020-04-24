@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81357035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751485"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 
@@ -44,7 +44,7 @@ MFC는 비트맵의 배경을 디더링된 패턴으로 바꾸기 위한 두 가
 
 비트맵의 회색 버전을 그립니다.
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -88,7 +88,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 비트맵의 회색 버전을 복사합니다.
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -124,7 +124,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 비트맵을 그려 배경을 디더(검사기) 패턴으로 바칩니다.
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -172,7 +172,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 비트맵을 복사하여 배경을 디더(검사기) 패턴으로 바칩니다.
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -208,6 +208,6 @@ void AFXAPI AfxGetDitheredBitmap(
 
 **헤더:** afxwin.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

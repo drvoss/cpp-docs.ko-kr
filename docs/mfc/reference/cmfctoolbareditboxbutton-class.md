@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: 52989f7b523bf0ba9a00da350242a968ca0db153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 064ebe1c8fe377064d410d09e5ef60ed628df2f3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360477"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754004"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFC툴바 편집박스버튼 클래스
 
@@ -207,7 +207,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 복사할 소스 단추에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
@@ -638,7 +638,7 @@ static BOOL SetContentsAll(
 
 단추와 연결된 바로 가기 메뉴의 리소스 ID를 지정합니다.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -685,7 +685,7 @@ virtual void SetStyle(UINT nStyle);
 
 이 메서드는 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) *nStyle응용* 프로그램이 사용자 지정 모드에 있을 때 텍스트 상자를 비활성화하고 응용 프로그램이 사용자 지정 모드에 없을 때 활성화합니다(CMFCToolBar:SetCustomizeMode 및 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)참조). [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) 유효한 스타일 플래그 목록은 [도구 모음 컨트롤 스타일을](../../mfc/reference/toolbar-control-styles.md) 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

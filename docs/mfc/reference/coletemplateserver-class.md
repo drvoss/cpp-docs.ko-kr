@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 561da5060aae3c938dc3e55d0310718a881c1a3b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374848"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753731"
 ---
 # <a name="coletemplateserver-class"></a>COle템플릿서버 클래스
 
@@ -85,7 +85,7 @@ COleTemplateServer();
 
 *pDocTemplate에서* 가리키는 문서 템플릿을 기본 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) 개체에 연결합니다.
 
-```
+```cpp
 void ConnectTemplate(
     REFCLSID clsid,
     CDocTemplate* pDocTemplate,
@@ -127,7 +127,7 @@ BOOL Unregister();
 
 문서 템플릿 문자열에서 파일 형식 정보를 로드하고 해당 정보를 OLE 시스템 레지스트리에 배치합니다.
 
-```
+```cpp
 void UpdateRegistry(
     OLE_APPTYPE nAppType = OAT_INPLACE_SERVER,
     LPCTSTR* rglpszRegister = NULL,
@@ -169,7 +169,7 @@ AFXDISP에 정의된 OLE_APPTYPE 열거형의 값입니다. H. 다음 값 중 �
 
 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [콜레오브젝트팩토리 클래스](../../mfc/reference/coleobjectfactory-class.md)<br/>

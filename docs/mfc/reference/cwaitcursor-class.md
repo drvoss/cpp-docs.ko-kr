@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 48ef8f9c965f54deafcc62451639f8c31021e900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aaa60e26d0a9bf99076f29124097b0629ce6f5d0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373171"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754323"
 ---
 # <a name="cwaitcursor-class"></a>C웨이트커서 클래스
 
@@ -100,7 +100,7 @@ CWaitCursor();
 
 대기 커서를 복원하려면 대기 커서를 다른 커서로 변경할 수 있는 메시지 상자 또는 대화 상자 표시와 같은 작업을 수행한 후 이 함수를 호출합니다.
 
-```
+```cpp
 void Restore();
 ```
 
@@ -114,7 +114,7 @@ void Restore();
 
 [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>

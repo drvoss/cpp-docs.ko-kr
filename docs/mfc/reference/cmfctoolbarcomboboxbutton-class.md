@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372184"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754017"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFC툴바콤보박스버튼 클래스
 
@@ -309,7 +309,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 소스 `CMFCToolBarComboBoxButton` 개체입니다.
 
 ## <a name="cmfctoolbarcomboboxbuttoncreatecombo"></a><a name="createcombo"></a>CMFCToolBarCombo박스 버튼::만들기콤보
@@ -1116,7 +1116,7 @@ TRUE 메서드가 이벤트를 처리하는 경우; 그렇지 않으면 false입
 
 목록에서 모든 항목을 삭제하고 상자를 편집합니다.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 
 콤보 상자 단추의 바로 가기 메뉴 리소스 ID를 설정합니다.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 목록 상자를 삭제할 때 목록 상자의 높이를 설정합니다.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ virtual void SetStyle(UINT nStyle);
 
 콤보 상자 단추의 편집 상자에 텍스트를 설정합니다.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 
@@ -1328,7 +1328,7 @@ void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 【인】 편집 상자에 대한 텍스트가 포함된 문자열에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

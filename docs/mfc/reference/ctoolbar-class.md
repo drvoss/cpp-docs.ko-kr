@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364288"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752213"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 클래스
 
@@ -292,7 +292,7 @@ CToolBar();
 
 이 멤버 함수는 *nIndex에서* 지정한 위치에서 도구 모음 단추 또는 구분 기호의 컨트롤 ID, 스타일 및 이미지 인덱스를 검색합니다.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 
 이 멤버 함수를 호출하여 단추의 명령 ID, 스타일 및 이미지 번호를 설정합니다.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ BOOL SetButtons(
 
 이 멤버 함수를 호출하여 단추 또는 구분 기호의 스타일을 설정하거나 단추를 그룹화합니다.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ BOOL SetButtonText(
 
 이 멤버 함수는 *cyHeight*에 지정된 픽셀 단위로 도구 모음의 높이를 값으로 설정합니다.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ void SetHeight(int cyHeight);
 
 이 멤버 함수를 호출하여 도구 모음단추를 *크기버튼으로*지정된 픽셀 크기로 설정합니다.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);
@@ -715,7 +715,7 @@ void SetSizes(
 
 [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>

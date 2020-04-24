@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: fb47e4373bf53e66dd4af17c89fe2f761858fbfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b0a999f1fd1e3df1b0a971220454397cead02a9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367745"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752602"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFC캡션버튼 클래스
 
@@ -226,7 +226,7 @@ BOOL IsMiniFrameButton() const;
 
 단추 그리기 위치와 창 표시 상태를 설정합니다.
 
-```
+```cpp
 void Move(
     const CPoint& ptTo,
     BOOL bHide = FALSE);
@@ -278,7 +278,7 @@ virtual void OnDraw(
 
 제목 표시줄의 미니 크기를 설정합니다.
 
-```
+```cpp
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```
 
@@ -287,7 +287,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 *bSet*<br/>
 【인】 미니 타이틀 바 높이에 대한 TRUE; 기본 제목 막대 높이에 대한 FALSE입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

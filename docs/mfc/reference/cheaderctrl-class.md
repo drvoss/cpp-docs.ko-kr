@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366863"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750925"
 ---
 # <a name="cheaderctrl-class"></a>C헤더Ctrl 클래스
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 헤더 컨트롤의 스타일을 지정합니다. 헤더 제어 스타일에 대한 설명은 Windows SDK의 [헤더 제어 스타일을](/windows/win32/Controls/header-control-styles) 참조하십시오.
 
 *rect*<br/>
-헤더 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+헤더 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 헤더 컨트롤의 부모 창(일반적으로 )을 `CDialog`지정합니다. NULL이 아니어야 합니다.
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 헤더 컨트롤의 스타일입니다. 헤더 제어 스타일에 대한 설명은 Windows SDK의 [헤더 제어 스타일을](/windows/win32/Controls/header-control-styles) 참조하십시오. 추가 스타일 목록은 [만들기를](#create) 참조하십시오.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -540,10 +540,10 @@ BOOL GetItemDropDownRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iItem*|【인】 스타일이 HDF_SPLITBUTTON 헤더 항목의 0기준 인덱스입니다. 자세한 내용은 `fmt` [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 구조의 멤버를 참조하십시오.|
-|*Lprect*|【아웃】 경계 사각형 정보를 수신하려면 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.|
+|*Lprect*|【아웃】 경계 사각형 정보를 수신하려면 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 헤더 제어 항목의 0기반 인덱스입니다.
 
 *Lprect*<br/>
-경계 사각형 정보를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조의 주소에 대한 포인터입니다.
+경계 사각형 정보를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조의 주소에 대한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -631,9 +631,9 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
-|*Lprect*|【아웃】 경계 사각형 정보를 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.|
+|*Lprect*|【아웃】 경계 사각형 정보를 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -667,7 +667,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*phdhti*|【인, 아웃】 테스트 할 지점을 지정하고 테스트 결과를 받는 [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) 구조에 대한 포인터입니다.|
 
@@ -823,7 +823,7 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iItem*|【인】 헤더 항목의 0기반 인덱스입니다.|
 
@@ -957,7 +957,7 @@ BOOL SetOrderArray(
 
   [CHeaderCtrl::GetOrderArray에](#getorderarray)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

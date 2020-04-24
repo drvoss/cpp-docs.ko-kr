@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: ab8d934ca0c40c7073f2fc6d88549eb8db595b3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 99b4ff27a7686972bcbc85478998b52ed713ab5b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352231"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754266"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 클래스
 
@@ -249,7 +249,7 @@ virtual BOOL OnColorOK();
 
 호출 `DoModal` 후 이 함수를 호출하여 현재 색상 선택을 *clr에*지정된 색상 값으로 강제로 선택합니다.
 
-```
+```cpp
 void SetCurrentColor(COLORREF clr);
 ```
 
@@ -266,7 +266,7 @@ RGB 색상 값입니다.
 
   [CColorDialog::OnColorOK에](#oncolorok)대한 예제를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 드로클리](../../overview/visual-cpp-samples.md)<br/>

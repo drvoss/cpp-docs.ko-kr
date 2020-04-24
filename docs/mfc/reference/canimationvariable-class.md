@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377046"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755065"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 클래스
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ void AddTransition(CBaseTransition* pTransition);
 
 내부 목록에서 스토리보드로전환을 추가합니다.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 
 전환을 지웁션을 지웁습니다.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ TRUE 전환이 성공적으로 생성된 경우 그렇지 않으면 거짓.
 
 IntegerValueChanged 이벤트를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ ValueChanged 이벤트가 활성화되면 프레임워크는 가상 메서드 CA
 
 ValueChanged 이벤트를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 기본값을 설정하고 IUIAnimationVariable COM 개체를 해제합니다.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 애니메이션 변수와 애니메이션 개체 간의 관계를 설정합니다.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 
@@ -444,6 +444,6 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 
 이 메서드는 내부적으로 호출되어 애니메이션 변수와 애니메이션 변수를 캡슐화하는 애니메이션 개체 간의 일대일 관계를 설정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

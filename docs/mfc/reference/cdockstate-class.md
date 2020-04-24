@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375560"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753264"
 ---
 # <a name="cdockstate-class"></a>CDockState 클래스
 
@@ -74,7 +74,7 @@ class CDockState : public CObject
 
 `CDockState` 이 함수를 호출하여 개체에 저장된 모든 도킹 정보를 지웁히 지웁습니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ DWORD GetVersion();
 
 이 함수를 호출하여 레지스트리 또는 에서 상태 정보를 검색합니다. INI 파일입니다.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 이 함수를 호출하여 상태 정보를 레지스트리 또는 에 저장합니다. INI 파일입니다.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 
@@ -140,7 +140,7 @@ void SaveState(LPCTSTR lpszProfileName);
 
 프로필 이름은 응용 프로그램의 의 섹션입니다. INI 파일 또는 컨트롤 막대의 상태 정보를 포함하는 레지스트리입니다. `SaveState`또한 현재 화면 크기를 저장합니다. 레지스트리 또는 에서 컨트롤 막대 정보를 검색할 수 있습니다. INI 파일 `LoadState`.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

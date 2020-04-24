@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375099"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753575"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFC리본메인패널 클래스
 
@@ -97,7 +97,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 최근 파일 목록 메뉴에 텍스트 문자열을 추가합니다.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -117,7 +117,7 @@ void AddRecentFilesList(
 
 리본 응용 프로그램 패널의 아래쪽 창에 리본 요소를 추가합니다.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
@@ -132,7 +132,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 응용 프로그램 단추 패널의 오른쪽 창에 리본 요소를 추가합니다.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);
@@ -162,7 +162,7 @@ CRect GetCommandsFrame() const;
 
 리본 주 패널의 영역을 나타내는 사각형입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

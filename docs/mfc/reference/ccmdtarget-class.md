@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352283"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752719"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 클래스
 
@@ -121,7 +121,7 @@ class CCmdTarget : public CObject
 
 명령이 실행되는 데 눈에 띄는 시간 간격이 걸릴 것으로 예상되는 경우 이 함수를 호출하여 커서를 모래 시계로 표시합니다.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 개체가 포함된 문서 창의 핸들입니다.
 
 *Lprect*<br/>
-*hwndParent에서*오브젝트의 경계 사각형을 정의하는 좌표를 포함하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터.
+*hwndParent에서*오브젝트의 경계 사각형을 정의하는 좌표를 포함하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터.
 
 ### <a name="return-value"></a>Return Value
 
@@ -183,7 +183,7 @@ TRUE 성공, 그렇지 않으면 거짓.
 
 개체에 대한 OLE 자동화를 사용하도록 설정하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ void EnableAutomation();
 
 연결 지점에서 이벤트를 발생시면 됩니다.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ void EnableConnections();
 
 개체의 형식 라이브러리를 활성화합니다.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ void EnableTypeLib();
 
 모래 시계 커서에서 `BeginWaitCursor` 이전 커서로 돌아가기 위해 멤버 함수를 호출한 후 이 함수를 호출합니다.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>매개 변수
 
 *pIID*<br/>
-인터페이스 [ID(GUID)](/previous-versions/cc317743(v%3dmsdn.10))포인터
+인터페이스 ID에 대한 포인터([GUID](/windows/win32/api/guiddef/ns-guiddef-guiddef-guid-guid-guid.)
 
 ### <a name="return-value"></a>Return Value
 
@@ -346,11 +346,11 @@ HRESULT GetTypeInfoOfGuid(
 
 ### <a name="parameters"></a>매개 변수
 
-*lcid*<br/>
+*Lcid*<br/>
 로캘 식별자 `LCID`().
 
-*Guid*<br/>
-형식 설명의 [GUID입니다.](/previous-versions/cc317743(v%3dmsdn.10))
+*guid*<br/>
+[GUID](/windows/win32/api/guiddef/ns-guiddef-guiddef-guid-guid.) 형식 설명입니다.
 
 *ppTypeInfo*<br/>
 인터페이스에 대한 포인터입니다. `ITypeInfo`
@@ -371,7 +371,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="parameters"></a>매개 변수
 
-*lcid*<br/>
+*Lcid*<br/>
 LCID(로캘 식별자)입니다.
 
 *ppTypeLib*<br/>
@@ -514,7 +514,7 @@ virtual void OnFinalRelease();
 
 시스템 커서가 변경된 후(예: 긴 작업 중에 메시지 상자를 열고 닫힌 후) 이 함수를 호출하여 적절한 모래시계 커서를 복원합니다.
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 
@@ -522,7 +522,7 @@ void RestoreWaitCursor();
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>

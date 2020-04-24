@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373781"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754982"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 클래스
 
@@ -384,7 +384,7 @@ CWnd* CreateView(
 
 컨트롤 막대를 프레임 창에 도킹합니다.
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ void DockControlBar(
 
 프레임 창에서 도킹 가능한 컨트롤 막대를 사용하도록 설정하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 이 함수를 호출하여 컨트롤 막대가 프레임 창에 도킹되지 않도록 합니다.
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,7 +570,7 @@ ID와 연결된 컨트롤 막대에 대한 포인터입니다.
 
 이 멤버 함수를 호출하여 프레임 창의 컨트롤 모음에 대한 상태 정보를 `CDockState` 개체에 저장합니다.
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 을 `IntitialUpdateFrame` 통해 새 프레임을 `Create`만든 후 호출합니다.
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 
 이 함수를 호출하여 프레임 창이 소유한 각 컨트롤 막대의 설정을 복원합니다.
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 프레임 창이 소유한 각 컨트롤 막대에 대한 정보를 저장하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 
 지정된 뷰를 [조회]에 대한 활성 보기로 지정합니다.
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ void SetActivePreviewView(CView* pViewNew);
 
 이 멤버 함수를 호출하여 활성 보기를 설정합니다.
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,7 +1068,7 @@ void SetActiveView(
 
 이 멤버 함수를 호출하여 `CDockState` 개체에 저장된 상태 정보를 프레임 창의 컨트롤 모음에 적용합니다.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -1091,7 +1091,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nState*|【인】 메뉴를 표시하거나 숨길지 여부를 지정합니다. *nState* 매개 변수에는 다음 값이 있을 수 있습니다.<br /><br />- AFX_MBS_VISIBLE (0x01) - 숨겨진 경우 메뉴를 표시하지만, 볼 경우 효과가 없습니다.<br />- AFX_MBS_HIDDEN (0x02) - 표시되는 경우 메뉴를 숨깁니다,하지만 숨겨진 경우 효과가 없습니다.|
 
@@ -1113,7 +1113,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nStyle*|【인】 메뉴가 기본적으로 숨겨져 있는지 또는 표시되고 포커스가 있는지 여부를 지정합니다. *nStyle* 매개 변수에는 다음 값이 있을 수 있습니다.<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     메뉴는 항상 표시되며 기본적으로 포커스가 없습니다.<br />- AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     메뉴는 기본적으로 숨김입니다. 메뉴가 숨겨져 있으면 ALT 키를 눌러 메뉴를 표시하고 포커스를 지정합니다. 메뉴가 표시되면 ALT 또는 ESC 키를 눌러 메뉴를 숨깁니다.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (BITWISE 조합(OR)) - 메뉴는 기본적으로 숨김입니다. 메뉴가 숨겨져 있으면 F10 키를 눌러 메뉴를 표시하고 포커스를 지정합니다. 메뉴가 표시되면 F10 키를 눌러 메뉴의 초점을 전환하거나 해제합니다. ALT 또는 ESC 키를 눌러 숨길 때까지 메뉴가 표시됩니다.|
 
@@ -1127,7 +1127,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ID가 0인 상태 표시줄 창에 문자열을 배치하려면 이 함수를 호출합니다.
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ void SetMessageText(UINT nID);
 
 작업 표시줄에 표시되는 Windows 7 진행률 표시줄의 현재 위치를 설정합니다.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 작업 표시줄에 표시되는 Windows 7 진행률 표시줄의 범위를 설정합니다.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ void SetProgressBarRange(
 
 작업 표시줄 단추에 표시되는 진행률 표시기의 유형 및 상태를 설정합니다.
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ BOOL SetTaskbarOverlayIcon(
 
 창 개체의 제목을 설정합니다.
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ void SetTitle(LPCTSTR lpszTitle);
 
 컨트롤 막대를 표시하거나 숨기려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ TRUE이면 컨트롤 막대 표시를 지연합니다. FALSE인 경우 컨트롤
 
 `CFrameWnd` 이 멤버 함수를 호출하여 개체의 하위 창인 모든 창을 표시합니다.
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 
@@ -1273,7 +1273,7 @@ void ShowOwnedWindows(BOOL bShow);
 *bShow*<br/>
 소유한 창을 표시할지 숨길지 여부를 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

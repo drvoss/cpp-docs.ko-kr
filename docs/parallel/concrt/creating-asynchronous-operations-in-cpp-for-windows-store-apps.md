@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353402"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032189"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP 앱에 대한 C++에서 비동기 작업 만들기
 
@@ -54,13 +54,13 @@ Windows 런타임을 사용하면 다양한 프로그래밍 언어의 최상의 
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 비동기 동작을 나타냅니다.
 
-[윈도우::파운데이션::IAsyncAction진행\<TProgress>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[윈도우::파운데이션::IAsyncAction진행\<TProgress>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 진행률을 보고하는 비동기 동작을 나타냅니다.
 
-[창:::기초::IAsync운영\<tresult>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[창:::기초::IAsync운영\<tresult>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 결과를 반환하는 비동기 작업을 나타냅니다.
 
-[윈도우:::기초::IAsync작업진행\<T결과, tProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[윈도우:::기초::IAsync작업진행\<T결과, tProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 결과를 반환하고 진행률을 보고하는 비동기 작업을 나타냅니다.
 
 여기서 *동작(action)* 은 비동기 작업에서 값을 생성하지 않음을 의미하고( `void`를 반환하는 함수와 유사함), *작업(operation)* 은 비동기 작업에서 값을 생성함을 의미합니다. *진행률(progress)* 은 작업에서 진행률 메시지를 호출자에게 보고할 수 있음을 의미합니다. JavaScript, .NET Framework 및 Visual C++에서는 ABI 경계를 넘어 사용할 수 있도록 이러한 인터페이스의 인스턴스를 만드는 방법을 자체적으로 제공합니다. Visual C++의 경우 PPL에서 [concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) 함수를 제공합니다. 이 함수는 작업의 완료를 나타내는 Windows 런타임 비동기 작업 또는 작업을 만듭니다. 이 `create_async` 함수는 작업 함수(일반적으로 lambda 식)를 `task` 사용하며 내부적으로 개체를 만들고 네 개의 비동기 Windows 런타임 인터페이스 중 하나에서 해당 작업을 래핑합니다.
@@ -92,7 +92,7 @@ Windows 런타임을 사용하면 다양한 프로그래밍 언어의 최상의 
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>예: C++ Windows 런타임 구성 요소를 만들고 C에서 사용\#
 
-XAML 및 C#을 사용하여 UI와 C++ Windows 런타임 구성 요소를 정의하여 계산 집약적인 작업을 수행하는 앱을 고려합니다. 이 예에서 C++ 구성 요소는 지정된 범위에서 소수인 수를 계산합니다. 4개의 Windows 런타임 비동기 작업 인터페이스 간의 차이점을 설명하기 위해 **빈 솔루션을** 만들고 이름을 `Primes`지정하여 Visual Studio에서 시작합니다. 그런 다음 솔루션에 **Windows 런타임 구성 요소** 프로젝트를 추가하고 이름을 `PrimesLibrary`로 지정합니다. 생성된 C++ 헤더 파일에 다음 코드를 추가합니다(이 예에서는 Class1.h의 이름을 Primes.h로 변경). 각 `public` 메서드는 네 가지 비동기 인터페이스 중 하나를 정의합니다. 값을 반환 하는 메서드는 [Windows::Foundation::컬렉션::IVector\<int 개체를 반환>.](/uwp/api/Windows.Foundation.Collections.IVector_T_) 진행률을 보고하는 메서드는 완료된 전체 작업의 백분율을 정의하는 `double` 값을 생성합니다.
+XAML 및 C#을 사용하여 UI와 C++ Windows 런타임 구성 요소를 정의하여 계산 집약적인 작업을 수행하는 앱을 고려합니다. 이 예에서 C++ 구성 요소는 지정된 범위에서 소수인 수를 계산합니다. 4개의 Windows 런타임 비동기 작업 인터페이스 간의 차이점을 설명하기 위해 **빈 솔루션을** 만들고 이름을 `Primes`지정하여 Visual Studio에서 시작합니다. 그런 다음 솔루션에 **Windows 런타임 구성 요소** 프로젝트를 추가하고 이름을 `PrimesLibrary`로 지정합니다. 생성된 C++ 헤더 파일에 다음 코드를 추가합니다(이 예에서는 Class1.h의 이름을 Primes.h로 변경). 각 `public` 메서드는 네 가지 비동기 인터페이스 중 하나를 정의합니다. 값을 반환 하는 메서드는 [Windows::Foundation::컬렉션::IVector\<int 개체를 반환>.](/uwp/api/windows.foundation.collections.ivector-1) 진행률을 보고하는 메서드는 완료된 전체 작업의 백분율을 정의하는 `double` 값을 생성합니다.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -190,6 +190,6 @@ MainPage.cpp에서 `MainPage::MakeWordList`, `MainPage::FindCommonWords`및 `Mai
 
 이 예제에서는 지원 `task` `create_async` 하는 개체암시적 취소 토큰을 사용 하 여 취소를 지원할 수 있습니다. 작업이 협조적으로 취소에 응답해야 하는 경우 `cancellation_token` 개체를 사용하도록 작업 함수를 정의합니다. PPL에서의 취소에 대한 자세한 내용은 [Cancellation in the PPL](cancellation-in-the-ppl.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [동시성 런타임](../../parallel/concrt/concurrency-runtime.md)

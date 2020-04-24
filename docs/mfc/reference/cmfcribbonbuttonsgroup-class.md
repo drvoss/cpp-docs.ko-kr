@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: af5919ff2a72fc2aa1eeeb95fc93afbe9e743582
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d690e8bf306234e7b742a4c6a0917e5430d92d10
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375283"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754108"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 클래스
 
@@ -97,7 +97,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 그룹에 단추를 추가합니다.
 
-```
+```cpp
 void AddButton(CMFCRibbonBaseElement* pButton);
 ```
 
@@ -110,7 +110,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 
 그룹에 단추 목록을 추가합니다.
 
-```
+```cpp
 void AddButtons(
     const CList<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& lstButtons);
 ```
@@ -246,7 +246,7 @@ virtual void OnDrawImage(
 
 개체에서 모든 단추를 `CMFCRibbonButtonsGroup` 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -256,7 +256,7 @@ void RemoveAll();
 
 리본 단추 그룹에 이미지를 할당합니다.
 
-```
+```cpp
 void SetImages(
     CMFCToolBarImages* pImages,
     CMFCToolBarImages* pHotImages,
@@ -296,7 +296,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

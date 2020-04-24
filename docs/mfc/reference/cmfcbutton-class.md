@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367786"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754875"
 ---
 # <a name="cmfcbutton-class"></a>CMFC버튼 클래스
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 도구 설명의 전체 텍스트를 큰 도구 설명 창에 표시할지 또는 작은 도구 설명 창에 텍스트의 잘린 버전을 표시할지 지정합니다.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 단추 텍스트 글꼴이 응용 프로그램 메뉴 글꼴과 동일한지 여부를 지정합니다.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 단추를 자동 반복 모드로 설정합니다.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 
 선택된 단추의 이미지를 설정합니다.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 단추 텍스트의 배경색을 설정합니다.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ void SetFaceColor(
 
 단추의 이미지를 설정합니다.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ void SetImage(
 
 커서 이미지를 설정합니다.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 커서를 손 의 이미지로 설정합니다.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ void SetMouseCursorHand();
 
 개체를 `CMenuImages` 사용하여 단추 이미지를 설정합니다.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -936,7 +936,7 @@ void SetStdImage(
 
 선택되지 않은 단추에 대해 단추 텍스트의 색상을 설정합니다.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 선택한 단추에 대해 단추 텍스트의 색상을 설정합니다.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 도구 팁을 단추와 연결합니다.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 
@@ -998,7 +998,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 
 기본적으로 이 메서드는 10픽셀의 수평 여백과 5픽셀의 세로 여백을 포함하는 새 크기를 계산합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

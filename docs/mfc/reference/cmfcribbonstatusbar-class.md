@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368826"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754048"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFC리본상태 바 클래스
 
@@ -140,7 +140,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 리본 상태 표시줄에 동적 요소를 추가합니다.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 
 리본 상태 표시줄에 새 리본 요소를 추가합니다.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 리본 상태 표시줄의 확장 영역에 리본 요소를 추가합니다.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ void AddExtendedElement(
 
 리본 상태 표시줄에 구분 기호를 추가합니다.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 리본 상태 표시줄에서 모든 요소를 제거합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ TRUE 지정된 *uiID가* 있는 요소가 제거된 경우 그렇지 않으면 F
 
 리본 상태 표시줄의 정보 모드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 
@@ -517,7 +517,7 @@ void SetInformation(LPCTSTR lpszInfo);
 
 lpszInfo가 NULL이면 상태 표시줄이 일반 모드로 되돌아갑니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374989"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753863"
 ---
 # <a name="coleipframewndex-class"></a>콜레IP프레임언덱스 클래스
 
@@ -194,7 +194,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>콜레IP프레임WndEx::애드독사이트
 
-```
+```cpp
 void AddDockSite();
 ```
 
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>콜레IP프레임WndEx::D오크파인
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -302,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>콜레IP프레임WndEx::인에이블파네메뉴
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -471,7 +471,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 프레임워크가 사용자 정의 도구 모음에 할당하는 다양한 제어 아이디를 지정합니다.
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -877,7 +877,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::제거파네에서독매니저
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -900,7 +900,7 @@ void RemovePaneFromDockManager(
 
 프레임 창에 속하는 창에 지정된 도킹 상태를 적용합니다.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -917,7 +917,7 @@ void SetDockState(const CDockState& state);
 
 더미 항목을 검색하고 지정된 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -939,7 +939,7 @@ void SetupToolbarMenu(
 
 ## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>콜레IP프레임WndEx::쇼파인
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -975,7 +975,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

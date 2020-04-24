@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376109"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753746"
 ---
 # <a name="coleserveritem-class"></a>콜레서버아이템 클래스
 
@@ -175,7 +175,7 @@ class COleServerItem : public CDocItem
 
 이 함수를 호출하여 OLE 항목의 프레젠테이션 및 변환 `COleDataSource` 형식을 지정된 개체에 배치합니다.
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ COleServerItem(
 
 이 함수를 호출하여 OLE 항목을 클립보드에 복사합니다.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ DROPEFFECT 열거형의 값입니다. DROPEFFECT_MOVE 경우 원본 데이터를
 
 이 함수를 호출하여 지정된 [COleDataSource](../../mfc/reference/coledatasource-class.md) 개체를 [CopyToClipboard라고](#copytoclipboard) 하는 경우 클립보드에 복사할 모든 데이터를 채웁니다(DoDragDrop이라고 하는 경우 동일한 데이터도 전송됨). [DoDragDrop](#dodragdrop)
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ COleServerDoc* GetDocument() const;
 
 이 함수를 호출하여 OLE 항목에 대한 CF_EMBEDSOURCE 데이터를 가져옵니다.
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ OLE 항목에 대한 CF_LINKSOURCE 데이터를 수신하는 [STGMEDIUM](/window
 
 이 함수를 호출하여 OLE 항목에 대한 CF_OBJECTDESCRIPTOR 데이터를 가져옵니다.
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ CSize m_sizeExtent;
 
 연결된 항목이 변경된 후 이 함수를 호출합니다.
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -903,7 +903,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_DOCPRINT 항목은 파일 메뉴에서 인쇄 명령을 사용하여 인쇄된 것처럼 표시됩니다.
 
-*크기*<br/>
+*size*<br/>
 OLE 항목의 새 크기를 지정하는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 구조입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -982,7 +982,7 @@ virtual void OnUpdateItems();
 
 연결된 항목을 만들 때 이 함수를 호출하여 이름을 설정합니다.
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 
@@ -995,7 +995,7 @@ void SetItemName(LPCTSTR lpszItemName);
 
 이름은 문서 내에서 고유해야 합니다. 연결된 항목을 편집하기 위해 서버 응용 프로그램이 호출되면 응용 프로그램은 이 이름을 사용하여 항목을 찾습니다. 포함된 항목에 대해 이 함수를 호출할 필요가 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem 클래스](../../mfc/reference/cdocitem-class.md)<br/>

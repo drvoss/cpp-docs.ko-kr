@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369014"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754747"
 ---
 # <a name="cdaodatabase-class"></a>CDao데이터베이스 클래스
 
@@ -315,7 +315,7 @@ virtual void Create(
 
 이 멤버 함수를 호출하여 데이터베이스의 기본 테이블에 있는 하나 이상의 필드와 외래 테이블(데이터베이스의 다른 테이블)의 하나 이상의 필드 간의 관계를 설정합니다.
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 이 멤버 함수를 호출하여 `CDaoDatabase` 개체의 QueryDefs 컬렉션에서 지정된 쿼리def(저장된 쿼리)를 삭제합니다.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 이 멤버 함수를 호출하여 데이터베이스 개체의 관계 컬렉션에서 기존 관계를 삭제합니다.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 이 멤버 함수를 호출하여 지정된 테이블과 `CDaoDatabase` 개체의 TableDefs 컬렉션에서 모든 데이터를 삭제합니다.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ tabledef 개체를 만드는 방법에 대한 자세한 내용은 [클래스 CDa
 
 이 멤버 함수를 호출하여 작업 쿼리를 실행하거나 데이터베이스에서 SQL 문을 실행합니다.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ short GetQueryDefCount();
 
 이 멤버 함수를 호출하여 데이터베이스에 정의된 쿼리에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ short GetRelationCount();
 
 데이터베이스의 관계 컬렉션에서 지정된 관계에 대한 정보를 가져오려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ short GetTableDefCount();
 
 이 멤버 함수를 호출하여 데이터베이스에 정의된 테이블에 대한 다양한 종류의 정보를 가져옵니다.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ virtual void Open(
 
 연결된 데이터베이스시간 초과에 대한 후속 작업 전에 허용하도록 기본 초 수를 재정의하려면 이 멤버 함수를 호출합니다.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 
@@ -890,7 +890,7 @@ void SetQueryTimeout(short nSeconds);
 
 관련 정보는 DAO 도움말의 "쿼리 시간 삭제 속성" 항목을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: f28ba975b060de149edaa5e3b93eac61d4cd6703
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375304"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752478"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFC리본베이스요소 클래스
 
@@ -547,7 +547,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 소스 [CMFC리본베이스요소](../../mfc/reference/cmfcribbonbaseelement-class.md) 개체입니다.
 
 ### <a name="remarks"></a>설명
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*종류*<br/>
+*type*<br/>
 【인】 이미지 유형이 값을 들어 올렸다. 가능한 값 목록은 비고 섹션을 참조하십시오.
 
 *rectImage*<br/>
@@ -1893,7 +1893,7 @@ virtual void OnShowPopupMenu();
 
 리본 요소에 대한 팝업 메뉴를 닫고 부모 메뉴에 가까운 메시지를 보냅니다.
 
-```
+```cpp
 void PostMenuCommand(UINT uiCmdId);
 ```
 
@@ -1972,7 +1972,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 데이터 항목을 리본 요소와 연결합니다.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1985,7 +1985,7 @@ void SetData(DWORD_PTR dwData);
 
 리본 요소를 팝업 명령으로 표시하도록 설정합니다.
 
-```
+```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```
 
@@ -2129,7 +2129,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 리본 요소에 대한 표시 사각형의 치수를 설정합니다.
 
-```
+```cpp
 void SetRect(CRect rect);
 ```
 
@@ -2200,7 +2200,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 
 리본 요소의 가시성을 설정합니다.
 
-```
+```cpp
 void SetVisible(BOOL bIsVisible);
 ```
 
@@ -2273,7 +2273,7 @@ TRUE 리본 요소가 포커스가 있는 경우; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366073"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753885"
 ---
 # <a name="coledispatchdriver-class"></a>올레디스패치드라이버 클래스
 
@@ -103,7 +103,7 @@ OLE 디스패치 인터페이스는 개체의 메서드 및 속성에 대한 액
 
 `AttachDispatch` 멤버 함수를 호출하여 `IDispatch` 개체에 대한 `COleDispatchDriver` 포인터를 연결합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ LPDispatch 유형에 대한 자세한 내용은 Windows SDK에서 [IDispatch 인
 
 *dwDispID에*의해 지정된 개체 속성을 가져옵니다.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ void GetProperty(
 
 wFlags 에 의해 지정된 컨텍스트에서 *dwDispID에*의해 지정된 개체 메서드 또는 속성을 *호출합니다.*
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,8 +282,8 @@ void AFX_CDECL InvokeHelper(
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**긴**|
-|VT_R4|**플 로트**|
+|VT_I4|**long**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**날짜**|
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 연결을 `IDispatch` 해제합니다. 자세한 내용은 [IDispatch 인터페이스 구현을](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 참조하십시오.
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ void ReleaseDispatch();
 
 *dwDispID로*지정된 OLE 개체 속성을 설정합니다.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -406,7 +406,7 @@ void AFX_CDECL SetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 ACDUAL](../../overview/visual-cpp-samples.md)<br/>

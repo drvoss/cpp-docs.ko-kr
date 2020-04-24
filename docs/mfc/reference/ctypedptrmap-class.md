@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373249"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754368"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 클래스
 
@@ -82,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 에서 `rNextPosition`맵 요소를 검색한 `rNextPosition` 다음 업데이트하여 맵의 다음 요소를 참조합니다.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -127,7 +127,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 이 맵 클래스의 기본 클래스를 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 살펴볼 요소의 키입니다.
 
 *값*<br/>
@@ -160,7 +160,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 *BASE_CLASS*<br/>
 이 맵 클래스의 기본 클래스를 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 맵에서 조회하거나 생성할 요소의 키입니다.
 
 ### <a name="remarks"></a>설명
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *키*<br/>
 맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 제거할 요소에 대한 키입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -195,7 +195,7 @@ BOOL RemoveKey(KEY key);
 
 이 멤버 `BASE_CLASS`함수는 **::SetAt 를 호출합니다.**
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *키*<br/>
 맵 키의 유형을 지정하는 템플릿 매개 변수입니다.
 
-*키*<br/>
+*key*<br/>
 newValue의 키 값을 지정합니다.
 
 *newValue*<br/>
@@ -214,7 +214,7 @@ newValue의 키 값을 지정합니다.
 
 더 자세한 설명은 [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 수집](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

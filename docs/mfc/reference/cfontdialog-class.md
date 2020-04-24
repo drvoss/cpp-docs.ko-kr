@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 6ece239496def9fd65a95a622ac3c475fe5becea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a8e24b68f377235c1f1e21fbcd5618aebbe299a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373832"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755020"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 클래스
 
@@ -196,7 +196,7 @@ IDOK를 반환하는 경우 `DoModal` 다른 멤버 함수를 호출하여 사�
 
 선택한 글꼴의 문자 서식을 검색합니다.
 
-```
+```cpp
 void GetCharFormat(CHARFORMAT& cf) const;
 ```
 
@@ -225,7 +225,7 @@ COLORREF GetColor() const;
 
 이 함수를 호출하여 현재 선택된 글꼴의 특성을 [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) 구조체의 멤버에 할당합니다.
 
-```
+```cpp
 void GetCurrentFont(LPLOGFONT lplf);
 ```
 
@@ -392,7 +392,7 @@ CHOOSEFONT m_cf;
 
 [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)<br/>

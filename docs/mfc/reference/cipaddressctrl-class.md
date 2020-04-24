@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372347"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754969"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 클래스
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 IP 주소 제어의 내용을 지웁니다.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용합니다. 컨트롤이 자식 창이어야 하기 때문에 WS_CHILD 스타일을 포함해야 합니다. 창 스타일 목록은 Windows SDK의 [창 만들기를](/windows/win32/api/winuser/nf-winuser-createwindoww) 참조하십시오.
 
 *rect*<br/>
-IP 주소 컨트롤의 크기와 위치에 대한 참조입니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+IP 주소 컨트롤의 크기와 위치에 대한 참조입니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 IP 주소 컨트롤의 상위 창에 대한 포인터입니다. NULL이 아니어야 합니다.
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용합니다. 컨트롤이 자식 창이어야 하기 때문에 WS_CHILD 스타일을 포함해야 합니다. 창 스타일 목록은 Windows SDK의 [창 만들기를](/windows/win32/api/winuser/nf-winuser-createwindoww) 참조하십시오.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -248,7 +248,7 @@ BOOL IsBlank() const;
 
 IP 주소 컨트롤의 네 필드 모두에 대한 주소 값을 설정합니다.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ void SetAddress(DWORD dwAddress);
 
 키보드 포커스를 IP 주소 제어의 지정된 필드로 설정합니다.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ void SetFieldFocus(WORD nField);
 
 IP 주소 제어에서 지정된 필드의 범위를 설정합니다.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,
@@ -329,7 +329,7 @@ void SetFieldRange(
 
 이 멤버 함수는 Windows SDK에 설명된 대로 IPM_SETRANGE Win32 [메시지의](/windows/win32/Controls/ipm-setrange)동작을 구현합니다. 두 매개 변수인 *nLower* 및 *nUpper를*사용하여 Win32 메시지와 함께 사용되는 *wRange* 매개 변수 대신 필드의 하한및 상한을 나타냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

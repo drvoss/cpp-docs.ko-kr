@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377359"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753408"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBars커렌드디아로그 클래스
 
@@ -120,7 +120,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 명령 페이지의 명령 목록에 도구 모음 **단추를 삽입합니다.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 **명령** 페이지의 명령 목록에 항목을 추가하여 지정된 메뉴의 모든 항목을 나타냅니다.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ virtual BOOL Create();
 
 **사용자 지정** 대화 상자를 사용하여 새 도구 모음만들기를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 제공된 `CComboBox` 개체를 **사용자 지정** 대화 상자에 각 명령 범주의 이름으로 채웁니다.
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ void FillCategoriesComboBox(
 
 제공된 `CListBox` 개체를 **사용자 지정** 대화 상자에 각 명령 범주의 이름으로 채웁니다.
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ BOOL RenameCategory(
 
 명령 페이지의 명령 목록 상자에서 도구 모음 **단추를 바꿉습니다.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);
@@ -750,7 +750,7 @@ TRUE 메서드가 성공하면 그렇지 않으면 거짓.
 
 사용자 범주 설정은 현재 프레임워크에서 사용되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

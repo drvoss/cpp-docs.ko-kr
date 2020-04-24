@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bb70acb43f2e73ade86b753ebbb7949759ce88d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754605"
 ---
 # <a name="cdbvariant-class"></a>CDB변형 클래스
 
@@ -119,7 +119,7 @@ CDBVariant();
 
 이 멤버 함수를 `CDBVariant` 호출하여 개체를 지웁습니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -242,7 +242,7 @@ ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체에 대�
 
 데이터 `m_pstringW` 멤버는 공용 구조에 속합니다. 액세스하기 `m_pstringW`전에 먼저 [CDBVariant:m_dwType](#m_dwtype)값을 확인합니다. DBVT_WSTRING `m_dwType` 설정된 경우 유효한 `m_pstringW` 포인터가 포함되어 있습니다. 그렇지 않으면 `m_pstringW` 액세스하면 신뢰할 수 없는 결과가 생성됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [C레코드 집합 클래스](../../mfc/reference/crecordset-class.md)

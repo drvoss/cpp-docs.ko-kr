@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: 80a90dfa37bc1d2c3c84e6451ae23af7ded767c2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f4a5b8b52d8bd37d1ed83618e7451dd85f84c32
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369691"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755124"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 클래스
 
@@ -102,7 +102,7 @@ CAnimationSize 클래스는 두 개의 CAnimationVariable 개체를 캡슐화하
 
 폭 및 높이에 대한 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pCXTransition,
     CBaseTransition* pCYTransition);
@@ -272,7 +272,7 @@ operator CSize();
 
 SzSrc를 CAnimationSize에 할당합니다.
 
-```
+```cpp
 void operator=(const CSize& szSrc);
 ```
 
@@ -289,7 +289,7 @@ SzSrc를 CAnimationSize에 할당합니다. 이 연산자는 SetDefaultValue를 
 
 기본값을 설정합니다.
 
-```
+```cpp
 void SetDefaultValue(const CSize& szDefault);
 ```
 
@@ -302,6 +302,6 @@ void SetDefaultValue(const CSize& szDefault);
 
 이 함수를 사용하여 기본값을 애니메이션 오브젝트로 설정합니다. 이 메서드는 기본값을 애니메이션 크기의 너비 및 높이에 할당합니다. 또한 기본 COM 개체가 생성된 경우 다시 만듭니다. 이 애니메이션 개체를 이벤트에 구독한 경우(ValueChanged 또는 IntegerValueChanged) 이러한 이벤트를 다시 활성화해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

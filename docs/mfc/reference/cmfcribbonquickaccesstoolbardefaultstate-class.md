@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368868"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753518"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 클래스
 
@@ -69,7 +69,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 빠른 액세스 도구 모음의 기본 상태에 명령을 추가합니다.
 
-```
+```cpp
 void AddCommand(
     UINT uiCmd,
     BOOL bIsVisible=TRUE);
@@ -91,13 +91,13 @@ CMFC리본퀵액세스툴기본상태에 명령을 추가하면 세 가지 결�
 
 한 빠른 액세스 도구 모음의 속성을 다른 도구 모음에 복사합니다.
 
-```
+```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*Src*<br/>
+*src*<br/>
 【인】 복사할 소스 `CMFCRibbonQuickAccessToolBarDefaultState` 개체에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
@@ -120,7 +120,7 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 
 빠른 액세스 도구 모음에서 기본 명령 목록을 지웁울 수 있습니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -128,7 +128,7 @@ void RemoveAll();
 
 이 함수는 이 인스턴스에서 [CMFCRibbonQuickAccessBarDefaultState::AddCommand추가에](#addcommand) 대해 이전 호출한 모든 명령을 제거합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

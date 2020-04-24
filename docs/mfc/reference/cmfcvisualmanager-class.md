@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319993"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752839"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFC비주얼매니저 클래스
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFC 비주얼 매니저::Dodraw헤더정렬로우
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFC 비주얼 매니저::사용 도구 모음 단추 채우기
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -5011,7 +5011,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 비활성화된 도구 모음 이미지에 대해 엠보싱 모드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 
 메뉴 또는 도구 모음에서 비활성 이미지에 대한 조명 효과를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 
 메뉴 단추가 평평하게 표시되는지 여부를 나타내는 플래그를 설정합니다. 그렇지 않으면 3차원으로 나타납니다.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 
 메뉴 그림자의 너비와 높이를 설정합니다.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ void SetMenuShadowDepth(int nDepth);
 
 [CMFCVisualManager가](../../mfc/reference/cmfcvisualmanager-class.md) 강조 표시된 이미지에 대한 그림자를 표시하는지 여부를 나타내는 플래그를 설정합니다.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 
@@ -5092,7 +5092,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 
 기본적으로 이 기능은 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

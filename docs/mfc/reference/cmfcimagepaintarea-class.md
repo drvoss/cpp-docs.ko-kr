@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 4e73bd7bc1a28317dbfc452df1f45541dfcbfd21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374442"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754270"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 클래스
 
@@ -93,7 +93,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pParentDlg*|【인】 이미지 편집기의 부모인 대화 상자에 대한 포인터입니다.|
 
 ## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFC이미지페인트영역::겟모드
@@ -112,7 +112,7 @@ IMAGE_EDIT_MODE GetMode() const;
 
 그림 영역에 대한 비트맵 이미지를 설정합니다.
 
-```
+```cpp
 void SetBitmap(CBitmap* pBitmap);
 ```
 
@@ -120,7 +120,7 @@ void SetBitmap(CBitmap* pBitmap);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*pBitmap*|【인】 표시할 새 비트맵 이미지입니다.|
 
 ### <a name="remarks"></a>설명
@@ -131,7 +131,7 @@ void SetBitmap(CBitmap* pBitmap);
 
 현재 드로잉 색상을 설정합니다.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*색*|【인】 새 그리기 색상입니다.|
 
 ### <a name="remarks"></a>설명
@@ -152,7 +152,7 @@ void SetColor(COLORREF color);
 
 현재 도면 모드를 설정합니다.
 
-```
+```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 
@@ -160,10 +160,10 @@ void SetMode(IMAGE_EDIT_MODE mode);
 
 |||
 |-|-|
-|매개 변수|설명|
+|매개 변수|Description|
 |*모드*|【인】 현재 도면 모드를 지정하는 [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 값입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

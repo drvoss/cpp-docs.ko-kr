@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171881"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032306"
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
 
 이 예제에서는 C++/CLI의 `...` 구문을 사용하여 인수 개수가 가변적인 함수를 구현하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 항목은 C++/CLI에 적용됩니다. ISO 표준 C++의 `...` 사용 방법에 대한 자세한 내용은 [줄임표 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 및 [후위 식](../cpp/postfix-expressions.md)의 줄임표 및 기본 인수를 참조하세요.
+> 이 항목은 C++/CLI에 적용됩니다. ISO 표준 `...` C++에서 사용에 대한 자세한 내용은 [Postfix 식에서](../cpp/postfix-expressions.md) [타원 및 다발성 템플릿](../cpp/ellipses-and-variadic-templates.md) 및 타원 및 기본 인수를 참조하십시오.
 
 `...`를 사용하는 매개 변수는 매개 변수 목록의 마지막 매개 변수여야 합니다.
 
@@ -101,6 +101,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [배열](arrays-cpp-component-extensions.md)

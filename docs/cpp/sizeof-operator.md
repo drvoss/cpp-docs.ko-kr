@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 8789bb5e0e363458edffa7207ea1e138aae4d284
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365575"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032293"
 ---
 # <a name="sizeof-operator"></a>sizeof 연산자
 
 **문자**문자의 크기에 대한 그 산모의 크기를 산출합니다.
 
 > [!NOTE]
-> 연산자에 `sizeof ...` 대한 자세한 내용은 [타원 및 Variadic 템플릿을](../cpp/ellipses-and-variadic-templates.md)참조하십시오.
+> 연산자에 `sizeof ...` 대한 자세한 내용은 [타원 및 다변 템플릿을](../cpp/ellipses-and-variadic-templates.md)참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -103,7 +103,7 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)<br/>
 [키워드](../cpp/keywords-cpp.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc5d6d99c326fba7020e8c5040c3bf28d09f8f0a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361785"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754123"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 클래스
 
@@ -115,7 +115,7 @@ TRUE 창이 성공적으로 생성된 경우 그렇지 않으면 false입니다.
 
 도구 설명 컨트롤을 비활성화하고 숨깁니다.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -127,7 +127,7 @@ void Deactivate();
 
 도구 설명 컨트롤의 마지막 위치의 좌표를 반환합니다.
 
-```
+```cpp
 void GetLastRect(CRect& rect) const;
 ```
 
@@ -140,7 +140,7 @@ void GetLastRect(CRect& rect) const;
 
 도구 설명 컨트롤을 숨깁니다.
 
-```
+```cpp
 void Hide();
 ```
 
@@ -148,7 +148,7 @@ void Hide();
 
 도구 설명 텍스트와 도구 설명 창의 테두리 사이의 간격을 설정합니다.
 
-```
+```cpp
 void SetTextMargin(int nTextMargin);
 ```
 
@@ -161,7 +161,7 @@ void SetTextMargin(int nTextMargin);
 
 도구 설명 컨트롤을 표시합니다.
 
-```
+```cpp
 void Track(
     CRect rect,
     const CString& strText);
@@ -179,7 +179,7 @@ void Track(
 
 이 메서드는 정류에 의해 지정된 위치와 크기로 도구 설명 컨트롤을 *표시합니다.* 이 메서드가 마지막으로 호출된 이후 위치, 크기 및 텍스트가 변경되지 않은 경우 이 메서드는 영향을 주지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

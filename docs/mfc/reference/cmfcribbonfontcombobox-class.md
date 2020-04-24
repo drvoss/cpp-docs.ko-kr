@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 822f4f6fe76bb5b82b455daec54ed96568ea6ba7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbf28787e0c0f7d89586fbf98632bd9172c12eed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375162"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754161"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFC리본글꼴콤보박스 클래스
 
@@ -93,7 +93,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 리본의 콤보 상자를 글꼴로 채웁니다.
 
-```
+```cpp
 void BuildFonts(
     int nFontType = DEVICE_FONTTYPE | RASTER_FONTTYPE | TRUETYPE_FONTTYPE,
     BYTE nCharSet = DEFAULT_CHARSET,
@@ -167,7 +167,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 리본의 콤보 상자를 이전에 지정된 글꼴 유형, 문자 집합, 피치 및 패밀리의 글꼴로 채웁니다.
 
-```
+```cpp
 void RebuildFonts();
 ```
 
@@ -244,7 +244,7 @@ BYTE GetPitchAndFamily() const;
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

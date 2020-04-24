@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367521"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752396"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 클래스
 
@@ -123,7 +123,7 @@ BOOL AddItem(
 
 자식 창(일반적으로 컨트롤)을 동적 레이아웃 관리자가 제어하는 창 목록에 추가합니다.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ CSize GetMinSize();
 
 창의 현재 클라이언트 영역에 대한 사각형을 검색합니다.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ static MoveSettings MoveVertical(int nRatio);
 
 레이아웃이 그 이하로 조정되지 않는 창 크기를 설정합니다.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 레이아웃이 그 이하로 조정되지 않는 원하는 크기입니다.
 
 ### <a name="remarks"></a>설명
@@ -518,7 +518,7 @@ static SizeSettings SizeVertical(int nRatio);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

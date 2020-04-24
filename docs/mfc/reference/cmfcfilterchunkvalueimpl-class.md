@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367503"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752368"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 클래스
 
@@ -105,7 +105,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 사용하려면 올바른 종류의 CMFCFilterChunkValueImpl 클래스를 생성하기만 하면 됩니다.
 
-예제:
+예:
 
 CMFC필터청크블심플청크;
 
@@ -129,7 +129,7 @@ hr = 청크. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
 
 청크밸값을 지웁히 바웁습니다.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -178,7 +178,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 
 이 청크 값을 다른 값에서 초기화합니다.
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -327,7 +327,7 @@ HRESULT SetBoolValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -367,7 +367,7 @@ HRESULT SetChunk(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -411,7 +411,7 @@ HRESULT SetDwordValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -455,7 +455,7 @@ HRESULT SetFileTimeValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -499,7 +499,7 @@ HRESULT SetInt64Value(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -543,7 +543,7 @@ HRESULT SetIntValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -587,7 +587,7 @@ HRESULT SetLongValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -631,7 +631,7 @@ HRESULT SetSystemTimeValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -675,7 +675,7 @@ HRESULT SetTextValue(
 *청크 타입*<br/>
 플래그는 이 청크에 텍스트 형식 또는 값 형식 속성이 포함되어 있는지 여부를 나타냅니다. 플래그 값은 CHUNKSTATE 열거형에서 가져온 값입니다.
 
-*로캘*<br/>
+*locale*<br/>
 텍스트 청크와 관련된 언어 및 하위 언어입니다. 청크 로캘은 문서 인덱서에서 텍스트의 적절한 단어 나누기를 수행하는 데 사용됩니다. 청크가 텍스트 형식이나 데이터 형식VT_LPWSTR VT_LPSTR 또는 VT_BSTR 있는 값 형식이 아니면 이 필드는 무시됩니다.
 
 *cwcLen소스*<br/>
@@ -693,6 +693,6 @@ HRESULT SetTextValue(
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

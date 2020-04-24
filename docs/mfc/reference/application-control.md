@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363551"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752861"
 ---
 # <a name="application-control"></a>애플리케이션 컨트롤
 
@@ -104,7 +104,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 에 대한 `AfxOleGetUserCtrl`참조에 설명된 사용자 제어 플래그를 설정하거나 지웁니다.
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 
 응용 프로그램의 활성 개체 수에 대한 프레임워크의 전역 수를 증가시입니다.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ void AFXAPI AfxOleLockApp();
 
 응용 프로그램에서 활성 개체의 프레임워크 수를 감소시입니다.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -284,7 +284,7 @@ OLE 응용 프로그램의 형식을 지정하는 OLE_APPTYPE 열거형에서 �
 
 *개체 형식에* 대 한 사용자 인터페이스를 구현 합니다 개체 입니다.
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,
@@ -365,6 +365,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **헤더:** afxwin.h
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](mfc-macros-and-globals.md)<br/>

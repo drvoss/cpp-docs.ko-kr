@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374919"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753838"
 ---
 # <a name="colemessagefilter-class"></a>COleMessage필터 클래스
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 OLE 호출 중에 메시지 보류 중인 지연이 만료될 때 표시되는 사용 중인 대화 상자를 활성화하고 사용하지 않도록 [설정합니다(SetRetryReply](#setretryreply)참조).
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 
 OLE 호출 중에 키보드 또는 마우스 메시지가 보류 중이고 통화 시간이 시간 지정된 경우 표시되는 "응답하지 않음" 대화 상자를 활성화하고 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ BOOL Register();
 
 [등록](#register)에 대한 호출에 의해 수행된 이전 등록을 해지합니다.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ void Revoke();
 
 이 함수는 응용 프로그램의 "사용 중인 응답"을 설정합니다.
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ COMPOBJ에 `SERVERCALL` 정의된 열거형의 값입니다. H. 다음 값 중 �
 
 추가 작업을 수행 하기 전에 호출 응용 프로그램 호출 응용 프로그램에서 호출 된 응용 프로그램의 응답을 대기 하는 기간 확인 합니다.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 호출 된 응용 프로그램에서 사용 하지 않는 응답을 받을 때 호출 응용 프로그램의 작업을 결정 합니다.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 
@@ -284,7 +284,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 
 대화 상자를 사용하지 않도록 설정하면 현재 "재시도 회신"이 항상 사용 중인 응용 프로그램에 대한 호출에 사용됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [CCmdTarget 클래스](../../mfc/reference/ccmdtarget-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

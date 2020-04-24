@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367529"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752371"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 클래스
 
@@ -133,7 +133,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 현재 편집 찾아보기 컨트롤에 찾아보기 단추를 표시하거나 표시되지 않습니다.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ TRUE 찾아보기 버튼을 표시합니다. FALSE는 찾아보기 버튼을 표
 
 현재 편집 찾아보기 컨트롤에 찾아보기 단추를 표시하고 *컨트롤을 파일 찾아보기* 모드로 넣습니다.
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ void EnableFileBrowseButton(
 
 현재 편집 찾아보기 컨트롤에 찾아보기 단추를 표시하고 *폴더 찾아보기* 모드로 컨트롤을 넣습니다.
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ TRUE 단추를 강조 표시 하는 경우; 그렇지 않으면 false입니다.
 
 편집 찾아보기 컨트롤의 찾아보기 단추에 사용자 지정 이미지를 설정합니다.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);
@@ -337,7 +337,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

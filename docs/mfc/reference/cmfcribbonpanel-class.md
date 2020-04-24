@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368892"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753551"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFC리본패널 클래스
 
@@ -432,7 +432,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 리본 패널에 포함된 모든 리본 요소를 검색합니다.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 지정된 명령 ID가 있는 리본 요소를 지정된 배열에 추가합니다.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 리본 패널의 모든 리본 요소에 대한 명령 ID를 검색합니다.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ BOOL bDelete = TRUE);
 
 리본 패널에서 모든 리본 요소를 삭제합니다.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ TRUE 원래 리본 요소가 새 리본 요소로 성공적으로 대체된 경�
 
 표시 사각형 내에서 리본 요소의 수직 위치의 중심을 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 사용자 정의 데이터를 리본 패널과 연결합니다.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 동일한 열에서 리본 요소의 너비를 조정하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 
 리본 패널의 기본 단추에 대한 키 팁을 설정합니다.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 지정된 리본 요소에 포커스를 설정합니다.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 
 갤러리를 스크롤하여 지정된 리본 요소를 표시합니다.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ TRUE 부모 리본에 Windows 7 모양이 있는 경우; 그렇지 않으면 거
 
 보이는 요소의 배열을 검색합니다.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1248,7 +1248,7 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

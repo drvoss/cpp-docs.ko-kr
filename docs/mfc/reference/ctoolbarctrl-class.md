@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365088"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752212"
 ---
 # <a name="ctoolbarctrl-class"></a>C툴바크터터 클래스
 
@@ -523,7 +523,7 @@ int AddStrings(LPCTSTR lpszStrings);
 
 전체 도구 모음 컨트롤의 크기를 조정합니다.
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -543,7 +543,7 @@ BOOL ChangeBitmap(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*idButton*|【인】 새 비트맵을 수신하는 단추의 명령 식별자입니다.|
 |*iBitmap*|【인】 현재 도구 모음 컨트롤의 이미지 목록에서 이미지의 0기반 인덱스입니다.|
@@ -627,7 +627,7 @@ virtual BOOL Create(
 도구 모음 컨트롤의 스타일을 지정합니다. 도구 모음은 항상 WS_CHILD 스타일이어야 합니다. 또한 비고 아래에 설명된 대로 도구 모음 스타일과 창 스타일의 조합을 지정할 수 **있습니다.**
 
 *rect*<br/>
-선택적으로 도구 모음 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조일 수 있습니다.
+선택적으로 도구 모음 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
 도구 모음 컨트롤의 상위 창을 지정합니다. NULL이 아니어야 합니다.
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 도구 모음 컨트롤의 스타일을 지정합니다. 도구 모음은 항상 WS_CHILD 스타일이어야 합니다. 또한 만들기의 **설명** 절 절절에 설명된 대로 도구 모음 스타일과 창 스타일의 조합을 지정할 수 [있습니다.](#create)
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
 컨트롤의 부모인 창에 대한 포인터입니다.
@@ -713,7 +713,7 @@ CToolBarCtrl();
 
 도구 모음 사용자 지정 대화 상자가 표시됩니다.
 
-```
+```cpp
 void Customize();
 ```
 
@@ -901,7 +901,7 @@ CString GetButtonText(int idButton) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*idButton*|【인】 표시 텍스트가 검색되는 단추의 식별자입니다.|
 
@@ -923,7 +923,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpColorScheme*|【아웃】 색 구성표 정보를 받는 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 구조에 대한 포인터입니다. 이 메서드가 반환되면 구조는 도구 모음 컨트롤의 강조 표시 색상과 그림자 색상을 설명합니다.|
 
@@ -1040,7 +1040,7 @@ CImageList* GetImageList() const;
 
 도구 모음의 현재 삽입 표시를 검색합니다.
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 정보를 검색할 단추의 0기반 인덱스입니다.
 
 *Lprect*<br/>
-경계 사각형의 좌표를 받는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체의 주소입니다.
+경계 사각형의 좌표를 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1132,7 +1132,7 @@ int GetMaxTextRows() const;
 
 개체의 메트릭을 검색합니다. `CToolBarCtrl`
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1157,7 +1157,7 @@ BOOL GetPadding(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pnHorzPadding*|【아웃】 도구 모음 컨트롤의 수평 패딩을 픽셀 단위로 받는 정수입니다.|
 |*pnVertPadding*|【아웃】 도구 모음 컨트롤의 세로 패딩을 픽셀 단위로 받는 정수입니다.|
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 단추 식별자입니다.
 
 *Lprect*<br/>
-경계 사각형 정보를 수신하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조에 대한 포인터입니다.
+경계 사각형 정보를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>매개 변수
 
 *Ppt*<br/>
-멤버에서 적중 테스트의 x 좌표와 `y` 멤버의 적중 테스트의 y 좌표를 포함하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 포인터입니다. `x` 좌표는 도구 모음의 클라이언트 영역을 기준으로 합니다.
+멤버에서 적중 테스트의 x 좌표와 `y` 멤버의 적중 테스트의 y 좌표를 포함하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 포인터입니다. `x` 좌표는 도구 모음의 클라이언트 영역을 기준으로 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>매개 변수
 
 *Ppt*<br/>
-도구 모음의 클라이언트 영역을 기준으로 적중 테스트 좌표를 포함하는 [POINT](/previous-versions/dd162805\(v=vs.85\)) 구조에 대한 포인터입니다.
+도구 모음의 클라이언트 영역을 기준으로 적중 테스트 좌표를 포함하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 포인터입니다.
 
 *ptbim*<br/>
 삽입 표시 정보를 수신하는 [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) 구조에 대한 포인터입니다.
@@ -1567,7 +1567,7 @@ BOOL IsButtonPressed(int nID) const;
 
 비트맵을 도구 모음 컨트롤의 이미지 목록에 로드합니다.
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1708,7 +1708,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*pReplaceBitmap*|【인】 대체할 비트맵과 새 비트맵을 설명하는 [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) 구조에 대한 포인터입니다.|
 
@@ -1730,7 +1730,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 매개 변수에 의해 지정된 레지스트리의 위치에서 도구 모음 컨트롤의 상태를 복원합니다.
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ void RestoreState(
 
 매개 변수에 의해 지정된 레지스트리의 위치에 도구 모음 컨트롤의 상태를 저장합니다.
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 비트매핑된 이미지의 너비와 높이(픽셀 단위)입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>매개 변수
 
-*크기*<br/>
+*size*<br/>
 버튼의 너비와 높이(픽셀 단위)입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1883,7 +1883,7 @@ BOOL SetButtonSize(CSize size);
 
 구조의 크기를 지정합니다. `TBBUTTON`
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,13 +1950,13 @@ BOOL SetCmdID(
 
 현재 도구 모음 컨트롤의 색 구성표를 설정합니다.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*lpColorScheme*|【인】 도구 모음 컨트롤의 강조 표시 색상 과 그림자 색상을 설명하는 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 구조에 대한 포인터입니다.|
 
@@ -2128,7 +2128,7 @@ BOOL SetIndent(int iIndent);
 
 도구 모음의 현재 삽입 표시를 설정합니다.
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 
 개체의 메트릭을 `CToolBarCtrl` 설정합니다.
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 
 도구 모음 컨트롤의 소유자 창을 설정합니다.
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2225,7 +2225,7 @@ DWORD SetPadding(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*nHorzPadding*|【인】 도구 모음 컨트롤의 가로 패딩을 픽셀 단위로 지정합니다.|
 |*nVertPadding*|【인】 도구 모음 컨트롤의 세로 패딩을 픽셀 단위로 지정합니다.|
@@ -2256,7 +2256,7 @@ CImagelist* SetPressedImageList(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*iImageID*|【인】 이미지 목록의 0기반 인덱스입니다. 이미지 목록을 하나만 사용하는 경우 이 매개 변수를 0으로 설정합니다.|
 |*pImageList*|【인】 새 이미지 목록이 포함된 [CImageList에](../../mfc/reference/cimagelist-class.md) 대한 포인터입니다.|
@@ -2279,7 +2279,7 @@ CImagelist* SetPressedImageList(
 
 도구 모음 컨트롤에 요청된 행 수로 크기를 조정하도록 요청합니다.
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ void SetRows(
 도구 모음의 크기를 요청된 행 수로 크기를 조정할 수 없는 경우 더 많은 행을 사용할지 또는 더 적은 행을 사용할지 여부를 알려줍니다.
 
 *Lprect*<br/>
-도구 모음의 새 경계 사각형을 수신하는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조를 가리킵니다.
+도구 모음의 새 경계 사각형을 수신하는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조를 가리킵니다.
 
 ### <a name="remarks"></a>설명
 
@@ -2341,7 +2341,7 @@ BOOL SetState(
 
 도구 모음 컨트롤의 스타일을 설정합니다.
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ Windows SDK에 설명된 대로 [도구 모음 컨트롤 스타일의](/windows/
 
 도구 설명 컨트롤을 도구 모음 컨트롤과 연결합니다.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
@@ -2384,7 +2384,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 이 멤버 함수는 Windows SDK에 설명된 대로 [TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme) 메시지의 기능을 에뮬레이트합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 MFCIE](../../overview/visual-cpp-samples.md)<br/>
