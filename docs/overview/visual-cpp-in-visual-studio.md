@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416098"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365201"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio의 C++
 
 > [!NOTE]
-> 이 개발자 설명서는 Visual Studio 2015 이상에 적용됩니다. 페이지의 왼쪽 위에 있는 버전 선택기를 사용하여 사용 중인 Visual Studio 버전을 선택합니다.
+> 이 개발자 설명서는 Visual Studio 2015 이상에 적용됩니다. 기본 설정된 버전의 Visual Studio에 대한 설명서를 보려면 **버전** 선택기 컨트롤을 사용하세요. 이 페이지의 목차 맨 위에 있습니다.
 >
 > 프로그램을 실행할 수 있도록 Visual C++ 재배포 가능 패키지를 찾고 있다면 [Microsoft 다운로드 센터](https://www.microsoft.com/download/)로 이동하여 검색 상자에 **Visual C++** 를 입력합니다.
 
@@ -65,7 +65,7 @@ C++에 대해 알아보기, 최신 C++ 개요 살펴보기, 서적, 문서, 토�
 [Visual C++ 살펴보기](../build/vscpp-step-1-create.md)<br/>
 C++를 배우기 시작합니다.
 
-[Visual C++ 샘플](visual-cpp-samples.md)<br/>
+[Visual Studio C++ 샘플](visual-cpp-samples.md)<br/>
 샘플에 대한 내용입니다.
 
 ## <a name="c-development-tools"></a>C++ 개발 도구

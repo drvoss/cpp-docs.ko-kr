@@ -2,12 +2,12 @@
 title: Visual Studio에서 대상 Linux 시스템에 연결
 description: Visual Studio C++ 프로젝트 내에서 원격 Linux 머신 또는 Linux용 Windows 하위 시스템에 연결하는 방법입니다.
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518220"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364359"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio에서 대상 Linux 시스템에 연결
 
@@ -150,10 +150,10 @@ Visual Studio 2017에서는 원격 Linux 머신에 사용하는 것과 같은 �
 
 Visual Studio 2019 버전 16.1에서는 [WSL(Linux용 Windows 하위 시스템)](/windows/wsl/about)과 함께 C++를 사용하기 위한 기본 지원을 추가했습니다. 즉, 로컬 WSL 설치에서 직접 빌드 및 디버그할 수 있습니다. 더 이상 원격 연결을 추가하거나 SSH를 구성할 필요가 없습니다. 자세한 내용은 여기서 [WSL 설치 방법](/windows/wsl/install-win10)을 참조하세요.
 
-Visual Studio에서 작동하도록 WSL 설치를 구성하려면 gcc 또는 clang, gdb, make, rsync 및 zip 도구를 설치해야 합니다. g++ 컴파일러도 설치하는 이 명령을 사용하여 APT를 사용하는 배포판에 설치할 수 있습니다.
+Visual Studio에서 작동하도록 WSL 설치를 구성하려면 gcc 또는 clang, gdb, ninja-build(Visual Studio 2019 버전 16.6 이상을 사용하는 CMake 프로젝트에만 필요), rsync 및 zip 도구가 설치되어 있어야 합니다. g++ 컴파일러도 설치하는 이 명령을 사용하여 APT를 사용하는 배포판에 설치할 수 있습니다.
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 자세한 내용은 [Linux 작업 다운로드, 설치, 설정](download-install-and-setup-the-linux-development-workload.md)을 참조하세요.

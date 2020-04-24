@@ -3,12 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 9b656d4e13fe241c22a9c555d1c597016c5353d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415720"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366813"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 

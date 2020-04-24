@@ -6,10 +6,10 @@ ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "71685706"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Microsoft C++ 도구 집합 또는 문서의 문제를 보고하는 방법
@@ -310,7 +310,7 @@ C++ 컴파일러의 모듈 기능을 사용하는 경우 전처리된 재현을 
 
 1. 개발자 콘솔 창에서 재현 프로젝트가 포함된 디렉터리로 다시 변경합니다.
 
-1. 위와 같이 **cl** *arguments* **/TP** *filename*.i를 입력하여 전처리된 파일을 C++ 소스 파일처럼 컴파일합니다.
+1. 위와 같이 **cl** *arguments* **/TP** *filename*.i 명령을 입력하여 전처리된 파일을 C++ 소스 파일처럼 컴파일합니다.
 
 1. 전처리된 파일이 여전히 문제를 일으키는지 확인합니다.
 

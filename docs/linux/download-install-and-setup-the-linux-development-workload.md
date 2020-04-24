@@ -3,12 +3,12 @@ title: Visual Studio에서 C++ Linux 워크로드 설치
 description: Visual Studio에서 C++에 대한 Linux 워크로드를 다운로드하고, 설치하고, 설정하는 방법을 설명합니다.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364338"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux 워크로드 다운로드, 설치 및 설정
 
@@ -36,7 +36,7 @@ CMake를 Visual Studio 프로젝트로 변환할 필요 없이 CMake를 사용�
 
    ![Windows 검색 상자](media/visual-studio-installer-search.png)
 
-2. **앱** 결과에서 설치 관리자를 찾아 두 번 클릭합니다. 설치 프로그램이 열리면 **수정**을 선택한 다음, **워크로드** 탭을 클릭합니다. **기타 도구 집합**으로 아래로 스크롤하여 **C++를 사용한 Linux 개발** 워크로드를 선을 선택합니다.
+1. **앱** 결과에서 설치 관리자를 찾아 두 번 클릭합니다. 설치 프로그램이 열리면 **수정**을 선택한 다음, **워크로드** 탭을 클릭합니다. **기타 도구 집합**으로 아래로 스크롤하여 **C++를 사용한 Linux 개발** 워크로드를 선을 선택합니다.
 
    ![Linux 개발용 Visual C++ 워크로드](media/linuxworkload.png)
 
@@ -62,6 +62,7 @@ Visual Studio의 Linux 프로젝트는 원격 Linux 시스템 또는 WSL에 다�
 - **make**
 - **openssh-server**(원격 Linux 시스템 전용) - Visual Studio는 보안 SSH 연결을 통해 원격 Linux 시스템에 연결합니다.
 - **CMake**(CMake 프로젝트 전용) - Linux에 대해 Microsoft의 [정적으로 링크한 CMake 이진 파일을 설치할 수 있습니다](https://github.com/microsoft/CMake/releases).
+- **ninja-build**(CMake 프로젝트만 해당) - [Ninja](https://ninja-build.org/)는 Visual Studio 2019 버전 16.6 이상에서 Linux 및 WSL 구성 기본 생성기입니다.
 
 다음 명령은 clang 대신 g++를 사용한다고 가정합니다.
 
@@ -84,10 +85,10 @@ Visual Studio의 Linux 프로젝트는 원격 Linux 시스템 또는 WSL에 다�
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 설정: WSL에서 Ubuntu
 
-WSL을 대상으로 하는 경우, 빌드 및 디버그를 위해 원격 연결을 추가하거나 SSH를 구성할 필요가 없습니다. Intellisense 지원을 위해 Visual Studio를 사용하는 Linux 헤더의 자동 동기화에 **zip** 및 **rsync**가 필요합니다. 필요한 애플리케이션이 없다면 다음과 같이 설치할 수 있습니다.
+WSL을 대상으로 하는 경우, 빌드 및 디버그를 위해 원격 연결을 추가하거나 SSH를 구성할 필요가 없습니다. Intellisense 지원을 위해 Visual Studio를 사용하는 Linux 헤더의 자동 동기화에 **zip** 및 **rsync**가 필요합니다. 필요한 애플리케이션이 없다면 다음과 같이 설치할 수 있습니다. **ninja-build**는 CMake 프로젝트에만 필요합니다.
 
 ```bash
-sudo apt-get install g++ gdb make rsync zip
+sudo apt-get install g++ gdb make ninja-build rsync zip
 ```
 
 ::: moniker-end
@@ -96,12 +97,12 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>원격 Linux 시스템에서 Ubuntu
 
-대상 Linux 시스템에 **openssh-server**, **g++** , **gdb** 및 **make**가 설치되어 있고 ssh 디먼이 실행되고 있어야 합니다. IntelliSense 지원을 위해 로컬 컴퓨터와 원격 헤더를 자동 동기화하려면 **zip** 및 **rsync**가 필요합니다. 이러한 애플리케이션이 없다면 다음과 같이 설치할 수 있습니다.
+대상 Linux 시스템에는 **openssh-server**, **g++** , **gdb**, **ninja-build**(CMake 프로젝트만 해당) 및 **make**가 설치되어 있고 ssh 디먼이 실행 중이어야 합니다. IntelliSense 지원을 위해 로컬 컴퓨터와 원격 헤더를 자동 동기화하려면 **zip** 및 **rsync**가 필요합니다. 이러한 애플리케이션이 없다면 다음과 같이 설치할 수 있습니다.
 
 1. Linux 컴퓨터의 셸 프롬프트에서 다음을 실행합니다.
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb make rsync zip
+   sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
    sudo 명령 때문에 루트 암호를 입력하라는 메시지가 표시될 수 있습니다.  메시지가 표시되면 루트 암호를 입력하고 계속합니다. 완료되면 필수 서비스 및 도구가 설치됩니다.
@@ -120,13 +121,13 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="fedora-on-wsl"></a>WSL에서 Fedora
 
-Fedora는 **dnf** 패키지 설치 관리자를 사용합니다. **g++** , **gdb**, **make**, **rsync** 및 **zip**을 다운로드하려면 다음을 실행합니다.
+Fedora는 **dnf** 패키지 설치 관리자를 사용합니다. **g++** , **gdb**, **make**, **rsync**, **ninja-build** 및 **zip**을 다운로드하려면 다음을 실행합니다.
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync make zip
+   sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-Intellisense 지원을 위해 Visual Studio를 사용하는 Linux 헤더의 자동 동기화에 **zip** 및 **rsync**가 필요합니다.
+Intellisense 지원을 위해 Visual Studio를 사용하는 Linux 헤더의 자동 동기화에 **zip** 및 **rsync**가 필요합니다. **ninja-build**는 CMake 프로젝트에만 필요합니다.
 
 ::: moniker-end
 
@@ -134,12 +135,12 @@ Intellisense 지원을 위해 Visual Studio를 사용하는 Linux 헤더의 자�
 
 ## <a name="fedora-on-remote-linux-systems"></a>원격 Linux 시스템에서 Fedora
 
-Fedora를 실행하는 대상 시스템은 **dnf** 패키지 설치 프로그램을 사용합니다. **openssh-server**, **g++** , **gdb**, **make**, **rsync** 및 **zip**을 다운로드하고 ssh 디먼을 다시 시작하려면 다음 지침을 따르세요.
+Fedora를 실행하는 대상 시스템은 **dnf** 패키지 설치 프로그램을 사용합니다. **openssh-server**, **g++** , **gdb**, **make**, **ninja-build**, **rsync** 및 **zip**을 다운로드하고 ssh 디먼을 다시 시작하려면 다음 지침을 따릅니다. **ninja-build**는 CMake 프로젝트에만 필요합니다.
 
 1. Linux 컴퓨터의 셸 프롬프트에서 다음을 실행합니다.
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
+   sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
    sudo 명령 때문에 루트 암호를 입력하라는 메시지가 표시될 수 있습니다.  메시지가 표시되면 루트 암호를 입력하고 계속합니다. 완료되면 필수 서비스 및 도구가 설치됩니다.

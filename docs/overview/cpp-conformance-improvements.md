@@ -3,12 +3,12 @@ title: C++ 규칙 향상
 ms.date: 03/16/2020
 description: Visual Studio의 Microsoft C++는 C++20 언어 표준을 완전하게 준수하기 위해 점점 향상되고 있습니다.
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 2309e79acb4784cd2e79b4f3f6fffb29e8d5dea8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077434"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353531"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio의 C++ 규칙 향상
 
@@ -71,7 +71,7 @@ int main(int argc, char** argv)
 
 ### <a name="references-to-types-with-mismatched-cv-qualifiers"></a>일치하지 않는 cv 한정자가 있는 유형에 대한 참조
 
-이전에는 MSVC에서 최상위 수준 아래에 일치하지 않는 cv 한정자가 있는 형식의 참조를 직접 바인딩할 수 있었습니다. 이 바인딩은 참조가 나타내는 것으로 추정되는 const 데이터의 수정을 허용할 수 있었습니다. 이제 컴파일러에서 표준에 따라 임시 바인딩을 만듭니다. Visual Studio 2017에서 다음 코드는 경고 없이 컴파일됩니다. Visual Studio 2019에서 컴파일러는 ‘경고 C4172: \<func:#1 "?PData@X@@QBEABQBXXZ"> 로컬 변수 또는 임시’ 주소를 반환합니다. 
+이전에는 MSVC에서 최상위 수준 아래에 일치하지 않는 cv 한정자가 있는 형식의 참조를 직접 바인딩할 수 있었습니다. 이 바인딩은 참조가 나타내는 것으로 추정되는 const 데이터의 수정을 허용할 수 있었습니다. 이제 컴파일러에서 표준에 따라 임시 바인딩을 만듭니다. Visual Studio 2017에서 다음 코드는 경고 없이 컴파일됩니다. Visual Studio 2019에서 컴파일러는 *경고 C4172: \<func:#1 "?PData@X@@QBEABQBXXZ"> 로컬 변수 또는 임시*  주소를 반환합니다.
 
 ```cpp
 struct X
@@ -93,7 +93,7 @@ int main()
 
 ### <a name="reinterpret_cast-from-an-overloaded-function"></a>`reinterpret_cast` 오버로드된 함수에서
 
-`reinterpret_cast`의 인수는 오버로드된 함수의 주소가 허용되는 컨텍스트 중 하나가 아닙니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 ‘C2440: ‘오버로드된 함수’에서 ‘fp’로 변환될 수 없음’을 발생시킵니다. 
+`reinterpret_cast`의 인수는 오버로드된 함수의 주소가 허용되는 컨텍스트 중 하나가 아닙니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 *C2440: '오버로드된 함수'에서 'fp'로 변환될 수 없음*을 발생시킵니다.
 
 ```cpp
 int f(int) { return 1; }
@@ -164,7 +164,7 @@ C++20에서 [P1164](https://wg21.link/p1164r1)를 무조건으로 구현했습�
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6). C++20은 UTF-8 코드 단위를 나타내는 데 사용되는 새로운 문자 형식을 추가합니다. C++20의 `u8` 문자열 리터럴에는 이전의 `const char[N]` 대신 `const char8_t[N]` 형식이 있습니다. [N2231](https://wg14.link/n2231)에서 C 표준에 대해 유사한 변경이 제안되었습니다. `char8_t` 이전 버전과의 호환성 수정에 대한 제안은 [P1423r0](https://wg21.link/p1423r0)에서 제공됩니다. Microsoft C++ 컴파일러는 **/Zc:char8_t** 컴파일러 옵션을 지정할 때 Visual Studio 2019 버전 16.1에서 `char8_t` 지원을 추가합니다. 향후 **/Zc:char8_t-** 를 통해 C++17 동작으로 되돌릴 수 있는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)로 지원될 예정입니다. IntelliSense를 지원하는 EDG 컴파일러는 이 기능을 아직 지원하지 않으므로 실제 컴파일에 영향을 주지 않는 IntelliSense 전용 의사 오류가 표시됩니다.
+[P0482r6](https://wg21.link/p0482r6). C++20은 UTF-8 코드 단위를 나타내는 데 사용되는 새로운 문자 형식을 추가합니다. C++20의 `u8` 문자열 리터럴에는 이전의 `const char[N]` 대신 `const char8_t[N]` 형식이 있습니다. [N2231](https://wg14.link/n2231)에서 C 표준에 대해 유사한 변경이 제안되었습니다. `char8_t` 이전 버전과의 호환성 수정에 대한 제안은 [P1423r3](https://wg21.link/p1423r3)에서 제공됩니다. Microsoft C++ 컴파일러는 **/Zc:char8_t** 컴파일러 옵션을 지정할 때 Visual Studio 2019 버전 16.1에서 `char8_t` 지원을 추가합니다. 향후 **/Zc:char8_t-** 를 통해 C++17 동작으로 되돌릴 수 있는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)로 지원될 예정입니다. IntelliSense를 지원하는 EDG 컴파일러는 이 기능을 아직 지원하지 않으므로 실제 컴파일에 영향을 주지 않는 IntelliSense 전용 의사 오류가 표시됩니다.
 
 #### <a name="example"></a>예제
 
@@ -204,7 +204,7 @@ long j = static_cast<long>(i);
 
 새 람다 프로세서는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 또는 **/experimental:newLambdaProcessor**를 사용하는 다른 언어 모드 아래의 일반 람다에서 몇 가지 규칙 모드 구문 검사를 활성화합니다.
 
-Visual Studio 2017에서 이 코드는 경고 없이 컴파일되지만 Visual Studio 2019에서는 ‘C2760 구문 오류: 예기치 않은 토큰 ‘\<id-expr>’, expected ‘id-expression’’ 오류가 생성됩니다. 
+Visual Studio 2017에서 이 코드는 경고 없이 컴파일되지만 Visual Studio 2019에서는 *C2760 구문 오류: 예기치 않은 토큰 '\<id-expr>', expected 'id-expression'* 오류가 생성됩니다.
 
 ```cpp
 void f() {
@@ -407,11 +407,11 @@ std::cin >> x;
 
 ### <a name="new-keywords-requires-and-concept"></a>새 키워드 **requires** 및 **concept**
 
-새 키워드 **requires** 및 **concept**가 Microsoft C++ 컴파일러에 추가되었습니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 두 키워드 중 하나를 식별자로 사용하려고 하면 컴파일러는 ‘C2059: 구문 오류’를 발생시킵니다. 
+새 키워드 **requires** 및 **concept**가 Microsoft C++ 컴파일러에 추가되었습니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 두 키워드 중 하나를 식별자로 사용하려고 하면 컴파일러는 *C2059: 구문 오류*를 발생시킵니다.
 
 ### <a name="constructors-as-type-names-disallowed"></a>생성자를 형식 이름으로 사용할 수 없음
 
-생성자 이름이 클래스 템플릿 특수화에 대한 별칭 뒤의 정규화된 이름에 표시되는 경우에는 더 이상 삽입된 클래스 이름으로 간주하지 않습니다. 이전에는 생성자를 형식 이름으로 사용하여 다른 엔터티를 선언할 수 있었습니다. 다음 예제에서는 ‘C3646: ‘TotalDuration’: 알 수 없는 재정의 지정자’를 생성합니다. 
+생성자 이름이 클래스 템플릿 특수화에 대한 별칭 뒤의 정규화된 이름에 표시되는 경우에는 더 이상 삽입된 클래스 이름으로 간주하지 않습니다. 이전에는 생성자를 형식 이름으로 사용하여 다른 엔터티를 선언할 수 있었습니다. 다음 예제에서는 *C3646: ‘TotalDuration’: 알 수 없는 재정의 지정자*를 생성합니다.
 
 ```cpp
 #include <chrono>
@@ -434,7 +434,7 @@ class Foo {
 
 ### <a name="stricter-checking-of-extern-c-functions"></a>Extern “C” 함수에 대해 더 엄격해진 검사
 
-**extern "C"** 함수가 다른 네임스페이스에서 선언된 경우 이전 버전의 Microsoft C++ 컴파일러는 선언이 호환되는지 여부를 확인하지 않았습니다. Visual Studio 2019 버전 16.3에서는 컴파일러가 이러한 검사를 수행합니다. [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 ‘C2371 : 재정의; 다른 기본 형식’ 및 ‘C2733 C 링크로 함수를 오버로드할 수 없음’을 생성합니다.  
+**extern "C"** 함수가 다른 네임스페이스에서 선언된 경우 이전 버전의 Microsoft C++ 컴파일러는 선언이 호환되는지 여부를 확인하지 않았습니다. Visual Studio 2019 버전 16.3에서는 컴파일러가 이러한 검사를 수행합니다. [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 *C2371 : 재정의; 다른 기본 형식* 및 *C2733 C 링크로 함수를 오버로드할 수 없음*을 생성합니다.
 
 ```cpp
 using BOOL = int;
@@ -890,7 +890,7 @@ U u{ 0 };
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>constexpr 함수의 reinterpret_cast
 
-**reinterpret_cast**는 **constexpr** 함수에서 사용할 수 없습니다. Microsoft C++ 컴파일러는 이전에 **constexpr** 컨텍스트에서 사용되는 경우에만 **reinterpret_cast**를 거부했습니다. Visual Studio 2019에서는 모든 언어 표준 모드에서 컴파일러가 **constexpr** 함수의 정의에서 **reinterpret_cast**를 정확히 진단합니다. 이제 다음 코드는 ‘C3615: constexpr 함수 ‘f’는 상수 식이 될 수 없음’을 생성합니다. 
+**reinterpret_cast**는 **constexpr** 함수에서 사용할 수 없습니다. Microsoft C++ 컴파일러는 이전에 **constexpr** 컨텍스트에서 사용되는 경우에만 **reinterpret_cast**를 거부했습니다. Visual Studio 2019에서는 모든 언어 표준 모드에서 컴파일러가 **constexpr** 함수의 정의에서 **reinterpret_cast**를 정확히 진단합니다. 이제 다음 코드는 *C3615: constexpr 함수 ‘f’는 상수 식이 될 수 없음*을 생성합니다.
 
 ```cpp
 long long i = 0;
@@ -910,7 +910,7 @@ std::wstring ws = /* … */;
 std::string out(ws.begin(), ws.end());
 ```
 
-Visual Studio 2019에서 ‘C4244: 'argument': 데이터 손실이 가능한 'wchar_t'에서 'const _Elem'으로 변환’이 발생합니다.  경고를 방지하려면 다음 예제와 같이 std::string을 초기화할 수 있습니다.
+Visual Studio 2019에서 *C4244: 'argument': 데이터 손실이 가능한 'wchar_t'에서 'const _Elem'으로 변환*이 발생합니다. 경고를 방지하려면 다음 예제와 같이 std::string을 초기화할 수 있습니다.
 
 ```cpp
 std::wstring ws = L"Hello world";
@@ -923,7 +923,7 @@ for (wchar_t ch : ws)
 
 ### <a name="incorrect-calls-to--and---under-clr-or-zw-are-now-correctly-detected"></a>/clr 또는 /ZW 아래에 += 및 -=에 대한 잘못된 호출 이제 올바르게 검색됩니다.
 
-Visual Studio 2017에서는 컴파일러가 자동으로 오류를 무시하고 `/clr` 또는 `/ZW` 아래의 잘못된 += 및 -= 호출에 대한 코드를 생성하지 않는 버그가 도입되었습니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 ‘오류 C2845: 'System::string ^': 이 형식에서는 포인터 산술이 허용되지 않음’을 올바르게 발생시킵니다. 
+Visual Studio 2017에서는 컴파일러가 자동으로 오류를 무시하고 `/clr` 또는 `/ZW` 아래의 잘못된 += 및 -= 호출에 대한 코드를 생성하지 않는 버그가 도입되었습니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 *오류 C2845: 'System::string ^': 이 형식에서는 포인터 산술이 허용되지 않음*을 올바르게 발생시킵니다.
 
 ```cpp
 public enum class E { e };
@@ -938,7 +938,7 @@ void f(System::String ^s)
 
 ### <a name="initializers-for-inline-static-data-members"></a>인라인 정적 데이터 멤버에 대한 이니셜라이저
 
-이제 **인라인** 및 **정적 constexpr** 이니셜라이저 내에서 잘못된 멤버 액세스가 올바르게 검색됩니다. 다음 예제에서는 Visual Studio 2017에서 오류 없이 컴파일되지만 `/std:c++17` 모드 아래에 Visual Studio 2019에서는 ‘오류 C2248: 'X' 클래스에 선언된 프라이빗 멤버에 액세스할 수 없음’을 발생시킵니다. 
+이제 **인라인** 및 **정적 constexpr** 이니셜라이저 내에서 잘못된 멤버 액세스가 올바르게 검색됩니다. 다음 예제에서는 Visual Studio 2017에서 오류 없이 컴파일되지만 `/std:c++17` 모드 아래에 Visual Studio 2019에서는 *오류 C2248: 'X' 클래스에 선언된 프라이빗 멤버에 액세스할 수 없음*을 발생시킵니다.
 
 ```cpp
 struct X
@@ -993,7 +993,7 @@ bool test(IUnknown* p)
 
 ### <a name="local-class-member-function-doesnt-have-a-body"></a>로컬 클래스 멤버 함수에 본문이 없습니다.
 
-Visual Studio 2017에서 ‘C4822: 로컬 클래스 멤버 함수에 본문이 없음’은 컴파일러 옵션 `/w14822`가 명시적으로 설정된 경우에만 발생합니다. `/Wall`에는 표시되지 않습니다.  Visual Studio 2019에서 C4822는 `/w14822`를 명시적으로 설정하지 않고도 `/Wall`에서 검색할 수 있도록 하는 off-by-default 경고입니다.
+Visual Studio 2017에서 *C4822: 로컬 클래스 멤버 함수에 본문이 없음*은 컴파일러 옵션 `/w14822`가 명시적으로 설정된 경우에만 발생합니다. `/Wall`에는 표시되지 않습니다. Visual Studio 2019에서 C4822는 `/w14822`를 명시적으로 설정하지 않고도 `/Wall`에서 검색할 수 있도록 하는 off-by-default 경고입니다.
 
 ```cpp
 void example()
@@ -1007,7 +1007,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>constexpr if 문을 포함하는 함수 템플릿 본문
 
-**if constexpr** 문을 포함하는 템플릿 함수 본문에 일부 [/permissive-](../build/reference/permissive-standards-conformance.md) 구문 분석 관련 검사가 활성화되어 있습니다. 예를 들어 Visual Studio 2017에서 다음 코드는 ‘C7510: ‘Type’: 종속 형식 이름을 사용하는 경우 ‘typename’으로 시작해야 합니다.’를 생성합니다. 단, **/permissive-** 옵션이 설정되지 않은 경우에만 해당합니다.  Visual Studio 2019에서는 **/permissive-** 옵션이 설정된 경우에도 동일한 코드에서 오류가 발생합니다.
+**if constexpr** 문을 포함하는 템플릿 함수 본문에 일부 [/permissive-](../build/reference/permissive-standards-conformance.md) 구문 분석 관련 검사가 활성화되어 있습니다. 예를 들어 Visual Studio 2017에서 다음 코드는 *C7510: ‘Type’: 종속 형식 이름을 사용하는 경우 ‘typename’으로 시작해야 합니다.* 를 생성합니다. 단, **/permissive-** 옵션이 설정되지 않은 경우에만 해당합니다. Visual Studio 2019에서는 **/permissive-** 옵션이 설정된 경우에도 동일한 코드에서 오류가 발생합니다.
 
 ```cpp
 template <typename T>
@@ -1046,7 +1046,7 @@ Microsoft C++ 팀은 최근 람다 내에서 인라인 어셈블러를 사용하
 
 발견된 ‘실제’ 사례에서 인라인 어셈블러가 람다 식 내에서 사용되는 유일한 목적은 반환 주소를 캡처하기 위한 것이었습니다. 이 시나리오에서는 컴파일러 고유의 `_ReturnAddress()`를 사용하여 모든 플랫폼에서 반환 주소를 캡처할 수 있습니다.
 
-다음 코드는 Visual Studio 2017 15.9 및 Visual Studio 2019에서 ‘C7552: 인라인 어셈블러는 람다에서 지원되지 않음’을 생성합니다. 
+다음 코드는 Visual Studio 2017 15.9 및 Visual Studio 2019에서 *C7552: 인라인 어셈블러는 람다에서 지원되지 않음*을 생성합니다.
 
 ```cpp
 #include <cstdio>
@@ -2514,7 +2514,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
    #pragma warning (pop)
    ```
 
-### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a>extern constexpr 링크
+### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> Extern constexpr 연결
 
 이전 버전의 Visual Studio에서는 **constexpr** 변수에 **extern**이 표시된 경우에도 컴파일러가 항상 해당 변수에 내부 연결을 제공했습니다. Visual Studio 2017 15.5 버전에서 새 컴파일러 스위치( **/Zc:externConstexpr**)는 올바른 표준 준수 동작을 활성화합니다. 결국 이 동작이 기본값이 됩니다.
 
@@ -2777,7 +2777,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서는 D의 **using** 문에 **typename** 키워드가 필요합니다. **typename**이 없으면 컴파일러가 경고 C4346: *'B<T\*>::type': 종속 이름은 type이 아님* 및 오류 C2061: ‘구문 오류: 식별자 ‘type’’을 발생시킵니다. 
+Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서는 D의 **using** 문에 **typename** 키워드가 필요합니다. **typename**이 없으면 컴파일러가 경고 C4346: *'B<T\*>::type': 종속 이름은 type이 아님* 및 오류 C2061: *구문 오류: 식별자 'type'* 을 발생시킵니다.
 
 ```cpp
 template<typename T>
@@ -2808,7 +2808,7 @@ int main() {
 
 Visual Studio의 이전 버전에서는 템플릿 인수가 누락된 variadic 템플릿 생성자 기본 클래스 초기화 목록이 오류 없이 잘못 허용되었습니다. Visual Studio 2017 버전 15.7에서는 컴파일러 오류가 발생합니다.
 
-Visual Studio 2017 버전 15.7의 다음 코드 예제에서는 ‘오류 C2614: D\<int>: 잘못된 멤버 초기화: ‘B’는 기본 또는 멤버가 아님’이 발생합니다. 
+Visual Studio 2017 버전 15.7의 다음 코드 예제에서는 *오류 C2614: D\<int>: 잘못된 멤버 초기화: 'B'는 기본 또는 멤버가 아님*이 발생합니다.
 
 ```cpp
 template<typename T>
@@ -2884,7 +2884,7 @@ using  X = typename T;
 
 [__declspec](../cpp/declspec.md)은 별칭 템플릿 정의의 오른쪽에 더 이상 허용되지 않습니다. 이 코드는 이전에 컴파일러에서 허용되었지만 무시되었으며, 별칭을 사용한 경우에도 사용 중단 경고가 발생하지 않았습니다.
 
-표준 C++ 특성 [\[\[deprecated\]\]](../cpp/attributes.md)를 대신 사용할 수 있으며, Visual Studio 2017 버전 15.6에서 적용됩니다. 이제 C2760 ‘구문 오류: ‘__declspec’은 예기치 않은 토큰입니다. 필요한 토큰은 'type specifier'입니다.’ 코드가 생성됩니다. 
+표준 C++ 특성 [\[\[deprecated\]\]](../cpp/attributes.md)를 대신 사용할 수 있으며, Visual Studio 2017 버전 15.6에서 적용됩니다. 이제 C2760 *구문 오류: '__declspec'은 예기치 않은 토큰입니다. 필요한 토큰은 'type specifier'입니다.* 코드가 생성됩니다.
 
 ```cpp
 template <typename T>
@@ -3113,9 +3113,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-컴파일러는 다음 두 경우 모두에 대해 C5050을 생성합니다. ‘경고 C5050: ‘m’ 모듈을 가져오는 동안 호환되지 않는 환경: C++ 버전이 일치하지 않습니다.  현재 "201402" 모듈 버전 "201703"’ 
+컴파일러는 다음 두 경우 모두에 대해 C5050을 생성합니다. *경고 C5050: 'm' 모듈을 가져오는 동안 호환되지 않는 환경: C++ 버전이 일치하지 않습니다.  현재 "201402" 모듈 버전 "201703"*
 
-또한 컴파일러는 .ifc 파일이 변조될 때마다 C7536을 발생시킵니다. 모듈 인터페이스의 헤더에는 아래 내용의 SHA2 해시가 포함됩니다. 가져올 때 .ifc 파일을 동일한 방식으로 해시한 다음, 헤더에 제공된 해시와 비교합니다. 해시가 일치하지 않으면 오류 C7536이 발생합니다. ‘ifc에서 무결성 검사에 실패했습니다.  예상된 SHA2: ‘66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6’’  .
+또한 컴파일러는 .ifc 파일이 변조될 때마다 C7536을 발생시킵니다. 모듈 인터페이스의 헤더에는 아래 내용의 SHA2 해시가 포함됩니다. 가져올 때 .ifc 파일을 동일한 방식으로 해시한 다음, 헤더에 제공된 해시와 비교합니다. 해시가 일치하지 않으면 오류 C7536이 발생합니다. *ifc에서 무결성 검사에 실패했습니다.  예상된 SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'* .
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>별칭 및 추론되지 않은 컨텍스트와 관련된 부분 순서
 

@@ -4,12 +4,12 @@ description: vcpkg는 Windows, MacOS 및 Linux에서 오픈 소스 C++ 라이브
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422759"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335403"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS 용 C++ 패키지 관리자
 
@@ -128,7 +128,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 WSL(Linux용 Windows 하위 시스템)을 사용하여 Windows 컴퓨터에서 Linux 바이너리를 생성할 수 있습니다. [Windows 10에 WSL을 설정](/windows/wsl/install-win10) 지침에 따라 [Linux용 Visual Studio 확장](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)을 사용하여 구성합니다. Windows 및 Linux용으로 빌드된 모든 라이브러리를 동일한 폴더에 배치하는 것이 좋습니다. Windows 및 WSL 모두에서 액세스할 수 있습니다.
 
-## <a name="export_binaries_per_project"></a> 컴파일된 이진 파일 및 헤더 내보내기
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> 컴파일된 이진 파일 및 헤더 내보내기
 
 팀의 모든 사용자가 공통 라이브러리를 다운로드하고 작성하는 것은 비효율적입니다. 단일 팀 멤버는 **vcpkg export** 명령을 사용하여 이진 파일 및 헤더의 일반 zip 파일 또는 NuGet 패키지를 만들 수 있습니다. 그런 다음 다른 팀 멤버와 공유하기가 쉽습니다.
 

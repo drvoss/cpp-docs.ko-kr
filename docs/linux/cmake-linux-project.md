@@ -3,12 +3,12 @@ title: Visual Studio에서 Linux CMake 프로젝트 만들기 및 구성
 description: Visual Studio에서 Linux CMake 프로젝트를 만들고, 구성, 편집 및 컴파일하는 방법
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 63c1f7953682e4d491660a18bedfa3d0ca4305ae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364384"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 만들기 및 구성
 
@@ -45,6 +45,7 @@ Linux 시스템에서 다음이 설치되어 있는지 확인합니다.
 - gdb
 - rsync
 - zip
+- ninja-build
 
 ::: moniker range="vs-2019"
 

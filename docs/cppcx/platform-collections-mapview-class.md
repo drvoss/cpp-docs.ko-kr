@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750603"
+ms.locfileid: "82032436"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 클래스
 
@@ -46,7 +46,7 @@ ref class MapView sealed;
 
 ### <a name="remarks"></a>설명
 
-MapView는 [Windows::Foundation::Collection::IMapView \<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 응용 프로그램 바이너리 인터페이스(ABI)를 통해 전달되는 인터페이스의 구체적인 C++ 구현입니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
+MapView는 [Windows::Foundation::Collection::IMapView \<K,V>](/uwp/api/windows.foundation.collections.imapview-2) 응용 프로그램 바이너리 인터페이스(ABI)를 통해 전달되는 인터페이스의 구체적인 C++ 구현입니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
 
 ### <a name="members"></a>멤버
 

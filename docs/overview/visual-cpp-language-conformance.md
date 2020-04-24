@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 8a5ffb5b3ab4bc80cb200b41752b19d1c958ece6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 18f8db28fab83f795baced82a346f07d73256716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365232"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 언어 규칙 테이블
 
@@ -385,33 +385,34 @@ __VS 2019 16.5__는 Visual Studio 2019 버전 16.5에서 지원되는 기능을 
 
 ### <a name="notes"></a>참고
 
-<a name="note_A"></a>__A__[/std:c++14](../build/reference/std-specify-language-standard-version.md) 모드에서는 동적 예외 사양이 구현되지 않은 상태로 남아 있으며 `throw()`는 여전히 `__declspec(nothrow)`의 동의어로 처리됩니다. C++17에서 동적 예외 사양은 P0003R5에 의해 대부분 제거되었으므로 1개의 vestige: `throw()`가 더 이상 사용되지 않으며 `noexcept`의 동의어로 작동해야 합니다. [/std:c++17](../build/reference/std-specify-language-standard-version.md) 모드에서 MSVC는 이제 `noexcept`, 즉 종료를 통한 적용과 동일한 동작을 `throw()`에 제공하여 표준을 준수합니다.
+<a name="note_A"></a> __A__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) 모드에서는 동적 예외 사양이 구현되지 않은 상태로 남아 있으며 `throw()`는 여전히 `__declspec(nothrow)`의 동의어로 처리됩니다. C++17에서 동적 예외 사양은 P0003R5에 의해 대부분 제거되었으므로 1개의 vestige: `throw()`가 더 이상 사용되지 않으며 `noexcept`의 동의어로 작동해야 합니다. [/std:c++17](../build/reference/std-specify-language-standard-version.md) 모드에서 MSVC는 이제 `noexcept`, 즉 종료를 통한 적용과 동일한 동작을 `throw()`에 제공하여 표준을 준수합니다.
 
 컴파일러 옵션 [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md)는 `__declspec(nothrow)`의 이전 동작을 요청합니다. `throw()`는 C++20에서 제거될 가능성이 있습니다. 표준 및 구현에서 이러한 변경 사항에 대한 응답으로 코드를 마이그레이션하는 것을 돕기 위해 예외 사양 문제에 대한 새로운 컴파일러 경고가 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 및 [/permissive-](../build/reference/permissive-standards-conformance.md) 아래에 추가되었습니다.
 
-<a name="note_B"></a>__B__ Visual Studio 2017 버전 15.7의 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 지원됩니다. 자세한 내용은 [2단계 이름 조회 지원이 MSVC에 제공](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)을 참조하세요.
+<a name="note_B"></a> __B__ Visual Studio 2017 버전 15.7의 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 지원됩니다. 자세한 내용은 [2단계 이름 조회 지원이 MSVC에 제공](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)을 참조하세요.
 
-<a name="note_C"></a>__C__ Visual Studio 2017에서 C99 전처리기 규칙에 대한 컴파일러의 지원이 완전하지 않습니다. Microsoft에서는 전처리기를 점검하고 있으며 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 컴파일러 스위치를 포함하여 Visual Studio 2017 버전 15.8에 해당 변경 내용 전달을 시작했습니다.
+<a name="note_C"></a> __C__ Visual Studio 2017에서 C99 전처리기 규칙에 대한 컴파일러의 지원이 완전하지 않습니다. Microsoft에서는 전처리기를 점검하고 있으며 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 컴파일러 스위치를 포함하여 Visual Studio 2017 버전 15.8에 해당 변경 내용 전달을 시작했습니다.
 
-<a name="note_D"></a>__D__[/std:c++14](../build/reference/std-specify-language-standard-version.md) 아래에서 억제 가능한 경고 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)로 표시됩니다.
+<a name="note_D"></a> __D__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) 아래에서 억제 가능한 경고 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)로 표시됩니다.
 
-<a name="note_E"></a>__E__ 이것은 완전히 새로운 구현이기 때문에 이전의 `std::experimental` 버전과 호환되지 않으며, symlink 지원, 버그 수정 및 표준 필수 동작의 변경이 필요합니다. 지금은 \<filesystem>을 포함하면 새로운 `std::filesystem`과 이전 `std::experimental::filesystem`을 제공하고 \<experimental/filesystem>을 포함하면 오래된 실험 구현만을 제공합니다. 실험적 구현은 다음 ABI-breaking 라이브러리 릴리스에서 제거될 것입니다.
+<a name="note_E"></a> __E__ 이것은 완전히 새로운 구현이기 때문에 이전의 `std::experimental` 버전과 호환되지 않으며, symlink 지원, 버그 수정 및 표준 필수 동작의 변경이 필요합니다. 지금은 \<filesystem>을 포함하면 새로운 `std::filesystem`과 이전 `std::experimental::filesystem`을 제공하고 \<experimental/filesystem>을 포함하면 오래된 실험 구현만을 제공합니다. 실험적 구현은 다음 ABI-breaking 라이브러리 릴리스에서 제거될 것입니다.
 
-<a name="note_G"></a>__G__ 컴파일러 내장 함수에서 지원됩니다.
+<a name="note_G"></a> __G__ 컴파일러 내장 함수에서 지원됩니다.
 
-<a name="note_14"></a>__14__ 이러한 C++17/20 기능은 [/std:c++14](../build/reference/std-specify-language-standard-version.md)(기본값)를 지정한 경우에도 항상 활성화됩니다. 이는 **/std** 옵션을 도입하기 전에 기능이 구현되었거나 조건부 구현이 바람직하지 않게 복잡했기 때문입니다.
+<a name="note_14"></a> __14__ 이러한 C++17/20 기능은 [/std:c++14](../build/reference/std-specify-language-standard-version.md)(기본값)를 지정한 경우에도 항상 활성화됩니다. 이는 **/std** 옵션을 도입하기 전에 기능이 구현되었거나 조건부 구현이 바람직하지 않게 복잡했기 때문입니다.
 
-<a name="note_17"></a>__17__ 이러한 기능은 [/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 컴파일러 옵션으로 활성화됩니다.
+<a name="note_17"></a> __17__ 이러한 기능은 [/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 컴파일러 옵션으로 활성화됩니다.
 
-<a name="note_20"></a>__20__ 이 기능은 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 통해 사용할 수 있습니다. C++20 구현이 완료되면 새 **/std:c++20** 컴파일러 옵션이 추가되어 이러한 기능도 사용할 수 있게 됩니다.
+<a name="note_20"></a> __20__ 이 기능은 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 통해 사용할 수 있습니다. C++20 구현이 완료되면 새 **/std:c++20** 컴파일러 옵션이 추가되어 이러한 기능도 사용할 수 있게 됩니다.
 
-<a name="note_byte"></a>__byte__`std::byte`는 [/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md))로 활성화되지만, 경우에 따라 Windows SDK 헤더와 충돌할 수 있으므로 세분화된 옵트아웃 매크로가 있습니다. `_HAS_STD_BYTE`를 `0`으로 정의하여 비활성화할 수 있습니다.
+<a name="note_byte"></a> __byte__ `std::byte`는 [/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md))로 활성화되지만, 경우에 따라 Windows SDK 헤더와 충돌할 수 있으므로 세분화된 옵트아웃 매크로가 있습니다. `_HAS_STD_BYTE`를 `0`으로 정의하여 비활성화할 수 있습니다.
 
-<a name="note_C11"></a>__C11__ 유니버셜 CRT에서는 C99 `strftime()` E/O 대체 변환 지정자, C11 `fopen()` 단독 모드 및 C11 `aligned_alloc()`을 제외하고는 C++17에 필요한 C11 표준 라이브러리의 일부를 구현했습니다. 후자는 C11에서 `free()`의 Microsoft 구현과 호환되지 않는 방식, 즉 `free()`에서 고도로 정렬된 할당을 처리할 수 있어야 하는 `aligned_alloc()`을 지정했기 때문에 구현되지 않을 것입니다.
+<a name="note_C11"></a> __C11__ 유니버셜 CRT에서는 C99 `strftime()` E/O 대체 변환 지정자, C11 `fopen()` 단독 모드 및 C11 `aligned_alloc()`을 제외하고는 C++17에 필요한 C11 표준 라이브러리의 일부를 구현했습니다. 후자는 C11에서 `free()`의 Microsoft 구현과 호환되지 않는 방식, 즉 `free()`에서 고도로 정렬된 할당을 처리할 수 있어야 하는 `aligned_alloc()`을 지정했기 때문에 구현되지 않을 것입니다.
 
-<a name="note_rem"></a>__rem__[/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 컴파일러 옵션이 지정되면 기능이 제거됩니다. 이 기능을 다시 사용하도록 설정하면 `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` 및 `_HAS_UNEXPECTED` 매크로를 사용하여 최신 언어 모드로 쉽게 전환할 수 있습니다.
+<a name="note_rem"></a> __rem__ [/std:c++17](../build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 컴파일러 옵션이 지정되면 기능이 제거됩니다. 이 기능을 다시 사용하도록 설정하면 `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` 및 `_HAS_UNEXPECTED` 매크로를 사용하여 최신 언어 모드로 쉽게 전환할 수 있습니다.
 
-<a name="note_charconv"></a>__charconv__`from_chars()` 및 `to_chars()`은(는) 정수에 사용할 수 있습니다. 부동 소수점 `from_chars()` 및 부동 소수점 `to_chars()`의 타임라인은 다음과 같습니다.
+<a name="note_charconv"></a> __charconv__ `from_chars()` 및 `to_chars()`는 정수에 사용할 수 있습니다. 부동 소수점 `from_chars()` 및 부동 소수점 `to_chars()`의 타임라인은 다음과 같습니다.
+
 - VS 2017 15.7: 정수 `from_chars()` 및 `to_chars()`.
 - VS 2017 15.8: 부동 소수점 `from_chars()`.
 - VS 2017 15.9: 가장 짧은 10진수에 대한 부동 소수점 `to_chars()` 오버로드.
