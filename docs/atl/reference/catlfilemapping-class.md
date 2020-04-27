@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7516349e4ec54d8cb90fa6ff23b0ded954aa043b
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318954"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168126"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 클래스
 
-이 클래스는 [CAtlFileMappingBase의](../../atl/reference/catlfilemappingbase-class.md)메서드에 캐스트 연산을 추가하는 메모리 매핑 된 파일을 나타냅니다.
+이 클래스는 [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)의 메서드에 캐스트 연산자를 추가 하 여 메모리 매핑된 파일을 나타냅니다.
 
 > [!IMPORTANT]
-> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template <typename T = char>
 class CAtlFileMapping : public CAtlFileMappingBase
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-캐스트 연산자에 사용되는 데이터 유형입니다.
+Cast 연산자에 사용 되는 데이터 형식입니다.
 
 ## <a name="members"></a>멤버
 
@@ -39,11 +39,11 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 |속성|Description|
 |----------|-----------------|
-|[CAtlFile매핑::연산자 T*](#operator_t_star)|개체를 `CAtlFileMapping` 에 대한 `T*`암시적 변환을 허용합니다.|
+|[CAtlFileMapping:: operator T *](#operator_t_star)|`CAtlFileMapping` 개체를로 암시적으로 `T*`변환할 수 있습니다.|
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 `CAtlFileMapping` 개체를 에 대한 암시적 `T*`변환을 허용하는 단일 캐스트 연산을 추가합니다. 다른 멤버는 기본 클래스인 [CAtlFileMappingBase에서](../../atl/reference/catlfilemappingbase-class.md)제공됩니다.
+이 클래스는 `CAtlFileMapping` 개체를로 암시적으로 `T*`변환할 수 있도록 단일 캐스트 연산자를 추가 합니다. 다른 멤버는 기본 클래스인 [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)에서 제공 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -53,23 +53,23 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlfile.h
+**헤더:** 이 파일 .h
 
-## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFile매핑::연산자 T*
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping:: operator T *
 
-개체를 `CAtlFileMapping` 에 대한 `T*`암시적 변환을 허용합니다.
+`CAtlFileMapping` 개체를로 암시적으로 `T*`변환할 수 있습니다.
 
-```
+```cpp
 operator T*() const throw();
 ```
 
 ### <a name="return-value"></a>Return Value
 
-메모리 `T*` 매핑된 파일의 시작 부분에 대한 포인터를 반환합니다.
+메모리 매핑된 `T*` 파일의 시작에 대 한 포인터를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-[CAtlFileMappingBase::GetData를](../../atl/reference/catlfilemappingbase-class.md#getdata) 호출하고 반환된 포인터를 `T*` 이 클래스의 템플릿 매개 변수로 사용되는 T *형식인* 위치로 재해석합니다.
+[CAtlFileMappingBase:: GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) 를 호출 하 고 반환 된 포인터를로 `T*` 다시 해석 합니다. 여기서 *T* 는이 클래스의 템플릿 매개 변수로 사용 되는 형식입니다.
 
 ## <a name="see-also"></a>참고 항목
 
