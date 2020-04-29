@@ -8,25 +8,25 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
+ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150955"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538589"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++의 데이터 액세스
 
 SQL과 NoSQL의 거의 모든 데이터베이스 제품에서는 네이티브 C++ 애플리케이션에 대한 인터페이스를 제공합니다. 업계 표준 인터페이스는 모든 주요 SQL 데이터베이스 제품과 여러 NoSQL 제품에서 지원되는 ODBC입니다. 타사 제품의 경우 자세한 내용은 공급 업체에 문의하세요. 사용 조건이 다양한 타사 라이브러리도 사용할 수 있습니다.
 
-Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microsoft SQL Server 데이터베이스에 연결하는 네이티브 애플리케이션에 대한 표준으로 ODBC를 제공해 왔습니다. 자세한 내용은 [데이터 액세스 프로그래밍\(MFC-ATL\)](data-access-programming-mfc-atl.md)을 참조하세요. C++/CLI 라이브러리는 네이티브 ODBC 드라이버 또는 ADO.NET을 사용할 수 있습니다. 자세한 내용은 [ADO.NET을 사용하여 데이터 액세스(C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 및 [Visual Studio에서 데이터 액세스](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)를 참조하세요.
+Microsoft는 2011년부터 온-프레미스와 클라우드 모두에서 Microsoft SQL Server 데이터베이스에 연결하는 네이티브 애플리케이션에 대한 표준으로 ODBC를 제공해 왔습니다. 자세한 내용은 [데이터 액세스 프로그래밍\(MFC-ATL\)](data-access-programming-mfc-atl.md)을 참조하세요. C++/CLI 라이브러리는 네이티브 ODBC 드라이버 또는 ADO.NET을 사용할 수 있습니다. 자세한 내용은 [ADO.NET를 사용 하 여 데이터 액세스 (c + +/cli)](../dotnet/data-access-using-adonet-cpp-cli.md) 및 [Visual Studio에서 데이터](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)액세스를 참조 하세요.
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[데이터 액세스 프로그래밍(MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
+[데이터 액세스 프로그래밍 (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
 Visual C++를 사용하는 레거시 데이터 액세스 프로그래밍에 대해 설명합니다. 이 프로그램에서는 기본적으로 ATL(액티브 템플릿 클래스 라이브러리) 또는 MFC(Microsoft Foundation Class) 라이브러리와 같은 클래스 라이브러리 중 하나를 사용하므로 데이터베이스 API를 간편하게 사용할 수 있습니다.
 
-[ODBC(Open Database Connectivity)](odbc/open-database-connectivity-odbc.md)<br/>
+[ODBC (Open Database Connectivity)](odbc/open-database-connectivity-odbc.md)<br/>
 MFC(Microsoft Foundation Classes) 라이브러리는 ODBC(Open Database Connectivity)를 사용하여 프로그래밍하는 데 필요한 클래스를 제공합니다.
 
 [OLE DB 프로그래밍](oledb/ole-db-programming.md)<br/>
@@ -38,7 +38,7 @@ MFC(Microsoft Foundation Classes) 라이브러리는 ODBC(Open Database Connecti
 C 또는 C++ 애플리케이션에서 Azure SQL Database에 연결합니다.
 
 [C++용 Microsoft Azure Storage Client Library](https://github.com/Azure/azure-storage-cpp)<br/>
-[Azure Storage](/azure/storage/storage-introduction)는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 애플리케이션을 위한 클라우드 저장소 솔루션입니다. C++용 Microsoft Azure Storage Client Library를 사용하여 C++에서 Azure Storage에 연결하세요.
+[Azure Storage](/azure/storage/common/storage-introduction)는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 애플리케이션을 위한 클라우드 저장소 솔루션입니다. C++용 Microsoft Azure Storage Client Library를 사용하여 C++에서 Azure Storage에 연결하세요.
 
 [SQL Server용 ODBC 드라이버](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 최신 ODBC 드라이버는 Microsoft SQL Server 및 C/C++용 Microsoft Azure SQL Database 기반 애플리케이션에 대한 강력한 데이터 액세스를 제공합니다. Always Encrypted, Azure Active Directory 및 AlwaysOn 가용성 그룹을 비롯한 여러 기능을 지원합니다. MacOS 및 Linux에서도 사용할 수 있습니다.
@@ -57,4 +57,4 @@ ODBC 인터페이스는 C 프로그래밍 언어와 함께 사용하도록 설�
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio의 C++](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio의 c + +](../overview/visual-cpp-in-visual-studio.md)
