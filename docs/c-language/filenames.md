@@ -17,6 +17,6 @@ ms.locfileid: "69498056"
 
 자세한 내용은 [파일 이름 지정](/windows/win32/FileIO/naming-a-file)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [라이브러리 함수](../c-language/library-functions.md)

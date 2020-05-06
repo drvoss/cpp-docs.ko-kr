@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158429"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport에 대한 규칙 및 제한
 
@@ -19,7 +19,7 @@ ms.locfileid: "56150560"
 
 - **dllimport** 또는 `dllexport` 특성을 포함하지 않고 선언하는 함수는 DLL 인터페이스의 일부분으로 간주되지 않습니다. 따라서 해당 모듈 또는 같은 프로그램의 다른 모듈에 함수 정의가 있어야 합니다. 함수를 DLL 인터페이스에 포함하려면 다른 모듈에서 함수의 정의를 `dllexport`로 선언해야 합니다. 그러지 않으면 클라이언트를 빌드할 때 링커 오류가 발생합니다.
 
-- 프로그램의 모듈 하나에 동일 함수에 대한 **dllimport** 및 `dllexport` 선언이 포함되어 있으면 `dllexport` 특성이 **dllimport** 특성보다 우선적으로 사용됩니다. 그러나 이 경우 컴파일러 경고가 생성됩니다. 예:
+- 프로그램의 모듈 하나에 동일 함수에 대한 **dllimport** 및 `dllexport` 선언이 포함되어 있으면 `dllexport` 특성이 **dllimport** 특성보다 우선적으로 사용됩니다. 그러나 이 경우 컴파일러 경고가 생성됩니다. 예를 들어:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "56150560"
 
     ```
 
-- 개체 선언에 `dllexport` 특성을 포함하는 프로그램은 해당 개체의 정의를 제공해야 하므로 `dllexport` 함수의 주소로 전역 또는 로컬 정적 함수 포인터를 초기화할 수 있습니다. 마찬가지로 `dllexport` 데이터 개체의 주소로 전역 또는 로컬 정적 데이터 포인터를 초기화할 수 있습니다. 예:
+- 개체 선언에 `dllexport` 특성을 포함하는 프로그램은 해당 개체의 정의를 제공해야 하므로 `dllexport` 함수의 주소로 전역 또는 로컬 정적 함수 포인터를 초기화할 수 있습니다. 마찬가지로 `dllexport` 데이터 개체의 주소로 전역 또는 로컬 정적 데이터 포인터를 초기화할 수 있습니다. 예를 들어:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -96,6 +96,6 @@ ms.locfileid: "56150560"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [DLL 가져오기 및 내보내기 함수](../c-language/dll-import-and-export-functions.md)

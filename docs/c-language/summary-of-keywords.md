@@ -3,11 +3,11 @@ title: 키워드 요약
 ms.date: 11/04/2016
 ms.assetid: 341d8297-03eb-4351-9ed0-138ec59b375c
 ms.openlocfilehash: 9dc32aa735b6eb6e3525e2fff64b06ced474b6af
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157697"
 ---
 # <a name="summary-of-keywords"></a>키워드 요약
 
@@ -24,6 +24,6 @@ ms.locfileid: "56149910"
 |**default**|**goto**|**sizeof**|**volatile**|
 |**do**|**if**|**static**|**while**|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [어휘 문법](../c-language/lexical-grammar.md)

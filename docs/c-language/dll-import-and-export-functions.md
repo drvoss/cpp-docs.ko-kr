@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
 ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234249"
 ---
 # <a name="dll-import-and-export-functions"></a>DLL 가져오기 및 내보내기 함수
 
@@ -40,6 +40,6 @@ DllExport int n;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 함수 정의](../c-language/c-function-definitions.md)

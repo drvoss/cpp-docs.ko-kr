@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
 ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334567"
@@ -18,14 +18,14 @@ ms.locfileid: "81334567"
 
 *함수 호출*은 컨트롤 및 인수(있는 경우)를 함수에 전달하는 다음 형식의 식입니다.
 
-*식* *(식 목록*<sub>옵트)</sub>
+*expression* (*expression-list*<sub>opt</sub>)
 
 여기서 *expression*은 함수 이름이거나 함수 주소로 계산되며, *expression-list*는 쉼표로 구분된 식 목록입니다. 두 번째 식의 값은 함수로 전달되는 인수입니다. 함수가 값을 반환하지 않는 경우에는 `void`를 반환하는 함수로 선언합니다.
 
 함수가 호출 전에 선언되었는데 매개 변수와 관련한 정보는 제공되지 않으면 선언되지 않은 인수에 대해서는 일반적인 산술 변환이 진행됩니다.
 
 > [!NOTE]
-> 함수 인수 목록의 식은 원하는 순서로 계산할 수 있으므로 다른 인수로부터의 의도하지 않은 결과로 인해 값이 변경될 수 있는 인수의 경우 정의되지 않은 값을 포함합니다. 함수 호출 연산자로 정의되는 시퀀스 위치를 통해 보장되는 사항은, 호출된 함수로 컨트롤이 전달되기 전에 인수 목록의 모든 의도하지 않은 결과가 평가된다는 것뿐입니다. (인수가 스택에 푸시되는 순서는 별개의 문제입니다.) 자세한 내용은 [시퀀스 포인트를](../c-language/c-sequence-points.md) 참조하십시오.
+> 함수 인수 목록의 식은 원하는 순서로 계산할 수 있으므로 다른 인수로부터의 의도하지 않은 결과로 인해 값이 변경될 수 있는 인수의 경우 정의되지 않은 값을 포함합니다. 함수 호출 연산자로 정의되는 시퀀스 위치를 통해 보장되는 사항은, 호출된 함수로 컨트롤이 전달되기 전에 인수 목록의 모든 의도하지 않은 결과가 평가된다는 것뿐입니다. 스택에서 인수가 푸시되는 순서는 별개의 사항입니다. 자세한 내용은 [시퀀스 위치](../c-language/c-sequence-points.md)를 참조하세요.
 
 함수 호출의 요구 사항은 괄호 앞의 식이 함수 주소로 계산되어야 한다는 것뿐입니다. 즉, 함수 포인터 식을 통해 함수를 호출할 수 있습니다.
 
@@ -91,6 +91,6 @@ work( count, lift );
 
 이 경우 단일 인수 `i`가 호출된 함수로 전달됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[Functions](../c-language/functions-c.md)
+[함수](../c-language/functions-c.md)

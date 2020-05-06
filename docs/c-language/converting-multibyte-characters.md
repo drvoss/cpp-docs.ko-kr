@@ -5,11 +5,11 @@ helpviewer_keywords:
 - multibyte characters, converting
 ms.assetid: bbee7586-6a60-4168-bb98-0d1c8aa823a1
 ms.openlocfilehash: ef1e6d64e508c06cb682e91870ce17a3bc688187
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312410"
 ---
 # <a name="converting-multibyte-characters"></a>멀티바이트 문자 변환
 
@@ -17,6 +17,6 @@ ms.locfileid: "56149286"
 
 기본적으로 현재 로캘은 "C" 로캘입니다. [#pragma setlocale](../preprocessor/setlocale.md)을 사용하여 변경할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자](../c-language/characters.md)

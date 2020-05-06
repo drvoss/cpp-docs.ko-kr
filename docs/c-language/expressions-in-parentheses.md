@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233750"
 ---
 # <a name="expressions-in-parentheses"></a>괄호를 사용한 식
 
@@ -22,7 +22,7 @@ ms.locfileid: "56149351"
 ( 10 + 5 ) / 5
 ```
 
-`10 + 5` 주위의 괄호는 `10 + 5` 값이 먼저 계산되어 나누기 연산자(**/**)의 왼쪽 피연산자가 된다는 의미입니다. `( 10 + 5 ) / 5`의 결과는 3입니다. 괄호가 없으면 `10 + 5 / 5`는 11로 계산됩니다.
+`10 + 5` 주위의 괄호는 `10 + 5` 값이 먼저 계산되어 나누기 연산자( **/** )의 왼쪽 피연산자가 된다는 의미입니다. `( 10 + 5 ) / 5`의 결과는 3입니다. 괄호가 없으면 `10 + 5 / 5`는 11로 계산됩니다.
 
 괄호는 피연산자가 식에서 그룹화되는 방식에 영향을 주지만 모든 경우에 계산의 특정 순서를 보장할 수 있는 것은 아닙니다. 예를 들어 다음 식의 괄호와 왼쪽-오른쪽 그룹화는 하위 식 중 하나에서 사용될 `i`의 값을 보장하지 않습니다.
 
@@ -39,6 +39,6 @@ ms.locfileid: "56149351"
 
 의도하지 않은 결과로 발생한 예외는 [파생 작업](../c-language/side-effects.md)에 설명되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 기본 식](../c-language/c-primary-expressions.md)

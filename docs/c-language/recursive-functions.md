@@ -8,11 +8,11 @@ helpviewer_keywords:
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
 ms.openlocfilehash: 82f0c820ab75fda4bae83db78fa402d7a07cb7fe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232135"
 ---
 # <a name="recursive-functions"></a>재귀 함수
 
@@ -20,7 +20,7 @@ C 프로그램의 모든 함수를 재귀적으로 호출할 수 있습니다. �
 
 **static** 스토리지로 선언된 변수에는 재귀적 호출 시마다 새로운 스토리지가 필요하지 않습니다. 해당 스토리지는 프로그램 수명 동안 존재합니다. 이러한 변수에 대한 각 참조는 동일한 스토리지 영역에 액세스합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 재귀적 호출을 보여 줍니다.
 
@@ -46,6 +46,6 @@ int factorial( int num )      /* Function definition */
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [함수 호출](../c-language/function-calls.md)

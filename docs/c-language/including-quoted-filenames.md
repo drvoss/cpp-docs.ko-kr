@@ -3,11 +3,11 @@ title: 따옴표로 묶은 파일 이름 포함
 ms.date: 11/04/2016
 ms.assetid: 789a047e-ea38-4c99-b71d-a2ad9c81daee
 ms.openlocfilehash: 4083519d6f6b9b4d037b0c2998737f3a5062c6cf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232958"
 ---
 # <a name="including-quoted-filenames"></a>따옴표로 묶은 파일 이름 포함
 
@@ -17,6 +17,6 @@ ms.locfileid: "56149871"
 
 [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec"으로 지정된 포함 파일의 경우 디렉터리 검색은 부모 파일의 디렉터리에서 시작한 다음 모든 조부모 파일의 디렉터리를 통해 진행됩니다. 따라서 검색이 현재 처리 중인 소스 파일을 포함하는 디렉터리를 기준으로 시작됩니다. 조부모 파일이 없고 파일이 검색되지 않은 경우 파일 이름이 꺾쇠 괄호로 묶여 있는 것처럼 검색이 계속됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [전처리 지시문](../c-language/preprocessing-directives.md)

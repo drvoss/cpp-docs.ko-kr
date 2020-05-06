@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
 ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81745883"
@@ -28,7 +28,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 `int`와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다(선언이 권장되기는 함).
 
-ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 다음은 그 예입니다.
+ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 예를 들어:
 
 ```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */

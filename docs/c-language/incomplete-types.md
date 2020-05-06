@@ -11,11 +11,11 @@ helpviewer_keywords:
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232897"
 ---
 # <a name="incomplete-types"></a>불완전한 형식
 
@@ -44,7 +44,7 @@ ms.locfileid: "56151730"
     }                   /* student structure now completed */
     ```
 
-- 불완전한 배열 형식을 만들려면 해당 반복 횟수를 지정하지 않고 배열 형식을 선언합니다. 예:
+- 불완전한 배열 형식을 만들려면 해당 반복 횟수를 지정하지 않고 배열 형식을 선언합니다. 예를 들어:
 
     ```C
     char a[];  /* a has incomplete type */
@@ -56,6 +56,6 @@ ms.locfileid: "56151730"
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

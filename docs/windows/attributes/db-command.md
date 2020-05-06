@@ -1,19 +1,19 @@
 ---
-title: db_command (C++ COM 특성)
+title: db_command (c + + COM 특성)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825436"
 ---
-# <a name="dbcommand"></a>db_command
+# <a name="db_command"></a>db_command
 
 OLE DB 명령을 만듭니다.
 
@@ -26,7 +26,7 @@ OLE DB 명령을 만듭니다.
 
 ### <a name="parameters"></a>매개 변수
 
-*command*<br/>
+*명령을 사용합니다.*<br/>
 OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 간단한 예제입니다.
 
 ```cpp
@@ -35,27 +35,32 @@ OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 
 
 *command* 구문은 다음과 같습니다.
 
-> binding parameter block 1 &nbsp;&nbsp;OLE DB command binding parameter block 2 &nbsp;&nbsp;continuation of OLE DB command binding parameter block 3 ...
+> 바인딩 매개 변수 블록 1 \
+> &nbsp;&nbsp;OLE DB 명령 \
+> 바인딩 매개 변수 블록 2 \
+> &nbsp;&nbsp;OLE DB 명령의 연속 작업
+> 바인딩 매개 변수 블록 3 \
+> ...
 
 *binding parameter block* 은 다음과 같이 정의됩니다.
 
-> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
+> **(\[ ** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
-다음은 각 문자에 대한 설명입니다.
+여기서
 
 - **(** 는 데이터 바인딩 블록의 시작을 표시합니다.
 
-- **\[** *bindtype* **]** 은 대/소문자를 구분하는 다음 문자열 중 하나입니다.
+- **\[***bindtype* **]** 은 다음과 같은 대/소문자를 구분 하지 않는 문자열 중 하나입니다.
 
-  - **\[db_column]** - 각 멤버 변수를 행 집합의 열에 바인딩합니다.
+  - ** \[db_column]** 각 멤버 변수를 행 집합의 열에 바인딩합니다.
 
-  - **\[bindto]**(**\[db_column]** 과 동일).
+  - ** \[bindto]** ** \[db_column**와 동일 합니다.
 
-  - **\[in]** - 멤버 변수를 입력 매개 변수로 바인딩합니다.
+  - ** \[in]** 멤버 변수를 입력 매개 변수로 바인딩합니다.
 
-  - **\[out]** - 멤버 변수를 출력 매개 변수로 바인딩합니다.
+  - ** \[out]** 멤버 변수를 출력 매개 변수로 바인딩합니다.
 
-  - **\[in,out]** - 멤버 변수를 입/출력 매개 변수로 바인딩합니다.
+  - in, out] ** \[** 멤버 변수를 입/출력 매개 변수로 바인딩합니다.
 
 - *szVarX*, *nVarX*는 현재 범위 내에서 멤버 변수를 확인합니다.
 
@@ -92,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 *hresult*<br/>
 (선택 사항) 이 데이터베이스 명령의 HRESULT를 수신할 변수를 식별합니다. 변수가 없으면 특성에 의해 자동으로 삽입됩니다.
 
-*bindings*<br/>
+*바인딩하*<br/>
 (선택 사항) OLE DB 명령에서 바인딩 매개 변수를 구분할 수 있습니다.
 
 *bindings*에 대한 값을 지정하면, **db_command**는 관련된 값을 구문 분석하고 \[*bindtype*] 매개 변수는 구문 분석하지 않습니다. 이 방법에서는 OLE DB 공급자 구문을 사용할 수 있습니다. 구문 분석을 사용하지 않도록 설정하려면 바인딩 매개 변수 없이 `Bindings=""`를 지정합니다.
@@ -122,7 +127,7 @@ TCHAR m_state[3] = 'CA';
 
 이 샘플에서는 상태 열이 'CA'와 일치하는 테이블에서 성과 이름을 선택하는 명령을 정의합니다. **db_command** 는 마법사에서 생성한 함수(예: [OpenAll 및 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)) 및 `CRowset` 멤버 함수(예: [MoveNext](../../data/oledb/crowset-movenext.md))를 호출할 수 있는 행 집합을 만들고 읽습니다.
 
-이 코드를 사용하려면 pubs 데이터베이스에 연결되는 고유한 연결 문자열을 제공해야 합니다. 개발 환경에서이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: 데이터베이스 및 기존 개체 찾아보기 연결할](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) 하 고 [새 연결 추가](/visualstudio/data-tools/add-new-connections)합니다.
+이 코드를 사용하려면 pubs 데이터베이스에 연결되는 고유한 연결 문자열을 제공해야 합니다. 개발 환경에서 이를 수행하는 방법에 대한 자세한 내용은 [방법: 데이터베이스에 연결 및 기존 개체 찾아보기](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) 및 [새 연결 추가](/visualstudio/data-tools/add-new-connections)를 참조하세요.
 
 ```cpp
 // db_command.h
@@ -238,13 +243,13 @@ int main() {
 |||
 |-|-|
 |**적용 대상**|**클래스**, **구조체**, 멤버, 메서드, 로컬|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 소비자 특성](ole-db-consumer-attributes.md)<br/>
 [독립 실행형 특성](stand-alone-attributes.md)

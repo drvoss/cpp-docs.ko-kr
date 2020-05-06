@@ -13,11 +13,11 @@ helpviewer_keywords:
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290692"
 ---
 # <a name="customizing-c-command-line-processing"></a>C 명령줄 처리 사용자 지정
 
@@ -27,6 +27,6 @@ ms.locfileid: "56147037"
 
 프로그램에서 C 런타임 라이브러리의 **_spawn** 또는 **_exec** 계열 루틴을 호출하는 경우 생성하는 프로세스에서 새 프로세스로 환경을 전달하는 데 환경 처리 루틴이 사용되므로 환경 처리 루틴을 억제하면 안 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [main 함수 및 프로그램 실행](../c-language/main-function-and-program-execution.md)

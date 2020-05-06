@@ -5,11 +5,11 @@ helpviewer_keywords:
 - domain errors
 ms.assetid: 67faa973-c872-40bc-a25f-2ef5559db96c
 ms.openlocfilehash: 2e81a5f722bc55ebe4c36e4321511afb751b4d73
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234083"
 ---
 # <a name="domain-errors"></a>도메인 오류
 
@@ -17,6 +17,6 @@ ms.locfileid: "56152510"
 
 ERRNO.H 파일은 도메인 오류 상수 `EDOM`을 33으로 정의합니다.  반환 값에 대한 자세한 내용은 오류를 발생시킨 특정 함수에 대한 도움말 항목을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [라이브러리 함수](../c-language/library-functions.md)
