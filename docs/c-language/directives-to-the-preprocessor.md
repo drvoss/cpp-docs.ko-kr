@@ -3,11 +3,11 @@ title: 전처리기에 대한 지시문
 ms.date: 11/04/2016
 ms.assetid: adc6251e-cf6b-4508-bdbb-55f446c838d3
 ms.openlocfilehash: 520d181c3a58ee2c626678a3afd9126f1ef183cc
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234142"
 ---
 # <a name="directives-to-the-preprocessor"></a>전처리기에 대한 지시문
 
@@ -24,6 +24,6 @@ ms.locfileid: "56149039"
 |`#elif`|`#error`|**#ifndef**|**#pragma**|
 |`#else`|`#if`|`#include`|`#undef`|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [원본 파일 및 원본 프로그램](../c-language/source-files-and-source-programs.md)

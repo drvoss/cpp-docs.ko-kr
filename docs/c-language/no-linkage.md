@@ -6,11 +6,11 @@ helpviewer_keywords:
 - linkage [C++], none
 ms.assetid: 5a413082-1034-4e04-b76b-8d14668bf434
 ms.openlocfilehash: c80cb814145ac986864fe351e664d8472f3bf880
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232391"
 ---
 # <a name="no-linkage"></a>링크 없음
 
@@ -26,6 +26,6 @@ ms.locfileid: "56152848"
 
 식별자에 링크가 없는 경우 동일한 범위 수준에서 선언자 또는 형식 지정자에 동일한 이름을 다시 선언하면 기호 재정의 오류가 발생합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [extern을 사용하여 링크 지정](../cpp/using-extern-to-specify-linkage.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
 ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158347"
 ---
 # <a name="scope-and-visibility"></a>범위 및 표시 영역
 
@@ -29,6 +29,6 @@ ms.locfileid: "56151288"
 
 다른 소스 파일에서 변수를 화면에 표시하기에 적절한 선언은 [스토리지 클래스](../c-language/c-storage-classes.md)에서 설명합니다. 하지만 **static** 스토리지 클래스 지정자를 사용하여 외부 수준에서 선언한 변수와 함수는 정의된 소스 파일 내에서만 표시됩니다. 다른 모든 함수는 전역적으로 표시됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [수명, 범위, 표시 유형 및 링크](../c-language/lifetime-scope-visibility-and-linkage.md)

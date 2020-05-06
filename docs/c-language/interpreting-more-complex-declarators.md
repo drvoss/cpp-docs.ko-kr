@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
 ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232867"
 ---
 # <a name="interpreting-more-complex-declarators"></a>더 복잡한 선언자 해석
 
@@ -50,7 +50,7 @@ ms.locfileid: "56148246"
 
 1. `char` 값
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 다른 복합 선언을 보여 주고 괄호가 선언의 의미에 미치는 영향을 나타냅니다.
 
@@ -126,6 +126,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 이 예제에서는 괄호의 위치에 따라 선언의 의미가 어떻게 바뀌는지를 보여 줍니다. 이 예제에서 `var`은 공용 구조체에 대한 포인터의 배열(요소가 5개임)에 대한 포인터의 배열(요소가 5개임)입니다. `typedef`를 사용하여 복합 선언을 방지하는 방법에 대한 예제를 보려면 [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

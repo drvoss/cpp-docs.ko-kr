@@ -3,15 +3,15 @@ title: 환경 이름
 ms.date: 11/04/2016
 ms.assetid: 9af409a5-e724-465a-9a21-88d3586c2e92
 ms.openlocfilehash: 43e1254b4c1ee61a92fbb6499d9396e8b15a3047
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234129"
 ---
 # <a name="environment-names"></a>환경 이름
 
-**ANSI 4.10.4.4** [getenv](../c-runtime-library/reference/getenv-wgetenv.md) 함수에 사용되는 환경 목록을 변경하는 메서드 및 환경 이름 집합입니다.
+**ANSI 4.10.4.4**[getenv](../c-runtime-library/reference/getenv-wgetenv.md) 함수에 사용되는 환경 목록을 변경하는 메서드 및 환경 이름 집합입니다.
 
 환경 이름 집합에는 제한이 없습니다.
 
@@ -27,7 +27,7 @@ system( SET LIB = D:\LIBS );
 
 마찬가지로 `_putenv` 함수로 변경한 내용은 프로그램이 끝날 때까지만 지속됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [라이브러리 함수](../c-language/library-functions.md)<br/>
 [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>
