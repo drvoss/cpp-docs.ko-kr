@@ -3,11 +3,11 @@ title: 가장 큰 배열 크기
 ms.date: 11/04/2016
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
 ms.openlocfilehash: a1f48bdade27d0d037609e3ad0e64b2f0fc7b9a9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232750"
 ---
 # <a name="largest-array-size"></a>가장 큰 배열 크기
 
@@ -15,6 +15,6 @@ ms.locfileid: "56147362"
 
 32비트 x86 플랫폼에서 `size_t` 형식 정의는 `unsigned int`입니다. 64비트 플랫폼에서 `size_t` 형식 정의는 `unsigned __int64`입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [배열 및 포인터](../c-language/arrays-and-pointers.md)
