@@ -8,11 +8,11 @@ helpviewer_keywords:
 - epilog code
 ms.assetid: 23b1209b-93ba-46ad-a60f-2327c1933eaf
 ms.openlocfilehash: 519d7bceb700e9862f0d0025b755cf28fb0fbc0c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325782"
 ---
 # <a name="naked-c"></a>Naked (C)
 
@@ -24,6 +24,6 @@ naked 특성 사용에 대한 자세한 내용은 [Naked 함수](../c-language/n
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 확장 스토리지 클래스 특성](../c-language/c-extended-storage-class-attributes.md)

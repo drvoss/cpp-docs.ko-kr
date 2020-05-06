@@ -8,11 +8,11 @@ helpviewer_keywords:
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
 ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312565"
 ---
 # <a name="continue-statement-c"></a>continue 문 (C)
 
@@ -43,6 +43,6 @@ while ( i-- > 0 )
 
 이 예제에서 `i`가 0보다 크면 문 분문이 실행됩니다. 첫 번째 `f(i)`가 `x`에 할당되고 `x`가 1과 같으면 `continue` 문이 실행됩니다. 본문에서 나머지 문이 무시되고 루프의 테스트를 실행하여 루프 맨 위에서 실행이 다시 시작됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [continue 문](../cpp/continue-statement-cpp.md)
