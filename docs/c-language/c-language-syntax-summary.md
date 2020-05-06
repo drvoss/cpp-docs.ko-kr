@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 6edccdb7-453b-4820-a5d8-075c19fb8926
 ms.openlocfilehash: 6fda07d6caf4f1c42248dc362524fd87e34e7218
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81335021"
@@ -21,6 +21,6 @@ ms.locfileid: "81335021"
 > [!NOTE]
 > 이 구문 요약은 ANSI C 표준에 속하지 않지만 정보 제공을 위해 포함되었습니다. Microsoft 전용 구문은 구문 다음에 나오는 주석을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 참조](../c-language/c-language-reference.md)

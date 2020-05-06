@@ -3,11 +3,11 @@ title: 문자 시퀀스
 ms.date: 11/04/2016
 ms.assetid: 1e6961a9-150e-4c13-b427-9af4b6a1fb7a
 ms.openlocfilehash: 42fb6b61771feb3eaedfb4ce1e674003df91b263
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312689"
 ---
 # <a name="character-sequences"></a>문자 시퀀스
 
@@ -27,6 +27,6 @@ ms.locfileid: "56149937"
 fil = fopen( "path1\\path2\\myfile", "rt" );
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [전처리 지시문](../c-language/preprocessing-directives.md)

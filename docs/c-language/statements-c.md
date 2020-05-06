@@ -7,11 +7,11 @@ helpviewer_keywords:
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
 ms.openlocfilehash: 0fb6a9c3742efd414581124e56d01356e4448614
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158022"
 ---
 # <a name="statements-c"></a>문 (C)
 
@@ -27,6 +27,6 @@ C 프로그램의 문은 프로그램 실행의 흐름을 제어합니다. 다�
 |[for 문](../c-language/for-statement-c.md)|[try-finally 문](../c-language/try-finally-statement-c.md)|
 |[goto 및 레이블 문](../c-language/goto-and-labeled-statements-c.md)|[while 문](../c-language/while-statement-c.md)|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 참조](../c-language/c-language-reference.md)

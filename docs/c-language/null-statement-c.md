@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148454"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343414"
 ---
 # <a name="null-statement-c"></a>Null 문 (C)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56148454"
 
 > **;**
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **do**, **for**, **if** 및 `while`과 같은 문의 경우 실행 가능 문이 문 본문으로 나타나야 합니다. null 문은 실제 문 본문이 필요하지 않는 경우 구문 요구 사항을 충족합니다.
 
@@ -37,6 +37,6 @@ for ( i = 0; i < 10; line[i++] = 0 )
 
 이 예제에서 **for** 문 `line[i++] = 0`의 루프 식은 `line`의 처음 10개 요소를 0개로 초기화합니다. 추가 문이 필요하지 않으므로 문 본문이 null 문입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문](../c-language/statements-c.md)

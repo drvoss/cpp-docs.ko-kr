@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type casts, conversion
 ms.assetid: 30fbd974-8f5a-4b70-ac44-d3937b96b702
 ms.openlocfilehash: f9f2d73e57c576dcf8afed008a74e5e7dd9b9d6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312468"
 ---
 # <a name="conversions-from-other-types"></a>다른 형식에서 변환
 
@@ -26,6 +26,6 @@ ms.locfileid: "50448661"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [할당 변환](../c-language/assignment-conversions.md)

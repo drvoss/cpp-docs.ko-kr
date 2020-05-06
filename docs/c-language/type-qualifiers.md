@@ -11,11 +11,11 @@ helpviewer_keywords:
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
 ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344800"
 ---
 # <a name="type-qualifiers"></a>형식 한정자
 
@@ -63,6 +63,6 @@ int volatile vint;     /* Volatile integer        */
 
 - 항목이 **const**이면서 `volatile`일 수도 있습니다. 이 경우 항목은 자체 프로그램에서 올바르게 수정될 수 없지만 비동기 프로세스에서 수정될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

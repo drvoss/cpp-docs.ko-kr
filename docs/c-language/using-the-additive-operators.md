@@ -6,11 +6,11 @@ helpviewer_keywords:
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
 ms.openlocfilehash: 0e2d802a77c56b8f458b614b29e86e2e1d30a55e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344878"
 ---
 # <a name="using-the-additive-operators"></a>가감 연산자 사용
 
@@ -37,6 +37,6 @@ j = &x[i] - &x[i-2];
 
 이 예제에서는 `x`의 세 번째 요소의 주소(`x[i-2]`에서 지정)가 `x`의 다섯 번째 요소의 주소(`x[i]`에서 지정)에서 차감됩니다. 차이는 **float**의 길이로 나눠지며 결과는 정수 값 2입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 가감 연산자](../c-language/c-additive-operators.md)

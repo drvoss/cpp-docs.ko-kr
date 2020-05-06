@@ -14,11 +14,11 @@ helpviewer_keywords:
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
 ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290666"
 ---
 # <a name="unary-arithmetic-operators"></a>단항 산술 연산자
 
@@ -33,7 +33,7 @@ C 단항 더하기, 산술 부정, 보수 및 논리 부정 연산자는 다음 
 
 포인터에 대한 단항 산술 연산은 수행할 수 없습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 단항 산술 연산자를 보여 줍니다.
 
@@ -57,6 +57,6 @@ if( !(x < y) )
 
 `x`가 `y`보다 크거나 같으면 식의 결과는 1(true)입니다. `x`가 `y`보다 작으면 결과는 0(false)입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)

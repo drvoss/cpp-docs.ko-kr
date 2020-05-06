@@ -5,11 +5,11 @@ helpviewer_keywords:
 - registers
 ms.assetid: f6654e53-742c-4a30-8620-1a4d436a6ae4
 ms.openlocfilehash: 5b4a6d320daae83685373f5cbb3bfd528635e2c2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232508"
 ---
 # <a name="registers-availability-of-registers"></a>레지스터: 레지스터의 가용성
 
@@ -17,6 +17,6 @@ ms.locfileid: "56152094"
 
 컴파일러는 레지스터 변수에 대한 사용자 요청을 고려하지 않습니다. 대신, 최적화할 때 자체적으로 선택합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [구현 정의 ](../c-language/implementation-defined-behavior.md)

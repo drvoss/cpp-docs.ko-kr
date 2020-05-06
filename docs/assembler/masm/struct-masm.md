@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 2524a8ade318bd29ebcd4e4273089598798302db
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f253c95eca6a3d48a4d9a7f3a7a4e97ea41202c8
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825462"
 ---
 # <a name="struct"></a>STRUCT
 
@@ -19,10 +19,11 @@ ms.locfileid: "80078907"
 
 ## <a name="syntax"></a>구문
 
-> *이름* **STRUCT** ⟦*alignment*⟧ ⟦ __,__ **고유**하지 않은 ⟧ *필드 선언*\
+> *이름* **STRUCT** ⟦*alignment*⟧ ⟦__,__ **고유**하지 않은 ⟧ \
+> *필드 선언*\
 > *이름* **끝**
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *이름* 인수는 여는 문과 닫는 문에서 동일 해야 합니다.
 

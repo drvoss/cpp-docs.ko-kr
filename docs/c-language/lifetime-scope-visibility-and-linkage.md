@@ -3,11 +3,11 @@ title: 수명, 범위, 표시 영역 및 링크
 ms.date: 11/04/2016
 ms.assetid: c7678bb8-9d79-40ed-b352-abab876f0b17
 ms.openlocfilehash: d7229d264f268914669b129428e99a430de55bdd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152445"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343488"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>수명, 범위, 표시 영역 및 링크
 
@@ -19,6 +19,6 @@ C 프로그램의 작동 방식을 이해하려면 프로그램에서 변수와 
 
 - [링크](../c-language/linkage.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [프로그램 구조](../c-language/program-structure.md)
