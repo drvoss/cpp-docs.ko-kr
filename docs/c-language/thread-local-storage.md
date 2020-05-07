@@ -75,7 +75,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */
     ```
 
-- C에서는 비정적 범위의 개체에 한해 자신에 대한 참조를 포함하는 식으로 변수를 초기화할 수 있습니다. 예:
+- C에서는 비정적 범위의 개체에 한해 자신에 대한 참조를 포함하는 식으로 변수를 초기화할 수 있습니다. 예를 들어:
 
     ```C
     #define Thread   __declspec( thread )
@@ -92,6 +92,6 @@ thread 특성 사용에 대한 자세한 내용은 [다중 스레딩 항목](../
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 확장 스토리지 클래스 특성](../c-language/c-extended-storage-class-attributes.md)
