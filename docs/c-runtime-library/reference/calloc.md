@@ -1,6 +1,6 @@
 ---
 title: calloc
-description: C 런타임 함수 calloc은 초기화되지 는 제로 초기화된 메모리를 할당합니다.
+description: C 런타임 라이브러리 함수 calloc는 0으로 초기화 된 메모리를 할당 합니다.
 ms.date: 4/2/2020
 api_name:
 - calloc
@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: fb4f7d6dc059023d34cb0b811edf5dfb48cb7a34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333646"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918717"
 ---
 # <a name="calloc"></a>calloc
 
@@ -53,34 +53,34 @@ void *calloc(
 *number*<br/>
 요소의 수입니다.
 
-*크기*<br/>
+*size*<br/>
 각 요소의 길이입니다(바이트).
 
 ## <a name="return-value"></a>Return Value
 
-**calloc할당된** 공간에 대한 포인터를 반환합니다. 반환 값이 가리킨 스토리지 공간은 모든 형식의 개체 스토리지를 위해 적절하게 정렬되도록 보장됩니다. **void**이외의 형식에 대한 포인터를 얻으려면 반환 값에 형식 캐스트를 사용합니다.
+**calloc** 은 할당 된 공간에 대 한 포인터를 반환 합니다. 반환 값이 가리킨 스토리지 공간은 모든 형식의 개체 스토리지를 위해 적절하게 정렬되도록 보장됩니다. **Void**이외의 형식에 대 한 포인터를 가져오려면 반환 값에 형식 캐스팅을 사용 합니다.
 
 ## <a name="remarks"></a>설명
 
-**calloc** 함수는 각 길이 *크기* 바이트의 *숫자* 요소 배열에 대 한 저장소 공간을 할당 합니다. 각 요소는 0으로 초기화됩니다.
+**Calloc** 함수는 각각 길이 *크기* 바이트의 *숫자* 요소 배열에 대 한 저장소 공간을 할당 합니다. 각 요소는 0으로 초기화됩니다.
 
-**calloc는** 메모리 할당이 실패하거나 요청된 메모리 양이 **_HEAP_MAXREQ**초과하는 경우 **errno를** **ENOMEM으로** 설정합니다. 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+**calloc** 는 메모리 할당이 실패 하거나 요청 된 메모리 양이 **_HEAP_MAXREQ**을 초과 하는 경우 **errno** 을 **enomem** 으로 설정 합니다. 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
-Microsoft 구현에서 *숫자* 또는 *크기가* 0이면 **calloc은** 0이 아닌 크기의 할당된 블록에 대한 포인터를 반환합니다. 반환된 포인터를 읽거나 쓰려고 하면 정의되지 않은 동작이 발생합니다.
+Microsoft 구현에서 *number* 또는 *size* 가 0 인 경우 **calloc** 는 크기가 0이 아닌 할당 된 블록에 대 한 포인터를 반환 합니다. 반환 된 포인터를 통해 읽거나 쓰려고 하면 정의 되지 않은 동작이 발생 합니다.
 
-**calloc는** C++ [_set_new_mode](set-new-mode.md) 함수를 사용하여 *새 처리기 모드를*설정합니다. 새 처리기 모드는 실패시 **calloc이** [_set_new_handler](set-new-handler.md)대해 설정한 대로 새 처리기 루틴을 호출할지 여부를 나타냅니다. 기본적으로 **calloc는** 메모리를 할당하지 못하면 새 처리기 루틴을 호출하지 않습니다. **calloc가** 메모리를 할당하지 못하면 새 **연산자가** 같은 이유로 실패할 때와 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음 코드를
+**calloc** 는 c + + [_set_new_mode](set-new-mode.md) 함수를 사용 하 여 *새 처리기 모드*를 설정 합니다. 새 처리기 모드는 실패 시 **calloc** 가 [_set_new_handler](set-new-handler.md)설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **calloc** 는 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **calloc** 에서 메모리를 할당 하지 못할 때 **새** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 기본값을 재정의하려면 다음 코드를
 
 ```C
 _set_new_mode(1);
 ```
 
-프로그램 초기에 또는 *NEWMODE와 연결합니다. OBJ* [(링크 옵션](../../c-runtime-library/link-options.md)참조).
+프로그램의 초기에 사용 하거나 Newmode를 사용 하 여 연결 *합니다. OBJ* ( [링크 옵션](../../c-runtime-library/link-options.md)참조).
 
-응용 프로그램이 C 런타임 라이브러리의 디버그 버전과 연결되면 **calloc는** [_calloc_dbg.](calloc-dbg.md) 디버깅 프로세스 동안 힙을 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.
+응용 프로그램이 C 런타임 라이브러리의 디버그 버전에 연결 된 경우 **calloc** 은 [_calloc_dbg](calloc-dbg.md)를 확인 합니다. 디버깅 프로세스 동안 힙을 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.
 
-**calloc가** `__declspec(noalias)` 표시되고 `__declspec(restrict)`, 함수가 전역 변수를 수정하지 않도록 보장되고 반환된 포인터가 별칭이 아님을 의미합니다. 자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md)를 참조하세요.
+**calloc** 는 및 `__declspec(noalias)` `__declspec(restrict)`로 표시 됩니다. 즉, 함수가 전역 변수를 수정 하지 않도록 보장 하 고 반환 된 포인터에 별칭이 지정 되지 않습니다. 자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -117,9 +117,9 @@ int main( void )
 Allocated 40 long integers
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
-[무료](free.md)<br/>
+[늘릴](free.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

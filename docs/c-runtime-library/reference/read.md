@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: db3726b85bb4ba7c8e9a691bef3fb063ec5709c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338129"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919511"
 ---
 # <a name="_read"></a>_read
 
@@ -54,32 +54,32 @@ int _read(
 
 ### <a name="parameters"></a>매개 변수
 
-*Fd*<br/>
+*fd*<br/>
 열려 있는 파일을 참조하는 파일 설명자입니다.
 
 *버퍼*<br/>
 데이터의 스토리지 위치입니다.
 
 *buffer_size*<br/>
-읽을 수 있는 최대 바이트 수입니다.
+읽을 최대 바이트 수입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_read** 파일에 남아 있는 *buffer_size* 바이트 미만이거나 파일이 텍스트 모드에서 열린 경우 *buffer_size* 미만일 수 있는 읽기 바이트 수를 반환합니다. 텍스트 모드에서는 각 캐리지 리턴 `\r\n` 라인 피드 쌍이 `\n`단일 줄 피드 문자로 바뀝습니다. 단일 줄 피드 문자만 반환 값에 계산됩니다. 이러한 바꾸기는 파일 포인터에 영향을 주지 않습니다.
+**_read** 는 읽은 바이트 수를 반환 합니다 .이는 파일에 남아 있는 *buffer_size* 바이트 수보다 적거나 파일이 텍스트 모드로 열린 경우 *buffer_size* 보다 적을 수 있습니다. 텍스트 모드에서 각 캐리지 리턴-줄 바꿈 쌍 `\r\n` 은 단일 줄 바꿈 문자로 `\n`바뀝니다. 반환 값에는 단일 줄 바꿈 문자만 계산 됩니다. 이러한 바꾸기는 파일 포인터에 영향을 주지 않습니다.
 
-함수는 파일의 끝에서 읽기를 시도하는 경우 0을 반환합니다. *fd가* 유효하지 않으면 파일을 읽기 위해 열리지 않거나 파일이 잠겨 있으면 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 함수는 -1을 반환하고 **errno를** **EBADF로**설정합니다.
+함수는 파일의 끝에서 읽기를 시도하는 경우 0을 반환합니다. *Fd* 가 유효 하지 않은 경우 파일을 읽기용으로 열지 않거나 파일을 잠 궜으 면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는-1을 반환 하 고 **errno** 를 **ebadf**로 설정 합니다.
 
-*버퍼가* **NULL이거나****INT_MAX** *buffer_size* > 경우 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있으면 함수가 -1을 반환하고 **errno가** **EINVAL로**설정됩니다.
+*버퍼가* **NULL**이거나 *buffer_size* > **INT_MAX**경우 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는-1을 반환 하 고 **errno** 는 **EINVAL**로 설정 됩니다.
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
-**_read** 함수는 *fd와*연결된 파일에서 최대 *buffer_size* 바이트를 *버퍼로* 읽습니다. 읽기 작업은 지정된 파일과 연결된 파일 포인터의 현재 위치에서 시작됩니다. 읽기 작업 후 파일 포인터는 읽지 않은 다음 문자를 가리킵니다.
+**_Read** 함수는 *fd*와 연결 된 파일에서 최대 *buffer_size* 바이트를 *버퍼로* 읽습니다. 읽기 작업은 지정된 파일과 연결된 파일 포인터의 현재 위치에서 시작됩니다. 읽기 작업 후 파일 포인터는 읽지 않은 다음 문자를 가리킵니다.
 
-파일이 텍스트 모드에서 열린 경우 **_read** CTRL+Z 문자가 발생하면 읽기가 종료되며, 이 문자는 파일 끝 표시기로 처리됩니다. 파일 끝 표시기를 지우려면 [_lseek](lseek-lseeki64.md)를 사용합니다.
+파일이 텍스트 모드에서 열린 경우에는 **_read** 가 CTRL + Z 문자 (파일 끝 표시기로 처리 됨)를 발견 하면 읽기가 종료 됩니다. 파일 끝 표시기를 지우려면 [_lseek](lseek-lseeki64.md)를 사용합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -146,7 +146,7 @@ Line two.
 Read 19 bytes from file
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

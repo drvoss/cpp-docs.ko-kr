@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,19 +66,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 315a86c5cf7e58219bad25f2b6633dd91275c09f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320464"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920005"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
 대소문자를 구분하지 않는 문자열 비교를 수행합니다.
 
 > [!IMPORTANT]
-> **_mbsicmp** 및 **_mbsicmp_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsicmp** 및 **_mbsicmp_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -114,44 +114,44 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열1,* *문자열2*<br/>
+*string1*, *문자열 2*<br/>
 비교할 Null 종료 문자열입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-반환 값은 다음과 같이 *string1과* *string2의* 관계를 나타냅니다.
+반환 값은 다음과 같이 *문자열* 1과 *문자열 2* 의 관계를 나타냅니다.
 
-|반환 값|Description|
+|반환 값|설명|
 |------------------|-----------------|
-|< 0|*문자열1보다* *문자열2*|
-|0|*문자열1과* *문자열2*|
-|> 0|*문자열1이* *문자열2보다* 큽|
+|< 0|*문자열* *2* 보다 작음|
+|0|*문자열* *2* 와 같음|
+|> 0|*문자열* *2* 보다 큼|
 
-오류가 발생하면 **_mbsicmp** **_NLSCMPERROR** \<string.h> mbstring.h \<> 정의된 _NLSCMPERROR 반환합니다.
+오류가 발생 하면 **_mbsicmp** **_NLSCMPERROR**를 반환 하며,이는> \<및 \<mbstrom. h>에 정의 됩니다.
 
 ## <a name="remarks"></a>설명
 
-**_stricmp** 함수는 각 문자를 소문자로 변환한 후 *string1과* *string2를* 정상적으로 비교하고 관계를 나타내는 값을 반환합니다. **_stricoll** **_stricmp** **_stricmp** 비교는 대문자와 소문자를 결정하는 **LC_CTYPE**영향을 받습니다. **_stricoll** 함수는 대/소문자 및 데이터 정렬 순서를 모두 포함하는 로캘의 **LC_CTYPE** **및 LC_COLLATE** 범주에 따라 문자열을 비교합니다. **LC_COLLATE** 범주에 대한 자세한 내용은 [setlocale](setlocale-wsetlocale.md) 및 [로캘 범주를](../../c-runtime-library/locale-categories.md)참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. 접미사가 있는 버전은 전달된 로캘을 사용한다는 점만 제외하면 동일합니다. 로캘이 설정되지 않은 경우에는 C 로캘이 사용됩니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_Stricmp** 함수 서 수로는 각 문자를 소문자로 변환한 후 *문자열* 1과 *문자열 2* 를 비교 하 고 해당 관계를 나타내는 값을 반환 합니다. **_stricmp** 는 **_stricoll** 와 다릅니다. **_stricmp** 비교는 상한 및 소문자를 결정 하는 **LC_CTYPE**의 영향을 받습니다. **_Stricoll** 함수는 로캘의 **LC_CTYPE** 및 **LC_COLLATE** 범주 모두에 따라 문자열을 비교 합니다. 여기에는 대/소문자와 데이터 정렬 순서가 모두 포함 됩니다. **LC_COLLATE** 범주에 대 한 자세한 내용은 [Setlocale](setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용 합니다. 접미사가 있는 버전은 전달된 로캘을 사용한다는 점만 제외하면 동일합니다. 로캘이 설정되지 않은 경우에는 C 로캘이 사용됩니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 > [!NOTE]
-> **_stricmp** **_strcmpi**같습니다. 서로 교환하여 사용할 수 있지만 **_stricmp** 기본 표준입니다.
+> **_stricmp** 은 **_strcmpi**와 동일 합니다. 이러한 두 용어는 서로 바꿔 사용할 수 있지만 **_stricmp** 기본 표준입니다.
 
-**_strcmpi** 함수는 **_stricmp** 동일하며 이전 버전과의 호환성을 위해서만 제공됩니다.
+**_Strcmpi** 함수는 **_stricmp** 와 같으며 이전 버전과의 호환성을 위해서만 제공 됩니다.
 
-**_stricmp** 소문자 비교를 수행하므로 예기치 않은 동작이 발생할 수 있습니다.
+**_Stricmp** 는 소문자 비교를 수행 하므로 예기치 않은 동작이 발생할 수 있습니다.
 
-**_stricmp** 의 대/소문자 변환이 비교 결과에 영향을 미치는 경우를 설명하기 위해 JOHNSTON과 JOHN_HENRY 두 문자열이 있다고 가정합니다. JOHN_HENRY 문자열은 "_"의 ASCII 값이 소문자 S보다 작기 때문에 JOHNSTON보다 작은 것으로 간주됩니다. 실제로 ASCII 값이 91~96인 문자는 모든 문자보다 작은 것으로 간주됩니다.
+**_Stricmp** 에의 한 대/소문자 변환이 비교 결과에 영향을 주는 경우를 설명 하기 위해 두 문자열 JOHNSTON 및 JOHN_HENRY 있다고 가정 합니다. JOHN_HENRY 문자열은 "_"의 ASCII 값이 소문자 S보다 작기 때문에 JOHNSTON보다 작은 것으로 간주됩니다. 실제로 ASCII 값이 91~96인 문자는 모든 문자보다 작은 것으로 간주됩니다.
 
-[strcmp](strcmp-wcscmp-mbscmp.md) 함수를 **_stricmp**대신 사용하는 경우 JOHN_HENRY JOHNSTON보다 큽합니다.
+**_Stricmp**대신 [strcmp](strcmp-wcscmp-mbscmp.md) 함수를 사용 하는 경우 JOHN_HENRY는 JOHNSTON 보다 큽니다.
 
-**_wcsicmp** **_mbsicmp** **_stricmp**와이드 문자 및 멀티 바이트 문자 버전입니다. **_wcsicmp** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsicmp** 그 문자열은 멀티 바이트 문자 문자열입니다. **_mbsicmp** 현재 다중 바이트 코드 페이지에 따라 다중 바이트 문자 시퀀스를 인식하고 오류에 **_NLSCMPERROR** 반환합니다. 자세한 내용은 [코드 페이지](../../c-runtime-library/code-pages.md) 참조하세요. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_wcsicmp** 및 **_mbsicmp** 는 **_stricmp**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsicmp** 의 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsicmp** 의 이러한 문자열은 멀티 바이트 문자열입니다. **_mbsicmp** 는 현재 멀티 바이트 코드 페이지에 따라 멀티 바이트 문자 시퀀스를 인식 하 고 오류 발생 시 **_NLSCMPERROR** 을 반환 합니다. 자세한 내용은 [코드 페이지](../../c-runtime-library/code-pages.md) 참조하세요. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-**_wcsicmp** **wcscmp는** **wcscmp가** 비교하기 전에 인수를 소문자로 변환하지 않는다는 점을 제외하고는 동일하게 작동합니다. **_mbsicmp** **_mbscmp** **_mbscmp** 인수를 비교하기 전에 소문자로 변환하지 않는다는 점을 제외하고는 동일하게 행동합니다.
+**_wcsicmp** 및 **wcscmp** 는 비교 하기 전에 **wcscmp** 가 인수를 소문자로 변환 하지 않는다는 점을 제외 하 고 동일 하 게 동작 합니다. **_mbsicmp** 와 **_mbscmp** **_mbscmp** 는 비교 하기 전에 해당 인수를 소문자로 변환 하지 않는다는 점을 제외 하 고 동일 하 게 동작 합니다.
 
-라틴어 1 문자로 작업하려면 **_wcsicmp** [setlocale를](setlocale-wsetlocale.md) 호출해야 합니다. 기본적으로는 C 로캘이 적용되므로 예를 들어 ä와 Ä는 비교 시 같은 항목으로 간주되지 않습니다. **_wcsicmp**호출하기 전에 C 로캘 이외의 로캘을 사용하여 **setlocale를** 호출합니다. 다음 샘플에서는 **_wcsicmp** 로캘에 얼마나 민감한지 보여 줍니다.
+라틴어 1 문자를 사용 하려면 **_wcsicmp** 에 대해 [setlocale](setlocale-wsetlocale.md) 을 호출 해야 합니다. 기본적으로는 C 로캘이 적용되므로 예를 들어 ä와 Ä는 비교 시 같은 항목으로 간주되지 않습니다. **_Wcsicmp**를 호출 하기 전에 C 로캘 이외의 로캘로 **setlocale** 을 호출 합니다. 다음 샘플에서는 **_wcsicmp** 로캘에 대 한 중요 한 영향을 보여 줍니다.
 
 ```C
 // crt_stricmp_locale.c
@@ -169,9 +169,9 @@ int main() {
 }
 ```
 
-다른 방법은 _create_locale 호출하여 [_wcreate_locale](create-locale-wcreate-locale.md) 반환된 로캘 개체를 **_wcsicmp_l**매개 변수로 전달하는 것입니다.
+대신 [_create_locale _wcreate_locale](create-locale-wcreate-locale.md) 호출 하 고 반환 된 로캘 개체를 매개 변수로 전달 하 여 **_wcsicmp_l**수 있습니다.
 
-이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *string1* 또는 *string2가* null 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 **_NLSCMPERROR** 반환하고 **errno를** **EINVAL로**설정합니다.
+이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *String1* 또는 *문자열* 1이 Null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **_NLSCMPERROR** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -238,13 +238,13 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[스트콜 함수](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll 함수](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
