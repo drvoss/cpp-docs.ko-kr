@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: ef0010088543f1c580e536f120cae681a7582491
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341186"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918431"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -81,10 +81,10 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 변환할 문자입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -93,17 +93,17 @@ unsigned int _mbcjmstojis_l(
 
 ## <a name="remarks"></a>설명
 
-**_mbcjistojms** 함수는 일본 산업 표준(JIS) 문자를 Microsoft 한자(Shift JIS) 문자로 변환합니다. 잠재 고객 및 추적 바이트가 0x21 - 0x7E 범위에 있는 경우에만 문자가 변환됩니다. 잠재 고객 또는 평가판 바이트가 이 범위를 벗어나면 **errno가** **EILSEQ로**설정됩니다. 이 오류 코드 및 다른 오류 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
+**_Mbcjistojms** 함수는 일본 산업 표준 (JIS) 문자를 Microsoft 간지 (Shift JIS) 문자로 변환 합니다. 문자는 선행 및 후행 바이트가 0x21-0x7E의 범위에 있는 경우에만 변환 됩니다. 선행 또는 평가판 바이트가이 범위를 벗어나면 **errno** 는 **eilseq**로 설정 됩니다. 이 오류 코드 및 다른 오류 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
-**_mbcjmstojis** 함수는 시프트 JIS 문자를 JIS 문자로 변환합니다. 잠재 고객 바이트가 0x81 - 0x9F 또는 0xE0 - 0xFC 범위에 있고 트레일 바이트가 0x40 - 0x7E 또는 0x80 - 0xFC 범위에 있는 경우에만 문자가 변환됩니다. 해당 범위의 일부 코드 포인트에는 할당된 문자가 없으므로 변환할 수 없습니다.
+**_Mbcjmstojis** 함수는 Shift jis 문자를 JIS 문자로 변환 합니다. 선행 바이트가 0x81-0x9F 또는 0xE0-0xFC 범위에 있고 트레일 바이트가 0x40-0x7E 또는 0x80-0xFC 범위에 있는 경우에만 문자가 변환 됩니다. 해당 범위의 일부 코드 포인트에는 할당된 문자가 없으므로 변환할 수 없습니다.
 
-값 *c는* 변환할 문자의 잠재 바이트를 나타내고 하위 8비트가 추적 바이트를 나타내는 상위 8비트의 16비트 값이어야 합니다.
+값 *c* 는 16 비트 값 이어야 합니다. 상위 8 비트는 변환할 문자의 선행 바이트를 나타내고, 하위 8 비트는 후행 바이트를 나타냅니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-이전 버전에서는 **_mbcjistojms** **_mbcjmstojis** 각각 **jistojms와** **jmstojis라고 불렸습니다.** **_mbcjistojms,** **_mbcjistojms_l,** **_mbcjmstojis** 및 **_mbcjmstojis_l** 대신 사용해야 합니다.
+이전 버전에서는 **_mbcjistojms** 및 **_mbcjmstojis** 를 각각 **jistojms** 및 **jistojms**라고 했습니다. **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** 및 **_mbcjmstojis_l** 를 대신 사용 해야 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -116,7 +116,7 @@ unsigned int _mbcjmstojis_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

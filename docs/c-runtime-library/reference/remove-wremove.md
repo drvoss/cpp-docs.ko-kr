@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338143"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917830"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -60,32 +60,32 @@ int _wremove(
 
 ### <a name="parameters"></a>매개 변수
 
-*경로*<br/>
+*path*<br/>
 제거할 파일의 경로입니다.
 
 ## <a name="return-value"></a>Return Value
 
-파일이 삭제되면 이러한 함수 각각이 0을 반환합니다. 그렇지 않으면 -1을 반환하고 **errno를** **EACCES로** 설정하여 경로가 읽기 전용 파일을 지정하거나, 디렉터리를 지정하거나, 파일이 열려 있음을 나타내거나, 파일 이름이나 경로가 발견되지 않았다는 것을 나타내기 위해 **ENOENT로** 설정합니다.
+파일이 삭제되면 이러한 함수 각각이 0을 반환합니다. 그렇지 않으면-1을 반환 하 고 **errno** 를 **eacces** 로 설정 하 여 경로가 읽기 전용 파일을 지정 하거나, 디렉터리를 지정 하거나, 파일이 열려 있거나, **enoent (** 를 지정 하 여 파일 이름 또는 경로를 찾을 수 없음을 나타냅니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 참조하십시오.
+이러한 반환 코드 및 기타 반환 코드에 대 한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-**remove** 함수는 *path*로 지정된 파일을 삭제합니다. **_wremove** **_remove**와이드 문자 버전입니다. **_wremove** *경로* 인수는 와이드 문자 문자열입니다. **_wremove** **_remove** 다르게 동일하게 행동합니다. 삭제하기 전에 파일에 대한 모든 핸들을 닫아야 합니다.
+**remove** 함수는 *path*로 지정된 파일을 삭제합니다. **_wremove** 은 **_remove**의 와이드 문자 버전입니다. **_wremove** 에 대 한 *경로* 인수는 와이드 문자 문자열입니다. **_wremove** 와 **_remove** 는 동일 하 게 동작 합니다. 삭제하기 전에 파일에 대한 모든 핸들을 닫아야 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**제거**|**제거**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**제거**|\<stdio.h> 또는 \<io.h>|
+|**remove**|\<stdio.h> 또는 \<io.h>|
 |**_wremove**|\<stdio.h> 또는 \<wchar.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
@@ -123,7 +123,7 @@ This file will be deleted.
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_unlink, _wunlink](unlink-wunlink.md)<br/>
