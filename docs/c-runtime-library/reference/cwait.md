@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: d54f62c8ce391b2c8ead92a0a73ac48e6f2b3cb3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e2e23acb041004b9e96d1c6558ae195ed522155
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348159"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914790"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -53,37 +53,37 @@ intptr_t _cwait(
 
 ### <a name="parameters"></a>매개 변수
 
-*용어 통계*<br/>
-지정된 프로세스의 결과 코드가 저장되는 버퍼 또는 **NULL에**대한 포인터 .
+*termstat*<br/>
+지정 된 프로세스의 결과 코드가 저장 되는 버퍼에 대 한 포인터 이거나 **NULL**입니다.
 
-*프로크 핸들*<br/>
-대기할 프로세스의 핸들(즉, **_cwait** 반환되기 전에 종료해야 하는 프로세스)입니다.
+*procHandle*<br/>
+대기 중인 프로세스에 대 한 핸들입니다 (즉, **_cwait** 를 반환 하기 전에 종료 되어야 하는 프로세스).
 
-*작업*<br/>
-NULL: Windows 운영 체제 응용 프로그램에서 무시됩니다. 다른 응용 프로그램의 경우: *procHandle에서*수행할 작업 코드입니다.
+*action*<br/>
+NULL: Windows 운영 체제 응용 프로그램에서 무시 됩니다. 다른 응용 프로그램: *procHandle*에서 수행할 작업 코드입니다.
 
 ## <a name="return-value"></a>Return Value
 
-지정된 프로세스가 성공적으로 완료되면 지정된 프로세스의 핸들을 반환하고 지정된 프로세스에서 반환되는 결과 코드에 *termstat를* 설정합니다. 그렇지 않으면 -1을 반환하고 다음과 같이 **errno를** 설정합니다.
+지정 된 프로세스가 성공적으로 완료 되 면는 지정 된 프로세스의 핸들을 반환 하 고 *termstat* 를 지정 된 프로세스에서 반환 되는 결과 코드로 설정 합니다. 그렇지 않으면-1을 반환 하 고 **errno** 를 다음과 같이 설정 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
-|**ECHILD**|지정된 프로세스가 *없거나, procHandle이* 유효하지 않거나, [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) 또는 [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API에 대한 호출이 실패했습니다.|
-|**아인발 ()에인발 (것)**|*작업이* 잘못되었습니다.|
+|**ECHILD**|지정 된 프로세스가 없거나 *procHandle* 이 잘못 되었거나 [Getexitcodeprocess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) 또는 [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API에 대 한 호출이 실패 했습니다.|
+|**EINVAL**|*동작이* 잘못 되었습니다.|
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_cwait** 함수는 *procHandle*에서 제공하는 지정된 프로세스의 프로세스 ID가 종료될 때까지 기다립니다. **_cwait** 전달되는 *procHandle값은* 지정된 프로세스를 만든 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 함수에 대한 호출에서 반환되는 값이어야 합니다. **_cwait** 호출되기 전에 프로세스 ID가 종료되면 **_cwait** 즉시 반환됩니다. **_cwait** 유효한 핸들 *(procHandle)이*존재하는 다른 알려진 프로세스를 기다리는 모든 프로세스에서 사용할 수 있습니다.
+**_Cwait** 함수는 *procHandle*에서 제공 하는 지정 된 프로세스의 프로세스 ID가 종료 될 때까지 대기 합니다. **_Cwait** 전달 되는 *procHandle* 의 값은 지정 된 프로세스를 만든 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 함수 호출에서 반환 되는 값 이어야 합니다. **_Cwait** 가 호출 되기 전에 프로세스 ID가 종료 되 면 **_cwait** 즉시 반환 됩니다. **_cwait** 는 모든 프로세스에서 유효한 핸들 (*procHandle*)이 존재 하는 기타 알려진 프로세스를 기다리는 데 사용할 수 있습니다.
 
-*termstat는* 지정된 프로세스의 반환 코드가 저장되는 버퍼를 가리킵니다. *termstat값은* 지정된 프로세스가 Windows [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API를 호출하여 정상적으로 종료되었는지 여부를 나타냅니다. **ExitProcess는** 지정된 프로세스가 **종료** 또는 **_exit**호출하거나 **main에서**반환하거나 **main**의 끝에 도달하는 경우 내부적으로 호출됩니다. *termstat를*통해 다시 전달되는 값에 대한 자세한 내용은 [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)을 참조하십시오. *termstat에* **NULL** 값을 사용하여 **_cwait** 호출되는 경우 지정된 프로세스의 반환 코드가 저장되지 않습니다.
+*termstat* 는 지정 된 프로세스의 반환 코드가 저장 될 버퍼를 가리킵니다. *Termstat* 값은 지정 된 프로세스가 Windows [exitprocess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API를 호출 하 여 정상적으로 종료 되었는지 여부를 나타냅니다. 지정 된 프로세스가 **exit** 또는 **_exit**를 호출 하거나, **main**에서 반환 되거나, **main**의 끝에 도달 하는 경우 **exitprocess** 가 내부적으로 호출 됩니다. *Termstat*를 통해 다시 전달 되는 값에 대 한 자세한 내용은 [Getexitcodeprocess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)를 참조 하세요. *Termstat*에 **NULL** 값을 사용 하 여 **_cwait** 를 호출 하면 지정 된 프로세스의 반환 코드가 저장 되지 않습니다.
 
-이러한 환경에서 부모-자식 관계가 구현되지 않으므로 *작업* 매개 변수는 Windows 운영 체제에서 무시됩니다.
+*작업* 매개 변수는 이러한 환경에서 부모-자식 관계가 구현 되지 않으므로 Windows 운영 체제에서 무시 됩니다.
 
-*procHandle이* -1 또는 -2(현재 프로세스 또는 스레드에 대한 핸들)가 아니면 핸들이 닫힙니다. 따라서 이 경우 반환된 핸들을 사용하지 마세요.
+*ProcHandle* 가-1 또는-2 (현재 프로세스 또는 스레드에 대 한 핸들)가 아닌 경우 핸들이 닫힙니다. 따라서 이 경우 반환된 핸들을 사용하지 마세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -161,7 +161,7 @@ Hi, Dad. It's Carl.
 Hi, Dad. It's Dave.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn 기능](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

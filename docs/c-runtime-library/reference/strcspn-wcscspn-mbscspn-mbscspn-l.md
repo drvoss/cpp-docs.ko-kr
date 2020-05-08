@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +45,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 2ba3c2941736d185ad93c7c6e44cb83c82ebb478
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358874"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915246"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 문자 집합에 속한 문자가 문자열에서 처음 나오는 위치의 인덱스를 반환합니다.
 
 > [!IMPORTANT]
-> **_mbschr** 및 **_mbschr_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbschr** 및 **_mbschr_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -83,30 +83,30 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*Str*<br/>
+*문자열*<br/>
 Null 종료 검색 대상 문자열입니다.
 
-*스트라셋*<br/>
+*strCharSet*<br/>
 Null 종료 문자 집합입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 함수는 *strCharSet에*있는 *str에서* 첫 번째 문자의 인덱스를 반환합니다. *strCharSet에*있는 *str* 문자가 없는 경우 반환 값은 *str의*길이입니다.
+이러한 함수는 *Strcharset*에 있는 *str* 의 첫 번째 문자 인덱스를 반환 합니다. *Str* 의 문자가 *strcharset*에 없으면 반환 값은 *str*의 길이입니다.
 
 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**wcscspn** 및 **_mbscspn** **strcspn의**넓은 문자 및 다중 바이트 문자 버전입니다. **wcscspn의** 인수는 와이드 문자 문자열입니다. **_mbscspn** 그 다중 바이트 문자 문자열입니다.
+**wcscspn** 및 **_mbscspn** 는 **strcspn**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcscspn** 의 인수는 와이드 문자 문자열입니다. **_mbscspn** 의 이러한 문자열은 멀티 바이트 문자열입니다.
 
-**_mbscspn** 매개 변수의 유효성을 검사합니다. *str* 또는 *strCharSet이* null 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 함수는 0을 반환하고 **errno를** **EINVAL로**설정합니다. **strcspn** 및 **wcscspn은** 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_mbscspn** 은 해당 매개 변수의 유효성을 검사 합니다. *Str* 또는 *strcharset* 이 Null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는 0을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. **strcspn** 및 **wcscspn** 는 매개 변수의 유효성을 검사 하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -159,11 +159,11 @@ strcspn( "", "abc" ) = 0
 strcspn( "", "" ) = 0
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

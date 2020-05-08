@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333393"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917047"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -62,26 +62,26 @@ int _wchdir(
 
 ### <a name="parameters"></a>매개 변수
 
-*디르나메*<br/>
+*dirname*<br/>
 새 작업 디렉터리의 경로입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 함수는 성공할 경우 0 값을 반환합니다. 반환 값 -1은 실패를 나타냅니다. 지정된 경로를 찾을 수 없는 경우 **errno는** **ENOENT로**설정됩니다. *dirname이* **NULL인**경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 -1을 반환합니다.
+이러한 함수는 성공할 경우 0 값을 반환합니다. 반환 값-1은 실패를 나타냅니다. 지정 된 경로를 찾을 수 없는 경우 **errno** 가 **enoent (** 로 설정 됩니다. *이름 이름이* **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는-1을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_chdir** 함수는 현재 작업 디렉토리를 *dirname로*지정된 디렉토리로 변경합니다. *dirname* 매개 변수는 기존 디렉터리를 참조해야 합니다. 이 함수는 모든 드라이브에서 현재 작업 디렉터리를 변경할 수 있습니다. 새 드라이브 문자가 *dirname으로*지정되면 기본 드라이브 문자도 변경됩니다. 예를 들어 A가 기본 드라이브 문자이고 \BIN이 현재 작업 디렉터리이면 다음 호출에서 C 드라이브에 대한 현재 작업 디렉터리를 변경하고 C를 새 기본 드라이브로 설정합니다.
+**_Chdir** 함수는 현재 작업 디렉터리를 변경 되지 않은 *이름*으로 지정 된 디렉터리로 변경 합니다. *Diname* 매개 변수는 기존 디렉터리를 참조 해야 합니다. 이 함수는 모든 드라이브에서 현재 작업 디렉터리를 변경할 수 있습니다. 새 드라이브 문자를 *이름*에 지정 된 경우에는 기본 드라이브 문자도 변경 됩니다. 예를 들어 A가 기본 드라이브 문자이고 \BIN이 현재 작업 디렉터리이면 다음 호출에서 C 드라이브에 대한 현재 작업 디렉터리를 변경하고 C를 새 기본 드라이브로 설정합니다.
 
 ```C
 _chdir("c:\temp");
 ```
 
-경로에서 선택적 백슬래시** 문자(&#92;)를 **사용하는 경우 C 문자열 리터럴에 두 개의 백슬래시(&#92;&#92;)를 배치하여 단일 백슬래시(&#92;)를 나타내야 합니다.** **** **
+경로에 선택적 백슬래시 문자 (**&#92;**)를 사용 하는 경우 단일 백슬래시 (**&#92;**)를 나타내려면 C 문자열 리터럴에 백슬래시 두 개 (**&#92;&#92;**)를 넣어야 합니다.
 
-**_wchdir** **_chdir**와이드 문자 버전입니다. **_wchdir** *dirname* 인수는 와이드 문자 문자열입니다. **_wchdir** **_chdir** 다르게 동일하게 행동합니다.
+**_wchdir** 은 **_chdir**의 와이드 문자 버전입니다. **_wchdir** 에 대 한 대상 *이름* 인수는 와이드 문자열입니다. **_wchdir** 와 **_chdir** 는 동일 하 게 동작 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mapping"></a>제네릭 텍스트 루틴 매핑:
 
@@ -157,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

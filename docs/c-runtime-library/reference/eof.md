@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347930"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915051"
 ---
 # <a name="_eof"></a>_eof
 
@@ -52,22 +52,22 @@ int _eof(
 
 ### <a name="parameters"></a>매개 변수
 
-*Fd*<br/>
+*fd*<br/>
 열려 있는 파일을 참조하는 파일 설명자입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_eof** 현재 위치가 파일의 끝인 경우 1을 반환하거나 그렇지 않은 경우 0을 반환합니다. 반환 값 -1은 오류를 나타냅니다. 이 경우 매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** 잘못된 파일 설명자를 나타내는 **EBADF로**설정됩니다.
+**_eof** 는 현재 위치가 파일의 끝 인 경우 1을 반환 하 고 그렇지 않으면 0을 반환 합니다. 반환 값-1은 오류를 나타냅니다. 이 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 는 **ebadf**로 설정 되며이는 잘못 된 파일 설명자를 나타냅니다.
 
 ## <a name="remarks"></a>설명
 
-**_eof** 함수는 *fd와* 연결된 파일의 끝에 도달했는지 여부를 결정합니다.
+**_Eof** 함수는 *fd* 와 연결 된 파일의 끝에 도달 했는지 여부를 확인 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|선택적 헤더|
+|기능|필수 헤더|선택적 헤더|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
@@ -125,7 +125,7 @@ This file contains some text.
 Number of bytes read = 29
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [오류 처리](../../c-runtime-library/error-handling-crt.md)<br/>
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>

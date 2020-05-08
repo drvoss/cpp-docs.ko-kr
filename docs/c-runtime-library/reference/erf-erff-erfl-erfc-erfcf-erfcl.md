@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915019"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -99,28 +99,28 @@ long double erfcl(
 
 ## <a name="return-value"></a>Return Value
 
-**erf** 함수는 *x.* 가우스 오류 함수를 반환합니다. **erfc** 함수는 *x.*
+**Erf** 함수는 *x*의 가우스 오차 함수를 반환 합니다. **Erfc** 함수는 *x*의 보완 가우스 오차 함수를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**erf** 함수는 *x의*가우스 오류 함수를 계산하며, 이는 다음과 같이 정의됩니다.
+**Erf** 함수는 다음과 같이 정의 되는 *x*의 가우스 오차 함수를 계산 합니다.
 
 ![x의 오차 함수](media/crt_erf_formula.PNG "x의 오차 함수")
 
-상보적인 가우스 오류 함수는 1 - erf(x)로 정의됩니다. **erf** 함수는 -1.0에서 1.0 까지의 값을 반환합니다. 반환되는 오류가 없습니다. **erfc** 함수는 범위 0에서 2까지의 값을 반환합니다. *x가* **erfc에**너무 큰 경우 **errno** 변수가 **ERANGE로**설정됩니다.
+보완적인 가우스 오류 함수는 erf (x)로 정의 됩니다. **Erf** 함수는-1.0 ~ 1.0 범위의 값을 반환 합니다. 반환되는 오류가 없습니다. **Erfc** 함수는 0 ~ 2 범위의 값을 반환 합니다. *X* 가 **erfc**에 대해 너무 크면 **errno** 변수는 **ERANGE**로 설정 됩니다.
 
-C++는 오버로드를 허용하므로 **플로트** 및 **긴** 이중 형식을 가져 와서 반환하는 **erf** 및 **erfc의** 오버로드를 호출할 수 **있습니다.** C 프로그램에서 **erf및** **erfc는** 항상 **이중을**가져 와서 반환합니다.
+C + +에서는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **erf** 및 **erfc** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **erf** 및 **erfc** 는 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
-|**erf,** **erff,** **erfl,** **erfc,** **erfcf,** **erfcl**|\<math.h>|
+|**erf**, **erff**, **erff**, **erfc**, **erfcf**, **erff**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>

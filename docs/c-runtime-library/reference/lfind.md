@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 287cbd8bc9cc567a4a0d5b9505d57098197bc545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4721ba96e145b3c2fde4ce0bb73157bbbcab4dff
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342172"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916462"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -56,7 +56,7 @@ void *_lfind(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 개체입니다.
 
 *base*<br/>
@@ -68,20 +68,20 @@ void *_lfind(
 *width*<br/>
 배열 요소의 너비입니다.
 
-*비교*<br/>
+*과*<br/>
 비교 루틴에 대한 포인터입니다. 첫 번째 매개 변수는 검색할 키에 대한 포인터입니다. 두 번째 매개 변수는 키와 비교할 배열 요소에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-키가 발견되면 **_lfind** *키와*일치하는 *기본* 배열 요소에 대한 포인터를 반환합니다. 키가 없는 경우 **_lfind** **NULL**을 반환합니다.
+키가 있으면 **_lfind** 는 *키*와 일치 하는 *기준* 에 있는 배열의 요소에 대 한 포인터를 반환 합니다. 키를 찾을 수 없으면 **_lfind** 에서 **NULL**을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_lfind** 함수는 각각 *너비* 바이트의 *숫자* 요소 배열에서 값 *키에* 대한 선형 검색을 수행합니다. **bsearch와**달리 **_lfind** 배열을 정렬할 필요가 없습니다. *기본* 인수는 검색할 배열의 기본에 대한 포인터입니다. *비교* 인수는 두 배열 요소를 비교한 다음 해당 관계를 지정하는 값을 반환하는 사용자 제공 루틴에 대한 포인터입니다. **_lfind** 각 호출에 두 개의 배열 요소에 포인터를 전달, 검색 하는 동안 하나 이상의 *비교* 루틴을 호출 합니다. *비교* 루틴은 요소를 비교한 다음 0이 아닌(요소가 다르다는 의미) 또는 0(요소가 동일하다는 의미)을 반환해야 합니다.
+**_Lfind** 함수는 각각 *width* 바이트의 *number* 요소 배열에서 값 *키* 에 대 한 선형 검색을 수행 합니다. 검색 **기능과**달리 **_lfind** 는 배열을 정렬할 필요가 없습니다. *기본* 인수는 검색할 배열의 기준에 대 한 포인터입니다. *Compare* 인수는 두 배열 요소를 비교 하 여 해당 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. **_lfind** 는 검색 중에 *비교* 루틴을 한 번 이상 호출 하 여 각 호출에서 두 배열 요소에 포인터를 전달 합니다. *비교* 루틴은 요소를 비교한 다음 0이 아닌 값 (요소가 다르다는 의미) 또는 0 (요소가 동일 하다는 의미)을 반환 합니다.
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. *compare*- *key* or *number가* **NULL이거나** *base가* **NULL이고** *숫자가* 0이 아닌 경우 또는 *너비가* 0보다 작은 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 **NULL을**반환합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. *Compare*, *key* 또는 *number* 가 **null**이거나 *base* 가 **null** 이 고 *숫자가* 0이 아닌 경우 또는 *width* 가 0 보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는 **NULL**을 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -128,7 +128,7 @@ int main( )
 Hello found
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>

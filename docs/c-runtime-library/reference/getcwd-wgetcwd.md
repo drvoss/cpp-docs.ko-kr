@@ -1,6 +1,6 @@
 ---
 title: _getcwd, _wgetcwd
-description: C 런타임 라이브러리는 현재 작업 디렉토리를 얻을 _wgetcwd _getcwd 작동합니다.
+description: C 런타임 라이브러리 함수는 현재 작업 디렉터리를 가져올 _wgetcwd _getcwd 합니다.
 ms.date: 4/2/2020
 api_name:
 - _wgetcwd
@@ -20,7 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: bc19a416ebebeb901e8dbb435971e6d5f33e4067
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344440"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915743"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -69,26 +69,26 @@ wchar_t *_wgetcwd(
 *버퍼*\
 경로의 스토리지 위치입니다.
 
-*맥클렌*\
-문자 경로의 최대 **길이:** **_getcwd** 문자 **및** **_wgetcwd**wchar_t.
+*maxlen*\
+경로의 최대 길이 (문자): char의 경우 **char** , **_wgetcwd**의 경우 **wchar_t** **_getcwd** 입니다.
 
 ## <a name="return-value"></a>Return Value
 
-버퍼에 대한 포인터를 *반환합니다.* **NULL** 반환 값은 오류를 나타내고 **errno는** **ENOMEM으로**설정되어 *maxlen* 바이트를 할당할 메모리가 충분하지 않다는 것을 나타냅니다(NULL 인수가 *버퍼로*지정되는 경우) 또는 경로가 *maxlen* 문자보다 길다는 것을 나타내는 **ERANGE에.** **NULL** *maxlen이* 0보다 크거나 같으면 이 함수는 매개 변수 유효성 검사에 설명된 대로 잘못된 매개 변수 처리기를 [호출합니다.](../../c-runtime-library/parameter-validation.md)
+*버퍼*에 대 한 포인터를 반환 합니다. **Null** 반환 값은 오류를 나타내며, **errno** 는 *maxlen* 바이트를 할당할 메모리가 부족 함을 나타내는 **enomem**( **null** 인수가 *버퍼로*지정 된 경우) 또는 **ERANGE**()로 설정 되어 경로가 *maxlen* 자 보다 긴 것을 나타냅니다. *Maxlen* 가 0 보다 작거나 같으면이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다.
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_getcwd** 함수는 기본 드라이브에 대한 현재 작업 디렉터리전체 경로를 *buffer*가져옵니다. 정수 인수 *maxlen* 경로에 대 한 최대 길이 지정 합니다. 경로의 길이(null 문자 종료 포함)가 *maxlen을*초과하면 오류가 발생합니다. *버퍼* 인수는 **NULL일**수 있습니다. 최소 크기의 *maxlen* 버퍼(필요한 경우에만 더)가 자동으로 할당되고 **malloc를**사용하여 경로를 저장합니다. 이 버퍼는 나중에 **free를** 호출하고 **반환** 값(할당된 버퍼에 대한 포인터)_getcwd 전달하여 해제할 수 있습니다.
+**_Getcwd** 함수는 기본 드라이브에 대 한 현재 작업 디렉터리의 전체 경로를 가져와 *버퍼*에 저장 합니다. 정수 인수 *maxlen* 는 경로에 대 한 최대 길이를 지정 합니다. 경로의 길이 (null 종결 문자 포함)가 *maxlen*를 초과 하면 오류가 발생 합니다. *Buffer* 인수는 **NULL**일 수 있습니다. **malloc**를 사용 하 여 경로를 저장 하는 최소 크기의 *maxlen* (필요한 경우에만) 버퍼가 자동으로 할당 됩니다. 이 버퍼는 나중에 **free** 를 호출 하 고 **_getcwd** 반환 값 (할당 된 버퍼에 대 한 포인터)으로 전달 하 여 해제할 수 있습니다.
 
-**_getcwd** 현재 작업 디렉터리 의 경로를 나타내는 문자열을 반환합니다. 현재 작업 디렉토리가 루트인 경우 문자열은 백슬래시()로`\`끝납니다. 현재 작업 디렉터리가 루트 이외의 디렉터리이면 문자열은 백슬래시가 아닌 디렉터리 이름으로 끝납니다.
+**_getcwd** 은 현재 작업 디렉터리의 경로를 나타내는 문자열을 반환 합니다. 현재 작업 디렉터리가 루트 이면 문자열이 백슬래시 (`\`)로 끝납니다. 현재 작업 디렉터리가 루트 이외의 디렉터리이면 문자열은 백슬래시가 아닌 디렉터리 이름으로 끝납니다.
 
-**_wgetcwd** **_getcwd**와이드 문자 버전입니다. *_wgetcwd 버퍼* 인수 및 반환 **값은** 와이드 문자 문자열입니다. **_wgetcwd** **_getcwd** 다르게 동일하게 행동합니다.
+**_wgetcwd** 은 **_getcwd**의 와이드 문자 버전입니다. **_wgetcwd** 의 *buffer* 인수와 반환 값은 와이드 문자열입니다. **_wgetcwd** 와 **_getcwd** 는 동일 하 게 동작 합니다.
 
-**_DEBUG** 및 **_CRTDBG_MAP_ALLOC** 정의되면 **_getcwd** 및 **_wgetcwd** 대한 호출이 **_getcwd_dbg** 및 **_wgetcwd_dbg** 대한 호출로 대체되어 메모리 할당을 디버깅할 수 있습니다. 자세한 내용은 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)를 참조하세요.
+**_DEBUG** 및 **_CRTDBG_MAP_ALLOC** 정의 되 면 **_getcwd** 및 **_wgetcwd** 에 대 한 호출이 **_getcwd_dbg** 및 **_wgetcwd_dbg** 호출로 대체 되어 메모리 할당 디버깅을 허용 합니다. 자세한 내용은 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -140,9 +140,9 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[디렉터리 컨트롤](../../c-runtime-library/directory-control.md)\
+[디렉터리 제어](../../c-runtime-library/directory-control.md)\
 [_chdir, _wchdir](chdir-wchdir.md)\
 [_mkdir, _wmkdir](mkdir-wmkdir.md)\
 [_rmdir, _wrmdir](rmdir-wrmdir.md)

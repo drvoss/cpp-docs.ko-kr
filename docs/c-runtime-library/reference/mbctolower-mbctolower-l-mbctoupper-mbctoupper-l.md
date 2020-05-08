@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341053"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914283"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -85,30 +85,30 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 변환할 멀티바이트 문자입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 함수는 가능한 경우 변환된 문자 *c를*반환합니다. 그렇지 않으면 문자 *c가* 변경되지 않고 반환됩니다.
+이러한 각 함수는 변환 된 문자 *c*를 반환 합니다 (가능한 경우). 그렇지 않으면 *c* 문자를 변경 하지 않고 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-함수는 문자 *c를* 테스트하고 가능하면 다음 변환 중 하나를 적용합니다.
+함수는 *c* 문자를 테스트 하 고 가능한 경우 다음 변환 중 하나를 적용 합니다.
 
 |루틴|변환|
 |--------------|--------------|
-|**_mbctolower,** **_mbctolower_l**|대문자를 소문자로|
+|**_mbctolower**, **_mbctolower_l**|대문자를 소문자로|
 |**_mbctoupper**, **_mbctoupper_l**|소문자를 대문자로|
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이 함수 버전은 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘 매개 변수를 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_L** 접미사가 없는이 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-이전 버전에서는 **_mbctolower** **jtolower라고**불렸으며 **_mbctoupper** **jtoupper라고**합니다. 새 코드의 경우에는 새 이름을 대신 사용하십시오.
+이전 버전에서는 **_mbctolower** 를 **jtolower**라고 했으며 **_mbctoupper** 를 **jtoupper**이라고 했습니다. 새 코드의 경우에는 새 이름을 대신 사용하십시오.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -116,19 +116,19 @@ unsigned int _mbctoupper_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴|필수 헤더|
 |--------------|---------------------|
-|**_mbctolower,** **_mbctolower_l**|\<mbstring.h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
 |**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

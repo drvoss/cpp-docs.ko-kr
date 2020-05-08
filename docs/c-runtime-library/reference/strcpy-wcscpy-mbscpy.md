@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359184"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915261"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 문자열을 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)를 참조하세요.
 
 > [!IMPORTANT]
-> **_mbscpy** Windows 런타임에서 실행되는 응용 프로그램에서는 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbscpy** 은 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -91,10 +91,10 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>매개 변수
 
-*스트대상*<br/>
+*strDestination*<br/>
 대상 문자열입니다.
 
-*스트소스 (것)스*<br/>
+*strSource*<br/>
 Null 종료 소스 문자열입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -103,16 +103,16 @@ Null 종료 소스 문자열입니다.
 
 ## <a name="remarks"></a>설명
 
-**strcpy** 함수는 null 문자 종료를 포함하여 *strSource를* *strDestination*에 의해 지정된 위치로 복사합니다. 원본 및 대상 문자열이 겹치는 경우 **strcpy의** 동작은 정의되지 않습니다.
+**Strcpy** 함수는 null 종결 문자를 포함 하 여 *Strsource*를 *strsource*에서 지정한 위치로 복사 합니다. 원본 및 대상 문자열이 겹치면 **strcpy** 의 동작이 정의 되지 않습니다.
 
 > [!IMPORTANT]
-> **strcpy는** *strSource를*복사하기 전에 *strDestination에서* 충분한 공간을 확인하지 않으므로 버퍼 오버런의 잠재적인 원인입니다. 따라서 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)를 대신 사용하는 것이 좋습니다.
+> **Strcpy** 는 *strdestination*를 복사 하기 전에 *strdestination* 에 충분 한 공간을 확인 하지 않으므로 버퍼 오버런이 발생할 수 있습니다. 따라서 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)를 대신 사용하는 것이 좋습니다.
 
-**wcscpy** 및 **_mbscpy** 각각 넓은 문자 및 다중 바이트 문자 버전의 **strcpy입니다.** **wcscpy의** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbscpy** 그 문자열은 멀티 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**wcscpy** 및 **_mbscpy** 는 각각 **strcpy**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcscpy** 의 인수와 반환 값은 와이드 문자 문자열입니다. **_mbscpy** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -165,7 +165,7 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338323"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916077"
 ---
 # <a name="_putw"></a>_putw
 
@@ -59,15 +59,15 @@ int _putw(
 
 ## <a name="return-value"></a>Return Value
 
-작성된 값을 반환합니다. **EOF의** 반환 값은 오류를 나타낼 수 있습니다. **EOF는** 합법적인 정수 값이기도 하므로 **ferror를** 사용하여 오류를 확인합니다. *stream이* null 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **EOF를**반환합니다.
+작성된 값을 반환합니다. **EOF** 의 반환 값은 오류를 나타낼 수 있습니다. **EOF** 도 올바른 정수 값 이므로 **ferror** 를 사용 하 여 오류를 확인 합니다. *Stream* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EOF**를 반환 합니다.
 
 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_putw** 함수는 *스트림의* 현재 위치에 **int** 형식의 이진 값을 씁니다. **_putw** 스트림의 항목 정렬에 영향을 주지 않으며 특수 정렬을 가정하지 도 않습니다. **_putw** 주로 이전 라이브러리와의 호환성을 위한 것입니다. **int의** 크기와 **int** 내의 바이트 순서가 시스템 마다 다르기 때문에 **_putw** 이식성 문제가 발생할 수 있습니다.
+**_Putw** 함수는 **int** 형식의 이진 값을 스트림의 현재 위치에 씁니다 *.* **_putw** 은 스트림의 항목 맞춤에 영향을 주지 않으며 특수 한 맞춤을 가정 하지도 않습니다. **_putw** 는 주로 이전 라이브러리와의 호환성을 위해 사용 됩니다. **Int** 의 크기와 **int** 내 바이트의 순서가 시스템 마다 다르기 때문에 **_putw** 에서 이식성 문제가 발생할 수 있습니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -119,7 +119,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914843"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -65,16 +65,16 @@ int _fpclassf(
 
 ## <a name="return-value"></a>Return Value
 
-**_fpclass** 함수 와 **_fpclassf** 함수는 인수 *x의*부동 점 분류를 나타내는 정수 값을 반환합니다. 분류는 \<float.h>에 정의된 다음 값 중 하나를 가질 수 있습니다.
+**_Fpclass** 및 **_fpclassf** 함수는 인수 *x*의 부동 소수점 분류를 나타내는 정수 값을 반환 합니다. 분류는 \<float.h>에 정의된 다음 값 중 하나를 가질 수 있습니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|신호 NaN|
 |**_FPCLASS_QNAN**|자동 NaN|
-|**_FPCLASS_NINF**|네거티브 무한대(-INF)|
+|**_FPCLASS_NINF**|음의 무한대 (-INF)|
 |**_FPCLASS_NN**|정규화된 0이 아닌 음수 값|
 |**_FPCLASS_ND**|비정규화된 음수|
-|**_FPCLASS_NZ**|음수 0 ( - 0)|
+|**_FPCLASS_NZ**|음수 0 (-0)|
 |**_FPCLASS_PZ**|양수 0(+0)|
 |**_FPCLASS_PD**|비정규화된 양수|
 |**_FPCLASS_PN**|정규화된 0이 아닌 양수 값|
@@ -82,19 +82,19 @@ int _fpclassf(
 
 ## <a name="remarks"></a>설명
 
-**_fpclass** 및 **_fpclassf** 기능은 Microsoft에 만연합니다. [fpclassify](fpclassify.md)와 비슷하지만 인수에 대한 더 자세한 정보를 반환합니다. **_fpclassf** 함수는 x64 플랫폼에 대해 컴파일된 경우에만 사용할 수 있습니다.
+**_Fpclass** 및 **_Fpclassf** 함수는 Microsoft 전용입니다. [fpclassify](fpclassify.md)와 비슷하지만 인수에 대한 더 자세한 정보를 반환합니다. **_Fpclassf** 함수는 x64 플랫폼용으로 컴파일된 경우에만 사용할 수 있습니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
 |**_fpclass**, **_fpclassf**|\<float.h>|
 
 호환성 및 규칙에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

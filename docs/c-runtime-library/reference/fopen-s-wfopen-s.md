@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538599"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914907"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
@@ -121,7 +121,7 @@ errno_t _wfopen_s(
 
 |ccs 플래그|BOM이 없거나 새 파일|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**유니코드**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
 |**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
@@ -137,7 +137,7 @@ errno_t _wfopen_s(
 
 문자열 *모드* 는 다음과 같이 파일에 대해 요청 되는 액세스의 종류를 지정 합니다.
 
-|*mode*|액세스|
+|*mode*|액세스 권한|
 |-|-|
 | **&** | 읽기 위해 엽니다. 파일이 없거나 찾을 수 없는 경우 **fopen_s** 호출이 실패 합니다. |
 | **w** | 쓰기 위해 빈 파일을 엽니다. 지정한 파일이 있으면 이 파일의 내용은 삭제됩니다. |
@@ -172,7 +172,7 @@ errno_t _wfopen_s(
 | **c** | **Fflush** 또는 **_flushall** 가 호출 되는 경우 파일 버퍼의 내용이 디스크에 직접 기록 되도록 연결 된 *파일 이름* 에 대 한 커밋 플래그를 사용 하도록 설정 합니다. |
 | **n** | 관련 *파일 이름* 에 대 한 커밋 플래그를 "커밋 안 함"으로 다시 설정 합니다. 기본값입니다. 또한 프로그램을 COMMODE.OBJ와 연결할 경우 전역 커밋 플래그를 재정의합니다. 프로그램을 COMMODE.OBJ와 명시적으로 연결하지 않을 경우 전역 커밋 플래그 기본값은 "커밋 안 함"입니다( [Link Options](../../c-runtime-library/link-options.md)참조). |
 | **개의** | 자식 프로세스에서 파일을 상속하지 않도록 지정합니다. |
-| **삭제** | 캐싱이 디스크에서 순차적 액세스를 위해 최적화되며 이에 제한되지 않습니다. |
+| **S** | 캐싱이 디스크에서 순차적 액세스를 위해 최적화되며 이에 제한되지 않습니다. |
 | **R** | 캐싱이 디스크에서 임의 액세스를 위해 최적화되며 이에 제한되지 않습니다. |
 | **T** | 파일을 임시 파일로 지정합니다. 가능하면 디스크에 플러시되지 않습니다. |
 | **D** | 파일을 임시 파일로 지정합니다. 마지막 파일 포인터를 닫을 때 삭제됩니다. |
@@ -192,7 +192,7 @@ errno_t _wfopen_s(
 |**트**|**_O_TEXT**|
 |**c**|없음|
 |**n**|없음|
-|**삭제**|**_O_SEQUENTIAL**|
+|**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
@@ -204,7 +204,7 @@ errno_t _wfopen_s(
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
 |**fopen_s**|\<stdio.h>|
 |**_wfopen_s**|\<stdio.h> 또는 \<wchar.h>|
@@ -281,7 +281,7 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

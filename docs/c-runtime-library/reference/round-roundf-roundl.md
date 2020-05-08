@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337985"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916714"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -72,23 +72,23 @@ long double roundl(
 
 ## <a name="return-value"></a>Return Value
 
-**둥근** 함수는 x에 가장 가까운 정수를 나타내는 부동 점 값을 반환합니다. *x* 중간값은 부동 소수점 반올림 모드의 설정에 관계없이 0에서 멀어지는 쪽으로 반올림됩니다. 반환되는 오류가 없습니다.
+**Round** 함수는 *x*에 가장 가까운 정수를 나타내는 부동 소수점 값을 반환 합니다. 중간값은 부동 소수점 반올림 모드의 설정에 관계없이 0에서 멀어지는 쪽으로 반올림됩니다. 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
-|± **QNAN,** **IND**|없음|**_DOMAIN**|
+|± **QNAN**, **IND**|없음|**_DOMAIN**|
 
 ## <a name="remarks"></a>설명
 
-C++는 오버로드를 허용하므로 **플로트** 및 **긴** **이중** 값을 가져가고 반환하는 **라운드** 오버로드를 호출할 수 있습니다. C 프로그램에서 **라운드는** 항상 **double을**가져와 반환합니다.
+C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **round** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **round** 는 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**라운드**, **라운드,** **라운드**|\<math.h>|
+|**round**, **roundf**, **roundl**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -128,7 +128,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
