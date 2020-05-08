@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 9eb856efca054423465aa7d30092edaf83a65eeb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333527"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917141"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -54,22 +54,22 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>설명
 
-**_cexit** 함수는 **atexit** 및 **_onexit**의해 등록된 함수인 마지막 IN, 선불(LIFO) 순서로 호출합니다. 그런 다음 **_cexit** 모든 I/O 버퍼를 플러시하고 반환하기 전에 모든 열린 스트림을 닫습니다. **_c_exit** **_exit** 동일하지만 **atexit** 또는 **_onexit** 처리하거나 스트림 버퍼를 플러시하지 않고 호출 프로세스로 돌아갑니다. **,** **_cexit** **_exit**및 **_c_exit** 동작은 다음 표에 나와 있습니다.
+**_Cexit** 함수는 **atexit** 및 **_onexit**에 의해 등록 된 함수를 LIFO (last in) 순서로 호출 합니다. 그런 다음를 반환 하기 전에 모든 i/o 버퍼를 플러시하고 열려 있는 모든 스트림을 닫습니다 **_cexit** 합니다. **_c_exit** 은 **_exit** 와 동일 하지만 **atexit** 를 처리 하거나 **_onexit** 하거나 스트림 버퍼를 플러시하는 대신 호출 프로세스로 돌아갑니다. **Exit**, **_exit**, **_cexit**및 **_c_exit** 의 동작은 다음 표에 나와 있습니다.
 
-|함수|동작|
+|기능|동작|
 |--------------|--------------|
-|**종료**|전체 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
+|**exit**|전체 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
 |**_exit**|빠른 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
 |**_cexit**|전체 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|
 |**_c_exit**|빠른 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|
 
-**_cexit** 또는 **_c_exit** 함수를 호출할 때 호출 시 존재하는 임시 또는 자동 개체에 대한 소멸자는 호출되지 않습니다. 자동 개체는 개체가 정적으로 선언되지 않은 함수에서 정의된 개체입니다. 임시 개체는 컴파일러에 의해 생성된 개체입니다. **_cexit** 또는 **_c_exit**호출하기 전에 자동 개체를 삭제하려면 다음과 같이 개체에 대한 소멸자 호출을 명시적으로 호출합니다.
+**_Cexit** 또는 **_c_exit** 함수를 호출 하는 경우 호출 시 존재 하는 임시 또는 자동 개체에 대 한 소멸자가 호출 되지 않습니다. 자동 개체는 개체가 정적으로 선언되지 않은 함수에서 정의된 개체입니다. 임시 개체는 컴파일러에 의해 생성된 개체입니다. **_Cexit** 또는 **_c_exit**를 호출 하기 전에 자동 개체를 삭제 하려면 다음과 같이 개체에 대 한 소멸자를 명시적으로 호출 합니다.
 
 ```cpp
 myObject.myClass::~myClass( );
 ```
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -80,13 +80,13 @@ myObject.myClass::~myClass( );
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[중단](abort.md)<br/>
+[중단이](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec 기능](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn 기능](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

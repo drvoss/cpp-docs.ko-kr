@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,12 +66,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 5c530f46877bdb23fc51fb49beab8abfc0c16b2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361199"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912123"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -108,45 +108,45 @@ int _wutime64(
 
 ### <a name="parameters"></a>매개 변수
 
-*파일*<br/>
+*이름도*<br/>
 경로 또는 파일 이름을 포함하는 문자열에 대한 포인터입니다.
 
-*시간*<br/>
+*곱한*<br/>
 저장된 시간 값에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-파일 수정 시간을 변경한 경우 이러한 각 함수는 0을 반환합니다. 반환 값 -1은 오류를 나타냅니다. 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 -1을 반환하고 **errno는** 다음 값 중 하나로 설정됩니다.
+파일 수정 시간을 변경한 경우 이러한 각 함수는 0을 반환합니다. 반환 값-1은 오류를 나타냅니다. 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는-1을 반환 하 고 **errno** 는 다음 값 중 하나로 설정 됩니다.
 
 |errno 값|조건|
 |-|-|
 | **EACCES** | 경로가 디렉터리 또는 읽기 전용 파일을 지정함 |
-| **아인발 ()에인발 (것)** | 잘못된 *시간* 인수 |
+| **EINVAL** | 잘못 된 *시간* 인수 |
 | **EMFILE** | 파일이 너무 많이 열려 있음(수정 시간을 변경하려면 파일을 열어야 함) |
-| **이노엔트 (이노엔트 주)** | 경로 또는 파일 이름을 찾을 수 없음 |
+| **ENOENT (** | 경로 또는 파일 이름을 찾을 수 없음 |
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
-변경 날짜가 1970년 1월 1일 자정 이후이고 사용한 함수의 종료 날짜 이전이면 파일의 날짜를 변경할 수 있습니다. **_utime** **_wutime** 64비트 시간 값을 사용하므로 종료 날짜는 UTC300년 12월 31일 23:59:59입니다. **_USE_32BIT_TIME_T** 이전 동작을 강제로 하도록 정의된 경우 종료 날짜는 UTC2038년 1월 18일 23:59:59입니다. **_utime32** 또는 **_wutime32** **_USE_32BIT_TIME_T** 정의되었는지 여부에 관계없이 32비트 시간 형식을 사용하며 항상 이전 종료 날짜가 있습니다. **_utime64** 또는 **_wutime64** 항상 64비트 시간 형식을 사용하므로 이러한 함수는 항상 이후 종료 날짜를 지원합니다.
+변경 날짜가 1970년 1월 1일 자정 이후이고 사용한 함수의 종료 날짜 이전이면 파일의 날짜를 변경할 수 있습니다. **_utime** 및 **_wutime** 64 비트 시간 값을 사용 하므로 종료 날짜는 23:59:59 년 12 월 31 일 3000, UTC입니다. 이전 동작을 강제 하도록 **_USE_32BIT_TIME_T** 정의 된 경우 종료 날짜는 2038 년 1 월 18 일 23:59:59입니다. **_utime32** 또는 **_wutime32** **_USE_32BIT_TIME_T** 정의 여부에 관계 없이 32 비트 시간 형식을 사용 하 고 항상 이전 종료 날짜를 사용 합니다. **_utime64** 또는 **_wutime64** 는 항상 64 비트 시간 형식을 사용 하므로 이러한 함수는 항상 이후 종료 날짜를 지원 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_utime** 함수는 *파일 이름으로*지정된 파일의 수정 시간을 설정합니다. 시간을 변경하려면 프로세스에 파일에 대한 쓰기 권한이 있어야 합니다. Windows 운영 체제에서 **_utimbuf** 구조의 액세스 시간과 수정 시간을 변경할 수 있습니다. *시간이* **NULL** 포인터인 경우 수정 시간은 현재 현지 시간으로 설정됩니다. 그렇지 않으면 *시간은* SYS\UTIME에 정의된 **_utimbuf**형식의 구조를 가리키야 합니다. H.
+**_Utime** 함수는 *filename*에 지정 된 파일의 수정 시간을 설정 합니다. 시간을 변경하려면 프로세스에 파일에 대한 쓰기 권한이 있어야 합니다. Windows 운영 체제에서 **_utimbuf** 구조의 액세스 시간 및 수정 시간을 변경할 수 있습니다. *Times* 가 **NULL** 포인터인 경우에는 수정 시간이 현재 현지 시간으로 설정 됩니다. 그렇지 않으면 *시간은* SYS\UTIME.에 정의 된 **_utimbuf**형식의 구조체를 가리켜야 합니다. 넣기.
 
-**_utimbuf** 구조는 파일 수정 날짜를 변경하는 **데** _utime 사용하는 파일 액세스 및 수정 시간을 저장합니다. 구조에는 형식 **time_t**모두인 다음 필드가 있습니다.
+**_Utimbuf** 구조는 **_utime** 에서 파일 수정 날짜를 변경 하는 데 사용 되는 파일 액세스 및 수정 시간을 저장 합니다. 구조에는 다음과 같은 필드가 있습니다. 이러한 필드는 모두 **time_t**형식입니다.
 
 | 필드 |   |
 |-------|---|
 | **actime** | 파일 액세스 시간 |
-| **모드 시간** | 파일 수정 시간 |
+| **modtime** | 파일 수정 시간 |
 
-**_utimbuf** 구조의 특정**버전(_utimebuf32** 및 **__utimbuf64)은**시간 형식의 32비트 및 64비트 버전을 사용하여 정의됩니다. 이러한 구조체는 이 함수의 32비트 및 64비트별 버전에서 사용됩니다. **_utimbuf** 자체는 기본적으로 **_USE_32BIT_TIME_T** 정의되지 않는 한 64비트 시간 형식을 사용합니다.
+특정 버전의 **_utimbuf** 구조 (**_utimebuf32** 및 **__utimbuf64**)는 시간 형식의 32 비트 및 64 비트 버전을 사용 하 여 정의 됩니다. 이러한 구조체는 이 함수의 32비트 및 64비트별 버전에서 사용됩니다. **_USE_32BIT_TIME_T** 정의 되지 않은 경우 기본적으로 **_utimbuf** 자체는 64 비트 시간 형식을 사용 합니다.
 
-**_utime** 파일 이름 인수가 열려 있는 **_utime** 파일의 *파일* 설명자가 아니라 파일 이름 또는 파일 경로라는 점을 제외하면 **_utime _futime** 동일합니다.
+**_utime** 은 **_futime** 와 동일 합니다. 단, **_utime** *의 파일 이름 인수는* 열려 있는 파일의 파일 설명자가 아니라 파일 이름 또는 파일 경로입니다.
 
-**_wutime** **_utime**와이드 문자 버전입니다. **_wutime** *파일 이름* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_wutime** 은 **_utime**의 와이드 문자 버전입니다. **_wutime** 에 대 한 *파일 이름* 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -160,7 +160,7 @@ int _wutime64(
 
 |루틴에서 반환된 값|필수 헤더|선택적 헤더|
 |-------------|----------------------|----------------------|
-|**_utime**, **_utime32,** **_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_wutime**|\<utime.h> 또는 \<wchar.h>|\<errno.h>|
 
@@ -168,7 +168,7 @@ int _wutime64(
 
 ## <a name="example"></a>예제
 
-이 프로그램은 **_utime** 사용하여 파일 수정 시간을 현재 시간으로 설정합니다.
+이 프로그램은 **_utime** 를 사용 하 여 파일 수정 시간을 현재 시간으로 설정 합니다.
 
 ```C
 // crt_utime.c
@@ -237,7 +237,7 @@ Directory of C:\test
                0 Dir(s)  20,742,955,008 bytes free
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
