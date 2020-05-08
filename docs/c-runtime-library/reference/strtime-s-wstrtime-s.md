@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316925"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910932"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -73,7 +73,7 @@ errno_t _wstrtime_s(
 *버퍼*<br/>
 시간을 쓸 버퍼(10바이트 이상)입니다.
 
-*숫자오브엘리먼트*<br/>
+*이면 numberofelements 이벤트가*<br/>
 버퍼의 크기입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -84,30 +84,30 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*버퍼*|*숫자오브엘리먼트*|반환 값|*버퍼의* 내용|
+|*버퍼*|*이면 numberofelements 이벤트가*|반환 값|*버퍼* 의 내용|
 |--------------|------------------------|------------|--------------------------|
-|**Null**|(임의)|**아인발 ()에인발 (것)**|수정 안 됨|
-|**NULL이** 아님(유효한 버퍼를 가리키는)|0|**아인발 ()에인발 (것)**|수정 안 됨|
-|**NULL이** 아님(유효한 버퍼를 가리키는)|0 < size < 9|**아인발 ()에인발 (것)**|빈 문자열|
-|**NULL이** 아님(유효한 버퍼를 가리키는)|크기 > 9|0|설명에 지정된 형식의 현재 시간|
+|**N**|(임의)|**EINVAL**|수정 안 됨|
+|Not **NULL** (올바른 버퍼를 가리킴)|0|**EINVAL**|수정 안 됨|
+|Not **NULL** (올바른 버퍼를 가리킴)|0 < size < 9|**EINVAL**|빈 문자열|
+|Not **NULL** (올바른 버퍼를 가리킴)|크기 > 9|0|설명에 지정된 형식의 현재 시간|
 
 ## <a name="security-issues"></a>보안 문제
 
-버퍼에 대해 잘못된**비NULL** 값을 전달하면 *numberOfElements* 매개 변수가 9보다 큰 경우 액세스 위반이 발생합니다.
+버퍼에 대해**NULL** 이 아닌 잘못 된 값을 전달 하면 *numberofelements* 매개 변수가 9 보다 크면 액세스 위반이 발생 합니다.
 
-*numberOf에* 대한 값을 전달하면 버퍼의 실제 크기보다 큰 요소로 인해 버퍼 오버런이 발생합니다.
+버퍼의 실제 크기 보다 큰 *Numberofelements* 에 대 한 값을 전달 하면 버퍼 오버런이 발생 합니다.
 
 ## <a name="remarks"></a>설명
 
-이러한 함수는 [_strtime](strtime-wstrtime.md) 및 [_wstrtime](strtime-wstrtime.md)보다 안전한 버전을 제공합니다. **_strtime_s** 함수는 현재 현지 시간을 *timestr로*가리키는 버퍼에 복사합니다. 시간은 **hh:mm:ss로** 서식이 지정되며 **hh는** 24시간 표기의 시간을 나타내는 두 자리이고, **mm은** 시간 지난 분을 나타내는 두 자리숫자이고, **ss는** 초를 나타내는 두 자리숫자입니다. 예를 들어 문자열 **18:23:44는** 오후 6시 이후 23분 44초를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다. 실제 크기는 두 번째 매개 변수로 지정됩니다.
+이러한 함수는 보다 안전한 버전의 [_strtime](strtime-wstrtime.md) 및 [_wstrtime](strtime-wstrtime.md)를 제공 합니다. **_Strtime_s** 함수는 *timestr*가 가리키는 버퍼에 현재 현지 시간을 복사 합니다. 시간은 **hh: mm: ss** 형식으로 지정 됩니다. 여기서 **hh** 는 24 시간 표기법의 시간을 나타내는 두 자리 숫자, **mm** 은 분을 나타내는 두 자리 숫자, **ss** 는 초를 나타내는 두 자리 숫자입니다. 예를 들어, **18:23:44** 문자열은 23 분 및 44 초 (오후 6 시)를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다. 실제 크기는 두 번째 매개 변수로 지정됩니다.
 
-**_wstrtime** **_strtime**와이드 문자 버전입니다. **_wstrtime** 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_wstrtime** 은 **_strtime**의 와이드 문자 버전입니다. **_wstrtime** 의 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-이러한 함수의 디버그 라이브러리 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mapping"></a>제네릭 텍스트 루틴 매핑:
 
@@ -167,7 +167,7 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

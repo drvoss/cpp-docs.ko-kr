@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334125"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909263"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -65,33 +65,33 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>Return Value
 
-**아신** 함수는 *x의* 아크신(역 사인 함수)을 x 범위 -π/2에서 π/2 라디안으로 반환합니다.
+**Asin** 함수는-π/2 ~ π/2 라디안 범위에서 *x* 의 아크사인 (역 사인 함수)을 반환 합니다.
 
-기본적으로 *x가* -1 보다 작거나 1보다 큰 경우 **asin은** 무기한을 반환합니다.
+기본적으로 *x* 가-1 보다 작거나 1 보다 큰 경우 **asin** 는 무한을 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± ∞|**올바르지 않음**|**_DOMAIN**|
-|± **QNAN,** **IND**|없음|**_DOMAIN**|
+|± **QNAN**, **IND**|없음|**_DOMAIN**|
 |&#124;x&#124;>1|**올바르지 않음**|**_DOMAIN**|
 
 ## <a name="remarks"></a>설명
 
-C++는 오버로드를 허용하므로 **부동 부동** 값과 긴 **이중** 값으로 **asin의** **오버로드를** 호출할 수 있습니다. C 프로그램에서 **asin은** 항상 **이중을**가져와 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 여 **asin** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **asin** 은 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
 |-------------|---------------------|-|
-|**아신,** **아신프,** **아신**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**asin**, **asinf**, **asinl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 ## <a name="example"></a>예제
 
 자세한 내용은 [acos, acosf, acosl](acos-acosf-acosl.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

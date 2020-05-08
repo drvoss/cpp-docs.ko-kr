@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348652"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919848"
 ---
 # <a name="_close"></a>_close
 
@@ -49,22 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>매개 변수
 
-*Fd*<br/>
+*fd*<br/>
 열려 있는 파일을 참조하는 파일 설명자입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_close** 파일이 성공적으로 닫힌 경우 0을 반환합니다. 반환 값 -1은 오류를 나타냅니다.
+파일이 성공적으로 닫히면 **_close** 가 0을 반환 합니다. 반환 값-1은 오류를 나타냅니다.
 
 ## <a name="remarks"></a>설명
 
-**_close** 함수는 *fd와*연결된 파일을 닫습니다.
+**_Close** 함수는 *fd*와 연결 된 파일을 닫습니다.
 
-파일 설명자와 기본 OS 파일 핸들을 닫습니다. 따라서 파일이 원래 Win32 함수 **CreateFile을** 사용하여 열리고 **_open_osfhandle**사용하여 파일 설명자로 변환된 경우 **CloseHandle을** 호출할 필요가 없습니다.
+파일 설명자와 기본 OS 파일 핸들을 닫습니다. 따라서 파일이 원래 Win32 함수 **CreateFile** 을 사용 하 여 열린 후 **_open_osfhandle**를 사용 하 여 파일 설명자로 변환 된 경우에는 **CloseHandle** 을 호출할 필요가 없습니다.
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. *fd가* 잘못된 파일 설명자인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있으면 함수가 -1을 반환하고 **errno가** **EBADF로**설정됩니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. *Fd* 가 잘못 된 파일 설명자 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는-1을 반환 하 고 **errno** 는 **ebadf**로 설정 됩니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -78,7 +78,7 @@ int _close(
 
 [_open](open-wopen.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338762"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919134"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -72,11 +72,11 @@ errno_t _wmktemp_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*네임 템플릿*<br/>
+*nameTemplate*<br/>
 파일 이름 패턴입니다.
 
-*크기인차스*<br/>
-**_mktemp_s**단일 바이트 문자의 버퍼 크기; null 터미네이터를 포함하여 **_wmktemp_s**와이드 문자입니다.
+*sizeInChars*<br/>
+**_Mktemp_s**의 싱글바이트 문자에 있는 버퍼의 크기입니다. **_wmktemp_s**에서 null 종결자를 포함 하는 와이드 문자입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -84,21 +84,21 @@ errno_t _wmktemp_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*네임 템플릿*|*크기인차스*|반환 값|*이름* 템플릿의 새 값|
+|*nameTemplate*|*sizeInChars*|반환 값|*NameTemplate* 의 새 값|
 |----------------|-------------------|----------------------|-------------------------------|
-|**Null**|any|**아인발 ()에인발 (것)**|**Null**|
-|잘못된 형식(올바른 형식의 비고 섹션 참조)|any|**아인발 ()에인발 (것)**|빈 문자열|
-|any|<= X의 수|**아인발 ()에인발 (것)**|빈 문자열|
+|**N**|any|**EINVAL**|**N**|
+|형식이 잘못 되었습니다 (올바른 형식에 대 한 설명 섹션 참조).|any|**EINVAL**|빈 문자열|
+|any|<= X의 수|**EINVAL**|빈 문자열|
 
-위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 **EINVAL을**반환합니다.
+위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 는 **EINVAL** 로 설정 되 고 함수는 **EINVAL**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_mktemp_s** 함수는 *nameTemplate* 인수를 수정하여 고유한 파일 이름을 만듭니다. *nameTemplate* **_mktemp_s** 런타임 시스템에서 현재 사용 중인 다중 바이트 코드 페이지에 따라 다중 바이트 문자 시퀀스를 인식하여 적절한 다중 바이트 문자 문자열 인수를 자동으로 처리합니다. **_wmktemp_s** **_mktemp_s**와이드 문자 버전입니다. **_wmktemp_s** 인수는 와이드 문자 문자열입니다. **_wmktemp_s** **_mktemp_s** **_wmktemp_s** 다중 바이트 문자 문자열을 처리하지 않는다는 점을 제외하고는 다르게 다르게 작동합니다.
+**_Mktemp_s** 함수는 *nameTemplate* 인수를 수정 하 여 고유한 파일 이름을 만듭니다. 따라서 호출 후에 *nameTemplate* 포인터는 새 파일 이름을 포함 하는 문자열을 가리킵니다. **_mktemp_s** 은 자동으로 멀티 바이트 문자열 인수를 적절 하 게 처리 하 고, 런타임 시스템에서 현재 사용 중인 멀티 바이트 코드 페이지에 따라 멀티 바이트 문자 시퀀스를 인식 합니다. **_wmktemp_s** 은 **_mktemp_s**의 와이드 문자 버전입니다. **_wmktemp_s** 의 인수는 와이드 문자 문자열입니다. **_wmktemp_s** 에서 멀티 바이트 문자열을 처리 하지 않는 경우를 제외 하 고 **_wmktemp_s** 및 **_mktemp_s** 는 동일 하 게 동작 합니다.
 
-이러한 함수의 디버그 라이브러리 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -106,17 +106,17 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*nameTemplate* 인수에는 **baseXXXXXX**형식이 있으며, *여기서 기본은* 제공하는 새 파일 이름의 일부이고 각 X는 **_mktemp_s**제공된 문자의 자리 표시자입니다. *nameTemplate의* 각 자리 표시자 문자는 대문자 X여야 **_mktemp_s** *기본을* 보존하고 첫 번째 후행 X를 알파벳 문자로 대체합니다. **_mktemp_s** 다음 후행 X를 5자리 값으로 대체합니다. 이 값은 호출 프로세스 또는 다중 스레드 프로그램에서 호출 스레드를 식별하는 고유 번호입니다.
+*NameTemplate* 인수에는 **baseXXXXXX**형식이 있습니다. 여기서 *base* 는 사용자가 제공 하는 새 파일 이름의 일부이 고 각 X는 **_mktemp_s**에서 제공 하는 문자에 대 한 자리 표시자입니다. *NameTemplate* 의 각 자리 표시자 문자는 대문자 X 여야 합니다 **_mktemp_s** . _mktemp_s *밑* 을 유지 하 고 첫 번째 후행 X를 영문자로 바꿉니다. **_mktemp_s** 는 다음 후행 X를 5 자리 값으로 바꿉니다. 이 값은 호출 프로세스 또는 다중 스레드 프로그램의 호출 스레드를 식별 하는 고유 번호입니다.
 
-**_mktemp_s** 대한 각 성공적인 호출은 *nameTemplate*. 동일한 *이름인* 동일한 프로세스 또는 스레드에서 후속 호출에서 **_mktemp_s** 이전 호출에서 **_mktemp_s** 반환된 이름과 일치하는 파일 이름을 확인합니다. 지정된 이름에 대한 파일이 없으면 **_mktemp_s** 해당 이름을 반환합니다. 이전에 반환된 모든 이름에 대해 파일이 있는 경우 **_mktemp_s** 이전에 반환된 이름에 사용된 알파벳 문자를 'a'에서 'z'까지 순서대로 사용 가능한 다음 소문자로 대체하여 새 이름을 만듭니다. 예를 *들어, 기준이* 다음과 같은 경우:
+**_Mktemp_s** 에 대 한 각 호출은 *nameTemplate*을 수정 합니다. 동일한 *nameTemplate* 인수를 사용 하는 동일한 프로세스 또는 스레드에서의 각 후속 호출에서 **_mktemp_s** 는 이전 호출에서 **_mktemp_s** 에서 반환 된 이름과 일치 하는 파일 이름을 확인 합니다. 지정 된 이름에 대 한 파일이 존재 하지 않는 경우 **_mktemp_s** 는 해당 이름을 반환 합니다. 이전에 반환 된 모든 이름에 대 한 파일이 존재 하는 경우 **_mktemp_s** 이전에 반환 된 이름에서 사용한 영문자를 ' a ' ~ ' z '부터 순서 대로 사용 가능한 다음 소문자로 대체 하 여 새 이름을 만듭니다. 예를 들어 *base* 가 다음과 같은 경우:
 
-> **Fn**
+> **fn**
 
-**_mktemp_s** 제공하는 5자리 값은 12345이며 반환되는 이름은 다음과 입니다.
+**_mktemp_s** 에서 제공 하는 5 자리 값은 12345이 고, 반환 되는 첫 번째 이름은입니다.
 
 > **fna12345**
 
-이 이름이 FNA12345 파일을 만드는 데 사용되고 이 파일이 여전히 존재하는 경우 동일한 프로세스 또는 *nameTemplate에* 대한 동일한 *기준을* 가진 스레드에서 호출시 반환된 다음 이름은 다음과 같습니다.
+이 이름을 사용 하 여 FNA12345 파일을 만들 때이 파일이 여전히 존재 하는 경우 *nameTemplate* 에 대해 동일한 *기본* 을 사용 하는 동일한 프로세스 또는 스레드의 호출에서 반환 된 다음 이름은 다음과 같습니다.
 
 > **fnb12345**
 
@@ -124,7 +124,7 @@ FNA12345가 존재하지 않는 경우 반환된 다음 이름은 다시 아래�
 
 > **fna12345**
 
-**_mktemp_s** *기본* 및 *nameTemplate* 값의 지정된 조합에 대해 최대 26개의 고유 파일 이름을 만들 수 있습니다. 따라서 FNZ12345는 이 예제에서 사용되는 *기본* 및 *nameTemplate* 값에 대해 만들 수 **_mktemp_s** 마지막 고유한 파일 이름입니다.
+**_mktemp_s** 는 *base* 및 *nameTemplate* 값의 지정 된 조합에 대해 최대 26 개의 고유한 파일 이름을 만들 수 있습니다. 따라서 FNZ12345는이 예제에 사용 된 *base* 및 *nameTemplate* 값에 대해 만들 수 **_mktemp_s** 마지막으로 고유한 파일 이름입니다.
 
 C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
@@ -191,7 +191,7 @@ Unique filename is fnd03188
 Unique filename is fne03188
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

@@ -21,7 +21,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: ef712ecb6236513d169b4a8836b1365b0aca0633
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337362"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918390"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-시스템 오류 메시지 **(strerror_s**, **_wcserror_s)를**얻거나 사용자 제공 오류 메시지 **(_strerror_s**, **__wcserror_s)를**인쇄합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)의 버전입니다.
+시스템 오류 메시지 (**strerror_s**, **_wcserror_s**)를 가져오거나 사용자 제공 오류 메시지 (**_strerror_s**, **__wcserror_s**)를 인쇄 합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)의 버전입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -107,13 +107,13 @@ errno_t __wcserror_s(
 *버퍼*<br/>
 오류 문자열을 저장할 버퍼입니다.
 
-*숫자오브엘리먼트*<br/>
+*이면 numberofelements 이벤트가*<br/>
 버퍼의 크기입니다.
 
-*에러 넘 (주)*<br/>
+*errnum*<br/>
 오류 번호입니다.
 
-*스트러롬스그*<br/>
+*strErrMsg*<br/>
 사용자 제공 메시지
 
 ## <a name="return-value"></a>Return Value
@@ -122,14 +122,14 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>오류 조건
 
-|*버퍼*|*숫자오브엘리먼트*|*스트러롬스그*|*버퍼의* 내용|
+|*버퍼*|*이면 numberofelements 이벤트가*|*strErrMsg*|*버퍼* 의 내용|
 |--------------|------------------------|-----------------|--------------------------|
-|**Null**|any|any|해당 없음|
+|**N**|any|any|해당 없음|
 |any|0|any|수정 안 됨|
 
 ## <a name="remarks"></a>설명
 
-**strerror_s** 함수는 *errnum을* 오류 메시지 문자열에 매핑하여 *버퍼에서*문자열을 반환합니다. **_strerror_s** 오류 번호를 받지 않습니다. **errno의** 현재 값을 사용하여 적절한 메시지를 결정합니다. **strerror_s** **_strerror_s** 실제로 메시지를 인쇄하지 않습니다: 이를 위해 [fprintf와](fprintf-fprintf-l-fwprintf-fwprintf-l.md)같은 출력 함수를 호출해야합니다.
+**Strerror_s** 함수는 *errnum* 을 오류 메시지 문자열로 매핑하여 *버퍼*에 문자열을 반환 합니다. **_strerror_s** 는 오류 번호를 사용 하지 않습니다. **errno** 의 현재 값을 사용 하 여 적절 한 메시지를 확인 합니다. 실제로는 **strerror_s** 또는 **_strerror_s** 모두 메시지를 인쇄 하지 않습니다. 즉, [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)와 같은 출력 함수를 호출 해야 합니다.
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -139,23 +139,23 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-*strErrMsg가* **NULL인**경우 **_strerror_s** 오류를 생성한 마지막 라이브러리 호출에 대한 시스템 오류 메시지를 포함하는 *버퍼의* 문자열을 반환합니다. 오류 메시지 문자열은 줄 바꿈 문자('\n')로 종료됩니다. *strErrMsg가* **NULL과**같지 않은 경우 **_strerror_s** 문자열 메시지, 콜론, 공간, 오류를 생성하는 마지막 라이브러리 호출에 대한 시스템 오류 메시지 및 줄 바선 문자를 포함하는 *버퍼의 문자열을* 반환합니다. 문자열 메시지는 94자 이하여야 합니다.
+*StrErrMsg* 가 **NULL**인 경우 **_strerror_s** 는 오류를 생성 한 마지막 라이브러리 호출에 대 한 시스템 오류 메시지를 포함 하는 *버퍼* 의 문자열을 반환 합니다. 오류 메시지 문자열은 줄 바꿈 문자('\n')로 종료됩니다. *StrErrMsg* 가 **NULL**과 같지 않은 경우 **_strerror_s** 는 문자열 메시지, 콜론, 공백, 오류가 발생 한 마지막 라이브러리 호출에 대 한 시스템 오류 메시지 및 줄 바꿈 문자를 순서 대로 포함 하는 *버퍼* 에 문자열을 반환 합니다. 문자열 메시지는 94자 이하여야 합니다.
 
-이러한 함수는 길이가 *숫자를* 초과하는 경우 오류 메시지를 트렁킨다OfElements -1. *버퍼의* 결과 문자열은 항상 null-종료됩니다.
+이러한 함수는 길이가 *Numberofelements* -1을 초과 하는 경우 오류 메시지를 자릅니다. *버퍼* 의 결과 문자열은 항상 null로 종료 됩니다.
 
-**_strerror_s** 대한 실제 오류 번호는 변수 [errno에](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)저장됩니다. [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 통해 시스템 오류 메시지에 액세스합니다. 이 변수는 오류 번호순으로 정렬된 메시지 배열입니다. **_strerror_s** **errno** 값을 변수 **_sys_errlist**인덱스로 사용하여 적절한 오류 메시지에 액세스합니다. 변수 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 값은 **_sys_errlist** 배열의 최대 요소 수로 정의됩니다. 정확한 결과를 얻으려면 라이브러리 루틴이 오류와 함께 반환된 직후 **_strerror_s** 호출합니다. 그렇지 않으면 **strerror_s** 또는 **_strerror_s** 대한 후속 호출은 **errno** 값을 덮어쓸 수 있습니다.
+**_Strerror_s** 의 실제 오류 번호는 변수 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)에 저장 됩니다. [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 통해 시스템 오류 메시지에 액세스합니다. 이 변수는 오류 번호순으로 정렬된 메시지 배열입니다. **_strerror_s** 는 **errno** 값을 **_sys_errlist**변수에 대 한 인덱스로 사용 하 여 적절 한 오류 메시지에 액세스 합니다. 변수 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 의 값은 **_sys_errlist** 배열의 최대 요소 수로 정의 됩니다. 정확한 결과를 생성 하려면 라이브러리 루틴이 오류와 함께 반환 되는 즉시 **_strerror_s** 를 호출 합니다. 그렇지 않으면 **strerror_s** 또는 **_strerror_s** 에 대 한 후속 호출에서 **errno** 값을 덮어쓸 수 있습니다.
 
-**_wcserror_s** **__wcserror_s** 각각 **strerror_s** **_strerror_s**와이드 문자 버전입니다.
+**_wcserror_s** 및 **__wcserror_s** 는 각각 **strerror_s** 및 **_strerror_s**의 와이드 문자 버전입니다.
 
-이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 버퍼가 **NULL이거나** 크기 매개 변수가 0인 경우 매개 변수 유효성 [검사에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 함수는 **EINVAL을** 반환하고 **errno를** **EINVAL로**설정합니다.
+이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 버퍼가 **NULL** 이거나 size 매개 변수가 0 이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-**_strerror_s**, **_wcserror_s**및 **__wcserror_s** ANSI 정의의 일부가 아니라 대신 Microsoft 확장입니다. 이식성이 필요한 곳에는 사용하지 마십시오. ANSI 호환성을 위해 **대신 strerror_s** 사용하십시오.
+**_strerror_s**, **_WCSERROR_S**및 **__wcserror_s** ANSI 정의의 일부가 아니지만 대신 Microsoft 확장입니다. 이식성이 필요한 경우에는 사용 하지 마십시오. ANSI 호환성을 위해 **strerror_s** 를 대신 사용 합니다.
 
 C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-이러한 함수의 디버그 라이브러리 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -168,7 +168,7 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**strerror_s**, **_strerror_s**|\<string.h>|
-|**_wcserror_s,** **__wcserror_s**|\<string.h> 또는 \<wchar.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> 또는 \<wchar.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -176,7 +176,7 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 
 [perror](perror-wperror.md)의 예를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>

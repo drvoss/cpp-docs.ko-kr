@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909544"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -57,22 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 테스트할 정수입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**isleadbyte는** 인수가 테스트 조건을 만족하는 경우 비영값을 반환하거나 그렇지 않은 경우 0을 반환합니다. "C" 로캘과 SBCS(단일 바이트 문자 집합)에서 **isleadbyte는** 항상 0을 반환합니다.
+**isleadbyte** 는 인수가 테스트 조건을 충족 하는 경우 0이 아닌 값을 반환 하 고 그렇지 않으면 0을 반환 합니다. "C" 로캘과 SBCS (싱글바이트 문자 집합) 로캘에서 **isleadbyte** 는 항상 0을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**isleadbyte** 매크로는 인수가 다중 바이트 문자의 첫 번째 바이트인 경우 비영값을 반환합니다. **isleadbyte는** -1 **(EOF)에서** **UCHAR_MAX** (0xFF)까지모든 정수 인수에 대해 의미있는 결과를 생성합니다.
+**Isleadbyte** 매크로는 인수가 멀티 바이트 문자의 첫 번째 바이트인 경우 0이 아닌 값을 반환 합니다. **isleadbyte** 는-1 (**EOF**)에서 **UCHAR_MAX** (0xff) (포함) 사이의 모든 정수 인수에 대해 의미 있는 결과를 생성 합니다.
 
-**isleadbyte의** 예상 인수 유형은 **int;** 서명된 문자가 전달되면 컴파일러는 사인 확장을 통해 정수로 변환하여 예기치 않은 결과를 얻을 수 있습니다.
+**Isleadbyte** 의 예상 인수 형식은 **int**입니다. 부호 있는 문자가 전달 되는 경우 컴파일러는 부호 확장을 통해 정수로 변환 하 여 예측할 수 없는 결과를 생성 합니다.
 
-**_l** 접미사가 있는 이 함수의 버전은 로캘 종속 동작에 대해 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다.
+**_L** 접미사가 있는이 함수의 버전은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -89,8 +89,8 @@ int _isleadbyte_l( int c );
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 288c23ac11104ed994719fae8576cdc3597d7478
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343647"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918940"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
@@ -59,19 +59,19 @@ int _ismbbkana_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 테스트할 정수입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_ismbbkana** 정수 *c가* 카타카나 기호인 경우 비영값을 반환하거나 그렇지 않은 경우 0을 반환합니다. **_ismbbkana** 로캘 종속 문자 정보에 현재 로캘을 사용합니다. **_ismbbkana_l** 전달된 로캘 개체를 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_ismbbkana** 는 정수 *c* 가 가타카나 기호인 경우 0이 아닌 값을 반환 하 고 그렇지 않으면 0을 반환 합니다. **_ismbbkana** 은 로캘 종속 문자 정보에 대 한 현재 로캘을 사용 합니다. **_ismbbkana_l** 은 전달 된 로캘 개체를 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -82,7 +82,7 @@ int _ismbbkana_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

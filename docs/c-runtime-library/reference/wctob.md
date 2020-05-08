@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910482"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,20 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>매개 변수
 
-*Wchar*<br/>
+*wchar*<br/>
 변환할 값입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**wctob가** 넓은 문자를 성공적으로 변환하는 경우 다중 바이트 문자가 정확히 1바이트 길이인 경우에만 다중 바이트 문자 표현을 반환합니다. **wctob이** 넓은 문자를 만나면 멀티바이트 문자로 변환할 수 없거나 다바이트 문자가 정확히 1바이트 길이가 아닌 경우 -1을 반환합니다.
+**Wctob** 가 와이드 문자를 성공적으로 변환 하는 경우 멀티 바이트 문자의 길이가 정확히 1 바이트 인 경우에만 멀티 바이트 문자 표현을 반환 합니다. **Wctob** 가 멀티 바이트 문자로 변환할 수 없는 와이드 문자를 발견 하거나 멀티 바이트 문자의 길이가 정확히 1 바이트는 아닌 경우-1을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**wctob** 함수는 *wchar에* 포함된 넓은 문자를 반환 **int** 값으로 전달되는 해당 멀티바이트 문자로 변환합니다(다중바이트 문자가 정확히 1바이트 길이인 경우).
+**Wctob** 함수는 멀티 바이트 문자의 길이가 정확히 1 바이트 이면 *wchar* 에 포함 된 와이드 문자를 return **int** 값으로 전달 된 해당 멀티 바이트 문자로 변환 합니다.
 
-**wctob가** 실패하고 해당 다바이트 문자가 발견되지 않은 경우 함수는 **errno를** **EILSEQ로** 설정하고 -1을 반환합니다.
+**Wctob** 이 실패 하 고 해당 하는 멀티 바이트 문자를 찾을 수 없는 경우 함수는 **Errno** 를 **eilseq** 로 설정 하 고-1을 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -106,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

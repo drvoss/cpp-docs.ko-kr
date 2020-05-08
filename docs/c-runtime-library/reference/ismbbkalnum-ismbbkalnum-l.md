@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343668"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909511"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -59,19 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 테스트할 정수입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_ismbbkalnum** 정수 *c가* 구두점 이외의 ASCII 텍스트 기호인 경우 비영값을 반환하거나 그렇지 않은 경우 0을 반환합니다. **_ismbbkalnum** 현재 로캘을 로캘 종속 문자 정보에 사용합니다. **_ismbbkalnum_l** 로캘을 매개 변수로 사용한다는 점을 제외하면 **_ismbbkalnum** 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+정수 *c* 가 문장 부호 이외의 ASCII가 아닌 텍스트 기호 이면 0이 아닌 값을 반환 하 고, 그렇지 않으면 0을 반환 합니다. **_ismbbkalnum** **_ismbbkalnum** 은 로캘 종속 문자 정보에 대 한 현재 로캘을 사용 합니다. **_ismbbkalnum_l** 은 로캘을 매개 변수로 사용 한다는 점을 제외 하 고 **_ismbbkalnum** 와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -82,7 +82,7 @@ int _ismbbkalnum_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

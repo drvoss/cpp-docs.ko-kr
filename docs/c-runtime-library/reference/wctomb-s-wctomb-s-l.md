@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 1ddc9a991f28c4a2ea491f3ddd04d78f6345e255
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367245"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910438"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -69,16 +69,16 @@ errno_t _wctomb_s_l(
 *pRetValue*<br/>
 결과를 나타내는 코드 또는 바이트 수입니다.
 
-*mbc하르*<br/>
+*mbchar*<br/>
 멀티바이트 문자의 주소입니다.
 
 *sizeInBytes*<br/>
-버퍼 *mbchar의*크기 .
+버퍼 *mbchar*의 크기입니다.
 
-*Wchar*<br/>
+*wchar*<br/>
 와이드 문자입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -87,23 +87,23 @@ errno_t _wctomb_s_l(
 
 오류 조건
 
-|*mbc하르*|*sizeInBytes*|반환 값|*pRetValue*|
+|*mbchar*|*sizeInBytes*|반환 값|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**Null**|>0|**아인발 ()에인발 (것)**|수정 안 됨|
-|any|>**INT_MAX**|**아인발 ()에인발 (것)**|수정 안 됨|
-|any|너무 작음|**아인발 ()에인발 (것)**|수정 안 됨|
+|**N**|>0|**EINVAL**|수정 안 됨|
+|any|>**INT_MAX**|**EINVAL**|수정 안 됨|
+|any|너무 작음|**EINVAL**|수정 안 됨|
 
-위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **wctomb은** **EINVAL을** 반환하고 **errno를** **EINVAL로**설정합니다.
+위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 **wctomb** 는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
 ## <a name="remarks"></a>설명
 
-**wctomb_s** 함수는 *wchar* 인수를 해당 다중 바이트 문자로 변환하고 결과를 *mbchar에*저장합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다.
+**Wctomb_s** 함수는 *wchar* 인수를 해당 멀티 바이트 문자로 변환 하 고 결과를 *mbchar*에 저장 합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다.
 
-**wctomb_s** 와이드 문자를 여러 바이트 문자로 변환하는 경우 *pRetValue가*가리키는 정수에 넓은 문자의 바이트 **수(MB_CUR_MAX**보다 크지 않습니다)를 넣습니다. *wchar가* 와이드 문자 null 문자(L'\0')인 경우 **wctomb_s** *pRetValue를* 1로 채웁니다. 대상 포인터 *mbchar가* **NULL이면** **wctomb_s** *pRetValue에 0을*넣습니다. 현재 로캘에서 변환이 불가능한 경우 **wctomb_s** *pRetValue에*-1을 넣습니다.
+**Wctomb_s** 와이드 문자를 멀티 바이트 문자로 변환 하는 경우 와이드 문자의 바이트 수 ( **MB_CUR_MAX**보다 크지 않음)를 *pRetValue*가 가리키는 정수에 배치 합니다. *Wchar* 가 와이드 문자 null 문자 (L ' \ 0 ') 인 경우 **wctomb_s** 은 1로 *pRetValue* 를 채웁니다. 대상 포인터 *mbchar* 가 **NULL**이면 **wctomb_s** *pRetValue*에 0이 배치 됩니다. 현재 로캘에서 변환할 수 없는 경우 **wctomb_s** 는 *pRetValue*에-1을 배치 합니다.
 
-**wctomb_s** 로캘 종속 정보에 현재 로캘을 사용합니다. **_wctomb_s_l** 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**wctomb_s** 은 로캘 종속 정보에 대 한 현재 로캘을 사용 합니다. **_wctomb_s_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -142,10 +142,10 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

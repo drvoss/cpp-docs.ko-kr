@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 50f1f6e4320e3ef905b4eda67ba1d458a5b1df08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344882"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919677"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -54,50 +54,50 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>매개 변수
 
 *pReturnValue*<br/>
-null 터미네이터를 포함하는 *timeZoneName의* 문자열 길이입니다.
+Null 종결자를 포함 하는 *Timezonename* 의 문자열 길이입니다.
 
-*시간대 이름*<br/>
-*인덱스에*따라 표준 시간대 이름 또는 일광 표준 표준 표준 시간대 이름(DST)을 표현하기 위한 문자 문자열의 주소입니다.
+*timeZoneName*<br/>
+*인덱스*에 따라 표준 시간대 이름 또는 일광 표준 시간대 이름 (DST) 표현에 대 한 문자열의 주소입니다.
 
 *sizeInBytes*<br/>
-*timeZoneName* 문자열의 크기입니다.
+*Timezonename* 문자열의 크기 (바이트)입니다.
 
 *index*<br/>
 검색할 두 표준 시간대 이름 중 하나의 인덱스입니다.
 
-|*index*|*시간대의 내용존이름*|*시간영역이름* 기본값|
+|*index*|*Timezonename* 의 내용|*Timezonename* 기본값|
 |-|-|-|
 |0|표준 시간대 이름|"PST"|
 |1|일광 표준 시간대 이름|"PDT"|
-|> 1 또는 < 0|**에르노는** **아인발로** 설정|수정 안 됨|
+|> 1 또는 < 0|**errno** 를 **EINVAL** 로 설정|수정 안 됨|
 
 런타임에 값을 명시적으로 변경하는 경우가 아니면 기본값은 각각 "PST" 및 "PDT"입니다.
 
 ## <a name="return-value"></a>Return Value
 
-성공하면 0, 그렇지 않으면 **errno** 형식 값입니다.
+성공 하면 0이 고, 그렇지 않으면 **errno** 형식 값입니다.
 
-*timeZoneName이* **NULL이거나** *sizeInBytes가* 0이거나 0보다 작으면(둘 다 아님) 매개 변수 유효성 [검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **EINVAL**을 반환합니다.
+*Timezonename* 이 **NULL**이거나 *sizeinbytes* 가 0 이거나 0 보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*pReturnValue*|*시간대 이름*|*sizeInBytes*|*index*|반환 값|*시간대의 내용존이름*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|반환 값|*Timezonename* 의 내용|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|TZ 이름의 크기|**Null**|0|0 또는 1|0|수정 안 됨|
+|TZ 이름의 크기|**N**|0|0 또는 1|0|수정 안 됨|
 |TZ 이름의 크기|any|> 0|0 또는 1|0|TZ 이름|
-|수정 안 됨|**Null**|> 0|any|**아인발 ()에인발 (것)**|수정 안 됨|
-|수정 안 됨|any|0|any|**아인발 ()에인발 (것)**|수정 안 됨|
-|수정 안 됨|any|> 0|> 1|**아인발 ()에인발 (것)**|수정 안 됨|
+|수정 안 됨|**N**|> 0|any|**EINVAL**|수정 안 됨|
+|수정 안 됨|any|0|any|**EINVAL**|수정 안 됨|
+|수정 안 됨|any|> 0|> 1|**EINVAL**|수정 안 됨|
 
 ## <a name="remarks"></a>설명
 
-**_get_tzname** 함수는 현재 표준 시간대 이름 또는 일광 표준 표준 표준 시간대 이름(DST)의 문자열 표현을 인덱스 값에 따라 *timeZoneName의* 주소로 검색하고 *pReturnValue의*문자열 크기를 검색합니다. *timeZoneName이* **NULL이고** *sizeInBytes가* 0인 경우 지정된 표준 시간대를 유지하는 데 필요한 문자열의 크기와 바이트 단위로 종료null이 *pReturnValue*에서 반환됩니다. 인덱스 값은 표준 표준 시간대의 경우 0이거나 일광 표준 표준 시간대의 경우 1이어야 합니다. *인덱스의* 다른 값에는 결정되지 않은 결과가 있습니다.
+**_Get_tzname** 함수는 현재 표준 시간대 이름 또는 일광 표준 시간대 이름 (DST)의 문자열 표현을 *pReturnValue*의 문자열 크기와 함께 인덱스 값에 따라 *timezonename* 의 주소로 검색 합니다. *Timezonename* 이 **NULL** 이 고 *sizeinbytes* 가 0 인 경우에는 지정 된 표준 시간대를 보유 하는 데 필요한 문자열의 크기와 *pReturnValue*에서 종료 NULL을 바이트 단위로 반환 합니다. 인덱스 값은 표준 시간대의 경우 0 또는 일광 표준 시간대의 경우 1 이어야 합니다. *인덱스* 의 다른 값은 결과를 결정 하지 않습니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-This sample calls **_get_tzname** to get the required buffer size to display the current Daylight standard time zone name, allocates a buffer of that size, calls **_get_tzname** again to load the name in the buffer, and prints it to the console.
+이 샘플은 **_get_tzname** 를 호출 하 여 현재 일광 표준 시간대 이름을 표시 하 고, 해당 크기의 버퍼를 할당 하 고, **_get_tzname** 를 다시 호출 하 여 버퍼에 이름을 로드 하 고 콘솔에 출력 합니다.
 
 ```C
 // crt_get_tzname.c
@@ -147,7 +147,7 @@ The current Daylight standard time zone name is PDT.
 
 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

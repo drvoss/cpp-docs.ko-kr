@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 7503de22a8310335ddd678335916d3e74dab6e70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340985"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920309"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,35 +49,35 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>매개 변수
 
-*Str*<br/>
+*문자열*<br/>
 멀티바이트 문자열에서 검사할 다음 바이트에 대한 포인터입니다.
 
 *count*<br/>
 검사할 최대 바이트 수입니다.
 
 *mbstate*<br/>
-*str의*초기 바이트의 현재 시프트 상태에 대한 포인터.
+*Str*의 초기 바이트의 현재 이동 상태에 대 한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-해당 값은
+다음 값 중 하나입니다.
 
 |||
 |-|-|
-0|다음 *개수* 또는 그 이하의 바이트는 넓은 null 문자를 나타내는 다바이트 문자를 완료합니다.
-1 *카운트,* 포함|다음 *개수* 또는 그 이하의 바이트가 유효한 다중 바이트 문자를 완료합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다.
-(size_t)(-2)|다음 *바이트* 수는 불완전하지만 잠재적으로 유효한 다바이트 문자에 기여하며 모든 *카운트* 바이트가 처리되었습니다.
-(size_t)(-1)|인코딩 오류가 발생했습니다. 다음 *개수* 또는 그 이하의 바이트는 완전하고 유효한 다중 바이트 문자에 기여하지 않습니다. 이 경우 **errno는** EILSEQ로 설정되고 *mbstate의* 변환 상태가 지정되지 않습니다.
+0|다음 *개수* 이하의 바이트가 와이드 null 문자를 나타내는 멀티 바이트 문자를 완성 합니다.
+1- *개수*, 포함|다음 *개수* 이하의 바이트가 올바른 멀티 바이트 문자를 완성 합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다.
+(size_t)(-2)|다음 *카운트* 바이트는 불완전 하지만 잠재적으로 유효한 멀티 바이트 문자에 영향을 주지만 모든 바이트 *수가* 처리 되었습니다.
+(size_t)(-1)|인코딩 오류가 발생했습니다. 다음 *개수* 이하의 바이트는 완전 하 고 유효한 멀티 바이트 문자에 영향을 주지 않습니다. 이 경우 **errno** 는 EILSEQ로 설정 되 고 *mbstate* 의 변환 상태는 지정 되지 않습니다.
 
 ## <a name="remarks"></a>설명
 
-**mbrlen** 함수는 *str이* 가리키는 바이트로 시작하여 최대 *바이트를* 검사하여 시프트 시퀀스를 포함하여 다음 멀티바이트 문자를 완료하는 데 필요한 바이트 수를 결정합니다. *mbstate가* 사용자가 `mbrtowc(NULL, str, count, &mbstate)` 제공한 **mbstate_t** 개체 또는 라이브러리에서 제공하는 정적 내부 개체인 호출과 동일합니다.
+**Mbrlen** 함수는 모든 이동 시퀀스를 포함 하 여 다음 멀티 바이트 문자를 완료 하는 데 필요한 바이트 수를 결정 하기 위해 *str* 가 가리키는 바이트로 시작 하는 최대 *개수* 바이트를 검사 합니다. `mbrtowc(NULL, str, count, &mbstate)` *Mbstate* 가 사용자 제공 **mbstate_t** 개체 이거나 라이브러리에서 제공 되는 정적 내부 개체 인 호출과 동일 합니다.
 
-**mbrlen** 함수는 *mbstate* 매개 변수에서 불완전한 다중 바이트 문자의 시프트 상태를 저장하고 사용합니다. 이렇게 하면 **mbrlen이** 필요한 경우 멀티바이트 문자 의 중간에 다시 시작하여 대부분의 *카운트* 바이트를 검사할 수 있습니다. *mbstate가* null 포인터인 경우 **mbrlen은** 내부정적 **mbstate_t** 개체를 사용하여 shift 상태를 저장합니다. 내부 **mbstate_t** 개체는 스레드에서 안전하지 않으므로 항상 고유한 *mbstate* 매개 변수를 할당하고 전달하는 것이 좋습니다.
+**Mbrlen** 함수는 *mbstate* 매개 변수에서 불완전 한 멀티 바이트 문자의 이동 상태를 저장 하 고 사용 합니다. 이를 통해 **mbrlen** 은 필요한 경우 멀티 바이트 문자 중간에서 다시 시작 하 여 최대 *카운트* 바이트를 검사 하는 기능을 제공 합니다. *Mbstate* 가 null 포인터인 경우 **mbrlen** 은 내부 정적 **mbstate_t** 개체를 사용 하 여 이동 상태를 저장 합니다. 내부 **mbstate_t** 개체는 스레드로부터 안전 하지 않으므로 항상 고유한 *mbstate* 매개 변수를 할당 하 고 전달 하는 것이 좋습니다.
 
-**mbrlen** 함수는 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) 재시작 가능성에 의해 다릅니다. shift 상태는 동일하거나 다른 다시 시작 가능한 함수에 대한 후속 호출에 대해 *mbstate에* 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어, **wcsrtombs 대신 wcsrtombs에** 대한 후속 호출이 사용되는 경우 응용 프로그램은 **wcsrlen** 대신 wcsrlen을 사용해야 **합니다.** **wcsrlen**
+**Mbrlen** 함수는 다시 시작할에 의해 [_mblen_l _mbclen mblen](mbclen-mblen-mblen-l.md) 다릅니다. 동일 하거나 다른 다시 시작 가능 함수에 대 한 후속 호출의 경우 이동 상태가 *mbstate* 에 저장 됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어 **wcstombs**대신 **wcsrtombs** 에 대 한 후속 호출을 사용 하는 경우 응용 프로그램은 **wcslen** 대신 **wcsrlen** 을 사용 해야 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -95,7 +95,7 @@ size_t mbrlen(
 
 ## <a name="example"></a>예제
 
-이 예제에서는 다중 바이트 문자의 해석이 현재 코드 페이지에 따라 달라지는 방법을 보여 주며 **mbrlen의**다시 시작 기능을 보여 줍니다.
+이 예제에서는 멀티 바이트 문자의 해석이 현재 코드 페이지에 따라 달라 지는 방법과 **mbrlen**의 다시 시작 기능을 보여 줍니다.
 
 ```C
 // crt_mbrlen.c
@@ -155,7 +155,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>

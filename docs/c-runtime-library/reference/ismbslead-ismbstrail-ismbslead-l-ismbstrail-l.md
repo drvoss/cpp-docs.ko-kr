@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342911"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919169"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -87,26 +87,26 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*Str*<br/>
+*문자열*<br/>
 문자열의 시작이나 알려진 이전 선행 바이트를 가리키는 포인터입니다.
 
 *현재*<br/>
 테스트할 문자열의 위치를 가리키는 포인터입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_ismbslead** 문자가 리드 바이트인 경우 -1을 반환하고 **문자가** 추적 바이트인 경우 _ismbstrail -1을 반환합니다. 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는 0을 반환합니다. 두 인수 중 하나가 **NULL인**경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 **NULL을** 반환하고 **errno를** **EINVAL로**설정합니다.
+문자는 선행 바이트 이면-1을 반환 하 고 **_ismbstrail** 문자가 후행 바이트인 경우에는-1을 반환 **_ismbslead** . 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는 0을 반환합니다. 두 인수 중 하나가 **NULL**이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **NULL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_ismbslead** **_ismbstrail** 문자열 컨텍스트를 고려하기 때문에 **_ismbblead** **및 _ismbbtrail** 버전보다 느립니다.
+**_ismbslead** 및 **_ismbstrail** 은 문자열 컨텍스트를 고려 하기 때문에 **_ismbblead** 및 **_ismbbtrail** 버전 보다 느립니다.
 
-**_l** 접미사가 있는 이러한 함수의 버전은 로캘 종속 동작의 경우 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_L** 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달 된 로캘을 사용 하는 로캘 종속 동작의 경우를 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -121,7 +121,7 @@ int _ismbstrail_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)<br/>

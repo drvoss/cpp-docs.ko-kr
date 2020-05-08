@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: f09168e8e010fb59d748c109d4a41c533318e2eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342892"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918514"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -72,29 +72,29 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 테스트할 정수입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-*c가* 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 것을 반환합니다. **isprint는** *c가* 인쇄 가능한 문자인 경우 영하지 않은 값을 반환합니다.이 문자는 공백 문자 (0x20 - 0x7E)를 포함합니다. **iswprint는** *c가* 인쇄 가능한 넓은 문자인 경우 영하가 아닌 값을 반환합니다. *c가* 테스트 조건을 충족하지 않는 경우 이러한 각 루틴은 0을 반환합니다.
+*C* 가 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환 합니다. *c* 가 인쇄 가능한 문자인 경우 **isprint 프린트** 는 0이 아닌 값을 반환 합니다. 여기에는 공백 문자 (0x20-0x7e)가 포함 됩니다. *c* 가 인쇄 가능한 와이드 문자인 경우 **iswprint** 는 0이 아닌 값을 반환 합니다. 여기에는 공백 와이드 문자가 포함 됩니다. *C* 가 테스트 조건을 충족 하지 않는 경우 이러한 루틴은 각각 0을 반환 합니다.
 
-이러한 함수에 대한 테스트 조건의 결과는 로캘의 **LC_CTYPE** 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](setlocale-wsetlocale.md) 를 참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+이러한 함수에 대 한 테스트 조건의 결과는 로캘의 **LC_CTYPE** 범주 설정에 따라 달라 집니다. 자세한 내용은 [setlocale, _wsetlocale를](setlocale-wsetlocale.md) 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-**isprint** 및 **_isprint_l** 동작은 *c가* EOF가 아니거나 0에서 0xFF 범위(포함)가 아닌 경우 정의되지 않습니다. 디버그 CRT 라이브러리가 사용되고 *c가* 이러한 값 중 하나가 아닌 경우 함수는 어설션을 발생시게 됩니다.
+*C* 가 EOF가 아니거나 0에서 0xff 사이 (포함) 범위 내에 있는 경우 **isprint 프린트** 및 **_isprint_l** 의 동작이 정의 되지 않습니다. 디버그 CRT 라이브러리가 사용 되 고 *c* 가 이러한 값 중 하나가 아니면 함수는 어설션을 발생 시킵니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **이스트프린트**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
+|**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
 
 ## <a name="remarks"></a>설명
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -107,8 +107,8 @@ int _iswprint_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>

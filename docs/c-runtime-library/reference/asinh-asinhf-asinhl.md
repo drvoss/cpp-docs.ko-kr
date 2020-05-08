@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350469"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919616"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -65,23 +65,23 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Return Value
 
-**asinh** 함수는 *x의*역 히버볼릭 사네(아크 쌍곡선 죄)를 반환합니다. 이 함수는 부동 소수점 도메인에 대해 유효합니다. *x가* 조용한 NaN, 무기한 또는 무한대인 경우 동일한 값이 반환됩니다.
+**Asinh** 함수는 *x*의 역 하이퍼볼릭 사인 (원호 하이퍼볼릭 사인)을 반환 합니다. 이 함수는 부동 소수점 도메인에 대해 유효합니다. *X* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
 
-|입력|SEH 예외|**_matherr** 예외|
+|입력|SEH 예외|**_matherr** 발생할|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|없음|없음|
 
 ## <a name="remarks"></a>설명
 
-C++를 사용하면 **부동 부동** 값 또는 **긴** **이중** 값을 가져가고 반환하는 **asinh의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **asinh는** 항상 **두 배를**가져 와서 반환합니다.
+C + +를 사용 하는 경우 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **asinh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **asinh** 는 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 C 헤더|필수 C++ 헤더|
+|기능|필수 C 헤더|필수 C++ 헤더|
 |--------------|--------------|------------------|
-|**아신,** **아신프,** **아신흘**|\<math.h>|\<cmath> \<또는 math.h<|
+|**asinh**, **asinh**, **asinh**|\<math.h>|\<cmath>> 또는 \<math<|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -113,7 +113,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

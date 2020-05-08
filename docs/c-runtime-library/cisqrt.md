@@ -13,7 +13,7 @@ api_location:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: e6bed6dcde8f4f80e323da120ddb3f2488f769a1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: baedb0541e16c28d18d0062fa5498fb8e2c8dea8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745427"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918360"
 ---
 # <a name="_cisqrt"></a>_CIsqrt
 
@@ -48,7 +48,7 @@ void __cdecl _CIsqrt();
 
 결과 값이 스택의 맨 위에 푸시됩니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
