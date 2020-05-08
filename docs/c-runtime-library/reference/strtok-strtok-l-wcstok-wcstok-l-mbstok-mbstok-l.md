@@ -25,7 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +53,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: d228d9824c534a21e4a22797e4b070e6d8d0b179
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365194"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912630"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 현재 로캘 또는 전달된 지정한 로캘을 사용하여 문자열의 다음 토큰을 찾습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **_mbstok** 및 **_mbstok_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbstok** 및 **_mbstok_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -104,33 +104,33 @@ unsigned char *_mbstok_l(
 *strToken*<br/>
 토큰을 하나 이상 포함하는 문자열입니다.
 
-*스트데리미트*<br/>
+*strDelimit*<br/>
 구분 기호 문자 집합입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-*strToken*에 있는 다음 토큰에 대한 포인터를 반환합니다. 함수는 더 이상 토큰을 찾을 수 없을 때 **NULL을** 반환합니다. 각 호출은 반환된 토큰 이후에 발생하는 첫 번째 구분 기호에 대해 null 문자를 대체하여 *strToken을* 수정합니다.
+*Strtoken*에서 찾은 다음 토큰에 대 한 포인터를 반환 합니다. 토큰을 더 이상 찾을 수 없는 경우이 함수는 **NULL** 을 반환 합니다. 각 호출은 반환 된 토큰 후에 발생 하는 첫 번째 구분 기호로 null 문자를 대체 하 여 *Strtoken* 을 수정 합니다.
 
 ## <a name="remarks"></a>설명
 
-**strtok** 함수는 *strToken*에서 다음 토큰을 찾습니다. *strDelimit의* 문자 집합은 현재 호출의 *strToken에서* 찾을 수 있는 토큰의 가능한 구분자를 지정합니다. **wcstok** 및 **_mbstok** **스트톡의**넓은 문자 및 멀티 바이트 문자 버전입니다. **wcstok의** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbstok** 그 다중 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**Strtok** 함수는 *strtoken*에서 다음 토큰을 찾습니다. *Strdelimit* 의 문자 집합은 현재 호출에 대 한 *strdelimit* 에서 찾을 수 있는 토큰의 가능한 구분 기호를 지정 합니다. **wcstok** 및 **_mbstok** 는 **strtok**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcstok** 의 인수와 반환 값은 와이드 문자 문자열입니다. **_mbstok** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 > [!IMPORTANT]
 > 이러한 함수는 버퍼 오버런 문제로 인해 발생하는 잠재적인 위협을 일으킵니다. 버퍼 오버런 문제는 자주 사용되는 시스템 공격 방법으로, 불필요한 권한 상승을 초래합니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-**strtok에**대한 첫 번째 호출에서 함수는 선행 구분 기호를 건너뛰고 *strToken의*첫 번째 토큰에 대한 포인터를 반환하여 null 문자로 토큰을 종료합니다. **strtok에**대한 일련의 호출을 통해 *strToken의* 나머지 부분에서 더 많은 토큰을 나눌 수 있습니다. **strtok에** 대한 각 호출은 해당 호출에서 반환된 **토큰** 이후에 null 문자를 삽입하여 *strToken을* 수정합니다. *strToken에서*다음 토큰을 읽으려면 *strToken* 인수에 대한 **NULL** 값을 가진 **strtok를** 호출합니다. **NULL** *strToken* 인수로 인해 **strtok는** 수정된 *strToken*에서 다음 토큰을 검색합니다. *strDelimit* 인수는 구분 기호 집합이 다를 수 있도록 한 호출에서 다음 호출로 모든 값을 취할 수 있습니다.
+**Strtok**에 대 한 첫 번째 호출에서 함수는 선행 구분 기호를 건너뛰고 *strtoken*의 첫 번째 토큰에 대 한 포인터를 반환 하 여 null 문자로 토큰을 종료 합니다. **Strtok**에 대 한 일련의 호출을 통해 *strtoken* 의 나머지 부분에서 더 많은 토큰을 분할할 수 있습니다. **Strtok** 에 대 한 각 호출에서는 해당 호출에서 반환 된 **토큰** 뒤에 null 문자를 삽입 하 여 *strtoken* 을 수정 합니다. *Strtoken*에서 다음 토큰을 읽으려면 *strtoken* 인수에 대해 **NULL** 값을 사용 하 여 **strtok** 를 호출 합니다. **NULL** *strtoken* 인수를 설정 하면 **Strtok** 는 수정 된 *strtoken*에서 다음 토큰을 검색 합니다. *Strdelimit* 인수는 구분 기호 집합이 다를 수 있도록 다음에 대 한 호출에서 임의의 값을 사용할 수 있습니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정설정의 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요.
 
-**_l** 접미사가 없는 이러한 함수의 버전은 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘 매개 변수를 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_L** 접미사가 없는 이러한 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_L** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 > [!NOTE]
 > 각 함수는 스레드 로컬 정적 변수를 사용하여 문자열을 토큰으로 구문 분석합니다. 따라서 여러 스레드가 부적절한 영향을 주지 않고 이러한 함수를 동시에 호출할 수 있습니다. 그러나 단일 스레드 내에서 이러한 함수 중 하나로 호출을 인터리빙하면 데이터가 손상되고 부정확한 결과가 생성될 가능성이 높습니다. 다른 문자열을 구문 분석할 때는 문자열 하나의 구문 분석을 완료한 후에 다음 문자열의 구문 분석을 시작하세요. 또한 다른 함수가 호출되는 루프 내에서 이러한 함수 중 하나를 호출할 때의 위험 가능성도 고려하세요. 다른 함수가 이러한 함수 중 하나를 사용하게 되면 인터리빙된 호출 시퀀스가 수행되어 데이터가 손상됩니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -195,10 +195,10 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

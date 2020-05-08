@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1fe34a6661f768bbe22838eedb1914f7d21e31a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341679"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911395"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -91,27 +91,27 @@ float _logbf(
 
 ## <a name="return-value"></a>Return Value
 
-**logb는** 부동 소수점 값으로 표시되는 서명된 정수로 *x의* 편향되지 않은 지수 값을 반환합니다.
+**logb** 는 *x* 의 비편향 지 수 값을 부동 소수점 값으로 표현 되는 부호 있는 정수로 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**logb** 함수는 *x가* 무한 범위로 표시된 것처럼 부동 소수점 인수 *x의*지수 값을 추출합니다. 인수 *x가* 정규화되지 않으면 정규화된 것처럼 처리됩니다.
+**Logb** 함수는 *x* 가 무한 범위로 표현 된 것 처럼 부동 소수점 인수 *x*의 지 수 값을 추출 합니다. 인수 *x* 가 정규화 되지 않은 경우 정규화 된 것 처럼 처리 됩니다.
 
-C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** 값을 가져가서 반환하는 **로그** 오버로드를 호출할 수 있습니다. C 프로그램에서 **logb는** 항상 **double을**가져와 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **logb** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **logb** 는 항상 **double**을 사용 하 고 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|없음|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**로그,** **로그,** **로그블,** **_logbf**|\<math.h>|
+|**logb**, **logb**, **logbl**, **_logbf**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -119,7 +119,7 @@ C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** �
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
