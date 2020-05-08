@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 9a0991d974c33cff22044364f7a4351f160215a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f33bb4d882031221a80dc3b86670916a2e77af66
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915687"
 ---
 # <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -75,30 +75,30 @@ int _ismbcupper_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*<br/>
+*c*<br/>
 테스트할 문자입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *c*<= 255이고 해당 **_ismbb** 루틴이 있는 경우(예: **_ismbcalnum** **_ismbbalnum**해당 _ismbb **루틴의** 반환 값입니다.
+이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *C*<= 255이 고 해당 **_ismbb** 루틴이 있는 경우 (예: **_ismbcalnum** **_ismbbalnum**에 해당 하는 경우) 결과는 해당 **_ismbb** 루틴의 반환 값입니다.
 
 ## <a name="remarks"></a>설명
 
 이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.
 
-**_l** 접미사가 있는 이러한 함수의 버전은 로캘 종속 동작에 대해 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_L** 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 |루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|소문자 영문자|*c가* ASCII 소문자 영어 문자의 단일 바이트 표현인 경우에만 0이 아닌 경우 를 반환합니다: 0x61<=*c*<=0x7A.|
-|**_ismbclower_l**|소문자 영문자|*c가* ASCII 소문자 영어 문자의 단일 바이트 표현인 경우에만 0이 아닌 경우 를 반환합니다: 0x61<=*c*<=0x7A.|
-|**_ismbcupper**|대문자 영문자|*c가* ASCII 대문자 영어 문자의 단일 바이트 표현인 경우에만 00을 반환합니다: 0x41<=*c*<=0x5A입니다.|
-|**_ismbcupper_l**|대문자 영문자|*c가* ASCII 대문자 영어 문자의 단일 바이트 표현인 경우에만 00을 반환합니다: 0x41<=*c*<=0x5A입니다.|
+|**_ismbclower**|소문자 영문자|*C* 가 ASCII 소문자 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환 합니다. 0x61<=*c*<= 0x7A.|
+|**_ismbclower_l**|소문자 영문자|*C* 가 ASCII 소문자 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환 합니다. 0x61<=*c*<= 0x7A.|
+|**_ismbcupper**|대문자 영문자|*C* 가 ASCII 대문자 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환 합니다. 0 x 41<=*c*<= 0x5a.|
+|**_ismbcupper_l**|대문자 영문자|*C* 가 ASCII 대문자 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환 합니다. 0 x 41<=*c*<= 0x5a.|
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -111,11 +111,11 @@ int _ismbcupper_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

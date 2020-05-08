@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345804"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911612"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -73,26 +73,26 @@ long double frexp(
 *x*<br/>
 부동 소수점 값입니다.
 
-*외피*<br/>
+*예기치 않은 ptr*<br/>
 저장된 정수 지수에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**프렘은** 사마를 반환합니다. *x가* 0이면 함수는 mantissa와 지수 모두에 대해 0을 반환합니다. *expptr이* **NULL이면**매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 0을 반환합니다.
+**frexp** 는가 나를 반환 합니다. *X* 가 0 이면 함수는가 수와 지 수 모두에 대해 0을 반환 합니다. *예기치 않은 ptr* 이 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 0을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**frexp** 함수는 부동 점 값 *(x)을*mantissa *(m)와*지수 *(n)로*나누어 *m의* 절대 값이 0.5 보다 크거나 1.0 미만, *x* = *m* * 2<sup>*n입니다.*</sup> 정수 지수 *n은* *expptr이*가리키는 위치에 저장됩니다.
+**Frexp** 함수는 부동 소수점 값 (*x*)을가 수 (*m*)로, 지 수 (*n*)를 구분 합니다 .이 값은 *m* 의 절대값은 0.5 보다 크거나 같고 1.0 보다 작은 경우 *x* = *m* * 2<sup>*n*</sup>입니다. 정수 지 수 *n* 은 임의의 *ptr*에서 가리키는 위치에 저장 됩니다.
 
-C ++는 오버로드를 허용하므로 **frexp의**오버로드를 호출 할 수 있습니다. C 프로그램에서 **frexp는** 항상 **이중** 포인터와 **int** 포인터를 가져와 **double을**반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **frexp**의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **frexp** 는 항상 **double** 및 **int** 포인터를 사용 하 고 **double**을 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
-|**프렘스,** **프렉스프,** **프렉스플**|\<math.h>|
+|**frexp**, **frexpf**, **frexpl**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -121,7 +121,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

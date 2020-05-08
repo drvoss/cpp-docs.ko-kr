@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355493"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913601"
 ---
 # <a name="srand"></a>srand
 
-**rand** 함수에서 사용하는 의사 난수 생성기의 시작 시드 값을 설정합니다.
+**Rand** 함수에서 사용 하는 의사 난수 생성기의 시작 초기값을 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -60,9 +60,9 @@ void srand(
 
 ## <a name="remarks"></a>설명
 
-**srand** 함수는 현재 스레드에서 일련의 의사 임의 정수를 생성하기 위한 시작점을 설정합니다. 생성기를 다시 초기화하여 동일한 결과 시퀀스를 만들려면 **srand** 함수를 호출하고 동일한 *시드* 인수를 다시 사용합니다. *시드에* 대한 다른 값은 생성기를 의사 랜덤 시퀀스의 다른 시작점으로 설정합니다. **rand는** 생성되는 의사 임의의 숫자를 검색합니다. **srand에** 대한 호출 전에 **rand를** 호출하는 것은 *시드가* 1로 전달된 **스랜드** 호출과 동일한 시퀀스를 생성합니다.
+**Srand** 함수는 현재 스레드에서 일련의 의사 난수 정수를 생성 하기 위한 시작점을 설정 합니다. 동일한 결과 시퀀스를 만들도록 생성기를 다시 초기화 하려면 **srand** 함수를 호출 하 고 동일한 *초기값* 인수를 다시 사용 합니다. *초기값* 의 다른 모든 값은 생성기를 의사 (pseudo) 시퀀스에서 다른 시작 점으로 설정 합니다. **rand** 는 생성 된 의사 난수를 검색 합니다. **Srand** 호출 하기 전에 **rand** 를 호출 하면 **srand** 를 호출 하는 것과 동일한 시퀀스가 생성 되며 *초기값* 이 1로 전달 됩니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -76,7 +76,7 @@ void srand(
 
 [rand](rand.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[랜드](rand.md)<br/>
+[rand](rand.md)<br/>

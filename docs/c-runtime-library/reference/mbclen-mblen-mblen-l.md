@@ -1,6 +1,6 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-description: Microsoft C 런타임 라이브러리(CRT) _mbclen, mblen, _mblen_l 및 _mbclen_l 함수에 대해 설명합니다.
+description: Microsoft CRT (C 런타임 라이브러리) _mbclen, mblen, _mblen_l 및 _mbclen_l 함수에 대해 설명 합니다.
 ms.date: 4/2/2020
 api_name:
 - _mbclen
@@ -24,7 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 76e8771898d8baa65f275304a9aefdcaeeb5b3bd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914364"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -85,35 +85,35 @@ int _mblen_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*C*\
+*c*\
 멀티바이트 문자입니다.
 
 *mbstr*\
 멀티바이트 문자 바이트 시퀀스의 주소입니다.
 
-*횟수*\
+*수*\
 검사할 바이트 수입니다.
 
-*로캘*\
+*로캘을*\
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**_mbclen** **및 _mbclen_l** 멀티바이트 문자 *c의*길이에 따라 1 또는 2를 반환합니다. 함수는 *c가* 멀티바이트인지 여부에 관계없이 UTF-8에 대해 항상 1을 반환합니다. **_mbclen**.
+**_mbclen** 및 **_mbclen_l** 는 멀티 바이트 문자 *c*의 길이에 따라 1 또는 2를 반환 합니다. *C* 가 멀티 바이트 인지 여부에 관계 없이 함수는 항상 u t f-8에 대해 1을 반환 합니다. **_Mbclen**에 대 한 오류 반환은 없습니다.
 
-*mbstr이* **NULL이**아닌 경우 **mblen** 및 **_mblen_l** 길이를 바이트로 곱바이트로 반환합니다. **mblen** 및 **_mblen_l** 함수는 UTF-8에서 올바르게 작동하며 1과 3 사이의 값을 반환할 수 있습니다. *mbstr이* **NULL(또는** 와이드 문자 null 문자를 가리키는 경우)이면 **mblen과** **_mblen_l** 반환 0입니다. *mbstr가* 가리키는 개체는 첫 번째 *카운트* 문자 내에서 유효한 다중 바이트 문자를 형성해야 하거나 **mblen** 및 **_mblen_l** 반환 -1을 반환해야 합니다.
+*Mbstr* 이 **NULL**이 아닌 경우 **mblen** 및 **_mblen_l** 는 멀티 바이트 문자의 길이 (바이트)를 반환 합니다. **Mblen** 및 **_mblen_l** 함수는 u t f-8에서 올바르게 작동 하며 1에서 3 사이의 값을 반환할 수 있습니다. *Mbstr* 이 **NULL** 이거나 와이드 문자 null 문자를 가리키는 경우 **mblen** 및 **_mblen_l** 는 0을 반환 합니다. *Mbstr* 가 가리키는 개체는 첫 번째 *카운트* 문자 내에서 유효한 멀티 바이트 문자를 형성 하거나 **mblen** 및 **_mblen_l** -1을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_mbclen** 함수는 다중 바이트 문자 *c의*길이를 바이트로 반환합니다. *c가* 다중 바이트 문자의 리드 바이트를 가리키지 않는 [경우(_ismbblead](ismbblead-ismbblead-l.md)대한 암시적 호출에 의해 결정된 경우 **_mbclen** 결과는 예측할 수 없습니다.
+**_Mbclen** 함수는 멀티 바이트 문자 *c*의 길이 (바이트)를 반환 합니다. *C* 가 [_ismbblead](ismbblead-ismbblead-l.md)에 대 한 암시적 호출에 의해 결정 된 멀티 바이트 문자의 선행 바이트를 가리키지 않는 경우 **_mbclen** 의 결과를 예측할 수 없습니다.
 
-**mblen은** 유효한 다중 바이트 문자인 경우 *mbstr의* 바이트로 길이를 반환합니다. 또한 코드 페이지와 연결된 다중 바이트 문자 유효성도 결정합니다. **mblen은** *mbstr에*포함된 *바이트* 수를 수 또는 더 적게 검사하지만 **MB_CUR_MAX** 바이트를 초과하지는 않습니다.
+**mblen** 은 유효한 멀티 바이트 문자인 경우 *mbstr* 의 길이 (바이트)를 반환 합니다. 또한 코드 페이지와 관련 된 멀티 바이트 문자 유효성을 결정 합니다. **mblen** 은 *mbstr*에 포함 된 바이트 *수* 를 검사 하지만 **MB_CUR_MAX** 바이트를 초과 하지 않습니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정의 영향을 받습니다. **_l** 접미사가 없는 이러한 함수의 버전은 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_l** 접미사 버전은 동일하게 행동하지만 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md) 및 [로캘](../../c-runtime-library/locale.md)을 참조하십시오.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 영향을 받습니다. **_L** 접미사가 없는 이러한 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_L** 접미사로 사용 하는 버전은 동일 하 게 작동 하지만 대신 전달 된 로캘 매개 변수를 사용 합니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md) 및 [Locale](../../c-runtime-library/locale.md)을 참조 하세요.
 
-**_mbclen** **_mblen_l**및 **_mbclen_l** 표준 C 라이브러리의 일부가 아닌 Microsoft 관련 입니다. 휴대용 코드를 원하는 곳에 사용하지 않는 것이 좋습니다. 표준 C 호환성을 위해 **mblen** 또는 **mbrlen** 대신 사용하십시오.
+**_mbclen**, **_mblen_l**및 **_Mbclen_l** 은 Microsoft 전용 이며 표준 C 라이브러리의 일부가 아닙니다. 이식 가능한 코드를 원하는 위치에 사용 하지 않는 것이 좋습니다. 표준 C 호환성의 경우 대신 **mblen** 또는 **mbrlen** 을 사용 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -170,11 +170,11 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)\
-[로캘](../../c-runtime-library/locale.md)\
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[로캘을](../../c-runtime-library/locale.md)\
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
 [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
 [mbrlen](mbrlen.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

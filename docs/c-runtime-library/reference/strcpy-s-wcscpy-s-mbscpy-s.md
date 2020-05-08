@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +45,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: ac68d2fb86a43d7114b3b0e7651f5ae4367aa44b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358703"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911839"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 문자열을 복사합니다. 이러한 버전의 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.
 
 > [!IMPORTANT]
-> **_mbscpy_s** 및 **_mbscpy_s_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbscpy_s** 및 **_mbscpy_s_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -116,12 +116,12 @@ errno_t _mbscpy_s_l(
 대상 문자열 버퍼의 위치입니다.
 
 *dest_size*<br/>
-좁고 다중 바이트 함수에 대한 **char** 단위의 대상 문자열 버퍼의 크기와 넓은 함수의 **경우 wchar_t** 단위입니다. 이 값은 0보다 크고 **RSIZE_MAX.**
+좁은/멀티 바이트 함수의 경우 **문자** 단위로 나타낸 대상 문자열 버퍼의 크기 이며, 와이드 함수의 경우에는 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다.
 
-*Src*<br/>
+*src*<br/>
 null 종료 소스 문자열 버퍼입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -130,27 +130,27 @@ null 종료 소스 문자열 버퍼입니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*dest*|*dest_size*|*Src*|반환 값|*가장 의 내용*|
+|*dest*|*dest_size*|*src*|반환 값|*대상* 의 내용|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**|any|any|**아인발 ()에인발 (것)**|수정 안 됨|
-|any|any|**Null**|**아인발 ()에인발 (것)**|*dest*[0] 0으로 설정|
-|any|0 또는 너무 작음|any|**ERANGE**|*dest*[0] 0으로 설정|
+|**N**|any|any|**EINVAL**|수정 안 됨|
+|any|any|**N**|**EINVAL**|*dest*[0]을 0으로 설정|
+|any|0 또는 너무 작음|any|**ERANGE**|*dest*[0]을 0으로 설정|
 
 ## <a name="remarks"></a>설명
 
-**strcpy_s** 함수는 null 문자 종료를 포함하여 *src*주소의 내용을 *dest*. 대상 문자열은 소스 문자열 및 이 문자열의 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 원본 및 대상 문자열이 겹치는 경우 **strcpy_s** 동작은 정의되지 않습니다.
+**Strcpy_s** 함수는 null 종결 문자를 포함 하 여 *src*주소의 내용을 *dest*로 지정 된 위치에 복사 합니다. 대상 문자열은 소스 문자열 및 이 문자열의 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 원본 및 대상 문자열이 겹치면 **strcpy_s** 의 동작이 정의 되지 않습니다.
 
-**wcscpy_s** **strcpy_s**와이드 문자 버전이며 **_mbscpy_s** 멀티 바이트 문자 버전입니다. **wcscpy_s** 인수는 와이드 문자 문자열입니다. **_mbscpy_s** **_mbscpy_s_l** 문자열은 멀티 바이트 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. **_mbscpy_s_l** 현재 로캘 대신 전달된 로캘 매개 변수를 사용한다는 점을 제외하면 **_mbscpy_s** 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**wcscpy_s** 은 **strcpy_s**와이드 문자 버전 이며, **_mbscpy_s** 는 멀티 바이트 문자 버전입니다. **Wcscpy_s** 의 인수는 와이드 문자 문자열입니다. **_mbscpy_s** 및 **_mbscpy_s_l** 는 멀티 바이트 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. **_mbscpy_s_l** 은 현재 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고 **_mbscpy_s** 와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-*dest* 또는 *src가* null 포인터이거나 *dest_size* 대상 문자열 크기가 너무 작으면 매개 변수 유효성 [검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 **EINVAL을** 반환하고 **errno를** **eINVAL로** *설정하면 dest* 또는 *src가* null 포인터이고 대상 문자열이 너무 작으면 **ERANGE를** 반환하고 **errno를** **ERANGE로** 설정합니다.
+*Dest* 또는 *src* 가 null 포인터 이거나 대상 문자열 *Dest_size* 크기가 너무 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **EINVAL** 를 반환 하 고, *dest* 또는 *src* 가 null 포인터인 경우 **errno** 를 **EINVAL** 로 설정 하 고, 대상 문자열이 너무 작은 경우 **ERANGE** 을 반환 하 고 **errno** 를 **ERANGE** 로 설정 합니다.
 
 실행이 완료되면 대상 문자열은 항상 null로 종료됩니다.
 
 C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없음), 보안 수준이 낮은 기존 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-이러한 함수의 디버그 라이브러리 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -166,11 +166,11 @@ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 �
 |**wcscpy_s**|\<string.h> 또는 \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-이러한 기능은 Microsoft에 만연합니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
+이러한 함수는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
-프로덕션 품질 코드와 달리 이 샘플은 오류를 확인하지 않고 보안 문자열 함수를 호출합니다.
+프로덕션 품질 코드와 달리이 샘플은 오류를 확인 하지 않고 보안 문자열 함수를 호출 합니다.
 
 ```C
 // crt_strcpy_s.c
@@ -200,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-C++ 코드를 작성할 때 템플릿 버전을 사용하기가 더 쉬울 수 있습니다.
+C + + 코드를 빌드하는 경우 템플릿 버전을 사용 하는 것이 더 쉬울 수 있습니다.
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -231,10 +231,10 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[스트캣, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
 [strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>

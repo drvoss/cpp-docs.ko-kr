@@ -1,6 +1,6 @@
 ---
 title: _popen, _wpopen
-description: Microsoft C 런타임(CRT) 라이브러리 함수 _popen 및 _wpopen에 대한 참조입니다.
+description: CRT (Microsoft C 런타임) 라이브러리 함수 _popen 및 _wpopen에 대 한 참조입니다.
 ms.date: 4/2/2020
 api_name:
 - _popen
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338511"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915283"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -81,32 +81,32 @@ FILE *_wpopen(
 *명령*\
 실행할 명령입니다.
 
-*모드*\
+*모드가*\
 반환된 스트림의 모드입니다.
 
 ## <a name="return-value"></a>반환 값
 
-생성된 파이프의 한쪽 끝와 연결된 스트림을 반환합니다. 파이프의 반대쪽은 생성된 명령의 표준 입력 또는 표준 출력에 연결됩니다. 오류가 발생하면 함수는 **NULL**을 반환합니다. 잘못된 매개 변수로 인해 오류가 발생하면 **errno가** **EINVAL로**설정됩니다. 올바른 모드는 설명 섹션을 참조하세요.
+생성된 파이프의 한쪽 끝와 연결된 스트림을 반환합니다. 파이프의 반대쪽은 생성된 명령의 표준 입력 또는 표준 출력에 연결됩니다. 오류가 발생하면 함수는 **NULL**을 반환합니다. 잘못 된 매개 변수로 인해 오류가 발생 하는 경우 **errno** 는 **EINVAL**로 설정 됩니다. 올바른 모드는 설명 섹션을 참조하세요.
 
 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_popen** 함수는 파이프를 만듭니다. 그런 다음 비동기적으로 명령 프로세서의 생성된 복사본을 실행하고 *명령을* 명령줄로 사용합니다. 문자열의 *mode*는 다음과 같이 요청된 액세스의 유형을 지정합니다.
+**_Popen** 함수는 파이프를 만듭니다. 그런 다음 명령 프로세서의 생성 된 복사본을 비동기식으로 실행 하 고 *명령을 명령줄로 사용* 합니다. 문자열의 *mode*는 다음과 같이 요청된 액세스의 유형을 지정합니다.
 
-|액세스 모드|Description|
+|액세스 모드|설명|
 |-|-|
-|**"r"**|호출 프로세스가 반환된 스트림을 사용하여 생성된 명령의 표준 출력을 읽을 수 있습니다.|
-|**"w"**|호출 프로세스가 반환된 스트림을 사용하여 생성된 명령의 표준 입력에 쓸 수 있습니다.|
-|**"b"**|이진 모드에서 엽니다.|
-|**"t"**|텍스트 모드에서 엽니다.|
+|**&**|호출 프로세스가 반환된 스트림을 사용하여 생성된 명령의 표준 출력을 읽을 수 있습니다.|
+|**w**|호출 프로세스가 반환된 스트림을 사용하여 생성된 명령의 표준 입력에 쓸 수 있습니다.|
+|**b**|이진 모드에서 엽니다.|
+|**트**|텍스트 모드에서 엽니다.|
 
 > [!NOTE]
-> Windows 프로그램에서 사용하는 경우 **_popen** 함수는 프로그램이 무기한 응답을 중지하도록 하는 잘못된 파일 포인터를 반환합니다. **_popen** 콘솔 응용 프로그램에서 제대로 작동합니다. 입력 및 출력을 리디렉션하는 Windows 응용 프로그램을 만들려면 Windows SDK에서 [리디렉션된 입력 및 출력을 사용하여 자식 프로세스 만들기를](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) 참조하십시오.
+> Windows 프로그램에서 사용 되는 경우 **_popen** 함수는 프로그램의 응답을 무기한 중지 하는 잘못 된 파일 포인터를 반환 합니다. **_popen** 콘솔 응용 프로그램에서 제대로 작동 합니다. 입력 및 출력을 리디렉션하는 Windows 응용 프로그램을 만들려면 Windows SDK [리디렉션된 입력 및 출력을 사용 하 여 자식 프로세스 만들기](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) 를 참조 하세요.
 
-**_wpopen** **_popen**와이드 문자 버전입니다. **_wpopen** *경로* 인수는 와이드 문자 문자열입니다. **_wpopen** **_popen** 달리 동일하게 행동합니다.
+**_wpopen** 은 **_popen**의 와이드 문자 버전입니다. **_wpopen** 에 대 한 *경로* 인수는 와이드 문자 문자열입니다. **_wpopen** 와 **_popen** 는 동일 하 게 동작 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -171,7 +171,7 @@ int main( void )
 }
 ```
 
-이 출력은 현재 디렉터리에 `.c` 파일 이름 확장명이 있는 파일이 하나뿐이라고 가정합니다.
+이 출력은 `.c` 파일 이름 확장명이 있는 파일이 현재 디렉터리에 하나만 있다고 가정 합니다.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -186,8 +186,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[공정 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)\
+[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

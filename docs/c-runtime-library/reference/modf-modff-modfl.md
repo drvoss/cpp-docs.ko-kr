@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338692"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914632"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -65,7 +65,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 부동 소수점 값입니다.
 
-*Intptr*<br/>
+*intptr*<br/>
 저장된 정수 부분에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -74,19 +74,19 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-**modf** 함수는 부동 소수점 값 *x를* 소수 및 정수 부분으로 나누며 각 부분은 *x와*동일한 기호를 가짐을 가짐을 가시고 있습니다. *x의* 서명된 소수 부분이 반환됩니다. 정수 부분은 *intptr에서*부동 점 값으로 저장됩니다.
+**Modf** 함수는 부동 소수점 값 *x* 를 소수 부분과 정수 부분으로 분할 하 고 각각은 *x*와 동일한 부호를 가집니다. *X* 의 부호 있는 소수 부분이 반환 됩니다. 정수 부분은 *intptr*에 부동 소수점 값으로 저장 됩니다.
 
-**modf에는** 스트리밍 SIMD 확장 2(SSE2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
+**modf** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-C++는 오버로드를 허용하므로 **플로트** 또는 **긴** **이중** 매개변수를 가져 와서 반환하는 **modf의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **modf는** 항상 두 개의 이중 값을 취하고 이중 값을 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 매개 변수를 사용 하 고 반환 하는 **modf** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **modf** 는 항상 두 개의 double 값을 사용 하 고 double 값을 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**모드,** **모드,** **모드 플**|C: \<math.h><br /><br /> C++: , \<cmath> 또는 \<math.h>|
+|**modf**, **modf**, **modf**|C: \<math.h><br /><br /> C++: , \<cmath> 또는 \<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -114,7 +114,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

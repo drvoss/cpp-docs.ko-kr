@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: ef8a68f0db45e718af6b17fe0d08c33a6fd61d6c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333841"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913386"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-정렬된 배열의 이진 검색을 수행합니다. 이 함수는 [CRT의 보안 기능에](../../c-runtime-library/security-features-in-the-crt.md)설명된 대로 보안 기능이 향상된 [bsearch](bsearch.md) 버전입니다.
+정렬된 배열의 이진 검색을 수행합니다. 이 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명 된 대로 보안 기능이 [향상 된 검색 버전입니다.](bsearch.md)
 
 ## <a name="syntax"></a>구문
 
@@ -54,53 +54,53 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
-검색할 키에 대한 포인터입니다.
+*키인지*\
+검색할 키에 대 한 포인터입니다.
 
-*기본*\
-검색 데이터의 기본에 대한 포인터입니다.
+*하단*\
+검색 데이터의 기준에 대 한 포인터입니다.
 
-*수*\
+*수많은*\
 요소의 수입니다.
 
 *너비*\
 요소의 너비입니다.
 
-*비교*\
-두 요소를 비교하는 콜백 함수입니다. 첫 번째 인수는 *컨텍스트* 포인터입니다. 두 번째 인수는 *검색키에* 대한 포인터입니다. 세 번째 인수는 *키와*비교할 배열 요소에 대한 포인터입니다.
+*과*\
+두 요소를 비교하는 콜백 함수입니다. 첫 번째 인수는 *컨텍스트* 포인터입니다. 두 번째 인수는 검색 *키* 에 대 한 포인터입니다. 세 번째 인수는 *키*와 비교할 배열 요소에 대 한 포인터입니다.
 
-*컨텍스트*\
+*측면*\
 비교 함수에서 액세스할 수 있는 개체에 대한 포인터입니다.
 
 ## <a name="return-value"></a>반환 값
 
-**bsearch_s** *base를*가리키는 배열에서 *키발생에* 대한 포인터를 반환합니다. *키가* 없는 경우 함수는 **NULL**을 반환합니다. 배열이 오름차순 정렬이 아니거나 동일한 키를 가진 중복 레코드를 포함하는 경우에는 결과를 예측할 수 없습니다.
+**bsearch_s** 는 *base*에서 가리키는 배열의 *키* 발생에 대 한 포인터를 반환 합니다. *키* 를 찾을 수 없는 경우이 함수는 **NULL**을 반환 합니다. 배열이 오름차순 정렬이 아니거나 동일한 키를 가진 중복 레코드를 포함하는 경우에는 결과를 예측할 수 없습니다.
 
-잘못된 매개 변수가 함수에 전달되면 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 **NULL을**반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
+잘못 된 매개 변수가 함수에 전달 되 면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는 **NULL**을 반환 합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ### <a name="error-conditions"></a>오류 조건
 
 |||||||
 |-|-|-|-|-|-|
-|*키*|*base*|*비교*|*number*|*width*|**errno**|
-|**Null**|any|any|any|any|**아인발 ()에인발 (것)**|
-|any|**Null**|any|!= 0|any|**아인발 ()에인발 (것)**|
-|any|any|any|any|= 0|**아인발 ()에인발 (것)**|
-|any|any|**Null**|an|any|**아인발 ()에인발 (것)**|
+|*key*|*base*|*과*|*number*|*width*|**errno**|
+|**N**|any|any|any|any|**EINVAL**|
+|any|**N**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**N**|an|any|**EINVAL**|
 
 ## <a name="remarks"></a>설명
 
-**bsearch_s** 함수는 *각각의 너비* 바이트 크기의 *정렬된 숫자* 요소 배열의 이진 검색을 수행합니다. *기준* 값은 검색할 배열의 기본에 대한 포인터이며 *키는* 검색중인 값입니다. *compare* 매개 변수는 요청된 키를 배열 요소와 비교하고 관계를 지정하는 다음 값 중 하나를 반환하는 사용자 제공 루틴에 대한 포인터입니다.
+**Bsearch_s** 함수는 각 *너비가* 바이트 인 *number* 요소의 정렬 된 배열에 대해 이진 검색을 수행 합니다. *기준* 값은 검색할 배열 기준에 대 한 포인터이 고 *key* 는 검색 중인 값입니다. *Compare* 매개 변수는 요청 된 키를 배열 요소와 비교 하 고 해당 관계를 지정 하는 다음 값 중 하나를 반환 하는 사용자 제공 루틴에 대 한 포인터입니다.
 
-|*비교* 루틴에 의해 반환된 값|Description|
+|*비교* 루틴에서 반환 된 값|설명|
 |-----------------------------------------|-----------------|
 |\< 0|키가 배열 요소보다 작습니다.|
 |0|키가 배열 요소와 같습니다.|
 |> 0|키가 배열 요소보다 큽니다.|
 
-*컨텍스트* 포인터는 검색된 데이터 구조가 개체의 일부이고 비교 함수가 개체의 멤버에 액세스해야 하는 경우에 유용할 수 있습니다. *compare* 함수는 void 포인터를 해당 개체 유형및 해당 개체의 액세스 멤버로 캐스팅할 수 있습니다. *컨텍스트* 매개 변수를 추가하면 정적 변수를 사용하여 *비교* 함수에서 데이터를 사용할 수 있도록 하는 것과 관련된 재진입 버그를 피하기 위해 추가 컨텍스트를 사용할 수 있기 때문에 **bsearch_s** 더 안전합니다.
+*컨텍스트* 포인터는 검색 된 데이터 구조가 개체의 일부 이며 비교 함수가 개체의 멤버에 액세스 해야 하는 경우에 유용할 수 있습니다. *Compare* 함수는 void 포인터를 적절 한 개체 형식으로 캐스팅 하 고 해당 개체의 멤버에 액세스할 수 있습니다. *컨텍스트* 매개 변수를 추가 하면 정적 변수를 사용 하 여 *비교* 함수에서 데이터를 사용할 수 있도록 하는 것과 관련 된 재진입 버그를 방지 하기 위해 추가 컨텍스트를 사용할 수 있으므로 더 안전 하 게 **bsearch_s** 수 있습니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -196,7 +196,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\
