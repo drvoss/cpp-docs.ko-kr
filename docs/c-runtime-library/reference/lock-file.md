@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342105"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911534"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-**FILE** 개체에 동시에 액세스하는 스레드의 일관성을 보장하기 위해 **FILE** 개체를 잠그십시오.
+파일 개체에 동시에 액세스 **하는 스레드에** 대 한 일관성을 유지 하기 위해 **파일** 개체를 잠급니다.
 
 ## <a name="syntax"></a>구문
 
@@ -48,14 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>매개 변수
 
-*파일*<br/>
+*파일과*<br/>
 파일 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
-**_lock_file** 함수는 *파일로*지정된 **FILE** 개체를 잠그습니다. 기본 파일은 **_lock_file.** 파일에 대한 잠금을 해제하려면 [_unlock_file](unlock-file.md)을 사용합니다. **_lock_file** 및 **_unlock_file** 대한 호출은 스레드에서 일치해야 합니다.
+**_Lock_file** 함수는 *file*에서 지정 된 **파일** 개체를 잠급니다. 기본 파일이 **_lock_file**에 의해 잠겨 있지 않습니다. 파일에 대한 잠금을 해제하려면 [_unlock_file](unlock-file.md)을 사용합니다. **_Lock_file** 및 **_unlock_file** 에 대 한 호출은 스레드에서 일치 해야 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -140,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

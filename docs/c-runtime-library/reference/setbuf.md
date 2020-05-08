@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332072"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910340"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -57,11 +57,11 @@ void setbuf(
 
 ## <a name="remarks"></a>설명
 
-**setbuf** 함수는 스트림에 대한 버퍼링을 *제어합니다.* *스트림* 인수는 읽거나 쓰지 않은 열린 파일을 참조해야 합니다. *버퍼* 인수가 **NULL이면**스트림이 버퍼링되지 않습니다. 그렇지 않은 경우 버퍼는 **BUFSIZ가** STDIO에 정의된 버퍼 크기인 길이 **BUFSIZ의**문자 배열을 가리키야 합니다. H. 지정된 스트림에 대한 기본 시스템 할당 버퍼 대신 사용자 지정 버퍼가 I/O 버퍼링에 사용됩니다. **stderr** 스트림은 기본적으로 버퍼링되지 않지만 **setbuf를** 사용하여 **stderr**에 버퍼를 할당할 수 있습니다.
+**Setbuf** 함수는 *스트림에*대 한 버퍼링을 제어 합니다. *Stream* 인수는 읽거나 쓰지 않은 열려 있는 파일을 참조 해야 합니다. *Buffer* 인수가 **NULL**이면 스트림은 버퍼링 되지 않습니다. 그렇지 않은 경우 버퍼는 길이가 **BUFSIZ**인 문자 배열을 가리켜야 합니다. 여기서 **BUFSIZ** 은 stdio.h에 정의 된 버퍼 크기입니다. 넣기. 지정된 스트림에 대한 기본 시스템 할당 버퍼 대신 사용자 지정 버퍼가 I/O 버퍼링에 사용됩니다. **Stderr** 스트림은 기본적으로 버퍼링 되지 않지만 **setbuf** 를 사용 하 여 버퍼를 **stderr**에 할당할 수 있습니다.
 
-**setbuf는** 새 코드에 대 한 기본 [루틴setvbuf로](setvbuf.md)대체 되었습니다. **setvbuf와**달리 **setbuf는** 오류를 보고할 방법이 없습니다. **setvbuf를** 사용하면 버퍼링 모드와 버퍼 크기를 모두 제어할 수 있습니다. **setbuf는** 기존 코드와의 호환성을 위해 존재합니다.
+**setbuf** 는 새 코드에 기본 설정 된 루틴 인 [setvbuf](setvbuf.md)로 대체 되었습니다. **Setvbuf**와 달리 **setbuf** 에는 오류를 보고 하는 방법이 없습니다. 또한 **setvbuf** 를 사용 하면 버퍼링 모드와 버퍼 크기를 모두 제어할 수 있습니다. **setbuf** 는 기존 코드와의 호환성을 위해 존재 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -110,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

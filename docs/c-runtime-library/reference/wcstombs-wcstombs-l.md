@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: fb95c6d73a3979a39995b9104a76fc42ca9e8535
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910631"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -87,28 +87,28 @@ size_t _wcstombs_l(
 *count*<br/>
 멀티바이트 출력 문자열에 저장할 수 있는 최대 바이트 수입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**wcstombs가** 성공적으로 다바이트 문자열을 변환하는 경우 종료 null(있는 경우)을 제외하고 다중 바이트 출력 문자열에 기록된 바이트 수를 반환합니다. *mbstr* 인수가 **NULL인**경우 **wcstombs는** 대상 문자열의 바이트로 필요한 크기를 반환합니다. **wcstombs가** 다양한 문자로 변환할 수 없는 넓은 문자를 만나면 size_t **입력하기** 위해 -1 캐스트를 반환하고 **errno를** **EILSEQ로**설정합니다.
+**Wcstombs** 가 멀티 바이트 문자열을 성공적으로 변환 하는 경우에는 종료 null (있는 경우)을 제외 하 고 멀티 바이트 출력 문자열에 쓴 바이트 수를 반환 합니다. *Mbstr* 인수가 **NULL**이면 **wcstombs** 는 대상 문자열의 필요한 크기 (바이트)를 반환 합니다. **Wcstombs** 가 멀티 바이트 문자로 변환할 수 없는 와이드 문자를 발견 하는 경우 **size_t** 형식으로-1 캐스트를 반환 하 고 **errno** 를 **eilseq**로 설정 합니다.
 
 ## <a name="remarks"></a>설명
 
-**wcstombs** 함수는 *wcstr이* 가리키는 와이드 문자 문자열을 해당 멀티 바이트 문자로 변환하고 결과를 *mbstr* 배열에 저장합니다. *count* 매개 변수는 멀티바이트 출력 문자열(즉, *mbstr*크기)에 저장할 수 있는 최대 바이트 수를 나타냅니다. 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서 1바이트만 사용하면 되면 되는 와이드 문자도 있고 2바이트를 사용해야 하는 문자도 있습니다. 입력 문자열의 모든 와이드 문자(와이드 문자 null 포함)에 대해 다바이트 출력 문자열에 두 바이트가 있는 경우 결과가 적합하도록 보장됩니다.
+**Wcstombs** 함수는 *wcstr* 가 가리키는 와이드 문자 문자열을 해당 멀티 바이트 문자로 변환 하 고 그 결과를 *mbstr* 배열에 저장 합니다. *Count* 매개 변수는 멀티 바이트 출력 문자열 ( *mbstr*의 크기)에 저장할 수 있는 최대 바이트 수를 나타냅니다. 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서 1바이트만 사용하면 되면 되는 와이드 문자도 있고 2바이트를 사용해야 하는 문자도 있습니다. 와이드 문자 null을 포함 하 여 입력 문자열의 모든 와이드 문자에 대해 멀티 바이트 출력 문자열에 2 바이트가 있으면 결과가 일치 하도록 보장 됩니다.
 
-**wcstombs가** 카운트가 발생하기 전이나 *카운트가* 발생하기 전에 또는 있을 때 와이드 문자 null 문자(L'\0')가 발생하면 8비트 0으로 변환하고 중지합니다. 따라서 *mbstr의* 멀티바이트 문자 문자열은 **wcstombs가** 변환 중에 와이드 문자 null 문자를 만나는 경우에만 null-종료됩니다. *wcstr* 및 *mbstr가* 가리키는 시퀀스가 겹치는 경우 **wcstombs의** 동작은 정의되지 않습니다.
+**Wcstombs** 가 발생 하기 전이나 후에 와이드 문자 null 문자 (L ' \ 0 ')를 발견 *하면이* 를 8 비트 0으로 변환 하 고 중지 합니다. 따라서 **wcstombs** 는 변환 중에 와이드 문자 null 문자를 발견 하는 경우에만 *mbstr* 의 멀티 바이트 문자열을 null로 종료 합니다. *Wcstr* 및 *mbstr* 가 가리키는 시퀀스가 겹치면 **wcstombs** 의 동작이 정의 되지 않습니다.
 
-*mbstr* 인수가 **NULL인**경우 **wcstombs는** 대상 문자열의 바이트로 필요한 크기를 반환합니다.
+*Mbstr* 인수가 **NULL**이면 **wcstombs** 는 대상 문자열의 필요한 크기 (바이트)를 반환 합니다.
 
-**wcstombs는** 매개 변수의 유효성을 검사합니다. *wcstr이* **NULL이거나** *수가* **INT_MAX**큰 경우 이 함수는 매개 변수 [유효성 검사에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속할 수 있는 경우 함수는 **errno를** **EINVAL로** 설정하고 -1을 반환합니다.
+**wcstombs** 은 매개 변수의 유효성을 검사 합니다. *Wcstr* 가 **NULL**이거나 *count* 가 **INT_MAX**보다 큰 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고-1을 반환 합니다.
 
-**wcstombs는** 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_wcstombs_l** 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**wcstombs** 는 로캘 종속 동작에 대해 현재 로캘을 사용 합니다. **_wcstombs_l** 은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -161,10 +161,10 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

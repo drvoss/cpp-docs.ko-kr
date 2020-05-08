@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318668"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909906"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
-쌍곡선 죄를 계산합니다.
+하이퍼볼릭 사인을 계산 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -68,26 +68,26 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Return Value
 
-**sinh** 함수는 *x의*과장된 죄를 반환합니다. 기본적으로 결과가 너무 크면 **sinh가** **errno를** **ERANGE로** 설정하고 ±**HUGE_VAL**반환합니다.
+**Sinh** 함수는 *x*의 하이퍼볼릭 사인을 반환 합니다. 기본적으로 결과가 너무 크면 **sinh** 는 **errno** 를 **ERANGE** 로 설정 하 고 ±**HUGE_VAL**를 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|없음|_DOMAIN|
-|&#124;x&#124; ≥ 7.10476e+002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-C++는 오버로드를 허용하므로 **플로트** 또는 긴 **이중** 값을 가져가서 반환하는 **sinh의** **오버로드를** 호출할 수 있습니다. C 프로그램에서 **sinh는** 항상 **두 배를**가져 와서 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **sinh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **sinh** 은 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
 |-|-|-|
-|**죄,** **신프,** **신**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**sinh**, **sinhf**, **sinhf**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -120,7 +120,7 @@ sinh( 1.570796 ) = 2.301299
 cosh( 1.570796 ) = 2.509178
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913763"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,11 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Return Value
 
-현재(기본) 드라이브(1=A, 2=B 등)를 반환합니다. 반환 값이 0이면 현재 경로가 UNC 경로와 같은 문자 드라이브 이름으로 시작되지 않습니다. 또는 내부 버퍼 할당에 실패했습니다. 내부 할당에 실패하면 ENOMEM으로 `errno` 설정됩니다.
+현재(기본) 드라이브(1=A, 2=B 등)를 반환합니다. 반환 값이 0 이면 현재 경로가 UNC 경로와 같은 문자 드라이브 이름으로 시작 되지 않습니다. 또는 내부 버퍼 할당이 실패 했음을 의미 합니다. 내부 할당이 실패 하는 경우 `errno` 가 ENOMEM으로 설정 됩니다.
 
 ## <a name="remarks"></a>설명
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -116,7 +116,7 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>

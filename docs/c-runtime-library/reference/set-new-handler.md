@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: c3f1b9bd8bf2a4404e2239858e4c3c59b755bacd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332371"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913964"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -54,17 +54,17 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>Return Value
 
-**_set_new_handler**등록된 이전 예외 처리 함수에 대한 포인터를 반환하여 나중에 이전 함수를 복원할 수 있습니다. 이전 함수가 설정되지 않은 경우 반환 값을 사용하여 기본 동작을 복원할 수 있습니다. 이 값은 **NULL일**수 있습니다.
+이전 함수를 나중에 복원할 수 있도록 **_set_new_handler**에서 등록 한 이전 예외 처리 함수에 대 한 포인터를 반환 합니다. 이전 함수를 설정 하지 않은 경우 반환 값을 사용 하 여 기본 동작을 복원할 수 있습니다. 이 값은 **NULL**일 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
-C++ **_set_new_handler** 함수는 **새** 연산자가 메모리를 할당하지 못할 경우 제어를 얻는 예외 처리 함수를 지정합니다. **새** 오류가 발생하면 런타임 시스템은 인수로 전달된 예외 처리 함수를 자동으로 호출하여 **_set_new_handler.** **new.h에**정의된 _PNH int 형식 **int를** 반환하고 **size_t**형식의 인수를 취하는 함수에 대한 포인터입니다. **size_t** 사용하여 할당할 공간의 양을 지정합니다.
+C + + **_set_new_handler** 함수는 **new** 연산자가 메모리 할당에 실패 하는 경우 컨트롤을 얻는 예외 처리 함수를 지정 합니다. **New** 가 실패 하는 경우 런타임 시스템은 **_set_new_handler**에 인수로 전달 된 예외 처리 함수를 자동으로 호출 합니다. 새 .h에 정의 된 **_PNH**은 **int** 형식을 반환 하 고 **size_t**형식의 인수를 사용 하는 함수에 대 한 포인터입니다. **Size_t** 를 사용 하 여 할당할 공간의 크기를 지정 합니다.
 
 기본 처리기가 없습니다.
 
-**_set_new_handler** 기본적으로 가비지 수집 방식입니다. 런타임 시스템은 함수가 0이 아닌 값을 반환할 때마다 할당을 다시 시도하고 함수가 0을 반환할 경우 실패합니다.
+**_set_new_handler** 은 기본적으로 가비지 수집 스키마입니다. 런타임 시스템은 함수가 0이 아닌 값을 반환할 때마다 할당을 다시 시도하고 함수가 0을 반환할 경우 실패합니다.
 
-프로그램에서 **_set_new_handler** 함수의 발생은 런타임 시스템과 인수 목록에 지정된 예외 처리 함수를 등록합니다.
+프로그램에서 **_set_new_handler** 함수가 발생 하면 인수 목록에 지정 된 예외 처리 함수를 런타임 시스템에 등록 합니다.
 
 ```cpp
 // set_new_handler1.cpp
@@ -84,7 +84,7 @@ int main( void )
 }
 ```
 
-**마지막으로 _set_new_handler** 함수에 전달된 함수 주소를 저장하고 나중에 복원할 수 있습니다.
+**_Set_new_handler** 함수에 마지막으로 전달 된 함수 주소를 저장 하 고 나중에 다시 복원할 수 있습니다.
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 오류가 발생할 경우 **malloc이** **_set_new_handler**설정된 대로 새 처리기 루틴을 호출할지 여부를 나타냅니다. 기본적으로 **malloc는** 메모리할당 실패시 새 처리기 루틴을 호출하지 않습니다. **malloc가** 메모리를 할당하지 못하면 **동일한** 이유로 **새** 연산자가 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음을
+C++ [_set_new_mode](set-new-mode.md) 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 **_set_new_handler**에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리 할당에 실패 한 경우 **malloc** 는 **새** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 합니다. 기본값을 재정의하려면 다음을
 
 ```cpp
 _set_new_mode(1);
@@ -103,11 +103,11 @@ _set_new_mode(1);
 
 초기 프로그램 또는 Newmode.obj에 대한 링크에서 호출합니다.
 
-사용자 정의가 `operator new` 제공되면 새 처리기 함수가 실패시 자동으로 호출되지 않습니다.
+사용자 정의 `operator new` 를 제공 하는 경우 오류 발생 시 새 처리기 함수가 자동으로 호출 되지 않습니다.
 
 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md)를 참조하세요.
 
-동적으로 연결된 모든 DLL 또는 실행 _set_new_handler 대한 단일 **_set_new_handler** 처리기가 있습니다. 처리기가 다른 처리기로 대체되거나 다른 DLL 또는 실행 _set_new_handler 설정된 처리기를 교체하는 _set_new_handler **호출하는** 경우에도 마찬가지입니다.
+동적으로 연결 된 모든 Dll 또는 실행 파일에 대 한 단일 **_set_new_handler** 처리기가 있습니다. **_set_new_handler** 호출 하는 경우에도 처리기가 다른로 대체 되거나 다른 DLL 또는 실행 파일에 의해 설정 된 처리기를 대체할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -167,9 +167,9 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[무료](free.md)<br/>
+[늘릴](free.md)<br/>
 [realloc](realloc.md)<br/>

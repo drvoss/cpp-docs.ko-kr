@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913469"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 함수: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -89,36 +89,36 @@ double _yn(
 *x*<br/>
 부동 소수점 값입니다.
 
-*N*<br/>
+*n*<br/>
 Bessel 함수의 정수 순서입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 루틴은 *x의*Bessel 함수를 반환합니다. **_y0,** **_y1**또는 **_yn** 함수에서 *x가* 음수인 경우 루틴은 **errno를** **EDOM으로**설정하고 **stderr에** **_DOMAIN** 오류 메시지를 인쇄하고 **_HUGE_VAL**반환합니다. **_matherr**.
+이러한 각 루틴은 *x*의 Bessel 함수를 반환 합니다. **_Y0**, **_y1**또는 **_yn** 함수에서 *x* 가 음수 이면 루틴은 **errno** 를 **edom**으로 설정 하 고, **_DOMAIN** 오류 메시지를 **stderr**에 출력 하 고, **_HUGE_VAL**를 반환 합니다. **_Matherr**를 사용 하 여 오류 처리를 수정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**_j0** **_j1**및 **_jn** 루틴은 각각 0, 1 및 n을 주문하는 Bessel 함수를 반환합니다.
+**_J0**, **_j1**및 **_jn** 루틴은 첫 번째 종류의 Bessel 함수를 각각 0, 1, n 순서로 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
-|± **QNAN,** **IND**|**올바르지 않음**|**_DOMAIN**|
+|± **QNAN**, **IND**|**올바르지 않음**|**_DOMAIN**|
 
-**_y0** **_y1**및 **_yn** 루틴은 각각 0, 1 및 n을 주문하는 두 번째 종류의 Bessel 함수를 반환합니다.
+**_Y0**, **_y1**및 **_yn** 루틴은 두 번째 종류의 Bessel 함수를 각각 0, 1, n 순서로 반환 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
-|± **QNAN,** **IND**|**올바르지 않음**|**_DOMAIN**|
+|± **QNAN**, **IND**|**올바르지 않음**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0.0|**올바르지 않음**|**_DOMAIN**|
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**_j0,** **_j1**, **_jn**, **_y0**, **_y1** **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -163,7 +163,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

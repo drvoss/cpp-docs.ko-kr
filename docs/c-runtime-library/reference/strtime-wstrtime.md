@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316876"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910915"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -71,22 +71,22 @@ wchar_t *_wstrtime(
 
 ### <a name="parameters"></a>매개 변수
 
-*타임스트*<br/>
+*timestr*<br/>
 시간 문자열입니다.
 
 ## <a name="return-value"></a>Return Value
 
-결과 문자 문자열 *timestr에*대한 포인터를 반환합니다.
+결과 문자열 *timestr*에 대 한 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_strtime** 함수는 현재 현지 시간을 *timestr로*가리키는 버퍼에 복사합니다. 시간은 **hh:mm:ss로** 서식이 지정되며 **hh는** 24시간 표기의 시간을 나타내는 두 자리이고, **mm은** 시간 지난 분을 나타내는 두 자리숫자이고, **ss는** 초를 나타내는 두 자리숫자입니다. 예를 들어 문자열 **18:23:44는** 오후 6시 이후 23분 44초를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
+**_Strtime** 함수는 *timestr*가 가리키는 버퍼에 현재 현지 시간을 복사 합니다. 시간은 **hh: mm: ss** 형식으로 지정 됩니다. 여기서 **hh** 는 24 시간 표기법의 시간을 나타내는 두 자리 숫자, **mm** 은 분을 나타내는 두 자리 숫자, **ss** 는 초를 나타내는 두 자리 숫자입니다. 예를 들어, **18:23:44** 문자열은 23 분 및 44 초 (오후 6 시)를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
 
-**_wstrtime** **_strtime**와이드 문자 버전입니다. **_wstrtime** 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. *timestr이* **NULL** 포인터이거나 *timestr이* 잘못 서식이 지정된 경우 [매개 변수 유효성 검사기에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 예외가 계속 될 수 있는 경우 이러한 함수는 **NULL을** 반환하고 *timestr이* **NULL인** 경우 **errno를** **EINVAL로** 설정하거나 *timestr이* 잘못 서식이 지정된 경우 **Errno를** **ERANGE로** 설정합니다.
+**_wstrtime** 은 **_strtime**의 와이드 문자 버전입니다. **_wstrtime** 의 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. *Timestr* 가 **NULL** 포인터 이거나 *timestr* 의 형식이 잘못 된 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 예외가 계속 허용 되는 경우 이러한 함수는 **null** 을 반환 하 고 *Timestr* 이 **Null** 인 경우 **errno** 를 **EINVAL** 로 설정 하 고 *timestr* 의 형식이 잘못 된 경우 **errno** 를 **ERANGE** 로 설정 합니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -125,7 +125,7 @@ int main( void )
 The current time is 14:21:44
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
