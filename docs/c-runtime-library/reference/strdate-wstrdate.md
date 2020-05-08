@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 9b4b6d3b81dd1dda968cc42448ab2e53bdd44433
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361275"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911860"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -71,26 +71,26 @@ wchar_t *_wstrdate(
 
 ### <a name="parameters"></a>매개 변수
 
-*날짜 스트레스트*<br/>
+*datestr*<br/>
 형식이 지정된 날짜 문자열을 포함하는 버퍼에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 함수는 결과 문자열 *datestr에*대한 포인터를 반환합니다.
+이러한 각 함수는 결과 문자열 *datestr*에 대 한 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md)를 참조하세요. 가능한 경우에는 항상 더 안전한 함수를 사용하는 것이 좋습니다.
 
-**_strdate** 함수는 현재 시스템 날짜를 *datestr,* 서식이 지정된 **mm**/**dd**/**y,** **mm는** 월을 나타내는 두 자리, **dd는** 날짜를 나타내는 두 자리, **yy는** 올해의 마지막 두 자리입니다. 예를 들어 **문자열 12/05/99는** 1999년 12월 5일입니다. 버퍼는 9바이트 이상이어야 합니다.
+**_Strdate** 함수는 **mm**/**dd**/**yy**로 지정 된 *datestr*에 의해 가리키는 버퍼에 현재 시스템 날짜를 복사 합니다. 여기서 **mm** 은 월을 나타내는 두 자리 **숫자, a 1은 일** 을 나타내는 두 자리 숫자, **yy** 는 연도의 마지막 두 자리 숫자입니다. 예를 들어, **12/05/99** 문자열은 1999 년 12 월 5 일을 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
 
-*datestr이* **NULL** 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 -1을 반환하고 **errno를** **EINVAL로**설정합니다.
+*Datestr* 가 **NULL** 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-**_wstrdate** **_strdate**와이드 문자 버전입니다. **_wstrdate** 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_wstrdate** 은 **_strdate**의 와이드 문자 버전입니다. **_wstrdate** 의 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -133,7 +133,7 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

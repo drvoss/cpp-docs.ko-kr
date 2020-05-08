@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ffc1a64c60d41246773d5e262523000355b0de3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361267"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909280"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -62,20 +62,20 @@ int _wunlink(
 
 ### <a name="parameters"></a>매개 변수
 
-*파일*<br/>
+*이름도*<br/>
 제거할 파일의 이름입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 함수는 정상적으로 실행되면 0을 반환합니다. 그렇지 않으면 함수가 -1을 반환하고 **errno를** **EACCES로**설정합니다. **ENOENT**
+이러한 각 함수는 정상적으로 실행되면 0을 반환합니다. 그렇지 않은 경우 함수는-1을 반환 하 고 **errno** 를 **eacces**로 설정 합니다. 즉, 경로가 읽기 전용 파일 또는 디렉터리를 지정 하거나 파일 또는 경로를 찾을 수 없음을 의미 하는 **enoent (** 로 설정 합니다.
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_unlink** 함수는 *파일 이름으로*지정된 파일을 삭제합니다. **_wunlink** **_unlink**넓은 문자 버전입니다. **_wunlink** *파일 이름* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_Unlink** 함수는 *filename*에 지정 된 파일을 삭제 합니다. **_wunlink** 은 **_unlink**의 와이드 문자 버전입니다. **_wunlink** 에 대 한 *파일 이름* 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -122,7 +122,7 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

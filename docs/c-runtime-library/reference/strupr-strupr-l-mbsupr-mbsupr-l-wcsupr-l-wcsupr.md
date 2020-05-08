@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c30aa9e1a73ba51931caff726837841f76922139
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362887"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912333"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 문자열을 대문자로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **_mbsupr** 및 **_mbsupr_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsupr** 및 **_mbsupr_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -139,10 +139,10 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*Str*<br/>
+*문자열*<br/>
 대문자로 변환할 문자열입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -151,15 +151,15 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>설명
 
-**_strupr** 함수는 *str의* 각 소문자가 대문자로 변환됩니다. 변환은 로캘의 **LC_CTYPE** 범주 설정에 의해 결정됩니다. 다른 문자는 영향을 받지 않습니다. **LC_CTYPE**대한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)를 참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_Strupr** 함수는 현재 자리에서 *str* 의 각 소문자를 대문자로 변환 합니다. 변환은 로캘의 **LC_CTYPE** 범주 설정에 따라 결정 됩니다. 다른 문자는 영향을 받지 않습니다. **LC_CTYPE**에 대 한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘을 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-**_wcsupr** **_mbsupr** **_strupr**와이드 문자 및 멀티 바이트 문자 버전입니다. **_wcsupr** 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsupr** 그 다중 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_wcsupr** 및 **_mbsupr** 는 **_strupr**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsupr** 의 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsupr** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-*str이* null 포인터인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 원래 문자열을 반환하고 **errno를** **EINVAL로**설정합니다.
+*Str* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 원래 문자열을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -174,7 +174,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 |-------------|---------------------|
 |**_strupr**, **_strupr_l**|\<string.h>|
 |**_wcsupr**, **_wcsupr_l**|\<string.h> 또는 \<wchar.h>|
-|**_mbsupr,** **_mbsupr_l**|\<mbstring.h>|
+|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -182,8 +182,8 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 
 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>
