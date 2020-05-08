@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337721"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913052"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-**errno** 전역 변수의 값을 설정합니다.
+**Errno** 전역 변수의 값을 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,7 +49,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>매개 변수
 
 *error_value*<br/>
-**errno의**새로운 값 .
+**Errno**의 새 값입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -59,7 +59,7 @@ errno_t _set_errno( int error_value );
 
 가능한 값은 Errno.h에서 정의됩니다. [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -87,7 +87,7 @@ Oops: Illegal byte sequence
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_get_errno](get-errno.md)<br/>
 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

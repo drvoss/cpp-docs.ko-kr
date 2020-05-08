@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 8f2983bee93c623eb936ed12422134281418076b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 589a413c9f1fb49fbfe8cd1b5eacb9d452716523
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342182"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916509"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -58,7 +58,7 @@ void *_lfind_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 개체입니다.
 
 *base*<br/>
@@ -67,10 +67,10 @@ void *_lfind_s(
 *number*<br/>
 배열 요소의 수입니다.
 
-*크기*<br/>
+*size*<br/>
 배열 요소의 크기(바이트)입니다.
 
-*비교*<br/>
+*과*<br/>
 비교 루틴에 대한 포인터입니다. 첫 번째 매개 변수는 *컨텍스트* 포인터입니다. 두 번째 매개 변수는 검색할 키에 대한 포인터입니다. 세 번째 매개 변수는 키와 비교할 배열 요소에 대한 포인터입니다.
 
 *context*<br/>
@@ -78,26 +78,26 @@ void *_lfind_s(
 
 ## <a name="return-value"></a>Return Value
 
-키가 발견되면 **_lfind_s** *키와*일치하는 *기본* 배열 요소에 대한 포인터를 반환합니다. 키가 없는 경우 **_lfind_s** **NULL**을 반환합니다.
+키가 있으면 **_lfind_s** 는 *키*와 일치 하는 *기준* 에 있는 배열의 요소에 대 한 포인터를 반환 합니다. 키를 찾을 수 없으면 **_lfind_s** 에서 **NULL**을 반환 합니다.
 
-함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 **errno는** **EINVAL로** 설정되고 함수는 **NULL을**반환합니다.
+함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는 **NULL**을 반환 합니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
 |key|base|compare|num|크기|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**Null**|any|any|any|any|**아인발 ()에인발 (것)**|
-|any|**Null**|any|!= 0|any|**아인발 ()에인발 (것)**|
-|any|any|any|any|0|**아인발 ()에인발 (것)**|
-|any|any|**Null**|an|any|**아인발 ()에인발 (것)**|
+|**N**|any|any|any|any|**EINVAL**|
+|any|**N**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|0|**EINVAL**|
+|any|any|**N**|an|any|**EINVAL**|
 
 ## <a name="remarks"></a>설명
 
-**_lfind_s** 함수는 각각 *너비* 바이트의 *숫자* 요소 배열에서 값 *키에* 대한 선형 검색을 수행합니다. **bsearch_s**달리 **_lfind_s** 배열을 정렬할 필요가 없습니다. *기본* 인수는 검색할 배열의 기본에 대한 포인터입니다. *비교* 인수는 두 배열 요소를 비교한 다음 해당 관계를 지정하는 값을 반환하는 사용자 제공 루틴에 대한 포인터입니다. **_lfind_s** 각 호출에 두 개의 배열 요소에 *컨텍스트* 포인터와 포인터를 전달, 검색 하는 동안 하나 이상의 *비교* 루틴을 호출 합니다. *비교* 루틴은 요소를 비교한 다음 비영도(요소가 다른 의미) 또는 0(요소가 동일하다는 의미)을 반환해야 합니다.
+**_Lfind_s** 함수는 각각 *width* 바이트의 *number* 요소 배열에서 값 *키* 에 대 한 선형 검색을 수행 합니다. **Bsearch_s**와 달리 **_lfind_s** 는 배열을 정렬할 필요가 없습니다. *기본* 인수는 검색할 배열의 기준에 대 한 포인터입니다. *Compare* 인수는 두 배열 요소를 비교 하 여 해당 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. **_lfind_s** 는 검색 중에 *비교* 루틴을 한 번 이상 호출 하 여 각 호출에서 두 배열 요소에 대 한 *컨텍스트* 포인터와 포인터를 전달 합니다. *비교* 루틴은 요소를 비교한 다음 0이 아닌 값 (요소가 다르다는 의미) 또는 0 (요소가 동일 하다는 의미)을 반환 해야 합니다.
 
-**_lfind_s** 비교 함수의 인수와 함수의 매개 변수 목록에 *컨텍스트* 포인터를 추가하는 것을 제외하고는 **_lfind** 비슷합니다. *컨텍스트* 포인터는 검색된 데이터 구조가 개체의 일부이고 *비교* 함수가 개체의 멤버에 액세스해야 하는 경우에 유용할 수 있습니다. *compare* 함수는 void 포인터를 해당 개체 유형으로 캐스팅하고 해당 개체의 멤버에 액세스할 수 있습니다. *컨텍스트* 매개 변수를 추가하면 정적 변수를 사용하여 *비교* 함수에서 데이터를 사용할 수 있도록 하는 것과 관련된 재진입 버그를 피하기 위해 추가 컨텍스트를 사용할 수 있으므로 **_lfind_s** 더 안전합니다.
+**_lfind_s** 는 비교 함수의 인수 및 함수의 매개 변수 목록에 대 한 *컨텍스트* 포인터를 추가 하는 것을 제외 하 고 **_lfind** 와 비슷합니다. *컨텍스트* 포인터는 검색 된 데이터 구조가 개체의 일부 이며 *비교* 함수가 개체의 멤버에 액세스 해야 하는 경우에 유용할 수 있습니다. *Compare* 함수는 void 포인터를 적절 한 개체 형식으로 캐스팅 하 고 해당 개체의 멤버에 액세스할 수 있습니다. *컨텍스트* 매개 변수를 추가 하면 정적 변수를 사용 하 여 *비교* 함수에서 데이터를 사용할 수 있도록 하는 것과 관련 된 재진입 버그를 방지 하기 위해 추가 컨텍스트를 사용할 수 있기 때문에 **_lfind_s** 더 안전 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -187,7 +187,7 @@ int main( )
 weit found
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

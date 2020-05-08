@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362904"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919978"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 문자열 포인터를 한 문자씩 이동합니다.
 
 > [!IMPORTANT]
-> **_mbsinc** 및 **_mbsinc_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsinc** 및 **_mbsinc_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -85,25 +85,25 @@ unsigned char *_mbsinc_l(
 *현재*<br/>
 문자 포인터입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-이러한 각 루틴은 *현재*바로 다음에 오는 문자에 대한 포인터를 반환합니다.
+이러한 각 루틴은 *현재*바로 뒤에 오는 문자에 대 한 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_mbsinc** 함수는 *현재*바로 다음에 오는 다중 바이트 문자의 첫 번째 바이트에 대한 포인터를 반환합니다. **_mbsinc** 현재 사용 중인 [다중바이트 코드 페이지에](../../c-runtime-library/code-pages.md) 따라 다중 바이트 문자 시퀀스를 인식합니다. **_mbsinc_l** 전달되는 로캘 매개 변수를 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**_Mbsinc** 함수는 *현재*바로 뒤에 오는 멀티 바이트 문자의 첫 번째 바이트에 대 한 포인터를 반환 합니다. **_mbsinc** 는 현재 사용 중인 [멀티 바이트 코드 페이지](../../c-runtime-library/code-pages.md) 에 따라 멀티 바이트 문자 시퀀스를 인식 합니다. **_mbsinc_l** 은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-Tchar.h에 정의된 일반 텍스트 **함수_tcsinc_MBCS**정의되었는지 **_MBCS** **_mbsinc** 매핑하거나 **_UNICODE** 정의된 지 **_wcsinc.** 그렇지 않으면 **_strinc**맵을 **_tcsinc.** **_strinc** **_wcsinc** **_mbsinc**단일 바이트 문자 및 와이드 문자 버전입니다. **_strinc** 및 **_wcsinc** 이 매핑에만 제공되며 그렇지 않으면 사용해서는 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.
+Tchar.h에 정의 된 일반 텍스트 함수 **_tcsinc** **_MBCS** 정의 된 경우 **_mbsinc** 에 매핑되고 **_UNICODE** 정의 된 경우 **_wcsinc** 합니다. 그렇지 않으면 **_tcsinc** **_strinc**에 매핑됩니다. **_strinc** 및 **_wcsinc** 는 **_mbsinc**의 싱글바이트 문자 및 와이드 문자 버전입니다. **_strinc** 및 **_wcsinc** 는이 매핑에 대해서만 제공 되며 그렇지 않으면 사용 하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.
 
-*현재가* **NULL인**경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **EINVAL을** 반환하고 **errno를** **EINVAL로**설정합니다.
+*Current* 가 **NULL**이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
 > [!IMPORTANT]
 > 이러한 함수는 버퍼 오버런 위협에 노출될 수 있습니다. 버퍼 오버런은 불필요한 권한 상승을 발생시킬 수 있으므로 시스템 공격에 사용될 수 있습니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -116,7 +116,7 @@ Tchar.h에 정의된 일반 텍스트 **함수_tcsinc_MBCS**정의되었는지 *
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>

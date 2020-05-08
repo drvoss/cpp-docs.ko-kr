@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364206"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918145"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 문자열의 문자를 추가합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **_mbsncat** 및 **_mbsncat_l** Windows 런타임에서 실행되는 응용 프로그램에서사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsncat** 및 **_mbsncat_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -131,16 +131,16 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*스트레스트*<br/>
+*strDest*<br/>
 Null 종료 대상 문자열입니다.
 
-*스트소스 (것)스*<br/>
+*strSource*<br/>
 Null 종료 소스 문자열입니다.
 
 *count*<br/>
 추가할 문자 수입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -149,18 +149,18 @@ Null 종료 소스 문자열입니다.
 
 ## <a name="remarks"></a>설명
 
-**strncat** 함수는 strSource에서 *strDest에*대한 *strSource의* 첫 번째 *카운트* 문자를 최대로 적용합니다. *strSource의* 초기 문자는 *strDest.* *카운트* 문자가 추가되기 전에 null 문자가 *strSource에* 나타나면 **strSource에서** null 문자까지 모든 문자를 추가합니다. *strSource* *카운트가* *strSource의*길이보다 큰 경우 *strSource의* 길이는 *개수*대신 사용됩니다. 모든 경우 결과 문자열은 null 문자로 종료됩니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
+**Strncat** 함수는 *strsource* 의 처음 *카운트* 문자를 *strsource*에 추가 합니다. *Strsource* 의 초기 문자는 *strsource*의 null 종결 문자를 덮어씁니다. *Count* 문자가 추가 되기 전에 *strsource* 에 null 문자가 표시 되는 경우 **strncat** 는 *strsource*의 모든 문자를 null 문자까지 추가 합니다. *Count* 가 *strsource*의 길이 보다 큰 경우 *strsource* 의 길이가 *count*대신 사용 됩니다. 모든 경우 결과 문자열은 null 문자로 종료됩니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
 
 > [!IMPORTANT]
-> **strncat는** *strDest에서*충분한 공간을 확인하지 않습니다. 따라서 버퍼 오버런의 잠재적원인입니다. *카운트는* 추가된 문자 수를 제한합니다. 그것은 *strDest의*크기에 대한 제한이 아닙니다. 아래 예제를 참조하세요. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
+> **strncat** 는 *strdest*에 충분 한 공간을 확인 하지 않습니다. 따라서 버퍼 오버런의 잠재적 원인이 될 수 있습니다. *Count* 는 추가 되는 문자 수를 제한 한다는 점에 유의 하십시오. *Strdest*의 크기에는 제한이 없습니다. 아래 예제를 참조하세요. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-**wcsncat** 및 **_mbsncat** **스트런의**넓은 문자 및 다중 바이트 문자 버전입니다. **wcsncat의** 문자열 인수 및 반환 값은 와이드 문자 문자열입니다. **_mbsncat** 그 다중 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**wcsncat** 및 **_mbsncat** 는 **strncat**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcsncat** 의 문자열 인수와 반환 값은 와이드 문자 문자열입니다. **_mbsncat** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 C++에서 이러한 함수에는 템플릿 오버로드가 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -170,7 +170,7 @@ C++에서 이러한 함수에는 템플릿 오버로드가 있습니다. 자세�
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** **_wcsncat_l** 로캘 에 대한 종속성은 없으며 직접 호출할 수 없습니다. 그들은 **_tcsncat_l**의해 내부 사용을 위해 제공됩니다.
+> **_strncat_l** 및 **_wcsncat_l** 에는 로캘 종속성이 없으며 직접 호출할 수 없습니다. **_Tcsncat_l**에서 내부용으로 제공 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -230,9 +230,9 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-**BadAppend는** 버퍼 오버런을 일으켰습니다.
+**Badappend** 로 인해 버퍼 오버런이 발생 했습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
@@ -245,5 +245,5 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

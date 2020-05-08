@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: b4871ff2c362e2c6cbe37be6a31bde4e6e258709
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333540"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917093"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -80,10 +80,10 @@ errno_t _cgetws_s(
 *버퍼*<br/>
 데이터의 스토리지 위치입니다.
 
-*숫자오브엘리먼트*<br/>
+*이면 numberofelements 이벤트가*<br/>
 단일 바이트 또는 와이드 문자 단위의 버퍼 크기이며, 읽을 수 있는 최대 문자 수이기도 합니다.
 
-*p사이즈읽기*<br/>
+*pSizeRead*<br/>
 실제로 읽은 문자 수입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -92,23 +92,23 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*버퍼*|*숫자오브엘리먼트*|*p사이즈읽기*|반환 값|*버퍼의* 내용|
+|*버퍼*|*이면 numberofelements 이벤트가*|*pSizeRead*|반환 값|*버퍼* 의 내용|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**Null**|any|any|**아인발 ()에인발 (것)**|해당 없음|
-|**NULL이** 아님|0|any|**아인발 ()에인발 (것)**|수정 안 됨|
-|**NULL이** 아님|any|**Null**|**아인발 ()에인발 (것)**|빈 문자열|
+|**N**|any|any|**EINVAL**|해당 없음|
+|**NULL** 이 아님|0|any|**EINVAL**|수정 안 됨|
+|**NULL** 이 아님|any|**N**|**EINVAL**|빈 문자열|
 
 ## <a name="remarks"></a>설명
 
-**_cgets_s _cgetws_s** 콘솔에서 문자열을 **읽고** 문자열(null 종기)을 *버퍼로*복사합니다. **_cgetws_s** 함수의 넓은 문자 버전입니다. 문자 크기 이외에는 이 두 함수의 동작이 동일합니다. 읽을 문자열의 최대 크기는 *numberOfElements* 매개 변수로 전달됩니다. 이 크기는 종료 null에 대한 추가 문자를 포함해야 합니다. 읽은 실제 문자 수는 *pSizeRead*에 배치됩니다.
+**_cgets_s** 및 **_cgetws_s** 콘솔에서 문자열을 읽고 null 종결자를 사용 하 여 문자열을 *버퍼*에 복사 합니다. **_cgetws_s** 은 함수의 와이드 문자 버전입니다. 문자 크기를 제외 하 고 이러한 두 함수의 동작은 동일 합니다. 읽을 문자열의 최대 크기는 *Numberofelements* 매개 변수로 전달 됩니다. 이 크기는 종료 null에 대한 추가 문자를 포함해야 합니다. 읽은 실제 문자 수는 *pSizeRead*에 배치 됩니다.
 
-작업 중이나 매개 변수의 유효성을 검사할 때 오류가 발생하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있으면 **errno가** **EINVAL로** 설정되고 **EINVAL이** 반환됩니다.
+작업 중이나 매개 변수의 유효성을 검사할 때 오류가 발생하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용 된 경우 **errno** 가 **EINVAL** 로 설정 되 고 **EINVAL** 이 반환 됩니다.
 
 C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없어지고 보안 수준이 낮은 기존 함수를 보안 수준이 높은 최신 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-이러한 함수의 디버그 라이브러리 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -125,7 +125,7 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

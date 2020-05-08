@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338198"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919535"
 ---
 # <a name="rand_s"></a>rand_s
 
-의사 난수를 생성합니다. 이것은 [CRT의 보안 기능에](../../c-runtime-library/security-features-in-the-crt.md)설명 된 대로 보안 향상 기능 [rand의](rand.md)보다 안전한 버전입니다.
+의사 난수를 생성합니다. 이는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명 된 대로 향상 된 보안 기능을 제공 하는 함수 [rand](rand.md)의 더 안전한 버전입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,18 +51,18 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>매개 변수
 
-*랜덤 밸류값*<br/>
-생성된 값을 보유하는 정수에 대한 포인터입니다.
+*randomValue*<br/>
+생성 된 값을 보유할 정수에 대 한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
 
-정상적으로 실행되는 경우 0이고 그렇지 않으면 오류 코드입니다. 입력 포인터 _randomValue가_ null 포인터인 경우 함수는 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속할 수 있는 경우 함수는 **EINVAL을** 반환하고 **errno를** **EINVAL로**설정합니다. 다른 이유로 함수가 실패하면 *_randomValue가_ 0으로 설정됩니다.
+정상적으로 실행되는 경우 0이고 그렇지 않으면 오류 코드입니다. 입력 포인터 _randomValue_ 가 null 포인터인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. 다른 이유로 인해 함수가 실패 하면 *_randomValue_ 는 0으로 설정 됩니다.
 
 ## <a name="remarks"></a>설명
 
-**rand_s** 함수는 입력 포인터에 **UINT_MAX** 범위 0에 의사 임의 정수를 씁니다. **rand_s** 함수는 운영 체제를 사용하여 암호화된 보안 난수를 생성합니다. [srand](srand.md) 함수에 의해 생성된 시드를 사용하지 않으며 [rand가](rand.md)사용하는 난수 시퀀스에 영향을 미치지 않습니다.
+**Rand_s** 함수는 입력 포인터에 **UINT_MAX** 범위 0의 의사 난수 정수를 씁니다. **Rand_s** 함수는 운영 체제를 사용 하 여 암호 보안 난수를 생성 합니다. [Srand](srand.md) 함수에 의해 생성 된 초기값은 사용 하지 않으며 [rand](rand.md)에서 사용 하는 난수 시퀀스에도 영향을 주지 않습니다.
 
-**rand_s** 함수는 다음 예제와 같이 함수에 대한 inclusion 문 앞에 상 **_CRT_RAND_S수를** 정의해야 합니다.
+**Rand_s** 함수를 사용 하려면 다음 예제와 같이 함수를 선언 하기 위한 포함 문 앞에 상수 **_CRT_RAND_S** 정의 해야 합니다.
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,7 +71,7 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s** Windows XP 및 이후 에서만 사용할 수 있는 [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API에 따라 달라집니다.
+**rand_s** 는 Windows XP 이상 에서만 사용할 수 있는 [Rtlgenrandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API에 따라 달라 집니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -157,8 +157,8 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[랜드](rand.md)<br/>
+[rand](rand.md)<br/>
 [srand](srand.md)<br/>

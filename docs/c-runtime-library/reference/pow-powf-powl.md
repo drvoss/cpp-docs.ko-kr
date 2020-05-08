@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333112"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916791"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-*y의*힘으로 제기 된 *x를* 계산합니다.
+*Y*의 거듭제곱으로 계산 되는 *x* 를 계산 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -71,36 +71,36 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 밑입니다.
 
-*Y*<br/>
+*x.y*<br/>
 지수입니다.
 
 ## <a name="return-value"></a>Return Value
 
-*x*<sup>*y*</sup>의 값을 반환합니다. 오버플로 또는 언더플로 시 오류 메시지는 인쇄되지 않습니다.
+*X*<sup>*y*</sup>의 값을 반환 합니다. 오버플로 또는 언더플로 시 오류 메시지는 인쇄되지 않습니다.
 
 |x 및 y의 값|pow의 반환 값|
 |-----------------------|-------------------------|
-|*x!=* 0.0 및 *y* =0.0|1|
-|*x* == 0.0 및 *y* =0.0|1|
-|*x* == 0.0 및 *y* < 0|INF|
+|*x* ! = 0.0 및 *y* = = 0.0|1|
+|*x* = = 0.0 및 *y* = = 0.0|1|
+|*x* = = 0.0 및 *y* < 0|INF|
 
 ## <a name="remarks"></a>설명
 
-**pow는** 2<sup>64보다</sup> 큰 정수 부동 점 값을 인식하지 못합니다(예: 1.0E100).
+**pow** 는 2<sup>64</sup> 보다 큰 정수 부동 소수점 값을 인식 하지 않습니다 (예: 1.0 e100).
 
-**pow에는** 스트리밍 SIMD 확장 2(SSE2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
+**pow** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-C++는 오버로드를 허용하므로 **다양한 pow**오버로드를 호출할 수 있습니다. C 프로그램에서 **pow는** 항상 두 **개의 이중** 값을 취하고 **이중** 값을 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **pow**의 다양 한 오버 로드를 호출할 수 있습니다. C 프로그램에서 **pow** 은 항상 두 개의 **double** 값을 사용 하 고 **double** 값을 반환 합니다.
 
-`pow(int, int)` 오버로드는 더 이상 사용할 수 없습니다. 이 오버로드를 사용하는 경우 컴파일러는 [C2668을](../../error-messages/compiler-errors-2/compiler-error-c2668.md)내보사할 수 있습니다. 이 문제를 방지하려면 첫 번째 매개 변수를 **double,** **float**또는 **long** **double로**캐스팅합니다.
+`pow(int, int)` 오버로드는 더 이상 사용할 수 없습니다. 이 오버 로드를 사용 하는 경우 컴파일러는 [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)를 내보낼 수 있습니다. 이 문제를 방지 하려면 첫 번째 매개 변수를 **double**, **float**또는 **long** **double**로 캐스팅 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
 |-|-|-|
-|**파우,** **파우,** **폴**|\<math.h>|\<math.h> 또는 \<cmath>|
+|**pow**, **powf**, **powl**|\<math.h>|\<math.h> 또는 \<cmath>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -125,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

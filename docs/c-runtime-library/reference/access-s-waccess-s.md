@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349133"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916903"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -62,10 +62,10 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*경로*<br/>
+*path*<br/>
 파일 또는 디렉터리 경로입니다.
 
-*모드*<br/>
+*mode*<br/>
 권한 설정
 
 ## <a name="return-value"></a>Return Value
@@ -82,7 +82,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>설명
 
-파일과 함께 사용할 때 **_access_s** 함수는 지정된 파일이 있는지 여부를 결정하고 *모드*값에 의해 지정된 대로 액세스할 수 있습니다. 디렉터리와 함께 사용할 경우 **_access_s** 지정된 디렉터리만 있는지 여부를 결정합니다. Windows 2000 및 이후 운영 체제에서는 모든 디렉터리에서 읽기 및 쓰기 액세스 권한을 갖습니다.
+파일에서 사용 하는 경우 **_access_s** 함수는 지정 된 파일이 있는지 여부를 확인 하 고 *모드*값에 지정 된 대로 액세스할 수 있습니다. 디렉터리와 함께 사용 하는 경우 **_access_s** 지정 된 디렉터리가 있는지만 확인 합니다. Windows 2000 이상 운영 체제에서는 모든 디렉터리에 읽기 및 쓰기 권한이 있습니다.
 
 |모드 값|파일 검사|
 |----------------|---------------------|
@@ -91,13 +91,13 @@ errno_t _waccess_s(
 |04|읽기 권한.|
 |06|읽기 및 쓰기 권한.|
 
-파일 읽기 권한 또는 쓰기 권한은 파일을 열기 위한 충분한 권한이 아닙니다. 예를 들어 파일이 다른 프로세스에 의해 잠겨 있는 경우 **_access_s** 0을 반환하더라도 파일에 액세스하지 못할 수 있습니다.
+파일 읽기 권한 또는 쓰기 권한은 파일을 열기 위한 충분한 권한이 아닙니다. 예를 들어 파일이 다른 프로세스에 의해 잠겨 있는 경우 **_access_s** 에서 0을 반환 하더라도 액세스 하지 못할 수 있습니다.
 
-**_waccess_s** **_waccess_s** 경로 인수가 와이드 문자 문자열인 **_access_s** *와이드* 문자 버전입니다. 그렇지 않으면 **_waccess_s** **_access_s** 동일하게 작동합니다.
+**_waccess_s** 은 **_access_s**의 와이드 문자 버전입니다. **_waccess_s** *경로* 인수는 와이드 문자 문자열입니다. 그렇지 않으면 **_waccess_s** 와 **_access_s** 는 동일 하 게 동작 합니다.
 
-이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *경로가* NULL이거나 *모드가* 유효한 모드를 지정하지 않으면 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.
+이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *Path* 가 NULL 이거나 *mode* 가 유효한 모드를 지정 하지 않는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -114,7 +114,7 @@ errno_t _waccess_s(
 
 ## <a name="example"></a>예제
 
-이 예제에서는 **_access_s** 사용하여 crt_access_s.c라는 파일을 확인하여 파일이 있는지 여부와 쓰기가 허용되는지 여부를 확인합니다.
+이 예제에서는 **_access_s** 를 사용 하 여 crt_access_s 파일이 있는지 확인 하 고 쓰기가 허용 되는지 여부를 확인 합니다.
 
 ```C
 // crt_access_s.c
@@ -156,7 +156,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

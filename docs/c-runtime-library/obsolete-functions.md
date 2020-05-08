@@ -1,6 +1,6 @@
 ---
 title: 사용되지 않는 함수
-description: Microsoft C 런타임 라이브러리(CRT)에서 더 이상 사용되지 않으며 제거된 사용되지 않는 함수를 나열합니다.
+description: Microsoft CRT (C 런타임 라이브러리)에서 더 이상 사용 되지 않고 제거 된 사용 되지 않는 함수를 나열 합니다.
 ms.date: 4/2/2020
 api_name:
 - _beep
@@ -36,7 +36,7 @@ api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,16 +65,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 5c3ebd9ff3533439cde2f1b46d100976b18e02c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b8a094294abba46ae78e9d3529ccf3a7b0a31f39
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351006"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919885"
 ---
 # <a name="obsolete-functions"></a>사용되지 않는 함수
 
-특정 라이브러리 함수는 더 이상 사용되지 않으며 최신의 동등한 함수를 포함합니다. 이러한 함수를 업데이트된 버전으로 변경하는 것이 좋습니다. 사용되지 않는 기타 함수가 CRT에서 제거되었습니다. 이 문서에서는 더 이상 사용되지 않는 함수와 특정 버전의 Visual Studio에서 제거된 함수를 나열합니다.
+특정 라이브러리 함수는 더 이상 사용되지 않으며 최신의 동등한 함수를 포함합니다. 이러한 함수를 업데이트 된 버전으로 변경 하는 것이 좋습니다. 사용되지 않는 기타 함수가 CRT에서 제거되었습니다. 이 문서에서는 더 이상 사용 되지 않는 함수 및 특정 버전의 Visual Studio에서 제거 된 함수를 나열 합니다.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015에서 더 이상 사용되지 않음
 
@@ -95,12 +95,12 @@ ms.locfileid: "81351006"
 |사용되지 않는 함수|대체|
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
-|[도착, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
+|[_getws를 가져옵니다.](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
 |[_get_output_format](../c-runtime-library/get-output-format.md)|없음|
 |[_heapadd](../c-runtime-library/heapadd.md)|없음|
 |[_heapset](../c-runtime-library/heapset.md)|없음|
-|[inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|없음|
-|[아웃, 아웃, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|없음|
+|[sct.inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|없음|
+|[outp, outp, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|없음|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|없음|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>이전 Visual Studio 버전의 CRT에서 제거됨
