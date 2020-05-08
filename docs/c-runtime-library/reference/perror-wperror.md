@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338541"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919331"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -59,14 +59,14 @@ void _wperror(
 
 ### <a name="parameters"></a>매개 변수
 
-*메시지*<br/>
+*message*<br/>
 인쇄할 문자열 메시지입니다.
 
 ## <a name="remarks"></a>설명
 
-**perror** 함수는 **stderr**에 오류 메시지를 인쇄합니다. **_wperror** **_perror**넓은 문자 버전입니다. **_wperror** *메시지* 인수는 와이드 문자 문자열입니다. **_wperror** **_perror** 다르게 동일하게 행동합니다.
+**Perror** 함수는 오류 메시지를 **stderr**에 출력 합니다. **_wperror** 은 **_perror**의 와이드 문자 버전입니다. **_wperror** 에 대 한 *메시지* 인수는 와이드 문자열입니다. **_wperror** 와 **_perror** 는 동일 하 게 동작 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -74,13 +74,13 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*메시지가* 먼저 인쇄된 다음 콜론다음에 오류를 생성한 마지막 라이브러리 호출에 대한 시스템 오류 메시지, 마지막으로 줄 바호 문자에 의해 인쇄됩니다. *메시지가* null 포인터또는 null 문자열에 대한 포인터인 경우 **perror는** 시스템 오류 메시지만 인쇄합니다.
+*메시지가* 먼저 인쇄 된 후 콜론, 오류를 생성 한 마지막 라이브러리 호출에 대 한 시스템 오류 메시지 및 줄 바꿈 문자가 차례로 인쇄 됩니다. *메시지가* null 포인터 또는 null 문자열에 대 한 포인터인 경우 **perror** 는 시스템 오류 메시지만 인쇄 합니다.
 
-오류 번호는 ERRNO.H에 정의되어 있는 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수에 저장됩니다. [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 통해 시스템 오류 메시지에 액세스합니다. 이 변수는 오류 번호순으로 정렬된 메시지 배열입니다. **perror는** **errno** 값을 인덱스로 사용하여 적절한 오류 메시지를 인쇄하여 **_sys_errlist.** 변수 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 값은 **_sys_errlist** 배열의 최대 요소 수로 정의됩니다.
+오류 번호는 ERRNO.H에 정의되어 있는 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수에 저장됩니다. [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 통해 시스템 오류 메시지에 액세스합니다. 이 변수는 오류 번호순으로 정렬된 메시지 배열입니다. **perror** 는 **_sys_errlist**에 대 한 인덱스로 **errno** 값을 사용 하 여 적절 한 오류 메시지를 인쇄 합니다. 변수 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 의 값은 **_sys_errlist** 배열의 최대 요소 수로 정의 됩니다.
 
-정확한 결과를 얻으려면 라이브러리 루틴이 오류와 함께 반환된 **직후에 perror를** 호출합니다. 그렇지 않으면 후속 호출이 **errno** 값을 덮어쓸 수 있습니다.
+정확한 결과를 위해 라이브러리 루틴이 오류와 함께 반환 되는 즉시 **perror** 를 호출 합니다. 그렇지 않으면 후속 호출에서 **errno** 값을 덮어쓸 수 있습니다.
 
-Windows 운영 체제에서 ERRNO에 나열된 일부 **errno** 값입니다. H는 사용되지 않습니다. 이러한 값은 UNIX 운영 체제에서 사용되도록 예약되어 있습니다. Windows 운영 체제에서 사용하는 **errno** 값 목록은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 참조하세요. **perror는** 이러한 플랫폼에서 사용되지 않는 **errno** 값에 대해 빈 문자열을 인쇄합니다.
+Windows 운영 체제에서 일부 **errno** 값은 errno에 나열 됩니다. H는 사용 되지 않습니다. 이러한 값은 UNIX 운영 체제에서 사용되도록 예약되어 있습니다. Windows 운영 체제에서 사용 하는 **errno** 값 목록은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 를 참조 하세요. **perror** 는 이러한 플랫폼에서 사용 하지 않는 모든 **errno** 값에 대 한 빈 문자열을 인쇄 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -143,7 +143,7 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>

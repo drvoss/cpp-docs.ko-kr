@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 10d2b9af45b78a3f5ed673bde3d37894ccb00168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345368"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919423"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -82,25 +82,25 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*버퍼*|*sizeInBytes*|*value*|*숫자*|반환 값|*버퍼의* 값|
+|*버퍼*|*sizeInBytes*|*value*|*숫자*|반환 값|*버퍼* 의 값|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**Null**|any|any|any|**아인발 ()에인발 (것)**|수정되지 않습니다.|
-|**NULL이** 아님(유효한 메모리를 가리킵니다)|0|any|any|**아인발 ()에인발 (것)**|수정되지 않습니다.|
-|**NULL이** 아님(유효한 메모리를 가리킵니다)|any|any|>= *크기인 바이트*|**아인발 ()에인발 (것)**|수정되지 않습니다.|
+|**N**|any|any|any|**EINVAL**|수정되지 않습니다.|
+|Not **NULL** (유효한 메모리를 가리킴)|0|any|any|**EINVAL**|수정되지 않습니다.|
+|Not **NULL** (유효한 메모리를 가리킴)|any|any|>= *sizeInBytes*|**EINVAL**|수정되지 않습니다.|
 
 **보안 문제**
 
-**_gcvt_s** *버퍼가* 유효한 메모리를 가리키지 않고 **NULL이**아닌 경우 액세스 위반을 생성할 수 있습니다.
+*버퍼가* 유효한 메모리를 가리키지 않고 **NULL**이 아닌 경우 액세스 위반을 생성할 수 **_gcvt_s** .
 
 ## <a name="remarks"></a>설명
 
-**_gcvt_s** 함수는 부동 소수점 *값을* 소수점과 가능한 부호 바이트를 포함하는 문자 문자열로 변환하고 문자열을 *버퍼에*저장합니다. *버퍼는* 변환된 값과 자동으로 추가되는 종료 null 문자를 수용할 수 있을 만큼 커야 합니다. **_CVTBUFSIZE** 길이 버퍼는 부동 점 값에 충분합니다. *숫자* + 1의 버퍼 크기를 사용하는 경우 함수는 버퍼의 끝을 덮어 쓰지 않으므로 이 작업에 충분한 버퍼를 제공해야 합니다. **_gcvt_s** 소수점 형식으로 *자릿수를* 생성하려고 시도합니다. 할 수없는 경우 지수 형식으로 *숫자* 숫자를 생성합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.
+**_Gcvt_s** 함수는 부동 소수점 *값* 을 문자열로 변환 하 고 (소수점 및 가능한 부호 바이트를 포함) 문자열을 *버퍼*에 저장 합니다. *버퍼* 는 변환 된 값과 종료 null 문자 (자동으로 추가 됨)를 수용할 수 있을 만큼 커야 합니다. 모든 부동 소수점 값에는 길이가 **_CVTBUFSIZE** 버퍼가 면 충분 합니다. 버퍼 *크기 + 1* 을 사용 하는 경우이 함수는 버퍼의 끝을 덮어쓰지 않으므로이 작업에 충분 한 버퍼를 제공 해야 합니다. **_gcvt_s** 10 진수 형식의 *숫자* 를 생성 하려고 시도 합니다. 사용할 수 없는 경우에는 지 수 형식으로 *숫자* 를 생성 합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.
 
 C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-이 함수의 디버그 버전은 먼저 버퍼를 0xFE로 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+이 함수의 디버그 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -141,7 +141,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>

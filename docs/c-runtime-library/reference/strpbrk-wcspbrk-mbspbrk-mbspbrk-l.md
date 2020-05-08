@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: ecdf896587096f0370351aac07cbd6be57257305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322163"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911177"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -122,41 +122,41 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*Str*<br/>
+*문자열*<br/>
 Null로 종료되는 검색 대상 문자열입니다.
 
-*스트라셋*<br/>
+*strCharSet*<br/>
 Null 종료 문자 집합입니다.
 
-*로캘*<br/>
+*locale*<br/>
 사용할 로캘입니다.
 
 ## <a name="return-value"></a>Return Value
 
-*strcharSet에서* 문자의 첫 번째 발생에 대 한 포인터를 반환 *합니다.*
+*Str*에서 *strcharset* 의 문자가 처음 나타나는 위치에 대 한 포인터를 반환 하거나, 두 문자열 인수에 공통 된 문자가 없는 경우 NULL 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-함수는 `strpbrk` *strCharSet의*문자 집합에 속하는 *str에서* 문자의 첫 번째 발생에 대한 포인터를 반환합니다. 종료 null 문자는 검색에 포함되지 않습니다.
+함수 `strpbrk` 는 *strcharset*의 문자 집합에 속하는 *str* 의 첫 번째 문자에 대 한 포인터를 반환 합니다. 종료 null 문자는 검색에 포함되지 않습니다.
 
 `wcspbrk` 및 `_mbspbrk` 는 `strpbrk`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcspbrk`의 인수 및 반환 값은 와이드 문자열이며 `_mbspbrk`의 인수와 반환 값은 멀티바이트 문자열입니다.
 
-`_mbspbrk`는 매개 변수의 유효성을 검사합니다. *str* 또는 *strCharSet이* NULL인 경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 `_mbspbrk` 경우 NULL을 반환하고 EINVAL로 설정합니다. `errno` `strpbrk` 및 `wcspbrk`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`_mbspbrk`는 매개 변수의 유효성을 검사합니다. *Str* 또는 *STRCHARSET* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `_mbspbrk` 는 NULL을 반환 `errno` 하 고를 EINVAL로 설정 합니다. `strpbrk` 및 `wcspbrk`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 `_mbspbrk`는 [size_t](../../c-runtime-library/standard-types.md) 형식의 값이 아닌 포인터를 반환한다는 점을 제외하면 `_mbspbrk`는 `_mbscspn`과 유사합니다.
 
-C에서 이러한 함수는 첫 번째 인수에 대한 **const** 포인터를 취합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **const에** 포인터를 취하는 오버로드는 **const에**대한 포인터를 반환합니다. 비**const에** 포인터를 소요 하는 버전은 비**const에**대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS 이러한 함수의 **const** 및**non-const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. C++ 오버로드 모두에 대해**const가** 아닌 동작이 필요한 경우 _CONST_RETURN 기호를 정의합니다.
+C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 취하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS은 이러한 함수의 **const** 및 비**const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. 두 c + + 오버 로드에 대 한 비**const** 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
 
-출력 값은 로캘의 LC_CTYPE 범주 설정설정의 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하십시오. **_l** 접미사가 없는 이러한 함수의 버전은 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. **_l** 접미사가 있는 버전은 대신 전달된 로캘 매개 변수를 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 LC_CTYPE 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**해당 /a**|**해당 /a**|`_mbspbrk_l`|**해당 /a**|
+|**해당 없음**|**해당 없음**|`_mbspbrk_l`|**해당 없음**|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -202,11 +202,11 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[다중 바이트 문자 시퀀스의 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

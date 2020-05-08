@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347545"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920237"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -75,7 +75,7 @@ long double fabsl(
 
 ## <a name="return-value"></a>Return Value
 
-fabs 함수는 인수 *x의*절대 값을 **반환합니다.** 반환되는 오류가 없습니다.
+**Fabs** 함수는 인수 *x*의 절대값을 반환 합니다. 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
@@ -83,15 +83,15 @@ fabs 함수는 인수 *x의*절대 값을 **반환합니다.** 반환되는 오�
 
 ## <a name="remarks"></a>설명
 
-C++는 오버로드를 허용하므로 cmath> 헤더를 \<포함하는 경우 팹의 오버로드를 호출할 수 **있습니다.** C 프로그램에서 **fabs는** 항상 **double을**가져와 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 cmath>> 헤더를 포함 \<하는 경우 **fabs** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fabs** 은 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 C 헤더|필수 C++ 헤더|
+|기능|필수 C 헤더|필수 C++ 헤더|
 |--------------|-----------------------|---------------------------|
-|**팹,** **팹스프,** **팹슬**|\<math.h>|\<cmath> 또는 \<math.h>|
+|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -99,7 +99,7 @@ C++는 오버로드를 허용하므로 cmath> 헤더를 \<포함하는 경우 �
 
 [abs](abs-labs-llabs-abs64.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

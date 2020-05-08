@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338153"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919520"
 ---
 # <a name="rand"></a>rand
 
-잘 알려진 완전히 재현 가능한 알고리즘을 사용하여 의사 난수 생성합니다. 이 함수의 보다 프로그래밍 방식으로 안전한 버전을 사용할 수 있습니다. [rand_s](rand-s.md)참조하십시오. **rand에** 의해 생성된 숫자는 암호화적으로 안전하지 않습니다. 보다 암호화된 보안 난수 생성을 위해 [rand_s](rand-s.md) 또는 [ \<C++ ](../../standard-library/random.md)표준 라이브러리에 지정된 함수를 임의의>사용합니다.
+잘 알려져 있고 완전히 재현 가능한 알고리즘을 사용 하 여 의사 난수를 생성 합니다. 이 함수의 프로그래밍 방식으로 안전한 버전을 사용할 수 있습니다. [rand_s](rand-s.md)를 참조 하세요. **Rand** 로 생성 된 숫자는 암호화 보안이 유지 되지 않습니다. 보다 강력한 암호화 보안 난수 생성을 위해 [rand_s](rand-s.md) 또는 c + + 표준 라이브러리에 선언 된 함수를 [ \<임의의>](../../standard-library/random.md)사용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -50,21 +50,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Return Value
 
-**rand는** 위에서 설명한 대로 의사 난수 번호를 반환합니다. 반환되는 오류가 없습니다.
+**rand** 는 위에서 설명한 대로 의사 난수를 반환 합니다. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-**rand** 함수는 범위 0에서 RAND_MAX(32767)에서 의사 임의 정수를 반환합니다. **RAND_MAX** rand를 **호출하기**전에 [srand](srand.md) 함수를 사용하여 의사 임의 번호 생성기를 시드합니다.
+**Rand** 함수는 0에서 **RAND_MAX** (32767) 범위의 의사 난수 정수를 반환 합니다. **Rand**를 호출 하기 전에 [srand](srand.md) 함수를 사용 하 여 의사 (pseudo) 번호 생성기를 초기값으로 사용 합니다.
 
-**rand** 함수는 잘 알려진 시퀀스를 생성하며 암호화 함수로 사용하기에는 적합하지 않습니다. 보다 암호화된 보안 난수 생성을 위해 [rand_s](rand-s.md) 또는 [ \<C++ ](../../standard-library/random.md)표준 라이브러리에 지정된 함수를 임의의>사용합니다. **랜드의** 문제점과 임의> 이러한 단점을 해결하는 방법에 \<대한 자세한 내용은 이 비디오에서 유해한 것으로 간주되는 [rand를](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)참조하십시오.
+**Rand** 함수는 잘 알려진 시퀀스를 생성 하며 암호화 함수로 사용 하기에 적합 하지 않습니다. 보다 강력한 암호화 보안 난수 생성을 위해 [rand_s](rand-s.md) 또는 c + + 표준 라이브러리에 선언 된 함수를 [ \<임의의>](../../standard-library/random.md)사용 합니다. **Rand** 에서 발생 하는 문제 및 임의> 이러한 \<단점을 해결 하는 방법에 대 한 자세한 내용은이 비디오에서 [위험한 것으로 간주](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)되는 항목을 참조 하세요.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**랜드**|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -138,7 +138,7 @@ int main( void )
    66
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>

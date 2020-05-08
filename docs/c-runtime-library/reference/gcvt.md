@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919405"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -67,17 +67,17 @@ char *_gcvt(
 
 ## <a name="return-value"></a>Return Value
 
-**_gcvt** 숫자 문자열에 대한 포인터를 반환합니다.
+**_gcvt** 는 숫자 문자열에 대 한 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_gcvt** 함수는 부동 소수점 *값을* 소수점과 가능한 부호 바이트를 포함하는 문자 문자열로 변환하고 문자열을 *버퍼에*저장합니다. *버퍼는* 변환된 값과 자동으로 추가되는 종료 null 문자를 수용할 수 있을 만큼 커야 합니다. *버퍼* 크기 + 1이 사용되는 경우 함수는 버퍼의 끝을 덮어씁니다. 이는 변환된 문자열에 소수점이 포함되어 있고 부호 및 지수 정보가 포함될 수 있기 때문입니다. 오버플로에 대한 프로비전이 없습니다. **_gcvt** 소수점 형식으로 *자릿수를* 생성하려고 시도합니다. 할 수없는 경우 지수 형식으로 *숫자* 숫자를 생성합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.
+**_Gcvt** 함수는 부동 소수점 *값* 을 문자열로 변환 하 고 (소수점 및 가능한 부호 바이트를 포함) 문자열을 *버퍼*에 저장 합니다. *버퍼* 는 변환 된 값과 종료 null 문자 (자동으로 추가 됨)를 수용할 수 있을 만큼 커야 합니다. 버퍼 *크기 + 1* 을 사용 하는 경우 함수는 버퍼의 끝을 덮어씁니다. 이는 변환된 문자열에 소수점이 포함되어 있고 부호 및 지수 정보가 포함될 수 있기 때문입니다. 오버플로에 대한 프로비전이 없습니다. **_gcvt** 10 진수 형식의 *숫자* 를 생성 하려고 시도 합니다. 사용할 수 없는 경우에는 지 수 형식으로 *숫자* 를 생성 합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.
 
-**_CVTBUFSIZE** 길이 *버퍼는* 부동 점 값에 충분합니다.
+모든 부동 소수점 값에는 길이가 **_CVTBUFSIZE** *버퍼가* 면 충분 합니다.
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. *버퍼가* **NULL인**경우 [매개 변수 유효성 검사에](../../c-runtime-library/parameter-validation.md)설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속할 수 있는 경우 이 함수는 **errno를** **EINVAL로** 설정하고 **NULL**을 반환합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. *Buffer* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **NULL**을 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -143,7 +143,7 @@ buffer: '-0.123456789012' (15 chars)
 buffer: '-1.23456789012e-002' (19 chars)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
