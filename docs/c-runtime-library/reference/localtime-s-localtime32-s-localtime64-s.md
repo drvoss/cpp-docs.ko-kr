@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3c5d194da85eb5d008dfc9cf19f222ebb575747d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342117"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911580"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
-**time_t** 시간 값을 **tm** 구조로 변환하고 현지 표준 시간대를 수정합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)의 버전입니다.
+**Time_t** 시간 값을 **tm** 구조로 변환 하 고 현지 표준 시간대를 수정 합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)의 버전입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -71,7 +71,7 @@ errno_t _localtime64_s(
 *tmDest*<br/>
 입력할 시간 구조체에 대한 포인터입니다.
 
-*소스 타임*<br/>
+*sourceTime*<br/>
 저장된 시간에 대한 포인터입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -80,50 +80,50 @@ errno_t _localtime64_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*tmDest*|*소스 타임*|반환 값|*tmDest의* 값|잘못된 매개 변수 처리기 호출|
+|*tmDest*|*sourceTime*|반환 값|*Tmdest* 의 값|잘못된 매개 변수 처리기 호출|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**Null**|any|**아인발 ()에인발 (것)**|수정 안 됨|예|
-|**NULL이** 아님(유효한 메모리를 가리킵니다)|**Null**|**아인발 ()에인발 (것)**|모든 필드가 -1로 설정됨|예|
-|**NULL이** 아님(유효한 메모리를 가리킵니다)|0 보다 _MAX__TIME64_T **_MAX__TIME64_T**|**아인발 ()에인발 (것)**|모든 필드가 -1로 설정됨|예|
+|**N**|any|**EINVAL**|수정 안 됨|예|
+|Not **NULL** (유효한 메모리를 가리킴)|**N**|**EINVAL**|모든 필드가 -1로 설정됨|예|
+|Not **NULL** (유효한 메모리를 가리킴)|0 보다 작거나 **_MAX__TIME64_T** 보다 큼|**EINVAL**|모든 필드가 -1로 설정됨|아니요|
 
-처음 두 오류 조건의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다. 실행을 계속할 수 있는 경우 이러한 함수는 **errno를** **EINVAL로** 설정하고 **EINVAL을**반환합니다.
+처음 두 오류 조건의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**localtime_s** 함수는 [time_t](../../c-runtime-library/standard-types.md) 값으로 저장된 시간을 변환하고 결과를 [tm](../../c-runtime-library/standard-types.md)형식의 구조로 저장합니다. **time_t** 값 *sourceTime은* 1970년 1월 1일 UTC 자정(00:00:00) 이후 경과된 초를 나타냅니다. 이 값은 일반적으로 [시간](time-time32-time64.md) 함수에서 가져옵니다.
+**Localtime_s** 함수는 [time_t](../../c-runtime-library/standard-types.md) 값으로 저장 된 시간을 변환 하 고 결과를 [tm](../../c-runtime-library/standard-types.md)형식의 구조에 저장 합니다. **Time_t** 값 *sourcetime* 은 자정 (00:00:00), 1970 년 1 월 1 일 (UTC) 이후 경과 된 시간 (초)을 나타냅니다. 이 값은 일반적으로 [time](time-time32-time64.md) 함수에서 가져옵니다.
 
-**localtime_s** 사용자가 먼저 글로벌 환경 변수 **TZ를**설정하는 경우 현지 표준 시간대를 수정합니다. **TZ가** 설정되면 세 가지 다른 환경**변수(_timezone,** **_daylight**및 **_tzname)도**자동으로 설정됩니다. **TZ** 변수가 설정되지 않은 경우 **localtime_s** 제어판의 날짜/시간 응용 프로그램에 지정된 표준 시간대 정보를 사용하려고 시도합니다. 이 정보를 가져올 수 없으면 기본적으로 태평양 표준 시간대를 의미하는 PST8PDT가 사용됩니다. 이러한 변수에 대한 설명은 [_tzset](tzset.md)을 참조하세요. **TZ는** Microsoft 확장이며 **현지 시간의**ANSI 표준 정의의 일부가 아닙니다.
+사용자가 먼저 전역 환경 변수 **TZ**를 설정 하는 경우 현지 표준 시간대에 대 한 수정 **localtime_s** 합니다. **TZ** 를 설정 하면 다른 세 가지 환경 변수 (**_timezone**, **_daylight**및 **_tzname**)도 자동으로 설정 됩니다. **TZ** 변수가 설정 되지 않은 경우 **localtime_s** 은 제어판의 날짜/시간 응용 프로그램에 지정 된 표준 시간대 정보를 사용 하려고 시도 합니다. 이 정보를 가져올 수 없으면 기본적으로 태평양 표준 시간대를 의미하는 PST8PDT가 사용됩니다. 이러한 변수에 대한 설명은 [_tzset](tzset.md)을 참조하세요. **TZ** 는 **localtime**의 ANSI 표준 정의의 일부가 아니라 Microsoft 확장입니다.
 
 > [!NOTE]
 > 대상 환경에서는 일광 절약 시간이 적용되는지 확인해야 합니다.
 
-**__time64_t** 구조를 사용하는 **_localtime64_s**3001년 1월 18일 23:59:59, 3001년 1월 18일, 조정된 유니버설 타임(UTC)까지 날짜를 표현할 수 **있는 반면, _localtime32_s** 2038년 1월 18일 23:59:59, UTC를 통해 날짜를 나타냅니다.
+**__time64_t** 구조를 사용 하는 **_localtime64_s**는 23:59:59 년 1 월 18 일 3001, utc (협정 세계시)까지 날짜를 표현할 수 있지만, **_Localtime32_s** 는 23:59:59 년 1 월 18 일 년 1 월 2038 18 일을 나타냅니다.
 
-**localtime_s** **_localtime64_s**평가하는 인라인 함수이며 **time_t** **__time64_t.** 컴파일러가 **time_t** 이전 32비트 **time_t**해석하도록 강제해야 하는 경우 **_USE_32BIT_TIME_T**. 이렇게 하면 **localtime_s** **_localtime32_s**평가합니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
+**localtime_s** 은 **_localtime64_s**으로 계산 되는 인라인 함수 이며 **time_t** **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 이전 32 비트 **time_t**으로 해석 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **localtime_s** **_localtime32_s**으로 평가 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
 
-구조체 형식 [tm의](../../c-runtime-library/standard-types.md) 필드는 다음 값을 저장하며 각 값은 **int입니다.**
+구조체 형식 [tm](../../c-runtime-library/standard-types.md) 의 필드에는 각각 **int**인 다음 값이 저장 됩니다.
 
-|필드|Description|
+|필드|설명|
 |-|-|
-|**tm_sec**|분 후 초 (0 - 59).|
-|**tm_min**|시간 후 분 (0 - 59).|
-|**tm_hour**|자정 이후 시간 (0 - 23).|
-|**tm_mday**|월의 일 (1 - 31).|
-|**tm_mon**|월 (0 - 11; 1월 = 0).|
+|**tm_sec**|분 이후의 초 (0-59)입니다.|
+|**tm_min**|시간 이후 분 (0-59)|
+|**tm_hour**|자정 이후의 시간 (0-23)입니다.|
+|**tm_mday**|월의 일자 (1-31)|
+|**tm_mon**|월 (0-11; 1 월 = 0).|
 |**tm_year**|연도(현재 연도 - 1900).|
-|**tm_wday**|요일 (0 - 6; 일요일 = 0).|
-|**tm_yday**|연도의 날 (0 - 365; 1월 1일 = 0).|
+|**tm_wday**|요일 (0-6; 일요일 = 0).|
+|**tm_yday**|연간 일자 (0-365; 1 월 1 일 = 0).|
 |**tm_isdst**|일광 절약 시간이 적용되면 양수, 일광 절약 시간이 적용되지 않으면 0, 일광 절약 시간의 상태를 알 수 없으면 음수입니다.|
 
-**TZ** 환경 변수가 설정된 경우 C 런타임 라이브러리는 일광 절약 시간제(DST) 계산을 구현하기 위해 미국에 적합한 규칙을 가정합니다.
+**TZ** 환경 변수가 설정 된 경우 C 런타임 라이브러리에서는 dst (일광 절약 시간) 계산을 구현 하기 위해 미국에 적절 한 규칙을 가정 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<> 또는 \<time.h>|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> 또는 \<시간>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -180,7 +180,7 @@ int main( void )
 Fri Apr 25 01:19:27 PM
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

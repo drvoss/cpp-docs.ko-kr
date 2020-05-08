@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346666"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911631"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -72,25 +72,25 @@ long double floorl(
 
 ## <a name="return-value"></a>Return Value
 
-**바닥** 함수는 *x보다*크거나 같은 가장 큰 정수값을 나타내는 부동 점 값을 반환합니다. 반환되는 오류가 없습니다.
+**Floor** 함수는 *x*보다 작거나 같은 가장 큰 정수를 나타내는 부동 소수점 값을 반환 합니다. 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|없음|_DOMAIN|
 
-**플로어에는** 스트리밍 SIMD 확장 2(SSE2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
+**floor** 는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현을 포함 합니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-C++는 오버로드를 허용하므로 **플로트** 및 **긴** **이중** 값을 가져가고 반환하는 **바닥의** 오버로드를 호출할 수 있습니다. C 프로그램에서 **바닥은** 항상 **이중을**가져와 반환합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **바닥** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **floor** 는 항상 **double**을 사용 하 고 반환 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더|
+|기능|필수 헤더|
 |--------------|---------------------|
-|**바닥,** **바닥,** **바닥**|\<math.h>|
+|**바닥**, **floorf**, **floorl**|\<math.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -129,7 +129,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

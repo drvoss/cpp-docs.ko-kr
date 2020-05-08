@@ -12,7 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351120"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912978"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -49,7 +49,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 내부 CRT 함수는 구현과 관련되어 있으며 각 릴리스 시 변경될 수 있습니다. 따라서 사용자 코드에는 사용하지 않는 것이 좋습니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -57,7 +57,7 @@ wchar_t** ___lc_locale_name_func(void);
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

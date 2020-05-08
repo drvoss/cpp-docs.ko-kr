@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333150"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914090"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -63,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 대상 개체입니다.
 
-*숫자오브엘리먼트*<br/>
+*이면 numberofelements 이벤트가*<br/>
 대상 버퍼의 크기입니다.
 
-*Src*<br/>
+*src*<br/>
 소스 개체입니다.
 
 *count*<br/>
-복사할 바이트**수(memmove_s)** 또는**문자(wmemmove_s)입니다.**
+복사할 바이트 수 (**memmove_s**) 또는 문자 수 (**wmemmove_s**)입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -78,19 +78,19 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*dest*|*숫자오브엘리먼트*|*Src*|반환 값|*가장 의 내용*|
+|*dest*|*이면 numberofelements 이벤트가*|*src*|반환 값|*대상* 의 내용|
 |------------|------------------------|-----------|------------------|------------------------|
-|**Null**|any|any|**아인발 ()에인발 (것)**|수정 안 됨|
-|any|any|**Null**|**아인발 ()에인발 (것)**|수정 안 됨|
-|any|< *횟수*|any|**ERANGE**|수정 안 됨|
+|**N**|any|any|**EINVAL**|수정 안 됨|
+|any|any|**N**|**EINVAL**|수정 안 됨|
+|any|< *수*|any|**ERANGE**|수정 안 됨|
 
 ## <a name="remarks"></a>설명
 
-복사본은 *src에서* *dest까지*문자 바이트를 *계산합니다.* 원본 영역과 대상의 일부 영역이 겹치는 경우 **memmove_s** 겹치는 영역의 원본 원본 바이트가 덮어쓰기 전에 복사되도록 합니다.
+Src의 문자 *수* 를 *src* 에서 *dest*로 복사 합니다. 원본 영역 및 대상의 일부 영역이 겹치면 **memmove_s** 겹쳐쓰기 지역에서 원래 원본 바이트가 복사 되기 전에 복사 되도록 합니다.
 
-*dest* 또는 *src가* null 포인터이거나 대상 문자열이 너무 작은 경우 이러한 함수는 [Parameter Validation에](../../c-runtime-library/parameter-validation.md) 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속할 수 있는 경우 이러한 함수는 **EINVAL을** 반환하고 **errno를** **EINVAL로**설정합니다.
+*Dest* 또는 *src* 가 null 포인터 이거나 대상 문자열이 너무 작은 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-기본적으로 이 함수의 전역 상태는 응용 프로그램에 대한 범위가 조정됩니다. 이를 변경하려면 [CRT의 전역 상태를](../global-state.md)참조하십시오.
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -137,7 +137,7 @@ Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
