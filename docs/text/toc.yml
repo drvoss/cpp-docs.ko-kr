@@ -1,0 +1,61 @@
+- name: MSVC 텍스트 및 문자열
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: 유니코드 및 멀티바이트 문자 집합(MBCS)
+  expanded: false
+  items:
+    - name: 유니코드 및 멀티바이트 문자 집합(MBCS)
+      href: ../text/unicode-and-mbcs.md
+    - name: 국가별 사용
+      href: ../text/international-enabling.md
+    - name: 국제화 전략
+      href: ../text/internationalization-strategies.md
+    - name: 로캘 및 코드 페이지
+      href: ../text/locales-and-code-pages.md
+    - name: 문자 집합 이식성의 이점
+      href: ../text/benefits-of-character-set-portability.md
+- name: 유니코드 지원
+  expanded: false
+  items:
+    - name: 유니코드 지원
+      href: ../text/support-for-unicode.md
+    - name: wmain 사용 지원
+      href: ../text/support-for-using-wmain.md
+    - name: 유니코드 프로그래밍 요약
+      href: ../text/unicode-programming-summary.md
+- name: MBCS(멀티바이트 문자 집합) 지원
+  expanded: false
+  items:
+    - name: MBCS(멀티바이트 문자 집합) 지원
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: MSVC에서 MBCS 지원
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: MBCS 프로그래밍 팁
+      expanded: false
+      items:
+        - name: MBCS 프로그래밍 팁
+          href: ../text/mbcs-programming-tips.md
+        - name: 일반적인 MBCS 프로그래밍 팁
+          href: ../text/general-mbcs-programming-advice.md
+        - name: 포인터 증가 및 감소
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: 바이트 인덱스
+          href: ../text/byte-indices.md
+        - name: 문자열의 마지막 문자
+          href: ../text/last-character-in-a-string.md
+        - name: 문자 할당
+          href: ../text/character-assignment.md
+        - name: 문자 비교
+          href: ../text/character-comparison.md
+        - name: 버퍼 오버플로
+          href: ../text/buffer-overflow.md
+- name: ANSI 지원
+  href: ../text/support-for-ansi.md
+- name: tchar.h의 제네릭 텍스트 매핑
+  expanded: false
+  items:
+    - name: tchar.h의 제네릭 텍스트 매핑
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: _MBCS 코드와 TCHAR.H 데이터 형식 사용
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: '방법: 다양한 문자열 형식 간 변환'
+  href: ../text/how-to-convert-between-various-string-types.md

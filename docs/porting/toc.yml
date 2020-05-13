@@ -1,0 +1,54 @@
+- name: Microsoft C++ 포팅 및 업그레이드 가이드
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: 이전 버전에서 프로젝트 업그레이드
+  items:
+    - name: 이전 버전에서 프로젝트 업그레이드
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: 잠재적인 업그레이드 문제 개요
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: 코드를 유니버설 CRT로 업그레이드
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: WINVER 및 _WIN32_WINNT 업데이트
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: 라이브러리 내부 요소에 대한 종속성 해결
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: 부동 소수점 마이그레이션 문제
+      href: ../porting/floating-point-migration-issues.md
+    - name: Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드
+      href: ../porting/use-native-multi-targeting.md
+    - name: C++ 기능은 Visual Studio 2019에서 사용되지 않음
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: VCBuild 및 MSBuild
+      href: ../porting/build-system-changes.md
+    - name: 타사 라이브러리 포팅
+      href: ../porting/porting-third-party-libraries.md
+    - name: 데이터 애플리케이션 포팅
+      href: ../data/data-access-programming-mfc-atl.md
+- name: C++ 코드를 업그레이드하기 위한 IDE 도구
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: Visual C++ 변경 기록 2003 - 2015
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: Visual C++ 2003~2015의 새로운 기능
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: C++ 이진 호환성 2015-2019
+  href: ../porting/binary-compat-2015-2017.md
+- name: '포팅 및 업그레이드: 예제 및 사례 연구'
+  items:
+    - name: 예제 및 사례 연구
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: '포팅 가이드: MFC Scribble'
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: '포팅 가이드: COM Spy'
+      href: ../porting/porting-guide-com-spy.md
+    - name: '포팅 가이드: Spy++'
+      href: ../porting/porting-guide-spy-increment.md
+- name: UNIX 사용자를 위한 Microsoft C++ 소개
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: Windows에서 Linux 프로그램 실행
+  href: ../porting/porting-from-unix-to-win32.md
+- name: 유니버설 Windows 플랫폼(C++)으로 포팅
+  items:
+    - name: 유니버설 Windows 플랫폼(C++)으로 포팅
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: '방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용'
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md

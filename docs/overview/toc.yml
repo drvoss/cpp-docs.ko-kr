@@ -1,0 +1,128 @@
+- name: Visual Studio의 C++
+  expanded: false
+  items:
+    - name: Visual Studio의 C++
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: Visual Studio의 C++ 개발 개요
+      href: ../overview/overview-of-cpp-development.md
+    - name: Visual Studio의 새로운 C++ 기능
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Visual Studio의 C++ 규칙 향상
+      href: ../overview/cpp-conformance-improvements.md
+    - name: Microsoft C++ 언어 규칙
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: 지원되는 대상 플랫폼
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: Visual Studio 버전의 C++ 도구 및 기능
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: 샘플
+      href: ../overview/visual-cpp-samples.md
+    - name: 도움말 및 커뮤니티
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: Visual C++ 도구 집합의 문제를 보고하는 방법
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Visual Studio C++ 자습서
+  expanded: false
+  items:
+    - name: Visual Studio에 C++ 지원 설치
+      href: ../build/vscpp-step-0-installation.md
+    - name: C++ 콘솔 앱 프로젝트 만들기 및 편집
+      href: ../build/vscpp-step-1-create.md
+    - name: C++ 콘솔 앱 프로젝트 빌드 및 실행
+      href: ../build/vscpp-step-2-build.md
+    - name: 두 번째 C++ 앱 만들기
+      href: ../get-started/tutorial-console-cpp.md
+    - name: UWP 앱 만들기
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Windows 데스크톱 애플리케이션 만들기
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: DirectX 게임 만들기
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: 프로젝트 및 빌드 시스템
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Visual Studio에서 C++ 코드 읽기 및 쓰기
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Windows 데스크톱 개발
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: UWP 개발
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: 게임 개발
+  href: ../overview/game-development-cpp.md
+- name: Linux 개발
+  href: ../linux/
+- name: 플랫폼 간 모바일 개발
+  href: ../cross-platform/
+- name: C++/CLI를 사용한 .NET 개발
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 클라우드 및 웹 프로그래밍
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: C++ 코드 포팅 및 업그레이드
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: C++ 보안 모범 사례
+  expanded: false
+  items:
+    - name: C++ 보안 모범 사례
+      href: ../security/security-best-practices-for-cpp.md
+    - name: 사용자 그룹의 멤버로 실행
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: UAC(사용자 계정 컨트롤)가 애플리케이션에 주는 영향
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: 예측 실행 부채널에 대한 C++ 개발자 지침
+      href: ../security/developer-guidance-speculative-execution.md
+- name: 참고
+  expanded: false
+  items:
+    - name: C/C++ 언어 및 표준 라이브러리
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: 언어 참조
+      expanded: false
+      items:
+        - name: 언어
+          href: ../overview/languages-cpp.md
+        - name: C 언어 참조
+          href: ../c-language/c-language-reference.md
+        - name: C++ 언어 참조
+          href: ../cpp/cpp-language-reference.md
+        - name: C/C++ 전처리기 참조
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: 컴파일러 내장 및 어셈블리 언어
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: 컴파일러 내장 함수
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: ARM 어셈블러 참조
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: MSVC 인라인 어셈블리
+          href: ../assembler/inline/inline-assembler.md
+        - name: Microsoft 매크로 어셈블러(MASM) 참조
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: .NET 및 UWP용 구성 요소 확장
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: COM 및 .NET의 C++ 특성
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: 라이브러리 참조
+      expanded: false
+      items:
+        - name: 라이브러리
+          href: ../overview/libraries-cpp.md
+        - name: C 런타임 라이브러리(CRT) 참조
+          href: ../c-runtime-library/
+        - name: C++ 표준 라이브러리 참조
+          href: ../standard-library/
+        - name: SafeInt 라이브러리
+          expanded: false
+          items:
+            - name: SafeInt 라이브러리
+              href: ../safeint/safeint-library.md
+            - name: SafeInt 클래스
+              href: ../safeint/safeint-class.md
+            - name: SafeInt 함수
+              href: ../safeint/safeint-functions.md
+            - name: SafeIntException 클래스
+              href: ../safeint/safeintexception-class.md
+        - name: MFC/ATL
+          href: ../mfc/mfc-and-atl.md
+        - name: 병렬 라이브러리
+          href: ../parallel/
+          items: null
+        - name: 데이터 액세스 라이브러리
+          href: ../data/

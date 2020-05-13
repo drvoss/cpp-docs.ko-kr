@@ -1,0 +1,742 @@
+- name: C 언어 참조
+  href: ../c-language/c-language-reference.md
+- name: C 언어 참조의 구조
+  expanded: false
+  items:
+    - name: C 언어 참조의 구조
+      href: ../c-language/organization-of-the-c-language-reference.md
+    - name: 이 설명서의 범위
+      href: ../c-language/scope-of-this-manual.md
+    - name: ANSI 규칙
+      href: ../c-language/ansi-conformance.md
+- name: C 요소
+  expanded: false
+  items:
+    - name: C 요소
+      href: ../c-language/elements-of-c.md
+    - name: C 토큰
+      expanded: false
+      items:
+        - name: C 토큰
+          href: ../c-language/c-tokens.md
+        - name: 공백 문자
+          href: ../c-language/white-space-characters.md
+        - name: C 주석
+          href: ../c-language/c-comments.md
+        - name: 토큰 계산
+          href: ../c-language/evaluation-of-tokens.md
+    - name: C 키워드
+      href: ../c-language/c-keywords.md
+    - name: C 식별자
+      expanded: false
+      items:
+        - name: C 식별자
+          href: ../c-language/c-identifiers.md
+        - name: 멀티바이트 및 와이드 문자
+          href: ../c-language/multibyte-and-wide-characters.md
+        - name: 삼중자
+          href: ../c-language/trigraphs.md
+    - name: C 상수
+      expanded: false
+      items:
+        - name: C 상수
+          href: ../c-language/c-constants.md
+        - name: C 부동 소수점 상수
+          expanded: false
+          items:
+            - name: C 부동 소수점 상수
+              href: ../c-language/c-floating-point-constants.md
+            - name: 부동 소수점 상수에 대한 제한
+              href: ../c-language/limits-on-floating-point-constants.md
+        - name: C 정수 상수
+          expanded: false
+          items:
+            - name: C 정수 상수
+              href: ../c-language/c-integer-constants.md
+            - name: 정수 형식
+              href: ../c-language/integer-types.md
+            - name: C 및 C++ 정수 제한
+              href: ../c-language/cpp-integer-limits.md
+        - name: C 문자 상수
+          expanded: false
+          items:
+            - name: C 문자 상수
+              href: ../c-language/c-character-constants.md
+            - name: 문자 형식
+              href: ../c-language/character-types.md
+            - name: 실행 문자 집합
+              href: ../c-language/execution-character-set.md
+            - name: 이스케이프 시퀀스
+              href: ../c-language/escape-sequences.md
+            - name: 8진 및 16진 문자 사양
+              href: ../c-language/octal-and-hexadecimal-character-specifications.md
+    - name: C 문자열 리터럴
+      expanded: false
+      items:
+        - name: C 문자열 리터럴
+          href: ../c-language/c-string-literals.md
+        - name: 문자열 리터럴의 형식
+          href: ../c-language/type-for-string-literals.md
+        - name: 문자열 리터럴 스토리지
+          href: ../c-language/storage-of-string-literals.md
+        - name: 문자열 리터럴 연결
+          href: ../c-language/string-literal-concatenation.md
+        - name: 최대 문자열 길이
+          href: ../c-language/maximum-string-length.md
+    - name: 문장 부호 및 특수 문자
+      href: ../c-language/punctuation-and-special-characters.md
+- name: 프로그램 구조
+  expanded: false
+  items:
+    - name: 프로그램 구조
+      href: ../c-language/program-structure.md
+    - name: 소스 파일 및 소스 프로그램
+      expanded: false
+      items:
+        - name: 원본 파일 및 원본 프로그램
+          href: ../c-language/source-files-and-source-programs.md
+        - name: 전처리기에 대한 지시문
+          href: ../c-language/directives-to-the-preprocessor.md
+        - name: C Pragma
+          href: ../c-language/c-pragmas.md
+        - name: C 선언 및 정의
+          href: ../c-language/c-declarations-and-definitions.md
+        - name: 함수 선언 및 정의
+          href: ../c-language/function-declarations-and-definitions.md
+        - name: 블록
+          href: ../c-language/blocks.md
+        - name: 예제 프로그램
+          href: ../c-language/example-program.md
+    - name: main 함수 및 프로그램 실행
+      expanded: false
+      items:
+        - name: main 함수 및 프로그램 실행
+          href: ../c-language/main-function-and-program-execution.md
+        - name: wmain 사용
+          href: ../c-language/using-wmain.md
+        - name: 인수 설명
+          href: ../c-language/argument-description.md
+        - name: 와일드카드 인수 확장
+          href: ../c-language/expanding-wildcard-arguments.md
+        - name: C 명령줄 인수 구문 분석
+          href: ../c-language/parsing-c-command-line-arguments.md
+        - name: C 명령줄 처리 사용자 지정
+          href: ../c-language/customizing-c-command-line-processing.md
+    - name: '수명, 범위, 표시 유형 및 링크'
+      expanded: false
+      items:
+        - name: '수명, 범위, 표시 유형 및 링크'
+          href: ../c-language/lifetime-scope-visibility-and-linkage.md
+        - name: 수명
+          href: ../c-language/lifetime.md
+        - name: 범위 및 표시 유형
+          href: ../c-language/scope-and-visibility.md
+        - name: 수명 및 표시 유형에 대한 요약
+          href: ../c-language/summary-of-lifetime-and-visibility.md
+        - name: 링크
+          expanded: false
+          items:
+            - name: 링크
+              href: ../c-language/linkage.md
+            - name: 내부 링크
+              href: ../c-language/internal-linkage.md
+            - name: 외부 링크
+              href: ../c-language/external-linkage.md
+            - name: 링크 없음
+              href: ../c-language/no-linkage.md
+    - name: 네임스페이스
+      href: ../c-language/name-spaces.md
+- name: 선언 및 형식
+  expanded: false
+  items:
+    - name: 선언 및 형식
+      href: ../c-language/declarations-and-types.md
+    - name: 선언 개요
+      href: ../c-language/overview-of-declarations.md
+    - name: C 스토리지 클래스
+      expanded: false
+      items:
+        - name: C 스토리지 클래스
+          href: ../c-language/c-storage-classes.md
+        - name: 외부 수준 선언에 대한 스토리지 클래스 지정자
+          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+        - name: 내부 수준 선언에 대한 스토리지 클래스 지정자
+          expanded: false
+          items:
+            - name: 내부 수준 선언에 대한 스토리지 클래스 지정자
+              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+            - name: 자동 스토리지 클래스 지정자
+              href: ../c-language/auto-storage-class-specifier.md
+            - name: register 스토리지 클래스 지정자
+              href: ../c-language/register-storage-class-specifier.md
+            - name: static 스토리지 클래스 지정자
+              href: ../c-language/static-storage-class-specifier.md
+            - name: extern 스토리지 클래스 지정자
+              href: ../c-language/extern-storage-class-specifier.md
+        - name: 함수 선언이 포함된 스토리지 클래스 지정자
+          href: ../c-language/storage-class-specifiers-with-function-declarations.md
+    - name: C 형식 지정자
+      expanded: false
+      items:
+        - name: C 형식 지정자
+          href: ../c-language/c-type-specifiers.md
+        - name: 데이터 형식 지정자 및 해당 항목
+          href: ../c-language/data-type-specifiers-and-equivalents.md
+    - name: 형식 한정자
+      href: ../c-language/type-qualifiers.md
+    - name: 선언자 및 변수 선언
+      expanded: false
+      items:
+        - name: 선언자 및 변수 선언
+          href: ../c-language/declarators-and-variable-declarations.md
+        - name: 단순 변수 선언
+          href: ../c-language/simple-variable-declarations.md
+        - name: C 열거형 선언
+          href: ../c-language/c-enumeration-declarations.md
+        - name: 구조체 선언
+          expanded: false
+          items:
+            - name: 구조체 선언
+              href: ../c-language/structure-declarations.md
+            - name: C 비트 필드
+              href: ../c-language/c-bit-fields.md
+            - name: 스토리지 및 구조체의 맞춤
+              href: ../c-language/storage-and-alignment-of-structures.md
+        - name: 공용 구조체 선언
+          expanded: false
+          items:
+            - name: 공용 구조체 선언
+              href: ../c-language/union-declarations.md
+            - name: 공용 구조체의 스토리지
+              href: ../c-language/storage-of-unions.md
+        - name: 배열 선언
+          expanded: false
+          items:
+            - name: 배열 선언
+              href: ../c-language/array-declarations.md
+            - name: 배열 스토리지
+              href: ../c-language/storage-of-arrays.md
+        - name: 포인터 선언
+          expanded: false
+          items:
+            - name: 포인터 선언
+              href: ../c-language/pointer-declarations.md
+            - name: 주소 스토리지
+              href: ../c-language/storage-of-addresses.md
+        - name: 기반 포인터 (C)
+          href: ../c-language/based-pointers-c.md
+        - name: C 추상 선언자
+          href: ../c-language/c-abstract-declarators.md
+    - name: 더 복잡한 선언자 해석
+      href: ../c-language/interpreting-more-complex-declarators.md
+    - name: 초기화
+      expanded: false
+      items:
+        - name: 초기화
+          href: ../c-language/initialization.md
+        - name: 스칼라 형식 초기화
+          href: ../c-language/initializing-scalar-types.md
+        - name: 집계 형식 초기화
+          href: ../c-language/initializing-aggregate-types.md
+        - name: 문자열 초기화
+          href: ../c-language/initializing-strings.md
+    - name: 기본 형식의 스토리지
+      expanded: false
+      items:
+        - name: 기본 형식의 저장소
+          href: ../c-language/storage-of-basic-types.md
+        - name: char 형식
+          href: ../c-language/type-char.md
+        - name: int 형식
+          href: ../c-language/type-int.md
+        - name: C 크기 조정 정수 형식
+          href: ../c-language/c-sized-integer-types.md
+        - name: float 형식
+          href: ../c-language/type-float.md
+        - name: double 형식
+          href: ../c-language/type-double.md
+        - name: long double 형식
+          href: ../c-language/type-long-double.md
+    - name: 불완전한 형식
+      href: ../c-language/incomplete-types.md
+    - name: Typedef 선언
+      href: ../c-language/typedef-declarations.md
+    - name: C 확장 스토리지 클래스 특성
+      expanded: false
+      items:
+        - name: C 확장 스토리지 클래스 특성
+          href: ../c-language/c-extended-storage-class-attributes.md
+        - name: DLL 가져오기 및 내보내기
+          href: ../c-language/dll-import-and-export.md
+        - name: Naked (C)
+          href: ../c-language/naked-c.md
+        - name: 스레드 로컬 스토리지
+          href: ../c-language/thread-local-storage.md
+- name: 식 및 할당
+  expanded: false
+  items:
+    - name: 식 및 할당
+      href: ../c-language/expressions-and-assignments.md
+    - name: 피연산자 및 식
+      expanded: false
+      items:
+        - name: 피연산자 및 식
+          href: ../c-language/operands-and-expressions.md
+        - name: C 기본 식
+          expanded: false
+          items:
+            - name: C 기본 식
+              href: ../c-language/c-primary-expressions.md
+            - name: 기본 식의 식별자
+              href: ../c-language/identifiers-in-primary-expressions.md
+            - name: 기본 식의 상수
+              href: ../c-language/constants-in-primary-expressions.md
+            - name: 기본 식의 문자열 리터럴
+              href: ../c-language/string-literals-in-primary-expressions.md
+            - name: 괄호를 사용한 식
+              href: ../c-language/expressions-in-parentheses.md
+        - name: L-value 및 R-value 식
+          href: ../c-language/l-value-and-r-value-expressions.md
+        - name: C 상수 식
+          href: ../c-language/c-constant-expressions.md
+        - name: 식 계산 (C)
+          expanded: false
+          items:
+            - name: 식 계산 (C)
+              href: ../c-language/expression-evaluation-c.md
+            - name: 파생 작업
+              href: ../c-language/side-effects.md
+            - name: C 시퀀스 포인트
+              href: ../c-language/c-sequence-points.md
+    - name: C 연산자
+      expanded: false
+      items:
+        - name: C 연산자
+          href: ../c-language/c-operators.md
+        - name: 우선 순위 및 식 평가 순서
+          href: ../c-language/precedence-and-order-of-evaluation.md
+        - name: 일반적인 산술 변환
+          href: ../c-language/usual-arithmetic-conversions.md
+        - name: 후위 연산자
+          expanded: false
+          items:
+            - name: 후위 연산자
+              href: ../c-language/postfix-operators.md
+            - name: 1차원 배열
+              href: ../c-language/one-dimensional-arrays.md
+            - name: 다차원 배열 (C)
+              href: ../c-language/multidimensional-arrays-c.md
+            - name: 함수 호출 (C)
+              href: ../c-language/function-call-c.md
+            - name: 구조체 및 공용 구조체 멤버
+              href: ../c-language/structure-and-union-members.md
+            - name: C 후위 증가 및 감소 연산자
+              href: ../c-language/c-postfix-increment-and-decrement-operators.md
+        - name: C 단항 연산자
+          expanded: false
+          items:
+            - name: C 단항 연산자
+              href: ../c-language/c-unary-operators.md
+            - name: 전위 증가 및 감소 연산자
+              href: ../c-language/prefix-increment-and-decrement-operators.md
+            - name: 간접 참조 및 주소 연산자
+              href: ../c-language/indirection-and-address-of-operators.md
+            - name: 단항 산술 연산자
+              href: ../c-language/unary-arithmetic-operators.md
+            - name: sizeof 연산자 (C)
+              href: ../c-language/sizeof-operator-c.md
+        - name: 캐스트 연산자
+          href: ../c-language/cast-operators.md
+        - name: C 곱하기 연산자
+          href: ../c-language/c-multiplicative-operators.md
+        - name: C 가감 연산자
+          expanded: false
+          items:
+            - name: C 가감 연산자
+              href: ../c-language/c-additive-operators.md
+            - name: 더하기(+)
+              href: ../c-language/addition-plus.md
+            - name: 빼기(–)
+              href: ../c-language/subtraction-minus.md
+            - name: 가감 연산자 사용
+              href: ../c-language/using-the-additive-operators.md
+            - name: 포인터 산술 연산
+              href: ../c-language/pointer-arithmetic.md
+        - name: 비트 시프트 연산자
+          href: ../c-language/bitwise-shift-operators.md
+        - name: C 관계 및 같음 연산자
+          href: ../c-language/c-relational-and-equality-operators.md
+        - name: C 비트 연산자
+          href: ../c-language/c-bitwise-operators.md
+        - name: C 논리 연산자
+          href: ../c-language/c-logical-operators.md
+        - name: 조건식 연산자
+          href: ../c-language/conditional-expression-operator.md
+        - name: C 할당 연산자
+          expanded: false
+          items:
+            - name: C 할당 연산자
+              href: ../c-language/c-assignment-operators.md
+            - name: 단순 할당 (C)
+              href: ../c-language/simple-assignment-c.md
+            - name: C 복합 할당
+              href: ../c-language/c-compound-assignment.md
+        - name: 순차적 계산 연산자
+          href: ../c-language/sequential-evaluation-operator.md
+    - name: 형식 변환 (C)
+      expanded: false
+      items:
+        - name: 형식 변환 (C)
+          href: ../c-language/type-conversions-c.md
+        - name: 할당 변환
+          expanded: false
+          items:
+            - name: 할당 변환
+              href: ../c-language/assignment-conversions.md
+            - name: 부호 있는 정수 계열 형식에서 변환
+              href: ../c-language/conversions-from-signed-integral-types.md
+            - name: 부호 없는 정수 계열 형식에서 변환
+              href: ../c-language/conversions-from-unsigned-integral-types.md
+            - name: 부동 소수점 형식에서 변환
+              href: ../c-language/conversions-from-floating-point-types.md
+            - name: 포인터 형식과의 변환
+              href: ../c-language/conversions-to-and-from-pointer-types.md
+            - name: 다른 형식에서 변환
+              href: ../c-language/conversions-from-other-types.md
+        - name: 형식 캐스팅 변환
+          href: ../c-language/type-cast-conversions.md
+        - name: 함수 호출 변환
+          href: ../c-language/function-call-conversions.md
+- name: 문 (C)
+  expanded: false
+  items:
+    - name: 문 (C)
+      href: ../c-language/statements-c.md
+    - name: C 문 개요
+      href: ../c-language/overview-of-c-statements.md
+    - name: break 문 (C)
+      href: ../c-language/break-statement-c.md
+    - name: 복합 문 (C)
+      href: ../c-language/compound-statement-c.md
+    - name: continue 문 (C)
+      href: ../c-language/continue-statement-c.md
+    - name: do-while 문 (C)
+      href: ../c-language/do-while-statement-c.md
+    - name: 식 문 (C)
+      href: ../c-language/expression-statement-c.md
+    - name: for 문 (C)
+      href: ../c-language/for-statement-c.md
+    - name: goto 및 레이블 문 (C)
+      href: ../c-language/goto-and-labeled-statements-c.md
+    - name: if 문 (C)
+      href: ../c-language/if-statement-c.md
+    - name: Null 문 (C)
+      href: ../c-language/null-statement-c.md
+    - name: return 문 (C)
+      href: ../c-language/return-statement-c.md
+    - name: switch 문 (C)
+      href: ../c-language/switch-statement-c.md
+    - name: try-except 문 (C)
+      href: ../c-language/try-except-statement-c.md
+    - name: try-finally 문 (C)
+      href: ../c-language/try-finally-statement-c.md
+    - name: while 문 (C)
+      href: ../c-language/while-statement-c.md
+- name: 함수 (C)
+  expanded: false
+  items:
+    - name: 함수 (C)
+      href: ../c-language/functions-c.md
+    - name: 함수 개요
+      expanded: false
+      items:
+        - name: 함수 개요
+          href: ../c-language/overview-of-functions.md
+        - name: 사용되지 않는 함수 선언 및 정의 폼
+          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+    - name: C 함수 정의
+      expanded: false
+      items:
+        - name: C 함수 정의
+          href: ../c-language/c-function-definitions.md
+        - name: 함수 특성
+          expanded: false
+          items:
+            - name: 함수 특성
+              href: ../c-language/function-attributes.md
+            - name: 호출 규칙 지정
+              href: ../c-language/specifying-calling-conventions.md
+            - name: 인라인 함수
+              href: ../c-language/inline-functions.md
+            - name: 인라인 어셈블러 (C)
+              href: ../c-language/inline-assembler-c.md
+        - name: DLL 가져오기 및 내보내기 함수
+          expanded: false
+          items:
+            - name: DLL 가져오기 및 내보내기 함수
+              href: ../c-language/dll-import-and-export-functions.md
+            - name: 선언 및 정의 (C)
+              href: ../c-language/definitions-and-declarations-c.md
+            - name: dllexport 및 dllimport로 인라인 C 함수 정의
+              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+            - name: dllimport-dllexport에 대한 규칙 및 제한
+              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+        - name: Naked 함수
+          expanded: false
+          items:
+            - name: Naked 함수
+              href: ../c-language/naked-functions.md
+            - name: Naked 함수 사용에 대한 규칙 및 제한
+              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+            - name: 프롤로그-에필로그 코드를 작성할 때 고려 사항
+              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+        - name: 스토리지 클래스
+          href: ../c-language/storage-class.md
+        - name: 반환 형식
+          href: ../c-language/return-type.md
+        - name: 매개 변수
+          href: ../c-language/parameters.md
+        - name: 함수 본문
+          href: ../c-language/function-body.md
+    - name: 함수 프로토타입
+      href: ../c-language/function-prototypes.md
+    - name: 함수 호출
+      expanded: false
+      items:
+        - name: 함수 호출
+          href: ../c-language/function-calls.md
+        - name: 인수
+          href: ../c-language/arguments.md
+        - name: 가변적인 개수의 인수를 사용하여 호출
+          href: ../c-language/calls-with-a-variable-number-of-arguments.md
+        - name: 재귀 함수
+          href: ../c-language/recursive-functions.md
+- name: C 언어 구문 요약
+  expanded: false
+  items:
+    - name: C 언어 구문 요약
+      href: ../c-language/c-language-syntax-summary.md
+    - name: 정의 및 규칙
+      href: ../c-language/definitions-and-conventions.md
+    - name: 어휘 문법
+      expanded: false
+      items:
+        - name: 어휘 문법
+          href: ../c-language/lexical-grammar.md
+        - name: 토큰 요약
+          href: ../c-language/summary-of-tokens.md
+        - name: 키워드 요약
+          href: ../c-language/summary-of-keywords.md
+        - name: 식별자 요약
+          href: ../c-language/summary-of-identifiers.md
+        - name: 상수 요약
+          href: ../c-language/summary-of-constants.md
+        - name: 문자열 리터럴 요약
+          href: ../c-language/summary-of-string-literals.md
+        - name: 연산자 (C)
+          href: ../c-language/operators-c.md
+        - name: 문장 부호
+          href: ../c-language/punctuators.md
+    - name: 구 구조 문법
+      expanded: false
+      items:
+        - name: 구 구조 문법
+          href: ../c-language/phrase-structure-grammar.md
+        - name: 식 요약
+          href: ../c-language/summary-of-expressions.md
+        - name: 선언 요약
+          href: ../c-language/summary-of-declarations.md
+        - name: 문 요약
+          href: ../c-language/summary-of-statements.md
+        - name: 외부 정의
+          href: ../c-language/external-definitions.md
+- name: 구현 정의 동작
+  expanded: false
+  items:
+    - name: 구현 정의 동작
+      href: ../c-language/implementation-defined-behavior.md
+    - name: '변환: 진단'
+      href: ../c-language/translation-diagnostics.md
+    - name: 환경
+      expanded: false
+      items:
+        - name: 환경
+          href: ../c-language/environment.md
+        - name: main에 대한 인수
+          href: ../c-language/arguments-to-main.md
+        - name: 대화형 디바이스
+          href: ../c-language/interactive-devices.md
+    - name: 식별자 동작
+      expanded: false
+      items:
+        - name: 식별자 동작
+          href: ../c-language/behavior-of-identifiers.md
+        - name: 외부 링크가 없는 중요한 문자
+          href: ../c-language/significant-characters-without-external-linkage.md
+        - name: 외부 링크가 있는 중요한 문자
+          href: ../c-language/significant-characters-with-external-linkage.md
+        - name: 대문자와 소문자
+          href: ../c-language/uppercase-and-lowercase.md
+    - name: 문자
+      expanded: false
+      items:
+        - name: 문자
+          href: ../c-language/characters.md
+        - name: ASCII 문자 집합
+          href: ../c-language/ascii-character-set.md
+        - name: 멀티바이트 문자
+          href: ../c-language/multibyte-characters.md
+        - name: 문자당 비트
+          href: ../c-language/bits-per-character.md
+        - name: 문자 집합1
+          href: ../c-language/character-sets1.md
+        - name: 나타낼 수 없는 문자 상수
+          href: ../c-language/unrepresented-character-constants.md
+        - name: 와이드 문자
+          href: ../c-language/wide-characters.md
+        - name: 멀티바이트 문자 변환
+          href: ../c-language/converting-multibyte-characters.md
+        - name: char 값의 범위
+          href: ../c-language/range-of-char-values.md
+    - name: 정수
+      expanded: false
+      items:
+        - name: 정수
+          href: ../c-language/integers.md
+        - name: 정수 값의 범위
+          href: ../c-language/range-of-integer-values.md
+        - name: 정수 강등
+          href: ../c-language/demotion-of-integers.md
+        - name: 부호 있는 비트 연산
+          href: ../c-language/signed-bitwise-operations.md
+        - name: 나머지
+          href: ../c-language/remainders.md
+        - name: 오른쪽 시프트
+          href: ../c-language/right-shifts.md
+    - name: 부동 소수점의 수학
+      expanded: false
+      items:
+        - name: 부동 소수점의 수학
+          href: ../c-language/floating-point-math.md
+        - name: 값
+          href: ../c-language/values.md
+        - name: 정수를 부동 소수점 값으로 캐스팅
+          href: ../c-language/casting-integers-to-floating-point-values.md
+        - name: 부동 소수점 값 잘라내기
+          href: ../c-language/truncation-of-floating-point-values.md
+    - name: 배열 및 포인터
+      expanded: false
+      items:
+        - name: 배열 및 포인터
+          href: ../c-language/arrays-and-pointers.md
+        - name: 가장 큰 배열 크기
+          href: ../c-language/largest-array-size.md
+        - name: 포인터 빼기
+          href: ../c-language/pointer-subtraction.md
+    - name: '레지스터: 레지스터의 가용성'
+      href: ../c-language/registers-availability-of-registers.md
+    - name: '구조체, 공용 구조체, 열거형 및 비트 필드'
+      expanded: false
+      items:
+        - name: '구조체, 공용 구조체, 열거형 및 비트 필드'
+          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+        - name: 공용 구조체에 대한 부적절한 액세스
+          href: ../c-language/improper-access-to-a-union.md
+        - name: 구조체 멤버 채우기 및 맞춤
+          href: ../c-language/padding-and-alignment-of-structure-members.md
+        - name: 비트 필드의 부호
+          href: ../c-language/sign-of-bit-fields.md
+        - name: 비트 필드의 스토리지
+          href: ../c-language/storage-of-bit-fields.md
+        - name: 열거형 형식
+          href: ../c-language/enum-type.md
+    - name: '한정자: 휘발성 개체에 대한 액세스'
+      href: ../c-language/qualifiers-access-to-volatile-objects.md
+    - name: '선언자: 최대 수'
+      href: ../c-language/declarators-maximum-number.md
+    - name: '문: Switch 문의 제한'
+      href: ../c-language/statements-limits-on-switch-statements.md
+    - name: 전처리 지시문
+      expanded: false
+      items:
+        - name: 전처리 지시문
+          href: ../c-language/preprocessing-directives.md
+        - name: 문자 상수 및 조건부 포함
+          href: ../c-language/character-constants-and-conditional-inclusion.md
+        - name: 대괄호로 묶은 파일 이름 포함
+          href: ../c-language/including-bracketed-filenames.md
+        - name: 따옴표로 묶은 파일 이름 포함
+          href: ../c-language/including-quoted-filenames.md
+        - name: 문자 시퀀스
+          href: ../c-language/character-sequences.md
+        - name: Pragma
+          href: ../c-language/pragmas.md
+        - name: 기본 날짜 및 시간
+          href: ../c-language/default-date-and-time.md
+    - name: 라이브러리 함수
+      expanded: false
+      items:
+        - name: 라이브러리 함수
+          href: ../c-language/library-functions.md
+        - name: NULL 매크로
+          href: ../c-language/null-macro.md
+        - name: assert 함수에서 진단 인쇄
+          href: ../c-language/diagnostic-printed-by-the-assert-function.md
+        - name: 문자 테스트
+          href: ../c-language/character-testing.md
+        - name: 도메인 오류
+          href: ../c-language/domain-errors.md
+        - name: 부동 소수점 값 언더플로
+          href: ../c-language/underflow-of-floating-point-values.md
+        - name: fmod 함수
+          href: ../c-language/fmod-function.md
+        - name: 신호 함수 (C)
+          href: ../c-language/signal-function-c.md
+        - name: 기본 신호
+          href: ../c-language/default-signals.md
+        - name: 줄 바꿈 문자 종료
+          href: ../c-language/terminating-newline-characters.md
+        - name: 빈 줄
+          href: ../c-language/blank-lines.md
+        - name: Null 문자
+          href: ../c-language/null-characters.md
+        - name: 추가 모드의 파일 위치
+          href: ../c-language/file-position-in-append-mode.md
+        - name: 텍스트 파일 잘라내기
+          href: ../c-language/truncation-of-text-files.md
+        - name: 파일 버퍼링
+          href: ../c-language/file-buffering.md
+        - name: 길이가 0인 파일
+          href: ../c-language/zero-length-files.md
+        - name: 파일 이름
+          href: ../c-language/filenames.md
+        - name: 파일 액세스 제한
+          href: ../c-language/file-access-limits.md
+        - name: 열려 있는 파일 삭제
+          href: ../c-language/deleting-open-files.md
+        - name: 이미 있는 이름으로 바꾸기
+          href: ../c-language/renaming-with-a-name-that-exists.md
+        - name: 포인터 값 읽기
+          href: ../c-language/reading-pointer-values.md
+        - name: 범위 읽기
+          href: ../c-language/reading-ranges.md
+        - name: 파일 위치 오류
+          href: ../c-language/file-position-errors.md
+        - name: perror 함수에서 생성된 메시지
+          href: ../c-language/messages-generated-by-the-perror-function.md
+        - name: 0 메모리 할당
+          href: ../c-language/allocating-zero-memory.md
+        - name: abort 함수 (C)
+          href: ../c-language/abort-function-c.md
+        - name: atexit 함수 (C)
+          href: ../c-language/atexit-function-c.md
+        - name: 환경 이름
+          href: ../c-language/environment-names.md
+        - name: 시스템 함수
+          href: ../c-language/system-function.md
+        - name: strerror 함수
+          href: ../c-language/strerror-function.md
+        - name: 표준 시간대
+          href: ../c-language/time-zone.md
+        - name: clock 함수 (C)
+          href: ../c-language/clock-function-c.md

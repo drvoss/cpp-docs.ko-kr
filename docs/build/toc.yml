@@ -1,0 +1,1462 @@
+- name: 프로젝트 및 빌드 시스템
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Visual Studio 프로젝트 - C++
+  expanded: false
+  items:
+    - name: Visual Studio 프로젝트 - C++
+      href: ../build/creating-and-managing-visual-cpp-projects.md
+    - name: Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정
+      expanded: false
+      items:
+        - name: Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정
+          href: ../build/working-with-project-properties.md
+        - name: Visual Studio 프로젝트 설정 공유 또는 재사용
+          href: ../build/create-reusable-property-configurations.md
+        - name: 프로젝트 속성 상속
+          href: ../build/project-property-inheritance.md
+        - name: 프로젝트 파일을 변경하지 않고 속성 및 대상 수정
+          href: ../build/modify-project-properties-without-changing-project-file.md
+    - name: Visual Studio 프로젝트의 Clang/LLVM(MSBuild)
+      href: ../build/clang-support-msbuild.md
+    - name: 빌드 시 참조 라이브러리 및 구성 요소
+      href: ../build/adding-references-in-visual-cpp-projects.md
+    - name: 프로젝트 출력 파일 구성
+      href: ../build/how-to-organize-project-output-files-for-builds.md
+    - name: 사용자 지정 빌드 단계 및 빌드 이벤트
+      expanded: false
+      items:
+        - name: 사용자 지정 빌드 단계 및 빌드 이벤트
+          href: ../build/understanding-custom-build-steps-and-build-events.md
+        - name: 사용자 지정 빌드 도구 지정
+          href: ../build/specifying-custom-build-tools.md
+        - name: 빌드 이벤트 지정
+          href: ../build/specifying-build-events.md
+        - name: 빌드 사용자 지정 문제 해결
+          href: ../build/troubleshooting-build-customizations.md
+        - name: 사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정
+          href: ../build/formatting-the-output-of-a-custom-build-step-or-build-event.md
+    - name: 기존 코드로 프로젝트 만들기
+      href: ../build/how-to-create-a-cpp-project-from-existing-code.md
+- name: C++의 폴더 열기 프로젝트
+  expanded: false
+  items:
+    - name: C++의 폴더 열기 프로젝트
+      href: ../build/open-folder-projects-cpp.md
+    - name: CppProperties.json 스키마 참조
+      href: ../build/cppproperties-schema-reference.md
+    - name: Tasks.vs.json 스키마 참조(C++)
+      href: ../build/tasks-vs-json-schema-reference-cpp.md
+    - name: Launch.vs.json 스키마 참조(C++)
+      href: ../build/launch-vs-schema-reference-cpp.md
+- name: CMake 프로젝트
+  expanded: false
+  items:
+    - name: CMake 프로젝트
+      href: ../build/cmake-projects-in-visual-studio.md
+    - name: '자습서: Visual Studio에서 C++ 플랫폼 간 프로젝트 만들기'
+      href: ../build/get-started-linux-cmake.md
+    - name: CMake 프로젝트의 Clang/LLVM
+      href: ../build/clang-support-cmake.md
+    - name: Linux CMake 프로젝트 구성
+      href: ../build/../linux/cmake-linux-project.md
+    - name: CMake 빌드 설정 사용자 지정
+      href: ../build/customize-cmake-settings.md
+    - name: CMake 디버깅 세션 구성
+      href: ../build/configure-cmake-debugging-sessions.md
+    - name: CMakeSettings.json 참조
+      href: ../build/cmakesettings-reference.md
+    - name: CMake 미리 정의된 구성 스키마 참조
+      href: ../build/cmake-predefined-configuration-reference.md
+- name: 'vcpkg: C++용 패키지 관리자'
+  href: ../build/vcpkg.md
+- name: C++ Build Insights
+  href: ../build-insights/get-started-with-cpp-build-insights.md
+- name: 미리 컴파일된 헤더 파일
+  href: ../build/creating-precompiled-header-files.md
+- name: C++ 릴리스 빌드
+  expanded: false
+  items:
+    - name: C++ 릴리스 빌드
+      href: ../build/release-builds.md
+    - name: '방법: 릴리스 빌드 만들기'
+      href: ../build/how-to-create-a-release-build.md
+    - name: 릴리스 빌드를 만드는 경우 일반적인 문제
+      href: ../build/common-problems-when-creating-a-release-build.md
+    - name: 릴리스 빌드 문제 해결
+      expanded: false
+      items:
+        - name: 릴리스 빌드 문제 해결
+          href: ../build/fixing-release-build-problems.md
+        - name: ASSERT 대신 VERIFY 사용
+          href: ../build/using-verify-instead-of-assert.md
+        - name: 디버그 빌드를 사용하여 메모리 덮어쓰기 확인
+          href: ../build/using-the-debug-build-to-check-for-memory-overwrite.md
+        - name: '방법: 릴리스 빌드 디버그'
+          href: ../build/how-to-debug-a-release-build.md
+        - name: 메모리 덮어쓰기 확인
+          href: ../build/checking-for-memory-overwrites.md
+    - name: 코드 최적화
+      expanded: false
+      items:
+        - name: 코드 최적화
+          href: ../build/optimizing-your-code.md
+        - name: 최적화 pragma 및 키워드
+          href: ../build/optimization-pragmas-and-keywords.md
+        - name: 컴파일러 처리량 향상
+          href: ../build/improving-compiler-throughput.md
+        - name: 부동 소수점 숫자의 정밀도가 떨어지는 이유
+          href: ../build/why-floating-point-numbers-may-lose-precision.md
+        - name: IEEE 부동 소수점 표시
+          href: ../build/ieee-floating-point-representation.md
+        - name: 시간이 중요한 코드를 개선하기 위한 팁
+          href: ../build/tips-for-improving-time-critical-code.md
+        - name: 함수 이름을 () 없이 사용하면 코드가 생성되지 않음
+          href: ../build/using-function-name-without-parens-produces-no-code.md
+        - name: 최적화에 유용한 정보
+          href: ../build/optimization-best-practices.md
+        - name: 프로필 기반 최적화
+          expanded: false
+          items:
+            - name: 프로필 기반 최적화
+              href: ../build/profile-guided-optimizations.md
+            - name: 프로필 기반 최적화 환경 변수
+              href: ../build/environment-variables-for-profile-guided-optimizations.md
+            - name: PgoAutoSweep
+              href: ../build/pgoautosweep.md
+            - name: pgomgr
+              href: ../build/pgomgr.md
+            - name: pgosweep
+              href: ../build/pgosweep.md
+            - name: '방법: 여러 개의 PGO 프로필을 단일 프로필로 병합'
+              href: ../build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
+- name: 명령줄에서 MSVC 도구 집합 사용
+  expanded: false
+  items:
+    - name: 명령줄에서 MSVC 도구 집합 사용
+      href: ../build/building-on-the-command-line.md
+    - name: '연습: 명령줄에서 네이티브 C++ 프로그램 컴파일'
+      href: ../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+    - name: '연습: 명령줄에서 C 프로그램 컴파일'
+      href: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+    - name: '연습: 명령줄에서 C++/CLI 프로그램 컴파일'
+      href: ../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+    - name: '연습: 명령줄에서 C++/CX 프로그램 컴파일'
+      href: ../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+    - name: 명령줄 빌드에 맞는 경로 및 환경 변수 설정
+      href: ../build/setting-the-path-and-environment-variables-for-command-line-builds.md
+- name: 명령줄에서 MSBuild 사용
+  expanded: false
+  items:
+    - name: 명령줄에서 MSBuild 사용
+      href: ../build/msbuild-visual-cpp.md
+    - name: '연습: MSBuild를 사용하여 C++ 프로젝트 만들기'
+      href: ../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
+    - name: '방법: MSBuild 프로젝트에서 빌드 이벤트 사용'
+      href: ../build/how-to-use-build-events-in-msbuild-projects.md
+    - name: '방법: MSBuild 프로젝트에 사용자 지정 빌드 단계 추가'
+      href: ../build/how-to-add-a-custom-build-step-to-msbuild-projects.md
+    - name: '방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가'
+      href: ../build/how-to-add-custom-build-tools-to-msbuild-projects.md
+    - name: '방법: 프로젝트 속성에 사용자 지정 도구 통합'
+      href: ../build/how-to-integrate-custom-tools-into-the-project-properties.md
+    - name: '방법: 대상 프레임워크 및 플랫폼 도구 집합 수정'
+      href: ../build/how-to-modify-the-target-framework-and-platform-toolset.md
+- name: '연습: 정적 라이브러리 만들기 및 사용 (C++)'
+  href: ../build/walkthrough-creating-and-using-a-static-library-cpp.md
+- name: Visual Studio에서 C++ DLL 빌드
+  expanded: false
+  items:
+    - name: Visual Studio에서 C++ DLL 빌드
+      href: ../build/dlls-in-visual-cpp.md
+    - name: '연습: 동적 연결 라이브러리 만들기 및 사용(C++)'
+      href: ../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+    - name: DLL 종류
+      expanded: false
+      items:
+        - name: DLL 종류
+          href: ../build/kinds-of-dlls.md
+        - name: '비 MFC DLL: 개요'
+          href: ../build/non-mfc-dlls-overview.md
+        - name: 정적으로 MFC에 링크된 기본 MFC DLL
+          href: ../build/regular-dlls-statically-linked-to-mfc.md
+        - name: 동적으로 MFC에 링크된 기본 MFC DLL
+          href: ../build/regular-dlls-dynamically-linked-to-mfc.md
+        - name: 'MFC 확장 DLL: 개요'
+          href: ../build/extension-dlls-overview.md
+    - name: MFC DLL 관련 질문과 대답
+      href: ../build/dll-frequently-asked-questions.md
+    - name: DLL에 실행 파일 링크
+      href: ../build/linking-an-executable-to-a-dll.md
+    - name: DLL 및 MSVC 런타임 라이브러리 동작
+      href: ../build/run-time-library-behavior.md
+    - name: LoadLibrary 및 AfxLoadLibrary
+      href: ../build/loadlibrary-and-afxloadlibrary.md
+    - name: GetProcAddress
+      href: ../build/getprocaddress.md
+    - name: FreeLibrary 및 AfxFreeLibrary
+      href: ../build/freelibrary-and-afxfreelibrary.md
+    - name: 동적으로 MFC에 링크된 기본 MFC DLL의 모듈 상태
+      href: ../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md
+    - name: MFC 확장 DLL
+      expanded: false
+      items:
+        - name: MFC 확장 DLL
+          href: ../build/extension-dlls.md
+        - name: '기본 MFC DLL에서 데이터베이스, OLE 및 소켓 MFC 확장 DLL 사용'
+          href: ../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md
+    - name: 리소스 전용 DLL 만들기
+      href: ../build/creating-a-resource-only-dll.md
+    - name: 'MFC 애플리케이션의 지역화된 리소스: 위성 DLL'
+      href: ../build/localized-resources-in-mfc-applications-satellite-dlls.md
+    - name: 가져오기 및 내보내기
+      expanded: false
+      items:
+        - name: 가져오기 및 내보내기
+          href: ../build/importing-and-exporting.md
+        - name: 애플리케이션으로 가져오기
+          expanded: false
+          items:
+            - name: 애플리케이션으로 가져오기
+              href: ../build/importing-into-an-application.md
+            - name: __declspec(dllimport)을 사용하여 애플리케이션으로 가져오기
+              href: ../build/importing-into-an-application-using-declspec-dllimport.md
+            - name: __declspec(dllimport)을 사용하여 함수 호출 가져오기
+              href: ../build/importing-function-calls-using-declspec-dllimport.md
+            - name: __declspec(dllimport)을 사용하여 데이터 가져오기
+              href: ../build/importing-data-using-declspec-dllimport.md
+            - name: DEF 파일을 사용하여 가져오기
+              href: ../build/importing-using-def-files.md
+        - name: DLL에서 내보내기
+          expanded: false
+          items:
+            - name: DLL에서 내보내기
+              href: ../build/exporting-from-a-dll.md
+            - name: DEF 파일을 사용하여 DLL에서 내보내기
+              href: ../build/exporting-from-a-dll-using-def-files.md
+            - name: __declspec(dllexport)을 사용하여 DLL에서 내보내기
+              href: ../build/exporting-from-a-dll-using-declspec-dllexport.md
+            - name: AFX_EXT_CLASS를 사용하여 내보내기 및 가져오기
+              href: ../build/exporting-and-importing-using-afx-ext-class.md
+            - name: C 언어 실행 파일에서 사용할 C++ 함수 내보내기
+              href: ../build/exporting-cpp-functions-for-use-in-c-language-executables.md
+            - name: C 또는 C++ 언어 실행 파일에서 사용할 C 함수 내보내기
+              href: ../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md
+            - name: 사용할 내보내기 방법 결정
+              href: ../build/determining-which-exporting-method-to-use.md
+            - name: 이름 대신 서수로 DLL에서 함수 내보내기
+              href: ../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md
+        - name: 상호 가져오기
+          href: ../build/mutual-imports.md
+        - name: 인라인 함수 가져오기 및 내보내기
+          href: ../build/importing-and-exporting-inline-functions.md
+    - name: 액티브 기술 및 DLL
+      href: ../build/active-technology-and-dlls.md
+    - name: DLL의 자동화
+      href: ../build/automation-in-a-dll.md
+    - name: Visual Basic 애플리케이션에서 DLL 함수 호출
+      href: ../build/calling-dll-functions-from-visual-basic-applications.md
+- name: C/C++ 격리된 애플리케이션 및 Side-by-Side 어셈블리 빌드
+  expanded: false
+  items:
+    - name: C/C++ 격리된 애플리케이션 및 Side-by-Side 어셈블리 빌드
+      href: ../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+    - name: 격리된 애플리케이션 및 side-by-side 어셈블리 개념
+      href: ../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md
+    - name: C/C++ 격리된 애플리케이션 빌드
+      href: ../build/building-c-cpp-isolated-applications.md
+    - name: C/C++ side-by-side 어셈블리 빌드
+      href: ../build/building-c-cpp-side-by-side-assemblies.md
+    - name: '방법: 등록이 필요 없는 COM 구성 요소 빌드'
+      href: ../build/how-to-build-registration-free-com-components.md
+    - name: '방법: COM 구성 요소를 사용하는 격리된 애플리케이션 빌드'
+      href: ../build/how-to-build-isolated-applications-to-consume-com-components.md
+    - name: C/C++ 프로그램의 매니페스트 생성 이해
+      expanded: false
+      items:
+        - name: C/C++ 프로그램의 매니페스트 생성 이해
+          href: ../build/understanding-manifest-generation-for-c-cpp-programs.md
+        - name: Visual Studio에서 매니페스트 생성
+          href: ../build/manifest-generation-in-visual-studio.md
+        - name: 명령줄에서 매니페스트 생성
+          href: ../build/manifest-generation-at-the-command-line.md
+        - name: '방법: C/C++ 애플리케이션에 매니페스트 포함'
+          href: ../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
+    - name: C/C++ 격리된 애플리케이션 및 side-by-side 어셈블리 문제 해결
+      href: ../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+- name: '64비트, x64 대상에 대해 MSVC 구성'
+  expanded: false
+  items:
+    - name: '64비트, x64 대상에 대해 MSVC 구성'
+      href: ../build/configuring-programs-for-64-bit-visual-cpp.md
+    - name: '방법: 64비트, x64 플랫폼을 대상으로 C++ 프로젝트 구성'
+      href: ../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
+    - name: '방법: 명령줄에서 64비트 MSVC 도구 집합을 사용하도록 설정'
+      href: ../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
+    - name: 일반적인 MSVC 64비트 마이그레이션 문제
+      href: ../build/common-visual-cpp-64-bit-migration-issues.md
+    - name: x64 소프트웨어 규칙
+      expanded: false
+      items:
+        - name: x64 소프트웨어 규칙
+          href: ../build/x64-software-conventions.md
+        - name: x64 호출 규칙
+          href: ../build/x64-calling-convention.md
+        - name: x64 스택 사용
+          href: ../build/stack-usage.md
+        - name: x64 프롤로그 및 에필로그
+          href: ../build/prolog-and-epilog.md
+        - name: x64 예외 처리
+          href: ../build/exception-handling-x64.md
+- name: ARM 프로세서에 대한 C++ 프로젝트 구성
+  expanded: false
+  items:
+    - name: ARM 프로세서에 대한 C++ 프로젝트 구성
+      href: ../build/configuring-programs-for-arm-processors-visual-cpp.md
+    - name: 일반적인 MSVC ARM 마이그레이션 문제
+      href: ../build/common-visual-cpp-arm-migration-issues.md
+    - name: ARM ABI 규칙 개요
+      href: ../build/overview-of-arm-abi-conventions.md
+    - name: ARM64 ABI 규칙 개요
+      href: ../build/arm64-windows-abi-conventions.md
+    - name: ARM 예외 처리
+      href: ../build/arm-exception-handling.md
+    - name: ARM64 예외 처리
+      href: ../build/arm64-exception-handling.md
+- name: Windows XP용 프로그램 구성
+  href: ../build/configuring-programs-for-windows-xp.md
+- name: C/C++용 코드 분석
+  href: ../code-quality/
+- name: 컴파일러 및 빌드 도구 참조
+  expanded: false
+  items:
+    - name: C/C++ 빌드 참조
+      href: ../build/reference/c-cpp-building-reference.md
+    - name: C++ 프로젝트용 MSBuild 참조
+      expanded: false
+      items:
+        - name: C++ 프로젝트용 MSBuild 참조
+          href: ../build/reference/msbuild-reference-cpp.md
+        - name: C++ 프로젝트용 MSBuild 내부
+          href: ../build/reference/msbuild-visual-cpp-overview.md
+        - name: 빌드 명령 및 속성에 대한 일반 매크로
+          href: ../build/reference/common-macros-for-build-commands-and-properties.md
+        - name: C++ 프로젝트에 사용되는 파일 형식
+          expanded: false
+          items:
+            - name: C++ 프로젝트에 사용되는 파일 형식
+              href: ../build/reference/file-types-created-for-visual-cpp-projects.md
+            - name: 프로젝트 및 솔루션 파일
+              href: ../build/reference/project-and-solution-files.md
+            - name: C++ 프로젝트 템플릿
+              href: ../build/reference/visual-cpp-project-types.md
+            - name: C++ 새 항목 템플릿
+              href: ../build/reference/using-visual-cpp-add-new-item-templates.md
+            - name: 리소스 파일
+              href: ../build/reference/resource-files-cpp.md
+            - name: CLR 프로젝트용으로 생성된 파일
+              href: ../build/reference/files-created-for-clr-projects.md
+            - name: ATL 프로그램 또는 컨트롤 소스 및 헤더 파일
+              href: ../build/reference/atl-program-or-control-source-and-header-files.md
+            - name: MFC 프로그램 또는 컨트롤 소스 및 헤더 파일
+              href: ../build/reference/mfc-program-or-control-source-and-header-files.md
+            - name: HTML 도움말 파일
+              href: ../build/reference/help-files-html-help.md
+            - name: Winhelp 도움말 파일
+              href: ../build/reference/help-files-winhelp.md
+            - name: IntelliSense용 힌트 파일
+              href: ../build/reference/hint-files.md
+            - name: 속성 페이지 XML 파일
+              href: ../build/reference/property-page-xml-files.md
+            - name: .vcxproj 및 .props 파일 구조
+              href: ../build/reference/vcxproj-file-structure.md
+            - name: 예제 프로젝트 파일
+              href: ../build/reference/project-files.md
+            - name: .vcxproj가 파일 구조를 필터링합니다.
+              href: ../build/reference/vcxproj-filters-files.md
+        - name: C++ 프로젝트 속성 페이지
+          expanded: false
+          items:
+            - name: C++ 프로젝트 속성 참조
+              href: ../build/reference/property-pages-visual-cpp.md
+            - name: 일반 속성 페이지(프로젝트)
+              href: ../build/reference/general-property-page-project.md
+            - name: 일반 속성 페이지
+              href: ../build/reference/general-property-page-file.md
+            - name: 고급 속성 페이지
+              href: ../build/reference/advanced-property-page.md
+            - name: 디버깅 속성 페이지
+              href: ../build/reference/debugging-prop-pages.md
+            - name: VC++ 디렉터리 속성 페이지
+              href: ../build/reference/vcpp-directories-property-page.md
+            - name: C/C++ 속성 페이지
+              href: ../build/reference/c-cpp-prop-page.md
+            - name: 링커 속성 페이지
+              href: ../build/reference/linker-property-pages.md
+            - name: 명령줄 속성 페이지
+              href: ../build/reference/command-line-property-pages.md
+            - name: NMake 속성 페이지
+              href: ../build/reference/nmake-property-page.md
+            - name: 매니페스트 도구 속성 페이지
+              href: ../build/reference/manifest-tool-property-pages.md
+            - name: 리소스 속성 페이지
+              href: ../build/reference/resources-property-pages.md
+            - name: 관리되는 리소스 속성 페이지
+              href: ../build/reference/managed-resources-property-page.md
+            - name: MIDL 속성 페이지
+              href: ../build/reference/midl-property-pages.md
+            - name: 웹 참조 속성 페이지
+              href: ../build/reference/web-references-property-page.md
+            - name: XML 데이터 생성기 도구 속성 페이지
+              href: ../build/reference/xml-data-generator-tool-property-page.md
+            - name: XML 문서 생성기 도구 속성 페이지
+              href: ../build/reference/xml-document-generator-tool-property-pages.md
+            - name: '사용자 지정 빌드 단계 속성 페이지: 일반'
+              href: ../build/reference/custom-build-step-property-page-general.md
+            - name: HLSL 속성 페이지
+              href: ../build/reference/hlsl-property-pages.md
+    - name: MSVC 컴파일러 참조
+      expanded: false
+      items:
+        - name: MSVC 컴파일러 참조
+          href: ../build/reference/compiling-a-c-cpp-program.md
+        - name: MSVC 컴파일러 명령줄 구문
+          expanded: false
+          items:
+            - name: MSVC 컴파일러 명령줄 구문
+              href: ../build/reference/compiler-command-line-syntax.md
+            - name: CL 파일 이름 구문
+              href: ../build/reference/cl-filename-syntax.md
+            - name: CL 옵션 순서
+              href: ../build/reference/order-of-cl-options.md
+            - name: cl.exe의 반환 값
+              href: ../build/reference/return-value-of-cl-exe.md
+        - name: CL 환경 변수
+          href: ../build/reference/cl-environment-variables.md
+        - name: CL 명령 파일
+          href: ../build/reference/cl-command-files.md
+        - name: CL에서 링커 호출
+          href: ../build/reference/cl-invokes-the-linker.md
+        - name: MSVC 컴파일러 옵션
+          expanded: false
+          items:
+            - name: MSVC 컴파일러 옵션
+              href: ../build/reference/compiler-options.md
+            - name: 컴파일러 옵션 범주별 목록
+              href: ../build/reference/compiler-options-listed-by-category.md
+            - name: 컴파일러 옵션 사전순 목록
+              expanded: false
+              items:
+                - name: 컴파일러 옵션 사전순 목록
+                  href: ../build/reference/compiler-options-listed-alphabetically.md
+                - name: '@(컴파일러 지시 파일 지정)'
+                  href: ../build/reference/at-specify-a-compiler-response-file.md
+                - name: /AI(메타데이터 디렉터리 지정)
+                  href: ../build/reference/ai-specify-metadata-directories.md
+                - name: /analyze(코드 분석)
+                  href: ../build/reference/analyze-code-analysis.md
+                - name: /arch(최소 CPU 아키텍처)
+                  expanded: false
+                  items:
+                    - name: /arch(최소 CPU 아키텍처)
+                      href: ../build/reference/arch-minimum-cpu-architecture.md
+                    - name: /arch(x86)
+                      href: ../build/reference/arch-x86.md
+                    - name: /arch(x64)
+                      href: ../build/reference/arch-x64.md
+                    - name: /arch(ARM)
+                      href: ../build/reference/arch-arm.md
+                - name: /await(코루틴 지원 사용)
+                  href: ../build/reference/await-enable-coroutine-support.md
+                - name: /bigobj(.Obj 파일의 섹션 수 늘리기)
+                  href: ../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md
+                - name: /C(전처리 중에 주석 유지)
+                  href: ../build/reference/c-preserve-comments-during-preprocessing.md
+                - name: /c(링크 없이 컴파일)
+                  href: ../build/reference/c-compile-without-linking.md
+                - name: /cgthreads(코드 생성 스레드)
+                  href: ../build/reference/cgthreads-code-generation-threads.md
+                - name: /clr(공용 언어 런타임 컴파일)
+                  expanded: false
+                  items:
+                    - name: /clr(공용 언어 런타임 컴파일)
+                      href: ../build/reference/clr-common-language-runtime-compilation.md
+                    - name: /clr 제한
+                      href: ../build/reference/clr-restrictions.md
+                - name: /constexpr(컨트롤 constexpr 평가)
+                  href: ../build/reference/constexpr-control-constexpr-evaluation.md
+                - name: /D(전처리기 정의)
+                  href: ../build/reference/d-preprocessor-definitions.md
+                - name: /diagnostics(컴파일러 진단 옵션)
+                  href: ../build/reference/diagnostics-compiler-diagnostic-options.md
+                - name: /doc(문서 주석 처리)(C/C++)
+                  href: ../build/reference/doc-process-documentation-comments-c-cpp.md
+                - name: /E(stdout으로 전처리)
+                  href: ../build/reference/e-preprocess-to-stdout.md
+                - name: /EH(예외 처리 모델)
+                  href: ../build/reference/eh-exception-handling-model.md
+                - name: '/EP(#line 지시문 없이 stdout로 전처리)'
+                  href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
+                - name: /errorReport(내부 컴파일러 오류 보고)
+                  href: ../build/reference/errorreport-report-internal-compiler-errors.md
+                - name: /execution/charset(실행 문자 집합 설정)
+                  href: ../build/reference/execution-charset-set-execution-character-set.md
+                - name: '/experimental:module'
+                  href: ../build/reference/experimental-module.md
+                - name: '/experimental:preprocessor'
+                  href: ../build/reference/experimental-preprocessor.md
+                - name: /F(스택 크기 설정)
+                  href: ../build/reference/f-set-stack-size.md
+                - name: 출력 파일(/F) 옵션
+                  expanded: false
+                  items:
+                    - name: 출력 파일(/F) 옵션
+                      href: ../build/reference/output-file-f-options.md
+                    - name: '/FA, /Fa(목록 파일)'
+                      href: ../build/reference/fa-fa-listing-file.md
+                    - name: 경로 이름 지정
+                      href: ../build/reference/specifying-the-pathname.md
+                    - name: /FD(IDE 최소 재빌드)
+                      href: ../build/reference/fd-ide-minimal-rebuild.md
+                    - name: /Fd(프로그램 데이터베이스 파일 이름)
+                      href: ../build/reference/fd-program-database-file-name.md
+                    - name: /Fe(EXE 파일 이름 지정)
+                      href: ../build/reference/fe-name-exe-file.md
+                    - name: /Fi (출력 파일 이름 전처리)
+                      href: ../build/reference/fi-preprocess-output-file-name.md
+                    - name: /FI(강제 포함 파일 이름 지정)
+                      href: ../build/reference/fi-name-forced-include-file.md
+                    - name: /Fm(맵 파일 이름 지정)
+                      href: ../build/reference/fm-name-mapfile.md
+                    - name: /Fo(개체 파일 이름)
+                      href: ../build/reference/fo-object-file-name.md
+                    - name: /Fp(.Pch 파일 이름 지정)
+                      href: ../build/reference/fp-name-dot-pch-file.md
+                    - name: '/FR, /Fr(.Sbr 파일 만들기)'
+                      href: ../build/reference/fr-fr-create-dot-sbr-file.md
+                    - name: /FU(강제 이름 지정
+                      href: ../build/reference/fu-name-forced-hash-using-file.md
+                    - name: /Fx(삽입된 코드 병합)
+                      href: ../build/reference/fx-merge-injected-code.md
+                - name: /favor(아키텍처에 맞게 최적화)
+                  href: ../build/reference/favor-optimize-for-architecture-specifics.md
+                - name: /FC(진단 소스 코드 파일의 전체 경로)
+                  href: ../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md
+                - name: /fp(부동 소수점 동작 지정)
+                  href: ../build/reference/fp-specify-floating-point-behavior.md
+                - name: /FS(동기 PDB 쓰기 적용)
+                  href: ../build/reference/fs-force-synchronous-pdb-writes.md
+                - name: '-GA(Windows 애플리케이션 최적화)'
+                  href: ../build/reference/ga-optimize-for-windows-application.md
+                - name: '/Gd, /Gr, /Gv, /Gz(호출 규칙)'
+                  href: ../build/reference/gd-gr-gv-gz-calling-convention.md
+                - name: /Ge(스택 조사 사용)
+                  href: ../build/reference/ge-enable-stack-probes.md
+                - name: /GF(중복 문자열 제거)
+                  href: ../build/reference/gf-eliminate-duplicate-strings.md
+                - name: /GH(_pexit 후크 함수 사용)
+                  href: ../build/reference/gh-enable-pexit-hook-function.md
+                - name: /Gh(_penter 후크 함수 사용)
+                  href: ../build/reference/gh-enable-penter-hook-function.md
+                - name: /GL(전체 프로그램 최적화)
+                  href: ../build/reference/gl-whole-program-optimization.md
+                - name: /Gm(최소 다시 빌드 사용)
+                  href: ../build/reference/gm-enable-minimal-rebuild.md
+                - name: /GR(런타임 형식 정보 사용)
+                  href: ../build/reference/gr-enable-run-time-type-information.md
+                - name: /GS(버퍼 보안 검사)
+                  href: ../build/reference/gs-buffer-security-check.md
+                - name: /Gs(스택 검사 호출 제어)
+                  href: ../build/reference/gs-control-stack-checking-calls.md
+                - name: /guard(제어 흐름 보호 사용)
+                  href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '-GT(파이버 안전 스레드 로컬 스토리지 지원)'
+                  href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
+                - name: /Gw(전역 데이터 최적화)
+                  href: ../build/reference/gw-optimize-global-data.md
+                - name: /GX(예외 처리 사용)
+                  href: ../build/reference/gx-enable-exception-handling.md
+                - name: /Gy(함수 수준 링크 사용)
+                  href: ../build/reference/gy-enable-function-level-linking.md
+                - name: /GZ(스택 프레임 런타임 오류 검사 사용)
+                  href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
+                - name: /H(외부 이름 길이 제한)
+                  href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /HELP(컴파일러 명령줄 도움말)
+                  href: ../build/reference/help-compiler-command-line-help.md
+                - name: /homeparams(스택에 레지스터 매개 변수 복사)
+                  href: ../build/reference/homeparams-copy-register-parameters-to-stack.md
+                - name: /hotpatch(핫 패치 가능 이미지 만들기)
+                  href: ../build/reference/hotpatch-create-hotpatchable-image.md
+                - name: /I(추가 포함 디렉터리)
+                  href: ../build/reference/i-additional-include-directories.md
+                - name: /J(부호 없는 기본 문자 형식)
+                  href: ../build/reference/j-default-char-type-is-unsigned.md
+                - name: /JMC(내 코드만 디버깅)
+                  href: ../build/reference/jmc.md
+                - name: /kernel(커널 모드 이진 만들기)
+                  href: ../build/reference/kernel-create-kernel-mode-binary.md
+                - name: /link(옵션을 링커로 전달)
+                  href: ../build/reference/link-pass-options-to-linker.md
+                - name: /LN(MSIL 모듈 만들기)
+                  href: ../build/reference/ln-create-msil-module.md
+                - name: '/MD, /MT, /LD(런타임 라이브러리 사용)'
+                  href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: /MP(여러 프로세스로 빌드)
+                  href: ../build/reference/mp-build-with-multiple-processes.md
+                - name: /nologo(시작 배너 표시 안 함)(C/C++)
+                  href: ../build/reference/nologo-suppress-startup-banner-c-cpp.md
+                - name: /O 옵션(코드 최적화)
+                  expanded: false
+                  items:
+                    - name: /O 옵션(코드 최적화)
+                      href: ../build/reference/o-options-optimize-code.md
+                    - name: '/O1, /O2(크기 최소화, 속도 최대화)'
+                      href: ../build/reference/o1-o2-minimize-size-maximize-speed.md
+                    - name: /Ob(인라인 함수 확장)
+                      href: ../build/reference/ob-inline-function-expansion.md
+                    - name: /Od(디버그 비활성화)
+                      href: ../build/reference/od-disable-debug.md
+                    - name: /Og(전역 최적화)
+                      href: ../build/reference/og-global-optimizations.md
+                    - name: /Oi(내장 함수 만들기)
+                      href: ../build/reference/oi-generate-intrinsic-functions.md
+                    - name: '/Os, /Ot(크기 우선 코드, 속도 우선 코드)'
+                      href: ../build/reference/os-ot-favor-small-code-favor-fast-code.md
+                    - name: /Ox(대부분의 속도 최적화 사용)
+                      href: ../build/reference/ox-full-optimization.md
+                    - name: /Oy(프레임 포인터 생략)
+                      href: ../build/reference/oy-frame-pointer-omission.md
+                - name: /openmp(OpenMP 2.0 지원 활성화)
+                  href: ../build/reference/openmp-enable-openmp-2-0-support.md
+                - name: /P(파일 전처리)
+                  href: ../build/reference/p-preprocess-to-a-file.md
+                - name: /permissive-(표준 준수)
+                  href: ../build/reference/permissive-standards-conformance.md
+                - name: /Q 옵션(하위 수준 작업)
+                  expanded: false
+                  items:
+                    - name: /Q 옵션(하위 수준 작업)
+                      href: ../build/reference/q-options-low-level-operations.md
+                    - name: /Qfast_transcendentals(빠른 초월수 강제 적용)
+                      href: ../build/reference/qfast-transcendentals-force-fast-transcendentals.md
+                    - name: /QIfist(_ftol 사용 안 함)
+                      href: ../build/reference/qifist-suppress-ftol.md
+                    - name: /Qimprecise_fwaits(Try 블록 내의 fwait 제거)
+                      href: ../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
+                    - name: /QIntel-jcc-erratum
+                      href: ../build/reference/qintel-jcc-erratum.md
+                    - name: /Qpar(자동 평행화 도우미)
+                      href: ../build/reference/qpar-auto-parallelizer.md
+                    - name: /Qpar-report(자동 병렬화 도우미 보고 수준)
+                      href: ../build/reference/qpar-report-auto-parallelizer-reporting-level.md
+                    - name: /Qsafe_fp_loads
+                      href: ../build/reference/qsafe-fp-loads.md
+                    - name: /Qspectre
+                      href: ../build/reference/qspectre.md
+                    - name: /Qspectre-load
+                      href: ../build/reference/qspectre-load.md
+                    - name: /Qspectre-load-cf
+                      href: ../build/reference/qspectre-load-cf.md
+                    - name: /Qvec-report(자동 벡터화 도우미 보고 수준)
+                      href: ../build/reference/qvec-report-auto-vectorizer-reporting-level.md
+                - name: /RTC(런타임 오류 검사)
+                  href: ../build/reference/rtc-run-time-error-checks.md
+                - name: /sdl(추가 보안 검사 사용)
+                  href: ../build/reference/sdl-enable-additional-security-checks.md
+                - name: /showIncludes(포함 파일 나열)
+                  href: ../build/reference/showincludes-list-include-files.md
+                - name: /source-charset(소스 문자 집합 설정)
+                  href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /std(언어 표준 버전 지정)
+                  href: ../build/reference/std-specify-language-standard-version.md
+                - name: '/Tc, /Tp, /TC, /TP(소스 파일 형식 지정)'
+                  href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: '/U, /u(기호 정의 해제)'
+                  href: ../build/reference/u-u-undefine-symbols.md
+                - name: /utf-8(소스 및 실행 파일 문자 집합을 UTF-8로 설정)
+                  href: ../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md
+                - name: /V(버전 번호)
+                  href: ../build/reference/v-version-number.md
+                - name: /validate-charset(호환 문자에 대한 유효성 검사)
+                  href: ../build/reference/validate-charset-validate-for-compatible-characters.md
+                - name: /vd(생성 치환 비활성화)
+                  href: ../build/reference/vd-disable-construction-displacements.md
+                - name: '/vmb, /vmg(표시 메서드)'
+                  href: ../build/reference/vmb-vmg-representation-method.md
+                - name: '/vmm, /vms, /vmv(일반적인 용도 표시)'
+                  href: ../build/reference/vmm-vms-vmv-general-purpose-representation.md
+                - name: /volatile(volatile 키워드 해석)
+                  href: ../build/reference/volatile-volatile-keyword-interpretation.md
+                - name: '/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX(경고 수준)'
+                  href: ../build/reference/compiler-option-warning-level.md
+                - name: /WL(1줄 진단 사용)
+                  href: ../build/reference/wl-enable-one-line-diagnostics.md
+                - name: /Wp64(64비트 이식성 문제 검색)
+                  href: ../build/reference/wp64-detect-64-bit-portability-issues.md
+                - name: /X(표준 포함 경로 무시)
+                  href: ../build/reference/x-ignore-standard-include-paths.md
+                - name: /Y(미리 컴파일된 헤더)
+                  expanded: false
+                  items:
+                    - name: /Y(미리 컴파일된 헤더)
+                      href: ../build/reference/y-precompiled-headers.md
+                    - name: /Y-(미리 컴파일된 헤더 옵션 무시)
+                      href: ../build/reference/y-ignore-precompiled-header-options.md
+                    - name: /Yc(미리 컴파일된 헤더 파일 만들기)
+                      href: ../build/reference/yc-create-precompiled-header-file.md
+                    - name: /Yd(개체 파일에 디버그 정보 삽입)
+                      href: ../build/reference/yd-place-debug-information-in-object-file.md
+                    - name: /Yl(디버그 라이브러리에 PCH 참조 넣기)
+                      href: ../build/reference/yl-inject-pch-reference-for-debug-library.md
+                    - name: /Yu(미리 컴파일된 헤더 파일 사용)
+                      href: ../build/reference/yu-use-precompiled-header-file.md
+                - name: '-Z7, -Zi, -ZI(디버그 정보 형식)'
+                  href: ../build/reference/z7-zi-zi-debug-information-format.md
+                - name: '/Za, /Ze(언어 확장명 사용 안 함)'
+                  expanded: false
+                  items:
+                    - name: '/Za, /Ze(언어 확장명 사용 안 함)'
+                      href: ../build/reference/za-ze-disable-language-extensions.md
+                    - name: C 및 C++에 대한 Microsoft 확장
+                      href: ../build/reference/microsoft-extensions-to-c-and-cpp.md
+                - name: /Zc(규칙)
+                  expanded: false
+                  items:
+                    - name: /Zc(규칙)
+                      href: ../build/reference/zc-conformance.md
+                    - name: '/Zc:alignedNew(C++17 과다 정렬된 할당)'
+                      href: ../build/reference/zc-alignednew.md
+                    - name: '/Zc:auto(변수 형식 추론)'
+                      href: ../build/reference/zc-auto-deduce-variable-type.md
+                    - name: '/Zc:__cplusplus (업데이트된 __cplusplus 매크로 사용)'
+                      href: ../build/reference/zc-cplusplus.md
+                    - name: '/Zc:externConstexpr(extern constexpr 변수 사용)'
+                      href: ../build/reference/zc-externconstexpr.md
+                    - name: '/Zc:forScope(for 루프 범위의 강제 규칙)'
+                      href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:implicitNoexcept(암시적 예외 지정자)'
+                      href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
+                    - name: '/Zc:inline(참조되지 않은 COMDAT 제거)'
+                      href: ../build/reference/zc-inline-remove-unreferenced-comdat.md
+                    - name: '/Zc:noexceptTypes(C++17 noexcept 규칙)'
+                      href: ../build/reference/zc-noexcepttypes.md
+                    - name: '/Zc:referenceBinding(참조 바인딩 규칙 적용)'
+                      href: ../build/reference/zc-referencebinding-enforce-reference-binding-rules.md
+                    - name: '/Zc:rvalueCast(형식 변환 규칙 적용)'
+                      href: ../build/reference/zc-rvaluecast-enforce-type-conversion-rules.md
+                    - name: '/Zc:sizedDealloc(전역으로 크기가 지정된 할당 해제 함수 사용)'
+                      href: ../build/reference/zc-sizeddealloc-enable-global-sized-dealloc-functions.md
+                    - name: '/Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함)'
+                      href: ../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md
+                    - name: '/Zc:ternary(조건 연산자 규칙 적용)'
+                      href: ../build/reference/zc-ternary.md
+                    - name: '/Zc:threadSafeInit(스레드로부터 안전한 로컬 정적 초기화)'
+                      href: ../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md
+                    - name: '/Zc:throwingNew(operator new throw 가정)'
+                      href: ../build/reference/zc-throwingnew-assume-operator-new-throws.md
+                    - name: '/Zc:trigraphs(삼중자 대체)'
+                      href: ../build/reference/zc-trigraphs-trigraphs-substitution.md
+                    - name: '/Zc:twoPhase-(2단계 이름 조회를 사용하지 않도록 설정)'
+                      href: ../build/reference/zc-twophase.md
+                    - name: '/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)'
+                      href: ../build/reference/zc-wchar-t-wchar-t-is-native-type.md
+                - name: /Zf(더 빠른 PDB 생성)
+                  href: ../build/reference/zf.md
+                - name: /Zg(함수 프로토타입 생성)
+                  href: ../build/reference/zg-generate-function-prototypes.md
+                - name: /ZH(디버그 정보의 체크섬에 대한 해시 알고리즘)
+                  href: ../build/reference/zh.md
+                - name: /Zl(기본 라이브러리 이름 생략)
+                  href: ../build/reference/zl-omit-default-library-name.md
+                - name: /Zm(미리 컴파일된 헤더 메모리 할당 제한 지정)
+                  href: ../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md
+                - name: /Zo(최적화된 디버깅 향상)
+                  href: ../build/reference/zo-enhance-optimized-debugging.md
+                - name: /Zp(구조체 멤버 맞춤)
+                  href: ../build/reference/zp-struct-member-alignment.md
+                - name: /Zs(구문만 검사)
+                  href: ../build/reference/zs-syntax-check-only.md
+                - name: /ZW(Windows 런타임 컴파일)
+                  href: ../build/reference/zw-windows-runtime-compilation.md
+        - name: 컴파일러 및 링커에서의 유니코드 지원
+          href: ../build/reference/unicode-support-in-the-compiler-and-linker.md
+    - name: MSVC 링커 참조
+      expanded: false
+      items:
+        - name: MSVC 링커 참조
+          href: ../build/reference/linking.md
+        - name: MSVC 링커 옵션
+          expanded: false
+          items:
+            - name: MSVC 링커 옵션
+              href: ../build/reference/linker-options.md
+            - name: 컴파일러 제어 LINK 옵션
+              href: ../build/reference/compiler-controlled-link-options.md
+            - name: LINK 입력 파일
+              expanded: false
+              items:
+                - name: LINK 입력 파일
+                  href: ../build/reference/link-input-files.md
+                - name: 링커 입력 파일로 사용하는 .Obj 파일
+                  href: ../build/reference/dot-obj-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .netmodule 파일
+                  expanded: false
+                  items:
+                    - name: 링커 입력 파일로 사용하는 .netmodule 파일
+                      href: ../build/reference/netmodule-files-as-linker-input.md
+                    - name: .netmodule 입력 파일 형식 선택
+                      href: ../build/reference/choosing-the-format-of-netmodule-input-files.md
+                - name: 링커 입력 파일로 사용하는 .Lib 파일
+                  href: ../build/reference/dot-lib-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Exp 파일
+                  href: ../build/reference/dot-exp-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Def 파일
+                  href: ../build/reference/dot-def-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Pdb 파일
+                  href: ../build/reference/dot-pdb-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Res 파일
+                  href: ../build/reference/dot-res-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Exe 파일
+                  href: ../build/reference/dot-exe-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Txt 파일
+                  href: ../build/reference/dot-txt-files-as-linker-input.md
+                - name: 링커 입력 파일로 사용하는 .Ilk 파일
+                  href: ../build/reference/dot-ilk-files-as-linker-input.md
+            - name: LINK 출력
+              href: ../build/reference/link-output.md
+            - name: 예약어
+              href: ../build/reference/reserved-words.md
+            - name: '@(링커 지시 파일 지정)'
+              href: ../build/reference/at-specify-a-linker-response-file.md
+            - name: /ALIGN(섹션 맞춤)
+              href: ../build/reference/align-section-alignment.md
+            - name: /ALLOWBIND(DLL 바인딩 방지)
+              href: ../build/reference/allowbind-prevent-dll-binding.md
+            - name: /ALLOWISOLATION(매니페스트 조회)
+              href: ../build/reference/allowisolation-manifest-lookup.md
+            - name: /APPCONTAINER(UWP/Microsoft Store 앱)
+              href: ../build/reference/appcontainer-windows-store-app.md
+            - name: /ASSEMBLYDEBUG(DebuggableAttribute 추가)
+              href: ../build/reference/assemblydebug-add-debuggableattribute.md
+            - name: /ASSEMBLYLINKRESOURCE(.NET Framework 리소스에 대한 링크)
+              href: ../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md
+            - name: /ASSEMBLYMODULE(MSIL 모듈을 어셈블리에 추가)
+              href: ../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md
+            - name: /ASSEMBLYRESOURCE(관리되는 리소스 포함)
+              href: ../build/reference/assemblyresource-embed-a-managed-resource.md
+            - name: /BASE(기준 주소)
+              href: ../build/reference/base-base-address.md
+            - name: /CETCOMPAT(제어 흐름 적용 기술 호환 가능)
+              href: ../build/reference/cetcompat.md
+            - name: /CGTHREADS(컴파일러 스레드)
+              href: ../build/reference/cgthreads-compiler-threads.md
+            - name: /CLRIMAGETYPE(CLR 이미지 형식 지정)
+              href: ../build/reference/clrimagetype-specify-type-of-clr-image.md
+            - name: /CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
+              href: ../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md
+            - name: /CLRTHREADATTRIBUTE(CLR 스레드 특성 설정)
+              href: ../build/reference/clrthreadattribute-set-clr-thread-attribute.md
+            - name: /CLRUNMANAGEDCODECHECK(SuppressUnmanagedCodeSecurityAttribute 제거)
+              href: ../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md
+            - name: /DEBUG(디버깅 정보 생성)
+              href: ../build/reference/debug-generate-debug-info.md
+            - name: /DEBUGTYPE(디버그 정보 옵션)
+              href: ../build/reference/debugtype-debug-info-options.md
+            - name: /DEF(모듈 정의 파일 지정)
+              href: ../build/reference/def-specify-module-definition-file.md
+            - name: /DEFAULTLIB(기본 라이브러리 지정)
+              href: ../build/reference/defaultlib-specify-default-library.md
+            - name: /DELAY(가져오기 설정 로드 지연)
+              href: ../build/reference/delay-delay-load-import-settings.md
+            - name: /DELAYLOAD(가져오기 로드 지연)
+              href: ../build/reference/delayload-delay-load-import.md
+            - name: /DELAYSIGN(어셈블리에 부분적으로 서명)
+              href: ../build/reference/delaysign-partially-sign-an-assembly.md
+            - name: /DEPENDENTLOADFLAG(기본 종속 로드 플래그 설정)
+              href: ../build/reference/dependentloadflag.md
+            - name: /DLL(DLL 빌드)
+              href: ../build/reference/dll-build-a-dll.md
+            - name: /DRIVER(Windows NT 커널 모드 드라이버)
+              href: ../build/reference/driver-windows-nt-kernel-mode-driver.md
+            - name: /DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)
+              href: ../build/reference/dynamicbase-use-address-space-layout-randomization.md
+            - name: /ENTRY(진입점 기호)
+              href: ../build/reference/entry-entry-point-symbol.md
+            - name: /ERRORREPORT(내부 링커 오류 보고)
+              href: ../build/reference/errorreport-report-internal-linker-errors.md
+            - name: /EXPORT(함수 내보내기)
+              href: ../build/reference/export-exports-a-function.md
+            - name: /FILEALIGN(파일의 섹션 맞춤)
+              href: ../build/reference/filealign.md
+            - name: /FIXED(고정 기준 주소)
+              href: ../build/reference/fixed-fixed-base-address.md
+            - name: /FORCE(파일 출력 강제)
+              href: ../build/reference/force-force-file-output.md
+            - name: /FUNCTIONPADMIN(핫 패치 가능 이미지 만들기)
+              href: ../build/reference/functionpadmin-create-hotpatchable-image.md
+            - name: '/GENPROFILE, /FASTGENPROFILE(계측된 빌드 프로파일링 생성)'
+              href: ../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md
+            - name: /GUARD(보호 검사 사용)
+              href: ../build/reference/guard-enable-guard-checks.md
+            - name: /HEAP(힙 크기 설정)
+              href: ../build/reference/heap-set-heap-size.md
+            - name: /HIGHENTROPYVA(64비트 ASLR 지원)
+              href: ../build/reference/highentropyva-support-64-bit-aslr.md
+            - name: /IDLOUT(MIDL 출력 파일 이름 지정)
+              href: ../build/reference/idlout-name-midl-output-files.md
+            - name: /IGNORE(특정 경고 무시)
+              href: ../build/reference/ignore-ignore-specific-warnings.md
+            - name: /IGNOREIDL(특성을 MIDL로 처리하지 않음)
+              href: ../build/reference/ignoreidl-don-t-process-attributes-into-midl.md
+            - name: /IMPLIB(가져오기 라이브러리 이름 지정)
+              href: ../build/reference/implib-name-import-library.md
+            - name: /INCLUDE(강제 기호 참조)
+              href: ../build/reference/include-force-symbol-references.md
+            - name: /INCREMENTAL(증분 링크)
+              href: ../build/reference/incremental-link-incrementally.md
+            - name: /INTEGRITYCHECK(시그니처 확인 필요)
+              href: ../build/reference/integritycheck-require-signature-check.md
+            - name: /KEYCONTAINER(어셈블리에 서명할 키 컨테이너 지정)
+              href: ../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md
+            - name: /KEYFILE(어셈블리에 서명할 키 또는 키 쌍 지정)
+              href: ../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md
+            - name: /LARGEADDRESSAWARE(큰 주소 처리)
+              href: ../build/reference/largeaddressaware-handle-large-addresses.md
+            - name: /LIBPATH(추가 Libpath)
+              href: ../build/reference/libpath-additional-libpath.md
+            - name: /LINKREPRO(링크 발생 디렉터리 이름)
+              href: ../build/reference/linkrepro.md
+            - name: /LINKREPROTARGET(링크 발생 파일 이름)
+              href: ../build/reference/linkreprotarget.md
+            - name: /LTCG(링크 타임 코드 생성)
+              href: ../build/reference/ltcg-link-time-code-generation.md
+            - name: /MACHINE(대상 플랫폼 지정)
+              href: ../build/reference/machine-specify-target-platform.md
+            - name: /MANIFEST(side-by-side 어셈블리 매니페스트 만들기)
+              href: ../build/reference/manifest-create-side-by-side-assembly-manifest.md
+            - name: /MANIFESTDEPENDENCY(매니페스트 종속성 지정)
+              href: ../build/reference/manifestdependency-specify-manifest-dependencies.md
+            - name: /MANIFESTFILE(매니페스트 파일 이름 지정)
+              href: ../build/reference/manifestfile-name-manifest-file.md
+            - name: /MANIFESTINPUT(매니페스트 입력 지정)
+              href: ../build/reference/manifestinput-specify-manifest-input.md
+            - name: /MANIFESTUAC(매니페스트에 UAC 정보 포함)
+              href: ../build/reference/manifestuac-embeds-uac-information-in-manifest.md
+            - name: /MAP(맵파일 생성)
+              href: ../build/reference/map-generate-mapfile.md
+            - name: /MAPINFO(맵파일에 정보 포함)
+              href: ../build/reference/mapinfo-include-information-in-mapfile.md
+            - name: /MERGE(섹션 결합)
+              href: ../build/reference/merge-combine-sections.md
+            - name: /MIDL(MIDL 명령줄 옵션 지정)
+              href: ../build/reference/midl-specify-midl-command-line-options.md
+            - name: /NATVIS(PDB에 Natvis 추가)
+              href: ../build/reference/natvis-add-natvis-to-pdb.md
+            - name: /NOASSEMBLY(MSIL 모듈 만들기)
+              href: ../build/reference/noassembly-create-a-msil-module.md
+            - name: /NODEFAULTLIB(라이브러리 무시)
+              href: ../build/reference/nodefaultlib-ignore-libraries.md
+            - name: /NOENTRY(진입점 없음)
+              href: ../build/reference/noentry-no-entry-point.md
+            - name: /NOLOGO(시작 배너 표시 안 함)(링커)
+              href: ../build/reference/nologo-suppress-startup-banner-linker.md
+            - name: /NXCOMPAT(데이터 실행 방지 기능과 호환)
+              href: ../build/reference/nxcompat-compatible-with-data-execution-prevention.md
+            - name: /OPT(최적화)
+              href: ../build/reference/opt-optimizations.md
+            - name: /ORDER(함수에 순서 지정)
+              href: ../build/reference/order-put-functions-in-order.md
+            - name: /OUT(출력 파일 이름)
+              href: ../build/reference/out-output-file-name.md
+            - name: /PDB(프로그램 데이터베이스 사용)
+              href: ../build/reference/pdb-use-program-database.md
+            - name: /PDBALTPATH(대체 PDB 경로 사용)
+              href: ../build/reference/pdbaltpath-use-alternate-pdb-path.md
+            - name: /PDBSTRIPPED(프라이빗 기호 제거)
+              href: ../build/reference/pdbstripped-strip-private-symbols.md
+            - name: /PGD(프로필 기반 최적화를 위한 데이터베이스 지정)
+              href: ../build/reference/pgd-specify-database-for-profile-guided-optimizations.md
+            - name: /POGOSAFEMODE
+              href: ../build/reference/pogosafemode-linker-option.md
+            - name: /PROFILE(성능 도구 프로파일러)
+              href: ../build/reference/profile-performance-tools-profiler.md
+            - name: /RELEASE(체크섬 설정)
+              href: ../build/reference/release-set-the-checksum.md
+            - name: /SAFESEH(이미지에 안전한 예외 처리기 포함)
+              href: ../build/reference/safeseh-image-has-safe-exception-handlers.md
+            - name: /SECTION(섹션 특성 지정)
+              href: ../build/reference/section-specify-section-attributes.md
+            - name: /SOURCELINK(PDB에 Sourcelink 파일 포함)
+              href: ../build/reference/sourcelink.md
+            - name: /STACK(스택 할당)
+              href: ../build/reference/stack-stack-allocations.md
+            - name: /STUB(MS-DOS 스텁 파일 이름)
+              href: ../build/reference/stub-ms-dos-stub-file-name.md
+            - name: /SUBSYSTEM(하위 시스템 지정)
+              href: ../build/reference/subsystem-specify-subsystem.md
+            - name: /SWAPRUN(링커 출력을 스왑 파일로 로드)
+              href: ../build/reference/swaprun-load-linker-output-to-swap-file.md
+            - name: /TLBID(TypeLib의 리소스 ID 지정)
+              href: ../build/reference/tlbid-specify-resource-id-for-typelib.md
+            - name: /TLBOUT(.TLB 파일 이름 지정)
+              href: ../build/reference/tlbout-name-dot-tlb-file.md
+            - name: '-TSAWARE(터미널 서버 인식 애플리케이션 만들기)'
+              href: ../build/reference/tsaware-create-terminal-server-aware-application.md
+            - name: /USEPROFILE
+              href: ../build/reference/useprofile.md
+            - name: /VERBOSE(진행 메시지 표시)
+              href: ../build/reference/verbose-print-progress-messages.md
+            - name: /VERSION(버전 정보)
+              href: ../build/reference/version-version-information.md
+            - name: /WHOLEARCHIVE(모든 라이브러리 개체 파일 포함)
+              href: ../build/reference/wholearchive-include-all-library-object-files.md
+            - name: /WINMD(Windows 메타데이터 생성)
+              href: ../build/reference/winmd-generate-windows-metadata.md
+            - name: /WINMDFILE(winmd 파일 지정)
+              href: ../build/reference/winmdfile-specify-winmd-file.md
+            - name: /WINMDKEYFILE(winmd 키 파일 지정)
+              href: ../build/reference/winmdkeyfile-specify-winmd-key-file.md
+            - name: /WINMDKEYCONTAINER(키 컨테이너 지정)
+              href: ../build/reference/winmdkeycontainer-specify-key-container.md
+            - name: /WINMDDELAYSIGN(winmd에 부분적으로 서명)
+              href: ../build/reference/winmddelaysign-partially-sign-a-winmd.md
+            - name: /WX(링커 경고를 오류로 처리)
+              href: ../build/reference/wx-treat-linker-warnings-as-errors.md
+        - name: 데코레이팅된 이름
+          href: ../build/reference/decorated-names.md
+        - name: 모듈 정의(.Def) 파일
+          expanded: false
+          items:
+            - name: 모듈 정의(.Def) 파일
+              href: ../build/reference/module-definition-dot-def-files.md
+            - name: 모듈 정의 문의 규칙
+              expanded: false
+              items:
+                - name: 모듈 정의 문의 규칙
+                  href: ../build/reference/rules-for-module-definition-statements.md
+                - name: EXPORTS
+                  href: ../build/reference/exports.md
+                - name: LIBRARY
+                  href: ../build/reference/library.md
+                - name: HEAPSIZE
+                  href: ../build/reference/heapsize.md
+                - name: NAME(C/C++)
+                  href: ../build/reference/name-c-cpp.md
+                - name: SECTIONS(C/C++)
+                  href: ../build/reference/sections-c-cpp.md
+                - name: STACKSIZE
+                  href: ../build/reference/stacksize.md
+                - name: STUB
+                  href: ../build/reference/stub.md
+                - name: VERSION(C/C++)
+                  href: ../build/reference/version-c-cpp.md
+        - name: 링커의 지연 로드된 DLL 지원
+          expanded: false
+          items:
+            - name: 링커의 지연 로드된 DLL 지원
+              href: ../build/reference/linker-support-for-delay-loaded-dlls.md
+            - name: 지연 로드할 DLL 지정
+              href: ../build/reference/specifying-dlls-to-delay-load.md
+            - name: 지연 로드된 DLL의 명시적 언로드
+              href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
+            - name: 가져오기 바인딩
+              href: ../build/reference/binding-imports.md
+            - name: 지연 로드된 DLL에 대한 모든 가져오기 로드
+              href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
+            - name: 오류 처리 및 알림
+              expanded: false
+              items:
+                - name: 오류 처리 및 알림
+                  href: ../build/reference/error-handling-and-notification.md
+                - name: 알림 후크
+                  href: ../build/reference/notification-hooks.md
+                - name: 오류 후크
+                  href: ../build/reference/failure-hooks.md
+                - name: DLL 로드 예외 코드(C/C++)
+                  href: ../build/reference/exceptions-c-cpp.md
+            - name: 지연 로드된 가져오기 덤프
+              href: ../build/reference/dumping-delay-loaded-imports.md
+            - name: DLL 지연 로드의 제약 조건
+              href: ../build/reference/constraints-of-delay-loading-dlls.md
+            - name: 도우미 함수 이해
+              expanded: false
+              items:
+                - name: 도우미 함수 이해
+                  href: ../build/reference/understanding-the-helper-function.md
+                - name: Visual C++ 6.0 이후 DLL 지연 로드 도우미 함수의 변경 내용
+                  href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
+                - name: '호출 규칙, 매개 변수, 반환 형식'
+                  href: ../build/reference/calling-conventions-parameters-and-return-type.md
+                - name: 구조체 및 상수 정의
+                  href: ../build/reference/structure-and-constant-definitions.md
+                - name: 필요한 값 계산
+                  href: ../build/reference/calculating-necessary-values.md
+                - name: 지연 로드된 DLL 언로드
+                  href: ../build/reference/unloading-a-delay-loaded-dll.md
+            - name: 사용자 도우미 함수 개발
+              href: ../build/reference/developing-your-own-helper-function.md
+    - name: 추가 MSVC 빌드 도구
+      expanded: false
+      items:
+        - name: 추가 MSVC 빌드 도구
+          href: ../build/reference/c-cpp-build-tools.md
+        - name: NMAKE 참조
+          expanded: false
+          items:
+            - name: NMAKE 참조
+              href: ../build/reference/nmake-reference.md
+            - name: Visual Studio의 NMAKE 프로젝트
+              href: ../build/reference/creating-a-makefile-project.md
+            - name: NMAKE 실행
+              href: ../build/reference/running-nmake.md
+            - name: 메이크파일의 내용
+              expanded: false
+              items:
+                - name: 메이크파일의 내용
+                  href: ../build/reference/contents-of-a-makefile.md
+                - name: 와일드카드와 NMAKE
+                  href: ../build/reference/wildcards-and-nmake.md
+                - name: 메이크파일의 긴 파일 이름
+                  href: ../build/reference/long-filenames-in-a-makefile.md
+                - name: 메이크파일의 주석
+                  href: ../build/reference/comments-in-a-makefile.md
+                - name: 메이크파일의 특수 문자
+                  href: ../build/reference/special-characters-in-a-makefile.md
+                - name: 샘플 메이크파일
+                  href: ../build/reference/sample-makefile.md
+            - name: 설명 블록
+              href: ../build/reference/description-blocks.md
+            - name: 메이크파일의 명령
+              expanded: false
+              items:
+                - name: 메이크파일의 명령
+                  href: ../build/reference/commands-in-a-makefile.md
+                - name: 명령 한정자
+                  href: ../build/reference/command-modifiers.md
+                - name: 파일 이름 부분 구문
+                  href: ../build/reference/filename-parts-syntax.md
+                - name: 메이크파일의 인라인 파일
+                  expanded: false
+                  items:
+                    - name: 메이크파일의 인라인 파일
+                      href: ../build/reference/inline-files-in-a-makefile.md
+                    - name: 인라인 파일 지정
+                      href: ../build/reference/specifying-an-inline-file.md
+                    - name: 인라인 파일 텍스트 만들기
+                      href: ../build/reference/creating-inline-file-text.md
+                    - name: 인라인 파일 다시 사용
+                      href: ../build/reference/reusing-inline-files.md
+                    - name: 인라인 파일이 여러 개인 경우
+                      href: ../build/reference/multiple-inline-files.md
+            - name: 매크로와 NMake
+              expanded: false
+              items:
+                - name: 매크로와 NMake
+                  href: ../build/reference/macros-and-nmake.md
+                - name: NMAKE 매크로 정의
+                  expanded: false
+                  items:
+                    - name: NMAKE 매크로 정의
+                      href: ../build/reference/defining-an-nmake-macro.md
+                    - name: 매크로의 특수 문자
+                      href: ../build/reference/special-characters-in-macros.md
+                    - name: null 및 정의되지 않은 매크로
+                      href: ../build/reference/null-and-undefined-macros.md
+                    - name: 매크로를 정의할 위치
+                      href: ../build/reference/where-to-define-macros.md
+                    - name: 매크로 정의의 우선 순위
+                      href: ../build/reference/precedence-in-macro-definitions.md
+                - name: NMAKE 매크로 사용
+                  expanded: false
+                  items:
+                    - name: NMAKE 매크로 사용
+                      href: ../build/reference/using-an-nmake-macro.md
+                    - name: 매크로 대체
+                      href: ../build/reference/macro-substitution.md
+                - name: 특수 NMAKE 매크로
+                  expanded: false
+                  items:
+                    - name: 특수 NMAKE 매크로
+                      href: ../build/reference/special-nmake-macros.md
+                    - name: 파일 이름 매크로
+                      href: ../build/reference/filename-macros.md
+                    - name: 재귀 매크로
+                      href: ../build/reference/recursion-macros.md
+                    - name: 명령 매크로와 옵션 매크로
+                      href: ../build/reference/command-macros-and-options-macros.md
+                    - name: 환경 변수 매크로
+                      href: ../build/reference/environment-variable-macros.md
+            - name: 유추 규칙
+              expanded: false
+              items:
+                - name: 유추 규칙
+                  href: ../build/reference/inference-rules.md
+                - name: 규칙 정의
+                  expanded: false
+                  items:
+                    - name: 규칙 정의
+                      href: ../build/reference/defining-a-rule.md
+                    - name: 규칙에서 경로 검색
+                      href: ../build/reference/search-paths-in-rules.md
+                - name: 일괄 처리 모드 규칙
+                  href: ../build/reference/batch-mode-rules.md
+                - name: 미리 정의된 규칙
+                  href: ../build/reference/predefined-rules.md
+                - name: 유추된 종속 파일과 규칙
+                  href: ../build/reference/inferred-dependents-and-rules.md
+                - name: 유추 규칙의 우선 순위
+                  href: ../build/reference/precedence-in-inference-rules.md
+            - name: 점 지시문
+              href: ../build/reference/dot-directives.md
+            - name: 메이크파일 전처리
+              expanded: false
+              items:
+                - name: 메이크파일 전처리
+                  href: ../build/reference/makefile-preprocessing.md
+                - name: 메이크파일 전처리 지시문
+                  href: ../build/reference/makefile-preprocessing-directives.md
+                - name: 메이크파일 전처리 식
+                  expanded: false
+                  items:
+                    - name: 메이크파일 전처리 식
+                      href: ../build/reference/expressions-in-makefile-preprocessing.md
+                    - name: 메이크파일 전처리 연산자
+                      href: ../build/reference/makefile-preprocessing-operators.md
+                    - name: 전처리에서 프로그램 실행
+                      href: ../build/reference/executing-a-program-in-preprocessing.md
+        - name: LIB 참조
+          expanded: false
+          items:
+            - name: LIB 참조
+              href: ../build/reference/lib-reference.md
+            - name: LIB 개요
+              expanded: false
+              items:
+                - name: LIB 개요
+                  href: ../build/reference/overview-of-lib.md
+                - name: '방법: Visual Studio 개발 환경에서 LIB.EXE 옵션 설정'
+                  href: ../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
+                - name: LIB 입력 파일
+                  href: ../build/reference/lib-input-files.md
+                - name: LIB 출력 파일
+                  href: ../build/reference/lib-output-files.md
+                - name: 기타 LIB 출력
+                  href: ../build/reference/other-lib-output.md
+                - name: 라이브러리 구조
+                  href: ../build/reference/structure-of-a-library.md
+            - name: LIB 실행
+              href: ../build/reference/running-lib.md
+            - name: 라이브러리 관리
+              href: ../build/reference/managing-a-library.md
+            - name: 라이브러리 멤버 추출
+              href: ../build/reference/extracting-a-library-member.md
+            - name: 가져오기 라이브러리 및 내보내기 파일을 사용한 작업
+              expanded: false
+              items:
+                - name: 가져오기 라이브러리 및 내보내기 파일을 사용한 작업
+                  href: ../build/reference/working-with-import-libraries-and-export-files.md
+                - name: 가져오기 라이브러리 및 내보내기 파일 빌드
+                  href: ../build/reference/building-an-import-library-and-export-file.md
+                - name: 가져오기 라이브러리 및 내보내기 파일 사용
+                  href: ../build/reference/using-an-import-library-and-export-file.md
+        - name: EDITBIN 참조
+          expanded: false
+          items:
+            - name: EDITBIN 참조
+              href: ../build/reference/editbin-reference.md
+            - name: EDITBIN 명령줄
+              href: ../build/reference/editbin-command-line.md
+            - name: EDITBIN 옵션
+              expanded: false
+              items:
+                - name: EDITBIN 옵션
+                  href: ../build/reference/editbin-options.md
+                - name: /ALLOWISOLATION
+                  href: ../build/reference/allowisolation.md
+                - name: /ALLOWBIND
+                  href: ../build/reference/allowbind.md
+                - name: /APPCONTAINER
+                  href: ../build/reference/appcontainer.md
+                - name: /BIND
+                  href: ../build/reference/bind.md
+                - name: /DYNAMICBASE
+                  href: ../build/reference/dynamicbase.md
+                - name: /ERRORREPORT(editbin.exe)
+                  href: ../build/reference/errorreport-editbin-exe.md
+                - name: /HEAP
+                  href: ../build/reference/heap.md
+                - name: /HIGHENTROPYVA
+                  href: ../build/reference/highentropyva.md
+                - name: /INTEGRITYCHECK
+                  href: ../build/reference/integritycheck.md
+                - name: /LARGEADDRESSAWARE
+                  href: ../build/reference/largeaddressaware.md
+                - name: /NOLOGO(EDITBIN)
+                  href: ../build/reference/nologo-editbin.md
+                - name: /NXCOMPAT
+                  href: ../build/reference/nxcompat.md
+                - name: /다시 지정
+                  href: ../build/reference/rebase.md
+                - name: /RELEASE
+                  href: ../build/reference/release.md
+                - name: /SECTION(EDITBIN)
+                  href: ../build/reference/section-editbin.md
+                - name: /STACK
+                  href: ../build/reference/stack.md
+                - name: /SUBSYSTEM
+                  href: ../build/reference/subsystem.md
+                - name: /SWAPRUN
+                  href: ../build/reference/swaprun.md
+                - name: /TSAWARE
+                  href: ../build/reference/tsaware.md
+                - name: /VERSION
+                  href: ../build/reference/version.md
+        - name: DUMPBIN 참조
+          expanded: false
+          items:
+            - name: DUMPBIN 참조
+              href: ../build/reference/dumpbin-reference.md
+            - name: DUMPBIN 명령줄
+              href: ../build/reference/dumpbin-command-line.md
+            - name: DUMPBIN 옵션
+              expanded: false
+              items:
+                - name: DUMPBIN 옵션
+                  href: ../build/reference/dumpbin-options.md
+                - name: /ALL
+                  href: ../build/reference/all.md
+                - name: /ARCHIVEMEMBERS
+                  href: ../build/reference/archivemembers.md
+                - name: /CLRHEADER
+                  href: ../build/reference/clrheader.md
+                - name: /DEPENDENTS
+                  href: ../build/reference/dependents.md
+                - name: /DIRECTIVES
+                  href: ../build/reference/directives.md
+                - name: /DISASM
+                  href: ../build/reference/disasm.md
+                - name: /ERRORREPORT(dumpbin.exe)
+                  href: ../build/reference/errorreport-dumpbin-exe.md
+                - name: /EXPORTS
+                  href: ../build/reference/dash-exports.md
+                - name: /FPO
+                  href: ../build/reference/fpo.md
+                - name: /HEADERS
+                  href: ../build/reference/headers.md
+                - name: /IMPORTS(DUMPBIN)
+                  href: ../build/reference/imports-dumpbin.md
+                - name: /LINENUMBERS
+                  href: ../build/reference/linenumbers.md
+                - name: /LINKERMEMBER
+                  href: ../build/reference/linkermember.md
+                - name: /LOADCONFIG
+                  href: ../build/reference/loadconfig.md
+                - name: /NOPDB
+                  href: ../build/reference/nopdb.md
+                - name: /OUT(DUMPBIN)
+                  href: ../build/reference/out-dumpbin.md
+                - name: /PDATA
+                  href: ../build/reference/pdata.md
+                - name: /PDBPATH
+                  href: ../build/reference/pdbpath.md
+                - name: /RANGE
+                  href: ../build/reference/range.md
+                - name: /RAWDATA
+                  href: ../build/reference/rawdata.md
+                - name: /RELOCATIONS
+                  href: ../build/reference/relocations.md
+                - name: /SECTION(DUMPBIN)
+                  href: ../build/reference/section-dumpbin.md
+                - name: /SUMMARY
+                  href: ../build/reference/summary.md
+                - name: /SYMBOLS
+                  href: ../build/reference/symbols.md
+                - name: /TLS
+                  href: ../build/reference/tls.md
+        - name: ERRLOOK 참조
+          expanded: false
+          items:
+            - name: ERRLOOK 참조
+              href: ../build/reference/errlook-reference.md
+            - name: 값 편집 컨트롤
+              href: ../build/reference/value-edit-control.md
+            - name: 오류 메시지 편집 컨트롤
+              href: ../build/reference/error-message-edit-control.md
+            - name: 모듈 단추
+              href: ../build/reference/modules-button.md
+            - name: 찾기 단추
+              href: ../build/reference/look-up-button.md
+        - name: XDCMake 참조
+          href: ../build/reference/xdcmake-reference.md
+        - name: BSCMAKE 참조
+          expanded: false
+          items:
+            - name: BSCMAKE 참조
+              href: ../build/reference/bscmake-reference.md
+            - name: '찾아보기 정보 파일 빌드: 개요'
+              href: ../build/reference/building-browse-information-files-overview.md
+            - name: .Bsc 파일 빌드
+              expanded: false
+              items:
+                - name: .Bsc 파일 빌드
+                  href: ../build/reference/building-a-dot-bsc-file.md
+                - name: .Sbr 파일 만들기
+                  href: ../build/reference/creating-an-dot-sbr-file.md
+                - name: BSCMAKE에서 .Bsc 파일을 빌드하는 방법
+                  href: ../build/reference/how-bscmake-builds-a-dot-bsc-file.md
+            - name: BSCMAKE 명령줄
+              href: ../build/reference/bscmake-command-line.md
+            - name: BSCMAKE 명령 파일(지시 파일)
+              href: ../build/reference/bscmake-command-file-response-file.md
+            - name: BSCMAKE 옵션
+              href: ../build/reference/bscmake-options.md
+            - name: BSCMAKE 종료 코드
+              href: ../build/reference/bscmake-exit-codes.md
+    - name: 컴파일러 및 빌드 도구 오류
+      href: ../error-messages/
+    - name: C++용 XML 설명서
+      expanded: false
+      items:
+        - name: C++용 XML 설명서
+          href: ../build/reference/xml-documentation-visual-cpp.md
+        - name: C++ 문서 주석에 대한 권장 태그
+          expanded: false
+          items:
+            - name: C++ 문서 주석에 대한 권장 태그
+              href: ../build/reference/recommended-tags-for-documentation-comments-visual-cpp.md
+            - name: <c>
+              href: ../build/reference/c-visual-cpp.md
+            - name: <code>
+              href: ../build/reference/code-visual-cpp.md
+            - name: <example>
+              href: ../build/reference/example-visual-cpp.md
+            - name: <exception>
+              href: ../build/reference/exception-visual-cpp.md
+            - name: <include>
+              href: ../build/reference/include-visual-cpp.md
+            - name: <list>
+              href: ../build/reference/list-visual-cpp.md
+            - name: <para>
+              href: ../build/reference/para-visual-cpp.md
+            - name: <param>
+              href: ../build/reference/param-visual-cpp.md
+            - name: <paramref>
+              href: ../build/reference/paramref-visual-cpp.md
+            - name: <permission>
+              href: ../build/reference/permission-visual-cpp.md
+            - name: <remarks>
+              href: ../build/reference/remarks-visual-cpp.md
+            - name: <returns>
+              href: ../build/reference/returns-visual-cpp.md
+            - name: <see>
+              href: ../build/reference/see-visual-cpp.md
+            - name: <seealso>
+              href: ../build/reference/seealso-visual-cpp.md
+            - name: <summary>
+              href: ../build/reference/summary-visual-cpp.md
+            - name: <value>
+              href: ../build/reference/value-visual-cpp.md
+        - name: .Xml 파일 처리
+          href: ../build/reference/dot-xml-file-processing.md
+        - name: C++ 문서 태그의 구분 기호
+          href: ../build/reference/delimiters-for-visual-cpp-documentation-tags.md
