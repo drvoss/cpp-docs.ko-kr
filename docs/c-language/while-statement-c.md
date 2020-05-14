@@ -8,11 +8,11 @@ helpviewer_keywords:
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
 ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344736"
 ---
 # <a name="while-statement-c"></a>while 문 (C)
 
@@ -45,6 +45,6 @@ while ( i >= 0 )
 
 이 예제에서는 `string2`의 문자를 `string1`에 복사합니다. `i`가 0보다 크거나 같은 경우 `string2[i]`가 `string1[i]`에 할당되고 `i`는 감소합니다. `i`가 0에 도달하거나 0 미만이면 `while` 문의 실행이 종료됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [while 문(C++)](../cpp/while-statement-cpp.md)

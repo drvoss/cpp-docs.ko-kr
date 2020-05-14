@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
 ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349608"
 ---
 # <a name="try-finally-statement-c"></a>try-finally 문 (C)
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
 `try-finally` 문은 코드 블록 실행이 중단될 때 애플리케이션에서 정리 코드가 실행되도록 보장하는 C 언어에 대한 Microsoft 확장입니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. `try-finally` 문은 루틴으로부터 중간에 반환되게 만들 수 있는 오류가 있는지 확인하기 위해 검사가 수행되는 위치가 많은 루틴에 특히 유용합니다.
 
@@ -50,6 +50,6 @@ ms.locfileid: "81349608"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [try-finally 문](../cpp/try-finally-statement.md)

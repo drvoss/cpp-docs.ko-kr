@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
 ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/16/2020
 ms.locfileid: "79422717"
@@ -27,7 +27,7 @@ ms.locfileid: "79422717"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 연습을 완료하려면 다음이 필요합니다.
+이 연습을 진행하려면 먼저 다음 작업을 수행해야 합니다.
 
 - **C++를 사용한 데스크톱 개발** 워크로드가 설치된 Visual Studio 복사본이 필요합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "79422717"
 > Visual Studio IDE를 사용하여 나중에 프로젝트 파일을 편집하려는 경우에는 이 방법을 사용하지 마십시오. .vcxproj 파일을 수동으로 만드는 경우 특히 프로젝트가 프로젝트 항목에 와일드 카드를 사용하면 Visual Studio IDE를 편집하거나 로드하지 못할 수도 있습니다.
 
 > [!NOTE]
-> 대부분의 하위 수준 빌드 지침은 **에 저장된 VCTargets 디렉터리에 정의된** .targets**및**.props`$(VCTargetsPath)` 파일에 포함되어 있습니다. Visual Studio 2019 Enterprise Edition에서 이러한 파일에 대한 기본 경로는 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props입니다.
+> 대부분의 하위 수준 빌드 지침은 `$(VCTargetsPath)`에 저장된 VCTargets 디렉터리에 정의된 **.targets** 및 **.props** 파일에 포함되어 있습니다. Visual Studio 2019 Enterprise Edition에서 이러한 파일에 대한 기본 경로는 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props입니다.
 
 ## <a name="creating-the-c-source-files"></a>C++ 원본 파일 만들기
 
@@ -233,7 +233,7 @@ MSBuild를 사용하면 미리 정의된 빌드 대상을 실행하고, 사용�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>64비트 컴파일러 및 도구와 함께 MSBuild 사용
 
-기본적으로 64비트 Windows에 Visual Studio가 설치되어 있는 경우 64비트 x64 네이티브 및 크로스 도구가 설치됩니다. `PreferredToolArchitecture` 속성을 설정하면 64비트 컴파일러 및 도구를 사용하여 애플리케이션을 빌드하도록 MSBuild를 구성할 수 있습니다. 이 속성은 프로젝트 구성 또는 플랫폼 속성에 영향을 주지 않습니다. 기본적으로, 도구의 32비트 버전이 사용됩니다. 64 비트 버전의 컴파일러 및 도구를 지정 하려면 `Microsoft.Cpp.default.props` \<Import/> 요소 다음에 Myproject 프로젝트 파일에 다음 속성 그룹 요소를 추가 합니다.
+기본적으로 64비트 Windows에 Visual Studio가 설치되어 있는 경우 64비트 x64 네이티브 및 크로스 도구가 설치됩니다. `PreferredToolArchitecture` 속성을 설정하면 64비트 컴파일러 및 도구를 사용하여 애플리케이션을 빌드하도록 MSBuild를 구성할 수 있습니다. 이 속성은 프로젝트 구성 또는 플랫폼 속성에 영향을 주지 않습니다. 기본적으로, 도구의 32비트 버전이 사용됩니다. 64비트 버전의 컴파일러 및 도구를 지정하려면 Myproject.vcxproj 프로젝트 파일에서 `Microsoft.Cpp.default.props`\<Import /> 요소 뒤에 다음 속성 그룹 요소를 추가합니다.
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ MSBuild를 사용하면 미리 정의된 빌드 대상을 실행하고, 사용�
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>다른 도구 집합과 함께 MSBuild 사용
 
-다른 버전의 Visual C++를 위한 도구 집합과 라이브러리가 설치되어 있는 경우 MSBuild는 현재 Visual C++ 버전 또는 다른 설치된 버전을 위한 애플리케이션을 빌드할 수 있습니다. 예를 들어 Visual Studio 2012을 설치한 경우 Windows XP 용 Visual C++ 11.0 도구 집합을 지정 하려면 `Microsoft.Cpp.props` \<Import/> 요소 다음에 Myproject 프로젝트 파일에 다음 속성 그룹 요소를 추가 합니다.
+다른 버전의 Visual C++를 위한 도구 집합과 라이브러리가 설치되어 있는 경우 MSBuild는 현재 Visual C++ 버전 또는 다른 설치된 버전을 위한 애플리케이션을 빌드할 수 있습니다. 예를 들어 Visual Studio 2012를 설치한 경우 Windows XP를 위한 Visual C++ 11.0 도구 집합을 지정하려면 Myproject.vcxproj 프로젝트 파일에서 `Microsoft.Cpp.props`\<Import /> 요소 뒤에 다음 속성 그룹 요소를 추가합니다.
 
 ```xml
 <PropertyGroup>

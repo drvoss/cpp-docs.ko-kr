@@ -1,5 +1,5 @@
 ---
-title: switch문 (C)
+title: switch  Statement (C)
 ms.date: 04/25/2020
 f1_keywords:
 - switch
@@ -11,35 +11,35 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
-ms.translationtype: MT
+ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587370"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825680"
 ---
-# <a name="switch-statement-c"></a>`switch`문 (C)
+# <a name="switch-statement-c"></a>`switch` Statement (C)
 
-및 __`switch`__ __`case`__ 문은 복잡 한 조건부 및 분기 작업을 제어 하는 데 도움이 됩니다. __`switch`__ 문은 해당 본문 내의 문으로 제어를 전달 합니다.
+__`switch`__ 및 __`case`__ 문은 복잡한 조건부 및 분기 작업을 제어하는 데 도움이 됩니다. __`switch`__ 문은 해당 본문 내의 문으로 제어를 전달합니다.
 
 ## <a name="syntax"></a>구문
 
-> *`selection-statement`*:<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
+> *`selection-statement`* :\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__ &nbsp; *`expression`* &nbsp; __`)`__ &nbsp; *`statement`*
 
-> *`labeled-statement`*:<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
+> *`labeled-statement`* :\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__ &nbsp; *`constant-expression`* &nbsp; __`:`__ &nbsp; *`statement`* \
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__ &nbsp; __`:`__ &nbsp; *`statement`*
 
 ## <a name="remarks"></a>설명
 
-__`switch`__ 문은의 *`expression`* 값에 따라 제어가 문 본문 *`labeled-statement`* 의 한로 전송 되도록 합니다.
+__`switch`__ 문을 통해 컨트롤은 *`expression`* 의 값에 따라 문 본문에서 하나의 *`labeled-statement`* 로 전송됩니다.
 
-및의 *`expression`* 값은 정수 *`constant-expression`* 계열 형식 이어야 합니다. 컴파일 *`constant-expression`* 시간에는 명확한 상수 정수 값이 있어야 합니다.
+*`expression`* 및 각 *`constant-expression`* 의 값은 정수 데이터 형식이어야 합니다. 컴파일 시간에는 *`constant-expression`* 에 명확한 상수 정수 값이 있어야 합니다.
 
-해당 **`case`** *`constant-expression`* 값이의 *`expression`* 값과 일치 하는 문으로 제어가 전달 됩니다. 문에 __`switch`__ 는 임의의 수의 __`case`__ 인스턴스가 포함 될 수 있습니다. 그러나 동일한 __`switch`__ 문 내의 *`constant-expression`* 두 값은 동일한 값을 가질 수 없습니다. __`switch`__ 문 본문의 실행은 일치 하 *`labeled-statement`* 는의 첫 번째 문에서 시작 합니다. 본문이 종료 될 때까지 또는 __`break`__ 문이 본문 밖으로 제어를 전송할 때까지 실행이 진행 됩니다.
+제어는 *`constant-expression`* 값이 *`expression`* 의 값과 일치하는 **`case`** 문으로 전달됩니다. __`switch`__ 문에는 임의의 수의 __`case`__ 인스턴스가 포함될 수 있습니다. 그러나 동일한 __`switch`__ 문 내의 *`constant-expression`* 값 2개가 동일한 값일 수는 없습니다. __`switch`__ 문 본문의 실행은 일치하는 *`labeled-statement`* 안에 있는 또는 뒤에 오는 첫 번째 문에서 시작합니다. 본문이 끝날 때까지 또는 __`break`__ 문이 본문 밖으로 컨트롤을 전송할 때까지 실행이 진행됩니다.
 
-__`switch`__ 문의 사용은 일반적으로 다음과 같습니다.
+__`switch`__ 문의 사용은 대개 다음과 같습니다.
 
 ```C
 switch ( expression )
@@ -56,18 +56,18 @@ switch ( expression )
 }
 ```
 
-문을 사용 __`break`__ 하 여 __`switch`__ 문 내에서 레이블이 지정 된 특정 문의 처리를 종료할 수 있습니다. __`switch`__ 문의 끝 부분으로 분기 합니다. 를 __`break`__ 사용 하지 않으면 프로그램은 __`break`__ 또는 문의 끝에 도달할 때까지 문을 실행 하 여 다음 레이블이 지정 된 문을 계속 실행 합니다. 이 연속 작업은 일부 상황에서 적합할 수 있습니다.
+__`break`__ 문을 사용하여 __`switch`__ 문 내의 레이블이 지정된 특정 문의 처리를 종료할 수 있습니다. __`switch`__ 문의 끝으로 분기됩니다. __`break`__ 가 없는 경우 프로그램은 레이블이 지정된 다음 문으로 지속되어 __`break`__ 또는 문의 끝에 도달할 때까지 문을 실행합니다. 어떤 상황에서는 이러한 지속이 바람직할 수 있습니다.
 
-값 __`default`__ 이이 아닌 경우 __`case`__ *`constant-expression`* 문이 실행 됩니다 *`expression`*. 문이 없고 __`default`__ 일치 항목을 찾을 수 없는 __`case`__ 경우 __`switch`__ 본문의 문이 실행 되지 않습니다. 문은 최대 하나만 __`default`__ 있을 수 있습니다. __`default`__ 문은 끝에 있을 필요가 없습니다. 이는 __`switch`__ 문의 본문 어디에 나 나타날 수 있습니다. __`case`__ 또는 __`default`__ 레이블은 __`switch`__ 문 내부에만 나타날 수 있습니다.
+__`case`__ *`constant-expression`* 값이 *`expression`* 의 값과 같지 않으면 __`default`__ 문이 실행됩니다. __`default`__ 문이 없고 __`case`__ 일치를 찾을 수 없으면 __`switch`__ 본문의 문이 전혀 실행되지 않습니다. __`default`__ 문은 하나만 존재할 수 있습니다. __`default`__ 문은 끝에 올 필요가 없고, __`switch`__ 문의 본문 어디에나 나타날 수 있습니다. __`case`__ 또는 __`default`__ 레이블은 __`switch`__ 문 안에만 나타날 수 있습니다.
 
-__`switch`__ *`expression`* 및 __`case`__ 의 *`constant-expression`* 형식은 정수 계열 이어야 합니다. 각각 __`case`__ *`constant-expression`* 의 값은 문 본문 내에서 고유 해야 합니다.
+__`switch`__ *`expression`* 및 __`case`__ *`constant-expression`* 의 형식은 정수이어야 합니다. 각 __`case`__ *`constant-expression`* 의 값은 문 본문 내에서 고유해야 합니다.
 
-문 __`case`__ 본문 __`default`__ 의 __`switch`__ 및 레이블은 문 본문에서 실행이 시작 되는 위치를 결정 하는 초기 테스트 에서만 의미가 있습니다. __`switch`__ 문은 중첩 될 수 있습니다. 모든 정적 변수는 __`switch`__ 문을 실행 하기 전에 초기화 됩니다.
+__`switch`__ 문 본문의 __`case`__ 및 __`default`__ 레이블은 문 본문에서 실행이 시작되는 위치를 결정하는 초기 테스트에서만 의미가 있습니다. __`switch`__ 문은 중첩될 수 있습니다. 모든 정적 변수는 __`switch`__ 문으로 실행하기 전에 초기화됩니다.
 
 > [!NOTE]
-> 선언은 __`switch`__ 본문을 형성 하는 복합 문의 헤드에 나타날 수 있지만 선언에 포함 된 초기화는 수행 되지 않습니다. __`switch`__ 문은 초기화가 포함 된 줄을 우회 하 여 본문 내의 실행 가능한 문으로 직접 제어를 전달 합니다.
+> 선언은 __`switch`__ 본문을 형성하는 복합 문의 위쪽에 나타날 수 있지만 선언에 포함된 초기화는 수행되지 않습니다. __`switch`__ 문은 초기화가 포함된 줄을 우회하여 본문 내의 실행 문으로 제어를 직접 전달합니다.
 
-다음 예에서는 문을 __`switch`__ 보여 줍니다.
+다음 예제에서는 __`switch`__ 문을 보여 줍니다.
 
 ```C
 switch( c )
@@ -81,7 +81,7 @@ switch( c )
 }
 ```
 
-이 예에서는 __`switch`__ 가 `c` `'A'`와 같은 경우 본문의 모든 세 문이 실행 됩니다 .이는 다음 __`break`__ __`case`__ 앞에 문이 표시 되지 않기 때문입니다. 실행 제어는 첫 번째 문(`capital_a++;`)으로 전달되고 본문의 나머지 부분에서 순서대로 계속됩니다. `c`가 `'a'`와 같은 경우 `letter_a` 및 `total`이 증가합니다. 가 `total` 또는 `'a'`와 같지 `c` `'A'` 않은 경우만 증가 합니다.
+이 예제에서는 __`break`__ 문이 다음 __`case`__ 앞에 나타나지 않으므로 `c`가 `'A'`와 같은 경우 __`switch`__ 본문의 모든 세 문이 실행됩니다. 실행 제어는 첫 번째 문(`capital_a++;`)으로 전달되고 본문의 나머지 부분에서 순서대로 계속됩니다. `c`가 `'a'`와 같은 경우 `letter_a` 및 `total`이 증가합니다. `c`가 `'A'` 또는 `'a'`와 같지 않을 경우에만 `total`이 증가합니다.
 
 ```C
 switch( i )
@@ -98,9 +98,9 @@ switch( i )
 }
 ```
 
-이 예제에서 __`break`__ 문은 __`switch`__ 본문의 각 문 뒤에 나옵니다. __`break`__ 문은 한 문이 실행 된 후 문 본문에서 강제로 종료 합니다. `i`가 –1과 같은 경우 `n`만 증가합니다. __`break`__ 다음 문은 `n++;` 실행 제어가 문 본문 밖으로 전달 되도록 하 여 나머지 문을 무시 합니다. 이와 마찬가지로 `i`가 0과 같은 경우 `z`만 증가하고, `i`가 1과 같은 경우에는 `p`만 증가합니다. 제어가 복합 __`break`__ 문의 끝에서 본문 밖으로 전달 되기 때문에 최종 문은 반드시 필요한 것은 아닙니다. 일관성을 위해 포함 되었습니다.
+이 예제에서 __`break`__ 문은 __`switch`__ 본문의 각 문 뒤에 나옵니다. __`break`__ 문은 한 문이 실행된 후 문 본문에서 강제로 빠져나옵니다. `i`가 –1과 같은 경우 `n`만 증가합니다. `n++;` 문 다음에 오는 __`break`__ 는 실행 제어가 문 본문 밖으로 전달되고 나머지 문들을 우회하도록 합니다. 이와 마찬가지로 `i`가 0과 같은 경우 `z`만 증가하고, `i`가 1과 같은 경우에는 `p`만 증가합니다. 제어가 복합 문의 끝에서 본문 밖으로 전달되므로 마지막 __`break`__ 문이 반드시 필요하지는 않습니다. 이 문은 일관성을 위해 포함되었습니다.
 
-단일 문은 다음 예제와 같이 __`case`__ 여러 레이블을 사용할 수 있습니다.
+다음 예제와 같이 단일 문이 여러 __`case`__ 레이블을 수행할 수 있습니다.
 
 ```C
 switch( c )
@@ -118,10 +118,10 @@ switch( c )
 
 ### <a name="microsoft-specific"></a>Microsoft 전용
 
-Microsoft C는 __`case`__ __`switch`__ 문의 값 수를 제한 하지 않습니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C를 사용 하려면 적어도 __`case`__ 257 개 이상의 레이블이 __`switch`__ 문에 허용 되어야 합니다.
+Microsoft C는 __`switch`__ 문의 __`case`__ 값 수를 제한하지 않습니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C의 경우 __`switch`__ 문에서 257개 이상의 __`case`__ 레이블이 허용되어야 합니다.
 
-Microsoft default C에 대 한는 microsoft 확장을 사용 하도록 설정 되어 있습니다. 이러한 확장을 사용 하지 않도록 설정 하려면 [/za](../build/reference/za-ze-disable-language-extensions.md) 컴파일러 옵션을 사용 합니다.
+Microsoft C에 대한 default는 Microsoft 확장을 사용하도록 설정되어 있다는 것입니다. 이러한 확장을 사용하지 않도록 설정하려면 [/Za](../build/reference/za-ze-disable-language-extensions.md) 컴파일러 옵션을 사용하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[switch문 (c + +)](../cpp/switch-statement-cpp.md)
+[switch Statement (C++)](../cpp/switch-statement-cpp.md)

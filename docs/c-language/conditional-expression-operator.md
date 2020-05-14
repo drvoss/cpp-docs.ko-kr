@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81749188"
 ---
 # <a name="conditional-expression-operator"></a>조건식 연산자
 
-C에는 삼항 연산자인 조건식 연산자가 하나 있습니다(**? :**).
+C에는 삼항 연산자인 조건식 연산자가 하나 있습니다( **? :** ).
 
 ## <a name="syntax"></a>구문
 
-*조건식*식 :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*논리-OR-표현식*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *식*  **:**  *조건부 식*
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
 *logical-OR-expression*은 정수 계열, 부동 소수점 또는 포인터 형식이어야 합니다. 식은 0과 같은지 여부의 측면에서 평가됩니다. 시퀀스 위치가 *logical-OR-expression* 뒤에 나옵니다. 피연산자에 대한 평가는 다음과 같이 진행됩니다.
 

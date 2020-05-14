@@ -7,15 +7,15 @@ helpviewer_keywords:
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
 ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233300"
 ---
 # <a name="function-call-c"></a>함수 호출 (C)
 
-‘함수 호출’은 호출되는 함수의 이름 또는 함수 포인터의 값 및 선택적으로 함수에 전달되는 인수를 포함하는 식입니다.
+‘함수 호출’은 호출되는 함수의 이름 또는 함수 포인터의 값 및 선택적으로 함수에 전달되는 인수를 포함하는 식입니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -30,6 +30,6 @@ ms.locfileid: "56147414"
 
 함수 호출 식에는 함수 반환 값의 값과 형식이 있습니다. 함수는 배열 형식의 개체를 반환할 수 없습니다. 함수의 반환 형식이 `void`인 경우, 즉, 함수가 값을 반환하지 않도록 선언된 경우 함수 호출 식 또한 `void` 형식을 가집니다. 자세한 내용은 [함수 호출](../c-language/function-calls.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [함수 호출 연산자: ()](../cpp/function-call-operator-parens.md)

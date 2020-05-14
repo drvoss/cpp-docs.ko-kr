@@ -17,7 +17,7 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62314756"
@@ -30,7 +30,7 @@ ms.locfileid: "62314756"
 
 ### <a name="to-specify-a-custom-build-tool"></a>사용자 지정 빌드 도구를 지정하려면
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 설정 C++ 컴파일러 및 빌드 속성](working-with-project-properties.md)합니다.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 컴파일러 및 빌드 속성 설정](working-with-project-properties.md)을 참조합니다.
 
 1. **구성 속성**을 선택하여 **구성** 상자를 사용하도록 설정합니다. **구성** 상자에서 사용자 지정 빌드 도구를 지정하려는 구성을 선택합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "62314756"
 
    - **명령줄**에서 명령 프롬프트에 지정한 경우와 같이 명령을 지정합니다. 유효한 명령이나 일괄 처리 파일 및 필수 입력이나 출력 파일을 지정합니다. 모든 후속 명령이 실행되도록 보장하려면 일괄 처리 파일의 이름 앞에 **호출** 일괄 처리 명령을 지정합니다.
 
-      여러 입력 및 출력 파일은 MSBuild 매크로를 사용하여 기호로 지정될 수 있습니다. 파일의 위치 또는 파일 집합의 이름을 지정 하는 방법에 대 한 자세한 내용은 [명령 및 속성에 대 한 일반 매크로 빌드](reference/common-macros-for-build-commands-and-properties.md)합니다.
+      여러 입력 및 출력 파일은 MSBuild 매크로를 사용하여 기호로 지정될 수 있습니다. 파일의 위치 또는 파일 집합의 이름을 지정하는 방법에 대한 정보는 [빌드 명령 및 속성에 대한 일반적인 매크로](reference/common-macros-for-build-commands-and-properties.md)를 참조하세요.
 
       '%' 문자를 MSBuild에서 예약했기 때문에 각 환경 변수를 지정한 경우 각 **%** 이스케이프 문자를 **%25** 16진수 이스케이프 시퀀스로 바꿉니다. 예를 들어 **%WINDIR%** 를 **%25WINDIR%25**로 바꿉니다. MSBuild는 환경 변수에 액세스하기 전에 각 **%25** 시퀀스를 **%** 문자로 바꿉니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "62314756"
 
 프로젝트를 빌드할 때 빌드 시스템은 parser.l와 parser.c의 타임스탬프를 비교합니다. parser.l가 최신인 경우 또는 parser.c가 존재하지 않는 경우 빌드 시스템은 **명령줄** 속성의 값을 실행하여 parser.c를 최신 상태로 변경합니다. 또한 parser.c가 프로젝트에 추가되었으므로 빌드 시스템은 parser.c를 컴파일합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [빌드 명령 및 속성에 대한 일반 매크로](reference/common-macros-for-build-commands-and-properties.md)<br>
 [빌드 사용자 지정 문제 해결](troubleshooting-build-customizations.md)

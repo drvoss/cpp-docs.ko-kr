@@ -27,6 +27,6 @@ ms.locfileid: "67400460"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [피연산자 및 식](../c-language/operands-and-expressions.md)

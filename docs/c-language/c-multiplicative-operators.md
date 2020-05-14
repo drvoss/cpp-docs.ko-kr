@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
 ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81335006"
 ---
 # <a name="c-multiplicative-operators"></a>곱하기 연산자
 
-곱셈 연산자는 곱셈 (),<strong>\*</strong>분할 (),**/** 및**%** 나머지 () 작업을 수행합니다.
+곱하기 연산자는 곱하기(<strong>\*</strong>), 나누기( **/** ) 및 나머지( **%** ) 연산을 수행합니다.
 
 ## <a name="syntax"></a>구문
 
-*곱셈 표현식*: &nbsp; &nbsp; &nbsp; &nbsp; *캐스트 식* &nbsp; &nbsp; &nbsp; &nbsp; *곱셈 표현식* <strong>\*</strong> 증식 *증식* &nbsp; &nbsp; &nbsp; &nbsp; *증식 증식* **/** *증식* &nbsp; &nbsp; &nbsp; &nbsp; *증식 증식 증식-식* **%** *cast-expression* 증식
+*multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
 
-나머지 연산자 ()의**%** 카페랜드는 적분이어야 합니다. 곱셈 ()<strong>\*</strong>및 분할**/**() 연산자는 적분형 또는 부동형 피연산자; 나연산자의 종류는 다를 수 있습니다.
+나머지 연산자의 피연산자( **%** )는 정수여야 합니다. 곱하기(<strong>\*</strong>) 및 나누기( **/** ) 연산자는 정수 계열 또는 부동 형식 피연산자를 사용할 수 있습니다. 따라서 피연산자의 형식은 다를 수도 있습니다.
 
 곱셈 연산자는 피연산자에 대한 일반적인 산술 변환을 수행합니다. 결과 형식은 변환 후의 피연산자 형식과 동일합니다.
 
@@ -35,11 +35,11 @@ ms.locfileid: "81335006"
 
 아래에서 C 곱셈 연산자를 설명합니다.
 
-|연산자|Description|
+|연산자|설명|
 |--------------|-----------------|
 |<strong>\*</strong>|곱셈 연산자를 사용하면 두 개의 피연산자가 곱해집니다.|
-|**/**|나누기 연산자를 사용하면 첫 번째 피연산자가 두 번째 피연산자로 나눠집니다. 두 정수 피연산자를 나눈 결과가 정수가 아닌 경우 다음과 같은 규칙에 따라 잘립니다.<br/><br/>- 0으로 나누기 결과는 ANSI C Standard에 따라 정의되지 않습니다. Microsoft C 컴파일러는 컴파일 타임이나 런타임에서 오류를 발생시킵니다.<br/><br/>- 두 피연산자 모두 양수 또는 unsigned 피연산자인 경우 결과는 0으로 잘립니다.<br/><br/>- 피연산자 중 하나가 음수인 경우 연산 결과가 대수 몫보다 작거나 같은 최대 정수인지 또는 대수 몫보다 크거나 같은 최소 정수인지가 정의되는 구현입니다. (아래 Microsoft 관련 섹션을 참조하십시오.)|
-|**%**|나머지 연산자 결과는 첫 번째 피연산자를 두 번째 피연산자로 나눈 나머지입니다. 나누기가 정확하지 않은 경우 결과는 다음 규칙에 따라 결정됩니다.<br/><br/>- 오른쪽 피연산자가 0이면 결과가 정의되지 않습니다.<br/><br/>- 두 피연산자 모두 양수 또는 unsigned 피연산자인 경우 결과는 양수입니다.<br/><br/>- 한 피연산자가 음수이고 결과가 정확하지 않은 경우 결과는 정의된 구현입니다. (아래 Microsoft 관련 섹션을 참조하십시오.)|
+|**/**|나누기 연산자를 사용하면 첫 번째 피연산자가 두 번째 피연산자로 나눠집니다. 두 정수 피연산자를 나눈 결과가 정수가 아닌 경우 다음과 같은 규칙에 따라 잘립니다.<br/><br/>- 0으로 나누기 결과는 ANSI C Standard에 따라 정의되지 않습니다. Microsoft C 컴파일러는 컴파일 타임이나 런타임에서 오류를 발생시킵니다.<br/><br/>- 두 피연산자 모두 양수 또는 unsigned 피연산자인 경우 결과는 0으로 잘립니다.<br/><br/>- 피연산자 중 하나가 음수인 경우 연산 결과가 대수 몫보다 작거나 같은 최대 정수인지 또는 대수 몫보다 크거나 같은 최소 정수인지가 정의되는 구현입니다. (아래의 Microsoft 전용 섹션을 참조하세요.)|
+|**%**|나머지 연산자 결과는 첫 번째 피연산자를 두 번째 피연산자로 나눈 나머지입니다. 나누기가 정확하지 않은 경우 결과는 다음 규칙에 따라 결정됩니다.<br/><br/>- 오른쪽 피연산자가 0이면 결과가 정의되지 않습니다.<br/><br/>- 두 피연산자 모두 양수 또는 unsigned 피연산자인 경우 결과는 양수입니다.<br/><br/>- 한 피연산자가 음수이고 결과가 정확하지 않은 경우 결과는 정의된 구현입니다. (아래의 Microsoft 전용 섹션을 참조하세요.)|
 
 ### <a name="microsoft-specific"></a>Microsoft 전용
 
@@ -76,9 +76,9 @@ n = i % j;
 
 이 문은 10을 3으로 나눌 때 `n`에 정수 나머지 1을 할당합니다.
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
-나머지의 부호는 피제수의 부호와 동일합니다. 다음은 그 예입니다.
+나머지의 부호는 피제수의 부호와 동일합니다. 예를 들어:
 
 ```
 50 % -6 = 2
@@ -89,6 +89,6 @@ n = i % j;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[곱셈 연산자 및 모듈러스 연산자](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[곱하기 연산자 및 나머지 연산자](../cpp/multiplicative-operators-and-the-modulus-operator.md)

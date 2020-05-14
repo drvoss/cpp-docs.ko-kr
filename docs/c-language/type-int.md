@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
 ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334444"
@@ -20,15 +20,15 @@ signed/unsigned `int` 항목의 크기는 특정 시스템의 표준 정수 크�
 
 형식 지정자 `int` 및 `unsigned int`(또는 단순히 `unsigned`)는 C 언어의 특정한 기능(예: `enum` 형식)을 정의합니다. 이러한 경우 특정 구현에 대한 `int` 정의 및 unsigned int로 실제 스토리지가 결정됩니다.
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
-부호 있는 정수는 2의 보수 형식으로 표시됩니다. 최상위 비트는 음수에 대해서는 부호 1을, 양수와 0에 대해서는 0을 가집니다. 값범위는 한계에서 가져온 [C 및 C++ 정수 제한에](../c-language/cpp-integer-limits.md)주어집니다. H 헤더 파일입니다.
+부호 있는 정수는 2의 보수 형식으로 표시됩니다. 가장 중요한 비트는 부호(음수의 경우 1, 양수 및 0의 경우 0)를 포함합니다. 값의 범위는 헤더 파일 LIMITS.H의 [C 및 C++ 정수 제한](../c-language/cpp-integer-limits.md)에 있습니다.
 
 **Microsoft 전용 종료**
 
 > [!NOTE]
 > int 및 unsigned int 형식 지정자는 특정 컴퓨터가 해당 시스템에 가장 효율적인 방식으로 대한 정수 값을 처리하도록 하기 때문에 C 프로그램에서 널리 사용됩니다. 그러나 int 및 unsigned int 형식은 크기가 매우 다양하므로 특정 int 크기에 따라 프로그램이 다른 컴퓨터에 이식될 수 있습니다. 프로그램을 더욱 이식 가능하도록 하려면, 하드 코딩된 데이터 크기 대신 sizeof 연산자([sizeof 연산자](../c-language/sizeof-operator-c.md) 참조)를 가진 식을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [기본 형식의 스토리지](../c-language/storage-of-basic-types.md)

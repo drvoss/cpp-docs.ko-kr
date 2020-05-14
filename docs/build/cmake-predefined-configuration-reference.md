@@ -6,7 +6,7 @@ helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81322994"
@@ -34,7 +34,7 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - MinGW 디버그
 - MinGW 릴리스
 
-구성을 선택하면 프로젝트의 루트 폴더에 있는 *CMakeSettings.json* 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다. 구성 속성에 대한 자세한 내용은 [CMakeSettings 참조를](cmakesettings-reference.md)참조하십시오.
+구성을 선택하면 프로젝트의 루트 폴더에 있는 *CMakeSettings.json* 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다. 구성 속성에 대한 자세한 내용은 [CMakeSettings 참조](cmakesettings-reference.md)를 참조하세요.
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 미리 정의된 빌드 구성:
 
@@ -361,24 +361,24 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 - x86 디버그
 - x86 Clang 디버그
 - x86 릴리스
-- x86 Clang 릴리즈
+- x86 Clang 릴리스
 - x64 디버그
 - x64 Clang 디버그
 - x64 릴리스
-- x64 클라인 릴리즈
+- x64 Clang 릴리스
 - Linux-디버그
 - Linux-릴리스
-- 리눅스-Clang-디버그
-- 리눅스-Clang-릴리스
+- Linux-Clang-디버그
+- Linux-Clang-릴리스
 - 기존 캐시(원격)
 - 기존 캐시
 - MinGW 디버그
 - MinGW 릴리스
 - WSL 디버그
 - WSL 릴리스
-- WSL 클랑 디버그
-- WSL 클랑 릴리스
-- 쿨랑 (주)
+- WSL Clang 디버그
+- WSL Clang 릴리스
+- Clang
 
 구성을 선택하면 프로젝트의 루트 폴더에 있는 CMakeSettings.json 파일에 추가됩니다. 그런 다음, 이를 사용하여 프로젝트를 빌드할 수 있습니다.
 
@@ -696,9 +696,9 @@ CMake 프로젝트에서 빌드 구성은 CMakeSettings.json 파일에 저장됩
 
 ::: moniker-end
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[비주얼 스튜디오에서 CMake 프로젝트](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio의 CMake 프로젝트](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake 프로젝트 구성](../linux/cmake-linux-project.md)<br/>
 [원격 Linux 컴퓨터에 연결](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake 디버깅 세션 구성](configure-cmake-debugging-sessions.md)<br/>

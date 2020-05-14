@@ -5,11 +5,11 @@ helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
 ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234439"
 ---
 # <a name="definitions-and-conventions"></a>정의 및 규칙
 
@@ -17,7 +17,7 @@ ms.locfileid: "56152471"
 
 비단말은 구문의 자리 표시자이며 이 구문 요약의 다른 곳에서 정의됩니다. 정의는 재귀적일 수 있습니다.
 
-선택적 구성 요소는 첨자 <sub>opt</sub>로 나타냅니다. 예를 들어 개체에 적용된
+선택적 구성 요소는 첨자 <sub>opt</sub>로 나타냅니다. 예를 들면 다음과 같습니다.
 
 > **{** *expression*<sub>opt</sub> **}**
 
@@ -32,8 +32,8 @@ ms.locfileid: "56152471"
 |<sub>opt</sub>|뒤에 <sub>opt</sub>가 오는 비터미널은 항상 선택 사항입니다.|
 |default typeface|이 서체로 설명되거나 나열된 집합의 문자는 C 문에서 단말로 사용할 수 있습니다.|
 
-비터미널 뒤에 오는 콜론(**:**)은 정의를 지정합니다. 대체 정의는 "one of"라는 단어가 앞에 오는 경우를 제외하고 별도의 줄에 나열됩니다.
+비터미널 뒤에 오는 콜론( **:** )은 정의를 지정합니다. 대체 정의는 "one of"라는 단어가 앞에 오는 경우를 제외하고 별도의 줄에 나열됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 구문 요약](../c-language/c-language-syntax-summary.md)

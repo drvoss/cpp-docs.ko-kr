@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325743"
 ---
 # <a name="c-constant-expressions"></a>C 상수 식
 
@@ -35,14 +35,14 @@ ms.locfileid: "50490534"
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
 
 구조체 선언자, 열거자, 직접 선언자, 직접 추상 선언자 및 레이블 문의 비단말에는 *onstant-expression* 비단말이 포함됩니다.
 
 정수 상수 식은 구조체의 비트 필드 멤버 크기, 열거형 상수의 값, 배열의 크기 또는 **case** 상수의 값을 지정하는 데 사용해야 합니다.
 
-전처리기 지시문에서 사용된 상수 식에는 제한이 추가로 적용됩니다. 따라서 이러한 상수 식을 "제한된 상수 식"이라고 합니다. 제한된 상수 식은 **sizeof** 식, 열거형 상수, 모든 형식에 대한 형식 캐스트 또는 부동 형식 상수를 포함할 수 없습니다. 그러나 특수 상수 식인 **defined(** _identifier_ **)** 를 포함할 수 있습니다.
+전처리기 지시문에서 사용된 상수 식에는 제한이 추가로 적용됩니다. 따라서 이러한 상수 식을 "제한된 상수 식"이라고 합니다. 제한된 상수 식은 **sizeof** 식, 열거형 상수, 모든 형식에 대한 형식 캐스트 또는 부동 형식 상수를 포함할 수 없습니다. 그러나 특수 상수 식인 **defined (** _identifier_ **)** 를 포함할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [피연산자 및 식](../c-language/operands-and-expressions.md)

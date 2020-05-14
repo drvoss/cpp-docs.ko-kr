@@ -12,15 +12,15 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326588"
 ---
 # <a name="c-logical-operators"></a>C 논리 연산자
 
-논리 연산자는 논리 AND(**&&**) 및 논리 OR(**||**) 연산자를 수행합니다.
+논리 연산자는 논리 AND( **&&** ) 및 논리 OR( **||** ) 연산자를 수행합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -45,7 +45,7 @@ C 논리 연산자는 아래에 설명되어 있습니다.
 
 논리 AND 및 논리 OR 식의 피연산자는 왼쪽에서 오른쪽으로 계산됩니다. 첫 번째 피연산자의 값이 작업의 결과를 결정하는 데 충분한 경우 두 번째 피연산자는 평가되지 않습니다. 이것을 "단락(short-circuit) 계산"이라고 합니다. 첫 번째 피연산자 다음에 시퀀스 위치가 있습니다. 자세한 내용은 [시퀀스 위치](../c-language/c-sequence-points.md)를 참조하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 논리 연산자를 보여 줍니다.
 
@@ -64,7 +64,7 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 이 예제에서 `x`가 `w`, `y` 또는 `z`와 같을 경우 **printf** 함수에 대한 두 번째 인수는 true로 계산되고 값 1이 출력됩니다. 그렇지 않으면 false로 계산되고 값 0이 출력됩니다. 조건 중 하나가 true로 확인되면 계산이 중지됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [논리적 AND 연산자: &&](../cpp/logical-and-operator-amp-amp.md)
 - [논리 OR 연산자: &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

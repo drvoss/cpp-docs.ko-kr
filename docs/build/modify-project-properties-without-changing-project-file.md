@@ -5,14 +5,14 @@ helpviewer_keywords:
 - project properties [C++], modifying outside project file
 ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328457"
 ---
 # <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>방법: 프로젝트 파일을 변경하지 않고 C++ 프로젝트 속성 및 대상 수정
 
-파일을 변경하지 않고 MSBuild 명령 프롬프트에서 프로젝트 속성 및 대상을 재정의할 수 있습니다. 일시적으로 또는 경우에 따라 일부 속성을 적용하려는 경우에 유용합니다. MSBuild의 일부 정보를 가정합니다. 자세한 내용은 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)을 참조하십시오.
+파일을 변경하지 않고 MSBuild 명령 프롬프트에서 프로젝트 속성 및 대상을 재정의할 수 있습니다. 일시적으로 또는 경우에 따라 일부 속성을 적용하려는 경우에 유용합니다. MSBuild의 일부 정보를 가정합니다. 자세한 내용은 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)를 참조하세요.
 
 > [!IMPORTANT]
 > .props 또는 .targets 파일을 만들려면 Visual Studio의 XML 편집기 또는 모든 텍스트 편집기를 사용할 수 있습니다. **속성 관리자**가 프로젝트 파일에 속성을 추가하기 때문에 이 시나리오에서는 사용하지 마십시오.

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
 ms.openlocfilehash: 75dba6ecfc915fa22829491705fb5dc769ddf377
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195288"
@@ -23,13 +23,13 @@ ms.locfileid: "62195288"
 
 - [ASSERT 문 검사](using-verify-instead-of-assert.md)
 
-- [디버그 빌드를 사용한 메모리 덮어쓰기 확인](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [디버그 빌드를 사용하여 메모리 덮어쓰기 확인](using-the-debug-build-to-check-for-memory-overwrite.md)
 
 - [릴리스 빌드에 대한 디버그 정보 생성 활성화](how-to-debug-a-release-build.md)
 
 - [메모리 덮어쓰기 확인](checking-for-memory-overwrites.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [릴리스 빌드](release-builds.md)<br/>
 [릴리스 빌드를 만들 때의 일반적인 문제](common-problems-when-creating-a-release-build.md)<br/>

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325665"
 ---
 # <a name="c-identifiers"></a>C 식별자
 
@@ -44,7 +44,7 @@ int main()
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 *nondigit*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
 
 *digit*: 다음 중 하나<br/>
@@ -96,6 +96,6 @@ Microsoft 링커는 대/소문자를 구분합니다. 대/소문자에 따라 �
 
 식별자에는 해당 식별자가 알려져 있는 프로그램의 영역인 "범위"가 있으며 다른 범위의 같은 이름이 같은 식별자를 참조하는지 여부를 결정하는 "링크"가 있습니다. 이러한 항목은 [수명, 범위, 표시 유형 및 링크](../c-language/lifetime-scope-visibility-and-linkage.md)에 설명되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 요소](../c-language/elements-of-c.md)

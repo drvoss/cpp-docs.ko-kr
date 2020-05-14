@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
 ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857075"
@@ -33,9 +33,9 @@ C 문은 토큰, 식 및 다른 문으로 구성되어 있습니다. 다른 문�
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-statement](../c-language/try-except-statement-c.md) /* Microsoft 전용 \*/
+[try-except-statement](../c-language/try-except-statement-c.md) /* Microsoft 전용 \*/
 
-[try...catch](../c-language/try-finally-statement-c.md) -Microsoft 전용 \*\* //
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Microsoft 전용 \*/
 
 대개 문 본문은 "복합 문"입니다. 복합 문은 키워드를 포함할 수 있는 다른 문으로 구성됩니다. 복합 문은 중괄호( **{ }** )로 구분됩니다. 다른 모든 C 문은 세미콜론( **;** )으로 끝납니다. 세미콜론은 문 종결자입니다.
 

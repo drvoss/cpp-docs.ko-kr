@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C], scalar
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
 ms.openlocfilehash: 8c2e3ba50ce3e768b377a588cd3e82ad29df79ee
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325577"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>C 후위 증가 및 감소 연산자
 
@@ -32,6 +32,6 @@ if( var++ > 0 )
 
 이 예제에서 `var` 변수는 0과 비교된 다음 증가됩니다. `var`이 증가되기 전에 양수였던 경우 다음 문이 실행됩니다. 먼저 `q`가 가리키는 개체의 값이 `p`가 가리키는 개체에 할당됩니다. 그런 다음 `q` 및 `p`가 증가됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [후위 증가 및 감소 연산자: ++ 및 --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
 ms.openlocfilehash: 1191cf4d2912cda535547f465fe4bfbedebe8fa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313196"
 ---
 # <a name="c-type-specifiers"></a>C 형식 지정자
 
@@ -46,7 +46,7 @@ short *ps;
 ps = pi;  /* Now generates warning */
 ```
 
-Microsoft C 컴파일러에서는 부호의 차이에 대한 경고도 생성합니다. 예:
+Microsoft C 컴파일러에서는 부호의 차이에 대한 경고도 생성합니다. 예를 들어:
 
 ```C
 signed int *pi;
@@ -63,6 +63,6 @@ ANSI 사양을 따르려면 <strong>void\*\*</strong>를 <strong>int\*\*</strong
 
 [Typedef 선언](../c-language/typedef-declarations.md)에 설명된 대로 **typedef** 선언으로 추가 형식 지정자를 만들 수 있습니다. 각 형식의 크기에 대한 자세한 내용은 [기본 형식의 스토리지](../c-language/storage-of-basic-types.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

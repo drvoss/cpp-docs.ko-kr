@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315237"
@@ -36,7 +36,7 @@ ms.locfileid: "62315237"
 
 1. **솔루션 탐색기**에서 빌드 이벤트를 지정할 프로젝트를 선택합니다.
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 설정 C++ 컴파일러 및 빌드 속성](working-with-project-properties.md)합니다.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 컴파일러 및 빌드 속성 설정](working-with-project-properties.md)을 참조합니다.
 
 1. **빌드 이벤트** 폴더에서 빌드 이벤트 속성 페이지를 선택합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "62315237"
 
    - **명령줄**에서 명령 프롬프트에 지정한 경우와 같이 명령을 지정합니다. 유효한 명령이나 일괄 처리 파일 및 필수 입력이나 출력 파일을 지정합니다. 모든 후속 명령이 실행되도록 보장하려면 일괄 처리 파일의 이름 앞에 **호출** 일괄 처리 명령을 지정합니다.
 
-      여러 입력 및 출력 파일은 MSBuild 매크로를 사용하여 기호로 지정될 수 있습니다. 파일의 위치 또는 파일 집합의 이름을 지정 하는 방법에 대 한 자세한 내용은 [명령 및 속성에 대 한 일반 매크로 빌드](reference/common-macros-for-build-commands-and-properties.md)합니다.
+      여러 입력 및 출력 파일은 MSBuild 매크로를 사용하여 기호로 지정될 수 있습니다. 파일의 위치 또는 파일 집합의 이름을 지정하는 방법에 대한 정보는 [빌드 명령 및 속성에 대한 일반적인 매크로](reference/common-macros-for-build-commands-and-properties.md)를 참조하세요.
 
       '%' 문자를 MSBuild에서 예약했기 때문에 각 환경 변수를 지정한 경우 각 **%** 이스케이프 문자를 **%25** 16진수 이스케이프 시퀀스로 바꿉니다. 예를 들어 **%WINDIR%** 를 **%25WINDIR%25**로 바꿉니다. MSBuild는 환경 변수에 액세스하기 전에 각 **%25** 시퀀스를 **%** 문자로 바꿉니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "62315237"
 
    - **빌드에서 제외**에서 이벤트를 실행하지 않도록 **예**를 지정합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [사용자 지정 빌드 단계 및 빌드 이벤트 이해](understanding-custom-build-steps-and-build-events.md)<br>
 [빌드 명령 및 속성에 대한 일반 매크로](reference/common-macros-for-build-commands-and-properties.md)<br>

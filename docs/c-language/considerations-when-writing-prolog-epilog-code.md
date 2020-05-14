@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334588"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>프롤로그/에필로그 코드를 작성할 때 고려 사항
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
-고유한 프롤로그 및 에필로그 코드 시퀀스를 작성하기 전에 스택 프레임이 어떻게 배치되는지 이해하는 것이 중요합니다. 미리 정의된 **__LOCAL_SIZE** 사용 하는 방법을 아는 것도 유용 합니다.
+자신의 prolog 및 epilog 코드 시퀀스를 작성하기 전에 스택 프레임을 배치하는 방법을 이해하는 것이 중요합니다. **__LOCAL_SIZE**의 미리 정의된 상수를 사용하는 방법을 알아두는 것도 좋습니다.
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>C스택 프레임 레이아웃
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a> C 스택 프레임 레이아웃
 
 이 예제에서는 32비트 함수에 표시될 수 있는 표준 prolog 코드를 보여 줍니다.
 
@@ -46,7 +46,7 @@ ret                          ; Return from function
 
 컴파일러는 함수 prolog 코드의 인라인 어셈블러 블록에서 사용할 **__LOCAL_SIZE** 상수를 제공합니다. 이 상수는 사용자 지정 prolog 코드의 스택 프레임에 대한 지역 변수의 공간을 할당하는 데 사용됩니다.
 
-컴파일러는 **__LOCAL_SIZE**의 값을 결정합니다. 값은 모든 사용자 정의 지역 변수 및 컴파일러 생성 임시 변수의 총 바이트 수입니다. **__LOCAL_SIZE**는 즉시 피연산자로만 사용할 수 있으며 식에서는 사용할 수 없습니다. 이 상수의 값을 변경하거나 다시 정의해서는 안 됩니다. 다음은 그 예입니다.
+컴파일러는 **__LOCAL_SIZE**의 값을 결정합니다. 값은 모든 사용자 정의 지역 변수 및 컴파일러 생성 임시 변수의 총 바이트 수입니다. **__LOCAL_SIZE**는 즉시 피연산자로만 사용할 수 있으며 식에서는 사용할 수 없습니다. 이 상수의 값을 변경하거나 다시 정의해서는 안 됩니다. 예를 들어:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
@@ -81,6 +81,6 @@ __declspec ( naked ) func()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Naked 함수](../c-language/naked-functions.md)

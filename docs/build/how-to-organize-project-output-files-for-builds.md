@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
 ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328520"
@@ -24,7 +24,7 @@ ms.locfileid: "81328520"
 
    지정된 파일이 MSIL에 위치하면 .dll, .exe, .netmodule 또는 .obj일 수 있습니다. 참조된 구성 요소는 임의의 언어로 빌드될 수 있습니다. 이 옵션을 사용하면 메타데이터를 MSIL에서 추출하므로 IntelliSense에 대한 액세스 권한이 있습니다. 해당 파일은 프로젝트의 경로에 있어야 합니다. 그렇지 않으면 프로젝트가 컴파일되지 않고 IntelliSense가 지원되지 않습니다. 파일이 경로에 있는지 확인하는 쉬운 방법은 #using 줄을 마우스 오른쪽 단추로 클릭하고, **문서 열기** 명령을 선택하는 것입니다. 파일을 찾을 수 없는 경우 알림이 표시됩니다.
 
-   파일에 전체 경로를 저장하지 않으려는 경우 **/AI** 컴파일러 옵션을 사용하여 #using 참조에 대한 검색 경로를 편집할 수 있습니다. 자세한 내용은 [/AI(메타데이터 디렉터리 지정)를](reference/ai-specify-metadata-directories.md)참조하십시오.
+   파일에 전체 경로를 저장하지 않으려는 경우 **/AI** 컴파일러 옵션을 사용하여 #using 참조에 대한 검색 경로를 편집할 수 있습니다. 자세한 내용은 [/AI(메타데이터 디렉터리 지정)](reference/ai-specify-metadata-directories.md)를 참조하세요.
 
 #### <a name="to-reference-assemblies-with-fu"></a>/FU에서 어셈블리를 참조하려면
 
@@ -46,7 +46,7 @@ ms.locfileid: "81328520"
 
 1. #include 지시문을 사용하여 코드에서 적절한 헤더 파일을 참조합니다. 헤더 파일은 include 경로에 위치하거나 현재 프로젝트의 일부여야 합니다. 자세한 내용은 [#include 지시문(C/C++)](../preprocessor/hash-include-directive-c-cpp.md)을 참조하세요.
 
-1. 프로젝트 종속성을 설정할 수도 있습니다. 프로젝트 종속성을 설정하면 다음 두 가지를 보장합니다. 먼저 프로젝트가 필요한 종속 파일을 항상 찾을 수 있도록 프로젝트를 적절한 순서로 빌드하는지 확인합니다. 둘째, 암시적으로 종속 프로젝트의 출력 디렉토리를 경로에 추가하여 링크 타임에 파일을 쉽게 찾을 수 있도록 합니다.
+1. 프로젝트 종속성을 설정할 수도 있습니다. 프로젝트 종속성을 설정하면 다음 두 가지를 보장합니다. 먼저 프로젝트가 필요한 종속 파일을 항상 찾을 수 있도록 프로젝트를 적절한 순서로 빌드하는지 확인합니다. 둘째, 링크 타임에 파일을 쉽게 찾을 수 있도록 종속 프로젝트의 출력 디렉터리를 경로에 암시적으로 추가합니다.
 
 1. 애플리케이션을 배포하려면 DLL을 적절한 위치에 배치해야 합니다. 다음 중 하나일 수 있습니다.
 
@@ -68,6 +68,6 @@ ms.locfileid: "81328520"
 
 1. 프로젝트 출력 설정의 위치는 프로젝트의 **속성 페이지**에서 찾을 수 있습니다. **구성 속성** 옆에 있는 노드를 확장하고, **일반**을 선택합니다. 출력 위치는 **출력 디렉터리** 옆에 지정됩니다. 자세한 내용은 [일반 속성 페이지(프로젝트)](reference/general-property-page-project.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio의 C++ 프로젝트 형식](reference/visual-cpp-project-types.md)

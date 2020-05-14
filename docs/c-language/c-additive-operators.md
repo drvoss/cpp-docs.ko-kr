@@ -9,15 +9,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
 ms.openlocfilehash: 29bea87e56aa90a8deab7ad7280b3fbdfb45c82b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326913"
 ---
 # <a name="c-additive-operators"></a>C 가감 연산자
 
-가감 연산자는 더하기(**+**)와 빼기(**-**)를 수행합니다.
+가감 연산자는 더하기( **+** )와 빼기( **-** )를 수행합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -33,6 +33,6 @@ ms.locfileid: "56151197"
 
 가감 연산자는 정수 계열 및 부동 형식 피연산자에 대한 일반적인 산술 변환을 수행합니다. 결과 형식은 변환 후의 피연산자 형식과 동일합니다. 가감 연산자로 수행된 변환은 오버플로 또는 언더플로 조건을 지원하지 않으므로 변환 후 가감 연산 결과가 피연산자 형식으로 표현될 수 없는 경우 정보가 손실될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [가감 연산자: + 및 -](../cpp/additive-operators-plus-and.md)

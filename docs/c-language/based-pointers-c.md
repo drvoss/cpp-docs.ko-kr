@@ -8,11 +8,11 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327433"
 ---
 # <a name="based-pointers-c"></a>기반 포인터 (C)
 
@@ -44,6 +44,6 @@ struct llist_t
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

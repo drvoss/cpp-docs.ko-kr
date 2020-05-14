@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
 ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
 ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "79438594"
@@ -19,7 +19,7 @@ ms.locfileid: "79438594"
 
 ## <a name="syntax"></a>구문
 
-*반복-문*: &nbsp;&nbsp;&nbsp;&nbsp;**do***문* **(** *식* **)**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
 
 *do-while* 문의 *expression*은 루프의 본문이 실행된 후 평가됩니다. 따라서 루프의 본문은 항상 한 번 이상 실행됩니다.
 
@@ -41,8 +41,8 @@ do
 } while ( x > 0 );
 ```
 
-이 *do-while* 문에서는 `y = f( x );`의 초기 값과 관계없이 `x--;` 및 `x` 문이 실행됩니다. 그런 다음 `x > 0`이 평가됩니다. `x`가 0보다 크면 문 본문이 다시 실행되고 `x > 0`이 다시 평가됩니다. `x`가 0보다 크게 유지되는 한 문 본문은 반복해서 실행됩니다. *do-while* 문의 실행은 `x`가 0이나 음수가 될 때 종료됩니다. 루프의 본문은 최소한 한 번 실행됩니다.
+이 *do-while* 문에서는 `x`의 초기 값과 관계없이 `y = f( x );` 및 `x--;` 문이 실행됩니다. 그런 다음 `x > 0`이 평가됩니다. `x`가 0보다 크면 문 본문이 다시 실행되고 `x > 0`이 다시 평가됩니다. `x`가 0보다 크게 유지되는 한 문 본문은 반복해서 실행됩니다. *do-while* 문의 실행은 `x`가 0이나 음수가 될 때 종료됩니다. 루프의 본문은 최소한 한 번 실행됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [do-while 문(C++)](../cpp/do-while-statement-cpp.md)

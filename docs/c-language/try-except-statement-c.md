@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349738"
 ---
 # <a name="try-except-statement-c"></a>try-except 문 (C)
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
 **try-except** 문은 정상적으로 실행을 종료시키는 이벤트가 발생하는 경우 애플리케이션이 프로그램의 제어를 얻을 수 있도록 하는 C 언어에 대한 Microsoft 확장입니다. 이러한 이벤트를 예외라고 하고 예외를 처리하는 메커니즘은 구조적 예외 처리라고 합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "81349738"
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except***(식)***)***컴파운드 문*      
+**__except (**  *expression*  **)**  *compound-statement*
 
 `__try` 절 뒤의 복합 문은 보호된 섹션입니다. `__except` 절 뒤에 오는 복합 문은 예외 처리기입니다. 처리기는 보호된 섹션을 실행하는 동안 예외가 발생하는 경우 수행할 일련의 작업을 지정합니다. 다음과 같이 실행됩니다.
 
@@ -96,6 +96,6 @@ world               /* flow out of handler                  */
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [try-except 문](../cpp/try-except-statement.md)

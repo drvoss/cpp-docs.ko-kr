@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157807"
 ---
 # <a name="structure-declarations"></a>구조체 선언
 
@@ -81,7 +81,7 @@ struct a var3;
 struct b var4;
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 구조체 선언을 보여 줍니다.
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 구조체의 처음 두 구성원은 `char` 변수와 **float** 값에 대한 포인터입니다. 세 번째 멤버인 `next`는 정의되는 구조체 형식에 대한 포인터로 선언됩니다(`sample`).
 
-익명 구조체는 명명된 태그가 필요하지 않은 경우 유용할 수 있습니다. 하나의 선언이 모든 구조체 인스턴스를 정의하는 경우가 그렇습니다. 예:
+익명 구조체는 명명된 태그가 필요하지 않은 경우 유용할 수 있습니다. 하나의 선언이 모든 구조체 인스턴스를 정의하는 경우가 그렇습니다. 예를 들어:
 
 ```C
 struct
@@ -149,7 +149,7 @@ struct somestruct
 
 컴파일러는 크기가 지정되지 않았거나 크기가 0인 배열을 구조체의 마지막 멤버로 허용합니다. 이는 다양한 상황에서 사용할 때 상수 배열의 크기가 다를 경우 유용할 수 있습니다. 이러한 구조체의 선언은 다음과 같습니다.
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
 크기가 지정되지 않은 배열은 구조체의 마지막 멤버로만 나타날 수 있습니다. 크기가 지정되지 않은 배열 선언을 포함하는 구조체는 바깥쪽 구조체에 멤버를 더 이상 선언하지 않는 한 다른 구조체 내에 중첩될 수 있습니다. 구조체에 멤버를 더 선언하는 경우 해당 배열은 허용되지 않습니다. `sizeof` 연산자는 이 형식의 배열이나 배열 자체에 적용될 경우 배열 크기가 0이라고 가정합니다.
 
@@ -175,6 +175,6 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

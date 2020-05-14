@@ -18,17 +18,17 @@ helpviewer_keywords:
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
 ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232777"
 ---
 # <a name="lifetime"></a>수명
 
 "수명"은 변수나 함수가 존재하는 프로그램 실행 중의 기간입니다. 식별자의 스토리지 기간에 따라 수명이 결정됩니다.
 
-*storage-class-specifier* **static**을 사용하여 선언된 식별자에는 정적 스토리지 기간이 있습니다. 정적 스토리지 기간("글로벌"이라고도 함)이 있는 식별자는 프로그램의 실행 기간 동안 스토리지와 정의된 값을 갖습니다. 프로그램 시작 전에 스토리지가 예약되고 식별자의 저장된 값이 한 번만 초기화됩니다. 외부 또는 내부 링크를 사용하여 선언된 식별자에도 정적 스토리지 기간이 있습니다([링크](../c-language/linkage.md) 참조).
+*storage-class-specifier* **static**을 사용하여 선언된 식별자에는 정적 저장 기간이 있습니다. 정적 스토리지 기간("글로벌"이라고도 함)이 있는 식별자는 프로그램의 실행 기간 동안 스토리지와 정의된 값을 갖습니다. 프로그램 시작 전에 스토리지가 예약되고 식별자의 저장된 값이 한 번만 초기화됩니다. 외부 또는 내부 링크를 사용하여 선언된 식별자에도 정적 스토리지 기간이 있습니다([링크](../c-language/linkage.md) 참조).
 
 **static** 스토리지 클래스 지정자 없이 선언된 식별자는 함수 내에서 선언되는 경우 자동 스토리지 기간을 갖게 됩니다. 자동 스토리지 기간이 있는 식별자("로컬 식별자")는 해당 식별자가 정의되거나 선언된 블록 내에서만 스토리지와 정의된 값을 갖습니다. 자동 식별자의 경우 프로그램이 해당 블록에 진입할 때마다 새 스토리지가 할당되고 프로그램이 해당 블록을 나갈 때 스토리지 및 값이 손실됩니다. 링크 없이 함수에서 선언된 식별자에도 자동 스토리지 기간이 있습니다.
 
@@ -42,6 +42,6 @@ ms.locfileid: "56149442"
 
 메모리는 `malloc` 등의 특수 라이브러리 루틴을 사용하여 만들어지는 경우 필요에 따라(동적) 할당될 수 있습니다. 동적 메모리 할당은 라이브러리 루틴을 사용하므로 언어의 일부로 간주되지 않습니다. *런타임 라이브러리 참조*에서 [malloc](../c-runtime-library/reference/malloc.md) 함수를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [수명, 범위, 표시 유형 및 링크](../c-language/lifetime-scope-visibility-and-linkage.md)

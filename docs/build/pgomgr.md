@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 ms.openlocfilehash: 4e3eb08c88db9d0ed4e47649014a600c3e0ccb78
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62295255"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-.Pgd 파일에 하나 이상의.pgc 파일에서 프로필 데이터를 추가합니다.
+하나 이상의 .pgc 파일에 있는 프로필 데이터를 .pgd 파일에 추가합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -23,46 +23,46 @@ ms.locfileid: "62295255"
 ### <a name="parameters"></a>매개 변수
 
 *options*<br/>
-다음 옵션을 지정할 수 있습니다 **pgomgr**:
+**pgomgr**에 지정할 수 있는 옵션은 다음과 같습니다.
 
-- **/help** 또는 **/?** 사용 가능한 표시 **pgomgr** 옵션입니다.
+- **/help** 또는 **/?** 사용 가능한 **pgomgr** 옵션을 표시합니다.
 
-- **지우기/** .pgd 파일을 지운 다음 모든 프로필 정보입니다. .pgc를 지정할 수 없습니다 경우 파일 **지우기/** 지정 됩니다.
+- **/clear** .pgd 파일의 모든 프로필 정보를 지웁니다. **/clear**를 지정하면 .pgc 파일을 지정할 수 없습니다.
 
-- **/detail** 흐름 그래프 검사 정보를 포함 하 여 자세한 통계를 표시 합니다.
+- **/detail** 흐름 그래프 적용 범위 정보를 포함하여 자세한 통계를 표시합니다.
 
-- **요약/** 표시 함수 통계.
+- **/summary** 함수별 통계를 표시합니다.
 
-- **고유 /** 와 함께 사용할 경우 **요약/**, 원인 데코레이팅된 함수 이름을 표시 합니다. 기본 면 **고유 /** 표시할 데코 레이트 되지 않은 함수 이름에는 사용 되지 않습니다.
+- **/unique** **/summary**와 함께 사용하면 데코레이트된 함수 이름이 표시됩니다. 기본값은 **/unique**를 사용하지 않는 경우 데코레이트되지 않은 함수 이름이 표시되는 것입니다.
 
-- **/ merge**\[**:**<em>n</em>].pgd 파일을 추가할 수는.pgc 파일에 데이터를 발생 합니다. 선택적 매개 변수 *n*에 데이터를 추가 해야 함을 지정할 수 있습니다 *n* 시간입니다. 예를 들어 시나리오의 경우는 일반적으로 완료 6 번 고객에 의해 이루어진다는 얼마나 자주 반영 하기 위해, 테스트 실행에서 두 번 수행 추가 하는 것으로 6 번.pgd 파일에 **pgomgr /merge:6** 합니다.
+- **/merge**\[ **:** <em>n</em>] .pgc 파일의 데이터를 .pgd 파일에 추가합니다. 선택적 매개 변수 *n*을 사용하면 데이터를 *n*번 추가하도록 지정할 수 있습니다. 예를 들어 고객이 수행하는 빈도를 반영해 시나리오가 일반적으로 6번 수행되는 경우 시나리오를 테스트 실행에서 한 번 수행하고 **pgomgr /merge:6**을 사용하여 .pgd 파일에 6번 추가할 수 있습니다.
 
 *pgcfiles*<br/>
-하나 이상의.pgc 파일.pgd 파일에 병합 하려는 프로필 데이터입니다. 단일.pgc 파일 또는 여러.pgc 파일을 지정할 수 있습니다. .Pgc 파일을 지정 하지 않는 경우 **pgomgr** 해당 파일 이름이.pgd 파일로 같습니다 모든.pgc 파일을 병합 합니다.
+.pgd 파일에 병합하려는 프로필 데이터가 포함된 하나 이상의 .pgc 파일입니다. 단일 .pgc 파일이나 여러 .pgc 파일을 지정할 수 있습니다. .pgc 파일을 지정하지 않으면 **pgomgr**은 파일 이름이 .pgd 파일과 동일한 모든 .pgc 파일을 병합합니다.
 
 *pgdfile*<br/>
-.Pgc 파일 또는 파일에서 데이터를 병합할.pgd 파일입니다.
+.pgc 파일의 데이터를 병합하는 .pgd 파일입니다.
 
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> Visual Studio 개발자 명령 프롬프트 에서만에서이 도구를 시작할 수 있습니다. 시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.
+> 이 도구는 Visual Studio 개발자 명령 프롬프트에서만 시작할 수 있습니다. 시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.
 
 ## <a name="example"></a>예제
 
-이 예제 명령은 프로필 데이터의 myapp.pgd 파일을 지웁니다.
+이 예제 명령은 myapp.pgd 파일에서 프로필 데이터를 지웁니다.
 
 `pgomgr /clear myapp.pgd`
 
-이 예제 명령은 프로필 데이터의에서 추가 myapp1.pgc.pgd 파일을 세 번:
+이 예제 명령은 myapp1.pgc의 프로필 데이터를 .pgd 파일에 세 번 추가합니다.
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-이 예제에서는 모든 myapp #.pgc 파일의 프로필 데이터는 myapp.pgd 파일에 추가 됩니다.
+이 예제에서는 모든 myapp#.pgc 파일의 프로필 데이터를 myapp.pgd 파일에 추가합니다.
 
 `pgomgr -merge myapp1.pgd`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로필 기반 최적화](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>

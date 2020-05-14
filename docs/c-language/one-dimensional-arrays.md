@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
 ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299106"
@@ -38,7 +38,7 @@ int main() {
 
 첨자식은 일반적으로 배열 요소를 참조하는 데 사용되지만 포인터에도 첨자를 적용할 수 있습니다. 값의 순서에 관계없이 *expression*은 대괄호( **[ ]** )로 묶어야 합니다.
 
-첨자식은 정수 계열 값을 포인터 값에 더한 다음 간접 참조 연산자(<strong>\*</strong>)를 결과에 적용하여 평가됩니다. 간접 참조 연산자에 대 한 설명은 [간접 참조 및 주소 연산자](../c-language/indirection-and-address-of-operators.md) 를 참조 하세요. 1 차원 배열의 경우 다음 네 식은 동일 합니다. `a`가 포인터이 고 `b` 정수일 경우
+첨자식은 정수 계열 값을 포인터 값에 더한 다음 간접 참조 연산자(<strong>\*</strong>)를 결과에 적용하여 평가됩니다. 간접 참조 연산자에 대한 자세한 내용은 [간접 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요. 1차원 배열의 경우 `a`가 포인터이고 `b`가 정수라고 가정할 때 다음 네 식은 동일합니다.
 
 ```
 a[b]
@@ -49,11 +49,11 @@ b[a]
 
 더하기 연산자([가감 연산자](../c-language/c-additive-operators.md) 참조)에 대한 변환 규칙에 따라 정수 계열 값은 포인터로 주소가 지정된 형식의 길이를 곱하여 주소 오프셋으로 변환됩니다.
 
-예를 들어 `line` 식별자가 `int` 값의 배열을 참조하는 경우, 다음 절차는 첨자식 `line[ i ]`를 평가하는 데 사용됩니다.
+예를 들어 `line` 식별자가 `int` 값의 배열을 참조하는 경우 다음 절차는 첨자식 `line[ i ]`를 평가하는 데 사용됩니다.
 
-1. 정수 값 `i`를 `int` 항목의 길이로 정의된 바이트 수와 곱합니다. 변환 된 `i` 값은 `i` `int` 위치를 나타냅니다.
+1. 정수 값 `i`를 `int` 항목의 길이로 정의된 바이트 수와 곱합니다. 변환된 `i`의 값은 `i``int`개의 위치를 나타냅니다.
 
-1. 이 변환 된 값을 원래 포인터 값 (`line`)에 추가 하 여 `line`에서 `int` 위치 `i` 오프셋 된 주소를 생성 합니다.
+1. 이 변환된 값을 원래 포인터 값(`line`)에 더하여 `line`으로부터 `i``int`개 위치만큼 떨어져 있는 주소를 생성합니다.
 
 1. 간접 참조 연산자가 새 주소에 적용됩니다. 결과는 해당 위치에 있는 배열 요소의 값입니다(직관적으로 `line [ i ]`).
 

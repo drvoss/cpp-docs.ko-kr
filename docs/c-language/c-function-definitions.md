@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
 ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857140"
@@ -36,7 +36,7 @@ ms.locfileid: "74857140"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *특성-시퀀스* 는 Microsoft 전용 \*/
+/\* *attribute-seq*는 Microsoft 전용임 \*/
 
 프로토타입 매개 변수인 경우:
 
@@ -53,8 +53,8 @@ ms.locfileid: "74857140"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 함수 선언자 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 새로운 스타일의 선언자 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 사용되지 않는 스타일의 선언자 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(** *parameter-type-list* **)**  /\* 새로운 스타일의 선언자 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* 사용되지 않는 스타일의 선언자 \*/
 
 정의의 매개 변수 목록에서는 다음 구문을 사용합니다.
 

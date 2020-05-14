@@ -33,6 +33,6 @@ ms.locfileid: "69492515"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [main 함수 및 프로그램 실행](../c-language/main-function-and-program-execution.md)

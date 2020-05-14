@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857088"
@@ -24,7 +24,7 @@ ms.locfileid: "74857088"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *특성-seq*<sub>opt</sub> 는 Microsoft 전용 \*/
+/\* *attribute-seq*<sub>opt</sub>는 Microsoft 전용임 \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -44,13 +44,13 @@ ms.locfileid: "74857088"
 
 *direct-declarator*: /\* 함수 선언자 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* 새로운 스타일의 선언자 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 사용되지 않는 스타일의 선언자 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* 사용되지 않는 스타일의 선언자 \*/
 
 프로토타입은 닫는 괄호 바로 다음에 오는 세미콜론으로 종료되므로 본문이 없다는 점을 제외하고 함수 정의와 형태가 동일합니다. 어떤 경우든 간에 반환 형식은 함수 정의에 지정된 반환 형식과 일치해야 합니다.
 
 함수 프로토타입에는 다음과 같은 중요한 용도가 있습니다.
 
-- **Int**이외의 형식을 반환 하는 함수의 반환 형식을 설정 합니다. **Int** 값을 반환 하는 함수에는 프로토타입이 필요 하지 않지만 프로토타입을 권장 합니다.
+- **int** 이외의 형식을 반환하는 함수의 반환 형식을 설정합니다. **int** 값을 반환하는 함수에는 프로토타입이 필요하지 않지만 프로토타입을 사용하는 것이 좋습니다.
 
 - 전체 프로토타입이 없는 경우 표준 변환이 수행되지만 매개 변수의 수에 대해 인수의 수나 형식이 확인되지 않습니다.
 

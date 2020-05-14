@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312418"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>포인터 형식과의 변환
 
@@ -34,8 +34,8 @@ ms.locfileid: "56147245"
 
 - 정수 계열 형식의 크기가 포인터 형식의 크기와 다른 경우 정수 계열 형식은 먼저 [부호 있는 정수 계열 형식에서 변환](../c-language/conversions-from-signed-integral-types.md) 및 [부호 없는 정수 계열 형식에서 변환](../c-language/conversions-from-unsigned-integral-types.md) 테이블에 지정된 변환 경로를 사용하여 포인터 크기로 변환됩니다. 그런 다음 포인터 값으로 처리됩니다.
 
-값이 0인 정수 상수 식 또는 **void** <strong>\*</strong> 형식으로 캐스팅된 이러한 식은 형식 캐스팅, 할당 또는 비교를 통해 모든 형식의 포인터로 변환될 수 있습니다. 이 경우 동일한 형식의 다른 null 포인터와 똑같은 null 포인터가 생성되지만 이 null 포인터는 함수 또는 개체에 대한 어떤 포인터와도 같지 않습니다. 상수 0 이외의 정수는 포인터 형식으로 변환될 수 있지만 결과는 이식할 수 없습니다.
+값이 0인 정수 상수 식 또는 **void** <strong>\*</strong> 형식으로 캐스팅된 식은 형식 캐스팅, 할당 또는 비교를 통해 모든 형식의 포인터로 변환될 수 있습니다. 이 경우 동일한 형식의 다른 null 포인터와 똑같은 null 포인터가 생성되지만 이 null 포인터는 함수 또는 개체에 대한 어떤 포인터와도 같지 않습니다. 상수 0 이외의 정수는 포인터 형식으로 변환될 수 있지만 결과는 이식할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [할당 변환](../c-language/assignment-conversions.md)

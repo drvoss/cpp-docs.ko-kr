@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313547"
 ---
 # <a name="array-declarations"></a>배열 선언
 
@@ -42,7 +42,7 @@ ms.locfileid: "56147778"
 
 - 두 번째 형태는 다른 곳에 정의된 변수를 선언합니다. 이 형태에서는 대괄호로 묶은 *constant-expression* 인수가 생략되지만 대괄호는 생략되지 않습니다. 배열을 이전에 초기화했거나, 배열을 매개 변수로 선언했거나, 프로그램의 다른 곳에서 명시적으로 정의된 배열에 대한 참조로 배열을 선언한 경우에만 이 형태를 사용할 수 있습니다.
 
-두 형태 모두에서 *direct-declarator*는 변수의 이름을 지정하고 변수의 형식을 수정할 수 있습니다. *direct-declarator* 뒤에 오는 대괄호(**[ ]**)는 선언자를 배열 형식으로 수정합니다.
+두 형태 모두에서 *direct-declarator*는 변수의 이름을 지정하고 변수의 형식을 수정할 수 있습니다. *direct-declarator* 뒤에 오는 대괄호( **[ ]** )는 선언자를 배열 형식으로 수정합니다.
 
 형식 한정자는 배열 형식의 개체에 대한 선언에 나타날 수 있지만 한정자는 배열 자체가 아니라 요소에 적용됩니다.
 
@@ -64,7 +64,7 @@ char A[2][3];
 
 배열의 개별 요소를 참조하려면 [후위 연산자](../c-language/postfix-operators.md)에 설명된 것처럼 첨자 식을 사용하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 배열 선언을 보여 줍니다.
 
@@ -94,6 +94,6 @@ extern char *name[];
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

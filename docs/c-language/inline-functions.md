@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325548"
 ---
 # <a name="inline-functions"></a>인라인 함수
 
@@ -37,6 +37,6 @@ ms.locfileid: "56147259"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)

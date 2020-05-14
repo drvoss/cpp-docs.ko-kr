@@ -1,5 +1,5 @@
 ---
-title: C++-visual Studio 프로젝트
+title: Visual Studio 프로젝트 - C++
 ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
 ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80078689"
 ---
-# <a name="visual-studio-projects---c"></a>Visual Studio 프로젝트-C++
+# <a name="visual-studio-projects---c"></a>Visual Studio 프로젝트 - C++
 
-*Visual Studio 프로젝트* 프로젝트를 MSBuild 빌드 시스템에 기반합니다. MSBuild는 Visual Studio에 대 한 기본 빌드 시스템 이며 일반적으로 Windows 관련 프로그램에 사용할 가장 좋은 빌드 시스템입니다. MSBuild는 Visual Studio와 긴밀하게 통합되어 있지만, 명령줄에서도 사용할 수도 있습니다. 플랫폼 간 프로젝트 또는 오픈 소스 라이브러리를 사용 하는 프로젝트의 경우 visual studio 2017 이상에서 [Visual studio의 cmake 프로젝트](cmake-projects-in-visual-studio.md) 를 사용 하는 것이 좋습니다. 이전 버전의 Visual Studio에서 MSBuild 프로젝트를 업그레이드 하는 방법에 대 한 자세한 내용은 [Microsoft C++ 포팅 및 업그레이드 가이드](../porting/visual-cpp-porting-and-upgrading-guide.md)를 참조 하세요.
+*Visual Studio 프로젝트* 프로젝트를 MSBuild 빌드 시스템에 기반합니다. MSBuild는 Visual Studio용 기본 빌드 시스템이며 일반적으로 Windows 관련 프로그램에 사용하기에 가장 좋은 빌드 시스템입니다. MSBuild는 Visual Studio와 긴밀하게 통합되어 있지만, 명령줄에서도 사용할 수도 있습니다. 플랫폼 간 프로젝트 또는 오픈 소스 라이브러리를 사용하는 프로젝트의 경우 Visual Studio 2017 이상에서 [Visual Studio CMake 프로젝트](cmake-projects-in-visual-studio.md)를 사용하는 것이 좋습니다. 이전 버전의 Visual Studio에서 MSBuild 프로젝트를 업그레이드하는 방법에 대한 자세한 `내용은 [Microsoft C++ 이식 및 업그레이드 가이드](../porting/visual-cpp-porting-and-upgrading-guide.md)를 참조하세요.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
@@ -37,7 +37,7 @@ ms.locfileid: "80078689"
 
 ::: moniker-end
 
-Visual Studio에 포함된 모든 기본 프로젝트 템플릿에 대한 자세한 정보는 [Visual Studio의 C++ 프로젝트 템플릿](reference/visual-cpp-project-types.md)을 참조하세요. 자체 프로젝트 템플릿을 만들 수 있습니다. 자세한 내용은 [방법: 프로젝트 템플릿 만들기](/visualstudio/ide/how-to-create-project-templates)를 참조 하세요.
+Visual Studio에 포함된 모든 기본 프로젝트 템플릿에 대한 자세한 정보는 [Visual Studio의 C++ 프로젝트 템플릿](reference/visual-cpp-project-types.md)을 참조하세요. 자체 프로젝트 템플릿을 만들 수 있습니다. 자세한 내용은 [방법: 프로젝트 템플릿 만들기](/visualstudio/ide/how-to-create-project-templates)를 참조하세요.
 
 프로젝트를 만든 후에는 [솔루션 탐색기](/visualstudio/ide/solutions-and-projects-in-visual-studio) 창에 표시됩니다.
 
@@ -55,7 +55,7 @@ Visual Studio에 포함된 모든 기본 프로젝트 템플릿에 대한 자세
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>컴파일러 옵션 및 기타 빌드 속성 설정
 
-프로젝트에 대한 빌드 속성을 구성하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 자세한 내용은 [Visual Studio에서 컴파일러 및 빌드 속성 설정](working-with-project-properties.md)을 참조합니다.
+프로젝트에 대한 빌드 속성을 구성하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 자세한 정보는 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](working-with-project-properties.md)을 참조하세요.
 
 ## <a name="compile-and-run"></a>컴파일 및 실행
 
@@ -84,7 +84,7 @@ Visual Studio에 포함된 모든 기본 프로젝트 템플릿에 대한 자세
 [기존 코드로 프로젝트 만들기](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 대강의 원본 파일 컬렉션에서 새 Visual Studio 프로젝트를 만드는 방법
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [프로젝트 및 빌드 시스템](projects-and-build-systems-cpp.md)<br>
-[Microsoft C++ 포팅 및 업그레이드 가이드](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Microsoft C++ 이식 및 업그레이드 가이드](../porting/visual-cpp-porting-and-upgrading-guide.md)

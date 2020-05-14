@@ -22,7 +22,7 @@ ms.locfileid: "62326081"
 ## <a name="syntax"></a>구문
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 집합체 초기화용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 집계 초기화용 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
@@ -55,7 +55,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 전용 종료**
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 이 예제는 배열에 대한 이니셜라이저를 보여 줍니다.
 
@@ -150,6 +150,6 @@ union
 
 이 예제에서는 공용 구조체 변수 `y`가 초기화됩니다. 공용 구조체의 첫 번째 요소는 배열이므로 이니셜라이저는 집합체 이니셜라이저입니다. 이니셜라이저 목록 `{'1'}`은 값을 배열의 첫 번째 행에 할당합니다. 하나의 값만 목록에 나타나므로 첫 번째 열의 요소는 문자 `1`로 초기화되며 행의 나머지 두 요소는 기본적으로 값 0으로 초기화됩니다. 마찬가지로 `x`의 두 번째 행에 있는 첫 번째 요소는 문자 `4`로 초기화되며 행의 나머지 두 요소는 값 0으로 초기화됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [초기화](../c-language/initialization.md)

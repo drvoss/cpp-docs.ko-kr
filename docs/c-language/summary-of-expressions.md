@@ -3,11 +3,11 @@ title: 식 요약
 ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
 ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157820"
 ---
 # <a name="summary-of-expressions"></a>식 요약
 
@@ -15,7 +15,7 @@ ms.locfileid: "50543496"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *expression*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *expression*  **)**
 
 *expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
@@ -47,19 +47,19 @@ ms.locfileid: "50543496"
 
 *unary-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **++**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **--**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
 
 *unary-operator*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+&nbsp;&nbsp;&nbsp;&nbsp; **&** **&#42;** **+** **-** **~** **!**
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *type-name*  **)**  *cast-expression*
 
 *multiplicative-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
@@ -109,6 +109,6 @@ ms.locfileid: "50543496"
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [구 구조 문법](../c-language/phrase-structure-grammar.md)

@@ -116,6 +116,6 @@ ms.locfileid: "67400521"
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 상수](../c-language/c-constants.md)<br/>
