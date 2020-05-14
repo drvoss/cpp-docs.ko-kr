@@ -1,7 +1,7 @@
 ---
-title: switch명령문(C++)
-description: Microsoft 비주얼 스튜디오 C++의 표준 C++ switch 문을 참조하십시오.
-ms.date: 04/15/2020
+title: switch문 (c + +)
+description: Microsoft Visual Studio c + +의 표준 c + + 문에 대 한 참조 switch 입니다.
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480830"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389703"
 ---
-# <a name="opno-locswitch-statement-c"></a>switch명령문(C++)
+# <a name="switch-statement-c"></a>`switch`문 (c + +)
 
 정수 계열 식의 값에 따라 코드의 여러 섹션 중에서 선택할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
-> **`switch (`**\[ *초기화* **`;`**] *표현식***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***상수 식* **`:`** *문*\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***문*] \
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub> <sup>C + + 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>설명
 
-*식에는* 정수 형식이 있거나 정수 형식에 대한 명확한 변환이 있는 클래스 형식이어야 합니다. 통합 승격은 표준 변환에 설명된 대로 [수행됩니다.](standard-conversions.md)
+__`switch`__ 문을 통해 컨트롤은 *`condition`* 의 값에 따라 문 본문에서 하나의 *`labeled-statement`* 로 전송됩니다.
 
-**switch** 문 본문은 일련의 **case** 레이블과 선택적 **default** 레이블로 구성됩니다. 전체적으로 레이블 다음에 있는 문을 *레이블이 있는* 문이라고 합니다. 레이블이 지정된 문은 구문 요구 **switch** 사항이 아니지만 문이 없으면 의미가 없습니다. 문에서 **case** 두 개의 상수 식은 동일한 값으로 평가할 수 없습니다. 레이블은 **default** 한 번만 나타날 수 있습니다. 문은 **default** 종종 끝에 배치되지만 **switch** 명령문 본문에 아무 곳에나 나타날 수 있습니다. A **case** **default** 또는 레이블은 **switch** 명령문 내에서만 나타날 수 있습니다.
+는 *`condition`* 정수 계열 형식 이거나 정수 계열 형식으로의 명확한 변환이 있는 클래스 형식 이어야 합니다. 정수 계열 확장은 [표준 변환](standard-conversions.md)에 설명 된 대로 발생 합니다.
 
-각 **case** 레이블의 *상수 표현식은* *식의*유형으로 변환됩니다. 그런 다음 같음 *표현식과* 비교합니다. 컨트롤은 **case** *상수 식이* *식의*값과 일치하는 문을 전달합니다. 결과적으로 발생하는 동작은 다음 표에 나와 있습니다.
+__`switch`__ 문 본문은 일련의 __`case`__ 레이블과 선택적 레이블로 구성 됩니다 __`default`__ . 는 *`labeled-statement`* 다음과 같은 레이블 및 문 중 하나입니다. 레이블이 지정 된 문은 구문 요구 사항이 아니지만 __`switch`__ 문은 필요 하지 않습니다. 문의 두 *`constant-expression`* 값 __`case`__ 은 동일한 값으로 계산 될 수 없습니다. __`default`__ 레이블은 한 번만 나타날 수 있습니다. __`default`__ 문은 종종 끝에 배치 되지만 문 본문의 어디에 나 나타날 수 있습니다 __`switch`__ . __`case`__ 또는 __`default`__ 레이블은 __`switch`__ 문 안에만 나타날 수 있습니다.
 
-### <a name="switch-statement-behavior"></a>문 비헤이비어 전환
+*`constant-expression`* 각 레이블의는 __`case`__ 와 동일한 형식의 상수 값으로 변환 됩니다 *`condition`* . 그런 다음와 비교 하 여 *`condition`* 같은지 비교 합니다. 컨트롤은 __`case`__ *`constant-expression`* 의 값과 일치 하는 값 뒤의 첫 번째 문으로 전달 *`condition`* 됩니다. 결과적으로 발생하는 동작은 다음 표에 나와 있습니다.
+
+### <a name="switch-statement-behavior"></a>`switch`문 동작
 
 | 조건 | 작업 |
 |--|--|
 | 변환된 값이 승격된 제어 식의 값과 일치합니다. | 제어가 해당 레이블 뒤에 오는 문으로 전송됩니다. |
-| **case** 상수는 레이블의 상수와 일치하지 않습니다. 레이블이 **default** 있습니다. | 컨트롤이 레이블로 **default** 전송됩니다. |
-| **case** 상수는 레이블의 상수와 일치하지 않습니다. 레이블이 없습니다. **default** | 컨트롤은 명령문 다음의 **switch** 명령문으로 전송됩니다. |
+| 레이블의 상수와 일치 하는 모든 상수는 없습니다 __`case`__ __`default`__ . 레이블이 있습니다. | 컨트롤이 레이블로 전송 됩니다 __`default`__ . |
+| 모든 상수는 레이블의 상수와 일치 하지 않습니다 __`case`__ __`default`__ . 레이블이 없습니다. | 제어가 문 뒤의 문으로 전달 됩니다 __`switch`__ . |
 
-일치하는 식이 발견되면 이후 **case** 또는 **default** 레이블을 통해 실행을 계속할 수 있습니다. 문은 [`break`](../cpp/break-statement-cpp.md) 실행을 중지하고 **switch** 명령문 다음의 명령문으로 제어를 전송하는 데 사용됩니다. **break** 문이 없으면 일치하는 **case** 레이블에서 의 끝까지 의 **switch** **default** 모든 문이 실행됩니다. 다음은 그 예입니다.
+일치 하는 식이 있는 경우 나중에 또는 레이블을 통해 실행을 계속할 수 있습니다 __`case`__ __`default`__ . 문은 [`break`](../cpp/break-statement-cpp.md) 실행을 중지 하 고 문 뒤의 문으로 제어를 전송 하는 데 사용 됩니다 __`switch`__ . 문이 없으면를 비롯 하 여의 __`break`__ __`case`__ 끝 부분에 대 한 일치 하는 레이블의 모든 문이 __`switch`__ __`default`__ 실행 됩니다. 다음은 그 예입니다.
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-위의 예제에서 `uppercase_A`는 `c`가 대문자 `'A'`인 경우 증가됩니다. 문 본문 및 컨트롤의 실행을 종료 한 **while** 후 **break** `uppercase_A++` 문은 루프에 전달됩니다. **switch** **break** 문이 없으면 실행이 다음 레이블이 지정된 문으로 "넘어지므로" `lowercase_a` 증가될 `other` 수 있습니다. 비슷한 목적은 에 **break** 대한 `case 'a'`명령문에 의해 제공됩니다. 소문자인 `c` `'a'` `lowercase_a` 경우 증분되고 **break** 문은 **switch** 명령문 본문을 종료합니다. `'a'` 또는 `c` `'A'`하지 않으면 **default** 문이 실행 됩니다.
+위의 예제에서 `uppercase_A`는 `c`가 대문자 `'A'`인 경우 증가됩니다. __`break`__ 뒤의 문은 `uppercase_A++` 문 본문의 실행을 종료 __`switch`__ 하 고 제어를 __`while`__ 루프로 전달 합니다. 문 없이 __`break`__ 실행은 레이블이 지정 된 다음 문으로 "이동" 하므로 `lowercase_a` 및 `other` 도 증가 합니다. 의 문에서는 이와 유사한 용도로 제공 됩니다 __`break`__ `case 'a'` . `c`가 소문자 인 경우 `'a'` `lowercase_a` 가 증가 하 고 문이 __`break`__ 문 본문을 종료 합니다 __`switch`__ . 이 `c` 또는가 아닌 경우 `'a'` `'A'` __`default`__ 문이 실행 됩니다.
 
-**Visual Studio 2017 이상:** [(/std:c++17)](../build/reference/std-specify-language-standard-version.md) `[[fallthrough]]` 특성은 C++17 표준에 지정됩니다. **switch** 명령문에서 사용할 수 있습니다. 컴파일러 또는 코드를 읽는 모든 사람이 의도적인 가을 스루 동작에 대한 힌트입니다. 현재 Microsoft C++ 컴파일러는 잘못된 동작에 대해 경고하지 않으므로 이 특성은 컴파일러 동작에 영향을 주지 않습니다. 이 예제에서는 특성이 종료되지 않은 레이블이 지정되지 않은 문 내의 빈 문에 적용됩니다. 즉, 세미콜론이 필요합니다.
+**Visual Studio 2017 이상:** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능) `[[fallthrough]]` 특성은 c + + 17 표준에 지정 되어 있습니다. 문에서 사용할 수 있습니다 __`switch`__ . 컴파일러에 대 한 힌트 또는 코드를 읽는 모든 사용자가 의도적으로 동작을 제어 합니다. Microsoft c + + 컴파일러는 현재 fallthrough 동작에 대 한 경고를 표시 하지 않으므로이 특성은 컴파일러 동작에 영향을 주지 않습니다. 이 예제에서 특성은 종결 되지 않은 레이블 문 내의 빈 문에 적용 됩니다. 즉, 세미콜론이 필요 합니다.
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 버전 15.3** [이상(/std:c++17).](../build/reference/std-specify-language-standard-version.md) switch *문에초기화* 절이 있을 수 있습니다. switch 문이 블록으로 제한되는 변수를 소개하고 초기화합니다.
+**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능). __`switch`__ 문에는 *`init-statement`* 세미콜론으로 끝나는 절이 있을 수 있습니다. 범위가 문의 블록으로 제한 되는 변수를 소개 하 고 초기화 합니다 __`switch`__ .
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-명령문의 내부 블록에는 가능한 모든 실행 경로에 의해 우회되지 않는 *도달 가능한*한 초기화가 있는 정의가 포함될 수 있습니다. **switch** 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 다음은 그 예입니다.
+문의 내부 블록은 __`switch`__ 사용 가능한 모든 실행 경로에 의해 바이패스 되지 않는 경우 이니셜라이저 *reachable*를 사용 하는 정의를 포함할 수 있습니다. 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 다음은 그 예입니다.
 
 ```cpp
 // switch_statement2.cpp
@@ -161,15 +173,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-**switch** 문을 중첩할 수 있습니다. 중첩되면 **case** 또는 **default** 레이블은 해당 문을 **switch** 둘러싸는 가장 가까운 문과 연결됩니다.
+__`switch`__ 문은 중첩 될 수 있습니다. 중첩 __`case`__ 된 경우 또는 __`default`__ 레이블은이를 포함 하는 가장 가까운 문과 연결 __`switch`__ 됩니다.
 
-### <a name="microsoft-specific-behavior"></a>Microsoft 관련 동작
+### <a name="microsoft-specific-behavior"></a>Microsoft 전용 동작
 
-Microsoft C는 **case** **switch** 명령문의 값 수를 제한하지 않습니다. 이 수는 사용 가능한 메모리에 의해서만 제한됩니다. ANSI C는 성명서에 **case** 최소 257개의 **switch** 레이블을 허용해야 합니다.
+Microsoft c + +는 문의 값 수를 제한 하지 않습니다 __`case`__ __`switch`__ . 이 수는 사용 가능한 메모리에 의해서만 제한됩니다.
 
-마이크로 default 소프트 C에 대한 마이크로 소프트 확장이 활성화되어 있다는 것입니다. [/Za](../build/reference/za-ze-disable-language-extensions.md) 컴파일러 옵션을 사용하여 이러한 확장을 사용하지 않도록 설정합니다.
-
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선택문](../cpp/selection-statements-cpp.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)
