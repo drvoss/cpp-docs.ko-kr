@@ -1,19 +1,19 @@
 ---
-title: '방법: 이동 생성자 및 이동 할당 연산자 정의 (C++)'
+title: '방법: 이동 생성자 및 이동 할당 연산자 정의 (c + +)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179369"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550773"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
 
-이 항목에서는 C++ 클래스에 대 한 이동 *생성자* 및 이동 할당 연산자를 작성 하는 방법에 대해 설명 합니다. 이동 생성자를 사용 하면 rvalue 개체가 소유한 리소스를 복사 하지 않고 lvalue로 이동할 수 있습니다. 의미 체계 이동에 대 한 자세한 내용은 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조 하세요.
+이 항목에서는 c + + 클래스에 대 한 이동 *생성자* 및 이동 할당 연산자를 작성 하는 방법에 대해 설명 합니다. 이동 생성자를 사용 하면 rvalue 개체가 소유한 리소스를 복사 하지 않고 lvalue로 이동할 수 있습니다. 의미 체계 이동에 대 한 자세한 내용은 [Rvalue 참조 선언 자:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조 하세요.
 
 이 항목은 메모리 버퍼를 관리하는 다음 C++클래스 `MemoryBlock`을 기반으로 합니다.
 
@@ -174,7 +174,7 @@ private:
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 이동 의미 체계를 통해 애플리케이션의 성능을 향상시키는 방법을 보여 줍니다. 이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다. `vector` 클래스는 이동 의미 체계를 사용 하 여 벡터의 요소를 복사 하는 대신 이동 하 여 삽입 작업을 효율적으로 수행 합니다.
+다음 예제에서는 이동 의미 체계를 통해 애플리케이션의 성능을 향상시키는 방법을 보여 줍니다. 이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다. `vector`클래스는 이동 의미 체계를 사용 하 여 벡터의 요소를 복사 하는 대신 이동 하 여 삽입 작업을 효율적으로 수행 합니다.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,22 +241,22 @@ int main()
 }
 ```
 
-이 예에서 생성되는 출력은 다음과 같습니다.
+이 예제는 다음과 같은 출력을 생성합니다.
 
 ```Output
 In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -299,7 +299,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,7 +307,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-[Std:: move](../standard-library/utility-functions.md#move) 함수는 *다른* 매개 변수의 rvalue 속성을 유지 합니다.
+[Std:: move](../standard-library/utility-functions.md#move) 함수는 lvalue `other` 를 rvalue로 변환 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
