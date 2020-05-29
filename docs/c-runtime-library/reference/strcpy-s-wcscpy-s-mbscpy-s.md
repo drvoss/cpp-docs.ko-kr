@@ -1,6 +1,6 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 4/2/2020
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911839"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206195"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 대상 문자열 버퍼의 위치입니다.
 
 *dest_size*<br/>
-좁은/멀티 바이트 함수의 경우 **문자** 단위로 나타낸 대상 문자열 버퍼의 크기 이며, 와이드 함수의 경우에는 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다.
+좁은/멀티 바이트 함수의 경우 **문자** 단위로 나타낸 대상 문자열 버퍼의 크기 이며, 와이드 함수의 경우에는 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다. 문자열 뒤의 종료에 대해이 크기의 계정을 확인 합니다 `NULL` .
 
 *src*<br/>
 null 종료 소스 문자열 버퍼입니다.
@@ -124,7 +124,7 @@ null 종료 소스 문자열 버퍼입니다.
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 성공하면 0이고, 실패하면 오류입니다.
 
@@ -132,8 +132,8 @@ null 종료 소스 문자열 버퍼입니다.
 
 |*dest*|*dest_size*|*src*|반환 값|*대상* 의 내용|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**N**|any|any|**EINVAL**|수정 안 됨|
-|any|any|**N**|**EINVAL**|*dest*[0]을 0으로 설정|
+|**NULL**|any|any|**EINVAL**|수정 안 됨|
+|any|any|**NULL**|**EINVAL**|*dest*[0]을 0으로 설정|
 |any|0 또는 너무 작음|any|**ERANGE**|*dest*[0]을 0으로 설정|
 
 ## <a name="remarks"></a>설명
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
