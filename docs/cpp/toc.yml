@@ -1,959 +1,907 @@
+- name: C++ 언어 설명서
+  href: ../cpp/index.yml
 - name: C++ 언어 참조
-  href: ../cpp/cpp-language-reference.md
-- name: C++(최신 C++) 시작하기
-  href: ../cpp/welcome-back-to-cpp-modern-cpp.md
-- name: 어휘 규칙
-  expanded: false
+  expanded: true
   items:
+    - name: C++ 언어 참조
+      href: ../cpp/cpp-language-reference.md
+    - name: C++(최신 C++) 시작하기
+      href: ../cpp/welcome-back-to-cpp-modern-cpp.md
     - name: 어휘 규칙
-      href: ../cpp/lexical-conventions.md
-    - name: 토큰 및 문자 집합
-      href: ../cpp/character-sets.md
-    - name: 주석
-      href: ../cpp/comments-cpp.md
-    - name: 식별자
-      href: ../cpp/identifiers-cpp.md
-    - name: 키워드
-      href: ../cpp/keywords-cpp.md
-    - name: 문장 부호
-      href: ../cpp/punctuators-cpp.md
-    - name: '숫자, 부울 및 포인터 리터럴'
-      href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
-    - name: 문자열 및 문자 리터럴
-      href: ../cpp/string-and-character-literals-cpp.md
-    - name: 사용자 정의 리터럴
-      href: ../cpp/user-defined-literals-cpp.md
-- name: 기본 개념
-  expanded: false
-  items:
+      items:
+        - name: 어휘 규칙
+          href: ../cpp/lexical-conventions.md
+        - name: 토큰 및 문자 집합
+          href: ../cpp/character-sets.md
+        - name: 주석
+          href: ../cpp/comments-cpp.md
+        - name: 식별자
+          href: ../cpp/identifiers-cpp.md
+        - name: 키워드
+          href: ../cpp/keywords-cpp.md
+        - name: 문장 부호
+          href: ../cpp/punctuators-cpp.md
+        - name: '숫자, 부울 및 포인터 리터럴'
+          href: ../cpp/numeric-boolean-and-pointer-literals-cpp.md
+        - name: 문자열 및 문자 리터럴
+          href: ../cpp/string-and-character-literals-cpp.md
+        - name: 사용자 정의 리터럴
+          href: ../cpp/user-defined-literals-cpp.md
     - name: 기본 개념
-      href: ../cpp/basic-concepts-cpp.md
-    - name: C++ 형식 시스템
-      href: ../cpp/cpp-type-system-modern-cpp.md
-    - name: Scope
-      href: ../cpp/scope-visual-cpp.md
-    - name: 헤더 파일
-      href: ../cpp/header-files-cpp.md
-    - name: 변환 단위 및 링크
-      href: ../cpp/program-and-linkage-cpp.md
-    - name: main 함수와 명령줄 인수
-      href: ../cpp/main-function-command-line-args.md
-    - name: 프로그램 종료
-      href: ../cpp/program-termination.md
-    - name: Lvalue 및 Rvalue
-      href: ../cpp/lvalues-and-rvalues-visual-cpp.md
-    - name: 임시 개체
-      href: ../cpp/temporary-objects.md
-    - name: 맞춤
-      href: ../cpp/alignment-cpp-declarations.md
-    - name: 'Trivial, 표준 레이아웃 및 POD 형식'
-      href: ../cpp/trivial-standard-layout-and-pod-types.md
-    - name: 값 형식
-      href: ../cpp/value-types-modern-cpp.md
-    - name: 형식 변환 및 형식 안전성
-      href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
-    - name: 표준 변환
-      href: ../cpp/standard-conversions.md
-- name: 기본 제공 형식
-  expanded: false
-  items:
+      items:
+        - name: 기본 개념
+          href: ../cpp/basic-concepts-cpp.md
+        - name: C++ 형식 시스템
+          href: ../cpp/cpp-type-system-modern-cpp.md
+        - name: Scope
+          href: ../cpp/scope-visual-cpp.md
+        - name: 헤더 파일
+          href: ../cpp/header-files-cpp.md
+        - name: 변환 단위 및 링크
+          href: ../cpp/program-and-linkage-cpp.md
+        - name: main 함수와 명령줄 인수
+          href: ../cpp/main-function-command-line-args.md
+        - name: 프로그램 종료
+          href: ../cpp/program-termination.md
+        - name: Lvalue 및 Rvalue
+          href: ../cpp/lvalues-and-rvalues-visual-cpp.md
+        - name: 임시 개체
+          href: ../cpp/temporary-objects.md
+        - name: 맞춤
+          href: ../cpp/alignment-cpp-declarations.md
+        - name: 'Trivial, 표준 레이아웃 및 POD 형식'
+          href: ../cpp/trivial-standard-layout-and-pod-types.md
+        - name: 값 형식
+          href: ../cpp/value-types-modern-cpp.md
+        - name: 형식 변환 및 형식 안전성
+          href: ../cpp/type-conversions-and-type-safety-modern-cpp.md
+        - name: 표준 변환
+          href: ../cpp/standard-conversions.md
     - name: 기본 제공 형식
-      href: ../cpp/fundamental-types-cpp.md
-    - name: 데이터 형식 범위
-      href: ../cpp/data-type-ranges.md
-    - name: nullptr
-      href: ../cpp/nullptr.md
-    - name: void
-      href: ../cpp/void-cpp.md
-    - name: bool
-      href: ../cpp/bool-cpp.md
-    - name: false
-      href: ../cpp/false-cpp.md
-    - name: true
-      href: ../cpp/true-cpp.md
-    - name: 'char, wchar_t, char16_t, char32_t'
-      href: ../cpp/char-wchar-t-char16-t-char32-t.md
-    - name: '__int8, __int16, __int32, __int64'
-      href: ../cpp/int8-int16-int32-int64.md
-    - name: __m64
-      href: ../cpp/m64.md
-    - name: __m128
-      href: ../cpp/m128.md
-    - name: __m128d
-      href: ../cpp/m128d.md
-    - name: __m128i
-      href: ../cpp/m128i.md
-    - name: '__ptr32, __ptr64'
-      href: ../cpp/ptr32-ptr64.md
-    - name: 숫자 제한
-      expanded: false
       items:
+        - name: 기본 제공 형식
+          href: ../cpp/fundamental-types-cpp.md
+        - name: 데이터 형식 범위
+          href: ../cpp/data-type-ranges.md
+        - name: nullptr
+          href: ../cpp/nullptr.md
+        - name: void
+          href: ../cpp/void-cpp.md
+        - name: bool
+          href: ../cpp/bool-cpp.md
+        - name: false
+          href: ../cpp/false-cpp.md
+        - name: true
+          href: ../cpp/true-cpp.md
+        - name: 'char, wchar_t, char16_t, char32_t'
+          href: ../cpp/char-wchar-t-char16-t-char32-t.md
+        - name: '__int8, __int16, __int32, __int64'
+          href: ../cpp/int8-int16-int32-int64.md
+        - name: __m64
+          href: ../cpp/m64.md
+        - name: __m128
+          href: ../cpp/m128.md
+        - name: __m128d
+          href: ../cpp/m128d.md
+        - name: __m128i
+          href: ../cpp/m128i.md
+        - name: '__ptr32, __ptr64'
+          href: ../cpp/ptr32-ptr64.md
         - name: 숫자 제한
-          href: ../cpp/numerical-limits-cpp.md
-        - name: 정수 제한
-          href: ../cpp/integer-limits.md
-        - name: 부동 한계
-          href: ../cpp/floating-limits.md
-- name: 선언 및 정의
-  expanded: false
-  items:
+          items:
+            - name: 숫자 제한
+              href: ../cpp/numerical-limits-cpp.md
+            - name: 정수 제한
+              href: ../cpp/integer-limits.md
+            - name: 부동 한계
+              href: ../cpp/floating-limits.md
     - name: 선언 및 정의
-      href: ../cpp/declarations-and-definitions-cpp.md
-    - name: 스토리지 클래스
-      href: ../cpp/storage-classes-cpp.md
-    - name: auto
-      href: ../cpp/auto-cpp.md
-    - name: const
-      href: ../cpp/const-cpp.md
-    - name: constexpr
-      href: ../cpp/constexpr-cpp.md
-    - name: extern
-      href: ../cpp/extern-cpp.md
-    - name: 이니셜라이저
-      href: ../cpp/initializers.md
-    - name: 별칭 및 typedef
-      href: ../cpp/aliases-and-typedefs-cpp.md
-    - name: 선언 사용
-      href: ../cpp/using-declaration.md
-    - name: volatile
-      href: ../cpp/volatile-cpp.md
-    - name: decltype
-      href: ../cpp/decltype-cpp.md
-    - name: 특성
-      href: ../cpp/attributes.md
-- name: '기본 제공 연산자, 우선 순위 및 결합성'
-  expanded: false
-  items:
+      items:
+        - name: 선언 및 정의
+          href: ../cpp/declarations-and-definitions-cpp.md
+        - name: 스토리지 클래스
+          href: ../cpp/storage-classes-cpp.md
+        - name: auto
+          href: ../cpp/auto-cpp.md
+        - name: const
+          href: ../cpp/const-cpp.md
+        - name: constexpr
+          href: ../cpp/constexpr-cpp.md
+        - name: extern
+          href: ../cpp/extern-cpp.md
+        - name: 이니셜라이저
+          href: ../cpp/initializers.md
+        - name: 별칭 및 typedef
+          href: ../cpp/aliases-and-typedefs-cpp.md
+        - name: 선언 사용
+          href: ../cpp/using-declaration.md
+        - name: volatile
+          href: ../cpp/volatile-cpp.md
+        - name: decltype
+          href: ../cpp/decltype-cpp.md
+        - name: 특성
+          href: ../cpp/attributes.md
     - name: '기본 제공 연산자, 우선 순위 및 결합성'
-      href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-    - name: __alignof 연산자
-      href: ../cpp/alignof-operator.md
-    - name: __uuidof operator
-      href: ../cpp/uuidof-operator.md
-    - name: '가감 연산자: + 및 -'
-      href: ../cpp/additive-operators-plus-and.md
-    - name: 'Address-of 연산자: &'
-      href: ../cpp/address-of-operator-amp.md
-    - name: 할당 연산자
-      href: ../cpp/assignment-operators.md
-    - name: '비트 AND 연산자: &'
-      href: ../cpp/bitwise-and-operator-amp.md
-    - name: '배타적 비트 OR 연산자: ^'
-      href: ../cpp/bitwise-exclusive-or-operator-hat.md
-    - name: '포괄적 비트 OR 연산자: |'
-      href: ../cpp/bitwise-inclusive-or-operator-pipe.md
-    - name: '캐스트 연산자: ()'
-      href: ../cpp/cast-operator-parens.md
-    - name: '쉼표 연산자: ,'
-      href: ../cpp/comma-operator.md
-    - name: '조건 연산자: ? :'
-      href: ../cpp/conditional-operator-q.md
-    - name: delete 연산자
-      href: ../cpp/delete-operator-cpp.md
-    - name: '같음 연산자: == 및 !='
-      href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
-    - name: '명시적 형식 변환 연산자: ()'
-      href: ../cpp/explicit-type-conversion-operator-parens.md
-    - name: '함수 호출 연산자: ()'
-      href: ../cpp/function-call-operator-parens.md
-    - name: '간접 참조 연산자: *'
-      href: ../cpp/indirection-operator-star.md
-    - name: 왼쪽 시프트 및 오른쪽 시프트 연산자(>> 및 <<)
-      href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
-    - name: '논리 AND 연산자: &&'
-      href: ../cpp/logical-and-operator-amp-amp.md
-    - name: '논리 부정 연산자: !'
-      href: ../cpp/logical-negation-operator-exclpt.md
-    - name: '논리 OR 연산자: ||'
-      href: ../cpp/logical-or-operator-pipe-pipe.md
-    - name: '멤버 액세스 연산자: . and ->'
-      href: ../cpp/member-access-operators-dot-and.md
-    - name: 곱하기 연산자 및 모듈러스 연산자
-      href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
-    - name: new 연산자
-      href: ../cpp/new-operator-cpp.md
-    - name: '1의 보수 연산자: ~'
-      href: ../cpp/one-s-complement-operator-tilde.md
-    - name: '멤버 포인터 연산자: .* 및 ->*'
-      href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
-    - name: '후위 증가 및 감소 연산자: ++ 및 --'
-      href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: '접두사 증가 및 감소 연산자: ++ 및 --'
-      href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
-    - name: '관계형 연산자: <, >, <= 및 >='
-      href: ../cpp/relational-operators-equal-and-equal.md
-    - name: '범위 해결 연산자: ::'
-      href: ../cpp/scope-resolution-operator.md
-    - name: sizeof 연산자
-      href: ../cpp/sizeof-operator.md
-    - name: '아래 첨자 연산자:'
-      href: ../cpp/subscript-operator.md
-    - name: typeid 연산자
-      href: ../cpp/typeid-operator.md
-    - name: '단항 더하기 및 부정 연산자: + 및 -'
-      href: ../cpp/unary-plus-and-negation-operators-plus-and.md
-- name: 표현식
-  expanded: false
-  items:
+      items:
+        - name: '기본 제공 연산자, 우선 순위 및 결합성'
+          href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+        - name: __alignof 연산자
+          href: ../cpp/alignof-operator.md
+        - name: __uuidof operator
+          href: ../cpp/uuidof-operator.md
+        - name: '가감 연산자: + 및 -'
+          href: ../cpp/additive-operators-plus-and.md
+        - name: 'Address-of 연산자: &'
+          href: ../cpp/address-of-operator-amp.md
+        - name: 할당 연산자
+          href: ../cpp/assignment-operators.md
+        - name: '비트 AND 연산자: &'
+          href: ../cpp/bitwise-and-operator-amp.md
+        - name: '배타적 비트 OR 연산자: ^'
+          href: ../cpp/bitwise-exclusive-or-operator-hat.md
+        - name: '포괄적 비트 OR 연산자: |'
+          href: ../cpp/bitwise-inclusive-or-operator-pipe.md
+        - name: '캐스트 연산자: ()'
+          href: ../cpp/cast-operator-parens.md
+        - name: '쉼표 연산자: ,'
+          href: ../cpp/comma-operator.md
+        - name: '조건 연산자: ? :'
+          href: ../cpp/conditional-operator-q.md
+        - name: delete 연산자
+          href: ../cpp/delete-operator-cpp.md
+        - name: '같음 연산자: == 및 !='
+          href: ../cpp/equality-operators-equal-equal-and-exclpt-equal.md
+        - name: '명시적 형식 변환 연산자: ()'
+          href: ../cpp/explicit-type-conversion-operator-parens.md
+        - name: '함수 호출 연산자: ()'
+          href: ../cpp/function-call-operator-parens.md
+        - name: '간접 참조 연산자: *'
+          href: ../cpp/indirection-operator-star.md
+        - name: 왼쪽 시프트 및 오른쪽 시프트 연산자(>> 및 <<)
+          href: ../cpp/left-shift-and-right-shift-operators-input-and-output.md
+        - name: '논리 AND 연산자: &&'
+          href: ../cpp/logical-and-operator-amp-amp.md
+        - name: '논리 부정 연산자: !'
+          href: ../cpp/logical-negation-operator-exclpt.md
+        - name: '논리 OR 연산자: ||'
+          href: ../cpp/logical-or-operator-pipe-pipe.md
+        - name: '멤버 액세스 연산자: . and ->'
+          href: ../cpp/member-access-operators-dot-and.md
+        - name: 곱하기 연산자 및 모듈러스 연산자
+          href: ../cpp/multiplicative-operators-and-the-modulus-operator.md
+        - name: new 연산자
+          href: ../cpp/new-operator-cpp.md
+        - name: '1의 보수 연산자: ~'
+          href: ../cpp/one-s-complement-operator-tilde.md
+        - name: '멤버 포인터 연산자: .* 및 ->*'
+          href: ../cpp/pointer-to-member-operators-dot-star-and-star.md
+        - name: '후위 증가 및 감소 연산자: ++ 및 --'
+          href: ../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: '접두사 증가 및 감소 연산자: ++ 및 --'
+          href: ../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md
+        - name: '관계형 연산자: <, >, <= 및 >='
+          href: ../cpp/relational-operators-equal-and-equal.md
+        - name: '범위 해결 연산자: ::'
+          href: ../cpp/scope-resolution-operator.md
+        - name: sizeof 연산자
+          href: ../cpp/sizeof-operator.md
+        - name: '아래 첨자 연산자:'
+          href: ../cpp/subscript-operator.md
+        - name: typeid 연산자
+          href: ../cpp/typeid-operator.md
+        - name: '단항 더하기 및 부정 연산자: + 및 -'
+          href: ../cpp/unary-plus-and-negation-operators-plus-and.md
     - name: 표현식
-      href: ../cpp/expressions-cpp.md
-    - name: 식의 형식
-      expanded: false
       items:
+        - name: 표현식
+          href: ../cpp/expressions-cpp.md
         - name: 식의 형식
-          href: ../cpp/types-of-expressions.md
-        - name: 기본 식
-          href: ../cpp/primary-expressions.md
-        - name: Ellipsis 및 Variadic 템플릿
-          href: ../cpp/ellipses-and-variadic-templates.md
-        - name: 후위 식
-          href: ../cpp/postfix-expressions.md
-        - name: 단항 연산자가 있는 식
-          href: ../cpp/expressions-with-unary-operators.md
-        - name: 이항 연산자로 구성된 식
-          href: ../cpp/expressions-with-binary-operators.md
-        - name: 상수 식
-          href: ../cpp/cpp-constant-expressions.md
-    - name: 식의 의미
-      href: ../cpp/semantics-of-expressions.md
-    - name: 캐스팅
-      expanded: false
-      items:
+          items:
+            - name: 식의 형식
+              href: ../cpp/types-of-expressions.md
+            - name: 기본 식
+              href: ../cpp/primary-expressions.md
+            - name: Ellipsis 및 Variadic 템플릿
+              href: ../cpp/ellipses-and-variadic-templates.md
+            - name: 후위 식
+              href: ../cpp/postfix-expressions.md
+            - name: 단항 연산자가 있는 식
+              href: ../cpp/expressions-with-unary-operators.md
+            - name: 이항 연산자로 구성된 식
+              href: ../cpp/expressions-with-binary-operators.md
+            - name: 상수 식
+              href: ../cpp/cpp-constant-expressions.md
+        - name: 식의 의미
+          href: ../cpp/semantics-of-expressions.md
         - name: 캐스팅
-          href: ../cpp/casting.md
-        - name: 캐스팅 연산자
-          expanded: false
           items:
+            - name: 캐스팅
+              href: ../cpp/casting.md
             - name: 캐스팅 연산자
-              href: ../cpp/casting-operators.md
-            - name: dynamic_cast 연산자
-              href: ../cpp/dynamic-cast-operator.md
-            - name: bad_cast 예외
-              href: ../cpp/bad-cast-exception.md
-            - name: static_cast 연산자
-              href: ../cpp/static-cast-operator.md
-            - name: const_cast 연산자
-              href: ../cpp/const-cast-operator.md
-            - name: reinterpret_cast 연산자
-              href: ../cpp/reinterpret-cast-operator.md
-        - name: RTTI(런타임 형식 정보)
-          expanded: false
-          items:
+              items:
+                - name: 캐스팅 연산자
+                  href: ../cpp/casting-operators.md
+                - name: dynamic_cast 연산자
+                  href: ../cpp/dynamic-cast-operator.md
+                - name: bad_cast 예외
+                  href: ../cpp/bad-cast-exception.md
+                - name: static_cast 연산자
+                  href: ../cpp/static-cast-operator.md
+                - name: const_cast 연산자
+                  href: ../cpp/const-cast-operator.md
+                - name: reinterpret_cast 연산자
+                  href: ../cpp/reinterpret-cast-operator.md
             - name: RTTI(런타임 형식 정보)
-              href: ../cpp/run-time-type-information.md
-            - name: bad_typeid 예외
-              href: ../cpp/bad-typeid-exception.md
-            - name: type_info 클래스
-              href: ../cpp/type-info-class.md
-- name: 문
-  expanded: false
-  items:
+              items:
+                - name: RTTI(런타임 형식 정보)
+                  href: ../cpp/run-time-type-information.md
+                - name: bad_typeid 예외
+                  href: ../cpp/bad-typeid-exception.md
+                - name: type_info 클래스
+                  href: ../cpp/type-info-class.md
     - name: 문
-      href: ../cpp/statements-cpp.md
-    - name: C++문 개요
-      href: ../cpp/overview-of-cpp-statements.md
-    - name: 레이블 문
-      href: ../cpp/labeled-statements.md
-    - name: 식 문
-      expanded: false
       items:
+        - name: 문
+          href: ../cpp/statements-cpp.md
+        - name: C++문 개요
+          href: ../cpp/overview-of-cpp-statements.md
+        - name: 레이블 문
+          href: ../cpp/labeled-statements.md
         - name: 식 문
-          href: ../cpp/expression-statement.md
-        - name: Null 문
-          href: ../cpp/null-statement.md
-    - name: 복합 문(블록)
-      href: ../cpp/compound-statements-blocks.md
-    - name: 선택 문
-      expanded: false
-      items:
+          items:
+            - name: 식 문
+              href: ../cpp/expression-statement.md
+            - name: Null 문
+              href: ../cpp/null-statement.md
+        - name: 복합 문(블록)
+          href: ../cpp/compound-statements-blocks.md
         - name: 선택 문
-          href: ../cpp/selection-statements-cpp.md
-        - name: if-else 문
-          href: ../cpp/if-else-statement-cpp.md
-        - name: __if_exists 문
-          href: ../cpp/if-exists-statement.md
-        - name: __if_not_exists 문
-          href: ../cpp/if-not-exists-statement.md
-        - name: switch 문
-          href: ../cpp/switch-statement-cpp.md
-    - name: 반복 문
-      expanded: false
-      items:
+          items:
+            - name: 선택 문
+              href: ../cpp/selection-statements-cpp.md
+            - name: if-else 문
+              href: ../cpp/if-else-statement-cpp.md
+            - name: __if_exists 문
+              href: ../cpp/if-exists-statement.md
+            - name: __if_not_exists 문
+              href: ../cpp/if-not-exists-statement.md
+            - name: switch 문
+              href: ../cpp/switch-statement-cpp.md
         - name: 반복 문
-          href: ../cpp/iteration-statements-cpp.md
-        - name: while 문
-          href: ../cpp/while-statement-cpp.md
-        - name: do-while 문
-          href: ../cpp/do-while-statement-cpp.md
-        - name: for 문
-          href: ../cpp/for-statement-cpp.md
-        - name: 범위 기반 for 문(C++)
-          href: ../cpp/range-based-for-statement-cpp.md
-    - name: 점프 문
-      expanded: false
-      items:
+          items:
+            - name: 반복 문
+              href: ../cpp/iteration-statements-cpp.md
+            - name: while 문
+              href: ../cpp/while-statement-cpp.md
+            - name: do-while 문
+              href: ../cpp/do-while-statement-cpp.md
+            - name: for 문
+              href: ../cpp/for-statement-cpp.md
+            - name: 범위 기반 for 문(C++)
+              href: ../cpp/range-based-for-statement-cpp.md
         - name: 점프 문
-          href: ../cpp/jump-statements-cpp.md
-        - name: break 문
-          href: ../cpp/break-statement-cpp.md
-        - name: continue 문
-          href: ../cpp/continue-statement-cpp.md
-        - name: return 문
-          href: ../cpp/return-statement-cpp.md
-        - name: goto 문
-          href: ../cpp/goto-statement-cpp.md
-        - name: 컨트롤 전송
-          href: ../cpp/transfers-of-control.md
-- name: 네임스페이스
-  href: ../cpp/namespaces-cpp.md
-- name: 열거형
-  href: ../cpp/enumerations-cpp.md
-- name: Unions
-  href: ../cpp/unions.md
-- name: 함수
-  expanded: false
-  items:
+          items:
+            - name: 점프 문
+              href: ../cpp/jump-statements-cpp.md
+            - name: break 문
+              href: ../cpp/break-statement-cpp.md
+            - name: continue 문
+              href: ../cpp/continue-statement-cpp.md
+            - name: return 문
+              href: ../cpp/return-statement-cpp.md
+            - name: goto 문
+              href: ../cpp/goto-statement-cpp.md
+            - name: 컨트롤 전송
+              href: ../cpp/transfers-of-control.md
+    - name: 네임스페이스
+      href: ../cpp/namespaces-cpp.md
+    - name: 열거형
+      href: ../cpp/enumerations-cpp.md
+    - name: Unions
+      href: ../cpp/unions.md
     - name: 함수
-      href: ../cpp/functions-cpp.md
-    - name: 가변 인수 목록을 사용하는 함수
-      href: ../cpp/functions-with-variable-argument-lists-cpp.md
-    - name: 함수 오버로드
-      href: ../cpp/function-overloading.md
-    - name: 명시적으로 기본 설정 및 삭제된 함수
-      href: ../cpp/explicitly-defaulted-and-deleted-functions.md
-    - name: 함수에 대한 인수 종속 이름(Koenig) 조회
-      href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
-    - name: 기본 인수
-      href: ../cpp/default-arguments.md
-    - name: 인라인 함수
-      href: ../cpp/inline-functions-cpp.md
-- name: 연산자 오버로드
-  expanded: false
-  items:
+      items:
+        - name: 함수
+          href: ../cpp/functions-cpp.md
+        - name: 가변 인수 목록을 사용하는 함수
+          href: ../cpp/functions-with-variable-argument-lists-cpp.md
+        - name: 함수 오버로드
+          href: ../cpp/function-overloading.md
+        - name: 명시적으로 기본 설정 및 삭제된 함수
+          href: ../cpp/explicitly-defaulted-and-deleted-functions.md
+        - name: 함수에 대한 인수 종속 이름(Koenig) 조회
+          href: ../cpp/argument-dependent-name-koenig-lookup-on-functions.md
+        - name: 기본 인수
+          href: ../cpp/default-arguments.md
+        - name: 인라인 함수
+          href: ../cpp/inline-functions-cpp.md
     - name: 연산자 오버로드
-      href: ../cpp/operator-overloading.md
-    - name: 연산자 오버로드에 대한 일반 규칙
-      href: ../cpp/general-rules-for-operator-overloading.md
-    - name: 단항 연산자 오버로드
-      expanded: false
       items:
+        - name: 연산자 오버로드
+          href: ../cpp/operator-overloading.md
+        - name: 연산자 오버로드에 대한 일반 규칙
+          href: ../cpp/general-rules-for-operator-overloading.md
         - name: 단항 연산자 오버로드
-          href: ../cpp/overloading-unary-operators.md
-        - name: 증가 및 감소 연산자 오버로드
-          href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
-    - name: 이항 연산자
-      href: ../cpp/binary-operators.md
-    - name: 할당
-      href: ../cpp/assignment.md
-    - name: 함수 호출
-      href: ../cpp/function-call-cpp.md
-    - name: 첨자
-      href: ../cpp/subscripting.md
-    - name: 멤버 액세스
-      href: ../cpp/member-access.md
-- name: 클래스 및 구조체
-  expanded: false
-  items:
-    - name: 클래스 및 구조체
-      href: ../cpp/classes-and-structs-cpp.md
-    - name: class
-      href: ../cpp/class-cpp.md
-    - name: struct
-      href: ../cpp/struct-cpp.md
-    - name: 클래스 멤버 개요
-      href: ../cpp/class-member-overview.md
-    - name: 멤버 액세스 제어
-      expanded: false
-      items:
-        - name: 멤버 액세스 제어
-          href: ../cpp/member-access-control-cpp.md
-        - name: friend
-          href: ../cpp/friend-cpp.md
-        - name: private
-          href: ../cpp/private-cpp.md
-        - name: protected
-          href: ../cpp/protected-cpp.md
-        - name: public
-          href: ../cpp/public-cpp.md
-    - name: 중괄호 초기화
-      href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
-    - name: 개체 수명 및 리소스 관리(RAII)
-      href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
-    - name: 컴파일 시간 캡슐화에 대한 Pimpl 관용구
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-    - name: ABI 경계의 이식성
-      href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
-    - name: 생성자
-      expanded: false
-      items:
-        - name: 생성자
-          href: ../cpp/constructors-cpp.md
-        - name: 복사 생성자 및 복사 할당 연산자
-          href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
-        - name: 이동 생성자 및 이동 할당 연산자
-          href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
-        - name: 위임 생성자
-          href: ../cpp/delegating-constructors.md
-    - name: 소멸자
-      href: ../cpp/destructors-cpp.md
-    - name: 멤버 함수 개요
-      expanded: false
-      items:
-        - name: 멤버 함수 개요
-          href: ../cpp/overview-of-member-functions.md
-        - name: virtual 지정자
-          href: ../cpp/virtual-specifier.md
-        - name: override 지정자
-          href: ../cpp/override-specifier.md
-        - name: final 지정자
-          href: ../cpp/final-specifier.md
-    - name: 상속
-      expanded: false
-      items:
-        - name: 상속
-          href: ../cpp/inheritance-cpp.md
-        - name: 가상 함수
-          href: ../cpp/virtual-functions.md
-        - name: 단일 상속
-          href: ../cpp/single-inheritance.md
-        - name: 기본 클래스
-          href: ../cpp/base-classes.md
-        - name: 다중 기본 클래스
-          href: ../cpp/multiple-base-classes.md
-        - name: 명시적 재정의
-          href: ../cpp/explicit-overrides-cpp.md
-        - name: 추상 클래스
-          href: ../cpp/abstract-classes-cpp.md
-        - name: 범위 규칙의 요약
-          href: ../cpp/summary-of-scope-rules.md
-        - name: 상속 키워드
-          href: ../cpp/inheritance-keywords.md
-        - name: virtual
-          href: ../cpp/virtual-cpp.md
-        - name: __super
-          href: ../cpp/super.md
-        - name: __interface
-          href: ../cpp/interface.md
-    - name: 특수 멤버 함수
-      href: ../cpp/special-member-functions.md
-    - name: 정적 멤버
-      href: ../cpp/static-members-cpp.md
-    - name: 값 형식으로서의 C++ 클래스
-      href: ../cpp/value-types-modern-cpp.md
-    - name: 사용자 정의 형식 변환
-      href: ../cpp/user-defined-type-conversions-cpp.md
-    - name: 변경할 수 있는 데이터 멤버
-      href: ../cpp/mutable-data-members-cpp.md
-    - name: 중첩 클래스 선언
-      href: ../cpp/nested-class-declarations.md
-    - name: 익명 클래스 형식
-      href: ../cpp/anonymous-class-types.md
-    - name: 멤버에 대한 포인터
-      href: ../cpp/pointers-to-members.md
-    - name: this 포인터
-      href: ../cpp/this-pointer.md
-    - name: 비트 필드
-      href: ../cpp/cpp-bit-fields.md
-- name: C++ 람다 식
-  expanded: false
-  items:
-    - name: C++ 람다 식
-      href: ../cpp/lambda-expressions-in-cpp.md
-    - name: 람다 식 구문
-      href: ../cpp/lambda-expression-syntax.md
-    - name: 람다 식의 예
-      href: ../cpp/examples-of-lambda-expressions.md
-    - name: constexpr 람다 식
-      href: ../cpp/lambda-expressions-constexpr.md
-- name: 배열
-  href: ../cpp/arrays-cpp.md
-- name: 참조 항목
-  expanded: false
-  items:
-    - name: 참조 항목
-      href: ../cpp/references-cpp.md
-    - name: 'Lvalue 참조 선언자: &'
-      href: ../cpp/lvalue-reference-declarator-amp.md
-    - name: 'Rvalue 참조 선언자: &&'
-      href: ../cpp/rvalue-reference-declarator-amp-amp.md
-    - name: 참조 형식 함수 인수
-      href: ../cpp/reference-type-function-arguments.md
-    - name: 참조 형식 함수 반환
-      href: ../cpp/reference-type-function-returns.md
-    - name: 포인터에 대한 참조
-      href: ../cpp/references-to-pointers.md
-- name: 포인터
-  expanded: false
-  items:
-    - name: 포인터
-      href: ../cpp/pointers-cpp.md
-    - name: 원시 포인터
-      href: ../cpp/raw-pointers.md
-    - name: const 및 volatile 포인터
-      href: ../cpp/const-and-volatile-pointers.md
-    - name: new 및 delete 연산자
-      href: ../cpp/new-and-delete-operators.md
-    - name: 스마트 포인터
-      href: ../cpp/smart-pointers-modern-cpp.md
-    - name: '방법: unique_ptr 인스턴스 만들기 및 사용'
-      href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
-    - name: '방법: shared_ptr 인스턴스 만들기 및 사용'
-      href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
-    - name: '방법: weak_ptr 인스턴스 만들기 및 사용'
-      href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
-    - name: '방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용'
-      href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-    - name: 컴파일 시간 캡슐화에 대한 Pimpl
-      href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-- name: C++ 예외 처리
-  expanded: false
-  items:
-    - name: C++ 예외 처리
-      href: ../cpp/exception-handling-in-visual-cpp.md
-    - name: 최신 C++ 모범 사례
-      href: ../cpp/errors-and-exception-handling-modern-cpp.md
-    - name: 예외 안전성을 고려하여 디자인하는 방법
-      href: ../cpp/how-to-design-for-exception-safety.md
-    - name: 예외 코드와 예외가 아닌 코드 간에 인터페이싱하는 방법
-      href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-    - name: 'Try, Throw 및 Catch 문'
-      href: ../cpp/try-throw-and-catch-statements-cpp.md
-    - name: Catch 블록의 평가 방법
-      href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
-    - name: 예외 및 스택 해제
-      href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
-    - name: 예외 사양(throw)
-      href: ../cpp/exception-specifications-throw-cpp.md
-    - name: noexcept
-      href: ../cpp/noexcept-cpp.md
-    - name: 처리되지 않은 C++ 예외
-      href: ../cpp/unhandled-cpp-exceptions.md
-    - name: C(구조적) 및 C++ 예외 혼합
-      expanded: false
-      items:
-        - name: C(구조적) 및 C++ 예외 혼합
-          href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
-        - name: setjmp-longjmp 사용
-          href: ../cpp/using-setjmp-longjmp.md
-        - name: C++에서 구조적 예외 처리
-          href: ../cpp/exception-handling-differences.md
-    - name: 구조적 예외 처리(SEH)(C/C++)
-      expanded: false
-      items:
-        - name: 구조적 예외 처리(SEH)(C/C++)
-          href: ../cpp/structured-exception-handling-c-cpp.md
-        - name: 예외 처리기 작성
-          expanded: false
           items:
-            - name: 예외 처리기 작성
-              href: ../cpp/writing-an-exception-handler.md
-            - name: try-except 문
-              href: ../cpp/try-except-statement.md
-            - name: 예외 필터 작성
-              href: ../cpp/writing-an-exception-filter.md
-            - name: 소프트웨어 예외 발생
-              href: ../cpp/raising-software-exceptions.md
-            - name: 하드웨어 예외
-              href: ../cpp/hardware-exceptions.md
-            - name: 예외 처리기에 대한 제한
-              href: ../cpp/restrictions-on-exception-handlers.md
-        - name: 종료 처리기 작성
-          expanded: false
-          items:
-            - name: 종료 처리기 작성
-              href: ../cpp/writing-a-termination-handler.md
-            - name: try-finally 문
-              href: ../cpp/try-finally-statement.md
-            - name: 리소스 정리
-              href: ../cpp/cleaning-up-resources.md
-            - name: '예외 처리 타이밍: 요약'
-              href: ../cpp/timing-of-exception-handling-a-summary.md
-            - name: 종료 처리기에 대한 제한
-              href: ../cpp/restrictions-on-termination-handlers.md
-    - name: 스레드 간 예외 전송
-      href: ../cpp/transporting-exceptions-between-threads.md
-- name: 어설션 및 사용자 제공 메시지
-  expanded: false
-  items:
-    - name: 어설션 및 사용자 제공 메시지
-      href: ../cpp/assertion-and-user-supplied-messages-cpp.md
-    - name: static_assert
-      href: ../cpp/static-assert.md
-- name: 모듈
-  expanded: false
-  items:
-    - name: C++에서의 모듈 개요
-      href: ../cpp/modules-cpp.md
-    - name: '모듈, 가져오기, 내보내기'
-      href: ../cpp/import-export-module.md
-- name: 템플릿
-  expanded: false
-  items:
-    - name: 템플릿
-      href: ../cpp/templates-cpp.md
-    - name: typename
-      href: ../cpp/typename.md
-    - name: 클래스 템플릿
-      href: ../cpp/class-templates.md
-    - name: 함수 템플릿
-      expanded: false
-      items:
-        - name: 함수 템플릿
-          href: ../cpp/function-templates.md
-        - name: 함수 템플릿 인스턴스화
-          href: ../cpp/function-template-instantiation.md
-        - name: 명시적 인스턴스화
-          href: ../cpp/explicit-instantiation.md
-        - name: 함수 템플릿의 명시적 특수화
-          href: ../cpp/explicit-specialization-of-function-templates.md
-        - name: 함수 템플릿의 부분 순서 지정
-          href: ../cpp/partial-ordering-of-function-templates-cpp.md
-        - name: 멤버 함수 템플릿
-          href: ../cpp/member-function-templates.md
-    - name: 템플릿 특수화
-      href: ../cpp/template-specialization-cpp.md
-    - name: 템플릿 및 이름 확인
-      expanded: false
-      items:
-        - name: 템플릿 및 이름 확인
-          href: ../cpp/templates-and-name-resolution.md
-        - name: 종속적인 형식에 대한 이름 확인
-          href: ../cpp/name-resolution-for-dependent-types.md
-        - name: 로컬로 선언된 이름에 대한 이름 확인
-          href: ../cpp/name-resolution-for-locally-declared-names.md
-        - name: 함수 템플릿 호출의 오버로드 확인
-          href: ../cpp/overload-resolution-of-function-template-calls.md
-    - name: 소스 코드 조직(C++ 템플릿)
-      href: ../cpp/source-code-organization-cpp-templates.md
-- name: 이벤트 처리
-  expanded: false
-  items:
-    - name: 이벤트 처리
-      href: ../cpp/event-handling.md
-    - name: __event
-      href: ../cpp/event.md
-    - name: __hook
-      href: ../cpp/hook.md
-    - name: __raise
-      href: ../cpp/raise.md
-    - name: __unhook
-      href: ../cpp/unhook.md
-    - name: 네이티브 C++에서 이벤트 처리
-      href: ../cpp/event-handling-in-native-cpp.md
-    - name: COM에서 이벤트 처리
-      href: ../cpp/event-handling-in-com.md
-- name: Microsoft 전용 한정자
-  expanded: false
-  items:
-    - name: Microsoft 전용 한정자
-      href: ../cpp/microsoft-specific-modifiers.md
-    - name: 기반 주소
-      expanded: false
-      items:
-        - name: 기반 주소
-          href: ../cpp/based-addressing.md
-        - name: __based 문법
-          href: ../cpp/based-grammar.md
-        - name: 기반 포인터
-          href: ../cpp/based-pointers-cpp.md
-    - name: 호출 규칙
-      expanded: false
-      items:
-        - name: 호출 규칙
-          href: ../cpp/calling-conventions.md
-        - name: 인수 전달 및 명명 규칙
-          expanded: false
-          items:
-            - name: 인수 전달 및 명명 규칙
-              href: ../cpp/argument-passing-and-naming-conventions.md
-            - name: __cdecl
-              href: ../cpp/cdecl.md
-            - name: __clrcall
-              href: ../cpp/clrcall.md
-            - name: __stdcall
-              href: ../cpp/stdcall.md
-            - name: __fastcall
-              href: ../cpp/fastcall.md
-            - name: __thiscall
-              href: ../cpp/thiscall.md
-            - name: __vectorcall
-              href: ../cpp/vectorcall.md
-        - name: '호출 예제: 함수 프로토타입 및 호출'
-          expanded: false
-          items:
-            - name: '호출 예제: 함수 프로토타입 및 호출'
-              href: ../cpp/calling-example-function-prototype-and-call.md
-            - name: 호출 예제 결과
-              href: ../cpp/results-of-calling-example.md
-        - name: Naked 함수 호출
-          expanded: false
-          items:
-            - name: Naked 함수 호출
-              href: ../cpp/naked-function-calls.md
-            - name: Naked 함수의 규칙 및 제한
-              href: ../cpp/rules-and-limitations-for-naked-functions.md
-            - name: 프롤로그-에필로그 코드 작성 시 고려 사항
-              href: ../cpp/considerations-for-writing-prolog-epilog-code.md
-        - name: 부동 소수점 보조 프로세서 및 호출 규칙
-          href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
-        - name: 사용되지 않는 호출 규칙
-          href: ../cpp/obsolete-calling-conventions.md
-    - name: restrict (C++ AMP)
-      href: ../cpp/restrict-cpp-amp.md
-    - name: tile_static 키워드
-      href: ../cpp/tile-static-keyword.md
-    - name: __declspec
-      expanded: false
-      items:
-        - name: __declspec
-          href: ../cpp/declspec.md
-        - name: align
-          href: ../cpp/align-cpp.md
+            - name: 단항 연산자 오버로드
+              href: ../cpp/overloading-unary-operators.md
+            - name: 증가 및 감소 연산자 오버로드
+              href: ../cpp/increment-and-decrement-operator-overloading-cpp.md
+        - name: 이항 연산자
+          href: ../cpp/binary-operators.md
         - name: 할당
-          href: ../cpp/allocate.md
-        - name: allocator
-          href: ../cpp/allocator.md
-        - name: appdomain
-          href: ../cpp/appdomain.md
-        - name: code_seg (__declspec)
-          href: ../cpp/code-seg-declspec.md
-        - name: 사용되지 않음
-          href: ../cpp/deprecated-cpp.md
-        - name: 'dllexport, dllimport'
-          expanded: false
+          href: ../cpp/assignment.md
+        - name: 함수 호출
+          href: ../cpp/function-call-cpp.md
+        - name: 첨자
+          href: ../cpp/subscripting.md
+        - name: 멤버 액세스
+          href: ../cpp/member-access.md
+    - name: 클래스 및 구조체
+      items:
+        - name: 클래스 및 구조체
+          href: ../cpp/classes-and-structs-cpp.md
+        - name: class
+          href: ../cpp/class-cpp.md
+        - name: struct
+          href: ../cpp/struct-cpp.md
+        - name: 클래스 멤버 개요
+          href: ../cpp/class-member-overview.md
+        - name: 멤버 액세스 제어
           items:
+            - name: 멤버 액세스 제어
+              href: ../cpp/member-access-control-cpp.md
+            - name: friend
+              href: ../cpp/friend-cpp.md
+            - name: private
+              href: ../cpp/private-cpp.md
+            - name: protected
+              href: ../cpp/protected-cpp.md
+            - name: public
+              href: ../cpp/public-cpp.md
+        - name: 중괄호 초기화
+          href: ../cpp/initializing-classes-and-structs-without-constructors-cpp.md
+        - name: 개체 수명 및 리소스 관리(RAII)
+          href: ../cpp/object-lifetime-and-resource-management-modern-cpp.md
+        - name: 컴파일 시간 캡슐화에 대한 Pimpl 관용구
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+        - name: ABI 경계의 이식성
+          href: ../cpp/portability-at-abi-boundaries-modern-cpp.md
+        - name: 생성자
+          items:
+            - name: 생성자
+              href: ../cpp/constructors-cpp.md
+            - name: 복사 생성자 및 복사 할당 연산자
+              href: ../cpp/copy-constructors-and-copy-assignment-operators-cpp.md
+            - name: 이동 생성자 및 이동 할당 연산자
+              href: ../cpp/move-constructors-and-move-assignment-operators-cpp.md
+            - name: 위임 생성자
+              href: ../cpp/delegating-constructors.md
+        - name: 소멸자
+          href: ../cpp/destructors-cpp.md
+        - name: 멤버 함수 개요
+          items:
+            - name: 멤버 함수 개요
+              href: ../cpp/overview-of-member-functions.md
+            - name: virtual 지정자
+              href: ../cpp/virtual-specifier.md
+            - name: override 지정자
+              href: ../cpp/override-specifier.md
+            - name: final 지정자
+              href: ../cpp/final-specifier.md
+        - name: 상속
+          items:
+            - name: 상속
+              href: ../cpp/inheritance-cpp.md
+            - name: 가상 함수
+              href: ../cpp/virtual-functions.md
+            - name: 단일 상속
+              href: ../cpp/single-inheritance.md
+            - name: 기본 클래스
+              href: ../cpp/base-classes.md
+            - name: 다중 기본 클래스
+              href: ../cpp/multiple-base-classes.md
+            - name: 명시적 재정의
+              href: ../cpp/explicit-overrides-cpp.md
+            - name: 추상 클래스
+              href: ../cpp/abstract-classes-cpp.md
+            - name: 범위 규칙의 요약
+              href: ../cpp/summary-of-scope-rules.md
+            - name: 상속 키워드
+              href: ../cpp/inheritance-keywords.md
+            - name: virtual
+              href: ../cpp/virtual-cpp.md
+            - name: __super
+              href: ../cpp/super.md
+            - name: __interface
+              href: ../cpp/interface.md
+        - name: 특수 멤버 함수
+          href: ../cpp/special-member-functions.md
+        - name: 정적 멤버
+          href: ../cpp/static-members-cpp.md
+        - name: 값 형식으로서의 C++ 클래스
+          href: ../cpp/value-types-modern-cpp.md
+        - name: 사용자 정의 형식 변환
+          href: ../cpp/user-defined-type-conversions-cpp.md
+        - name: 변경할 수 있는 데이터 멤버
+          href: ../cpp/mutable-data-members-cpp.md
+        - name: 중첩 클래스 선언
+          href: ../cpp/nested-class-declarations.md
+        - name: 익명 클래스 형식
+          href: ../cpp/anonymous-class-types.md
+        - name: 멤버에 대한 포인터
+          href: ../cpp/pointers-to-members.md
+        - name: this 포인터
+          href: ../cpp/this-pointer.md
+        - name: 비트 필드
+          href: ../cpp/cpp-bit-fields.md
+    - name: C++ 람다 식
+      items:
+        - name: C++ 람다 식
+          href: ../cpp/lambda-expressions-in-cpp.md
+        - name: 람다 식 구문
+          href: ../cpp/lambda-expression-syntax.md
+        - name: 람다 식의 예
+          href: ../cpp/examples-of-lambda-expressions.md
+        - name: constexpr 람다 식
+          href: ../cpp/lambda-expressions-constexpr.md
+    - name: 배열
+      href: ../cpp/arrays-cpp.md
+    - name: 참조 항목
+      items:
+        - name: 참조 항목
+          href: ../cpp/references-cpp.md
+        - name: 'Lvalue 참조 선언자: &'
+          href: ../cpp/lvalue-reference-declarator-amp.md
+        - name: 'Rvalue 참조 선언자: &&'
+          href: ../cpp/rvalue-reference-declarator-amp-amp.md
+        - name: 참조 형식 함수 인수
+          href: ../cpp/reference-type-function-arguments.md
+        - name: 참조 형식 함수 반환
+          href: ../cpp/reference-type-function-returns.md
+        - name: 포인터에 대한 참조
+          href: ../cpp/references-to-pointers.md
+    - name: 포인터
+      items:
+        - name: 포인터
+          href: ../cpp/pointers-cpp.md
+        - name: 원시 포인터
+          href: ../cpp/raw-pointers.md
+        - name: const 및 volatile 포인터
+          href: ../cpp/const-and-volatile-pointers.md
+        - name: new 및 delete 연산자
+          href: ../cpp/new-and-delete-operators.md
+        - name: 스마트 포인터
+          href: ../cpp/smart-pointers-modern-cpp.md
+        - name: '방법: unique_ptr 인스턴스 만들기 및 사용'
+          href: ../cpp/how-to-create-and-use-unique-ptr-instances.md
+        - name: '방법: shared_ptr 인스턴스 만들기 및 사용'
+          href: ../cpp/how-to-create-and-use-shared-ptr-instances.md
+        - name: '방법: weak_ptr 인스턴스 만들기 및 사용'
+          href: ../cpp/how-to-create-and-use-weak-ptr-instances.md
+        - name: '방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용'
+          href: ../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+        - name: 컴파일 시간 캡슐화에 대한 Pimpl
+          href: ../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+    - name: C++ 예외 처리
+      items:
+        - name: C++ 예외 처리
+          href: ../cpp/exception-handling-in-visual-cpp.md
+        - name: 최신 C++ 모범 사례
+          href: ../cpp/errors-and-exception-handling-modern-cpp.md
+        - name: 예외 안전성을 고려하여 디자인하는 방법
+          href: ../cpp/how-to-design-for-exception-safety.md
+        - name: 예외 코드와 예외가 아닌 코드 간에 인터페이싱하는 방법
+          href: ../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+        - name: 'Try, Throw 및 Catch 문'
+          href: ../cpp/try-throw-and-catch-statements-cpp.md
+        - name: Catch 블록의 평가 방법
+          href: ../cpp/how-catch-blocks-are-evaluated-cpp.md
+        - name: 예외 및 스택 해제
+          href: ../cpp/exceptions-and-stack-unwinding-in-cpp.md
+        - name: 예외 사양(throw)
+          href: ../cpp/exception-specifications-throw-cpp.md
+        - name: noexcept
+          href: ../cpp/noexcept-cpp.md
+        - name: 처리되지 않은 C++ 예외
+          href: ../cpp/unhandled-cpp-exceptions.md
+        - name: C(구조적) 및 C++ 예외 혼합
+          items:
+            - name: C(구조적) 및 C++ 예외 혼합
+              href: ../cpp/mixing-c-structured-and-cpp-exceptions.md
+            - name: setjmp-longjmp 사용
+              href: ../cpp/using-setjmp-longjmp.md
+            - name: C++에서 구조적 예외 처리
+              href: ../cpp/exception-handling-differences.md
+        - name: 구조적 예외 처리(SEH)(C/C++)
+          items:
+            - name: 구조적 예외 처리(SEH)(C/C++)
+              href: ../cpp/structured-exception-handling-c-cpp.md
+            - name: 예외 처리기 작성
+              items:
+                - name: 예외 처리기 작성
+                  href: ../cpp/writing-an-exception-handler.md
+                - name: try-except 문
+                  href: ../cpp/try-except-statement.md
+                - name: 예외 필터 작성
+                  href: ../cpp/writing-an-exception-filter.md
+                - name: 소프트웨어 예외 발생
+                  href: ../cpp/raising-software-exceptions.md
+                - name: 하드웨어 예외
+                  href: ../cpp/hardware-exceptions.md
+                - name: 예외 처리기에 대한 제한
+                  href: ../cpp/restrictions-on-exception-handlers.md
+            - name: 종료 처리기 작성
+              items:
+                - name: 종료 처리기 작성
+                  href: ../cpp/writing-a-termination-handler.md
+                - name: try-finally 문
+                  href: ../cpp/try-finally-statement.md
+                - name: 리소스 정리
+                  href: ../cpp/cleaning-up-resources.md
+                - name: '예외 처리 타이밍: 요약'
+                  href: ../cpp/timing-of-exception-handling-a-summary.md
+                - name: 종료 처리기에 대한 제한
+                  href: ../cpp/restrictions-on-termination-handlers.md
+        - name: 스레드 간 예외 전송
+          href: ../cpp/transporting-exceptions-between-threads.md
+    - name: 어설션 및 사용자 제공 메시지
+      items:
+        - name: 어설션 및 사용자 제공 메시지
+          href: ../cpp/assertion-and-user-supplied-messages-cpp.md
+        - name: static_assert
+          href: ../cpp/static-assert.md
+    - name: 모듈
+      items:
+        - name: C++에서의 모듈 개요
+          href: ../cpp/modules-cpp.md
+        - name: '모듈, 가져오기, 내보내기'
+          href: ../cpp/import-export-module.md
+    - name: 템플릿
+      items:
+        - name: 템플릿
+          href: ../cpp/templates-cpp.md
+        - name: typename
+          href: ../cpp/typename.md
+        - name: 클래스 템플릿
+          href: ../cpp/class-templates.md
+        - name: 함수 템플릿
+          items:
+            - name: 함수 템플릿
+              href: ../cpp/function-templates.md
+            - name: 함수 템플릿 인스턴스화
+              href: ../cpp/function-template-instantiation.md
+            - name: 명시적 인스턴스화
+              href: ../cpp/explicit-instantiation.md
+            - name: 함수 템플릿의 명시적 특수화
+              href: ../cpp/explicit-specialization-of-function-templates.md
+            - name: 함수 템플릿의 부분 순서 지정
+              href: ../cpp/partial-ordering-of-function-templates-cpp.md
+            - name: 멤버 함수 템플릿
+              href: ../cpp/member-function-templates.md
+        - name: 템플릿 특수화
+          href: ../cpp/template-specialization-cpp.md
+        - name: 템플릿 및 이름 확인
+          items:
+            - name: 템플릿 및 이름 확인
+              href: ../cpp/templates-and-name-resolution.md
+            - name: 종속적인 형식에 대한 이름 확인
+              href: ../cpp/name-resolution-for-dependent-types.md
+            - name: 로컬로 선언된 이름에 대한 이름 확인
+              href: ../cpp/name-resolution-for-locally-declared-names.md
+            - name: 함수 템플릿 호출의 오버로드 확인
+              href: ../cpp/overload-resolution-of-function-template-calls.md
+        - name: 소스 코드 조직(C++ 템플릿)
+          href: ../cpp/source-code-organization-cpp-templates.md
+    - name: 이벤트 처리
+      items:
+        - name: 이벤트 처리
+          href: ../cpp/event-handling.md
+        - name: __event
+          href: ../cpp/event.md
+        - name: __hook
+          href: ../cpp/hook.md
+        - name: __raise
+          href: ../cpp/raise.md
+        - name: __unhook
+          href: ../cpp/unhook.md
+        - name: 네이티브 C++에서 이벤트 처리
+          href: ../cpp/event-handling-in-native-cpp.md
+        - name: COM에서 이벤트 처리
+          href: ../cpp/event-handling-in-com.md
+    - name: Microsoft 전용 한정자
+      items:
+        - name: Microsoft 전용 한정자
+          href: ../cpp/microsoft-specific-modifiers.md
+        - name: 기반 주소
+          items:
+            - name: 기반 주소
+              href: ../cpp/based-addressing.md
+            - name: __based 문법
+              href: ../cpp/based-grammar.md
+            - name: 기반 포인터
+              href: ../cpp/based-pointers-cpp.md
+        - name: 호출 규칙
+          items:
+            - name: 호출 규칙
+              href: ../cpp/calling-conventions.md
+            - name: 인수 전달 및 명명 규칙
+              items:
+                - name: 인수 전달 및 명명 규칙
+                  href: ../cpp/argument-passing-and-naming-conventions.md
+                - name: __cdecl
+                  href: ../cpp/cdecl.md
+                - name: __clrcall
+                  href: ../cpp/clrcall.md
+                - name: __stdcall
+                  href: ../cpp/stdcall.md
+                - name: __fastcall
+                  href: ../cpp/fastcall.md
+                - name: __thiscall
+                  href: ../cpp/thiscall.md
+                - name: __vectorcall
+                  href: ../cpp/vectorcall.md
+            - name: '호출 예제: 함수 프로토타입 및 호출'
+              items:
+                - name: '호출 예제: 함수 프로토타입 및 호출'
+                  href: ../cpp/calling-example-function-prototype-and-call.md
+                - name: 호출 예제 결과
+                  href: ../cpp/results-of-calling-example.md
+            - name: Naked 함수 호출
+              items:
+                - name: Naked 함수 호출
+                  href: ../cpp/naked-function-calls.md
+                - name: Naked 함수의 규칙 및 제한
+                  href: ../cpp/rules-and-limitations-for-naked-functions.md
+                - name: 프롤로그-에필로그 코드 작성 시 고려 사항
+                  href: ../cpp/considerations-for-writing-prolog-epilog-code.md
+            - name: 부동 소수점 보조 프로세서 및 호출 규칙
+              href: ../cpp/floating-point-coprocessor-and-calling-conventions.md
+            - name: 사용되지 않는 호출 규칙
+              href: ../cpp/obsolete-calling-conventions.md
+        - name: restrict (C++ AMP)
+          href: ../cpp/restrict-cpp-amp.md
+        - name: tile_static 키워드
+          href: ../cpp/tile-static-keyword.md
+        - name: __declspec
+          items:
+            - name: __declspec
+              href: ../cpp/declspec.md
+            - name: align
+              href: ../cpp/align-cpp.md
+            - name: 할당
+              href: ../cpp/allocate.md
+            - name: allocator
+              href: ../cpp/allocator.md
+            - name: appdomain
+              href: ../cpp/appdomain.md
+            - name: code_seg (__declspec)
+              href: ../cpp/code-seg-declspec.md
+            - name: 사용되지 않음
+              href: ../cpp/deprecated-cpp.md
             - name: 'dllexport, dllimport'
-              href: ../cpp/dllexport-dllimport.md
-            - name: 정의 및 선언
-              href: ../cpp/definitions-and-declarations-cpp.md
-            - name: dllexport 및 dllimport로 인라인 C++ 함수 정의
-              href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
-            - name: 일반 규칙 및 제한 사항
-              href: ../cpp/general-rules-and-limitations.md
-            - name: C++ 클래스에서 dllimport 및 dllexport 사용
-              href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
-        - name: jitintrinsic
-          href: ../cpp/jitintrinsic.md
-        - name: naked
-          href: ../cpp/naked-cpp.md
-        - name: noalias
-          href: ../cpp/noalias.md
-        - name: noinline
-          href: ../cpp/noinline.md
-        - name: noreturn
-          href: ../cpp/noreturn.md
-        - name: nothrow
-          href: ../cpp/nothrow-cpp.md
-        - name: novtable
-          href: ../cpp/novtable.md
-        - name: 프로세스
-          href: ../cpp/process.md
-        - name: 속성(property)
-          href: ../cpp/property-cpp.md
-        - name: restrict
-          href: ../cpp/restrict.md
-        - name: safebuffer
-          href: ../cpp/safebuffers.md
-        - name: selectany
-          href: ../cpp/selectany.md
-        - name: spectre
-          href: ../cpp/spectre.md
-        - name: 스레드
-          href: ../cpp/thread.md
-        - name: uuid
-          href: ../cpp/uuid-cpp.md
-    - name: __restrict
-      href: ../cpp/extension-restrict.md
-    - name: '__sptr, __uptr'
-      href: ../cpp/sptr-uptr.md
-    - name: __unaligned
-      href: ../cpp/unaligned.md
-    - name: __w64
-      href: ../cpp/w64.md
-    - name: __func__
-      href: ../cpp/func.md
-- name: 컴파일러 COM 지원
-  expanded: false
-  items:
+              items:
+                - name: 'dllexport, dllimport'
+                  href: ../cpp/dllexport-dllimport.md
+                - name: 정의 및 선언
+                  href: ../cpp/definitions-and-declarations-cpp.md
+                - name: dllexport 및 dllimport로 인라인 C++ 함수 정의
+                  href: ../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md
+                - name: 일반 규칙 및 제한 사항
+                  href: ../cpp/general-rules-and-limitations.md
+                - name: C++ 클래스에서 dllimport 및 dllexport 사용
+                  href: ../cpp/using-dllimport-and-dllexport-in-cpp-classes.md
+            - name: jitintrinsic
+              href: ../cpp/jitintrinsic.md
+            - name: naked
+              href: ../cpp/naked-cpp.md
+            - name: noalias
+              href: ../cpp/noalias.md
+            - name: noinline
+              href: ../cpp/noinline.md
+            - name: noreturn
+              href: ../cpp/noreturn.md
+            - name: nothrow
+              href: ../cpp/nothrow-cpp.md
+            - name: novtable
+              href: ../cpp/novtable.md
+            - name: 프로세스
+              href: ../cpp/process.md
+            - name: 속성(property)
+              href: ../cpp/property-cpp.md
+            - name: restrict
+              href: ../cpp/restrict.md
+            - name: safebuffer
+              href: ../cpp/safebuffers.md
+            - name: selectany
+              href: ../cpp/selectany.md
+            - name: spectre
+              href: ../cpp/spectre.md
+            - name: 스레드
+              href: ../cpp/thread.md
+            - name: uuid
+              href: ../cpp/uuid-cpp.md
+        - name: __restrict
+          href: ../cpp/extension-restrict.md
+        - name: '__sptr, __uptr'
+          href: ../cpp/sptr-uptr.md
+        - name: __unaligned
+          href: ../cpp/unaligned.md
+        - name: __w64
+          href: ../cpp/w64.md
+        - name: __func__
+          href: ../cpp/func.md
     - name: 컴파일러 COM 지원
-      href: ../cpp/compiler-com-support.md
-    - name: 컴파일러 COM 전역 함수
-      expanded: false
       items:
+        - name: 컴파일러 COM 지원
+          href: ../cpp/compiler-com-support.md
         - name: 컴파일러 COM 전역 함수
-          href: ../cpp/compiler-com-global-functions.md
-        - name: _com_raise_error
-          href: ../cpp/com-raise-error.md
-        - name: ConvertStringToBSTR
-          href: ../cpp/convertstringtobstr.md
-        - name: ConvertBSTRToString
-          href: ../cpp/convertbstrtostring.md
-        - name: _set_com_error_handler
-          href: ../cpp/set-com-error-handler.md
-    - name: 컴파일러 COM 지원 클래스
-      expanded: false
-      items:
+          items:
+            - name: 컴파일러 COM 전역 함수
+              href: ../cpp/compiler-com-global-functions.md
+            - name: _com_raise_error
+              href: ../cpp/com-raise-error.md
+            - name: ConvertStringToBSTR
+              href: ../cpp/convertstringtobstr.md
+            - name: ConvertBSTRToString
+              href: ../cpp/convertbstrtostring.md
+            - name: _set_com_error_handler
+              href: ../cpp/set-com-error-handler.md
         - name: 컴파일러 COM 지원 클래스
-          href: ../cpp/compiler-com-support-classes.md
-        - name: _bstr_t 클래스
-          expanded: false
           items:
+            - name: 컴파일러 COM 지원 클래스
+              href: ../cpp/compiler-com-support-classes.md
             - name: _bstr_t 클래스
-              href: ../cpp/bstr-t-class.md
-            - name: _bstr_t 멤버 함수
-              expanded: false
               items:
+                - name: _bstr_t 클래스
+                  href: ../cpp/bstr-t-class.md
                 - name: _bstr_t 멤버 함수
-                  href: ../cpp/bstr-t-member-functions.md
-                - name: '_bstr_t::Assign'
-                  href: ../cpp/bstr-t-assign.md
-                - name: '_bstr_t::Attach'
-                  href: ../cpp/bstr-t-attach.md
-                - name: '_bstr_t::_bstr_t'
-                  href: ../cpp/bstr-t-bstr-t.md
-                - name: '_bstr_t::copy'
-                  href: ../cpp/bstr-t-copy.md
-                - name: '_bstr_t::Detach'
-                  href: ../cpp/bstr-t-detach.md
-                - name: '_bstr_t::GetAddress'
-                  href: ../cpp/bstr-t-getaddress.md
-                - name: '_bstr_t::GetBSTR'
-                  href: ../cpp/bstr-t-getbstr.md
-                - name: '_bstr_t::length'
-                  href: ../cpp/bstr-t-length.md
-            - name: _bstr_t 연산자
-              expanded: false
-              items:
+                  items:
+                    - name: _bstr_t 멤버 함수
+                      href: ../cpp/bstr-t-member-functions.md
+                    - name: '_bstr_t::Assign'
+                      href: ../cpp/bstr-t-assign.md
+                    - name: '_bstr_t::Attach'
+                      href: ../cpp/bstr-t-attach.md
+                    - name: '_bstr_t::_bstr_t'
+                      href: ../cpp/bstr-t-bstr-t.md
+                    - name: '_bstr_t::copy'
+                      href: ../cpp/bstr-t-copy.md
+                    - name: '_bstr_t::Detach'
+                      href: ../cpp/bstr-t-detach.md
+                    - name: '_bstr_t::GetAddress'
+                      href: ../cpp/bstr-t-getaddress.md
+                    - name: '_bstr_t::GetBSTR'
+                      href: ../cpp/bstr-t-getbstr.md
+                    - name: '_bstr_t::length'
+                      href: ../cpp/bstr-t-length.md
                 - name: _bstr_t 연산자
-                  href: ../cpp/bstr-t-operators.md
-                - name: '_bstr_t::operator ='
-                  href: ../cpp/bstr-t-operator-equal.md
-                - name: '_bstr_t::operator +=, +'
-                  href: ../cpp/bstr-t-operator-add-equal-plus.md
-                - name: '_bstr_t::operator !'
-                  href: ../cpp/bstr-t-operator-logical-not.md
-                - name: _bstr_t 관계형 연산자
-                  href: ../cpp/bstr-t-relational-operators.md
-                - name: '_bstr_t::wchar_t *, _bstr_t::char*'
-                  href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
-        - name: _com_error 클래스
-          expanded: false
-          items:
+                  items:
+                    - name: _bstr_t 연산자
+                      href: ../cpp/bstr-t-operators.md
+                    - name: '_bstr_t::operator ='
+                      href: ../cpp/bstr-t-operator-equal.md
+                    - name: '_bstr_t::operator +=, +'
+                      href: ../cpp/bstr-t-operator-add-equal-plus.md
+                    - name: '_bstr_t::operator !'
+                      href: ../cpp/bstr-t-operator-logical-not.md
+                    - name: _bstr_t 관계형 연산자
+                      href: ../cpp/bstr-t-relational-operators.md
+                    - name: '_bstr_t::wchar_t *, _bstr_t::char*'
+                      href: ../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md
             - name: _com_error 클래스
-              href: ../cpp/com-error-class.md
-            - name: _com_error 멤버 함수
-              expanded: false
               items:
+                - name: _com_error 클래스
+                  href: ../cpp/com-error-class.md
                 - name: _com_error 멤버 함수
-                  href: ../cpp/com-error-member-functions.md
-                - name: '_com_error::_com_error'
-                  href: ../cpp/com-error-com-error.md
-                - name: '_com_error::Description'
-                  href: ../cpp/com-error-description.md
-                - name: '_com_error::Error'
-                  href: ../cpp/com-error-error.md
-                - name: '_com_error::ErrorInfo'
-                  href: ../cpp/com-error-errorinfo.md
-                - name: '_com_error::ErrorMessage'
-                  href: ../cpp/com-error-errormessage.md
-                - name: '_com_error::GUID'
-                  href: ../cpp/com-error-guid.md
-                - name: '_com_error::HelpContext'
-                  href: ../cpp/com-error-helpcontext.md
-                - name: '_com_error::HelpFile'
-                  href: ../cpp/com-error-helpfile.md
-                - name: '_com_error::HRESULTToWCode'
-                  href: ../cpp/com-error-hresulttowcode.md
-                - name: '_com_error::Source'
-                  href: ../cpp/com-error-source.md
-                - name: '_com_error::WCode'
-                  href: ../cpp/com-error-wcode.md
-                - name: '_com_error::WCodeToHRESULT'
-                  href: ../cpp/com-error-wcodetohresult.md
-            - name: _com_error 연산자
-              expanded: false
-              items:
+                  items:
+                    - name: _com_error 멤버 함수
+                      href: ../cpp/com-error-member-functions.md
+                    - name: '_com_error::_com_error'
+                      href: ../cpp/com-error-com-error.md
+                    - name: '_com_error::Description'
+                      href: ../cpp/com-error-description.md
+                    - name: '_com_error::Error'
+                      href: ../cpp/com-error-error.md
+                    - name: '_com_error::ErrorInfo'
+                      href: ../cpp/com-error-errorinfo.md
+                    - name: '_com_error::ErrorMessage'
+                      href: ../cpp/com-error-errormessage.md
+                    - name: '_com_error::GUID'
+                      href: ../cpp/com-error-guid.md
+                    - name: '_com_error::HelpContext'
+                      href: ../cpp/com-error-helpcontext.md
+                    - name: '_com_error::HelpFile'
+                      href: ../cpp/com-error-helpfile.md
+                    - name: '_com_error::HRESULTToWCode'
+                      href: ../cpp/com-error-hresulttowcode.md
+                    - name: '_com_error::Source'
+                      href: ../cpp/com-error-source.md
+                    - name: '_com_error::WCode'
+                      href: ../cpp/com-error-wcode.md
+                    - name: '_com_error::WCodeToHRESULT'
+                      href: ../cpp/com-error-wcodetohresult.md
                 - name: _com_error 연산자
-                  href: ../cpp/com-error-operators.md
-                - name: '_com_error::operator ='
-                  href: ../cpp/com-error-operator-equal.md
-        - name: _com_ptr_t 클래스
-          expanded: false
-          items:
+                  items:
+                    - name: _com_error 연산자
+                      href: ../cpp/com-error-operators.md
+                    - name: '_com_error::operator ='
+                      href: ../cpp/com-error-operator-equal.md
             - name: _com_ptr_t 클래스
-              href: ../cpp/com-ptr-t-class.md
-            - name: _com_ptr_t 멤버 함수
-              expanded: false
               items:
+                - name: _com_ptr_t 클래스
+                  href: ../cpp/com-ptr-t-class.md
                 - name: _com_ptr_t 멤버 함수
-                  href: ../cpp/com-ptr-t-member-functions.md
-                - name: '_com_ptr_t::_com_ptr_t'
-                  href: ../cpp/com-ptr-t-com-ptr-t.md
-                - name: '_com_ptr_t::AddRef'
-                  href: ../cpp/com-ptr-t-addref.md
-                - name: '_com_ptr_t::Attach'
-                  href: ../cpp/com-ptr-t-attach.md
-                - name: '_com_ptr_t::CreateInstance'
-                  href: ../cpp/com-ptr-t-createinstance.md
-                - name: '_com_ptr_t::Detach'
-                  href: ../cpp/com-ptr-t-detach.md
-                - name: '_com_ptr_t::GetActiveObject'
-                  href: ../cpp/com-ptr-t-getactiveobject.md
-                - name: '_com_ptr_t::GetInterfacePtr'
-                  href: ../cpp/com-ptr-t-getinterfaceptr.md
-                - name: '_com_ptr_t::QueryInterface'
-                  href: ../cpp/com-ptr-t-queryinterface.md
-                - name: '_com_ptr_t::Release'
-                  href: ../cpp/com-ptr-t-release.md
-            - name: _com_ptr_t 연산자
-              expanded: false
-              items:
+                  items:
+                    - name: _com_ptr_t 멤버 함수
+                      href: ../cpp/com-ptr-t-member-functions.md
+                    - name: '_com_ptr_t::_com_ptr_t'
+                      href: ../cpp/com-ptr-t-com-ptr-t.md
+                    - name: '_com_ptr_t::AddRef'
+                      href: ../cpp/com-ptr-t-addref.md
+                    - name: '_com_ptr_t::Attach'
+                      href: ../cpp/com-ptr-t-attach.md
+                    - name: '_com_ptr_t::CreateInstance'
+                      href: ../cpp/com-ptr-t-createinstance.md
+                    - name: '_com_ptr_t::Detach'
+                      href: ../cpp/com-ptr-t-detach.md
+                    - name: '_com_ptr_t::GetActiveObject'
+                      href: ../cpp/com-ptr-t-getactiveobject.md
+                    - name: '_com_ptr_t::GetInterfacePtr'
+                      href: ../cpp/com-ptr-t-getinterfaceptr.md
+                    - name: '_com_ptr_t::QueryInterface'
+                      href: ../cpp/com-ptr-t-queryinterface.md
+                    - name: '_com_ptr_t::Release'
+                      href: ../cpp/com-ptr-t-release.md
                 - name: _com_ptr_t 연산자
-                  href: ../cpp/com-ptr-t-operators.md
-                - name: '_com_ptr_t::operator ='
-                  href: ../cpp/com-ptr-t-operator-equal.md
-                - name: _com_ptr_t 관계형 연산자
-                  href: ../cpp/com-ptr-t-relational-operators.md
-                - name: _com_ptr_t 추출기
-                  href: ../cpp/com-ptr-t-extractors.md
-            - name: 관계형 함수 템플릿
-              href: ../cpp/relational-function-templates.md
-        - name: _variant_t 클래스
-          expanded: false
-          items:
+                  items:
+                    - name: _com_ptr_t 연산자
+                      href: ../cpp/com-ptr-t-operators.md
+                    - name: '_com_ptr_t::operator ='
+                      href: ../cpp/com-ptr-t-operator-equal.md
+                    - name: _com_ptr_t 관계형 연산자
+                      href: ../cpp/com-ptr-t-relational-operators.md
+                    - name: _com_ptr_t 추출기
+                      href: ../cpp/com-ptr-t-extractors.md
+                - name: 관계형 함수 템플릿
+                  href: ../cpp/relational-function-templates.md
             - name: _variant_t 클래스
-              href: ../cpp/variant-t-class.md
-            - name: _variant_t 멤버 함수
-              expanded: false
               items:
+                - name: _variant_t 클래스
+                  href: ../cpp/variant-t-class.md
                 - name: _variant_t 멤버 함수
-                  href: ../cpp/variant-t-member-functions.md
-                - name: '_variant_t::_variant_t'
-                  href: ../cpp/variant-t-variant-t.md
-                - name: '_variant_t::Attach'
-                  href: ../cpp/variant-t-attach.md
-                - name: '_variant_t::Clear'
-                  href: ../cpp/variant-t-clear.md
-                - name: '_variant_t::ChangeType'
-                  href: ../cpp/variant-t-changetype.md
-                - name: '_variant_t::Detach'
-                  href: ../cpp/variant-t-detach.md
-                - name: '_variant_t::SetString'
-                  href: ../cpp/variant-t-setstring.md
-            - name: _variant_t 연산자
-              expanded: false
-              items:
+                  items:
+                    - name: _variant_t 멤버 함수
+                      href: ../cpp/variant-t-member-functions.md
+                    - name: '_variant_t::_variant_t'
+                      href: ../cpp/variant-t-variant-t.md
+                    - name: '_variant_t::Attach'
+                      href: ../cpp/variant-t-attach.md
+                    - name: '_variant_t::Clear'
+                      href: ../cpp/variant-t-clear.md
+                    - name: '_variant_t::ChangeType'
+                      href: ../cpp/variant-t-changetype.md
+                    - name: '_variant_t::Detach'
+                      href: ../cpp/variant-t-detach.md
+                    - name: '_variant_t::SetString'
+                      href: ../cpp/variant-t-setstring.md
                 - name: _variant_t 연산자
-                  href: ../cpp/variant-t-operators.md
-                - name: '_variant_t::operator ='
-                  href: ../cpp/variant-t-operator-equal.md
-                - name: _variant_t 관계형 연산자
-                  href: ../cpp/variant-t-relational-operators.md
-                - name: _variant_t 추출기
-                  href: ../cpp/variant-t-extractors.md
-- name: Microsoft 확장
-  href: ../cpp/microsoft-extensions.md
-- name: 비표준 동작
-  href: ../cpp/nonstandard-behavior.md
-- name: 컴파일러 한계
-  href: ../cpp/compiler-limits.md
+                  items:
+                    - name: _variant_t 연산자
+                      href: ../cpp/variant-t-operators.md
+                    - name: '_variant_t::operator ='
+                      href: ../cpp/variant-t-operator-equal.md
+                    - name: _variant_t 관계형 연산자
+                      href: ../cpp/variant-t-relational-operators.md
+                    - name: _variant_t 추출기
+                      href: ../cpp/variant-t-extractors.md
+    - name: Microsoft 확장
+      href: ../cpp/microsoft-extensions.md
+    - name: 비표준 동작
+      href: ../cpp/nonstandard-behavior.md
+    - name: 컴파일러 한계
+      href: ../cpp/compiler-limits.md
+- name: C/C++ 전처리기 참조
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: C++ 표준 라이브러리 참조
+  href: ../standard-library/cpp-standard-library-reference.md

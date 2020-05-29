@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: C++ 언어 설명서
+summary: C++ 및 C++ 표준 라이브러리를 사용하는 방법을 알아봅니다.
+metadata:
+  title: C++ 문서 - 시작, 자습서, 참조.
+  description: Microsoft C++ 및 Visual Studio 사용자를 위한 C++ 프로그래밍 참조.
+  ms.topic: landing-page
+  ms.date: 05/08/2020
+  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108623"
+landingContent:
+- title: Visual Studio의 C++ 알아보기
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Windows용 Visual Studio 다운로드
+      url: https://visualstudio.microsoft.com/downloads
+    - text: Visual Studio에 C/C++ 지원 설치
+      url: ../build/vscpp-step-0-installation.md
+    - text: 명령줄 빌드 도구만 다운로드
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: get-started
+    links:
+    - text: C++ 지원 Visual Studio의 Hello World
+      url: ../build/vscpp-step-1-create.md
+    - text: C++에서 계산기 만들기
+      url: ../get-started/tutorial-console-cpp.md
+  - linkListType: video
+    links:
+    - text: C++ 알아보기 - 범용 언어 및 라이브러리
+      url: https://channel9.msdn.com/Series/cplusplus-language-library
+  - linkListType: learn
+    links:
+    - text: C++ 시작하기 - 최신 C++
+      url: ../cpp/welcome-back-to-cpp-modern-cpp.md
+    - text: 샘플 및 샘플 보관
+      url: ../overview/visual-cpp-samples.md
+- title: Visual Studio의 새로운 C++ 기능
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio의 새로운 C++ 기능
+      url: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - text: C++ 규칙 향상
+      url: ../overview/cpp-conformance-improvements.md
+  - linkListType: overview
+    links:
+    - text: Visual Studio의 C++ 개발 개요
+      url: ../overview/overview-of-cpp-development.md
+    - text: 지원되는 대상 플랫폼
+      url: ../overview/supported-platforms-visual-cpp.md
+    - text: 도움말 및 커뮤니티 리소스
+      url: ../overview/visual-cpp-help-and-community.md
+    - text: 문제 보고 또는 제안하기
+      url: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- title: 컴파일러 및 도구 사용
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C/C++ 빌드 참조
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: 프로젝트 및 빌드 시스템
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: 컴파일러 참조
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: 링커 참조
+      url: ../build/reference/linking.md
+    - text: 추가 빌드 도구
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: 오류 및 경고
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: C++ 언어
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 언어 참조
+      url: ../cpp/cpp-language-reference.md
+    - text: C++ 키워드
+      url: ../cpp/keywords-cpp.md
+    - text: C++ 연산자
+      url: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+    - text: C/C++ 전처리기 참조
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: C++ 표준 라이브러리(STL)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 표준 라이브러리 개요
+      url: ../standard-library/cpp-standard-library-overview.md
+    - text: 헤더별 C++ 표준 라이브러리 참조
+      url: ../standard-library/cpp-standard-library-header-files.md
+    - text: C++ 표준 라이브러리 컨테이너
+      url: ../standard-library/stl-containers.md
+    - text: 반복기
+      url: ../standard-library/iterators.md
+    - text: 알고리즘
+      url: ../standard-library/algorithms.md
+    - text: Allocators
+      url: ../standard-library/allocators.md
+    - text: 함수 개체
+      url: ../standard-library/function-objects-in-the-stl.md
+    - text: iostream 프로그래밍
+      url: ../standard-library/iostream-programming.md
+    - text: 정규식
+      url: ../standard-library/regular-expressions-cpp.md
+    - text: 파일 시스템 탐색
+      url: ../standard-library/file-system-navigation.md

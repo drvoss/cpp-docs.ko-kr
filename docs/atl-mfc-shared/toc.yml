@@ -6,7 +6,6 @@
     - name: ATL-MFC 개념
       href: ../atl-mfc-shared/atl-mfc-concepts.md
     - name: 날짜 및 시간
-      expanded: false
       items:
         - name: 날짜 및 시간 개요
           href: ../atl-mfc-shared/date-and-time.md
@@ -18,12 +17,10 @@
         - name: 문자열(ATL-MFC)
           href: ../atl-mfc-shared/strings-atl-mfc.md
         - name: CStringT 사용
-          expanded: false
           items:
             - name: CStringT 사용
               href: ../atl-mfc-shared/using-cstringt.md
             - name: CStringT를 사용한 메모리 관리
-              expanded: false
               items:
                 - name: CStringT를 사용한 메모리 관리
                   href: ../atl-mfc-shared/memory-management-with-cstringt.md
@@ -38,7 +35,6 @@
             - name: CStringT를 사용하여 문자열 클래스 내보내기
               href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
         - name: CString 사용
-          expanded: false
           items:
             - name: CString 사용
               href: ../atl-mfc-shared/using-cstring.md
@@ -59,8 +55,9 @@
             - name: 유니코드 및 MBCS(멀티바이트 문자 집합) 지원
               href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
 - name: 참고
-  expanded: false
   items:
+    - name: MFC와 ATL에서 공유되는 클래스
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: CSize 클래스
       href: ../atl-mfc-shared/reference/csize-class.md
     - name: CTimeSpan 클래스
@@ -69,16 +66,12 @@
       href: ../atl-mfc-shared/reference/coledatetime-class.md
     - name: CRect 클래스
       href: ../atl-mfc-shared/reference/crect-class.md
-    - name: MFC와 ATL에서 공유되는 클래스
-      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: CPoint 클래스
       href: ../atl-mfc-shared/reference/cpoint-class.md
     - name: CStringT 클래스
       href: ../atl-mfc-shared/reference/cstringt-class.md
     - name: COleDateTimeSpan 클래스
       href: ../atl-mfc-shared/reference/coledatetimespan-class.md
-    - name: IAtlStringMgr 클래스
-      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
     - name: CFixedStringT 클래스
       href: ../atl-mfc-shared/reference/cfixedstringt-class.md
     - name: CStrBufT 클래스
@@ -95,3 +88,5 @@
       href: ../atl-mfc-shared/reference/csimplestringt-class.md
     - name: CTime 클래스
       href: ../atl-mfc-shared/reference/ctime-class.md
+    - name: IAtlStringMgr 클래스
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
