@@ -3,7 +3,6 @@
 - name: '연습: CLR을 대상으로 하는 C++/CLI 프로그램 컴파일'
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: C++/CLI 작업
-  expanded: false
   items:
     - name: C++/CLI 작업
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: ADO.NET을 사용하여 데이터 액세스
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: 네이티브 및 .NET 상호 운용성
-  expanded: false
   items:
     - name: 네이티브 및 .NET 상호 운용성
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: 다른 .NET 언어와의 상호 운용성
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: 혼합형(네이티브 및 관리형) 어셈블리
-      expanded: false
       items:
         - name: 혼합형(네이티브 및 관리형) 어셈블리
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: '방법: CRT 라이브러리 DLL에 대한 종속성을 제거하여 부분적으로 신뢰할 수 있는 애플리케이션 만들기'
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: MFC에서 Windows Form 사용자 정의 컨트롤 사용
-      expanded: false
       items:
         - name: MFC에서 Windows Form 사용자 정의 컨트롤 사용
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Windows Forms-MFC 프로그래밍의 차이점
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
-          expanded: false
           items:
             - name: MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: '방법: 네이티브 C++ 클래스에서 Windows Forms 이벤트 싱크'
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
-          expanded: false
           items:
             - name: Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: 관리 코드에서 네이티브 함수 호출
-      expanded: false
       items:
         - name: 관리 코드에서 네이티브 함수 호출
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: C++에서 명시적 PInvoke 사용(DllImport 특성)
-          expanded: false
           items:
             - name: C++에서 명시적 PInvoke 사용(DllImport 특성)
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: '방법: PInvoke를 사용하여 포함 포인터 마샬링'
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: C++ Interop 사용(암시적 PInvoke)
-          expanded: false
           items:
             - name: C++ Interop 사용(암시적 PInvoke)
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: '방법: C#에서 사용하기 위해 네이티브 클래스 래핑'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: 순수형 및 안정형 코드
-  expanded: false
   items:
     - name: 순수형 및 안정형 코드
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: Debug 클래스
   href: ../dotnet/debug-class-cpp-cli.md
 - name: STL/CLR 라이브러리 참조
-  expanded: false
   items:
     - name: STL/CLR 라이브러리 참조
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector(STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: C++ 지원 라이브러리
-  expanded: false
   items:
     - name: C++ 지원 라이브러리
       href: ../dotnet/cpp-support-library.md
     - name: C++ 마샬링 개요
-      expanded: false
       items:
         - name: C++ 마샬링 개요
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: msclr 네임스페이스
       href: ../dotnet/msclr-namespace.md
     - name: 리소스 관리 클래스
-      expanded: false
       items:
         - name: 리소스 관리 클래스
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: swap 함수(auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: swap 함수(auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: 동기화(lock 클래스)
-      expanded: false
       items:
         - name: 동기화(lock 클래스)
           href: ../dotnet/synchronization-lock-class.md
         - name: lock
-          expanded: false
           items:
             - name: lock
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: lock_when 열거형
               href: ../dotnet/lock-when-enum.md
     - name: 특정 애플리케이션 도메인에서 함수 호출
-      expanded: false
       items:
         - name: 특정 애플리케이션 도메인에서 함수 호출
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain 함수
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr 클래스'
           href: ../dotnet/com-ptr-class.md
 - name: C++/CLI의 예외
-  expanded: false
   items:
     - name: C++/CLI의 예외
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: '방법: 전역 예외 처리기 정의 및 설치'
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: boxing
-  expanded: false
   items:
     - name: boxing
       href: ../dotnet/boxing-cpp-cli.md
