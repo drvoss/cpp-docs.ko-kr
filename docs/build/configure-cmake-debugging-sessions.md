@@ -4,12 +4,12 @@ description: Visual Studio를 사용하여 CMake 디버거 설정을 구성하�
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 8364e5b3dd3316a4ed7e754a104a14373040aa6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328830"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630530"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake 디버깅 세션 구성
 
@@ -97,7 +97,7 @@ Visual Studio 2019 버전 16.6에서는 원격 시스템 및 WSL에서의 디버
 - `name`: **시작 항목** 드롭다운에서 구성을 식별하기 위한 식별 이름입니다.
 - `project`: 프로젝트 파일의 상대 경로를 지정합니다. CMake 프로젝트를 디버깅할 때는 일반적으로 이 경로를 변경하지 않아도 됩니다.
 - `projectTarget`: 프로젝트를 빌드할 때 호출할 CMake 대상을 지정합니다. **디버그 메뉴** 또는 **대상 뷰**에서 *launch.vs.json*을 입력하면 Visual Studio는 이 속성을 자동으로 채웁니다. 이 대상 값은 **시작 항목** 드롭다운에 나열된 기존 디버그 대상의 이름과 일치해야 합니다.
-- `debuggerConfiguration`: 사용할 디버깅 기본값 집합을 나타냅니다. Visual Studio 2019 버전 16.6에서 유일하게 유효한 옵션은 `gdb`입니다. 이전 버전에서는 `gdbserver`도 지원합니다.
+- `debuggerConfiguration`: 사용할 디버깅 기본값 집합을 나타냅니다. Visual Studio 2019 버전 16.6에서 유일하게 유효한 옵션은 `gdb`입니다. Visual Studio 2019 버전 16.7 이상도 `gdbserver`를 지원합니다.
 - `args`: 시작할 때 디버그 중인 프로그램에 전달되는 명령줄 인수입니다.
 - `env`: 디버그 중인 프로그램에 전달되는 부가적인 환경 변수입니다. 예: `{"DISPLAY": "0.0"}`.
 - `processID`: 연결할 Linux 프로세스 ID입니다. 원격 프로세스에 연결하는 경우에만 사용됩니다. 자세한 내용은 [GDB를 사용하여 프로세스에 연결할 때 발생하는 문제 해결](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB)을 참조하세요.
@@ -109,6 +109,15 @@ Visual Studio 2019 버전 16.6에서는 원격 시스템 및 WSL에서의 디버
 - `cwd`: 기본값은 `"${debugInfo.defaultWorkingDirectory}"`입니다. `program`이 실행되는 원격 시스템의 디렉터리에 대한 Unix 경로입니다. 디렉터리가 있어야 합니다.
 - `gdbpath`: 기본값은 `/usr/bin/gdb`입니다. 디버깅하는 데 사용되는 `gdb`에 대한 전체 Unix 경로입니다. `gdb`의 사용자 지정 버전을 사용하는 경우에만 필요합니다.
 - `preDebugCommand`: `gdb`를 호출하기 직전에 실행할 Linux 명령입니다. 명령이 완료될 때까지 `gdb`는 시작되지 않습니다. `gdb`를 실행하기 전에 옵션을 사용하여 스크립트를 실행할 수 있습니다.
+
+#### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>`gdbserver` 구성에서 허용되는 추가 옵션(16.7 이상)
+
+- `program`: 기본값은 `"${debugInfo.fullTargetPath}"`입니다. 디버그할 애플리케이션의 Unix 경로입니다. 빌드 또는 배포 위치의 대상 실행 파일과 다른 경우에만 필요합니다.
+- `remoteMachineName`:  기본값은 `"${debugInfo.remoteMachineName}"`입니다. 디버그할 프로그램을 호스팅하는 원격 시스템의 이름입니다. 빌드 시스템과 다른 경우에만 필요합니다. [연결 관리자](../linux/connect-to-your-remote-linux-computer.md)에 기존 항목이 있어야 합니다. **Ctrl+Space**를 눌러 모든 기존 원격 연결의 목록을 표시합니다.
+- `cwd`: 기본값은 `"${debugInfo.defaultWorkingDirectory}"`입니다. `program`이 실행되는 원격 시스템의 디렉터리에 대한 전체 Unix 경로입니다. 디렉터리가 있어야 합니다.
+- `gdbPath`: 기본값은 `${debugInfo.vsInstalledGdb}`입니다. 디버그하는 데 사용되는 `gdb`의 전체 Windows 경로입니다. C/C++ 워크로드를 사용하여 Linux 개발과 함께 설치된 `gdb`가 기본값입니다.
+- `gdbserverPath`: 기본값은 `usr/bin/gdbserver`입니다. 디버깅하는 데 사용되는 `gdbserver`에 대한 전체 Unix 경로입니다.
+- `preDebugCommand`: `gdbserver`를 시작하기 직전에 실행할 Linux 명령입니다. 명령이 완료될 때까지 `gdbserver`는 시작되지 않습니다.
 
 #### <a name="deployment-options"></a>배포 옵션
 
