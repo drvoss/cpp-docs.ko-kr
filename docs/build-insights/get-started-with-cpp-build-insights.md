@@ -1,49 +1,61 @@
 ---
 title: C++ Build Insights 활용 시작
-description: C++ 빌드 인사이트에 대한 높은 수준의 개요입니다.
+description: 대략적인 C++ Build Insights 개요입니다.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325723"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759227"
 ---
 # <a name="get-started-with-c-build-insights"></a>C++ Build Insights 활용 시작
 
 ::: moniker range="<=vs-2017"
 
-C++ 빌드 인사이트 도구는 Visual Studio 2019에서 사용할 수 있습니다. 해당 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
+C++ Build Insights 도구는 Visual Studio 2019에서 사용할 수 있습니다. 이 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2019로 설정하세요. 이 페이지의 목차 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++ 빌드 인사이트는 MSVC(Microsoft Visual C++) 도구 체인에 대한 가시성을 높이는 도구 모음입니다. 도구는 C++ 빌드에 대한 데이터를 수집하고 다음과 같은 일반적인 질문에 대답하는 데 도움이 되는 형식으로 제공합니다.
+C++ Build Insights는 MSVC(Microsoft Visual C++) 도구 체인에 대한 향상된 가시성을 제공하는 도구 모음입니다. 이 도구는 C++ 빌드에 대한 데이터를 수집하여 다음과 같은 일반적인 질문에 답하는 데 도움이 되는 형식으로 표시합니다.
 
-- 빌드가 충분히 병렬화되어 있습니까?
-- 미리 컴파일된 헤더(PCH)에 무엇을 포함해야 합니까?
-- 빌드 속도를 높이기 위해 중점을 두어야 할 특정 병목 현상이 있습니까?
+- 빌드가 충분히 병렬화되어 있나요?
+- 미리 컴파일된 헤더(PCH)에 무엇을 포함해야 하나요?
+- 빌드 속도를 높이기 위해 집중해야 하는 특정 병목 현상이 있나요?
 
 이 기술의 주요 구성 요소는 다음과 같습니다.
 
-- *vcperf.exe*, 빌드에 대한 추적을 수집하는 데 사용할 수있는 명령 줄 유틸리티,
-- WPA에서 빌드 트레이스를 볼 수 있는 WPA(Windows 성능 분석기) 확장
-- C++ 빌드 인사이트 SDK는 C++ 빌드 인사이트 데이터를 사용하는 사용자 고유의 도구를 만들기 위한 소프트웨어 개발 키트입니다.
+- 빌드에 대한 추적을 수집하는 데 사용할 수 있는 명령줄 유틸리티인 *vcperf.exe*
+- WPA(Windows Performance Analyzer)에서 빌드 추적을 볼 수 있는 WPA 확장
+- C++ Build Insights 데이터를 사용하는 자체 도구 생성을 위한 소프트웨어 개발 도구인 C++ Build Insights SDK
 
-아래 링크를 클릭하여 다음 구성 요소를 빠르게 시작하십시오.
+## <a name="documentation-sections"></a>설명서 섹션
 
-[튜토리얼: vcperf 및 Windows 성능 분석기](tutorials/vcperf-and-wpa.md)\
-C++ 프로젝트에 대한 빌드 추적을 수집하는 방법과 WPA에서 이를 보는 방법에 대해 알아봅니다.
+[자습서: vcperf 및 Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
+C++ 프로젝트의 빌드 추적을 수집하고 WPA에서 보는 방법을 알아봅니다.
 
-[튜토리얼: 윈도우 성능 기본 사항](tutorials/wpa-basics.md)\
-빌드 추적을 분석하기 위한 유용한 WPA 팁을 알아보십시오.
+[자습서: Windows 성능 기본 사항](tutorials/wpa-basics.md)\
+빌드 추적을 분석하는 데 유용한 WPA 팁을 검색합니다.
 
-[C++ 인사이트 SDK 구축](reference/sdk/overview.md)\
-C++ 빌드 인사이트 SDK의 개요입니다.
+[C++ Build Insights SDK](reference/sdk/overview.md)\
+C++ Build Insights SDK의 개요입니다.
+
+## <a name="articles"></a>문서
+
+C++ Build Insights에 대한 자세한 내용은 공식 팀 블로그의 다음 문서를 참조하세요.
+
+[C++ Build Insights 소개](https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/)
+
+[C++ Build Insights SDK를 사용하여 프로그래밍 방식으로 빌드 분석](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
+
+[C++ Build Insights를 사용하여 빌드 병목 상태 찾기](https://devblogs.microsoft.com/cppblog/finding-build-bottlenecks-with-cpp-build-insights/)
+
+[C++ Build Insights에서 PCH 제안을 사용하여 더 빠른 빌드](https://devblogs.microsoft.com/cppblog/faster-builds-with-pch-suggestions-from-c-build-insights/)
 
 ::: moniker-end

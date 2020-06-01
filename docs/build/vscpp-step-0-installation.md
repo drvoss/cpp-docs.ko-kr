@@ -1,21 +1,21 @@
 ---
-title: Visual Studio에 C++ 지원 설치
+title: Visual Studio에 C 및 C++ 지원 설치
 description: Visual C++에 대한 Visual Studio 지원 설치
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335359"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550812"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Visual Studio에 C++ 지원 설치
+# <a name="install-c-and-c-support-in-visual-studio"></a>Visual Studio에 C 및 C++ 지원 설치
 
-아직 Visual Studio 및 Visual C++ 도구를 다운로드하여 설치하지 않은 경우 시작하는 방법은 다음과 같습니다.
+아직 Visual Studio 및 Microsoft C/C++ 도구를 다운로드하여 설치하지 않은 경우 시작하는 방법은 다음과 같습니다.
 
 ::: moniker range="vs-2019"
 
@@ -67,15 +67,15 @@ Visual Studio 설치 관리자를 설치하려면 부트스트래퍼 파일을 �
 
 ### <a name="step-4---choose-workloads"></a>4단계 - 워크로드 선택
 
-설치 관리자를 설치한 후에  워크로드 또는 원하는 기능 집합을 선택하여 설치를 사용자 지정하는 데 사용할 수 있습니다. 방법은 다음과 같습니다.
+설치 관리자를 설치한 후에 워크로드 또는 원하는 기능 집합을 선택하여 설치를 사용자 지정하는 데 사용할 수 있습니다. 방법은 다음과 같습니다.
 
 1. **Visual Studio 설치** 화면에서 원하는 작업을 찾습니다.
 
    ![Visual Studio 2019: 워크로드 설치](../get-started/media/vs-installer-workloads.png)
 
-   핵심 C++ 지원을 위해 "C++를 사용한 데스크톱 개발" 워크로드를 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.
+   핵심 C 및 C++ 지원을 위해 "C++를 사용한 데스크톱 개발" 워크로드를 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.
 
-   추가 워크로드는 다른 종류의 C++ 개발을 지원합니다. 예를 들어 "유니버설 Windows 플랫폼 개발" 워크 로드를 선택하여 Microsoft Store용 Windows 런타임을 사용하는 앱을 만듭니다. DirectX, Unreal 및 Cocos2d를 사용하는 게임을 만들려면 "C++를 사용한 게임 개발"을 선택합니다. IoT 개발을 포함하여 Linux 플랫폼을 대상으로 하려면 "C++를 사용한 Linux 개발"을 선택합니다.
+   추가 워크로드는 다른 종류의 개발을 지원합니다. 예를 들어 "유니버설 Windows 플랫폼 개발" 워크 로드를 선택하여 Microsoft Store용 Windows 런타임을 사용하는 앱을 만듭니다. DirectX, Unreal 및 Cocos2d를 사용하는 게임을 만들려면 "C++를 사용한 게임 개발"을 선택합니다. IoT 개발을 포함하여 Linux 플랫폼을 대상으로 하려면 "C++를 사용한 Linux 개발"을 선택합니다.
 
    **설치 세부 정보** 창에는 각 워크로드가 설치하는 포함된 및 선택적 구성 요소가 나열됩니다. 이 목록에서 선택적 구성 요소를 선택하거나 선택 취소할 수 있습니다. 예를 들어 Visual Studio 2017 또는 2015 컴파일러 도구 집합을 사용하여 개발을 지원하려면 MSVC v141 또는 MSVC v140 선택적 구성 요소를 선택합니다. MFC, 실험적 모듈 언어 확장, IncrediBuild 등에 대한 지원을 추가할 수 있습니다.
 
@@ -125,7 +125,7 @@ Visual Studio 설치 관리자를 설치하려면 부트스트래퍼 파일을 �
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 설치
 
@@ -159,7 +159,7 @@ Visual Studio 2017에서는 필요한 기능만 선택하여 쉽게 설치할 �
 
    ![C++를 사용한 데스크톱 개발 워크로드](media/desktop-development-with-cpp.png "C++를 사용한 데스크톱 개발")
 
-   C++의 경우 **C++를 사용한 데스크톱 개발** 워크로드를 선택한 다음 **설치**를 선택합니다.
+   C 및 C++의 경우 **C++를 사용한 데스크톱 개발** 워크로드를 선택한 다음 **설치**를 선택합니다.
 
    ![C++를 사용한 데스크톱 개발 워크로드 설치](media/vscpp-concierge-choose-workload.gif "C++를 사용한 데스크톱 개발 워크로드 설치")
 
@@ -185,9 +185,9 @@ Visual Studio 2017에서는 필요한 기능만 선택하여 쉽게 설치할 �
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 설치
 
-Visual Studio 2015를 설치하려면 [이전 버전의 Visual Studio 다운로드](https://www.visualstudio.com/vs/older-downloads/)로 이동합니다. 설치 프로그램을 실행하고 **사용자 지정 설치**를 선택한 다음, C++ 구성 요소를 선택합니다. 기존 Visual Studio 2015 설치에 C++ 지원을 추가하려면 Windows 시작 단추를 클릭하고 **프로그램 추가/제거**를 입력합니다. 결과 목록에서 프로그램을 열고 설치된 프로그램 목록에서 Visual Studio 2015 설치를 찾습니다. 이를 두 번 클릭한 다음 **수정**을 선택하고 설치할 Visual C++ 구성 요소를 선택합니다.
+Visual Studio 2015를 설치하려면 [이전 버전의 Visual Studio 다운로드](https://www.visualstudio.com/vs/older-downloads/)로 이동합니다. 설치 프로그램을 실행하고 **사용자 지정 설치**를 선택한 다음, C++ 구성 요소를 선택합니다. 기존 Visual Studio 2015 설치에 C 및 C++ 지원을 추가하려면 Windows 시작 단추를 클릭하고 **프로그램 추가/제거**를 입력합니다. 결과 목록에서 프로그램을 열고 설치된 프로그램 목록에서 Visual Studio 2015 설치를 찾습니다. 이를 두 번 클릭한 다음 **수정**을 선택하고 설치할 Visual C++ 구성 요소를 선택합니다.
 
-일반적으로 Visual Studio 2015 컴파일러를 사용하여 코드를 컴파일해야 하는 경우에도 Visual Studio 2017을 사용하는 것이 좋습니다. 자세한 내용은 [Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드](../porting/use-native-multi-targeting.md)를 참조하세요.
+일반적으로 Visual Studio 2015 컴파일러를 사용하여 코드를 컴파일해야 하는 경우에도 최신 버전의 Visual Studio를 사용하는 것이 좋습니다. 자세한 내용은 [Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드](../porting/use-native-multi-targeting.md)를 참조하세요.
 
 ::: moniker-end
 

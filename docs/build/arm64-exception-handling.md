@@ -2,12 +2,12 @@
 title: ARM64 예외 처리
 description: ARM64에서 Windows가 사용하는 예외 처리 규칙 및 데이터에 대해 설명합니다.
 ms.date: 11/19/2018
-ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
-ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
+ms.openlocfilehash: abc77aa683e73a2740c71ffbd7ddead07f91ff7d
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504487"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854829"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 예외 처리
 
@@ -307,12 +307,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`end`|            11100100: 해제 코드의 끝 에필로그에서 ret를 의미 |
 |`end_c`|        11100101: 현재 연결된 범위에서 해제 코드의 끝 |
 |`save_next`|        11100110: 다음 비휘발성 Int 또는 FP 레지스터 쌍 저장 |
-|`arithmetic(add)`|    11100111'000zxxxx: 쿠키 reg(z)를 lr (0=x28, 1=sp)에 더하기, `add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111'001zxxxx: 쿠키 reg(z)를 lr (0=x28, 1=sp)에서 빼기, `sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111'010zxxxx: 쿠키 reg(z) (0=x28, 1=sp) 포함 eor lr, `eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111'0110xxxx: 쿠키 reg (x28) xip0 = neg x28 포함 Ir의 시뮬레이션된 rol, `ror lr, xip0` |
-|`arithmetic(ror)`|    11100111'100zxxxx: 쿠키 reg(z) (0=x28, 1=sp) 포함 ror lr, `ror lr, lr, reg(z)` |
-| |            11100111: xxxz----: ---- 예약됨 |
+| |            11100111: 예약됨 |
 | |              11101xxx: asm 루틴에 대해서만 생성된 아래 사용자 지정 사례에 대해 예약됨 |
 | |              11101000: MSFT_OP_TRAP_FRAME에 대한 사용자 지정 스택 |
 | |              11101001: MSFT_OP_MACHINE_FRAME에 대한 사용자 지정 스택 |

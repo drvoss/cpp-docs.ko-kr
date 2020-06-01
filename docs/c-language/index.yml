@@ -1,0 +1,87 @@
+### YamlMime:Landing
+title: C 언어 설명서
+summary: C 및 C 런타임 라이브러리를 사용하는 방법을 알아봅니다.
+metadata:
+  title: C 문서 - 시작, 자습서, 참조.
+  description: Microsoft C/C++ 및 Visual Studio 사용자를 위한 C 프로그래밍 참조.
+  ms.topic: landing-page
+  ms.date: 05/28/2020
+  ms.openlocfilehash: 74e65a2cb4e65bbbaaa51a9b1bdd358b96dff4eb
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153521"
+landingContent:
+- title: Visual Studio에서 C 시작
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Windows용 Visual Studio 다운로드
+      url: https://visualstudio.microsoft.com/downloads
+    - text: Visual Studio에 C/C++ 지원 설치
+      url: ../build/vscpp-step-0-installation.md
+    - text: 명령줄 빌드 도구만 다운로드
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: tutorial
+    links:
+    - text: 명령줄에서 C 프로그램 컴파일
+      url: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+- title: 컴파일러 및 도구 사용
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C/C++ 빌드 참조
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: 프로젝트 및 빌드 시스템
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: 컴파일러 참조
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: 링커 참조
+      url: ../build/reference/linking.md
+    - text: 추가 빌드 도구
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: 오류 및 경고
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: C 언어
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C 언어 참조
+      url: ../c-language/c-language-reference.md
+    - text: C 요소
+      url: ../c-language/elements-of-c.md
+    - text: 프로그램 구조
+      url: ../c-language/program-structure.md
+    - text: 선언 및 형식
+      url: ../c-language/declarations-and-types.md
+    - text: 식 및 할당
+      url: ../c-language/expressions-and-assignments.md
+    - text: 문
+      url: ../c-language/statements-c.md
+    - text: 함수
+      url: ../c-language/functions-c.md
+    - text: C 언어 구문 요약
+      url: ../c-language/c-language-syntax-summary.md
+    - text: 구현 정의 동작
+      url: ../c-language/implementation-defined-behavior.md
+    - text: C/C++ 전처리기 참조
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: CRT(C 런타임 라이브러리)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: CRT 라이브러리 기능
+      url: ../c-runtime-library/crt-library-features.md
+    - text: 사전순 함수 참조
+      url: ../c-runtime-library/reference/crt-alphabetical-function-reference.md
+    - text: 범주별 C 런타임 루틴
+      url: ../c-runtime-library/run-time-routines-by-category.md
+    - text: 전역 변수 및 표준 형식
+      url: ../c-runtime-library/global-variables-and-standard-types.md
+    - text: 전역 상수
+      url: ../c-runtime-library/global-constants.md
+    - text: 전역 상태
+      url: ../c-runtime-library/global-state.md
+    - text: 일반 텍스트 매핑
+      url: ../c-runtime-library/generic-text-mappings.md

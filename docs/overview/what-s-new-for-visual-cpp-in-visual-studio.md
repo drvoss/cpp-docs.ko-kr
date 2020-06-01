@@ -1,14 +1,14 @@
 ---
 title: Visual Studio의 새로운 C++ 기능
-ms.date: 07/02/2019
+ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 9b656d4e13fe241c22a9c555d1c597016c5353d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366813"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630482"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -44,11 +44,11 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 - 링커에서 파일 I/O를 처리하는 방식 및 PDB 형식 병합 및 생성 시 링크 시간을 포함한 빌드 처리량 향상된 기능입니다.
 
-- OpenMP SIMD 벡터화에 대한 기본 지원을 추가했습니다. 새 컴파일러 스위치 `-openmp:experimental`을 사용하여 사용하도록 설정할 수 있습니다. 이 옵션을 사용하면 `#pragma omp simd`로 주석을 단 루프가 잠재적으로 벡터화될 수 있습니다. 벡터화는 보장되지 않으며 주석이 있지만 벡터화되지 않은 루프에는 보고된 경고가 표시됩니다. SIMD 절은 지원되지 않으므로 무시되고 경고가 보고됩니다.
+- OpenMP SIMD 벡터화에 대한 기본 지원을 추가했습니다. 새 컴파일러 스위치 **`/openmp:experimental`** 을 사용하여 사용하도록 설정할 수 있습니다. 이 옵션을 사용하면 `#pragma omp simd`로 주석을 단 루프가 잠재적으로 벡터화될 수 있습니다. 벡터화는 보장되지 않으며 주석이 있지만 벡터화되지 않은 루프에는 보고된 경고가 표시됩니다. SIMD 절은 지원되지 않으므로 무시되고 경고가 보고됩니다.
 
-- `-Ob2`의 적극적인 버전인 새로운 인라인 명령줄 스위치 `-Ob3`을 추가했습니다. `-O2`(속도를 위해 이진 파일 최적화)는 기본적으로 `-Ob2`를 의미합니다. 컴파일러가 충분히 적극적으로 인라인하지 않는다면 `-O2 -Ob3`을 전달하는 것이 좋습니다.
+- **`/Ob2`** 의 적극적인 버전인 새로운 인라인 명령줄 스위치 **`/Ob3`** 을 추가했습니다. **`/O2`** (속도를 위해 이진 파일 최적화)는 기본적으로 **`/Ob2`** 를 의미합니다. 컴파일러가 충분히 적극적으로 인라인하지 않는다면 **`/O2 -Ob3`** 을 전달하는 것이 좋습니다.
 
-- 수학 라이브러리 함수 및 정수 나누기와 같은 특정 다른 작업에 대한 호출을 포함하는 루프의 수동 벡터화를 지원하기 위해 SVML(Short Vector Math Library) 내장 함수에 대한 지원을 추가했습니다. 이러한 함수는 해당하는 128비트, 256비트 또는 512비트 벡터를 컴퓨팅합니다. 지원되는 기능에 대한 정의는 [Intel Intrinsic 가이드](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML)를 참조하세요.
+- SVML(Short Vector Math Library) 내장 함수에 대한 지원이 추가되었습니다. 이러한 함수는 해당하는 128비트, 256비트 또는 512비트 벡터를 컴퓨팅합니다. 수학 라이브러리 함수 및 정수 나누기와 같은 다른 특정 연산에 대한 호출을 포함하는 루프의 수동 벡터화를 지원하기 위해 이 지원을 추가했습니다. 지원되는 기능에 대한 정의는 [Intel Intrinsic 가이드](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML)를 참조하세요.
 
 - 새로운 기능과 향상된 최적화:
 
@@ -70,17 +70,17 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 - 병렬 알고리즘 라이브러리의 런타임 동적 연결 검색은 더 이상 함수 포인터 배열을 저장하는 데 전체 페이지를 사용하지 않습니다. 이 메모리를 읽기 전용으로 표시하는 작업이 이제 보안과 관련이 없는 것으로 간주하였습니다.
 
-- `std::thread`의 생성자는 더 이상 스레드가 시작되기를 기다리지 않으며, 기본 C 라이브러리 `_beginthreadex`와 제공된 호출 가능 개체 간에 더 이상 너무 많은 함수 호출 레이어를 삽입하지 않습니다. 이전에 `std::thread`는 `_beginthreadex`와 제공된 호출 가능 개체 간에 6개 함수를 넣어 단 3개로 감소되었습니다(2개는 `std::invoke`에만 해당). 이 변경을 통해 정확히 `std::thread`가 생성되는 시점에 시스템 시계가 변경된 경우 `std::thread`의 생성자가 중단되는 모호한 타이밍 버그가 해결됩니다.
+- `std::thread`의 생성자는 더 이상 스레드가 시작되기를 기다리지 않으며, 기본 C 라이브러리 `_beginthreadex`와 제공된 호출 가능 개체 간에 더 이상 너무 많은 함수 호출 레이어를 삽입하지 않습니다. 이전에 `std::thread`는 `_beginthreadex`와 제공된 호출 가능 개체 사이에 여섯 개의 함수를 배치했습니다. 이 숫자는 단 3개로 축소되었으며, 그중 2개만 `std::invoke`입니다. 이 변경을 통해 정확히 `std::thread`가 생성되는 시점에 시스템 시계가 변경된 경우 `std::thread`의 생성자가 중단되는 모호한 타이밍 버그가 해결됩니다.
 
 - `std::hash<std::filesystem::path>`를 구현할 때 도입된 `std::hash`에서 성능 회귀를 수정했습니다.
 
-- 이제 표준 라이브러리의 여러 곳에서 정확성을 위해 catch 블록 대신 소멸자를 사용합니다. 이 변경으로 인해 디버거 상호 작용이 향상됩니다. 영향받는 위치에서 표준 라이브러리를 통해 throw하는 예외는 이제 다시 throw가 아니라 원래 throw 사이트에서 throw되는 것으로 표시됩니다. 일부 표준 라이브러리 catch 블록이 제거되었으며, catch 블록 수가 MSVC의 이후 릴리스에서 감소할 것으로 예상합니다.
+- 이제 표준 라이브러리의 여러 곳에서 정확성을 위해 catch 블록 대신 소멸자를 사용합니다. 이 변경으로 인해 디버거 상호 작용이 향상됩니다. 영향받는 위치에서 표준 라이브러리를 통해 throw하는 예외는 이제 다시 throw가 아니라 원래 throw 사이트에서 throw되는 것으로 표시됩니다. 모든 표준 라이브러리 catch 블록이 제거된 것은 아닙니다. MSVC의 이후 릴리스에서는 catch 블록 수가 줄어들 것으로 예상됩니다.
 
 - noexcept 함수 내부에서 조건부 throw로 인해 발생한 `std::bitset`의 최적이 아닌 Codegen은 throw 경로를 제외하여 수정되었습니다.
 
 - `std::list` 및 `std::unordered_*` 패밀리는 더 많은 곳에서 내부적으로 디버그가 아닌 반복기를 사용합니다.
 
-- 목록 노드를 할당 취소한 후 다시 할당하는 대신 가능한 경우 목록 노드를 다시 사용하도록 여러 `std::list` 멤버가 변경되었습니다. 예를 들어, 이미 크기가 3인 `list<int>`의 경우 `assign(4, 1729)`을 호출하면 처음 3개 목록 노드의 int를 덮어쓰고 값이 1729인 새 목록 노드 하나가 할당됩니다.
+- 목록 노드를 할당 취소한 후 다시 할당하는 대신 가능한 경우 목록 노드를 다시 사용하도록 여러 `std::list` 멤버가 변경되었습니다. 예를 들어 이미 크기가 3인 `list<int>`의 경우 `assign(4, 1729)`를 호출하면 처음 세 개 목록 노드의 int를 덮어쓰고 값이 1729인 새 목록 노드 하나가 할당됩니다.
 
 - `erase(begin(), end())`에 대한 모든 표준 라이브러리 호출이 `clear()`로 변경되었습니다.
 
@@ -98,7 +98,7 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 버전 16.1
 
-IntelliCode는 광범위한 학습 및 코드 컨텍스트를 사용하는 선택적 확장으로 사용할 가능성이 가장 높은 항목을 완성 목록의 맨 위에 배치합니다. 목록을 아래로 스크롤할 필요가 없어질 수 있습니다. C++의 경우 IntelliCode는 표준 라이브러리와 같은 인기 라이브러리를 사용할 때 가장 도움이 됩니다. 설치 관리자에서 워크로드 구성 요소로 사용할 수 있습니다. 자세한 내용은 [IntelliCode를 통해 C++에 대한 AI 지원 코드 완성 추천](https://devblogs.microsoft.com/cppblog/cppintellicode/)을 참조하세요.
+IntelliCode는 광범위한 자체 학습 및 코드 컨텍스트를 사용하여 사용할 가능성이 가장 높은 항목을 완성 목록의 맨 위에 배치합니다. 목록을 아래로 스크롤할 필요가 없어질 수 있습니다. C++의 경우 IntelliCode는 표준 라이브러리와 같은 인기 라이브러리를 사용할 때 가장 도움이 됩니다. IntelliCode는 설치 프로그램에서 워크로드 구성 요소로 사용할 수 있는 선택적 확장입니다. 자세한 내용은 [IntelliCode를 통해 C++에 대한 AI 지원 코드 완성 추천](https://devblogs.microsoft.com/cppblog/cppintellicode/)을 참조하세요.
 
 ### <a name="template-intellisense"></a>템플릿 IntelliSense
 
@@ -106,7 +106,7 @@ IntelliCode는 광범위한 학습 및 코드 컨텍스트를 사용하는 선�
 
 ### <a name="new-start-window-experience"></a>새로운 시작 창 환경
 
-IDE를 시작할 때 최근에 사용한 프로젝트 열기, 소스 제어에서 코드 복제, 솔루션 또는 폴더로 로컬 코드 열기, 새 프로젝트 만들기 옵션을 사용하여 새로운 시작 창이 나타납니다. 새 프로젝트 대화 상자는 우선 검색, 필터링 가능 환경으로 철저히 점검되었습니다.
+IDE를 시작할 때 새로운 시작 창이 표시됩니다. 이 창에는 최근에 사용한 프로젝트 열기, 소스 제어에서 코드 복제, 솔루션 또는 폴더로 로컬 코드 열기, 새 프로젝트 만들기 옵션이 있습니다. 새 프로젝트 대화 상자는 우선 검색, 필터링 가능 환경으로 철저히 점검되었습니다.
 
 ### <a name="new-names-for-some-project-templates"></a>일부 프로젝트 템플릿에 대한 새 이름
 
@@ -132,7 +132,7 @@ Visual Studio 2019에는 코딩을 쉽고 직관적으로 만드는 데 도움�
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 버전 16.1
 
-이제 요약 정보 도구 설명은 편집기의 의미 체계 색 지정을 따릅니다. 가리킨 코드 구문에 대한 자세한 정보를 알아보기 위해 온라인 문서를 검색할 새 **온라인 검색** 링크도 포함됩니다. 빨간색 구부러진 곡선 코드의 경우 요약 정보에서 제공된 링크는 온라인으로 오류를 검색합니다. 이 방법을 사용하면 브라우저에 메시지를 다시 입력하지 않아도 됩니다. 자세한 내용은 [Quick Info Improvements in Visual Studio 2019: Colorization and Search Online](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)(Visual Studio 2019의 요약 정보 향상: 색 지정 및 온라인 검색)을 참조하세요.
+이제 요약 정보 도구 설명은 편집기의 의미 체계 색 지정을 따릅니다. 가리킨 코드 구문에 대한 자세한 정보를 알아보기 위해 온라인 문서를 검색할 새 **온라인 검색** 링크도 포함됩니다. 빨간색 구부러진 곡선 코드가 제공하는 링크는 온라인으로 오류를 검색합니다. 이 방법을 사용하면 브라우저에 메시지를 다시 입력하지 않아도 됩니다. 자세한 내용은 [Quick Info Improvements in Visual Studio 2019: Colorization and Search Online](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)(Visual Studio 2019의 요약 정보 향상: 색 지정 및 온라인 검색)을 참조하세요.
 
 ### <a name="intellicode-available-in-c-workload"></a>C++ 워크로드에서 사용 가능한 IntelliCode
 
@@ -158,7 +158,7 @@ Visual Studio 2019에는 코딩을 쉽고 직관적으로 만드는 데 도움�
 
 - 이제 CMake 프로젝트는 기본적으로 내 코드만 디버깅을 활성화합니다.
 
-- 이제 정적 분석 경고는 백그라운드에서 처리되어 CMake 프로젝트에 대한 편집기에 표시될 수 있습니다.
+- 이제 정적 분석 경고가 백그라운드에서 처리되어 CMake 프로젝트 편집기에 표시됩니다.
 
 - CMake 프로젝트에 대한 '시작' 및 '종료' 메시지를 명확하게 빌드 및 구성하고, Visual Studio의 빌드 진행 UI를 지원합니다. 또한 이제 출력 창에서 CMake 빌드 및 구성 메시지의 세부 수준을 사용자 지정하는 **도구 > 옵션**의 CMake 세부 정보 설정이 있습니다.
 
@@ -184,7 +184,7 @@ IncrediBuild는 **C++를 사용한 데스크톱 개발** 워크로드의 선택�
 
 ## <a name="debugging"></a>디버깅
 
-- Windows에서 실행되는 C++ 애플리케이션의 경우 PDB 파일은 이제 별도의 64비트 프로세스로 로드됩니다. 이 변경 내용은 많은 수의 모듈과 PDB 파일이 포함된 애플리케이션을 디버그할 때 메모리가 부족한 디버거 실행으로 인해 발생하는 다양한 충돌을 해결합니다.
+- Windows에서 실행되는 C++ 애플리케이션의 경우 PDB 파일은 이제 별도의 64비트 프로세스로 로드됩니다. 이 변경으로 디버거 메모리 부족으로 인한 크래시 범위가 해결됩니다. 예를 들어 많은 수의 모듈과 PDB 파일을 포함하는 애플리케이션을 디버그하는 경우가 그렇습니다.
 
 - 검색은 **조사식**, **자동** 및 **지역** 창에서 사용할 수 있습니다.
 
@@ -203,7 +203,7 @@ IncrediBuild는 **C++를 사용한 데스크톱 개발** 워크로드의 선택�
 
   이러한 기술에 대한 샘플 코드는 Microsoft Docs 및 VCSamples GitHub 리포지토리에 보관됩니다.
 
-- Windows 8.1 SDK는 Visual Studio 설치 관리자에서 더 이상 사용할 수 없습니다. C++ 프로젝트를 최신 Windows 10 SDK로 업그레이드하는 것이 좋습니다. 8\.1에 대한 종속성이 높은 경우 Windows SDK 아카이브에서 다운로드할 수 있습니다.
+- Windows 8.1 SDK(소프트웨어 개발 키트)는 Visual Studio 설치 관리자에서 더 이상 사용할 수 없습니다. C++ 프로젝트를 최신 Windows 10 SDK로 업그레이드하는 것이 좋습니다. 8\.1에 대한 종속성이 높은 경우 Windows SDK 아카이브에서 다운로드할 수 있습니다.
 
 - Windows XP 대상은 최신 C++ 도구 세트에서 더 이상 사용할 수 없습니다. VS 2017 수준 MSVC 컴파일러 및 라이브러리가 있는 XP 대상은 여전히 지원되며 "개별 구성 요소"를 통해 설치할 수 있습니다.
 
@@ -239,17 +239,17 @@ Clang/C2 실험적 구성 요소가 제거되었습니다. C++ 표준을 완전�
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017에는 C++ 환경에 대한 많은 업데이트와 수정이 포함되었습니다. 대부분 **피드백 보내기** 아래의 [문제 보고 및 제안하기](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) 옵션을 통해 고객이 제출한 250개 이상의 버그와 보고된 문제를 해결했습니다. 버그를 알려 주셔서 감사합니다. 모든 Visual Studio의 새로운 기능에 대한 자세한 내용은 [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)을 참조하세요. Visual Studio 2019의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)을 참조하세요. Visual Studio 2015 및 이전 버전의 새로운 C++ 기능에 대한 자세한 내용은 [Visual C++ 2003~2015의 새로운 기능](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)을 참조하세요.
+Visual Studio 2017에는 C++ 환경에 대한 많은 업데이트와 수정이 포함되었습니다. 컴파일러 및 도구에서 250개 이상의 버그와 문제가 해결되었습니다. 대부분은 고객이 **피드백 보내기** 아래의 [문제 보고 및 제안하기](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) 옵션을 통해 제출한 것입니다. 버그를 알려 주셔서 감사합니다. 모든 Visual Studio의 새로운 기능에 대한 자세한 내용은 [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)을 참조하세요. Visual Studio 2019의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)을 참조하세요. Visual Studio 2015 및 이전 버전의 새로운 C++ 기능에 대한 자세한 내용은 [Visual C++ 2003~2015의 새로운 기능](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)을 참조하세요.
 
-## <a name="c-compiler"></a>C++ 컴파일러
+## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 C++ 컴파일러
 
 ### <a name="c-conformance-improvements"></a>C++ 규칙 향상
 
-이 릴리스에서는 C++ 컴파일러 및 표준 라이브러리를 C++11 및 C++14 기능에 대한 강화된 지원 기능과, C++17 표준에서 선보일 것으로 예상되는 특정 기능에 대한 임시 지원 기능으로 업데이트했습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
+이 릴리스에서는 C++ 컴파일러 및 표준 라이브러리가 C++11 및 C++14 기능에 대한 지원 향상으로 업데이트되었습니다. 또한 C++17 표준에 포함될 것으로 예상되는 특정 기능에 대한 예비 지원 기능도 포함하고 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이러한 기능은 **/std:c++17** 옵션 아래에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
+컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이러한 기능은 **`/std:c++17`** 옵션 아래에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
@@ -257,34 +257,34 @@ Visual Studio 버전 15.7의 MSVC 컴파일러 도구 집합은 이제 C++ 표�
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 버전 15.8
 
-[/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 컴파일러 스위치를 사용하면 궁극적으로 적용 가능한 모든 C 및 C++ 표준을 준수하는 새로운 실험적 MSVC 전처리기를 사용할 수 있습니다. 자세한 내용은 [MSVC 실험적 전처리기 개요](../preprocessor/preprocessor-experimental-overview.md)를 참조하세요.
+[`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) 컴파일러 스위치를 사용하면 궁극적으로 적용 가능한 모든 C 및 C++ 표준을 준수하는 새로운 실험적 MSVC 전처리기를 사용할 수 있습니다. 자세한 내용은 [MSVC 실험적 전처리기 개요](../preprocessor/preprocessor-experimental-overview.md)를 참조하세요.
 
 ### <a name="new-compiler-options"></a>새로운 컴파일러 옵션
 
-- [/permissive-](../build/reference/permissive-standards-conformance.md): 모든 엄격한 표준 준수 컴파일러 옵션을 사용하고 대부분의 Microsoft 전용 컴파일러 확장(예: `__declspec(dllimport)` 제외)을 사용하지 않도록 설정합니다. 이 옵션은 Visual Studio 2017 버전 15.5에서 기본적으로 켜져 있습니다.  **/permissive-** conformance 모드에는 2단계 이름 조회에 대한 지원이 포함됩니다. 자세한 내용은 [Visual Studio의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
+- [`/permissive-`](../build/reference/permissive-standards-conformance.md): 모든 엄격한 표준 준수 컴파일러 옵션을 사용하고 대부분의 Microsoft 전용 컴파일러 확장(예: `__declspec(dllimport)` 제외)을 사용하지 않도록 설정합니다. 이 옵션은 Visual Studio 2017 버전 15.5에서 기본적으로 켜져 있습니다.  **`/permissive-`** conformance 모드에는 2단계 이름 조회에 대한 지원이 포함됩니다. 자세한 내용은 [Visual Studio의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
 
-- [/diagnostics](../build/reference/diagnostics-compiler-diagnostic-options.md): 줄 번호, 줄 번호 및 열 또는 줄 번호 및 열과 진단 오류 또는 경고가 발견된 코드 줄 아래의 캐럿을 표시할 수 있습니다.
+- [`/diagnostics`](../build/reference/diagnostics-compiler-diagnostic-options.md): 줄 번호만, 줄 번호 및 열 또는 잘못된 코드 줄 아래 캐럿을 포함한 줄 번호와 열과 같이 세 가지 방법으로 진단 오류나 경고를 표시할 수 있습니다.
 
-- [/debug:fastlink](../build/reference/debug-generate-debug-info.md): 일부 디버그 정보를 PDB 파일에 복사하지 않음으로써 최대 30%까지 빠른 증분 연결 시간(Visual Studio 2015 대비)을 사용합니다. 대신, PDB 파일은 실행 파일을 만드는 데 사용된 개체 및 라이브러리 파일에 대한 디버그 정보를 가리킵니다. [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/)(/Debug:fastlink를 사용하는 VS "15"의 더 빠른 C++ 빌드 주기) 및 [Recommendations to speed C++ builds in Visual Studio](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/)(Visual Studio에서 C++ 빌드 속도를 향상하기 위한 권장 사항)를 참조하세요.
+- [`/debug:fastlink`](../build/reference/debug-generate-debug-info.md): 일부 디버그 정보를 PDB 파일에 복사하지 않음으로써 최대 30%까지 빠른 증분 연결 시간(Visual Studio 2015 대비)을 사용합니다. 대신, PDB 파일은 실행 파일을 만드는 데 사용된 개체 및 라이브러리 파일에 대한 디버그 정보를 가리킵니다. [`/Debug:fastlink`를 사용하는 VS "15"의 더 빠른 C++ 빌드 주기](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/) 및 [Visual Studio에서 C++ 빌드 속도 향상을 위한 권장 사항](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/)을 참조하세요.
 
-- Visual Studio 2017에서는 [/sdl](../build/reference/sdl-enable-additional-security-checks.md)과 함께 [/await](../build/reference/await-enable-coroutine-support.md)를 사용할 수 있습니다. 코루틴에서 [/RTC](../build/reference/rtc-run-time-error-checks.md) 제한이 제거되었습니다.
+- Visual Studio 2017에서는 [`/await`](../build/reference/await-enable-coroutine-support.md)와 함께 [`/sdl`](../build/reference/sdl-enable-additional-security-checks.md)을 사용할 수 있습니다. 코루틴에서 [`/RTC`](../build/reference/rtc-run-time-error-checks.md) 제한이 제거되었습니다.
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 버전
 
-- [/std:c++14 및 /std:c++latest](../build/reference/std-specify-language-standard-version.md): 이러한 컴파일러 옵션을 사용하면 프로젝트에서 특정 버전의 ISO C++ 프로그래밍 언어를 옵트인할 수 있습니다. **/std:c++latest** 옵션은 대부분의 새 초안 표준 기능을 보호합니다.
+- [`/std:c++14` 및 `/std:c++latest`](../build/reference/std-specify-language-standard-version.md): 이러한 컴파일러 옵션을 사용하면 프로젝트에서 특정 버전의 ISO C++ 프로그래밍 언어를 옵트인할 수 있습니다. **`/std:c++latest`** 옵션은 대부분의 새 초안 표준 기능을 보호합니다.
 
-- [/std:c++17](../build/reference/std-specify-language-standard-version.md)을 사용하면 컴파일러에서 구현된 일련의 C++17 기능을 사용할 수 있습니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다. 이러한 기능을 사용하려면 **/std:c++latest**를 사용하세요.
+- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)을 사용하면 컴파일러에서 구현된 일련의 C++17 기능을 사용할 수 있습니다. 이 옵션은 C++17 이후의 기능, 즉 작업 초안의 이후 버전과 C++ 표준의 결함 업데이트에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용 중지합니다. 이러한 기능을 사용하려면 **`/std:c++latest`** 를 사용하세요.
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, 보안, 진단 및 버전 관리
 
 이 릴리스에서는 최적화, 코드 생성, 도구 집합 버전 관리 및 진단의 몇 가지 기능이 향상되었습니다. 특히 주목할 만한 기능 향상은 다음과 같습니다.
 
 - 루프의 향상된 코드 생성: 상수 정수 나누기의 자동 벡터화를 지원하며, memset 패턴 식별 기능이 향상되었습니다.
-- 코드 보안 개선: 버퍼 오버런 컴파일러 진단의 내보내기가 개선되었으며, 이제는 [/guard:cf](../build/reference/guard-enable-control-flow-guard.md)가 점프 테이블을 생성하는 스위치 문을 보호합니다.
+- 코드 보안 개선: 버퍼 오버런 컴파일러 진단의 내보내기가 개선되었으며, 이제는 [`/guard:cf`](../build/reference/guard-enable-control-flow-guard.md)가 점프 테이블을 생성하는 스위치 문을 보호합니다.
 - 버전 관리: 기본 제공 전처리기 매크로 **\_MSC\_VER**의 값이 이제 Visual C++ 도구 세트 업데이트 시마다 일정하게 업데이트됩니다. 자세한 내용은 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)(Visual C++ 컴파일러 버전)을 참조하세요.
 - 새 도구 세트 레이아웃: 개발 머신에서 컴파일러 및 관련된 빌드 도구의 위치 및 디렉터리 구조가 변경되었습니다. 새 레이아웃을 사용하면 여러 버전의 컴파일러를 병렬 설치할 수 있습니다. 자세한 내용은 [Compiler Tools Layout in Visual Studio 2017](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/)(Visual Studio 2017의 컴파일러 도구 레이아웃)을 참조하세요.
 - 향상된 진단: 이제 출력 창에 오류가 발생하는 열이 표시됩니다. 자세한 내용은 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/)(VS "15" Preview 5의 C++ 컴파일러 진단 향상)를 참조하세요.
-- 코루틴을 사용하는 경우 실험적인 **yield**( **/await** 옵션 아래에서 사용 가능) 키워드가 제거되었습니다. 대신 `co_yield`를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 [`yield` keyword to become `co_yield` in VS 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)(VS 2017에서 `yield` 키워드가 `co_yield`로 변경됨)을 참조하세요.
+- 코루틴을 사용하는 경우 실험적인 **yield**( **`/await`** 옵션 아래에서 사용 가능) 키워드가 제거되었습니다. 대신 `co_yield`를 사용하도록 코드를 업데이트해야 합니다. 자세한 내용은 [`yield` keyword to become `co_yield` in VS 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)(VS 2017에서 `yield` 키워드가 `co_yield`로 변경됨)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 버전
 
@@ -292,9 +292,9 @@ Visual Studio 버전 15.7의 MSVC 컴파일러 도구 집합은 이제 C++ 표�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-생성된 코드의 품질 향상으로 인해 Visual C++ 런타임 성능은 계속 개선되고 있습니다. 이제 코드를 다시 컴파일하기만 하면 앱이 더 빠르게 실행됩니다. 컴파일러 최적화 기능 중에는 조건부 스칼라 저장소의 벡터화, 호출 `sin(x)` 및 `cos(x)`를 새로운 `sincos(x)`로 결합, SSA 최적화 프로그램을 통한 중복 명령 제거와 같이 완전히 새로운 기능이 있습니다. 다른 컴파일러 최적화 기능으로는 조건식의 벡터화 도우미 추론, 더 나은 루프 최적화 및 부동 최소/최대 codegen과 같은 기존 기능에 대한 개선 사항이 있습니다. 링커에는 링크 시간 속도를 최대 9% 개선할 수 있는 새롭고 더욱 빠른 **/OPT:ICF** 구현이 있고, 증분 링크에는 다른 성능 개선 사항이 있습니다. 자세한 내용은 [/OPT(최적화)](../build/reference/opt-optimizations.md) 및 [/INCREMENTAL(증분 링크)](../build/reference/incremental-link-incrementally.md)을 참조하세요.
+생성된 코드의 품질 향상을 통해 Visual C++ 런타임 성능은 계속 개선되고 있습니다. 이제 코드를 다시 컴파일하기만 하면 앱이 더 빠르게 실행됩니다. 컴파일러 최적화 기능 중에는 조건부 스칼라 저장소의 벡터화, 호출 `sin(x)` 및 `cos(x)`를 새로운 `sincos(x)`로 결합, SSA 최적화 프로그램을 통한 중복 명령 제거와 같이 완전히 새로운 기능이 있습니다. 다른 컴파일러 최적화 기능으로는 조건식의 벡터화 도우미 추론, 더 나은 루프 최적화 및 부동 최소/최대 codegen과 같은 기존 기능에 대한 개선 사항이 있습니다. 링커에는 링크 시간 속도를 최대 9% 개선할 수 있는 새롭고 더욱 빠른 **`/OPT:ICF`** 구현이 있고, 증분 링크에는 다른 성능 개선 사항이 있습니다. 자세한 내용은 [/OPT(최적화)](../build/reference/opt-optimizations.md) 및 [/INCREMENTAL(증분 링크)](../build/reference/incremental-link-incrementally.md)을 참조하세요.
 
-Microsoft C++ 컴파일러는 AVX-512의 새로운 기능을 128비트 및 256비트 차원의 레지스터로 가져오는 벡터 길이 명령을 포함하여 Intel의 AVX-512를 지원합니다.
+Microsoft C++ 컴파일러는 Intel의 AVX-512를 지원합니다. AVX-512의 새로운 기능을 128비트 및 256비트 너비의 레지스터에 가져오는 벡터 길이 명령이 포함되어 있습니다.
 
 전체적으로 C++17 모드를 사용 중일 때 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 옵션을 사용하여 `noexcept`의 C++14 버전으로 되돌릴 수 있습니다. 이 옵션을 사용하면 모든 `throw()` 코드를 동시에 다시 작성하지 않고도 C++17을 준수하도록 소스 코드를 업데이트할 수 있습니다. 자세한 내용은 [동적 예외 사양 제거 및 noexcept](cpp-conformance-improvements.md#noexcept_removal)를 참조하세요.
 
@@ -302,7 +302,7 @@ Microsoft C++ 컴파일러는 AVX-512의 새로운 기능을 128비트 및 256�
 
 - 새로운 컴파일러 스위치 [/Qspectre](../build/reference/qspectre.md)는 예측 실행 부채널 공격을 완화하는 데 도움이 됩니다. 자세한 내용은 [Spectre mitigations in MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc/)(MSVC의 스펙터 완화)를 참조하세요.
 - 스펙터 완화를 위해 새로운 진단 경고 자세한 내용은 [Spectre diagnostic in Visual Studio 2017 Version 15.7 Preview 4](https://devblogs.microsoft.com/cppblog/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/)(Visual Studio 2017 버전 15.7 미리 보기 4의 스펙터 진단)를 참조하세요.
-- /Zc, **/Zc:__cplusplus**의 새 값을 사용하면 C++ 표준 지원에 대한 올바른 보고가 가능합니다. 예를 들어, 스위치가 설정되고 컴파일러가 /std:c++17 모드인 경우 값은 **201703L**로 확장됩니다. 자세한 내용은 [MSVC now correctly reports __cplusplus](https://devblogs.microsoft.com/cppblog/msvc-now-correctly-reports-__cplusplus/)(MSVC가 이제 __cplusplus를 올바르게 보고)를 참조하세요.
+- /Zc, **`/Zc:__cplusplus`** 의 새 값을 사용하면 C++ 표준 지원에 대한 올바른 보고가 가능합니다. 예를 들어 스위치가 설정되고 컴파일러가 **`/std:c++17`** 모드인 경우 값은 **`201703L`** 로 확장됩니다. 자세한 내용은 [MSVC now correctly reports __cplusplus](https://devblogs.microsoft.com/cppblog/msvc-now-correctly-reports-__cplusplus/)(MSVC가 이제 __cplusplus를 올바르게 보고)를 참조하세요.
 
 ## <a name="c-standard-library"></a>C++ 표준 라이브러리
 
@@ -310,7 +310,7 @@ Microsoft C++ 컴파일러는 AVX-512의 새로운 기능을 128비트 및 256�
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM(버전 15.0)
 
-- 사소한 `basic_string``_ITERATOR_DEBUG_LEVEL != 0` 진단 기능 개선. 문자열 조직에서 IDL 검사를 트립할 경우 그 트립이 일어나게 된 특정 동작이 보고됩니다. 예를 들어 "문자열 반복기를 역참조할 수 없음" 대신에 "범위(예: 끝 반복기) 밖에 있기 때문에 문자열 반복기를 역참조할 수 없음”이라는 메시지가 나타납니다.
+- 사소한 `basic_string``_ITERATOR_DEBUG_LEVEL != 0` 진단 기능 개선. 문자열 동작에서 IDL 검사가 발생하는 경우 이를 유발한 특정 동작을 보고합니다. 예를 들어 "문자열 반복기를 역참조할 수 없음" 대신에 "범위(예: 끝 반복기) 밖에 있기 때문에 문자열 반복기를 역참조할 수 없음”이라는 메시지가 나타납니다.
 - 이전에 코드가 영원히 잠기는 문제가 발생하던 `std::promise` 이동 할당 연산자가 해결되었습니다.
 - `atomic<T*>`를 `T*`로 암시적으로 변환할 때 발생하는 컴파일러 오류를 해결했습니다.
 - `pointer_traits<Ptr>`가 이제 `Ptr::rebind<U>`를 올바르게 검색합니다.
@@ -319,16 +319,16 @@ Microsoft C++ 컴파일러는 AVX-512의 새로운 기능을 128비트 및 256�
 - `atomic<T>`가 이제 오버로드된 `operator&()`를 허용합니다.
 - 잘못된 `bind()` 호출에 대한 컴파일러 진단이 약간 개선되었습니다.
 
-Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 목록은 C++ 팀 블로그 항목 [Standard Library Fixes In VS 2017 RTM](https://devblogs.microsoft.com/cppblog/stl-fixes-in-vs-2017-rtm/)(VS 2017 RTM의 표준 라이브러리 수정)을 참조하세요.
+Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되었습니다. 전체 목록은 C++ 팀 블로그 항목 [VS 2017 RTM의 표준 라이브러리 수정](https://devblogs.microsoft.com/cppblog/stl-fixes-in-vs-2017-rtm/)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 버전
 
 - 표준 라이브러리 컨테이너는 이제 `max_size()`를 `size_type`의 `max()`가 아닌 `numeric_limits<difference_type>::max()`로 제한합니다. 이 변경으로 인해 해당 컨테이너의 반복기에 대한 `distance()`의 결과를 `distance()`의 반환 형식으로 나타낼 수 있습니다.
 - 누락된 `auto_ptr<void>` 전문화가 수정되었습니다.
-- 이전에는 length 인수가 정수 형식이 아닌 경우 `for_each_n()`, `generate_n()` 및 `search_n()` 알고리즘을 컴파일하지 못했습니다. 이제는 정수 형식이 아닌 길이를 반복기의 `difference_type`으로 변환하려고 시도합니다.
+- 이전에는 길이 인수가 정수 형식이 아닌 경우 `for_each_n()`, `generate_n()`, `search_n()` 알고리즘이 컴파일하지 못했습니다. 이제는 정수가 아닌 길이를 반복기의 `difference_type`으로 변환을 시도합니다.
 - `normal_distribution<float>`는 double에서 float로 좁히는 방법에 대한 경고를 표준 라이브러리 내부에서 더 이상 내보내지 않습니다.
 - 최대 크기 오버플로를 확인할 때 `max_size()` 대신 `npos`를 사용한 일부 `basic_string` 연산이 수정되었습니다.
-- `condition_variable::wait_for(lock, relative_time, predicate)`는 의사 대기 모드 해제의 경우 전체 상대 시간 동안 대기합니다. 이제는 상대 시간의 단일 간격 동안만 대기합니다.
+- `condition_variable::wait_for(lock, relative_time, predicate)`는 잘못된 대기 모드 해제가 있는 경우 전체 상대 시간 동안 대기했습니다. 이제는 상대 시간의 단일 간격 동안만 대기합니다.
 - `future::get()`은 표준에 필요한 만큼 `future`를 무효화합니다.
 - `iterator_traits<void *>`는 `void&`를 형성하려고 시도했기 때문에 하드 오류였습니다. 이제는 "is iterator" SFINAE 조건에서 `iterator_traits`를 사용할 수 있도록 완전하게 빈 구조체가 됩니다.
 - Clang **-Wsystem-headers**에서 보고된 일부 경고가 수정되었습니다.
@@ -340,21 +340,21 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 - 이제 표준 라이브러리에서 옵트아웃 이스케이프 해치와 일치하는 `value_type` 할당자(C++17 모드)를 적용합니다.
 - `basic_string`에 대한 self-range-insert에서 문자열의 내용이 뒤섞이는 일부 조건이 수정되었습니다. (참고: 벡터에 대한 self-range-insert는 여전히 표준 라이브러리에서 금지됩니다.)
 - `basic_string::shrink_to_fit()`는 더 이상 할당자 `propagate_on_container_swap`의 영향을 받지 않습니다.
-- 이제 `std::decay`에서 정규화된 cv 함수 형식, 정규화된 ref 함수 형식 등의 끔찍한 함수 형식을 처리합니다.
+- 이제 `std::decay`에서 abominable 함수 형식, 즉 정규화된 cv 함수 형식이나 정규화된 ref 함수 형식 또는 두 형식 모두를 처리합니다.
 - include 지시문에서 적절한 대/소문자 구분과 슬래시를 사용하도록 변경하여 이식성이 향상되었습니다.
-- 경고 C4061 "열거형 '*enumeration*'의 switch에 있는 '*enumerator*' 열거자는 case 레이블에 의해 명시적으로 처리되지 않습니다."가 수정되었습니다. 이 경고는 기본적으로 꺼져 있으며, 표준 라이브러리 일반 경고 정책의 예외로 수정되었습니다. 표준 라이브러리는 **/W4** 경고 수준을 유지하되, **/Wall** 경고 수준까지는 시도하지 않습니다. 기본적으로 꺼져 있는 대부분의 경고는 매우 번거로우며, 일반적으로 사용하기 위한 것이 아닙니다.
+- 경고 C4061 "열거형 '*enumeration*'의 switch에 있는 '*enumerator*' 열거자는 case 레이블에 의해 명시적으로 처리되지 않습니다."가 수정되었습니다. 이 경고는 기본적으로 꺼져 있으며, 표준 라이브러리 일반 경고 정책의 예외로 수정되었습니다. (표준 라이브러리는 **`/W4`** 경고 수준을 유지하되, **`/Wall`** 경고 수준까지는 시도하지 않습니다. 기본적으로 꺼져 있는 대부분의 경고는 특별히 번거로우며, 정기적으로 사용하기 위한 것이 아닙니다.)
 - `std::list` 디버그 검사가 향상되었습니다. 이제는 목록 반복기에서 `operator->()`를 검사하고, `list::unique()`에서는 반복기를 무효화된(invalidated) 것으로 표시합니다.
 - `tuple`의 use-allocator 메타 프로그래밍이 수정되었습니다.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-- `std::partition`은 이제 표준의 요구 사항에 따라 조건자를 N + 1회 대신 N회 호출합니다.
+- `std::partition`은 이제 표준의 요구 사항에 따라 조건자를 `N + 1`회 대신 `N`회 호출합니다.
 - 버전 15.3에서 매직 정적 이름을 방지하려는 시도가 버전 15.5에서 복구되었습니다.
 - `std::atomic<T>`는 더 이상 `T`를 구성 가능한 기본값으로 요구하지 않습니다.
-- 로그 시간을 사용하는 힙 알고리즘은 반복기 디버깅이 활성화되었을 때 사실상 입력이 힙인 선형 시간 어설션을 더 이상 수행하지 않습니다.
+- 반복기 디버깅을 사용하는 경우 로그 시간을 사용하는 힙 알고리즘이 다르게 동작합니다. 입력이 실제로 힙인 선형 시간 어설션을 더 이상 수행하지 않습니다.
 - 이제 `__declspec(allocator)`는 이러한 declspec를 인식하지 않는 Clang의 경고를 방지하기 위해 C1XX에서만 보호됩니다.
 - `basic_string::npos`는 이제 컴파일 시간 상수로 사용할 수 있습니다.
-- C++17 모드에서 `std::allocator`는 이제 alignment가 `max_align_t`보다 큰 over-aligned types - types 할당을 올바르게 처리합니다( **/Zc:alignedNew-** 로 비활성화되지 않은 경우에 한함).  예를 들어 16바이트 또는 32바이트 맞춤이 있는 개체의 벡터가 이제 SSE 및 AVX 명령에 맞게 올바르게 맞춰집니다.
+- **`/Zc:alignedNew-`** 로 비활성화되지 않은 경우 C++17 모드의 `std::allocator`는 이제 과다 정렬된 형식(즉, 정렬이 `max_align_t`보다 큰 형식)의 할당을 올바르게 처리합니다.  예를 들어 16바이트 또는 32바이트 맞춤이 있는 개체의 벡터가 이제 SSE 및 AVX 명령에 맞게 올바르게 맞춰집니다.
 
 ### <a name="conformance-improvements"></a>규칙 향상
 
@@ -368,8 +368,8 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 
 - 몇 가지 C++17 추가 기능이 구현되었습니다. 자세한 내용은 [Microsoft C++ 언어 규칙 테이블](cpp-conformance-improvements.md#improvements_153)을 참조하세요.
 - 구현된 P0602R0 "variant 및 optional에서 복사/이동 사소성(triviality)을 전파해야 합니다".
-- 이제 표준 라이브러리에서 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 옵션을 통해 동적 RTTI를 해제할 수 있도록 공식적으로 허용합니다. `dynamic_pointer_cast()` 및 `rethrow_if_nested()`는 둘 다 기본적으로 `dynamic_cast`가 필요하므로 표준 라이브러리에서 이제 **/GR-** 아래에 `=delete`로 표시됩니다.
-- 동적 RTTI가 **/GR-** 을 통해 해제된 경우에도 `typeid(SomeType)` 양식의 “정적 RTTI”는 계속 사용할 수 있으며, 몇 가지 표준 라이브러리 구성 요소를 지원합니다. 이제 표준 라이브러리에서 **/D\_HAS\_STATIC\_RTTI=0**을 통해 이 기능도 해제할 수 있도록 지원합니다. 이 플래그는 `std::function`의 `std::any`, `target()` 및 `target_type()` 멤버 함수와 `std::shared_ptr` 및 `std::weak_ptr`의 `get_deleter()` friend 멤버 함수도 사용하지 않도록 설정합니다.
+- 이제 표준 라이브러리에서 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 옵션을 통해 동적 RTTI를 해제할 수 있도록 공식적으로 허용합니다. `dynamic_pointer_cast()` 및 `rethrow_if_nested()`는 둘 다 기본적으로 `dynamic_cast`가 필요하므로 표준 라이브러리에서 이제 **`/GR-`** 아래에 `=delete`로 표시됩니다.
+- 동적 RTTI가 **`/GR-`** 을 통해 사용 중지된 경우에도 `typeid(SomeType)` 양식의 "정적 RTTI"는 계속 사용할 수 있으며, 몇 가지 표준 라이브러리 구성 요소를 지원합니다. 이제 표준 라이브러리에서 **`/D_HAS_STATIC_RTTI=0`** 을 통해 이 기능도 사용 중지할 수 있도록 지원합니다. 이 플래그는 `std::function`의 `std::any`, `target()` 및 `target_type()` 멤버 함수와 `std::shared_ptr` 및 `std::weak_ptr`의 `get_deleter()` friend 멤버 함수도 사용하지 않도록 설정합니다.
 - 이제 표준 라이브러리에서 조건부로 정의된 매크로 대신 C++14 `constexpr`을 무조건 사용합니다.
 - 이제 표준 라이브러리에서 별칭 템플릿을 내부적으로 사용합니다.
 - 이제 표준 라이브러리에서 `nullptr_t{}` 대신 `nullptr`을 내부적으로 사용합니다. (NULL의 내부 사용은 완전히 금지되었습니다. 0-as-null의 내부 사용은 점차적으로 정리되고 있습니다.)
@@ -377,7 +377,7 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 - `static_assert(false, "message")`을(를) `#error message`(으)로 변경했습니다. 이 변경으로 인해 `#error`에서 컴파일을 즉시 중지하기 때문에 컴파일러 진단이 향상됩니다.
 - 표준 라이브러리에서 더 이상 함수를 `__declspec(dllimport)`로 표시하지 않습니다. 최신 링커 기술에서는 이 선언자가 더 이상 필요하지 않습니다.
 - SFINAE가 기본 템플릿 인수로 추출되어 반환 형식 및 함수 인수 형식에 비해 간단하게 표시됩니다.
-- 이제 \<random\>의 디버그 검사에서 `fputs()`를 **stderr**로 호출한 내부 함수 `_Rng_abort()` 대신 표준 라이브러리의 일반 동작을 사용합니다. 이 함수의 구현은 이진 호환성을 위해 유지되지만, 이진 방식으로 호환되지 않는 다음 버전의 표준 라이브러리에서는 제거되었습니다.
+- 이제 \<random\>의 디버그 검사에서 `fputs()`를 **stderr**로 호출한 내부 함수 `_Rng_abort()` 대신 표준 라이브러리의 일반 동작을 사용합니다. 이 함수의 구현은 이진 호환성을 위해 유지되었습니다. 이것은 표준 라이브러리의 다음 이진 비호환 버전에서 제거됩니다.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
@@ -392,7 +392,7 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
   - `replace`
   - `replace_if`
   - `sort`
-- 다음과 같은 병렬 알고리즘에 대한 서명이 추가되었지만 현재는 병렬화되어 있지 않으므로 요소를 이동하거나 변경하기만 하는 병렬화 알고리즘에서는 아무 유익이 없는 것으로 나타났습니다.
+- 다음 병렬 알고리즘의 시그니처가 추가되지만 지금은 병렬화되지 않습니다. 프로파일링에 따르면 요소만 이동하거나 치환하는 알고리즘을 병렬화하는 데 따르는 이점이 없습니다.
   - `copy`
   - `copy_n`
   - `fill`
@@ -431,7 +431,7 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 - `basic_string::find(char)` 오버로드가 `traits::find`를 한 번만 호출하도록 수정되었습니다. 이전에는 길이가 1인 문자열의 일반 문자열 검색으로 구현되었습니다.
 - 이제 `basic_string::operator==`에서 문자열 내용을 비교하기 전에 문자열 크기를 확인합니다.
 - `basic_string`에서 컴파일러 최적화 프로그램을 통해 분석하기 어려운 컨트롤 결합이 제거되었습니다. 짧은 문자열에 대해 `reserve`를 호출하는 경우 아무 효과도 없이 여전히 비용이 듭니다.
-- `std::vector`의 정확성과 성능이 철저히 점검되었습니다. 이제 삽입/대입 작업 중에 앨리어싱이 표준에 따라 올바르게 처리되고, 표준에서 요구되는 경우 강력한 예외 보장이 `move_if_noexcept()` 및 기타 논리를 통해 제공되며, 삽입/대입에서 더 적은 요소 작업을 수행합니다.
+- `std::vector`의 정확성과 성능이 철저히 점검되었습니다. 이제 삽입/대입 작업 중에 앨리어싱이 표준에 따라 올바르게 처리되고, 표준에서 요구되는 경우 강력한 예외 보장이 `move_if_noexcept()` 및 기타 논리를 통해 제공되며, 삽입/대입에서 더 적은 요소 작업을 합니다.
 - 이제 C++ 표준 라이브러리에서 가상의 null 포인터를 역참조하지 못하도록 방지합니다.
 - `weak_ptr::lock()` 성능이 향상되었습니다.
 - 컴파일러 처리량을 늘리기 위해 이제 C++ 표준 라이브러리 헤더에서 불필요한 컴파일러 내장 함수의 선언이 포함되지 않도록 방지합니다.
@@ -444,16 +444,16 @@ Visual Studio 2017 RTM에서 향상된 표준 라이브러리 기능의 전체 �
 - 재귀 대신 팩 확장을 사용하도록 `std::try_lock()`이 변경되었습니다.
 - 모든 잠금의 `std::lock()`에서 회전하는 대신 `lock()` 연산을 사용하도록 `try_lock()` 교착 상태 방지 알고리즘이 향상되었습니다.
 - `system_category::message()`에서 명명된 반환 값 최적화가 활성화되었습니다.
-- `conjunction` 및 `disjunction`은 이제 2N + 2 형식 대신 N + 1 형식을 인스턴스화합니다.
+- `conjunction` 및 `disjunction`은 이제 `2N + 2` 형식 대신 `N + 1` 형식을 인스턴스화합니다.
 - `std::function`에서는 `std::function`으로 많은 고유 람다를 전달하는 프로그램에서 처리량을 향상시키고 obj 크기를 줄임으로써 더 이상 각 type-erased 호출 가능 코드에 대한 할당자 지원 기계를 인스턴스화하지 않습니다.
 - `allocator_traits<std::allocator>`에는 `std::allocator`부터 `allocator_traits`까지만 상호 작용하는 코드에서(즉, 대부분의 코드에서) 코드 크기를 줄이는, 수동으로 인라인된 `std::allocator` 연산이 포함됩니다.
 - 이제 표준 라이브러리에서 내부 클래스 `_Wrap_alloc`에 할당자를 래핑하는 대신 `allocator_traits`를 직접 호출하여 C++11 최소 할당자 인터페이스를 처리합니다. 이 변경으로 인해 할당자 지원을 위해 생성되는 코드의 크기가 줄어들고, 경우에 따라 표준 라이브러리 컨테이너에 대해 추론할 수 있는 최적화 프로그램의 기능이 향상되며, 더 효율적인 디버깅 환경이 제공됩니다(이제 디버거에서 `_Wrap_alloc<your_allocator_type>` 대신 할당자 유형이 표시됨).
-- 할당자를 실제로 사용자 지정할 수 없는 사용자 지정 `allocator::reference`에 대한 메타 프로그래밍이 제거되었습니다. (할당자는 컨테이너에서 고급 참조가 아니라 고급 포인터를 사용하도록 만들 수 있습니다.)
+- 할당자를 사용자 지정할 수 없는 사용자 지정 `allocator::reference`에 대한 메타 프로그래밍이 제거되었습니다. (할당자는 컨테이너에서 고급 참조가 아니라 고급 포인터를 사용하도록 만들 수 있습니다.)
 - 컴파일러 프런트 엔드에 범위 기반 for 루프의 디버그 반복기를 래핑 해제하도록 지시하여 디버그 빌드의 성능이 향상되었습니다.
 - `shrink_to_fit()` 및 `reserve()`에 대한 `basic_string`의 내부 축소 경로는 더 이상 재할당 작업의 경로에 있지 않으므로 모든 변경 멤버에 대한 코드 크기가 줄어듭니다.
 - `basic_string` 내부 증가 경로가 더 이상 `shrink_to_fit()` 경로에 없습니다.
 - `basic_string`의 변경 작업은 이제 할당되지 않은 빠른 경로와 할당된 느린 경로 함수에 팩터링되어 기능이 할당되므로 일반적인 재할당되지 않은 case가 호출자에 인라인될 가능성이 높아집니다.
-- `basic_string`의 변형 작업은 이제 크기를 조정하는 대신 원하는 상태로 재할당된 버퍼를 구성합니다. 예를 들어 문자열의 시작에 삽입하면 이제는 재할당될 case에 두 번(새로 할당된 버퍼로, 그 다음에 아래로) 삽입하는 것이 아니라 정확히 한 번만(아래로 또는 새로 할당된 버퍼로) 삽입한 후의 내용을 이동합니다.
+- `basic_string`의 변형 작업은 이제 크기를 조정하는 대신 원하는 상태로 재할당된 버퍼를 구성합니다. 예를 들어 문자열의 시작 부분에 있는 insert는 이제 정확히 한 번 삽입 후 콘텐츠를 이동합니다. 콘텐츠는 아래로 또는 새로 할당된 버퍼로 이동됩니다. 다시 할당하는 경우 먼저 새로 할당된 버퍼로 이동한 다음 아래로 이동하는 두 번 이동이 더 이상 수행되지 않습니다.
 - \<string\>에서 C 표준 라이브러리를 호출하는 작업은 이제 `errno`의 주소를 캐시하여 TLS와의 반복된 상호 작용을 제거합니다.
 - `is_pointer` 구현이 간소화되었습니다.
 - 함수 기반 식 SFINAE가 `struct` 및 `void_t` 기반으로 변경되었습니다.
@@ -492,13 +492,13 @@ C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되
 - 이름 조회 규칙의 다른 설정 수정
 - 기존 이동 생성자 및 이동 할당 연산자가 이제 throw되지 않음으로 제대로 표시됨
 - atlstr.h에서 스레드로부터 안전한 로컬 정적 초기화에 대한 유효한 경고 C4640 표시
-- ATL을 사용하여 DLL을 빌드할 때 XP 도구 집합에서 스레드로부터 안전한 로컬 정적 초기화가 자동으로 꺼졌는데 이제 꺼지지 않습니다. 스레드로부터 안전한 초기화를 끄려는 경우 프로젝트 설정에 **/Zc:threadSafeInit-** 를 추가할 수 있습니다.
+- ATL을 사용하여 DLL을 빌드할 때 XP 도구 집합에서 스레드로부터 안전한 로컬 정적 초기화가 자동으로 꺼졌습니다. 이제는 꺼지지 않습니다. 스레드로부터 안전한 초기화를 원하지 않는 경우 프로젝트 설정에 **`/Zc:threadSafeInit-`** 를 추가할 수 있습니다.
 
 ### <a name="visual-c-runtime"></a>Visual C++ 런타임
 
 - 제어 흐름 보호 기호에 대한 새 헤더 "cfguard.h".
 
-## <a name="c-ide"></a>C++ IDE
+## <a name="visual-studio-2017-c-ide"></a>Visual Studio 2017 C++ IDE
 
 - 이제 구성 변경 성능이 C++ 네이티브 프로젝트의 경우 향상되었고, C++/CLI 프로젝트의 경우 훨씬 더 향상되었습니다. 이제 처음으로 활성화될 때 솔루션 구성이 더 빠르고, 이 솔루션 구성의 모든 이후 활성화는 거의 즉시 이루어집니다.
 
@@ -524,7 +524,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 
 ## <a name="intellisense"></a>IntelliSense
 
-- 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 **정의로 이동(Go To Definitions)** , **모든 참조 찾기(Find All References)** 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**(이전에는 ...C/C++ | 실험적에 있었음)으로 이동되었습니다.
+- 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 새 엔진은 **정의로 이동** 및 **모든 참조 찾기**와 같은 데이터베이스 작업 속도를 높입니다. 초기 솔루션 구문 분석 시간을 크게 향상시킵니다. 이 설정은 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**으로 이동되었습니다. (이전에는 ...C/C++ > 실험적에 있었습니다.)
 
 - 미리 컴파일된 헤더를 사용하지 않는 프로젝트 및 파일에 대한 IntelliSense 성능이 향상되었습니다. 현재 파일의 헤더에 대해 자동 미리 컴파일된 헤더가 생성됩니다.
 
@@ -542,7 +542,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 - 이제 **모든 참조 찾기**(Shift+F12)를 사용하여 복잡한 코드베이스에서도 쉽게 탐색할 수 있습니다. 고급 그룹화, 필터링, 정렬, 결과 내 검색 및 (일부 언어의 경우) 색 지정이 제공되므로 참조를 명확하게 이해할 수 있습니다. C++의 경우 새로운 UI에 변수에서 읽고 있는지 아니면 변수에 쓰고 있는지에 대한 정보가 포함되어 있습니다.
 - IntelliSense 점-화살표 기능이 실험적에서 고급으로 옮겨졌고 이제 기본적으로 사용됩니다. 편집기 기능인 **범위 확장**과 **우선 순위 확장**도 실험적에서 고급으로 옮겨졌습니다.
 - 실험적 리팩터링 기능인 **시그니처 변경**과 **함수 추출**을 기본적으로 사용할 수 있습니다.
-- C++ 프로젝트에 대해 ‘빠른 프로젝트 로드’라는 실험적 기능이 추가되었습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 후에 프로젝트를 열 때는 ‘훨씬’ 더 빠르게 로드됩니다. 
+- C++ 프로젝트에 대해 ‘빠른 프로젝트 로드’라는 실험적 기능이 추가되었습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 후에 프로젝트를 열 때는 ‘훨씬’ 더 빠르게 로드됩니다.
 - 이러한 기능 중 일부는 다른 언어에 공통적으로 적용되고, 일부는 C++에만 해당합니다. 이러한 새로운 기능에 대한 자세한 내용은 [Announcing Visual Studio “15” Preview 5](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/)(Visual Studio “15” 미리 보기 5 발표)를 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
@@ -551,7 +551,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>폴더 열기를 사용한 비 MSBuild 프로젝트에
 
-Visual Studio 2017에서는 솔루션 또는 프로젝트를 만들 필요 없이 소스 코드가 포함된 폴더에서 코딩, 빌드 및 디버그할 수 있는 **폴더 열기** 기능이 도입되었습니다. 이제 프로젝트가 MSBuild 기반 프로젝트가 아니어도 Visual Studio를 훨씬 간단하게 시작할 수 있습니다. **폴더 열기**를 사용하면 Visual Studio에서 MSBuild 프로젝트에 대해 이미 제공하는 강력한 코드 이해, 편집, 빌드 및 디버깅 기능에 액세스할 수 있습니다. 자세한 내용은 [C++용 폴더 열기 프로젝트](../build/open-folder-projects-cpp.md)를 참조하세요.
+Visual Studio 2017에는 **폴더 열기** 기능이 도입되었습니다. 솔루션 또는 프로젝트를 만들 필요 없이 소스 코드가 포함된 폴더에서 코딩, 빌드 및 디버그할 수 있습니다. 이제 프로젝트가 MSBuild 기반 프로젝트가 아니어도 Visual Studio를 훨씬 간단하게 시작할 수 있습니다. **폴더 열기**로 강력한 코드 이해, 편집, 빌드 및 디버깅 기능에 액세스할 수 있습니다. 이러한 기능은 Visual Studio가 MSBuild 프로젝트에 이미 제공하고 있는 기능과 동일합니다. 자세한 내용은 [C++용 폴더 열기 프로젝트](../build/open-folder-projects-cpp.md)를 참조하세요.
 
 - 폴더 열기 환경이 개선되었습니다. 다음 json 파일을 통해 환경을 사용자 지정할 수 있습니다.
   - IntelliSense 및 검색 환경을 사용자 지정할 수 있는 CppProperties.json.
@@ -578,7 +578,7 @@ Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하�
 
 - CMake Ninja 생성기에 대한 지원이 추가되었습니다.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
+##### <a name="visual-studio-2017-version-154"></a>Visual Studio 2017 버전 15.4
 
 - 기존 CMake 캐시 가져오기에 대한 지원이 추가되었습니다.
 
@@ -586,7 +586,7 @@ Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하�
 
 - CMake 3.11, CMake 프로젝트의 코드 분석, 솔루션 탐색기의 대상 보기, 캐시 생성 옵션 및 단일 파일 컴파일에 대한 지원이 추가되었습니다. 자세한 내용은 [Visual Studio의 CMake 지원](https://devblogs.microsoft.com/cppblog/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) 및 [Visual Studio의 CMake 프로젝트](../build/cmake-projects-in-visual-studio.md)를 참조하세요.
 
-## <a name="windows-desktop-development-with-c"></a>C++를 사용한 Windows 데스크톱 개발
+## <a name="windows-desktop-development"></a>Windows 데스크톱 개발
 
 이제 원래 C++ 워크로드에 대한 보다 세분화된 설치 환경이 제공됩니다. 필요한 도구만 설치할 수 있도록 선택 가능한 구성 요소가 추가되었습니다. 설치 관리자 UI에 나열된 구성 요소에 대해 표시된 설치 크기는 정확하지 않으며 전체 크기는 이보다 클 수 있습니다.
 
@@ -621,33 +621,33 @@ Visual C++ 빌드 도구(이전에 독립 실행형 제품으로 제공)가 이�
 
 C++의 모든 기능을 사용하여 DirectX 또는 Cocos2d로 구동하는 전문 게임을 개발해 보세요.
 
-## <a name="mobile-development-with-c-android-and-ios"></a>C++를 사용한 모바일 개발(Android 및 iOS)
+## <a name="mobile-development-with-c-for-android-and-ios"></a>Android 및 iOS용 C++를 사용한 모바일 개발
 
 이제 Visual Studio를 사용하여 Android 및 iOS를 대상으로 할 수 있는 모바일 앱을 만들고 디버깅할 수 있습니다.
 
 ## <a name="universal-windows-apps"></a>유니버설 Windows 앱
 
-C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소로 제공됩니다.  현재 C++ 프로젝트를 업그레이드하려면 수동으로 해야 합니다. Visual Studio 2017에서 v140을 대상으로 한 유니버설 Windows 플랫폼 프로젝트를 여는 경우, Visual Studio 2015가 설치되어 있지 않으면 프로젝트 속성 페이지에서 v141 플랫폼 도구 집합을 선택해야 합니다.
+C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소로 제공됩니다. 현재는 C++ 프로젝트를 수동으로 업그레이드해야 합니다. Visual Studio 2017에서 v140을 대상으로 한 유니버설 Windows 플랫폼 프로젝트를 열 수 있습니다. 하지만 Visual Studio 2015가 설치되어 있지 않으면 프로젝트 속성 페이지에서 v141 플랫폼 도구 집합을 선택해야 합니다.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>유니버설 Windows 플랫폼(UWP)의 C++에 대한 새로운 옵션
 
-이제 유니버설 Windows 플랫폼 및 Windows Store용 C++ 애플리케이션 작성 및 패키징에 대한 새 옵션이 제공됩니다. 사이드로드를 통한 기존 채널 또는 Windows 스토어를 통해 배포하기 위해 데스크톱 브리지 인프라를 사용하여 기존 데스크톱 애플리케이션 또는 COM 개체를 패키징할 수 있습니다. Windows 10의 새로운 기능을 사용하면 다양한 방법으로 데스크톱 애플리케이션에 UWP 기능을 추가할 수 있습니다. 자세한 내용은 [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
+이제 유니버설 Windows 플랫폼 및 Windows Store용 C++ 애플리케이션 작성 및 패키징에 대한 새 옵션이 제공됩니다. 데스크톱 브리지 인프라를 사용하면 기존 데스크톱 애플리케이션 또는 COM 개체를 패키징하여 Windows 스토어를 통해 배포할 수 있습니다. 또는 테스트용 로드를 통해 기존 채널을 통한 배포도 가능합니다. Windows 10의 새로운 기능을 사용하면 다양한 방법으로 데스크톱 애플리케이션에 UWP 기능을 추가할 수 있습니다. 자세한 내용은 [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
 데스크톱 브리지를 통해 데스크톱 애플리케이션 패키징을 훨씬 간소화하는 프로젝트 템플릿인 **Windows 애플리케이션 패키징 프로젝트**가 추가되었습니다. **파일 | 새로 만들기 | 프로젝트 | 설치됨 | Visual C++ | 유니버설 Windows 플랫폼**에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio(데스크톱 브리지)를 사용하여 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조하세요.
 
-이제 새 코드를 작성할 때 헤더 파일에서만 구현되는 Windows 런타임용 표준 C++ 언어 프로젝션인 C++/WinRT를 사용할 수 있습니다. C++/WinRT를 사용하면 모든 표준 규격 C++ 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. C++/WinRT는 C++ 개발자에게 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT: Windows 런타임용 최신 C++](https://moderncpp.com/)를 참조하세요.
+이제 새 코드를 작성할 때 헤더 파일에서만 구현되는 Windows 런타임용 표준 C++ 언어 프로젝션인 C++/WinRT를 사용할 수 있습니다. C++/WinRT를 사용하면 모든 표준 규격 C++ 컴파일러를 통해 Windows 런타임 API를 사용하고 작성할 수 있습니다. C++/WinRT는 C++ 개발자에게 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT: Windows 런타임용 최신 C++](https://moderncpp.com/)를 참조하세요.
 
 Windows SDK Insider Preview의 빌드 17025부터 C++/WinRT가 Windows SDK에 포함됩니다. 자세한 내용은 [Windows SDK에 이제 C++/WinRT가 포함됨(영문)](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/)을 참조하세요.
 
-## <a name="clangc2-platform-toolset"></a>Clang/C2 플랫폼 도구 집합
+## <a name="the-clangc2-platform-toolset"></a>Clang/C2 플랫폼 도구 집합
 
-이제 Visual Studio 2017과 함께 제공되는 Clang/C2 도구 집합이 대규모 프로젝트를 빌드하는 데 중요한 **/bigobj** 스위치를 지원합니다. 또한 컴파일러의 프런트 엔드와 백 엔드에서 몇몇 중요한 버그 수정이 있었습니다.
+이제 Visual Studio 2017과 함께 제공되는 Clang/C2 도구 집합이 대규모 프로젝트를 빌드하는 데 중요한 **`/bigobj`** 스위치를 지원합니다. 또한 컴파일러 프런트 엔드 및 백 엔드의 몇몇 중요한 버그 수정이 포함되어 있습니다.
 
 ## <a name="c-code-analysis"></a>C++ 코드 분석
 
-[C++ Core 지침](https://github.com/isocpp/CppCoreGuidelines)을 적용하기 위한 C++ Core Checkers가 이제는 Visual Studio와 함께 배포됩니다. 프로젝트의 속성 페이지의 **코드 분석 확장** 페이지에서 체커를 활성화하기만 하면 코드 분석을 실행할 때 확장이 포함됩니다. 자세한 내용은 [C++ 핵심 지침 검사기 사용](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)을 참조하세요.
+[C++ Core 지침](https://github.com/isocpp/CppCoreGuidelines)을 적용하기 위한 C++ Core Checkers가 이제는 Visual Studio와 함께 배포됩니다. 프로젝트의 속성 페이지에 있는 **코드 분석 확장** 페이지에서 검사기를 사용하도록 설정합니다. 그러면 코드 분석을 실행할 때 확장이 포함됩니다. 자세한 내용은 [C++ 핵심 지침 검사기 사용](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)을 참조하세요.
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 속성 페이지")
 
@@ -670,18 +670,18 @@ Windows SDK Insider Preview의 빌드 17025부터 C++/WinRT가 Windows SDK에 �
 - 실행할 코드 분석 규칙을 지정할 수 있는 [/analyze:ruleset](../build/reference/analyze-code-analysis.md)에 대한 지원이 추가되었습니다.
 - 추가 C++ Core Guidelines 규칙에 대한 지원이 추가되었습니다.  자세한 내용은 [C++ 핵심 지침 검사기 사용](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)을 참조하세요.
 
-## <a name="unit-testing"></a>단위 테스트
+## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017에서 단위 테스트
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-이제 Google Test Adapter와 Boost.Test Adapter가 **C++를 사용한 데스크톱 개발** 워크로드의 구성 요소로 제공되며, **테스트 탐색기**와 통합됩니다. Cmake 프로젝트에 대한 CTest 지원이 추가되었습니다(폴더 열기 사용). 단, **테스트 탐색기**와의 완전한 통합은 아직 제공되지 않습니다. 자세한 내용은 [C/C++에 대한 단위 테스트 작성](/visualstudio/test/writing-unit-tests-for-c-cpp)을 참조하세요.
+이제 Google Test Adapter와 Boost.Test Adapter가 **C++를 사용한 데스크톱 개발** 워크로드의 구성 요소로 제공되며, **테스트 탐색기**와 통합됩니다. CMake 프로젝트에 대한 CTest 지원이 추가되었습니다(폴더 열기 사용). 단, **테스트 탐색기**와의 완전한 통합은 아직 제공되지 않습니다. 자세한 내용은 [C/C++에 대한 단위 테스트 작성](/visualstudio/test/writing-unit-tests-for-c-cpp)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 버전 15.6
 
-- Boost.Test 동적 라이브러리 지원에 대한 지원이 추가되었습니다.
-- 이제 Boost.Test 항목 템플릿을 IDE에서 사용할 수 있습니다.
+- `Boost.Test` 동적 라이브러리 지원에 대한 지원이 추가되었습니다.
+- 이제 `Boost.Test` 항목 템플릿을 IDE에서 사용할 수 있습니다.
 
-자세한 내용은 [Boost.Test 단위 테스트: 동적 라이브러리 지원 및 새 항목 템플릿](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)을 참조하세요.
+자세한 내용은 [`Boost.Test` 단원 테스트: 동적 라이브러리 지원 및 새 항목 템플릿](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
@@ -689,9 +689,9 @@ C++ 단위 테스트 프로젝트에 대한 [CodeLens](/visualstudio/ide/find-co
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 그래픽 진단
 
-Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를 기록한 후 분석하기 위한 도구 집합입니다. Windows PC에서 로컬로 실행 중이거나 Windows 디바이스 에뮬레이터 또는 원격 PC나 디바이스에서 실행 중인 앱에서 그래픽 진단 기능을 사용할 수 있습니다.
+Visual Studio 그래픽 진단 도구: 이 도구를 사용하여 Direct3D 앱의 렌더링 및 성능 문제를 기록하고 분석할 수 있습니다. Windows PC에서 로컬로 실행 중이거나 Windows 디바이스 에뮬레이터 또는 원격 PC나 디바이스에서 실행 중인 앱에서 그래픽 진단 도구를 사용하세요.
 
-- **꼭짓점 및 기하 도형 셰이더의 입력 및 출력:** 꼭짓점 셰이더 및 기하 도형 셰이더의 입력과 출력을 볼 수 있는 기능은 가장 많이 요청된 기능 중 하나였으며 이제 도구에서 지원됩니다. 파이프라인 단계 보기에서 VS 또는 GS 단계를 선택하면 아래 표의 입력 및 출력 검사가 시작됩니다.
+- **꼭짓점 및 기하 도형 셰이더의 입력 및 출력:** 꼭짓점 셰이더 및 기하 도형 셰이더의 입력과 출력을 볼 수 있는 기능은 가장 많이 요청된 기능 중 하나였으며, 이제 도구에서 지원됩니다. 파이프라인 단계 보기에서 VS 또는 GS 단계를 선택하면 아래 표의 입력 및 출력 검사가 시작됩니다.
 
   ![셰이더의 입력/출력](media/io-shaders.png)
 
@@ -699,21 +699,21 @@ Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를
 
   ![검색](media/search.png)
 
-- **리소스 기록:** 이 새로운 보기는 캡처된 프레임 렌더링하는 동안 사용된 리소스의 전체 수정 기록을 간단하게 볼 수 있는 방법을 제공합니다. 리소스에 대한 기록을 호출하려면 리소스 하이퍼링크 옆에 있는 시계 아이콘을 클릭하면 됩니다.
+- **리소스 기록:** 이 새로운 보기는 캡처된 프레임 렌더링하는 동안 사용된 리소스의 전체 수정 기록을 간단하게 볼 수 있는 방법을 제공합니다. 리소스에 대한 기록을 호출하려면 리소스 하이퍼링크 옆에 있는 시계 아이콘을 클릭하세요.
 
   ![리소스 기록](media/resource-history.png)
 
-  리소스의 변경 기록으로 채워진 새 **리소스 기록** 도구 창이 표시됩니다.
+  리소스 변경 기록으로 채워진 새 **리소스 기록** 도구 창이 표시됩니다.
 
   ![리소스 기록 변경](media/resource-history-change.png)
 
-  **Visual Studio > 도구 > 옵션**의 **그래픽 진단** 아래에서 전체 호출 스택 캡처를 사용하도록 설정하여 프레임을 캡처한 경우, Visual Studio 프로젝트 내에서 각 변경 이벤트의 컨텍스트를 신속하게 추론하고 검사할 수 있습니다.
+  전체 호출 스택 캡처를 사용하도록 설정하면 프레임을 캡처할 수 있습니다. 이렇게 하면 각 변경 이벤트의 컨텍스트를 신속하게 추론하고 Visual Studio 프로젝트 내에서 검사할 수 있습니다. **그래픽 진단**의 Visual Studio **도구 > 옵션** 대화 상자에서 전체 스택 캡처 옵션을 설정합니다.
 
-- **API 통계:** 프레임의 API 사용에 대한 대략적인 요약을 표시합니다. 인지하지 못한 상태에서 수행하는 호출이나 너무 많이 수행하는 호출을 검색하는 데 유용할 수 있습니다. 이 창은 Visual Studio Graphics Analyzer의 **보기 > API 통계**를 통해 사용할 수 있습니다.
+- **API 통계:** 프레임의 API 사용에 대한 대략적인 요약을 표시합니다. 인지하지 못한 상태에서 수행하는 호출이나 너무 자주 수행하는 호출을 검색하는 데 유용할 수 있습니다. 이 창은 Visual Studio Graphics Analyzer의 **보기 > API 통계**를 통해 사용할 수 있습니다.
 
   ![API 통계](media/api-stats.png)
 
-- **메모리 통계:** 드라이버가 프레임에 생성되는 리소스에 대해 할당하는 메모리 양을 표시합니다. 이 창은 **Visual Studio Graphics Analyzer**의 **보기 | 메모리 통계**를 통해 사용할 수 있습니다. 마우스 오른쪽 단추로 클릭하고 **모두 복사**를 선택하여 데이터를 CSV 파일에 복사한 후 스프레드시트에서 볼 수 있습니다.
+- **메모리 통계:** 프레임에 생성하는 리소스에 드라이버가 할당하는 메모리 양을 표시합니다. 이 창은 **Visual Studio Graphics Analyzer**의 **보기 | 메모리 통계**를 통해 사용할 수 있습니다. 스프레드시트에서 볼 수 있도록 데이터를 CSV 파일로 복사하려면 마우스 오른쪽 단추를 클릭하고 **모두 복사**를 선택합니다.
 
   ![메모리 통계](media/memory-stats.png)
 
@@ -725,11 +725,11 @@ Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를
 
   ![프레임 분석](media/frame-analysis.png)
 
-- **GPU 사용량 향상:** 더욱 자세한 분석을 위해 GPU 보기 또는 WPA(Windows 성능 분석기) 도구를 사용하여 Visual Studio GPU 사용량 프로파일러를 통해 수행된 추적을 엽니다. Windows Performance Toolkit이 설치된 경우 WPA 및 GPU 보기의 하이퍼링크가 각각 하나씩 세션 개요의 오른쪽 아래에 표시됩니다.
+- **GPU 사용량 향상:** 더욱 자세한 분석을 위해 GPU 보기 또는 WPA(Windows 성능 분석기) 도구를 사용하여 Visual Studio GPU 사용량 프로파일러를 통해 수행된 추적을 엽니다. Windows Performance Toolkit가 설치된 경우 WPA 및 GPU 보기의 하이퍼링크가 각각 하나씩 세션 개요의 오른쪽 아래에 표시됩니다.
 
   ![GPU 사용량](media/gpu-usage.png)
 
-  이 링크를 통해 GPU 보기에서 열린 추적은 VS와 GPU 보기 간에 동기화된 타임라인 확대/축소 및 이동을 지원합니다. VS의 확인란을 사용하여 동기화 사용 여부를 제어합니다.
+  이 링크를 통해 GPU 보기에서 열린 추적은 동기화된 VS 및 GPU 보기 타임라인 확대/축소 및 이동을 지원합니다. VS의 확인란은 동기화 사용 여부를 제어합니다.
 
   ![GPU 보기](media/gpu-view.png)
 
@@ -737,6 +737,12 @@ Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를
 
 ::: moniker range="=vs-2015"
 
-Visual Studio 2015 업데이트 3까지 새로운 기능의 전체 목록은 [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)(Visual C++ 2003~2015의 새로운 기능)를 참조하세요. 모든 Visual Studio 2015의 새로운 기능에 대한 자세한 내용은 [Visual Studio 2015 릴리스 정보 기록](/visualstudio/releasenotes/vs2015-version-history)에 링크된 릴리스 정보를 참조하세요. Visual Studio 2019의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)을 참조하세요. Visual Studio 2017의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio 2017의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)을 참조하세요.
+Visual Studio 2015 업데이트 3까지 새로운 기능의 전체 목록은 [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)(Visual C++ 2003~2015의 새로운 기능)를 참조하세요.
+
+Visual Studio 2015의 새로운 기능에 대한 자세한 내용은 릴리스 정보를 참조하세요. [Visual Studio 2015 릴리스 정보 기록](/visualstudio/releasenotes/vs2015-version-history)에서 링크로 연결됩니다.
+
+Visual Studio 2019의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)을 참조하세요.
+
+Visual Studio 2017의 새로운 C++ 기능에 대한 자세한 내용은 [Visual Studio 2017의 새로운 C++ 기능](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)을 참조하세요.
 
 ::: moniker-end

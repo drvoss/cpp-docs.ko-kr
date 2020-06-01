@@ -1,14 +1,14 @@
 ---
 title: C++ 규칙 향상
-ms.date: 03/16/2020
+ms.date: 05/18/2020
 description: Visual Studio의 Microsoft C++는 C++20 언어 표준을 완전하게 준수하기 위해 점점 향상되고 있습니다.
 ms.technology: cpp-language
-ms.openlocfilehash: 2309e79acb4784cd2e79b4f3f6fffb29e8d5dea8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353531"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630496"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio의 C++ 규칙 향상
 
@@ -20,7 +20,7 @@ Microsoft C++는 모든 릴리스에서 규칙 및 버그 수정을 향상합니
 
 Visual Studio 2019 RTW에는 다음과 같은 Microsoft C++ 컴파일러(MSVC)의 규칙 향상, 버그 수정 및 동작 변경이 포함되어 있습니다.
 
-**참고:** C++20 기능은 컴파일러와 IntelliSense 모두에 대해 C++20 구현이 완료될 때까지 `/std:c++latest` 모드에서 사용할 수 있습니다. 이때 `/std:c++20` 컴파일러 모드가 도입됩니다.
+**참고:** C++20 기능은 컴파일러와 IntelliSense 모두에 대해 C++20 구현이 완료될 때까지 **`/std:c++latest`** 모드에서 사용할 수 있습니다. 이때 **`/std:c++20`** 컴파일러 모드가 도입됩니다.
 
 ### <a name="improved-modules-support-for-templates-and-error-detection"></a>템플릿 및 오류 검색에 대한 향상된 모듈 지원
 
@@ -28,9 +28,9 @@ Visual Studio 2019 RTW에는 다음과 같은 Microsoft C++ 컴파일러(MSVC)�
 
 ### <a name="modified-specification-of-aggregate-type"></a>집계 유형의 수정된 사양
 
-집계 유형의 사양이 C++20에서 변경되었습니다([사용자가 선언한 생성자로 집계 금지](https://wg21.link/p1008r1) 참조). Visual Studio 2019의 `/std:c++latest`에서 사용자가 선언한 생성자가 있는 클래스(예: `= default` 또는 `= delete`로 선언된 생성자 포함)는 집계가 아닙니다. 이전에는 사용자가 제공한 생성자만 클래스가 집계되지 못하도록 합니다. 이 변경으로 인해 이러한 형식을 초기화할 수 있는 방법이 제한됩니다.
+집계 유형의 사양이 C++20에서 변경되었습니다([사용자가 선언한 생성자로 집계 금지](https://wg21.link/p1008r1) 참조). Visual Studio 2019의 **`/std:c++latest`** 에서 사용자가 선언한 생성자가 있는 클래스(예: `= default` 또는 `= delete`로 선언된 생성자 포함)는 집계가 아닙니다. 이전에는 사용자가 제공한 생성자만 클래스가 집계되지 못하도록 합니다. 이 변경으로 인해 이러한 형식을 초기화할 수 있는 방법이 제한됩니다.
 
-다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 `/std:c++latest` 아래의 Visual Studio 2019에서는 C2280 및 C2440 오류를 발생시킵니다.
+다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 **`/std:c++latest`** 아래의 Visual Studio 2019에서는 C2280 및 C2440 오류를 발생시킵니다.
 
 ```cpp
 struct A
@@ -50,7 +50,7 @@ B b = { 1 }; // ill-formed in C++20, previously well-formed
 
 ### <a name="partial-support-for-operator-"></a>`operator <=>`에 대한 부분 지원
 
-[P0515R3](https://wg21.link/p0515r3) C++20에서는 "우주선 연산자"라고도 하는 `<=>` 3방향 비교 연산자를 소개합니다. `/std:c++latest` 모드의 Visual Studio 2019는 현재 허용되지 않는 구문 오류를 발생시켜 연산자에 대한 부분 지원을 도입합니다. 예를 들어 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 `/std:c++latest` 아래의 Visual Studio 2019에서는 여러 오류가 발생합니다.
+[P0515R3](https://wg21.link/p0515r3) C++20에서는 "우주선 연산자"라고도 하는 `<=>` 3방향 비교 연산자를 소개합니다. **`/std:c++latest`** 모드의 Visual Studio 2019는 현재 허용되지 않는 구문 오류를 발생시켜 연산자에 대한 부분 지원을 도입합니다. 예를 들어 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 **`/std:c++latest`** 아래의 Visual Studio 2019에서는 여러 오류가 발생합니다.
 
 ```cpp
 struct S
@@ -71,7 +71,7 @@ int main(int argc, char** argv)
 
 ### <a name="references-to-types-with-mismatched-cv-qualifiers"></a>일치하지 않는 cv 한정자가 있는 유형에 대한 참조
 
-이전에는 MSVC에서 최상위 수준 아래에 일치하지 않는 cv 한정자가 있는 형식의 참조를 직접 바인딩할 수 있었습니다. 이 바인딩은 참조가 나타내는 것으로 추정되는 const 데이터의 수정을 허용할 수 있었습니다. 이제 컴파일러에서 표준에 따라 임시 바인딩을 만듭니다. Visual Studio 2017에서 다음 코드는 경고 없이 컴파일됩니다. Visual Studio 2019에서 컴파일러는 *경고 C4172: \<func:#1 "?PData@X@@QBEABQBXXZ"> 로컬 변수 또는 임시*  주소를 반환합니다.
+이전에는 MSVC에서 최상위 수준 아래에 일치하지 않는 cv 한정자가 있는 형식의 참조를 직접 바인딩할 수 있었습니다. 이 바인딩은 참조가 나타내는 것으로 추정되는 const 데이터의 수정을 허용할 수 있었습니다. 이제 컴파일러에서 표준에 따라 임시 바인딩을 만듭니다. Visual Studio 2017에서 다음 코드는 경고 없이 컴파일됩니다. Visual Studio 2019에서 컴파일러는 경고 C4172: `<func:#1 "?PData@X@@QBEABQBXXZ"> returning address of local variable or temporary.`를 발생시킵니다.
 
 ```cpp
 struct X
@@ -93,7 +93,7 @@ int main()
 
 ### <a name="reinterpret_cast-from-an-overloaded-function"></a>`reinterpret_cast` 오버로드된 함수에서
 
-`reinterpret_cast`의 인수는 오버로드된 함수의 주소가 허용되는 컨텍스트 중 하나가 아닙니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 *C2440: '오버로드된 함수'에서 'fp'로 변환될 수 없음*을 발생시킵니다.
+`reinterpret_cast`의 인수는 오버로드된 함수의 주소가 허용되는 컨텍스트 중 하나가 아닙니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 C2440: `cannot convert from 'overloaded-function' to 'fp'` 오류를 발생시킵니다.
 
 ```cpp
 int f(int) { return 1; }
@@ -121,7 +121,7 @@ int main()
 
 ### <a name="lambda-closures"></a>람다 클로저
 
-C++14에서 람다 클로저 형식은 리터럴이 아닙니다. 이 규칙의 기본 결과는 람다가 **constexpr** 변수에 할당되지 않을 수 있다는 것입니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만, Visual Studio 2019에서는 ‘C2127: ‘l’: 비상수 식으로 ‘constexpr’ 엔터티 초기화가 잘못되었습니다.’가 발생합니다. 
+C++14에서 람다 클로저 형식은 리터럴이 아닙니다. 이 규칙의 기본 결과는 람다가 **constexpr** 변수에 할당되지 않을 수 있다는 것입니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 C2127: `'l': illegal initialization of 'constexpr' entity with a non-constant expression` 오류를 발생시킵니다.
 
 ```cpp
 int main()
@@ -164,7 +164,7 @@ C++20에서 [P1164](https://wg21.link/p1164r1)를 무조건으로 구현했습�
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6). C++20은 UTF-8 코드 단위를 나타내는 데 사용되는 새로운 문자 형식을 추가합니다. C++20의 `u8` 문자열 리터럴에는 이전의 `const char[N]` 대신 `const char8_t[N]` 형식이 있습니다. [N2231](https://wg14.link/n2231)에서 C 표준에 대해 유사한 변경이 제안되었습니다. `char8_t` 이전 버전과의 호환성 수정에 대한 제안은 [P1423r3](https://wg21.link/p1423r3)에서 제공됩니다. Microsoft C++ 컴파일러는 **/Zc:char8_t** 컴파일러 옵션을 지정할 때 Visual Studio 2019 버전 16.1에서 `char8_t` 지원을 추가합니다. 향후 **/Zc:char8_t-** 를 통해 C++17 동작으로 되돌릴 수 있는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)로 지원될 예정입니다. IntelliSense를 지원하는 EDG 컴파일러는 이 기능을 아직 지원하지 않으므로 실제 컴파일에 영향을 주지 않는 IntelliSense 전용 의사 오류가 표시됩니다.
+[P0482r6](https://wg21.link/p0482r6). C++20은 UTF-8 코드 단위를 나타내는 데 사용되는 새로운 문자 형식을 추가합니다. C++20의 `u8` 문자열 리터럴에는 이전의 `const char[N]` 대신 `const char8_t[N]` 형식이 있습니다. [N2231](https://wg14.link/n2231)에서 C 표준에 대해 유사한 변경이 제안되었습니다. `char8_t` 이전 버전과의 호환성 수정에 대한 제안은 [P1423r3](https://wg21.link/p1423r3)에서 제공됩니다. Microsoft C++ 컴파일러는 **`/Zc:char8_t`** 컴파일러 옵션을 지정할 때 Visual Studio 2019 버전 16.1에서 `char8_t` 지원을 추가합니다. 향후 **`/Zc:char8_t-`** 를 통해 C++17 동작으로 되돌릴 수 있는 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)로 지원될 예정입니다. IntelliSense를 지원하는 EDG 컴파일러는 이 기능을 아직 지원하지 않으므로 실제 컴파일에 영향을 주지 않는 IntelliSense 전용 의사 오류가 표시됩니다.
 
 #### <a name="example"></a>예제
 
@@ -202,9 +202,9 @@ long j = static_cast<long>(i);
 
 ### <a name="syntax-checks-for-generic-lambdas"></a>일반 람다에 대한 구문 검사
 
-새 람다 프로세서는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 또는 **/experimental:newLambdaProcessor**를 사용하는 다른 언어 모드 아래의 일반 람다에서 몇 가지 규칙 모드 구문 검사를 활성화합니다.
+새 람다 프로세서는 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 또는 **`/experimental:newLambdaProcessor`** 를 사용하는 다른 언어 모드 아래의 일반 람다에서 몇 가지 규칙 모드 구문 검사를 활성화합니다.
 
-Visual Studio 2017에서 이 코드는 경고 없이 컴파일되지만 Visual Studio 2019에서는 *C2760 구문 오류: 예기치 않은 토큰 '\<id-expr>', expected 'id-expression'* 오류가 생성됩니다.
+Visual Studio 2017에서 이 코드는 경고 없이 컴파일되지만 Visual Studio 2019에서는 C2760 `syntax error: unexpected token '\<id-expr>', expected 'id-expression'` 오류가 생성됩니다.
 
 ```cpp
 void f() {
@@ -226,11 +226,11 @@ void f() {
 
 ### <a name="argument-dependent-lookup-for-function-calls"></a>함수 호출에 대한 인수 종속 조회
 
-[P0846R0](https://wg21.link/p0846r0)(C++20) 명시적 템플릿 인수를 사용하는 함수 호출 식에 대한 인수 종속 조회를 통해 함수 템플릿을 찾는 기능이 향상되었습니다. **/std:c++latest**가 필요합니다.
+[P0846R0](https://wg21.link/p0846r0)(C++20) 명시적 템플릿 인수를 사용하는 함수 호출 식에 대한 인수 종속 조회를 통해 함수 템플릿을 찾는 기능이 향상되었습니다. **`/std:c++latest`** 가 필요합니다.
 
 ### <a name="designated-initialization"></a>지정된 초기화
 
-[P0329R4](https://wg21.link/p0329r4)(C++20) 지정된 초기화를 통해 `Type t { .member = expr }` 구문을 사용하여 지정된 멤버를 집계 초기화에서 선택할 수 있습니다. **/std:c++latest**가 필요합니다.
+[P0329R4](https://wg21.link/p0329r4)(C++20) 지정된 초기화를 통해 `Type t { .member = expr }` 구문을 사용하여 지정된 멤버를 집계 초기화에서 선택할 수 있습니다. **`/std:c++latest`** 가 필요합니다.
 
 ### <a name="new-and-updated-standard-library-functions-c20"></a>신규 및 업데이트된 표준 라이브러리 함수(C++20)
 
@@ -265,7 +265,9 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>열거형 형식이 다른 이진 식
 
-하나는 열거형 형식이고 다른 하나는 다른 열거형 형식이거나 부동 소수점 형식인 피연산자에 일반적인 산술 변환을 적용하는 기능은 C++20에서 더 이상 사용되지 않습니다([P1120R0](https://wg21.link/p1120r0)). Visual Studio 2019 버전 16.2 이상에서 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 사용하는 경우 다음 코드는 수준 4 경고를 생성합니다.
+하나는 열거형 형식이고 다른 하나는 다른 열거형 형식이거나 부동 소수점 형식인 피연산자에 일반적인 산술 변환을 적용하는 기능은 C++20에서 더 이상 사용되지 않습니다([P1120R0](https://wg21.link/p1120r0)).
+
+Visual Studio 2019 버전 16.2 이상에서 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 사용하는 경우 다음 코드는 수준 4 경고를 생성합니다.
 
 ```cpp
 enum E1 { a };
@@ -285,9 +287,7 @@ int main() {
 }
 ```
 
-### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>열거형 및 부동 소수점 형식을 사용하는 이진 식
-
-하나는 열거형 형식이고 다른 하나는 다른 열거형 형식이거나 부동 소수점 형식인 피연산자에 일반적인 산술 변환을 적용하는 기능은 C++20에서 더 이상 사용되지 않습니다([P1120R0](https://wg21.link/p1120r0)). 즉, 열거형과 부동 소수점 형식 간에 이진 연산을 사용하면 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 사용 설정된 경우 경고가 발생합니다.
+열거형과 부동 소수점 형식 간에 이진 연산을 사용하면 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 사용 설정된 경우 경고가 발생합니다.
 
 ```cpp
 enum E1 { a };
@@ -307,7 +307,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>배열의 같음 및 관계 비교
 
-배열 형식의 두 피연산자 간 같음 및 관계 비교는 C++20에서 사용되지 않습니다([P1120R0](https://wg21.link/p1120r0)). 즉, 두 배열 간의 비교 연산(순위 및 범위 유사성과 관계없이)을 사용하면 경고가 발생합니다. Visual Studio 2019 버전 16.2부터 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 사용 설정된 경우 다음 코드는 *C5056: operator '==': deprecated for array types*를 생성합니다.
+배열 형식의 두 피연산자 간 같음 및 관계 비교는 C++20에서 사용되지 않습니다([P1120R0](https://wg21.link/p1120r0)). 즉, 두 배열 간의 비교 연산(순위 및 범위 유사성에도 불구하고)을 사용하면 경고가 발생합니다. Visual Studio 2019 버전 16.2부터 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 사용 설정된 경우 다음 코드는 C5056:`operator '==': deprecated for array types`를 생성합니다.
 
 ```cpp
 int main() {
@@ -333,9 +333,9 @@ int main() {
 std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 ```
 
-### <a name="effect-of-defining-spaceship-operator-on--and-"></a>우주선 연산자 정의가 == 및 !=에 미치는 영향
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>우주선 연산자 정의가 `==` 및 `!=`에 미치는 영향
 
-우주선 연산자가 `= default`로 표시되지 않는 한 우주선 연산자 정의( **<=>** )만으로는 더 이상 **==** 또는 **!=** 을 포함하는 식을 다시 생성하지 않습니다([P1185R2](https://wg21.link/p1185r2)). 다음 예제는 Visual Studio 2019 RTW 및 버전 16.1에서 컴파일되지만 Visual Studio 2019 버전 16.2에서 C2678을 생성합니다.
+우주선 연산자가 **`= default`** 로 표시되지 않는 한 우주선 연산자 정의( **`<=>`** )만으로는 더 이상 **`==`** 또는 **`!=`** 을 포함하는 식을 다시 생성하지 않습니다([P1185R2](https://wg21.link/p1185r2)). 다음 예제는 Visual Studio 2019 RTW 및 버전 16.1에서 컴파일되지만 Visual Studio 2019 버전 16.2에서 C2678을 생성합니다.
 
 ```cpp
 #include <compare>
@@ -389,7 +389,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Char*의 스트림 추출 연산자가 제거됨
 
-포인터와 문자 간에 대한 스트림 추출 연산자가 제거되고 문자 배열에 대한 추출 연산자로 바뀌었습니다([P0487R1](https://wg21.link/p0487r1)에 따라). WG21은 제거된 오버로드를 안전하지 않은 것으로 간주합니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 다음 예제는 이제 ‘C2679: binary ‘>>’: ‘char\*’ 형식의 오른쪽 피연산자를 사용하는 연산자를 찾을 수 없음(또는 허용되는 변환이 없음)’을 생성합니다. 
+포인터와 문자 간에 대한 스트림 추출 연산자가 제거되고 문자 배열에 대한 추출 연산자로 바뀌었습니다([P0487R1](https://wg21.link/p0487r1)에 따라). WG21은 제거된 오버로드를 안전하지 않은 것으로 간주합니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 다음 예제는 이제 C2679: `binary '>>': no operator found which takes a right-hand operand of type 'char*' (or there is no acceptable conversion)`을 생성합니다.
 
 ```cpp
    char x[42];
@@ -405,13 +405,13 @@ char x[42];
 std::cin >> x;
 ```
 
-### <a name="new-keywords-requires-and-concept"></a>새 키워드 **requires** 및 **concept**
+### <a name="new-keywords-requires-and-concept"></a>새 키워드 **`requires`** 및 **`concept`**
 
-새 키워드 **requires** 및 **concept**가 Microsoft C++ 컴파일러에 추가되었습니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 두 키워드 중 하나를 식별자로 사용하려고 하면 컴파일러는 *C2059: 구문 오류*를 발생시킵니다.
+새 키워드 **`requires`** 및 **`concept`** 가Microsoft C++ 컴파일러에 추가되었습니다. [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드에서 두 키워드 중 하나를 식별자로 사용하려고 하면 컴파일러는 C2059: `syntax error`를 발생시킵니다.
 
 ### <a name="constructors-as-type-names-disallowed"></a>생성자를 형식 이름으로 사용할 수 없음
 
-생성자 이름이 클래스 템플릿 특수화에 대한 별칭 뒤의 정규화된 이름에 표시되는 경우에는 더 이상 삽입된 클래스 이름으로 간주하지 않습니다. 이전에는 생성자를 형식 이름으로 사용하여 다른 엔터티를 선언할 수 있었습니다. 다음 예제에서는 *C3646: ‘TotalDuration’: 알 수 없는 재정의 지정자*를 생성합니다.
+생성자 이름이 클래스 템플릿 특수화에 대한 별칭 뒤의 정규화된 이름에 표시되는 경우에는 더 이상 삽입된 클래스 이름으로 간주하지 않습니다. 이전에는 생성자를 형식 이름으로 사용하여 다른 엔터티를 선언할 수 있었습니다. 다음 예제는 이제 C3646: `'TotalDuration': unknown override specifier`를 생성합니다.
 
 ```cpp
 #include <chrono>
@@ -432,9 +432,9 @@ class Foo {
 };
 ```
 
-### <a name="stricter-checking-of-extern-c-functions"></a>Extern “C” 함수에 대해 더 엄격해진 검사
+### <a name="stricter-checking-of-extern-c-functions"></a>`extern "C"` 함수에 대해 더 엄격해진 검사
 
-**extern "C"** 함수가 다른 네임스페이스에서 선언된 경우 이전 버전의 Microsoft C++ 컴파일러는 선언이 호환되는지 여부를 확인하지 않았습니다. Visual Studio 2019 버전 16.3에서는 컴파일러가 이러한 검사를 수행합니다. [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 *C2371 : 재정의; 다른 기본 형식* 및 *C2733 C 링크로 함수를 오버로드할 수 없음*을 생성합니다.
+**`extern "C"`** 함수가 다른 네임스페이스에서 선언된 경우 이전 버전의 Microsoft C++ 컴파일러는 선언이 호환되는지 여부를 확인하지 않았습니다. Visual Studio 2019 버전 16.3에서는 컴파일러가 이러한 검사를 수행합니다. [`/permissive-`](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 C2371 `redefinition; different basic types` 및 C2733 `you cannot overload a function with C linkage` 오류를 생성합니다.
 
 ```cpp
 using BOOL = int;
@@ -452,7 +452,7 @@ void g()
 extern "C" void f(int, int, int, BOOL){}
 ```
 
-앞의 예제에서 오류를 방지하려면 두 `f` 선언 모두에서 일관적으로 **BOOL** 대신 **bool**을 사용합니다.
+앞의 예제에서 오류를 방지하려면 두 `f` 선언 모두에서 일관적으로 `BOOL` 대신 **`bool`** 을 사용하세요.
 
 ### <a name="standard-library-improvements"></a>표준 라이브러리 향상
 
@@ -460,11 +460,11 @@ extern "C" void f(int, int, int, BOOL){}
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a> Visual Studio 2019 버전 16.4의 규칙 개선
 
-### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>한층 개선된 /permissive-에서의 정규화된 ID에 대한 2단계 이름 조회
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>`/permissive-`의 정규화된 ID에 대한 한층 개선된 2단계 이름 조회
 
-2단계 이름 조회를 위해서는 템플릿 본문에 사용된 종속되지 않은 이름이 정의 시점에 템플릿에 표시될 수 있어야 합니다. 이전에는 템플릿이 인스턴스화될 때 이러한 이름이 발견되었을 수 있습니다. 이번 변경을 통해 MSVC에서 이식 가능하고 규칙에 맞는 코드를 [/permissive-](../build/reference/permissive-standards-conformance.md) 플래그 아래에서 더 쉽게 작성할 수 있습니다.
+2단계 이름 조회를 위해서는 템플릿 본문에 사용된 종속되지 않은 이름이 정의 시점에 템플릿에 표시될 수 있어야 합니다. 이전에는 템플릿이 인스턴스화될 때 이러한 이름이 발견되었을 수 있습니다. 이번 변경을 통해 MSVC에서 이식 가능하고 규칙에 맞는 코드를 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 플래그 아래에서 더 쉽게 작성할 수 있습니다.
 
-**/permissive-** 플래그 집합이 설정된 Visual Studio 2019 버전 16.4의 다음 예에서는 `f<T>` 템플릿이 정의될 때 `N::f`이(가) 표시되지 않기 때문에 오류가 생성됩니다.
+**`/permissive-`** 플래그 집합이 설정된 Visual Studio 2019 버전 16.4의 다음 예제에서는 `f<T>` 템플릿이 정의될 때 `N::f`가 표시되지 않기 때문에 오류가 생성됩니다.
 
 ```cpp
 template <class T>
@@ -477,7 +477,7 @@ namespace N {
 }
 ```
 
-일반적으로 이 오류는 다음 예와 같이 누락된 헤더나 전달 선언 함수 또는 변수를 포함하여 해결할 수 있습니다.
+일반적으로 이 오류는 다음 예제와 같이 누락된 헤더나 전달 선언 함수 또는 변수를 포함하여 해결할 수 있습니다.
 
 ```cpp
 namespace N {
@@ -496,7 +496,7 @@ namespace N {
 
 ### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>정수 계열 상수 식에서 Null 포인터로의 암시적 변환
 
-MSVC 컴파일러는 이제 규칙 모드(/permissive-)에서 [CWG 이슈 903](https://wg21.link/cwg903)을 구현합니다. 이 규칙은 정수 계열 상수 식에서 Null 포인터 상수로의 암시적 변환(정수 리터럴 '0'은 제외)을 허용하지 않습니다. 다음 예에서는 규칙 모드에서 C2440을 생성합니다.
+MSVC 컴파일러는 이제 규칙 모드( **`/permissive-`** )에서 [CWG 이슈 903](https://wg21.link/cwg903)을 구현합니다. 이 규칙은 정수 계열 상수 식에서 Null 포인터 상수로의 암시적 변환(정수 리터럴 '0'은 제외)을 허용하지 않습니다. 다음 예에서는 규칙 모드에서 C2440을 생성합니다.
 
 ```cpp
 int* f(bool* p) {
@@ -518,11 +518,11 @@ int* f(bool* p) {
 
 ### <a name="standard-rules-for-types-of-integer-literals"></a>정수 리터럴 형식에 대한 표준 규칙
 
-규칙 모드([/permissive-](../build/reference/permissive-standards-conformance.md)로 사용)에서는 MSVC에 정수 리터럴 형식에 대한 표준 규칙이 사용됩니다. 이전에는 너무 커서 부호 있는 'int'에 맞지 않는 10진 리터럴에는 'unsigned int' 형식이 제공되었습니다. 이제 이러한 리터럴에는 두 번째로 큰 부호 있는 정수 형식 'long long'이 제공됩니다. 또한 너무 커서 부호 있는 형식에 맞지 않는 'll' 접미사가 포함된 리터럴에는 'unsigned long long' 형식이 제공됩니다.
+규칙 모드([`/permissive-`](../build/reference/permissive-standards-conformance.md)로 사용 설정됨)에서는 MSVC에 정수 리터럴 형식에 대한 표준 규칙이 사용됩니다. 너무 커서 부호 있는 **`int`** 에 맞지 않는 10진 리터럴에 이전에는 **`unsigned int`** 형식이 제공되었습니다. 이제 이러한 리터럴에는 두 번째로 큰 부호 있는 정수 형식 **`long long`** 이 제공됩니다. 또한 너무 커서 부호 있는 형식에 맞지 않는 'll' 접미사가 포함된 리터럴에는 **`unsigned long long`** 형식이 제공됩니다.
 
-이로 인해 다른 경고 진단이 생성될 수 있으며 리터럴에 대해 수행되는 산술 연산에 대한 동작이 달라질 수 있습니다.
+이 변경으로 인해 다른 경고 진단이 생성될 수 있으며, 리터럴에서 산술 연산 동작이 달라질 수 있습니다.
 
-다음 예에서는 Visual Studio 2019, 버전 16.4의 새 동작을 보여줍니다. `i` 변수는 **unsigned int** 형식이므로 경고가 발생합니다. 변수 `j`의 상위 비트는 0으로 설정됩니다.
+다음 예제는 Visual Studio 2019 버전 16.4의 새 동작을 보여 줍니다. `i` 변수는 이제 **`unsigned int`** 형식입니다. 이 때문에 경고가 발생합니다. 변수 `j`의 상위 비트는 0으로 설정됩니다.
 
 ```cpp
 void f(int r) {
@@ -531,7 +531,7 @@ void f(int r) {
 }
 ```
 
-다음 예에서는 이전 동작을 유지하여 경고 및 런타임 동작이 변경되지 않도록 하는 방법을 보여줍니다.
+다음 예제는 이전 동작을 유지하여 경고 및 런타임 동작이 변경되지 않도록 하는 방법을 보여 줍니다.
 
 ```cpp
 void f(int r) {
@@ -570,7 +570,7 @@ void f(T (&buffer)[Size], int& size_read)
 
 ### <a name="user-provided-specializations-of-type-traits"></a>형식 특성의 사용자 제공 특수화
 
-표준의 *meta.rqmts* 하위 절에 따라 MSVC 컴파일러는 이제 `std` 네임스페이스에서 지정된 `type_traits` 템플릿 중 하나의 사용자 정의 특수화를 발견하면 오류를 표시합니다. 달리 지정하지 않은 경우 이러한 특수화로 인해 정의되지 않은 동작이 발생됩니다. 다음 예에서는 정의되지 않은 동작이 규칙을 위반하여 `static_assert`이(가) **C2338** 오류로 인해 실패합니다.
+표준의 *meta.rqmts* 하위 절에 따라 MSVC 컴파일러는 이제 `std` 네임스페이스에서 지정된 `type_traits` 템플릿 중 하나의 사용자 정의 특수화를 발견하면 오류를 표시합니다. 달리 지정하지 않은 경우 이러한 특수화로 인해 정의되지 않은 동작이 발생됩니다. 다음 예제에서는 정의되지 않은 동작이 규칙을 위반하여 `static_assert`가 C2338 오류로 인해 실패합니다.
 
 ```cpp
 #include <type_traits>
@@ -600,9 +600,9 @@ static_assert(my_is_fundamental<S>::value, "fail");
 
 ### <a name="changes-to-compiler-provided-comparison-operators"></a>컴파일러에서 제공되는 비교 연산자에 대한 변경 내용
 
-MSVC 컴파일러는 이제 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 옵션이 설정되어 있는 경우 [P1630R1](https://wg21.link/p1630r1)에 따라 비교 연산자에 대해 다음과 같은 변경 내용을 구현합니다.
+MSVC 컴파일러는 이제 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 옵션이 사용 설정되어 있는 경우 [P1630R1](https://wg21.link/p1630r1)에 따라 비교 연산자에 대해 다음과 같은 변경 내용을 구현합니다.
 
-**bool**이 아닌 반환 형식이 포함된 경우 컴파일러는 더 이상 `operator==`을(를) 사용하는 식을 다시 쓰지 않습니다. 다음 코드는 *error C2088: '!=': illegal for struct*를 생성합니다.
+**bool**이 아닌 반환 형식이 포함된 경우 컴파일러는 더 이상 `operator==`을(를) 사용하는 식을 다시 쓰지 않습니다. 다음 코드는 이제 오류 C2088: `'!=': illegal for struct`를 생성합니다.
 
 ```cpp
 struct U {
@@ -635,7 +635,7 @@ bool neq(const S& lhs, const S& rhs) {
 }
 ```
 
-공용 구조체와 같은 클래스의 멤버인 기본 비교 연산자는 컴파일러가 더 이상 정의하지 않습니다. 다음 예는 이제 *C2120: ‘void’ illegal with all types*를 생성합니다.
+공용 구조체와 같은 클래스의 멤버인 기본 비교 연산자는 컴파일러가 더 이상 정의하지 않습니다. 다음 예제는 이제 C2120: `'void' illegal with all types`를 생성합니다.
 
 ```cpp
 #include <compare>
@@ -667,7 +667,7 @@ bool lt(const S& lhs, const S& rhs) {
 }
 ```
 
-컴파일러는 클래스에 참조 구성원이 포함된 경우 더 이상 기본 비교 연산자를 정의하지 않습니다. 다음과 같은 코드를 입력하면 이제 *error C2120: 'void' illegal with all types*가 생성됩니다.
+컴파일러는 클래스에 참조 구성원이 포함된 경우 더 이상 기본 비교 연산자를 정의하지 않습니다. 다음 코드는 이제 오류 C2120: `'void' illegal with all types`를 생성합니다.
 
 ```cpp
 #include <compare>
@@ -699,7 +699,7 @@ bool lt(const U& lhs, const U& rhs) {
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-165"></a><a name="improvements_165"></a> Visual Studio 2019 버전 16.5의 규칙 개선
 
-### <a name="explicit-specialization-declaration-without-an-initializer-is-not-a-definition"></a>이니셜라이저가 없는 명시적 특수화 선언은 정의가 아님
+### <a name="explicit-specialization-declaration-without-an-initializer-isnt-a-definition"></a>이니셜라이저가 없는 명시적 특수화 선언은 정의가 아님
 
 MSVC는 이제 `/permissive-` 아래에서 이니셜라이저가 없는 명시적 특수화 선언은 정의가 아니라는 표준 규칙을 적용합니다. 이전에는 이러한 선언이 기본 이니셜라이저를 갖는 정의로 간주되었습니다. 이 동작을 사용하는 프로그램은 이제 확인되지 않은 기호를 갖게 되므로 변경의 효과는 링크 타임에 볼 수 있습니다. 다음 예는 이제 오류를 발생시킵니다.
 
@@ -708,7 +708,7 @@ template <typename> struct S {
     static int a;
 };
 
-// In permissive-, this declaration is not a definition and the program will not link.
+// In permissive-, this declaration isn't a definition, and the program won't link.
 template <> int S<char>::a;
 
 int main() {
@@ -762,7 +762,7 @@ line
  line
 ```
 
-### <a name="import-and-module-keywords-are-context-dependent"></a>‘import’ 및 ‘module’ 키워드가 컨텍스트 종속적임
+### <a name="import-and-module-keywords-are-context-dependent"></a>'import' 및 'module' 키워드가 컨텍스트 종속적임
 
 P1857R1에 따라, import 및 module 전처리기 지시문에 추가 구문 제한 사항이 적용됩니다. 다음 예는 더 이상 컴파일되지 않습니다.
 
@@ -886,11 +886,182 @@ struct U {
 U u{ 0 };
 ```
 
+## <a name="conformance-improvements-in-visual-studio-2019-version-166"></a><a name="improvements_166"></a> Visual Studio 2019 버전 16.6의 규칙 개선
+
+### <a name="standard-library-streams-reject-insertions-of-mis-encoded-character-types"></a>표준 라이브러리 스트림은 잘못 인코딩된 문자 형식의 삽입을 거부함
+
+일반적으로 `wchar_t`를 `std::ostream`에 삽입하고, `char16_t` 또는 `char32_t`를 `std::ostream` 또는 `std::wostream`에 삽입하면 정수 계열 값이 출력됩니다. 이러한 문자 형식에 포인터를 삽입하면 포인터 값이 출력됩니다. 프로그래머에게는 두 가지 경우 어느 것도 직관적이지 않습니다. 프로그래머는 흔히 표준 라이브러리가 문자 또는 null로 끝나는 문자열을 대신 트랜스코딩하고 결과를 출력할 것으로 예상합니다.
+
+C++20 제안 [P1423R3](https://wg21.link/p1423r3)은 스트림 및 문자 또는 문자 포인터 형식의 조합에 대해 삭제된 이러한 스트림 삽입 연산자 오버로드를 추가합니다. **`/std:c++latest`** 에서 오버로드는 의도하지 않은 방식으로 동작하는 대신 이러한 삽입을 잘못된 형식으로 만듭니다. 컴파일러는 이러한 삽입이 발견되면 오류 C2280을 발생시킵니다. "이스케이프 해치" 매크로 `_HAS_STREAM_INSERTION_OPERATORS_DELETED_IN_CXX20`을 `1`로 정의하여 이전 동작을 복원할 수 있습니다. (제안은 `char8_t`의 스트림 삽입 연산자도 삭제합니다. 표준 라이브러리는 `char8_t` 지원을 추가할 때 유사한 오버로드를 구현했으므로 "잘못된" 동작을 `char8_t`에 사용할 수 없었습니다.)
+
+이 샘플에서는 다음과 같이 변경된 동작을 보여 줍니다.
+
+```cpp
+#include <iostream>
+int main() {
+    const wchar_t cw = L'x', *pw = L"meow";
+    const char16_t c16 = u'x', *p16 = u"meow";
+    const char32_t c32 = U'x', *p32 = U"meow";
+    std::cout << cw << ' ' << pw << '\n';
+    std::cout << c16 << ' ' << p16 << '\n';
+    std::cout << c32 << ' ' << p32 << '\n';
+    std::wcout << c16 << ' ' << p16 << '\n';
+    std::wcout << c32 << ' ' << p32 << '\n';
+}
+```
+
+이제 코드에서 다음과 같은 진단 메시지를 생성합니다.
+
+```Output
+error C2280: 'std::basic_ostream<char,std::char_traits<char>> &std::<<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,wchar_t)': attempting to reference a deleted function
+error C2280: 'std::basic_ostream<char,std::char_traits<char>> &std::<<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char16_t)': attempting to reference a deleted function
+error C2280: 'std::basic_ostream<char,std::char_traits<char>> &std::<<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char32_t)': attempting to reference a deleted function
+error C2280: 'std::basic_ostream<wchar_t,std::char_traits<wchar_t>> &std::<<<std::char_traits<wchar_t>>(std::basic_ostream<wchar_t,std::char_traits<wchar_t>> &,char16_t)': attempting to reference a deleted function
+error C2280: 'std::basic_ostream<wchar_t,std::char_traits<wchar_t>> &std::<<<std::char_traits<wchar_t>>(std::basic_ostream<wchar_t,std::char_traits<wchar_t>> &,char32_t)': attempting to reference a deleted function
+```
+
+문자 형식을 `unsigned int`로 또는 pointer-to-character 형식을 `const void*`로 변환하여 모든 언어 모드에서 이전 동작의 효과를 달성할 수 있습니다.
+
+```c++
+#include <iostream>
+int main() {
+    const wchar_t cw = L'x', *pw = L"meow";
+    const char16_t c16 = u'x', *p16 = u"meow";
+    const char32_t c32 = U'x', *p32 = U"meow";
+    std::cout << (unsigned)cw << ' ' << (const void*)pw << '\n'; // Outputs "120 0052B1C0"
+    std::cout << (unsigned)c16 << ' ' << (const void*)p16 << '\n'; // Outputs "120 0052B1CC"
+    std::cout << (unsigned)c32 << ' ' << (const void*)p32 << '\n'; // Outputs "120 0052B1D8"
+    std::wcout << (unsigned)c16 << ' ' << (const void*)p16 << '\n'; // Outputs "120 0052B1CC"
+    std::wcout << (unsigned)c32 << ' ' << (const void*)p32 << '\n'; // Outputs "120 0052B1D8"
+}
+```
+
+### <a name="changed-return-type-of-stdpow-for-stdcomplex"></a>`std::pow()`의 변경된 반환 형식 `std::complex`
+
+이전에는 함수 템플릿 `std::pow()`의 반환 형식에 대한 승격 규칙의 MSVC 구현이 잘못되었습니다. 예를 들어 이전에는 `pow(complex<float>, int)`가 `complex<float>`를 반환했습니다. 이제는 올바르게 `complex<double>`을 반환합니다. 이 수정은 Visual Studio 2019 버전 16.6의 모든 표준 모드에서 무조건 구현되었습니다.
+
+이 변경으로 컴파일러 오류가 발생할 수 있습니다. 예를 들어 이전에는 `pow(complex<float>, int)`에 **`float`** 를 곱할 수 있었습니다. `complex<T> operator*`는 동일한 형식의 인수를 예상하기 때문에 다음 예제는 이제 컴파일러 오류 C2676: `binary '*': 'std::complex<double>' does not define this operator or a conversion to a type acceptable to the predefined operator`를 내보냅니다.
+
+```cpp
+// pow_error.cpp
+// compile by using: cl /EHsc /nologo /W4 pow_error.cpp
+#include <complex>
+
+int main() {
+    std::complex<float> cf(2.0f, 0.0f);
+    (void) (std::pow(cf, -1) * 3.0f);
+}
+```
+
+가능한 해결 방법에는 여러 가지가 있습니다.
+
+- **`float`** 피승수의 형식을 **`double`** 로 변경합니다. `pow`에서 반환된 형식과 일치하도록 이 인수를 `complex<double>`로 직접 변환할 수 있습니다.
+
+- `complex<float>{pow(ARG, ARG)}`를 명시하여 `pow`의 결과 범위를 `complex<float>`로 좁힙니다. 그런 다음 **`float`** 값을 계속 곱할 수 있습니다.
+
+- **`int`** 대신 **`float`** 를 `pow`에 전달합니다. 이 연산은 느릴 수 있습니다.
+
+- 경우에 따라 `pow`를 완전히 피할 수 있습니다. 예를 들어 `pow(cf, -1)`을 나누기로 대체할 수 있습니다.
+
+### <a name="switch-related-warnings-for-c"></a>C의 스위치 관련 경고
+
+Visual Studio 2019 버전 16.6부터 컴파일러는 C로 컴파일된 코드에 대한 일부 기존 C++ 경고를 구현합니다. 이제 다음과 같은 경고를 다양한 수준에서 사용 설정할 수 있습니다. C4060, C4061, C4062, C4063, C4064, C4065, C4808 및 C4809. C4065 및 C4060 경고는 C에서 기본적으로 사용되지 않습니다.
+
+경고는 누락된 **`case`** 문, 정의되지 않은 **`enum`** 및 잘못된 **`bool`** 스위치(즉, 너무 많은 사례가 포함 된 스위치)에서 트리거됩니다. 예를 들어:
+
+```c
+#include <stdbool.h>
+
+int main() {
+    bool b = true;
+    switch (b) {
+        case true: break;
+        case false: break;
+        default: break; // C4809: switch statement has redundant 'default' label;
+                        // all possible 'case' labels are given
+    }
+}
+```
+
+이 코드를 수정하려면 중복 **`default`** 사례를 제거합니다.
+
+```c
+#include <stdbool.h>
+
+int main() {
+    bool b = true;
+    switch (b) {
+        case true: break;
+        case false: break;
+    }
+}
+```
+
+### <a name="unnamed-classes-in-typedef-declarations"></a>`typedef` 선언에 있는 명명되지 않은 클래스
+
+Visual Studio 2019 버전 16.6부터 `typedef` 선언의 동작이 [P1766R1](https://wg21.link/P1766R1)을 준수하도록 제한되었습니다. 이 업데이트로 `typedef` 선언 내의 명명되지 않은 클래스는 다음을 제외한 다른 멤버를 가질 수 없습니다.
+
+- 비정적 데이터 멤버
+- 멤버 클래스
+- 멤버 열거형
+- 기본 멤버 이니셜라이저
+
+중첩된 각 클래스에 동일한 제한이 재귀적으로 적용됩니다. 제한 사항은 연결을 위해 `typedef` 이름이 있는 구조체의 단순성을 보장하기 위한 것입니다. 컴파일러가 연결을 위해 `typedef` 이름에 도달하기 전에 연결 계산이 필요하지 않을 만큼 간단해야 합니다.
+
+이 변경은 컴파일러의 모든 표준 모드에 영향을 줍니다. 기본( **`/std:c++14`** ) 및 **`/std:c++17`** 모드에서 컴파일러는 비순응 코드에 대한 경고 C5208을 내보냅니다. **`/permissive-`** 가 지정된 경우 컴파일러는 **`/std:c++14`** 아래에서 경고 C5208을 오류로 내보내고 **`/std:c++17`** 아래에서 오류 C7626을 내보냅니다. 컴파일러는 **`/std:c++latest`** 가 지정된 경우 비순응 코드에 대한 오류 C7626을 내보냅니다.
+
+다음 샘플은 명명되지 않은 구조체에서 더 이상 허용되지 않는 구문을 보여 줍니다. 지정된 표준 모드에 따라 C5208 또는 C7626 오류나 경고를 내보냅니다.
+
+```cpp
+struct B { };
+typedef struct : B { // inheriting from 'B'; ill-formed
+    void f(); // ill-formed
+    static int i; // ill-formed
+    struct U {
+        void f(); // nested class has non-data member; ill-formed
+    };
+    int j = 10; // default member initializer; ill-formed
+} S;
+```
+
+위의 코드는 명명되지 않은 클래스에 이름을 지정하여 수정할 수 있습니다.
+
+```cpp
+struct B { };
+typedef struct S_ : B {
+    void f();
+    static int i;
+    struct U {
+        void f();
+    };
+    int j = 10;
+} S;
+```
+
+### <a name="default-argument-import-in-ccli"></a>C++/CLI에서 기본 인수 가져오기
+
+.NET Core 기본 인수가 있는 API 수가 늘어나고 있기 때문에 이제 C++/CLI 기본 인수 가져오기를 지원합니다. 이 변경은 다음 예제와 같이 여러 오버로드가 선언된 기존 코드를 중단할 수 있습니다.
+
+```cpp
+public class R {
+    public void Func(string s) {}   // overload 1
+    public void Func(string s, string s2 = "") {} // overload 2;
+}
+```
+
+이 클래스를 C++/CLI로 가져올 때 오버로드 중 하나를 호출하면 오류가 발생합니다.
+
+```cpp
+    (gcnew R)->Func("abc"); // error C2668: 'R::Func' ambiguous call to overloaded function
+```
+
+두 오버로드 모두 이 인수 목록과 일치하므로 컴파일러는 오류 C2668을 내보냅니다. 두 번째 오버로드에서 두 번째 인수는 기본 인수로 채워집니다. 이 문제를 해결하기 위해 중복 오버로드 (1)을 삭제할 수 있습니다. 또는 전체 인수 목록을 사용하고 명시적으로 기본 인수를 제공합니다.
+
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a> Visual Studio 2019의 버그 수정 및 동작 변경
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>constexpr 함수의 reinterpret_cast
 
-**reinterpret_cast**는 **constexpr** 함수에서 사용할 수 없습니다. Microsoft C++ 컴파일러는 이전에 **constexpr** 컨텍스트에서 사용되는 경우에만 **reinterpret_cast**를 거부했습니다. Visual Studio 2019에서는 모든 언어 표준 모드에서 컴파일러가 **constexpr** 함수의 정의에서 **reinterpret_cast**를 정확히 진단합니다. 이제 다음 코드는 *C3615: constexpr 함수 ‘f’는 상수 식이 될 수 없음*을 생성합니다.
+**reinterpret_cast**는 **constexpr** 함수에서 사용할 수 없습니다. Microsoft C++ 컴파일러는 이전에 **constexpr** 컨텍스트에서 사용되는 경우에만 **reinterpret_cast**를 거부했습니다. Visual Studio 2019에서는 모든 언어 표준 모드에서 컴파일러가 **constexpr** 함수의 정의에서 **reinterpret_cast**를 정확히 진단합니다. 다음 코드는 이제 C3615: `constexpr function 'f' cannot result in a constant expression`을 생성합니다.
 
 ```cpp
 long long i = 0;
@@ -910,7 +1081,7 @@ std::wstring ws = /* … */;
 std::string out(ws.begin(), ws.end());
 ```
 
-Visual Studio 2019에서 *C4244: 'argument': 데이터 손실이 가능한 'wchar_t'에서 'const _Elem'으로 변환*이 발생합니다. 경고를 방지하려면 다음 예제와 같이 std::string을 초기화할 수 있습니다.
+Visual Studio 2019에서 경고 C4244: `'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data`가 올바로 생성됩니다. 경고를 방지하려면 다음 예제와 같이 std::string을 초기화할 수 있습니다.
 
 ```cpp
 std::wstring ws = L"Hello world";
@@ -923,7 +1094,7 @@ for (wchar_t ch : ws)
 
 ### <a name="incorrect-calls-to--and---under-clr-or-zw-are-now-correctly-detected"></a>/clr 또는 /ZW 아래에 += 및 -=에 대한 잘못된 호출 이제 올바르게 검색됩니다.
 
-Visual Studio 2017에서는 컴파일러가 자동으로 오류를 무시하고 `/clr` 또는 `/ZW` 아래의 잘못된 += 및 -= 호출에 대한 코드를 생성하지 않는 버그가 도입되었습니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 *오류 C2845: 'System::string ^': 이 형식에서는 포인터 산술이 허용되지 않음*을 올바르게 발생시킵니다.
+Visual Studio 2017에서는 컴파일러가 자동으로 오류를 무시하고 `/clr` 또는 `/ZW` 아래의 잘못된 += 및 -= 호출에 대한 코드를 생성하지 않는 버그가 도입되었습니다. 다음 코드는 Visual Studio 2017에서 오류 없이 컴파일되지만 Visual Studio 2019에서는 오류 C2845: `'System::String ^': pointer arithmetic not allowed on this type`을 생성합니다.
 
 ```cpp
 public enum class E { e };
@@ -938,7 +1109,7 @@ void f(System::String ^s)
 
 ### <a name="initializers-for-inline-static-data-members"></a>인라인 정적 데이터 멤버에 대한 이니셜라이저
 
-이제 **인라인** 및 **정적 constexpr** 이니셜라이저 내에서 잘못된 멤버 액세스가 올바르게 검색됩니다. 다음 예제에서는 Visual Studio 2017에서 오류 없이 컴파일되지만 `/std:c++17` 모드 아래에 Visual Studio 2019에서는 *오류 C2248: 'X' 클래스에 선언된 프라이빗 멤버에 액세스할 수 없음*을 발생시킵니다.
+이제 **인라인** 및 **정적 constexpr** 이니셜라이저 내에서 잘못된 멤버 액세스가 올바르게 검색됩니다. 다음 예제는 Visual Studio 2017에서 오류 없이 컴파일되지만 **`/std:c++17`** 모드 아래 Visual Studio 2019에서는 오류 C2248: `cannot access private member declared in class 'X'`를 발생시킵니다.
 
 ```cpp
 struct X
@@ -965,7 +1136,7 @@ struct X
 
 ### <a name="c4800-reinstated"></a>C4800 복원
 
-MSVC에서는 **bool**로의 암시적 변환에 대해 성능 경고 C4800을 사용했습니다. 이 경고는 너무 번거롭고 표시되지 않도록 설정할 수 없어 Visual Studio 2017에서 제거되었습니다. 그러나 Visual Studio 2017의 수명 주기 동안 이 경고를 통해 해결되었던 유용한 사례에 대한 많은 피드백을 받았습니다. Visual Studio 2019에서는 설명을 포함하는 C4165와 함께 신중하게 조정된 C4800이 다시 추가되었습니다. 두 경고는 명시적 캐스트 또는 적절한 형식의 0 비교를 사용하여 표시되지 않도록 쉽게 설정할 수 있습니다. C4800은 off-by-default 수준 4 경고이고 C4165는 off-by-default 수준 3 경고입니다. 둘 다 `/Wall` 컴파일러 옵션을 사용하여 검색할 수 있습니다.
+MSVC에서는 **bool**로의 암시적 변환에 대해 성능 경고 C4800을 사용했습니다. 이 경고는 너무 번거롭고 표시되지 않도록 설정할 수 없어 Visual Studio 2017에서 제거되었습니다. 그러나 Visual Studio 2017의 수명 주기 동안 이 경고를 통해 해결되었던 유용한 사례에 대한 많은 피드백을 받았습니다. Visual Studio 2019에서는 설명을 포함하는 C4165와 함께 신중하게 조정된 C4800이 다시 추가되었습니다. 두 경고 모두 명시적 캐스트를 사용하거나 적절한 형식의 0 비교를 통해 표시되지 않도록 쉽게 설정할 수 있습니다. C4800은 off-by-default 수준 4 경고이고 C4165는 off-by-default 수준 3 경고입니다. 둘 다 `/Wall` 컴파일러 옵션을 사용하여 검색할 수 있습니다.
 
 다음 예제에서는 `/Wall`에서 C4800 및 C4165를 발생시킵니다.
 
@@ -993,7 +1164,7 @@ bool test(IUnknown* p)
 
 ### <a name="local-class-member-function-doesnt-have-a-body"></a>로컬 클래스 멤버 함수에 본문이 없습니다.
 
-Visual Studio 2017에서 *C4822: 로컬 클래스 멤버 함수에 본문이 없음*은 컴파일러 옵션 `/w14822`가 명시적으로 설정된 경우에만 발생합니다. `/Wall`에는 표시되지 않습니다. Visual Studio 2019에서 C4822는 `/w14822`를 명시적으로 설정하지 않고도 `/Wall`에서 검색할 수 있도록 하는 off-by-default 경고입니다.
+Visual Studio 2017에서 경고 C4822: `Local class member function doesn't have a body`는 컴파일러 옵션 `/w14822`가 명시적으로 설정된 경우에만 발생합니다. `/Wall`로 표시되지는 않습니다. Visual Studio 2019에서 C4822는 `/w14822`를 명시적으로 설정하지 않고도 `/Wall`에서 검색할 수 있도록 하는 off-by-default 경고입니다.
 
 ```cpp
 void example()
@@ -1007,7 +1178,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>constexpr if 문을 포함하는 함수 템플릿 본문
 
-**if constexpr** 문을 포함하는 템플릿 함수 본문에 일부 [/permissive-](../build/reference/permissive-standards-conformance.md) 구문 분석 관련 검사가 활성화되어 있습니다. 예를 들어 Visual Studio 2017에서 다음 코드는 *C7510: ‘Type’: 종속 형식 이름을 사용하는 경우 ‘typename’으로 시작해야 합니다.* 를 생성합니다. 단, **/permissive-** 옵션이 설정되지 않은 경우에만 해당합니다. Visual Studio 2019에서는 **/permissive-** 옵션이 설정된 경우에도 동일한 코드에서 오류가 발생합니다.
+**if constexpr** 문을 포함하는 템플릿 함수 본문에 일부 [/permissive-](../build/reference/permissive-standards-conformance.md) 구문 분석 관련 검사가 활성화되어 있습니다. 예를 들어 Visual Studio 2017에서 다음 코드는 **`/permissive-`** 옵션이 설정된 경우에만 C7510: `'Type': use of dependent type name must be prefixed with 'typename'`을 생성합니다. Visual Studio 2019에서는 **`/permissive-`** 옵션이 설정된 경우에도 동일한 코드에서 오류가 발생합니다.
 
 ```cpp
 template <typename T>
@@ -1038,15 +1209,15 @@ int main()
 }
 ```
 
-이 오류를 방지하려면 `a` 선언 **typename** 키워드를 추가합니다.`typename T::Type a;`
+이 오류를 방지하려면 **typename** 키워드를 `a`:`typename T::Type a;` 선언에 추가합니다.
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>인라인 어셈블리 코드는 람다 식에서 지원되지 않음
 
-Microsoft C++ 팀은 최근 람다 내에서 인라인 어셈블러를 사용하면 런타임 시 `ebp`(반환 주소 레지스터)가 손상될 수 있는 보안 문제를 인식하게 되었습니다. 악의적인 공격자가 이 시나리오를 활용할 수 있었습니다. 이 문제의 특성, 인라인 어셈블러가 x86에서만 지원된다는 팩트, 인라인 어셈블러와 다른 컴파일러 부분 간의 상호 작용 부족 등을 고려할 때, 이 문제의 가장 안전한 솔루션은 람다 식 내에서 인라인 어셈블러를 허용하지 않는 것이었습니다.
+Microsoft C++ 팀은 최근 람다 내에서 인라인 어셈블러를 사용하면 런타임 시 `ebp`(반환 주소 레지스터)가 손상될 수 있는 보안 문제를 인식하게 되었습니다. 악의적인 공격자가 이 시나리오를 활용할 수 있었습니다. 인라인 어셈블러는 x86에서만 지원되며, 인라인 어셈블러와 컴파일러 나머지 부분 간의 상호 작용은 좋지 않습니다. 이러한 사실과 문제의 특성을 감안할 때 이 문제의 가장 안전한 해결책은 람다 식 내에서 인라인 어셈블러를 허용하지 않는 것입니다.
 
 발견된 ‘실제’ 사례에서 인라인 어셈블러가 람다 식 내에서 사용되는 유일한 목적은 반환 주소를 캡처하기 위한 것이었습니다. 이 시나리오에서는 컴파일러 고유의 `_ReturnAddress()`를 사용하여 모든 플랫폼에서 반환 주소를 캡처할 수 있습니다.
 
-다음 코드는 Visual Studio 2017 15.9 및 Visual Studio 2019에서 *C7552: 인라인 어셈블러는 람다에서 지원되지 않음*을 생성합니다.
+다음 코드는 Visual Studio 2017 15.9와 Visual Studio 2019 모두에서 C7552: `inline assembler is not supported in a lambda`를 생성합니다.
 
 ```cpp
 #include <cstdio>
@@ -1115,7 +1286,7 @@ int main()
 
 ### <a name="correct-warning-for-narrowing-string-conversions"></a>문자열 변환을 좁히기 위한 올바른 경고
 
-표준에서 요청되지 않았으며, C4244 축소 경고가 표시되지 않도록 하는 의사 `static_cast`가 `std::string`에서 제거되었습니다. 이제 `std::string::string(const wchar_t*, const wchar_t*)`를 호출하려고 하면 *C4244 "wchar_t를 char로 축소합니다."* 를 적절히 내보냅니다.
+표준이 요청하지 않았고 실수로 C4244 축소 경고가 표시되지 않도록 한 의사 `static_cast`가 `std::string`에서 제거되었습니다. 이제 `std::string::string(const wchar_t*, const wchar_t*)`를 호출하려고 하면 C4244 `narrowing a wchar_t into a char`를 제대로 내보냅니다.
 
 ### <a name="various-filesystem-correctness-fixes"></a>다양한 \<filesystem> 정확성 수정
 
@@ -1143,7 +1314,7 @@ int main()
 
 ### <a name="fixes-for-iterator-unwrapping"></a>반복기 래핑 해제를 위한 수정
 
-C++ 팀 블로그 문서 [STL Features and Fixes in VS 2017 15.8](https://devblogs.microsoft.com/cppblog/stl-features-and-fixes-in-vs-2017-15-8/)(VS 2017 15.8의 STL 기능 및 수정 사항)에 설명된 대로 Visual Studio 2017 15.8에서 프로그래머와 사용자 통합을 위해 처음 공개된 반복기 래핑 해제 동작은 표준 라이브러리 반복기에서 파생된 반복기를 더 이상 래핑 해제하지 않습니다. 예를 들어 `std::vector<int>::iterator`에서 파생되고 동작을 사용자 지정하려는 사용자는 이제 포인터의 동작 대신 표준 라이브러리 알고리즘을 호출할 때 사용자 지정된 동작을 가져옵니다.
+일부 반복기 래핑 해제 동작은 C++ 팀 블로그 문서 [VS 2017 15.8의 STL 기능 및 수정 사항](https://devblogs.microsoft.com/cppblog/stl-features-and-fixes-in-vs-2017-15-8/)에 설명된 대로 Visual Studio 2017 15.8에서 프로그래머와 사용자 통합을 위해 처음 공개되었습니다. 이 동작은 표준 라이브러리 반복기에서 파생된 반복기를 더 이상 래핑 해제하지 않습니다. 예를 들어 `std::vector<int>::iterator`에서 파생되고 동작을 사용자 지정하려는 사용자는 이제 포인터의 동작 대신 표준 라이브러리 알고리즘을 호출할 때 사용자 지정된 동작을 가져옵니다.
 
 순서가 지정되지 않은 컨테이너 `reserve` 함수가 이제 [LWG 2156](https://cplusplus.github.io/LWG/issue2156)에 설명된 대로 N개 요소를 실제로 예약합니다.
 
@@ -1151,7 +1322,7 @@ C++ 팀 블로그 문서 [STL Features and Fixes in VS 2017 15.8](https://devblo
 
 - 이전에는 동시성 라이브러리에 전달된 일부 시간 값이 오버플로되었습니다(예: `condition_variable::wait_for(seconds::max())`). 현재 수정된 이 오버플로는 임의의 29일 주기로 동작을 변경했습니다(기본 Win32 API에서 허용된 uint32_t 밀리초가 오버플로된 경우).
 
-- 이제 \<ctime> 헤더가 전역 네임스페이스에서 선언하는 것 외에 `std` 네임스페이스에서도 `timespec` 및 `timespec_get`을(를) 올바르게 선언합니다.
+- 이제 \<ctime> 헤더가 전역 네임스페이스에서 선언하는 것 외에 `std` 네임스페이스에서도 `timespec` 및 `timespec_get`을 올바르게 선언합니다.
 
 ### <a name="various-fixes-for-containers"></a>컨테이너에 대한 다양한 수정
 
@@ -1161,7 +1332,7 @@ C++ 팀 블로그 문서 [STL Features and Fixes in VS 2017 15.8](https://devblo
 
 - 컨테이너는 `is_always_equal`로 선언된 할당자에 대해서도 `propagate_on_container_copy_assignment`, `propagate_on_container_move_assignment` 및 `propagate_on_container_swap`에 따라 할당자를 항상 복사/이동/스왑하도록 수정되었습니다.
 
-- [P0083 "맵 및 집합 스플라이스"](https://wg21.link/p0083r3)에 따라 rvalue 컨테이너를 허용하는 컨테이너 병합 및 추출 멤버 함수에 대한 오버로드 추가
+- [P0083 "맵 및 집합 스플라이스"](https://wg21.link/p0083r3)에 따라 rvalue 컨테이너를 허용하는 컨테이너 병합 및 추출 멤버 함수에 대한 오버로드가 추가되었습니다.
 
 ### <a name="stdbasic_istreamread-processing-of-rn--n"></a>\\r\\n => \\n의 `std::basic_istream::read` 처리
 
@@ -1239,7 +1410,7 @@ struct Comparer  {
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11: 더 많은 라이브러리의 SFINAE 식 지원
 
-Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매개 변수로 나타날 수 있는 템플릿 인수 감소 및 대체에 필요한 SFINAE 식에 대한 지원을 계속 개선하고 있습니다. 자세한 내용은 [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)(Visual Studio 2017 RC의 SFINAE 식 향상)를 참조하세요.
+컴파일러는 SFINAE 식에 대한 지원을 계속 개선하고 있습니다. 이는 **decltype** 및 **constexpr** 식이 템플릿 매개 변수로 나타날 수 있는 템플릿 인수 추론 및 대체에 필요합니다. 자세한 내용은 [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)(Visual Studio 2017 RC의 SFINAE 식 향상)를 참조하세요.
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14: 집계용 NSDMI
 
@@ -1247,7 +1418,7 @@ Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매�
 
 ### <a name="c14-extended-constexpr"></a>C++14: 확장된 **constexpr**
 
-**constexpr**로 선언된 식은 이제 특정 종류의 선언, if 및 switch 문, loop 문 및 수명이 constexpr 식 계산 내에서 시작된 개체의 변형을 포함할 수 있습니다. 또한 더 이상 **constexpr** 비정적 멤버 함수가 암시적으로 **const**가 될 필요가 없습니다. 자세한 내용은 [Relaxing constraints on constexpr functions](https://wg21.link/n3652)(constexpr 함수에 대한 제약 조건 완화)를 참조하세요.
+**constexpr**로 선언된 식은 이제 특정 종류의 선언, if 및 switch 문, loop 문 및 수명이 constexpr 식 계산 내에서 시작된 개체의 변형을 포함할 수 있습니다. 더 이상 **constexpr** 비정적 멤버 함수가 암시적으로 **const**가 될 필요가 없습니다. 자세한 내용은 [Relaxing constraints on constexpr functions](https://wg21.link/n3652)(constexpr 함수에 대한 제약 조건 완화)를 참조하세요.
 
 ### <a name="c17-terse-static_assert"></a>C++17: 간결한 `static_assert`
 
@@ -1255,7 +1426,7 @@ Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매�
 
 ### <a name="c17-fallthrough-attribute"></a>C++17: `[[fallthrough]]` 특성
 
-**/std:c++17** 모드에서 `[[fallthrough]]` 특성은 switch 문의 컨텍스트에서 제어 이동 동작이 의도된 컴파일러에 대한 힌트로 사용될 수 있습니다. 이 특성을 사용하면 컴파일러가 이러한 경우에 경고를 실행하지 않습니다. 자세한 내용은 [Wording for \[\[fallthrough\]\] attribute](https://wg21.link/p0188r0)([[fallthrough]] 특성의 표현)를 참조하세요.
+**`/std:c++17`** 모드에서 `[[fallthrough]]` 특성은 switch 문의 컨텍스트에서 제어 이동 동작이 의도된 컴파일러에 대한 힌트로 사용될 수 있습니다. 이 특성을 사용하면 컴파일러가 이러한 경우에 경고를 실행하지 않습니다. 자세한 내용은 [Wording for \[\[fallthrough\]\] attribute](https://wg21.link/p0188r0)([[fallthrough]] 특성의 표현)를 참조하세요.
 
 ### <a name="generalized-range-based-for-loops"></a>일반화된 범위 기반 for 루프
 
@@ -1289,7 +1460,7 @@ Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매�
 
 ### <a name="construction-rules-for-enum-class-values"></a>**열거형 클래스** 값에 대한 생성 규칙
 
-이제 해당 정의에서 열거자를 소개하지 않고 소스에서 목록 초기화 구문을 사용하는 경우 범위가 지정된 열거형의 기본 형식에서 열거형 자체로의 암시적/비축소 변환 기능이 있습니다. 자세한 내용은 [enum 클래스 값의 생성 규칙](https://wg21.link/p0138r2) 및 [열거형](../cpp/enumerations-cpp.md#no_enumerators)을 참조하세요.
+이제 범위가 지정된 열거형의 기본 형식에서 열거형 자체로의 암시적 및 비축소 변환이 생겼습니다. 변환은 해당 정의가 열거자를 도입하지 않는 경우와 소스가 목록 초기화 구문을 사용하는 경우에 사용할 수 있습니다. 자세한 내용은 [enum 클래스 값의 생성 규칙](https://wg21.link/p0138r2) 및 [열거형](../cpp/enumerations-cpp.md#no_enumerators)을 참조하세요.
 
 ### <a name="capturing-this-by-value"></a>값 기준 `*this` 캡처
 
@@ -1305,11 +1476,11 @@ Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매�
 
 ## <a name="conformance-improvements-in-155"></a><a name="improvements_155"></a> 15.5의 규칙 향상
 
-\[14]로 표시된 기능은 **/std:c++14** 모드에서도 무조건 사용할 수 있습니다.
+\[14]로 표시된 기능은 **`/std:c++14`** 모드에서도 무조건 사용할 수 있습니다.
 
 ### <a name="new-compiler-switch-for-extern-constexpr"></a>**extern constexpr**을 위한 새로운 컴파일러 스위치
 
-이전 버전의 Visual Studio에서는 **constexpr** 변수에 **extern**이 표시된 경우에도 컴파일러가 항상 해당 변수에 내부 연결을 제공했습니다. Visual Studio 2017 15.5 버전에서 새 컴파일러 스위치[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)는 올바른 표준 준수 동작을 활성화합니다. 자세한 내용은 [extern constexpr 링크](#extern_linkage)를 참조하세요.
+이전 버전의 Visual Studio에서는 **constexpr** 변수에 **extern**이 표시된 경우에도 컴파일러가 항상 해당 변수에 내부 연결을 제공했습니다. Visual Studio 2017 15.5 버전에서 새 컴파일러 스위치([`/Zc:externConstexpr`](../build/reference/zc-externconstexpr.md))는 올바른 표준 준수 동작을 사용하도록 설정합니다. 자세한 내용은 [extern constexpr 링크](#extern_linkage)를 참조하세요.
 
 ### <a name="removing-dynamic-exception-specifications"></a>동적 예외 사양 제거
 
@@ -1321,7 +1492,7 @@ Visual C++ 컴파일러는 **decltype** 및 **constexpr** 식이 템플릿 매�
 
 ### <a name="rewording-enable_shared_from_this"></a>`enable_shared_from_this` 표현 수정
 
-C++11에 [P0033R1](https://wg21.link/p0033r1) `enable_shared_from_this`가 추가되었습니다. C++17 표준은 비정상적인 특정 사례를 더 잘 처리하도록 사양을 업데이트합니다. [14]
+C++11에 [P0033R1](https://wg21.link/p0033r1) `enable_shared_from_this`가 추가되었습니다. C++17 표준은 비정상적인 특정 사례를 더 잘 처리하도록 사양을 업데이트합니다. \[14]
 
 ### <a name="splicing-maps-and-sets"></a>맵과 집합 스플라이스
 
@@ -1341,11 +1512,11 @@ C++11에 [P0033R1](https://wg21.link/p0033r1) `enable_shared_from_this`가 추�
 
 ### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
 
-[P0414R2](https://wg21.link/p0414r2) 라이브러리 기본 사항에서 C++17로 `shared_ptr` 변경 사항 병합. [14]
+[P0414R2](https://wg21.link/p0414r2) 라이브러리 기본 사항에서 C++17로 `shared_ptr` 변경 사항 병합. \[14]
 
 ### <a name="fixing-shared_ptr-for-arrays"></a>배열에 대한 `shared_ptr` 수정
 
-[P0497R0](https://wg21.link/p0497r0) 배열에 대한 shared_ptr 지원 해결입니다. [14]
+[P0497R0](https://wg21.link/p0497r0) 배열에 대한 shared_ptr 지원 해결입니다. \[14]
 
 ### <a name="clarifying-insert_return_type"></a>`insert_return_type`의 명확한 정의
 
@@ -1357,15 +1528,15 @@ C++11에 [P0033R1](https://wg21.link/p0033r1) `enable_shared_from_this`가 추�
 
 ### <a name="annex-d-features-deprecated"></a>부록 D 기능 사용 중단
 
-C++ 표준의 부록 D에는 사용이 중단된 모든 기능이 포함되어 있습니다(`shared_ptr::unique()`, `<codecvt>` 및 `namespace std::tr1` 포함). **/std:c++17** 컴파일러 스위치를 설정하면 부록 D의 거의 모든 표준 라이브러리 기능이 사용되지 않는 것으로 표시됩니다. 자세한 내용은 [부록 D의 표준 라이브러리 기능이 사용되지 않는 것으로 표시됨](#annex_d)을 참조하세요.
+C++ 표준의 부록 D에는 사용이 중단된 모든 기능이 포함되어 있습니다(`shared_ptr::unique()`, `<codecvt>` 및 `namespace std::tr1` 포함). **`/std:c++17`** 컴파일러 스위치를 설정하면 부록 D의 거의 모든 표준 라이브러리 기능이 사용되지 않는 것으로 표시됩니다. 자세한 내용은 [부록 D의 표준 라이브러리 기능이 사용되지 않는 것으로 표시됨](#annex_d)을 참조하세요.
 
-`<experimental/filesystem>`의 `std::tr2::sys` 네임스페이스는 이제 기본적으로 **/std:c++14** 하에서 사용 중단 경고를 생성하며, **/std:c++17** 하에서 기본적으로 제거됩니다.
+`<experimental/filesystem>`의 `std::tr2::sys` 네임스페이스는 이제 기본적으로 **`/std:c++14`** 하에서 사용 중단 경고를 생성하며, **`/std:c++17`** 하에서 기본적으로 제거됩니다.
 
 비표준 확장(클래스 내 명시적 특수화)을 방지하여 `<iostream>`의 규칙이 개선되었습니다.
 
 이제 표준 라이브러리에서 변수 템플릿을 내부적으로 사용합니다.
 
-형식 시스템의 **noexcept** 추가 및 dynamic-exception-specifications 제거를 포함한 C++17 컴파일러 변경 사항에 따라 표준 라이브러리가 업데이트되었습니다.
+C++17 컴파일러 변경에 대응하여 표준 라이브러리가 업데이트되었습니다. 업데이트에는 형식 시스템에 **noexcept** 추가와 동적 예외 사양 제거가 포함됩니다.
 
 ## <a name="conformance-improvements-in-156"></a><a name="improvements_156"></a> 15.6의 규칙 향상
 
@@ -1381,7 +1552,7 @@ C++ 표준의 부록 D에는 사용이 중단된 모든 기능이 포함되어 �
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17: 상속 생성자 표현 수정
 
-[P0136R1](https://wg21.link/p0136r1) 생성자의 이름을 지정하는 **using** 선언에서 이제 파생 클래스 생성자를 추가로 선언하는 대신 파생 클래스의 초기화에 해당 기본 클래스 생성자가 표시되도록 합니다. 이 표현 수정은 C++14의 변경 내용입니다. Visual Studio 2017 버전 15.7 이상의 **/std:c++17** 모드에서는, C++14에서 유효하고 상속 생성자를 사용하는 코드가 유효하지 않거나 다른 의미 체계를 가질 수 있습니다.
+[P0136R1](https://wg21.link/p0136r1) 생성자의 이름을 지정하는 **using** 선언에서 이제 파생 클래스 생성자를 추가로 선언하는 대신 파생 클래스의 초기화에 해당 기본 클래스 생성자가 표시되도록 합니다. 이 표현 수정은 C++14의 변경 내용입니다. Visual Studio 2017 버전 15.7 이상의 **`/std:c++17`** 모드에서는, C++14에서 유효하고 상속 생성자를 사용하는 코드가 유효하지 않거나 다른 의미 체계를 가질 수 있습니다.
 
 다음 예제에서는 C++14 동작을 보여 줍니다.
 
@@ -1401,7 +1572,7 @@ B b(42L); // Calls B<long>(long), which calls A(int)
           //  due to substitution failure in A<long>(long).
 ```
 
-다음 예제에서는 Visual Studio 15.7에서 **/std:c++17** 동작을 보여 줍니다.
+다음 예제에서는 Visual Studio 15.7에서 **`/std:c++17`** 동작을 보여 줍니다.
 
 ```cpp
 struct A {
@@ -1427,7 +1598,7 @@ B b(42L); // now calls B(int)
 
 [P0017R1](https://wg21.link/p0017r1)
 
-기본 클래스의 생성자가 공용이 아니지만 파생된 클래스에 액세스할 수 있는 경우, Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서 파생된 형식의 개체를 초기화하기 위해 더 이상 빈 중괄호를 사용할 수 없습니다.
+기본 클래스의 생성자가 공용이 아니지만 파생된 클래스에 액세스할 수 있는 경우, Visual Studio 2017 버전 15.7의 **`/std:c++17`** 모드에서 파생된 형식의 개체를 초기화하기 위해 더 이상 빈 중괄호를 사용할 수 없습니다.
 다음 예제에서는 C++14 준수 동작을 보여 줍니다.
 
 ```cpp
@@ -1445,7 +1616,7 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 ```
 
 C++17에서 `Derived`는 이제 집계 형식으로 간주되므로 프라이빗 기본 생성자를 통한 `Base`의 초기화가 확장된 집계 초기화 규칙의 일부로 직접 발생합니다. 이전에는 `Base` 프라이빗 생성자가 `Derived` 생성자를 통해 호출되었으며, friend 선언 때문에 성공했습니다.
-다음 예제에서는 **/std:c++17** 모드의 Visual Studio 버전 15.7에서 C++17 동작을 보여 줍니다.
+다음 예제에서는 **`/std:c++17`** 모드의 Visual Studio 버전 15.7에서 C++17 동작을 보여 줍니다.
 
 ```cpp
 struct Derived;
@@ -1467,7 +1638,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
 
 [P0127R2](https://wg21.link/p0127r2)
 
-**/std:c++17** 모드에서 컴파일러는 이제 **자동**으로 선언된 비형식 템플릿 인수의 형식을 추론할 수 있습니다.
+**`/std:c++17`** 모드에서 컴파일러는 이제 **자동**으로 선언된 비형식 템플릿 인수의 형식을 추론할 수 있습니다.
 
 ```cpp
 template <auto x> constexpr auto constant = x;
@@ -1477,7 +1648,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-이 새로운 기능의 한가지 영향은 유효한 C++14 코드는 유효하지 않을 수 있거나 서로 다른 의미 체계를 가질 수 있다는 것입니다. 예를 들어 이전에 유효하지 않았던 일부 오버로드가 이제 유효합니다. 다음 예제에서는 `example(p)`에 대한 호출이 `example(void*);`로 바인딩되기 때문에 컴파일하는 C++14 코드를 보여 줍니다. Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서 `example` 함수 템플릿은 가장 일치하는 것입니다.
+이 새로운 기능의 한가지 영향은 유효한 C++14 코드는 유효하지 않을 수 있거나 서로 다른 의미 체계를 가질 수 있다는 것입니다. 예를 들어 이전에 유효하지 않았던 일부 오버로드가 이제 유효합니다. 다음 예제에서는 `example(p)`에 대한 호출이 `example(void*);`로 바인딩되기 때문에 컴파일하는 C++14 코드를 보여 줍니다. Visual Studio 2017 버전 15.7의 **`/std:c++17`** 모드에서 `example` 함수 템플릿이 가장 일치하는 항목입니다.
 
 ```cpp
 template <int N> struct A;
@@ -1491,7 +1662,7 @@ void sample(A<0> *p)
 }
 ```
 
-다음 예제에서는 **/std:c++17** 모드의 Visual Studio 15.7에서 C++17 코드를 보여 줍니다.
+다음 예제에서는 **`/std:c++17`** 모드의 Visual Studio 15.7에서 C++17 코드를 보여 줍니다.
 
 ```cpp
 template <int N> struct A;
@@ -1549,11 +1720,11 @@ C++17부터 `->*`, `[]`, `>>`, `<<` 연산자의 피연산자가 왼쪽에서 �
 
 - 피연산자 식 중 하나가 값으로 전달된 개체이거나 값으로 전달된 개체를 포함하는 경우, 또는
 
-- **/clr**을 사용하여 컴파일할 때 피연산자 중 하나가 개체 또는 배열 요소의 필드인 경우.
+- **`/clr`** 을 사용하여 컴파일할 때 피연산자 중 하나가 개체 또는 배열 요소의 필드인 경우.
 
-컴파일러는 왼쪽에서 오른쪽으로 계산을 보장할 수 없는 경우 경고 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)을 생성합니다. 이러한 연산자의 왼쪽에서 오른쪽 순서 요구 사항이 C++17에서 도입되었기 때문에, **/std:c++17** 이상을 지정한 경우에만 컴파일러에서 이 경고를 생성합니다.
+컴파일러는 왼쪽에서 오른쪽으로 계산을 보장할 수 없는 경우 경고 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)을 생성합니다. 이러한 연산자의 왼쪽에서 오른쪽 순서 요구 사항이 C++17에서 도입되었기 때문에 **`/std:c++17`** 이상을 지정한 경우에만 컴파일러에서 이 경고를 생성합니다.
 
-이 경고를 해결하려면 먼저 피연산자 계산으로 순서에 종속되는 부작용이 발생하는 경우처럼 피연산자의 왼쪽에서 오른쪽으로 계산이 필요한지 고려합니다. 대부분의 경우 피연산자가 계산되는 순서는 눈에 띄는 영향을 미치지 않습니다. 계산 순서가 왼쪽에서 오른쪽이어야 하는 경우, 대신 const 참조로 피연산자를 전달할 수 있는지 여부를 고려합니다. 이렇게 변경하면 다음 코드 샘플에서 경고가 제거됩니다.
+이 경고를 해결하려면 먼저 피연산자를 왼쪽에서 오른쪽으로 계산해야 하는지 여부를 고려하세요. 예를 들어 피연산자를 계산할 때 순서에 영향을 받는 부작용이 발생할 수 있는 경우 필요할 수 있습니다. 피연산자가 계산되는 순서는 대부분의 경우 눈에 띄는 영향을 미치지 않습니다. 계산 순서가 왼쪽에서 오른쪽이어야 하는 경우, 대신 const 참조로 피연산자를 전달할 수 있는지 여부를 고려합니다. 이렇게 변경하면 다음 코드 샘플에서 경고가 제거됩니다.
 
 ```cpp
 // C4866.cpp
@@ -1586,7 +1757,7 @@ int main()
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-Visual Studio 2017에서는 Visual Studio 2015에서 catch되지 않았으며 크래시나 정의되지 않은 런타임 동작을 일으킬 수 있었던, 이니셜라이저 목록을 사용한 개체 만들기와 관련된 컴파일러 오류를 올바르게 발생시킵니다. N4594 13.3.1.7p1을 기준으로, copy-list-initialization에서 컴파일러는 오버로드 해결을 위해 명시적 생성자를 고려해야 하지만 이 특정 오버로드가 선택되면 오류를 발생시켜야 합니다.
+Visual Studio 2017은 이니셜라이저 목록을 사용하여 개체 생성과 관련된 컴파일러 오류를 올바르게 발생시킵니다. 이러한 오류는 Visual Studio 2015에서 catch되지 않으며, 충돌 또는 정의되지 않은 런타임 동작이 발생할 수 있습니다. N4594 13.3.1.7p1을 기준으로, copy-list-initialization에서 컴파일러는 오버로드 해결을 위해 명시적 생성자를 고려해야 하지만 이 특정 오버로드가 선택되면 오류를 발생시켜야 합니다.
 
 다음 두 가지 예제는 Visual Studio 2015에서 컴파일되지만 Visual Studio 2017에서 컴파일되지 않습니다.
 
@@ -1674,7 +1845,7 @@ int main()
 
 ### <a name="constexpr"></a>**constexpr**
 
-Visual Studio 2017에서는 조건부 계산 연산의 왼쪽 피연산자가 constexpr 컨텍스트에서 유효하지 않을 경우 올바르게 오류를 발생시킵니다. 다음 코드는 Visual Studio 2017이 아닌 Visual Studio 2015에서 컴파일합니다(C3615 constexpr 함수 ‘f’는 상수 식이 될 수 없음).
+Visual Studio 2017에서는 조건부 계산 연산의 왼쪽 피연산자가 constexpr 컨텍스트에서 유효하지 않을 경우 올바르게 오류를 발생시킵니다. 다음 코드는 Visual Studio 2015에서는 컴파일되지만 Visual Studio 2017에서는 C3615 `constexpr function 'f' cannot result in a constant expression`을 발생시킵니다.
 
 ```cpp
 template<int N>
@@ -1693,7 +1864,7 @@ constexpr bool f(const array<1> &arr)
 
 ### <a name="class-types-passed-to-variadic-functions"></a>variadic 함수에 전달된 클래스 형식
 
-Visual Studio 2017에서 printf와 같이 variadic 함수에 전달된 클래스 또는 구조체는 일반적으로 복사 가능합니다. 해당 개체를 전달할 때 컴파일러는 비트 복사본을 만들기만 하고 생성자 또는 소멸자를 호출하지 않습니다.
+Visual Studio 2017에서 `printf`와 같이 variadic 함수에 전달된 클래스 또는 구조체는 일반적으로 복사 가능합니다. 해당 개체를 전달할 때 컴파일러는 비트 복사본을 만들기만 하고 생성자 또는 소멸자를 호출하지 않습니다.
 
 ```cpp
 #include <atomic>
@@ -1762,7 +1933,7 @@ int i = (const S)0; // error C2440
 
 ### <a name="access-checking-on-qualified-names-in-templates"></a>템플릿의 정규화된 이름에 대한 액세스 검사
 
-이전 버전의 컴파일러는 일부 템플릿 컨텍스트에서 정규화된 이름에 대한 액세스를 검사하지 않았습니다. 이 문제는 이름에 액세스할 수 없어 대체에 실패할 것으로 예상되는 경우의 SFINAE 동작을 방해할 수 있습니다. 컴파일러가 연산자의 틀린 오버로드를 잘못 호출했기 때문에 잠재적으로 런타임에 크래시나 예기치 않은 동작이 발생할 수 있었습니다. Visual Studio 2017에서는 컴파일러 오류가 발생합니다. 구체적인 오류는 달라질 수 있지만 일반적으로 오류는 “C2672 일치하는 오버로드된 함수가 없습니다.”입니다. 다음 코드는 Visual Studio 2015에서는 컴파일되지만 Visual Studio 2017에서는 오류를 발생시킵니다.
+이전 버전의 컴파일러는 일부 템플릿 컨텍스트에서 정규화된 이름에 대한 액세스를 검사하지 않았습니다. 이 문제는 이름에 액세스할 수 없어 대체에 실패할 것으로 예상되는 경우의 SFINAE 동작을 방해할 수 있습니다. 컴파일러가 연산자의 틀린 오버로드를 잘못 호출했기 때문에 잠재적으로 런타임에 크래시나 예기치 않은 동작이 발생할 수 있었습니다. Visual Studio 2017에서는 컴파일러 오류가 발생합니다. 구체적 오류는 다를 수 있지만 일반적으로는 C2672 `no matching overloaded function found`입니다. 다음 코드는 Visual Studio 2015에서는 컴파일되지만 Visual Studio 2017에서는 오류를 발생시킵니다.
 
 ```cpp
 #include <type_traits>
@@ -1782,7 +1953,7 @@ int main()
 
 ### <a name="missing-template-argument-lists"></a>누락된 템플릿 인수 목록
 
-Visual Studio 2015 및 이전 버전에서는 템플릿이 기본 템플릿 인수 또는 비형식 템플릿 매개 변수의 일부 등으로 템플릿 매개 변수 목록에 표시될 때 컴파일러가 누락된 템플릿 인수 목록을 진단하지 않았습니다. 이 문제로 인해 컴파일러 크래시나 예기치 않은 런타임 동작을 포함하여 예기치 않은 동작이 발생할 수 있습니다. 다음 코드는 Visual Studio 2015에서 컴파일되지만 Visual Studio 2017에서는 오류를 생성합니다.
+Visual Studio 2015 이전 버전에서는 템플릿이 템플릿 매개 변수 목록에 표시될 때 컴파일러가 누락된 템플릿 인수 목록을 진단하지 않았습니다. 예를 들어 기본 템플릿 인수 또는 비형식 템플릿 매개 변수의 일부가 누락된 경우가 그렇습니다. 이 문제로 인해 컴파일러 크래시나 예기치 않은 런타임 동작을 포함하여 예기치 않은 동작이 발생할 수 있습니다. 다음 코드는 Visual Studio 2015에서 컴파일되지만 Visual Studio 2017에서는 오류를 생성합니다.
 
 ```cpp
 template <class T> class ListNode;
@@ -1824,7 +1995,7 @@ static_assert(test2, "PASS2");
 
 ### <a name="classes-declared-in-anonymous-namespaces"></a>익명 네임스페이스에 선언된 클래스
 
-C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 연결이 있으므로 내보낼 수 없습니다. Visual Studio 2015 및 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. 다음 예제에서는 Visual Studio 2017에서 "오류 C2201: const anonymous namespace::S1::vftable: 가져오거나 내보내려면 외부 링크가 있어야 합니다." 오류를 발생시킵니다.
+C++ 표준에 따라 익명 네임스페이스 내에 선언된 클래스는 내부 연결이 있으므로 내보낼 수 없습니다. Visual Studio 2015 및 이전 버전에서는 이 규칙이 적용되지 않았습니다. Visual Studio 2017에서는 이 규칙이 부분적으로 적용됩니다. Visual Studio 2017에서 다음 예제는 오류 C2201: `const anonymous namespace::S1::vftable: must have external linkage in order to be exported/imported.`를 발생시킵니다.
 
 ```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
@@ -1844,7 +2015,7 @@ value struct V
 
 ### <a name="default-indexers-ccli"></a>기본 인덱서(C++/CLI)
 
-Visual Studio 2015 이하에서는 컴파일러가 기본 속성을 기본 인덱서로 잘못 식별하는 경우가 있었습니다. 속성에 액세스하는 데 식별자 **default**를 사용하여 문제를 해결할 수 있었습니다. **default**가 C++11에서 키워드로 도입된 이후 해결 방법 자체가 문제가 되었습니다. Visual Studio 2017에서는 해결 방법이 필요했던 버그가 수정되었고 이제 컴파일러는 **default**가 클래스에 대한 기본 속성에 액세스하는 데 사용될 경우 오류를 발생시킵니다.
+Visual Studio 2015 이하에서는 컴파일러가 기본 속성을 기본 인덱서로 잘못 식별하는 경우가 있었습니다. 속성에 액세스하는 데 식별자 **default**를 사용하여 문제를 해결할 수 있었습니다. **default**가 C++11에서 키워드로 도입된 이후 해결 방법 자체가 문제가 되었습니다. Visual Studio 2017에서는 해결 방법이 필요한 버그가 수정되었습니다. 이제 **기본값**을 사용하여 클래스의 기본 속성에 액세스하는 경우 컴파일러에서 오류가 발생합니다.
 
 ```cpp
 //class1.cs
@@ -1902,7 +2073,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 
 ### <a name="calls-to-deleted-member-templates"></a>삭제된 멤버 템플릿에 대한 호출
 
-이전 버전의 Visual Studio에서는 컴파일러가 런타임에 크래시를 일으킬 수 있는, 삭제된 멤버 템플릿에 대한 잘못된 양식의 호출에 대한 오류를 내보내지 못하는 경우가 있었습니다. 다음 코드는 C2280 "'int S\<int>::f\<int>(void)': 삭제된 함수를 참조하려고 합니다."를 생성합니다.
+Visual Studio의 이전 버전에서는 경우에 따라 컴파일러가 삭제된 멤버 템플릿에 대한 잘못된 형식의 호출에 관련된 오류를 내보내지 못합니다. 이러한 호출은 런타임에 충돌을 일으킬 수 있습니다. 다음 코드는 이제 C2280: `'int S<int>::f<int>(void)': attempting to reference a deleted function`을 생성합니다.
 
 ```cpp
 template<typename T>
@@ -1934,7 +2105,7 @@ static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 
 관리형 함수에서 네이티브 함수로 호출하려면 마샬링이 필요합니다. CLR은 마샬링을 수행하지만 C++ 의미 체계를 이해하지 못합니다. 네이티브 개체를 값으로 전달하면 CLR은 개체의 복사 생성자를 호출하거나, 런타임에 정의되지 않은 동작을 유발할 수 있는 `BitBlt`를 사용합니다.
 
-이제 컴파일러는 컴파일 시간에 삭제된 복사 생성자를 포함하는 네이티브 개체가 네이티브 경계와 관리되는 경계 사이에 값으로 전달됨을 알 수 있는 경우 경고를 내보냅니다. 컴파일러는 컴파일 시간에 알 수 없는 이러한 경우를 위해 잘못된 양식의 마양샬링이 수행될 때 프로그램에서 즉시 `std::terminate`를 호출하도록 런타임 검사를 삽입합니다. Visual Studio 2017 15.3에서 다음 코드는 경고 C4606을 생성합니다. "'A': 네이티브 및 관리 경계에서 인수를 값별로 전달하려면 유효한 복사 생성자가 필요합니다. 이 생성자가 없으면 런타임 동작이 정의되지 않습니다.”
+이제 컴파일러는 컴파일 시간에 삭제된 복사 생성자를 포함하는 네이티브 개체가 네이티브 경계와 관리되는 경계 사이에 값으로 전달됨을 확인할 수 있는 경우 경고를 내보냅니다. 컴파일러는 컴파일 시간에 알 수 없는 이러한 경우를 위해 잘못된 양식의 마양샬링이 수행될 때 프로그램에서 즉시 `std::terminate`를 호출하도록 런타임 검사를 삽입합니다. Visual Studio 2017 버전 15.3에서 다음 코드는 경고 C4606 `'A': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise, the runtime behavior is undefined.`를 생성합니다.
 
 ```cpp
 class A
@@ -1970,9 +2141,9 @@ int main()
 
 ### <a name="experimental-api-warning-for-winrt"></a>WinRT에 대한 실험적 API 경고
 
-실험 및 피드백용으로 릴리스된 WinRT API는 `Windows.Foundation.Metadata.ExperimentalAttribute`로 데코레이트됩니다. Visual Studio 2017 버전 15.3에서는 컴파일러에서 특성을 발견하면 C4698 경고를 생성합니다. 이전 Windows SDK 버전의 몇몇 API는 이미 특성으로 데코레이트되었고 이러한 API를 호출하면 이제 이 컴파일러 경고가 트리거됩니다. 최신 Windows SDK에서는 모든 제공된 형식에서 이 특성이 제거되었지만, 이전 SDK를 사용 중인 경우 모든 제공된 형식 호출에 대해 이러한 경고가 표시되지 않도록 해야 합니다.
+실험 및 피드백용으로 릴리스된 WinRT API는 `Windows.Foundation.Metadata.ExperimentalAttribute`로 데코레이트됩니다. Visual Studio 2017 버전 15.3에서 컴파일러는 이 특성에 C4698 경고를 생성합니다. 이전 Windows SDK 버전의 몇몇 API는 이미 특성으로 데코레이트되었고 이러한 API를 호출하면 이제 이 컴파일러 경고가 트리거됩니다. 최신 Windows SDK에서는 제공된 모든 형식에서 특성이 제거되었습니다. 이전 SDK를 사용하는 경우 제공된 형식에 대한 모든 호출에 대해 이러한 경고가 표시되지 않도록 해야 합니다.
 
-다음 코드는 경고 C4698을 생성합니다. “‘Windows::Storage::IApplicationDataStatics2::GetForUserAsync’는 평가 목적으로만 제공되며 향후 업데이트에서 변경되거나 제거될 수 있습니다.”
+다음 코드는 경고 C4698: `'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' is for evaluation purposes only and is subject to change or removal in future updates`를 생성합니다.
 
 ```cpp
 Windows::Storage::IApplicationDataStatics2::GetForUserAsync(); //C4698
@@ -1991,7 +2162,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync();
 
 ### <a name="out-of-line-definition-of-a-template-member-function"></a>템플릿 멤버 함수의 확장 정의
 
-Visual Studio 2017 버전 15.3에서는 클래스에 선언되지 않은 템플릿 멤버 함수의 확장 정의를 발견할 경우 오류를 생성합니다. 다음 코드는 오류 C2039를 생성합니다. ‘f’:이 ‘S’의 멤버가 아닙니다.
+Visual Studio 2017 버전 15.3은 클래스에서 선언되지 않은 템플릿 멤버 함수의 확장 정의에 대해 오류를 생성합니다. 다음 코드는 이제 오류 C2039: `'f': is not a member of 'S'`를 생성합니다.
 
 ```cpp
 struct S {};
@@ -2013,11 +2184,11 @@ void S::f(T t) {}
 
 ### <a name="attempting-to-take-the-address-of-this-pointer"></a>**this** 포인터의 주소 사용 시도
 
-C++에서 **this**는 X에 대한 형식 포인터의 prvalue입니다. **this** 의 주소를 가져오거나 lvalue 참조에 바인딩할 수 없습니다. 이전 버전의 Visual Studio에서는 컴파일러를 통해 캐스트를 사용하여 이 제한 사항을 회피할 수 있었습니다. Visual Studio 2017 버전 15.3에서는 컴파일러에서 C2664 오류를 생성합니다.
+C++에서 **`this`** 는 X에 대한 형식 포인터의 prvalue입니다. **`this`** 의 주소를 사용하거나 lvalue 참조에 바인딩할 수 없습니다. 이전 버전의 Visual Studio에서는 컴파일러를 통해 캐스트를 사용하여 이 제한 사항을 회피할 수 있었습니다. Visual Studio 2017 버전 15.3에서는 컴파일러에서 C2664 오류를 생성합니다.
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>액세스할 수 없는 기본 클래스로의 변환
 
-Visual Studio 2017 버전 15.3에서 형식을 액세스할 수 없는 기본 클래스로 변환하려고 하면 오류가 발생합니다. 이제는 컴파일러에서 "오류 C2243: 'type cast': 변환('D *'에서 'B *'(으)로)이 있지만 액세스할 수 없습니다."를 발생시킵니다. 다음 코드는 형식이 잘못되었고 런타임에 충돌을 일으킬 수 있습니다. 이제 컴파일러는 다음과 같은 코드를 발견할 때 C2243을 생성합니다.
+Visual Studio 2017 버전 15.3에서 형식을 액세스할 수 없는 기본 클래스로 변환하려고 하면 오류가 발생합니다. 컴파일러는 이제 오류 C2243: `'type cast': conversion from 'D *' to 'B *' exists, but is inaccessible`을 생성합니다. 다음 코드는 형식이 잘못되었고 런타임에 충돌을 일으킬 수 있습니다. 이제 컴파일러는 다음과 같은 코드를 발견할 때 C2243을 생성합니다.
 
 ```cpp
 #include <memory>
@@ -2033,9 +2204,9 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>기본 인수는 멤버 함수의 확장 정의에서 허용되지 않음
 
-기본 인수는 템플릿 클래스에 있는 멤버 함수의 확장 정의에서 허용되지 않습니다. 컴파일러는 **/permissive** 아래에 경고를 실행하고, [/permissive-](../build/reference/permissive-standards-conformance.md) 아래에 하드 오류를 실행합니다.
+기본 인수는 템플릿 클래스에 있는 멤버 함수의 확장 정의에서 허용되지 않습니다. 컴파일러는 **`/permissive`** 아래에 경고를, [/permissive-](../build/reference/permissive-standards-conformance.md) 아래에 하드 오류를 발생시킵니다.
 
-이전 버전의 Visual Studio에서는 다음과 같은 잘못된 코드로 인해 잠재적으로 런타임 크래시가 발생할 수 있었습니다. Visual Studio 2017 버전 15.3은 경고 C5034를 생성합니다. 'A\<T>::f': 클래스 템플릿 멤버의 확장 정의에는 기본 인수가 포함될 수 없습니다.
+이전 버전의 Visual Studio에서는 다음과 같은 잘못된 코드로 인해 잠재적으로 런타임 크래시가 발생할 수 있었습니다. Visual Studio 2017 버전 15.3은 경고 C5034: `'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments`를 생성합니다.
 
 ```cpp
 template <typename T>
@@ -2054,7 +2225,7 @@ T A<T>::f(T t, bool b = false) // C5034
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>복합 멤버 지정자와 함께 `offsetof` 사용
 
-Visual Studio 2017 버전 15.3에서 *m*이 "복합 멤버 지정자"인 `offsetof(T, m)`를 사용하면 **/Wall** 옵션으로 컴파일할 때 경고가 발생합니다. 다음 코드는 형식이 잘못되었고 런타임에 크래시가 발생할 수 있습니다. Visual Studio 2017 버전 15.3에서 "경고 C4841: 비표준 확장이 사용됨: 복합 멤버 지정자가 offsetof에 사용되었습니다."를 생성합니다.
+Visual Studio 2017 버전 15.3에서 *m*이 "복합 멤버 지정자"인 `offsetof(T, m)`를 사용하면 **`/Wall`** 옵션으로 컴파일할 때 경고가 발생합니다. 다음 코드는 형식이 잘못되었고 런타임에 크래시가 발생할 수 있습니다. Visual Studio 2017 버전 15.3은 경고 C4841: `non-standard extension used: compound member designator in offsetof`를 생성합니다.
 
 ```cpp
 struct A {
@@ -2076,7 +2247,7 @@ constexpr auto off = offsetof(A, arr[2]);
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>정적 데이터 멤버 또는 멤버 함수와 함께 `offsetof` 사용
 
-Visual Studio 2017 버전 15.3에서 *m*이 정적 데이터 멤버 또는 멤버 함수를 참조하는 `offsetof(T, m)`를 사용하면 오류가 발생합니다. 다음 코드는 “오류 C4597: 정의되지 않은 동작: offsetof가 멤버 함수 ‘example’에 적용되었습니다.” 및 “오류 C4597: 정의되지 않은 동작: offsetof가 정적 데이터 멤버 ‘sample’에 적용되었습니다.”를 생성합니다.
+Visual Studio 2017 버전 15.3에서 *m*이 정적 데이터 멤버 또는 멤버 함수를 참조하는 `offsetof(T, m)`를 사용하면 오류가 발생합니다. 다음 코드는 오류 C4597: `undefined behavior: offsetof applied to member function 'example'` 및 오류 C4597: `undefined behavior: offsetof applied to static data member 'sample'`을 생성합니다.
 
 ```cpp
 #include <cstddef>
@@ -2094,7 +2265,7 @@ constexpr auto off2 = offsetof(A, two);
 
 ### <a name="new-warning-on-__declspec-attributes"></a><a name="declspec"></a>`__declspec` 특성에 대한 새로운 경고
 
-Visual Studio 2017 버전 15.3에서는 `__declspec(...)`가 `extern "C"` 링크 사양 앞에 적용되면 컴파일러에서 더 이상 특성을 무시하지 않습니다. 이전 버전에서는 컴파일러가 런타임 의미를 가질 수 있는 특성을 무시합니다. **/Wall** 및 **/WX** 옵션이 설정되면 다음 코드는 “경고 C4768: 링크 사양 앞의 __declspec 특성은 무시됩니다.”를 생성합니다.
+Visual Studio 2017 버전 15.3에서는 `__declspec(...)`가 `extern "C"` 링크 사양 앞에 적용되면 컴파일러에서 더 이상 특성을 무시하지 않습니다. 이전 버전에서는 컴파일러가 런타임 의미를 가질 수 있는 특성을 무시합니다. **`/Wall`** 및 **`/WX`** 옵션이 설정된 경우 다음 코드는 경고 C4768: `__declspec attributes before linkage specification are ignored`를 생성합니다.
 
 ```cpp
 __declspec(noinline) extern "C" HRESULT __stdcall //C4768
@@ -2106,11 +2277,11 @@ __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-이 경고는 15.3에서 기본적으로 꺼져 있지만 15.5에서는 기본적으로 켜져 있으며, **/Wall** **/WX**로 컴파일된 코드에만 영향을 줍니다.
+이 경고는 15.3에서 기본적으로 꺼져 있지만 15.5에서는 기본적으로 켜져 있으며, **`/Wall`** **`/WX`** 로 컴파일된 코드에만 영향을 줍니다.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** 및 삭제된 소멸자 호출
 
-이전 버전의 Visual Studio에서 컴파일러는 삭제된 소멸자 호출이 **decltype**과 연결된 식의 컨텍스트에서 발생한 시점을 검색하지 않았습니다. Visual Studio 2017 버전 15.3에서 다음 코드는 "오류 C2280: 'A\<T>::~A(void)': 삭제된 함수를 참조하려고 시도 중"을 생성합니다.
+이전 버전의 Visual Studio에서 컴파일러는 삭제된 소멸자 호출이 **decltype**과 연결된 식의 컨텍스트에서 발생한 시점을 검색하지 않았습니다. Visual Studio 2017 버전 15.3에서 다음 코드는 오류 C2280: `'A<T>::~A(void)': attempting to reference a deleted function`을 생성합니다.
 
 ```cpp
 template<typename T>
@@ -2133,7 +2304,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>초기화되지 않은 const 변수
 
-Visual Studio 2017 RTW 릴리스에는 **const** 변수가 초기화되지 않은 경우 C++ 컴파일러가 진단을 실행하지 않는 재발 문제가 있었습니다. 이 재발 문제는 Visual Studio 2017 버전 15.3에서 수정되었습니다. 다음 코드는 이제 "경고 C4132: 'Value': const 개체를 초기화해야 합니다."를 생성합니다.
+Visual Studio 2017 RTW 릴리스에는 초기화되지 않은 **const** 변수에 대해 C++ 컴파일러가 진단을 실행하지 않는 재발 문제가 있었습니다. 이 재발 문제는 Visual Studio 2017 버전 15.3에서 수정되었습니다. 다음 코드는 이제 경고 C4132: `'Value': const object should be initialized`를 생성합니다.
 
 ```cpp
 const int Value; //C4132
@@ -2158,7 +2329,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 경고를 제거하려면 빈 선언을 주석으로 처리하거나 제거합니다. 명명되지 않은 개체에 부작용(예: RAII)을 포함하려는 경우 개체에 이름을 지정해야 합니다.
 
-경고는 **/Wv:18**에서는 제외되고 기본적으로 경고 수준 W2에서 켜집니다.
+경고는 **`/Wv:18`** 에서는 제외되고 기본적으로 경고 수준 W2에서 켜집니다.
 
 ### <a name="stdis_convertible-for-array-types"></a>배열 형식에 대한 `std::is_convertible`
 
@@ -2208,7 +2379,7 @@ static_assert(std::is_constructible<PrivateDtor, int>::value);
 
 ### <a name="c2668-ambiguous-overload-resolution"></a>C2668: 모호한 오버로드 확인
 
-이전 버전의 컴파일러에서는 선언 및 인수 종속성 조회를 모두 사용하여 여러 후보를 찾을 때 모호성을 검색하지 못하는 경우가 종종 있었습니다. 이 오류로 인해 잘못된 오버로드를 선택하고 예기치 않은 런타임 동작이 발생할 수 있습니다. 다음 예제에서는 Visual Studio 2017 버전 15.3에서 "C2668 'f': 오버로드된 함수에 대한 호출이 모호합니다."를 정확히 발생시킵니다.
+이전 버전의 컴파일러에서는 선언 및 인수 종속성 조회를 모두 사용하여 여러 후보를 찾을 때 모호성을 검색하지 못하는 경우가 종종 있었습니다. 이 오류로 인해 잘못된 오버로드를 선택하고 예기치 않은 런타임 동작이 발생할 수 있습니다. 다음 예제에서 Visual Studio 2017 버전 15.3은 C2668 `'f': ambiguous call to overloaded function`을 올바르게 발생시킵니다.
 
 ```cpp
 namespace N {
@@ -2236,7 +2407,7 @@ void f()
 
 ### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: 로컬 함수 선언 및 인수 종속성 조회
 
-로컬 함수 선언은 바깥쪽 범위에 있는 함수 선언을 숨기고 인수 종속성 조회를 사용하지 않도록 설정합니다. 그러나 이 경우에는 이전 버전의 컴파일러가 인수 종속성 조회를 수행했으므로 잘못된 오버로드를 선택하고 예기치 않은 런타임 동작이 발생할 가능성이 있습니다. 일반적으로 이 오류는 로컬 함수 선언의 잘못된 시그니처 때문입니다. 다음 예제에서는 Visual Studio 2017 버전 15.3이 “C2660 ‘f’: 함수는 2개의 매개 변수를 사용하지 않습니다.”를 올바르게 발생시킵니다.
+로컬 함수 선언은 바깥쪽 범위에 있는 함수 선언을 숨기고 인수 종속성 조회를 사용하지 않도록 설정합니다. 그러나 이전 버전의 컴파일러는 이 경우에 인수 종속성 조회를 수행했습니다. 이로 인해 잘못된 오버로드가 선택되고 예기치 않은 런타임 동작이 발생할 수 있었습니다. 일반적으로 이 오류는 로컬 함수 선언의 잘못된 시그니처 때문입니다. 다음 예제에서 Visual Studio 2017 버전 15.3은 C2660 `'f': function does not take two arguments`를 올바르게 발생시킵니다.
 
 ```cpp
 struct S {};
@@ -2255,7 +2426,7 @@ void g()
 
 ### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: 이니셜라이저 목록에서 초기화 순서
 
-클래스 멤버는 이니셜라이저 목록에 표시되는 순서가 아니라 선언된 순서대로 초기화됩니다. 이전 버전의 컴파일러는 이니셜라이저 목록의 순서가 선언 순서와 다른 경우 경고를 표시하지 않았습니다. 이 문제로 인해 한 멤버의 초기화가 이미 초기화되고 있는 목록의 다른 멤버에 종속된 경우 정의되지 않은 런타임 동작이 발생할 수 있었습니다. 다음 예제에서는 Visual Studio 2017 버전 15.3( **/Wall** 포함)에서 "C5038: 'A::y' 데이터 멤버가 'A::y' 데이터 멤버 다음에 초기화됩니다."라는 경고를 발생시킵니다.
+클래스 멤버는 이니셜라이저 목록에 표시되는 순서가 아니라 선언된 순서대로 초기화됩니다. 이전 버전의 컴파일러는 이니셜라이저 목록의 순서가 선언 순서와 다른 경우 경고를 표시하지 않았습니다. 이 문제로 인해 한 멤버의 초기화가 이미 초기화되고 있는 목록의 다른 멤버에 종속된 경우 정의되지 않은 런타임 동작이 발생할 수 있었습니다. 다음 예제에서 Visual Studio 2017 버전 15.3( **`/Wall`** 포함)은 경고 C5038: `data member 'A::y' will be initialized after data member 'A::x'`를 발생시킵니다.
 
 ```cpp
 struct A
@@ -2268,7 +2439,7 @@ struct A
 
 문제를 해결하려면 선언과 같은 순서가 되도록 이니셜라이저 목록을 정렬합니다. 하나 또는 두 이니셜라이저가 기본 클래스 구성원을 참조하는 경우 유사한 경고가 발생합니다.
 
-이 경고는 기본적으로 꺼져 있으며, **/Wall**로 컴파일된 코드에만 영향을 줍니다.
+이 경고는 기본적으로 꺼져 있으며, **`/Wall`** 로 컴파일된 코드에만 영향을 줍니다.
 
 ## <a name="bug-fixes-and-other-behavior-changes-in-155"></a><a name="update_155"></a> 15.5의 버그 수정 및 기타 동작 변경
 
@@ -2308,7 +2479,7 @@ t161.cpp(2): note: or       'int f<int>(int*)'
 t161.cpp(16): note: while trying to match the argument list '(int*)'
 ```
 
-위의 예에서 문제는 형식에 두 가지 차이점이 있다는 것입니다(const 및 non-const와 pack 및 non-pack). 컴파일러 오류를 제거하려면 차이점 중 하나를 제거합니다. 이렇게 하면 컴파일러가 함수의 순서를 명확하게 지정할 수 있습니다.
+위의 예에서 문제는 형식에 두 가지 차이점이 있다는 것입니다(const 및 non-const와 pack 및 non-pack). 컴파일러 오류를 제거하려면 차이점 중 하나를 제거합니다. 그러면 컴파일러가 함수의 순서를 명확하게 지정할 수 있습니다.
 
 ```cpp
 template<typename... T>
@@ -2332,7 +2503,7 @@ int main()
 
 ### <a name="exception-handlers"></a>예외 처리기
 
-배열 또는 함수 형식에 대한 참조 처리기는 모든 예외 개체에 일치하지 않습니다. 컴파일러는 이제 이 규칙을 올바르게 적용하고 수준 4 경고를 생성합니다. 또한 **/Zc:strictStrings**가 사용될 경우 `char*` 또는 `wchar_t*` 처리기를 더 이상 문자열 리터럴에 일치시키지 않습니다.
+배열 또는 함수 형식에 대한 참조 처리기는 모든 예외 개체에 일치하지 않습니다. 컴파일러는 이제 이 규칙을 올바르게 적용하고 수준 4 경고를 생성합니다. 또한 **`/Zc:strictStrings`** 가 사용될 경우 `char*` 또는 `wchar_t*` 처리기를 더 이상 문자열 리터럴에 일치시키지 않습니다.
 
 ```cpp
 int main()
@@ -2395,7 +2566,7 @@ int main() {
 
 ### <a name="standard-library-features-in-annex-d-are-marked-as-deprecated"></a><a name="annex_d"></a> 부록 D의 표준 라이브러리 기능이 사용되지 않는 것으로 표시됨
 
-**/std:c++17** 모드 컴파일러 스위치를 설정하면 부록 D의 거의 모든 표준 라이브러리 기능이 사용되지 않는 것으로 표시됩니다.
+**`/std:c++17`** 모드 컴파일러 스위치를 설정하면 부록 D의 거의 모든 표준 라이브러리 기능이 사용되지 않는 것으로 표시됩니다.
 
 Visual Studio 2017 15.5 버전에서 다음 코드를 실행하면 C4996이 발생합니다.
 
@@ -2455,7 +2626,7 @@ warning C4189: 's': local variable is initialized but not referenced
 
 ### <a name="single-line-comments"></a>한 줄로 된 주석
 
-Visual Studio 2017 15.5 버전에서는 C 컴파일러에서 더 이상 C4001 및 C4179 경고를 내보내지 않습니다. 이전에는 이러한 경고가 **/Za** 컴파일러 스위치하에서만 내보내졌습니다.  C99 이후로 한 줄로 된 주석이 C 표준에 포함되었으므로 이러한 경고는 더 이상 필요하지 않습니다.
+Visual Studio 2017 15.5 버전에서는 C 컴파일러에서 더 이상 C4001 및 C4179 경고를 내보내지 않습니다. 이전에는 이러한 경고가 **`/Za`** 컴파일러 스위치 하에서만 내보내졌습니다.  C99 이후로 한 줄로 된 주석이 C 표준에 포함되었으므로 이러한 경고는 더 이상 필요하지 않습니다.
 
 ```cpp
 /* C only */
@@ -2469,7 +2640,7 @@ Visual Studio 2017 15.5 버전에서는 C 컴파일러에서 더 이상 C4001 �
 warning C4619: #pragma warning: there is no warning number '4001'
 ```
 
-코드가 이전 버전과 호환될 필요가 없는 경우 C4001/C4179 비표시 오류(Suppression)를 제거하여 경고를 방지할 수 있습니다. 코드가 이전 버전과 호환되어야 할 경우 C4619만 표시되지 않게 합니다.
+코드가 이전 버전과 호환될 필요가 없는 경우 C4001/C4179 비표시 오류(suppression)를 제거하여 경고를 방지할 수 있습니다. 코드가 이전 버전과 호환되어야 할 경우 C4619만 표시되지 않게 합니다.
 
 ```C
 
@@ -2516,7 +2687,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> Extern constexpr 연결
 
-이전 버전의 Visual Studio에서는 **constexpr** 변수에 **extern**이 표시된 경우에도 컴파일러가 항상 해당 변수에 내부 연결을 제공했습니다. Visual Studio 2017 15.5 버전에서 새 컴파일러 스위치( **/Zc:externConstexpr**)는 올바른 표준 준수 동작을 활성화합니다. 결국 이 동작이 기본값이 됩니다.
+이전 버전의 Visual Studio에서는 **constexpr** 변수에 **extern**이 표시된 경우에도 컴파일러가 항상 해당 변수에 내부 연결을 제공했습니다. Visual Studio 2017 15.5 버전에서 새 컴파일러 스위치( **`/Zc:externConstexpr`** )는 올바른 표준 준수 동작을 활성화합니다. 결국 이 동작이 기본값이 됩니다.
 
 ```cpp
 extern constexpr int x = 10;
@@ -2574,11 +2745,11 @@ static_assert(std::is_convertible<D *, B *>::value, "fail");
 
 ### <a name="dynamic-exception-specification-removal-and-noexcept"></a><a name="noexcept_removal"></a> 동적 예외 사양 제거 및 **noexcept**
 
-C++17에서 `throw()`는 **noexcept**에 대한 별칭이고, `throw(<type list>)` 및 `throw(...)`가 제거되었으며 특정 형식에 **noexcept**가 포함될 수 있습니다. 이 변경으로 인해 C++14 또는 이전 버전을 준수하는 코드와 소스 호환성 문제가 발생할 수 있습니다. 전체적으로 C++17 모드를 사용 중일 때 **/Zc:noexceptTypes-** 스위치를 사용하여 **noexcept** 의 C++14 버전으로 되돌릴 수 있습니다. 이렇게 하면 모든 `throw()` 코드를 동시에 다시 작성하지 않고도 C++17을 준수하도록 소스 코드를 업데이트할 수 있습니다.
+C++17에서 `throw()`는 **noexcept**에 대한 별칭이고, `throw(<type list>)` 및 `throw(...)`가 제거되었으며 특정 형식에 **noexcept**가 포함될 수 있습니다. 이 변경으로 인해 C++14 또는 이전 버전을 준수하는 코드와 소스 호환성 문제가 발생할 수 있습니다. 일반적으로 C++17 모드를 사용 중일 때 **`/Zc:noexceptTypes-`** 스위치를 사용하여 **noexcept**의 C++14 버전으로 되돌릴 수 있습니다. 이렇게 하면 모든 `throw()` 코드를 동시에 다시 작성하지 않고도 C++17을 준수하도록 소스 코드를 업데이트할 수 있습니다.
 
 또한 컴파일러는 이제 새로운 경고 C5043과 관련하여 C++17 모드의 선언이나 [/permissive-](../build/reference/permissive-standards-conformance.md)를 사용하여 더 많은 불일치 예외 사양을 진단합니다.
 
-다음 코드는 Visual Studio 2017 버전 15.5에서 **/std:c++17** 스위치가 적용될 때 C5043 및 C5040을 생성합니다.
+다음 코드는 Visual Studio 2017 버전 15.5에서 **`/std:c++17`** 스위치가 적용될 때 C5043 및 C5040을 생성합니다.
 
 ```cpp
 void f() throw(); // equivalent to void f() noexcept;
@@ -2594,7 +2765,7 @@ struct B : A {
 };
 ```
 
-여전히 **/std:c++17**을 사용 중일 때 오류를 제거하려면 명령줄에 **/Zc:noexceptTypes-** 스위치를 추가하거나 다음 예제에 나와 있는 것처럼 **noexcept**를 사용하도록 코드를 업데이트하세요.
+여전히 **`/std:c++17`** 을 사용 중일 때 오류를 제거하려면 명령줄에 **`/Zc:noexceptTypes-`** 스위치를 추가하거나 다음 예제에 나와 있는 것처럼 **noexcept**를 사용하도록 코드를 업데이트하세요.
 
 ```cpp
 void f() noexcept;
@@ -2612,7 +2783,7 @@ struct B : A {
 
 ### <a name="inline-variables"></a>인라인 변수
 
-constexpr 정적 데이터 멤버는 이제 암시적으로 인라인이므로 이제 클래스 내 선언으로 정의됩니다. constexpr 정적 데이터 멤버에 대한 확장 정의는 이제 중복되며 사용되지 않습니다. Visual Studio 2017 버전 15.5에서 **/std:c++17** 스위치를 적용하면, 이제 다음 코드에서 경고 C5041 ‘‘size’: constexpr 정적 데이터 멤버에 대한 확장 정의는 C++17에서 필요하지 않거나 사용되지 않습니다.’가 발생합니다. 
+constexpr 정적 데이터 멤버는 이제 암시적으로 인라인이므로 이제 클래스 내 선언으로 정의됩니다. constexpr 정적 데이터 멤버에 대한 확장 정의는 이제 중복되며 사용되지 않습니다. Visual Studio 2017 버전 15.5에서 **`/std:c++17`** 스위치가 적용되면 다음 코드는 이제 경고 C5041 `'size': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17`을 생성합니다.
 
 ```cpp
 struct X {
@@ -2627,7 +2798,7 @@ const int X::size; // C5041
 
 ### <a name="defaulted-functions-and-__declspecnothrow"></a>기본값으로 설정된 함수 및 `__declspec(nothrow)`
 
-컴파일러는 이전에 해당 기본/멤버 함수가 예외를 허용할 경우 기본값으로 설정된 함수를 `__declspec(nothrow)`로 선언하도록 허용했습니다. 이 동작은 C++ 표준과 반대되며, 런타임 시 정의되지 않은 동작을 유발할 수 있습니다. 표준에 따라, 예외 사양 불일치가 있을 경우 이러한 함수를 삭제된 것으로 정의해야 합니다.  **/std:c++17** 하에서 다음 모드는 C2280 *삭제된 함수를 참조하려고 합니다. 명시적 예외 사양이 암시적 선언의 명시적 예외 사양과 호환되지 않으므로 함수가 암시적으로 삭제되었습니다.’를 발생시킵니다.*
+컴파일러는 이전에 해당 기본/멤버 함수가 예외를 허용할 경우 기본값으로 설정된 함수를 `__declspec(nothrow)`로 선언하도록 허용했습니다. 이 동작은 C++ 표준과 반대되며, 런타임 시 정의되지 않은 동작을 유발할 수 있습니다. 표준에 따라, 예외 사양 불일치가 있을 경우 이러한 함수를 삭제된 것으로 정의해야 합니다.  **`/std:c++17`** 아래에서 다음 코드는 C2280 `attempting to reference a deleted function. Function was implicitly deleted because the explicit exception specification is incompatible with that of the implicit declaration.`을 발생시킵니다.
 
 ```cpp
 struct A {
@@ -2669,11 +2840,11 @@ int main()
 
 ### <a name="noexcept-and-partial-specializations"></a>**noexcept** 및 부분 특수화
 
-형식 시스템에서 **noexcept**를 사용하면 pointers-to-noexcept-functions에 대한 부분 특수화가 누락되어 일치하는 특정 “호출 가능” 형식이 컴파일되지 않거나 기본 템플릿을 선택하지 못할 수 있습니다.
+형식 시스템에서 **noexcept**를 사용하면 pointers-to-noexcept-functions에 대한 부분 특수화가 누락되어 일치하는 특정 "호출 가능" 형식이 컴파일되지 않거나 기본 템플릿을 선택하지 못할 수 있습니다.
 
-이러한 경우 **noexcept** 함수 포인터 및 멤버 함수에 대한 **noexcept** 포인터를 처리할 추가 부분 특수화를 추가해야 합니다. 이러한 오버로드는 **/std:c++17** 모드에서만 적합합니다. C++14와 호환성을 유지해야 하고, 다른 사람이 사용할 코드를 작성 중인 경우 `#ifdef` 지시문 내에서 이러한 새 오버로드를 보호해야 합니다. 자체 포함 모듈에서 작업 중인 경우 `#ifdef` 가드를 사용하는 대신 **/Zc:noexceptTypes-** 스위치를 사용하여 컴파일할 수 있습니다.
+이러한 경우 **noexcept** 함수 포인터 및 멤버 함수에 대한 **noexcept** 포인터를 처리할 추가 부분 특수화를 추가해야 합니다. 이러한 오버로드는 **`/std:c++17`** 모드에서만 적합합니다. C++14와 호환성을 유지해야 하고, 다른 사람이 사용할 코드를 작성 중인 경우 `#ifdef` 지시문 내에서 이러한 새 오버로드를 보호해야 합니다. 자체 포함 모듈에서 작업 중인 경우 `#ifdef` 가드를 사용하는 대신 **`/Zc:noexceptTypes-`** 스위치를 사용하여 컴파일할 수 있습니다.
 
-다음 코드는 **/std:c++14** 하에서 컴파일하지만 "오류 C2027:정의되지 않은 형식 'A\<T>'"와 함께 **/std:c++17** 하에서 실패합니다.
+다음 코드는 **`/std:c++14`** 하에서 컴파일되지만 **`/std:c++17`** 하에서는 `error C2027: use of undefined type 'A<T>'`과 함께 실패합니다.
 
 ```cpp
 template <typename T> struct A;
@@ -2698,7 +2869,7 @@ int main()
 }
 ```
 
-다음 코드는 컴파일러가 새로운 부분 특수화 `A<void (*)() noexcept>`를 선택하기 때문에 **/std:c++17** 하에서 성공합니다.
+다음 코드는 컴파일러가 새로운 부분 특수화 `A<void (*)() noexcept>`를 선택하기 때문에 **`/std:c++17`** 하에서 성공합니다.
 
 ```cpp
 template <typename T> struct A;
@@ -2747,7 +2918,7 @@ template<typename T>
 void S<T>::f(int = 0) {} // Re-definition necessary
 ```
 
-Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서는 기본 인수가 무시되지 않습니다.
+Visual Studio 2017 버전 15.7의 **`/std:c++17`** 모드에서는 기본 인수가 무시되지 않습니다.
 
 ```cpp
 template<typename T>
@@ -2777,7 +2948,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서는 D의 **using** 문에 **typename** 키워드가 필요합니다. **typename**이 없으면 컴파일러가 경고 C4346: *'B<T\*>::type': 종속 이름은 type이 아님* 및 오류 C2061: *구문 오류: 식별자 'type'* 을 발생시킵니다.
+Visual Studio 2017 버전 15.7의 **`/std:c++17`** 모드에서는 D의 **using** 문에 **typename** 키워드가 필요합니다. **typename**이 없으면 컴파일러가 경고 C4346: `'B<T*>::type': dependent name is not a type` 및 오류 C2061: `syntax error: identifier 'type'`을 발생시킵니다.
 
 ```cpp
 template<typename T>
@@ -2793,7 +2964,7 @@ struct D : B<T*> {
 
 ### <a name="c17-nodiscard-attribute---warning-level-increase"></a>C++17: `[[nodiscard]]` 특성 - 경고 수준 증가
 
-Visual Studio 2017 버전 15.7의 **/std:c++17** 모드에서 C4834의 경고 레벨("'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중")은 W3에서 W1로 증가되었습니다. **void**로 캐스트하거나 **/wd:4834**를 컴파일러로 전달하여 경고를 해제할 수 있습니다.
+**`/std:c++17`** 모드의 Visual Studio 2017 버전 15.7에서 C4834 `discarding return value of function with 'nodiscard' attribute`의 경고 수준이 W3에서 W1로 올라갑니다. **void**로 캐스트하거나 **`/wd:4834`** 를 컴파일러로 전달하여 경고를 해제할 수 있습니다.
 
 ```cpp
 [[nodiscard]] int f() { return 0; }
@@ -2808,7 +2979,7 @@ int main() {
 
 Visual Studio의 이전 버전에서는 템플릿 인수가 누락된 variadic 템플릿 생성자 기본 클래스 초기화 목록이 오류 없이 잘못 허용되었습니다. Visual Studio 2017 버전 15.7에서는 컴파일러 오류가 발생합니다.
 
-Visual Studio 2017 버전 15.7의 다음 코드 예제에서는 *오류 C2614: D\<int>: 잘못된 멤버 초기화: 'B'는 기본 또는 멤버가 아님*이 발생합니다.
+Visual Studio 2017 버전 15.7에서 다음 코드 예제는 오류 C2614: `D<int>: illegal member initialization: 'B' is not a base or member`를 발생시킵니다.
 
 ```cpp
 template<typename T>
@@ -2829,7 +3000,7 @@ D<int> d;
 
 ### <a name="constexpr-aggregate-initialization"></a>**constexpr** 집계 초기화
 
-이전 버전의 C++ 컴파일러가 **constexpr** 집계 초기화를 잘못 처리했습니다. aggregate-init-list에 요소가 너무 많은 잘못된 코드를 허용했으며 잘못된 codegen을 생성했습니다. 다음 코드는 이러한 코드의 예제입니다.
+이전 버전의 C++ 컴파일러에서는 **constexpr** 집계 초기화를 잘못 처리했습니다. 컴파일러는 aggregate-init-list에 너무 많은 요소가 있는 잘못된 코드를 수락하고 그에 대해 잘못된 codegen을 생성했습니다. 다음 코드는 이러한 코드의 예제입니다.
 
 ```cpp
 #include <array>
@@ -2847,7 +3018,7 @@ int main() {
 }
 ```
 
-Visual Studio 2017 버전 15.7 업데이트 3 이상에서는 이전 예제에서 현재 ‘C2078 이니셜라이저가 너무 많음’이 발생합니다.  다음 예제는 코드를 수정하는 방법을 보여 줍니다. 중첩된 brace-init-lists를 사용하여 `std::array`를 초기화할 때 내부 배열에 자체 braced-list를 제공합니다.
+Visual Studio 2017 버전 15.7 업데이트 3 이상에서는 이전 예제가 이제 C2078 `too many initializers`를 발생시킵니다. 다음 예제는 코드를 수정하는 방법을 보여 줍니다. 중첩된 brace-init-lists를 사용하여 `std::array`를 초기화할 때 내부 배열에 자체 braced-list를 제공합니다.
 
 ```cpp
 #include <array>
@@ -2867,11 +3038,11 @@ int main() {
 
 ## <a name="bug-fixes-and-behavior-changes-in-158"></a><a name="update_158"></a> 15.8의 버그 수정 및 동작 변경
 
-Visual Studio 2017 버전 15.8의 모든 컴파일러 변경 사항은 버그 수정 및 동작 변경의 범주에 속하며, 아래에 나열되어 있습니다.
+Visual Studio 2017 버전 15.8의 컴파일러 변경은 모두 버그 수정과 동작 변경입니다. 아래와 같습니다.
 
 ### <a name="typename-on-unqualified-identifiers"></a>정규화되지 않은 식별자의 **typename**
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서는 별칭 템플릿 정의의 정규화되지 않은 식별자에 있는 의사 **typename** 키워드가 컴파일러에서 더 이상 허용되지 않습니다. 이제 C7511 *'T': 'typename' 키워드 뒤에는 정규화된 이름이 와야 합니다* 코드가 생성됩니다.
+[`/permissive-`](../build/reference/permissive-standards-conformance.md) 모드에서는 별칭 템플릿 정의의 정규화되지 않은 식별자에 있는 의사 **typename** 키워드가 컴파일러에서 더 이상 허용되지 않습니다. 다음 코드는 이제 C7511 `'T': 'typename' keyword must be followed by a qualified name`을 생성합니다.
 
 ```cpp
 template <typename T>
@@ -2882,9 +3053,9 @@ using  X = typename T;
 
 ### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>별칭 템플릿 정의 오른쪽의 `__declspec()`
 
-[__declspec](../cpp/declspec.md)은 별칭 템플릿 정의의 오른쪽에 더 이상 허용되지 않습니다. 이 코드는 이전에 컴파일러에서 허용되었지만 무시되었으며, 별칭을 사용한 경우에도 사용 중단 경고가 발생하지 않았습니다.
+[__declspec](../cpp/declspec.md)은 별칭 템플릿 정의의 오른쪽에 더 이상 허용되지 않습니다. 이전에는 컴파일러가 이 코드를 수락했지만 무시했습니다. 별칭을 사용하면 사용 중단 경고가 발생하지 않았습니다.
 
-표준 C++ 특성 [\[\[deprecated\]\]](../cpp/attributes.md)를 대신 사용할 수 있으며, Visual Studio 2017 버전 15.6에서 적용됩니다. 이제 C2760 *구문 오류: '__declspec'은 예기치 않은 토큰입니다. 필요한 토큰은 'type specifier'입니다.* 코드가 생성됩니다.
+표준 C++ 특성 [\[\[deprecated\]\]](../cpp/attributes.md)를 대신 사용할 수 있으며, Visual Studio 2017 버전 15.6에서 적용됩니다. 다음 코드는 이제 C2760: `syntax error: unexpected token '__declspec', expected 'type specifier'`를 생성합니다.
 
 ```cpp
 template <typename T>
@@ -2902,9 +3073,9 @@ using  X [[deprecated("msg")]] = T;
 
 2단계 이름 조회를 위해서는 템플릿 본문에 사용된 종속되지 않은 이름이 정의 시점에 템플릿에 표시될 수 있어야 합니다. 이전에는 Microsoft C++ 컴파일러가 인스턴스화 시점까지 찾을 수 없는 이름을 조회되지 않는 것으로 남겨 두었습니다. 이제, 종속되지 않은 이름을 템플릿 본문에 바인드해야 합니다.
 
-이것을 나타낼 수 있는 한 가지 방법은 종속 기본 클래스를 조회하는 것입니다. 이전에는 모든 형식이 확인되는 인스턴스화 시간 동안 이름이 조회되었기 때문에 컴파일러가 종속 기본 클래스에 정의된 이름을 사용할 수 있도록 허용했습니다. 이제 해당 코드가 오류로 처리됩니다. 이러한 경우 기본 클래스 형식으로 한정하거나 `this->` 포인터 추가 등으로 종속으로 지정하여 인스턴스화 시점에 변수가 조회되도록 강제 적용할 수 있습니다.
+이것을 나타낼 수 있는 한 가지 방법은 종속 기본 클래스를 조회하는 것입니다. 이전에는 컴파일러에서 종속된 기본 클래스에 정의된 이름을 사용할 수 있었습니다. 모든 형식이 확인되면 인스턴스화 과정에서 이름을 조회하기 때문입니다. 이제 해당 코드가 오류로 처리됩니다. 이러한 경우 기본 클래스 형식으로 한정하거나 `this->` 포인터 추가 등으로 종속으로 지정하여 인스턴스화 시점에 변수가 조회되도록 강제 적용할 수 있습니다.
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서는 다음 C3861: *'base_value': 식별자를 찾을 수 없습니다.* 코드가 발생합니다.
+[/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 이제 C3861: `'base_value': identifier not found`을 발생시킵니다.
 
 ```cpp
 template <class T>
@@ -2922,15 +3093,15 @@ struct S : Base<T> {
 
 이 오류를 해결하려면 `return` 문을 `return this->base_value;`로 변경합니다.
 
-**참고:** Boost python 라이브러리에는 오랫동안 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp)의 템플릿 정방향 선언에 대한 MSVC 관련 해결 방법이 있었습니다. Visual Studio 2017 버전 15.8(_MSC_VER=1915)부터 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 MSVC 컴파일러가 ADL(인수 종속성 이름 조회)을 올바로 수행하고 다른 컴파일러와 일치하므로 이 해결 방법 보호가 필요 없어졌습니다. ‘C3861: ‘unwind_type’: 식별자를 찾을 수 없습니다.’ 오류를 방지하려면 Boostorg 리포지토리에서 [PR 229](https://github.com/boostorg/python/pull/229)를 참조하여 헤더 파일을 업데이트합니다.  [vcpkg](../build/vcpkg.md) Boost 패키지를 이미 패치했으므로 vcpkg에서 Boost 소스를 가져오거나 업그레이드한 경우 패치를 별도로 적용할 필요가 없습니다.
+**참고:** Boost python 라이브러리에는 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp)의 템플릿 정방향 선언에 대한 MSVC 관련 해결 방법이 있었습니다. Visual Studio 2017 버전 15.8(\_MSC\_VER=1915)부터 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 모드에서 MSVC 컴파일러가 ADL(인수 종속성 이름 조회)을 올바르게 수행합니다. 이제 다른 컴파일러와 일치하므로 이 해결 방법 가드가 필요 없습니다. 오류 C3861: `'unwind_type': identifier not found`를 방지하려면 Boost 리포지토리의 [PR 229](https://github.com/boostorg/python/pull/229)를 참조하여 헤더 파일을 업데이트합니다. [vcpkg](../build/vcpkg.md) Boost 패키지를 이미 패치했으므로 vcpkg에서 Boost 소스를 가져오거나 업그레이드한 경우 패치를 별도로 적용할 필요가 없습니다.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>`std` 네임스페이스에서 정방향 선언 및 정의
 
 C++ 표준에서는 사용자가 `std` 네임스페이스에 정방향 선언 또는 정의를 추가할 수 없습니다. `std` 네임스페이스 또는 `std` 네임스페이스 내의 네임스페이스에 선언 또는 정의를 추가하면 정의되지 않은 동작이 발생합니다.
 
-향후 Microsoft는 일부 표준 라이브러리 형식이 정의된 위치를 변경할 예정입니다. 이 변경으로 인해 `std` 네임스페이스에 정방향 선언을 추가하는 기존 코드의 호환성이 손상됩니다. 새로운 경고, C4643을 통해 이러한 소스 문제를 파악할 수 있습니다. 이 경고는 **/default** 모드에서 사용하도록 설정되며 기본적으로 해제되어 있습니다. 이것은 **/Wall** 또는 **/WX**로 컴파일되는 프로그램에 영향을 줍니다.
+향후 Microsoft는 일부 표준 라이브러리 형식이 정의된 위치를 변경할 예정입니다. 이 변경으로 인해 `std` 네임스페이스에 정방향 선언을 추가하는 기존 코드의 호환성이 손상됩니다. 새로운 경고, C4643을 통해 이러한 소스 문제를 파악할 수 있습니다. 이 경고는 **`/default`** 모드에서 사용하도록 설정되며 기본적으로 해제되어 있습니다. 이것은 **`/Wall`** 또는 **`/WX`** 로 컴파일되는 프로그램에 영향을 줍니다.
 
-이제 다음 코드는 C4643: *C++ 표준에서는 네임스페이스 std에서 'vector' 정방향 선언이 허용되지 않습니다*를 생성합니다.
+이제 다음 코드는 C4643: `Forward declaring 'vector' in namespace std is not permitted by the C++ Standard`를 발생시킵니다.
 
 ```cpp
 namespace std {
@@ -2946,7 +3117,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>자신을 위임하는 생성자
 
-C++ 표준에서는 위임하는 생성자가 해당 생성자에 위임하는 경우 컴파일러가 진단을 내보내도록 제안합니다. [/std:c++17](../build/reference/std-specify-language-standard-version.md) 및 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드의 Microsoft C++ 컴파일러는 이제 C7535: *'X::X': 위임하는 생성자는 자신을 호출합니다*를 생성합니다.
+C++ 표준에서는 위임하는 생성자가 해당 생성자에 위임하는 경우 컴파일러가 진단을 내보내도록 제안합니다. [/std:c++17](../build/reference/std-specify-language-standard-version.md) 및 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 모드의 Microsoft C++ 컴파일러는 이제 C7535: `'X::X': delegating constructor calls itself`를 발생시킵니다.
 
 이 오류가 없으면 다음 프로그램이 컴파일되지만 무한 루프가 생성됩니다.
 
@@ -2973,9 +3144,9 @@ public:
 
 지금까지 [offsetof](../c-runtime-library/reference/offsetof-macro.md)는 [reinterpret_cast](../cpp/reinterpret-cast-operator.md)가 필요한 매크로를 사용하여 구현되었습니다. 이 사용법은 상수 식을 필요로 하는 컨텍스트에서 올바르지 않지만, Microsoft C++ 컴파일러에서는 일반적으로 허용되었습니다. 표준 라이브러리의 일부로 제공되는 `offsetof` 매크로는 컴파일러 내장 함수( **__builtin_offsetof**)를 올바르게 사용하지만, 매크로 트릭을 사용하여 고유한 `offsetof`를 정의하는 사람이 많았습니다.
 
-Visual Studio 2017 버전 15.8에서 컴파일러는 `reinterpret_cast` 연산자가 기본 모드로 표시될 수 있는 영역을 제한하여 코드가 표준 C++ 동작을 준수하도록 합니다. [/permissive-](../build/reference/permissive-standards-conformance.md) 아래에서는 제약 조건이 더욱 엄격합니다. 상수 식이 필요한 위치에 `offsetof`의 결과를 사용하면 C4644 ‘상수 식에 매크로 기반 offsetof 패턴을 사용하는 것은 표준이 아닙니다. 대신 C++ 표준 라이브러리에 정의된 offsetof를 사용하세요.’ 또는 C2975 ‘템플릿 인수가 잘못되었습니다. 컴파일 시간 상수 식이 필요합니다.’라는 경고를 실행하는 코드가 생성될 수 있습니다.  
+Visual Studio 2017 버전 15.8에서 컴파일러는 `reinterpret_cast` 연산자가 기본 모드로 표시될 수 있는 영역을 제한하여 코드가 표준 C++ 동작을 준수하도록 합니다. [/permissive-](../build/reference/permissive-standards-conformance.md) 아래에서는 제약 조건이 더욱 엄격합니다. 상수 식이 필요한 `offsetof`의 결과를 사용하면 경고 C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` 또는 C2975 `invalid template argument, expected compile-time constant expression`을 보내는 코드가 생성될 수 있습니다.
 
-**/default** 및 **/std:c++17** 모드에서는 C4644가, [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서는 C2975 코드가 발생합니다.
+다음 코드는 **`/default`** 및 **`/std:c++17`** 모드에서는 C4644를, [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서는 C2975를 발생시킵니다.
 
 ```cpp
 struct Data {
@@ -3017,7 +3188,7 @@ int main()
 
 이전 버전의 Microsoft C++ 컴파일러는 기본 클래스에 팩 확장도 적용되는 경우 기본 클래스에 cv 한정자가 있음을 검색하지 못했습니다.
 
-Visual Studio 2017 버전 15.8의 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서는 C3770 *'const S': 유효한 기본 클래스가 아닙니다.* 코드가 발생합니다.
+Visual Studio 2017 버전 15.8의 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 C3770 `'const S': is not a valid base class`를 발생시킵니다.
 
 ```cpp
 template<typename... T>
@@ -3035,7 +3206,7 @@ int main()
 
 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드의 컴파일러에서 이제 종속된 중첩 이름 지정자 뒤에 오는 템플릿 이름을 **template** 키워드로 시작해야 합니다.
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) 모드의 다음 코드에서 이제 C7510: ‘’example’: 종속 템플릿 이름을 사용하는 경우 ‘template’으로 시작해야 합니다. 참고: 컴파일되는 클래스 템플릿 인스턴스화 ‘X\<T>’에 대한 참조를 확인하세요. 
+[/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 다음 코드는 이제 C7510: `'example': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled`를 발생시킵니다.
 
 ```cpp
 template<typename T> struct Base
@@ -3096,7 +3267,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-Visual Studio 2017 버전 15.9의 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드에서 컴파일러는 C3861: *'from_template': 식별자를 찾을 수 없음*을 발생시킵니다.
+Visual Studio 2017 version 15.9의 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 모드에서 컴파일러는 C3861: `'from_template': identifier not found`를 발생시킵니다.
 
 오류를 해결하려면 `from_template_t` 전에 `from_template`를 선언합니다.
 
@@ -3104,22 +3275,22 @@ Visual Studio 2017 버전 15.9의 [/permissive-](../build/reference/permissive-s
 
 Visual Studio 2017 버전 15.9에서 컴파일러는 모듈의 명령줄 옵션이 모듈 생성 쪽과 모듈 사용 쪽에서 일치하지 않을 때마다 C5050을 발생시킵니다. 다음 예제에서는 두 가지 문제가 있습니다.
 
-- 사용 쪽(main.cpp)에서 **/EHsc** 옵션을 지정하지 않았습니다.
+- 사용 쪽(main.cpp)에서 **`/EHsc`** 옵션을 지정하지 않았습니다.
 
-- C++ 버전이 생성 쪽에서는 **/std:c++17**이고, 사용 쪽에서는 **/std:c++14**입니다.
+- C++ 버전이 생성 쪽에서는 **`/std:c++17`** 이고, 사용 쪽에서는 **`/std:c++14`** 입니다.
 
 ```cmd
 cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-컴파일러는 다음 두 경우 모두에 대해 C5050을 생성합니다. *경고 C5050: 'm' 모듈을 가져오는 동안 호환되지 않는 환경: C++ 버전이 일치하지 않습니다.  현재 "201402" 모듈 버전 "201703"*
+컴파일러는 두 경우 모두에 대해 C5050 `warning C5050: Possible incompatible environment while importing module 'm': mismatched C++ versions.  Current "201402" module version "201703"`을 발생시킵니다.
 
-또한 컴파일러는 .ifc 파일이 변조될 때마다 C7536을 발생시킵니다. 모듈 인터페이스의 헤더에는 아래 내용의 SHA2 해시가 포함됩니다. 가져올 때 .ifc 파일을 동일한 방식으로 해시한 다음, 헤더에 제공된 해시와 비교합니다. 해시가 일치하지 않으면 오류 C7536이 발생합니다. *ifc에서 무결성 검사에 실패했습니다.  예상된 SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'* .
+또한 컴파일러는 .ifc 파일이 변조될 때마다 C7536을 발생시킵니다. 모듈 인터페이스의 헤더에는 아래 내용의 SHA2 해시가 포함됩니다. 가져올 때 .ifc 파일을 해시한 다음 헤더에 제공된 해시와 비교합니다. 일치하지 않으면 오류 C7536 `ifc failed integrity checks.  Expected SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'`이 발생합니다.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>별칭 및 추론되지 않은 컨텍스트와 관련된 부분 순서
 
-추론되지 않은 컨텍스트에서 별칭을 포함하는 부분 순서 지정 규칙의 구현에 차이가 있습니다. 다음 예제에서 Clang이 코드를 허용하는 반면 [/permissive-](../build/reference/permissive-standards-conformance.md) 모드의 GCC 및 Microsoft C++ 컴파일러는 오류를 발생시킵니다.
+추론되지 않은 컨텍스트에서 별칭을 포함하는 부분 순서 지정 규칙의 구현에 차이가 있습니다. 다음 예제에서 Clang이 코드를 허용하는 반면 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 모드의 GCC 및 Microsoft C++ 컴파일러는 오류를 발생시킵니다.
 
 ```cpp
 #include <utility>
@@ -3261,7 +3432,7 @@ note: see usage of 'g'.
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015의 C++ 규칙 향상
 
-Visual Studio 2015, 업데이트 3까지 규칙 향상의 전체 목록은 [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)(2003부터 2015까지 Visual C++의 새로운 기능)를 참조하세요.
+Visual Studio 2015 업데이트 3까지 규칙 향상의 전체 목록이 있습니다. 자세한 내용은 [Visual C++ 2003 ~ 2015의 새로운 기능](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)을 참조하세요.
 
 ::: moniker-end
 
