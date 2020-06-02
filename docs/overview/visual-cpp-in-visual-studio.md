@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
+ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365201"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84108434"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio의 C++
 
@@ -99,7 +99,7 @@ Windows용 기존 네이티브 C++ 데스크톱 애플리케이션을 만드는 
 [C++/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 C# 또는 Visual Basic과 같은 언어로 작성된 네이티브 C++ 및 .NET 프로그램 간의 상호 운용성을 활성화하는 DLL을 만드는 방법을 알아봅니다.
 
-[Linux 프로그래밍](../linux/index.md)<br/>
+[Linux 프로그래밍](../linux/index.yml)<br/>
 Visual Studio IDE를 사용하여 GCC로 컴파일을 위해 원격 Linux 머신으로 코딩 및 배포합니다.
 
 [Visual Studio에서 C/C++ DLL 만들기](../build/dlls-in-visual-cpp.md)<br/>
