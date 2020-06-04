@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759240"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421327"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -86,7 +86,7 @@ int _wprintf_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 인쇄된 문자 수 또는 오류가 발생하는 경우 음수 값을 반환합니다. *Format* 이 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. *인수*에 **EOF** (0xffff)가 있으면이 함수는-1을 반환 합니다.
 
@@ -139,6 +139,9 @@ Line one
 |**wprintf**, **_wprintf_l**|\<stdio.h> 또는 \<wchar.h>|
 
 이 콘솔은 UWP (유니버설 Windows 플랫폼) 앱에서 지원 되지 않습니다. 콘솔, **stdin**, **stdout**및 **stderr**에 연결 된 표준 스트림 핸들은 C 런타임 함수가 UWP 앱에서 사용할 수 있으려면 먼저 리디렉션해야 합니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+> [!IMPORTANT]
+> Windows 10 버전 2004 (빌드 19041)부터 `printf` 함수 패밀리는 반올림을 위한 IEEE 754 규칙에 따라 표현 가능한 부동 소수점 숫자를 정확 하 게 출력 합니다. 이전 버전의 Windows에서는 ' 5 '로 끝나는 정확히 표현할 수 있는 부동 소수점 숫자가 항상 반올림 됩니다. IEEE 754은 가장 가까운 짝수 ("은행원의 반올림"이 라고도 함)로 반올림 해야 함을 명시 합니다. 예를 들어 1.5과 2.5은 모두 2로 반올림 되어야 합니다. 이전에는 1.5가 2로 반올림 되 고 2.5가 3으로 반올림 됩니다. 이 변경은 정확히 표현할 수 있는 숫자에만 영향을 줍니다. 예를 들어 2.35 (메모리에 표시 되는 경우 2.35000000000000008에 가까울수록)는 계속 2.4으로 반올림 됩니다. 이러한 함수에서 수행 하는 반올림은 이제 [fesetenv](fesetenv1.md)에 의해 설정 된 부동 소수점 반올림 모드와도 동일 합니다. 이전에는 항상 FE_TONEAREST 동작을 선택 합니다. 이 변경 내용은 Visual Studio 2019 버전 16.2 이상을 사용 하 여 빌드된 프로그램에만 영향을 줍니다. 레거시 부동 소수점 반올림 동작을 사용 하려면 [legacy_stdio_float_rounding](../link-options.md)와 연결 합니다.
 
 ## <a name="example"></a>예제
 
@@ -226,12 +229,12 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [형식 사양 구문: printf 및 wprintf 함수](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
