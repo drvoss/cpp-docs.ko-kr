@@ -1,9 +1,11 @@
 ---
 title: _strtime, _wstrtime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime
 - _strtime
+- _o__strtime
+- _o__wstrtime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946554"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910915"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -71,7 +74,7 @@ wchar_t *_wstrtime(
 *timestr*<br/>
 시간 문자열입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 결과 문자열 *timestr*에 대 한 포인터를 반환 합니다.
 
@@ -79,11 +82,13 @@ wchar_t *_wstrtime(
 
 **_Strtime** 함수는 *timestr*가 가리키는 버퍼에 현재 현지 시간을 복사 합니다. 시간은 **hh: mm: ss** 형식으로 지정 됩니다. 여기서 **hh** 는 24 시간 표기법의 시간을 나타내는 두 자리 숫자, **mm** 은 분을 나타내는 두 자리 숫자, **ss** 는 초를 나타내는 두 자리 숫자입니다. 예를 들어, **18:23:44** 문자열은 23 분 및 44 초 (오후 6 시)를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
 
-**_wstrtime** 는 **_strtime**의 와이드 문자 버전입니다. **_wstrtime** 의 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. *Timestr* 가 **NULL** 포인터 이거나 *timestr* 의 형식이 잘못 된 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 예외가 계속 허용 되는 경우 이러한 함수는 **null** 을 반환 하 고 *Timestr* 이 **Null** 인 경우 **errno** 를 **EINVAL** 로 설정 하 고 *timestr* 의 형식이 잘못 된 경우 **errno** 를 **ERANGE** 로 설정 합니다.
+**_wstrtime** 은 **_strtime**의 와이드 문자 버전입니다. **_wstrtime** 의 인수 및 반환 값은 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. *Timestr* 가 **NULL** 포인터 이거나 *timestr* 의 형식이 잘못 된 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 예외가 계속 허용 되는 경우 이러한 함수는 **null** 을 반환 하 고 *Timestr* 이 **Null** 인 경우 **errno** 를 **EINVAL** 로 설정 하 고 *timestr* 의 형식이 잘못 된 경우 **errno** 를 **ERANGE** 로 설정 합니다.
 
-C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -96,7 +101,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -120,7 +125,7 @@ int main( void )
 The current time is 14:21:44
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

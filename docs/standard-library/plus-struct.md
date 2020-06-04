@@ -7,12 +7,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240502"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372075"
 ---
 # <a name="plus-struct"></a>plus 구조체
 
@@ -20,7 +20,7 @@ ms.locfileid: "68240502"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -39,16 +39,16 @@ struct plus<void>
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*하십시오 *T*, *U*\
+*유형*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 이진 `operator+`를 지원하는 형식입니다.
 
 *왼쪽*\
-더하기 연산의 왼쪽 피연산자입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *T*합니다.
+더하기 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 type *type.* 특수화된 템플릿은 유추된 형식 *T의*lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
 
 *오른쪽*\
-더하기 연산의 오른쪽 피연산자입니다. 형식의 lvalue 참조 인수를 사용 하는 특수화 되지 않은 템플릿은 *형식*합니다. 특수화 된 템플릿은 완벽 하 게 전달의 lvalue 및 rvalue 참조 인수 형식 유추 *U*합니다.
+더하기 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 type *type.* 특수화된 템플릿은 유추U 형식 *U의*lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 `Left + Right`의 결과입니다. 특수 템플릿은 이진 `operator+`에 의해 반환되는 형식을 포함하는 결과를 완벽하게 전달합니다.
 

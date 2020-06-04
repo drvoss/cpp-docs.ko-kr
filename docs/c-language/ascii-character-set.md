@@ -2,12 +2,12 @@
 title: ASCII 문자 집합
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 264d1f5a0f10d77a2c7c1dcc945ee6e508c70789
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335078"
 ---
 # <a name="ascii-character-set"></a>ASCII 문자 집합
 
@@ -16,8 +16,8 @@ ms.locfileid: "56147168"
 소스 문자 집합은 소스 파일에 나타날 수 있는 올바른 문자 집합입니다. Microsoft C의 경우 소스 문자 집합은 표준 ASCII 문자 집합입니다.
 
 > [!NOTE]
->  **경고** 키보드 및 콘솔 드라이버로 인해 문자 집합이 다시 매핑될 수 있으므로 전 세계 배포용 프로그램은 국가/지역 코드를 확인해야 합니다.
+> **경고** 키보드 및 콘솔 드라이버로 인해 문자 집합이 다시 매핑될 수 있으므로 전 세계 배포용 프로그램은 국가/지역 코드를 확인해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자](../c-language/characters.md)

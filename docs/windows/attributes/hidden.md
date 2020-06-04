@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168098"
 ---
 # <a name="hidden"></a>hidden
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501456"
 [hidden]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Hidden** C++ 특성에는 [hidden](/windows/win32/Midl/hidden) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69501456"
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)<br/>

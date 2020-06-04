@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
 ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326796"
 ---
 # <a name="c-keywords"></a>C 키워드
 
@@ -56,6 +56,6 @@ Microsoft 확장을 사용하면 위에 나열된 키워드를 프로그램에�
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 요소](../c-language/elements-of-c.md)

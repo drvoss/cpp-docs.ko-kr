@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1307
 ms.assetid: 6f77d3d4-ba8a-476c-b540-aff19eb4efc4
-ms.openlocfilehash: 1acdda77ac9cbf8d99752de3b78ab9c32bbb4cbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7eb90c8e17408f6898ef7ff1a9d9e5efcafb4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203348"
 ---
 # <a name="fatal-error-c1307"></a>심각한 오류 C1307
 
 프로필 데이터가 수집된 이후 프로그램이 편집되었습니다.
 
-사용 하는 경우 [/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md), 링커 /ltcg: pginstrument 후 컴파일된 입력된 모듈을 검색 및 모듈에 없는 기존 프로필 데이터는 더 이상 관련이 지점에 변경 된 것입니다. 예를 들어 호출 그래프 다시 컴파일된 모듈에서 변경 된 경우 컴파일러에서 C1307를 생성 합니다.
+[/Ltcg: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)를 사용 하는 경우 링커에서/LTCG: pginstrument 후 다시 컴파일된 입력 모듈을 검색 하 고 모듈이 기존 프로필 데이터가 더 이상 관련이 없는 지점으로 변경 되었습니다. 예를 들어, 다시 컴파일된 모듈에서 호출 그래프가 변경 되 면 컴파일러는 C1307을 생성 합니다.
 
-이 오류를 해결 하려면 /ltcg: pginstrument 실행, 모든 테스트 실행을 다시 실행 하 고 /ltcg: pgoptimize를 실행 합니다. 실행 /ltcg: pginstrument 및 다시 실행 된 모든 테스트를 실행할 수 없습니다, 경우에 최적화 된 이미지를 만드는 /ltcg: pgupdate /ltcg: pgoptimize 대신 사용 합니다.
+이 오류를 해결 하려면/LTCG: PGINSTRUMENT를 실행 하 고 모든 테스트 실행을 다시 실행 한 다음/LTCG: PGOPTIMIZE를 실행 합니다. /LTCG: PGINSTRUMENT 수 없으며 모든 테스트 실행을 다시 실행 하는 경우/ltcg: PGOPTIMIZE 대신/LTCG: PGINSTRUMENT를 사용 하 여 최적화 된 이미지를 만듭니다.

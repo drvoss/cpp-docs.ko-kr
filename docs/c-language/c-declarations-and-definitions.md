@@ -3,11 +3,11 @@ title: C 선언 및 정의
 ms.date: 11/04/2016
 ms.assetid: 575f0c9b-5554-4346-be64-b2129ca9227f
 ms.openlocfilehash: 3be9cd72e9f4dbad4d279cc1bb65dfb92a61cd42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326055"
 ---
 # <a name="c-declarations-and-definitions"></a>C 선언 및 정의
 
@@ -28,6 +28,6 @@ int count( double f ) {}
 
 `var` 및 `val` 함수에 `find` 및 `count` 변수를 사용할 수 있으며 추가 선언은 필요하지 않습니다. 그러나 이러한 이름은 `main`에 표시되지 않습니다(액세스할 수 없음).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [원본 파일 및 원본 프로그램](../c-language/source-files-and-source-programs.md)

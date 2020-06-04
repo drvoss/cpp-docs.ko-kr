@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403232"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213722"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 열거형
 
@@ -30,18 +30,18 @@ enum ModuleType;
 
 |이름|설명|
 |----------|-----------------|
-|`InProc`|in-process 서버입니다.|
-|`OutOfProc`|-out-of-process 서버입니다.|
-|`DisableCaching`|모듈에 캐싱 메커니즘을 사용 하지 않도록 설정 합니다.|
-|`InProcDisableCaching`|조합 `InProc` 고 `DisableCaching`입니다.|
-|`OutOfProcDisableCaching`|조합 `OutOfProc` 고 `DisableCaching`입니다.|
+|`InProc`|In-process 서버.|
+|`OutOfProc`|Out-of-process 서버입니다.|
+|`DisableCaching`|모듈에서 캐싱 메커니즘을 사용 하지 않도록 설정 합니다.|
+|`InProcDisableCaching`|`InProc`와 `DisableCaching`의 조합입니다.|
+|`OutOfProcDisableCaching`|`OutOfProc`와 `DisableCaching`의 조합입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** module .h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

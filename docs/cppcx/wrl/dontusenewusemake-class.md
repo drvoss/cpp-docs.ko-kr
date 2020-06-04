@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::DontUseNewUseMake class
 - Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-ms.openlocfilehash: 02420f2657c7d7d6a7a0294f0321717a3bb2b5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae67373b4f2f2d4a199b939b06e6f526f1365446
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371547"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake 클래스
 
@@ -28,15 +28,15 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>설명
 
-연산자를 사용 하는 것을 금지 `new` 에서 `RuntimeClass`합니다. 결과적으로 사용 해야 합니다 [함수](make-function.md) 대신 합니다.
+에서 `new` 연산자 `RuntimeClass`사용을 방지합니다. 따라서 [대신 Make 함수를](make-function.md) 사용해야 합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-operators"></a>Public 연산자
 
-이름                                             | 설명
+속성                                             | Description
 ------------------------------------------------ | ---------------------------------------------------------------------------
-[Dontusenewusemake:: Operator 새](#operator-new) | 연산자 오버 로드 `new` 에서 사용 되지 않도록 방지 하 고 `RuntimeClass`입니다.
+[돈트유스뉴유메이크::연산자 새](#operator-new) | 연산자 `new` 에 오버로드되고 `RuntimeClass`에서 사용되지 않도록 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -46,9 +46,9 @@ class DontUseNewUseMake;
 
 **헤더:** implements.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="operator-new"></a>Dontusenewusemake:: Operator 새
+## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a>돈트유스뉴유메이크::연산자 새
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -62,15 +62,15 @@ void* operator new(
 ### <a name="parameters"></a>매개 변수
 
 *__unnamed0*<br/>
-할당할 메모리의 바이트 수를 지정 하는 명명 되지 않은 매개 변수입니다.
+할당할 메모리 바이트 수를 지정하는 명명되지 않은 매개 변수입니다.
 
-*placement*<br/>
+*배치*<br/>
 할당할 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자를 오버 로드 하는 경우 추가 인수를 전달 하는 방법을 제공 `new`합니다.
+연산자 `new`에 오버로드하는 경우 추가 인수를 전달하는 방법을 제공합니다.
 
 ### <a name="remarks"></a>설명
 
-연산자 오버 로드 `new` 에서 사용 되지 않도록 방지 하 고 `RuntimeClass`입니다.
+연산자 `new` 에 오버로드되고 `RuntimeClass`에서 사용되지 않도록 합니다.

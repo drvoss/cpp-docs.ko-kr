@@ -30,12 +30,12 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: 5080f390d302840e9e7b349cf1c21ab618ae48db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168801"
 ---
 # <a name="c-assignment-operators"></a>C 할당 연산자
 
@@ -48,7 +48,7 @@ ms.locfileid: "50657030"
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 C의 할당 연산자는 단일 연산에서 값을 변형 및 할당할 수 있습니다. C에서는 다음과 같은 할당 연산자를 제공합니다.
 
@@ -68,6 +68,6 @@ C의 할당 연산자는 단일 연산에서 값을 변형 및 할당할 수 있
 
 할당에서 오른쪽 값의 형식은 왼쪽 값의 형식으로 변환되고 해당 값은 할당이 발생한 후 왼쪽 피연산자에 저장됩니다. 왼쪽 피연산자는 배열, 함수 또는 상수이어서는 안 됩니다. 두 형식에 의존하는 특정 변환 경로에 대한 자세한 내용은 [형식 변환](../c-language/type-conversions-c.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [할당 연산자](../cpp/assignment-operators.md)

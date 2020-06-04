@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d87cdae5c24eae391be8db2fcdd04f91d592e427
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348629"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753163"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 클래스
 
-ID2D1LinearGradientBrush에 대 한 래퍼입니다.
+ID2D1LinearGradient브러시용 래퍼입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,47 +51,47 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|CD2DLinearGradientBrush 개체를 생성합니다.|
-|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|소멸자입니다. D2D 선형 그라데이션 브러시 개체 소멸 될 때 호출 됩니다.|
+|[CD2DLinear그라데이션 브러시::CD2D선형그라데이션 브러시](#cd2dlineargradientbrush)|CD2DLinearGradient브러시 오브젝트를 생성합니다.|
+|[CD2DLinear그라데이션 브러시::~CD2DLinearGradient브러시](#_dtorcd2dlineargradientbrush)|소멸자입니다. D2D 선형 그라데이션 브러시 오브젝트가 소멸될 때 호출됩니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|
-|[CD2DLinearGradientBrush::Create](#create)|CD2DLinearGradientBrush를 만듭니다. (재정의 [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DLinearGradientBrush::Destroy](#destroy)|CD2DLinearGradientBrush 개체를 제거합니다. (재정의 [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DLinearGradientBrush::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|
-|[CD2DLinearGradientBrush::Get](#get)|반환 ID2D1LinearGradientBrush 인터페이스|
-|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|선형 그라데이션의 끝 좌표를 검색합니다.|
-|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|선형 그라데이션의 시작 좌표를 검색합니다.|
-|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|브러시의 좌표 공간에서 선형 그라데이션의 끝 좌표를 설정합니다.|
-|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|브러시의 좌표 공간에서 선형 그라데이션의 시작 좌표를 설정합니다.|
+|[CD2D선형 그라데이션 브러시::연결](#attach)|기존 리소스 인터페이스를 개체에 연결합니다.|
+|[CD2D선형 그라데이션 브러시::만들기](#create)|CD2DLinearGradient브러시를 만듭니다. [(CD2DResource::만들기](../../mfc/reference/cd2dresource-class.md#create)재정의.)|
+|[CD2D리니어그라디언트 브러쉬::D에스트로이](#destroy)|CD2DLinearGradient브러시 오브젝트를 삭제합니다. [(CD2DGradient브러시::Destroy.)](../../mfc/reference/cd2dgradientbrush-class.md#destroy)|
+|[CD2D리니어그라디언트 브러쉬::D에타치](#detach)|개체에서 리소스 인터페이스 분리|
+|[CD2D선형 그라데이션 브러시::Get](#get)|ID2D1선형그라데이션 브러시 인터페이스 반환|
+|[CD2D선형 그라데이션 브러시::GetEndPoint](#getendpoint)|선형 그라데이션의 끝 좌표를 검색합니다.|
+|[CD2D선형 그라데이션 브러시::GetStartPoint](#getstartpoint)|선형 그라데이션의 시작 좌표를 검색합니다.|
+|[CD2D선형 그라데이션 브러시::설정 끝점](#setendpoint)|브러시의 좌표 공간에서 선형 그라데이션의 끝 좌표 설정|
+|[CD2D선형 그라데이션 브러시::셋스타트포인트](#setstartpoint)|브러시좌표 공간에서 선형 그라데이션의 시작 좌표 설정|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|반환 ID2D1LinearGradientBrush 인터페이스|
+|[CD2DLinearGradient브러시::연산자 ID2D1Linear그라디언트 브러시*](#operator_id2d1lineargradientbrush_star)|ID2D1선형그라데이션 브러시 인터페이스 반환|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|그라데이션의 시작점과 끝점이 고 시작 합니다.|
-|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradientBrush 포인터입니다.|
+|[CD2D선형그라데이션 브러시::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|그라데이션의 시작점과 끝점입니다.|
+|[CD2D선형그라데이션 브러시::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradient브러시에 대한 포인터입니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D자원](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
+[CD2D브러시](../../mfc/reference/cd2dbrush-class.md)
 
-[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2D그라디엔트 브러쉬](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DLinearGradientBrush`
 
@@ -99,30 +99,30 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **헤더:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2DLinear그라데이션 브러시::~CD2DLinearGradient브러시
 
-소멸자입니다. D2D 선형 그라데이션 브러시 개체 소멸 될 때 호출 됩니다.
+소멸자입니다. D2D 선형 그라데이션 브러시 오브젝트가 소멸될 때 호출됩니다.
 
 ```
 virtual ~CD2DLinearGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach
+## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2D선형 그라데이션 브러시::연결
 
-기존 개체에 대 한 리소스 인터페이스를 연결.
+기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pResource*<br/>
-기존 리소스 인터페이스입니다. NULL 일 수 없습니다.
+*Presource*<br/>
+기존 리소스 인터페이스입니다. NULL일 수 없음
 
-##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2DLinear그라데이션 브러시::CD2D선형그라데이션 브러시
 
-CD2DLinearGradientBrush 개체를 생성합니다.
+CD2DLinearGradient브러시 오브젝트를 생성합니다.
 
 ```
 CD2DLinearGradientBrush(
@@ -138,33 +138,33 @@ CD2DLinearGradientBrush(
 
 ### <a name="parameters"></a>매개 변수
 
-*pParentTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p부모 대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-*gradientStops*<br/>
-D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.
+*그라데이션스톱*<br/>
+D2D1_GRADIENT_STOP 구조의 배열에 대한 포인터입니다.
 
-*gradientStopsCount*<br/>
-GradientStops 배열의 그라데이션 중지점의 수를 지정 하는 1 보다 크거나 같은 값입니다.
+*그라데이션스스카운트*<br/>
+그라데이션Stops 배열에서 그라데이션 스톱 수를 지정하는 값보다 크거나 1과 같은 값입니다.
 
-*LinearGradientBrushProperties*<br/>
-그라데이션의 시작점과 끝점이 고 시작 합니다.
+*선형 그라데이션 브러시 속성*<br/>
+그라데이션의 시작점과 끝점입니다.
 
-*colorInterpolationGamma*<br/>
-그라데이션 중지점 사이 보간을 수행 되는 색 공간입니다.
+*색상인터폴레이션감마*<br/>
+그라데이션 정지 사이의 색상 보간이 수행되는 공간입니다.
 
-*extendMode*<br/>
-[0, 1]의 표준화 된 범위 밖에 그라데이션의 동작입니다.
+*확장 모드*<br/>
+정규화된 범위를 벗어난 그라데이션의 동작입니다.
 
-*pBrushProperties*<br/>
-불투명도 및 브러시의 변환에 대 한 포인터입니다.
+*p브러시프로퍼티*<br/>
+브러시의 불투명도 및 변환에 대한 포인터입니다.
 
-*bAutoDestroy*<br/>
-개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.
+*b오토파괴*<br/>
+개체가 소유자(pParentTarget)에 의해 소멸됨을 나타냅니다.
 
-##  <a name="create"></a>  CD2DLinearGradientBrush::Create
+## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2D선형 그라데이션 브러시::만들기
 
-CD2DLinearGradientBrush를 만듭니다.
+CD2DLinearGradient브러시를 만듭니다.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -172,46 +172,46 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>매개 변수
 
-*pRenderTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p렌더대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy
+## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2D리니어그라디언트 브러쉬::D에스트로이
 
-CD2DLinearGradientBrush 개체를 제거합니다.
+CD2DLinearGradient브러시 오브젝트를 삭제합니다.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach
+## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2D리니어그라디언트 브러쉬::D에타치
 
-개체에서 리소스 인터페이스를 분리합니다.
+개체에서 리소스 인터페이스 분리
 
 ```
 ID2D1LinearGradientBrush* Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-분리 된 리소스 인터페이스에 대 한 포인터입니다.
+분리된 리소스 인터페이스에 대한 포인터입니다.
 
-##  <a name="get"></a>  CD2DLinearGradientBrush::Get
+## <a name="cd2dlineargradientbrushget"></a><a name="get"></a>CD2D선형 그라데이션 브러시::Get
 
-반환 ID2D1LinearGradientBrush 인터페이스
+ID2D1선형그라데이션 브러시 인터페이스 반환
 
 ```
 ID2D1LinearGradientBrush* Get();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ID2D1LinearGradientBrush 인터페이스 또는 개체가 아직 초기화 되지 않은 경우 NULL 포인터입니다.
+개체가 아직 초기화되지 않은 경우 ID2D1LinearGradient브러시 인터페이스 또는 NULL에 대한 포인터입니다.
 
-##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint
+## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2D선형 그라데이션 브러시::GetEndPoint
 
 선형 그라데이션의 끝 좌표를 검색합니다.
 
@@ -219,11 +219,11 @@ ID2D1LinearGradientBrush 인터페이스 또는 개체가 아직 초기화 되�
 CD2DPointF GetEndPoint() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-브러시의 좌표 공간에서 선형 그라데이션의 끝 2 차원 좌표
+브러시의 좌표 공간에서 선형 그라데이션의 끝 2차원 좌표
 
-##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint
+## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2D선형 그라데이션 브러시::GetStartPoint
 
 선형 그라데이션의 시작 좌표를 검색합니다.
 
@@ -231,64 +231,64 @@ CD2DPointF GetEndPoint() const;
 CD2DPointF GetStartPoint() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-브러시의 좌표 공간에서 선형 그라데이션의 시작 2 차원 좌표
+브러시의 좌표 공간에서 선형 그라데이션의 시작 2차원 좌표
 
-##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2D선형그라데이션 브러시::m_LinearGradientBrushProperties
 
-그라데이션의 시작점과 끝점이 고 시작 합니다.
+그라데이션의 시작점과 끝점입니다.
 
 ```
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush
+## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2D선형그라데이션 브러시::m_pLinearGradientBrush
 
-ID2D1LinearGradientBrush 포인터입니다.
+ID2D1LinearGradient브러시에 대한 포인터입니다.
 
 ```
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
+## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradient브러시::연산자 ID2D1Linear그라디언트 브러시*
 
-반환 ID2D1LinearGradientBrush 인터페이스
+ID2D1선형그라데이션 브러시 인터페이스 반환
 
 ```
 operator ID2D1LinearGradientBrush*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ID2D1LinearGradientBrush 인터페이스 또는 개체가 아직 초기화 되지 않은 경우 NULL 포인터입니다.
+개체가 아직 초기화되지 않은 경우 ID2D1LinearGradient브러시 인터페이스 또는 NULL에 대한 포인터입니다.
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
+## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2D선형 그라데이션 브러시::설정 끝점
 
-브러시의 좌표 공간에서 선형 그라데이션의 끝 좌표를 설정합니다.
+브러시의 좌표 공간에서 선형 그라데이션의 끝 좌표 설정
 
-```
+```cpp
 void SetEndPoint(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
-브러시의 좌표 공간에서 선형 그라데이션의 끝 2 차원 좌표
+*지점*<br/>
+브러시의 좌표 공간에서 선형 그라데이션의 끝 2차원 좌표
 
-##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
+## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2D선형 그라데이션 브러시::셋스타트포인트
 
-브러시의 좌표 공간에서 선형 그라데이션의 시작 좌표를 설정합니다.
+브러시좌표 공간에서 선형 그라데이션의 시작 좌표 설정
 
-```
+```cpp
 void SetStartPoint(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
-브러시의 좌표 공간에서 선형 그라데이션의 시작 2 차원 좌표
+*지점*<br/>
+브러시의 좌표 공간에서 선형 그라데이션의 시작 2차원 좌표
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

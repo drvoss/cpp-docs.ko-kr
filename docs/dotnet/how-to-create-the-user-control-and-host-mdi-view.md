@@ -6,71 +6,71 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72501ba32d3b8b9a5c5fd8dd0c56f0628642b147
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374463"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기
 
-다음 단계에는.NET Framework 사용자 정의 컨트롤을 만들고 컨트롤 클래스 라이브러리 (특히 Windows 컨트롤 라이브러리 프로젝트의 경우) 사용자 정의 컨트롤을 작성 한 다음 프로젝트를 어셈블리로 컴파일합니다 하는 방법을 보여 줍니다. 컨트롤에서 파생 된 클래스를 사용 하는 MFC 응용 프로그램에서 사용할 수 있습니다 [CView 클래스](../mfc/reference/cview-class.md) 하 고 [CWinFormsView 클래스](../mfc/reference/cwinformsview-class.md)합니다.
+다음 단계에서는 .NET Framework 사용자 컨트롤을 만들고, 컨트롤 클래스 라이브러리(특히 Windows 컨트롤 라이브러리 프로젝트)에서 사용자 컨트롤을 작성한 다음 프로젝트를 어셈블리로 컴파일하는 방법을 보여 준다. 그런 다음 [CView 클래스](../mfc/reference/cview-class.md) 및 [CWinFormsView](../mfc/reference/cwinformsview-class.md)클래스에서 파생된 클래스를 사용하는 MFC 응용 프로그램에서 컨트롤을 사용할 수 있습니다.
 
-Windows Forms 사용자 정의 컨트롤을 만들고 컨트롤 클래스 라이브러리를 작성 하는 방법에 대 한 정보를 참조 하세요. [방법: 사용자 컨트롤 작성](/dotnet/framework/winforms/controls/how-to-author-composite-controls)합니다.
+Windows Forms 사용자 컨트롤을 만들고 컨트롤 클래스 라이브러리를 작성하는 방법에 대한 자세한 내용은 [사용자 컨트롤 작성 방법을](/dotnet/framework/winforms/controls/how-to-author-composite-controls)참조하십시오.
 
 > [!NOTE]
->  일부 경우에는 타사 Grid 컨트롤 같은 Windows Forms 컨트롤, 동작할 수 있습니다 하지 안정적으로 MFC 응용 프로그램에서 호스트 되는 경우. 권장된 해결 방법을 MFC 응용 프로그램에 Windows Forms 사용자 정의 컨트롤을 배치 하 고 사용자 정의 컨트롤 내에서 타사 표 형태 컨트롤을 배치 하는 것입니다.
+> 경우에 따라 타사 Grid 컨트롤과 같은 Windows Forms 컨트롤은 MFC 응용 프로그램에서 호스팅될 때 안정적으로 재생되지 않을 수 있습니다. 권장되는 해결 방법은 MFC 응용 프로그램에 Windows Forms 사용자 컨트롤을 배치하고 타사 그리드 컨트롤을 사용자 컨트롤 내부에 배치하는 것입니다.
 
-이 절차에 절차에 따라 WindowsFormsControlLibrary1 이라는 Windows Forms 컨트롤 라이브러리 프로젝트를 만들었다고 가정 [방법: 대화 상자에서 사용자 정의 컨트롤 및 호스트 만들기](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)합니다.
+이 절차에서는 [대화 상자에서 사용자 컨트롤 및 호스트 만들기](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)의 절차에 따라 WindowsFormsControlLibrary1이라는 Windows Forms 컨트롤 라이브러리 프로젝트를 만들었다고 가정합니다.
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC 호스트 응용 프로그램을 만들려면
 
 1. MFC 응용 프로그램 프로젝트를 만듭니다.
 
-   에 **파일** 메뉴에서 **새로 만들기**를 클릭 하 고 **프로젝트**합니다. 에 **시각적 C++**  폴더를 선택 **MFC 응용 프로그램**합니다.
+   **파일** 메뉴에서 **새로**를 선택한 다음 **프로젝트를**클릭합니다. 시각적 **C++** 폴더에서 **MFC 응용 프로그램을**선택합니다.
 
-   에 **이름** 상자에 입력 합니다 `MFC02` 변경 합니다 **솔루션** 로 설정 **솔루션에 추가**. **확인**을 클릭합니다.
+   **이름** 상자에 **솔루션** `MFC02` 설정을 입력하고 변경하여 **솔루션에 추가합니다.** **확인**을 클릭합니다.
 
-   에 **MFC 응용 프로그램 마법사**에서 모든 기본값을 적용 하 고 클릭 **마침**합니다. 이 다중 문서 인터페이스를 사용 하 여 MFC 응용 프로그램을 만듭니다.
+   **MFC 응용 프로그램 마법사에서**모든 기본값을 적용한 다음 **완료를**클릭합니다. 이렇게 하면 여러 문서 인터페이스가 있는 MFC 응용 프로그램이 만들어집니다.
 
-1. 공용 언어 런타임 (CLR) 지원에 대 한 프로젝트를 구성 합니다.
+1. CLR(공통 언어 런타임) 지원을 위한 프로젝트를 구성합니다.
 
-   **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 `MFC01` 프로젝트 노드를 선택한 **속성** 상황에 맞는 메뉴에서. 합니다 **속성 페이지** 대화 상자가 나타납니다.
+   **솔루션 탐색기에서**프로젝트 `MFC01` 노드를 마우스 오른쪽 단추로 클릭하고 컨텍스트 메뉴에서 **속성을** 선택합니다. **속성 페이지** 대화 상자가 나타납니다.
 
-   아래 **구성 속성**를 선택 **일반**합니다. 아래는 **프로젝트 기본값** 으로 설정 **공용 언어 런타임 지원을** 하 **공용 언어 런타임 지원 (/ clr)** 합니다.
+   **구성 속성에서** **일반**을 선택합니다. 프로젝트 기본값 섹션에서 **공통 언어 런타임 지원을** 공통 언어 **런타임 지원(/clr)으로** **설정합니다.**
 
-   아래 **구성 속성**, 확장 **C /C++**  을 클릭 합니다 **일반** 노드. 설정할 **디버그 정보 형식** 하 **프로그램 데이터베이스 (/Zi)** 합니다.
+   **구성 속성에서** **C/C++를** 확장하고 **일반** 노드를 클릭합니다. **디버그 정보 형식을** **프로그램 데이터베이스(/Zi)로**설정합니다.
 
-   클릭 합니다 **코드 생성** 노드. 설정 **최소 다시 빌드 가능** 하 **없음 (/ Gm-)** 합니다. 설정할 수도 **기본 런타임 검사** 하 **기본**입니다.
+   코드 생성 노드를 **클릭합니다.** 설정 **최소 재생성** **없음(/Gm-)으로**설정합니다. 또한 **기본 런타임 검사를** **기본값으로**설정합니다.
 
-   클릭 **확인** 변경 내용을 적용 하려면.
+   **확인을** 클릭하여 변경 내용을 적용합니다.
 
-1. Stdafx.h에서 다음 줄을 추가 합니다.
+1. *pch.h(Visual* Studio 2017 및 이전 의*stdafx.h)에서* 다음 줄을 추가합니다.
 
     ```
     #using <System.Windows.Forms.dll>
     ```
 
-1. .NET 컨트롤에 대 한 참조를 추가 합니다.
+1. .NET 컨트롤에 대한 참조를 추가합니다.
 
-   **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 `MFC02` 프로젝트 노드를 선택 **추가**를 **참조**합니다. 에 **속성 페이지**, 클릭 **새 참조 추가**, WindowsFormsControlLibrary1 선택 (아래는 **프로젝트** 탭), 클릭 **확인** . 형식의 대 한 참조를 추가 [/FU](../build/reference/fu-name-forced-hash-using-file.md) 컴파일러 옵션은 프로그램을 컴파일되지;에 WindowsFormsControlLibrary1.dll 복사를 `MFC02` 디렉터리를 프로젝트에 프로그램이 실행 됩니다.
+   **솔루션 탐색기에서**프로젝트 `MFC02` 노드를 마우스 오른쪽 단추로 클릭하고 **참조** **추가를**선택합니다. 속성 **페이지에서**새 **참조 추가를**클릭하고 프로젝트 **탭에서** WindowsFormsControlLibrary1을 선택하고 **확인을**클릭합니다. 이렇게 하면 프로그램이 컴파일되도록 [/FU](../build/reference/fu-name-forced-hash-using-file.md) 컴파일러 옵션 의 형태로 참조가 추가됩니다. 또한 프로그램이 실행되도록 `MFC02` WindowsFormsControlLibrary1.dll을 프로젝트 디렉터리로 복사합니다.
 
-1. Stdafx.h에서이 줄을 찾습니다.
+1. stdafx.h에서 다음 줄을 찾으십시오.
 
     ```
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-   위에 다음이 줄을 추가 합니다.
+   위에 다음 줄을 추가합니다.
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
     ```
 
-1. 상속 되도록 뷰 클래스를 수정 [CWinFormsView](../mfc/reference/cwinformsview-class.md)합니다.
+1. [CWinFormsView에서](../mfc/reference/cwinformsview-class.md)상속되도록 뷰 클래스를 수정합니다.
 
-   MFC02View.h에서 바꿉니다 [CView](../mfc/reference/cview-class.md) 사용 하 여 [CWinFormsView](../mfc/reference/cwinformsview-class.md) 코드를 다음과 같이 표시 되도록 합니다.
+   MFC02View.h에서 코드가 다음과 같이 표시되도록 [CView를](../mfc/reference/cview-class.md) [CWinFormsView로](../mfc/reference/cwinformsview-class.md) 바꿉니다.
 
     ```
     class CMFC02View : public CWinFormsView
@@ -78,9 +78,9 @@ Windows Forms 사용자 정의 컨트롤을 만들고 컨트롤 클래스 라이
     };
     ```
 
-   MDI 응용 프로그램에 추가 뷰를 추가 하려면를 호출 해야 합니다 [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) 만든 각 보기에 대 한 합니다.
+   MDI 응용 프로그램에 추가 보기를 추가하려면 생성한 각 뷰에 대해 [CWinApp::AddDocTemplate를](../mfc/reference/cwinapp-class.md#adddoctemplate) 호출해야 합니다.
 
-1. 아래에 표시 된 생성자를 사용 하 여 기존의 빈 생성자를 바꾸고 IMPLEMENT_DYNCREATE 매크로 및 메시지 맵에서 CView를 cwinformsview로 변경 MFC02View.cpp 파일을 수정 합니다.
+1. MFC02View.cpp 파일을 수정하여 IMPLEMENT_DYNCREATE 매크로 및 메시지 맵에서 CView를 CWinFormsView로 변경하고 기존 빈 생성기를 아래 표시된 생성물로 바꿉니다.
 
     ```
     IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)
@@ -95,12 +95,12 @@ Windows Forms 사용자 정의 컨트롤을 만들고 컨트롤 클래스 라이
 
 1. 프로젝트를 빌드하고 실행합니다.
 
-   **솔루션 탐색기**MFC02를 마우스 오른쪽 단추로 클릭 하 고 선택 **시작 프로젝트로 설정**합니다.
+   **솔루션 탐색기에서**MFC02를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정을**선택합니다.
 
    **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.
 
-   에 **디버그** 메뉴에서 클릭 **디버깅 하지 않고 시작**합니다.
+   **디버그** 메뉴에서 **디버깅하지 않고 시작을 클릭합니다.**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

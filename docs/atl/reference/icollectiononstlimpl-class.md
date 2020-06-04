@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329902"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 클래스
 
-이 클래스는 컬렉션 클래스에 의해 사용 되는 메서드를 제공 합니다.
+이 클래스는 컬렉션 클래스에서 사용하는 메서드를 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,49 +37,49 @@ COM 컬렉션 인터페이스입니다.
 *CollType*<br/>
 C++ 표준 라이브러리 컨테이너 클래스입니다.
 
-*ItemType*<br/>
-컨테이너 인터페이스에 의해 노출 되는 항목의 형식입니다.
+*Itemtype*<br/>
+컨테이너 인터페이스에서 노출되는 항목의 유형입니다.
 
-*CopyItem*<br/>
-A [복사 정책 클래스](../../atl/atl-copy-policy-classes.md)합니다.
+*복사 항목*<br/>
+[복사 정책 클래스](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*<br/>
-A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-호환 열거자 클래스입니다.
+*에이넘 타입*<br/>
+[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)호환 열거자 클래스입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|컬렉션에 대 한 열거자 개체를 반환합니다.|
+|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|컬렉션에 대한 열거자 개체를 반환합니다.|
 |[ICollectionOnSTLImpl::getcount](#get_count)|컬렉션의 요소 수를 반환합니다.|
-|[ICollectionOnSTLImpl::get_Item](#get_item)|컬렉션에서 요청된 된 항목을 반환합니다.|
+|[ICollectionOnSTLImpl::get_Item](#get_item)|컬렉션에서 요청된 항목을 반환합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[ICollectionOnSTLImpl::m_coll](#m_coll)|컬렉션입니다.|
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 컬렉션 인터페이스의 세 가지 방법에 대 한 구현을 제공 합니다. [getcount](#get_count)를 [get_Item](#get_item), 및 [get__NewEnum](#newenum)합니다.
+이 클래스는 컬렉션 인터페이스의 세 가지 메서드인 [getcount,](#get_count) [get_Item](#get_item)및 [get__NewEnum](#newenum).
 
-이 클래스를 사용 합니다.
+이 클래스를 사용하려면 다음을 수행하십시오.
 
-- 컬렉션 인터페이스를 구현 정의 (또는 차용) 합니다.
+- 구현하려는 컬렉션 인터페이스를 정의(또는 대여)합니다.
 
-- 특수화에서 클래스를 파생 `ICollectionOnSTLImpl` 이 컬렉션 인터페이스를 기반으로 합니다.
+- 이 컬렉션 인터페이스를 `ICollectionOnSTLImpl` 기반으로 하는 전문화에서 클래스를 파생합니다.
 
-- 파생된 클래스에서 처리 되지 않은 컬렉션 인터페이스에서 메서드를 구현 하는 데 `ICollectionOnSTLImpl`합니다.
+- 파생 클래스를 사용하여 `ICollectionOnSTLImpl`에서 처리하지 않는 컬렉션 인터페이스에서 메서드를 구현합니다.
 
 > [!NOTE]
->  컬렉션 인터페이스 이면 이중 인터페이스에서 클래스를 파생 [IDispatchImpl](../../atl/reference/idispatchimpl-class.md)전달 된 `ICollectionOnSTLImpl` ATL의 구현을 제공 하도록 하려는 경우 첫 번째 템플릿 매개 변수로 특수화는 `IDispatch` 메서드입니다.
+> 컬렉션 인터페이스가 이중 인터페이스인 경우 ATL이 메서드의 구현을 제공하려는 경우 `ICollectionOnSTLImpl` 전문화 특성을 첫 번째 템플릿 `IDispatch` 매개 변수로 전달하는 [IDispatchImpl에서](../../atl/reference/idispatchimpl-class.md)클래스를 파생합니다.
 
-- 항목을 추가 합니다 [m_coll](#m_coll) 컬렉션을 채우는 데는 멤버입니다.
+- [m_coll](#m_coll) 멤버에 항목을 추가하여 컬렉션을 채웁니다.
 
-자세한 내용 및 예제를 참조 하세요 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)합니다.
+자세한 정보 및 예제는 [ATL 컬렉션 및 열거자를](../../atl/atl-collections-and-enumerators.md)참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -91,7 +91,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-호환 열거자 �
 
 **헤더:** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectionOnSTLImpl::getcount
 
 이 메서드는 컬렉션의 항목 수를 반환합니다.
 
@@ -102,15 +102,15 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>매개 변수
 
 *pcount*<br/>
-[out] 컬렉션의 요소 수입니다.
+【아웃】 컬렉션의 요소 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectionOnSTLImpl::get_Item
 
-이 메서드는 컬렉션에서 지정된 된 항목을 반환합니다.
+이 메서드는 컬렉션에서 지정 된 항목을 반환 합니다.
 
 ```
 STDMETHOD(get_Item)(long Index, ItemType* pvar);
@@ -118,23 +118,23 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>매개 변수
 
-*Index*<br/>
-[in] 컬렉션에 있는 항목의 인덱스 1부터 시작 합니다.
+*인덱스*<br/>
+【인】 컬렉션에 있는 항목의 1기반 인덱스입니다.
 
 *pvar*<br/>
-[out] 에 해당 하는 항목 *인덱스*합니다.
+【아웃】 *인덱스에*해당하는 항목입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-항목의 지정한 위치에서 데이터를 복사 하 여 가져온 [m_coll](#m_coll) 복사 메서드를 사용 하는 [복사 정책 클래스](../../atl/atl-copy-policy-classes.md) 의 템플릿 인수로 전달 되는 `ICollectionOnSTLImpl` 특수화 합니다.
+항목은 `ICollectionOnSTLImpl` 전문화 에서 템플릿 인수로 전달 된 [복사 정책 클래스의](../../atl/atl-copy-policy-classes.md) 복사 방법을 사용하여 [m_coll](#m_coll) 지정된 위치에 데이터를 복사하여 가져옵니다.
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectionOnSTLImpl::get__NewEnum
 
-컬렉션에 대 한 열거자 개체를 반환합니다.
+컬렉션에 대한 열거자 개체를 반환합니다.
 
 ```
 STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
@@ -142,26 +142,26 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>매개 변수
 
-*ppUnk*<br/>
-[out] 합니다 **IUnknown** 새로 만든된 열거자 개체의 포인터입니다.
+*ppunk*<br/>
+【아웃】 새로 만든 열거체 개체의 **IUnknown** 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-원래 컬렉션에 반복기를 유지 하는 새로 만든된 열거자 `m_coll`(따라서 복사본이 생성 됨), 컬렉션 처리 되지 않은 열거자 있기는 활성 상태로 유지 하기 위해 컬렉션 개체에 대 한 COM 참조를 보유 하 고 있습니다.
+새로 생성된 열거자는 원래 컬렉션의 `m_coll`이터레이터를 유지 관리하며(복사본이 만들어지지 않도록) 컬렉션 개체에 COM 참조를 보유하여 뛰어난 열거자가 있는 동안 컬렉션이 살아 있는지 확인합니다.
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectionOnSTLImpl::m_coll
 
-이 멤버는 컬렉션을 나타내는 항목을 보유 합니다.
+이 멤버는 컬렉션으로 표시되는 항목을 보유합니다.
 
 ```
 CollType m_coll;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[ATLCollections 샘플](../../overview/visual-cpp-samples.md)<br/>
+[ATL컬렉션 샘플](../../overview/visual-cpp-samples.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

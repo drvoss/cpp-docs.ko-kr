@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165992"
 ---
 # <a name="version-c"></a>version(C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69514882"
 ### <a name="parameters"></a>매개 변수
 
 *version*<br/>
-버전 번호는 `coclass`합니다. 지정 하지 않으면 1.0가 .idl 파일에 배치 됩니다.
+`coclass`의 버전 번호입니다. 지정 하지 않으면 1.0가 .idl 파일에 배치 됩니다.
 
 ## <a name="remarks"></a>설명
 
@@ -43,14 +43,14 @@ ms.locfileid: "69514882"
 
 |||
 |-|-|
-|**적용 대상**|**class**, **struct**|
-|**반복 가능**|아니요|
+|**적용 대상**|**클래스**, **구조체**|
+|**반복 가능**|예|
 |**필수 특성**|**coclass**|
-|**잘못된 특성**|없음|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
 [클래스 특성](class-attributes.md)

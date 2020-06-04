@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
+- _o__mbsnbcmp
+- _o__mbsnbcmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911972"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -66,7 +69,7 @@ int _mbsnbcmp_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*string1*, *string2*<br/>
+*string1*, *문자열 2*<br/>
 비교할 문자열입니다.
 
 *count*<br/>
@@ -75,7 +78,7 @@ int _mbsnbcmp_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 반환 값 *은 문자열 1과* *문자열 2*의 부분 문자열 간의 서 수 관계를 나타냅니다.
 
@@ -85,19 +88,21 @@ int _mbsnbcmp_l(
 |0|*string1* 하위 문자열 *은 문자열이 아닌 부분 문자열과 같습니다* .|
 |> 0|*string1* 부분 문자열이 문자열 *2* 의 부분 문자열 보다 큽니다.|
 
-매개 변수 유효성 검사 오류 시 **_mbsnbcmp** 및 **_mbsnbcmp_l** 는 **_NLSCMPERROR**를 반환 하 고, \<이는 및 \<mbstrom> .h >에 정의 됩니다.
+매개 변수 유효성 검사 오류 시 및를 **_mbsnbcmp** 하 고 **_mbsnbcmp_l** **_NLSCMPERROR**을 반환 합니다 \<.이 매개 변수는 \<> 및> mbstrom.
 
 ## <a name="remarks"></a>설명
 
-**_Mbsnbcmp** 함수 *는 문자열 1과* *문자열 2* 의 최대 바이트 *수* 를 비교한 다음 부분 문자열 간의 관계를 나타내는 값을 반환 합니다. **_mbsnbcmp** 은 대/소문자를 구분 하는 **_mbsnbicmp**버전입니다. **_Mbsnbcoll**와 달리 **_mbsnbcmp** 은 로캘의 데이터 정렬 순서에 영향을 받지 않습니다. **_mbsnbcmp** 는 현재 멀티 바이트 [코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티 바이트 문자 시퀀스를 인식 합니다.
+**_Mbsnbcmp** 함수 *는 문자열 1과* *문자열 2* 의 최대 바이트 *수* 를 비교한 다음 부분 문자열 간의 관계를 나타내는 값을 반환 합니다. **_mbsnbcmp** 는 대/소문자를 구분 하는 **_mbsnbicmp**버전입니다. **_Mbsnbcoll**와 달리 **_mbsnbcmp** 는 로캘의 데이터 정렬 순서에 영향을 받지 않습니다. **_mbsnbcmp** 는 현재 멀티 바이트 [코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티 바이트 문자 시퀀스를 인식 합니다.
 
-**_mbsnbcmp** 는 **_mbsncmp**과 유사 합니다. 단, **_mbsncmp** 는 문자열을 바이트가 아닌 문자로 비교 합니다.
+**_mbsnbcmp** 은 문자열이 바이트가 아닌 문자로 문자열을 비교 **_mbsncmp** 하는 경우를 제외 하 고 **_mbsncmp**와 비슷합니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 영향을 받습니다 .이는 선행 바이트 및 후행 바이트의 멀티 바이트 문자를 지정 합니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_Mbsnbcmp** 함수는이 로캘 종속 동작에 대해 현재 로캘을 사용 합니다. **_Mbsnbcmp_l** 함수는 *로캘* 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 영향을 받습니다 .이는 선행 바이트 및 후행 바이트의 멀티 바이트 문자를 지정 합니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_Mbsnbcmp** 함수는이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_Mbsnbcmp_l** 함수는 *로캘* 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-*String1* 또는 *문자열* 하나가 null 포인터인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **_NLSCMPERROR** 를 반환 하 고 **errno** 은 **EINVAL**로 설정 됩니다.
+*String1* 또는 *문자열* 하나가 null 포인터인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 함수는 **_NLSCMPERROR** 을 반환 하 고 **errno** 는 **EINVAL**로 설정 됩니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|---------------------------------------|--------------------|-----------------------|
@@ -111,7 +116,7 @@ int _mbsnbcmp_l(
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -164,12 +169,12 @@ Function: _mbsnicmp _mbsnicmp (first 10 characters only)
 Result:   String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

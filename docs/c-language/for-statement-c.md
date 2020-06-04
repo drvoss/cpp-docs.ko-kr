@@ -5,11 +5,11 @@ helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
 ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233646"
 ---
 # <a name="for-statement-c"></a>for 문 (C)
 
@@ -40,7 +40,7 @@ for( ; ; )
 
 **break**, **goto** 또는 **return** 문을 사용해야만 종료할 수 있는 무한 루프를 생성하는 일반적인 방법입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 **for** 문에 대해 설명합니다.
 
@@ -78,6 +78,6 @@ Number of spaces: 4
 Number of tabs: 2
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문](../c-language/statements-c.md)

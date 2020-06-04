@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371380"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 구조체
 
@@ -104,43 +104,43 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 ### <a name="parameters"></a>매개 변수
 
 *TDelegateInterface*<br/>
-대리자 인터페이스 형식입니다.
+대리자 인터페이스 유형입니다.
 
-*TCallback*<br/>
+*T콜백*<br/>
 이벤트 처리기 함수의 형식입니다.
 
-*argCount*<br/>
-인수 개수는 `InvokeHelper` 특수화 합니다.
+*아르그카운트*<br/>
+`InvokeHelper` 전문화 된 인수의 수입니다.
 
 ## <a name="remarks"></a>설명
 
-구현을 제공 합니다 `Invoke()` 메서드 인수 형식 및 지정 된 수에 따라 합니다.
+지정된 수와 `Invoke()` 인수 유형에 따라 메서드의 구현을 제공합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-이름     | 설명
+속성     | Description
 -------- | -----------------------------------------------------------------------------
-`Traits` | 각 이벤트 처리기 인수 형식을 정의 하는 클래스의 동의어입니다.
+`Traits` | 각 이벤트 처리기 인수의 형식을 정의하는 클래스의 동의어입니다.
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                                        | 설명
+속성                                        | Description
 ------------------------------------------- | -------------------------------------------------------
-[InvokeHelper::InvokeHelper](#invokehelper) | `InvokeHelper` 클래스의 새 인스턴스를 초기화합니다.
+[호출 도우미::호출 도우미](#invokehelper) | `InvokeHelper` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                            | 설명
+속성                            | Description
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Invoke](#invoke) | 지정 된 인수 개수를 포함 하는 시그니처를 가진 이벤트 처리기를 호출 합니다.
+[호출도우미::호출](#invoke) | 지정된 인수 수를 포함하는 시그니처를 포함하는 이벤트 처리기를 호출합니다.
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-이름                                 | 설명
+속성                                 | Description
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | 이벤트가 발생할 때 호출할 이벤트 처리기를 나타냅니다.
+[호출도우미::callback_](#callback) | 이벤트가 발생할 때 호출할 이벤트 처리기를 나타냅니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -150,9 +150,9 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 **헤더:** event.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="callback"></a>InvokeHelper::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>호출도우미::callback_
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -164,9 +164,9 @@ TCallback callback_;
 
 이벤트가 발생할 때 호출할 이벤트 처리기를 나타냅니다.
 
-`TCallback` 템플릿 매개 변수는 이벤트 처리기의 유형을 지정 합니다.
+템플릿 `TCallback` 매개 변수는 이벤트 처리기의 형식을 지정합니다.
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>호출도우미::호출
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -205,42 +205,42 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*arg1*<br/>
-인수 1입니다.
+*아르그1*<br/>
+인수 1.
 
-*arg2*<br/>
-인수 2입니다.
+*아르그2*<br/>
+인수 2.
 
-*arg3*<br/>
-인수 3입니다.
+*아르그3*<br/>
+인수 3.
 
 *arg4*<br/>
-인수 4입니다.
+인수 4.
 
-*arg5*<br/>
-5 인수입니다.
+*아르그 5*<br/>
+인수 5.
 
-*arg6*<br/>
-인수 6입니다.
+*아르그6*<br/>
+인수 6.
 
-*arg7*<br/>
-7 인수입니다.
+*아르그7*<br/>
+인수 7.
 
-*arg8*<br/>
-8 인수입니다.
+*아르그8*<br/>
+인수 8.
 
-*arg9*<br/>
-9 인수입니다.
+*아르그9*<br/>
+인수 9.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.
+성공하면 S_OK; 그렇지 않으면 오류를 설명하는 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 인수 개수를 포함 하는 시그니처를 가진 이벤트 처리기를 호출 합니다.
+지정된 인수 수를 포함하는 시그니처를 포함하는 이벤트 처리기를 호출합니다.
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>호출 도우미::호출 도우미
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>매개 변수
 
-*callback*<br/>
+*콜백(callback)*<br/>
 이벤트 처리기입니다.
 
 ### <a name="remarks"></a>설명
 
 `InvokeHelper` 클래스의 새 인스턴스를 초기화합니다.
 
-`TCallback` 템플릿 매개 변수는 이벤트 처리기의 유형을 지정 합니다.
+템플릿 `TCallback` 매개 변수는 이벤트 처리기의 형식을 지정합니다.

@@ -11,11 +11,11 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243827"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425492"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 연산자
 
@@ -54,7 +54,7 @@ bool operator!=(
 *Ty2*\
 오른쪽 공유 포인터로 제어되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체가 같지 않으면 **true**이고, 개체가 같으면 **false**입니다.
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 개체 간의 같음을 테스트합니다.
 
@@ -155,9 +155,9 @@ bool operator==(
 *Ty2*\
 오른쪽 공유 포인터로 제어되는 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 개체가 같으면 **false** 개체 같지 않은 경우.
+개체가 같으면 **true** 이 고, 개체가 같지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> 연산자&gt;=
+## <a name="op_gt_eq"></a>연산자&gt;=
 
 한 개체가 두 번째 개체보다 크거나 같은지 테스트합니다.
 
@@ -264,7 +264,7 @@ bool operator>=(
 
 ### <a name="remarks"></a>설명
 
-템플릿 연산자 반환 `left.get() >= right.get()`합니다.
+템플릿 연산자는 `left.get() >= right.get()`를 반환 합니다.
 
 ## <a name="op_lt"></a> 연산자&lt;
 
@@ -296,7 +296,7 @@ bool operator<(
 *Ty2*\
 오른쪽 포인터에 의해 제어되는 형식입니다.
 
-## <a name="op_lt_eq"></a> 연산자&lt;=
+## <a name="op_lt_eq"></a>연산자&lt;=
 
 한 개체가 두 번째 개체보다 작거나 같은지 테스트합니다.
 
@@ -328,7 +328,7 @@ bool operator<=(
 
 ### <a name="remarks"></a>설명
 
-템플릿 연산자 반환 `left.get() <= right.get()`
+템플릿 연산자는 `left.get() <= right.get()`을 반환 합니다.
 
 ## <a name="op_gt"></a> 연산자&gt;
 
@@ -360,7 +360,7 @@ bool operator>(
 *Ty2*\
 오른쪽 공유 포인터로 제어되는 형식입니다.
 
-## <a name="op_lt_lt"></a> 연산자&lt;&lt;
+## <a name="op_lt_lt"></a>연산자&lt;&lt;
 
 공유 포인터를 스트림에 씁니다.
 
@@ -375,7 +375,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 스트림 요소의 형식입니다.
 
-*tr*\
+*Tr*\
 스트림 요소 특성의 형식입니다.
 
 *Ty*\
@@ -389,7 +389,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수가 `out << sp.get()`을 반환합니다.
+템플릿 함수가 `out << sp.get()`를 반환합니다.
 
 ### <a name="example"></a>예제
 

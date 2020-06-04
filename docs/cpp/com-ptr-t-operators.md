@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _com_ptr_t class [C++], operators
 ms.assetid: 716564e4-f538-4eee-8532-c841f90c3a69
-ms.openlocfilehash: b5ff6797937045f4d5e5b4409d4121a5b728369e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b7da90e850e1c4465353975f2db039c203b8545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170660"
 ---
-# <a name="comptrt-operators"></a>_com_ptr_t 연산자
+# <a name="_com_ptr_t-operators"></a>_com_ptr_t 연산자
 
-에 대 한 자세한 합니다 `_com_ptr_t` 연산자를 참조 하세요 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)합니다.
+`_com_ptr_t` 연산자에 대 한 자세한 내용은 [_Com_ptr_t 클래스](../cpp/com-ptr-t-class.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

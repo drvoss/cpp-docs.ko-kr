@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 712c1f1638b954d1580eb527dd9eab7401917517
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688049"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317200"
 ---
 # <a name="freelist-class"></a>freelist 클래스
 
@@ -33,23 +33,23 @@ class freelist : public Max
 |매개 변수|설명|
 |---------------|-----------------|
 |*Sz*|할당할 배열의 요소 수입니다.|
-|*Max*|Max 클래스는 사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. Max 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|
+|*최대*|사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이 클래스 템플릿은 *Max*로 전달된 max 클래스에 의해 결정되는 목록의 최대 길이를 사용하여 *Sz* 크기의 메모리 블록 목록을 관리합니다.
+이 클래스 템플릿은 *최대에*전달된 최대 클래스에 의해 결정된 목록의 최대 길이로 *크기 Sz의* 메모리 블록 목록을 관리합니다.
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[freelist](#freelist)|`freelist` 형식의 개체를 생성합니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
-|[pop](#pop)|사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.|
+|[팝](#pop)|사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.|
 |[push](#push)|목록에 메모리 블록을 추가합니다.|
 
 ## <a name="requirements"></a>요구 사항
@@ -58,7 +58,7 @@ class freelist : public Max
 
 **네임스페이스:** stdext
 
-## <a name="freelist"></a>  freelist::freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a>자유 목록::자유 목록
 
 `freelist` 형식의 개체를 생성합니다.
 
@@ -66,9 +66,9 @@ class freelist : public Max
 freelist();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-## <a name="pop"></a>  freelist::pop
+## <a name="freelistpop"></a><a name="pop"></a>프리리스트::p
 
 사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.
 
@@ -76,15 +76,15 @@ freelist();
 void *pop();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 목록에서 제거된 메모리 블록의 포인터를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-목록이 비어 있으면 멤버 함수는 NULL을 반환합니다. 그렇지 않으면 목록에서 첫번째 메모리 블록을 제거합니다.
+목록이 비어 있으면 멤버 함수가 NULL을 반환합니다. 그렇지 않으면 목록에서 첫 번째 메모리 블록을 제거합니다.
 
-## <a name="push"></a>  freelist::push
+## <a name="freelistpush"></a><a name="push"></a>프리리스트::p우시
 
 목록에 메모리 블록을 추가합니다.
 
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*ptr*|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|
+|*Ptr*|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-max 클래스의 `full` 함수가 **false**를 반환하면 **true**입니다. 그렇지 않으면 `push` 함수는 **false**를 반환합니다.
+**max** 클래스의 함수가 `full` **false를**반환하는 경우 true; 그렇지 않으면 `push` 함수가 **false**를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-max 클래스의 `full` 함수가 **false**를 반환하는 경우 이 멤버 함수는 *ptr*에서 가리키는 메모리 블록을 목록의 맨 위에 추가합니다.
+max `full` 클래스의 함수가 **false를**반환하는 경우 이 멤버 함수는 *ptr이* 가리키는 메모리 블록을 목록의 헤드에 추가합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<할당자>](../standard-library/allocators-header.md)

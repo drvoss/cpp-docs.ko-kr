@@ -1,5 +1,5 @@
 ---
-title: 에이전트 클래스
+title: agent 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - agent
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142887"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427478"
 ---
-# <a name="agent-class"></a>에이전트 클래스
+# <a name="agent-class"></a>agent 클래스
 
 모든 독립 에이전트에 대한 기본 클래스로 사용되는 클래스입니다. 다른 에이전트로부터 상태를 숨기고 메시지 전달을 사용하여 상호 작용하는 데 사용됩니다.
 
@@ -34,30 +34,30 @@ ms.locfileid: "77142887"
 class agent;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[에이전트](#ctor)|오버로드됨. 에이전트를 생성 합니다.|
+|[에이전트](#ctor)|오버로드되었습니다. 에이전트를 생성 합니다.|
 |[~ 에이전트 소멸자](#dtor)|에이전트를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[cancel](#cancel)|에이전트를 `agent_created` 또는 `agent_runnable` 상태에서 `agent_canceled` 상태로 이동 합니다.|
 |[start](#start)|에이전트를 `agent_created` 상태에서 `agent_runnable` 상태로 이동 하 고 실행을 예약 합니다.|
-|[상태](#status)|에이전트의 상태 정보에 대 한 동기 원본입니다.|
+|[status](#status)|에이전트의 상태 정보에 대 한 동기 원본입니다.|
 |[status_port](#status_port)|에이전트의 상태 정보에 대 한 비동기 원본입니다.|
 |[대기한](#wait)|에이전트가 작업을 완료할 때까지 기다립니다.|
 |[wait_for_all](#wait_for_all)|지정 된 모든 에이전트가 작업을 완료할 때까지 기다립니다.|
 |[wait_for_one](#wait_for_one)|지정 된 에이전트 중 하나가 해당 작업을 완료할 때까지 기다립니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[done](#done)|에이전트를 `agent_done` 상태로 이동 하 여 에이전트가 완료 되었음을 나타냅니다.|
 |[run](#run)|에이전트의 주 작업을 나타냅니다. `run` 파생 클래스에서 재정의 되 고 에이전트가 시작 된 후 수행 해야 하는 작업을 지정 합니다.|

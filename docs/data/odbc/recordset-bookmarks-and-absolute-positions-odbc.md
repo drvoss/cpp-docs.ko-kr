@@ -1,5 +1,5 @@
 ---
-title: '레코드 집합: 책갈피와 절대 위치 (ODBC)'
+title: '레코드 집합: 책갈피와 절대 위치(ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,34 +21,34 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c8bbaf7c0bc21dab62c3785364e72656287815
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367063"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>레코드 집합: 책갈피와 절대 위치 (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>레코드 집합: 책갈피와 절대 위치(ODBC)
 
-이 항목에서는 MFC ODBC 클래스에 적용됩니다.
+이 토픽은 MFC ODBC 클래스에 적용됩니다.
 
-레코드 집합을 탐색할 때 특정 레코드를 반환 하는 방법은 해야 합니다. 책갈피와 절대 위치 레코드의 이러한 두 메서드를 제공합니다.
+레코드 집합을 탐색할 때 특정 레코드로 돌아가는 방법이 필요한 경우가 많습니다. 레코드의 책갈피와 절대 위치는 두 가지 방법을 제공합니다.
 
-이 항목에 설명 합니다.
+이 토픽에서는 다음 내용을 설명합니다.
 
-- [책갈피를 사용 하는 방법을](#_core_bookmarks_in_mfc_odbc)합니다.
+- [책갈피 를 사용하는 방법](#_core_bookmarks_in_mfc_odbc).
 
-- [절대 위치를 사용 하 여 현재 레코드를 설정 하는 방법을](#_core_absolute_positions_in_mfc_odbc)합니다.
+- [절대 위치를 사용하여 현재 레코드를 설정하는 방법](#_core_absolute_positions_in_mfc_odbc).
 
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC의 책갈피
+## <a name="bookmarks-in-mfc-odbc"></a><a name="_core_bookmarks_in_mfc_odbc"></a>MFC ODBC의 책갈피
 
-책갈피는 레코드를 고유 하 게 식별합니다. 레코드 집합을 탐색할 때 없습니다 항상 있으므로 의존 하면 레코드의 절대 위치 레코드 집합에서 레코드를 삭제할 수 있습니다. 레코드의 위치를 추적 하기 위해 신뢰할 수 있는 방법은 해당 책갈피를 사용 하는 것입니다. 클래스 `CRecordset` 멤버 함수를 제공 합니다.
+책갈피는 레코드를 고유하게 식별합니다. 레코드 집합을 탐색할 때 레코드 집합에서 레코드를 삭제할 수 있으므로 레코드의 절대 위치에 항상 의존할 수는 없습니다. 레코드의 위치를 추적하는 신뢰할 수 있는 방법은 책갈피를 사용하는 것입니다. 클래스는 `CRecordset` 다음을 위한 멤버 함수를 제공합니다.
 
-- 변수에 저장할 수 있도록 현재 레코드의 책갈피 가져오기 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).
+- 현재 레코드의 책갈피를 얻으면[변수(GetBookmark)에](../../mfc/reference/crecordset-class.md#getbookmark)저장할 수 있습니다.
 
-- 이전에 변수로 저장 하는 해당 책갈피를 지정 하 여 지정된 된 레코드를 신속 하 게 이동 ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).
+- 변수[(SetBookmark)에](../../mfc/reference/crecordset-class.md#setbookmark)이전에 저장 한 책갈피를 지정하여 지정된 레코드로 빠르게 이동합니다.
 
-다음 예에서는 현재 레코드를 표시 하 여 나중에 돌아가서 이러한 멤버 함수를 사용 하는 방법을 보여 줍니다.
+다음 예제에서는 이러한 멤버 함수를 사용하여 현재 레코드를 표시하고 나중에 다시 반환하는 방법을 보여 줍니다.
 
 ```cpp
 // rs is a CRecordset or
@@ -63,25 +63,25 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );
 ```
 
-기본 데이터 형식에서 추출 해야 합니다 [CDBVariant 클래스](../../mfc/reference/cdbvariant-class.md) 개체입니다. 사용 하 여 값을 할당 `GetBookmark` 사용 하 여 해당 책갈피 돌아가서 `SetBookmark`합니다.
+[CDBVariant 클래스](../../mfc/reference/cdbvariant-class.md) 개체에서 기본 데이터 형식을 추출할 필요가 없습니다. 값을 `GetBookmark` 할당하고 `SetBookmark`을 사용하여 해당 책갈피로 돌아갑니다.
 
 > [!NOTE]
->  ODBC 드라이버 및 레코드 집합 형식에 따라 책갈피 지원 되지 않을 수 있습니다. 책갈피를 호출 하 여 지원 되는지 여부를 쉽게 확인할 수 있습니다 [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)합니다. 또한 책갈피는 지원 되는 경우 명시적으로 선택 해야를 지정 하 여 구현 하는 `CRecordset::useBookmarks` 옵션을 [crecordset:: Open](../../mfc/reference/crecordset-class.md#open) 멤버 함수입니다. 또한 특정 레코드 집합 작업 후 책갈피의 지를 확인 해야 합니다. 예를 들어 경우 없습니다 `Requery` 레코드 집합과 책갈피 수 이상 유효 하지 않습니다. 호출 [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) 안전 하 게 호출할 수 있는지 여부를 확인 하려면 `SetBookmark`합니다.
+> ODBC 드라이버 및 레코드 집합 유형에 따라 책갈피가 지원되지 않을 수 있습니다. [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)를 호출하여 책갈피가 지원되는지 여부를 쉽게 확인할 수 있습니다. 또한 책갈피가 지원되는 경우 [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) `CRecordset::useBookmarks` 멤버 함수에서 옵션을 지정하여 북마크를 구현하도록 명시적으로 선택해야 합니다. 또한 특정 레코드 집합 작업 후 책갈피의 지속성도 확인해야 합니다. 예를 들어 레코드 `Requery` 집합의 경우 책갈피가 더 이상 유효하지 않을 수 있습니다. [CDatabase::GetBookmark지속성으로](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) 안전하게 호출할 `SetBookmark`수 있는지 확인합니다.
 
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC의 절대 위치
+## <a name="absolute-positions-in-mfc-odbc"></a><a name="_core_absolute_positions_in_mfc_odbc"></a>MFC ODBC의 절대 위치
 
-책갈피 외 클래스 `CRecordset` 서 수 위치를 지정 하 여 현재 레코드를 설정할 수 있습니다. 이 절대 위치 지정 호출 됩니다.
-
-> [!NOTE]
->  절대 위치 앞 으로만 이동 가능한 레코드 집합에서 제공 되지 않습니다. 앞 으로만 이동 가능한 레코드 집합에 대 한 자세한 내용은 참조 하세요. [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)합니다.
-
-절대 위치를 사용 하 여 현재 레코드 포인터를 이동 하려면 호출 [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)합니다. 값을 전달 하는 경우 `SetAbsolutePosition`, 서 수 위치 레코드가 현재 해당 하는 레코드입니다.
+책갈피 외에도 `CRecordset` 클래스를 사용하면 서수 위치를 지정하여 현재 레코드를 설정할 수 있습니다. 이를 절대 위치 지정이라고 합니다.
 
 > [!NOTE]
->  레코드의 절대 위치는 신뢰할 수 없습니다. 레코드 집합에서 레코드를 삭제 하는 사용자, 모든 후속 레코드의 서 수 위치 변경 합니다. 책갈피는 현재 레코드를 이동 하기 위한 권장된 방법입니다. 자세한 내용은 [MFC ODBC에서 책갈피](#_core_bookmarks_in_mfc_odbc)합니다.
+> 정방향 전용 레코드 집합에는 절대 위치 지정을 사용할 수 없습니다. 정방향 전용 레코드 집합에 대한 자세한 내용은 [레코드 집합(ODBC)을](../../data/odbc/recordset-odbc.md)참조하십시오.
 
-레코드 집합 탐색에 대 한 자세한 내용은 참조 하세요. [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)합니다.
+절대 위치를 사용하여 현재 레코드 포인터를 이동하려면 [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)를 호출합니다. `SetAbsolutePosition`에 값을 전달하면 해당 서수 위치에 해당하는 레코드가 현재 레코드가 됩니다.
 
-## <a name="see-also"></a>참고자료
+> [!NOTE]
+> 레코드의 절대 위치는 잠재적으로 신뢰할 수 없습니다. 사용자가 레코드 집합에서 레코드를 삭제하면 후속 레코드의 서수 위치가 변경됩니다. 책갈피는 현재 레코드를 이동하는 데 권장되는 방법입니다. 자세한 내용은 [MFC ODBC의 북마크](#_core_bookmarks_in_mfc_odbc)를 참조하십시오.
+
+레코드 집합 탐색에 대한 자세한 내용은 [레코드 집합: 스크롤(ODBC)을](../../data/odbc/recordset-scrolling-odbc.md)참조하십시오.
+
+## <a name="see-also"></a>참고 항목
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)

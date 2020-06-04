@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: b6bb626f944ce87748809a5eb03a6f06f92c3de5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: de376503111dab157ca34744863fb1d35a58785e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369342"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 클래스
 
@@ -37,33 +37,33 @@ class CCubicTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CCubicTransition::CCubicTransition](#ccubictransition)|전환 개체를 생성 하 고 해당 매개 변수를 초기화 합니다.|
+|[C큐빅 트랜지션::C큐빅트랜지션](#ccubictransition)|전환 개체를 생성하고 해당 매개 변수를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CCubicTransition::Create](#create)|는 전환 라이브러리를 호출 하 여 캡슐화 된 전환 COM 개체를 만듭니다. [Cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create)를 재정의 합니다.|
+|[C큐빅 전환::만들기](#create)|전환 라이브러리를 호출하여 캡슐화된 전환 COM 개체를 만듭니다. [(재정의 CBaseTransition::만들기.)](../../mfc/reference/cbasetransition-class.md#create)|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|전환의 끝에 있는 애니메이션 변수의 값입니다.|
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|전환이 끝날 때 변수의 속도입니다.|
-|[CCubicTransition::m_duration](#m_duration)|전환 기간입니다.|
+|[C큐빅 트랜지션::m_dblFinalValue](#m_dblfinalvalue)|전환이 끝날 때의 애니메이션 변수의 값입니다.|
+|[C큐빅 트랜지션::m_dblFinalVelocity](#m_dblfinalvelocity)|전환이 끝날 때변수의 속도입니다.|
+|[C큐빅 트랜지션::m_duration](#m_duration)|전환 기간입니다.|
 
 ## <a name="remarks"></a>설명
 
-입방로 전환 하는 동안 애니메이션 변수의 값은 전환 기간 동안 지정 된 속도에서 종료 되는 초기 값에서 지정 된 최종 값으로 변경 됩니다. 모든 전환은 자동으로 지워지므로 operator new를 사용 하 여 할당 하는 것이 좋습니다. 캡슐화 된 IuiAnimateGroup 전환 COM 개체는 NULL 일 때까지 CAnimationController::에 의해 생성 됩니다. 이 COM 개체를 만든 후 멤버 변수를 변경 해도 아무런 영향을 주지 않습니다.
+입방 전환 중에 애니메이션 변수의 값은 전환 기간 동안 초기 값에서 지정된 최종 값으로 변경되어 지정된 속도로 끝납니다. 모든 전환이 자동으로 지워지므로 운영자 new를 사용하여 할당하는 것이 좋습니다. 캡슐화된 IUIAnimationTransition COM 개체는 CAnimationController::AnimateGroup에 의해 만들어지며, 그때까지는 NULL이 됩니다. 이 COM 개체를 만든 후 멤버 변수를 변경하면 아무런 효과가 없습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[C베이스 트랜지션](../../mfc/reference/cbasetransition-class.md)
 
 `CCubicTransition`
 
@@ -71,9 +71,9 @@ class CCubicTransition : public CBaseTransition;
 
 **헤더:** afxanimationcontroller.h
 
-##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition
+## <a name="ccubictransitionccubictransition"></a><a name="ccubictransition"></a>C큐빅 트랜지션::C큐빅트랜지션
 
-전환 개체를 생성 하 고 해당 매개 변수를 초기화 합니다.
+전환 개체를 생성하고 해당 매개 변수를 초기화합니다.
 
 ```
 CCubicTransition(
@@ -84,18 +84,18 @@ CCubicTransition(
 
 ### <a name="parameters"></a>매개 변수
 
-*duration*<br/>
+*기간*<br/>
 전환 기간입니다.
 
 *finalValue*<br/>
-전환의 끝에 있는 애니메이션 변수의 값입니다.
+전환이 끝날 때의 애니메이션 변수의 값입니다.
 
-*finalVelocity*<br/>
-전환이 끝날 때 변수의 속도입니다.
+*최종벨로시티*<br/>
+전환이 끝날 때변수의 속도입니다.
 
-##  <a name="create"></a>  CCubicTransition::Create
+## <a name="ccubictransitioncreate"></a><a name="create"></a>C큐빅 전환::만들기
 
-는 전환 라이브러리를 호출 하 여 캡슐화 된 전환 COM 개체를 만듭니다.
+전환 라이브러리를 호출하여 캡슐화된 전환 COM 개체를 만듭니다.
 
 ```
 virtual BOOL Create(
@@ -105,30 +105,30 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>매개 변수
 
-*pLibrary*<br/>
-표준 전환 라이브러리를 정의 하는 [IUIAnimationTransitionLibrary 인터페이스](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)에 대 한 포인터입니다.
+*p라이브러리*<br/>
+표준 전환 라이브러리를 정의하는 [IUIAnimationTransitionLibrary 인터페이스에](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-전환이 성공적으로 생성 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+TRUE 전환이 성공적으로 만들어지면 그렇지 않으면 거짓.
 
-##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue
+## <a name="ccubictransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>C큐빅 트랜지션::m_dblFinalValue
 
-전환의 끝에 있는 애니메이션 변수의 값입니다.
+전환이 끝날 때의 애니메이션 변수의 값입니다.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity
+## <a name="ccubictransitionm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>C큐빅 트랜지션::m_dblFinalVelocity
 
-전환이 끝날 때 변수의 속도입니다.
+전환이 끝날 때변수의 속도입니다.
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCubicTransition::m_duration
+## <a name="ccubictransitionm_duration"></a><a name="m_duration"></a>C큐빅 트랜지션::m_duration
 
 전환 기간입니다.
 
@@ -136,6 +136,6 @@ DOUBLE m_dblFinalVelocity;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스](../../mfc/reference/mfc-classes.md)

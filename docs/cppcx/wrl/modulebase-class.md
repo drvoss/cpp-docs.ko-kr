@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371266"
 ---
 # <a name="modulebase-class"></a>ModuleBase 클래스
 
@@ -34,23 +34,23 @@ class ModuleBase;
 
 ## <a name="remarks"></a>설명
 
-기본 클래스를 나타냅니다 합니다 [모듈](module-class.md) 클래스입니다.
+[모듈](module-class.md) 클래스의 기본 클래스를 나타냅니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                                         | 설명
+속성                                         | Description
 -------------------------------------------- | ---------------------------------------------------------
-[ModuleBase::ModuleBase](#modulebase)        | `Module` 클래스의 인스턴스를 초기화합니다.
-[ModuleBase::~ModuleBase](#tilde-modulebase) | 현재 인스턴스를 초기화 해제는 `Module` 클래스입니다.
+[모듈 베이스 :: 모듈 베이스](#modulebase)        | `Module` 클래스의 인스턴스를 초기화합니다.
+[모듈 베이스 ::~모듈 베이스](#tilde-modulebase) | 클래스의 현재 인스턴스를 초기화합니다. `Module`
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                                      | 설명
+속성                                                      | Description
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[ModuleBase::DecrementObjectCount](#decrementobjectcount) | 구현 될 때, 개체 수가 감소 모듈에서 추적 합니다.
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | 구현 시 모듈에 의해 추적 되는 개체의 수를 증가 시킵니다.
+[모듈베이스::D개체카운트](#decrementobjectcount) | 구현될 때 모듈에서 추적하는 개체 수를 감소시입니다.
+[모듈 베이스::증분개체카운트](#incrementobjectcount) | 구현될 때 모듈에서 추적하는 개체 수를 늘입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -60,9 +60,9 @@ class ModuleBase;
 
 **헤더:** implements.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="tilde-modulebase"></a>ModuleBase::~ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>모듈 베이스 ::~모듈 베이스
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -72,9 +72,9 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>설명
 
-현재 인스턴스를 초기화 해제는 `ModuleBase` 클래스입니다.
+클래스의 현재 인스턴스를 초기화합니다. `ModuleBase`
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>모듈베이스::D개체카운트
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -82,15 +82,15 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 virtual long DecrementObjectCount() = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 감소 작업 전 수입니다.
 
 ### <a name="remarks"></a>설명
 
-구현 될 때, 개체 수가 감소 모듈에서 추적 합니다.
+구현될 때 모듈에서 추적하는 개체 수를 감소시입니다.
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>모듈 베이스::증분개체카운트
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -98,15 +98,15 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 virtual long IncrementObjectCount() = 0;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 증가 연산 전 수입니다.
 
 ### <a name="remarks"></a>설명
 
-구현 시 모듈에 의해 추적 되는 개체의 수를 증가 시킵니다.
+구현될 때 모듈에서 추적하는 개체 수를 늘입니다.
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>모듈 베이스 :: 모듈 베이스
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 

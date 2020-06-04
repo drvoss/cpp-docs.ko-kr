@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515558"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373449"
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 
 정수 오버플로를 방지할 수 있도록 정수 기본 형식을 확장하고 다양한 형식의 정수 비교를 허용합니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 이 라이브러리의 최신 버전은 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)에 있습니다.
 
 ## <a name="syntax"></a>구문
@@ -33,7 +33,7 @@ class SafeInt;
 
 ### <a name="parameters"></a>매개 변수
 
-| 템플릿  |  설명 |
+| 템플릿  |  Description |
 |--------|------------|
 | T         |  `SafeInt`로 대체되는 정수 또는 부울 매개 변수의 형식입니다. |
 | E         |  오류 처리 정책을 정의하는 열거형 데이터 형식입니다. |
@@ -42,20 +42,20 @@ class SafeInt;
 | 매개 변수  |  설명 |
 |---------|-----------------|
 | *rhs*      |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *i*        |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *bits*     |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
+| *Ⅰ*        |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
+| *비트*     |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| name                          |  설명 |
+| 속성                          |  Description |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  기본 생성자입니다. |
 
-### <a name="assignment-operators"></a>할당 연산자
+### <a name="assignment-operators"></a>대입 연산자
 
-| name  |  구문 |
+| 속성  |  구문 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>캐스팅 연산자
 
-| name              |  구문 |
+| 속성              |  구문 |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>비교 연산자
 
-| name  |  구문 |
+| 속성  |  구문 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>산술 연산자
 
-| name  |  구문 |
+| 속성  |  구문 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>논리 연산자
 
-| name     |  구문 |
+| 속성     |  구문 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `SafeInt` 클래스는 수학 연산에서 정수 오버플로를 방지합니다. 예를 들어 두 개의 8비트 정수를 더한다고 가정합니다. 첫 번째 정수의 값은 200이고, 두 번째 정수의 값은 100입니다. 올바른 수학 연산은 200 + 100 = 300입니다. 그러나 8비트 정수 제한으로 인해 상위 비트는 손실되고, 컴파일러에서 44(300 - 2<sup>8</sup>)가 결과로 반환됩니다. 이 수학 수식을 사용하는 모든 연산에서 예기치 않은 동작이 생성됩니다.
 
@@ -219,7 +219,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > SafeInt 라이브러리에서 오류를 처리하는 사용자 지정 클래스는 오류 처리기를 호출한 코드에 제어를 반환하면 안 됩니다. 오류 처리기가 호출된 후에는 `SafeInt` 작업의 결과를 신뢰할 수 없습니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `SafeInt`
 
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **네임스페이스:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>세이프인트::세이프인트
 
 `SafeInt` 개체를 생성합니다.
 
@@ -257,18 +257,18 @@ SafeInt (
 
 ### <a name="parameters"></a>매개 변수
 
-*i*<br/>
+*Ⅰ*<br/>
 [in] 새로운 `SafeInt` 개체의 값입니다. 생성자에 따라 T 또는 U 형식의 매개 변수여야 합니다.
 
-*b*<br/>
+*B*<br/>
 [in] 새로운 `SafeInt` 개체의 부울 값입니다.
 
-*u*<br/>
+*U*<br/>
 [in] U 형식의 `SafeInt`입니다. 새로운 `SafeInt` 개체는 *u*와 동일한 값을 갖지만 T 형식입니다.
 
 U `SafeInt`에 저장된 데이터의 형식입니다. 부울, 문자 또는 정수 형식일 수 있습니다. 정수 형식인 경우 부호 있는 형식이나 부호 없는 형식으로, 8비트에서 64비트 사이일 수 있습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자 *i* 또는 *u*의 입력 매개 변수는 부울, 문자 또는 정수 형식이어야 합니다. 또 다른 형식의 매개 변수인 경우 `SafeInt` 클래스에서 [static_assert](../cpp/static-assert.md)를 호출하여 잘못된 입력 매개 변수를 나타냅니다.
 

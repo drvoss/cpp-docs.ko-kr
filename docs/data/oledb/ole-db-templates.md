@@ -1,19 +1,19 @@
 ---
-title: OLE DB 템플릿
+title: OLE DB 템플릿(영문)
 ms.date: 05/09/2019
 f1_keywords:
 - vc.templates.ole
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525334"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209874"
 ---
-# <a name="ole-db-templates"></a>OLE DB 템플릿
+# <a name="ole-db-templates"></a>OLE DB 템플릿(영문)
 
 OLE DB 템플릿을 사용하면 OLE DB 데이터에 더 쉽게 액세스할 수 있습니다. Visual C++에서는 자주 사용되는 여러 OLE DB 인터페이스를 구현하는 템플릿 클래스를 제공합니다. Visual C++ 소비자 템플릿을 사용하여 OLE DB 클라이언트(소비자) 애플리케이션을 작성하고, 공급자 템플릿을 사용하여 서버(공급자) 애플리케이션을 작성할 수 있습니다.
 
@@ -25,7 +25,7 @@ OLE DB 템플릿을 사용하면 OLE DB 데이터에 더 쉽게 액세스할 수
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 용도별로 나열된 OLE DB 공급자 템플릿 클래스 링크를 제공합니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [OLE DB 프로그래밍 개요](../../data/oledb/ole-db-programming-overview.md)<br/>
 OLE DB가 무엇인지를 소개하고 OLE DB의 범용 데이터 액세스에 대해 설명합니다.

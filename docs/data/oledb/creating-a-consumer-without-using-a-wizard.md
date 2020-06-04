@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211460"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>마법사를 사용하지 않고 소비자 만들기
 
@@ -17,7 +17,7 @@ ms.locfileid: "65525112"
 
 **ATL OLE DB 소비자 마법사**를 사용하지 않고 OLE DB 소비자 지원을 추가하려면 다음을 수행합니다.
 
-- pch.h 파일에 다음 `#include` 문을 추가합니다.
+- *.Pch .h* 파일에서 다음 `#include` 문을 추가 합니다.
 
     ```cpp
     #include <atlbase.h>
@@ -40,7 +40,7 @@ ms.locfileid: "65525112"
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- `CoInitialize`를 호출하여 COM을 초기화합니다. 주 코드에서 호출됩니다. 예:
+- `CoInitialize`를 호출하여 COM을 초기화합니다. 주 코드에서 호출됩니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
@@ -56,7 +56,7 @@ ms.locfileid: "65525112"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 필요에 따라 `CDBPropSet::AddProperty`를 사용하여 행 집합 속성을 설정하고 `rs.Open`에 매개 변수로 전달합니다. 이 작업을 수행하는 방법의 예제는 [소비자 마법사 생성 메서드](../../data/oledb/consumer-wizard-generated-methods.md)의 `GetRowsetProperties`를 참조하세요.
+- 필요에 따라 `CDBPropSet::AddProperty`를 사용하여 행 집합 속성을 설정하고 `rs.Open`에 매개 변수로 전달합니다. 이 작업을 수행하는 방법의 예제는 `GetRowsetProperties`소비자 마법사 생성 메서드[의 ](../../data/oledb/consumer-wizard-generated-methods.md)를 참조하세요.
 
 - 이제 행 집합을 사용하여 데이터를 검색/조작할 수 있습니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65525112"
     ds.Close();
     ```
 
-   명령을 사용하는 경우 `Close` 다음에 `ReleaseCommand`를 호출하는 것이 좋습니다. [CCommand::Close](../../data/oledb/ccommand-close.md)의 코드 예제에서는 `Close` 및 `ReleaseCommand`를 호출하는 방법을 보여 줍니다.
+   명령을 사용하는 경우 `ReleaseCommand` 다음에 `Close`를 호출하는 것이 좋습니다. [CCommand::Close](../../data/oledb/ccommand-close.md)의 코드 예제에서는 `Close` 및 `ReleaseCommand`를 호출하는 방법을 보여 줍니다.
 
 - `CoUnInitialize`를 호출하여 COM 초기화를 취소합니다. 주 코드에서 호출됩니다.
 

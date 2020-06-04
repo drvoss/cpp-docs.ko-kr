@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778306"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079989"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 콘솔에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)을 참조하세요.
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2015에서는 `printf` 및 `scanf` 함수 패밀리가 **인라인으로** 선언 되었으며 `<stdio.h>` 및 `<conio.h>` 헤더로 이동 했습니다. 이전 코드를 마이그레이션하는 경우 이러한 함수와의 연결에 *LNK2019* 가 표시 될 수 있습니다. 자세한 내용은 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)를 참조 하세요.
 
 > [!IMPORTANT]
@@ -105,18 +105,18 @@ int _cwscanf_l(
 
 ## <a name="remarks"></a>주의
 
-**_Cscanf** 함수는 콘솔에서 *인수로*지정 된 위치로 데이터를 직접 읽습니다. [_getche](getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. 이 형식은 입력 필드의 해석을 제어 하 고 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 함수의 *format* 매개 변수와 동일한 양식 및 기능을 포함 합니다. **_Cscanf** 는 일반적으로 입력 문자를 에코 하는 반면, 마지막 호출이 **_ungetch**에 대해 수행 되는 경우에는이 작업을 수행 하지 않습니다.
+**_Cscanf** 함수는 콘솔에서 *인수로*지정 된 위치로 데이터를 직접 읽습니다. [_getche](getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. 이 형식은 입력 필드의 해석을 제어 하 고 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 함수의 *format* 매개 변수와 동일한 양식 및 기능을 포함 합니다. **_Cscanf** 는 일반적으로 입력 문자를 에코 하지만 마지막 호출이 **_ungetch**된 경우에는이를 수행 하지 않습니다.
 
 이 함수는 해당 매개 변수의 유효성을 검사합니다. Format이 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 는 **EINVAL** 로 설정 되 고 함수는 **EOF**를 반환 합니다.
 
-**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 경우를 제외 하 고는 동일 합니다.
+**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고는 동일 합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
-|**_tccf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
+|**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -125,7 +125,7 @@ int _cwscanf_l(
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

@@ -3,10 +3,10 @@ title: FIPS 규격 보안 원격 Linux 개발 설정
 description: 원격 개발을 위해 Visual Studio와 Linux 머신 간에 FIPS 규격 암호화 연결을 설정하는 방법입니다.
 ms.date: 01/17/2020
 ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "76520464"
 ---
 # <a name="set-up-fips-compliant-secure-remote-linux-development"></a>FIPS 규격 보안 원격 Linux 개발 설정

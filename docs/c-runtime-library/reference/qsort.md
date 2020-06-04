@@ -1,8 +1,9 @@
 ---
 title: qsort
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort
+- _o_qsort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949706"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913266"
 ---
 # <a name="qsort"></a>qsort
 
@@ -57,12 +59,12 @@ void qsort(
 대상 배열의 시작 부분입니다.
 
 *number*<br/>
-요소의 배열 길이입니다.
+요소의 배열 크기입니다.
 
 *width*<br/>
 요소 크기(바이트)입니다.
 
-*compare*<br/>
+*과*<br/>
 두 배열 요소를 비교하여 해당 관계를 지정하는 값을 반환하는 사용자가 제공한 루틴에 대한 포인터입니다.
 
 ## <a name="remarks"></a>설명
@@ -77,7 +79,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 루틴은 요소를 비교한 후에 다음 값 중 하나를 반환합니다.
 
-|비교 함수 반환 값|Description|
+|비교 함수 반환 값|설명|
 |-----------------------------------|-----------------|
 |< 0|**elem1** 보다 작음 **elem2**|
 |0|**elem2** 에 해당 하는 **elem1**|
@@ -87,13 +89,15 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 이 함수는 해당 매개 변수의 유효성을 검사합니다. *Compare* 또는 *number* 가 **null**이거나 *base* 가 **null** 이 고 *숫자가* 0이 아닌 경우 또는 *width* 가 0 보다 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는를 반환 하 고 **errno** 는 **EINVAL**로 설정 됩니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> 및 \<search.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -139,7 +143,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

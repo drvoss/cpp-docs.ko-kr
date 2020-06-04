@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07c987fb08a213bb66da628bec3021a3bf9ba24a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448893"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370629"
 ---
 # <a name="gslice-class"></a>gslice 클래스
 
@@ -25,13 +25,13 @@ valarray의 다차원 하위 집합을 정의하는 데 사용되는 valarray에
 
 ## <a name="remarks"></a>설명
 
-클래스는 [gslice_array](../standard-library/gslice-array-class.md) 형식의 개체 특징을 결정하는 매개 변수를 저장합니다. gslice 클래스의 개체가 [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** 클래스의 개체에 대한 인수로 표시되는 경우 valarray의 하위 집합이 간접적으로 생성됩니다. 부모 valarray에서 선택되는 하위 집합을 지정하는 저장된 값은 다음과 같습니다.
+클래스는 [gslice_array](../standard-library/gslice-array-class.md) 형식의 개체 특징을 결정하는 매개 변수를 저장합니다. valarray의 하위 집합은 클래스 gslice의 개체가 [클래스 valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 개체에 대한 인수로 나타날 때 간접적으로 생성됩니다. 부모 valarray에서 선택되는 하위 집합을 지정하는 저장된 값은 다음과 같습니다.
 
 - 시작 인덱스
 
-- 클래스 `valarray<size_t>`의 길이 벡터입니다.
+- 클래스의 `valarray<size_t>`길이 벡터입니다.
 
-- 클래스 `valarray<size_t>`의 stride 벡터입니다.
+- 클래스의 `valarray<size_t>`보폭 벡터 .
 
 두 벡터는 길이가 같아야 합니다.
 
@@ -49,9 +49,9 @@ gslice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 �
 
 |멤버 함수|Description|
 |-|-|
-|[size](#size)|`valarray`의 일반 조각 요소 수를 지정하는 배열 값을 찾습니다.|
-|[start](#start)|`valarray`의 일반 조각 시작 인덱스를 찾습니다.|
-|[stride](#stride)|`valarray`의 일반 조각 요소 간의 거리를 찾습니다.|
+|[크기](#size)|`valarray`의 일반 조각 요소 수를 지정하는 배열 값을 찾습니다.|
+|[시작](#start)|`valarray`의 일반 조각 시작 인덱스를 찾습니다.|
+|[Stride](#stride)|`valarray`의 일반 조각 요소 간의 거리를 찾습니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -59,7 +59,7 @@ gslice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 �
 
 **네임스페이스:** std
 
-## <a name="gslice"></a>  gslice::gslice
+## <a name="gslicegslice"></a><a name="gslice"></a>g슬라이스::g슬라이스
 
 valarray의 다차원 조각을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다.
 
@@ -83,13 +83,13 @@ gslice(
 *_IncArray*\
 각 조각에서 진행 속도를 지정하는 배열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본 생성자는 시작 인덱스에 대해 0을 저장하고 길이 및 진행 속도 벡터에 대해 0 길이 벡터를 저장합니다. 두 번째 생성자는 시작 인덱스에 대해 *_Startindex* 를 저장 하 고, 길이 배열의 경우 *_LenArray* 을 저장 하 고, stride 배열의 경우 *_IncArray* 를 저장 합니다.
+기본 생성자는 시작 인덱스에 대해 0을 저장하고 길이 및 진행 속도 벡터에 대해 0 길이 벡터를 저장합니다. 두 번째 생성자는 시작 인덱스에 대한 *_StartIndex,* 길이 배열에 대한 *_LenArray* 및 보폭 배열에 대한 *_IncArray* 저장합니다.
 
 ### <a name="remarks"></a>설명
 
-**gslice**는 각각 동일한 지정된 요소에서 시작되는 valarray의 여러 조각으로 구성된 valarray 하위 집합을 정의합니다. 배열을 사용하여 여러 조각을 정의하는 기능은 `gslice`와 [slice::slice](../standard-library/slice-class.md#slice) 간의 유일한 차이점입니다. 첫 번째 조각에는 *_Startindex*의 인덱스를 사용 하는 첫 번째 요소, *_LenArray*의 첫 번째 요소에 의해 지정 된 요소 수, *_IncArray*의 첫 번째 요소에서 제공 하는 스트라이드가 있습니다. 직교 조각의 다음 set에는 첫 번째 조각이 제공한 첫 번째 요소가 있습니다. *_LenArray* 의 두 번째 요소는 요소 수를 지정 합니다. Stride는 *_IncArray*의 두 번째 요소에 의해 제공 됩니다. 조각의 세 번째 차원은 2차원 배열의 요소를 시작 요소로 사용하고 비슷하게 진행됩니다.
+**gslice**는 각각 동일한 지정된 요소에서 시작되는 valarray의 여러 조각으로 구성된 valarray 하위 집합을 정의합니다. 배열을 사용하여 여러 조각을 정의하는 기능은 `gslice`와 [slice::slice](../standard-library/slice-class.md#slice) 간의 유일한 차이점입니다. 첫 번째 슬라이스에는 *_StartIndex*인덱스가 있는 첫 번째 요소, *_LenArray*첫 번째 요소에 의해 지정된 여러 요소 및 *_IncArray*첫 번째 요소에 의해 제공되는 보폭이 있습니다. 직교 조각의 다음 set에는 첫 번째 조각이 제공한 첫 번째 요소가 있습니다. *_LenArray* 두 번째 요소는 요소 수를 지정합니다. 보폭은 *_IncArray*두 번째 요소에 의해 제공됩니다. 조각의 세 번째 차원은 2차원 배열의 요소를 시작 요소로 사용하고 비슷하게 진행됩니다.
 
 ### <a name="example"></a>예제
 
@@ -138,7 +138,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="size"></a>  gslice::size
+## <a name="gslicesize"></a><a name="size"></a>g슬라이스::크기
 
 valarray의 일반 조각 요소 수를 지정하는 배열 값을 찾습니다.
 
@@ -146,7 +146,7 @@ valarray의 일반 조각 요소 수를 지정하는 배열 값을 찾습니다.
 valarray<size_t> size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray의 일반 조각 중 각 조각의 요소 수를 지정하는 valarray입니다.
 
@@ -216,7 +216,7 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="start"></a>  gslice::start
+## <a name="gslicestart"></a><a name="start"></a>g슬라이스::시작
 
 valarray의 일반 조각 시작 인덱스를 찾습니다.
 
@@ -224,7 +224,7 @@ valarray의 일반 조각 시작 인덱스를 찾습니다.
 size_t start() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray의 일반 조각 시작 인덱스입니다.
 
@@ -279,7 +279,7 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="stride"></a>  gslice::stride
+## <a name="gslicestride"></a><a name="stride"></a>g슬라이스::보폭
 
 valarray의 일반 조각 요소 간의 거리를 찾습니다.
 
@@ -287,7 +287,7 @@ valarray의 일반 조각 요소 간의 거리를 찾습니다.
 valarray<size_t> stride() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 valarray의 일반 조각 중 각 조각의 요소 간 거리를 지정하는 valarray입니다.
 
@@ -347,6 +347,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

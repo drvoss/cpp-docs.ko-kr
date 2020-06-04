@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: bd13ba4d0dd60f65372b2c1f51d70d338566301e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916255"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750111"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 클래스
 
@@ -35,23 +35,23 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|`CAnimationManagerEventHandler` 개체를 생성합니다.|
+|[C애니메이션관리자이벤트핸들러::C애니메이션매니저이벤트핸들러](#canimationmanagereventhandler)|`CAnimationManagerEventHandler` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|개체의 `CAnimationManagerEventHandler` 인스턴스를 만듭니다.|
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|애니메이션 관리자의 상태가 변경 되 면 호출 됩니다. ( `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`을 재정의합니다.)|
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|애니메이션 컨트롤러에 대 한 포인터를 저장 하 여 이벤트를 라우팅합니다.|
+|[C애니메이션관리자이벤트핸들러::만들기 인스턴스](#createinstance)|개체의 `CAnimationManagerEventHandler` 인스턴스를 만듭니다.|
+|[C애니메이션관리자이벤트핸들러::온매니저 상태 변경](#onmanagerstatuschanged)|애니메이션 관리자의 상태가 변경된 경우 호출됩니다. ( `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`을 재정의합니다.)|
+|[C애니메이션관리자이벤트핸들러::세트애니메이션컨트롤러](#setanimationcontroller)|애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 이벤트 처리기는 CAnimationController:: EnableAnimationManagerEvent를 호출할 때 생성 되 고 Iui-: SetManagerEventHandler 메서드로 전달 됩니다.
+이 이벤트 처리기는 CAnimationController::EnableAnimationManagerEvent를 호출할 때 IUIAnimationManager::SetManagerEvent 메서드에 생성되고 전달됩니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `CUIAnimationCallbackBase`
 
@@ -63,17 +63,17 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 **헤더:** afxanimationcontroller.h
 
-##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>C애니메이션관리자이벤트핸들러::C애니메이션매니저이벤트핸들러
 
 Visual Studio 2010 SP1이 필요합니다.
 
-CAnimationManagerEventHandler 개체를 생성 합니다.
+CAnimationManagerEventHandler 개체를 생성합니다.
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>C애니메이션관리자이벤트핸들러::만들기 인스턴스
 
 Visual Studio 2010 SP1이 필요합니다.
 
@@ -87,21 +87,21 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnimationController*<br/>
-이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.
+*p애니메이션 컨트롤러*<br/>
+이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-*ppManagerEventHandler*<br/>
-출력. 메서드가 성공 하면 애니메이션 관리자에 대 한 상태 업데이트를 처리 하는 COM 개체에 대 한 포인터가 포함 됩니다.
+*pp관리자이벤트*<br/>
+출력 메서드가 성공하면 애니메이션 관리자에 대한 상태 업데이트를 처리하는 COM 개체에 대한 포인터가 포함되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환 합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>C애니메이션관리자이벤트핸들러::온매니저 상태 변경
 
 Visual Studio 2010 SP1이 필요합니다.
 
-애니메이션 관리자의 상태가 변경 되 면 호출 됩니다.
+애니메이션 관리자의 상태가 변경된 경우 호출됩니다.
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -111,31 +111,31 @@ IFACEMETHOD(OnManagerStatusChanged)(
 
 ### <a name="parameters"></a>매개 변수
 
-*newStatus*<br/>
+*new Status*<br/>
 새 상태입니다.
 
-*previousStatus*<br/>
-이전 상태.
+*이전 상태*<br/>
+이전 상태입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 구현에서는 항상 S_OK를 반환 합니다.
+현재 구현은 항상 S_OK 반환합니다.
 
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>C애니메이션관리자이벤트핸들러::세트애니메이션컨트롤러
 
 Visual Studio 2010 SP1이 필요합니다.
 
-애니메이션 컨트롤러에 대 한 포인터를 저장 하 여 이벤트를 라우팅합니다.
+애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnimationController*<br/>
-이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.
+*p애니메이션 컨트롤러*<br/>
+이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

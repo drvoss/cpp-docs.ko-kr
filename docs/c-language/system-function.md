@@ -5,11 +5,11 @@ helpviewer_keywords:
 - system function
 ms.assetid: 0786ccdc-20cd-4d96-b3d8-3230507c3066
 ms.openlocfilehash: e37de4e084de6727cf2858117945fd162f6b0d63
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345125"
 ---
 # <a name="system-function"></a>시스템 함수
 
@@ -21,6 +21,6 @@ ms.locfileid: "56151224"
 
 자세한 내용은 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [라이브러리 함수](../c-language/library-functions.md)

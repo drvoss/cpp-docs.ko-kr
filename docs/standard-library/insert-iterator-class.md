@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2865db023425fa301ad5440a0dc8ed491213f33f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447657"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368051"
 ---
-# <a name="insertiterator-class"></a>insert_iterator 클래스
+# <a name="insert_iterator-class"></a>insert_iterator 클래스
 
 출력 반복기의 요구 사항을 충족하는 반복기 어댑터에 대해 설명합니다. 반복기 어댑터는 요소를 덮어쓰는 것이 아니라, 시퀀스에 요소를 삽입하므로 C++ 시퀀스 및 연관 컨테이너의 반복기가 제공한 덮어쓰기 의미 체계와 다른 의미 체계를 제공합니다. `insert_iterator` 클래스는 조정하는 컨테이너 형식에 대해 템플릿화됩니다.
 
@@ -35,7 +35,7 @@ class insert_iterator;
 
 ## <a name="remarks"></a>설명
 
-형식의 `Container` 컨테이너는 가변 크기의 컨테이너에 대 한 요구 사항을 충족 해야 하며, 매개 변수가 형식이 `Container::iterator` 고 `Container::value_type` 가 형식을 `Container::iterator`반환 하는 두 개의 인수 삽입 멤버 함수가 있어야 합니다. C++ 표준 라이브러리 시퀀스 및 정렬된 연관 컨테이너는 이러한 요구 사항을 준수하며 `insert_iterator`를 사용할 수 있도록 조정되었습니다. 연관 컨테이너의 경우 위치 인수는 힌트로 처리되며, 힌트가 얼마나 양호한가에 따라 성능이 향상되거나 저하될 수 있습니다. `insert_iterator`는 항상 컨테이너를 사용하여 초기화해야 합니다.
+형식의 `Container` 컨테이너는 가변 크기의 컨테이너에 대한 요구 사항을 충족해야 하며 매개 변수가 `Container::iterator` 형식이고 `Container::value_type` 형식을 `Container::iterator`반환하는 2인수 삽입 멤버 함수가 있어야 합니다. C++ 표준 라이브러리 시퀀스 및 정렬된 연관 컨테이너는 이러한 요구 사항을 준수하며 `insert_iterator`를 사용할 수 있도록 조정되었습니다. 연관 컨테이너의 경우 위치 인수는 힌트로 처리되며, 힌트가 얼마나 양호한가에 따라 성능이 향상되거나 저하될 수 있습니다. `insert_iterator`는 항상 컨테이너를 사용하여 초기화해야 합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -43,28 +43,28 @@ class insert_iterator;
 |-|-|
 |[insert_iterator](#insert_iterator)|컨테이너의 지정된 위치에 요소를 삽입하는 `insert_iterator`를 만듭니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[container_type](#container_type)|일반 삽입 대상인 컨테이너를 나타내는 형식입니다.|
-|[reference](#reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|
+|[참조](#reference)|연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[operator*](#op_star)|일반 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용된 역참조 연산자입니다.|
-|[operator++](#op_add_add)|값을 저장할 다음 위치에 `insert_iterator`를 증가시킵니다.|
-|[operator=](#op_eq)|일반 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용된 대입 연산자입니다.|
+|[연산자*](#op_star)|일반 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용된 역참조 연산자입니다.|
+|[연산자++](#op_add_add)|값을 저장할 다음 위치에 `insert_iterator`를 증가시킵니다.|
+|[연산자 =](#op_eq)|일반 삽입을 위해 출력 반복기 식 * `i` = `x`를 구현하는 데 사용된 대입 연산자입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**: \<iterator>
+**헤더** \<: 이터레이터>
 
 **네임스페이스:** std
 
-## <a name="container_type"></a>  insert_iterator::container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator:container_type
 
 일반 삽입 대상인 컨테이너를 나타내는 형식입니다.
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>  insert_iterator::insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator:insert_iterator
 
 컨테이너의 지정된 위치에 요소를 삽입하는 `insert_iterator`를 만듭니다.
 
@@ -116,7 +116,7 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>매개 변수
 
-*_ 계속*\
+*_Cont*\
 `insert_iterator`에서 요소를 삽입할 대상 컨테이너입니다.
 
 *_It*\
@@ -172,7 +172,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  insert_iterator::operator*
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator::연산자*
 
 주소가 지정된 요소를 반환하는 삽입 반복기를 역참조합니다.
 
@@ -180,13 +180,13 @@ After the insertions, the list L is:
 insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수는 주소가 지정된 요소의 값을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. 가 `Iter` 시퀀스의 요소에 주소를 지정한  **\*** 반복기 인 경우 Iter = **value** 는 해당 요소를 value로 바꾸고 시퀀스의 총 요소 수를 변경 하지 않습니다.
+출력 이터레이터 식 =  ** \*Iter****값을**구현하는 데 사용됩니다. 시퀀스의 요소를 해결하는 `Iter` ** \*이터레이터인**경우 Iter = **값은** 해당 요소를 값으로 바꾸고 시퀀스의 총 요소 수를 변경하지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -232,7 +232,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  insert_iterator::operator++
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator::연산자++
 
 값을 저장할 다음 위치에 `insert_iterator`를 증가시킵니다.
 
@@ -296,7 +296,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="op_eq"></a>  insert_iterator::operator=
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator::연산자=
 
 컨테이너에 값을 삽입하고 새 요소를 가리키도록 업데이트된 반복기를 반환합니다.
 
@@ -310,10 +310,10 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>매개 변수
 
-*짧은*\
+*발*\
 컨테이너에 할당할 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨테이너에 삽입된 요소에 대한 참조입니다.
 
@@ -379,7 +379,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="reference"></a>  insert_iterator::reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator::참조
 
 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -427,8 +427,8 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<>](../standard-library/iterator.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

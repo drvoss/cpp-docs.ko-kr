@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
 ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70177318"
@@ -38,7 +38,7 @@ Visual C++ 개발 환경 내에서 빌드 프로세스를 사용자 지정하는
 
 사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식도 도구의 유용성을 향상시킬 수 있습니다. 자세한 내용은 [사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정](formatting-the-output-of-a-custom-build-step-or-build-event.md)을 참조하세요.
 
-솔루션의 각 프로젝트에 대해 빌드 이벤트 및 사용자 지정 빌드 단계는 다른 빌드 단계와 함께 다음 순서 대로 실행 됩니다.
+솔루션의 각 프로젝트에 대해 빌드 이벤트 및 사용자 지정 빌드 단계는 다른 빌드 단계와 함께 다음 순서로 실행됩니다.
 
 1. 빌드 전 이벤트
 
@@ -71,7 +71,7 @@ Visual C++ 개발 환경 내에서 빌드 프로세스를 사용자 지정하는
 [빌드 사용자 지정 문제 해결](troubleshooting-build-customizations.md)<br/>
 [사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[C++-visual Studio 프로젝트](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio 프로젝트 - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [빌드 명령 및 속성에 대한 일반 매크로](reference/common-macros-for-build-commands-and-properties.md)

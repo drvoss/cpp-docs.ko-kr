@@ -1,130 +1,61 @@
 ---
 title: C++ Build Insights 활용 시작
-description: 빌드 정보에 C++ 포함 된 빌드 시간 성능 분석 도구를 사용 하는 방법에 대 한 개략적인 개요입니다.
+description: 대략적인 C++ Build Insights 개요입니다.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298742"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759227"
 ---
 # <a name="get-started-with-c-build-insights"></a>C++ Build Insights 활용 시작
 
 ::: moniker range="<=vs-2017"
 
-C++ Build Insights 도구는 Visual Studio 2019에서 사용할 수 있습니다. 해당 버전에 대 한 설명서를 보려면이 문서에 대 한 Visual Studio 버전 선택기 컨트롤을 Visual Studio 2019로 설정 합니다.
+C++ Build Insights 도구는 Visual Studio 2019에서 사용할 수 있습니다. 이 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2019로 설정하세요. 이 페이지의 목차 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++빌드 통찰력은 MSVC (Microsoft 시각적 개체 C++ ) 도구 체인에 대 한 향상 된 가시성을 제공 하는 도구 모음입니다. 도구는 C++ 빌드에 대 한 데이터를 수집 하 고 다음과 같은 일반적인 질문에 대답 하는 데 도움이 되는 형식으로 표시 합니다.
+C++ Build Insights는 MSVC(Microsoft Visual C++) 도구 체인에 대한 향상된 가시성을 제공하는 도구 모음입니다. 이 도구는 C++ 빌드에 대한 데이터를 수집하여 다음과 같은 일반적인 질문에 답하는 데 도움이 되는 형식으로 표시합니다.
 
-- 빌드가 충분히 병렬 처리 되나요?
-- 미리 컴파일된 헤더 (PCH)에 포함 해야 하는 항목은 무엇 인가요?
-- 빌드 속도를 높이기 위해 초점을 맞춰야 하는 특정 병목 현상이 있나요?
+- 빌드가 충분히 병렬화되어 있나요?
+- 미리 컴파일된 헤더(PCH)에 무엇을 포함해야 하나요?
+- 빌드 속도를 높이기 위해 집중해야 하는 특정 병목 현상이 있나요?
 
-이 기술의 두 가지 주요 구성 요소는 명령줄 유틸리티 *vcperf* 와 Windows 성능 분석기 (WPA) 추적 뷰어의 추가 기능입니다. 유틸리티는 빌드 추적을 수집 하는 데 사용 되며, 추가 기능을 통해 WPA에서 볼 수 있습니다. 이러한 두 도구를 사용 하려면 다음 단계를 수행 하세요.
+이 기술의 주요 구성 요소는 다음과 같습니다.
 
-## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>1 단계: Windows Performance Analyzer 설치 및 구성
+- 빌드에 대한 추적을 수집하는 데 사용할 수 있는 명령줄 유틸리티인 *vcperf.exe*
+- WPA(Windows Performance Analyzer)에서 빌드 추적을 볼 수 있는 WPA 확장
+- C++ Build Insights 데이터를 사용하는 자체 도구 생성을 위한 소프트웨어 개발 도구인 C++ Build Insights SDK
 
-WPA는 Windows ADK (평가 및 배포 키트)에서 사용할 수 있는 추적 뷰어입니다. Visual Studio 설치 관리자를 사용 하 여 설치할 수 있는 구성 요소에 속하지 않는 별도의 유틸리티입니다.
+## <a name="documentation-sections"></a>설명서 섹션
 
-빌드 정보를 지 원하는 C++ WPA 버전은 현재 Windows ADK Insider preview 에서만 사용할 수 있습니다. 이 미리 보기에 액세스 하려면 [Windows 참가자 프로그램](https://insider.windows.com)에 등록 해야 합니다. Windows ADK preview를 얻기 위해 Windows 10 Insider preview 운영 체제를 설치할 필요가 없습니다. Windows 참가자 프로그램에 Microsoft 계정을 등록 하기만 하면 됩니다.
+[자습서: vcperf 및 Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
+C++ 프로젝트의 빌드 추적을 수집하고 WPA에서 보는 방법을 알아봅니다.
 
-### <a name="to-download-and-install-wpa"></a>WPA를 다운로드 하 여 설치 하려면
+[자습서: Windows 성능 기본 사항](tutorials/wpa-basics.md)\
+빌드 추적을 분석하는 데 유용한 WPA 팁을 검색합니다.
 
-참고: windows 성능 분석기를 설치 하려면 Windows 8 이상이 필요 합니다.
+[C++ Build Insights SDK](reference/sdk/overview.md)\
+C++ Build Insights SDK의 개요입니다.
 
-1. Windows ADK Insider preview [다운로드 페이지로](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)이동 합니다.
+## <a name="articles"></a>문서
 
-1. Windows ADK Insider Preview를 다운로드 합니다. 디스크 이미지입니다.
+C++ Build Insights에 대한 자세한 내용은 공식 팀 블로그의 다음 문서를 참조하세요.
 
-1. 디스크 이미지를 열고 *adksetup* 설치 관리자를 실행 합니다.
+[C++ Build Insights 소개](https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/)
 
-1. 설치 하려는 기능에 대 한 메시지가 표시 되 면 **Windows 성능 도구 키트**를 선택 합니다. 원하는 경우 다른 기능을 선택할 수 있지만 WPA를 설치할 필요는 없습니다.
+[C++ Build Insights SDK를 사용하여 프로그래밍 방식으로 빌드 분석](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
 
-   ![Windows Performance Analyzer 설치 관리자의 기능 선택 화면](media/wpa-installation.png)
+[C++ Build Insights를 사용하여 빌드 병목 상태 찾기](https://devblogs.microsoft.com/cppblog/finding-build-bottlenecks-with-cpp-build-insights/)
 
-### <a name="configuration-steps"></a>빌드 정보를 구성 하려면
-
-1. WPA를 시작 합니다.
-
-1. **창** 을 선택 하 > **테이블 (실험적)을 선택**합니다.
-
-1. **진단** 섹션으로 스크롤합니다.
-
-1. 모든 MSVC Build Insights 뷰를 선택 합니다.
-
-   ![Windows 성능 분석기의 테이블 선택 패널](media/wpa-configuration.png)
-
-## <a name="step-2-trace-your-build-with-vcperfexe"></a>2 단계: vcperf를 사용 하 여 빌드 추적
-
-빌드 정보 C++ 데이터를 보려면 먼저 다음 단계를 수행 하 여 추적 파일로 수집 합니다.
-
-1. 관리자 모드에서 Visual Studio 2019에 대 한 네이티브 도구 또는 크로스 도구 개발자 명령 프롬프트를 엽니다. 시작 메뉴 항목을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **관리자 권한으로 실행**을 선택 합니다.
-
-1. 명령 프롬프트 창에서 다음 명령을 입력 합니다.
-
-   **vcperf/start _세션 이름_**
-
-   세션 이름을 선택 하 여 세션 이름 *에 대해 기억할 수 있습니다.*
-
-1. 일반적인 방법으로 프로젝트를 빌드합니다. 동일한 명령 프롬프트 창을 사용 하 여 빌드할 필요는 없습니다.
-
-1. 명령 프롬프트 창에서 다음 명령을 입력 합니다.
-
-   **vcperf/stop _세션 이름_ _tracefile .etl_**
-
-   *이전 세션 이름에* 대해 선택한 것과 동일한 세션 이름을 사용 합니다. *Tracefile .etl* 추적 파일에 적절 한 이름을 선택 합니다.
-
-개발자 명령 프롬프트 창에서 일반적인 *vcperf* 명령 시퀀스는 다음과 같습니다.
-
-![간단한 vcperf 사용 시나리오](media/vcperf-simple-usage.png)
-
-### <a name="important-notes-about-vcperfexe"></a>Vcperf에 대 한 중요 참고 사항
-
-- *Vcperf* 추적을 시작 하거나 중지 하려면 관리자 권한이 필요 합니다. **관리자 권한으로 실행**을 사용 하 여 여는 개발자 명령 프롬프트 창을 사용 합니다.
-
-- 한 번에 하나의 추적 세션만 컴퓨터에서 실행 될 수 있습니다.
-
-- 추적을 시작 하는 데 사용한 세션 이름을 명심 해야 합니다. 이름을 모르는 상태에서 실행 중인 세션을 중지 하는 것이 문제가 될 수 있습니다.
-
-- *Cl.exe* *및 debug.exe와 마찬가지로*명령줄 유틸리티 *vcperf* 가 설치에 포함 되어 있습니다. 이 구성 요소를 가져오기 위해 추가 단계가 필요 하지 않습니다.
-
-- *vcperf* 는 시스템에서 실행 되는 모든 MSVC 도구에 대 한 정보를 수집 합니다. 따라서 추적을 수집 하는 데 사용한 것과 동일한 명령 프롬프트에서 빌드를 시작할 필요가 없습니다. 다른 명령 프롬프트 또는 Visual Studio 에서도 프로젝트를 빌드할 수 있습니다.
-
-## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>3 단계: Windows 성능 분석기에서 추적 보기
-
-WPA를 시작 하 고 방금 수집한 추적을 엽니다. WPA는이를 C++ Build Insights 추적으로 인식 하 고 왼쪽의 그래프 탐색기 패널에 다음 뷰가 표시 되어야 합니다.
-
-- 빌드 탐색기
-- Files
-- 기능
-
-이러한 보기가 표시 되지 않는 경우 [1 단계](#configuration-steps)에 설명 된 대로 WPA가 올바르게 구성 되어 있는지 두 번 확인 합니다. 다음과 같이 뷰를 오른쪽의 빈 분석 창으로 끌어서 빌드 데이터를 볼 수 있습니다.
-
-![Windows 성능 C++ 분석기에서 Build Insights 추적 보기](media/wpa-viewing-trace.gif)
-
-다른 뷰는 그래프 탐색기 패널에서 사용할 수 있습니다. 포함 된 정보에 관심이 있는 경우 분석 창으로 끌어 놓습니다. 유용한 것은 빌드 전반의 CPU 사용률을 보여 주는 CPU (샘플링 된) 뷰입니다.
-
-## <a name="more-information"></a>추가 정보
-
-[Windows 성능 분석기 기본 사항](wpa-basics.md)\
-빌드 추적을 분석 하는 데 사용할 수 있는 일반적인 WPA 작업에 대해 알아봅니다.
-
-[vcperf 참조](vcperf-reference.md)\
-*Vcperf* 명령 참조는 사용 가능한 모든 명령 옵션을 나열 합니다.
-
-[Windows Performance Analyzer 뷰 참조](wpa-views-reference.md)\
-WPA의 C++ Build Insights 보기에 대 한 자세한 내용은이 문서를 참조 하세요.
-
-[Windows 성능 분석기](/windows-hardware/test/wpt/windows-performance-analyzer)\
-공식 WPA 설명서 사이트입니다.
+[C++ Build Insights에서 PCH 제안을 사용하여 더 빠른 빌드](https://devblogs.microsoft.com/cppblog/faster-builds-with-pch-suggestions-from-c-build-insights/)
 
 ::: moniker-end

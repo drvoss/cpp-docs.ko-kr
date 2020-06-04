@@ -13,18 +13,18 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-ms.openlocfilehash: b42ba7c1a88a4de28eb3385bbf6cad068abf1944
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c0a2c96a37f58c956976980beafd5ecbed4d1318
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365113"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>C++ 클래스에서 dllimport 및 dllexport 사용
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
-**Dllimport** 또는 dllexport C++ 특성을 사용 하 여 클래스를 선언할 수 있습니다. 이 폼은 전체 클래스를 가져오거나 내보냄을 의미합니다. 이 방법으로 내보낸 클래스를 내보낼 수 있는 클래스라고 합니다.
+**dllimport** 또는 **dllexport** 특성으로 C++ 클래스를 선언할 수 있습니다. 이 폼은 전체 클래스를 가져오거나 내보냄을 의미합니다. 이 방법으로 내보낸 클래스를 내보낼 수 있는 클래스라고 합니다.
 
 다음 예제에서는 내보낼 수 있는 클래스를 정의합니다. 모든 멤버 함수 및 정적 데이터를 내보냅니다.
 
@@ -37,27 +37,27 @@ class DllExport C {
 };
 ```
 
-내보낼 수 있는 클래스의 멤버에 대해 **dllimport** 및 **dllexport** 특성을 명시적으로 사용 하는 것은 허용 되지 않습니다.
+내보낼 수 있는 클래스의 멤버에 **dllimport** 및 **dllexport** 특성을 명시적으로 사용하는 것은 금지됩니다.
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>dllexport 클래스
+## <a name="dllexport-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>dllexport 클래스
 
-**Dllexport**클래스를 선언할 때 모든 멤버 함수 및 정적 데이터 멤버를 내보냅니다. 모든 해당 멤버의 정의를 동일한 프로그램에 제공해야 합니다. 그렇게 하지 않으면 링커 오류가 생성됩니다. 명시적 정의를 제공할 필요가 없는 순수 가상 함수에 이 규칙에 대한 예외가 적용됩니다. 그러나 추상 클래스에 대한 소멸자가 항상 기본 클래스의 소멸자에 의해 호출되므로 순수 가상 소멸자는 항상 정의를 제공해야 합니다. 이 규칙은 내보내기 불가능한 클래스에 대해서도 동일합니다.
+클래스 **dllexport를**선언하면 모든 멤버 함수와 정적 데이터 멤버가 내보내됩니다. 모든 해당 멤버의 정의를 동일한 프로그램에 제공해야 합니다. 그렇게 하지 않으면 링커 오류가 생성됩니다. 명시적 정의를 제공할 필요가 없는 순수 가상 함수에 이 규칙에 대한 예외가 적용됩니다. 그러나 추상 클래스에 대한 소멸자가 항상 기본 클래스의 소멸자에 의해 호출되므로 순수 가상 소멸자는 항상 정의를 제공해야 합니다. 이 규칙은 내보내기 불가능한 클래스에 대해서도 동일합니다.
 
 클래스를 반환하는 함수 또는 클래스 형식의 데이터를 내보낼 경우 클래스를 내보내야 합니다.
 
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a>dllimport 클래스
+## <a name="dllimport-classes"></a><a name="_pluslang_dllexport_classesdllexportclasses"></a>dllimport 클래스
 
-**Dllimport**클래스를 선언할 때 모든 멤버 함수 및 정적 데이터 멤버를 가져옵니다. 비 클래스 형식에서 **dllimport** 및 **dllexport** 의 동작과 달리, 정적 데이터 멤버는 **dllimport** 클래스가 정의 된 동일한 프로그램에서 정의를 지정할 수 없습니다.
+클래스 **dllimport를**선언하면 모든 멤버 함수와 정적 데이터 멤버가 가져옵니다. 비클래스 형식에서 **dllimport** 및 **dllexport의** 동작과 달리 정적 데이터 멤버는 **dllimport** 클래스가 정의된 동일한 프로그램에서 정의를 지정할 수 없습니다.
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>상속 및 내보내기 가능 클래스
+## <a name="inheritance-and-exportable-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>상속 및 내보낼 수 있는 클래스
 
-내보낼 수 있는 클래스의 모든 기본 클래스는 내보낼 수 있어야 합니다. 그렇지 않으면 컴파일러 경고가 생성됩니다. 또한 클래스이기도 한 액세스 가능 멤버를 모두 내보낼 수 있어야 합니다. 이 규칙은 **dllexport** 클래스가 **dllimport** 클래스에서 상속 하 고 **dllimport** 클래스를 **dllexport** 클래스에서 상속 하도록 허용 합니다. 단, 후자는 권장 되지 않습니다. 따라서 C++ 액세스 규칙에 따라 DLL의 클라이언트에 액세스할 수 있는 모든 항목은 내보낼 수 있는 인터페이스의 일부여야 합니다. 인라인 함수에서 참조되는 전용 데이터 멤버가 여기에 포함됩니다.
+내보낼 수 있는 클래스의 모든 기본 클래스는 내보낼 수 있어야 합니다. 그렇지 않으면 컴파일러 경고가 생성됩니다. 또한 클래스이기도 한 액세스 가능 멤버를 모두 내보낼 수 있어야 합니다. 이 규칙은 **dllexport** 클래스가 **dllimport** 클래스에서 상속할 수 있도록 허용하고 **dllimport** 클래스는 **dllexport** 클래스에서 상속할 수 있습니다(후자는 권장되지 않음). 따라서 C++ 액세스 규칙에 따라 DLL의 클라이언트에 액세스할 수 있는 모든 항목은 내보낼 수 있는 인터페이스의 일부여야 합니다. 인라인 함수에서 참조되는 전용 데이터 멤버가 여기에 포함됩니다.
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>선택적 멤버 가져오기/내보내기
+## <a name="selective-member-importexport"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>선택적 멤버 가져오기/내보내기
 
-클래스 내의 멤버 함수 및 정적 데이터는 암시적으로 외부 링크를 포함 하므로 전체 클래스를 내보내지 않는 한 **dllimport** 또는 **dllexport** 특성을 사용 하 여 선언할 수 있습니다. 전체 클래스를 가져오거나 내보내는 경우 멤버 함수 및 데이터를 **dllimport** 또는 **dllexport** 로 명시적으로 선언 하는 것은 금지 됩니다. 클래스 정의 내에서 정적 데이터 멤버를 **dllexport**로 선언 하는 경우에는 비 클래스 외부 링크와 같이 동일한 프로그램 내에서 정의가 발생 해야 합니다.
+멤버 함수와 정적 데이터는 암시적으로 외부 연결이 있으므로 전체 클래스를 내보내지 않는 한 **dllimport** 또는 **dllexport** 특성으로 선언할 수 있습니다. 전체 클래스를 가져오거나 내보내는 경우 **dllimport** 또는 **dllexport로** 멤버 함수 및 데이터를 명시적으로 선언할 수 없습니다. 클래스 정의 내에서 정적 데이터 멤버를 **dllexport로**선언하는 경우 정의는 클래스가 아닌 외부 링크와 마찬가지로 동일한 프로그램 내에서 어딘가에서 발생해야 합니다.
 
-마찬가지로, **dllimport** 또는 **dllexport** 특성을 사용 하 여 멤버 함수를 선언할 수 있습니다. 이 경우 동일한 프로그램 내에서 **dllexport** 정의를 제공 해야 합니다.
+마찬가지로 **dllimport** 또는 **dllexport** 특성을 사용 하 고 멤버 함수를 선언할 수 있습니다. 이 경우 동일한 프로그램 내에서 **dllexport** 정의를 제공해야 합니다.
 
 선택적 멤버 가져오기 및 내보내기와 관련하여 몇 가지 중요한 사항을 기억하십시오.
 
@@ -67,14 +67,14 @@ class DllExport C {
 
 - 선택적 멤버 가져오기/내보내기가 가상 함수와 함께 사용되는 클래스가 있을 경우 함수가 내보내기 가능 인터페이스에 있거나 인라인으로 정의되어야 합니다(클라이언트가 볼 수 있음).
 
-- 멤버를 **dllexport** 로 정의 하지만 클래스 정의에 포함 하지 않는 경우 컴파일러 오류가 발생 합니다. 클래스 헤더에 멤버를 정의해야 합니다.
+- 멤버를 **dllexport로** 정의하지만 클래스 정의에 포함하지 않으면 컴파일러 오류가 생성됩니다. 클래스 헤더에 멤버를 정의해야 합니다.
 
-- 클래스 멤버의 정의가 **dllimport** 또는 **dllexport** 로 허용 되지만 클래스 정의에 지정 된 인터페이스를 재정의할 수 없습니다.
+- 클래스 멤버를 **dllimport** 또는 **dllexport로** 정의할 수 있지만 클래스 정의에 지정된 인터페이스를 재정의할 수는 없습니다.
 
-- 멤버 함수를 선언한 클래스 정의의 본문이 아닌 다른 위치로 멤버 함수를 정의 하는 경우 함수가 **dllexport** 또는 **dllimport** 로 정의 되 면 (이 정의가 클래스 선언에 지정 된 정의와 다른 경우) 경고가 생성 됩니다.
+- 멤버 함수를 선언한 클래스 정의 본문이 아닌 다른 위치에서 멤버 함수를 정의하는 경우 함수가 **dllexport** 또는 **dllimport로** 정의된 경우 경고가 생성됩니다(이 정의가 클래스 선언에 지정된 것과 다른 경우).
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214892"
 ---
 # <a name="custom-c"></a>custom(C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "69491006"
 *value*<br/>
 변형에 포함할 수 있는 값입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **사용자 지정** C++ 특성을 통해 정보가 형식 라이브러리에 배치 됩니다. 형식 라이브러리의 사용자 지정 값을 읽는 도구가 필요 합니다.
 
@@ -46,14 +46,14 @@ ms.locfileid: "69491006"
 
 |||
 |-|-|
-|**적용 대상**|비 COM **인터페이스**, **클래스**, **열거형** `idl_module` s, 메서드, 인터페이스 멤버, 인터페이스 매개 변수, **typedef**s, **union**s, **struct**s|
+|**적용 대상**|비 COM **인터페이스**, **클래스**, **열거형**s, `idl_module` 메서드, 인터페이스 멤버, 인터페이스 매개 변수, **typedef**s, **union**s, **struct**s|
 |**반복 가능**|예|
 |**필수 특성**|**coclass** (클래스에서 사용 되는 경우)|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [독립 실행형 특성](stand-alone-attributes.md)<br/>

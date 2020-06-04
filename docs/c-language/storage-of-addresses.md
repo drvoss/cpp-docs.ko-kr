@@ -6,11 +6,11 @@ helpviewer_keywords:
 - addresses [C++], storage of
 ms.assetid: 423b2402-b847-4788-ad70-943b7c9c5c8b
 ms.openlocfilehash: 47b09ab6cd0b2045206daaee4badad32858ff934
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336194"
 ---
 # <a name="storage-of-addresses"></a>주소 스토리지
 
@@ -22,6 +22,6 @@ Microsoft C 컴파일러의 경우 **sizeof(char \*)** 는 **sizeof(int \*)** �
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [포인터 선언](../c-language/pointer-declarations.md)

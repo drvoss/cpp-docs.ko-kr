@@ -1,19 +1,20 @@
 ---
 title: 컴파일러 옵션 범주별 목록
-ms.date: 01/08/2020
+description: Microsoft C/C++ 컴파일러 명령줄 옵션 범주별 참조 목록입니다.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034586"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422789"
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 
-이 문서에는 컴파일러 옵션의 범주별 목록이 포함되어 있습니다. 사전순으로 나열된 목록을 보려면 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)을 참조하세요.
+이 문서에는 컴파일러 옵션의 범주별 목록이 포함되어 있습니다. 사전순 목록에 대해서는 [컴파일러 옵션 사전순](compiler-options-listed-alphabetically.md)목록을 참조 하세요.
 
 ## <a name="optimization"></a>Optimization
 
@@ -88,7 +89,7 @@ ms.locfileid: "77034586"
 |[/Fm](fm-name-mapfile.md)|맵 파일을 만듭니다.|
 |[/Fo](fo-object-file-name.md)|개체 파일을 만듭니다.|
 |[/Fp](fp-name-dot-pch-file.md)|미리 컴파일된 헤더 파일 이름을 지정합니다.|
-|[/FR,/Fr](fr-fr-create-dot-sbr-file.md)|생성 된 .sbr 브라우저 파일의 이름입니다.|
+|[/FR,/Fr](fr-fr-create-dot-sbr-file.md)|브라우저 파일 *`.sbr`* 생성 된 이름입니다.|
 
 ## <a name="preprocessor"></a>전처리기
 
@@ -112,7 +113,7 @@ ms.locfileid: "77034586"
 
 |옵션|목적|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|컴파일 시간에 constexpr 평가를 제어 합니다.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|컴파일 시간에 **constexpr** 평가를 제어 합니다.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|소스 코드에서 [#pragma omp](../../preprocessor/omp.md) 를 활성화합니다.|
 |[/vd](vd-disable-construction-displacements.md)|숨겨진 `vtordisp` 클래스 멤버를 사용하도록 설정하거나 표시하지 않습니다.|
 |[/vmb](vmb-vmg-representation-method.md)|멤버의 포인터에 best case를 사용합니다.|
@@ -128,7 +129,7 @@ ms.locfileid: "77034586"
 |[/ZH](zh.md)|디버그 정보에서 체크섬에 대해 MD5, SHA-1 또는 SHA-256을 지정 합니다.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|편집하며 계속하기와 호환되는 프로그램 데이터베이스에 디버깅 정보를 포함합니다. (x86 전용)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|완전한 디버깅 정보를 생성합니다.|
-|[/Zl](zl-omit-default-library-name.md)|.obj 파일에서 기본 라이브러리 이름을 제거합니다.|
+|[/Zl](zl-omit-default-library-name.md)|*`.obj`* 파일에서 기본 라이브러리 이름을 제거 합니다.|
 |[/Zp](zp-struct-member-alignment.md) *n*|구조체 멤버를 압축합니다.|
 |[/Zs](zs-syntax-check-only.md)|구문만 확인합니다.|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows 런타임에서 실행할 출력 파일을 생성 합니다.|
@@ -142,10 +143,10 @@ ms.locfileid: "77034586"
 |[/LDd](md-mt-ld-use-run-time-library.md)|디버그 DLL(동적 연결 라이브러리)을 만듭니다.|
 |[/link](link-pass-options-to-linker.md)|지정된 옵션을 LINK에 전달합니다.|
 |[/LN](ln-create-msil-module.md)|MSIL 모듈을 만듭니다.|
-|[/MD](md-mt-ld-use-run-time-library.md)|MSVCRT.lib을 사용하여 컴파일함으로써 다중 스레드 DLL을 만듭니다.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|MSVCRTD.lib로 컴파일하여 디버그 다중 스레드 DLL을 만듭니다.|
-|[/MT](md-mt-ld-use-run-time-library.md)|LIBCMT.lib를 사용하여 컴파일함으로써 다중 스레드 실행 파일을 만듭니다.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|LIBCMTD.lib를 사용하여 컴파일함으로써 디버그 다중 스레드 실행 파일을 만듭니다.|
+|[/MD](md-mt-ld-use-run-time-library.md)|*Msvcrt.lib*를 사용 하 여 다중 스레드 DLL을 만들도록 컴파일합니다.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|*Msvcrtd.lib*를 사용 하 여 디버그 다중 스레드 DLL을 만들도록 컴파일합니다.|
+|[/MT](md-mt-ld-use-run-time-library.md)|*Libcmt.lib*를 사용 하 여 다중 스레드 실행 파일을 만들기 위해 컴파일합니다.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|*Libcmtd.lib*를 사용 하 여 디버그 다중 스레드 실행 파일을 만들기 위해 컴파일합니다.|
 
 ## <a name="miscellaneous"></a>기타
 
@@ -156,10 +157,10 @@ ms.locfileid: "77034586"
 |[/analyze](analyze-code-analysis.md)|코드 분석을 활성화합니다.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|.obj 파일에서 주소 지정 가능한 섹션의 수를 늘립니다.|
 |[/c](c-compile-without-linking.md)|링크하지 않고 컴파일합니다.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|최적화 및 코드 생성에 사용할 cl.exe 스레드 수를 지정합니다.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|ICE (내부 컴파일러 오류) 정보를 Microsoft C++ 팀에 직접 제공할 수 있습니다.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|진단 텍스트에서 cl.exe에 전달된 소스 코드 파일의 전체 경로를 표시합니다.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|MSPDBSRV.EXE를 통해 serialize될 프로그램 데이터베이스(PDB) 파일에 강제로 씁니다.|
+|[/cgthreads](cgthreads-code-generation-threads.md)|최적화 및 코드 생성에 사용할 *cl.exe* 스레드 수를 지정 합니다.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 사용되지 않습니다. 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다. |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|진단 텍스트에서 *cl.exe* 에 전달 된 소스 코드 파일의 전체 경로를 표시 합니다.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Mspdbsrv.exe를 통해 serialize 될 PDB 파일에 대 한 쓰기를 강제로 수행 *합니다. EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다.|
 |[/HELP](help-compiler-command-line-help.md)|컴파일러 옵션을 나열합니다.|
 |[/J](j-default-char-type-is-unsigned.md)|기본 `char` 형식을 변경합니다.|
@@ -184,7 +185,7 @@ ms.locfileid: "77034586"
 |[/wo](compiler-option-warning-level.md)|지정된 경고를 한 번만 표시합니다.|
 |[/Wv](compiler-option-warning-level.md)|이후 버전의 컴파일러에서 도입된 경고를 사용하지 않습니다.|
 |[/WX](compiler-option-warning-level.md)|경고를 오류로 처리합니다.|
-|[/Yc](yc-create-precompiled-header-file.md)|만드십시오. PCH 파일.|
+|[/Yc](yc-create-precompiled-header-file.md)|*`.PCH`* 파일을 만듭니다.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|디버그 라이브러리를 만들 때 PCH 참조를 삽입합니다.|
 |[/Yu](yu-use-precompiled-header-file.md)|빌드하는 동안 미리 컴파일된 헤더 파일을 사용합니다.|
@@ -201,7 +202,7 @@ ms.locfileid: "77034586"
 
 ## <a name="experimental-options"></a>실험적 옵션
 
-실험적 옵션은 특정 버전의 컴파일러 에서만 지원 될 수 있으며 다른 컴파일러 버전에서 다르게 동작할 수 있습니다. 주로 [ C++ Microsoft 팀 블로그](https://devblogs.microsoft.com/cppblog/)에서 실험적 옵션에 대 한 최상의 설명서를 사용할 수 있습니다.
+실험적 옵션은 특정 버전의 컴파일러 에서만 지원 될 수 있습니다. 다른 컴파일러 버전에서 다르게 동작할 수도 있습니다. 주로 [ C++ Microsoft 팀 블로그](https://devblogs.microsoft.com/cppblog/)에서 실험적 옵션에 대 한 최상의 설명서를 사용할 수 있습니다.
 
 |옵션|목적|
 |------------|-------------|
@@ -213,6 +214,7 @@ ms.locfileid: "77034586"
 |옵션|목적|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|사용되지 않습니다. 대신 [/LN (Create MSIL Module)](ln-create-msil-module.md) 를 사용하세요.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 사용되지 않습니다. 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다. |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|사용되지 않습니다. 지역 변수 없이 찾아보기 정보 파일을 만듭니다.|
 |[/Ge](ge-enable-stack-probes.md)|사용되지 않습니다. 스택 프로브를 활성화합니다. 기본적으로 설정되어 있습니다.|
 |[/Gm](gm-enable-minimal-rebuild.md)|사용되지 않습니다. 최소 재빌드를 사용합니다.|
@@ -221,7 +223,7 @@ ms.locfileid: "77034586"
 |[/H](h-restrict-length-of-external-names.md)|사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다.|
 |[/Og](og-global-optimizations.md)|사용되지 않습니다. 전역 최적화를 사용합니다.|
 |[/QIfist](qifist-suppress-ftol.md)|사용되지 않습니다. 부동 소수점 형식에서 정수 계열 형식으로 변환하는 방법을 지정하는 데 사용되었습니다.|
-|[/V](v-version-number.md)|사용되지 않습니다. .obj 파일 버전 문자열을 설정합니다.|
+|[/V](v-version-number.md)|사용되지 않습니다. *`.obj`* 파일 버전 문자열을 설정 합니다.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|더 이상 사용되지 않습니다. 64비트 이식성 문제를 검색합니다.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. 대신 [/Zi](z7-zi-zi-debug-information-format.md) 를 사용합니다.|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|사용되지 않습니다. for 루프 범위의 규칙을 사용하지 않도록 설정합니다.|
@@ -230,6 +232,6 @@ ms.locfileid: "77034586"
 
 ## <a name="see-also"></a>참고 항목
 
-[C/C++ 빌드 참조](c-cpp-building-reference.md)<br/>
-[MSVC 컴파일러 옵션](compiler-options.md)<br/>
-[MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>
+[C/C++ 빌드 참조](c-cpp-building-reference.md)\
+[MSVC 컴파일러 옵션](compiler-options.md)\
+[MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

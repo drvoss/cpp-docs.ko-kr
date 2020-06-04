@@ -1,9 +1,6 @@
 ---
 title: MSBuild 명령 및 속성에 대 한 일반 매크로
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988334"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440175"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 명령 및 속성에 대 한 일반 매크로
 
@@ -114,7 +111,7 @@ Visual Studio에서는 설치 옵션에 따라 Visual Studio 프로젝트 (MSBui
 
 이 표에서는 사용 가능한 매크로의 일반적으로 사용 되는 하위 집합을 설명 합니다. 여기에 나열 되지 않은 여러 가지가 있습니다. **매크로** 대화 상자로 이동 하 여 프로젝트의 모든 속성 및 현재 값을 확인 합니다. MSBuild 속성 정의를 .props, .targets 및 .vcxproj 파일의 매크로로 생성하고 사용하는 방법에 대한 자세한 내용은 [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)을 참조하세요.
 
-|매크로|설명|
+|매크로|Description|
 |-----------|-----------------|
 |**$(Configuration)**|현재 프로젝트 구성의 이름(예: "디버그")입니다.|
 |**$(DevEnvDir)**|Visual Studio의 설치 디렉터리(드라이브 + 경로로 정의됨)이며, 뒤의 백슬래시 '\\'를 포함합니다.|
@@ -125,7 +122,7 @@ Visual Studio에서는 설치 옵션에 따라 Visual Studio 프로젝트 (MSBui
 |**$(IntDir)**|중간 파일에 대해 지정된 디렉터리 경로입니다. 상대 경로인 경우 중간 파일은 프로젝트 디렉터리에 추가 된이 경로로 이동 합니다. 이 경로의 끝에는 슬래시가 있어야 합니다. **중간 디렉터리** 속성의 값으로 확인 됩니다. 이 속성을 정의 하는 데 **$ (OutDir)** 를 사용 하지 마세요.|
 |**$(OutDir)**|출력 파일 디렉터리에 대한 경로입니다. 상대 경로인 경우 출력 파일은 프로젝트 디렉터리에 추가 된이 경로로 이동 합니다. 이 경로의 끝에는 슬래시가 있어야 합니다. **출력 디렉터리** 속성의 값으로 확인 됩니다. 이 속성을 정의 하는 데 **$ (IntDir)** 를 사용 하지 마세요.|
 |**$(Platform)**|현재 프로젝트 플랫폼의 이름(예: "Win32")입니다.|
-|**$(PlatformShortName)**|현재 아키텍처의 약식 이름입니다 (예: "x86" 또는 "x64").|
+|**$ (PlatformShortName)**|현재 아키텍처의 약식 이름입니다 (예: "x86" 또는 "x64").|
 |**$(ProjectDir)**|프로젝트의 디렉터리(드라이브 + 경로로 정의됨)이며, 뒤의 백슬래시 '\\'를 포함합니다.|
 |**$(ProjectExt)**|프로젝트의 파일 확장명입니다. 파일 확장명 앞에 '.'을 포함합니다.|
 |**$(ProjectFileName)**|프로젝트의 파일 이름(기본 이름 + 파일 확장명으로 정의됨)입니다.|
@@ -153,7 +150,7 @@ Visual Studio에서는 설치 옵션에 따라 Visual Studio 프로젝트 (MSBui
 
 Visual Studio 2008에서 Visual Studio 2010으로 가면서 C++ 빌드 시스템이 크게 변경되었습니다. 이전 프로젝트 형식에 사용된 많은 매크로가 새 매크로로 변경되었습니다. 이러한 매크로는 더 이상 사용되지 않거나 하나 이상의 동일한 속성 또는 [항목 메타데이터 매크로](/visualstudio/msbuild/itemmetadata-element-msbuild)( **%(** _name_ **)** ) 값으로 대체되었습니다. "마이그레이션됨"으로 표시된 매크로는 프로젝트 마이그레이션 도구로 업데이트할 수 있습니다. 매크로를 포함하는 프로젝트가 Visual Studio 2008 이하 버전에서 Visual Studio 2010으로 마이그레이션된 경우 Visual Studio는 매크로를 해당하는 현재 매크로로 변환합니다. 최신 버전의 Visual Studio는 프로젝트를 Visual Studio 2008 이하 버전에서 새 프로젝트 형식으로 변환할 수 없습니다. 이러한 프로젝트는 먼저 Visual Studio 2010으로 변환한 다음, 결과를 최신 버전의 Visual Studio로 변환하는 2단계 변환을 거쳐야 합니다. 자세한 내용은 [잠재적인 업그레이드 문제 개요](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)를 참조하세요.
 
-|매크로|설명|
+|매크로|Description|
 |-----------|-----------------|
 |**$(InputDir)**|(마이그레이션) 입력 파일의 디렉터리 (드라이브 + 경로로 정의 됨) 뒤에 백슬래시 '\\'가 포함 됩니다. 프로젝트가 입력인 경우 이 매크로는 **$(ProjectDir)** 에 해당합니다.|
 |**$(InputExt)**|(마이그레이션) 입력 파일의 파일 확장명입니다. 파일 확장명 앞에 '.'을 포함합니다. 프로젝트가 입력인 경우 이 매크로는 **$(ProjectExt)** 에 해당합니다. 원본 파일의 경우 이는 **%(Extension)** 입니다.|
@@ -165,7 +162,7 @@ Visual Studio 2008에서 Visual Studio 2010으로 가면서 C++ 빌드 시스템
 |**$(SafeParentName)**|유효한 이름 형식인 직계 부모의 이름입니다. 예를 들어 양식은 .resx 파일의 부모입니다. 이 속성에는 정확한 해당 사항이 없습니다.|
 |**$(SafeRootNamespace)**|프로젝트 마법사에서 코드를 추가할 네임스페이스 이름입니다. 이 네임스페이스 이름에는 유효한 C++ 식별자에 사용할 수 있는 문자만 포함됩니다. 이 속성에는 정확한 해당 사항이 없습니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Visual Studio 프로젝트- C++ ](../creating-and-managing-visual-cpp-projects.md)\
 [시각적 C++ 포팅 및 업그레이드 가이드](../../porting/visual-cpp-porting-and-upgrading-guide.md)\

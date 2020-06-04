@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233711"
 ---
 # <a name="expression-statement-c"></a>식 문 (C)
 
@@ -35,6 +35,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 마지막 문인 함수 호출 식에서 함수에서 해당 함수가 반환한 모든 값을 포함하는 식의 값이 3씩 증가한 다음 `y` 및 `z` 변수에 할당됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문](../c-language/statements-c.md)

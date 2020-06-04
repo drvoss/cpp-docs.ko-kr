@@ -1,9 +1,11 @@
 ---
 title: fputc, fputwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputc
 - fputwc
+- _o_fputc
+- _o_fputwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956957"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910202"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -60,10 +63,10 @@ wint_t fputwc(
 *c*<br/>
 쓸 문자입니다.
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 기록된 문자를 반환합니다. **Fputc**의 경우 **EOF** 의 반환 값은 오류를 나타냅니다. **Fputwc**의 경우 **weof** 반환 값은 오류를 나타냅니다. *Stream* 이 **NULL**인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 **EOF** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
@@ -84,7 +87,9 @@ wint_t fputwc(
 |**fputc**|**Putc**와 동일 하지만 함수 및 매크로가 아닌 함수로만 구현 됩니다.|
 |**fputwc**|**Fputc**의 와이드 문자 버전입니다. *스트림을* 텍스트 모드에서 열지 아니면 이진 모드로 열지에 따라 멀티 바이트 문자 또는 와이드 문자로 *c* 를 씁니다.|
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -97,7 +102,7 @@ wint_t fputwc(
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> 또는 \<wchar.h>|
 
-이 콘솔은 UWP (유니버설 Windows 플랫폼) 앱에서 지원 되지 않습니다. 콘솔에 연결 된 표준 스트림 핸들 (**stdin**, **stdout**및 **stderr**)은 C 런타임 함수가 UWP 앱에서 사용할 수 있도록 리디렉션해야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+이 콘솔은 UWP (유니버설 Windows 플랫폼) 앱에서 지원 되지 않습니다. 콘솔에 연결 된 표준 스트림 핸들 (**stdin**, **stdout**및 **stderr**)은 C 런타임 함수가 UWP 앱에서 사용할 수 있도록 리디렉션해야 합니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -124,7 +129,7 @@ int main( void )
 This is a test of fputc!!
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

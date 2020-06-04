@@ -1,25 +1,22 @@
 ---
-title: __Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기
+title: __declspec(dllimport)을 사용하여 애플리케이션으로 가져오기
 ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
 helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: fd7d42ec5a76b92aa789a3a20f38e6b2c0fd2cb1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341653"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440415"
 ---
-# <a name="import-into-an-application-using-declspecdllimport"></a>__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기
+# <a name="import-into-an-application-using-__declspecdllimport"></a>__declspec(dllimport)을 사용하여 애플리케이션으로 가져오기
 
-DLL에서 정의 된 공용 기호를 사용 하는 프로그램을 가져오는 라고 합니다. Dll을 사용 하 여 빌드를 사용 하는 응용 프로그램 사용에 대 한 헤더 파일을 만들 때 **__declspec (dllimport)** 의 공용 기호를 선언 합니다. 키워드 **__declspec (dllimport)** 또는.def 파일을 사용 하 여 내보내면 든 관계 없이 작동 합니다 **__declspec (dllexport)** 키워드입니다.
+DLL에 정의된 공용 기호를 사용하는 프로그램은 해당 기호를 가져온다고 합니다. DLL을 사용하여 빌드하는 애플리케이션의 헤더 파일을 만드는 경우 공용 기호를 선언하는 데 **__declspec(dllimport)** 을 사용합니다. **__declspec(dllimport)** 키워드는 .def 파일을 사용하여 내보낼지 **__declspec(dllexport)** 키워드를 사용하여 내보낼지 관계없이 작동합니다.
 
-코드를 읽기 쉽게 정의 대 한 매크로 **__declspec (dllimport)** 매크로 사용 하 여 각 가져온된 기호를 선언 합니다.
+코드를 더 읽기 쉽게 만들려면 **__declspec(dllimport)** 에 대한 매크로를 정의한 다음 이 매크로를 사용하여 가져온 각 기호를 선언합니다.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -28,9 +25,9 @@ DllImport int  j;
 DllImport void func();
 ```
 
-사용 하 여 **__declspec (dllimport)** 함수 선언에서은 하지만 컴파일러가이 키워드를 사용 하는 경우 보다 효율적인 코드를 생성 합니다. 그러나 사용 해야 합니다 **__declspec (dllimport)** 가져오기 개체가 실행 DLL의 공용 데이터 기호 및 개체에 액세스 합니다. 사용자 DLL 가져오기 라이브러리를 사용 하 여 링크 해야 note 합니다.
+함수 선언에서 **__declspec(dllimport)** 사용은 선택적이지만 이 키워드를 사용하면 컴파일러가 보다 효율적인 코드를 생성합니다. 그러나 가져오는 실행 파일이 DLL의 공용 데이터 기호 및 개체에 액세스하는 데 **__declspec(dllimport)** 을 사용해야 합니다. DLL 사용자는 여전히 가져오기 라이브러리에 연결해야 합니다.
 
-DLL과 클라이언트 응용 프로그램 모두에 동일한 헤더 파일을 사용할 수 있습니다. 이렇게 하려면 DLL 빌드 또는 클라이언트 응용 프로그램을 빌드하는 지 여부를 나타내는 특수 전처리기 기호를 사용 합니다. 예를 들어:
+DLL과 클라이언트 애플리케이션 모두에 동일한 헤더 파일을 사용할 수 있습니다. 이렇게 하려면 DLL을 빌드하는지 또는 클라이언트 애플리케이션을 빌드하는지 나타내는 특수 전처리기 기호를 사용합니다. 예를 들어:
 
 ```
 #ifdef _EXPORTING
@@ -53,6 +50,6 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 - [상호 가져오기](mutual-imports.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [애플리케이션으로 가져오기](importing-into-an-application.md)

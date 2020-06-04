@@ -111,7 +111,7 @@
           items:
             - name: 속성 페이지 구현
               href: implementing-property-pages.md
-            - name: '예제: 속성 페이지 구현'
+            - name: '예: 속성 페이지 구현'
               href: example-implementing-a-property-page.md
     - name: DHTML 컨트롤에 대한 ATL 지원
       expanded: false

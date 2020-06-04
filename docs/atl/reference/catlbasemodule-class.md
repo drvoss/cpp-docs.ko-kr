@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d57d6e631cb287496a4ff5516e97e65ec0152e30
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247154"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168295"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule 클래스
 
@@ -28,7 +28,7 @@ ms.locfileid: "62247154"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class CAtlBaseModule : public _ATL_BASE_MODULE
 ```
 
@@ -36,32 +36,32 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|생성자입니다.|
+|[CAtlBaseModule:: CAtlBaseModule](#catlbasemodule)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|리소스 인스턴스를 저장된 핸들 목록에 추가합니다.|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|지정 된 리소스 인스턴스에 대 한 핸들을 반환합니다.|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|모듈 인스턴스를 반환을 `CAtlBaseModule` 개체입니다.|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|리소스 인스턴스를 반환을 `CAtlBaseModule` 개체입니다.|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|저장 된 핸들의 목록에서 리소스 인스턴스를 제거합니다.|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|리소스 인스턴스의 집합을 `CAtlBaseModule` 개체입니다.|
+|[CAtlBaseModule:: AddResourceInstance](#addresourceinstance)|저장 된 핸들 목록에 리소스 인스턴스를 추가 합니다.|
+|[CAtlBaseModule:: GetHInstanceAt](#gethinstanceat)|지정 된 리소스 인스턴스에 대 한 핸들을 반환 합니다.|
+|[CAtlBaseModule:: GetModuleInstance](#getmoduleinstance)|`CAtlBaseModule` 개체에서 모듈 인스턴스를 반환 합니다.|
+|[CAtlBaseModule:: GetResourceInstance](#getresourceinstance)|`CAtlBaseModule` 개체에서 리소스 인스턴스를 반환 합니다.|
+|[CAtlBaseModule:: RemoveResourceInstance](#removeresourceinstance)|저장 된 핸들 목록에서 리소스 인스턴스를 제거 합니다.|
+|[CAtlBaseModule:: SetResourceInstance](#setresourceinstance)|`CAtlBaseModule` 개체의 리소스 인스턴스를 설정 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|모듈 초기화 실패 한 나타내는 변수입니다.|
+|[CAtlBaseModule:: m_bInitFailed](#m_binitfailed)|모듈 초기화가 실패 했는지 여부를 나타내는 변수입니다.|
 
 ## <a name="remarks"></a>설명
 
-인스턴스의 `CAtlBaseModule` 명명된 _AtlBaseModule 모듈 인스턴스에 대 한 핸들, 기본 제공 모듈에 대 한 핸들의 배열 및 리소스 (기본적으로 동일)을 포함 하는 모듈에 대 한 핸들을 포함 하는 모든 ATL 프로젝트에 있습니다. 리소스입니다. `CAtlBaseModule` 수 여러 스레드에서 안전 하 게 액세스할 수 있습니다.
+명명 된 _AtlBaseModule `CAtlBaseModule` 의 인스턴스는 모듈 인스턴스에 대 한 핸들, 리소스를 포함 하는 모듈에 대 한 핸들, 기본 리소스를 제공 하는 모듈에 대 한 핸들, 기본 리소스를 제공 하는 모듈에 대 한 핸들의 배열을 포함 하는 모든 ATL 프로젝트에 존재 합니다. `CAtlBaseModule`여러 스레드에서 안전 하 게 액세스할 수 있습니다.
 
-이 클래스는 사용 되지 않는 대체 [CComModule](../../atl/reference/ccommodule-class.md) ATL.의 이전 버전에서 사용 되는 클래스
+이 클래스는 이전 버전의 ATL에서 사용 되는 사용 되지 않는 [CComModule](../../atl/reference/ccommodule-class.md) 클래스를 대체 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -71,13 +71,13 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlcore.h
+**헤더:**
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule:: AddResourceInstance
 
-리소스 인스턴스를 저장된 핸들 목록에 추가합니다.
+저장 된 핸들 목록에 리소스 인스턴스를 추가 합니다.
 
-```
+```cpp
 bool AddResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -86,15 +86,15 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 추가할 리소스 인스턴스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리소스가 성공적으로 되었으면 true를 반환 합니다 추가 false이 고, 그렇지입니다.
+리소스가 성공적으로 추가 되었으면 true를 반환 하 고 그렇지 않으면 false를 반환 합니다.
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule:: CAtlBaseModule
 
 생성자입니다.
 
-```
+```cpp
 CAtlBaseModule() throw();
 ```
 
@@ -102,64 +102,64 @@ CAtlBaseModule() throw();
 
 `CAtlBaseModule`를 만듭니다.
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule:: GetHInstanceAt
 
-지정 된 리소스 인스턴스에 대 한 핸들을 반환합니다.
+지정 된 리소스 인스턴스에 대 한 핸들을 반환 합니다.
 
-```
+```cpp
 HINSTANCE GetHInstanceAt(int i) throw();
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*i*<br/>
-리소스 인스턴스의 수입니다.
+*보이지*<br/>
+리소스 인스턴스 번호입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-해당 리소스 인스턴스가 없는 경우 리소스 인스턴스 또는 NULL에 핸들을 반환 합니다.
+리소스 인스턴스에 대 한 핸들을 반환 하거나, 해당 하는 리소스 인스턴스가 없으면 NULL을 반환 합니다.
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule:: GetModuleInstance
 
-모듈 인스턴스를 반환을 `CAtlBaseModule` 개체입니다.
+`CAtlBaseModule` 개체에서 모듈 인스턴스를 반환 합니다.
 
-```
+```cpp
 HINSTANCE GetModuleInstance() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-모듈 인스턴스를 반환합니다.
+모듈 인스턴스를 반환 합니다.
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule:: GetResourceInstance
 
-리소스 인스턴스를 반환합니다.
+리소스 인스턴스를 반환 합니다.
 
-```
+```cpp
 HINSTANCE GetResourceInstance() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리소스 인스턴스를 반환합니다.
+리소스 인스턴스를 반환 합니다.
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule:: m_bInitFailed
 
-모듈 초기화 실패 한 나타내는 변수입니다.
+모듈 초기화가 실패 했는지 여부를 나타내는 변수입니다.
 
-```
+```cpp
 static bool m_bInitFailed;
 ```
 
 ### <a name="remarks"></a>설명
 
-모듈 초기화 true, false 초기화에 실패 한 경우.
+모듈이 초기화 되었으면 True이 고, 초기화에 실패 하면 false입니다.
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule:: RemoveResourceInstance
 
-저장 된 핸들의 목록에서 리소스 인스턴스를 제거합니다.
+저장 된 핸들 목록에서 리소스 인스턴스를 제거 합니다.
 
-```
+```cpp
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -168,15 +168,15 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 제거할 리소스 인스턴스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-그렇지 않으면 리소스를 제거 했습니다.이 고, false true를 반환 합니다.
+리소스가 성공적으로 제거 되 면 true를 반환 하 고, 그렇지 않으면 false를 반환 합니다.
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule:: SetResourceInstance
 
-리소스 인스턴스의 집합을 `CAtlBaseModule` 개체입니다.
+`CAtlBaseModule` 개체의 리소스 인스턴스를 설정 합니다.
 
-```
+```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -185,11 +185,11 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 새 리소스 인스턴스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 된 리소스 인스턴스를 반환합니다.
+업데이트 된 리소스 인스턴스를 반환 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../../atl/atl-class-overview.md)<br/>
 [모듈 클래스](../../atl/atl-module-classes.md)

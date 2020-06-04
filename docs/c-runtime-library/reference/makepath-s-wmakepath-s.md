@@ -1,9 +1,11 @@
 ---
 title: _makepath_s, _wmakepath_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmakepath_s
 - _makepath_s
+- _o__makepath_s
+- _o__wmakepath_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624352"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914486"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -92,8 +95,8 @@ errno_t _wmakepath_s(
 *sizeInBytes*<br/>
 버퍼의 크기(바이트)입니다.
 
-*drive*<br/>
-원하는 드라이브에 따른 문자(A, B 등) 및 후행 콜론(선택 사항)을 포함합니다. **_makepath_s** 가 없는 경우 복합 경로에 콜론을 자동으로 삽입 합니다. *드라이브가* **NULL** 이거나 빈 문자열을 가리키는 경우 복합 *경로* 문자열에 드라이브 문자가 나타나지 않습니다.
+*드라이브나*<br/>
+원하는 드라이브에 따른 문자(A, B 등) 및 후행 콜론(선택 사항)을 포함합니다. **_makepath_s** 는 복합 경로에 콜론을 자동으로 삽입 합니다 (없는 경우). *드라이브가* **NULL** 이거나 빈 문자열을 가리키는 경우 복합 *경로* 문자열에 드라이브 문자가 나타나지 않습니다.
 
 *dir*<br/>
 드라이브 지정자 또는 실제 파일 이름을 제외한 디렉터리의 경로를 포함합니다. 후행 슬래시는 선택 사항이 며 슬래시 (/) 또는 백슬래시 (\\) 중 하나 또는 둘 다를 단일 *dir* 인수에 사용할 수 있습니다. 후행 슬래시(/ 또는 \\)가 지정되지 않은 경우 자동으로 삽입됩니다. *Dir* 이 **NULL** 이거나 빈 문자열을 가리키는 경우에는 복합 *경로* 문자열에 디렉터리 경로가 삽입 되지 않습니다.
@@ -102,26 +105,28 @@ errno_t _wmakepath_s(
 파일 확장명 없이 기본 파일 이름을 포함합니다. *Fname* 이 **NULL** 이거나 빈 문자열을 가리키는 경우 복합 *경로* 문자열에 파일 이름이 삽입 되지 않습니다.
 
 *확장*<br/>
-앞에 마침표(.)가 있거나 없는 실제 파일 확장명을 포함합니다. **_makepath_s** 는 *내선*에 표시 되지 않는 경우 자동으로 마침표를 삽입 합니다. *Ext* 가 **NULL** 이거나 빈 문자열을 가리키는 경우 복합 *경로* 문자열에 확장명이 삽입 되지 않습니다.
+앞에 마침표(.)가 있거나 없는 실제 파일 확장명을 포함합니다. **_makepath_s** 은 *ext*에 표시 되지 않는 경우 자동으로 마침표를 삽입 합니다. *Ext* 가 **NULL** 이거나 빈 문자열을 가리키는 경우 복합 *경로* 문자열에 확장명이 삽입 되지 않습니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 시 0이고, 실패 시 오류 코드입니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*path*|*Sizeinwords* / *sizeinwords*|반환|*경로의* 내용|
+|*path*|*sizeinwords* / *sizeinwords*|반환 값|*경로의* 내용|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|any|**EINVAL**|수정 안 됨|
+|**N**|any|**EINVAL**|수정 안 됨|
 |any|<= 0|**EINVAL**|수정 안 됨|
 
 위의 오류 조건이 발생하는 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 는 **EINVAL** 로 설정 되 고 함수는 **EINVAL**를 반환 합니다. *Drive*, *fname*및 *ext*매개 변수에는 **NULL** 을 사용할 수 있습니다. 이러한 매개 변수가 null 포인터 이거나 빈 문자열인 경우의 동작에 대 한 자세한 내용은 설명 부분을 참조 하세요.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**_Makepath_s** 함수는 개별 구성 요소에서 복합 경로 문자열을 만들고 결과를 *경로*에 저장 합니다. *경로* 에는 드라이브 문자, 디렉터리 경로, 파일 이름 및 파일 이름 확장명이 포함 될 수 있습니다. **_wmakepath_s** 는 **_makepath_s**의 와이드 문자 버전입니다. **_wmakepath_s** 에 대 한 인수는 와이드 문자 문자열입니다. **_wmakepath_s** 및 **_makepath_s** 는 동일 하 게 동작 합니다.
+**_Makepath_s** 함수는 개별 구성 요소에서 복합 경로 문자열을 만들어 *경로*에 결과를 저장 합니다. *경로* 에는 드라이브 문자, 디렉터리 경로, 파일 이름 및 파일 이름 확장명이 포함 될 수 있습니다. **_wmakepath_s** 은 **_makepath_s**의 와이드 문자 버전입니다. **_wmakepath_s** 인수는 와이드 문자 문자열입니다. **_wmakepath_s** 와 **_makepath_s** 는 동일 하 게 동작 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|

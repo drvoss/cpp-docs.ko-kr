@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용 하 여 포인터를 포함 하는 마샬링 C++ Interop'
+title: '방법: C++ Interop를 사용하여 포함 포인터 마샬링'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345734"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544900"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>방법: 사용 하 여 포인터를 포함 하는 마샬링 C++ Interop
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>방법: C++ Interop를 사용하여 포함 포인터 마샬링
 
-다음 코드 예제에서 사용 된 [관리 되는, 관리 되지 않는](../preprocessor/managed-unmanaged.md) 구현 #pragma 지시문 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수에서 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.
+다음 코드 예제에서는 관리 되는 관리 [되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 사용 하 여 동일한 파일에서 관리 되는 함수 및 관리 되지 않는 함수를 구현 하지만 이러한 함수는 별도의 파일에 정의 된 경우와 동일한 방식으로 상호 운용 됩니다 관리 되지 않는 함수만 포함 하는 파일은 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 사용 하 여 컴파일할 필요가 없습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 관리 되는 함수에서 포인터를 포함 하는 구조체를 사용 하는 관리 되지 않는 함수를 호출할 수 있습니다 하는 방법을 보여 줍니다. 관리 되는 함수 구조체의 인스턴스를 만들고 새 키워드를 사용 하 여 포함된 된 포인터를 초기화 (대신 합니다 [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) 키워드). 없기 때문에이 네이티브 힙의 메모리 할당, 가비지 수집 하지 않으려면 배열을 고정 필요가 없습니다. 그러나 메모리는 메모리 누수를 방지 하려면 명시적으로 삭제 되어야 합니다.
+다음 예제에서는 관리 되는 함수에서 포인터를 포함 하는 구조체를 사용 하는 관리 되지 않는 함수를 호출할 수 있는 방법을 보여 줍니다. 관리 되는 함수는 구조체의 인스턴스를 만들고 [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) 키워드 대신 new 키워드를 사용 하 여 포함 포인터를 초기화 합니다. 이는 네이티브 힙에서 메모리를 할당 하기 때문에 가비지 수집을 표시 하지 않도록 배열을 고정할 필요가 없습니다. 그러나 메모리 누수를 방지 하려면 메모리를 명시적으로 삭제 해야 합니다.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>
@@ -91,6 +91,6 @@ array[8] = 97.754975
 array[9] = 27.370446
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

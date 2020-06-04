@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4691
+title: 컴파일러 경고(수준 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 8065129e20b627eb387421455527f6aaec3fdc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175378"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>컴파일러 경고 (수준 1) C4691
+# <a name="compiler-warning-level-1-c4691"></a>컴파일러 경고(수준 1) C4691
 
 ' type ': 참조 된 형식이 참조 되지 않은 어셈블리 ' file '에 있어야 하는데 대신 사용 되는 현재 변환 단위에 정의 된 형식입니다.
 

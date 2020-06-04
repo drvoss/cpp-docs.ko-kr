@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2056
 ms.assetid: 043a1f72-738a-487f-b7b3-055cc5ca0ae7
-ms.openlocfilehash: 43072d99e8ac8a5fe746b2baa8e422ce2c6fd3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd253cdeee84bf4fbc03b8dc060e4400c42533bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408721"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207981"
 ---
 # <a name="compiler-error-c2056"></a>컴파일러 오류 C2056
 
-식이 잘못 되었습니다.
+잘못 된 식
 
-이전 오류로 인해 식을 잘못 되었습니다.
+이전 오류로 인해 식이 잘못 되었습니다.

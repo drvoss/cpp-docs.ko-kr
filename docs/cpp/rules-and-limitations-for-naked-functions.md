@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178953"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Naked 함수의 규칙 및 제한
 
@@ -33,7 +33,7 @@ naked 함수에는 다음과 같은 규칙과 제한이 적용됩니다.
 
 - **Naked** 키워드는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)을 사용 하 여 컴파일할 때 무시 됩니다.
 
-- [__Fastcall](../cpp/fastcall.md) naked 함수의 경우 레지스터 인수 중 하나에 C/C++ 코드에 대 한 참조가 있을 때마다 프롤로그 코드는 해당 레지스터의 값을 해당 변수의 스택 위치에 저장 해야 합니다. 예를 들면 다음과 같습니다.:
+- [__Fastcall](../cpp/fastcall.md) naked 함수의 경우 레지스터 인수 중 하나에 C/C++ 코드에 대 한 참조가 있을 때마다 프롤로그 코드는 해당 레지스터의 값을 해당 변수의 스택 위치에 저장 해야 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // nkdfastcl.cpp
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Naked 함수 호출](../cpp/naked-function-calls.md)

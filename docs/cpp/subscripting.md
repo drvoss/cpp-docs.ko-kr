@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160894"
 ---
 # <a name="subscripting"></a>첨자
 
-첨자 연산자( **[ ]**)는 함수 호출 연산자와 마찬가지로 이항 연산자로 간주됩니다. 첨자 연산자는 단일 인수를 사용하는 비정적 멤버 함수여야 합니다. 이 인수는 어떠한 형식도 될 수 있으며 원하는 배열 첨자를 지정합니다.
+함수 호출 연산자와 같은 첨자 연산자 ( **[]** )는 이항 연산자로 간주 됩니다. 첨자 연산자는 단일 인수를 사용하는 비정적 멤버 함수여야 합니다. 이 인수는 어떠한 형식도 될 수 있으며 원하는 배열 첨자를 지정합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 범위 검사를 구현하는 **int** 형식의 벡터를 만드는 방법을 보여 줍니다.
+다음 예제에서는 범위 검사를 구현 하는 **int** 형식의 벡터를 만드는 방법을 보여 줍니다.
 
 ```cpp
 // subscripting.cpp
@@ -89,11 +89,11 @@ Array bounds violation.
 Element: [10] = 10
 ```
 
-## <a name="comments"></a>설명
+## <a name="comments"></a>주석
 
-위의 프로그램에서 `i`가 10에 도달할 때 **operator[]** 는 범위를 벗어나는 첨자를 사용하고 있음을 감지하고 오류 메시지를 발행합니다.
+이전 프로그램에서 `i` 10에 도달 하면 **operator []** 는 범위를 벗어난 첨자가 사용 중임을 감지 하 고 오류 메시지를 발행 합니다.
 
-**operator[]** 함수는 참조 형식을 반환하고, 이에 따라 l-value가 되므로 할당 연산자의 양쪽에서 첨자 식을 사용할 수 있습니다.
+함수 **연산자 []** 는 참조 형식을 반환 합니다. 이에 따라 l-value가 되므로 할당 연산자의 양쪽에서 첨자 식을 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

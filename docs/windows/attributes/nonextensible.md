@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214687"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-`IDispatch` 구현 시 인터페이스 설명에 나열 된 속성 및 메서드만 포함 하 고 런타임에 추가 멤버로 확장할 수 없도록 지정 합니다.
+`IDispatch` 구현에 인터페이스 설명에 나열 된 속성 및 메서드만 포함 하 고 런타임에 추가 멤버로 확장할 수 없도록 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514404"
 [nonextensible]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **비 확장 가능** C++ 특성에는 [비 확장](/windows/win32/Midl/nonextensible) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -56,12 +56,12 @@ __interface IFireTabCtrl
 |-|-|
 |**적용 대상**|**interface**|
 |**반복 가능**|아니요|
-|**필수 특성**|`dual`및 `oleautomation`또는`dispinterface`|
+|**필수 특성**|`dual` 및 `oleautomation`또는 `dispinterface`|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)

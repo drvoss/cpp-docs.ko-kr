@@ -1,8 +1,9 @@
 ---
 title: _get_wpgmptr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_wpgmptr
+- _o__get_wpgmptr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 0cd2dc9c2f82d3dc49a17dc438157233c50b3261
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec21e4967d123c988886fa2e6ab996aad83ef206
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919673"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
@@ -52,7 +54,7 @@ errno_t _get_wpgmptr(
 *pValue*<br/>
 **_Wpgmptr** 변수의 현재 값으로 채울 문자열에 대 한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. *Pvalue* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
@@ -60,14 +62,16 @@ errno_t _get_wpgmptr(
 
 프로그램에 **wmain ()** 또는 **wwinmain ()** 과 같은 넓은 진입점이 있는 경우에만 **_get_wpgmptr** 를 호출 합니다. **_Wpgmptr** 전역 변수는 프로세스와 연결 된 실행 파일의 전체 경로를 와이드 문자열로 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [_get_pgmptr](get-pgmptr.md)<br/>

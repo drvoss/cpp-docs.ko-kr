@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211304"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 클래스
 
@@ -37,8 +37,8 @@ class CRestrictions :
 *T*<br/>
 접근자에 사용 되는 클래스입니다.
 
-*nRestrictions*<br/>
-스키마 행 집합에 대 한 제한 열의 수입니다.
+*nRestrictions 사항*<br/>
+스키마 행 집합에 대 한 제한 열 수입니다.
 
 *pguid*<br/>
 스키마에 대 한 GUID에 대 한 포인터입니다.
@@ -53,11 +53,11 @@ class CRestrictions :
 
 |||
 |-|-|
-|[열기](#open)|결과 사용자가 제공한 제한 사항에 따라 집합을 반환 합니다.|
+|[열기](#open)|사용자가 제공한 제한에 따라 결과 집합을 반환 합니다.|
 
-## <a name="open"></a> Crestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
 
-결과 사용자가 제공한 제한 사항에 따라 집합을 반환 합니다.
+사용자가 제공한 제한에 따라 결과 집합을 반환 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -75,27 +75,27 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>매개 변수
 
-*session*<br/>
-[in] 데이터 원본에 연결 하는 데 기존 세션 개체를 지정 합니다.
+*세션별*<br/>
+진행 데이터 원본에 연결 하는 데 사용 되는 기존 세션 개체를 지정 합니다.
 
 *lpszParam*<br/>
-[in] 스키마 행 집합에는 제한을 지정합니다.
+진행 스키마 행 집합에 대 한 제한을 지정 합니다.
 
 *bBind*<br/>
-[in] 열 지도 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은 **true**를 자동으로 바인딩할 열 지도 이르게 합니다. 설정 *bBind* 하 **false** 수동으로 바인딩할 수 있도록 열 맵의 자동 바인딩 방지 합니다. (수동 바인딩으로 OLAP 사용자에 게 특히 관심입니다.)
+진행 열 맵을 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은 **true**로, 열 맵이 자동으로 바인딩됩니다. *Bbind* 를 **false** 로 설정 하면 수동으로 바인딩할 수 있도록 열 맵의 자동 바인딩이 방지 됩니다. (수동 바인딩은 OLAP 사용자에 게 특히 관심이 있습니다.)
 
 ### <a name="return-value"></a>반환 값
 
-HRESULT 값 중 하나입니다.
+표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-스키마 행 집합에서 최대 7 개의 제한 지정할 수 있습니다.
+스키마 행 집합에 대해 최대 7 개의 제한을 지정할 수 있습니다.
 
-참조 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 각 스키마 행 집합에서 정의 된 제한에 대 한 정보에 대 한 합니다.
+각 스키마 행 집합에 대해 정의 된 제한 사항에 대 한 자세한 내용은 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

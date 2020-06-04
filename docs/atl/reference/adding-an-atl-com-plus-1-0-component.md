@@ -2,15 +2,14 @@
 title: ATL COM+ 1.0 구성 요소 추가
 ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 843563e324e5e01af3c38896f268efc06c9a6222
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706951"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075316"
 ---
 # <a name="adding-an-atl-com-10-component"></a>ATL COM+ 1.0 구성 요소 추가
-
 
 ::: moniker range="vs-2019"
 
@@ -36,5 +35,3 @@ Visual Studio 2019 이상에서는 ATL COM+ 1.0 구성 요소 마법사를 사�
 [메서드 추가](../../ide/adding-a-method-visual-cpp.md)
 
 ::: moniker-end
-
-

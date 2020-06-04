@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용 하 여 COM 문자열 마샬링 C++ Interop'
+title: '방법: C++ Interop를 사용하여 COM 문자열 마샬링'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfdad892261d5ae2d3494734458e1447f8ebd7c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325483"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545230"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>방법: 사용 하 여 COM 문자열 마샬링 C++ Interop
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>방법: C++ Interop를 사용하여 COM 문자열 마샬링
 
-이 항목에서는 BSTR (COM 프로그래밍에서 선호 하는 기본 문자열 형식) 수 있는 방법을 보여 줍니다. 그 반대로 관리 되지 않는 함수에 관리 되는 전달 합니다. 다른 문자열 형식 상호 작용을 하기 위한 다음 항목을 참조 합니다.
+이 항목에서는 BSTR (COM 프로그래밍에서 선호 되는 기본 문자열 형식)을 관리 되는 함수에서 관리 되지 않는 함수로 전달 하는 방법 및 그 반대로를 전달할 수 있는 방법을 보여 줍니다. 다른 문자열 형식과의 상호 운용을 위해 다음 항목을 참조 하십시오.
 
 - [방법: C++ Interop를 사용하여 유니코드 문자열 마샬링](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [방법: C++ Interop를 사용하여 ANSI 문자열 마샬링](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-다음 코드 예제에서 사용 된 [관리 되는, 관리 되지 않는](../preprocessor/managed-unmanaged.md) 구현 #pragma 지시문 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수에서 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.
+다음 코드 예제에서는 관리 되는 관리 [되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 사용 하 여 동일한 파일에서 관리 되는 함수 및 관리 되지 않는 함수를 구현 하지만 이러한 함수는 별도의 파일에 정의 된 경우와 동일한 방식으로 상호 운용 됩니다 관리 되지 않는 함수만 포함 하는 파일은 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 사용 하 여 컴파일할 필요가 없습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 BSTR (COM 프로그래밍에서 사용 하는 문자열 형식)를 전달할 수 있습니다 하는 방법을 보여 줍니다. 관리 되지 않는 함수에 관리 되는 합니다. 호출 함수는 관리 되는 <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> 내용의.NET System.String 표현 BSTR의 주소를 가져옵니다. 이 포인터를 사용 하 여 고정 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) 관리 되지 않는 함수를 실행 하는 동안 해당 실제 주소는 가비지 컬렉션 주기 동안 변경 되지 않도록 확인 합니다. 가비지 수집기가 이동 될 때까지 메모리에서 허용 되지 않습니다 합니다 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) 범위를 벗어납니다.
+다음 예제에서는 BSTR (COM 프로그래밍에서 사용 되는 문자열 형식)을 관리 되는 함수에서 관리 되지 않는 함수로 전달할 수 있는 방법을 보여 줍니다. 호출 하는 관리 되는 함수는 <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>를 사용 하 여 .NET System.string의 내용에 대 한 BSTR 표현의 주소를 가져옵니다. 이 포인터는 관리 되지 않는 함수가 실행 되는 동안 가비지 수집 주기 동안 실제 주소가 변경 되지 않도록 [pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md) 를 사용 하 여 고정 됩니다. 가비지 수집기는 [pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md) 가 범위를 벗어날 때까지 메모리를 이동 하는 것이 금지 됩니다.
 
-```
+```cpp
 // MarshalBSTR1.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -65,9 +65,9 @@ int main() {
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 BSTR 전달 하는 방법에서 관리 되지 않는 함수에 관리 되지 않는 합니다. 관리 되는 함수에서 문자열을 BSTR을 사용 하거나 사용 하 여 수신 <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> 변환할를 <xref:System.String> 다른 사용에 대 한 관리 되는 함수입니다. BSTR 나타내는 메모리 관리 되지 않는 힙에서 할당 되므로, 고정 안 함 이므로 필요에 따라 관리 되지 않는 힙의 가비지 컬렉션이 없습니다.
+다음 예제에서는 BSTR을 관리 되지 않는 함수에서 관리 되지 않는 함수로 전달할 수 있는 방법을 보여 줍니다. 수신 관리 함수는의 문자열을 BSTR로 사용 하거나, <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>를 사용 하 여 다른 관리 되는 함수와 함께 사용할 <xref:System.String>로 변환할 수 있습니다. BSTR을 나타내는 메모리는 관리 되지 않는 힙에 할당 되기 때문에 관리 되지 않는 힙에서 가비지 수집이 수행 되지 않으므로 고정이 필요 하지 않습니다.
 
-```
+```cpp
 // MarshalBSTR2.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -102,6 +102,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

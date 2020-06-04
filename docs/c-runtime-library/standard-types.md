@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500633"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367942"
 ---
 # <a name="standard-types"></a>표준 형식
 
@@ -173,7 +173,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 
 ### <a name="fixed-width-integral-types-stdinth"></a>고정 너비 정수 계열 형식(stdint.h)
 
-|name|해당하는 기본 제공 형식|
+|속성|해당하는 기본 제공 형식|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -189,7 +189,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|형식|설명|선언됨|
+|Type|Description|선언됨|
 |----------|-----------------|-----------------|
 |`clock_t`(long)|시간 값을 저장합니다. [clock](../c-runtime-library/reference/clock.md)에 의해 사용됩니다.|TIME.H|
 |`_complex` 구조체|복소수의 실수와 허수 부분을 저장합니다. [_cabs](../c-runtime-library/reference/cabs.md)에 의해 사용됩니다.|MATH.H|
@@ -198,7 +198,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |`_CrtMemState` 구조체|C 런타임 디버그 힙의 현재 상태에 대한 정보를 제공합니다.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)에서 호출되는 콜백 함수에 대한 형식이 정의됩니다.<br /><br /> 이 함수에 대한 매개 변수는 보고서 유형, 출력 메시지 및 콜백 함수의 반환 값입니다.|CRTDBG.H|
 |`dev_t`, `_dev_t` short 또는 부호 없는 정수|디바이스 핸들을 나타냅니다.|SYS\TYPES.H|
-|`_diskfree_t` 구조체|디스크 드라이브에 대한 정보가 들어 있습니다. [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.** 에 의해 사용됩니다.|DOS.H 및 DIRECT.H|
+|`_diskfree_t` 구조체|디스크 드라이브에 대한 정보가 들어 있습니다. [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.** 에 의해 사용됩니다.|DOS.H 및 DIRECT.H|
 |`div_t`, `ldiv_t` 및 `lldiv_t` 구조|[div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 및 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md)에 의해 반환된 값을 각각 저장합니다.|STDLIB.H|
 |`errno_t` 정수|`errno`의 오류 코드를 처리하는 매개 변수 또는 함수 반환 형식에 사용됩니다.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` 구조체|[_matherr](../c-runtime-library/reference/matherr.md)에 대한 오류 정보를 저장합니다.|MATH.H|
@@ -217,7 +217,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |`jmp_buf` 배열|[setjmp](../c-runtime-library/reference/setjmp.md) 및 [longjmp](../c-runtime-library/reference/longjmp.md)에서 프로그램 환경을 저장하고 복원하는 데 사용됩니다.|SETJMP.H|
 |`lconv` 구조체|다른 국가/지역의 숫자 값에 대한 서식 규칙을 포함합니다. [localeconv](../c-runtime-library/reference/localeconv.md)에서 사용됩니다.|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12`(long double 또는 부호 없는 문자 배열)|long double 값을 나타내는 데 사용합니다.|STDLIB.H|
-|`_locale_t` 구조체|현재 로캘 값을 저장합니다. 모든 로캘 특정 C 런타임 라이브러리에서 사용됩니다.|CRTDEF.H|
+|`_locale_t` 구조체|현재 로캘 값을 저장합니다. 모든 로캘 특정 C 런타임 라이브러리에서 사용됩니다.|CRTDEFS.H|
 |`mbstate_t`|멀티 바이트 문자 변환의 상태를 추적합니다.|WCHAR.H|
 |`off_t`, `_off_t` long 정수|파일 오프셋 값을 나타냅니다.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> `_onexit_m_t` 포인터|[_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)에서 반환됩니다.|STDLIB.H|
@@ -231,7 +231,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |`sig_atomic_t` 정수|비동기 인터럽트의 출현에도 원자 항목으로 수정할 수 있는 개체의 형식입니다. [signal](../c-runtime-library/reference/signal.md)과 함께 사용됩니다.|SIGNAL.H|
 |`size_t`(대상 플랫폼에 따라 부호 없는 __int64 또는 부호 없는 정수)|`sizeof` 연산자의 결과입니다.|CRTDEFS.H 및 기타 포함 파일|
 |`_stat` 구조체|[_stat](../c-runtime-library/reference/stat-functions.md) 및 [_fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)에서 반환되는 파일 상태 정보가 포함됩니다.|SYS\STAT.H|
-|`__stat64` 구조체|[_fstat64](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) [_stat64](../c-runtime-library/reference/stat-functions.md) 및 [_wstat64](../c-runtime-library/reference/stat-functions.md)에서 반환되는 파일 상태 정보가 포함됩니다.|SYS\STAT.H|
+|`__stat64` 구조체|[_fstat64](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)[_stat64](../c-runtime-library/reference/stat-functions.md) 및 [_wstat64](../c-runtime-library/reference/stat-functions.md)에서 반환되는 파일 상태 정보가 포함됩니다.|SYS\STAT.H|
 |`_stati64` 구조체|[_fstati64](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), [_stati64](../c-runtime-library/reference/stat-functions.md) 및 [_wstati64](../c-runtime-library/reference/stat-functions.md)에서 반환되는 파일 상태 정보가 포함됩니다.|SYS\STAT.H|
 |`terminate_function` 형식 정의|[terminate](../c-runtime-library/reference/terminate-crt.md)가 호출될 때 호출되는 콜백 함수에 대한 유형을 정의합니다. [set_terminate](../c-runtime-library/reference/set-terminate-crt.md)에 의해 사용됩니다.|EH.H|
 |`time_t`(__int64 또는 long 정수)|시간 값을 [mktime](../c-runtime-library/reference/mktime-mktime32-mktime64.md), [time](../c-runtime-library/reference/time-time32-time64.md), [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md), [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) 및 [gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)로 나타냅니다. 1970년 1월 1일 0:00 UTC 이후의 초 수 _USE_32BIT_TIME_T가 정의된 경우 `time_t`는 long 정수입니다. 정의 되지 않은 경우 64비트 정수입니다.|TIME.H,<br /><br /> SYS\STAT.H,<br /><br /> SYS\TIMEB.H|

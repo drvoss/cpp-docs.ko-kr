@@ -23,23 +23,23 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944494"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745379"
 ---
 # <a name="_lock"></a>_lock
 
 다중 스레드 잠금을 가져옵니다.
 
 > [!IMPORTANT]
->  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
+> 이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void __cdecl _lock
    int locknum
 );
@@ -58,7 +58,7 @@ void __cdecl _lock
 
 **소스:** mlock.c
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

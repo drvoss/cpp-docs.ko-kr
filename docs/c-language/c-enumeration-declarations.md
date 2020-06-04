@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326016"
 ---
 # <a name="c-enumeration-declarations"></a>C 열거형 선언
 
@@ -68,7 +68,7 @@ enum identifier
 
 - 열거형 태그는 일반 범위 지정 규칙을 따르며, 표시 유형이 동일한 다른 열거형, 구조체 및 공용 구조체 태그와 구별되어야 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 열거형 선언을 보여 줍니다.
 
@@ -144,6 +144,6 @@ if ( match_flag == false )
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [열거형](../cpp/enumerations-cpp.md)

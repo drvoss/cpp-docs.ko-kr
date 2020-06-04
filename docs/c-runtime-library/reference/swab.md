@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946284"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912418"
 ---
 # <a name="_swab"></a>_swab
 
@@ -65,11 +67,13 @@ void _swab(
 
 **Swab** 함수는 값을 반환 하지 않습니다. *Src* 또는 *dest* 포인터가 null 이거나 *n* 이 0 보다 작은 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이 코드 및 기타 반환 코드에 대 한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-*N* 이 짝수 이면 **_swab** 함수는 *src*에서 *n* 바이트를 복사 하 여 인접 한 각 바이트 쌍을 교환 하 고 결과를 *대상*에 저장 합니다. *N* 이 홀수 이면 **_swab** 은 *src*의 첫 번째 *n*-1 바이트를 복사 하 여 교체 하 고 최종 바이트는 복사 되지 않습니다. **_Swab** 함수는 일반적으로 다른 바이트 순서를 사용 하는 컴퓨터에 전송할 이진 데이터를 준비 하는 데 사용 됩니다.
+*N* 이 짝수 이면 **_swab** 함수는 *src*에서 *n* 바이트를 복사 하 고, 인접 한 각 바이트 쌍을 교환 하 고, 결과를 *대상*에 저장 합니다. *N* 이 홀수 이면 **_swab** 은 *src*의 첫 번째 *n*-1 바이트를 복사 하 고 교환 하 고 최종 바이트는 복사 되지 않습니다. **_Swab** 함수는 일반적으로 다른 바이트 순서를 사용 하는 컴퓨터에 전송할 이진 데이터를 준비 하는 데 사용 됩니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -77,7 +81,7 @@ void _swab(
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> 또는 \<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -106,6 +110,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)<br/>

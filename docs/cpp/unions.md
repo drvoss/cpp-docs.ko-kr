@@ -1,5 +1,5 @@
 ---
-title: Unions
+title: 통합
 ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187962"
 ---
-# <a name="unions"></a>Unions
+# <a name="unions"></a>통합
 
 > [!NOTE]
 > C + + 17 이상에서 **std:: variant** 클래스는 공용 구조체에 대 한 형식 안전 대안입니다.
@@ -34,7 +34,7 @@ union [name]  { member-list };
 *name*<br/>
 공용 구조체에 지정된 형식 이름입니다.
 
-*member-list*<br/>
+*멤버 목록*<br/>
 공용 구조체에 포함할 수 있는 멤버입니다. 설명 부분을 참조하세요.
 
 ## <a name="remarks"></a>설명
@@ -636,7 +636,7 @@ int main()
 ![숫자 형식 union의 데이터 저장소](../cpp/media/vc38ul1.png "NumericType 공용 구조체에 데이터 저장") <br/>
 NumericType 공용 구조체에 데이터 스토리지
 
-## <a name="anonymous_unions"></a>익명 공용 구조체
+## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>익명 공용 구조체
 
 익명 공용 구조체는 *클래스 이름* 또는 *선언 자 목록*없이 선언 된 공용 구조체입니다.
 
@@ -654,9 +654,9 @@ union  {  member-list  }
 
 - 멤버 함수를 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 및 구조체(C++)](../cpp/classes-and-structs-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[클래스 및 구조체](../cpp/classes-and-structs-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [class](../cpp/class-cpp.md)<br/>
 [struct](../cpp/struct-cpp.md)

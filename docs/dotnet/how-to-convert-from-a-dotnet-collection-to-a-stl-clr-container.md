@@ -5,36 +5,36 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387554"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545050"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>방법: .NET 컬렉션에서 STL/CLR 컨테이너로 변환
 
-이 항목에서는.NET 컬렉션이 해당 하는 STL/CLR 컨테이너로 변환 하는 방법을 보여 줍니다. 예를 들어.NET으로 변환 하는 방법을 살펴보겠습니다 <xref:System.Collections.Generic.List%601> STL/clr [벡터](../dotnet/vector-stl-clr.md) .NET으로 변환 하는 방법과 <xref:System.Collections.Generic.Dictionary%602> STL/clr [맵](../dotnet/map-stl-clr.md), 절차는 모든 컬렉션에 컨테이너와 유사 하지만 .
+이 항목에서는 .NET 컬렉션을 해당 하는 STL/CLR 컨테이너로 변환 하는 방법을 보여 줍니다. 예를 들어 .NET <xref:System.Collections.Generic.List%601> STL/CLR [벡터로](../dotnet/vector-stl-clr.md) 변환 하는 방법 및 .net <xref:System.Collections.Generic.Dictionary%602>을 STL/clr [맵으로](../dotnet/map-stl-clr.md)변환 하는 방법을 보여 주지만 프로시저는 모든 컬렉션 및 컨테이너와 유사 합니다.
 
 ### <a name="to-create-a-container-from-a-collection"></a>컬렉션에서 컨테이너를 만들려면
 
-1. 전체 컬렉션으로 변환 하려면 STL/CLR 컨테이너 만들기 및 컬렉션 생성자에 전달 합니다.
+1. 전체 컬렉션을 변환 하려면 STL/CLR 컨테이너를 만들고 컬렉션을 생성자에 게 전달 합니다.
 
-   첫 번째 예제에서는이 절차를 보여 줍니다.
+   첫 번째 예제에서는이 프로시저를 보여 줍니다.
 
--또는-
+또는
 
-1. 만들어 제네릭 STL/CLR 컨테이너 만들기를 [collection_adapter](../dotnet/collection-adapter-stl-clr.md) 개체입니다. 이 템플릿 클래스는.NET 컬렉션 인터페이스를 인수로 사용 합니다. 인터페이스는 지를 확인 하려면 참조 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)합니다.
+1. [Collection_adapter](../dotnet/collection-adapter-stl-clr.md) 개체를 만들어 일반 STL/CLR 컨테이너를 만듭니다. 이 템플릿 클래스는 .NET 컬렉션 인터페이스를 인수로 사용 합니다. 지원 되는 인터페이스를 확인 하려면 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)를 참조 하세요.
 
-1. 컨테이너에.NET 컬렉션의 콘텐츠를 복사 합니다. STL/CLR을 사용 하 여 이렇게 [알고리즘](../dotnet/algorithm-stl-clr.md),.NET 컬렉션을 반복 하 고 STL/CLR 컨테이너에 각 요소의 복사본을 삽입 하 여 또는입니다.
+1. .NET 컬렉션의 내용을 컨테이너에 복사 합니다. STL/CLR [알고리즘](../dotnet/algorithm-stl-clr.md)을 사용 하거나 .net 컬렉션을 반복 하 고 각 요소의 복사본을 STL/clr 컨테이너에 삽입 하 여이 작업을 수행할 수 있습니다.
 
-   두 번째 예제에서는이 절차를 보여 줍니다.
+   두 번째 예에서는이 절차를 보여 줍니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 제네릭 만듭니다 <xref:System.Collections.Generic.List%601> 5 요소를 추가 합니다. 을 만듭니다는 `vector` 사용 하는 생성자를 사용 하 여는 <xref:System.Collections.Generic.IEnumerable%601> 인수로 합니다.
+이 예제에서는 제네릭 <xref:System.Collections.Generic.List%601> 만들고 요소 5 개를 추가 합니다. 그런 다음 <xref:System.Collections.Generic.IEnumerable%601>를 인수로 사용 하는 생성자를 사용 하 여 `vector`를 만듭니다.
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>예제
 
-이 예제에서는 제네릭 만듭니다 <xref:System.Collections.Generic.Dictionary%602> 5 요소를 추가 합니다. 을 만듭니다는 `collection_adapter` 래핑할는 <xref:System.Collections.Generic.Dictionary%602> 간단한 STL/CLR 컨테이너입니다. 마지막으로 만들겠습니다.는 `map` 의 내용을 복사 하 고는 <xref:System.Collections.Generic.Dictionary%602> 에 `map` 반복 하 여는 `collection_adapter`합니다. 이 과정에서 사용 하 여 새로운 쌍을 만듭니다는 `make_pair` 함수를 하 고 새 쌍에 직접 삽입 합니다 `map`합니다.
+이 예제에서는 제네릭 <xref:System.Collections.Generic.Dictionary%602> 만들고 요소 5 개를 추가 합니다. 그런 다음 `collection_adapter`를 만들어 <xref:System.Collections.Generic.Dictionary%602> 간단한 STL/CLR 컨테이너로 래핑합니다. 마지막으로 `map`를 만들고 `collection_adapter`를 반복 하 여 <xref:System.Collections.Generic.Dictionary%602> 내용을 `map`에 복사 합니다. 이 과정에서 `make_pair` 함수를 사용 하 여 새 쌍을 만들고 새 쌍을 `map`에 직접 삽입 합니다.
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 
@@ -128,7 +128,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter(STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

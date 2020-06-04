@@ -14,63 +14,63 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e071e0cc25492073cd74ed517284476b6e49ef8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182901"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368898"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: 문서 및 뷰를 이용한 데이터베이스 클래스 사용
 
-문서/뷰 아키텍처 없이 MFC 데이터베이스 클래스를 사용할 수 있습니다. 이 항목에서는 문서 및 뷰를 사용 하 여 작업을 강조합니다. 설명:
+문서/보기 아키텍처의 유무에 관계없이 MFC 데이터베이스 클래스를 사용할 수 있습니다. 이 항목에서는 문서 및 뷰 작업을 강조합니다. 그것은 설명한다 :
 
-- [폼 기반 응용 프로그램을 작성 하는 방법](#_core_writing_a_form.2d.based_application) 를 사용 하 여를 `CRecordView` 문서에 있는 주 뷰로 개체입니다.
+- 문서의 기본 보기로 개체를 `CRecordView` 사용하여 [양식 기반 응용 프로그램을 작성하는 방법.](#_core_writing_a_form.2d.based_application)
 
-- [문서와 뷰 레코드 집합 개체를 사용 하는 방법을](#_core_using_recordsets_in_documents_and_views)합니다.
+- [문서 및 보기에서 레코드 집합 개체를 사용하는 방법.](#_core_using_recordsets_in_documents_and_views)
 
-- [기타 고려 사항](#_core_other_factors)합니다.
+- [기타 고려 사항](#_core_other_factors).
 
-대체를 참조 하세요. [MFC: 문서 및 뷰 하지 않는 데이터베이스 클래스를 사용 하 여](../data/mfc-using-database-classes-without-documents-and-views.md)입니다.
+대안은 [MFC: 문서 및 뷰 없이 데이터베이스 클래스 사용.](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-##  <a name="_core_writing_a_form.2d.based_application"></a> 폼 기반 응용 프로그램 작성
+## <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>양식 기반 응용 프로그램 작성
 
-대부분의 데이터 액세스 응용 프로그램 폼을 기반으로 합니다. 사용자 인터페이스는 사용자를 검사, 입력, 또는 데이터 편집 컨트롤을 포함 하는 폼 이며 기반 응용 프로그램 폼을 만들려면 클래스를 사용 하 여 `CRecordView`입니다. MFC 응용 프로그램 마법사를 실행 하 고 선택 **ODBC** 클라이언트 형식에는 **데이터베이스 지원** 페이지에서 프로젝트를 사용 하 여 `CRecordView` 뷰 클래스에 대 한 합니다.
+많은 데이터 액세스 응용 프로그램은 양식을 기반으로 합니다. 사용자 인터페이스는 사용자가 데이터를 검사, 입력 또는 편집하는 컨트롤을 포함하는 양식입니다. 신청서를 기반으로 만들려면 클래스를 `CRecordView`사용합니다. MFC 응용 프로그램 마법사를 실행하고 **데이터베이스 지원** 페이지에서 **ODBC** 클라이언트 `CRecordView` 유형을 선택하면 프로젝트가 뷰 클래스에 사용합니다.
 
-폼 기반 응용 프로그램에서 각 레코드 뷰 개체에 대 한 포인터를 저장 한 `CRecordset` 개체입니다. 레코드 집합 및 데이터 원본 간에 데이터를 교환 하는 프레임 워크의 레코드 필드 교환 (RFX) 메커니즘입니다. 대화 상자 데이터 교환 (DDX) 메커니즘 레코드 집합 개체의 필드 데이터 멤버와 폼의 컨트롤 간에 데이터를 교환 합니다. `CRecordView` 또한 기본 제공 명령 처리기 함수 양식의 레코드 탐색에 대 한 합니다.
+양식 기반 응용 프로그램에서 각 레코드 뷰 개체는 `CRecordset` 개체에 대한 포인터를 저장합니다. 프레임워크의 레코드 필드 교환(RFX) 메커니즘은 레코드 집합과 데이터 원본 간에 데이터를 교환합니다. 대화 상자 데이터 교환(DDX) 메커니즘은 레코드 집합 개체의 필드 데이터 멤버와 폼의 컨트롤 간에 데이터를 교환합니다. `CRecordView`또한 레코드에서 양식에 기록하기 위해 탐색하기 위한 기본 명령 처리기 함수도 제공합니다.
 
-참조 응용 프로그램 마법사를 사용 하 여 form 기반 응용 프로그램을 만들려면 [폼 기반 MFC 응용 프로그램을 만드는](../mfc/reference/creating-a-forms-based-mfc-application.md) 하 고 [MFC 응용 프로그램 마법사, 데이터베이스 지원](../mfc/reference/database-support-mfc-application-wizard.md)합니다.
+응용 프로그램 마법사를 사용하여 양식 기반 응용 프로그램을 만들려면 [양식 기반 MFC 응용 프로그램](../mfc/reference/creating-a-forms-based-mfc-application.md) 및 데이터베이스 [지원, MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md)만들기를 참조하십시오.
 
-폼에 대 한 자세한 내용은 참조 하세요. [레코드 뷰](../data/record-views-mfc-data-access.md)합니다.
+양식에 대한 전체 설명은 [레코드 보기](../data/record-views-mfc-data-access.md)를 참조하십시오.
 
-##  <a name="_core_using_recordsets_in_documents_and_views"></a> 레코드 집합을 문서 및 뷰를 사용 하 여
+## <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>문서 및 뷰에 레코드 집합 사용
 
-많은 간단한 폼 기반 응용 프로그램에 문서를 사용할 필요가 없습니다. 응용 프로그램이 더 복잡 한 문서를 데이터베이스에 대 한 프록시로 사용 하려면 원할 경우 저장 된 `CDatabase` 데이터 원본에 연결 하는 개체입니다. 일반적으로 폼 기반 응용 프로그램 보기에서 레코드 집합 개체에 대 한 포인터를 저장 합니다. 다른 종류의 데이터베이스 응용 프로그램 레코드 집합 저장 및 `CDatabase` 문서에는 개체입니다. 일부의 문서를 사용 하 여 데이터베이스 응용 프로그램의 예는 다음과 같습니다.
+많은 간단한 양식 기반 응용 프로그램에는 문서가 필요하지 않습니다. 응용 프로그램이 더 복잡한 경우 문서를 데이터베이스의 프록시로 사용하여 데이터 원본에 연결하는 개체를 `CDatabase` 저장하려고 할 수 있습니다. 양식 기반 응용 프로그램은 일반적으로 뷰에서 레코드 집합 개체에 대한 포인터를 저장합니다. 다른 종류의 데이터베이스 응용 프로그램은 문서에 `CDatabase` 레코드 집합과 개체를 저장합니다. 다음은 데이터베이스 응용 프로그램에서 문서를 사용할 수 있는 몇 가지 가능성입니다.
 
-- 로컬 컨텍스트에서 레코드 집합에 액세스 하는 경우 만들기는 `CRecordset` 필요에 따라 문서 또는 뷰를 멤버 함수의 로컬 개체입니다.
+- 로컬 컨텍스트에서 레코드 집합에 액세스하는 경우 `CRecordset` 필요에 따라 문서 또는 뷰의 멤버 함수에서 개체를 로컬로 만듭니다.
 
-   함수에서 지역 변수로 레코드 집합 개체를 선언 합니다. 임시 만들고 프레임 워크는 생성자에 NULL을 전달할 `CDatabase` 개체입니다. 대신 전달에 대 한 포인터를 `CDatabase` 개체입니다. 함수 내에서 레코드 집합을 사용 하 고 함수가 종료 될 때 자동으로 제거할 수 있도록 합니다.
+   함수에서 레코드 집합 개체를 로컬 변수로 선언합니다. NULL을 생성자에게 전달하면 프레임워크가 임시 `CDatabase` 개체를 만들고 열립니다. 또는 개체에 포인터를 전달합니다. `CDatabase` 함수 내에서 레코드 집합을 사용하고 함수가 종료될 때 자동으로 삭제됩니다.
 
-   프레임 워크는 레코드 집합에서 반환 되는 정보를 사용 하 여 레코드 집합 생성자에 NULL을 전달 하면 `GetDefaultConnect` 만들려는 멤버 함수는 `CDatabase` 개체를 엽니다. 마법사 구현 `GetDefaultConnect` 있습니다.
+   NULL을 레코드 집합 생성자로 전달하면 프레임워크는 레코드 집합의 `GetDefaultConnect` 멤버 함수에서 `CDatabase` 반환하는 정보를 사용하여 개체를 만들고 엽니다. 마법사가 당신을 `GetDefaultConnect` 위해 구현합니다.
 
-- 레코드 집합 문서 수명 중에 액세스 하는 경우 하나 이상의 포함 `CRecordset` 문서에는 개체입니다.
+- 문서의 수명 동안 레코드 집합에 액세스하는 경우 문서에 `CRecordset` 하나 이상의 개체를 포함합니다.
 
-   문서를 초기화할 때 또는 필요에 따라 레코드 집합 개체를 생성 합니다. 이미 존재 하거나 생성 하 고 아직 존재 하지 않는 경우 레코드 집합을 열고 경우 레코드 집합에 대 한 포인터를 반환 하는 함수를 작성할 수 있습니다. 닫기, 삭제, 필요에 따라 레코드 집합을 다시 호출 또는 해당 `Requery` 레코드를 새로 고치려면 멤버 함수입니다.
+   문서를 초기화할 때 또는 필요에 따라 레코드 집합 개체를 생성합니다. 레코드 집합이 이미 존재하거나 생성되어 아직 존재하지 않는 경우 레코드 집합을 여는 경우 레코드 집합에 대한 포인터를 반환하는 함수를 작성할 수 있습니다. 필요에 따라 레코드 집합을 닫고 삭제하고 다시 `Requery` 만들거나 멤버 함수를 호출하여 레코드를 새로 고칩니다.
 
-- 문서의 수명 동안 데이터 소스를 액세스 하는 경우 포함을 `CDatabase` 개체에 대 한 포인터를 저장 또는 `CDatabase` 에 개체.
+- 문서의 수명 동안 데이터 원본에 액세스하는 경우 `CDatabase` 개체를 포함하거나 개체에 대한 포인터를 `CDatabase` 저장합니다.
 
-   `CDatabase` 개체는 데이터 원본에 대 한 연결을 관리 합니다. 개체가 문서 생성 하는 동안 자동으로 생성 되 고 호출 하면 해당 `Open` 문서를 초기화할 때 멤버 함수입니다. 문서에 포인터를 전달 하는 문서 멤버 함수에서 레코드 집합 개체를 생성할 때 `CDatabase` 개체입니다. 이 데이터 원본과 각 레코드 집합을 연결합니다. 데이터베이스 개체는 일반적으로 문서를 닫을 때 소멸 됩니다. 레코드 집합 개체는 함수의 범위를 종료 하는 경우에 일반적으로 제거 됩니다.
+   개체는 `CDatabase` 데이터 원본에 대한 연결을 관리합니다. 개체는 문서를 구성하는 동안 자동으로 생성되며 `Open` 문서를 초기화할 때 해당 멤버 함수를 호출합니다. 문서 멤버 함수에서 레코드 집합 개체를 생성할 때 문서의 `CDatabase` 개체에 대한 포인터를 전달합니다. 이렇게 하면 각 레코드 집합이 데이터 원본과 연결됩니다. 데이터베이스 개체는 일반적으로 문서가 닫히면 소멸됩니다. 레코드 집합 개체는 일반적으로 함수의 범위를 종료할 때 소멸됩니다.
 
-##  <a name="_core_other_factors"></a> 다른 요소
+## <a name="other-factors"></a><a name="_core_other_factors"></a>기타 요인
 
-폼 기반 응용 프로그램 종종 없는 프레임 워크의 문서 serialization 메커니즘을 사용 하 여 모든 않으므로 제거, 사용 안 함, 또는 교체 해야 할 수는 **새로 만들기** 하 고 **열기** 명령에는 **파일** 메뉴. 문서를 참조 [직렬화 합니다. Serialization 및 입/출력 데이터베이스](../mfc/serialization-serialization-vs-database-input-output.md)합니다.
+양식 기반 응용 프로그램은 프레임워크의 문서 직렬화 메커니즘에 사용되지 않는 경우가 많으므로 **파일** 메뉴에서 **새로** 시작 및 **열기** 명령을 제거, 비활성화 또는 대체할 수 있습니다. [일련화: 직렬화 대 데이터베이스 입력/출력](../mfc/serialization-serialization-vs-database-input-output.md)문서를 참조하십시오.
 
-확인 하려는 수도 프레임 워크를 지원할 수 있는 많은 사용자 인터페이스 기능을 활용 합니다. 예를 들어, 여러 개 사용할 수 있습니다 `CRecordView` 분할자 창에서 개체 여러 문서 MDI (인터페이스) 자식 창, 및 등 다른 다중 레코드 집합을 엽니다.
+프레임워크가 지원할 수 있는 많은 사용자 인터페이스 가능성을 활용할 수도 있습니다. 예를 들어 스플리터 `CRecordView` 창에서 여러 개체를 사용하고, MDI(다른 여러 문서 인터페이스) 자식 창에서 여러 레코드 집합을 여는 등의 방법으로 여러 개체를 사용할 수 있습니다.
 
-보기에 인쇄를 구현 하려는 경우, 폼을 사용 하 여 구현 인지 `CRecordView` 또는 다른 요소입니다. 파생 된 클래스 `CFormView`, `CRecordView` 않습니다 인쇄를 지원 하지 않습니다 하지만 재정의할 수는 `OnPrint` 인쇄할 수 있도록 하려면 멤버 함수입니다. 자세한 내용은 클래스를 참조 하세요 [CFormView](../mfc/reference/cformview-class.md)합니다.
+뷰에 있는 양식이 구현된 `CRecordView` 양식이든 다른 형식이든 관계없이 뷰에 있는 모든 인쇄를 구현할 수 있습니다. 에서 파생된 클래스는 인쇄를 지원하지 않지만 인쇄를 `OnPrint` 허용하도록 멤버 함수를 재정의할 수 있습니다. `CRecordView` `CFormView` 자세한 내용은 클래스 [CFormView](../mfc/reference/cformview-class.md)를 참조하십시오.
 
-문서 및 뷰를 전혀 사용 하지 않을 수도 있습니다. 이 경우 참조 [MFC: 문서 및 뷰 하지 않는 데이터베이스 클래스를 사용 하 여](../data/mfc-using-database-classes-without-documents-and-views.md)입니다.
+문서와 뷰를 전혀 사용하지 않을 수 있습니다. 이 경우 [MFC: 문서 및 뷰 없이 데이터베이스 클래스 사용.](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 데이터베이스 클래스](../data/mfc-database-classes-odbc-and-dao.md)

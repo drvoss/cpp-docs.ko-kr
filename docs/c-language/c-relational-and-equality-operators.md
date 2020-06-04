@@ -56,7 +56,7 @@ ms.locfileid: "67400525"
 
 - 같음 연산자는 관계형 연산자와 동일한 규칙을 따르지만 추가 가능성을 허용합니다. 포인터를 값이 0인 상수 정수 식과 비교하거나 `void`에 대한 포인터와 비교할 수 있습니다. 두 포인터가 모두 null 포인터인 경우는 동일한 것으로 비교됩니다. 같음 연산자는 세그먼트와 오프셋을 모두 비교합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 아래 예제에서는 관계형 연산자와 같음 연산자를 보여 줍니다.
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 이러한 문은 `col` 태그를 사용하여 `color`이라는 열거형 변수를 선언합니다. 언제든지 변수는 정수 값 0, 1 또는 2를 포함할 수 있으며, 이러한 값은 열거형 집합 `color`의 요소 중 하나인 빨간색, 흰색 또는 녹색을 각각 나타냅니다. **if** 문이 실행될 때 `col`에 0이 포함되어 있는 경우 **if**에 종속된 모든 문이 실행됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [관계형 연산자: \<, >, \<=, >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [같음 연산자: == 및 !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

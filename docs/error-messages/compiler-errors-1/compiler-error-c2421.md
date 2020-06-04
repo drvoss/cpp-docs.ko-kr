@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2421
 ms.assetid: 0a9afb9f-60d8-4df7-b2ae-5c36e86df891
-ms.openlocfilehash: efa4e16ccc153ede4938abcf685bf8764e60019a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabee67ecf55fad82ea2f8aa875f54491f65e21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205437"
 ---
 # <a name="compiler-error-c2421"></a>컴파일러 오류 C2421
 
-PTR 연산자의 '컨텍스트' 레지스터와 함께 사용
+' Context '의 레지스터와 함께 PTR 연산자를 사용 합니다.
 
-합니다 `PTR` 연산자와 함께 사용할 수는 `register` 피연산자입니다.
+`PTR` 연산자는 `register` 피연산자와 함께 사용할 수 없습니다.

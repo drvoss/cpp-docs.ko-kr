@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 ms.assetid: 9493f8cc-64a2-4284-9aaf-26eec11c4f40
 ms.openlocfilehash: 37affedc0bcf3fb1423898ecf2c570794d9625c0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233849"
 ---
 # <a name="expression-evaluation-c"></a>식 계산 (C)
 
@@ -18,6 +18,6 @@ ms.locfileid: "56151093"
 
 "의도하지 않은 결과"는 식을 계산하여 생기는 변경 내용입니다. 식을 계산하여 변수 값이 변경될 때마다 의도하지 않은 결과가 생깁니다. 모든 할당 연산에는 의도하지 않은 결과가 따릅니다. 외부에 표시되는 항목의 값을 변경할 경우 직접 할당에 의해 또는 포인터를 통한 간접 할당에 의해 함수 호출에 의도하지 않은 결과가 생길 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [피연산자 및 식](../c-language/operands-and-expressions.md)

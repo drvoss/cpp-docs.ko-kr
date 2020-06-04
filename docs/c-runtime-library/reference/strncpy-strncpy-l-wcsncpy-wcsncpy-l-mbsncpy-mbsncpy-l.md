@@ -1,6 +1,6 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncpy
 - _strncpy_l
@@ -8,6 +8,8 @@ api_name:
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
+- _o__mbsncpy
+- _o__mbsncpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,12 +68,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947204"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919274"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -162,7 +165,7 @@ unsigned char *_mbsncpy_l(
 대상 문자열입니다.
 
 *strSource*<br/>
-소스 문자열입니다.
+원본 문자열입니다.
 
 *count*<br/>
 복사할 문자의 수입니다.
@@ -170,7 +173,7 @@ unsigned char *_mbsncpy_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *Strdest*를 반환 합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
 
@@ -183,13 +186,15 @@ unsigned char *_mbsncpy_l(
 
 *Strdest* 또는 *Strdest* 가 **NULL** 포인터 이거나 *Count* 가 0 보다 작거나 같으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-**wcsncpy** 및 **_mbsncpy** 는 **strncpy**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcsncpy** 및 **_mbsncpy** 의 인수와 반환 값은 그에 따라 다릅니다. 그 외의 경우에는 이들 6개 함수가 동일하게 작동합니다.
+**wcsncpy** 및 **_mbsncpy** 는 **strncpy**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcsncpy** 및 **_mbsncpy** 의 인수 및 반환 값은 그에 따라 다릅니다. 그 외의 경우에는 이들 6개 함수가 동일하게 작동합니다.
 
 **_L** 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -197,7 +202,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** 및 **_wcsncpy_l** 에는 로캘 종속성이 없습니다. 이는 **_tcsncpy_l** 에 대해서만 제공 되며 직접 호출할 수 없습니다.
+> **_strncpy_l** 및 **_wcsncpy_l** 에는 로캘 종속성이 없습니다. 이러한 기능은 **_tcsncpy_l** 에 대해서만 제공 되며 직접 호출할 수 없습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -211,7 +216,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 **strncpy** 를 사용 하는 방법과 프로그램 버그 및 보안 문제를 일으킬 수 있는 오용 방법을 보여 줍니다. 컴파일러가 **crt_strncpy_x86 (15): warning C4996: ' strncpy '와 유사한 **strncpy** 에 대 한 각 호출에 대 한 경고를 생성 합니다. 이 함수 또는 변수는 안전하지 않을 수 있습니다. strncpy_s를 대신 사용하세요. 사용 중단을 사용하지 않도록 설정하려면 _CRT_SECURE_NO_WARNINGS를 사용합니다. 자세한 내용은 온라인 도움말을 참조하세요.**
+다음 예제에서는 **strncpy** 를 사용 하는 방법과 프로그램 버그 및 보안 문제를 일으킬 수 있는 오용 방법을 보여 줍니다. 컴파일러는 crt_strncpy_x86 **에 대** 한 각 호출에 대 한 경고를 생성 **합니다. c (15): 경고 C4996: ' Strncpy ':이 함수 또는 변수는 안전 하지 않을 수 있습니다. 대신 strncpy_s를 사용 하는 것이 좋습니다. 사용 중단을 사용 하지 않도록 설정 하려면 _CRT_SECURE_NO_WARNINGS을 사용 합니다. 자세한 내용은 온라인 도움말을 참조 하십시오.**
 
 ```C
 // crt_strncpy_x86.c
@@ -278,11 +283,11 @@ Buffer overrun: s = 'ars.' (should be 'test')
 
 자동 변수의 레이아웃과 오류 검색 및 코드 보호의 수준은 변경된 컴파일러 설정에 따라 달라질 수 있습니다. 이 예제에서는 다른 컴파일러 옵션을 사용하거나 다른 컴파일 환경에서 빌드하는 경우 서로 다른 결과가 발생할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

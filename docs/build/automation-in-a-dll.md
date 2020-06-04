@@ -24,12 +24,12 @@ MFC DLL 마법사에서 자동화 옵션을 선택하면 마법사에서 다음�
 
 - **AfxDllCanUnloadNow** 함수를 호출하는 `DllCanUnloadNow` 함수 구현
 
-- [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) 함수를 호출하는 `DllRegisterServer` 함수 구현
+- [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) 함수를 호출하는 `DllRegisterServer` 함수 구현
 
 ## <a name="what-do-you-want-to-know-more-about"></a>추가 정보
 
 - [자동화 서버](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[C를 만들기 /C++ Visual Studio에서 Dll](dlls-in-visual-cpp.md)
+[Visual Studio에서 C/C++ DLL 만들기](dlls-in-visual-cpp.md)

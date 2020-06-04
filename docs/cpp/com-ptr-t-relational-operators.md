@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95d1e7a1e4322eb497a2d7ed410065bb92f17e09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170649"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t 관계형 연산자
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t 관계형 연산자
 
 **Microsoft 전용**
 
-스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터를 비교 하거나 NULL.
+스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터 또는 NULL과 비교합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -47,7 +47,7 @@ ms.locfileid: "62399241"
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -112,12 +112,12 @@ template<typename _InterfaceType>
 bool operator>=( _InterfaceType* p );
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-비교는 스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터 이거나 NULL입니다. NULL 포인터 테스트를 제외 하 고 이러한 연산자 먼저 쿼리에 대 한 두 포인터 `IUnknown`, 결과 비교 합니다.
+스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터 또는 NULL과 비교합니다. NULL 포인터 테스트를 제외 하 고, 이러한 연산자는 먼저 `IUnknown`에 대 한 두 포인터를 모두 쿼리하고 결과를 비교 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

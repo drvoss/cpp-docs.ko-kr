@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515638"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172116"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr(C++/CLI 및 C++/CX)
 
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 `/clr`로 컴파일할 때 네이티브 포인터에 **nullptr**을 할당할 수 있음을 보여 줍니다.
+다음 코드 예제에서는 **로 컴파일할 때 네이티브 포인터에** nullptr`/clr`을 할당할 수 있음을 보여 줍니다.
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,7 +221,7 @@ int main() {
 
 ## <a name="requirements"></a>요구 사항
 
-컴파일러 옵션: (필수 아님, `/ZW` 및 `/clr`을 비롯한 모든 코드 생성 옵션에서 지원됨)
+컴파일러 옵션: (필수 아님, `/ZW` 및 `/clr`를 포함 하 여 모든 코드 생성 옵션에서 지원 됨)
 
 ## <a name="see-also"></a>참고 항목
 

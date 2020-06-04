@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176163"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212266"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 클래스
 
@@ -66,7 +65,7 @@ class CArrayRowset :
 ### <a name="parameters"></a>매개 변수
 
 *TAccessor*<br/>
-사용 하 여 행 집합 접근자 클래스의 형식입니다.
+행 집합에서 사용 하려는 접근자 클래스의 형식입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -85,15 +84,15 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[연산자&#91;&#93;](#operator)|행 집합의 요소에 액세스합니다.|
+|[연산자&#91;&#93;](#operator)|행 집합의 요소에 액세스 합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
 |||
 |-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|이미 읽은 행의 수입니다.|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|이미 읽은 행 수입니다.|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
 새 `CArrayRowset` 개체를 만듭니다.
 
@@ -108,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] 행 집합에 있는 최대 행 수입니다.
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: Snapshot
 
 전체 행 집합을 메모리로 읽어서 이에 대한 이미지 또는 스냅샷을 만듭니다.
 
@@ -118,9 +117,9 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: operator
 
-행 집합의 행에 액세스 하는 것에 대 한 배열 유사 구문을 제공 합니다.
+행 집합의 행에 액세스 하기 위한 배열 형태의 구문을 제공 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -131,22 +130,22 @@ TAccessor & operator[](int nrow);
 #### <a name="parameters"></a>매개 변수
 
 *TAccessor*<br/>
-행 집합에 저장 하는 접근자의 유형을 지정 하는 템플릿 매개 변수입니다.
+행 집합에 저장 된 접근자의 유형을 지정 하는 템플릿 매개 변수입니다.
 
 *nRow*<br/>
-[in] 액세스 하려는 행 (배열 요소)의 수입니다.
+진행 액세스 하려는 행 (배열 요소)의 번호입니다.
 
 ### <a name="return-value"></a>반환 값
 
-요청한 행의 내용입니다.
+요청 된 행의 내용입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-하는 경우 *nRow* 행 집합의 행 수를 초과 하면, 예외가 throw 됩니다.
+*Nrow* 가 행 집합의 행 수를 초과 하면 예외가 throw 됩니다.
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
-이미 읽은 행 집합의 행 수가 포함 되어 있습니다.
+이미 읽은 행 집합의 행 수를 포함 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -154,8 +153,8 @@ TAccessor & operator[](int nrow);
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset 클래스](../../data/oledb/crowset-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-ms.openlocfilehash: 465dd5fffa7b9cadf6f0daf97c4f540cf90a11ec
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: dc3296b8d15c2a516eaf3d3995b66c2917d432d4
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314122"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825348"
 ---
 # <a name="const-32-bit-masm"></a>. CONST (32 비트 MASM)
 
@@ -19,13 +19,14 @@ ms.locfileid: "75314122"
 
 ## <a name="syntax"></a>구문
 
-> **. CONST** ⟦ *segmentItem* ⟧ ...
+> **. 멤버도**\
+> ⟦ *segmentItem* ⟧ ...
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 세그먼트에는 읽기 전용 특성이 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [지시문 참조](directives-reference.md)\
 [MASM BNF 문법](masm-bnf-grammar.md)

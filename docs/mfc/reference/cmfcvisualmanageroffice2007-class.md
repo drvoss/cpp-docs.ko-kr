@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2007 클래스
+title: CMFC비주얼매니저오피스2007 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2007
@@ -230,18 +230,18 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b7e15a540ab95342b030c48c93905daaf86f40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319922"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 클래스
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFC비주얼매니저오피스2007 클래스
 
-`CMFCVisualManagerOffice2007` 응용 프로그램에 Microsoft Office 2007 모양을 제공 합니다.
+`CMFCVisualManagerOffice2007`응용 프로그램에 마이크로 소프트 오피스 2007 모양을 제공합니다.
 
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -253,130 +253,130 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||
-|[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||
-|[CMFCVisualManagerOffice2007::GetCaptionBarTextColor](#getcaptionbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManagerOffice2007::GetMenuItemTextColor](#getmenuitemtextcolor)||
-|[CMFCVisualManagerOffice2007::GetNcBtnSize](#getncbtnsize)||
-|[CMFCVisualManagerOffice2007::GetRibbonBar](#getribbonbar)||
-|[CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
-|[CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset](#getribbonquickaccesstoolbarchevronoffset)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin](#getribbonquickaccesstoolbarrightmargin)||
-|[CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||
-|[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
-|[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
-|`CMFCVisualManagerOffice2007::GetStyle`|현재 색 구성표를 반환 합니다 `CMFCVisualManagerOffice2007` 차례로 Microsoft Office 2007 GUI를 모방 하는 GUI입니다.|
-|[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||
-|[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||
-|[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)||
-|[CMFCVisualManagerOffice2007::GetToolTipInfo](#gettooltipinfo)||
-|[CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)||
-|[CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip](#islayeredribbonkeytip)||
-|[CMFCVisualManagerOffice2007::IsOwnerDrawCaption](#isownerdrawcaption)||
-|[CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck](#isownerdrawmenucheck)||
-|[CMFCVisualManagerOffice2007::IsRibbonPresent](#isribbonpresent)||
-|[CMFCVisualManagerOffice2007::OnDrawBarGripper](#ondrawbargripper)||
-|[CMFCVisualManagerOffice2007::OnDrawButtonBorder](#ondrawbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawButtonSeparator](#ondrawbuttonseparator)||
-|[CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
-|[CMFCVisualManagerOffice2007::OnDrawCheckBoxEx](#ondrawcheckboxex)||
-|[CMFCVisualManagerOffice2007::OnDrawComboBorder](#ondrawcomboborder)||
-|[CMFCVisualManagerOffice2007::OnDrawComboDropButton](#ondrawcombodropbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)||
-|[CMFCVisualManagerOffice2007::OnDrawEditBorder](#ondraweditborder)||
-|[CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)||
-|[CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuBorder](#ondrawmenuborder)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuCheck](#ondrawmenucheck)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuItemButton](#ondrawmenuitembutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuLabel](#ondrawmenulabel)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMenuSystemButton](#ondrawmenusystembutton)||
-|[CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
-|[CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)||
-|[CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawPaneCaption](#ondrawpanecaption)||
-|[CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem](#ondrawpropertysheetlistitem)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaption](#ondrawribboncaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategory](#ondrawribboncategory)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanel](#ondrawribbonpanel)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)||
-|[CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)||
-|[CMFCVisualManagerOffice2007::OnDrawScrollButtons](#ondrawscrollbuttons)||
-|[CMFCVisualManagerOffice2007::OnDrawSeparator](#ondrawseparator)||
-|[CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)||
-|[CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)||
-|[CMFCVisualManagerOffice2007::OnDrawTab](#ondrawtab)||
-|[CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)||
-|[CMFCVisualManagerOffice2007::OnDrawTask](#ondrawtask)||
-|[CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)||
-|[CMFCVisualManagerOffice2007::OnDrawTearOffCaption](#ondrawtearoffcaption)||
-|[CMFCVisualManagerOffice2007::OnEraseMDIClientArea](#onerasemdiclientarea)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsArea](#onerasetabsarea)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsButton](#onerasetabsbutton)||
-|[CMFCVisualManagerOffice2007::OnEraseTabsFrame](#onerasetabsframe)||
-|[CMFCVisualManagerOffice2007::OnFillBarBackground](#onfillbarbackground)||
-|[CMFCVisualManagerOffice2007::OnFillButtonInterior](#onfillbuttoninterior)||
-|[CMFCVisualManagerOffice2007::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
-|[CMFCVisualManagerOffice2007::OnFillHighlightedArea](#onfillhighlightedarea)||
-|[CMFCVisualManagerOffice2007::OnFillMiniFrameCaption](#onfillminiframecaption)||
-|[CMFCVisualManagerOffice2007::OnFillOutlookBarCaption](#onfilloutlookbarcaption)||
-|[CMFCVisualManagerOffice2007::OnFillOutlookPageButton](#onfilloutlookpagebutton)||
-|[CMFCVisualManagerOffice2007::OnFillPopupWindowBackground](#onfillpopupwindowbackground)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonButton](#onfillribbonbutton)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonEdit](#onfillribbonedit)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame](#onfillribbonmenuframe)||
-|[CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
-|[CMFCVisualManagerOffice2007::OnFillTab](#onfilltab)||
-|[CMFCVisualManagerOffice2007::OnHighlightMenuItem](#onhighlightmenuitem)||
-|[CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)||
-|[CMFCVisualManagerOffice2007::OnNcActivate](#onncactivate)||
-|[CMFCVisualManagerOffice2007::OnNcPaint](#onncpaint)||
-|[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||
-|[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||
-|[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||
-|`CMFCVisualManagerOffice2007::SetStyle`|설정의 색 구성표를 `CMFCVisualManagerOffice2007` GUI입니다.|
+|[CMFC비주얼매니저오피스2007::항상하이라이트3D탭](#alwayshighlight3dtabs)||
+|[CMFC비주얼매니저오피스2007::클린스타일](#cleanstyle)||
+|[CMFC비주얼매니저오피스2007::겟캡션바텍스트컬러](#getcaptionbartextcolor)||
+|[CMFC비주얼매니저오피스2007::겟하이라이트메뉴항목텍스트컬러](#gethighlightedmenuitemtextcolor)||
+|[CMFC비주얼매니저오피스2007::겟메뉴항목텍스트컬러](#getmenuitemtextcolor)||
+|[CMFC비주얼매니저오피스2007::겟엔비젠사이즈](#getncbtnsize)||
+|[CMFC비주얼매니저오피스2007::겟리본바](#getribbonbar)||
+|[CMFC비주얼매니저오피스2007::겟리본하이퍼링크텍스트컬러](#getribbonhyperlinktextcolor)||
+|[CMFC비주얼매니저오피스2007::겟리본팝보더사이즈](#getribbonpopupbordersize)||
+|[CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바셰브론오프셋](#getribbonquickaccesstoolbarchevronoffset)||
+|[CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바라이트마진](#getribbonquickaccesstoolbarrightmargin)||
+|[CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바텍스트컬러](#getribbonquickaccesstoolbartextcolor)||
+|[CMFC비주얼매니저오피스2007::겟리본상태바텍스트컬러](#getribbonstatusbartextcolor)||
+|[CMFC비주얼매니저오피스2007::겟쇼올메뉴아이템높이](#getshowallmenuitemsheight)||
+|[CMFC비주얼매니저오피스2007::겟스테이터스바파네텍스트컬러](#getstatusbarpanetextcolor)||
+|`CMFCVisualManagerOffice2007::GetStyle`|차례로, 마이크로 소프트 `CMFCVisualManagerOffice2007` 오피스 2007 GUI를 모방 GUI의 현재 색 구성표를 반환합니다.|
+|[CMFC비주얼매니저오피스2007::겟탭프레임컬러](#gettabframecolors)||
+|[CMFC비주얼매니저오피스2007::겟탭호즈마진](#gettabhorzmargin)||
+|[CMFC비주얼매니저오피스2007::겟탭텍스트컬러](#gettabtextcolor)||
+|[CMFC비주얼매니저오피스2007::겟툴바버튼텍스트컬러](#gettoolbarbuttontextcolor)||
+|[CMFC비주얼매니저오피스2007::겟툴바장애인텍스트컬러](#gettoolbardisabledtextcolor)||
+|[CMFC비주얼매니저오피스2007::겟툴팁정보](#gettooltipinfo)||
+|[CMFC비주얼매니저오피스2007::이하이라이트전체메뉴아이템](#ishighlightwholemenuitem)||
+|[CMFC비주얼매니저오피스2007::IsLayered리본키팁](#islayeredribbonkeytip)||
+|[CMFC비주얼매니저오피스2007::IsOwnerDraw캡션](#isownerdrawcaption)||
+|[CMFC비주얼매니저오피스2007::오너드로우메뉴체크](#isownerdrawmenucheck)||
+|[CMFC비주얼매니저오피스2007::이리본](#isribbonpresent)||
+|[CMFC비주얼매니저오피스2007::온드로우바그리퍼](#ondrawbargripper)||
+|[CMFC비주얼매니저오피스2007::온드로우버튼보더](#ondrawbuttonborder)||
+|[CMFC비주얼매니저오피스2007::온드로우버튼세파레이터](#ondrawbuttonseparator)||
+|[CMFC비주얼매니저오피스2007::온드로우캡션바정보영역](#ondrawcaptionbarinfoarea)||
+|[CMFC비주얼매니저오피스2007::온드로우체크박스엑스](#ondrawcheckboxex)||
+|[CMFC비주얼매니저오피스2007::온드로우콤보보보보보](#ondrawcomboborder)||
+|[CMFC비주얼매니저오피스2007::온드로우컴보드롭버튼](#ondrawcombodropbutton)||
+|[CMFC비주얼매니저오피스2007::온드로우디폴드리본이미지](#ondrawdefaultribbonimage)||
+|[CMFC비주얼매니저오피스2007::온드로우에더접경](#ondraweditborder)||
+|[CMFC비주얼매니저오피스2007::온드로우딩툴바보더](#ondrawfloatingtoolbarborder)||
+|[CMFC비주얼매니저오피스2007::온드로우헤더트툴보더](#ondrawheaderctrlborder)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴보더](#ondrawmenuborder)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴체크](#ondrawmenucheck)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴항목버튼](#ondrawmenuitembutton)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴라벨](#ondrawmenulabel)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴리사이즈바](#ondrawmenuresizebar)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴스크롤버튼](#ondrawmenuscrollbutton)||
+|[CMFC비주얼매니저오피스2007::온드로우메뉴시스템버튼](#ondrawmenusystembutton)||
+|[CMFC비주얼매니저오피스2007::온드로우미니프레임보더](#ondrawminiframeborder)||
+|[CMFC비주얼매니저오피스2007::온드로우아웃아웃아웃바스플리터](#ondrawoutlookbarsplitter)||
+|[CMFC비주얼매니저오피스2007::온드로우아웃아웃아웃페이지버튼보더](#ondrawoutlookpagebuttonborder)||
+|[CMFC비주얼매니저오피스2007::온드로우파네캡션](#ondrawpanecaption)||
+|[CMFC비주얼매니저오피스2007::온드로우팝윈도우캡션](#ondrawpopupwindowcaption)||
+|[CMFC비주얼매니저오피스2007::온드로우프로퍼티시트리스트아이템](#ondrawpropertysheetlistitem)||
+|[CMFC비주얼매니저오피스2007::온드로우리본응용버튼](#ondrawribbonapplicationbutton)||
+|[CMFC비주얼매니저오피스2007::온드로우리본버튼보더](#ondrawribbonbuttonborder)||
+|[CMFC비주얼매니저오피스2007::온드로우리본버튼그룹](#ondrawribbonbuttonsgroup)||
+|[CMFC비주얼매니저오피스2007::온드로우리본캡션](#ondrawribboncaption)||
+|[CMFC비주얼매니저오피스2007::온드로우리본캡션버튼](#ondrawribboncaptionbutton)||
+|[CMFC비주얼매니저오피스2007::온드로우리본카테고리](#ondrawribboncategory)||
+|[CMFC비주얼매니저오피스2007::온드로우리본카테고리캡션](#ondrawribboncategorycaption)||
+|[CMFC비주얼매니저오피스2007::온드로우리본카테고리스크롤](#ondrawribboncategoryscroll)||
+|[CMFC비주얼매니저오피스2007::온드로우리본카테고리탭](#ondrawribboncategorytab)||
+|[CMFC비주얼매니저오피스2007::온드로우리본체크박스온리스트](#ondrawribboncheckboxonlist)||
+|[CMFC비주얼매니저오피스2007::온드로우리본기본판버튼](#ondrawribbondefaultpanebutton)||
+|[CMFC비주얼매니저오피스2007::온드로우리본기본판버튼표시기](#ondrawribbondefaultpanebuttonindicator)||
+|[CMFC비주얼매니저오피스2007::온드로우리본갤러리보더](#ondrawribbongalleryborder)||
+|[CMFC비주얼매니저오피스2007::온드로우리본갤러리버튼](#ondrawribbongallerybutton)||
+|[CMFC비주얼매니저오피스2007::온드로우리본키팁](#ondrawribbonkeytip)||
+|[CMFC비주얼매니저오피스2007::온드로우리본메인패널버튼보더](#ondrawribbonmainpanelbuttonborder)||
+|[CMFC비주얼매니저오피스2007::온드로우리본메인패널프레임](#ondrawribbonmainpanelframe)||
+|[CMFC비주얼매니저오피스2007::온드로우리본메뉴체크프레임](#ondrawribbonmenucheckframe)||
+|[CMFC비주얼매니저오피스2007::온드로우리본패널](#ondrawribbonpanel)||
+|[CMFC비주얼매니저오피스2007::온드로우리본패널캡션](#ondrawribbonpanelcaption)||
+|[CMFC비주얼매니저오피스2007::온드로우리본진행바](#ondrawribbonprogressbar)||
+|[CMFC비주얼매니저오피스2007::온드로우리본최근파일프레임](#ondrawribbonrecentfilesframe)||
+|[CMFC비주얼매니저오피스2007::온드로우리본슬라이더채널](#ondrawribbonsliderchannel)||
+|[CMFC비주얼매니저오피스2007::온드로우리본슬라이더엄지](#ondrawribbonsliderthumb)||
+|[CMFC비주얼매니저오피스2007::온드로우리본슬라이더줌버튼](#ondrawribbonsliderzoombutton)||
+|[CMFC비주얼매니저오피스2007::온드로우리본상태바파네](#ondrawribbonstatusbarpane)||
+|[CMFC비주얼매니저오피스2007::온드로우리본탭프레임](#ondrawribbontabsframe)||
+|[CMFC비주얼매니저오피스2007::온드로우스크롤버튼](#ondrawscrollbuttons)||
+|[CMFC비주얼매니저오피스2007::온드로우세파레이터](#ondrawseparator)||
+|[CMFC비주얼매니저오피스2007::온드로우쇼올메뉴아이템](#ondrawshowallmenuitems)||
+|[CMFC비주얼매니저오피스2007::온드로우스테이던트바파네보더](#ondrawstatusbarpaneborder)||
+|[CMFC비주얼매니저오피스2007::온드로우스테이던스바사이즈박스](#ondrawstatusbarsizebox)||
+|[CMFC비주얼매니저오피스2007::온드로우탭](#ondrawtab)||
+|[CMFC비주얼매니저오피스2007::온드로우탭스버튼보더](#ondrawtabsbuttonborder)||
+|[CMFC비주얼매니저오피스2007::온드로우태스크](#ondrawtask)||
+|[CMFC비주얼매니저오피스2007::온드로우태스크그룹캡션](#ondrawtasksgroupcaption)||
+|[CMFC비주얼매니저오피스2007::온드로드티어오프캡션](#ondrawtearoffcaption)||
+|[CMFC비주얼매니저오피스2007::온라아제MDI클라이언트에어리어](#onerasemdiclientarea)||
+|[CMFC비주얼매니저오피스2007::에라아제탭스에어리어](#onerasetabsarea)||
+|[CMFC비주얼매니저오피스2007::에라아제탭버튼](#onerasetabsbutton)||
+|[CMFC비주얼매니저오피스2007:::온라아제탭스프레임](#onerasetabsframe)||
+|[CMFC비주얼매니저오피스2007::온필바백](#onfillbarbackground)||
+|[CMFC비주얼매니저오피스2007::온필버튼인테리어](#onfillbuttoninterior)||
+|[CMFC비주얼매니저오피스2007::온필캡션바버튼](#onfillcaptionbarbutton)||
+|[CMFC비주얼매니저오피스2007::온필하이라이트에어리어](#onfillhighlightedarea)||
+|[CMFC비주얼매니저오피스2007::온필미니프레임캡션](#onfillminiframecaption)||
+|[CMFC비주얼매니저오피스2007:::온필아웃아웃바캡션](#onfilloutlookbarcaption)||
+|[CMFC비주얼매니저오피스2007:::온필아웃아웃페이지버튼](#onfilloutlookpagebutton)||
+|[CMFC비주얼매니저오피스2007::온필팝윈도우배경](#onfillpopupwindowbackground)||
+|[CMFC비주얼매니저오피스2007::온필리본버튼](#onfillribbonbutton)||
+|[CMFC비주얼매니저오피스2007::온필리본 편집](#onfillribbonedit)||
+|[CMFC비주얼매니저오피스2007::온필리본메인패널버튼](#onfillribbonmainpanelbutton)||
+|[CMFC비주얼매니저오피스2007::온필리본메뉴프레임](#onfillribbonmenuframe)||
+|[CMFC비주얼매니저오피스2007::온필리본퀵액세스툴바팝](#onfillribbonquickaccesstoolbarpopup)||
+|[CMFC비주얼매니저오피스2007::온필탭](#onfilltab)||
+|[CMFC비주얼매니저오피스2007::온하이라이트메뉴항목](#onhighlightmenuitem)||
+|[CMFC비주얼매니저오피스2007::온하이라이트 드물게 사용 메뉴항목](#onhighlightrarelyusedmenuitems)||
+|[CMFC비주얼매니저오피스2007::온시스](#onncactivate)||
+|[CMFC비주얼매니저오피스2007::온씨페인트](#onncpaint)||
+|[CMFC비주얼매니저오피스2007::온셋윈도우리전](#onsetwindowregion)||
+|[CMFC비주얼매니저오피스2007::온업데이트시스템색상](#onupdatesystemcolors)||
+|[CMFC비주얼매니저오피스2007::셋리소스핸들](#setresourcehandle)||
+|`CMFCVisualManagerOffice2007::SetStyle`|`CMFCVisualManagerOffice2007` GUI의 색 구성표를 설정합니다.|
 
 ## <a name="remarks"></a>설명
 
-사용 하 여 `CMFCVisualManagerOffice2007` 비슷하게 Microsoft Office 2007의 응용 프로그램의 시각적 모양을 변경 합니다. 이 비주얼 관리자 사용 하기 전에 스타일을 설정 해야 합니다. 이 비주얼 관리자를 전달 하기 전에 `CMFCVisualManager::SetDefaultManager`, 정적 함수를 호출 해야 `CMFCVisualManagerOffice2007::SetStyle`합니다.
+응용 `CMFCVisualManagerOffice2007` 프로그램의 시각적 모양을 Microsoft Office 2007과 유사하게 변경하는 데 사용합니다. 이 시각적 관리자는 스타일을 사용하기 전에 설정해야 합니다. 이 시각적 관리자를 `CMFCVisualManager::SetDefaultManager`에 전달하기 전에 정적 `CMFCVisualManagerOffice2007::SetStyle`함수를 호출해야 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 Office 2007 비주얼 관리자를 사용 하는 방법에 설명 합니다. 이 코드 조각은의 일부인 합니다 [바탕 화면 경고 데모 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 Visual 관리자 Office 2007을 사용 하는 방법을 보여 줍니다. 이 코드 조각은 데스크톱 [경고 데모 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 
@@ -384,11 +384,11 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFC베이스비주얼매니저](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFC비주얼매니저오피스XP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 
@@ -398,17 +398,17 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 **헤더:** afxvisualmanageroffice2007.h
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanageroffice2007alwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFC비주얼매니저오피스2007::항상하이라이트3D탭
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle
+## <a name="cmfcvisualmanageroffice2007cleanstyle"></a><a name="cleanstyle"></a>CMFC비주얼매니저오피스2007::클린스타일
 
 ```
 static void __stdcall CleanStyle();
@@ -416,7 +416,7 @@ static void __stdcall CleanStyle();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor
+## <a name="cmfcvisualmanageroffice2007getcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFC비주얼매니저오피스2007::겟캡션바텍스트컬러
 
 ```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -424,13 +424,13 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanageroffice2007gethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFC비주얼매니저오피스2007::겟하이라이트메뉴항목텍스트컬러
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -438,13 +438,13 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pButton*<br/>
+【인】 *p 버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor
+## <a name="cmfcvisualmanageroffice2007getmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFC비주얼매니저오피스2007::겟메뉴항목텍스트컬러
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -455,15 +455,15 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pButton*<br/>
-[in] *bHighlighted*<br/>
-[in] *bDisabled*<br/>
+【인】 *p 버튼*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *b 장애인*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize
+## <a name="cmfcvisualmanageroffice2007getncbtnsize"></a><a name="getncbtnsize"></a>CMFC비주얼매니저오피스2007::겟엔비젠사이즈
 
 ```
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
@@ -471,13 +471,13 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bSmall*<br/>
+【인】 *b스몰*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar
+## <a name="cmfcvisualmanageroffice2007getribbonbar"></a><a name="getribbonbar"></a>CMFC비주얼매니저오피스2007::겟리본바
 
 ```
 CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
@@ -485,13 +485,13 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFC비주얼매니저오피스2007::겟리본하이퍼링크텍스트컬러
 
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -499,13 +499,13 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pHyperLink*<br/>
+【인】 *p하이퍼링크*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize
+## <a name="cmfcvisualmanageroffice2007getribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFC비주얼매니저오피스2007::겟리본팝보더사이즈
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
@@ -513,33 +513,33 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pPopup*<br/>
+【인】 *강아지*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바셰브론오프셋
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바라이트마진
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFC비주얼매니저오피스2007::겟리본퀵액세스툴바텍스트컬러
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -547,13 +547,13 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bDisabled*<br/>
+【인】 *b 장애인*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor
+## <a name="cmfcvisualmanageroffice2007getribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFC비주얼매니저오피스2007::겟리본상태바텍스트컬러
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -561,13 +561,13 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pStatusBar*<br/>
+【인】 *pStatusBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight
+## <a name="cmfcvisualmanageroffice2007getshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFC비주얼매니저오피스2007::겟쇼올메뉴아이템높이
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -577,14 +577,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *sizeDefault*<br/>
+【인】 *pDC*<br/>
+【인】 *크기기본값*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor
+## <a name="cmfcvisualmanageroffice2007getstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFC비주얼매니저오피스2007::겟스테이터스바파네텍스트컬러
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -594,14 +594,14 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pStatusBar*<br/>
-[in] *pPane*<br/>
+【인】 *pStatusBar*<br/>
+【인】 *pPane*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors
+## <a name="cmfcvisualmanageroffice2007gettabframecolors"></a><a name="gettabframecolors"></a>CMFC비주얼매니저오피스2007::겟탭프레임컬러
 
 ```
 virtual void GetTabFrameColors(
@@ -618,19 +618,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pTabWnd*<br/>
-[in] *clrDark*<br/>
-[in] *clrBlack*<br/>
-[in] *clrHighlight*<br/>
-[in] *clrFace*<br/>
-[in] *clrDarkShadow*<br/>
-[in] *clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+【인】 *pTabWnd*<br/>
+【인】 *클래다크*<br/>
+【인】 *클러 블랙*<br/>
+【인】 *clr하이라이트*<br/>
+【인】 *클러 페이스*<br/>
+【인】 *클러 다크 섀도우*<br/>
+【인】 *clrLight*<br/>
+【인】 *pbrFace*<br/>
+【인】 *pbr블랙*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin
+## <a name="cmfcvisualmanageroffice2007gettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFC비주얼매니저오피스2007::겟탭호즈마진
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
@@ -638,13 +638,13 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pTabWnd*<br/>
+【인】 *pTabWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor
+## <a name="cmfcvisualmanageroffice2007gettabtextcolor"></a><a name="gettabtextcolor"></a>CMFC비주얼매니저오피스2007::겟탭텍스트컬러
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -655,15 +655,15 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pTabWnd*<br/>
+【인】 *pTabWnd*<br/>
 [in] *iTab*<br/>
-[in] *bIsActive*<br/>
+【인】 *비스액티브*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor
+## <a name="cmfcvisualmanageroffice2007gettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFC비주얼매니저오피스2007::겟툴바버튼텍스트컬러
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -673,24 +673,24 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pButton*<br/>
-[in] *state*<br/>
+【인】 *p 버튼*<br/>
+【인】 *상태 상태*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor
+## <a name="cmfcvisualmanageroffice2007gettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFC비주얼매니저오피스2007::겟툴바장애인텍스트컬러
 
 ```
 virtual COLORREF GetToolbarDisabledTextColor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo
+## <a name="cmfcvisualmanageroffice2007gettooltipinfo"></a><a name="gettooltipinfo"></a>CMFC비주얼매니저오피스2007::겟툴팁정보
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -700,54 +700,54 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *params*<br/>
-[in] *nType*<br/>
+【인】 *매개 변수*<br/>
+【인】 *n유형*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanageroffice2007ishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFC비주얼매니저오피스2007::이하이라이트전체메뉴아이템
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip
+## <a name="cmfcvisualmanageroffice2007islayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFC비주얼매니저오피스2007::IsLayered리본키팁
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption
+## <a name="cmfcvisualmanageroffice2007isownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFC비주얼매니저오피스2007::IsOwnerDraw캡션
 
 ```
 virtual BOOL IsOwnerDrawCaption();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck
+## <a name="cmfcvisualmanageroffice2007isownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFC비주얼매니저오피스2007::오너드로우메뉴체크
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent
+## <a name="cmfcvisualmanageroffice2007isribbonpresent"></a><a name="isribbonpresent"></a>CMFC비주얼매니저오피스2007::이리본
 
 ```
 BOOL IsRibbonPresent(CWnd* pWnd) const;
@@ -755,13 +755,13 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper
+## <a name="cmfcvisualmanageroffice2007ondrawbargripper"></a><a name="ondrawbargripper"></a>CMFC비주얼매니저오피스2007::온드로우바그리퍼
 
 ```
 virtual void OnDrawBarGripper(
@@ -773,14 +773,14 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectGripper*<br/>
-[in] *bHorz*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *렉트그리퍼*<br/>
+【인】 *b호르츠 (주)*<br/>
+【인】 *pBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFC비주얼매니저오피스2007::온드로우버튼보더
 
 ```
 virtual void OnDrawButtonBorder(
@@ -792,14 +792,14 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
+【인】 *상태 상태*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator
+## <a name="cmfcvisualmanageroffice2007ondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFC비주얼매니저오피스2007::온드로우버튼세파레이터
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -812,15 +812,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
-[in] *bHorz*<br/>
+【인】 *상태 상태*<br/>
+【인】 *b호르츠 (주)*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea
+## <a name="cmfcvisualmanageroffice2007ondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFC비주얼매니저오피스2007::온드로우캡션바정보영역
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -831,13 +831,13 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx
+## <a name="cmfcvisualmanageroffice2007ondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFC비주얼매니저오피스2007::온드로우체크박스엑스
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -851,16 +851,16 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nState*<br/>
-[in] *bHighlighted*<br/>
-[in] *bPressed*<br/>
-[in] *bEnabled*<br/>
+【인】 *n스테이트*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *bpressed*<br/>
+【인】 *b사용*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder
+## <a name="cmfcvisualmanageroffice2007ondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFC비주얼매니저오피스2007::온드로우콤보보보보보
 
 ```
 virtual void OnDrawComboBorder(
@@ -874,16 +874,16 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+【인】 *b 장애인*<br/>
+【인】 *비스드 드롭*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton
+## <a name="cmfcvisualmanageroffice2007ondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFC비주얼매니저오피스2007::온드로우컴보드롭버튼
 
 ```
 virtual void OnDrawComboDropButton(
@@ -897,16 +897,16 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+【인】 *b 장애인*<br/>
+【인】 *비스드 드롭*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage
+## <a name="cmfcvisualmanageroffice2007ondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFC비주얼매니저오피스2007::온드로우디폴드리본이미지
 
 ```
 virtual void OnDrawDefaultRibbonImage(
@@ -919,15 +919,15 @@ virtual void OnDrawDefaultRibbonImage(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectImage*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 이미지*<br/>
+【인】 *isdisabled*<br/>
+【인】 *비스누른*<br/>
+【인】 *비스하이라이트*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder
+## <a name="cmfcvisualmanageroffice2007ondraweditborder"></a><a name="ondraweditborder"></a>CMFC비주얼매니저오피스2007::온드로우에더접경
 
 ```
 virtual void OnDrawEditBorder(
@@ -940,15 +940,15 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+【인】 *b 장애인*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanageroffice2007ondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFC비주얼매니저오피스2007::온드로우딩툴바보더
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -960,14 +960,14 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pToolBar*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+【인】 *pDC*<br/>
+【인】 *pToolBar*<br/>
+【인】 *직류 국경*<br/>
+【인】 *직사각형 테두리크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanageroffice2007ondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFC비주얼매니저오피스2007::온드로우헤더트툴보더
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -980,15 +980,15 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pCtrl*<br/>
-[in] *pDC*<br/>
+【인】 *pCtrl*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
+【인】 *비스누른*<br/>
+【인】 *비스하이라이트*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder
+## <a name="cmfcvisualmanageroffice2007ondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFC비주얼매니저오피스2007::온드로우메뉴보더
 
 ```
 virtual void OnDrawMenuBorder(
@@ -999,13 +999,13 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pMenu*<br/>
+【인】 *pDC*<br/>
+【인】 *p메뉴*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck
+## <a name="cmfcvisualmanageroffice2007ondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFC비주얼매니저오피스2007::온드로우메뉴체크
 
 ```
 virtual void OnDrawMenuCheck(
@@ -1018,15 +1018,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *bHighlight*<br/>
-[in] *bIsRadio*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *비스 라디오*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFC비주얼매니저오피스2007::온드로우메뉴항목버튼
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -1039,15 +1039,15 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectButton*<br/>
-[in] *bHighlight*<br/>
-[in] *bDisabled*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
+【인】 *정사각형 버튼*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *b 장애인*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel
+## <a name="cmfcvisualmanageroffice2007ondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFC비주얼매니저오피스2007::온드로우메뉴라벨
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -1057,14 +1057,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar
+## <a name="cmfcvisualmanageroffice2007ondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFC비주얼매니저오피스2007::온드로우메뉴리사이즈바
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -1075,13 +1075,13 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nResizeFlags*<br/>
+【인】 *n 리사이즈플래그*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFC비주얼매니저오피스2007::온드로우메뉴스크롤버튼
 
 ```
 virtual void OnDrawMenuScrollButton(
@@ -1095,16 +1095,16 @@ virtual void OnDrawMenuScrollButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsScrollDown*<br/>
-[in] *bIsHighlited*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+【인】 *비스스크롤다운*<br/>
+【인】 *비스하이리트*<br/>
+【인】 *비스누른*<br/>
+【인】 *isdisabled*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton
+## <a name="cmfcvisualmanageroffice2007ondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFC비주얼매니저오피스2007::온드로우메뉴시스템버튼
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -1117,15 +1117,15 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *uiSystemCommand*<br/>
-[in] *nStyle*<br/>
-[in] *bHighlight*<br/>
+【인】 *uiSystemCommand*<br/>
+【인】 *n스타일*<br/>
+【인】 *b 강조 표시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanageroffice2007ondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFC비주얼매니저오피스2007::온드로우미니프레임보더
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -1137,14 +1137,14 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+【인】 *pDC*<br/>
+【인】 *pFrameWnd*<br/>
+【인】 *직류 국경*<br/>
+【인】 *직사각형 테두리크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter
+## <a name="cmfcvisualmanageroffice2007ondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFC비주얼매니저오피스2007::온드로우아웃아웃아웃바스플리터
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -1154,12 +1154,12 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectSplitter*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 스플리터*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFC비주얼매니저오피스2007::온드로우아웃아웃아웃페이지버튼보더
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -1171,14 +1171,14 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectBtn*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
+【인】 *pDC*<br/>
+【인】 *정류Btn*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스누른*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption
+## <a name="cmfcvisualmanageroffice2007ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFC비주얼매니저오피스2007::온드로우파네캡션
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -1191,17 +1191,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in] *rectButtons*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
+【인】 *b활성*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *정사각형 버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption
+## <a name="cmfcvisualmanageroffice2007ondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFC비주얼매니저오피스2007::온드로우팝윈도우캡션
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -1212,15 +1212,15 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pPopupWnd*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *강아지*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem
+## <a name="cmfcvisualmanageroffice2007ondrawpropertysheetlistitem"></a><a name="ondrawpropertysheetlistitem"></a>CMFC비주얼매니저오피스2007::온드로우프로퍼티시트리스트아이템
 
 ```
 virtual COLORREF OnDrawPropertySheetListItem(
@@ -1233,17 +1233,17 @@ virtual COLORREF OnDrawPropertySheetListItem(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pParent*<br/>
+【인】 *pDC*<br/>
+【인】 *pParent*<br/>
 [in] *rect*<br/>
-[in] *bIsHighlihted*<br/>
-[in] *bIsSelected*<br/>
+【인】 *비하이리히트*<br/>
+【인】 *선택된 항목*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFC비주얼매니저오피스2007::온드로우리본응용버튼
 
 ```
 virtual void OnDrawRibbonApplicationButton(
@@ -1253,12 +1253,12 @@ virtual void OnDrawRibbonApplicationButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFC비주얼매니저오피스2007::온드로우리본버튼보더
 
 ```
 virtual void OnDrawRibbonButtonBorder(
@@ -1268,12 +1268,12 @@ virtual void OnDrawRibbonButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup
+## <a name="cmfcvisualmanageroffice2007ondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFC비주얼매니저오피스2007::온드로우리본버튼그룹
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -1284,15 +1284,15 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *rectGroup*<br/>
+【인】 *pDC*<br/>
+【인】 *p그룹 (것)들*<br/>
+【인】 *정류 그룹*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFC비주얼매니저오피스2007::온드로우리본캡션
 
 ```
 virtual void OnDrawRibbonCaption(
@@ -1304,14 +1304,14 @@ virtual void OnDrawRibbonCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectCaption*<br/>
-[in] *rectText*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *rectText*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton
+## <a name="cmfcvisualmanageroffice2007ondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFC비주얼매니저오피스2007::온드로우리본캡션버튼
 
 ```
 virtual void OnDrawRibbonCaptionButton(
@@ -1321,12 +1321,12 @@ virtual void OnDrawRibbonCaptionButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFC비주얼매니저오피스2007::온드로우리본카테고리
 
 ```
 virtual void OnDrawRibbonCategory(
@@ -1337,13 +1337,13 @@ virtual void OnDrawRibbonCategory(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pCategory*<br/>
-[in] *rectCategory*<br/>
+【인】 *pDC*<br/>
+【인】 *p카테고리*<br/>
+【인】 *정류 범주*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFC비주얼매니저오피스2007::온드로우리본카테고리캡션
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -1353,14 +1353,14 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pContextCaption*<br/>
+【인】 *pDC*<br/>
+【인】 *p컨텍스트 캡션*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFC비주얼매니저오피스2007::온드로우리본카테고리스크롤
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -1370,12 +1370,12 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pScroll*<br/>
+【인】 *pDC*<br/>
+【인】 *p스크롤*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab
+## <a name="cmfcvisualmanageroffice2007ondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFC비주얼매니저오피스2007::온드로우리본카테고리탭
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -1386,15 +1386,15 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pTab*<br/>
-[in] *bIsActive*<br/>
+【인】 *pDC*<br/>
+【인】 *pTab*<br/>
+【인】 *비스액티브*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList
+## <a name="cmfcvisualmanageroffice2007ondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFC비주얼매니저오피스2007::온드로우리본체크박스온리스트
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -1407,15 +1407,15 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pCheckBox*<br/>
+【인】 *pDC*<br/>
+【인】 *p체크박스*<br/>
 [in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b 강조 표시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFC비주얼매니저오피스2007::온드로우리본기본판버튼
 
 ```
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -1425,12 +1425,12 @@ virtual void OnDrawRibbonDefaultPaneButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator
+## <a name="cmfcvisualmanageroffice2007ondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFC비주얼매니저오피스2007::온드로우리본기본판버튼표시기
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -1443,15 +1443,15 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b 강조 표시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFC비주얼매니저오피스2007::온드로우리본갤러리보더
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -1462,13 +1462,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectBorder*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
+【인】 *직류 국경*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFC비주얼매니저오피스2007::온드로우리본갤러리버튼
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -1478,12 +1478,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip
+## <a name="cmfcvisualmanageroffice2007ondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFC비주얼매니저오피스2007::온드로우리본키팁
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -1495,14 +1495,14 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pElement*<br/>
+【인】 *pDC*<br/>
+【인】 *p엘리아*<br/>
 [in] *rect*<br/>
-[in] *str*<br/>
+【인】 *str*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFC비주얼매니저오피스2007::온드로우리본메인패널버튼보더
 
 ```
 virtual void OnDrawRibbonMainPanelButtonBorder(
@@ -1512,12 +1512,12 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFC비주얼매니저오피스2007::온드로우리본메인패널프레임
 
 ```
 virtual void OnDrawRibbonMainPanelFrame(
@@ -1528,13 +1528,13 @@ virtual void OnDrawRibbonMainPanelFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
+【인】 *pDC*<br/>
+【인】 *p 패널*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFC비주얼매니저오피스2007::온드로우리본메뉴체크프레임
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -1545,13 +1545,13 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel
+## <a name="cmfcvisualmanageroffice2007ondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFC비주얼매니저오피스2007::온드로우리본패널
 
 ```
 virtual COLORREF OnDrawRibbonPanel(
@@ -1563,16 +1563,16 @@ virtual COLORREF OnDrawRibbonPanel(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rectPanel*<br/>
-[in] *rectCaption*<br/>
+【인】 *pDC*<br/>
+【인】 *p 패널*<br/>
+【인】 *정류 패널*<br/>
+【인】 *정류 캡션*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption
+## <a name="cmfcvisualmanageroffice2007ondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFC비주얼매니저오피스2007::온드로우리본패널캡션
 
 ```
 virtual void OnDrawRibbonPanelCaption(
@@ -1583,13 +1583,13 @@ virtual void OnDrawRibbonPanelCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
-[in] *rectCaption*<br/>
+【인】 *pDC*<br/>
+【인】 *p 패널*<br/>
+【인】 *정류 캡션*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar
+## <a name="cmfcvisualmanageroffice2007ondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFC비주얼매니저오피스2007::온드로우리본진행바
 
 ```
 virtual void OnDrawRibbonProgressBar(
@@ -1602,15 +1602,15 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pProgress*<br/>
-[in] *rectProgress*<br/>
-[in] *rectChunk*<br/>
-[in] *bInfiniteMode*<br/>
+【인】 *pDC*<br/>
+【인】 *pProgress*<br/>
+【인】 *직류 진행률*<br/>
+【인】 *직사각형*<br/>
+【인】 *b인피니트 모드*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFC비주얼매니저오피스2007::온드로우리본최근파일프레임
 
 ```
 virtual void OnDrawRibbonRecentFilesFrame(
@@ -1621,13 +1621,13 @@ virtual void OnDrawRibbonRecentFilesFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
+【인】 *pDC*<br/>
+【인】 *p 패널*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFC비주얼매니저오피스2007::온드로우리본슬라이더채널
 
 ```
 virtual void OnDrawRibbonSliderChannel(
@@ -1638,13 +1638,13 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
+【인】 *pDC*<br/>
+【인】 *p슬라이더*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFC비주얼매니저오피스2007::온드로우리본슬라이더엄지
 
 ```
 virtual void OnDrawRibbonSliderThumb(
@@ -1658,16 +1658,16 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
+【인】 *pDC*<br/>
+【인】 *p슬라이더*<br/>
 [in] *rect*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스누른*<br/>
+【인】 *isdisabled*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton
+## <a name="cmfcvisualmanageroffice2007ondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFC비주얼매니저오피스2007::온드로우리본슬라이더줌버튼
 
 ```
 virtual void OnDrawRibbonSliderZoomButton(
@@ -1682,17 +1682,17 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
+【인】 *pDC*<br/>
+【인】 *p슬라이더*<br/>
 [in] *rect*<br/>
-[in] *bIsZoomOut*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+【인】 *비스줌 축소*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스누른*<br/>
+【인】 *isdisabled*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane
+## <a name="cmfcvisualmanageroffice2007ondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFC비주얼매니저오피스2007::온드로우리본상태바파네
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -1703,15 +1703,15 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *pPane*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
+【인】 *pPane*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame
+## <a name="cmfcvisualmanageroffice2007ondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFC비주얼매니저오피스2007::온드로우리본탭프레임
 
 ```
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -1722,15 +1722,15 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pWndRibbonBar*<br/>
-[in] *rectTab*<br/>
+【인】 *pDC*<br/>
+【인】 *pWnd리본바*<br/>
+【인】 *정사각형 탭*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons
+## <a name="cmfcvisualmanageroffice2007ondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFC비주얼매니저오피스2007::온드로우스크롤버튼
 
 ```
 virtual void OnDrawScrollButtons(
@@ -1743,15 +1743,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+【인】 *n보더사이즈*<br/>
+【인】 *아이 이미지*<br/>
+【인】 *bhilited*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator
+## <a name="cmfcvisualmanageroffice2007ondrawseparator"></a><a name="ondrawseparator"></a>CMFC비주얼매니저오피스2007::온드로우세파레이터
 
 ```
 virtual void OnDrawSeparator(
@@ -1763,14 +1763,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+【인】 *비쇼리즈*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems
+## <a name="cmfcvisualmanageroffice2007ondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFC비주얼매니저오피스2007::온드로우쇼올메뉴아이템
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -1781,13 +1781,13 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
+【인】 *상태 상태*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanageroffice2007ondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFC비주얼매니저오피스2007::온드로우스테이던트바파네보더
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1800,15 +1800,15 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectPane*<br/>
-[in] *uiID*<br/>
-[in] *nStyle*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
+【인】 *렉트파인*<br/>
+【인】 *UIID*<br/>
+【인】 *n스타일*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanageroffice2007ondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFC비주얼매니저오피스2007::온드로우스테이던스바사이즈박스
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1819,13 +1819,13 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pStatBar*<br/>
-[in] *rectSizeBox*<br/>
+【인】 *pDC*<br/>
+【인】 *pStatBar*<br/>
+【인】 *정크사이즈박스*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab
+## <a name="cmfcvisualmanageroffice2007ondrawtab"></a><a name="ondrawtab"></a>CMFC비주얼매니저오피스2007::온드로우탭
 
 ```
 virtual void OnDrawTab(
@@ -1838,15 +1838,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectTab*<br/>
+【인】 *pDC*<br/>
+【인】 *정사각형 탭*<br/>
 [in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+【인】 *비스액티브*<br/>
+【인】 *pTabWnd*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanageroffice2007ondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFC비주얼매니저오피스2007::온드로우탭스버튼보더
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1859,15 +1859,15 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
-[in] *pWndTab*<br/>
+【인】 *p 버튼*<br/>
+【인】 *uiState*<br/>
+【인】 *pWndTab*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask
+## <a name="cmfcvisualmanageroffice2007ondrawtask"></a><a name="ondrawtask"></a>CMFC비주얼매니저오피스2007::온드로우태스크
 
 ```
 virtual void OnDrawTask(
@@ -1880,15 +1880,15 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pTask*<br/>
-[in] *pIcons*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
+【인】 *pDC*<br/>
+【인】 *pTask*<br/>
+【인】 *아이콘*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *선택된 항목*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanageroffice2007ondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFC비주얼매니저오피스2007::온드로우태스크그룹캡션
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1901,15 +1901,15 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+【인】 *pDC*<br/>
+【인】 *p그룹 (것)들*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b스캔접지*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption
+## <a name="cmfcvisualmanageroffice2007ondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFC비주얼매니저오피스2007::온드로드티어오프캡션
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1920,13 +1920,13 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsActive*<br/>
+【인】 *비스액티브*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea
+## <a name="cmfcvisualmanageroffice2007onerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFC비주얼매니저오피스2007::온라아제MDI클라이언트에어리어
 
 ```
 virtual BOOL OnEraseMDIClientArea(
@@ -1936,14 +1936,14 @@ virtual BOOL OnEraseMDIClientArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 클라이언트*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea
+## <a name="cmfcvisualmanageroffice2007onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFC비주얼매니저오피스2007::에라아제탭스에어리어
 
 ```
 virtual void OnEraseTabsArea(
@@ -1954,13 +1954,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
+【인】 *pTabWnd*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton
+## <a name="cmfcvisualmanageroffice2007onerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFC비주얼매니저오피스2007::에라아제탭버튼
 
 ```
 virtual void OnEraseTabsButton(
@@ -1972,14 +1972,14 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *pWndTab*<br/>
+【인】 *p 버튼*<br/>
+【인】 *pWndTab*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame
+## <a name="cmfcvisualmanageroffice2007onerasetabsframe"></a><a name="onerasetabsframe"></a>CMFC비주얼매니저오피스2007:::온라아제탭스프레임
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1990,15 +1990,15 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
+【인】 *pTabWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground
+## <a name="cmfcvisualmanageroffice2007onfillbarbackground"></a><a name="onfillbarbackground"></a>CMFC비주얼매니저오피스2007::온필바백
 
 ```
 virtual void OnFillBarBackground(
@@ -2011,15 +2011,15 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rectClient*<br/>
-[in] *rectClip*<br/>
-[in] *bNCArea*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
+【인】 *정류 클라이언트*<br/>
+【인】 *렉클립*<br/>
+【인】 *bNC Area*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior
+## <a name="cmfcvisualmanageroffice2007onfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFC비주얼매니저오피스2007::온필버튼인테리어
 
 ```
 virtual void OnFillButtonInterior(
@@ -2031,14 +2031,14 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
+【인】 *상태 상태*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton
+## <a name="cmfcvisualmanageroffice2007onfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFC비주얼매니저오피스2007::온필캡션바버튼
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -2054,20 +2054,20 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+【인】 *비스누른*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *isdisabled*<br/>
+【인】 *bHasDropDownArrow*<br/>
+【인】 *비시스버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea
+## <a name="cmfcvisualmanageroffice2007onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFC비주얼매니저오피스2007::온필하이라이트에어리어
 
 ```
 virtual void OnFillHighlightedArea(
@@ -2079,14 +2079,14 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *pBrush*<br/>
-[in] *pButton*<br/>
+【인】 *p브러시*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanageroffice2007onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFC비주얼매니저오피스2007::온필미니프레임캡션
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -2098,16 +2098,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *pFrameWnd*<br/>
+【인】 *b활성*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption
+## <a name="cmfcvisualmanageroffice2007onfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFC비주얼매니저오피스2007:::온필아웃아웃바캡션
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -2118,13 +2118,13 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *clrText*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *clrText*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton
+## <a name="cmfcvisualmanageroffice2007onfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFC비주얼매니저오피스2007:::온필아웃아웃페이지버튼
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -2137,15 +2137,15 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *clrText*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스누른*<br/>
+【인】 *clrText*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground
+## <a name="cmfcvisualmanageroffice2007onfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFC비주얼매니저오피스2007::온필팝윈도우배경
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -2155,12 +2155,12 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton
+## <a name="cmfcvisualmanageroffice2007onfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFC비주얼매니저오피스2007::온필리본버튼
 
 ```
 virtual COLORREF OnFillRibbonButton(
@@ -2170,14 +2170,14 @@ virtual COLORREF OnFillRibbonButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit
+## <a name="cmfcvisualmanageroffice2007onfillribbonedit"></a><a name="onfillribbonedit"></a>CMFC비주얼매니저오피스2007::온필리본 편집
 
 ```
 virtual void OnFillRibbonEdit(
@@ -2194,19 +2194,19 @@ virtual void OnFillRibbonEdit(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pEdit*<br/>
+【인】 *pDC*<br/>
+【인】 *pEdit*<br/>
 [in] *rect*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPaneHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *clrText*<br/>
-[in] *clrSelBackground*<br/>
-[in] *clrSelText*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스파인 강조 표시*<br/>
+【인】 *isdisabled*<br/>
+【인】 *clrText*<br/>
+【인】 *clrSelBackground*<br/>
+【인】 *clrSelText*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton
+## <a name="cmfcvisualmanageroffice2007onfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFC비주얼매니저오피스2007::온필리본메인패널버튼
 
 ```
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -2216,14 +2216,14 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame
+## <a name="cmfcvisualmanageroffice2007onfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFC비주얼매니저오피스2007::온필리본메뉴프레임
 
 ```
 virtual void OnFillRibbonMenuFrame(
@@ -2234,13 +2234,13 @@ virtual void OnFillRibbonMenuFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pPanel*<br/>
+【인】 *pDC*<br/>
+【인】 *p 패널*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup
+## <a name="cmfcvisualmanageroffice2007onfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFC비주얼매니저오피스2007::온필리본퀵액세스툴바팝
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -2251,13 +2251,13 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pMenuBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pMenuBar*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab
+## <a name="cmfcvisualmanageroffice2007onfilltab"></a><a name="onfilltab"></a>CMFC비주얼매니저오피스2007::온필탭
 
 ```
 virtual void OnFillTab(
@@ -2271,16 +2271,16 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectFill*<br/>
-[in] *pbrFill*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 채우기*<br/>
+【인】 *pbrFill*<br/>
 [in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+【인】 *비스액티브*<br/>
+【인】 *pTabWnd*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem
+## <a name="cmfcvisualmanageroffice2007onhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFC비주얼매니저오피스2007::온하이라이트메뉴항목
 
 ```
 virtual void OnHighlightMenuItem(
@@ -2292,14 +2292,14 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *clrText*<br/>
+【인】 *clrText*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanageroffice2007onhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFC비주얼매니저오피스2007::온하이라이트 드물게 사용 메뉴항목
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -2309,12 +2309,12 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectRarelyUsed*<br/>
+【인】 *pDC*<br/>
+【인】 *정류드물게 사용*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate
+## <a name="cmfcvisualmanageroffice2007onncactivate"></a><a name="onncactivate"></a>CMFC비주얼매니저오피스2007::온시스
 
 ```
 virtual BOOL OnNcActivate(
@@ -2324,14 +2324,14 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+【인】 *pWnd*<br/>
+【인】 *b활성*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint
+## <a name="cmfcvisualmanageroffice2007onncpaint"></a><a name="onncpaint"></a>CMFC비주얼매니저오피스2007::온씨페인트
 
 ```
 virtual BOOL OnNcPaint(
@@ -2342,15 +2342,15 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
-[in] *lstSysButtons*<br/>
-[in] *rectRedraw*<br/>
+【인】 *pWnd*<br/>
+【인】 *lstSysButtons*<br/>
+【인】 *직사각형 다시 그리기*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion
+## <a name="cmfcvisualmanageroffice2007onsetwindowregion"></a><a name="onsetwindowregion"></a>CMFC비주얼매니저오피스2007::온셋윈도우리전
 
 ```
 virtual BOOL OnSetWindowRegion(
@@ -2360,14 +2360,14 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
-[in] *sizeWindow*<br/>
+【인】 *pWnd*<br/>
+【인】 *크기창*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors
+## <a name="cmfcvisualmanageroffice2007onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFC비주얼매니저오피스2007::온업데이트시스템색상
 
 ```
 virtual void OnUpdateSystemColors();
@@ -2375,7 +2375,7 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle
+## <a name="cmfcvisualmanageroffice2007setresourcehandle"></a><a name="setresourcehandle"></a>CMFC비주얼매니저오피스2007::셋리소스핸들
 
 ```
 static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
@@ -2383,14 +2383,14 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *hinstRes*<br/>
+【인】 *힌스트 레스*<br/>
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[CMFC비주얼매니저 클래스](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [CMFCVisualManagerOfficeXP 클래스](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
-[CMFCVisualManagerWindows 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[CMFC비주얼매니저윈도우 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ff42ba8a2e908f672db7e96fc9f24f51a1fd9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211408"
 ---
 # <a name="creating-a-project-for-the-provider"></a>공급자용 프로젝트 만들기
 
@@ -21,19 +21,19 @@ ms.locfileid: "62362009"
 
    **새 프로젝트** 대화 상자가 나타납니다.
 
-1. **프로젝트 형식** 창에서 **설치됨**  >  **Visual C++**  >  **MFC/ATL** 폴더를 클릭합니다. **템플릿** 창에서 **ATL 프로젝트**를 클릭합니다.
+1. **프로젝트 형식** 창에서 **설치** 된 > **Visual C++**  > **MFC/ATL** 폴더를 클릭 합니다. **템플릿** 창에서 **ATL 프로젝트**를 클릭 합니다.
 
     > [!NOTE]
-    > Visual Studio의 이전 버전에서는 프로젝트 형식에서 **설치됨**  >  **템플릿**  >  **Visual C++**  >  **ATL**을 찾습니다.
+    > 이전 버전의 visual Studio에서는 **설치** > **템플릿** > **visual C++**  > **ATL**에서 프로젝트 형식을 찾습니다.
 
-1. **이름** 상자에 프로젝트의 이름을 입력한 후 **확인**을 클릭합니다.
+1. **이름** 상자에 프로젝트의 이름을 입력 하 고 **확인**을 클릭 합니다.
 
-   **ATL 프로젝트 마법사**가 나타납니다.
+   **ATL 프로젝트 마법사** 가 나타납니다.
 
-1. **ATL 프로젝트 마법사**에서 **응용 프로그램 유형**으로 **동적 연결 라이브러리(DLL)** 를 선택합니다.
+1. **ATL 프로젝트 마법사**에서 **응용 프로그램 종류**에 대 한 **DLL (동적 연결 라이브러리)** 을 선택 합니다.
 
 1. **마침**을 클릭합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

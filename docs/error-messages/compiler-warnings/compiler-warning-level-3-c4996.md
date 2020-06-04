@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898772"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425042"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>컴파일러 경고 (수준 3) C4996
 
@@ -21,7 +21,7 @@ ms.locfileid: "74898772"
 > [!IMPORTANT]
 > 이 경고는 항상 기호를 선언 하는 헤더 파일의 작성자 로부터 의도적으로 발생 하는 메시지입니다. 결과를 이해 하지 않고 사용 되지 않는 기호를 사용 하지 마세요.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Visual Studio 라이브러리의 여러 함수, 멤버 함수, 템플릿 함수 및 전역 변수는 *더 이상 사용 되지*않습니다. POSIX 및 Microsoft 전용 함수와 같은 일부는 이제 다른 기본 설정 이름을 사용 하기 때문에 사용 되지 않습니다. 일부 C 런타임 라이브러리 함수는 안전 하지 않으며 변형이 더 안전 하기 때문에 더 이상 사용 되지 않습니다. 다른 항목은 사용 되지 않으므로 더 이상 사용 되지 않습니다. 사용 중단 메시지에는 일반적으로 사용 되지 않는 함수 또는 전역 변수에 대해 제안 되는 대체가 포함 됩니다.
 
@@ -244,7 +244,7 @@ C4996는 보안상의 이유로 더 이상 사용 되지 않는 MFC 또는 ATL �
 
 ## <a name="obsolete-crt-functions-and-variables"></a>사용 되지 않는 CRT 함수 및 변수
 
-**이 함수 또는 변수는 최신 라이브러리 또는 운영 체제 기능으로 대체 되었습니다. 대신 new_item를 사용 하는 것이 좋습니다** **. 자세한 내용은 온라인 도움말을 참조 하십시오.**
+**이 함수 또는 변수는 최신 라이브러리 또는 운영 체제 기능으로 대체 되었습니다. 대신 new_item를 사용 하는 것이 좋습니다** *new_item* **. 자세한 내용은 온라인 도움말을 참조 하십시오.**
 
 일부 라이브러리 함수 및 전역 변수는 구식으로 사용되지 않습니다. 이러한 함수 및 변수는 이후 버전의 라이브러리에서 제거될 수도 있습니다. 컴파일러는 이러한 항목에 대해 사용 중단 경고를 실행하고 기본 설정 대체 항목을 제안합니다.
 

@@ -1,8 +1,9 @@
 ---
 title: _callnewh
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _callnewh
+- _o__callnewh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: 3e14450538807b164897c335f7e37d82d8562314
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3990d4b15c25cfd6c753c2b1d44c112971ff59af
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939387"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918795"
 ---
 # <a name="_callnewh"></a>_callnewh
 
@@ -48,12 +50,12 @@ int _callnewh(
 *size*<br/>
 [new 연산자](../../cpp/new-operator-cpp.md)에서 할당하려고 시도한 메모리의 양입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 |값|설명|
 |-----------|-----------------|
-|0|실패로 새 처리기가 설치 되어 있지 않거나 새 처리기가 활성화 되어 있지 않습니다.|
-|1|성공할 새 처리기가 설치 되어 있고 활성 상태입니다. 메모리 할당을 다시 시도할 수 있습니다.|
+|0|실패: 설치된 새 처리기가 없거나 새 처리기가 비활성 상태입니다.|
+|1|성공: 새 처리기가 설치되었으며 활성 상태입니다. 메모리 할당을 다시 시도할 수 있습니다.|
 
 ## <a name="exceptions"></a>예외
 
@@ -63,13 +65,15 @@ int _callnewh(
 
 [new 연산자](../../cpp/new-operator-cpp.md)가 메모리 할당에 실패하는 경우 *새 처리기*가 호출됩니다. 그러면 후속 할당에 성공할 수 있도록 새 처리기가 메모리를 해제하는 등의 몇 가지 적절한 작업을 시작할 수 있습니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |_callnewh|internal.h|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [_set_new_handler](set-new-handler.md)<br/>
 [_set_new_mode](set-new-mode.md)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169021"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Visual Studio C++ 프로젝트용으로 생성 되는 파일 형식
 
@@ -47,19 +47,19 @@ Visual Studio 프로젝트를 만들 때 새 솔루션에서 프로젝트를 만
 
 다음 표에서는 Visual Studio 프로젝트의 공통 파일을 보여 주고 파일 확장명을 사용 하 여 해당 파일을 식별 합니다.
 
-|파일 확장명|형식|목차|
+|파일 확장명|Type|콘텐츠|
 |--------------------|----------|--------------|
-|.asmx|소스|배포 파일|
-|.asp|Source|Active Server Page 파일|
+|.asmx|원본|배포 파일|
+|.asp|원본|Active Server Page 파일|
 |.asp|Project|애플리케이션 템플릿 프로젝트 파일|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|리소스|일반 이미지 파일|
 |.bsc|컴파일|브라우저 코드 파일|
-|.cpp, .c|Source|애플리케이션의 기본 소스 코드 파일|
+|.cpp, .c|원본|애플리케이션의 기본 소스 코드 파일|
 |.cur|리소스|커서 비트맵 그래픽 파일|
 |.dbp|Project|데이터베이스 프로젝트 파일|
-|.disco|Source|동적 검색 문서 파일. XML Web services 검색을 처리합니다.|
+|.disco|원본|동적 검색 문서 파일. XML Web services 검색을 처리합니다.|
 |.exe, .dll|Project|실행 파일 또는 동적 연결 라이브러리 파일|
-|.h|Source|헤더(포함) 파일|
+|.h|원본|헤더(포함) 파일|
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|리소스|공용 웹 파일|
 |.HxC|Project|도움말 프로젝트 파일|
 |.ico|리소스|아이콘 비트맵 그래픽 파일|
@@ -72,11 +72,11 @@ Visual Studio 프로젝트를 만들 때 새 솔루션에서 프로젝트를 만
 |.pch|디버그|미리 컴파일된 헤더 파일|
 |.rc, .rc2|리소스|리소스를 생성하는[리소스 스크립트 파일](../../windows/working-with-resource-files.md)|
 |.sbr|컴파일|소스 브라우저 중간 파일. [BSCMAKE](bscmake-options.md)의 입력 파일입니다.|
-|.sln|솔루션|[솔루션](/visualstudio/ide/solutions-and-projects-in-visual-studio) 파일|
-|.suo|솔루션|솔루션 옵션 파일|
+|.sln|해결 방법|[솔루션](/visualstudio/ide/solutions-and-projects-in-visual-studio) 파일입니다.|
+|.suo|해결 방법|솔루션 옵션 파일입니다.|
 |.txt|리소스|텍스트 파일(일반적으로 "추가 정보" 파일)|
 |.vap|Project|Visual Studio Analyzer 프로젝트 파일|
-|.vbg|솔루션|호환 가능한 프로젝트 그룹 파일|
+|.vbg|해결 방법|호환 가능한 프로젝트 그룹 파일|
 |.vbp, .vip, .vbproj|Project|Visual Basic 프로젝트 파일|
 |.vcxitems|Project|여러 C++ 프로젝트 간에 코드 파일을 공유하는 공유 항목 프로젝트입니다. 자세한 내용은 [프로젝트 및 솔루션 파일](project-and-solution-files.md)을 참조 하세요.|
 |.vcxproj|Project|Visual Studio 프로젝트 파일입니다. 자세한 내용은 [프로젝트 및 솔루션 파일](project-and-solution-files.md)을 참조 하세요.|
@@ -91,7 +91,7 @@ Visual Studio와 관련된 다른 파일에 대한 자세한 내용은 [Visual S
 
 프로젝트에 항목을 추가 하는 경우 해당 프로젝트의 모든 구성에 항목을 추가 합니다. 항목은 빌드 가능한 여부에 관계 없이 추가 됩니다. 예를 들어 MyProject라는 프로젝트가 있는 경우 항목을 추가하면 디버그 및 릴리스 프로젝트 구성 둘 다에 항목이 추가됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Visual Studio C++ 프로젝트 만들기 및 관리](../creating-and-managing-visual-cpp-projects.md)<br>
 [Visual Studio C++ 프로젝트 형식](visual-cpp-project-types.md)<br>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d85693cec11ef53a6bbbb60d8ced716d2a0bb131
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391415"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754340"
 ---
 # <a name="linker-tools-error-lnk1179"></a>링커 도구 오류 LNK1179
 
-파일이 잘못 되었거나 손상 되었습니다. 'filename' COMDAT가 중복 됩니다
+유효하지 않거나 손상된 파일: COMDAT '파일 이름' 복제
 
-개체 모듈 이름이 같은 둘 이상의 Comdat를 포함합니다.
+개체 모듈에는 이름이 같은 두 개 이상의 COMDA가 포함되어 있습니다.
 
-사용 하 여이 오류를 발생할 수 있습니다 [/H](../../build/reference/h-restrict-length-of-external-names.md), 외부 이름 길이 제한 및 [/Gy](../../build/reference/gy-enable-function-level-linking.md), Comdat에 함수를 패키지 하 합니다.
+이 오류는 외부 이름의 길이를 제한하는 [/H](../../build/reference/h-restrict-length-of-external-names.md)및 COMDAT에서 함수를 패키지하는 [/Gy를](../../build/reference/gy-enable-function-level-linking.md)사용하여 발생할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 `function1` 및 `function2` 처음 8 자에서 동일 합니다. 사용 하 여 컴파일하면 **/Gy** 하 고 **/H8** 링크 오류가 발생 합니다.
+다음 코드에서는 `function1` 처음 `function2` 8자에서 동일합니다. **/Gy** 및 **/H8로** 컴파일할 때 링크 오류가 발생합니다.
 
-```
+```cpp
 void function1(void);
 void function2(void);
 

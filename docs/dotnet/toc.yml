@@ -1,0 +1,344 @@
+- name: C++/CLI를 사용한 .NET 프로그래밍
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: '연습: CLR을 대상으로 하는 C++/CLI 프로그램 컴파일'
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: C++/CLI 작업
+  items:
+    - name: C++/CLI 작업
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: '방법: CLR 빈 프로젝트 만들기'
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: '방법: CLR 콘솔 애플리케이션 만들기'
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: '방법: C++/CLI에서 추적 참조 사용'
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: '방법: C++/CLI에서 배열 사용'
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: '방법: 클래스 및 구조체 정의 및 사용'
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: 참조 형식에 대한 C++ 스택 의미 체계
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: 사용자 정의 연산자
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: 사용자 정의 변환
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: '방법: 대리자 정의 및 사용'
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: '방법: C++/CLI에서 열거형 정의 및 사용'
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: '방법: C++/CLI에서 이벤트 사용'
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: '방법: 인터페이스 정적 생성자 정의'
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: '방법: 네이티브 컴파일의 override 지정자 선언'
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: '방법: C++/CLI에서 속성 사용'
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: '방법: C++/CLI에서 safe_cast 사용'
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: 정규식
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: 파일 처리 및 I/O
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: 그래픽 작업
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Windows 작업
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: ADO.NET을 사용하여 데이터 액세스
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: 네이티브 및 .NET 상호 운용성
+  items:
+    - name: 네이티브 및 .NET 상호 운용성
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: 다른 .NET 언어와의 상호 운용성
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: 혼합형(네이티브 및 관리형) 어셈블리
+      items:
+        - name: 혼합형(네이티브 및 관리형) 어셈블리
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: '방법: -clr로 마이그레이션'
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: '방법: -clr을 사용하여 MFC 및 ATL 코드 컴파일'
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: 혼합형 어셈블리 초기화
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: 혼합형 어셈블리에 대한 라이브러리 지원
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Interop에 대한 성능 고려 사항(C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: 애플리케이션 도메인 및 Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: 이중 썽킹(C++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: '-clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지'
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: '방법: CRT 라이브러리 DLL에 대한 종속성을 제거하여 부분적으로 신뢰할 수 있는 애플리케이션 만들기'
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: MFC에서 Windows Form 사용자 정의 컨트롤 사용
+      items:
+        - name: MFC에서 Windows Form 사용자 정의 컨트롤 사용
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Windows Forms-MFC 프로그래밍의 차이점
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
+          items:
+            - name: MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: '방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기'
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: '방법: Windows Forms에서 DDX-DDV 데이터 바인딩 수행'
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: '방법: 네이티브 C++ 클래스에서 Windows Forms 이벤트 싱크'
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
+          items:
+            - name: Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: '방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기'
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: '방법: Windows Forms 컨트롤에 명령 라우팅 추가'
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: '방법: Windows Forms 컨트롤의 속성 및 메서드 호출'
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: 관리 코드에서 네이티브 함수 호출
+      items:
+        - name: 관리 코드에서 네이티브 함수 호출
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: C++에서 명시적 PInvoke 사용(DllImport 특성)
+          items:
+            - name: C++에서 명시적 PInvoke 사용(DllImport 특성)
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: '방법: PInvoke를 사용하여 관리 코드로부터 네이티브 DLL 호출'
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: '방법: PInvoke를 사용하여 문자열 마샬링'
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: '방법: PInvoke를 사용하여 구조체 마샬링'
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: '방법: PInvoke를 사용하여 배열 마샬링'
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: '방법: PInvoke를 사용하여 함수 포인터 마샬링'
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: '방법: PInvoke를 사용하여 포함 포인터 마샬링'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: C++ Interop 사용(암시적 PInvoke)
+          items:
+            - name: C++ Interop 사용(암시적 PInvoke)
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: '방법: C++ Interop를 사용하여 ANSI 문자열 마샬링'
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 유니코드 문자열 마샬링'
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 COM 문자열 마샬링'
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 구조체 마샬링'
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 배열 마샬링'
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 콜백 및 대리자 마샬링'
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: '방법: C++ Interop를 사용하여 포함 포인터 마샬링'
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: '방법: 마샬링 라이브러리 확장'
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: '방법: System::String의 문자에 액세스'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: '방법: char * 문자열을 System::Byte 배열로 변환'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: '방법: System::String을 wchar_t* 또는 char*로 변환'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: '방법: System::String을 표준 문자열로 변환'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: '방법: 표준 문자열을 System::String으로 변환'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: '방법: 바이트 배열에 대한 포인터 가져오기'
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: '방법: 관리되지 않는 리소스를 바이트 배열로 로드'
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: '방법: 네이티브 함수에서 참조 클래스 수정'
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: '방법: 이미지가 네이티브인지 또는 CLR인지 확인'
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: '방법: 전역 어셈블리 캐시에 네이티브 DLL 추가'
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: '방법: 값 형식에 대한 참조를 네이티브 형식에 저장'
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: '방법: 관리되지 않는 메모리에 개체 참조 유지'
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: '방법: -clr 컴파일 감지'
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: '방법: System::Guid 및 _GUID 간 변환'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: '방법: out 매개 변수 지정'
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: '방법: -clr 컴파일에 네이티브 형식 사용'
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: '방법: 네이티브 형식으로 핸들 선언'
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: '방법: C#에서 사용하기 위해 네이티브 클래스 래핑'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: 순수형 및 안정형 코드
+  items:
+    - name: 순수형 및 안정형 코드
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: '방법: 안정형 C++ 프로젝트 만들기'
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: SQL Server에 안정형 어셈블리 사용
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: 프로젝트를 혼합 모드에서 순수 IL로 변환
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: Serialization
+  href: ../dotnet/serialization-cpp-cli.md
+- name: Friend 어셈블리(C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: 관리되는 형식
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: 반사
+  href: ../dotnet/reflection-cpp-cli.md
+- name: 강력한 이름 어셈블리(어셈블리 서명)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: Debug 클래스
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: STL/CLR 라이브러리 참조
+  items:
+    - name: STL/CLR 라이브러리 참조
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: cliext 네임스페이스
+      href: ../dotnet/cliext-namespace.md
+    - name: STL/CLR 컨테이너
+      href: ../dotnet/stl-clr-containers.md
+    - name: STL/CLR 컨테이너 요소에 대한 요구 사항
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: '방법: .NET 컬렉션에서 STL/CLR 컨테이너로 변환'
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: '방법: STL/CLR 컨테이너에서 .NET 컬렉션으로 변환'
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: '방법: 어셈블리에서 STL/CLR 컨테이너 노출'
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter(STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm(STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque(STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional(STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map(STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap(STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset(STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set(STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list(STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map(STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap(STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset(STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: numeric(STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue(STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue(STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set(STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack(STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility(STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector(STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: C++ 지원 라이브러리
+  items:
+    - name: C++ 지원 라이브러리
+      href: ../dotnet/cpp-support-library.md
+    - name: C++ 마샬링 개요
+      items:
+        - name: C++ 마샬링 개요
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: marshal_context 클래스
+          href: ../dotnet/marshal-context-class.md
+    - name: msclr 네임스페이스
+      href: ../dotnet/msclr-namespace.md
+    - name: 리소스 관리 클래스
+      items:
+        - name: 리소스 관리 클래스
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: auto_gcroot 클래스
+              href: ../dotnet/auto-gcroot-class.md
+            - name: swap 함수(auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: auto_handle 클래스
+              href: ../dotnet/auto-handle-class.md
+            - name: swap 함수(auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: 동기화(lock 클래스)
+      items:
+        - name: 동기화(lock 클래스)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: lock
+          items:
+            - name: lock
+              href: ../dotnet/lock.md
+            - name: lock 클래스
+              href: ../dotnet/lock-class.md
+            - name: lock_when 열거형
+              href: ../dotnet/lock-when-enum.md
+    - name: 특정 애플리케이션 도메인에서 함수 호출
+      items:
+        - name: 특정 애플리케이션 도메인에서 함수 호출
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: call_in_appdomain 함수
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'com::ptr 클래스'
+          href: ../dotnet/com-ptr-class.md
+- name: C++/CLI의 예외
+  items:
+    - name: C++/CLI의 예외
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: 관리되는 예외 사용의 기본 개념
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: '-clr을 지정하는 경우 예외 처리 동작의 차이점'
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: '방법: 네이티브 코드에서 MSIL이 throw한 예외 catch'
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: '방법: 전역 예외 처리기 정의 및 설치'
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: boxing
+  items:
+    - name: boxing
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: '방법: 명시적으로 boxing 요청'
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: '방법: gcnew를 사용하여 값 형식 만들기 및 암시적 boxing 사용'
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: '방법: Unbox'
+      href: ../dotnet/how-to-unbox.md
+    - name: 표준 변환 및 암시적 boxing
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

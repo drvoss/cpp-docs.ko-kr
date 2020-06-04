@@ -1,26 +1,24 @@
 ---
 title: 애플리케이션 프레임워크
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - application framework [MFC], building applications
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-ms.openlocfilehash: fb8e19b7e8a305367e5265707bbef2801176c010
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b55635de322274ab02372251976d4ebb9511ade5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394652"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446525"
 ---
 # <a name="application-framework"></a>애플리케이션 프레임워크
 
-Microsoft Foundation 클래스 (MFC) 라이브러리의 핵심은 Windows API의 큰 부분을 캡슐화 하는 C++ 형식입니다. 라이브러리 클래스 브러시, 펜, 컨트롤을 다른 표준 Windows 항목 등 일반적인 GDI 개체는 windows 대화 상자, 장치 컨텍스트를 나타냅니다. 이러한 클래스를 편리 하 게 제공 C++ 캡슐화 하는 Windows의 구조에 멤버 함수 인터페이스입니다. 이러한 클래스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요 [창의 개체 항목](../mfc/window-objects.md)합니다.
+MFC (Microsoft Foundation Class) 라이브러리의 핵심은 폼에서 C++ Windows API의 많은 부분을 캡슐화 하는 것입니다. 라이브러리 클래스는 창, 대화 상자, 장치 컨텍스트, 브러시, 펜, 컨트롤 및 기타 표준 Windows 항목과 같은 일반적인 GDI 개체를 나타냅니다. 이러한 클래스는 캡슐화 되 C++ 는 Windows의 구조에 대 한 편리한 멤버 함수 인터페이스를 제공 합니다. 이러한 클래스를 사용 하는 방법에 대 한 자세한 내용은 [창 개체 항목](../mfc/window-objects.md)을 참조 하세요.
 
-MFC 라이브러리에도 계층 기반 응용 프로그램 추가 기능을 제공 합니다 C++ Windows API를 캡슐화 합니다. 이 계층은 작업 응용 프로그램 프레임 워크는 Windows에 도구 모음, 상태 표시줄을 포함 하 여 인쇄, 인쇄 미리 보기에 대 한 프로그램의 예상 하는 대부분의 공통 사용자 인터페이스를 제공 하는 Windows에 대 한 데이터베이스 지원 및 ActiveX 지원 합니다. [클래스를 사용 하 여 Windows에 대 한 응용 프로그램 작성을](../mfc/using-the-classes-to-write-applications-for-windows.md) 자세히 프레임 워크에 설명 합니다.
+그러나 MFC 라이브러리는 Windows API를 캡슐화 하 여 구축 된 C++ 추가 응용 프로그램 기능 계층도 제공 합니다. 이 계층은 도구 모음, 상태 표시줄, 인쇄, 인쇄 미리 보기, 데이터베이스 지원 및 ActiveX 지원을 포함 하 여 Windows 용 프로그램에서 예상 되는 대부분의 공통 사용자 인터페이스를 제공 하는 Windows 용 작동 하는 응용 프로그램 프레임 워크입니다. [클래스를 사용 하 여 Windows 용 응용 프로그램을 작성 하](../mfc/using-the-classes-to-write-applications-for-windows.md) 는 것은 프레임 워크에 자세히 설명 되어 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [일반 클래스 디자인 원칙](../mfc/general-class-design-philosophy.md)

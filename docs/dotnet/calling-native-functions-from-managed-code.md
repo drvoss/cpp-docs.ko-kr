@@ -9,16 +9,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cdd5db4fae8d9167fa9ab1aeb6a4e8cbfe76ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372518"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>관리 코드에서 네이티브 함수 호출
 
-공용 언어 런타임 Platform Invocation Services 또는 PInvoke를는 관리 되는 네이티브 동적 연결 라이브러리 (Dll)의 C 스타일 함수를 호출 하는 코드를 제공 합니다. COM 상호 운용성 It Just Works, "ijw 메커니즘은 런타임에서 동일한 데이터 마샬링이 사용 됩니다.
+공통 언어 런타임은 DDL(네이티브 동적 연결 라이브러리)에서 관리되는 코드가 C 스타일 함수를 호출할 수 있도록 하는 플랫폼 호출 서비스 또는 PInvoke를 제공합니다. 런타임과의 COM 상호 운용성 및 "It Just Works" 또는 IJW 메커니즘에 대해 동일한 데이터 마샬링이 사용됩니다.
 
 자세한 내용은 다음을 참조하세요.
 
@@ -26,16 +26,16 @@ ms.locfileid: "62209193"
 
 - [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-이 단원의 샘플에서는 대해서만 설명 하는 방법을 `PInvoke` 사용할 수 있습니다. `PInvoke` 프로시저 마샬링 코드를 작성 하는 대신 특성에 선언적으로 마샬링 정보를 제공할 수 있으므로 사용자 지정된 데이터 마샬링을 간소화할 수 있습니다.
+이 섹션의 샘플은 사용 `PInvoke` 방법을 보여 줍니다. `PInvoke`절차 마샬링 코드를 작성하는 대신 특성에 선언적으로 마샬링 정보를 제공하기 때문에 사용자 지정된 데이터 마샬링을 단순화할 수 있습니다.
 
 > [!NOTE]
->  마샬링 라이브러리는 최적화 된 방식으로 네이티브 및 관리 되는 환경 간에 데이터를 마샬링하는 대안을 제공 합니다. 참조 [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md) 마샬링 라이브러리에 대 한 자세한 내용은 합니다. 마샬링 라이브러리는 함수에 대 한 데이터만 사용할 수 있습니다.
+> 마샬링 라이브러리는 최적화된 방식으로 네이티브 환경과 관리되는 환경 간의 데이터를 마샬링하는 다른 방법을 제공합니다. 마샬링 라이브러리에 대한 자세한 내용은 [C++에서](../dotnet/overview-of-marshaling-in-cpp.md) 마샬링 개요를 참조하십시오. 마샬링 라이브러리는 데이터에만 사용할 수 있으며 함수에는 사용할 수 없습니다.
 
-## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke 및 DllImport 특성
+## <a name="pinvoke-and-the-dllimport-attribute"></a>핀보크 및 DllImport 속성
 
-다음 예제에서는 사용을 보여 줍니다 `PInvoke` 시각적 개체의 C++ 프로그램입니다. 네이티브 함수 puts는 msvcrt.dll에서 정의 됩니다. DllImport 특성은 puts 선언에 사용 됩니다.
+다음 예제에서는 Visual `PInvoke` C++ 프로그램에서의 사용을 보여 주며 있습니다. 기본 함수가 넣는 것은 msvcrt.dll에 정의되어 있습니다. DllImport 특성은 풋옵션 선언에 사용됩니다.
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -50,9 +50,9 @@ int main() {
 }
 ```
 
-다음 샘플 앞의 예와 동일 하지만 IJW를 사용 합니다.
+다음 샘플은 이전 샘플과 동일하지만 IJW를 사용합니다.
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -69,33 +69,33 @@ int main() {
 }
 ```
 
-### <a name="advantages-of-ijw"></a>IJW의 이점
+### <a name="advantages-of-ijw"></a>IJW의 장점
 
-- 쓸 필요가 없습니다 `DLLImport` 특성 선언을 프로그램을 사용 하 여 관리 되지 않는 Api에 대 한 합니다. 방금 헤더 파일 및 가져오기 라이브러리를 사용 하 여 링크를 포함 합니다.
+- 프로그램에서 사용하는 관리되지 `DLLImport` 않는 API에 대한 특성 선언을 작성할 필요가 없습니다. 헤더 파일을 포함하고 가져오기 라이브러리에 대한 링크를 포함하기만 하면 됩니다.
 
-- IJW 메커니즘은 약간 더 빠릅니다 (예를 들어 IJW 스텁이 필요 하지 않은 데이터 항목을 고정 하거나 복사 해야 하는 값은 개발자가 명시적으로 수행 되기 때문에 확인 하려면).
+- IJW 메커니즘은 약간 더 빠릅니다(예: IJW 스텁은 개발자가 명시적으로 수행하기 때문에 데이터 항목을 고정하거나 복사할 필요가 없습니다).
 
-- 명확 하 게 성능 문제를 보여 줍니다. 이 경우 번역할 유니코드 문자열에서 ANSI 문자열 및 해당 하는 경우는 점과 메모리 할당 및 할당 취소 IJW를 사용 하는 코드를 작성 하는 개발자 호출 된다는 사실을 예제의 경우 `_putws` 를 사용 하 여 및 `PtrToStringChars` 성능이 향상 될 것입니다.
+- 성능 문제를 명확하게 보여 줍니다. 이 경우 유니코드 문자열에서 ANSI 문자열로 변환하고 수행자 메모리 할당 및 할당 할당이 있다는 사실입니다. 이 경우 IJW를 사용하여 코드를 작성하는 개발자는 `_putws` 호출 `PtrToStringChars` 및 사용이 성능에 더 좋을 것이라는 점을 깨닫게 됩니다.
 
-- 호출 하면 많은 관리 되지 않는 Api에서 동일한 데이터를 사용 하 여이 한 번 전달 마샬링하고 마샬링된 복사본을 매번 다시 마샬링하 보다 훨씬 효율적입니다.
+- 동일한 데이터를 사용하여 관리되지 않는 많은 API를 호출하는 경우 한 번 마샬링하고 마샬링된 복사본을 전달하는 것이 매번 다시 마샬링하는 것보다 훨씬 효율적입니다.
 
 ### <a name="disadvantages-of-ijw"></a>IJW의 단점
 
-- 마샬링 지정 되어야 합니다 명시적으로 대신 코드에서 특성 (있는 자주 적절 한 기본값).
+- 마샬링은 특성(적절한 기본값)이 아닌 코드에서 명시적으로 지정해야 합니다.
 
-- 마샬링 코드는 인라인, 응용 프로그램 논리의 흐름이 침해 될 소지가 많습니다.
+- 마샬링 코드는 인라인으로 응용 프로그램 논리의 흐름에서 더 침입적입니다.
 
-- 명시적 마샬링 Api는 반환할 `IntPtr` 32 비트에서 64 비트 이식성에 대 한 형식을 사용 해야 추가 `ToPointer` 호출 합니다.
+- 명시적 마샬링 API는 `IntPtr` 32비트에서 64비트 이식성에 대해 형식을 반환하므로 추가 `ToPointer` 호출을 사용해야 합니다.
 
-에 의해 노출 되는 특정 메서드 C++ 는 더 효율적이 고 명시적인 메서드인 반면 더 복잡해 진다는 합니다.
+C++에서 노출되는 특정 메서드는 몇 가지 추가 복잡성을 희생하여 보다 효율적이고 명시적인 메서드입니다.
 
-응용 프로그램은 주로 관리 되지 않는 데이터 형식 또는.NET Framework Api 보다 좀 더 관리 되지 않는 Api를 호출 하는 경우 좋습니다 하는 경우 IJW 기능을 사용 합니다. 대부분 관리 되는 응용 프로그램에서 가끔 관리 되지 않는 API를 호출 하려면 선택은 더 미묘 합니다.
+응용 프로그램이 주로 관리되지 않는 데이터 형식을 사용하거나 .NET Framework API보다 더 관리되지 않는 API를 호출하는 경우 IJW 기능을 사용하는 것이 좋습니다. 대부분 관리되는 응용 프로그램에서 가끔 관리되지 않는 API를 호출하려면 선택이 더 미묘합니다.
 
-## <a name="pinvoke-with-windows-apis"></a>Windows Api와 함께 PInvoke
+## <a name="pinvoke-with-windows-apis"></a>윈도우 API를 가진 핀보크
 
-PInvoke는 Windows의 함수를 호출 하는 데 유용 합니다.
+PInvoke는 Windows에서 함수를 호출하는 데 편리합니다.
 
-이 예제에서는 시각적 개체 C++ 프로그램 Win32 API의 일부인 MessageBox 함수와 상호 운용 합니다.
+이 예제에서는 Visual C++ 프로그램이 Win32 API의 일부인 MessageBox 함수와 상호 작용합니다.
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -113,28 +113,28 @@ int main() {
 }
 ```
 
-출력은 제목이 PInvoke Test 및 Hello World 텍스트를 포함 하는 메시지 상자입니다.
+출력은 제목 PInvoke 테스트가 있고 텍스트 Hello World!를 포함하는 메시지 상자입니다.
 
-마샬링 정보도 PInvoke에서 DLL의 함수를 조회 사용 됩니다. User32.dll에서에 실제로 MessageBox 함수가 없지만 CharSet = charset:: Ansi 유니코드 버전인 MessageBoxW 대신 ANSI 버전인 MessageBoxA를 사용 하는 PInvoke 사용 합니다. 일반적으로 ANSI로.NET Framework 문자열 개체의 네이티브 유니코드 형식에서 오버 헤드가 번역은 제거 하는 관리 되지 않는 Api의 유니코드 버전을 사용 하는 것이 좋습니다.
+마샬링 정보는 PInvoke에서 DLL의 함수를 조회하는 데도 사용됩니다. user32.dll에는 실제로 메시지 박스 기능이 없지만 CharSet = CharSet::Ansi를 사용하면 PInvoke가 유니코드 버전인 MessageBoxW 대신 ANSI 버전인 MessageBoxA를 사용할 수 있습니다. 일반적으로 .NET Framework 문자열 개체의 기본 유니코드 형식에서 ANSI로의 번역 오버헤드를 제거하기 때문에 관리되지 않는 API의 유니코드 버전을 사용하는 것이 좋습니다.
 
-## <a name="when-not-to-use-pinvoke"></a>PInvoke를 사용 하지 않는 경우
+## <a name="when-not-to-use-pinvoke"></a>핀보크를 사용하지 않을 때
 
-PInvoke를 사용 하 여 Dll에서 모든 C 스타일 함수에 대해 적합 하지 않습니다. 예를 들어 있는 함수가 Mylib.dll에에서 다음과 같이 선언 됩니다.
+PInvoke를 사용하는 것은 DLL의 모든 C 스타일 함수에 적합하지 않습니다. 예를 들어 mylib.dll에 MakeSpecial 함수가 있다고 가정하면 다음과 같습니다.
 
 `char * MakeSpecial(char * pszString);`
 
-시각적 개체에서 PInvoke를 사용 하는 경우 C++ 응용 프로그램 코드를 작성 해야 다음과 비슷합니다.
+Visual C++ 응용 프로그램에서 PInvoke를 사용하는 경우 다음과 유사한 내용을 작성할 수 있습니다.
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-이 경우 makespecial 반환 되는 관리 되지 않는 문자열에 대 한 메모리를 삭제할 수 없습니다. PInvoke를 통해 호출 된 다른 함수는 사용자가 할당을 해제할 수 없는 내부 버퍼에 대 한 포인터를 반환 합니다. 이 경우 IJW 기능을 사용 하는 것이 좋습니다.
+여기서 어려움은 MakeSpecial에서 반환된 관리되지 않는 문자열에 대한 메모리를 삭제할 수 없다는 것입니다. PInvoke를 통해 호출 된 다른 함수는 사용자가 할당 할 필요가없는 내부 버퍼에 포인터를 반환합니다. 이 경우 IJW 기능을 사용하는 것이 당연한 선택입니다.
 
-## <a name="limitations-of-pinvoke"></a>PInvoke의 제한 사항
+## <a name="limitations-of-pinvoke"></a>핀보크의 한계
 
-네이티브 함수를 매개 변수로 사용 했던 것과 동일한 포인터를 반환할 수 없습니다. 네이티브 함수에 PInvoke에서 마샬링 한 포인터를 반환 합니다, 메모리 손상 되 고 예외 충돌 될 수 있습니다.
+매개 변수로 사용 했던 네이티브 함수에서 동일한 정확한 포인터를 반환할 수 없습니다. 네이티브 함수가 PInvoke에 의해 마샬링된 포인터를 반환하면 메모리 손상 및 예외가 발생할 수 있습니다.
 
 ```cpp
 __declspec(dllexport)
@@ -143,9 +143,9 @@ char* fstringA(char* param) {
 }
 ```
 
-다음 샘플은이 문제를 나타냅니다. 및 출력이 해제 된 메모리에서 가져온 프로그램 올바른 출력 보일 수, 하는 경우에 합니다.
+다음 샘플에서는 이 문제가 발생하며 프로그램이 올바른 출력을 제공하는 것처럼 보일지라도 출력은 해제된 메모리에서 출력됩니다.
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -166,41 +166,41 @@ int main() {
 }
 ```
 
-## <a name="marshaling-arguments"></a>마샬링 인수
+## <a name="marshaling-arguments"></a>인수 마샬링
 
-사용 하 여 `PInvoke`, 마샬링할 필요가 없습니다 간의 관리 및 C++ 네이티브 기본 형식과 동일한 형식입니다. 예를 들어 마샬링이 없는 Int32와 int 또는 Double과 double 사이는 필수입니다.
+을 `PInvoke`사용하면 동일한 폼을 가진 관리되는 형식과 C++ 네이티브 기본 형식 간에 마샬링이 필요하지 않습니다. 예를 들어 Int32와 int 간에 또는 이중과 이중 사이에 는 마샬링이 필요하지 않습니다.
 
-그러나 동일한 폼이 없는 형식은 마샬링해야 합니다. Char, string 및 struct 형식이 포함 됩니다. 다음 표에서 다양 한 형식에 대해 마샬러에 사용 하는 매핑을 보여 줍니다.
+그러나 동일한 양식이 없는 형식을 마샬링해야 합니다. 여기에는 char, 문자열 및 구조체 형식이 포함됩니다. 다음 표에서는 마샬러가 다양한 형식에 대해 사용하는 매핑을 보여 주며 있습니다.
 
-|wtypes.h|Visual C++|Visual C++ /clr을 사용한|공용 언어 런타임|
+|wtypes.h|Visual C++|/clr가 있는 시각적 C++|공용 언어 런타임|
 |--------------|------------------|-----------------------------|-----------------------------|
-|HANDLE|void \*|void \*|IntPtr, UIntPtr|
+|HANDLE|Void\*|Void\*|인트프트르, 위트Ptr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
 |INT|int|int|Int32|
-|UINT|unsigned int|unsigned int|UInt32|
+|UINT|부호 없는 정수|부호 없는 정수|UInt32|
 |LONG|long|long|Int32|
-|BOOL|long|bool|Boolean|
+|BOOL|long|bool|부울|
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [에서 out]|String ^ [in], StringBuilder ^ [에서 out]|
-|LPCSTR|const char \*|String ^|문자열|
-|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [에서 out]|String ^ [in], StringBuilder ^ [에서 out]|
-|LPCWSTR|const wchar_t \*|String ^|문자열|
+|LPSTR|Char\*|문자열 ^ [인], 스트링 빌더 ^ [인, 아웃]|문자열 ^ [인], 스트링 빌더 ^ [인, 아웃]|
+|LPCSTR|const char\*|문자열 ^|String|
+|LPWSTR|Wchar_t\*|문자열 ^ [인], 스트링 빌더 ^ [인, 아웃]|문자열 ^ [인], 스트링 빌더 ^ [인, 아웃]|
+|LPCWSTR|wchar_t\*|문자열 ^|String|
 |FLOAT|float|float|Single|
 |DOUBLE|double|double|Double|
 
-마샬러는 자동으로 해당 주소는 관리 되지 않는 함수에 전달 되 면 런타임 힙에 할당 된 메모리를 고정 합니다. 고정 가비지 수집기가 압축 하는 동안 메모리의 할당된 된 블록을 이동할 수 없습니다.
+마샬러는 주소가 관리되지 않는 함수에 전달되는 경우 런타임 힙에 할당된 메모리를 자동으로 고정합니다. 고정을 사용하면 압축 중에 가비지 수집기에서 할당된 메모리 블록을 이동하지 않습니다.
 
-DllImport의 CharSet 매개 변수를이 항목의 앞부분에 표시 된 예제에서는 관리 되는 문자열을 지정 해야 마샬링할 수 있습니다. 이 경우 네이티브 쪽에 대해 ANSI 문자열로 마샬링할 수 해야 합니다.
+이 항목의 앞에 표시된 예제에서 DllImport의 CharSet 매개 변수는 관리되는 문자열을 마샬링하는 방법을 지정합니다. 이 경우 네이티브 측에 대한 ANSI 문자열로 마샬링되어야 합니다.
 
-MarshalAs 특성을 사용 하 여 네이티브 함수의 개별 인수에 대 한 마샬링 정보를 지정할 수 있습니다. 문자열을 마샬링하기 위한 여러 가지 \* 인수: BStr, ANSIBStr, TBStr, LPStr, LPWStr 및 LPTStr 합니다. 기본값은 LPStr입니다.
+MarshalAs 특성을 사용하여 네이티브 함수의 개별 인수에 대한 마샬링 정보를 지정할 수 있습니다. 문자열 \* 인수를 마샬링하기 위한 몇 가지 선택 사항은 BStr, ANSIBStr, TBStr, LPStr, LPWStr 및 LPTStr입니다. 기본값은 LPStr입니다.
 
-이 예제에서는 문자열을 더블 바이트 유니코드 문자열 LPWStr로 마샬링됩니다. 출력은 Hello World의 첫 글자! 마샬링된 문자열의 두 번째 바이트는 null이 고 배치 하기 때문에이 문자열의 끝 표식으로 해석 합니다.
+이 예제에서 문자열은 이중 바이트 유니코드 문자열 인 LPWStr로 마샬링됩니다. 출력은 헬로 월드의 첫 글자입니다! 마샬링된 문자열의 두 번째 바이트가 null이고 이를 문자열 끝 마커로 해석하기 때문입니다.
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -215,16 +215,16 @@ int main() {
 }
 ```
 
-MarshalAs 특성은 System::Runtime::InteropServices 네임 스페이스입니다. 배열과 같은 다른 데이터 형식 특성을 사용할 수 있습니다.
+MarshalAs 특성은 시스템:::런타임::InteropServices 네임스페이스에 있습니다. 특성은 배열과 같은 다른 데이터 형식과 함께 사용할 수 있습니다.
 
-항목의 앞부분에서 설명 했 듯이 마샬링 라이브러리는 네이티브 및 관리 되는 환경 간에 데이터를 마샬링하기의 최적화 된 새 메서드를 제공 합니다. 자세한 내용은 [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md)합니다.
+이 항목의 앞에서 설명한 것처럼 마샬링 라이브러리는 네이티브 환경과 관리되는 환경 간에 데이터를 마샬링하는 새롭고 최적화된 방법을 제공합니다. 자세한 내용은 [C++에서 마샬링 개요를](../dotnet/overview-of-marshaling-in-cpp.md)참조하십시오.
 
 ## <a name="performance-considerations"></a>성능 고려 사항
 
-PInvoke는 오버 헤드가 발생의 10과 30 사이의 x86 명령을 호출 합니다. 이 고정된 비용 외에도 마샬링을 사용 하면 추가 오버 헤드입니다. 관리 및 비관리 코드에서 표현이 동일한 blittable 형식 간에 마샬링 비용은 없습니다. 예를 들어 int와 Int32 사이 변환 비용은 없습니다.
+PInvoke는 통화당 10~30x86의 오버헤드를 가지고 있습니다. 이 고정 된 비용 외에도 마샬링 추가 오버 헤드를 만듭니다. 관리되는 코드와 관리되지 않는 코드에서 동일한 표현을 가진 blittable 형식 간에는 마샬링 비용이 없습니다. 예를 들어 int와 Int32 간에 변환하는 데는 비용이 들지 않습니다.
 
-성능 향상을 위해 호출당 데이터를 더 적게 마샬링하는 호출을 많이 하는 대신 최대한 많은 데이터를 마샬링하는 PInvoke 호출을 더 적은 경우
+성능을 향상하기 위해 호출당 더 적은 데이터를 마샬링하는 호출이 더 많지 않고 가능한 한 많은 데이터를 마샬링하는 PInvoke 호출이 줄어듭니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [네이티브 및 .NET 상호 운용성](../dotnet/native-and-dotnet-interoperability.md)

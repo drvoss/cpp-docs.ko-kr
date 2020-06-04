@@ -1,5 +1,5 @@
 ---
-title: CPaneContainerManager 클래스
+title: CPaneContainer관리자 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneContainerManager
@@ -106,17 +106,17 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b4c406360158795b9c9554bfd70e7d41875be13
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373130"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753641"
 ---
-# <a name="cpanecontainermanager-class"></a>CPaneContainerManager 클래스
+# <a name="cpanecontainermanager-class"></a>CPaneContainer관리자 클래스
 
-`CPaneContainerManager` 클래스는 저장 하 고 현재 도킹 레이아웃의 표시를 관리 합니다.
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+클래스는 `CPaneContainerManager` 현재 도킹 레이아웃의 저장소 및 표시를 관리합니다.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -128,68 +128,68 @@ class CPaneContainerManager : public CObject
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CPaneContainerManager::AddPane](#addpane)||
-|[CPaneContainerManager::AddPaneContainerManager](#addpanecontainermanager)||
-|[CPaneContainerManager::AddPaneContainerManagerToDockablePane](#addpanecontainermanagertodockablepane)||
-|[CPaneContainerManager::AddPanesToList](#addpanestolist)||
-|[CPaneContainerManager::AddPaneToList](#addpanetolist)||
-|[CPaneContainerManager::AddPaneToRecentPaneContainer](#addpanetorecentpanecontainer)||
-|[CPaneContainerManager::CalcRects](#calcrects)||
-|[CPaneContainerManager::CanBeAttached](#canbeattached)||
-|[CPaneContainerManager::CheckAndRemoveNonValidPane](#checkandremovenonvalidpane)||
-|[CPaneContainerManager::CheckForMiniFrameAndCaption](#checkforminiframeandcaption)||
-|[CPaneContainerManager::Create](#create)||
-|[CPaneContainerManager::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)||
-|[CPaneContainerManager::DoesContainFloatingPane](#doescontainfloatingpane)||
-|[CPaneContainerManager::EnableGrippers](#enablegrippers)||
-|[CPaneContainerManager::FindPaneContainer](#findpanecontainer)||
-|[CPaneContainerManager::FindTabbedPane](#findtabbedpane)||
-|[CPaneContainerManager::GetAvailableSpace](#getavailablespace)||
-|[CPaneContainerManager::GetDefaultPaneDivider](#getdefaultpanedivider)||
-|[CPaneContainerManager::GetDockSiteFrameWnd](#getdocksiteframewnd)||
-|[CPaneContainerManager::GetFirstPane](#getfirstpane)||
-|[CPaneContainerManager::GetFirstVisiblePane](#getfirstvisiblepane)||
-|[CPaneContainerManager::GetMinMaxOffset](#getminmaxoffset)||
-|[CPaneContainerManager::GetMinSize](#getminsize)||
-|[CPaneContainerManager::GetNodeCount](#getnodecount)||
-|[CPaneContainerManager::GetPaneContainerRTC](#getpanecontainerrtc)||
-|[CPaneContainerManager::GetPaneCount](#getpanecount)||
-|[CPaneContainerManager::GetTotalRefCount](#gettotalrefcount)||
-|[CPaneContainerManager::GetVisiblePaneCount](#getvisiblepanecount)||
-|[CPaneContainerManager::GetWindowRect](#getwindowrect)||
-|[CPaneContainerManager::HideAll](#hideall)||
-|[CPaneContainerManager::InsertPane](#insertpane)||
-|[CPaneContainerManager::IsAutoHideMode](#isautohidemode)||
-|[CPaneContainerManager::IsEmpty](#isempty)||
-|[CPaneContainerManager::IsRootPaneContainerVisible](#isrootpanecontainervisible)||
-|[CPaneContainerManager::NotifyPaneDivider](#notifypanedivider)||
-|[CPaneContainerManager::OnPaneDividerMove](#onpanedividermove)||
-|[CPaneContainerManager::OnShowPane](#onshowpane)||
-|[CPaneContainerManager::PaneFromPoint](#panefrompoint)||
-|[CPaneContainerManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)||
-|[CPaneContainerManager::RemoveAllPanesAndPaneDividers](#removeallpanesandpanedividers)||
-|[CPaneContainerManager::RemoveNonValidPanes](#removenonvalidpanes)||
-|[CPaneContainerManager::RemovePaneDivider](#removepanedivider)||
-|[CPaneContainerManager::RemovePaneFromPaneContainer](#removepanefrompanecontainer)||
-|[CPaneContainerManager::ReplacePane](#replacepane)||
-|[CPaneContainerManager::ResizePaneContainers](#resizepanecontainers)||
-|[CPaneContainerManager::Serialize](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다. ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)를 재정의합니다.)|
-|[CPaneContainerManager::SetDefaultPaneDividerForPanes](#setdefaultpanedividerforpanes)||
-|[CPaneContainerManager::SetPaneContainerRTC](#setpanecontainerrtc)||
-|[CPaneContainerManager::SetResizeMode](#setresizemode)||
-|[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
+|[CPane 컨테이너 관리자::애드파인](#addpane)||
+|[CPane 컨테이너 관리자::애드파네 컨테이너 관리자](#addpanecontainermanager)||
+|[CPane 컨테이너 관리자::애드파네 컨테이너관리자토도킹파네](#addpanecontainermanagertodockablepane)||
+|[CPane 컨테이너 관리자::애드파네스토리스트](#addpanestolist)||
+|[CPane 컨테이너 관리자::애드파네토리스트](#addpanetolist)||
+|[CPane컨테이너 관리자::애드파네토최근패네컨테이너](#addpanetorecentpanecontainer)||
+|[CPane 컨테이너 관리자::칼크렉트](#calcrects)||
+|[CPane 컨테이너 관리자::수 연결](#canbeattached)||
+|[CPane 컨테이너 관리자::체크앤리Remove비유효파인](#checkandremovenonvalidpane)||
+|[CPane 컨테이너 관리자::체크포미니프레임앤캡션](#checkforminiframeandcaption)||
+|[CPane컨테이너 관리자::만들기](#create)||
+|[CPaneContainer관리자::DoesAllowDyn인더인](#doesallowdyninsertbefore)||
+|[CPaneContainer관리자::Does포함플로팅파네](#doescontainfloatingpane)||
+|[CPaneContainer 관리자::인에이블그리퍼](#enablegrippers)||
+|[CPane컨테이너 관리자::찾기창](#findpanecontainer)||
+|[CPane컨테이너 관리자::찾기탭판](#findtabbedpane)||
+|[CPane 컨테이너 관리자::사용 가능 공간](#getavailablespace)||
+|[CPane 컨테이너 관리자::GetDefaultPane 분배기](#getdefaultpanedivider)||
+|[CPane컨테이너 관리자::GetDockSiteFrameWnd](#getdocksiteframewnd)||
+|[CPane컨테이너 관리자::GetFirstPane](#getfirstpane)||
+|[CPane컨테이너 관리자::GetFirstVisiblePane](#getfirstvisiblepane)||
+|[CPane 컨테이너 관리자::GetMinMax오프셋](#getminmaxoffset)||
+|[CPane컨테이너 관리자::GetMinSize](#getminsize)||
+|[CPane컨테이너 관리자::GetNodeCount](#getnodecount)||
+|[CPane컨테이너 관리자::겟파인 컨테이너RTC](#getpanecontainerrtc)||
+|[CPane컨테이너 관리자::겟파인카운트](#getpanecount)||
+|[CPane컨테이너 관리자::GetTotalRefCount](#gettotalrefcount)||
+|[CPane컨테이너 관리자::보이지 않는 파인카운트](#getvisiblepanecount)||
+|[CPane 컨테이너 관리자::GetWindowRect](#getwindowrect)||
+|[CPane컨테이너 관리자::숨기기모두](#hideall)||
+|[CPane 컨테이너 관리자::삽입 창](#insertpane)||
+|[CPane컨테이너 관리자::IsAutoHideMode](#isautohidemode)||
+|[CPane컨테이너 관리자::비어 있음](#isempty)||
+|[CPane컨테이너 관리자::IsRootPane컨테이너가 보입니다.](#isrootpanecontainervisible)||
+|[CPane 컨테이너 관리자::알림파인 분배기](#notifypanedivider)||
+|[CPane컨테이너 관리자::온파네 디바이더무브](#onpanedividermove)||
+|[CPane 컨테이너 관리자::온쇼파인](#onshowpane)||
+|[CPane컨테이너 관리자::P인FromPoint](#panefrompoint)||
+|[CPane 컨테이너 관리자::릴리스빈파인 컨테이너](#releaseemptypanecontainers)||
+|[CPane컨테이너 관리자::제거AllPanesAndPane 분배기](#removeallpanesandpanedividers)||
+|[CPane 컨테이너 관리자::제거비유효 파인](#removenonvalidpanes)||
+|[CPane컨테이너 관리자::제거파네 분배기](#removepanedivider)||
+|[CPane컨테이너 관리자::제거페네에서파네컨테이너](#removepanefrompanecontainer)||
+|[CPane컨테이너 관리자::대체창](#replacepane)||
+|[CPane 컨테이너 관리자::크기 조정 컨테이너](#resizepanecontainers)||
+|[CPaneContainer 관리자::직렬화](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다. ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)를 재정의합니다.)|
+|[CPane 컨테이너 관리자::설정기본파인 분배기포파네](#setdefaultpanedividerforpanes)||
+|[CPane컨테이너 관리자::세파네 컨테이너RTC](#setpanecontainerrtc)||
+|[CPane컨테이너 관리자::세트크기 모드](#setresizemode)||
+|[CPane 컨테이너 관리자:::저장소최근독사이트정보](#storerecentdocksiteinfo)||
 
 ### <a name="remarks"></a>설명
 
-프레임 워크의 인스턴스를 자동으로 만듭니다 `CPaneContainerManager` 개체를 포함 하거나 시킵니다로 [CPaneDivider 클래스](../../mfc/reference/cpanedivider-class.md) 개체 또는 [CMultiPaneFrameWnd 클래스](../../mfc/reference/cmultipaneframewnd-class.md) 개체입니다.
+프레임워크는 자동으로 개체의 `CPaneContainerManager` 인스턴스를 만들고 [CPaneDivider 클래스](../../mfc/reference/cpanedivider-class.md) 개체 또는 [CMultiPaneFrameWnd 클래스](../../mfc/reference/cmultipaneframewnd-class.md) 개체에 포함합니다.
 
-합니다 `CPaneContainerManager` 클래스에서 기본 제공 되는 이진 트리의 루트에 대 한 포인터를 저장 [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) 개체입니다.
+클래스는 `CPaneContainerManager` [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) 개체에서 빌드된 이진 트리의 루트에 대 한 포인터를 저장 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에 대 한 참조 하는 방법에 설명 된 `CPaneContainerManager` 개체입니다. 이 코드 조각은의 일부인 합니다 [창 크기 설정 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 `CPaneContainerManager` 개체에 대한 참조를 얻는 방법을 보여 줍니다. 이 코드 조각은 창 [크기 설정 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 
@@ -203,7 +203,7 @@ class CPaneContainerManager : public CObject
 
 **헤더:** afxpanecontainermanager.h
 
-##  <a name="addpane"></a>  CPaneContainerManager::AddPane
+## <a name="cpanecontainermanageraddpane"></a><a name="addpane"></a>CPane 컨테이너 관리자::애드파인
 
 ```
 virtual void AddPane(CDockablePane* pControlBarToAdd);
@@ -211,11 +211,11 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBarToAdd*<br/>
+【인】 *p컨트롤바토추가*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpanecontainermanager"></a>  CPaneContainerManager::AddPaneContainerManager
+## <a name="cpanecontainermanageraddpanecontainermanager"></a><a name="addpanecontainermanager"></a>CPane 컨테이너 관리자::애드파네 컨테이너 관리자
 
 ```
 virtual BOOL AddPaneContainerManager(
@@ -231,17 +231,17 @@ virtual BOOL AddPaneContainerManager(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *srcManager*<br/>
-[in] *bOuterEdge*<br/>
-[in] *pTargetControlBar*<br/>
-[in] *dwAlignment*<br/>
-[in] *bCopy*<br/>
+【인】 *srcManager*<br/>
+【인】 *bOuterEdge*<br/>
+【인】 *pTarget컨트롤바*<br/>
+【인】 *dw정렬*<br/>
+【인】 *bCopy*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpanecontainermanagertodockablepane"></a>  CPaneContainerManager::AddPaneContainerManagerToDockablePane
+## <a name="cpanecontainermanageraddpanecontainermanagertodockablepane"></a><a name="addpanecontainermanagertodockablepane"></a>CPane 컨테이너 관리자::애드파네 컨테이너관리자토도킹파네
 
 ```
 virtual BOOL AddPaneContainerManagerToDockablePane(
@@ -251,16 +251,16 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pTargetControlBar*<br/>
-[in] *srcManager*<br/>
+【인】 *pTarget컨트롤바*<br/>
+【인】 *srcManager*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpanestolist"></a>  CPaneContainerManager::AddPanesToList
+## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a>CPane 컨테이너 관리자::애드파네스토리스트
 
-```
+```cpp
 void AddPanesToList(
     CObList* plstControlBars,
     CObList* plstSliders);
@@ -268,24 +268,24 @@ void AddPanesToList(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *plstControlBars*<br/>
-[in] *plstSliders*<br/>
+【인】 *plst컨트롤바*<br/>
+【인】 *plst슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpanetolist"></a>  CPaneContainerManager::AddPaneToList
+## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a>CPane 컨테이너 관리자::애드파네토리스트
 
-```
+```cpp
 void AddPaneToList(CDockablePane* pControlBarToAdd);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBarToAdd*<br/>
+【인】 *p컨트롤바토추가*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpanetorecentpanecontainer"></a>  CPaneContainerManager::AddPaneToRecentPaneContainer
+## <a name="cpanecontainermanageraddpanetorecentpanecontainer"></a><a name="addpanetorecentpanecontainer"></a>CPane컨테이너 관리자::애드파네토최근패네컨테이너
 
 ```
 virtual CDockablePane* AddPaneToRecentPaneContainer(
@@ -295,16 +295,16 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBarToAdd*<br/>
-[in] *pRecentContainer*<br/>
+【인】 *pBarToAdd*<br/>
+【인】 *p최근 컨테이너*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="calcrects"></a>  CPaneContainerManager::CalcRects
+## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a>CPane 컨테이너 관리자::칼크렉트
 
-```
+```cpp
 void CalcRects(
     CRect& rectOriginal,
     CRect& rectInserted,
@@ -317,27 +317,27 @@ void CalcRects(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *rectOriginal*<br/>
-[in] *rectInserted*<br/>
-[in] *rectSlider*<br/>
-[in] *dwSliderStyle*<br/>
-[in] *dwAlignment*<br/>
-[in] *sizeMinOriginal*<br/>
-[in] *sizeMinInserted*<br/>
+【인】 *정류 오리지널*<br/>
+【인】 *정류 삽입*<br/>
+【인】 *직사각형 슬라이더*<br/>
+【인】 *dw슬라이더 스타일*<br/>
+【인】 *dw정렬*<br/>
+【인】 *크기원래*<br/>
+【인】 *크기삽입*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="canbeattached"></a>  CPaneContainerManager::CanBeAttached
+## <a name="cpanecontainermanagercanbeattached"></a><a name="canbeattached"></a>CPane 컨테이너 관리자::수 연결
 
 ```
 virtual BOOL CanBeAttached() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="checkandremovenonvalidpane"></a>  CPaneContainerManager::CheckAndRemoveNonValidPane
+## <a name="cpanecontainermanagercheckandremovenonvalidpane"></a><a name="checkandremovenonvalidpane"></a>CPane 컨테이너 관리자::체크앤리Remove비유효파인
 
 ```
 BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
@@ -345,13 +345,13 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="checkforminiframeandcaption"></a>  CPaneContainerManager::CheckForMiniFrameAndCaption
+## <a name="cpanecontainermanagercheckforminiframeandcaption"></a><a name="checkforminiframeandcaption"></a>CPane 컨테이너 관리자::체크포미니프레임앤캡션
 
 ```
 virtual BOOL CheckForMiniFrameAndCaption(
@@ -361,14 +361,14 @@ virtual BOOL CheckForMiniFrameAndCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *point*<br/>
-[in] *ppTargetControlBar*<br/>
+【인】 *점*<br/>
+【인】 *ppTargetControlBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="create"></a>  CPaneContainerManager::Create
+## <a name="cpanecontainermanagercreate"></a><a name="create"></a>CPane컨테이너 관리자::만들기
 
 ```
 virtual BOOL Create(
@@ -379,35 +379,35 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pParentWnd*<br/>
-[in] *pDefaultSlider*<br/>
-[in] *pContainerRTC*<br/>
+【인】 *pParentWnd*<br/>
+【인】 *p디폴디폴 슬라이더*<br/>
+【인】 *p컨테이너RTC*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="doesallowdyninsertbefore"></a>  CPaneContainerManager::DoesAllowDynInsertBefore
+## <a name="cpanecontainermanagerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CPaneContainer관리자::DoesAllowDyn인더인
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="doescontainfloatingpane"></a>  CPaneContainerManager::DoesContainFloatingPane
+## <a name="cpanecontainermanagerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a>CPaneContainer관리자::Does포함플로팅파네
 
 ```
 virtual BOOL DoesContainFloatingPane();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enablegrippers"></a>  CPaneContainerManager::EnableGrippers
+## <a name="cpanecontainermanagerenablegrippers"></a><a name="enablegrippers"></a>CPaneContainer 관리자::인에이블그리퍼
 
 ```
 virtual void EnableGrippers(BOOL bEnable);
@@ -415,11 +415,11 @@ virtual void EnableGrippers(BOOL bEnable);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bEnable*<br/>
+【인】 *bEnable*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="findpanecontainer"></a>  CPaneContainerManager::FindPaneContainer
+## <a name="cpanecontainermanagerfindpanecontainer"></a><a name="findpanecontainer"></a>CPane컨테이너 관리자::찾기창
 
 ```
 virtual CPaneContainer* FindPaneContainer(
@@ -429,14 +429,14 @@ virtual CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bLeftBar*<br/>
+【인】 *pBar*<br/>
+【인】 *bLeftBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="findtabbedpane"></a>  CPaneContainerManager::FindTabbedPane
+## <a name="cpanecontainermanagerfindtabbedpane"></a><a name="findtabbedpane"></a>CPane컨테이너 관리자::찾기탭판
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -444,13 +444,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nID*<br/>
+【인】 *니드 (미국)의*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getavailablespace"></a>  CPaneContainerManager::GetAvailableSpace
+## <a name="cpanecontainermanagergetavailablespace"></a><a name="getavailablespace"></a>CPane 컨테이너 관리자::사용 가능 공간
 
 ```
 virtual void GetAvailableSpace(CRect& rect) const;
@@ -462,47 +462,47 @@ virtual void GetAvailableSpace(CRect& rect) const;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdefaultpanedivider"></a>  CPaneContainerManager::GetDefaultPaneDivider
+## <a name="cpanecontainermanagergetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>CPane 컨테이너 관리자::GetDefaultPane 분배기
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdocksiteframewnd"></a>  CPaneContainerManager::GetDockSiteFrameWnd
+## <a name="cpanecontainermanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CPane컨테이너 관리자::GetDockSiteFrameWnd
 
 ```
 virtual CWnd* GetDockSiteFrameWnd();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getfirstpane"></a>  CPaneContainerManager::GetFirstPane
+## <a name="cpanecontainermanagergetfirstpane"></a><a name="getfirstpane"></a>CPane컨테이너 관리자::GetFirstPane
 
 ```
 virtual CBasePane* GetFirstPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getfirstvisiblepane"></a>  CPaneContainerManager::GetFirstVisiblePane
+## <a name="cpanecontainermanagergetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPane컨테이너 관리자::GetFirstVisiblePane
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getminmaxoffset"></a>  CPaneContainerManager::GetMinMaxOffset
+## <a name="cpanecontainermanagergetminmaxoffset"></a><a name="getminmaxoffset"></a>CPane 컨테이너 관리자::GetMinMax오프셋
 
 ```
 virtual void GetMinMaxOffset(
@@ -514,14 +514,14 @@ virtual void GetMinMaxOffset(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
-[in] *nMinOffset*<br/>
-[in] *nMaxOffset*<br/>
-[in] *nStep*<br/>
+【인】 *p슬라이더*<br/>
+【인】 *nMinOffset*<br/>
+【인】 *nMax오프오프*<br/>
+【인】 *n스텝*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getminsize"></a>  CPaneContainerManager::GetMinSize
+## <a name="cpanecontainermanagergetminsize"></a><a name="getminsize"></a>CPane컨테이너 관리자::GetMinSize
 
 ```
 virtual void GetMinSize(CSize& size);
@@ -529,61 +529,61 @@ virtual void GetMinSize(CSize& size);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *size*<br/>
+【인】 *크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getnodecount"></a>  CPaneContainerManager::GetNodeCount
+## <a name="cpanecontainermanagergetnodecount"></a><a name="getnodecount"></a>CPane컨테이너 관리자::GetNodeCount
 
 ```
 int GetNodeCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getpanecontainerrtc"></a>  CPaneContainerManager::GetPaneContainerRTC
+## <a name="cpanecontainermanagergetpanecontainerrtc"></a><a name="getpanecontainerrtc"></a>CPane컨테이너 관리자::겟파인 컨테이너RTC
 
 ```
 CRuntimeClass* GetPaneContainerRTC() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getpanecount"></a>  CPaneContainerManager::GetPaneCount
+## <a name="cpanecontainermanagergetpanecount"></a><a name="getpanecount"></a>CPane컨테이너 관리자::겟파인카운트
 
 ```
 int GetPaneCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettotalrefcount"></a>  CPaneContainerManager::GetTotalRefCount
+## <a name="cpanecontainermanagergettotalrefcount"></a><a name="gettotalrefcount"></a>CPane컨테이너 관리자::GetTotalRefCount
 
 ```
 int GetTotalRefCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getvisiblepanecount"></a>  CPaneContainerManager::GetVisiblePaneCount
+## <a name="cpanecontainermanagergetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPane컨테이너 관리자::보이지 않는 파인카운트
 
 ```
 virtual int GetVisiblePaneCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getwindowrect"></a>  CPaneContainerManager::GetWindowRect
+## <a name="cpanecontainermanagergetwindowrect"></a><a name="getwindowrect"></a>CPane 컨테이너 관리자::GetWindowRect
 
 ```
 virtual void GetWindowRect(CRect& rect) const;
@@ -595,7 +595,7 @@ virtual void GetWindowRect(CRect& rect) const;
 
 ### <a name="remarks"></a>설명
 
-##  <a name="hideall"></a>  CPaneContainerManager::HideAll
+## <a name="cpanecontainermanagerhideall"></a><a name="hideall"></a>CPane컨테이너 관리자::숨기기모두
 
 ```
 virtual void HideAll();
@@ -603,7 +603,7 @@ virtual void HideAll();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="insertpane"></a>  CPaneContainerManager::InsertPane
+## <a name="cpanecontainermanagerinsertpane"></a><a name="insertpane"></a>CPane 컨테이너 관리자::삽입 창
 
 ```
 virtual BOOL InsertPane(
@@ -616,55 +616,55 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBarToInsert*<br/>
-[in] *pTargetControlBar*<br/>
-[in] *dwAlignment*<br/>
-[in] *lpRect*<br/>
-[in] *dockMethod*<br/>
+【인】 *p컨트롤바토인서인더*<br/>
+【인】 *pTarget컨트롤바*<br/>
+【인】 *dw정렬*<br/>
+【인】 *lpRect*<br/>
+【인】 *독 방법*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isautohidemode"></a>  CPaneContainerManager::IsAutoHideMode
+## <a name="cpanecontainermanagerisautohidemode"></a><a name="isautohidemode"></a>CPane컨테이너 관리자::IsAutoHideMode
 
 ```
 BOOL IsAutoHideMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isempty"></a>  CPaneContainerManager::IsEmpty
+## <a name="cpanecontainermanagerisempty"></a><a name="isempty"></a>CPane컨테이너 관리자::비어 있음
 
 ```
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isrootpanecontainervisible"></a>  CPaneContainerManager::IsRootPaneContainerVisible
+## <a name="cpanecontainermanagerisrootpanecontainervisible"></a><a name="isrootpanecontainervisible"></a>CPane컨테이너 관리자::IsRootPane컨테이너가 보입니다.
 
 ```
 virtual BOOL IsRootPaneContainerVisible() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="notifypanedivider"></a>  CPaneContainerManager::NotifyPaneDivider
+## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a>CPane 컨테이너 관리자::알림파인 분배기
 
-```
+```cpp
 void NotifyPaneDivider();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onpanedividermove"></a>  CPaneContainerManager::OnPaneDividerMove
+## <a name="cpanecontainermanageronpanedividermove"></a><a name="onpanedividermove"></a>CPane컨테이너 관리자::온파네 디바이더무브
 
 ```
 virtual int OnPaneDividerMove(
@@ -676,16 +676,16 @@ virtual int OnPaneDividerMove(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
-[in] *uFlags*<br/>
-[in] *nOffset*<br/>
-[in] *hdwp*<br/>
+【인】 *p슬라이더*<br/>
+【인】 *uFlags*<br/>
+【인】 *n오프셋*<br/>
+【인】 *HDWP*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onshowpane"></a>  CPaneContainerManager::OnShowPane
+## <a name="cpanecontainermanageronshowpane"></a><a name="onshowpane"></a>CPane 컨테이너 관리자::온쇼파인
 
 ```
 virtual BOOL OnShowPane(
@@ -695,14 +695,14 @@ virtual BOOL OnShowPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+【인】 *pBar*<br/>
+【인】 *bShow*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="panefrompoint"></a>  CPaneContainerManager::PaneFromPoint
+## <a name="cpanecontainermanagerpanefrompoint"></a><a name="panefrompoint"></a>CPane컨테이너 관리자::P인FromPoint
 
 ```
 virtual CDockablePane* PaneFromPoint(
@@ -715,41 +715,41 @@ virtual CDockablePane* PaneFromPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *point*<br/>
-[in] *nSensitivity*<br/>
-[in] *bExactBar*<br/>
-[in] *bIsTabArea*<br/>
-[in] *bCaption*<br/>
+【인】 *점*<br/>
+【인】 *n감도*<br/>
+【인】 *bExactBar*<br/>
+【인】 *비스탭 에어리어*<br/>
+【인】 *b캡션*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="releaseemptypanecontainers"></a>  CPaneContainerManager::ReleaseEmptyPaneContainers
+## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPane 컨테이너 관리자::릴리스빈파인 컨테이너
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removeallpanesandpanedividers"></a>  CPaneContainerManager::RemoveAllPanesAndPaneDividers
+## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a>CPane컨테이너 관리자::제거AllPanesAndPane 분배기
 
-```
+```cpp
 void RemoveAllPanesAndPaneDividers();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removenonvalidpanes"></a>  CPaneContainerManager::RemoveNonValidPanes
+## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 컨테이너 관리자::제거비유효 파인
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removepanedivider"></a>  CPaneContainerManager::RemovePaneDivider
+## <a name="cpanecontainermanagerremovepanedivider"></a><a name="removepanedivider"></a>CPane컨테이너 관리자::제거파네 분배기
 
 ```
 virtual void RemovePaneDivider(CPaneDivider* pSlider);
@@ -757,11 +757,11 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
+【인】 *p슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removepanefrompanecontainer"></a>  CPaneContainerManager::RemovePaneFromPaneContainer
+## <a name="cpanecontainermanagerremovepanefrompanecontainer"></a><a name="removepanefrompanecontainer"></a>CPane컨테이너 관리자::제거페네에서파네컨테이너
 
 ```
 virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
@@ -769,13 +769,13 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBar*<br/>
+【인】 *p컨트롤바*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="replacepane"></a>  CPaneContainerManager::ReplacePane
+## <a name="cpanecontainermanagerreplacepane"></a><a name="replacepane"></a>CPane컨테이너 관리자::대체창
 
 ```
 virtual BOOL ReplacePane(
@@ -785,14 +785,14 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBarOld*<br/>
-[in] *pBarNew*<br/>
+【인】 *pBarOld*<br/>
+【인】 *pBarNew*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="resizepanecontainers"></a>  CPaneContainerManager::ResizePaneContainers
+## <a name="cpanecontainermanagerresizepanecontainers"></a><a name="resizepanecontainers"></a>CPane 컨테이너 관리자::크기 조정 컨테이너
 
 ```
 virtual void ResizePaneContainers(
@@ -808,17 +808,17 @@ virtual void ResizePaneContainers(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nSide*<br/>
-[in] *bExpand*<br/>
-[in] *nOffset*<br/>
-[in] *hdwp*<br/>
+【인】 *nSide*<br/>
+【인】 *b확장*<br/>
+【인】 *n오프셋*<br/>
+【인】 *HDWP*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="serialize"></a>  CPaneContainerManager::Serialize
+## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a>CPaneContainer 관리자::직렬화
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -828,31 +828,31 @@ void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setdefaultpanedividerforpanes"></a>  CPaneContainerManager::SetDefaultPaneDividerForPanes
+## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a>CPane 컨테이너 관리자::설정기본파인 분배기포파네
 
-```
+```cpp
 void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
+【인】 *p슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setpanecontainerrtc"></a>  CPaneContainerManager::SetPaneContainerRTC
+## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a>CPane컨테이너 관리자::세파네 컨테이너RTC
 
-```
+```cpp
 void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pContainerRTC*<br/>
+【인】 *p컨테이너RTC*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setresizemode"></a>  CPaneContainerManager::SetResizeMode
+## <a name="cpanecontainermanagersetresizemode"></a><a name="setresizemode"></a>CPane컨테이너 관리자::세트크기 모드
 
 ```
 virtual void SetResizeMode(BOOL bResize);
@@ -860,11 +860,11 @@ virtual void SetResizeMode(BOOL bResize);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bResize*<br/>
+【인】 *b 크기 조정*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainerManager::StoreRecentDockSiteInfo
+## <a name="cpanecontainermanagerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPane 컨테이너 관리자:::저장소최근독사이트정보
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -872,14 +872,14 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
 [CPaneContainer 클래스](../../mfc/reference/cpanecontainer-class.md)<br/>
-[CPaneDivider 클래스](../../mfc/reference/cpanedivider-class.md)
+[크파네 디바이더 클래스](../../mfc/reference/cpanedivider-class.md)

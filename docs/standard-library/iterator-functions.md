@@ -33,15 +33,15 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244030"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425648"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 함수
 
-## <a name="advance"></a> 고급
+## <a name="advance"></a>선
 
 지정된 위치 수만큼 반복기를 증가시킵니다.
 
@@ -62,9 +62,9 @@ template <class InputIterator, class Distance>
 
 증가 범위는 특이하지 않아야 하며, 반복기는 역참조 가능하거나 끝을 지날 수 있어야 합니다.
 
-경우는 `InputIterator` 다음에 양방향 반복기 형식의 요구 사항을 충족 *해제* 음수가 될 수 있습니다. 하는 경우 `InputIterator` , 입력 또는 정방향 반복기 형식인 *해제* 음수가 아니어야 합니다.
+`InputIterator` 양방향 반복기 형식에 대 한 요구 사항을 충족 하는 경우 *Off* 는 음수일 수 있습니다. `InputIterator` 입력 또는 전달 반복기 형식이 면 *Off* 는 음수가 아니어야 합니다.
 
-고급 함수에 고정적 복잡성 때 `InputIterator` , 임의 액세스 반복기의 요구 사항을 충족 합니다. 그렇지 않으면 선형 복잡성이 있으며 따라서 잠재적으로 높을 합니다.
+사전 함수는 `InputIterator` 임의 액세스 반복기의 요구 사항을 충족 하는 경우 일관 된 복잡성을 갖습니다. 그렇지 않으면 선형 복잡성이 발생 하므로 잠재적으로 비용이 많이 듭니다.
 
 ### <a name="example"></a>예제
 
@@ -113,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a> back_inserter
+## <a name="back_inserter"></a>back_inserter
 
 지정된 컨테이너 뒤에 요소를 삽입할 수 있는 반복기를 만듭니다.
 
@@ -127,9 +127,9 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 *_Cont*\
 후면 삽입을 실행할 컨테이너입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-A `back_insert_iterator` 컨테이너 개체에 연결 된 *_Cont*합니다.
+컨테이너 개체 *_Cont*연결 된 `back_insert_iterator`입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -184,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a> 시작
+## <a name="begin"></a>시작
 
 지정된 컨테이너의 첫 번째 요소에 대한 반복기를 검색합니다.
 
@@ -203,17 +203,17 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>매개 변수
 
-*계속*\
+*연속*\
 컨테이너입니다.
 
 *배열*\
 `Ty` 형식의 개체의 배열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 두 템플릿 함수에서 `cont.begin()`을 반환합니다. 첫 번째 함수는 비상수이고, 두 번째는 상수입니다.
 
-세 번째 템플릿 함수 *배열*합니다.
+세 번째 템플릿 함수는 *배열을*반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -286,7 +286,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
 지정된 컨테이너의 첫 번째 요소에 대한 상수 반복기를 검색합니다.
 
@@ -298,10 +298,10 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>매개 변수
 
-*계속*\
+*연속*\
 컨테이너 또는 initializer_list입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상수 `cont.begin()`입니다.
 
@@ -309,7 +309,7 @@ auto cbegin(const Container& cont)
 
 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.
 
-`begin()` 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 예제를 고려해 야 `Container` 수정 되도록 (비 **const**) 컨테이너 또는 `initializer_list` 지 원하는 모든 종류의 `begin()` 및 `cbegin()`합니다.
+`begin()` 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 수정 가능 (비 **const**) 컨테이너 또는 `begin()` 및 `cbegin()`를 지 원하는 모든 종류의 `initializer_list` `Container` 하는 것이 좋습니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -319,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
 지정된 컨테이너에서 마지막 요소 다음에 있는 요소에 대한 상수 반복기를 검색합니다.
 
@@ -331,10 +331,10 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>매개 변수
 
-*계속*\
+*연속*\
 컨테이너 또는 initializer_list입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 상수 `cont.end()`입니다.
 
@@ -342,7 +342,7 @@ auto cend(const Container& cont)
 
 이 함수는 모든 C++ 표준 라이브러리 컨테이너와 [initializer_list](../standard-library/initializer-list-class.md)에서 작동합니다.
 
-[end()](../standard-library/iterator-functions.md#end) 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 예제를 고려해 야 `Container` 수정 되도록 (비 **const**) 컨테이너 또는 `initializer_list` 지 원하는 모든 종류의 `end()` 및 `cend()`합니다.
+[end()](../standard-library/iterator-functions.md#end) 템플릿 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 수정 가능 (비 **const**) 컨테이너 또는 `end()` 및 `cend()`를 지 원하는 모든 종류의 `initializer_list` `Container` 하는 것이 좋습니다.
 
 ```cpp
 auto i1 = Container.end();
@@ -352,19 +352,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a> 데이터
+## <a name="data"></a>데이터로
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +373,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a> 거리
+## <a name="distance"></a>거리
 
 두 반복기에 의해 주소가 지정된 위치 사이의 간격의 수를 결정합니다.
 
@@ -390,13 +390,13 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *마지막*\
 첫 번째로부터의 거리를 결정해야 하는 두 번째 반복기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-수 있는 횟수 *첫 번째* 가 될 때까지 증가 되어야 *마지막*합니다.
+*마지막으로*같을 때까지 *먼저* 증가 해야 하는 횟수입니다.
 
 ### <a name="remarks"></a>설명
 
-Distance 함수 고정적 복잡성이 때 `InputIterator` , 임의 액세스 반복기의 요구 사항을 그렇지 않으면 선형 복잡성이 있으며 따라서 잠재적으로 비용이 많이 드는 합니다.
+Distance 함수는 `InputIterator` 임의 액세스 반복기의 요구 사항을 충족 하는 경우 일관 된 복잡성을 갖습니다. 그렇지 않으면 선형 복잡성이 발생 하므로 잠재적으로 비용이 많이 듭니다.
 
 ### <a name="example"></a>예제
 
@@ -454,7 +454,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a> 끝
+## <a name="end"></a>종단
 
 지정된 컨테이너에서 마지막 요소 다음의 요소에 대한 반복기를 검색합니다.
 
@@ -473,13 +473,13 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>매개 변수
 
-*계속*\
+*연속*\
 컨테이너입니다.
 
 *배열*\
 `Ty` 형식의 개체의 배열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 두 템플릿 함수는 `cont.end()`를 반환합니다(첫 번째 함수는 비상수이며, 두 번째 함수는 상수임).
 
@@ -489,7 +489,7 @@ Ty *end(Ty (& array)[Size]);
 
 코드 예제는 [begin](../standard-library/iterator-functions.md#begin)을 참조하세요.
 
-## <a name="front_inserter"></a> front_inserter
+## <a name="front_inserter"></a>front_inserter
 
 지정된 컨테이너 앞에 요소를 삽입할 수 있는 반복기를 만듭니다.
 
@@ -503,9 +503,9 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 *_Cont*\
 앞에 요소를 삽입할 컨테이너 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-A `front_insert_iterator` 컨테이너 개체에 연결 된 *_Cont*합니다.
+컨테이너 개체 *_Cont*연결 된 `front_insert_iterator`입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -560,9 +560,9 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a> inserter
+## <a name="inserter"></a>삽입기
 
-사용할 수 있도록 하는 도우미 템플릿 함수 `inserter(_Cont, _Where)` 대신 `insert_iterator<Container>(_Cont, _Where)`합니다.
+`insert_iterator<Container>(_Cont, _Where)`대신 `inserter(_Cont, _Where)`을 사용할 수 있도록 하는 도우미 템플릿 함수입니다.
 
 ```cpp
 template <class Container>
@@ -582,7 +582,7 @@ inserter(
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`합니다.
+템플릿 함수는 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -631,7 +631,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a> make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a>make_checked_array_iterator
 
 다른 알고리즘에서 사용할 수 있는 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)를 만듭니다.
 
@@ -649,7 +649,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>매개 변수
 
-*ptr*\
+*Ptr*\
 대상 배열에 대한 포인터입니다.
 
 *크기*\
@@ -658,7 +658,7 @@ Iter Ptr,
 *인덱스*\
 배열에 대한 선택적 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `checked_array_iterator`의 인스턴스입니다.
 
@@ -725,9 +725,9 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a> make_move_iterator
+## <a name="make_move_iterator"></a>make_move_iterator
 
-제공된 반복기를 `stored` 반복기로 포함하는 `move iterator`를 만듭니다.
+제공된 반복기를 `move iterator` 반복기로 포함하는 `stored`를 만듭니다.
 
 ```cpp
 template <class Iterator>
@@ -742,9 +742,9 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수 `move_iterator` `<Iterator>(_It)`합니다.
+템플릿 함수는 `move_iterator` `<Iterator>(_It)`를 반환 합니다.
 
-## <a name="make_unchecked_array_iterator"></a> make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
 
 다른 알고리즘에서 사용할 수 있는 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)를 만듭니다.
 
@@ -759,10 +759,10 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>매개 변수
 
-*ptr*\
+*Ptr*\
 대상 배열에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `unchecked_array_iterator`의 인스턴스입니다.
 
@@ -823,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a> 다음
+## <a name="next"></a>그런
 
 지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.
 
@@ -842,15 +842,15 @@ InputIterator next(
 *_Off*\
 반복할 횟수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-반복 후 새 반복기 위치를 반환 *_Off* 시간입니다.
+*_Off* 시간을 반복한 후 새 반복기 위치를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수 `next` 증가 *_Off* 시간
+템플릿 함수는 증가 하는 `next` *_Off* 시간을 반환 합니다.
 
-## <a name="prev"></a> 이전
+## <a name="prev"></a>이전
 
 역순으로 지정된 횟수만큼 반복하고 새 반복기 위치를 반환합니다.
 
@@ -871,23 +871,23 @@ BidirectionalIterator prev(
 
 ### <a name="remarks"></a>설명
 
-이 템플릿 함수는 `off`번 감소된 `next`를 반환합니다.
+이 템플릿 함수는 `next`번 감소된 `off`를 반환합니다.
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a> rend
+## <a name="rend"></a>rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a> 크기
+## <a name="size"></a>크기가
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());

@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4835
+title: 컴파일러 경고(수준 1) C4835
 ms.date: 11/04/2016
 f1_keywords:
 - C4835
 helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-ms.openlocfilehash: e59c8a7c9cdd9b892155a7d8ee8c8259324c2045
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: f86fcaea8a742c19ce175a453c06669178ed2145
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174858"
 ---
-# <a name="compiler-warning-level-1-c4835"></a>컴파일러 경고 (수준 1) C4835
+# <a name="compiler-warning-level-1-c4835"></a>컴파일러 경고(수준 1) C4835
 
 ' variable ': 내보낸 데이터의 이니셜라이저는 관리 코드가 호스트 어셈블리에서 먼저 실행 될 때까지 실행 되지 않습니다.
 

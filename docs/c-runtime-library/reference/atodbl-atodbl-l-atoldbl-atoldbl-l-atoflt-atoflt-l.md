@@ -1,6 +1,6 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _atoldbl
 - _atoldbl_l
@@ -8,6 +8,12 @@ api_name:
 - _atoflt
 - _atoflt_l
 - _atodbl_l
+- _o__atodbl
+- _o__atodbl_l
+- _o__atoflt
+- _o__atoflt_l
+- _o__atoldbl
+- _o__atoldbl_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +59,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920040"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-문자열을 double ( **_atodbl**), long double ( **_atoldbl**) 또는 float ( **_atoldbl**)로 변환 합니다.
+문자열을 double (**_atodbl**), long double (**_atoldbl**) 또는 float (**_atoflt**)로 변환 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -79,15 +86,15 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 문자열을 부동 소수점 값으로 변환하여 생성되는 double, long double 또는 float 값입니다. 이러한 값은 구조체에서 래핑됩니다.
 
-*str*<br/>
+*문자열*<br/>
 부동 소수점 값으로 변환하기 위해 구문 분석할 문자열입니다.
 
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공하면 0을 반환합니다. 가능한 오류 코드는 **_underflow** 또는 **_underflow**이며 헤더 파일 \<>에 정의 되어 있습니다.
+정상적으로 실행되는 경우 0을 반환합니다. 가능한 오류 코드는 **_UNDERFLOW** 또는 **_OVERFLOW**헤더 파일 \<>에 정의 되어 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -96,6 +103,8 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 문자열에 부동 소수점 값으로 유효한 해석이 없으면 *값* 이 0으로 설정 되 고 반환 값은 0이 됩니다.
 
 **_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 *로캘* 매개 변수를 사용 한다는 점을 제외 하 고 접미사가 없는 버전과 동일 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -159,9 +168,9 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

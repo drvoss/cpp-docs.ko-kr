@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-ms.openlocfilehash: a0b9c6dcd7ee19af59ac39a71498fe41bfc107ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22703e92b1a127378c965ce12bcc4e5475b3e452
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180838"
 ---
-# <a name="codeseg-declspec"></a>code_seg (__declspec)
+# <a name="code_seg-__declspec"></a>code_seg (__declspec)
 
 **Microsoft 전용**
 
-합니다 **code_seg** 선언 특성 함수 또는 클래스 멤버 함수의 개체 코드가 저장 될.obj 파일의 실행 텍스트 세그먼트의 이름을 지정 합니다.
+**Code_seg** 선언 특성은 함수 또는 클래스 멤버 함수의 개체 코드가 저장 될 .obj 파일에서 실행 가능한 텍스트 세그먼트의 이름을 지정할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,23 +25,23 @@ ms.locfileid: "62216556"
 __declspec(code_seg("segname")) declarator
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 `__declspec(code_seg(...))` 특성을 사용하면 메모리에 개별적으로 페이징 또는 잠글 수 있는 별도의 명명된 세그먼트에 코드를 배치할 수 있습니다. 이 특성을 사용하여 인스턴스화한 템플릿과 컴파일러에서 생성된 코드의 배치를 제어할 수 있습니다.
 
-A *세그먼트* 단위로 메모리에 로드 된.obj 파일에서 데이터의 명명 된 블록입니다. A *텍스트 세그먼트* 실행 코드가 포함 된 세그먼트입니다. 용어 *섹션* 세그먼트 함께 서로 교환해 서 주로 사용 됩니다.
+*세그먼트* 는 메모리에 하나의 단위로 로드 되는 .obj 파일의 명명 된 데이터 블록입니다. *텍스트 세그먼트* 는 실행 코드를 포함 하는 세그먼트입니다. 용어 *섹션* 은 세그먼트와 같은 의미로 사용 되는 경우가 많습니다.
 
-`declarator`가 지정될 때 생성되는 개체 코드는 좁은 문자열 리터럴인 `segname`에서 지정한 텍스트 세그먼트에 배치됩니다. 이름을 `segname` 지정할 필요가 없습니다를 [섹션](../preprocessor/section.md) pragma 선언에서 사용할 수 있습니다. 기본적으로 `code_seg`가 지정되지 않으면 개체 코드가 .text라는 세그먼트에 배치됩니다. A **code_seg** 기존 특성 재정의 [#pragma code_seg](../preprocessor/code-seg.md) 지시문입니다. A **code_seg** 멤버 함수에 적용 된 특성 재정의 **code_seg** 특성은 바깥쪽 클래스에 적용 합니다.
+`declarator`가 지정될 때 생성되는 개체 코드는 좁은 문자열 리터럴인 `segname`에서 지정한 텍스트 세그먼트에 배치됩니다. 이름 `segname` 선언에서 사용 하기 전에 [section](../preprocessor/section.md) pragma에 지정할 필요가 없습니다. 기본적으로 `code_seg`가 지정되지 않으면 개체 코드가 .text라는 세그먼트에 배치됩니다. **Code_seg** 특성은 모든 기존 [#pragma code_seg](../preprocessor/code-seg.md) 지시어를 재정의 합니다. 멤버 함수에 적용 된 **code_seg** 특성은 바깥쪽 클래스에 적용 된 모든 **code_seg** 특성을 재정의 합니다.
 
-엔터티의 경우는 **code_seg** 특성, 모든 선언 및 정의 동일한 엔터티의 동일한 있어야 **code_seg** 특성입니다. 기본 클래스에는 **code_seg** 특성을 파생 클래스에 동일한 특성이 있어야 합니다.
+엔터티에 **code_seg** 특성이 있는 경우 동일한 엔터티의 모든 선언 및 정의에 동일한 **code_seg** 특성이 있어야 합니다. 기본 클래스에 **code_seg** 특성이 있는 경우 파생 클래스에는 동일한 특성이 있어야 합니다.
 
-경우는 **code_seg** 특성 네임 스페이스 범위 함수 또는 멤버 함수에 적용 되 면 해당 함수의 개체 코드가 지정된 된 텍스트 세그먼트에 배치 됩니다. 이 특성이 클래스에 적용되면 컴파일러 생성 특수 멤버 함수를 포함하는 클래스와 중첩된 클래스의 모든 멤버 함수가 지정된 세그먼트에 배치됩니다. 로컬로 클래스를 정의-멤버 함수 본문에 정의 된 클래스 예를 들어-상속 하지 않습니다 합니다 **code_seg** 바깥쪽 범위의 특성입니다.
+**Code_seg** 특성이 네임 스페이스 범위 함수 또는 멤버 함수에 적용 되 면 해당 함수의 개체 코드가 지정 된 텍스트 세그먼트에 배치 됩니다. 이 특성이 클래스에 적용되면 컴파일러 생성 특수 멤버 함수를 포함하는 클래스와 중첩된 클래스의 모든 멤버 함수가 지정된 세그먼트에 배치됩니다. 멤버 함수 본문에 정의 된 클래스와 같이 로컬로 정의 된 클래스는 바깥쪽 범위의 **code_seg** 특성을 상속 하지 않습니다.
 
-경우는 **code_seg** 특성 템플릿 클래스 또는 템플릿 함수에 적용 되 면 템플릿의 모든 암시적 특수화가 지정된 된 세그먼트에 배치 됩니다. 명시적 또는 부분 특수화를 상속 하지 않는 합니다 **code_seg** 기본 템플릿에서 특성입니다. 동일 하거나 다른 지정할 수 있습니다 **code_seg** 특수화에는 특성입니다. A **code_seg** 특성은 명시적 템플릿 인스턴스화에 적용할 수 없습니다.
+**Code_seg** 특성이 템플릿 클래스 또는 템플릿 함수에 적용 되 면 템플릿의 모든 암시적 특수화가 지정 된 세그먼트에 배치 됩니다. 명시적 또는 부분 특수화는 기본 템플릿에서 **code_seg** 특성을 상속 하지 않습니다. 특수화에서 동일 하거나 다른 **code_seg** 특성을 지정할 수 있습니다. 명시적 템플릿 인스턴스화에는 **code_seg** 특성을 적용할 수 없습니다.
 
-기본적으로 특수 멤버 함수 등 컴파일러에서 생성된 코드는 .text 세그먼트에 배치됩니다. `#pragma code_seg` 지시문은 이 기본값을 재정의하지 않습니다. 사용 된 **code_seg** 클래스, 클래스 템플릿 또는 함수 템플릿은 컴파일러에서 생성 된 코드는 배치는 컨트롤에 대 한 특성입니다.
+기본적으로 특수 멤버 함수 등 컴파일러에서 생성된 코드는 .text 세그먼트에 배치됩니다. `#pragma code_seg` 지시문은 이 기본값을 재정의하지 않습니다. 클래스, 클래스 템플릿 또는 함수 템플릿의 **code_seg** 특성을 사용 하 여 컴파일러에서 생성 된 코드가 배치 되는 위치를 제어 합니다.
 
-람다 식은 상속 **code_seg** 는 바깥쪽 범위에서 특성입니다. 람다에 대 한 세그먼트를 지정 하려면 적용을 **code_seg** 특성 매개 변수 선언 절 뒤 및 하기 전에 변경할 수 또는 예외 사양, 모든 후행 반환 형식 사양 및 람다 본문입니다. 자세한 내용은 [람다 식 구문](../cpp/lambda-expression-syntax.md)합니다. 이 예제에서는 PagedMem이라는 세그먼트에 람다를 정의합니다.
+람다는 바깥쪽 범위에서 **code_seg** 특성을 상속 합니다. 람다에 대 한 세그먼트를 지정 하려면 매개 변수 선언 절 뒤에, 변경 가능한 또는 예외 지정, 후행 반환 형식 사양 및 람다 본문 앞에 **code_seg** 특성을 적용 합니다. 자세한 내용은 [람다 식 구문](../cpp/lambda-expression-syntax.md)을 참조 하세요. 이 예제에서는 PagedMem이라는 세그먼트에 람다를 정의합니다.
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -51,7 +51,7 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
 
 ## <a name="example"></a>예제
 
-이 예제에서는 어떻게를 **code_seg** 특성 컨트롤 세그먼트 배치 하면 암시적 및 명시적 템플릿 특수화는:
+이 예제에서는 암시적 및 명시적 템플릿 특수화를 사용할 때 **code_seg** 특성이 세그먼트 배치를 제어 하는 방법을 보여 줍니다.
 
 ```cpp
 // code_seg.cpp
@@ -105,7 +105,7 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [__declspec](../cpp/declspec.md)<br/>
 [키워드](../cpp/keywords-cpp.md)

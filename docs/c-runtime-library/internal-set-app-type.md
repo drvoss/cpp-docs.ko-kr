@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
-ms.openlocfilehash: 4d72eecd454e6c01e88c6869c96b628902690383
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8efe2159618f728cfaad33493dd482fbdd5375f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171491"
 ---
 # <a name="__set_app_type"></a>__set_app_type
 
@@ -44,9 +44,9 @@ void __set_app_type (
 #### <a name="parameters"></a>매개 변수
 
 *at*<br/>
-애플리케이션 형식을 나타내는 값입니다. 가능한 값은 다음과 같습니다.
+애플리케이션 형식을 나타내는 값입니다. 사용 가능한 값은
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |_UNKNOWN_APP|알 수 없는 애플리케이션 형식입니다.|
 |_CONSOLE_APP|콘솔(명령줄) 애플리케이션입니다.|
@@ -56,6 +56,6 @@ void __set_app_type (
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |__set_app_type|internal.h|

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325522"
 ---
 # <a name="l-value-and-r-value-expressions"></a>L-Value 및 R-Value 식
 
-메모리 위치를 참조하는 식을 "l-value" 식이라고 합니다. l-value는 스토리지 영역의 "로케이터" 값이나 "왼쪽" 값을 나타내므로 등호(**=**)의 왼쪽에 나타날 수 있습니다. l-value는 대개 식별자입니다.
+메모리 위치를 참조하는 식을 "l-value" 식이라고 합니다. l-value는 스토리지 영역의 "로케이터" 값이나 "왼쪽" 값을 나타내므로 등호( **=** )의 왼쪽에 나타날 수 있습니다. l-value는 대개 식별자입니다.
 
 수정할 수 있는 위치를 참조하는 식을 "수정할 수 있는 l-value"라고 합니다. 수정할 수 있는 l-value는 배열 형식, 불완전한 형식 또는 **const** 특성이 있는 형식일 수 없습니다. 구조체와 공용 구조체가 수정할 수 있는 l-value이려면 **const** 특성이 있는 멤버를 포함하지 않아야 합니다. 식별자의 이름은 스토리지 위치를 나타내지만, 변수의 값은 해당 위치에 저장된 값입니다.
 
@@ -26,9 +26,9 @@ ms.locfileid: "56150222"
 
 - 정수 계열, 부동 소수점, 포인터, 구조체 또는 공용 구조체 형식의 식별자
 
-- 배열로 평가되지 않는 첨자식(**[ ]**)
+- 배열로 평가되지 않는 첨자식( **[ ]** )
 
-- 멤버 선택 식(**->** 또는 **.**)
+- 멤버 선택 식( **->** 또는 **.** )
 
 - 배열을 참조하지 않는 단항 간접 참조 식(<strong>\*</strong>)
 
@@ -55,6 +55,6 @@ long l;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [피연산자 및 식](../c-language/operands-and-expressions.md)

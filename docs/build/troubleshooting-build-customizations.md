@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
 ms.openlocfilehash: 7a45b449dc9c3c4c81add37bbac0813c81133203
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315250"
@@ -35,6 +35,6 @@ ms.locfileid: "62315250"
 
 - 사용자 지정 빌드 단계를 실행하고 이벤트를 개별적으로 빌드하여 동작을 확인합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [사용자 지정 빌드 단계 및 빌드 이벤트 이해](understanding-custom-build-steps-and-build-events.md)

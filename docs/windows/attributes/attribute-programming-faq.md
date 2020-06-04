@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c1762994d2cb109e86397bb0a5db1258cf33be2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376057"
 ---
 # <a name="attribute-programming-faq"></a>특성 프로그래밍 FAQ
 
-이 항목에서는 다음 자주 묻는 질문에 대답 합니다.
+이 항목에서는 자주 묻는 다음과 같은 질문에 대한 답변을 제시합니다.
 
-- [HRESULT는 무엇입니까?](#vcconattributeprogrammmingfaqanchor1)
+- [HRESULT란 무엇입니까?](#vcconattributeprogrammmingfaqanchor1)
 
-- [특성에 대 한 매개 변수 이름을 지정 해야 하는 경우는 합니까?](#vcconattributeprogrammmingfaqanchor2)
+- [특성의 매개 변수 이름을 지정해야 하는 시기는 언제입니까?](#vcconattributeprogrammmingfaqanchor2)
 
-- [주석 특성 블록에서 사용할 수 있나요?](#vcconattributeprogrammmingfaqanchor3)
+- [특성 블록에서 주석을 사용할 수 있습니까?](#vcconattributeprogrammmingfaqanchor3)
 
-- [상속을 사용 하 여 특성 작용 수행 하는 방법](#vcconattributeprogrammmingfaqanchor4)
+- [특성은 상속과 어떻게 상호 작용합니까?](#vcconattributeprogrammmingfaqanchor4)
 
-- [하지 않는 ATL 프로젝트의 특성을 사용 하는 방법](#vcconattributeprogrammmingfaqanchor5)
+- [어트리뷰트되지 않은 ATL 프로젝트에서 특성을 사용해 두면 어떻게 해야 합니까?](#vcconattributeprogrammmingfaqanchor5)
 
-- [특성 사용된 프로젝트에.idl 파일을 사용 하는 방법](#vcconattributeprogrammmingfaqanchor6)
+- [어트리뷰트된 프로젝트에서 .idl 파일을 사용해 주시면 어떻게 해야 합니까?](#vcconattributeprogrammmingfaqanchor6)
 
-- [특성에 의해 삽입 된 코드를 수정할 수 있나요?](#vcconattributeprogrammmingfaqanchor7)
+- [특성에 의해 주입되는 코드를 수정할 수 있습니까?](#vcconattributeprogrammmingfaqanchor7)
 
-- [앞으로 특성 가진된 인터페이스를 선언할 수는 방법](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [어트리뷰트된 인터페이스를 선언하면 어떻게 해야 합니까?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [또한 특성을 사용 하는 클래스에서 파생 된 클래스에 특성을 사용할 수 있나요?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [특성을 사용하는 클래스에서 파생 된 클래스에서 특성을 사용할 수 있습니까?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT는 무엇입니까?
+## <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULT란 무엇입니까?
 
-HRESULT는 자주 사용 되는 반환 값으로 특성 및 ATL 일반적 단순 데이터 형식입니다. 다음 표에서 다양 한 값을 보여 줍니다. 더 많은 값은 헤더 파일은 winerror.h에 포함 됩니다.
+HRESULT는 일반적으로 특성 및 ATL에 의해 반환 값으로 자주 사용되는 간단한 데이터 형식입니다. 다음 표는 다양한 값을 설명합니다. 헤더 파일 winerror.h에 더 많은 값이 포함되어 있습니다.
 
-|이름|설명|값|
+|속성|Description|값|
 |----------|-----------------|-----------|
-|S_OK|작업 성공|0x00000000|
+|S_OK|작업이 성공했습니다.|0x00000000|
 |E_UNEXPECTED|예기치 않은 오류|0x8000FFFF|
-|E_NOTIMPL|구현 되지 않음|0x80004001|
-|E_OUTOFMEMORY|필요한 메모리를 할당 하지 못했습니다.|0x8007000E|
-|E_INVALIDARG|하나 이상의 인수가 올바르지 않습니다.|0x80070057|
-|E_NOINTERFACE|인터페이스|0x80004002|
-|E_POINTER|잘못 된 포인터|0x80004003|
-|E_HANDLE|잘못 된 핸들|0x80070006|
-|E_ABORT|작업이 중단 되었습니다|0x80004004|
-|E_FAIL|지정 되지 않은 오류|0x80004005|
+|E_NOTIMPL|구현되지 않음|0x80004001|
+|E_OUTOFMEMORY|필요한 메모리를 할당하지 못했습니다.|0x8007000E|
+|E_INVALIDARG|하나 이상의 인수가 잘못되었습니다.|0x80070057|
+|E_NOINTERFACE|이러한 인터페이스가 지원되지 않음|0x80004002|
+|E_POINTER|잘못된 포인터|0x80004003|
+|E_HANDLE|잘못된 핸들|0x80070006|
+|E_ABORT|작동 이 중단되었습니다.|0x80004004|
+|E_FAIL|지정되지 않은 오류|0x80004005|
 |E_ACCESSDENIED|일반 액세스 거부 오류|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 특성에 대 한 매개 변수 이름을 지정 해야 하는 경우는 합니까?
+## <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>특성의 매개 변수 이름을 지정해야 하는 시기는 언제입니까?
 
-대부분의 경우에서 특성에는 단일 매개 변수가 해당 매개 변수 명명 됩니다. 이 이름은 코드에 특성을 삽입 하는 경우 필요 하지 않습니다. 예를 들어, 다음 사용 합니다 [집계할](aggregatable.md) 특성:
+대부분의 경우 특성에 단일 매개 변수가 있는 경우 해당 매개 변수의 이름이 지정됩니다. 코드에 특성을 삽입할 때 이 이름은 필요하지 않습니다. 예를 들어 집계 [가능한](aggregatable.md) 특성의 다음 사용:
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -66,7 +66,7 @@ class CMyClass
 };
 ```
 
-정확히와 같습니다.
+정확히 동일합니다.
 
 ```cpp
 [coclass, aggregatable(allowed)]
@@ -76,27 +76,27 @@ class CMyClass
 };
 ```
 
-그러나 다음과 같은 특성에 단일, 명명 되지 않은 매개 변수
+그러나 다음 특성에는 명명되지 않은 단일 매개 변수가 있습니다.
 
 ||||
 |-|-|-|
-|[call_as](call-as.md)|[case](case-cpp.md)|[cpp_quote](cpp-quote.md)|
-|[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
-|[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
-|[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
-|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[ID](id.md)|
-|[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
-|[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
+|[call_as](call-as.md)|[경우](case-cpp.md)|[cpp_quote](cpp-quote.md)|
+|[default](default-cpp.md)|[Defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
+|[emitidl](emitidl.md)|[항목](entry.md)|[first_is](first-is.md)|
+|[helpcontext](helpcontext.md)|[Helpfile](helpfile.md)|[helpstring](helpstring.md)|
+|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[id](id.md)|
+|[iid_is](iid-is.md)|[가져오기](import.md)|[importlib](importlib.md)|
+|[포함](include-cpp.md)|[포함 리브](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
-|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[제한](restricted.md)|
+|[size_is](size-is.md)|[소스](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 주석 특성 블록에서 사용할 수 있나요?
+## <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>특성 블록에서 주석을 사용할 수 있습니까?
 
-특성 블록 내에서 한 줄 및 여러 줄 주석을 사용할 수 있습니다. 그러나 주석 특성은 매개 변수가 들어 있는 괄호 안에 두 스타일 중 하나를 사용할 수 없습니다.
+특성 블록 내에서 한 줄 및 다중 줄 주석을 모두 사용할 수 있습니다. 그러나 특성에 대한 매개 변수를 보유하는 괄호 안에 주석 스타일을 사용할 수 없습니다.
 
-다음은 허용 됩니다.
+다음이 허용됩니다.
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +105,30 @@ class CMyClass
 ]
 ```
 
-다음은 허용 되지 않습니다.
+다음은 허용되지 않습니다.
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 상속을 사용 하 여 특성 작용 수행 하는 방법
+## <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>특성은 상속과 어떻게 상호 작용합니까?
 
-특성을 사용 하 고 해결 되지 않은 클래스 있습니다 자체 때문일 여부는 다른 클래스에서 상속할 수 있습니다. 특성 사용된 하는 클래스에서 파생 하는 결과 특성 공급자가 해당 코드를 변환 된 후 해당 클래스에서 파생와 같습니다. 특성을 통해 파생된 클래스에 전송 되지 않습니다 C++ 상속 합니다. 특성 공급자만 해당 특성 유사 하 게 코드를 변환합니다.
+어트리뷰터된 클래스와 어트리뷰트되지 않은 클래스를 모두 상속할 수 있습니다. 특성이 있는 클래스에서 파생된 결과는 특성 공급자가 해당 코드를 변환한 후 해당 클래스에서 파생되는 것과 동일합니다. 특성은 C++ 상속을 통해 파생 클래스로 전송되지 않습니다. 특성 공급자는 특성 부근에서만 코드를 변환합니다.
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 하지 않는 ATL 프로젝트의 특성을 사용 하는 방법
+## <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>어트리뷰트되지 않은 ATL 프로젝트에서 특성을 사용해 두면 어떻게 해야 합니까?
 
-.Idl 파일에는 하지 않는 ATL 프로젝트를 해야 하 고 특성 사용된 개체 추가 시작 하는 것이 좋습니다. 이 경우에 사용 된 **클래스 추가 마법사** 코드를 제공 합니다.
+.idl 파일이 있는 속성이 없는 ATL 프로젝트가 있을 수 있으며 특성이 있는 개체를 추가할 수 있습니다. 이 경우 클래스 **추가 마법사를** 사용하여 코드를 제공합니다.
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 특성 사용된 프로젝트에.idl 파일을 사용 하는 방법
+## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>어트리뷰트된 프로젝트에서 .idl 파일을 사용해 주시면 어떻게 해야 합니까?
 
-특성 사용 ATL 프로젝트에서 사용 하려는.idl 파일이 있을 수 있습니다. 사용이 경우에 [importidl](importidl.md) 특성,.h 파일.idl 파일을 컴파일할 (참조는 [MIDL Property Pages](../../build/reference/midl-property-pages.md) 프로젝트의 **속성 페이지** 대화 상자), 및 그런 다음 프로젝트에.h 파일을 포함 합니다.
+ATL 어트리뷰트 프로젝트에서 사용할 .idl 파일이 있을 수 있습니다. 이 경우 [importidl](importidl.md) 특성을 사용하고 .idl 파일을 .h 파일로 컴파일한 다음(프로젝트의 **속성 페이지** 대화 상자에서 [MIDL 속성 페이지](../../build/reference/midl-property-pages.md) 참조) 프로젝트에 .h 파일을 포함합니다.
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 특성에 의해 삽입 된 코드를 수정할 수 있나요?
+## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>특성에 의해 주입되는 코드를 수정할 수 있습니까?
 
-일부 특성 프로젝트에 코드를 삽입합니다. 사용 하 여 삽입된 된 코드를 볼 수는 [/Fx](../../build/reference/fx-merge-injected-code.md) 컴파일러 옵션입니다. 삽입된 된 파일에서 코드를 복사 하 고 소스 코드에 붙여 넣습니다 수 이기도 합니다. 이 특성의 동작을 수정할 수 있습니다. 그러나 다른 부분 에서도 코드를 수정 해야 합니다.
+일부 특성은 프로젝트에 코드를 삽입합니다. [/Fx](../../build/reference/fx-merge-injected-code.md) 컴파일러 옵션을 사용하여 주입된 코드를 볼 수 있습니다. 주입된 파일에서 코드를 복사하여 소스 코드에 붙여넣을 수도 있습니다. 이렇게 하면 특성의 동작을 수정할 수 있습니다. 그러나 코드의 다른 부분도 수정해야 할 수 있습니다.
 
-다음 샘플은 소스 코드 파일에 삽입 된 코드를 복사 하는 결과.
+다음 샘플은 삽입된 코드를 소스 코드 파일로 복사한 결과입니다.
 
 ```cpp
 // attr_injected.cpp
@@ -234,14 +234,14 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 앞으로 특성 가진된 인터페이스를 선언할 수는 방법
+## <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>어트리뷰트된 인터페이스를 선언하면 어떻게 해야 합니까?
 
-특성 가진된 인터페이스의 정방향 선언 되도록 하려는 경우에 실제 인터페이스 선언에 적용 되는 정방향 선언에 동일한 특성을 적용 해야 합니다. 적용 해야 합니다 [내보내기](export.md) 정방향 선언 하는 특성입니다.
+특성이 있는 인터페이스의 전달 선언을 만들려면 실제 인터페이스 선언에 적용하는 전달 선언에 동일한 특성을 적용해야 합니다. 또한 전달 선언에 [내보내기](export.md) 특성을 적용해야 합니다.
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 또한 특성을 사용 하는 클래스에서 파생 된 클래스에 특성을 사용할 수 있나요?
+## <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>특성을 사용하는 클래스에서 파생 된 클래스에서 특성을 사용할 수 있습니까?
 
-아니요, 또한 특성을 사용 하는 클래스에서 파생 된 클래스에서 특성을 사용 하 여도 지원 되지 않습니다.
+아니요, 특성을 사용하는 클래스에서 파생된 클래스에서 특성을 사용하는 것은 지원되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[COM 및 .NET에 대한 C++ 특성](cpp-attributes-com-net.md)
+[COM 및 .NET의 C++ 특성](cpp-attributes-com-net.md)

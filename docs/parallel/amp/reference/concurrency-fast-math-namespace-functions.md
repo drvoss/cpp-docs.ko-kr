@@ -46,43 +46,43 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: cd0882b072cfe26cd83e63024ae6837dc962ebf9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127009"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376404"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math 네임스페이스 함수
 
 ||||
 |-|-|-|
-|[acos](#acos)|[acosf](#acosf)|[asin](#asin)|
-|[asinf](#asinf)|[atan](#atan)|[atan2](#atan2)|
-|[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|
-|[ceilf](#ceilf)|[cos](#cos)|[cosf](#cosf)|
-|[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|
+|[Acos](#acos)|[acosf](#acosf)|[Asin](#asin)|
+|[asinf](#asinf)|[Atan](#atan)|[atan2](#atan2)|
+|[atan2f](#atan2f)|[atanf](#atanf)|[Ceil](#ceil)|
+|[ceilf](#ceilf)|[Cos](#cos)|[cosf](#cosf)|
+|[cosh](#cosh)|[coshf](#coshf)|[특급](#exp)|
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|
-|[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|
+|[fabs](#fabs)|[fabsf](#fabsf)|[바닥](#floor)|
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|
-|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|
-|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|
-|[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|
-|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|
+|[fmin](#fmin)|[fminf](#fminf)|[Fmod](#fmod)|
+|[fmodf](#fmodf)|[frexp](#frexp)|[프렉스프 ()프렉스프 (](#frexpf)|
+|[이스피니트](#isfinite)|[이신프](#isinf)|[이산 (isnan)](#isnan)|
+|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[로그](#log)|
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[pow](#pow)|[powf](#powf)|
-|[round](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|
-|[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|
-|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|
+|[라운드](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|
+|[rsqrtf](#rsqrtf)|[signbit](#signbit)|[사인비트프](#signbitf)|
+|[죄](#sin)|[신코스](#sincos)|[신코스프](#sincosf)|
 |[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|
-|[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|
-|[tanf](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|
-|[trunc](#trunc)|[truncf](#truncf)|
+|[Sqrt](#sqrt)|[sqrtf](#sqrtf)|[탄](#tan)|
+|[tanf](#tanf)|[Tanh](#tanh)|[tanhf](#tanhf)|
+|[트렁크는](#trunc)|[truncf](#truncf)|
 
-## <a name="acos"></a>  acos
+## <a name="acos"></a><a name="acos"></a>Acos
 
-인수의 아크코사인을 계산 합니다.
+인수의 아크코신계산
 
 ```cpp
 inline float acos(float _X) restrict(amp);
@@ -90,16 +90,16 @@ inline float acos(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크코사인 값을 반환합니다.
 
-## <a name="acosf"></a>acosf
+## <a name="acosf"></a><a name="acosf"></a>아코스프 ()에이코스프
 
-인수의 아크코사인을 계산 합니다.
+인수의 아크코신계산
 
 ```cpp
 inline float acosf(float _X) restrict(amp);
@@ -107,16 +107,16 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크코사인 값을 반환합니다.
 
-## <a name="asin"></a>  asin
+## <a name="asin"></a><a name="asin"></a>Asin
 
-인수의 아크사인을 계산 합니다.
+인수의 호신을 계산합니다.
 
 ```cpp
 inline float asin(float _X) restrict(amp);
@@ -124,16 +124,16 @@ inline float asin(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크사인 값을 반환합니다.
 
-## <a name="asinf"></a>asinf
+## <a name="asinf"></a><a name="asinf"></a>아신프
 
-인수의 아크사인을 계산 합니다.
+인수의 호신을 계산합니다.
 
 ```cpp
 inline float asinf(float _X) restrict(amp);
@@ -141,14 +141,14 @@ inline float asinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크사인 값을 반환합니다.
 
-## <a name="atan"></a>  atan
+## <a name="atan"></a><a name="atan"></a>Atan
 
 인수의 아크탄젠트를 계산합니다.
 
@@ -158,16 +158,16 @@ inline float atan(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크탄젠트 값을 반환합니다.
 
-## <a name="atan2"></a>  atan2
+## <a name="atan2"></a><a name="atan2"></a>아탄2
 
-_Y/_X의 아크탄젠트를 계산 합니다.
+_Y/_X 아크탠젠트를 계산합니다.
 
 ```cpp
 inline float atan2(
@@ -177,19 +177,19 @@ inline float atan2(
 
 ### <a name="parameters"></a>매개 변수
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _Y/_X의 아크탄젠트 값을 반환합니다.
 
-## <a name="atan2f"></a>atan2f
+## <a name="atan2f"></a><a name="atan2f"></a>아탄2f
 
-_Y/_X의 아크탄젠트를 계산 합니다.
+_Y/_X 아크탠젠트를 계산합니다.
 
 ```cpp
 inline float atan2f(
@@ -199,17 +199,17 @@ inline float atan2f(
 
 ### <a name="parameters"></a>매개 변수
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _Y/_X의 아크탄젠트 값을 반환합니다.
 
-## <a name="atanf"></a>atanf
+## <a name="atanf"></a><a name="atanf"></a>아탄프 (동안)
 
 인수의 아크탄젠트를 계산합니다.
 
@@ -219,16 +219,16 @@ inline float atanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 아크탄젠트 값을 반환합니다.
 
-## <a name="ceil"></a>ceil
+## <a name="ceil"></a><a name="ceil"></a>Ceil
 
-인수의 최대값을 계산 합니다.
+인수의 천장을 계산합니다.
 
 ```cpp
 inline float ceil(float _X) restrict(amp);
@@ -236,16 +236,16 @@ inline float ceil(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 한계를 반환합니다.
 
-## <a name="ceilf"></a>ceilf
+## <a name="ceilf"></a><a name="ceilf"></a>실프 (것)에 프실프 (것
 
-인수의 최대값을 계산 합니다.
+인수의 천장을 계산합니다.
 
 ```cpp
 inline float ceilf(float _X) restrict(amp);
@@ -253,14 +253,14 @@ inline float ceilf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 한계를 반환합니다.
 
-## <a name="cosf"></a>cosf
+## <a name="cosf"></a><a name="cosf"></a>코스프 ()코스프
 
 인수의 코사인을 계산합니다.
 
@@ -270,16 +270,16 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 코사인 값을 반환합니다.
 
-## <a name="coshf"></a>coshf
+## <a name="coshf"></a><a name="coshf"></a>코스프 ()에프 ()에프 (
 
-인수의 하이퍼볼릭 코사인 값을 계산 합니다.
+인수의 쌍곡선 코신 값을 계산합니다.
 
 ```cpp
 inline float coshf(float _X) restrict(amp);
@@ -287,14 +287,14 @@ inline float coshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 코사인 값을 반환합니다.
 
-## <a name="cos"></a>  cos
+## <a name="cos"></a><a name="cos"></a>Cos
 
 인수의 코사인을 계산합니다.
 
@@ -304,16 +304,16 @@ inline float cos(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 코사인 값을 반환합니다.
 
-## <a name="cosh"></a>  cosh
+## <a name="cosh"></a><a name="cosh"></a>코시 (주)
 
-인수의 하이퍼볼릭 코사인 값을 계산 합니다.
+인수의 쌍곡선 코신 값을 계산합니다.
 
 ```cpp
 inline float cosh(float _X) restrict(amp);
@@ -321,16 +321,16 @@ inline float cosh(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 코사인 값을 반환합니다.
 
-## <a name="exp"></a>  exp
+## <a name="exp"></a><a name="exp"></a>특급
 
-인수의 밑이 e 인 지 수를 계산 합니다.
+인수의 기본 e 지수를 계산합니다.
 
 ```cpp
 inline float exp(float _X) restrict(amp);
@@ -338,16 +338,16 @@ inline float exp(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 e인 지수 값을 반환합니다.
 
-## <a name="exp2"></a>exp2
+## <a name="exp2"></a><a name="exp2"></a>exp2
 
-인수의 밑이 2 인 지 수를 계산 합니다.
+인수의 기본 2 지수를 계산합니다.
 
 ```cpp
 inline float exp2(float _X) restrict(amp);
@@ -355,16 +355,16 @@ inline float exp2(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 2인 지수 값을 반환합니다.
 
-## <a name="exp2f"></a>exp2f
+## <a name="exp2f"></a><a name="exp2f"></a>exp2f
 
-인수의 밑이 2 인 지 수를 계산 합니다.
+인수의 기본 2 지수를 계산합니다.
 
 ```cpp
 inline float exp2f(float _X) restrict(amp);
@@ -372,16 +372,16 @@ inline float exp2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 2인 지수 값을 반환합니다.
 
-## <a name="expf"></a>expf
+## <a name="expf"></a><a name="expf"></a>expf
 
-인수의 밑이 e 인 지 수를 계산 합니다.
+인수의 기본 e 지수를 계산합니다.
 
 ```cpp
 inline float expf(float _X) restrict(amp);
@@ -389,16 +389,16 @@ inline float expf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 e인 지수 값을 반환합니다.
 
-## <a name="fabs"></a>fabs
+## <a name="fabs"></a><a name="fabs"></a>팹
 
-인수의 절대 값을 반환 합니다.
+인수의 절대 값을 반환합니다.
 
 ```cpp
 inline float fabs(float _X) restrict(amp);
@@ -406,16 +406,16 @@ inline float fabs(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 정수 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 절대 값을 반환 합니다.
+인수의 절대 값을 반환합니다.
 
-## <a name="fabsf"></a>fabsf
+## <a name="fabsf"></a><a name="fabsf"></a>팹스프 (것)
 
-인수의 절대 값을 반환 합니다.
+인수의 절대 값을 반환합니다.
 
 ```cpp
 inline float fabsf(float _X) restrict(amp);
@@ -423,16 +423,16 @@ inline float fabsf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 절대 값을 반환 합니다.
+인수의 절대 값을 반환합니다.
 
-## <a name="floor"></a>평면
+## <a name="floor"></a><a name="floor"></a>바닥
 
-인수의 바닥을 계산 합니다.
+인수의 바닥을 계산합니다.
 
 ```cpp
 inline float floor(float _X) restrict(amp);
@@ -440,16 +440,16 @@ inline float floor(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑을 반환합니다.
 
-## <a name="floorf"></a>floorf
+## <a name="floorf"></a><a name="floorf"></a>플로어프
 
-인수의 바닥을 계산 합니다.
+인수의 바닥을 계산합니다.
 
 ```cpp
 inline float floorf(float _X) restrict(amp);
@@ -457,16 +457,16 @@ inline float floorf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑을 반환합니다.
 
-## <a name="fmax"></a>fmax
+## <a name="fmax"></a><a name="fmax"></a>fmax
 
-인수의 최대 숫자 값을 결정 합니다.
+인수의 최대 숫자 값 결정
 
 ```cpp
 inline float max(
@@ -476,19 +476,19 @@ inline float max(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 정수 값
 
-*_Y*<br/>
+*_y*<br/>
 정수 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 최대 숫자 값을 반환 합니다.
+인수의 최대 숫자 값을 반환합니다.
 
-## <a name="fmaxf"></a>fmaxf
+## <a name="fmaxf"></a><a name="fmaxf"></a>fmaxf
 
-인수의 최대 숫자 값을 결정 합니다.
+인수의 최대 숫자 값 결정
 
 ```cpp
 inline float fmaxf(
@@ -498,19 +498,19 @@ inline float fmaxf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 최대 숫자 값을 반환 합니다.
+인수의 최대 숫자 값을 반환합니다.
 
-## <a name="fmin"></a>fmin
+## <a name="fmin"></a><a name="fmin"></a>fmin
 
-인수의 최소 숫자 값을 확인 합니다.
+인수의 최소 숫자 값 결정
 
 ```cpp
 inline float min(
@@ -520,19 +520,19 @@ inline float min(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 정수 값
 
-*_Y*<br/>
+*_y*<br/>
 정수 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 최소 숫자 값을 반환 합니다.
+인수의 최소 숫자 값을 반환합니다.
 
-## <a name="fminf"></a>fminf
+## <a name="fminf"></a><a name="fminf"></a>fminf
 
-인수의 최소 숫자 값을 확인 합니다.
+인수의 최소 숫자 값 결정
 
 ```cpp
 inline float fminf(
@@ -542,19 +542,19 @@ inline float fminf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 최소 숫자 값을 반환 합니다.
+인수의 최소 숫자 값을 반환합니다.
 
-## <a name="fmod"></a>fmod
+## <a name="fmod"></a><a name="fmod"></a>Fmod
 
-_X/_Y의 부동 소수점 나머지를 계산 합니다.
+_X/_Y 부동점 나머지 를 계산합니다.
 
 ```cpp
 inline float fmod(
@@ -564,17 +564,17 @@ inline float fmod(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X/_Y의 부동 소수점 나머지를 반환합니다.
 
-## <a name="fmodf"></a>fmodf
+## <a name="fmodf"></a><a name="fmodf"></a>fmodf
 
 _X/_Y의 부동 소수점 나머지를 계산합니다.
 
@@ -586,19 +586,19 @@ inline float fmodf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X/_Y의 부동 소수점 나머지를 반환합니다.
 
-## <a name="frexp"></a>frexp
+## <a name="frexp"></a><a name="frexp"></a>frexp
 
-의가 수와 지 수를 가져옵니다 _X
+_X 의 사마증과 지수를 가져옵니다
 
 ```cpp
 inline float frexp(
@@ -608,7 +608,7 @@ inline float frexp(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 *_Exp*<br/>
@@ -618,9 +618,9 @@ inline float frexp(
 
 _X의 가수를 반환합니다.
 
-## <a name="frexpf"></a>frexpf
+## <a name="frexpf"></a><a name="frexpf"></a>프렉스프 ()프렉스프 (
 
-의가 수와 지 수를 가져옵니다 _X
+_X 의 사마증과 지수를 가져옵니다
 
 ```cpp
 inline float frexpf(
@@ -630,7 +630,7 @@ inline float frexpf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 *_Exp*<br/>
@@ -640,9 +640,9 @@ inline float frexpf(
 
 _X의 가수를 반환합니다.
 
-## <a name="isfinite"></a>isfinite
+## <a name="isfinite"></a><a name="isfinite"></a>이스피니트
 
-인수에 유한 값이 있는지 여부를 확인 합니다.
+인수에 유한 값이 있는지 여부를 결정합니다.
 
 ```cpp
 inline int isfinite(float _X) restrict(amp);
@@ -650,16 +650,16 @@ inline int isfinite(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수가 유한인 값인 경우에만 0이 아닌 값을 반환합니다.
 
-## <a name="isinf"></a>isinf
+## <a name="isinf"></a><a name="isinf"></a>이신프
 
-인수가 무한대 인지 여부를 확인 합니다.
+인수가 무한대인지 여부를 결정합니다.
 
 ```cpp
 inline int isinf(float _X) restrict(amp);
@@ -667,16 +667,16 @@ inline int isinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수가 무한대 값인 경우에 0이 아닌 값을 반환합니다.
 
-## <a name="isnan"></a>isnan
+## <a name="isnan"></a><a name="isnan"></a>이산 (isnan)
 
-인수가 NaN 인지 여부를 확인 합니다.
+인수가 NaN인지 여부를 결정합니다.
 
 ```cpp
 inline int isnan(float _X) restrict(amp);
@@ -684,16 +684,16 @@ inline int isnan(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수가 NaN 값을 갖는 경우에만 0이 아닌 값을 반환합니다.
 
-## <a name="ldexp"></a>ldexp
+## <a name="ldexp"></a><a name="ldexp"></a>ldexp
 
-가 수 및 지 수에서 실수를 계산 합니다.
+가사 및 지수에서 실제 숫자를 계산합니다.
 
 ```cpp
 inline float ldexp(
@@ -703,7 +703,7 @@ inline float ldexp(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값, 가수
 
 *_Exp*<br/>
@@ -711,11 +711,11 @@ inline float ldexp(
 
 ### <a name="return-value"></a>Return Value
 
-_X \* 2 ^ _Exp 반환 합니다.
+_X \* 2^_Exp 반환
 
-## <a name="ldexpf"></a>ldexpf
+## <a name="ldexpf"></a><a name="ldexpf"></a>ldexpf
 
-가 수 및 지 수에서 실수를 계산 합니다.
+가사 및 지수에서 실제 숫자를 계산합니다.
 
 ```cpp
 inline float ldexpf(
@@ -725,7 +725,7 @@ inline float ldexpf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값, 가수
 
 *_Exp*<br/>
@@ -733,11 +733,11 @@ inline float ldexpf(
 
 ### <a name="return-value"></a>Return Value
 
-_X \* 2 ^ _Exp 반환 합니다.
+_X \* 2^_Exp 반환
 
-## <a name="log"></a>  log
+## <a name="log"></a><a name="log"></a>로그
 
-인수의 밑이 e 인 로그를 계산 합니다.
+인수의 기본 e 로그릿헴을 계산합니다.
 
 ```cpp
 inline float log(float _X) restrict(amp);
@@ -745,16 +745,16 @@ inline float log(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 e인 로그 값을 반환합니다.
 
-## <a name="log10"></a>  log10
+## <a name="log10"></a><a name="log10"></a>log10
 
-인수의 밑이 10 인 로그를 계산 합니다.
+인수의 기본 10 로그릿헴을 계산합니다.
 
 ```cpp
 inline float log10(float _X) restrict(amp);
@@ -762,16 +762,16 @@ inline float log10(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 10인 로그 값을 반환합니다.
 
-## <a name="log10f"></a>log10f
+## <a name="log10f"></a><a name="log10f"></a>log10f
 
-인수의 밑이 10 인 로그를 계산 합니다.
+인수의 기본 10 로그릿헴을 계산합니다.
 
 ```cpp
 inline float log10f(float _X) restrict(amp);
@@ -779,16 +779,16 @@ inline float log10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 10인 로그 값을 반환합니다.
 
-## <a name="log2"></a>log2
+## <a name="log2"></a><a name="log2"></a>log2
 
-인수의 밑이 2 인 로그를 계산 합니다.
+인수의 기본 2 로그릿헴을 계산합니다.
 
 ```cpp
 inline float log2(float _X) restrict(amp);
@@ -796,16 +796,16 @@ inline float log2(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 밑이 2 인 로그를 반환 합니다.
+인수의 기본 2 로그림을 반환합니다.
 
-## <a name="log2f"></a>log2f
+## <a name="log2f"></a><a name="log2f"></a>log2f
 
-인수의 밑이 2 인 로그를 계산 합니다.
+인수의 기본 2 로그릿헴을 계산합니다.
 
 ```cpp
 inline float log2f(float _X) restrict(amp);
@@ -813,16 +813,16 @@ inline float log2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 10인 로그 값을 반환합니다.
 
-## <a name="logf"></a>logf
+## <a name="logf"></a><a name="logf"></a>로그 (것)로
 
-인수의 밑이 e 인 로그를 계산 합니다.
+인수의 기본 e 로그릿헴을 계산합니다.
 
 ```cpp
 inline float logf(float _X) restrict(amp);
@@ -830,16 +830,16 @@ inline float logf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 밑이 e인 로그 값을 반환합니다.
 
-## <a name="modf"></a>modf
+## <a name="modf"></a><a name="modf"></a>모드
 
-_X을 소수 부분과 정수 부분으로 분할 합니다.
+_X 소수 및 정수 부분으로 분할합니다.
 
 ```cpp
 inline float modf(
@@ -849,7 +849,7 @@ inline float modf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 *_Ip*<br/>
@@ -859,9 +859,9 @@ inline float modf(
 
 _X의 부호 있는 소수 부분을 반환합니다.
 
-## <a name="modff"></a>modff
+## <a name="modff"></a><a name="modff"></a>모드 프
 
-_X을 소수 부분과 정수 부분으로 분할 합니다.
+_X 소수 및 정수 부분으로 분할합니다.
 
 ```cpp
 inline float modff(
@@ -871,7 +871,7 @@ inline float modff(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 *_Ip*<br/>
@@ -881,9 +881,9 @@ inline float modff(
 
 _X의 부호 있는 소수 부분을 반환합니다.
 
-## <a name="pow"></a>  pow
+## <a name="pow"></a><a name="pow"></a>포로
 
-_Y의 거듭제곱으로 발생 한 _X 계산 합니다.
+_Y 힘으로 제기 _X 계산
 
 ```cpp
 inline float pow(
@@ -893,19 +893,19 @@ inline float pow(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값, 밑
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값, 지수
 
 ### <a name="return-value"></a>Return Value
 
-_X의 거듭제곱 값을 반환 _Y
+_Y 힘으로 제기된 _X 값을 반환합니다.
 
-## <a name="powf"></a>powf
+## <a name="powf"></a><a name="powf"></a>포프 ()와 포프 (것)
 
-_Y의 거듭제곱으로 발생 한 _X 계산 합니다.
+_Y 힘으로 제기 _X 계산
 
 ```cpp
 inline float powf(
@@ -915,17 +915,17 @@ inline float powf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값, 밑
 
-*_Y*<br/>
+*_y*<br/>
 부동 소수점 값, 지수
 
 ### <a name="return-value"></a>Return Value
 
-## <a name="round"></a>둥근
+## <a name="round"></a><a name="round"></a>라운드
 
-_X를 가장 가까운 정수로 반올림 합니다.
+가장 가까운 정수로 _X
 
 ```cpp
 inline float round(float _X) restrict(amp);
@@ -933,16 +933,16 @@ inline float round(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X의 가장 가까운 정수를 반환합니다.
 
-## <a name="roundf"></a>roundf
+## <a name="roundf"></a><a name="roundf"></a>라운드프
 
-_X를 가장 가까운 정수로 반올림 합니다.
+가장 가까운 정수로 _X
 
 ```cpp
 inline float roundf(float _X) restrict(amp);
@@ -950,16 +950,16 @@ inline float roundf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X의 가장 가까운 정수를 반환합니다.
 
-## <a name="rsqrt"></a>rsqrt
+## <a name="rsqrt"></a><a name="rsqrt"></a>rsqrt
 
-인수의 제곱근의 역을 반환 합니다.
+인수의 제곱근의 호수를 반환합니다.
 
 ```cpp
 inline float rsqrt(float _X) restrict(amp);
@@ -967,16 +967,16 @@ inline float rsqrt(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 제곱근의 역을 반환 합니다.
+인수의 제곱근의 호수를 반환합니다.
 
-## <a name="rsqrtf"></a>rsqrtf
+## <a name="rsqrtf"></a><a name="rsqrtf"></a>rsqrtf
 
-인수의 제곱근의 역을 반환 합니다.
+인수의 제곱근의 호수를 반환합니다.
 
 ```cpp
 inline float rsqrtf(float _X) restrict(amp);
@@ -984,14 +984,14 @@ inline float rsqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
-인수의 제곱근의 역을 반환 합니다.
+인수의 제곱근의 호수를 반환합니다.
 
-## <a name="signbit"></a>signbit
+## <a name="signbit"></a><a name="signbit"></a>사인 비트
 
 _X의 부호가 음수인지 결정합니다.
 
@@ -1001,14 +1001,14 @@ inline int signbit(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X의 부호가 음수인 경우에만 0이 아닌 값을 반환합니다.
 
-## <a name="signbitf"></a>signbitf
+## <a name="signbitf"></a><a name="signbitf"></a>사인비트프
 
 _X의 부호가 음수인지 결정합니다.
 
@@ -1018,16 +1018,16 @@ inline int signbitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 _X의 부호가 음수인 경우에만 0이 아닌 값을 반환합니다.
 
-## <a name="sin"></a>  sin
+## <a name="sin"></a><a name="sin"></a>죄
 
-인수의 사인 값을 계산 합니다.
+인수의 사이가지 값을 계산합니다.
 
 ```cpp
 inline float sin(float _X) restrict(amp);
@@ -1035,16 +1035,16 @@ inline float sin(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 사인 값을 반환합니다.
 
-## <a name="sinf"></a>sinf
+## <a name="sinf"></a><a name="sinf"></a>죄프
 
-인수의 사인 값을 계산 합니다.
+인수의 사이가지 값을 계산합니다.
 
 ```cpp
 inline float sinf(float _X) restrict(amp);
@@ -1052,16 +1052,16 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 사인 값을 반환합니다.
 
-## <a name="sincos"></a>sincos
+## <a name="sincos"></a><a name="sincos"></a>신코스
 
-_X의 사인 및 코사인 값을 계산 합니다.
+_X 의 사네 값과 코사네 값을 계산합니다.
 
 ```cpp
 inline void sincos(
@@ -1072,18 +1072,18 @@ inline void sincos(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_S*<br/>
+*_s*<br/>
 _X의 사인 값을 반환합니다.
 
 *_C*<br/>
 _X의 코사인 값을 반환합니다.
 
-## <a name="sincosf"></a>sincosf
+## <a name="sincosf"></a><a name="sincosf"></a>신코스프
 
-_X의 사인 및 코사인 값을 계산 합니다.
+_X 의 사네 값과 코사네 값을 계산합니다.
 
 ```cpp
 inline void sincosf(
@@ -1094,18 +1094,18 @@ inline void sincosf(
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
-*_S*<br/>
+*_s*<br/>
 _X의 사인 값을 반환합니다.
 
 *_C*<br/>
 _X의 코사인 값을 반환합니다.
 
-## <a name="sinh"></a>  sinh
+## <a name="sinh"></a><a name="sinh"></a>Sinh
 
-인수의 하이퍼볼릭 사인 값을 계산 합니다.
+인수의 쌍곡선 사절 값을 계산합니다.
 
 ```cpp
 inline float sinh(float _X) restrict(amp);
@@ -1113,16 +1113,16 @@ inline float sinh(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 사인 값을 반환합니다.
 
-## <a name="sinhf"></a>sinhf
+## <a name="sinhf"></a><a name="sinhf"></a>신프 ()와 같은
 
-인수의 하이퍼볼릭 사인 값을 계산 합니다.
+인수의 쌍곡선 사절 값을 계산합니다.
 
 ```cpp
 inline float sinhf(float _X) restrict(amp);
@@ -1130,14 +1130,14 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 사인 값을 반환합니다.
 
-## <a name="sqrt"></a>  sqrt
+## <a name="sqrt"></a><a name="sqrt"></a>Sqrt
 
 인수의 제곱근을 계산합니다.
 
@@ -1147,14 +1147,14 @@ inline float sqrt(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 제곱근을 반환합니다.
 
-## <a name="sqrtf"></a>sqrtf
+## <a name="sqrtf"></a><a name="sqrtf"></a>sqrtf
 
 인수의 제곱근을 계산합니다.
 
@@ -1164,16 +1164,16 @@ inline float sqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 제곱근을 반환합니다.
 
-## <a name="tan"></a>  tan
+## <a name="tan"></a><a name="tan"></a>탄
 
-인수의 탄젠트 값을 계산 합니다.
+인수의 접선 값을 계산합니다.
 
 ```cpp
 inline float tan(float _X) restrict(amp);
@@ -1181,16 +1181,16 @@ inline float tan(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 탄젠트 값을 반환합니다.
 
-## <a name="tanf"></a>tanf
+## <a name="tanf"></a><a name="tanf"></a>탄프 (것)와 함께
 
-인수의 탄젠트 값을 계산 합니다.
+인수의 접선 값을 계산합니다.
 
 ```cpp
 inline float tanf(float _X) restrict(amp);
@@ -1198,16 +1198,16 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 탄젠트 값을 반환합니다.
 
-## <a name="tanh"></a>  tanh
+## <a name="tanh"></a><a name="tanh"></a>Tanh
 
-인수의 하이퍼볼릭 탄젠트 값을 계산 합니다.
+인수의 쌍탄값 계산
 
 ```cpp
 inline float tanh(float _X) restrict(amp);
@@ -1215,16 +1215,16 @@ inline float tanh(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 탄젠트 값을 반환합니다.
 
-## <a name="tanhf"></a>tanhf
+## <a name="tanhf"></a><a name="tanhf"></a>탄프 ()탄프 (것
 
-인수의 하이퍼볼릭 탄젠트 값을 계산 합니다.
+인수의 쌍탄값 계산
 
 ```cpp
 inline float tanhf(float _X) restrict(amp);
@@ -1232,16 +1232,16 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 하이퍼볼릭 탄젠트 값을 반환합니다.
 
-## <a name="trunc"></a>trunc
+## <a name="trunc"></a><a name="trunc"></a>트렁크는
 
-인수를 정수 구성 요소로 자릅니다.
+인수를 정수 구성 요소로 연결합니다.
 
 ```cpp
 inline float trunc(float _X) restrict(amp);
@@ -1249,16 +1249,16 @@ inline float trunc(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
 
 인수의 정수 구성 요소를 반환합니다.
 
-## <a name="truncf"></a>truncf
+## <a name="truncf"></a><a name="truncf"></a>트렁그어
 
-인수를 정수 구성 요소로 자릅니다.
+인수를 정수 구성 요소로 연결합니다.
 
 ```cpp
 inline float truncf(float _X) restrict(amp);
@@ -1266,7 +1266,7 @@ inline float truncf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>매개 변수
 
-*_X*<br/>
+*_x*<br/>
 부동 소수점 값
 
 ### <a name="return-value"></a>Return Value
@@ -1275,7 +1275,7 @@ inline float truncf(float _X) restrict(amp);
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** Amp_math **네임 스페이스:** Concurrency:: fast_math
+**헤더:** amp_math.h **네임스페이스:** 동시성:fast_math
 
 ## <a name="see-also"></a>참고 항목
 

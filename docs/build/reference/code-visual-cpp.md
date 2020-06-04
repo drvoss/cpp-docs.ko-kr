@@ -2,20 +2,19 @@
 title: '&lt;코드 > (C++ 문서 주석)'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4bc28c4615a4aab3076940806f54c699ec1ee0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272427"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169932"
 ---
-# <a name="ltcodegt"></a>&lt;코드&gt;
+# <a name="ltcodegt"></a>&lt;code&gt;
 
 \<code> 태그를 사용하면 하나 이상의 줄을 코드로 지정할 수 있습니다.
 
@@ -38,8 +37,8 @@ ms.locfileid: "62272427"
 
 ## <a name="example"></a>예제
 
-\<code> 태그를 사용하는 방법의 예는 [\<example>](example-visual-cpp.md) 항목을 참조하세요.
+[code> 태그를 사용하는 방법의 예는 \<](example-visual-cpp.md)example>\< 항목을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)

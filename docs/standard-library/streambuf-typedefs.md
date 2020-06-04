@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 1c9850ad7d7ec9b9c3554e6806f4790ef3613b08
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8eb058f161a9f30ccf5e9d49307b50c215f79c22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376687"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; 형식 정의
 
@@ -18,30 +18,30 @@ ms.locfileid: "72688931"
 |-|-|
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|
 
-## <a name="streambuf"></a>  streambuf
+## <a name="streambuf"></a><a name="streambuf"></a>스트림부프
 
-**Char** 를 템플릿 매개 변수로 사용 하는 `basic_streambuf`의 특수화입니다.
+이 전문화는 `basic_streambuf` **char를** 템플릿 매개 변수로 사용합니다.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 기본 문자 특성을 포함 하는 **char** 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_streambuf](../standard-library/basic-streambuf-class.md)의 동의어입니다.
+형식은 클래스 템플릿 [basic_streambuf](../standard-library/basic-streambuf-class.md)동의어로 기본 문자 특성이 **있는** 문자 문자 형식의 요소에 대해 특수화됩니다.
 
-## <a name="wstreambuf"></a>  wstreambuf
+## <a name="wstreambuf"></a><a name="wstreambuf"></a>wstreambuf
 
-**Wchar_t** 를 템플릿 매개 변수로 사용 하는 `basic_streambuf`의 특수화입니다.
+이 전문화는 `basic_streambuf` **wchar_t** 템플릿 매개 변수로 사용합니다.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 기본 문자 특성을 포함 하는 **wchar_t** 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_streambuf](../standard-library/basic-streambuf-class.md)의 동의어입니다.
+형식은 기본 문자 특성이 있는 **wchar_t** 형식 요소에 특화된 클래스 템플릿 [basic_streambuf](../standard-library/basic-streambuf-class.md)동의어입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<streambuf>](../standard-library/streambuf.md)
+[\<스트림부프>](../standard-library/streambuf.md)

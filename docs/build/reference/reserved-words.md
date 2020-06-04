@@ -17,45 +17,45 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319423"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171153"
 ---
 # <a name="reserved-words"></a>예약어
 
-링커에 의해에서는 다음 단어가 예약 되어 있습니다. 이러한 이름은의 인수로 사용할 수 있습니다 [모듈 정의 문의](module-definition-dot-def-files.md) 이름을 큰따옴표로 묶은 경우에 ("").
+다음 단어는 링커에 예약 되어 있습니다. 이러한 이름은 이름이 큰따옴표 ("")로 묶여 있는 경우에만 [모듈 정의 문에서](module-definition-dot-def-files.md) 인수로 사용할 수 있습니다.
 
 ||||
 |-|-|-|
-|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRELOAD**|
-|**BASE**|**IOPL**|**PRIVATE**|
-|**CODE**|**LIBRARY**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**준수**|**LOADONCALL**<sup>1</sup>|**PURE**<sup>1</sup>|
-|**DATA**|**LONGNAMES**<sup>2</sup>|**READONLY**|
-|**DESCRIPTION**|**MOVABLE**<sup>1</sup>|**READWRITE**|
-|**DEV386**|**MOVEABLE**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**DISCARDABLE**|**MULTIPLE**|**RESIDENT**|
-|**DYNAMIC**|**Name**|**RESIDENTNAME**<sup>1</sup>|
-|**EXECUTE-ONLY**|**NEWFILES**<sup>2</sup>|**SECTIONS**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTS**|
-|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**SHARED**|
-|**EXETYPE**|**NONAME**|**SINGLE**|
-|**EXPORTS**|**표준에 맞지 않는**<sup>1</sup>|**STACKSIZE**|
-|**고정**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**함수**<sup>2</sup>|**없음**|**VERSION**|
+|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**미리 로드**|
+|**하단**|**IOPL**|**문자**|
+|**CODE**|**라이브러리**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**있지만**|**Loadoncall**<sup>1</sup>|**순수**<sup>1</sup>|
+|**데이터로**|**이름**<sup>2</sup>|**READONLY**|
+|**설명**|**MOVABLE**이동 가능<sup>1</sup>|**읽기**|
+|**DEV386**|**MOVEABLE**이동 가능<sup>1</sup>|**REALMODE**<sup>1</sup>|
+|**삭제 가능한**|**배수로**|**상주**|
+|**비동적**|**이름**|**RESIDENTNAME**<sup>1</sup>|
+|**실행 전용**|**Newfiles**<sup>2</sup>|**섹션이**|
+|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**분류**|
+|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**공유할**|
+|**EXETYPE**|**NONAME**|**단**|
+|**EXPORTS**|**순응**하지 않는<sup>1</sup>|**STACKSIZE**|
+|**수정**됨<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
+|**함수**<sup>2</sup>|**NONE**|**VERSION**|
 |**HEAPSIZE**|**비공유**|**WINDOWAPI**|
-|**IMPORTS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**IMPURE**<sup>1</sup>|**OBJECTS**|**WINDOWS**|
-|**INCLUDE**<sup>2</sup>|**OLD**<sup>1</sup>||
+|**가져오도록**|**Notwindowcompat**<sup>1</sup>|**WINDOWCOMPAT**|
+|**비 순수형**<sup>1</sup>|**개체가**|**WINDOWS**|
+|**포함**<sup>2</sup>|**이전**<sup>1</sup>||
 
-<sup>1</sup> 링커가이 용어를 발견할 때 경고 ("무시")을 내보냅니다. 그러나 단어 여전히 예약 되어 있습니다.
+<sup>1</sup> 이 용어를 발견 하면 링커에서 경고 ("무시 됨")를 내보냅니다. 그러나이 단어는 계속 예약 되어 있습니다.
 
-<sup>2</sup> 링커가이 단어를 무시 하지만 없는 경고를 생성 합니다.
+<sup>2</sup> 링커가이 단어를 무시 하지만 경고는 발생 하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [MSVC 링커 참조](linking.md)
 - [MSVC 링커 옵션](linker-options.md)

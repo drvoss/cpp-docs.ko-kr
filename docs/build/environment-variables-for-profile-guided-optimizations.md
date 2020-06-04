@@ -6,69 +6,69 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195275"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>프로필 기반 최적화 환경 변수
 
-사용 하 여 만든 이미지에서 테스트 시나리오에 영향을 주는 세 개의 환경 변수가 **/ltcg: pgi** 프로필 기반 최적화에 대 한 합니다.
+프로필 기반 최적화를 위해 **/LTCG: PGI**를 사용하여 만든 이미지의 테스트 시나리오에 영향을 주는 세 가지 환경 변수가 있습니다.
 
-- **PogoSafeMode** 응용 프로그램 프로 파일링에 대 한 빠른 모드 또는 안전 모드를 사용할지 여부를 지정 합니다.
+- **PogoSafeMode** - 애플리케이션 프로파일링에 고속 모드를 사용할지 안전 모드를 사용할지를 지정합니다.
 
-- **VCPROFILE_ALLOC_SCALE** 프로파일러 사용에 대 한 추가 메모리를 추가 합니다.
+- **VCPROFILE_ALLOC_SCALE** - 프로파일러에서 사용할 메모리를 추가합니다.
 
-- **VCPROFILE_PATH** .pgc 파일에 사용할 폴더를 지정할 수 있습니다.
+- **VCPROFILE_PATH** - .pgc 파일에 사용되는 폴더를 지정할 수 있습니다.
 
-**PogoSafeMode 및 VCPROFILE_ALLOC_SCALE 환경 변수는 Visual Studio 2015부터 사용 되지 않습니다.** 링커 옵션 [/GENPROFILE 또는 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) 하 고 [/USEPROFILE](reference/useprofile.md) 이러한 환경 변수로 서 동일한 링커 동작을 지정 합니다.
+**PogoSafeMode 및 VCPROFILE_ALLOC_SCALE 환경 변수는 Visual Studio 2015부터 사용되지 않습니다.** 링커 옵션 [/GENPROFILE 또는 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) 및 [/USEPROFILE](reference/useprofile.md)은 관련 환경 변수와 동일한 링커 동작을 지정합니다.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-이 환경 변수를 사용 하는 사용 되지 않습니다. 사용 하 여는 **정확한 수치** 또는 **NOEXACT** 인수를 **/GENPROFILE** 또는 **/FASTGENPROFILE** 이 동작을 제어 합니다.
+이 환경 변수는 사용되지 않습니다. **/GENPROFILE** 또는 **/FASTGENPROFILE**에 **EXACT** 또는 **NOEXACT** 인수를 사용하여 이 동작을 제어합니다.
 
-해제 하거나 설정 합니다 **PogoSafeMode** x86 응용 프로그램 프로 파일링에 대 한 빠른 모드 또는 안전 모드를 사용할지 여부를 지정 하도록 환경 변수 시스템입니다.
+**PogoSafeMode** 환경 변수를 지우거나 설정하여 x86 시스템에서 애플리케이션 프로파일링에 고속 모드를 사용할지 안전 모드를 사용할지를 지정합니다.
 
-프로필 기반 최적화 PGO ()는 두 가지 가능한 모드는 프로 파일링 단계: *고속 모드* 하 고 *안전 모드*합니다. 프로 파일링 하는 것은 빠른 모드에서를 사용 합니다 **INC** 데이터 카운터를 늘리려면 명령입니다. 합니다 **INC** 명령은 빠르지만 스레드로부터 안전한 아닙니다. 프로 파일링 하는 것은 안전 모드에서를 사용 합니다 **LOCK INC** 데이터 카운터를 늘리려면 명령입니다. **LOCK INC** 명령에 동일한 기능을 합니다 **INC** 명령에는 스레드로부터 안전 하며 보다 느립니다 합니다 **INC** 명령 합니다.
+PGO(프로필 기반 최적화)에서는 프로파일링 단계 중에 *고속 모드*와 *안전 모드*의 두 가지 모드를 사용할 수 있습니다. 프로파일링이 고속 모드면 **INC** 명령을 사용하여 데이터 카운터를 늘립니다. **INC** 명령은 빠르지만 스레드로부터 안전하지 않습니다. 프로파일링이 안전 모드면 **LOCK INC** 명령을 사용하여 데이터 카운터를 늘립니다. **LOCK INC** 명령은 **INC** 명령과 기능이 동일하고 스레드로부터 안전하지만 **INC** 명령보다 느립니다.
 
-기본적으로 PGO 프로 파일링은 빠른 모드로 작동 합니다. **PogoSafeMode** 는 안전 모드를 사용 하려는 경우에 필요 합니다.
+기본적으로 PGO 프로파일링은 고속 모드로 작동합니다. **PogoSafeMode**는 안전 모드를 사용하려는 경우에만 필요합니다.
 
-안전 모드에서 PGO 프로 파일링 실행을 사용 해야 합니다 하거나 환경 변수 **PogoSafeMode** 또는 링커 스위치 **/PogoSafeMode**시스템에 따라 합니다. 수행 하는 경우 x64에서 프로 파일링 컴퓨터 링커 스위치를 사용 해야 합니다. 수행 하는 경우 x86에서 프로 파일링 컴퓨터 링커를 사용할 수 있습니다 전환 하거나 설정 합니다 **PogoSafeMode** 최적화 프로세스를 시작 하기 전에 값을 환경 변수입니다.
+안전 모드에서 PGO 프로파일링을 실행하려면 시스템에 따라 **PogoSafeMode** 환경 변수나 링커 스위치 **/PogoSafeMode**를 사용해야 합니다. x64 컴퓨터에서 프로파일링을 수행하는 경우 링커 스위치를 사용해야 합니다. x86 컴퓨터에서 프로파일링을 수행하는 경우에는 최적화 프로세스를 시작하기 전에 링커 스위치를 사용하거나 **PogoSafeMode** 환경 변수를 임의 값으로 설정할 수 있습니다.
 
 ### <a name="pogosafemode-syntax"></a>PogoSafeMode 구문
 
-> **set PogoSafeMode**[**=**_value_]
+> **set PogoSafeMode**[ **=** _value_]
 
-설정할 **PogoSafeMode** 안전 모드를 사용 하도록 설정 하려면 값으로. 이전 값을 지우고 다시 고속 모드를 사용 하도록 설정 하는 값 없이 설정 합니다.
+안전 모드를 사용하도록 설정하려면 **PogoSafeMode**를 임의 값으로 설정합니다. 값 없이 설정하면 이전 값이 지워지고 고속 모드가 다시 사용하도록 설정됩니다.
 
-## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+## <a name="vcprofile_alloc_scale"></a>VCPROFILE_ALLOC_SCALE
 
-이 환경 변수를 사용 하는 사용 되지 않습니다. 사용 하 여는 **MEMMIN** 및 **MEMMAX** 인수 **/GENPROFILE** 또는 **/FASTGENPROFILE** 이 동작을 제어 합니다.
+이 환경 변수는 사용되지 않습니다. **/GENPROFILE** 또는 **/FASTGENPROFILE**에 **MEMMIN** 및 **MEMMAX** 인수를 사용하여 이 동작을 제어합니다.
 
-수정 된 **VCPROFILE_ALLOC_SCALE** 프로필 데이터를 보관에 할당 된 메모리 양을 변경 하려면 환경 변수입니다. 드문 경우에서 충분 한 메모리를 지원 하 게 되지 테스트 시나리오를 실행 하는 경우 프로필 데이터를 수집 합니다. 이러한 경우에 설정 하 여 메모리 크기를 늘릴 수 있습니다 **VCPROFILE_ALLOC_SCALE**합니다. 메모리가 부족 하 여 있다고 표시 하는 테스트 실행 도중 오류 메시지가 표시 되 면 더 큰 값을 할당 **VCPROFILE_ALLOC_SCALE**테스트 실행의 메모리 부족 오류 없이 완료 될 때까지, 합니다.
+프로필 데이터를 저장하기 위해 할당되는 메모리양을 변경하려면 **VCPROFILE_ALLOC_SCALE** 환경 변수를 수정합니다. 드문 경우지만 테스트 시나리오를 실행할 때 프로필 데이터 수집을 지원하는 데 사용할 수 있는 메모리가 부족할 수 있습니다. 이러면 **VCPROFILE_ALLOC_SCALE**을 설정하여 메모리양을 늘릴 수 있습니다. 테스트를 실행하는 동안 메모리가 부족하다는 오류 메시지가 표시되는 경우 테스트 실행이 메모리 부족 오류 없이 완료될 때까지 **VCPROFILE_ALLOC_SCALE**에 더 큰 값을 할당합니다.
 
-### <a name="vcprofileallocscale-syntax"></a>VCPROFILE_ALLOC_SCALE 구문
+### <a name="vcprofile_alloc_scale-syntax"></a>VCPROFILE_ALLOC_SCALE 구문
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **set VCPROFILE_ALLOC_SCALE**[ __=__ *scale_value*]
 
-합니다 *scale_value* 매개 변수는 테스트 시나리오를 실행 하기 위한 메모리의 양을 배율 인수입니다.  기본값은 1입니다. 예를 들어 명령줄이 배율 인수를 2로 설정합니다.
+*scale_value* 매개 변수는 테스트 시나리오를 실행하는 데 필요한 메모리양의 크기 조정 인수입니다.  기본값은 1입니다. 예를 들어 다음 명령줄은 크기 조정 인수를 2로 설정합니다.
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
-## <a name="vcprofilepath"></a>VCPROFILE_PATH
+## <a name="vcprofile_path"></a>VCPROFILE_PATH
 
-사용 된 **VCPROFILE_PATH** .pgc 파일을 만들 디렉터리를 지정 하려면 환경 변수입니다. 기본적으로 프로 파일링 중인 이진 형식으로 동일한 디렉터리에.pgc 파일이 만들어집니다. 그러나 없으면 이진 파일의 절대 경로 이진 빌드 했던 다른 컴퓨터에서 프로필 시나리오를 실행 하는 경우에 해당 될 수 있으므로, 설정할 수 있습니다 **VCPROFILE_PATH** 대상 컴퓨터에 있는 경로입니다.
+**VCPROFILE_PATH** 환경 변수를 사용하여 .pgc 파일을 만들 디렉터리를 지정합니다. 기본적으로 .pgc 파일은 프로파일링되는 이진 파일과 같은 디렉터리에 생성됩니다. 그러나 이진 파일이 빌드된 컴퓨터와 다른 컴퓨터에서 프로필 시나리오를 실행하는 경우와 같이 이진 파일의 절대 경로가 없는 경우 **VCPROFILE_PATH**를 대상 컴퓨터에 있는 경로로 설정할 수 있습니다.
 
-### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH 구문
+### <a name="vcprofile_path-syntax"></a>VCPROFILE_PATH 구문
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **set VCPROFILE_PATH**[ **=** _path_]
 
-설정 된 *경로* .pgc 파일을 추가 하는 디렉터리 경로에 매개 변수입니다. 예를 들어 명령줄이 C:\profile에 폴더를 설정 합니다.
+*path* 매개 변수를 .pgc 파일을 추가할 디렉터리 경로로 설정합니다. 예를 들어 다음 명령줄은 폴더를 C:\profile로 설정합니다.
 
 `set VCPROFILE_PATH=c:\profile`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로필 기반 최적화](profile-guided-optimizations.md)<br/>
-[/GENPROFILE 및 /fastgenprofile은](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE 및 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

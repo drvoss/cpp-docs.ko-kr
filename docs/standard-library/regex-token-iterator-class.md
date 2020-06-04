@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5ada2ad69cbcac15e09968045e54095dfb2623d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689065"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366409"
 ---
 # <a name="regex_token_iterator-class"></a>regex_token_iterator 클래스
 
@@ -45,18 +45,18 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 부분 일치에 대한 반복기 형식입니다.
 
-*Elem* \
+*Elem*\
 일치 항목을 찾을 요소의 형식입니다.
 
-*Rxtraits* \
+*RXtraits*\
 요소에 대한 특성 클래스입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿은 상수 전방 반복기 개체를 설명 합니다. 개념적으로 문자 시퀀스에서 정규식 일치를 검색하는 데 사용되는 `regex_iterator` 개체를 보관합니다. 각 정규식 일치에 대해 저장된 벡터 `sub_match<BidIt>` 의 인덱스 값으로 식별된 부분 일치를 나타내는 `subs` 형식의 개체를 추출합니다.
+클래스 템플릿은 상수 전달 이터레이터 개체를 설명합니다. 개념적으로 문자 시퀀스에서 정규식 일치를 검색하는 데 사용되는 `regex_iterator` 개체를 보관합니다. 각 정규식 일치에 대해 저장된 벡터 `sub_match<BidIt>` 의 인덱스 값으로 식별된 부분 일치를 나타내는 `subs` 형식의 개체를 추출합니다.
 
 인덱스 값 -1은 이전 정규식 일치가 끝난 다음 바로 시작되거나 이전 정규식 일치가 없는 경우 문자 시퀀스의 시작에서 시작되고 현재 정규식 일치의 첫 번째 문자로 확장되지만 포함하지 않거나 현재 일치가 없는 경우 문자 시퀀스의 끝으로 확장되는 문자 시퀀스를 지정합니다. 다른 모든 인덱스 값 `idx` 는 `it.match[idx]`에 보관된 캡처 그룹의 내용을 지정합니다.
 
@@ -70,30 +70,30 @@ class regex_token_iterator
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|반복기를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[difference_type](#difference_type)|반복기 차이의 형식입니다.|
 |[iterator_category](#iterator_category)|반복기 범주의 형식입니다.|
-|[pointer](#pointer)|일치 항목에 대한 포인터의 형식입니다.|
-|[reference](#reference)|부분 일치에 대한 참조의 형식입니다.|
+|[포인터(pointer)](#pointer)|일치 항목에 대한 포인터의 형식입니다.|
+|[참조](#reference)|부분 일치에 대한 참조의 형식입니다.|
 |[regex_type](#regex_type)|일치 항목을 찾을 정규식의 형식입니다.|
-|[value_type](#value_type)|부분 일치의 형식입니다.|
+|[Value_type](#value_type)|부분 일치의 형식입니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[operator!=](#op_neq)|반복기가 같지 않은지 비교합니다.|
-|[operator*](#op_star)|지정된 부분 일치에 액세스합니다.|
-|[operator++](#op_add_add)|반복기를 증가시킵니다.|
+|[연산자!=](#op_neq)|반복기가 같지 않은지 비교합니다.|
+|[연산자*](#op_star)|지정된 부분 일치에 액세스합니다.|
+|[연산자++](#op_add_add)|반복기를 증가시킵니다.|
 |[연산자==](#op_eq_eq)|반복기가 같은지 비교합니다.|
-|[operator->](#op_arrow)|지정된 부분 일치에 액세스합니다.|
+|[연산자 >](#op_arrow)|지정된 부분 일치에 액세스합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -197,7 +197,7 @@ match == aa
 match == z
 ```
 
-## <a name="difference_type"></a>  regex_token_iterator::difference_type
+## <a name="regex_token_iteratordifference_type"></a><a name="difference_type"></a>regex_token_iterator::d이퍼런스_타입
 
 반복기 차이의 형식입니다.
 
@@ -205,11 +205,11 @@ match == z
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `std::ptrdiff_t`의 동의어입니다.
 
-## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
+## <a name="regex_token_iteratoriterator_category"></a><a name="iterator_category"></a>regex_token_iterator:iterator_category
 
 반복기 범주의 형식입니다.
 
@@ -217,11 +217,11 @@ typedef std::ptrdiff_t difference_type;
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `std::forward_iterator_tag`의 동의어입니다.
 
-## <a name="op_neq"></a>  regex_token_iterator::operator!=
+## <a name="regex_token_iteratoroperator"></a><a name="op_neq"></a>regex_token_iterator::연산자!=
 
 반복기가 같지 않은지 비교합니다.
 
@@ -231,14 +231,14 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 비교할 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `!(*this == right)`를 반환합니다.
 
-## <a name="op_star"></a>  regex_token_iterator::operator*
+## <a name="regex_token_iteratoroperator"></a><a name="op_star"></a>regex_token_iterator::연산자*
 
 지정된 부분 일치에 액세스합니다.
 
@@ -246,11 +246,11 @@ bool operator!=(const regex_token_iterator& right);
 const sub_match<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `sub_match<BidIt>` 인덱스 값으로 식별된 캡처 그룹을 나타내는 `subs[pos]`개체를 반환합니다.
 
-## <a name="op_add_add"></a>  regex_token_iterator::operator++
+## <a name="regex_token_iteratoroperator"></a><a name="op_add_add"></a>regex_token_iterator::연산자++
 
 반복기를 증가시킵니다.
 
@@ -260,13 +260,13 @@ regex_token_iterator& operator++();
 regex_token_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 저장된 반복기 `it`가 시퀀스의 끝 반복기인 경우 첫 번째 연산자는 저장된 값 `pos`를 `subs.size()`의 값으로 설정하여 시퀀스의 끝 반복기를 만듭니다. 그렇지 않은 경우 연산자는 저장된 값 `pos`를 증가시킵니다. 결과가 `subs.size()` 값과 같으면 저장된 값 `pos`를 0으로 설정하고 저장된 반복기 `it`를 증가시킵니다. 저장된 반복기의 증분 결과가 시퀀스의 끝 반복기와 같지 않은 경우 연산자가 추가 작업을 수행하지 않습니다. 이전 일치 항목의 끝이 문자 시퀀스의 끝에 있는 경우 연산자가 `pos`의 저장된 값을 `subs.size()`로 설정합니다. 또는 `pos == subs.size()` 또는 `subs[pos] == -1`까지 연산자가 저장된 값 `pos`를 반복적으로 증가시켜 인덱스 값 중 하나가 -1이면 반복기의 다음 역참조에서 문자 시퀀스의 테일이 반환되도록 합니다. 모든 경우에서 연산자는 개체를 반환합니다.
 
 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
 
-## <a name="op_eq_eq"></a>  regex_token_iterator::operator==
+## <a name="regex_token_iteratoroperator"></a><a name="op_eq_eq"></a>regex_token_iterator::연산자==
 
 반복기가 같은지 비교합니다.
 
@@ -276,14 +276,14 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 비교할 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `it == right.it && subs == right.subs && pos == right.pos`를 반환합니다.
 
-## <a name="op_arrow"></a>  regex_token_iterator::operator-&gt;
+## <a name="regex_token_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_token_iterator::연산자-&gt;
 
 지정된 부분 일치에 액세스합니다.
 
@@ -291,11 +291,11 @@ bool operator==(const regex_token_iterator& right);
 const sub_match<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `sub_match<BidIt>` 인덱스 값으로 식별된 캡처 그룹을 나타내는 `subs[pos]`개체에 대한 포인터를 반환합니다.
 
-## <a name="pointer"></a>  regex_token_iterator::pointer
+## <a name="regex_token_iteratorpointer"></a><a name="pointer"></a>regex_token_iterator::p
 
 일치 항목에 대한 포인터의 형식입니다.
 
@@ -303,11 +303,11 @@ const sub_match<BidIt> * operator->();
 typedef sub_match<BidIt> *pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `sub_match<BidIt>*`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="reference"></a>  regex_token_iterator::reference
+## <a name="regex_token_iteratorreference"></a><a name="reference"></a>regex_token_iterator::참조
 
 부분 일치에 대한 참조의 형식입니다.
 
@@ -315,11 +315,11 @@ typedef sub_match<BidIt> *pointer;
 typedef sub_match<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `sub_match<BidIt>&`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
+## <a name="regex_token_iteratorregex_token_iterator"></a><a name="regex_token_iterator"></a>regex_token_iterator:regex_token_iterator
 
 반복기를 생성합니다.
 
@@ -342,19 +342,19 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째* \
+*첫 번째*\
 일치하는 시퀀스의 시작입니다.
 
-*마지막* \
+*마지막*\
 일치하는 시퀀스의 끝입니다.
 
-*다시* \
+*다시*\
 일치 항목에 대한 정규식입니다.
 
-*f* \
+*F*\
 일치에 대한 플래그입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 생성자는 시퀀스의 끝 반복기를 생성합니다.
 
@@ -364,7 +364,7 @@ regex_token_iterator(BidIt first, BidIt last,
 
 네 번째 생성자는 저장된 반복기 `it` 은 `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`로 초기화되고, 저장된 벡터 `subs` 는 생성자 인수 `N` 가 가리키는 `submatches`값을 보유하며, 저장된 값 `pos` 는 0인 개체를 생성합니다.
 
-## <a name="regex_type"></a>  regex_token_iterator::regex_type
+## <a name="regex_token_iteratorregex_type"></a><a name="regex_type"></a>regex_token_iterator:regex_type
 
 일치 항목을 찾을 정규식의 형식입니다.
 
@@ -372,11 +372,11 @@ regex_token_iterator(BidIt first, BidIt last,
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 typedef는 `basic_regex<Elem, RXtraits>`의 동의어입니다.
 
-## <a name="value_type"></a>  regex_token_iterator::value_type
+## <a name="regex_token_iteratorvalue_type"></a><a name="value_type"></a>regex_token_iterator:value_type
 
 부분 일치의 형식입니다.
 
@@ -384,17 +384,17 @@ typedef는 `basic_regex<Elem, RXtraits>`의 동의어입니다.
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `sub_match<BidIt>`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants 클래스](../standard-library/regex-constants-class.md) \
-[Regex_error 클래스](../standard-library/regex-error-class.md) \
-[> 함수를 \<regex](../standard-library/regex-functions.md) \
-[Regex_iterator 클래스](../standard-library/regex-iterator-class.md) \
-[> 연산자를 \<regex](../standard-library/regex-operators.md) \
-[Regex_traits 클래스](../standard-library/regex-traits-class.md) \
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)
+[\<정규식>](../standard-library/regex.md)\
+[regex_constants 클래스](../standard-library/regex-constants-class.md)\
+[regex_error 클래스](../standard-library/regex-error-class.md)\
+[\<정규식> 함수](../standard-library/regex-functions.md)\
+[regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
+[\<정규식> 연산자](../standard-library/regex-operators.md)\
+[regex_traits 클래스](../standard-library/regex-traits-class.md)\
+[\<정규식> 타입defs](../standard-library/regex-typedefs.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
 ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344943"
 ---
 # <a name="type-cast-conversions"></a>형식 캐스팅 변환
 
@@ -24,7 +24,7 @@ ms.locfileid: "56151662"
 
 *cast-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*단항 식*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *type-name*  **)**  *cast-expression*
 
 *type-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
@@ -54,6 +54,6 @@ ms.locfileid: "56151662"
 
 캐스팅을 사용하여 식을 `void` 형식으로 변환할 수 있지만 결과 식은 값이 필요하지 않은 위치에서만 사용할 수 있습니다. **void** <strong>\*</strong>로 변환되었다가 다시 원래 형식으로 변환된 개체 포인터는 해당 원래 값으로 되돌려집니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [형식 변환](../c-language/type-conversions-c.md)

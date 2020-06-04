@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4011
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
-ms.openlocfilehash: 3b73e92c929b3dd5924584ab732f731d565d0430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1701ffc83f849d2482bd14b25d65c04c496899
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359776"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193149"
 ---
 # <a name="nmake-warning-u4011"></a>NMAKE 경고 U4011
 
-'target': 사용할 수 있습니다; 모든 종속 항목 대상이 빌드되지 않았습니다.
+' target ': 모든 종속 항목을 사용할 수 없습니다. 대상이 빌드되지 않음
 
-지정된 된 대상의 종속성이 없어 또는 되었으며 및 종속 파일을 업데이트 하기 위한 명령이 0이 아닌 종료 코드를 반환 합니다. /K 옵션 NMAKE 빌드 관련 되지 않은 부분을 계속 처리 및 NMAKE 세션이 완료 되 면 종료 코드 1을 발급 하도록 지시 합니다.
+지정 된 대상에 종속 된이 없거나, 해당 대상에 종속 되어 있지 않거나, 종속 업데이트를 위한 명령이 0이 아닌 종료 코드를 반환 했습니다. /K 옵션은 nmake 세션이 완료 되 면 NMAKE는 빌드에서 관련 되지 않은 부분을 계속 처리 하 고 종료 코드 1을 실행 하도록 지시 합니다.
 
-이 경고는 경고 뒤 [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) 생성 또는 업데이트에 실패 한 각 종속에 대 한 합니다.
+이 경고는 생성 하거나 업데이트 하지 못한 각 종속에 대 한 경고 [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) 앞에 나옵니다.

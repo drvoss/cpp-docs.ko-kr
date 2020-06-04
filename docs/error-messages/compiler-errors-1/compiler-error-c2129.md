@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: e55107419235420d272c738e9d8ef7cf277c11c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397629"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207287"
 ---
 # <a name="compiler-error-c2129"></a>컴파일러 오류 C2129
 
-'function' 정적 함수 선언 되었지만 정의 되지 않았습니다.
+' function ' 정적 함수가 선언 되었지만 정의 되지 않았습니다.
 
-전방 참조 하려고는 `static` 정의 되지 않은 함수입니다.
+정의 되지 않은 `static` 함수에 대 한 전방 참조가 생성 됩니다.
 
-`static` 파일 범위 내에서 함수를 정의 해야 합니다. 를 다른 파일에서 함수를 정의 하는 경우 선언 되어야 합니다 `extern`합니다.
+파일 범위 내에서 `static` 함수를 정의 해야 합니다. 함수가 다른 파일에 정의 되어 있으면 `extern`선언 되어야 합니다.

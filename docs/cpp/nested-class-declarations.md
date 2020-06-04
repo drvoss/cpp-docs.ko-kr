@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367898"
 ---
 # <a name="nested-class-declarations"></a>중첩 클래스 선언
 
@@ -61,9 +61,9 @@ int main()
 위의 `BufferedIO` 예제에서 `IOError` 함수에 표시된 것과 같이 중첩 클래스 `BufferedIO::BufferedInput` 또는 `BufferedIO::BufferedOutput`의 멤버 함수에서 `good` 열거형에 직접 액세스할 수 있습니다.
 
 > [!NOTE]
->  중첩 클래스는 클래스 범위 내에서 형식만 선언하며, 중첩 클래스의 포함된 개체가 만들어지지는 않습니다. 위의 예제에서는 두 중첩 클래스를 선언하지만 이러한 클래스 형식의 개체는 선언하지 않습니다.
+> 중첩 클래스는 클래스 범위 내에서 형식만 선언하며, 중첩 클래스의 포함된 개체가 만들어지지는 않습니다. 위의 예제에서는 두 중첩 클래스를 선언하지만 이러한 클래스 형식의 개체는 선언하지 않습니다.
 
-중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  예를 들어:
+중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  다음은 그 예입니다.
 
 ```cpp
 // nested_class_declarations_2.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-앞의 예제에는 *정규화 된 형식-이름이* 구문이 함수 이름을 선언 하는 데 사용 됩니다. 다음 선언은
+앞의 예제에서는 *정규화된 형식 이름* 구문을 사용하여 함수 이름을 선언합니다. 다음 선언은
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-"`read` 클래스의 범위에 있는 `BufferedInput` 클래스의 멤버인 `BufferedIO` 함수"를 의미합니다. 이 선언을 사용 하기 때문에 합니다 *정규화 된 형식-이름이* 구문을 다음 형태의 구문이 가능있지 않습니다:
+"`read` 클래스의 범위에 있는 `BufferedInput` 클래스의 멤버인 `BufferedIO` 함수"를 의미합니다. 이 선언은 *정규화된 형식 이름* 구문을 사용하므로 다음 양식의 구문이 가능합니다.
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-앞의 선언은 이전 쿼리와 동일 하지만 사용 된 **typedef** 클래스 이름 대신 이름입니다.
+앞의 선언은 이전 선언과 동일하지만 클래스 이름 대신 **typedef** 이름을 사용합니다.
 
 ## <a name="friend-functions-in-nested-classes"></a>중첩 클래스의 Friend 함수
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 이전의 인터페이스를 사용하면 여러 클래스에서 오류 메시지를 복사할 메모리 위치를 전달하여 이 함수의 서비스를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 및 구조체(C++)](../cpp/classes-and-structs-cpp.md)
+[클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

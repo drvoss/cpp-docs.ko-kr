@@ -1,6 +1,6 @@
 ---
-title: Visual Studio에서 속성을 빌드하고 C++ 컴파일러를 설정 합니다.
-description: C++ 컴파일러 및 링커 옵션과 기타 빌드 설정을 변경 하려면 Visual Studio IDE를 사용 합니다.
+title: Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정
+description: Visual Studio IDE를 사용하여 C++ 컴파일러 및 링커 옵션과 기타 빌드 설정을 변경합니다.
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498120"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078232"
 ---
 # <a name="set-compiler-and-build-properties"></a>컴파일러 및 빌드 속성 설정
 
-IDE에서 프로젝트를 빌드하는 데 필요한 모든 정보는 *속성*으로 공개됩니다. 이 정보에는 애플리케이션 이름, 확장명(예: DLL, LIB, EXE), 컴파일러 옵션, 링커 옵션, 디버거 설정, 사용자 지정 빌드 단계 및 다른 많은 항목이 포함됩니다. 일반적으로 *속성 페이지* 를 사용 하 여 이러한 속성을 보고 수정 합니다. 속성 페이지에 액세스 하려면 주 메뉴에서 **프로젝트 프로젝트** >  **_이름_ 속성** 을 선택 하거나 **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+IDE에서 프로젝트를 빌드하는 데 필요한 모든 정보는 *속성*으로 공개됩니다. 이 정보에는 애플리케이션 이름, 확장명(예: DLL, LIB, EXE), 컴파일러 옵션, 링커 옵션, 디버거 설정, 사용자 지정 빌드 단계 및 다른 많은 항목이 포함됩니다. 일반적으로 *속성 페이지*를 사용하여 이러한 속성을 보고 수정합니다. 속성 페이지에 액세스하려면 메인 메뉴에서 **프로젝트** >  **_projectname_ 속성**을 선택하거나 **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
 ## <a name="default-properties"></a>기본 속성
 
 프로젝트를 만들 때 시스템은 다양한 속성에 대해 값을 지정합니다. 기본값은 프로젝트의 종류 및 앱 마법사에서 선택한 옵션에 따라 다소 다릅니다. 예를 들어 ATL 프로젝트에는 MIDL 파일과 관련된 속성이 있지만 이 파일들은 기본 콘솔 애플리케이션에는 없습니다. 기본 속성은 속성 페이지의 일반 창에 표시됩니다.
 
-![Visual C&#43; &#43; 프로젝트 기본값](media/visual-c---project-defaults.png "visual C++ 프로젝트 기본값")
+![Visual C&#43;&#43; 프로젝트 기본값](media/visual-c---project-defaults.png "Visual C++ 프로젝트 기본값")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>빌드 구성 및 대상 플랫폼에 속성 적용
 
@@ -31,11 +31,11 @@ IDE에서 프로젝트를 빌드하는 데 필요한 모든 정보는 *속성*�
 
 속성 페이지는 수정이 필요한 경우 속성 값을 어떤 구성 및 플랫폼에 적용해야 하는지 항상 확인할 수 있도록 설계됩니다. 다음 그림에서는 맨 위의 목록 상자에서 구성 및 플랫폼 정보가 포함된 속성 페이지를 보여줍니다. **최적화** 속성은 여기에 설정된 경우 빨간색 화살표로 표시된 것처럼 활성 구성이 될 수 있는 디버그 Win32 빌드에만 적용됩니다.
 
-![활성 구성을 보여주는 Visual C&#43;&#43; 속성 페이지](media/visual-c---property-pages-showing-active-configuration.png "활성 구성을 보여주는 Visual C++ 속성 페이지")
+![활성 구성을 표시하는 Visual C&#43;&#43; 속성 페이지](media/visual-c---property-pages-showing-active-configuration.png "활성 구성을 표시하는 Visual C++ 속성 페이지")
 
 다음 그림에서는 같은 프로젝트 속성 페이지를 보여주지만 구성은 릴리스로 변경되었습니다. 최적화 속성에 대해 다른 값입니다. 또한 활성 구성이 여전히 디버그입니다. 모든 구성에 대한 속성을 설정할 수 있으며, 활성 구성일 필요는 없습니다.
 
-![릴리스 구성을 보여주는 Visual C&#43;&#43; 속성 페이지](media/visual-c---property-pages-showing-release-config.png "릴리스 구성을 보여주는 Visual C++ 속성 페이지")
+![릴리스 구성을 표시하는 Visual C&#43;&#43; 속성 페이지](media/visual-c---property-pages-showing-release-config.png "릴리스 구성을 표시하는 Visual C++ 속성 페이지")
 
 ## <a name="target-platforms"></a>대상 플랫폼
 
@@ -43,7 +43,7 @@ IDE에서 프로젝트를 빌드하는 데 필요한 모든 정보는 *속성*�
 
 **Configuration Manager**에서 확인할 수 있는 **모든 CPU** 대상 플랫폼 값은 네이티브 C++ 프로젝트에 영향을 주지 않으며, C++/CLI 및 다른 .NET 프로젝트 형식에 대해 관련이 있습니다. 자세한 내용은 [/CLRIMAGETYPE(CLR 이미지 형식 지정)](reference/clrimagetype-specify-type-of-clr-image.md)을 참조하세요.
 
-디버그 빌드에 대 한 속성을 설정 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
+디버그 빌드에 대해 속성을 설정하는 방법은 다음 항목을 참조하세요.
 
 - [C++ 디버그 구성에 대한 프로젝트 설정](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [디버거 설정 및 준비](/visualstudio/debugger/debugger-settings-and-preparation)
@@ -52,15 +52,15 @@ IDE에서 프로젝트를 빌드하는 데 필요한 모든 정보는 *속성*�
 
 ## <a name="c-compiler-and-linker-options"></a>C++ 컴파일러 및 링커 옵션
 
-C++ 컴파일러 및 링커 옵션은 아래에 **C/C++** 하 고 **링커** 노드 아래의 왼쪽된 창에서 **구성 속성**합니다. 이는 컴파일러에 전달 되는 명령줄 옵션으로 직접 변환 됩니다. 특정 옵션에 대 한 설명서를 읽으려면 가운데 창에서 옵션을 선택 하 고 **f1**키를 누릅니다. 또는 [MSVC 컴파일러 옵션](reference/compiler-options.md) 및 [MSVC 링커 옵션](reference/linker-options.md)에서 모든 옵션에 대 한 설명서를 찾아볼 수 있습니다. 
+C++컴파일러 및 링커 옵션은 **구성 속성**의 왼쪽 창에 있는 **C/C++** 및 **링커** 노드 아래에 있습니다. 이 옵션은 컴파일러에 전달될 명령줄 옵션으로 직접 변환됩니다. 특정 옵션에 대한 설명서를 읽으려면 가운데 창에서 옵션을 선택하고 **F1**을 누르세요. 또는 [MSVC 컴파일러 옵션](reference/compiler-options.md) 및 [MSVC 링커 옵션](reference/linker-options.md)에서 모든 옵션에 대한 설명서를 찾아볼 수 있습니다.
 
-**속성 페이지** 대화 상자에는 현재 프로젝트와 관련 된 속성 페이지만 표시 됩니다. 예를 들어, 프로젝트에 .idl 파일이 없는 경우 MIDL 속성 페이지가 표시되지 않습니다. 각 속성 페이지 설정에 대 한 자세한 내용은 참조 [속성 페이지 (C++)](reference/property-pages-visual-cpp.md)합니다. 
+**속성 페이지** 대화 상자에는 현재 프로젝트와 관련이 있는 속성 페이지만 표시됩니다. 예를 들어, 프로젝트에 .idl 파일이 없는 경우 MIDL 속성 페이지가 표시되지 않습니다. 각 속성 페이지에 있는 설정에 대한 자세한 내용은 [속성 페이지(C++)](reference/property-pages-visual-cpp.md)를 참조하세요.
 
 ## <a name="directory-and-path-values"></a>디렉터리 및 경로 값
 
-MSBuild는 특정 문자열 값에 대해 "macros" 라는 컴파일 타임 상수를 사용할 수 있도록 지원 합니다. 디렉터리 및 경로입니다. 이러한 속성은 속성 [편집기](#property_editor)를 사용 하 여 참조 하 고 수정할 수 있는 속성 페이지에 표시 됩니다. 
+MSBuild는 디렉터리 및 경로를 포함한 특정 문자열 값에 대해 "macros"라는 컴파일 시간 상수를 사용할 수 있도록 지원합니다. 이러한 속성은 속성 페이지에 노출되며, 이 페이지에서 [속성 편집기](#property_editor)를 사용하여 이를 참조하고 수정할 수 있습니다.
 
-다음 그림에서는 Visual Studio C++ 프로젝트에 대 한 속성 페이지를 보여 줍니다. 왼쪽 창에서 **VC++ 디렉터리** *규칙*을 선택하면 오른쪽 창에 해당 규칙과 연결된 속성이 나열됩니다. 이러한 `$(...)` 값을 *매크로*라고 합니다. *매크로*는 Visual Studio 또는 MSBuild 시스템에서 정의한 값 또는 사용자 정의 값을 참조할 수 있는 컴파일 시간 상수입니다. 디렉터리 경로와 같이 하드 코드 된 값 대신 매크로를 사용 하 여 컴퓨터 간 속성 설정과 Visual Studio 버전 간의 속성 설정을 좀 더 쉽게 공유할 수 있고 프로젝트 설정이 속성에 올바르게 참여 하는지 확인할 수 있습니다. [ 상속](project-property-inheritance.md). 
+다음 그림은 Visual Studio C++ 프로젝트에 대한 속성 페이지를 나타낸 것입니다. 왼쪽 창에서 **VC++ 디렉터리** *규칙*을 선택하면 오른쪽 창에 이 규칙과 연결된 속성이 나열됩니다. `$(...)` 값은 *매크로*라고 합니다. *매크로*는 Visual Studio 또는 MSBuild 시스템에서 정의한 값 또는 사용자 정의 값을 참조할 수 있는 컴파일 시간 상수입니다. 디렉터리 경로와 같이 하드 코딩된 값 대신에 매크로를 사용하여 컴퓨터 간 속성 설정과 Visual Studio 버전 간의 속성 설정을 좀 더 쉽게 공유할 수 있고 프로젝트 설정이 제대로 [속성 상속](project-property-inheritance.md)에 참여할 수 있도록 확인합니다.
 
 ![프로젝트 속성 페이지](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -78,21 +78,21 @@ MSBuild는 특정 문자열 값에 대해 "macros" 라는 컴파일 타임 상�
 
 *사용자 정의 매크로*를 만들어 프로젝트 빌드에서 변수로 사용할 수 있습니다. 예를 들어, 사용자 지정 빌드 단계 또는 사용자 지정 빌드 도구에 가치를 제공하는 사용자 정의 매크로를 만들 수 있습니다. 사용자 정의 매크로는 이름/값 쌍입니다. 프로젝트 파일에서 **$(** <em>name</em> **)** 표기법을 사용하여 값에 액세스합니다.
 
-사용자 정의 매크로는 속성 시트에 저장됩니다. 프로젝트에 속성 시트가 아직 포함 되어 있지 않은 경우 [Visual Studio 프로젝트 설정 공유 또는 다시 사용](create-reusable-property-configurations.md)의 단계를 수행 하 여 프로젝트를 만들 수 있습니다.
+사용자 정의 매크로는 속성 시트에 저장됩니다. 프로젝트에 속성 시트가 아직 포함되어 있지 않은 경우 [Visual Studio 프로젝트 설정 공유 및 다시 사용](create-reusable-property-configurations.md)에 있는 단계에 따라 속성 시트를 만들 수 있습니다.
 
 #### <a name="to-create-a-user-defined-macro"></a>사용자 정의 매크로를 만들려면
 
-1. **속성 관리자** 창을 엽니다. 메뉴 모음에서**속성 관리자** **보기** > 를 선택 하거나**다른 Windows** > **속성 관리자** **보기** > 를 선택 합니다. 속성 시트에 대 한 바로 가기 메뉴를 열고 (이름이 사용자로 끝남) **속성**을 선택 합니다. 해당 속성 시트의 **속성 페이지** 대화 상자가 열립니다.
+1. **속성 관리자** 창을 엽니다. (메뉴 모음에서 **보기** > **속성 관리자** 또는 **보기** > **다른 창** > **속성 관리자**를 선택합니다.) 속성 시트에 대한 바로 가기 메뉴를 열고(이름이 사용자로 끝남) **속성**를 선택합니다. 해당 속성 시트의 **속성 페이지** 대화 상자가 열립니다.
 
 1. 대화 상자의 왼쪽 창에서 **사용자 매크로**를 선택합니다. 오른쪽 창에서 **매크로 추가** 단추를 선택하여 **사용자 매크로 추가** 대화 상자를 엽니다.
 
 1. 대화 상자에서 매크로에 대한 이름 및 값을 지정합니다. 또는 **이 매크로를 빌드 환경의 환경 변수로 설정** 확인란을 선택합니다.
 
-## <a name="property_editor">속성 편집기</a>
+## <a name=""></a><a name="property_editor">속성 편집기</a>
 
 속성 편집기를 사용하여 특정 문자열 속성을 수정하고 값으로 매크로를 선택할 수 있습니다. 속성 편집기에 액세스하려면 속성 페이지에서 속성을 선택한 후 오른쪽에 있는 아래쪽 화살표 단추를 선택합니다. 드롭다운 목록에 **\<편집>** 이 포함된 경우 이를 선택하여 해당 속성에 대한 속성 편집기를 표시할 수 있습니다.
 
-![Property&#95;Editor&#95;Dropdown](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![속성&#95;편집기&#95;드롭다운](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
 속성 편집기에서 **매크로** 단추를 선택하여 사용 가능한 매크로와 해당 현재 값을 볼 수 있습니다. 다음 그림에서는 **매크로** 단추 선택 후 **추가 포함 디렉터리** 속성에 대한 속성 편집기를 보여 줍니다. **부모 또는 프로젝트 기본값에서 상속** 확인란이 선택되어 있고 새 값을 추가하면 현재 상속되는 모든 값에 새 값이 추가됩니다. 확인란의 선택을 취소하면 새 값이 상속된 값을 대체합니다. 대부분의 경우 확인란을 선택한 상태로 둡니다.
 
@@ -102,7 +102,7 @@ MSBuild는 특정 문자열 값에 대해 "macros" 라는 컴파일 타임 상�
 
 포함 디렉터리를 프로젝트에 추가할 때 모든 기본 디렉터리를 재정의하지 않는 것이 중요합니다. 디렉터리를 추가하는 올바른 방법은 예를 들어, "C:\MyNewIncludeDir\\"과 같이 새 경로를 추가한 다음 속성 값에 **$(IncludePath)** 매크로를 추가하는 것입니다.
 
-## <a name="quickly-browse-and-search-all-properties"></a>모든 속성을 빠르게 찾아서 검색
+## <a name="quickly-browse-and-search-all-properties"></a>모든 속성을 신속하게 찾고 검색
 
 **모든 옵션** 속성 페이지(**속성 페이지** 대화 상자의 **구성 속성 &#124; C/C++** 노드 아래)를 사용하면 현재 컨텍스트에서 사용할 수 있는 속성을 신속하게 찾고 검색할 수 있습니다. 이 페이지에는 특수 검색 상자 및 결과를 필터링할 수 있는 간단한 구문이 있습니다.
 
@@ -115,11 +115,11 @@ MSBuild는 특정 문자열 값에 대해 "macros" 라는 컴파일 타임 상�
 v:<br/>
 값에서만 검색합니다(부분 문자열 대/소문자 구분 안 함).
 
-## <a name="set-environment-variables-for-a-build"></a>빌드에 대 한 환경 변수 설정
+## <a name="set-environment-variables-for-a-build"></a>빌드에 대한 환경 변수 설정
 
-MSVC 컴파일러 (cl.exe)는 특정 환경 변수, 특히 LIB, LIBPATH, PATH 및 INCLUDE를 인식 합니다. IDE로 빌드하면 [VC++ Directories Property Page](reference/vcpp-directories-property-page.md) 속성 페이지에 설정된 속성이 환경 변수를 설정하는 데 사용됩니다. 개발자 명령 프롬프트가 LIB, LIBPATH 및 INCLUDE 값을 설정하는 경우 해당 값을 MSBuild 속성 값으로 대체합니다. 그러면 빌드에서 VC++ 디렉터리 실행 가능 디렉터리 속성 값을 PATH에 추가합니다. 사용자 정의 매크로를 생성한 다음 **이 매크로를 빌드 환경의 환경 변수로 설정**상자를 선택하여 사용자 정의 환경 변수를 설정할 수 있습니다.
+MSVC 컴파일러(cl.exe)는 특정 환경 변수, 특히 LIB, LIBPATH, PATH 및 INCLUDE를 인식합니다. IDE로 빌드하면 [VC++ Directories Property Page](reference/vcpp-directories-property-page.md) 속성 페이지에 설정된 속성이 환경 변수를 설정하는 데 사용됩니다. 개발자 명령 프롬프트가 LIB, LIBPATH 및 INCLUDE 값을 설정하는 경우 해당 값을 MSBuild 속성 값으로 대체합니다. 그러면 빌드에서 VC++ 디렉터리 실행 가능 디렉터리 속성 값을 PATH에 추가합니다. 사용자 정의 매크로를 생성한 다음 **이 매크로를 빌드 환경의 환경 변수로 설정**상자를 선택하여 사용자 정의 환경 변수를 설정할 수 있습니다.
 
-## <a name="set-environment-variables-for-a-debugging-session"></a>디버깅 세션에 대 한 환경 변수 설정
+## <a name="set-environment-variables-for-a-debugging-session"></a>디버깅 세션에 대한 환경 변수 설정
 
 프로젝트의 **속성 페이지** 대화 상자의 왼쪽 창에서 **구성 속성** 을 확장하고 **디버깅**을 선택합니다.
 
@@ -128,15 +128,15 @@ MSVC 컴파일러 (cl.exe)는 특정 환경 변수, 특히 LIB, LIBPATH, PATH �
 ## <a name="in-this-section"></a>단원 내용
 
 [Visual Studio 프로젝트 설정 공유 또는 재사용](create-reusable-property-configurations.md)<br/>
-공유 하거나 다시 사용할 수 있는 사용자 지정 빌드 설정을 사용 하 여 props 파일을 만드는 방법
+공유하거나 다시 사용할 수 있는 사용자 지정 빌드 설정을 사용하여 .props 파일을 만드는 방법
 
 [프로젝트 속성 상속](project-property-inheritance.md)<br/>
-빌드 프로세스의 props, .targets, .vcxproj 파일 및 환경 변수에 대 한 계산 순서를 설명 합니다.
+빌드 프로세스의 .props, .targets, .vcxproj 파일 및 환경 변수에 대한 평가 순서를 설명합니다.
 
 [프로젝트 파일을 변경하지 않고 속성 및 대상 수정](modify-project-properties-without-changing-project-file.md)<br/>
-프로젝트 파일을 수정 하지 않고 임시 빌드 설정을 만드는 방법 
+프로젝트 파일을 수정하지 않고 임시 빌드 설정을 만드는 방법
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Visual Studio 프로젝트 - C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [.vcxproj 및 .props 파일 구조](reference/vcxproj-file-structure.md)<br/>

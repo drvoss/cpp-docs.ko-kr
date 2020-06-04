@@ -5,11 +5,11 @@ helpviewer_keywords:
 - null values, appended to binary stream
 ms.assetid: bca3fc78-0347-41bd-9e3e-94d646104bad
 ms.openlocfilehash: 329e20451394923f8ecb97cae853dde2fdf8017f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325457"
 ---
 # <a name="null-characters"></a>Null 문자
 
@@ -17,6 +17,6 @@ ms.locfileid: "56152120"
 
 null 문자가 개수에 제한 없이 이진 스트림에 추가될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [라이브러리 함수](../c-language/library-functions.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 85a315ee393a002da4d0999569d4af6c34a37ee3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455512"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376837"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream 클래스
+# <a name="basic_ifstream-class"></a>basic_ifstream 클래스
 
-문자 특성이 클래스 `Tr`에 의해 결정되는 `Elem` 형식의 요소가 있는 클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체에 대해 설명합니다.
+클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`> `Tr` 스트림 버퍼에서 요소 및 인코딩된 개체의 추출을 제어하는 개체를 설명하며, 문자 `Elem`특성은 클래스에 `Tr`의해 결정됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,10 +36,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>매개 변수
 
-*E*\
+*Elem*\
 파일 버퍼의 기본 요소입니다.
 
-*비교한*\
+*Tr*\
 파일 버퍼 기본 요소의 특성(일반적으로 `char_traits`< `Elem`>)입니다.
 
 ## <a name="remarks"></a>설명
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>입력: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>입력: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -91,19 +91,19 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
-|[close](#close)|파일을 닫습니다.|
+|[가까이](#close)|파일을 닫습니다.|
 |[is_open](#is_open)|파일이 열려 있는지 확인합니다.|
-|[open](#open)|파일을 엽니다.|
+|[열기](#open)|파일을 엽니다.|
 |[rdbuf](#rdbuf)|저장된 스트림 버퍼 주소를 반환합니다.|
-|[swap](#swap)|이 `basic_ifstream`의 콘텐츠를 제공된 `basic_ifstream`의 콘텐츠로 교환합니다.|
+|[스왑](#swap)|이 `basic_ifstream`의 콘텐츠를 제공된 `basic_ifstream`의 콘텐츠로 교환합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[operator=](#op_eq)|이 스트림 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 `rvalue`와 관련된 이동 할당입니다.|
+|[연산자 =](#op_eq)|이 스트림 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 `rvalue`와 관련된 이동 할당입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -111,7 +111,7 @@ This is the contents of basic_ifstream_class.txt.
 
 **네임스페이스:** std
 
-## <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream
+## <a name="basic_ifstreambasic_ifstream"></a><a name="basic_ifstream"></a>basic_ifstream:basic_ifstream
 
 `basic_ifstream` 형식의 개체를 생성합니다.
 
@@ -133,10 +133,10 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*파일 이름 (_s)* \
+*_Filename*\
 열어야 할 파일의 이름입니다.
 
-*모드 (_s)* \
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)의 열거형 중 하나입니다.
 
 *_Prot*\
@@ -144,9 +144,9 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 [basic_istream](../standard-library/basic-istream-class.md)( `sb`)를 호출하여 기본 클래스를 초기화합니다. 여기서 `sb`는 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 클래스의 저장된 개체입니다. 또한 `basic_filebuf`< `Elem`, `Tr`>을 호출하여 `sb`를 초기화합니다.
+첫 번째 생성자는 클래스 basic_filebuf [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem` `Tr`> 저장된 `sb`개체인 `sb` [basic_istream()를](../standard-library/basic-istream-class.md)호출하여 기본 클래스를 초기화합니다. 또한 `basic_filebuf`< `Elem`, `Tr`>을 호출하여 `sb`를 초기화합니다.
 
-두 번째 및 세 번째 생성자는 `basic_istream`( `sb`)를 호출하여 기본 클래스를 초기화합니다. 또한 `sb`를 초기화하는데, 이번에는 [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`> 및 `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`)을 차례로 호출합니다. 후자 함수가 null 포인터를 반환하면 생성자는 **setstate**( `failbit`)를 호출합니다.
+두 번째 및 세 번째 생성자는 `basic_istream`( `sb`)를 호출하여 기본 클래스를 초기화합니다. `sb` 또한 [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`호출하여 초기화 `Tr` , `sb`>, 다음 . (, `_Mode` &#124;)을 `ios_base::in` [입력합니다.](../standard-library/basic-filebuf-class.md#open) `_Filename` 후자의 함수가 null 포인터를 반환하는 경우 `failbit`생성자는 **setstate**()를 호출합니다.
 
 네 번째 생성자는 rvalue 참조로 처리되는 `right`의 내용으로 개체를 초기화합니다.
 
@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="close"></a>  basic_ifstream::close
+## <a name="basic_ifstreamclose"></a><a name="close"></a>basic_ifstream::닫기
 
 파일을 닫습니다.
 
@@ -185,13 +185,13 @@ void close();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)를 호출 합니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [close를 호출합니다.](../standard-library/basic-filebuf-class.md#close)
 
 ### <a name="example"></a>예제
 
 `close`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
-## <a name="is_open"></a>  basic_ifstream::is_open
+## <a name="basic_ifstreamis_open"></a><a name="is_open"></a>basic_ifstream:is_open
 
 파일이 열려 있는지 확인합니다.
 
@@ -199,19 +199,19 @@ void close();
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일이 열린 경우 **true**, 아닌 경우 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)를 반환 합니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)반환합니다.
 
 ### <a name="example"></a>예제
 
 `is_open`을 사용하는 방법의 예는 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)을 참조하세요.
 
-## <a name="open"></a>  basic_ifstream::open
+## <a name="basic_ifstreamopen"></a><a name="open"></a>basic_ifstream::열기
 
 파일을 엽니다.
 
@@ -237,10 +237,10 @@ void open(
 
 ### <a name="parameters"></a>매개 변수
 
-*파일 이름 (_s)* \
+*_Filename*\
 열어야 할 파일의 이름입니다.
 
-*모드 (_s)* \
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)의 열거형 중 하나입니다.
 
 *_Prot*\
@@ -248,13 +248,13 @@ void open(
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**)을 호출합니다. Open이 실패 하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)를 호출 하며,이 경우 ios_base:: failure 예외가 throw 될 수 있습니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [open(_](../standard-library/basic-filebuf-class.md#open)파일 *이름*, `_Mode` &#124; **ios_base::in)를**호출합니다. open이 실패하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)()를`failbit`호출하여 ios_base::실패 예외를 throw할 수 있습니다.
 
 ### <a name="example"></a>예제
 
-을 사용 `open`하는 예제는 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 을 참조 하세요.
+[basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) 을 사용하는 예제를 참조하십시오. `open`
 
-## <a name="op_eq"></a>  basic_ifstream::operator=
+## <a name="basic_ifstreamoperator"></a><a name="op_eq"></a>basic_ifstream::연산자=
 
 이 스트림 개체의 콘텐츠를 할당합니다. 복사본을 남기지 않는 rvalue와 관련된 이동 할당입니다.
 
@@ -267,15 +267,15 @@ basic_ifstream& operator=(basic_ifstream&& right);
 *오른쪽*\
 `basic_ifstream` 개체에 대한 rvalue 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `*this`를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 rvalue 참조로 처리 되는 *오른쪽*의 내용을 사용 하 여 개체의 내용을 바꿉니다. 자세한 내용은 [Lvalue 및 Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)를 참조하세요.
+멤버 연산자는 rvalue 참조로 처리된 *오른쪽의*내용을 사용하여 개체의 내용을 대체합니다. 자세한 내용은 [Lvalue 및 Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)를 참조하세요.
 
-## <a name="rdbuf"></a>  basic_ifstream::rdbuf
+## <a name="basic_ifstreamrdbuf"></a><a name="rdbuf"></a>basic_ifstream::rdbuf
 
 저장된 스트림 버퍼 주소를 반환합니다.
 
@@ -283,7 +283,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 저장된 스트림 버퍼를 나타내는 [basic_filebuf](../standard-library/basic-filebuf-class.md) 개체에 대한 포인터입니다.
 
@@ -291,7 +291,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 `rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
-## <a name="swap"></a>  basic_ifstream::swap
+## <a name="basic_ifstreamswap"></a><a name="swap"></a>basic_ifstream::스왑
 
 두 `basic_ifstream` 개체의 내용을 교환합니다.
 
@@ -306,10 +306,10 @@ void swap(basic_ifstream& right);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는이 개체의 내용을 *오른쪽*의 내용으로 교환 합니다.
+멤버 함수는 이 개체의 내용을 *오른쪽의*내용으로 교환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

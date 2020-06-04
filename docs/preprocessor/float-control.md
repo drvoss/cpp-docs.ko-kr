@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 0c9caea5ba35a55a53f7b9340cf9bfd2cce80561
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305499"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166786"
 ---
 # <a name="float_control-pragma"></a>float_control pragma
 
@@ -30,10 +30,10 @@ ms.locfileid: "74305499"
 ## <a name="options"></a>옵션
 
 **정확한** |  **꺼짐**, **푸시**\
-정확한 부동 소수점 의미 체계를 사용 하거나 사용 하지**않도록 (설정) 할지** **여부를 지정**합니다. 이 옵션이 이름이 지정 된 **/fp: precise** 컴파일러 옵션과 어떻게 다른 지에 대 한 자세한 내용은 설명 부분을 참조 하십시오. 선택적 **푸시** 토큰은 내부 컴파일러 스택에 **float_control** 의 현재 설정을 푸시하는 컴파일러에 지시 합니다.
+정확한 부동 소수점 의미 체계를 사용 하거나 사용 하지**않도록 (설정) 할지** **여부를 지정**합니다. **/Fp: precise** 컴파일러 옵션의 차이점에 대 한 자세한 내용은 설명 부분을 참조 하세요. 선택적 **푸시** 토큰은 내부 컴파일러 스택에 **float_control** 의 현재 설정을 푸시합니다.
 
 **제외**하 고 | **해제** **시** **푸시**\
-부동 소수점 예외 의미 체계를 사용 하거나 사용 하지**않도록 (설정) 할지** **여부를 지정**합니다. 이 옵션이 이름이 지정 된 **/fp: except** 컴파일러 옵션과 어떻게 다른 지에 대 한 자세한 내용은 설명 부분을 참조 하세요. 선택적 **푸시** 토큰은 내부 컴파일러 스택에 **float_control** 의 현재 설정을 푸시하는 컴파일러에 지시 합니다.
+부동 소수점 예외 의미 체계를 사용 하거나 사용 하지**않도록 (설정) 할지** **여부를 지정**합니다. 선택적 **푸시** 토큰은 내부 컴파일러 스택에 **float_control** 의 현재 설정을 푸시합니다.
 
 **except** 는 **on**으로 **설정 된 경우** 에만 **on** 으로 설정할 수 있습니다.
 
@@ -43,19 +43,17 @@ ms.locfileid: "74305499"
 **pop**\
 내부 컴파일러 스택 맨 위에서 **float_control** 설정을 제거 하 고 새 **float_control** 설정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**정확한** 및 **제외** 옵션은 동일한 이름의 [/fp](../build/reference/fp-specify-floating-point-behavior.md) 컴파일러 옵션과 정확히 동일한 동작을 포함 하지 않습니다. **Float_control** pragma는 부동 소수점 동작의 일부를 제어 합니다. [Fp_contract](../preprocessor/fp-contract.md) 및 [fenv_access](../preprocessor/fenv-access.md) pragma를 조합 하 여 **/fp** 컴파일러 옵션을 다시 만들어야 합니다. 다음 표에서는 각 컴파일러 옵션에 대 한 동일한 pragma 설정을 보여 줍니다.
+**Float_control** pragma는 [/fp](../build/reference/fp-specify-floating-point-behavior.md) 컴파일러 옵션과 동일한 동작을 포함 하지 않습니다. **Float_control** pragma는 부동 소수점 동작의 일부를 제어 합니다. [Fp_contract](../preprocessor/fp-contract.md) 및 [fenv_access](../preprocessor/fenv-access.md) pragma를 조합 하 여 **/fp** 컴파일러 옵션을 다시 만들어야 합니다. 다음 표에서는 각 컴파일러 옵션에 대 한 동일한 pragma 설정을 보여 줍니다.
 
 | | float_control (정확한, \*) | float_control (제외, \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /fp:strict             | 위치:  | 위치:  | 해제 | 위치:  |
-| /fp:strict /fp:except- | 위치:  | 해제 | 해제 | 위치:  |
-| /fp:precise            | 위치:  | 해제 | 위치:  | 해제 |
-| /fp:precise /fp:except | 위치:  | 위치:  | 위치:  | 해제 |
-| /fp:fast               | 해제 | 해제 | 위치:  | 해제 |
+| /fp:strict             | on  | on  | 끄기 | on  |
+| /fp:precise            | on  | 끄기 | on  | 끄기 |
+| /fp:fast               | 끄기 | 끄기 | on  | 끄기 |
 
-즉, 여러 pragma를 조합 하 여 **/fp: fast**, **/fp: precise**, **/fp: strict**및 **/fp: except** 명령줄 옵션을 에뮬레이션 해야 합니다.
+즉, 여러 pragma를 조합 하 여 **/fp: fast**, **/fp: precise**, **/fp: strict** 명령줄 옵션을 에뮬레이션 해야 할 수 있습니다.
 
 **Float_control** 를 사용 하 고 부동 소수점 pragma를 **fenv_access** 하는 방법에는 다음과 같은 제한 사항이 있습니다.
 
@@ -67,7 +65,7 @@ ms.locfileid: "74305499"
 
 - **Fenv_access** 사용 하도록 설정 된 경우 **float_control** 를 사용 하 여 **정확한** 기능을 해제할 수 없습니다.
 
-이러한 제한 사항은 일부 부동 소수점 pragma의 순서가 중요 함을 의미 합니다. **Float_control** 및 관련 pragma를 사용 하 여 빠른 모델에서 엄격한 모델로 이동 하려면 다음 코드를 사용 합니다.
+이러한 제한 사항은 일부 부동 소수점 pragma의 순서가 중요 함을 의미 합니다. Pragma를 사용 하 여 빠른 모델에서 엄격한 모델로 이동 하려면 다음 코드를 사용 합니다.
 
 ```cpp
 #pragma float_control(precise, on)  // enable precise semantics
@@ -82,7 +80,7 @@ ms.locfileid: "74305499"
 #pragma float_control(except, off)  // disable exception semantics
 #pragma fenv_access(off)            // disable environment sensitivity
 #pragma float_control(precise, off) // disable precise semantics
-#pragma fp_contract(on)             // ensable contractions
+#pragma fp_contract(on)             // enable contractions
 ```
 
 옵션을 지정 하지 않으면 **float_control** 적용 되지 않습니다.

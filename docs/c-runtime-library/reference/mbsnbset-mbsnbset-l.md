@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset, _mbsnbset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset
 - _mbsnbset_l
+- _o__mbsnbset
+- _o__mbsnbset_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952161"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915546"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -67,7 +70,7 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*문자열*<br/>
 변경할 문자열입니다.
 
 *c*<br/>
@@ -79,23 +82,25 @@ unsigned char *_mbsnbset_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_mbsnbset** 는 변경 된 문자열에 대 한 포인터를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_Mbsnbset** 및 **_mbsnbset_l** 함수는 *str* 의 처음 *카운트* 바이트를 *c*로 설정 합니다. *Count* 가 *str*의 길이 보다 크면 *count*대신 *str* 의 길이가 사용 됩니다. *C* 가 멀티 바이트 문자이 고 *count*로 지정 된 마지막 바이트로 완전히 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. **_mbsnbset** 및 **_mbsnbset_l** 는 *str*의 끝에 종료 null을 삽입 하지 않습니다.
+**_Mbsnbset** 및 **_mbsnbset_l** 함수는 *str* 의 처음 *카운트* 바이트를 *c*로 설정 합니다. *Count* 가 *str*의 길이 보다 크면 *count*대신 *str* 의 길이가 사용 됩니다. *C* 가 멀티 바이트 문자이 고 *count*로 지정 된 마지막 바이트로 완전히 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. **_mbsnbset** 및 **_mbsnbset_l** 은 *str*의 끝에 종료 null을 삽입 하지 않습니다.
 
 **_mbsnbset** 및 **_mbsnbset_l** 는 *c*의 *카운트* 문자 대신 *count* 바이트를 설정 한다는 점을 제외 하 고 **_mbsnset**와 비슷합니다.
 
 *Str* 이 **NULL** 이거나 *개수가* 0 인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 예외를 생성 합니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는 **NULL**을 반환 합니다. 또한 *c* 가 유효한 멀티 바이트 문자가 아닌 경우에는 **errno** 가 **EINVAL** 로 설정 되 고 대신 공백이 사용 됩니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. 이 함수의 **_mbsnbset** 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_mbsnbset_l** 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. 이 함수의 **_mbsnbset** 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_mbsnbset_l** 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 **보안 정보** 이 API는 버퍼 오버런 문제로 인해 발생하는 잠재적인 위협을 일으킵니다. 버퍼 오버런 문제는 자주 사용되는 시스템 공격 방법으로, 불필요한 권한 상승을 초래합니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -109,7 +114,7 @@ unsigned char *_mbsnbset_l(
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -137,7 +142,7 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

@@ -10,11 +10,11 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241656"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427808"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 연산자
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> 연산자&lt;=
+## <a name="op_lt_eq"></a>연산자&lt;=
 
 `tuple` 개체가 작거나 같은지 비교합니다.
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 `tuple` 개체가 같은지 비교합니다.
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> 연산자&gt;=
+## <a name="op_gt_eq"></a>연산자&gt;=
 
 `tuple` 개체가 크거나 같은지 비교합니다.
 

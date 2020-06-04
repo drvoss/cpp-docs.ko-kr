@@ -3,11 +3,11 @@ title: 예제 프로그램
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
 ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233941"
 ---
 # <a name="example-program"></a>예제 프로그램
 
@@ -73,6 +73,6 @@ FILE1.C는 정의하는 선언을 사용하여 전역 변수 `a` 및 `b`를 초�
 
 식별자의 수명 및 표시 유형은 [수명, 범위, 표시 유형 및 링크](../c-language/lifetime-scope-visibility-and-linkage.md)에 설명되어 있습니다. 함수에 대한 자세한 내용은 [함수](../c-language/functions-c.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [원본 파일 및 원본 프로그램](../c-language/source-files-and-source-programs.md)

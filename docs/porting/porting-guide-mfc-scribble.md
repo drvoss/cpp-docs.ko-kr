@@ -2,12 +2,12 @@
 title: '포팅 가이드: MFC Scribble'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627222"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076962"
 ---
 # <a name="porting-guide-mfc-scribble"></a>포팅 가이드: MFC Scribble
 
@@ -23,11 +23,11 @@ MFC Scribble은 다양한 버전의 Visual C++에 포함된 잘 알려진 샘플
 
 다음으로, 전체 솔루션과 해당 콘텐츠를 모두 백업합니다.
 
-마지막으로, 최신 버전의 Visual Studio에서 솔루션을 열고 마법사에서 프로젝트를 변환 하도록 허용 합니다. 
+마지막으로, 최신 버전의 Visual Studio에서 솔루션을 열고 마법사에서 프로젝트를 변환 하도록 허용 합니다.
 
 마법사를 사용하여 프로젝트를 업그레이드하는 대신 `/Upgrade` 옵션을 사용하여 명령줄에서 devenv를 실행할 수도 있습니다. [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)를 참조하세요. 이 작업은 다수의 프로젝트에 대해 업그레이드 프로세스를 자동화하는 데 유용할 수 있습니다.
 
-### <a name="step-1-converting-the-project-file"></a>1단계: 프로젝트 파일 변환
+### <a name="step-1-converting-the-project-file"></a>1단계. 프로젝트 파일 변환
 
 Visual Studio에서 이전 프로젝트 파일을 열면 Visual Studio에서 프로젝트 파일을 최신 버전으로 변환 하는 것을 제공 합니다. 다음과 같은 대화 상자가 나타납니다.
 
@@ -73,7 +73,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 코드에서 이 매크로로 지정한 Windows 버전에서 사용할 수 없는 Windows API의 일부를 사용하는 경우 컴파일러 오류로 표시됩니다. Scribble 코드의 경우 오류가 없습니다.
 
-### <a name="step-3-testing-and-debugging"></a>3단계: 테스트 및 디버깅
+### <a name="step-3-testing-and-debugging"></a>3단계. 테스트 및 디버깅
 
 테스트 도구 모음이 없으므로 앱을 시작하고 UI를 통해 수동으로 해당 기능을 테스트했습니다. 문제가 발견되지 않았습니다.
 
@@ -85,7 +85,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Scribble은 작고 간단한 Windows 데스크톱 애플리케이션이며 변환하기 어렵지 않았습니다. 마찬가지로, 대부분의 작고 간단한 앱은 쉽게 새 버전으로 변환됩니다.  많은 줄의 코드, 최신 엔지니어링 표준에 부합되지 않는 레거시 코드, 여러 프로젝트와 라이브러리, 사용자 지정 빌드 단계를 포함하는 더 복잡한 애플리케이션이나 복잡한 스크립팅된 자동화 빌드의 경우 업그레이드하는 데 더 오랜 시간이 걸립니다. [다음 예제](../porting/porting-guide-com-spy.md)인 COM Spy라는 ATL/COM 애플리케이션으로 계속합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [포팅 및 업그레이드: 예제 및 사례 연구](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [다음 예제: COM Spy](../porting/porting-guide-com-spy.md)

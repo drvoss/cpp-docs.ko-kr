@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154635"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180279"
 ---
 # <a name="continue-statement-c"></a>continue 문 (C++)
 
-가장 작은 바깥쪽의 제어 식으로 강제로 전송 [마십시오](../cpp/do-while-statement-cpp.md)를 [에 대 한](../cpp/for-statement-cpp.md), 또는 [하는 동안](../cpp/while-statement-cpp.md) 루프입니다.
+가장 작은 바깥쪽 [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)또는 [while](../cpp/while-statement-cpp.md) 루프의 제어 식으로 제어를 강제로 전송 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,11 +27,11 @@ continue;
 
 현재 반복에서 나머지 모든 문은 실행되지 않습니다. 루프의 다음 반복은 다음과 같이 결정됩니다.
 
-- 에 **수행** 또는 **하는 동안** 루프의 제어 식 내에서 시작 된 다음 반복 합니다 **수행** 또는 **하는 동안** 문.
+- **Do** 또는 **while** 루프에서는 **do** 또는 **while** 문의 제어 식을 다시 계산 하 여 다음 반복이 시작 됩니다.
 
-- 에 **에 대 한** 루프 (구문을 사용 하 여 `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` 절이 실행 됩니다. 그런 다음 `cond-expr` 절이 다시 계산되고 해당 결과에 따라 루프가 종료되거나 다른 반복이 발생합니다.
+- **For** 루프에서 (`for`(`init-expr`; `cond-expr`; `loop-expr`) 구문을 사용 하 여) `loop-expr` 절이 실행 됩니다. 그런 다음 `cond-expr` 절이 다시 계산되고 해당 결과에 따라 루프가 종료되거나 다른 반복이 발생합니다.
 
-다음 예제와 방법을 **계속** 문은 코드 섹션을 건너뛰고 루프의 다음 반복이 시작에 사용할 수 있습니다.
+다음 예제에서는 **continue** 문을 사용 하 여 코드 섹션을 건너뛰고 루프의 다음 반복을 시작할 수 있는 방법을 보여 줍니다.
 
 ## <a name="example"></a>예제
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [점프 문](../cpp/jump-statements-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

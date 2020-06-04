@@ -1,10 +1,13 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949369"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917829"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -56,28 +60,30 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>매개 변수
 
-*numer*<br/>
+*숫자로*<br/>
 분자입니다.
 
 *denom*<br/>
 분모입니다.
 
-*quo*<br/>
+*현상*<br/>
 몫의 대략적인 크기와 부호가 포함된 값을 저장하는 정수에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**remquo** 는 *x* / *y*의 부동 소수점 나머지를 반환 합니다. *Y* 값이 0.0 이면 **Remquo** 는 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf, _printf_l, wprintf, _printf_l](printf-printf-l-wprintf-wprintf-l.md)을 참조 하세요.
+**remquo** 는 *x* / *y*의 부동 소수점 나머지를 반환 합니다. *Y* 값이 0.0 이면 **Remquo** 는 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-**Remquo** 함수 *는 x* = *i*  /  y\* f와같이xy의부동소수점나머지 +  *f* 를 계산 합니다. 여기서 *i는* 는 정수이 고, *f* 는 *x*와 동일한 부호를 가지 며, *f* 의 절대값은 *y*의 절대값 보다 낮습니다.
+**Remquo** 함수는 x*i*  / *y* \* *y* =  *x* + *f*인 x y의 부동 소수점 나머지 *f* 를 계산 합니다. 여기서 *i* 는 정수이 고 *f* 는 *x*와 같으며 *f의 절대값은* *y*의 절대값 보다 작은 *값입니다.*
 
-C++는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **remquo** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **remquo** 은 항상 두 개의 **double** 인수를 사용 하 고 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **remquo** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **remquo** 은 항상 두 개의 **double** 인수를 사용 하 고 **double**을 반환 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|함수|필수 헤더(C)|필수 헤더(C++)|
+|기능|필수 헤더(C)|필수 헤더(C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> 또는 \<math.h>|
 
@@ -108,7 +114,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

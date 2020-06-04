@@ -1,0 +1,49 @@
+### YamlMime:Landing
+title: C++를 사용한 모바일 개발 | Windows UWP, Android 및 iOS
+summary: Visual Studio에서 iOS, Android 및 Windows 디바이스용 네이티브 C++ 앱을 만듭니다.
+metadata:
+  title: C++을 사용한 모바일 개발 설명서
+  description: Visual Studio에서 iOS, Android 및 Windows 디바이스용 네이티브 C++ 앱을 만듭니다.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153531"
+landingContent:
+- title: 플랫폼 간 모바일 앱 빌드하는 방법 알아보기
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: C++를 사용하여 플랫폼 간 모바일 개발 설치
+      url: install-visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: overview
+    links:
+    - text: C++를 사용한 플랫폼 간 모바일 개발 개요
+      url: visual-cpp-for-cross-platform-mobile-development.md
+  - linkListType: tutorial
+    links:
+    - text: Android 및 iOS에서 OpenGL ES 애플리케이션 빌드
+      url: build-an-opengl-es-application-on-android-and-ios.md
+    - text: Android Native Activity 앱 만들기
+      url: create-an-android-native-activity-app.md
+  - linkListType: learn
+    links:
+    - text: 플랫폼 간 모바일 개발 예제
+      url: cross-platform-mobile-development-examples.md
+- title: 플랫폼 간 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: C++ 플랫폼 간 속성 페이지 참조
+      url: cross-platform-prop-pages.md
+    - text: UWP(유니버설 Windows 플랫폼) 설명서
+      url: /cpp/cppcx/universal-windows-apps-cpp
+    - text: iOS API 설명서
+      url: https://developer.apple.com/reference
+    - text: Android API 설명서
+      url: https://developer.android.com/guide/index.html

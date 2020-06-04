@@ -1,0 +1,73 @@
+- name: Visual Studio에서 C++ 코드 읽기 및 쓰기
+  expanded: true
+  items:
+    - name: C++ 코드 읽기 및 이해
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: C++ 코드 편집 및 리팩터링
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: C++ 코드 탐색
+      href: ../ide/navigate-code-cpp.md
+    - name: C++ 코딩 기본 설정 지정
+      href: ../ide/how-to-set-preferences.md
+    - name: C++용 Live Share를 사용하여 협업
+      href: ../ide/live-share-cpp.md
+    - name: 시그니처 변경
+      href: ../ide/refactoring/change-signature.md
+    - name: 원시 문자열 리터럴로 변환
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: 선언/정의 만들기
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: 함수 추출
+      href: ../ide/refactoring/extract-function.md
+    - name: 순수 가상 구현
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: 함수 정의 이동
+      href: ../ide/refactoring/move-definition-location.md
+    - name: 이름 바꾸기
+      href: ../ide/refactoring/rename.md
+- name: C++ 데스크톱 개발에 Visual Studio IDE 사용
+  expanded: true
+  items:
+    - name: C++ 데스크톱 개발에 Visual Studio IDE 사용
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: '연습: 프로젝트 및 솔루션 작업(C++)'
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: '연습: 프로젝트 빌드(C++)'
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: '연습: 프로젝트 테스트(C++)'
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: '연습: 프로젝트 디버그(C++)'
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: '연습: 프로그램 배포(C++)'
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: 코드 마법사로 기능 추가
+  expanded: true
+  items:
+    - name: 코드 마법사로 기능 추가
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: 클래스 추가
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: ActiveX 컨트롤의 클래스 추가
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: 일반 C++ 클래스 추가
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: 멤버 함수 추가
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: 멤버 변수 추가
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: 메서드 추가
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: 속성 추가
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: 이벤트 추가
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: 이벤트 처리기 추가
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: COM 인터페이스 만들기
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: 연결점 구현
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: 인터페이스 구현
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: 가상 함수 재정의
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

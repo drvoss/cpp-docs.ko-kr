@@ -1,34 +1,21 @@
 ---
 title: scanf 너비 사양
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811125"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444712"
 ---
 # <a name="scanf-width-specification"></a>scanf 너비 사양
 
-이 정보는 `scanf_s`와 같은 보안 버전을 비롯하여 함수의 `scanf` 패밀리에서 형식 문자열의 해석에 적용됩니다. 다음 함수는 일반적으로 입력 스트림이 일련의 토큰으로 나뉜다고 가정합니다. 토큰은 공백 (공백, 탭 또는 줄 바꿈)으로 구분 되거나 숫자 형식의 경우 숫자 텍스트로 변환할 수 없는 첫 번째 문자가 나타내는 숫자 데이터 형식의 자연 스러운 끝으로 구분 됩니다. 입력 구문 분석을 토큰의 자연스러운 끝 이전에 중단하는 데 너비 지정을 사용할 수 있습니다.
+이 정보는 `scanf`와 같은 보안 버전을 비롯하여 함수의 `scanf_s` 패밀리에서 형식 문자열의 해석에 적용됩니다. 다음 함수는 일반적으로 입력 스트림이 일련의 토큰으로 나뉜다고 가정합니다. 토큰은 공백 (공백, 탭 또는 줄 바꿈)으로 구분 되거나 숫자 형식의 경우 숫자 텍스트로 변환할 수 없는 첫 번째 문자가 나타내는 숫자 데이터 형식의 자연 스러운 끝으로 구분 됩니다. 입력 구문 분석을 토큰의 자연스러운 끝 이전에 중단하는 데 너비 지정을 사용할 수 있습니다.
 
-*width* 지정은 *너비* 필드라고 하는 양의 정수를 포함할 수 있는 형식 필드 한정자와 `%` 사이의 문자 및 필드 형식의 수정자(예: 정수 유형이 **short** 또는 **long**인지 표시)로도 간주할 수 있는 필드의 크기를 나타내는 하나 이상의 문자로 구성되어 있습니다. 이러한 문자를 크기 접두사라고 합니다.
+*width* 지정은 `%`너비*필드라고 하는 양의 정수를 포함할 수 있는 형식 필드 한정자와* 사이의 문자 및 필드 형식의 수정자(예: 정수 유형이 **short** 또는 **long**인지 표시)로도 간주할 수 있는 필드의 크기를 나타내는 하나 이상의 문자로 구성되어 있습니다. 이러한 문자를 크기 접두사라고 합니다.
 
 ## <a name="the-width-field"></a>너비 필드
 
@@ -73,7 +60,7 @@ scanf_s("%20s", str, 21);
 |`scanf` 포함 된 와이드 문자열|**l**|**s** 또는 **S**|
 |`wscanf` 포함 된 와이드 문자열|**l**|**s** 또는 **S**|
 
-다음 예에서는 `scanf_s` 함수 및 `wscanf_s` 함수와 함께 **h** 및 **l**를 사용합니다.
+다음 예에서는 **함수 및** 함수와 함께 **h** 및 `scanf_s`l`wscanf_s`를 사용합니다.
 
 ```C
 scanf_s("%ls", &x, 2);     // Read a wide-character string
@@ -106,7 +93,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 어떤 이유로든 `scanf` 함수가 입력 필드 읽기를 중지한 경우 다음 입력 필드는 읽지 않은 첫 번째 문자에서 시작되는 것으로 간주됩니다. 충돌 하는 문자 (있는 경우)는 읽지 않은 것으로 간주 됩니다. 다음 입력 필드의 첫 번째 문자 또는 입력 스트림에서 후속 읽기 작업의 첫 번째 문자입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

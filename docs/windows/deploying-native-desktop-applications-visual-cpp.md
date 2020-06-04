@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160192"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>네이티브 데스크톱 애플리케이션 배포(Visual C++)
 
@@ -53,7 +53,7 @@ Visual Studio는 Windows 애플리케이션을 배포하는 다양한 기술을 
 
 - [이전 버전의 런타임에서 C++ /clr 애플리케이션 실행](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 - [C/C++ 격리된 애플리케이션 및 side-by-side 어셈블리 빌드](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 

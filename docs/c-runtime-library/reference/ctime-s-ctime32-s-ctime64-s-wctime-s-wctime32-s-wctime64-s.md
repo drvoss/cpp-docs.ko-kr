@@ -1,6 +1,6 @@
 ---
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ctime64_s
 - _wctime32_s
@@ -8,6 +8,10 @@ api_name:
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
+- _o__ctime32_s
+- _o__ctime64_s
+- _o__wctime32_s
+- _o__wctime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624408"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914815"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -125,38 +130,38 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 26자를 포함할 만큼 충분히 커야 합니다. 문자열 결과에 대 한 포인터 이거나, 다음과 같은 경우 **NULL** 입니다.
 
 - *Sourcetime* 은 1970 년 1 월 1 일 자정 (UTC) 이전의 날짜를 나타냅니다.
 
-- **_Ctime32_s** 또는 **_wctime32_s** 를 사용 하는 경우 *Sourcetime* 은 2038 년 1 월 18 일 23:59:59 이후의 날짜를 나타냅니다.
+- **_Ctime32_s** 또는 **_wctime32_s** 를 사용 하 고 *Sourcetime* 은 2038 년 1 월 18 일 23:59:59 이후의 날짜를 나타냅니다.
 
 - **_Ctime64_s** 또는 **_wctime64_s** 를 사용 하는 경우 *Sourcetime* 은 3000 년 12 월 31 일 23:59:59 이후의 날짜를 나타냅니다.
 
-- **_Ctime_s** 또는 **_wctime_s**를 사용 하는 경우 이러한 함수는 이전 함수에 대 한 래퍼입니다. 설명 부분을 참조하세요.
+- **_Ctime_s** 또는 **_wctime_s**를 사용 하는 경우 이러한 함수는 이전 함수에 대 한 래퍼입니다. 주의 섹션을 참조하십시오.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 버퍼의 크기입니다.
 
 *sourceTime*<br/>
 저장된 시간에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되는 경우 0입니다. 잘못된 매개 변수로 인해 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 오류 코드가 반환됩니다. 오류 코드는 ERRNO.H에 정의됩니다. 이러한 오류의 목록을 보려면 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 throw되는 실제 오류 코드가 다음 표에 나와 있습니다.
+성공할 경우 0입니다. 잘못된 매개 변수로 인해 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 오류 코드가 반환됩니다. 오류 코드는 ERRNO.H에 정의됩니다. 이러한 오류의 목록을 보려면 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 throw되는 실제 오류 코드가 다음 표에 나와 있습니다.
 
 ## <a name="error-conditions"></a>오류 조건
 
-|*buffer*|*numberOfElements*|*sourceTime*|반환|*버퍼* 의 값|
+|*버퍼*|*이면 numberofelements 이벤트가*|*sourceTime*|반환 값|*버퍼* 의 값|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|any|any|**EINVAL**|수정 안 됨|
+|**N**|any|any|**EINVAL**|수정 안 됨|
 |Not **NULL** (유효한 메모리를 가리킴)|0|any|**EINVAL**|수정 안 됨|
 |**NULL** 이 아님|0< 크기 < 26|any|**EINVAL**|빈 문자열|
 |**NULL** 이 아님|>= 26|NULL|**EINVAL**|빈 문자열|
 |**NULL** 이 아님|>= 26|< 0|**EINVAL**|빈 문자열|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **Ctime_s** 함수는 [time_t](../../c-runtime-library/standard-types.md) 구조체로 저장 된 시간 값을 문자열로 변환 합니다. 일반적으로 *sourcetime* 값은 자정 (00:00:00), 1 월 1 일, 1970, utc (협정 세계시) 이후 경과 된 시간 (초)을 반환 하는 [시간](time-time32-time64.md)에 대 한 호출에서 가져옵니다. 반환 값 문자열은 정확히 26자를 포함하며 그 형식은 다음과 같습니다.
 
@@ -164,17 +169,19 @@ errno_t _wctime64_s(
 
 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자('\n') 및 null 문자('\0')는 문자열의 마지막 두 자리를 차지합니다.
 
-또한 변환된 문자열은 현지 표준 시간대 설정에 따라 조정됩니다. 표준 시간대 환경 및 전역 변수를 정의 하는 방법에 대 한 정보는 [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)및 [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) 함수에서 현지 시간 및 [_tzset](tzset.md) 함수를 구성 하는 방법에 대 한 정보를 참조 하세요.
+또한 변환된 문자열은 현지 표준 시간대 설정에 따라 조정됩니다. 표준 시간대 환경 및 전역 변수를 정의 하는 방법에 대 한 자세한 내용은 [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)및 [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) 함수를 참조 하 여 현지 시간과 [_tzset](tzset.md) 함수를 구성 하는 방법에 대 한 정보를 참조 하십시오.
 
-**_wctime32_s** 및 **_wctime64_s** 는 **_ctime32_s** 및 **_ctime64_s**의 와이드 문자 버전입니다. 와이드 문자 문자열에 대 한 포인터 반환 그렇지 않으면 **_ctime64_s**, **_wctime32_s**및 **_wctime64_s** 는 **_ctime32_s**와 동일 하 게 작동 합니다.
+**_wctime32_s** 및 **_wctime64_s** 은 **_ctime32_s** 및 **_ctime64_s**의 와이드 문자 버전입니다. 와이드 문자 문자열에 대 한 포인터 반환 그렇지 않으면 **_ctime64_s**, **_wctime32_s**및 **_wctime64_s** **_ctime32_s**와 동일 하 게 작동 합니다.
 
-**ctime_s** 는 **_ctime64_s** 로 계산 되는 인라인 함수 이며 **time_t** 는 **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 를 이전 32 비트 **time_t**해석 하도록 강제 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **ctime_s** 가 **_ctime32_s**로 평가 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
+**ctime_s** 은 **_ctime64_s** 으로 계산 되는 인라인 함수 이며 **time_t** **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 이전 32 비트 **time_t**으로 해석 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **ctime_s** **_ctime32_s**으로 평가 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
 
 C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|

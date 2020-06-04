@@ -2,20 +2,17 @@
 title: 맞춤
 description: 데이터 맞춤이 최신 C++에서 지정 되는 방식입니다.
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301667"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076121"
 ---
 # <a name="alignment"></a>맞춤
 
-C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 최대한 활용하기 위해 메모리 내 개체의 정확한 맞춤을 지정하는 기능입니다. 기본적으로 컴파일러는 크기 값에 대 한 클래스 및 구조체 멤버를 정렬 합니다. `bool` 및 `char` 1 바이트 경계, 2 바이트 경계에 `short` 2 바이트 경계, `int`, `long`, `float` 4 바이트 경계, `long long`, `double`, `long double` 8 바이트 경계에 합니다. 
+C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 최대한 활용하기 위해 메모리 내 개체의 정확한 맞춤을 지정하는 기능입니다. 기본적으로 컴파일러는 크기 값에 대 한 클래스 및 구조체 멤버를 정렬 합니다. `bool` 및 `char` 1 바이트 경계, 2 바이트 경계에 `short` 2 바이트 경계, `int`, `long`, `float` 4 바이트 경계, `long long`, `double`, `long double` 8 바이트 경계에 합니다.
 
 대부분의 시나리오에서는 기본 맞춤이 이미 최적 이므로 맞춤을 걱정 하지 않아도 됩니다. 그러나 경우에 따라 데이터 구조에 대 한 사용자 지정 맞춤을 지정 하 여 상당한 성능 향상 이나 메모리 절감 효과를 얻을 수 있습니다. Visual Studio 2015 이전에는 Microsoft 전용 키워드 `__alignof` 사용 하 고 `declspec(alignas)` 하 여 기본값 보다 큰 맞춤을 지정할 수 있습니다. Visual Studio 2015부터 최대 코드 이식성을 위해 c + + 11 표준 키워드인 **alignof** 및 **alignas** 를 사용 해야 합니다. 새 키워드는 Microsoft 전용 확장과 동일한 방식으로 동작 합니다. 이러한 확장에 대 한 설명서는 새 키워드에도 적용 됩니다. 자세한 내용은 [__Alignof 연산자](../cpp/alignof-operator.md) 및 [맞춤](../cpp/align-cpp.md)을 참조 하세요. 표준 C++ 에서는 대상 플랫폼에 대 한 컴파일러 기본값 보다 작은 경계에 맞춤에 대 한 압축 동작을 지정 하지 않으므로이 경우에도 Microsoft #pragma [pack](../preprocessor/pack.md) 을 사용 해야 합니다.
 
@@ -23,7 +20,7 @@ C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 �
 
 ## <a name="alignment-and-memory-addresses"></a>맞춤 및 메모리 주소
 
-맞춤은 숫자 주소 모듈로 2의 거듭제곱으로 표현된 메모리 주소의 속성입니다. 예를 들어 0X0001103c4 주소는 3입니다. 이 주소는 4n + 3에 맞춰져 있습니다. 여기서 4는 선택 된 2의 제곱을 나타냅니다. 주소 맞춤은 선택 된 2의 거듭제곱에 따라 다릅니다. 동일한 주소의 모듈로 8은 7입니다. 맞춤이 Xn+0인 경우 주소가 X에 맞춰집니다.
+맞춤은 숫자 주소 모듈로 2의 거듭제곱으로 표현된 메모리 주소의 속성입니다. 예를 들어 0X0001103 주소는 3입니다. 이 주소는 4n + 3에 맞춰져 있습니다. 여기서 4는 선택 된 2의 제곱을 나타냅니다. 주소 맞춤은 선택 된 2의 거듭제곱에 따라 다릅니다. 동일한 주소의 모듈로 8은 7입니다. 맞춤이 Xn+0인 경우 주소가 X에 맞춰집니다.
 
 Cpu는 메모리에 저장 된 데이터에 대해 작동 하는 명령을 실행 합니다. 데이터는 메모리의 주소로 식별 됩니다. 단일 데이텀이 크기를 가집니다. 주소가 크기에 맞게 정렬 된 경우 *자연스럽 게 맞춰진* 데이텀을 호출 합니다. 그렇지 않으면 *잘못 정렬* 됩니다. 예를 들어 8 바이트의 부동 소수점 좌표는이를 식별 하는 데 사용 되는 주소에 8 바이트 맞춤이 있는 경우 자연스럽 게 맞춰집니다.
 
@@ -101,11 +98,11 @@ adr offset   element
 
 ## <a name="alignof-and-alignas"></a>alignof 및 alignas
 
-**alignas** 형식 지정자는 변수 및 사용자 정의 형식의 사용자 지정 맞춤을 지정하는 포팅 가능한 C++ 표준 방법입니다. 마찬가지로 **alignof** 연산자도 지정된 형식 또는 변수의 맞춤을 얻는 포팅 가능한 표준 방법입니다.
+**Alignas** 형식 지정자는 변수와 사용자 정의 형식 C++ 에 대 한 사용자 지정 맞춤을 지정 하는 이식 가능한 표준 방법입니다. **Alignof** 연산자는 지정 된 형식이 나 변수의 맞춤을 가져오는 표준 이식 가능한 방법입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-클래스, 구조체/공용 구조체 또는 개별 멤버에 **alignas**를 사용할 수 있습니다. 여러 **alignas** 지정자가 발견되는 경우 컴파일러는 가장 엄격한 지정자(가장 큰 값을 가진 지정자)를 선택합니다.
+클래스, 구조체 또는 공용 구조체 또는 개별 멤버에 대해 **alignas** 를 사용할 수 있습니다. 여러 **alignas** 지정 자가 발견 되 면 컴파일러는 가장 엄격한 one (가장 큰 값이 있는 항목)을 선택 합니다.
 
 ```cpp
 // alignas_alignof.cpp
@@ -126,6 +123,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 구조 맞춤](https://en.wikipedia.org/wiki/Data_structure_alignment)

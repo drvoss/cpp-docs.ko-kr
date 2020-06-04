@@ -2,15 +2,14 @@
 title: ATL Active Server Page 구성 요소 추가
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706924"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075293"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>ATL Active Server Page 구성 요소 추가
-
 
 ::: moniker range="vs-2019"
 
@@ -20,7 +19,7 @@ Visual Studio 2019 이상에서는 ATL Active Server Pages 구성 요소 마법�
 
 ::: moniker range="<=vs-2017"
 
-ATL(액티브 템플릿 라이브러리) 개체를 프로젝트에 추가하려면 프로젝트가 COM ATL 애플리케이션 또는 ATL 지원이 포함된 MFC 애플리케이션으로 만든 것이어야 합니다. [ATL 프로젝트 마법사](../../atl/reference/atl-project-wizard.md)를 사용하여 ATL 애플리케이션을 만들 수 있으며 [클래스 대화 상자 추가](../../ide/add-class-dialog-box.md) 대화 상자에서 **MFC에 ATL 지원 추가**를 선택하거나 [MFC 애플리케이션에 ATL 개체를 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)하여 MFC 애플리케이션용 ATL 지원을 구현할 수 있습니다.
+ATL(액티브 템플릿 라이브러리) 개체를 프로젝트에 추가하려면 프로젝트가 COM ATL 애플리케이션 또는 ATL 지원이 포함된 MFC 애플리케이션으로 만든 것이어야 합니다. [ATL 프로젝트 마법사](../../atl/reference/atl-project-wizard.md)를 사용하여 ATL 애플리케이션을 만들 수 있으며 **클래스 대화 상자 추가** 대화 상자에서 [MFC에 ATL 지원 추가](../../ide/add-class-dialog-box.md)를 선택하거나 [MFC 애플리케이션에 ATL 개체를 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)하여 MFC 애플리케이션용 ATL 지원을 구현할 수 있습니다.
 
 Active Server Pages 구성 요소는 다음과 같은 고급 웹 개발 기능을 제공하는 인터넷 정보 서비스 아키텍처의 일부입니다.
 

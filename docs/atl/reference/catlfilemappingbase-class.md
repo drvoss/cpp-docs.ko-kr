@@ -16,23 +16,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739557"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168087"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 클래스
 
 이 클래스는 메모리 매핑된 파일을 나타냅니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -40,29 +40,29 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|생성자입니다.|
-|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|소멸자입니다.|
+|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|파일 매핑 개체에서 복사 하려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::GetData](#getdata)|파일 매핑 개체에서 데이터를 가져오려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::GetHandle](#gethandle)|파일 핸들을 반환 하려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: CopyFrom](#copyfrom)|파일 매핑 개체에서 복사 하려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: GetData](#getdata)|파일 매핑 개체에서 데이터를 가져오려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: GetHandle](#gethandle)|파일 핸들을 반환 하려면이 메서드를 호출 합니다.|
 |[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|파일 매핑 개체에서 매핑 크기를 가져오려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::MapFile](#mapfile)|파일 매핑 개체를 만들려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|모든 프로세스에 대 한 모든 액세스를 허용 하는 파일 매핑 개체를 만들려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|파일 매핑 개체에 대 한 핸들을 반환 하려면이 메서드를 호출 합니다.|
-|[CAtlFileMappingBase::Unmap](#unmap)|파일 매핑 개체의 매핑을 해제 하려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: 맵 파일](#mapfile)|파일 매핑 개체를 만들려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: MapSharedMem](#mapsharedmem)|모든 프로세스에 대 한 모든 액세스를 허용 하는 파일 매핑 개체를 만들려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: OpenMapping](#openmapping)|파일 매핑 개체에 대 한 핸들을 반환 하려면이 메서드를 호출 합니다.|
+|[CAtlFileMappingBase:: 매핑 해제](#unmap)|파일 매핑 개체의 매핑을 해제 하려면이 메서드를 호출 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAtlFileMappingBase::operator =](#operator_eq)|현재 파일 매핑 개체를 다른 파일 매핑 개체로 설정 합니다.|
+|[CAtlFileMappingBase:: operator =](#operator_eq)|현재 파일 매핑 개체를 다른 파일 매핑 개체로 설정 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -74,11 +74,11 @@ class CAtlFileMappingBase
 
 **헤더:** 이 파일 .h
 
-##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 생성자입니다.
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
@@ -96,11 +96,11 @@ CAtlFileMappingBase() throw();
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase
 
 소멸자입니다.
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
@@ -108,11 +108,11 @@ CAtlFileMappingBase() throw();
 
 클래스에서 할당 한 모든 리소스를 해제 하 고 [CAtlFileMappingBase:: 매핑](#unmap) 해제 메서드를 호출 합니다.
 
-##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase:: CopyFrom
 
 파일 매핑 개체에서 복사 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
@@ -121,43 +121,43 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 *orig*<br/>
 복사할 원본 파일 매핑 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 성공 시 S_OK를 반환 하 고 실패 하면 오류 HRESULT를 반환 합니다.
+성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
-##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase:: GetData
 
 파일 매핑 개체에서 데이터를 가져오려면이 메서드를 호출 합니다.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 데이터에 대 한 포인터를 반환 합니다.
 
-##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase:: GetHandle
 
 파일 매핑 개체에 대 한 핸들을 반환 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일 매핑 개체에 대 한 핸들을 반환 합니다.
 
-##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
 
 파일 매핑 개체에서 매핑 크기를 가져오려면이 메서드를 호출 합니다.
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매핑 크기를 반환 합니다.
 
@@ -165,11 +165,11 @@ SIZE_T GetMappingSize() throw();
 
 [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase)의 예제를 참조 하세요.
 
-##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase:: 맵 파일
 
 이 메서드를 호출 하 여 지정 된 파일에 대 한 파일 매핑 개체를 열거나 만듭니다.
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -195,9 +195,9 @@ HRESULT MapFile(
 *dwViewDesiredAccess*<br/>
 파일 보기에 대 한 액세스 형식을 지정 합니다. 따라서 파일에 의해 매핑되는 페이지의 보호를 지정 합니다. Windows SDK에서 *dwDesiredAccess* 의 [mapviewoffileex가](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 성공 시 S_OK를 반환 하 고 실패 하면 오류 HRESULT를 반환 합니다.
+성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -207,11 +207,11 @@ HRESULT MapFile(
 
 [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase)의 예제를 참조 하세요.
 
-##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase:: MapSharedMem
 
 모든 프로세스에 대 한 모든 액세스를 허용 하는 파일 매핑 개체를 만들려면이 메서드를 호출 합니다.
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -236,24 +236,24 @@ HRESULT MapSharedMem(
 반환 된 핸들이 자식 `SECURITY_ATTRIBUTES` 프로세스에서 상속 될 수 있는지 여부를 결정 하는 구조체에 대 한 포인터입니다. Windows SDK에서 *Lpattributes* in [createfilemapping에서](/windows/win32/api/winbase/nf-winbase-createfilemappinga) 를 참조 하세요.
 
 *dwMappingProtection*<br/>
-파일이 매핑될 때 파일 보기에 필요한 보호입니다. Windows SDK에서 *flprotect* 를 `CreateFileMapping` 참조 하세요.
+파일이 매핑될 때 파일 보기에 필요한 보호입니다. Windows SDK에서 *Flprotect* 를 `CreateFileMapping` 참조 하세요.
 
 *dwViewDesiredAccess*<br/>
 파일 보기에 대 한 액세스 형식을 지정 합니다. 따라서 파일에 의해 매핑되는 페이지의 보호를 지정 합니다. Windows SDK에서 *dwDesiredAccess* 의 [mapviewoffileex가](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 성공 시 S_OK를 반환 하 고 실패 하면 오류 HRESULT를 반환 합니다.
+성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
 `MapShareMem`[createfilemapping에서](/windows/win32/api/winbase/nf-winbase-createfilemappinga)에서 만든 기존 파일 매핑 개체를 프로세스 간에 공유할 수 있도록 합니다.
 
-##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase:: OpenMapping
 
 지정 된 파일에 대 한 명명 된 파일 매핑 개체를 열려면이 메서드를 호출 합니다.
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -275,19 +275,19 @@ HRESULT OpenMapping(
 *dwViewDesiredAccess*<br/>
 파일 보기에 대 한 액세스 형식을 지정 합니다. 따라서 파일에 의해 매핑되는 페이지의 보호를 지정 합니다. Windows SDK에서 *dwDesiredAccess* 의 [mapviewoffileex가](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 성공 시 S_OK를 반환 하 고 실패 하면 오류 HRESULT를 반환 합니다.
+성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
 디버그 빌드에서는 입력 매개 변수가 잘못 된 경우 어설션 오류가 발생 합니다.
 
-##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase:: operator =
 
 현재 파일 매핑 개체를 다른 파일 매핑 개체로 설정 합니다.
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
@@ -296,27 +296,27 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 *orig*<br/>
 현재 파일 매핑 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 개체에 대 한 참조를 반환 합니다.
 
-##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase:: 매핑 해제
 
 파일 매핑 개체의 매핑을 해제 하려면이 메서드를 호출 합니다.
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 성공 시 S_OK를 반환 하 고 실패 하면 오류 HRESULT를 반환 합니다.
+성공 시 S_OK 또는 실패 시 오류 HRESULT를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
 자세한 내용은 Windows SDK의 [unmapviewoffile이](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) 를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CAtlFileMapping 클래스](../../atl/reference/catlfilemapping-class.md)<br/>
 [클래스 개요](../../atl/atl-class-overview.md)

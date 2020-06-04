@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506440"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754988"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 클래스
 
@@ -47,34 +47,34 @@ class CFontHolder
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CFontHolder::CFontHolder](#cfontholder)|`CFontHolder` 개체를 생성합니다.|
+|[C글꼴 홀더::C폰트 홀더](#cfontholder)|`CFontHolder` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CFontHolder::GetDisplayString](#getdisplaystring)|컨테이너의 속성 브라우저에 표시 되는 문자열을 검색 합니다.|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|글꼴의 `IDispatch` 인터페이스를 반환 합니다.|
-|[CFontHolder::GetFontHandle](#getfonthandle)|Windows 글꼴에 대 한 핸들을 반환 합니다.|
-|[CFontHolder::InitializeFont](#initializefont)|개체를 `CFontHolder` 초기화 합니다.|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|관련 글꼴에 대 한 정보를 검색 합니다.|
-|[CFontHolder::ReleaseFont](#releasefont)|및`IFont` `CFontHolder` 인터페이스에서개체의`IFontNotification` 연결을 끊습니다.|
-|[CFontHolder::Select](#select)|장치 컨텍스트에서 글꼴 리소스를 선택 합니다.|
-|[CFontHolder::SetFont](#setfont)|개체를 `IFont` 인터페이스에 연결 합니다. `CFontHolder`|
+|[C글꼴 홀더::GetDisplay스트](#getdisplaystring)|컨테이너의 속성 브라우저에 표시되는 문자열을 검색합니다.|
+|[C글꼴 홀더::겟폰트 디스패치](#getfontdispatch)|글꼴의 `IDispatch` 인터페이스를 반환합니다.|
+|[C글꼴 홀더::겟폰트 핸들](#getfonthandle)|핸들을 Windows 글꼴로 반환합니다.|
+|[C글꼴 홀더::초기화글꼴](#initializefont)|`CFontHolder` 개체를 초기화합니다.|
+|[C글꼴 홀더::쿼리텍스트메트릭](#querytextmetrics)|관련 글꼴에 대한 정보를 검색합니다.|
+|[C글꼴 홀더::릴리스 글꼴](#releasefont)|및 인터페이스에서 개체연결을 `CFontHolder` 끊습니다. `IFontNotification` `IFont`|
+|[C글꼴 홀더::선택](#select)|장치 컨텍스트에 글꼴 리소스를 선택합니다.|
+|[C글꼴 홀더::세트폰트](#setfont)|개체를 `CFontHolder` 인터페이스에 `IFont` 연결합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|`CFontHolder` 개체 의`IFont` 인터페이스에 대 한 포인터입니다.|
+|[C폰트 홀더::m_pFont](#m_pfont)|개체의 인터페이스에 `CFontHolder` 대한 `IFont` 포인터입니다.|
 
 ## <a name="remarks"></a>설명
 
-`CFontHolder`에 기본 클래스가 없습니다.
+`CFontHolder`기본 클래스가 없습니다.
 
-이 클래스를 사용 하 여 컨트롤에 대 한 사용자 지정 글꼴 속성을 구현 합니다. 이러한 속성을 [만드는 방법에 대 한 자세한 내용은 ActiveX 컨트롤: 글꼴](../../mfc/mfc-activex-controls-using-fonts.md)사용.
+이 클래스를 사용하여 컨트롤에 대한 사용자 지정 글꼴 속성을 구현합니다. 이러한 속성을 만드는 방법에 대한 자세한 내용은 [ActiveX 컨트롤: 글꼴 사용](../../mfc/mfc-activex-controls-using-fonts.md)문서를 참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -82,9 +82,9 @@ class CFontHolder
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxctl
+**헤더:** afxctl.h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+## <a name="cfontholdercfontholder"></a><a name="cfontholder"></a>C글꼴 홀더::C폰트 홀더
 
 `CFontHolder` 개체를 생성합니다.
 
@@ -95,15 +95,15 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="parameters"></a>매개 변수
 
 *pNotify*<br/>
-글꼴의 `IPropertyNotifySink` 인터페이스에 대 한 포인터입니다.
+글꼴의 `IPropertyNotifySink` 인터페이스에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-를 사용 하기 `InitializeFont` 전에를 호출 하 여 결과 개체를 초기화 해야 합니다.
+결과 개체를 사용하기 전에 호출하여 `InitializeFont` 결과 개체를 초기화해야 합니다.
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+## <a name="cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>C글꼴 홀더::GetDisplay스트
 
-컨테이너의 속성 브라우저에 표시할 수 있는 문자열을 검색 합니다.
+컨테이너의 속성 브라우저에 표시할 수 있는 문자열을 검색합니다.
 
 ```
 BOOL GetDisplayString(CString& strValue);
@@ -112,31 +112,31 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>매개 변수
 
 *strValue*<br/>
-표시 문자열을 보유할 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 에 대 한 참조입니다.
+표시 문자열을 보유하는 [CString에](../../atl-mfc-shared/reference/cstringt-class.md) 대한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-문자열이 성공적으로 검색 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
+문자열이 성공적으로 검색되는 경우 0이 아닙니다. 그렇지 않으면 0.
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+## <a name="cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>C글꼴 홀더::겟폰트 디스패치
 
-글꼴의 디스패치 인터페이스에 대 한 포인터를 검색 하려면이 함수를 호출 합니다.
+이 함수를 호출하여 글꼴의 디스패치 인터페이스에 대한 포인터를 검색합니다.
 
 ```
 LPFONTDISP GetFontDispatch();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CFontHolder` 개체 의`IFontDisp` 인터페이스에 대 한 포인터입니다. 을 호출 `GetFontDispatch` 하는 함수는 작업을 `IUnknown::Release` 수행할 때이 인터페이스 포인터에서를 호출 해야 합니다.
+개체의 인터페이스에 `CFontHolder` 대한 `IFontDisp` 포인터입니다. 호출하는 `GetFontDispatch` 함수는 이 `IUnknown::Release` 인터페이스 포인터를 호출해야 합니다.
 
 ### <a name="remarks"></a>설명
 
-를`GetFontDispatch`호출 하기 전에를 호출 `InitializeFont` 합니다.
+전화하기 `GetFontDispatch`전에 전화하십시오. `InitializeFont`
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+## <a name="cfontholdergetfonthandle"></a><a name="getfonthandle"></a>C글꼴 홀더::겟폰트 핸들
 
-Windows 글꼴에 대 한 핸들을 가져오려면이 함수를 호출 합니다.
+이 함수를 호출하여 Windows 글꼴에 대한 핸들을 가져옵니다.
 
 ```
 HFONT GetFontHandle();
@@ -148,29 +148,29 @@ HFONT GetFontHandle(
 
 ### <a name="parameters"></a>매개 변수
 
-*cyLogical*<br/>
-컨트롤이 그려지는 사각형의 높이 (논리 단위)입니다.
+*사이로만그(것)*<br/>
+컨트롤이 그려지는 사각형의 높이(논리 단위)입니다.
 
-*cyHimetric*<br/>
-컨트롤의 높이 (MM_HIMETRIC 단위)입니다.
+*시히메트릭*<br/>
+컨트롤의 높이(MM_HIMETRIC 단위)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-글꼴 개체에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
+글꼴 개체에 대한 핸들; 그렇지 않으면 NULL.
 
 ### <a name="remarks"></a>설명
 
-*CyLogical* 및 *cyHimetric* 의 비율을 사용 하 여 MM_HIMETRIC 단위로 표현 되는 글꼴의 포인트 크기에 대 한 적절 한 표시 크기 (논리 단위)를 계산 합니다.
+*cyLogical* 및 *cyHimetric의* 비율은 MM_HIMETRIC 단위로 표현된 글꼴의 점 크기에 대해 논리적 단위로 적절한 표시 크기를 계산하는 데 사용됩니다.
 
-Display size = ( *cyLogical* / *cyHimetric*) X font size
+디스플레이 크기 = *(cylogical* / *cyHimetric)* X 글꼴 크기
 
-매개 변수가 없는 버전은 화면에 맞는 글꼴 크기에 대 한 핸들을 반환 합니다.
+매개 변수가 없는 버전은 화면에 대해 올바르게 크기의 글꼴로 핸들을 반환합니다.
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+## <a name="cfontholderinitializefont"></a><a name="initializefont"></a>C글꼴 홀더::초기화글꼴
 
-개체를 `CFontHolder` 초기화 합니다.
+`CFontHolder` 개체를 초기화합니다.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -179,51 +179,51 @@ void InitializeFont(
 ### <a name="parameters"></a>매개 변수
 
 *pFontDesc*<br/>
-글꼴의 특징을 지정 하는 글꼴 설명 구조 [(글꼴 설명)에](/windows/win32/api/olectl/ns-olectl-fontdesc)대 한 포인터입니다.
+글꼴의 특성을 지정하는 글꼴 설명 [구조(FONTDESC)에](/windows/win32/api/olectl/ns-olectl-fontdesc)대한 포인터입니다.
 
 *pFontDispAmbient*<br/>
-컨테이너의 앰비언트 글꼴 속성에 대 한 포인터입니다.
+컨테이너의 주변 Font 속성에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-*PFontDispAmbient* 가 NULL이 아닌 경우 개체 `CFontHolder` 는 컨테이너의 앰비언트 글꼴 속성에서 사용 `IFont` 하는 인터페이스의 복제본에 연결 됩니다.
+*pFontDispAmbient가* NULL이 아닌 `CFontHolder` 경우 개체는 컨테이너의 `IFont` 주변 Font 속성에서 사용하는 인터페이스의 복제본에 연결됩니다.
 
-*PFontDispAmbient* 가 null 인 경우에는 *pfontdesc* 가 가리키는 글꼴 설명에서 새 font 개체가 만들어지거나 기본 설명에서 *pfontdesc* 가 NULL 인 경우에는 새 font 개체가 만들어집니다.
+*pFontDispAmbient가* NULL인 경우 새 글꼴 개체는 *pFontDesc이* 가리키는 글꼴 설명에서 만들어지거나 *pFontDesc이* NULL인 경우 기본 설명에서 만들어집니다.
 
-개체를 생성 한 후이 `CFontHolder` 함수를 호출 합니다.
+개체를 생성한 후 `CFontHolder` 이 함수를 호출합니다.
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+## <a name="cfontholderm_pfont"></a><a name="m_pfont"></a>C폰트 홀더::m_pFont
 
-`CFontHolder` 개체 의`IFont` 인터페이스에 대 한 포인터입니다.
+개체의 인터페이스에 `CFontHolder` 대한 `IFont` 포인터입니다.
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+## <a name="cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>C글꼴 홀더::쿼리텍스트메트릭
 
-`CFontHolder` 개체로 표시 되는 실제 글꼴에 대 한 정보를 검색 합니다.
+개체로 표시되는 실제 글꼴에 `CFontHolder` 대한 정보를 검색합니다.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *lptm*<br/>
-정보를 받을 [Textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw) 구조체에 대 한 포인터입니다.
+정보를 수신하는 [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) 구조에 대한 포인터입니다.
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+## <a name="cfontholderreleasefont"></a><a name="releasefont"></a>C글꼴 홀더::릴리스 글꼴
 
-이 함수는 `IFont` 인터페이스 `CFontHolder` 에서 개체의 연결을 끊습니다.
+이 함수는 `CFontHolder` 개체의 `IFont` 인터페이스연결을 끊습니다.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+## <a name="cfontholderselect"></a><a name="select"></a>C글꼴 홀더::선택
 
-지정 된 장치 컨텍스트에 컨트롤의 글꼴을 선택 하려면이 함수를 호출 합니다.
+이 함수를 호출하여 지정된 장치 컨텍스트에 컨트롤의 글꼴을 선택합니다.
 
 ```
 CFont* Select(
@@ -235,36 +235,36 @@ CFont* Select(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-글꼴이 선택 된 장치 컨텍스트입니다.
+글꼴이 선택되는 장치 컨텍스트입니다.
 
-*cyLogical*<br/>
-컨트롤이 그려지는 사각형의 높이 (논리 단위)입니다.
+*사이로만그(것)*<br/>
+컨트롤이 그려지는 사각형의 높이(논리 단위)입니다.
 
-*cyHimetric*<br/>
-컨트롤의 높이 (MM_HIMETRIC 단위)입니다.
+*시히메트릭*<br/>
+컨트롤의 높이(MM_HIMETRIC 단위)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-대체 되는 글꼴에 대 한 포인터입니다.
+대체되는 글꼴에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-*CyLogical* 및 *cyHimetric* 매개 변수에 대 한 자세한 내용은 [GetFontHandle](#getfonthandle) 를 참조 하세요.
+*cylogical* 및 *cyHimetric* 매개 변수에 대한 설명은 [GetFontHandle을](#getfonthandle) 참조하십시오.
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+## <a name="cfontholdersetfont"></a><a name="setfont"></a>C글꼴 홀더::세트폰트
 
-기존 글꼴을 해제 하 고 `CFontHolder` 개체를 `IFont` 인터페이스에 연결 합니다.
+기존 글꼴을 해제하고 `CFontHolder` 개체를 `IFont` 인터페이스에 연결합니다.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pNewFont*<br/>
-새 `IFont` 인터페이스에 대 한 포인터입니다.
+*p뉴폰트*<br/>
+새 `IFont` 인터페이스에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
-[CPropExchange 클래스](../../mfc/reference/cpropexchange-class.md)
+[프롭익스체인지 클래스](../../mfc/reference/cpropexchange-class.md)

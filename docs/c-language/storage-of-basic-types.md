@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
 ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
 ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71998769"
@@ -45,7 +45,7 @@ ms.locfileid: "71998769"
 |**double**|8바이트|
 |**long double**|8바이트|
 
-C 데이터 형식은 일반 범주로 분류됩니다. *정수 계열 형식* 에는 **int**, **char**, **short**, **long**및 **long long**이 포함 됩니다. 이러한 형식은 **signed** 또는 **unsigned**로 한정 될 수 있으며, **부호 없는** **int**에 대 한 약어로 사용할 수 있습니다. 열거형 형식 (**열거형**)도 대부분의 용도에 대 한 정수 계열 형식으로 처리 됩니다. *부동 형식* 에는 **float**, **double**및 **long double**이 포함 됩니다. *산술 형식* 에는 모든 부동 및 정수 형식이 포함 됩니다.
+C 데이터 형식은 일반 범주로 분류됩니다. ‘정수 형식’에는 **int**, **char**, **short**, **long** 및 **long long**이 포함됩니다.  관련 형식은 **signed** 또는 **unsigned**로 한정할 수 있으며 **unsigned** 자체는 **unsigned int**의 약어로 사용할 수 있습니다. 열거형 형식(**enum**)도 대부분 정수 형식으로 처리됩니다. ‘부동 형식’에는 **float**, **double** 및 **long double**이 포함됩니다.  ‘산술 형식’에는  모든 부동 및 정수 형식이 포함됩니다.
 
 ## <a name="see-also"></a>참조
 

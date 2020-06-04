@@ -1,8 +1,9 @@
 ---
 title: _flushall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _flushall
+- _o__flushall
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a53eeedd5dfa0f9c01fa5883a9db33e26e3ea17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957146"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911620"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -44,7 +46,7 @@ ms.locfileid: "70957146"
 int _flushall( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_flushall** 은 열려 있는 스트림 (입력 및 출력)의 수를 반환 합니다. 반환되는 오류가 없습니다.
 
@@ -52,11 +54,13 @@ int _flushall( void );
 
 기본적으로 **_flushall** 함수는 열려 있는 출력 스트림과 연결 된 모든 버퍼의 내용을 해당 파일에 씁니다. 열려 있는 입력 스트림과 연결된 모든 버퍼에서 현재 내용이 지워집니다. 이 버퍼는 대개 자동으로 디스크에 데이터를 쓸 수 있는 최적의 시간을 결정하는 운영 체제에서 유지 관리됩니다. 버퍼가 채워졌을 때 스트림이 닫히거나 스트림을 닫지 않고 프로그램이 정상적으로 종료됩니다.
 
-**_Flushall**에 대 한 호출을 따르는 경우 입력 파일에서 버퍼로 새 데이터를 읽습니다. **_Flushall**에 대 한 호출 후 모든 스트림이 열린 상태로 유지 됩니다.
+읽기 **_flushall**에 대 한 호출을 수행 하면 입력 파일에서 버퍼로 새 데이터를 읽습니다. **_Flushall**를 호출한 후에는 모든 스트림이 열린 상태로 유지 됩니다.
 
-런타임 라이브러리의 디스크에 커밋 기능을 사용하면 중요한 데이터가 운영 체제 버퍼 대신 디스크에 직접 기록되어 있는지 확인할 수 있습니다. 기존 프로그램을 다시 작성하지 않고 프로그램의 개체 파일을 Commode.obj에 연결하여 이 기능을 사용할 수 있습니다. 결과 실행 파일에서 **_flushall** 호출 하면 모든 버퍼의 내용이 디스크에 작성 됩니다. **_Flushall** 및 [Fflush](fflush.md) 는 commode .obj의 영향을 받습니다.
+런타임 라이브러리의 디스크에 커밋 기능을 사용하면 중요한 데이터가 운영 체제 버퍼 대신 디스크에 직접 기록되어 있는지 확인할 수 있습니다. 기존 프로그램을 다시 작성 하지 않고 프로그램의 개체 파일을 Commode와 연결 하 여이 기능을 사용 하도록 설정할 수 있습니다. 결과 실행 파일에서를 호출 하면 모든 버퍼의 내용이 디스크에 기록 **_flushall** . **_Flushall** 및 [Fflush](fflush.md) 만 commode .obj의 영향을 받습니다.
 
 디스크에 커밋 기능을 제어하는 방법에 대한 자세한 내용은 [스트림 I/O](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) 및 [_fdopen](fdopen-wfdopen.md)을 참조하세요.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -64,7 +68,7 @@ int _flushall( void );
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -88,7 +92,7 @@ int main( void )
 There were 3 streams flushed
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>

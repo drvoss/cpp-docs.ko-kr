@@ -6,11 +6,11 @@ helpviewer_keywords:
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
 ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232288"
 ---
 # <a name="overview-of-functions"></a>함수 개요
 
@@ -22,6 +22,6 @@ ms.locfileid: "56150326"
 
 함수 호출은 호출하는 함수에서 호출된 함수로 실행 제어를 전달합니다. 인수(있는 경우)는 호출된 함수에 값으로 전달됩니다. 호출된 함수에서 `return` 문이 실행되면 호출하는 함수에 제어가 반환되며 값이 함께 반환될 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [함수](../c-language/functions-c.md)

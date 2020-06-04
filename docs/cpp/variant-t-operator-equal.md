@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187624"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
 **Microsoft 전용**
 
@@ -119,40 +119,40 @@ _variant_t& operator=(
 
 다음 연산자는 `_variant_t` 개체에 새 값을 할당합니다.
 
-- **operator = (***varSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.
+- **operator = (** *varsrc* **)** `_variant_t` 개체에 기존 `VARIANT`을 할당 합니다.
 
-- **operator = (***pVarSrc***)** 기존 할당 `VARIANT` 에 `_variant_t` 개체입니다.
+- **operator = (** *pvarsrc* **)** `_variant_t` 개체에 기존 `VARIANT`을 할당 합니다.
 
-- **operator = (***var_t_Src***)** 기존 할당 `_variant_t` 개체를 `_variant_t` 개체입니다.    
+- **연산자 = (** *var_t_Src* **)** `_variant_t` 개체에 기존 `_variant_t` 개체를 할당 합니다.
 
-- **연산자 = (***sSrc***)** 할당 된 **짧은** 정수 값을 `_variant_t` 개체입니다.
+- **연산자 = (** *sSrc* **)** `_variant_t` 개체에 **short** 정수 값을 할당 합니다.
 
-- **연산자 = (**`lSrc`**)** 할당 한 **긴** 정수 값을 `_variant_t` 개체입니다.
+- **연산자 = (** `lSrc` **)** `_variant_t` 개체에 정수 ( **long** ) 값을 할당 합니다.
 
-- **연산자 = (***fltSrc***)** 할당 된 **float** 숫자 값을 `_variant_t` 개체입니다.
+- **연산자 = (**  *fltSrc*  **)** **부동 소수점** 숫자 값을 `_variant_t` 개체에 할당 합니다.
 
-- **operator=(**  *dblSrc*  **)** Assigns a **double** numerical value to a `_variant_t` object.
+- **연산자 = (** *dblSrc* **)** `_variant_t` 개체에 **double** 숫자 값을 할당 합니다.
 
-- **operator = (***cySrc***)** 할당을 `CY` 개체를 `_variant_t` 개체.
+- **operator = (** *cysrc* **)** `_variant_t` 개체에 `CY` 개체를 할당 합니다.
 
-- **operator=(**  *bstrSrc*  **)** Assigns a `BSTR` object to a `_variant_t` object.
+- **연산자 = (** *bstrSrc* **)** `_variant_t` 개체에 `BSTR` 개체를 할당 합니다.
 
-- **operator = (***wstrSrc***)** 유니코드 문자열을 할당을 `_variant_t` 개체입니다.
+- **연산자 = (**  *wstrSrc*  **)** `_variant_t` 개체에 유니코드 문자열을 할당 합니다.
 
-- **operator = (**`strSrc`**)** 멀티 바이트 문자열을 할당을 `_variant_t` 개체입니다.
+- **연산자 = (** `strSrc` **)** `_variant_t` 개체에 멀티 바이트 문자열을 할당 합니다.
 
-- **연산자 = (** `bSrc` **)** 할당 한 **bool** 값을 `_variant_t` 개체입니다.
+- **연산자 = (** `bSrc` **)** `_variant_t` 개체에 **부울** 값을 할당 합니다.
 
-- **operator = (***pDispSrc***)** 할당을 `VT_DISPATCH` 개체를 `_variant_t` 개체.
+- **연산자 = (** *pDispSrc* **)** `_variant_t` 개체에 `VT_DISPATCH` 개체를 할당 합니다.
 
-- **operator = (***pIUnknownSrc***)** 할당을 `VT_UNKNOWN` 개체를 `_variant_t` 개체.
+- **연산자 = (** *pIUnknownSrc* **)** `_variant_t` 개체에 `VT_UNKNOWN` 개체를 할당 합니다.
 
-- **operator=(**  *decSrc*  **)** Assigns a `DECIMAL` value to a `_variant_t` object.
+- **operator = (** *src* **)** `_variant_t` 개체에 `DECIMAL` 값을 할당 합니다.
 
-- **연산자 = (** `bSrc` **)** 할당 한 `BYTE` 값을 `_variant_t` 개체입니다.
+- **연산자 = (** `bSrc` **)** `_variant_t` 개체에 `BYTE` 값을 할당 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

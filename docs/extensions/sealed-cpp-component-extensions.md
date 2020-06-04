@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181800"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed(C++/CLI 및 C++/CX)
 
@@ -65,7 +65,7 @@ ref 클래스 및 해당 가상 멤버 함수에 대해 **sealed** 키워드를 
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 가상 멤버에 대한 **sealed**의 영향을 보여 줍니다.
 

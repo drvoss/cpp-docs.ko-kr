@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0028
 - CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-ms.openlocfilehash: 33440c0b594bfd710156ab4a77afd59575f7b6fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed79867b2793fbaf7fe6edec35c82a224a2582c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195645"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>식 계산기 오류 CXX0028
 
-하지 구조체/공용 구조체 요소
+구조체/공용 구조체 요소가 아닙니다.
 
-' Struct.member ' 또는 'pstruct->member' 식을 지정 하지만 \<멤버 > 구조체의 요소가 아닙니다.
+' Struct. Member ' 또는 ' pStruct-> Member ' 형식의 식이 지정 되었지만 \<멤버 > 구조체의 요소가 아닙니다.
 
-식을은 괄호로 묶인 올바르게 수 있습니다.
+식의 괄호를 올바르게 지정할 수 없습니다.
 
-이 오류는 can0028과 동일 합니다.
+이 오류는 CAN0028와 동일 합니다.

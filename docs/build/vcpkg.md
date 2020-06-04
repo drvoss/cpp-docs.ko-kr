@@ -4,16 +4,16 @@ description: vcpkg는 Windows, MacOS 및 Linux에서 오픈 소스 C++ 라이브
 ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.openlocfilehash: 9dbeba1f55164ace01fb8bb26155dd9319ba62db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869704"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335403"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS 용 C++ 패키지 관리자
 
-vcpkg는 C++ 용 명령줄 패키지 관리자입니다. vcpkg는 Windows, Linux 및 MacOS에서 타사 라이브러리 획득 및 설치를 크게 간소화합니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg Windows 카탈로그의 모든 라이브러리가 Visual Studio 2015, Visual Studio 2017 및 Visual Studio 2019와의 호환성 테스트를 거쳤습니다. vcpkg는 현재 Windows 및 Linux/MacOS 카탈로그 사이에서 1900개 이상의 라이브러리를 지원합니다. C++ 커뮤니티는 지속적으로 두 카탈로그에 더 많은 라이브러리를 추가하고 있습니다.
+vcpkg는 C++ 용 명령줄 패키지 관리자입니다. vcpkg는 Windows, Linux 및 MacOS에서 타사 라이브러리 획득 및 설치를 크게 간소화합니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg Windows 카탈로그의 모든 라이브러리가 isual Studio 2015, Visual Studio 2017 및 Visual Studio 2019와의 호환성 테스트를 거쳤습니다. vcpkg는 현재 Windows 및 Linux/MacOS 카탈로그 사이에서 1900개 이상의 라이브러리를 지원합니다. C++ 커뮤니티는 지속적으로 두 카탈로그에 더 많은 라이브러리를 추가하고 있습니다.
 
 ## <a name="simple-yet-flexible"></a>단순하면서도 유연한
 
@@ -79,7 +79,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예:
+CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`에서 라이브러리를 사용할 수 있도록 합니다. 예를 들어:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -128,7 +128,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 WSL(Linux용 Windows 하위 시스템)을 사용하여 Windows 컴퓨터에서 Linux 바이너리를 생성할 수 있습니다. [Windows 10에 WSL을 설정](/windows/wsl/install-win10) 지침에 따라 [Linux용 Visual Studio 확장](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)을 사용하여 구성합니다. Windows 및 Linux용으로 빌드된 모든 라이브러리를 동일한 폴더에 배치하는 것이 좋습니다. Windows 및 WSL 모두에서 액세스할 수 있습니다.
 
-## <a name="export_binaries_per_project"></a> 컴파일된 이진 파일 및 헤더 내보내기
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> 컴파일된 이진 파일 및 헤더 내보내기
 
 팀의 모든 사용자가 공통 라이브러리를 다운로드하고 작성하는 것은 비효율적입니다. 단일 팀 멤버는 **vcpkg export** 명령을 사용하여 이진 파일 및 헤더의 일반 zip 파일 또는 NuGet 패키지를 만들 수 있습니다. 그런 다음 다른 팀 멤버와 공유하기가 쉽습니다.
 

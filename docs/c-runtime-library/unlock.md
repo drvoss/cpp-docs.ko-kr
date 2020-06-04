@@ -23,23 +23,23 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 73eec2b05b1d321bfc8ac61e743459bf2323fb8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957255"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745114"
 ---
 # <a name="_unlock"></a>_unlock
 
 다중 스레드 잠금을 해제합니다.
 
 > [!IMPORTANT]
->  이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
+> 이 함수는 사용되지 않습니다. Visual Studio 2015부터 CRT에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void __cdecl _unlock(
    int locknum
 );
@@ -54,7 +54,7 @@ void __cdecl _unlock(
 
 **소스:** mlock.c
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

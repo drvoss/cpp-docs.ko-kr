@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188937"
 ---
 # <a name="false-c"></a>false (C++)
 
-이 키워드는 [bool](../cpp/bool-cpp.md) 형식의 변수나 조건식(조건식은 이제 **true** 부울 식임)에 대한 두 값 중 하나입니다. 예를 들어 `i`가 **bool** 형식의 변수인 경우 `i = false;` 문은 **false**를 `i`에 할당합니다.
+키워드는 [bool](../cpp/bool-cpp.md) 또는 조건식 형식의 변수에 대 한 두 값 중 하나입니다. 조건식은 이제 **진정한** 부울 식입니다. 예를 들어 `i`가 **bool**형식의 변수인 경우 `i = false;` 문은 `i`에 **false** 를 할당 합니다.
 
 ## <a name="example"></a>예제
 
@@ -37,6 +37,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

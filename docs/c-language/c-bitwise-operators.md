@@ -12,16 +12,16 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168775"
 ---
 # <a name="c-bitwise-operators"></a>C 비트 연산자
 
-비트 연산자는 비트 AND(**&**), 배타적 비트 OR(**^**) 및 포괄적 비트 OR(**&#124;**) 연산을 수행합니다.
+비트 연산자는 비트 AND( **&** ), 배타적 비트 OR( **^** ) 및 포괄적 비트 OR( **&#124;** ) 연산을 수행합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,7 +41,7 @@ C 비트 연산자는 아래에 설명되어 있습니다.
 |**^**|포괄적 비트 OR 연산자는 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 한 비트가 0이고 다른 비트가 1인 경우 해당 결과 비트는 1로 설정됩니다. 그렇지 않으면 해당 결과 비트는 0으로 설정됩니다.|
 |**&#124;**|배타적 비트 OR 연산자는 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 어느 한쪽 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 그렇지 않으면 해당 결과 비트는 0으로 설정됩니다.|
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 이러한 선언은 다음 3가지 예제에서 사용됩니다.
 
@@ -78,7 +78,7 @@ n = i ^ j;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [비트 AND 연산자: &](../cpp/bitwise-and-operator-amp.md)<br/>
 [배타적 비트 OR 연산자: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>

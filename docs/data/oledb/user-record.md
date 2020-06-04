@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525258"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078998"
 ---
 # <a name="user-record"></a>사용자 레코드
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 이상에서는 ATL OLE DB 공급자 마법사를 사용할 수 없습니다.
 
 사용자 레코드는 행 집합의 열 데이터를 나타내는 코드 및 데이터 구조를 제공합니다. 컴파일 시간이나 런타임에 사용자 레코드를 만들 수 있습니다. **ATL OLE DB 공급자 마법사**를 사용하여 공급자를 만드는 경우, 마법사에서 다음과 같은 기본 사용자 레코드를 만듭니다(공급자 이름(짧은 이름)으로 *MyProvider*를 지정했다고 가정).
@@ -43,7 +43,7 @@ OLE DB 공급자 템플릿은 클라이언트와의 상호 작용에 대한 모�
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 이 코드는 다음과 같습니다.

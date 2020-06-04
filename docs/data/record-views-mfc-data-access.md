@@ -8,18 +8,18 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31dbd92219f263c625050524279b97ef38ba9ba1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209133"
 ---
 # <a name="record-views--mfc-data-access"></a>레코드 뷰  (MFC Data Access)
 
-이 섹션에서는 MFC ODBC 클래스에만 적용 됩니다. OLE DB 레코드 뷰에 대 한 자세한 내용은 [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) 하 고 [사용 하 여 OLE DB 레코드 뷰](../data/oledb/using-ole-db-record-views.md)합니다.
+이 섹션은 MFC ODBC 클래스에만 적용 됩니다. OLE DB 레코드 뷰에 대 한 자세한 내용은 [Coledbrecordview](../mfc/reference/coledbrecordview-class.md) 및 [OLE DB 레코드 뷰 사용](../data/oledb/using-ole-db-record-views.md)을 참조 하세요.
 
-폼 기반 데이터 액세스 응용 프로그램을 지원 하려면 클래스 라이브러리는 클래스를 제공 [CRecordView](../mfc/reference/crecordview-class.md)합니다. 레코드 뷰는 해당 컨트롤의 필드 데이터 멤버에 직접 매핑되는 폼 뷰 개체를 [레코드 집합](../data/odbc/recordset-odbc.md) 개체 (및 데이터 원본에 테이블 또는 쿼리 결과의 해당 열에 간접적으로). 해당 기본 클래스와 마찬가지로 [CFormView](../mfc/reference/cformview-class.md), `CRecordView` 대화 상자 템플릿 리소스를 기반으로 합니다.
+폼 기반 데이터 액세스 응용 프로그램을 지원 하기 위해 클래스 라이브러리는 [CRecordView](../mfc/reference/crecordview-class.md)클래스를 제공 합니다. 레코드 뷰는 해당 컨트롤이 [레코드 집합](../data/odbc/recordset-odbc.md) 개체의 필드 데이터 멤버에 직접 매핑되고 데이터 원본에 있는 쿼리 결과 또는 테이블의 해당 열에 간접적으로 매핑되는 폼 뷰 개체입니다. 기본 클래스 [CFormView](../mfc/reference/cformview-class.md)와 마찬가지로 `CRecordView`는 대화 상자 템플릿 리소스를 기반으로 합니다.
 
 ## <a name="form-uses"></a>폼 사용
 
@@ -35,19 +35,19 @@ ms.locfileid: "62161370"
 
 아래 항목의 자료는 ODBC 기반 및 DAO 기반 클래스 둘 다에 적용됩니다. ODBC의 경우 `CRecordView`를 사용하고 DAO의 경우에는 `CDaoRecordView`를 사용합니다.
 
-다루는 주제는 다음과 같습니다.
+다룰 주제는 다음과 같습니다.
 
 - [레코드 뷰 클래스의 기능](../data/features-of-record-view-classes-mfc-data-access.md)
 
 - [레코드 뷰의 데이터 교환](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [레코드 뷰를 사용 하 여 작업에서 역할](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [레코드 뷰를 사용 하 여 작업 하는 사용자의 역할](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
 - [레코드 뷰 디자인 및 만들기](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
 - [레코드 뷰 사용](../data/using-a-record-view-mfc-data-access.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[데이터 액세스 프로그래밍 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[데이터 액세스 프로그래밍(MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [ODBC 드라이버 목록](../data/odbc/odbc-driver-list.md)

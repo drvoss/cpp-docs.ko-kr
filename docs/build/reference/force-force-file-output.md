@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299715"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079623"
 ---
 # <a name="force-force-file-output"></a>/FORCE(파일 출력 강제)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68299715"
 /FORCE:[MULTIPLE|UNRESOLVED]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 /FORCE 옵션을 지정 하면 기호가 참조 되지만 정의 되지 않았거나 여러 번 정의 된 경우에도 올바른 .exe 파일이 나 DLL을 만들도록 링커에 지시 합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "68299715"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면
 
-1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. 
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
 1. **Linker** 폴더를 클릭합니다.
 
@@ -49,13 +49,13 @@ ms.locfileid: "68299715"
 
 1. **추가 옵션** 상자에 옵션을 입력 합니다.
 
-자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
+자세한 내용은 [Visual Studio에서 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)

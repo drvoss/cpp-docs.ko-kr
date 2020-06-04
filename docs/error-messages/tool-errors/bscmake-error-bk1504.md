@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1504
 ms.assetid: e6d1a171-1472-4b7e-a04b-1a68a561675f
-ms.openlocfilehash: b213944f26932ec3b3934e82953573c1b8050532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38cbc3173cbb9436a9b2e7f0d0c38af0b2caf4e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197836"
 ---
 # <a name="bscmake-error-bk1504"></a>BSCMAKE 오류 BK1504
 
-'filename' 파일에 배치할 수 없습니다 [: 이유]
+' filename ' 파일에 위치를 지정할 수 없습니다 [: reason]
 
-BSCMAKE 파일의 위치로 이동 하지 못했습니다.
+BSCMAKE를 파일의 위치로 이동할 수 없습니다.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면
 
-1. 디스크가 꽉 찼습니다.
+1. 전체 디스크.
 
-1. 하드웨어 오류가 발생 합니다.
+1. 하드웨어 오류입니다.
 
-1. 파일이 디스크 공간 부족 또는.sbr 파일을 만드는 동안 컴파일러의 중단으로 인해 잘렸습니다.
+1. .Sbr 파일을 만드는 동안 디스크 공간이 부족 하거나 컴파일러가 중단 되어 파일이 잘렸습니다.

@@ -1,16 +1,16 @@
 ---
-title: '방법: 수정 C++ 속성 및 대상을 프로젝트 파일을 변경 하지 않고 프로젝트'
+title: '방법: 프로젝트 파일을 변경하지 않고 C++ 프로젝트 속성 및 대상 수정'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273341"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328457"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>방법: 수정 C++ 속성 및 대상을 프로젝트 파일을 변경 하지 않고 프로젝트
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>방법: 프로젝트 파일을 변경하지 않고 C++ 프로젝트 속성 및 대상 수정
 
 파일을 변경하지 않고 MSBuild 명령 프롬프트에서 프로젝트 속성 및 대상을 재정의할 수 있습니다. 일시적으로 또는 경우에 따라 일부 속성을 적용하려는 경우에 유용합니다. MSBuild의 일부 정보를 가정합니다. 자세한 내용은 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)를 참조하세요.
 

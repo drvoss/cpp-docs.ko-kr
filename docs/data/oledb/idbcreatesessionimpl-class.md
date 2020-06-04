@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409163"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210784"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 클래스
 
-에 대 한 구현을 제공 합니다 [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) 인터페이스입니다.
+[IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) 인터페이스에 대 한 구현을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-파생 된 클래스
+클래스는에서 파생 됩니다.
 
 *SessionClass*<br/>
 세션 개체입니다.
@@ -49,15 +49,15 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 |||
 |-|-|
-|[CreateSession](#createsession)|데이터 원본 개체에서 새 세션을 만들고 새로 만들어진된 세션에서 요청된 된 인터페이스를 반환 합니다.|
+|[CreateSession](#createsession)|데이터 원본 개체에서 새 세션을 만들고 새로 만든 세션에서 요청 된 인터페이스를 반환 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-데이터 원본 개체에는 필수 인터페이스입니다.
+데이터 원본 개체에 대 한 필수 인터페이스입니다.
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl:: CreateSession
 
-데이터 원본 개체에서 새 세션을 만들고 새로 만들어진된 세션에서 요청된 된 인터페이스를 반환 합니다.
+데이터 원본 개체에서 새 세션을 만들고 새로 만든 세션에서 요청 된 인터페이스를 반환 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [idbcreatesession:: Createsession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

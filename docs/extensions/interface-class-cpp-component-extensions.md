@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515708"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172167"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>인터페이스 클래스(C++/CLI 및 C++/CX)
 
@@ -43,7 +43,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *base_interface*<br/>
 (선택 사항) 인터페이스 ‘이름’의 기본 인터페이스입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **인터페이스 구조체**는 **인터페이스 클래스**와 동일합니다.
 
@@ -51,7 +51,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 인터페이스는 클래스를 구현할 수 있는 방법을 정의합니다. 인터페이스는 클래스가 아니며, 클래스는 인터페이스를 구현할 수만 있습니다. 클래스가 인터페이스에서 선언된 함수를 정의하는 경우 함수가 재정의되지 않고 구현됩니다. 따라서 이름 조회는 인터페이스 멤버를 포함하지 않습니다.
 
-인터페이스에서 파생된 클래스 또는 구조체는 인터페이스의 모든 멤버를 구현해야 합니다. 인터페이스 ‘이름’을 구현하는 경우 `base_interface` 목록의 인터페이스도 구현해야 합니다.
+인터페이스에서 파생된 클래스 또는 구조체는 인터페이스의 모든 멤버를 구현해야 합니다. 인터페이스 ‘이름’을 구현하는 경우  *목록의 인터페이스도 구현해야 합니다.* `base_interface`
 
 자세한 내용은 다음을 참조하세요.
 
@@ -67,7 +67,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)
 
@@ -77,7 +77,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 (이 언어 기능에는 공용 언어 런타임에만 적용되는 설명이 없습니다.)
 
@@ -85,7 +85,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 인터페이스를 통해 클록 함수의 동작을 정의할 수 있는 방법을 보여 줍니다.
 

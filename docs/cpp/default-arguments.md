@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154518"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189548"
 ---
 # <a name="default-arguments"></a>기본 인수
 
-많은 경우에 함수에는 기본값이면 충분할 정도로 가끔 사용되는 인수가 있습니다. 이러한 경우 기본 인수 기능을 사용하면 지정된 호출에서 의미가 있는 인수만 함수에 지정할 수 있습니다. 이 개념을 설명에 나오는 예제를 살펴보세요 [함수 오버 로드](../cpp/function-overloading.md)합니다.
+많은 경우에 함수에는 기본값이면 충분할 정도로 가끔 사용되는 인수가 있습니다. 이러한 경우 기본 인수 기능을 사용하면 지정된 호출에서 의미가 있는 인수만 함수에 지정할 수 있습니다. 이러한 개념을 설명 하려면 [함수 오버 로드](../cpp/function-overloading.md)에 제공 된 예제를 참조 하세요.
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-구현의 합니다 `print` 함수는 형식에 대 한 이러한 함수가 하나만 있는지 반영 하도록 약간 변경 되었습니다 **double**:
+**Double**형식에 대해 이러한 함수 하나만 존재 한다는 사실을 반영 하기 위해 `print` 함수의 구현이 약간 변경 됩니다.
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 이후 선언에서 기본 인수를 더 추가할 수 있습니다.
 
-- 함수에 대한 포인터에 기본 인수를 제공할 수 있습니다. 예를 들어:
+- 함수에 대한 포인터에 기본 인수를 제공할 수 있습니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

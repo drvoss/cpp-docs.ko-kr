@@ -7,18 +7,18 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: b0cddd2c5cc09e77e8733ca88177c3b2223fc8ce
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a016fe8fee4e5765e6172184bfa9c90eecbc687
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160673"
 ---
-# <a name="typeinfo-class"></a>type_info 클래스
+# <a name="type_info-class"></a>type_info 클래스
 
-합니다 **type_info** 형식 정보를 컴파일러에 의해 프로그램 내에서 생성 하는 클래스에 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. 합니다 **type_info** 클래스에는 또한 두 형식의 비교 또는 정렬 순서에 대 한 적절 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.
+**Type_info** 클래스는 컴파일러에 의해 프로그램 내에서 생성 되는 형식 정보를 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. 또한 **type_info** 클래스는 두 형식에 대해 같음 또는 정렬 순서를 비교 하는 데 적합 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.
 
-`<typeinfo>` 헤더 파일을 사용 하려면 포함 되어야 합니다 **type_info** 클래스입니다. 에 대 한 인터페이스를 **type_info** 클래스는:
+**Type_info** 클래스를 사용 하려면 `<typeinfo>` 헤더 파일이 포함 되어 있어야 합니다. **Type_info** 클래스에 대 한 인터페이스는 다음과 같습니다.
 
 ```cpp
 class type_info {
@@ -36,20 +36,20 @@ public:
 };
 ```
 
-개체를 인스턴스화할 수 없습니다는 **type_info** 클래스에 전용 복사 생성자만 있으므로 클래스를 직접. (임시)를 생성 하는 유일한 방법은 **type_info** 개체가 사용 하 여 [typeid](../cpp/typeid-operator.md) 연산자입니다. 복사 하거나 클래스의 개체를 할당할 수 없습니다. 개인 또한 대입 연산자 이므로 **type_info**합니다.
+클래스에 전용 복사 생성자만 있기 때문에 **type_info** 클래스의 개체를 직접 인스턴스화할 수 없습니다. (임시) **type_info** 개체를 생성 하는 유일한 방법은 [typeid](../cpp/typeid-operator.md) 연산자를 사용 하는 것입니다. 할당 연산자도 private 이므로 **type_info**클래스의 개체를 복사 하거나 할당할 수 없습니다.
 
-`type_info::hash_code` 형식의 값을 매핑하기에 적합 한 해시 함수를 정의 **typeinfo** 인덱스 값의 분포에 있습니다.
+`type_info::hash_code`은 **typeinfo** 형식의 값을 인덱스 값의 분포에 매핑하는 데 적합 한 해시 함수를 정의 합니다.
 
-연산자 `==` 하 고 `!=` 사용 하 여 다른 같음 또는 같지 않음을 비교할 수 있습니다 **type_info** 개체를 각각.
+`==` 및 `!=` 연산자를 사용 하 여 다른 **type_info** 개체와 같음 및 같지 않음을 비교할 수 있습니다.
 
-형식의 정렬 순서와 상속 관계 간에 링크가 없습니다. 사용 된 `type_info::before` 형식의 정렬 순서를 결정 하는 멤버 함수입니다. 보장이 `type_info::before` 다른 프로그램 또는 같은 프로그램의 다른 실행에서 동일한 결과 생성 합니다. 이런 방식으로 `type_info::before` 비슷합니다 주소 `(&)` 연산자입니다.
+형식의 정렬 순서와 상속 관계 간에 링크가 없습니다. `type_info::before` 멤버 함수를 사용 하 여 형식의 정렬 순서를 확인 합니다. 다른 프로그램에서 동일한 결과를 생성 하거나 동일한 프로그램의 다른 실행을 `type_info::before` 것이 보장 되지 않습니다. 이러한 방식으로 `type_info::before`은 주소 `(&)` 연산자와 유사 합니다.
 
-`type_info::name` 멤버 함수가 반환 하는 `const char*` 형식의 알기 쉬운 이름을 나타내는 null로 끝나는 문자열에 있습니다. 가리키는 메모리는 캐시되며 직접 할당 해지되면 안 됩니다.
+`type_info::name` 멤버 함수는 사용자가 읽을 수 있는 형식의 이름을 나타내는 null로 끝나는 문자열에 대 한 `const char*`을 반환 합니다. 가리키는 메모리는 캐시되며 직접 할당 해지되면 안 됩니다.
 
-`type_info::raw_name` 멤버 함수가 반환 하는 `const char*` null로 끝나는 문자열로 개체 형식을 데코 레이트 된 이름을 나타내는입니다. 공간을 절약하기 위해 이름은 실제로 데코레이팅된 형식으로 저장됩니다. 따라서이 함수는 보다 빠르게 `type_info::name` 이름의 데코레이팅을 취소할 필요가 없기 때문입니다. 반환한 문자열을 `type_info::raw_name` 함수 비교 연산에 유용 하지만 읽을 수 없습니다. 사람이 읽을 수 있는 문자열에 필요한 경우 사용 된 `type_info::name` 함수를 대신 합니다.
+`type_info::raw_name` 멤버 함수는 개체 형식의 데코레이팅된 이름을 나타내는 null로 끝나는 문자열에 대 한 `const char*`을 반환 합니다. 공간을 절약하기 위해 이름은 실제로 데코레이팅된 형식으로 저장됩니다. 따라서이 함수는 이름을 데코레이팅 필요가 없기 때문에 `type_info::name` 보다 빠릅니다. `type_info::raw_name` 함수에서 반환 되는 문자열은 비교 작업에 유용 하지만 읽을 수는 없습니다. 사람이 읽을 수 있는 문자열이 필요한 경우 `type_info::name` 함수를 대신 사용 합니다.
 
-경우에만 다형 클래스에 대 한 형식 정보가 생성 되는 [/GR (런타임 형식 정보 사용)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션을 지정 합니다.
+형식 정보는 [/gr (런타임 형식 정보 사용)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션이 지정 된 경우에만 다형성 클래스에 대해 생성 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [런타임 형식 정보](../cpp/run-time-type-information.md)

@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
 description: _Mkgmtime, _mkgmtime32 및 _mkgmtime64 C 런타임 라이브러리 함수에 대해 설명 하 고이 함수를 사용 하는 방법에 대 한 예제를 제공 합니다.
-ms.date: 12/04/2019
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914649"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -70,11 +73,11 @@ __time64_t _mkgmtime64(
 *timeptr*\
 변환할 **struct** **tm** 의 UTC 시간에 대 한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 1970 년 1 월 1 일 자정 이후 경과 된 시간 (초)을 나타내는 **__time64_t** **__time32_t** 또는 utc (협정 세계시) 형식의 수량입니다. 날짜가 범위를 벗어난 경우 (설명 섹션 참조) 또는 입력을 유효한 시간으로 해석할 수 없는 경우 반환 값은-1입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **_Mkgmtime32** 및 **_MKGMTIME64** 함수는 utc 시간을 utc 시간을 나타내는 **__time32_t** 또는 **__time64_t** 형식으로 변환 합니다. 현지 시간을 UTC 시간으로 변환 하려면 **mktime**, **_mktime32**및 **_mktime64** 를 대신 사용 합니다.
 
@@ -85,6 +88,8 @@ __time64_t _mkgmtime64(
 **_Mkgmtime32** 함수의 범위는 자정부터 1970 1 월 1 일 자정부터 23:59:59 년 1 월 18 일 2038, utc 까지의 시간입니다. **_Mkgmtime64** 범위는 자정, 1970 1 월 1 일 자정부터 23:59:59 년 12 월 31 일, 3000, utc 사이입니다. 범위를 벗어난 날짜의 반환 값은-1입니다. **_Mkgmtime** 범위는 **_USE_32BIT_TIME_T** 정의 되었는지 여부에 따라 달라 집니다. 정의 되지 않은 경우 (기본값) 범위는 **_mkgmtime64**와 동일 합니다. 그렇지 않으면 범위는 **_mkgmtime32**의 32 비트 범위로 제한 됩니다.
 
 **Gmtime** 와 **localtime** 는 모두 변환에 공통 정적 버퍼를 사용 합니다. 이 버퍼를 **_mkgmtime**에 제공 하면 이전 내용이 제거 됩니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="examples"></a>예
 

@@ -1,11 +1,15 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 01/22/2019
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
+- _o__mbscpy_s
+- _o__mbscpy_s_l
+- _o_strcpy_s
+- _o_wcscpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 12c20abc13846388b7a303af4e29de3cd2a60fed
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957852"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206195"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -111,7 +116,7 @@ errno_t _mbscpy_s_l(
 대상 문자열 버퍼의 위치입니다.
 
 *dest_size*<br/>
-좁은/멀티 바이트 함수의 경우 **문자** 단위에서 대상 문자열 버퍼의 크기이 고, 와이드 함수의 경우 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다.
+좁은/멀티 바이트 함수의 경우 **문자** 단위로 나타낸 대상 문자열 버퍼의 크기 이며, 와이드 함수의 경우에는 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다. 문자열 뒤의 종료에 대해이 크기의 계정을 확인 합니다 `NULL` .
 
 *src*<br/>
 null 종료 소스 문자열 버퍼입니다.
@@ -128,24 +133,26 @@ null 종료 소스 문자열 버퍼입니다.
 |*dest*|*dest_size*|*src*|반환 값|*대상* 의 내용|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|수정 안 됨|
-|any|any|**NULL**|**EINVAL**|*대상* [0]을 0으로 설정 합니다.|
-|any|0 또는 너무 작음|any|**ERANGE**|*대상* [0]을 0으로 설정 합니다.|
+|any|any|**NULL**|**EINVAL**|*dest*[0]을 0으로 설정|
+|any|0 또는 너무 작음|any|**ERANGE**|*dest*[0]을 0으로 설정|
 
 ## <a name="remarks"></a>설명
 
 **Strcpy_s** 함수는 null 종결 문자를 포함 하 여 *src*주소의 내용을 *dest*로 지정 된 위치에 복사 합니다. 대상 문자열은 소스 문자열 및 이 문자열의 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 원본 및 대상 문자열이 겹치면 **strcpy_s** 의 동작이 정의 되지 않습니다.
 
-**wcscpy_s** 는 **strcpy_s**의 와이드 문자 버전 이며, **_mbscpy_s** 는 멀티 바이트 문자 버전입니다. **Wcscpy_s** 의 인수는 와이드 문자 문자열입니다. **_mbscpy_s** 및 **_mbscpy_s_l** 의 해당 문자는 멀티 바이트 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. **_mbscpy_s_l** 은 현재 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고 **_mbscpy_s** 와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+**wcscpy_s** 은 **strcpy_s**와이드 문자 버전 이며, **_mbscpy_s** 는 멀티 바이트 문자 버전입니다. **Wcscpy_s** 의 인수는 와이드 문자 문자열입니다. **_mbscpy_s** 및 **_mbscpy_s_l** 는 멀티 바이트 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. **_mbscpy_s_l** 은 현재 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고 **_mbscpy_s** 와 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-*Dest* 또는 *src* 가 null 포인터 이거나 대상 문자열 크기 *Dest_size* 이 너무 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **EINVAL** 를 반환 하 고, *dest* 또는 *src* 가 null 포인터인 경우 **errno** 를 **EINVAL** 로 설정 하 고, **ERANGE** 을 반환 하 고 **errno** 을 **ERANGE** 로 설정 합니다. 대상 문자열이 너무 작습니다.
+*Dest* 또는 *src* 가 null 포인터 이거나 대상 문자열 *Dest_size* 크기가 너무 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **EINVAL** 를 반환 하 고, *dest* 또는 *src* 가 null 포인터인 경우 **errno** 를 **EINVAL** 로 설정 하 고, 대상 문자열이 너무 작은 경우 **ERANGE** 을 반환 하 고 **errno** 를 **ERANGE** 로 설정 합니다.
 
 실행이 완료되면 대상 문자열은 항상 null로 종료됩니다.
 
-C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없음), 보안 수준이 낮은 기존 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없음), 보안 수준이 낮은 기존 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -159,7 +166,7 @@ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 �
 |**wcscpy_s**|\<string.h> 또는 \<wchar.h>|
 |**_mbscpy_s**|\<mbstring.h>|
 
-이러한 함수는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+이러한 함수는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -193,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-코드를 C++ 작성할 때 템플릿 버전을 사용 하는 것이 더 쉬울 수 있습니다.
+C + + 코드를 빌드하는 경우 템플릿 버전을 사용 하는 것이 더 쉬울 수 있습니다.
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -224,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>

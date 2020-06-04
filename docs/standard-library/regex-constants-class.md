@@ -82,14 +82,14 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451666"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331957"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants 네임스페이스
+# <a name="regex_constants-namespace"></a>regex_constants 네임스페이스
 
 정규식 플래그에 대한 네임스페이스입니다.
 
@@ -119,7 +119,7 @@ namespace regex_constants {
 
 **네임스페이스:** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants:error_type
 
 정규식 구문 오류 보고에 대한 플래그입니다.
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- 식에 잘못된 역참조가 포함되었습니다.
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants:match_flag_type
 
 정규식 일치 옵션에 대한 플래그입니다.
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- 첫 번째 일치 항목 뒤에서 일치 항목을 검색하지 않습니다.
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants:syntax_option_type
 
 구문 옵션을 선택하기 위한 플래그입니다.
 
@@ -288,13 +288,13 @@ enum syntax_option_type
 
 `collate` -- 일치 항목이 로캘을 구분하도록 함
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<regex>](../standard-library/regex.md)\
+[\<정규식>](../standard-library/regex.md)\
 [regex_error 클래스](../standard-library/regex-error-class.md)\
-[\<regex > 함수](../standard-library/regex-functions.md)\
+[\<정규식> 함수](../standard-library/regex-functions.md)\
 [regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
-[\<regex > 연산자](../standard-library/regex-operators.md)\
+[\<정규식> 연산자](../standard-library/regex-operators.md)\
 [regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)\
 [regex_traits 클래스](../standard-library/regex-traits-class.md)\
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)
+[\<정규식> 타입defs](../standard-library/regex-typedefs.md)

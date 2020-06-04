@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 3bf4065b4c409e1baad3183cc8ccbd8c97d43d5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370597"
 ---
 # <a name="hash_set-class"></a>hash_set 클래스
 
@@ -111,16 +111,16 @@ class hash_set
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 hash_set에 저장되는 요소 데이터 형식입니다.
 
-*특성* \
-두 요소 값을 정렬 키로 비교 하 여 상대 순서를 확인할 수 있는 이진 조건자 인 클래스 비교 중 하 나와 요소의 키 값을 unsigned로 매핑하는 단항 조건자 인 해시 함수의 두 함수 개체를 포함 하는 형식입니다. `size_t` 형식의 정수입니다. 이 인수는 선택 사항이며 기본값은 `hash_compare<Key, less<Key> >`입니다.
+*특성*\
+두 개의 함수 개체를 포함하는 형식은 두 요소 값을 sort 키로 비교하여 상대 순서를 결정할 수 있는 이진 조건자와 요소의 키 값을 서명되지 않은 정수에 `size_t`매핑하는 해시 함수입니다. 이 인수는 선택 사항이며 기본값은 `hash_compare<Key, less<Key> >`입니다.
 
-*할당자* \
+*할당자*\
 hash_set의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<Key>`입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Hash_set은 다음과 같습니다.
 
@@ -132,7 +132,7 @@ Hash_set은 다음과 같습니다.
 
 - 각각의 요소가 반드시 고유한 키를 가지고 있어야 한다는 점에서 고유성을 갖고 있습니다. 또한 hash_set은 간단한 연관 컨테이너이므로 해당 요소도 고유합니다.
 
-- 제공 하는 기능이 제네릭이 고 요소 또는 키로 포함 된 데이터의 특정 형식과 독립적 이기 때문에 클래스 템플릿입니다. 요소에 사용될 데이터 형식과 키는 대신 비교 함수 및 할당자와 함께 클래스 템플릿에서 매개 변수로 지정됩니다.
+- 클래스 템플릿은 제공하는 기능이 일반적이므로 요소 또는 키로 포함된 특정 데이터 유형과 독립적입니다. 요소에 사용될 데이터 형식과 키는 대신 비교 함수 및 할당자와 함께 클래스 템플릿에서 매개 변수로 지정됩니다.
 
 해시는 정렬보다 훨씬 효율적입니다. 성공적인 해시는 정렬 방식에 대한 컨테이너의 요소 수 로그에 비례하는 시간과 비교할 때 삽입, 삭제, 찾기를 일정한 평균 시간 이내에 수행합니다. set 요소의 값은 직접 변경할 수 없습니다. 대신, 이전 값을 삭제하고 새 값의 요소를 삽입해야 합니다.
 
@@ -140,7 +140,7 @@ Hash_set은 다음과 같습니다.
 
 애플리케이션에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 hash_set입니다. hash_set의 요소는 고유하며 자체 정렬 키로 사용됩니다. 이 형식의 구조에 대한 모델은 정렬된 목록입니다. 예를 들어, 단어 내의 단어는 한 번만 나타날 수 있습니다. 단어를 여러 번 중복할 수 있는 경우 hash_multiset이 적절한 컨테이너 구조입니다. 고유 키 단어 목록에 값이 연결된 경우 이 데이터를 포함하기 위한 적절한 구조는 hash_map입니다. 대신 Key가 고유하지 않은 경우 hash_multimap이 적절한 컨테이너입니다.
 
-Hash_set는 [value_compare](#value_compare)형식의 저장 된 해시 `Traits` 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 *hash_compare<Key, less\<Key> >* 클래스의 개체와 동일하게 동작해야 합니다. 특히, 형식 Key의 `key` 모든 값에 대해 호출 특성 (`key`)은 size_t 형식의 값 분포를 생성 합니다.
+hash_set [value_compare](#value_compare)형식의 저장된 해시 `Traits` 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 *hash_compare<Key, less\<Key> >* 클래스의 개체와 동일하게 동작해야 합니다. 특히 Key 형식의 모든 값에 `key` 대해`key`특성() 호출은 size_t 형식 값의 분포를 생성합니다.
 
 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*(*x*, *y*)는 두 인수 개체 x, y 및 반환 값 true 또는 false가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_set에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, *f*(*x*, *y*) 및 *f*(*y*, *x*)가 모두 false인 경우 *x* 및 *y* 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
 
@@ -150,65 +150,65 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[hash_set](#hash_set)|비어 있거나 다른 `hash_set`의 전체 또는 일부의 복사본인 `hash_set`을 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 개체의 `hash_set` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|`const`에 있는 `hash_set` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
-|[const_pointer](#const_pointer)|@No__t_1의 **const** 요소에 대 한 포인터를 제공 하는 형식입니다.|
-|[const_reference](#const_reference)|**Const** 작업을 읽고 수행 하기 위해 `hash_set`에 저장 된 **const** 요소에 대 한 참조를 제공 하는 형식입니다.|
-|[const_reverse_iterator](#const_reverse_iterator)|@No__t_1의 모든 **const** 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다.|
+|[const_pointer](#const_pointer)|에서 **const** 요소에 대한 포인터를 제공하는 `hash_set`형식입니다.|
+|[const_reference](#const_reference)|**const** 작업을 읽고 수행하기 위해 에 `hash_set` 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.|
+|[const_reverse_iterator](#const_reverse_iterator)|의 **모든 const** 요소를 읽을 수 있는 양방향 이터레이터를 `hash_set`제공하는 형식입니다.|
 |[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 `hash_set`의 요소의 개수를 표현하는 데 사용할 수 있습니다.|
-|[iterator](#iterator)|`hash_set`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
+|[반복기](#iterator)|`hash_set`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[key_compare](#key_compare)|`hash_set`의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|
 |[key_type](#key_type)|해당 용량 내 `hash_set` 요소로 저장된 개체를 정렬 키로 설명하는 형식입니다.|
-|[pointer](#pointer)|`hash_set`의 요소에 대한 포인터를 제공하는 형식입니다.|
-|[reference](#reference)|`hash_set` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|
+|[포인터(pointer)](#pointer)|`hash_set`의 요소에 대한 포인터를 제공하는 형식입니다.|
+|[참조](#reference)|`hash_set` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|
 |[reverse_iterator](#reverse_iterator)|역순 `hash_set`의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[size_type](#size_type)|`hash_set`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
 |[value_compare](#value_compare)|`hash_set`의 두 요소 값을 비교하여 상대 순서를 확인할 수 있는 클래스 비교의 이진 조건자와 요소를 해시하는 단항 조건자인 두 함수 개체를 제공하는 형식입니다.|
-|[value_type](#value_type)|해당 용량 내 `hash_set` 요소로 저장된 개체를 값으로 설명하는 형식입니다.|
+|[Value_type](#value_type)|해당 용량 내 `hash_set` 요소로 저장된 개체를 값으로 설명하는 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
-|[begin](#begin)|`hash_set`의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|
+|[시작](#begin)|`hash_set`의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|
 |[cbegin](#cbegin)|`hash_set`의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|
-|[cend](#cend)|`hash_set`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
-|[clear](#clear)|`hash_set`의 모든 요소를 지웁니다.|
+|[엔드 (것)엔드](#cend)|`hash_set`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
+|[명확한](#clear)|`hash_set`의 모든 요소를 지웁니다.|
 |[count](#count)|키가 매개 변수로 지정된 키와 일치하는 `hash_set`의 요소 수를 반환합니다.|
 |[crbegin](#crbegin)|역순 `hash_set`에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|
 |[crend](#crend)|역순 `hash_set`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
 |[emplace](#emplace)|생성된 요소를 `hash_set`에 삽입합니다.|
 |[emplace_hint](#emplace_hint)|배치 힌트를 사용하여 생성된 요소를 `hash_set`에 삽입합니다.|
-|[empty](#empty)|`hash_set`가 비어 있는지 여부를 테스트합니다.|
+|[빈](#empty)|`hash_set`가 비어 있는지 여부를 테스트합니다.|
 |[end](#end)|`hash_set`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|
 |[equal_range](#equal_range)|지정된 키보다 더 큰 키를 가진 `hash_set`의 첫 번째 요소와 지정된 키보다 더 크거나 같은 키를 가진 `hash_set`의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.|
 |[erase](#erase)|지정된 위치에서 `hash_set`의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.|
-|[find](#find)|지정된 키와 같은 키를 가진 `hash_set` 내 요소의 위치를 가리키는 반복기를 반환합니다.|
+|[찾을](#find)|지정된 키와 같은 키를 가진 `hash_set` 내 요소의 위치를 가리키는 반복기를 반환합니다.|
 |[get_allocator](#get_allocator)|`allocator`을 생성하는 데 사용되는 `hash_set` 개체의 복사본을 반환합니다.|
-|[insert](#insert)|`hash_set`에 요소 또는 요소의 범위를 삽입합니다.|
+|[삽입](#insert)|`hash_set`에 요소 또는 요소의 범위를 삽입합니다.|
 |[key_comp](#key_comp)|`hash_set`에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.|
 |[lower_bound](#lower_bound)|`hash_set`에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.|
 |[max_size](#max_size)|`hash_set`의 최대 길이를 반환합니다.|
 |[rbegin](#rbegin)|역순 `hash_set`에서 첫 번째 요소를 참조하는 반복기를 반환합니다.|
 |[rend](#rend)|역순 `hash_set`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|
-|[size](#size)|`hash_set`에 있는 요소 수를 반환합니다.|
-|[swap](#swap)|두 `hash_set`의 요소를 교환합니다.|
+|[크기](#size)|`hash_set`에 있는 요소 수를 반환합니다.|
+|[스왑](#swap)|두 `hash_set`의 요소를 교환합니다.|
 |[upper_bound](#upper_bound)|`hash_set`에서 지정된 키보다 같거나 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.|
 |[value_comp](#value_comp)|`hash_set`의 요소 키 값을 해시하고 정렬하는 데 사용되는 해시 특성 개체의 복사본을 검색합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[hash_set::operator=](#op_eq)|`hash_set`의 요소를 다른 `hash_set`의 복사본으로 대체합니다.|
+|[hash_set::연산자=](#op_eq)|`hash_set`의 요소를 다른 `hash_set`의 복사본으로 대체합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -216,7 +216,7 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 **네임스페이스:** stdext
 
-## <a name="allocator_type"></a>  hash_set::allocator_type
+## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set:allocator_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -227,17 +227,17 @@ hash_set 개체의 할당자 클래스를 나타내는 형식입니다.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`allocator_type`은 템플릿 매개 변수 *할당자*의 동의어입니다.
+`allocator_type`는 템플릿 매개 변수 *할당자의*동의어입니다.
 
-*할당자*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
+*할당자에*대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 비고 섹션을 참조하십시오.
 
 ### <a name="example"></a>예제
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="begin"></a>  hash_set::begin
+## <a name="hash_setbegin"></a><a name="begin"></a>hash_set::시작
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -250,13 +250,13 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set의 첫 번째 요소 또는 빈 hash_set 다음의 위치 주소를 지정하는 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-@No__t_0의 반환 값이 `const_iterator`에 할당 된 경우에는 hash_set 개체의 요소를 수정할 수 없습니다. @No__t_0의 반환 값이 `iterator`에 할당 된 경우 hash_set 개체의 요소를 수정할 수 있습니다.
+의 `begin` 반환 값이 에 `const_iterator`할당된 경우 hash_set 개체의 요소를 수정할 수 없습니다. 의 `begin` 반환 값이 `iterator`에 할당된 경우 hash_set 개체의 요소를 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -298,7 +298,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2
 ```
 
-## <a name="cbegin"></a>  hash_set::cbegin
+## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set::cbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -309,11 +309,11 @@ hash_set의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환�
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [hash_set](../standard-library/hash-set-class.md)의 첫 번째 요소 또는 빈 `hash_set` 다음의 위치 주소를 지정하는 상수 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cbegin`의 반환 값을 사용하여 `hash_set` 개체의 요소를 수정할 수 없습니다.
 
@@ -345,7 +345,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="cend"></a>  hash_set::cend
+## <a name="hash_setcend"></a><a name="cend"></a>hash_set::cend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -356,11 +356,11 @@ hash_set에서 마지막 요소 다음에 나오는 위치를 주소 지정하�
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [hash_set](../standard-library/hash-set-class.md)에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 양방향 반복기입니다. `hash_set`이 비어 있으면 `hash_set::cend == hash_set::begin`입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `cend`는 반복기가 `hash_set`의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다. `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
@@ -393,7 +393,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="clear"></a>  hash_set::clear
+## <a name="hash_setclear"></a><a name="clear"></a>hash_set::클리어
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -404,7 +404,7 @@ hash_set의 모든 요소를 지웁니다.
 void clear();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -437,7 +437,7 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  hash_set::const_iterator
+## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set:const_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -448,7 +448,7 @@ hash_set의 **const** 요소 하나를 읽을 수 있는 양방향 반복기를 
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
@@ -456,7 +456,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)에 대한 예제를 참조하세요.
 
-## <a name="const_pointer"></a>  hash_set::const_pointer
+## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set:const_pointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -467,13 +467,13 @@ hash_set에서 **const** 요소에 대한 포인터를 제공하는 형식입니
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `const_pointer` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
 대부분의 경우에는 [const_iterator](#const_iterator)를 사용하여 **const** hash_set 개체의 요소에 액세스해야 합니다.
 
-## <a name="const_reference"></a>  hash_set::const_reference
+## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set:const_reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -484,7 +484,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -520,7 +520,7 @@ int main( )
 The first element in the hash_set is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  hash_set::const_reverse_iterator
+## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set:const_reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -531,7 +531,7 @@ hash_set의 모든 **const** 요소를 읽을 수 있는 양방향 반복기를 
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `const_reverse_iterator` 형식은 요소 값을 수정할 수 없으며 hash_set을 역방향으로 반복하는 데 사용됩니다.
 
@@ -539,7 +539,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
-## <a name="count"></a>  hash_set::count
+## <a name="hash_setcount"></a><a name="count"></a>hash_set::카운트
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -552,16 +552,16 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 hash_set에서 일치하는지 확인할 요소의 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set에 정렬 키가 매개 변수 키와 일치하는 요소가 포함되어 있는 경우 1입니다.
 
 hash_set에 일치하는 키가 있는 요소가 포함되지 않은 경우 0입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수가 다음 범위에 있는 요소의 수를 반환합니다.
 
@@ -603,7 +603,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a>  hash_set::crbegin
+## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set::crbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -614,11 +614,11 @@ The number of elements in hs1 with a sort key of 2 is: 0.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 [hash_set](../standard-library/hash-set-class.md)에서 첫 번째 요소 또는 정방향 `hash_set`에서 마지막 요소의 주소를 지정하는 상수 역방향 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `crbegin`은 [hash_set::begin](#begin)이 hash_set에서 사용되는 것처럼 역방향 hash_set에서 사용됩니다.
 
@@ -655,7 +655,7 @@ int main( )
 The first element in the reversed hash_set is 30.
 ```
 
-## <a name="crend"></a>  hash_set::crend
+## <a name="hash_setcrend"></a><a name="crend"></a>hash_set::crend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -666,11 +666,11 @@ The first element in the reversed hash_set is 30.
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 [hash_set](../standard-library/hash-set-class.md)에서 마지막 요소 다음의 위치(정방향 `hash_set`의 첫 번째 요소 앞의 위치) 주소를 지정하는 상수 역방향 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `crend`는 [hash_set::end](#end)가 `hash_set`에서 사용되는 것처럼 역방향 `hash_set`에서 사용됩니다.
 
@@ -708,7 +708,7 @@ int main( )
 The last element in the reversed hash_set is 10.
 ```
 
-## <a name="difference_type"></a>  hash_set::difference_type
+## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set::d이퍼런스_타입
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -719,7 +719,7 @@ The last element in the reversed hash_set is 10.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `difference_type`은 컨테이너의 반복기를 빼거나 더할 때 반환되는 형식입니다. `difference_type`은 일반적으로 `first` 및 `last` 반복기 사이의 [ `first`, `last`) 범위 내 요소 수를 나타내는 데 사용됩니다. 여기에는 `first`가 가리키는 요소와 `last`가 가리키는 요소까지의 요소 범위가 포함됩니다(마지막 요소는 포함되지 않음).
 
@@ -785,7 +785,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.
 ```
 
-## <a name="emplace"></a>  hash_set::emplace
+## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set::엠플레이스
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -803,13 +803,13 @@ emplace(
 
 |매개 변수|설명|
 |-|-|
-|*val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
+|*발*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-@No__t_0 멤버 함수는 부울 구성 요소가 삽입이 수행 된 경우 true를 **반환 하 고** , `hash_set` 해당 키가 순서 지정 시 동일한 값을 가진 요소를 이미 포함 하 고 있는 경우에는 **부울** 구성 요소가 **true** 를 반환 하 고, 해당 반복기가 구성 요소는 새 요소가 삽입 되었거나 요소가 이미 있었던 주소를 반환 합니다.
+멤버 `emplace` 함수는 삽입이 된 경우 **bool** 구성 요소가 **true로** 반환되고 순서에 동일한 값이 있는 요소가 `hash_set` 이미 포함된 요소와 변경기 구성 요소가 새 요소가 삽입된 주소 또는 요소가 이미 있는 위치를 반환하는 경우 **false를** 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -837,7 +837,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="emplace_hint"></a>  hash_set::emplace_hint
+## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set:emplace_hint
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -855,16 +855,16 @@ iterator emplace(
 
 |매개 변수|설명|
 |-|-|
-|*val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
-|*_Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 *_Where*바로 다음에 오는 경우 로그 시간 대신 분할 상환 일정 시간에 삽입이 발생할 수 있습니다.|
+|*발*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
+|*_Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 *바로 _Where*따라 오는 경우 삽입은 로그 시간 대신 상각 된 일정한 시간에 발생할 수 있습니다.)|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [hash_set::emplace](#emplace) 멤버 함수는 새 요소가 `hash_set`에 삽입되거나 동일한 순서를 가진 기존 요소가 있는 위치를 가리키는 반복기를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-삽입 지점이 *_Where*바로 다음에 오는 경우 로그 시간 대신 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
+삽입 지점이 *바로 _Where*따라 오는 경우 삽입은 로그 시간 대신 상각 된 일정한 시간에 발생할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -892,7 +892,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="empty"></a>  hash_set::empty
+## <a name="hash_setempty"></a><a name="empty"></a>hash_set::비어 있음
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -903,11 +903,11 @@ hash_set이 비어 있는지 테스트합니다.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -941,7 +941,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.
 ```
 
-## <a name="end"></a>  hash_set::end
+## <a name="hash_setend"></a><a name="end"></a>hash_set:종료
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -954,13 +954,13 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 양방향 반복기입니다. hash_set이 비어 있으면 hash_set::end == hash_set::begin입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`end`는 반복기가 hash_set의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
+`end`는 hash_set 끝에 도달했는지 여부를 테스트하는 데 사용됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1004,7 +1004,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2
 ```
 
-## <a name="equal_range"></a>  hash_set::equal_range
+## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set:equal_range
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1019,16 +1019,16 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반복기 쌍. 여기서 첫 번째 반복기는 키의 [lower_bound](../standard-library/set-class.md#lower_bound)이고 두 번째 반복기는 키의 [upper_bound](../standard-library/set-class.md#upper_bound)입니다.
 
-멤버 함수가 반환하는 pr 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **first**를 사용하고 하한 반복기를 역참조하려면 \*( `pr`. **first**)를 사용합니다. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **second**를 사용하고 상한 반복기를 역참조하려면 \*( `pr`. **second**)를 사용합니다.
+멤버 함수가 반환하는 pr 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **먼저**하반되는 이터레이터를 반성하려면 \*( `pr` **첫 번째)를**참조하십시오. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **두 번째**, 상한 이터레이터를 반참조하려면 \*( `pr` **두 번째)를**참조하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -1089,7 +1089,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ```
 
-## <a name="erase"></a>  hash_set::erase
+## <a name="hash_seterase"></a><a name="erase"></a>hash_set::지우기
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1106,23 +1106,23 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*_Where* \
+*_Where*\
 hash_set에서 제거할 요소의 위치입니다.
 
-*첫 번째* \
+*첫 번째*\
 hash_set에서 제거되는 첫 번째 요소의 위치입니다.
 
-*마지막* \
+*마지막*\
 hash_set에서 제거되는 마지막 요소 바로 뒤의 위치입니다.
 
-*키* \
+*키*\
 hash_set에서 제거할 요소의 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 처음 두 멤버 함수의 경우 제거된 요소 뒤에 남은 첫 번째 요소를 지정하는 양방향 반복기이거나 이러한 요소가 없을 경우 hash_set의 끝에 대한 포인터입니다. 세 번째 멤버 함수의 경우 hash_set에서 제거된 요소의 수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 예외를 throw하지 않습니다.
 
@@ -1209,7 +1209,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ```
 
-## <a name="find"></a>  hash_set::find
+## <a name="hash_setfind"></a><a name="find"></a>hash_set::찾기
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1224,18 +1224,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 검색 중인 hash_set에서 요소의 정렬 키와 일치 여부를 확인할 인수 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 키에 해당 하는 요소 위치의 주소를 지정 하거나, 키와 일치 하는 항목이 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 지정 하는 `iterator` 또는 `const_iterator`입니다.
+`iterator` 또는 `const_iterator` 지정된 키와 동일한 요소의 위치를 주소또는 키에 대한 일치가 없는 경우 hash_set 마지막 요소를 성공하는 위치를 해결하는 것입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 hash_set의 요소를 주소 지정 하는 반복기를 반환 합니다 .이는 작음 비교 가능 관계를 기준으로 순서를 지정 하는 이진 조건자의 인수 키에 정렬 키가 `equivalent` 됩니다.
+멤버 함수는 정렬 키가 `equivalent` 보다 적은 비교 관계하에 순서를 유도하는 이진 조건자 아래의 인수 키에 hash_set 요소를 해결하는 이터레이터를 반환합니다.
 
-@No__t_0의 반환 값이 `const_iterator`에 할당 된 경우에는 hash_set 개체를 수정할 수 없습니다. @No__t_0의 반환 값이 `iterator`에 할당 된 경우에는 hash_set 개체를 수정할 수 있습니다.
+의 `find` 반환 값이 `const_iterator`에 할당된 경우 hash_set 개체를 수정할 수 없습니다. 의 `find` 반환 값이 `iterator`에 할당된 경우 hash_set 개체를 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1287,7 +1287,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="get_allocator"></a>  hash_set::get_allocator
+## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set:get_allocator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1298,13 +1298,13 @@ hash_set을 생성하는 데 사용되는 할당자 개체의 복사본을 반�
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Hash_set에서 메모리를 관리 하는 데 사용 하는 할당자 (템플릿 매개 변수 *할당자*)입니다.
+hash_set 메모리를 관리하는 데 사용되는 할당자이며, 템플릿 매개 변수 *인 할당자*입니다.
 
-*할당자*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
+*할당자에*대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 비고 섹션을 참조하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 hash_set 클래스의 할당자는 클래스가 스토리지를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.
 
@@ -1363,7 +1363,7 @@ int main( )
 }
 ```
 
-## <a name="hash_set"></a>  hash_set::hash_set
+## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set:hash_set
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1421,13 +1421,13 @@ hash_set(
 
 |매개 변수|설명|
 |-|-|
-|*Al*|이 `hash_set` 개체에 사용할 스토리지 할당자 클래스로, 기본값은 `Allocator`입니다.|
-|*생략*|`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
+|*알*|이 `hash_set` 개체에 사용할 스토리지 할당자 클래스로, 기본값은 `Allocator`입니다.|
+|*광고*|`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
 |*오른쪽*|생성된 `hash_set`이 복사본으로 지정될 `hash_set`입니다.|
-|*첫째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
+|*첫 번째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
 |*마지막*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 생성자는 `hash_set`의 메모리 스토리지를 관리하며 나중에 [hash_set::get_allocator](#get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. allocator 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.
 
@@ -1437,17 +1437,17 @@ hash_set(
 
 첫 번째 생성자는 빈 초기 `hash_set`을 정의하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수(`Comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식(`Al`)을 명시적으로 지정합니다. `explicit` 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
 
-네 번째 및 다섯 번째 생성자는 `hash_set` `Right`의 복사본을 지정 합니다.
+네 번째 및 다섯 번째 생성자는 `hash_set` `Right`의 복사본을 지정합니다.
 
 마지막 여섯 번째, 일곱 번째 및 여덟 번째 생성자는 요소에 initializer_list를 사용합니다.
 
 마지막 3개 생성자는 `hash_set`의 범위 [ `First`, `Last`)를 복사하며, 범위 내에서 클래스 Traits 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.
 
-여덟 번째 생성자는 `hash_set` `Right`를 이동 합니다.
+여덟 번째 생성자는 `hash_set` `Right`를 이동합니다.
 
 `hash_set` 컨테이너에 있는 요소의 실제 순서는 해시 함수, 순서 지정 함수 및 해시 테이블의 현재 크기에 따라 달라지고, 일반적으로 순서 지정 함수에 의해서만 결정된 경우 set 컨테이너에서 예상 가능하던 것처럼 실제 순서를 예상할 수는 없습니다.
 
-## <a name="insert"></a>  hash_set::insert
+## <a name="hash_setinsert"></a><a name="insert"></a>hash_set::삽입
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1475,26 +1475,26 @@ void insert(
 |매개 변수|설명|
 |-|-|
 |*Val*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 `hash_set`에 삽입될 요소의 값입니다.|
-|*Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
-|*첫째*|`hash_set`에서 복사할 첫 번째 요소의 위치입니다.|
+|*어디*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
+|*첫 번째*|`hash_set`에서 복사할 첫 번째 요소의 위치입니다.|
 |*마지막*|`hash_set`에서 복사할 마지막 요소 바로 다음 위치입니다.|
 |*IList*|요소를 복사해올 initializer_list입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 `insert` 멤버 함수는 **부울** 구성 요소가 삽입이 수행 된 경우 **true** 를 반환 하 고, 해당 키가 순서 지정 시 동일한 값을 가지는 요소를 이미 포함 하 고 있는 요소를 이미 포함 하 고 있는 `hash_set` 경우 **false** 를 반환 합니다. 구성 요소는 새 요소가 삽입 되었거나 요소가 이미 있었던 주소를 반환 합니다.
+첫 `insert` 번째 멤버 함수는 삽입이 된 경우 **bool** 구성 요소가 **true로** 반환되고 순서에 동일한 값이 있는 요소가 `hash_set` 이미 포함된 요소와 변경기 구성 요소가 새 요소가 삽입된 주소 또는 요소가 이미 있는 위치를 반환하는 경우 **false를** 반환합니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수가 반환 하는 `pr` 쌍의 **bool** 구성 요소에 액세스 하려면 `pr.second`를 사용 하 고이를 역참조 하려면 `*(pr.second)`를 사용 합니다.
+이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수에서 반환되는 `pr` 쌍의 **bool** 구성 `pr.second`요소에 액세스하려면 을 `*(pr.second)`사용하고 이 구성 요소를 참조하려면 을 사용합니다.
 
 두 번째 `insert` 멤버 함수는 새 요소를 `hash_set`에 삽입한 위치를 가리키는 반복기를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 세 번째 멤버 함수는 initializer_list에 요소를 삽입합니다.
 
 세 번째 멤버 함수는 지정된 `hash_set`의 [`First`, `Last`) 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 `hash_set`에 요소 값의 시퀀스를 삽입합니다.
 
-## <a name="iterator"></a>  hash_set::iterator
+## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set:::이터레이터
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1505,15 +1505,15 @@ hash_set에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-@No__t_0 형식을 사용 하 여 요소의 값을 수정할 수 있습니다.
+형식을 `iterator` 사용하여 요소값을 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
 `iterator`를 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="key_comp"></a>  hash_set::key_comp
+## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set:key_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1524,21 +1524,21 @@ hash_set의 요소 키 값을 해시하고 정렬하는 데 사용되는 해시 
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Hash_set에서 요소를 정렬 하는 데 사용 하는 함수 개체를 반환 합니다 .이 개체는 템플릿 매개 변수 *특성*입니다.
+hash_set 템플릿 매개 변수 *Traits의*요소를 정렬하는 데 사용하는 함수 개체를 반환합니다.
 
-*특성* 에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조 하세요.
+*특성에* 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 저장된 개체는 구성원 함수
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
-정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.
+이는 선행하는 `_xVal` 경우 `_yVal` **true를** 반환하며 정렬 순서와 같지 않습니다.
 
-[key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+[key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*와 동일한 의미입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
 ### <a name="example"></a>예제
 
@@ -1589,7 +1589,7 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>  hash_set::key_compare
+## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set:key_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1600,19 +1600,19 @@ hash_set의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`key_compare`은 템플릿 매개 변수 *특성*의 동의어입니다.
+`key_compare`는 템플릿 매개 변수 *특성의*동의어입니다.
 
-*특성* 에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조 하세요.
+*특성에* 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하십시오.
 
-`key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*의 동의어입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+`key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 *Traits*와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
 ### <a name="example"></a>예제
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
-## <a name="key_type"></a>  hash_set::key_type
+## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set:key_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1623,19 +1623,19 @@ typedef Traits key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`key_type`은 템플릿 매개 변수 *키*의 동의어입니다.
+`key_type`는 템플릿 매개 변수 *Key의*동의어입니다.
 
-*키*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
+*키에*대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 비고 섹션을 참조하십시오.
 
 `key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 *Key*의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
 ### <a name="example"></a>예제
 
-`key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
+`key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="lower_bound"></a>  hash_set::lower_bound
+## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set:lower_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1650,14 +1650,14 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-인수 키 보다 크거나 같은 키를 사용 하 여 hash_set의 요소 위치를 주소를 하거나, 키와 일치 하는 항목이 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 나타내는 `iterator` 또는 `const_iterator`입니다.
+인수 `iterator` `const_iterator` 키와 같거나 큰 키를 가진 키또는 키에 대한 일치가 없는 경우 hash_set 마지막 요소를 성공하는 위치를 해결하는 hash_set 요소의 위치를 해결하는 것입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -1709,7 +1709,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="max_size"></a>  hash_set::max_size
+## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set:max_size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1720,11 +1720,11 @@ hash_set의 최대 길이를 반환합니다.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set의 최대 허용 길이입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -1747,7 +1747,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_set::operator=
+## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set::연산자=
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1764,11 +1764,11 @@ hash_set& operator=(hash_set&& right);
 
 |매개 변수|설명|
 |-|-|
-|*right*|`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.|
+|*오른쪽*|`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-@No__t_0의 기존 요소를 지운 후에 *는의 내용을* `hash_set` 복사 하거나 이동 `operator=`.
+`hash_set`에서 기존 요소를 지워면 `operator=` *오른쪽의* 내용을 을 복사하거나 이동합니다. `hash_set`
 
 ### <a name="example"></a>예제
 
@@ -1808,7 +1808,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  hash_set::pointer
+## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set::p
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1819,13 +1819,13 @@ hash_set에서 요소에 대한 포인터를 제공하는 형식입니다.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-@No__t_0 형식을 사용 하 여 요소의 값을 수정할 수 있습니다.
+형식을 `pointer` 사용하여 요소값을 수정할 수 있습니다.
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_set 개체의 요소에 액세스해야 합니다.
 
-## <a name="rbegin"></a>  hash_set::rbegin
+## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set::rbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1838,11 +1838,11 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 hash_set에서 첫 번째 요소 또는 정방향 hash_set에서 마지막 요소의 주소를 지정하는 역방향 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `rbegin`은 [begin](#begin)이 hash_set에서 사용되는 것처럼 역방향 hash_set에서 사용됩니다.
 
@@ -1908,7 +1908,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.
 ```
 
-## <a name="reference"></a>  hash_set::reference
+## <a name="hash_setreference"></a><a name="reference"></a>hash_set::참조
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1919,7 +1919,7 @@ hash_set에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -1958,7 +1958,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.
 ```
 
-## <a name="rend"></a>  hash_set::rend
+## <a name="hash_setrend"></a><a name="rend"></a>hash_set::rend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1971,11 +1971,11 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 역방향 hash_set에서 마지막 요소 다음의 위치(정방향 hash_set의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 양방향 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `rend`은 [end](#end)가 hash_set에서 사용되는 것처럼 역방향 hash_set에서 사용됩니다.
 
@@ -2044,7 +2044,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.
 ```
 
-## <a name="reverse_iterator"></a>  hash_set::reverse_iterator
+## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set:reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2055,7 +2055,7 @@ After the erasure, the last element in the reversed hash_set is 20.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `reverse_iterator` 형식은 hash_set을 역방향으로 반복하는 데 사용됩니다.
 
@@ -2063,7 +2063,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="size"></a>  hash_set::size
+## <a name="hash_setsize"></a><a name="size"></a>hash_set:크기
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2074,11 +2074,11 @@ hash_set에 있는 요소 수를 반환합니다.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 hash_set의 현재 길이입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -2110,7 +2110,7 @@ The hash_set length is 1.
 The hash_set length is now 2.
 ```
 
-## <a name="size_type"></a>  hash_set::size_type
+## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set:size_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2121,13 +2121,13 @@ hash_set에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="swap"></a>  hash_set::swap
+## <a name="hash_setswap"></a><a name="swap"></a>hash_set::스왑
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2140,10 +2140,10 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 대상 hash_set과 교환할 요소를 제공하는 인수 hash_set입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 해당 요소를 교환할 두 hash_set의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.
 
@@ -2201,7 +2201,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  hash_set::upper_bound
+## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set:upper_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2216,14 +2216,14 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키* \
+*키*\
 검색 중인 hash_set에서 요소의 정렬 키와 비교할 인수 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-인수 키 보다 크거나 같은 키를 사용 하 여 hash_set 내 요소의 위치 주소를 하거나, 키와 일치 하는 항목이 없는 경우 hash_set에서 마지막 요소 다음 위치의 주소를 나타내는 `iterator` 또는 `const_iterator`입니다.
+인수 `iterator` `const_iterator` 키와 같거나 큰 키를 가진 키또는 키에 대한 일치가 없는 경우 hash_set 마지막 요소를 성공하는 위치를 해결하는 hash_set 요소의 위치를 해결하는 것입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ### <a name="example"></a>예제
 
@@ -2275,7 +2275,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.
 ```
 
-## <a name="value_comp"></a>  hash_set::value_comp
+## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set:value_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2286,21 +2286,21 @@ hash_set에서 요소 값의 정렬에 사용되는 비교 개체의 복사본�
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Hash_set에서 요소를 정렬 하는 데 사용 하는 함수 개체를 반환 합니다 .이 개체는 템플릿 매개 변수 *비교*입니다.
+hash_set 해당 요소를 정렬하는 데 사용하는 함수 개체를 *Compare*반환합니다.
 
-*비교*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
+*비교에*대한 자세한 내용은 [hash_set 수업](../standard-library/hash-set-class.md) 항목의 비고 섹션을 참조하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 저장된 개체는 구성원 함수
 
 `bool operator( const Key& _xVal, const Key& _yVal );`
 
-정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.
+이는 선행하는 `_xVal` 경우 `_yVal` **true를** 반환하며 정렬 순서와 같지 않습니다.
 
-[Value_compare](../standard-library/set-class.md#value_compare) 와 [key_compare](../standard-library/set-class.md#key_compare) 는 둘 다 템플릿 매개 변수 *비교*에 대 한 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+[value_compare](../standard-library/set-class.md#value_compare) [key_compare](../standard-library/set-class.md#key_compare) 모두 템플릿 매개 변수 *비교의*동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
 ### <a name="example"></a>예제
 
@@ -2351,7 +2351,7 @@ int main( )
 }
 ```
 
-## <a name="value_compare"></a>  hash_set::value_compare
+## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set:value_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2362,19 +2362,19 @@ hash_set의 두 요소 값을 비교하여 상대 순서를 확인할 수 있는
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`value_compare`은 템플릿 매개 변수 *특성*의 동의어입니다.
+`value_compare`는 템플릿 매개 변수 *특성의*동의어입니다.
 
-*특성* 에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조 하세요.
+*특성에* 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하십시오.
 
-[Key_compare](#key_compare) 및 `value_compare`는 모두 템플릿 매개 변수 *특성*의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
+[key_compare](#key_compare) 템플릿 매개 `value_compare` 변수 *특성의*동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
 ### <a name="example"></a>예제
 
 `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.
 
-## <a name="value_type"></a>  hash_set::value_type
+## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set:value_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2421,7 +2421,7 @@ int main( )
 The hash_set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

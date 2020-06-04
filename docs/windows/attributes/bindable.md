@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167357"
 ---
 # <a name="bindable"></a>bindable
 
@@ -65,13 +65,13 @@ __interface IPropDemo : IDispatch {
 |||
 |-|-|
 |**적용 대상**|인터페이스 메서드|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>

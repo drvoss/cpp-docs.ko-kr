@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210719"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 클래스
 
-구현을 제공 합니다 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) 인터페이스입니다.
+[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) 인터페이스의 구현을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-세션 개체에서 파생 된 `IDBCreateCommandImpl`합니다.
+`IDBCreateCommandImpl`에서 파생 된 세션 개체입니다.
 
 *CommandClass*<br/>
 명령 클래스입니다.
@@ -51,13 +50,13 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |-|-|
 |[CreateCommand](#createcommand)|새 명령을 만듭니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-새 명령을 가져올 세션 개체의 선택적 인터페이스입니다.
+새 명령을 얻기 위한 session 개체의 선택적 인터페이스입니다.
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
 
-새 명령을 만들고 요청된 된 인터페이스를 반환 합니다.
+새 명령을 만들고 요청 된 인터페이스를 반환 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 를 참조 하세요.
 
-에 해당 하는 일부 매개 변수 *OLE DB Programmer's Reference* 매개 변수에서 설명 하는 다른 이름의 `IDBCreateCommand::CreateCommand`:
+일부 매개 변수는 `IDBCreateCommand::CreateCommand`에서 설명 하는 다양 한 이름의 *프로그래머 참조* 매개 변수 OLE DB에 해당 합니다.
 
-|OLE DB 템플릿 매개 변수|*OLE DB Programmer's Reference* 매개 변수|
+|OLE DB 템플릿 매개 변수|*OLE DB 프로그래머 참조* 매개 변수|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

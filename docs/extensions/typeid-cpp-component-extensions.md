@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181748"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid(C++/CLI 및 C++/CX)
 
@@ -82,7 +82,7 @@ GetType은 런타임에 반환할 형식을 평가하는 반면, `typeid`는 컴
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 typeid 키워드와 `GetType()` 멤버를 비교합니다.
 

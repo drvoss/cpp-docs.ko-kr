@@ -7,11 +7,11 @@ helpviewer_keywords:
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158523"
 ---
 # <a name="sequential-evaluation-operator"></a>순차적 확인 연산자
 
@@ -29,7 +29,7 @@ ms.locfileid: "56149130"
 
 일부 컨텍스트에서는 쉼표를 구분 기호로 사용할 수 있습니다. 그러나 쉼표를 구분 기호로 사용하는 경우와 연산자로 사용하는 경우는 완전히 다르기 때문에 둘을 혼동하지 않도록 주의해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 순차 계산 연산자를 보여 줍니다.
 
@@ -46,6 +46,6 @@ func_two( (x--, y + 2), z );
 
 `func_one`에 대한 함수 호출에서 쉼표로 구분된 세 인수(`x`, `y + 2`, `z`)가 전달됩니다. `func_two`에 대한 함수 호출에서 괄호는 컴파일러가 첫 번째 쉼표를 순차적 계산 연산자로 해석하도록 합니다. 이 함수 호출은 두 인수를 `func_two`에 전달합니다. 첫 번째 인수는 `(x--, y + 2)` 식의 값과 형식을 가진 순차적 계산 연산 `y + 2`의 결과이며, 두 번째 인수는 `z`입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [쉼표 연산자: ,](../cpp/comma-operator.md)

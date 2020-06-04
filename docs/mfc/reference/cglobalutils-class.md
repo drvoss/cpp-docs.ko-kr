@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbac56ea7efca98218133b23657f8508ea6bac28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182018"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752911"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 클래스
 
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -59,7 +59,7 @@ class CGlobalUtils
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||
@@ -88,9 +88,9 @@ class CGlobalUtils
 
 **헤더:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils::adjustRectToWorkArea
 
-```
+```cpp
 void AdjustRectToworkArea(
     CRect& rect,
     CRect* pRectDelta = NULL);
@@ -98,14 +98,14 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[out에서] *rect*<br/>
-[in] *pRectDelta*<br/>
+【인, 아웃】 *정류*<br/>
+【인】 *프렉트델타*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CPaneContainerManager& barContainerManager,
     CWnd* pWndTodock,
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *barContainerManager*<br/>
+【인】 *바 컨테이너 관리자*<br/>
 
-[in] *pWndTodock*<br/>
+【인】 *pWndTodock*<br/>
 
-[in] *ptMouse*<br/>
+【인】 *pt마우스*<br/>
 
-[out] *rectResult*<br/>
+【아웃】 *정류 결과*<br/>
 
-[out] *bDrawTab*<br/>
+【아웃】 *b그리기 탭*<br/>
 
-[out] *ppTargetBar*<br/>
+【아웃】 *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>CGlobalUtils::수 있습니다연결
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::칸파네빈플로팅멀티파인프레임
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>CGlobalUtils::체크정렬
 
 ```
 BOOL CheckAlignment(
@@ -175,27 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *point*<br/>
+【인】 *점*<br/>
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-[in] *nSensitivity*<br/>
+【인】 *n감도*<br/>
 
-[in] *pDockManager*<br/>
+【인】 *pDockManager*<br/>
 
-[in] *bOuterEdge*<br/>
+【인】 *bOuterEdge*<br/>
 
-[out] *dwAlignment*<br/>
+【아웃】 *dw정렬*<br/>
 
-[in] *dwEnabledDockBars*<br/>
+【인】 *dwEnabledDockBar*<br/>
 
-[in] *lpRectBounds*<br/>
+【인】 *lpRect바운드*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>CGlobalUtils::사이프프스트링
 
 ```
 BOOL CyFromString(
@@ -205,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>매개 변수
 
-[out] *cy*<br/>
+【아웃】 *사이 (것)에*<br/>
 
-[in] *psz*<br/>
+【인】 *psz*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>CGlobalUtils::D에시멀스트링
 
 ```
 BOOL DecimalFromString(
@@ -223,17 +223,17 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>매개 변수
 
-[out] *decimal*<br/>
+【아웃】 *십진수*<br/>
 
-[in] *psz*<br/>
+【인】 *psz*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils::플립렉트
 
-```
+```cpp
 void FlipRect(
     CRect& rect,
     int nDegrees);
@@ -241,14 +241,14 @@ void FlipRect(
 
 ### <a name="parameters"></a>매개 변수
 
-[out에서] *rect*<br/>
-[in] *nDegrees*<br/>
+【인, 아웃】 *정류*<br/>
+【인】 *n도*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils::포스조정레이아웃
 
-```
+```cpp
 void ForceAdjustLayout(
     CDockingManager* pDockManager,
     BOOL bForce = FALSE,
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>매개 변수
 
-[in, out] *pDockManager*<br/>
+【인, 아웃】 *pDockManager*<br/>
 
-[in] *bForce*<br/>
+【인】 *bForce*<br/>
 
-[in] *bForceInvisible*<br/>
+【인】 *b인가볼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>CGlobalUtils::Get반대 정렬
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *dwAlign*<br/>
+【인】 *dwAlign*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>CGlobalUtils::겟파네앤정렬From포인트
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,23 +307,23 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *barContainerManager*<br/>
+【인】 *바 컨테이너 관리자*<br/>
 
-[in] *pt*<br/>
+【인】 *pt*<br/>
 
-[out] *ppTargetControlBar*<br/>
+【아웃】 *ppTargetControlBar*<br/>
 
-[out] *dwAlignment*<br/>
+【아웃】 *dw정렬*<br/>
 
-[out] *bTabArea*<br/>
+【아웃】 *bTabArea*<br/>
 
-[out] *bCaption*<br/>
+【아웃】 *b캡션*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>CGlobalUtils::GetWndicon
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,15 +331,15 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
+【인】 *pWnd*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils::SetNewParent
 
-```
+```cpp
 void SetNewParent(
     CObList& lstControlBars,
     CWnd* pNewParent,
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *lstControlBars*<br/>
+【인】 *lstControlBars*<br/>
 
-[in] *pNewParent*<br/>
+【인】 *pNewParent*<br/>
 
-[in] *bCheckVisibility*<br/>
+【인】 *b체크가시성*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>CGlobalUtils::문자열FromCy
 
 ```
 BOOL StringFromCy(
@@ -366,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>매개 변수
 
-[out] *str*<br/>
+【아웃】 *str*<br/>
 
-[in] *cy*<br/>
+【인】 *사이 (것)에*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>CGlobalUtils::문자열출신데시
 
 ```
 BOOL StringFromDecimal(
@@ -384,15 +384,15 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>매개 변수
 
-[out] *str*<br/>
+【아웃】 *str*<br/>
 
-[in] *decimal*<br/>
+【인】 *십진수*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

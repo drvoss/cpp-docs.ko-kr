@@ -1,5 +1,5 @@
 ---
-title: CContextMenuManager 클래스
+title: C컨텍스트 메뉴관리자 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CContextMenuManager
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182227"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754810"
 ---
-# <a name="ccontextmenumanager-class"></a>CContextMenuManager 클래스
+# <a name="ccontextmenumanager-class"></a>C컨텍스트 메뉴관리자 클래스
 
-`CContextMenuManager` 개체 관리 바로 가기 메뉴, 상황에 맞는 메뉴 라고도 합니다.
+개체는 `CContextMenuManager` 바로 가기 메뉴(컨텍스트 메뉴라고도 함)를 관리합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,39 +49,39 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|`CContextMenuManager` 개체를 생성합니다.|
+|[C컨텍스트 메뉴 관리자::C컨텍스트 메뉴 관리자](#ccontextmenumanager)|`CContextMenuManager` 개체를 생성합니다.|
 |`CContextMenuManager::~CContextMenuManager`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CContextMenuManager::AddMenu](#addmenu)|새 바로 가기 메뉴를 추가합니다.|
-|[CContextMenuManager::GetMenuById](#getmenubyid)|제공 된 리소스 ID와 연결 된 메뉴에 대 한 핸들을 반환 합니다.|
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|제공 된 메뉴 이름과 일치 하는 메뉴에 대 한 핸들을 반환 합니다.|
-|[CContextMenuManager::GetMenuNames](#getmenunames)|메뉴 이름 목록을 반환합니다.|
-|[CContextMenuManager::LoadState](#loadstate)|Windows 레지스트리에 저장 된 바로 가기 메뉴를 로드 합니다.|
-|[CContextMenuManager::ResetState](#resetstate)|상황에 맞는 메뉴 관리자에서 바로 가기 메뉴를 지웁니다.|
-|[CContextMenuManager::SaveState](#savestate)|바로 가기 메뉴를 Windows 레지스트리에 저장합니다.|
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|컨트롤 여부는 `CContextMenuManager` 새 바로 가기 메뉴가 표시 되 면 현재 바로 가기 메뉴를 닫습니다.|
-|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|지정 된 바로 가기 메뉴를 표시합니다.|
-|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|지정 된 바로 가기 메뉴를 표시합니다. 선택한 메뉴 명령의 인덱스를 반환합니다.|
+|[C컨텍스트 메뉴 관리자::추가 메뉴](#addmenu)|새 바로 가기 메뉴를 추가합니다.|
+|[CContextMenu관리자::GetMenuById](#getmenubyid)|제공된 리소스 ID와 연결된 메뉴에 핸들을 반환합니다.|
+|[CContext메뉴 관리자::GetMenuByName](#getmenubyname)|제공된 메뉴 이름과 일치하는 메뉴에 핸들을 반환합니다.|
+|[C컨텍스트 메뉴 관리자::GetMenu 이름](#getmenunames)|메뉴 이름 목록을 반환합니다.|
+|[C컨텍스트 메뉴 관리자::로드 상태](#loadstate)|Windows 레지스트리에 저장된 바로 가기 메뉴를 로드합니다.|
+|[C컨텍스트 메뉴 관리자::재설정 상태](#resetstate)|컨텍스트 메뉴 관리자에서 바로 가기 메뉴를 지웁힙으로 지웁힙으로 지웁힙입니다.|
+|[C컨텍스트 메뉴 관리자::저장 상태](#savestate)|바로 가기 메뉴를 Windows 레지스트리에 저장합니다.|
+|[C컨텍스트 메뉴 관리자::SetDont닫기 활성 메뉴](#setdontcloseactivemenu)|새 바로 `CContextMenuManager` 가기 메뉴가 표시될 때 활성 바로 가기 메뉴를 닫는지 여부를 제어합니다.|
+|[C컨텍스트 메뉴 관리자::쇼팝메뉴](#showpopupmenu)|지정된 바로 가기 메뉴를 표시합니다.|
+|[C컨텍스트 메뉴 관리자::트랙팝메뉴](#trackpopupmenu)|지정된 바로 가기 메뉴를 표시합니다. 선택한 메뉴 명령의 인덱스를 반환합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CContextMenuManager` 바로 가기 메뉴를 관리 하 고 일관 된 모양이 있는지 확인 합니다.
+`CContextMenuManager`바로 가기 메뉴를 관리하고 일관된 모양을 가지고 있는지 확인합니다.
 
-만들어야 합니다를 `CContextMenuManager` 수동으로 개체입니다. 응용 프로그램의 프레임 워크는 생성 된 `CContextMenuManager` 개체입니다. 하지만 호출 해야 [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 응용 프로그램을 초기화할 경우. 메서드를 사용 하 여 컨텍스트 관리자를 초기화 한 후 [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) 응용 프로그램에 대 한 컨텍스트 관리자에 대 한 포인터를 가져오려고 합니다.
+개체를 `CContextMenuManager` 수동으로 만들지 않아야 합니다. 응용 프로그램의 프레임워크는 `CContextMenuManager` 개체를 만듭니다. 그러나 응용 프로그램이 초기화될 때 [CWinAppEx::InitContextMenuManager를](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 호출해야 합니다. 컨텍스트 관리자를 초기화한 후 [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) 메서드를 사용하여 응용 프로그램에 대한 컨텍스트 관리자에 대한 포인터를 가져옵니다.
 
-호출 하 여 런타임 시 바로 가기 메뉴를 만들 수 있습니다 `AddMenu`합니다. 첫 번째 수신 사용자 입력 없이 메뉴를 표시 하려는 경우 호출 `ShowPopupMenu`합니다. `TrackPopupMenu` 메뉴를 만들고 사용자 입력 대기 하려는 경우 사용 됩니다. `TrackPopupMenu` 사용자는 아무 것도 선택 하지 않고 종료 하는 경우 선택한 명령을 또는 0의 인덱스를 반환 합니다.
+을 호출하여 `AddMenu`런타임에 바로 가기 메뉴를 만들 수 있습니다. 사용자 입력을 먼저 받지 않고 메뉴를 표시하려면 을 호출합니다. `ShowPopupMenu` `TrackPopupMenu`는 메뉴를 만들고 사용자 입력을 기다릴 때 사용됩니다. `TrackPopupMenu`은 사용자가 아무 것도 선택하지 않고 종료된 경우 선택한 명령의 인덱스 또는 0을 반환합니다.
 
-`CContextMenuManager` 도 저장 하 고 Windows 레지스트리에 해당 상태를 로드할 수 있습니다.
+또한 `CContextMenuManager` Windows 레지스트리에 상태를 저장하고 로드할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 예에서는 메뉴에 추가 하는 방법에 설명를 `CContextMenuManager` 개체 및 방법 활성 팝업 메뉴 닫기 때는 `CContextMenuManager` 개체에 새 팝업 메뉴가 표시 됩니다. 이 코드 조각은의 일부인 합니다 [사용자 지정 페이지 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 `CContextMenuManager` 개체에 메뉴를 추가하는 방법과 `CContextMenuManager` 개체에 새 팝업 메뉴가 표시될 때 활성 팝업 메뉴를 닫지 않는 방법을 보여 줍니다. 이 코드 조각은 사용자 [지정 페이지 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -95,9 +95,9 @@ class CContextMenuManager : public CObject
 
 **헤더:** afxcontextmenumanager.h
 
-##  <a name="addmenu"></a>  CContextMenuManager::AddMenu
+## <a name="ccontextmenumanageraddmenu"></a><a name="addmenu"></a>C컨텍스트 메뉴 관리자::추가 메뉴
 
-새 바로 가기 메뉴를 추가 합니다 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)합니다.
+[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)에 새 바로 가기 메뉴를 추가합니다.
 
 ```
 BOOL AddMenu(
@@ -112,25 +112,25 @@ BOOL AddMenu(
 ### <a name="parameters"></a>매개 변수
 
 *uiMenuNameResId*<br/>
-[in] 새 메뉴 이름을 포함 하는 문자열에 대 한 리소스 ID입니다.
+【인】 새 메뉴의 이름을 포함하는 문자열의 리소스 ID입니다.
 
 *uiMenuResId*<br/>
-[in] 메뉴 리소스 id입니다.
+【인】 메뉴 리소스 ID입니다.
 
 *lpszName*<br/>
-[in] 새 메뉴 이름을 포함 하는 문자열입니다.
+【인】 새 메뉴의 이름을 포함하는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 0이 아닌 값 메서드가 실패 하는 경우 0입니다.
+메서드가 성공한 경우 0이 아닙니다. 메서드가 실패하면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드가 실패 하는 경우 *uiMenuResId* 되었거나 잘못 된 경우 동일한 이름의 다른 메뉴에 이미 포함 되어는 `CContextMenuManager`합니다.
+*uiMenuResId가* 유효하지 않거나 이름이 같은 다른 메뉴가 이미 에 `CContextMenuManager`있는 경우 이 메서드가 실패합니다.
 
-##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager
+## <a name="ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a>C컨텍스트 메뉴 관리자::C컨텍스트 메뉴 관리자
 
-생성 된 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) 개체입니다.
+[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) 개체를 생성합니다.
 
 ```
 CContextMenuManager();
@@ -138,11 +138,11 @@ CContextMenuManager();
 
 ### <a name="remarks"></a>설명
 
-대부분의 경우, 만들지 않아야는 `CContextMenuManager` 수동으로. 응용 프로그램의 프레임 워크는 생성 된 `CContextMenuManager` 개체입니다. 호출 해야 [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 응용 프로그램을 초기화 하는 동안. 호출 컨텍스트 관리자에 대 한 포인터를 가져오려는 [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)합니다.
+대부분의 경우 수동으로 만들지 않아야 `CContextMenuManager` 합니다. 응용 프로그램의 프레임워크는 `CContextMenuManager` 개체를 만듭니다. 응용 프로그램의 초기화 중에 [CWinAppEx::InitContextMenuManager를](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) 호출해야 합니다. 컨텍스트 관리자에 대한 포인터를 얻으려면 [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)를 호출합니다.
 
-##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById
+## <a name="ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a>CContextMenu관리자::GetMenuById
 
-지정 된 리소스 ID와 연결 된 메뉴에 핸들을 반환 합니다.
+지정된 리소스 ID와 연결된 메뉴에 핸들을 반환합니다.
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -150,16 +150,16 @@ HMENU GetMenuById(UINT nMenuResId) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*nMenuResId*<br/>
-[in] 메뉴에 대 한 리소스 ID입니다.
+*nMenuResid*<br/>
+【인】 메뉴의 리소스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연결 된 메뉴에 대 한 핸들 또는 `NULL` 메뉴 없는 경우.
+연결된 메뉴또는 `NULL` 메뉴를 찾을 수 없는 핸들입니다.
 
-##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName
+## <a name="ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a>CContext메뉴 관리자::GetMenuByName
 
-특정 메뉴에 대 한 핸들을 반환합니다.
+핸들을 특정 메뉴로 반환합니다.
 
 ```
 HMENU GetMenuByName(
@@ -170,35 +170,35 @@ HMENU GetMenuByName(
 ### <a name="parameters"></a>매개 변수
 
 *lpszName*<br/>
-[in] 검색할 메뉴의 이름을 포함 하는 문자열입니다.
+【인】 검색할 메뉴의 이름이 포함된 문자열입니다.
 
-*puiOrigResID*<br/>
-[out] UINT 포인터입니다. 하는 경우이 매개 변수에 지정된 된 메뉴의 리소스 ID를 포함 찾을 수 있습니다.
+*푸오리그레시드*<br/>
+【아웃】 UINT에 대한 포인터입니다. 이 매개 변수에는 지정된 메뉴의 리소스 ID(있는 경우)가 포함되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 이름과 일치 하는 메뉴에 대 한 핸들 *lpszName*합니다. 호출 없음 메뉴의 경우 NULL *lpszName*합니다.
+*lpszName에*의해 지정된 이름과 일치하는 메뉴에 대한 핸들입니다. *lpszName이라는*메뉴가 없는 경우 NULL .
 
 ### <a name="remarks"></a>설명
 
-일치 하는 메뉴 발견 되 면 *lpszName*를 `GetMenuByName` 매개 변수에서 메뉴 리소스 ID를 저장 *puiOrigResID*합니다.
+이 메서드가 *lpszName과*일치하는 `GetMenuByName` 메뉴를 찾으면 메뉴 리소스 ID를 매개 변수 *puiOrigResID에 저장합니다.*
 
-##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames
+## <a name="ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a>C컨텍스트 메뉴 관리자::GetMenu 이름
 
-메뉴 이름에 추가 된 목록을 반환 합니다 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)합니다.
+[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)에 추가된 메뉴 이름 목록을 반환합니다.
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*listOfNames*<br/>
-[out] 에 대 한 참조를 [CStringList](../../mfc/reference/cstringlist-class.md) 매개 변수입니다. 이 메서드는 메뉴 이름 목록을이 매개 변수를 씁니다.
+*목록이름*<br/>
+【아웃】 [CStringList](../../mfc/reference/cstringlist-class.md) 매개 변수에 대 한 참조입니다. 이 메서드는 이 매개 변수에 메뉴 이름 목록을 씁니다.
 
-##  <a name="loadstate"></a>  CContextMenuManager::LoadState
+## <a name="ccontextmenumanagerloadstate"></a><a name="loadstate"></a>C컨텍스트 메뉴 관리자::로드 상태
 
-연관 된 정보를 로드 합니다 [CContextMenuManager 클래스](../../mfc/reference/ccontextmenumanager-class.md) Windows 레지스트리에서 합니다.
+Windows 레지스트리에서 [CContextMenuManager 클래스와](../../mfc/reference/ccontextmenumanager-class.md) 관련된 정보를 로드합니다.
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,37 +207,37 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *lpszProfileName*<br/>
-[in] 레지스트리 키의 상대 경로 포함 하는 문자열입니다.
+【인】 레지스트리 키의 상대 경로를 포함하는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.
+메서드가 성공하면 0이 아닙니다. 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-합니다 *lpszProfileName* 매개 변수는 레지스트리 항목에 대 한 절대 경로가 아닙니다. 응용 프로그램에 대 한 기본 레지스트리 키의 끝에 추가 되는 상대 경로 것입니다. 가져오거나 설정할 기본 레지스트리 키, 메서드를 사용 하 여 [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) 하 고 [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) 각각.
+*lpszProfileName* 매개 변수는 레지스트리 항목에 대 한 절대 경로 아닙니다. 응용 프로그램의 기본 레지스트리 키 끝에 추가되는 상대 경로입니다. 기본 레지스트리 키를 얻거나 설정하려면 [각각 CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) 및 [CWinAppYBase::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) 메서드를 사용합니다.
 
-메서드를 사용 하 여 [CContextMenuManager::SaveState](#savestate) 바로 가기 메뉴를 레지스트리에 저장 합니다.
+[CContextMenuManager:SaveState](#savestate) 메서드를 사용하여 바로 가기 메뉴를 레지스트리에 저장합니다.
 
-##  <a name="resetstate"></a>  CContextMenuManager::ResetState
+## <a name="ccontextmenumanagerresetstate"></a><a name="resetstate"></a>C컨텍스트 메뉴 관리자::재설정 상태
 
-연결 된 바로 가기 메뉴에서 모든 항목을 지웁니다 합니다 [CContextMenuManager 클래스](../../mfc/reference/ccontextmenumanager-class.md)합니다.
+[CContextMenuManager 클래스와](../../mfc/reference/ccontextmenumanager-class.md)연결된 바로 가기 메뉴에서 모든 항목을 지웁힙입니다.
 
 ```
 virtual BOOL ResetState();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE입니다. 오류가 발생 하는 경우에 FALSE입니다.
+TRUE 메서드가 성공하면 오류가 발생하는 경우 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드가 팝업 메뉴를 지우고에서 제거 된 `CContextMenuManager`합니다.
+이 메서드는 팝업 메뉴를 지우고 `CContextMenuManager`에서 제거합니다.
 
-##  <a name="savestate"></a>  CContextMenuManager::SaveState
+## <a name="ccontextmenumanagersavestate"></a><a name="savestate"></a>C컨텍스트 메뉴 관리자::저장 상태
 
-연관 된 정보를 저장 합니다 [CContextMenuManager 클래스](../../mfc/reference/ccontextmenumanager-class.md) Windows 레지스트리에 합니다.
+[CContextMenuManager 클래스와](../../mfc/reference/ccontextmenumanager-class.md) 관련된 정보를 Windows 레지스트리에 저장합니다.
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -246,38 +246,38 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *lpszProfileName*<br/>
-[in] 레지스트리 키의 상대 경로 포함 하는 문자열입니다.
+【인】 레지스트리 키의 상대 경로를 포함하는 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.
+메서드가 성공하면 0이 아닙니다. 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-합니다 *lpszProfileName* 매개 변수는 레지스트리 항목에 대 한 절대 경로가 아닙니다. 응용 프로그램에 대 한 기본 레지스트리 키의 끝에 추가 되는 상대 경로 것입니다. 가져오거나 설정할 기본 레지스트리 키, 메서드를 사용 하 여 [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) 하 고 [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) 각각.
+*lpszProfileName* 매개 변수는 레지스트리 항목에 대 한 절대 경로 아닙니다. 응용 프로그램의 기본 레지스트리 키 끝에 추가되는 상대 경로입니다. 기본 레지스트리 키를 얻거나 설정하려면 [각각 CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) 및 [CWinAppYBase::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) 메서드를 사용합니다.
 
-메서드를 사용 하 여 [CContextMenuManager::LoadState](#loadstate) 레지스트리에서 바로 가기 메뉴를 로드 합니다.
+[CContextMenuManager::LoadState](#loadstate) 메서드를 사용하여 레지스트리에서 바로 가기 메뉴를 로드합니다.
 
-##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu
+## <a name="ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a>C컨텍스트 메뉴 관리자::SetDont닫기 활성 메뉴
 
-컨트롤 여부는 [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) 새 팝업 메뉴가 표시 될 때 활성 팝업 메뉴를 닫습니다.
+[CContextMenuManager새](../../mfc/reference/ccontextmenumanager-class.md) 팝업 메뉴를 표시할 때 활성 팝업 메뉴를 닫는지 여부를 제어합니다.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bSet*<br/>
-[in] 활성 팝업 메뉴를 닫을지 여부를 제어 하는 부울 매개 변수입니다. TRUE 값을 지정 활성 팝업 메뉴 닫혀 있지 않습니다. FALSE 이면 활성 팝업 메뉴 닫히도록 합니다.
+【인】 활성 팝업 메뉴를 닫을지 여부를 제어하는 부울 매개 변수입니다. TRUE 값은 활성 팝업 메뉴가 닫혀 있지 않음을 나타냅니다. FALSE는 활성 팝업 메뉴가 닫혀 있음을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로 `CContextMenuManager` 활성 팝업 메뉴를 닫습니다.
+기본적으로 활성 `CContextMenuManager` 팝업 메뉴를 닫습니다.
 
-##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu
+## <a name="ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a>C컨텍스트 메뉴 관리자::쇼팝메뉴
 
-지정 된 바로 가기 메뉴를 표시합니다.
+지정된 바로 가기 메뉴를 표시합니다.
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -301,42 +301,42 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="parameters"></a>매개 변수
 
 *uiMenuResId*<br/>
-[in] 이 메서드를 표시 하는 메뉴의 리소스 ID입니다.
+【인】 이 메서드가 표시하는 메뉴의 리소스 ID입니다.
 
 *x*<br/>
-[in] 가로 클라이언트 좌표에서 바로 가기 메뉴에 대 한 오프셋입니다.
+【인】 클라이언트 좌표의 바로 가기 메뉴의 수평 오프셋입니다.
 
-*y*<br/>
-[in] 클라이언트 좌표에서 바로 가기 메뉴에 대 한 세로 오프셋
+*Y*<br/>
+【인】 클라이언트 좌표의 바로 가기 메뉴의 수직 오프셋
 
-*pWndOwner*<br/>
-[in] 바로 가기 메뉴의 부모 창에 대 한 포인터입니다.
+*pWnd소유자*<br/>
+【인】 바로 가기 메뉴의 상위 창에 대한 포인터입니다.
 
-*bOwnMessage*<br/>
-[in] 메시지가 라우팅되는 방식을 나타내는 부울 매개 변수입니다. 하는 경우 *bOwnMessage* FALSE이 고, 표준 MFC는 라우팅이 사용 됩니다. 그렇지 않으면 *pWndOwner* 메시지를 수신 합니다.
+*bOwn 메시지*<br/>
+【인】 메시지가 라우팅되는 방법을 나타내는 부울 매개 변수입니다. *bOwnMessage가* FALSE이면 표준 MFC 라우팅이 사용됩니다. 그렇지 않으면 *pWndOwner* 메시지를 받습니다.
 
 *hmenuPopup*<br/>
-[in] 이 메서드를 표시 하는 메뉴의 핸들입니다.
+【인】 이 메서드가 표시하는 메뉴의 핸들입니다.
 
-*bAutoDestroy*<br/>
-[in] 메뉴 자동으로 제거 됩니다 있는지 여부를 나타내는 부울 매개 변수입니다.
+*b오토파괴*<br/>
+【인】 메뉴가 자동으로 소멸되는지 여부를 나타내는 부울 매개 변수입니다.
 
 *bRightAlign*<br/>
-[in] 메뉴 항목을 정렬 하는 방법을 나타내는 부울 매개 변수입니다. 하는 경우 *bRightAlign* 가 TRUE 이면 메뉴는 오른쪽에서 왼쪽 읽기 순서에 대 한 오른쪽에 맞춰집니다.
+【인】 메뉴 항목이 정렬되는 방법을 나타내는 부울 매개 변수입니다. *bRightAlign이* TRUE이면 오른쪽에서 왼쪽 읽기 순서로 메뉴가 오른쪽으로 정렬됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 메서드 오버 로드 메서드가 성공적으로 메뉴를 표시 하는 경우 0이 아닌 반환 그렇지 않으면 0입니다. 두 번째 메서드 오버 로드에 대 한 포인터를 반환 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) 경우 바로 가기 메뉴 표시 잘못 되었습니다; 그렇지 않으면 NULL입니다.
+메서드가 메뉴를 성공적으로 표시하면 첫 번째 메서드 오버로드가 비영을 반환합니다. 그렇지 않으면 0. 두 번째 메서드 오버로드는 바로 가기 메뉴가 올바르게 표시되는 경우 [CMFCPopupMenu에](../../mfc/reference/cmfcpopupmenu-class.md) 대한 포인터를 반환합니다. 그렇지 않으면 NULL.
 
 ### <a name="remarks"></a>설명
 
-이 메서드가 메서드 유사 [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) 는 두 메서드는 바로 가기 메뉴를 표시 합니다. 그러나 `TrackPopupMenu` 선택한 메뉴 명령의 인덱스를 반환 합니다.
+이 메서드는 두 메서드모두 바로 가기 메뉴를 표시한다는 점에서 [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) 메서드와 유사합니다. 그러나 `TrackPopupMenu` 선택한 메뉴 명령의 인덱스를 반환 합니다.
 
-경우 매개 변수 *bAutoDestroy* 은 FALSE, 상속 된 호출 해야 수동으로 `DestroyMenu` 메모리 리소스를 해제 하는 방법입니다. 기본 구현의 `ShowPopupMenu` 매개 변수를 사용 하지 않습니다 *bAutoDestroy*합니다. 파생 된 사용자 지정 클래스 또는 나중에 사용 된는 `CContextMenuManager` 클래스입니다.
+매개 변수 *bAutoDestroyFALSE* 인 경우 수동으로 상속 `DestroyMenu` 된 메서드를 호출 하여 메모리 리소스를 해제해야 합니다. 기본 구현은 `ShowPopupMenu` 매개 변수 *bAutoDestroy를*사용하지 않습니다. 나중에 사용하거나 클래스에서 파생된 사용자 지정 `CContextMenuManager` 클래스용으로 제공됩니다.
 
-##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu
+## <a name="ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a>C컨텍스트 메뉴 관리자::트랙팝메뉴
 
-지정 된 바로 가기 메뉴를 표시 하 고 선택한 바로 가기 메뉴 명령의 인덱스를 반환 합니다.
+지정된 바로 가기 메뉴를 표시하고 선택한 바로 가기 메뉴 명령의 인덱스를 반환합니다.
 
 ```
 virtual UINT TrackPopupMenu(
@@ -350,29 +350,29 @@ virtual UINT TrackPopupMenu(
 ### <a name="parameters"></a>매개 변수
 
 *hmenuPopup*<br/>
-[in] 이 메서드를 표시 하는 바로 가기 메뉴의 핸들입니다.
+【인】 이 메서드가 표시하는 바로 가기 메뉴의 핸들입니다.
 
 *x*<br/>
-[in] 가로 클라이언트 좌표에서 바로 가기 메뉴에 대 한 오프셋입니다.
+【인】 클라이언트 좌표의 바로 가기 메뉴의 수평 오프셋입니다.
 
-*y*<br/>
-[in] 세로 클라이언트 좌표에서 바로 가기 메뉴에 대 한 오프셋입니다.
+*Y*<br/>
+【인】 클라이언트 좌표의 바로 가기 메뉴의 수직 오프셋입니다.
 
-*pWndOwner*<br/>
-[in] 바로 가기 메뉴의 부모 창에 대 한 포인터입니다.
+*pWnd소유자*<br/>
+【인】 바로 가기 메뉴의 상위 창에 대한 포인터입니다.
 
 *bRightAlign*<br/>
-[in] 메뉴 항목을 정렬 하는 방법을 나타내는 부울 매개 변수입니다. 하는 경우 *bRightAlign* 가 TRUE 이면 메뉴는 오른쪽에서 왼쪽 읽기 순서에 대 한 오른쪽에 맞춰집니다. 하는 경우 *bRightAlign* 은 FALSE 메뉴는 왼쪽에서 오른쪽 읽기 순서에 대 한 왼쪽에 맞춰집니다.
+【인】 메뉴 항목이 정렬되는 방법을 나타내는 부울 매개 변수입니다. *bRightAlign이* TRUE이면 오른쪽에서 왼쪽 읽기 순서로 메뉴가 오른쪽으로 정렬됩니다. *bRightAlign이* FALSE이면 메뉴가 왼쪽에서 오른쪽 읽기 순서로 정렬됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-사용자가; 명령의 메뉴 명령 ID 사용자가 메뉴 명령을 선택 하지 않고 바로 가기 메뉴를 닫을 경우 0입니다.
+사용자가 선택하는 명령의 메뉴 명령 ID; 사용자가 메뉴 명령을 선택하지 않고 바로 가기 메뉴를 닫는 경우 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 바로 가기 메뉴를 표시할 모달 호출으로 작동 합니다. 사용자 또는 바로 가기 메뉴를 닫습니다가 명령을 선택할 때까지 응용 프로그램 코드에서 다음 줄으로 계속 되지 않습니다. 바로 가기 메뉴를 표시 하는 데 사용할 수 있는 대체 방법은 것 [CContextMenuManager::ShowPopupMenu](#showpopupmenu)합니다. 해당 메서드에 모달 호출 아니며 선택한 명령 ID를 반환 하지 않습니다.
+이 메서드는 바로 가기 메뉴를 표시 하는 모달 호출으로 작동 합니다. 사용자가 바로 가기 메뉴를 닫거나 명령을 선택할 때까지 응용 프로그램은 코드에서 다음 줄로 계속되지 않습니다. 바로 가기 메뉴를 표시하는 데 사용할 수있는 다른 방법은 [CContextMenuManager ::ShowPopupMenu](#showpopupmenu). 이 메서드는 모달 호출이 아니며 선택한 명령의 ID를 반환하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

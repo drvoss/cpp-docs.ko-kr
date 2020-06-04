@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232854"
 ---
 # <a name="integer-types"></a>정수 형식
 
@@ -36,7 +36,7 @@ ms.locfileid: "56146881"
 778866LU
 ```
 
-상수에 할당하는 형식은 상수가 나타내는 값에 따라 달라집니다. 상수의 값은 상수 형식에 대한 표현 가능한 값의 범위에 있어야 합니다. 상수의 형식에 따라 상수가 식에서 사용될 때나 마이너스 기호(**-**)가 적용될 때 수행되는 변환이 결정됩니다. 다음 목록에는 정수 상수에 대한 변환 규칙이 요약되어 있습니다.
+상수에 할당하는 형식은 상수가 나타내는 값에 따라 달라집니다. 상수의 값은 상수 형식에 대한 표현 가능한 값의 범위에 있어야 합니다. 상수의 형식에 따라 상수가 식에서 사용될 때나 마이너스 기호( **-** )가 적용될 때 수행되는 변환이 결정됩니다. 다음 목록에는 정수 상수에 대한 변환 규칙이 요약되어 있습니다.
 
 - 접미사가 없는 10진수 상수의 형식은 `int`, **long int** 또는 **unsigned long int**입니다. 상수의 값이 표현될 수 있는 이러한 세 형식 중 첫 번째 형식이 상수에 할당됩니다.
 
@@ -48,6 +48,6 @@ ms.locfileid: "56146881"
 
 - **u** 또는 **U** 접미사와 **l** 또는 **L** 접미사가 있는 상수에 할당되는 형식은 **unsigned long int**입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 정수 상수](../c-language/c-integer-constants.md)

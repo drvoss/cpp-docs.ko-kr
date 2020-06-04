@@ -2,7 +2,6 @@
 title: event 클래스
 ms.date: 11/04/2016
 f1_keywords:
-- event
 - CONCRT/concurrency::event
 - CONCRT/concurrency::event::reset
 - CONCRT/concurrency::event::set
@@ -12,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 2c72b4b086e932f4fe404259c25f8d2c8be2be31
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3d645cc09c61402059e9a86679c10ee703ee8031
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138853"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443731"
 ---
 # <a name="event-class"></a>event 클래스
 
@@ -29,17 +28,17 @@ ms.locfileid: "77138853"
 class event;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[~ 이벤트 소멸자](#dtor)|이벤트를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[reset](#reset)|이벤트를 신호를 받지 않는 상태로 다시 설정 합니다.|
 |[set](#set)|이벤트에 신호를 보냅니다.|
@@ -48,7 +47,7 @@ class event;
 
 ### <a name="public-constants"></a>공용 상수
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|대기 시간이 초과되지 않아야 함을 나타내는 값입니다.|
 

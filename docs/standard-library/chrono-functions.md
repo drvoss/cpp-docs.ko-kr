@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244913"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423950"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt; 함수
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 지정된 형식으로 `duration` 개체를 캐스팅합니다.
 
@@ -30,15 +30,15 @@ template <class ToDuration, class Rep, class Period>
 constexpr ToDuration round(const duration<Rep, Period>& d);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-시간 간격 `Dur`을 나타내는 `To` 형식의 `duration` 개체로, 대상 형식에 맞게 조정해야 하는 경우 잘립니다.
+시간 간격 `duration`을 나타내는 `To` 형식의 `Dur` 개체로, 대상 형식에 맞게 조정해야 하는 경우 잘립니다.
 
 ### <a name="remarks"></a>설명
 
 `To`가 `duration`의 인스턴스화인 경우 이 함수는 오버로드 확인에 참여하지 않습니다.
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 지정된 형식으로 [time_point](../standard-library/time-point-class.md) 개체를 캐스팅합니다.
 
@@ -57,9 +57,9 @@ constexpr time_point<Clock, ToDuration>
 round(const time_point<Clock, Duration>& tp);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`To` 형식의 기간이 있는 `time_point` 개체입니다.
+`time_point` 형식의 기간이 있는 `To` 개체입니다.
 
 ### <a name="remarks"></a>설명
 

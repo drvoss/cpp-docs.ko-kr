@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215178"
 ---
 # <a name="mfc-predefined-symbols"></a>미리 정의된 MFC 기호
 
-MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포함 합니다. 이러한 항목을 통해 추가 됩니다 `#include` 문에서 `StdAfx.h` 파일:
+MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포함 합니다. 이러한 파일은 `StdAfx.h` 파일의 `#include` 문을 통해 추가 됩니다.
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포�
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-헤더 파일에 MFC 공통 값에 대 한 기호 ID 값을 포함 합니다. 이러한 기호는 MFC 프로젝트에서 작업 하는 경우에 사용할 수 있습니다. `AFX_` 접두사 뒤에 표준 기호 이름 접두사입니다.
+헤더 파일에는 MFC 공통 값에 대 한 기호 ID 값이 포함 됩니다. 이러한 기호는 MFC 프로젝트에서 작업 하는 경우에만 사용할 수 있습니다. `AFX_` 접두사 뒤에 표준 기호 이름 접두사가와 야 합니다.
 
 |||
 |-|-|
@@ -181,7 +181,7 @@ MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포�
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|
 |AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-FONT|
-|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ EXCEPTION|
+|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ 예외|
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|
@@ -213,7 +213,7 @@ MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포�
 
 ## <a name="mfc-database-programming"></a>MFC 데이터베이스 프로그래밍
 
-이 표의 기호 데이터베이스 지원이 추가 되었습니다. 경우에 MFC 프로젝트에 나타납니다. SQL server 데이터베이스 프로그래밍에 대 한 MFC 연결과 지원합니다.
+이 표의 기호는 데이터베이스 지원이 추가 된 경우에만 MFC 프로젝트에 표시 됩니다. SQL server 및 데이터베이스 프로그래밍에 대 한 MFC 연결을 지원 합니다.
 
 |||
 |-|-|
@@ -234,9 +234,9 @@ MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포�
 
 ## <a name="mfc-windows-programming"></a>MFC Windows 프로그래밍
 
-이러한 기호는 MFC 지원 파일의 일부 이기도 하지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이러한 기호는 메뉴를 사용 하 여 사용 됩니다.
+이러한 기호는 MFC 지원 파일에도 포함 되지만 표준 Windows 응용 프로그램 함수 및 작업을 지원 합니다. 이러한 기호는 메뉴와 함께 사용 됩니다.
 
-메뉴를 사용 하는 경우는 **메뉴 편집기**, 이러한 기호에 표시 됩니다는 **속성** 일반적인 메뉴 명령과 사용 하 여 연결 된 창입니다. 예를 들어 응용 프로그램에 **파일** 메뉴를는 **종료** 명령, 명령이 기호 ID_APP_EXIT 연관 됩니다에 [속성 창](/visualstudio/ide/reference/properties-window)합니다.
+**메뉴 편집기**에서 메뉴를 사용 하는 경우 이러한 기호가 일반 메뉴 명령과 관련 된 **속성** 창에 표시 됩니다. 예를 들어 응용 프로그램에 **끝내기** 명령을 사용 하 여 **파일** 메뉴가 있는 경우 해당 명령은 [속성 창](/visualstudio/ide/reference/properties-window)ID_APP_EXIT 기호와 연결 됩니다.
 
 ||||
 |-|-|-|
@@ -280,7 +280,7 @@ MFC 프로젝트는 항상 windows를 지 원하는 여러 헤더 파일을 포�
 
 MFC
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [미리 정의된 기호 ID](../windows/predefined-symbol-ids.md)<br/>
 [미리 정의된 ATL 기호](../windows/atl-predefined-symbols.md)<br/>

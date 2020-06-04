@@ -7,15 +7,15 @@ helpviewer_keywords:
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
 ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326003"
 ---
 # <a name="initializing-strings"></a>문자열 초기화
 
-문자열 리터럴(또는 와이드 문자열 리터럴)로 문자(또는 와이드 문자) 배열을 초기화할 수 있습니다. 예:
+문자열 리터럴(또는 와이드 문자열 리터럴)로 문자(또는 와이드 문자) 배열을 초기화할 수 있습니다. 예를 들어:
 
 ```
 char code[ ] = "abc";
@@ -52,6 +52,6 @@ Microsoft C에서 문자열 리터럴은 최대 2048바이트가 될 수 있습�
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [초기화](../c-language/initialization.md)

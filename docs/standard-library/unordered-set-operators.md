@@ -6,13 +6,13 @@ f1_keywords:
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243430"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427688"
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 연산자
+# <a name="ltunordered_setgt-operators"></a>&lt;unordered_set&gt; 연산자
 
 ## <a name="op_neq"></a> operator!=
 
@@ -30,9 +30,9 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 *오른쪽*\
 `unordered_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** unordered_set가 같지 않으면 하는 경우 **false** 같으면 합니다.
+unordered_sets 같으면 **true** 이 고, 그렇지 않으면입니다. 같으면 false이 고, 그렇지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 [unordered_set](../standard-library/unordered-set-class.md) 개체가 우변에 있는 unordered_set 개체와 같은지 테스트합니다.
 
@@ -98,9 +98,9 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 *오른쪽*\
 `unordered_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** unordered_set가 같으면 **false** 동일 하지 않은 경우.
+unordered_sets 같으면 **true** 이 고, 그렇지 않으면입니다. 같지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -164,9 +164,9 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 *오른쪽*\
 `unordered_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** unordered_multiset가 같지 않으면 하는 경우 **false** 같으면 합니다.
+unordered_multisets 같으면 **true** 이 고, 그렇지 않으면입니다. 같으면 false이 고, 그렇지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a> 연산자 = =
+## <a name="op_eq_eq_unordered_multiset"></a>연산자 = =
 
 연산자의 좌변에 있는 [unordered_multiset](../standard-library/unordered-multiset-class.md) 개체가 우변에 있는 unordered_multiset 개체와 같은지 테스트합니다.
 
@@ -233,9 +233,9 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 *오른쪽*\
 `unordered_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** unordered_multiset가 같으면 **false** 동일 하지 않은 경우.
+unordered_multisets 같으면 **true** 이 고, 그렇지 않으면입니다. 같지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 

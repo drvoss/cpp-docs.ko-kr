@@ -1,9 +1,11 @@
 ---
 title: _lseek, _lseeki64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lseeki64
 - _lseek
+- _o__lseek
+- _o__lseeki64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952982"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911316"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -66,12 +69,12 @@ __int64 _lseeki64(
 *offset*<br/>
 *origin*부터의 바이트 수입니다.
 
-*origin*<br/>
+*원본*<br/>
 초기 위치입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_lseek** 는 파일의 시작 부분에서 새 위치의 오프셋 (바이트)을 반환 합니다. **_lseeki64** 는 64 비트 정수로 오프셋을 반환 합니다. 함수는 오류를 나타내기 위해-1L을 반환 합니다. 잘못된 파일 설명자와 같이 잘못된 매개 변수를 전달했거나, *origin*에 대한 값이 잘못되었거나, *offset*에 지정된 위치가 파일의 시작 이전인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **ebadf** 로 설정 하 고-1l을 반환 합니다. 검색을 수행할 수 없는 디바이스(예: 터미널 및 프린터)에서는 반환 값이 정의되지 않습니다.
+**_lseek** 는 파일의 시작 부분에서 새 위치의 오프셋 (바이트)을 반환 합니다. **_lseeki64** 는 64 비트 정수의 오프셋을 반환 합니다. 함수는 오류를 나타내기 위해-1L을 반환 합니다. 잘못된 파일 설명자와 같이 잘못된 매개 변수를 전달했거나, *origin*에 대한 값이 잘못되었거나, *offset*에 지정된 위치가 파일의 시작 이전인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **ebadf** 로 설정 하 고-1l을 반환 합니다. 검색을 수행할 수 없는 디바이스(예: 터미널 및 프린터)에서는 반환 값이 정의되지 않습니다.
 
 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
@@ -87,6 +90,8 @@ __int64 _lseeki64(
 
 **_Lseek** 를 사용 하 여 파일의 아무 위치나 파일의 끝을 넘어 포인터의 위치를 변경할 수 있습니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
@@ -94,7 +99,7 @@ __int64 _lseeki64(
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -170,7 +175,7 @@ Position for current position seek = 10
 Position for end of file seek = 57
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>

@@ -1,10 +1,11 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - cosh
 - coshf
 - coshl
+- _o_cosh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938991"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917224"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -60,20 +62,22 @@ long double cosh( long double x );  // C++ only
 *x*<br/>
 각도(라디안)입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *X*의 하이퍼볼릭 코사인입니다.
 
-기본적으로 **cosh**, **coshf**또는 **coshl** 호출에서 결과가 너무 크면 함수는 **HUGE_VAL** 를 반환 하 고 **errno** 를 **ERANGE**로 설정 합니다.
+기본적으로 **cosh**, **coshf**또는 **coshl** 호출에서 결과가 너무 크면 함수는 **HUGE_VAL** 을 반환 하 고 **errno** 를 **ERANGE**로 설정 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|없음|**_DOMAIN**|
-|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
+|*x* ≥ 7.104760 e + 002|**부정확 한**+**오버플로**|**오버플로**|
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **cosh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **cosh** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **cosh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **cosh** 는 항상 **double**을 사용 하 고 반환 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -81,13 +85,13 @@ long double cosh( long double x );  // C++ only
 |-------------|---------------------|-|
 |**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [Sinh, sinhf, sinhf](sinh-sinhf-sinhl.md)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

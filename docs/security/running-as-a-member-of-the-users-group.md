@@ -1,9 +1,6 @@
 ---
 title: 사용자 그룹의 멤버로 실행
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411294"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445436"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>사용자 그룹의 멤버로 실행
 
@@ -29,7 +26,7 @@ ms.locfileid: "62411294"
 
 ## <a name="non-administrator-user-groups"></a>관리자가 아닌 사용자 그룹
 
-개발자가 일반적으로 사용하는 Windows 사용자 계정은 사용자 또는 고급 사용자 그룹에 추가해야 합니다. 개발자는 디버깅 그룹에도 추가되어야 합니다. 사용자 그룹의 멤버가 되면 컴퓨터를 불필요한 위험에 노출시키지 않고 프로그램 실행 및 인터넷 사이트 방문 등의 일상적인 작업을 수행할 수 있습니다. 고급 사용자 그룹의 멤버가 되면 애플리케이션 설치, 프린터 설치 및 대부분의 제어판 작업도 함께 수행할 수 있습니다. 운영 체제 업그레이드 또는 시스템 매개 변수 구성과 같은 관리자 작업을 수행해야 하는 경우 관리자 작업을 수행하는 동안만 관리자 계정으로 로그인해야 합니다. Windows 또는 **runas** 명령은 관리 액세스를 사용 하 여 특정 응용 프로그램을 시작 하려면 사용할 수 있습니다.
+개발자가 일반적으로 사용하는 Windows 사용자 계정은 사용자 또는 고급 사용자 그룹에 추가해야 합니다. 개발자는 디버깅 그룹에도 추가되어야 합니다. 사용자 그룹의 멤버가 되면 컴퓨터를 불필요한 위험에 노출시키지 않고 프로그램 실행 및 인터넷 사이트 방문 등의 일상적인 작업을 수행할 수 있습니다. 고급 사용자 그룹의 멤버가 되면 애플리케이션 설치, 프린터 설치 및 대부분의 제어판 작업도 함께 수행할 수 있습니다. 운영 체제 업그레이드 또는 시스템 매개 변수 구성과 같은 관리자 작업을 수행해야 하는 경우 관리자 작업을 수행하는 동안만 관리자 계정으로 로그인해야 합니다. 또는 Windows **runas** 명령을 사용 하 여 관리자 권한으로 특정 응용 프로그램을 시작할 수 있습니다.
 
 ## <a name="exposing-customers-to-security-risks"></a>고객을 보안 위험에 노출
 
@@ -51,6 +48,6 @@ ms.locfileid: "62411294"
 
 디버깅 그룹의 멤버가 되면 관리자가 아닌 권한으로도 Visual Studio 내에서 실행하는 네이티브 및 관리되지 않는 모든 애플리케이션을 디버깅할 수 있습니다. 여기에는 프로세스에 연결 명령을 사용하여 실행 중인 애플리케이션에 연결하는 기능이 포함됩니다. 그러나 다른 사용자가 실행한 네이티브 또는 관리되는 애플리케이션을 디버깅하려면 관리자 그룹의 멤버가 되어야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [보안 모범 사례](security-best-practices-for-cpp.md)

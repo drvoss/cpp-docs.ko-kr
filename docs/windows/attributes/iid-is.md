@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167994"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "69514664"
 *expression*<br/>
 인터페이스 포인터가 가리키는 COM 인터페이스의 IID를 지정 하는 C 언어 식입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Iid_is** C++ 특성은 [iid_is](/windows/win32/Midl/iid-is) MIDL 특성과 동일한 기능을 포함 합니다.
+**Iid_is** C++ 특성에는 [iid_is](/windows/win32/Midl/iid-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -64,7 +64,7 @@ __interface IFireTabCtrl : IDispatch
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [매개 변수 특성](parameter-attributes.md)

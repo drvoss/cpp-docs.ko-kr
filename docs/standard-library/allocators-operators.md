@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377897"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364958"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 연산자
 
-&lt;allocators&gt;에 정의된 전역 템플릿 연산자 함수입니다. 클래스 멤버 연산자 함수에 대해서는 클래스 설명서를 참조하십시오.
+다음은 &lt;할당자에&gt;정의된 전역 템플릿 연산자 함수입니다. 클래스 멤버 연산자 함수는 클래스 설명서를 참조하십시오.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[연산자!=](#op_neq)|[연산자==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 지정된 클래스의 할당자 개체가 다른지 테스트합니다.
 
@@ -35,18 +35,18 @@ bool operator!=(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*left*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
-|*right*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
+|*왼쪽*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
+|*오른쪽*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당자 개체가 같지 않으면 **true**이고 할당자 개체가 같으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 연산자가 `!(left == right)`를 반환합니다.
+템플릿 연산자는 `!(left == right)`을 반환합니다.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 지정된 클래스의 할당자 개체가 같은지 테스트합니다.
 
@@ -61,10 +61,10 @@ bool operator==(
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*left*|같은지를 테스트할 할당자 개체 중 하나입니다.|
-|*right*|같은지를 테스트할 할당자 개체 중 하나입니다.|
+|*왼쪽*|같은지를 테스트할 할당자 개체 중 하나입니다.|
+|*오른쪽*|같은지를 테스트할 할당자 개체 중 하나입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당자 개체가 같으면 **true**이고 할당자 개체가 같지 않으면 **false**입니다.
 
@@ -72,6 +72,6 @@ bool operator==(
 
 템플릿 연산자가 `left.equals(right)`를 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<할당자>](../standard-library/allocators-header.md)

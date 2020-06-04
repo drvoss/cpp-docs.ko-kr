@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725723"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416118"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>이전 C++ 버전의 Visual Studio에서 프로젝트 업그레이드
 
@@ -21,7 +21,7 @@ ms.locfileid: "76725723"
 
 **예**를 선택 하면 프로젝트가 원위치에서 업그레이드 됩니다. 이전 버전으로 다시 변환할 수 없습니다. 업그레이드 시나리오에서는 기존 프로젝트 및 솔루션 파일의 백업 복사본을 만드는 것이 좋습니다.
 
-## <a name="upgrade-reports"></a>업그레이드 보고서
+## <a name="upgrade-reports"></a>보고서 업그레이드
 
 프로젝트를 업그레이드 하면 업그레이드 보고서가 표시 됩니다. 또한이 보고서는 프로젝트 폴더에 UpgradeLog .htm으로 저장 됩니다. 업그레이드 보고서는 변환 하는 동안 발견 된 문제에 대 한 요약을 표시 합니다. 다음을 포함 하 여 변경 된 내용에 대 한 일부 정보를 나열 합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "76725723"
 
 1. 플랫폼 도구 집합, C++ 언어 표준 및 Windows SDK 버전 (해당 하는 경우)을 기본 설정 버전으로 설정 합니다. (**Project** > **속성** > **구성 속성** > **일반**)
 
-1. 오류가 많이 발생 하는 경우 일부 옵션을 수정 하는 동안 일시적으로 해제할 수 있습니다. [/Permissive-](../build/reference/permissive-standards-conformance.md) 옵션을 해제 하려면 **Project** > **속성** > **구성 속성** > **C/C++**  > **언어**를 사용 합니다. [코드 분석](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) 옵션을 해제 하려면 **프로젝트** > **속성** > **구성 속성** 을 사용 하 여 **코드 분석**을 > 합니다.
+1. 오류가 많이 발생 하는 경우 일부 옵션을 수정 하는 동안 일시적으로 해제할 수 있습니다. [/Permissive-](../build/reference/permissive-standards-conformance.md) 옵션을 해제 하려면 **Project** > **속성** > **구성 속성** > **C/C++**  > **언어**를 사용 합니다. [코드 분석](/cpp/code-quality/code-analysis-for-c-cpp-overview) 옵션을 해제 하려면 **프로젝트** > **속성** > **구성 속성** 을 사용 하 여 **코드 분석**을 > 합니다.
 
 1. 모든 종속성이 있고 포함 경로 또는 라이브러리 위치가 올바른지 확인 하십시오. (**프로젝트** > **속성** > **구성 속성** > **VC + + 디렉터리**)
 
@@ -63,7 +63,7 @@ ms.locfileid: "76725723"
 
 오류를 수정 하려면 Stack Overflow 또는 [ C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)에서 질문을 검색 하거나 게시 해 보세요.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [잠재적인 업그레이드 문제 개요](overview-of-potential-upgrade-issues-visual-cpp.md)\
 [코드를 유니버설 CRT로 업그레이드](upgrade-your-code-to-the-universal-crt.md)\
@@ -74,7 +74,7 @@ ms.locfileid: "76725723"
 [VCBuild 및 MSBuild](build-system-changes.md)\
 [타사 라이브러리 포트](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [새로워진 Visual Studio의 Visual C++ 기능](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
 [시각적 C++ 변경 기록 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\

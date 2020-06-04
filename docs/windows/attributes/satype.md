@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407304"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166278"
 ---
 # <a name="satype"></a>satype
 
-데이터 형식을 지정 합니다 `SAFEARRAY` 구조입니다.
+`SAFEARRAY` 구조의 데이터 형식을 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,7 +26,7 @@ ms.locfileid: "62407304"
 ### <a name="parameters"></a>매개 변수
 
 *data_type*<br/>
-데이터에 대 한 입력을 `SAFEARRAY` 인터페이스 메서드에 대 한 매개 변수로 전달 되는 데이터 구조입니다.
+인터페이스 메서드에 매개 변수로 전달 되는 `SAFEARRAY` 데이터 구조체의 데이터 형식입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -34,17 +34,17 @@ ms.locfileid: "62407304"
 
 |||
 |-|-|
-|**적용 대상**|인터페이스 매개 변수를 인터페이스 메서드|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**적용 대상**|인터페이스 매개 변수, 인터페이스 메서드|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 ## <a name="remarks"></a>설명
 
-합니다 **satype** C++ 특성의 데이터 형식을 지정 합니다 `SAFEARRAY`합니다.
+**Satype** C++ 특성은 `SAFEARRAY`의 데이터 형식을 지정 합니다.
 
 > [!NOTE]
-> 간접 참조 수준을에서 삭제 되는 `SAFEARRAY` 생성된 된.idl 파일에서.cpp 파일에서 선언 하는 방법에 대 한 포인터입니다.
+> 생성 된 .idl 파일의 `SAFEARRAY` 포인터에서 간접 참조 수준이 .cpp 파일에 선언 된 방법에서 삭제 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -59,9 +59,9 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
 [매개 변수 특성](parameter-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>
-[ID](id.md)
+[id](id.md)

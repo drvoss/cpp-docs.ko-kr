@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398736"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372674"
 ---
 # <a name="classfactory-class"></a>ClassFactory 클래스
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>매개 변수
 
 *I0*<br/>
-0 번째 인터페이스입니다.
+제로 인터페이스입니다.
 
 *I1*<br/>
 첫 번째 인터페이스입니다.
@@ -63,9 +63,9 @@ class ClassFactory :
 
 ## <a name="remarks"></a>설명
 
-활용 `ClassFactory` 는 사용자 정의 팩터리 구현을 제공 합니다.
+사용자 `ClassFactory` 정의 팩터리 구현을 제공하는 데 활용합니다.
 
-프로그래밍 패턴을 사용 하는 방법에 설명 합니다 [구현](implements-structure.md) 클래스 팩터리 세 개 이상의 인터페이스를 지정 하는 구조입니다.
+다음 프로그래밍 패턴에서는 [구현 구조를](implements-structure.md) 사용하여 클래스 팩터리에서 세 개 이상의 인터페이스를 지정하는 방법을 보여 줍니다.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                                        | 설명
+속성                                        | Description
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[클래스팩토리::클래스팩토리](#classfactory) |
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                            | 설명
+속성                                            | Description
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | 현재 참조 횟수를 증가 시킵니다 `ClassFactory` 개체입니다.
-[ClassFactory::LockServer](#lockserver)         | 증가 또는 감소 시킵니다 현재 추적 되는 개체의 기본 수 `ClassFactory` 개체입니다.
-[ClassFactory::QueryInterface](#queryinterface) | 매개 변수에 의해 지정 된 인터페이스에 대 한 포인터를 검색 합니다.
-[ClassFactory::Release](#release)               | 현재 참조 횟수를 감소 `ClassFactory` 개체입니다.
+[클래스팩토리::애드레프](#addref)                 | 현재 `ClassFactory` 개체에 대한 참조 수를 증가합니다.
+[클래스 팩토리 :: 잠금 서버](#lockserver)         | 현재 `ClassFactory` 개체에서 추적하는 기본 개체의 수를 증가하거나 감소시입니다.
+[클래스팩터::쿼리 인터페이스](#queryinterface) | 매개 변수에 의해 지정된 인터페이스에 대한 포인터를 검색합니다.
+[클래스팩토리::릴리스](#release)               | 현재 `ClassFactory` 개체에 대한 참조 수를 감소시입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -110,13 +110,13 @@ class ClassFactory :
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** 모듈.h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>클래스팩토리::애드레프
 
-현재 참조 횟수를 증가 시킵니다 `ClassFactory` 개체입니다.
+현재 `ClassFactory` 개체에 대한 참조 수를 증가합니다.
 
 ```cpp
 STDMETHOD_(
@@ -125,19 +125,19 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다.
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>클래스팩토리::클래스팩토리
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>클래스 팩토리 :: 잠금 서버
 
-증가 또는 감소 시킵니다 현재 추적 되는 개체의 기본 수 `ClassFactory` 개체입니다.
+현재 `ClassFactory` 개체에서 추적하는 기본 개체의 수를 증가하거나 감소시입니다.
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*fLock*<br/>
-**true** 추적 된 개체 수가 증가 합니다. **false** 추적 된 개체 수가 감소 합니다.
+*무리*<br/>
+**추적된** 개체 수를 증가시려면 true입니다. **추적된** 개체의 수를 감소시가지기 위해 false를 사용합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 E_FAIL입니다.
 
 ### <a name="remarks"></a>설명
 
-`ClassFactory` 개체의 기본 인스턴스에서 추적 합니다 [모듈](module-class.md) 클래스입니다.
+`ClassFactory`은 [Module](module-class.md) 클래스의 기본 인스턴스에서 개체를 추적합니다.
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>클래스팩터::쿼리 인터페이스
 
-매개 변수에 의해 지정 된 인터페이스에 대 한 포인터를 검색 합니다.
+매개 변수에 의해 지정된 인터페이스에 대한 포인터를 검색합니다.
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 인터페이스 ID입니다.
 
 *ppvObject*<br/>
-이 작업이 완료 될 때를 매개 변수로 지정 된 인터페이스에 대 한 포인터 *riid*합니다.
+이 작업이 완료되면 매개 변수 *riid에*의해 지정된 인터페이스에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다.
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>클래스팩토리::릴리스
 
-현재 참조 횟수를 감소 `ClassFactory` 개체입니다.
+현재 `ClassFactory` 개체에 대한 참조 수를 감소시입니다.
 
 ```cpp
 STDMETHOD_(
@@ -191,6 +191,6 @@ STDMETHOD_(
 )();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다.

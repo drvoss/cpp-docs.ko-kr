@@ -6,6 +6,7 @@ helpviewer_keywords:
 - newmode.obj
 - noenv.obj
 - psetargv.obj
+- legacy_stdio_float_rounding.obj
 - loosefpmath.obj
 - smallheap.obj
 - fp10.obj
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: 8cd5513acd2617e784b2ec9fa203614b752e6076
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351108"
 ---
 # <a name="link-options"></a>링크 옵션
 
@@ -42,18 +43,19 @@ CRT 라이브러리 디렉터리에는 코드를 변경하지 않고도 특정 C
 
 이러한 개체의 CLR 순수 모드 버전은 Visual Studio 2015에서 사용되지 않으며 Visual Studio 2017에서 지원되지 않습니다. 네이티브 및 /clr 코드에는 일반 버전을 사용합니다.
 
-|네이티브 및 /clr|순수 모드|설명|
+|네이티브 및 /clr|순수 모드|Description|
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|기본 파일 변환 모드를 이진으로 설정합니다. [_fmode](../c-runtime-library/fmode.md)를 참조하세요.|
-|chkstk.obj|N/A|CRT를 사용하지 않는 경우 스택 검사 및 alloca를 지원합니다.|
+|chkstk.obj|해당 없음|CRT를 사용하지 않는 경우 스택 검사 및 alloca를 지원합니다.|
 |commode.obj|pcommode.obj|전역 커밋 플래그를 "커밋"으로 설정합니다. [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) 및 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)를 참조하세요.|
-|exe_initialize_mta.lib|N/A|글로벌 스마트 포인터에서 COM 개체를 사용할 수 있도록 EXE 시작 시 MTA 아파트를 초기화합니다. 이 옵션은 종료하는 동안 MTA 아파트 참조를 누출하므로 DLL에 사용하지 마세요. 이 링크는 combase.h를 포함하고 _EXE_INITIALIZE_MTA를 정의하는 것과 같습니다. |
-|fp10.obj|N/A|기본 정밀도 컨트롤을 64비트로 변경합니다. [부동 소수점 지원](../c-runtime-library/floating-point-support.md)을 참조하세요.|
+|exe_initialize_mta.lib|해당 없음|글로벌 스마트 포인터에서 COM 개체를 사용할 수 있도록 EXE 시작 시 MTA 아파트를 초기화합니다. 이 옵션은 종료하는 동안 MTA 아파트 참조를 누출하므로 DLL에 사용하지 마세요. 이 링크는 combase.h를 포함하고 _EXE_INITIALIZE_MTA를 정의하는 것과 같습니다. |
+|fp10.obj|해당 없음|기본 정밀도 컨트롤을 64비트로 변경합니다. [부동 소수점 지원](../c-runtime-library/floating-point-support.md)을 참조하세요.|
 |invalidcontinue.obj|pinvalidcontinue.obj|아무 작업도 수행하지 않는 기본 잘못된 매개 변수 처리기를 설정합니다. 즉, CRT 함수에 전달된 잘못된 매개 변수는 단순히 errno를 설정하고 오류 결과를 반환합니다.|
-|loosefpmath.obj|N/A|부동 소수점 코드에서 비정상적인 값을 허용하도록 합니다.|
+|legacy_stdio_float_rounding.obj|해당 없음|Windows 10 19041 유니버설 C 런타임을 사용하여 부동 점 값(예: [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)사용 시)을 인쇄하는 것이 수정되었습니다. 이제 정확하게 표현 가능한 부동 점 숫자를 반올림하고 [fesetenv가](../c-runtime-library/reference/fesetenv1.md)요청한 부동 점 반올림을 존중합니다. 이 동작 업데이트는 Visual Studio 2019 버전 16.2 이상에서 사용할 수 있습니다. 레거시 동작은 이전 버전의 Visual Studio에서 사용하거나 이 링크 옵션을 제공하여 사용됩니다.|
+|loosefpmath.obj|해당 없음|부동 소수점 코드에서 비정상적인 값을 허용하도록 합니다.|
 |newmode.obj|pnewmode.obj|[malloc](../c-runtime-library/reference/malloc.md)가 실패 시 새 처리기를 호출하도록 합니다. [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) 및 [realloc](../c-runtime-library/reference/realloc.md)를 참조하세요.|
 |noarg.obj|pnoarg.obj|argc 및 argv의 모든 처리를 사용하지 않도록 설정합니다.|
-|nochkclr.obj|해당 없음|아무 작업도 수행하지 않습니다. 프로젝트에서 제거합니다.|
+|nochkclr.obj|해당 없음|아무 작업도 하지 않습니다. 프로젝트에서 제거합니다.|
 |noenv.obj|pnoenv.obj|CRT에 대해 캐시된 환경 만들기를 사용하지 않도록 설정합니다.|
 |nothrownew.obj|pnothrownew.obj|CRT의 throw되지 않는 새 버전을 사용하도록 설정합니다. [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.|
 |setargv.obj|psetargv.obj|명령줄 인수 와일드 카드 확장을 사용하도록 설정합니다. [와일드카드 인수 확장](../c-language/expanding-wildcard-arguments.md)을 참조하세요.|

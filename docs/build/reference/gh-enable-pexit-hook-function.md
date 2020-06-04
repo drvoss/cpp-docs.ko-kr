@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749233"
 ---
-# <a name="gh-enable-pexit-hook-function"></a>/GH(_pexit 후크 함수 사용)
+# <a name="gh-enable-_pexit-hook-function"></a>/GH(_pexit 후크 함수 사용)
 
-모든 메서드와 함수의 끝에 `_pexit` 함수를 호출합니다.
+모든 `_pexit` 메서드 또는 함수의 끝에 함수를 호출합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,19 +28,19 @@ ms.locfileid: "62270915"
 
 ## <a name="remarks"></a>설명
 
-`_pexit` 함수는 라이브러리의 일부가 아니며, `_pexit`에 대한 정의는 개발자의 제공에 따라 달라집니다.
+이 `_pexit` 함수는 라이브러리의 일부가 아니며 에 대한 `_pexit`정의를 제공하는 것은 사용자몫입니다.
 
-명시적으로 `_pexit`를 호출하지 않는다면 프로토타입을 제공하지 않아도 됩니다. 마치 함수에 이어 프로토타입이 있는 것처럼 실행되며 레지스터에 있는 모든 내용을 푸시하고 종료 시 변경되지 않은 내용을 팝해야 합니다.
+명시적으로 호출할 `_pexit`계획이 없다면 프로토타입을 제공할 필요가 없습니다. 함수는 다음 프로토타입이 있는 것처럼 나타나야 하며 항목에 있는 모든 레지스터의 내용을 푸시하고 종료시 변경되지 않은 콘텐츠를 팝업해야 합니다.
 
-```
+```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit`는 `_penter`와 비슷합니다. `_pexit` 함수의 작성 방법은 [/Gh(_penter 후크 함수 사용)](gh-enable-penter-hook-function.md)을 참조합니다.
+`_pexit`와 `_penter`유사하다. `_pexit` 함수를 작성하는 방법에 대한 [예제는 /Gh(_penter 후크 함수 사용)를](gh-enable-penter-hook-function.md) 참조하십시오.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
 
 1. **C/C++** 폴더를 클릭합니다.
 
@@ -52,7 +52,7 @@ void __declspec(naked) __cdecl _pexit( void );
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

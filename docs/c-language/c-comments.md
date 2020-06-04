@@ -9,11 +9,11 @@ helpviewer_keywords:
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326289"
 ---
 # <a name="c-comments"></a>C 주석
 
@@ -61,13 +61,13 @@ printf( "Hello\n" );  /* Comments can go here */
 
 **Microsoft 전용**
 
-또한 Microsoft 컴파일러에서는 두 개의 슬래시(__//__)가 앞에 오는 한 줄 주석이 지원됩니다. /Za(ANSI 표준)로 컴파일할 경우 이러한 주석은 오류를 발생시킵니다. 이 주석은 두 번째 줄로 확장될 수 없습니다.
+또한 Microsoft 컴파일러에서는 두 개의 슬래시( __//__ )가 앞에 오는 한 줄 주석이 지원됩니다. /Za(ANSI 표준)로 컴파일할 경우 이러한 주석은 오류를 발생시킵니다. 이 주석은 두 번째 줄로 확장될 수 없습니다.
 
 ```C
 // This is a valid comment
 ```
 
-두 개의 슬래시(__//__)로 시작하는 주석은 이스케이프 문자가 앞에 나오지 않는 다음 줄 바꿈 문자로 종료됩니다. 다음 예제에서는 줄 바꿈 문자가 백슬래시(**\\**) 뒤에 와서 "이스케이프 시퀀스"를 만듭니다. 이 이스케이프 시퀀스는 컴파일러가 다음 줄을 앞 줄의 일부로 취급하게 합니다. 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요.
+두 개의 슬래시( __//__ )로 시작하는 주석은 이스케이프 문자가 앞에 나오지 않는 다음 줄 바꿈 문자로 종료됩니다. 다음 예제에서는 줄 바꿈 문자가 백슬래시( **\\** ) 뒤에 와서 "이스케이프 시퀀스"를 만듭니다. 이 이스케이프 시퀀스는 컴파일러가 다음 줄을 앞 줄의 일부로 취급하게 합니다. 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요.
 
 ```C
 // my comment \
@@ -80,6 +80,6 @@ printf( "Hello\n" );  /* Comments can go here */
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 토큰](../c-language/c-tokens.md)

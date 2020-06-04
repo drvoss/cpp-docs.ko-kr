@@ -1,43 +1,43 @@
 ---
-title: '연습: 컴파일하는 C++on the Command Line /CX 프로그램'
+title: '연습: 명령줄에서 C++/CX 프로그램 컴파일'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: cbf5a48de3c029e36fc6daabe2b3f0db55dc173c
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: MT
+ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877173"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078203"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>연습: 컴파일하는 C++on the Command Line /CX 프로그램
-
-> [!NOTE] 
-> 새 UWP 앱 및 구성 요소를 사용 하는 권장 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), 표준 C + + 17 개의 언어 프로젝션 Windows 런타임 Api에 대 한 합니다. C++/ WinRT는 Windows 10 SDK 부터는 버전 1803에서에서 사용할 수 있습니다. C++/ WinRT 헤더 파일에서 완전히 구현 되 고 최신 Windows API에 대 한 최고 수준의 액세스를 사용 하 여 제공 하도록 설계 되었습니다.
-
-Microsoft C++ (MSVC) 컴파일러에서 지 원하는 C++ 구성 요소 확장 (C++/CX)에 추가 형식 및 연산자가 Windows 런타임 프로그래밍 모델을 대상으로 합니다. 사용할 수 있습니다 C++/CX 유니버설 Windows 플랫폼 (UWP) 및 Windows 데스크톱 앱을 빌드할 수 있습니다. 자세한 내용은 [는 C+ 둘러보기 + CX](https://msdn.microsoft.com/magazine/dn166929.aspx) 하 고 [런타임 플랫폼용 구성 요소 확장](../extensions/component-extensions-for-runtime-platforms.md)합니다.
-
-이 연습에서는 텍스트 편집기를 사용하여 기본적인 C++/CX 프로그램을 만든 다음 명령줄에서 컴파일합니다. 여기에 나와 있는 내용을 입력하는 대신 C++/CX 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C++/CX 코드 샘플을 사용할 수도 있습니다. 이 방법은 구축 하 고 UI 요소가 없는 소형 모듈을 테스트 하는 데 유용 합니다.)
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>연습: 명령줄에서 C++/CX 프로그램 컴파일
 
 > [!NOTE]
-> 또한 Visual Studio IDE를 사용하여 C++/CX 프로그램을 컴파일할 수 있습니다. IDE에서 디자인, 디버깅, 에뮬레이션 및 배포 지원 명령줄에서 사용할 수 없는 포함 하므로 IDE를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱을 빌드하는 것이 좋습니다. 자세한 내용은 [C++ UWP 앱을 만들](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)합니다.
+> 새 UWP 앱 및 구성 요소의 경우 Windows 런타임 API에 대한 표준 C++ 17 언어 프로젝션인 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 사용하는 것이 좋습니다. C++/WinRT는 버전 1803부터 Windows 10 SDK에서 제공됩니다. C++/WinRT는 전적으로 헤더 파일에 구현되며 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-## <a name="prerequisites"></a>전제 조건
+Microsoft C++ 컴파일러(MSVC)는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C++ 구성 요소 확장(C++/CX)을 지원합니다. C++/CX를 사용하여 UWP(유니버설 Windows 플랫폼) 및 Windows 데스크톱용 앱을 빌드할 수 있습니다. 자세한 내용은 [C++/CX 둘러보기](https://msdn.microsoft.com/magazine/dn166929.aspx) 및 [런타임 플랫폼용 구성 요소 확장](../extensions/component-extensions-for-runtime-platforms.md)을 참조하세요.
 
-C++ 언어의 기본적인 사항을 알고 있습니다.
+이 연습에서는 텍스트 편집기를 사용하여 기본적인 C++/CX 프로그램을 만든 다음 명령줄에서 컴파일합니다. 여기에 나와 있는 내용을 입력하는 대신 C++/CX 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C++/CX 코드 샘플을 사용할 수도 있습니다. 이 기술은 UI 요소가 없는 소형 모듈을 빌드하고 테스트하는 데 유용합니다.
+
+> [!NOTE]
+> 또한 Visual Studio IDE를 사용하여 C++/CX 프로그램을 컴파일할 수 있습니다. IDE는 명령줄에서는 제공되지 않는 디자인, 디버그, 에뮬레이션 및 배포 지원을 포함하므로 IDE를 사용하여 UWP(유니버설 Windows 플랫폼) 앱을 빌드하는 것이 좋습니다. 자세한 내용은 [C++에서 UWP 앱 만들기](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)를 참조하세요.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+C++ 언어의 기본적인 사항을 알고 있어야 합니다.
 
 ## <a name="compiling-a-ccx-program"></a>C++/CX 프로그램 컴파일
 
-컴파일하려면 C++ /cli를 사용 해야 CX, 합니다 [/ZW](reference/zw-windows-runtime-compilation.md) 컴파일러 옵션. MSVC 컴파일러를 Windows 런타임을 대상으로 하 여 필요한 라이브러리를 링크는.exe 파일을 생성 합니다.
+C++/CX를 컴파일할 수 있도록 설정하려면 [/ZW](reference/zw-windows-runtime-compilation.md) 컴파일러 옵션을 사용해야 합니다. MSVC 컴파일러는 Windows 런타임을 대상으로 하는 .exe 파일을 생성하고 필수 라이브러리에 연결합니다.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>명령줄에서 C++/CX 애플리케이션을 컴파일하려면
 
-1. 엽니다는 **개발자 명령 프롬프트** 창입니다. (에 **시작** 창을 열려면 **앱**합니다. 열기는 **Visual Studio Tools** Visual Studio 버전 아래의 폴더를 선택 합니다 **개발자 명령 프롬프트** 바로 가기.) 개발자 명령 프롬프트 창을 여는 방법에 대 한 자세한 내용은 참조 하세요. [명령줄에서 MSVC 도구 집합을 사용 하 여](building-on-the-command-line.md)입니다.
+1. **개발자 명령 프롬프트** 창을 엽니다. (**시작** 창에서 **앱**을 엽니다. 사용 중인 Visual Studio 버전에서 **Visual Studio Tools** 폴더를 연 다음 **개발자 명령 프롬프트** 바로 가기를 선택합니다.) 개발자 명령 프롬프트 창을 여는 방법에 대한 자세한 내용은 [명령줄에서 MSVC 도구 집합 사용](building-on-the-command-line.md)을 참조하세요.
 
-   컴퓨터 운영 체제 및 구성에 따라 코드를 정상적으로 컴파일하려면 관리자 자격 증명이 필요할 수 있습니다. 명령 프롬프트 창을 관리자 권한으로을 실행 하려면 바로 가기 메뉴를 열고 **개발자 명령 프롬프트** 를 선택한 후 **관리자 권한으로 실행**합니다.
+   컴퓨터 운영 체제 및 구성에 따라 코드를 정상적으로 컴파일하려면 관리자 자격 증명이 필요할 수 있습니다. 관리자로 명령 프롬프트 창을 실행하려면 **개발자 명령 프롬프트**의 바로 가기 메뉴를 연 다음 **관리자 권한으로 실행**을 선택합니다.
 
-1. 명령 프롬프트에서 입력 **notepad basiccx.cpp**합니다.
+1. 명령 프롬프트에 **notepad basiccx.cpp**를 입력합니다.
 
-   선택할 **예** 묻는 파일을 만듭니다.
+   파일을 만들지 묻는 메시지가 나타나면 **예**를 선택합니다.
 
 1. 메모장에 다음 줄을 입력합니다.
 
@@ -50,13 +50,13 @@ C++ 언어의 기본적인 사항을 알고 있습니다.
     }
     ```
 
-1. 메뉴 모음에서 선택 **파일** > **저장**합니다.
+1. 메뉴 모음에서 **파일** > **저장**을 선택합니다.
 
-   사용자가 만든를 C++ Windows 런타임을 사용 하는 원본 파일 [Platform 네임 스페이스](../cppcx/platform-namespace-c-cx.md) 네임 스페이스입니다.
+   Windows 런타임 [Platform namespace](../cppcx/platform-namespace-c-cx.md) 네임스페이스를 사용하는 C++ 소스 파일을 만들었습니다.
 
-1. 명령 프롬프트에서 입력 **cl /EHsc /ZW basiccx.cpp /link /subsystem: console**합니다. cl.exe 컴파일러는 이 소스 파일을 .obj 파일로 컴파일한 다음 링커를 실행하여 실행 프로그램인 basiccx.exe를 생성합니다. (합니다 [/EHsc](reference/eh-exception-handling-model.md) 컴파일러 옵션에는 C++ 예외 처리 모델을 지정 하며 [/l i n](reference/link-pass-options-to-linker.md) 콘솔 응용 프로그램을 지정 하는 플래그입니다.)
+1. 명령 프롬프트에 **cl /EHsc /ZW basiccx.cpp /link /SUBSYSTEM:CONSOLE**을 입력합니다. cl.exe 컴파일러는 이 소스 파일을 .obj 파일로 컴파일한 다음 링커를 실행하여 실행 프로그램인 basiccx.exe를 생성합니다. ([/EHsc](reference/eh-exception-handling-model.md) 컴파일러 옵션은 C++ 예외 처리 모델을 지정하고 [/link](reference/link-pass-options-to-linker.md) 플래그는 콘솔 애플리케이션을 지정합니다.)
 
-1. Basiccx.exe 프로그램을 명령 프롬프트를 실행 하려면 입력 **basiccx**합니다.
+1. basiccx.exe 프로그램을 실행하려면 명령 프롬프트에 **basiccx**를 입력합니다.
 
    프로그램이 다음 텍스트를 표시하고 종료됩니다.
 
@@ -64,7 +64,7 @@ C++ 언어의 기본적인 사항을 알고 있습니다.
     This is a C++/CX program.
     ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로젝트 및 빌드 시스템](projects-and-build-systems-cpp.md)<br/>
 [MSVC 컴파일러 옵션](reference/compiler-options.md)

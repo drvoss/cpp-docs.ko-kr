@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345318"
 ---
 # <a name="trigraphs"></a>삼중자
 
@@ -62,7 +62,7 @@ printf( "What?\?!\n" );
 
 이 `printf` 문에서 두 번째 물음표 앞에 있는 백슬래시 이스케이프 문자는 `??!`가 삼중자로 잘못 해석되지 않게 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [/Zc:trigraphs(삼중자 대체)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [C 식별자](../c-language/c-identifiers.md)

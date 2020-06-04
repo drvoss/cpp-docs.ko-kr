@@ -11,11 +11,11 @@ helpviewer_keywords:
 - language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 ms.openlocfilehash: 9c5417ff3ced770c8dc8a70932d70d9d96b4331d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326666"
 ---
 # <a name="c-language-reference"></a>C 언어 참조
 
@@ -31,6 +31,6 @@ C++ 및 전처리기에 대한 추가 참고 자료는 다음을 참조하세요
 
 컴파일러 및 링커 옵션은 [C/C++ 빌드 참조](../build/reference/c-cpp-building-reference.md)에 설명되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C++ 언어 참조](../cpp/cpp-language-reference.md)

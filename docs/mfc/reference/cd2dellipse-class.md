@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369267"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 클래스
 
@@ -29,11 +29,11 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|오버로드됨. 개체에서 `CD2DEllipse` `D2D1_ELLIPSE` 개체를 생성 합니다.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|오버로드되었습니다. 개체에서 `D2D1_ELLIPSE` `CD2DEllipse` 개체를 생성합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `D2D1_ELLIPSE`
 
@@ -41,11 +41,11 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxrendertarget
+**헤더:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
-CD2DRectF 개체에서 CD2DEllipse 개체를 생성 합니다.
+CD2DRectF 개체에서 CD2DEllipse 개체를 생성합니다.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
@@ -63,14 +63,14 @@ CD2DEllipse(
 소스 사각형
 
 *ellipse*<br/>
-원본 타원
+소스 타원
 
-*ptCenter*<br/>
+*pt센터*<br/>
 타원의 중심점입니다.
 
-*sizeRadius*<br/>
-타원의 X 반지름 및 Y 반경입니다.
+*크기경수경*<br/>
+타원의 X 반지름과 Y 반지름입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스](../../mfc/reference/mfc-classes.md)

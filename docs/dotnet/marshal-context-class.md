@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 25fc2be80ba0e5d8c7f76cee1f22eed4d1bb4fc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384870"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332006"
 ---
-# <a name="marshalcontext-class"></a>marshal_context 클래스
+# <a name="marshal_context-class"></a>marshal_context 클래스
 
-이 클래스는 네이티브 및 관리 되는 환경 간에 데이터를 변환합니다.
+이 클래스는 네이티브 환경과 관리되는 환경 간에 데이터를 변환합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,35 +27,34 @@ class marshal_context
 
 ## <a name="remarks"></a>설명
 
-사용 된 `marshal_context` 컨텍스트를 필요로 하는 데이터 변환에 대 한 클래스입니다. 변환이 필요한 컨텍스트 및 마샬링 파일에 포함 되도록 하는 방법에 대 한 자세한 내용은 참조 하세요. [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md)합니다. 마샬링 컨텍스트를 사용 하는 경우의 결과 까지만 유효 합니다 `marshal_context` 개체는 소멸 됩니다. 결과 유지 하려면 데이터를 복사 해야 합니다.
+컨텍스트가 `marshal_context` 필요한 데이터 변환에 클래스를 사용합니다. 컨텍스트가 필요한 변환과 포함해야 하는 마샬링 파일에 대한 자세한 내용은 [C++ 마샬링 의 마샬링 개요를](../dotnet/overview-of-marshaling-in-cpp.md)참조하십시오. 컨텍스트를 사용할 때 마샬링의 결과는 `marshal_context` 개체가 소멸될 때까지만 유효합니다. 결과를 보존하려면 데이터를 복사해야 합니다.
 
-동일한 `marshal_context` 다양 한 데이터 변환에 사용할 수 있습니다. 이 방식으로 컨텍스트를 다시 사용 마샬링 이전 호출의 결과 영향을 주지 않습니다.
+수많은 `marshal_context` 데이터 변환에 대해동일한 것을 사용할 수 있습니다. 이러한 방식으로 컨텍스트를 다시 사용하면 이전 마샬링 호출의 결과에 영향을 주지 않습니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명| 
-|---------|-----------| 
-|[marshal_context::marshal_context](#marshal-context)|생성 된 `marshal_context` 관리 및 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체입니다.| 
-|[marshal_context::~marshal_context](#tilde-marshal-context)|`marshal_context` 개체를 제거합니다.| 
+|속성|Description|
+|---------|-----------|
+|[marshal_context::marshal_context](#marshal-context)|관리되는 `marshal_context` 데이터 형식과 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체를 생성합니다.|
+|[marshal_context:~marshal_context](#tilde-marshal-context)|`marshal_context` 개체를 제거합니다.|
 
 ### <a name="public-methods"></a>public 메서드
 
-|이름|설명| 
-|---------|-----------| 
-|[marshal_context::marshal_as](#marshal-as)|특정 데이터 개체를 관리 및 네이티브 데이터 형식 간에 변환할 마샬링을 수행 합니다.| 
-
+|속성|Description|
+|---------|-----------|
+|[marshal_context::marshal_as](#marshal-as)|특정 데이터 개체에 대한 마샬링을 수행하여 관리되는 데이터 형식과 네이티브 데이터 형식 간에 변환합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더 파일:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, 또는 \<msclr\marshal_atl.h >
+**헤더 파일:** \<msclr\marshal.h \<>, msclr\marshal_windows.h>, \<msclr\marshal_cppstd.h>, 또는 \<msclr\marshal_atl.h>
 
-**Namespace:** msclr::interop
+**네임 스페이스 :** msclr :::interop
 
-## <a name="marshal-context"></a>marshal_context::marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context:marshal_context
 
-생성 된 `marshal_context` 관리 및 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체입니다.
+관리되는 `marshal_context` 데이터 형식과 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체를 생성합니다.
 
 ```cpp
 marshal_context();
@@ -63,14 +62,13 @@ marshal_context();
 
 ### <a name="remarks"></a>설명
 
-일부 데이터 변환을 마샬링 컨텍스트가 필요 합니다. 번역에 대 한 자세한 컨텍스트를 필요를 응용 프로그램에 포함 해야 합니다는 마샬링 파일을 참조 하세요 [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md)합니다.
+일부 데이터 변환에는 마샬링 컨텍스트가 필요합니다. 컨텍스트가 필요한 번역및 응용 프로그램에 포함해야 하는 마샬링 파일에 대한 자세한 내용은 [C++에서 마샬링 개요를](../dotnet/overview-of-marshaling-in-cpp.md)참조하십시오.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [marshal_context:: marshal_as](../dotnet/marshal-context-marshal-as.md)합니다.
+[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)에 대한 예제를 참조하십시오.
 
-
-## <a name="tilde-marshal-context"></a>marshal_context::~marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context:~marshal_context
 
 `marshal_context` 개체를 제거합니다.
 
@@ -80,13 +78,13 @@ marshal_context();
 
 ### <a name="remarks"></a>설명
 
-일부 데이터 변환을 마샬링 컨텍스트가 필요 합니다. 참조 [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md) 는 번역 컨텍스트 하며 응용 프로그램에 포함할 마샬링 파일에 대 한 자세한 내용은 합니다.
+일부 데이터 변환에는 마샬링 컨텍스트가 필요합니다. 컨텍스트가 필요한 번역과 응용 프로그램에 포함해야 하는 마샬링 파일에 대한 자세한 내용은 [C++에서 마샬링 개요를](../dotnet/overview-of-marshaling-in-cpp.md) 참조하십시오.
 
-삭제를 `marshal_context` 개체 컨텍스트에서 변환 데이터를 무효화 됩니다. 이후에 데이터를 보존 하려는 경우를 `marshal_context` 개체 삭제 되 면 유지 되는 변수에 데이터를 수동으로 복사 해야 합니다.
+개체를 `marshal_context` 삭제하면 해당 컨텍스트에서 변환된 데이터가 무효화됩니다. `marshal_context` 개체가 소멸된 후 데이터를 보존하려면 데이터를 유지될 변수에 수동으로 복사해야 합니다.
 
-## <a name="marshal-as"></a>marshal_context::marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context:marshal_as
 
-특정 데이터 개체를 관리 및 네이티브 데이터 형식 간에 변환할 마샬링을 수행 합니다.
+특정 데이터 개체에 대한 마샬링을 수행하여 관리되는 데이터 형식과 네이티브 데이터 형식 간에 변환합니다.
 
 ```cpp
 To_Type marshal_as<To_Type>(
@@ -97,23 +95,23 @@ To_Type marshal_as<To_Type>(
 ### <a name="parameters"></a>매개 변수
 
 *input*<br/>
-[in] 에 마샬링하 려는 값을 `To_Type` 변수입니다.
+【인】 변수에 마샬링할 값입니다. `To_Type`
 
 ### <a name="return-value"></a>반환 값
 
-형식 변수의 `To_Type` 의 변환 된 값인는 `input`합니다.
+변환된 값인 형식의 `To_Type` `input`변수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 특정 데이터 개체의 마샬링을 수행 합니다. 이 함수를 사용 하 여 테이블에서 지정 된 변환 만으로 [마샬링 개요 C++ ](../dotnet/overview-of-marshaling-in-cpp.md)합니다.
+이 함수는 특정 데이터 개체에 대한 마샬링을 수행합니다. [C++ 마샬링 개요에서](../dotnet/overview-of-marshaling-in-cpp.md)표에 표시된 변환에만 이 함수를 사용합니다.
 
-지원 되지 않는 데이터 형식의 쌍 마샬링할 하려고 하면 `marshal_as` 오류가 생성 됩니다 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 컴파일 타임에 있습니다. 자세한 내용은이 오류와 함께 제공 되는 메시지를 읽습니다. `C4996` 이상만 사용 되지 않는 함수에 대 한 오류를 생성할 수 있습니다. 이 오류를 생성 하는 두 가지 조건은를 지원 하지 않는 데이터 형식의 한 쌍을 마샬링하는 동안 하며 사용 하는 동안 `marshal_as` 필요한 컨텍스트를 변환 합니다.
+지원되지 `marshal_as` 않는 데이터 형식 쌍을 마샬링하려고 하면 컴파일 시 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 오류가 발생합니다. 자세한 내용은 이 오류와 함께 제공된 메시지를 읽어보십시오. 더 `C4996` 이상 사용되지 이상인 함수 이상에 대해 오류를 생성할 수 있습니다. 이 오류를 생성하는 두 가지 조건은 지원되지 않는 데이터 형식 쌍을 `marshal_as` 마샬링하고 컨텍스트가 필요한 변환에 사용하려고 합니다.
 
-마샬링 라이브러리는 몇 가지 헤더 파일의 구성 됩니다. 변환 파일을 하나만 이어야 하는데 다른 변환 해야 할 경우 추가 파일을 포함할 수 있습니다. 표의 `Marshaling Overview in C++` 나타냅니다 마샬링 파일 각 변환에 포함 해야 합니다.
+마샬링 라이브러리는 여러 헤더 파일로 구성됩니다. 모든 변환에는 하나의 파일만 필요하지만 다른 변환을 위해 필요한 경우 추가 파일을 포함할 수 있습니다. 테이블은 `Marshaling Overview in C++` 각 변환에 포함해야 하는 마샬링 파일을 나타냅니다.
 
 ### <a name="example"></a>예제
 
-마샬링에 대 한 컨텍스트를 만드는이 예제는 `System::String` 에 `const char *` 변수 형식입니다. 변환된 된 데이터 컨텍스트를 삭제 하는 줄 뒤에 유효 하지 않습니다.
+이 예제는 a에서 `System::String` 변수 형식으로 `const char *` 마샬링하기 위한 컨텍스트를 만듭니다. 변환된 데이터는 컨텍스트를 삭제하는 줄 이후에 유효하지 않습니다.
 
 ```cpp
 // marshal_context_test.cpp

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151366"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825693"
 ---
 # <a name="structure-and-union-members"></a>구조체 및 공용 구조체 멤버
 
 "멤버 선택 식"은 구조체와 공용 구조체의 멤버를 참조합니다. 이러한 식은 선택한 멤버의 값과 형식을 갖게 됩니다.
 
-> *postfix-expression* **.** *identifier*
+> *postfix-expression* **.** *identifier*\
 > *postfix-expression* **->** *identifier*
 
 다음 목록에서는 멤버 선택 식의 두 가지 형태에 대해 설명합니다.
@@ -33,7 +33,7 @@ ms.locfileid: "56151366"
 
 두 가지 형태의 멤버 선택 식은 비슷한 효과가 있습니다.
 
-마침표(**.**) 앞의 식이 포인터 값에 적용된 간접 참조 연산자(<strong>\*</strong>)로 구성된 경우 멤버 선택 연산자(**->**)를 포함하는 식은 마침표를 사용하는 식의 약식 버전입니다. 따라서
+마침표( **.** ) 앞의 식이 포인터 값에 적용된 간접 참조 연산자(<strong>\*</strong>)로 구성된 경우 멤버 선택 연산자( **->** )를 포함하는 식은 마침표를 사용하는 식의 약식 버전입니다. 따라서
 
 ```cpp
 expression->identifier
@@ -47,7 +47,7 @@ expression->identifier
 
 여기서 *expression*은 포인터 값입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 이 구조체 선언을 참조합니다. 이러한 예제에서 사용하는 간접 참조 연산자(<strong>\*</strong>)에 대한 자세한 내용은 [간접 참조 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요.
 
@@ -72,7 +72,7 @@ item.sp = &item;
 (item.sp)->a = 24;
 ```
 
-이 예제에서는 포인터 식 `item.sp`를 멤버 선택 연산자(**->**)와 함께 사용하여 `a` 멤버에 값을 할당합니다.
+이 예제에서는 포인터 식 `item.sp`를 멤버 선택 연산자( **->** )와 함께 사용하여 `a` 멤버에 값을 할당합니다.
 
 ```
 list[8].b = 12;
@@ -80,6 +80,6 @@ list[8].b = 12;
 
 이 문은 구조체 배열에서 개별 구조체 멤버를 선택하는 방법을 보여 줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [멤버 액세스 연산자: . 및 ->](../cpp/member-access-operators-dot-and.md)

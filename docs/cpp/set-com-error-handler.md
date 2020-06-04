@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857296"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749801"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-COM 오류 처리에 사용되는 기본 함수를 대체합니다. **_set_com_error_handler** 는 Microsoft 전용입니다.
+COM 오류 처리에 사용되는 기본 함수를 대체합니다. **_set_com_error_handler** Microsoft에 만전을 기하고 있습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -31,15 +31,15 @@ void __stdcall _set_com_error_handler(
 *pHandler*<br/>
 대체 함수에 대한 포인터입니다.
 
-*hr*<br/>
-HRESULT 정보입니다.
+*Hr*<br/>
+HRESULT 정보.
 
-*perrinfo*<br/>
-`IErrorInfo` 개체
+*페르인포*<br/>
+`IErrorInfo` 개체입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-기본적으로 [_com_raise_error](../cpp/com-raise-error.md)는 모든 COM 오류를 처리합니다. **_set_com_error_handler**를 사용하여 사용자 고유의 오류 처리 함수를 호출하도록 변경할 수 있습니다.
+기본적으로 [_com_raise_error](../cpp/com-raise-error.md) 모든 COM 오류를 처리합니다. **_set_com_error_handler** 사용하여 사용자 고유의 오류 처리 함수를 호출하여 이 동작을 변경할 수 있습니다.
 
 대체 함수에는 `_com_raise_error`의 시그니처에 해당하는 시그니처가 있어야 합니다.
 
@@ -86,9 +86,9 @@ Exception raised: Unable to establish the connection!
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<comdef .h >
+**헤더:** \<comdef.h>
 
-**Lib:** **/Zc: wchar_t** 컴파일러 옵션 (기본값)을 지정 하는 경우 comsuppw 또는 comsuppw를 사용 합니다. **/Zc: wchar_t-** 컴파일러 옵션이 지정 된 경우 comsupp.lib를 사용 합니다. IDE에서이 옵션을 설정 하는 방법을 비롯 한 자세한 내용은 [/zc: wchar_t (Wchar_t 네이티브 형식)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조 하세요.
+**Lib:** **/Zc:wchar_t** 컴파일러 옵션이 지정되면(기본값) comsuppw.lib 또는 comsuppwd.lib를 사용합니다. **/Zc:wchar_t 컴파일러** 옵션을 지정하면 comsupp.lib를 사용합니다. IDE에서 이 옵션을 설정하는 방법을 포함하여 자세한 내용은 [/Zc:wchar_t(wchar_t 네이티브 유형)을](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)참조하십시오.
 
 ## <a name="see-also"></a>참조
 

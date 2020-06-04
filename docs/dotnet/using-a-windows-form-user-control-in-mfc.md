@@ -1,6 +1,6 @@
 ---
 title: MFC에서 Windows Form 사용자 정의 컨트롤 사용
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "79544749"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>MFC에서 Windows Form 사용자 정의 컨트롤 사용
 
-MFC Windows Forms 지원 클래스를 사용 하 여, Windows Forms 컨트롤 MFC 응용 프로그램 내에서 MFC 대화 상자 또는 뷰 내에서 ActiveX 컨트롤을 호스트할 수 있습니다. 또한 MFC 대화 상자는 Windows Forms 폼을 호스트할 수 있습니다.
+Mfc Windows Forms 지원 클래스를 사용 하 여 mfc 대화 상자 또는 뷰에서 ActiveX 컨트롤로 MFC 응용 프로그램 내에서 Windows Forms 컨트롤을 호스트할 수 있습니다. 또한 Windows Forms Forms는 MFC 대화 상자로 호스팅될 수 있습니다.
 
-다음 섹션에서는 설명 하는 방법.
+다음 섹션에서는 다음을 수행 하는 방법을 설명 합니다.
 
-- MFC 대화 상자에서 Windows Forms 컨트롤을 호스트 합니다.
+- MFC 대화 상자에서 Windows Forms 컨트롤을 호스팅합니다.
 
-- Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스트 합니다.
+- Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅합니다.
 
-- MFC 대화 상자로 Windows Forms 폼을 호스트 합니다.
-
-> [!NOTE]
-> MFC Windows Forms 통합 MFC를 사용 하 여 동적으로 연결 되는 프로젝트 에서만 작동 합니다 (프로젝트는 `_AFXDLL` 정의 됩니다).
+- Windows Forms 폼을 MFC 대화 상자로 호스팅합니다.
 
 > [!NOTE]
-> MFC Windows Forms 인터페이스 (mfcmifc80.dll) DLL의 개인 (수정된) 복사본을 사용 하 여 응용 프로그램을 빌드할 때 고유한 공급 업체 키를 사용 하 여 Microsoft 키를 대체 하지 않는 한 GAC에 설치 하지 못합니다. 어셈블리 서명에 대 한 자세한 내용은 참조 하세요. [어셈블리를 사용한 프로그래밍](/dotnet/framework/app-domains/programming-with-assemblies) 하 고 [강력한 이름 어셈블리 (어셈블리 서명) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)합니다.
+> MFC Windows Forms 통합은 MFC (`_AFXDLL`가 정의 된 프로젝트)와 동적으로 연결 되는 프로젝트 에서만 작동 합니다.
 
-MFC 응용 프로그램에서는 Windows Forms 응용 프로그램을 사용 하 여 mfcmifc80.dll을 재배포 해야 합니다. 자세한 내용은 [MFC 라이브러리 재배포](../windows/redistributing-the-mfc-library.md)합니다.
+> [!NOTE]
+> MFC Windows Forms 인터페이스 DLL (mfcmifc80.dll)의 전용 (수정 된) 복사본을 사용 하 여 응용 프로그램을 빌드할 때 Microsoft 키를 고유한 공급 업체 키로 대체 하지 않으면 GAC에 설치 되지 않습니다. 어셈블리 서명에 대 한 자세한 내용은 어셈블리를 [사용한 프로그래밍](/dotnet/framework/app-domains/programming-with-assemblies) 및 [강력한 이름 어셈블리 (어셈블리 서명) (C++/cli)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)를 참조 하세요.
+
+MFC 응용 프로그램이 Windows Forms를 사용 하는 경우 응용 프로그램과 함께 mfcmifc80.dll를 재배포 해야 합니다. 자세한 내용은 [MFC 라이브러리 재배포](../windows/redistributing-the-mfc-library.md)를 참조 하세요.
 
 ## <a name="in-this-section"></a>섹션 내용
 
@@ -66,13 +66,13 @@ MFC 응용 프로그램에서는 Windows Forms 응용 프로그램을 사용 하
 
 [UICheckState](../mfc/reference/uicheckstate-enumeration.md)
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 [Windows Forms](/dotnet/framework/winforms/index)
 
 [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)<br/>
-[폼 뷰](../mfc/form-views-mfc.md)
+[폼 보기](../mfc/form-views-mfc.md)

@@ -1,51 +1,51 @@
 ---
-title: 'TN045: Long Varchar-varbinary에 대 한 MFC 데이터베이스 지원'
+title: 'TN045: 긴 바르차-바르바이너리를 위한 MFC-데이터베이스 지원'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TN045
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 3e8b356027e5c5b7c604a0354624d9f11e32fb9a
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611038"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750288"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Long Varchar/Varbinary에 대 한 c/데이터베이스 지원
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Long Varchar/Varbinary에 대한 MFC/데이터베이스 지원
 
 > [!NOTE]
->  다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다. 따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다. 최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.
+> 다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다. 따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다. 최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.
 
-이 ODBC를 보내고 검색 하는 방법에 설명 합니다 **SQL_LONGVARCHAR** 하 고 **SQL_LONGVARBINARY** MFC를 사용 하 여 데이터 형식을 데이터베이스 클래스입니다.
+이 참고 는 MFC 데이터베이스 클래스를 사용하여 ODBC **SQL_LONGVARCHAR** 및 **SQL_LONGVARBINARY** 데이터 형식을 검색하고 보내는 방법에 대해 설명합니다.
 
-## <a name="overview-of-long-varcharvarbinary-support"></a>Long Varchar/Varbinary 지원 개요
+## <a name="overview-of-long-varcharvarbinary-support"></a>롱 바르차/바르바이너리 지원 개요
 
-ODBC **SQL_LONG_VARCHAR** 하 고 **SQL_LONGBINARY** (긴 데이터 열으로 여기까지 라고도 함) 데이터 형식에서 엄청난 양의 데이터를 포함할 수 있습니다. 3 가지 방법으로이 데이터를 처리할 수 있습니다.
+ODBC **SQL_LONG_VARCHAR** 및 **SQL_LONGBINARY** 데이터 유형(긴 데이터 열이라고 함)은 방대한 양의 데이터를 보유할 수 있습니다. 이 데이터를 처리할 수 있는 방법에는 세 가지가 있습니다.
 
-- 에 바인딩하는 `CString` / `CByteArray`합니다.
+- 에 바인딩합니다. / `CString` `CByteArray`
 
-- 에 바인딩하는 `CLongBinary`합니다.
+- `CLongBinary`에 바인딩합니다.
 
-- 전혀 바인딩하지 및 검색 하지 않으며 보낼 긴 데이터 값을 수동으로 데이터베이스 클래스와 무관 합니다.
+- 데이터베이스 클래스와 는 별개로 긴 데이터 값을 수동으로 검색하고 전송하지 마십시오.
 
-각각의 세 가지 방법의 장점 및 단점에 있습니다.
+세 가지 방법 각각에는 장점과 단점이 있습니다.
 
-쿼리 매개 변수에 대 한 long 데이터 열을 사용할 수 없습니다. OutputColumns에만 지원 됩니다.
+긴 데이터 열은 쿼리에 대한 매개 변수에 대해 지원되지 않습니다. 출력열에 대해서만 지원됩니다.
 
-## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>CString/CByteArray에 Long 데이터가 열 바인딩
+## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>긴 데이터 열을 CString/CByteArray에 바인딩
 
 장점
 
-이 방법은 이해 하기 간단 하 고 친숙 한 클래스를 사용 합니다. 프레임 워크를 제공 `CFormView` 에 대 한 지원 `CString` 사용 하 여 `DDX_Text`입니다. 일반 문자열 또는 컬렉션 기능을 많이 해야 합니다 `CString` 및 `CByteArray` 클래스 및 사용자 데이터 값을 보유할 수 로컬로 할당 된 메모리 양을 제어할 수 있습니다. 프레임 워크 중 필드 데이터의 이전 복사본을 유지 `Edit` 또는 `AddNew` 함수 호출 및 프레임 워크 수를 변경 데이터를 자동으로 검색 합니다.
+이 방법은 이해하기 쉽고 익숙한 클래스로 작업합니다. 프레임워크는 `CFormView` `DDX_Text`에 `CString` 대한 지원을 제공합니다. `CString` 및 `CByteArray` 클래스와 함께 많은 일반 문자열 또는 컬렉션 기능이 있으며 데이터 값을 보유하도록 로컬로 할당된 메모리 양을 제어할 수 있습니다. 프레임워크는 호출 중 또는 `Edit` `AddNew` 함수 호출 중에 필드 데이터의 이전 복사본을 유지 관리하며 프레임워크는 자동으로 데이터 변경 내용을 검색할 수 있습니다.
 
 > [!NOTE]
->  이후 `CString` 문자 데이터에 대해 작업을 위해 만들어진 및 `CByteArray` 이진 데이터를 사용할 것이 좋습니다 문자 데이터를 추가 하는 (**SQL_LONGVARCHAR**)에 `CString`, 및 이진 데이터 ( **SQL_LONGVARBINARY**)에 `CByteArray`입니다.
+> 문자 `CString` 데이터 작업을 위해 설계되었으며 `CByteArray` 이진 데이터 작업을 위해 문자 데이터(SQL_LONGVARCHAR)와**SQL_LONGVARCHAR** `CString`이진 데이터(SQL_LONGVARBINARY)를 에 `CByteArray`넣는 것이 좋습니다.**SQL_LONGVARBINARY**
 
-에 대 한 함수는 RFX `CString` 및 `CByteArray` 데이터 열에 대 한 검색된 값을 보유할 할당 된 메모리의 기본 크기를 재정의할 수 있는 추가 인수를 사용할 수 있습니다. 다음 함수 선언에서 nMaxLength 인수 참고:
+RFX함수는 데이터 `CString` `CByteArray` 열에 대해 검색된 값을 보유하도록 할당된 메모리의 기본 크기를 재정의할 수 있는 추가 인수를 가지고 있습니다. 다음 함수 선언에서 nMaxLength 인수를 참고하십시오.
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,
@@ -59,64 +59,64 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
     int nMaxLength = 255);
 ```
 
-긴 데이터 열을 검색 하는 경우는 `CString` 또는 `CByteArray`, 최대 데이터 양이, 기본적으로 255 바이트를 반환 합니다. 이 항목은 무시 됩니다. 프레임 워크는 예외를 throw 하는 예에서 **AFX_SQL_ERROR_DATA_TRUNCATED**합니다. 다행 스럽게도 명시적으로 늘리려면 nMaxLength 큰 값으로 최대 **maxint와 같습니다**합니다.
+`CString` 긴 데이터 열을 또는 `CByteArray`로 검색하는 경우 반환되는 최대 데이터 양은 기본적으로 255바이트입니다. 이 것 이상의 것은 무시됩니다. 이 경우 프레임워크는 예외 **AFX_SQL_ERROR_DATA_TRUNCATED**throw합니다. 다행히도 **maxInT까지**nMaxLength를 더 큰 값으로 명시적으로 늘릴 수 있습니다.
 
 > [!NOTE]
->  NMaxLength의 값의 로컬 버퍼를 설정 하려면 MFC에서 사용 되는 `SQLBindColumn` 함수입니다. 이 데이터의 저장소에 대 한 로컬 버퍼 및 ODBC 드라이버에서 반환 되는 데이터 양을 실제로 영향을 주지 않습니다. `RFX_Text` 및 `RFX_Binary` 만 사용 하 여 하나를 수행 `SQLFetch` 백 엔드 데이터베이스에서 데이터를 검색할 수 있습니다. 각 ODBC 드라이버는 단일 인출에서 반환할 수 있습니다 하는 데이터의 양에 따라 다양 한 제한이 있습니다. 이 제한은 있으며이 경우는 예외에 nMaxLength, 설정 된 값 보다 훨씬 더 작은 수 있습니다 **AFX_SQL_ERROR_DATA_TRUNCATED** throw 됩니다. 이러한 상황을 사용 하도록 전환 `RFX_LongBinary` of `RFX_Text` 또는 `RFX_Binary` 모든 데이터를 검색할 수 있도록 합니다.
+> nMaxLength값은 MFC에서 `SQLBindColumn` 함수의 로컬 버퍼를 설정하는 데 사용됩니다. 이 버퍼는 데이터 저장을 위한 로컬 버퍼이며 ODBC 드라이버에서 반환되는 데이터 양에는 실제로 영향을 주지 않습니다. `RFX_Text`백 `RFX_Binary` 엔드 데이터베이스에서 `SQLFetch` 데이터를 검색하는 데 사용한 호출만 합니다. 각 ODBC 드라이버는 단일 가져오기에서 반환할 수 있는 데이터 양에 대해 서로 다른 제한을 가지게 됩니다. 이 제한은 nMaxLength에 설정된 값보다 훨씬 작을 수 있으며, 이 경우 예외 **AFX_SQL_ERROR_DATA_TRUNCATED** throw됩니다. 이러한 상황에서는 모든 `RFX_LongBinary` 데이터를 `RFX_Text` 검색할 수 있는 대신 사용하거나 `RFX_Binary` 사용할 수 있도록 전환합니다.
 
-ClassWizard 바인딩합니다를 **SQL_LONGVARCHAR** 에 `CString`, 또는 **SQL_LONGVARBINARY** 에 `CByteArray` 를. Long 데이터가 열에는 검색 255 바이트 이상의 할당 하려는 경우 다음 nMaxLength 명시적 값을 제공할 수 있습니다.
+ClassWizard는 **SQL_LONGVARCHAR** `CString`에 바인딩하거나 **SQL_LONGVARBINARY** `CByteArray` 바인딩합니다. 긴 데이터 열을 검색하는 255바이트 이상을 할당하려는 경우 nMaxLength에 대한 명시적 값을 제공할 수 있습니다.
 
-Long 데이터가 열에 바인딩된 경우는 `CString` 또는 `CByteArray`를 SQL_에 바인딩될 때 하는 것과 마찬가지로 작동 필드 업데이트**VARCHAR** 또는 SQL_**VARBINARY**합니다. 하는 동안 `Edit`, 데이터 값이 이상 떨어진 경우 비교 캐시 `Update` 데이터 변경에는 귀찮은 설정 및 열에 대 한 값을 적절 하 게 Null 값을 검색 하기 위해 호출 됩니다.
+긴 데이터 열이 `CString` 또는 `CByteArray`에 바인딩된 경우 " 필드 업데이트는 varCHAR 또는 SQL_**VARBINARY에**바인딩된 경우와 SQL_ 작동합니다.**VARCHAR** 동안 `Edit`. `Update`
 
-## <a name="binding-a-long-data-column-to-a-clongbinary"></a>CLongBinary에 Long 데이터가 열 바인딩
+## <a name="binding-a-long-data-column-to-a-clongbinary"></a>긴 데이터 열을 CLong Binary에 바인딩
 
-더 긴 데이터 열에 있을 경우 **maxint와 같습니다** 데이터의 바이트, 아마도 고려해 야 검색에 `CLongBinary`합니다.
+긴 데이터 열에 **MAXINT** 바이트의 데이터가 더 포함될 수 있는 경우 `CLongBinary`을 로 검색하는 것이 좋습니다.
 
 장점
 
-이 최대 사용 가능한 메모리 전체 긴 데이터 열을 검색합니다.
+이렇게 하면 사용 가능한 메모리까지 전체 긴 데이터 열을 검색합니다.
 
 단점
 
-데이터는 메모리에 보관 됩니다. 또한이 방법은 매우 많은 양의 데이터에 대 한 많은 비용이 들거나 실행 합니다. 호출 해야 합니다 `SetFieldDirty` 바인딩된 데이터 필드를 확인 하는 멤버에 포함 되어는 `Update` 작업 합니다.
+데이터는 메모리에 보관됩니다. 또한 이 방법은 매우 많은 양의 데이터에 대해 엄청나게 비용이 많이 듭니다. 필드가 `SetFieldDirty` 작업에 포함되도록 바인딩된 데이터 멤버를 `Update` 호출해야 합니다.
 
-긴 데이터 열을 검색 하는 경우는 `CLongBinary`, 데이터베이스 클래스는 long 데이터 열의 전체 크기를 확인 한 후 할당을 `HGLOBAL` 전체 데이터 값을 저장 하는 데 충분히 큰 메모리 세그먼트입니다. 다음 데이터베이스 클래스에 할당 된 전체 데이터 값을 검색 `HGLOBAL`합니다.
+에서 긴 데이터 열을 `CLongBinary`검색하는 경우 데이터베이스 클래스는 긴 데이터 열의 총 크기를 `HGLOBAL` 확인한 다음 전체 데이터 값을 보유할 수 있을 만큼 큰 메모리 세그먼트를 할당합니다. 그런 다음 데이터베이스 클래스는 전체 데이터 `HGLOBAL`값을 할당된 로 검색합니다.
 
-데이터 원본 열 긴 데이터의 예상된 크기를 반환할 수 없습니다, 프레임 워크는 예외를 throw 합니다 **AFX_SQL_ERROR_SQL_NO_TOTAL**합니다. 경우 할당 된 `HGLOBAL` 실패 하면 표준 메모리 예외를 throw 됩니다.
+데이터 원본이 긴 데이터 열의 예상 크기를 반환할 수 없는 경우 프레임워크는 **예외를 AFX_SQL_ERROR_SQL_NO_TOTAL**throw합니다. `HGLOBAL` 실패를 할당하려는 시도가 실패하면 표준 메모리 예외가 throw됩니다.
 
-Classwizard 함께 바인딩합니다는 **SQL_LONGVARCHAR** 또는 **SQL_LONGVARBINARY** 에 `CLongBinary` 있습니다. 선택 `CLongBinary` 멤버 변수 추가 대화 상자에서 변수 형식으로 합니다. 클래스 마법사는 다음 추가 `RFX_LongBinary` 호출에 `DoFieldExchange` 호출 하 고 바인딩된 필드의 총 수를 증가 시킵니다.
+ClassWizard는 **SQL_LONGVARCHAR** 또는 **SQL_LONGVARBINARY** `CLongBinary` 바인딩합니다. 멤버 `CLongBinary` 추가 변수 대화 상자에서 변수 유형으로 선택합니다. 그런 다음 ClassWizard는 `RFX_LongBinary` `DoFieldExchange` 호출에 호출을 추가하고 바인딩필드의 총 수를 증가시게 됩니다.
 
-긴 데이터 열 값을 업데이트 하려면 먼저 했는지 할당 된 `HGLOBAL` 를 호출 하 여 새 데이터를 저장할 수 있도록 충분히 큰 **:: GlobalSize** 에 *m_hData* 의 멤버는 `CLongBinary`합니다. 너무 작은 경우 릴리스는 `HGLOBAL` 및 적절 한 크기를 할당 합니다. 설정한 *m_dwDataLength* 새 크기를 반영 하도록 합니다.
+긴 데이터 열 값을 업데이트하려면 먼저 `HGLOBAL` 할당된 데이터가 `CLongBinary`m_hData 의 *멤버에서* **::GlobalSize를** 호출하여 새 데이터를 보유할 수 있을 만큼 충분히 큰지 확인합니다. 너무 작으면 `HGLOBAL` 릴리스하고 적절한 크기를 할당합니다. 그런 다음 *m_dwDataLength* 새 크기를 반영하도록 설정합니다.
 
-그렇지 않은 경우, *m_dwDataLength* 크기 보다 크면 변경 하려는 데이터의 수 중 하나를 해제 하 고 다시 할당 합니다 `HGLOBAL`, 하거나 할당 된 상태로 둡니다. 실제로 사용 된 바이트 수를 지정 해야 *m_dwDataLength*합니다.
+그렇지 않으면 *m_dwDataLength* 대체할 데이터의 크기보다 큰 경우 을 해제하고 다시 할당하거나 `HGLOBAL`할당된 상태로 둘 수 있습니다. *m_dwDataLength*실제로 사용되는 바이트 수를 나타내야 합니다.
 
-## <a name="how-updating-a-clongbinary-works"></a>방법을 업데이트는 CLongBinary 작동
+## <a name="how-updating-a-clongbinary-works"></a>CLong Binary 작동 방식 업데이트
 
-것을 이해 하는 데 필요한 방법을 업데이트는 `CLongBinary` 작동 하지만 데이터 원본에 긴 데이터 값을 보내는 방법에 대 한 예로 유용할 수 있습니다 아래에 설명 된 세 번째이 메서드를 선택 하는 경우.
+`CLongBinary` 작동 방식을 이해하는 것은 아니지만 아래에 설명된 이 세 번째 방법을 선택하면 긴 데이터 값을 데이터 원본에 보내는 방법에 대한 예제로 유용할 수 있습니다.
 
 > [!NOTE]
->  에 대 한 순서 대로 `CLongBinary` 업데이트에 포함 될 필드 명시적으로 호출 해야 `SetFieldDirty` 필드에 대 한 합니다. Null 설정 비롯 한 필드를 변경 하는 경우 호출 해야 `SetFieldDirty`합니다. 도 호출 해야 합니다 `SetFieldNull`, 되 고 두 번째 매개 변수 **FALSE**, 필드가 값을 가진 것으로 표시 합니다.
+> `CLongBinary` 필드를 업데이트에 포함하려면 필드를 명시적으로 호출해야 `SetFieldDirty` 합니다. Null 설정 을 포함하여 필드를 변경하는 경우 을 호출해야 `SetFieldDirty`합니다. 또한 두 `SetFieldNull`번째 매개 변수가 **FALSE인**을 호출하여 필드를 값을 갖는 것으로 표시해야 합니다.
 
-업데이트 하는 경우는 `CLongBinary` 필드에 데이터베이스 클래스를 사용 하 여 ODBC의 **DATA_AT_EXEC** 메커니즘 (ODBC 설명서를 참조 `SQLSetPos`의 rgbValue 인수). 프레임 워크를 가리키는 대신 insert 또는 update 문을 준비 하는 경우는 `HGLOBAL` 데이터를 포함 하는 *주소* 의 합니다 `CLongBinary` 으로 설정 됩니다는 *값* 열 대신, 길이 표시기로 설정 하 고 **SQL_DATA_AT_EXEC**합니다. Update 문의 데이터 원본에 보내면 나중 `SQLExecDirect` 돌아갑니다 **SQL_NEED_DATA**합니다. 이 열에 대 한 매개 변수 값의 주소가 실제로 인지 프레임 워크가 경고는 `CLongBinary`합니다. 프레임 워크 호출 `SQLGetData` 번 작은 버퍼를 사용 하 여 데이터의 실제 길이 반환 하려면 드라이버가 필요 합니다. Binary large object (BLOB)의 실제 길이 반환 하는 드라이버, MFC 다시 BLOB을 인출 하는 데 필요한 만큼 공간을 할당 합니다. 데이터 원본 반환 **SQL_NO_TOTAL**, BLOB의 크기를 확인할 수 없음을 나타내는, MFC 만들어집니다 작은 블록입니다. 기본 초기 크기는 64k 및 후속 블록 크기를 두 배로 됩니다. 예를 들어, 두 번째 128k 됩니다, 그리고 세 번째는 256 K입니다. 초기 크기는 구성할 수 있습니다.
+필드를 업데이트할 `CLongBinary` 때 데이터베이스 클래스는 ODBC의 **DATA_AT_EXEC** 메커니즘을 사용합니다(rgbValue 인수에 대한 `SQLSetPos`ODBC 설명서 참조). 프레임워크에서 삽입 또는 업데이트 문을 준비하는 대신 `HGLOBAL` 포함 된 데이터를 가리키는 대신 의 *주소가* `CLongBinary` 열의 *값으로* 설정되고 길이 표시기는 **SQL_DATA_AT_EXEC**. 나중에 업데이트 문이 데이터 원본으로 `SQLExecDirect` 전송되면 **SQL_NEED_DATA**반환합니다. 이렇게 하면 프레임워크에 이 열의 매개 변수 값이 실제로 의 `CLongBinary`주소임을 알 수 있습니다. 프레임워크는 `SQLGetData` 작은 버퍼로 한 번 호출하여 드라이버가 데이터의 실제 길이를 반환할 것으로 예상합니다. 드라이버가 이진 큰 개체(BLOB)의 실제 길이를 반환하는 경우 MFC는 BLOB를 가져오는 데 필요한 만큼의 공간을 재할당합니다. 데이터 원본이 BLOB의 크기를 확인할 수 없다는 SQL_NO_TOTAL **반환하면**MFC는 더 작은 블록을 만듭니다. 기본 초기 크기는 64K이며 후속 블록은 두 배 크기입니다. 예를 들어 두 번째는 128K이고 세 번째는 256K입니다. 초기 크기를 구성할 수 있습니다.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>바인딩되지 않습니다. SQLGetData 사용 하 여 ODBC에서 직접 데이터를 검색 하 고 전송
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>바인딩되지 않음: SQLGetData를 사용하여 ODBC에서 직접 데이터 검색/전송
 
-이 메서드를 사용 하 여 완전히 데이터베이스 클래스를 사용 하지 않고 긴 데이터 열을 사용 하 여 처리 합니다.
+이 방법을 사용하면 데이터베이스 클래스를 완전히 우회하고 긴 데이터 열을 직접 처리합니다.
 
 장점
 
-필요한 경우 디스크 또는 동적으로 데이터 양을 결정 검색할 데이터를 캐시할 수 있습니다.
+필요한 경우 데이터를 디스크에 캐시하거나 검색할 데이터의 양을 동적으로 결정할 수 있습니다.
 
 단점
 
-프레임 워크의 얻지 `Edit` 또는 `AddNew` 지원 하 고 작성 해야 코드를 직접 기본 기능을 수행 하도록 (`Delete` 열 수준 작업을 아니므로 하지만 작동).
+프레임워크또는 `Edit` `AddNew` 지원이 없으며 기본 기능을 수행하기 위해 직접 코드를 작성해야 합니다(열`Delete` 수준 작업이 아니므로 작동).
 
-이 경우 긴 데이터 열, 레코드 집합의 select 목록에 있어야 하지만 프레임 워크에서에 바인딩되어 있지 해야 합니다. 작업을 수행 하는 한 가지 방법은이 통해 사용자 고유의 SQL 문을 제공 `GetDefaultSQL` 또는 lpszSQL 인수로 `CRecordset`의 `Open` 함수 및 RFX_ 함수 호출을 사용 하 여 추가 열을 바인딩하지 않습니다. ODBC 바인딩된 필드의 오른쪽에 바인딩되지 않은 필드가 나타나도록 해야, 하므로 select 목록의 끝에 바인딩되지 않은 열 또는 열을 추가 합니다.
+이 경우 긴 데이터 열은 레코드 집합의 선택 목록에 있어야 하지만 프레임워크에 바인딩해서는 안 됩니다. 이 작업을 수행하는 한 가지 방법은 lpszSQL 인수를 통해 `GetDefaultSQL` 또는 `CRecordset`lpszSQL 인수를 `Open` 함수에 제공하고 추가 열을 RFX_ 함수 호출로 바인딩하지 않는 것입니다. ODBC에는 언바운드 필드가 바운드 필드의 오른쪽에 표시되도록 하므로 언바운드 열 또는 열을 선택 목록의 끝에 추가해야 합니다.
 
 > [!NOTE]
->  사용 하 여 변경 내용을 처리 되지 것입니다 프레임 워크에서 긴 데이터 열에 바인딩되지 않은, 때문에 `CRecordset::Update` 호출 합니다. 만들고 필요한 SQL 송신 해야 **삽입** 하 고 **업데이트** 문을 직접.
+> 긴 데이터 열은 프레임워크에 의해 바인딩되지 않으므로 변경 내용은 `CRecordset::Update` 호출로 처리되지 않습니다. 필요한 SQL **INSERT** 및 **UPDATE** 문을 직접 만들고 보내야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)<br/>
+[숫자별 기술 노트](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

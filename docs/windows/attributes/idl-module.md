@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168046"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -53,7 +53,7 @@ function declaration
 *함수 선언*<br/>
 정의 하는 함수입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Idl_module** C++ 특성을 사용 하면 .dll 파일에서 진입점을 지정 하 여 .dll 파일에서 가져올 수 있습니다.
 
@@ -61,7 +61,7 @@ function declaration
 
 .Idl 파일의 라이브러리 블록에 DLL 진입점을 추가 하 여 .dll 파일에서 내보낼 수 있는 COM 개체에서 모든 항목을 내보낼 수 있습니다.
 
-**Idl_module** 는 두 단계에서 사용 해야 합니다. 먼저 이름/DLL 쌍을 정의 해야 합니다. 그런 다음 **idl_module** 를 사용 하 여 진입점을 지정 하는 경우 이름 및 추가 특성을 지정 합니다.
+는 두 단계로 **idl_module** 를 사용 해야 합니다. 먼저 이름/DLL 쌍을 정의 해야 합니다. 그런 다음 **idl_module** 를 사용 하 여 진입점을 지정 하는 경우 이름 및 추가 특성을 지정 합니다.
 
 ## <a name="example"></a>예제
 
@@ -89,7 +89,7 @@ void FuncName(int i);
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [독립 실행형 특성](stand-alone-attributes.md)<br/>

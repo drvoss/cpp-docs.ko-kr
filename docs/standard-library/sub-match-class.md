@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685838"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376578"
 ---
 # <a name="sub_match-class"></a>sub_match 클래스
 
@@ -41,43 +41,43 @@ class sub_match
 
 ## <a name="parameters"></a>매개 변수
 
-*Bidit* \
+*입찰가*\
 부분 일치에 대한 반복기 형식입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿은 [regex_match](../standard-library/regex-functions.md#regex_match) 또는 [regex_search](../standard-library/regex-functions.md#regex_search)에 대 한 호출에서 캡처 그룹과 일치 하는 문자 시퀀스를 지정 하는 개체를 설명 합니다. [match_results Class](../standard-library/match-results-class.md) 형식의 개체는 검색에서 사용된 정규식의 각 캡처 그룹에 대해 하나씩 이러한 개체의 배열을 보유합니다.
+클래스 템플릿은 [regex_match](../standard-library/regex-functions.md#regex_match) 또는 [regex_search](../standard-library/regex-functions.md#regex_search)대한 호출에서 캡처 그룹과 일치하는 문자 시퀀스를 지정하는 개체를 설명합니다. [match_results Class](../standard-library/match-results-class.md) 형식의 개체는 검색에서 사용된 정규식의 각 캡처 그룹에 대해 하나씩 이러한 개체의 배열을 보유합니다.
 
 캡처 그룹이 개체의 데이터 멤버와 일치하지 않는 경우 `matched` 는 false를 보유하고 두 개의 반복기 `first` 와 `second` (기본 `std::pair`에서 상속됨)가 동일합니다. 캡처 그룹이 일치하는 경우 `matched` 는 true를 보유하고, 반복기 `first` 는 캡처 그룹과 일치하는 대상 시퀀스의 첫 번째 문자를 가리키며, 반복기 `second` 는 캡처 그룹과 일치하는 대상 시퀀스의 마지막 문자를 지난 한 위치를 가리킵니다. 멤버와 길이가 0인 일치의 경우 `matched` 는 true를 보유하고, 두 개의 반복기가 동일하며, 둘 다 일치 항목의 위치를 가리킵니다.
 
-길이가 0인 일치는 캡처 그룹이 어설션으로만 구성되거나 0 반복을 허용하는 반복으로 구성된 경우에 발생할 수 있습니다. 예를 들면,
+길이가 0인 일치는 캡처 그룹이 어설션으로만 구성되거나 0 반복을 허용하는 반복으로 구성된 경우에 발생할 수 있습니다. 다음은 그 예입니다.
 
 "^"은 대상 시퀀스 "a"와 일치합니다. 즉, 캡처 그룹 0에 해당하는 `sub_match` 개체는 둘 다 시퀀스의 첫 번째 문자를 가리키는 반복기를 보유합니다.
 
 "b(a*)b"는 대상 시퀀스 "bb"와 일치합니다. 즉, 캡처 그룹 1에 해당하는 `sub_match` 개체는 둘 다 시퀀스의 두 번째 문자를 가리키는 반복기를 보유합니다.
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[difference_type](#difference_type)|반복기 차이의 형식입니다.|
-|[iterator](#iterator)|반복기의 형식입니다.|
-|[value_type](#value_type)|요소의 형식입니다.|
+|[반복기](#iterator)|반복기의 형식입니다.|
+|[Value_type](#value_type)|요소의 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
-|[compare](#compare)|시퀀스에 대해 부분 일치를 비교합니다.|
+|[비교](#compare)|시퀀스에 대해 부분 일치를 비교합니다.|
 |[length](#length)|부분 일치의 길이를 반환합니다.|
-|[하도록](#matched)|일치에 성공했는지를 나타냅니다.|
-|[str](#str)|부분 일치를 문자열로 변환합니다.|
+|[일치](#matched)|일치에 성공했는지를 나타냅니다.|
+|[Str](#str)|부분 일치를 문자열로 변환합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|문자열에 부분 일치를 캐스팅합니다.|
+|[운영자 basic_string value_type><](#op_basic_string_lt_value_type_gt)|문자열에 부분 일치를 캐스팅합니다.|
 
 ## <a name="example"></a>예제
 
@@ -137,7 +137,7 @@ compare(sub) == 0
 
 **네임스페이스:** std
 
-## <a name="compare"></a>  sub_match::compare
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match::비교
 
 시퀀스에 대해 부분 일치를 비교합니다.
 
@@ -149,16 +149,16 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 비교할 부분 일치입니다.
 
-*str* \
+*Str*\
 비교할 문자열입니다.
 
-*ptr* \
+*Ptr*\
 비교할 null 종료 시퀀스입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 일치하는 시퀀스 `[first, second)`를 일치하는 시퀀스에 `[right.first, right.second)`와 비교합니다. 두 번째 멤버 함수는 일치하는 시퀀스 `[first, second)`를 문자 시퀀스에 `[right.begin(), right.end())`와 비교합니다. 세 번째 멤버 함수는 일치하는 시퀀스 `[first, second)`를 문자 시퀀스 `[right, right + std::char_traits<value_type>::length(right))`와 비교합니다.
 
@@ -170,7 +170,7 @@ int compare(const value_type *ptr) const;
 
 그렇지 않으면 양수 값
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::d이퍼런스_타입
 
 반복기 차이의 형식입니다.
 
@@ -178,11 +178,11 @@ int compare(const value_type *ptr) const;
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 typedef는 `iterator_traits<BidIt>::difference_type`의 동의어입니다.
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match::이터레이터
 
 반복기의 형식입니다.
 
@@ -190,11 +190,11 @@ typedef는 `iterator_traits<BidIt>::difference_type`의 동의어입니다.
 typedef BidIt iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 typedef는 템플릿 형식 인수 `Bidit`의 동의어입니다.
 
-## <a name="length"></a>  sub_match::length
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match::길이
 
 부분 일치의 길이를 반환합니다.
 
@@ -202,11 +202,11 @@ typedef는 템플릿 형식 인수 `Bidit`의 동의어입니다.
 difference_type length() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 일치하는 시퀀스의 길이 또는 일치하는 시퀀스가 없는 경우 0을 반환합니다.
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::일치
 
 일치에 성공했는지를 나타냅니다.
 
@@ -214,11 +214,11 @@ difference_type length() const;
 bool matched;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버는 `*this` 연결 된 캡처 그룹이 정규식 일치의 일부인 경우에만 **true** 를 가집니다.
+멤버는 연결된 `*this` 캡처 그룹이 정규식 일치의 일부인 경우에만 **true를** 유지합니다.
 
-## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::연산자 basic_string&lt;value_type&gt;
 
 문자열에 부분 일치를 캐스팅합니다.
 
@@ -226,11 +226,11 @@ bool matched;
 operator basic_string<value_type>() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 연산자는 `str()`를 반환합니다.
 
-## <a name="str"></a>  sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match::str
 
 부분 일치를 문자열로 변환합니다.
 
@@ -238,11 +238,11 @@ operator basic_string<value_type>() const;
 basic_string<value_type> str() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 `basic_string<value_type>(first, second)`를 반환합니다.
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match:value_type
 
 요소의 형식입니다.
 
@@ -250,11 +250,11 @@ basic_string<value_type> str() const;
 typedef typename iterator_traits<BidIt>::value_type value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 typedef는 `iterator_traits<BidIt>::value_type`의 동의어입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<regex>](../standard-library/regex.md)\
+[\<정규식>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)

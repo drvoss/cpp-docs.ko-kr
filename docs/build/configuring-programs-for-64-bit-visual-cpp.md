@@ -1,5 +1,5 @@
 ﻿---
-title: 64비트, x64를 대상으로 하는 C++ 프로젝트 구성
+title: 64비트, x64 대상에 대한 C++ 프로젝트 구성
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 ms.openlocfilehash: 906591544717ed107c284dfb41bbbf2dfdd3c253
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493287"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>64비트, x64를 대상으로 하는 C++ 프로젝트 구성
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>64비트, x64 대상에 대한 C++ 프로젝트 구성
 
-이 단원에는 Visual C++ 빌드 도구로 64비트 x64 하드웨어를 대상으로 지정하는 방법에 대한 항목이 포함되어 있습니다.
+이 섹션에는 Visual C++ 빌드 도구를 사용하여 64비트 x64 하드웨어를 대상으로 지정하는 방법에 대한 항목이 포함되어있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
-- [방법: 64비트, x64 플랫폼을 대상으로 하는 Viausl Studio C++ 프로젝트 구성](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [방법: 64비트, x64 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [방법: 명령줄에서 64비트, x64 호스팅된 MSVC 도구 세트를 사용하도록 설정](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [방법: 명령줄에서 64비트 x64 호스팅 MSVC 도구 집합 사용](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [일반적인 Visual C++ 64비트 마이그레이션 문제](common-visual-cpp-64-bit-migration-issues.md)
 
@@ -30,9 +30,9 @@ ms.locfileid: "69493287"
 
 ## <a name="related-sections"></a>관련 단원
 
-[.NET framework에 대한 64비트 응용 프로그램](/dotnet/framework/64-bit-apps)
+[.NET Framework 64비트 애플리케이션](/dotnet/framework/64-bit-apps)
 
-[align(C++)](../cpp/align-cpp.md)
+[align](../cpp/align-cpp.md)
 
 [/clr(공용 언어 런타임 컴파일)](reference/clr-common-language-runtime-compilation.md)
 
@@ -44,6 +44,6 @@ ms.locfileid: "69493287"
 
 [x64(amd64) 내장 목록](../intrinsics/x64-amd64-intrinsics-list.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로젝트 및 빌드 시스템](projects-and-build-systems-cpp.md)

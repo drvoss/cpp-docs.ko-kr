@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4007
 ms.assetid: 56a70c07-59a5-4fd7-80ed-63592c65cbb7
-ms.openlocfilehash: 07cbea639918de8dfa7381880c34ef3bc5656288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33ef3abfa0b24babf1288f8df4156659c83001dd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384064"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174377"
 ---
 # <a name="compiler-warning-level-2-c4007"></a>컴파일러 경고 (수준 2) C4007
 
-'function': '특성' 이어야 합니다
+' function ': ' attribute ' 여야 합니다.
 
-함수에 대 한 필수 특성을 명시적으로 지정 되지 않습니다. 예를 들어 함수 **주** 있어야는 `__cdecl` 특성입니다. 컴파일러 특성을 강제로 수행합니다.
+함수에 필요한 특성은 명시적으로 명시 되지 않습니다. 예를 들어 **main** 함수에는 `__cdecl` 특성이 있어야 합니다. 컴파일러는 특성을 강제로 적용 합니다.

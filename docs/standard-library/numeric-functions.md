@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627453"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425366"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 함수
 
@@ -61,10 +61,10 @@ Type accumulate(
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *init*\
@@ -75,11 +75,11 @@ Type accumulate(
 
 ### <a name="return-value"></a>반환 값
 
-첫 번째 템플릿 함수에 대해 지정 된 범위에 있는 *init* 의 합계 및 모든 요소 또는 두 번째 템플릿 함수의 경우 sum 연산 대신 이항 연산 *binary_op* 을 적용 한 결과 (* partialresult, *in_ iter*). 여기서 *partialresult* 는 이전 작업 응용 프로그램의 결과이 고 *in_iter* 는 범위의 다음 요소를 가리키는 반복기입니다.
+첫 번째 템플릿 함수에 대해 지정 된 범위에 있는 *init* 의 합계와 모든 요소를 반환 합니다. 두 번째 템플릿 함수의 경우에는 (* partialresult, *in_iter*)에 sum 연산 대신 *binary_op* 이항 연산을 적용 한 결과입니다. 여기서 *partialresult* 는 작업의 이전 응용 프로그램의 결과이 고 *in_iter* 는 범위의 다음 요소를 가리키는 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-초기 값은 범위가 비어 있을 때 잘 정의 된 결과가 있는지 확인 합니다 .이 경우 *init* 가 반환 됩니다. 이항 연산은 연관성이 나 비가 환 일 필요가 없습니다. 결과는 초기 값 *init* 로 초기화 된 다음 *결과* = *binary_op*(*result*, *in_iter*)는 범위를 통해 반복적으로 계산 됩니다. 여기서 *in_iter* 은 각각을 가리키는 반복기입니다. 범위의 연속 요소입니다. 범위는 유효 해야 하 고 복잡성은 범위의 크기와 선형입니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.
+초기 값은 범위가 비어 있을 때 잘 정의 된 결과가 있는지 확인 합니다 .이 경우 *init* 가 반환 됩니다. 이항 연산은 연관성이 나 비가 환 일 필요가 없습니다. 결과는 초기 값 *init* 로 초기화 된 다음 *결과* = *binary_op*(*결과*, *in_iter*)는 범위를 통해 반복적으로 계산 됩니다. 여기서 *in_iter* 은 범위의 각 연속 요소를 가리키는 반복기입니다. 범위는 유효 해야 하 고 복잡성은 범위의 크기와 선형입니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -220,10 +220,10 @@ ForwardIterator2 adjacent_difference(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
+*첫 번째*\
 입력 범위에서 해당 선행 작업과 차별화해야 하거나 지정된 다른 이진 작업에서 값 쌍을 처리해야 하는 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 입력 범위에서 해당 선행 작업과 차별화해야 하거나 지정된 다른 이진 작업에서 값 쌍을 처리해야 하는 마지막 요소를 주소 지정하는 입력 반복기입니다.
 
 *결과*\
@@ -236,13 +236,13 @@ ForwardIterator2 adjacent_difference(
 
 대상 범위 끝을 주소 지정 하는 출력 반복기입니다. `result` + (`last` - `first`).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 출력 반복기 *결과* 는 *입력 반복기와*동일한 반복기 일 수 있으므로 `adjacent_difference` 값이 현재 위치의 계산 될 수 있습니다.
 
 입력 범위에서 *1,* *a*2, 3의 값 시퀀스에 대해 첫 번째 템플릿 함수는 대상 범위에 연속 `adjacent_difference` *값 1,* 2- *a* *1,* a3- *a* *2를 저장*합니다.
 
-입력 범위에서 1, *a*2 *, 3*의 값 시퀀스에 대해 두 번째 템플릿 함수는 연속 `adjacent_difference` 값 *a* *1,* 2 *binary_op* *a* *1, 3* *binary_op* *a* *2를 저장*합니다. 대상 범위입니다.
+입력 범위에서 1, *a* *a*2, 3의 값 *a*시퀀스에 대해 두 번째 템플릿 함수는 연속 `adjacent_difference` 값 1, 2 *binary_op* 1 *,* *3*binary_op *2를*대상 범위에 저장 합니다. *binary_op* *a* *a*
 
 적용 되는 작업의 순서가 지정 되어 있으므로 이항 연산 *binary_op* 는 결합형 또는 교환 일 필요가 없습니다.
 
@@ -350,10 +350,10 @@ ForwardIterator2 exclusive_scan(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\
@@ -445,10 +445,10 @@ ForwardIterator2 inclusive_scan(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\
@@ -488,13 +488,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>매개 변수
 
-*first1* \
+*first1*\
 두 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 첫 번째 범위의 첫 번째 요소 주소를 지정하는 입력 반복기입니다.
 
-*last1* \
+*last1*\
 두 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 첫 번째 범위의 마지막 번째 요소 주소를 지정하는 입력 반복기입니다.
 
-*first2* \
+*first2*\
 첫 번째 범위와의 일반화된 내부 곱 또는 내부 곱을 계산할 두 번째 범위의 첫 번째 요소 주소를 지정하는 입력 반복기입니다.
 
 *init*\
@@ -516,11 +516,11 @@ Type inner_product(
 
 두 번째 구성원 함수는 다음 결과를 반환합니다.
 
-*init* *binary_op1* (*1* *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*1* *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*n* *binary_op2* *b*n)
 
-*init* 를 *init* *binary_op1* (*a*i *binary_op2* *b*i)로 반복적으로 대체 합니다.
+*init* 를 *init* *binary_op1* 로 반복적으로 바꿔서 *(* i *binary_op2* *b*i).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 초기 값은 범위가 비어 있을 때 잘 정의 된 결과가 있는지 확인 합니다. 이 경우 *init* 가 반환 됩니다. 이항 연산은 연관성이 나 비가 환 필요가 없습니다. 범위는 유효 해야 하 고 복잡성은 범위의 크기와 선형입니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.
 
@@ -625,10 +625,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째* \
+*첫 번째*\
 채울 범위의 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 채울 범위의 마지막 요소를 주소 지정하는 입력 반복기입니다.
 
 *value*\
@@ -636,7 +636,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 함수를 사용할 수 있도록 정수 [list](../standard-library/list.md)를 채운 다음 `list`로 [vector](../standard-library/vector.md)를 채우는 `iota` 함수의 몇 가지 사용 방법을 보여 줍니다.
+다음 예제에서는 `iota`random_shuffle[ 함수를 사용할 수 있도록 정수 ](../standard-library/list.md)list[를 채운 다음 ](../standard-library/vector.md)로 `list`vector[를 채우는 ](../standard-library/algorithm-functions.md#random_shuffle) 함수의 몇 가지 사용 방법을 보여 줍니다.
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -704,10 +704,10 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째* \
+*첫 번째*\
 지정된 이진 연산에 따라 부분적으로 합을 계산하거나 결합할 범위의 첫 번째 요소를 주소 지정하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복된 누적에 실제로 포함된 마지막 요소 하나 다음 위치의 지정된 이진 연산에 따라 부분적으로 합을 계산하거나 결합할 범위의 마지막 요소를 주소 지정하는 입력 반복기입니다.
 
 *결과*\
@@ -720,13 +720,13 @@ OutputIterator partial_sum(
 
 대상 범위 끝을 주소 지정 하는 출력 반복기: *result* + (*last* - *first*).
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 출력 반복기 *결과* 는 입력 반복기와 동일한 반복기 일 수 있으므로 부분 *합계를 계산*하는 데 사용할 수 있습니다.
 
 *값 시퀀스의 경우 1*, *a*2, ... 입력 범위의 x 인 첫 번째 템플릿 함수는 연속 부분 합계를 대상 범위에 *저장 합니다.* *N*번째 요소*는 (1*+ *a*2 + *a*3 + ... + *a*n)로 지정 됩니다.
 
-입력 범위에서 *1,* *a*2, 3의 값 시퀀스에 대해 두 번째 템플릿 *함수는 연속*된 부분 결과를 대상 범위에 저장 합니다. *N*번째 요소는 ((... ((*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ...) *binary_op* *n)* .
+입력 범위에서 *1,* *a*2, 3의 값 시퀀스에 대해 두 번째 템플릿 *함수는 연속*된 부분 결과를 대상 범위에 저장 합니다. *N*번째 요소는 ((... ((*a*1 *binary_op* *a*2) *binary_op* *3)* *binary_op* ...) n) *을* *binary_op* 합니다.
 
 적용 되는 작업의 순서가 지정 되어 있으므로 이항 연산 *binary_op* 는 결합형 또는 교환 일 필요가 없습니다.
 
@@ -840,10 +840,10 @@ Type reduce(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\
@@ -859,9 +859,9 @@ Type reduce(
 
 *Init* 에 *binary_op* 또는 `std::plus<>()`를 적용 하 고 지정 된 범위의 모든 요소를 (* partialresult, *in_iter*)에 적용 한 결과입니다. 여기서 *partialresult* 는 이전 작업 응용 프로그램의 결과이 고 *in_iter* 는 범위의 일부 요소를 가리키는 반복기입니다. *Init*를 지정 하지 않는 오버 로드에서 사용 되는 *init* 값은 `typename iterator_traits<InputIterator>::value_type{}`와 동일 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-*binary_op* 가 결합형 및 교환 되지 않는 한 `reduce` 동작은 비결 정적입니다. *Binary_op* 가 모든 요소를 수정 하거나 interval \[*first*, *last*], 포함 된 모든 반복기를 무효화 하는 경우 동작이 정의 되지 않습니다.
+*binary_op* 를 연결 하 고 교환 하지 않는 한 `reduce` 동작은 명확 하지 않습니다. *Binary_op* 요소를 수정 하거나 interval \[*first*, *last*], 포함 된 모든 반복기를 무효화 하는 경우 동작이 정의 되지 않습니다.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
@@ -893,10 +893,10 @@ ForwardIterator2 transform_exclusive_scan(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\
@@ -958,10 +958,10 @@ ForwardIterator2 transform_inclusive_scan(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\
@@ -1038,16 +1038,16 @@ Type transform_reduce(
 *exec*\
 실행 정책입니다.
 
-*첫 번째* \
-*Binary_op*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*첫 번째*\
+*Binary_op*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*first1* \
-*Binary_op1*를 사용 하 여 sum 또는 combine 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
+*first1*\
+*Binary_op1*를 사용 하 여 합계를 계산 하거나 결합할 범위의 첫 번째 요소를 주소 지정 하는 입력 반복기입니다.
 
-*마지막* \
+*마지막*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
-*last1* \
+*last1*\
 반복 된 누적에 실제로 포함 된 마지막 요소 하나 다음의 한 위치인 *binary_op1*를 사용 하 여 합계 또는 결합 범위의 마지막 요소를 주소 지정 하는 입력 반복기입니다.
 
 *결과*\

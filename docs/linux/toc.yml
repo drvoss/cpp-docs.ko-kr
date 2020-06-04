@@ -1,50 +1,52 @@
 - name: Visual Studio C++ 설명서가 있는 Linux
-  href: index.md
+  href: ../linux/index.yml
 - name: 'Linux 개발 워크로드 다운로드, 설치 및 설정'
-  href: download-install-and-setup-the-linux-development-workload.md
+  href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: 원격 Linux 컴퓨터에 연결
-  expanded: true
   items:
     - name: 원격 Linux 컴퓨터에 연결
-      href: connect-to-your-remote-linux-computer.md
+      href: ../linux/connect-to-your-remote-linux-computer.md
     - name: FIPS 규격 보안 원격 Linux 개발 설정
-      href: set-up-fips-compliant-secure-remote-linux-development.md
+      href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager 참조
-      href: connectionmanager-reference.md
-- name: 새 Linux 프로젝트 만들기
-  href: create-a-new-linux-project.md
-- name: Linux 프로젝트 구성
-  href: configure-a-linux-project.md
-- name: Linux CMake 프로젝트 만들기 및 구성
-  href: cmake-linux-project.md
-- name: Address Sanitizer를 사용하도록 Linux 프로젝트 구성
-  href: linux-asan-configuration.md
-- name: 'Linux 프로젝트 배포, 실행 및 디버그'
-  href: deploy-run-and-debug-your-linux-project.md
-- name: '자습서: Visual Studio에서 C++ 플랫폼 간 프로젝트 만들기'
-  href: ../build/get-started-linux-cmake.md
-- name: Linux 프로젝트 속성 페이지 참조
-  expanded: false
+      href: ../linux/connectionmanager-reference.md
+- name: Visual Studio에서 MSBuild를 사용하여 Linux 프로젝트 빌드
   items:
+    - name: 새 Linux 프로젝트 만들기
+      href: ../linux/create-a-new-linux-project.md
+    - name: Linux 프로젝트 구성
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Linux 프로젝트 배포, 실행 및 디버그'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
     - name: Linux 프로젝트 속성 페이지 참조
-      href: prop-pages-linux.md
-    - name: 일반 속성(Linux)
-      href: prop-pages/general-linux.md
-    - name: 디버깅 속성(Linux)
-      href: prop-pages/debugging-linux.md
-    - name: VC++ 디렉터리 속성(Linux)
-      href: prop-pages/directories-linux.md
-    - name: 소스 복사 속성(Linux)
-      href: prop-pages/copy-sources-project.md
-    - name: C/C++ 속성(Linux)
-      href: prop-pages/c-cpp-linux.md
-    - name: 링커 속성(Linux)
-      href: prop-pages/linker-linux.md
-    - name: 빌드 이벤트 속성(Linux)
-      href: prop-pages/build-events-linux.md
-    - name: 사용자 지정 빌드 단계 속성(Linux)
-      href: prop-pages/custom-build-step-linux.md
-    - name: 메이크파일 프로젝트 속성(Linux)
-      href: prop-pages/makefile-linux.md
-    - name: 원격 아카이브 속성(Linux)
-      href: prop-pages/remote-ar-linux.md
+      items:
+        - name: Linux 프로젝트 속성 페이지 참조
+          href: ../linux/prop-pages-linux.md
+        - name: 일반 속성(Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: 디버깅 속성(Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: VC++ 디렉터리 속성(Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: 소스 복사 속성(Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: C/C++ 속성(Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: 링커 속성(Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: 빌드 이벤트 속성(Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: 사용자 지정 빌드 단계 속성(Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: 메이크파일 프로젝트 속성(Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: 원격 아카이브 속성(Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Visual Studio에서 CMake를 사용하여 Linux 프로젝트 빌드
+  items:
+    - name: Linux CMake 프로젝트 만들기 및 구성
+      href: ../linux/cmake-linux-project.md
+    - name: '자습서: Visual Studio에서 C++ 플랫폼 간 프로젝트 만들기'
+      href: ../build/get-started-linux-cmake.md
+- name: Address Sanitizer를 사용하도록 Linux 프로젝트 구성
+  href: ../linux/linux-asan-configuration.md

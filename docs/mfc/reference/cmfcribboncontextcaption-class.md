@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonContextCaption 클래스
+title: CMFC리본컨텍스트 캡션 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonContextCaption
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aacbe23684914c91129d9962ae847d442cc411b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237327"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375216"
 ---
-# <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 클래스
+# <a name="cmfcribboncontextcaption-class"></a>CMFC리본컨텍스트 캡션 클래스
 
 리본 범주 맨 위 또는 컨텍스트 범주에 나타나는 색 지정된 캡션을 구현합니다.
 
@@ -31,18 +31,18 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`CMFCRibbonContextCaption::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|캡션 색을 반환합니다.|
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
-|`CMFCRibbonContextCaption::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|
+|`CMFCRibbonContextCaption::GetThisClass`|이 클래스 형식과 연결된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대한 포인터를 얻기 위해 프레임워크에서 사용됩니다.|
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 직접 인스턴스화할 수 없습니다. 합니다 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md) 클래스를 사용 하 여이 클래스 내부적으로 리본 범주에 색을 추가 합니다.
+이 클래스는 직접 인스턴스화할 수 없습니다. [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md) 클래스는 내부적으로 이 클래스를 사용하여 리본 범주에 색상을 추가합니다.
 
-리본 범주에 대 한 색을 설정 하려면 호출 [cmfcribboncategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)합니다. 컨텍스트 범주에 대 한 색을 설정 하려면 호출 [cmfcribbonbar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)합니다.
+리본 범주의 색상을 설정하려면 [CMFC리본 범주::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)를 호출합니다. 컨텍스트 범주의 색상을 설정하려면 [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)를 호출합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -58,7 +58,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 **헤더:** afxRibbonBar.h
 
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+## <a name="cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFC리본컨텍스트캡션::겟컬러
 
 캡션의 배경색을 반환합니다.
 
@@ -66,9 +66,9 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 AFX_RibbonCategoryColor GetColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-반환된 된 값은 다음 열거형된 값 중 하나일 수 있습니다.
+반환된 값은 다음 열거된 값 중 하나일 수 있습니다.
 
 - `AFX_CategoryColor_None`
 
@@ -88,26 +88,26 @@ AFX_RibbonCategoryColor GetColor() const;
 
 ### <a name="remarks"></a>설명
 
-캡션 색을 호출 하 여 설정할 수 있습니다 [cmfcribboncategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) 하거나 [cmfcribbonbar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)합니다.
+캡션의 색상은 [CMFC리본범주::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) 또는 [CMFC리본바::추가컨텍스트범주를](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)호출하여 설정할 수 있습니다.
 
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+## <a name="cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFC리본컨텍스트캡션::겟라이트탭스
 
-범주 리본 탭의 오른쪽 가장자리의 위치를 검색합니다.
+범주의 리본 탭의 오른쪽 가장자리 위치를 검색합니다.
 
 ```
 int GetRightTabX() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-둘러싸는 사각형의 오른쪽 X 값을 반환 합니다 `CMFCRibbonCategory` 개체의 리본 탭 또는 탭 잘린 경우-1 값입니다.
+`CMFCRibbonCategory` 개체의 리본 탭을 둘러싸는 사각형의 오른쪽 X 값 또는 탭이 잘린 경우 -1 값을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-[CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFC리본버튼 클래스](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFC리본카테고리 클래스](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[CMFC리본바 클래스](../../mfc/reference/cmfcribbonbar-class.md)

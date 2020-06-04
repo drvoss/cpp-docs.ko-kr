@@ -2,16 +2,16 @@
 title: exception 클래스
 ms.date: 11/04/2016
 f1_keywords:
-- exception
+- exception/std::exception
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246076"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446823"
 ---
 # <a name="exception-class"></a>exception 클래스
 
@@ -36,7 +36,7 @@ class exception {
 
 특히 이 기본 클래스는 [\<stdexcept>](../standard-library/stdexcept.md)에 정의된 표준 예외 클래스의 루트입니다. `what`에서 반환된 C 문자열 값은 기본 생성자에 의해서는 지정되지 않지만 특정 파생 클래스의 생성자에 의해 구현이 정의된 C 문자열로 정의될 수 있습니다. 멤버 함수는 예외를 발생시키지 않습니다.
 
-합니다 **int** 매개 변수를 사용 하면 메모리를 할당 되는 지정할 수 있습니다. 값을 **int** 무시 됩니다.
+**Int** 매개 변수를 사용 하면 메모리를 할당 하지 않도록 지정할 수 있습니다. **Int** 값은 무시 됩니다.
 
 > [!NOTE]
 > 생성자 `exception(const char* const &message)` 및 `exception(const char* const &message, int)`는 C++ 표준 라이브러리에 대한 Microsoft 확장입니다.

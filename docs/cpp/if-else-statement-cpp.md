@@ -9,12 +9,12 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661635"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178433"
 ---
 # <a name="if-else-statement-c"></a>if-else 문 (C++)
 
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a>이니셜라이저가 포함 된 if 문
+## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>이니셜라이저가 포함 된 if 문
 
-**Visual Studio 2017 버전 15.3 이상** (/std [: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **If** 문에는 명명 된 변수를 선언 하 고 초기화 하는 식이 포함 될 수도 있습니다. If 블록의 범위 내 에서만 변수가 필요한 경우에는이 형식의 if 문을 사용 합니다.
+**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **if** 문에는 명명 된 변수를 선언 하 고 초기화 하는 식이 포함 될 수도 있습니다. If 블록의 범위 내 에서만 변수가 필요한 경우에는이 형식의 if 문을 사용 합니다.
 
 ## <a name="example"></a>예제
 
@@ -163,9 +163,9 @@ int main()
 
 `if...else` 문의 **else** 절은 해당 **else** 문이 없는 동일한 범위에 있는 가장 가까운 이전 **if** 문과 연결 되어 있습니다.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr 문
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a>constexpr 문이 <a name="if_constexpr"> 경우
 
-**Visual Studio 2017 버전 15.3 이상** (/std [: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): 함수 템플릿에서는 **if constexpr** 문을 사용 하 여 여러 함수 오버 로드를 사용 하지 않고도 컴파일 시간 분기 결정을 내릴 수 있습니다. 예를 들어 매개 변수 압축 풀기를 처리 하는 단일 함수를 작성할 수 있습니다 (매개 변수가 없는 오버 로드 필요 없음).
+**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): 함수 템플릿에서 여러 함수 오버 로드를 사용 하지 않고도 컴파일 시간 분기 결정을 내리는 데 **if constexpr** 문을 사용할 수 있습니다. 예를 들어 매개 변수 압축 풀기를 처리 하는 단일 함수를 작성할 수 있습니다 (매개 변수가 없는 오버 로드 필요 없음).
 
 ```cpp
 template <class T, class... Rest>
@@ -186,8 +186,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[선택 문(C++)](../cpp/selection-statements-cpp.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[선택 문](../cpp/selection-statements-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [switch 문(C++)](../cpp/switch-statement-cpp.md)

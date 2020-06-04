@@ -1,8 +1,6 @@
 ---
 title: 코드 페이지
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738573"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443507"
 ---
 # <a name="code-pages"></a>코드 페이지
 
@@ -35,7 +33,7 @@ Microsoft 런타임 라이브러리는 다음 형식의 코드 페이지를 사�
 
    로캘이 시스템 기본 ANSI 코드 페이지로 설정됩니다.
 
-- 로캘 코드 페이지. 다양한 런타임 루틴의 동작은 로캘 코드 페이지를 포함하는 현재 로캘 설정에 따라 달라집니다. 자세한 내용은 [로캘 종속 루틴](../c-runtime-library/locale.md)을 참조하세요. 기본적으로 Microsoft 런타임 라이브러리의 모든 로캘 종속 루틴은 "C" 로캘에 해당하는 코드 페이지를 사용합니다. 런타임에 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 호출하여 사용 중인 로캘 코드 페이지를 변경하거나 쿼리할 수 있습니다.
+- 로캘 코드 페이지. 다양한 런타임 루틴의 동작은 로캘 코드 페이지를 포함하는 현재 로캘 설정에 따라 달라집니다. 자세한 내용은 [로캘 종속 루틴](../c-runtime-library/locale.md)을 참조 하세요. 기본적으로 Microsoft 런타임 라이브러리의 모든 로캘 종속 루틴은 "C" 로캘에 해당 하는 코드 페이지를 사용 합니다. 런타임에 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 호출하여 사용 중인 로캘 코드 페이지를 변경하거나 쿼리할 수 있습니다.
 
 - 멀티바이트 코드 페이지. 런타임 라이브러리에서 대부분의 멀티바이트 문자 루틴 동작은 현재 멀티바이트 코드 페이지 설정에 따라 달라집니다. 기본적으로 이러한 루틴은 시스템 기본 ANSI 코드 페이지를 사용합니다. 런타임 시 [_getmbcp](../c-runtime-library/reference/getmbcp.md) 및 [_setmbcp](../c-runtime-library/reference/setmbcp.md)를 각각 사용하여 멀티바이트 코드 페이지를 변경하거나 쿼리할 수 있습니다.
 

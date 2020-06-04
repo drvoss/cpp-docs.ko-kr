@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: c21b5b1ff059f26558749e904894cb5d15572519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375757"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>MBCS(멀티바이트 문자 집합) 지원
 
@@ -22,17 +22,17 @@ MBCS(멀티바이트 문자 집합)는 일본어 및 중국어와 같이 싱글�
 
 샘플에 대해서는 MFC 소스 코드 파일을 참조하세요.
 
-언어에 포함되는 문자의 갯수가 많아 큰 문자 집합이 사용되는 지역 및 국가에서 사용되는 플랫폼이라면 유니코드의 대안으로 멀티바이트 문자 집합(MBCS)을 사용하는 것이 좋습니다. MFC에서는 국제화 가능한 데이터 형식 및 C 런타임 함수를 사용하여 멀티바이트 문자 집합(MBCS)을 지원합니다. 코딩 방법은 같은 방식으로 이루어 집니다.
+언어에 큰 문자 집합이 사용되는 지역/국가에서 사용되는 플랫폼의 경우 유니코드 대신 MBCS를 사용하는 것이 가장 좋습니다. MFC에서는 국제화 가능한 데이터 형식 및 C 런타임 함수를 사용하여 MBCS를 지원합니다. 코드에서 같은 작업을 수행해야 합니다.
 
-멀티바이트 문자 집합(MBCS)에서 문자의 크기는 1바이트나 2바이트로 인코딩됩니다. 2바이트 문자에서 앞 바이트, 즉 일반적인 선행 바이트에 따라 후행 바이트가 해석되도록 특별한 의미를 가지고 있습니다. 첫 번째 바이트는 선행 바이트로 사용하도록 미리 정의된 값의 범위가 있습니다. 선행 바이트가 될 수 있는 바이트 범위는 사용 중인 코드 페이지에 따라 다릅니다. 예를들어 일본어 코드 페이지 932에는 0x81부터 0x9F 범위가 선행 바이트로 사용되지만, 한국어 코드 페이지 949에는 다른 범위를 사용합니다.
+MBCS에서 문자는 1 또는 2바이트로 인코딩됩니다. 2바이트 문자에서 첫 번째 또는 선행 바이트는 해당 바이트 및 후행 바이트가 한 문자로 해석되도록 신호를 보냅니다. 첫 번째 바이트는 선행 바이트로 사용하도록 예약된 코드 범위에서 가져옵니다. 선행 바이트가 될 수 있는 바이트 범위는 사용 중인 코드 페이지에 따라 다릅니다. 예를 들어 일본어 코드 페이지 932에는 0x81~0x9F 범위가 선행 바이트로 사용되지만, 한국어 코드 페이지 949에는 다른 범위가 사용됩니다.
 
-멀티바이트 문자 집합(MBCS) 프로그래밍에서는 다음 사항을 모두 고려해야 합니다.
+MBCS 프로그래밍에서는 다음을 모두 고려하세요.
 
-멀티바이트 문자 집합(MBCS)으로 이루어진 MBCS 환경에는 파일 및 디렉터리 이름과 같은 문자열이 나타날 수 있습니다.
+환경의 MBCS 문자는 파일 및 디렉터리 이름과 같은 문자열에 나타날 수 있습니다.
 
 ### <a name="editing-operations"></a>편집 작업
 
-MBCS 애플리케이션의 편집 작업은 바이트가 아니라 문자 단위로 수행되어야 합니다. 키보드에서 **오른쪽 화살표**를 눌렀다면 커서는 오른쪽으로 글자 한개 만큼 이동해야 합니다. **삭제** 했다면 글자 한개를 삭제해야 하며, **실행 취소** 했다면 글자 한개만 다시 삽입 해야 합니다. 한바이트 단위의 문자가 아님을 주의합니다.
+MBCS 애플리케이션의 편집 작업은 바이트가 아니라 문자 단위로 수행되어야 합니다. 캐리트는 문자를 분할해서는 안되며 **오른쪽 화살표** 키는 한 문자를 오른쪽으로 이동해야 합니다. **삭제는** 문자를 삭제해야 합니다. **취소는** 다시 삽입해야 합니다.
 
 ### <a name="string-handling"></a>문자열 처리
 
@@ -40,32 +40,32 @@ MBCS를 사용하는 애플리케이션에서 문자열 처리 시 특수한 문
 
 ### <a name="run-time-library-support"></a>런타임 라이브러리 지원
 
-C 런타임 라이브러리 및 MFC는 단일 바이트, 멀티바이트 문자 집합(MBCS) 및 유니코드 프로그래밍을 지원합니다. 단일 바이트 문자열은 `str` 계열의 런타임 함수로 처리되고 멀티바이트 문자 집합(MBCS)은 `_mbs` 계열의 함수로 처리되며 유니코드 문자열은 `wcs` 계열 함수로 처리됩니다. MFC 클래스의 맴버 함수 구현에는 "MBCS/유니코드 이식성"의 설명대로 일반적인 `str` 계열 함수들, MBCS 함수 또는 유니코드 함수에 적절히 매핑되는 이식 가능한 런타임 함수가 사용됩니다.
+C 런타임 라이브러리 및 MFC는 단일 바이트, MBCS 및 유니코드 프로그래밍을 지원합니다. 단일 바이트 문자열은 런타임 함수 `str` 패밀리로 처리되고 MBCS 문자열은 해당 `_mbs` 함수로 처리되고 유니코드 문자열은 해당 `wcs` 함수로 처리됩니다. "MBCS/유니코드 이식성"의 설명대로 MFC 클래스 멤버 함수 구현에는 적합한 환경에서 함수의 일반 `str` 패밀리, MBCS 함수 또는 유니코드 함수에 매핑되는 이식 가능한 런타임 함수가 사용됩니다.
 
 ### <a name="mbcsunicode-portability"></a>MBCS/유니코드 이식성
 
-Tchar.h 헤더 파일을 사용 하 여 빌드할 수 있습니다 단일 바이트, MBCS 및 유니코드 동일한 원본 으로부터의 응용 프로그램입니다. tchar.h에는 `str`, `_mbs` 또는 `wcs` 계열 함수에 적절히 매핑되는 *_tcs* 접두사가 붙은 매크로가 정의되어 있습니다. 멀티바이트 문자 집합(MBCS)으로 빌드하려면 `_MBCS` 상수를 정의하고. 유니코드로 빌드하려면`_UNICODE` 상수를 정의합니다. MFC 응용 프로그램에서는 `_UNICODE`가 기본적으로 정의됩니다. 자세한 내용은 [tchar.h의 제네릭 텍스트 매핑](../text/generic-text-mappings-in-tchar-h.md)을 참조하십시오.
+tchar.h 헤더 파일을 사용하여 동일한 소스에서 단일 바이트, MBCS 및 유니코드 응용 프로그램을 빌드할 수 있습니다. Tchar.h는 *_tcs* 접두번으로 고정된 `str`매크로를 `wcs` 정의하며, 이 매크로는 에 `_mbs`매핑됩니다. MBCS를 빌드하려면 기호를 `_MBCS`정의합니다. 유니코드를 빌드하려면 기호를 `_UNICODE`정의합니다. 기본적으로 `_UNICODE` MFC 응용 프로그램에 대해 정의됩니다. 자세한 내용은 [tchar.h의 일반 텍스트 매핑을](../text/generic-text-mappings-in-tchar-h.md)참조하십시오.
 
 > [!NOTE]
->  `_UNICODE`와 `_MBCS`를 모두 사용한다면 정의되지 않은 동작이 발생할 수 있습니다.
+> 동작은 둘 다 `_UNICODE` 와 `_MBCS`을 정의하는 경우 정의되지 않습니다.
 
-mbctype.h 및 mbstring.h 헤더 파일은 경우에 따라 필요할 수 있는 MBCS 관련 함수 및 매크로가 정의되어 있습니다. 예를 들어 `_ismbblead`는 문자열의 특정 바이트가 선행 바이트인지를 알려줍니다.
+Mbctype.h 및 Mbstring.h 헤더 파일에서는 특정 경우에 필요할 수 있는 MBCS 특정 함수 및 매크로를 정의합니다. 예를 들어 `_ismbblead`는 문자열의 특정 바이트가 선행 바이트인지를 알립니다.
 
-국제화 코드 관련 이식성을 위해 [유니코드](../text/support-for-unicode.md) 또는 멀티바이트 문자 집합(MBCS)으로 프로그램을 작성하세요.
+국제적인 이식성을 위해 [유니코드](../text/support-for-unicode.md) 또는 다중 바이트 문자 집합(MBCS)으로 프로그램을 코딩합니다.
 
-## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.
+## <a name="what-do-you-want-to-do"></a>수행 작업
 
 - [프로그램에서 MBCS 사용](../text/international-enabling.md)
 
-- [프로그램에서 유니코드 및 MBCS를 사용하도록 설정](../text/internationalization-strategies.md)
+- [프로그램에서 유니코드 및 MBCS 둘 다 사용](../text/internationalization-strategies.md)
 
 - [MBCS를 사용하여 국제화된 프로그램 만들기](../text/mbcs-programming-tips.md)
 
 - [MBCS 프로그래밍 요약 참조](../text/mbcs-programming-tips.md)
 
-- [바이트 크기에 따른 이식성을 고려한 일반 텍스트 매핑에 대해 알아보기](../text/generic-text-mappings-in-tchar-h.md)
+- [바이트 너비 이식성을 위한 제네릭 텍스트 매핑에 대해 알아보기](../text/generic-text-mappings-in-tchar-h.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [텍스트 및 문자열](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Visual C++에서 MBCS 지원](../text/mbcs-support-in-visual-cpp.md)

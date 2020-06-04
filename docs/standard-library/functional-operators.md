@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243766"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424766"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 연산자
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 호출 가능 개체가 비어 있는지 테스트합니다.
 
@@ -33,7 +33,7 @@ template <class Fty>
 *Fty*\
 래핑할 함수 형식입니다.
 
-*F*\
+*f*\
 함수 개체입니다.
 
 *npc*\
@@ -92,7 +92,7 @@ template <class Fty>
 *Fty*\
 래핑할 함수 형식입니다.
 
-*F*\
+*f*\
 함수 개체입니다.
 
 *npc*\

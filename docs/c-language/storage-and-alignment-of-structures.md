@@ -8,11 +8,11 @@ helpviewer_keywords:
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336174"
 ---
 # <a name="storage-and-alignment-of-structures"></a>스토리지 및 구조체의 맞춤
 
@@ -40,6 +40,6 @@ Microsoft C 컴파일러의 경우 비트 필드의 기본 크기는 **long**입
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [구조체 선언](../c-language/structure-declarations.md)

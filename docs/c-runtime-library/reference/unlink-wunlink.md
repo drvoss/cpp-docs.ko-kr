@@ -1,9 +1,11 @@
 ---
 title: _unlink, _wunlink
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlink
 - _wunlink
+- _o__unlink
+- _o__wunlink
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957387"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909280"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -59,20 +62,22 @@ int _wunlink(
 
 ### <a name="parameters"></a>매개 변수
 
-*filename*<br/>
+*이름도*<br/>
 제거할 파일의 이름입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 정상적으로 실행되면 0을 반환합니다. 그렇지 않은 경우 함수는-1을 반환 하 고 **errno** 를 **eacces**로 설정 합니다. 즉, 경로가 읽기 전용 파일 또는 디렉터리를 지정 하거나 파일 또는 경로를 찾을 수 없음을 의미 하는 **enoent (** 로 설정 합니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_Ununlink** 함수는 *filename*에 지정 된 파일을 삭제 합니다. **_wun\waga** 의 와이드문자 버전입니다. _wununun\\wun\\\\\\\\&gt의 *파일 이름* 인수 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_Unlink** 함수는 *filename*에 지정 된 파일을 삭제 합니다. **_wunlink** 은 **_unlink**의 와이드 문자 버전입니다. **_wunlink** 에 대 한 *파일 이름* 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -85,7 +90,7 @@ int _wunlink(
 |**_unlink**|\<io.h> 및 \<stdio.h>|
 |**_wunlink**|\<io.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="code-example"></a>코드 예
 
@@ -117,7 +122,7 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

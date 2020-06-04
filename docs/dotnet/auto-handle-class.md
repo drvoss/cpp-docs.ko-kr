@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 701669d1dbc6f3363f76c113dc98e38db04681a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372542"
 ---
-# <a name="autohandle-class"></a>auto_handle 클래스
+# <a name="auto_handle-class"></a>auto_handle 클래스
 
-관리 되는 형식에 가상 핸들을 포함 하는 자동 리소스 관리.
+가상 핸들을 관리 되는 형식에 포함 하는 데 사용할 수 있는 자동 리소스 관리입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,43 +36,43 @@ ref class auto_handle;
 ### <a name="parameters"></a>매개 변수
 
 *_element_type*<br/>
-포함할 관리 되는 형식입니다.
+포함할 관리형식입니다.
 
-## <a name="members"></a>멤버 
+## <a name="members"></a><a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자  
 
-|이름|설명|  
+|속성|Description|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle` 생성자입니다.|  
-|[auto_handle::~auto_handle](#tilde-auto-handle)|`auto_handle` 소멸자입니다.|  
+|[auto_handle:~auto_handle](#tilde-auto-handle)|`auto_handle` 소멸자입니다.|  
 
 ### <a name="public-methods"></a>public 메서드  
 
-|이름|설명|  
+|속성|Description|  
 |---------|-----------|  
-|[auto_handle::get](#get)|포함 된 개체를 가져옵니다.|  
-|[auto_handle::release](#release)|개체를 해제 `auto_handle` 관리 합니다.|
-|[auto_handle::reset](#reset)|현재 소유한 개체를 제거 하 고 필요에 따라 새 개체의 소유를 수행 합니다.| 
-|[auto_handle::swap](#swap)|다른 개체를 바꿉니다 `auto_handle`합니다.|  
+|[auto_handle::get](#get)|포함된 개체를 가져옵니다.|  
+|[auto_handle::release](#release)|관리에서 `auto_handle` 개체를 해제합니다.|
+|[auto_handle::reset](#reset)|현재 소유한 오브젝트를 파괴하고 선택적으로 새 개체를 소유합니다.|
+|[auto_handle::swap](#swap)|개체를 다른 `auto_handle`.|  
 
-### <a name="public-operators"></a>Public 연산자 
+### <a name="public-operators"></a>공공 사업자
 
-|이름|설명|  
-|---------|-----------| 
-|[auto_handle::operator-&gt;](#operator-arrow)|멤버 액세스 연산자입니다.|   
-|[auto_handle::operator=](#operator-assign)|대입 연산자입니다.| 
-|[auto_handle::operator auto_handle](#operator-auto-handle)|형식 캐스팅 연산자 간의 `auto_handle` 및 호환 되는 형식입니다.|  
-|[auto_handle::operator bool](#operator-bool)|연산자를 사용 하 여 `auto_handle` 조건식에서입니다.|   
-|[auto_handle::operator!](#operator-logical-not)|연산자를 사용 하 여 `auto_handle` 조건식에서입니다.|  
+|속성|Description|  
+|---------|-----------|
+|[auto_handle::연산자-&gt;](#operator-arrow)|멤버 액세스 연산자입니다.|
+|[auto_handle::operator=](#operator-assign)|대입 연산자입니다.|
+|[auto_handle::operator auto_handle](#operator-auto-handle)|호환되는 형식 `auto_handle` 간의 형식 캐스트 연산자입니다.|  
+|[auto_handle::operator bool](#operator-bool)|조건식에서 `auto_handle` 사용하기 위한 연산자입니다.|
+|[auto_handle::연산자!](#operator-logical-not)|조건식에서 `auto_handle` 사용하기 위한 연산자입니다.|  
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더 파일** \<msclr\auto_handle.h >
+**헤더 파일** \<msclr\auto_handle.h>
 
-**Namespace** msclr
+**네임스페이스** msclr
 
-## <a name="auto-handle"></a>auto_handle::auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:auto_handle
 
 `auto_handle` 생성자입니다.
 
@@ -93,7 +93,7 @@ auto_handle(
 ### <a name="parameters"></a>매개 변수
 
 *_ptr*<br/>
-개체 자체입니다.
+소유할 개체입니다.
 
 *_right*<br/>
 기존 `auto_handle`입니다.
@@ -163,7 +163,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="tilde-auto-handle"></a>auto_handle::~auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:~auto_handle
 
 `auto_handle` 소멸자입니다.
 
@@ -173,7 +173,7 @@ done
 
 ### <a name="remarks"></a>설명
 
-소멸자에는 또한 소유한 개체를 destructs 합니다.
+소멸자는 또한 소유한 개체를 소멸시입니다.
 
 ### <a name="example"></a>예제
 
@@ -210,9 +210,9 @@ ClassA destructor
 done
 ```
 
-## <a name="get"></a>auto_handle::get
+## <a name="auto_handleget"></a><a name="get"></a>auto_handle::get
 
-포함 된 개체를 가져옵니다.
+포함된 개체를 가져옵니다.
 
 ```cpp
 _element_type ^ get();
@@ -270,9 +270,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="release"></a>auto_handle::release
+## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle::릴리스
 
-개체를 해제 `auto_handle` 관리 합니다.
+관리에서 `auto_handle` 개체를 해제합니다.
 
 ```cpp
 _element_type ^ release();
@@ -280,7 +280,7 @@ _element_type ^ release();
 
 ### <a name="return-value"></a>반환 값
 
-출시 된 개체입니다.
+릴리스된 개체입니다.
 
 ### <a name="example"></a>예제
 
@@ -333,10 +333,9 @@ Hello from first A!
 done
 ```
 
-## <a name="reset"></a>auto_handle::reset
+## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle::리셋
 
-현재 소유한 개체를 제거 하 고 필요에 따라 새 개체의 소유를 수행 합니다.
-
+현재 소유한 오브젝트를 파괴하고 선택적으로 새 개체를 소유합니다.
 
 ```cpp
 void reset(
@@ -400,9 +399,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="swap"></a>auto_handle::swap
+## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle::스왑
 
-다른 개체를 바꿉니다 `auto_handle`합니다.
+개체를 다른 `auto_handle`.
 
 ```cpp
 void swap(
@@ -413,7 +412,7 @@ void swap(
 ### <a name="parameters"></a>매개 변수
 
 *_right*<br/>
-`auto_handle` 교환할 수 있는 개체입니다.
+`auto_handle` 개체를 교환할 대상입니다.
 
 ### <a name="example"></a>예제
 
@@ -442,7 +441,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="operator-arrow"></a>auto_handle::operator-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle::연산자-&gt;
 
 멤버 액세스 연산자입니다.
 
@@ -452,7 +451,7 @@ _element_type ^ operator->();
 
 ### <a name="return-value"></a>반환 값
 
-개체가 래핑하는 `auto_handle`합니다.
+에 의해 `auto_handle`래핑된 개체입니다.
 
 ### <a name="example"></a>예제
 
@@ -491,7 +490,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="operator-assign"></a>auto_handle::operator=
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle::연산자=
 
 대입 연산자입니다.
 
@@ -508,11 +507,11 @@ auto_handle<_element_type> % operator=(
 ### <a name="parameters"></a>매개 변수
 
 *_right*<br/>
-합니다 `auto_handle` 현재 할당할 `auto_handle`합니다.
+현재에 할당할 . `auto_handle` `auto_handle`
 
 ### <a name="return-value"></a>반환 값
 
-현재 `auto_handle`이제 소유 `_right`합니다.
+현재 `auto_handle`, 현재 `_right`소유 .
 
 ### <a name="example"></a>예제
 
@@ -575,10 +574,9 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="operator-auto-handle"></a>auto_handle::operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle::연산자 auto_handle
 
-형식 캐스팅 연산자 간의 `auto_handle` 및 호환 되는 형식입니다.
-
+호환되는 형식 `auto_handle` 간의 형식 캐스트 연산자입니다.
 
 ```cpp
 template<typename _other_type>
@@ -587,7 +585,7 @@ operator auto_handle<_other_type>();
 
 ### <a name="return-value"></a>반환 값
 
-현재 `auto_handle` 캐스팅할 `auto_handle<_other_type>`합니다.
+현재 `auto_handle` 캐스트입니다. `auto_handle<_other_type>`
 
 ### <a name="example"></a>예제
 
@@ -631,9 +629,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="operator-bool"></a>auto_handle::operator bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle::연산자 불
 
-연산자를 사용 하 여 `auto_handle` 조건식에서입니다.
+조건식에서 `auto_handle` 사용하기 위한 연산자입니다.
 
 ```cpp
 operator bool();
@@ -641,11 +639,11 @@ operator bool();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 래핑된 개체가 잘못 되었습니다. `false` 그렇지 않은 경우.
+`true`래핑된 개체가 유효한 경우; `false` 그렇지 않으면.
 
 ### <a name="remarks"></a>설명
 
-이 연산자를 실제로 변환 `_detail_class::_safe_bool` 는 보다 안전한 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.
+이 연산자는 `_detail_class::_safe_bool` 실제로 정수 `bool` 유형으로 변환할 수 없기 때문에 보다 안전한 것으로 변환합니다.
 
 ### <a name="example"></a>예제
 
@@ -676,9 +674,9 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="operator-logical-not"></a>auto_handle::operator!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle::연산자!
 
-연산자를 사용 하 여 `auto_handle` 조건식에서입니다.
+조건식에서 `auto_handle` 사용하기 위한 연산자입니다.
 
 ```cpp
 bool operator!();
@@ -686,7 +684,7 @@ bool operator!();
 
 ### <a name="return-value"></a>반환 값
 
-`true` 래핑된 개체 잘못 된 경우 `false` 그렇지 않은 경우.
+`true`래핑된 개체가 유효하지 않은 경우; `false` 그렇지 않으면.
 
 ### <a name="example"></a>예제
 

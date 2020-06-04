@@ -1,0 +1,125 @@
+- name: .NET 및 UWP용 구성 요소 확장
+  href: ../extensions/component-extensions-for-runtime-platforms.md
+- name: 추적 참조 연산자
+  href: ../extensions/tracking-reference-operator-cpp-component-extensions.md
+- name: 개체 연산자에 대한 핸들(^)
+  href: ../extensions/handle-to-object-operator-hat-cpp-component-extensions.md
+- name: abstract
+  href: ../extensions/abstract-cpp-component-extensions.md
+- name: 배열
+  href: ../extensions/arrays-cpp-component-extensions.md
+- name: boxing
+  href: ../extensions/boxing-cpp-component-extensions.md
+- name: 클래스 및 구조체
+  href: ../extensions/classes-and-structs-cpp-component-extensions.md
+- name: 'Platform, default 및 cli 네임스페이스'
+  href: ../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md
+- name: 형식 특성에 적합한 컴파일러 지원
+  href: ../extensions/compiler-support-for-type-traits-cpp-component-extensions.md
+- name: 상황에 맞는 키워드
+  href: ../extensions/context-sensitive-keywords-cpp-component-extensions.md
+- name: 대리자(delegate)
+  href: ../extensions/delegate-cpp-component-extensions.md
+- name: 열거형 클래스
+  href: ../extensions/enum-class-cpp-component-extensions.md
+- name: event
+  href: ../extensions/event-cpp-component-extensions.md
+- name: 예외 처리
+  href: ../extensions/exception-handling-cpp-component-extensions.md
+- name: 명시적 재정의
+  href: ../extensions/explicit-overrides-cpp-component-extensions.md
+- name: 'ref new, gcnew'
+  href: ../extensions/ref-new-gcnew-cpp-component-extensions.md
+- name: 제네릭
+  expanded: false
+  items:
+    - name: 제네릭
+      href: ../extensions/generics-cpp-component-extensions.md
+    - name: Visual C++의 제네릭 개요
+      href: ../extensions/overview-of-generics-in-visual-cpp.md
+    - name: 제네릭 함수
+      href: ../extensions/generic-functions-cpp-cli.md
+    - name: 일반 클래스
+      href: ../extensions/generic-classes-cpp-cli.md
+    - name: 제네릭 인터페이스
+      href: ../extensions/generic-interfaces-visual-cpp.md
+    - name: 제네릭 대리자
+      href: ../extensions/generic-delegates-visual-cpp.md
+    - name: 제네릭 형식 매개 변수에 대한 제약 조건
+      href: ../extensions/constraints-on-generic-type-parameters-cpp-cli.md
+    - name: 제네릭 사용
+      href: ../extensions/consuming-generics-cpp-cli.md
+    - name: 제네릭 및 템플릿
+      href: ../extensions/generics-and-templates-visual-cpp.md
+    - name: '방법: 제네릭을 사용하여 성능 개선'
+      href: ../extensions/how-to-improve-performance-with-generics-visual-cpp.md
+- name: 인터페이스 클래스
+  href: ../extensions/interface-class-cpp-component-extensions.md
+- name: 리터럴
+  href: ../extensions/literal-cpp-component-extensions.md
+- name: Windows 런타임 및 관리형 템플릿
+  href: ../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md
+- name: new(vtable의 new 슬롯)
+  href: ../extensions/new-new-slot-in-vtable-cpp-component-extensions.md
+- name: nullptr
+  href: ../extensions/nullptr-cpp-component-extensions.md
+- name: Override 지정자
+  href: ../extensions/override-specifiers-cpp-component-extensions.md
+- name: override
+  href: ../extensions/override-cpp-component-extensions.md
+- name: 부분
+  href: ../extensions/partial-cpp-component-extensions.md
+- name: 속성(property)
+  href: ../extensions/property-cpp-component-extensions.md
+- name: safe_cast
+  href: ../extensions/safe-cast-cpp-component-extensions.md
+- name: String
+  href: ../extensions/string-cpp-component-extensions.md
+- name: sealed
+  href: ../extensions/sealed-cpp-component-extensions.md
+- name: typeid
+  href: ../extensions/typeid-cpp-component-extensions.md
+- name: 사용자 정의 특성
+  expanded: false
+  items:
+    - name: 사용자 정의 특성
+      href: ../extensions/user-defined-attributes-cpp-component-extensions.md
+    - name: 특성 매개 변수 형식
+      href: ../extensions/attribute-parameter-types-cpp-component-extensions.md
+    - name: 특성 대상
+      href: ../extensions/attribute-targets-cpp-component-extensions.md
+- name: C++/CLI와 관련된 확장명
+  expanded: false
+  items:
+    - name: C++/CLI와 관련된 확장명
+      href: ../extensions/extensions-that-are-specific-to-cpp-cli.md
+    - name: __identifier
+      href: ../extensions/identifier-cpp-cli.md
+    - name: '-clr을 사용한 C 스타일 캐스트'
+      href: ../extensions/c-style-casts-with-clr-cpp-cli.md
+    - name: interior_ptr
+      expanded: false
+      items:
+        - name: interior_ptr
+          href: ../extensions/interior-ptr-cpp-cli.md
+        - name: '방법: 내부 포인터 및 관리형 배열의 선언 및 사용'
+          href: ../extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
+        - name: '방법: interior_ptr 키워드를 사용하여 값 형식 선언'
+          href: ../extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
+        - name: '방법: 내부 포인터 및 네이티브 포인터를 사용하여 함수 오버로드'
+          href: ../extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
+        - name: '방법: const 키워드를 사용하여 내부 포인터 선언'
+          href: ../extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
+    - name: pin_ptr
+      expanded: false
+      items:
+        - name: pin_ptr
+          href: ../extensions/pin-ptr-cpp-cli.md
+        - name: '방법: 포인터 및 배열 고정'
+          href: ../extensions/how-to-pin-pointers-and-arrays.md
+        - name: '방법: 고정 포인터 및 값 형식 선언'
+          href: ../extensions/how-to-declare-pinning-pointers-and-value-types.md
+    - name: 형식 전달
+      href: ../extensions/type-forwarding-cpp-cli.md
+    - name: 가변 인수 목록(...)
+      href: ../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md

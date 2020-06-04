@@ -2,16 +2,16 @@
 title: /MANIFESTINPUT(매니페스트 입력 지정)
 ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: 7b7bd54f98003d9158276fcf75fd61ffb5348585
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: d7c8351c915f5666ada9939df686c81c86ab89ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337503"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT(매니페스트 입력 지정)
 
-이미지에 포함 된 매니페스트에 포함할 매니페스트 입력 파일을 지정 합니다.
+이미지에 포함된 매니페스트에 포함되도록 매니페스트 입력 파일을 지정합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -21,16 +21,16 @@ ms.locfileid: "68606466"
 
 ### <a name="parameters"></a>매개 변수
 
-*filename*<br/>
-포함 된 매니페스트에 포함할 매니페스트 파일입니다.
+*파일*<br/>
+포함된 매니페스트에 포함할 매니페스트 파일입니다.
 
 ## <a name="remarks"></a>설명
 
-**/MANIFESTINPUT** 옵션은 실행 가능한 이미지에 포함 된 매니페스트를 만드는 데 사용할 입력 파일의 경로를 지정 합니다. 매니페스트 입력 파일이 여러 개 있는 경우 각 입력 파일에 대해 한 번씩 스위치를 여러 번 사용 합니다. 매니페스트 입력 파일이 병합 되어 포함 된 매니페스트를 만듭니다. 이 옵션을 사용 하려면 **/Smanifest: EMBED** 옵션이 필요 합니다.
+**/MANIFESTINPUT** 옵션은 실행 파일 이미지에서 포함된 매니페스트를 만드는 데 사용할 입력 파일의 경로를 지정합니다. 매니페스트 입력 파일이 여러 개인 경우 각 입력 파일에 대해 한 번씩 스위치를 여러 번 사용합니다. 매니페스트 입력 파일은 병합되어 포함된 매니페스트를 만듭니다. 이 옵션에는 **/MANIFEST:EMBED** 옵션이 필요합니다.
 
-이 옵션은 Visual Studio에서 직접 설정할 수 없습니다. 대신 프로젝트의 **추가 매니페스트 파일** 속성을 사용 하 여 포함할 추가 매니페스트 파일을 지정 합니다. 자세한 내용은 [매니페스트 도구 속성 페이지](manifest-tool-property-pages.md)를 참조 하세요.
+이 옵션은 Visual Studio에서 직접 설정할 수 없습니다. 대신 프로젝트의 **추가 매니페스트 파일** 속성을 사용하여 포함할 추가 매니페스트 파일을 지정합니다. 자세한 내용은 [매니페스트 도구 속성 페이지를](manifest-tool-property-pages.md)참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)

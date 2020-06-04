@@ -1,21 +1,21 @@
 ---
-title: 이중 (C++ COM 특성)
+title: dual (C++ COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409683"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168215"
 ---
 # <a name="dual"></a>dual
 
-.Idl 파일에 이중 인터페이스와 인터페이스를 배치합니다.
+인터페이스를 .idl 파일에 이중 인터페이스로 배치 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -23,13 +23,13 @@ ms.locfileid: "62409683"
 [dual]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-경우는 **이중** C++ 특성이 인터페이스 앞에 오면, 생성된 된.idl 파일의 라이브러리 블록 안에 배치 하는 인터페이스입니다.
+**이중** C++ 특성이 인터페이스 앞에 오면 생성 된 .idl 파일의 라이브러리 블록 안에 인터페이스가 배치 됩니다.
 
 ## <a name="example"></a>예제
 
-다음 코드는 사용 하는 특성 블록 **이중** 인터페이스 정의 하기 전에:
+다음 코드는 인터페이스 정의 앞에 **이중** 을 사용 하는 특성 블록입니다.
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -66,7 +66,7 @@ __interface IStatic : IDispatch
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [용도별 특성](attributes-by-usage.md)<br/>

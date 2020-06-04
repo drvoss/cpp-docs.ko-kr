@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 3) C4281
+title: 컴파일러 경고(수준 3) C4281
 ms.date: 11/04/2016
 f1_keywords:
 - C4281
 helpviewer_keywords:
 - C4281
 ms.assetid: a9771261-5725-4fc6-87b6-16cf92113a25
-ms.openlocfilehash: 454118aa9b9cb1fdea5fb10576ac8d26833cb08c
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 31c389f4bc0546270240c9c701be7f1e9e620db1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051688"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174143"
 ---
-# <a name="compiler-warning-level-3-c4281"></a>컴파일러 경고 (수준 3) C4281
+# <a name="compiler-warning-level-3-c4281"></a>컴파일러 경고(수준 3) C4281
 
 ' type ' 형식을 통해 ' operator > ' 재귀가 발생 했습니다.
 

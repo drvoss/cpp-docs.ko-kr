@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
 ms.openlocfilehash: 868acf0abd26a1f4b5533bb997fb9ea09a27954b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291004"
 ---
 # <a name="wide-characters"></a>와이드 문자
 
@@ -19,6 +19,6 @@ ms.locfileid: "56151964"
 
 위에서 설명한 것처럼 멀티바이트 문자 상수를 읽은 다음 `mbtowc` 런타임 함수를 사용하여 와이드 문자 상수로 변환합니다. 변환 결과가 유효한 와이드 문자 상수가 아니면 오류가 발생합니다. 어떠한 경우에도 `mbtowc` 함수가 검사하는 바이트 수는 `MB_CUR_MAX`의 값으로 제한됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자](../c-language/characters.md)

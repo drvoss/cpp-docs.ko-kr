@@ -17,35 +17,35 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fba3a3c6cd3fecbda7f46575b1d72c450c44019
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361863"
 ---
 # <a name="collections"></a>컬렉션
 
 Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위한 컬렉션 클래스를 제공합니다. 이러한 클래스는 두 가지 유형입니다.
 
-- [컬렉션 클래스에서 만든 C++ 템플릿](#_core_the_template_based_collection_classes)
+- [C++ 템플릿에서 생성된 컬렉션 클래스](#_core_the_template_based_collection_classes)
 
-- [템플릿에서 생성 되지 않은 컬렉션 클래스](#_core_the_collection_classes_not_based_on_templates)
+- [템플릿에서 생성되지 않은 컬렉션 클래스](#_core_the_collection_classes_not_based_on_templates)
 
 > [!NOTE]
->  코드에 이미 비템플릿 컬렉션 클래스가 사용되는 경우 이를 계속 사용할 수 있습니다. 고유 데이터 형식에 대해 새로운 형식 안전 컬렉션 클래스를 작성하는 경우 템플릿 기반의 신규 클래스를 사용하는 것이 좋습니다.
+> 코드에 이미 비템플릿 컬렉션 클래스가 사용되는 경우 이를 계속 사용할 수 있습니다. 고유 데이터 형식에 대해 새로운 형식 안전 컬렉션 클래스를 작성하는 경우 템플릿 기반의 신규 클래스를 사용하는 것이 좋습니다.
 
-##  <a name="_core_collection_shapes"></a> 컬렉션 모양
+## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>컬렉션 셰이프
 
 컬렉션 클래스는 "모양" 및 요소의 유형에 따라 분류됩니다. 모양은 컬렉션에서 개체가 구성 및 저장되는 방법을 나타냅니다. MFC는 세 가지 컬렉션 모양으로 목록, 배열 및 맵(사전이라고도 부름)을 제공합니다. 특정 프로그래밍 문제에 가장 적합한 컬렉션 모양을 선택하면 됩니다.
 
-제공된 세 가지 컬렉션 모양에 대해서는 이 항목의 뒷 부분에서 간단히 설명합니다. 프로그램에 대 한 가장 적합 한 것을 결정할 수 있도록 모양의 기능 비교를 참조 하세요 [컬렉션 클래스 선택에 대 한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md)합니다.
+제공된 세 가지 컬렉션 모양에 대해서는 이 항목의 뒷 부분에서 간단히 설명합니다. 프로그램에 가장 적합한 셰이프의 기능을 비교하려면 컬렉션 클래스 [선택에 대한 권장 사항을](../mfc/recommendations-for-choosing-a-collection-class.md)참조하십시오.
 
 - 목록
 
    목록 클래스는 이중으로 링크된 목록으로 구현되는 정렬되었고 인덱싱되지 않은 요소 목록을 제공합니다. 목록에는 "머리"와 "꼬리"가 포함되며, 머리 또는 꼬리에서 요소를 추가 또는 제거하거나, 가운데에서 요소를 삽입 또는 삭제는 작업은 속도가 매우 빠릅니다.
 
-- 배열
+- Array
 
    배열 클래스는 개체에 대해 동적으로 크기가 조정되고, 정렬되었으며, 정수로 인덱싱된 배열을 제공합니다.
 
@@ -53,26 +53,26 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 
    맵은 키 개체를 값 개체와 연결하는 컬렉션입니다.
 
-##  <a name="_core_the_template_based_collection_classes"></a> 템플릿 기반 컬렉션 클래스
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>템플릿 기반 컬렉션 클래스
 
-모든 형식의 개체를 포함하는 형식 안전 컬렉션을 구현하는 가장 쉬운 방법은 MFC 템플릿 기반 클래스 중 하나를 사용하는 것입니다. 이러한 클래스의 예에 대 한 MFC 샘플을 참조 하세요 [수집](../overview/visual-cpp-samples.md)합니다.
+모든 형식의 개체를 포함하는 형식 안전 컬렉션을 구현하는 가장 쉬운 방법은 MFC 템플릿 기반 클래스 중 하나를 사용하는 것입니다. 이러한 클래스의 예는 MFC 샘플 [COLLECT](../overview/visual-cpp-samples.md)를 참조하십시오.
 
 다음 표에서는 MFC 템플릿 기반의 컬렉션 클래스를 보여줍니다.
 
 ### <a name="collection-template-classes"></a>컬렉션 템플릿 클래스
 
-|컬렉션 내용|배열|목록|맵|
+|컬렉션 내용|배열|목록|지도|
 |-------------------------|------------|-----------|----------|
 |임의 형식의 개체의 컬렉션|`CArray`|`CList`|`CMap`|
 |임의 형식의 개체에 대한 포인터 컬렉션|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> 템플릿 기반 컬렉션 클래스
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>템플릿을 기반으로 하지 않는 컬렉션 클래스
 
 애플리케이션에서 이미 MFC 비템플릿 클래스가 사용되는 경우 이를 계속 사용할 수 있습니다. 하지만 새로운 컬렉션의 경우에는 템플릿 기반 클래스를 사용하는 것이 좋습니다. 다음 표에서는 템플릿을 기반으로 하지 않는 MFC 컬렉션 클래스를 보여줍니다.
 
 ### <a name="nontemplate-collection-classes"></a>비템플릿 컬렉션 클래스
 
-|배열|목록|맵|
+|배열|목록|지도|
 |------------|-----------|----------|
 |`CObArray`|`CObList`|`CMapPtrToWord`|
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|
@@ -82,7 +82,7 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-MFC 컬렉션 클래스의 특징 테이블 [컬렉션 클래스 선택에 대 한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md) 이러한 특성 (모양 외) 측면에서 MFC 컬렉션 클래스에 설명 합니다.
+컬렉션 클래스 [선택 권장 사항의](../mfc/recommendations-for-choosing-a-collection-class.md) MFC 컬렉션 클래스 테이블의 특성은 이러한 특성(셰이프 제외)으로 MFC 컬렉션 클래스를 설명합니다.
 
 - 클래스에서 C++ 템플릿이 사용되는지 여부
 
@@ -102,7 +102,7 @@ MFC 컬렉션 클래스의 특징 테이블 [컬렉션 클래스 선택에 대 �
 
 - [스택 및 큐 컬렉션 만들기](../mfc/creating-stack-and-queue-collections.md)
 
-- [CArray::Add](../mfc/reference/carray-class.md#add)
+- [배열 ::추가](../mfc/reference/carray-class.md#add)
 
 #### <a name="template-based-collection-class-tasks"></a>템플릿 기반 컬렉션 클래스 작업
 
@@ -114,7 +114,7 @@ MFC 컬렉션 클래스의 특징 테이블 [컬렉션 클래스 선택에 대 �
 
 - [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [개념](../mfc/mfc-concepts.md)<br/>
 [일반 MFC 항목](../mfc/general-mfc-topics.md)

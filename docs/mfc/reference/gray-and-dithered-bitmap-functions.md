@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322322"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751485"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 
@@ -22,7 +22,7 @@ ms.locfileid: "62322322"
 
 MFC는 비트맵이 비활성화된 컨트롤의 모양을 갖도록 하기 위한 두 가지 함수를 제공합니다.
 
-![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 및 기존 아이콘 버전 비교")
+![회색 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 아이콘 버전 및 기존 아이콘 버전 비교")
 
 |||
 |-|-|
@@ -33,18 +33,18 @@ MFC는 비트맵이 비활성화된 컨트롤의 모양을 갖도록 하기 위�
 
 MFC는 비트맵의 배경을 디더링된 패턴으로 바꾸기 위한 두 가지 함수도 제공합니다.
 
-![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "디더링된 및 기존 아이콘 버전 비교")
+![디더링된 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "디더링된 아이콘 버전 및 기존 아이콘 버전 비교")
 
 |||
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|디더링된 배경을 사용하여 비트맵을 그립니다.|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|디더링된 배경을 사용하여 비트맵을 복사합니다.|
 
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>아프드로우그레이비트맵
 
 비트맵의 회색 버전을 그립니다.
 
-```
+```cpp
 void AFXAPI AfxDrawGrayBitmap(
     CDC* pDC,
     int x,
@@ -61,7 +61,7 @@ void AFXAPI AfxDrawGrayBitmap(
 *x*<br/>
 대상 x 좌표입니다.
 
-*y*<br/>
+*Y*<br/>
 대상 y 좌표입니다.
 
 *rSrc*<br/>
@@ -74,7 +74,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 `AfxDrawGrayBitmap` 으로 그린 비트맵은 비활성화된 컨트롤의 모양을 갖습니다.
 
-![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 및 기존 아이콘 버전 비교")
+![회색 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 아이콘 버전 및 기존 아이콘 버전 비교")
 
 ### <a name="example"></a>예제
 
@@ -84,11 +84,11 @@ void AFXAPI AfxDrawGrayBitmap(
 
 **헤더:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>아fxGet그레이비트맵
 
 비트맵의 회색 버전을 복사합니다.
 
-```
+```cpp
 void AFXAPI AfxGetGrayBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -110,7 +110,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 `AfxGetGrayBitmap` 로 복사한 비트맵은 비활성화된 컨트롤의 모양을 갖습니다.
 
-![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 및 기존 아이콘 버전 비교")
+![회색 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "회색 아이콘 버전 및 기존 아이콘 버전 비교")
 
 ### <a name="example"></a>예제
 
@@ -120,11 +120,11 @@ void AFXAPI AfxGetGrayBitmap(
 
 **헤더:** afxwin.h
 
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>아프드로드디더레드비트맵
 
-비트맵 배경이 디더링된 (검사기) 패턴을 사용 하 여 대체를 그립니다.
+비트맵을 그려 배경을 디더(검사기) 패턴으로 바칩니다.
 
-```
+```cpp
 void AFXAPI AfxDrawDitheredBitmap(
     CDC* pDC,
     int x,
@@ -142,23 +142,23 @@ void AFXAPI AfxDrawDitheredBitmap(
 *x*<br/>
 대상 x 좌표입니다.
 
-*y*<br/>
+*Y*<br/>
 대상 y 좌표입니다.
 
 *rSrc*<br/>
 소스 비트맵입니다.
 
 *cr1*<br/>
-두 디더링 색상 중 하나로 일반적으로 흰색입니다.
+두 디더 색상 중 하나(일반적으로 흰색)입니다.
 
 *cr2*<br/>
-다른 디더링 색, 일반적으로 밝은 회색 (: COLOR_MENU)입니다.
+다른 디더 색상은 일반적으로 밝은 회색(COLOR_MENU)입니다.
 
 ### <a name="remarks"></a>설명
 
-두 가지 색을 사용 하 여 대상 DC에서 소스 비트맵을 그릴 (*cr1* 하 고 *인 cr2*) 체크 무늬 패턴 비트맵의 배경을 대체 합니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.
+소스 비트맵은 비트맵의 배경을 대체하는 두 가지*색상(cr1* 및 *cr2)* 체크 무늬 패턴으로 대상 DC에 그려집니다. 소스 비트맵의 배경은 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색상과 일치하는 흰색 픽셀과 모든 픽셀로 정의됩니다.
 
-![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "디더링된 및 기존 아이콘 버전 비교")
+![디더링된 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "디더링된 아이콘 버전 및 기존 아이콘 버전 비교")
 
 ### <a name="example"></a>예제
 
@@ -168,11 +168,11 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 **헤더:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>아fxGetDithered비트맵
 
-배경이 디더링된 (검사기) 패턴을 사용 하 여 대체 비트맵을 복사 합니다.
+비트맵을 복사하여 배경을 디더(검사기) 패턴으로 바칩니다.
 
-```
+```cpp
 void AFXAPI AfxGetDitheredBitmap(
     const CBitmap& rSrc,
     CBitmap* pDest,
@@ -189,16 +189,16 @@ void AFXAPI AfxGetDitheredBitmap(
 대상 비트맵입니다.
 
 *cr1*<br/>
-두 디더링 색상 중 하나로 일반적으로 흰색입니다.
+두 디더 색상 중 하나(일반적으로 흰색)입니다.
 
 *cr2*<br/>
-다른 디더링 색, 일반적으로 밝은 회색 (: COLOR_MENU)입니다.
+다른 디더 색상은 일반적으로 밝은 회색(COLOR_MENU)입니다.
 
 ### <a name="remarks"></a>설명
 
-소스 비트맵을 2 가지를 사용 하 여 대상 비트맵에 복사 됩니다 (*cr1* 하 고 *인 cr2*) 소스 비트맵의 배경을 대체 체크 무늬 패턴입니다. 소스 비트맵의 배경은 흰색 픽셀 및 모든 픽셀 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색으로 정의 됩니다.
+원본 비트맵은 소스 비트맵의 배경을 대체하는 두 가지*색상(cr1* 및 *cr2)* 체크 무늬 패턴으로 대상 비트맵에 복사됩니다. 소스 비트맵의 배경은 비트맵의 왼쪽 위 모서리에 있는 픽셀의 색상과 일치하는 흰색 픽셀과 모든 픽셀로 정의됩니다.
 
-![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![디더링된 아이콘 버전 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 
 ### <a name="example"></a>예제
 
@@ -208,6 +208,6 @@ void AFXAPI AfxGetDitheredBitmap(
 
 **헤더:** afxwin.h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)

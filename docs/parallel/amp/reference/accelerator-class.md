@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127165"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427484"
 ---
 # <a name="accelerator-class"></a>accelerator 클래스
 
@@ -57,18 +57,18 @@ ms.locfileid: "77127165"
 class accelerator;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[액셀러레이터 키 생성자](#ctor)|`accelerator` 클래스의 새 인스턴스를 초기화합니다.|
 |[~ accelerator 소멸자](#ctor)|`accelerator` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[create_view](#create_view)|이 액셀러레이터 키에 `accelerator_view` 개체를 만들어 반환 합니다.|
 |[get_all](#get_all)|사용 가능한 모든 액셀러레이터를 나타내는 `accelerator` 개체의 벡터를 반환 합니다.|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[operator!=](#operator_neq)|이 `accelerator` 개체를 다른 개체와 비교 하 고 같으면 **false** 를 반환 합니다. 그렇지 않으면 **true**를 반환 합니다.|
 |[operator=](#operator_eq)|지정 된 `accelerator` 개체의 내용을이 개체에 복사 합니다.|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|CPU `accelerator`에 대 한 문자열 상수를 가져옵니다.|
 |[dedicated_memory](#dedicated_memory)|`accelerator`에 대 한 전용 메모리를 킬로바이트 단위로 가져옵니다.|

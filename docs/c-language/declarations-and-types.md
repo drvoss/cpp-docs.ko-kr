@@ -8,11 +8,11 @@ helpviewer_keywords:
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
 ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234592"
 ---
 # <a name="declarations-and-types"></a>선언 및 형식
 
@@ -40,6 +40,6 @@ ms.locfileid: "56150248"
 
 - [확장 스토리지 클래스 특성](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 참조](../c-language/c-language-reference.md)

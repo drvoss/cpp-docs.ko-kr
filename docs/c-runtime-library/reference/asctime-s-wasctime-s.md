@@ -1,9 +1,11 @@
 ---
 title: asctime_s, _wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624781"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909417"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -71,33 +74,33 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 문자열 결과를 저장할 버퍼에 대 한 포인터입니다. 이 함수는 *Numberofelements*에 의해 지정 된 크기의 유효한 메모리 위치에 대 한 포인터를 가정 합니다.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 결과를 저장 하는 데 사용 되는 버퍼의 크기입니다.
 
 *tmSource*<br/>
 시간/날짜 구조체입니다. 이 함수는 유효한 **struct** **tm** 개체에 대 한 포인터를 가정 합니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되는 경우 0입니다. 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에서 정의됩니다. 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 반환되는 실제 오류 코드가 다음 표에 나와 있습니다.
+성공할 경우 0입니다. 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에서 정의됩니다. 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 반환되는 실제 오류 코드가 다음 표에 나와 있습니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*buffer*|*numberOfElements*|*tmSource*|반환|*버퍼* 의 값|
+|*버퍼*|*이면 numberofelements 이벤트가*|*tmSource*|반환 값|*버퍼* 의 값|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|임의의 값|임의의 값|**EINVAL**|수정 안 됨|
-|Not **NULL** (유효한 메모리를 가리킴)|0|임의의 값|**EINVAL**|수정 안 됨|
-|**NULL** 이 아님|0< 크기 < 26|임의의 값|**EINVAL**|빈 문자열|
-|**NULL** 이 아님|>= 26|**NULL**|**EINVAL**|빈 문자열|
+|**N**|모두|모두|**EINVAL**|수정 안 됨|
+|Not **NULL** (유효한 메모리를 가리킴)|0|모두|**EINVAL**|수정 안 됨|
+|**NULL** 이 아님|0< 크기 < 26|모두|**EINVAL**|빈 문자열|
+|**NULL** 이 아님|>= 26|**N**|**EINVAL**|빈 문자열|
 |**NULL** 이 아님|>= 26|시간 구성 요소에 대한 잘못된 시간 구조체 또는 범위를 벗어난 값|**EINVAL**|빈 문자열|
 
 > [!NOTE]
-> **Wasctime_s** 에 대 한 오류 조건은 크기 제한이 단어로 측정 된다는 예외를 제외 하 고 **asctime_s** 와 비슷합니다.
+> **Wasctime_s** 에 대 한 오류 조건은 크기 제한을 단어로 측정 하는 예외를 제외 하 고 **asctime_s** 와 비슷합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **Asctime** 함수는 구조체로 저장 된 시간을 문자열로 변환 합니다. *Tmsource* 값은 일반적으로 **gmtime** 또는 **localtime**에 대 한 호출에서 가져옵니다. 두 함수는 시간에 정의 된 대로 **tm** 구조를 채우는 데 사용할 수 있습니다. 넣기.
 
@@ -115,11 +118,13 @@ errno_t _wasctime_s(
 
 또한 변환된 문자열은 현지 표준 시간대 설정에 따라 조정됩니다. 현지 시간 구성에 대한 정보는 [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) 및 [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 함수를 참조하고 표준 시간대 환경 및 전역 변수 정의에 대한 정보는 [_tzset](tzset.md) 함수를 참조하세요.
 
-**Asctime_s** 에 의해 생성 된 문자열 결과에는 정확히 26 자가 포함 되며 `Wed Jan 02 02:03:55 1980\n\0`형식이 있습니다. 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자 및 null 문자는 문자열의 마지막 두 자리를 차지합니다. 두 번째 매개 변수로서 전달된 값은 이 크기 이상이어야 합니다. 더 작은 경우 오류 코드 **EINVAL**이 반환 됩니다.
+**Asctime_s** 에서 생성 되는 문자열 결과는 정확히 26 자를 포함 하며 형식은 `Wed Jan 02 02:03:55 1980\n\0`입니다. 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자 및 null 문자는 문자열의 마지막 두 자리를 차지합니다. 두 번째 매개 변수로서 전달된 값은 이 크기 이상이어야 합니다. 더 작은 경우 오류 코드 **EINVAL**이 반환 됩니다.
 
-**_wasctime_s** 는 **asctime_s**의 와이드 문자 버전입니다. **_wasctime_s** 및 **asctime_s** 는 동일 하 게 동작 합니다.
+**_wasctime_s** 은 **asctime_s**의 와이드 문자 버전입니다. **_wasctime_s** 와 **asctime_s** 는 동일 하 게 동작 합니다.
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mapping"></a>제네릭 텍스트 루틴 매핑
 
@@ -144,7 +149,7 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 
 ## <a name="example"></a>예제
 
-이 프로그램은 시스템 시간을 정수 (long) **aclock**에 배치 하 고,이를 **newtime** 으로 변환한 다음 **asctime_s** 함수를 사용 하 여 출력에 대 한 문자열 형식으로 변환 합니다.
+이 프로그램은 시스템 시간을 정수 (long) **aclock**에 배치 하 고,이를 n e n t e n t e n t e n t e n t e n t a **time** 으로 변환한 다음, **asctime_s** 함수를 사용
 
 ```C
 // crt_asctime_s.c

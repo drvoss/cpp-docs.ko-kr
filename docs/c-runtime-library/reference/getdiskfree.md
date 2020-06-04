@@ -1,8 +1,9 @@
 ---
 title: _getdiskfree
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdiskfree
+- _o__getdiskfree
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955105"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913824"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-디스크 드라이브에 대 한 정보를 사용 하 여 **_diskfree_t** 구조를 채웁니다.
+는 디스크 드라이브에 대 한 정보를 사용 하 여 **_diskfree_t** 구조를 채웁니다.
 
 > [!IMPORTANT]
 > 이 API는 Windows 런타임에서 실행되는 애플리케이션에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
@@ -54,19 +56,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>매개 변수
 
-*drive*<br/>
+*드라이브나*<br/>
 정보를 표시할 디스크 드라이브입니다.
 
 *driveinfo*<br/>
-드라이브에 대 한 정보로 채워질 **_diskfree_t** 구조체입니다.
+드라이브에 대 한 정보로 채워지는 **_diskfree_t** 구조입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 함수가 성공할 경우 반환 값은 0입니다. 함수가 실패할 경우 반환 값은 오류 코드입니다. **Errno** 값은 운영 체제에서 반환 되는 모든 오류에 대해 설정 됩니다. **Errno**에 표시 되는 오류 조건에 대 한 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조 하십시오.
 
 ## <a name="remarks"></a>설명
 
-**_Diskfree_t** 구조는 직접 .h에 정의 되어 있습니다.
+**_Diskfree_t** 구조체는 직접 h에 정의 되어 있습니다.
 
 ```C
 struct _diskfree_t {
@@ -79,13 +81,15 @@ struct _diskfree_t {
 
 이 함수는 해당 매개 변수의 유효성을 검사합니다. *Driveinfo* 포인터가 **NULL** 이거나 *드라이브가* 잘못 된 드라이브를 지정 하는 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. 올바른 드라이브의 범위는 0에서 26 사이입니다. *드라이브* 값 0은 현재 드라이브를 지정 합니다. 그 후에는 숫자가 A 드라이브를 나타내고 3은 C 드라이브를 의미 하는 것 처럼 숫자가 영어 알파벳 문자에 매핑됩니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -189,6 +193,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 ======================================================================
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>

@@ -1,23 +1,23 @@
 ---
-title: 컴파일러 경고 (수준 1) C4584
+title: 컴파일러 경고(수준 1) C4584
 ms.date: 11/04/2016
 f1_keywords:
 - C4584
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-ms.openlocfilehash: 831789f5295fcf91e83de3bd0bba12c8429e9fa3
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: fa736e8dbab775fcd6cdffc467aee1312004fa60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966229"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162155"
 ---
-# <a name="compiler-warning-level-1-c4584"></a>컴파일러 경고 (수준 1) C4584
+# <a name="compiler-warning-level-1-c4584"></a>컴파일러 경고(수준 1) C4584
 
 ' class1 ': 기본 클래스 ' class2 '은 (는) 이미 ' a.winmd '의 기본 클래스입니다.
 
-사용자가 정의한 클래스는 두 클래스에서 상속 되는데, 그 중 하나는 다른 클래스에서 상속 됩니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+사용자가 정의한 클래스는 두 클래스에서 상속 되는데, 그 중 하나는 다른 클래스에서 상속 됩니다. 다음은 그 예입니다.
 
 ```cpp
 // C4584.cpp

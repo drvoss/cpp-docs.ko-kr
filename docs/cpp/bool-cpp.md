@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301641"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190497"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -50,7 +50,7 @@ if (condexpr1) statement1;
 
 **Bool** 형식은 정수 계열 확장에 참여 합니다. **Bool** 형식의 r 값은 **int**형식의 r 값으로 변환 될 수 있으며 FALSE는 0이 되 고 TRUE는 1이 됩니다. 고유 형식으로 서, **bool** 은 오버 로드 확인에 참여 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [기본 제공 형식](../cpp/fundamental-types-cpp.md)

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 83d69df399d556025d0f7d4a8ccd714ff43a76ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368768"
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution 클래스
+# <a name="discrete_distribution-class"></a>discrete_distribution 클래스
 
 각 간격의 확률이 균일하고 폭이 균등한 간격이 있는 이산 정수 분포를 생성합니다.
 
@@ -73,7 +73,7 @@ public:
 ### <a name="parameters"></a>매개 변수
 
 *IntType*\
-정수 결과 형식으로, 기본적으로 **int**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+정수 결과 유형, 기본값은 **int.** 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="remarks"></a>설명
 
@@ -88,7 +88,7 @@ public:
 
 속성 함수 `vector<double> probabilities()`는 생성된 각 정수에 대한 개별 확률을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -175,7 +175,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::d이스크레테_분포
 
 분포를 생성합니다.
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*firstW*\
+*첫 번째W*\
 분포를 생성할 목록의 첫 번째 반복기입니다.
 
-*lastW*\
+*라스트W*\
 분포를 생성할 목록의 마지막 반복기입니다(반복기는 끝에 빈 요소를 사용하기 때문에 제외됨).
 
-*weightlist*\
+*체중 목록*\
 분포를 생성할 [initializer_list](../cpp/initializers.md)입니다.
 
-*수*\
+*횟수*\
 분포 범위의 요소 수입니다. `count==0`이면 기본 생성자와 동일합니다(항상 0 생성).
 
-*거의*\
+*낮은*\
 분포 범위의 가장 작은 값입니다.
 
-*최고*\
+*높은*\
 분포 범위의 가장 큰 값입니다.
 
-*weightfunc*\
-분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 **double**로 변환할 수 있어야 합니다.
+*웨이트 펀크*\
+분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값을 모두 **두 배로**변환할 수 있어야 합니다.
 
-*parm*\
+*파름 ()와*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>설명
@@ -230,16 +230,16 @@ explicit discrete_distribution(const param_type& parm);
 
 *firstW* 및 *lastW* 매개 변수가 포함된 반복기 범위 생성자는 간격 시퀀스 [*firstW*, *lastW*)에 대해 반복기에서 가져온 가중치 값을 사용하여 분포 개체를 생성합니다.
 
-*Weightlist* 매개 변수가 있는 이니셜라이저 목록 생성자는 이니셜라이저 목록 *weightlist*의 가중치를 사용 하 여 분포 개체를 생성 합니다.
+*가중치 목록* 매개 변수가 있는 초기화자 목록 생성자는 초기화자 목록 *가중치 목록에서*가중치를 가진 분포 개체를 구성합니다.
 
 *count*, *low*, *high* 및 *weightfunc* 매개 변수가 포함된 생성자는 다음 규칙에 따라 초기화된 분포 개체를 생성합니다.
 
 - *count* < 1, **n** = 1이라 기본 생성자와 같은 경우 항상 0을 생성합니다.
-- *count* > 0, **n** = *count*인 경우 D **= (** *높은* - *낮음*)/ **n** 이 0 보다 크면 **d** uniform 하위 범위를 사용 하 여 각 가중치가 다음과 같이 할당 됩니다. `weight[k] = weightfunc(x)`여기서 **x** = *low*  + k **= 0** , ..., **n** -1의 경우 **k** * **d** + **d** /2입니다.
+- *count* > 0, **n** = *count*인 경우 제공 **된 d** =*(높은* - *낮음)*/ **n은** **d** 균일 한 하위 `weight[k] = weightfunc(x)`범위를 사용하여 0보다 크고, 각 가중치는 다음과 같이 할당됩니다 : , **x** = *낮은* + **k** * **d** + **d** / 2, **k** = 0, ..., **n** - 1.
 
 `param_type` 매개 변수 *parm*이 포함된 생성자는 *parm*을 사용하여 분포 개체를 저장된 매개 변수 구조체로 생성합니다.
 
-## <a name="param_type"></a>  discrete_distribution::param_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::p아람_타입
 
 분포의 모든 매개 변수를 저장합니다.
 
@@ -268,26 +268,26 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
-*firstW*\
+*첫 번째W*\
 분포를 생성할 목록의 첫 번째 반복기입니다.
 
-*lastW*\
+*라스트W*\
 분포를 생성할 목록의 마지막 반복기입니다(반복기는 끝에 빈 요소를 사용하기 때문에 제외됨).
 
-*weightlist*\
+*체중 목록*\
 분포를 생성할 [initializer_list](../cpp/initializers.md)입니다.
 
-*수*\
+*횟수*\
 분포 범위의 요소 수입니다. *count*가 0이면 기본 생성자와 같습니다(항상 0 생성).
 
-*거의*\
+*낮은*\
 분포 범위의 가장 작은 값입니다.
 
-*최고*\
+*높은*\
 분포 범위의 가장 큰 값입니다.
 
-*weightfunc*\
-분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 **double**로 변환할 수 있어야 합니다.
+*웨이트 펀크*\
+분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값을 모두 **두 배로**변환할 수 있어야 합니다.
 
 *오른쪽*\
 이 매개 변수와 비교할 `param_type` 개체입니다.
@@ -296,6 +296,6 @@ struct param_type {
 
 이 매개 변수 패키지를 `operator()`에 전달하여 반환 값을 생성할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<random>](../standard-library/random.md)
+[\<임의>](../standard-library/random.md)

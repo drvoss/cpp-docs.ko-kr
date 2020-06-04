@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183113"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>링커 도구 경고 LNK4217
 
-> '*filename_1*'에 정의 된 '*symbol*' 기호는 '*function*' 함수에서 '*filename_2*'에 의해 가져옴
+> '*filename_1 .obj*'에 정의 된 '*symbol*' 기호는 '*function*' 함수에서 '*filename_2 .obj*'로 가져왔습니다.
 
-동일한 이미지의 개체 파일에 기호가 정의 되어 있어도 기호에 대해 [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) 가 지정 되었습니다. 이 경고를 해결 하려면 한정자를제거합니다.`__declspec(dllimport)`
+기호가 동일한 이미지의 개체 파일에 정의 된 경우에도 기호에 대해 [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) 가 지정 되었습니다. 이 경고를 해결 하려면 `__declspec(dllimport)` 한정자를 제거 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -62,7 +62,7 @@ lib.exe tt.obj /export:func /def
 link.exe main.obj tt.lib
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [링커 도구 경고 LNK4049](linker-tools-warning-lnk4049.md) \
 [링커 도구 경고 LNK4286](linker-tools-warning-lnk4286.md) \

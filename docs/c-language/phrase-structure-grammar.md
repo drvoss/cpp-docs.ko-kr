@@ -6,11 +6,11 @@ helpviewer_keywords:
 - grammar, phrase structure
 ms.assetid: 546c2961-5d37-4ef9-a0ce-74e7550e3899
 ms.openlocfilehash: 9dd87cd455971bbe83d76d424280e23f2e53a1fb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232378"
 ---
 # <a name="phrase-structure-grammar"></a>구 구조 문법
 
@@ -22,6 +22,6 @@ ms.locfileid: "56148441"
 
 - [외부 정의](../c-language/external-definitions.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 구문 요약](../c-language/c-language-syntax-summary.md)

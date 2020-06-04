@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,12 +16,12 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
-- rmtmp
 - _rmtmp
 helpviewer_keywords:
 - removing temporary files
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949157"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917646"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -48,7 +49,7 @@ ms.locfileid: "70949157"
 int _rmtmp( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_rmtmp** 는 닫히고 삭제 된 임시 파일의 수를 반환 합니다.
 
@@ -56,13 +57,15 @@ int _rmtmp( void );
 
 **_Rmtmp** 함수는 현재 디렉터리에 있는 모든 임시 파일을 정리 합니다. 함수는 **tmpfile**에 의해 생성 된 파일만 제거 합니다. 임시 파일을 만든 디렉터리와 동일한 디렉터리 에서만 사용 합니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -72,7 +75,7 @@ int _rmtmp( void );
 
 [tmpfile](tmpfile.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

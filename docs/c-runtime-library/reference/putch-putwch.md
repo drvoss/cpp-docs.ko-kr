@@ -1,9 +1,11 @@
 ---
 title: _putch, _putwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch
 - _putch
+- _o__putch
+- _o__putwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950042"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916183"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -63,9 +66,9 @@ wint_t _putwch(
 *c*<br/>
 출력할 문자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되면 *c*를 반환합니다. **_Putch** 가 실패할 경우 **EOF**를 반환 합니다. **_putwch** 가 실패할 경우 **weof**를 반환 합니다.
+정상적으로 실행되면 *c*를 반환합니다. **_Putch** 실패 하면 **EOF**를 반환 합니다. **_putwch** 실패할 경우 **weof**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -73,7 +76,9 @@ wint_t _putwch(
 
 **_nolock** 접미사가 있는 버전은 다른 스레드에 의한 간섭에서 보호되지 않는 점을 제외하면 동일합니다. 자세한 내용은 **_putch_nolock**, **_putwch_nolock**을 참조 하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -86,7 +91,7 @@ wint_t _putwch(
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -96,7 +101,7 @@ wint_t _putwch(
 
 [_getch](getch-getwch.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214849"
 ---
 # <a name="includelib-c"></a>includelib(C++)
 
-생성된 된.idl 파일에 포함 될.idl 또는.h 파일을 사용 하면 됩니다.
+.Idl 또는 .h 파일을 생성 된 .idl 파일에 포함 시킵니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409358"
 
 ### <a name="parameters"></a>매개 변수
 
-*name.idl*<br/>
-생성된 된.idl 파일의 일부분으로 포함 하려는.idl 파일의 이름입니다.
+*이름 .idl*<br/>
+생성 된 .idl 파일의 일부로 포함 하려는 .idl 파일의 이름입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-합니다 **includelib** C++ 특성을 한 후 생성 된.idl 파일에 포함 될.idl 또는.h 파일을 사용 하면 합니다 `importlib` 문입니다.
+**Includelib** C++ 특성을 통해 .idl 또는 .h 파일이 생성 된 .idl 파일에 포함 되 고 `importlib` 문 뒤에 포함 됩니다.
 
 ## <a name="example"></a>예제
 
-다음 코드는.cpp 파일에 표시 됩니다.
+다음 코드는 .cpp 파일에 표시 됩니다.
 
 ```cpp
 // cpp_attr_ref_includelib.cpp
@@ -56,7 +56,7 @@ ms.locfileid: "62409358"
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [독립 실행형 특성](stand-alone-attributes.md)<br/>

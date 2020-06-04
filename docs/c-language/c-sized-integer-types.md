@@ -5,11 +5,11 @@ helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
 ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313300"
 ---
 # <a name="c-sized-integer-types"></a>C 크기 조정 정수 형식
 
@@ -28,6 +28,6 @@ __int64 nHuge;      // Declares 64-bit integer
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [기본 형식의 스토리지](../c-language/storage-of-basic-types.md)

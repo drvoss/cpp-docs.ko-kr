@@ -3,11 +3,11 @@ title: 라이브러리 함수
 ms.date: 11/04/2016
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 ms.openlocfilehash: 6cb9c0197ad625487a2c0e98d176c46c4bba4139
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232789"
 ---
 # <a name="library-functions"></a>라이브러리 함수
 
@@ -73,6 +73,6 @@ ms.locfileid: "56149520"
 
 - [clock 함수](../c-language/clock-function-c.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [구현 정의 ](../c-language/implementation-defined-behavior.md)

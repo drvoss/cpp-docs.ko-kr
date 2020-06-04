@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291043"
 ---
 # <a name="union-declarations"></a>공용 구조체 선언
 
@@ -53,7 +53,7 @@ ms.locfileid: "56149260"
 > [!NOTE]
 > 두 형식의 공용 구조체가 선언되고 값이 한 개 저장되지만 다른 형식으로 공용 구조체에 액세스하는 경우 결과를 신뢰할 수 없습니다. 예를 들어, **float** 및 `int`의 공용 구조체가 선언됩니다. **float** 값이 저장되지만 나중에 `int`로 값에 액세스합니다. 그러면 **float** 값의 내부 스토리지에 따라 값이 결정됩니다. 정수 값은 신뢰할 수 없습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음은 공용 구조체의 예제입니다.
 
@@ -121,6 +121,6 @@ struct x
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213527"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 네임스페이스
 
-개체 및 팩터리 만들기와 같은 기본적인 Windows 런타임 기능을 사용 하도록 설정 합니다.
+개체 및 팩터리 생성과 같은 기본적인 Windows 런타임 기능을 사용 하도록 설정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -31,15 +31,15 @@ namespace Windows::Foundation;
 
 |이름|설명|
 |----------|-----------------|
-|[ActivateInstance 함수](activateinstance-function.md)|등록 하 고 ID가 지정 된 클래스에 정의 된 지정 된 형식의 인스턴스를 검색 합니다.|
+|[ActivateInstance 함수](activateinstance-function.md)|지정 된 클래스 ID에 정의 된 지정 된 형식의 인스턴스를 등록 하 고 검색 합니다.|
 |[GetActivationFactory 함수](getactivationfactory-function.md)|템플릿 매개 변수로 지정 된 형식에 대 한 활성화 팩터리를 검색 합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** client.h
 
-**네임스페이스:** Windows
+**네임 스페이스:** Windows
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Windows UWP 네임 스페이스](/uwp/api/)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351497"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545374"
 ---
-# <a name="callinappdomain-function"></a>call_in_appdomain 함수
+# <a name="call_in_appdomain-function"></a>call_in_appdomain 함수
 
-지정 된 응용 프로그램 도메인에서 함수를 실행합니다.
+지정 된 응용 프로그램 도메인에서 함수를 실행 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -42,28 +42,28 @@ RetType call_in_appdomain(
 #### <a name="parameters"></a>매개 변수
 
 *appdomainId*<br/>
-함수를 호출 하는 appdomain 합니다.
+함수를 호출할 appdomain입니다.
 
 *voidFunc*<br/>
-에 대 한 포인터를 `void` N 매개 변수를 사용 하는 함수 (0 < = N < = 15).
+N 개의 매개 변수를 사용 하는 `void` 함수에 대 한 포인터입니다 (0 < = N < = 15).
 
 *nonvoidFunc*<br/>
-이외에 대 한 포인터`void` N 매개 변수를 사용 하는 함수 (0 < = N < = 15).
+N 개의 매개 변수를 사용 하는 비`void` 함수에 대 한 포인터입니다 (0 < = N < = 15).
 
-*arg1...argN*<br/>
-0에 전달할 매개 변수가 15 ~ `voidFunc` 또는 `nonvoidFunc` 다른 appdomain에서.
+*arg1 ... argN*<br/>
+다른 appdomain의 `voidFunc` 또는 `nonvoidFunc`에 전달 되는 매개 변수는 0 ~ 15입니다.
 
 ## <a name="return-value"></a>반환 값
 
-실행 결과 `voidFunc` 또는 `nonvoidFunc` 지정 된 응용 프로그램 도메인입니다.
+지정 된 응용 프로그램 도메인에서 `voidFunc` 또는 `nonvoidFunc`를 실행 한 결과입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-함수의 인수를 전달할 `call_in_appdomain` CLR 형식이 아니어야 합니다.
+`call_in_appdomain`에 전달 된 함수의 인수는 CLR 형식이 아니어야 합니다.
 
 ## <a name="example"></a>예제
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -120,4 +120,4 @@ appDomain1 id = 2
 
 **헤더 파일** \<msclr\appdomain.h >
 
-**Namespace** msclr
+Msclr **네임 스페이스**

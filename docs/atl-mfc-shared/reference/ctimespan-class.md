@@ -1,5 +1,5 @@
 ---
-title: CTimeSpan 클래스
+title: C타임스팬 클래스
 ms.date: 10/18/2018
 f1_keywords:
 - CTimeSpan
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14aa5eb52e2c631a92e40ae7053c566284e00e57
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317496"
 ---
-# <a name="ctimespan-class"></a>CTimeSpan 클래스
+# <a name="ctimespan-class"></a>C타임스팬 클래스
 
-되는 시간 기간 시간 (초)의 숫자와 내부적으로 저장 됩니다.
+내부적으로 시간 범위의 초 수로 저장되는 시간입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,54 +44,54 @@ class CTimeSpan
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CTimeSpan::CTimeSpan](#ctimespan)|생성 `CTimeSpan` 다양 한 방법으로 개체입니다.|
+|[C시간스팬::C타임스팬](#ctimespan)|다양한 `CTimeSpan` 방법으로 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CTimeSpan::Format](#format)|변환 된 `CTimeSpan` 서식이 지정 된 문자열로 합니다.|
-|[CTimeSpan::GetDays](#getdays)|두 일 수를 나타내는 값을 반환 `CTimeSpan`합니다.|
-|[CTimeSpan::GetHours](#gethours)|현재 날짜 (23 23 까지입니다)의 시간 수를 나타내는 값을 반환 합니다.|
-|[CTimeSpan::GetMinutes](#getminutes)|현재 시간 (-59에서 59 사이)에 분 수를 나타내는 값을 반환 합니다.|
-|[CTimeSpan::GetSeconds](#getseconds)|현재 분 (-59에서 59 사이)에 시간 (초) 수를 나타내는 값을 반환 합니다.|
-|[CTimeSpan::GetTimeSpan](#gettimespan)|값을 반환 합니다 `CTimeSpan` 개체입니다.|
-|[CTimeSpan::GetTotalHours](#gettotalhours)|이 전체 시간의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.|
-|[CTimeSpan::GetTotalMinutes](#gettotalminutes)|이 분의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.|
-|[CTimeSpan::GetTotalSeconds](#gettotalseconds)|이 전체 시간 (초)의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.|
-|[CTimeSpan::Serialize64](#serialize64)|보관 파일에서 데이터를 serialize합니다.|
+|[C시간 범위::형식](#format)|형식이 `CTimeSpan` 지정된 문자열로 변환합니다.|
+|[C시간스팬::겟데이](#getdays)|이 의 완료 일 수를 나타내는 `CTimeSpan`값을 반환합니다.|
+|[C시간스팬::겟타임](#gethours)|현재 일의 시간(-23~23)을 나타내는 값을 반환합니다.|
+|[C시간스팬::겟분](#getminutes)|현재 시간의 분(-59~59)을 나타내는 값을 반환합니다.|
+|[C시간 스팬::겟초](#getseconds)|현재 분(-59~59)의 초 수를 나타내는 값을 반환합니다.|
+|[C시간스팬::겟타임스팬](#gettimespan)|개체의 값을 `CTimeSpan` 반환합니다.|
+|[C시간스팬::겟토탈시간](#gettotalhours)|이 의 총 완료 시간 수를 나타내는 `CTimeSpan`값을 반환합니다.|
+|[C시간스팬::겟토탈분](#gettotalminutes)|이 `CTimeSpan`에서 총 완료 분 수를 나타내는 값을 반환합니다.|
+|[C시간 범위::겟토탈초](#gettotalseconds)|이 에서 총 완료 초 수를 나타내는 `CTimeSpan`값을 반환합니다.|
+|[C시간스팬::직렬화64](#serialize64)|아카이브에서 데이터를 직렬화합니다.|
 
 ### <a name="operators"></a>연산자
 
 |||
 |-|-|
-|[operator + -](#operator_add_-)|더하고 빼는 `CTimeSpan` 개체입니다.|
-|[operator += -=](#operator_add_eq_-_eq)|더하고 빼는 `CTimeSpan` 개체를이 `CTimeSpan`합니다.|
-|[operator == < etc.](#ctimespan_comparison_operators)|두 개의 상대 시간 값을 비교합니다.|
+|[연산자 + -](#operator_add_-)|객체를 `CTimeSpan` 추가하고 뺍니다.|
+|[연산자 += -=](#operator_add_eq_-_eq)|이 `CTimeSpan`에서 개체를 `CTimeSpan` 추가하고 뺍니다.|
+|[연산자 == < 등](#ctimespan_comparison_operators)|두 개의 상대 시간 값을 비교합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CTimeSpan` 기본 클래스는 없습니다.
+`CTimeSpan`기본 클래스가 없습니다.
 
-`CTimeSpan` 함수에는 다양 한 일, 시, 분, 초 및 시간 (초)로 변환 합니다.
+`CTimeSpan`함수는 초를 일, 시간, 분 및 초의 다양한 조합으로 변환합니다.
 
-합니다 `CTimeSpan` 개체에 저장 됩니다는 **__time64_t** 구조를 8 바이트입니다.
+개체는 `CTimeSpan` 8바이트인 **__time64_t** 구조에 저장됩니다.
 
-도우미 클래스인 [CTime](../../atl-mfc-shared/reference/ctime-class.md), 절대 시간을 나타냅니다.
+동반자 클래스인 [CTime은](../../atl-mfc-shared/reference/ctime-class.md)절대 시간을 나타냅니다.
 
-합니다 `CTime` 고 `CTimeSpan` 파생 클래스 설계 되지 않았습니다. 둘 다의 크기 가상 함수가 없는 되므로 `CTime` 및 `CTimeSpan` 개체는 8 바이트 정확 하 게 합니다. 대부분의 멤버 함수는 인라인입니다.
+`CTime` 및 `CTimeSpan` 클래스는 파생을 위해 설계되지 않았습니다. 가상 함수가 없기 때문에 두 `CTime` `CTimeSpan` 개체의 크기는 정확히 8바이트입니다. 대부분의 멤버 함수는 인라인입니다.
 
-사용 하 여 대 한 자세한 내용은 `CTimeSpan`, 문서를 참조 하세요 [날짜 및 시간](../../atl-mfc-shared/date-and-time.md), 및 [시간 관리](../../c-runtime-library/time-management.md) 에 *런타임 라이브러리 참조*합니다.
+사용에 `CTimeSpan`대한 자세한 내용은 *런타임 라이브러리 참조에서* [날짜 및 시간](../../atl-mfc-shared/date-and-time.md)및 시간 [관리](../../c-runtime-library/time-management.md) 문서를 참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atltime.h
+**헤더:** 아틀타임.h
 
-##  <a name="ctimespan_comparison_operators"></a>  CTimeSpan 비교 연산자
+## <a name="ctimespan-comparison-operators"></a><a name="ctimespan_comparison_operators"></a>CTimeSpan 비교 연산자
 
-비교 연산자입니다.
+비교 연산자.
 
 ```
 bool operator==(CTimeSpan span) const throw();
@@ -104,20 +104,20 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*span*<br/>
-비교할 개체입니다.
+*범위*<br/>
+비교할 개체.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이러한 연산자는 두 개의 상대 시간 값을 비교합니다. 조건이 true 이면 TRUE 반환 그렇지 않으면 FALSE입니다.
+이러한 연산자는 두 개의 상대 시간 값을 비교합니다. 조건이 true이면 TRUE를 반환합니다. 그렇지 않으면 거짓.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]
 
-##  <a name="ctimespan"></a>  CTimeSpan::CTimeSpan
+## <a name="ctimespanctimespan"></a><a name="ctimespan"></a>C시간스팬::C타임스팬
 
-생성 `CTimeSpan` 다양 한 방법으로 개체입니다.
+다양한 `CTimeSpan` 방법으로 개체를 생성합니다.
 
 ```
 CTimeSpan() throw();
@@ -132,43 +132,43 @@ CTimeSpan(
 
 ### <a name="parameters"></a>매개 변수
 
-*timeSpanSrc*<br/>
-`CTimeSpan` 이미 존재 하는 개체입니다.
+*시간 스팬Src*<br/>
+이미 `CTimeSpan` 존재하는 개체입니다.
 
 *time*<br/>
-A **__time64_t** 시간 값에서 시간 범위를 시간 (초)입니다.
+**시간** 범위의 __time64_t 시간 값입니다.
 
-*lDays*, *nHours*, *nMins*, *nSecs*<br/>
-일, 시간, 분 및 초, 각각.
+*lDays,* *nHours,* *nMins,* *nSecs*<br/>
+일, 시간, 분 및 초각각.
 
 ### <a name="remarks"></a>설명
 
-이러한 모든 생성자를 만듭니다 `CTimeSpan` 지정된 된 상대 시간을 사용 하 여 초기화 하는 개체입니다. 각 생성자에 대 한 설명은 다음과 같습니다.
+이러한 모든 생성자는 지정된 `CTimeSpan` 상대 시간으로 초기화된 새 개체를 만듭니다. 각 생성자는 아래에 설명되어 있습니다.
 
-- `CTimeSpan( );` 초기화 되지 않은 생성 `CTimeSpan` 개체입니다.
+- `CTimeSpan( );`초기화되지 않은 `CTimeSpan` 개체를 생성합니다.
 
-- `CTimeSpan( const CTimeSpan& );` 생성 된 `CTimeSpan` 개체에서 다른 `CTimeSpan` 값입니다.
+- `CTimeSpan( const CTimeSpan& );`다른 `CTimeSpan` `CTimeSpan` 값에서 개체를 생성합니다.
 
-- `CTimeSpan( __time64_t );` 생성 된 `CTimeSpan` 에서 개체를 **__time64_t** 형식.
+- `CTimeSpan( __time64_t );``CTimeSpan` **__time64_t** 형식에서 개체를 생성합니다.
 
-- `CTimeSpan( LONG, int, int, int );` 생성 된 `CTimeSpan` 각 구성 요소를 사용 하 여 구성 요소에서 개체를 다음 범위로 제한 합니다.
+- `CTimeSpan( LONG, int, int, int );`각 구성요소가 다음 범위로 구속된 구성요소에서 `CTimeSpan` 객체를 생성합니다.
 
    |구성 요소|범위|
    |---------------|-----------|
    |*lDays*|0-25,000 (약)|
-   |*nHours*|0-23|
+   |*시간 (것)시간*|0-23|
    |*nMins*|0-59|
    |*nSecs*|0-59|
 
-Microsoft Foundation Class 라이브러리의 디버그 버전 경우 어설션 또는 시간 구성 요소 범위를 벗어났습니다. 호출 하기 전에 인수의 유효성을 검사 해야 하는 것입니다.
+Microsoft Foundation 클래스 라이브러리의 디버그 버전은 하나 이상의 시간 구성 요소가 범위를 벗어난 경우 어설션합니다. 호출하기 전에 인수의 유효성을 검사하는 것은 사용자의 책임입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]
 
-##  <a name="format"></a>  CTimeSpan::Format
+## <a name="ctimespanformat"></a><a name="format"></a>C시간 범위::형식
 
-이에 해당 하는 서식이 지정 된 문자열을 생성 `CTimeSpan`합니다.
+이에 `CTimeSpan`해당하는 서식이 지정된 문자열을 생성합니다.
 
 ```
 CString Format(LPCSTR pFormat) const;
@@ -179,164 +179,164 @@ CString Format(UINT nID) const;
 ### <a name="parameters"></a>매개 변수
 
 *pFormat*, *pszFormat*<br/>
-유사한 문자열 서식의 `printf` 문자열 서식을 지정 합니다. 서식 코드 앞에 백분율 (`%`)에 서명, 해당 바뀝니다 `CTimeSpan` 구성 요소입니다. 반환된 된 문자열에 형식 문자열에 다른 문자 변경 되지 않고 복사 됩니다. 값 및 서식 지정 코드의 의미를 `Format` 다음과 같습니다.
+`printf` 서식 문자열과 유사한 서식 문자열입니다. 백분율()`%`기호 앞에 오는 서식 지정 코드는 `CTimeSpan` 해당 구성 요소로 대체됩니다. 서식 문자열의 다른 문자는 반환된 문자열에 변경되지 않고 복사됩니다. 서식 코드의 값과 `Format` 의미는 다음과 같습니다.
 
-- **%D** 총이 일 수 `CTimeSpan`
+- **%D** 이 것의 총 일수`CTimeSpan`
 
-- **%H** 현재 날짜 시간
+- **%H** 현재 일의 시간
 
-- **%M** 현재 시간에서 분
+- **%M** 현재 시간의 분
 
-- **%S** 현재 분의 시간 (초)
+- **%S** 현재 분단위의 초
 
 - **%%** 백분율 기호
 
 *nID*<br/>
-이 형식을 식별 하는 문자열의 ID입니다.
+이 형식을 식별하는 문자열의 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CString` 서식이 지정 된 시간을 포함 하는 개체입니다.
+서식이 지정된 시간을 포함하는 `CString` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 지정 코드를 확인 하 고 코드는 위 목록에 없으면 어설션 하는 라이브러리의 디버그 버전입니다.
+라이브러리의 디버그 버전은 서식 코드를 확인하고 코드가 위의 목록에 없는 경우 어설션합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]
 
-##  <a name="getdays"></a>  CTimeSpan::GetDays
+## <a name="ctimespangetdays"></a><a name="getdays"></a>C시간스팬::겟데이
 
-두 일 수를 나타내는 값을 반환 `CTimeSpan`합니다.
+이 의 완료 일 수를 나타내는 `CTimeSpan`값을 반환합니다.
 
 ```
 LONGLONG GetDays() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-시간 범위에서 전체 24 일 수를 반환합니다. 이 값은 시간 범위에 좋지 않은 경우에 음수일 수 있습니다.
+시간 범위의 전체 24시간 일 수를 반환합니다. 시간 범위가 음수인 경우 이 값은 음수일 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-일광 절약 시간을 일으킬 수 있는 참고 `GetDays` 잠재적으로 놀라운 결과 반환 합니다. 예를 들어 DST 경우 실제로 `GetDays` 4 월에서 1 일을 시간으로 단축 됩니다 및 완료 일으로 계산 되지 않습니다 때문에 29, 30이 아닌으로 사이의 년 4 월 1 월 1 일 수를 보고 합니다.
+일광 절약 시간제는 `GetDays` 잠재적으로 놀라운 결과를 반환할 수 있습니다. 예를 들어 DST가 적용되는 `GetDays` 경우 4월 의 하루가 한 시간 단축되어 전체 일로 계산되지 않으므로 4월 1일부터 5월 1일까지의 일수를 30이 아닌 29일로 보고합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]
 
-##  <a name="gethours"></a>  CTimeSpan::GetHours
+## <a name="ctimespangethours"></a><a name="gethours"></a>C시간스팬::겟타임
 
-현재 날짜 (23 23 까지입니다)의 시간 수를 나타내는 값을 반환 합니다.
+현재 일의 시간(-23~23)을 나타내는 값을 반환합니다.
 
 ```
 LONG GetHours() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 날짜에 시간을 반환합니다. 범위는 23 23 까지입니다.
+현재 일의 시간 수를 반환합니다. 범위는 -23에서 23사이입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]
 
-##  <a name="getminutes"></a>  CTimeSpan::GetMinutes
+## <a name="ctimespangetminutes"></a><a name="getminutes"></a>C시간스팬::겟분
 
-현재 시간 (-59에서 59 사이)에 분 수를 나타내는 값을 반환 합니다.
+현재 시간의 분(-59~59)을 나타내는 값을 반환합니다.
 
 ```
 LONG GetMinutes() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 시간에서 분 수를 반환합니다. 범위는-59에서 59 사이입니다.
+현재 시간의 분 수를 반환합니다. 범위는 -59에서 59사이입니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [GetHours](#gethours)합니다.
+[GetHours에](#gethours)대한 예제를 참조하십시오.
 
-##  <a name="getseconds"></a>  CTimeSpan::GetSeconds
+## <a name="ctimespangetseconds"></a><a name="getseconds"></a>C시간 스팬::겟초
 
-현재 분 (-59에서 59 사이)에 시간 (초) 수를 나타내는 값을 반환 합니다.
+현재 분(-59~59)의 초 수를 나타내는 값을 반환합니다.
 
 ```
 LONG GetSeconds() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 분의 시간 (초) 수를 반환합니다. 범위는-59에서 59 사이입니다.
+현재 분에서 초 수를 반환합니다. 범위는 -59에서 59사이입니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [GetHours](#gethours)합니다.
+[GetHours에](#gethours)대한 예제를 참조하십시오.
 
-##  <a name="gettimespan"></a>  CTimeSpan::GetTimeSpan
+## <a name="ctimespangettimespan"></a><a name="gettimespan"></a>C시간스팬::겟타임스팬
 
-값을 반환 합니다 `CTimeSpan` 개체입니다.
+개체의 값을 `CTimeSpan` 반환합니다.
 
 ```
 __ time64_t GetTimeSpan() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 값을 반환 합니다 `CTimeSpan` 개체입니다.
+개체의 현재 값을 `CTimeSpan` 반환합니다.
 
-##  <a name="gettotalhours"></a>  CTimeSpan::GetTotalHours
+## <a name="ctimespangettotalhours"></a><a name="gettotalhours"></a>C시간스팬::겟토탈시간
 
-이 전체 시간의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.
+이 의 총 완료 시간 수를 나타내는 `CTimeSpan`값을 반환합니다.
 
 ```
 LONGLONG GetTotalHours() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 전체 시간의 총 수를 반환 합니다. `CTimeSpan`합니다.
+이 에서 총 완료 시간을 `CTimeSpan`반환합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]
 
-##  <a name="gettotalminutes"></a>  CTimeSpan::GetTotalMinutes
+## <a name="ctimespangettotalminutes"></a><a name="gettotalminutes"></a>C시간스팬::겟토탈분
 
-이 분의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.
+이 `CTimeSpan`에서 총 완료 분 수를 나타내는 값을 반환합니다.
 
 ```
 LONGLONG GetTotalMinutes() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 분의 총 수를 반환 합니다. `CTimeSpan`합니다.
+이 에서 총 완료 분 `CTimeSpan`수를 반환합니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [GetTotalHours](#gettotalhours)합니다.
+[GetTotalHours에](#gettotalhours)대한 예제를 참조하십시오.
 
-##  <a name="gettotalseconds"></a>  CTimeSpan::GetTotalSeconds
+## <a name="ctimespangettotalseconds"></a><a name="gettotalseconds"></a>C시간 범위::겟토탈초
 
-이 전체 시간 (초)의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.
+이 에서 총 완료 초 수를 나타내는 `CTimeSpan`값을 반환합니다.
 
 ```
 LONGLONG GetTotalSeconds() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 전체 시간 (초)의 총 수를 반환 합니다. `CTimeSpan`합니다.
+이 에서 총 완료 초 `CTimeSpan`수를 반환합니다.
 
 ### <a name="example"></a>예제
 
-예를 참조 하세요 [GetTotalHours](#gettotalhours)합니다.
+[GetTotalHours에](#gettotalhours)대한 예제를 참조하십시오.
 
-##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -
+## <a name="ctimespanoperator---"></a><a name="operator_add_-"></a>C시간 범위::연산자 +, -
 
-더하고 빼는 `CTimeSpan` 개체입니다.
+객체를 `CTimeSpan` 추가하고 뺍니다.
 
 ```
 CTimeSpan operator+(CTimeSpan span) const throw();
@@ -345,24 +345,24 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*span*<br/>
-에 추가할 값을 `CTimeSpan` 개체입니다.
+*범위*<br/>
+개체에 추가할 값입니다. `CTimeSpan`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CTimeSpan` 작업의 결과 나타내는 개체입니다.
+작업 `CTimeSpan` 결과를 나타내는 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-이러한 두 연산자를 사용 하면 더하기 및 빼기를 `CTimeSpan` 개체와 서로 합니다.
+이 두 연산자는 서로 객체를 추가하고 빼기 `CTimeSpan` 할 수 있습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
+## <a name="ctimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>C시간 범위::연산자 +=, -=
 
-더하고 빼는 `CTimeSpan` 개체를이 `CTimeSpan`합니다.
+이 `CTimeSpan`에서 개체를 `CTimeSpan` 추가하고 뺍니다.
 
 ```
 CTimeSpan& operator+=(CTimeSpan span) throw();
@@ -371,27 +371,27 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*span*<br/>
-에 추가할 값을 `CTimeSpan` 개체입니다.
+*범위*<br/>
+개체에 추가할 값입니다. `CTimeSpan`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 된 `CTimeSpan` 개체입니다.
+업데이트된 `CTimeSpan` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-이러한 연산자를 사용 하면 더하기 및 빼기에 `CTimeSpan` 개체를이 `CTimeSpan`합니다.
+이러한 연산자는 이 에서 개체를 `CTimeSpan` 추가하고 뺄 `CTimeSpan`수 있도록 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]
 
-##  <a name="serialize64"></a>  CTimeSpan::Serialize64
+## <a name="ctimespanserialize64"></a><a name="serialize64"></a>C시간스팬::직렬화64
 
 > [!NOTE]
->  이 메서드는 MFC 프로젝트에서 사용할 수만 있습니다.
+> 이 메서드는 MFC 프로젝트에서만 사용할 수 있습니다.
 
-보관에서 멤버 변수를 사용 하 여 연결 된 데이터를 serialize 합니다.
+아카이브에서 멤버 변수와 연결된 데이터를 직렬화합니다.
 
 ```
 CArchive& Serialize64(CArchive& ar);
@@ -400,13 +400,13 @@ CArchive& Serialize64(CArchive& ar);
 ### <a name="parameters"></a>매개 변수
 
 *ar*<br/>
-`CArchive` 업데이트 하려는 개체입니다.
+업데이트할 `CArchive` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 된 `CArchive` 개체입니다.
+업데이트된 `CArchive` 개체입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>

@@ -1,8 +1,6 @@
 ---
 title: 텍스트 및 이진 모드 파일 I/O
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738588"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444633"
 ---
 # <a name="text-and-binary-mode-file-io"></a>텍스트 및 이진 모드 파일 I/O
 
@@ -28,11 +26,11 @@ ms.locfileid: "57738588"
 
 - 현재 기본 설정을 유지하고 선택된 파일을 열 때만 대체 모드를 지정합니다.
 
-- [_set_fmode](../c-runtime-library/reference/set-fmode.md) 함수를 사용하여 새로 열린 파일에 대한 기본 모드를 변경합니다. [_get_fmode](../c-runtime-library/reference/get-fmode.md)를 사용하여 현재 기본 모드를 찾습니다. 초기 기본 설정은 텍스트 모드(**_O_TEXT**)입니다.
+- [_set_fmode](../c-runtime-library/reference/set-fmode.md) 함수를 사용하여 새로 열린 파일에 대한 기본 모드를 변경합니다. [_get_fmode](../c-runtime-library/reference/get-fmode.md)를 사용하여 현재 기본 모드를 찾습니다. 초기 기본 설정은 텍스트 모드( **_O_TEXT**)입니다.
 
 - 프로그램에서 [_fmode](../c-runtime-library/fmode.md) 전역 변수를 설정하여 직접적으로 기본 변환 모드를 변경합니다. **_set_fmode** 함수는 이 변수의 값을 설정하지만 직접 설정할 수도 있습니다.
 
-파일 열기 함수(예: [_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 또는 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md))를 호출하는 경우 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 함수에 적절한 인수를 지정하여 **_fmode**의 현재 기본 설정을 재정의할 수 있습니다. **stdin**, **stdout** 및 **stderr** 스트림은 기본적으로 항상 텍스트 모드로 열립니다. 또한 이러한 파일을 열 때 이 기본값을 재정의할 수도 있습니다. [_setmode](../c-runtime-library/reference/setmode.md)를 사용하면 파일이 열린 후 파일 설명자를 사용하여 변환 모드를 변경할 수 있습니다.
+파일 열기 함수(예: [_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 또는 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md))를 호출하는 경우 **_set_fmode** 함수에 적절한 인수를 지정하여 [_fmode](../c-runtime-library/reference/set-fmode.md)의 현재 기본 설정을 재정의할 수 있습니다. **stdin**, **stdout** 및 **stderr** 스트림은 기본적으로 항상 텍스트 모드로 열립니다. 또한 이러한 파일을 열 때 이 기본값을 재정의할 수도 있습니다. [_setmode](../c-runtime-library/reference/setmode.md)를 사용하면 파일이 열린 후 파일 설명자를 사용하여 변환 모드를 변경할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

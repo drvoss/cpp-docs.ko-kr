@@ -3,11 +3,11 @@ title: 이 설명서의 범위
 ms.date: 11/04/2016
 ms.assetid: 406e7cc0-27cb-46b4-b38e-c200f3fddafd
 ms.openlocfilehash: ac5003e24a7f0965107b712da7db0549b28831f1
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336181"
 ---
 # <a name="scope-of-this-manual"></a>이 설명서의 범위
 
@@ -15,6 +15,6 @@ C는 프로그래머가 많은 프로그래밍 결정을 내릴 수 있는 유�
 
 이 책에서는 C++ 프로그래밍을 다루지 않습니다. C++ 언어에 대한 자세한 내용은 [C++ 언어 참조](../cpp/cpp-language-reference.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 언어 참조의 구조](../c-language/organization-of-the-c-language-reference.md)

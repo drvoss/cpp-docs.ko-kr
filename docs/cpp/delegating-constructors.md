@@ -1,17 +1,17 @@
 ---
-title: 생성자 위임 (C++)
-description: 에서 C++ 위임 생성자를 사용 하 여 다른 생성자를 호출 하 고 코드 반복을 줄입니다.
+title: 생성자 위임(C++)
+description: C++에서 위임 생성기를 사용하여 다른 생성자 호출을 호출하고 코드 반복을 줄입니다.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316666"
 ---
 # <a name="delegating-constructors"></a>위임 생성자
 
-많은 클래스에는 비슷한 작업을 수행 하는 여러 생성자 (예: 매개 변수 유효성 검사)가 있습니다.
+대부분의 클래스에는 매개 변수의 유효성을 검사하는 것과 같은 유사한 작업을 수행하는 여러 생성자가 있습니다.
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-모든 유효성 검사를 수행 하는 함수를 추가 하 여 반복적인 코드를 줄일 수 있지만, 한 생성자가 일부 작업을 다른 생성자에 위임할 수 있는 경우 `class_c` 코드를 이해 하 고 유지 관리 하기가 더 쉽습니다. 위임 생성자를 추가 하려면 `constructor (. . .) : constructor (. . .)` 구문을 사용 합니다.
+모든 유효성 검사를 수행하는 함수를 추가하여 반복 코드를 줄일 수 있지만 한 `class_c` 생성자가 일부 작업을 다른 생성자로 위임할 수 있는 경우 코드를 이해하고 유지 관리하는 것이 더 쉽습니다. 위임 생성자 추가하려면 구문을 `constructor (. . .) : constructor (. . .)` 사용합니다.
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-이전 예제를 단계별로 진행 하면서 생성자는 먼저 `class_c(int)`를 호출 하는 생성자 `class_c(int, int)`를 호출 `class_c(int, int, int)` 합니다. 각 생성자는 다른 생성자에서 수행 되지 않는 작업만 수행 합니다.
+이전 예제를 단계별로 살펴보면 생성자가 `class_c(int, int, int)` 먼저 생성자 `class_c(int, int)`호출을 호출하여 `class_c(int)`생성자가 호출됩니다. 각 생성자는 다른 생성자가 수행하지 않는 작업만 수행합니다.
 
-호출 되는 첫 번째 생성자는 개체를 초기화 하 여 해당 지점에서 모든 멤버가 초기화 되도록 합니다. 다음과 같이 다른 생성자에 위임 하는 생성자에서 멤버를 초기화할 수 없습니다.
+호출된 첫 번째 생성자는 해당 시점에서 모든 멤버가 초기화되도록 개체를 초기화합니다. 다음과 같이 다른 생성자를 위임하는 생성자에서는 멤버 초기화를 수행할 수 없습니다.
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-다음 예제에서는 비정적 데이터 멤버 이니셜라이저를 사용 하는 방법을 보여 줍니다. 생성자가 지정 된 데이터 멤버를 초기화 하는 경우에도 멤버 이니셜라이저가 재정의 됩니다.
+다음 예제에서는 비정적 데이터 멤버 초기화자의 사용을 보여 주며 있습니다. 생성자가 지정된 데이터 멤버를 초기화하는 경우 멤버 초기화가 재정의됩니다.
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-생성자 위임 구문은 실수로 생성자 재귀를 만들도록 방지 하지 않습니다. Constructor1는 Constructor1를 호출 하는 Constructor2를 호출 하 고 스택 오버플로가 발생할 때까지 오류가 throw 되지 않습니다. 주기를 방지 하는 것은 사용자의 책임입니다.
+생성자 위임 구문은 생성자 재귀의 실수로 생성을 방지 하지 않습니다-Constructor1 생성자1 을 호출 하는 Constructor2 호출 생성자 1-스택 오버플로가 있을 때까지 오류가 throw 되지 않습니다. 그것은 주기를 피하기 위해 귀하의 책임.
 
 ```cpp
 class class_f{

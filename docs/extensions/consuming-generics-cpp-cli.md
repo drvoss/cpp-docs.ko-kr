@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 116d12b301af2769c4d4571a07ce604f18f67152
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516118"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172414"
 ---
 # <a name="consuming-generics-ccli"></a>제네릭 사용(C++/CLI)
 
@@ -18,13 +18,13 @@ ms.locfileid: "65516118"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 이 예제에서는 C#에 정의된 제네릭 클래스를 보여 줍니다.
 
 ### <a name="code"></a>코드
 
-```cs
+```csharp
 // consuming_generics_from_other_NET_languages.cs
 // compile with: /target:library
 // a C# program
@@ -82,7 +82,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 이 예제에서는 C#에서 작성된 어셈블리를 사용합니다.
 

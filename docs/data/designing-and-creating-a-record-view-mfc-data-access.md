@@ -9,28 +9,28 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: dfd486c397dffa87295839f5ef62de0bd1ba812a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397967"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213423"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>레코드 뷰 디자인 및 만들기  (MFC Data Access)
 
-사용 하 여 레코드 뷰 클래스를 만들 수 있습니다 합니다 [MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md)합니다. 애플리케이션 마법사를 사용하는 경우 마법사에서 레코드 뷰 클래스와 해당 클래스에 대한 대화 상자 템플릿 리소스(컨트롤은 없음)를 만듭니다. Visual C++ 대화 상자 편집기를 사용하여 대화 상자 템플릿 리소스에 컨트롤을 추가해야 합니다. 반면, 사용 하는 경우 **클래스 추가**, 먼저 대화 상자 템플릿 리소스 대화 상자에서 편집기 만들고 해야 다음 레코드 뷰 클래스를 만듭니다.
+[MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md)를 사용 하 여 레코드 뷰 클래스를 만들 수 있습니다. 애플리케이션 마법사를 사용하는 경우 마법사에서 레코드 뷰 클래스와 해당 클래스에 대한 대화 상자 템플릿 리소스(컨트롤은 없음)를 만듭니다. Visual C++ 대화 상자 편집기를 사용하여 대화 상자 템플릿 리소스에 컨트롤을 추가해야 합니다. 반면, **클래스 추가**를 사용 하는 경우 먼저 대화 상자 편집기에서 대화 상자 템플릿 리소스를 만든 다음 레코드 뷰 클래스를 만들어야 합니다.
 
 #### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>MFC 애플리케이션 마법사를 사용하여 레코드 뷰를 만들려면
 
-1. 참조 [데이터베이스 지원, MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md)합니다.
+1. [MFC 응용 프로그램 마법사, 데이터베이스 지원을](../mfc/reference/database-support-mfc-application-wizard.md)참조 하세요.
 
 #### <a name="to-design-your-form"></a>폼을 디자인하려면
 
-1. 참조 [대화 상자 편집기](../windows/dialog-editor.md)합니다.
+1. [대화 상자 편집기](../windows/dialog-editor.md)를 참조 하십시오.
 
 #### <a name="to-create-your-record-view-class"></a>레코드 뷰 클래스를 만들려면
 
-1. 참조 [MFC ODBC 소비자 추가](../mfc/reference/adding-an-mfc-odbc-consumer.md)합니다.
+1. [MFC ODBC 소비자 추가](../mfc/reference/adding-an-mfc-odbc-consumer.md)를 참조하세요.
 
 다음 항목에서는 레코드 뷰 사용에 대한 추가 세부 사항을 설명합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "62397967"
 
 - [레코드 뷰: 두 번째 레코드 집합에서 목록 상자 채우기](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [레코드 뷰(MFC Data Access)](../data/record-views-mfc-data-access.md)<br/>
 [레코드 집합(ODBC)](../data/odbc/recordset-odbc.md)<br/>

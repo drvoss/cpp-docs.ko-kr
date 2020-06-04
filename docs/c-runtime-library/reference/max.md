@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952746"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170191"
 ---
 # <a name="__max"></a>__max
 
@@ -48,15 +48,15 @@ ms.locfileid: "70952746"
 *a*, *b*<br/>
 비교될 숫자 형식의 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**__max** 는 더 큰 인수를 반환 합니다.
+**__max** 는 해당 인수 중 더 큰 값을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
 **__Max** 매크로는 두 값을 비교 하 고 더 큰 값을 반환 합니다. 인수는 서명되거나 서명되지 않은 모든 숫자 데이터 형식일 수 있습니다. 두 인수와 반환 값은 동일한 데이터 형식이어야 합니다.
 
-반환 되는 인수는 매크로에 의해 두 번 계산 됩니다. 이로 인해 인수가 계산 될 때 값을 변경 하는 식인 경우 ( `*p++`예:) 예기치 않은 결과가 발생할 수 있습니다.
+반환 되는 인수는 매크로에 의해 두 번 계산 됩니다. 인수가 계산 될 때 값을 변경 하는 식인 경우 (예: `*p++`) 예기치 않은 결과가 발생할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -68,7 +68,7 @@ ms.locfileid: "70952746"
 
 자세한 내용은 [__min](min.md)에 대한 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369440"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 클래스
 
@@ -29,13 +29,13 @@ class CCommonDialog : public CDialog
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|`CCommonDialog` 개체를 생성합니다.|
+|[C커먼디아로그::C커먼디아로그](#ccommondialog)|`CCommonDialog` 개체를 생성합니다.|
 
 ## <a name="remarks"></a>설명
 
-다음 클래스는 Windows 공용 대화 상자의의 기능을 캡슐화 합니다.
+다음 클래스는 Windows 공통 대화 상자의 기능을 캡슐화합니다.
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -69,7 +69,7 @@ class CCommonDialog : public CDialog
 
 **헤더:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>C커먼디아로그::C커먼디아로그
 
 `CCommonDialog` 개체를 생성합니다.
 
@@ -80,17 +80,17 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="parameters"></a>매개 변수
 
 *pParentWnd*<br/>
-부모 또는 소유자 창 개체 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속한 합니다. NULL 인 경우 대화 상자 개체의 부모 창 주 응용 프로그램 창으로 설정 됩니다.
+대화 상자 개체가 속한 상위 또는 소유자 창 [개체(CWnd](../../mfc/reference/cwnd-class.md)형식)를 가리킵니다. NULL인 경우 대화 상자 개체의 부모 창이 기본 응용 프로그램 창으로 설정됩니다.
 
 ### <a name="remarks"></a>설명
 
-참조 [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) 완전 한 정보에 대 한 합니다.
+전체 정보는 [CDialog::CDialog를](../../mfc/reference/cdialog-class.md#cdialog) 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CDialog 클래스](../../mfc/reference/cdialog-class.md)<br/>
+[클리언로그 클래스](../../mfc/reference/cdialog-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
-[CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)<br/>
+[CFile Dialog 클래스](../../mfc/reference/cfiledialog-class.md)<br/>
 [CFontDialog 클래스](../../mfc/reference/cfontdialog-class.md)<br/>
 [CColorDialog 클래스](../../mfc/reference/ccolordialog-class.md)<br/>
 [CPageSetupDialog 클래스](../../mfc/reference/cpagesetupdialog-class.md)<br/>

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403297"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187572"
 ---
-# <a name="variantt-relational-operators"></a>_variant_t 관계형 연산자
+# <a name="_variant_t-relational-operators"></a>_variant_t 관계형 연산자
 
 **Microsoft 전용**
 
@@ -44,21 +44,21 @@ bool operator!=(
 #### <a name="parameters"></a>매개 변수
 
 *varSrc*<br/>
-A `VARIANT` 와 비교 되는 `_variant_t` 개체입니다.
+`_variant_t` 개체와 비교할 `VARIANT`입니다.
 
-*pSrc*<br/>
-에 대 한 포인터를 `VARIANT` 와 비교 되는 `_variant_t` 개체입니다.
+*.Psrc*<br/>
+`_variant_t` 개체와 비교할 `VARIANT`에 대 한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-반환 **true** 비교를 보유 하는 경우 **false** 그렇지 않은 경우.
+비교가 포함 되 면 **true** 를 반환 하 고 그렇지 않으면 **false** 를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-비교는 `_variant_t` 개체는 `VARIANT`, 같음 또는 같지 않음을 테스트 합니다.
+`_variant_t` 개체를 `VARIANT`와 비교 하 여 같음 또는 같지 않은지 테스트 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

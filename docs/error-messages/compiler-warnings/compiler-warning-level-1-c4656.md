@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
-ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a78da51a99aa924eadbf5c9f458ceb0a75889141
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375251"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175651"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>컴파일러 경고(수준 1) C4656
 
-'symbol': 데이터 형식이 마지막 빌드 이후에 변경 된 또는 다른 곳에서 다르게 정의 된 기능
+' symbol ': 데이터 형식이 새 형식 이거나 마지막 빌드 이후 변경 되었거나 다른 곳에서 다르게 정의 되었습니다.
 
 데이터 형식을 추가하거나 변경하여 마지막으로 성공한 빌드 후 소스 코드에 대해 새롭게 만들었습니다. 편집하며 계속하기는 기존 데이터 형식에 대한 변경 내용은 지원하지 않습니다.
 

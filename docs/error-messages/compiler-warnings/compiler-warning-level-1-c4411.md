@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4411
 ms.assetid: d209452c-83bd-4333-8d0b-759ca9b4864e
-ms.openlocfilehash: 2813713a1177a551b1682fb6fef74b2920e91cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d5064b69259e0b88d51d316f5ecf06591c744f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162415"
 ---
 # <a name="compiler-warning-level-1-c4411"></a>컴파일러 경고(수준 1) C4411
 
-'identifier': 치환 레지스터가 되는 기호
+' identifier ': 기호가 치환 레지스터로 확인 됩니다.
 
-식별자는 로컬 기호 치환 레지스터가 되는 다른 기호를 사용 하 여 피연산자에 사용할 수 있습니다.
+이 식별자는 치환 레지스터를 확인 하는 로컬 기호 이므로 다른 기호와 함께 피연산자에서 사용할 수 있습니다.

@@ -1,8 +1,6 @@
 ---
 title: 하위 수준 I/O
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740146"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443109"
 ---
 # <a name="low-level-io"></a>하위 수준 I/O
 
@@ -23,7 +21,7 @@ ms.locfileid: "57740146"
 
 하위 수준 루틴에서는 다음과 같은 미리 정의된 파일 설명자를 사용하여 프로그램을 시작할 때 열린 표준 스트림에 액세스할 수 있습니다.
 
-|스트림|파일 설명자|
+|STREAM|파일 설명자|
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
@@ -33,7 +31,7 @@ ms.locfileid: "57740146"
 
 ## <a name="low-level-io-functions"></a>하위 수준 I/O 함수
 
-|함수|기능|
+|함수|사용|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|파일 닫기|
 |[_commit](../c-runtime-library/reference/commit.md)|디스크에 파일 플러시|

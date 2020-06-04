@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManager 클래스
+title: CMFC비주얼매니저 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManager
@@ -344,18 +344,18 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504705"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752839"
 ---
-# <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 클래스
+# <a name="cmfcvisualmanager-class"></a>CMFC비주얼매니저 클래스
 
 애플리케이션의 모양을 전역 수준에서 변경하는 기능을 지원합니다. `CMFCVisualManager` 클래스는 일관된 스타일을 사용하여 응용 프로그램의 GUI 컨트롤을 그리는 명령을 제공하는 클래스와 함께 작동합니다. 이러한 다른 클래스를 비주얼 관리자라고 하며 `CMFCBaseVisualManager`에서 상속됩니다.
 
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -367,191 +367,191 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|기본 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCVisualManager::AdjustFrames](#adjustframes)||
-|[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
-|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|강조 색을 사용 하 여 3D 탭을 항상 그릴지 여부를 결정 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::DestroyInstance](#destroyinstance)||
-|[CMFCVisualManager::DoDrawHeaderSortArrow](#dodrawheadersortarrow)||
-|[CMFCVisualManager::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
-|[CMFCVisualManager::DrawPushButtonWinXP](#drawpushbuttonwinxp)||
-|[CMFCVisualManager::DrawTextOnGlass](#drawtextonglass)||
-|[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|자동 숨기기 단추의 텍스트 색을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|현재 비주얼 관리자가 단추를 그리기 위해 필요로 하는 증가 된 단추 크기를 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|캡션 표시줄의 텍스트 색을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetDockingTabsBordersSize](#getdockingtabsborderssize)|도킹 된 탭 모음의 테두리 크기를 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManager::GetInstance](#getinstance)|`CMFCVisualManager` 개체에 대 한 포인터를 반환 합니다.|
-|[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|MDITabs 창의 테두리 크기를 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||
-|[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|메뉴 그림자의 너비와 높이를 결정 하는 값을 반환 합니다.|
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|현재 비주얼 관리자를 기반으로 시스템 단추의 크기를 결정 하기 위해 프레임 워크에서 호출 됩니다. 시스템 단추는 **닫기**, **최소화**, **최대화**및 **복원**명령에 매핑되는 주 프레임 캡션의 단추입니다.|
-|[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|팝업 메뉴의 테두리 크기를 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|속성 목록의 배경색을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|속성 목록의 텍스트 색을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
-|[CMFCVisualManager::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
-|[CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
-|[CMFCVisualManager::GetRibbonSliderColors](#getribbonslidercolors)||
-|[CMFCVisualManager::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
-|[CMFCVisualManager::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)||
-|[CMFCVisualManager::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)||
-|[CMFCVisualManager::GetSmartDockingTheme](#getsmartdockingtheme)|스마트 도킹 표식을 표시 하는 데 사용 되는 테마를 반환 합니다.|
-|[CMFCVisualManager::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
-|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|탭 프레임을 그릴 때 사용할 색 집합을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetTabTextColor](#gettabtextcolor)||
-|[CMFCVisualManager::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|도구 모음 단추에서 텍스트의 현재 색을 검색 하기 위해 프레임 워크에서 호출 됩니다. 이 색은 현재 비주얼 관리자 및 단추 상태에 따라 달라 집니다.|
-|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|비활성화 된 도구 모음 요소에 표시 되는 텍스트의 색을 확인 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::GetToolbarHighlightColor](#gettoolbarhighlightcolor)||
-|[CMFCVisualManager::GetToolTipInfo](#gettooltipinfo)||
-|[CMFCVisualManager::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|자동 숨기기 단추가 겹치는 지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsDockingTabHasBorder](#isdockingtabhasborder)|현재 비주얼 관리자에서 탭 도킹 막대 주위에 테두리를 그릴지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)|비활성화 된 이미지를 돋을새김으로 표시할지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|도구 모음 또는 메뉴의 비활성 이미지가 흐리게 표시 되는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::IsMenuFlatLook](#ismenuflatlook)|메뉴 단추의 모양을 평면화 할지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Visual manager에서 Office XP 스타일 메뉴를 구현 하는지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsOwnerDrawCaption](#isownerdrawcaption)|현재 visual manager에서 프레임 창의 소유자가 그린 캡션을 구현 하는지 여부를 지정 합니다.|
-|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|강조 표시 된 이미지에 그림자가 있는지 여부를 지정 합니다.|
-|[CMFCVisualManager::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|자동 숨기기 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|컨트롤 막대의 그리퍼를 그릴 때 프레임 워크에서 호출 됩니다. 사용자는 컨트롤 막대를 이동 하기 위해 그리퍼를 클릭 해야 합니다.|
-|[CMFCVisualManager::OnDrawBrowseButton](#ondrawbrowsebutton)|편집 컨트롤 ( [CMFCEditBrowseCtrl 클래스](../../mfc/reference/cmfceditbrowsectrl-class.md))에 속하는 찾아보기 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawButtonBorder](#ondrawbuttonborder)|도구 모음 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawButtonSeparator](#ondrawbuttonseparator)||
-|[CMFCVisualManager::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|캡션 표시줄 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawCaptionBarButtonBorder](#ondrawcaptionbarbuttonborder)||
-|[CMFCVisualManager::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
-|[CMFCVisualManager::OnDrawCaptionButton](#ondrawcaptionbutton)|캡션 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawCheckBox](#ondrawcheckbox)||
-|[CMFCVisualManager::OnDrawCheckBoxEx](#ondrawcheckboxex)||
-|[CMFCVisualManager::OnDrawComboBorder](#ondrawcomboborder)|콤보 상자 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawComboDropButton](#ondrawcombodropbutton)|콤보 상자 놓기 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawControlBorder](#ondrawcontrolborder)||
-|[CMFCVisualManager::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|기본 리본 이미지를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 개체 주위에 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawExpandingBox](#ondrawexpandingbox)||
-|[CMFCVisualManager::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|부동 도구 모음의 테두리를 그릴 때 프레임 워크에서 호출 됩니다. 부동 도구 모음은 미니 프레임 창으로 표시 되는 도구 모음입니다.|
-|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|헤더 컨트롤을 포함 하는 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|헤더 컨트롤 정렬 화살표를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawMenuArrowOnCustomizeList](#ondrawmenuarrowoncustomizelist)||
-|[CMFCVisualManager::OnDrawMenuBorder](#ondrawmenuborder)|메뉴 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawMenuCheck](#ondrawmenucheck)||
-|[CMFCVisualManager::OnDrawMenuItemButton](#ondrawmenuitembutton)||
-|[CMFCVisualManager::OnDrawMenuLabel](#ondrawmenulabel)||
-|[CMFCVisualManager::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
-|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|메뉴 스크롤 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawMenuShadow](#ondrawmenushadow)||
-|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|메뉴 시스템 단추 **닫기**, **최소화**, **최대화**및 **복원을**그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
-|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Outlook 표시줄의 분할자를 그릴 때 프레임 워크에서 호출 됩니다. 분할자는 컨트롤을 그룹화 하는 데 사용 되는 가로 막대형입니다.|
-|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Outlook 페이지 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다. Outlook 페이지 단추는 Outlook 표시줄 창에 표시할 수 있는 것 보다 많은 단추가 포함 된 경우에 나타납니다.|
-|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|[Cpane 클래스](../../mfc/reference/cpane-class.md)의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|에 대 한 `CPane`캡션을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawPaneDivider](#ondrawpanedivider)||
-|[CMFCVisualManager::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
-|[CMFCVisualManager::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
-|[CMFCVisualManager::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
-|[CMFCVisualManager::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|리본 메뉴에 **주 단추** 를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|리본 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|리본 메뉴에 단추 그룹을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|주 프레임의 캡션을 그릴 때 프레임 워크에서 호출 됩니다. 단, 리본 표시줄이 프레임에 통합 되어 있는 경우에만 해당 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|리본 표시줄에 있는 캡션 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCategory](#ondrawribboncategory)|리본 범주를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|리본 범주에 대 한 캡션을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
-|[CMFCVisualManager::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|리본 범주에 대 한 탭을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
-|[CMFCVisualManager::OnDrawRibbonColorPaletteBox](#ondrawribboncolorpalettebox)||
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext](#ondrawribbondefaultpanebuttoncontext)||
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|리본 창 기본값 단추를 그릴 때 프레임 워크에서 호출 됩니다. 기본 단추는 사용자가 리본 패널을 축소 하 여 리본 요소를 표시할 수 없을 때 나타납니다. 대신 기본 단추가 그려지고 리본 요소가 드롭다운 메뉴에 항목으로 추가 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
-|[CMFCVisualManager::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
-|[CMFCVisualManager::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
-|[CMFCVisualManager::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
-|[CMFCVisualManager::OnDrawRibbonLabel](#ondrawribbonlabel)|리본 레이블을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|**주** 패널에 배치 되는 리본 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다. **주** 패널은 사용자가 **기본 단추**를 클릭할 때 표시 되는 패널입니다.|
-|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|**주** 패널 주위에 프레임을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
-|[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|리본 패널을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|리본 패널의 캡션을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|[Cmfc리본 progressbar](../../mfc/reference/cmfcribbonprogressbar-class.md) 개체를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|리본 메뉴의 **빠른 액세스 도구 모음**에 구분 기호를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|최근 파일 목록 주위에 프레임을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|[Cmfc리본 슬라이더](../../mfc/reference/cmfcribbonslider-class.md) 개체의 채널을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|`CMFCRibbonSlider` 개체의 엄지 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|`CMFCRibbonSlider` 개체의 확대/축소 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|리본의 상태 표시줄 창을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|리본 메뉴 탭 집합 주위에 프레임을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawScrollButtons](#ondrawscrollbuttons)||
-|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|구분 기호를 그릴 때 프레임 워크에서 호출 됩니다. 구분 기호는 일반적으로 컨트롤 막대에서 아이콘 그룹을 구분 하는 데 사용 됩니다.|
-|[CMFCVisualManager::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
-|[CMFCVisualManager::OnDrawSpinButtons](#ondrawspinbuttons)|스핀 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|분할 창의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|분할 창에 대해 분할자 끌기 상자를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|상태 표시줄 창의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|상태 표시줄 진행률 표시기를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|상태 표시줄 크기 상자를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTab](#ondrawtab)|[Cmfctabctrl](../../mfc/reference/cmfctabctrl-class.md) 개체를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTabCloseButton](#ondrawtabclosebutton)|활성 탭에서 **닫기** 단추를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|탭 내부 (이미지, 텍스트)를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|탭 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTask](#ondrawtask)|작업 창에서 작업을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|작업 창에서 그룹 영역 주위에 테두리를 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|작업 창에서 작업 그룹에 대 한 캡션을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawTasksGroupIcon](#ondrawtasksgroupicon)||
-|[CMFCVisualManager::OnDrawTearOffCaption](#ondrawtearoffcaption)|분리 막대의 분리 캡션을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnDrawToolBoxFrame](#ondrawtoolboxframe)||
-|[CMFCVisualManager::OnEraseMDIClientArea](#onerasemdiclientarea)|MDI 클라이언트 영역을 지울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnErasePopupWindowButton](#onerasepopupwindowbutton)||
-|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|탭 창에서 탭 영역을 지울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|탭 단추의 아이콘과 텍스트를 지울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnEraseTabsFrame](#onerasetabsframe)|탭 프레임을 지울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|자동 숨기기 단추의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillBarBackground](#onfillbarbackground)|컨트롤 막대의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillButtonInterior](#onfillbuttoninterior)|도구 모음 단추의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
-|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|사용자 지정 대화 상자의 일부가 되는 명령 목록에 속하는 도구 모음 단추의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|헤더 컨트롤의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|미니 프레임 창의 캡션을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Outlook 표시줄 캡션의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Outlook 페이지 단추의 내부를 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|팝업 창의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillRibbonButton](#onfillribbonbutton)|리본 단추 내부를 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillRibbonEdit](#onfillribbonedit)|리본 편집 컨트롤의 내부를 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|**주** 패널에 있는 리본 단추의 내부를 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillRibbonMenuFrame](#onfillribbonmenuframe)|기본 리본 패널의 메뉴 프레임을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
-|[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|분할 창의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillTab](#onfilltab)|탭의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)에 있는 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체의 내부를 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|`CMFCTasksPane` 컨트롤의 배경을 채울 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|강조 표시 된 메뉴 항목을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|강조 표시 되 고 드물게 사용 되는 메뉴 항목을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnNcPaint](#onncpaint)|비클라이언트 영역을 그릴 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnSetWindowRegion](#onsetwindowregion)|프레임 및 팝업 메뉴가 포함 된 영역을 설정 하는 경우 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|시스템 색 설정을 변경할 때 프레임 워크에서 호출 됩니다.|
-|[CMFCVisualManager::RedrawAll](#redrawall)|응용 프로그램의 모든 컨트롤 막대를 다시 그립니다.|
-|[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|기본 비주얼 관리자를 설정 합니다.|
-|[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|비활성화 된 도구 모음 이미지에 대해 볼록 모드를 사용 하거나 사용 하지 않도록 설정 합니다.|
-|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|메뉴 또는 도구 모음에서 비활성 이미지에 대 한 조명 효과를 사용 하거나 사용 하지 않도록 설정 합니다.|
-|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|응용 프로그램 메뉴 단추에 일반 모양이 지정 되는지 여부를 나타내는 플래그를 설정 합니다.|
-|[CMFCVisualManager::SetMenuShadowDepth](#setmenushadowdepth)|메뉴 그림자의 너비와 높이를 설정 합니다.|
-|[CMFCVisualManager::SetShadowHighlightedImage](#setshadowhighlightedimage)|강조 표시 된 이미지를 렌더링할 때 그림자를 표시할지 여부를 나타내는 플래그를 설정 합니다.|
+|[CMFC 비주얼 매니저::조정 프레임](#adjustframes)||
+|[CMFC 비주얼 매니저::조정도구](#adjusttoolbars)||
+|[CMFC 비주얼 매니저::항상하이라이트3DTabs](#alwayshighlight3dtabs)|프레임워크에서 호출하여 강조 표시 색상을 사용하여 항상 3D 탭을 그려야 하는지 여부를 결정합니다.|
+|[CMFC비주얼매니저::D에스트로이인스턴스](#destroyinstance)||
+|[CMFC 비주얼 매니저::Dodraw헤더정렬로우](#dodrawheadersortarrow)||
+|[CMFC비주얼매니저::D로컴보드롭버튼윈XP](#drawcombodropbuttonwinxp)||
+|[CMFC비주얼매니저::D로 푸시버튼윈XP](#drawpushbuttonwinxp)||
+|[CMFC비주얼매니저::D로텍스트온글라스](#drawtextonglass)||
+|[CMFC 비주얼 매니저::GetAutoHide버튼텍스트컬러](#getautohidebuttontextcolor)|자동 숨기기 단추에 대 한 텍스트 색상을 검색 하려면 프레임 워크에서 호출 됩니다.|
+|[CMFC 비주얼 매니저::GetButton엑스트라보더](#getbuttonextraborder)|현재 시각적 관리자가 단추를 그리는 데 필요한 증가된 단추 크기를 검색하기 위해 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::겟캡션바텍스트컬러](#getcaptionbartextcolor)|캡션 막대의 텍스트 색상을 검색하려면 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::GetDockingTabsBordersSize](#getdockingtabsborderssize)|도킹된 탭 된 막대의 테두리에 대 한 크기를 검색 하는 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::Get하이라이트메뉴항목텍스트컬러](#gethighlightedmenuitemtextcolor)||
+|[CMFC 비주얼 관리자::GetInstance](#getinstance)|개체에 대한 `CMFCVisualManager` 포인터를 반환합니다.|
+|[CMFC 비주얼 매니저::겟MDITabsBordersSize](#getmditabsborderssize)|MDITabs 창의 테두리 크기를 검색 하는 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::GetMenu항목텍스트컬러](#getmenuitemtextcolor)||
+|[CMFC 비주얼 매니저::겟메뉴섀도우 딥](#getmenushadowdepth)|메뉴 그림자의 너비와 높이를 결정하는 값을 반환합니다.|
+|[CMFC 비주얼 매니저::GetNcBtnSize](#getncbtnsize)|현재 시각적 관리자를 기반으로 시스템 단추의 크기를 결정 하기 위해 프레임 워크에 의해 호출 됩니다. 시스템 단추는 **닫기,** **최소화,** **최대화**및 **복원**명령에 매핑되는 주 프레임 캡션의 단추입니다.|
+|[CMFC 비주얼 매니저:::GetPopup메뉴보더사이즈](#getpopupmenubordersize)|팝업 메뉴에 대 한 테두리의 크기를 검색 하는 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::겟프로퍼티그리드그룹컬러](#getpropertygridgroupcolor)|속성 목록의 배경 색을 검색하는 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::겟프로퍼티그리드그룹텍스트컬러](#getpropertygridgrouptextcolor)|속성 목록의 텍스트 색상을 검색하려면 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::겟리본하이퍼링크텍스트컬러](#getribbonhyperlinktextcolor)||
+|[CMFC 비주얼 매니저::겟리본팝보더사이즈](#getribbonpopupbordersize)||
+|[CMFC 비주얼 매니저::GetRibbon빠른 액세스도구텍스트컬러](#getribbonquickaccesstoolbartextcolor)||
+|[CMFC 비주얼 매니저::GetRibbon슬라이더 색상](#getribbonslidercolors)||
+|[CMFC 비주얼 매니저::겟쇼올메뉴아이템높이](#getshowallmenuitemsheight)||
+|[CMFC비주얼 매니저::겟스마트도킹베이스가이드컬러](#getsmartdockingbaseguidecolors)||
+|[CMFC 비주얼 매니저::겟스마트 독킹하이라이트톤컬러](#getsmartdockinghighlighttonecolor)||
+|[CMFC비주얼매니저::겟스마트도킹테마](#getsmartdockingtheme)|스마트 도킹 마커를 표시하는 데 사용되는 테마를 반환합니다.|
+|[CMFC 비주얼 매니저::겟스테이터스바파네텍스트컬러](#getstatusbarpanetextcolor)||
+|[CMFC 비주얼 매니저::GetTabFrameColors](#gettabframecolors)|탭 프레임을 그릴 때 사용할 색상 집합을 검색하기 위해 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::GetTabTextColor](#gettabtextcolor)||
+|[CMFC 비주얼 매니저::gettoolbar단추텍스트컬러](#gettoolbarbuttontextcolor)|도구 모음 단추에서 텍스트의 현재 색상을 검색하려면 프레임워크에서 호출합니다. 이 색상은 현재 시각적 관리자 및 단추 상태에 따라 다릅니다.|
+|[CMFC 비주얼 매니저::GetToolbar장애인텍스트컬러](#gettoolbardisabledtextcolor)|프레임워크에서 호출하여 비활성화된 도구 모음 요소에 표시되는 텍스트의 색상을 결정합니다.|
+|[CMFC 비주얼 매니저::겟툴바하이라이트컬러](#gettoolbarhighlightcolor)||
+|[CMFC 비주얼 매니저::GetToolTipInfo](#gettooltipinfo)||
+|[CMFC비주얼매니저::하오버랩자동숨기기버튼](#hasoverlappedautohidebuttons)|자동 숨기기 단추 겹침 여부를 지정합니다.|
+|[CMFC 비주얼 매니저::이스독타브하스보더](#isdockingtabhasborder)|현재 시각적 관리자가 탭된 도킹 막대 주위에 테두리를 그리는지 여부를 지정합니다.|
+|[CMFC 비주얼 매니저::이셈보스장애인이미지](#isembossdisabledimage)|비활성화된 이미지를 엠보싱할지 여부를 지정합니다.|
+|[CMFC비주얼매니저::이페이드인액티브이미지](#isfadeinactiveimage)|도구 모음 또는 메뉴의 비활성 이미지가 흐리게 표시되는지 여부를 확인하기 위해 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::이스메뉴플랫룩](#ismenuflatlook)|메뉴 단추에 병합된 모양이 있는지 여부를 지정합니다.|
+|[CMFC 비주얼 매니저::이오피스XP스타일메뉴](#isofficexpstylemenus)|시각적 관리자가 Office XP 스타일 메뉴를 구현하는지 여부를 지정합니다.|
+|[CMFC 비주얼 매니저::IsOwner그리기 캡션](#isownerdrawcaption)|현재 시각적 관리자가 프레임 창의 소유자가 그린 캡션을 구현하는지 여부를 지정합니다.|
+|[CMFC비주얼매니저::그림자 강조 표시이미지](#isshadowhighlightedimage)|강조 표시된 이미지에 그림자가 있는지 여부를 지정합니다.|
+|[CMFC 비주얼 매니저::에드로드자동하이드버튼보더](#ondrawautohidebuttonborder)|자동 숨기기 단추에 대한 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우바그리퍼](#ondrawbargripper)|컨트롤 막대의 그리퍼를 그릴 때 프레임워크에서 호출합니다. 컨트롤 막대를 이동하려면 그리퍼를 클릭해야 합니다.|
+|[CMFC 비주얼 매니저::온드로우브라우징 버튼](#ondrawbrowsebutton)|편집 컨트롤 [(CMFCEditBrowseCtrl 클래스)에](../../mfc/reference/cmfceditbrowsectrl-class.md)속하는 찾아보기 단추를 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우버튼보더](#ondrawbuttonborder)|도구 모음 단추의 테두리를 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::에 드로 버튼분리기](#ondrawbuttonseparator)||
+|[CMFC 비주얼 매니저::온드로우캡션바보더](#ondrawcaptionbarborder)|캡션 막대 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우캡션바버튼보더](#ondrawcaptionbarbuttonborder)||
+|[CMFC 비주얼 매니저::에인출캡션바정보 영역](#ondrawcaptionbarinfoarea)||
+|[CMFC 비주얼 매니저::온드로우 캡션 버튼](#ondrawcaptionbutton)|캡션 단추를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우체크박스](#ondrawcheckbox)||
+|[CMFC 비주얼 매니저::온드로우체크박스엑스](#ondrawcheckboxex)||
+|[CMFC 비주얼 매니저::온드로우콤보보보보보보보](#ondrawcomboborder)|콤보 상자 단추의 테두리를 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우컴보드롭버튼](#ondrawcombodropbutton)|콤보 상자 드롭 버튼을 그릴 때 프레임 워크에 의해 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우컨트롤보더](#ondrawcontrolborder)||
+|[CMFC 비주얼 매니저::온드로우디폴드리본이미지](#ondrawdefaultribbonimage)|기본 리본 이미지를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우편집보더](#ondraweditborder)|[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 개체 주위에 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우 확장 상자](#ondrawexpandingbox)||
+|[CMFC 비주얼 매니저::온드로우플로팅툴바보더](#ondrawfloatingtoolbarborder)|부동 도구 모음의 테두리를 그릴 때 프레임워크에서 호출됩니다. 부동 도구 모음은 미니 프레임 창으로 표시되는 도구 모음입니다.|
+|[CMFC 비주얼 매니저::온드로우헤더트툴보더](#ondrawheaderctrlborder)|헤더 컨트롤을 포함하는 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로헤더트러소트로우](#ondrawheaderctrlsortarrow)|헤더 컨트롤 정렬 화살표를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에드드로우메뉴로온커스터](#ondrawmenuarrowoncustomizelist)||
+|[CMFC 비주얼 매니저::온드로우메뉴보더](#ondrawmenuborder)|메뉴 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우 메뉴체크](#ondrawmenucheck)||
+|[CMFC 비주얼 매니저::온드로우메뉴항목버튼](#ondrawmenuitembutton)||
+|[CMFC 비주얼 매니저::온드로우 메뉴라벨](#ondrawmenulabel)||
+|[CMFC 비주얼 매니저::온드로우메뉴리사이즈바](#ondrawmenuresizebar)||
+|[CMFC 비주얼 매니저::온드로우메뉴스크롤버튼](#ondrawmenuscrollbutton)|메뉴 스크롤 단추를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우메뉴섀도우](#ondrawmenushadow)||
+|[CMFC 비주얼 매니저::온드로우메뉴시스템버튼](#ondrawmenusystembutton)|메뉴 시스템 단추 **닫기,** **최소화,** **최대화**및 **복원을**그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온드로우미니프레임테두리](#ondrawminiframeborder)||
+|[CMFC 비주얼 매니저::온드로우아웃아웃바스플리터](#ondrawoutlookbarsplitter)|Outlook 막대에 대한 스플리터를 그릴 때 프레임 워크에서 호출됩니다. 스플리터는 컨트롤을 그룹화하는 데 사용되는 가로 막대입니다.|
+|[CMFC 비주얼 매니저::에드로우아웃아웃아웃페이지버튼보더](#ondrawoutlookpagebuttonborder)|Outlook 페이지 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다. Outlook 막대 창에 표시할 수 있는 것보다 많은 단추가 있는 경우 Outlook 페이지 단추가 나타납니다.|
+|[CMFC 비주얼 매니저::온드로우파네보더](#ondrawpaneborder)|[CPane 클래스의](../../mfc/reference/cpane-class.md)테두리를 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온드로우파네캡션](#ondrawpanecaption)|에 대한 캡션을 그릴 때 `CPane`프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우파인 디바이더](#ondrawpanedivider)||
+|[CMFC 비주얼 매니저::온드로우팝윈도우보더](#ondrawpopupwindowborder)||
+|[CMFC 비주얼 매니저::온드로우팝윈도우버튼보더](#ondrawpopupwindowbuttonborder)||
+|[CMFC 비주얼 매니저::온드로우팝윈도우캡션](#ondrawpopupwindowcaption)||
+|[CMFC 비주얼 매니저::에 그리기 리본응용 프로그램 버튼](#ondrawribbonapplicationbutton)|리본에 **기본 단추를** 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본버튼 테두리](#ondrawribbonbuttonborder)|리본 단추의 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저:::에 그리기 리본 단추 그룹](#ondrawribbonbuttonsgroup)|리본에 단추 그룹을 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온드로우리본캡션](#ondrawribboncaption)|메인 프레임의 캡션을 그릴 때 프레임에서 호출되지만 리본 막대가 프레임과 통합된 경우에만 호출됩니다.|
+|[CMFC 비주얼 매니저::에 그리기 리본 캡션 버튼](#ondrawribboncaptionbutton)|리본 막대에 있는 캡션 단추를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본카테고리](#ondrawribboncategory)|리본 범주를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본카테고리캡션](#ondrawribboncategorycaption)|리본 범주에 대한 캡션을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본카테고리스크롤](#ondrawribboncategoryscroll)||
+|[CMFC 비주얼 매니저::온드로우리본카테고리탭](#ondrawribboncategorytab)|리본 범주에 대한 탭을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에드드로우리본체크박스온리스트](#ondrawribboncheckboxonlist)||
+|[CMFC 비주얼 매니저::에그리기리본컬러 팔레트박스](#ondrawribboncolorpalettebox)||
+|[CMFC 비주얼 매니저::온드로우리본기본판버튼컨텍스트](#ondrawribbondefaultpanebuttoncontext)||
+|[CMFC 비주얼 매니저::온드로우리본기본판 버튼](#ondrawribbondefaultpanebutton)|리본 창 기본 단추를 그릴 때 프레임 워크에 의해 호출 됩니다. 사용자가 리본 패널을 축소하여 리본 요소를 표시하기에 너무 작을 때 기본 버튼이 나타납니다. 기본 버튼이 대신 그려지고 리본 요소가 드롭다운 메뉴의 항목으로 추가됩니다.|
+|[CMFC 비주얼 매니저::에 그리기 리본기본판 버튼표시기](#ondrawribbondefaultpanebuttonindicator)||
+|[CMFC 비주얼 매니저::온드로우리본갤러리보더](#ondrawribbongalleryborder)||
+|[CMFC 비주얼 매니저::온드로우리본 갤러리버튼](#ondrawribbongallerybutton)||
+|[CMFC 비주얼 매니저::온드로우리본키팁](#ondrawribbonkeytip)||
+|[CMFC 비주얼 매니저::온드로우리본라벨](#ondrawribbonlabel)|리본 레이블을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본메인패널버튼보더](#ondrawribbonmainpanelbuttonborder)|**메인** 패널에 배치된 리본 단추의 테두리를 그릴 때 프레임워크에서 호출됩니다. **주** 패널은 사용자가 **기본 단추를**클릭할 때 나타나는 패널입니다.|
+|[CMFC 비주얼 매니저::온드로우리본메인패널프레임](#ondrawribbonmainpanelframe)|**메인** 패널 주위에 프레임을 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본메뉴체크프레임](#ondrawribbonmenucheckframe)||
+|[CMFC 비주얼 매니저::온드로우리본패널](#ondrawribbonpanel)|리본 패널을 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본패널캡션](#ondrawribbonpanelcaption)|리본 패널의 캡션을 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본진행바](#ondrawribbonprogressbar)|[CMFC리본프로그레시브 객체를](../../mfc/reference/cmfcribbonprogressbar-class.md) 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에그리기리본퀵액세스툴세파레이터](#ondrawribbonquickaccesstoolbarseparator)|리본의 **빠른 액세스 도구 모음에**구분 기호를 그릴 때 프레임 워크에서 호출 합니다.|
+|[CMFC 비주얼 매니저::온드로우리본최근파일프레임](#ondrawribbonrecentfilesframe)|최근 파일 목록 주위에 프레임을 그릴 때 프레임 에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본 슬라이더 채널](#ondrawribbonsliderchannel)|[CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) 개체의 채널을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에 그리기 리본 슬라이더 엄지 손가락](#ondrawribbonsliderthumb)|`CMFCRibbonSlider` 개체의 엄지 손가락을 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::에 그리기 리본 슬라이더 줌 버튼](#ondrawribbonsliderzoombutton)|`CMFCRibbonSlider` 개체의 확대/축소 단추를 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::에 그리기 리본 상태바파인](#ondrawribbonstatusbarpane)|리본의 상태 표시줄 창을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우리본탭프레임](#ondrawribbontabsframe)|리본 탭 집합 주위에 프레임을 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저:::온드로우스크롤 버튼](#ondrawscrollbuttons)||
+|[CMFC 비주얼 매니저::온드로우세파레이터](#ondrawseparator)|구분 기호를 그릴 때 프레임워크에서 호출됩니다. 구분 기호는 일반적으로 컨트롤 바에서 아이콘 그룹을 분리하는 데 사용됩니다.|
+|[CMFC 비주얼 매니저::온드로우쇼올메뉴아이템](#ondrawshowallmenuitems)||
+|[CMFC 비주얼 매니저::온드로우스핀버튼](#ondrawspinbuttons)|스핀 단추를 그릴 때 프레임 워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우스플리터 보더](#ondrawsplitterborder)|분할 창의 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우 스플리터박스](#ondrawsplitterbox)|분할 창에 대한 스플리터 드래그 상자를 그릴 때 프레임 워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우스테이터스바파네보더](#ondrawstatusbarpaneborder)|상태 표시줄 창에 대한 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우 상태표시진행상황](#ondrawstatusbarprogress)|상태 표시줄 진행률 표시기를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우스테이터스바사이즈박스](#ondrawstatusbarsizebox)|상태 표시줄 크기 상자를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우탭](#ondrawtab)|[CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) 개체를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우탭클로즈버튼](#ondrawtabclosebutton)|활성 탭에 **닫기** 단추를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에 그리기탭 콘텐츠](#ondrawtabcontent)|탭 내부 (이미지, 텍스트)를 그릴 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::에드로드탭버튼보더](#ondrawtabsbuttonborder)|탭 단추의 테두리를 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우 태스크](#ondrawtask)|작업 창에 작업을 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온드로우태스크그룹지역경계](#ondrawtasksgroupareaborder)|작업 창에서 그룹 영역 주위에 테두리를 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온드로우 태스크그룹 캡션](#ondrawtasksgroupcaption)|작업 창에서 작업 그룹에 대한 캡션을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우태스크그룹아이콘](#ondrawtasksgroupicon)||
+|[CMFC 비주얼 매니저::온드로인티어오프캡션](#ondrawtearoffcaption)|이 찢어진 막대에 대한 찢어짐 캡션을 그릴 때 프레임 워크에 의해 호출됩니다.|
+|[CMFC 비주얼 매니저::온드로우툴박스프레임](#ondrawtoolboxframe)||
+|[CMFC 비주얼 매니저::에라아제MDI클라이언트에어리어](#onerasemdiclientarea)|MDI 클라이언트 영역을 지울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::에라아제팝윈도우버튼](#onerasepopupwindowbutton)||
+|[CMFC 비주얼 매니저:::에라아제탭스에어리어](#onerasetabsarea)|탭 창에서 탭 영역을 지울 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저:::에라아제탭버튼](#onerasetabsbutton)|탭 단추의 아이콘과 텍스트를 지울 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저:::에라아제탭프레임](#onerasetabsframe)|탭 프레임을 지울 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에필자동 하이드버튼백](#onfillautohidebuttonbackground)|자동 숨기기 단추의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC비주얼매니저::온필바백](#onfillbarbackground)|컨트롤 막대의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필버튼인테리어](#onfillbuttoninterior)|도구 모음 단추의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필 캡션바 버튼](#onfillcaptionbarbutton)||
+|[CMFC비주얼매니저::온필커맨드리스트배경](#onfillcommandslistbackground)|프레임워크에서 호출되는 도구 모음 단추의 배경을 채우는 경우 명령 목록에 속하는 이 단추는 사용자 지정 대화 상자의 일부입니다.|
+|[CMFC 비주얼 매니저::온필헤더Ctrl백](#onfillheaderctrlbackground)|헤더 컨트롤의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필미니프레임캡션](#onfillminiframecaption)|미니 프레임 창의 캡션을 채울 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온필아웃아웃바캡션](#onfilloutlookbarcaption)|Outlook 막대 캡션의 배경을 채울 때 프레임 워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저:::온필아웃아웃페이지버튼](#onfilloutlookpagebutton)|Outlook 페이지 단추의 내부를 채울 때 프레임 워크에서 호출됩니다.|
+|[CMFC비주얼매니저::온필팝윈도우배경](#onfillpopupwindowbackground)|팝업 창의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필리본 버튼](#onfillribbonbutton)|리본 단추의 내부를 채울 때 프레임 워크에 의해 호출 됩니다.|
+|[CMFC 비주얼 매니저::온필리본 편집](#onfillribbonedit)|리본 편집 컨트롤의 내부를 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필리본메인패널버튼](#onfillribbonmainpanelbutton)|**메인** 패널에 있는 리본 단추의 내부를 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필리본메뉴프레임](#onfillribbonmenuframe)|메인 리본 패널의 메뉴 프레임을 채울 때 프레임 워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에필리본퀵액세스툴바팝](#onfillribbonquickaccesstoolbarpopup)||
+|[CMFC비주얼매니저::온필스플리터배경](#onfillsplitterbackground)|분할 창의 배경을 채울 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온필탭](#onfilltab)|탭의 배경을 채울 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::온필태스크그룹인테리어](#onfilltasksgroupinterior)|[CMFCTaskPane에서 CMFCTaskPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체의 내부를 채울 때 프레임워크에서 [호출됩니다.](../../mfc/reference/cmfctaskspane-class.md)|
+|[CMFC 비주얼 매니저::온필태스크스페네배경](#onfilltaskspanebackground)|컨트롤의 배경을 채울 때 프레임워크에서 `CMFCTasksPane` 호출합니다.|
+|[CMFC 비주얼 매니저::에 하이라이트 메뉴항목](#onhighlightmenuitem)|강조 표시된 메뉴 항목을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::에 하이라이트 드물게 사용 메뉴항목](#onhighlightrarelyusedmenuitems)|강조 표시되고 거의 사용되지 않는 메뉴 항목을 그릴 때 프레임워크에서 호출됩니다.|
+|[CMFC비주얼매니저::온씨페인트](#onncpaint)|클라이언트가 아닌 영역을 그릴 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::온셋윈도우 리전](#onsetwindowregion)|프레임 및 팝업 메뉴가 포함된 영역을 설정하면 프레임워크에서 호출됩니다.|
+|[CMFC 비주얼 매니저::업데이트시스템색상](#onupdatesystemcolors)|시스템 색상 설정을 변경할 때 프레임워크에서 호출합니다.|
+|[CMFC 비주얼 매니저::다시 그리기모두](#redrawall)|응용 프로그램에서 모든 컨트롤 막대를 다시 그립니다.|
+|[CMFC 비주얼 매니저::리본카테고리컬러토르GB](#ribboncategorycolortorgb)||
+|[CMFC 비주얼 매니저::설정기본 관리자](#setdefaultmanager)|기본 시각적 관리자를 설정합니다.|
+|[CMFC 비주얼 매니저::SetEmboss장애인 이미지](#setembossdisabledimage)|비활성화된 도구 모음 이미지에 대해 엠보싱 모드를 활성화하거나 사용하지 않도록 설정합니다.|
+|[CMFC 비주얼 매니저::세트페이드인액티브이미지](#setfadeinactiveimage)|메뉴 또는 도구 모음에서 비활성 이미지에 대한 조명 효과를 활성화하거나 사용하지 않도록 설정합니다.|
+|[CMFC 비주얼 매니저::세트메뉴플랫룩](#setmenuflatlook)|응용 프로그램 메뉴 단추에 병합된 모양이 있는지 여부를 나타내는 플래그를 설정합니다.|
+|[CMFC 비주얼 매니저::세트메뉴섀도우 딥](#setmenushadowdepth)|메뉴 그림자의 너비와 높이를 설정합니다.|
+|[CMFC 비주얼 매니저::설정그림자 강조 표시이미지](#setshadowhighlightedimage)|강조 표시된 이미지를 렌더링할 때 그림자를 표시할지 여부를 나타내는 플래그를 설정합니다.|
 
 ## <a name="remarks"></a>설명
 
-클래스가 응용 프로그램의 GUI를 제어 하기 때문에 각 응용 프로그램에는 `CMFCVisualManager`의 인스턴스를 하나 또는에서 `CMFCVisualManager`파생 된 클래스의 인스턴스 하나를 사용할 수 있습니다. `CMFCVisualManager` 응용 프로그램은 `CMFCVisualManager`없이도 작동할 수 있습니다. 정적 메서드 `GetInstance` 를 사용 하 여 현재 `CMFCVisualManager`파생 개체에 대 한 포인터를 가져옵니다.
+클래스는 `CMFCVisualManager` 응용 프로그램의 GUI를 제어하기 때문에 각 응용 `CMFCVisualManager`프로그램은 에서 파생된 클래스의 `CMFCVisualManager`한 인스턴스 또는 한 인스턴스를 가질 수 있습니다. 응용 프로그램은 `CMFCVisualManager`을 이없이 작동 할 수도 있습니다. 정적 메서드를 `GetInstance` 사용하여 현재 `CMFCVisualManager`파생 된 개체에 대한 포인터를 가져옵니다.
 
-응용 프로그램의 모양을 변경 하려면 응용 프로그램의 모든 시각적 요소를 그리기 위한 메서드를 제공 하는 다른 클래스를 사용 해야 합니다. 이러한 클래스의 몇 가지 예로는 [CMFCVisualManagerOfficeXP 클래스](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), [CMFCVisualManagerOffice2003 클래스](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)및 [CMFCVisualManagerOffice2007 클래스가](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)있습니다. 응용 프로그램의 모양을 변경 하려면 이러한 시각적 관리자 중 하나를 메서드에 `SetDefaultManager`전달 합니다. 응용 프로그램이 Microsoft Office 2003의 모양을 모방 하는 방법을 보여 주는 예제는 [CMFCVisualManagerOffice2003 클래스](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)를 참조 하세요.
+응용 프로그램의 모양을 변경하려면 응용 프로그램의 모든 시각적 요소를 그리는 메서드를 제공하는 다른 클래스를 사용해야 합니다. 이러한 클래스의 몇 가지 예는 [CMFCVisualManagerOfficeXP 클래스,](../../mfc/reference/cmfcvisualmanagerofficexp-class.md) [CMFCVisualManagerOffice2003 클래스](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)및 [CMFCVisualManagerOffice2007 클래스입니다.](../../mfc/reference/cmfcvisualmanageroffice2007-class.md) 응용 프로그램의 모양을 변경하려는 경우 이러한 시각적 관리자 중 하나를 `SetDefaultManager`메서드에 전달합니다. 응용 프로그램이 Microsoft Office 2003의 모양을 모방하는 방법을 보여 주는 예제는 [CMFCVisualManagerOffice2003 클래스](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)를 참조하십시오.
 
-모든 그리기 메서드는 가상입니다. 이렇게 하면 응용 프로그램의 GUI에 대 한 사용자 지정 비주얼 스타일을 만들 수 있습니다. 사용자 고유의 비주얼 스타일을 만들려는 경우 visual manager 클래스 중 하나에서 클래스를 파생 시키고 변경할 그리기 메서드를 재정의 합니다.
+모든 그리기 방법은 가상입니다. 이렇게 하면 응용 프로그램의 GUI에 대한 사용자 지정 시각적 스타일을 만들 수 있습니다. 고유한 시각적 스타일을 만들려면 visual manager 클래스 중 하나에서 클래스를 파생하고 변경하려는 그리기 메서드를 재정의합니다.
 
 ## <a name="example"></a>예제
 
@@ -587,23 +587,23 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `CMFCVisualManager` 개체의 기본값을 검색 하는 방법을 보여 줍니다. 이 코드 조각은 [작업 창 샘플](../../overview/visual-cpp-samples.md)의 일부입니다.
+다음 예제에서는 `CMFCVisualManager` 개체의 기본값을 검색하는 방법을 보여 줍니다. 이 코드 조각은 작업 [창 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFC베이스비주얼매니저](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 `CMFCVisualManager`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxvisualmanager
+**헤더:** afxvisualmanager.h
 
-##  <a name="adjustframes"></a>  CMFCVisualManager::AdjustFrames
+## <a name="cmfcvisualmanageradjustframes"></a><a name="adjustframes"></a>CMFC 비주얼 매니저::조정 프레임
 
 ```
 static void __stdcall AdjustFrames();
@@ -611,7 +611,7 @@ static void __stdcall AdjustFrames();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="adjusttoolbars"></a>  CMFCVisualManager::AdjustToolbars
+## <a name="cmfcvisualmanageradjusttoolbars"></a><a name="adjusttoolbars"></a>CMFC 비주얼 매니저::조정도구
 
 ```
 static void __stdcall AdjustToolbars();
@@ -619,23 +619,23 @@ static void __stdcall AdjustToolbars();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManager::AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanageralwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFC 비주얼 매니저::항상하이라이트3DTabs
 
-프레임 워크는이 메서드를 호출 하 여 응용 프로그램에서 3D 탭이 항상 강조 표시 되어야 하는지 여부를 확인 합니다.
+프레임워크는 이 메서드를 호출하여 응용 프로그램에서 항상 3D 탭을 강조 표시해야 하는지 여부를 결정합니다.
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`TRUE`3D 탭을 강조 표시 해야 하는 경우입니다.
+`TRUE`3D 탭을 강조 표시해야 하는 경우.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 함수를 재정의 하 고 3D 탭을 항상 강조 표시 해야 하는 경우 TRUE를 반환 합니다. 이 메서드의 기본 구현에서는 FALSE를 반환 합니다.
+파생된 시각적 관리자에서 이 함수를 재정의하고 3D 탭을 항상 강조 표시해야 하는 경우 TRUE를 반환합니다. 이 메서드의 기본 구현은 FALSE를 반환합니다.
 
-##  <a name="cmfcvisualmanager"></a>  CMFCVisualManager::CMFCVisualManager
+## <a name="cmfcvisualmanagercmfcvisualmanager"></a><a name="cmfcvisualmanager"></a>CMFC비주얼매니저::CMFC비주얼매니저
 
 ```
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -643,11 +643,11 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bTemporary*<br/>
+【인】 *b 임시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="destroyinstance"></a>  CMFCVisualManager::DestroyInstance
+## <a name="cmfcvisualmanagerdestroyinstance"></a><a name="destroyinstance"></a>CMFC비주얼매니저::D에스트로이인스턴스
 
 ```
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -655,13 +655,13 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bAutoDestroyOnly*<br/>
+【인】 *b오토파괴만*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="dodrawheadersortarrow"></a>  CMFCVisualManager::DoDrawHeaderSortArrow
+## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFC 비주얼 매니저::Dodraw헤더정렬로우
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -671,14 +671,14 @@ void DoDrawHeaderSortArrow(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsUp*<br/>
-[in] *bDlgCtrl*<br/>
+【인】 *비스업*<br/>
+【인】 *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManager::DrawComboBorderWinXP
+## <a name="cmfcvisualmanagerdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFC 비주얼 매니저::D로콤보보보보보더윈XP
 
 ```
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -690,15 +690,15 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="parameters"></a>매개 변수
 
-진행 *CDC&#42;*<br/>
-[in] *CRect*<br/>
-[in] *BOOL*<br/>
+【인】 *CDC&#42;*<br/>
+【인】 *트렉트 (주)*<br/>
+【인】 *불 (것)이*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManager::DrawComboDropButtonWinXP
+## <a name="cmfcvisualmanagerdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFC비주얼매니저::D로컴보드롭버튼윈XP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -710,15 +710,15 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>매개 변수
 
-진행 *CDC&#42;*<br/>
-[in] *CRect*<br/>
-[in] *BOOL*<br/>
+【인】 *CDC&#42;*<br/>
+【인】 *트렉트 (주)*<br/>
+【인】 *불 (것)이*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManager::DrawPushButtonWinXP
+## <a name="cmfcvisualmanagerdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFC비주얼매니저::D로 푸시버튼윈XP
 
 ```
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -729,16 +729,16 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>매개 변수
 
-진행 *CDC&#42;*<br/>
-[in] *CRect*<br/>
-진행 *Cmfcbutton&#42;*<br/>
-[in] *UINT*<br/>
+【인】 *CDC&#42;*<br/>
+【인】 *트렉트 (주)*<br/>
+【인】 *CMFC버튼&#42;*<br/>
+【인】 *유엔 (미국)*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="drawtextonglass"></a>  CMFCVisualManager::DrawTextOnGlass
+## <a name="cmfcvisualmanagerdrawtextonglass"></a><a name="drawtextonglass"></a>CMFC비주얼매니저::D로텍스트온글라스
 
 ```
 virtual BOOL DrawTextOnGlass(
@@ -752,32 +752,32 @@ virtual BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *strText*<br/>
+【인】 *pDC*<br/>
+【인】 *스트라텍스트*<br/>
 [in] *rect*<br/>
-[in] *dwFlags*<br/>
-[in] *nGlowSize*<br/>
-[in] *clrText*<br/>
+【인】 *dwFlags*<br/>
+【인】 *앤글로우 사이즈*<br/>
+【인】 *clrText*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enabletoolbarbuttonfill"></a>  CMFCVisualManager::EnableToolbarButtonFill
+## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFC 비주얼 매니저::사용 도구 모음 단추 채우기
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bEnable*<br/>
+【인】 *bEnable*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getautohidebuttontextcolor"></a>  CMFCVisualManager::GetAutoHideButtonTextColor
+## <a name="cmfcvisualmanagergetautohidebuttontextcolor"></a><a name="getautohidebuttontextcolor"></a>CMFC 비주얼 매니저::GetAutoHide버튼텍스트컬러
 
-프레임 워크는이 메서드를 호출 하 여 자동 숨기기 단추의 텍스트 색을 검색 합니다.
+프레임워크는 자동 숨기기 단추의 텍스트 색상을 검색하기 위해 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
@@ -785,36 +785,36 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 
 ### <a name="parameters"></a>매개 변수
 
-*pButton*<br/>
-진행 자동 숨기기 단추에 대 한 포인터입니다.
+*p 버튼*<br/>
+【인】 자동 숨기기 단추에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*Pbutton*의 텍스트 색을 지정 하는 [colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+*pButton의*텍스트 색상을 지정하는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에서 자동 숨기기 단추의 텍스트 색을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다. 이렇게 하려면 응용 프로그램이 텍스트 색으로 사용할 색을 반환 합니다.
+파생 클래스에서 이 메서드를 재정의하여 응용 프로그램에서 자동 숨기기 단추의 텍스트 색상을 사용자 지정합니다. 이렇게 하려면 응용 프로그램에서 텍스트 색상으로 사용할 색상을 반환합니다.
 
-##  <a name="getbuttonextraborder"></a>  CMFCVisualManager::GetButtonExtraBorder
+## <a name="cmfcvisualmanagergetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFC 비주얼 매니저::GetButton엑스트라보더
 
-프레임 워크는 도구 모음 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 도구 모음 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual CSize GetButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-도구 모음 단추 테두리의 추가 크기를 포함 하는 [Csize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
+도구 모음 단추에 대한 테두리의 추가 크기를 포함하는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-일부 스킨은 도구 모음 단추의 테두리를 확장 해야 합니다. 사용자 지정 시각적 관리자에서이 메서드를 재정의 하 여 응용 프로그램의 도구 모음 단추 테두리를 확장 합니다. 이 메서드의 기본 구현에서는 빈 크기를 반환 합니다.
+일부 스킨은 도구 모음 단추의 테두리를 확장해야 합니다. 사용자 지정 시각적 관리자에서 이 메서드를 재정의하여 응용 프로그램에서 도구 모음 단추의 테두리를 확장합니다. 이 메서드의 기본 구현은 빈 크기를 반환합니다.
 
-##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManager::GetCaptionBarTextColor
+## <a name="cmfcvisualmanagergetcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFC 비주얼 매니저::겟캡션바텍스트컬러
 
-프레임 워크는이 메서드를 호출 하 여 캡션 표시줄의 텍스트 색을 검색 합니다.
+프레임워크는 이 메서드를 호출하여 캡션 표시줄에서 텍스트의 색상을 검색합니다.
 
 ```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -823,55 +823,55 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ### <a name="parameters"></a>매개 변수
 
 *pBar*<br/>
-진행 캡션 표시줄에 대 한 포인터입니다.
+【인】 캡션 막대에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*Pbar*의 텍스트 색을 나타내는 [colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+*pBar에서*텍스트의 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 여 캡션 표시줄의 텍스트 색을 사용자 지정 합니다. 재정의 된 메서드에서 원하는 색을 반환 합니다.
+파생 클래스에서 이 메서드를 재정의하여 캡션 막대에 대한 텍스트 색상을 사용자 지정합니다. 재정의 된 방법에서 원하는 색상을 반환합니다.
 
-##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManager::GetCaptionButtonExtraBorder
+## <a name="cmfcvisualmanagergetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFC 비주얼 매니저::GetCaptionButton엑스트라보더
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManager::GetDockingPaneCaptionExtraHeight
+## <a name="cmfcvisualmanagergetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFC 비주얼 매니저::GetDockingPane캡션엑스트라하이트
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManager::GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagergetdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFC 비주얼 매니저::GetDockingTabsBordersSize
 
-프레임 워크는 도킹 되 고 탭 되는 창을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 도킹되고 탭된 창을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual int GetDockingTabsBordersSize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-도킹 하 고 탭 하는 창의 테두리 크기를 나타내는 정수입니다.
+도킹되고 탭된 창의 테두리 크기를 나타내는 정수입니다.
 
 ### <a name="remarks"></a>설명
 
-사용자가 응용 프로그램의 동일한 위치에 여러 창을 도킹할 때 도킹 된 창이 탭으로 전환 됩니다.
+사용자가 응용 프로그램의 동일한 위치에 여러 창을 도킹하면 도킹된 창이 탭됩니다.
 
-사용자 지정 시각적 관리자에서이 메서드를 재정의 하 여 도킹 된 탭 컨트롤 막대의 테두리 크기를 변경 합니다. 기본 구현된 경우에는 -1을 반환합니다.
+사용자 지정 시각적 관리자에서 이 메서드를 재정의하여 도킹된 탭 컨트롤 막대의 테두리 크기를 변경합니다. 기본 구현된 경우에는 -1을 반환합니다.
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManager::GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanagergethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFC 비주얼 매니저::Get하이라이트메뉴항목텍스트컬러
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -879,55 +879,55 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pButton*<br/>
+【인】 *p 버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getinstance"></a>  CMFCVisualManager::GetInstance
+## <a name="cmfcvisualmanagergetinstance"></a><a name="getinstance"></a>CMFC 비주얼 관리자::GetInstance
 
-응용 프로그램에 대 한 현재 [Cmfcvisualmanager 클래스](../../mfc/reference/cmfcvisualmanager-class.md) 개체에 대 한 포인터를 반환 합니다.
+응용 프로그램에 대 한 현재 [CMFCVisualManager 클래스](../../mfc/reference/cmfcvisualmanager-class.md) 개체에 대 한 포인터를 반환 합니다.
 
 ```
 static CMFCVisualManager* GetInstance();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `CMFCVisualManager` 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에는 연결 된 `CMFCVisualManager` 개체가 하나만 있을 수 있습니다. 여기에는 `CMFCVisualManager` 클래스에서 파생 된 모든 개체가 포함 됩니다. 이 메서드는 연결 `CMFCVisualManager` 된 개체에 대 한 포인터를 반환 합니다. 응용 프로그램에 연결 된 개체가 없는 경우 `CMFCVisualManager` 이 메서드는 연결 된 개체를 만들어 응용 프로그램에 연결 합니다.
+응용 프로그램에는 연결된 `CMFCVisualManager` 개체가 하나만 있을 수 있습니다. 여기에는 클래스에서 파생된 `CMFCVisualManager` 모든 개체가 포함됩니다. 이 메서드는 연결된 `CMFCVisualManager` 개체에 대한 포인터를 반환합니다. 응용 프로그램에 연결된 `CMFCVisualManager` 개체가 없는 경우 이 메서드는 하나를 만들고 응용 프로그램과 연결합니다.
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManager::GetMDITabsBordersSize
+## <a name="cmfcvisualmanagergetmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFC 비주얼 매니저::겟MDITabsBordersSize
 
-프레임 워크는이 메서드를 호출 하 여 창을 그리기 전에 MDITabs 창의 테두리 크기를 확인 합니다.
+프레임워크는 창을 그리기 전에 MDITabs 창의 테두리 크기를 결정하기 위해 이 메서드를 호출합니다.
 
 ```
 virtual int GetMDITabsBordersSize();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 MDITabs 창의 테두리 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 함수를 재정의 하 여 MDITabs 창의 테두리 크기를 사용자 지정 합니다.
+파생 클래스에서 이 함수를 재정의하여 MDITabs 창의 테두리 크기를 사용자 지정합니다.
 
-##  <a name="getmenuimagemargin"></a>  CMFCVisualManager::GetMenuImageMargin
+## <a name="cmfcvisualmanagergetmenuimagemargin"></a><a name="getmenuimagemargin"></a>CMFC비주얼매니저::겟메뉴이미지마진
 
 ```
 virtual int GetMenuImageMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManager::GetMenuItemTextColor
+## <a name="cmfcvisualmanagergetmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFC 비주얼 매니저::GetMenu항목텍스트컬러
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -938,33 +938,33 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pButton*<br/>
-진행 *Bhighlighted 표시*<br/>
-[in] *bDisabled*<br/>
+【인】 *p 버튼*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *b 장애인*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getmenushadowdepth"></a>  CMFCVisualManager::GetMenuShadowDepth
+## <a name="cmfcvisualmanagergetmenushadowdepth"></a><a name="getmenushadowdepth"></a>CMFC 비주얼 매니저::겟메뉴섀도우 딥
 
-메뉴 그림자의 너비와 높이를 검색 합니다.
+메뉴 그림자의 너비와 높이를 검색합니다.
 
 ```
 int GetMenuShadowDepth() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메뉴 그림자의 너비와 높이 (픽셀)입니다.
+메뉴 그림자의 너비와 높이를 픽셀 단위로 설정합니다.
 
 ### <a name="remarks"></a>설명
 
-메뉴 그림자의 너비와 높이는 동일 합니다. 기본값은 7 픽셀입니다.
+메뉴 그림자의 너비와 높이는 동일합니다. 기본값은 7픽셀입니다.
 
-##  <a name="getncbtnsize"></a>  CMFCVisualManager::GetNcBtnSize
+## <a name="cmfcvisualmanagergetncbtnsize"></a><a name="getncbtnsize"></a>CMFC 비주얼 매니저::GetNcBtnSize
 
-시스템 단추의 크기를 검색 해야 할 때 프레임 워크에서 호출 됩니다.
+시스템 단추의 크기를 검색해야 하는 경우 프레임워크에서 호출합니다.
 
 ```
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
@@ -972,46 +972,46 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*bSmall*<br/>
-진행 에서 작거나 큰 시스템 단추의 크기 `GetNcBtnSize` 를 검색 해야 하는지 여부를 나타내는 부울 매개 변수입니다. *Bsmall* 가 TRUE 이면 작은 `GetNcBtnSize` 시스템 단추의 크기를 반환 합니다. 그렇지 않으면 큰 시스템 단추의 크기를 반환 합니다.
+*b스몰*<br/>
+【인】 크기 또는 큰 시스템 `GetNcBtnSize` 단추의 크기를 검색해야 하는지 여부를 나타내는 부울 매개 변수입니다. *bSmall이* TRUE인 `GetNcBtnSize` 경우 작은 시스템 단추의 크기를 반환합니다. 그렇지 않으면 큰 시스템 단추의 크기를 반환합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-시스템 단추의 크기를 나타내는 [Csize](../../atl-mfc-shared/reference/csize-class.md) 매개 변수입니다.
+시스템 단추의 크기를 나타내는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-시스템 단추는 **닫기**, **최소화**, **최대화**및 **복원**명령에 매핑되는 프레임 창의 캡션에 있는 단추입니다. 이러한 단추의 크기는 현재 비주얼 관리자에 따라 다릅니다. 응용 프로그램의 시스템 단추 크기를 사용자 지정 하려면이 메서드를 재정의 합니다.
+시스템 단추는 **닫기,** **최소화,** **최대화**및 **복원**명령에 매핑되는 프레임 창 캡션의 단추입니다. 이러한 단추의 크기는 현재 시각적 관리자에 따라 다릅니다. 응용 프로그램에서 시스템 단추의 크기를 사용자 지정하려는 경우 이 메서드를 재정의합니다.
 
-##  <a name="getpopupmenubordersize"></a>  CMFCVisualManager::GetPopupMenuBorderSize
+## <a name="cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a>CMFC 비주얼 매니저:::GetPopup메뉴보더사이즈
 
-프레임 워크는이 메서드를 호출 하 여 팝업 메뉴의 테두리 크기를 가져옵니다.
+프레임워크는 이 메서드를 호출하여 팝업 메뉴의 테두리 크기를 가져옵니다.
 
 ```
 virtual int GetPopupMenuBorderSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-팝업 메뉴의 테두리 크기를 지정 하는 정수입니다.
+팝업 메뉴의 테두리 크기를 지정하는 정수입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에서 팝업 메뉴의 테두리 크기를 사용자 지정 하려면이 메서드를 재정의 합니다.
+응용 프로그램에서 팝업 메뉴의 테두리 크기를 사용자 지정하려면 이 메서드를 재정의합니다.
 
-##  <a name="getpopupmenugap"></a>  CMFCVisualManager::GetPopupMenuGap
+## <a name="cmfcvisualmanagergetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFC 비주얼 매니저:::GetPopup메뉴갭
 
 ```
 virtual int GetPopupMenuGap() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManager::GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagergetpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFC 비주얼 매니저::겟프로퍼티그리드그룹컬러
 
-프레임 워크는이 메서드를 호출 하 여 속성 목록의 배경색을 가져옵니다.
+프레임워크는 속성 목록의 배경색을 얻기 위해 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -1019,20 +1019,20 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>매개 변수
 
-*pPropList*<br/>
-진행 프레임 워크가 그리는 속성 목록에 대 한 포인터입니다.
+*프로펠리스트*<br/>
+【인】 프레임워크가 그리는 속성 목록에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*PPropList*의 배경색을 나타내는 [colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+*pPropList의*배경 색을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에서 속성 목록의 배경색을 사용자 지정 하려면이 함수를 재정의 합니다.
+이 함수를 재정의하여 응용 프로그램에서 속성 목록의 배경색을 사용자 지정합니다.
 
-##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManager::GetPropertyGridGroupTextColor
+## <a name="cmfcvisualmanagergetpropertygridgrouptextcolor"></a><a name="getpropertygridgrouptextcolor"></a>CMFC 비주얼 매니저::겟프로퍼티그리드그룹텍스트컬러
 
-프레임 워크는이 메서드를 호출 하 여 속성 목록의 텍스트 색을 검색 합니다.
+프레임워크는 속성 목록의 텍스트 색상을 검색하기 위해 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
@@ -1040,18 +1040,18 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>매개 변수
 
-*pPropList*<br/>
-진행 속성 목록에 대 한 포인터입니다.
+*프로펠리스트*<br/>
+【인】 속성 목록에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-속성 목록의 텍스트 색을 나타내는 [Colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+속성 목록의 텍스트 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에서 속성 목록의 텍스트 색을 사용자 지정 하려면이 함수를 재정의 합니다.
+이 함수를 재정의하여 응용 프로그램에서 속성 목록의 텍스트 색상을 사용자 지정합니다.
 
-##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManager::GetRibbonHyperlinkTextColor
+## <a name="cmfcvisualmanagergetribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFC 비주얼 매니저::겟리본하이퍼링크텍스트컬러
 
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -1059,13 +1059,13 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pHyperLink*<br/>
+【인】 *p하이퍼링크*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManager::GetRibbonPopupBorderSize
+## <a name="cmfcvisualmanagergetribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFC 비주얼 매니저::겟리본팝보더사이즈
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
@@ -1073,33 +1073,33 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CMFCRibbonPanelMenu&#42;*<br/>
+【인】 *CMFC리본패널메뉴&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFC 비주얼 매니저::GetRibbon퀵액세스툴바셰브론오프셋
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFC 비주얼 매니저::GetRIBBON빠른 액세스도구바로라이트마진
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor
+## <a name="cmfcvisualmanagergetribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFC 비주얼 매니저::GetRibbon빠른 액세스도구텍스트컬러
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -1107,13 +1107,13 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bDisabled*<br/>
+【인】 *b 장애인*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonslidercolors"></a>  CMFCVisualManager::GetRibbonSliderColors
+## <a name="cmfcvisualmanagergetribbonslidercolors"></a><a name="getribbonslidercolors"></a>CMFC 비주얼 매니저::GetRibbon슬라이더 색상
 
 ```
 virtual void GetRibbonSliderColors(
@@ -1127,16 +1127,16 @@ virtual void GetRibbonSliderColors(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
-[in] *clrLine*<br/>
-[in] *clrFill*<br/>
+【인】 *p슬라이더*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스누른*<br/>
+【인】 *isdisabled*<br/>
+【인】 *클라인*<br/>
+【인】 *clrFill*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManager::GetRibbonStatusBarTextColor
+## <a name="cmfcvisualmanagergetribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFC 비주얼 매니저::Get리본 상태바텍스트컬러
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -1144,13 +1144,13 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pStatusBar*<br/>
+【인】 *pStatusBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManager::GetShowAllMenuItemsHeight
+## <a name="cmfcvisualmanagergetshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFC 비주얼 매니저::겟쇼올메뉴아이템높이
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -1160,14 +1160,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *sizeDefault*<br/>
+【인】 *pDC*<br/>
+【인】 *크기기본값*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManager::GetSmartDockingBaseGuideColors
+## <a name="cmfcvisualmanagergetsmartdockingbaseguidecolors"></a><a name="getsmartdockingbaseguidecolors"></a>CMFC비주얼 매니저::겟스마트도킹베이스가이드컬러
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -1177,36 +1177,36 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *clrBaseGroupBackground*<br/>
-[in] *clrBaseGroupBorder*<br/>
+【인】 *clrBaseGroup배경*<br/>
+【인】 *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManager::GetSmartDockingHighlightToneColor
+## <a name="cmfcvisualmanagergetsmartdockinghighlighttonecolor"></a><a name="getsmartdockinghighlighttonecolor"></a>CMFC 비주얼 매니저::겟스마트 독킹하이라이트톤컬러
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getsmartdockingtheme"></a>  CMFCVisualManager::GetSmartDockingTheme
+## <a name="cmfcvisualmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CMFC비주얼매니저::겟스마트도킹테마
 
-스마트 도킹 표식을 표시 하는 데 사용 되는 테마를 반환 합니다.
+스마트 도킹 마커를 표시하는 데 사용되는 테마를 반환합니다.
 
 ```
 virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-다음 열거형 값 중 하나를 반환 합니다. AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008 다음 내큐어된 값 중 하나를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManager::GetStatusBarPaneTextColor
+## <a name="cmfcvisualmanagergetstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFC 비주얼 매니저::겟스테이터스바파네텍스트컬러
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1216,16 +1216,16 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pStatusBar*<br/>
-[in] *pPane*<br/>
+【인】 *pStatusBar*<br/>
+【인】 *pPane*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManager::GetTabFrameColors
+## <a name="cmfcvisualmanagergettabframecolors"></a><a name="gettabframecolors"></a>CMFC 비주얼 매니저::GetTabFrameColors
 
-프레임 워크는 탭 창을 그리기 위한 색 집합을 검색 해야 하는 경우이 함수를 호출 합니다.
+프레임워크는 탭 창을 그리기 위해 색상 집합을 검색해야 하는 경우 이 함수를 호출합니다.
 
 ```
 virtual void GetTabFrameColors(
@@ -1243,37 +1243,37 @@ virtual void GetTabFrameColors(
 ### <a name="parameters"></a>매개 변수
 
 *pTabWnd*<br/>
-진행 프레임이 탭을 그리는 탭 창에 대 한 포인터입니다.
+【인】 프레임이 탭을 그리는 탭 창에 대한 포인터입니다.
 
-*clrDark*<br/>
-제한이 이 메서드가 탭의 짙은 테두리에 대 한 색을 저장 하는 [Colorref](/windows/win32/gdi/colorref) 매개 변수에 대 한 참조입니다.
+*클래다크*<br/>
+【아웃】 이 메서드는 탭의 어두운 테두리에 대 한 색상을 저장 하는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수에 대 한 참조입니다.
 
-*clrBlack*<br/>
-제한이 이 메서드가 탭 창의 테두리 색을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다. 테두리의 기본 색은 검정입니다.
+*클러 블랙*<br/>
+【아웃】 이 메서드는 탭 창의 테두리에 대 한 색상을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다. 테두리의 기본 색상은 검은색입니다.
 
-*clrHighlight*<br/>
-제한이 이 메서드가 탭 창의 강조 표시 상태에 대 한 색을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
+*clr하이라이트*<br/>
+【아웃】 이 메서드는 탭 창의 강조 표시 상태에 대 한 색상을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
 
-*clrFace*<br/>
-제한이 이 메서드가 탭 창의 표면에 대 한 색을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
+*클러 페이스*<br/>
+【아웃】 이 메서드는 탭 창의 면에 대 한 색상을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
 
-*clrDarkShadow*<br/>
-제한이 이 메서드가 탭 창의 그림자 색을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
+*클러 다크 섀도우*<br/>
+【아웃】 이 메서드는 탭 창의 그림자에 대 한 색상을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
 
 *clrLight*<br/>
-제한이 이 메서드가 탭 창의 밝은 가장자리에 대 한 색을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
+【아웃】 이 메서드는 탭 창의 밝은 가장자리에 대 한 색상을 저장 하는 COLORREF 매개 변수에 대 한 참조입니다.
 
 *pbrFace*<br/>
-제한이 브러시에 대 한 참조에 대 한 포인터입니다. 이 메서드는이 매개 변수에서 탭 창의 얼굴을 채우는 데 사용 하는 브러시를 저장 합니다.
+【아웃】 브러시에 대한 참조에 대한 포인터입니다. 이 메서드는 이 매개 변수에서 탭 창의 면을 채우는 데 사용하는 브러시를 저장합니다.
 
-*pbrBlack*<br/>
-제한이 브러시에 대 한 참조에 대 한 포인터입니다. 이 메서드는이 매개 변수에서 탭 창의 검정색 가장자리를 채우는 데 사용 하는 브러시를 저장 합니다.
+*pbr블랙*<br/>
+【아웃】 브러시에 대한 참조에 대한 포인터입니다. 이 메서드는 이 매개 변수에서 탭 창의 검은색 가장자리를 채우는 데 사용하는 브러시를 저장합니다.
 
 ### <a name="remarks"></a>설명
 
-프레임 워크에서 탭 창을 그릴 때 사용 하는 색 집합을 사용자 지정 하려면 파생 클래스에서이 함수를 재정의 합니다.
+탭 창을 그릴 때 프레임워크에서 사용하는 색상 집합을 사용자 지정하려는 경우 파생 클래스에서 이 함수를 재정의합니다.
 
-##  <a name="gettabhorzmargin"></a>  CMFCVisualManager::GetTabHorzMargin
+## <a name="cmfcvisualmanagergettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFC비주얼매니저::겟타브호즈마진
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1281,13 +1281,13 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
+【인】 *CMFC베이스탭트르&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabtextcolor"></a>  CMFCVisualManager::GetTabTextColor
+## <a name="cmfcvisualmanagergettabtextcolor"></a><a name="gettabtextcolor"></a>CMFC 비주얼 매니저::GetTabTextColor
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -1298,107 +1298,107 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
+【인】 *CMFC베이스탭트르&#42;*<br/>
 [in] *int*<br/>
-[in] *BOOL*<br/>
+【인】 *불 (것)이*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanegroupcaptionheight"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHeight
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionheight"></a><a name="gettaskspanegroupcaptionheight"></a>CMFC 비주얼 매니저::GetTasksPane그룹캡션높이
 
 ```
 int GetTasksPaneGroupCaptionHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanegroupcaptionhorzoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionhorzoffset"></a><a name="gettaskspanegroupcaptionhorzoffset"></a>CMFC 비주얼 매니저::겟태스크스파네그룹캡션호즈오프셋
 
 ```
 int GetTasksPaneGroupCaptionHorzOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanegroupcaptionvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset
+## <a name="cmfcvisualmanagergettaskspanegroupcaptionvertoffset"></a><a name="gettaskspanegroupcaptionvertoffset"></a>CMFC 비주얼 매니저::겟태스크스파네그룹캡션오프셋
 
 ```
 int GetTasksPaneGroupCaptionVertOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanegroupvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupVertOffset
+## <a name="cmfcvisualmanagergettaskspanegroupvertoffset"></a><a name="gettaskspanegroupvertoffset"></a>CMFC 비주얼 매니저::겟태스크스파네그룹버트오프셋
 
 ```
 int GetTasksPaneGroupVertOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanehorzmargin"></a>  CMFCVisualManager::GetTasksPaneHorzMargin
+## <a name="cmfcvisualmanagergettaskspanehorzmargin"></a><a name="gettaskspanehorzmargin"></a>CMFC 비주얼 매니저::겟태스크파네호즈마진
 
 ```
 int GetTasksPaneHorzMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspaneiconhorzoffset"></a>  CMFCVisualManager::GetTasksPaneIconHorzOffset
+## <a name="cmfcvisualmanagergettaskspaneiconhorzoffset"></a><a name="gettaskspaneiconhorzoffset"></a>CMFC 비주얼 매니저::겟태스크파네아이콘호즈오프셋
 
 ```
 int GetTasksPaneIconHorzOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspaneiconvertoffset"></a>  CMFCVisualManager::GetTasksPaneIconVertOffset
+## <a name="cmfcvisualmanagergettaskspaneiconvertoffset"></a><a name="gettaskspaneiconvertoffset"></a>CMFC 비주얼 매니저::겟태스크파네아이콘오프셋
 
 ```
 int GetTasksPaneIconVertOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanetaskhorzoffset"></a>  CMFCVisualManager::GetTasksPaneTaskHorzOffset
+## <a name="cmfcvisualmanagergettaskspanetaskhorzoffset"></a><a name="gettaskspanetaskhorzoffset"></a>CMFC 비주얼 매니저::겟태스크파네태스크호츠오프셋
 
 ```
 int GetTasksPaneTaskHorzOffset() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskspanevertmargin"></a>  CMFCVisualManager::GetTasksPaneVertMargin
+## <a name="cmfcvisualmanagergettaskspanevertmargin"></a><a name="gettaskspanevertmargin"></a>CMFC 비주얼 매니저::겟태스크파네버트마진
 
 ```
 int GetTasksPaneVertMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManager::GetToolbarButtonTextColor
+## <a name="cmfcvisualmanagergettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFC 비주얼 매니저::gettoolbar단추텍스트컬러
 
-프레임 워크는이 메서드를 호출 하 여 도구 모음 단추의 텍스트 색을 결정 합니다.
+프레임워크는 도구 모음 단추의 텍스트 색상을 결정하기 위해 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -1408,69 +1408,69 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>매개 변수
 
-*pButton*<br/>
-진행 도구 모음 단추에 대 한 포인터입니다.
+*p 버튼*<br/>
+【인】 도구 모음 단추에 대한 포인터입니다.
 
-*state*<br/>
-진행 도구 모음 단추의 상태입니다.
+*상태*<br/>
+【인】 도구 모음 단추의 상태입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*상태가*표시 된 상태를 포함 하는 경우 *pbutton* 의 텍스트 색입니다.
+*pButton의* 텍스트 색상이 *상태별로*표시된 상태가 있는 경우 .
 
 ### <a name="remarks"></a>설명
 
-[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) 개체의 텍스트 색은 단추의 상태에 따라 달라 집니다. 도구 모음 단추의 `ButtonsIsRegular`가능한 상태는, `ButtonsIsPressed`또는 `ButtonsIsHighlighted`입니다.
+[CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 개체의 텍스트 색상은 단추의 상태에 따라 다릅니다. 도구 모음 단추의 가능한 `ButtonsIsRegular`상태는 `ButtonsIsPressed`에 `ButtonsIsHighlighted`이 수 있습니다.
 
-응용 프로그램에서 도구 모음 단추의 텍스트 색을 사용자 지정 하려면이 함수를 재정의 합니다.
+응용 프로그램에서 도구 모음 단추의 텍스트 색상을 사용자 지정하려면 이 함수를 재정의합니다.
 
-##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManager::GetToolBarCustomizeButtonMargin
+## <a name="cmfcvisualmanagergettoolbarcustomizebuttonmargin"></a><a name="gettoolbarcustomizebuttonmargin"></a>CMFC 비주얼 매니저::GetToolBar 사용자 정의 버튼 마진
 
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManager::GetToolbarDisabledColor
+## <a name="cmfcvisualmanagergettoolbardisabledcolor"></a><a name="gettoolbardisabledcolor"></a>CMFC 비주얼 매니저::GetToolbar장애인색상
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManager::GetToolbarDisabledTextColor
+## <a name="cmfcvisualmanagergettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFC 비주얼 매니저::GetToolbar장애인텍스트컬러
 
-프레임 워크는이 함수를 호출 하 여 사용할 수 없는 도구 모음 단추의 텍스트 색을 결정 합니다.
+프레임워크는 이 함수를 호출하여 사용할 수 없는 도구 모음 단추의 텍스트 색상을 확인합니다.
 
 ```
 virtual COLORREF GetToolbarDisabledTextColor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-프레임 워크에서 사용할 수 없는 도구 모음 단추의 텍스트 색에 사용 하는 색입니다.
+사용할 수 없는 도구 모음 단추의 텍스트 색상에 프레임워크에서 사용하는 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-사용자 지정 시각적 관리자에서이 메서드를 재정의 하 여 사용할 수 없는 도구 모음 단추의 텍스트 색을 설정 합니다.
+사용할 수 없는 도구 모음 단추의 텍스트 색상을 설정하려면 사용자 지정 시각적 관리자에서 이 메서드를 재정의합니다.
 
-##  <a name="gettoolbarhighlightcolor"></a>  CMFCVisualManager::GetToolbarHighlightColor
+## <a name="cmfcvisualmanagergettoolbarhighlightcolor"></a><a name="gettoolbarhighlightcolor"></a>CMFC 비주얼 매니저::겟툴바하이라이트컬러
 
 ```
 virtual COLORREF GetToolbarHighlightColor();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettooltipinfo"></a>  CMFCVisualManager::GetToolTipInfo
+## <a name="cmfcvisualmanagergettooltipinfo"></a><a name="gettooltipinfo"></a>CMFC 비주얼 매니저::GetToolTipInfo
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -1480,36 +1480,36 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *params*<br/>
-[in] *nType*<br/>
+【인】 *매개 변수*<br/>
+【인】 *n유형*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManager::HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagerhasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFC비주얼매니저::하오버랩자동숨기기버튼
 
-현재 비주얼 관리자에서 자동 숨기기 단추가 겹치는 지 여부를 반환 합니다.
+자동 숨기기 버튼이 현재 시각적 관리자에서 겹치는지 여부를 반환합니다.
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-자동 숨기기 단추가 겹치면 TRUE입니다. 그렇지 않으면 FALSE입니다.
+자동 숨기기 버튼이 겹치는 경우 TRUE; 그렇지 않으면 false입니다.
 
-##  <a name="isautodestroy"></a>  CMFCVisualManager::IsAutoDestroy
+## <a name="cmfcvisualmanagerisautodestroy"></a><a name="isautodestroy"></a>CMFC 비주얼 매니저::IsAutoDestroy
 
 ```
 BOOL IsAutoDestroy() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManager::IsDefaultWinXPPopupButton
+## <a name="cmfcvisualmanagerisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFC 비주얼 매니저:::isDefaultWinXPPopup버튼
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
@@ -1517,187 +1517,187 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CMFCDesktopAlertWndButton&#42;*<br/>
+【인】 *CMFC데스크톱 경고&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isdockingtabhasborder"></a>  CMFCVisualManager::IsDockingTabHasBorder
+## <a name="cmfcvisualmanagerisdockingtabhasborder"></a><a name="isdockingtabhasborder"></a>CMFC 비주얼 매니저::이스독타브하스보더
 
-현재 visual manager가 도킹 및 탭 된 창 주위에 테두리를 그릴지 여부를 반환 합니다.
+현재 시각적 관리자가 도킹및 탭된 창 주위에 테두리를 그리는지 여부를 반환합니다.
 
 ```
 virtual BOOL IsDockingTabHasBorder();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-시각적 관리자가 도킹 및 탭 된 창 주위에 테두리를 그리면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+TRUE 시각적 관리자가 도킹되고 탭된 창 주위에 테두리를 그리는 경우 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-여러 창이 같은 위치에 도킹 되 면 도킹 된 창이 탭 됩니다.
+여러 창이 동일한 위치에 도킹되면 도킹된 창이 탭됩니다.
 
-##  <a name="isembossdisabledimage"></a>  CMFCVisualManager::IsEmbossDisabledImage
+## <a name="cmfcvisualmanagerisembossdisabledimage"></a><a name="isembossdisabledimage"></a>CMFC 비주얼 매니저::이셈보스장애인이미지
 
-프레임 워크에서 사용할 수 없는 이미지를 embosses 여부를 지정 합니다.
+프레임워크에서 사용할 수 없는 이미지를 엠보시할지 여부를 지정합니다.
 
 ```
 BOOL IsEmbossDisabledImage() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-프레임 워크에서 사용할 수 없는 이미지를 embosses 경우 0이 아닙니다. 그렇지 않으면 0입니다.
+프레임워크에서 사용할 수 없는 이미지를 포함하는 경우 Nonzero; 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 도구 모음에서 사용할 수 없는 이미지를 그릴 때 [Cmfc도구 이미지: 원시:D](../../mfc/reference/cmfctoolbarimages-class.md#draw) 에 의해 호출 됩니다.
+이 메서드는 [CMFCToolBarImages::Draw사용할](../../mfc/reference/cmfctoolbarimages-class.md#draw) 수 없는 도구 모음에 이미지를 그릴 때 호출됩니다.
 
-##  <a name="isfadeinactiveimage"></a>  CMFCVisualManager::IsFadeInactiveImage
+## <a name="cmfcvisualmanagerisfadeinactiveimage"></a><a name="isfadeinactiveimage"></a>CMFC비주얼매니저::이페이드인액티브이미지
 
-프레임 워크는 도구 모음이 나 메뉴에 비활성 이미지를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 도구 모음이나 메뉴에서 비활성 이미지를 그릴 때 이 메서드를 호출합니다.
 
 ```
 BOOL IsFadeInactiveImage() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-도구 모음이 나 메뉴에서 비활성 이미지를 그릴 때 프레임 워크에서 조명 효과를 사용 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
+프레임워크가 도구 모음 이나 메뉴에서 비활성 이미지를 그릴 때 조명 효과를 사용하는 경우 비영입니다. 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-[Cmfcvisualmanager:: SetFadeInactiveImage](#setfadeinactiveimage)를 호출 하 여 조명 효과를 활성화 하거나 비활성화할 수 있습니다. 조명 효과는 사용할 수 없는 이미지가 흐리게 표시 되도록 하는 것입니다.
+[CMFCVisualManager::SetFadeInactive Image](#setfadeinactiveimage)를 호출하여 조명 효과를 활성화하거나 비활성화할 수 있습니다. 조명 효과는 사용할 수 없는 이미지가 희미하게 보이게 만드는 것입니다.
 
-##  <a name="isframemenucheckeditems"></a>  CMFCVisualManager::IsFrameMenuCheckedItems
+## <a name="cmfcvisualmanagerisframemenucheckeditems"></a><a name="isframemenucheckeditems"></a>CMFC 비주얼 매니저::isFrame메뉴 체크아이템
 
 ```
 BOOL IsFrameMenuCheckedItems() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManager::IsHighlightOneNoteTabs
+## <a name="cmfcvisualmanagerishighlightonenotetabs"></a><a name="ishighlightonenotetabs"></a>CMFC 비주얼 매니저::이스하이라이트원노트탭
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManager::IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanagerishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFC 비주얼 매니저::이하이라이트전체메뉴항목
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManager::IsLayeredRibbonKeyTip
+## <a name="cmfcvisualmanagerislayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFC 비주얼 매니저::IsLayered리본키팁
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ismenuflatlook"></a>  CMFCVisualManager::IsMenuFlatLook
+## <a name="cmfcvisualmanagerismenuflatlook"></a><a name="ismenuflatlook"></a>CMFC 비주얼 매니저::이스메뉴플랫룩
 
-메뉴 단추를 평면으로 표시할지 여부를 나타냅니다.
+메뉴 단추가 평평하게 표시되는지 여부를 나타냅니다.
 
 ```
 BOOL IsMenuFlatLook() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메뉴 단추가 평면으로 표시 되 면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
+메뉴 단추가 평평하게 표시되는 경우 영하지 않습니다. 0 그렇지 않으면.
 
 ### <a name="remarks"></a>설명
 
-기본적으로 메뉴 단추는 평면으로 표시 되지 않습니다. [Cmfcvisualmanager:: SetMenuFlatLook](#setmenuflatlook) 메서드를 사용 하 여이 동작을 변경할 수 있습니다. 메뉴 단추가 평면으로 표시 되 면 사용자가 클릭 하면 모양이 변경 되지 않습니다.
+기본적으로 메뉴 버튼은 평평하게 나타나지 않습니다. [CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook) 메서드를 사용하여 이 동작을 변경합니다. 메뉴 단추가 평평하게 나타나면 사용자가 단추를 클릭할 때 모양이 변경되지 않습니다.
 
-##  <a name="isofficexpstylemenus"></a>  CMFCVisualManager::IsOfficeXPStyleMenus
+## <a name="cmfcvisualmanagerisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFC 비주얼 매니저::이오피스XP스타일메뉴
 
-Visual manager에서 Office XP 스타일 메뉴를 구현 하는지 여부를 나타냅니다.
+시각적 관리자가 Office XP 스타일 메뉴를 구현하는지 여부를 나타냅니다.
 
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Visual manager에서 Office XP 스타일 메뉴를 표시 하는 경우 0이 아님 그렇지 않으면 0입니다.
+비주얼 매니저가 Office XP 스타일 메뉴를 표시하는 경우 비영; 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-[CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 는 메뉴와 그림자를 그려야 할 때이 메서드를 호출 합니다. 기본적으로이 메서드는 FALSE를 반환 합니다. Office XP의 팝업 메뉴와 유사한 팝업 메뉴를 사용 하려면 사용자 지정 시각적 관리자에서이 메서드를 재정의 하 고 TRUE를 반환 합니다.
+[CMFCPopupMenu 클래스는](../../mfc/reference/cmfcpopupmenu-class.md) 메뉴와 그림자를 그려야 할 때 이 메서드를 호출합니다. 기본적으로 이 메서드는 FALSE를 반환합니다. Office XP의 팝업 메뉴와 유사한 팝업 메뉴를 사용하려면 사용자 지정 시각적 관리자에서 이 메서드를 재정의하고 TRUE를 반환합니다.
 
-##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManager::IsOffsetPressedButton
+## <a name="cmfcvisualmanagerisoffsetpressedbutton"></a><a name="isoffsetpressedbutton"></a>CMFC 비주얼 매니저::오프셋된 압축 단추
 
 ```
 virtual BOOL IsOffsetPressedButton() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isownerdrawcaption"></a>  CMFCVisualManager::IsOwnerDrawCaption
+## <a name="cmfcvisualmanagerisownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFC 비주얼 매니저::IsOwner그리기 캡션
 
-현재 visual manager에서 소유자가 그린 캡션을 구현 하는지 여부를 나타냅니다.
+현재 시각적 관리자가 소유자가 그린 캡션을 구현하는지 여부를 나타냅니다.
 
 ```
 virtual BOOL IsOwnerDrawCaption();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-응용 프로그램의 모든 프레임 창에 소유자 그리기 캡션이 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
+TRUE 응용 프로그램의 모든 프레임 창에 소유자-그리기 캡션이 있는 경우; 그렇지 않으면 거짓.
 
-##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManager::IsOwnerDrawMenuCheck
+## <a name="cmfcvisualmanagerisownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFC 비주얼 매니저::Isowner그리기 메뉴체크
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isshadowhighlightedimage"></a>  CMFCVisualManager::IsShadowHighlightedImage
+## <a name="cmfcvisualmanagerisshadowhighlightedimage"></a><a name="isshadowhighlightedimage"></a>CMFC비주얼매니저::그림자 강조 표시이미지
 
-강조 표시 된 이미지를 렌더링할 때 비주얼 관리자에서 그림자를 표시할지 여부를 나타냅니다.
+강조 표시된 이미지를 렌더링할 때 시각적 관리자가 그림자를 표시하는지 여부를 나타냅니다.
 
 ```
 BOOL IsShadowHighlightedImage() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-시각적 관리자가 강조 표시 된 이미지 아래에 그림자를 표시 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
+비주얼 매니저가 강조 표시된 이미지 아래에 그림자를 표시할 때 0이 아닙니다. 0 그렇지 않으면.
 
-##  <a name="istoolbarbuttonfillenabled"></a>  CMFCVisualManager::IsToolbarButtonFillEnabled
+## <a name="cmfcvisualmanageristoolbarbuttonfillenabled"></a><a name="istoolbarbuttonfillenabled"></a>CMFC 비주얼 매니저::istoolbar단추채우기 사용 가능
 
 ```
 BOOL IsToolbarButtonFillEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="istoolbarroundshape"></a>  CMFCVisualManager::IsToolbarRoundShape
+## <a name="cmfcvisualmanageristoolbarroundshape"></a><a name="istoolbarroundshape"></a>CMFC 비주얼 매니저::이스툴바라운드 셰이프
 
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1705,23 +1705,23 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 ### <a name="parameters"></a>매개 변수
 
-진행 *Cmfctoolbar&#42;*<br/>
+【인】 *CMFC툴바&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManager::IsWindowsThemingSupported
+## <a name="cmfcvisualmanageriswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFC비주얼 매니저::IsWindowsTheming지원
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onactivateapp"></a>  CMFCVisualManager::OnActivateApp
+## <a name="cmfcvisualmanageronactivateapp"></a><a name="onactivateapp"></a>CMFC 비주얼 매니저::온인스탭앱
 
 ```
 virtual void OnActivateApp(
@@ -1731,12 +1731,12 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+【인】 *pWnd*<br/>
+【인】 *b활성*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManager::OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagerondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFC 비주얼 매니저::에드로드자동하이드버튼보더
 
 자동 숨기기 단추의 테두리를 그릴 때 프레임워크에서 이 메서드를 호출합니다.
 
@@ -1751,26 +1751,26 @@ virtual void OnDrawAutoHideButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectBounds*<br/>
-진행 자동 숨기기 단추의 크기 및 위치입니다.
+*정류 바운드*<br/>
+【인】 자동 숨기기 단추의 크기 및 위치입니다.
 
-*rectBorderSize*<br/>
-진행 테두리의 크기를 포함 하는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 매개 변수입니다.
+*직사각형 테두리크기*<br/>
+【인】 테두리의 크기를 포함하는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 매개 변수입니다.
 
-*pButton*<br/>
-진행 자동 숨기기 단추에 대 한 포인터입니다. 프레임 워크에서이 단추의 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 자동 숨기기 단추에 대한 포인터입니다. 프레임워크가 이 단추의 테두리를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-자동 숨기기 단추의 테두리 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다. 기본적으로이 메서드는 응용 프로그램의 기본 그림자 색으로 평면 테두리를 채웁니다.
+자동 숨기기 단추의 테두리 모양을 사용자 지정하려는 경우 파생 클래스에서 이 메서드를 재정의합니다. 기본적으로 이 메서드는 플랫 테두리에 응용 프로그램의 기본 그림자 색상을 채웁니다.
 
-*RectBorderSize* 매개 변수는 테두리의 좌표를 포함 하지 않습니다. 여기 `top`에는 `bottom` ,`left`, 및`right` 데이터 멤버의 테두리 크기가 포함 됩니다. 0 보다 작거나 같은 값은 자동 숨기기 단추의 해당 쪽에 테두리가 없음을 나타냅니다.
+*rectBorderSize* 매개 변수는 테두리의 좌표를 포함하지 않습니다. 여기에는 `top`의 `bottom` `left` `right` 테두리 크기가 포함되어 있습니다. 값이 0보다 낮거나 같을 때자동 숨기기 단추의 해당 면에 테두리가 없음을 나타냅니다.
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper
+## <a name="cmfcvisualmanagerondrawbargripper"></a><a name="ondrawbargripper"></a>CMFC 비주얼 매니저::온드로우바그리퍼
 
-컨트롤 막대의 위치 조정 막대를 그릴 때 프레임 워크에서 호출 됩니다.
+컨트롤 막대에 대한 그리퍼를 그릴 때 프레임워크에서 호출합니다.
 
 ```
 virtual void OnDrawBarGripper(
@@ -1783,24 +1783,24 @@ virtual void OnDrawBarGripper(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 컨트롤 막대의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 컨트롤 막대의 장치 컨텍스트에 대한 포인터입니다.
 
-*rectGripper*<br/>
-진행 컨트롤 막대의 경계 사각형입니다.
+*렉트그리퍼*<br/>
+【인】 컨트롤 막대의 경계 사각형입니다.
 
-*bHorz*<br/>
-진행 컨트롤 막대를 가로 또는 세로로 도킹할 지 여부를 지정 하는 부울 매개 변수입니다.
+*b호르츠 (주)*<br/>
+【인】 컨트롤 막대가 수평 또는 수직으로 도킹되는지 여부를 지정하는 부울 매개변수입니다.
 
 *pBar*<br/>
-진행 컨트롤 막대에 대 한 포인터입니다. 시각적 관리자는이 컨트롤 막대의 위치 조정 막대를 그립니다.
+【인】 컨트롤 막대에 대한 포인터입니다. 시각적 관리자는 이 컨트롤 막대의 그리퍼를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 표준 위치 조정 막대를 표시 합니다. 그리퍼의 모양을 사용자 지정 하려면 `CMFCVisualManager` 클래스에서 파생 된 사용자 지정 클래스에서이 메서드를 재정의 합니다.
+이 메서드의 기본 구현에는 표준 그리퍼가 표시됩니다. 그리퍼의 모양을 사용자 지정하려면 클래스에서 파생된 사용자 지정 클래스에서 이 메서드를 `CMFCVisualManager` 재정의합니다.
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManager::OnDrawBrowseButton
+## <a name="cmfcvisualmanagerondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFC 비주얼 매니저::온드로우브라우징 버튼
 
-프레임 워크는 편집 컨트롤에 대 한 찾아보기 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 편집 컨트롤에 대한 찾아보기 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -1814,31 +1814,31 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 찾아보기 단추의 경계를 지정 하는 사각형입니다.
+【인】 찾아보기 단추의 경계를 지정하는 사각형입니다.
 
-*pEdit*<br/>
-진행 편집 컨트롤에 대 한 포인터입니다. 시각적 관리자가이 편집 컨트롤에 대 한 찾아보기 단추를 그립니다.
+*Pedit*<br/>
+【인】 편집 컨트롤에 대한 포인터입니다. 시각적 관리자는 이 편집 컨트롤의 찾아보기 단추를 그립니다.
 
-*state*<br/>
-진행 단추의 상태를 지정 하는 열거형 값입니다.
+*상태*<br/>
+【인】 단추의 상태를 지정하는 예인된 값입니다.
 
 *clrText*<br/>
-제한이 [Colorref](/windows/win32/gdi/colorref) 매개 변수에 대 한 참조입니다. 이 값은 예약 된 값 이며 현재 사용 되지 않습니다.
+【아웃】 [COLORREF](/windows/win32/gdi/colorref) 매개 변수에 대한 참조입니다. 예약된 값이며 현재 사용되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-[CMFCEditBrowseCtrl 클래스](../../mfc/reference/cmfceditbrowsectrl-class.md)의 인스턴스에서 찾아보기 단추의 모양을 사용자 지정 하려면 파생 클래스에서이 함수를 재정의 합니다. 단추의 `ButtonsIsRegular`상태에 사용할 수 있는 값은, `ButtonsIsPressed`및 `ButtonsIsHighlighted`입니다.
+[CMFCEdItBrowseCtrl 클래스의](../../mfc/reference/cmfceditbrowsectrl-class.md)인스턴스에서 찾아보기 단추의 모양을 사용자 지정하려는 경우 파생 클래스에서 이 함수를 재정의합니다. 단추의 상태에 대 한 가능한 `ButtonsIsRegular` `ButtonsIsPressed`값은 `ButtonsIsHighlighted`는 .
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManager::OnDrawButtonBorder
+## <a name="cmfcvisualmanagerondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFC 비주얼 매니저::온드로우버튼보더
 
-프레임 워크는 도구 모음 단추의 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 도구 모음 단추의 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawButtonBorder(
@@ -1851,24 +1851,24 @@ virtual void OnDrawButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 도구 모음 단추의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 도구 모음 단추의 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 도구 모음 단추에 대 한 포인터입니다. 프레임 워크는이 단추의 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 도구 모음 단추에 대한 포인터입니다. 프레임워크는 이 단추의 테두리를 그립니다.
 
 *rect*<br/>
-진행 도구 모음 단추의 경계를 지정 하는 사각형입니다.
+【인】 도구 모음 단추의 경계를 지정하는 사각형입니다.
 
-*state*<br/>
-진행 도구 모음 단추의 현재 상태를 지정 하는 열거형 데이터 형식입니다.
+*상태*<br/>
+【인】 도구 모음 단추의 현재 상태를 지정하는 예발된 데이터 형식입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 표준 테두리를 표시 합니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 도구 모음 단추의 테두리 모양을 사용자 지정 합니다.
+이 메서드의 기본 구현에는 표준 테두리가 표시됩니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 도구 모음 단추의 테두리 모양을 사용자 지정합니다.
 
-도구 모음 단추의 `ButtonsIsRegular`가능한 상태는, `ButtonsIsPressed`또는 `ButtonsIsHighlighted`입니다.
+도구 모음 단추의 가능한 `ButtonsIsRegular`상태는 `ButtonsIsPressed`에 `ButtonsIsHighlighted`이 수 있습니다.
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManager::OnDrawButtonSeparator
+## <a name="cmfcvisualmanagerondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFC 비주얼 매니저::에 드로 버튼분리기
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -1881,17 +1881,17 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
-[in] *bHorz*<br/>
+【인】 *상태 상태*<br/>
+【인】 *b호르츠 (주)*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManager::OnDrawCaptionBarBorder
+## <a name="cmfcvisualmanagerondrawcaptionbarborder"></a><a name="ondrawcaptionbarborder"></a>CMFC 비주얼 매니저::온드로우캡션바보더
 
-프레임 워크는 [Cmfccaptionbar 클래스](../../mfc/reference/cmfccaptionbar-class.md) 개체의 테두리를 그릴 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCCaptionBar 클래스](../../mfc/reference/cmfccaptionbar-class.md) 개체의 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawCaptionBarBorder(
@@ -1905,25 +1905,25 @@ virtual void OnDrawCaptionBarBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 `CMFCCaptionBar` 개체에 대 한 포인터입니다. 프레임 워크는이 캡션 표시줄을 그립니다.
+【인】 개체에 대한 `CMFCCaptionBar` 포인터입니다. 프레임워크는 이 캡션 막대를 그립니다.
 
 *rect*<br/>
-진행 캡션 표시줄의 경계를 지정 하는 사각형입니다.
+【인】 캡션 막대의 경계를 지정하는 사각형입니다.
 
-*clrBarBorder*<br/>
-진행 테두리의 색입니다.
+*클러바보어더*<br/>
+【인】 테두리의 색상입니다.
 
-*bFlatBorder*<br/>
-진행 테두리에 평면 모양의 모양이 있는지 여부를 지정 하는 부울 매개 변수입니다.
+*b플랫보더*<br/>
+【인】 테두리에 플랫 2D 모양이 있는지 여부를 지정하는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 여 캡션 표시줄 테두리의 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 캡션 막대의 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawcaptionbarbuttonborder"></a>  CMFCVisualManager::OnDrawCaptionBarButtonBorder
+## <a name="cmfcvisualmanagerondrawcaptionbarbuttonborder"></a><a name="ondrawcaptionbarbuttonborder"></a>CMFC 비주얼 매니저::온드로우캡션바버튼보더
 
 ```
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1939,18 +1939,18 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+【인】 *비스누른*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *isdisabled*<br/>
+【인】 *bHasDropDownArrow*<br/>
+【인】 *비시스버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManager::OnDrawCaptionBarInfoArea
+## <a name="cmfcvisualmanagerondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFC 비주얼 매니저::에인출캡션바정보 영역
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -1961,15 +1961,15 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManager::OnDrawCaptionButton
+## <a name="cmfcvisualmanagerondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFC 비주얼 매니저::온드로우 캡션 버튼
 
-프레임 워크는 [Cmfccaptionbutton](../../mfc/reference/cmfccaptionbutton-class.md) 개체를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md) 개체를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawCaptionButton (
@@ -1985,33 +1985,33 @@ virtual void OnDrawCaptionButton (
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 `CMFCCaptionButton` 개체에 대 한 포인터입니다. 프레임 워크는이 캡션 단추를 그립니다.
+*p 버튼*<br/>
+【인】 개체에 대한 `CMFCCaptionButton` 포인터입니다. 프레임워크는 이 캡션 단추를 그립니다.
 
-*bActive*<br/>
-진행 단추가 활성 상태 인지 여부를 지정 하는 부울 매개 변수입니다.
+*b활성*<br/>
+【인】 단추를 활성 상태인지 여부를 지정하는 부울 매개 변수입니다.
 
-*bHorz*<br/>
-진행 캡션이 가로 인지 여부를 지정 하는 부울 매개 변수입니다.
+*b호르츠 (주)*<br/>
+【인】 캡션이 수평인지 여부를 지정하는 부울 매개 변수입니다.
 
-*bMaximized*<br/>
-진행 부모 창이 최대화 되는지 여부를 지정 하는 부울 매개 변수입니다.
+*b최대화*<br/>
+【인】 상위 창이 최대화되는지 여부를 지정하는 부울 매개변수입니다.
 
-*bDisabled*<br/>
-진행 캡션 단추를 사용할 수 없는지 여부를 지정 하는 부울 매개 변수입니다.
+*b 장애인*<br/>
+【인】 캡션 단추를 사용하지 않도록 설정했는지 여부를 지정하는 부울 매개 변수입니다.
 
-*nImageID*<br/>
-진행 단추에 사용할 아이콘의 이미지 인덱스입니다. *NImageID* 가-1 인 경우이 메서드는 *pbutton*에 기록 된 이미지 인덱스를 사용 합니다.
+*n이미지 ID*<br/>
+【인】 단추에 사용할 아이콘의 이미지 인덱스입니다. *nImageID가* -1이면 이 메서드는 *pButton*에 기록된 이미지 인덱스를 사용합니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 `CMenuImages` 클래스의 전역 인스턴스에서 작은 단추를 표시 합니다. 의 `CMenuImages`헤더 파일에 단추가 나열 됩니다. `CMenuImages::IdArowLeft` 몇가지`CMenuImages::IdArowRight`예 를들면`CMenuImages::IdArowDown` ,`CMenuImages::IdPinHorz`, ,,및가있습니다`CMenuImages::IdArowUp`. `CMenuImages::IdClose`
+이 메서드의 기본 구현클래스의 전역 인스턴스에서 `CMenuImages` 작은 단추를 표시 합니다. 단추는 에 대한 `CMenuImages`헤더 파일에 나열됩니다. 몇 가지 `CMenuImages::IdClose`예는 `CMenuImages::IdArowRight` `CMenuImages::IdArowDown`" `CMenuImages::IdArowUp` `CMenuImages::IdArowLeft`, `CMenuImages::IdPinHorz`및 .
 
-파생 클래스에서이 메서드를 재정의 하 여 캡션 단추의 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 캡션 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawcheckbox"></a>  CMFCVisualManager::OnDrawCheckBox
+## <a name="cmfcvisualmanagerondrawcheckbox"></a><a name="ondrawcheckbox"></a>CMFC 비주얼 매니저::온드로우체크박스
 
 ```
 virtual void OnDrawCheckBox(
@@ -2024,15 +2024,15 @@ virtual void OnDrawCheckBox(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-진행 *Bhighlighted 표시*<br/>
-[in] *bChecked*<br/>
-[in] *bEnabled*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *b 확인됨*<br/>
+【인】 *b사용*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManager::OnDrawCheckBoxEx
+## <a name="cmfcvisualmanagerondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFC 비주얼 매니저::온드로우체크박스엑스
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -2046,18 +2046,18 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nState*<br/>
-진행 *Bhighlighted 표시*<br/>
-[in] *bPressed*<br/>
-[in] *bEnabled*<br/>
+【인】 *n스테이트*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *bpressed*<br/>
+【인】 *b사용*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManager::OnDrawComboBorder
+## <a name="cmfcvisualmanagerondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFC 비주얼 매니저::온드로우콤보보보보보보보
 
-프레임 워크는 [CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)의 인스턴스 주위에 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCToolBarComboBoxButton 클래스의](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)인스턴스 주위에 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawComboBorder(
@@ -2072,30 +2072,30 @@ virtual void OnDrawComboBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 콤보 상자 단추의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 콤보 상자 단추의 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 콤보 상자 단추의 경계를 지정 하는 사각형입니다.
+【인】 콤보 상자 단추의 경계를 지정하는 사각형입니다.
 
-*bDisabled*<br/>
-진행 콤보 상자 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*b 장애인*<br/>
+【인】 콤보 상자 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsDropped*<br/>
-진행 콤보 상자를 삭제할지 여부를 나타내는 부울 매개 변수입니다.
+*비스드 드롭*<br/>
+【인】 콤보 상자를 삭제했는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsHighlighted*<br/>
-진행 콤보 상자 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 콤보 상자 단추를 강조 표시 되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*pButton*<br/>
-진행 `CMFCToolBarComboBoxButton` 개체에 대 한 포인터입니다. 프레임 워크는이 콤보 상자 단추를 그립니다.
+*p 버튼*<br/>
+【인】 개체에 대한 `CMFCToolBarComboBoxButton` 포인터입니다. 프레임워크는 이 콤보 상자 단추를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 콤보 상자의 테두리 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 콤보 상자의 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManager::OnDrawComboDropButton
+## <a name="cmfcvisualmanagerondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFC 비주얼 매니저::온드로우컴보드롭버튼
 
-프레임 워크는 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)의 드롭 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCToolBarComboBoxButton의](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)드롭 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawComboDropButton(
@@ -2110,28 +2110,28 @@ virtual void OnDrawComboDropButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 드롭 단추의 경계를 지정 하는 사각형입니다.
+【인】 놓기 단추의 경계를 지정하는 사각형입니다.
 
-*bDisabled*<br/>
-진행 드롭 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*b 장애인*<br/>
+【인】 놓기 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsDropped*<br/>
-진행 콤보 상자를 삭제할지 여부를 나타내는 부울 매개 변수입니다.
+*비스드 드롭*<br/>
+【인】 콤보 상자를 삭제했는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsHighlighted*<br/>
-진행 드롭 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 놓기 버튼이 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*pButton*<br/>
-진행 `CMFCToolBarComboBoxButton` 개체에 대 한 포인터입니다. 프레임 워크는이 콤보 상자 단추의 드롭 단추를 그립니다.
+*p 버튼*<br/>
+【인】 개체에 대한 `CMFCToolBarComboBoxButton` 포인터입니다. 프레임 워크는이 콤보 상자 버튼에 대 한 드롭 단추를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 콤보 상자 단추의 드롭 단추 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의하여 콤보 상자 단추의 놓기 단추 모양을 사용자 지정합니다.
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManager::OnDrawControlBorder
+## <a name="cmfcvisualmanagerondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFC 비주얼 매니저::온드로우컨트롤보더
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -2139,13 +2139,13 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWndCtrl*<br/>
+【인】 *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManager::OnDrawDefaultRibbonImage
+## <a name="cmfcvisualmanagerondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFC 비주얼 매니저::온드로우디폴드리본이미지
 
-프레임 워크는 리본 단추에 사용 되는 기본 이미지를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 단추에 사용되는 기본 이미지를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawDefaultRibbonImage(
@@ -2159,27 +2159,27 @@ virtual void OnDrawDefaultRibbonImage(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rectImage*<br/>
-진행 기본 이미지의 경계를 지정 하는 사각형입니다.
+【인】 기본 이미지의 경계를 지정하는 사각형입니다.
 
-*bIsDisabled*<br/>
-진행 리본 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*isdisabled*<br/>
+【인】 리본 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsPressed*<br/>
-진행 리본 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 리본 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsHighlighted*<br/>
-진행 리본 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 리본 버튼이 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 단추에 사용 되는 이미지를 사용자 지정 하려면 파생 된 visual manager에서이 메서드를 재정의 합니다.
+리본 단추에 사용되는 이미지를 사용자 지정하려는 경우 파생 시각적 관리자에서 이 메서드를 재정의합니다.
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManager::OnDrawEditBorder
+## <a name="cmfcvisualmanagerondraweditborder"></a><a name="ondraweditborder"></a>CMFC 비주얼 매니저::온드로우편집보더
 
-프레임 워크는 [CMFCToolBarEditBoxButton 클래스](../../mfc/reference/cmfctoolbareditboxbutton-class.md)의 인스턴스 주위에 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCToolBarEditBoxButton 클래스의](../../mfc/reference/cmfctoolbareditboxbutton-class.md)인스턴스 주위에 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawEditBorder(
@@ -2193,25 +2193,25 @@ virtual void OnDrawEditBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 `CMFCToolBarEditBoxButton` 개체의 경계를 지정 하는 사각형입니다.
+【인】 개체의 경계를 지정하는 사각형입니다. `CMFCToolBarEditBoxButton`
 
-*bDisabled*<br/>
-진행 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*b 장애인*<br/>
+【인】 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsHighlighted*<br/>
-진행 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 단추를 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*pButton*<br/>
-진행 `CMFCToolBarEditBoxButton` 개체에 대 한 포인터입니다. 프레임 워크는이 편집 상자 단추의 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 개체에 대한 `CMFCToolBarEditBoxButton` 포인터입니다. 프레임워크는 이 편집 상자 단추의 테두리를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 `CMFCToolBarEditBoxButton` 개체의 테두리를 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCToolBarEditBoxButton` 개체의 테두리를 사용자 지정합니다.
 
-##  <a name="ondrawexpandingbox"></a>  CMFCVisualManager::OnDrawExpandingBox
+## <a name="cmfcvisualmanagerondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFC 비주얼 매니저::온드로우 확장 상자
 
 ```
 virtual void OnDrawExpandingBox(
@@ -2223,16 +2223,16 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsOpened*<br/>
-[in] *colorBox*<br/>
+【인】 *비스오픈*<br/>
+【인】 *컬러박스*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManager::OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanagerondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFC 비주얼 매니저::온드로우플로팅툴바보더
 
-프레임 워크는 부동 도구 모음의 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 부동 도구 모음의 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -2245,28 +2245,28 @@ virtual void OnDrawFloatingToolbarBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pToolBar*<br/>
-진행 부동 도구 모음에 대 한 포인터입니다.
+【인】 부동 도구 모음에 대한 포인터입니다.
 
-*rectBorder*<br/>
-진행 부동 도구 모음의 경계를 지정 하는 사각형입니다.
+*직류 국경*<br/>
+【인】 부동 도구 모음의 경계를 지정하는 사각형입니다.
 
-*rectBorderSize*<br/>
-진행 도구 모음의 테두리 크기를 지정 하는 사각형입니다.
+*직사각형 테두리크기*<br/>
+【인】 도구 모음의 테두리 크기를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-부동 도구 모음은 미니 프레임 창으로 표시 되는 도구 모음입니다. 일반적으로이는 사용자가 더 이상 도킹 되지 않도록 도구 모음을 끌 때 발생 합니다.
+부동 도구 모음은 미니 프레임 창으로 표시되는 도구 모음입니다. 일반적으로 사용자가 도구 모음을 드래그하여 더 이상 도킹되지 않도록 하는 경우에 발생합니다.
 
-테두리의 크기는 *rectBorderSize*의 해당 매개 변수에 의해 지정 됩니다. 예를 들어 도구 모음의 위쪽 테두리 너비는로 `rectBorderSize.top`지정 됩니다.
+테두리의 크기는 *rectBorderSize*. 예를 들어 도구 모음의 맨 위 테두리의 `rectBorderSize.top`너비는 에 의해 지정됩니다.
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 부동 도구 모음의 테두리 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 부동 도구 모음의 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManager::OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanagerondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFC 비주얼 매니저::온드로우헤더트툴보더
 
-프레임 워크는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)의 인스턴스 주위에 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCHeaderCtrl 클래스의](../../mfc/reference/cmfcheaderctrl-class.md)인스턴스 주위에 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -2280,27 +2280,27 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pCtrl*<br/>
-진행 `CMFCHeaderCtrl` 개체에 대 한 포인터입니다. 프레임 워크는이 헤더 컨트롤의 테두리를 그립니다.
+【인】 개체에 대한 `CMFCHeaderCtrl` 포인터입니다. 프레임워크는 이 헤더 컨트롤의 테두리를 그립니다.
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 헤더 컨트롤의 경계를 지정 하는 사각형입니다.
+【인】 헤더 컨트롤의 경계를 지정하는 사각형입니다.
 
-*bIsPressed*<br/>
-진행 헤더 컨트롤이 눌러져 있는지 여부를 나타내는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 헤더 컨트롤이 눌리게 되는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsHighlighted*<br/>
-진행 헤더 컨트롤이 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 헤더 컨트롤이 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 머리글 컨트롤의 테두리를 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 헤더 컨트롤의 테두리를 사용자 지정합니다.
 
-##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManager::OnDrawHeaderCtrlSortArrow
+## <a name="cmfcvisualmanagerondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFC 비주얼 매니저::온드로헤더트러소트로우
 
-프레임 워크는 헤더 컨트롤의 정렬 화살표를 그릴 때이 함수를 호출 합니다.
+프레임워크는 헤더 컨트롤의 정렬 화살표를 그릴 때 이 함수를 호출합니다.
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -2313,22 +2313,22 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ### <a name="parameters"></a>매개 변수
 
 *pCtrl*<br/>
-진행 헤더 컨트롤에 대 한 포인터입니다. 시각적 관리자는이 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md) 개체의 정렬 화살표를 그립니다.
+【인】 헤더 컨트롤에 대한 포인터입니다. 시각적 관리자는 이 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md) 개체의 정렬 화살표를 그립니다.
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 정렬 화살표의 경계를 지정 하는 사각형입니다.
+【인】 정렬 화살표의 경계를 지정하는 사각형입니다.
 
-*bIsUp*<br/>
-진행 정렬 화살표의 방향을 지정 하는 부울입니다.
+*비스업*<br/>
+【인】 정렬 화살표의 방향을 지정하는 부울입니다.
 
 ### <a name="remarks"></a>설명
 
-*Bisup* 가 TRUE 이면 시각적 관리자는 위쪽 정렬 화살표를 그립니다. FALSE 이면 시각적 관리자에서 아래쪽 정렬 화살표를 그립니다. 정렬 `OnDrawHeaderCtrlSortArrow` 단추의 모양을 사용자 지정 하려면 파생 클래스에서를 재정의 합니다.
+*bIsUp이* TRUE이면 시각적 관리자가 정렬 화살표를 그립니다. FALSE인 경우 시각적 관리자는 정렬 화살표를 그립니다. 파생 `OnDrawHeaderCtrlSortArrow` 클래스에서 재정의하여 정렬 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList
+## <a name="cmfcvisualmanagerondrawmenuarrowoncustomizelist"></a><a name="ondrawmenuarrowoncustomizelist"></a>CMFC 비주얼 매니저::에드드로우메뉴로온커스터
 
 ```
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2339,15 +2339,15 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectCommand*<br/>
-[in] *bSelected*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 명령*<br/>
+【인】 *b 선택됨*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManager::OnDrawMenuBorder
+## <a name="cmfcvisualmanagerondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFC 비주얼 매니저::온드로우메뉴보더
 
-프레임 워크는 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)의 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCPopupMenu의](../../mfc/reference/cmfcpopupmenu-class.md)테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawMenuBorder(
@@ -2359,19 +2359,19 @@ virtual void OnDrawMenuBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 `CMFCPopupMenu` 개체의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 개체에 대한 장치 컨텍스트에 대한 포인터입니다. `CMFCPopupMenu`
 
-*pMenu*<br/>
-진행 `CMFCPopupMenu` 개체에 대 한 포인터입니다. 프레임 워크는이 팝업 메뉴 주위에 테두리를 그립니다.
+*p메뉴*<br/>
+【인】 개체에 대한 `CMFCPopupMenu` 포인터입니다. 프레임워크는 이 팝업 메뉴 주위에 테두리를 그립니다.
 
 *rect*<br/>
-진행 팝업 메뉴의 경계를 지정 하는 사각형입니다.
+【인】 팝업 메뉴의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 표준 메뉴 테두리를 표시 합니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 메뉴 테두리의 모양을 사용자 지정 합니다.
+이 메서드의 기본 구현에는 표준 메뉴 테두리가 표시됩니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 메뉴 테두리의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManager::OnDrawMenuCheck
+## <a name="cmfcvisualmanagerondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFC 비주얼 매니저::온드로우 메뉴체크
 
 ```
 virtual void OnDrawMenuCheck(
@@ -2384,15 +2384,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *bHighlight*<br/>
-[in] *bIsRadio*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *비스 라디오*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManager::OnDrawMenuItemButton
+## <a name="cmfcvisualmanagerondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFC 비주얼 매니저::온드로우메뉴항목버튼
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -2405,15 +2405,15 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectButton*<br/>
-[in] *bHighlight*<br/>
-[in] *bDisabled*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
+【인】 *정사각형 버튼*<br/>
+【인】 *b 강조 표시*<br/>
+【인】 *b 장애인*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenulabel"></a>  CMFCVisualManager::OnDrawMenuLabel
+## <a name="cmfcvisualmanagerondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFC 비주얼 매니저::온드로우 메뉴라벨
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -2423,14 +2423,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManager::OnDrawMenuResizeBar
+## <a name="cmfcvisualmanagerondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFC 비주얼 매니저::온드로우메뉴리사이즈바
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -2441,15 +2441,15 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nResizeFlags*<br/>
+【인】 *n 리사이즈플래그*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManager::OnDrawMenuScrollButton
+## <a name="cmfcvisualmanagerondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFC 비주얼 매니저::온드로우메뉴스크롤버튼
 
-프레임 워크는 메뉴 스크롤 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 메뉴 스크롤 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawMenuScrollButton(
@@ -2464,28 +2464,28 @@ virtual void OnDrawMenuScrollButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 스크롤 단추의 경계를 지정 하는 사각형입니다.
+【인】 스크롤 단추의 경계를 지정하는 사각형입니다.
 
-*bIsScrollDown*<br/>
-진행 Visual manager에서 그리는 단추의 유형을 나타내는 부울입니다. 값이 TRUE 이면 시각적 관리자가 아래쪽 단추를 그리는지 나타냅니다.
+*비스스크롤다운*<br/>
+【인】 시각적 관리자가 그리는 단추 유형을 나타내는 부울입니다. TRUE 값은 시각적 관리자가 다운 버튼을 그리는 것을 나타냅니다.
 
-*bIsHighlited*<br/>
-진행 단추가 강조 표시 되는지 여부를 나타내는 부울입니다.
+*비스하이리트*<br/>
+【인】 단추를 강조 표시되어 있는지 여부를 나타내는 부울입니다.
 
-*bIsPressed*<br/>
-진행 단추를 눌렀는지 여부를 나타내는 부울입니다.
+*비스누른*<br/>
+【인】 단추를 눌렀는지 여부를 나타내는 부울입니다.
 
-*bIsDisabled*<br/>
-진행 단추를 사용할 수 없는지 여부를 나타내는 부울입니다.
+*isdisabled*<br/>
+【인】 단추를 사용하지 않도록 설정했는지 여부를 나타내는 부울입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 메뉴 스크롤 단추의 모양을 사용자 지정 합니다. 메뉴 스크롤 단추는 메뉴 항목의 전체 높이가 팝업 메뉴의 높이를 초과할 때 팝업 메뉴의 가장자리에 표시 됩니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 메뉴 스크롤 단추의 모양을 사용자 지정합니다. 메뉴 항목의 총 높이가 팝업 메뉴의 높이를 초과하면 메뉴 스크롤 버튼이 팝업 메뉴가장자리에 나타납니다.
 
-##  <a name="ondrawmenushadow"></a>  CMFCVisualManager::OnDrawMenuShadow
+## <a name="cmfcvisualmanagerondrawmenushadow"></a><a name="ondrawmenushadow"></a>CMFC 비주얼 매니저::온드로우메뉴섀도우
 
 ```
 virtual void OnDrawMenuShadow(
@@ -2502,21 +2502,21 @@ virtual void OnDrawMenuShadow(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *rectExclude*<br/>
-[in] *nDepth*<br/>
-[in] *iMinBrightness*<br/>
-[in] *iMaxBrightness*<br/>
-[in] *pBmpSaveBottom*<br/>
-[in] *pBmpSaveRight*<br/>
-[in] *bRTL*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 클라이언트*<br/>
+【인】 *rect제외*<br/>
+【인】 *n 깊이*<br/>
+【인】 *아이민밝기*<br/>
+【인】 *아이맥스밝기*<br/>
+【인】 *pBmp세이브바텀*<br/>
+【인】 *pBmp세이브라이트*<br/>
+【인】 *bRTL*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManager::OnDrawMenuSystemButton
+## <a name="cmfcvisualmanagerondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFC 비주얼 매니저::온드로우메뉴시스템버튼
 
-프레임 워크는 응용 프로그램에 대 한 메뉴 시스템 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 응용 프로그램에 대한 메뉴 시스템 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -2530,27 +2530,27 @@ virtual void OnDrawMenuSystemButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 단추의 경계를 지정 하는 사각형입니다.
+【인】 단추의 경계를 지정하는 사각형입니다.
 
 *uiSystemCommand*<br/>
-진행 단추와 연결 된 시스템 명령을 지정 하는 플래그입니다. 가능한 값은 SC_CLOSE, SC_MINIMIZE 및 SC_RESTORE입니다.
+【인】 단추와 연결된 시스템 명령을 지정하는 플래그입니다. 가능한 값은 SC_CLOSE, SC_MINIMIZE 및 SC_RESTORE.
 
 *nStyle*<br/>
-진행 단추의 현재 스타일을 지정 하는 플래그입니다. 가능한 값은 TBBS_PRESSED, TBBS_DISABLED 및 0입니다.
+【인】 단추의 현재 스타일을 지정하는 플래그입니다. 가능한 값은 TBBS_PRESSED, TBBS_DISABLED 및 0입니다.
 
 *bHighlight*<br/>
-진행 단추가 강조 표시 되는지 여부를 지정 하는 부울 매개 변수입니다.
+【인】 단추를 강조 표시할지 여부를 지정하는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-메뉴 시스템 단추는 제목 표시줄에 있는 **닫기**, **최소화**, **최대화**및 **복원** 단추입니다.
+메뉴 시스템 단추는 제목 표시줄에 있는 **닫기,** **최소화,** **최대화**및 **복원** 단추입니다.
 
-이 메서드의 기본 구현에서는 DFC_CAPTION 형식의 [CDC::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) 를 호출 합니다. 파생 된 visual manager 클래스에서이 메서드를 재정의 하 여 시스템 단추의 모양을 사용자 지정 합니다.
+이 메서드의 기본 구현은 DFC_CAPTION 형식을 사용하여 [CDC::DrawFrameControl을](../../mfc/reference/cdc-class.md#drawframecontrol) 호출합니다. 파생 된 시각적 관리자 클래스에서이 메서드를 재정의 하여 시스템 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManager::OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanagerondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFC 비주얼 매니저::온드로우미니프레임테두리
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -2562,16 +2562,16 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+【인】 *pDC*<br/>
+【인】 *pFrameWnd*<br/>
+【인】 *직류 국경*<br/>
+【인】 *직사각형 테두리크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManager::OnDrawOutlookBarSplitter
+## <a name="cmfcvisualmanagerondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFC 비주얼 매니저::온드로우아웃아웃바스플리터
 
-프레임 워크는 Outlook 표시줄의 분할자를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 Outlook 막대에 대한 스플리터를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -2582,16 +2582,16 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectSplitter*<br/>
-진행 분할자의 경계를 지정 하는 사각형입니다.
+*정류 스플리터*<br/>
+【인】 스플리터의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 Outlook 표시줄의 분할자 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 Outlook 막대에서 스플리터의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManager::OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanagerondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFC 비주얼 매니저::에드로우아웃아웃아웃페이지버튼보더
 
 Outlook 페이지 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.
 
@@ -2606,24 +2606,24 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectBtn*<br/>
-진행 Outlook 페이지 단추의 경계를 지정 하는 사각형입니다.
+*정류Btn*<br/>
+【인】 Outlook 페이지 단추의 경계를 지정하는 사각형입니다.
 
-*bIsHighlighted*<br/>
-진행 단추가 강조 표시 되는지 여부를 지정 하는 부울입니다.
+*비스하이라이트*<br/>
+【인】 단추를 강조 표시할지 여부를 지정하는 부울입니다.
 
-*bIsPressed*<br/>
-진행 단추를 눌렀는지 여부를 지정 하는 부울입니다.
+*비스누른*<br/>
+【인】 단추를 누를지 여부를 지정하는 부울입니다.
 
 ### <a name="remarks"></a>설명
 
-사용자 지정 시각적 관리자에서이 메서드를 재정의 하 여 Outlook 페이지 단추의 모양을 변경 합니다.
+사용자 지정 시각적 관리자에서 이 메서드를 재정의하여 Outlook 페이지 단추의 모양을 변경합니다.
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManager::OnDrawPaneBorder
+## <a name="cmfcvisualmanagerondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFC 비주얼 매니저::온드로우파네보더
 
-프레임 워크는 [Cpane 클래스](../../mfc/reference/cpane-class.md) 개체의 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 CPane Class 개체의 테두리를 그릴 때 이 [메서드를 호출합니다.](../../mfc/reference/cpane-class.md)
 
 ```
 virtual void OnDrawPaneBorder(
@@ -2635,21 +2635,21 @@ virtual void OnDrawPaneBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 컨트롤 막대의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 컨트롤 막대의 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 창에 대 한 포인터입니다. 시각적 관리자에서이 창의 테두리를 그립니다.
+【인】 창에 대한 포인터입니다. 시각적 관리자는 이 창의 테두리를 그립니다.
 
 *rect*<br/>
-진행 창의 경계를 나타내는 사각형입니다.
+【인】 창의 경계를 나타내는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 표준 테두리를 표시 합니다. 테두리의 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다.
+이 메서드의 기본 구현에는 표준 테두리가 표시됩니다. 파생 클래스에서 이 메서드를 재정의하여 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManager::OnDrawPaneCaption
+## <a name="cmfcvisualmanagerondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFC 비주얼 매니저::온드로우파네캡션
 
-프레임 워크는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)의 인스턴스에 대 한 캡션을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CDockablePane 클래스의](../../mfc/reference/cdockablepane-class.md)인스턴스에 대한 캡션을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -2663,29 +2663,29 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 `CDockablePane` 개체에 대 한 포인터입니다. 프레임 워크는이 창의 캡션을 그립니다.
+【인】 개체에 대한 `CDockablePane` 포인터입니다. 프레임워크는 이 창에 대한 캡션을 그립니다.
 
-*bActive*<br/>
-진행 컨트롤 막대가 활성 상태 인지 여부를 나타내는 부울 매개 변수입니다.
+*b활성*<br/>
+【인】 컨트롤 막대가 활성 상태인지 여부를 나타내는 부울 매개 변수입니다.
 
-*rectCaption*<br/>
-진행 캡션의 경계를 지정 하는 사각형입니다.
+*정류 캡션*<br/>
+【인】 캡션의 경계를 지정하는 사각형입니다.
 
-*rectButtons*<br/>
-진행 캡션 단추의 경계를 지정 하는 사각형입니다.
+*정사각형 버튼*<br/>
+【인】 캡션 단추의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡션의 텍스트 색을 나타내는 [Colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+캡션의 텍스트 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 창 캡션의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 창 캡션의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawpanedivider"></a>  CMFCVisualManager::OnDrawPaneDivider
+## <a name="cmfcvisualmanagerondrawpanedivider"></a><a name="ondrawpanedivider"></a>CMFC 비주얼 매니저::온드로우파인 디바이더
 
 ```
 virtual void OnDrawPaneDivider(
@@ -2697,14 +2697,14 @@ virtual void OnDrawPaneDivider(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
+【인】 *pDC*<br/>
+【인】 *p슬라이더*<br/>
 [in] *rect*<br/>
-[in] *bAutoHideMode*<br/>
+【인】 *b자동하이드모드*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManager::OnDrawPopupWindowBorder
+## <a name="cmfcvisualmanagerondrawpopupwindowborder"></a><a name="ondrawpopupwindowborder"></a>CMFC 비주얼 매니저::온드로우팝윈도우보더
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -2714,12 +2714,12 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManager::OnDrawPopupWindowButtonBorder
+## <a name="cmfcvisualmanagerondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFC 비주얼 매니저::온드로우팝윈도우버튼보더
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2730,13 +2730,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 클라이언트*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManager::OnDrawPopupWindowCaption
+## <a name="cmfcvisualmanagerondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFC 비주얼 매니저::온드로우팝윈도우캡션
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2747,17 +2747,17 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pPopupWnd*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 캡션*<br/>
+【인】 *강아지*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManager::OnDrawRibbonApplicationButton
+## <a name="cmfcvisualmanagerondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFC 비주얼 매니저::에 그리기 리본응용 프로그램 버튼
 
-프레임 워크는 리본 메뉴에 **주 단추** 를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본에 **주 단추를** 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonApplicationButton(
@@ -2768,18 +2768,18 @@ virtual void OnDrawRibbonApplicationButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 리본의 **주 단추** 에 대 한 포인터입니다.
+*p 버튼*<br/>
+【인】 리본의 **주 단추에** 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-**주 단추의**모양을 사용자 지정 하려면 파생 된 visual manager에서이 메서드를 재정의 합니다.
+**기본 단추의**모양을 사용자 지정하려는 경우 파생 시각적 관리자에서 이 메서드를 재정의합니다.
 
-##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonButtonBorder
+## <a name="cmfcvisualmanagerondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFC 비주얼 매니저::온드로우리본버튼 테두리
 
-프레임 워크는 리본의 단추 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본에 단추의 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonButtonBorder(
@@ -2790,18 +2790,18 @@ virtual void OnDrawRibbonButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 [Cmfc리본 단추](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 단추에 대 한 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 리본 단추의 테두리를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여의 `CMFCRibbonButton`모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCRibbonButton`의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManager::OnDrawRibbonButtonsGroup
+## <a name="cmfcvisualmanagerondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFC 비주얼 매니저:::에 그리기 리본 단추 그룹
 
-프레임 워크는 리본 메뉴의 단추 그룹을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본에 단추 그룹을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -2813,25 +2813,25 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pGroup*<br/>
-진행 리본의 단추 그룹에 대 한 포인터입니다. 프레임 워크는이 그룹의 단추를 그립니다.
+【인】 리본의 단추 그룹에 대한 포인터입니다. 프레임워크는 이 단추 그룹을 그립니다.
 
-*rectGroup*<br/>
-진행 그룹의 경계를 지정 하는 사각형입니다.
+*정류 그룹*<br/>
+【인】 그룹의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-예약 된 값입니다. 기본 구현된 경우에는 -1을 반환합니다.
+예약된 값입니다. 기본 구현된 경우에는 -1을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본의 단추 그룹 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본에 단추 그룹의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManager::OnDrawRibbonCaption
+## <a name="cmfcvisualmanagerondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFC 비주얼 매니저::온드로우리본캡션
 
-프레임 워크는 주 프레임 창의 캡션 표시줄을 그릴 때이 메서드를 호출 합니다. 프레임 워크는 리본이 주 프레임과 통합 된 경우에만이 메서드를 호출 합니다.
+프레임워크는 주 프레임 창의 캡션 막대를 그릴 때 이 메서드를 호출합니다. 프레임워크는 리본이 메인 프레임과 통합된 경우에만 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonCaption(
@@ -2844,24 +2844,24 @@ virtual void OnDrawRibbonCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 리본 표시줄에 대 한 포인터입니다. 시각적 관리자는이 리본 표시줄을 그립니다.
+【인】 리본 막대에 대한 포인터입니다. 시각적 관리자가 이 리본 막대를 그립니다.
 
 *rect*<br/>
-진행 리본 표시줄의 경계를 지정 하는 사각형입니다.
+【인】 리본 막대의 경계를 지정하는 사각형입니다.
 
 *rectText*<br/>
-진행 캡션 표시줄 텍스트의 경계를 지정 하는 사각형입니다.
+【인】 캡션 막대의 텍스트에 대한 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 함수를 재정의 하 여 캡션 표시줄의 모양을 사용자 지정 합니다. 이 메서드는 리본이 주 프레임 창과 통합 된 경우에만 캡션 표시줄에 영향을 줍니다.
+파생 된 시각적 관리자에서이 함수를 재정의 하여 캡션 막대의 모양을 사용자 지정합니다. 이 메서드는 리본이 주 프레임 창과 통합된 경우에만 캡션 막대에 영향을 줍니다.
 
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManager::OnDrawRibbonCaptionButton
+## <a name="cmfcvisualmanagerondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFC 비주얼 매니저::에 그리기 리본 캡션 버튼
 
-프레임 워크는 리본 표시줄에 있는 캡션 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 막대에 있는 캡션 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonCaptionButton(
@@ -2874,16 +2874,16 @@ virtual void OnDrawRibbonCaptionButton(
 *pDC*<br/>
 디바이스 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-`CMFCRibbonCaptionButton` 클래스에 대 한 포인터입니다. 프레임 워크는이 캡션 단추를 그립니다.
+*p 버튼*<br/>
+클래스에 대한 `CMFCRibbonCaptionButton` 포인터입니다. 프레임워크는 이 캡션 단추를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본의 캡션 단추 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본에 캡션 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribboncategory"></a>  CMFCVisualManager::OnDrawRibbonCategory
+## <a name="cmfcvisualmanagerondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFC 비주얼 매니저::온드로우리본카테고리
 
-프레임 워크는 [Cmfc리본 범주](../../mfc/reference/cmfcribboncategory-class.md) 개체를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 개체를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonCategory(
@@ -2895,23 +2895,23 @@ virtual void OnDrawRibbonCategory(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pCategory*<br/>
-진행 `CMFCRibbonCategory` 개체에 대 한 포인터입니다. 프레임 워크는이 리본 범주를 그립니다.
+*p카테고리*<br/>
+【인】 개체에 대한 `CMFCRibbonCategory` 포인터입니다. 프레임워크는 이 리본 범주를 그립니다.
 
-*rectCategory*<br/>
-진행 리본 메뉴에 있는 모든 범주 패널의 경계를 지정 하는 사각형입니다.
+*정류 범주*<br/>
+【인】 리본의 모든 범주 패널의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 범주는 메뉴 명령의 논리적 그룹화입니다. 리본 범주에 대 한 자세한 내용은 [Cmfcribbon Category 클래스](../../mfc/reference/cmfcribboncategory-class.md)를 참조 하세요.
+리본 범주는 메뉴 명령의 논리적 그룹화입니다. 리본 범주에 대한 자세한 내용은 [CMFC리본범주 클래스](../../mfc/reference/cmfcribboncategory-class.md)를 참조하십시오.
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본 범주의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본 범주의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManager::OnDrawRibbonCategoryCaption
+## <a name="cmfcvisualmanagerondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFC 비주얼 매니저::온드로우리본카테고리캡션
 
-프레임 워크는 리본 범주에 대 한 캡션 표시줄을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 범주에 대한 캡션 막대를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -2922,20 +2922,20 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 그리기 컨텍스트입니다.
+【인】 드로잉 컨텍스트입니다.
 
-*pContextCaption*<br/>
-진행 캡션 표시줄에 대 한 포인터입니다. Visual manager는이 [Cmfc리본 Contextcaption 클래스](../../mfc/reference/cmfcribboncontextcaption-class.md) 개체를 그립니다.
+*p컨텍스트 캡션*<br/>
+【인】 캡션 막대에 대한 포인터입니다. 시각적 관리자는 이 [CMFC리본컨텍스트 캡션 클래스 개체를](../../mfc/reference/cmfcribboncontextcaption-class.md) 그립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡션 표시줄의 텍스트 색을 나타내는 [Colorref](/windows/win32/gdi/colorref) 매개 변수입니다.
+캡션 막대에 있는 텍스트의 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 범주에 대 한 캡션 표시줄의 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다. 캡션 표시줄에 대 한 자세한 내용은 [Cmfc리본 Contextcaption 클래스](../../mfc/reference/cmfcribboncontextcaption-class.md)를 참조 하세요.
+파생 클래스에서 이 메서드를 재정의하여 리본 범주에 대한 캡션 막대의 모양을 사용자 지정합니다. 캡션 표시줄에 대한 자세한 내용은 [CMFC리본컨텍스트 캡션 클래스를](../../mfc/reference/cmfcribboncontextcaption-class.md)참조하십시오.
 
-##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManager::OnDrawRibbonCategoryScroll
+## <a name="cmfcvisualmanagerondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFC 비주얼 매니저::온드로우리본카테고리스크롤
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -2945,14 +2945,14 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pScroll*<br/>
+【인】 *pDC*<br/>
+【인】 *p스크롤*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManager::OnDrawRibbonCategoryTab
+## <a name="cmfcvisualmanagerondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFC 비주얼 매니저::온드로우리본카테고리탭
 
-프레임 워크는 리본 범주에 대 한 탭을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 범주에 대한 탭을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -2964,23 +2964,23 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pTab*<br/>
-진행 `CMFCRibbonTab` 클래스의 인스턴스에 대 한 포인터입니다. 프레임 워크는이 탭을 그립니다.
+【인】 클래스의 인스턴스에 대한 `CMFCRibbonTab` 포인터입니다. 프레임워크는 이 탭을 그립니다.
 
-*bIsActive*<br/>
-진행 탭이 활성 상태 인지 여부를 나타내는 부울 매개 변수입니다.
+*비스액티브*<br/>
+【인】 탭이 활성 상태인지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리본 범주 탭의 텍스트에 사용 되는 색입니다.
+리본 범주 탭의 텍스트에 사용되는 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본 범주 탭의 모양을 사용자 지정 합니다. 리본 범주에 대 한 자세한 내용은 [Cmfcribbon Category 클래스](../../mfc/reference/cmfcribboncategory-class.md)를 참조 하세요.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본 범주 탭의 모양을 사용자 지정합니다. 리본 범주에 대한 자세한 내용은 [CMFC리본범주 클래스](../../mfc/reference/cmfcribboncategory-class.md)를 참조하십시오.
 
-##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManager::OnDrawRibbonCheckBoxOnList
+## <a name="cmfcvisualmanagerondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFC 비주얼 매니저::에드드로우리본체크박스온리스트
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -2993,15 +2993,15 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pCheckBox*<br/>
+【인】 *pDC*<br/>
+【인】 *p체크박스*<br/>
 [in] *rect*<br/>
-[in] *bIsSelected*<br/>
-진행 *Bhighlighted 표시*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b 강조 표시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribboncolorpalettebox"></a>  CMFCVisualManager::OnDrawRibbonColorPaletteBox
+## <a name="cmfcvisualmanagerondrawribboncolorpalettebox"></a><a name="ondrawribboncolorpalettebox"></a>CMFC 비주얼 매니저::에그리기리본컬러 팔레트박스
 
 ```
 virtual void OnDrawRibbonColorPaletteBox(
@@ -3019,22 +3019,22 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pColorButton*<br/>
-[in] *pIcon*<br/>
-[in] *color*<br/>
+【인】 *pDC*<br/>
+【인】 *p컬러 버튼*<br/>
+【인】 *아이콘*<br/>
+【인】 *색상*<br/>
 [in] *rect*<br/>
-[in] *bDrawTopEdge*<br/>
-[in] *bDrawBottomEdge*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsChecked*<br/>
-[in] *bIsDisabled*<br/>
+【인】 *b그리기탑엣지*<br/>
+【인】 *b그리기바텀엣지*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *비스 체크*<br/>
+【인】 *isdisabled*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButton
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFC 비주얼 매니저::온드로우리본기본판 버튼
 
-프레임 워크는 리본 창에 대 한 기본 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 창의 기본 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -3045,18 +3045,18 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 리본 창의 기본 단추에 대 한 포인터입니다.
+*p 버튼*<br/>
+【인】 리본 창의 기본 단추에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 창의 크기를 최소화 하 고 패널의 콘텐츠를 표시할 영역이 없는 경우 프레임 워크는 기본 단추를 표시 합니다. 사용자가 기본 단추를 클릭 하면 프레임 워크는 패널에 대 한 콘텐츠가 포함 된 드롭다운 메뉴를 표시 합니다.
+리본 창의 크기가 최소 크기로 조정되고 패널의 내용을 표시할 영역이 없을 때 프레임워크에 기본 단추가 표시됩니다. 사용자가 기본 단추를 클릭하면 프레임워크에 패널의 콘텐츠가 포함된 드롭다운 메뉴가 표시됩니다.
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 기본 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하 여 기본 단추의 모양을 사용자 지정 합니다.
 
-##  <a name="ondrawribbondefaultpanebuttoncontext"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttoncontext"></a><a name="ondrawribbondefaultpanebuttoncontext"></a>CMFC 비주얼 매니저::온드로우리본기본판버튼컨텍스트
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonContext(
@@ -3066,12 +3066,12 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
+## <a name="cmfcvisualmanagerondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFC 비주얼 매니저::에 그리기 리본기본판 버튼표시기
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -3084,15 +3084,15 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
-[in] *bIsSelected*<br/>
-진행 *Bhighlighted 표시*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b 강조 표시*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManager::OnDrawRibbonGalleryBorder
+## <a name="cmfcvisualmanagerondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFC 비주얼 매니저::온드로우리본갤러리보더
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -3103,13 +3103,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectBorder*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
+【인】 *직류 국경*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManager::OnDrawRibbonGalleryButton
+## <a name="cmfcvisualmanagerondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFC 비주얼 매니저::온드로우리본 갤러리버튼
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -3119,12 +3119,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManager::OnDrawRibbonKeyTip
+## <a name="cmfcvisualmanagerondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFC 비주얼 매니저::온드로우리본키팁
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -3136,16 +3136,16 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pElement*<br/>
+【인】 *pDC*<br/>
+【인】 *p엘리아*<br/>
 [in] *rect*<br/>
-[in] *str*<br/>
+【인】 *str*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonlabel"></a>  CMFCVisualManager::OnDrawRibbonLabel
+## <a name="cmfcvisualmanagerondrawribbonlabel"></a><a name="ondrawribbonlabel"></a>CMFC 비주얼 매니저::온드로우리본라벨
 
-프레임 워크는 리본 메뉴의 레이블을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본의 레이블을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonLabel(
@@ -3157,21 +3157,21 @@ virtual void OnDrawRibbonLabel(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pLabel*<br/>
-진행 [Cmfc리본 레이블](../../mfc/reference/cmfcribbonlabel-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 레이블을 그립니다.
+*p라벨*<br/>
+【인】 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 리본 레이블을 그립니다.
 
 *rect*<br/>
-진행 리본 패널의 경계를 지정 하는 사각형입니다.
+【인】 리본 패널의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 레이블을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다.
+파생 클래스에서 이 메서드를 재정의하여 리본 레이블을 사용자 지정합니다.
 
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder
+## <a name="cmfcvisualmanagerondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFC 비주얼 매니저::온드로우리본메인패널버튼보더
 
-프레임 워크는 **주** 패널에 위치한 [Cmfc리본 단추의](../../mfc/reference/cmfcribbonbutton-class.md) 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 **주** 패널에 배치된 [CMFCRibbonButton의](../../mfc/reference/cmfcribbonbutton-class.md) 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonMainPanelButtonBorder(
@@ -3182,18 +3182,18 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 리본의 주 패널에 `CMFCRibbonButton` 있는에 대 한 포인터입니다. 프레임 워크는이 단추의 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 리본의 주 `CMFCRibbonButton` 패널에 있는 포인터입니다. 프레임워크는 이 단추의 테두리를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 `CMFCRibbonButton` **주** 패널의에 대 한 테두리의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 **기본** `CMFCRibbonButton` 패널에 대한 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManager::OnDrawRibbonMainPanelFrame
+## <a name="cmfcvisualmanagerondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFC 비주얼 매니저::온드로우리본메인패널프레임
 
-프레임 워크는 [Cmfc리본 Mainpanel](../../mfc/reference/cmfcribbonmainpanel-class.md)주위에 프레임을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)주위에 프레임을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonMainPanelFrame(
@@ -3205,19 +3205,19 @@ virtual void OnDrawRibbonMainPanelFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pPanel*<br/>
-진행 에 대 `CMFCRibbonMainPanel`한 포인터입니다.
+*p 패널*<br/>
+【인】 에 대한 `CMFCRibbonMainPanel`포인터입니다.
 
 *rect*<br/>
-진행 의 경계를 지정 하는 사각형입니다 `CMFCRibbonMainPanel`.
+【인】 의 경계를 지정하는 사각형입니다. `CMFCRibbonMainPanel`
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여의 프레임 `CMFCRibbonMainPanel`모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의하여 `CMFCRibbonMainPanel`에 대한 프레임의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManager::OnDrawRibbonMenuCheckFrame
+## <a name="cmfcvisualmanagerondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFC 비주얼 매니저::온드로우리본메뉴체크프레임
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3228,15 +3228,15 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *p 버튼*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManager::OnDrawRibbonPanel
+## <a name="cmfcvisualmanagerondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFC 비주얼 매니저::온드로우리본패널
 
-프레임 워크는 [Cmfc리본 패널](../../mfc/reference/cmfcribbonpanel-class.md) 개체를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) 개체를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonPanel(
@@ -3249,28 +3249,28 @@ virtual COLORREF OnDrawRibbonPanel(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pPanel*<br/>
-진행 `CMFCRibbonPanel` 개체에 대 한 포인터입니다. 프레임 워크는이 리본 패널을 그립니다.
+*p 패널*<br/>
+【인】 개체에 대한 `CMFCRibbonPanel` 포인터입니다. 프레임워크는 이 리본 패널을 그립니다.
 
-*rectPanel*<br/>
-진행 패널의 경계를 지정 하는 사각형입니다.
+*정류 패널*<br/>
+【인】 패널의 경계를 지정하는 사각형입니다.
 
-*rectCaption*<br/>
-진행 패널 캡션의 테두리를 지정 하는 사각형입니다.
+*정류 캡션*<br/>
+【인】 패널에 대한 캡션의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리본 패널의 텍스트 색입니다.
+리본 패널의 텍스트 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 여 리본 패널의 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 리본 패널의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManager::OnDrawRibbonPanelCaption
+## <a name="cmfcvisualmanagerondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFC 비주얼 매니저::온드로우리본패널캡션
 
-프레임 워크는 [Cmfc리본 패널 클래스](../../mfc/reference/cmfcribbonpanel-class.md)의 캡션을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonPanel 클래스의](../../mfc/reference/cmfcribbonpanel-class.md)캡션을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonPanelCaption(
@@ -3282,21 +3282,21 @@ virtual void OnDrawRibbonPanelCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pPanel*<br/>
-진행 `CMFCRibbonPanel` 개체에 대 한 포인터입니다. 프레임 워크는이 리본 패널에 대 한 캡션을 그립니다.
+*p 패널*<br/>
+【인】 개체에 대한 `CMFCRibbonPanel` 포인터입니다. 프레임워크는 이 리본 패널의 캡션을 그립니다.
 
-*rectCaption*<br/>
-진행 리본 패널의 캡션 경계를 지정 하는 사각형입니다.
+*정류 캡션*<br/>
+【인】 리본 패널에 대한 캡션의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-리본 패널의 캡션 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다.
+파생 클래스에서 이 메서드를 재정의하여 리본 패널에 대한 캡션 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManager::OnDrawRibbonProgressBar
+## <a name="cmfcvisualmanagerondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFC 비주얼 매니저::온드로우리본진행바
 
-프레임 워크는 [Cmfc리본 Progressbar 클래스](../../mfc/reference/cmfcribbonprogressbar-class.md)를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonProgressBar 클래스를](../../mfc/reference/cmfcribbonprogressbar-class.md)그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonProgressBar(
@@ -3310,27 +3310,27 @@ virtual void OnDrawRibbonProgressBar(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pProgress*<br/>
-진행 `CMFCRibbonProgressBar` 개체에 대 한 포인터입니다. 프레임 워크는이 진행률 표시줄을 그립니다.
+【인】 개체에 대한 `CMFCRibbonProgressBar` 포인터입니다. 프레임워크는 이 진행률 표시줄을 그립니다.
 
-*rectProgress*<br/>
-진행 진행률 표시줄의 경계를 지정 하는 사각형입니다.
+*직류 진행률*<br/>
+【인】 진행률 표시줄의 경계를 지정하는 사각형입니다.
 
-*rectChunk*<br/>
-진행 진행률 표시줄 주위의 영역 경계를 지정 하는 사각형입니다.
+*직사각형*<br/>
+【인】 진행률 표시줄을 둘러싼 영역의 경계를 지정하는 사각형입니다.
 
-*bInfiniteMode*<br/>
-진행 진행률 표시줄의 모드를 나타내는 부울 매개 변수입니다. 값이 TRUE 이면 막대가 무한 모드입니다. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.
+*b인피니트 모드*<br/>
+【인】 진행률 표시줄의 모드를 나타내는 부울 매개변수입니다. TRUE 값은 막대가 무한 모드에 있다는 것을 의미합니다. 기본 구현에서 이 매개 변수를 사용하지 않습니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 여 진행률 표시줄의 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 진행률 표시줄의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator
+## <a name="cmfcvisualmanagerondrawribbonquickaccesstoolbarseparator"></a><a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFC 비주얼 매니저::에그리기리본퀵액세스툴세파레이터
 
-프레임 워크는 리본 메뉴의 **빠른 실행 도구 모음** 에 구분 기호를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본의 **빠른 액세스 도구 모음에** 구분 기호를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -3342,21 +3342,21 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pSeparator*<br/>
-진행 [Cmfc리본 구분 기호](../../mfc/reference/cmfcribbonseparator-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 구분 기호를 그립니다.
+【인】 [CMFCRibbon분리기](../../mfc/reference/cmfcribbonseparator-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 리본 구분 기호를 그립니다.
 
 *rect*<br/>
-진행 구분선의 경계를 지정 하는 사각형입니다.
+【인】 구분 기호의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-**빠른 실행 도구 모음**에서 리본 구분 기호의 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다.
+파생 클래스에서 이 메서드를 재정의하여 **빠른 액세스 도구 모음에서**리본 구분 기호의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManager::OnDrawRibbonRecentFilesFrame
+## <a name="cmfcvisualmanagerondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFC 비주얼 매니저::온드로우리본최근파일프레임
 
-프레임 워크는 최근 파일 목록 주위에 프레임을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 최근 파일 목록 주위에 프레임을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonRecentFilesFrame(
@@ -3368,21 +3368,21 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pPanel*<br/>
-진행 리본의 **주** 패널에 대 한 포인터입니다.
+*p 패널*<br/>
+【인】 리본의 **주** 패널에 대한 포인터입니다.
 
 *rect*<br/>
-진행 최근 파일 목록에 대 한 프레임의 경계를 지정 하는 사각형입니다.
+【인】 최근 파일 목록에 대한 프레임 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 visual manager에서이 메서드를 재정의 하 여 최근 파일 목록의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 최근 파일 목록의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManager::OnDrawRibbonSliderChannel
+## <a name="cmfcvisualmanagerondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFC 비주얼 매니저::온드로우리본 슬라이더 채널
 
-프레임 워크는 [Cmfc리본 슬라이더 클래스](../../mfc/reference/cmfcribbonslider-class.md)의 채널을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCRibbonSlider 클래스의](../../mfc/reference/cmfcribbonslider-class.md)채널을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonSliderChannel(
@@ -3394,21 +3394,21 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSlider*<br/>
-진행 Cmfc리본 슬라이더 개체에 대 한 포인터입니다. 프레임 워크는이 리본 슬라이더의 채널을 그립니다.
+*p슬라이더*<br/>
+【인】 CMFC리본슬라이더 개체에 대한 포인터입니다. 프레임워크는 이 리본 슬라이더의 채널을 그립니다.
 
 *rect*<br/>
-진행 리본 슬라이더의 채널에 대 한 경계를 지정 하는 사각형입니다.
+【인】 리본 슬라이더의 채널경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 여 리본 슬라이더의 채널 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 리본 슬라이더의 채널 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManager::OnDrawRibbonSliderThumb
+## <a name="cmfcvisualmanagerondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFC 비주얼 매니저::에 그리기 리본 슬라이더 엄지 손가락
 
-프레임 워크는 [Cmfc리본 슬라이더](../../mfc/reference/cmfcribbonslider-class.md) 개체의 엄지 단추를 그릴 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) 개체의 엄지 손가락을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonSliderThumb(
@@ -3423,30 +3423,30 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSlider*<br/>
-진행 에 대 `CMFCRibbonSlider`한 포인터입니다. 프레임 워크는이 리본 슬라이더의 엄지 단추를 그립니다.
+*p슬라이더*<br/>
+【인】 에 대한 `CMFCRibbonSlider`포인터입니다. 프레임워크는 이 리본 슬라이더에 대한 엄지 손가락을 그립니다.
 
 *rect*<br/>
-진행 리본 슬라이더의 엄지 단추 경계를 지정 하는 사각형입니다.
+【인】 리본 슬라이더에 대한 엄지 손가락의 경계를 지정하는 사각형입니다.
 
-*bIsHighlighted*<br/>
-진행 엄지 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 엄지 손가락이 강조 표시되어 있는지 를 나타내는 부울 매개 변수입니다.
 
-*bIsPressed*<br/>
-진행 엄지 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 엄지 손가락을 눌렀는지 나타내는 부울 매개변수입니다.
 
-*bIsDisabled*<br/>
-진행 엄지 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*isdisabled*<br/>
+【인】 엄지 손가락을 사용할 수 없는지 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여에 대 한 `CMFCRibbonSlider`thumb의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의하여 `CMFCRibbonSlider`에 대한 엄지 손가락의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManager::OnDrawRibbonSliderZoomButton
+## <a name="cmfcvisualmanagerondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFC 비주얼 매니저::에 그리기 리본 슬라이더 줌 버튼
 
-프레임 워크는 [Cmfc리본 슬라이더](../../mfc/reference/cmfcribbonslider-class.md) 개체에 대 한 확대/축소 단추를 그릴 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) 개체의 확대/축소 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawRibbonSliderZoomButton(
@@ -3462,33 +3462,33 @@ virtual void OnDrawRibbonSliderZoomButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSlider*<br/>
-진행 `CMFCRibbonSlider` 개체에 대 한 포인터입니다. 프레임 워크는이 리본 슬라이더를 그립니다.
+*p슬라이더*<br/>
+【인】 개체에 대한 `CMFCRibbonSlider` 포인터입니다. 프레임워크는 이 리본 슬라이더를 그립니다.
 
 *rect*<br/>
-진행 리본 슬라이더의 확대/축소 단추 경계를 지정 하는 사각형입니다.
+【인】 리본 슬라이더의 확대/축소 단추경계를 지정하는 사각형입니다.
 
-*bIsZoomOut*<br/>
-진행 프레임 워크가 그리는 단추를 나타내는 부울 매개 변수입니다. TRUE 값은 축소를 위해 "-"가 있는 왼쪽 단추를 나타냅니다. FALSE 값은 확대 하는 데 "+"가 있는 오른쪽 단추를 나타냅니다.
+*비스줌 축소*<br/>
+【인】 프레임워크가 그리는 단추를 나타내는 부울 매개 변수입니다. TRUE 값은 축소를 위한 "-"가 있는 왼쪽 단추를 나타냅니다. FALSE 값은 확대할 수 있는 "+"가 있는 오른쪽 단추를 나타냅니다.
 
-*bIsHighlighted*<br/>
-진행 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 단추를 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsPressed*<br/>
-진행 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsDisabled*<br/>
-진행 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*isdisabled*<br/>
+【인】 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로 리본 슬라이더의 확대/축소 단추는 중앙에서 + 또는-기호를 사용 하는 원입니다. 확대/축소 단추의 모양을 사용자 지정 하려면 파생 된 비주얼 관리자에서이 메서드를 재정의 합니다.
+기본적으로 리본 슬라이더의 확대/축소 단추는 가운데에 +또는 - 로그인이 있는 원입니다. 확대/축소 단추의 모양을 사용자 지정하려면 파생 된 시각적 관리자에서이 메서드를 재정의합니다.
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManager::OnDrawRibbonStatusBarPane
+## <a name="cmfcvisualmanagerondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFC 비주얼 매니저::에 그리기 리본 상태바파인
 
-프레임 워크는 상태 표시줄에 창을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 상태 표시줄에 창을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -3500,25 +3500,25 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 창을 포함 하는 상태 표시줄에 대 한 포인터입니다.
+【인】 창이 포함된 상태 표시줄에 대한 포인터입니다.
 
 *pPane*<br/>
-진행 상태 표시줄 창에 대 한 포인터입니다. 프레임 워크는이 [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) 개체를 그립니다.
+【인】 상태 표시줄 창에 대한 포인터입니다. 프레임워크는 이 [CMFC리본상태바파네 개체를](../../mfc/reference/cmfcribbonstatusbarpane-class.md) 그립니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-예약 된 값입니다. 기본 구현된 경우에는 -1을 반환합니다.
+예약된 값입니다. 기본 구현된 경우에는 -1을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 상태 표시줄에서 창의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 상태 표시줄에 창의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManager::OnDrawRibbonTabsFrame
+## <a name="cmfcvisualmanagerondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFC 비주얼 매니저::온드로우리본탭프레임
 
-프레임 워크는 리본 탭 집합 주위에 프레임을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 리본 탭 집합 주위에 프레임을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -3532,21 +3532,21 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 *pDC*<br/>
 디바이스 컨텍스트에 대한 포인터입니다.
 
-*pWndRibbonBar*<br/>
-[Cmfc리본 표시줄](../../mfc/reference/cmfcribbonbar-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 표시줄의 프레임을 그립니다.
+*pWnd리본바*<br/>
+[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 리본 막대의 프레임을 그립니다.
 
-*rectTab*<br/>
-리본 탭의 경계를 지정 하는 사각형입니다.
+*정사각형 탭*<br/>
+리본 탭의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-예약 된 값입니다. 기본적으로이 메서드는-1을 반환 합니다.
+예약된 값입니다. 기본적으로 이 메서드는 -1을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본의 탭 집합 주위에 프레임을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본의 탭 집합 주위에 프레임을 사용자 지정합니다.
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManager::OnDrawScrollButtons
+## <a name="cmfcvisualmanagerondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFC 비주얼 매니저:::온드로우스크롤 버튼
 
 ```
 virtual void OnDrawScrollButtons(
@@ -3559,15 +3559,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+【인】 *n보더사이즈*<br/>
+【인】 *아이 이미지*<br/>
+【인】 *bhilited*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManager::OnDrawSeparator
+## <a name="cmfcvisualmanagerondrawseparator"></a><a name="ondrawseparator"></a>CMFC 비주얼 매니저::온드로우세파레이터
 
 프레임 워크는 구분 기호를 그릴 때이 메서드를 호출 합니다.
 
@@ -3582,22 +3582,22 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 컨트롤 막대의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 컨트롤 막대의 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 구분 기호를 포함 하는 창에 대 한 포인터입니다.
+【인】 구분 기호가 포함된 창에 대한 포인터입니다.
 
 *rect*<br/>
-진행 구분선의 경계를 지정 하는 사각형입니다.
+【인】 구분 기호의 경계를 지정하는 사각형입니다.
 
-*bIsHoriz*<br/>
-진행 도킹 된 창의 방향을 나타내는 부울 매개 변수입니다. TRUE 값은 창이 가로로 도킹 됨을 나타냅니다. FALSE 값은 창이 세로로 도킹 되었음을 나타냅니다.
+*비쇼리즈*<br/>
+【인】 도킹된 창의 방향을 나타내는 부울 매개변수입니다. TRUE 값은 창이 수평으로 도킹되어 있음을 나타냅니다. FALSE 값은 창이 세로로 도킹되어 있음을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
-구분 기호는 컨트롤 막대에서 관련 아이콘 그룹을 구분 하는 데 사용 됩니다. 이 메서드의 기본 구현에서는 표준 구분 기호를 표시 합니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 구분 기호의 모양을 사용자 지정 합니다.
+구분 기호는 컨트롤 막대에서 관련 아이콘 그룹을 구분하는 데 사용됩니다. 이 메서드의 기본 구현에는 표준 구분 기호가 표시됩니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 구분 기호의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManager::OnDrawShowAllMenuItems
+## <a name="cmfcvisualmanagerondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFC 비주얼 매니저::온드로우쇼올메뉴아이템
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -3608,15 +3608,15 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
-[in] *state*<br/>
+【인】 *상태 상태*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawspinbuttons"></a>  CMFCVisualManager::OnDrawSpinButtons
+## <a name="cmfcvisualmanagerondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFC 비주얼 매니저::온드로우스핀버튼
 
-프레임 워크는 [CMFCSpinButtonCtrl 클래스](../../mfc/reference/cmfcspinbuttonctrl-class.md)의 인스턴스를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCSpinButtonCtrl 클래스의](../../mfc/reference/cmfcspinbuttonctrl-class.md)인스턴스를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawSpinButtons(
@@ -3630,23 +3630,23 @@ virtual void OnDrawSpinButtons(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectSpin*<br/>
-진행 Spin 컨트롤의 경계를 지정 하는 사각형입니다.
+*직류 스핀*<br/>
+【인】 스핀 컨트롤의 경계를 지정하는 사각형입니다.
 
 *nState*<br/>
-진행 Spin 컨트롤의 상태를 나타내는 플래그입니다. 자세한 내용은 설명 부분을 참조하세요.
+【인】 스핀 컨트롤의 상태를 나타내는 플래그입니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
-*bOrientation*<br/>
-진행 Spin 컨트롤의 방향을 지정 하는 부울 매개 변수입니다. TRUE 값은 spin 컨트롤이 가로 임을 나타냅니다. 그렇지 않으면 세로입니다.
+*b방향 방향*<br/>
+【인】 스핀 컨트롤의 방향을 지정하는 부울 매개변수입니다. TRUE 값은 스핀 컨트롤이 수평임을 나타냅니다. 그렇지 않으면 수직입니다.
 
 *pSpinCtrl*<br/>
-진행 Spin 컨트롤에 대 한 포인터입니다. 프레임 워크는이 컨트롤에 대 한 단추를 그립니다.
+【인】 스핀 컨트롤에 대한 포인터입니다. 프레임워크는 이 컨트롤에 대한 단추를 그립니다.
 
 ### <a name="remarks"></a>설명
 
-*Nstate* 매개 변수는 spin 컨트롤의 상태를 나타냅니다. 매개 변수는 다음 값 중 하나입니다.
+*nState* 매개 변수는 스핀 컨트롤의 상태를 나타냅니다. 매개 변수는 다음 값 중 하나입니다.
 
 - AFX_SPIN_PRESSEDUP
 
@@ -3658,11 +3658,11 @@ virtual void OnDrawSpinButtons(
 
 - AFX_SPIN_DISABLED
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 spin 컨트롤의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 스핀 컨트롤의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawsplitterborder"></a>  CMFCVisualManager::OnDrawSplitterBorder
+## <a name="cmfcvisualmanagerondrawsplitterborder"></a><a name="ondrawsplitterborder"></a>CMFC 비주얼 매니저::온드로우스플리터 보더
 
-프레임 워크는 [CSplitterWndEx 클래스](csplitterwndex-class.md)의 인스턴스 주위에 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CSplitterWndEx 클래스의](csplitterwndex-class.md)인스턴스 주위에 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawSplitterBorder(
@@ -3674,21 +3674,21 @@ virtual void OnDrawSplitterBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSplitterWnd*<br/>
-진행 분할자 창에 대 한 포인터입니다. 프레임 워크는이 창의 테두리를 그립니다.
+*p스플리터Wnd*<br/>
+【인】 스플리터 창에 대한 포인터입니다. 프레임워크는 이 창의 테두리를 그립니다.
 
 *rect*<br/>
-진행 분할자 창의 경계를 지정 하는 사각형입니다.
+【인】 스플리터 창의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 분할자 창의 테두리 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 스플리터 창에 대 한 테두리의 모양을 사용자 지정 합니다.
 
-##  <a name="ondrawsplitterbox"></a>  CMFCVisualManager::OnDrawSplitterBox
+## <a name="cmfcvisualmanagerondrawsplitterbox"></a><a name="ondrawsplitterbox"></a>CMFC 비주얼 매니저::온드로우 스플리터박스
 
-프레임 워크는 [CSplitterWndEx 클래스](csplitterwndex-class.md)의 인스턴스에 대해 끌기 상자를 그릴 때이 메서드를 호출 합니다. 사용자가 분할 막대를 선택 하 고 자식 창의 차원을 변경 하면 끌기 상자가 나타납니다.
+프레임워크는 [CSplitterWndEx 클래스의](csplitterwndex-class.md)인스턴스에 대한 드래그 상자를 그릴 때 이 메서드를 호출합니다. 사용자가 스플리터 막대를 선택하고 자식 창의 크기를 변경할 때 드래그 상자가 나타납니다.
 
 ```
 virtual void OnDrawSplitterBox(
@@ -3700,21 +3700,21 @@ virtual void OnDrawSplitterBox(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSplitterWnd*<br/>
-진행 분할자 창에 대 한 포인터입니다. 프레임 워크는이 분할자 창의 상자를 그립니다.
+*p스플리터Wnd*<br/>
+【인】 스플리터 창에 대한 포인터입니다. 프레임워크는 이 스플리터 창에 대한 상자를 그립니다.
 
 *rect*<br/>
-진행 분할자 창의 경계를 지정 하는 사각형입니다.
+【인】 스플리터 창의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 분할자 창의 끌기 상자 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 분할자 창에 대 한 끌기 상자의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManager::OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanagerondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFC 비주얼 매니저::온드로우스테이터스바파네보더
 
-프레임 워크는 [Cmfcstatusbar](../../mfc/reference/cmfcstatusbar-class.md) 개체의 테두리를 그릴 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) 개체에 대한 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -3728,27 +3728,27 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 `CMFCStatusBar` 개체에 대 한 포인터입니다. 프레임 워크는이 상태 표시줄 개체를 그립니다.
+【인】 개체에 대한 `CMFCStatusBar` 포인터입니다. 프레임워크는 이 상태 표시줄 개체를 그립니다.
 
-*rectPane*<br/>
-진행 상태 표시줄의 경계를 지정 하는 사각형입니다.
+*렉트파인*<br/>
+【인】 상태 표시줄의 경계를 지정하는 사각형입니다.
 
 *uiID*<br/>
-진행 상태 표시줄의 ID입니다.
+【인】 상태 표시줄의 ID입니다.
 
 *nStyle*<br/>
-진행 상태 표시줄의 스타일입니다.
+【인】 상태 표시줄의 스타일입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 `CMFCStatusBar` 개체의 테두리 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCStatusBar` 개체에 대 한 테두리의 모양을 사용자 지정 합니다.
 
-##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManager::OnDrawStatusBarProgress
+## <a name="cmfcvisualmanagerondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFC 비주얼 매니저::온드로우 상태표시진행상황
 
-프레임 워크는 [Cmfcstatusbar](../../mfc/reference/cmfcstatusbar-class.md) 개체에 진행률 표시기를 그릴 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) 개체에서 진행률 표시기를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -3766,39 +3766,39 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 상태 표시줄의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 상태 표시줄에 대한 장치 컨텍스트에 대한 포인터입니다.
 
 *pStatusBar*<br/>
-진행 진행률 표시줄을 포함 하는 개체입니다.`CMFCStatusBar`
+【인】 진행률 표시줄이 포함된 `CMFCStatusBar` 개체입니다.
 
-*rectProgress*<br/>
-진행 진행률 표시줄의 경계를 지정 하는 사각형입니다.
+*직류 진행률*<br/>
+【인】 진행률 표시줄의 경계를 지정하는 사각형입니다.
 
 *nProgressTotal*<br/>
-진행 진행률 표시줄의 총 수입니다.
+【인】 진행률 표시줄의 총 수입니다.
 
 *nProgressCurr*<br/>
-진행 진행률 표시줄의 현재 진행률입니다.
+【인】 진행률 표시줄의 현재 진행률입니다.
 
-*clrBar*<br/>
-진행 진행률 표시줄의 초기 색을 나타내는 [Colorref](/windows/win32/gdi/colorref) 매개 변수입니다. 값은 색 그라데이션의 시작 또는 진행률 표시줄의 전체 색 중 하나입니다.
+*클러바*<br/>
+【인】 진행률 표시줄의 초기 색상을 나타내는 [COLORREF](/windows/win32/gdi/colorref) 매개 변수입니다. 값은 색상 그라데이션의 시작 또는 진행률 표시줄의 전체 색상입니다.
 
 *clrProgressBarDest*<br/>
-진행 진행률 표시줄에 대 한 색 그라데이션의 끝을 나타내는 COLORREF 매개 변수입니다. *ClrProgressBarDest* 가-1 인 경우 프레임 워크는 진행률 표시줄을 색 그라데이션으로 그리지 않습니다. 대신, 전체 진행률 표시줄을 *Clrbar*에 지정 된 색으로 채웁니다.
+【인】 진행률 표시줄에 대한 색상 그라데이션의 끝을 나타내는 COLORREF 매개변수입니다. *clrProgressBarDest가* -1이면 프레임워크는 진행률 표시줄을 색상 그라데이션으로 그리지 않습니다. 대신 전체 진행률 표시줄을 *clrBar에서*지정한 색상으로 채웁니다.
 
 *clrProgressText*<br/>
-진행 현재 진행률에 대 한 텍스트 표현의 텍스트 색을 나타내는 COLORREF 매개 변수입니다. *BProgressText* 가 FALSE로 설정 되어 있으면이 매개 변수는 무시 됩니다.
+【인】 현재 진행률의 텍스트 표현에 대한 텍스트 색상을 나타내는 COLORREF 매개 변수입니다. *bProgressText가* FALSE로 설정된 경우 이 매개 변수는 무시됩니다.
 
 *bProgressText*<br/>
-진행 현재 진행률에 대 한 텍스트 표현을 표시할지 여부를 나타내는 부울 매개 변수입니다.
+【인】 현재 진행률의 텍스트 표현을 표시할지 여부를 나타내는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 `CMFCStatusBar` 개체의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCStatusBar` 개체의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManager::OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanagerondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFC 비주얼 매니저::온드로우스테이터스바사이즈박스
 
-프레임 워크는 [Cmfcstatusbar](../../mfc/reference/cmfcstatusbar-class.md)의 크기 상자를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCStatusBar에](../../mfc/reference/cmfcstatusbar-class.md)대한 크기 상자를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -3810,21 +3810,21 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pStatBar*<br/>
-진행 상태 표시줄에 대 한 포인터입니다. 프레임 워크는이 상태 표시줄의 크기 상자를 그립니다.
+【인】 상태 표시줄에 대한 포인터입니다. 프레임워크는 이 상태 표시줄의 크기 상자를 그립니다.
 
-*rectSizeBox*<br/>
-진행 크기 상자의 경계를 지정 하는 사각형입니다.
+*정크사이즈박스*<br/>
+【인】 크기 상자의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여의 크기 상자 `CMFCStatusBar`모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCStatusBar`에서 크기 상자의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtab"></a>  CMFCVisualManager::OnDrawTab
+## <a name="cmfcvisualmanagerondrawtab"></a><a name="ondrawtab"></a>CMFC 비주얼 매니저::온드로우탭
 
-프레임 워크는 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체에 대 한 탭을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체에 대한 탭을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTab(
@@ -3838,29 +3838,29 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectTab*<br/>
-진행 탭 컨트롤의 경계를 지정 하는 사각형입니다.
+*정사각형 탭*<br/>
+【인】 탭 컨트롤의 경계를 지정하는 사각형입니다.
 
 *iTab*<br/>
-진행 프레임 워크가 그리는 탭의 인덱스입니다.
+【인】 프레임워크가 그리는 탭의 인덱스입니다.
 
-*bIsActive*<br/>
-진행 탭이 활성 상태 인지 여부를 지정 하는 부울 매개 변수입니다.
+*비스액티브*<br/>
+【인】 탭이 활성 상태인지 여부를 지정하는 부울 매개 변수입니다.
 
 *pTabWnd*<br/>
-진행 `CMFCBaseTabCtrl` 개체에 대 한 포인터입니다. 프레임 워크는이 탭 컨트롤을 그립니다.
+【인】 개체에 대한 `CMFCBaseTabCtrl` 포인터입니다. 프레임워크는 이 탭 컨트롤을 그립니다.
 
 ### <a name="remarks"></a>설명
 
-개체 `CMFCBaseTabCtrl` 는 WM_PAINT 메시지를 처리할 때이 메서드를 호출 합니다.
+개체는 `CMFCBaseTabCtrl` WM_PAINT 메시지를 처리할 때 이 메서드를 호출합니다.
 
-파생 클래스에서이 메서드를 재정의 하 여 탭의 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 탭 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManager::OnDrawTabCloseButton
+## <a name="cmfcvisualmanagerondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFC 비주얼 매니저::온드로우탭클로즈버튼
 
-프레임 워크는 활성 탭에서 **닫기** 단추를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 활성 탭에서 **닫기** 단추를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -3875,30 +3875,30 @@ virtual void OnDrawTabCloseButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 **닫기** 단추의 경계를 지정 하는 사각형입니다.
+【인】 **닫기** 단추의 경계를 지정하는 사각형입니다.
 
 *pTabWnd*<br/>
-진행 탭 컨트롤에 대 한 포인터입니다. 프레임 워크는이 탭 컨트롤에 대 한 **닫기** 단추를 그립니다.
+【인】 탭 컨트롤에 대한 포인터입니다. 프레임워크는 이 탭 컨트롤에 대한 **닫기** 단추를 그립니다.
 
-*bIsHighlighted*<br/>
-진행 **닫기** 단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 **닫기** 단추가 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsPressed*<br/>
-진행 **닫기** 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 **닫기** 단추를 눌렀는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsDisabled*<br/>
-진행 **닫기** 단추를 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*isdisabled*<br/>
+【인】 **닫기** 단추를 사용할 수 있는지 여부를 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 *pTabWnd*의 활성 탭에 있는 **닫기** 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 *pTabWnd의*활성 탭에서 **닫기** 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent
+## <a name="cmfcvisualmanagerondrawtabcontent"></a><a name="ondrawtabcontent"></a>CMFC 비주얼 매니저::에 그리기탭 콘텐츠
 
-프레임 워크는 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)인스턴스의 내부에 있는 내용을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCBaseTabCtrl 클래스의](../../mfc/reference/cmfcbasetabctrl-class.md)인스턴스 내부에 있는 내용을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTabContent(
@@ -3913,30 +3913,30 @@ virtual void OnDrawTabContent(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectTab*<br/>
-진행 내부 탭의 경계를 지정 하는 사각형입니다.
+*정사각형 탭*<br/>
+【인】 탭 내부의 경계를 지정하는 사각형입니다.
 
 *iTab*<br/>
-[in] 탭의 0부터 시작하는 인덱스입니다. 프레임 워크는이 탭의 내부를 그립니다.
+【인】 탭의 0기반 인덱스입니다. 프레임워크는 이 탭의 내부를 그립니다.
 
-*bIsActive*<br/>
-진행 탭이 활성 상태 인지 여부를 나타내는 부울 매개 변수입니다.
+*비스액티브*<br/>
+【인】 탭이 활성 상태인지 여부를 나타내는 부울 매개 변수입니다.
 
 *pTabWnd*<br/>
-진행 그리고 있는 탭을 포함 하는 탭 컨트롤에 대 한 포인터입니다.
+【인】 그려지는 탭을 포함하는 탭 컨트롤에 대한 포인터입니다.
 
 *clrText*<br/>
-진행 탭 내부에 있는 텍스트의 색입니다.
+【인】 탭 내부의 텍스트 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-탭의 내부에는 탭의 텍스트와 아이콘이 있습니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 탭의 모양을 사용자 지정 합니다.
+탭의 내부에는 탭의 텍스트와 아이콘이 포함되어 있습니다.
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManager::OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanagerondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFC 비주얼 매니저::에드로드탭버튼보더
 
-프레임 워크는 탭 단추의 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 탭 단추의 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -3950,27 +3950,27 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 탭 단추의 경계를 지정 하는 사각형입니다.
+【인】 탭 단추의 경계를 지정하는 사각형입니다.
 
-*pButton*<br/>
-진행 [Cmfcbutton](../../mfc/reference/cmfcbutton-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 `CMFCButton` 인스턴스의 테두리를 그립니다.
+*p 버튼*<br/>
+【인】 [CMFCButton](../../mfc/reference/cmfcbutton-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 `CMFCButton` 인스턴스의 테두리를 그립니다.
 
 *uiState*<br/>
-진행 단추의 상태를 지정 하는 부호 없는 정수입니다.
+【인】 단추의 상태를 지정하는 서명되지 않은 정수입니다.
 
 *pWndTab*<br/>
-진행 부모 탭 창에 대 한 포인터입니다.
+【인】 상위 탭 창에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 탭 단추의 테두리 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 탭 단추의 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtask"></a>  CMFCVisualManager::OnDrawTask
+## <a name="cmfcvisualmanagerondrawtask"></a><a name="ondrawtask"></a>CMFC 비주얼 매니저::온드로우 태스크
 
-프레임 워크는 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 개체를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 개체를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTask(
@@ -3984,29 +3984,29 @@ virtual void OnDrawTask(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pTask*<br/>
-진행 [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) 개체에 대 한 포인터입니다. 프레임 워크에서이 작업을 그립니다.
+【인】 [CMFCTaskPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 작업을 그립니다.
 
-*pIcons*<br/>
-진행 작업 창과 연결 된 이미지 목록에 대 한 포인터입니다. 각 태스크에는이 목록에 있는 이미지에 대 한 인덱스가 포함 됩니다.
+*아이콘*<br/>
+【인】 작업 창과 연결된 이미지 목록에 대한 포인터입니다. 각 작업에는 이 목록에 있는 이미지에 대한 인덱스가 포함되어 있습니다.
 
-*bIsHighlighted*<br/>
-진행 표시 된 태스크가 강조 표시 되는지 여부를 지정 하는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 표시된 작업이 강조 표시되는지 여부를 지정하는 부울 매개 변수입니다.
 
 *bIsSelected*<br/>
-진행 표시 된 작업을 선택 했는지 여부를 지정 하는 부울 매개 변수입니다.
+【인】 표시된 작업이 선택되었는지 여부를 지정하는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-프레임 워크는 작업 표시줄에 아이콘 및 텍스트로 작업을 표시 합니다. 이 매개 변수는 *ptask*로 표시 된 작업에 대 한 아이콘을 포함 합니다.
+프레임워크는 작업 표시줄의 작업을 아이콘과 텍스트로 표시합니다. *pIcons* 매개 변수에는 *pTask*.
 
-작업 표시줄에서 작업의 모양을 사용자 지정 하려면 파생 클래스에서이 메서드를 재정의 합니다.
+파생 클래스에서 이 메서드를 재정의하여 작업 표시줄에서 작업의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManager::OnDrawTasksGroupAreaBorder
+## <a name="cmfcvisualmanagerondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFC 비주얼 매니저::온드로우태스크그룹지역경계
 
-프레임 워크는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md)의 그룹 주위에 테두리를 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCTasksPane 클래스에서](../../mfc/reference/cmfctaskspane-class.md)그룹 주위에 테두리를 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -4019,24 +4019,24 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 작업 창에서 그룹 영역의 경계를 지정 하는 사각형입니다.
+【인】 작업 창에서 그룹 영역의 경계를 지정하는 사각형입니다.
 
-*bSpecial*<br/>
-진행 테두리를 강조 표시 하는지 여부를 지정 하는 부울 매개 변수입니다. TRUE 값은 테두리가 강조 표시 됨을 나타냅니다.
+*b 스페셜*<br/>
+【인】 테두리가 강조 표시된 경우를 지정하는 부울 매개변수입니다. TRUE 값은 테두리가 강조 표시되어 있음을 나타냅니다.
 
-*bNoTitle*<br/>
-진행 그룹 영역에 제목이 있는지 여부를 지정 하는 부울 매개 변수입니다. TRUE 값은 그룹 영역에 제목이 없음을 나타냅니다.
+*b제목 없음*<br/>
+【인】 그룹 영역에 제목이 있는지 여부를 지정하는 부울 매개변수입니다. TRUE 값은 그룹 영역에 제목이 없는 것을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 함수를 재정의 하 여 작업 창에서 그룹 영역 주위의 테두리를 사용자 지정할 수 있습니다.
+파생 클래스에서 이 함수를 재정의하여 작업 창의 그룹 영역 주위의 테두리를 사용자 지정합니다.
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManager::OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanagerondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFC 비주얼 매니저::온드로우 태스크그룹 캡션
 
-프레임 워크는 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체에 대 한 캡션을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCTaskPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체에 대한 캡션을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -4050,27 +4050,27 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *pGroup*<br/>
-진행 `CMFCTasksPaneTaskGroup` 개체에 대 한 포인터입니다. 프레임 워크는이 그룹의 캡션을 그립니다.
+【인】 개체에 대한 `CMFCTasksPaneTaskGroup` 포인터입니다. 프레임워크는 이 그룹에 대한 캡션을 그립니다.
 
-*bIsHighlighted*<br/>
-진행 그룹이 강조 표시 되었는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 그룹이 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
 *bIsSelected*<br/>
-진행 그룹이 현재 선택 되어 있는지 여부를 나타내는 부울 매개 변수입니다.
+【인】 그룹이 현재 선택되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bCanCollapse*<br/>
-진행 그룹을 축소할 수 있는지 여부를 나타내는 부울 매개 변수입니다.
+*b스캔접지*<br/>
+【인】 그룹을 축소할 수 있는지 여부를 나타내는 부울 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-작업 그룹이 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 개체에 표시 됩니다.
+작업 그룹은 [CMFCTaskPane](../../mfc/reference/cmfctaskspane-class.md) 개체에 나타납니다.
 
-파생 클래스에서이 메서드를 재정의 하 여의 `CMFCTasksPaneTaskGroup`캡션을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 `CMFCTasksPaneTaskGroup`에 대한 캡션을 사용자 지정합니다.
 
-##  <a name="ondrawtasksgroupicon"></a>  CMFCVisualManager::OnDrawTasksGroupIcon
+## <a name="cmfcvisualmanagerondrawtasksgroupicon"></a><a name="ondrawtasksgroupicon"></a>CMFC 비주얼 매니저::온드로우태스크그룹아이콘
 
 ```
 virtual void OnDrawTasksGroupIcon(
@@ -4084,18 +4084,18 @@ virtual void OnDrawTasksGroupIcon(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *nIconHOffset*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+【인】 *pDC*<br/>
+【인】 *p그룹 (것)들*<br/>
+【인】 *니콘H오프셋*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *선택된 항목*<br/>
+【인】 *b스캔접지*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManager::OnDrawTearOffCaption
+## <a name="cmfcvisualmanagerondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFC 비주얼 매니저::온드로인티어오프캡션
 
-프레임 워크는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)에 대 한 캡션을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCPopupMenu 클래스에](../../mfc/reference/cmfcpopupmenu-class.md)대한 캡션을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -4107,21 +4107,21 @@ virtual void OnDrawTearOffCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 캡션의 경계를 지정 하는 사각형입니다.
+【인】 캡션의 경계를 지정하는 사각형입니다.
 
-*bIsActive*<br/>
-진행 캡션이 활성화 되어 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+*비스액티브*<br/>
+【인】 캡션이 활성 상태인 경우 TRUE; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 `CMFCPopupMenu` 개체가 WM_PAINT 메시지를 처리 하 고 분리 캡션을 그려야 할 때 프레임 워크에서 호출 됩니다.
+이 함수는 `CMFCPopupMenu` 개체가 WM_PAINT 메시지를 처리하고 찢어짐 캡션을 그려야 할 때 프레임워크에서 호출됩니다.
 
-파생 클래스에서이 메서드를 재정의 하 여 분리 막대의 캡션 모양을 사용자 지정 합니다.
+파생 클래스에서 이 메서드를 재정의하여 제거 막대에 대한 캡션 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManager::OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagerondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFC 비주얼 매니저::온드로우툴박스프레임
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -4131,14 +4131,14 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
+【인】 *pDC*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManager::OnEraseMDIClientArea
+## <a name="cmfcvisualmanageronerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFC 비주얼 매니저::에라아제MDI클라이언트에어리어
 
-프레임 워크는 MDI 클라이언트 영역을 지울 때이 메서드를 호출 합니다.
+프레임워크는 MDI 클라이언트 영역을 지울 때 이 메서드를 호출합니다.
 
 ```
 virtual BOOL OnEraseMDIClientArea(
@@ -4149,20 +4149,20 @@ virtual BOOL OnEraseMDIClientArea(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rectClient*<br/>
-진행 MDI 클라이언트 영역의 경계를 지정 하는 사각형입니다.
+【인】 MDI 클라이언트 영역의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-예약 된 값입니다. 기본 구현에서는 FALSE를 반환 합니다.
+예약된 값입니다. 기본 구현은 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Visual manager에서 MDI 클라이언트 영역을 지울 때 사용자 지정 코드를 실행 하려면이 메서드를 재정의 합니다.
+시각적 관리자가 MDI 클라이언트 영역을 지울 때 이 메서드를 재정의하여 사용자 지정 코드를 실행합니다.
 
-##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManager::OnErasePopupWindowButton
+## <a name="cmfcvisualmanageronerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFC 비주얼 매니저::에라아제팝윈도우버튼
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -4173,15 +4173,15 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+【인】 *pDC*<br/>
+【인】 *정류 클라이언트*<br/>
+【인】 *p 버튼*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManager::OnEraseTabsArea
+## <a name="cmfcvisualmanageronerasetabsarea"></a><a name="onerasetabsarea"></a>CMFC 비주얼 매니저:::에라아제탭스에어리어
 
-프레임 워크는 탭 창의 탭 영역을 지울 때이 메서드를 호출 합니다.
+프레임워크는 탭 창의 탭 영역을 지울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnEraseTabsArea(
@@ -4193,23 +4193,23 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 탭 영역의 경계를 지정 하는 사각형입니다.
+【인】 탭 영역의 경계를 지정하는 사각형입니다.
 
 *pTabWnd*<br/>
-진행 탭 창에 대 한 포인터입니다. 프레임 워크는 지정 된 탭 창의 탭 영역을 지웁니다.
+【인】 탭 창에 대한 포인터입니다. 프레임워크는 지정된 탭 창의 탭 영역을 지웁니까?
 
 ### <a name="remarks"></a>설명
 
-이 함수는 [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) 개체가 WM_PAINT 메시지를 처리 하 고 탭 영역을 지울 때 프레임 워크에서 호출 됩니다.
+[CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md) 개체가 WM_PAINT 메시지를 처리하고 탭 영역을 지울 때 이 함수는 프레임워크에서 호출됩니다.
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 탭의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 탭 모양을 사용자 지정합니다.
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManager::OnEraseTabsButton
+## <a name="cmfcvisualmanageronerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFC 비주얼 매니저:::에라아제탭버튼
 
-프레임 워크는 탭 단추의 텍스트와 아이콘을 지울 때이 메서드를 호출 합니다.
+프레임워크는 탭 단추의 텍스트와 아이콘을 지울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnEraseTabsButton(
@@ -4222,26 +4222,26 @@ virtual void OnEraseTabsButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 탭 단추의 경계를 지정 하는 사각형입니다.
+【인】 탭 단추의 경계를 지정하는 사각형입니다.
 
-*pButton*<br/>
-진행 탭 단추에 대 한 포인터입니다. 프레임 워크는이 단추에 대 한 텍스트 및 아이콘을 지웁니다.
+*p 버튼*<br/>
+【인】 탭 단추에 대한 포인터입니다. 프레임워크는 이 단추의 텍스트와 아이콘을 지웁습니다.
 
 *pWndTab*<br/>
-진행 탭 단추를 포함 하는 tab 컨트롤에 대 한 포인터입니다.
+【인】 탭 단추가 포함된 탭 컨트롤에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체가 WM_ERASEBKGND 메시지를 처리할 때 프레임 워크는 단추의 텍스트와 아이콘을 지웁니다.
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) 개체가 WM_ERASEBKGND 메시지를 처리할 때 프레임워크는 단추의 텍스트와 아이콘을 지웁니까?
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 탭 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 탭 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManager::OnEraseTabsFrame
+## <a name="cmfcvisualmanageronerasetabsframe"></a><a name="onerasetabsframe"></a>CMFC 비주얼 매니저:::에라아제탭프레임
 
-프레임 워크는 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)의 프레임을 지울 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCBaseTabCtrl 클래스의](../../mfc/reference/cmfcbasetabctrl-class.md)프레임을 지울 때 이 메서드를 호출합니다.
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -4253,23 +4253,23 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 탭 창의 경계를 지정 하는 사각형입니다.
+【인】 탭 창의 경계를 지정하는 사각형입니다.
 
 *pTabWnd*<br/>
-진행 탭 창에 대 한 포인터입니다. 프레임 워크는이 `CMFCBaseTabCtrl`에 대 한 프레임을 지웁니다.
+【인】 탭 창에 대한 포인터입니다. 프레임 워크는 이에 `CMFCBaseTabCtrl`대한 프레임을 지웁습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+TRUE 메서드가 성공하면 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 *rect* 에 표시 된 영역을 활성 탭의 배경색으로 채웁니다. `CMFCBaseTabCtrl` 개체가 WM_PAINT 메시지를 처리 하 고 탭 프레임을 지울 때 호출 됩니다.
+이 메서드는 *정사각형으로* 표시된 영역을 활성 탭의 배경색으로 채웁니다. `CMFCBaseTabCtrl` 개체가 WM_PAINT 메시지를 처리하고 탭 프레임을 지울 때 호출됩니다.
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanageronfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFC 비주얼 매니저::에필자동 하이드버튼백
 
 자동 숨기기 단추의 배경을 채울 때 프레임워크에서 이 메서드를 호출합니다.
 
@@ -4283,21 +4283,21 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 자동 숨기기 단추의 경계를 지정 하는 사각형입니다.
+【인】 자동 숨기기 단추의 경계를 지정하는 사각형입니다.
 
-*pButton*<br/>
-진행 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 자동 숨기기 단추의 배경을 채웁니다.
+*p 버튼*<br/>
+【인】 [CMFC자동 숨기기](../../mfc/reference/cmfcautohidebutton-class.md) 단추 개체에 대한 포인터입니다. 프레임워크는 이 자동 숨기기 단추의 배경을 채웁니다.
 
 ### <a name="remarks"></a>설명
 
-자동 숨기기 단추의 모양을 사용자 지정 하려면 파생 된 visual manager에서이 메서드를 재정의 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 자동 숨기기 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManager::OnFillBarBackground
+## <a name="cmfcvisualmanageronfillbarbackground"></a><a name="onfillbarbackground"></a>CMFC비주얼매니저::온필바백
 
-프레임 워크는 [Cbasepane](../../mfc/reference/cbasepane-class.md) 개체의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 [CBasePane](../../mfc/reference/cbasepane-class.md) 개체의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillBarBackground(
@@ -4311,33 +4311,33 @@ virtual void OnFillBarBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 컨트롤 막대의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 컨트롤 막대의 장치 컨텍스트에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 `CBasePane` 개체에 대 한 포인터입니다. 프레임 워크는이 창의 배경을 채웁니다.
+【인】 개체에 대한 `CBasePane` 포인터입니다. 프레임워크는 이 창의 배경을 채웁니다.
 
 *rectClient*<br/>
-진행 창의 경계를 지정 하는 사각형입니다.
+【인】 창의 경계를 지정하는 사각형입니다.
 
-*rectClip*<br/>
-진행 창의 클리핑 영역을 지정 하는 사각형입니다.
+*렉클립*<br/>
+【인】 창의 클리핑 영역을 지정하는 사각형입니다.
 
-*bNCArea*<br/>
-진행 예약 된 값입니다.
+*bNC Area*<br/>
+【인】 예약된 값입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 막대의 배경을 전역 변수의 `afxGlobalData`3d 배경색으로 채웁니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 창의 배경을 사용자 지정 합니다.
+이 메서드의 기본 구현은 막대의 배경을 전역 변수의 `afxGlobalData`3D 배경색으로 채웁니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 창의 배경을 사용자 지정합니다.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 `OnFillBarBackground` `CMFCVisualManager` 클래스에서를 사용 하는 방법을 보여 줍니다. 이 코드 조각은 [Outlook Demo 샘플](../../overview/visual-cpp-samples.md)의 일부입니다.
+다음 예제에서는 `OnFillBarBackground` `CMFCVisualManager` 클래스에서 를 사용하는 방법을 보여 줍니다. 이 코드 조각은 Outlook [데모 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManager::OnFillButtonInterior
+## <a name="cmfcvisualmanageronfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFC 비주얼 매니저::온필버튼인테리어
 
-프레임 워크는 도구 모음 단추의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 도구 모음 단추의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillButtonInterior(
@@ -4350,24 +4350,24 @@ virtual void OnFillButtonInterior(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 도구 모음 단추의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 도구 모음 단추의 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)에 대 한 포인터입니다. 프레임 워크는이 단추의 배경을 채웁니다.
+*p 버튼*<br/>
+【인】 [CMFCToolBarButton에](../../mfc/reference/cmfctoolbarbutton-class.md)대한 포인터입니다. 프레임워크는 이 단추의 배경을 채웁니다.
 
 *rect*<br/>
-진행 도구 모음 단추의 경계를 지정 하는 사각형입니다.
+【인】 도구 모음 단추의 경계를 지정하는 사각형입니다.
 
-*state*<br/>
-진행 도구 모음 단추의 상태입니다.
+*상태*<br/>
+【인】 도구 모음 단추의 상태입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 기본 색을 사용 하 여 배경을 채웁니다. 파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 도구 모음 단추의 배경을 사용자 지정 합니다.
+이 메서드의 기본 구현은 기본 색상을 사용하여 배경을 채웁니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 도구 모음 단추의 배경을 사용자 지정합니다.
 
-도구 모음 단추의 `ButtonsIsRegular`가능한 상태는, `ButtonsIsPressed`또는 `ButtonsIsHighlighted`입니다.
+도구 모음 단추의 가능한 `ButtonsIsRegular`상태는 `ButtonsIsPressed`에 `ButtonsIsHighlighted`이 수 있습니다.
 
-##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManager::OnFillCaptionBarButton
+## <a name="cmfcvisualmanageronfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFC 비주얼 매니저::온필 캡션바 버튼
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -4383,22 +4383,22 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+【인】 *비스누른*<br/>
+【인】 *비스하이라이트*<br/>
+【인】 *isdisabled*<br/>
+【인】 *bHasDropDownArrow*<br/>
+【인】 *비시스버튼*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManager::OnFillCommandsListBackground
+## <a name="cmfcvisualmanageronfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFC비주얼매니저::온필커맨드리스트배경
 
-프레임 워크는 명령 목록에 속하는 도구 모음 단추의 배경을 채울 때이 메서드를 호출 합니다. 이 명령 목록은 사용자 지정 대화 상자의 일부입니다.
+프레임워크는 명령 목록에 속하는 도구 모음 단추의 배경을 채울 때 이 메서드를 호출합니다. 이 명령 목록은 사용자 지정 대화 상자의 일부입니다.
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -4410,25 +4410,25 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 단추의 경계를 지정 하는 사각형입니다.
+【인】 단추의 경계를 지정하는 사각형입니다.
 
 *bIsSelected*<br/>
-진행 단추가 선택 되었는지 여부를 나타내는 부울 매개 변수입니다.
+【인】 단추를 선택했는지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-도구 모음 단추의 텍스트 색입니다.
+도구 모음 단추의 텍스트 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-사용자 지정 목록에 대 한 자세한 내용은 [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)를 참조 하세요. 이 메서드의 기본 구현에서는 현재 선택 된 스킨의 색 구성표에 따라 배경을 채웁니다.
+사용자 지정 목록에 대한 자세한 내용은 [CMFCToolBarButton::OnDrawOn사용자 지정 목록](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)을 참조하십시오. 이 메서드의 기본 구현은 현재 선택한 스킨의 색 구성표를 기반으로 배경을 채웁니다.
 
-##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManager::OnFillHeaderCtrlBackground
+## <a name="cmfcvisualmanageronfillheaderctrlbackground"></a><a name="onfillheaderctrlbackground"></a>CMFC 비주얼 매니저::온필헤더Ctrl백
 
-프레임 워크는 헤더 컨트롤의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 헤더 컨트롤의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillHeaderCtrlBackground(
@@ -4440,21 +4440,21 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pCtrl*<br/>
-진행 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 헤더 컨트롤의 배경을 채웁니다.
+【인】 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 헤더 컨트롤의 배경을 채웁니다.
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 헤더 컨트롤의 경계를 지정 하는 사각형입니다.
+【인】 헤더 컨트롤의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 헤더 컨트롤의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 헤더 컨트롤의 모양을 사용자 지정합니다.
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManager::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanageronfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFC 비주얼 매니저::온필미니프레임캡션
 
-프레임 워크는 미니 프레임 창의 캡션 표시줄을 채울 때이 메서드를 호출 합니다.
+프레임워크는 미니 프레임 창의 캡션 막대를 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -4467,28 +4467,28 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectCaption*<br/>
-진행 캡션 표시줄의 경계를 지정 하는 사각형입니다.
+*정류 캡션*<br/>
+【인】 캡션 막대의 경계를 지정하는 사각형입니다.
 
 *pFrameWnd*<br/>
-진행 미니 프레임 창에 대 한 포인터입니다. 프레임 워크는이 창의 캡션 표시줄을 그립니다.
+【인】 미니 프레임 창에 대한 포인터입니다. 프레임워크는 이 창에 대한 캡션 막대를 그립니다.
 
-*bActive*<br/>
-진행 창이 활성 상태 인지 여부를 나타내는 부울 매개 변수입니다.
+*b활성*<br/>
+【인】 창이 활성 상태인지 를 나타내는 부울 매개변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡션 표시줄의 배경을 채우는 데 사용 되는 색입니다.
+캡션 막대의 배경을 채우는 데 사용되는 색상입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 캡션 표시줄을 활성 스킨의 현재 캡션 색으로 채웁니다.
+이 메서드의 기본 구현은 활성 스킨에 대한 현재 캡션 색상으로 캡션 막대를 채웁니다.
 
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManager::OnFillOutlookBarCaption
+## <a name="cmfcvisualmanageronfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFC 비주얼 매니저::온필아웃아웃바캡션
 
-프레임 워크는 Outlook 캡션 표시줄의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 Outlook 캡션 막대의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -4500,21 +4500,21 @@ virtual void OnFillOutlookBarCaption(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectCaption*<br/>
-진행 캡션 표시줄의 경계를 지정 하는 사각형입니다.
+*정류 캡션*<br/>
+【인】 캡션 막대의 경계를 지정하는 사각형입니다.
 
 *clrText*<br/>
-제한이 [Colorref](/windows/win32/gdi/colorref) 매개 변수에 대 한 참조입니다. 메서드는 캡션 표시줄의 텍스트 색을이 매개 변수에 씁니다.
+【아웃】 [COLORREF](/windows/win32/gdi/colorref) 매개 변수에 대한 참조입니다. 메서드는 캡션 막대에 텍스트의 색상을 이 매개 변수에 씁니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 캡션 표시줄을 현재 스킨을 기반으로 하는 그림자의 색으로 채웁니다. 파생 된 visual manager에서이 메서드를 재정의 하 여 Outlook 캡션 표시줄의 색을 사용자 지정 합니다.
+이 메서드의 기본 구현은 현재 스킨을 기반으로 그림자의 색상으로 캡션 막대를 채웁니다. 파생 된 시각적 관리자에서이 메서드를 재정의 하여 Outlook 캡션 막대의 색상을 사용자 지정합니다.
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManager::OnFillOutlookPageButton
+## <a name="cmfcvisualmanageronfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFC 비주얼 매니저:::온필아웃아웃페이지버튼
 
-프레임 워크는 Outlook 페이지 단추의 내부를 채울 때이 메서드를 호출 합니다.
+프레임워크는 Outlook 페이지 단추의 내부를 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -4528,27 +4528,27 @@ virtual void OnFillOutlookPageButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 Outlook 페이지 단추의 경계를 지정 하는 사각형입니다.
+【인】 Outlook 페이지 단추의 경계를 지정하는 사각형입니다.
 
-*bIsHighlighted*<br/>
-진행 단추가 강조 표시 되는지 여부를 지정 하는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 단추를 강조 표시할지 여부를 지정하는 부울 매개 변수입니다.
 
-*bIsPressed*<br/>
-진행 단추를 눌렀는지 여부를 지정 하는 부울 매개 변수입니다.
+*비스누른*<br/>
+【인】 단추를 누를지 여부를 지정하는 부울 매개 변수입니다.
 
 *clrText*<br/>
-제한이 [Colorref](/windows/win32/gdi/colorref) 매개 변수에 대 한 참조입니다. 이 메서드는 outlook 페이지 단추의 텍스트 색을이 매개 변수에 저장 합니다.
+【아웃】 [COLORREF](/windows/win32/gdi/colorref) 매개 변수에 대한 참조입니다. 이 메서드는 이 매개 변수에 Outlook 페이지 단추의 텍스트 색상을 저장합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 visual manager에서이 함수를 재정의 하 여 Outlook 페이지 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 함수를 재정의하여 Outlook 페이지 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManager::OnFillPopupWindowBackground
+## <a name="cmfcvisualmanageronfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFC비주얼매니저::온필팝윈도우배경
 
-프레임 워크는 팝업 창의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 팝업 창의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -4559,16 +4559,16 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 팝업 창의 경계를 지정 하는 사각형입니다.
+【인】 팝업 창의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 팝업 창의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 팝업 창의 모양을 사용자 지정합니다.
 
-##  <a name="onfillribbonbutton"></a>  CMFCVisualManager::OnFillRibbonButton
+## <a name="cmfcvisualmanageronfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFC 비주얼 매니저::온필리본 버튼
 
 프레임 워크는 리본 단추의 내부를 채울 때이 메서드를 호출 합니다.
 
@@ -4581,22 +4581,22 @@ virtual COLORREF OnFillRibbonButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 [Cmfc리본 단추](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 단추의 내부를 채웁니다.
+*p 버튼*<br/>
+【인】 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대한 포인터입니다. 프레임 워크는이 리본 버튼의 내부를 채웁니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리본 단추가 텍스트를 지 원하는 경우 *Pbutton* 으로 지정 된 리본 단추의 텍스트 색입니다. 리본 단추에 대 한 텍스트가 잘못 된 경우 값은-1입니다.
+리본 단추가 텍스트를 지원하는 경우 *pButton에서* 지정한 리본 단추의 텍스트 색상입니다. 리본 단추에 대해 텍스트가 유효하지 않은 경우 -1값입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 리본 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 리본 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onfillribbonedit"></a>  CMFCVisualManager::OnFillRibbonEdit
+## <a name="cmfcvisualmanageronfillribbonedit"></a><a name="onfillribbonedit"></a>CMFC 비주얼 매니저::온필리본 편집
 
-프레임 워크는 `CMFCRibbonRichEditCtrl` 클래스 인스턴스의 내부를 채울 때이 메서드를 호출 합니다.
+프레임워크는 클래스의 인스턴스 내부를 채울 때 이 `CMFCRibbonRichEditCtrl` 메서드를 호출합니다.
 
 ```
 virtual void OnFillRibbonEdit(
@@ -4614,41 +4614,41 @@ virtual void OnFillRibbonEdit(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pEdit*<br/>
-진행 `CMFCRibbonRichEditCtrl` 개체에 대 한 포인터입니다. 프레임 워크는이 편집 컨트롤의 내부를 채웁니다.
+*Pedit*<br/>
+【인】 개체에 대한 `CMFCRibbonRichEditCtrl` 포인터입니다. 프레임워크는 이 편집 컨트롤의 내부를 채웁니다.
 
 *rect*<br/>
-진행 편집 컨트롤의 경계를 지정 하는 사각형입니다.
+【인】 편집 컨트롤의 경계를 지정하는 사각형입니다.
 
-*bIsHighlighted*<br/>
-진행 편집 컨트롤이 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스하이라이트*<br/>
+【인】 편집 컨트롤이 강조 표시되어 있는지 여부를 나타내는 부울 매개 변수입니다.
 
-*bIsPaneHighlighted*<br/>
-진행 부모 창이 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.
+*비스파인 강조 표시*<br/>
+【인】 상위 창이 강조 표시되어 있는지 여부를 나타내는 부울 매개변수입니다.
 
-*bIsDisabled*<br/>
-진행 편집 컨트롤을 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
+*isdisabled*<br/>
+【인】 편집 컨트롤을 사용할 수 없는지 여부를 나타내는 부울 매개 변수입니다.
 
 *clrText*<br/>
-진행 편집 컨트롤의 텍스트 색에 대 한 참조입니다.
+【인】 편집 컨트롤의 텍스트 색상에 대한 참조입니다.
 
 *clrSelBackground*<br/>
-진행 강조 표시 되는 편집 컨트롤의 배경색에 대 한 참조입니다.
+【인】 편집 컨트롤이 강조 표시될 때 컨트롤의 배경색에 대한 참조입니다.
 
 *clrSelText*<br/>
-진행 편집 컨트롤에서 선택한 텍스트의 색에 대 한 참조입니다.
+【인】 편집 컨트롤에서 선택한 텍스트의 색상에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-`CMFCRibbonRichEditCtrl` *Pedit* 로 표시 되는는 리본 메뉴의 콤보 상자 단추 일부일 수 있습니다.
+`CMFCRibbonRichEditCtrl` *pEdit에* 의해 표시된 리본의 콤보 상자 버튼의 일부가 될 수 있습니다.
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여의 `CMFCRibbonRichEditCtrl`모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCRibbonRichEditCtrl`의 모양을 사용자 지정합니다.
 
-##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManager::OnFillRibbonMainPanelButton
+## <a name="cmfcvisualmanageronfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFC 비주얼 매니저::온필리본메인패널버튼
 
-프레임 워크는 **주** 패널에 있는 리본 단추의 내부를 채울 때이 메서드를 호출 합니다.
+프레임워크는 **메인** 패널에 있는 리본 단추의 내부를 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -4659,22 +4659,22 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 [Cmfc리본 단추 클래스](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대 한 포인터입니다. 프레임 워크는이 리본 단추를 채웁니다.
+*p 버튼*<br/>
+【인】 [CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md) 개체에 대한 포인터입니다. 프레임워크는 이 리본 단추를 채웁니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리본 단추가 텍스트를 지 원하는 경우 *Pbutton* 으로 지정 된 리본 단추의 텍스트 색입니다. 리본 단추에 대 한 텍스트가 잘못 된 경우 값은-1입니다.
+리본 단추가 텍스트를 지원하는 경우 *pButton에서* 지정한 리본 단추의 텍스트 색상입니다. 리본 단추에 대해 텍스트가 유효하지 않은 경우 -1값입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 **기본** 패널에서 리본 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 **기본** 패널에서 리본 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManager::OnFillRibbonMenuFrame
+## <a name="cmfcvisualmanageronfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFC 비주얼 매니저::온필리본메뉴프레임
 
-프레임 워크는 리본 패널의 메뉴 프레임을 채울 때이 메서드를 호출 합니다.
+프레임워크는 리본 패널의 메뉴 프레임을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillRibbonMenuFrame(
@@ -4686,19 +4686,19 @@ virtual void OnFillRibbonMenuFrame(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pPanel*<br/>
-진행 [Cmfc리본 Mainpanel 클래스](../../mfc/reference/cmfcribbonmainpanel-class.md)의 인스턴스에 대 한 포인터입니다. 프레임 워크는이 리본 패널의 메뉴 프레임을 채웁니다.
+*p 패널*<br/>
+【인】 [CMFC리본MainPanel 클래스의](../../mfc/reference/cmfcribbonmainpanel-class.md)인스턴스에 대한 포인터입니다. 프레임워크는 이 리본 패널의 메뉴 프레임을 채웁니다.
 
 *rect*<br/>
-진행 메뉴 프레임의 경계를 지정 하는 사각형입니다.
+【인】 메뉴 프레임의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여에 대 한 `CMFCRibbonMainPanel`메뉴 모음의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 에 대 `CMFCRibbonMainPanel`한 메뉴 모음의 모양을 사용자 지정합니다.
 
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
+## <a name="cmfcvisualmanageronfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFC 비주얼 매니저::에필리본퀵액세스툴바팝
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4709,15 +4709,15 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pDC*<br/>
-[in] *pMenuBar*<br/>
+【인】 *pDC*<br/>
+【인】 *pMenuBar*<br/>
 [in] *rect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onfillsplitterbackground"></a>  CMFCVisualManager::OnFillSplitterBackground
+## <a name="cmfcvisualmanageronfillsplitterbackground"></a><a name="onfillsplitterbackground"></a>CMFC비주얼매니저::온필스플리터배경
 
-프레임 워크는 분할자 창의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 스플리터 창의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillSplitterBackground(
@@ -4729,21 +4729,21 @@ virtual void OnFillSplitterBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pSplitterWnd*<br/>
-진행 [CSplitterWndEx 클래스](csplitterwndex-class.md)의 인스턴스에 대 한 포인터입니다. 프레임 워크는이 분할자 창의 배경을 채웁니다.
+*p스플리터Wnd*<br/>
+【인】 [CSplitterWndEx 클래스의](csplitterwndex-class.md)인스턴스에 대한 포인터입니다. 프레임워크는 이 스플리터 창의 배경을 채웁니다.
 
 *rect*<br/>
-진행 분할자 창의 경계를 지정 하는 사각형입니다.
+【인】 스플리터 창의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 분할자 창의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 스플리터 창의 모양을 사용자 지정합니다.
 
-##  <a name="onfilltab"></a>  CMFCVisualManager::OnFillTab
+## <a name="cmfcvisualmanageronfilltab"></a><a name="onfilltab"></a>CMFC 비주얼 매니저::온필탭
 
-프레임 워크는 탭 창의 배경을 채울 때이 메서드를 호출 합니다.
+프레임워크는 탭 창의 배경을 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillTab(
@@ -4758,30 +4758,30 @@ virtual void OnFillTab(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectFill*<br/>
-진행 탭 창의 경계를 지정 하는 사각형입니다.
+*정류 채우기*<br/>
+【인】 탭 창의 경계를 지정하는 사각형입니다.
 
 *pbrFill*<br/>
-진행 브러시에 대 한 포인터입니다. 프레임 워크는이 브러시를 사용 하 여 탭 창을 채웁니다.
+【인】 브러시에 대한 포인터입니다. 프레임워크는 이 브러시를 사용하여 탭 창을 채웁니다.
 
 *iTab*<br/>
-진행 프레임 워크가 배경을 채우는 탭의 0부터 시작 하는 탭 인덱스입니다.
+【인】 프레임워크가 배경을 채우는 탭의 0기반 탭 인덱스입니다.
 
-*bIsActive*<br/>
-진행 탭이 활성화 되어 있으면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+*비스액티브*<br/>
+【인】 TRUE 탭이 활성 상태인 경우; 그렇지 않으면 거짓.
 
 *pTabWnd*<br/>
-진행 부모 탭 컨트롤에 대 한 포인터입니다.
+【인】 상위 탭 컨트롤에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 탭의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 탭 모양을 사용자 지정합니다.
 
-##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManager::OnFillTasksGroupInterior
+## <a name="cmfcvisualmanageronfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFC 비주얼 매니저::온필태스크그룹인테리어
 
-프레임 워크는 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체의 내부를 채울 때이 메서드를 호출 합니다.
+프레임워크는 [CMFCTaskPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체의 내부를 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -4793,21 +4793,21 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-진행 작업 그룹의 경계를 지정 하는 사각형입니다.
+【인】 작업 그룹의 경계를 지정하는 사각형입니다.
 
-*bSpecial*<br/>
-진행 내부가 특수 한 색으로 채워져 있는지 여부를 나타내는 부울입니다.
+*b 스페셜*<br/>
+【인】 내부가 특별한 색상으로 채워져 있는지 나타내는 부울입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 visual manager에서이 메서드를 재정의 하 여 작업 그룹의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 작업 그룹의 모양을 사용자 지정합니다.
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManager::OnFillTasksPaneBackground
+## <a name="cmfcvisualmanageronfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFC 비주얼 매니저::온필태스크스페네배경
 
-프레임 워크는 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 컨트롤의 배경을 채울 때이 메서드를 호출 합니다.
+[프레임워크는 CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 컨트롤의 백그라운드를 채울 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -4818,18 +4818,18 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectWorkArea*<br/>
-진행 작업 창의 경계를 지정 하는 사각형입니다.
+*정류 작업 영역*<br/>
+【인】 작업 창의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 visual manager에서이 메서드를 재정의 하 여 `CMFCTasksPane` 개체의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 `CMFCTasksPane` 개체의 모양을 사용자 지정합니다.
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManager::OnHighlightMenuItem
+## <a name="cmfcvisualmanageronhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFC 비주얼 매니저::에 하이라이트 메뉴항목
 
-프레임 워크는 강조 표시 된 메뉴 항목을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 강조 표시된 메뉴 항목을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnHighlightMenuItem(
@@ -4842,26 +4842,26 @@ virtual void OnHighlightMenuItem(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 메뉴의 장치 컨텍스트에 대 한 포인터입니다.
+【인】 메뉴의 장치 컨텍스트에 대한 포인터입니다.
 
-*pButton*<br/>
-진행 표시할 [Cmfc의 Menubutton](../../mfc/reference/cmfctoolbarmenubutton-class.md) 개체에 대 한 포인터입니다. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.
+*p 버튼*<br/>
+【인】 표시할 [CMFCToolBarMenu단추](../../mfc/reference/cmfctoolbarmenubutton-class.md) 개체에 대한 포인터입니다. 기본 구현에서 이 매개 변수를 사용하지 않습니다.
 
 *rect*<br/>
-진행 메뉴 항목의 경계를 지정 하는 사각형입니다.
+【인】 메뉴 항목의 경계를 지정하는 사각형입니다.
 
 *clrText*<br/>
-진행 강조 표시 된 메뉴 항목의 현재 텍스트 색입니다. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.
+【인】 강조 표시된 메뉴 항목의 현재 텍스트 색상입니다. 기본 구현에서 이 매개 변수를 사용하지 않습니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드의 기본 구현에서는 *Pbutton* 또는 *clrtext*매개 변수를 사용 하지 않습니다. *Rect* 에 지정 된 사각형을 표준 배경색으로 채웁니다.
+이 메서드의 기본 구현 매개 변수 *pButton* 또는 *clrText를*사용 하지 않습니다. 직사각형으로 지정된 사각형을 *rect* 표준 배경색으로 채웁니다.
 
-파생 된 visual manager에서이 메서드를 재정의 하 여 강조 표시 된 메뉴 항목의 모양을 사용자 지정 합니다. *Clrtext* 매개 변수를 사용 하 여 강조 표시 된 메뉴 항목의 텍스트 색을 수정할 수 있습니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하 여 강조 표시된 메뉴 항목의 모양을 사용자 지정 합니다. *clrText* 매개 변수를 사용하여 강조 표시된 메뉴 항목의 텍스트 색상을 수정합니다.
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanageronhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFC 비주얼 매니저::에 하이라이트 드물게 사용 메뉴항목
 
-프레임 워크는 강조 표시 된 메뉴 명령을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 강조 표시된 메뉴 명령을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -4872,16 +4872,16 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*rectRarelyUsed*<br/>
-진행 강조 표시 된 명령의 경계를 지정 하는 사각형입니다.
+*정류드물게 사용*<br/>
+【인】 강조 표시된 명령의 경계를 지정하는 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 visual manager에서이 메서드를 재정의 하 여 강조 표시 된 메뉴 명령의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 강조 표시된 메뉴 명령의 모양을 사용자 지정합니다.
 
-##  <a name="onncactivate"></a>  CMFCVisualManager::OnNcActivate
+## <a name="cmfcvisualmanageronncactivate"></a><a name="onncactivate"></a>CMFC 비주얼 매니저::온시 활성화
 
 ```
 virtual BOOL OnNcActivate(
@@ -4891,16 +4891,16 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+【인】 *pWnd*<br/>
+【인】 *b활성*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onncpaint"></a>  CMFCVisualManager::OnNcPaint
+## <a name="cmfcvisualmanageronncpaint"></a><a name="onncpaint"></a>CMFC비주얼매니저::온씨페인트
 
-프레임 워크는 비클라이언트 영역을 그릴 때이 메서드를 호출 합니다.
+프레임워크는 클라이언트가 아닌 영역을 그릴 때 이 메서드를 호출합니다.
 
 ```
 virtual BOOL OnNcPaint(
@@ -4912,25 +4912,25 @@ virtual BOOL OnNcPaint(
 ### <a name="parameters"></a>매개 변수
 
 *pWnd*<br/>
-진행 비클라이언트 영역 프레임 워크가 그려지는 창에 대 한 포인터입니다.
+【인】 프레임워크가 그리는 클라이언트가 아닌 영역이 있는 창에 대한 포인터입니다.
 
 *lstSysButtons*<br/>
-진행 시스템 단추 목록입니다. 이를 캡션 단추 라고도 합니다.
+【인】 시스템 단추 목록입니다. 캡션 단추라고도 합니다.
 
-*rectRedraw*<br/>
-진행 비클라이언트 영역의 경계를 지정 하는 사각형입니다.
+*직사각형 다시 그리기*<br/>
+【인】 클라이언트가 아닌 영역의 경계를 지정하는 사각형입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-예약 된 값입니다. 기본 구현에서는 FALSE를 반환 합니다.
+예약된 값입니다. 기본 구현은 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 된 비주얼 관리자에서이 메서드를 재정의 하 여 창 프레임 및 캡션 단추의 모양을 사용자 지정 합니다.
+파생 된 시각적 관리자에서이 메서드를 재정의 하여 창 프레임 및 캡션 단추의 모양을 사용자 지정합니다.
 
-##  <a name="onsetwindowregion"></a>  CMFCVisualManager::OnSetWindowRegion
+## <a name="cmfcvisualmanageronsetwindowregion"></a><a name="onsetwindowregion"></a>CMFC 비주얼 매니저::온셋윈도우 리전
 
-프레임 워크는 프레임 및 팝업 메뉴가 포함 된 영역을 설정한 후이 메서드를 호출 합니다.
+프레임 및 팝업 메뉴가 포함된 영역을 설정한 후 프레임워크는 이 메서드를 호출합니다.
 
 ```
 virtual BOOL OnSetWindowRegion(
@@ -4941,22 +4941,22 @@ virtual BOOL OnSetWindowRegion(
 ### <a name="parameters"></a>매개 변수
 
 *pWnd*<br/>
-진행 영역이 변경 된 창에 대 한 포인터입니다.
+【인】 변경된 영역이 있는 창에 대한 포인터입니다.
 
-*sizeWindow*<br/>
-진행 창의 크기입니다.
+*크기창*<br/>
+【인】 창의 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+TRUE 메서드가 성공하면 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-프레임 워크는이 메서드를 호출 하 여 프레임 및 팝업 메뉴에 대 한 지역이 설정 되었음을 시각적 관리자에 알립니다. 자세한 내용은 [CWindow:: SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)를 참조 하세요.
+프레임워크는 이 메서드를 호출하여 시각적 관리자에게 프레임 및 팝업 메뉴에 대해 영역이 설정되었음을 알립니다. 자세한 내용은 [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)을 참조하십시오.
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManager::OnUpdateSystemColors
+## <a name="cmfcvisualmanageronupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFC 비주얼 매니저::업데이트시스템색상
 
-프레임 워크는 시스템 색을 변경할 때이 함수를 호출 합니다.
+프레임워크는 시스템 색상을 변경할 때 이 함수를 호출합니다.
 
 ```
 virtual void OnUpdateSystemColors();
@@ -4964,9 +4964,9 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>설명
 
-프레임 워크는 WM_SYSCOLORCHANGE 메시지를 처리 하는 과정에서이 메서드를 호출 합니다. 기본 구현은 아무 작업도 수행하지 않습니다. 응용 프로그램에서 색이 변경 될 때 사용자 지정 코드를 실행 하려면 파생 된 visual manager에서이 메서드를 재정의 합니다.
+프레임워크는 WM_SYSCOLORCHANGE 메시지를 처리하는 일부로 이 메서드를 호출합니다. 기본 구현은 아무 작업도 수행하지 않습니다. 응용 프로그램의 색상이 변경될 때 사용자 지정 코드를 실행하려는 경우 파생 시각적 관리자에서 이 메서드를 재정의합니다.
 
-##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll
+## <a name="cmfcvisualmanagerredrawall"></a><a name="redrawall"></a>CMFC 비주얼 매니저::다시 그리기모두
 
 응용 프로그램의 모든 컨트롤 막대를 즉시 다시 그립니다.
 
@@ -4974,7 +4974,7 @@ virtual void OnUpdateSystemColors();
 static void RedrawAll();
 ```
 
-##  <a name="ribboncategorycolortorgb"></a>  CMFCVisualManager::RibbonCategoryColorToRGB
+## <a name="cmfcvisualmanagerribboncategorycolortorgb"></a><a name="ribboncategorycolortorgb"></a>CMFC 비주얼 매니저::리본카테고리컬러토르GB
 
 ```
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
@@ -4982,15 +4982,15 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *color*<br/>
+【인】 *색상*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setdefaultmanager"></a>  CMFCVisualManager::SetDefaultManager
+## <a name="cmfcvisualmanagersetdefaultmanager"></a><a name="setdefaultmanager"></a>CMFC 비주얼 매니저::설정기본 관리자
 
-기본 관리자를 설정 합니다.
+기본 관리자를 설정합니다.
 
 ```
 static void SetDefaultManager(CRuntimeClass* pRTI);
@@ -4999,102 +4999,102 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ### <a name="parameters"></a>매개 변수
 
 *pRTI*<br/>
-진행 비주얼 관리자의 런타임 정보에 대 한 포인터입니다.
+【인】 시각적 관리자의 런타임 정보에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-`CMFCVisualManager` 클래스 및 파생 된 모든 시각적 관리자를 사용 하 여 응용 프로그램의 모양을 사용자 지정 합니다. 기본 비주얼 관리자를 설정 하면이 메서드는 새 비주얼 관리자를 사용 하 여 응용 프로그램을 다시 그립니다. 시각적 관리자를 사용 하는 방법에 대 한 자세한 내용은 [시각화 관리자](../../mfc/visualization-manager.md)를 참조 하세요.
+`CMFCVisualManager` 클래스 및 파생 된 시각적 관리자를 사용 하 여 응용 프로그램의 모양을 사용자 지정 합니다. 기본 시각적 관리자를 설정한 후 이 메서드는 새 시각적 관리자를 사용하여 응용 프로그램을 다시 그립니다. 시각적 관리자를 사용하는 방법에 대한 자세한 내용은 [시각화 관리자를](../../mfc/visualization-manager.md)참조하십시오.
 
-응용 프로그램에서 사용 하는 비주얼 관리자를 변경 하려면이 메서드를 사용 합니다.
+이 메서드를 사용 하 여 응용 프로그램에서 사용 하는 시각적 관리자를 변경 합니다.
 
-##  <a name="setembossdisabledimage"></a>  CMFCVisualManager::SetEmbossDisabledImage
+## <a name="cmfcvisualmanagersetembossdisabledimage"></a><a name="setembossdisabledimage"></a>CMFC 비주얼 매니저::SetEmboss장애인 이미지
 
-비활성화 된 도구 모음 이미지에 대해 볼록 모드를 사용 하거나 사용 하지 않도록 설정 합니다.
+비활성화된 도구 모음 이미지에 대해 엠보싱 모드를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bEmboss*<br/>
-진행 비활성화 된 도구 모음 이미지에 대해 볼록 모드를 사용할지 여부를 나타내는 부울 매개 변수입니다.
+*bEm보스*<br/>
+【인】 비활성화된 도구 모음 이미지에 대해 엠보싱 모드를 사용하도록 설정할지 여부를 나타내는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-[Cmfcvisualmanager:: IsEmbossDisabledImage](#isembossdisabledimage) 함수를 사용 하 여 볼록 모드가 사용 되는지 여부를 확인 합니다.
+[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage) 함수를 사용하여 엠보싱 모드가 활성화되어 있는지 확인합니다.
 
-##  <a name="setfadeinactiveimage"></a>  CMFCVisualManager::SetFadeInactiveImage
+## <a name="cmfcvisualmanagersetfadeinactiveimage"></a><a name="setfadeinactiveimage"></a>CMFC 비주얼 매니저::세트페이드인액티브이미지
 
-메뉴 또는 도구 모음에서 비활성 이미지에 대 한 조명 효과를 사용 하거나 사용 하지 않도록 설정 합니다.
+메뉴 또는 도구 모음에서 비활성 이미지에 대한 조명 효과를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bFade*<br/>
-진행 조명 효과를 사용 하도록 설정할지 여부를 지정 하는 부울 매개 변수입니다.
+*b페이드*<br/>
+【인】 조명 효과를 활성화할지 여부를 지정하는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 기능은 비활성 이미지가 메뉴 또는 도구 모음에서 페이드 인 된 것으로 표시 되는지 여부를 제어 합니다. [Cmfcvisualmanager:: IsFadeInactiveImage](#isfadeinactiveimage) 메서드를 사용 하 여이 기능을 사용할 수 있는지 여부를 확인 합니다.
+이 기능은 비활성 이미지가 메뉴 또는 도구 모음에서 흐리게 표시되는지 여부를 제어합니다. [CMFCVisualManager::IsFadeInactive](#isfadeinactiveimage) 메서드를 사용하여 이 기능이 활성화되어 있는지 확인합니다.
 
-##  <a name="setmenuflatlook"></a>  CMFCVisualManager::SetMenuFlatLook
+## <a name="cmfcvisualmanagersetmenuflatlook"></a><a name="setmenuflatlook"></a>CMFC 비주얼 매니저::세트메뉴플랫룩
 
-메뉴 단추를 평면으로 표시할지 여부를 나타내는 플래그를 설정 합니다. 그렇지 않으면 3 차원으로 표시 됩니다.
+메뉴 단추가 평평하게 표시되는지 여부를 나타내는 플래그를 설정합니다. 그렇지 않으면 3차원으로 나타납니다.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bMenuFlatLook*<br/>
-진행 메뉴 단추를 평면으로 표시할지 여부를 나타내는 부울 매개 변수입니다.
+*bMenu플랫룩*<br/>
+【인】 메뉴 단추가 평평하게 표시되는지 여부를 나타내는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로이 기능은 사용 되지 않습니다.
+기본적으로 이 기능은 활성화되어 있지 않습니다.
 
-##  <a name="setmenushadowdepth"></a>  CMFCVisualManager::SetMenuShadowDepth
+## <a name="cmfcvisualmanagersetmenushadowdepth"></a><a name="setmenushadowdepth"></a>CMFC 비주얼 매니저::세트메뉴섀도우 딥
 
-메뉴 그림자의 너비와 높이를 설정 합니다.
+메뉴 그림자의 너비와 높이를 설정합니다.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*nDepth*<br/>
-진행 메뉴 그림자의 깊이를 픽셀 단위로 지정 하는 정수입니다.
+*n 깊이*<br/>
+【인】 메뉴 그림자의 깊이를 픽셀단위로 지정하는 정수입니다.
 
 ### <a name="remarks"></a>설명
 
-메뉴 그림자의 높이와 너비는 동일 해야 합니다. 기본값은 7 픽셀입니다.
+메뉴 그림자의 높이와 너비는 동일해야 합니다. 기본값은 7픽셀입니다.
 
-##  <a name="setshadowhighlightedimage"></a>  CMFCVisualManager::SetShadowHighlightedImage
+## <a name="cmfcvisualmanagersetshadowhighlightedimage"></a><a name="setshadowhighlightedimage"></a>CMFC 비주얼 매니저::설정그림자 강조 표시이미지
 
-[Cmfcvisualmanager](../../mfc/reference/cmfcvisualmanager-class.md) 에서 강조 표시 된 이미지에 대 한 그림자를 표시할지 여부를 나타내는 플래그를 설정 합니다.
+[CMFCVisualManager가](../../mfc/reference/cmfcvisualmanager-class.md) 강조 표시된 이미지에 대한 그림자를 표시하는지 여부를 나타내는 플래그를 설정합니다.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bShadow*<br/>
-진행 시각적 관리자가 강조 표시 된 이미지 아래에 그림자를 표시 하는지 여부를 나타내는 부울 매개 변수입니다.
+*b그림자*<br/>
+【인】 시각적 관리자가 강조 표시된 이미지 아래에 그림자를 표시할지 여부를 나타내는 부울 매개변수입니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로이 기능은 사용할 수 없습니다.
+기본적으로 이 기능은 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager::GetInstance](#getinstance)<br/>
+[CMFC 비주얼 관리자::GetInstance](#getinstance)<br/>
 [시각화 관리자](../../mfc/visualization-manager.md)

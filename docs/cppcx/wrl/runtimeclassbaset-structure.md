@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403167"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375729"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 구조체
 
@@ -31,21 +31,21 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>매개 변수
 
-*RuntimeClassTypeT*<br/>
-플래그 중 하나 이상 지정 하는 필드 [RuntimeClassType](runtimeclasstype-enumeration.md) 열거자입니다.
+*런타임클래스TypeT*<br/>
+하나 이상의 [RuntimeClassType](runtimeclasstype-enumeration.md) 열거형을 지정하는 플래그 필드입니다.
 
 ## <a name="remarks"></a>설명
 
-도우미 메서드를 제공 `QueryInterface` 작업과 인터페이스 Id를 시작 합니다.
+`QueryInterface` 작업 및 인터페이스 아이디 를 가져오는 도우미 메서드를 제공합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-이름                                                         | 설명
+속성                                                         | Description
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | 지정 된 인터페이스 ID에 대 한 포인터를 검색합니다.
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | 지정된 된 형식에서 구현 되는 Id 인터페이스의 배열을 검색 합니다.
+[런타임클래스베이스:::아시ID](#asiid)                           | 지정된 인터페이스 ID에 대한 포인터를 검색합니다.
+[런타임클래스베이스T::Get구현IIDS](#getimplementediids) | 지정된 형식에 의해 구현되는 인터페이스 아이디의 배열을 검색합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -55,9 +55,9 @@ friend struct Details::RuntimeClassBaseT;
 
 **헤더:** implements.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>런타임클래스베이스:::아시ID
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -73,26 +73,26 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-매개 변수로 지정 된 인터페이스 ID를 구현 하는 형식을 *riid*합니다.
+매개 변수 *riid에*의해 지정된 인터페이스 ID를 구현하는 형식입니다.
 
-*implements*<br/>
-템플릿 매개 변수로 지정 된 형식의 변수로 *T*합니다.
+*구현*<br/>
+템플릿 매개 변수 *T에*의해 지정된 형식의 변수입니다.
 
 *riid*<br/>
 검색할 인터페이스 ID입니다.
 
 *ppvObject*<br/>
-이 작업에 성공한 경우 포인터-에-a-인터페이스에서 지정한 매개 변수 *riid*합니다.
+이 작업이 성공하면 매개 변수 *riid로*지정된 인터페이스에 대한 포인터 대 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.
+성공하면 S_OK; 그렇지 않으면 오류를 설명하는 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 인터페이스 ID에 대 한 포인터를 검색합니다.
+지정된 인터페이스 ID에 대한 포인터를 검색합니다.
 
-## <a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>런타임클래스베이스T::Get구현IIDS
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-형식의 합니다 *구현* 매개 변수입니다.
+구현 매개 변수의 *형식입니다.*
 
-*implements*<br/>
-매개 변수에 의해 지정 된 형식에 대 한 포인터 *T*합니다.
+*구현*<br/>
+매개 변수 *T*.
 
-*iidCount*<br/>
-검색할 인터페이스 Id의 최대 수입니다.
+*이드 카운트*<br/>
+검색할 최대 인터페이스 아이디 수입니다.
 
-*iids*<br/>
-이 작업 완료, 인터페이스 형식에 의해 구현 되는 Id의 배열을 *T*합니다.
+*아이드 (이드)*<br/>
+이 작업이 성공적으로 완료되면 *T*유형으로 구현된 인터페이스 ID의 배열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.
+성공하면 S_OK; 그렇지 않으면 오류를 설명하는 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-지정된 된 형식에서 구현 되는 Id 인터페이스의 배열을 검색 합니다.
+지정된 형식에 의해 구현되는 인터페이스 아이디의 배열을 검색합니다.

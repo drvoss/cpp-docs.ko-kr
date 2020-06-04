@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 776f715f72d2e3b6b3841856323a52953e9c5344
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376335"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 네임스페이스 함수
 
@@ -18,9 +18,9 @@ ms.locfileid: "77126983"
 |-|-|
 |[copy](#copy)|[copy_async](#copy_async)|
 
-## <a name="copy"></a>copy 함수 (Concurrency:: graphics 네임 스페이스)
+## <a name="copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>복사 함수(동시성::그래픽 네임스페이스)
 
-소스 텍스처를 대상 버퍼에 복사 하거나 소스 버퍼를 대상 버퍼에 복사 합니다. 이 함수의 일반적인 형태는 `copy(src, dest)`입니다.
+소스 텍스처를 대상 버퍼에 복사하거나 소스 버퍼를 대상 버퍼에 복사합니다. 이 함수의 일반적인 `copy(src, dest)`형태는 .
 
 ```cpp
 template <
@@ -119,7 +119,7 @@ void copy (
 ### <a name="parameters"></a>매개 변수
 
 *_Copy_extent*<br/>
-복사할 질감 섹션의 범위입니다.
+복사할 텍스처 섹션의 범위입니다.
 
 *_Dst*<br/>
 복사할 개체입니다.
@@ -131,35 +131,35 @@ void copy (
 대상 개체의 형식입니다.
 
 *_Dst_offset*<br/>
-복사를 시작할 대상에 대 한 오프셋입니다.
+복사를 시작할 대상에 대한 오프셋입니다.
 
 *InputIterator*<br/>
 입력 반복기의 형식입니다.
 
-*OutputIterator*<br/>
-출력 반복기의 형식입니다.
+*출력이터*<br/>
+출력 거터레이터의 유형입니다.
 
 *_Src*<br/>
-복사할 개체입니다.
+복사할 것을 반대합니다.
 
 *_Src_byte_size*<br/>
 소스의 바이트 수입니다.
 
 *_Src_type*<br/>
-원본 개체의 형식입니다.
+소스 개체의 형식입니다.
 
 *_Src_offset*<br/>
-원본에서 복사를 시작할 오프셋입니다.
+복사를 시작할 소스로 오프셋합니다.
 
-*first*<br/>
-소스 컨테이너에 대 한 시작 반복기입니다.
+*첫 번째*<br/>
+소스 컨테이너에 대한 시작 이터레이터입니다.
 
-*last*<br/>
-소스 컨테이너에 대 한 종료 반복기입니다.
+*마지막*<br/>
+소스 컨테이너에 대한 끝 이터레이터입니다.
 
-## <a name="copy_async"></a>copy_async 함수 (Concurrency:: graphics 네임 스페이스)
+## <a name="copy_async-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async 함수(동시성::그래픽 네임스페이스)
 
-소스 텍스처를 대상 버퍼에 비동기적으로 복사 하거나 소스 버퍼를 대상 버퍼에 복사한 다음 대기 시킬 수 있는 [completion_future](completion-future-class.md) 개체를 반환 합니다. 코드가 액셀러레이터 키에서 실행 중일 때는 데이터를 복사할 수 없습니다. 이 함수의 일반적인 형태는 `copy(src, dest)`입니다.
+비동기적으로 소스 텍스처를 대상 버퍼에 복사하거나 소스 버퍼를 대상 버퍼에 복사한 다음 기다릴 수 있는 [completion_future](completion-future-class.md) 개체를 반환합니다. 가속기에서 코드가 실행중일 때는 데이터를 복사할 수 없습니다. 이 함수의 일반적인 `copy(src, dest)`형태는 .
 
 ```cpp
 template<
@@ -254,7 +254,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ### <a name="parameters"></a>매개 변수
 
 *_Copy_extent*<br/>
-복사할 질감 섹션의 범위입니다.
+복사할 텍스처 섹션의 범위입니다.
 
 *_Dst*<br/>
 복사할 개체입니다.
@@ -266,37 +266,37 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 대상 개체의 형식입니다.
 
 *_Dst_offset*<br/>
-복사를 시작할 대상에 대 한 오프셋입니다.
+복사를 시작할 대상에 대한 오프셋입니다.
 
 *InputIterator*<br/>
 입력 반복기의 형식입니다.
 
-*OutputIterator*<br/>
-출력 반복기의 형식입니다.
+*출력이터*<br/>
+출력 거터레이터의 유형입니다.
 
 *_Src*<br/>
-복사할 개체입니다.
+복사할 것을 반대합니다.
 
 *_Src_byte_size*<br/>
 소스의 바이트 수입니다.
 
 *_Src_type*<br/>
-원본 개체의 형식입니다.
+소스 개체의 형식입니다.
 
 *_Src_offset*<br/>
-원본에서 복사를 시작할 오프셋입니다.
+복사를 시작할 소스로 오프셋합니다.
 
-*first*<br/>
-소스 컨테이너에 대 한 시작 반복기입니다.
+*첫 번째*<br/>
+소스 컨테이너에 대한 시작 이터레이터입니다.
 
-*last*<br/>
-소스 컨테이너에 대 한 종료 반복기입니다.
+*마지막*<br/>
+소스 컨테이너에 대한 끝 이터레이터입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** amp_graphics. h
+**헤더:** amp_graphics.h
 
-**네임 스페이스:** Concurrency:: graphics
+**네임스페이스:** 동시성::그래픽
 
 ## <a name="see-also"></a>참고 항목
 

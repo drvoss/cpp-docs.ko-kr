@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-ms.openlocfilehash: bb1d9af10084d6b3e75325450c7f13ea1683ee2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64671c9abe8ed1375df1e91ca7509e6a597366ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203645"
 ---
 # <a name="fatal-error-c1128"></a>심각한 오류 C1128
 
-섹션 수가 개체 파일 형식 한도 초과 했습니다: /bigobj를 사용 하 여 컴파일
+섹션 수가 개체 파일 형식 한계를 초과 했습니다./bigobj로 컴파일합니다.
 
-COFF 개체 파일 형식 제한 허용 되는 섹션의 수를 초과 하는.obj 파일.
+.Obj 파일의 허용 되는 섹션 수 (COFF 개체 파일 형식 제한)를 초과 했습니다.
 
-이 섹션에서는 제한을 사용 하 여 발생할 수 있습니다 [/Gy](../../build/reference/gy-enable-function-level-linking.md) 및 디버그 빌드에 있습니다. **/Gy** 하면 함수는 자신의 COMDAT 섹션으로 이동 합니다. 디버그 빌드에서 각 COMDAT 함수에 대 한 디버그 정보 섹션.
+이 섹션 제한에 도달 하면 [/gy](../../build/reference/gy-enable-function-level-linking.md) 와 디버그 빌드를 사용한 결과일 수 있습니다. **/Gy** 는 함수를 자체 COMDAT 섹션으로 이동 시킵니다. 디버그 빌드에서는 각 COMDAT 함수에 대 한 디버그 정보 섹션이 있습니다.
 
-C1128은 인라인 함수가 너무 많을 경우에 발생할 수 있습니다.
+인라인 함수가 너무 많은 경우에도 C1128 발생할 수 있습니다.
 
-이 오류를 해결 하려면 소스 파일이 여러 소스 코드 파일 나눌, 하지 않고 컴파일할 **/Gy**를 사용 하 여 컴파일 또는 [/bigobj (섹션 수 늘리기에 있습니다. Obj 파일)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)합니다.  사용 하 여 컴파일하지 않는 경우 **/Gy**, 최적화를 개별적으로 지정 해야 하므로 **/o2** 및 **/o1** 모두 의미 **/Gy**합니다.
+이 오류를 해결 하려면 소스 파일을 여러 소스 코드 파일로 나누고, **/gy**를 사용 하지 않고 컴파일하거나,/bigobj로 컴파일합니다 [(에서 섹션의 수 늘리기). Obj 파일)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  **/Gy**로 컴파일하지 않는 경우 **/O2** 와 **/o2** 모두 **/gy**를 암시 하므로 최적화를 개별적으로 지정 해야 합니다.
 
-가능한 경우 디버깅 정보 없이 컴파일하십시오.
+가능 하면 디버깅 정보 없이 컴파일합니다.
 
-내보낼 컴파일러 보다는 템플릿의 특정 인스턴스화를 별도 소스 코드 파일에도 해야 합니다.
+컴파일러가이를 내보내는 대신 별도의 소스 코드 파일에 템플릿의 특정 인스턴스화가 필요할 수도 있습니다.
 
-코드를 이식할 때 C1128 가능성이 나타납니다 먼저 x64를 사용 하는 경우 컴파일러, 그리고 나중에 x86 컴파일러. x64 최소 4 개의 섹션에서는 컴파일된 각 함수를 사용 하 여 연결 해야 합니다. **/Gy** 인라인으로 템플릿 또는 클래스 인라인으로부터 인라인 된: 코드, pdata 및 디버그 정보와 xdata 합니다.  X86 pdata가 없습니다.
+코드를 이식할 때 x64 컴파일러를 사용 하는 경우와 x86 컴파일러를 사용 하는 경우에는 C1128가 먼저 나타날 가능성이 높습니다. x 64에는 각 함수에 연결 된 각각의 함수에 4 개 이상의 섹션이 있습니다. 즉, 코드, .pdata 및 디버그 정보, .xdata 등의 템플릿 또는 클래스에서 인라인 된 **/gy** 를 컴파일합니다.  X 86은 .pdata를 갖지 않습니다.

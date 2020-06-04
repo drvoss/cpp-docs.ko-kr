@@ -1,25 +1,25 @@
 ---
-title: '방법: 이벤트에서 사용 하 여 C++/CLI'
+title: '방법: C++/CLI에서 이벤트 사용'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387177"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545176"
 ---
-# <a name="how-to-use-events-in-ccli"></a>방법: 이벤트에서 사용 하 여 C++/CLI
+# <a name="how-to-use-events-in-ccli"></a>방법: C++/CLI에서 이벤트 사용
 
-이 아티클에서 이벤트 및 해당 이벤트를 호출 하는 함수를 선언 하는 인터페이스 및 인터페이스를 구현 하는 클래스 및 이벤트 처리기를 사용 하는 방법에 설명 합니다.
+이 문서에서는 이벤트를 선언 하는 인터페이스를 사용 하는 방법과 해당 이벤트를 호출 하는 함수와 인터페이스를 구현 하는 클래스 및 이벤트 처리기를 사용 하는 방법을 보여 줍니다.
 
-## <a name="interface-events"></a>이벤트 인터페이스
+## <a name="interface-events"></a>인터페이스 이벤트
 
-다음 코드 예제에서는 이벤트 처리기를 추가, 이벤트를 호출, 이벤트 처리기 이름을 콘솔에 쓰려고 하면-이벤트 처리기를 제거 합니다.
+다음 코드 예제에서는 이벤트 처리기를 추가 하 고 이벤트를 호출 하 여 이벤트 처리기가 해당 이름을 콘솔에 쓴 다음 이벤트 처리기를 제거 합니다.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -73,9 +73,9 @@ EventReceiver::Handler
 
 ## <a name="custom-accessor-methods"></a>사용자 지정 접근자 메서드
 
-다음 샘플에는 처리기 추가 되거나 제거 되 면 및 이벤트가 발생할 때 이벤트의 동작을 정의 하는 방법을 보여 줍니다.
+다음 샘플에서는 처리기를 추가 하거나 제거할 때 및 이벤트가 발생할 때 이벤트의 동작을 정의 하는 방법을 보여 줍니다.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>에 대 한 기본 액세스 재정의 추가, 제거 및 접근자를 발생 시킵니다.
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Add, remove 및 raise 접근자에 대 한 기본 액세스 재정의
 
-이 샘플에는 add, remove 및 raise 이벤트 메서드의 대 한 기본 액세스 재정의 하는 방법을 보여 줍니다.
+이 샘플에서는 add, remove 및 raise 이벤트 메서드에 대 한 기본 액세스를 재정의 하는 방법을 보여 줍니다.
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>여러 이벤트 처리기
 
-이벤트 수신기, 또는 다른 클라이언트 코드에서 이벤트에 하나 이상의 처리기를 추가할 수 있습니다.
+이벤트 수신기 또는 다른 클라이언트 코드는 하나 이상의 처리기를 이벤트에 추가할 수 있습니다.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>정적 이벤트
 
-다음 샘플에는 정적 이벤트 정의 및 사용 방법을 보여 줍니다.
+다음 샘플에서는 정적 이벤트를 정의 하 고 사용 하는 방법을 보여 줍니다.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>가상 이벤트
 
-이 샘플 인터페이스 및 클래스에서 관리 되는 가상 이벤트를 구현합니다.
+이 샘플은 인터페이스 및 클래스에서 관리 되는 가상 이벤트를 구현 합니다.
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-단순 이벤트를 재정의 하거나 기본 클래스 이벤트를 숨기려면 지정할 수 없습니다.  모든 이벤트의 접근자 함수를 정의 하 고 다음을 지정 해야 합니다 `new` 또는 `override` 각 접근자 함수에는 키워드입니다.
+기본 클래스 이벤트를 재정의 하거나 숨기도록 단순 이벤트를 지정할 수 없습니다.  모든 이벤트의 접근자 함수를 정의한 다음 각 접근자 함수에 `new` 또는 `override` 키워드를 지정 해야 합니다.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -510,9 +510,9 @@ ref struct C : B {
 
 ## <a name="abstract-events"></a>추상 이벤트
 
-다음 샘플에는 추상 이벤트를 구현 하는 방법을 보여 줍니다.
+다음 샘플에서는 추상 이벤트를 구현 하는 방법을 보여 줍니다.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -593,11 +593,11 @@ hi
 hello from Event2
 ```
 
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>다른 어셈블리에 정의 된 이벤트를 발생 시키기
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>다른 어셈블리에 정의 된 이벤트 발생
 
-이벤트 및 이벤트 처리기를 하나의 어셈블리에 정의 하 고 다른 어셈블리에서 사용 될 수 있습니다.
+한 어셈블리에서 이벤트 및 이벤트 처리기를 정의 하 고 다른 어셈블리에서 사용할 수 있습니다.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -615,7 +615,7 @@ public:
 
 이 클라이언트 코드는 이벤트를 사용 합니다.
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -647,6 +647,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [event](../extensions/event-cpp-component-extensions.md)

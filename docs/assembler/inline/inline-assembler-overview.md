@@ -7,12 +7,12 @@ helpviewer_keywords:
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6233e07e115c21a0a173f094079dc9c1753533b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169399"
 ---
 # <a name="inline-assembler-overview"></a>인라인 어셈블러 개요
 
@@ -22,7 +22,7 @@ ms.locfileid: "62167013"
 
 인라인 어셈블러에는 별도의 어셈블리 및 링크 단계가 필요 없으므로 별도의 어셈블리보다 편리합니다. 인라인 어셈블리 코드는 범위에 있는 임의의 C/C++ 변수 또는 함수 이름을 사용할 수 있으므로 프로그램의 C 및 C++ 코드와 쉽게 통합될 수 있습니다. 어셈블리 코드는 C 및 C++ 문과 혼합될 수 있으므로 C 또는 C++만 사용하는 경우 다루기 어렵거나 불가능한 작업을 수행할 수 있습니다.
 
-합니다 [__asm](../../assembler/inline/asm.md) 키워드는 인라인 어셈블러를 호출 하 고 C 어디서 나 나타날 수 있습니다 또는 C++ 문이 유효 합니다. 이 키워드는 자체적으로 표시할 수 없습니다. 이 키워드 다음에는 어셈블리 명령, 중괄호로 묶은 명령 그룹 또는 최소한 빈 괄호의 쌍이 와야 합니다. 여기서 "`__asm` 블록"이라는 용어는 중괄호에 상관없이 명령 또는 명령 그룹을 참조합니다.
+[__Asm](../../assembler/inline/asm.md) 키워드는 인라인 어셈블러를 호출 하 고 C 또는 C++ 문이 유효한 모든 위치에 나타날 수 있습니다. 이 키워드는 자체적으로 표시할 수 없습니다. 이 키워드 다음에는 어셈블리 명령, 중괄호로 묶은 명령 그룹 또는 최소한 빈 괄호의 쌍이 와야 합니다. 여기서 "`__asm` 블록"이라는 용어는 중괄호에 상관없이 명령 또는 명령 그룹을 참조합니다.
 
 다음 코드는 중괄호로 묶여 있는 간단한 `__asm` 블록입니다. 이 코드는 사용자 지정 함수 프롤로그 시퀀스입니다.
 
@@ -62,6 +62,6 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

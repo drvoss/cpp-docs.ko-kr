@@ -1,6 +1,6 @@
 ---
 title: 부동 소수점 기본 형식
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - _dclass
 - _ldclass
@@ -37,6 +37,37 @@ api_name:
 - _dsin
 - _ldsin
 - _fdsin
+- _o__d_int
+- _o__dclass
+- _o__dlog
+- _o__dnorm
+- _o__dpcomp
+- _o__dpoly
+- _o__dscale
+- _o__dsign
+- _o__dsin
+- _o__dtest
+- _o__dunscale
+- _o__fd_int
+- _o__fdclass
+- _o__fdexp
+- _o__fdlog
+- _o__fdpcomp
+- _o__fdpoly
+- _o__fdscale
+- _o__fdsign
+- _o__fdsin
+- _o__ld_int
+- _o__ldclass
+- _o__ldexp
+- _o__ldlog
+- _o__ldpcomp
+- _o__ldpoly
+- _o__ldscale
+- _o__ldsign
+- _o__ldsin
+- _o__ldtest
+- _o__ldunscale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -49,6 +80,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -125,16 +157,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957166"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916690"
 ---
 # <a name="floating-point-primitives"></a>부동 소수점 기본 형식
 
 일부 표준 CRT (C 런타임 라이브러리) 부동 소수점 함수를 구현 하는 데 사용 되는 Microsoft 전용 기본 함수입니다. 여기서는 완전성을 위해 설명 했지만 사용 하지 않는 것이 좋습니다. 이러한 함수 중 일부는 전체 자릿수, 예외 처리 및 IEEE-754 동작에 대 한 준수 문제로 알려져 있으므로 사용 되지 않는 것으로 표시 됩니다. 이전 버전과의 호환성을 위해서만 라이브러리에 존재 합니다. 올바른 동작, 이식성 및 표준 준수를 위해 이러한 함수에 대해 표준 부동 소수점 함수를 사용 하는 것이 좋습니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
@@ -163,7 +197,7 @@ short __cdecl _fdclass(float x);
 | **FP_SUBNORMAL** | 긍정 또는 부정 된 subnormal (비 정규화 된) 값 |
 | **FP_ZERO** | 양수 또는 음수 0 값 |
 
-추가 세부 정보는 Microsoft 전용 [_fpclass, _fpclassf](fpclass-fpclassf.md) 함수를 사용할 수 있습니다. 이식성을 위해 [fpclassify](fpclassify.md) 매크로 또는 함수를 사용 합니다.
+자세한 내용은 Microsoft 전용 [_fpclass _fpclassf](fpclass-fpclassf.md) 함수를 사용할 수 있습니다. 이식성을 위해 [fpclassify](fpclassify.md) 매크로 또는 함수를 사용 합니다.
 
 ## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
@@ -203,7 +237,7 @@ int __cdecl _fdpcomp(float x, float y);
 
 이러한 부동 소수점 기본 형식은 *x* 및 *y*라는 두 개의 인수를 사용 하 고 math에 정의 된 이러한 상수의 비트 or로 표현 되는 순서 관계를 표시 하는 값을 반환 합니다.
 
-| 값 | Description |
+| 값 | 설명 |
 |------------|-----------------|
 | **_FP_LT** | *x* 는 *y* 보다 작은 것으로 간주할 수 있습니다. |
 | **_FP_EQ** | *x* 는 *y* 와 동일한 것으로 간주할 수 있습니다. |
@@ -228,7 +262,7 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="remarks"></a>설명
 
-이러한 부동 소수점 기본 형식은 부동 소수점 C++ 형식에 대 한 CRT 함수 [fpclassify](fpclassify.md) 의 버전을 구현 합니다. *X* 인수는 평가 되 고, 해당 분류는 math. h에 정의 된 다음 상수 중 하나로 반환 됩니다.
+이러한 부동 소수점 기본 형식은 부동 소수점 형식에 대 한 CRT 함수 [fpclassify](fpclassify.md) 의 c + + 버전을 구현 합니다. *X* 인수는 평가 되 고, 해당 분류는 math. h에 정의 된 다음 상수 중 하나로 반환 됩니다.
 
 |값|설명|
 |-----------|-----------------|
@@ -238,7 +272,7 @@ short __cdecl _fdtest(float* px);
 | **FP_SUBNORMAL** | 긍정 또는 부정 된 subnormal (비 정규화 된) 값 |
 | **FP_ZERO** | 양수 또는 음수 0 값 |
 
-추가 세부 정보는 Microsoft 전용 [_fpclass, _fpclassf](fpclass-fpclassf.md) 함수를 사용할 수 있습니다. 이식성에는 [fpclassify](fpclassify.md) 함수를 사용 합니다.
+자세한 내용은 Microsoft 전용 [_fpclass _fpclassf](fpclass-fpclassf.md) 함수를 사용할 수 있습니다. 이식성에는 [fpclassify](fpclassify.md) 함수를 사용 합니다.
 
 ## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
@@ -255,7 +289,7 @@ short __cdecl _fd_int(float* px, short exp);
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*exp*<br/>
+*.exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -277,7 +311,7 @@ short __cdecl _fdscale(float* px, long exp);
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*exp*<br/>
+*.exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -318,13 +352,13 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="parameters"></a>매개 변수
 
-*y*<br/>
+*x.y*<br/>
 부동 소수점 함수 인수입니다.
 
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*exp*<br/>
+*.exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -347,7 +381,7 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="remarks"></a>설명
 
-이러한 부동 소수점 기본 형식은 언더플로 되었습니다 부동 소수점 값의 소수 부분을 정규화 하 고 *특성*또는 편향 지수가 일치 하도록 조정 합니다. 값은 punning에 선언 된 `_double_val`, `_ldouble_val`또는 `_float_val` 형식을 통해 **부호 없는** **short** 배열로 변환 된 부동 소수점 형식의 비트 표현으로 전달 됩니다. 반환 값은 NaN 또는 infinity 인 경우 입력 부동 소수점 값에 대 한 **fpclassify** 의 결과이 고, 그렇지 않으면 출력 값입니다.
+이러한 부동 소수점 기본 형식은 언더플로 되었습니다 부동 소수점 값의 소수 부분을 정규화 하 고 *특성*또는 편향 지수가 일치 하도록 조정 합니다. 값은 `_double_val`punning에 선언 된 `_ldouble_val`, `_float_val` 또는 형식을 통해 **부호 없는** **short** 배열로 변환 된 부동 소수점 형식의 비트 표현으로 전달 됩니다. 반환 값은 NaN 또는 infinity 인 경우 입력 부동 소수점 값에 대 한 **fpclassify** 의 결과이 고, 그렇지 않으면 출력 값입니다.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -394,7 +428,7 @@ float __cdecl _fdlog(float x, int base_flag);
 
 ### <a name="remarks"></a>설명
 
-이러한 부동 소수점 기본 형식은 *base_flag* 가 0 일 때 *x*, ln (*x*) 또는 log<sub>*e*</sub>(*x*)의 자연 로그를 반환 합니다. *Base_flag* 가 0이 아닌 경우 로그 밑이 10 인 *x*또는 log<sub>10</sub>(*x*)을 반환 합니다. 이러한 함수는 내부적으로 사용 되지 않습니다. 이식성을 위해 [log, logf, logf, log10, log10f 및 log10l](log-logf-log10-log10f.md)함수를 사용 하는 것이 좋습니다.
+이러한 부동 소수점 기본 형식은 *base_flag* 가 0 일 때 *x*, ln (*x*) 또는 log<sub>*e*</sub>(*x*)의 자연 로그를 반환 합니다. 이 값은 0이 아닌 *base_flag* 경우 로그 밑이 10 인 *x*또는 log<sub>10</sub>(*x*)을 반환 합니다. 이러한 함수는 내부적으로 사용 되지 않습니다. 이식성을 위해 [log, logf, logf, log10, log10f 및 log10l](log-logf-log10-log10f.md)함수를 사용 하는 것이 좋습니다.
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
@@ -411,8 +445,8 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 *x*<br/>
 부동 소수점 함수 인수입니다.
 
-*quadrant*<br/>
-`sin`, ,`cos`및 결과를생성하는데사용할사분면오프셋(0,1,2또는3)입니다.`-cos` `-sin`
+*제*<br/>
+, `sin` `cos`, 및 `-cos` 결과를 생성 하는 데 사용할 사분면 오프셋 (0, 1, 2 또는 3)입니다. `-sin`
 
 ### <a name="remarks"></a>설명
 
@@ -420,11 +454,11 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ## <a name="requirements"></a>요구 사항
 
-헤더: \<math. h >
+헤더: \<math. h>
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
@@ -435,6 +469,6 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [frexp, frexpf, frexpl](frexp.md)<br/>
-[ldexp, ldexpf, and ldexpl](ldexp.md)<br/>
+[ldexp, ldexp 및 ldexp](ldexp.md)<br/>
 [log, logf, logl, log10, log10f, log10l](log-logf-log10-log10f.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>

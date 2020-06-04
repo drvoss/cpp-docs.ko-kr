@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857751"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911378"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,21 +112,23 @@ long long int llrintl(
 *x*<br/>
 반올림할 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 하면 *x*의 반올림 된 정수 값을 반환 합니다.
 
-|문제|반환|
+|문제|반환 값|
 |-----------|------------|
-|*x* 가 반환 형식 범위를 벗어났습니다.<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID** 발생 하 고 0을 반환 합니다.|
+|*x* 가 반환 형식 범위를 벗어났습니다.<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|**FE_INVALID** 발생 하 고 0을 반환 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하는 **lrint** 및 **llrint** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **lrint** 및 **llrint** 는 항상 **double**을 사용 합니다.
+C + +에서는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하는 **lrint** 및 **llrint** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **lrint** 및 **llrint** 는 항상 **double**을 사용 합니다.
 
 *X* 가 정수 계열 값에 해당 하는 부동 소수점 값을 나타내지 않는 경우 이러한 함수는 **FE_INEXACT**을 발생 시킵니다.
 
 **Microsoft**전용: 결과가 반환 형식 범위를 벗어났거나 매개 변수가 NaN 또는 무한대 인 경우 반환 값은 정의 된 구현입니다. Microsoft 컴파일러는 0 값을 반환합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142713"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424190"
 ---
 # <a name="source_block-class"></a>source_block 클래스
 
@@ -59,24 +59,24 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 *_MessageProcessorType*<br/>
 메시지 처리를 위한 프로세서 유형입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |`target_iterator`|연결 된 대상을 탐색 하는 반복기입니다.|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[source_block](#ctor)|`source_block` 개체를 생성합니다.|
 |[~ source_block 소멸자](#dtor)|`source_block` 개체를 소멸 시킵니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[수락할](#accept)|이 `source_block` 개체가 제공 하는 메시지를 수락 하 여 호출자에 게 소유권을 전송 합니다.|
 |[acquire_ref](#acquire_ref)|삭제를 방지 하기 위해이 `source_block` 개체에 대 한 참조 횟수를 가져옵니다.|
@@ -88,9 +88,9 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |[unlink_target](#unlink_target)|이 `source_block` 개체에서 대상 블록을 해제 합니다.|
 |[unlink_targets](#unlink_targets)|이 `source_block` 개체에서 모든 대상 블록을 해제 합니다. ( [ISource:: unlink_targets](isource-class.md#unlink_targets)을 재정의 합니다.)|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[accept_message](#accept_message)|파생 클래스에서 재정의 되는 경우 소스에서 제공 된 메시지를 수락 합니다. 메시지 블록은 `_MsgId`의 유효성을 검사 하 고 메시지를 반환 하려면이 메서드를 재정의 해야 합니다.|
 |[async_send](#async_send)|비동기 방식으로 메시지를 큐에 대기 시키고 아직 수행 되지 않은 경우 전파 작업을 시작 합니다.|

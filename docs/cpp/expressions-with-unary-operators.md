@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26aad64e5b9c7a496c2e6bb131b82740c06abe07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188976"
 ---
 # <a name="expressions-with-unary-operators"></a>단항 연산자가 있는 식
 
@@ -19,7 +19,7 @@ ms.locfileid: "62183873"
 
 - [간접 참조 연산자 (*)](../cpp/indirection-operator-star.md)
 
-- [Address-of 연산자 (&)](../cpp/address-of-operator-amp.md)
+- [주소 연산자 (&)](../cpp/address-of-operator-amp.md)
 
 - [단항 더하기 연산자 (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
@@ -31,17 +31,17 @@ ms.locfileid: "62183873"
 
 - [전위 증가 연산자 (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [전위 감소 연산자 (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [전위 감소 연산자 (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [캐스트 연산자)](../cpp/cast-operator-parens.md)
+- [캐스트 연산자 ()](../cpp/cast-operator-parens.md)
 
-- [sizeof operator](../cpp/sizeof-operator.md)
+- [sizeof 연산자](../cpp/sizeof-operator.md)
 
-- [__uuidof operator](../cpp/uuidof-operator.md)
+- [__uuidof 연산자](../cpp/uuidof-operator.md)
 
 - [__alignof 연산자](../cpp/alignof-operator.md)
 
-- [new 연산자](../cpp/new-operator-cpp.md)
+- [새 운영자](../cpp/new-operator-cpp.md)
 
 - [delete 연산자](../cpp/delete-operator-cpp.md)
 
@@ -51,32 +51,32 @@ ms.locfileid: "62183873"
 
 - *postfix-expression*
 
-- `++` *unary-expression*
+- `++` *단항 식*
 
-- `--` *unary-expression*
+- `--` *단항 식*
 
-- *unary-operator* *cast-expression*
+- *단항 연산자* *캐스트 식*
 
-- **sizeof** *unary-expression*
+- **sizeof** *단항 식*
 
-- `sizeof(` *type-name* `)`
+- `sizeof(` *형식 이름* `)`
 
-- `decltype(` *expression* `)`
+- `decltype(` *식* `)`
 
-- *allocation-expression*
+- *할당 식*
 
-- *deallocation-expression*
+- *할당 취소 식*
 
-모든 *후 위 식* 것으로 간주 됩니다는 *단항 식은*, 이므로 기본 식으로 간주 됩니다는 *후 위 식*, 모든 기본 식은 간주는 *단항 식* 수도 있습니다. 자세한 내용은 [후 위 식](../cpp/postfix-expressions.md) 하 고 [기본 식](../cpp/primary-expressions.md)합니다.
+*후 위 식은* *단항 식*으로 간주 되며, 기본 식은 *후 위 식*으로 간주 되기 때문에 모든 기본 식은 *단항 식* 으로 간주 됩니다. 자세한 내용은 [후 위 식](../cpp/postfix-expressions.md) 및 [기본 식](../cpp/primary-expressions.md)을 참조 하세요.
 
-A *단항 연산자* 기호 중 하나 이상을 구성 합니다. `* & + - ! ~`
+*단항 연산자* 는 다음 기호 중 하나 이상으로 구성 됩니다. `* & + - ! ~`
 
-합니다 *캐스트 식* 형식을 변경 하는 선택적 캐스트를 사용 하 여 단항 식입니다. 자세한 내용은 참조 [캐스트 연산자: ()](../cpp/cast-operator-parens.md)합니다.
+*캐스트 식은* 형식을 변경 하는 선택적 캐스트를 사용 하는 단항 식입니다. 자세한 내용은 [캐스트 연산자: ()](../cpp/cast-operator-parens.md)를 참조 하세요.
 
-*식* 식일 수 있습니다. 자세한 내용은 [식을](../cpp/expressions-cpp.md)합니다.
+*식은* 어떤 식일 수도 있습니다. 자세한 내용은 [식](../cpp/expressions-cpp.md)을 참조 하세요.
 
-합니다 *할당 식* 가리킵니다 합니다 **새** 연산자입니다. 합니다 *할당 취소 식* 가리킵니다 합니다 **삭제** 연산자. 자세한 내용은 이 항목의 앞부분에 나오는 링크를 참조하십시오.
+*할당 식은* **new** 연산자를 참조 합니다. *할당 취소 식은* **delete** 연산자를 참조 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 링크를 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [식의 형식](../cpp/types-of-expressions.md)

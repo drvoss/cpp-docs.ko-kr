@@ -1,8 +1,9 @@
 ---
 title: __p__fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__fmode
+- _o___p__fmode
 api_location:
 - msvcr80.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939980"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919883"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -48,6 +50,8 @@ int* __p__fmode(
 `__p__fmode` 함수는 내부용이며 사용자 코드에서 호출할 수 없습니다.
 
 파일 변환 모드는 [_open](../c-runtime-library/reference/open-wopen.md) 및 [_pipe](../c-runtime-library/reference/pipe.md) I/O 연산에 대한 `binary` 또는 `text` 변환을 지정합니다. 자세한 내용은 [_fmode](../c-runtime-library/fmode.md)를 참조하세요.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 

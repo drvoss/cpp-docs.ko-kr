@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143123"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427406"
 ---
 # <a name="context-class"></a>Context 클래스
 
@@ -37,24 +37,24 @@ ms.locfileid: "77143123"
 class Context;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[~ 컨텍스트 소멸자](#dtor)||
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[블록](#block)|현재 컨텍스트를 차단 합니다.|
 |[CurrentContext](#currentcontext)|현재 컨텍스트에 대 한 포인터를 반환 합니다.|
 |[GetId](#getid)|컨텍스트가 속한 스케줄러 내에서 고유한 컨텍스트의 식별자를 반환 합니다.|
 |[GetScheduleGroupId](#getschedulegroupid)|컨텍스트가 현재 작업 중인 일정 그룹에 대 한 식별자를 반환 합니다.|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|컨텍스트가 현재 실행 되 고 있는 가상 프로세서에 대 한 식별자를 반환 합니다.|
-|[ID](#id)|현재 컨텍스트가 속한 스케줄러 내에서 고유한 현재 컨텍스트에 대 한 식별자를 반환 합니다.|
+|[Id](#id)|현재 컨텍스트가 속한 스케줄러 내에서 고유한 현재 컨텍스트에 대 한 식별자를 반환 합니다.|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 컬렉션이 활성 취소를 기반으로 하 고 있는지 여부를 나타내는 표시를 반환 합니다.|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|컨텍스트가 동기적으로 차단 되는지 여부를 결정 합니다. 컨텍스트는 차단을 초래한 작업을 명시적으로 수행 하는 경우 동기적으로 차단 된 것으로 간주 됩니다.|
 |[Oversubscribe](#oversubscribe)|해당 스케줄러의 가상 프로세서 중 하나에서 실행 되는 컨텍스트에서 호출 될 때 코드 블록의 기간 동안 추가 가상 프로세서를 스케줄러에 삽입 합니다.|

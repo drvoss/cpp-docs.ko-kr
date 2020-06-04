@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385065"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749695"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
 `_bstr_t` 래퍼를 `BSTR`에 연결합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -38,10 +38,10 @@ void Attach(
 
 ## <a name="example"></a>예제
 
-참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 **연결**합니다.
+[_bstr_t::할당](../cpp/bstr-t-assign.md) 을 사용하여 **연결**을 사용하는 예제에 대한 할당
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [_bstr_t 클래스](../cpp/bstr-t-class.md)

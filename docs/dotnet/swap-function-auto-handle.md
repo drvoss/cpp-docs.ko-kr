@@ -2,22 +2,19 @@
 title: swap 함수(auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384558"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545944"
 ---
-# <a name="swap-function-autohandle"></a>swap 함수(auto_handle)
+# <a name="swap-function-auto_handle"></a>swap 함수(auto_handle)
 
-개체 하나를 바꿉니다 `auto_handle` 또 다른 합니다.
+개체를 한 `auto_handle`에서 다른 개체와 교환 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,11 +32,11 @@ void swap(
 `auto_handle`입니다.
 
 *_right*<br/>
-다른 `auto_handle`합니다.
+다른 `auto_handle`입니다.
 
 ## <a name="example"></a>예제
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -66,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더 파일** \<msclr\auto_handle.h >
+**헤더 파일** \<msclr \ auto_handle >
 
-**Namespace** msclr
+Msclr **네임 스페이스**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

@@ -1,6 +1,6 @@
 ---
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset
 - _mbsset
@@ -8,6 +8,9 @@ api_name:
 - _strset
 - _wcsset_l
 - _mbsset_l
+- _o__mbsset
+- _o__mbsset_l
+- _o__wcsset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 7f8674467c0d02143e6edf1e4e95c6ee3e20c4b5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946762"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911121"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -111,7 +115,7 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*문자열*<br/>
 설정할 Null 종료 문자열입니다.
 
 *c*<br/>
@@ -120,22 +124,24 @@ unsigned char *_mbsset_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 변경된 문자열에 대한 포인터를 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**_Strset** 함수는 **char**로 변환 된 *str* 의 모든 문자 (null 종결 문자 제외)를 *c*로 설정 합니다. **_wcsset** 및 **_mbsset_l** 는 **_strset**의 와이드 문자 및 멀티 바이트 문자 버전 이며, 인수 및 반환 값의 데이터 형식은 그에 따라 다릅니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_Strset** 함수는 *str* 의 종료 null 문자를 제외한 모든 문자를 **char**로 변환 된 *c*로 설정 합니다. **_wcsset** 및 **_mbsset_l** 는 **_strset**의 와이드 문자 및 멀티 바이트 문자 버전 이며, 인수 및 반환 값의 데이터 형식은 그에 따라 다릅니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
-**_mbsset** 은 매개 변수의 유효성을 검사 합니다. *Str* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **_mbsset** 는 **NULL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. **_strset** 및 **_wcsset** 는 해당 매개 변수의 유효성을 검사 하지 않습니다.
+**_mbsset** 은 해당 매개 변수의 유효성을 검사 합니다. *Str* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **_Mbsset** **NULL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. **_strset** 및 **_wcsset** 는 매개 변수의 유효성을 검사 하지 않습니다.
 
-출력 값은 로캘의 **LC_CTYPE** 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale을](setlocale-wsetlocale.md) 참조 하세요. **_L** 접미사가 없는 함수는 현재 로캘을 사용 하 고 **_l** 접미사가 있는 함수는 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고 이러한 함수의 버전은 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale를](setlocale-wsetlocale.md) 참조 하세요. **_L** 접미사가 없는 함수는 현재 로캘을 사용 하 고 **_l** 접미사가 있는 함수는 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고 이러한 함수의 버전은 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 > [!IMPORTANT]
 > 이러한 함수는 버퍼 오버런 위협에 노출될 수 있습니다. 버퍼 오버런은 불필요한 권한 상승을 발생시킬 수 있으므로 시스템 공격에 사용될 수 있습니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -152,7 +158,7 @@ unsigned char *_mbsset_l(
 |**_wcsset_l**|\<tchar.h>|
 |**_mbsset**, **_mbsset_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -178,11 +184,11 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

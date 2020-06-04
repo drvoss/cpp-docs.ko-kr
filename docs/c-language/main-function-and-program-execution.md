@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
 ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/16/2020
 ms.locfileid: "76123944"
@@ -26,7 +26,7 @@ ms.locfileid: "76123944"
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 소스 프로그램 내의 함수는 하나 이상의 특정 작업을 수행합니다. **main** 함수는 각 작업을 수행하기 위해 이러한 함수를 호출할 수 있습니다. 다른 함수를 호출할 때 **main**은 실행이 함수의 첫 번째 문에서 시작될 수 있도록 해당 함수에 실행 제어를 전달합니다. 함수는 `return` 문이 실행되거나 함수 끝에 도달할 때 **main**에 제어를 반환합니다.
 
@@ -38,5 +38,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="see-also"></a>참조
 
-[main 함수 및 명령줄 인수 (C++)](../cpp/main-function-command-line-args.md)\
+[main 함수와 명령줄 인수(C++)](../cpp/main-function-command-line-args.md)\
 [C 명령줄 인수 구문 분석](../c-language/parsing-c-command-line-arguments.md)

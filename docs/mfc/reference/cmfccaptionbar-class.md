@@ -66,16 +66,16 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403843"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752623"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 클래스
 
-`CMFCCaptionBar` 개체는 세 가지 요소를 표시할 수 있는 컨트롤 막대: 단추, 텍스트 레이블 및 비트맵입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.
+`CMFCCaptionBar` 개체는 단추, 텍스트 레이블 및 비트맵의 세 가지 요소를 표시할 수 있는 컨트롤 막대입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -87,68 +87,68 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCCaptionBar::Create](#create)|캡션 표시줄 컨트롤을 만들고에 연결 된 `CMFCCaptionBar` 개체입니다.|
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|캡션 표시줄에서 해당 부모 프레임 사이의 다른 창을 동적으로 삽입할 수 있는지 여부를 나타냅니다. (재정의 [cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
-|[CMFCCaptionBar::EnableButton](#enablebutton)|캡션 표시줄에 단추를 사용 하지 않도록 설정 하거나 합니다.|
-|[CMFCCaptionBar::GetAlignment](#getalignment)|지정 된 요소의 맞춤을 반환 합니다.|
-|[CMFCCaptionBar::GetBorderSize](#getbordersize)|캡션 표시줄 테두리 크기를 반환합니다.|
-|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|캡션 표시줄에 단추의 경계 사각형을 검색합니다.|
-|[CMFCCaptionBar::GetMargin](#getmargin)|캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 사이의 거리를 반환 합니다.|
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|캡션 표시줄 메시지 표시줄 모드 인지 여부를 지정 합니다.|
-|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|캡션 표시줄에서 비트맵 이미지를 제거합니다.|
-|[CMFCCaptionBar::RemoveButton](#removebutton)|캡션 표시줄에서 단추를 제거합니다.|
-|[CMFCCaptionBar::RemoveIcon](#removeicon)|캡션 표시줄에서 아이콘을 제거합니다.|
-|[CMFCCaptionBar::RemoveText](#removetext)|캡션 표시줄의 텍스트 레이블을 제거합니다.|
-|[CMFCCaptionBar::SetBitmap](#setbitmap)|캡션 표시줄에 대 한 비트맵 이미지를 설정합니다.|
-|[CMFCCaptionBar::SetBorderSize](#setbordersize)|캡션 표시줄 테두리 크기를 설정합니다.|
-|[CMFCCaptionBar::SetButton](#setbutton)|캡션 표시줄에 대 한 단추를 설정합니다.|
-|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|단추 누름 유지 여부를 지정 합니다.|
-|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|단추에 대 한 도구 설명을 설정 합니다.|
-|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|캡션 표시줄의 테두리 스타일을 설정합니다.|
-|[CMFCCaptionBar::SetIcon](#seticon)|캡션 표시줄에 대 한 아이콘을 설정 합니다.|
-|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|캡션 표시줄에 대 한 이미지에 대 한 도구 설명을 설정 합니다.|
-|[CMFCCaptionBar::SetMargin](#setmargin)|캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 간 거리를 설정 합니다.|
-|[CMFCCaptionBar::SetText](#settext)|캡션 표시줄에 대 한 텍스트 레이블을 가져오거나 설정 합니다.|
+|[CMFC 캡션바::만들기](#create)|캡션 막대 컨트롤을 만들고 개체에 `CMFCCaptionBar` 연결합니다.|
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|캡션 막대와 상위 프레임 사이에 다른 창을 동적으로 삽입할 수 있는지 여부를 나타냅니다. [(재정의 CBasePane::DoesAllowDyn인가 전에](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CMFC 캡션바::사용 버튼](#enablebutton)|캡션 표시줄의 단추를 활성화하거나 사용하지 않도록 설정합니다.|
+|[CMFC 캡션바::정렬 정렬](#getalignment)|지정된 요소의 선형을 반환합니다.|
+|[CMFC 캡션바::GetBorderSize](#getbordersize)|캡션 막대의 테두리 크기를 반환합니다.|
+|[CMFC 캡션바::GetButtonRect](#getbuttonrect)|캡션 막대에서 단추의 경계 사각형을 검색합니다.|
+|[CMFC 캡션바::겟마진](#getmargin)|캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 반환합니다.|
+|[CMFC 캡션바::이메시지 바모드](#ismessagebarmode)|캡션 막대가 메시지 표시줄 모드에 있는지 여부를 지정합니다.|
+|[CMFC캡션바::리모크비트맵](#removebitmap)|캡션 표시줄에서 비트맵 이미지를 제거합니다.|
+|[CMFC 캡션바::제거 버튼](#removebutton)|캡션 표시줄에서 단추를 제거합니다.|
+|[CMFC캡션바::리모크아이콘](#removeicon)|캡션 표시줄에서 아이콘을 제거합니다.|
+|[CMFC 캡션바::삭제텍스트](#removetext)|캡션 표시줄에서 텍스트 레이블을 제거합니다.|
+|[CMFC캡션바::세트비트맵](#setbitmap)|캡션 막대의 비트맵 이미지를 설정합니다.|
+|[CMFC 캡션바::설정경계 크기](#setbordersize)|캡션 막대의 테두리 크기를 설정합니다.|
+|[CMFC 캡션바::설정 버튼](#setbutton)|캡션 막대의 단추를 설정합니다.|
+|[CMFC 캡션바::버튼 누른](#setbuttonpressed)|단추를 계속 누른 상태로 유지되는지 여부를 지정합니다.|
+|[CMFC 캡션바::설정 단추도구 팁](#setbuttontooltip)|단추의 도구 설명입니다.|
+|[CMFC 캡션바::세트플랫보더](#setflatborder)|캡션 막대의 테두리 스타일을 설정합니다.|
+|[CMFC캡션바::세티콘](#seticon)|캡션 막대의 아이콘을 설정합니다.|
+|[CMFC 캡션바::세트이미지툴팁](#setimagetooltip)|캡션 막대의 이미지에 대한 도구 설명입니다.|
+|[CMFC캡션바::세트마진](#setmargin)|캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 설정합니다.|
+|[CMFC 캡션바::SetText](#settext)|캡션 막대의 텍스트 레이블을 설정합니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|캡션 표시줄의 배경을 채울 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|캡션 표시줄의 테두리를 그리기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|캡션 표시줄 단추를 그리기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|캡션 표시줄 이미지를 그리기 위해 프레임 워크에서 호출 됩니다.|
-|[CMFCCaptionBar::OnDrawText](#ondrawtext)|캡션 표시줄 텍스트를 그리기 위해 프레임 워크에서 호출 됩니다.|
+|[CMFC 캡션바::온드로우백](#ondrawbackground)|캡션 막대의 배경을 채우기 위해 프레임워크에서 호출됩니다.|
+|[CMFC캡션바::온드로우보더](#ondrawborder)|캡션 막대의 테두리를 그리는 프레임워크에서 호출됩니다.|
+|[CMFC 캡션바::온드로우 버튼](#ondrawbutton)|캡션 막대 단추를 그리는 프레임워크에서 호출됩니다.|
+|[CMFC 캡션바::온드로우 이미지](#ondrawimage)|캡션 막대 이미지를 그리는 프레임워크에서 호출됩니다.|
+|[CMFC 캡션바::온드로우텍스트](#ondrawtext)|캡션 막대 텍스트를 그리는 프레임워크에서 호출됩니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|캡션 표시줄의 배경색입니다.|
-|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|캡션 표시줄의 테두리 색입니다.|
-|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|캡션 표시줄 텍스트의 색입니다.|
+|[CMFC캡션바::m_clrBarBackground](#m_clrbarbackground)|캡션 막대의 배경색입니다.|
+|[CMFC캡션바::m_clrBarBorder](#m_clrbarborder)|캡션 막대의 테두리의 색상입니다.|
+|[CMFC캡션바::m_clrBarText](#m_clrbartext)|캡션 막대 텍스트의 색상입니다.|
 
 ## <a name="remarks"></a>설명
 
-캡션 표시줄을 만들려면 다음이 단계를 수행 합니다.
+캡션 막대를 만들려면 다음 단계를 따르세요.
 
-1. `CMFCCaptionBar` 개체를 생성합니다. 일반적으로 캡션 표시줄 프레임 창 클래스를 추가 합니다.
+1. `CMFCCaptionBar` 개체를 생성합니다. 일반적으로 프레임 창 클래스에 캡션 막대를 추가합니다.
 
-1. 호출 된 [CMFCCaptionBar::Create](#create) 캡션 표시줄 컨트롤을 만들고 연결 하는 메서드를 `CMFCCaptionBar` 개체입니다.
+1. [CMFCCaptionBar::Create](#create) 메서드를 호출하여 캡션 막대 컨트롤을 `CMFCCaptionBar` 만들고 개체에 연결합니다.
 
-1. 호출 [CMFCCaptionBar::SetButton](#setbutton)를 [CMFCCaptionBar::SetText](#settext)하십시오 [CMFCCaptionBar::SetIcon](#seticon), 및 [CMFCCaptionBar::SetBitmap](#setbitmap)캡션 표시줄 요소를 설정 합니다.
+1. [CMFC캡션Bar::SetButton,](#setbutton) [CMFC캡션Bar::SetText,](#settext) [CMFC캡션Bar::SetIcon](#seticon)및 [CMFCCaptionBar::SetBitmap을](#setbitmap) 사용하여 캡션 막대 요소를 설정합니다.
 
-Button 요소를 설정 하면 단추 명령 ID를 할당 해야 합니다. 사용자가 단추를 클릭 하면 캡션 표시줄 부모 프레임 창에이 ID는 WM_COMMAND 메시지를 라우팅합니다.
+단추 요소를 설정할 때 단추에 명령 ID를 할당해야 합니다. 사용자가 단추를 클릭하면 캡션 막대는 이 ID가 있는 WM_COMMAND 메시지를 부모 프레임 창으로 라우팅합니다.
 
-캡션 표시줄 있습니다 Microsoft Office 2007 응용 프로그램에 표시 되는 메시지 표시줄을 에뮬레이션 하는 메시지 막대 모드 에서도 작동 합니다. 메시지 표시줄 모드로 캡션 표시줄 표시 비트맵, 메시지 및 단추 (일반적으로 대화 상자를 엽니다.) 비트맵에 도구 설명에 할당할 수 있습니다.
+캡션 표시줄은 Microsoft Office 2007 응용 프로그램에 나타나는 메시지 표시줄을 에뮬레이트하는 메시지 표시줄 모드에서도 작동할 수 있습니다. 메시지 표시줄 모드에서 캡션 막대에는 비트맵, 메시지 및 버튼(일반적으로 대화 상자가 열리는)이 표시됩니다. 도구 팁을 비트맵에 할당할 수 있습니다.
 
-메시지 표시줄 모드를 사용 하려면 호출 [CMFCCaptionBar::Create](#create) 네 번째 매개 변수 (bIsMessageBarMode) TRUE로 설정 합니다.
+메시지 표시줄 모드를 사용하려면 [CMFCCaptionBar::만들기를](#create) 호출하고 네 번째 매개 변수(bIsMessageBarMode)를 TRUE로 설정합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `CMFCCaptionBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 캡션 표시줄 컨트롤을 만드는, 캡션 표시줄에 3D 테두리를 설정, 픽셀 캡션 표시줄 컨트롤의 가장자리와 요소 표시줄 캡션의 가장자리 사이의 거리를 설정의 캡션 표시줄에 대 한 단추를 설정 하는 방법을 보여 줍니다. 에서 단추의 도구 설명 설정, 캡션 표시줄의 텍스트 레이블을 설정, 비트맵 이미지의 캡션 표시줄에 대 한 설정 및 이미지에 대 한 도구 설명의 캡션 표시줄에 설정 합니다. 이 코드 조각은의 일부인 합니다 [MS Office 2007 데모 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 `CMFCCaptionBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 캡션 막대 컨트롤을 만들고, 캡션 막대의 3D 테두리를 설정하고, 캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 픽셀 단위로 설정하고, 캡션 막대의 단추를 설정하고, 단추에 대한 도구 설명세트를 설정하고, 캡션 막대의 텍스트 레이블을 설정하고, 캡션 막대의 비트맵 이미지를 설정하는 방법을 보여 주며, 캡션 막대의 비트맵 이미지를 설정하는 방법을 보여 주며, 캡션 막대의 3D 테두리를 설정합니다. 을 클릭하고 캡션 막대에서 이미지에 대한 도구 설명입니다. 이 코드 조각은 MS [Office 2007 데모 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -169,11 +169,11 @@ Button 요소를 설정 하면 단추 명령 ID를 할당 해야 합니다. 사�
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxcaptionbar.h
+**헤더:** afx캡션바.h
 
-##  <a name="create"></a>  CMFCCaptionBar::Create
+## <a name="cmfccaptionbarcreate"></a><a name="create"></a>CMFC 캡션바::만들기
 
-캡션 표시줄 컨트롤을 만들고에 연결 된 `CMFCCaptionBar` 개체입니다.
+캡션 막대 컨트롤을 만들고 개체에 `CMFCCaptionBar` 연결합니다.
 
 ```
 BOOL Create(
@@ -187,58 +187,58 @@ BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *dwStyle*<br/>
-캡션 표시줄 스타일의 논리 OR 조합입니다.
+캡션 막대 스타일의 논리적 OR 조합입니다.
 
 *pParentWnd*<br/>
-캡션 표시줄 컨트롤의 부모 창입니다.
+캡션 막대 컨트롤의 상위 창입니다.
 
-*uID*<br/>
-캡션 표시줄 컨트롤의 ID입니다.
+*Uid*<br/>
+캡션 막대 컨트롤의 ID입니다.
 
 *nHeight*<br/>
-캡션 표시줄 컨트롤의 픽셀에서 높이입니다. -1 인 경우 높이 아이콘, 텍스트 및 캡션 표시줄 컨트롤이 표시 하는 단추 높이 따라 계산 됩니다.
+캡션 막대 컨트롤의 높이(픽셀 단위)입니다. -1이면 높이가 아이콘의 높이, 텍스트 및 캡션 막대 컨트롤이 표시하는 단추에 따라 계산됩니다.
 
-*bIsMessageBarMode*<br/>
-캡션 표시줄 메시지 표시줄 모드로; 이면 TRUE FALSE이 고, 그렇지 합니다.
+*비스메시지바모드*<br/>
+캡션 막대가 메시지 표시줄 모드에 있는 경우 TRUE입니다. 그렇지 않으면 거짓.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡션 표시줄 컨트롤을 성공적으로 만든 경우 TRUE입니다. FALSE이 고, 그렇지 합니다.
+캡션 막대 컨트롤이 성공적으로 만들어지면 TRUE입니다. 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-생성 된 `CMFCCaptionBar` 두 단계에서 개체입니다. 먼저 생성자를 호출 하 고 호출 하는 다음의 `Create` Windows 컨트롤을 만들고에 연결 하는 메서드를 `CMFCCaptionBar` 개체입니다.
+두 단계로 `CMFCCaptionBar` 객체를 생성합니다. 먼저 생성자 호출 한 다음 Windows `Create` 컨트롤을 만들고 `CMFCCaptionBar` 개체에 연결 하는 메서드를 호출 합니다.
 
-##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore
+## <a name="cmfccaptionbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFC 캡션바::DoesAllowDyn인더인
 
-캡션 표시줄에서 해당 부모 프레임 사이의 다른 창을 동적으로 삽입할 수 있는지 여부를 나타냅니다.
+캡션 막대와 상위 프레임 사이에 다른 창을 동적으로 삽입할 수 있는지 여부를 나타냅니다.
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-재정의 되지 않은 경우 FALSE를 반환 합니다.
+재정의하지 않는 한 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton
+## <a name="cmfccaptionbarenablebutton"></a><a name="enablebutton"></a>CMFC 캡션바::사용 버튼
 
-캡션 표시줄에 단추를 사용 하지 않도록 설정 하거나 합니다.
+캡션 표시줄의 단추를 활성화하거나 사용하지 않도록 설정합니다.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bEnable*<br/>
-[in] FALSE 단추를 사용 하지 않도록 설정 하 고 단추를 사용 하도록 설정 하려면 TRUE입니다.
+【인】 TRUE 버튼을 활성화하려면 FALSE가 버튼을 비활성화합니다.
 
-##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
+## <a name="cmfccaptionbargetalignment"></a><a name="getalignment"></a>CMFC 캡션바::정렬 정렬
 
-지정 된 요소의 맞춤을 반환 합니다.
+지정된 요소의 선형을 반환합니다.
 
 ```
 BarElementAlignment GetAlignment(BarElement elem);
@@ -246,16 +246,16 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>매개 변수
 
-*elem*<br/>
-[in] 캡션 표시줄 맞춤 검색할 요소입니다.
+*Elem*<br/>
+【인】 선형을 검색할 캡션 막대 요소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-단추, 비트맵, 텍스트 또는 아이콘 같은 요소에 맞춥니다.
+단추, 비트맵, 텍스트 또는 아이콘과 같은 요소의 정렬입니다.
 
 ### <a name="remarks"></a>설명
 
-요소의 맞춤을 다음 값 중 하나일 수 있습니다.
+요소의 정렬은 다음 값 중 하나일 수 있습니다.
 
 - ALIGN_INVALID
 
@@ -265,85 +265,85 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 - ALIGN_CENTER
 
-##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize
+## <a name="cmfccaptionbargetbordersize"></a><a name="getbordersize"></a>CMFC 캡션바::GetBorderSize
 
-캡션 표시줄 테두리 크기를 반환합니다.
+캡션 막대의 테두리 크기를 반환합니다.
 
 ```
 int GetBorderSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-픽셀 테두리의 크기입니다.
+테두리의 크기(픽셀 단위)입니다.
 
-##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect
+## <a name="cmfccaptionbargetbuttonrect"></a><a name="getbuttonrect"></a>CMFC 캡션바::GetButtonRect
 
-캡션 표시줄에 단추의 경계 사각형을 검색합니다.
+캡션 막대에서 단추의 경계 사각형을 검색합니다.
 
 ```
 CRect GetButtonRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CRect` 캡션 표시줄에 단추의 경계 사각형의 좌표를 포함 하는 개체입니다.
+캡션 `CRect` 막대에 있는 단추의 경계 사각형의 좌표를 포함하는 개체입니다.
 
-##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin
+## <a name="cmfccaptionbargetmargin"></a><a name="getmargin"></a>CMFC 캡션바::겟마진
 
-캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 사이의 거리를 반환 합니다.
+캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 반환합니다.
 
 ```
 int GetMargin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-픽셀 단위로 캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 사이의 거리입니다.
+캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리(픽셀 단위)입니다.
 
-##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode
+## <a name="cmfccaptionbarismessagebarmode"></a><a name="ismessagebarmode"></a>CMFC 캡션바::이메시지 바모드
 
-캡션 표시줄 메시지 표시줄 모드 인지 여부를 지정 합니다.
+캡션 막대가 메시지 표시줄 모드에 있는지 여부를 지정합니다.
 
 ```
 BOOL IsMessageBarMode() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡션 표시줄 메시지 표시줄 모드로; 이면 TRUE FALSE이 고, 그렇지 합니다.
+캡션 막대가 메시지 표시줄 모드에 있는 경우 TRUE입니다. 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-메시지 표시줄 모드의 캡션 표시줄 단추, 도구 설명 및 메시지 텍스트와 이미지를 표시합니다.
+메시지 표시줄 모드에서 캡션 막대는 도구 설명, 메시지 텍스트 및 단추가 있는 이미지를 표시합니다.
 
-##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground
+## <a name="cmfccaptionbarm_clrbarbackground"></a><a name="m_clrbarbackground"></a>CMFC캡션바::m_clrBarBackground
 
-캡션 표시줄의 배경색입니다.
+캡션 막대의 배경색입니다.
 
 ```
 COLORREF m_clrBarBackground
 ```
 
-##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder
+## <a name="cmfccaptionbarm_clrbarborder"></a><a name="m_clrbarborder"></a>CMFC캡션바::m_clrBarBorder
 
-캡션 표시줄의 테두리 색입니다.
+캡션 막대의 테두리의 색상입니다.
 
 ```
 COLORREF m_clrBarBorder
 ```
 
-##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText
+## <a name="cmfccaptionbarm_clrbartext"></a><a name="m_clrbartext"></a>CMFC캡션바::m_clrBarText
 
-캡션 표시줄 텍스트의 색입니다.
+캡션 막대 텍스트의 색상입니다.
 
 ```
 COLORREF m_clrBarText
 ```
 
-##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground
+## <a name="cmfccaptionbarondrawbackground"></a><a name="ondrawbackground"></a>CMFC 캡션바::온드로우백
 
-캡션 표시줄의 배경을 채울 하기 위해 프레임 워크에서 호출 됩니다.
+캡션 막대의 배경을 채우기 위해 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawBackground(
@@ -354,20 +354,20 @@ virtual void OnDrawBackground(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 캡션 표시줄의 장치 컨텍스트 포인터입니다.
+【인】 캡션 막대의 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-[in] 경계 사각형 채우기입니다.
+【인】 채울 경계 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-`OnDrawBackground` 캡션 표시줄의 배경을 채워야 할 때 호출 됩니다. 기본 구현을 사용 하 여 배경을 채우는 합니다 [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) 색입니다.
+캡션 `OnDrawBackground` 막대의 배경이 채워질 때 메서드가 호출됩니다. 기본 구현은 [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) 색상을 사용하여 배경을 채웁니다.
 
-이 메서드를 재정의 한 `CMFCCaptionBar` 캡션 표시줄의 모양을 사용자 지정 하는 클래스를 파생 합니다.
+파생 클래스에서 이 `CMFCCaptionBar` 메서드를 재정의하여 캡션 막대의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder
+## <a name="cmfccaptionbarondrawborder"></a><a name="ondrawborder"></a>CMFC캡션바::온드로우보더
 
-캡션 표시줄의 테두리를 그리기 위해 프레임 워크에서 호출 됩니다.
+캡션 막대의 테두리를 그리는 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawBorder(
@@ -378,20 +378,20 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 테두리를 표시 하는 데 사용 되는 장치 컨텍스트.
+【인】 테두리를 표시하는 데 사용되는 장치 컨텍스트입니다.
 
 *rect*<br/>
-[in] 경계 사각형입니다.
+【인】 경계 사각형입니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로 테두리가 평면 스타일을 적용 합니다.
+기본적으로 테두리에는 플랫 스타일이 있습니다.
 
-이 메서드를 재정의 한 `CMFCCaptionBar` 캡션 표시줄 테두리의 모양을 사용자 지정 하는 클래스를 파생 합니다.
+파생 클래스에서 이 `CMFCCaptionBar` 메서드를 재정의하여 캡션 막대의 테두리 모양을 사용자 지정합니다.
 
-##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton
+## <a name="cmfccaptionbarondrawbutton"></a><a name="ondrawbutton"></a>CMFC 캡션바::온드로우 버튼
 
-캡션 표시줄 단추를 그리기 위해 프레임 워크에서 호출 됩니다.
+캡션 막대 단추를 그리는 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawButton(
@@ -404,24 +404,24 @@ virtual void OnDrawButton(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 단추를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.
+【인】 단추를 표시하는 데 사용되는 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-[in] 단추의 경계 사각형입니다.
+【인】 단추의 경계 사각형입니다.
 
-*strButton*<br/>
-[in] 단추의 텍스트 레이블입니다.
+*스트버튼*<br/>
+【인】 단추의 텍스트 레이블입니다.
 
 *bEnabled*<br/>
-[in] 단추를 사용 하면 TRUE입니다. FALSE이 고, 그렇지 합니다.
+【인】 TRUE 버튼이 활성화되어 있는 경우 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 재정의 한 `CMFCCaptionBar` 캡션 표시줄의 단추 모양을 사용자 지정 하는 클래스를 파생 합니다.
+파생 클래스에서 이 `CMFCCaptionBar` 메서드를 재정의하여 캡션 막대 단추의 모양을 사용자 지정합니다.
 
-##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage
+## <a name="cmfccaptionbarondrawimage"></a><a name="ondrawimage"></a>CMFC 캡션바::온드로우 이미지
 
-캡션 표시줄 이미지를 그리기 위해 프레임 워크에서 호출 됩니다.
+캡션 막대 이미지를 그리는 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawImage(
@@ -432,18 +432,18 @@ virtual void OnDrawImage(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 이미지를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.
+【인】 이미지를 표시하는 데 사용되는 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-[in] 이미지의 경계 사각형을 지정합니다.
+【인】 이미지의 경계 사각형을 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 재정의 한 `CMFCCaptionBar` 이미지 모양을 사용자 지정 하는 클래스를 파생 합니다.
+파생 클래스에서 이 `CMFCCaptionBar` 메서드를 재정의하여 이미지 모양을 사용자 지정합니다.
 
-##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText
+## <a name="cmfccaptionbarondrawtext"></a><a name="ondrawtext"></a>CMFC 캡션바::온드로우텍스트
 
-캡션 표시줄 텍스트를 그리기 위해 프레임 워크에서 호출 됩니다.
+캡션 막대 텍스트를 그리는 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnDrawText(
@@ -455,61 +455,61 @@ virtual void OnDrawText(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 단추를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.
+【인】 단추를 표시하는 데 사용되는 장치 컨텍스트에 대한 포인터입니다.
 
 *rect*<br/>
-[in] 텍스트의 경계 사각형입니다.
+【인】 텍스트의 경계 사각형입니다.
 
 *strText*<br/>
-[in] 표시할 텍스트 문자열입니다.
+【인】 표시할 텍스트 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
-사용 하 여 텍스트를 표시 하는 기본 구현은 `CDC::DrawText` 하 고 [CMFCCaptionBar::m_clrBarText](#m_clrbartext) 색입니다.
+기본 구현은 `CDC::DrawText` [CMFCCaptionBar::m_clrBarText](#m_clrbartext) 색상을 사용하여 텍스트를 표시합니다.
 
-이 메서드를 재정의 한 `CMFCCaptionBar` 캡션 표시줄의 텍스트의 모양을 사용자 지정 하는 클래스를 파생 합니다.
+파생 클래스에서 이 `CMFCCaptionBar` 메서드를 재정의하여 캡션 막대텍스트의 모양을 사용자 지정합니다.
 
-##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap
+## <a name="cmfccaptionbarremovebitmap"></a><a name="removebitmap"></a>CMFC캡션바::리모크비트맵
 
 캡션 표시줄에서 비트맵 이미지를 제거합니다.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
-##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton
+## <a name="cmfccaptionbarremovebutton"></a><a name="removebutton"></a>CMFC 캡션바::제거 버튼
 
 캡션 표시줄에서 단추를 제거합니다.
 
-```
+```cpp
 void RemoveButton();
 ```
 
 ### <a name="remarks"></a>설명
 
-캡션 표시줄 요소의 레이아웃은 자동으로 조정 됩니다.
+캡션 막대 요소의 레이아웃이 자동으로 조정됩니다.
 
-##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon
+## <a name="cmfccaptionbarremoveicon"></a><a name="removeicon"></a>CMFC캡션바::리모크아이콘
 
 캡션 표시줄에서 아이콘을 제거합니다.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
-##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText
+## <a name="cmfccaptionbarremovetext"></a><a name="removetext"></a>CMFC 캡션바::삭제텍스트
 
-캡션 표시줄의 텍스트 레이블을 제거합니다.
+캡션 표시줄에서 텍스트 레이블을 제거합니다.
 
-```
+```cpp
 void RemoveText();
 ```
 
-##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap
+## <a name="cmfccaptionbarsetbitmap"></a><a name="setbitmap"></a>CMFC캡션바::세트비트맵
 
-캡션 표시줄에 대 한 비트맵 이미지를 설정합니다.
+캡션 막대의 비트맵 이미지를 설정합니다.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -526,24 +526,24 @@ void SetBitmap(
 ### <a name="parameters"></a>매개 변수
 
 *hBitmap*<br/>
-[in] 핸들을 설정 하는 비트맵입니다.
+【인】 설정할 비트맵의 핸들입니다.
 
-*clrTransparent*<br/>
-[in] 비트맵의 투명 한 색을 지정 하는 RGB 값입니다.
+*clr투명*<br/>
+【인】 비트맵의 투명 색상을 지정하는 RGB 값입니다.
 
-*bStretch*<br/>
-[in] True 이면 비트맵 이미지 경계 사각형에 맞지 않으면 연장 됩니다. 그렇지 않으면 비트맵을 채우도록 확장 되지 않습니다.
+*b스트레치*<br/>
+【인】 TRUE인 경우 비트맵이 이미지 경계 사각형에 맞지 않으면 늘어납니다. 그렇지 않으면 비트맵이 늘어나지 않습니다.
 
-*bmpAlignment*<br/>
-[in] 비트맵의 맞춤입니다.
+*bmp정렬*<br/>
+【인】 비트맵의 정렬입니다.
 
 ### <a name="remarks"></a>설명
 
-캡션 표시줄에 비트맵을 설정 하려면이 메서드를 사용 합니다.
+이 메서드를 사용하여 캡션 막대에 비트맵을 설정합니다.
 
-이전 비트맵은 자동으로 삭제 됩니다. 호출 했기 때문에 캡션 표시줄 아이콘을 표시 하는 경우는 [CMFCCaptionBar::SetIcon](#seticon) 메서드를 호출 하 여 아이콘을 제거 하지 않으면 비트맵 표시 되지 것입니다 [CMFCCaptionBar::RemoveIcon](#removeicon)합니다.
+이전 비트맵이 자동으로 소멸됩니다. [CMFCCaptionBar::SetIcon](#seticon) 메서드를 호출했기 때문에 캡션 표시줄에 아이콘이 표시되면 [CMFCCaptionBar::RemoveIcon을](#removeicon)호출하여 아이콘을 제거하지 않으면 비트맵이 표시되지 않습니다.
 
-비트맵 맞춰지지에 지정 된 대로 합니다 *bmpAlignment* 매개 변수입니다.  이 매개 변수는 다음 `BarElementAlignment` 값 중 하나일 수 있습니다.
+비트맵은 *bmpAlignment* 매개 변수에 의해 지정된 대로 정렬됩니다.  이 매개 변수는 다음 `BarElementAlignment` 값 중 하나일 수 있습니다.
 
 - ALIGN_INVALID
 
@@ -553,24 +553,24 @@ void SetBitmap(
 
 - ALIGN_CENTER
 
-##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize
+## <a name="cmfccaptionbarsetbordersize"></a><a name="setbordersize"></a>CMFC 캡션바::설정경계 크기
 
-캡션 표시줄 테두리 크기를 설정합니다.
+캡션 막대의 테두리 크기를 설정합니다.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *nSize*<br/>
-[in] 픽셀 캡션 표시줄 테두리의 새 크기입니다.
+【인】 캡션 막대 테두리의 새 크기(픽셀 단위)입니다.
 
-##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton
+## <a name="cmfccaptionbarsetbutton"></a><a name="setbutton"></a>CMFC 캡션바::설정 버튼
 
-캡션 표시줄에 대 한 단추를 설정합니다.
+캡션 막대의 단추를 설정합니다.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -583,33 +583,33 @@ void SetButton(
 *lpszLabel*<br/>
 단추의 명령 레이블입니다.
 
-*uiCmdUI*<br/>
-단추의 명령 id입니다.
+*uiCmdui*<br/>
+단추의 명령 ID입니다.
 
 *btnAlignmnet*<br/>
-단추의 맞춤입니다.
+단추의 정렬입니다.
 
 *bHasDropDownArrow*<br/>
-표시 되 면 단추는 드롭다운 화살표를 FALSE 그렇지 않으면 TRUE입니다.
+TRUE 단추에 드롭다운 화살표가 표시되면 FALSE가 표시됩니다.
 
-##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed
+## <a name="cmfccaptionbarsetbuttonpressed"></a><a name="setbuttonpressed"></a>CMFC 캡션바::버튼 누른
 
-단추 누름 유지 여부를 지정 합니다.
+단추를 계속 누른 상태로 유지되는지 여부를 지정합니다.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bPresed*<br/>
-단추는 누름된 상태로 FALSE이 고, 그렇지 유지 하는 경우 TRUE입니다.
+TRUE 단추의 누른 상태를 유지 하는 경우 TRUE, FALSE 그렇지 않으면.
 
-##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip
+## <a name="cmfccaptionbarsetbuttontooltip"></a><a name="setbuttontooltip"></a>CMFC 캡션바::설정 단추도구 팁
 
-단추에 대 한 도구 설명을 설정 합니다.
+단추의 도구 설명입니다.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -618,29 +618,29 @@ void SetButtonToolTip(
 ### <a name="parameters"></a>매개 변수
 
 *lpszToolTip*<br/>
-[in] 도구 설명 캡션입니다.
+【인】 도구 설명 캡션입니다.
 
 *lpszDescription*<br/>
-[in] 도구 설명에 대 한 설명입니다.
+【인】 도구 설명 설명입니다.
 
-##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder
+## <a name="cmfccaptionbarsetflatborder"></a><a name="setflatborder"></a>CMFC 캡션바::세트플랫보더
 
-캡션 표시줄의 테두리 스타일을 설정합니다.
+캡션 막대의 테두리 스타일을 설정합니다.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bFlat*<br/>
-[in] 캡션 표시줄의 테두리 플랫 이면 TRUE입니다. 3D 테두리 경우 FALSE입니다.
+*b플랫*<br/>
+【인】 캡션 막대의 테두리가 평평한 경우 TRUE입니다. 테두리가 3D인 경우 FALSE입니다.
 
-##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon
+## <a name="cmfccaptionbarseticon"></a><a name="seticon"></a>CMFC캡션바::세티콘
 
-캡션 표시줄에 대 한 아이콘을 설정 합니다.
+캡션 막대의 아이콘을 설정합니다.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -649,16 +649,16 @@ void SetIcon(
 ### <a name="parameters"></a>매개 변수
 
 *hIcon*<br/>
-[in] 설정 아이콘에 대 한 핸들입니다.
+【인】 설정할 아이콘의 핸들입니다.
 
-*iconAlignment*<br/>
-[in] 아이콘의 맞춤입니다.
+*아이콘정렬*<br/>
+【인】 아이콘의 정렬입니다.
 
 ### <a name="remarks"></a>설명
 
-캡션 표시줄 아이콘 또는 비트맵을 표시할 수 있습니다. 참조 [CMFCCaptionBar::SetBitmap](#setbitmap) 비트맵을 표시 하는 방법을 확인 합니다. 아이콘과 비트맵을 둘 다로 설정 하면 아이콘이 표시 됩니다. 호출 [CMFCCaptionBar::RemoveIcon](#removeicon) 캡션 표시줄에서 아이콘을 제거 합니다.
+캡션 막대는 아이콘 또는 비트맵을 표시할 수 있습니다. 비트맵을 표시하는 방법을 알아보려면 [CMFC캡션Bar::SetBitmap을](#setbitmap) 참조하십시오. 아이콘과 비트맵을 모두 설정하면 아이콘이 항상 표시됩니다. [CMFC캡션Bar::RemoveIcon을](#removeicon) 호출하여 캡션 바에서 아이콘을 제거합니다.
 
-아이콘에 따라 정렬 되는 *iconAlignment* 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:
+아이콘은 *아이콘정렬* 매개 변수에 따라 정렬됩니다. 다음 `BarElementAlignment` 값 중 하나가 될 수 있습니다.
 
 - ALIGN_INVALID
 
@@ -668,11 +668,11 @@ void SetIcon(
 
 - ALIGN_CENTER
 
-##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip
+## <a name="cmfccaptionbarsetimagetooltip"></a><a name="setimagetooltip"></a>CMFC 캡션바::세트이미지툴팁
 
-캡션 표시줄에 이미지에 대 한 도구 설명을 설정 합니다.
+캡션 막대에서 이미지의 도구 설명입니다.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -681,29 +681,29 @@ void SetImageToolTip(
 ### <a name="parameters"></a>매개 변수
 
 *lpszToolTip*<br/>
-[in] 텍스트 도구 설명입니다.
+【인】 도구 설명의 텍스트입니다.
 
 *lpszDescription*<br/>
-[in] 도구 설명에 대 한 설명입니다.
+【인】 도구 설명 설명입니다.
 
-##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin
+## <a name="cmfccaptionbarsetmargin"></a><a name="setmargin"></a>CMFC캡션바::세트마진
 
-캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 간 거리를 설정 합니다.
+캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리를 설정합니다.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *nMargin*<br/>
-[in] 픽셀 단위로 캡션 표시줄 요소의 가장자리와 캡션 표시줄 컨트롤의 가장자리 사이의 거리입니다.
+【인】 캡션 막대 요소의 가장자리와 캡션 막대 컨트롤의 가장자리 사이의 거리(픽셀 단위)입니다.
 
-##  <a name="settext"></a>  CMFCCaptionBar::SetText
+## <a name="cmfccaptionbarsettext"></a><a name="settext"></a>CMFC 캡션바::SetText
 
-캡션 표시줄에 대 한 텍스트 레이블을 가져오거나 설정 합니다.
+캡션 막대의 텍스트 레이블을 설정합니다.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);
@@ -712,14 +712,14 @@ void SetText(
 ### <a name="parameters"></a>매개 변수
 
 *strText*<br/>
-[in] 설정 하려면 텍스트 문자열입니다.
+【인】 설정할 텍스트 문자열입니다.
 
-*textAlignment*<br/>
-[in] 텍스트 맞춤입니다.
+*텍스트 정렬*<br/>
+【인】 텍스트 정렬입니다.
 
 ### <a name="remarks"></a>설명
 
-텍스트 레이블을 맞춥니다에 지정 된 대로 합니다 *textAlignment* 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:
+텍스트 레이블은 *텍스트정렬* 매개변수에 지정된 대로 정렬됩니다. 다음 `BarElementAlignment` 값 중 하나가 될 수 있습니다.
 
 - ALIGN_INVALID
 
@@ -729,7 +729,7 @@ void SetText(
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
+ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793791"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84108434"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio의 C++
 
 > [!NOTE]
-> 이 개발자 설명서는 Visual Studio 2015 이상에 적용됩니다. 페이지의 왼쪽 위에 있는 버전 선택기를 사용하여 사용 중인 Visual Studio 버전을 선택합니다.
+> 이 개발자 설명서는 Visual Studio 2015 이상에 적용됩니다. 기본 설정된 버전의 Visual Studio에 대한 설명서를 보려면 **버전** 선택기 컨트롤을 사용하세요. 이 페이지의 목차 맨 위에 있습니다.
 >
 > 프로그램을 실행할 수 있도록 Visual C++ 재배포 가능 패키지를 찾고 있다면 [Microsoft 다운로드 센터](https://www.microsoft.com/download/)로 이동하여 검색 상자에 **Visual C++** 를 입력합니다.
 
@@ -65,7 +65,7 @@ C++에 대해 알아보기, 최신 C++ 개요 살펴보기, 서적, 문서, 토�
 [Visual C++ 살펴보기](../build/vscpp-step-1-create.md)<br/>
 C++를 배우기 시작합니다.
 
-[Visual C++ 샘플](visual-cpp-samples.md)<br/>
+[Visual Studio C++ 샘플](visual-cpp-samples.md)<br/>
 샘플에 대한 내용입니다.
 
 ## <a name="c-development-tools"></a>C++ 개발 도구
@@ -82,7 +82,7 @@ C++ 편집기의 생산성 기능을 사용하여 코드를 리팩터링, 탐색
 [네이티브 코드 디버그](/visualstudio/debugger/debugging-native-code)<br/>
 C++ 프로젝트에서 Visual Studio 디버거를 사용합니다.
 
-[C/C++용 코드 분석 개요](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++용 코드 분석 개요](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 SAL 주석 또는 C++ Core Guidelines 검사 프로그램을 사용하여 정적 분석을 수행합니다.
 
 [Visual Studio에서 C/C++에 대한 단위 테스트 작성](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -99,7 +99,7 @@ Windows용 기존 네이티브 C++ 데스크톱 애플리케이션을 만드는 
 [C++/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 C# 또는 Visual Basic과 같은 언어로 작성된 네이티브 C++ 및 .NET 프로그램 간의 상호 운용성을 활성화하는 DLL을 만드는 방법을 알아봅니다.
 
-[Linux 프로그래밍](../linux/index.md)<br/>
+[Linux 프로그래밍](../linux/index.yml)<br/>
 Visual Studio IDE를 사용하여 GCC로 컴파일을 위해 원격 Linux 머신으로 코딩 및 배포합니다.
 
 [Visual Studio에서 C/C++ DLL 만들기](../build/dlls-in-visual-cpp.md)<br/>

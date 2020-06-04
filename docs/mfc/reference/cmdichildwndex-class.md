@@ -112,18 +112,18 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9bb033b7ba366d233c8a0a81f36251d8b3f62808
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505558"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754564"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 
-클래스 `CMDIChildWndEx` 는 Windows MDI (다중 문서 인터페이스) 자식 창의 기능을 제공 합니다. [CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)의 기능을 확장 합니다. MDI 애플리케이션에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.
+클래스는 `CMDIChildWndEx` Windows 다중 문서 인터페이스(MDI) 자식 창의 기능을 제공합니다. [CMDIChildWnd 클래스의](../../mfc/reference/cmdichildwnd-class.md)기능을 확장합니다. MDI 애플리케이션에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.
 
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -135,73 +135,73 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|작업 표시줄 탭에서 응용 프로그램을 활성화 해야 하는 경우 최상위 프레임을 활성화 하기 위해 프레임 워크에서 내부적으로 호출 됩니다.|
-|`CMDIChildWndEx::AddDockSite`|이 메서드는 사용 되거나 구현 되지 않습니다.|
-|[CMDIChildWndEx::AddPane](#addpane)|창을 추가합니다.|
-|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|탭 창을 추가 합니다.|
-|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|도킹 레이아웃을 조정 합니다.|
-|[CMDIChildWndEx::CanShowOnMDITabs](#canshowonmditabs)||
-|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Windows 7 작업 표시줄 탭에이 MDI 자식을 표시할 수 있는지 여부를 프레임 워크에 알립니다.|
-|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|[Cmfcwindowsmanagerdialog 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자에 MDI 자식 창 이름을 표시할 수 있으면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환 합니다.|
-|`CMDIChildWndEx::CreateObject`|이 클래스 형식의 동적 인스턴스를 만들기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::DockPane](#dockpane)|창을 도킹 합니다.|
+|[CMDIChildWndEx::활성화탑레벨프레임](#activatetoplevelframe)|작업 표시줄 탭에서 응용 프로그램을 활성화해야 하는 경우 최상위 프레임을 활성화하기 위해 프레임워크에서 내부적으로 호출합니다.|
+|`CMDIChildWndEx::AddDockSite`|이 메서드는 사용 하거나 구현 되지 않습니다.|
+|[CMDIChildWndEx::애드파인](#addpane)|창을 추가합니다.|
+|[CMDIChildWndEx::애드탭베드파인](#addtabbedpane)|탭된 창을 추가합니다.|
+|[CMDIChildWndEx::조정도킹레이아웃](#adjustdockinglayout)|도킹 레이아웃을 조정합니다.|
+|[CMDIChildWndEx::캔쇼온MDITabs](#canshowonmditabs)||
+|[CMDIChildWndEx::캔쇼온태스크바탭](#canshowontaskbartabs)|이 MDI 자식이 Windows 7 작업 표시줄 탭에 표시될 수 있는지 여부를 프레임워크에 알려줍니다.|
+|[CMDIChildWndEx::캔쇼온윈도우리스트](#canshowonwindowslist)|[CMFCWindowsManagerDialog 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자에 MDI 자식 창 이름을 표시할 수 있는 경우 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.|
+|`CMDIChildWndEx::CreateObject`|이 클래스 형식의 동적 인스턴스를 만들기 위해 프레임 워크에서 호출 합니다.|
+|[CMDIChildWndEx::DockPane](#dockpane)|창을 도킹합니다.|
 |[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|창을 다른 창의 왼쪽에 도킹합니다.|
-|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|창의 지정 된 면에 도킹 될 때 창의 자동 숨기기 모드를 사용 하도록 설정 합니다.|
-|[CMDIChildWndEx::EnableDocking](#enabledocking)|주 프레임에 자식 창을 도킹할 수 있도록 합니다.|
-|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|작업 표시줄에 해당 창의 미리 보기를 표시 하도록 창의 클라이언트 영역에 있는 자동 선택을 사용 하거나 사용 하지 않도록 설정 합니다.|
+|[CMDIChildWndEx::인에이블오토하이드파인즈](#enableautohidepanes)|창이 창의 지정된 면에 도킹될 때 자동 숨기기 모드를 활성화합니다.|
+|[CMDIChildWndEx::인에이블도킹](#enabledocking)|자식 창을 주 프레임에 도킹할 수 있습니다.|
+|[CMDIChildWndEx::인에이블태스크바썸네일클립렉트](#enabletaskbarthumbnailcliprect)|창의 클라이언트 영역 일부를 자동으로 선택하거나 비활성화하여 작업 표시줄에 해당 창의 축소판으로 표시합니다.|
 |[CMDIChildWndEx::GetDockingManager](#getdockingmanager)||
-|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|MDI 자식 창에 표시 되는 문서의 이름을 반환 합니다.|
-|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|MDI 자식 창 아이콘을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::GetFrameText](#getframetext)|MDI 자식 창에 대 한 텍스트를 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::GetPane](#getpane)|지정 된 컨트롤 ID로 창을 찾습니다.|
-|[CMDIChildWndEx::GetRelatedTabGroup](#getrelatedtabgroup)||
-|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|탭 문서로 변환 된 포함 된 도킹 창에 대 한 포인터를 반환 합니다.|
-|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Windows 7 작업 표시줄 탭에 실제로 등록 된 탭 프록시 창을 반환 합니다.|
-|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Windows 7 작업 표시줄 탭 축소판 그림에 표시 되는 자식 창 (일반적으로 뷰 또는 분할자 창)을 가져와야 하는 경우 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|작업 표시줄에 해당 창의 축소판 그림으로 표시 하기 위해 창 클라이언트 영역의 일부를 선택 해야 할 때 프레임 워크에서 호출 됩니다.|
-|`CMDIChildWndEx::GetThisClass`|이 클래스 형식과 연결 된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대 한 포인터를 가져오기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|도구 모음 단추에 대 한 도구 설명을 검색 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::InsertPane](#insertpane)|지정 된 창을 도킹 관리자에 등록 합니다.|
-|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|MDI 자식의 아이콘 비트맵 표현을 무효화 합니다.|
-|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|지정 된 지점이 dock 사이트 근처에 있는지 여부를 확인 합니다.|
-|[CMDIChildWndEx::IsReadOnly](#isreadonly)|자식 창에 표시 된 문서가 읽기 전용 이면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환 합니다.|
-|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|MDI 자식이 Windows 7 작업 표시줄 탭에 성공적으로 등록 된 경우 TRUE를 반환 합니다.|
-|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|MDI 자식 창에 도킹 창이 포함 되어 있으면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환 합니다.|
-|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|MDI 자식이 Windows 7 작업 표시줄 탭에 표시 될 수 있는지 여부를 나타냅니다.|
-|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|작업 표시줄에서 창의 축소판 그림이 활성화 또는 비활성화 되어 표시 되도록 창의 클라이언트 영역 부분을 자동으로 선택할 수 있는지 여부를 나타냅니다.|
-|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|탭 (MDI 자식)이 Windows 7 작업 표시줄 탭에 등록 될 때 프레임 워크에서 Settask Tabproperties 메서드로 전달 되는 플래그의 조합입니다. 기본 조합은 STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE입니다.|
-|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|MDI 자식의 라이브 미리 보기에 대 한 비트맵을 가져와야 할 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|MDI 자식의 아이콘 미리 보기에 대 한 비트맵을 가져와야 할 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|미니 프레임 창을 이동 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|사용자가 작업 표시줄 탭 축소판 그림에서 닫기 단추를 누를 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|인쇄 미리 보기 모드를 시작 하거나 종료 하기 위해 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|작업 표시줄 탭 축소판 그림이 WM_ACTIVATE 메시지를 처리 해야 할 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|작업 표시줄 탭 축소판 그림이 WM_MOUSEACTIVATE 메시지를 처리 해야 할 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|MDI 자식의 Windows 7 작업 표시줄 탭 축소판 그림 미리 보기에 대 한 비트맵을 스트레치 해야 할 때 프레임 워크에서 호출 됩니다.|
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|프레임 제목을 업데이트 하기 위해 프레임 워크에서 호출 됩니다. ( `CMDIChildWnd::OnUpdateFrameTitle`을 재정의합니다.)|
-|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|지정 된 지점을 포함 하는 창을 반환 합니다.|
+|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|MDI 자식 창에 표시되는 문서의 이름을 반환합니다.|
+|[CMDIChildWndEx::겟프레임아이콘](#getframeicon)|MDI 자식 창 아이콘을 검색 하는 프레임 워크에 의해 호출 됩니다.|
+|[CMDIChildWndEx::GetFrameText](#getframetext)|MDI 자식 창에 대 한 텍스트를 검색 하는 프레임 워크에 의해 호출 됩니다.|
+|[CMDIChildWndEx::겟파인](#getpane)|지정된 컨트롤 ID로 창을 찾습니다.|
+|[CMDIChildWndEx::관련 탭 그룹](#getrelatedtabgroup)||
+|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|탭된 문서로 변환된 포함된 도킹 창에 대한 포인터를 반환합니다.|
+|[CMDIChildWndEx::GetTab프록시Wnd](#gettabproxywnd)|실제로 Windows 7 작업 표시줄 탭에 등록 된 탭 프록시 창을 반환합니다.|
+|[CMDIChildWndEx::GetTaskbar프리뷰](#gettaskbarpreviewwnd)|Windows 7 작업 표시줄 탭 축소판에 표시할 자식 창(일반적으로 보기 또는 분할창)을 가져와야 할 때 프레임워크에서 호출합니다.|
+|[CMDIChildWndEx::겟태스크바썸네일클립렉트](#gettaskbarthumbnailcliprect)|작업 표시줄에서 해당 창의 축소판으로 표시할 창의 클라이언트 영역 의 일부를 선택해야 할 때 프레임워크에서 호출합니다.|
+|`CMDIChildWndEx::GetThisClass`|이 클래스 형식과 연결된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대한 포인터를 얻기 위해 프레임워크에서 호출합니다.|
+|[CMDIChildWndEx::gettoolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|도구 모음 단추에 대한 도구 설명을 검색하려면 프레임워크에서 호출합니다.|
+|[CMDIChildWndEx::삽입판](#insertpane)|지정된 창을 도킹 관리자에 등록합니다.|
+|[CMDIChildWndEx::무효화아이코닉비트맵](#invalidateiconicbitmaps)|MDI 자식의 상징적인 비트맵 표현을 무효화합니다.|
+|[CMDIChildWndEx::이스포인트니어독사이트](#ispointneardocksite)|지정된 점이 도크 사이트 근처에 있는지 여부를 결정합니다.|
+|[CMDIChildWndEx::IsRead전용](#isreadonly)|하위 창에 표시되는 문서가 읽기 전용인 경우 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.|
+|[CMDIChildWndEx::등록된작업 표시줄탭](#isregisteredwithtaskbartabs)|MDI 자식이 Windows 7 작업 표시줄 탭에 성공적으로 등록된 경우 TRUE를 반환합니다.|
+|[CMDIChildWndEx::이스탭베드파인](#istabbedpane)|MDI 자식 창에 도킹 창이 포함되어 있는 경우 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.|
+|[CMDIChildWndEx::IsTaskbarTabs지원 지원](#istaskbartabssupportenabled)|MDI 자식이 Windows 7 작업 표시줄 탭에 나타날 수 있는지 여부를 알려줍니다.|
+|[CMDIChildWndEx::이태스크바썸네일클립렉트사용](#istaskbarthumbnailcliprectenabled)|작업 표시줄에서 해당 창의 축소판 그림으로 표시할 창의 클라이언트 영역 의 일부를 자동으로 선택할 수 있는지 여부를 알려줍니다.|
+|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|탭 (MDI 자식)가 Windows 7 작업 표시 줄 탭에 등록 될 때 SetTaskbarTabProperties 메서드에 프레임 워크에 의해 전달 되는 플래그의 조합입니다. 기본 조합은 STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|
+|[CMDIChildWndEx::OnGetIconicLive프리뷰비트맵](#ongeticoniclivepreviewbitmap)|MDI 자식의 라이브 미리 보기를 위해 비트맵을 가져와야 할 때 프레임워크에서 호출합니다.|
+|[CMDIChildWndEx::OnGetIconic엄지손가락](#ongeticonicthumbnail)|MDI 자식의 상징적 인 축소판 그림에 대한 비트 맵을 가져와야 할 때 프레임 워크에서 호출됩니다.|
+|[CMDIChildWndEx::온무브미니프레임](#onmoveminiframe)|프레임 워크에서 호출하여 미니 프레임 창을 이동합니다.|
+|[CMDIChildWndEx::OnpressTaskbarThmb네일클로즈버튼](#onpresstaskbarthmbnailclosebutton)|사용자가 작업 표시 줄 탭 축소판에 닫기 단추를 누를 때 프레임 워크에 의해 호출 됩니다.|
+|[CMDIChildWndEx::온셋프리뷰모드](#onsetpreviewmode)|인쇄 미리 보기 모드를 입력하거나 종료하려면 프레임워크에서 호출됩니다.|
+|[CMDIChildWndEx::OnTaskbarTab엄지네일활성화](#ontaskbartabthumbnailactivate)|작업 표시줄 탭 축소판이 WM_ACTIVATE 메시지를 처리해야 하는 경우 프레임워크에서 호출됩니다.|
+|[CMDIChildWndEx::OnTaskbarTab엄지네일마우스활성화](#ontaskbartabthumbnailmouseactivate)|작업 표시줄 탭 축소판이 WM_MOUSEACTIVATE 메시지를 처리해야 하는 경우 프레임워크에서 호출됩니다.|
+|[CMDIChildWndEx::온태스크바탭섬네일스트레치](#ontaskbartabthumbnailstretch)|그것은 윈도우 7 작업 표시 줄 탭 축소판 미리보기 MDI 자식에 대한 비트 맵을 스트레칭해야 할 때 프레임 워크에 의해 호출됩니다.|
+|[CMDIChildWndEx::온업데이트프레임타이틀](#onupdateframetitle)|프레임 제목을 업데이트하기 위해 프레임워크에서 호출합니다. ( `CMDIChildWnd::OnUpdateFrameTitle`을 재정의합니다.)|
+|[CMDIChildWndEx::P인FromPoint](#panefrompoint)|지정된 점을 포함하는 창을 반환합니다.|
 |`CMDIChildWndEx::PreTranslateMessage`|창 메시지가 [TranslateMessage](../../mfc/reference/cwinapp-class.md) 및 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) Windows 함수로 디스패치되기 전에 [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 클래스가 이 메시지를 해석하는 데 사용됩니다. ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)를 재정의합니다.)|
-|[CMDIChildWndEx::RecalcLayout](#recalclayout)|창의 레이아웃을 다시 계산 합니다.|
-|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Windows 7 작업 표시줄 탭에 MDI 자식을 등록 합니다.|
-|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|도킹 관리자에서 창을 제거 합니다.|
-|[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||
-|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|해당 하는 Windows 7 작업 표시줄 탭을 활성화 합니다.|
-|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Windows 7 작업 표시줄 탭의 지정 된 창 앞에 MDI 자식을 삽입 합니다.|
+|[CMDIChildWndEx::리콜크 레이아웃](#recalclayout)|창의 레이아웃을 다시 계산합니다.|
+|[CMDIChildWndEx::레지스터작업 표시줄 탭](#registertaskbartab)|Windows 7 작업 표시줄 탭으로 MDI 자식을 등록합니다.|
+|[CMDIChildWndEx::제거파네에서독매니저](#removepanefromdockmanager)|도킹 관리자에서 창을 제거합니다.|
+|[CMDIChildWndEx::세트 관련 탭 그룹](#setrelatedtabgroup)||
+|[CMDIChildWndEx::설정 작업 표시줄탭 활성](#settaskbartabactive)|해당 윈도우 7 작업 표시 줄 탭을 활성화합니다.|
+|[CMDIChildWndEx::설정 작업 표시줄 탭 순서](#settaskbartaborder)|Windows 7 작업 표시줄 탭에서 지정된 창 앞에 MDI 자식을 삽입합니다.|
 |[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Windows 7 작업 표시줄 탭에 대한 속성을 설정합니다.|
-|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|클리핑 사각형을 설정 하 여 작업 표시줄에 해당 창의 축소판 그림으로 표시할 창 클라이언트 영역의 일부를 선택 하기 위해 프레임 워크에서 내부적으로 호출 됩니다.|
-|[CMDIChildWndEx::ShowPane](#showpane)||
-|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Windows 7 작업 표시줄 탭에서 MDI 자식을 제거 합니다.|
-|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Windows 7 작업 표시줄 탭 아이콘을 업데이트 합니다.|
+|[CMDIChildWndEx::셋태스크바썸네일클립렉트](#settaskbarthumbnailcliprect)|프레임워크에서 내부적으로 호출하여 클리핑 사각형을 설정하여 작업 표시줄에서 해당 창의 축소판으로 표시할 창 의 클라이언트 영역 의 일부를 선택합니다.|
+|[CMDIChildWndEx::쇼파인](#showpane)||
+|[CMDIChildWndEx::레지스터 해제작업 표시줄 탭](#unregistertaskbartab)|Windows 7 작업 표시줄 탭에서 MDI 자식을 제거합니다.|
+|[CMDIChildWndEx::업데이트 작업 표시줄TabIcon](#updatetaskbartabicon)|업데이트 윈도우 7 작업 표시줄 탭 아이콘.|
 
 ## <a name="remarks"></a>설명
 
-Mdi 응용 프로그램에서 확장 된 도킹 기능을 활용 하려면 `CMDIChildWndEx` [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)대신 응용 프로그램의 mdi 자식 창 클래스를 파생 시킵니다.
+MDI 응용 프로그램에서 확장 된 도킹 기능을 활용 하려면 `CMDIChildWndEx` [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)대신 응용 프로그램의 MDI 자식 창 클래스를 파생 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는에서 `CMDIChildWndEx`클래스를 파생 시킵니다. 이 코드 조각은 [VisualStudioDemo 샘플에서 제공 됩니다. MFC Visual Studio 응용](../../overview/visual-cpp-samples.md)프로그램입니다.
+다음 예제는 에서 `CMDIChildWndEx`클래스를 파생합니다. 이 코드 조각은 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램에서](../../overview/visual-cpp-samples.md)제공됩니다.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -221,9 +221,9 @@ Mdi 응용 프로그램에서 확장 된 도킹 기능을 활용 하려면 `CMDI
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxMDIChildWndEx
+**헤더:** afxMDIChildWndEx.h
 
-##  <a name="addpane"></a>  CMDIChildWndEx::AddPane
+## <a name="cmdichildwndexaddpane"></a><a name="addpane"></a>CMDIChildWndEx::애드파인
 
 창을 추가합니다.
 
@@ -235,32 +235,32 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>매개 변수
 
-*pControlBar*<br/>
-진행 창에 대 한 포인터입니다.
+*p컨트롤바*<br/>
+【인】 창에 대한 포인터입니다.
 
-*bTail*<br/>
-진행 도킹 관리자에 대 한 창 목록의 끝에 창을 추가 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
+*b테일 (것)들*<br/>
+【인】 TRUE 도킹 관리자에 대 한 창 목록의 끝에 창을 추가 합니다. 그렇지 않으면 false입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창이 도킹 관리자에 성공적으로 등록 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+창이 도킹 관리자에 성공적으로 등록된 경우 TRUE입니다. 그렇지 않으면 false입니다.
 
-##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane
+## <a name="cmdichildwndexaddtabbedpane"></a><a name="addtabbedpane"></a>CMDIChildWndEx::애드탭베드파인
 
-탭 창을 추가 합니다.
+탭된 창을 추가합니다.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pControlBar*<br/>
-진행 창에 대 한 포인터입니다.
+*p컨트롤바*<br/>
+【인】 창에 대한 포인터입니다.
 
-##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout
+## <a name="cmdichildwndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CMDIChildWndEx::조정도킹레이아웃
 
-도킹 레이아웃을 조정 합니다.
+도킹 레이아웃을 조정합니다.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -268,40 +268,40 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>매개 변수
 
-*hdwp*<br/>
-진행 지연 된 창 위치 구조체에 대 한 핸들입니다.
+*HDWP*<br/>
+【인】 지연된 창 위치 구조로 처리합니다.
 
-##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
+## <a name="cmdichildwndexcanshowonmditabs"></a><a name="canshowonmditabs"></a>CMDIChildWndEx::캔쇼온MDITabs
 
 ```
 virtual BOOL CanShowOnMDITabs();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList
+## <a name="cmdichildwndexcanshowonwindowslist"></a><a name="canshowonwindowslist"></a>CMDIChildWndEx::캔쇼온윈도우리스트
 
-[Cmfcwindowsmanagerdialog 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자에 MDI 자식 창 이름을 표시할 수 있는지 여부를 지정 합니다.
+MDI 자식 창 이름을 [CMFCWindowsManagerDialog 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 대화 상자에 표시할 수 있는지 여부를 지정합니다.
 
 ```
 virtual BOOL CanShowOnWindowsList();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창이 창 대화 상자에 표시 될 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
+TRUE 창을 **Windows** 대화 상자에 표시할 수 있는 경우; 그렇지 않으면 false입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 고 창이 **Windows** 대화 상자에 표시 되지 않아야 하는 경우 FALSE를 반환 합니다. 이 함수는에서 `CMFCWindowsManagerDialog`호출 됩니다.
+파생 된 클래스에서이 메서드를 재정의 하 고 **Windows** 대화 상자에 창을 표시 하지 않아야 하는 경우 FALSE를 반환 합니다. 이 함수는 `CMFCWindowsManagerDialog`에서 호출됩니다.
 
-##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane
+## <a name="cmdichildwndexdockpane"></a><a name="dockpane"></a>CMDIChildWndEx::DockPane
 
-창을 도킹 합니다.
+창을 도킹합니다.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -311,19 +311,19 @@ void DockPane(
 ### <a name="parameters"></a>매개 변수
 
 *pBar*<br/>
-진행 창에 대 한 포인터입니다.
+【인】 창에 대한 포인터입니다.
 
 *nDockBarID*<br/>
-진행 창의 ID입니다.
+【인】 창의 ID입니다.
 
-*lpRect*<br/>
-진행 사각형에 대 한 포인터입니다.
+*Lprect*<br/>
+【인】 사각형에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-*LpRect* 매개 변수는 사용 되지 않습니다.
+*lpRect* 매개 변수는 사용 되지 않습니다.
 
-##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf
+## <a name="cmdichildwndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf
 
 창을 다른 창의 왼쪽에 도킹합니다.
 
@@ -336,24 +336,24 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>매개 변수
 
 *pBar*<br/>
-도킹 될 창에 대 한 포인터입니다.
+도킹할 창에 대한 포인터입니다.
 
-*pLeftOf*<br/>
-참조 지점으로 사용 되는 창에 대 한 포인터입니다.
+*p왼쪽*<br/>
+참조 지점 역할을 하는 창에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE이 고, 실패 하면 FALSE입니다.
+성공에 진실, 실패에 거짓.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 *Pbar* 에 지정 된 창을 가져와 *pLeftOf*에 지정 된 창의 왼쪽에 도킹 합니다.
+이 메서드는 *pBar에서* 지정 한 창을 사용 하 고 *pLeftOf에*의해 지정 된 창의 왼쪽에 도킹 합니다.
 
-여러 창을 미리 정의 된 순서로 도킹 하려면이 메서드를 호출 합니다.
+미리 정의된 순서로 여러 창을 도킹하려는 경우 이 메서드를 호출합니다.
 
-##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes
+## <a name="cmdichildwndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CMDIChildWndEx::인에이블오토하이드파인즈
 
-창의 지정 된 면에 도킹 될 때 창의 자동 숨기기 모드를 사용 하도록 설정 합니다.
+창이 창의 지정된 면에 도킹될 때 자동 숨기기 모드를 활성화합니다.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -362,7 +362,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="parameters"></a>매개 변수
 
 *dwDockStyle*<br/>
-진행 사용할 수 있는 주 프레임 창의 면을 지정 합니다. 다음 플래그 중 하나 이상을 사용 합니다.
+【인】 활성화된 주 프레임 창의 측면을 지정합니다. 다음 플래그 중 하나 이상을 사용합니다.
 
 - CBRS_ALIGN_LEFT
 
@@ -372,13 +372,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 - CBRS_ALIGN_BOTTOM
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+메서드가 성공하면 TRUE입니다. 그렇지 않으면 거짓.
 
-##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking
+## <a name="cmdichildwndexenabledocking"></a><a name="enabledocking"></a>CMDIChildWndEx::인에이블도킹
 
-주 프레임에 자식 창을 도킹할 수 있도록 합니다.
+자식 창을 주 프레임에 도킹할 수 있습니다.
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -387,93 +387,93 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="parameters"></a>매개 변수
 
 *dwDockStyle*<br/>
-진행 사용할 도킹 맞춤을 지정 합니다.
+【인】 활성화할 도킹 정렬을 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
+메서드가 성공하면 TRUE입니다. 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-주 프레임에 대 한 도킹 맞춤을 사용 하도록 설정 하려면이 메서드를 호출 합니다. CBRS_ALIGN_ 플래그의 조합을 전달할 수 있습니다 (자세한 내용은 [Ccontrolbar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)참조).
+주 프레임에 도킹 정렬을 활성화하려면 이 메서드를 호출합니다. CBRS_ALIGN_ 플래그 조합을 전달할 수 있습니다(자세한 내용은 [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)참조).
 
-##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
+## <a name="cmdichildwndexgetdockingmanager"></a><a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName
+## <a name="cmdichildwndexgetdocumentname"></a><a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName
 
-MDI 자식 창에 표시 되는 문서의 이름을 반환 합니다.
+MDI 자식 창에 표시되는 문서의 이름을 반환합니다.
 
 ```
 virtual LPCTSTR GetDocumentName(CObject** pObj);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-문서 이름을 포함 하는 문자열에 대 한 포인터입니다.
+문서 의 이름을 포함 하는 문자열에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-문서는 MDI 자식 창에 표시 되는 내용입니다. 일반적으로 창에는 파일에서 로드 되거나 파일에 저장 된 데이터가 표시 됩니다. 따라서 문서 이름은 파일의 이름입니다. 의 `GetDocumentName` 기본 구현은에서 `CDocument::GetPathName`가져온 문자열을 반환 합니다.
+문서는 MDI 자식 창에 표시되는 내용입니다. 일반적으로 창에는 파일에서 로드하거나 파일에 저장된 데이터가 표시됩니다. 따라서 문서의 이름은 파일의 이름입니다. 기본 구현은 `GetDocumentName` 에서 `CDocument::GetPathName`얻은 문자열을 반환합니다.
 
-창에 파일에서 로드 되지 않은 문서가 표시 되 면 파생 클래스에서이 메서드를 재정의 하 고 고유한 문서 식별자를 반환 합니다.
+창에 파일에서 로드되지 않은 문서가 표시되는 경우 파생 클래스에서 이 메서드를 재정의하고 고유한 문서 식별자를 반환합니다.
 
-`GetDocumentName`는 열려 있는 모든 문서의 상태를 저장할 때 프레임 워크에서 호출 됩니다. 반환 된 문자열은 레지스트리에 기록 됩니다.
+`GetDocumentName`열려 있는 모든 문서의 상태를 저장할 때 프레임워크에서 호출됩니다. 반환된 문자열이 레지스트리에 기록됩니다.
 
-프레임 워크에서 나중에 상태를 복원 하는 경우 문서 이름을 레지스트리에서 읽고 [CMDIFrameWndEx:: CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)에 전달 합니다. [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)파생 클래스에서이 메서드를 재정의 하 고이 이름을 가진 문서를 만들거나 열고이 이름을 가진 파일을 읽습니다. 문서가 파일을 기반으로 하지 않는 경우 문서 식별자 자체를 기반으로 문서를 만듭니다. 문서를 저장 하 고 복원 하려는 경우에만 위의 작업을 수행 해야 합니다.
+프레임워크가 나중에 상태를 복원하는 경우 문서 이름이 레지스트리에서 [읽혀지고 CMDIFrameWndEx::CreateDocument창으로](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)전달됩니다. [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-derived 클래스에서 이 메서드를 재정의하고 이 이름을 가지고 있는 파일에서 이 이름을 가지고 있는 문서를 만들거나 엽니다. 문서가 파일을 기반으로 하지 않는 경우 문서 식별자 자체를 기반으로 문서를 만듭니다. 문서를 저장하고 복원하려는 경우에만 이전 작업을 수행해야 합니다.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 `GetDocumentName` 메서드를 사용하는 방법을 보여 줍니다. 이 코드 조각은 [VisualStudioDemo 샘플에서 제공 됩니다. MFC Visual Studio 응용](../../overview/visual-cpp-samples.md)프로그램입니다.
+다음 예제에서는 `GetDocumentName` 메서드를 사용하는 방법을 보여 줍니다. 이 코드 조각은 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램에서](../../overview/visual-cpp-samples.md)제공됩니다.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
-##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon
+## <a name="cmdichildwndexgetframeicon"></a><a name="getframeicon"></a>CMDIChildWndEx::겟프레임아이콘
 
-MDI 자식 창의 아이콘을 검색 하기 위해 프레임 워크에서 호출 됩니다.
+MDI 자식 창의 아이콘을 검색 하려면 프레임 워크에 의해 호출 됩니다.
 
 ```
 virtual HICON GetFrameIcon() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창 아이콘에 대 한 핸들입니다.
+창 아이콘의 핸들입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 MDI 자식 프레임 창이 포함 된 MDI 탭에 표시할 아이콘을 결정 하기 위해 프레임 워크에서 호출 됩니다.
+이 메서드는 MDI 자식 프레임 창을 포함 하는 MDI 탭에 표시 할 아이콘을 결정 하기 위해 프레임 워크에 의해 호출 됩니다.
 
-기본적으로이 메서드는 창 아이콘을 반환 합니다. 파생 `GetFrameIcon` 클래스`CMDIChildWndEx`에서를 재정의 하 여이 동작을 사용자 지정 합니다.
+기본적으로 이 메서드는 창 아이콘을 반환합니다. -derived 클래스에서 재정의하여 `GetFrameIcon` 이 동작을 사용자 지정합니다. `CMDIChildWndEx`
 
-##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText
+## <a name="cmdichildwndexgetframetext"></a><a name="getframetext"></a>CMDIChildWndEx::GetFrameText
 
-MDI 자식 창에 대 한 텍스트를 검색 하기 위해 프레임 워크에서 호출 됩니다.
+MDI 자식 창에 대 한 텍스트를 검색 하는 프레임 워크에 의해 호출 됩니다.
 
 ```
 virtual CString GetFrameText() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-프레임 창 텍스트를 포함 하는 문자열입니다.
+프레임 창 텍스트가 포함된 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 MDI 자식 프레임 창이 포함 된 MDI 탭에 표시할 텍스트를 결정 하기 위해 프레임 워크에서 호출 됩니다.
+이 메서드는 MDI 자식 프레임 창을 포함 하는 MDI 탭에 표시 할 텍스트를 결정 하기 위해 프레임 워크에서 호출 됩니다.
 
-기본적으로이 메서드는 창 텍스트를 반환 합니다. 파생 `GetFrameText` 클래스`CMDIChildWndEx`에서를 재정의 하 여이 동작을 사용자 지정 합니다.
+기본적으로 이 메서드는 창 텍스트를 반환합니다. -derived 클래스에서 재정의하여 `GetFrameText` 이 동작을 사용자 지정합니다. `CMDIChildWndEx`
 
-##  <a name="getpane"></a>  CMDIChildWndEx::GetPane
+## <a name="cmdichildwndexgetpane"></a><a name="getpane"></a>CMDIChildWndEx::겟파인
 
-지정 된 컨트롤 ID로 창을 찾습니다.
+지정된 컨트롤 ID로 창을 찾습니다.
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -482,37 +482,37 @@ CBasePane* GetPane(UINT nID);
 ### <a name="parameters"></a>매개 변수
 
 *nID*<br/>
-진행 찾을 창의 컨트롤 ID입니다.
+【인】 찾을 창의 제어 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창에 대 한 포인터입니다 (있는 경우). 그렇지 않으면 NULL입니다.
+창에 대한 포인터가 발견되면 NULL이 있습니다.
 
-##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
+## <a name="cmdichildwndexgetrelatedtabgroup"></a><a name="getrelatedtabgroup"></a>CMDIChildWndEx::관련 탭 그룹
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane
+## <a name="cmdichildwndexgettabbedpane"></a><a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane
 
-MDI 탭 문서 그룹의 일부인 도킹 창에 대 한 포인터를 반환 합니다.
+MDI 탭된 문서 그룹의 일부인 도킹 창에 대한 포인터를 반환합니다.
 
 ```
 CDockablePane* GetTabbedPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-MDI 탭 문서 그룹의 일부인 도킹 창에 대 한 포인터입니다.
+MDI 탭된 문서 그룹의 일부인 도킹 창에 대한 포인터입니다.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText
+## <a name="cmdichildwndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::gettoolbarButtonToolTipText
 
-도구 모음 단추에 대 한 도구 설명을 검색 하기 위해 프레임 워크에서 호출 됩니다.
+도구 모음 단추에 대한 도구 설명을 검색하려면 프레임워크에서 호출합니다.
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -520,17 +520,17 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString&);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-도구 설명이 표시 되 면 TRUE입니다. 기본 구현에서는 FALSE를 반환 합니다.
+도구 설명이 표시된 경우 TRUE입니다. 기본 구현은 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-도구 모음 단추에 대 한 사용자 지정 도구 설명을 표시 하려면이 메서드를 재정의 합니다.
+도구 모음 단추에 대한 사용자 지정 도구 팁을 표시하려면 이 방법을 재정의합니다.
 
-##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane
+## <a name="cmdichildwndexinsertpane"></a><a name="insertpane"></a>CMDIChildWndEx::삽입판
 
-지정 된 창을 도킹 관리자에 등록 합니다.
+지정된 창을 도킹 관리자에 등록합니다.
 
 ```
 BOOL InsertPane(
@@ -541,22 +541,22 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>매개 변수
 
-*pControlBar*<br/>
-진행 삽입할 창에 대 한 포인터입니다.
+*p컨트롤바*<br/>
+【인】 삽입할 창에 대한 포인터입니다.
 
-*pTarget*<br/>
-진행 인접 한 창에 대 한 포인터입니다.
+*p Target*<br/>
+【인】 인접 창에 대한 포인터입니다.
 
-*bAfter*<br/>
-진행 TRUE 이면 *Pcontrolbar* 가 *ptarget*뒤에 삽입 됩니다. FALSE 이면 *Pcontrolbar* 가 *ptarget*앞에 삽입 됩니다.
+*b애프터*<br/>
+【인】 TRUE인 경우 *pControlBar가* *pTarget*에 삽입됩니다. FALSE인 경우 *pControlBar가* *pTarget*앞에 삽입됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+TRUE 메서드가 성공하면 FALSE가 그렇지 않으면 FALSE입니다.
 
-##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite
+## <a name="cmdichildwndexispointneardocksite"></a><a name="ispointneardocksite"></a>CMDIChildWndEx::이스포인트니어독사이트
 
-지정 된 지점이 dock 사이트 근처에 있는지 여부를 확인 합니다.
+지정된 점이 도크 사이트 근처에 있는지 여부를 결정합니다.
 
 ```
 BOOL IsPointNearDockSite(
@@ -567,60 +567,60 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
-진행 지정 된 지점입니다.
+*지점*<br/>
+【인】 지정된 점입니다.
 
-*dwBarAlignment*<br/>
-진행 점이 근처에 있는 가장자리를 지정 합니다. 가능한 값은 CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP 및 CBRS_ALIGN_BOTTOM입니다.
+*dwBar 정렬*<br/>
+【인】 점이 근처에 있는 모서리를 지정합니다. 가능한 값은 CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP 및 CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
-진행 지점이 dock 사이트의 외부 테두리 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+【인】 TRUE 점이 도크 사이트의 외부 테두리 근처에 있는 경우; 그렇지 않으면 거짓.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지점이 dock 사이트 근처에 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+포인트가 도크 사이트 근처에 있는 경우 TRUE; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-도킹 관리자의 민감도 집합 내에 있는 위치는 도크 사이트 근처에 있습니다. 기본 민감도는 15 픽셀입니다.
+점은 도킹 관리자에서 설정된 민감도 내에 있을 때 도크 사이트 근처에 있습니다. 기본 민감도는 15픽셀입니다.
 
-##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly
+## <a name="cmdichildwndexisreadonly"></a><a name="isreadonly"></a>CMDIChildWndEx::IsRead전용
 
-자식 창에 표시 되는 문서를 읽기 전용인 지 여부를 지정 합니다.
+하위 창에 표시되는 문서가 읽기 전용인지 여부를 지정합니다.
 
 ```
 virtual BOOL IsReadOnly();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-문서가 읽기 전용 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.
+TRUE 문서가 읽기 전용인 경우 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 읽기 전용 문서 저장을 방지 하는 데 사용 됩니다.
+이 함수는 읽기 전용 문서를 저장하지 못하도록 하는 데 사용됩니다.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 메서드를 `IsReadOnly` 재정의 하는 방법을 보여 줍니다. 이 코드 조각은 [VisualStudioDemo 샘플에서 제공 됩니다. MFC Visual Studio 응용](../../overview/visual-cpp-samples.md)프로그램입니다.
+다음 예제에서는 메서드재정의방법을 `IsReadOnly` 보여 줍니다. 이 코드 조각은 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램에서](../../overview/visual-cpp-samples.md)제공됩니다.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
-##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane
+## <a name="cmdichildwndexistabbedpane"></a><a name="istabbedpane"></a>CMDIChildWndEx::이스탭베드파인
 
-MDI 자식 창에 도킹 창이 포함 되는지 여부를 지정 합니다.
+MDI 자식 창에 도킹 창이 있는지 여부를 지정합니다.
 
 ```
 BOOL IsTabbedPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-MDI 자식 창에 탭 문서로 변환 된 도킹 창이 포함 되어 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+True MDI 자식 창에 탭된 문서로 변환된 도킹 창이 포함되어 있는 경우 그렇지 않으면 거짓.
 
-##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame
+## <a name="cmdichildwndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CMDIChildWndEx::온무브미니프레임
 
-미니 프레임 창을 이동 하기 위해 프레임 워크에서 호출 됩니다.
+프레임 워크에서 호출하여 미니 프레임 창을 이동합니다.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -629,15 +629,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>매개 변수
 
 *pFrame*<br/>
-진행 미니 프레임 창에 대 한 포인터입니다.
+【인】 미니 프레임 창에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+TRUE 메서드가 성공하면 FALSE가 됩니다.
 
-##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode
+## <a name="cmdichildwndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CMDIChildWndEx::온셋프리뷰모드
 
-인쇄 미리 보기 모드를 시작 하거나 종료 하기 위해 프레임 워크에서 호출 됩니다.
+인쇄 미리 보기 모드를 입력하거나 종료하려면 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnSetPreviewMode(
@@ -648,14 +648,14 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>매개 변수
 
 *bPreview*<br/>
-진행 TRUE 이면 인쇄 미리 보기 모드를 입력 합니다. FALSE 이면 인쇄 미리 보기 모드를 종료 합니다.
+【인】 TRUE인 경우 인쇄 미리 보기 모드를 입력합니다. FALSE인 경우 인쇄 미리 보기 모드를 종료합니다.
 
 *pState*<br/>
-진행 인쇄 미리 보기 상태 구조에 대 한 포인터입니다.
+【인】 인쇄 미리 보기 상태 구조에 대한 포인터입니다.
 
-##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle
+## <a name="cmdichildwndexonupdateframetitle"></a><a name="onupdateframetitle"></a>CMDIChildWndEx::온업데이트프레임타이틀
 
-프레임 제목을 업데이트 하기 위해 프레임 워크에서 호출 됩니다.
+프레임 제목을 업데이트하기 위해 프레임워크에서 호출합니다.
 
 ```
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
@@ -664,11 +664,11 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ### <a name="parameters"></a>매개 변수
 
 *bAddToTitle*<br/>
-진행 TRUE 이면 제목에 문서 이름을 추가 합니다.
+【인】 TRUE인 경우 제목에 문서 이름을 추가합니다.
 
-##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint
+## <a name="cmdichildwndexpanefrompoint"></a><a name="panefrompoint"></a>CMDIChildWndEx::P인FromPoint
 
-지정 된 지점을 포함 하는 창을 반환 합니다.
+지정된 점을 포함하는 창을 반환합니다.
 
 ```
 CBasePane* PaneFromPoint(
@@ -686,34 +686,34 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
-진행 확인할 지점을 화면 좌표로 지정 합니다.
+*지점*<br/>
+【인】 검사할 점을 화면 좌표로 지정합니다.
 
-*nSensitivity*<br/>
-진행 검색 영역을이 양만큼 늘립니다. 지정 된 지점이 증가 하는 영역에 있으면 창이 검색 조건을 충족 합니다.
+*n감도*<br/>
+【인】 이 금액만큼 검색 영역을 늘립니다. 지정된 점이 증가된 영역에 속하는 경우 창은 검색 기준을 충족합니다.
 
 *bExactBar*<br/>
-진행 *Nsensitivity* 매개 변수를 무시 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.
+【인】 *true는 nSensitivity* 매개 변수를 무시합니다. 그렇지 않으면 false입니다.
 
 *pRTCBarType*<br/>
-진행 NULL이 아닌 경우 메서드는 지정 된 형식의 요소만 검색 합니다.
+【인】 NULL이 아닌 경우 메서드는 지정된 형식의 창만 검색합니다.
 
-*dwAlignment*<br/>
-진행 지정 된 지점에 창이 있으면이 매개 변수에는 지정 된 지점에 가장 가까운 창의 측면이 포함 됩니다. 자세한 내용은 설명 섹션을 참조하세요.
+*dw정렬*<br/>
+【인】 지정된 지점에서 창이 발견되면 이 매개변수에는 지정된 점에 가장 가까운 창의 측면이 포함됩니다. 자세한 내용은 주의 섹션을 참조하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 지점을 포함 `CBasePane`하는 파생 개체에 대 한 포인터 이거나 창이 없는 경우 NULL입니다.
+지정된 점을 `CBasePane`포함하는 -derived 개체에 대한 포인터 또는 창이 없는 경우 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-런타임 클래스 및 표시 유형과 같은 지정 된 조건에 따라 지정 된 지점이 창에 포함 되어 있는지 여부를 확인 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 창에 런타임 클래스 및 가시성과 같은 지정된 조건에 따라 지정된 점이 포함되어 있는지 확인합니다.
 
-함수에서를 반환 하 고 창을 찾았으면 *Dwalignment* 에 지정 된 점의 맞춤을 포함 합니다. 예를 들어 점이 창의 맨 위에 가장 가까이 있는 경우 *Dwalignment* 가 CBRS_ALIGN_TOP로 설정 됩니다.
+함수가 반환되고 창이 발견되면 *dwAlignment에는* 지정된 점의 정렬이 포함됩니다. 예를 들어 점이 창의 맨 위에 가장 가깝으면 *dwAlignment이* CBRS_ALIGN_TOP 설정됩니다.
 
-##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout
+## <a name="cmdichildwndexrecalclayout"></a><a name="recalclayout"></a>CMDIChildWndEx::리콜크 레이아웃
 
-창의 레이아웃을 다시 계산 합니다.
+창의 레이아웃을 다시 계산합니다.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -722,13 +722,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="parameters"></a>매개 변수
 
 *bNotify*<br/>
-진행 TRUE 이면 창의 활성 내부 항목이 레이아웃 변경에 대 한 알림을 받습니다.
+【인】 TRUE이면 창의 활성 인플레이스 항목에서 레이아웃 변경에 대한 알림을 받습니다.
 
-##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager
+## <a name="cmdichildwndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CMDIChildWndEx::제거파네에서독매니저
 
-도킹 관리자에서 창을 제거 합니다.
+도킹 관리자에서 창을 제거합니다.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -739,36 +739,36 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>매개 변수
 
-*pControlBar*<br/>
-진행 제거할 창에 대 한 포인터입니다.
+*p컨트롤바*<br/>
+【인】 제거할 창에 대한 포인터입니다.
 
 *bDestroy*<br/>
-진행 TRUE 이면 제거 된 창이 제거 됩니다.
+【인】 TRUE이면 제거된 창이 소멸됩니다.
 
-*bAdjustLayout*<br/>
-진행 TRUE 이면 도킹 레이아웃을 즉시 조정 합니다.
+*bAdjust레이아웃*<br/>
+【인】 TRUE인 경우 도킹 레이아웃을 즉시 조정합니다.
 
-*bAutoHide*<br/>
-진행 TRUE 이면 도킹 레이아웃이 자동 숨기기 막대 목록과 관련 됩니다. FALSE 이면 도킹 레이아웃이 일반 창 목록과 관련 됩니다.
+*b자동 숨기기*<br/>
+【인】 TRUE인 경우 도킹 레이아웃은 자동 숨기기 막대 목록과 관련이 있습니다. FALSE인 경우 도킹 레이아웃은 일반 창 목록과 관련이 있습니다.
 
-*pBarReplacement*<br/>
-진행 제거 된 창을 대체 하는 창에 대 한 포인터입니다.
+*pBar교체*<br/>
+【인】 제거된 창을 대체하는 창에 대한 포인터입니다.
 
-##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
+## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::세트 관련 탭 그룹
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *p*<br/>
+【인】 *p*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
+## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::쇼파인
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -778,19 +778,19 @@ void ShowPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-[in] *bShow*<br/>
+【인】 *bShow*<br/>
 
-[in] *bDelay*<br/>
+【인】 *bDelay*<br/>
 
-[in] *bActivate*<br/>
+【인】 *b활성화*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon
+## <a name="cmdichildwndexupdatetaskbartabicon"></a><a name="updatetaskbartabicon"></a>CMDIChildWndEx::업데이트 작업 표시줄TabIcon
 
-Windows 7 작업 표시줄 탭 아이콘을 업데이트 합니다.
+Windows 7 작업 표시줄 탭 아이콘을 업데이트합니다.
 
 ```
 virtual void UpdateTaskbarTabIcon(HICON hIcon);
@@ -799,28 +799,28 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ### <a name="parameters"></a>매개 변수
 
 *hIcon*<br/>
-Windows 7 작업 표시줄 탭에 표시 되는 아이콘에 대 한 핸들입니다.
+Windows 7 작업 표시줄 탭에 표시할 아이콘의 핸들입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab
+## <a name="cmdichildwndexunregistertaskbartab"></a><a name="unregistertaskbartab"></a>CMDIChildWndEx::레지스터 해제작업 표시줄 탭
 
-Windows 7 작업 표시줄 탭에서 MDI 자식을 제거 합니다.
+Windows 7 작업 표시줄 탭에서 MDI 자식을 제거합니다.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*bCheckRegisteredMDIChildCount*<br/>
-이 함수가 MDI 탭에 등록 된 MDI 자식의 수를 확인 해야 하는지 여부를 지정 합니다. 이 숫자가 0 이면이 함수는 응용 프로그램의 작업 표시줄 축소판 그림에서 클리핑 사각형을 제거 합니다.
+*bCheck등록MDIChildCount*<br/>
+이 함수가 MDI 탭에 등록된 MDI 자식 수를 확인해야 하는지 여부를 지정합니다. 이 숫자가 0이면 이 함수는 응용 프로그램의 작업 표시줄 축소판에서 클리핑 사각형을 제거합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect
+## <a name="cmdichildwndexsettaskbarthumbnailcliprect"></a><a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::셋태스크바썸네일클립렉트
 
-작업 표시줄에 해당 창의 축소판 그림으로 표시할 창 클라이언트 영역의 일부를 선택 하는 클리핑 사각형을 설정 하기 위해 프레임 워크에서 호출 됩니다.
+프레임워크에서 클리핑 사각형을 설정하여 작업 표시줄에 해당 창의 축소판으로 표시할 창 클라이언트 영역의 일부를 선택합니다.
 
 ```
 virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
@@ -829,57 +829,57 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ### <a name="parameters"></a>매개 변수
 
 *rect*<br/>
-새 클리핑 사각형을 지정 합니다. 사각형이 비어 있거나 null 인 경우에는 클리핑이 제거 됩니다.
+새 클리핑 사각형을 지정합니다. 사각형이 비어 있거나 null이면 클리핑이 제거됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties
+## <a name="cmdichildwndexsettaskbartabproperties"></a><a name="settaskbartabproperties"></a>CMDIChildWndEx::설정 작업 표시줄탭속성
 
 Windows 7 작업 표시줄 탭에 대한 속성을 설정합니다.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *dwFlags*<br/>
-STPFLAG 값의 조합입니다. 자세한 내용은 [ITaskbarList4:: SetTabProperties](/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties)를 참조 하세요.
+STPFLAG 값의 조합입니다. 자세한 내용은 [ITaskbarList4:SetTabProperties](/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).
 
 ### <a name="remarks"></a>설명
 
-##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder
+## <a name="cmdichildwndexsettaskbartaborder"></a><a name="settaskbartaborder"></a>CMDIChildWndEx::설정 작업 표시줄 탭 순서
 
-Windows 7 작업 표시줄 탭의 지정 된 창 앞에 MDI 자식을 삽입 합니다.
+Windows 7 작업 표시줄 탭에서 지정된 창 앞에 MDI 자식을 삽입합니다.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pWndBefore*<br/>
-축소판 그림이 왼쪽에 삽입 되는 MDI 자식 창에 대 한 포인터입니다. 이 창은를 통해 `RegisterTaskbarTab`이미 등록 되어 있어야 합니다. 이 값이 NULL 이면 새 미리 보기가 목록의 끝에 추가 됩니다.
+*pWnd이전*<br/>
+축소판 그림이 왼쪽에 삽입된 MDI 자식 창에 대한 포인터입니다. 이 창을 통해 `RegisterTaskbarTab`이미 등록되어 있어야 합니다. 이 값이 NULL이면 새 축소판 그림이 목록의 끝에 추가됩니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive
+## <a name="cmdichildwndexsettaskbartabactive"></a><a name="settaskbartabactive"></a>CMDIChildWndEx::설정 작업 표시줄탭 활성
 
-해당 하는 Windows 7 작업 표시줄 탭을 활성화 합니다.
+해당 Windows 7 작업 표시줄 탭을 활성화합니다.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab
+## <a name="cmdichildwndexregistertaskbartab"></a><a name="registertaskbartab"></a>CMDIChildWndEx::레지스터작업 표시줄 탭
 
-Windows 7 작업 표시줄 탭에 MDI 자식을 등록 합니다.
+Windows 7 작업 표시줄 탭으로 MDI 자식을 등록합니다.
 
 ```
 virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
@@ -887,14 +887,14 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 
 ### <a name="parameters"></a>매개 변수
 
-*pWndBefore*<br/>
-축소판 그림이 왼쪽에 삽입 되는 MDI 자식 창에 대 한 포인터입니다. 이 창은를 통해 `RegisterTaskbarTab`이미 등록 되어 있어야 합니다. 이 값이 NULL 이면 새 미리 보기가 목록의 끝에 추가 됩니다.
+*pWnd이전*<br/>
+축소판 그림이 왼쪽에 삽입된 MDI 자식 창에 대한 포인터입니다. 이 창을 통해 `RegisterTaskbarTab`이미 등록되어 있어야 합니다. 이 값이 NULL이면 새 축소판 그림이 목록의 끝에 추가됩니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch
+## <a name="cmdichildwndexontaskbartabthumbnailstretch"></a><a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::온태스크바탭섬네일스트레치
 
-MDI 자식의 Windows 7 작업 표시줄 탭 축소판 그림 미리 보기에 대 한 비트맵을 스트레치 해야 할 때 프레임 워크에서 호출 됩니다.
+그것은 윈도우에 대한 비트 맵을 스트레칭해야 할 때 프레임 워크에 의해 호출 7 작업 표시 줄 탭 축소판 미리보기 MDI 자식.
 
 ```
 virtual BOOL OnTaskbarTabThumbnailStretch(
@@ -907,24 +907,24 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ### <a name="parameters"></a>매개 변수
 
 *hBmpDst*<br/>
-대상 비트맵에 대 한 핸들입니다.
+대상 비트맵에 대한 핸들입니다.
 
-*rectDst*<br/>
-대상 사각형을 지정 합니다.
+*정류자*<br/>
+대상 사각형을 지정합니다.
 
 *hBmpSrc*<br/>
-소스 비트맵에 대 한 핸들입니다.
+소스 비트맵에 대한 핸들입니다.
 
 *rectSrc*<br/>
-소스 사각형을 지정 합니다.
+소스 사각형을 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-요구 사항: afxmdichildwndex
+요구 사항 : afxmdichildwndex.h
 
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate
+## <a name="cmdichildwndexontaskbartabthumbnailmouseactivate"></a><a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTab엄지네일마우스활성화
 
-작업 표시줄 탭 축소판 그림이 WM_MOUSEACTIVATE 메시지를 처리 해야 할 때 프레임 워크에서 호출 됩니다.
+작업 표시줄 탭 축소판이 WM_MOUSEACTIVATE 메시지를 처리해야 하는 경우 프레임워크에서 호출됩니다.
 
 ```
 virtual int OnTaskbarTabThumbnailMouseActivate(
@@ -936,21 +936,21 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="parameters"></a>매개 변수
 
 *pDesktopWnd*<br/>
-활성화 되는 창의 최상위 부모 창에 대 한 포인터를 지정 합니다. 포인터는 일시적일 수 있으므로 저장 하면 안 됩니다.
+활성화되는 창의 최상위 상위 창에 대한 포인터를 지정합니다. 포인터는 일시적일 수 있으며 저장해서는 안 됩니다.
 
-*nHitTest*<br/>
-적중 테스트 영역 코드를 지정 합니다. 적중 횟수 테스트는 커서의 위치를 결정 하는 테스트입니다.
+*n히트 테스트*<br/>
+적중 테스트 영역 코드를 지정합니다. 적중 테스트는 커서의 위치를 결정하는 테스트입니다.
 
 *message*<br/>
-마우스 메시지 번호를 지정 합니다.
+마우스 메시지 번호를 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-기본 구현에서는 관련 MDI 자식 프레임을 활성화 합니다.
+기본 구현은 관련 MDI 자식 프레임을 활성화합니다.
 
-##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate
+## <a name="cmdichildwndexontaskbartabthumbnailactivate"></a><a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTab엄지네일활성화
 
-작업 표시줄 탭 축소판 그림이 WM_ACTIVATE 메시지를 처리 해야 할 때 프레임 워크에서 호출 됩니다.
+작업 표시줄 탭 축소판이 WM_ACTIVATE 메시지를 처리해야 하는 경우 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnTaskbarTabThumbnailActivate(
@@ -962,21 +962,21 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="parameters"></a>매개 변수
 
 *nState*<br/>
-을 `CWnd` 활성화 하거나 비활성화 하 고 있는지 여부를 지정 합니다.
+활성화 또는 비활성화 `CWnd` 중인지 여부를 지정합니다.
 
-*pWndOther*<br/>
-활성화 또는 비활성화 `CWnd` 되는에 대 한 포인터입니다. 포인터는 NULL 일 수 있으며 일시적일 수 있습니다.
+*pWnd기타*<br/>
+활성화 `CWnd` 또는 비활성화되는 포인터입니다. 포인터는 NULL일 수 있으며 일시적일 수 있습니다.
 
-*bMinimized*<br/>
-활성화 또는 비활성화 되는 `CWnd` 의 최소화 된 상태를 지정 합니다. TRUE 값은 창이 최소화 되었음을 나타냅니다.
+*b최소화*<br/>
+활성화 또는 `CWnd` 비활성화되는 최소화된 상태를 지정합니다. TRUE 값은 창이 최소화했음을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
-기본 구현에서는 관련 MDI 자식 프레임을 활성화 합니다.
+기본 구현은 관련 MDI 자식 프레임을 활성화합니다.
 
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton
+## <a name="cmdichildwndexonpresstaskbarthmbnailclosebutton"></a><a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnpressTaskbarThmb네일클로즈버튼
 
-사용자가 작업 표시줄 탭 미리 보기에서 닫기 단추를 누를 때 프레임 워크에서 호출 됩니다.
+사용자가 작업 표시줄 탭 축소판에서 닫기 단추를 누를 때 프레임워크에서 호출됩니다.
 
 ```
 virtual void OnPressTaskbarThmbnailCloseButton();
@@ -984,9 +984,9 @@ virtual void OnPressTaskbarThmbnailCloseButton();
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail
+## <a name="cmdichildwndexongeticonicthumbnail"></a><a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconic엄지손가락
 
-MDI 자식의 아이콘 미리 보기에 대 한 비트맵을 가져와야 할 때 프레임 워크에서 호출 됩니다.
+MDI 자식의 상징적인 축소판 그림에 대한 비트맵을 가져와야 할 때 프레임워크에서 호출합니다.
 
 ```
 virtual HBITMAP OnGetIconicThumbnail(
@@ -997,16 +997,16 @@ virtual HBITMAP OnGetIconicThumbnail(
 ### <a name="parameters"></a>매개 변수
 
 *nWidth*<br/>
-필수 비트맵의 너비를 지정 합니다.
+필요한 비트맵의 너비를 지정합니다.
 
 *nHeight*<br/>
-필수 비트맵의 높이를 지정 합니다.
+필요한 비트맵의 높이를 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap
+## <a name="cmdichildwndexongeticoniclivepreviewbitmap"></a><a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLive프리뷰비트맵
 
-MDI 자식의 라이브 미리 보기에 대 한 비트맵을 가져와야 할 때 프레임 워크에서 호출 됩니다.
+MDI 자식의 라이브 미리 보기를 위해 비트맵을 가져와야 할 때 프레임워크에서 호출합니다.
 
 ```
 virtual HBITMAP OnGetIconicLivePreviewBitmap(
@@ -1016,23 +1016,23 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 
 ### <a name="parameters"></a>매개 변수
 
-*bIsMDIChildActive*<br/>
-현재 활성 상태이 고 주 창이 최소화 되지 않은 MDI 자식에 대해 비트맵이 요청 되 면이 매개 변수는 TRUE입니다. 이 경우 기본 처리에는 주 창의 스냅숏이 사용 됩니다.
+*비스엠디차일드액티브*<br/>
+이 매개 변수는 현재 활성 상태이고 주 창이 최소화되지 않은 MDI 자식에 대해 비트맵이 요청된 경우 TRUE입니다. 이 경우 기본 처리는 주 창의 스냅숏을 생성합니다.
 
-*ptLocation*<br/>
-주 (최상위) 창 클라이언트 좌표에서 비트맵의 위치를 지정 합니다. 이 지점은 호출 수신자가 제공 해야 합니다.
+*pt위치*<br/>
+기본(최상위) 창 클라이언트 좌표에서 비트맵의 위치를 지정합니다. 이 점은 받는 이별에서 제공해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-처리 되는 경우 유효한 32bpp 비트맵에 대 한 핸들을 반환 하 고 그렇지 않으면 NULL을 반환 합니다.
+처리된 경우 핸들을 유효한 32bpp 비트맵(그렇지 않으면 NULL)으로 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 고 MDI 자식의 실시간 미리 보기에 대해 유효한 32bpp 비트맵을 반환 합니다. 이 메서드는 MDI 자식이 Windows 7 작업 표시줄 탭에 표시 되는 경우에만 호출 됩니다. NULL을 반환 하는 경우 MFC는 기본 처리기를 호출 하 고 `PrintClient` 또는 `PrintWindow`을 사용 하 여 비트맵을 가져옵니다.
+파생 클래스에서 이 메서드를 재정의하고 MDI 자식의 라이브 미리 보기에 유효한 32bpp 비트맵을 반환합니다. 이 메서드는 MDI 자식이 Windows 7 작업 표시줄 탭에 표시 될 때만 호출 됩니다. NULL을 반환하는 경우 MFC는 기본 처리기를 호출하고 `PrintWindow`를 사용하여 `PrintClient` 비트맵을 가져옵니다.
 
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags
+## <a name="cmdichildwndexm_dwdefaulttaskbartabpropertyflags"></a><a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags
 
-탭 (MDI 자식)이 Windows 7 작업 표시줄 탭에 등록 `SetTaskbarTabProperties` 될 때 프레임 워크에서 메서드로 전달 되는 플래그의 조합입니다.
+탭 (MDI 자식)가 Windows `SetTaskbarTabProperties` 7 작업 표시 줄 탭에 등록 될 때 메서드에 프레임 워크에 의해 전달 되는 플래그의 조합입니다.
 
 ```
 AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
@@ -1040,142 +1040,142 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 
 ### <a name="remarks"></a>설명
 
-기본 조합은 STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE입니다.
+기본 조합은 STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.
 
-##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled
+## <a name="cmdichildwndexistaskbarthumbnailcliprectenabled"></a><a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::이태스크바썸네일클립렉트사용
 
-작업 표시줄에서 창의 축소판 그림이 활성화 또는 비활성화 되어 표시 되도록 창의 클라이언트 영역 부분을 자동으로 선택할 수 있는지 여부를 나타냅니다.
+작업 표시줄에서 해당 창의 축소판 그림으로 표시할 창의 클라이언트 영역 의 일부를 자동으로 선택할 수 있는지 여부를 알려줍니다.
 
 ```
 BOOL IsTaskbarThumbnailClipRectEnabled() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-창 클라이언트 영역의 일부를 자동으로 선택 하 여 사용할 수 있는 경우 TRUE를 반환 합니다. 그렇지 않으면 FALSE입니다.
+표시할 창의 클라이언트 영역 의 일부를 자동으로 선택하면 TRUE를 반환합니다. 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled
+## <a name="cmdichildwndexistaskbartabssupportenabled"></a><a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabs지원 지원
 
-MDI 자식이 Windows 7 작업 표시줄 탭에 표시 될 수 있는지 여부를 나타냅니다.
+MDI 자식이 Windows 7 작업 표시줄 탭에 나타날 수 있는지 여부를 알려줍니다.
 
 ```
 BOOL IsTaskbarTabsSupportEnabled();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-MDI 자식이 Windows 7 작업 표시줄 탭에 표시 될 수 있으면 TRUE입니다. Windows 7 작업 표시줄 탭에 MDI 자식을 표시할 수 없으면 FALSE입니다.
+True 경우 MDI 자식 Windows 7 작업 표시줄 탭에 나타날 수 있습니다. MDI 자식이 Windows 7 작업 표시줄 탭에 나타날 수 없는 경우 FALSE.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs
+## <a name="cmdichildwndexisregisteredwithtaskbartabs"></a><a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::등록된작업 표시줄탭
 
-MDI 자식이 Windows 7 작업 표시줄 탭에 성공적으로 등록 된 경우 TRUE를 반환 합니다.
+MDI 자식이 Windows 7 작업 표시줄 탭에 성공적으로 등록된 경우 TRUE를 반환합니다.
 
 ```
 BOOL IsRegisteredWithTaskbarTabs();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-MDI 자식이 Windows 7 작업 표시줄 탭에 등록 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
+True MDI 자식이 Windows 7 작업 표시줄 탭에 등록된 경우 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps
+## <a name="cmdichildwndexinvalidateiconicbitmaps"></a><a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::무효화아이코닉비트맵
 
-MDI 자식의 아이콘 비트맵 표현을 무효화 합니다.
+MDI 자식의 상징적인 비트맵 표현을 무효화합니다.
 
 ```
 BOOL InvalidateIconicBitmaps();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Windows 7 작업 표시줄 지원이 사용 하지 않도록 설정 되어 있거나 MDI 자식이 Windows 7 작업 표시줄 탭에 등록 되지 않은 경우 FALSE를 반환 합니다. 그렇지 않으면 TRUE를 반환 합니다.
+Windows 7 작업 표시줄 지원이 비활성화되어 있거나 MDI 자식이 Windows 7 작업 표시줄 탭에 등록되지 않은 경우 FALSE를 반환합니다. 그렇지 않으면 TRUE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-는 MDI 자식의 라이브 콘텐츠나 크기가 변경 될 때 호출 되어야 합니다.
+MDI 자식의 라이브 콘텐츠 또는 크기가 변경된 경우 호출해야 합니다.
 
-##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect
+## <a name="cmdichildwndexgettaskbarthumbnailcliprect"></a><a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::겟태스크바썸네일클립렉트
 
-작업 표시줄에 해당 창의 축소판 그림으로 표시 하기 위해 창 클라이언트 영역의 일부를 선택 해야 할 때 프레임 워크에서 호출 됩니다.
+작업 표시줄에서 해당 창의 축소판으로 표시할 창의 클라이언트 영역 의 일부를 선택해야 할 때 프레임워크에서 호출합니다.
 
 ```
 virtual CRect GetTaskbarThumbnailClipRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Windows 좌표의 사각형입니다. 이 사각형은 최상위 프레임의 클라이언트 영역에 매핑됩니다. 클리핑 사각형을 지우려면 사각형을 비워 두어야 합니다.
+창 좌표의 사각형입니다. 이 사각형은 최상위 프레임의 클라이언트 영역에 매핑됩니다. 클리핑 사각형을 지우려면 사각형이 비어 있어야 합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd
+## <a name="cmdichildwndexgettaskbarpreviewwnd"></a><a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbar프리뷰
 
-Windows 7 작업 표시줄 탭 축소판 그림에 표시 되는 자식 창 (일반적으로 뷰 또는 분할자 창)을 가져와야 할 때 프레임 워크에서 호출 됩니다.
+Windows 7 작업 표시줄 탭 축소판에 표시할 자식 창(일반적으로 보기 또는 분할자 창)을 가져와야 할 때 프레임워크에서 호출합니다.
 
 ```
 virtual CWnd* GetTaskbarPreviewWnd();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-는 `CWnd` 개체에 대 한 유효한 포인터를 반환 해야 합니다 .이 개체는 해당 미리 보기가이 MDI 자식과 관련 된 Windows 7 작업 표시줄 탭에 표시 되어야 합니다. 기본 구현에서는 AFX_IDW_PANE_FIRST 컨트롤 ID (일반적 `CView`으로 파생 클래스)를 사용 하 여이 MDI 자식의 자식 창을 반환 합니다.
+이 MDI 자식과 관련된 Windows 7 작업 표시줄 탭에 미리 보기가 표시되어야 하는 `CWnd` 개체에 유효한 포인터를 반환해야 합니다. 기본 구현은 AFX_IDW_PANE_FIRST 제어 ID(일반적으로 `CView`-derived 클래스)를 가진 이 MDI 자식의 자식 창을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd
+## <a name="cmdichildwndexgettabproxywnd"></a><a name="gettabproxywnd"></a>CMDIChildWndEx::GetTab프록시Wnd
 
-Windows 7 작업 표시줄 탭에 등록 된 탭 프록시 창을 반환 합니다.
+Windows 7 작업 표시줄 탭에 등록된 탭 프록시 창을 반환합니다.
 
 ```
 CMDITabProxyWnd* GetTabProxyWnd();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Windows 7 작업 표시줄 `CMDITabProxyWnd` 탭에 등록 된 개체에 대 한 포인터입니다.
+Windows 7 `CMDITabProxyWnd` 작업 표시줄 탭에 등록된 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect
+## <a name="cmdichildwndexenabletaskbarthumbnailcliprect"></a><a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::인에이블태스크바썸네일클립렉트
 
-작업 표시줄에 해당 창의 미리 보기를 표시 하도록 창의 클라이언트 영역에 있는 자동 선택을 사용 하거나 사용 하지 않도록 설정 합니다.
+창의 클라이언트 영역 일부를 자동으로 선택하거나 비활성화하여 작업 표시줄에 해당 창의 축소판으로 표시합니다.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bEnable*<br/>
-창 클라이언트 영역의 일부를 자동으로 선택 하 여 표시할 수 있는지 (FALSE)를 지정 합니다.
+표시할 창의 클라이언트 영역 부분의 활성화(TRUE) 또는 (FALSE) 자동 선택을 사용하도록 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs
+## <a name="cmdichildwndexcanshowontaskbartabs"></a><a name="canshowontaskbartabs"></a>CMDIChildWndEx::캔쇼온태스크바탭
 
-Windows 7 작업 표시줄 탭에이 MDI 자식을 표시할 수 있는지 여부를 프레임 워크에 알립니다.
+이 MDI 자식이 Windows 7 작업 표시줄 탭에 표시될 수 있는지 여부를 프레임워크에 알려줍니다.
 
 ```
 virtual BOOL CanShowOnTaskBarTabs();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Windows 7 작업 표시줄 축소판 그림에 MDI 자식의 콘텐츠를 표시할 수 있으면 TRUE입니다.
+True MDI 자식의 내용을 Windows 7 작업 표시줄 축소판에 표시할 수 있는 경우.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스에서이 메서드를 재정의 하 고 FALSE를 반환 하 여 Windows 7 작업 표시줄 탭에서이 MDI 자식의 모양을 사용 하지 않도록 설정 합니다.
+파생 된 클래스에서이 메서드를 재정의 하 고 Windows 7 작업 표시줄 탭에서이 MDI 자식의 모양을 사용 하지 않도록 설정 하려면 FALSE를 반환 합니다.
 
-##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame
+## <a name="cmdichildwndexactivatetoplevelframe"></a><a name="activatetoplevelframe"></a>CMDIChildWndEx::활성화탑레벨프레임
 
-작업 표시줄 탭에서 응용 프로그램을 활성화할 때 최상위 프레임을 활성화 하기 위해 프레임 워크에서 호출 됩니다.
+작업 표시줄 탭에서 응용 프로그램이 활성화될 때 최상위 프레임을 활성화하기 위해 프레임워크에서 호출합니다.
 
 ```
 virtual void ActivateTopLevelFrame();
@@ -1183,10 +1183,10 @@ virtual void ActivateTopLevelFrame();
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)<br/>
-[CMFCWindowsManagerDialog 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
+[CMDI차일드 클래스](../../mfc/reference/cmdichildwnd-class.md)<br/>
+[CMFC윈도우매니저디아로그 클래스](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)

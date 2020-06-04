@@ -1,10 +1,11 @@
 ---
 title: modf, modff, modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914632"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -66,7 +68,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *intptr*<br/>
 저장된 정수 부분에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이 함수는 *x*의 부호 있는 소수 부분을 반환합니다. 반환되는 오류가 없습니다.
 
@@ -76,15 +78,17 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-C++는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 매개 변수를 사용 하 고 반환 하는 **modf** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **modf** 는 항상 두 개의 double 값을 사용 하 고 double 값을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 매개 변수를 사용 하 고 반환 하는 **modf** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **modf** 는 항상 두 개의 double 값을 사용 하 고 double 값을 반환 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> 또는 \<math.h>|
+|**modf**, **modf**, **modf**|C: \<math.h><br /><br /> C++: , \<cmath> 또는 \<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -110,7 +114,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

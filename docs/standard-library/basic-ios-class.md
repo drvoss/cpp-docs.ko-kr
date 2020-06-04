@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c8f883dd4f946c03aaa22dffcf5a3164a539d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688435"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364917"
 ---
 # <a name="basic_ios-class"></a>basic_ios 클래스
 
-클래스 템플릿은 템플릿 매개 변수에 따라 달라 지는 입력 스트림 (클래스 템플릿 [basic_istream](../standard-library/basic-istream-class.md)) 및 출력 스트림 (클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md))에 공통 된 저장소 및 멤버 함수를 설명 합니다. [Ios_base](../standard-library/ios-base-class.md) 클래스는 템플릿 매개 변수에 종속 되지 않는 일반적인 항목을 설명 합니다. **Basic_ios \<class Elem, 클래스 특성 >** 클래스의 개체는 `Elem` 형식의 요소가 포함 된 스트림을 제어 하는 데 도움이 됩니다. 해당 문자 특성은 `Traits` 클래스에 의해 결정 됩니다.
+클래스 템플릿은 템플릿 매개 변수에 의존하는 입력 스트림(클래스 템플릿 [basic_istream)과](../standard-library/basic-istream-class.md)출력 스트림(클래스 템플릿 [basic_ostream)에](../standard-library/basic-ostream-class.md)공통적인 저장소 및 멤버 함수를 설명합니다. 클래스 [ios_base](../standard-library/ios-base-class.md) 템플릿 매개 변수에 종속되지 않고 공통되는 것을 설명합니다.) 클래스 **basic_ios\<클래스 Elem의 개체인 클래스 특성>** 클래스 `Elem`특성은 클래스에 `Traits`의해 문자 특성이 결정되는 형식 요소로 스트림을 제어하는 데 도움이 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -76,19 +76,19 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem* \
+*Elem*\
 형식입니다.
 
-*특성* \
+*특성*\
 `char_traits` 형식의 변수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **basic_ios\<class Elem, class Traits>** 클래스의 개체는 다음을 저장합니다.
 
-- [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** 형식의 개체에 대한 연결(tie) 포인터
+- basic_istream [유형의](../standard-library/basic-istream-class.md)개체에 대한 넥타이 포인터, 특성>.**\< **
 
-- [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, Traits >** 형식의 개체에 대한 스트림 버퍼 포인터
+- **\<Basic_streambuf Elem, Traits >** 형식의 개체에 [대한](../standard-library/basic-streambuf-class.md)스트림 버퍼 포인터 .
 
 - [서식 정보](../standard-library/ios-base-class.md)
 
@@ -98,13 +98,13 @@ class basic_ios : public ios_base
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[basic_ios](#basic_ios)|`basic_ios` 클래스를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[char_type](#char_type)|템플릿 매개 변수 `Elem`의 동의어.|
 |[int_type](#int_type)|`Traits::int_type`의 동의어입니다.|
@@ -114,35 +114,35 @@ class basic_ios : public ios_base
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
-|[bad](#bad)|스트림 버퍼의 무결성 손실을 나타냅니다.|
-|[clear](#clear)|오류 플래그를 모두 지웁니다.|
+|[나쁜](#bad)|스트림 버퍼의 무결성 손실을 나타냅니다.|
+|[명확한](#clear)|오류 플래그를 모두 지웁니다.|
 |[copyfmt](#copyfmt)|스트림 간에 플래그를 복사합니다.|
-|[eof](#eof)|스트림의 끝에 도달했는지 여부를 나타냅니다.|
-|[exceptions](#exceptions)|스트림에서 발생하는 예외를 나타냅니다.|
-|[fail](#fail)|스트림에서 유효한 필드 추출 실패를 나타냅니다.|
-|[fill](#fill)|텍스트가 스트림만큼 넓지 않을 경우 사용할 문자를 지정하거나 반환합니다.|
-|[good](#good)|스트림 상태가 양호함을 나타냅니다.|
+|[Eof](#eof)|스트림의 끝에 도달했는지 여부를 나타냅니다.|
+|[예외](#exceptions)|스트림에서 발생하는 예외를 나타냅니다.|
+|[실패](#fail)|스트림에서 유효한 필드 추출 실패를 나타냅니다.|
+|[채우기](#fill)|텍스트가 스트림만큼 넓지 않을 경우 사용할 문자를 지정하거나 반환합니다.|
+|[좋은](#good)|스트림 상태가 양호함을 나타냅니다.|
 |[imbue](#imbue)|로캘을 변경합니다.|
-|[init](#init)|`basic_ios` 생성자에 의해 호출됩니다.|
-|[move](#move)|스트림 버퍼에 대한 포인터를 제외하고 매개 변수의 모든 값을 현재 개체로 이동합니다.|
+|[Init](#init)|`basic_ios` 생성자에 의해 호출됩니다.|
+|[이동](#move)|스트림 버퍼에 대한 포인터를 제외하고 매개 변수의 모든 값을 현재 개체로 이동합니다.|
 |[narrow](#narrow)|지정된 `char_type`에 해당하는 char를 찾습니다.|
 |[rdbuf](#rdbuf)|스트림을 지정된 버퍼로 라우트합니다.|
 |[rdstate](#rdstate)|플래그에 대한 비트 상태를 읽습니다.|
 |[set_rdbuf](#set_rdbuf)|이 스트림 개체에 대한 읽기 버퍼로 사용할 스트림 버퍼를 할당합니다.|
 |[setstate](#setstate)|추가 플래그를 설정합니다.|
-|[swap](#swap)|이 `basic_ios` 개체의 값을 다른 `basic_ios` 개체의 값으로 교환합니다. 스트림 버퍼에 대한 포인터는 교환되지 않습니다.|
+|[스왑](#swap)|이 `basic_ios` 개체의 값을 다른 `basic_ios` 개체의 값으로 교환합니다. 스트림 버퍼에 대한 포인터는 교환되지 않습니다.|
 |[tie](#tie)|한 스트림이 다른 스트림보다 먼저 처리되도록 합니다.|
 |[widen](#widen)|지정된 char에 해당하는 `char_type`을 찾습니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
-|[explicit operator bool](#op_bool)|@No__t_0 개체를 **bool**로 사용할 수 있습니다. 일반적이고 의도하지 않은 부작용을 방지하기 위해 자동 형식 변환이 사용되지 않습니다.|
+|[explicit operator bool](#op_bool)|개체를 `basic_ios` **bool로**사용할 수 있습니다. 일반적이고 의도하지 않은 부작용을 방지하기 위해 자동 형식 변환이 사용되지 않습니다.|
 |[operator void *](#op_void_star)|스트림 상태가 여전히 양호한지 여부를 나타냅니다.|
-|[operator!](#op_not)|스트림 상태가 불량이 아닌지 여부를 나타냅니다.|
+|[연산자!](#op_not)|스트림 상태가 불량이 아닌지 여부를 나타냅니다.|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -150,7 +150,7 @@ class basic_ios : public ios_base
 
 **네임스페이스:** std
 
-## <a name="bad"></a>  basic_ios::bad
+## <a name="basic_iosbad"></a><a name="bad"></a>basic_ios::Bad
 
 스트림 버퍼의 무결성 손실을 나타냅니다.
 
@@ -158,9 +158,9 @@ class basic_ios : public ios_base
 bool bad() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`rdstate & badbit` 0이 아니면 **true** 이 고, 그렇지 않으면 **false**입니다.
+**0이** 아닌 경우 `rdstate & badbit` true; 그렇지 않으면 **거짓**.
 
 `badbit`에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
 
@@ -183,7 +183,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_ios"></a>  basic_ios::basic_ios
+## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a>basic_ios:basic_ios
 
 basic_ios 클래스를 생성합니다.
 
@@ -194,14 +194,14 @@ basic_ios();
 
 ### <a name="parameters"></a>매개 변수
 
-*sb* \
+*Sb*\
 입력 또는 출력 요소를 저장할 표준 버퍼입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 생성자는 [init](#init)(_ *Sb*)를 호출하여 멤버 개체를 초기화합니다. 보호된 두 번째 생성자는 멤버 개체를 초기화하지 않은 채 유지합니다. 나중에 `init`를 호출 하는 경우 개체를 안전 하 게 제거할 수 있으려면 먼저 개체를 초기화 해야 합니다.
+첫 번째 생성자는 [init](#init)(_ *Sb*)를 호출하여 멤버 개체를 초기화합니다. 보호된 두 번째 생성자는 멤버 개체를 초기화하지 않은 채 유지합니다. 개체를 `init` 안전하게 삭제하려면 먼저 호출해야 합니다.
 
-## <a name="char_type"></a>  basic_ios::char_type
+## <a name="basic_ioschar_type"></a><a name="char_type"></a>basic_ios:char_type
 
 템플릿 매개 변수 `Elem`의 동의어.
 
@@ -209,7 +209,7 @@ basic_ios();
 typedef Elem char_type;
 ```
 
-## <a name="clear"></a>  basic_ios::clear
+## <a name="basic_iosclear"></a><a name="clear"></a>basic_ios:클리어
 
 오류 플래그를 모두 지웁니다.
 
@@ -220,27 +220,27 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>매개 변수
 
-*상태* \
-필드 모든 플래그를 지운 후에 설정할 플래그입니다. 기본값은 `goodbit`입니다.
+*상태*\
+(선택 사항) 모든 플래그를 지운 후 설정하려는 플래그입니다. 기본값은 `goodbit`입니다.
 
-*reraise* \
-필드 예외를 다시 발생시킬지 여부를 지정 합니다. 기본값은 **false** (예외를 다시 발생 시 키 지 않음)입니다.
+*재인상*\
+(선택 사항) 예외를 다시 발생 해야 하는지 여부를 지정 합니다. 기본값은 **false** false(예외를 다시 발생시키지 않음)로 설정됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-플래그는 `goodbit`, `failbit`, `eofbit` 및 `badbit`입니다. [good](#good), [bad](#bad), [eof](#eof) 및 [fail](#fail)을 사용하여 이러한 플래그를 테스트합니다.
+플래그는 `goodbit`" `failbit` `eofbit`및 `badbit` [good](#good), [bad](#bad), [eof](#eof) 및 [fail](#fail)을 사용하여 이러한 플래그를 테스트합니다.
 
 멤버 함수는 저장된 스트림 상태 정보를 다음 코드로 바꿉니다.
 
 `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-`state` **&** [exceptions](#exceptions)가 0이 아니면 [failure](../standard-library/ios-base-class.md#failure) 클래스 개체를 throw합니다.
+`state` **&** [예외가](#exceptions) 0이 아닌 경우 클래스 [실패](../standard-library/ios-base-class.md#failure)의 개체를 throw합니다.
 
 ### <a name="example"></a>예제
 
-@No__t_2를 사용 하는 예제는 [rdstate](#rdstate) 및 [getline](../standard-library/string-functions.md#getline) 을 참조 하세요.
+을 사용하는 `clear`예제는 [rdstate](#rdstate) 및 [getline을](../standard-library/string-functions.md#getline) 참조하십시오.
 
-## <a name="copyfmt"></a>  basic_ios::copyfmt
+## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a>basic_ios::카피fmt
 
 스트림 간에 플래그를 복사합니다.
 
@@ -251,16 +251,16 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 플래그를 복사하려는 스트림입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 플래그를 복사 중인 스트림에 대한 **this** 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 콜백 이벤트 **지우기 \_event**를 보고 합니다. 그런 다음 *오른쪽* 에서 채우기 문자, 타이 포인터 및 서식 정보 **\*this** 로 복사 합니다. 예외 마스크를 변경 하기 전에 `copyfmt_event` 콜백 이벤트를 보고 합니다. 복사가 완료되고 **state &** [exceptions](#exceptions)가 0이 아니면, 함수는 실제로 [rdstate](#rdstate) 인수와 함께 [clear](#clear)를 호출합니다. 그런 다음 **\*this**를 반환합니다.
+멤버 함수는 콜백 이벤트 **지우기\_이벤트를**보고합니다. 그런 다음 *오른쪽에서* ** \*** 이 채우기 문자, 타이 포인터 및 서식 정보를 복사합니다. 예외 마스크를 변경하기 전에 콜백 이벤트를 `copyfmt_event`보고합니다. 복사가 완료되고 **state &**[exceptions](#exceptions)가 0이 아니면, 함수는 실제로 [rdstate](#rdstate) 인수와 함께 [clear](#clear)를 호출합니다. ** \*이**것을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -283,7 +283,7 @@ int main( )
 }
 ```
 
-## <a name="eof"></a>  basic_ios::eof
+## <a name="basic_ioseof"></a><a name="eof"></a>basic_ios::eof
 
 스트림의 끝에 도달했는지 여부를 나타냅니다.
 
@@ -291,13 +291,13 @@ int main( )
 bool eof() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-스트림의 끝에 도달 하면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**스트림의** 끝에 도달 한 경우 true, 그렇지 않으면 **거짓.**
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 멤버 함수는 [rdstate](#rdstate) `& eofbit` 0이 아닌 경우 **true** 를 반환 합니다. `eofbit`에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
+[rdstate가](#rdstate) `& eofbit` 0이 아닌 경우 멤버 함수는 **true를** 반환합니다. `eofbit`에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
 
 ### <a name="example"></a>예제
 
@@ -321,7 +321,7 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="exceptions"></a>  basic_ios::exceptions
+## <a name="basic_iosexceptions"></a><a name="exceptions"></a>basic_ios::예외
 
 스트림에서 발생하는 예외를 나타냅니다.
 
@@ -333,14 +333,14 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>매개 변수
 
-*새 \ 제외*
+*뉴 예외*\
 예외를 throw하려는 플래그입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 스트림에 대한 예외를 throw하도록 지정된 플래그입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 저장된 예외 마스크를 반환합니다. 두 번째 멤버 함수는 예외 마스크에 *_Except*를 저장하고 전에 저장된 값을 반환합니다. 새 예외 마스크를 저장하면 [clear](#clear)( [rdstate](#rdstate) )와 같은 예외가 throw될 수 있습니다.
 
@@ -380,7 +380,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set
 ```
 
-## <a name="fail"></a>  basic_ios::fail
+## <a name="basic_iosfail"></a><a name="fail"></a>basic_ios::실패
 
 스트림에서 유효한 필드 추출 실패를 나타냅니다.
 
@@ -388,9 +388,9 @@ Exception description: ios_base::eofbit set
 bool fail() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-[rdstate](#rdstate) `& (badbit|failbit)` 0이 아니면 **true** 이 고, 그렇지 않으면 **false**입니다.
+[rdstate가](#rdstate) `& (badbit|failbit)` 영하지 않은 경우 **true,** 그렇지 않으면 **거짓**.
 
 `failbit`에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
 
@@ -410,7 +410,7 @@ int main( void )
 }
 ```
 
-## <a name="fill"></a>  basic_ios::fill
+## <a name="basic_iosfill"></a><a name="fill"></a>basic_ios::채우기
 
 텍스트가 스트림만큼 넓지 않을 경우 사용할 문자를 지정하거나 반환합니다.
 
@@ -421,16 +421,16 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>매개 변수
 
-*문자* \
+*Char*\
 채우기 문자로 사용할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 채우기 문자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 저장된 채우기 문자를 반환합니다. 두 번째 멤버 함수는 *문자를 채우기 문자에 저장* 하 고 이전에 저장 된 값을 반환 합니다.
+첫 번째 멤버 함수는 저장된 채우기 문자를 반환합니다. 두 번째 멤버 함수는 채우기 문자에 *Char를* 저장하고 이전 저장된 값을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -457,7 +457,7 @@ xxxxa
 x
 ```
 
-## <a name="good"></a>  basic_ios::good
+## <a name="basic_iosgood"></a><a name="good"></a>basic_ios::좋다
 
 스트림 상태가 양호함을 나타냅니다.
 
@@ -465,9 +465,9 @@ x
 bool good() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-[rstate](#rdstate) `== goodbit` (상태 플래그가 설정 되지 않음) 이면 **true** 이 고, 그렇지 않으면 **false**입니다.
+**true** [rdstate](#rdstate) `== goodbit` (상태 플래그가 설정되지 않은 경우), 그렇지 않으면 **false**.
 
 `goodbit`에 대한 자세한 내용은 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)를 참조하세요.
 
@@ -475,7 +475,7 @@ bool good() const;
 
 `good`을 사용하는 예는 [basic_ios::bad](#bad)를 참조하세요.
 
-## <a name="imbue"></a>  basic_ios::imbue
+## <a name="basic_iosimbue"></a><a name="imbue"></a>basic_ios::imbue
 
 로캘을 변경합니다.
 
@@ -485,14 +485,14 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>매개 변수
 
-*Loc* \
+*Loc*\
 로캘 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 로캘입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [rdbuf](#rdbuf)가 null 포인터가 아닌 경우 멤버 함수는
 
@@ -518,7 +518,7 @@ int main( )
 }
 ```
 
-## <a name="init"></a>  basic_ios::init
+## <a name="basic_iosinit"></a><a name="init"></a>basic_ios::init
 
 basic_ios 생성자에 의해 호출됩니다.
 
@@ -528,13 +528,13 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>매개 변수
 
-*_Sb* \
+*_Sb*\
 입력 또는 출력 요소를 저장할 표준 버퍼입니다.
 
-*_Isstd* \
+*_Isstd*\
 표준 스트림인지 여부를 지정합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 모든 멤버 개체에 값을 저장하므로:
 
@@ -542,9 +542,9 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [tie](#tie)는 null 포인터를 반환합니다.
 
-- [rdstate](#rdstate) 는 *_nois* 가 0이 아닌 경우 [goodbit](../standard-library/ios-base-class.md#iostate) 를 반환 합니다. 그렇지 않으면 [badbit](../standard-library/ios-base-class.md#iostate)를 반환 합니다.
+- [rdstate는](#rdstate) *_Sb* 0이 아닌 경우 [goodbit을](../standard-library/ios-base-class.md#iostate) 반환합니다. 그렇지 않으면 [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [예외](#exceptions) 는 `goodbit`을 반환 합니다.
+- [예외가 반환됩니다.](#exceptions) `goodbit`
 
 - [flags](../standard-library/ios-base-class.md#flags)는 [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags)를 반환합니다.
 
@@ -558,7 +558,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [iword](../standard-library/ios-base-class.md#iword)는 0을 반환하고, [pword](../standard-library/ios-base-class.md#pword)는 모든 인수 값에 대해 null 포인터를 반환합니다.
 
-## <a name="int_type"></a>  basic_ios::int_type
+## <a name="basic_iosint_type"></a><a name="int_type"></a>basic_ios:int_type
 
 `traits_type::int_type`의 동의어입니다.
 
@@ -566,7 +566,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="move"></a>  basic_ios::move
+## <a name="basic_iosmove"></a><a name="move"></a>basic_ios::move
 
 스트림 버퍼에 대한 포인터를 제외하고 매개 변수의 모든 값을 현재 개체로 이동합니다.
 
@@ -576,14 +576,14 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 값을 이동할 `ios_base` 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Protected 멤버 함수는 오른쪽에서 변경 되지 않고 `*this`에서 null 포인터로 설정 된 저장 된 `stream buffer pointer`를 제외 *하 고 `*this`* 에 저장 된 모든 값을 *로 이동* 합니다. 저장 된 `tie pointer` *오른쪽*의 null 포인터로 설정 되어 있습니다.
+보호된 멤버 함수는 *오른쪽에* 저장된 `*this` 모든 값을 `stream buffer pointer` *오른쪽에* 변경되지 않고 에서 null 포인터로 `*this`설정하는 저장된 값을 이동합니다. 저장된 `tie pointer` 것은 *오른쪽의*null 포인터로 설정됩니다.
 
-## <a name="narrow"></a>  basic_ios::narrow
+## <a name="basic_iosnarrow"></a><a name="narrow"></a>basic_ios::좁은
 
 지정된 `char_type`에 해당하는 char를 찾습니다.
 
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>매개 변수
 
-*문자* \
-변환할 **문자** 입니다.
+*Char*\
+변환할 **문자입니다.**
 
-*Default*\
-해당 항목이 없는 경우 반환 하려는 **문자** 입니다.
+*기본*\
+등가물을 찾을 수 없는 경우 반환하려는 **문자입니다.**
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 `char_type`에 해당 하는 **char** 입니다.
+지정된 `char_type` **에** 해당하는 문자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [use_facet](../standard-library/basic-filebuf-class.md#open) \<ctype \<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)())를 반환 합니다. `narrow` (`Char`, `Default`).
+멤버 함수는 [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E [> >(getloc)use_facet](../standard-library/ios-base-class.md#getloc)반환합니다. `narrow`( `Char`, `Default`).
 
 ### <a name="example"></a>예제
 
@@ -628,7 +628,7 @@ int main( )
 }
 ```
 
-## <a name="off_type"></a>  basic_ios::off_type
+## <a name="basic_iosoff_type"></a><a name="off_type"></a>basic_ios:off_type
 
 `traits_type::off_type`의 동의어입니다.
 
@@ -636,7 +636,7 @@ int main( )
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="op_void_star"></a>  basic_ios::operator void *
+## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a>basic_ios::연산자 무효 *
 
 스트림 상태가 여전히 양호한지 여부를 나타냅니다.
 
@@ -644,7 +644,7 @@ typedef typename traits_type::off_type off_type;
 operator void *() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자는 [fail](#fail)인 경우에만 null 포인터를 반환합니다.
 
@@ -666,7 +666,7 @@ int main( )
 1
 ```
 
-## <a name="op_not"></a>  basic_ios::operator!
+## <a name="basic_iosoperator"></a><a name="op_not"></a>basic_ios::연산자!
 
 스트림 상태가 불량이 아닌지 여부를 나타냅니다.
 
@@ -674,7 +674,7 @@ int main( )
 bool operator!() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [fail](#fail)을 반환합니다.
 
@@ -696,19 +696,19 @@ int main( )
 0
 ```
 
-## <a name="op_bool"></a>  basic_ios::operator bool
+## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a>basic_ios::연산자 불
 
-@No__t_0 개체를 **bool**로 사용할 수 있습니다. 일반적이고 의도하지 않은 부작용을 방지하기 위해 자동 형식 변환이 사용되지 않습니다.
+개체를 `basic_ios` **bool로**사용할 수 있습니다. 일반적이고 의도하지 않은 부작용을 방지하기 위해 자동 형식 변환이 사용되지 않습니다.
 
 ```cpp
 explicit operator bool() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-연산자는 `fail()` 경우에만 **false** 로 변환할 수 있는 값을 반환 합니다. 반환 형식은 `void *` 또는 기타 알려진 스칼라 형식이 아닌 **bool**로만 변환할 수 있습니다.
+연산자는 변환 가능한 값을 **false로** 반환합니다. `fail()` 반환 형식은 **bool로만**변환할 `void *` 수 있으며, 다른 알려진 스칼라 유형은 변환할 수 없습니다.
 
-## <a name="pos_type"></a>  basic_ios::pos_type
+## <a name="basic_iospos_type"></a><a name="pos_type"></a>basic_ios::pos_type
 
 `traits_type::pos_type`의 동의어입니다.
 
@@ -716,7 +716,7 @@ explicit operator bool() const;
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="rdbuf"></a>  basic_ios::rdbuf
+## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a>basic_ios:rdbuf
 
 스트림을 지정된 버퍼로 라우트합니다.
 
@@ -728,14 +728,14 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>매개 변수
 
-*_Sb* \
+*_Sb*\
 스트림입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 저장된 스트림 버퍼 포인터를 반환합니다.
 
-두 번째 멤버 함수는 저장 된 스트림 버퍼 포인터에 *_Sb* 를 저장 하 고 이전에 저장 된 값을 반환 합니다.
+두 번째 멤버 함수는 저장된 스트림 버퍼 포인터에 *_Sb* 저장하고 이전에 저장된 값을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -761,7 +761,7 @@ int main( )
 test2
 ```
 
-## <a name="rdstate"></a>  basic_ios::rdstate
+## <a name="basic_iosrdstate"></a><a name="rdstate"></a>basic_ios::rdstate
 
 플래그에 대한 비트 상태를 읽습니다.
 
@@ -769,7 +769,7 @@ test2
 iostate rdstate() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 저장된 스트림 상태 정보입니다.
 
@@ -810,7 +810,7 @@ int main( )
 1
 ```
 
-## <a name="setstate"></a>  basic_ios::setstate
+## <a name="basic_iossetstate"></a><a name="setstate"></a>basic_ios::setstate
 
 추가 플래그를 설정합니다.
 
@@ -820,10 +820,10 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>매개 변수
 
-*_State* \
+*_state*\
 설정할 추가 플래그입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 실제로 [clear](#clear)(_ *State* &#124; [rdstate](#rdstate))를 호출합니다.
 
@@ -859,7 +859,7 @@ int main( )
 1
 ```
 
-## <a name="set_rdbuf"></a>  basic_ios::set_rdbuf
+## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a>basic_ios:set_rdbuf
 
 이 스트림 개체에 대한 읽기 버퍼로 사용할 스트림 버퍼를 할당합니다.
 
@@ -870,14 +870,14 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>매개 변수
 
-*strbuf* \
+*스트루프 (동부)는*\
 읽기 버퍼가 될 스트림 버퍼입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Protected 멤버 함수는 *strbuf* 를 `stream buffer pointer`에 저장 합니다. `clear`를 호출 하지 않습니다.
+보호된 멤버 함수는 *strbuf를* 에 저장합니다. `stream buffer pointer` 을 호출하지 `clear`않습니다.
 
-## <a name="tie"></a>  basic_ios::tie
+## <a name="basic_iostie"></a><a name="tie"></a>basic_ios::넥타이
 
 한 스트림이 다른 스트림보다 먼저 처리되도록 합니다.
 
@@ -889,14 +889,14 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>매개 변수
 
-*str* \
+*Str*\
 스트림입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-첫 번째 멤버 함수는 저장된 연결(tie) 포인터를 반환합니다. 두 번째 멤버 함수는 동률 포인터에 *str* 를 저장 하 고 이전에 저장 된 값을 반환 합니다.
+첫 번째 멤버 함수는 저장된 연결(tie) 포인터를 반환합니다. 두 번째 멤버 함수는 tie 포인터에 *str을* 저장하고 이전 저장된 값을 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `tie`는 한 스트림의 작업이 완료된 후 다른 스트림의 작업이 발생하도록 두 스트림을 동기화합니다.
 
@@ -918,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>  basic_ios::traits_type
+## <a name="basic_iostraits_type"></a><a name="traits_type"></a>basic_ios:traits_type
 
 템플릿 매개 변수 `Traits`의 동의어.
 
@@ -926,9 +926,9 @@ int main( )
 typedef Traits traits_type;
 ```
 
-## <a name="widen"></a>  basic_ios::widen
+## <a name="basic_ioswiden"></a><a name="widen"></a>basic_ios::확대
 
-지정 된 **char**에 해당 하는 `char_type`를 찾습니다.
+지정된 `char_type` **char와**동등한 것을 찾습니다.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,16 +936,16 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*문자* \
+*Char*\
 변환할 문자입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 **char**에 해당 하는 `char_type`를 찾습니다.
+지정된 `char_type` **char와**동등한 것을 찾습니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`)를 반환합니다.
+멤버 함수는**ctype** \< **E** [> >(getloc)use_facet](../standard-library/ios-base-class.md#getloc) [use_facet](../standard-library/basic-filebuf-class.md#open)< 반환합니다. `widen`( `Char`).
 
 ### <a name="example"></a>예제
 
@@ -967,7 +967,7 @@ int main( )
 }
 ```
 
-## <a name="swap"></a>  basic_ios::swap
+## <a name="basic_iosswap"></a><a name="swap"></a>basic_ios::스왑
 
 이 `basic_ios` 개체의 값을 다른 `basic_ios` 개체의 값으로 교환합니다. 그러나 스트림 버퍼에 대한 포인터는 교환되지 않습니다.
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 값을 교환하는 데 사용되는 `basic_ios` 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Protected 멤버 함수는 저장 된 `stream buffer pointer`를 제외 하 고 `*this`로 *오른쪽* 에 저장 된 모든 값을 교환 합니다.
+보호된 멤버 함수는 저장된 `stream buffer pointer`값을 `*this` 제외한 *오른쪽에* 저장된 모든 값을 교환합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

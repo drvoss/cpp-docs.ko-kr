@@ -3,7 +3,6 @@ title: /C(전처리 중에 주석 유지)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
-- /c
 - VC.Project.VCCLWCECompilerTool.KeepComments
 helpviewer_keywords:
 - comments, not stripping during preprocessing
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988362"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440279"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C(전처리 중에 주석 유지)
 
@@ -29,9 +28,9 @@ ms.locfileid: "74988362"
 /C
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**/E**, **/P**, 또는 **/EP**와 같은 컴파일러 옵션이 필요합니다.
+이 컴파일러 옵션에는 **/e**, **/p**또는 **/ep** 옵션이 필요 합니다.
 
 다음 코드 샘플에서는 소스 코드 주석을 표시 합니다.
 
@@ -54,15 +53,15 @@ int i;   // a variable
 
 1. **C/C++** 폴더를 클릭합니다.
 
-1. **전처리기** 속성 페이지를 클릭합니다
+1. **전처리기** 속성 페이지를 클릭 합니다.
 
-1. **주석 유지** 속성을 수정합니다.
+1. **주석 유지** 속성을 수정 합니다.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
 
-- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>를 참조하세요.
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>

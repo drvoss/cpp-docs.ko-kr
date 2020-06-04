@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320266"
 ---
-# <a name="randomdevice-class"></a>random_device 클래스
+# <a name="random_device-class"></a>random_device 클래스
 
 외부 디바이스에서 임의 시퀀스를 생성합니다.
 
@@ -53,8 +53,8 @@ public:
 
 |||
 |-|-|
-|[random_device](#random_device)|[entropy](#entropy)|
-|[random_device::operator()](#op_call)||
+|[random_device](#random_device)|[엔트로피](#entropy)|
+|[random_device::연산자()](#op_call)||
 
 ## <a name="remarks"></a>설명
 
@@ -64,7 +64,7 @@ public:
 
 `random_device`는 비블로킹 호출이 수행되지 않을 수도 있습니다.
 
-일반적으로 `random_device`는 엔진 또는 엔진 어댑터를 통해 생성된 다른 생성기를 시드하는 데 사용됩니다. 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+일반적으로 `random_device`는 엔진 또는 엔진 어댑터를 통해 생성된 다른 생성기를 시드하는 데 사용됩니다. 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -100,7 +100,7 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-이 예제는 간단한 예제로 이러한 생성기의 일반적인 사용 사례를 대표적으로 보여주지는 않습니다. 보다 대표적인 코드 예제는 [\<random>](../standard-library/random.md)을 참조하세요.
+이 예제는 간단한 예제로 이러한 생성기의 일반적인 사용 사례를 대표적으로 보여주지는 않습니다. 보다 대표적인 코드 예제는 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -108,7 +108,7 @@ a random value == 213725214
 
 **네임스페이스:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device:random_device
 
 생성기를 생성합니다.
 
@@ -120,7 +120,7 @@ random_device(const std::string& = "");
 
 이 생성자는 필요에 따라 생성기를 초기화하여 문자열 매개 변수를 무시합니다. `random_device`를 초기화할 수 없는 경우 [exception](../standard-library/exception-class.md)에서 파생된 구현 정의 형식의 값을 throw합니다.
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device:엔트로피
 
 소스의 임의성을 예측합니다.
 
@@ -132,7 +132,7 @@ double entropy() const noexcept;
 
 이 멤버 함수는 비트 단위로 측정된 소스의 임의성에 대한 예상 값을 반환합니다.
 
-## <a name="op_call"></a>  random_device::operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device::연산자()
 
 난수 값을 반환합니다.
 
@@ -144,6 +144,6 @@ result_type operator()();
 
 구성원 함수 `min()` 및 `max()`에서 결정한 대로 닫힌 간격 [ `min, max`]에 균일하게 분포된 값을 반환합니다. 난수 값을 얻을 수 없는 경우 [exception](../standard-library/exception-class.md)에서 파생된 구현 정의 형식의 값을 throw합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<random>](../standard-library/random.md)
+[\<임의>](../standard-library/random.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365607"
 ---
 # <a name="single-inheritance"></a>단일 상속
 
@@ -44,11 +44,11 @@ class PaperbackBook : public Book {};
 
 각 클래스가 파생되는 기본 클래스는 파생 클래스의 선언 이전에 선언됩니다. 기본 클래스에 대한 전방 참조 선언만을 제공하는 것으로는 부족하며 완전한 선언을 제공해야 합니다.
 
-위의 예제에서는 액세스 지정자 **공용** 사용 됩니다. Public, protected 및 전용 상속의 의미에 설명 된 [멤버 액세스 제어 합니다.](../cpp/member-access-control-cpp.md)
+앞의 예제에서는 액세스 **지정자 공용이** 사용됩니다. 공용, 보호 및 개인 상속의 의미는 [멤버 액세스 제어에](../cpp/member-access-control-cpp.md) 설명되어 있습니다.
 
 다음 그림과 같이 클래스 하나를 여러 특정 클래스의 기본 클래스로 사용할 수 있습니다.
 
-![지시 된 방향이 있는 비순환 그래프](../cpp/media/vc38xj2.gif "지시 된 방향이 있는 비순환 그래프") <br/>
+![방향성 비순환 그래프](../cpp/media/vc38xj2.gif "방향성 비순환 그래프") <br/>
 방향이 있는 비순환 그래프 샘플
 
 위의 다이어그램에 나와 있는 "DAG"("방향이 있는 비순환 그래프")에서 일부 클래스는 파생 클래스 두 개 이상의 기본 클래스입니다. 그러나 그 반대의 경우는 성립하지 않습니다. 즉, 지정된 파생 클래스의 직접 기본 클래스는 하나뿐입니다. 그림의 그래프는 "단일 상속" 구조체를 나타냅니다.
@@ -56,7 +56,7 @@ class PaperbackBook : public Book {};
 > [!NOTE]
 > 방향이 있는 비순환 그래프는 단일 상속만을 고유하게 나타내지 않습니다. 즉, 다중 상속 그래프를 나타내는 데 사용되기도 합니다.
 
-상속에서 파생 클래스는 기본 클래스의 멤버와 새로 추가하는 멤버를 포함합니다. 따라서 파생 클래스는 기본 클래스의 멤버를 참조할 수 있습니다(해당 멤버가 파생 클래스에서 다시 정의되는 경우는 제외). 이러한 멤버가 파생 클래스에서 다시 정의된 경우에는 범위 결정 연산자(`::`)를 사용하여 직접 또는 간접 기본 클래스의 멤버를 참조할 수 있습니다. 다음 예제를 고려해 보세요.
+상속에서 파생 클래스는 기본 클래스의 멤버와 새로 추가하는 멤버를 포함합니다. 따라서 파생 클래스는 기본 클래스의 멤버를 참조할 수 있습니다(해당 멤버가 파생 클래스에서 다시 정의되는 경우는 제외). 이러한 멤버가 파생 클래스에서 다시 정의된 경우에는 범위 결정 연산자(`::`)를 사용하여 직접 또는 간접 기본 클래스의 멤버를 참조할 수 있습니다. 다음 예를 살펴보세요.
 
 ```cpp
 // deriv_SingleInheritance2.cpp
@@ -154,4 +154,4 @@ int main() {
 `Document` 클래스는 `PrintNameOf` 함수를 포함하므로 도서관에 있는 각 책의 이름을 인쇄할 수 있습니다. 그러나 `Book`의 페이지 수, `HelpFile`의 바이트 수 등 문서 형식과 관련된 일부 정보는 생략될 수 있습니다.
 
 > [!NOTE]
->  기본 클래스를 강제로 적용하여 `PrintNameOf`와 같은 함수를 구현하는 방식은 최적의 디자인이 아닌 경우가 많습니다. [가상 함수](../cpp/virtual-functions.md) 다른 디자인 대안을 제공 합니다.
+> 기본 클래스를 강제로 적용하여 `PrintNameOf`와 같은 함수를 구현하는 방식은 최적의 디자인이 아닌 경우가 많습니다. [가상 함수는](../cpp/virtual-functions.md) 다른 디자인 대안을 제공합니다.

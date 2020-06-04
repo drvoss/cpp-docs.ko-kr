@@ -1,9 +1,10 @@
 ---
 title: _cexit, _c_exit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _c_exit
 - _cexit
+- _o__cexit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939250"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917141"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -52,9 +54,9 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>설명
 
-**_Cexit** 함수는 **atexit** 및 **_onexit**에서 등록 된 함수를 LIFO (LIFO) 순서로 호출 합니다. 그런 다음 **_cexit** 모든 i/o 버퍼를 플러시하고 반환 하기 전에 열려 있는 모든 스트림을 닫습니다. **_c_exit** 는 **_exit** 와 동일 하지만 **atexit** 또는 **_onexit** 를 처리 하거나 스트림 버퍼를 플러시하는 대신 호출 프로세스로 돌아갑니다. **Exit**, **_exit**, **_cexit**및 **_c_exit** 의 동작은 다음 표에 나와 있습니다.
+**_Cexit** 함수는 **atexit** 및 **_onexit**에 의해 등록 된 함수를 LIFO (last in) 순서로 호출 합니다. 그런 다음를 반환 하기 전에 모든 i/o 버퍼를 플러시하고 열려 있는 모든 스트림을 닫습니다 **_cexit** 합니다. **_c_exit** 은 **_exit** 와 동일 하지만 **atexit** 를 처리 하거나 **_onexit** 하거나 스트림 버퍼를 플러시하는 대신 호출 프로세스로 돌아갑니다. **Exit**, **_exit**, **_cexit**및 **_c_exit** 의 동작은 다음 표에 나와 있습니다.
 
-|함수|동작|
+|기능|동작|
 |--------------|--------------|
 |**exit**|전체 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
 |**_exit**|빠른 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
@@ -67,6 +69,8 @@ void _c_exit( void );
 myObject.myClass::~myClass( );
 ```
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
@@ -74,12 +78,12 @@ myObject.myClass::~myClass( );
 |**_cexit**|\<process.h>|
 |**_c_exit**|\<process.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[중단이](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

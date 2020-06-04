@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182021"
 ---
 # <a name="generic-interfaces-ccli"></a>제네릭 인터페이스(C++/CLI)
 
@@ -30,9 +30,9 @@ ms.locfileid: "65516368"
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-*특성*<br/>
+*attributes*<br/>
 (선택 사항) 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 **특성**을 참조하세요.
 
 *class-key*<br/>
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>예제
 
-이 예제에서는 제네릭 인터페이스 `IMyGenIface`와 `IMyGenIface`를 특수화하는, 제네릭이 아닌 두 인터페이스 `IMySpecializedInt` 및 `ImySpecializedString`을 선언합니다. 그런 다음, 두 클래스 `MyIntClass` 및 `MyStringClass`에서 특수화된 두 인터페이스를 구현합니다. 예제에서는 제네릭 인터페이스를 특수화하고, 제네릭 인터페이스와 제네릭이 아닌 인터페이스를 인스턴스화하고, 인터페이스에서 명시적으로 구현된 멤버를 호출하는 방법을 보여 줍니다.
+이 예제에서는 제네릭 인터페이스 `IMyGenIface`와 `IMySpecializedInt`를 특수화하는, 제네릭이 아닌 두 인터페이스 `ImySpecializedString` 및 `IMyGenIface`을 선언합니다. 그런 다음, 두 클래스 `MyIntClass` 및 `MyStringClass`에서 특수화된 두 인터페이스를 구현합니다. 예제에서는 제네릭 인터페이스를 특수화하고, 제네릭 인터페이스와 제네릭이 아닌 인터페이스를 인스턴스화하고, 인터페이스에서 명시적으로 구현된 멤버를 호출하는 방법을 보여 줍니다.
 
 ```cpp
 // generic_interface2.cpp

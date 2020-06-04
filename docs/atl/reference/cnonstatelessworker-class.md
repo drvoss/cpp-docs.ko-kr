@@ -1,5 +1,5 @@
 ---
-title: CNonStatelessWorker 클래스
+title: CNonStateless워커 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CNonStatelessWorker
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245532"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747675"
 ---
-# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 클래스
+# <a name="cnonstatelessworker-class"></a>CNonStateless워커 클래스
 
-스레드 풀에서 요청을 받고 각 요청에 대해 생성 되 고 제거 하는 작업자 개체에 전달 합니다.
+스레드 풀에서 요청을 수신 하 고 각 요청에 생성 되 고 소멸 하는 작업자 개체에 전달 합니다.
 
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,40 +34,40 @@ class CNonStatelessWorker
 
 #### <a name="parameters"></a>매개 변수
 
-*Worker*<br/>
-준수 하는 작업자 스레드 클래스를 [worker 원형](../../atl/reference/worker-archetype.md) 큐에 대기 요청 처리에 대 한 적절 한 [CThreadPool](../../atl/reference/cthreadpool-class.md)합니다.
+*작업자*<br/>
+[CThreadPool에서](../../atl/reference/cthreadpool-class.md)큐에 대기된 요청을 처리하는 데 적합한 [작업자 아키타입을](../../atl/reference/worker-archetype.md) 준수하는 작업자 스레드 클래스입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CNonStatelessWorker::RequestType](#requesttype)|구현의 [WorkerArchetype::RequestType](worker-archetype.md#requesttype)합니다.|
+|[CNonStateless워커::요청 유형](#requesttype)|[Worker아키 유형 구현::요청 유형](worker-archetype.md#requesttype).|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CNonStatelessWorker::Execute](#execute)|구현의 [WorkerArchetype::Execute](worker-archetype.md#execute)합니다.|
-|[CNonStatelessWorker::Initialize](#initialize)|구현의 [WorkerArchetype::Initialize](worker-archetype.md#initialize)합니다.|
-|[CNonStatelessWorker::Terminate](#terminate)|구현의 [WorkerArchetype::Terminate](worker-archetype.md#terminate)합니다.|
+|[CNonStateless워커::실행](#execute)|[Worker아키 유형 구현::Execute](worker-archetype.md#execute).|
+|[CNonStateless워커::초기화](#initialize)|[Worker아키 유형 구현::초기화](worker-archetype.md#initialize).|
+|[CNonStateless워커::종료](#terminate)|[WorkerArchetype 의 구현::종료](worker-archetype.md#terminate).|
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 사용에 대 한 간단한 작업자 스레드 [CThreadPool](../../atl/reference/cthreadpool-class.md)합니다. 이 클래스는 자체의 모든 요청 처리 기능을 제공 하지 않습니다. 대신 하나의 인스턴스만 인스턴스화합니다 *작업자* 요청당 및 대리자 인스턴스에 해당 메서드를 구현 합니다.
+이 클래스는 [CThreadPool](../../atl/reference/cthreadpool-class.md)에서 사용할 수 있는 간단한 작업자 스레드입니다. 이 클래스는 자체요청 처리 기능을 제공하지 않습니다. 대신 요청당 한 인스턴스의 *Worker를* 인스턴스화하고 해당 메서드의 구현을 해당 인스턴스에 위임합니다.
 
-이 클래스의 장점은 기존 작업자 스레드 클래스에 대 한 상태 모델을 변경 하는 편리한 방법을 제공 합니다. `CThreadPool` 단일 작업자 스레드의 수명에 대 한 만들어집니다 상태를 보관 하는 작업자 클래스를 해당 여러 요청에서 저장할 수 있도록 합니다. 에 해당 클래스를 단순히 래핑하여 합니다 `CNonStatelessWorker` 템플릿을 사용 하 여 사용 하기 전에 `CThreadPool`, 작업자 및 단일 요청으로 제한 됩니다 보유 하 고 상태 수명입니다.
+이 클래스의 장점은 기존 작업자 스레드 클래스에 대한 상태 모델을 변경하는 편리한 방법을 제공한다는 것입니다. `CThreadPool`스레드의 수명 동안 단일 워커를 만들므로 worker 클래스가 상태를 보유하면 여러 요청에서 해당 워커를 보유합니다. `CNonStatelessWorker` 템플릿을 사용하기 전에 템플릿에서 해당 `CThreadPool`클래스를 래핑하기만 하면 작업자의 수명과 해당 클래스가 보유한 상태는 단일 요청으로 제한됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** 와 atlutil.h
+**헤더:** atlutil.h
 
-##  <a name="execute"></a>  CNonStatelessWorker::Execute
+## <a name="cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStateless워커::실행
 
-구현의 [WorkerArchetype::Execute](worker-archetype.md#execute)합니다.
+[Worker아키 유형 구현::Execute](worker-archetype.md#execute).
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
@@ -76,27 +76,27 @@ void Execute(
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 인스턴스를 만듭니다는 *작업자* 스택 및 호출에는 클래스 [초기화](worker-archetype.md#initialize) 해당 개체에서. 성공적으로 초기화 하는 경우이 메서드 호출 [Execute](worker-archetype.md#execute) 하 고 [Terminate](worker-archetype.md#terminate) 동일한 개체에서.
+이 메서드는 스택에 *Worker* 클래스의 인스턴스를 만들고 해당 개체에 [초기화를](worker-archetype.md#initialize) 호출합니다. 초기화가 성공하면 이 메서드는 동일한 개체에서 [Execute](worker-archetype.md#execute) 및 [Terminate를](worker-archetype.md#terminate) 호출합니다.
 
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+## <a name="cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStateless워커::초기화
 
-구현의 [WorkerArchetype::Initialize](worker-archetype.md#initialize)합니다.
+[Worker아키 유형 구현::초기화](worker-archetype.md#initialize).
 
 ```
 BOOL Initialize(void* /* pvParam */) throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-항상 TRUE를 반환 합니다.
+항상 TRUE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-이 클래스 초기화를 수행 하지 않습니다 `Initialize`합니다.
+이 클래스는 에서 `Initialize`초기화를 수행하지 않습니다.
 
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+## <a name="cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStateless워커::요청 유형
 
-구현의 [WorkerArchetype::RequestType](worker-archetype.md#requesttype)합니다.
+[Worker아키 유형 구현::요청 유형](worker-archetype.md#requesttype).
 
 ```
 typedef Worker::RequestType RequestType;
@@ -104,22 +104,22 @@ typedef Worker::RequestType RequestType;
 
 ### <a name="remarks"></a>설명
 
-이 클래스에 사용 되는 클래스와 동일한 유형의 작업 항목을 처리 합니다 *작업자* 템플릿 매개 변수입니다. 참조 [CNonStatelessWorker 개요](../../atl/reference/cnonstatelessworker-class.md) 세부 정보에 대 한 합니다.
+이 클래스는 *Worker* 템플릿 매개 변수에 사용되는 클래스와 동일한 유형의 작업 항목을 처리합니다. 자세한 내용은 [CNonStatelessWorker 개요를](../../atl/reference/cnonstatelessworker-class.md) 참조하십시오.
 
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+## <a name="cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStateless워커::종료
 
-구현의 [WorkerArchetype::Terminate](worker-archetype.md#terminate)합니다.
+[WorkerArchetype 의 구현::종료](worker-archetype.md#terminate).
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 
 ### <a name="remarks"></a>설명
 
-이 클래스 정리를 수행 하지 않습니다 `Terminate`합니다.
+이 클래스에서는 정리를 수행하지 `Terminate`않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[CThreadPool 클래스](../../atl/reference/cthreadpool-class.md)<br/>
-[Worker 원형](../../atl/reference/worker-archetype.md)<br/>
+[C스레드풀 클래스](../../atl/reference/cthreadpool-class.md)<br/>
+[작업자 아키타입](../../atl/reference/worker-archetype.md)<br/>
 [클래스](../../atl/reference/atl-classes.md)

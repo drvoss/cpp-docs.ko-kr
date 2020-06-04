@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988078"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416162"
 ---
 # <a name="security-best-practices-for-c"></a>C++의 최선의 보안 구현 방법
 
@@ -35,7 +35,7 @@ ms.locfileid: "74988078"
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (데이터 실행 방지와 호환 가능)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) 이러한 컴파일러 및 링커 옵션은 DEP (데이터 실행 방지) 호환성을 지원 합니다. DEP는 비코드 페이지 실행에 대해 CPU를 보호합니다.
 
 [/analyze(코드 분석)](../build/reference/analyze-code-analysis.md)<br/>
-이 컴파일러 옵션은 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조 및 메모리 누수와 같은 잠재적인 보안 문제를 보고하는 코드 분석을 활성화합니다. 이 옵션은 기본적으로 해제되어 있습니다. 자세한 내용은 [C/C++ 개요에 대 한 코드 분석](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)을 참조 하세요.
+이 컴파일러 옵션은 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조 및 메모리 누수와 같은 잠재적인 보안 문제를 보고하는 코드 분석을 활성화합니다. 이 옵션은 기본적으로 해제되어 있습니다. 자세한 내용은 [C/C++ 개요에 대 한 코드 분석](/cpp/code-quality/code-analysis-for-c-cpp-overview)을 참조 하세요.
 
 [/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 이 링커 옵션은 실행을 시작할 때 메모리의 다른 위치에 로드될 수 있는 실행 가능한 이미지를 작성할 수 있게 합니다. 또한 이 옵션을 사용하면 메모리의 스택 위치를 예측하기가 훨씬 어렵습니다.
@@ -92,8 +92,8 @@ Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개�
 
 소프트웨어의 C++ 잘못 실행 측 채널 하드웨어 취약점을 식별할 하 고 완화 하는 방법에 대 한 자세한 내용은 [ C++ 추론 실행 측 채널 개발자 가이드](developer-guidance-speculative-execution.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[보안](/dotnet/standard/security/index)<br/>
 [UAC(사용자 계정 컨트롤)가 애플리케이션에 주는 영향](how-user-account-control-uac-affects-your-application.md)

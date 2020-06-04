@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623615"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165147"
 ---
 # <a name="compiler-warning-c4485"></a>컴파일러 경고 C4485
 
-' override_function ': 기본 ref 클래스 메서드 ' base_class_function '와 일치 하지만 ' new ' 또는 ' override '로 표시 되어 있지 않습니다. ' new ' (및 ' virtual ')를 가정 합니다.
+' override_function ': 기본 ref 클래스 메서드 ' base_class_function '과 (와) 일치 하지만 ' new ' 또는 ' override '로 표시 되어 있지 않습니다. ' new ' (및 ' virtual ')를 가정 합니다.
 
 접근자는 `virtual` 키워드를 사용 하거나 사용 하지 않고 기본 클래스 접근자 함수를 사용 하 여 재정의 하지만 `override` 또는 `new` 지정자는 재정의 함수 시그니처의 일부가 아닙니다. 이 경고를 해결 하려면 `new` 또는 `override` 지정자를 추가 합니다.
 

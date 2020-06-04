@@ -1,9 +1,11 @@
 ---
 title: _tell, _telli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _telli64
 - _tell
+- _o__tell
+- _o__telli64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,12 +18,12 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946266"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912252"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -57,10 +59,10 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>매개 변수
 
-*handle*<br/>
+*처리*<br/>
 열려 있는 파일을 참조하는 파일 설명자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 파일 포인터의 현재 위치입니다. 검색을 수행할 수 없는 디바이스에서는 반환 값이 정의되지 않습니다.
 
@@ -70,7 +72,9 @@ __int64 _telli64(
 
 ## <a name="remarks"></a>설명
 
-**_Atata** 함수는 *핸들* 인수와 연결 된 파일 포인터 (있는 경우)의 현재 위치를 가져옵니다. 위치는 파일의 시작 부분에서 바이트 수로 표현됩니다. **_Telli64** 함수의 경우이 값은 64 비트 정수로 표현 됩니다.
+**_Tell** 함수는 *핸들* 인수와 연결 된 파일 포인터 (있는 경우)의 현재 위치를 가져옵니다. 위치는 파일의 시작 부분에서 바이트 수로 표현됩니다. **_Telli64** 함수의 경우이 값은 64 비트 정수로 표현 됩니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -78,7 +82,7 @@ __int64 _telli64(
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -126,7 +130,7 @@ Line two.
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

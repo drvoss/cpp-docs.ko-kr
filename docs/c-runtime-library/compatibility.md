@@ -2,19 +2,17 @@
 title: 호환성
 description: 표준 C 라이브러리, POSIX, 안전한 CRT 및 스토어 앱과 함께 Microsoft CRT (유니버설 C 런타임 라이브러리)의 호환성에 대해 설명 합니다.
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171049"
 ---
 # <a name="compatibility"></a>호환성
 
@@ -30,10 +28,10 @@ C++ 표준은 구현에 대한 전역 네임스페이스에 밑줄로 시작하�
 
 ## <a name="related-articles"></a>관련 문서
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[UWP 앱, Windows 런타임 및 C 런타임](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|세계 RT 루틴이 유니버설 Windows 앱 또는 Microsoft Store 앱과 호환 되지 않는 경우를 설명 합니다.|
-|[ANSI C 규격](../c-runtime-library/ansi-c-compliance.md)|UCRT의 표준 규격 이름 지정을 설명합니다.|
+|[ANSI C 준수](../c-runtime-library/ansi-c-compliance.md)|UCRT의 표준 규격 이름 지정을 설명합니다.|
 |[UNIX](../c-runtime-library/unix.md)|프로그램을 UNIX에 이식하는 작업에 대한 지침을 제공합니다.|
 |[Windows 플랫폼(CRT)](../c-runtime-library/windows-platforms-crt.md)|CRT가 지원되는 운영 체제를 나열합니다.|
 |[이전 버전과의 호환성](../c-runtime-library/backward-compatibility.md)|이전 CRT 이름을 새 CRT 이름에 매핑하는 방법을 설명합니다.|

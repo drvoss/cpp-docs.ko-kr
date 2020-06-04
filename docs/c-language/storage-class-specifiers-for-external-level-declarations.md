@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157957"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>외부 수준 선언에 대한 스토리지 클래스 지정자
 
@@ -40,7 +40,7 @@ ms.locfileid: "56152081"
 
 - 외부 수준에서 명시적으로 초기화하는 변수. 예를 들어 `int j = 3;`은 변수 `j`의 정의입니다.
 
-외부 수준(즉, 모든 함수의 외부)의 변수 선언에서 **static** 또는 `extern` 스토리지 클래스 지정자를 사용할 수도 있고 스토리지 클래스 지정자를 완전히 생략할 수도 있습니다. 외부 수준에서는 **auto** 및 **register** *스토리지 클래스 지정자* 터미널을 사용할 수 없습니다.
+외부 수준(즉, 모든 함수의 외부)의 변수 선언에서 **static** 또는 `extern` 스토리지 클래스 지정자를 사용할 수도 있고 스토리지 클래스 지정자를 완전히 생략할 수도 있습니다. 외부 수준에서는 **auto** 및 **register** ‘스토리지 수준 지정자’ 터미널을 사용할 수 없습니다. 
 
 변수가 외부 수준에서 정의되면 변환 단위의 나머지 부분 전체에서 표시됩니다. 변수는 동일한 소스 파일에서 해당 변수의 선언 이전에 표시되지 않습니다. 또한 변수는 아래에 설명된 대로 참조 선언에서 표시되도록 지정하지 않는 한 프로그램의 다른 소스 파일에서도 표시되지 않습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "56152081"
 
 - `extern` 참조가 유효하려면 참조하는 변수가 외부 수준에서 한 번만 정의되어야 합니다. 이 정의(`extern` 스토리지 클래스를 사용하지 않음)는 프로그램을 구성하는 어떠한 변환 단위에도 포함될 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 외부 선언을 보여 줍니다.
 
@@ -125,6 +125,6 @@ int x = 0;
 
 `i` 변수가 초기화되지 않은 경우 자동으로 0으로 설정됩니다. 이 경우에는 값 1, 2, 3이 인쇄됩니다. 변수 초기화에 대한 자세한 내용은 [초기화](../c-language/initialization.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 스토리지 클래스](../c-language/c-storage-classes.md)

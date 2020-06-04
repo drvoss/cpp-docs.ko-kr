@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126229"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427592"
 ---
 # <a name="vector-class"></a>vector 클래스
 
@@ -123,7 +123,7 @@ class vector
 
 [Vector\<bool > reference 클래스](../standard-library/vector-bool-class.md#reference_class) 는 개체가 vector\<bool > 개체 내의 요소 (단일 비트)에 대 한 참조를 제공할 수 있는 중첩 클래스입니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="constructors"></a>생성자
 
@@ -131,7 +131,7 @@ class vector
 |-|-|
 |[vector](#vector)|특정 크기의 벡터 또는 특정 값의 요소나 특정 `allocator`가 포함된 벡터를 생성하거나 다른 벡터의 복사본으로 벡터를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -156,7 +156,7 @@ class vector
 |[at](#at)|벡터의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.|
 |[back](#back)|벡터의 마지막 요소에 대한 참조를 반환합니다.|
 |[begin](#begin)|벡터의 첫 번째 요소에 대한 임의 액세스 반복기를 반환합니다.|
-|[capacity](#capacity)|스토리지를 더 할당하지 않고 벡터가 포함할 수 있는 요소의 수를 반환합니다.|
+|[용량](#capacity)|스토리지를 더 할당하지 않고 벡터가 포함할 수 있는 요소의 수를 반환합니다.|
 |[cbegin](#cbegin)|벡터의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|
 |[cend](#cend)|벡터 끝의 바로 다음을 가리키는 임의 액세스 const 반복기를 반환합니다.|
 |[crbegin](#crbegin)|역방향 벡터의 첫 번째 요소에 대해 const 반복기를 반환합니다.|
@@ -199,7 +199,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>설명
 
-`allocator_type`는 템플릿 매개 변수 `Allocator`와 동일한 의미입니다.
+`allocator_type`은 템플릿 매개 변수 `Allocator`의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -1494,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>설명
 
-**pointer** 형식은 요소값을 수정할 때 사용할 수 있습니다.
+형식 **pointer**는 요소값을 수정할 때 사용할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2054,7 +2054,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>설명
 
-`value_type`는 템플릿 매개 변수 `Type`와 동일한 의미입니다.
+`value_type`은 템플릿 매개 변수 `Type`의 동의어입니다.
 
 ### <a name="example"></a>예제
 

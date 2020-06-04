@@ -1,5 +1,5 @@
 ---
-title: 'Address-of 연산자: &amp;'
+title: '주소 연산자: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181605"
 ---
-# <a name="address-of-operator-amp"></a>Address-of 연산자: &amp;
+# <a name="address-of-operator-amp"></a>주소 연산자: &amp;
 
 ## <a name="syntax"></a>구문
 
@@ -23,15 +23,15 @@ ms.locfileid: "62385026"
 & cast-expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-단항 address-of 연산자 (**&**)는 피연산자의 주소를 사용 합니다. Address-of 연산자의 피연산자는 함수 지정자 또는 l-value 비트 필드가 아닌 개체를 지정 하는 수 있습니다.
+단항 주소 연산자 ( **&** )는 해당 피연산자의 주소를 사용 합니다. 주소 연산자의 피연산자는 함수 지정자 이거나 비트 필드가 아닌 개체를 지정 하는 l-value 일 수 있습니다.
 
 주소 연산자는 파일 범위 수준에서 선언된 기본, 구조체, 클래스 또는 공용 구조체 형식의 변수 또는 첨자된 배열 참조에만 적용될 수 있습니다. 이러한 식에서는 주소 연산자가 없는 상수 식을 주소 식에 추가하거나 뺄 수 있습니다.
 
-함수 또는 l-value에 적용된 식의 결과는 피연산자의 형식에서 파생된 포인터 형식(r-value)입니다. 예를 들어 형식의 피연산자가 **char**에 대 한 형식 포인터의 식의 결과 **char**합니다. 적용할 address-of 연산자 **const** 또는 **volatile** 개체, 조건이 `const type *` 또는 `volatile type *`여기서 **형식** 의 원래 형식인 개체입니다.
+함수 또는 l-value에 적용된 식의 결과는 피연산자의 형식에서 파생된 포인터 형식(r-value)입니다. 예를 들어 피연산자 형식이 **char**인 경우 식의 결과는 **char**에 대 한 포인터 형식입니다. **Const** 또는 **volatile** 개체에 적용 되는 주소 연산자는 `const type *` 또는 `volatile type *`으로 계산 됩니다. 여기서 **type** 은 원본 개체의 형식입니다.
 
-Address-of 연산자는 정규화 된 이름에 적용 되 면 결과 종속 여부는 *정규화 된 이름이* 정적 멤버를 지정 합니다. 그럴 경우 결과는 멤버의 선언에 지정된 형식의 포인터입니다. 멤버가 정적 인지, 결과 멤버에 대 한 포인터 *이름을* 으로 표시 되는 클래스의 *정규화 된 클래스 이름*합니다. (참조 [기본 식](../cpp/primary-expressions.md) 대 한 자세한 내용은 *정규화 된 클래스 이름*.) 다음 코드는 멤버가 정적인지 여부에 따라 결과가 달라지는 방식을 보여 줍니다.
+주소 연산자가 정규화 된 이름에 적용 되는 경우 결과는 *정규화 된 이름이* 정적 멤버를 지정 하는지 여부에 따라 달라 집니다. 그럴 경우 결과는 멤버의 선언에 지정된 형식의 포인터입니다. 멤버가 정적이 아니면 결과는 *정규화 된 클래스 이름*으로 표시 된 클래스의 멤버 *이름* 에 대 한 포인터입니다. *정규화 된 클래스 이름*에 대 한 자세한 내용은 [기본 식](../cpp/primary-expressions.md) 을 참조 하세요. 다음 코드 조각에서는 멤버가 정적 인지 여부에 따라 결과가 달라 지는 방식을 보여 줍니다.
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -51,9 +51,9 @@ int main() {
 
 이 예제에서 `&PTM::fValue` 식은 `float *`가 정적 멤버이기 때문에 `float PTM::*` 형식이 아닌 `fValue` 형식이 됩니다.
 
-오버로드된 함수의 주소는 어느 버전의 함수를 참조하는지 분명할 때에만 사용할 수 있습니다. 참조 [함수 오버 로드](function-overloading.md) 특정의 주소를 확인 하는 방법에 대 한 정보에 대 한 오버 로드 된 함수입니다.
+오버로드된 함수의 주소는 어느 버전의 함수를 참조하는지 분명할 때에만 사용할 수 있습니다. 오버 로드 된 특정 함수의 주소를 가져오는 방법에 대 한 자세한 내용은 [함수 오버 로드](function-overloading.md) 를 참조 하세요.
 
-주소 연산자를 참조 형식에 적용하면 해당 연산자를 참조가 바인딩된 개체에 적용하는 것과 같은 결과가 도출됩니다. 예를 들어:
+주소 연산자를 참조 형식에 적용하면 해당 연산자를 참조가 바인딩된 개체에 적용하는 것과 같은 결과가 도출됩니다. 예를 들면 다음과 같습니다.
 
 ## <a name="example"></a>예제
 
@@ -105,7 +105,7 @@ int main() {
 25
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

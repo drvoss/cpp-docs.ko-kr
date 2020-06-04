@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4288
+title: 컴파일러 경고(수준 1) C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: e706a448f4264eceedbb4fa8932c0fc30e88d532
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175742"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>컴파일러 경고 (수준 1) C4288
+# <a name="compiler-warning-level-1-c4288"></a>컴파일러 경고(수준 1) C4288
 
 비표준 확장이 사용 됨: ' var ': for 루프에서 선언 된 루프 제어 변수가 for 루프 범위 외부에서 사용 됩니다. 외부 범위의 선언과 충돌 합니다.
 

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169633"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Microsoft 전용**
 
@@ -27,13 +27,13 @@ ms.locfileid: "65445897"
 
 ## <a name="grammar"></a>문법
 
-*asm-block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*asm-블록*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *어셈블리 명령* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *어셈블리-명령 목록* **}** **;** <sub>opt</sub>
 
-*assembly-instruction-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*어셈블리-명령 목록*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*어셈블리 명령* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp; *&nbsp;&nbsp;어셈블리* **;** *명령* **;** 입니다. <sub>opt</sub>
 
 ## <a name="remarks"></a>설명
 
@@ -41,17 +41,17 @@ ms.locfileid: "65445897"
 
 `__asm` 키워드가 문 구분 기호이므로 어셈블리 명령을 동일한 줄에 배치할 수 있습니다.
 
-Visual Studio 2005 명령 전에
+Visual Studio 2005 이전에는 명령
 
 ```cpp
 __asm int 3
 ```
 
-네이티브 코드를 컴파일하면 생성 시 키 지 않는 **/clr**; 컴파일러 CLR 중단 명령으로 변환 합니다.
+**/clr**을 사용 하 여 컴파일할 때 네이티브 코드가 생성 되지 않았습니다. 컴파일러가 명령을 CLR break 명령으로 변환 했습니다.
 
-이제 `__asm int 3`을 사용하면 함수의 네이티브 코드가 생성됩니다. 함수 코드에서 중단점을 발생 하 여 MSIL로 컴파일된 함수를 사용 하려는 경우 [__debugbreak](../../intrinsics/debugbreak.md)합니다.
+이제 `__asm int 3`을 사용하면 함수의 네이티브 코드가 생성됩니다. 함수를 사용 하 여 코드에서 중단점을 발생 시 키 려 고 하는 함수를 MSIL로 컴파일하려면 [__debugbreak](../../intrinsics/debugbreak.md)를 사용 합니다.
 
-이전 버전과 호환성에 대 한 **_asm** 에 대 한 동의어가 **__asm** 하지 않는 한 컴파일러 옵션 [/Za \(언어 확장을 사용 하지 않도록 설정)](../../build/reference/za-ze-disable-language-extensions.md) 지정 됩니다.
+이전 버전과의 호환성을 위해 **_asm** 는 컴파일러 옵션 [/za \(언어 확장 사용 안 함)](../../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 고 **__asm** 의 동의어입니다.
 
 ## <a name="example"></a>예제
 
@@ -87,5 +87,5 @@ C 및 C++의 중괄호와 달리 `__asm` 블록을 묶는 중괄호는 변수 �
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../../cpp/keywords-cpp.md)<br/>
+[키워드](../../cpp/keywords-cpp.md)<br/>
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

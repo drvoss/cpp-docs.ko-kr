@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
 - ATL.CManualAccessor.AddBindEntry
 - CManualAccessor::AddBindEntry
-- AddBindEntry
 - CManualAccessor.AddBindEntry
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -16,7 +15,6 @@ f1_keywords:
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
 - ATL::CManualAccessor::CreateAccessor
-- CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211850"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 클래스
 
-고급 사용을 위한 접근자 유형을 나타냅니다.
+고급 사용을 위해 디자인 된 접근자 형식을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -59,18 +57,18 @@ class CManualAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|출력 열에 바인딩 항목을 추가합니다.|
-|[AddParameterEntry](#addparameterentry)|매개 변수 접근자에 매개 변수 항목을 추가합니다.|
-|[CreateAccessor](#createaccessor)|바인딩 구조 열에 대 한 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.|
-|[CreateParameterAccessor](#createparameteraccessor)|바인딩 구조를 매개 변수에 대 한 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.|
+|[AddBindEntry](#addbindentry)|출력 열에 바인드 항목을 추가 합니다.|
+|[AddParameterEntry](#addparameterentry)|매개 변수 접근자에 매개 변수 항목을 추가 합니다.|
+|[CreateAccessor](#createaccessor)|열 바인딩 구조에 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.|
+|[CreateParameterAccessor](#createparameteraccessor)|매개 변수 바인딩 구조에 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-사용 하 여 `CManualAccessor`, 런타임 함수 호출에 의해 출력 되는 열 바인딩 및 매개 변수를 지정할 수 있습니다.
+`CManualAccessor`를 사용 하 여 런타임 함수 호출을 통해 매개 변수 및 출력 열 바인딩을 지정할 수 있습니다.
 
-## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
 
-출력 열에 바인딩 항목을 추가합니다.
+출력 열에 바인드 항목을 추가 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -84,33 +82,33 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 를 참조 하세요.
 
 *nOrdinal*<br/>
-[in] 열 번호입니다.
+진행 열 번호입니다.
 
 *wType*<br/>
-[in] 데이터 형식입니다.
+진행 데이터 형식입니다.
 
 *nColumnSize*<br/>
-[in] 열 크기 (바이트)에서입니다.
+진행 열 크기 (바이트)입니다.
 
 *pData*<br/>
-[in] 버퍼에 저장 된 열 데이터에 대 한 포인터입니다.
+진행 버퍼에 저장 된 열 데이터에 대 한 포인터입니다.
 
 *pLength*<br/>
-[in] 필요한 경우 필드 길이에 대 한 포인터입니다.
+진행 필요한 경우 필드 길이에 대 한 포인터입니다.
 
 *pStatus*<br/>
-[in] 필요한 경우 열 상태에 바인딩할 변수의 포인터입니다.
+진행 필요한 경우 열 상태에 바인딩될 변수에 대 한 포인터입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 함수를 사용 하려면 먼저 불러와야 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)합니다. 에 지정 된 열의 수보다 더 많은 항목을 추가할 수 없습니다 `CreateAccessor`합니다.
+이 함수를 사용 하려면 먼저 [Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)를 호출 해야 합니다. `CreateAccessor`에 지정 된 열 개수 보다 많은 항목을 추가할 수 없습니다.
 
-## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
 
-매개 변수 입력 구조에 매개 변수 항목을 추가합니다.
+매개 변수 엔트리를 매개 변수 항목 구조에 추가 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -125,36 +123,36 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 를 참조 하세요.
 
 *nOrdinal*<br/>
-[in] 매개 변수 수입니다.
+진행 매개 변수 번호입니다.
 
 *wType*<br/>
-[in] 데이터 형식입니다.
+진행 데이터 형식입니다.
 
 *nColumnSize*<br/>
-[in] 열 크기 (바이트)에서입니다.
+진행 열 크기 (바이트)입니다.
 
 *pData*<br/>
-[in] 버퍼에 저장 된 열 데이터에 대 한 포인터입니다.
+진행 버퍼에 저장 된 열 데이터에 대 한 포인터입니다.
 
 *pLength*<br/>
-[in] 필요한 경우 필드 길이에 대 한 포인터입니다.
+진행 필요한 경우 필드 길이에 대 한 포인터입니다.
 
 *pStatus*<br/>
-[in] 필요한 경우 열 상태에 바인딩할 변수의 포인터입니다.
+진행 필요한 경우 열 상태에 바인딩될 변수에 대 한 포인터입니다.
 
 *eParamIO*<br/>
-[in] 바인딩에 연결 된 매개 변수는 입력, 입/출력 또는 출력 매개 변수 인지 여부를 지정 합니다.
+진행 바인딩과 연결 된 매개 변수가 입력, 입/출력 또는 출력 매개 변수 인지 여부를 지정 합니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 함수를 사용 하려면 먼저 불러와야 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)합니다.
+이 함수를 사용 하려면 먼저 [Createparameteraccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)를 호출 해야 합니다.
 
-## <a name="createaccessor"></a> Cmanualaccessor:: Createaccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: CreateAccessor
 
-바인딩 구조 열에 대 한 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.
+열 바인딩 구조에 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -167,25 +165,25 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>매개 변수
 
 *nBindEntries*<br/>
-[in] 열의 수입니다. 이 수에 대 한 호출의 수와 일치 해야 합니다 [cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md) 함수입니다.
+진행 열 수입니다. 이 수는 [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 함수에 대 한 호출 수와 일치 해야 합니다.
 
 *pBuffer*<br/>
-[in] 출력 열에는 저장 된 버퍼에 대 한 포인터입니다.
+진행 출력 열이 저장 되는 버퍼에 대 한 포인터입니다.
 
 *nBufferSize*<br/>
-[in] 바이트 버퍼의 크기입니다.
+진행 버퍼의 크기 (바이트)입니다.
 
 ### <a name="return-value"></a>반환 값
 
-HRESULT 값 중 하나입니다.
+표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 함수를 호출 하기 전에 호출 된 `CManualAccessor::AddBindEntry` 함수입니다.
+`CManualAccessor::AddBindEntry` 함수를 호출 하기 전에이 함수를 호출 합니다.
 
-## <a name="createparameteraccessor"></a> Cmanualaccessor:: Createparameteraccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
 
-바인딩 구조를 매개 변수에 대 한 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.
+매개 변수 바인딩 구조에 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -198,26 +196,26 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 #### <a name="parameters"></a>매개 변수
 
 *nBindEntries*<br/>
-[in] 열의 수입니다.
+진행 열 수입니다.
 
 *pBuffer*<br/>
-[in] 입력된 열에는 저장 된 버퍼에 대 한 포인터입니다.
+진행 입력 열이 저장 되는 버퍼에 대 한 포인터입니다.
 
 *nBufferSize*<br/>
-[in] 바이트 버퍼의 크기입니다.
+진행 버퍼의 크기 (바이트)입니다.
 
 ### <a name="return-value"></a>반환 값
 
-HRESULT 값 중 하나입니다.
+표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-이 함수를 호출 하기 전에 호출 해야 합니다 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)합니다.
+[Addparameterentry](../../data/oledb/cmanualaccessor-addparameterentry.md)를 호출 하기 전에이 함수를 호출 해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 클래스](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)<br/>

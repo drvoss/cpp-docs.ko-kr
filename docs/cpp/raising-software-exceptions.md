@@ -13,12 +13,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 7c58ae2e2b6635345a162d11d2b75a9865d37751
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179135"
 ---
 # <a name="raising-software-exceptions"></a>소프트웨어 예외 발생
 
@@ -36,7 +36,7 @@ ms.locfileid: "74246402"
 
 \<winerror.h > 파일에서는 예외 코드의 형식을 보여 줍니다. 기존 예외 코드와 충돌하는 코드를 정의하지 않으려면 세 번째 최상위 비트를 1로 설정합니다. 4개의 최상위 비트는 다음 표와 같이 설정되어야 합니다.
 
-|비트|권장하는 이진 설정|설명|
+|비트|권장하는 이진 설정|Description|
 |----------|--------------------------------|-----------------|
 |31-30|11|이러한 두 비트는 코드의 기본 상태(11 = 오류, 00 = 성공, 01 = 정보, 10 = 경고)를 나타냅니다.|
 |29|1|클라이언트 비트. 사용자 정의 코드의 경우 1로 설정합니다.|
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 예외를 발생시키기만 하려면 마지막 세 매개 변수를 0으로 설정하면 됩니다. 마지막 세 매개 변수는 추가 정보를 전달하고 처리기가 계속 실행되지 않도록 하는 플래그를 설정하는 데 유용합니다. 자세한 내용은 Windows SDK에서 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) 함수를 참조 하세요.
 
-이렇게 하면 예외 처리 필터에서 사용자가 정의한 코드를 테스트할 수 있습니다. 예를 들면 다음과 같습니다.
+이렇게 하면 예외 처리 필터에서 사용자가 정의한 코드를 테스트할 수 있습니다. 다음은 그 예입니다.
 
 ```cpp
 __try {

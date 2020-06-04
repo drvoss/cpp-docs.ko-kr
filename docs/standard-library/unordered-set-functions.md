@@ -5,21 +5,20 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243425"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427694"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 함수
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 함수
 
-## <a name="swap"></a> swap (unordered_set)
+## <a name="swap"></a>swap (unordered_set)
 
 두 컨테이너의 내용을 바꿉니다.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -34,7 +33,7 @@ void swap(
 *해시*\
 해시 함수 개체 형식입니다.
 
-*pred*\
+*Pred*\
 같음 비교 함수 개체 형식입니다.
 
 *할당*\
@@ -103,11 +102,11 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>swap (unordered_multiset)
 
 두 컨테이너의 내용을 바꿉니다.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,7 +121,7 @@ void swap(
 *해시*\
 해시 함수 개체 형식입니다.
 
-*pred*\
+*Pred*\
 같음 비교 함수 개체 형식입니다.
 
 *할당*\

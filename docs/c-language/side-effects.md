@@ -6,11 +6,11 @@ helpviewer_keywords:
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
 ms.openlocfilehash: de5e398afd8b95cfe5596f487a36b6a2d27e3287
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158475"
 ---
 # <a name="side-effects"></a>파생 작업
 
@@ -31,6 +31,6 @@ x[i] = i++;
 
 C에서는 의도하지 않은 결과에 대한 계산 순서를 정의하지 않으므로 위에서 설명한 두 계산 방법 모두 올바르며 둘 중 하나가 구현될 수 있습니다. 코드가 이식 가능하고 명확하도록 하려면 의도하지 않은 결과에 대한 특정 계산 순서에 의존하는 문을 사용하지 않아야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [식 계산](../c-language/expression-evaluation-c.md)

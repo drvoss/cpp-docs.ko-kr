@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143073"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427412"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 클래스
 
@@ -34,22 +34,22 @@ ms.locfileid: "77143073"
 class CurrentScheduler;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[만들기](#create)|`_Policy` 매개 변수에서 동작을 설명 하는 새 스케줄러를 만들어 호출 컨텍스트에 연결 합니다. 새로 만든 스케줄러는 호출 하는 컨텍스트에 대 한 현재 스케줄러가 됩니다.|
-|[CreateScheduleGroup](#createschedulegroup)|오버로드됨. 호출 컨텍스트와 연결 된 스케줄러 내에 새 일정 그룹을 만듭니다. `_Placement` 매개 변수를 사용 하는 버전은 새로 만든 일정 그룹 내의 태스크가 해당 매개 변수로 지정 된 위치에서 실행 될 때 편향 되도록 합니다.|
-|[Detach](#detach)|호출 컨텍스트에서 현재 스케줄러를 분리 하 고 이전에 연결 된 스케줄러를 현재 스케줄러로 복원 합니다 (있는 경우). 이 메서드가 반환 된 후 호출 컨텍스트는 `CurrentScheduler::Create` 또는 `Scheduler::Attach` 메서드를 사용 하 여 컨텍스트에 이전에 연결 된 스케줄러에 의해 관리 됩니다.|
+|[CreateScheduleGroup](#createschedulegroup)|오버로드되었습니다. 호출 컨텍스트와 연결 된 스케줄러 내에 새 일정 그룹을 만듭니다. `_Placement` 매개 변수를 사용 하는 버전은 새로 만든 일정 그룹 내의 태스크가 해당 매개 변수로 지정 된 위치에서 실행 될 때 편향 되도록 합니다.|
+|[분리](#detach)|호출 컨텍스트에서 현재 스케줄러를 분리 하 고 이전에 연결 된 스케줄러를 현재 스케줄러로 복원 합니다 (있는 경우). 이 메서드가 반환 된 후 호출 컨텍스트는 `CurrentScheduler::Create` 또는 `Scheduler::Attach` 메서드를 사용 하 여 컨텍스트에 이전에 연결 된 스케줄러에 의해 관리 됩니다.|
 |[Get](#get)|호출 컨텍스트와 연결 된 스케줄러에 대 한 포인터를 반환 합니다. 현재 스케줄러 라고도 합니다.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|호출 컨텍스트와 연결 된 스케줄러의 현재 가상 프로세서 수를 반환 합니다.|
 |[GetPolicy](#getpolicy)|현재 스케줄러를 만든 정책의 복사본을 반환 합니다.|
-|[ID](#id)|현재 스케줄러에 대 한 고유 식별자를 반환 합니다.|
+|[Id](#id)|현재 스케줄러에 대 한 고유 식별자를 반환 합니다.|
 |[IsAvailableLocation](#isavailablelocation)|현재 스케줄러에서 지정된 위치를 사용할 수 있는지를 확인합니다.|
 |[RegisterShutdownEvent](#registershutdownevent)|현재 컨텍스트와 연결 된 스케줄러를 종료 하 고 자체를 소멸 시킬 때 `_ShutdownEvent` 매개 변수에 전달 된 Windows 이벤트 핸들이 신호를 받도록 합니다. 이벤트가 신호를 받을 때 스케줄러에 예약 된 모든 작업이 완료 됩니다. 이 메서드를 통해 여러 종료 이벤트를 등록할 수 있습니다.|
-|[ScheduleTask](#scheduletask)|오버로드됨. 호출 컨텍스트와 연결 된 스케줄러 내에서 경량 작업을 예약 합니다. 간단한 작업은 런타임에 의해 결정되는 일정 그룹에 배치됩니다. `_Placement` 매개 변수를 사용하는 버전은 작업이 지정된 위치에서 실행되도록 합니다.|
+|[ScheduleTask](#scheduletask)|오버로드되었습니다. 호출 컨텍스트와 연결 된 스케줄러 내에서 경량 작업을 예약 합니다. 간단한 작업은 런타임에 의해 결정되는 일정 그룹에 배치됩니다. `_Placement` 매개 변수를 사용하는 버전은 작업이 지정된 위치에서 실행되도록 합니다.|
 
 ## <a name="remarks"></a>설명
 

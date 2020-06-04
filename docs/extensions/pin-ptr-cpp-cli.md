@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172037"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr(C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr(C++/CLI)
 
 공용 언어 런타임에서만 사용되는 ‘고정 포인터’를 선언합니다.
 
@@ -53,7 +53,7 @@ Windows 런타임에서는 이 언어 기능이 지원되지 않습니다.
 *initializer*<br/>
 참조 형식의 멤버, 관리되는 배열의 요소 또는 네이티브 포인터에 할당할 수 있는 다른 모든 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **pin_ptr**은 네이티브 포인터 기능의 상위 집합을 나타냅니다. 따라서 네이티브 포인터에 할당할 수 있으면 **pin_ptr**에도 할당할 수 있습니다. 내부 포인터는 네이티브 포인터로서 비교 및 포인터 산술을 포함한 동일한 일련의 작업을 수행할 수 있습니다.
 
@@ -89,13 +89,13 @@ Windows 런타임에서는 이 언어 기능이 지원되지 않습니다.
 
 내부 포인터에 대한 자세한 내용은 [interior_ptr(C++/CLI)](interior-ptr-cpp-cli.md)을 참조하세요.
 
-고정 포인터에 대한 자세한 내용은 [방법: 포인터 및 배열 고정](how-to-pin-pointers-and-arrays.md) 및 [방법: 고정 포인터 및 값 형식 선언](how-to-declare-pinning-pointers-and-value-types.md)을 참조하세요.
+포인터 고정에 대 한 자세한 내용은 [방법: 포인터 및 배열 고정](how-to-pin-pointers-and-arrays.md) 및 [방법: 고정 포인터 및 값 형식 선언](how-to-declare-pinning-pointers-and-value-types.md)을 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 **pin_ptr**을 사용하여 배열의 첫 번째 요소 위치를 제한합니다.
 

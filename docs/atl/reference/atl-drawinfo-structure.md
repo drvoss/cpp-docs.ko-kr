@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 00d93b3dd8b060a21b6ff4083bb9880d8d836a19
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498003"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168620"
 ---
 # <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO 구조체
 
@@ -21,7 +21,7 @@ ms.locfileid: "69498003"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 struct ATL_DRAWINFO {
     UINT cbSize;
     DWORD dwDrawAspect;
@@ -60,10 +60,10 @@ struct ATL_DRAWINFO {
 를 그릴 장치 컨텍스트입니다. 창 없는 개체의 경우 멤버 `hdcDraw` 는 포함 하는 `MM_TEXT` 창의 클라이언트 좌표와 일치 하는 논리적 좌표를 사용 하 여 매핑 모드에 있습니다. 또한 장치 컨텍스트는 일반적으로 `WM_PAINT` 메시지에서 전달 하는 것과 동일한 상태 여야 합니다.
 
 `prcBounds`<br/>
-개체를 그릴 `hdcDraw`및 사각형을 지정하는 [RECTL](/previous-versions//dd162907\(v=vs.85\)) 구조체에 대한 포인터입니다. 이 멤버는 개체의 위치 지정 및 늘이기를 제어 합니다. 창 없는 내부 활성 개체를 그리려면이 멤버가 NULL 이어야 합니다. 다른 모든 상황에서 NULL은 올바른 값이 아니므로 `E_INVALIDARG` 오류 코드가 생성 됩니다. 컨테이너가 NULL이 아닌 값을 창 없는 개체에 전달 하는 경우 개체는 요청한 측면을 지정 된 장치 컨텍스트와 사각형에 렌더링 해야 합니다. 컨테이너는 창 없는 개체에서이를 요청 하 여 개체의 두 번째 비활성 뷰를 렌더링 하거나 개체를 인쇄할 수 있습니다.
+개체를 그릴 `hdcDraw`및 사각형을 지정하는 [RECTL](/windows/win32/api/windef/ns-windef-rectl) 구조체에 대한 포인터입니다. 이 멤버는 개체의 위치 지정 및 늘이기를 제어 합니다. 창 없는 내부 활성 개체를 그리려면이 멤버가 NULL 이어야 합니다. 다른 모든 상황에서 NULL은 올바른 값이 아니므로 `E_INVALIDARG` 오류 코드가 생성 됩니다. 컨테이너가 NULL이 아닌 값을 창 없는 개체에 전달 하는 경우 개체는 요청한 측면을 지정 된 장치 컨텍스트와 사각형에 렌더링 해야 합니다. 컨테이너는 창 없는 개체에서이를 요청 하 여 개체의 두 번째 비활성 뷰를 렌더링 하거나 개체를 인쇄할 수 있습니다.
 
 `prcWBounds`<br/>
-이 `hdcDraw` 메타 파일 장치 컨텍스트 (Windows SDK의 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 참조) 이면 기본 메타 파일의 경계 사각형을 지정 `RECTL` 하는 구조체에 대 한 포인터입니다. 사각형 구조에는 창 범위와 창 원점이 포함 됩니다. 이러한 값은 메타 파일을 그리는 데 유용 합니다. 에 의해 `prcBounds` 표시 된 사각형은이 `prcWBounds` 사각형 안에 중첩 되며 동일한 좌표 공간에 있습니다.
+이 `hdcDraw` 메타 파일 장치 컨텍스트 (Windows SDK의 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 참조) 이면 기본 메타 파일의 경계 사각형을 지정 `RECTL` 하는 구조체에 대 한 포인터입니다. 사각형 구조에는 창 범위와 창 원점이 포함 됩니다. 이러한 값은 메타 파일을 그리는 데 유용 합니다. 에 의해 `prcBounds` 표시 되는 사각형은이 `prcWBounds` 사각형 안에 중첩 됩니다. 동일한 좌표 공간에 있습니다.
 
 `bOptimize`<br/>
 컨트롤의 그리기를 최적화 하는 경우 0이 아니고, 그렇지 않으면 0입니다. 그리기가 최적화 된 경우 렌더링을 마치면 장치 컨텍스트의 상태가 자동으로 복원 됩니다.
@@ -75,7 +75,7 @@ struct ATL_DRAWINFO {
 의 `prcBounds` 차원이 HIMETRIC에 있으면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
 `ZoomNum`<br/>
-개체가 렌더링 되는 사각형의 너비와 높이입니다. 대상 `ZoomNum.cx` 의 x 축 (개체의 기본 크기에 대 한 비율)을 따른 확대/축소 비율은의 값으로 `ZoomDen.cx`나눈 값입니다. Y 축을 따라 확대/축소 비율은 비슷한 방식으로 달성 됩니다.
+개체가 렌더링 되는 사각형의 너비와 높이입니다. 대상의 x 축 (개체의 기본 크기에 대 한 비율)을 따른 확대/축소 비율은의 값으로 `ZoomNum.cx` 나눈 값입니다. `ZoomDen.cx` Y 축을 따라 확대/축소 비율은 비슷한 방식으로 달성 됩니다.
 
 `ZoomDen`<br/>
 대상의 실제 너비와 높이입니다.
@@ -90,8 +90,8 @@ struct ATL_DRAWINFO {
 
 **헤더:** 없음 ctl. h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 및 구조체](../../atl/reference/atl-classes.md)<br/>
 [IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
-[CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
+[CComControlBase:: OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

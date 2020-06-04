@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Visual Studio의 C++ 코드 분석
+summary: Visual Studio는 C++ 코드 품질을 분석하고 개선하는 도구를 제공합니다.
+metadata:
+  title: C/C++ 코드 분석기
+  description: Visual Studio를 사용하여 C 및 C++ 코드 품질을 분석하는 방법을 알아봅니다.
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108410"
+landingContent:
+- title: C 및 C++ 코드 분석
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C/C++용 코드 분석 개요
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: quickstart
+    links:
+    - text: C/C++용 코드 분석 빠른 시작
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: tutorial
+    links:
+    - text: 오류에 대한 C/C++ 코드 분석 연습
+      url: walkthrough-analyzing-c-cpp-code-for-defects.md
+    - text: C/C++ 코드 오류를 줄이기 위한 SAL 주석 사용
+      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
+- title: 코드 분석 참조
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Core Guidelines
+      url: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+  - linkListType: reference
+    links:
+    - text: C++ Core Guidelines 경고
+      url: code-analysis-for-cpp-corecheck.md
+    - text: C++ 코드 분석 경고
+      url: code-analysis-for-c-cpp-warnings.md

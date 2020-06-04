@@ -1,9 +1,11 @@
 ---
 title: _mkdir, _wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951725"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919155"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -64,7 +67,7 @@ int _wmkdir(
 *dirname*<br/>
 새 디렉터리에 대한 경로입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 새 디렉터리가 만들어진 경우 0을 반환합니다. 오류가 발생 하면 함수는-1을 반환 하 고 **errno** 를 다음과 같이 설정 합니다.
 
@@ -72,15 +75,17 @@ int _wmkdir(
 
 **Enoent (** 경로를 찾을 수 없습니다.
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_Mkdir** 함수는 지정 된 이름을 사용 하 여 새 디렉터리를 만듭니다 *.* **_mkdir** 은 호출 당 새 디렉터리를 하나만 만들 수 있으므로 새 디렉터리 *이름을 지정할 수* 있습니다. **_mkdir** 은 경로 구분 기호를 변환 하지 않습니다. Windows NT에서 백슬래시(\\)와 슬래시(/)는 런타임 루틴의 문자열에 사용할 수 있는 경로 구분 기호입니다.
+**_Mkdir** 함수는 지정 된 이름을 사용 하 여 새 디렉터리를 만듭니다 *.* **_mkdir** 는 각 호출에 새 디렉터리를 하나만 만들 수 있으므로 새 *디렉터리의 이름을* 마지막으로 지정할 수 있습니다. **_mkdir** 은 경로 구분 기호를 변환 하지 않습니다. Windows NT에서 백슬래시(\\)와 슬래시(/)는 런타임 루틴의 문자열에 사용할 수 있는 경로 구분 기호입니다.
 
-**_wmkdir** 는 **_mkdir**의 와이드 문자 버전입니다. **_wmkdir** 에 대 한 *tname* 인수는 와이드 문자열입니다. **_wmkdir** 및 **_mkdir** 은 동일 하 게 작동 하지 않습니다.
+**_wmkdir** 은 **_mkdir**의 와이드 문자 버전입니다. **_wmkdir** 에 대 한 대상 *이름* 인수는 와이드 문자열입니다. **_wmkdir** 와 **_mkdir** 는 동일 하 게 동작 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -93,7 +98,7 @@ int _wmkdir(
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -140,7 +145,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

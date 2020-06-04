@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 6f8f9466b867603738919c6210055d02d3c579ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180045"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>예외 사양 (throw, noexcept) (C++)
 
@@ -24,11 +24,13 @@ C + + 17 이전에는 두 가지 종류의 예외 사양이 있었습니다. *No
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 컴파일러에 함수가 아무 예외도 throw하지 않음을 알립니다. 그러나 **/std: c + + 14** 모드에서는 함수가 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다. 따라서 위의 항목 대신 [noexcept](../cpp/noexcept-cpp.md) 연산자를 사용 하는 것이 좋습니다.
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 다음 표에서는 예외 사양의 Microsoft C++ 구현을 요약 합니다.
 
 |예외 사양|의미|
@@ -54,9 +56,9 @@ C 함수에서는 명시적 예외 사양이 허용되지 않습니다. C 함수
 
 |함수|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|예외 사양이 없는 C++ 함수|예|예|예|예|
-|C++`noexcept`, `noexcept(true)`또는 `throw()` 예외 사양을 사용 하는 함수|아니요|아니요|예|예|
-|C++`noexcept(false)`, `throw(...)`또는 `throw(type)` 예외 사양을 사용 하는 함수|예|예|예|예|
+|예외 사양이 없는 C++ 함수|yes|yes|yes|yes|
+|C++`noexcept`, `noexcept(true)`또는 `throw()` 예외 사양을 사용 하는 함수|예|예|yes|yes|
+|C++`noexcept(false)`, `throw(...)`또는 `throw(type)` 예외 사양을 사용 하는 함수|yes|yes|yes|yes|
 
 ## <a name="example"></a>예제
 

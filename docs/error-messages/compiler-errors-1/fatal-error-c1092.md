@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-ms.openlocfilehash: 3268e5b124be40313bdc97b4c95d935ddd4f9160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af43ddb83e872762f720b156644e0d466957a8a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203881"
 ---
 # <a name="fatal-error-c1092"></a>심각한 오류 C1092
 
 편집하며 계속하기는 데이터 형식에 대한 변경 내용은 지원하지 않습니다. 빌드해야 합니다.
 
-변경 하거나 마지막으로 빌드가 성공한 이후 데이터 형식을 추가 합니다.
+마지막으로 성공한 빌드 이후 데이터 형식을 변경 하거나 추가 했습니다.
 
-- 편집 하며 계속 하기를 클래스, 구조체 또는 열거형 정의 포함 하 여 기존 데이터 형식으로 변경 내용을 지원 하지 않습니다. 디버깅을 중지 하 고 응용 프로그램을 작성 해야 합니다.
+- 편집 하며 계속 하기는 클래스, 구조체 또는 열거형 정의를 비롯 한 기존 데이터 형식에 대 한 변경 내용을 지원 하지 않습니다. 디버깅을 중지 하 고 응용 프로그램을 빌드해야 합니다.
 
-- 편집 하며 계속 하기 새 데이터 형식의 경우 vc 같은 프로그램 데이터베이스 파일에 추가 지원 하지 않습니다*x*0.pdb (여기서 *x* 는 시각적 개체의 주 버전 C++ 사용에서) 읽기 전용입니다. 데이터 형식에 추가 하려면 컴파일러 쓰기 모드에서.pdb 파일을 열어야 합니다.
+- Vc*x*0 .pdb ( *x* 는 사용 중인 시각적 개체 C++ 의 주 버전)와 같은 프로그램 데이터베이스 파일이 읽기 전용인 경우 편집 하며 계속 하기는 새 데이터 형식 추가를 지원 하지 않습니다. 데이터 형식을 추가 하려면 컴파일러에서 .pdb 파일을 쓰기 모드로 열어야 합니다.
 
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>현재 디버그 세션을 끝내 지 않고이 오류를 제거 하려면
 

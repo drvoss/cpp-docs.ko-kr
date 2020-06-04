@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184244"
 ---
 # <a name="function-inlining-problems"></a>함수 인라이닝 문제
 
-인라인 함수를 사용 하는 경우 다음을 수행 해야 합니다.
+함수 인라인 함수를 사용 하는 경우 다음을 수행 해야 합니다.
 
-- 인라인 함수를 포함 하는 헤더 파일에서 구현 된 경우
+- 포함 하는 헤더 파일에 인라인 함수를 구현 합니다.
 
-- 가 인라인 헤더 파일에서 ON으로 설정 합니다.
+- 헤더 파일에서 인라인이 설정 되어 있어야 합니다.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-사용 중인 경우는 `#pragma inline_depth` 컴파일러 지시문에 있어야 2의 큰 값을 설정 합니다. 값 0은 해제 인라인 처리 합니다. 또한 사용 하 고 있는지를 확인 합니다 **/Ob1** 하거나 **/ob2** 컴파일러 옵션입니다.
+`#pragma inline_depth` 컴파일러 지시문을 사용 하는 경우 값이 2 이상으로 설정 되어 있는지 확인 합니다. 0 값은 인라이닝을 해제 합니다. 또한 **/Pv1** 또는 **/ob2** 컴파일러 옵션을 사용 하 고 있는지 확인 합니다.
 
-서로 다른 모듈에서 인라인 및 인라인이 아닌 컴파일 옵션을 혼합 하면 문제가 발생할 수 있습니다. 경우는 C++ 함수 인라이닝 켜져 라이브러리를 만들면 ([/Ob1](../../build/reference/ob-inline-function-expansion.md) 하거나 [/ob2](../../build/reference/ob-inline-function-expansion.md)) 함수를 설명 하는 해당 헤더 파일은 인라인 (옵션 제외)를 해제 하지만 오류가 표시 됩니다 LNK2001 합니다. 함수를 얻지 인라인 코드를 헤더 파일에서 있지만 없기 때문에 라이브러리 파일에 대 한 참조를 해결 하려면 주소가 없습니다.
+여러 모듈에서 인라인 및 비 인라인 컴파일 옵션을 혼합 하면 문제가 발생할 수 있습니다. 함수 인라이닝 C++ 이 설정 된 ([/ob1](../../build/reference/ob-inline-function-expansion.md) 또는 [/o2](../../build/reference/ob-inline-function-expansion.md)) 함수를 사용 하 여 라이브러리를 만들었지만 함수를 설명 하는 해당 헤더 파일에 인라이닝이 해제 되어 있으면 (옵션 없음) 오류 LNK2001이 발생 합니다. 함수는 헤더 파일의 코드에 인라인 되지 않지만 라이브러리 파일에 있지 않기 때문에 참조를 확인 하는 주소가 없습니다.
 
-마찬가지로, 인라인 함수를 사용 하는 프로젝트 함수를 정의.cpp 파일에 파일 헤더에 LNK2019를 가져올 수도 대신 합니다. 헤더 파일은 어디에서 나 적절 한 것으로 간주 포함 되지만 함수만 인라인 컴파일러를 통해.cpp 파일을 전달 하는 경우 따라서 링커는 다른 모듈에 사용 되는 경우 외부 참조로 함수를 볼 수 있습니다.
+마찬가지로 함수 인라이닝을 사용 하는 프로젝트에서 헤더 파일 대신 .cpp 파일에 함수를 정의 하는 경우에도 LNK2019가 발생 합니다. 헤더 파일은 적절 하 게 간주 되는 모든 위치에 포함 되지만 .cpp 파일이 컴파일러를 통해 전달 될 때만 함수가 인라인 됩니다. 따라서 링커에서는 다른 모듈에서 사용 될 때 함수를 확인 되지 않은 외부 참조로 볼 수 있습니다.
 
 ```cpp
 // LNK2019_FIP.h
@@ -91,6 +91,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [링커 도구 오류 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

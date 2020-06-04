@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4378
+title: 컴파일러 경고(수준 1) C4378
 ms.date: 11/04/2016
 f1_keywords:
 - C4378
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162831"
 ---
-# <a name="compiler-warning-level-1-c4378"></a>컴파일러 경고 (수준 1) C4378
+# <a name="compiler-warning-level-1-c4378"></a>컴파일러 경고(수준 1) C4378
 
 이니셜라이저를 실행 하려면 함수 포인터를 가져와야 합니다. System:: ModuleHandle:: ResolveMethodHandle을 고려 합니다.
 

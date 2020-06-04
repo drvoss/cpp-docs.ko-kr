@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-ms.openlocfilehash: f3dd0b73e300b44cb4f35e42683725813453d7de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: f7269a62d7899df4eb89f6dd9487310c0fda0b4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181813"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew(C++/CLI 및 C++/CXgcnew)
 
@@ -45,7 +45,7 @@ ms.locfileid: "65516648"
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 **gcnew**를 사용하여 Message 개체를 할당합니다.
 

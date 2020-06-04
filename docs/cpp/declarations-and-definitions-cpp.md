@@ -2,12 +2,12 @@
 title: 선언 및 정의 (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301550"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077209"
 ---
 # <a name="declarations-and-definitions-c"></a>선언 및 정의 (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-줄 5에서는 `main` 함수가 선언 됩니다. 줄 7에서는 `pi` 이라는 **const** 변수를 선언 하 고 *초기화*합니다. 줄 8에서 정수 `i`는 함수 `f`생성 된 값을 사용 하 여 선언 되 고 초기화 됩니다. 이름 `f`은 줄 3의 *전방 선언* 으로 인해 컴파일러에 표시 됩니다. 
+줄 5에서는 `main` 함수가 선언 됩니다. 줄 7에서는 `pi` 이라는 **const** 변수를 선언 하 고 *초기화*합니다. 줄 8에서 정수 `i`는 함수 `f`생성 된 값을 사용 하 여 선언 되 고 초기화 됩니다. 이름 `f`은 줄 3의 *전방 선언* 으로 인해 컴파일러에 표시 됩니다.
 
-9 번 줄에서 `C` 형식의 `obj` 라는 변수가 선언 되었습니다. 그러나이 선언에서는 `C`이 프로그램에서 나중에 선언 되지 않고 앞으로 선언 되지 않기 때문에 오류가 발생 합니다. 오류를 해결 하려면 `main` 하기 전에 `C`의 전체 *정의* 를 이동 하거나 앞으로 선언을 추가 합니다. 이 동작은 소스 파일의 선언 지점 앞에서 C#함수 및 클래스를 사용할 수 있는 등의 다른 언어와는 다릅니다. 
+9 번 줄에서 `C` 형식의 `obj` 라는 변수가 선언 되었습니다. 그러나이 선언에서는 `C`이 프로그램에서 나중에 선언 되지 않고 앞으로 선언 되지 않기 때문에 오류가 발생 합니다. 오류를 해결 하려면 `main` 하기 전에 `C`의 전체 *정의* 를 이동 하거나 앞으로 선언을 추가 합니다. 이 동작은 소스 파일의 선언 지점 앞에서 C#함수 및 클래스를 사용할 수 있는 등의 다른 언어와는 다릅니다.
 
 줄 10에서는 `std::string` 형식의 `str` 라는 변수가 선언 됩니다. 이름 `std::string`은 줄 1의 소스 파일에 병합 되는 `string` [헤더 파일](header-files-cpp.md) 에 도입 되기 때문에 표시 됩니다. `std`은 `string` 클래스가 선언 되는 네임 스페이스입니다.
 
@@ -94,7 +94,7 @@ char *strchr( const char *Str, const char Target );
 
 프로그램 C++ 에는 둘 이상의 [컴파일 단위가](header-files-cpp.md)포함 될 수 있습니다. 별도의 컴파일 단위에 정의 된 엔터티를 선언 하려면 [extern](extern-cpp.md) 키워드를 사용 합니다. 선언에 있는 정보는 컴파일러에 충분 하지만 링크 단계에서 엔터티의 정의를 찾을 수 없는 경우 링커에서 오류가 발생 합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [스토리지 클래스](storage-classes-cpp.md)<br/>
 [const](const-cpp.md)<br/>
@@ -107,6 +107,6 @@ char *strchr( const char *Str, const char Target );
 [decltype](decltype-cpp.md)<br/>
 [의 특성C++](attributes.md)<br/>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [기본 개념](../cpp/basic-concepts-cpp.md)<br/>

@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366792"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 버전의 C++ 도구 및 기능
 
-
 ::: moniker range=">=vs-2019"
-
 
 다음 C++ 기능은 Visual Studio 2019에서 사용할 수 있습니다. 별도로 명시되지 않는 한 모든 기능은 모든 버전에서 사용할 수 있습니다. Visual Studio Community, Visual Studio Professional 및 Visual Studio Enterprise. 일부 기능에는 Visual Studio 설치 관리자를 사용하여 설치할 수 있는 특정 워크로드 또는 선택적 구성 요소가 필요합니다.
 
@@ -35,7 +33,7 @@ ms.locfileid: "67400634"
 - Clang/LLVM
   - Windows의 경우 x86 또는 x64를 대상으로 하는 Clang/LLVM 7.0(CMake 지원에만 해당). 다른 Clang 버전도 작동하지만 공식적으로 지원되지 않습니다.
   - Linux의 경우 배포판에서 지원되는 모든 Clang/LLVM 설치.
- 
+
 ## <a name="c-workloads"></a>C++ 워크로드
 
 Visual Studio에는 C++ 개발을 위한 다음과 같은 워크로드가 포함되어 있습니다. .NET 데스크톱 개발, Python 개발, Azure 개발, Visual Studio 확장 개발 등과 같은 다른 워크로드와 함께 이러한 워크로드 중 일부 또는 모두를 설치할 수 있습니다.
@@ -43,9 +41,11 @@ Visual Studio에는 C++ 개발을 위한 다음과 같은 워크로드가 포함
 ### <a name="desktop-development-with-c"></a>C++를 사용한 데스크톱 개발
 
 Included:
+
 - C++ 핵심 데스크톱 기능
 
 선택적 구성 요소:
+
 - MSVC v142 - VS 2019 C++ x64/x86 빌드 도구(v14.21)
 - Windows 10 SDK(10.0.17763.0)
 - Just-In-Time 디버거
@@ -70,24 +70,28 @@ Included:
 ### <a name="linux-development-with-c"></a>C++를 사용한 Linux 개발
 
 Included:
+
 - C++ 핵심 기능
 - Windows 유니버설 C 런타임
 - Linux 개발용 C++
 
 선택적 구성 요소:
+
 - Linux용 C++ CMake 도구
 - Embedded 및 IoT 개발 도구
 
 ### <a name="universal-windows-platform-development"></a>유니버설 Windows 플랫폼 개발
 
 Included:
-- Blend for Visual Studio
+
+- Visual Studio용 Blend
 - .NET 네이티브 및 .NET Standard
 - NuGet 패키지 관리자
 - 유니버설 Windows 플랫폼 도구
 - Windows 10 SDK(10.0.17763.0)
 
 선택적 구성 요소:
+
 - IntelliCode
 - IntelliTrace(Enterprise만 해당)
 - USB 디바이스 연결
@@ -102,12 +106,14 @@ Included:
 ### <a name="c-game-development"></a>C++ 게임 개발
 
 Included:
+
 - C++ 핵심 기능
 - Windows 유니버설 C 런타임
 - C++ 2019 재배포 가능 업데이트
 - MSVC v142 - VS 2019 C++ x64/x86 빌드 도구(v14.21)
 
 선택적 구성 요소:
+
 - C++ 프로파일링 도구
 - Windows 10 SDK(10.0.17763.0)
 - IntelliCode
@@ -122,10 +128,12 @@ Included:
 ### <a name="mobile-development-with-c"></a>C++를 사용한 모바일 개발
 
 Included:
+
 - C++ 핵심 기능
 - Android SDK 설치(API 레벨 25)(C++를 통해 모바일 개발을 할 수 있도록 로컬 설치)
 
 선택적 구성 요소:
+
 - Android NDK(R16B)
 - Apache Ant(1.9.3)
 - C++ Android 개발 도구
@@ -135,7 +143,6 @@ Included:
 - Android NDK(R16B)(32비트)
 - C++ iOS 개발 도구
 - IncrediBuild - 빌드 가속화
-
 
 ## <a name="individual-components"></a>개별 구성 요소
 
@@ -175,6 +182,7 @@ Included:
 설치한 워크로드에 따라 다음 프로젝트 템플릿을 사용할 수 있습니다.
 
 Windows 데스크톱:
+
 - 빈 프로젝트
 - 콘솔 앱
 - Windows 데스크톱 마법사
@@ -195,17 +203,19 @@ Windows 데스크톱:
 - Google Test
 
 유니버설 Windows 플랫폼(C++/CX):
+
 - 새 응용 프로그램
 - DirectX 11 및 XAML 앱
 - DirectX 11 앱
-- DirectX 12 앱 
-- 단위 테스트 앱 
-- DLL 
-- Windows 런타임 구성 요소 
-- 정적 라이브러리 
+- DirectX 12 앱
+- 단위 테스트 앱
+- DLL
+- Windows 런타임 구성 요소
+- 정적 라이브러리
 - Windows 애플리케이션 패키징 프로젝트
 
 Linux:
+
 - 콘솔 앱(Linux)
 - 빈 프로젝트(Linux)
 - Raspberry Pi Blink
@@ -291,7 +301,7 @@ Linux:
 - Microsoft Fakes(단위 테스트 격리)(Enterprise만 해당)
 - 코드 검사(Enterprise만 해당)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio 설치](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)<br/>
@@ -459,7 +469,7 @@ Linux:
 |코드 맵 및 종속성 그래프|||읽기 전용|X|
 |코드 맵 디버깅||||X|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio 설치](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)<br/>

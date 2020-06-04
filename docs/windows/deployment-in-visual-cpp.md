@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c4b75a65fcfb34a4988b176ffcb5b2afcb7ea13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514813"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377372"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++의 개발
 
@@ -26,7 +26,7 @@ Visual C++ 라이브러리를 중앙에서 배포하려면 설치할 파일에 �
 
 - *재배포 가능 패키지* 파일. 독립 실행형 명령줄 실행 파일로서 모든 Visual C++ 재배포 가능 라이브러리를 압축 형태로 포함합니다.
 
-- *재배포 가능 병합 모듈*(.msm 파일). 특정 라이브러리 배포에 사용할 수 있고 애플리케이션의 Windows Installer(.msi) 파일에 포함되는 모듈입니다.
+- 특정 라이브러리를 배포하는 데 사용할 수 있고 응용 프로그램의 Windows 설치 관리자(.msi) 파일에 포함할 모듈(.msm 파일)을 *재배포할* 수 있습니다.
 
 재배포 가능 패키지 파일은 특정 시스템 아키텍처에 대해 모든 Visual C++ 라이브러리를 설치합니다. 예를 들어 애플리케이션이 x64용으로 빌드되는 경우 애플리케이션에서 사용하는 모든 Visual C++ 라이브러리를 설치하려면 vcredist_x64.exe 재배포 가능 패키지를 사용할 수 있습니다. 애플리케이션 설치자를 프로그래밍하여 애플리케이션을 설치하기 전에 필수 구성 요소로 재배포 가능 패키지를 실행할 수 있습니다.
 
@@ -50,7 +50,7 @@ Microsoft는 로컬 배포된 Visual C++ 라이브러리를 자동으로 업데�
 
 Visual C++ 라이브러리의 로드 순서는 시스템에 따라 다릅니다. 로더 문제를 진단하려면 depends.exe 또는 where.exe를 사용합니다. 자세한 내용은 [동적 연결 라이브러리 순서(Windows)](/windows/win32/Dlls/dynamic-link-library-search-order)를 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [데스크톱 응용 프로그램 배포](deploying-native-desktop-applications-visual-cpp.md)
+- [데스크톱 애플리케이션 배포](deploying-native-desktop-applications-visual-cpp.md)
 - [범용 CRT 배포](universal-crt-deployment.md)

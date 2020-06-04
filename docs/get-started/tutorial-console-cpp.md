@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80079285"
 ---
 # <a name="create-a-c-console-app-project"></a>C++ 콘솔 앱 프로젝트 만들기
 
@@ -19,17 +19,17 @@ ms.locfileid: "69631051"
 
 C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio를 사용해 좀 더 어려운 문제인 계산기 앱을 개발해 보겠습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 컴퓨터에서 설치되고 실행 중인 **C++ 워크로드를 사용하여 데스크톱 개발**을 위해 Visual Studio를 설치합니다. 아직 설치되지 않은 경우 [Visual Studio에서 C++ 지원 설치](../build/vscpp-step-0-installation.md)를 참조하세요.
 
 ## <a name="create-your-app-project"></a>앱 프로젝트 만들기
 
-Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성하고 *솔루션*을 사용하여 프로젝트를 구성합니다. 프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
+Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다.   프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
 
 1. Visual Studio를 방금 시작한 경우 Visual Studio 2019 대화 상자가 표시됩니다. **새 프로젝트 만들기**를 선택하여 시작합니다.
 
-   ![Visual Studio 2019 초기 대화 상자](./media/calc-vs2019-initial-dialog.png "Visual Studio 2019 초기 대화 상자")
+   ![Visual Studio 2019 첫 번째 대화 상자](./media/calc-vs2019-initial-dialog.png "Visual Studio 2019 첫 번째 대화 상자")
 
    그렇지 않으면, Visual Studio의 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트 만들기** 창이 열립니다.
 
@@ -42,7 +42,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름** 편집 상자를 선택하고, 새 프로젝트의 이름을 *CalculatorTutorial*로 지정한 다음, **만들기**를 선택합니다.
 
-   ![새 프로젝트 대화 상자 구성에서 프로젝트 이름 지정](./media/calc-vs2019-name-your-project.png "새 프로젝트 대화 상자 구성에서 프로젝트 이름 지정")
+   ![새 프로젝트 구성 대화 상자에서 프로젝트에 이름 지정](./media/calc-vs2019-name-your-project.png "새 프로젝트 구성 대화 상자에서 프로젝트에 이름 지정")
 
    비어 있는 C++ Windows 콘솔 애플리케이션이 생성됩니다. 콘솔 애플리케이션은 Windows 콘솔 창을 사용하여 출력을 표시하고 사용자 입력을 허용합니다. Visual Studio에서 편집기 창이 열리고 생성된 코드를 보여 줍니다.
 
@@ -81,7 +81,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    ![프로젝트 시작](./media/calc-vs2019-hello-world-console.png "프로젝트 시작")
 
-   콘솔 창이 열린 다음, 앱을 실행합니다. Visual Studio에서 콘솔 앱을 시작하면 코드를 실행한 다음, "이 창을 닫으려면 아무 키나 누르세요. . "를 표시하여 출력을 볼 수 있도록 합니다. 지금까지 Visual Studio에서 첫 번째 "Hello, world!" 콘솔 앱을 만들었습니다.
+   콘솔 창이 열린 다음, 앱을 실행합니다. Visual Studio에서 콘솔 앱을 시작하면 코드를 실행한 다음, "이 창을 닫으려면 아무 키나 누르세요. 을 선택합니다. "를 표시하여 출력을 볼 수 있도록 합니다. 지금까지 Visual Studio에서 첫 번째 "Hello, world!" 콘솔 앱을 만들었습니다.
 
 1. 키를 눌러서 콘솔 창을 닫고 Visual Studio로 돌아갑니다.
 
@@ -174,7 +174,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    다른 파일에서 이루어진 코드 변경 내용의 피킹을 제공하는 팝업이 나타납니다. 코드를 *Calculator.cpp*에 추가했습니다.
 
-   ![Calculate의 정의를 사용하여 팝업](./media/calc-vs2019-pop-up-definition.png "Calculate의 정의를 사용하여 팝업")
+   ![Calculate의 정의가 표시된 팝업 항목](./media/calc-vs2019-pop-up-definition.png "Calculate의 정의가 표시된 팝업 항목")
 
    현재, 0.0만 반환합니다. 이를 변경해봅시다. **Esc** 키를 눌러 팝업을 닫습니다.
 
@@ -264,7 +264,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. `5 + 5`를 입력하고 **Enter** 키를 누릅니다. 결과가 10인지 확인합니다.
 
-   ![5+5라는 결과](./media/calc-vs2019-five-plus-five.png "5+5라는 결과")
+   ![5 + 5의 결과](./media/calc-vs2019-five-plus-five.png "5 + 5의 결과")
 
 ## <a name="debug-the-app"></a>앱 디버그
 
@@ -308,7 +308,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    프로그램이 예정된 내용을 수행하는 것처럼 보입니다. 첫 번째 숫자를 사용하고 두 번째로 나눕니다. `cout` 줄에서 `result` 변수를 마우스로 가리키거나 **자동** 창에서 `result`를 살펴봅니다. 올바르지 않은 것 같은 “inf”로 값이 등록된 것을 확인하게 됩니다. 해당 값을 수정하세요. `cout` 줄은 `result`에 저장된 모든 값을 출력하므로 **F10** 키를 사용하여 추가로 한 줄을 실행하면 콘솔 창에서는 다음을 표시합니다.
 
-   ![0으로 나누기의 결과](./media/calc-vs2019-divide-by-zero-fail.png "0으로 나누기의 결과")
+   ![0으로 나눈 결과](./media/calc-vs2019-divide-by-zero-fail.png "0으로 나눈 결과")
 
    이 결과는 0으로 나누기가 정의되지 않았기 때문에 발생합니다. 따라서 프로그램에는 요청된 작업에 대한 숫자 응답이 포함되지 않습니다.
 
@@ -359,7 +359,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. 이제 **F5** 키를 한 번 누릅니다. 사용자 입력에 대한 요청을 일시 중지해야 할 때까지 계속 프로그램을 실행합니다. `10 / 0`을 다시 입력하세요. 이제 더 유용한 메시지가 출력됩니다. 사용자에게는 추가 입력 메시지가 표시되고, 프로그램은 계속 정상적으로 실행됩니다.
 
-   ![변경 이후 최종 결과](./media/calc-vs2019-final-verification.png "변경 이후 최종 결과")
+   ![변경 후의 최종 결과](./media/calc-vs2019-final-verification.png "변경 후의 최종 결과")
 
    > [!Note]
    > 디버깅 모드에서 코드를 편집하면 코드가 부실해질 위험이 있습니다. 이 문제는 디버거가 계속 이전 코드를 실행하고 변경 내용을 사용하여 업데이트하지 않는 경우에 발생합니다. 디버거는 문제가 발생했음을 알려주는 대화 상자를 표시합니다. 경우에 따라 **F5** 키를 눌러 실행 중인 코드를 새로 고쳐야 합니다. 특히 함수를 변경하는 동시에 실행 지점이 해당 함수 내에 있는 경우 함수에서 나간 다음, 다시 들어와서 업데이트된 코드를 가져와야 합니다. 이 방법이 어떤 이유로 작동하지 않고 오류 메시지가 표시되는 경우 IDE의 맨 위에 있는 메뉴 아래의 도구 모음에서 빨간색 사각형을 클릭하여 디버깅을 중지한 다음, **F5** 키를 다시 입력하거나 도구 모음에서 중지 단추 옆에 있는 녹색 "재생" 화살표를 선택하여 디버깅을 시작할 수 있습니다.
@@ -387,15 +387,15 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 ::: moniker range="<vs-2019"
 
-C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio에서 만든 항목이며 좀 더 어려운 문제인 계산기 앱을 살펴보겠습니다.
+C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio를 사용해 좀 더 어려운 문제인 계산기 앱을 개발해 보겠습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 컴퓨터에서 설치되고 실행 중인 **C++ 워크로드를 사용하여 데스크톱 개발**을 위해 Visual Studio를 설치합니다. 아직 설치되지 않은 경우 [Visual Studio에서 C++ 지원 설치](../build/vscpp-step-0-installation.md)를 참조하세요.
 
 ## <a name="create-your-app-project"></a>앱 프로젝트 만들기
 
-Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성하고 *솔루션*을 사용하여 프로젝트를 구성합니다. 프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
+Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다.   프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
 
 1. Visual Studio의 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 창이 열립니다.
 
@@ -416,13 +416,13 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
     int main()
     {
-        std::cout << "Hello World!\n"; 
+        std::cout << "Hello World!\n";
     }
 
     // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
     // Debug program: F5 or Debug > Start Debugging menu
 
-    // Tips for Getting Started: 
+    // Tips for Getting Started:
     //   1. Use the Solution Explorer window to add/manage files
     //   2. Use the Team Explorer window to connect to source control
     //   3. Use the Output window to see build output and other messages
@@ -443,7 +443,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    ![프로젝트 시작](./media/calculator-hello-world-console.png "프로젝트 시작")
 
-   콘솔 창이 열린 다음, 앱을 실행합니다. Visual Studio에서 콘솔 앱을 시작하면 코드를 실행한 다음, "계속하려면 아무 키나 누르세요. . "를 표시하여 출력을 볼 수 있도록 합니다. 지금까지 Visual Studio에서 첫 번째 "Hello, world!" 콘솔 앱을 만들었습니다.
+   콘솔 창이 열린 다음, 앱을 실행합니다. Visual Studio에서 콘솔 앱을 시작하면 코드를 실행한 다음, "계속하려면 아무 키나 누르세요. 을 선택합니다. "를 표시하여 출력을 볼 수 있도록 합니다. 지금까지 Visual Studio에서 첫 번째 "Hello, world!" 콘솔 앱을 만들었습니다.
 
 1. 키를 눌러서 콘솔 창을 닫고 Visual Studio로 돌아갑니다.
 
@@ -496,7 +496,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. 애플리케이션을 실행하려면 **Ctrl+F5** 키를 누르거나 **디버그** 메뉴로 이동하고 **디버깅하지 않고 시작**을 선택하세요. **이 프로젝트가 만료되었습니다.** 라는 문구의 팝업이 표시되면 **이 대화 상자를 다시 표시 안 함**을 선택한 다음, **예**를 선택하여 애플리케이션을 빌드할 수 있습니다. 코드에서 지정된 텍스트가 표시되는 콘솔 창이 나타납니다.
 
-   ![애플리케이션 빌드 및 시작](./media/calculator-first-launch.gif "애플리케이션 빌드 및 시작")
+   ![애플리케이션 빌드 시작](./media/calculator-first-launch.gif "애플리케이션 빌드 시작")
 
 1. 작업이 완료되면 콘솔 창을 닫습니다.
 
@@ -628,7 +628,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. `5 + 5`를 입력하고 **Enter** 키를 누릅니다. 결과가 10인지 확인합니다.
 
-   ![5+5라는 결과](./media/calculator-five-plus-five.png "5+5라는 결과")
+   ![5 + 5의 결과](./media/calculator-five-plus-five.png "5 + 5의 결과")
 
 ## <a name="debug-the-app"></a>앱 디버그
 
@@ -678,7 +678,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    프로그램이 예정된 내용을 수행하는 것처럼 보입니다. 첫 번째 숫자를 사용하고 두 번째로 나눕니다. `cout` 줄에서 `result` 변수를 마우스로 가리키거나 **자동** 창에서 `result`를 살펴봅니다. 올바르지 않은 것 같은 “inf”로 값이 등록된 것을 확인하게 됩니다. 해당 값을 수정하세요. `cout` 줄은 `result`에 저장된 모든 값을 출력하므로 **F10** 키를 사용하여 추가로 한 줄을 실행하면 콘솔 창에서는 다음을 표시합니다.
 
-   ![0으로 나누기의 결과](./media/calculator-divide-by-zero-fail.png "0으로 나누기의 결과")
+   ![0으로 나눈 결과](./media/calculator-divide-by-zero-fail.png "0으로 나눈 결과")
 
    이 결과는 0으로 나누기가 정의되지 않았기 때문에 발생합니다. 따라서 프로그램에는 요청된 작업에 대한 숫자 응답이 포함되지 않습니다.
 
@@ -730,11 +730,11 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. 이제 **F5** 키를 한 번 누릅니다. 사용자 입력에 대한 요청을 일시 중지해야 할 때까지 계속 프로그램을 실행합니다. `10 / 0`을 다시 입력하세요. 이제 더 유용한 메시지가 출력됩니다. 사용자에게는 추가 입력 메시지가 표시되고, 프로그램은 계속 정상적으로 실행됩니다.
 
-   ![변경 이후 최종 결과](./media/calculator-final-verification.gif "변경 이후 최종 결과")
+   ![변경 후의 최종 결과](./media/calculator-final-verification.gif "변경 후의 최종 결과")
 
    > [!Note]
    > 디버깅 모드에서 코드를 편집하면 코드가 부실해질 위험이 있습니다. 이 문제는 디버거가 계속 이전 코드를 실행하고 변경 내용을 사용하여 업데이트하지 않는 경우에 발생합니다. 디버거는 문제가 발생했음을 알려주는 대화 상자를 표시합니다. 경우에 따라 **F5** 키를 눌러 실행 중인 코드를 새로 고쳐야 합니다. 특히 함수를 변경하는 동시에 실행 지점이 해당 함수 내에 있는 경우 함수에서 나간 다음, 다시 들어와서 업데이트된 코드를 가져와야 합니다. 이 방법이 어떤 이유로 작동하지 않고 오류 메시지가 표시되는 경우 IDE의 맨 위에 있는 메뉴 아래의 도구 모음에서 빨간색 사각형을 클릭하여 디버깅을 중지한 다음, **F5** 키를 다시 입력하거나 도구 모음에서 중지 단추 옆에 있는 녹색 "재생" 화살표를 선택하여 디버깅을 시작할 수 있습니다.
-   
+
    > 실행 및 디버그 바로 가기 이해
    >
    > - **F5** 키(또는 **디버그** > **디버깅 시작**)는 디버깅 세션이 활성 상태가 아닌 경우 디버깅 세션을 시작하고, 중단점에 도달하거나 프로그램에 사용자 입력이 필요할 때까지 프로그램을 실행합니다. 사용자 입력이 필요하지 않고 중단점에 도달할 수 없는 경우 프로그램 실행이 완료되면 프로그램이 종료되고 콘솔 창이 닫힙니다. "Hello World"와 같은 프로그램을 실행한 경우 **F5** 키를 입력하여 창을 열어두기 전에 **Ctrl+F5** 키를 사용하거나 중단점을 설정합니다.

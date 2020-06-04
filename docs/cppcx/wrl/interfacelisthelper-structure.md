@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396036"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213852"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 구조체
 
@@ -42,59 +42,59 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 ### <a name="parameters"></a>매개 변수
 
 *T0*<br/>
-템플릿 매개 변수 0 필요 합니다.
+필요한 템플릿 매개 변수 0입니다.
 
 *T1*<br/>
-템플릿 매개 변수 1에는 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 1입니다.
 
 *T2*<br/>
-템플릿 매개 변수 2는 기본적으로 지정 되지 않았습니다. 세 번째 템플릿 매개 변수입니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 2입니다. 세 번째 템플릿 매개 변수입니다.
 
 *T3*<br/>
-템플릿 매개 변수 3, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 3입니다.
 
 *T4*<br/>
-템플릿 매개 변수 4, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 4입니다.
 
 *T5*<br/>
-템플릿 매개 변수 5는 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 5입니다.
 
 *T6*<br/>
-템플릿 매개 변수 6, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 6입니다.
 
 *T7*<br/>
-템플릿 매개 변수 7, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 7입니다.
 
 *T8*<br/>
-템플릿 매개 변수 8, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 8입니다.
 
 *T9*<br/>
-템플릿 매개 변수 9, 기본적으로 지정 되지 않았습니다.
+기본적으로 지정 되지 않은 템플릿 매개 변수 9입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-빌드는 `InterfaceList` 재귀적으로 지정 된 템플릿 매개 변수 인수를 적용 하 여 형식입니다.
+지정 된 템플릿 매개 변수 인수를 재귀적으로 적용 하 여 `InterfaceList` 형식을 빌드합니다.
 
-**InterfaceListHelper** 템플릿은 템플릿 매개 변수를 사용 하 여 *T0* 의 첫 번째 데이터 멤버를 정의 하는 `InterfaceList` 구조 및 재귀적으로 적용 되는  **InterfaceListHelper** 나머지 모든 템플릿 매개 변수는 템플릿. **InterfaceListHelper** 나머지 템플릿 매개 변수가 없는 경우 중지 합니다.
+**InterfaceListHelper** 템플릿에서는 템플릿 매개 변수 *T0* 를 사용 하 여 `InterfaceList` 구조체의 첫 번째 데이터 멤버를 정의한 다음, 나머지 템플릿 매개 변수에 **InterfaceListHelper** 템플릿을 재귀적으로 적용 합니다. 남아 있는 템플릿 매개 변수가 없으면 **InterfaceListHelper** 이 중지 됩니다.
 
 ## <a name="members"></a>멤버
 
-### <a name="public-typedefs"></a>공용 Typedefs
+### <a name="public-typedefs"></a>공용 형식 정의
 
 |이름|설명|
 |----------|-----------------|
-|`TypeT`|InterfaceList 형식에 대 한 동의어입니다.|
+|`TypeT`|[인터페이스 목록] 형식의 동의어입니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `InterfaceListHelper`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)

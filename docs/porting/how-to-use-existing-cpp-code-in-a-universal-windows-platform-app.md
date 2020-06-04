@@ -2,12 +2,12 @@
 title: '방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: b1351a1c7858b00cffc454fa66831b3995aea804
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630437"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366424"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
 
@@ -44,13 +44,13 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
 이 항목에는 다음 절차가 포함됩니다.
 
-- [UWP 앱에서 Win32 DLL 사용하기](#BK_Win32DLL)
+- [UWP 앱에서 Win32 DLL 사용](#BK_Win32DLL)
 
 - [UWP 앱에서 네이티브 C++ 정적 라이브러리 사용](#BK_StaticLib)
 
-- [Windows 런타임 구성 요소로 C++ 라이브러리 포팅](#BK_WinRTComponent)
+- [C++ 라이브러리를 Windows 런타임 구성 요소로 포팅](#BK_WinRTComponent)
 
-##  <a name="BK_Win32DLL"></a>UWP 앱에서 Win32 DLL 사용하기
+## <a name="using-a-win32-dll-in-a-uwp-app"></a><a name="BK_Win32DLL"></a>UWP 앱에서 Win32 DLL 사용
 
 보안과 안정성을 높이기 위해 유니버설 Windows 앱은 제한된 런타임 환경에서 실행되므로 클래식 Windows 데스크톱 애플리케이션에서 사용하듯이 네이티브 DLL을 사용할 수 없습니다. DLL의 소스 코드가 있는 경우 UWP에서 실행되도록 코드를 이식할 수 있습니다. 먼저 프로젝트를 UWP 프로젝트로 식별하기 위해 몇 가지 프로젝트 설정과 프로젝트 파일 메타데이터를 변경합니다. C++/CX를 사용하도록 설정하는 `/ZW` 옵션을 사용하여 라이브러리 코드를 컴파일해야 합니다. 특정 API 코드는 해당 환경과 관련된 더 엄격한 제어 때문에 UWP 앱에서 허용되지 않습니다. [UWP 앱용 Win32 및 COM API](/uwp/win32-and-com/win32-and-com-for-uwp-apps)를 참조하세요.
 
@@ -135,7 +135,7 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
 2. DLL 프로젝트에 대한 **프로젝트 속성**을 열고 **구성**을 **모든 구성**으로 설정합니다.
 
-3. **프로젝트 속성**의 **C/C++**  > **일반** 탭에서 **Windows 런타임 확장 사용**을 **예(/ZW)** 로 설정합니다. 이렇게 하면 구성 요소 확장명(C++/CX)이 활성화됩니다.
+3. **프로젝트 속성**의 **C/C++** > **일반** 탭에서 **Windows 런타임 확장 사용**을 **예(/ZW)** 로 설정합니다. 이렇게 하면 구성 요소 확장명(C++/CX)이 활성화됩니다.
 
 4. **솔루션 탐색기**에서 프로젝트 노드를 선택하고 바로 가기 메뉴를 연 다음 **프로젝트 언로드**를 선택합니다. 그런 다음 언로드된 프로젝트 노드에서 바로 가기 메뉴를 열고 프로젝트 파일을 편집하도록 선택합니다. `WindowsTargetPlatformVersion` 요소를 찾아서 다음 요소로 바꿉니다.
 
@@ -151,7 +151,7 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
    이제 **솔루션 탐색기**는 프로젝트를 유니버설 Windows 프로젝트로 식별합니다.
 
-5. 미리 컴파일된 헤더 파일 이름이 올바른지 확인합니다. **미리 컴파일된 헤더** 섹션에서 **미리 컴파일된 헤더 파일**을 *pch.h*에서 *stdafx.h*로 변경합니다. 이렇게 하지 않으면 다음과 같은 오류가 표시됩니다.
+5. 미리 컴파일된 헤더 파일 이름이 올바른지 확인합니다. 미리 **컴파일된 헤더** 섹션에서 **미리 컴파일된 헤더 파일을** *pch.h에서* *stdafx.h로*변경합니다. 이렇게 하지 않으면 다음과 같은 오류가 표시됩니다.
 
    > error C2857: '#include' statement specified with the /Ycpch.h command-line option was not found in the source file(오류 C2857: /Ycpch.h 명령줄 옵션과 함께 지정된 '#include' 문을 소스 파일에서 찾을 수 없습니다.)
 
@@ -161,11 +161,11 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
    유니버설 Windows 플랫폼용으로 컴파일할 경우 일부 기능을 사용할 수 없습니다. 모든 문제에 대한 컴파일러 오류가 표시됩니다. 클린 빌드를 수행할 때까지 이러한 문제를 해결하세요.
 
-7. 동일한 솔루션의 UWP 앱에서 DLL을 사용하려면 UWP 프로젝트 노드에 대한 바로 가기 메뉴를 열고 **추가** > **참조**를 선택합니다.
+7. 동일한 솔루션에서 UWP 앱에서 DLL을 사용하려면 UWP 프로젝트 노드의 바로 가기 메뉴를 열고**참조** **추가를** > 선택합니다.
 
-   **프로젝트** > **솔루션** 아래에서 DLL 프로젝트 옆의 확인란을 선택하고 **확인** 단추를 선택합니다.
+   **프로젝트** > **솔루션에서**DLL 프로젝트 옆의 확인란을 선택하고 **확인** 단추를 선택합니다.
 
-8. UWP 앱의 *pch.h* 파일에 라이브러리 헤더 파일을 포함합니다.
+8. UWP 앱의 *pch.h* 파일에 라이브러리의 헤더 파일을 포함합니다.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -183,7 +183,7 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
     }
     ```
 
-##  <a name="BK_StaticLib"></a> UWP 앱에서 네이티브 C++ 정적 라이브러리 사용
+## <a name="using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a> UWP 앱에서 네이티브 C++ 정적 라이브러리 사용
 
 UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용할 수 있지만 알아두어야 할 몇 가지 제한 사항이 있습니다. [C++/CX의 정적 라이브러리](../cppcx/static-libraries-c-cx.md)에 대한 내용을 읽고 시작합니다. UWP 앱에서 정적 라이브러리의 네이티브 코드에 액세스할 수 있지만 이러한 정적 라이브러리에서는 공용 ref 형식을 만들지 않는 것이 좋습니다. `/ZW` 옵션을 사용하여 정적 라이브러리를 컴파일하는 경우 라이브러리 관리자(실제로는 가장된 링커)는 다음과 같이 경고합니다.
 
@@ -193,9 +193,9 @@ UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용할 수 
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용하려면
 
-1. UWP 프로젝트의 프로젝트 속성에 있는 왼쪽 창에서 **구성 속성** > **링커** > **입력**을 선택합니다. 오른쪽 창에서 **추가 종속성** 속성의 라이브러리에 경로를 추가합니다. 예를 들어 출력을 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib에 배치하는 프로젝트 라이브러리의 경우 상대 경로 `Debug\MyNativeLibrary\MyNativeLibrary.lib`를 추가합니다.
+1. UWP 프로젝트의 프로젝트 속성에서 왼쪽 창에서 **구성 속성** > **링커** > **입력을** 선택합니다. 오른쪽 창에서 **추가 종속성** 속성의 라이브러리에 경로를 추가합니다. 예를 들어 출력을 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib에 배치하는 프로젝트 라이브러리의 경우 상대 경로 `Debug\MyNativeLibrary\MyNativeLibrary.lib`를 추가합니다.
 
-2. *pch.h* 파일(있는 경우) 또는 필요에 따라 .cpp 파일 내에 헤더 파일을 참조하는 include 문을 추가하고 라이브러리를 사용하는 코드를 추가하기 시작합니다.
+2. 포함 문을 추가하여 *pch.h* 파일(있는 경우) 또는 필요에 따라 .cpp 파일에 헤더 파일을 참조하고 라이브러리를 사용하는 코드를 추가합니다.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -203,7 +203,7 @@ UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용할 수 
 
    **솔루션 탐색기**의 **참조** 노드에서 참조를 추가하지 마세요. 해당 메커니즘은 Windows 런타임 구성 요소에만 적용됩니다.
 
-##  <a name="BK_WinRTComponent"></a> Windows 런타임 구성 요소로 C++ 라이브러리 포팅
+## <a name="porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a> Windows 런타임 구성 요소로 C++ 라이브러리 포팅
 
 UWP 앱의 정적 라이브러리에서 네이티브 API를 사용하려는 경우 네이티브 라이브러리의 소스 코드가 있으면 해당 코드를 Windows 런타임 구성 요소로 이식할 수 있습니다. 이 라이브러리는 더 이상 정적 라이브러리가 아니며 DLL이 됩니다. 모든 C++ UWP 앱에서 이 라이브러리를 사용할 수 있지만, 정적 라이브러리의 경우와 달리 언어에 관계없이 모든 UWP 앱 코드에서 클라이언트가 사용할 수 있는 ref 형식 및 다른 C++/CX 구문을 추가할 수 있습니다. 따라서 C#, Visual Basic 또는 JavaScript에서 이러한 형식에 액세스할 수 있습니다.  기본 절차는 Windows 런타임 구성 요소 프로젝트를 만들고 여기에 정적 라이브러리에 대한 코드를 추가한 다음, 표준 C++ 컴파일에서 `/ZW` 컴파일로 코드를 이동할 때 발생하는 모든 오류를 해결하는 것입니다.
 
@@ -219,7 +219,7 @@ UWP 앱의 정적 라이브러리에서 네이티브 API를 사용하려는 경�
 
 5. 원래 프로젝트에서 추가할 모든 파일을 선택하고 **확인**을 선택합니다. 필요한 경우 하위 폴더를 대상으로 반복합니다.
 
-6. 이제 중복된 일부 코드가 있을 수도 있습니다. 미리 컴파일된 헤더(예: *stdafx.h* 및 *pch.h*)가 두 개 이상 있으면 유지할 헤더를 하나만 선택합니다. 유지할 헤더에 include 문과 같은 필요한 코드를 복사합니다. 그런 다음 다른 헤더를 삭제하고 프로젝트 속성의 **미리 컴파일된 헤더**에서 헤더 파일의 이름이 올바른지 확인합니다.
+6. 이제 중복된 일부 코드가 있을 수도 있습니다. 미리 컴파일된 헤더가 두 개 이상 있는 경우(예: *stdafx.h* 및 *pch.h)* 보관할 헤더를 선택합니다. 유지할 헤더에 include 문과 같은 필요한 코드를 복사합니다. 그런 다음 다른 헤더를 삭제하고 프로젝트 속성의 **미리 컴파일된 헤더**에서 헤더 파일의 이름이 올바른지 확인합니다.
 
    미리 컴파일된 헤더로 사용할 파일을 변경한 경우 각 파일에 대한 미리 컴파일된 헤더 옵션이 올바른지 확인합니다. 각 .cpp 파일을 차례로 선택하고 속성 창을 연 다음 **만들기(/Yc)** 로 설정되어야 하는 원하는 미리 컴파일된 헤더를 제외하고 모두 **사용(/Yu)** 으로 설정되어 있는지 확인합니다.
 

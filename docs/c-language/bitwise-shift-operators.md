@@ -8,15 +8,15 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326029"
 ---
 # <a name="bitwise-shift-operators"></a>비트 시프트 연산자
 
-시프트 연산자는 두 번째 피연산자가 지정하는 위치 수만큼 첫 번째 피연산자를 왼쪽(**&lt;&lt;**) 또는 오른쪽(**>>**)으로 이동합니다.
+시프트 연산자는 두 번째 피연산자가 지정하는 위치 수만큼 첫 번째 피연산자를 왼쪽( **&lt;&lt;** ) 또는 오른쪽( **>>** )으로 이동합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -60,6 +60,6 @@ z = ( x << 8 ) + ( y >> 8 );
 
 오른쪽 시프트는 기호 비트를 유지합니다. 부호 있는 정수가 오른쪽으로 이동하면 최상위 비트는 설정된 상태로 유지됩니다. 부호 없는 정수가 오른쪽으로 이동하면 최상위 비트는 해제됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [왼쪽 시프트 및 오른쪽 시프트 연산자(>> 및 <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

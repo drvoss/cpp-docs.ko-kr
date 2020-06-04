@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172609"
 ---
 # <a name="boxing--ccli-and-ccx"></a>boxing(C++/CLI 및 C++/CX)
 
@@ -34,7 +34,7 @@ value_variable = (value_type) object_variable;
 
 컴파일러 옵션: `/ZW`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 `DateTime` 값을 boxing 및 unboxing합니다. 먼저 예제에서는 현재 날짜 및 시간을 나타내는 `DateTime` 값을 가져와 `DateTime` 변수에 할당합니다. 그런 다음, `DateTime`을 `Object` 변수에 할당하여 boxing합니다. 마지막으로 boxed 값을 다른 `DateTime` 변수에 할당하여 unboxing합니다.
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-자세한 내용은 [boxing(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx)을 참조하세요.
+자세한 내용은 [boxing(C++/CX)](../cppcx/boxing-c-cx.md)을 참조하세요.
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
@@ -86,7 +86,7 @@ Boxing 및 unboxing을 통해 값 형식으로 개체로 처리할 수 있습니
 
 - [방법: gcnew를 사용하여 값 형식 만들기 및 암시적 boxing 사용](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [방법: unbox](../dotnet/how-to-unbox.md)
+- [방법: Unbox](../dotnet/how-to-unbox.md)
 
 - [표준 변환 및 암시적 boxing](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -94,7 +94,7 @@ Boxing 및 unboxing을 통해 값 형식으로 개체로 처리할 수 있습니
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 암시적 boxing의 작동 방식을 보여 줍니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171179"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -36,8 +36,8 @@ ms.locfileid: "62320021"
 
 ## <a name="example"></a>예제
 
-\<para>를 사용한 예제는 [\<summary>](summary-visual-cpp.md)를 참조하세요.
+[para>를 사용한 예제는 \<](summary-visual-cpp.md)summary>\<를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)

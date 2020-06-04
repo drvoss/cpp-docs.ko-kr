@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168462"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -30,7 +30,7 @@ COM 인터페이스의 동기 버전과 비동기 버전을 모두 정의 하도
 
 ## <a name="remarks"></a>설명
 
-**Async_uuid** C++ 특성은 [async_uuid](/windows/win32/Midl/async-uuid) MIDL 특성과 동일한 기능을 포함 합니다.
+**Async_uuid** C++ 특성에는 [async_uuid](/windows/win32/Midl/async-uuid) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -53,13 +53,13 @@ __interface ICustom {
 |||
 |-|-|
 |**적용 대상**|`interface`|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|**dual**, **dispinterface**|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|**이중**, **대** 만|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)

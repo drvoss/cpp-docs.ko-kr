@@ -3,13 +3,15 @@ layout: HubPage
 title: Visual C++ 설명서
 description: C++를 사용하여 플랫폼과 디바이스용 애플리케이션, 서비스 및 도구를 개발하는 방법을 알아봅니다.
 ms.topic: hub-page
-ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793801"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446110"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
@@ -251,7 +253,7 @@ ms.locfileid: "75793801"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Debug</h3>
+                                                    <h3>디버그</h3>
                                                     <p>Visual Studio 디버거를 사용하여 C++ 코드를 디버그합니다.</p>
                                                 </div>
                                             </div>

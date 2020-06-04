@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2185
 ms.assetid: 74bc9f64-7b4c-4735-ba13-67c43f8c47db
-ms.openlocfilehash: d1d9d3d6f40d5797d5d51684734adc80ee8da591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ec8b92d9411e790870c582d98cc67c7e68284a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206780"
 ---
 # <a name="compiler-error-c2185"></a>컴파일러 오류 C2185
 
-'identifier': 기반 할당이 잘못 되었습니다
+' identifier ': 기반 할당이 잘못 되었습니다.
 
-레지스터 변수 또는 (로컬) 자동 변수를 선언 `__based`합니다. 만 전역 변수를 선언할 수 `__based`입니다.
+레지스터 변수 또는 자동 (지역) 변수가 `__based`선언 됩니다. 전역 변수만 `__based`선언할 수 있습니다.

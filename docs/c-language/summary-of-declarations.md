@@ -2,12 +2,12 @@
 title: 선언 요약
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170438"
 ---
 # <a name="summary-of-declarations"></a>선언 요약
 
@@ -19,10 +19,10 @@ ms.locfileid: "74857023"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*특성-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 전용 \*<br/>
+*attribute-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 전용\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
 
-*특성* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 전용 \*<br/>
+*attribute* : &nbsp;&nbsp;&nbsp;&nbsp;/ 중 하나 \* Microsoft 전용 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
@@ -31,7 +31,7 @@ ms.locfileid: "74857023"
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  **=**  *initializer* /\* 스칼라 초기화의 경우 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  **=**  *initializer* /\* 스칼라 초기화용 \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -39,17 +39,17 @@ ms.locfileid: "74857023"
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *확장 decl* - **)**  /Microsoft 전용 \* \*
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* Microsoft 전용 \*/
 
 *type-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 전용 \*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 전용 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -149,7 +149,7 @@ ms.locfileid: "74857023"
 
 *initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* 집계 초기화의 경우 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* 집합체 초기화용 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
 
 *initializer-list*:<br/>
@@ -162,11 +162,11 @@ ms.locfileid: "74857023"
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-*확장-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 관련 \*/<br/>
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 전용\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*확장-decl-한정자*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 관련 \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 전용\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>

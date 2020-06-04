@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368232"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>추적 참조 연산자(C++/CLI 및 C++/CX)
 
-‘추적 참조’(`%`)는 일반 C++ 참조(`&`)처럼 동작합니다. 단, 추적 참조에 개체를 할당하면 개체 참조 개수가 증가합니다.
+*추적 참조* `%`() 는 객체가 추적 참조에`&`할당된 경우 객체의 참조 수가 증가한다는 점을 제외하면 일반 C++ 참조 () 처럼 행동합니다.
 
 ## <a name="all-platforms"></a>모든 플랫폼
 
 추적 참조에는 다음과 같은 특징이 있습니다.
 
-- 개체를 추적 참조에 할당하면 개체 참조 개수가 증가합니다.
+- 추적 참조에 개체를 할당하면 개체의 참조 수가 증가합니다.
 
 - 네이티브 참조(`&`)는 `*`를 역참조할 경우의 결과입니다. 추적 참조(`%`)는 `^`를 역참조할 경우의 결과입니다. 개체에 대한 `%`가 있는 한, 개체가 메모리에 유지됩니다.
 
@@ -77,7 +77,7 @@ C++/CLI의 추적 참조에 대한 자세한 내용은 다음을 참조하십시
 
 - [방법: C++/CLI에서 추적 참조 사용](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 C++/CLI에 대한 다음 샘플은 네이티브 및 관리되는 형식을 사용하여 추적 참조를 사용하는 방법을 보여 줍니다.
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148291"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168333"
 ---
 # <a name="coclass"></a>coclass
 
-COM 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.
+Com 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,55 +25,55 @@ COM 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.
 
 ## <a name="remarks"></a>설명
 
-합니다 **coclass** C++ 특성 생성된 된.idl 파일에서 coclass 구문을 배치 합니다.
+**Coclass** C++ 특성은 생성 된 .idl 파일에 coclass 구문을 배치 합니다.
 
-Coclass를 정의할 때는 지정할 수도 있습니다는 [uuid](uuid-cpp-attributes.md)를 [버전](version-cpp.md)를 [스레딩](threading-cpp.md)를 [vi_progid](vi-progid.md), 및 [progid ](progid.md) 특성입니다. 그 중 하나를 지정 하지 않은 경우 생성 됩니다.
+Coclass를 정의할 때 [uuid](uuid-cpp-attributes.md), [version](version-cpp.md), [스레딩](threading-cpp.md), [vi_progid](vi-progid.md)및 [progid](progid.md) 특성도 지정할 수 있습니다. 이러한 항목 중 하나를 지정 하지 않으면 생성 됩니다.
 
-두 개의 헤더 파일 사용 하 여 클래스를 포함 하는 경우는 **coclass** 특성 및 GUID를 지정 하지 않는 컴파일러에서는 두 클래스 모두에 대 한 동일한 GUID를 사용 하 고 MIDL 오류가 발생 하는 합니다.  따라서 사용 해야 합니다 `uuid` 사용 하는 경우 특성 **coclass**합니다.
+두 헤더 파일에 **coclass** 특성이 있는 클래스가 포함 되어 있고 GUID를 지정 하지 않는 경우 컴파일러는 두 클래스에 동일한 GUID를 사용 하 고이로 인해 MIDL 오류가 발생 합니다.  따라서 **coclass**를 사용 하는 경우 `uuid` 특성을 사용 해야 합니다.
 
 **ATL 프로젝트**
 
-이 특성은 클래스 또는 구조체 정의 ATL 프로젝트에서 앞에 오는 경우 해당:
+이 특성이 ATL 프로젝트의 클래스 또는 구조체 정의 앞에 오면 다음과 같이 됩니다.
 
-- 코드 또는 개체에 대 한 자동 등록을 지원 하기 위해 데이터를 삽입 합니다.
+- 개체에 대 한 자동 등록을 지원 하기 위해 코드 또는 데이터를 삽입 합니다.
 
-- 코드 또는 개체에 대 한 COM 클래스 팩터리를 지원 하기 위해 데이터를 삽입 합니다.
+- 개체에 대 한 COM 클래스 팩터리를 지 원하는 코드 또는 데이터를 삽입 합니다.
 
-- 코드 또는 구현 하는 데이터를 삽입 `IUnknown` COM creatable 개체를 개체를 확인 합니다.
+- `IUnknown`를 구현 하는 코드 또는 데이터를 삽입 하 고 개체를 COM에서 만들 수 있는 개체로 만듭니다.
 
-특히 다음 기본 클래스에는 대상 개체에 추가 됩니다.
+특히, 다음 기본 클래스는 대상 개체에 추가 됩니다.
 
-- [CComCoClass 클래스](../../atl/reference/ccomcoclass-class.md) 개체에 대 한 기본 클래스 팩터리 및 집계 모델을 제공 합니다.
+- [CComCoClass 클래스](../../atl/reference/ccomcoclass-class.md) 는 개체에 대 한 기본 클래스 팩터리 및 집계 모델을 제공 합니다.
 
-- [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md) 에서 지정한 스레딩 모델 클래스를 기반으로 템플릿을는 [스레딩](threading-cpp.md) 특성입니다. 경우는 `threading` 특성을 지정 하지 않으면 스레딩 모델 기본값인 아파트 합니다.
+- [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md) 에는 [스레딩](threading-cpp.md) 특성에 의해 지정 된 스레딩 모델 클래스를 기반으로 하는 템플릿이 있습니다. `threading` 특성을 지정 하지 않으면 기본 스레딩 모델은 아파트입니다.
 
-- [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) 를 추가 하면 합니다 [noncreatable](noncreatable.md) 대상 개체에 대 한 특성을 지정 하지 않으면.
+- [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) 는 대상 개체에 대해 [noncreatable](noncreatable.md) 특성이 지정 되지 않은 경우에 추가 됩니다.
 
-마지막으로, 포함된 IDL를 사용 하 여 정의 되지 않은 모든 이중 인터페이스는 해당 바뀝니다 [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) 클래스입니다. 이중 인터페이스 포함된 IDL에 정의 된 경우에 기본 목록에 특정 인터페이스를 수정 되지 않습니다.
+마지막으로, 포함 IDL을 사용 하 여 정의 되지 않은 모든 이중 인터페이스는 해당 [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) 클래스로 대체 됩니다. 이중 인터페이스가 포함 IDL에 정의 되어 있는 경우 기본 목록에 있는 특정 인터페이스는 수정 되지 않습니다.
 
-합니다 **coclass** 특성 또한 다음 함수를 사용할 수 있게의 경우 삽입 된 코드를 통하거나 `GetObjectCLSID`, 기본 클래스의 정적 메서드로 `CComCoClass`:
+또한 **coclass** 특성은 삽입 된 코드를 통해 다음 함수를 사용할 수 있도록 하거나, `GetObjectCLSID`의 경우 기본 클래스 `CComCoClass`의 정적 메서드로 설정 합니다.
 
-- `UpdateRegistry` 대상 클래스의 클래스 팩터리를 등록합니다.
+- `UpdateRegistry`는 대상 클래스의 클래스 팩터리를 등록 합니다.
 
-- `GetObjectCLSID`에 관련 된 등록을 사용할 수도 있습니다 대상 클래스의 CLSID를 가져오려고 합니다.
+- 등록과 관련 된 `GetObjectCLSID`를 사용 하 여 대상 클래스의 CLSID를 가져올 수도 있습니다.
 
-- `GetObjectFriendlyName` 기본적으로 형식의 문자열을 반환 합니다 "\<*대상 클래스 이름*> `Object`"입니다. 이 함수가 이미 있으면 추가 되지 않습니다. 이 함수를 자동으로 생성 하는 것 보다 친숙 한 이름을 반환 하는 대상 클래스를 추가 합니다.
+- 기본적으로 `GetObjectFriendlyName` "\<*대상 클래스 이름*> `Object`" 형식의 문자열을 반환 합니다. 이 함수가 이미 있으면 추가 되지 않습니다. 대상 클래스에이 함수를 추가 하 여 자동으로 생성 된 것 보다 친숙 한 이름을 반환 합니다.
 
-- `GetProgID`를 등록, 관련 된 지정 된 문자열을 반환 합니다는 [progid](progid.md) 특성입니다.
+- 등록과 관련 된 `GetProgID`는 [progid](progid.md) 특성으로 지정 된 문자열을 반환 합니다.
 
-- `GetVersionIndependentProgID` 동일한 기능이 `GetProgID`를 사용 하 여 지정 된 문자열을 반환 하지만 [vi_progid](vi-progid.md)합니다.
+- `GetVersionIndependentProgID`는 `GetProgID`와 동일한 기능을 갖지만 [vi_progid](vi-progid.md)에 지정 된 문자열을 반환 합니다.
 
-대상 클래스를 COM 맵 관련이 다음 변경 내용이:
+COM 맵과 관련 된 다음과 같은 변경 내용은 대상 클래스에 적용 됩니다.
 
-- 대상 클래스에서 파생 되는 모든 인터페이스에 대 한 항목 및 지정 된 모든 항목을 사용 하 여 COM 맵에 추가 되는 [COM 인터페이스 진입점](../../mfc/com-interface-entry-points.md) 특성 또는에 필요한 것을 [집계](aggregates.md) 특성입니다.
+- COM 맵은 대상 클래스가 파생 되는 모든 인터페이스에 대 한 항목과, [Com 인터페이스 진입점](../../mfc/com-interface-entry-points.md) 특성에 지정 된 모든 항목 또는 [집계](aggregates.md) 특성에 필요한 모든 항목을 포함 하 여 추가 됩니다.
 
-- [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) COM 맵에 매크로가 삽입 됩니다.
+- [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) 매크로가 COM 맵에 삽입 됩니다.
 
-클래스에 대 한.idl 파일에서 생성 된 coclass의 이름 클래스와 동일한 이름을 갖습니다.  예를 들어와 coclass의 클래스 ID에 액세스 하려면 다음 샘플에서는 참조 `CMyClass`, MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서 사용 하 여 `CLSID_CMyClass`입니다.
+클래스의 .idl 파일에서 생성 된 coclass의 이름은 클래스와 동일한 이름을 갖습니다.  예를 들어 다음 샘플을 참조 하 여 coclass `CMyClass`의 클래스 ID에 액세스 하려면 MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서 `CLSID_CMyClass`를 사용 합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 사용 하 여 **coclass** 특성:
+다음 코드에서는 **coclass** 특성을 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 // cpp_attr_ref_coclass1.cpp
@@ -91,7 +91,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-다음 예제에서 삽입 된 코드에 표시 되는 함수의 기본 구현을 재정의 하는 방법을 설명 합니다 **coclass** 특성입니다. 삽입된 코드 보기에 대한 자세한 정보는 [/Fx](../../build/reference/fx-merge-injected-code.md) 를 참조하세요. 모든 기본 클래스 또는 인터페이스 클래스를 사용 하는 삽입된 된 코드에 나타납니다. 또한 클래스는 삽입된 된 코드에 기본적으로 포함 하 고 명시적으로 해당 클래스를 기준으로 프로그램 coclass에 대 한를 지정 하는 경우 특성 공급자 코드에서 지정 된 형식을 사용 합니다.
+다음 샘플에서는 **coclass** 특성에 의해 삽입 된 코드에 표시 되는 함수의 기본 구현을 재정의 하는 방법을 보여 줍니다. 삽입된 코드 보기에 대한 자세한 정보는 [/Fx](../../build/reference/fx-merge-injected-code.md) 를 참조하세요. 클래스에 사용 하는 모든 기본 클래스 또는 인터페이스는 삽입 된 코드에 표시 됩니다. 또한 클래스가 삽입 된 코드에 기본적으로 포함 되어 있고 해당 클래스를 coclass의 기반으로 명시적으로 지정 하는 경우 특성 공급자가 코드에 지정 된 형식을 사용 합니다.
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -131,14 +131,14 @@ public:
 
 |||
 |-|-|
-|**적용 대상**|**class**, **struct**|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**적용 대상**|**클래스**, **구조체**|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [COM 특성](com-attributes.md)<br/>

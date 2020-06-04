@@ -4,22 +4,22 @@ ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 ms.openlocfilehash: 0dc87e9a119f82c03a11dde0d90c27de71618f5a
 ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/18/2019
 ms.locfileid: "74163437"
 ---
 # <a name="configure-c-projects-for-arm-processors"></a>ARM 프로세서에 대한 C++ 프로젝트 구성
 
-설명서의이 섹션에는 ARM 하드웨어를 대상으로 하는 MSVC build 도구를 사용 하는 방법에 대 한 정보가 포함 되어 있습니다.
+이 설명서 섹션에는 ARM 하드웨어를 대상으로 하는 MSVC 빌드 도구 사용 방법에 대한 정보가 포함되어 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [ARM ABI 규칙 개요](overview-of-arm-abi-conventions.md)\
 Windows on ARM에서 사용 등록, 호출 규칙 및 예외 처리에 사용하는 애플리케이션 이진 인터페이스에 대해 설명합니다.
 
 [ARM64 ABI 규칙 개요](arm64-windows-abi-conventions.md)\
-등록 사용, 호출 규칙 및 예외 처리를 위해 Windows의 ARM64에서 사용 하는 응용 프로그램 이진 인터페이스에 대해 설명 합니다.
+Windows on ARM64에서 사용 등록, 호출 규칙 및 예외 처리에 사용하는 애플리케이션 이진 인터페이스에 대해 설명합니다.
 
 [일반적인 MSVC ARM 마이그레이션 문제](common-visual-cpp-arm-migration-issues.md)\
 일반적으로 아키텍처 간에 이식이 가능한 것으로 가정되지만 ARM에서는 x86 및 x64와 다른 결과를 생성하는 C++ 코드 요소에 대해 설명합니다.
@@ -28,7 +28,7 @@ Windows on ARM에서 사용 등록, 호출 규칙 및 예외 처리에 사용하
 Windows on ARM의 구조적 예외 처리 중에 사용되는 스택 해제용 인코딩 구성표에 대해 설명합니다.
 
 [ARM64 예외 처리](arm64-exception-handling.md)\
-ARM64의 Windows에서 구조적 예외 처리 중 스택 해제를 위한 인코딩 체계에 대해 설명 합니다.
+Windows on ARM64의 구조적 예외 처리 중에 사용되는 스택 해제용 인코딩 구성표에 대해 설명합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
@@ -36,4 +36,4 @@ ARM64의 Windows에서 구조적 예외 처리 중 스택 해제를 위한 인�
 ARM 아키텍처를 사용하는 프로세서의 컴파일러 내장 기능에 대해 설명합니다.
 
 [ARM64 내장 함수](../intrinsics/arm-intrinsics.md)\
-ARM64 아키텍처를 사용 하는 프로세서의 컴파일러 내장 함수에 대해 설명 합니다.
+ARM64 아키텍처를 사용하는 프로세서의 컴파일러 내장 기능에 대해 설명합니다.

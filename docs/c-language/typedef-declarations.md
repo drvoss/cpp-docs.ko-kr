@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346108"
 ---
 # <a name="typedef-declarations"></a>Typedef 선언
 
@@ -51,7 +51,7 @@ typedef 선언은 변수 또는 함수 선언과 같은 방식으로 해석되�
 
 typedef 선언은 형식을 만드는 것이 아니라 기존 형식의 동의어나 다른 방식으로 지정할 수 있는 형식의 이름을 만듭니다. typedef 이름을 형식 지정자로 사용하는 경우 특정 형식 지정자와 함께 사용할 수 있습니다. 허용되는 한정자에는 **const** 및 `volatile`이 포함됩니다.
 
-typedef 이름은 일반 식별자와 네임스페이스를 공유합니다(자세한 내용은 [네임스페이스](../c-language/name-spaces.md) 참조). 따라서 프로그램에 동일한 이름의 typedef 이름과 로컬 범위 식별자가 있을 수 있습니다. 예:
+typedef 이름은 일반 식별자와 네임스페이스를 공유합니다(자세한 내용은 [네임스페이스](../c-language/name-spaces.md) 참조). 따라서 프로그램에 동일한 이름의 typedef 이름과 로컬 범위 식별자가 있을 수 있습니다. 예를 들어:
 
 ```C
 typedef char FlagType;
@@ -103,7 +103,7 @@ fv *signal( int, fv * );   /* Uses typedef type */
 pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 typedef 선언을 보여 줍니다.
 
@@ -146,6 +146,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

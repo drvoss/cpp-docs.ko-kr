@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451678"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320201"
 ---
-# <a name="recursivemutex-class"></a>recursive_mutex 클래스
+# <a name="recursive_mutex-class"></a>recursive_mutex 클래스
 
-*뮤텍스 형식*을 나타냅니다. [mutex](../standard-library/mutex-class-stl.md)와 달리 이미 잠겨 있는 개체에 대한 잠금 메서드 호출 동작은 적절하게 정의됩니다.
+*뮤텍스 형식을*나타냅니다. [mutex](../standard-library/mutex-class-stl.md)와 달리 이미 잠겨 있는 개체에 대한 잠금 메서드 호출 동작은 적절하게 정의됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,26 +35,26 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|`recursive_mutex` 개체를 생성합니다.|
 |[~recursive_mutex 소멸자](#dtorrecursive_mutex_destructor)|`recursive_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[lock](#lock)|스레드가 뮤텍스의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|
 |[try_lock](#try_lock)|차단되지 않고 뮤텍스의 소유권을 가져오려고 시도합니다.|
-|[unlock](#unlock)|뮤텍스의 소유권을 해제합니다.|
+|[잠금을 해제](#unlock)|뮤텍스의 소유권을 해제합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<뮤텍스 >
+**헤더:** \<뮤텍스>
 
 **네임스페이스:** std
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a><a name="lock"></a>잠금
 
 스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.
 
@@ -66,7 +66,7 @@ void lock();
 
 호출 스레드가 `mutex`를 이미 소유하고 있으면 메서드는 결과를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.
 
-## <a name="recursive_mutex"></a>  recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
 
 잠기지 않은 `recursive_mutex` 개체를 생성합니다.
 
@@ -74,7 +74,7 @@ void lock();
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
+## <a name="recursive_mutex"></a><a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex
 
 개체에서 사용하는 리소스를 모두 해제합니다.
 
@@ -86,7 +86,7 @@ recursive_mutex();
 
 소멸자가 실행될 때 개체가 잠겨 있는 경우, 이 동작은 정의되지 않습니다.
 
-## <a name="try_lock"></a>  try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.
 
@@ -94,15 +94,15 @@ recursive_mutex();
 bool try_lock() noexcept;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공적으로의 소유권 `mutex` 을 얻거나 호출 스레드가를 `mutex**; otherwise, **false`이미 소유 하 고 있으면 true입니다.
+메서드가 성공적으로 소유권을 `mutex` 획득하거나 호출 스레드가 이미 `mutex**; otherwise, **false`을 소유하고 있는 경우 **true**
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가를 `mutex`이미 소유 하 고 있으면이 함수는 **true**를 즉시 반환 하 고 이전 잠금은 적용 된 상태로 유지 됩니다.
+호출 스레드가 이미 `mutex`을 소유하고 있는 경우 함수는 즉시 **true를**반환하고 이전 잠금은 여전히 적용됩니다.
 
-## <a name="unlock"></a>  unlock
+## <a name="unlock"></a><a name="unlock"></a>잠금을 해제
 
 뮤텍스의 소유권을 해제합니다.
 
@@ -116,7 +116,7 @@ void unlock();
 
 호출 스레드가 `mutex`를 소유하지 않은 경우, 이 동작은 정의되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[\<뮤텍스>](../standard-library/mutex.md)

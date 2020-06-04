@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1011
 ms.assetid: ae0b89ec-0a31-4f8e-b9d0-f974152c185e
-ms.openlocfilehash: f8c312d8e4fc76d1bde919841b812db5e8b616c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36428fda26301d1dfa878992acb6114fb9d0f8e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173090"
 ---
 # <a name="resource-compiler-fatal-error-rc1011"></a>리소스 컴파일러 심각한 오류 RC1011
 
-컴파일러 한계: 'identifier': 매크로 정의 너무 큽니다.
+컴파일러 한계: ' identifier ': 매크로 정의가 너무 큽니다.
 
-짧은 정의로 정의 분할 하려고 합니다.
+정의를 더 짧은 정의로 분할 해 보세요.

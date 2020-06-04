@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: C++ Build Insights | 빌드 도구 체인 분석 자동화
+summary: 실시간과 자동화된 빌드 분석 및 최적화를 위해 C++ Build Insights를 사용합니다.
+metadata:
+  title: C++ Build Insights
+  description: C++ Build Insights를 사용하여 빌드를 분석하고 최적화하는 방법을 알아봅니다.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: e5a165888026c1485b77bd2784e22b3c9b36684a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153541"
+landingContent:
+- title: 빌드를 수행하는 방법 알아보기
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ Build Insights 활용 시작
+      url: get-started-with-cpp-build-insights.md
+  - linkListType: tutorial
+    links:
+    - text: vcperf 및 Windows Performance Analyzer
+      url: tutorials/vcperf-and-wpa.md
+    - text: Windows Performance Analyzer
+      url: tutorials/wpa-basics.md
+- title: 빌드 성능 측정
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: vcperf 명령
+      url: reference/vcperf-commands.md
+    - text: Windows Performance Analyzer 뷰
+      url: reference/wpa-views.md
+- title: 사용자 고유의 빌드 성능 분석 만들기
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: SDK 참조
+      url: reference/sdk/overview.md

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688330"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317130"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution 클래스
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* \
-부동 소수점 결과 형식으로, 기본적으로 **double**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*실제 유형*\
+부동 점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
-*Urng* \
-단일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*URNG (우롱)는*\
+균일 한 난수 생성기 엔진입니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-코시 분포 분포에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 부동 소수점 형식의 값을 생성 하는 분포를 설명 하 고, 아무것도 제공 되지 않은 경우 **double** 형식으로 지정 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+클래스 템플릿은 코시 분포에 따라 배포되는 사용자 지정 부동 점 형식의 값을 생성하거나 제공되지 않으면 **double** 을 입력하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
 
 코시 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523)(코시 분포)을 참조하세요.
 
@@ -240,7 +240,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:cauchy_distribution
 
 분포를 생성합니다.
 
@@ -251,24 +251,24 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*\*
+*a.*\
 `a` 분포 매개 변수입니다.
 
-*b* \
+*B*\
 `b` 분포 매개 변수입니다.
 
-*parm* \
+*파름 ()와*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-**사전 조건:** `0.0 < b`
+**사전 조건:**`0.0 < b`
 
 첫 번째 생성자는 저장된 `a` 값이 *a* 값을 갖고 저장된 `b` 값이 *b* 값을 갖는 개체를 생성합니다.
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="param_type"></a>  cauchy_distribution::param_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p아람_타입
 
 분포의 모든 매개 변수를 저장합니다.
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
-*\*
+*a.*\
 `a` 분포 매개 변수입니다.
 
-*b* \
+*B*\
 `b` 분포 매개 변수입니다.
 
-*오른쪽* \
+*오른쪽*\
 이 매개 변수와 비교할 `param_type` 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-**사전 조건:** `0.0 < b`
+**사전 조건:**`0.0 < b`
 
 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<random>](../standard-library/random.md)
+[\<임의>](../standard-library/random.md)

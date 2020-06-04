@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172440"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate(C++/CLI 및 C++/CX)
 
@@ -23,7 +23,7 @@ ms.locfileid: "65516488"
 
 Windows 런타임과 공용 언어 런타임에서 모두, 대리자를 지원합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **delegate**는 상황에 맞는 키워드입니다. 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요.
 
@@ -59,7 +59,7 @@ delegate-type-identifier
 *parameters*<br/>
 (선택 사항) 함수 프로토타입의 형식 및 식별자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 대리자와 동일한 프로토타입을 가진 이벤트를 선언하려면 *delegate-type-identifier*를 사용합니다. 자세한 내용은 [대리자(C++/CX)](../cppcx/delegates-c-cx.md)를 참조하세요.
 
@@ -89,7 +89,7 @@ function_declaration
 
 바인딩되지 않은 대리자를 정의하려면 *function_declaration*의 첫 번째 매개 변수가 개체에 대한 **this** 포인터의 형식이어야 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 대리자는 멀티캐스트입니다. “함수 포인터”를 관리형 클래스 내의 하나 이상 메서드에 바인딩할 수 있습니다. **delegate** 키워드는 특정 메서드 시그니처를 사용하여 멀티캐스트 대리자 형식을 정의합니다.
 
@@ -127,7 +127,7 @@ function_declaration
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 예제에서는 대리자를 선언, 초기화 및 호출하는 방법을 보여 줍니다.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
 ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344839"
 ---
 # <a name="usual-arithmetic-conversions"></a>일반적인 산술 변환
 
@@ -58,6 +58,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 연산자](../c-language/c-operators.md)

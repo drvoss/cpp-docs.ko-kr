@@ -3,17 +3,17 @@ title: Platform::IBoxArray 인터페이스
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392078"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444165"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 인터페이스
 
@@ -33,17 +33,17 @@ interface class IBoxArray
 
 ### <a name="remarks"></a>설명
 
-`IBoxArray` C++이름을 /CX `Windows::Foundation::IReferenceArray`합니다.
+`IBoxArray`은 `Windows::Foundation::IReferenceArray`C++의/cx 이름입니다.
 
-### <a name="members"></a>멤버
+### <a name="members"></a>구성원
 
 `IBoxArray` 인터페이스는 `IValueType` 인터페이스에서 상속됩니다. `IBoxArray` 에도 다음과 같은 멤버가 포함됩니다.
 
-|메서드|설명|
+|방법|Description|
 |------------|-----------------|
 |[값](#value)|이 `IBoxArray` 인스턴스에 이전에 저장된 unboxed 배열을 반환합니다.|
 
-## <a name="value"></a> Iboxarray:: Value 속성
+## <a name="value"></a>IBoxArray:: Value 속성
 
 이 개체에 원래 저장된 값을 반환합니다.
 
@@ -64,8 +64,8 @@ boxed 값의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
-예를 들어 참조 [Boxing](../cppcx/boxing-c-cx.md)합니다.
+예제를 보려면 [Boxing](../cppcx/boxing-c-cx.md)을 참조 하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Array 및 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

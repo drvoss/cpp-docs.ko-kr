@@ -25,23 +25,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497727"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167827"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 클래스
 
 CAtlTransactionManager 클래스는 KTM (Kernel Transaction Manager) 함수에 대 한 래퍼를 제공 합니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 class CAtlTransactionManager;
 ```
 
@@ -49,17 +49,17 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager 소멸자입니다.|
+|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 소멸자입니다.|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
 |[닫기](#close)|트랜잭션 핸들 하나를 닫습니다.|
-|[커밋이](#commit)|트랜잭션이 커밋되는 것을 요청 합니다.|
+|[커밋](#commit)|트랜잭션이 커밋되는 것을 요청 합니다.|
 |[만들기](#create)|트랜잭션 핸들을 만듭니다.|
 |[CreateFile](#createfile)|파일, 파일 스트림 또는 디렉터리를 트랜잭션 작업으로 만들거나 엽니다.|
 |[DeleteFile](#deletefile)|트 랜 잭 트 작업으로 기존 파일을 삭제 합니다.|
@@ -77,7 +77,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|대체 (fallback)가 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.|
 |[m_hTransaction](#m_htransaction)|트랜잭션 핸들입니다.|
@@ -86,17 +86,17 @@ class CAtlTransactionManager;
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
-[ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
+[ATL:: CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** atltransactionmanager
 
-##  <a name="dtor"></a>  ~CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager
 
 CAtlTransactionManager 소멸자입니다.
 
-```
+```cpp
 virtual ~CAtlTransactionManager();
 ```
 
@@ -104,11 +104,11 @@ virtual ~CAtlTransactionManager();
 
 정상적인 처리에서는 트랜잭션이 자동으로 커밋되고 닫힙니다. 예외 해제 중에 소멸자가 호출 되 면 트랜잭션이 롤백되고 닫힙니다.
 
-##  <a name="catltransactionmanager"></a>  CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
 
 CAtlTransactionManager 생성자입니다.
 
-```
+```cpp
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
 ```
 
@@ -122,15 +122,15 @@ TRUE는 트랜잭션 처리기가 생성자에 자동으로 생성 됨을 나타
 
 ### <a name="remarks"></a>설명
 
-##  <a name="close"></a>닫습니다
+## <a name="close"></a><a name="close"></a>닫습니다
 
 트랜잭션 핸들을 닫습니다.
 
-```
+```cpp
 inline BOOL Close();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -138,15 +138,15 @@ inline BOOL Close();
 
 이 래퍼는 함수 `CloseHandle` 를 호출 합니다. 메서드는 소멸자에서 자동으로 호출 됩니다.
 
-##  <a name="commit"></a>커밋이
+## <a name="commit"></a><a name="commit"></a>커밋이
 
 트랜잭션이 커밋되는 것을 요청 합니다.
 
-```
+```cpp
 inline BOOL Commit();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -154,15 +154,15 @@ inline BOOL Commit();
 
 이 래퍼는 함수 `CommitTransaction` 를 호출 합니다. 메서드는 소멸자에서 자동으로 호출 됩니다.
 
-##  <a name="create"></a>만드십시오
+## <a name="create"></a><a name="create"></a>만드십시오
 
 트랜잭션 핸들을 만듭니다.
 
-```
+```cpp
 inline BOOL Create();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -170,11 +170,11 @@ inline BOOL Create();
 
 이 래퍼는 함수 `CreateTransaction` 를 호출 합니다. 확인 방법
 
-##  <a name="createfile"></a>  CreateFile
+## <a name="createfile"></a><a name="createfile"></a>CreateFile
 
 파일, 파일 스트림 또는 디렉터리를 트랜잭션 작업으로 만들거나 엽니다.
 
-```
+```cpp
 inline HANDLE CreateFile(
     LPCTSTR lpFileName,
     DWORD dwDesiredAccess,
@@ -191,24 +191,24 @@ inline HANDLE CreateFile(
 만들거나 열 개체의 이름입니다.
 
 *dwDesiredAccess*<br/>
-개체에 대 한 액세스로, 읽기, 쓰기, 둘 다 또는 둘 다 (0)로 요약할 수 있습니다. 가장 일반적으로 사용 되는 값은 GENERIC_READ, GENERIC_WRITE 또는 both입니다. GENERIC_READ &#124; GENERIC_WRITE.
+개체에 대 한 액세스로, 읽기, 쓰기, 둘 다 또는 둘 다 (0)로 요약할 수 있습니다. 가장 일반적으로 사용 되는 값은 GENERIC_READ, GENERIC_WRITE 또는 둘 다 GENERIC_READ &#124; GENERIC_WRITE입니다.
 
 *dwShareMode*<br/>
-개체의 공유 모드 (읽기, 쓰기, 둘 다, 모두 삭제, 모두 또는 없음) 일 수 있습니다. 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+개체의 공유 모드입니다. 여기에는 읽기, 쓰기, 모두, 삭제, 모두 또는 none: 0, FILE_SHARE_DELETE, FILE_SHARE_READ FILE_SHARE_WRITE 수 있습니다.
 
 *lpSecurityAttributes*<br/>
-선택적 보안 설명자를 포함 하 고 반환 된 핸들을 자식 프로세스에서 상속할 수 있는지 여부도 결정 하는 SECURITY_ATTRIBUTES 구조체에 대 한 포인터입니다. 매개 변수는 NULL 일 수 있습니다.
+선택적 보안 설명자를 포함 하 고 반환 된 핸들을 자식 프로세스에서 상속할 수 있는지 여부를 결정 하는 SECURITY_ATTRIBUTES 구조체에 대 한 포인터입니다. 매개 변수는 NULL 일 수 있습니다.
 
 *dwCreationDisposition*<br/>
-존재 하지 않는 파일에 대해 수행할 작업입니다. 이 매개 변수는 결합할 수 없는 다음 값 중 하나 여야 합니다. CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING 또는 TRUNCATE_EXISTING입니다.
+존재 하지 않는 파일에 대해 수행할 작업입니다. 이 매개 변수는 CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING 또는 TRUNCATE_EXISTING 값 중 하나 여야 합니다.
 
 *dwFlagsAndAttributes*<br/>
-파일 특성 및 플래그입니다. 이 매개 변수는 사용 가능한 파일 특성 (FILE_ATTRIBUTE_ *)의 조합을 포함할 수 있습니다. 다른 모든 파일 특성은 FILE_ATTRIBUTE_NORMAL를 재정의 합니다. 또한이 매개 변수는 버퍼링 동작, 액세스 모드\*및 기타 특수 용도의 플래그를 제어 하기 위한 플래그 (FILE_FLAG_)의 조합을 포함할 수 있습니다. 이러한 값은 FILE_ATTRIBUTE_\* 값과 결합 됩니다.
+파일 특성 및 플래그입니다. 이 매개 변수는 사용 가능한 파일 특성 (FILE_ATTRIBUTE_ *)의 조합을 포함할 수 있습니다. 다른 모든 파일 특성은 FILE_ATTRIBUTE_NORMAL를 재정의 합니다. 이 매개 변수에는 버퍼링 동작, 액세스 모드 및\*기타 특수 용도의 플래그를 제어 하기 위한 플래그 (FILE_FLAG_) 조합이 포함 될 수도 있습니다. 이러한 값은 모든 FILE_ATTRIBUTE_\* 값과 결합 됩니다.
 
-*hTemplateFile*<br/>
-GENERIC_READ access 권한이 있는 템플릿 파일에 대 한 올바른 핸들입니다. 템플릿 파일은 생성 되는 파일에 대 한 파일 특성 및 확장 특성을 제공 합니다. 이 매개 변수는 NULL 일 수 있습니다.
+*H템플릿 파일*<br/>
+GENERIC_READ 액세스 권한이 있는 템플릿 파일에 대 한 올바른 핸들입니다. 템플릿 파일은 생성 되는 파일에 대 한 파일 특성 및 확장 특성을 제공 합니다. 이 매개 변수는 NULL 일 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체에 액세스 하는 데 사용할 수 있는 핸들을 반환 합니다.
 
@@ -216,11 +216,11 @@ GENERIC_READ access 권한이 있는 템플릿 파일에 대 한 올바른 핸�
 
 이 래퍼는 함수 `CreateFileTransacted` 를 호출 합니다.
 
-##  <a name="deletefile"></a>  DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
 
 트 랜 잭 트 작업으로 기존 파일을 삭제 합니다.
 
-```
+```cpp
 inline BOOL DeleteFile(LPCTSTR lpFileName);
 ```
 
@@ -233,11 +233,11 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 이 래퍼는 함수 `DeleteFileTransacted` 를 호출 합니다.
 
-##  <a name="findfirstfile"></a>  FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
 
 디렉터리에서 파일 또는 하위 디렉터리를 트랜잭션 작업으로 검색 합니다.
 
-```
+```cpp
 inline HANDLE FindFirstFile(
     LPCTSTR lpFileName,
     WIN32_FIND_DATA* pNextInfo);
@@ -251,19 +251,19 @@ inline HANDLE FindFirstFile(
 *pNextInfo*<br/>
 찾은 파일이 나 하위 디렉터리에 대 한 정보를 수신 하는 WIN32_FIND_DATA 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-함수가 성공 하면 반환 값은 또는 `FindNextFile` `FindClose`에 대 한 후속 호출에 사용 되는 검색 핸들입니다. 함수가 실패 하거나 *Lpfilename* 매개 변수의 검색 문자열에서 파일을 찾지 못하면 반환 값은 INVALID_HANDLE_VALUE입니다.
+함수가 성공 하면 반환 값은 또는 `FindNextFile` `FindClose`에 대 한 후속 호출에 사용 되는 검색 핸들입니다. 함수가 실패 하거나 *Lpfilename* 매개 변수의 검색 문자열에서 파일을 찾지 못한 경우 반환 값은 INVALID_HANDLE_VALUE입니다.
 
 ### <a name="remarks"></a>설명
 
 이 래퍼는 함수 `FindFirstFileTransacted` 를 호출 합니다.
 
-##  <a name="getfileattributes"></a>  GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
 
 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 트랜잭션 작업으로 검색 합니다.
 
-```
+```cpp
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ```
 
@@ -276,11 +276,11 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 이 래퍼는 함수 `GetFileAttributesTransacted` 를 호출 합니다.
 
-##  <a name="getfileattributesex"></a>  GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
 
 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 트랜잭션 작업으로 검색 합니다.
 
-```
+```cpp
 inline BOOL GetFileAttributesEx(
     LPCTSTR lpFileName,
     GET_FILEEX_INFO_LEVELS fInfoLevelId,
@@ -302,59 +302,59 @@ inline BOOL GetFileAttributesEx(
 
 이 래퍼는 함수 `GetFileAttributesTransacted` 를 호출 합니다.
 
-##  <a name="gethandle"></a>  GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
 
 트랜잭션 핸들을 반환 합니다.
 
-```
+```cpp
 HANDLE GetHandle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 클래스에 대 한 트랜잭션 핸들을 반환 합니다. `CAtlTransactionManager` 가 핸들에 연결 되지 않은 경우 NULL을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isfallback"></a>  IsFallback
+## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
 
 대체 (fallback) 호출이 사용 되는지 여부를 확인 합니다.
 
-```
+```cpp
 BOOL IsFallback() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 클래스에서 대체 호출을 지원 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="m_bfallback"></a>  m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
 
 대체 (fallback)가 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-```
+```cpp
 BOOL m_bFallback;
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="m_htransaction"></a>  m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
 트랜잭션 핸들입니다.
 
-```
+```cpp
 HANDLE m_hTransaction;
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="movefile"></a>  MoveFile
+## <a name="movefile"></a><a name="movefile"></a>My.computer.filesystem.movefile
 
 기존 파일이 나 해당 자식을 포함 하는 디렉터리를 트랜잭션 된 작업으로 이동 합니다.
 
-```
+```cpp
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ```
 
@@ -370,11 +370,11 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 이 래퍼는 함수 `MoveFileTransacted` 를 호출 합니다.
 
-##  <a name="regcreatekeyex"></a>  RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
 
 지정 된 레지스트리 키를 만들고 트랜잭션과 연결 합니다. 키가 이미 있는 경우 함수에서 키를 엽니다.
 
-```
+```cpp
 inline LSTATUS RegCreateKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -402,21 +402,21 @@ inline LSTATUS RegCreateKeyEx(
 이 키의 사용자 정의 클래스입니다. 이 매개 변수는 무시 해도 됩니다. 이 매개 변수는 NULL 일 수 있습니다.
 
 *dwOptions*<br/>
-이 매개 변수는 다음 값 중 하나일 수 있습니다. REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE 또는 REG_OPTION_VOLATILE입니다.
+이 매개 변수는 REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE 또는 REG_OPTION_VOLATILE 값 중 하나일 수 있습니다.
 
 *samDesired*<br/>
 키에 대 한 액세스 권한을 지정 하는 마스크입니다.
 
 *lpSecurityAttributes*<br/>
-반환 된 핸들이 자식 프로세스에 의해 상속 될 수 있는지 여부를 결정 하는 SECURITY_ATTRIBUTES 구조체에 대 한 포인터입니다. *Lpsecurityattributes* 가 NULL 인 경우 핸들을 상속할 수 없습니다.
+반환된 핸들이 자식 프로세스에 의해 상속되는지 여부를 결정하는 SECURITY_ATTRIBUTES 구조에 대한 포인터입니다. *Lpsecurityattributes* 가 NULL 인 경우 핸들을 상속할 수 없습니다.
 
 *phkResult*<br/>
 열리거나 만든 키에 대 한 핸들을 받는 변수에 대 한 포인터입니다. 키가 미리 정의 된 레지스트리 키 중 하나가 아닌 경우 핸들 사용을 `RegCloseKey` 마친 후 함수를 호출 합니다.
 
-*lpdwDisposition*<br/>
-다음 처리 값 중 하나를 받는 변수에 대 한 포인터입니다. REG_CREATED_NEW_KEY 또는 REG_OPENED_EXISTING_KEY.
+*Lstwstgga*<br/>
+REG_CREATED_NEW_KEY 또는 REG_OPENED_EXISTING_KEY 처리 값 중 하나를 받는 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 반환 값은 ERROR_SUCCESS입니다. 함수가 실패 하면 반환 값은 Winerror.h에 정의 된 0이 아닌 오류 코드입니다.
 
@@ -424,11 +424,11 @@ inline LSTATUS RegCreateKeyEx(
 
 이 래퍼는 함수 `RegCreateKeyTransacted` 를 호출 합니다.
 
-##  <a name="regdeletekey"></a>  RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
 
 레지스트리의 지정 된 플랫폼별 뷰에서 하위 키와 해당 값을 트랜잭션 작업으로 삭제 합니다.
 
-```
+```cpp
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ```
 
@@ -439,7 +439,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 |*hKey*|열린 레지스트리 키에 대 한 핸들입니다.|
 |*lpSubKey*|삭제할 키의 이름입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 반환 값은 ERROR_SUCCESS입니다. 함수가 실패 하면 반환 값은 Winerror.h에 정의 된 0이 아닌 오류 코드입니다.
 
@@ -447,11 +447,11 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 이 래퍼는 함수 `RegDeleteKeyTransacted` 를 호출 합니다.
 
-##  <a name="regopenkeyex"></a>  RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
 
 지정 된 레지스트리 키를 열고 트랜잭션과 연결 합니다.
 
-```
+```cpp
 inline LSTATUS RegOpenKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -477,7 +477,7 @@ inline LSTATUS RegOpenKeyEx(
 *phkResult*<br/>
 열리거나 만든 키에 대 한 핸들을 받는 변수에 대 한 포인터입니다. 키가 미리 정의 된 레지스트리 키 중 하나가 아닌 경우 핸들 사용을 `RegCloseKey` 마친 후 함수를 호출 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 반환 값은 ERROR_SUCCESS입니다. 함수가 실패 하면 반환 값은 Winerror.h에 정의 된 0이 아닌 오류 코드입니다.
 
@@ -485,15 +485,15 @@ inline LSTATUS RegOpenKeyEx(
 
 이 래퍼는 함수 `RegOpenKeyTransacted` 를 호출 합니다.
 
-##  <a name="rollback"></a>  Rollback
+## <a name="rollback"></a><a name="rollback"></a>롤백해야
 
 트랜잭션이 롤백되는 것을 요청 합니다.
 
-```
+```cpp
 inline BOOL Rollback();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 
@@ -501,11 +501,11 @@ inline BOOL Rollback();
 
 이 래퍼는 함수 `RollbackTransaction` 를 호출 합니다.
 
-##  <a name="setfileattributes"></a>  SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes
 
 파일이 나 디렉터리에 대 한 특성을 트랜잭션 작업으로 설정 합니다.
 
-```
+```cpp
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ```
 
@@ -521,6 +521,6 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 이 래퍼는 함수 `SetFileAttributesTransacted` 를 호출 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
 ms.openlocfilehash: c1b3e31561bedece6a6180fbeb13473153a46ab6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152679"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343133"
 ---
 # <a name="pointer-arithmetic"></a>포인터 산술 연산
 
@@ -20,6 +20,6 @@ ms.locfileid: "56152679"
 
 마찬가지로 두 포인터 값을 빼는 경우 변환에서는 공백이 없는 동일한 형식의 값만 피연산자가 제공하는 주소 사이에 있다고 가정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 가감 연산자](../c-language/c-additive-operators.md)

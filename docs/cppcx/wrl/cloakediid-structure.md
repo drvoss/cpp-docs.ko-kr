@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398721"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214112"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 구조체
 
-에 `RuntimeClass`, `Implements` 및 `ChainInterfaces` 지정된 된 인터페이스 IID 목록에서 액세스할 수 없는 템플릿.
+IID 목록에서 지정 된 인터페이스에 액세스할 수 없는 `RuntimeClass`, `Implements` 및 `ChainInterfaces` 템플릿을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,13 +28,13 @@ struct CloakedIid : T;
 #### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-인터페이스는 숨겨진 (숨김)입니다.
+숨겨진 (숨겨짐) 인터페이스입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-다음은 방법의 예가 **CloakedIid** 되: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`합니다.
+다음은 **CloakedIid** 를 사용 하는 방법의 예입니다. `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `T`
 
@@ -42,10 +42,10 @@ struct CloakedIid : T;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

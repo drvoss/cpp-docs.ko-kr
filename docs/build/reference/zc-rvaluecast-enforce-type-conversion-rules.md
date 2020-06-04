@@ -1,6 +1,6 @@
 ---
 title: /Zc:rvalueCast(형식 변환 규칙 적용)
-ms.date: 03/06/2018
+ms.date: 02/18/2020
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -12,28 +12,29 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-ms.openlocfilehash: e5a6abd3b85136b05ae58ebc8750aa9120cabc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac74192cad8a62e4c82b480038e727b114362cdd
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315783"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504564"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast(형식 변환 규칙 적용)
 
-경우는 **/zc: rvaluecast** 옵션을 지정 하면 컴파일러는 c++11 표준에 따라 캐스트 연산의 결과로 rvalue 참조 형식의 올바르게 식별 합니다. 이 옵션이 지정되지 않은 경우 컴파일러 동작은 Visual Studio 2012와 동일합니다.
+**`/Zc:rvalueCast`** 옵션이 지정 된 경우 컴파일러는 캐스트 작업의 결과로 rvalue 참조 형식을 올바르게 식별 합니다. 해당 동작은 c + + 11 표준을 따릅니다. 옵션이 지정 되지 않은 경우 컴파일러 동작은 Visual Studio 2012와 동일 합니다.
 
 ## <a name="syntax"></a>구문
 
-> **/Zc:rvalueCast**[**-**]
+> **`/Zc:rvalueCast`**\
+> **`/Zc:rvalueCast-`**
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-하는 경우 **/zc: rvaluecast** 컴파일러는 c++11 표준의 섹션 5.4 따르며 캐스트 식 비참조 형식에서 발생할 수 있으며 비 함수 형식 rvalue 참조가 발생 하는 캐스트 식만 처리 된 형식 rvalue입니다. 기본적으로 이거나 **/Zc:rvalueCast-** 를 지정한 경우 컴파일러는 비호환 고 rvalue로 rvalue 참조는 모든 캐스트 식을 처리 합니다. 준수 및 오류 캐스트를 제거 하기를 사용 하는 것이 좋습니다 **/zc: rvaluecast**합니다.
+**`/Zc:rvalueCast`** 지정 된 경우 컴파일러는 c + + 11 표준의 섹션 5.4을 따르고 비 참조 형식을 반환 하는 캐스트 식과 비 함수 형식에 대 한 rvalue 참조를 결과로 반환 하는 캐스트 식만 rvalue 형식으로 처리 합니다. 기본적으로 또는 **`/Zc:rvalueCast-`** 를 지정 하는 경우 컴파일러는 비준수를 처리 하 고 rvalue 참조를 결과로 반환 하는 모든 캐스트 식을 rvalue로 처리 합니다. 규칙을 준수 하 고 캐스트 사용 시 발생 하는 오류를 없애려면 **`/Zc:rvalueCast`** 를 사용 하는 것이 좋습니다.
 
-기본적으로 **/zc: rvaluecast** 해제 되어 (**/Zc:rvalueCast-**). 합니다 [/ permissive-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:rvalueCast-** 합니다.
+기본적으로 **`/Zc:rvalueCast`** 는 해제 되어 있습니다 ( **`/Zc:rvalueCast-`** ). [/Permissive-](permissive-standards-conformance.md) 컴파일러 옵션은이 옵션을 암시적으로 설정 하지만 **`/Zc:rvalueCast-`** 를 사용 하 여 재정의할 수 있습니다.
 
-사용 하 여 **/zc: rvaluecast** rvalue 참조 형식을 사용 하는 함수에 캐스트 식을 인수로 전달 하는 경우. 기본 동작은 컴파일러 오류를 발생 시킵니다 [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 때 컴파일러가 잘못 판단 캐스트 식의 형식입니다. 이 예제에서는 올바른 컴파일러 오류를 보여 줍니다. 때 코드 **/zc: rvaluecast** 지정 하지 않으면:
+Rvalue 참조 형식을 사용 하는 함수에 대 한 인수로 캐스트 식을 전달 하는 경우 **`/Zc:rvalueCast`** 를 사용 합니다. 컴파일러가 캐스트 식의 형식을 잘못 결정 하면 기본 동작으로 인해 컴파일러 오류가 [c 2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 됩니다. 이 예제에서는 **`/Zc:rvalueCast`** 지정 되지 않은 경우 올바른 코드의 컴파일러 오류를 보여 줍니다.
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -71,7 +72,7 @@ struct Test1 {
 };
 ```
 
-보고하지 않는 것이 적절한 경우 기본 컴파일러 동작이 오류 C2102를 보고하지 않을 수도 있습니다. 이 예에서 컴파일러는 오류를 보고 하지 경우 id 캐스트에서 만든 rvalue의 주소가 사용 되 면 **/zc: rvaluecast** 지정 하지 않으면:
+보고하지 않는 것이 적절한 경우 기본 컴파일러 동작이 오류 C2102를 보고하지 않을 수도 있습니다. 이 예제에서는 **`/Zc:rvalueCast`** 지정 되지 않은 경우 id 캐스팅을 통해 생성 된 rvalue의 주소가 사용 되는 경우 컴파일러에서 오류를 보고 하지 않습니다.
 
 ```cpp
 int main() {
@@ -88,10 +89,10 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성** > **C/C++** > **명령줄** 속성 페이지를 선택합니다.
+1. **구성 속성** > **C/C++**  > **언어** 속성 페이지를 선택 합니다.
 
-1. 수정 된 **추가 옵션** 포함할 속성을 **/zc: rvaluecast** 를 선택한 후 **확인**합니다.
+1. **형식 변환 규칙 적용** 속성을 **`/Zc:rvalueCast`** 또는 **`/Zc:rvalueCast-`** 로 설정 합니다. **확인** 또는 **적용** 을 선택 하 여 변경 내용을 저장 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[/Zc(규칙)](zc-conformance.md)<br/>
+[/Zc(규칙)](zc-conformance.md)

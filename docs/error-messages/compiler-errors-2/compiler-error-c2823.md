@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: 5f9b60499fd3c3bd5f06834e3c4f6482031066d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406966"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201957"
 ---
 # <a name="compiler-error-c2823"></a>컴파일러 오류 C2823
 
 > typedef 템플릿이 잘못 되었습니다.
 
-서식 파일에서 허용 되지 않는 `typedef` 정의 합니다.
+템플릿은 `typedef` 정의에서 사용할 수 없습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C2823, 생성 및이 해결 하는 방법을 보여 줍니다.
+다음 샘플에서는 C2823를 생성 하 고이를 해결 하는 한 가지 방법을 보여 줍니다.
 
 ```cpp
 // C2823.cpp

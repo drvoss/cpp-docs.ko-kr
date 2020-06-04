@@ -1,19 +1,19 @@
 ---
-title: '&lt;문제점&gt;'
+title: '&lt;실행&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 81e9aa63265c367412fda709aacd5ca3953e9fdf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457975"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445035"
 ---
-# <a name="ltexecutiongt"></a>&lt;문제점&gt;
+# <a name="ltexecutiongt"></a>&lt;실행&gt;
 
 병렬 알고리즘에 대 한 실행 정책에 대해 설명 합니다.
 
@@ -29,6 +29,7 @@ namespace std::execution {
     inline constexpr parallel_unsequenced_policy par_unseq { unspecified };
 }
 ```
+
 ### <a name="classes-and-structs"></a>클래스 및 구조체
 
 |||
@@ -44,7 +45,7 @@ namespace std::execution {
 
 **네임스페이스:** stdext
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](cpp-standard-library-header-files.md)\
 [C++ 표준 라이브러리의 스레드 보안](thread-safety-in-the-cpp-standard-library.md)\

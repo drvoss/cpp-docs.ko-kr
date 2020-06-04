@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 3609e3f0541cfd8a8af8559d8d49e6a77c00d91c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a0011d11e4a59c9ca3a5e18f44d4cf831b21582
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366655"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 제한 지정자는 함수 및 람다 선언에 적용할 수 있습니다. 제한 지정자는 C++ AMP(C++ Accelerated Massive Parallelism) 런타임을 사용하는 애플리케이션의 함수 동작 및 함수의 코드에 제한을 적용합니다.
 
 > [!NOTE]
->  에 대 한 자세한 합니다 **제한** 포함 된 키워드는 **__declspec** 저장소 클래스 특성을 참조 하세요 [제한](../cpp/restrict.md)합니다.
+> **__declspec** 저장소 클래스 특성의 일부인 **제한** 키워드에 대한 자세한 내용은 [을](../cpp/restrict.md)참조하십시오.
 
-합니다 **제한** 절은 다음 형식:
+**제한** 절은 다음과 같은 양식을 사용합니다.
 
-|절|설명|
+|절|Description|
 |------------|-----------------|
 |`restrict(cpu)`|이 함수는 전체 C++ 언어를 사용할 수 있습니다. restrict(cpu) 함수를 사용하여 선언된 다른 함수만 이 함수를 호출할 수 있습니다.|
 |`restrict(amp)`|이 함수는 C++ AMP를 통해 가속할 수 있는 C++ 언어의 하위 집합만 사용할 수 있습니다.|
@@ -31,7 +31,7 @@ ms.locfileid: "62403388"
 
 ## <a name="remarks"></a>설명
 
-합니다 **제한** 키워드는 상황별 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. 없는 함수는 **제한할** 절이 있는 함수와 동일 하 게는 `restrict(cpu)` 절.
+**제한** 키워드는 컨텍스트 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. **제한** 절이 없는 함수는 `restrict(cpu)` 절이 있는 함수와 동일합니다.
 
 `restrict(amp)` 절이 있는 함수에는 다음 제한이 적용됩니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "62403388"
 
 - 함수 인라이닝 처리 가능해야 합니다.
 
-- 함수를 선언할 수 있습니다 **int**를 **부호 없는 int**를 **float**, 및 **double** 변수 및 클래스와 포함 된 구조 이러한 형식입니다. **bool** 도 사용할 수 있지만 복합 형식에서 사용 하는 경우 4 바이트 맞춤 이어야 합니다.
+- 함수는 **int,** **부호없는 int,** **float**및 **이중** 변수 및 이러한 형식만 포함하는 클래스 및 구조를 선언할 수 있습니다. **bool도** 허용되지만 복합 유형에서 사용하는 경우 4바이트 정렬되어야 합니다.
 
 - 람다 함수는 참조로 캡처할 수 없으며 포인터를 캡처할 수 없습니다.
 
@@ -47,43 +47,43 @@ ms.locfileid: "62403388"
 
 - 다음은 허용되지 않습니다.
 
-   - 재귀
+  - 재귀
 
-   - 사용 하 여 선언 된 변수를 [volatile](../cpp/volatile-cpp.md) 키워드입니다.
+  - [휘발성](../cpp/volatile-cpp.md) 키워드로 선언된 변수입니다.
 
-   - 가상 함수
+  - 가상 함수
 
-   - 함수에 대한 포인터
+  - 함수에 대한 포인터
 
-   - 멤버 함수에 대한 포인터
+  - 멤버 함수에 대한 포인터
 
-   - 구조체의 포인터
+  - 구조체의 포인터
 
-   - 포인터에 대한 포인터
+  - 포인터에 대한 포인터
 
-   - **goto** 문입니다.
+  - **goto** 문.
 
-   - 레이블 문
+  - 레이블 문
 
-   - **시도**, **catch**, 또는 **throw** 문입니다.
+  - try , **catch,** 또는 **throw** 문을 **참조하십시오.**
 
-   - 전역 변수
+  - 전역 변수
 
-   - 정적 변수 사용 하 여 [tile_static 키워드](../cpp/tile-static-keyword.md) 대신 합니다.
+  - 정적 변수 대신 [tile_static 키워드를](../cpp/tile-static-keyword.md) 사용합니다.
 
-   - **dynamic_cast** 캐스팅 합니다.
+  - **dynamic_cast** 캐스트.
 
-   - **typeid** 연산자
+  - **유형** 연산자입니다.
 
-   - asm 선언
+  - asm 선언
 
-   - vararg
+  - vararg
 
-함수 제한 사항 설명은 참조 하세요 [(amp) 제한 사항 제한](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)합니다.
+기능 제한에 대한 설명은 [제한(amp) 제한을](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)참조하십시오.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 사용 하는 방법의 `restrict(amp)`절.
+다음 예제에서는 절을 `restrict(amp)`사용하는 방법을 보여 주며 있습니다.
 
 ```cpp
 void functionAmp() restrict(amp) {}
@@ -104,6 +104,6 @@ void callFunctions() restrict(amp)
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ AMP(C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

@@ -1,5 +1,5 @@
 ---
-title: COleIPFrameWndEx 클래스
+title: 콜레IP프레임언덱스 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - COleIPFrameWndEx
@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504148"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753863"
 ---
-# <a name="coleipframewndex-class"></a>COleIPFrameWndEx 클래스
+# <a name="coleipframewndex-class"></a>콜레IP프레임언덱스 클래스
 
 `COleIPFrameWndEx` 클래스는 MFC를 지원하는 OLE 컨테이너를 구현합니다. 애플리케이션에 대한 현재 위치의 프레임 창 클래스는 `COleIPFrameWndEx` COleIPFrameWnd [클래스에서 파생하는 대신](../../mfc/reference/coleipframewnd-class.md)클래스에서 파생해야 합니다.
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -116,57 +116,57 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[COleIPFrameWndEx::AddDockSite](#adddocksite)||
-|[COleIPFrameWndEx::AddPane](#addpane)||
-|[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx::DockPane](#dockpane)||
-|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|창을 다른 창의 왼쪽에 도킹합니다.|
-|[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
-|[COleIPFrameWndEx::EnableDocking](#enabledocking)||
-|[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
-|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|현재 표시된 팝업 메뉴에 대한 포인터를 반환합니다.|
-|[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
+|[콜레IP프레임WndEx::애드독사이트](#adddocksite)||
+|[콜레IP프레임WndEx::애드파인](#addpane)||
+|[COleIPFrameWndEx::조정도킹레이아웃](#adjustdockinglayout)||
+|[콜레IP프레임WndEx::D오크파인](#dockpane)||
+|[코올레IP프레임WndEx::D오크파네레프트](#dockpaneleftof)|창을 다른 창의 왼쪽에 도킹합니다.|
+|[COleIPFrameWndEx::인에이블오토하이드파인](#enableautohidepanes)||
+|[COleIPFrameWndEx::인에이블도킹](#enabledocking)||
+|[콜레IP프레임WndEx::인에이블파네메뉴](#enablepanemenu)||
+|[콜레IP프레임WndEx::겟액티브팝](#getactivepopup)|현재 표시된 팝업 메뉴에 대한 포인터를 반환합니다.|
+|[COleIPFrameWndEx::겟컨테이너프레임윈도우](#getcontainerframewindow)||
 |[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|창이 로드될 때 지정한 프레임 창의 리소스 ID를 반환합니다.|
-|[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
+|[콜레IP프레임WndEx::겟독프레임](#getdockframe)||
 |[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||
-|[COleIPFrameWndEx::GetMainFrame](#getmainframe)||
-|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|프레임 창에 연결된 메뉴 모음 개체에 대한 포인터를 반환합니다.|
-|[COleIPFrameWndEx::GetPane](#getpane)||
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|분리 상태에 있는 창 개체의 목록을 반환합니다.|
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|단추에 대한 도구 설명이 표시되기 전에 프레임워크에서 호출합니다.|
-|[COleIPFrameWndEx::InsertPane](#insertpane)||
-|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|메뉴 모음 개체에 대한 포인터가 `NULL`이 아닌지 여부를 확인합니다.|
-|[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|( `COleIPFrameWnd::LoadFrame`을 재정의합니다.)|
-|[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
-|[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
-|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`을 재정의합니다.)|
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|메뉴 항목과 연결된 이미지를 그릴 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)개체에서 WM_PAINT 메시지를 처리할 때 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::겟메인프레임](#getmainframe)||
+|[콜레IP프레임WndEx::겟메뉴바](#getmenubar)|프레임 창에 연결된 메뉴 모음 개체에 대한 포인터를 반환합니다.|
+|[콜레IP프레임WndEx::겟파인](#getpane)||
+|[콜레IP프레임WndEx::겟티어오프바](#gettearoffbars)|분리 상태에 있는 창 개체의 목록을 반환합니다.|
+|[COleIPFrameWndEx::gettoolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|단추에 대한 도구 설명이 표시되기 전에 프레임워크에서 호출합니다.|
+|[콜레IP프레임WndEx::인서트파인](#insertpane)||
+|[콜레IP프레임WndEx::IsMenuBar 사용 가능](#ismenubaravailable)|메뉴 모음 개체에 대한 포인터가 `NULL`이 아닌지 여부를 확인합니다.|
+|[콜레IP프레임WndEx::이스포인트니어독사이트](#ispointneardocksite)||
+|[콜레IP프레임WndEx::로드프레임](#loadframe)|( `COleIPFrameWnd::LoadFrame`을 재정의합니다.)|
+|[콜레IP프레임WndEx::온클로즈도킹파인](#onclosedockingpane)||
+|[콜레IP프레임WndEx::온클로즈미니프레임](#oncloseminiframe)||
+|[콜레IP프레임WndEx::온클로즈업팝업메뉴](#onclosepopupmenu)|활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`을 재정의합니다.)|
+|[콜레IP프레임WndEx::온드로우메뉴이미지](#ondrawmenuimage)|메뉴 항목과 연결된 이미지를 그릴 때 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::온드로우메뉴로고](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)개체에서 WM_PAINT 메시지를 처리할 때 프레임워크에서 호출됩니다.|
 |[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)개체에서 WM_NCHITTEST 메시지를 처리할 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|애플리케이션의 주 프레임 창을 인쇄 미리 보기 모드 내부 및 외부로 설정하려면 이 멤버 함수를 호출합니다. ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)를 재정의합니다.)|
-|[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
-|[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
-|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|팝업 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|분리 막대가 있는 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
-|[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`을 재정의합니다.)|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`을 재정의합니다.)|
-|[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
-|[COleIPFrameWndEx::SetDockState](#setdockstate)|프레임 창에 속해 있는 창에 지정된 도킹 상태를 적용합니다.|
-|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|더미 항목을 검색하고 지정된 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.|
-|[COleIPFrameWndEx::ShowPane](#showpane)||
-|[COleIPFrameWndEx::WinHelpA](#winhelpa)|WinHelp 애플리케이션 또는 상황에 맞는 도움말을 시작하기 위해 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::온무브미니프레임](#onmoveminiframe)||
+|[콜레IP프레임WndEx::온셋프리뷰모드](#onsetpreviewmode)|애플리케이션의 주 프레임 창을 인쇄 미리 보기 모드 내부 및 외부로 설정하려면 이 멤버 함수를 호출합니다. ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)를 재정의합니다.)|
+|[콜레IP프레임WndEx::OnShow사용자 정의판](#onshowcustomizepane)||
+|[콜레IP프레임WndEx::온쇼파네스](#onshowpanes)||
+|[콜레IP프레임WndEx::온쇼팝메뉴](#onshowpopupmenu)|팝업 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::온티어오프메뉴](#ontearoffmenu)|분리 막대가 있는 메뉴가 활성화될 때 프레임워크에서 호출됩니다.|
+|[콜레IP프레임WndEx::P인프포인트](#panefrompoint)||
+|[콜레IP프레임WndEx::P번역메시지](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`을 재정의합니다.)|
+|[COleIPFrameWndEx::리칼레이아웃](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`을 재정의합니다.)|
+|[COleIPFrameWndEx::제거파네에서독매니저](#removepanefromdockmanager)||
+|[콜레IP프레임WndEx::SetDockState](#setdockstate)|프레임 창에 속해 있는 창에 지정된 도킹 상태를 적용합니다.|
+|[COleIPFrameWndEx::설치도구 모음메뉴](#setuptoolbarmenu)|더미 항목을 검색하고 지정된 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.|
+|[콜레IP프레임WndEx::쇼파인](#showpane)||
+|[콜레IP프레임WndEx::윈헬프아](#winhelpa)|WinHelp 애플리케이션 또는 상황에 맞는 도움말을 시작하기 위해 프레임워크에서 호출됩니다.|
 
-### <a name="protected-methods"></a>보호된 메서드
+### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|사용자 정의 도구 모음에 할당되는 컨트롤 ID의 범위를 초기화하도록 프레임워크에 지시합니다.|
+|[COleIPFrameWndEx::이니트유저투바](#initusertoobars)|사용자 정의 도구 모음에 할당되는 컨트롤 ID의 범위를 초기화하도록 프레임워크에 지시합니다.|
 
 ## <a name="example"></a>예제
 
@@ -174,7 +174,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -192,15 +192,15 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 **헤더:** afxoleipframewndex.h
 
-##  <a name="adddocksite"></a>  COleIPFrameWndEx::AddDockSite
+## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>콜레IP프레임WndEx::애드독사이트
 
-```
+```cpp
 void AddDockSite();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addpane"></a>  COleIPFrameWndEx::AddPane
+## <a name="coleipframewndexaddpane"></a><a name="addpane"></a>콜레IP프레임WndEx::애드파인
 
 ```
 BOOL AddPane(
@@ -210,14 +210,14 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBar*<br/>
-[in] *bTail*<br/>
+【인】 *p컨트롤바*<br/>
+【인】 *b테일 (것)들*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="adjustdockinglayout"></a>  COleIPFrameWndEx::AdjustDockingLayout
+## <a name="coleipframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>COleIPFrameWndEx::조정도킹레이아웃
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -225,13 +225,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *hdwp*<br/>
+【인】 *HDWP*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="dockpane"></a>  COleIPFrameWndEx::DockPane
+## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>콜레IP프레임WndEx::D오크파인
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -240,13 +240,13 @@ void DockPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *nDockBarID*<br/>
-[in] *lpRect*<br/>
+【인】 *pBar*<br/>
+【인】 *nDockBarID*<br/>
+【인】 *lpRect*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="dockpaneleftof"></a>  COleIPFrameWndEx::DockPaneLeftOf
+## <a name="coleipframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>코올레IP프레임WndEx::D오크파네레프트
 
 창을 다른 창의 왼쪽에 도킹합니다.
 
@@ -259,20 +259,20 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>매개 변수
 
 *pBar*<br/>
-진행 도킹할 창에 대 한 포인터입니다.
+【인】 도킹할 창에 대한 포인터입니다.
 
-*pLeftOf*<br/>
-진행 원본으로 사용 되는 창에 대 한 포인터입니다.
+*p왼쪽*<br/>
+【인】 원점으로 사용되는 창에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-작업이 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환 합니다.
+작업이 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-여러 창 개체를 미리 정의 된 순서로 도킹 하려면이 메서드를 호출 합니다. 이 메서드는 *Pbar* 로 지정 된 창을 *pLeftOf*에 지정 된 창의 왼쪽에 도킹 합니다.
+이 메서드를 호출하여 미리 정의된 순서로 여러 창 개체를 도킹합니다. 이 메서드는 *pLeftOf에*의해 지정 된 창의 왼쪽에 *pBar에* 의해 지정 된 창을 도킹 합니다.
 
-##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes
+## <a name="coleipframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>COleIPFrameWndEx::인에이블오토하이드파인
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -280,13 +280,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *dwDockStyle*<br/>
+【인】 *dwDock스타일*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enabledocking"></a>  COleIPFrameWndEx::EnableDocking
+## <a name="coleipframewndexenabledocking"></a><a name="enabledocking"></a>COleIPFrameWndEx::인에이블도킹
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -294,15 +294,15 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *dwDockStyle*<br/>
+【인】 *dwDock스타일*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="enablepanemenu"></a>  COleIPFrameWndEx::EnablePaneMenu
+## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>콜레IP프레임WndEx::인에이블파네메뉴
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -314,88 +314,88 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bEnable*<br/>
-[in] *uiCustomizeCmd*<br/>
-[in] *strCustomizeLabel*<br/>
-[in] *uiViewToolbarsMenuEntryID*<br/>
-[in] *bContextMenuShowsToolbarsOnly*<br/>
-[in] *bViewMenuShowsToolbarsOnly*<br/>
+【인】 *bEnable*<br/>
+【인】 *ui사용자 정의Cmd*<br/>
+【인】 *str사용자 정의 레이블*<br/>
+【인】 *uiView도구바메뉴엔트리ID*<br/>
+【인】 *b컨텍스트메뉴도구바만*<br/>
+【인】 *bView메뉴쇼도구바만*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup
+## <a name="coleipframewndexgetactivepopup"></a><a name="getactivepopup"></a>콜레IP프레임WndEx::겟액티브팝
 
-현재 표시 된 팝업 메뉴에 대 한 포인터를 반환 합니다.
+현재 표시된 팝업 메뉴에 대한 포인터를 반환합니다.
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-활성 팝업 메뉴에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
+활성 팝업 메뉴에 대한 포인터; 그렇지 않으면 NULL.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 사용 하 여 현재 표시 된 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체에 대 한 포인터를 가져옵니다.
+현재 표시되는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체에 대한 포인터를 얻으려면 이 메서드를 사용합니다.
 
-##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow
+## <a name="coleipframewndexgetcontainerframewindow"></a><a name="getcontainerframewindow"></a>COleIPFrameWndEx::겟컨테이너프레임윈도우
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId
+## <a name="coleipframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId
 
-프레임 창이 메뉴를 로드할 때 지정 된 메뉴 리소스 ID를 반환 합니다.
+프레임 창이 메뉴를 로드할 때 지정된 메뉴 리소스 ID를 반환합니다.
 
 ```
 UINT GetDefaultResId() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메뉴의 리소스 ID를 반환 하거나, 프레임 창에 메뉴 모음이 없는 경우 0을 반환 합니다.
+메뉴의 리소스 ID를 반환하거나 프레임 창에 메뉴 모음이 없는 경우 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-을 호출 `COleIPFrameWndEx::LoadFrame`하 여 프레임 창이 메뉴 리소스를 로드할 때 지정 된 리소스 ID를 검색 하려면이 함수를 호출 합니다.
+이 함수를 호출하여 프레임 창에서 메뉴 리소스를 호출하여 `COleIPFrameWndEx::LoadFrame`로드할 때 지정된 리소스 ID를 검색합니다.
 
-##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame
+## <a name="coleipframewndexgetdockframe"></a><a name="getdockframe"></a>콜레IP프레임WndEx::겟독프레임
 
 ```
 CFrameWnd* GetDockFrame();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getdockingmanager"></a>  COleIPFrameWndEx::GetDockingManager
+## <a name="coleipframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getmainframe"></a>  COleIPFrameWndEx::GetMainFrame
+## <a name="coleipframewndexgetmainframe"></a><a name="getmainframe"></a>콜레IP프레임WndEx::겟메인프레임
 
 ```
 CFrameWnd* GetMainFrame();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getmenubar"></a>  COleIPFrameWndEx::GetMenuBar
+## <a name="coleipframewndexgetmenubar"></a><a name="getmenubar"></a>콜레IP프레임WndEx::겟메뉴바
 
 프레임 창에 연결된 메뉴 모음 개체에 대한 포인터를 반환합니다.
 
@@ -403,15 +403,15 @@ CFrameWnd* GetMainFrame();
 const CMFCMenuBar* GetMenuBar() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메뉴 모음 개체에 대 한 포인터입니다.
+메뉴 막대 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수를 사용 하 여 `COleIPFrameWndEx` 개체에 속하는 메뉴 모음 개체에 대 한 포인터를 검색 합니다.
+이 함수를 사용하여 개체에 속한 메뉴 막대 `COleIPFrameWndEx` 개체에 대한 포인터를 검색합니다.
 
-##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane
+## <a name="coleipframewndexgetpane"></a><a name="getpane"></a>콜레IP프레임WndEx::겟파인
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -419,13 +419,13 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nID*<br/>
+【인】 *니드 (미국)의*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettearoffbars"></a>  COleIPFrameWndEx::GetTearOffBars
+## <a name="coleipframewndexgettearoffbars"></a><a name="gettearoffbars"></a>콜레IP프레임WndEx::겟티어오프바
 
 분리 상태에 있는 창 개체의 목록을 반환합니다.
 
@@ -433,15 +433,15 @@ CBasePane* GetPane(UINT nID);
 const CObList& GetTearOffBars() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CObList` [Cbasepane 클래스](../../mfc/reference/cbasepane-class.md)파생 개체에 대 한 포인터의 컬렉션을 포함 하는 개체에 대 한 참조입니다.
+`CObList` [CBasePane 클래스](../../mfc/reference/cbasepane-class.md)파생 개체에 대한 포인터 컬렉션을 포함하는 개체에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-개체 `COleIPFrameWndEx` 는 [cbasepane 클래스](../../mfc/reference/cbasepane-class.md)파생 개체의 목록으로 분리 메뉴의 컬렉션을 유지 관리 합니다. 이 목록에 대 한 참조를 검색 하려면이 메서드를 사용 합니다.
+개체는 `COleIPFrameWndEx` 제거 메뉴의 컬렉션을 [CBasePane 클래스-파생](../../mfc/reference/cbasepane-class.md)개체 목록으로 유지 관리합니다. 이 메서드를 사용하여 이 목록에 대한 참조를 검색합니다.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText
+## <a name="coleipframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::gettoolbarButtonToolTipText
 
 단추에 대한 도구 설명이 표시되기 전에 프레임워크에서 호출합니다.
 
@@ -453,25 +453,25 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="parameters"></a>매개 변수
 
-*pButton*<br/>
-진행 단추에 대 한 포인터입니다.
+*p 버튼*<br/>
+【인】 단추에 대한 포인터입니다.
 
-*strTTText*<br/>
-진행 도구 설명 텍스트에 대 한 포인터입니다.
+*스트릿 텍스트*<br/>
+【인】 도구 설명 텍스트에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본 구현에서는 0을 반환 합니다.
+기본 구현은 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-도구 모음 단추에 대 한 도구 설명 표시를 사용자 지정 하려면이 함수를 재정의 합니다.
+이 함수를 재정의하여 도구 모음 단추의 도구 설명 표시를 사용자 지정합니다.
 
-##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars
+## <a name="coleipframewndexinitusertoobars"></a><a name="initusertoobars"></a>COleIPFrameWndEx::이니트유저투바
 
-프레임 워크가 사용자 정의 도구 모음에 할당 하는 컨트롤 Id의 범위를 지정 합니다.
+프레임워크가 사용자 정의 도구 모음에 할당하는 다양한 제어 아이디를 지정합니다.
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -480,20 +480,20 @@ void InitUserToolbars(
 
 ### <a name="parameters"></a>매개 변수
 
-*lpszRegEntry*<br/>
-진행 라이브러리가 사용자 도구 모음 설정을 저장 하는 레지스트리 항목입니다.
+*lpsz레엔트리*<br/>
+【인】 라이브러리에 사용자 도구 모음 설정을 저장하는 레지스트리 항목입니다.
 
-*uiUserToolbarFirst*<br/>
-진행 첫 번째 사용자 정의 도구 모음에 할당 된 컨트롤 ID입니다.
+*uiUser툴바우선*<br/>
+【인】 첫 번째 사용자 정의 도구 모음에 할당된 제어 ID입니다.
 
-*uiUserToolbarLast*<br/>
-진행 마지막 사용자 정의 도구 모음에 할당 된 컨트롤 ID입니다.
+*uiUser도구바마지막*<br/>
+【인】 마지막 사용자 정의 도구 모음에 할당된 제어 ID입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수를 사용 하 여 사용자가 동적으로 정의 하는 도구 모음에 할당에 대 한 컨트롤 Id 범위를 초기화 합니다. *Uiusertoolbar first* 및 uiusertoolbar 매개 변수는 허용 되는 도구 모음 컨트롤 id의 범위를 *마지막으로* 정의 합니다. 사용자 정의 도구 모음 만들기를 사용 하지 않도록 설정 하려면 *uiusertoolbars first* 또는 *uiuser도구 집합 last* 를-1로 설정 합니다.
+이 함수를 사용하여 사용자가 동적으로 정의하는 도구 모음에 할당할 제어 아이디 범위를 초기화합니다. 매개 변수 *uiUserToolbarFirst* 및 *uiUserToolLast* 허용 된 도구 모음 컨트롤 의 범위를 정의 합니다. 사용자 정의 도구 모음 의 생성을 사용하지 않도록 설정하려면 *uiUserToolBarFirst* 또는 *uiUserToolbarLast를* -1로 설정합니다.
 
-##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane
+## <a name="coleipframewndexinsertpane"></a><a name="insertpane"></a>콜레IP프레임WndEx::인서트파인
 
 ```
 BOOL InsertPane(
@@ -504,31 +504,31 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBar*<br/>
-[in] *pTarget*<br/>
-[in] *bAfter*<br/>
+【인】 *p컨트롤바*<br/>
+【인】 *p Target*<br/>
+【인】 *b애프터*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable
+## <a name="coleipframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>콜레IP프레임WndEx::IsMenuBar 사용 가능
 
-메뉴 모음 개체에 대 한 포인터가 NULL이 아니어야 하는지 여부를 확인 합니다.
+메뉴 막대 개체에 대한 포인터가 NULL이 아닌지 확인합니다.
 
 ```
 BOOL IsMenuBarAvailable() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-프레임 창에 메뉴 모음이 있는 경우 0이 아닌 값을 반환 합니다. 그렇지 않으면 0을 반환 합니다.
+프레임 창에 메뉴 모음이 있는 경우 0이 아닌 값을 반환합니다. 그렇지 않으면 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 호출 하 여 프레임 창이 메뉴 모음 개체에 대해 NULL이 아닌 포인터를 유지 하는지 여부를 확인 합니다.
+이 메서드를 호출하여 프레임 창이 메뉴 막대 개체에 대해 NULL이 아닌 포인터를 유지하는지 여부를 확인합니다.
 
-##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite
+## <a name="coleipframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>콜레IP프레임WndEx::이스포인트니어독사이트
 
 ```
 BOOL IsPointNearDockSite(
@@ -539,15 +539,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *point*<br/>
-[in] *dwBarAlignment*<br/>
-[in] *bOuterEdge*<br/>
+【인】 *점*<br/>
+【인】 *dwBar 정렬*<br/>
+【인】 *bOuterEdge*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="loadframe"></a>  COleIPFrameWndEx::LoadFrame
+## <a name="coleipframewndexloadframe"></a><a name="loadframe"></a>콜레IP프레임WndEx::로드프레임
 
 ```
 virtual BOOL LoadFrame(
@@ -559,16 +559,16 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nIDResource*<br/>
-[in] *dwDefaultStyle*<br/>
-[in] *pParentWnd*<br/>
-[in] *pContext*<br/>
+【인】 *니드리소스*<br/>
+【인】 *dw기본 스타일*<br/>
+【인】 *pParentWnd*<br/>
+【인】 *p컨텍스트*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onclosedockingpane"></a>  COleIPFrameWndEx::OnCloseDockingPane
+## <a name="coleipframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>콜레IP프레임WndEx::온클로즈도킹파인
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -576,13 +576,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>매개 변수
 
-진행 *CDockablePane&#42;*<br/>
+【인】 *코도니블파인&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="oncloseminiframe"></a>  COleIPFrameWndEx::OnCloseMiniFrame
+## <a name="coleipframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>콜레IP프레임WndEx::온클로즈미니프레임
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -590,13 +590,13 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CPaneFrameWnd&#42;*<br/>
+【인】 *CPaneFramewnd&#42;*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu
+## <a name="coleipframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>콜레IP프레임WndEx::온클로즈업팝업메뉴
 
 활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.
 
@@ -607,13 +607,13 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>매개 변수
 
 *pMenuPopup*<br/>
-진행 팝업 메뉴 개체에 대 한 포인터입니다.
+【인】 팝업 메뉴 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-WM_DESTROY 메시지를 처리할 때 개체에서 `CMFCPopupMenu` 알림을 수신 하려면이 메서드를 재정의 합니다.
+이 메서드를 재정의하여 `CMFCPopupMenu` WM_DESTROY 메시지를 처리할 때 개체에서 알림을 받습니다.
 
-##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg
+## <a name="coleipframewndexoncmdmsg"></a><a name="oncmdmsg"></a>콜레IP프레임WndEx::OnCmdMsg
 
 ```
 virtual BOOL OnCmdMsg(
@@ -625,18 +625,18 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nID*<br/>
-[in] *nCode*<br/>
-[in] *pExtra*<br/>
-[in] *pHandlerInfo*<br/>
+【인】 *니드 (미국)의*<br/>
+【인】 *nCode*<br/>
+【인】 *pExtra*<br/>
+【인】 *pHandlerInfo*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuimage"></a>  COleIPFrameWndEx::OnDrawMenuImage
+## <a name="coleipframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>콜레IP프레임WndEx::온드로우메뉴이미지
 
-메뉴 항목과 연결 된 이미지를 그릴 때 프레임 워크에서 호출 됩니다.
+메뉴 항목과 연결된 이미지가 그려질 때 프레임워크에서 호출됩니다.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -648,23 +648,23 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pMenuButton*<br/>
-진행 메뉴 단추에 대 한 포인터입니다.
+*p메뉴 버튼*<br/>
+【인】 메뉴 단추에 대한 포인터입니다.
 
 *rectImage*<br/>
-진행 메뉴 항목과 연결 된 이미지입니다.
+【인】 메뉴 항목과 연결된 이미지입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본 구현은 아무 작업도 수행 하지 않고 0을 반환 합니다.
+기본 구현은 아무 것도 수행하지 않으며 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 개체가 소유한 `COleIPFrameWndEx`메뉴 모음에 속하는 메뉴 항목에 대해 이미지 그리기를 사용자 지정 하려면이 메서드를 재정의 합니다.
+-derived 개체가 소유한 메뉴 막대에 속하는 메뉴 항목에 대한 이미지 그리기를 사용자 지정하려는 경우 이 메서드를 `COleIPFrameWndEx`재정의합니다.
 
-##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo
+## <a name="coleipframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>콜레IP프레임WndEx::온드로우메뉴로고
 
 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)개체에서 WM_PAINT 메시지를 처리할 때 프레임워크에서 호출됩니다.
 
@@ -678,21 +678,21 @@ virtual void OnDrawMenuLogo(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-진행 장치 컨텍스트에 대 한 포인터입니다.
+【인】 장치 컨텍스트에 대한 포인터입니다.
 
-*pMenu*<br/>
-진행 팝업 메뉴 개체에 대 한 포인터입니다.
+*p메뉴*<br/>
+【인】 팝업 메뉴 개체에 대한 포인터입니다.
 
-*rectLogo*<br/>
-진행 표시할 로고에 대 한 포인터입니다.
+*렉로고*<br/>
+【인】 표시할 로고에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-파생 개체가 소유한 `COleIPFrameWndEx`메뉴 모음과 연결 된 팝업 메뉴에 로고를 표시 하려면이 메서드를 재정의 합니다. 기본 구현은 아무 작업도 수행하지 않습니다.
+이 메서드를 재정의하여 -derived 개체가 소유한 메뉴 모음과 `COleIPFrameWndEx`연결된 팝업 메뉴에 로고를 표시합니다. 기본 구현은 아무 작업도 수행하지 않습니다.
 
-##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest
+## <a name="coleipframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
 
-[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)개체가 WM_NCHITTEST 메시지를 처리할 때 프레임 워크에서 호출 됩니다.
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)개체가 WM_NCHITTEST 메시지를 처리하는 경우 프레임워크에서 호출됩니다.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -702,19 +702,19 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] 메뉴 단추에 대 한 pButton 포인터입니다.
+[에서] 메뉴 버튼에 대한 pButton 포인터.
 
-[out] 구조체에 대 한 `TOOLINFO` pti 포인터입니다.
+[아웃] 구조에 `TOOLINFO` 대한 pTI 포인터.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본 구현은 아무 작업도 수행 하지 않고 0을 반환 합니다. *Pti* 매개 변수를 채우면 구현에서 0이 아닌 값을 반환 해야 합니다.
+기본 구현은 아무 것도 수행하지 않으며 0을 반환합니다. *구현은 pTI* 매개 변수를 채우는 경우 0이 아닌 값을 반환해야 합니다.
 
 ### <a name="remarks"></a>설명
 
-특정 메뉴 항목에 대 한 도구 설명 정보를 제공 하려면이 메서드를 재정의 합니다.
+이 메서드를 재정의하여 특정 메뉴 항목에 대한 ToolTip 정보를 제공합니다.
 
-##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame
+## <a name="coleipframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>콜레IP프레임WndEx::온무브미니프레임
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -722,13 +722,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pFrame*<br/>
+【인】 *p프레임*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onsetpreviewmode"></a>  COleIPFrameWndEx::OnSetPreviewMode
+## <a name="coleipframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>콜레IP프레임WndEx::온셋프리뷰모드
 
 ```
 virtual void OnSetPreviewMode(
@@ -738,12 +738,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bPreview*<br/>
-[in] *pState*<br/>
+【인】 *b미리보기*<br/>
+【인】 *p상태*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onshowcustomizepane"></a>  COleIPFrameWndEx::OnShowCustomizePane
+## <a name="coleipframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>콜레IP프레임WndEx::OnShow사용자 정의판
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -753,14 +753,14 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pMenuPane*<br/>
-[in] *uiToolbarID*<br/>
+【인】 *pMenuPane*<br/>
+【인】 *uiToolbarID*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onshowpanes"></a>  COleIPFrameWndEx::OnShowPanes
+## <a name="coleipframewndexonshowpanes"></a><a name="onshowpanes"></a>콜레IP프레임WndEx::온쇼파네스
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -768,15 +768,15 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bShow*<br/>
+【인】 *bShow*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onshowpopupmenu"></a>  COleIPFrameWndEx::OnShowPopupMenu
+## <a name="coleipframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>콜레IP프레임WndEx::온쇼팝메뉴
 
-팝업 메뉴가 표시 될 때 프레임 워크에서 호출 됩니다.
+팝업 메뉴가 표시될 때 프레임워크에서 호출됩니다.
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -785,19 +785,19 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>매개 변수
 
 *pMenuPopup*<br/>
-진행 표시할 팝업 메뉴에 대 한 포인터입니다.
+【인】 표시할 팝업 메뉴에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본 구현은 아무 작업도 수행 하지 않고 0이 아닌 값을 반환 합니다. 팝업 메뉴를 표시할 수 없으면 구현이 FALSE를 반환 해야 합니다.
+기본 구현은 아무 것도 수행하지 않으며 0이 아닌 값을 반환합니다. 팝업 메뉴를 표시할 수 없는 경우 구현에서 FALSE를 반환해야 합니다.
 
 ### <a name="remarks"></a>설명
 
-팝업 메뉴의 표시를 사용자 지정 하려면이 메서드를 재정의 합니다. 예를 들어 메뉴 단추를 색 메뉴 단추로 변경 하거나 분리 막대를 초기화할 수 있습니다.
+이 메서드를 재정의하여 팝업 메뉴의 표시를 사용자 지정합니다. 예를 들어 메뉴 단추를 변경하여 메뉴 단추의 색상을 지정하거나 찢어짐 막대를 초기화할 수 있습니다.
 
-##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu
+## <a name="coleipframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>콜레IP프레임WndEx::온티어오프메뉴
 
-사용자가 분리 막대가 있는 메뉴를 선택할 때 프레임 워크에서 호출 됩니다.
+사용자가 찢어짐 막대가 있는 메뉴를 선택할 때 프레임워크에서 호출됩니다.
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -808,20 +808,20 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>매개 변수
 
 *pMenuPopup*<br/>
-진행 사용자가 선택한 팝업 메뉴에 대 한 포인터입니다.
+【인】 사용자가 선택한 팝업 메뉴에 대한 포인터입니다.
 
 *pBar*<br/>
-진행 메뉴를 호스트 하는 창에 대 한 포인터입니다.
+【인】 메뉴를 호스트하는 창에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-프레임 워크에서 팝업 메뉴를 활성화 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다. 기본값은 TRUE입니다.
+TRUE 프레임워크가 팝업 메뉴를 활성화하려면 그렇지 않으면 거짓. 기본값은 TRUE입니다.
 
 ### <a name="remarks"></a>설명
 
-분리 막대의 설정을 사용자 지정 하려면이 함수를 재정의 합니다.
+떼어 놓은 막대의 설정을 사용자 지정하려는 경우 이 함수를 재정의합니다.
 
-##  <a name="panefrompoint"></a>  COleIPFrameWndEx::PaneFromPoint
+## <a name="coleipframewndexpanefrompoint"></a><a name="panefrompoint"></a>콜레IP프레임WndEx::P인프포인트
 
 ```
 CBasePane* PaneFromPoint(
@@ -839,17 +839,17 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *point*<br/>
-[in] *nSensitivity*<br/>
-[in] *bExactBar*<br/>
-[in] *pRTCBarType*<br/>
-[in] *dwAlignment*<br/>
+【인】 *점*<br/>
+【인】 *n감도*<br/>
+【인】 *bExactBar*<br/>
+【인】 *pRTCBarType*<br/>
+【인】 *dw정렬*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="pretranslatemessage"></a>  COleIPFrameWndEx::PreTranslateMessage
+## <a name="coleipframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>콜레IP프레임WndEx::P번역메시지
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -859,11 +859,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 [in] *pMsg*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="recalclayout"></a>  COleIPFrameWndEx::RecalcLayout
+## <a name="coleipframewndexrecalclayout"></a><a name="recalclayout"></a>COleIPFrameWndEx::리칼레이아웃
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -871,13 +871,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bNotify*<br/>
+【인】 *b알림*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removepanefromdockmanager"></a>  COleIPFrameWndEx::RemovePaneFromDockManager
+## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::제거파네에서독매니저
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -888,36 +888,36 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pControlBar*<br/>
-[in] *bDestroy*<br/>
-[in] *bAdjustLayout*<br/>
-[in] *bAutoHide*<br/>
-[in] *pBarReplacement*<br/>
+【인】 *p컨트롤바*<br/>
+【인】 *bDestroy*<br/>
+【인】 *bAdjust레이아웃*<br/>
+【인】 *b자동 숨기기*<br/>
+【인】 *pBar교체*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setdockstate"></a>  COleIPFrameWndEx::SetDockState
+## <a name="coleipframewndexsetdockstate"></a><a name="setdockstate"></a>콜레IP프레임WndEx::SetDockState
 
-프레임 창에 속하는 창에 지정 된 도킹 상태를 적용 합니다.
+프레임 창에 속하는 창에 지정된 도킹 상태를 적용합니다.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*state*<br/>
-진행 도킹 상태를 지정 합니다.
+*상태*<br/>
+【인】 도킹 상태를 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수를 사용 하 여 `COleIPFrameWndEx` 개체에 속하는 창의 새 도킹 상태를 지정할 수 있습니다.
+이 함수를 사용하여 개체에 속한 창에 대한 `COleIPFrameWndEx` 새 도킹 상태를 지정합니다.
 
-##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu
+## <a name="coleipframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>COleIPFrameWndEx::설치도구 모음메뉴
 
 더미 항목을 검색하고 지정된 사용자 정의 항목으로 대체하여 도구 모음 개체를 수정합니다.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -926,20 +926,20 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>매개 변수
 
-*menu*<br/>
-진행 수정할 [CMenu](../../mfc/reference/cmenu-class.md) 개체에 대 한 참조입니다.
+*메뉴*<br/>
+【인】 수정할 [CMenu](../../mfc/reference/cmenu-class.md) 개체에 대한 참조입니다.
 
-*uiViewUserToolbarCmdFirst*<br/>
-진행 첫 번째 사용자 정의 명령을 지정 합니다.
+*uiViewUser도구모음첫번째*<br/>
+【인】 첫 번째 사용자 정의 명령을 지정합니다.
 
-*uiViewUserToolbarCmdLast*<br/>
-진행 마지막 사용자 정의 명령을 지정 합니다.
+*uiViewUser도구모음마지막*<br/>
+【인】 마지막 사용자 정의 명령을 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="showpane"></a>  COleIPFrameWndEx::ShowPane
+## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>콜레IP프레임WndEx::쇼파인
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -949,14 +949,14 @@ void ShowPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
-[in] *bDelay*<br/>
-[in] *bActivate*<br/>
+【인】 *pBar*<br/>
+【인】 *bShow*<br/>
+【인】 *bDelay*<br/>
+【인】 *b활성화*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="winhelpa"></a>  COleIPFrameWndEx::WinHelpA
+## <a name="coleipframewndexwinhelpa"></a><a name="winhelpa"></a>콜레IP프레임WndEx::윈헬프아
 
 WinHelp 애플리케이션 또는 상황에 맞는 도움말을 시작하기 위해 프레임워크에서 호출됩니다.
 
@@ -968,14 +968,14 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] dwData는 *Ncmd*에서 지정 하는 도움말 유형에 필요한 데이터를 지정 합니다.
+[in] dwData는 *nCmd에서*지정한 도움말 유형에 필요한 데이터를 지정합니다.
 
 *nCmd*<br/>
-진행 요청 된 도움말의 유형을 지정 합니다. 사용할 수 있는 값 목록과 이러한 값이 *Dwdata* 매개 변수에 미치는 영향에 대해서는 Windows SDK의 [WinHelp 함수](/windows/win32/api/winuser/nf-winuser-winhelpw) 를 참조 하십시오.
+【인】 요청된 도움말 유형을 지정합니다. 가능한 값 목록과 *dwData* 매개 변수에 미치는 영향은 Windows SDK의 [WinHelp 함수를](/windows/win32/api/winuser/nf-winuser-winhelpw) 참조하십시오.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

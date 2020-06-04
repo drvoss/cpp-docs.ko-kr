@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
 ms.openlocfilehash: 0c0233ad6715a3adb7d47f021a87207f288d5139
 ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65837024"
@@ -35,6 +35,6 @@ ms.locfileid: "65837024"
 
 1. **솔루션 탐색기**에서 프로젝트를 오른쪽 마우스 단추로 클릭하고 **속성**을 클릭합니다. **속성 페이지** 창의 왼쪽 창에 해당 규칙 이름이 있는 새 노드가 있는지 확인합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [명령줄의 MSBuild - C++](msbuild-visual-cpp.md)

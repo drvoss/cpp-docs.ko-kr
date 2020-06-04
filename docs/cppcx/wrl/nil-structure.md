@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::Nil
 ms.assetid: ea6dddc1-2bd0-44eb-804e-477572215712
-ms.openlocfilehash: 143b5133589198341cb68378778631e6a78af006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f71c120e62a11881cf071879ed8a151a9b46b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213671"
 ---
 # <a name="nil-structure"></a>Nil 구조체
 
@@ -22,22 +22,22 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 struct Nil;
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-지정 되지 않은 (선택 사항) 템플릿 매개 변수를 나타내는 데 사용 합니다.
+지정 되지 않은 선택적 템플릿 매개 변수를 나타내는 데 사용 됩니다.
 
-**Nil** 빈 구조입니다.
+**Nil** 은 빈 구조체입니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `Nil`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214677"
 ---
 # <a name="optional-c"></a>optional(C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514350"
 [optional]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **선택적** C++ 특성에는 [선택적](/windows/win32/Midl/optional) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -57,7 +57,7 @@ __interface IFireTabCtrl : IDispatch
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [매개 변수 특성](parameter-attributes.md)

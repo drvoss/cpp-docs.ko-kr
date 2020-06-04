@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-ms.openlocfilehash: 8a7acf943bd4c8180e60748b89a96fdf44a19576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0195973e7d23baf2f2853bdb00bedcbc841c3549
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279582"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197695"
 ---
 # <a name="bscmake-error-bk1508"></a>BSCMAKE 오류 BK1508
 
-'filename' 임시 파일을 삭제할 수 없습니다. [: 이유]
+' filename ' 임시 파일을 삭제할 수 없습니다 [: reason]
 
-BSCMAKE는 해당 임시 파일 중 하나를 삭제할 수 없습니다.
+BSCMAKE에서 임시 파일 중 하나를 삭제할 수 없습니다.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면
 
 1. 다른 프로세스에서 파일을 엽니다.
 
-1. 하드웨어 오류가 발생 합니다.
+1. 하드웨어 오류입니다.

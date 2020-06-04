@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403336"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187702"
 ---
-# <a name="variantt-extractors"></a>_variant_t Extractors
+# <a name="_variant_t-extractors"></a>_variant_t Extractors
 
 **Microsoft 전용**
 
-캡슐화 된 데이터를 추출 `VARIANT` 개체입니다.
+캡슐화 된 `VARIANT` 개체에서 데이터를 추출 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>설명
 
-캡슐화 된 원시 데이터를 추출 `VARIANT`합니다. 경우는 `VARIANT` 가 이미 올바른 형식이 아닌 `VariantChangeType` 변환을 시도 하는 데 사용 되 고 실패 시 오류가 생성 됩니다:
+캡슐화 된 `VARIANT`에서 원시 데이터를 추출 합니다. `VARIANT` 올바른 형식이 아니면 변환을 시도 하는 데 `VariantChangeType` 사용 되며 오류가 발생 하면 오류가 생성 됩니다.
 
-- **연산자 short ()** 추출 된 **짧은** 정수 값입니다.
+- **연산자 short ()** **Short** 정수 값을 추출 합니다.
 
-- **연산자 long ()** 추출 된 **긴** 정수 값입니다.
+- **연산자 long ()** 정수 ( **long** ) 값을 추출 합니다.
 
-- **연산자 float ()** 추출 된 **float** 숫자 값입니다.
+- **operator float ()** **부동 소수점** 숫자 값을 추출 합니다.
 
-- **연산자 double ()** 추출 된 **double** 정수 값입니다.
+- **operator double ()** **Double** 정수 값을 추출 합니다.
 
-- **연산자 CY ()** 추출 된 `CY` 개체입니다.
+- **연산자 CY ()** `CY` 개체를 추출 합니다.
 
-- **연산자 bool ()** 추출 된 **bool** 값입니다.
+- **연산자 bool ()** **부울** 값을 추출 합니다.
 
-- **연산자 DECIMAL ()** 추출 된 `DECIMAL` 값입니다.
+- **연산자 DECIMAL ()** `DECIMAL` 값을 추출 합니다.
 
-- **연산자 BYTE ()** 추출 된 `BYTE` 값입니다.
+- **연산자 BYTE ()** `BYTE` 값을 추출 합니다.
 
-- **연산자 _bstr_t ()** 에서 캡슐화 된 문자열을 추출 된 `_bstr_t` 개체입니다.
+- **연산자 _bstr_t ()** `_bstr_t` 개체에 캡슐화 되는 문자열을 추출 합니다.
 
-- **연산자 IDispatch\*()** 캡슐화 된에서 dispinterface 포인터를 추출 `VARIANT`합니다. `AddRef` 호출 하는 이므로 결과 포인터 라고 `Release` 메모리를 해제 해야 합니다.
+- **Operator IDispatch\*()** 캡슐화 된 `VARIANT`에서가 나 포인터를 추출 합니다. 결과 포인터에서 `AddRef`가 호출 되므로 `Release`를 호출 하 여 해제할 수 있습니다.
 
-- **연산자 IUnknown\*()** 캡슐화 된에서 COM 인터페이스 포인터를 추출 `VARIANT`합니다. `AddRef` 호출 하는 이므로 결과 포인터 라고 `Release` 메모리를 해제 해야 합니다.
+- **Operator IUnknown\*()** 캡슐화 된 `VARIANT`에서 COM 인터페이스 포인터를 추출 합니다. 결과 포인터에서 `AddRef`가 호출 되므로 `Release`를 호출 하 여 해제할 수 있습니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

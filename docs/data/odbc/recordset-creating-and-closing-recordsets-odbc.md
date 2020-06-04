@@ -9,23 +9,23 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707990"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367084"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>레코드 집합: 레코드 집합 만들기 및 닫기(ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 여전히 수동으로 소비자를 만들 수 있습니다.
 
-이 항목은 MFC ODBC 클래스에 적용됩니다.
+이 토픽은 MFC ODBC 클래스에 적용됩니다.
 
 레코드 집합을 사용하려면 레코드 집합 개체를 구성한 다음, 해당 `Open` 멤버 함수를 호출하여 레코드 집합의 쿼리를 실행하고 레코드를 선택합니다. 레코드 집합을 마치면 개체를 닫고 제거합니다.
 
-이 항목에서는 다음 내용을 설명합니다.
+이 토픽에서는 다음 내용을 설명합니다.
 
 - [레코드 집합 개체를 만드는 시기 및 방법](#_core_creating_recordsets_at_run_time).
 
@@ -33,7 +33,7 @@ ms.locfileid: "65707990"
 
 - [레코드 집합 개체를 닫는 시기 및 방법](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> 런타임에 레코드 집합 만들기
+## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> 런타임에 레코드 집합 만들기
 
 프로그램에서 레코드 집합 개체를 만들기 전에 일반적으로 애플리케이션별 레코드 집합 클래스를 작성합니다. 이 예비 단계에 대한 자세한 내용은 [MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)를 참조하세요.
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-`Open`을 호출한 후 개체의 멤버 함수와 데이터 멤버를 사용하여 레코드 작업을 수행합니다. 경우에 따라 데이터 원본에서 변경 내용을 포함하도록 레코드 집합을 다시 쿼리하거나 새로 고칠 수도 있습니다. 자세한 내용은 [레코드 집합: 레코드 집합 다시 쿼리(ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)를 참조하세요.
+`Open`을 호출한 후 개체의 멤버 함수와 데이터 멤버를 사용하여 레코드 작업을 수행합니다. 경우에 따라 데이터 원본에서 변경 내용을 포함하도록 레코드 집합을 다시 쿼리하거나 새로 고칠 수도 있습니다. 자세한 내용은 [레코드 집합: 레코드 집합(ODBC) 다시 쿼리를](../../data/odbc/recordset-requerying-a-recordset-odbc.md)참조하십시오.
 
 > [!TIP]
->  개발 중에 사용하는 연결 문자열은 최종 사용자에게 필요한 연결 문자열과 다를 수 있습니다. 이와 관련하여 애플리케이션을 일반화하는 방법에 대한 아이디어는 [데이터 원본: 연결 관리(ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)를 참조하세요.
+> 개발 중에 사용하는 연결 문자열은 최종 사용자에게 필요한 연결 문자열과 다를 수 있습니다. 이와 관련하여 응용 프로그램을 일반화하는 것에 대한 아이디어는 [데이터 원본: ODBC(연결 관리)를](../../data/odbc/data-source-managing-connections-odbc.md)참조하십시오.
 
-##  <a name="_core_setting_recordset_options"></a> 레코드 집합 옵션 설정
+## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 레코드 집합 옵션 설정
 
 레코드 집합 개체를 구성한 후 `Open`을 호출하여 레코드를 선택하기 전에 레코드 집합의 동작을 제어하는 몇 가지 옵션을 설정할 수 있습니다. 모든 레코드 집합에 대해 다음을 수행할 수 있습니다.
 
@@ -94,9 +94,9 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 - 레코드 집합을 업데이트할 수 있고 잠금 옵션을 지원하는 경우 업데이트에 사용되는 [잠금](../../data/odbc/recordset-locking-records-odbc.md) 메서드를 지정합니다.
 
 > [!NOTE]
->  레코드 선택의 영향을 주려면 `Open` 멤버 함수를 호출하기 전에 이러한 옵션을 설정해야 합니다.
+> 레코드 선택의 영향을 주려면 `Open` 멤버 함수를 호출하기 전에 이러한 옵션을 설정해야 합니다.
 
-##  <a name="_core_closing_a_recordset"></a> 레코드 집합 닫기
+## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> 레코드 집합 닫기
 
 레코드 집합을 마치면 레코드를 삭제하고 메모리를 할당 취소해야 합니다.
 
@@ -113,5 +113,5 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 ## <a name="see-also"></a>참고 항목
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[레코드 집합 스크롤(ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[레코드 집합 레코드 추가, 업데이트 및 삭제(ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[레코드 집합: 스크롤(ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[레코드 집합: 레코드 추가, 업데이트 및 삭제(ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40ae12130fdced9fd958c3b8316fa3b718ca9b5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374124"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>증가 및 감소 연산자 오버로드(C++)
 
@@ -22,10 +22,10 @@ ms.locfileid: "62183570"
 
 - 사전 감소 및 사후 감소
 
-오버로드된 연산자 함수를 작성하는 경우 이러한 연산자의 전위 버전과 후위 버전에 대해 별도의 버전을 구현하는 것이 유용할 수 있습니다. 둘을 구분 하기 위해 다음 규칙은 관찰 됩니다. 연산자의 전위 형태는 선언 동일한 방식으로 다른 단항 연산자입니다. 형식의 추가 인수를 허용 하는 후 위 형식 **int**합니다.
+오버로드된 연산자 함수를 작성하는 경우 이러한 연산자의 전위 버전과 후위 버전에 대해 별도의 버전을 구현하는 것이 유용할 수 있습니다. 둘을 구별하기 위해 다음 규칙이 관찰됩니다: 연산자의 접두사 형식은 다른 비연산자와 정확히 동일한 방식으로 선언됩니다. postfix 양식은 **int**형식의 추가 인수를 수락합니다.
 
 > [!NOTE]
->  증가 또는 감소 연산자의 후 위 형태에 대 한 오버 로드 된 연산자를 지정 하는 경우 추가 인수 형식 이어야 합니다 **int**; 다른 형식을 지정 해도 오류가 발생 합니다.
+> 증분 또는 감소 연산자의 postfix 형식에 대해 오버로드된 연산자(overloaded)를 지정할 때 추가 인수는 **int**형식이어야 합니다. 다른 형식을 지정하면 오류가 생성됩니다.
 
 다음 예제에서는 `Point` 클래스에 대해 전위 및 후위 증가 연산자와 감소 연산자를 정의하는 방법을 보여 줍니다.
 
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-형식 인수의 **int** 증가값의 후 위 형태는 감소 연산자 사용 되지 않거나 일반적으로 인수를 전달 합니다. 일반적으로 0 값을 포함합니다. 그러나 이 인수는 다음과 같이 사용할 수 있습니다.
+증분 또는 감소 연산자의 postfix 형식을 나타내는 **int** 형식의 인수는 일반적으로 인수를 전달하는 데 사용되지 않습니다. 일반적으로 0 값을 포함합니다. 그러나 이 인수는 다음과 같이 사용할 수 있습니다.
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,8 +124,8 @@ int main()
 }
 ```
 
-위의 코드에 나와 있는 것처럼 명시적 호출 외에 이러한 값을 전달하기 위해 증가 또는 감소 연산자를 사용하는 구문은 없습니다. 이 기능을 구현 하는 보다 쉬운 방법은 더하기/대입 연산자를 오버 로드 하는 것 (**+=**).
+위의 코드에 나와 있는 것처럼 명시적 호출 외에 이러한 값을 전달하기 위해 증가 또는 감소 연산자를 사용하는 구문은 없습니다. 이 기능을 구현하는 보다 간단한 방법은 추가/할당 연산자()를**+=** 오버로드하는 것입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [연산자 오버로드](../cpp/operator-overloading.md)

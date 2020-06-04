@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234532"
 ---
 # <a name="declarators-and-variable-declarations"></a>선언자 및 변수 선언
 
@@ -49,7 +49,7 @@ __declspec(thread) char *var;
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *declarator*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *declarator*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**
@@ -65,7 +65,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 > *선언자*를 참조하는 구문은 [C 언어 구문 요약](../c-language/c-language-syntax-summary.md) 또는 [선언 개요](../c-language/overview-of-declarations.md)에서 *선언*에 대한 구문을 참조하세요.
 
-선언자가 수정되지 않은 식별자로 구성되면 선언되는 항목에 기본 형식이 있습니다. 식별자 왼쪽에 별표(<strong>\*</strong>)가 나타나는 경우 형식은 포인터 형식으로 수정됩니다. 식별자 뒤에 대괄호(**[ ]**)가 올 경우 형식은 배열 형식으로 수정됩니다. 식별자 뒤에 괄호가 올 경우 형식은 함수 형식으로 수정됩니다. 선언 내에서 우선 순위를 해석하는 방법에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.
+선언자가 수정되지 않은 식별자로 구성되면 선언되는 항목에 기본 형식이 있습니다. 식별자 왼쪽에 별표(<strong>\*</strong>)가 나타나는 경우 형식은 포인터 형식으로 수정됩니다. 식별자 뒤에 대괄호( **[ ]** )가 올 경우 형식은 배열 형식으로 수정됩니다. 식별자 뒤에 괄호가 올 경우 형식은 함수 형식으로 수정됩니다. 선언 내에서 우선 순위를 해석하는 방법에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.
 
 각 선언자는 하나 이상의 식별자를 선언합니다. 선언이 완전하려면 선언자에 형식 지정자가 포함되어야 합니다. 형식 지정자는 배열 형식의 요소 형식, 포인터 형식으로 처리되는 개체의 형식 또는 함수의 반환 형식을 제공합니다.
 
@@ -85,6 +85,6 @@ Microsoft C 컴파일러는 산술, 구조체 또는 공용 구조체 형식을 
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언 및 형식](../c-language/declarations-and-types.md)

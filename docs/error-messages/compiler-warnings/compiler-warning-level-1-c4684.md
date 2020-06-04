@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4684
+title: 컴파일러 경고(수준 1) C4684
 ms.date: 11/04/2016
 f1_keywords:
 - C4684
 helpviewer_keywords:
 - C4684
 ms.assetid: e95f1a83-2784-4b05-ae94-12148e056e26
-ms.openlocfilehash: f6ce86cc297a6529d58573f3e7d906f51771013b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 017d2ad9ac327e99bdd9afb0914d17946103771c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175456"
 ---
-# <a name="compiler-warning-level-1-c4684"></a>컴파일러 경고 (수준 1) C4684
+# <a name="compiler-warning-level-1-c4684"></a>컴파일러 경고(수준 1) C4684
 
 ' attribute ': 경고 특성으로 인해 잘못 된 코드가 생성 될 수 있습니다. 주의 해 서 사용 하세요.
 

@@ -1,17 +1,18 @@
 ---
 title: 파일 시스템 탐색
-ms.date: 11/04/2016
+description: C++ 표준 라이브러리 파일 시스템 API를 사용하여 파일 시스템을 탐색하는 방법
+ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368436"
 ---
 # <a name="file-system-navigation"></a>파일 시스템 탐색
 
-\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)`은 항상 Windows에서 **false** 를 반환 합니다.
+\<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 플랫폼 간이기 때문에 Windows 시스템과 관련이 없는 API가 포함되어 있습니다. 예를 들어 `is_fifo(const path&)` 항상 Windows에서 **false를** 반환합니다.
 
 ## <a name="overview"></a>개요
 
@@ -23,7 +24,7 @@ ms.locfileid: "76518506"
 
 - 경로 작성, 분해 및 비교
 
-- 디렉터리 만들기, 복사 및 삭제
+- 디렉터리 생성, 복사 및 삭제
 
 - 파일 복사 및 삭제
 
@@ -33,7 +34,7 @@ ms.locfileid: "76518506"
 
 ### <a name="constructing-and-composing-paths"></a>경로 생성 및 작성
 
-XP 이후 Windows의 경로는 기본적으로 유니코드로 저장됩니다. [path](../standard-library/path-class.md) 클래스에서 필요한 모든 문자열 변환을 자동으로 수행합니다. 와이드 및 좁은 문자 배열 둘 다의 인수와 UTF8 또는 UTF16 형식의 `std::string` 및 `std::wstring` 형식을 수락합니다. 또한 `path` 클래스는 경로 구분 기호를 자동으로 정규화합니다. 생성자 인수에 단일 슬래시를 디렉터리 구분 기호로 사용할 수 있습니다. 이렇게 하면 동일한 문자열을 사용하여 Windows 및 UNIX 환경에 둘 다에 경로를 저장할 수 있습니다.
+XP 이후 Windows의 경로는 기본적으로 유니코드로 저장됩니다. [경로](../standard-library/path-class.md) 클래스는 필요한 모든 문자열 변환을 자동으로 수행합니다. 넓고 좁은 문자 배열과 `std::string` UTF8 또는 UTF16으로 서식이 지정된 `std::wstring` 형식의 인수를 모두 허용합니다. 또한 `path` 클래스는 경로 구분 기호를 자동으로 정규화합니다. 생성자 인수에 단일 슬래시를 디렉터리 구분 기호로 사용할 수 있습니다. 이 구분 기호를 사용하면 동일한 문자열을 사용하여 Windows 및 UNIX 환경 모두에서 경로를 저장할 수 있습니다.
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -41,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-두 경로를 연결하기 위해 `/` 및 `/=` 의 `+` 및 `+=` 연산자와 유사한 오버로드된 `std::string` 및 `std::wstring`연산자를 사용할 수 있습니다. 구분 기호를 제공하지 않을 경우 `path` 개체가 편리하게 제공합니다.
+두 경로를 연결하기 위해 `/` 및 `/=` 의 `+` 및 `+=` 연산자와 유사한 오버로드된 `std::string` 및 `std::wstring`연산자를 사용할 수 있습니다. 그렇지 `path` 않으면 개체가 구분 기호를 편리하게 공급합니다.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -50,18 +51,18 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>경로 검사
 
-path 클래스에는 참조하는 파일 시스템 엔터티와 별도로 경로 자체의 다양한 부분에 대한 정보를 반환하는 여러 메서드가 있습니다. 루트, 상대 경로, 파일 이름 및 파일 확장명 등을 가져올 수 있습니다. path 개체를 반복하여 계층 구조의 모든 폴더를 검사할 수 있습니다. 다음 예제에서는 경로(참조하는 디렉터리 아님)를 반복하고 해당 부분에 대한 정보를 검색하는 방법을 보여 줍니다.
+경로 클래스에는 경로 자체의 여러 부분에 대한 정보를 반환하는 여러 메서드가 있습니다. 이 정보는 참조할 수 있는 파일 시스템 엔터티에 대한 정보와 구별됩니다. 루트, 상대 경로, 파일 이름 및 파일 확장명 등을 가져올 수 있습니다. path 개체를 반복하여 계층 구조의 모든 폴더를 검사할 수 있습니다. 다음 예제에서는 경로 개체를 반복하는 방법을 보여 주며 있습니다. 그리고, 그 부분에 대한 정보를 검색하는 방법.
 
 ```cpp
 // filesystem_path_example.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
 wstring DisplayPathInfo()
 {
@@ -88,7 +89,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -119,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>경로 비교
 
-`path` 클래스는 `std::string` 및 `std::wstring`과 동일한 비교 연산자를 오버로드합니다. 두 경로를 비교하는 경우 구분 기호가 정규화된 후 문자열 비교를 수행합니다. 후행 슬래시(또는 백슬래시)가 없는 경우 추가되지 않고 비교에 영향을 줍니다. 다음 예제에서는 경로 값이 비교되는 방식을 보여 줍니다.
+`path` 클래스는 `std::string` 및 `std::wstring`과 동일한 비교 연산자를 오버로드합니다. 두 경로를 비교할 때 구분 기호가 정규화된 후 문자열 비교를 합니다. 후행 슬래시(또는 백슬래시)가 없으면 추가되지 않으며 비교에 영향을 줍니다. 다음 예제에서는 경로 값이 비교되는 방식을 보여 줍니다.
 
 ```cpp
 wstring ComparePaths()
@@ -154,22 +155,22 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 
 ### <a name="converting-between-path-and-string-types"></a>경로와 문자열 형식 간 변환
 
-`path` 개체를 `std::wstring` 또는 `std::string`으로 암시적으로 변환할 수 있습니다. 즉, 다음 예제와 같이 [wofstream::open](../standard-library/basic-ofstream-class.md#open) 등의 함수에 경로를 전달할 수 있습니다.
+`path` 개체를 `std::wstring` 또는 `std::string`으로 암시적으로 변환할 수 있습니다. 즉, 이 예제와 같이 [wofstream::open](../standard-library/basic-ofstream-class.md#open)과 같은 함수에 경로를 전달할 수 있습니다.
 
 ```cpp
 // filesystem_path_conversion.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
-int main(int argc, char* argv[])
+int main()
 {
-    wchar_t* p = L"C:/Users/Public/Documents";
+    const wchar_t* p{ L"C:/Users/Public/Documents" };
     path filePath(p);
 
     filePath /= L"NewFile.txt";
@@ -209,4 +210,4 @@ Press Enter to exit
 
 \<filesystem> 헤더는 단일 디렉터리를 반복하는 [directory_iterator](../standard-library/directory-iterator-class.md) 형식과 디렉터리 및 하위 디렉터리를 재귀적으로 반복하는 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) 클래스를 제공합니다. `path` 개체를 전달하여 반복기를 생성하면 반복기가 경로의 첫 번째 directory_entry를 가리킵니다. 기본 생성자를 호출하여 끝 반복기를 만듭니다.
 
-디렉터리를 반복하는 경우 디렉터리, 파일, 기호화된 링크 및 소켓 파일을 포함하되 이에 제한되지 않고 발견할 수 있는 여러 종류의 항목이 있습니다. `directory_iterator`는 해당 항목을 [directory_entry](../standard-library/directory-entry-class.md) 개체로 반환합니다.
+디렉터리를 반복할 때 여러 종류의 항목을 발견할 수 있습니다. 이러한 항목에는 디렉터리, 파일, 기호 링크, 소켓 파일 등이 포함됩니다. `directory_iterator`는 해당 항목을 [directory_entry](../standard-library/directory-entry-class.md) 개체로 반환합니다.

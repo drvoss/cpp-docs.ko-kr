@@ -1,8 +1,9 @@
 ---
 title: feof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - feof
+- _o_feof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920164"
 ---
 # <a name="feof"></a>feof
 
@@ -46,10 +48,10 @@ int feof(
 
 ### <a name="parameters"></a>매개 변수
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 파일의 끝을 지나서 읽기 작업을 읽으려고 시도 하는 경우 **feof** 함수는 0이 아닌 값을 반환 합니다. 그렇지 않으면 0을 반환 합니다. 스트림 포인터가 **NULL**인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용 된 경우 **errno** 가 **EINVAL** 로 설정 되 고 **feof** 0을 반환 합니다.
 
@@ -61,13 +63,15 @@ int feof(
 
 예를 들어 파일이 10 바이트를 포함 하 고 파일에서 10 바이트를 읽은 경우 **feof** 는 파일 포인터가 파일의 끝에 있더라도 끝을 넘어 읽으려고 시도 하지 않았으므로 0을 반환 합니다. 11 번째 바이트를 읽으려고 시도한 후에만에서 0이 아닌 값 **을 반환 합니다** .
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |기능|필수 헤더|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -122,7 +126,7 @@ Line two.
 Number of bytes read = 19
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [오류 처리](../../c-runtime-library/error-handling-crt.md)<br/>
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>

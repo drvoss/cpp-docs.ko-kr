@@ -1,5 +1,5 @@
 ---
-title: CDragListBox 클래스
+title: 드래그리스트박스 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CDragListBox
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1ae94948e1143a5bac17985423c4bd1bfbaf65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374039"
 ---
-# <a name="cdraglistbox-class"></a>CDragListBox 클래스
+# <a name="cdraglistbox-class"></a>드래그리스트박스 클래스
 
-Windows 목록 상자의 기능을 제공 하는 것 외에도 `CDragListBox` 클래스 목록 상자 내에서 파일 이름과 같은 목록 상자 항목을 이동할 수 있습니다.
+이 클래스는 `CDragListBox` Windows 목록 상자의 기능을 제공하는 것 외에도 사용자가 목록 상자 내에서 파일 이름과 같은 목록 상자 항목을 이동할 수 있도록 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,30 +41,30 @@ class CDragListBox : public CListBox
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CDragListBox::CDragListBox](#cdraglistbox)|`CDragListBox` 개체를 생성합니다.|
+|[드래그리스트 박스::드래그리스트박스](#cdraglistbox)|`CDragListBox` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CDragListBox::BeginDrag](#begindrag)|끌기 작업이 시작 될 때 프레임 워크에서 호출 됩니다.|
-|[CDragListBox::CancelDrag](#canceldrag)|끌기 작업이 취소 되었을 때 프레임 워크에서 호출 됩니다.|
-|[CDragListBox::Dragging](#dragging)|끌기 작업 중 프레임 워크에서 호출 됩니다.|
-|[CDragListBox::DrawInsert](#drawinsert)|드래그 목록 상자의 삽입 안내선을 그립니다.|
-|[CDragListBox::Dropped](#dropped)|항목 삭제 된 후 프레임 워크에서 호출 됩니다.|
-|[CDragListBox::ItemFromPt](#itemfrompt)|끌고 있는 항목의 좌표를 반환 합니다.|
+|[CDragList상자::시작드래그](#begindrag)|끌기 작업이 시작될 때 프레임워크에서 호출됩니다.|
+|[CDragList상자::취소드래그](#canceldrag)|끌기 작업이 취소되었을 때 프레임워크에서 호출합니다.|
+|[CDragList상자::D 래깅](#dragging)|끌기 작업 중에 프레임워크에서 호출합니다.|
+|[CDragList상자::D로인더삽입](#drawinsert)|끌기 목록 상자의 삽입 가이드를 그립니다.|
+|[CDragList상자::D](#dropped)|항목을 삭제한 후 프레임워크에서 호출합니다.|
+|[CDragList상자::항목에서Pt](#itemfrompt)|드래그되는 항목의 좌표를 반환합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 기능을 사용 하 여 목록 상자는 게 가장 유용한 방식으로 목록에서 항목을 주문 하는 작업을 할 수 있습니다. 기본적으로 목록 상자는 항목 목록에서 새 위치로 이동 합니다. 그러나 `CDragListBox` 이동 하지 않고 항목을 복사할 개체를 사용자 지정할 수 있습니다.
+이 기능을 갖춘 목록 상자를 사용하면 사용자가 가장 유용한 방식으로 목록에서 항목을 정렬할 수 있습니다. 기본적으로 목록 상자는 항목을 목록의 새 위치로 이동합니다. 그러나 `CDragListBox` 개체를 이동하는 대신 항목을 복사하도록 사용자 지정할 수 있습니다.
 
-와 연결 된 목록 상자 컨트롤을 `CDragListBox` 클래스는 LBS_SORT 또는 LBS_MULTIPLESELECT 스타일 없어야 합니다. 목록 상자 스타일의 설명을 참조 하세요 [목록 상자 스타일](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)합니다.
+`CDragListBox` 클래스와 연결된 목록 상자 컨트롤에는 LBS_SORT 또는 LBS_MULTIPLESELECT 스타일이 없어야 합니다. 목록 상자 스타일에 대한 설명은 [목록 상자 스타일을](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)참조하십시오.
 
-응용 프로그램의 기존 대화 상자에서 끌어 목록 상자를 사용 하려면 대화 상자 편집기를 사용 하 여 대화 상자 템플릿에 목록 상자 컨트롤을 추가 하 고 다음 멤버 변수를 할당 (범주의 `Control` 형식과 변수 `CDragListBox`) 목록 상자에 해당 합니다. 대화 상자 템플릿에 컨트롤입니다.
+응용 프로그램의 기존 대화 상자에서 드래그 목록 상자를 사용하려면 대화 상자 편집기를 사용하여 대화 상자 컨트롤을 대화 상자에 추가한 다음 대화 상자 템플릿의 목록 상자 컨트롤에 해당하는 멤버 변수(범주 `Control` 및 변수 유형)를 `CDragListBox`할당합니다.
 
-컨트롤을 멤버 변수에 할당 하는 방법은 참조 하세요 [대화 상자 컨트롤에 대 한 멤버 변수 정의 대 한 바로 가기](../../windows/defining-member-variables-for-dialog-controls.md)합니다.
+멤버 변수에 컨트롤 할당에 대한 자세한 내용은 [대화 상자 컨트롤에 대한 멤버 변수 정의에 대한 바로 가기를](../../windows/defining-member-variables-for-dialog-controls.md)참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -82,9 +82,9 @@ class CDragListBox : public CListBox
 
 **헤더:** afxcmn.h
 
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragList상자::시작드래그
 
-에 의해 호출 프레임 워크는 이벤트가 발생 하는 경우에 마우스 왼쪽된 단추를 누르면 등의 끌기 작업을 시작할 수 있습니다.
+왼쪽 마우스 단추를 누르는 등 끌기 작업을 시작할 수 있는 이벤트가 발생할 때 프레임워크에서 호출합니다.
 
 ```
 virtual BOOL BeginDrag(CPoint pt);
@@ -93,19 +93,19 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="parameters"></a>매개 변수
 
 *pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 끌고 있는 항목의 좌표를 포함 하는 개체입니다.
+드래그되는 항목의 좌표를 포함하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이 속성을 0이 아닌 끌어 허용 된 경우, 그렇지 않으면 0입니다.
+드래그가 허용되는 경우 0이 아닌 0입니다.
 
 ### <a name="remarks"></a>설명
 
-끌기 작업이 시작 될 때의 결과 제어 하려는 경우이 함수를 재정의 합니다. 기본 구현은 마우스를 캡처하고 사용자가 마우스 왼쪽 또는 오른쪽 단추를 클릭 하거나 끌기 작업이 취소 되었습니다. 이때 esc 키를 누를 때까지 끌기 모드에 유지 됩니다.
+끌기 작업이 시작될 때 발생하는 작업을 제어하려면 이 함수를 재정의합니다. 기본 구현은 마우스를 캡처하고 사용자가 왼쪽 또는 오른쪽 마우스 단추를 클릭하거나 드래그 작업이 취소될 때 ESC를 누를 때까지 드래그 모드로 유지됩니다.
 
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragList상자::취소드래그
 
-끌기 작업이 취소 되었을 때 프레임 워크에서 호출 됩니다.
+끌기 작업이 취소되었을 때 프레임워크에서 호출합니다.
 
 ```
 virtual void CancelDrag(CPoint pt);
@@ -114,13 +114,13 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="parameters"></a>매개 변수
 
 *pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 끌고 있는 항목의 좌표를 포함 하는 개체입니다.
+드래그되는 항목의 좌표를 포함하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-목록 상자 컨트롤에 대 한 특별 한 처리를 처리 하려면이 함수를 재정의 합니다.
+목록 상자 컨트롤에 대한 특수 처리를 처리하려면 이 함수를 재정의합니다.
 
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>드래그리스트 박스::드래그리스트박스
 
 `CDragListBox` 개체를 생성합니다.
 
@@ -128,9 +128,9 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 끌고 있는 항목�
 CDragListBox();
 ```
 
-##  <a name="dragging"></a>  CDragListBox::Dragging
+## <a name="cdraglistboxdragging"></a><a name="dragging"></a>CDragList상자::D 래깅
 
-안에서 목록 상자 항목을 끌 때 프레임 워크에서 호출 된 `CDragListBox` 개체입니다.
+개체 내에서 목록 상자 항목을 끌 때 `CDragListBox` 프레임워크에서 호출합니다.
 
 ```
 virtual UINT Dragging(CPoint pt);
@@ -139,25 +139,25 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="parameters"></a>매개 변수
 
 *pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) x 및 y를 포함 하는 개체는 커서의 좌표가 화면.
+커서의 x 및 y 화면 좌표를 포함하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-표시할 커서의 리소스 ID입니다. 다음 값이 가능 합니다.
+표시할 커서의 리소스 ID입니다. 다음 값이 가능합니다.
 
-- DL_COPYCURSOR 항목을 복사할 것을 나타냅니다.
+- DL_COPYCURSOR 항목이 복사될 것임을 나타냅니다.
 
-- DL_MOVECURSOR 항목을 이동할 것을 나타냅니다.
+- DL_MOVECURSOR 항목이 이동될 것임을 나타냅니다.
 
-- DL_STOPCURSOR 현재 놓기 대상 허용 되지 않음을 나타냅니다.
+- DL_STOPCURSOR 현재 놓기 대상이 허용되지 않음을 나타냅니다.
 
 ### <a name="remarks"></a>설명
 
-기본 동작은 DL_MOVECURSOR를 반환합니다. 추가 기능을 제공 하려는 경우이 함수를 재정의 합니다.
+기본 동작은 DL_MOVECURSOR 반환합니다. 추가 기능을 제공하려는 경우 이 함수를 재정의합니다.
 
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragList상자::D로인더삽입
 
-지정 된 인덱스를 가진 항목 앞에 삽입 안내선을 그리기 위해 프레임 워크에서 호출 됩니다.
+표시된 인덱스가 있는 항목 앞에 삽입 가이드를 그리려면 프레임워크에서 호출합니다.
 
 ```
 virtual void DrawInsert(int nItem);
@@ -166,15 +166,15 @@ virtual void DrawInsert(int nItem);
 ### <a name="parameters"></a>매개 변수
 
 *nItem*<br/>
-커서의 0부터 시작 인덱스입니다.
+삽입 점의 제로 기반 인덱스입니다.
 
 ### <a name="remarks"></a>설명
 
-값-1 삽입 안내선을 지웁니다. 모양이 나 삽입 가이드의 동작을 수정 하려면이 함수를 재정의 합니다.
+값 -1은 삽입 가이드를 지웁히 됩니다. 삽입 가이드의 모양이나 동작을 수정하려면 이 함수를 재정의합니다.
 
-##  <a name="dropped"></a>  CDragListBox::Dropped
+## <a name="cdraglistboxdropped"></a><a name="dropped"></a>CDragList상자::D
 
-내에서 항목을 삭제할 때 프레임 워크에서 호출을 `CDragListBox` 개체입니다.
+개체 내에서 항목을 삭제할 때 프레임워크에서 호출합니다. `CDragListBox`
 
 ```
 virtual void Dropped(
@@ -184,19 +184,19 @@ virtual void Dropped(
 
 ### <a name="parameters"></a>매개 변수
 
-*nSrcIndex*<br/>
-삭제 된 문자열의 0부터 시작 인덱스를 지정합니다.
+*nSrc인덱스*<br/>
+삭제된 문자열의 0기반 인덱스를 지정합니다.
 
 *pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 놓기 사이트의 좌표가 포함 된 개체입니다.
+놓기 사이트의 좌표를 포함하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-기본 동작 목록 상자 항목 및 해당 데이터를 새 위치로 복사 하 고 원래 항목을 삭제 합니다. 목록 내에서 다른 위치로 끌 수 있는 목록 상자 항목의 복사본을 사용 하도록 설정 하면 같은 기본 동작을 사용자 지정 하려면이 함수를 재정의 합니다.
+기본 비헤이비어는 목록 상자 항목과 해당 데이터를 새 위치로 복사한 다음 원래 항목을 삭제합니다. 이 함수를 재정의하여 목록 상자 항목의 복사본을 목록 내의 다른 위치로 드래그할 수 있도록 설정하는 등 기본 동작을 사용자 지정합니다.
 
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragList상자::항목에서Pt
 
-에 있는 목록 상자 항목의 인덱스를 검색 하려면이 함수 호출 *pt*합니다.
+*pt에*있는 목록 상자 항목의 0 기반 인덱스를 검색 하려면이 함수를 호출 합니다.
 
 ```
 int ItemFromPt(
@@ -207,18 +207,18 @@ int ItemFromPt(
 ### <a name="parameters"></a>매개 변수
 
 *pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 목록 상자 내에서 한 점의 좌표를 포함 하는 개체입니다.
+목록 상자 내의 점 좌표를 포함하는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
-*bAutoScroll*<br/>
-스크롤이 허용 되는, 그렇지 않으면 0 0이 아닌 지정 합니다.
+*b 자동 스크롤*<br/>
+스크롤이 허용되는 경우 0이 아닌 0입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-끌어 목록 상자 항목의 0부터 시작 인덱스입니다.
+드래그 목록 상자 항목의 0기반 인덱스입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 TSTCON](../../overview/visual-cpp-samples.md)<br/>
-[CListBox 클래스](../../mfc/reference/clistbox-class.md)<br/>
+[클리스박스 클래스](../../mfc/reference/clistbox-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
-[CListBox 클래스](../../mfc/reference/clistbox-class.md)
+[클리스박스 클래스](../../mfc/reference/clistbox-class.md)

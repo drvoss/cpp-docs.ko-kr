@@ -3,12 +3,12 @@ title: Visual Studio에서 C++ Linux 프로젝트 배포, 실행 및 디버그
 description: Visual Studio에 있는 C++ Linux 프로젝트 내의 원격 대상에서 코드를 컴파일하고, 실행하고, 디버그하는 방법을 설명합니다.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80077831"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux 프로젝트 배포, 실행 및 디버그
 
@@ -35,7 +35,7 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 ## <a name="debug-your-linux-project"></a>Linux 프로젝트 디버그
 
 1. **디버깅** 속성 페이지에서 디버깅 모드를 선택합니다.
-   
+
    ::: moniker range="vs-2019"
 
    GDB는 Linux에서 실행되는 애플리케이션을 디버그하는 데 사용됩니다. 원격 시스템(WSL 아님)에서 디버깅할 때 GDB는 두 가지 모드에서 실행할 수 있고, 모드는 프로젝트의 **디버깅** 속성 페이지에 있는 **디버깅 모드** 옵션에서 선택할 수 있습니다.
@@ -51,7 +51,6 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
    ![GDB 옵션](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - **gdbserver** 모드에서 원격 시스템의 gdbserver에 연결된 GDB는 로컬에서 실행됩니다.  Linux 콘솔 창이 지원하는 모드는 이 모드뿐입니다.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> 빌드 및 디버깅에 다른 머신 지정
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> 빌드 및 디버깅에 다른 머신 지정
 
 Visual Studio 2019 버전 16.1에서는 MSBuild 기반 Linux 프로젝트와 원격 Linux 머신을 대상으로 하는 CMake 프로젝트 둘 다에 대해, 원격 빌드 머신과 원격 디버그 머신을 분리할 수 있습니다. 예를 들어 IoT 시나리오를 대상으로 하는 경우, 이제 x64에서 교차 컴파일하여 ARM 디바이스에 배포할 수 있습니다.
 
@@ -191,12 +190,13 @@ IntelliSense에서 설정된 모든 원격 연결 목록을 제안합니다. **�
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>다음 단계
 
 - Linux에서 ARM 디바이스를 디버깅하려면 다음 블로그 게시물을 참조하세요. [Visual Studio에서 포함 ARM 디바이스 디버깅](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C++ 디버깅 속성(Linux C++)](prop-pages/debugging-linux.md)

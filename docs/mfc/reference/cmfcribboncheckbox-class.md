@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCheckBox 클래스
+title: CMFC리본체크박스 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 089c8056afebef31ff98a435bf145566ae64fe1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392546"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375261"
 ---
-# <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 클래스
+# <a name="cmfcribboncheckbox-class"></a>CMFC리본체크박스 클래스
 
 `CMFCRibbonCheckBox` 클래스는 리본 패널, 빠른 실행 도구 모음 또는 팝업 메뉴에 추가할 수 있는 확인란을 구현합니다.
 
@@ -45,22 +45,22 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(재정의 [cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(재정의 [cmfcribbonbutton:: Getintermediatesize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
-|[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(재정의 [cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|[(CMFC 리본 단추 재정의::GetCompactSize.)](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)|
+|[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|[(CMFC 리본 단추 재정의::GetintermediateSize.)](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize)|
+|[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|[(CMFC 리본 단추 재정의::GetRegularSize.)](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)|
 |[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|( `CMFCRibbonButton::IsDrawTooltipImage`을 재정의합니다.)|
-|[CMFCRibbonCheckBox::OnDraw](#ondraw)|(재정의 [cmfcribbonbutton:: Ondraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(재정의 [cmfcribbonbaseelement:: Ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
+|[CMFCRibbonCheckBox::OnDraw](#ondraw)|[(CMFC 리본 단추 재정의::온드로우.)](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)|
+|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|[(CMFC 리본베이스 요소 재정의::온드로우 메뉴이미지.)](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)|
 |[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|( `CMFCRibbonButton::OnDrawOnList`을 재정의합니다.)|
-|[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(재정의 [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[CMFCRibbonCheckBox::SetACCData](#setaccdata)|[(CMFC 리본 단추 재정의::SetACCData.)](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)|
 
 ## <a name="remarks"></a>설명
 
@@ -69,9 +69,10 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ```
-여기서 *nID* 는 확인란 명령 ID 및 *lpszText* 확인란의 텍스트 레이블입니다.
 
-사용 하 여 리본 패널에 확인란을 추가할 수 있습니다 [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)합니다.
+*여기서 nID는* 확인란 명령 ID이고 *lpszText는* 확인란의 텍스트 레이블입니다.
+
+[CMFC리본 패널::Add를](../../mfc/reference/cmfcribbonpanel-class.md#add)사용하여 리본 패널에 확인란을 추가할 수 있습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -85,9 +86,9 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxribboncheckbox.h
+**헤더:** afxribbon체크박스.h
 
-##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox
+## <a name="cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFC리본 체크박스::CMFC리본체크박스
 
 리본 확인란 개체의 생성자
 
@@ -100,24 +101,24 @@ CMFCRibbonCheckBox(
 ### <a name="parameters"></a>매개 변수
 
 *nID*<br/>
-[in] 명령 ID를 지정 합니다.
+【인】 명령 ID를 지정합니다.
 
 *lpszText*<br/>
-[in] 텍스트 레이블을 지정합니다.
+【인】 텍스트 레이블을 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 리본 확인란 개체를 생성합니다.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는의 개체를 생성 하는 방법에 설명 합니다 `CMFCRibbonCheckBox` 클래스입니다.
+다음 예제에서는 `CMFCRibbonCheckBox` 클래스의 개체를 생성 하는 방법을 보여 줍니다.
 
 [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]
 
-##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize
+## <a name="cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>CMFC리본 체크박스::겟컴팩트사이즈
 
-재정의 된 경우 확인란의 압축 크기를 가져옵니다.
+재정의하면 확인란의 컴팩트한 크기를 가져옵니다.
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -126,17 +127,17 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 확인란을 사용 하 여 연결 된 CDC에 대 한 포인터입니다.
+【인】 확인란과 연결된 CDC에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-반환 된 `CSize` 확인란의 압축 크기를 포함 하는 개체입니다.
+확인란의 컴팩트한 `CSize` 크기를 포함하는 개체를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-재정의 되지 않으면 확인란의 중간 크기를 반환 합니다.
+재정의하지 않으면 확인란의 중간 크기를 반환합니다.
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize
+## <a name="cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFC 리본 체크 박스 :: Getintermediatesize크기
 
 확인란의 중간 크기를 가져옵니다.
 
@@ -147,17 +148,17 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 이 확인란을 사용 하 여 연결 된 CDC에 대 한 포인터입니다.
+【인】 이 확인란과 연결된 CDC에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`CSize` 확인란의 중간 크기를 포함 하는 개체입니다.
+확인란의 중간 크기를 포함하는 `CSize` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-재정의 되지 않으면 기본 확인란 크기로 중간 크기를 계산 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 및 텍스트 크기와 여백입니다.
+재정의하지 않으면 중간 크기를 기본 확인란 크기() `AFX_CHECK_BOX_DEFAULT_SIZE`및 텍스트 크기 및 여백으로 계산합니다.
 
-##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize
+## <a name="cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>CMFC 리본 체크 박스 ::GetRegularsize
 
 확인란의 일반 크기를 가져옵니다.
 
@@ -168,33 +169,33 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 이 확인란을 사용 하 여 연결 된 CDC 개체에 대 한 포인터입니다.
+【인】 이 확인란과 연결된 CDC 개체에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-반환 된 `CSize` 확인란의 보통 크기를 포함 하는 개체입니다.
+확인란의 `CSize` 일반 크기를 포함하는 개체를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-재정의 되지 않으면 확인란의 중간 크기를 반환 합니다.
+재정의하지 않으면 확인란의 중간 크기를 반환합니다.
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage
+## <a name="cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFC 리본 확인란::이스드툴팁이미지
 
-확인란을 사용 하 여 연결 하는 도구 설명 이미지 인지 여부를 나타냅니다.
+확인란과 연결된 툴팁 이미지가 있는지 여부를 나타냅니다.
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-확인란을 사용 하 여 연결 또는 그렇지 않은 경우 FALSE를 도구 설명 이미지 이면 TRUE를 반환 합니다.
+확인란과 연결된 도구 설명 이미지가 있는 경우 TRUE를 반환하거나 그렇지 않은 경우 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw
+## <a name="cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFC 리본 체크 박스 ::에 그리기
 
-지정 된 디바이스 컨텍스트를 사용 하 여 확인란을 그리기 위해 프레임 워크에서 호출 됩니다.
+지정된 장치 컨텍스트를 사용하여 확인란을 그리는 프레임워크에서 호출합니다.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -203,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 확인란을 그릴 CDC에 대 한 포인터입니다.
+【인】 확인란을 그릴 CDC에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage
+## <a name="cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFC 리본 체크 박스::온드로우 메뉴이미지
 
-확인란에 대 한 메뉴 이미지를 그리기 위해 프레임 워크에서 호출 됩니다.
+확인란에 대한 메뉴 이미지를 그리는 프레임워크에서 호출됩니다.
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -217,23 +218,23 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CDC&#42;*<br/>
-확인란을 사용 하 여 연결 된 CDC에 대 한 포인터입니다.
+【인】 *CDC&#42;*<br/>
+확인란과 연결된 CDC에 대한 포인터입니다.
 
 *CRect*<br/>
-[in] `CRect` 메뉴 이미지를 그릴 사각형을 지정 하는 개체입니다.
+【인】 메뉴 `CRect` 이미지를 그릴 사각형을 지정하는 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-이미지를 그릴 경우 TRUE 또는 그렇지 않은 경우 FALSE를 반환 합니다.
+이미지가 그려진 경우 TRUE를 반환하거나 그렇지 않은 경우 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-재정의 되지 않으면 FALSE를 반환 합니다.
+재정의하지 않으면 FALSE를 반환합니다.
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList
+## <a name="cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>CMFC리본 체크박스::온드로우온리스트
 
-명령 목록 상자에서 확인란을 그리기 위해 프레임 워크에서 호출 됩니다.
+명령 목록 상자에 확인란을 그리는 프레임 워크에 의해 호출 됩니다.
 
 ```
 virtual void OnDrawOnList(
@@ -248,28 +249,28 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>매개 변수
 
 *pDC*<br/>
-[in] 확인란을 그릴 장치 컨텍스트에 대 한 포인터입니다.
+【인】 확인란을 그릴 장치 컨텍스트에 대한 포인터입니다.
 
 *strText*<br/>
-[in] 표시 텍스트입니다.
+【인】 표시 텍스트입니다.
 
 *nTextOffset*<br/>
-[in] 텍스트를 표시할 목록 상자의 왼쪽에서의 픽셀 단위의 거리입니다.
+【인】 목록 상자의 왼쪽에서 표시 텍스트까지의 거리(픽셀 단위)입니다.
 
 *rect*<br/>
-[in] 확인란의 표시 사각형을 합니다.
+【인】 확인란의 표시 사각형입니다.
 
 *bIsSelected*<br/>
-[in] 확인란을 선택 하거나 그렇지 않은 경우 FALSE 이면 TRUE입니다.
+【인】 확인란이 선택된 경우 TRUE, 그렇지 않은 경우 FALSE입니다.
 
-*bHighlighted*<br/>
-[in] 확인란 강조 표시 된, 또는 그렇지 않은 경우 FALSE 이면 TRUE입니다.
+*b 강조 표시*<br/>
+【인】 확인란이 강조 표시된 경우 TRUE, 그렇지 않은 경우 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData
+## <a name="cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>CMFC 리본 확인란::설정ACC데이터
 
-확인란에 대 한 내게 필요한 옵션 데이터를 설정합니다.
+확인란에 대한 접근성 데이터를 설정합니다.
 
 ```
 virtual BOOL SetACCData(
@@ -280,21 +281,21 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>매개 변수
 
 *pParent*<br/>
-확인란의 부모 창입니다.
+확인란의 상위 창입니다.
 
-*data*<br/>
-확인란에 대 한 내게 필요한 옵션 데이터입니다.
+*데이터*<br/>
+확인란의 접근성 데이터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-항상 TRUE를 반환 합니다.
+항상 TRUE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-기본적으로이 메서드는 확인란에 대 한 내게 필요한 옵션 데이터를 설정 하 고 항상 TRUE를 반환 합니다. 내게 필요한 옵션 데이터를 설정하고 성공 또는 실패를 나타내는 값을 반환하려면 이 메서드를 재정의합니다.
+기본적으로 이 메서드는 확인란에 대한 내게 필요한 옵션 데이터를 설정하고 항상 TRUE를 반환합니다. 내게 필요한 옵션 데이터를 설정하고 성공 또는 실패를 나타내는 값을 반환하려면 이 메서드를 재정의합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonPanel 클래스](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFC리본패널 클래스](../../mfc/reference/cmfcribbonpanel-class.md)

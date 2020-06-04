@@ -1,8 +1,9 @@
 ---
 title: localeconv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - localeconv
+- _o_localeconv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953355"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916403"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -43,9 +45,9 @@ ms.locfileid: "70953355"
 struct lconv *localeconv( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**localeconv** 는 [struct lconv](../../c-runtime-library/standard-types.md)형식의 채워진 개체에 대 한 포인터를 반환 합니다. 개체에 포함 된 값은 스레드 로컬 저장소의 로캘 설정에서 복사 되며 **localeconv**에 대 한 후속 호출로 덮어쓸 수 있습니다. 이 개체의 값을 변경 해도 로캘 설정은 수정 되지 않습니다. **LC_ALL**, **LC_MONETARY**또는 **LC_NUMERIC** 의 *범주* 값을 사용 하 여 [setlocale](setlocale-wsetlocale.md) 을 호출 하면 구조체의 내용이 덮어쓰여집니다.
+**localeconv** 는 [struct lconv](../../c-runtime-library/standard-types.md)형식의 채워진 개체에 대 한 포인터를 반환 합니다. 개체에 포함 된 값은 스레드 로컬 저장소의 로캘 설정에서 복사 되며 **localeconv**에 대 한 후속 호출로 덮어쓸 수 있습니다. 이 개체의 값을 변경 해도 로캘 설정은 수정 되지 않습니다. **LC_ALL**, **LC_MONETARY**또는 **LC_NUMERIC** *범주* 값이 포함 된 [setlocale](setlocale-wsetlocale.md) 호출은 구조체의 내용을 덮어씁니다.
 
 ## <a name="remarks"></a>설명
 
@@ -72,11 +74,11 @@ n_sep_by_space|통화 기호가 음수 서식이 지정된 통화 수량에 대�
 p_sign_posn|음수가 아닌 서식이 지정된 통화 수량에서 양수 부호의 위치입니다.
 n_sign_posn|음수 서식이 지정된 통화 수량에서 양수 부호의 위치입니다.
 
-지정 된 경우를 제외 하 고 및 `wchar_t *` 버전이 포함 `char *` 된 **lconv** 구조체의 멤버는 문자열에 대 한 포인터입니다. **""** **(또는** **wchar_t** <strong>\*</strong>의 경우)와 같은 이러한 값은 길이가 0 이거나 현재 로캘에서 지원 되지 않습니다. **Decimal_point** 및 **_W_decimal_point** 는 항상 지원 되며 0이 아닌 길이입니다.
+지정 된 경우를 제외 하 고 및 `char *` `wchar_t *` 버전이 포함 된 **lconv** 구조체의 멤버는 문자열에 대 한 포인터입니다. **""** **(또는** **wchar_t** <strong>\*</strong>)에 해당 하는 값 중 하나는 길이가 0 이거나 현재 로캘에서 지원 되지 않습니다. **Decimal_point** 및 **_W_decimal_point** 는 항상 지원 되며 0이 아닌 길이입니다.
 
 구조체의 **char** 멤버는 문자가 아닌 음수가 아닌 작은 숫자입니다. **CHAR_MAX**와 동일한 이러한 멤버는 현재 로캘에서 지원되지 않습니다.
 
-**Grouping** 및 **mon_grouping** 의 값은 다음 규칙에 따라 해석 됩니다.
+**그룹화** 및 **mon_grouping** 의 값은 다음 규칙에 따라 해석 됩니다.
 
 - **CHAR_MAX** -추가 그룹화를 수행 하지 않습니다.
 
@@ -114,21 +116,23 @@ n_sign_posn|음수 서식이 지정된 통화 수량에서 양수 부호의 위�
 
 - 4-부호 문자열이 통화 기호 바로 다음에 옵니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[로캘](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [strcoll 함수](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

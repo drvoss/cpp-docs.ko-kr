@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957491"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913840"
 ---
 # <a name="_umask"></a>_umask
 
@@ -51,13 +53,13 @@ int _umask( int pmode );
 *pmode*<br/>
 기본 사용 권한 설정입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_umask** 는 *pmode*의 이전 값을 반환 합니다. 반환되는 오류가 없습니다.
+**_umask** 은 *pmode*의 이전 값을 반환 합니다. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-**_Umask** 함수는 현재 프로세스의 파일 사용 권한 마스크를 *pmode*로 지정 된 모드로 설정 합니다. 파일 사용 권한 마스크는 **_user_open**또는 **_sopen**에서 만든 새 파일의 사용 권한설정을 수정 합니다. 마스크의 비트가 1이면 파일의 요청된 사용 권한 값에서 해당하는 비트가 0(허용되지 않음)으로 설정됩니다. 마스크의 비트가 0이면 해당하는 비트는 변경되지 않고 그대로 유지됩니다. 새 파일에 대한 사용 권한 설정은 파일을 처음으로 닫을 때까지 설정되지 않습니다.
+**_Umask** 함수는 현재 프로세스의 파일 사용 권한 마스크를 *pmode*로 지정 된 모드로 설정 합니다. 파일 사용 권한 마스크는 **_creat**, **_open**또는 **_sopen**에서 만든 새 파일의 사용 권한 설정을 수정 합니다. 마스크의 비트가 1이면 파일의 요청된 사용 권한 값에서 해당하는 비트가 0(허용되지 않음)으로 설정됩니다. 마스크의 비트가 0이면 해당하는 비트는 변경되지 않고 그대로 유지됩니다. 새 파일에 대한 사용 권한 설정은 파일을 처음으로 닫을 때까지 설정되지 않습니다.
 
 정수 식 *pmode* 에는 SYS\STAT.에 정의 된 다음 매니페스트 상수 중 하나 또는 둘 다가 포함 됩니다. 넣기
 
@@ -67,9 +69,11 @@ int _umask( int pmode );
 | **_S_IREAD** | 읽기를 허용합니다. |
 | **_S_IREAD** &#124; **_S_IWRITE** | 읽기 및 쓰기를 허용합니다. |
 
-두 상수가 모두 지정 된 경우 비트 or 연산자 ( **&#124;** )와 조인 됩니다. *Pmode* 인수가 **_S_IREAD**인 경우 읽기는 허용 되지 않습니다 (쓰기 전용 파일). *Pmode* 인수가 **_S_IWRITE**인 경우 쓰기는 허용 되지 않습니다. 파일이 읽기 전용입니다. 예를 들어 마스크에 쓰기 비트가 설정되어 있으면 모든 새 파일은 읽기 전용이 됩니다. MS-DOS 및 Windows 운영 체제에서는 모든 파일을 읽을 수는 있지만 쓰기 전용 권한을 부여할 수는 없습니다. 따라서 **_umask** 를 사용 하 여 읽기 비트를 설정 해도 파일의 모드에는 영향을 주지 않습니다.
+두 상수가 모두 지정 된 경우 비트 or 연산자 ( **&#124;** )를 사용 하 여 조인 됩니다. *Pmode* 인수가 **_S_IREAD**이면 읽기는 허용 되지 않습니다 (쓰기 전용 파일). *Pmode* 인수가 **_S_IWRITE**이면 쓰기는 허용 되지 않습니다 .이 파일은 읽기 전용입니다. 예를 들어 마스크에 쓰기 비트가 설정되어 있으면 모든 새 파일은 읽기 전용이 됩니다. MS-DOS 및 Windows 운영 체제에서는 모든 파일을 읽을 수는 있지만 쓰기 전용 권한을 부여할 수는 없습니다. 따라서 **_umask** 를 사용 하 여 읽기 비트를 설정 해도 파일 모드에는 영향을 주지 않습니다.
 
 *Pmode* 가 매니페스트 상수 중 하나의 조합이 아니거나 대체 상수 집합을 통합 하는 경우 함수는 단순히이를 무시 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -77,7 +81,7 @@ int _umask( int pmode );
 |-------------|---------------------|
 |**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -112,7 +116,7 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>

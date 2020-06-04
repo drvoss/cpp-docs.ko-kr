@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc9265cd3f9f400e2880405019e4d2c9a934f10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222184"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180084"
 ---
 # <a name="event-handling-in-native-c"></a>네이티브 C++에서 이벤트 처리
 
-네이티브에서 C++ 이벤트 처리를 사용 하 여 이벤트 소스와 이벤트 수신기를 설정 하는 [event_source](../windows/attributes/event-source.md) 하 고 [event_receiver](../windows/attributes/event-receiver.md) 특성에 각각 지정 `type` =`native`. 이러한 특성을 사용하면 해당 특성이 적용되는 클래스가 COM 이외의 네이티브 컨텍스트에서 이벤트를 발생시키고 처리할 수 있습니다.
+네이티브 C++ 이벤트 처리에서는 [event_source](../windows/attributes/event-source.md) 및 [event_receiver](../windows/attributes/event-receiver.md) 특성을 사용 하 여 이벤트 원본 및 이벤트 수신기를 설정 하 고 각각 `type`=`native`를 지정 합니다. 이러한 특성을 사용하면 해당 특성이 적용되는 클래스가 COM 이외의 네이티브 컨텍스트에서 이벤트를 발생시키고 처리할 수 있습니다.
 
 ## <a name="declaring-events"></a>이벤트 선언
 
-이벤트 소스 클래스를 사용 합니다 [__event](../cpp/event.md) 이벤트로 메서드를 선언 하는 메서드 선언에서 키워드입니다. 메서드를 선언하되 정의하지는 마십시오. 메서드가 이벤트로 만들어질 때 컴파일러가 메서드를 암시적으로 정의하기 때문에 사용자가 메서드를 정의하면 컴파일러 오류가 생성됩니다. 네이티브 이벤트는 매개 변수가 0개 이상인 메서드일 수 있습니다. 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.
+이벤트 소스 클래스에서 메서드를 이벤트로 선언 하려면 메서드 선언에 [__event](../cpp/event.md) 키워드를 사용 합니다. 메서드를 선언하되 정의하지는 마십시오. 메서드가 이벤트로 만들어질 때 컴파일러가 메서드를 암시적으로 정의하기 때문에 사용자가 메서드를 정의하면 컴파일러 오류가 생성됩니다. 네이티브 이벤트는 매개 변수가 0개 이상인 메서드일 수 있습니다. 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.
 
 ## <a name="defining-event-handlers"></a>이벤트 처리기 정의
 
@@ -25,7 +25,7 @@ ms.locfileid: "65222184"
 
 ## <a name="hooking-event-handlers-to-events"></a>이벤트에 이벤트 처리기 후크
 
-또한 이벤트 수신기 클래스를 사용 하 여 내장 함수 [__hook](../cpp/hook.md) 이벤트 처리기를 사용 하 여 이벤트를 연결 하 고 [__unhook](../cpp/unhook.md) 이벤트 처리기에서 이벤트를 분리 하려면. 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.
+또한 이벤트 수신기 클래스에서 내장 함수 [__hook](../cpp/hook.md) 를 사용 하 여 이벤트 처리기에 이벤트를 연결 하 고 [__unhook](../cpp/unhook.md) 이벤트 처리기에서 이벤트를 분리 합니다. 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.
 
 ## <a name="firing-events"></a>이벤트 발생
 
@@ -88,6 +88,6 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [이벤트 처리](../cpp/event-handling.md)

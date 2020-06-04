@@ -6,14 +6,14 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166570"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169125"
 ---
-# <a name="using-assembly-language-in-asm-blocks"></a>__asm 블록에서 어셈블리 언어 사용
+# <a name="using-assembly-language-in-__asm-blocks"></a>__asm 블록에서 어셈블리 언어 사용
 
 **Microsoft 전용**
 
@@ -45,6 +45,6 @@ ms.locfileid: "62166570"
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

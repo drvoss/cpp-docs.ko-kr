@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: C++를 사용한 Linux 개발 | Linux용 애플리케이션 만들기 및 디버그
+summary: Visual Studio 2017 이상에서 C++를 사용하여 Linux용 애플리케이션을 만든 후 디버그합니다.
+metadata:
+  title: C++를 사용한 Linux 개발
+  description: Visual Studio 2017 이상에서 C++를 사용하여 Linux용 애플리케이션을 만든 후 디버그하는 방법을 알아봅니다.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 04/26/2020
+  ms.openlocfilehash: ac705ae3ae457d804ed2ca884143c8c6cb5a4758
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108643"
+landingContent:
+- title: Visual Studio에서 Linux C++ 앱 만들기
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Linux 워크로드 다운로드, 설치 및 설정
+      url: download-install-and-setup-the-linux-development-workload.md
+  - linkListType: how-to-guide
+    links:
+    - text: 대상 Linux 시스템에 연결
+      url: connect-to-your-remote-linux-computer.md
+  - linkListType: reference
+    links:
+    - text: ConnectionManager 참조
+      url: connectionmanager-reference.md
+- title: Visual Studio에서 Linux 프로젝트 빌드
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 새 Linux 프로젝트 만들기
+      url: create-a-new-linux-project.md
+    - text: Linux 프로젝트 구성
+      url: configure-a-linux-project.md
+    - text: Linux 프로젝트 배포, 실행 및 디버그
+      url: deploy-run-and-debug-your-linux-project.md
+  - linkListType: reference
+    links:
+    - text: Linux 프로젝트 속성 페이지 참조
+      url: prop-pages-linux.md
+- title: Visual Studio에서 Linux CMake 프로젝트 빌드
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Linux CMake 프로젝트 만들기 및 구성
+      url: cmake-linux-project.md
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio에서 C++ 플랫폼 간 프로젝트 만들기
+      url: /cpp/build/get-started-linux-cmake

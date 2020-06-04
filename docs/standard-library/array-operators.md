@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364905"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 연산자
 
-\<array> 헤더에는 다음과 같은 **배열**의 비 멤버 템플릿 비교 함수가 포함됩니다.
+배열 \<> 헤더에는 이러한 **배열** 비멤버 비교 템플릿 함수가 포함됩니다.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[연산자==](#op_eq_eq)|
+|[연산자!=](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;=](#op_gt_eq)|
+|[연산자&lt;](#op_lt)|[연산자&lt;=](#op_lt_eq)|[연산자==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 배열 비교, 같지 않음
 
@@ -38,19 +38,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수가 `!(left == right)`을 반환합니다.
 
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 배열 비교, 보다 작음
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수는 두 [array 클래스](../standard-library/array-class-stl.md) 클래스 템플릿 개체를 비교하는 `< 연산자`를 오버로드합니다. 함수에서 `lexicographical_compare(left.begin(), left.end(), right.begin())`을 반환합니다.
+템플릿 함수 오버로드를 `operator<` 사용하여 클래스 템플릿 배열 [클래스의](../standard-library/array-class-stl.md)두 개체를 비교합니다. 함수에서 `lexicographical_compare(left.begin(), left.end(), right.begin())`을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 배열 비교, 보다 작거나 같음
 
@@ -184,19 +184,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수가 `!(right < left)`을 반환합니다.
 
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 배열 비교, 같음
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수는 두 [array 클래스](../standard-library/array-class-stl.md) 클래스 템플릿 개체를 비교하는 `== 연산자`를 오버로드합니다. 함수에서 `equal(left.begin(), left.end(), right.begin())`을 반환합니다.
+템플릿 함수 오버로드를 `operator==` 사용하여 클래스 템플릿 배열 [클래스의](../standard-library/array-class-stl.md)두 개체를 비교합니다. 함수에서 `equal(left.begin(), left.end(), right.begin())`을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 배열 비교, 보다 큼
 
@@ -330,19 +330,19 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수가 `(right < left)`을 반환합니다.
 
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 배열 비교, 보다 크거나 같음
 
@@ -403,19 +403,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ty* \
+*타이*\
 요소의 형식입니다.
 
-*N* \
+*N*\
 배열의 크기입니다.
 
-*left* \
+*왼쪽*\
 비교할 왼쪽 컨테이너입니다.
 
-*right* \
+*오른쪽*\
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 템플릿 함수가 `!(left < right)`을 반환합니다.
 
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<array>](../standard-library/array.md)
+[\<배열>](../standard-library/array.md)

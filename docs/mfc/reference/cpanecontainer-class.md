@@ -120,18 +120,18 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a37230b4889b32c42d48525f10a3164da33b63
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753655"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 클래스
 
-`CPaneContainer` 클래스는 MFC에서 구현한 도킹 모델의 기본 구성 요소입니다. 이 클래스의 개체는 도킹 창 두 개 또는 `CPaneContainer.` 인스턴스 두 개를 가리키며 창이나 컨테이너를 나누는 구분선의 포인터를 저장합니다. 컨테이너 안에 컨테이너를 중첩하면 프레임워크에서 복잡한 도킹 레이아웃을 나타내는 이진 트리를 빌드할 수 있습니다. 이진 트리의 루트에 저장 되는 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) 개체입니다.
+클래스는 `CPaneContainer` MFC에서 구현한 도킹 모델의 기본 구성 요소입니다. 이 클래스의 개체는 도킹 창 두 개 또는 `CPaneContainer.` 인스턴스 두 개를 가리키며 창이나 컨테이너를 나누는 구분선의 포인터를 저장합니다. 컨테이너 안에 컨테이너를 중첩하면 프레임워크에서 복잡한 도킹 레이아웃을 나타내는 이진 트리를 빌드할 수 있습니다. 이진 트리의 루트는 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) 개체에 저장됩니다.
 
-더 자세한 내용은 Visual Studio 설치의 **VC\\atlmfc\\src\\mfc** 폴더에 있는 소스 코드를 참조하세요.
+자세한 내용은 Visual Studio 설치의 **\\VC\\atlmfc\\src mfc** 폴더에 있는 소스 코드를 참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -143,78 +143,78 @@ class CPaneContainer : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|기본 생성자입니다.|
+|[CPane 컨테이너 ::CPane컨테이너](#cpanecontainer)|기본 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CPaneContainer::AddPane](#addpane)||
-|[CPaneContainer::AddRef](#addref)||
-|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||
-|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||
-|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||
-|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||
-|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||
-|[CPaneContainer::Copy](#copy)||
+|[CPane 컨테이너::애드파인](#addpane)||
+|[CPane 컨테이너::AddRef](#addref)||
+|[CPaneContainer::추가 서브파인 컨테이너](#addsubpanecontainer)||
+|[CPaneContainer::석회화가능파인스페이스](#calcavailablepanespace)||
+|[CPaneContainer::석회화 사용 가능한 공간](#calcavailablespace)||
+|[CPane 컨테이너:계산최근 크기](#calculaterecentsize)||
+|[CPaneContainer::체크파인 분배자 가시성](#checkpanedividervisibility)||
+|[CPaneContainer::복사](#copy)||
 |[CPaneContainer::DeletePane](#deletepane)||
-|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||
-|[CPaneContainer::FindTabbedPane](#findtabbedpane)||
-|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||
-|[CPaneContainer::GetLeftPane](#getleftpane)||
-|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||
+|[CPaneContainer::찾기서브파네컨테이너](#findsubpanecontainer)||
+|[CPane 컨테이너::찾기탭판](#findtabbedpane)||
+|[CPaneContainer::GetAssociated형제파네이드](#getassociatedsiblingpaneids)||
+|[CPane 컨테이너::GetLeftPane](#getleftpane)||
+|[CPane Container::GetLeftPaneContainer](#getleftpanecontainer)||
 |[CPaneContainer::GetMinSize](#getminsize)||
 |[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||
 |[CPaneContainer::GetMinSizeRight](#getminsizeright)||
-|[CPaneContainer::GetNodeCount](#getnodecount)||
-|[CPaneContainer::GetPaneDivider](#getpanedivider)||
-|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||
-|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||
-|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||
-|[CPaneContainer::GetRecentPercent](#getrecentpercent)||
-|[CPaneContainer::GetRefCount](#getrefcount)||
-|[CPaneContainer::GetResizeStep](#getresizestep)||
-|[CPaneContainer::GetRightPane](#getrightpane)||
-|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||
-|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||
-|[CPaneContainer::GetWindowRect](#getwindowrect)||
-|[CPaneContainer::IsDisposed](#isdisposed)||
-|[CPaneContainer::IsEmpty](#isempty)||
-|[CPaneContainer::IsLeftPane](#isleftpane)||
-|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||
-|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||
-|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||
-|[CPaneContainer::IsVisible](#isvisible)||
-|[CPaneContainer::Move](#move)||
-|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||
-|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||
-|[CPaneContainer::OnShowPane](#onshowpane)||
-|[CPaneContainer::Release](#release)||
-|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||
-|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||
-|[CPaneContainer::RemovePane](#removepane)||
-|[CPaneContainer::Resize](#resize)||
-|[CPaneContainer::ResizePane](#resizepane)||
-|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||
-|[CPaneContainer::Serialize](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다. ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)를 재정의합니다.)|
-|[CPaneContainer::SetPane](#setpane)||
-|[CPaneContainer::SetPaneContainer](#setpanecontainer)||
-|[CPaneContainer::SetPaneDivider](#setpanedivider)||
+|[CPane컨테이너::겟노드카운트](#getnodecount)||
+|[CPane 컨테이너::GetPane 분배기](#getpanedivider)||
+|[CPane Container::GetParentPaneContainer](#getparentpanecontainer)||
+|[CPane 컨테이너::GetRecentPane 분배자 Rect](#getrecentpanedividerrect)||
+|[CPane 컨테이너::GetRecent파인 디바이더 스타일](#getrecentpanedividerstyle)||
+|[CPane 컨테이너::GetRecentPercent](#getrecentpercent)||
+|[CPane컨테이너::GetRefCount](#getrefcount)||
+|[CPane컨테이너::GetResize스텝](#getresizestep)||
+|[CPane 컨테이너::GetRightPane](#getrightpane)||
+|[CPane컨테이너::겟라이트파인컨테이너](#getrightpanecontainer)||
+|[CPaneContainer::GetTotal참조 카운트](#gettotalreferencecount)||
+|[CPane 컨테이너::GetWindowRect](#getwindowrect)||
+|[CPaneContainer::삭제](#isdisposed)||
+|[CPane컨테이너::비어 있음](#isempty)||
+|[CPane 컨테이너::왼쪽 파인](#isleftpane)||
+|[CPane Container::왼쪽 파인 컨테이너](#isleftpanecontainer)||
+|[CPane컨테이너::왼쪽 부분비어 있음](#isleftpartempty)||
+|[CPane 컨테이너::IsRightPart비어](#isrightpartempty)||
+|[CPaneContainer::보이지 않는](#isvisible)||
+|[CPane컨테이너::이동](#move)||
+|[CPane 컨테이너::에삭제하이드파인](#ondeletehidepane)||
+|[CPane컨테이너::온무내부파네분배기](#onmoveinternalpanedivider)||
+|[CPane 컨테이너::온쇼파인](#onshowpane)||
+|[CPaneContainer::릴리스](#release)||
+|[CPaneContainer::릴리스빈파인컨테이너](#releaseemptypanecontainer)||
+|[CPane 컨테이너::제거비유효파인](#removenonvalidpanes)||
+|[CPane컨테이너::제거창](#removepane)||
+|[CPaneContainer::크기 조정](#resize)||
+|[CPane 컨테이너::크기 조정](#resizepane)||
+|[CPaneContainer::크기 조정부분OfPaneContainer](#resizepartofpanecontainer)||
+|[CPaneContainer::직렬화](#serialize)|이 개체를 보관 저장소에서 읽어오거나 보관 저장소에 씁니다. ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)를 재정의합니다.)|
+|[CPane 컨테이너::세파인](#setpane)||
+|[CPaneContainer::세파네 컨테이너](#setpanecontainer)||
+|[CPane 컨테이너::세파네 디바이더](#setpanedivider)||
 |[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||
-|[CPaneContainer::SetRecentPercent](#setrecentpercent)||
-|[CPaneContainer::SetUpByID](#setupbyid)||
-|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
-|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||
+|[CPane 컨테이너::SetRecent퍼센트](#setrecentpercent)||
+|[CPane 컨테이너::설치ByID](#setupbyid)||
+|[CPane컨테이너::스토어최근독사이트정보](#storerecentdocksiteinfo)||
+|[CPane 컨테이너 :: 스트레치 파네 컨테이너](#stretchpanecontainer)||
 
 ### <a name="remarks"></a>설명
 
-`CPaneContainer` 개체는 프레임 워크에서 자동으로 생성 됩니다.
+`CPaneContainer`개체는 프레임워크에 의해 자동으로 만들어집니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는의 인스턴스를 생성 하는 방법에 설명 합니다 `CPaneContainer` 클래스입니다. 이 코드 조각은의 일부인 합니다 [창 크기 설정 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 `CPaneContainer` 클래스의 인스턴스를 구성하는 방법을 보여 줍니다. 이 코드 조각은 창 [크기 설정 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
@@ -229,7 +229,7 @@ class CPaneContainer : public CObject
 
 **헤더:** afxpanecontainer.h
 
-##  <a name="addpane"></a>  CPaneContainer::AddPane
+## <a name="cpanecontaineraddpane"></a><a name="addpane"></a>CPane 컨테이너::애드파인
 
 ```
 CDockablePane* AddPane(CDockablePane* pBar);
@@ -237,21 +237,21 @@ CDockablePane* AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addref"></a>  CPaneContainer::AddRef
+## <a name="cpanecontaineraddref"></a><a name="addref"></a>CPane 컨테이너::AddRef
 
-```
+```cpp
 void AddRef();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer
+## <a name="cpanecontaineraddsubpanecontainer"></a><a name="addsubpanecontainer"></a>CPaneContainer::추가 서브파인 컨테이너
 
 ```
 BOOL AddSubPaneContainer(
@@ -261,14 +261,14 @@ BOOL AddSubPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pContainer*<br/>
-[in] *bRightNodeNew*<br/>
+【인】 *p 컨테이너*<br/>
+【인】 *b라이트노드뉴*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace
+## <a name="cpanecontainercalcavailablepanespace"></a><a name="calcavailablepanespace"></a>CPaneContainer::석회화가능파인스페이스
 
 ```
 virtual int CalcAvailablePaneSpace(
@@ -280,16 +280,16 @@ virtual int CalcAvailablePaneSpace(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nRequiredOffset*<br/>
-[in] *pBar*<br/>
-[in] *pContainer*<br/>
-[in] *bLeftBar*<br/>
+【인】 *n필수오프셋*<br/>
+【인】 *pBar*<br/>
+【인】 *p 컨테이너*<br/>
+【인】 *bLeftBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace
+## <a name="cpanecontainercalcavailablespace"></a><a name="calcavailablespace"></a>CPaneContainer::석회화 사용 가능한 공간
 
 ```
 virtual CSize CalcAvailableSpace(
@@ -299,30 +299,30 @@ virtual CSize CalcAvailableSpace(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *sizeStretch*<br/>
-[in] *bLeftBar*<br/>
+【인】 *크기 스트레칭*<br/>
+【인】 *bLeftBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize
+## <a name="cpanecontainercalculaterecentsize"></a><a name="calculaterecentsize"></a>CPane 컨테이너:계산최근 크기
 
-```
+```cpp
 void CalculateRecentSize();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility
+## <a name="cpanecontainercheckpanedividervisibility"></a><a name="checkpanedividervisibility"></a>CPaneContainer::체크파인 분배자 가시성
 
-```
+```cpp
 void CheckPaneDividerVisibility();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="copy"></a>  CPaneContainer::Copy
+## <a name="cpanecontainercopy"></a><a name="copy"></a>CPaneContainer::복사
 
 ```
 virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
@@ -330,13 +330,13 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pParentContainer*<br/>
+【인】 *p부모 컨테이너*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer
+## <a name="cpanecontainercpanecontainer"></a><a name="cpanecontainer"></a>CPane 컨테이너 ::CPane컨테이너
 
 ```
 CPaneContainer(
@@ -348,14 +348,14 @@ CPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pManager*<br/>
-[in] *pLeftBar*<br/>
-[in] *pRightBar*<br/>
-[in] *pSlider*<br/>
+【인】 *pManager*<br/>
+【인】 *pLeftBar*<br/>
+【인】 *pRightBar*<br/>
+【인】 *p슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="deletepane"></a>  CPaneContainer::DeletePane
+## <a name="cpanecontainerdeletepane"></a><a name="deletepane"></a>CPaneContainer::DeletePane
 
 ```
 virtual void DeletePane(
@@ -365,12 +365,12 @@ virtual void DeletePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *barType*<br/>
+【인】 *pBar*<br/>
+【인】 *바 유형*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer
+## <a name="cpanecontainerfindsubpanecontainer"></a><a name="findsubpanecontainer"></a>CPaneContainer::찾기서브파네컨테이너
 
 ```
 CPaneContainer* FindSubPaneContainer(
@@ -380,14 +380,14 @@ CPaneContainer* FindSubPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pObject*<br/>
-[in] *findCriteria*<br/>
+【인】 *pObject*<br/>
+【인】 *찾기조건*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane
+## <a name="cpanecontainerfindtabbedpane"></a><a name="findtabbedpane"></a>CPane 컨테이너::찾기탭판
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -395,13 +395,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nID*<br/>
+【인】 *니드 (미국)의*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs
+## <a name="cpanecontainergetassociatedsiblingpaneids"></a><a name="getassociatedsiblingpaneids"></a>CPaneContainer::GetAssociated형제파네이드
 
 ```
 CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
@@ -409,33 +409,33 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane
+## <a name="cpanecontainergetleftpane"></a><a name="getleftpane"></a>CPane 컨테이너::GetLeftPane
 
 ```
 const CDockablePane* GetLeftPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer
+## <a name="cpanecontainergetleftpanecontainer"></a><a name="getleftpanecontainer"></a>CPane Container::GetLeftPaneContainer
 
 ```
 const CPaneContainer* GetLeftPaneContainer() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getminsize"></a>  CPaneContainer::GetMinSize
+## <a name="cpanecontainergetminsize"></a><a name="getminsize"></a>CPaneContainer::GetMinSize
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -443,11 +443,11 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *size*<br/>
+【인】 *크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft
+## <a name="cpanecontainergetminsizeleft"></a><a name="getminsizeleft"></a>CPaneContainer::GetMinSizeLeft
 
 ```
 virtual void GetMinSizeLeft(CSize& size) const;
@@ -455,11 +455,11 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *size*<br/>
+【인】 *크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight
+## <a name="cpanecontainergetminsizeright"></a><a name="getminsizeright"></a>CPaneContainer::GetMinSizeRight
 
 ```
 virtual void GetMinSizeRight(CSize& size) const;
@@ -467,121 +467,121 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *size*<br/>
+【인】 *크기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount
+## <a name="cpanecontainergetnodecount"></a><a name="getnodecount"></a>CPane컨테이너::겟노드카운트
 
 ```
 int GetNodeCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider
+## <a name="cpanecontainergetpanedivider"></a><a name="getpanedivider"></a>CPane 컨테이너::GetPane 분배기
 
 ```
 const CPaneDivider* GetPaneDivider() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer
+## <a name="cpanecontainergetparentpanecontainer"></a><a name="getparentpanecontainer"></a>CPane Container::GetParentPaneContainer
 
 ```
 CPaneContainer* GetParentPaneContainer() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect
+## <a name="cpanecontainergetrecentpanedividerrect"></a><a name="getrecentpanedividerrect"></a>CPane 컨테이너::GetRecentPane 분배자 Rect
 
 ```
 CRect GetRecentPaneDividerRect() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle
+## <a name="cpanecontainergetrecentpanedividerstyle"></a><a name="getrecentpanedividerstyle"></a>CPane 컨테이너::GetRecent파인 디바이더 스타일
 
 ```
 DWORD GetRecentPaneDividerStyle() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent
+## <a name="cpanecontainergetrecentpercent"></a><a name="getrecentpercent"></a>CPane 컨테이너::GetRecentPercent
 
 ```
 int GetRecentPercent();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount
+## <a name="cpanecontainergetrefcount"></a><a name="getrefcount"></a>CPane컨테이너::GetRefCount
 
 ```
 LONG GetRefCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep
+## <a name="cpanecontainergetresizestep"></a><a name="getresizestep"></a>CPane컨테이너::GetResize스텝
 
 ```
 virtual int GetResizeStep() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane
+## <a name="cpanecontainergetrightpane"></a><a name="getrightpane"></a>CPane 컨테이너::GetRightPane
 
 ```
 const CDockablePane* GetRightPane() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer
+## <a name="cpanecontainergetrightpanecontainer"></a><a name="getrightpanecontainer"></a>CPane컨테이너::겟라이트파인컨테이너
 
 ```
 const CPaneContainer* GetRightPaneContainer() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount
+## <a name="cpanecontainergettotalreferencecount"></a><a name="gettotalreferencecount"></a>CPaneContainer::GetTotal참조 카운트
 
 ```
 int GetTotalReferenceCount() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect
+## <a name="cpanecontainergetwindowrect"></a><a name="getwindowrect"></a>CPane 컨테이너::GetWindowRect
 
 ```
 virtual void GetWindowRect(
@@ -592,31 +592,31 @@ virtual void GetWindowRect(
 ### <a name="parameters"></a>매개 변수
 
 [in] *rect*<br/>
-[in] *bIgnoreVisibility*<br/>
+【인】 *b무시가시성*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed
+## <a name="cpanecontainerisdisposed"></a><a name="isdisposed"></a>CPaneContainer::삭제
 
 ```
 BOOL IsDisposed() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isempty"></a>  CPaneContainer::IsEmpty
+## <a name="cpanecontainerisempty"></a><a name="isempty"></a>CPane컨테이너::비어 있음
 
 ```
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane
+## <a name="cpanecontainerisleftpane"></a><a name="isleftpane"></a>CPane 컨테이너::왼쪽 파인
 
 ```
 BOOL IsLeftPane(CDockablePane* pBar) const;
@@ -624,23 +624,23 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer
+## <a name="cpanecontainerisleftpanecontainer"></a><a name="isleftpanecontainer"></a>CPane Container::왼쪽 파인 컨테이너
 
 ```
 BOOL IsLeftPaneContainer() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty
+## <a name="cpanecontainerisleftpartempty"></a><a name="isleftpartempty"></a>CPane컨테이너::왼쪽 부분비어 있음
 
 ```
 BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -648,13 +648,13 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bCheckVisibility*<br/>
+【인】 *b체크가시성*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty
+## <a name="cpanecontainerisrightpartempty"></a><a name="isrightpartempty"></a>CPane 컨테이너::IsRightPart비어
 
 ```
 BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
@@ -662,23 +662,23 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bCheckVisibility*<br/>
+【인】 *b체크가시성*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isvisible"></a>  CPaneContainer::IsVisible
+## <a name="cpanecontainerisvisible"></a><a name="isvisible"></a>CPaneContainer::보이지 않는
 
 ```
 BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="move"></a>  CPaneContainer::Move
+## <a name="cpanecontainermove"></a><a name="move"></a>CPane컨테이너::이동
 
 ```
 virtual void Move(CPoint ptNewLeftTop);
@@ -686,13 +686,13 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *ptNewLeftTop*<br/>
+【인】 *ptNewLeftTop*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane
+## <a name="cpanecontainerondeletehidepane"></a><a name="ondeletehidepane"></a>CPane 컨테이너::에삭제하이드파인
 
-```
+```cpp
 void OnDeleteHidePane(
     CDockablePane* pBar,
     BOOL bHide);
@@ -700,12 +700,12 @@ void OnDeleteHidePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bHide*<br/>
+【인】 *pBar*<br/>
+【인】 *bHide*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider
+## <a name="cpanecontaineronmoveinternalpanedivider"></a><a name="onmoveinternalpanedivider"></a>CPane컨테이너::온무내부파네분배기
 
 ```
 virtual int OnMoveInternalPaneDivider(
@@ -715,14 +715,14 @@ virtual int OnMoveInternalPaneDivider(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nOffset*<br/>
-[in] *hdwp*<br/>
+【인】 *n오프셋*<br/>
+【인】 *HDWP*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane
+## <a name="cpanecontaineronshowpane"></a><a name="onshowpane"></a>CPane 컨테이너::온쇼파인
 
 ```
 virtual void OnShowPane(
@@ -732,38 +732,38 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+【인】 *pBar*<br/>
+【인】 *bShow*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="release"></a>  CPaneContainer::Release
+## <a name="cpanecontainerrelease"></a><a name="release"></a>CPaneContainer::릴리스
 
 ```
 DWORD Release();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer
+## <a name="cpanecontainerreleaseemptypanecontainer"></a><a name="releaseemptypanecontainer"></a>CPaneContainer::릴리스빈파인컨테이너
 
-```
+```cpp
 void ReleaseEmptyPaneContainer();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes
+## <a name="cpanecontainerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 컨테이너::제거비유효파인
 
-```
+```cpp
 void RemoveNonValidPanes();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="removepane"></a>  CPaneContainer::RemovePane
+## <a name="cpanecontainerremovepane"></a><a name="removepane"></a>CPane컨테이너::제거창
 
 ```
 virtual void RemovePane(CDockablePane* pBar);
@@ -771,11 +771,11 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="resize"></a>  CPaneContainer::Resize
+## <a name="cpanecontainerresize"></a><a name="resize"></a>CPaneContainer::크기 조정
 
 ```
 virtual void Resize(
@@ -787,12 +787,12 @@ virtual void Resize(
 ### <a name="parameters"></a>매개 변수
 
 [in] *rect*<br/>
-[in] *hdwp*<br/>
-[in] *bRedraw*<br/>
+【인】 *HDWP*<br/>
+【인】 *b 다시 그리기*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="resizepane"></a>  CPaneContainer::ResizePane
+## <a name="cpanecontainerresizepane"></a><a name="resizepane"></a>CPane 컨테이너::크기 조정
 
 ```
 virtual void ResizePane(
@@ -806,16 +806,16 @@ virtual void ResizePane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nOffset*<br/>
-[in] *pBar*<br/>
-[in] *pContainer*<br/>
-[in] *bHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *hdwp*<br/>
+【인】 *n오프셋*<br/>
+【인】 *pBar*<br/>
+【인】 *p 컨테이너*<br/>
+【인】 *b호르츠 (주)*<br/>
+【인】 *bLeftBar*<br/>
+【인】 *HDWP*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer
+## <a name="cpanecontainerresizepartofpanecontainer"></a><a name="resizepartofpanecontainer"></a>CPaneContainer::크기 조정부분OfPaneContainer
 
 ```
 virtual void ResizePartOfPaneContainer(
@@ -826,15 +826,15 @@ virtual void ResizePartOfPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nOffset*<br/>
-[in] *bLeftPart*<br/>
-[in] *hdwp*<br/>
+【인】 *n오프셋*<br/>
+【인】 *bLeftPart*<br/>
+【인】 *HDWP*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="serialize"></a>  CPaneContainer::Serialize
+## <a name="cpanecontainerserialize"></a><a name="serialize"></a>CPaneContainer::직렬화
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -844,9 +844,9 @@ void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setpane"></a>  CPaneContainer::SetPane
+## <a name="cpanecontainersetpane"></a><a name="setpane"></a>CPane 컨테이너::세파인
 
-```
+```cpp
 void SetPane(
     CDockablePane* pBar,
     BOOL bLeft);
@@ -854,14 +854,14 @@ void SetPane(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
-[in] *bLeft*<br/>
+【인】 *pBar*<br/>
+【인】 *b왼쪽*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer
+## <a name="cpanecontainersetpanecontainer"></a><a name="setpanecontainer"></a>CPaneContainer::세파네 컨테이너
 
-```
+```cpp
 void SetPaneContainer(
     CPaneContainer* pContainer,
     BOOL bLeft);
@@ -869,48 +869,48 @@ void SetPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pContainer*<br/>
-[in] *bLeft*<br/>
+【인】 *p 컨테이너*<br/>
+【인】 *b왼쪽*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider
+## <a name="cpanecontainersetpanedivider"></a><a name="setpanedivider"></a>CPane 컨테이너::세파네 디바이더
 
-```
+```cpp
 void SetPaneDivider(CPaneDivider* pSlider);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pSlider*<br/>
+【인】 *p슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer
+## <a name="cpanecontainersetparentpanecontainer"></a><a name="setparentpanecontainer"></a>CPaneContainer::SetParentPaneContainer
 
-```
+```cpp
 void SetParentPaneContainer(CPaneContainer* p);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *p*<br/>
+【인】 *p*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent
+## <a name="cpanecontainersetrecentpercent"></a><a name="setrecentpercent"></a>CPane 컨테이너::SetRecent퍼센트
 
-```
+```cpp
 void SetRecentPercent(int nRecentPercent);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nRecentPercent*<br/>
+【인】 *nRecentPercent*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID
+## <a name="cpanecontainersetupbyid"></a><a name="setupbyid"></a>CPane 컨테이너::설치ByID
 
 ```
 BOOL SetUpByID(
@@ -920,14 +920,14 @@ BOOL SetUpByID(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nID*<br/>
-[in] *pBar*<br/>
+【인】 *니드 (미국)의*<br/>
+【인】 *pBar*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo
+## <a name="cpanecontainerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPane컨테이너::스토어최근독사이트정보
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -935,11 +935,11 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer
+## <a name="cpanecontainerstretchpanecontainer"></a><a name="stretchpanecontainer"></a>CPane 컨테이너 :: 스트레치 파네 컨테이너
 
 ```
 virtual int StretchPaneContainer(
@@ -952,19 +952,19 @@ virtual int StretchPaneContainer(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *nOffset*<br/>
-[in] *bStretchHorz*<br/>
-[in] *bLeftBar*<br/>
-[in] *bMoveSlider*<br/>
-[in] *hdwp*<br/>
+【인】 *n오프셋*<br/>
+【인】 *b스트레치호츠*<br/>
+【인】 *bLeftBar*<br/>
+【인】 *bMove슬라이더*<br/>
+【인】 *HDWP*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 클래스](../../mfc/reference/cobject-class.md)<br/>
-[CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md)
+[CPaneContainer관리자 클래스](../../mfc/reference/cpanecontainermanager-class.md)

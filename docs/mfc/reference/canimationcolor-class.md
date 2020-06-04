@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c1c98d739aa1c17bb30df2d9d4ce8c41558c76d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151177"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750197"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 클래스
 
@@ -51,52 +51,52 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationColor::CAnimationColor](#canimationcolor)|오버로드됨. 애니메이션 색 개체를 생성 합니다.|
+|[C애니메이션컬러::C애니메이션컬러](#canimationcolor)|오버로드되었습니다. 애니메이션 색상 오브젝트를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationColor::AddTransition](#addtransition)|빨강, 녹색 및 파랑 구성 요소에 대 한 변환을 추가합니다.|
-|[CAnimationColor::GetB](#getb)|파랑 구성 요소를 나타내는 CAnimationVariable에 액세스할 수 있습니다.|
-|[CAnimationColor::GetDefaultValue](#getdefaultvalue)|색의 구성 요소에 대 한 기본 값을 반환합니다.|
-|[CAnimationColor::GetG](#getg)|CAnimationVariable 나타내는 녹색 구성 요소에 대 한 액세스를 제공 합니다.|
-|[CAnimationColor::GetR](#getr)|CAnimationVariable 나타내는 빨강 구성 요소에 대 한 액세스를 제공 합니다.|
-|[CAnimationColor::GetValue](#getvalue)|현재 값을 반환합니다.|
-|[CAnimationColor::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|
+|[C애니메이션컬러::추가전환](#addtransition)|빨간색, 녹색 및 파란색 구성 요소에 대한 전환을 추가합니다.|
+|[C애니메이션컬러::겟비](#getb)|파란색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.|
+|[C애니메이션컬러::Getdefaultvalue](#getdefaultvalue)|색상 구성 요소에 대한 기본값을 반환합니다.|
+|[C애니메이션컬러::겟G](#getg)|녹색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.|
+|[C애니메이션컬러::게터](#getr)|빨간색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.|
+|[C애니메이션컬러::겟밸류](#getvalue)|현재 값을 반환합니다.|
+|[C애니메이션컬러::설정디폴값](#setdefaultvalue)|기본값을 설정합니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|캡슐화 된 애니메이션 변수를 목록에 넣습니다. (재정의 [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[C애니메이션컬러::겟애니메이션변수리스트](#getanimationvariablelist)|캡슐화된 애니메이션 변수를 목록에 넣습니다. [(CAnimationBaseObject 재정의::GetAnimationVariablelist.)](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator=](#operator_eq)|CAnimationColor에 색을 할당합니다.|
+|[C애니메이션컬러::연산자 COLORREF](#operator_colorref)||
+|[C애니메이션컬러::연산자=](#operator_eq)|CAnimationColor에 색상을 할당합니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationColor::m_bValue](#m_bvalue)|캡슐화 된 애니메이션 변수의 애니메이션 색의 파랑 구성 요소를 나타냅니다.|
-|[CAnimationColor::m_gValue](#m_gvalue)|캡슐화 된 애니메이션 변수의 애니메이션 색의 녹색 구성 요소를 나타냅니다.|
-|[CAnimationColor::m_rValue](#m_rvalue)|캡슐화 된 애니메이션 변수의 애니메이션 색의 빨강 구성 요소를 나타냅니다.|
+|[C애니메이션컬러::m_bValue](#m_bvalue)|애니메이션 색상의 파란색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.|
+|[C애니메이션컬러:m_gValue](#m_gvalue)|애니메이션 색상의 녹색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.|
+|[C애니메이션컬러:m_rValue](#m_rvalue)|애니메이션 색상의 빨간색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.|
 
 ## <a name="remarks"></a>설명
 
-CAnimationColor 클래스는 세 가지 CAnimationVariable 개체를 캡슐화 하 고 색을 응용 프로그램에 나타낼 수 있습니다. 예를 들어, 화면의 모든 개체의 색에 애니메이션 효과를이 클래스를 사용할 수 있습니다 (같은 텍스트 색, 배경색 등). 응용 프로그램에서이 클래스를 사용 하려면 방금이 클래스의 개체를 인스턴스화할 CAnimationController::AddAnimationObject를 사용 하 여 애니메이션 컨트롤러를 추가 및 빨강, 녹색 및 파랑 구성 요소에 적용할 각 전환에 대 한 AddTransition 호출 합니다.
+CAnimationColor 클래스는 세 개의 CAnimationVariable 개체를 캡슐화하고 응용 프로그램에서 색상을 나타낼 수 있습니다. 예를 들어 이 클래스를 사용하여 화면의 모든 개체의 색상(예: 텍스트 색상, 배경색 등)을 애니메이션할 수 있습니다. 응용 프로그램에서 이 클래스를 사용하려면 이 클래스의 개체를 인스턴스화하고 CAnimationController::AddAnimationObject를 사용하여 애니메이션 컨트롤러에 추가하고 각 전환이 빨간색, 녹색 및 파란색 구성 요소에 적용될 경우 AddTransition를 호출합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
+[C애니메이션베이스오브젝트](../../mfc/reference/canimationbaseobject-class.md)
 
 `CAnimationColor`
 
@@ -104,11 +104,11 @@ CAnimationColor 클래스는 세 가지 CAnimationVariable 개체를 캡슐화 �
 
 **헤더:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationColor::AddTransition
+## <a name="canimationcoloraddtransition"></a><a name="addtransition"></a>C애니메이션컬러::추가전환
 
-빨강, 녹색 및 파랑 구성 요소에 대 한 변환을 추가합니다.
+빨간색, 녹색 및 파란색 구성 요소에 대한 전환을 추가합니다.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pRTransition,
     CBaseTransition* pGTransition,
@@ -117,20 +117,20 @@ void AddTransition(
 
 ### <a name="parameters"></a>매개 변수
 
-*pRTransition*<br/>
-빨강 구성 요소에 대 한 전환
+*pR 전환*<br/>
+빨간색 구성 요소에 대한 전환입니다.
 
-*pGTransition*<br/>
-녹색 구성 요소에 대 한 전환
+*pG트랜지션*<br/>
+녹색 구성요소에 대한 전환입니다.
 
-*pBTransition*<br/>
-파랑 구성 요소에 대 한 전환
+*pB 트랜지션*<br/>
+파란색 구성 요소에 대한 전환입니다.
 
 ### <a name="remarks"></a>설명
 
-애니메이션 변수를 나타내는 색 구성 요소에 적용할 변환의 내부 목록에 지정된 된 전환을 추가 하려면이 함수를 호출 합니다. 전환에 추가 하지 즉시 적용 되며 내부 목록에 저장. 전환 (특정 값에 대 한 스토리 보드에 추가) 적용 됩니다 CAnimationController::AnimateGroup를 호출 하는 경우. 전환을 색 구성 요소 중 하나를 적용할 필요가 없으면 NULL을 전달할 수 있습니다.
+색상 구성 요소를 나타내는 애니메이션 변수에 적용할 전환의 내부 목록에 지정된 전환을 추가하려면 이 함수를 호출합니다. 전환을 추가하면 전환이 즉시 적용되지 않고 내부 목록에 저장됩니다. CAnimationController::AnimateGroup을 호출할 때 전환이 적용됩니다(특정 값에 대한 스토리보드에 추가). 색상 구성 요소 중 하나에 전환을 적용할 필요가 없는 경우 NULL을 전달할 수 있습니다.
 
-##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor
+## <a name="canimationcolorcanimationcolor"></a><a name="canimationcolor"></a>C애니메이션컬러::C애니메이션컬러
 
 CAnimationColor 개체를 생성합니다.
 
@@ -146,25 +146,25 @@ CAnimationColor(
 
 ### <a name="parameters"></a>매개 변수
 
-*color*<br/>
-기본 색을 지정합니다.
+*색*<br/>
+기본 색상을 지정합니다.
 
-*nGroupID*<br/>
-그룹 ID를 지정 합니다.
+*n그룹 ID*<br/>
+그룹 ID를 지정합니다.
 
-*nObjectID*<br/>
+*n개체 ID*<br/>
 개체 ID를 지정합니다.
 
-*dwUserData*<br/>
+*dw사용자 데이터*<br/>
 사용자 정의 데이터를 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-개체에 대 한 기본값 빨간색, 녹색, 파란색, 개체 ID 및 0으로 설정할 수 있는 그룹 ID를 사용 하 여 생성 됩니다. 이러한 SetDefaultValue 및 SetID 사용 하 여 런타임 시 나중에 변경할 수 있습니다.
+오브젝트는 빨간색, 녹색, 파란색, 개체 ID 및 그룹 ID에 대한 기본값으로 생성되며, 이 값은 0으로 설정됩니다. 나중에 SetDefaultValue 및 SetID를 사용하여 런타임에 변경할 수 있습니다.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList
+## <a name="canimationcolorgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>C애니메이션컬러::겟애니메이션변수리스트
 
-캡슐화 된 애니메이션 변수를 목록에 넣습니다.
+캡슐화된 애니메이션 변수를 목록에 넣습니다.
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
@@ -172,74 +172,74 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 
 ### <a name="parameters"></a>매개 변수
 
-*lst*<br/>
-함수는 반환 될 때 빨강, 녹색 및 파랑 구성 요소를 나타내는 세 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.
+*순*<br/>
+함수가 반환되면 빨간색, 녹색 및 파란색 구성 요소를 나타내는 세 개의 CAnimationVariable 개체에 대한 포인터가 포함되어 있습니다.
 
-##  <a name="getb"></a>  CAnimationColor::GetB
+## <a name="canimationcolorgetb"></a><a name="getb"></a>C애니메이션컬러::겟비
 
-파랑 구성 요소를 나타내는 CAnimationVariable에 액세스할 수 있습니다.
+파란색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.
 
 ```
 CAnimationVariable& GetB();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡슐화 된 CAnimationVariable 파란색 구성 요소를 나타내는 참조입니다.
+파란색 구성 요소를 나타내는 캡슐화된 CAnimationVariable에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-파랑 구성 요소를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.
+이 메서드를 호출하여 파란색 구성 요소를 나타내는 기본 CAnimationVariable에 직접 액세스할 수 있습니다.
 
-##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue
+## <a name="canimationcolorgetdefaultvalue"></a><a name="getdefaultvalue"></a>C애니메이션컬러::Getdefaultvalue
 
-색의 구성 요소에 대 한 기본 값을 반환합니다.
+색상 구성 요소에 대한 기본값을 반환합니다.
 
 ```
 COLORREF GetDefaultValue();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-RGB 구성 요소에 대 한 기본값을 포함 하는 COLORREF 값입니다.
+RGB 구성 요소에 대한 기본값을 포함하는 COLORREF 값입니다.
 
 ### <a name="remarks"></a>설명
 
-생성자 또는 SetDefaultValue 하 여 이전에 설정 된 기본값을 검색 하려면이 함수를 호출 합니다.
+이 함수를 호출하여 생성자 또는 SetDefaultValue에 의해 이전에 설정된 기본값을 검색합니다.
 
-##  <a name="getg"></a>  CAnimationColor::GetG
+## <a name="canimationcolorgetg"></a><a name="getg"></a>C애니메이션컬러::겟G
 
-CAnimationVariable 나타내는 녹색 구성 요소에 대 한 액세스를 제공 합니다.
+녹색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.
 
 ```
 CAnimationVariable& GetG();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡슐화 된 CAnimationVariable 나타내는 녹색 구성에 대 한 참조입니다.
+녹색 구성 요소를 나타내는 캡슐화된 CAnimationVariable에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-기본 CAnimationVariable 나타내는 녹색 구성 요소에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.
+이 메서드를 호출하여 녹색 구성 요소를 나타내는 기본 CAnimationVariable에 직접 액세스할 수 있습니다.
 
-##  <a name="getr"></a>  CAnimationColor::GetR
+## <a name="canimationcolorgetr"></a><a name="getr"></a>C애니메이션컬러::게터
 
-CAnimationVariable 나타내는 빨강 구성 요소에 대 한 액세스를 제공 합니다.
+빨간색 구성 요소를 나타내는 CAnimation변수에 대한 액세스를 제공합니다.
 
 ```
 CAnimationVariable& GetR();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-캡슐화 된 CAnimationVariable 나타내는 빨강 구성 요소에 대 한 참조입니다.
+빨간색 구성 요소를 나타내는 캡슐화된 CAnimationVariable에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-빨강 구성 요소를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.
+이 메서드를 호출하여 빨간색 구성 요소를 나타내는 기본 CAnimationVariable에 직접 액세스할 수 있습니다.
 
-##  <a name="getvalue"></a>  CAnimationColor::GetValue
+## <a name="canimationcolorgetvalue"></a><a name="getvalue"></a>C애니메이션컬러::겟밸류
 
 현재 값을 반환합니다.
 
@@ -249,83 +249,83 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>매개 변수
 
-*color*<br/>
-출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.
+*색*<br/>
+출력 이 메서드가 반환될 때 현재 값을 포함합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-TRUE 이면 현재 값을 성공적으로 검색 합니다. 그렇지 않으면 FALSE입니다.
+TRUE, 현재 값이 성공적으로 검색된 경우; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-색 애니메이션의 현재 값을 검색 하려면이 함수를 호출 합니다. 이 메서드가 실패 하거나 색 구성 요소에 대 한 기본 COM 개체 초기화 되지 않은, 경우 색 SetDefaultValue 또는 생성자에서 이전에 설정 된 기본값을 포함 합니다.
+이 함수를 호출하여 애니메이션 색상의 현재 값을 검색합니다. 이 메서드가 실패하거나 색상 구성 요소에 대한 기본 COM 개체가 초기화되지 않은 경우 색상에는 이전에 생성자 또는 SetDefaultValue에 의해 설정된 기본값이 포함됩니다.
 
-##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue
+## <a name="canimationcolorm_bvalue"></a><a name="m_bvalue"></a>C애니메이션컬러::m_bValue
 
-캡슐화 된 애니메이션 변수의 애니메이션 색의 파랑 구성 요소를 나타냅니다.
+애니메이션 색상의 파란색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.
 
 ```
 CAnimationVariable m_bValue;
 ```
 
-##  <a name="m_gvalue"></a>  CAnimationColor::m_gValue
+## <a name="canimationcolorm_gvalue"></a><a name="m_gvalue"></a>C애니메이션컬러:m_gValue
 
-캡슐화 된 애니메이션 변수의 애니메이션 색의 녹색 구성 요소를 나타냅니다.
+애니메이션 색상의 녹색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.
 
 ```
 CAnimationVariable m_gValue;
 ```
 
-##  <a name="m_rvalue"></a>  CAnimationColor::m_rValue
+## <a name="canimationcolorm_rvalue"></a><a name="m_rvalue"></a>C애니메이션컬러:m_rValue
 
-캡슐화 된 애니메이션 변수의 애니메이션 색의 빨강 구성 요소를 나타냅니다.
+애니메이션 색상의 빨간색 구성 요소를 나타내는 캡슐화된 애니메이션 변수입니다.
 
 ```
 CAnimationVariable m_rValue;
 ```
 
-##  <a name="operator_colorref"></a>  CAnimationColor::operator COLORREF
+## <a name="canimationcoloroperator-colorref"></a><a name="operator_colorref"></a>C애니메이션컬러::연산자 COLORREF
 
 ```
 operator COLORREF();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator=
+## <a name="canimationcoloroperator"></a><a name="operator_eq"></a>C애니메이션컬러::연산자=
 
-CAnimationColor에 색을 할당합니다.
+CAnimationColor에 색상을 할당합니다.
 
-```
+```cpp
 void operator=(COLORREF color);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*color*<br/>
-새 애니메이션 색 값을 지정합니다.
+*색*<br/>
+새 값 애니메이션 색상을 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-이 연산자가 생성 된 색의 구성 요소에 대 한 기본 COM 개체를 다시 SetDefaultValue 호출 되므로 애니메이션이 시작 되기 전에 것이 좋습니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.
+이 연산자는 SetDefaultValue를 호출하기 때문에 애니메이션을 시작하기 전에 이 작업을 수행하는 것이 좋습니다. 이 애니메이션 개체를 이벤트에 구독한 경우(ValueChanged 또는 IntegerValueChanged) 이러한 이벤트를 다시 활성화해야 합니다.
 
-##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue
+## <a name="canimationcolorsetdefaultvalue"></a><a name="setdefaultvalue"></a>C애니메이션컬러::설정디폴값
 
 기본값을 설정합니다.
 
-```
+```cpp
 void SetDefaultValue(COLORREF color);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*color*<br/>
-빨강, 녹색 및 파랑 구성 요소에 대 한 새 기본값을 지정합니다.
+*색*<br/>
+빨간색, 녹색 및 파랑 구성요소에 대한 새 기본값을 지정합니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수를 사용 하 여 애니메이션 개체에 기본값을 설정 합니다. 이 메서드는 애니메이션 색의 색상 구성 요소에 기본값을 할당 합니다. 이 또한 만들지 않은 경우 기본 COM 개체를 다시 합니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.
+이 함수를 사용하여 기본값을 애니메이션 오브젝트로 설정합니다. 이 메서드는 애니메이션 색상의 색상 구성 요소에 기본값을 할당합니다. 또한 기본 COM 개체가 생성된 경우 다시 만듭니다. 이 애니메이션 개체를 이벤트에 구독한 경우(ValueChanged 또는 IntegerValueChanged) 이러한 이벤트를 다시 활성화해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

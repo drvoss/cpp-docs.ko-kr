@@ -1,10 +1,12 @@
 ---
 title: gmtime_s, _gmtime32_s, _gmtime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _gmtime32_s
 - gmtime_s
 - _gmtime64_s
+- _o__gmtime32_s
+- _o__gmtime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: bcfc512022393c6a3e8a9cd97efe96d03b4877ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954837"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916225"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -74,23 +77,23 @@ errno_t _gmtime64_s(
 *sourceTime*<br/>
 저장된 시간에 대한 포인터입니다. 시간은 1970년 1월 1일 자정(00:00:00)(UTC(협정 세계시)) 이후 경과한 시간(초)으로 표현됩니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되는 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에 정의됩니다. 이러한 오류의 목록을 보려면 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요.
+성공할 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno에 정의 되어 있습니다. 이러한 오류의 목록은 [errno](../../c-runtime-library/errno-constants.md)를 참조 하세요.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*tmDest*|*sourceTime*|반환|*Tmdest* 의 값|
+|*tmDest*|*sourceTime*|반환 값|*Tmdest* 의 값|
 |-----------|------------|------------|--------------------|
-|**NULL**|any|**EINVAL**|수정되지 않습니다.|
-|Not **NULL** (유효한 메모리를 가리킴)|**NULL**|**EINVAL**|모든 필드가 -1로 설정됩니다.|
+|**N**|any|**EINVAL**|수정되지 않습니다.|
+|Not **NULL** (유효한 메모리를 가리킴)|**N**|**EINVAL**|모든 필드가 -1로 설정됩니다.|
 |**NULL** 이 아님|< 0|**EINVAL**|모든 필드가 -1로 설정됩니다.|
 
 처음 두 오류 조건의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_Gmtime32_s** 함수는 *sourcetime* 값을 분할 하 여 타임에 정의 된 **tm**형식의 구조에 저장 합니다. 구조체의 주소는 *Tmdest*에 전달 됩니다. *Sourcetime* 값은 일반적으로 [time](time-time32-time64.md) 함수에 대 한 호출에서 가져옵니다.
+**_Gmtime32_s** 함수는 *sourcetime* 값을 분할 하 고, Time. h에 정의 된 **tm**형식의 구조에 저장 합니다. 구조체의 주소는 *Tmdest*에 전달 됩니다. *Sourcetime* 값은 일반적으로 [time](time-time32-time64.md) 함수에 대 한 호출에서 가져옵니다.
 
 > [!NOTE]
 > 대상 환경에서는 일광 절약 시간이 적용되는지 확인해야 합니다. C 런타임 라이브러리에서는 일광 절약 시간 계산 구현을 위한 미국의 규칙이 사용된다고 가정합니다.
@@ -109,17 +112,19 @@ errno_t _gmtime64_s(
 |**tm_yday**|연간 일자 (0-365; 1 월 1 일 = 0).|
 |**tm_isdst**|**Gmtime_s**의 경우 항상 0입니다.|
 
-**__time64_t** 구조체를 사용 하는 **_Gmtime64_s**는 23:59:59 년 12 월 31 일 12 월 3000 31 일을 기준으로 날짜를 표현할 수 있습니다. 반면 **gmtime32_s** 는 2038 년 1 월 18 일 23:59:59 까지만 날짜를 나타냅니다. 1970년 1월 1일 자정은 이러한 두 함수 모두에 대한 날짜 범위의 하한입니다.
+**__time64_t** 구조를 사용 하는 **_gmtime64_s**에 따라 날짜를 23:59:59 년 12 월 31 일 3000, UTC로 표현할 수 있습니다. 반면 **gmtime32_s** 는 날짜를 23:59:59 년 1 월 18 일 2038 년 1 월 18 일 까지만 표시 합니다. 1970년 1월 1일 자정은 이러한 두 함수 모두에 대한 날짜 범위의 하한입니다.
 
-**gmtime_s** 는 **_gmtime64_s** 로 계산 되는 인라인 함수 이며 **time_t** 는 **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 를 이전 32 비트 **time_t**해석 하도록 강제 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **gmtime_s** 이 **_gmtime32_s**에 게 정렬 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
+**gmtime_s** 은 **_gmtime64_s** 으로 계산 되는 인라인 함수 이며 **time_t** **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 이전 32 비트 **time_t**으로 해석 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **gmtime_s** **_gmtime32_s**에 인라인 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime > 또는 \<시간 >|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> 또는 \<시간>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -165,7 +170,7 @@ int main( void )
 Coordinated universal time is Fri Apr 25 20:12:33 2003
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

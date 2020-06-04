@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1210
 ms.assetid: e2208309-c284-425c-a7e8-48e96e66f35b
-ms.openlocfilehash: a90ca3e3b55642f1a6cd847997b83e4b7db46818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50bafa522c931c909b5ce163a78305ffc028765a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203387"
 ---
 # <a name="fatal-error-c1210"></a>심각한 오류 C1210
 
 > 설치된 런타임 버전에서는 /clr:pure 및 /clr:safe가 지원되지 않습니다.
 
-**/clr: pure** 및 **/clr: safe** Visual Studio 2015에서 사용 되지 않고 Visual Studio 2017에서 지원 되지 않는 컴파일러 옵션입니다.
+**/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
 현재 릴리스에 대한 컴파일러가 있지만 이전 릴리스의 공용 언어 런타임을 사용하는 경우 C1210이 발생합니다.
 

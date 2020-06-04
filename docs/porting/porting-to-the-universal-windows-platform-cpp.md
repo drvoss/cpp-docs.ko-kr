@@ -2,12 +2,12 @@
 title: 유니버설 Windows 플랫폼으로 포팅(C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 7663fbac62687562f09a3a1ed66b8c09b75c51fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167643"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>유니버설 Windows 플랫폼으로 포팅(C++)
 
@@ -21,9 +21,9 @@ Windows 개발자 센터 설명서에는 유니버설 Windows 플랫폼으로 Wi
 
 - [Windows 8.1 런타임 구성 요소를 UWP에 이식](#BK_81Component)
 
-클래식 데스크톱 Win32 DLL이 있는 상태에서 UWP 애플리케이션에서 이 파일을 호출하려는 경우에도 이 작업을 수행할 수 있습니다. 이러한 절차를 사용하여 기존 클래식 Windows 데스크톱 C++ 애플리케이션에 대한 UWP 사용자 인터페이스 레이어 또는 플랫폼 간 표준 C++ 코드를 만들 수 있습니다. [방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)을 참조하세요. 
+클래식 데스크톱 Win32 DLL이 있는 상태에서 UWP 애플리케이션에서 이 파일을 호출하려는 경우에도 이 작업을 수행할 수 있습니다. 이러한 절차를 사용하여 기존 클래식 Windows 데스크톱 C++ 애플리케이션에 대한 UWP 사용자 인터페이스 레이어 또는 플랫폼 간 표준 C++ 코드를 만들 수 있습니다. [방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)을 참조하세요.
 
-## <a name="BK_81StoreApp"></a> Windows 8.1 스토어 앱을 UWP에 이식
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Windows 8.1 스토어 앱을 UWP에 포팅
 
 Windows 8.1 스토어 앱을 사용하는 경우 이러한 작업을 위해 UWP 및 Windows 10을 실행하는 모든 디바이스에서 다음 절차를 사용할 수 있습니다.  먼저 Visual Studio 2019을 사용 하 여 프로젝트를 Windows 8.1 프로젝트로 빌드하여 컴파일러 및 라이브러리의 변경 내용으로 인해 발생 하는 모든 문제를 제거 하는 것이 좋습니다. 작업을 완료한 후 이 작업을 Windows 10 UWP 프로젝트로 변환하는 두 가지 방법이 있습니다. 가장 쉬운 방법은(다음 절차에서 설명) 유니버설 Windows 프로젝트를 만들고 기존 코드를 복사하는 것입니다. Windows 8.1 데스크톱 및 Windows 8.1 Phone용 유니버설 프로젝트를 사용한 경우 프로젝트는 XAML의 두 개의 다른 레이아웃으로 시작되지만 디스플레이 크기에 맞게 조정되는 단일 동적 레이아웃으로 끝납니다.
 
@@ -47,7 +47,7 @@ Windows 8.1 스토어 앱을 사용하는 경우 이러한 작업을 위해 UWP 
 
    모든 하위 폴더를 선택하고 포함된 파일도 모두 추가합니다.
 
-1. 이전 프로젝트와 이름이 같은 프로젝트를 사용하지 않을 경우 Package.appxmanifest 파일을 열고 `App` 클래스에 대한 네임스페이스 이름을 반영하도록 **진입점**을 업데이트합니다.
+1. 이전 프로젝트와 이름이 같은 프로젝트를 사용하지 않을 경우 Package.appxmanifest 파일을 열고 **클래스에 대한 네임스페이스 이름을 반영하도록**진입점`App`을 업데이트합니다.
 
    Package.appxmanifest 파일의 **진입점** 필드에는 `App` 클래스에 대해 범위가 지정된 이름이 포함됩니다. 이 이름에는 `App` 클래스를 포함하는 네임스페이스가 들어 있습니다. 유니버설 Windows 프로젝트를 만들 경우 네임스페이스는 프로젝트의 이름으로 설정됩니다. 이전 프로젝트에서 복사한 파일에 포함된 것과 다를 경우 일치하도록 업데이트해야 합니다.
 
@@ -68,7 +68,7 @@ Windows 8.1 스토어 앱을 사용하는 경우 이러한 작업을 위해 UWP 
 
 1. 앱이 지원하는 각 디바이스 종류에 대해 에뮬레이터 또는 실제 디바이스에서 앱을 실행하고 디버그합니다. 에뮬레이터를 실행하려면 가상 머신이 아닌 실제 컴퓨터에서 Visual Studio를 실행해야 합니다.
 
-## <a name="BK_81Component"></a> Windows 8.1 런타임 구성 요소를 UWP에 이식
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Windows 8.1 런타임 구성 요소를 UWP에 이식
 
 Windows 8.1 스토어 앱에서 이미 작동되는 DLL 또는 Windows 런타임 구성 요소가 있는 경우 다음 절차에 따라 구성 요소 또는 DLL이 UWP 및 Windows 10에서 작동되도록 할 수 있습니다. 기본 절차는 새 프로젝트를 만들고 코드를 복사하는 것입니다.
 
@@ -106,7 +106,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 Visual Studio를 사용하여 새 UWP 프로젝트를 만든 경우 이 오류가 나타나지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Visual C++ 포팅 가이드](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [UWP(유니버설 Windows 플랫폼)용 앱 개발](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

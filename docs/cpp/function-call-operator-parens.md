@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301524"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179772"
 ---
 # <a name="function-call-operator-"></a>함수 호출 연산자: ()
 
@@ -28,7 +28,7 @@ postfix-expression
 ( [argument-expression-list ] )
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 함수 호출 연산자의 인수는 쉼표로 구분된 0개 이상의 식(함수의 실제 인수)입니다.
 
@@ -61,7 +61,7 @@ postfix-expression
     (Object.*pmf)();
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 3개의 인수로 표준 라이브러리 함수 `strcat_s`를 호출합니다.
 
@@ -176,7 +176,7 @@ int main() {
 
 함수를 재귀적으로 호출할 수 있습니다. 함수 선언에 대 한 자세한 내용은 [함수](functions-cpp.md)를 참조 하세요. 관련 자료는 [변환 단위와 링크](../cpp/program-and-linkage-cpp.md)에 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [후위 식](../cpp/postfix-expressions.md)<br/>
 [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

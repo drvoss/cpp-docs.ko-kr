@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210810"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 클래스
 
-구현을 제공 합니다 [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) 인터페이스입니다.
+[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) 인터페이스의 구현을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +36,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-파생 된 클래스
+클래스는에서 파생 됩니다.
 
 *PropClass*<br/>
 속성 클래스입니다.
@@ -53,16 +51,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|현재 행 집합에 대 한 요청 된 행 집합 속성 그룹의 속성 목록을 반환 합니다.|
-|[SetProperties](#setproperties)|행 집합 속성 그룹의 속성을 설정합니다.|
+|[GetProperties](#getproperties)|행 집합에 대해 현재 요청 된 행 집합 속성 그룹의 속성 목록을 반환 합니다.|
+|[SetProperties](#setproperties)|행 집합 속성 그룹의 속성을 설정 합니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 명령에 필수입니다. 구현이 정의 된 정적 함수에서 제공 되는 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 매크로입니다.
+명령에 필수입니다. 구현은 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 매크로에서 정의한 정적 함수를 통해 제공 됩니다.
 
-## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
 
-명령의 속성 맵을 사용 하 여 모든 요청 된 속성 집합을 반환 합니다.
+명령의 속성 맵을 사용 하 여 요청 된 모든 속성 집합을 반환 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -75,15 +73,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 를 참조 하세요.
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.
 
-## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
 
-명령 개체에 대 한 속성을 설정합니다.
+Command 개체에 대 한 속성을 설정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머 참조*에서 [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

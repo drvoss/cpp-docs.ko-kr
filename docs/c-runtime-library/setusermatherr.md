@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-ms.openlocfilehash: 1dc20be40614aaeda72040496a61a6ea9df99383
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 842a6899f37db7a479bf5f1212f0ef6bd6c4edf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957740"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170854"
 ---
 # <a name="__setusermatherr"></a>__setusermatherr
 
@@ -47,10 +47,10 @@ void __setusermatherr(
 
 *pf* 매개 변수의 형식은 `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`로 선언됩니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |__setusermatherr|matherr.c|

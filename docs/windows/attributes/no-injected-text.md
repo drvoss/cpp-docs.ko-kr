@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409293"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166616"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-컴파일러 특성 사용으로 인해 코드를 삽입 하지 못하도록 방지 합니다.
+컴파일러가 특성 사용의 결과로 코드를 삽입 하지 않도록 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409293"
 ### <a name="parameters"></a>매개 변수
 
 *boolean*<br/>
-(선택 사항) **true** 없는 코드를 삽입 하려는 경우 **false** 코드를 삽입할 수 있도록 합니다. **true** 가 기본값입니다.
+필드 코드를 삽입 하지 않으려면 **true** 이 고, 코드를 삽입할 수 있도록 하려면 **false** 입니다. 기본값은 **true** 입니다.
 
 ## <a name="remarks"></a>설명
 
-가장 일반적으로 사용 합니다 **no_injected_text** C++ 특성이는 [/Fx](../../build/reference/fx-merge-injected-code.md) 삽입 하는 컴파일러 옵션을는 **no_injected_text** 특성이.mrg 파일에.
+**No_injected_text** C++ 특성의 가장 일반적인 용도는 **no_injected_text** 특성을 .mrg 파일에 삽입 하는 [/fx](../../build/reference/fx-merge-injected-code.md) 컴파일러 옵션을 사용 하는 것입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -39,12 +39,12 @@ ms.locfileid: "62409293"
 |||
 |-|-|
 |**적용 대상**|원하는 위치|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)

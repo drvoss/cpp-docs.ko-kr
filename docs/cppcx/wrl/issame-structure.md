@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371338"
 ---
 # <a name="issame-structure"></a>IsSame 구조체
 
@@ -36,19 +36,19 @@ struct IsSame<T1, T1>;
 형식입니다.
 
 *T2*<br/>
-다른 형식입니다.
+다른 유형입니다.
 
 ## <a name="remarks"></a>설명
 
-형식이 지정 된 것과 같습니다 다른 테스트 형식을 지정 합니다.
+지정된 형식이 지정된 다른 형식과 동일한지 여부를 테스트합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constants"></a>공용 상수
 
-이름                    | 설명
+속성                    | Description
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | 한 형식이 다른 동일한 인지 여부를 나타냅니다.
+[IsSame::값](#value) | 한 형식이 다른 형식과 동일한지 여부를 나타냅니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -56,11 +56,11 @@ struct IsSame<T1, T1>;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** internal.h
+**헤더:** 내부.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::값
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>설명
 
-한 형식이 다른 동일한 인지 여부를 나타냅니다.
+한 형식이 다른 형식과 동일한지 여부를 나타냅니다.
 
-`value` 됩니다 **true** 같으면 템플릿 매개 변수, 및 **false** 템플릿 매개 변수는 서로 다른 경우.
+`value`템플릿 매개 변수가 동일한 경우 **true이고** 템플릿 매개 변수가 다른 경우 **false입니다.**

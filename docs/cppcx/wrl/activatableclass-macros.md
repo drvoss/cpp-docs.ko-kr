@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214281"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 매크로
 
-지정된 된 클래스의 인스턴스를 만들 수 있는 팩터리를 포함 하는 내부 캐시를 채웁니다.
+지정 된 클래스의 인스턴스를 만들 수 있는 팩터리를 포함 하는 내부 캐시를 채웁니다.
 
 ## <a name="syntax"></a>구문
 
@@ -46,22 +46,22 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 만들 클래스의 이름입니다.
 
-*factory*<br/>
-지정된 된 클래스의 인스턴스를 만든 팩터리입니다.
+*팩토리에서*<br/>
+지정 된 클래스의 인스턴스를 만드는 팩터리입니다.
 
 *serverName*<br/>
-모듈의 팩터리 하위 집합을 지정 하는 이름입니다.
+모듈에서 팩터리의 하위 집합을 지정 하는 이름입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-사용 하지 않는 경우 클래식 COM을 사용 하 여 이러한 매크로 사용 하지 마십시오 합니다 `#undef` 되도록 지시문을 `__WRL_WINRT_STRICT__` 매크로 정의 제거 됩니다.
+`#undef` 지시어를 사용 하 여 `__WRL_WINRT_STRICT__` 매크로 정의가 제거 되지 않도록 하는 경우를 제외 하 고 이러한 매크로를 클래식 COM과 함께 사용 하지 마세요.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** module .h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Module 클래스](module-class.md)

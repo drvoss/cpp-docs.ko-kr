@@ -1,9 +1,11 @@
 ---
 title: _get_daylight
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __daylight
 - _get_daylight
+- _o___daylight
+- _o__get_daylight
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 226242c5dd6c3c204d2449bd14ee7dee4f5fe7b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956055"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919394"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -47,10 +50,10 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>매개 변수
 
-*시간*<br/>
+*시간의*<br/>
 일관 절약 시간의 오프셋(시간)입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 하면 0이 고, 오류가 발생 하면 **errno** 값입니다.
 
@@ -60,7 +63,9 @@ error_t _get_daylight( int* hours );
 
 *Hours* 가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
-매크로 **_ro** 또는 사용 되지 않는 함수 **__daylight**에서 대신이 함수를 사용 하는 것이 좋습니다.
+매크로 **_daylight** 또는 사용 되지 않는 함수 **__daylight**대신이 함수를 사용 하는 것이 좋습니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -70,7 +75,7 @@ error_t _get_daylight( int* hours );
 
 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

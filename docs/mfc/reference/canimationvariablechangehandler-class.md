@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338144"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755048"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 클래스
 
@@ -31,21 +31,21 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|`CAnimationVariableChangeHandler` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CreateInstance`|인스턴스를 만들고 `CAnimationVariableChangeHandler` 개체입니다.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|애니메이션 변수 값이 변경 될 때 호출 합니다. ( `CUIAnimationVariableChangeHandlerBase::OnValueChanged`을 재정의합니다.)|
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|이벤트를 라우팅하도록 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.|
+|`CAnimationVariableChangeHandler::CreateInstance`|개체의 `CAnimationVariableChangeHandler` 인스턴스를 만듭니다.|
+|[C애니메이션변수변경핸들러::온밸류변경](#onvaluechanged)|애니메이션 변수의 값이 변경된 경우 호출됩니다. ( `CUIAnimationVariableChangeHandlerBase::OnValueChanged`을 재정의합니다.)|
+|[C애니메이션변수체인지핸들러:세트애니메이션컨트롤러](#setanimationcontroller)|애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 이벤트 처리기 생성 되어 전달할 `IUIAnimationVariable::SetVariableChangeHandler` 메서드를 호출할 때 `CAnimationVariable::EnableValueChangedEvent` 또는 `CAnimationBaseObject::EnableValueChangedEvent` (그러면 애니메이션 개체에 캡슐화 하는 모든 애니메이션 변수에 대 한이 이벤트).
+이 이벤트 처리기는 `IUIAnimationVariable::SetVariableChangeHandler` 호출하거나 `CAnimationVariable::EnableValueChangedEvent` `CAnimationBaseObject::EnableValueChangedEvent` 애니메이션 개체에 캡슐화된 모든 애니메이션 변수에 대해 이 이벤트를 활성화할 때 메서드에 생성되고 전달됩니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -59,9 +59,9 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 **헤더:** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>C애니메이션변수변경핸들러::온밸류변경
 
-애니메이션 변수 값이 변경 될 때 호출 합니다.
+애니메이션 변수의 값이 변경된 경우 호출됩니다.
 
 ```
 IFACEMETHOD(OnValueChanged) (
@@ -73,35 +73,35 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>매개 변수
 
-*storyboard*<br/>
-변수의 애니메이션을 적용 하는 스토리 보드입니다.
+*스토리 보드*<br/>
+변수에 애니메이션을 만드는 스토리보드입니다.
 
-*variable*<br/>
-업데이트 된 애니메이션 변수입니다.
+*변수*<br/>
+업데이트된 애니메이션 변수입니다.
 
 *newValue*<br/>
 새 값입니다.
 
-*previousValue*<br/>
+*이전값*<br/>
 이전 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>C애니메이션변수체인지핸들러:세트애니메이션컨트롤러
 
-이벤트를 라우팅하도록 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.
+애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnimationController*<br/>
-이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.
+*p애니메이션 컨트롤러*<br/>
+이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

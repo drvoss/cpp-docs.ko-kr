@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .DATA directive
 ms.assetid: 32797935-9c79-46e0-bf6f-07d0c2bf1dc1
-ms.openlocfilehash: e89fa948f40c984f8c455d11d5916b807f6319bc
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 2bb71c7f9d26f12bfefbef947592acc8bef48214
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313992"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076231"
 ---
 # <a name="data"></a>.DATA
 
@@ -22,12 +22,11 @@ ms.locfileid: "75313992"
 > **. 데이터**\
 > ⟦ *segmentItem* ⟧ ...
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [지시문 참조](directives-reference.md)\
-[.DATA?](dot-data-q.md)\
-[.CONST](dot-const.md)\
-[.FARDATA](dot-fardata.md)\
+[. 데이터?](dot-data-q.md)\
+[. CONST](dot-const.md)\
+[. FARDATA](dot-fardata.md)\
 [. FARDATA?](dot-fardata-q.md)\
 [MASM BNF 문법](masm-bnf-grammar.md)
-

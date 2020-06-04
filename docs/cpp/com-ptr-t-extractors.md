@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190029"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t Extractors
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t Extractors
 
 **Microsoft 전용**
 
@@ -44,22 +44,22 @@ Interface** operator&( ) throw( );
 operator bool( ) const throw( );
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-- **연산자 인터페이스** <strong>\*</strong> NULL 일 수 있는 캡슐화 된 인터페이스 포인터를 반환 합니다.
+- **연산자 인터페이스** <strong>\*</strong> 은 NULL 일 수 있는 캡슐화 된 인터페이스 포인터를 반환 합니다.
 
-- **연산자 인터페이스 &** 캡슐화 된 인터페이스 포인터에 대 한 참조를 반환 하 고 포인터가 null 인 경우 오류가 발생 합니다.
+- **연산자 인터페이스 &** 캡슐화 된 인터페이스 포인터에 대 한 참조를 반환 하 고 포인터가 NULL 인 경우 오류를 발생 시킵니다.
 
-- **연산자** <strong>\*</strong> 는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 허용 합니다.
+- **연산자** <strong>\*</strong> 를 사용 하면 스마트 포인터 개체가 역참조 시 실제 캡슐화 된 인터페이스인 것 처럼 동작할 수 있습니다.
 
-- **operator->** 는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 허용 합니다.
+- **연산자->** 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 동작할 수 있습니다.
 
-- **연산자 &** NULL으로 바꿔 모든 캡슐화 된 인터페이스 포인터를 해제 하 고 캡슐화 된 포인터의 주소를 반환 합니다. 이렇게 하면 포함 된 함수를 주소로 전달 되는 스마트 포인터는 *out* 인터페이스 포인터를 반환 하는 매개 변수입니다.
+- **연산자 &** 캡슐화 된 인터페이스 포인터를 해제 하 여 NULL로 바꾸고 캡슐화 된 포인터의 주소를 반환 합니다. 이를 통해 스마트 포인터는 *out* 매개 변수를 사용 하 여 인터페이스 포인터를 반환 하는 함수에 주소로 전달 됩니다.
 
-- **연산자 bool** 스마트 포인터 개체를 조건식에 사용할 수 있습니다. 이 연산자는 포인터가 NULL이 아닌 경우 TRUE를 반환 합니다.
+- **연산자 bool** 조건식에 스마트 포인터 개체를 사용할 수 있도록 합니다. 이 연산자는 포인터가 NULL이 아닌 경우 TRUE를 반환 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)

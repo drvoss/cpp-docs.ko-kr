@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ae4ceea53ec91cc3f9593dd3789fcf61e0702274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390765"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376941"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 클래스
 
-OLE DB 템플릿 구현의 합니다 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 사양에 대 한 인터페이스입니다.
+OLE DB 사양의 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) 인터페이스의 OLE DB 템플릿 구현입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -58,19 +57,19 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-파생 된 클래스 `IRowsetChangeImpl`합니다.
+에서 `IRowsetChangeImpl`파생된 클래스입니다.
 
 *스토리지*<br/>
 사용자 레코드입니다.
 
-*BaseInterface*<br/>
-와 같은 인터페이스에 대 한 기본 클래스 `IRowsetChange`합니다.
+*베이스 인터페이스*<br/>
+인터페이스의 기본 클래스(예: `IRowsetChange`))
 
-*RowClass*<br/>
-행 핸들에 대 한 저장소 단위입니다.
+*로우 클래스*<br/>
+행 핸들의 저장소 단위입니다.
 
-*MapClass*<br/>
-공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.
+*맵 클래스*<br/>
+공급자가 보유한 모든 행 핸들의 저장소 단위입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -78,38 +77,38 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ## <a name="members"></a>멤버
 
-### <a name="interface-methods-used-with-irowsetchange"></a>인터페이스 메서드 (IRowsetChange와 함께 사용)
+### <a name="interface-methods-used-with-irowsetchange"></a>인터페이스 방법(IRowsetChange와 함께 사용)
 
 |||
 |-|-|
-|[DeleteRows](#deleterows)|행 집합에서 행을 삭제합니다.|
-|[InsertRow](#insertrow)|행 집합에 행을 삽입 합니다.|
-|[SetData](#setdata)|하나 이상의 열에 데이터 값을 설정 합니다.|
+|[삭제행](#deleterows)|행 집합에서 행을 삭제합니다.|
+|[InsertRow](#insertrow)|행을 행 집합에 삽입합니다.|
+|[Setdata](#setdata)|하나 이상의 열에서 데이터 값을 설정합니다.|
 
-### <a name="implementation-method-callback"></a>구현 메서드 (콜백)
+### <a name="implementation-method-callback"></a>구현 방법(콜백)
 
 |||
 |-|-|
-|[FlushData](#flushdata)|데이터 저장소에 커밋하는 공급자가 재정의 합니다.|
+|[플러시 데이터](#flushdata)|공급자가 데이터를 해당 저장소에 커밋하도록 재정의합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당 합니다. "즉시"을 의미 하며 최종 사용자 (소비자를 사용 하 여 person) 변경 하면 해당 변경 내용을 즉시 전송 데이터 저장과 실행 취소할 수 없습니다.
+이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당합니다. "즉시"는 최종 사용자(소비자를 사용하는 사람)가 변경하면 해당 변경 내용이 즉시 데이터 저장소로 전송되며 취소할 수 없음을 의미합니다.
 
-`IRowsetChangeImpl` OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값으로 업데이트할 수 있도록 하는 인터페이스입니다.
+`IRowsetChangeImpl`기존 행의 `IRowsetChange` 열 값을 업데이트하고 행을 삭제하고 새 행을 삽입할 수 있는 OLE DB 인터페이스를 구현합니다.
 
-OLE DB 템플릿 구현에서는 모든 기본 메서드를 지원 (`SetData`하십시오 `InsertRow`, 및 `DeleteRows`).
+OLE DB 템플릿 구현은 모든 기본`SetData` `InsertRow`메서드(, 및)를 `DeleteRows`지원합니다.
 
 > [!IMPORTANT]
->  공급자를 구현 하기 전에 다음 설명서를 참조 하는 것이 좋습니다.
+> 공급자를 구현하기 전에 다음 설명서를 읽는 것이 좋습니다.
 
-- [업데이트 가능 공급자 만들기](../../data/oledb/creating-an-updatable-provider.md)
+- [업데이터 제공자 만들기](../../data/oledb/creating-an-updatable-provider.md)
 
-- 6 장은 *OLE DB 프로그래머 참조*
+- OLE DB *프로그래머 의 참조* 6 장
 
-- 참조 하는 방법을 `RUpdateRowset` 클래스에서 사용 됩니다 합니다 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 샘플.
+- 또한 `RUpdateRowset` [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 샘플에서 클래스가 어떻게 사용되는지 확인합니다.
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl::D엘레테로우스
 
 행 집합에서 행을 삭제합니다.
 
@@ -124,11 +123,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*OLE DB 프로그래머의 참조에서* [IRowsetChange::Deleterows를](/previous-versions/windows/desktop/ms724362(v=vs.85)) 참조하십시오.
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowset체인지임플::인서트로
 
-만들고 행 집합에 새 행을 초기화 합니다.
+행 집합에서 새 행을 만들고 초기화합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -141,11 +140,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+[IRowsetChange::OLE](/previous-versions/windows/desktop/ms716921(v=vs.85)) *DB 프로그래머의 참조에서 삽입행을*참조하십시오.
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowset체인지임플::세트데이터
 
-하나 이상의 열에 데이터 값을 설정 합니다.
+하나 이상의 열에서 데이터 값을 설정합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -157,11 +156,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>매개 변수
 
-참조 [irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232(v=vs.85)) 에 *OLE DB Programmer's Reference*합니다.
+*올레 DB 프로그래머의 참조에서* [IRowsetChange::SetData를](/previous-versions/windows/desktop/ms721232(v=vs.85)) 참조하십시오.
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowset체인지임플::플러시데이터
 
-데이터 저장소에 커밋하는 공급자가 재정의 합니다.
+공급자가 데이터를 해당 저장소에 커밋하도록 재정의합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -172,17 +171,17 @@ HRESULT FlushData(HROW hRowToFlush,
 
 #### <a name="parameters"></a>매개 변수
 
-*hRowToFlush*<br/>
-[in] 데이터에 대 한 행에 대 한 핸들입니다. 이 행의 형식에서 결정 됩니다 합니다 *RowClass* 템플릿 인수는 `IRowsetImpl` 클래스 (`CSimpleRow` 기본적으로).
+*hRowTo플러시*<br/>
+【인】 데이터의 행을 처리합니다. 이 행의 형식은 `IRowsetImpl` 클래스의 *RowClass* 템플릿 인수(기본적으로)에서`CSimpleRow` 결정됩니다.
 
-*hAccessorToFlush*<br/>
-[in] 바인딩 정보 및 형식 정보를 포함 하는 접근자에 대 한 핸들 해당 `PROVIDER_MAP` (참조 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).
+*h액세스토르토플러시*<br/>
+【인】 바인딩 정보 및 형식 정보를 포함하는 접근자(IAccessorImpl 참조)를 처리합니다. `PROVIDER_MAP` [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-표준 HRESULT입니다.
+표준 HRESULT.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

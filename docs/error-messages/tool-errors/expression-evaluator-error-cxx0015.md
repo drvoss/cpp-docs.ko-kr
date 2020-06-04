@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196068"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>식 계산기 오류 CXX0015
 
-식이 너무 복잡 합니다. (스택 오버플로)
+식이 너무 복잡 합니다 (스택 오버플로).
 
-입력 한 식이 너무 복잡 하거나 C 식 계산기에 제공 된 저장소의 양을 너무 많이 중첩 되었습니다.
+입력 한 식이 너무 복잡 하거나 C 식 계산기에 사용할 수 있는 저장소 크기에 너무 많이 중첩 되었습니다.
 
-오버플로 일반적으로 너무 많은 보류 중인 계산으로 인해 발생합니다.
+오버플로는 일반적으로 보류 중인 계산이 너무 많기 때문에 발생 합니다.
 
-계산할 식의 다른 부분에 대 한 대기 하는 대신 발견 될 때 식의 각 구성 요소를 계산할 수 있도록 식을 다시 정렬 합니다.
+식의 다른 부분이 계산 될 때까지 기다릴 필요 없이 식의 각 구성 요소가 발생할 때이를 평가할 수 있도록 식을 다시 정렬 합니다.
 
-식은 여러 명령을 나눕니다.
+식을 여러 개의 명령으로 나눕니다.
 
-이 오류는 can0015와 동일 합니다.
+이 오류는 CAN0015와 동일 합니다.

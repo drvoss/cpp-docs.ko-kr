@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837599"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422717"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>연습: MSBuild를 사용하여 Visual C++ 프로젝트 만들기
 
@@ -25,7 +25,7 @@ ms.locfileid: "65837599"
 
 - MSBuild를 사용하여 프로젝트 사용자 지정
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 진행하려면 먼저 다음 작업을 수행해야 합니다.
 
@@ -233,7 +233,7 @@ MSBuild를 사용하면 미리 정의된 빌드 대상을 실행하고, 사용�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>64비트 컴파일러 및 도구와 함께 MSBuild 사용
 
-기본적으로 64비트 Windows에 Visual Studio가 설치되어 있는 경우 64비트 x64 네이티브 및 크로스 도구가 설치됩니다. `PreferredToolArchitecture` 속성을 설정하면 64비트 컴파일러 및 도구를 사용하여 애플리케이션을 빌드하도록 MSBuild를 구성할 수 있습니다. 이 속성은 프로젝트 구성 또는 플랫폼 속성에 영향을 주지 않습니다. 기본적으로, 도구의 32비트 버전이 사용됩니다. 64비트 버전의 컴파일러 및 도구를 지정하려면 Myproject.vcxproj 프로젝트 파일에 다음 속성 그룹 요소를 `Microsoft.Cpp.default.props` \<Import /> 요소 뒤에 추가합니다.
+기본적으로 64비트 Windows에 Visual Studio가 설치되어 있는 경우 64비트 x64 네이티브 및 크로스 도구가 설치됩니다. `PreferredToolArchitecture` 속성을 설정하면 64비트 컴파일러 및 도구를 사용하여 애플리케이션을 빌드하도록 MSBuild를 구성할 수 있습니다. 이 속성은 프로젝트 구성 또는 플랫폼 속성에 영향을 주지 않습니다. 기본적으로, 도구의 32비트 버전이 사용됩니다. 64비트 버전의 컴파일러 및 도구를 지정하려면 Myproject.vcxproj 프로젝트 파일에서 `Microsoft.Cpp.default.props`\<Import /> 요소 뒤에 다음 속성 그룹 요소를 추가합니다.
 
 ```xml
 <PropertyGroup>
@@ -247,7 +247,7 @@ MSBuild를 사용하면 미리 정의된 빌드 대상을 실행하고, 사용�
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>다른 도구 집합과 함께 MSBuild 사용
 
-다른 버전의 Visual C++를 위한 도구 집합과 라이브러리가 설치되어 있는 경우 MSBuild는 현재 Visual C++ 버전 또는 다른 설치된 버전을 위한 애플리케이션을 빌드할 수 있습니다. 예를 들어, Visual Studio 2012를 설치한 경우 Windows XP를 위한 Visual C++ 11.0 도구 집합을 지정하려면 Myproject.vcxproj 프로젝트 파일에 다음 속성 그룹 요소를 `Microsoft.Cpp.props` \<Import /> 요소 뒤에 추가합니다.
+다른 버전의 Visual C++를 위한 도구 집합과 라이브러리가 설치되어 있는 경우 MSBuild는 현재 Visual C++ 버전 또는 다른 설치된 버전을 위한 애플리케이션을 빌드할 수 있습니다. 예를 들어 Visual Studio 2012를 설치한 경우 Windows XP를 위한 Visual C++ 11.0 도구 집합을 지정하려면 Myproject.vcxproj 프로젝트 파일에서 `Microsoft.Cpp.props`\<Import /> 요소 뒤에 다음 속성 그룹 요소를 추가합니다.
 
 ```xml
 <PropertyGroup>

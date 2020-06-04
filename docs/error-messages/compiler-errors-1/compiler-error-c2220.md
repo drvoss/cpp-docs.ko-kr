@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
-ms.openlocfilehash: 3ff730c6fea7d2c57c4ec3054fc627cdc6227e2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4fdac833e69e748dd29b9cf772c167fc1dbbd00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311750"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206663"
 ---
 # <a name="compiler-error-c2220"></a>컴파일러 오류 C2220
 
-경고가 오류로 처리 되었습니다-개체 파일이 생성 되지 않았습니다.
+경고가 오류로 처리 되었습니다. 개체 파일이 생성 되지 않았습니다.
 
-[/WX](../../build/reference/compiler-option-warning-level.md) 컴파일러가 모든 경고를 오류로 처리 합니다. 오류가 발생했기 때문에 개체 또는 실행 파일이 생성되지 않았습니다.
+[/Wx](../../build/reference/compiler-option-warning-level.md) 는 모든 경고를 오류로 처리 하도록 컴파일러에 지시 합니다. 오류가 발생했기 때문에 개체 또는 실행 파일이 생성되지 않았습니다.
 
-경우는이 오류만 표시 합니다 **/WX** 플래그가 설정 되 고 컴파일 중 경고가 발생 합니다. 이 오류를 해결하려면 프로젝트에서 모든 경고를 없애야 합니다.
+이 오류는 **/wx** 플래그가 설정 되 고 컴파일 중에 경고가 발생 하는 경우에만 표시 됩니다. 이 오류를 해결하려면 프로젝트에서 모든 경고를 없애야 합니다.
 
 ### <a name="to-fix-use-one-of-the-following-techniques"></a>해결하려면 다음 방법 중 하나를 사용합니다.
 
 - 프로젝트에서 경고를 일으키는 문제를 해결합니다.
 
-- 낮은 경고 수준에서 컴파일-사용 예를 들어 **/w3** of **/w4**합니다.
+- 낮은 경고 수준에서 컴파일합니다 (예: **/W4**대신 **/W3** 사용).
 
-- 사용 된 [경고](../../preprocessor/warning.md) pragma를 사용 하지 않거나 특정 경고를 표시 합니다.
+- [경고](../../preprocessor/warning.md) pragma를 사용 하 여 특정 경고를 사용 하지 않도록 설정 하거나 표시 하지 않습니다.
 
-- 사용 하지 마세요 **/WX** 컴파일할 수 있습니다.
+- **/Wx** 를 사용 하 여 컴파일해야 합니다.

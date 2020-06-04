@@ -1,1074 +1,1074 @@
 ---
-title: Microsoft 매크로 어셈블러 BNF 문법
-description: X 64 용 MASM에 대 한 BNF 설명입니다.
+title: 마이크로 소프트 매크로 어셈블러 BNF 문법
+description: x64에 대한 MASM에 대한 BNF 설명.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 738dce66cbae62939c9e001127e542f5b2798fc0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317969"
 ---
-# <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft 매크로 어셈블러 BNF 문법
+# <a name="microsoft-macro-assembler-bnf-grammar"></a>마이크로 소프트 매크로 어셈블러 BNF 문법
 
-이 페이지에는 MASM 문법에 대 한 BNF 설명이 포함 되어 있습니다. 이는 참조 항목에 대 한 보완으로 제공 되며 완전 하지 않을 수 있습니다. 키워드, 매개 변수, 작업 등에 대 한 자세한 내용은 참조 항목을 참조 하세요.
+이 페이지에는 MASM 문법에 대한 BNF 설명이 포함되어 있습니다. 그것은 참조에 대 한 보충으로 제공 하 고 완전 한 보장 되지 않습니다. 키워드, 매개 변수, 작업 등자세한 내용은 참조를 참조하십시오.
 
-BNF를 사용 하는 방법을 보여 주기 위해 다음 다이어그램에서는 비터미널 *Typedefdir*부터 TYPEDEF 지시문의 정의를 보여 줍니다.
+BNF의 사용을 설명하기 위해 다음 다이어그램은 비터미널로 *`typedefDir`* 시작하는 TYPEDEF 지시문 정의를 보여 줍니다.
 
 ![MASM BNF 예제](media/bnf.png)
 
-각 가로 중괄호 아래의 항목은 추가로 정의할 수 있는 터미널 (예: **NEAR16**, **NEAR32**, **FAR16**및 **FAR32**) 또는 비 터미널 (예: *한정자*, *qualifiedType*, *distance*및 *protoSpec*)입니다. *Typedefdir* 정의의 각 기울임꼴 비터미널 BNF의 항목 이기도 합니다. 3 개의 수직선은 비터미널에 대 한 분기 정의를 나타내므로이 그림에서는 간단한 설명을 위해 설명 하지 않습니다.
+각 가로 보조기 아래에 있는 항목은 **`NEAR16`** **`NEAR32`**". **`FAR16`** **`FAR32`** 및 및 . 또는 *`qualifier`*" *`qualifiedType`* *`distance`* 및 이와 같은 비터미널이며 *`protoSpec`* 추가정의할 수 있습니다. *`typedefDir`* 정의에서 각 기울임꼴 비터미널는 BNF의 항목이기도 합니다. 세 개의 세로 점은 단순성을 위해 이 그림이 설명하지 않는 비터미널에 대한 분기 정의를 나타냅니다.
 
-BNF 문법을 통해 재귀 정의를 사용할 수 있습니다. 예를 들어, 문법에서는 qualifiedType에 대 한 정의 구성 요소인 qualifiedType를 가능한 정의로 사용 합니다. "|" 기호는 대체 식 중에서 선택 항목을 지정 합니다 (예: *endOfLine* | *comment*). 이중 중괄호는 선택적 매개 변수를 지정 합니다 (예: ⟦ *macroParmList* ⟧). 대괄호는 실제로 소스 코드에 표시 되지 않습니다.
+BNF 문법은 재귀 정의를 허용합니다. 예를 들어 문법은 qualifiedType에 대한 가능한 정의로 qualifiedType을 사용하며, 이는 한정자에 대한 정의의 구성 요소이기도 합니다. "|" 기호는 대체 식 중에서 선택할 수 *`endOfLine`*  |  *`comment`* 있는 예: 이중 중괄호는 선택적 매개 *`macroParmList`* 변수(예: 대괄호는 실제로 소스 코드에 나타나지 않습니다.
 
-## <a name="masm-nonterminals"></a>MASM 비 터미널
+## <a name="masm-nonterminals"></a>MASM 비터미널
 
-*;;* \
-&nbsp;&nbsp;&nbsp;&nbsp;*endOfLine* | *설명*
+*`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`endOfLine`* | *`comment`*
 
-*= Dir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* = *immExpr* ;;
+*`=Dir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* = *`immExpr`* *`;;`*
 
-*Addop*\
-&nbsp;&nbsp;&nbsp;&nbsp;+ | -
+*`addOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | **`-`**
 
-*Aexpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;*용어* | *aexpr* && *용어*
+*`aExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`term`* | *`aExpr`* **`&&`** *`term`*
 
-*Altid*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`altId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*arbitraryText*\
-&nbsp;&nbsp;&nbsp;&nbsp;*charList*
+*`arbitraryText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`charList`*
 
-*asmInstruction*\
-&nbsp;&nbsp;&nbsp;&nbsp;*니모닉* ⟦ *exprList* ⟧
+*`asmInstruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`mnemonic`* ⟦ *`exprList`* ⟧
 
-*assumeDir*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** *assumeList* ; \
-&nbsp;&nbsp;&nbsp;&nbsp;| **아무 것도 가정** 하지 않습니다.
+*`assumeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ASSUME`** *`assumeList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ASSUME NOTHING`** *`;;`*
 
-*assumeList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*assumeRegister* | *assumeList* , *assumeRegister*\
+*`assumeList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`assumeRegister`* | *`assumeList`* **`,`** *`assumeRegister`*\
 
-*assumeReg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*등록* : *assumeVal*
+*`assumeReg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* **`:`** *`assumeVal`*
 
-*assumeRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;*assumeSegReg* | *assumeReg*
+*`assumeRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`assumeSegReg`* | *`assumeReg`*
 
-*assumeSegReg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segmentRegister* : *assumeSegVal*
+*`assumeSegReg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segmentRegister`* **`:`** *`assumeSegVal`*
 
-*assumeSegVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*프레임 식* | **NOTHING** | **오류**
+*`assumeSegVal`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`frameExpr`* | **`NOTHING`** | **`ERROR`**
 
-*assumeVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | **NOTHING** | **오류**
+*`assumeVal`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`qualifiedType`* | **`NOTHING`** | **`ERROR`**
 
-*bcdConst*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *sign* ⟧ *denumber*
+*`bcdConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`sign`* ⟧ *`decNumber`*
 
-*Binaryop*\
-&nbsp;&nbsp;&nbsp;&nbsp;= = |! = | > = | < = | > | < | &
+*`binaryOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`==`** | **`!=`** | **`>=`** | **`<=`** | **`>`** | **`<`** | **`&`**
 
-*Bitdef*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Bitfieldid* : *bitfieldid* ⟦ = *constExpr* ⟧
+*`bitDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`bitFieldId`* **`:`** *`bitFieldSize`* ⟦ **`=`** *`constExpr`* ⟧
 
-*Bitdeflist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Bitdef* | *bitdeflist* , ⟦;; ⟧ *Bitdef*
+*`bitDefList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`bitDef`* | *`bitDefList`* **`,`** ⟦ *`;;`* ⟧ *`bitDef`*
 
-*Bitfieldid*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`bitFieldId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*Bitfieldsize*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
+*`bitFieldSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*Blockstatements*\
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. 계속** **합니다. IF** *cexpr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.** ⟦ **를 중단 합니다. IF** *cexpr* ⟧
+*`blockStatements`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.CONTINUE`** **`.IF`** *`cExpr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.BREAK`** ⟦ **`.IF`** *`cExpr`* ⟧
 
-*bool*\
-&nbsp;&nbsp;&nbsp;&nbsp;**TRUE** | **FALSE**
+*`bool`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TRUE`** | **`FALSE`**
 
-*byteRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;AL | AH | CL | CH | DL | DH | BL | BH | R8B | R9B | R10B | R11B | R12B | R13B | R14B | R15B
+*`byteRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`AL`** | **`AH`** | **`CL`** | **`CH`** | **`DL`** | **`DH`** | **`BL`** | **`BH`** | **`R8B`** | **`R9B`** | **`R10B`** | **`R11B`** | **`R12B`** | **`R13B`** | **`R14B`** | **`R15B`**
 
-*Cexpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;*aexpr* | *Cexpr* || *aexpr*
+*`cExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`aExpr`* | *`cExpr`* **`||`** *`aExpr`*
 
-*문자*\
-&nbsp;&nbsp;&nbsp;는 줄 바꿈 (10)을 제외 하 고 0 ~ 255 범위에서 서 수를 포함 하는 모든 문자를 &nbsp;합니다.
+*`character`*\
+&nbsp;&nbsp;&nbsp;&nbsp;줄 바수(10)를 제외한 범위 0-255에 서수인 모든 문자입니다.
 
-*charList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*문자* | *charList* 문자
+*`charList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`character`* | *`charList`* *`character`*
 
-*className*\
-&nbsp;&nbsp;&nbsp;&nbsp;*문자열*
+*`className`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`string`*
 
-*주석 decl*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *nearfar* ⟧ ⟦ *langType* ⟧ *id* : *주석 유형*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦: *constExpr* ⟧
+*`commDecl`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`nearfar`* ⟧ ⟦ *`langType`* ⟧ *`id`* **`:`** *`commType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`:`** *`constExpr`* ⟧
 
-*주석 디렉터리*\
-&nbsp;&nbsp;&nbsp;&nbsp;**통신**\
-&nbsp;&nbsp;&nbsp;&nbsp;*주석 목록* ;;
+*`commDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`COMM`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`commList`* *`;;`*
 
-*주석*\
-&nbsp;&nbsp;&nbsp;&nbsp;; *텍스트* ;;
+*`comment`*\
+&nbsp;&nbsp;&nbsp;&nbsp;; *`text`* *`;;`*
 
-*commentDir*\
-&nbsp;&nbsp;&nbsp;**주석** *구분 기호* 를 &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;*텍스트*\
-&nbsp;&nbsp;&nbsp;&nbsp;*텍스트* *구분 기호* *텍스트* ;;
+*`commentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`COMMENT`** *`delimiter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`text`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`text`* *`delimiter`* *`text`* *`;;`*
 
-*주석 목록*\
-&nbsp;&nbsp;&nbsp;&nbsp;*주석* Decl | *주석 목록* , *주석 decl*
+*`commList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`commDecl`* | *`commList`* **`,`** *`commDecl`*
 
-*주석 형식*\
-&nbsp;&nbsp;&nbsp;&nbsp;*유형* | *constExpr*
+*`commType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`type`* | *`constExpr`*
 
-*상수*\
-&nbsp;&nbsp;&nbsp;&nbsp;*digits* ⟦ *radixOverride* ⟧
+*`constant`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`digits`* ⟦ *`radixOverride`* ⟧
 
-*constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*
+*`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*
 
-*Contextdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Pushcontext** *contextitemlist* ; \
-&nbsp;&nbsp;&nbsp;&nbsp;**POPCONTEXT** *contextitemlist* ;;
+*`contextDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUSHCONTEXT`** *`contextItemList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`POPCONTEXT`** *`contextItemList`* *`;;`*
 
-*Contextitem*\
-&nbsp;&nbsp;&nbsp;&nbsp; | **CPU** | 모두 **나열** |  | **기** 하는 **것으로 가정** 합니다.
+*`contextItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ASSUMES`** | **`RADIX`** | **`LISTING`** | **`CPU`** | **`ALL`**
 
-*Contextitemlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*contextitem* | *contextitemlist* , *contextitem*
+*`contextItemList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`contextItem`* | *`contextItemList`* **`,`** *`contextItem`*
 
-*Controlblock*\
-&nbsp;&nbsp;&nbsp;&nbsp;*whileBlock* | *repeatblock*
+*`controlBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`whileBlock`* | *`repeatBlock`*
 
-*Controldir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*controlIf* | *controlblock*
+*`controlDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`controlIf`* | *`controlBlock`*
 
-*Controlelseif*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ELSEIF** &nbsp;&nbsp;&nbsp;&nbsp;*cexpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList* \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Controlelseif* ⟧
+*`controlElseif`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ELSEIF`** &nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`* \
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`controlElseif`* ⟧
 
-*controlIf*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. &nbsp;&nbsp;** &nbsp;&nbsp;*cexpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Controlelseif* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ **. ELSE** ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;[*directiveList*⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp; **. ENDIF** ;;
+*`controlIf`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.IF`** &nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`controlElseif`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`.ELSE`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;[*`directiveList`*⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ENDIF`** *`;;`*
 
-*보조 프로세서*\
-&nbsp;&nbsp;&nbsp;&nbsp;. 8087 | 287 |. 387 |. NO87
+*`coprocessor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.8087`** | **`.287`** | **`.387`** | **`.NO87`**
 
-*Crefdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Crefoption* ;;
+*`crefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`crefOption`* *`;;`*
 
-*Crefoption*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. CREF**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. XCREF** ⟦ *idlist* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. NOCREF** ⟦ *idlist* ⟧
-
-*Cxzexpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*\
-&nbsp;&nbsp;&nbsp;&nbsp;|! *expr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *expr* = = expr \
-&nbsp;&nbsp;&nbsp;&nbsp;| *expr* ! = expr
-
-*Datadecl*\
-&nbsp;&nbsp;&nbsp;&nbsp;DB | DW | DD | DF | DQ | DT | *dataType* | *typeId*
-
-*Datadir*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *id* ⟧ *dataItem* ;;
-
-*dataItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Datadecl* *scalarInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *structTag* *structInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *typeId* *structInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *unionTag* *structInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Recordtag* *recordtag 목록*
-
-*데이터 형식*\
-&nbsp;&nbsp;&nbsp;&nbsp;바이트 | SBYTE | WORD | 검 | DWORD | SDWORD | FWORD | QWORD(64 | SQWORD | 1TB | OWORD | REAL4 | REAL8 | REAL10 | MMWORD | XMMWORD | YMMWORD
-
-*\*
-&nbsp;&nbsp;&nbsp;&nbsp;0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 되었는지
-
-\ *수*
-&nbsp;&nbsp; *&nbsp;&nbsp;\*
-&nbsp;&nbsp;&nbsp;&nbsp;| *바이트 수*
-
-*구분 기호*\
-*whiteSpaceCharacter* 를 제외한 모든 문자를 &nbsp;&nbsp;&nbsp;&nbsp;
-
-*숫자*\
-&nbsp;&nbsp; *&nbsp;&nbsp;\*
-&nbsp;&nbsp;&nbsp;&nbsp;| *자리 숫자* *\*
-&nbsp;&nbsp;&nbsp;&nbsp;| *숫자* hexdigit
-
-*지시문*\
-&nbsp;&nbsp;&nbsp;&nbsp;*일반 dir* | *segmentDef*
-
-*directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*지시문* | *directiveList* *지시문*
-
-*거리*\
-&nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
-
-*e 01,* \
-&nbsp;&nbsp;&nbsp;&nbsp;e 01, *Orop* *e02* | *e02*
-
-*e02*\
-&nbsp;&nbsp;&nbsp;&nbsp;e02 **및** *e03* | *e03*
-
-*e03*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** *e04* | *e04*
-
-*e04*\
-&nbsp;&nbsp;&nbsp;&nbsp;*e04* *relop* *e05* | *e05*
-
-*e05*\
-&nbsp;&nbsp;&nbsp;&nbsp;*e05* *addop* *e06* | *e06*
-
-*e06*\
-&nbsp;&nbsp;&nbsp;&nbsp;*e06* *mulOp* *e07* | *e06* *shiftOp* *e07* | *e07*
-
-*e07*\
-&nbsp;&nbsp;&nbsp;&nbsp;*e07* *addop* *e08* | *e08*
-
-*e08*\
-&nbsp;&nbsp;&nbsp;&nbsp;**HIGH** *e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **LOW** *e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Highword** *e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Lowword** *e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *e09*
-
-*e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;**OFFSET** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SEG** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Lroffset** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **TYPE** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;**이** *e10* | 
-&nbsp;&nbsp;&nbsp;&nbsp;| *e09* **PTR** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *e09* : *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *e10*
-
-*e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;*e10* . *e11*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *e10* ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| *e11*
-
-*e11*\
-&nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **너비** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **마스크** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **크기** *sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SIZEOF** *sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **길이** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **LENGTHOF** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Recordconst*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *문자열*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *상수*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *형식*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **$**\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *등록*
-&nbsp;&nbsp;&nbsp;&nbsp;| **ST**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ST** ( *expr* )
-
-*echoDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**에코**\
-&nbsp;&nbsp;&nbsp;&nbsp;*arbitraryText* ;; \
-%**OUT** *arbitraryText* ;; \
-
-*elseifBlock*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elseifStatement* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *elseifBlock* ⟧ \
-
-*elseifStatement*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ELSEIF** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFE** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFB** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNB** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDEF** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFNDEF** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIF** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFDIFI** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDN** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIFIDNI** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF1**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF2**
-
-*Enddir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**END** ⟦ *immExpr* ⟧;;
-
-*Endpdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Procid* **endp** ;;
-
-*Endsdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id가* **끝남** ;;
-
-*\*
-&nbsp;&nbsp;&nbsp;&nbsp;*textMacroId* **같음** *equType* ;;
-
-*equType*\
-&nbsp;&nbsp;&nbsp;&nbsp;*immExpr* | *textliteral*
-
-*Errordir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Erroropt* ;;
-
-*Erroropt*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ERR** ⟦ *textitem* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRE** *constExpr* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRNZ** *constExpr* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRB** *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRNB** *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRDEF** *id* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .ERRNDEF** *id* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .ERRDIF** *textitem* , *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRDIFI** *textitem* , *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRIDN** *textitem* , *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERRIDNI** *textitem* , *textitem* ⟦ *optText* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERR1** ⟦ *textitem* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .ERR2** ⟦ *textitem* ⟧
-
-*Exitdir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. EXIT** &nbsp;&nbsp;&nbsp;&nbsp;⟦ *expr* ⟧;;
-
-*exitmDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;: EXITM | EXITM *Textitem*
-
-*지* 수\
-&nbsp;&nbsp;&nbsp;&nbsp;E ⟦ *sign* ⟧ *denumber*
-
-*expr*\
-&nbsp;&nbsp;&nbsp;&nbsp;**SHORT** *e05*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.** E 01, \ 형식
-&nbsp;&nbsp;&nbsp;&nbsp;| **Opattr** *e 01,* \
-&nbsp;&nbsp;&nbsp;&nbsp;| *e 01,*
-
-*exprList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr* | *exprList* , *expr*
-
-*externDef*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧ *Id* ⟦ ( *Altid* ) ⟧: *externType*
-
-*externDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*externKey* *externList* ;;
-
-*externKey*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Extrn** | **EXTERN** | **EXTERNDEF**
-
-*externList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*externDef* | *externList* , ⟦;; ⟧ *externDef*
-
-*externType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ABS** | *qualifiedType*
-
-*Fieldalign*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
-
-*fieldInit*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Initvalue* ⟧ | *structInstance*
-
-*Fieldinitlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*fieldInit* | *fieldinitlist* , ⟦;; ⟧ *fieldInit*
-
-*fileChar*\
-&nbsp;&nbsp;&nbsp;&nbsp;*구분 기호*
-
-*fileCharList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*fileChar* | *fileCharList* *fileChar*
-
-*fileSpec*\
-&nbsp;&nbsp;&nbsp;&nbsp;*fileCharList* | *textliteral*
-
-*플래그 이름*\
-&nbsp;&nbsp;&nbsp;&nbsp;**0 입니까?** | **수행 하 시겠습니까?****오버플로  | ?** | **기호**패리티를  | **하 시겠습니까?**
-
-*floatNumber*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *sign* ⟧ *denumber* . ⟦ *Denumber* ⟧ ⟦ *지* 수 ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| *숫자* R | *숫자* r
-
-*forcDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Forc** | **irpc**
-
-*Fordir*\
- | **IRP** **에 대 한** &nbsp;&nbsp;&nbsp;&nbsp;
-
-*forParm*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* ⟦: *forParmType* ⟧
-
-*forParmType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**요청** | = *Textliteral*
-
-*fpuRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ST** *식*
-
-*프레임 식*\
-&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Idgroup** : *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister* : *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *id*
-
-*일반 디렉터리*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Modeldir* | *SegOrderDir* | *namedir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *includeLibDir* | *commentDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Groupdir* | *assumeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *structDir* | *Recorddir* | *typedefdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *externDir* | *Publicdir* | *protoTypeDir* * | \*
-&nbsp;&nbsp;&nbsp; *&nbsp;| * = Dir | *Textdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Contextdir* | *dir* | *processorDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *radixDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *titleDir* | *Pagedir* | *listdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Crefdir* | *echoDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Ifdir* | *Errordir* | *includedir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *macroDir* | *macroCall* | *macroRepeat* | *purgeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *macroWhile* | *macroFor* | *macroForc*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *aliasDir*
-
-*gpRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;AX | EAX | CX | ECX | DX | EDX | BX | EBX | DI | EDI | SI | ESI | BP | EBP | SP | ESP | RSP | R8W | R8D | R9W | R9D | R12D | R13W | R13D | R14W | R14D
-
-*Groupdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*groupId* **그룹** *segIdList*
-
-*groupId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
-
-*hexdigit*\
-&nbsp;&nbsp;&nbsp;&nbsp;a | b | c | d | e | f | A | B | C | D | E | 350
-
-*id*\
-식별자의 첫 번째 문자를 &nbsp;&nbsp;&nbsp;대문자 (`[A–Za-z]`) 또는 이러한 네 문자 중 하나를 사용할 수 있습니다. 나머지 문자는 같은 문자 또는 10 진수 (`@ _ $ ?`)를 사용할 수 있습니다. &nbsp; 최대 길이는 247 자입니다.
-
-*Idlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* | *idlist* , *id*
-
-*Ifdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Ifstatement* ; \
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *elseifBlock* ⟧ \
-&nbsp;&nbsp;&nbsp; **&nbsp;⟦;;** \
-&nbsp;&nbsp;&nbsp;&nbsp;*directiveList* ⟧;; \
-
-*Ifstatement*\
-*constExpr* 을 &nbsp;&nbsp; **&nbsp;&nbsp;\**
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ife** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFB** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ifnb** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFDEF** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFNDEF** *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFDIF** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ifdifi** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ifidn** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ifidni** *textitem* , *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IF1**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IF2**
-
-*immExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*
-
-*Includedir*\
-&nbsp;&nbsp;&nbsp;&nbsp;에 **는** *fileSpec* 이 포함 됩니다.
-
-*includeLibDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**INCLUDELIB** *fileSpec* ;;
-
-*Initvalue*\
-&nbsp;&nbsp;&nbsp;&nbsp;*immExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *문자열*\
-&nbsp;&nbsp;&nbsp;&nbsp;|? \
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *scalarInstList* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| *floatNumber*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *bcdConst*
-
-*inSegDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Labeldef* ⟧ *inSegmentDir*
-
-*inSegDirList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*inSegDir* | *inSegDirList* *inSegDir*
-
-*inSegmentDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*명령*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Datadir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Controldir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Startupdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Exitdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *offsetDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Labeldir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Procdir* ⟦ *localdirlist* ⟧ ⟦ *inSegDirList* ⟧ *endpdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *invokeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *일반 디렉터리*
-
-*instrPrefix*\
-&nbsp;&nbsp; **&nbsp;&nbsp; | ** **Repe** | **REPZ** | **Repne** | **repnz** | **잠금**
-
-*명령*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *instrPrefix* ⟧ *asmInstruction*
-
-*invokeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*register* :: *register* | *expr* | **ADDR** *expr*
-
-*invokeDir*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** *expr* ⟦, ⟦;; ⟧ *invokeList* ⟧;;
-
-*invokeList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*invokeArg* | *invokeList* , ⟦;; ⟧ *invokeArg*
-
-*키워드*\
-모든 예약어를 &nbsp;&nbsp;&nbsp;&nbsp;합니다.
-
-*Keywordlist* 아래\
-&nbsp;&nbsp;&nbsp;&nbsp;*키워드* | *키워드* *keywordlist* 모음
-
-*Labeldef*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* : | *id* :: | @@:
-
-*Labeldir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* **레이블** *qualifiedType* ;;
-
-*langType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**C** | **파스칼** | **포트란** | **BASIC** | **SYSCALL** | **STDCALL**
-
-*Listdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Listoption* ;;
-
-*Listoption*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 목록**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. NOLIST**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. XLIST**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. LISTALL**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .LISTIF**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .LFCOND**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .NOLISTIF**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. SFST\**
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .TFCOND**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. .LISTMACROALL** |  **. LALL**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. NOLISTMACRO** | **입니다. .SALL**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. LISTMACRO** | **입니다. XALL**\
-
-*Localdef*\
-&nbsp;&nbsp;&nbsp;&nbsp;**로컬** *idlist* ;;
-
-*Localdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**로컬** *parmlist* ;;
-
-*Localdirlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*localdir* | *localtlist* *localdir*
-
-*Locallist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*localdef* | *localdef 목록*
-
-*macroArg*\
- % *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| %*textMacroId*\
-&nbsp;&nbsp;&nbsp;&nbsp;| %*macroFuncId* ( *macroArgList* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| *문자열*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *arbitraryText*\
-&nbsp;&nbsp;&nbsp;&nbsp;| < *arbitraryText* >
-
-*macroArgList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*macroArg* | *macroArgList* , *macroArg*
-
-*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Locallist* ⟧ *macroStmtList*
-
-*macroCall*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* *macroArgList* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *id* ( *macroArgList* )
-
-*macroDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* **매크로** ⟦ *macroParmList* ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Endm** ;;
-
-*macroFor*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Fordir* *ForParm* , < *macroArgList* >;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Endm** ;;
-
-*macroForc*\
-&nbsp;&nbsp;&nbsp;&nbsp;*forcDir* *id* , *textliteral* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Endm** ;;
-
-*macroFuncId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
-
-*macroId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*macroProcId* | *macroFuncId*
-
-*macroIdList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*macroId* | *macroIdList* , *macroId*
-
-*macroLabel*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
-
-*macroParm*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* ⟦: *parmType* ⟧
-
-*macroParmList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*macroParm* | *macroParmList* , ⟦;; ⟧ *macroParm*
-
-*macroProcId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
-
-*macroRepeat*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Repeatdir* *constExpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Endm** ;;
-
-*macroStmt*\
-&nbsp;&nbsp;&nbsp;&nbsp;*지시문* 을 \
-&nbsp;&nbsp;&nbsp;&nbsp;| *exitmDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| : *macroLabel*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **GOTO**
-&nbsp;&nbsp;&nbsp;&nbsp;*macroLabel*
-
-*macroStmtList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*macroStmt* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *macroStmtList* *macroStmt* ;; \
-
-*macroWhile*\
-*constExpr* 에 &nbsp;&nbsp; **&nbsp;&nbsp;;** \
-&nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Endm** ;;
-
-*Maptype*\
-&nbsp;&nbsp;&nbsp;&nbsp;**모든** | **없음** | **NOTPUBLIC**
-
-*Memoption*\
-&nbsp;&nbsp; **&nbsp;&nbsp;작은** | **SMALL** | **MEDIUM** | **COMPACT** | **큰** |  ** | ** **FLAT**
-
-*니모닉*\
+*`crefOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.CREF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.XCREF`**  ⟦ *`idList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOCREF`** ⟦ *`idList`* ⟧
+
+*`cxzExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`!`** *`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`expr`* **`==`** *`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`expr`* **`!=`** *`expr`*
+
+*`dataDecl`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`DB`** | **`DW`** | **`DD`** | **`DF`** | **`DQ`** | **`DT`** | *`dataType`* | *`typeId`*
+
+*`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`id`* ⟧ *`dataItem`* *`;;`*
+
+*`dataItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`dataDecl`* *`scalarInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structTag`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`typeId`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`unionTag`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordTag`* *`recordInstList`*
+
+*`dataType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`BYTE`** | **`SBYTE`** | **`WORD`** | **`SWORD`** | **`DWORD`** | **`SDWORD`** | **`FWORD`** | **`QWORD`** | **`SQWORD`** | **`TBYTE`** | **`OWORD`** | **`REAL4`** | **`REAL8`** | **`REAL10`** | **`MMWORD`** | **`XMMWORD`** | **`YMMWORD`**
+
+*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`0`** | **`1`** | **`2`** | **`3`** | **`4`** | **`5`** | **`6`** | **`7`** | **`8`** | **`9`**
+
+*`decNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`decNumber`* *`decdigit`*
+
+*`delimiter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;제외한 모든 문자*`whiteSpaceCharacter`*
+
+*`digits`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* *`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* *`hexdigit`*
+
+*`directive`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`generalDir`* | *`segmentDef`*
+
+*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directive`* | *`directiveList`* *`directive`*
+
+*`distance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`nearfar`* | **`NEAR16`** | **`NEAR32`** | **`FAR16`** | **`FAR32`**
+
+*`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e01`* *`orOp`* *`e02`* | *`e02`*
+
+*`e02`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e02`* **`AND`** *`e03`* | *`e03`*
+
+*`e03`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NOT`** *`e04`* | *`e04`*
+
+*`e04`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e04`* *`relOp`* *`e05`* | *`e05`*
+
+*`e05`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e05`* *`addOp`* *`e06`* | *`e06`*
+
+*`e06`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e06`* *`mulOp`* *`e07`* | *`e06`* *`shiftOp`* *`e07`* | *`e07`*
+
+*`e07`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e07`* *`addOp`* *`e08`* | *`e08`*
+
+*`e08`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`HIGH`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LOW`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`HIGHWORD`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LOWWORD`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`*
+
+*`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OFFSET`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SEG`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LROFFSET`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`TYPE`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`THIS`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`* **`PTR`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`* **`:`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e10`*
+
+*`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e10`* **`.`** *`e11`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e10`* ⟦ *`expr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e11`*
+
+*`e11`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`expr`* **`)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *`expr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`WIDTH`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`MASK`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZE`** *`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZEOF`** *`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LENGTH`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LENGTHOF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constant`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`type`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`$`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segmentRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`register`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ST`** **`(`** *`expr`* **`)`**
+
+*`echoDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ECHO`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`arbitraryText`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`%OUT`** *`arbitraryText`* *`;;`*
+
+*`elseifBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`elseifStatement`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`elseifBlock`* ⟧
+
+*`elseifStatement`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ELSEIF`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFE`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFNB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFNDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDIF`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDIFI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFIDN`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFIDNI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIF1`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIF2`**
+
+*`endDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`END`** ⟦ *`immExpr`* ⟧ *`;;`*
+
+*`endpDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`procId`* **`ENDP`** *`;;`*
+
+*`endsDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`ENDS`** *`;;`*
+
+*`equDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textMacroId`* **`EQU`** *`equType`* *`;;`*
+
+*`equType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`immExpr`* | *`textLiteral`*
+
+*`errorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`errorOpt`* *`;;`*
+
+*`errorOpt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ERR`** ⟦ *`textItem`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRE`** *`constExpr`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNZ`** *`constExpr`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRB`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNB`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDEF`** *`id`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNDEF`** *`id`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDIF`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDIFI`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRIDN`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRIDNI`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERR1`** ⟦ *`textItem`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERR2`** ⟦ *`textItem`* ⟧
+
+*`exitDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.EXIT`** &nbsp;&nbsp;&nbsp;&nbsp;⟦ *`expr`* ⟧ *`;;`*
+
+*`exitmDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;: **`EXITM`** | **`EXITM`** *`textItem`*
+
+*`exponent`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`E`** ⟦ *`sign`* ⟧ *`decNumber`*
+
+*`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SHORT`** *`e05`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.TYPE`** *`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OPATTR`** *`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e01`*
+
+*`exprList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`* | *`exprList`* **`,`** *`expr`*
+
+*`externDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`langType`* ⟧ *`id`* ⟦ **`(`** *`altId`* **`)`** ⟧ **`:`** *`externType`*
+
+*`externDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`externKey`* *`externList`* *`;;`*
+
+*`externKey`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EXTRN`** | **`EXTERN`** | **`EXTERNDEF`**
+
+*`externList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`externDef`* | *`externList`* **`,`** ⟦ *`;;`* ⟧ *`externDef`*
+
+*`externType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ABS`** | *`qualifiedType`*
+
+*`fieldAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
+
+*`fieldInit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`initValue`* ⟧ | *`structInstance`*
+
+*`fieldInitList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fieldInit`* | *`fieldInitList`* **`,`** ⟦ *`;;`* ⟧ *`fieldInit`*
+
+*`fileChar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`delimiter`*
+
+*`fileCharList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fileChar`* | *`fileCharList`* *`fileChar`*
+
+*`fileSpec`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fileCharList`* | *`textLiteral`*
+
+*`flagName`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ZERO?`** | **`CARRY?`** | **`OVERFLOW?`** | **`SIGN?`** | **`PARITY?`**
+
+*`floatNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`sign`* ⟧ *`decNumber`* **`.`** ⟦ *`decNumber`* ⟧ ⟦ *`exponent`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* **`R`** | *`digits`* **`r`**
+
+*`forcDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`FORC`** | **`IRPC`**
+
+*`forDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`FOR`** | **`IRP`**
+
+*`forParm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* ⟦ **`:`** *`forParmType`* ⟧
+
+*`forParmType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REQ`** | **`=`** *`textLiteral`*
+
+*`fpuRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ST`** *`expr`*
+
+*`frameExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SEG`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`DGROUP`** **`:`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segmentRegister`* **`:`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`*
+
+*`generalDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`modelDir`* | *`segOrderDir`* | *`nameDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`includeLibDir`* | *`commentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`groupDir`* | *`assumeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structDir`* | *`recordDir`* | *`typedefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`externDir`* | *`publicDir`* | *`commDir`* | *`protoTypeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`equDir`* | *`=Dir`* | *`textDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`contextDir`* | *`optionDir`* | *`processorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`radixDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`titleDir`* | *`pageDir`* | *`listDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`crefDir`* | *`echoDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`ifDir`* | *`errorDir`* | *`includeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroDir`* | *`macroCall`* | *`macroRepeat`* | *`purgeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroWhile`* | *`macroFor`* | *`macroForc`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`aliasDir`*
+
+*`gpRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`AX`** | **`EAX`** | **`CX`** | **`ECX`** | **`DX`** | **`EDX`** | **`BX`** | **`EBX`** | **`DI`** | **`EDI`** | **`SI`** | **`ESI`** | **`BP`** | **`EBP`** | **`SP`** | **`ESP`** | **`RSP`** | **`R8W`** | **`R8D`** | **`R9W`** | **`R9D`** | **`R12D`** | **`R13W`** | **`R13D`** | **`R14W`** | **`R14D`**
+
+*`groupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`groupId`* **`GROUP`** *`segIdList`*
+
+*`groupId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`hexdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`a`** | **`b`** | **`c`** | **`d`** | **`e`** | **`f`** | **`A`** | **`B`** | **`C`** | **`D`** | **`E`** | **`F`**
+
+*`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;식별자의 첫 번째 문자는 대문자 또는 소문자 알파벳`[A–Za-z]`문자() 또는 이 `@ _ $ ?` 네 문자 중 어느 한 쪽이 될`[0–9]`수 있습니다. 최대 길이는 247자입니다.
+
+*`idList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* | *`idList`* **`,`** *`id`*
+
+*`ifDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`ifStatement`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`elseifBlock`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`ELSE`** *`;;`* \
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`* ⟧ *`;;`*
+
+*`ifStatement`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`IF`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFE`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFNB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFNDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDIF`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDIFI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFIDN`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFIDNI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IF1`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IF2`**
+
+*`immExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*
+
+*`includeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INCLUDE`** *`fileSpec`* *`;;`*
+
+*`includeLibDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INCLUDELIB`** *`fileSpec`* *`;;`*
+
+*`initValue`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`immExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`?`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** ( *`scalarInstList`* )\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`floatNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`bcdConst`*
+
+*`inSegDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`labelDef`* ⟧ *`inSegmentDir`*
+
+*`inSegDirList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`inSegDir`* | *`inSegDirList`* *`inSegDir`*
+
+*`inSegmentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`instruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`controlDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`startupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`exitDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`labelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`procDir`* ⟦ *`localDirList`* ⟧ ⟦ *`inSegDirList`* ⟧ *`endpDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`invokeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`generalDir`*
+
+*`instrPrefix`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REP`** | **`REPE`** | **`REPZ`** | **`REPNE`** | **`REPNZ`** | **`LOCK`**
+
+*`instruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`instrPrefix`* ⟧ *`asmInstruction`*
+
+*`invokeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* **`::`** *`register`* | *`expr`* | **`ADDR`** *`expr`*
+
+*`invokeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INVOKE`** *`expr`* ⟦ **`,`** ⟦ *`;;`* ⟧ *`invokeList`* ⟧ *`;;`*
+
+*`invokeList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`invokeArg`* | *`invokeList`* **`,`** ⟦ *`;;`* ⟧ *`invokeArg`*
+
+*`keyword`*\
+&nbsp;&nbsp;&nbsp;&nbsp;예약된 단어입니다.
+
+*`keywordList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`keyword`* | *`keyword`* *`keywordList`*
+
+*`labelDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`:`** | *`id`* **`::`** | **`@@:`**
+
+*`labelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`LABEL`** *`qualifiedType`* *`;;`*
+
+*`langType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`C`** | **`PASCAL`** | **`FORTRAN`** | **`BASIC`** | **`SYSCALL`** | **`STDCALL`**
+
+*`listDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`listOption`* *`;;`*
+
+*`listOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.LIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.XLIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTIF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLISTIF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.SFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.TFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTMACROALL`** | **`.LALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLISTMACRO`** | **`.SALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTMACRO`** | **`.XALL`**
+
+*`localDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`LOCAL`** *`idList`* *`;;`*
+
+*`localDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`LOCAL`** *`parmList`* *`;;`*
+
+*`localDirList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`localDir`* | *`localDirList`* *`localDir`*
+
+*`localList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`localDef`* | *`localList`* *`localDef`*
+
+*`macroArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`%`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`%`** *`textMacroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`%`** *`macroFuncId`* **`(`** *`macroArgList`* **`)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`arbitraryText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`<`** *`arbitraryText`* **`>`**
+
+*`macroArgList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroArg`* | *`macroArgList`* **`,`** *`macroArg`*
+
+*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`localList`* ⟧ *`macroStmtList`*
+
+*`macroCall`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`macroArgList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`* ( *`macroArgList`* )
+
+*`macroDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`MACRO`** ⟦ *`macroParmList`* ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroFor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`forDir`* *`forParm`* **`,`** **`<`** *`macroArgList`* **`>`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroForc`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`forcDir`* *`id`* **`,`** *`textLiteral`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroFuncId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroProcId`* | *`macroFuncId`*
+
+*`macroIdList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroId`* | *`macroIdList`* **`,`** *`macroId`*
+
+*`macroLabel`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroParm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* ⟦ **`:`** *`parmType`* ⟧
+
+*`macroParmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroParm`* | *`macroParmList`* **`,`** ⟦ *`;;`* ⟧ *`macroParm`*
+
+*`macroProcId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroRepeat`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`repeatDir`* *`constExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroStmt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directive`* \
+&nbsp;&nbsp;&nbsp;&nbsp;| *`exitmDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`:`** *`macroLabel`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`GOTO`** *`macroLabel`*
+
+*`macroStmtList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroStmt`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroStmtList`* *`macroStmt`* *`;;`*\
+
+*`macroWhile`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`WHILE`** *`constExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`mapType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ALL`** | **`NONE`** | **`NOTPUBLIC`**
+
+*`memOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TINY`** | **`SMALL`** | **`MEDIUM`** | **`COMPACT`** | **`LARGE`** | **`HUGE`** | **`FLAT`**
+
+*`mnemonic`*\
 &nbsp;&nbsp;&nbsp;&nbsp;명령 이름입니다.
 
-*Modeldir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 모델**\
-&nbsp;&nbsp;&nbsp;&nbsp;*Memoption* ⟦, *Modeloptlist* ⟧;;
+*`modelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.MODEL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`memOption`* ⟦ **`,`** *`modelOptlist`* ⟧ *`;;`*
 
-*Modelopt*\
-&nbsp;&nbsp;&nbsp;&nbsp;*langType* | *stackoption*
+*`modelOpt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`langType`* | *`stackOption`*
 
-*Modeloptlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*modelopt* | *Modeloptlist* , *modelopt*
+*`modelOptlist`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`modelOpt`* | *`modelOptlist`* **`,`** *`modelOpt`*
 
-*모듈*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *directiveList* ⟧ *enddir*
+*`module`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`directiveList`* ⟧ *`endDir`*
 
-*mulOp*\
-&nbsp;&nbsp;&nbsp;&nbsp;\* | / | **MOD**
+*`mulOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`*`** | **`/`** | **`MOD`**
 
-*Namedir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**이름**\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* ;; \
+*`nameDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NAME`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`;;`*
 
-*nearfar*\
-&nbsp;&nbsp;&nbsp;&nbsp;**근처** | 
+*`nearfar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NEAR`** | **`FAR`**
 
-*nestedStruct*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structHdr* ⟦ *id* ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*structBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;**종료** ; \
+*`nestedStruct`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structHdr`* ⟦ *`id`* ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDS`** *`;;`*
 
-*offsetDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*offsetDirType* ;;
+*`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`offsetDirType`* *`;;`*
 
-*offsetDirType*\
-&nbsp;&nbsp; **&nbsp;&nbsp; | ** **ORG** *immExpr* | **ALIGN** ⟦ *constExpr* ⟧
+*`offsetDirType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EVEN`** | **`ORG`** *`immExpr`* | **`ALIGN`** ⟦ *`constExpr`* ⟧
 
-*offsetType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**그룹** | **세그먼트** | 
+*`offsetType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`GROUP`** | **`SEGMENT`** | **`FLAT`**
 
-*oldRecordFieldList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *oldRecordFieldList* , ⟦ *constExpr* ⟧
+*`oldRecordFieldList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`constExpr`* ⟧ | *`oldRecordFieldList`* **`,`** ⟦ *`constExpr`* ⟧
 
-기타 *dir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**옵션 옵션** *목록* ;;
+*`optionDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OPTION`** *`optionList`* *`;;`*
 
-*항목 항목*\
-&nbsp;&nbsp;&nbsp;&nbsp;**CASEMAP** : *maptype*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **DOTNAME** | **NODOTNAME**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **에뮬레이터** | **noemulator**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **에필로그** : *macroId*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **EXPR16** | **EXPR32**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **언어** : *langType*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ljmp**
-| **noljmp**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **M510** | **NOM510**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Nokeyword** : < *keywordlist* 모음 >\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Nosignextend**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **오프셋** : *offsetType*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Oldmacros** | **nooldmacros**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Oldstructs** | **nooldstructs**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **PROC** : *ovisibility*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **프롤로그** : *macroId*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **READONLY** | **NOREADONLY**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **범위** | **noscoped** 지정 된\
-&nbsp;&nbsp;&nbsp;&nbsp;| **세그먼트** : *segSize*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SETIF2** : bool
+*`optionItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CASEMAP`** : *`mapType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`DOTNAME`** | **`NODOTNAME`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EMULATOR`** | **`NOEMULATOR`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EPILOGUE`** **`:`** *`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EXPR16`** | **`EXPR32`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LANGUAGE`** **`:`** *`langType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LJMP`** | **`NOLJMP`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`M510`** | **`NOM510`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`NOKEYWORD`** **`:`** **`<`** *`keywordList`* **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`NOSIGNEXTEND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OFFSET`** **`:`** *`offsetType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OLDMACROS`** | **`NOOLDMACROS`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OLDSTRUCTS`** | **`NOOLDSTRUCTS`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`PROC`** **`:`** *`oVisibility`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`PROLOGUE`** : *`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`READONLY`** | **`NOREADONLY`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SCOPED`** | **`NOSCOPED`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SEGMENT`** **`:`** *`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SETIF2`** **`:`** *`bool`*
 
-\ *목록* (영문)
-&nbsp;&nbsp;&nbsp;&nbsp;*항목* * | ;* ⟦;; ⟧; *항목*
+*`optionList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`optionItem`* | *`optionList`* **`,`** ⟦ *`;;`* ⟧ *`optionItem`*
 
-*optText*\
-&nbsp;&nbsp;&nbsp;&nbsp;, *Textitem*
+*`optText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`,`** *`textItem`*
 
-*Orop*\
-&nbsp;&nbsp;&nbsp;&nbsp;**또는** | **XOR**
+*`orOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OR`** | **`XOR`**
 
-*Ovisibility*\
-&nbsp;&nbsp;&nbsp;&nbsp;**공용** | **개인** | **내보내기**
+*`oVisibility`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** | **`PRIVATE`** | **`EXPORT`**
 
-*Pagedir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**페이지** ⟦ *pageexpr* ⟧;;
+*`pageDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PAGE`** ⟦ *`pageExpr`* ⟧ *`;;`*
 
-*Pageexpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;\+ | ⟦ *pageLength* ⟧ ⟦, *pagewidth* ⟧
+*`pageExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | ⟦ *`pageLength`* ⟧ ⟦ **`,`** *`pageWidth`* ⟧
 
-*pageLength*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
+*`pageLength`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*Pagewidth*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
+*`pageWidth`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*parm*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Parmid* ⟦: *qualifiedType* ⟧ | *Parmid* ⟦ *constExpr* ⟧ ⟦: *qualifiedType* ⟧
+*`parm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`parmId`* ⟦ **`:`** *`qualifiedType`* ⟧ | *`parmId`* ⟦ *`constExpr`* ⟧ ⟦ **`:`** *`qualifiedType`* ⟧
 
-*Parmid*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`parmId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*Parmlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*parm* | *parmlist* , ⟦;; ⟧ *parm*
+*`parmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`parm`* | *`parmList`* **`,`** ⟦ *`;;`* ⟧ *`parm`*
 
-*parmType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**요청** | = *Textliteral* | **VARARG**
+*`parmType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REQ`** | **`=`** *`textLiteral`* | **`VARARG`**
 
-*Poptions*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *distance* ⟧ ⟦ *LangType* ⟧ ⟦ *ovisibility* ⟧
+*`pOptions`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`distance`* ⟧ ⟦ *`langType`* ⟧ ⟦ *`oVisibility`* ⟧
 
-*기본*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr* *Binaryop* *expr* | *플래그 이름* | *expr*
+*`primary`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`* *`binaryOp`* *`expr`* | *`flagName`* | *`expr`*
 
-*Procdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Procid* **프로시저**\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Poptions* ⟧ ⟦ < *macroArgList* > ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Usesregs* ⟧ ⟦ *Procparmlist* ⟧
+*`procDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`procId`* **`PROC`**\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`pOptions`* ⟧ ⟦ **`<`** *`macroArgList`* **`>`** ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`usesRegs`* ⟧ ⟦ *`procParmList`* ⟧
 
-*프로세서*\
-&nbsp;&nbsp;&nbsp;&nbsp;|. 386 |. 386p |. 486 |. .486P \
-&nbsp;&nbsp;&nbsp;&nbsp;|. 586 |. 586P |. 686 |. 686P |. 387
+*`processor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.386`** | **`.386p`** | **`.486`** | **`.486P`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.586`** | **`.586P`** | **`.686`** | **`.686P`** | **`.387`**
 
-*processorDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*프로세서* ; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *보조 프로세서* ;;
+*`processorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`processor`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`coprocessor`* *`;;`*
 
-*Procid*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`procId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*Procitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;*instrPrefix* | *Datadir* | *Labeldir* | *offsetDir* | *일반 디렉터리*
+*`procItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`instrPrefix`* | *`dataDir`* | *`labelDir`* | *`offsetDir`* | *`generalDir`*
 
-*Procparmlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *Parmlist* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *Parmid* : VARARG ⟧
+*`procParmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`parmList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`parmId`* **`:VARARG`** ⟧
 
-*protoArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *id* ⟧: *qualifiedType*
+*`protoArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`id`* ⟧ **`:`** *`qualifiedType`*
 
-*protoArgList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *protoList* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ ⟦ *id* ⟧: VARARG ⟧
+*`protoArgList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`protoList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ ⟦ *`id`* ⟧ **`:VARARG`** ⟧
 
-*protoList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*protoArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *protoList* , ⟦;; ⟧ *protoArg*
+*`protoList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`protoArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`protoList`* **`,`** ⟦ *`;;`* ⟧ *`protoArg`*
 
-*protoSpec*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *distance* ⟧ ⟦ *LangType* ⟧ ⟦ *protoArgList* ⟧ | *typeId*
+*`protoSpec`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`distance`* ⟧ ⟦ *`langType`* ⟧ ⟦ *`protoArgList`* ⟧ | *`typeId`*
 
-*protoTypeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* **프로토콜** *protoSpec*
+*`protoTypeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`PROTO`** *`protoSpec`*
 
-*Pubdef*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧ *id*
+*`pubDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`langType`* ⟧ *`id`*
 
-*Publicdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**공용** *publist* ;;
+*`publicDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** *`pubList`* *`;;`*
 
-*Publist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Pubdef* | *pubdef* , ⟦;; ⟧ *Pubdef*
+*`pubList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`pubDef`* | *`pubList`* **`,`** ⟦ *`;;`* ⟧ *`pubDef`*
 
-*purgeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; *macroIdList* 제거
+*`purgeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PURGE`** *`macroIdList`*
 
-*qualifiedType*\
-&nbsp;&nbsp;&nbsp;&nbsp;*유형* | ⟦ *distance* ⟧ **PTR** ⟦ *qualifiedType* ⟧
+*`qualifiedType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`type`* | ⟦ *`distance`* ⟧ **`PTR`** ⟦ *`qualifiedType`* ⟧
 
-*한정자*\
-&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | **프로토콜** *protoSpec*
+*`qualifier`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`qualifiedType`* | **`PROTO`** *`protoSpec`*
 
-*견적*\
-&nbsp;&nbsp;&nbsp;&nbsp;"| '
+*`quote`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`"`** | **`'`**
 
-*Qwordregister*\
-&nbsp;&nbsp;&nbsp;&nbsp;RAX | RCX | RDX | RBX | RDI | RSI | RBP | R8 | R 9 | R10 | R 11 | R12 | R13 | R14 | R15
+*`qwordRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`RAX`** | **`RCX`** | **`RDX`** | **`RBX`** | **`RDI`** | **`RSI`** | **`RBP`** | **`R8`** | **`R9`** | **`R10`** | **`R11`** | **`R12`** | **`R13`** | **`R14`** | **`R15`**
 
-*radixDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 기** 하 방법 *constExpr* ;;
+*`radixDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.RADIX`** *`constExpr`* *`;;`*
 
-*radixOverride*\
-&nbsp;&nbsp;&nbsp;&nbsp;h | o | q | t | y | H | O | Q | T | X.y
+*`radixOverride`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`h`** | **`o`** | **`q`** | **`t`** | **`y`** | **`H`** | **`O`** | **`Q`** | **`T`** | **`Y`**
 
-*Recordconst*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Recordtag* { *oldRecordFieldList* } | *oldRecordFieldList* > < *recordtag*
+*`recordConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordTag`* **`{`** *`oldRecordFieldList`* **`}`** | *`recordTag`* **`<`** *`oldRecordFieldList`* **`>`**
 
-*Recorddir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Recordtag* **레코드** *bitdeflist* ;;
+*`recordDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordTag`* **`RECORD`** *`bitDefList`* *`;;`*
 
-*recordFieldList*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *recordFieldList* , ⟦;; ⟧ ⟦ *constExpr* ⟧
+*`recordFieldList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`constExpr`* ⟧ | *`recordFieldList`* **`,`** ⟦ *`;;`* ⟧ ⟦ *`constExpr`* ⟧
 
-*Recordinstance*\
- {⟦;; ⟧ *recordFieldList* ⟦;; ⟧} \
-&nbsp;&nbsp;&nbsp;&nbsp;| < *oldRecordFieldList* >\
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *recordinstance* )
+*`recordInstance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`{`** ⟦ *`;;`* ⟧ *`recordFieldList`* ⟦ *`;;`* ⟧ **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`<`** *`oldRecordFieldList`* **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** **`(`** *`recordInstance`* **`)`**
 
-\ *Recordlist*
-&nbsp;&nbsp;&nbsp;&nbsp;*Recordinstance* | *recordinstance* ;; ⟧ *Recordinstance*
+*`recordInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordInstance`* | *`recordInstList`* **`,`** ⟦ *`;;`* ⟧ *`recordInstance`*
 
-*Recordtag*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`recordTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-\ *등록*
-&nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *Qwordregister* |  *fpuRegister* |  *segmentRegister | *
+*`register`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`specialRegister`* | *`gpRegister`* | *`byteRegister`* | *`qwordRegister`* |  *`fpuRegister`* | *`SIMDRegister`* | *`segmentRegister`*
 
-*Reglist*\
-&nbsp;&nbsp; *&nbsp;&nbsp;등록* | *reglist* *등록*
+*`regList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* | *`regList`* *`register`*
 
-*Relop*\
-&nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
+*`relOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EQ`** | **`NE`** | **`LT`** | **`LE`** | **`GT`** | **`GE`**
 
-*Repeatblock*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 반복** ; \
-&nbsp;&nbsp;&nbsp;&nbsp;*Blockstatements* ;; untilDir ;;
+*`repeatBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.REPEAT`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`blockStatements`* *`;;`*
+*`untilDir`* *`;;`*
 
-*Repeatdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**반복** | **REPT**
+*`repeatDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REPEAT`** | **`REPT`**
 
-*scalarInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Initvalue* | *scalarInstList* , ⟦;; ⟧ *Initvalue*
+*`scalarInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`initValue`* | *`scalarInstList`* **`,`** ⟦ *`;;`* ⟧ *`initValue`*
 
-*segAlign*\
-&nbsp;&nbsp;&nbsp;&nbsp;**바이트** | **WORD** |  ** | **  |  **페이지**
+*`segAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`BYTE`** | **`WORD`** | **`DWORD`** | **`PARA`** | **`PAGE`**
 
-*segAttrib*\
-&nbsp;&nbsp;&nbsp;&nbsp;**공용** | **스택** * |  | * **에서** **일반적인** | **메모리** | 
+*`segAttrib`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** | **`STACK`** | **`COMMON`** | **`MEMORY`** | **`AT`** *`constExpr`* | **`PRIVATE`**
 
-*segDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 코드**\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *segId* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. 데이터**\
-&nbsp;&nbsp;&nbsp;&nbsp;|   **. 데이터?** \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. CONST**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. FARDATA**⟦ *segId* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|   **. FARDATA?** ⟦ *segId* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. STACK** ⟦ *constExpr* ⟧
+*`segDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.CODE`**\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.DATA`**\
+&nbsp;&nbsp;&nbsp;&nbsp;|  **`.DATA?`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.CONST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.FARDATA`**⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;|  **`.FARDATA?`** ⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.STACK`** ⟦ *`constExpr`* ⟧
 
-*segId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`segId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*segIdList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segId*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segIdList* , *segId*
+*`segIdList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segIdList`* **`,`** *`segId`*
 
-*segmentDef*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segmentDir* ⟦ *inSegDirList* ⟧ *endsdir* | *SimpleSegDir* ⟦ *inSegDirList ⟧* ⟦ *endsdir* ⟧
+*`segmentDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segmentDir`* ⟦ *`inSegDirList`* ⟧ *`endsDir`* | *`simpleSegDir`* ⟦ *`inSegDirList`* ⟧ ⟦ *`endsDir`* ⟧
 
-*segmentDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segId* **SEGMENT** ⟦ *segOptionList* ⟧;;
+*`segmentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segId`* **`SEGMENT`** ⟦ *`segOptionList`* ⟧ *`;;`*
 
-*segmentRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;**CS** | **DS** | **ES** | **FS** | **GS** | **SS**
+*`segmentRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CS`** | **`DS`** | **`ES`** | **`FS`** | **`GS`** | **`SS`**
 
-*segOption*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segAlign*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segRO*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segAttrib*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *segSize*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *className*
+*`segOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segRO`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segAttrib`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`className`*
 
-*segOptionList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segOption* | *segOptionList* *segOption*
+*`segOptionList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segOption`* | *`segOptionList`* *`segOption`*
 
-*segOrderDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 알파** | **입니다. SEQ** | **입니다. .DOSSEG** |  **.dosseg**
+*`segOrderDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ALPHA`** | **`.SEQ`** | **`.DOSSEG`** | **`DOSSEG`**
 
-*segRO*\
-**읽기 전용** &nbsp;&nbsp;&nbsp;&nbsp;
+*`segRO`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`READONLY`**
 
-*segSize*\
-&nbsp;&nbsp;&nbsp;&nbsp;**USE16** | **USE32** | **FLAT**
+*`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`USE16`** | **`USE32`** | **`FLAT`**
 
-*shiftOp*\
-&nbsp;&nbsp;&nbsp;&nbsp;**SHR** | **SHL**
+*`shiftOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SHR`** | **`SHL`**
 
-*서명*\
- - | +
+*`sign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | **`-`**
 
-*\*
-&nbsp;&nbsp;&nbsp;&nbsp;MM0 | MM1 | MM2 | MM3 | MM4 | MM5 | MM6 | MM7 | xmmRegister | 형식인 경우 YMM0 | YMM1 | YMM2 | YMM3 | YMM4 | YMM5 | YMM6 | YMM7 | YMM8 | YMM9 | YMM10 | YMM11 | YMM12 | YMM13 | YMM14 | YMM15
+*`simdRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`MM0`** | **`MM1`** | **`MM2`** | **`MM3`** | **`MM4`** | **`MM5`** | **`MM6`** | **`MM7`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`xmmRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`YMM0`** | **`YMM1`** | **`YMM2`** | **`YMM3`** | **`YMM4`** | **`YMM5`** | **`YMM6`** | **`YMM7`** | **`YMM8`** | **`YMM9`** | **`YMM10`** | **`YMM11`** | **`YMM12`** | **`YMM13`** | **`YMM14`** | **`YMM15`**
 
-*simpleExpr*\
- ( *Cexpr* ) | *기본*
+*`simpleExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`cExpr`* **`)`** | *`primary`*
 
-*simpleSegDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*segDir* ;;
+*`simpleSegDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segDir`* *`;;`*
 
-*sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* | *형식* | *e10*
+*`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* | *`type`* | *`e10`*
 
-*specialChars*\
- : | . | ⟦ | ⟧ | ( | ) | < | > | { | } \
-&nbsp;&nbsp;&nbsp;&nbsp;| + | - | / | * | & | % | !\
-&nbsp;&nbsp;&nbsp;&nbsp;| ' | \ | = | ; | , | "\
-&nbsp;&nbsp;&nbsp;&nbsp;| *whiteSpaceCharacter*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *endOfLine*
+*`specialChars`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`:`** | **`.`** | **`[`** | **`]`** | **`(`** | **`)`** | **`<`** | **`>`** | **`{`** | **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`+`** | **`-`** | **`/`** | **`*`** | **`&`** | **`%`** | **`!`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`'`** | **`\`** | **`=`** | **`;`** | **`,`** | **`"`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`whiteSpaceCharacter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`endOfLine`*
 
-*specialRegister*\
-&nbsp;&nbsp;&nbsp;&nbsp;CR0 레지스터 | CR2 | CR3 | DR0 | DR1 | DR2 | DR3 | DR6 | DR7 | TR3 | TR4 | TR5 | TR6 | TR7
+*`specialRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CR0`** | **`CR2`** | **`CR3`** | **`DR0`** | **`DR1`** | **`DR2`** | **`DR3`** | **`DR6`** | **`DR7`** | **`TR3`** | **`TR4`** | **`TR5`** | **`TR6`** | **`TR7`**
 
-*Stackoption*\
-&nbsp;&nbsp;&nbsp;&nbsp;**NEARSTACK** | **FARSTACK**
+*`stackOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NEARSTACK`** | **`FARSTACK`**
 
-*Startupdir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. 시작** ;;
+*`startupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.STARTUP`** *`;;`*
 
-*stext*\
-&nbsp;&nbsp;&nbsp;&nbsp;*stringchar* | *stext* *stringchar*
+*`stext`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`stringChar`* | *`stext`* *`stringChar`*
 
-*string*\
-&nbsp;&nbsp;&nbsp;&nbsp;*quote* ⟦ *stext* ⟧ *따옴표*
+*`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`quote`* ⟦ *`stext`* ⟧ *`quote`*
 
-*Stringchar*\
-&nbsp;&nbsp;&nbsp;&nbsp;*견적* *따옴표* | 따옴표를 제외한 모든 문자입니다.
+*`stringChar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`quote`**`quote`* | 따옴표를 제외한 모든 문자입니다.
 
-*structBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structItem* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *structBody* *structItem* ;;
+*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structItem`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structBody`* *`structItem`* *`;;`*
 
-*structDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structTag* *structHdr* ⟦ *fieldalign* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, **고유** 하지 않은 ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*structBody*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
-&nbsp;&nbsp;&nbsp;&nbsp;**끝남** ;;
+*`structDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`* *`structHdr`* ⟦ *`fieldAlign`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** **`NONUNIQUE`** ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDS`** *`;;`*
 
-*structHdr*\
-&nbsp;&nbsp;&nbsp;&nbsp;**STRUC** | **구조체** | **UNION**
+*`structHdr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`STRUC`** | **`STRUCT`** | **`UNION`**
 
-*structInstance*\
- < ⟦ *Fieldinitlist* ⟧ > \
-&nbsp;&nbsp;&nbsp;&nbsp;| {⟦;; ⟧ ⟦ *Fieldinitlist* ⟧ ⟦;; ⟧} \
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *structInstList* ) \
+*`structInstance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`<`** ⟦ *`fieldInitList`* ⟧ **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`{`** ⟦ *`;;`* ⟧ ⟦ *`fieldInitList`* ⟧ ⟦ *`;;`* ⟧ **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** ( *`structInstList`* )
 
-*structInstList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structInstance* | *structInstList* , ⟦;; ⟧ *structInstance*
+*`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structInstance`* | *`structInstList`* **`,`** ⟦ *`;;`* ⟧ *`structInstance`*
 
-*structItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Datadir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *일반 디렉터리*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *offsetDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *nestedStruct*
+*`structItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`generalDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`nestedStruct`*
 
-*structTag*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*용어*\
-&nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* |! *simpleExpr*
+*`term`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`simpleExpr`* | **`!`** *`simpleExpr`*
 
-*text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Textliteral* | *텍스트* 문자 |! *문자* *텍스트* | *문자* |! *문자*
+*`text`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textLiteral`* | *`text`* 문자 | **`!`** *`character`* *`text`* | *`character`* | **`!`***`character`*
 
-*Textdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* *textMacroDir* ;;
+*`textDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`textMacroDir`* *`;;`*
 
-*Textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Textliteral* | *textMacroId* | % *constExpr*
+*`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textLiteral`* | *`textMacroId`* | **`%`** *`constExpr`*
 
-*Textlen*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
+*`textLen`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*Textlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Textitem* | *textitem* , ⟦;; ⟧ *Textitem*
+*`textList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textItem`* | *`textList`* **`,`** ⟦ *`;;`* ⟧ *`textItem`*
 
-*Textliteral*\
-&nbsp;&nbsp;&nbsp;&nbsp;< *텍스트* >;;
+*`textLiteral`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`<`** *`text`* **`>`** **`;;`**
 
-*textMacroDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Textlist** ⟦ *textlist* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **TEXTEQU** ⟦ *textlist* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **SIZESTR** *textitem*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SUBSTR** *textitem* , *Textitem* ⟦, *textitem* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **INSTR** ⟦ *textstart* , ⟧ *textstart* , *textstart*
+*`textMacroDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CATSTR`** ⟦ *`textList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`TEXTEQU`** ⟦ *`textList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZESTR`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SUBSTR`** *`textItem`* **`,`** *`textStart`* ⟦ **`,`** *`textLen`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`INSTR`** ⟦ *`textStart`* **`,`** ⟧ *`textItem`* **`,`** *`textItem`*
 
-*textMacroId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`textMacroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*Textstart*\
-*constExpr* &nbsp;&nbsp;&nbsp;&nbsp;
+*`textStart`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*titleDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*titleType* *arbitraryText* ;;
+*`titleDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`titleType`* *`arbitraryText`* *`;;`*
 
-*titleType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**제목** | **부제목** | **subttl**
+*`titleType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TITLE`** | **`SUBTITLE`** | **`SUBTTL`**
 
-*type*\
-&nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *unionTag*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *Recordtag*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *거리*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *데이터 형식*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *typeId*
+*`type`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`unionTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`distance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`dataType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`typeId`*
 
-*Typedefdir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*typeId* **TYPEDEF** 한정자
+*`typedefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`typeId`***`TYPEDEF`** 한정자
 
-*typeId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`typeId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*unionTag*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id*
+*`unionTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*untilDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. UNTIL** *cexpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp; **. .UNTILCXZ** ⟦ *cxzexpr* ⟧;;
+*`untilDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.UNTIL`** *`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.UNTILCXZ`** ⟦ *`cxzExpr`* ⟧ *`;;`*
 
-*\*
-&nbsp;&nbsp;&nbsp;&nbsp; *reglist* 사용
+*`usesRegs`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`USES`** *`regList`*
 
-*whileBlock*\
-&nbsp;&nbsp;&nbsp;&nbsp; **.\**
-&nbsp;&nbsp;&nbsp;&nbsp;*Cexpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*Blockstatements* ; \
-&nbsp;&nbsp;&nbsp;&nbsp; **. ENDW**
+*`whileBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.WHILE`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`blockStatements`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ENDW`**
 
-*whiteSpaceCharacter*\
-&nbsp;&nbsp;&nbsp;&nbsp;ASCII 8, 9, 11 – 13, 26, 32
+*`whiteSpaceCharacter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;ASCII 8, 9, 11-13, 26, 32
 
-*Xmmregister*\
-&nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | ~ XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-
+*`xmmRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`XMM0`** | **`XMM1`** | **`XMM2`** | **`XMM3`** | **`XMM4`** | **`XMM5`** | **`XMM6`** | **`XMM7`** | **`XMM8`** | **`XMM9`** | **`XMM10`** | **`XMM11`** | **`XMM12`** | **`XMM13`** | **`XMM14`** | **`XMM15`**

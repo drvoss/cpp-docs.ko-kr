@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158238"
 ---
 # <a name="simple-variable-declarations"></a>단순 변수 선언
 
@@ -33,7 +33,7 @@ ms.locfileid: "56149988"
 
 산술, 구조체, 공용 구조체, 열거형 및 void 형식과 `typedef` 이름으로 나타내는 형식의 경우 형식 지정자가 모든 형식 정보를 제공하므로 선언에 단순 선언자를 사용할 수 있습니다. 포인터, 배열 및 함수 형식에는 복잡한 선언자가 필요합니다.
 
-쉼표(**,**)로 구분된 식별자 목록을 사용하여 같은 선언에 여러 변수를 지정할 수 있습니다. 선언에 정의된 모든 변수의 기본 형식은 같습니다. 예:
+쉼표( **,** )로 구분된 식별자 목록을 사용하여 같은 선언에 여러 변수를 지정할 수 있습니다. 선언에 정의된 모든 변수의 기본 형식은 같습니다. 예를 들어:
 
 ```C
 int x, y;        /* Declares two simple variables of type int */
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 이 예제에서 `reply` 변수와 `flag` 변수 모두 `unsigned long` 형식이고 부호 없는 정수 값을 갖습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

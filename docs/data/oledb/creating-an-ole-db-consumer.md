@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: a221aa98f5d4011bb310e056f4c2c8b04d847af6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0e084b5f25d713424217af5a2f4517ca73a27b39
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211447"
 ---
 # <a name="creating-an-ole-db-consumer"></a>OLE DB 소비자 만들기
 
@@ -23,7 +23,7 @@ Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 �
 
 **ATL OLE DB 소비자 마법사**를 사용하거나 사용하지 않고 OLE DB 템플릿 소비자를 만들 수 있습니다. 마법사를 사용하는 것이 좋습니다. ATL을 지원하는 모든 애플리케이션에서 소비자를 실행할 수 있습니다.
 
-이 단원에서는 다음 항목에 대해 설명합니다.
+이 섹션에서는 다음 항목을 다룹니다.
 
 - [마법사를 사용하여 OLE DB 소비자 만들기](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 4c0544df55fc71ace697d7e0a53ba303706e1378
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201125"
 ---
 # <a name="compiler-error-c3390"></a>컴파일러 오류 C3390
 
@@ -19,7 +19,7 @@ ms.locfileid: "76912869"
 
 제네릭 형식이 잘못 인스턴스화되었습니다.  형식 정의를 확인하세요.  자세한 내용은 [제네릭](../../extensions/generics-cpp-component-extensions.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 첫 번째 샘플에서는 C# 를 사용 하 여/clr에서 C++제네릭 형식을 제작할 때 지원 되지 않는 특정 제약 조건이 있는 제네릭 형식을 포함 하는 구성 요소를 만듭니다. 자세한 내용은 [형식 매개 변수에 대한 제약 조건](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)을 참조하세요.
 

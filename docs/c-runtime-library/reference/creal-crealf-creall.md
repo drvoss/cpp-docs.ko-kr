@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942599"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171218"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -59,26 +59,26 @@ long double creal( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>매개 변수
 
-*z*<br/>
+*-*<br/>
 복소수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *Z*의 실제 부분입니다.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **_Fcomplex** 또는 **_fcomplex** 값을 사용 하는 **creal** 의 오버 로드를 호출 하 고 **float** 또는 **long double** 값을 반환할 수 있습니다. C 프로그램에서 **creal** 은 항상 **_d** 값을 사용 하 여 **double** 값을 반환 합니다.
+는 C++ 오버 로드를 허용 하므로 **_Fcomplex** 또는 **_Lcomplex** 값을 사용 하는 **creal** 의 오버 로드를 호출 하 고 **float** 또는 **long double** 값을 반환할 수 있습니다. C 프로그램에서 **creal** 은 항상 **_Dcomplex** 값을 사용 하 여 **double** 값을 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|C 헤더|C++ 헤더|
+|루틴|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
+|**creal**, **crealf**, **creal**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**, **_Fcomplex**및 **_Fcomplex** 형식은 각각 C99에서 구현 되지 않은 네이티브 형식으로 **서, float**, **Double _complex**및 **long double _complex**의 Microsoft 관련 항목입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+**_Fcomplex**, **_Dcomplex**및 **_Lcomplex** 형식은 각각 Microsoft에서 구현 되지 않은 네이티브 C99 유형 **float _Complex**, **double _Complex**및 **long double _Complex**에 해당 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

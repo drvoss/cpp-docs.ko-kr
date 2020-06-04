@@ -1,5 +1,5 @@
 ---
-title: CMouseManager 클래스
+title: C마우스관리자 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMouseManager
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1394a1b47a86022e37b11e032b87ee2a2a369862
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338248"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752802"
 ---
-# <a name="cmousemanager-class"></a>CMouseManager 클래스
+# <a name="cmousemanager-class"></a>C마우스관리자 클래스
 
-사용자가 다른 명령을 특정을 사용 하 여 연결 하도록 허용 [CView](../../mfc/reference/cview-class.md) 사용자가 뷰 안에서 두 번 클릭할 때 개체입니다.
+사용자가 해당 보기 내에서 두 번 클릭할 때 사용자가 다른 명령을 특정 [CView](../../mfc/reference/cview-class.md) 개체와 연결할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -43,22 +43,22 @@ class CMouseManager : public CObject
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CMouseManager::AddView](#addview)|추가 된 `CView` 개체를 **사용자 지정** 대화 상자. 합니다 **사용자 지정** 대화 상자에서는 사용자가 두 번 클릭을 각 나열된 된 보기에 대 한 명령을 사용 하 여 연결 합니다.|
-|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|사용자 제공된 뷰 안에서 두 번 클릭할 때 실행 되는 명령을 반환 합니다.|
-|[CMouseManager::GetViewIconId](#getviewiconid)|제공 된 뷰 ID와 사용 하 여 연결 된 아이콘을 반환 합니다.|
-|[CMouseManager::GetViewIdByName](#getviewidbyname)|제공 된 뷰 이름과 연결 된 뷰 ID를 반환 합니다.|
-|[CMouseManager::GetViewNames](#getviewnames)|모든 추가 뷰 이름의 목록을 검색합니다.|
-|[CMouseManager::LoadState](#loadstate)|로드 된 `CMouseManager` Windows 레지스트리에서 상태입니다.|
-|[CMouseManager::SaveState](#savestate)|기록 된 `CMouseManager` Windows 레지스트리에 상태입니다.|
-|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|제공된 된 명령 및 제공 된 뷰를 연결합니다.|
+|[C마우스 관리자::추가 보기](#addview)|사용자 지정 대화 상자에 개체를 추가합니다. **Customization** `CView` **사용자 지정** 대화 상자를 사용하면 나열된 각 보기에 대한 명령과 두 번 클릭을 연결할 수 있습니다.|
+|[C마우스 매니저::GetViewDblClickCommand](#getviewdblclickcommand)|사용자가 제공된 보기 내에서 두 번 클릭할 때 실행되는 명령을 반환합니다.|
+|[C마우스 매니저::겟뷰아이콘](#getviewiconid)|제공된 뷰 ID와 연결된 아이콘을 반환합니다.|
+|[C마우스 매니저::GetViewIdByName](#getviewidbyname)|제공된 뷰 이름과 연결된 뷰 ID를 반환합니다.|
+|[C마우스 관리자::GetView 이름](#getviewnames)|추가된 모든 뷰 이름 목록을 검색합니다.|
+|[C마우스 관리자::로드스테이트](#loadstate)|Windows `CMouseManager` 레지스트리에서 상태를 로드합니다.|
+|[C마우스 관리자::저장 상태](#savestate)|`CMouseManager` 상태를 Windows 레지스트리에 씁니다.|
+|[CMouse 관리자::세트커맨드포블클크](#setcommandfordblclk)|제공된 명령과 제공된 뷰를 연결합니다.|
 
 ## <a name="remarks"></a>설명
 
-합니다 `CMouseManager` 클래스의 컬렉션을 유지 `CView` 개체입니다. 각 보기는 식별 이름으로 ID 이러한 보기에 표시 되는 **사용자 지정** 대화 상자. 사용자가 명령을 통해 모든 보기를 사용 하 여 연결 된 변경할 수는 **사용자 지정** 대화 상자. 사용자가 해당 보기에는 관련 된 명령이 실행 됩니다. 이 지 원하는 코딩 관점에서 WM_LBUTTONDBLCLK 메시지 및 통화를 처리 해야 합니다 [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) 함수에 대 한 코드에서 `CView` 개체...
+클래스는 `CMouseManager` 개체의 `CView` 컬렉션을 유지 관리합니다. 각 보기는 이름과 ID로 식별됩니다. 이러한 보기는 **사용자 지정** 대화 상자에 표시됩니다. 사용자는 **사용자 지정** 대화 상자를 통해 모든 보기와 연결된 명령을 변경할 수 있습니다. 연결된 명령은 사용자가 해당 보기를 두 번 클릭할 때 실행됩니다. 코딩 관점에서 이를 지원하려면 WM_LBUTTONDBLCLK 메시지를 처리하고 해당 `CView` 개체에 대한 코드에서 [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) 함수를 호출해야 합니다.
 
-만들어야 합니다를 `CMouseManager` 수동으로 개체입니다. 응용 프로그램의 프레임 워크에 의해 생성 됩니다. 사용자가 응용 프로그램을 종료할 때 자동으로 소멸도 됩니다. 응용 프로그램에 대 한 마우스 관리자에 대 한 포인터를 가져오려면, 호출 [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)합니다.
+개체를 `CMouseManager` 수동으로 만들지 않아야 합니다. 응용 프로그램의 프레임워크에 의해 만들어집니다. 또한 사용자가 응용 프로그램을 종료할 때 자동으로 소멸됩니다. 응용 프로그램에 대한 마우스 관리자에 대한 포인터를 얻으려면 [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)로 전화하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -70,9 +70,9 @@ class CMouseManager : public CObject
 
 **헤더:** afxmousemanager.h
 
-##  <a name="addview"></a>  CMouseManager::AddView
+## <a name="cmousemanageraddview"></a><a name="addview"></a>C마우스 관리자::추가 보기
 
-등록을 [CView](../../mfc/reference/cview-class.md) 개체를 [CMouseManager 클래스](../../mfc/reference/cmousemanager-class.md) 마우스 사용자 지정 동작을 지원 합니다.
+사용자 지정 마우스 동작을 지원 하기 위해 [CMouseManager 클래스와](../../mfc/reference/cmousemanager-class.md) [CView](../../mfc/reference/cview-class.md) 개체를 등록 합니다.
 
 ```
 BOOL AddView(
@@ -88,42 +88,42 @@ BOOL AddView(
 
 ### <a name="parameters"></a>매개 변수
 
-*iViewId*<br/>
-[in] 뷰 id가.
+*아이뷰아이드*<br/>
+【인】 보기 ID입니다.
 
 *uiViewNameResId*<br/>
-[in] 뷰 이름을 참조 하는 리소스 문자열 ID입니다.
+【인】 뷰 이름을 참조하는 리소스 문자열 ID입니다.
 
 *uiIconId*<br/>
-[in] 뷰 아이콘 id입니다.
+【인】 뷰 아이콘 ID입니다.
 
-*iId*<br/>
-[in] 뷰 id가.
+*Iid*<br/>
+【인】 보기 ID입니다.
 
 *lpszViewName*<br/>
-[in] 뷰 이름입니다.
+【인】 뷰 이름입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-사용자 지정 마우스 동작을 지원 하기 위해 뷰를 사용 하 여 등록 해야 합니다는 `CMouseManager` 개체입니다. 파생 된 개체는 `CView` 마우스 관리자를 사용 하 여 클래스를 등록할 수 있습니다. 문자열 및 보기와 연결 된 아이콘에 표시 됩니다는 **마우스** 탭의 **사용자 지정** 대화 상자.
+사용자 지정 마우스 동작을 지원하려면 뷰를 `CMouseManager` 개체에 등록해야 합니다. 클래스에서 파생된 `CView` 모든 개체는 마우스 관리자에 등록할 수 있습니다. 보기와 연결된 문자열과 아이콘은 **사용자 지정** 대화 상자의 **마우스** 탭에 표시됩니다.
 
-만들기와 같은 뷰 Id를 유지 관리 하는 프로그래머의 책임 *iViewId* 하 고 *iId*합니다.
+*iViewId* 및 *iId와*같은 보기 ID를 만들고 유지 관리하는 것은 프로그래머의 책임입니다.
 
-사용자 지정 마우스 동작을 제공 하는 방법에 대 한 자세한 내용은 참조 하세요. [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)합니다.
+사용자 지정 마우스 동작을 제공하는 방법에 대한 자세한 내용은 [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)을 참조하십시오.
 
 ### <a name="example"></a>예제
 
-다음 예제에 대 한 포인터를 검색 하는 방법을 보여 줍니다는 `CMouseManager` 사용 하 여 개체를 `CWinAppEx::GetMouseManager` 메서드 및 `AddView` 에서 메서드를 `CMouseManager` 클래스입니다. 이 코드 조각은의 일부인 합니다 [상태 컬렉션 샘플](../../overview/visual-cpp-samples.md)합니다.
+다음 예제에서는 `CMouseManager` 클래스에서 `CWinAppEx::GetMouseManager` 메서드와 메서드를 사용 하 여 `AddView` 개체에 `CMouseManager` 대 한 포인터를 검색 하는 방법을 보여 줍니다. 이 코드 조각은 상태 [컬렉션 샘플의](../../overview/visual-cpp-samples.md)일부입니다.
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
-##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand
+## <a name="cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>C마우스 매니저::GetViewDblClickCommand
 
-사용자 제공된 뷰 안에서 두 번 클릭할 때 실행 되는 명령을 반환 합니다.
+사용자가 제공된 보기 내에서 두 번 클릭할 때 실행되는 명령을 반환합니다.
 
 ```
 UINT GetViewDblClickCommand(int iId) const;
@@ -131,16 +131,16 @@ UINT GetViewDblClickCommand(int iId) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*iId*<br/>
-[in] 뷰 ID
+*Iid*<br/>
+【인】 뷰 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-명령 식별자; 명령과 연결 된 경우 그렇지 않으면 0입니다.
+뷰가 명령과 연결되어 있는 경우 명령 식별자입니다. 그렇지 않으면 0.
 
-##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId
+## <a name="cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>C마우스 매니저::겟뷰아이콘
 
-뷰 ID와 사용 하 여 연결 된 아이콘을 검색 합니다.
+뷰 ID와 연결된 아이콘을 검색합니다.
 
 ```
 UINT GetViewIconId(int iViewId) const;
@@ -148,20 +148,20 @@ UINT GetViewIconId(int iViewId) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*iViewId*<br/>
-[in] 뷰 ID
+*아이뷰아이드*<br/>
+【인】 뷰 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공할 경우 아이콘 리소스 식별자 그렇지 않으면 0입니다.
+성공하면 아이콘 리소스 식별자; 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-뷰를 사용 하 여 먼저 등록 되지 않은 경우이 메서드를 사용할 [CMouseManager::AddView](#addview)합니다.
+[CMouseManager::AddView](#addview)을 사용하여 뷰가 처음 등록되지 않은 경우 이 메서드가 실패합니다.
 
-##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName
+## <a name="cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>C마우스 매니저::GetViewIdByName
 
-뷰 이름으로 연결 된 뷰 ID를 검색 합니다.
+뷰 이름과 연결된 뷰 ID를 검색합니다.
 
 ```
 int GetViewIdByName(LPCTSTR lpszName) const;
@@ -170,36 +170,36 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="parameters"></a>매개 변수
 
 *lpszName*<br/>
-[in] 뷰 이름입니다.
+【인】 뷰 이름입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공할 경우에 뷰 ID 그렇지 않으면 0입니다.
+뷰 ID가 성공하면 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 사용 하 여 등록 하는 뷰를 통해 검색 [CMouseManager::AddView](#addview)합니다.
+이 메서드는 [CMouseManager::AddView](#addview)를 사용 하 여 등록 된 보기를 통해 검색 합니다.
 
-##  <a name="getviewnames"></a>  CMouseManager::GetViewNames
+## <a name="cmousemanagergetviewnames"></a><a name="getviewnames"></a>C마우스 관리자::GetView 이름
 
-모든 등록 된 뷰 이름 목록을 검색합니다.
+등록된 모든 뷰 이름 목록을 검색합니다.
 
-```
+```cpp
 void GetViewNames(CStringList& listOfNames) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*listOfNames*<br/>
-[out] 에 대 한 참조 `CStringList` 개체입니다.
+*목록이름*<br/>
+【아웃】 개체에 `CStringList` 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 매개 변수를 채웁니다 `listOfNames` 이름을 사용 하 여 등록 된 모든 뷰를 사용 하 여 [CMouseManager::AddView](#addview)합니다.
+이 메서드는 `listOfNames` [CMouseManager::AddView를](#addview)사용 하 여 등록 된 모든 뷰의 이름으로 매개 변수를 채웁니다.
 
-##  <a name="loadstate"></a>  CMouseManager::LoadState
+## <a name="cmousemanagerloadstate"></a><a name="loadstate"></a>C마우스 관리자::로드스테이트
 
-상태를 로드 합니다 [CMouseManager 클래스](../../mfc/reference/cmousemanager-class.md) 레지스트리에서 합니다.
+레지스트리에서 [CMouseManager 클래스의](../../mfc/reference/cmousemanager-class.md) 상태를 로드합니다.
 
 ```
 BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -208,21 +208,21 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *lpszProfileName*<br/>
-[in] 레지스트리 키의 경로입니다.
+【인】 레지스트리 키의 경로입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-레지스트리에서 로드 상태 정보를 등록 된 뷰, 뷰 식별자 및 연결 된 명령을 포함 합니다. 경우 매개 변수 *lpszProfileName* 가 null 인 경우이 함수를 로드 합니다 `CMouseManager` 으로 지정 된 기본 레지스트리 위치에서 데이터를 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다.
+레지스트리에서 로드된 상태 정보에는 등록된 보기, 뷰 식별자 및 관련 명령이 포함됩니다. 매개 변수 *lpszProfileName이* NULL인 경우 `CMouseManager` 이 함수는 [CWinAppEx 클래스에서](../../mfc/reference/cwinappex-class.md)제어하는 기본 레지스트리 위치에서 데이터를 로드합니다.
 
-대부분의 경우이 함수를 직접 호출할 필요가 없습니다. 작업 영역 초기화 프로세스의 일부로 호출 됩니다. 작업 영역 초기화 프로세스에 대 한 자세한 내용은 참조 하세요. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)합니다.
+대부분의 경우 이 함수를 직접 호출할 필요가 없습니다. 작업 영역 초기화 프로세스의 일부로 호출됩니다. 작업 영역 초기화 프로세스에 대한 자세한 내용은 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)를 참조하십시오.
 
-##  <a name="savestate"></a>  CMouseManager::SaveState
+## <a name="cmousemanagersavestate"></a><a name="savestate"></a>C마우스 관리자::저장 상태
 
-상태를 기록 합니다 [CMouseManager 클래스](../../mfc/reference/cmousemanager-class.md) 레지스트리에 합니다.
+[CMouseManager 클래스의](../../mfc/reference/cmousemanager-class.md) 상태를 레지스트리에 기록합니다.
 
 ```
 BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -231,23 +231,23 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>매개 변수
 
 *lpszProfileName*<br/>
-[in] 레지스트리 키의 경로입니다.
+【인】 레지스트리 키의 경로입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-레지스트리에 기록 된 상태 정보를 등록 된 모든 뷰, 뷰 식별자 및 연결 된 명령을 포함 합니다. 경우 매개 변수 *lpszProfileName* 가 null 인 경우이 함수를 씁니다 합니다 `CMouseManager` 에 의해 제어 기본 레지스트리 위치에 데이터를 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다.
+레지스트리에 기록된 상태 정보에는 등록된 모든 보기, 뷰 식별자 및 관련 명령이 포함됩니다. 매개 변수 *lpszProfileName이* NULL인 경우 `CMouseManager` 이 함수는 [CWinAppEx 클래스에서](../../mfc/reference/cwinappex-class.md)제어하는 기본 레지스트리 위치에 데이터를 씁니다.
 
-대부분의 경우이 함수를 직접 호출할 필요가 없습니다. 작업 영역 serialization 프로세스의 일부로 호출 됩니다. 작업 영역 serialization 프로세스에 대 한 자세한 내용은 참조 하세요. [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)합니다.
+대부분의 경우 이 함수를 직접 호출할 필요가 없습니다. 작업 영역 직렬화 프로세스의 일부로 호출됩니다. 작업 영역 직렬화 프로세스에 대한 자세한 내용은 [CWinAppEx:SaveState](../../mfc/reference/cwinappex-class.md#savestate)를 참조하십시오.
 
-##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk
+## <a name="cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>CMouse 관리자::세트커맨드포블클크
 
-사용자 지정 명령을 마우스 manager를 처음 등록 하는 뷰를 사용 하 여 연결 합니다.
+사용자 지정 명령을 마우스 관리자에 처음 등록된 뷰와 연결합니다.
 
-```
+```cpp
 void SetCommandForDblClk(
     int iViewId,
     UINT uiCmd);
@@ -255,19 +255,19 @@ void SetCommandForDblClk(
 
 ### <a name="parameters"></a>매개 변수
 
-*iViewId*<br/>
-[in] 뷰 식별자입니다.
+*아이뷰아이드*<br/>
+【인】 뷰 식별자입니다.
 
 *uiCmd*<br/>
-[in] 명령 식별자입니다.
+【인】 명령 식별자입니다.
 
 ### <a name="remarks"></a>설명
 
-뷰를 사용 하 여 사용자 지정 명령에 연결 하기 위해 먼저 등록 해야 뷰를 사용 하 여 [CMouseManager::AddView](#addview)합니다. `AddView` 메서드 뷰 식별자를 입력된 매개 변수로 필요 합니다. 호출할 수는 보기를 등록 하 고 나면 `CMouseManager::SetCommandForDblClk` 동일한 뷰 식별자 입력 매개 변수를 제공 하는 `AddView`합니다. 그런 다음 등록 된 보기에서 마우스를 클릭할 때 응용 프로그램은 명령을 실행 합니다 나타난 *uiCmd 합니다.* 사용자 지정 마우스 동작을 지원 하려면는 마우스 관리자를 사용 하 여 등록 된 보기를 사용자 지정도 해야 합니다. 사용자 지정 마우스 동작에 대 한 자세한 내용은 참조 하세요. [키보드 및 마우스 사용자 지정](../keyboard-and-mouse-customization.md)합니다.
+사용자 지정 명령을 뷰와 연결하려면 먼저 [CMouseManager::AddView](#addview)를 사용하여 뷰를 등록해야 합니다. 메서드는 `AddView` 뷰 식별자를 입력 매개 변수로 사용해야 합니다. 뷰를 등록한 후 에 `CMouseManager::SetCommandForDblClk` 제공한 동일한 뷰 식별자 입력 `AddView`매개 변수로 호출할 수 있습니다. 그런 다음 사용자가 등록된 보기에서 마우스를 두 번 클릭하면 응용 프로그램은 *uiCmd로* 표시된 명령을 실행합니다. 사용자 지정 마우스 동작을 지원하려면 마우스 관리자에 등록된 뷰를 사용자 지정해야 합니다. 사용자 지정 마우스 동작에 대한 자세한 내용은 [키보드 및 마우스 사용자 지정](../keyboard-and-mouse-customization.md)을 참조하십시오.
 
-하는 경우 *uiCmd* 설정할지를 0으로 지정 된 뷰를 더 이상 연결 되어 명령과 사용 하 여 합니다.
+*uiCmd가* 0으로 설정되면 지정된 뷰가 더 이상 명령과 연결되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898761"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427562"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 열거형
 
@@ -18,7 +18,7 @@ ms.locfileid: "74898761"
 
 `<errno.h>`에서 POSIX에 의해 정의 된 모든 오류 코드 매크로에 대해 기호화 된 이름을 제공 합니다.
 
-```
+```cpp
 class errc {
    address_family_not_supported = EAFNOSUPPORT,
    address_in_use = EADDRINUSE,
@@ -101,19 +101,19 @@ class errc {
 };
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 ## <a name="io_errc"></a>io_errc
 
-\<iostream>의 오류 조건에 대한 심볼 이름을 제공합니다. [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` 함수가 반환하는 값과 비교할 [error_condition](../standard-library/error-condition-class.md) 개체를 만드는 데 사용할 수 있습니다.
+\<iostream>의 오류 조건에 대한 심볼 이름을 제공합니다. [ios_base::failure](../standard-library/error-condition-class.md)[ 함수가 반환하는 값과 비교할 ](../standard-library/ios-base-class.md#failure)error_condition`code()` 개체를 만드는 데 사용할 수 있습니다.
 
-```
+```cpp
 class io_errc {
    stream = 1
 };
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) 및 [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition)은 모두 이 열거형에 대해 오버로드됩니다.
 

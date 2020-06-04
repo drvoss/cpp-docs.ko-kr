@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants
 ms.assetid: f5bd7213-97ab-4cad-b913-1fc91a486935
 ms.openlocfilehash: 39559f85585b3ba7f21935f43abfb6ada4b0a605
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326094"
 ---
 # <a name="c-constants"></a>C 상수
 
@@ -29,6 +29,6 @@ ms.locfileid: "56152705"
 
 상수는 값과 형식을 사용하여 규정됩니다. [부동 소수점](../c-language/c-floating-point-constants.md), [정수](../c-language/c-integer-constants.md) 및 [문자 상수](../c-language/c-character-constants.md)는 다음 세 섹션에서 설명합니다. 열거형 상수는 [열거형 선언](../c-language/c-enumeration-declarations.md)에서 설명합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 요소](../c-language/elements-of-c.md)

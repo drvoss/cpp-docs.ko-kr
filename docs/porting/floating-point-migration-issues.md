@@ -2,12 +2,12 @@
 title: 부동 소수점 마이그레이션 문제
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215022"
 ---
 # <a name="floating-point-migration-issues"></a>부동 소수점 마이그레이션 문제
 
@@ -29,7 +29,7 @@ Visual Studio 2015에서 수학 함수를 유니버설 CRT로 이동하면서 �
 
 대부분의 경우 최신 컴파일러 및 라이브러리의 부동 소수점 변경으로 인해 더 빠르거나 더 정확하게 동작합니다. x87 명령을 SSE2 명령으로 바꾸면 프로세서 전원 성능이 향상될 수 있습니다. 하지만 이전 컴파일러의 부동 소수점 동작을 정확하게 복제해야 하는 코드가 있는 경우 Visual Studio 네이티브 멀티 타기팅 기능을 사용하고 이전 도구 집합으로 해당 프로젝트를 빌드하는 것이 좋습니다. 자세한 내용은 [Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드](use-native-multi-targeting.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [이전 버전의 Visual에서 프로젝트 업그레이드C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [잠재적인 업그레이드 문제 개요(Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

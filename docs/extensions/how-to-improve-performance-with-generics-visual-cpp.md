@@ -1,5 +1,5 @@
 ---
-title: '방법: 제네릭을 사용하여 성능 개선(C++/CLI)'
+title: '방법: 제네릭을 사용 하 여 성능 향상C++(/cli)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515718"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181943"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>방법: 제네릭을 사용하여 성능 개선(C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>방법: 제네릭을 사용 하 여 성능 향상C++(/cli)
 
 제네릭을 사용하여 형식 매개 변수를 기반으로 재사용 가능한 코드를 만들 수 있습니다. 형식 매개 변수의 실제 형식은 클라이언트 코드에서 호출할 때까지 지연됩니다. 제네릭에 대한 자세한 내용은 [Generics](generics-cpp-component-extensions.md)을 참조하세요.
 

@@ -1,5 +1,5 @@
 ---
-title: 반환 유형
+title: 반환 형식
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function return types
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857036"
 ---
-# <a name="return-type"></a>반환 유형
+# <a name="return-type"></a>반환 형식
 
 함수의 반환 형식은 함수에 의해 반환된 값의 크기와 형식을 설정하며, 아래 구문에 나타난 type-specifier에 대응됩니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "74857036"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *특성-시퀀스* 는 Microsoft 전용 \*/
+/\* *attribute-seq*는 Microsoft 전용임 \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ ms.locfileid: "74857036"
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 전용 \*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 전용 \*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 전용 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 전용 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>

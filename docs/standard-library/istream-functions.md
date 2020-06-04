@@ -5,20 +5,20 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458760"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363074"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 함수
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[스왑](#istream_swap)|[Ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="swap"></a><a name="istream_swap"></a>스왑
 
 두 stream 개체의 요소를 교환합니다.
 
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 스트림입니다.
 
 *오른쪽*\
 스트림입니다.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a><a name="ws"></a>Ws
 
 스트림의 공백을 건너뜁니다.
 
@@ -55,20 +55,20 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 *_Istr*\
 스트림입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스트림입니다.
 
 ### <a name="remarks"></a>설명
 
-이 조작자는 모든 `ch` 요소(이 요소의 경우 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true임)를 추출하고 삭제합니다.
+`ch` 조작자는**ctype** \< **Elem**> >(getloc)use_facet [use_facet](../standard-library/basic-filebuf-class.md#open)< 있는 모든 요소를 추출하고 [삭제합니다.](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true임)를 추출하고 삭제합니다.
 
-함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*을 반환 합니다.
+함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*반환합니다.
 
 ### <a name="example"></a>예제
 
 `ws` 사용 예제는 [operator>>](../standard-library/istream-operators.md#op_gt_gt)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<istream>](../standard-library/istream.md)
+[\<아이스트림>](../standard-library/istream.md)

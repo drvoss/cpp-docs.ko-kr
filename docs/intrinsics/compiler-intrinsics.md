@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 6f41b56995e1a5a7d7f4267cb1def5370f953d5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171673"
 ---
 # <a name="compiler-intrinsics"></a>컴파일러 내장 함수
 
 대부분의 함수는 라이브러리에 포함되어 컴파일러에서 기본 제공되는 내장 함수도 있습니다. 이러한 함수를 내장 함수라고 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 내장 함수의 코드는 보통 인라인으로 삽입되므로 함수 호출 오버헤드가 발생하지 않으며 해당 함수에 대해 매우 효율적인 컴퓨터 명령을 내보낼 수 있습니다. 내장 함수는 동일한 인라인 어셈블리보다 속도가 빠른 경우가 많습니다. 최적화 프로그램에는 정상적으로 동작하는 내장 함수의 수를 확인하는 기본 기능이 있어서 인라인 어셈블리를 사용할 때는 제공되지 않는 일부 최적화 기능을 사용할 수 있기 때문입니다. 또한 최적화 프로그램은 내장 함수를 다르게 확장하거나, 버퍼를 다르게 정렬하거나, 호출의 인수와 컨텍스트에 따라 기타 조정을 수행할 수도 있습니다.
 
@@ -46,9 +46,9 @@ ms.locfileid: "74163481"
 
 - [내장 함수의 사전순 목록](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [ARM 어셈블러 참조](../assembler/arm/arm-assembler-reference.md)<br/>
 [Microsoft 매크로 어셈블러 참조](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)<br/>
+[키워드](../cpp/keywords-cpp.md)<br/>
 [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)

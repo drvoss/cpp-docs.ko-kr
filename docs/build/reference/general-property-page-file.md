@@ -5,12 +5,12 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 41366e2eae479c3d00f79cc47da9100b22129d50
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a9281a0ea02bd9b1fd529453cb9a67e54e4ddda7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218188"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168978"
 ---
 # <a name="general-property-page-file"></a>일반 속성 페이지(파일)
 
@@ -24,7 +24,7 @@ ms.locfileid: "70218188"
 
    프로그래밍 방식으로 이 속성에 액세스하려면 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>을 참조하세요.
 
-- **콘텐츠** (UWP 앱에만 적용 됩니다.) 응용 프로그램 패키지에 포함할 콘텐츠를 파일에 포함할지 여부를 지정 합니다.
+- **콘텐츠** (UWP 앱에만 적용 됨) 응용 프로그램 패키지에 포함할 콘텐츠를 파일에 포함할지 여부를 지정 합니다.
 
 - **항목 유형**
 
@@ -36,24 +36,24 @@ ms.locfileid: "70218188"
 
     다음 표에서는 기본 항목 유형을 나열 합니다.
 
-    |파일 확장명|항목 형식|기본 도구|
+    |파일 확장명|Item Type|기본 도구|
     |-|-|-|
     |.appx|XAML 응용 프로그램 정의|[앱 패키지 작성](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |. hlsl, .ca|HLSL 컴파일러|[fxc.exe](/windows/win32/direct3dtools/fxc)|
     |.h|C/C++ 헤더|[C/C++ 전처리기](../../preprocessor/c-cpp-preprocessor-reference.md)|
-    |n/a|빌드에 참여 하지 않습니다.|n/a|
+    |해당 없음|빌드에 참여 하지 않습니다.|해당 없음|
     |.xml, .xslt, .xsl|Xml|[XML 편집기](/visualstudio/xml-tools/xml-editor)|
     |. resw,. resw|PRI 리소스 (UWP 앱)|[MakePri .exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||미디어 (UWP)|[앱 패키지 작성](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.xsd|XML 데이터 생성기 도구|[XML 스키마 정의 도구 (xsd.exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) .NET 작업을 필요로 합니다. MSVC에는 포함 되지 않습니다.|
+    |.xsd|XML 데이터 생성기 도구|[XML 스키마 정의 도구 (xsd.exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (.Net 작업 필요) MSVC에는 포함 되지 않습니다.|
     ||매니페스트 도구|[mt.exe](/windows/win32/sbscs/mt-exe)|
     |.rc|리소스|[Windows 리소스 컴파일러 (.rc)](/windows/win32/menurc/resource-compiler)|
     |. appxmanifest.xml|앱 패키지 매니페스트|[앱 패키지 작성](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.obj|Object|[C/C++ 링커 (링크 .exe)](cl-invokes-the-linker.md)|
-    |. .ttf|Font|n/a|
-    |.txt|텍스트|n/a|
-    |n/a|사용자 지정 빌드 도구|사용자 정의|
-    |n/a|파일 복사|n/a|
+    |. .ttf|글꼴|해당 없음|
+    |.txt|텍스트|해당 없음|
+    |해당 없음|사용자 지정 빌드 도구|사용자 정의|
+    |해당 없음|파일 복사|해당 없음|
     |. app.packagelayout|앱 패키지 레이아웃|[앱 패키지 작성](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.resx|컴파일러 관리 리소스|[Resgen.exe(리소스 파일 생성기)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
     |natvis|C++디버거 시각화 파일|[Natvis 프레임 워크](/visualstudio/debugger/create-custom-views-of-native-objects)|
@@ -64,6 +64,6 @@ ms.locfileid: "70218188"
 
 **구성 속성** 노드의 **일반** 속성 페이지에 액세스 하는 방법에 대 한 자세한 내용은 [Visual Studio C++ 에서 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)
+[C++프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)

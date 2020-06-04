@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403687"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752500"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 클래스
 
-사용자가 문서 또는 응용 프로그램에서 색을 선택 하는 데 사용할 팝업 메뉴를 나타냅니다.
+사용자가 문서 또는 응용 프로그램에서 색상을 선택하는 데 사용하는 팝업 메뉴를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,33 +37,33 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|이름|설명|
-|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|`CMFCColorPopupMenu` 개체를 생성합니다.|
+|속성|Description|
+|[CMFC컬러팝업메뉴::CMFC컬러팝메뉴](#cmfccolorpopupmenu)|`CMFCColorPopupMenu` 개체를 생성합니다.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
 |||
 |-|-|
-|이름|설명|
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|도킹 가능한 분리 색 막대를 만듭니다. (재정의 [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|반환 된 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 팝업 메뉴 내에 포함 되어 있는 합니다. (재정의 [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
-|`CMFCColorPopupMenu::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해 합니다 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|포함 된 속성 표 컨트롤 개체를 설정 `CMFCColorBar` 개체입니다.|
+|속성|Description|
+|[CMFC컬러팝업메뉴::티어오프바 만들기](#createtearoffbar)|도킹 가능한 분리 가능한 색상 막대를 만듭니다. [(CMFCPopup메뉴 재정의::만들기티어오프바.)](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)|
+|[CMFC컬러팝업메뉴::겟메뉴바](#getmenubar)|팝업 메뉴에 포함된 [CMFCPopupMenuBar를](../../mfc/reference/cmfcpopupmenubar-class.md) 반환합니다. [(재정의 CMFCPopup메뉴::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
+|`CMFCColorPopupMenu::GetThisClass`|이 클래스 형식과 연결된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대한 포인터를 얻기 위해 프레임워크에서 사용됩니다.|
+|[CMFC컬러팝업메뉴::세트프로프리스트](#setproplist)|포함된 `CMFCColorBar` 개체의 속성 그리드 제어 개체를 설정합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
 |||
 |-|-|
-|이름|설명|
-|`m_bEnabledInCustomizeMode`|색 막대를 표시할지 여부를 결정 하는 부울 값입니다.|
-|`m_wndColorBar`|`CMFCColorBar` 색 선택 영역을 제공 하는 개체입니다.|
+|속성|Description|
+|`m_bEnabledInCustomizeMode`|색상 막대를 표시할지 여부를 결정하는 부울 값입니다.|
+|`m_wndColorBar`|색상 `CMFCColorBar` 선택을 제공하는 개체입니다.|
 
 ### <a name="remarks"></a>설명
 
-이 클래스의 팝업 메뉴 기능을 상속 합니다 `CMFCPopupMenu` 클래스 및 관리는 `CMFCColorBar` 색 선택 영역을 제공 하는 개체입니다. 사용자 지정 모드에서 도구 모음 프레임 워크의 경우 및 `m_bEnabledInCustomizeMode` 멤버가 FALSE로 설정, 색 막대 개체 표시 되지 않습니다. 사용자 지정 모드에 대 한 자세한 내용은 참조 하세요. [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
+이 클래스는 `CMFCPopupMenu` 클래스의 팝업 메뉴 기능을 상속 `CMFCColorBar` 하 고 색상 선택을 제공 하는 개체를 관리 합니다. 도구 모음 프레임워크가 사용자 지정 모드에 있고 멤버가 `m_bEnabledInCustomizeMode` FALSE로 설정되면 색상 막대 개체가 표시되지 않습니다. 사용자 지정 모드에 대한 자세한 내용은 [CMFCToolBar::IsCustomizeMode를](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) 참조하십시오.
 
-에 대 한 자세한 내용은 `CMFCColorBar`를 참조 하세요 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md)합니다.
+자세한 `CMFCColorBar`내용은 [CMFCColorBar 클래스를](../../mfc/reference/cmfccolorbar-class.md)참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -79,13 +79,13 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
-[CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
+[CMFC컬러팝메뉴](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
 ## <a name="requirements"></a>요구 사항
 
 **헤더:** afxcolorpopupmenu.h
 
-##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu
+## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFC컬러팝업메뉴::CMFC컬러팝메뉴
 
 `CMFCColorPopupMenu` 개체를 생성합니다.
 
@@ -127,65 +127,65 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>매개 변수
 
-*colors*<br/>
-[in] 배열 프레임 워크 팝업 메뉴에 표시 되는 색입니다.
+*색상*<br/>
+【인】 프레임워크가 팝업 메뉴에 표시되는 색상 배열입니다.
 
-*color*<br/>
-[in] 기본 색을 선택 합니다.
+*색*<br/>
+【인】 기본 선택 된 색상입니다.
 
 *lpszAutoColor*<br/>
-[in] 텍스트 레이블을 합니다 *자동* 색 단추 (기본값) 또는 NULL입니다.
+【인】 자동(기본) *automatic* 색상 단추 또는 NULL의 텍스트 레이블입니다.
 
-자동 단추에 대 한 표준 레이블이 **자동**합니다.
+자동 단추의 표준 레이블은 **자동**입니다.
 
 *lpszOtherColor*<br/>
-[in] 텍스트 레이블을 합니다 *다른* 단추를 표시 하는 색 중에서 더 또는 NULL입니다.
+【인】 더 많은 색상 선택 또는 NULL을 표시하는 *다른* 단추의 텍스트 레이블입니다.
 
-기타 단추에 대 한 표준 레이블이 **다른 색...** .
+다른 버튼의 표준 레이블은 **더 많은 색상입니다...**.
 
 *lpszDocColors*<br/>
-[in] 문서 색 단추 텍스트 레이블입니다. 문서 색 색상표를 문서에서 현재 사용 하는 모든 색을 나열 합니다.
+【인】 문서 색상 단추의 텍스트 레이블입니다. 문서 색상팔레트에는 문서가 현재 사용하는 모든 색상이 나열됩니다.
 
 *lstDocColors*<br/>
-[in] 현재 문서에 사용 된 색 목록을 합니다.
+【인】 문서에서 현재 사용하는 색상 목록입니다.
 
 *nColumns*<br/>
-[in] 색 배열에 있는 열의 수입니다.
+【인】 색상 배열에 있는 열 수입니다.
 
-*nHorzDockRows*<br/>
-[in] 가로로 도킹 될 때 색 막대에는 행의 수입니다.
+*n호르즈독로우스*<br/>
+【인】 색상 막대가 가로로 도킹될 때 있는 행 수입니다.
 
-*nVertDockColumns*<br/>
-[in] 세로로 도킹 될 때 색 막대에 있는 열의 수입니다.
+*nVertDock열*<br/>
+【인】 색상 막대가 세로로 도킹될 때 있는 열 수입니다.
 
 *colorAutomatic*<br/>
-[in] 프레임 워크에는 자동 단추를 클릭할 때 적용 되는 기본 색입니다.
+【인】 자동 단추를 클릭할 때 프레임워크가 적용되는 기본 색상입니다.
 
 *uiCommandID*<br/>
-[in] 색 막대 컨트롤 명령 id입니다.
+【인】 색상 막대 컨트롤 명령 ID입니다.
 
 *bStdColorDlg*<br/>
-[in] 표준 시스템 색 대화 상자를 표시할지 여부를 나타내는 부울 값 또는 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) 대화 상자.
+【인】 표준 시스템 색상 대화 상자 또는 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) 대화 상자를 표시할지 여부를 나타내는 부울입니다.
 
-*pParentBtn*<br/>
-[in] 부모 단추에 대 한 포인터입니다.
+*p부모Btn*<br/>
+【인】 상위 단추에 대한 포인터입니다.
 
 *nID*<br/>
-[in] 명령 id입니다.
+【인】 명령 ID입니다.
 
 ### <a name="remarks"></a>설명
 
-생성자 오버 로드 된 각는 `m_bEnabledInCustomizeMode` 멤버 FALSE입니다.
+오버로드된 각 생성자는 멤버를 `m_bEnabledInCustomizeMode` FALSE로 설정합니다.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 생성 하는 방법에 설명 된 `CMFCColorPopupMenu` 개체입니다.
+다음 예제에서는 개체를 `CMFCColorPopupMenu` 구성하는 방법을 보여 줍니다.
 
 [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]
 
-##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar
+## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFC컬러팝업메뉴::티어오프바 만들기
 
-도킹 가능한 분리 색 막대를 만듭니다.
+도킹 가능한 분리 가능한 색상 막대를 만듭니다.
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -198,49 +198,49 @@ virtual CPane* CreateTearOffBar(
 
 |||
 |-|-|
-|매개 변수|설명|
-|*pWndMain*|[in] 분리 막대가 막대의 부모 창에 대 한 포인터입니다.|
-|*uiID*|[in] 분리 막대가 막대의 명령 ID입니다.|
-|*lpszName*|[in] 창 텍스트 분리 모음입니다.|
+|매개 변수|Description|
+|*pWndMain*|【인】 찢어짐 막대의 상위 창에 대한 포인터입니다.|
+|*uiID*|【인】 찢어짐 막대의 명령 ID입니다.|
+|*lpszName*|【인】 찢어짐 막대의 창 텍스트입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-새 분리 컨트롤 막대 개체에 대 한 포인터입니다.
+새 해제 컨트롤 막대 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 만듭니다는 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 개체를 캐스팅 하는 [CPane 클래스](../../mfc/reference/cpane-class.md) 포인터입니다. 이 값으로 캐스팅할 수 있습니다 다시를 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 에 설명 된 캐스팅 매크로 중 하나를 사용 하 여 포인터 [MFC 클래스 개체의 형식 캐스팅의](../../mfc/reference/type-casting-of-mfc-class-objects.md)합니다.
+이 메서드는 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 개체를 만들고 [CPane 클래스](../../mfc/reference/cpane-class.md) 포인터에 캐스팅 합니다. [MFC 클래스 개체의 형식 캐스팅에](../../mfc/reference/type-casting-of-mfc-class-objects.md)설명된 캐스팅 매크로 중 하나를 사용하여 이 값을 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 포인터로 다시 캐스팅할 수 있습니다.
 
-##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar
+## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFC컬러팝업메뉴::겟메뉴바
 
-반환 된 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 팝업 메뉴 내에 포함 되어 있는 합니다.
+팝업 메뉴에 포함된 [CMFCPopupMenuBar를](../../mfc/reference/cmfcpopupmenubar-class.md) 반환합니다.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-포함에 대 한 포인터 `CMFCPopupMenuBar`합니다.
+임베디드에 `CMFCPopupMenuBar`대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-색 팝업 메뉴에 포함 된 [CMFCPopupMenuBar 클래스](../../mfc/reference/cmfcpopupmenubar-class.md) 개체입니다. 응용 프로그램에 포함 된 유형을 사용 하는 경우 파생된 클래스에서이 메서드를 재정의 합니다.
+색상 팝업 메뉴에는 [CMFCPopupMenuBar 클래스](../../mfc/reference/cmfcpopupmenubar-class.md) 개체가 포함되어 있습니다. 응용 프로그램에서 다른 임베디드 형식을 사용하는 경우 derived 클래스에서 이 메서드를 재정의합니다.
 
-##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList
+## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFC컬러팝업메뉴::세트프로프리스트
 
-포함 된 속성 표 컨트롤 개체를 설정 `CMFCColorBar` 개체입니다.
+포함된 `CMFCColorBar` 개체의 속성 그리드 제어 개체를 설정합니다.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pWndList*<br/>
-[in] 속성 표 컨트롤 개체에 대 한 포인터입니다.
+【인】 속성 그리드 제어 개체에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

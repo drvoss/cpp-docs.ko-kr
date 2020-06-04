@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3752
 ms.assetid: 1ac81d85-0f5a-4f39-95b6-42fd43cb18d5
-ms.openlocfilehash: cc5317c2a246493cb2231eda4ca4189a2b2128e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7180f587081c98f16ab4327b5632fecf1fd689bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165862"
 ---
 # <a name="compiler-error-c3752"></a>컴파일러 오류 C3752
 
-'특성 클래스': 특성을 분류할 수 없습니다 이 컨텍스트에서 'keyword'를 사용 하지 않아야 합니다.
+' attribute class ': 특성을 분류할 수 없습니다. ' keyword '는이 컨텍스트에서 사용할 수 없습니다.
 
-사용자 정의 특성을 올바르게 적용 되었습니다.
+사용자 정의 특성이 잘못 적용 되었습니다.

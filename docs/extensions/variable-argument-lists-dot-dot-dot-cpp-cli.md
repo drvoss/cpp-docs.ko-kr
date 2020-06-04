@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: ec1e2cefa33bc9d749d0f05e170c2f2db9b25f02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515958"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032306"
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
 
 이 예제에서는 C++/CLI의 `...` 구문을 사용하여 인수 개수가 가변적인 함수를 구현하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 항목은 C++/CLI에 적용됩니다. ISO 표준 C++의 `...` 사용 방법에 대한 자세한 내용은 [줄임표 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 및 [후위 식](../cpp/postfix-expressions.md)의 줄임표 및 기본 인수를 참조하세요.
+> 이 항목은 C++/CLI에 적용됩니다. ISO 표준 `...` C++에서 사용에 대한 자세한 내용은 [Postfix 식에서](../cpp/postfix-expressions.md) [타원 및 다발성 템플릿](../cpp/ellipses-and-variadic-templates.md) 및 타원 및 기본 인수를 참조하십시오.
 
 `...`를 사용하는 매개 변수는 매개 변수 목록의 마지막 매개 변수여야 합니다.
 
@@ -49,7 +49,7 @@ int main() {
 3
 ```
 
-## <a name="code-example"></a>코드 예제
+## <a name="code-example"></a>코드 예
 
 다음 예제에서는 가변 개수의 인수를 사용하는 Visual C++ 함수를 C#에서 호출하는 방법을 보여 줍니다.
 
@@ -68,7 +68,7 @@ public:
 
 C#에서 `ParamArray` 매개 변수에 전달된 인수를 가변 개수의 인수로 호출할 수 있습니다. 다음 코드 샘플은 C#으로 작성되었습니다.
 
-```cs
+```csharp
 // mcppv2_paramarray3.cs
 // compile with: /r:mcppv2_paramarray2.dll
 // a C# program
@@ -101,6 +101,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [배열](arrays-cpp-component-extensions.md)

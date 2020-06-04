@@ -6,16 +6,16 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150625"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749188"
 ---
 # <a name="conditional-expression-operator"></a>조건식 연산자
 
-C에는 삼항 연산자인 조건식 연산자가 하나 있습니다(**? :**).
+C에는 삼항 연산자인 조건식 연산자가 하나 있습니다( **? :** ).
 
 ## <a name="syntax"></a>구문
 
@@ -45,7 +45,7 @@ C에는 삼항 연산자인 조건식 연산자가 하나 있습니다(**? :**).
 
 포인터에 대한 형식 비교에서 포인터가 가리키는 형식의 모든 형식 한정자(**const** 또는 `volatile`)는 중요하지 않지만 결과 형식은 조건의 두 구성 요소에서 한정자를 상속합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 조건 연산자를 사용하는 방법을 보여 줍니다.
 
@@ -55,7 +55,7 @@ j = ( i < 0 ) ? ( -i ) : ( i );
 
 이 예제에서는 `i`의 절대값을 `j`에 할당합니다. `i`가 0보다 작으면 `-i`가 `j`에 할당되고, `i`가 0보다 크거나 같으면 `i`가 `j`에 할당됩니다.
 
-```
+```cpp
 void f1( void );
 void f2( void );
 int x;
@@ -68,6 +68,6 @@ int y;
 
 이 예제에서는 `f1` 및 `f2` 함수와 `x` 및 `y` 변수가 선언되었습니다. 프로그램의 뒷부분에서 두 변수의 값이 같으면 `f1` 함수가 호출되고, 그렇지 않으면 `f2`가 호출됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [조건 연산자: ? :](../cpp/conditional-operator-q.md)

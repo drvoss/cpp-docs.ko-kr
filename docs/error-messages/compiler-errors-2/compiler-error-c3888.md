@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40156dfaad5965d30a32d3aa2ac574a5f91999ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187381"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176406"
 ---
 # <a name="compiler-error-c3888"></a>컴파일러 오류 C3888
 
@@ -23,6 +23,6 @@ ms.locfileid: "62187381"
 
 1. 선언된 리터럴 데이터 멤버가 지원되는 형식인지 확인합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[name](../../extensions/literal-cpp-component-extensions.md)
+[literal](../../extensions/literal-cpp-component-extensions.md)

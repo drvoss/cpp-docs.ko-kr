@@ -1,8 +1,9 @@
 ---
 title: _open_osfhandle
-ms.date: 05/21/2019
+ms.date: 4/2/2020
 api_name:
 - _open_osfhandle
+- _o__open_osfhandle
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951214"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910667"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -55,9 +57,9 @@ int _open_osfhandle (
 *flags*<br/>
 허용되는 연산의 유형입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-정상적으로 실행되면 **_open_osfhandle**은 C 런타임 파일 설명자를 반환합니다. 그렇지 않은 경우 -1을 반환합니다.
+정상적으로 실행되면 **_open_osfhandle**은 C 런타임 파일 설명자를 반환합니다. 그렇지 않으면 -1을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -67,12 +69,14 @@ int _open_osfhandle (
 
 |||
 |-|-|
-| **\_O\_APPEND** | 모든 쓰기 작업 전에 파일 포인터를 파일 끝에 배치합니다. |
+| **\_O\_추가** | 모든 쓰기 작업 전에 파일 포인터를 파일 끝에 배치합니다. |
 | **\_O\_RDONLY** | 읽기 전용으로 파일을 엽니다. |
-| **\_O\_TEXT** | 파일을 텍스트(변환됨) 모드에서 엽니다. |
+| **\_O\_텍스트** | 파일을 텍스트(변환됨) 모드에서 엽니다. |
 | **\_O\_WTEXT** | 파일을 유니코드(변환된 UTF-16) 모드에서 엽니다. |
 
-**_open_osfhandle** 호출이 Win32 파일 핸들의 소유권을 파일 설명자로 전송합니다. **_open_osfhandle**을 사용하여 열린 파일을 닫으려면 [\_닫기](close.md)를 호출합니다. 기본 OS 파일 핸들도 **_close**에 대한 호출에 의해 닫힙니다. 원래 핸들에 있는 Win32 함수 **CloseHandle**을 호출하지 마세요. **파일 설명자가 파일 스트림이 소유 &#42;**  하 고 있는 경우 [fclose](fclose-fcloseall.md) 호출은 파일 설명자와 기본 핸들을 모두 닫습니다. 이 경우 파일 설명자의 **_close** 또는 원래 핸들의 **CloseHandle**을 호출하지 마세요.
+**_open_osfhandle** 호출이 Win32 파일 핸들의 소유권을 파일 설명자로 전송합니다. **_open_osfhandle**을 사용하여 열린 파일을 닫으려면 [\_닫기](close.md)를 호출합니다. 기본 OS 파일 핸들도 **_close**에 대한 호출에 의해 닫힙니다. 원래 핸들에 있는 Win32 함수 **CloseHandle**을 호출하지 마세요. 파일 **&#42;** 스트림이 파일 설명자를 소유 하는 경우 [fclose](fclose-fcloseall.md) 를 호출 하면 파일 설명자와 기본 핸들이 모두 닫힙니다. 이 경우 파일 설명자의 **_close** 또는 원래 핸들의 **CloseHandle**을 호출하지 마세요.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -80,9 +84,9 @@ int _open_osfhandle (
 |-------------|---------------------|
 |**_open_osfhandle**|\<io.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [\_get_osfhandle](get-osfhandle.md)

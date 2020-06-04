@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514186"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166434"
 ---
 # <a name="propputref"></a>propputref
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514186"
 
 |||
 |-|-|
-|**적용 대상**|메서드|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
+|**적용 대상**|방법|
+|**반복 가능**|예|
+|**필수 특성**|None|
 |**잘못된 특성**|`propget`, `propput`|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>

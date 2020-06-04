@@ -1,9 +1,11 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy_s
 - _mbccpy_s_l
+- _o__mbccpy_s
+- _o__mbccpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952629"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920315"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -88,7 +91,7 @@ errno_t _mbccpy_s_l(
 *buffSizeInBytes*<br/>
 대상 버퍼의 크기입니다.
 
-*pCopied*<br/>
+*pCopied 됨*<br/>
 복사된 바이트 수로 채워집니다(성공할 경우 1 또는 2). 숫자에 대해 걱정 하지 않는 경우 **NULL** 을 전달 합니다.
 
 *src*<br/>
@@ -97,7 +100,7 @@ errno_t _mbccpy_s_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 시 0이고, 실패 시 오류 코드입니다. *Src* 또는 *dest* 가 **NULL**이거나 **buffSizeinBytes** 바이트를 초과 하는 바이트를 *Dest*로 복사 하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 은 **EINVAL**로 설정 됩니다.
 
@@ -109,7 +112,7 @@ errno_t _mbccpy_s_l(
 
 *Pcopied* 의 값은 복사 된 바이트 수로 채워집니다. 연산이 성공할 경우 가능한 값은 1과 2입니다. **NULL** 이 전달 되 면이 매개 변수는 무시 됩니다.
 
-|*src*|*대상* 에 복사 됨|*pCopied*|반환 값|
+|*src*|*대상* 에 복사 됨|*pCopied 됨*|반환 값|
 |-----------|----------------------|---------------|------------------|
 |비선행 바이트|비선행 바이트|1|0|
 |0|0|1|0|
@@ -118,11 +121,13 @@ errno_t _mbccpy_s_l(
 
 두 번째 행은 첫 번째 행의 특수 사례일 뿐입니다. 또한 테이블에서는 *buffSizeInBytes* >= *pcopied*를 가정 합니다.
 
-**_mbccpy_s** 는 로캘 종속 동작에 대해 현재 로캘을 사용 합니다. **_mbccpy_s_l** 는 로캘 종속 동작에 대해 전달 된 **로캘을 사용 한다는** 점을 제외 하 고 **_mbccpy_s** 와 동일 합니다.
+**_mbccpy_s** 은 모든 로캘 종속 동작에 현재 로캘을 사용 합니다. **_mbccpy_s_l** 은 모든 로캘 종속 동작에 대해 전달 된 로캘을 사용 **_mbccpy_s_l** 한다는 점을 제외 하 고 **_mbccpy_s** 와 동일 합니다.
 
-C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -135,10 +140,10 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

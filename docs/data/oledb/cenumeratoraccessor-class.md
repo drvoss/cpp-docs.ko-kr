@@ -14,14 +14,12 @@ f1_keywords:
 - CEnumeratorAccessor.m_nType
 - CEnumeratorAccessor::m_nType
 - ATL.CEnumeratorAccessor.m_nType
-- m_nType
 - ATL::CEnumeratorAccessor::m_szDescription
 - CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szDescription
 - ATL.CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szName
 - ATL.CEnumeratorAccessor.m_szName
-- m_szName
 - ATL::CEnumeratorAccessor::m_szName
 - CEnumeratorAccessor.m_szName
 - CEnumeratorAccessor::m_szParseName
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: e609b346bb4a0c2469c24e20540c646fa869ae26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211834"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 클래스
 
-사용한 [CEnumerator](../../data/oledb/cenumerator-class.md) 열거자 행 집합에서 데이터를 액세스할 수 있습니다.
+[CEnumerator](../../data/oledb/cenumerator-class.md) 에서 열거자 행 집합의 데이터에 액세스 하는 데 사용 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -64,19 +62,19 @@ class CEnumeratorAccessor
 
 |||
 |-|-|
-|[m_bIsParent](#bisparent)|있는지 여부를 나타내는 열거자 부모 열거자의 경우 행이 열거자는 변수입니다.|
-|[m_nType](#ntype)|행이 데이터 원본 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.|
-|[m_szDescription](#szdescription)|데이터 원본 또는 열거자의 설명입니다.|
-|[m_szName](#szname)|데이터 원본 또는 열거자의 이름입니다.|
-|[m_szParseName](#szparsename)|에 전달할 문자열 [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) 데이터 원본 또는 열거자에 대 한 모니커를 가져오려고 합니다.|
+|[m_bIsParent](#bisparent)|열거자가 부모 열거자 인지 여부를 나타내는 변수입니다 (행이 열거자 인 경우).|
+|[m_nType](#ntype)|행이 데이터 소스 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.|
+|[m_szDescription](#szdescription)|데이터 원본 또는 열거자에 대 한 설명입니다.|
+|[m_szName](#szname)|데이터 소스 또는 열거자의 이름입니다.|
+|[m_szParseName](#szparsename)|데이터 소스 또는 열거자에 대 한 모니커를 가져오기 위해 [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 에 전달할 문자열입니다.|
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 행 집합은 데이터 원본 및 현재 열거자에서 표시 되는 열거자 구성 됩니다.
+이 행 집합은 현재 열거자에서 표시 되는 데이터 소스와 열거자로 구성 됩니다.
 
-## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
 
-있는지 여부를 나타내는 열거자 부모 열거자의 경우 행이 열거자는 변수입니다.
+열거자가 부모 열거자 인지 여부를 나타내는 변수입니다 (행이 열거자 인 경우).
 
 ### <a name="syntax"></a>구문
 
@@ -84,13 +82,13 @@ class CEnumeratorAccessor
 VARIANT_BOOL m_bIsParent;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-참조 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 에 *OLE DB Programmer's Reference* 자세한 내용은 합니다.
+자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
 
-행이 데이터 원본 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.
+행이 데이터 소스 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -98,13 +96,13 @@ VARIANT_BOOL m_bIsParent;
 USHORT m_nType;
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-참조 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 에 *OLE DB Programmer's Reference* 자세한 내용은 합니다.
+자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
 
-데이터 원본 또는 열거자의 설명입니다.
+데이터 원본 또는 열거자에 대 한 설명입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -112,13 +110,13 @@ USHORT m_nType;
 WCHAR m_szDescription[129];
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-참조 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 에 *OLE DB Programmer's Reference* 자세한 내용은 합니다.
+자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="szname"></a> CEnumeratorAccessor::m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
 
-데이터 원본 또는 열거자의 이름입니다.
+데이터 소스 또는 열거자의 이름입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -126,13 +124,13 @@ WCHAR m_szDescription[129];
 WCHAR m_szName[129];
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-참조 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 에 *OLE DB Programmer's Reference* 자세한 내용은 합니다.
+자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
 
-에 전달할 문자열 [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) 데이터 원본 또는 열거자에 대 한 모니커를 가져오려고 합니다.
+데이터 소스 또는 열거자에 대 한 모니커를 가져오기 위해 [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 에 전달할 문자열입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -140,11 +138,11 @@ WCHAR m_szName[129];
 WCHAR m_szParseName[129];
 ```
 
-### <a name="remarks"></a>설명
+### <a name="remarks"></a>주의
 
-참조 [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 에 *OLE DB Programmer's Reference* 자세한 내용은 합니다.
+자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325681"
 ---
 # <a name="c-floating-point-constants"></a>C 부동 소수점 상수
 
@@ -35,7 +35,7 @@ ms.locfileid: "56148701"
 &nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *digit-sequence*
 
 *sign*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
+&nbsp;&nbsp;&nbsp;&nbsp; **+ -**
 
 *digit-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
@@ -56,9 +56,9 @@ ms.locfileid: "56148701"
 25E-4     /* =  0.0025 */
 ```
 
-부동 소수점 상수는 빼기 기호(**-**)가 앞에 없는 경우 양수입니다. 이 경우 빼기 기호는 단항 산술 부정 연산자로 처리됩니다. 부동 소수점 상수의 형식은 `float`, `double` 또는 `long double`입니다.
+부동 소수점 상수는 빼기 기호( **-** )가 앞에 없는 경우 양수입니다. 이 경우 빼기 기호는 단항 산술 부정 연산자로 처리됩니다. 부동 소수점 상수의 형식은 `float`, `double` 또는 `long double`입니다.
 
-**f**, **F**, **l** 또는 **L** 접미사가 없는 부동 소수점 상수는 `double` 형식입니다. 문자 **f** 또는 **F**가 접미사이면 상수 형식은 `float`입니다. 그 뒤에 문자 **l** 또는 **L**이 오는 경우 형식은 `long double`입니다. 예:
+**f**, **F**, **l** 또는 **L** 접미사가 없는 부동 소수점 상수는 `double` 형식입니다. 문자 **f** 또는 **F**가 접미사이면 상수 형식은 `float`입니다. 그 뒤에 문자 **l** 또는 **L**이 오는 경우 형식은 `long double`입니다. 예를 들어:
 
 ```C
 10.0L  /* Has type long double  */
@@ -76,6 +76,6 @@ Microsoft C 컴파일러는 내부적으로 `long double`을 `double` 형식과 
 75e-2
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 상수](../c-language/c-constants.md)

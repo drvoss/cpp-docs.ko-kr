@@ -1,17 +1,17 @@
 ﻿---
-title: 개체 수명 및 리소스 관리 (RAII)
+title: 개체 수명 및 리소스 관리(RAII)
 description: 리소스 누수를 방지 하려면 최신 C++ RAII의 원칙을 따릅니다.
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303367"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078026"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>개체 수명 및 리소스 관리 (RAII)
+# <a name="object-lifetime-and-resource-management-raii"></a>개체 수명 및 리소스 관리(RAII)
 
 관리 되는 언어 C++ 와 달리에는 자동 *가비지 컬렉션이*없습니다. 프로그램이 실행 될 때 힙 메모리 및 기타 리소스를 해제 하는 내부 프로세스입니다. C++ 프로그램은 가져온 모든 리소스를 운영 체제에 반환 해야 합니다. 사용 하지 않는 리소스를 해제 하는 데 실패 하는 것을 *누출*이라고 합니다. 프로세스가 종료 될 때까지 다른 프로그램에서 유출 된 리소스를 사용할 수 없습니다. 특히 메모리 누수는 C 스타일 프로그래밍에서 발생 하는 버그의 일반적인 원인입니다.
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 다음 예제에서 `w`는 메모리 리소스를 소유 하므로 메모리를 삭제 하려면 해당 소멸자에 코드가 있어야 합니다.
- 
+
 ```cpp
 class widget
 {

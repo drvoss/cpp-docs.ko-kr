@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: e5e6b0a22d438f9c26318129e2d04df96d386cda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391337"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755098"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 클래스
 
@@ -37,17 +37,17 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|인스턴스를 만들고 `CAnimationTimerEventHandler` 콜백 합니다.|
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|애니메이션 업데이트가 완료 된 후 발생 하는 이벤트를 처리 합니다. ( `CUIAnimationTimerEventHandlerBase::OnPostUpdate`을 재정의합니다.)|
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|애니메이션 업데이트가 시작 되기 전에 발생 하는 이벤트를 처리 합니다. ( `CUIAnimationTimerEventHandlerBase::OnPreUpdate`을 재정의합니다.)|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|애니메이션 렌더링 프레임 속도가 최소 원하는 프레임 속도 아래로 떨어질 때 발생 하는 이벤트를 처리 합니다. ( `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`을 재정의합니다.)|
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|이벤트를 라우팅하도록 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.|
+|[C애니메이션타이머이벤트::만들기 인스턴스](#createinstance)|콜백 인스턴스를 `CAnimationTimerEventHandler` 만듭니다.|
+|[C애니메이션타이머이벤트::온포스트업데이트](#onpostupdate)|애니메이션 업데이트가 완료된 후 발생하는 이벤트를 처리합니다. ( `CUIAnimationTimerEventHandlerBase::OnPostUpdate`을 재정의합니다.)|
+|[C애니메이션타이머이벤트::온사전업데이트](#onpreupdate)|애니메이션 업데이트가 시작되기 전에 발생하는 이벤트를 처리합니다. ( `CUIAnimationTimerEventHandlerBase::OnPreUpdate`을 재정의합니다.)|
+|[C애니메이션타이머이벤트::온렌더링투슬로우](#onrenderingtooslow)|애니메이션의 렌더링 프레임 속도가 최소 바람직한 프레임 속도보다 낮을 때 발생하는 이벤트를 처리합니다. ( `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`을 재정의합니다.)|
+|[C애니메이션타이머이벤트::세트애니메이션컨트롤러](#setanimationcontroller)|애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 이벤트 처리기 생성 되어 IUIAnimationTimer::SetTimerEventHandler CAnimationController::EnableAnimationTimerEventHandler를 호출할 때 전달 됩니다.
+이 이벤트 처리기는 CAnimationController::EnableAnimationTimerEventHandler를 호출할 때 IUIAnimationTimer::SetTimerEventHandler에 생성되고 전달됩니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -61,9 +61,9 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 **헤더:** afxanimationcontroller.h
 
-##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance
+## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>C애니메이션타이머이벤트::만들기 인스턴스
 
-CAnimationTimerEventHandler 콜백 인스턴스를 만듭니다.
+CAnimationTimerEventHandler 콜백의 인스턴스를 만듭니다.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -73,42 +73,42 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnimationController*<br/>
-이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.
+*p애니메이션 컨트롤러*<br/>
+이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-*ppTimerEventHandler*
+*pp타이머이벤트핸들러*
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
+메서드가 성공하면 S_OK가 반환되고, 그렇지 않으면 HRESULT 오류 코드를 반환합니다.
 
-##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate
+## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>C애니메이션타이머이벤트::온포스트업데이트
 
-애니메이션 업데이트가 완료 된 후 발생 하는 이벤트를 처리 합니다.
+애니메이션 업데이트가 완료된 후 발생하는 이벤트를 처리합니다.
 
 ```
 IFACEMETHOD(OnPostUpdate)();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.
+메서드가 성공하면 S_OK. 그렇지 않으면 E_FAIL.
 
-##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate
+## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>C애니메이션타이머이벤트::온사전업데이트
 
-애니메이션 업데이트가 시작 되기 전에 발생 하는 이벤트를 처리 합니다.
+애니메이션 업데이트가 시작되기 전에 발생하는 이벤트를 처리합니다.
 
 ```
 IFACEMETHOD(OnPreUpdate)();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.
+메서드가 성공하면 S_OK. 그렇지 않으면 E_FAIL.
 
-##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow
+## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>C애니메이션타이머이벤트::온렌더링투슬로우
 
-애니메이션 렌더링 프레임 속도가 최소 원하는 프레임 속도 아래로 떨어질 때 발생 하는 이벤트를 처리 합니다.
+애니메이션의 렌더링 프레임 속도가 최소 바람직한 프레임 속도보다 낮을 때 발생하는 이벤트를 처리합니다.
 
 ```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
@@ -116,25 +116,25 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 ### <a name="parameters"></a>매개 변수
 
-*fps*
+*Fps*
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL입니다.
+메서드가 성공하면 S_OK. 그렇지 않으면 E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController
+## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>C애니메이션타이머이벤트::세트애니메이션컨트롤러
 
-이벤트를 라우팅하도록 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.
+애니메이션 컨트롤러에 대한 포인터를 저장하여 이벤트를 라우팅합니다.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnimationController*<br/>
-이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.
+*p애니메이션 컨트롤러*<br/>
+이벤트를 수신하는 애니메이션 컨트롤러에 대한 포인터입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

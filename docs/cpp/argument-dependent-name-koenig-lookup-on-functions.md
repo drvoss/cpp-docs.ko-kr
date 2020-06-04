@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184480"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190539"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>함수에 대한 인수 종속 이름(Koenig) 조회
 
-컴파일러에서는 인수 종속 이름 조회를 사용하여 정규화되지 않은 함수 호출의 정의를 찾을 수 있습니다. 인수 종속 이름 조회를 Koenig 조회라고도 합니다. 함수 호출에 있는 모든 인수의 형식은 네임스페이스, 클래스, 구조체, 공용 구조체 또는 템플릿의 계층 구조 내에서 정의됩니다. 지정 된 정규화 되지 않은 [후 위](../cpp/postfix-expressions.md) 함수 호출인 경우 컴파일러는 각 인수 형식과 연결 된 계층 구조에서 함수 정의 대 한 검색 합니다.
+컴파일러에서는 인수 종속 이름 조회를 사용하여 정규화되지 않은 함수 호출의 정의를 찾을 수 있습니다. 인수 종속 이름 조회를 Koenig 조회라고도 합니다. 함수 호출에 있는 모든 인수의 형식은 네임스페이스, 클래스, 구조체, 공용 구조체 또는 템플릿의 계층 구조 내에서 정의됩니다. 정규화 되지 않은 [후 위](../cpp/postfix-expressions.md) 함수 호출을 지정 하는 경우 컴파일러는 각 인수 형식과 연결 된 계층에서 함수 정의를 검색 합니다.
 
 ## <a name="example"></a>예제
 

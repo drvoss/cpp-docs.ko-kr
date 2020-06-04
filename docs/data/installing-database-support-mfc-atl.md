@@ -7,18 +7,17 @@ helpviewer_keywords:
 - ATL [C++], database support
 - databases [C++], installing database support
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
-ms.openlocfilehash: cd0e8892aa208c80fdd30e6c3f4d47bddb9886ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1c1222c5804b508a8ddaa30d49277d98b2e10ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213397"
 ---
 # <a name="installing-database-support-mfcatl"></a>데이터베이스 지원 설치 (MFC/ATL)
 
-Visual C++ 모든 데이터베이스 제품에 포함 되지 않습니다. 대상
+시각적 C++ 개체에는 데이터베이스 제품이 포함 되지 않습니다. 수행 작업
 
-
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [데이터 액세스](data-access-in-cpp.md)

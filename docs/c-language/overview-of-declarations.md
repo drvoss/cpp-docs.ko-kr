@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
 ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857062"
@@ -21,7 +21,7 @@ ms.locfileid: "74857062"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *특성-seq*<sub>opt</sub> is Microsoft 전용 */
+/\* *attribute-seq*<sub>opt</sub>는 Microsoft 전용임 */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -43,7 +43,7 @@ ms.locfileid: "74857062"
 
 선언에는 *attribute-seq*에 나열된 선택적 특성이 하나 이상 포함될 수 있습니다. *seq*는 시퀀스의 약어입니다. 이러한 Microsoft 전용 특성은 이 설명서 전반에 설명되어 있는 다양한 기능을 수행합니다.
 
-변수 선언에 대한 일반적인 양식에서 *type-specifier*는 변수의 데이터 형식을 제공합니다. *type-specifier*는 형식이 **const** 또는 `volatile`에 의해 수정될 때처럼 복합형이 될 수 있습니다. `declarator`는 변수 이름을 제공합니다. 이러한 변수 이름은 배열이나 포인터 형식을 선언하기 위해 수정할 수 있습니다. 예를 들어 입니다.
+변수 선언에 대한 일반적인 양식에서 *type-specifier*는 변수의 데이터 형식을 제공합니다. *type-specifier*는 형식이 **const** 또는 `volatile`에 의해 수정될 때처럼 복합형이 될 수 있습니다. `declarator`는 변수 이름을 제공합니다. 이러한 변수 이름은 배열이나 포인터 형식을 선언하기 위해 수정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```C
 int const *fp;

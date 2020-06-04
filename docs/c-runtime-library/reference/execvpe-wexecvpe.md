@@ -1,9 +1,11 @@
 ---
 title: _execvpe, _wexecvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execvpe
 - _wexecvpe
+- _o__execvpe
+- _o__wexecvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,13 +18,13 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4a1a2d66600a7502c088577adca4085c68e4ccd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941735"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909701"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -65,13 +67,13 @@ intptr_t _wexecvpe(
 *cmdname*<br/>
 실행할 파일의 경로입니다.
 
-*argv*<br/>
+*마다*<br/>
 매개 변수에 대한 포인터 배열입니다.
 
 *envp*<br/>
 환경 설정에 대한 포인터 배열입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공하면 이러한 함수는 호출 프로세스에 값을 반환하지 않습니다. 반환 값-1은 오류를 나타내며,이 경우 **errno** 전역 변수가 설정 됩니다.
 
@@ -80,7 +82,7 @@ intptr_t _wexecvpe(
 |**E2BIG**|인수 및 환경 설정에 필요한 공간의 크기가 32KB를 초과합니다.|
 |**EACCES**|지정한 파일이 잠금 또는 공유 위반이 되었습니다.|
 |**EMFILE**|너무 많은 파일이 열려 있습니다. 실행 파일인지 여부를 확인하려면 지정한 파일이 열려 있어야 합니다.|
-|**ENOENT**|파일 또는 경로를 찾을 수 없습니다.|
+|**ENOENT (**|파일 또는 경로를 찾을 수 없습니다.|
 |**ENOEXEC**|지정한 파일이 실행할 수 없거나 실행 파일 형식이 잘못되었습니다.|
 |**ENOMEM**|메모리가 부족하여 새 프로세스를 실행할 수 없습니다. 사용 가능한 메모리가 손상되었거나 잘못된 블록이 있습니다. 이는 호출 프로세스가 제대로 할당되지 않았음을 나타냅니다.|
 
@@ -90,7 +92,9 @@ intptr_t _wexecvpe(
 
 이러한 각 함수는 새 프로세스를 로드 및 실행하고, 명령줄 인수에 대한 포인터 배열 및 환경 설정에 대한 포인터 배열을 전달합니다. 이러한 함수는 **PATH** 환경 변수를 사용 하 여 실행할 파일을 찾습니다.
 
-_Exatwaatststnoststnostststnost *Cmdname* 이 null 포인터 이거나 *argv* 가 null 포인터 이거나, 빈 배열에 대 한 포인터 이거나, 첫 번째 인수로 빈 문자열이 포함 된 배열에 대 한 포인터인 경우 이러한 함수는에 [설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md). 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고-1을 반환 합니다. 프로세스가 시작되지 않습니다.
+**_Execvpe** 함수는 해당 매개 변수의 유효성을 검사 합니다. *Cmdname* 이 null 포인터 이거나 *argv* 가 null 포인터 이거나, 빈 배열에 대 한 포인터 이거나, 첫 번째 인수로 빈 문자열이 포함 된 배열에 대 한 포인터인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고-1을 반환 합니다. 프로세스가 시작되지 않습니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -99,17 +103,17 @@ _Exatwaatststnoststnostststnost *Cmdname* 이 null 포인터 이거나 *argv* �
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> 또는 \<wchar.h>|\<errno.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[중단이](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334425"
 ---
 # <a name="c-run-time-library-reference"></a>C 런타임 라이브러리 참조
 
@@ -32,8 +32,11 @@ C 런타임 라이브러리를 구성하는 .lib 파일에 대해 설명합니�
 [전역 변수 및 표준 형식](../c-runtime-library/global-variables-and-standard-types.md)<br/>
 런타임 라이브러리에서 제공된 표준 형식과 전역 변수에 대한 링크를 제공합니다.
 
-[전역 상수](../c-runtime-library/global-constants.md)<br/>
+[글로벌 상수](../c-runtime-library/global-constants.md)<br/>
 런타임 라이브러리에 의해 정의된 전역 상수에 대한 링크를 제공합니다.
+
+[글로벌 주](../c-runtime-library/global-state.md)<br/>
+C 런타임 라이브러리에서 전역 상태의 범위를 설명합니다.
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 모든 C 런타임 라이브러리 함수의 알파벳순 목록에 대한 목차 진입점을 제공합니다.
@@ -56,4 +59,4 @@ Tchar.h에서 정의된 제네릭 텍스트 매핑에 대한 링크를 제공합
 DLL에 사용되는 진입점과 시작 코드를 설명합니다.
 
 [디버깅](/visualstudio/debugger/debugging-in-visual-studio)<br/>
-Visual Studio 디버거를 사용하여 응용 프로그램이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.
+Visual Studio 디버거를 사용하여 애플리케이션이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.

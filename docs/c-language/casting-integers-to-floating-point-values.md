@@ -5,11 +5,11 @@ helpviewer_keywords:
 - integers, casting to floating-point values
 ms.assetid: 81fd5b7d-15eb-4c11-a8c8-e1621ff54fd3
 ms.openlocfilehash: 8fa013668278fae82bcb2bb9eb1f2aec3cb61581
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312650"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>정수를 부동 소수점 값으로 캐스팅
 
@@ -19,6 +19,6 @@ ms.locfileid: "56152874"
 
 예를 들어, **unsigned long**(전체 자릿수가 32비트)을 **float**(가수의 전체 자릿수가 23비트)로 캐스팅하면 가장 근사한 256의 배수로 반올림됩니다. 4,294,966,913에서 4,294,967,167까지의 **long** 값이 모두 **float** 값 4,294,967,040으로 반올림됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [부동 소수점의 수학](../c-language/floating-point-math.md)

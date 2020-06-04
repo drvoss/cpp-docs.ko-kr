@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172622"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>특성 대상(C++/CLI 및 C++/CX)
 
@@ -193,7 +193,7 @@ ms.locfileid: "65516148"
     };
     ```
 
-일반적으로, 특성은 적용되는 언어 요소 바로 앞에 옵니다. 그러나 일부의 경우, 특성의 위치만으로 특성의 의도된 대상을 결정하기에 충분하지 않습니다. 다음 예제를 고려해 보세요.
+일반적으로, 특성은 적용되는 언어 요소 바로 앞에 옵니다. 그러나 일부의 경우, 특성의 위치만으로 특성의 의도된 대상을 결정하기에 충분하지 않습니다. 다음 예를 살펴보세요.
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -250,7 +250,7 @@ ms.locfileid: "65516148"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 이 샘플에서는 여러 대상을 지정하는 방법을 보여 줍니다.
 

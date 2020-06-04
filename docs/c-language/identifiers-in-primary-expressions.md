@@ -5,11 +5,11 @@ helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
 ms.openlocfilehash: 053720bcdf635a7e09363712259b558d93a2972c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233088"
 ---
 # <a name="identifiers-in-primary-expressions"></a>기본 식의 식별자
 
@@ -19,6 +19,6 @@ ms.locfileid: "56151457"
 
 함수로 선언된 식별자는 값이 함수의 주소인 포인터를 나타냅니다. 포인터는 지정된 형식의 값을 반환하는 함수의 주소를 지정합니다. 따라서 함수 식별자도 할당 연산에서 l-value일 수 없습니다. 자세한 내용은 [Identifiers](../c-language/c-identifiers.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 기본 식](../c-language/c-primary-expressions.md)

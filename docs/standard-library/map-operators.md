@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956951"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371033"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 연산자
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체와 같지 않은지 테스트합니다.
 
@@ -37,13 +37,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 map이 같지 않으면 **true**이고, map이 같으면 **false**입니다.
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체보다 작은지 테스트합니다.
 
@@ -102,13 +102,13 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체보다 작거나 같은지 테스트합니다.
 
@@ -167,13 +167,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체와 같은지 테스트합니다.
 
@@ -235,13 +235,13 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체보다 큰지 테스트합니다.
 
@@ -300,13 +300,13 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 map 개체가 우변에 있는 map 개체보다 크거나 같은지 테스트합니다.
 
@@ -364,13 +364,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `map` 형식의 개체입니다.
 
 *오른쪽*\
 `map` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 map이 연산자 우변의 map보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a>operator! = (multimap)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>연산자!= (멀티맵)
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체와 같지 않은지 테스트합니다.
 
@@ -432,13 +432,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 multimap이 같지 않으면 **true**이고 multimap이 같으면 **false**입니다.
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>연산자&lt;
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체보다 작은지 테스트합니다.
 
@@ -497,13 +497,13 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="op_lt_eq_multimap"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>연산자&lt;=
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체보다 작거나 같은지 테스트합니다.
 
@@ -562,13 +562,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>연산자==
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체와 같은지 테스트합니다.
 
@@ -630,13 +630,13 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap과 같으면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>연산자&gt;
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체보다 큰지 테스트합니다.
 
@@ -695,13 +695,13 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 크면 **true**이고 그렇지 않으면 **false**입니다.
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>연산자&gt;=
 
 연산자의 좌변에 있는 multimap 개체가 우변에 있는 multimap 개체보다 크거나 같은지 테스트합니다.
 
@@ -760,13 +760,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 `multimap` 형식의 개체입니다.
 
 *오른쪽*\
 `multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 연산자 좌변의 multimap이 연산자 우변의 multimap보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
 

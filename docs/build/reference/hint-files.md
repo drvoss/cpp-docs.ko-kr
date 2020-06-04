@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322307"
 ---
 # <a name="hint-files"></a>힌트 파일
 
@@ -36,8 +36,9 @@ C++ 검색 데이터베이스 파서는 짧은 시간 내에 많은 양의 코�
 
 > [!IMPORTANT]
 > 힌트 파일을 수정 또는 추가하는 경우 변경 내용을 적용하려면 추가 단계를 수행해야 합니다.
-> - Visual Studio 2017 버전 15.6 이전 버전에서: 모든 변경 내용에 대해 솔루션에서 .sdf 파일 및/또는 VC db 파일을 삭제 합니다.
-> - Visual Studio 2017 버전 15.6 이상: 새 힌트 파일을 추가한 후 솔루션을 닫았다가 다시 엽니다.
+>
+> - Visual Studio 2017 버전 15.6 이전 버전: 모든 변경 사항에 대한 솔루션에서 .sdf 파일 및/또는 VC.db 파일을 삭제합니다.
+> - Visual Studio 2017 버전 15.6 이상: 새 힌트 파일을 추가한 후 솔루션을 닫고 다시 엽니다.
 
 ## <a name="scenario"></a>시나리오
 
@@ -92,19 +93,19 @@ Visual Studio 2017 버전 15.8부터 방해가 되는 매크로를 식별할 수
 
 - 빠른 작업을 통해 강조 표시된 매크로를 포함하는 힌트 파일을 만들거나 기존 힌트 파일이 있는 경우 해당 매크로를 힌트 파일에 추가합니다.
 
-![강조 표시 된 매크로.](media/hint-squiggle-and-actions.png "힌트 물결선 및 빠른 작업")
+![강조 표시된 매크로.](media/hint-squiggle-and-actions.png "힌트 물결선 및 빠른 작업")
 
 빠른 작업 중 하나를 실행하면 파서가 힌트 파일에 의해 영향을 받는 파일을 다시 구문 분석합니다.
 
-기본적으로 문제 매크로는 제안으로 강조 표시됩니다. 강조 표시는 빨간색 또는 녹색 오류 표시선처럼 보다 눈에 띄는 것으로 변경할 수 있습니다. **도구**옵션 > 텍스트 편집기 > C/C++ > 보기**아래**코드 오류 표시선 >  섹션에서 **Macros in Skipped Browsing Regions**(건너뛴 검색 영역의 매크로) 옵션을 사용합니다.
+기본적으로 문제 매크로는 제안으로 강조 표시됩니다. 강조 표시는 빨간색 또는 녹색 오류 표시선처럼 보다 눈에 띄는 것으로 변경할 수 있습니다. **도구** > **옵션** > **텍스트 편집기** > **C/C++** > **보기** 아래 **코드 오류 표시선** 섹션에서 **Macros in Skipped Browsing Regions**(건너뛴 검색 영역의 매크로) 옵션을 사용합니다.
 
-![건너뛴 검색 영역 옵션의 매크로](media/skipped-regions-squiggle-option.png "건너뛴 영역 물결선 옵션입니다.")
+![건너뛴 브라우징 지역 옵션의 매크로.](media/skipped-regions-squiggle-option.png "건너뛴 영역 물결선 옵션입니다.")
 
 ## <a name="display-browsing-database-errors"></a>검색 데이터베이스 오류 표시
 
-**프로젝트** > **검색 데이터베이스 오류 표시** 메뉴 명령은 **오류 목록**에서 구문 분석에 실패한 모든 영역을 표시합니다. 이 명령은 초기 힌트 파일의 작성을 간소화하기 위해 것입니다. 그러나 파서는 문제의 원인이 방해가 되는 매크로인지 알릴 수 없으므로 사용자가 각 오류를 평가해야 합니다. **검색 데이터베이스 오류 표시** 명령을 실행하고 각 오류로 이동하여 편집기에서 영향을 받는 파일을 로드합니다. 파일이 로드된 후에는 매크로가 영역 내에 있는 경우 강조 표시됩니다. 빠른 작업을 호출하여 매크로를 힌트 파일에 추가할 수 있습니다. 힌트 파일을 업데이트하면 오류 목록이 자동으로 업데이트됩니다. 또는, 힌트 파일을 수동으로 수정하는 경우 **솔루션 다시 검색** 명령을 사용하여 업데이트를 트리거할 수 있습니다.
+**프로젝트** > **디스플레이 데이터베이스 오류 오류** 메뉴 **명령에오류 목록에서**구문 분석하지 못한 모든 영역이 표시됩니다. 이 명령은 초기 힌트 파일의 작성을 간소화하기 위해 것입니다. 그러나 파서는 문제의 원인이 방해가 되는 매크로인지 알릴 수 없으므로 사용자가 각 오류를 평가해야 합니다. **검색 데이터베이스 오류 표시** 명령을 실행하고 각 오류로 이동하여 편집기에서 영향을 받는 파일을 로드합니다. 파일이 로드된 후에는 매크로가 영역 내에 있는 경우 강조 표시됩니다. 빠른 작업을 호출하여 매크로를 힌트 파일에 추가할 수 있습니다. 힌트 파일을 업데이트하면 오류 목록이 자동으로 업데이트됩니다. 또는, 힌트 파일을 수동으로 수정하는 경우 **솔루션 다시 검색** 명령을 사용하여 업데이트를 트리거할 수 있습니다.
 
-## <a name="architecture"></a>아키텍처
+## <a name="architecture"></a>Architecture
 
 힌트 파일은 **솔루션 탐색기**에 표시된 논리 디렉터리가 아니라 실제 디렉터리와 관련됩니다. 힌트 파일을 적용하기 위해 프로젝트에 힌트 파일을 추가할 필요가 없습니다. 구문 분석 시스템은 소스 파일을 구문 분석할 때만 힌트 파일을 사용합니다.
 
@@ -166,7 +167,7 @@ Visual Studio 2017 버전 15.8부터 방해가 되는 매크로를 식별할 수
 
 ### <a name="hint-file-directories"></a>힌트 파일 디렉터리
 
-![공용 및 프로젝트별&#45;힌트 파일 디렉터리입니다.](media/hintfile.png "HintFile")
+![특정 힌트 파일 디렉토리를&#45;공통 및 프로젝트입니다.](media/hintfile.png "힌트 파일")
 
 ### <a name="directories-and-hint-file-contents"></a>디렉터리 및 힌트 파일 내용
 
@@ -236,16 +237,15 @@ Visual Studio 2017 버전 15.8부터 방해가 되는 매크로를 식별할 수
 
 - 효과적인 힌트는 `vcpackages`, `Debug`, `A1` 및 `A2` 디렉터리에 있습니다.
 
-- **힌트 파일의**#undef`Debug` 지시문은 `#define _In_` 디렉터리 힌트 파일에서 `vcpackages` 힌트를 제거했습니다.
+- `Debug` 힌트 파일의 **#undef** 지시문은 `vcpackages` 디렉터리 힌트 파일에서 `#define _In_` 힌트를 제거했습니다.
 
 - `A1` 디렉터리의 힌트 파일은 `START_NAMESPACE`를 다시 정의합니다.
 
-- `#undef` 디렉터리의 `A2` 힌트에서 `OBRACE` 디렉터리 힌트 파일의 `CBRACE` 및 `Debug`에 대한 힌트를 제거했습니다.
+- `A2` 디렉터리의 `#undef` 힌트에서 `Debug` 디렉터리 힌트 파일의 `OBRACE` 및 `CBRACE`에 대한 힌트를 제거했습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [Visual Studio C++ 프로젝트용으로 만든 파일 형식](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 지시문(C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
-[#undef 지시문(C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[#undef 지시문 (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 주석](../../c-runtime-library/sal-annotations.md)<br>
-

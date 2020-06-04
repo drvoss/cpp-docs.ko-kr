@@ -12,11 +12,11 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233062"
 ---
 # <a name="if-statement-c"></a>if 문 (C)
 
@@ -70,6 +70,6 @@ else
 
 이 예제에서 내부 **if** 문을 묶은 중괄호 때문에 **else** 절이 외부 **if** 문의 부분이 됩니다. `i`가 0보다 작거나 같으면 `i`가 `x`에 할당됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [if-else 문(C++)](../cpp/if-else-statement-cpp.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
 ms.openlocfilehash: 0d573fac938f5e4d62c99c8cd6e676b96123a0c4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232919"
 ---
 # <a name="multibyte-and-wide-characters"></a>멀티바이트 및 와이드 문자
 
@@ -35,6 +35,6 @@ ms.locfileid: "56152016"
 
 유니코드 사양은 와이드 문자에 대한 사양입니다. 멀티바이트 및 와이드 문자 간 변환을 위한 런타임 라이브러리 루틴에는 `mbstowcs`, `mbtowc`, `wcstombs` 및 `wctomb`가 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 식별자](../c-language/c-identifiers.md)

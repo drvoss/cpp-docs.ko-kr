@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232154"
 ---
 # <a name="pointer-declarations"></a>포인터 선언
 
@@ -25,7 +25,7 @@ ms.locfileid: "56152003"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**
@@ -40,7 +40,7 @@ ms.locfileid: "56152003"
 
 *type-specifier*는 개체의 형식을 제공합니다. 개체 형식은 기본, 구조체 또는 공용 구조체 형식일 수 있습니다. 포인터 변수는 함수, 배열 및 다른 포인터를 가리킬 수도 있습니다. 더 복잡한 포인터 형식의 선언 및 해석에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.
 
-*type-specifier*를 **void**로 만들면 포인터가 참조할 형식 지정이 지연됩니다. 그러한 항목이 "**void**에 대한 포인터"로 참조되고 `void *`로 작성됩니다. *void*에 대한 포인터로 선언된 변수를 사용하여 모든 형식의 개체를 가리킬 수 있습니다. 그러나 포인터나 포인터가 가리키는 개체에 대해 작업을 수행하려면 대개 포인터가 가리키는 형식이 각 작업에 대해 명시적으로 지정되어야 합니다. **char** <strong>\*</strong> 형식 및 **void** <strong>\*</strong> 형식의 변수는 형식 캐스팅 없이 대입과 호환됩니다. 형식 캐스팅을 사용하여 이러한 변환을 수행할 수 있습니다. 자세한 내용은 [형식 캐스팅 변환](../c-language/type-cast-conversions.md)을 참조하세요.
+*type-specifier*를 **void**로 만들면 포인터가 참조할 형식 지정이 지연됩니다. 그러한 항목이 "**void**에 대한 포인터"로 참조되고 `void *`로 작성됩니다. *void*에 대한 포인터로 선언된 변수를 사용하여 모든 형식의 개체를 가리킬 수 있습니다. 그러나 포인터나 포인터가 가리키는 개체에 대해 작업을 수행하려면 대개 포인터가 가리키는 형식이 각 작업에 대해 명시적으로 지정되어야 합니다. **char**<strong>\*</strong> 형식 및 **void**<strong>\*</strong> 형식의 변수는 형식 캐스팅 없이 대입과 호환됩니다. 형식 캐스팅을 사용하여 이러한 변환을 수행할 수 있습니다. 자세한 내용은 [형식 캐스팅 변환](../c-language/type-cast-conversions.md)을 참조하세요.
 
 *type-qualifier*는 **const** 또는 **volatile**이거나 둘 다일 수 있습니다. 이 형식 한정자는 각각 프로그램 자체에서 포인터를 수정할 수 없거나(**const**), 프로그램 제어를 벗어나 일부 프로세스에서 포인터를 올바르게 수정할 수 있도록(**volatile**) 지정합니다. **const** 및 **volatile**에 대한 자세한 내용은 [형식 한정자](../c-language/type-qualifiers.md)를 참조하세요.
 
@@ -48,7 +48,7 @@ ms.locfileid: "56152003"
 
 구조체, 공용 구조체 또는 열거형 형식을 정의하기 전에 구조체, 공용 구조체 또는 열거형 형식에 대한 포인터를 선언할 수 있습니다. 아래의 예제와 같이 구조체 또는 공용 구조체 태그를 사용하여 포인터를 선언합니다. 컴파일러가 구조체나 공용 구조체의 크기를 몰라도 포인터 변수의 공간을 할당할 수 있으므로 이러한 선언이 허용됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 포인터 선언을 보여 줍니다.
 
@@ -114,6 +114,6 @@ struct id
 
 *record* 변수에는 *id* 구조체 형식이 있습니다. *pname*은 이름이 *name*인 다른 구조체 형식에 대한 포인터로 선언됩니다. *name* 형식이 정의되기 전에 이 선언이 나타날 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [선언자 및 변수 선언](../c-language/declarators-and-variable-declarations.md)

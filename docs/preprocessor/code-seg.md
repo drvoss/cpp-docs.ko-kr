@@ -2,18 +2,17 @@
 title: code_seg pragma
 ms.date: 08/29/2019
 f1_keywords:
-- code_seg_CPP
 - vc-pragma.code_seg
 helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 0144b3ed220c39cd30aeb8e53bc2aa3c0381b668
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 65d702273593dc7fba68cc040f700b01a2c5e4a7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218317"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446482"
 ---
 # <a name="code_seg-pragma"></a>code_seg pragma
 
@@ -21,18 +20,18 @@ ms.locfileid: "70218317"
 
 ## <a name="syntax"></a>구문
 
-> **#pragma code_seg (** ["*섹션-이름*" [ **,** "*섹션-클래스*"]] **)** \
-> **#pragma code_seg (** { **push** | **pop** } [ **,** *식별자* ] [ **,** "*섹션 이름*" [ **,** "*섹션-클래스*"]] **)**
+> **#pragma code_seg (** ["*섹션 이름*" [ **,** "*섹션-클래스*"]] **)** \
+> **#pragma code_seg (** { **push** | **pop** } [ **,** *식별자* ] [ **,** "*섹션-이름*" [ **,** "*섹션-클래스*"]] **)**
 
 ### <a name="parameters"></a>매개 변수
 
-**누르기**\
+**푸시**\
 필드 내부 컴파일러 스택에 레코드를 넣습니다. **푸시** 에는 *식별자* 와 *섹션 이름이*있을 수 있습니다.
 
-**창을**\
+**pop**\
 필드 내부 컴파일러 스택의 맨 위에서 레코드를 제거 합니다. **Pop** 에는 *식별자* 와 *섹션 이름이*있을 수 있습니다. *식별자*를 사용 하 여 하나의 **pop** 명령만을 사용 하 여 여러 레코드를 표시할 수 있습니다. *섹션 이름* 은 pop 뒤의 활성 텍스트 섹션 이름이 됩니다.
 
-*한정자*\
+*식별자*\
 필드 **Push**와 함께 사용 하는 경우 내부 컴파일러 스택의 레코드에 이름을 할당 합니다. **Pop**에서 사용 하는 경우 지시문은 *식별자* 가 제거 될 때까지 내부 스택에서 레코드를 팝 합니다. 내부 스택에서 *식별자* 를 찾을 수 없는 경우 아무 것도 팝 되지 않습니다.
 
 "*섹션-이름*" \
@@ -45,13 +44,13 @@ ms.locfileid: "70218317"
 
 개체 파일의 *섹션* 은 메모리에 하나의 단위로 로드 되는 명명 된 데이터 블록입니다. *텍스트 섹션* 은 실행 코드를 포함 하는 섹션입니다. 이 문서에서 *세그먼트* 와 *섹션* 이라는 용어는 동일한 의미를 갖습니다.
 
-**Code_seg** pragma 지시문은 변환 단위의 모든 후속 개체 코드를 *섹션 이름*이라는 텍스트 섹션에 배치 하도록 컴파일러에 지시 합니다. 기본적으로 개체 파일의 함수에 사용 되는 텍스트 섹션의 이름은 `.text`입니다. *섹션 이름* 매개 변수가 없는 `.text` **code_seg** pragma 지시문은 후속 개체 코드의 텍스트 섹션 이름을로 다시 설정 합니다.
+**Code_seg** pragma 지시문은 변환 단위의 모든 후속 개체 코드를 *section-name*이라는 텍스트 섹션에 포함 하도록 컴파일러에 지시 합니다. 기본적으로 개체 파일의 함수에 사용 되는 텍스트 섹션은 `.text`로 지정 됩니다. *섹션 이름* 매개 변수가 없는 **code_seg** pragma 지시문은 `.text`하기 위해 후속 개체 코드의 텍스트 섹션 이름을 다시 설정 합니다.
 
 **Code_seg** pragma 지시문은 인스턴스화된 템플릿에 대해 생성 된 개체 코드의 배치를 제어 하지 않습니다. 특수 멤버 함수와 같이 컴파일러에 의해 암시적으로 생성 된 코드도 제어 하지 않습니다. 해당 코드를 제어 하려면 [__declspec (code_seg (...))](../cpp/code-seg-declspec.md) 특성을 대신 사용 하는 것이 좋습니다. 컴파일러에서 생성 된 코드를 포함 하 여 모든 개체 코드의 배치를 제어할 수 있습니다.
 
 섹션을 만드는 데 사용 하지 않아야 하는 이름 목록은 [/SECTION](../build/reference/section-specify-section-attributes.md)를 참조 하세요.
 
-초기화 데이터 ([data_seg](../preprocessor/data-seg.md)), 초기화 되지 않은 데이터 ([bss_seg](../preprocessor/bss-seg.md)) 및 const 변수 ([const_seg](../preprocessor/const-seg.md))에 대 한 섹션도 지정할 수 있습니다.
+초기화 되는 데이터에 대 한 섹션 ([data_seg](../preprocessor/data-seg.md)), 초기화 되지 않은 데이터 ([bss_seg](../preprocessor/bss-seg.md)) 및 const 변수 ([const_seg](../preprocessor/const-seg.md))를 지정할 수도 있습니다.
 
 DUMPBIN을 사용할 수 있습니다 [. ](../build/reference/dumpbin-command-line.md)개체 파일을 볼 수 있는 EXE 응용 프로그램입니다. 지원 되는 각 대상 아키텍처의 DUMPBIN 버전은 Visual Studio에 포함 되어 있습니다.
 
@@ -80,7 +79,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [code_seg (__declspec)](../cpp/code-seg-declspec.md)\
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

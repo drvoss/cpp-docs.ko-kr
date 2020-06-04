@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927732"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169710"
 ---
 # <a name="c-debugging-property-pages"></a>C++디버깅 속성 페이지
 
-이러한 속성 페이지는 **프로젝트** > **속성** > **구성 속성** > **디버깅**아래에 있습니다. 드롭다운 컨트롤에서 디버거 형식을 선택 합니다. 코드를 디버깅 C++ 하는 [방법에 대 한 자세한 내용은 자습서: Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) 를 C++ 사용 하 여 코드를 디버그 하 고 [네이티브 코드를 디버깅](/visualstudio/debugger/debugging-native-code)하는 방법을 알아봅니다.
+이러한 속성 페이지는 **프로젝트** > **속성** > **구성 속성** > **디버깅**에서 찾을 수 있습니다. 드롭다운 컨트롤에서 디버거 형식을 선택 합니다. 코드를 디버깅 C++ 하는 방법에 대 한 자세한 내용은 [자습서: C++ Visual Studio를 사용 하 여 코드를 디버그](/visualstudio/debugger/getting-started-with-the-debugger-cpp) 하 고 [네이티브 코드 디버깅](/visualstudio/debugger/debugging-native-code)을 참조 하세요.
 
 ## <a name="local-windows-debugger-property-page"></a>로컬 Windows 디버거 속성 페이지
 
@@ -60,7 +60,7 @@ ms.locfileid: "70927732"
 
 응용 프로그램의 작업 디렉터리입니다. 기본적으로 프로젝트 파일을 포함 하는 디렉터리입니다.
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>연결
 
 디버깅이 시작 될 때 디버거가 기존 프로세스에 연결을 시도할지 여부를 지정 합니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "70927732"
 
 사용할 디버거 형식을 지정 합니다. Auto로 설정 된 경우 exe 파일의 내용에 따라 디버거 형식이 선택 됩니다.
 
-**시**
+**Choices**
 
 - **네이티브 전용** -네이티브 전용
 - **관리 전용** -관리 전용
@@ -77,7 +77,7 @@ ms.locfileid: "70927732"
 - **스크립트** -스크립트
 - **GPU 전용 (C++ amp)** -gpu 전용 (C++ amp)
 
-### <a name="environment"></a>환경
+### <a name="environment"></a>Environment
 
 디버깅할 프로그램의 환경 또는 기존 환경과 병합할 변수를 지정 합니다.
 
@@ -89,7 +89,7 @@ GPU 코드를 디버깅 하는 데 사용할 디버깅 액셀러레이터 키 �
 
 GPU 디버거가 중단 되는 빈도를 설정 합니다.
 
-**시**
+**Choices**
 
 - 휘기 당 **한 번 중단** -휘기 당 한 번 중단
 - 모든 스레드에 대해 **중단** (예: cpu 동작)
@@ -130,7 +130,7 @@ AMP C++ 의 기본 액셀러레이터 키 선택을 재정의 합니다. 관리 
 
 연결 유형을 지정 합니다.
 
-**시**
+**Choices**
 
 - **Windows 인증을 사용 하는 원격** - [windows 인증](/windows-server/security/windows-authentication/windows-authentication-overview)을 사용 하는 원격
 - **인증을 사용 하지 않는 원격** -인증을 사용 하지 않는 원격
@@ -139,7 +139,7 @@ AMP C++ 의 기본 액셀러레이터 키 선택을 재정의 합니다. 관리 
 
 사용할 디버거 형식을 지정 합니다. Auto로 설정 된 경우 exe 파일의 내용에 따라 디버거 형식이 선택 됩니다.
 
-**시**
+**Choices**
 
 - **네이티브 전용** -네이티브 전용
 - **관리 전용** -관리 전용
@@ -148,7 +148,7 @@ AMP C++ 의 기본 액셀러레이터 키 선택을 재정의 합니다. 관리 
 - **스크립트** -스크립트
 - **GPU 전용 (C++ amp)** -gpu 전용 (C++ amp)
 
-### <a name="environment"></a>환경
+### <a name="environment"></a>Environment
 
 디버깅할 프로그램의 환경 또는 기존 환경과 병합할 변수를 지정 합니다.
 
@@ -160,12 +160,12 @@ GPU 코드를 디버깅 하는 데 사용할 디버깅 액셀러레이터 키 �
 
 GPU 디버거가 중단 되는 빈도를 설정 합니다.
 
-**시**
+**Choices**
 
 - 휘기 당 **한 번 중단** -휘기 당 한 번 중단
 - 모든 스레드에 대해 **중단** (예: cpu 동작)
 
-### <a name="attach"></a>Attach
+### <a name="attach"></a>연결
 
 디버깅이 시작 될 때 디버거가 기존 프로세스에 연결을 시도할지 여부를 지정 합니다.
 
@@ -199,7 +199,7 @@ AMP C++ 의 기본 액셀러레이터 키 선택을 재정의 합니다. 관리 
 
 사용할 디버거 형식을 지정 합니다. Auto로 설정 된 경우 exe 파일의 내용에 따라 디버거 형식이 선택 됩니다.
 
-**시**
+**Choices**
 
 - **네이티브 전용** -네이티브 전용
 - **관리 전용** -관리 전용
@@ -217,7 +217,7 @@ AMP C++ 의 기본 액셀러레이터 키 선택을 재정의 합니다. 관리 
 
 사용할 디버거 형식을 지정 합니다. Auto로 설정 된 경우 exe 파일의 내용에 따라 디버거 형식이 선택 됩니다.
 
-**시**
+**Choices**
 
 - **네이티브 전용** -네이티브 전용
 - **관리 전용** -관리 전용

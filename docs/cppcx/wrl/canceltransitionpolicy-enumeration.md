@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214125"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 열거형
 
-비동기 작업의 터미널 상태로 전환 하려고 하는 방법을 나타냅니다 완료 또는 오류는 클라이언트 요청 취소 상태와 관련 하 여 작동 해야 합니다.
+비동기 작업의 상태를 완료 또는 오류로 전환 하려는 시도가 클라이언트에서 요청한 취소 됨 상태와 관련 하 여 동작 하는 방식을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,15 +32,15 @@ enum CancelTransitionPolicy;
 
 |이름|설명|
 |----------|-----------------|
-|`RemainCanceled`|비동기 작업에 현재 클라이언트 요청 취소 된 상태로 터미널 완료 또는 오류 상태를 전환 하는 대신 취소 된 상태로 남아 있는지 나타냅니다.|
-|`TransitionFromCanceled`|비동기 작업을 현재 클라이언트 요청 취소 된 상태로 있는 경우 취소 된 상태로 터미널 상태에 완료 된 상태로 전환 해야 나타냅니다 또는 오류가이 플래그를 사용 하는 호출을 기준으로 합니다.|
+|`RemainCanceled`|비동기 작업이 현재 클라이언트에서 요청 된 취소 된 상태 이면이는 완료 된 터미널 또는 오류 상태로 전환 하는 것과는 반대로 취소 된 상태를 유지 함을 나타냅니다.|
+|`TransitionFromCanceled`|비동기 작업이 현재 클라이언트에서 요청한 취소 된 상태 이면이 플래그를 활용 하는 호출에 의해 결정 된 대로 상태가 취소 됨 상태에서 완료 됨 또는 오류의 터미널 상태로 전환 되어야 함을 나타냅니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** async.h
+**헤더:** async. h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

@@ -1,19 +1,17 @@
 ---
 title: EOF, WEOF
 ms.date: 11/04/2016
-f1_keywords:
-- EOF
 helpviewer_keywords:
 - EOF function
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5ccb97b55cb61bd42d0487b22bd3e01413444ad3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740045"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438433"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -23,7 +21,7 @@ ms.locfileid: "57740045"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 파일 끝(또는 경우에 따라 오류)이 발견되면 I/O 루틴에 의해 EOF가 반환됩니다.
 

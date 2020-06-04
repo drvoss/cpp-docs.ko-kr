@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - HRESULTToWCode method [C++]
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
-ms.openlocfilehash: d89503e822d92bf6a1fcb2b6bb658d532af32c5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35a497c273f15c9755d3607e7907a3a48dad8dc8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180565"
 ---
-# <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
+# <a name="_com_errorhresulttowcode"></a>_com_error::HRESULTToWCode
 
 **Microsoft 전용**
 
-16 비트에서 32 비트 HRESULT 매핑됩니다 `wCode`합니다.
+32 비트 HRESULT를 16 비트 `wCode`매핑합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,19 +30,19 @@ static WORD HRESULTToWCode(
 #### <a name="parameters"></a>매개 변수
 
 *hr*<br/>
-16 비트와 매핑되어야 32 비트 HRESULT `wCode`합니다.
+16 비트 `wCode`에 매핑될 32 비트 HRESULT입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-16 비트 `wCode` 32 비트 HRESULT에서 매핑됩니다.
+32 비트 HRESULT에서 매핑된 16 비트 `wCode`입니다.
 
 ## <a name="remarks"></a>설명
 
-참조 [_com_error:: wcode](../cpp/com-error-wcode.md) 자세한 내용은 합니다.
+자세한 내용은 [_com_error:: WCode](../cpp/com-error-wcode.md) 를 참조 하세요.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_com_error::WCode](../cpp/com-error-wcode.md)<br/>
 [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)<br/>

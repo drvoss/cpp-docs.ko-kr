@@ -1,22 +1,20 @@
 ---
-title: 이전 버전과의 호환성
+title: Backward Compatibility
 ms.date: 11/04/2016
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility, C run-time libraries
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-ms.openlocfilehash: f672f0601a9d20a726f90963265d08ec212dedce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2c2b4570e5e3131911e7f424280f16e9977f047e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744466"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438568"
 ---
-# <a name="backward-compatibility"></a>이전 버전과의 호환성
+# <a name="backward-compatibility"></a>Backward Compatibility
 
 제품 버전 간의 호환성을 위해 OLDNAMES.LIB 라이브러리는 이전 이름을 새 이름에 매핑합니다. 예를 들어 `open`은 `_open`에 매핑됩니다. 다음 명령줄 옵션 조합을 사용하여 컴파일할 때는 OLDNAMES.LIB를 명시적으로 링크해야 합니다.
 

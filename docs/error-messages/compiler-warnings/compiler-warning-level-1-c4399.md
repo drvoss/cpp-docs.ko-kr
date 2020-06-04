@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408344"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186805"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>컴파일러 경고(수준 1) C4399
 
-> '*기호*': /clr으로 컴파일될 때 __declspec (dllimport)을 사용 하 여 프로세스별 기호를 표시 하지 말아야 합니다: 순수
+> '*symbol*':/clr: pure를 사용 하 여 컴파일할 경우 프로세스별 기호를 __declspec (dllimport)로 표시 해서는 안 됩니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**/clr: pure** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+**/Clr: pure** 컴파일러 옵션은 visual studio 2015에서는 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-순수 이미지에는 네이티브 이미지 또는 네이티브 및 CLR 구문을 사용 하 여 이미지에서 데이터를 가져올 수 있습니다. 이 경고를 해결 하려면 사용 하 여 컴파일합니다 **/clr** (하지 **/clr: pure**) 또는 삭제 `__declspec(dllimport)`합니다.
+네이티브 이미지 또는 네이티브 및 CLR 구문이 있는 이미지의 데이터는 순수 이미지로 가져올 수 없습니다. 이 경고를 해결 하려면 **/clr** ( **/clr: pure**아님)를 사용 하 여 컴파일하거나 `__declspec(dllimport)`삭제 합니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C4399를 생성합니다.
+다음 샘플에서는 C4399를 생성 합니다.
 
 ```cpp
 // C4399.cpp

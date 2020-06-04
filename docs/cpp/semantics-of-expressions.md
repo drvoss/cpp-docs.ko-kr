@@ -7,20 +7,20 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178851"
 ---
 # <a name="semantics-of-expressions"></a>식의 의미
 
 식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선 순위 및](../cpp/cpp-built-in-operators-precedence-and-associativity.md) [어휘 규칙](../cpp/lexical-conventions.md)의 결합성은 연산자가 식 C++ 에 적용 하는 관계를 보여 줍니다.)
 
-## <a name="order-of-evaluation"></a>계산 순서
+## <a name="order-of-evaluation"></a>평가 순서
 
-다음 예제를 고려해 보세요.
+다음 예를 살펴보세요.
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -69,16 +69,16 @@ C++ 언어는 피연산자를 지정할 때 특정 호환성을 지정합니다.
 
 |필요한 형식|허용되는 형식|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|`const` *형식*<br /> `volatile` *형식*<br /> *type*&<br /> `const` *형식*&<br /> `volatile` *형식*&<br /> `volatile const` *형식*<br /> `volatile const` *형식*&|
+|*형식* \*|*형식* \*<br /> `const` *형식* \*<br /> `volatile` *형식* \*<br /> `volatile const` *형식* \*|
+|`const` *형식*|*type*<br /> `const` *형식*<br />`const` *형식*&|
+|`volatile` *형식*|*type*<br /> `volatile` *형식*<br /> `volatile` *형식*&|
 
 항상 이전 규칙을 조합하여 사용할 수 있으므로 포인터가 필요한 지점에 volatile 개체에 대한 const 포인터를 제공할 수 있습니다.
 
 ## <a name="ambiguous-expressions"></a>모호한 식
 
-특정 식의 의미가 모호합니다. 이러한 식은 개체의 값이 동일한 식에서 두 번 이상 변경될 때 가장 자주 발생합니다. 이러한 식은 언어에서 하나로 정의되지 않는 특정 계산 순서에 의존합니다. 다음 예제를 참조하세요.
+특정 식의 의미가 모호합니다. 이러한 식은 개체의 값이 동일한 식에서 두 번 이상 변경될 때 가장 자주 발생합니다. 이러한 식은 언어에서 하나로 정의되지 않는 특정 계산 순서에 의존합니다. 다음과 같은 예제를 참조하세요.
 
 ```
 int i = 7;
@@ -116,6 +116,6 @@ C++ 언어에서는 함수 호출에 대한 인수가 계산되는 순서를 보
 
 - return 문의 식. 호출 함수로 제어가 반환되기 전에 식이 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [식](../cpp/expressions-cpp.md)

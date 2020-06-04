@@ -1,8 +1,9 @@
 ---
 title: _unlock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlock_file
+- _o__unlock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957486"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909207"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -49,12 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>매개 변수
 
-*file*<br/>
+*파일과*<br/>
 파일 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
-**_S_l** 함수는 *file*에 지정 된 파일의 잠금을 해제 합니다. 파일의 잠금을 해제하면 다른 프로세스에서 파일에 액세스할 수 있습니다. 이 함수는 이전에 *파일* 포인터에 대해를 **호출한 경우에** 만 호출 하면 안 됩니다. 잠겨 있지 않은 파일에 대해 **_unlock\rlrl\unununununununununununun** 관련 예제는 [_lock_file](lock-file.md)을 참조하세요.
+**_Unlock_file** 함수는 *파일*에 지정 된 파일의 잠금을 해제 합니다. 파일의 잠금을 해제하면 다른 프로세스에서 파일에 액세스할 수 있습니다. **_Lock_file** 이전에 *파일* 포인터에서 호출 된 경우가 아니면이 함수를 호출 하면 안 됩니다. 잠기지 않은 파일에 대해 **_unlock_file** 를 호출 하면 교착 상태가 발생할 수 있습니다. 관련 예제는 [_lock_file](lock-file.md)을 참조하세요.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -62,9 +66,9 @@ void _unlock_file(
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

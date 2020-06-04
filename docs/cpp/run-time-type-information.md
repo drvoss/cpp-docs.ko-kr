@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178940"
 ---
 # <a name="run-time-type-information"></a>런타임 형식 정보
 
@@ -24,17 +24,17 @@ RTTI(런타임 형식 정보)는 프로그램 실행 중에 개체의 형식이 
 
 런타임 형식 정보에는 다음 세 가지 기본 C++ 언어 요소가 있습니다.
 
-- [dynamic_cast](../cpp/dynamic-cast-operator.md) 연산자
+- [Dynamic_cast](../cpp/dynamic-cast-operator.md) 연산자입니다.
 
    다형 형식을 변환하는 데 사용됩니다.
 
-- [typeid](../cpp/typeid-operator.md) 연산자
+- [Typeid](../cpp/typeid-operator.md) 연산자입니다.
 
    개체의 정확한 형식을 식별하는 데 사용됩니다.
 
-- [type_info](../cpp/type-info-class.md) 클래스
+- [Type_info](../cpp/type-info-class.md) 클래스입니다.
 
-   **typeid** 연산자에서 반환된 형식 정보를 저장하는 데 사용됩니다.
+   **Typeid** 연산자에서 반환 하는 형식 정보를 저장 하는 데 사용 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

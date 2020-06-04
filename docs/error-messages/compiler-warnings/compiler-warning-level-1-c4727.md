@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185869"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>컴파일러 경고(수준 1) C4727
 
-Obj_file_1 및 obj_file_2에서 동일한 타임 스탬프를 사용 하는 pch_file 라는 PCH가 있습니다.  첫 번째 PCH 사용.
+Obj_file_1 및 obj_file_2에서 동일한 타임 스탬프를 사용 하는 pch_file PCH가 있습니다.  첫 번째 PCH 사용.
 
 > [!NOTE]
 > Visual Studio 2017이 하 버전에서는 기본적으로 미리 컴파일된 헤더를 *stdafx.h* 라고 하며, visual studio 2019 이상에서는 기본적으로 해당 헤더를 *.pch .h* 라고 합니다.
@@ -34,7 +34,7 @@ C4727는 **/yc**를 사용 하 여 여러 compilands을 컴파일하는 경우�
 
 **cl/clr a. .cpp/Ycstdafx.h/c**
 
-**cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**
+**cl/clr/GL b. .cpp/Yustdafx.h/link. .obj**
 
 ::: moniker-end
 
@@ -49,7 +49,6 @@ C4727는 **/yc**를 사용 하 여 여러 compilands을 컴파일하는 경우�
 **cl/clr/GL b. .cpp/Yupch.h/link. .obj**
 
 ::: moniker-end
-
 
 자세한 내용은 다음을 참조하세요.
 

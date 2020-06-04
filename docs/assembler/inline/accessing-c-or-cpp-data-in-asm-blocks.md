@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318087"
 ---
-# <a name="accessing-c-or-c-data-in-asm-blocks"></a>__asm 블록에서 C 또는 C++ 데이터 액세스
+# <a name="accessing-c-or-c-data-in-__asm-blocks"></a>__asm 블록에서 C 또는 C++ 데이터 액세스
 
-**Microsoft 전용**
+**마이크로소프트 특정**
 
 인라인 어셈블리를 사용하면 C 또는 C++ 변수를 이름으로 참조할 수 있으므로 매우 편리합니다. `__asm` 블록은 블록이 나타나는 범위에 있는 변수 이름을 비롯한 모든 기호를 참조할 수 있습니다. 예를 들어 C 변수 `var`이 범위에 있는 경우 다음 명령은
 
@@ -26,7 +26,7 @@ __asm mov eax, var
 
 `var`의 값을 EAX에 저장합니다.
 
-클래스, 구조체 또는 공용 구조체 멤버에는 고유한 이름이 있는 경우는 `__asm` 변수를 지정 하지 않고 멤버 이름만 사용 하 여 참조할 수 있습니다 또는 `typedef` 되는 기간 전에 이름 (**.**) 연산자. 그러나 멤버 이름이 고유하지 않은 경우에는 마침표 연산자 바로 앞에 변수 또는 `typedef` 이름을 배치해야 합니다. 예를 들어 다음 샘플의 구조체 형식은 `same_name`을 멤버 이름으로 공유합니다.
+클래스, 구조또는 공용 구조자 멤버에 고유한 `__asm` 이름이 있는 경우 블록은 마침표 **(.** `typedef` ) 연산자 앞에 변수 나 이름을 지정하지 않고 멤버 이름만 사용하여 참조할 수 있습니다. 그러나 멤버 이름이 고유하지 않은 경우에는 마침표 연산자 바로 앞에 변수 또는 `typedef` 이름을 배치해야 합니다. 예를 들어 다음 샘플의 구조체 형식은 `same_name`을 멤버 이름으로 공유합니다.
 
 다음 형식으로 변수를 선언하는 경우
 
@@ -74,6 +74,6 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [__asm 블록에서 C 또는 C++ 사용](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

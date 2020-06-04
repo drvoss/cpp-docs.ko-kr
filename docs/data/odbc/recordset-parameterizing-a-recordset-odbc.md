@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6d28471bdc44d5d75a9eeac2327f92a8e2e265c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707798"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360655"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>레코드 집합: 레코드 집합 매개 변수화(ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65707798"
 
 - [런타임에 레코드 집합 개체에 매개 변수 정보를 전달하는 방법](#_core_passing_parameter_values_at_run_time)
 
-##  <a name="_core_parameterized_recordsets"></a> 매개 변수화 레코드 집합
+## <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> 매개 변수화 레코드 집합
 
 매개 변수화 레코드 집합을 사용하면 런타임에 매개 변수 정보를 전달할 수 있습니다. 이 기능은 두 가지 중요한 효과가 있습니다.
 
@@ -40,13 +40,13 @@ ms.locfileid: "65707798"
 
 `Open`을 호출하여 쿼리를 실행하는 경우 레코드 집합은 매개 변수 정보를 사용하여 자체의 **SQL SELECT** 문을 완료합니다. 어떤 레코드 집합도 매개 변수화할 수 있습니다.
 
-##  <a name="_core_when_to_use_parameters"></a> 매개 변수를 사용하는 경우
+## <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> 매개 변수를 사용하는 경우
 
 매개 변수의 일반적인 사용은 다음을 포함합니다.
 
 - 미리 정의된 쿼리에 런타임 인수 전달
 
-   저장 프로시에 매개 변수를 전달하려면 `Open`을 호출할 때 매개 변수 자리 표시자를 통해 완전한 사용자 지정 ODBC **CALL** 문을 지정하여 레코드 집합의 기본 SQL 문을 재정의해야 합니다. 자세한 내용은 *클래스 라이브러리 참조*의 [CRecordset::Open](../../mfc/reference/crecordset-class.md#open), 그리고 [SQL: 레코드 집합의 SQL 문 사용자 지정(ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) 및 [레코드 집합: 미리 정의된 쿼리에 대한 클래스 선언(ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)을 참조하세요.
+   저장 프로시에 매개 변수를 전달하려면 `Open`을 호출할 때 매개 변수 자리 표시자를 통해 완전한 사용자 지정 ODBC **CALL** 문을 지정하여 레코드 집합의 기본 SQL 문을 재정의해야 합니다. 자세한 내용은 클래스 *라이브러리 참조* 및 SQL에서 [CRecordset::Open:](../../mfc/reference/crecordset-class.md#open) [레코드 집합의 SQL 문(ODBC) 및](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) 레코드 집합 사용자 [지정: 미리 정의된 쿼리(ODBC)에 대 한 클래스 선언을](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)참조 합니다.
 
 - 서로 다른 매개 변수 정보를 사용하여 수많은 다시 쿼리를 효율적으로 수행합니다.
 
@@ -75,25 +75,25 @@ ms.locfileid: "65707798"
                                        // for some drivers
     ```
 
-   필터 문자열에 올바른 따옴표를 사용하는 방법에 대한 설명은 [ 레코드 집합: 레코드 필터링(ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)을 참조하세요.
+   필터 문자열에 대 한 따옴표를 올바르게 사용 하는 방법에 대 한 설명은 [레코드 집합: 필터 레코드 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)를 참조 하십시오.
 
    매개 변수 값은 레코드 집합에 대해 새 학생 ID를 다시 쿼리할 때마다 다릅니다.
 
    > [!TIP]
    > 매개 변수 사용은 단순한 필터보다 더 효율적입니다. 매개 변수화 레코드 집합의 경우 데이터베이스는 SQL **SELECT** 문을 한 번만 처리해야 합니다. 매개 변수 없이 필터링된 레코드 집합의 경우 새 필터 값을 사용하여 `Requery`할 때마다 **SELECT** 문을 처리해야 합니다.
 
-필터에 대한 자세한 내용은 [레코드 집합: 레코드 필터링(ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)을 참조하세요.
+필터에 대한 자세한 내용은 [레코드 집합: 레코드(ODBC) 필터링을](../../data/odbc/recordset-filtering-records-odbc.md)참조하십시오.
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> 레코드 집합 클래스 매개 변수화
+## <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> 레코드 집합 클래스 매개 변수화
 
 > [!NOTE]
-> 이 섹션은 대량 행 페치가 구현되지 않은 `CRecordset`에서 파생된 개체에 적용됩니다. 대량 행 페치를 사용하는 경우 매개 변수 구현은 유사한 프로세스입니다. 자세한 내용은 [레코드 집합: 대량 레코드 페치(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)를 참조하세요.
+> 이 섹션은 대량 행 페치가 구현되지 않은 `CRecordset`에서 파생된 개체에 적용됩니다. 대량 행 페치를 사용하는 경우 매개 변수 구현은 유사한 프로세스입니다. 자세한 내용은 [레코드 집합: 대량(ODBC)으로 레코드 가져오기를](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)참조하십시오.
 
 레코드 집합을 만들기 전에 필요한 매개 변수, 해당 매개 변수의 데이터 형식 및 레코드 집합에서 해당 매개 변수를 사용하는 방법을 결정합니다.
 
 #### <a name="to-parameterize-a-recordset-class"></a>레코드 집합 클래스를 매개 변수화하려면 다음을 수행합니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 수동으로 이 기능을 만들 수는 있습니다.
 
 1. **클래스 추가**에서 [MFC ODBC 소비자 마법사](../../mfc/reference/adding-an-mfc-odbc-consumer.md)를 실행하여 클래스를 만듭니다.
@@ -117,7 +117,7 @@ ms.locfileid: "65707798"
 
    매개 변수 데이터 멤버를 마법사가 생성한 필드 데이터 멤버 뒤에 추가합니다. 규칙은 각 사용자 정의 매개 변수 이름에 단어 "Param"을 추가하는 것입니다.
 
-1. .cpp 파일의 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 멤버 함수 정의를 수정합니다. 클래스에 추가한 각 매개 변수 데이터 멤버에 대해 RFX 함수 호출을 추가합니다. RFX 함수 작성에 대한 자세한 내용은 [레코드 집합 필드 교환: RFX 작동 방법](../../data/odbc/record-field-exchange-how-rfx-works.md)을 참조하세요. 매개 변수에 대한 RFX 호출을 다음 단일 호출의 앞에 추가합니다.
+1. .cpp 파일의 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 멤버 함수 정의를 수정합니다. 클래스에 추가한 각 매개 변수 데이터 멤버에 대해 RFX 함수 호출을 추가합니다. RFX 함수 작성에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오. 매개 변수에 대한 RFX 호출을 다음 단일 호출의 앞에 추가합니다.
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -126,7 +126,7 @@ ms.locfileid: "65707798"
 
 1. 레코드 집합 클래스의 생성자에서 매개 변수 개수 `m_nParams`를 증가합니다.
 
-   자세한 내용은 [레코드 필드 교환: 마법사 코드 작업](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)을 참조하세요.
+   자세한 내용은 [레코드 필드 교환: 마법사 코드 작업을](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)참조하십시오.
 
 1. 이 클래스의 레코드 집합 개체를 만드는 코드를 작성할 때 매개 변수로 바꿀 SQL 명령문 문자열의 각 자리에 "?"(물음표)를 넣습니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "65707798"
 > [!TIP]
 > 작업할 가능성이 가장 높은 문자열은 클래스의 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 데이터 멤버에 대해 지정한 문자열(있는 경우)이지만 일부 ODBC 드라이버는 다른 SQL 절에 매개 변수를 허용할 수 있습니다.
 
-##  <a name="_core_passing_parameter_values_at_run_time"></a> 런타임에 매개 변수 값 전달
+## <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> 런타임에 매개 변수 값 전달
 
 `Open`(새 레코드 집합 개체) 또는 `Requery`(기존 레코드 집합 개체)를 호출하기 전에 매개 변수 값을 지정해야 합니다.
 
@@ -174,10 +174,10 @@ if( !rsStudents.Requery( ) )
 레코드 집합은 해당 기록이 런타임 매개 변수에서 생성된 필터로 지정한 조건을 만족하는 학생에 대한 레코드를 포함합니다. 이 경우 레코드 집합은 모든 고학년 학생에 대한 기록을 포함합니다.
 
 > [!NOTE]
->  필요한 경우 [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull)을 사용하여 매개 변수 데이터 멤버의 값을 Null로 설정할 수 있습니다. 마찬가지로 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)을 사용하여 매개 변수 데이터 멤버가 Null인지 여부를 확인할 수 있습니다.
+> 필요한 경우 [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull)을 사용하여 매개 변수 데이터 멤버의 값을 Null로 설정할 수 있습니다. 마찬가지로 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)을 사용하여 매개 변수 데이터 멤버가 Null인지 여부를 확인할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[레코드 집합 레코드 추가, 업데이트 및 삭제(ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[레코드 집합 레코드 집합의 레코드 선택 방법(ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[레코드 집합: 레코드 추가, 업데이트 및 삭제(ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[레코드 집합: 레코드 집합의 레코드 선택 방법(ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

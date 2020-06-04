@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166538"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -30,7 +30,7 @@ ms.locfileid: "69514264"
 
 ## <a name="remarks"></a>설명
 
-**Pointer_default** C++ 특성은 [pointer_default](/windows/win32/Midl/pointer-default) MIDL 특성과 동일한 기능을 포함 합니다.
+**Pointer_default** C++ 특성에는 [pointer_default](/windows/win32/Midl/pointer-default) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -43,13 +43,13 @@ ms.locfileid: "69514264"
 |||
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)

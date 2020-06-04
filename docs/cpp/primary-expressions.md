@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177627"
 ---
 # <a name="primary-expressions"></a>기본 식
 
@@ -26,11 +26,11 @@ name
 ::name ( expression )
 ```
 
-A *리터럴* 상수 기본 식입니다. 지정의 형태에 따라 형식이 결정됩니다. 참조 [리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md) 리터럴 지정 하는 방법에 대 한 자세한 정보.
+*리터럴은* 상수 기본 식입니다. 지정의 형태에 따라 형식이 결정됩니다. 리터럴을 지정 하는 방법에 대 한 자세한 내용은 [리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md) 을 참조 하세요.
 
-합니다 **이** 키워드는 클래스 개체에 대 한 포인터입니다. 비정적 멤버 함수 안에 사용할 수 있으며 함수가 호출된 인스턴스에 대한 클래스의 인스턴스를 가리킵니다. 합니다 **이** 키워드 클래스 멤버 함수의 본문 밖에 서 사용할 수 없습니다.
+**This** 키워드는 클래스 개체에 대 한 포인터입니다. 비정적 멤버 함수 안에 사용할 수 있으며 함수가 호출된 인스턴스에 대한 클래스의 인스턴스를 가리킵니다. **이** 키워드는 클래스 멤버 함수 본문 외부에서 사용할 수 없습니다.
 
-형식의 합니다 **이** 포인터가 `type`  **\*const** (여기서 `type` 클래스 이름입니다) 명시적으로 수정 하는 함수 내에서 **이** 대 한 포인터입니다. 다음 예제에서는 함수 선언 및 유형의 멤버를 보여 줍니다 **이**:
+**This 포인터** 의 형식은 **this** 포인터를 특별히 수정 하지 않는 함수 내에서 const (`type`는 클래스 이름) **\*** `type` 됩니다. 다음 예제에서는 멤버 함수 선언과 **이**의 형식을 보여 줍니다.
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-참조 [이 포인터](this-pointer.md) 의 형식을 수정 하는 방법에 대 한 자세한 내용은 합니다 **이** 포인터입니다.
+**This** 포인터의 형식을 수정 하는 방법에 대 한 자세한 내용은 [이 포인터](this-pointer.md) 를 참조 하십시오.
 
-이름 앞의 범위 결정 연산자(`::`)는 기본 식을 구성합니다.  이러한 이름은 멤버 이름이 아니라 전역 범위의 이름이어야 합니다.  이름의 선언이 이 식의 형식을 결정합니다. 선언 이름이 l-value인 경우 l-value이므로 대입 연산자 식의 왼쪽에 나타날 수 있습니다. 범위 결정 연산자를 사용하면 전역 이름이 현재 범위에서 숨겨지더라도 해당 이름이 참조됩니다. 참조 [범위](../cpp/scope-visual-cpp.md) 범위 결정 연산자를 사용 하는 방법의 예입니다.
+이름 앞의 범위 결정 연산자(`::`)는 기본 식을 구성합니다.  이러한 이름은 멤버 이름이 아니라 전역 범위의 이름이어야 합니다.  이름의 선언이 이 식의 형식을 결정합니다. 선언 이름이 l-value인 경우 l-value이므로 대입 연산자 식의 왼쪽에 나타날 수 있습니다. 범위 결정 연산자를 사용하면 전역 이름이 현재 범위에서 숨겨지더라도 해당 이름이 참조됩니다. 범위 결정 연산자를 사용 하는 방법에 대 한 예는 [범위](../cpp/scope-visual-cpp.md) 를 참조 하세요.
 
 괄호로 묶은 식은 그 형식과 값이 괄호로 묶지 않은 식과 동일한 기본 식입니다. 괄호로 묶지 않은 식이 l-value일 경우 l-value입니다.
 
@@ -62,7 +62,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-아래 예제에서는 모든 고려할 *이름을*, 및 다양 한 형태로 따라서 기본 식:
+아래 예제는 다음과 같은 다양 한 형식으로 모든 *이름*, 즉 기본 식으로 간주 됩니다.
 
 ```cpp
 MyClass // a identifier
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [식의 형식](../cpp/types-of-expressions.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2721
 ms.assetid: 7a97823c-3ce1-4112-8253-fc1448685235
-ms.openlocfilehash: bf33ebdc3f34efb22809cbc5e62070226df2fd5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6edda08807c752c9257bf09033538d57ac276ed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202135"
 ---
 # <a name="compiler-error-c2721"></a>컴파일러 오류 C2721
 
-'specifier': 연산자 키워드 및 형식 간의 잘못 된 저장소 클래스 지정자
+' 지정자 ': 연산자 키워드 및 형식 사이에 저장소 클래스 지정 자가 잘못 되었습니다.
 
-사용자 정의 형식 변환 모든 저장소 클래스에 적용 되는 형식 변환에는 저장소 클래스를 지정할 수 없습니다.
+사용자 정의 형식 변환은 모든 저장소 클래스에 적용 되므로 형식 변환에서 저장소 클래스를 지정할 수 없습니다.

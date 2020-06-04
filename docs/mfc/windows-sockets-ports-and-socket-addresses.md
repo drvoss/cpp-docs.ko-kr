@@ -10,33 +10,33 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 791bf07c927e80e65e0fda79fae8a50235bc2def
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371041"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows 소켓: 포트 및 소켓 주소
 
-이 문서는 용어 "port" 및 "address"로 Windows 소켓을 사용 하 여 사용을 설명 합니다.
+이 문서에서는 Windows 소켓에서 사용되는 용어 "포트" 및 "주소"에 대해 설명합니다.
 
-##  <a name="_core_port"></a> 포트
+## <a name="port"></a><a name="_core_port"></a>포트
 
-포트는 서비스가 제공 될 수 있는 고유한 프로세스를 식별 합니다. 현재 컨텍스트에서 포트는 Windows 소켓을 지 원하는 응용 프로그램과 연결 합니다. 컴퓨터에서 동시에 실행 하는 하나 이상의 Windows 소켓 응용 프로그램을 갖도록 각 Windows Sockets 응용 프로그램을 고유 하 게 식별 하는 개념이입니다.
+포트는 서비스를 제공할 수 있는 고유한 프로세스를 식별합니다. 현재 컨텍스트에서 포트는 Windows 소켓을 지원하는 응용 프로그램과 연결됩니다. 이 아이디어는 각 Windows 소켓 응용 프로그램을 고유하게 식별하여 컴퓨터에서 동시에 두 개 이상의 Windows 소켓 응용 프로그램을 실행할 수 있도록 하는 것입니다.
 
-FTP와 같은 공통 서비스의 특정 포트 예약 되어 있습니다. 해당 종류의 서비스를 제공 하는 경우가 아니면 해당 포트를 사용 하지 않아야 합니다. Windows 소켓 사양 이러한 예약 된 포트를 자세히 설명합니다. WINSOCK 파일입니다. H도 나열 됩니다.
+특정 포트는 FTP와 같은 일반적인 서비스를 위해 예약되어 있습니다. 이러한 종류의 서비스를 제공하지 않는 한 이러한 포트를 사용하지 않아야 합니다. Windows 소켓 사양은 이러한 예약된 포트에 대해 자세히 설명합니다. 파일 WINSOCK. H는 또한 그들을 나열합니다.
 
-사용 가능한 포트를 선택 하는 Windows 소켓 DLL을 수 있도록 하려면 포트 값으로 0을 전달 합니다. MFC는 1,024 10 진수 보다 큰 포트 값을 선택합니다. MFC를 호출 하 여 선택 된 포트 값을 검색할 수는 [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) 멤버 함수입니다.
+Windows 소켓 DLL에서 사용 가능한 포트를 선택하도록 하려면 0을 포트 값으로 전달합니다. MFC는 소수점 이하의 포트 값을 선택합니다. [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) 멤버 함수를 호출하여 MFC가 선택한 포트 값을 검색할 수 있습니다.
 
-##  <a name="_core_socket_address"></a> 소켓 주소
+## <a name="socket-address"></a><a name="_core_socket_address"></a>소켓 주소
 
-각 소켓 개체는 네트워크에서 IP (인터넷 프로토콜) 주소와 연결 합니다. 일반적으로 주소는 점으로 구분 된 숫자를 "128.56.22.8" 또는 "형식인" 등의 컴퓨터 이름을 합니다.
+각 소켓 개체는 네트워크의 IP(인터넷 프로토콜) 주소와 연결됩니다. 일반적으로 주소는 "ftp.microsoft.com"과 같은 컴퓨터 이름 또는 "128.56.22.8"과 같은 점선 번호입니다.
 
-소켓을 만들려고 하는 경우에 일반적으로 자신의 주소를 지정 하지 필요가.
+소켓을 만들려고 할 때 일반적으로 자신의 주소를 지정할 필요가 없습니다.
 
 > [!NOTE]
->  수는 컴퓨터에 네트워크 카드가 여러 개 (또는 이러한 컴퓨터에서 응용 프로그램 실행 될 수도 있습니다) 다른 네트워크를 나타내는입니다. 그렇다면 소켓 사용할지는 네트워크 카드를 지정 하는 주소를 지정 해야 합니다. 이 고급 사용 방법 및 이식성 문제가 발생할 수 있습니다.
+> 컴퓨터에 여러 네트워크 카드가 있을 수 있습니다(또는 응용 프로그램이 이러한 컴퓨터에서 언젠가 실행될 수 있음) 각각 다른 네트워크를 나타내는 것일 수 있습니다. 그렇다면 소켓에서 사용할 네트워크 카드를 지정하기 위해 주소를 지정해야 할 수 있습니다. 이것은 고급 사용 및 가능한 이식성 문제일 수 있습니다.
 
 자세한 내용은 다음을 참조하세요.
 
@@ -50,6 +50,6 @@ FTP와 같은 공통 서비스의 특정 포트 예약 되어 있습니다. 해�
 
 - [Windows 소켓: 데이터그램 소켓](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MFC의 Windows 소켓](../mfc/windows-sockets-in-mfc.md)

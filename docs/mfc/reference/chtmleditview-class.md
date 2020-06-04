@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389569"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752326"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 클래스
 
@@ -35,17 +35,17 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CHtmlEditView::CHtmlEditView](#chtmleditview)|`CHtmlEditView` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|새 창 개체를 만듭니다.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|반환 된 `IHTMLDocument2` 현재 문서에 대 한 인터페이스입니다.|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|이 보기에 대 한 기본 문서의 이름을 검색합니다.|
+|[CHtmlEditView::만들기](#create)|새 창 개체를 만듭니다.|
+|[CHtmlEditView::GetDHtml문서](#getdhtmldocument)|현재 `IHTMLDocument2` 문서의 인터페이스를 반환합니다.|
+|[CHtmlEditView::GetStart문서](#getstartdocument)|이 보기에 대 한 기본 문서의 이름을 검색합니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -71,7 +71,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **헤더:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView
 
 `CHtmlEditView` 개체를 생성합니다.
 
@@ -79,7 +79,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::만들기
 
 새 창 개체를 만듭니다.
 
@@ -97,33 +97,33 @@ virtual BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *lpszClassName*<br/>
-Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름을 사용 하 여 등록 된 모든 이름 수는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 `RegisterClass` Windows 함수입니다. NULL 인 경우 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.
+Windows 클래스의 이름을 지정하는 null 종료된 문자 문자열을 가리킵니다. 클래스 이름은 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 글로벌 함수 또는 `RegisterClass` Windows 함수에 등록된 모든 이름일 수 있습니다. NULL인 경우 미리 정의된 기본 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성을 사용합니다.
 
 *lpszWindowName*<br/>
-창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다.
+창 이름을 나타내는 null 종료된 문자 문자열을 가리킵니다.
 
 *dwStyle*<br/>
-창 스타일 특성을 지정합니다. WS_VISIBLE 및 WS_CHILD Windows 스타일은 기본적으로 설정 됩니다.
+창 스타일 특성을 지정합니다. 기본적으로 WS_VISIBLE 및 WS_CHILD Windows 스타일이 설정됩니다.
 
 *rect*<br/>
-에 대 한 참조를 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조 크기와 창의 위치를 지정 합니다. 합니다 *rectDefault* 값 크기와 새 창의 위치를 지정 하는 Windows를 허용 합니다.
+창의 크기와 위치를 지정하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다. *rectDefault* 값을 사용하면 Windows에서 새 창의 크기와 위치를 지정할 수 있습니다.
 
 *pParentWnd*<br/>
-컨트롤의 부모 창에 대 한 포인터입니다.
+컨트롤의 상위 창에 대한 포인터입니다.
 
 *nID*<br/>
-뷰의 ID. 기본적으로 AFX_IDW_PANE_FIRST로 설정 합니다.
+뷰의 ID 번호입니다. 기본적으로 AFX_IDW_PANE_FIRST 설정합니다.
 
 *pContext*<br/>
-에 대 한 포인터를 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. 기본적으로 NULL입니다.
+[CCreateContext에](../../mfc/reference/ccreatecontext-structure.md)대한 포인터 . 기본적으로 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 포함 된 WebBrowser를 호출할 수도 `Navigate` 기본 문서를 로드 하는 방법 (참조 [CHtmlEditView::GetStartDocument](#getstartdocument)).
+또한 이 메서드는 포함된 WebBrowser `Navigate` 메서드를 호출하여 기본 문서를 로드합니다(CHtmlEditView::GetStartDocument 참조). [CHtmlEditView::GetStartDocument](#getstartdocument)
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtml문서
 
-반환 된 `IHTMLDocument2` 현재 문서에 대 한 인터페이스입니다.
+현재 `IHTMLDocument2` 문서의 인터페이스를 반환합니다.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -132,9 +132,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>매개 변수
 
 *ppDocument*<br/>
-합니다 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) 인터페이스입니다.
+[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) 인터페이스입니다.
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStart문서
 
 이 보기에 대 한 기본 문서의 이름을 검색합니다.
 
@@ -142,7 +142,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-[HTMLEdit 샘플](../../overview/visual-cpp-samples.md)<br/>
+[HTML편집 샘플](../../overview/visual-cpp-samples.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316342"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335727"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 문서(Visual C++)
 
@@ -27,21 +27,21 @@ Visual C++ 코드 파일에서 XML 문서 주석은 메서드 또는 형식 정�
 1. 형식 선언 및 구현이 동일한 헤더 파일에 있는 라이브러리
 
 > [!NOTE]
->  현재 릴리스에서는 코드 주석이 템플릿 또는 템플릿 형식을 포함하는 모든 항목(예: 매개 변수를 템플릿으로 사용하는 함수)에서 처리되지 않습니다. 이러한 주석을 추가하면 정의되지 않은 동작이 발생합니다.
+> 현재 릴리스에서는 코드 주석이 템플릿 또는 템플릿 형식을 포함하는 모든 항목(예: 매개 변수를 템플릿으로 사용하는 함수)에서 처리되지 않습니다. 이러한 주석을 추가하면 정의되지 않은 동작이 발생합니다.
 
 문서 주석이 있는 .xml 파일을 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-|추가 정보|참조|
+|원하는 정보|참조|
 |---------------------------|---------|
 |사용할 컴파일러 옵션|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|문서에서 일반적으로 사용되는 기능을 제공하는 데 사용할 수 있는 태그|[문서 주석에 대한 권장 태그](recommended-tags-for-documentation-comments-visual-cpp.md)|
-|컴파일러에서 코드의 구문을 식별하기 위해 생성하는 ID 문자열|[ .xml 파일 처리](dot-xml-file-processing.md)|
+|문서에서 일반적으로 사용되는 기능을 제공하는 데 사용할 수 있는 태그|[문서 주석에 권장태그](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|컴파일러에서 코드의 구문을 식별하기 위해 생성하는 ID 문자열|[.xml 파일 처리](dot-xml-file-processing.md)|
 |문서 태그를 구분하는 방법|[Visual C++ 문서 태그의 구분 기호](delimiters-for-visual-cpp-documentation-tags.md)|
 |하나 이상의 .xdc 파일에서.xml 파일을 생성합니다.|[XDCMake 참조](xdcmake-reference.md)|
 |Visual Studio 기능 영역과 관련된 XML에 대한 정보 링크|[Visual Studio의 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|
 
 문서 주석의 텍스트에 XML 특수 문자를 넣어야 하는 경우 XML 엔터티 또는 CDATA 섹션을 사용해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [런타임 플랫폼용 구성 요소 확장](../../extensions/component-extensions-for-runtime-platforms.md)

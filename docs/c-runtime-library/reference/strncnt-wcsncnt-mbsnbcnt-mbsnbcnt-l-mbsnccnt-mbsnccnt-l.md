@@ -1,6 +1,6 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947304"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914206"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 지정한 개수 내에서 문자 또는 바이트 수를 반환합니다.
 
 > [!IMPORTANT]
-> Windows 런타임에서 실행 되는 응용 프로그램에서는 **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**및 **_mbsnccnt_l** 를 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**및 **_mbsnccnt_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -100,7 +105,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*문자열*<br/>
 검사할 문자열입니다.
 
 *count*<br/>
@@ -109,31 +114,33 @@ size_t _mbsnccnt_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_mbsnbcnt** 및 **_mbsnbcnt_l** 는 *str*의 첫 번째 멀티 바이트 문자 *수* 에 있는 바이트 수를 반환 합니다. **_mbsnccnt** 및 **_mbsnccnt_l** 는 *str* *의 첫 번째 바이트 수에* 있는 문자 수를 반환 합니다. *Str* 검사를 완료 하기 전에 null 문자를 발견 하면 null 문자 앞에 있는 바이트 또는 문자 수를 반환 합니다. *Str* 이 *count* 문자 또는 바이트 미만으로 구성 된 경우 문자열의 문자 또는 바이트 수를 반환 합니다. *Count* 가 0 보다 작은 경우 0을 반환 합니다. 이전 버전에서는 이러한 함수에 **size_t**대신 **int** 형식의 반환 값이 있었습니다.
+**_mbsnbcnt** 및 **_mbsnbcnt_l** 은 *str*의 첫 번째 멀티 바이트 문자 *수* 에 있는 바이트 수를 반환 합니다. **_mbsnccnt** 및 **_mbsnccnt_l** 는 *str* *의 첫 번째 바이트 수에* 있는 문자 수를 반환 합니다. *Str* 검사를 완료 하기 전에 null 문자를 발견 하면 null 문자 앞에 있는 바이트 또는 문자 수를 반환 합니다. *Str* 이 *count* 문자 또는 바이트 미만으로 구성 된 경우 문자열의 문자 또는 바이트 수를 반환 합니다. *Count* 가 0 보다 작은 경우 0을 반환 합니다. 이전 버전에서는 이러한 함수에 **size_t**아닌 **int** 형식의 반환 값이 있습니다.
 
-**_strncnt** 는 싱글바이트 문자열 *str*의 첫 번째 *카운트* 바이트에 있는 문자 수를 반환 합니다. **_wcsncnt** 는 와이드 문자 문자열 *str*의 첫 번째 *개수* 와이드 문자 수를 반환 합니다.
+**_strncnt** 는 단일 바이트 문자열 *str* *의 첫 번째 바이트 수* 의 문자 수를 반환 합니다. **_wcsncnt** 는 와이드 문자 문자열 *str*의 첫 번째 *count* 와이드 문자 수를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**_mbsnbcnt** 및 **_mbsnbcnt_l** count는 *str*의 첫 번째 멀티 바이트 문자 *수* 에서 발견 된 바이트 수를 계산 합니다. **_mbsnbcnt** 및 **_mbsnbcnt_l** replace **mtob** 는 **mtob**대신 사용 해야 합니다.
+**_mbsnbcnt** 및 **_mbsnbcnt_l** 은 *str*의 첫 번째 멀티 바이트 문자 *수* 에 있는 바이트 수를 계산 합니다. **_mbsnbcnt** 및 **_mbsnbcnt_l** replace를 사용 하 여 **mtob**대신 **mtob** 를 사용 해야 합니다.
 
-**_mbsnccnt** 및 **_mbsnccnt_l** count는 *str* *의 첫 번째 바이트 수에* 있는 문자 수를 계산 합니다. **_Mbsnccnt** 및 **_mbsnccnt_l** 가 더블 바이트 문자의 두 번째 바이트에서 null 문자를 발견 하면 첫 번째 바이트만 null로 간주 되어 반환 되는 count 값에 포함 되지 않습니다. btom 대신 **_mbsnccnt** 및 **_mbsnccnt_l** **replace를** 사용 해야 **합니다.**
+**_mbsnccnt** 및 **_mbsnccnt_l** 은 *str*바이트의 첫 번째 *카운트* 에서 발견 된 문자 수를 계산 합니다. **_Mbsnccnt** 및 **_mbsnccnt_l** 더블 바이트 문자의 두 번째 바이트에서 null 문자를 발견 하는 경우 첫 번째 바이트만 null로 간주 되 고 반환 되는 count 값에 포함 되지 않습니다. **btom** 대신 **_mbsnccnt** 및 **_mbsnccnt_l** 를 사용 해야 **합니다.**
 
 *Str* 가 **NULL** 포인터 이거나 *count* 가 0 이면 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 하 고 **errno** 가 **EINVAL**로 설정 되 고 함수는 0을 반환 합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |루틴에서 반환된 값|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/a|
-|**_wcsncnt**|n/a|n/a|**_mbsnbcnt**|
-|**_wcsncnt**|n/a|n/a|**_mbsnccnt**|
-|n/a|n/a|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|해당 없음|
+|**_wcsncnt**|해당 없음|해당 없음|**_mbsnbcnt**|
+|**_wcsncnt**|해당 없음|해당 없음|**_mbsnccnt**|
+|해당 없음|해당 없음|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>요구 사항
 
@@ -146,7 +153,7 @@ size_t _mbsnccnt_l(
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -175,9 +182,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

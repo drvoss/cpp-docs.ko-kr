@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2285
 ms.assetid: 7b40a1b0-f477-49fa-b762-c3bccd88514e
-ms.openlocfilehash: 88e2a54463814b8a436149c79460b584a475362e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0d2eb9ce16c1cee7cb06d7e3e81803cf94f596c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388789"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206456"
 ---
 # <a name="compiler-error-c2285"></a>컴파일러 오류 C2285
 
-멤버 표현에 대 한 포인터를 이미 결정 된-pragma가 무시 됩니다
+멤버에 대 한 포인터가 이미 확인 되었습니다. pragma가 무시 됩니다.
 
-클래스에 대 한 두 가지 표현이 존재 합니다.
+클래스에 대 한 두 가지 표현이 있습니다.

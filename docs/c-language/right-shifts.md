@@ -3,11 +3,11 @@ title: 오른쪽 시프트
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
 ms.openlocfilehash: c34373f69a41ad65031753cd352098dce7e98ef4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158361"
 ---
 # <a name="right-shifts"></a>오른쪽 시프트
 
@@ -19,6 +19,6 @@ ms.locfileid: "56149481"
 
 부호 없는 정수가 오른쪽으로 이동하면 최상위 비트는 해제됩니다. 예를 들어 0xF000에 부호가 없는 경우 결과는 0x7800입니다. `unsigned` 또는 양의 `int`를 오른쪽으로 32번 이동하면 0x00000000이 생성됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [정수](../c-language/integers.md)

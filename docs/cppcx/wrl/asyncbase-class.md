@@ -53,12 +53,12 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 367d0b0cd3197623b27ee1a50e804cca797aedf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0254aa4dc243eeffa43850c437a833a6530c01e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371866"
 ---
 # <a name="asyncbase-class"></a>AsyncBase 클래스
 
@@ -82,55 +82,54 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 ### <a name="parameters"></a>매개 변수
 
 *TComplete*<br/>
-비동기 작업이 완료 될 때 호출 되는 이벤트 처리기입니다.
+비동기 작업이 완료될 때 호출되는 이벤트 처리기입니다.
 
 *TProgress*<br/>
-작업의 현재 진행률을 보고 하는 비동기 작업 실행을 때 호출 되는 이벤트 처리기입니다.
+실행 중인 비동기 작업이 작업의 현재 진행 률을 보고할 때 호출되는 이벤트 처리기입니다.
 
-*resultType*<br/>
-중 하나는 [AsyncResultType](asyncresulttype-enumeration.md) 열거형 값입니다. 기본적으로 `SingleResult`입니다.
+*결과 유형*<br/>
+[AsyncResultType](asyncresulttype-enumeration.md) 열거 형 열거 값 중 하나입니다. 기본적으로 `SingleResult`입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-이름                               | 설명
+속성                               | Description
 ---------------------------------- | -------------------------------------------------
-[AsyncBase::AsyncBase](#asyncbase) | `AsyncBase` 클래스의 인스턴스를 초기화합니다.
+[비동기 베이스::비동기 베이스](#asyncbase) | `AsyncBase` 클래스의 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                         | 설명
+속성                                         | Description
 -------------------------------------------- | -------------------------------------------------------------------------------------
-[AsyncBase::Cancel](#cancel)                 | 비동기 작업을 취소합니다.
-[AsyncBase::Close](#close)                   | 비동기 작업을 닫습니다.
-[AsyncBase::FireCompletion](#firecompletion) | 완료 이벤트 처리기를 호출 하거나 내부 진행률 대리자를 다시 설정 합니다.
-[AsyncBase::FireProgress](#fireprogress)     | 현재 진행률 이벤트 처리기를 호출합니다.
-[AsyncBase::get_ErrorCode](#get-errorcode)   | 현재 비동기 작업에 대 한 오류 코드를 검색 합니다.
-[AsyncBase::get_Id](#get-id)                 | 비동기 작업의 핸들을 검색 합니다.
-[AsyncBase::get_Status](#get-status)         | 비동기 작업의 상태를 나타내는 값을 검색 합니다.
-[AsyncBase::GetOnComplete](#getoncomplete)   | 지정된 된 변수를 현재 완료 이벤트 처리기의 주소를 복사합니다.
-[AsyncBase::GetOnProgress](#getonprogress)   | 지정된 된 변수를 현재 진행률 이벤트 처리기의 주소를 복사합니다.
-[AsyncBase::put_Id](#put-id)                 | 비동기 작업의 핸들을 설정 합니다.
-[AsyncBase::PutOnComplete](#putoncomplete)   | 완료 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.
-[AsyncBase::PutOnProgress](#putonprogress)   | 진행률 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.
-
+[비동기 베이스::취소](#cancel)                 | 비동기 작업을 취소합니다.
+[비동기 베이스::닫기](#close)                   | 비동기 작업을 닫습니다.
+[비동기 기반::화재 완료](#firecompletion) | 완료 이벤트 처리기를 호출하거나 내부 진행률 대리자를 다시 설정합니다.
+[비동기 기지::화재 진행상황](#fireprogress)     | 현재 진행률 이벤트 처리기를 호출합니다.
+[비동기 베이스::get_ErrorCode](#get-errorcode)   | 현재 비동기 작업에 대한 오류 코드를 검색합니다.
+[비동기 베이스::get_Id](#get-id)                 | 비동기 작업의 핸들을 검색합니다.
+[비동기 베이스:get_Status](#get-status)         | 비동기 작업의 상태를 나타내는 값을 검색합니다.
+[비동기 베이스::GetOnComplete](#getoncomplete)   | 현재 완료 이벤트 처리기의 주소를 지정된 변수에 복사합니다.
+[비동기 베이스::GetonProgress](#getonprogress)   | 현재 진행률 이벤트 처리기의 주소를 지정된 변수에 복사합니다.
+[비동기베이스::put_Id](#put-id)                 | 비동기 작업의 핸들을 설정합니다.
+[비동기베이스::PutonComplete](#putoncomplete)   | 완료 이벤트 처리기의 주소를 지정된 값으로 설정합니다.
+[비동기베이스::PutonProgress](#putonprogress)   | 진행률 이벤트 처리기의 주소를 지정된 값으로 설정합니다.
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-이름                                                                         | 설명
+속성                                                                         | Description
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | 현재 비동기 상태의 대리자 속성을 수정할 수 있는지 테스트 합니다.
-[AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | 현재 비동기 상태에서 비동기 작업의 결과 수집할 수 있는지 테스트 합니다.
-[AsyncBase::ContinueAsyncOperation](#continueasyncoperation)                 | 비동기 작업을 계속 처리 해야 중단 되어야 하는지 여부를 결정 합니다.
-[AsyncBase::CurrentStatus](#currentstatus)                                   | 현재 비동기 작업의 상태를 검색합니다.
-[AsyncBase::ErrorCode](#errorcode)                                           | 현재 비동기 작업에 대 한 오류 코드를 검색 합니다.
-[AsyncBase::OnCancel](#oncancel)                                             | 파생된 클래스에서 재정의 되 면 비동기 작업을 취소 합니다.
-[AsyncBase::OnClose](#onclose)                                               | 파생된 클래스에서 재정의 하는 경우 비동기 작업을 닫습니다.
-[AsyncBase::OnStart](#onstart)                                               | 파생된 클래스에서 재정의 되 면 비동기 작업을 시작 합니다.
-[AsyncBase::Start](#start)                                                   | 비동기 작업을 시작 합니다.
-[AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | 현재 비동기 작업이 완료 되었는지 여부를 나타냅니다.
-[AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | 지정된 된 오류 코드 내부 오류 상태를 수정할 수 있는지 여부를 나타냅니다.
+[비동기 베이스::체크유효상태ForDelegate호출](#checkvalidstatefordelegatecall) | 현재 비동기 상태에서 대리자 속성을 수정할 수 있는지 여부를 테스트합니다.
+[비동기 베이스::체크유효상태검사결과콜](#checkvalidstateforresultscall)   | 비동기 작업의 결과를 현재 비동기 상태에서 수집할 수 있는지 여부를 테스트합니다.
+[비동기 베이스::계속동기 작업](#continueasyncoperation)                 | 비동기 작업이 처리를 계속해야 하는지 아니면 중지해야 하는지 여부를 결정합니다.
+[비동기 베이스::현재 상태](#currentstatus)                                   | 현재 비동기 작업의 상태를 검색합니다.
+[비동기 베이스::오류 코드](#errorcode)                                           | 현재 비동기 작업에 대한 오류 코드를 검색합니다.
+[비동기 베이스::온취소](#oncancel)                                             | 파생 클래스에서 재정의하면 비동기 작업이 취소됩니다.
+[비동기 베이스::온클로즈](#onclose)                                               | 파생 클래스에서 재정의하면 비동기 작업이 닫힙됩니다.
+[비동기 베이스::시작 시](#onstart)                                               | 파생 클래스에서 재정의하면 비동기 작업이 시작됩니다.
+[비동기 베이스::시작](#start)                                                   | 비동기 작업을 시작합니다.
+[비동기 베이스::시도전환완료](#trytransitiontocompleted)             | 현재 비동기 작업이 완료되었는지 여부를 나타냅니다.
+[비동기 기반::tryTransitionToError](#trytransitiontoerror)                     | 지정된 오류 코드가 내부 오류 상태를 수정할 수 있는지 여부를 나타냅니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -140,11 +139,11 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** async.h
+**헤더:** 비동기.h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="asyncbase"></a>AsyncBase::AsyncBase
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>비동기 베이스::비동기 베이스
 
 `AsyncBase` 클래스의 인스턴스를 초기화합니다.
 
@@ -152,7 +151,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 AsyncBase();
 ```
 
-## <a name="cancel"></a>AsyncBase::Cancel
+## <a name="asyncbasecancel"></a><a name="cancel"></a>비동기 베이스::취소
 
 비동기 작업을 취소합니다.
 
@@ -162,39 +161,39 @@ STDMETHOD(
 )(void);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-기본적으로 항상 S_OK를 반환합니다.
+기본적으로 항상 S_OK 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`Cancel()` 기본 구현 이며 `IAsyncInfo::Cancel`, 없습니다 실제 작업을 수행 합니다. 비동기 작업을 실제로 취소 하려면 재정의 `OnCancel()` 순수 가상 메서드가 있습니다.
+`Cancel()`은 의 기본 `IAsyncInfo::Cancel`구현이며 실제 작업을 수행하지 않습니다. 실제로 비동기 작업을 취소하려면 순수 가상 `OnCancel()` 메서드를 재정의합니다.
 
-## <a name="checkvalidstatefordelegatecall"></a>AsyncBase::CheckValidStateForDelegateCall
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>비동기 베이스::체크유효상태ForDelegate호출
 
-현재 비동기 상태의 대리자 속성을 수정할 수 있는지 테스트 합니다.
+현재 비동기 상태에서 대리자 속성을 수정할 수 있는지 여부를 테스트합니다.
 
 ```cpp
 inline HRESULT CheckValidStateForDelegateCall();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 대리자 속성을 수정할 수 있습니다. 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+S_OK 대리자 속성을 수정할 수 있는지 를 지정합니다. 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
-## <a name="checkvalidstateforresultscall"></a>AsyncBase::CheckValidStateForResultsCall
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>비동기 베이스::체크유효상태검사결과콜
 
-현재 비동기 상태에서 비동기 작업의 결과 수집할 수 있는지 테스트 합니다.
+비동기 작업의 결과를 현재 비동기 상태에서 수집할 수 있는지 여부를 테스트합니다.
 
 ```cpp
 inline HRESULT CheckValidStateForResultsCall();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_OK 결과 수집할 수 있습니다. 그렇지 않으면 E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL 합니다.
+결과를 수집할 수 있는지 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
 
-## <a name="close"></a>AsyncBase::Close
+## <a name="asyncbaseclose"></a><a name="close"></a>비동기 베이스::닫기
 
 비동기 작업을 닫습니다.
 
@@ -204,27 +203,27 @@ STDMETHOD(
 )(void) override;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-작업이 이미 닫히거나 경우 s_ok이 고, 닫혀 않으면 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.
+작업이 닫히거나 이미 닫혔는지 S_OK. 그렇지 않으면, E_ILLEGAL_STATE_CHANGE.
 
 ### <a name="remarks"></a>설명
 
-`Close()` 기본 구현 이며 `IAsyncInfo::Close`, 없습니다 실제 작업을 수행 합니다. 비동기 작업을 실제로 닫으려면 재정의 `OnClose()` 순수 가상 메서드가 있습니다.
+`Close()`은 의 기본 `IAsyncInfo::Close`구현이며 실제 작업을 수행하지 않습니다. 실제로 비동기 작업을 닫려면 순수 가상 `OnClose()` 메서드를 재정의합니다.
 
-## <a name="continueasyncoperation"></a>AsyncBase::ContinueAsyncOperation
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>비동기 베이스::계속동기 작업
 
-비동기 작업을 계속 처리 해야 중단 되어야 하는지 여부를 결정 합니다.
+비동기 작업이 처리를 계속해야 하는지 아니면 중지해야 하는지 여부를 결정합니다.
 
 ```cpp
 inline bool ContinueAsyncOperation();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** 비동기 작업의 현재 상태 이면 *시작*, 즉, 작업을 계속 해야 합니다. 그렇지 않으면 **false**, 즉, 작업을 중지 해야 합니다.
+**true** 는 비동기 작업의 현재 상태가 *시작되는*경우 작업을 계속해야 한다는 것을 의미합니다. 그렇지 않으면 **false는**작업이 중지되어야 한다는 것을 의미합니다.
 
-## <a name="currentstatus"></a>AsyncBase::CurrentStatus
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>비동기 베이스::현재 상태
 
 현재 비동기 작업의 상태를 검색합니다.
 
@@ -236,16 +235,16 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>매개 변수
 
-*status*<br/>
-이 작업의 현재 상태를 저장 하는 위치를 위치입니다.
+*상태*<br/>
+이 작업이 현재 상태를 저장하는 위치입니다.
 
 ### <a name="remarks"></a>설명
 
-이 작업은 스레드로부터 안전 합니다.
+이 작업은 스레드에서 안전합니다.
 
-## <a name="errorcode"></a>AsyncBase::ErrorCode
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>비동기 베이스::오류 코드
 
-현재 비동기 작업에 대 한 오류 코드를 검색 합니다.
+현재 비동기 작업에 대한 오류 코드를 검색합니다.
 
 ```cpp
 inline void ErrorCode(
@@ -256,15 +255,15 @@ inline void ErrorCode(
 ### <a name="parameters"></a>매개 변수
 
 *error*<br/>
-이 작업에서 현재 오류 코드를 저장 하는 위치를 위치입니다.
+이 작업이 현재 오류 코드를 저장하는 위치입니다.
 
 ### <a name="remarks"></a>설명
 
-이 작업은 스레드로부터 안전 합니다.
+이 작업은 스레드에서 안전합니다.
 
-## <a name="firecompletion"></a>AsyncBase::FireCompletion
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>비동기 기반::화재 완료
 
-완료 이벤트 처리기를 호출 하거나 내부 진행률 대리자를 다시 설정 합니다.
+완료 이벤트 처리기를 호출하거나 내부 진행률 대리자를 다시 설정합니다.
 
 ```cpp
 void FireCompletion(
@@ -276,9 +275,9 @@ virtual void FireCompletion();
 
 ### <a name="remarks"></a>설명
 
-첫 번째 버전 `FireCompletion()` 내부 진행률 대리자 변수를 다시 설정 합니다. 비동기 작업이 완료 될 경우 완료 이벤트 처리기를 호출 하는 두 번째 버전입니다.
+첫 번째 `FireCompletion()` 버전의 재설정은 내부 진행률 대리자 변수입니다. 두 번째 버전은 비동기 작업이 완료되면 완료 이벤트 처리기를 호출합니다.
 
-## <a name="fireprogress"></a>AsyncBase::FireProgress
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>비동기 기지::화재 진행상황
 
 현재 진행률 이벤트 처리기를 호출합니다.
 
@@ -290,16 +289,16 @@ void FireProgress(
 
 ### <a name="parameters"></a>매개 변수
 
-*arg*<br/>
-이벤트 처리기 메서드를 호출 합니다.
+*Arg*<br/>
+호출할 이벤트 처리기 메서드입니다.
 
 ### <a name="remarks"></a>설명
 
-`ProgressTraits` 파생 됩니다 [ArgTraitsHelper 구조체](argtraitshelper-structure.md)합니다.
+`ProgressTraits`[ArgTraits도움말 구조에서](argtraitshelper-structure.md)파생됩니다.
 
-## <a name="get-errorcode"></a>AsyncBase::get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>비동기 베이스::get_ErrorCode
 
-현재 비동기 작업에 대 한 오류 코드를 검색 합니다.
+현재 비동기 작업에 대한 오류 코드를 검색합니다.
 
 ```cpp
 STDMETHOD(
@@ -310,15 +309,15 @@ STDMETHOD(
 ### <a name="parameters"></a>매개 변수
 
 *errorCode*<br/>
-현재 오류 코드가 저장 된 위치입니다.
+현재 오류 코드가 저장되는 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 현재 비동기 작업이 닫히면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면 현재 비동기 작업이 닫혀 있는지 E_ILLEGAL_METHOD_CALL.
 
-## <a name="get-id"></a>AsyncBase::get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a>비동기 베이스::get_Id
 
-비동기 작업의 핸들을 검색 합니다.
+비동기 작업의 핸들을 검색합니다.
 
 ```cpp
 STDMETHOD(
@@ -328,20 +327,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
-핸들이 저장할 수 있는 위치입니다.
+*id*<br/>
+핸들을 저장할 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
 ### <a name="remarks"></a>설명
 
 이 메서드는 `IAsyncInfo::get_Id`를 구현합니다.
 
-## <a name="get-status"></a>AsyncBase::get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a>비동기 베이스:get_Status
 
-비동기 작업의 상태를 나타내는 값을 검색 합니다.
+비동기 작업의 상태를 나타내는 값을 검색합니다.
 
 ```cpp
 STDMETHOD(
@@ -351,20 +350,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*status*<br/>
-상태를 저장할 위치입니다. 자세한 내용은 참조 하세요. `Windows::Foundation::AsyncStatus` 열거형입니다.
+*상태*<br/>
+상태를 저장할 위치입니다. 자세한 내용은 열거를 참조하십시오. `Windows::Foundation::AsyncStatus`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
 ### <a name="remarks"></a>설명
 
 이 메서드는 `IAsyncInfo::get_Status`를 구현합니다.
 
-## <a name="getoncomplete"></a>AsyncBase::GetOnComplete
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>비동기 베이스::GetOnComplete
 
-지정된 된 변수를 현재 완료 이벤트 처리기의 주소를 복사합니다.
+현재 완료 이벤트 처리기의 주소를 지정된 변수에 복사합니다.
 
 ```cpp
 STDMETHOD(
@@ -374,16 +373,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*completeHandler*<br/>
-현재 완료 이벤트 처리기의 주소를 저장 된 위치입니다.
+*전체 처리기*<br/>
+현재 완료 이벤트 처리기의 주소가 저장되는 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
-## <a name="getonprogress"></a>AsyncBase::GetOnProgress
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>비동기 베이스::GetonProgress
 
-지정된 된 변수를 현재 진행률 이벤트 처리기의 주소를 복사합니다.
+현재 진행률 이벤트 처리기의 주소를 지정된 변수에 복사합니다.
 
 ```cpp
 STDMETHOD(
@@ -393,16 +392,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*progressHandler*<br/>
-현재 진행률 이벤트 처리기의 주소를 저장 된 위치입니다.
+*진행률 처리기*<br/>
+현재 진행률 이벤트 처리기의 주소가 저장되는 위치입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
-## <a name="oncancel"></a>AsyncBase::OnCancel
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>비동기 베이스::온취소
 
-파생된 클래스에서 재정의 되 면 비동기 작업을 취소 합니다.
+파생 클래스에서 재정의하면 비동기 작업이 취소됩니다.
 
 ```cpp
 virtual void OnCancel(
@@ -410,9 +409,9 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="onclose"></a>AsyncBase::OnClose
+## <a name="asyncbaseonclose"></a><a name="onclose"></a>비동기 베이스::온클로즈
 
-파생된 클래스에서 재정의 하는 경우 비동기 작업을 닫습니다.
+파생 클래스에서 재정의하면 비동기 작업이 닫힙됩니다.
 
 ```cpp
 virtual void OnClose(
@@ -420,9 +419,9 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="onstart"></a>AsyncBase::OnStart
+## <a name="asyncbaseonstart"></a><a name="onstart"></a>비동기 베이스::시작 시
 
-파생된 클래스에서 재정의 되 면 비동기 작업을 시작 합니다.
+파생 클래스에서 재정의하면 비동기 작업이 시작됩니다.
 
 ```cpp
 virtual HRESULT OnStart(
@@ -430,9 +429,9 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="put-id"></a>AsyncBase::put_Id
+## <a name="asyncbaseput_id"></a><a name="put-id"></a>비동기베이스::put_Id
 
-비동기 작업의 핸들을 설정 합니다.
+비동기 작업의 핸들을 설정합니다.
 
 ```cpp
 STDMETHOD(
@@ -442,16 +441,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*ID*<br/>
-0이 아닌 핸들입니다.
+*id*<br/>
+제로가 아닌 핸들입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 이 고, 그렇지 E_INVALIDARG 또는 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면 E_INVALIDARG 또는 E_ILLEGAL_METHOD_CALL.
 
-## <a name="putoncomplete"></a>AsyncBase::PutOnComplete
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>비동기베이스::PutonComplete
 
-완료 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.
+완료 이벤트 처리기의 주소를 지정된 값으로 설정합니다.
 
 ```cpp
 STDMETHOD(
@@ -461,16 +460,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*completeHandler*<br/>
-완료 이벤트 처리기에 설정 된 주소입니다.
+*전체 처리기*<br/>
+완료 이벤트 처리기가 설정된 주소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
-## <a name="putonprogress"></a>AsyncBase::PutOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>비동기베이스::PutonProgress
 
-진행률 이벤트 처리기의 주소를 지정된 된 값으로 설정합니다.
+진행률 이벤트 처리기의 주소를 지정된 값으로 설정합니다.
 
 ```cpp
 STDMETHOD(
@@ -480,16 +479,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>매개 변수
 
-*progressHandler*<br/>
-진행률 이벤트 처리기에 설정 된 주소입니다.
+*진행률 처리기*<br/>
+진행률 이벤트 처리기가 설정된 주소입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.
+성공하면 S_OK; 그렇지 않으면, E_ILLEGAL_METHOD_CALL.
 
-## <a name="start"></a>AsyncBase::Start
+## <a name="asyncbasestart"></a><a name="start"></a>비동기 베이스::시작
 
-비동기 작업을 시작 합니다.
+비동기 작업을 시작합니다.
 
 ```cpp
 STDMETHOD(
@@ -497,17 +496,17 @@ STDMETHOD(
 )(void);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-S_ok이 고, 작업을 시작 하거나 이미 있는 경우 시작 합니다. 그렇지 않으면 E_ILLEGAL_STATE_CHANGE 합니다.
+작업이 시작되었는지 또는 이미 시작된 지 S_OK. 그렇지 않으면, E_ILLEGAL_STATE_CHANGE.
 
 ### <a name="remarks"></a>설명
 
-`Start()` 비동기 작업 "핫 시작" 호출자에 게 반환 하기 전에 외부에서 볼 수 없는 보호 된 메서드입니다.
+`Start()`는 호출자에게 돌아가기 전에 비동기 작업이 "핫 스타트"이기 때문에 외부에 표시되지 않는 보호된 메서드입니다.
 
-## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>비동기 베이스::시도전환완료
 
-현재 비동기 작업이 완료 되었는지 여부를 나타냅니다.
+현재 비동기 작업이 완료되었는지 여부를 나타냅니다.
 
 ```cpp
 bool TryTransitionToCompleted(
@@ -515,13 +514,13 @@ bool TryTransitionToCompleted(
 );
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 비동기 작업이 완료 되었으면;이 고, 그렇지 **false**합니다.
+비동기 작업이 완료된 경우 **true입니다.** 그렇지 **않으면, 거짓**.
 
-## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>비동기 기반::tryTransitionToError
 
-지정된 된 오류 코드 내부 오류 상태를 수정할 수 있는지 여부를 나타냅니다.
+지정된 오류 코드가 내부 오류 상태를 수정할 수 있는지 여부를 나타냅니다.
 
 ```cpp
 bool TryTransitionToError(
@@ -532,12 +531,12 @@ bool TryTransitionToError(
 ### <a name="parameters"></a>매개 변수
 
 *error*<br/>
-HRESULT 오류가 발생 합니다.
+오류 HRESULT.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 내부 오류 상태가 고, 그렇지 않으면 변경 되었으면 **false**합니다.
+내부 오류 상태가 변경된 경우 **true입니다.** 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
-오류 상태는 s_ok가 이미 설정 되어 있는 경우에이 작업은 오류 상태를 수정 합니다. 이 작업이 오류 상태가 이미 오류, 취소, 완료 또는 종료 하는 경우에 효과가 없습니다.
+이 작업은 오류 상태가 이미 S_OK 설정된 경우에만 오류 상태를 수정합니다. 오류 상태가 이미 오류, 취소, 완료 또는 닫힌 경우 이 작업은 영향을 주지 않습니다.

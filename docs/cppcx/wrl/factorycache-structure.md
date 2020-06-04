@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371501"
 ---
 # <a name="factorycache-structure"></a>FactoryCache 구조체
 
-Windows 런타임을 지 원하는 C++ 템플릿 라이브러리 인프라 하며 코드에서 직접 사용할 수 없습니다.
+Windows 런타임 C++ 템플릿 라이브러리 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,16 +30,16 @@ struct FactoryCache;
 
 ## <a name="remarks"></a>설명
 
-클래스 팩터리와 wrt 등록을 식별 하는 값 또는 COM 클래스 개체의 위치를 포함 합니다.
+클래스 팩터리의 위치와 등록된 wrt 또는 COM 클래스 개체를 식별하는 값을 포함합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-이름                              | 설명
+속성                              | Description
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | 등록된 된 Windows 런타임 또는 COM 클래스 개체를 식별 하 고 개체 등록을 취소 하려면 나중에 사용 되는 값을 포함 합니다.
-[FactoryCache::factory](#factory) | Windows 런타임 또는 COM 클래스 팩터리를 가리킵니다.
+[팩토리 캐시 :: 쿠키](#cookie)   | 등록된 Windows 런타임 또는 COM 클래스 개체를 식별하고 나중에 개체를 등록 취소하는 데 사용되는 값을 포함합니다.
+[팩토리 캐시 :: 공장](#factory) | Windows 런타임 또는 COM 클래스 팩터리를 가리킵니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -47,13 +47,13 @@ struct FactoryCache;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** module.h
+**헤더:** 모듈.h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임스페이스:** 마이크로소프트::WRL::D테일
 
-## <a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a>팩토리 캐시 :: 쿠키
 
-Windows 런타임을 지 원하는 C++ 템플릿 라이브러리 인프라 하며 코드에서 직접 사용할 수 없습니다.
+Windows 런타임 C++ 템플릿 라이브러리 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.
 
 ```cpp
 union {
@@ -64,11 +64,11 @@ union {
 
 ### <a name="remarks"></a>설명
 
-등록된 된 Windows 런타임 또는 COM 클래스 개체를 식별 하 고 개체 등록을 취소 하려면 나중에 사용 되는 값을 포함 합니다.
+등록된 Windows 런타임 또는 COM 클래스 개체를 식별하고 나중에 개체를 등록 취소하는 데 사용되는 값을 포함합니다.
 
-## <a name="factory"></a>FactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a>팩토리 캐시 :: 공장
 
-Windows 런타임을 지 원하는 C++ 템플릿 라이브러리 인프라 하며 코드에서 직접 사용할 수 없습니다.
+Windows 런타임 C++ 템플릿 라이브러리 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.
 
 ```cpp
 IUnknown* factory;

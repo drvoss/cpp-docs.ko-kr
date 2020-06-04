@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b0a6d000309a709c528822870f910521f51100df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68821107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208309"
 ---
 > [!IMPORTANT]
 > Visual Studio 컴파일러 및 빌드 도구는 다양 한 종류의 오류 및 경고를 보고할 수 있습니다. 오류 또는 경고가 발견 되 면 빌드 도구는 코드 의도에 대해 가정을 하 고 계속 해 서 더 많은 문제를 보고할 수 있습니다. 도구의 추측이 잘못된 경우 이후 오류나 경고를 프로젝트에 적용할 수 없습니다. 프로젝트에서 문제를 수정하는 경우 항상 보고된 첫 번째 오류나 경고에서 시작하고 자주 다시 빌드하십시오. 한 가지 해결 방법으로 많은 후속 오류가 발생할 수 있습니다.

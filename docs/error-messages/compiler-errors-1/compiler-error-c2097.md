@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: 8b50221997dcf2fb60ee2b82ed630dd325a38145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207499"
 ---
 # <a name="compiler-error-c2097"></a>컴파일러 오류 C2097
 
-초기화가 잘못 되었습니다
+잘못 된 초기화
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면
 
-1. 상수가 아닌 값으로 사용 하 여 변수를 초기화 합니다.
+1. 비상수 값을 사용 하 여 변수를 초기화 합니다.
 
 1. 긴 주소를 사용 하 여 짧은 주소를 초기화 합니다.
 
-1. 로컬 구조체, 공용 구조체 또는 비상수 식 컴파일할 때 사용 하 여 배열 초기화 **/Za**합니다.
+1. **/Za**를 사용 하 여 컴파일할 때 비상수 식으로 로컬 구조체, 공용 구조체 또는 배열을 초기화 합니다.
 
-1. 쉼표 연산자를 포함 하는 식으로 초기화 합니다.
+1. 쉼표 연산자를 포함 하는 식을 사용 하 여 초기화 합니다.
 
-1. 이 아니고 기호화 된 상수는 식으로 초기화 합니다.
+1. 상수와 기호화 된 식이 아닌 식으로 초기화 합니다.

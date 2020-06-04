@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 415ad5e33de3132e055e53178e6e65d411f169f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514127"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214606"
 ---
 # <a name="readonly-c"></a>readonly(C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514127"
 [readonly]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **readonly** C++ 특성에는 [readonly](/windows/win32/Midl/readonly) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -60,7 +60,7 @@ __interface IFireTabCtrl
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [데이터 멤버 특성](data-member-attributes.md)

@@ -1,11 +1,15 @@
 ---
 title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbckata
 - _ismbchira_l
 - _ismbchira
 - _ismbckata_l
+- _o__ismbchira
+- _o__ismbchira_l
+- _o__ismbckata
+- _o__ismbckata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: 13f66c7450e05240f8bad6034bd56f5da6de20c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953879"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910702"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -84,9 +89,9 @@ int _ismbckata_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *C* < = 255이 고 해당 **_ismbb** 루틴이 있는 경우 (예: **_ismbcalnum** 가 **_ismbbalnum**에 해당 하는 경우) 결과는 해당 **_ismbb** 루틴의 반환 값입니다.
+이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *C* <= 255이 고 해당 **_ismbb** 루틴이 있는 경우 (예: **_ismbcalnum** **_ismbbalnum**에 해당 하는 경우) 결과는 해당 **_ismbb** 루틴의 반환 값입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -96,12 +101,14 @@ int _ismbckata_l(
 
 |루틴에서 반환된 값|테스트 조건(코드 페이지 932만 해당)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|더블바이트 히라가나: 0x829F<=*c*<=0x82F1.|
-|**_ismbchira_l**|더블바이트 히라가나: 0x829F<=*c*<=0x82F1.|
-|**_ismbckata**|더블바이트 가타카나: 0x8340<=*c*<=0x8396.|
-|**_ismbckata_l**|더블바이트 가타카나: 0x8340<=*c*<=0x8396.|
+|**_ismbchira**|더블 바이트 히라가나: 0x829F<=*c*<= 0x82F1.|
+|**_ismbchira_l**|더블 바이트 히라가나: 0x829F<=*c*<= 0x82F1.|
+|**_ismbckata**|더블 바이트 가타카나: 0x8340<=*c*<= 0x8340.|
+|**_ismbckata_l**|더블 바이트 가타카나: 0x8340<=*c*<= 0x8340.|
 
-**최종 코드 페이지 932 관련**
+**최종 코드 페이지 932 특정**
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -112,12 +119,12 @@ int _ismbckata_l(
 |**_ismbckata**|\<mbstring.h>|
 |**_ismbckata_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

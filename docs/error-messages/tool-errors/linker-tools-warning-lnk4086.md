@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4086
 ms.assetid: ea1eecbb-ba2c-41bb-9a4f-fa0808a4b92d
-ms.openlocfilehash: c6a5a0714e070e6cf3aee8efcdfbdfa07fa9ee69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e012ceb5e20855353c69bbcde85fb78afad2011
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399937"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183425"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>링커 도구 경고 LNK4086
 
-entrypoint 'function' 'number' 바이트 인수가 있는 __stdcall이 아닙니다. 이미지를 실행할 수 없습니다.
+' function ' entrypoint는 ' number ' 바이트의 인수를 사용 하 여 __stdcall 하지 않습니다. 이미지가 실행 되지 않을 수 있습니다.
 
-Dll 진입점 이어야 `__stdcall`합니다. 사용 하 여 함수를 다시 컴파일 중 하나는 [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) 옵션 또는 지정 `__stdcall` 또는 WINAPI 함수를 정의 하는 경우.
+DLL에 대 한 진입점은 `__stdcall`이어야 합니다. [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) 옵션을 사용 하 여 함수를 다시 컴파일하거나 함수를 정의할 때 `__stdcall` 또는 WINAPI를 지정 합니다.

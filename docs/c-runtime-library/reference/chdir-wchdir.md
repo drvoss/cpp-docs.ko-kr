@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939368"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917047"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -62,7 +65,7 @@ int _wchdir(
 *dirname*<br/>
 새 작업 디렉터리의 경로입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 함수는 성공할 경우 0 값을 반환합니다. 반환 값-1은 실패를 나타냅니다. 지정 된 경로를 찾을 수 없는 경우 **errno** 가 **enoent (** 로 설정 됩니다. *이름 이름이* **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **errno** 은 **EINVAL** 로 설정 되 고 함수는-1을 반환 합니다.
 
@@ -74,9 +77,11 @@ int _wchdir(
 _chdir("c:\temp");
 ```
 
-경로에 선택적 백슬래시 문자 ( **&#92;** )를 사용 하는 경우 단일 백슬래시 ( **&#92;** **&#92;** )를 나타내려면 C 문자열 리터럴에 백슬래시 두 개 ()를 넣어야 합니다.
+경로에 선택적 백슬래시 문자 (**&#92;**)를 사용 하는 경우 단일 백슬래시 (**&#92;**)를 나타내려면 C 문자열 리터럴에 백슬래시 두 개 (**&#92;&#92;**)를 넣어야 합니다.
 
-**_wchdir** 은 **_chdir**의 와이드 문자 버전입니다. **_wchdir** 에 대 한 *diname* 인수는 와이드 문자열입니다. **_wchdir** 및 **_chdir** 은 동일 하 게 작동 하지 않습니다.
+**_wchdir** 은 **_chdir**의 와이드 문자 버전입니다. **_wchdir** 에 대 한 대상 *이름* 인수는 와이드 문자열입니다. **_wchdir** 와 **_chdir** 는 동일 하 게 동작 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ### <a name="generic-text-routine-mapping"></a>제네릭 텍스트 루틴 매핑:
 
@@ -91,7 +96,7 @@ _chdir("c:\temp");
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> 또는 \<wchar.h>|\<errno.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

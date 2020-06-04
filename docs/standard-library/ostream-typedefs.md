@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 82539a3fdadf10d340ca957756e235e8ae00b267
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373576"
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; 형식 정의
 
@@ -18,30 +18,30 @@ ms.locfileid: "72687224"
 |-|-|
 |[ostream](#ostream)|[wostream](#wostream)|
 
-## <a name="ostream"></a>  ostream
+## <a name="ostream"></a><a name="ostream"></a>오스트림 (오스트림)
 
-Char **에 특수화** 된 basic_ostream에서 **char**에 특수화 된 `char_traits` 형식을 만듭니다.
+**char에** 특화된 basic_ostream char에 `char_traits` 특화된 **char**형식을 만듭니다.
 
 ```cpp
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 기본 문자 특성을 포함 하는 **char** 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md)의 동의어입니다.
+형식은 기본 문자 특성이 **있는** 문자 문자 형식의 요소에 특화된 클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md)동의어입니다.
 
-## <a name="wostream"></a>  wostream
+## <a name="wostream"></a><a name="wostream"></a>워스트림
 
-**Wchar_t 및** **wchar_t**에서 특수화 된 `char_traits`에서 특수화 된 basic_ostream에서 형식을 만듭니다.
+**wchar_t** 전문으로 하고 `char_traits` **wchar_t**전문으로 하는 basic_ostream 형식을 만듭니다.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 기본 문자 특성을 포함 하는 **wchar_t** 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md)의 동의어입니다.
+형식은 기본 문자 특성이 있는 **wchar_t** 형식의 요소에 특화된 클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md)동의어입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<ostream>](../standard-library/ostream.md)
+[\<오스트림>](../standard-library/ostream.md)

@@ -3,12 +3,12 @@ title: enum class(C++/CLI 및 C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516598"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182138"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class(C++/CLI 및 C++/CX)
 
@@ -16,7 +16,7 @@ ms.locfileid: "65516598"
 
 ## <a name="all-runtimes"></a>모든 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 C++/CX 및 C++/CLI에서는 표준 C++ **enum class**와 유사하지만 접근성 지정자가 추가된 **public enum class** 및 **private enum class**를 지원합니다. **/clr**에서는 C++11 **enum class** 형식이 허용되지만, C++/CX 및 C++/CLI 형식이 아닌 ISO 열거형 형식을 사용할 것인지 확인하는 경고 C4472가 생성됩니다. ISO 표준 C++ **enum** 키워드에 대한 자세한 내용은 [열거형](../cpp/enumerations-cpp.md)을 참조하세요.
 
@@ -53,11 +53,11 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *var*<br/>
 (선택 사항) 열거형 형식의 변수 이름입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용과 예제는 [열거형](../cppcx/enums-c-cx.md)을 참조하세요.
 
-컴파일러는 열거자의 값을 정의하는 상수 식을 *underlying-type*으로 표현할 수 없는 경우 오류 메시지를 내보냅니다.  그러나 컴파일러는 내부 형식에 적합하지 않은 값에 대해 오류를 보고하지 않습니다. 예:
+컴파일러는 열거자의 값을 정의하는 상수 식을 *underlying-type*으로 표현할 수 없는 경우 오류 메시지를 내보냅니다.  그러나 컴파일러는 내부 형식에 적합하지 않은 값에 대해 오류를 보고하지 않습니다. 다음은 그 예입니다.
 
 - *underlying-type* 이 숫자이고, 열거자가 해당 형식의 최대값을 지정하는 경우, 그 다음에 암시적으로 정의되는 열거형 값은 표현할 수 없습니다.
 
@@ -97,7 +97,7 @@ accessenum structname [:type] { enumerator-list } var;
 *var*<br/>
 (선택 사항) 열거형 형식의 변수 이름입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **enum 클래스** 및 **enum 구조체** 는 동일한 선언입니다.
 
@@ -178,7 +178,7 @@ CLR 열거형에 대한 자세한 내용은 다음을 참조하세요.
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```cpp
 // mcppv2_enum_2.cpp

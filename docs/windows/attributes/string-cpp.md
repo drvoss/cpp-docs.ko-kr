@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166164"
 ---
 # <a name="string-c"></a>string(C++)
 
-1 차원 **char**, `byte` **wchar_t**또는 해당 배열에 대 한 포인터를 문자열로 처리 해야 함을 나타냅니다.
+1 차원 **char**, **wchar_t**, `byte` 또는 해당 배열에 대 한 포인터가 문자열로 처리 되어야 함을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,13 +51,13 @@ __interface IFireTabCtrl
 |||
 |-|-|
 |**적용 대상**|배열 또는 배열에 대 한 포인터, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|아니요|
-|**필수 특성**|없음|
-|**잘못된 특성**|없음|
+|**반복 가능**|예|
+|**필수 특성**|None|
+|**잘못된 특성**|None|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [배열 특성](array-attributes.md)<br/>

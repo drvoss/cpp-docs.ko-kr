@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214190"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 클래스
 
@@ -42,7 +41,7 @@ InvokeMode 필드가 `InvokeMode::StopOnFirstError` 또는 `InvokeMode::FireAll`
 
 Windows 런타임의 대부분 구성 요소는 agile 구성 요소입니다. 자세한 내용은 [스레딩 및 마샬링 (C++/cx)](../../cppcx/threading-and-marshaling-c-cx.md)을 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층 구조
+## <a name="inheritance-hierarchy"></a>상속 계층
 
 `EventSource`
 
@@ -54,15 +53,15 @@ Windows 런타임의 대부분 구성 요소는 agile 구성 요소입니다. �
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="members"></a>Members
+## <a name="members"></a>멤버
 
-### <a name="public-methods"></a>Public 메서드
+### <a name="public-methods"></a>공용 방법
 
 |이름|설명|
 |----------|-----------------|
 |[AgileEventSource:: Add 메서드](#add)|지정 된 대리자 인터페이스가 나타내는 agile 이벤트 처리기를 현재 **AgileEventSource** 개체에 대 한 이벤트 처리기 집합에 추가 합니다.|
 
-## <a name="add"></a>AgileEventSource:: Add 메서드
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource:: Add 메서드
 
 지정 된 대리자 인터페이스에서 나타내는 이벤트 처리기를 현재 [EventSource](eventsource-class.md) 개체에 대 한 이벤트 처리기 집합에 추가 합니다.
 
@@ -80,13 +79,13 @@ HRESULT Add(
 *delegateInterface*<br/>
 이벤트 처리기를 나타내는 대리자 개체에 대 한 인터페이스입니다.
 
-*token*<br/>
+*토큰*<br/>
 이 작업이 완료 되 면 이벤트를 나타내는 핸들입니다. 이 토큰을 `Remove()` 메서드에 대 한 매개 변수로 사용 하 여 이벤트 처리기를 삭제 합니다.
 
 ### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

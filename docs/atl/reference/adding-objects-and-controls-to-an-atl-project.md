@@ -11,16 +11,16 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706854"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075303"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL 프로젝트에 개체 및 컨트롤 추가
 
-> [!NOTE] 
+> [!NOTE]
 > ATL COM+ 1.0 구성 요소 마법사, ATL OLE DB 소비자 마법사 및 ATL Active Server Page 구성 요소 마법사는 Visual Studio 2019 이상에서 사용할 수 없습니다.
 
 ATL 코드 마법사 중 하나를 사용하여 ATL 또는 MFC 기반 프로젝트에 개체나 컨트롤을 추가할 수 있습니다. 추가한 각 COM 개체 또는 컨트롤에 대해 마법사는 cpp 및 .h 파일과 스크립트 기반 레지스트리 지원을 위한.rgs 파일을 생성합니다. 다음 ATL 코드 마법사는 Visual Studio에서 사용할 수 있습니다.

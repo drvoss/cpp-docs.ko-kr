@@ -1,8 +1,6 @@
 ---
 title: 파일 변환 상수
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - translation constants
 - file translation [C++], constants
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375923"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443268"
 ---
 # <a name="file-translation-constants"></a>파일 변환 상수
 
@@ -43,7 +41,7 @@ ms.locfileid: "68375923"
 
    이진(변환되지 않음) 모드에서 엽니다. 위 변환은 표시되지 않습니다.
 
-*mode*에 **t** 또는 **b**가 지정되지 않은 경우 변환 모드는 기본 모드 변수 [_fmode](../c-runtime-library/fmode.md)로 정의됩니다. 텍스트 모드와 이진 모드 사용에 대한 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)를 참조하세요.
+**mode**에 **t** 또는 *b*가 지정되지 않은 경우 변환 모드는 기본 모드 변수 [_fmode](../c-runtime-library/fmode.md)로 정의됩니다. 텍스트 모드와 이진 모드 사용에 대한 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -3,11 +3,7 @@ title: vector&lt;bool&gt; 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
-- vector/std::vector::const_pointer
-- vector/std::vector::const_reference
-- vector/std::vector::pointer
 - vector/std::vector::flip
-- vector/std::vector::swap
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -15,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6c67e3d9ba1b33cb99a7d3afb2522f443003fa38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376088"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 
-클래스 `vector<bool>` 는 **bool**형식의 요소에 대 한 [vector](../standard-library/vector-class.md) 의 부분 특수화입니다. 이 클래스는 특수화에서 사용 되는 기본 형식에 대 한 할당자를 포함 하 고 있으며,이는 비트 당 하나의 **bool** 값을 저장 하 여 공간 최적화를 제공 합니다.
+클래스는 `vector<bool>` **bool**형식의 요소에 대한 [벡터의](../standard-library/vector-class.md) 부분 전문화입니다. 특수화에서 사용되는 기본 형식에 대한 할당자가 있으며 비트당 하나의 **bool** 값을 저장하여 공간 최적화를 제공합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,22 +33,22 @@ class vector<bool, Allocator>
 
 이 클래스 템플릿 특수화는 이 문서에서 설명하는 차이를 제외하고 벡터처럼 동작합니다.
 
-**Bool** 형식을 처리 하는 작업은 컨테이너 저장소의 값에 해당 합니다. `allocator_traits::construct`는 이러한 값을 만드는 데 사용되지 않습니다.
+**bool** 형식을 처리하는 작업은 컨테이너 저장소의 값에 해당합니다. `allocator_traits::construct`는 이러한 값을 만드는 데 사용되지 않습니다.
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|형식 이름|Description|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator`의 부울 요소에 대한 상수 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|
-|[const_reference](#const_reference)|**Bool**의 typedef입니다. 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|
-|[pointer](#pointer)|`iterator`의 부울 요소에 대한 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|
+|[const_reference](#const_reference)|**bool에**대한 형식 def . 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|
+|[포인터(pointer)](#pointer)|`iterator`의 부울 요소에 대한 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[flip](#flip)|`vector<bool>`의 모든 비트를 반대로 바꿉니다.|
-|[swap](#swap)|두 `vector<bool>`의 요소를 교환합니다.|
+|[스왑](#swap)|두 `vector<bool>`의 요소를 교환합니다.|
 |[operator&#91;&#93;](#op_at)|지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.|
 |`at`|프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::at 함수와 동일하게 작동합니다. [operator&#91;&#93;](#op_at)도 참조하세요.|
 |`front`|프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용한다는 점을 제외하면 특수화되지 않은 [vector](../standard-library/vector-class.md)::front 함수와 동일하게 작동합니다. [operator&#91;&#93;](#op_at)도 참조하세요.|
@@ -66,11 +62,11 @@ class vector<bool, Allocator>
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**: \<vector>
+**헤더** \<: 벡터>
 
 **네임스페이스:** std
 
-## <a name="const_pointer"></a>  vector\<bool>::const_pointer
+## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>벡터\<bool>::const_pointer
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -78,7 +74,7 @@ class vector<bool, Allocator>
 typedef const_iterator const_pointer;
 ```
 
-## <a name="const_reference"></a>  vector\<bool>::const_reference
+## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>벡터\<불>:const_reference
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 참조로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -90,7 +86,7 @@ typedef bool const_reference;
 
 자세한 내용과 코드 예제는 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)를 참조하세요.
 
-## <a name="flip"></a>  vector\<bool>::flip
+## <a name="vectorboolflip"></a><a name="flip"></a>벡터\<bool>::뒤집기
 
 `vector<bool>`의 모든 비트를 반대로 바꿉니다.
 
@@ -128,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="op_at"></a>  vector\<bool>::operator[]
+## <a name="vectorbooloperator"></a><a name="op_at"></a>벡터\<bool>::연산자[]
 
 지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.
 
@@ -144,7 +140,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |-|-|
 |*Pos*|`vector<bool>` 요소의 위치입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인덱싱된 요소의 값이 포함된 [vector\<bool>::reference](#reference_class) 또는 [vector\<bool>::const_reference](#const_reference) 개체입니다.
 
@@ -152,11 +148,11 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>설명
 
-_ITERATOR_DEBUG_LEVEL set를 사용 하 여 컴파일하는 경우 벡터 범위 밖의 요소에 액세스 하려고 하면 런타임 오류가 발생 합니다.  자세한 내용은 [Checked Iterators](../standard-library/checked-iterators.md)을 참조하세요.
+_ITERATOR_DEBUG_LEVEL 집합으로 컴파일하는 경우 벡터의 경계 외부의 요소에 액세스하려고 하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
 ### <a name="example"></a>예제
 
-이 코드 예제는 `vector<bool>::operator[]`의 올바른 사용 방법과 두 가지 흔한 코딩 실수(주석 처리)를 보여 줍니다. 이러한 실수는 `vector<bool>::reference`에서 반환하는 `vector<bool>::operator[]` 개체의 주소를 가져올 수 없으므로 오류가 발생합니다.
+이 코드 예제에서는 주석이 있는 두 가지 일반적인 코딩 실수의 `vector<bool>::operator[]` 올바른 사용과 두 가지 일반적인 코딩 실수를 보여 주십니다. 이러한 실수는 반환하는 `vector<bool>::reference` `vector<bool>::operator[]` 개체의 주소를 사용할 수 없기 때문에 오류를 일으킵니다.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -185,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="pointer"></a>  vector\<bool>::pointer
+## <a name="vectorboolpointer"></a><a name="pointer"></a>벡터\<불>::p
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -193,7 +189,7 @@ int main()
 typedef iterator pointer;
 ```
 
-## <a name="reference_class"></a>  vector\<bool>::reference 클래스
+## <a name="vectorboolreference-class"></a><a name="reference_class"></a>벡터\<bool>::참조 클래스
 
 `vector<bool>::reference` 클래스는 [vector\<bool> 클래스](../standard-library/vector-bool-class.md)에서 `bool&`을 시뮬레이션하도록 제공되는 프록시 클래스입니다.
 
@@ -208,7 +204,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-###  <a name="reference_flip"></a>  vector\<bool>::reference::flip
+### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>벡터\<bool>::참조::뒤집기
 
 참조된 [vector\<bool>](../standard-library/vector-bool-class.md) 요소의 부울 값을 반전합니다.
 
@@ -255,15 +251,15 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
+### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>벡터\<bool>::참조::연산자 bool
 
-에서 `vector<bool>::reference` **bool**로의 암시적 변환을 제공 합니다.
+`vector<bool>::reference` **bool로**암시적 변환을 제공합니다.
 
 ```cpp
 operator bool() const;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 vector\<bool> 개체의 요소 부울 값
 
@@ -271,7 +267,7 @@ vector\<bool> 개체의 요소 부울 값
 
 `vector<bool>` 개체는 이 연산자로 수정할 수 없습니다.
 
-###  <a name="reference_operator_eq"></a>  vector\<bool>::reference::operator=
+### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>벡터\<bool>::참조::연산자=
 
 비트에 부울 값을 할당하거나 참조된 요소에 저장된 값을 비트에 할당합니다.
 
@@ -285,7 +281,7 @@ reference& operator=(bool Val);
 *오른쪽*\
 해당 값을 비트에 할당할 요소 참조입니다.
 
-*짧은*\
+*발*\
 비트에 할당될 부울 값입니다.
 
 #### <a name="example"></a>예제
@@ -359,7 +355,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="swap"></a>  vector\<bool>::swap
+## <a name="vectorboolswap"></a><a name="swap"></a>벡터\<bool>::swap
 
 프록시 클래스 [vector\<bool>::reference](#reference_class)를 사용하여 부울 벡터(`vector<bool>`)의 두 요소를 교환하는 정적 구성원 함수입니다.
 
@@ -371,7 +367,7 @@ static void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 *오른쪽* 요소와 교환할 요소입니다.
 
 *오른쪽*\
@@ -381,7 +377,7 @@ static void swap(
 
 이 오버로드는 `vector<bool>`의 특정 프록시 요구 사항을 지원합니다. [vector](../standard-library/vector-class.md)::swap에는 `vector<bool>::swap()`의 단일 인수 오버로드와 동일한 기능이 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

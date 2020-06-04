@@ -1,8 +1,6 @@
 ---
 title: 파일 읽기-쓰기 액세스 상수
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - read/write access constants
 - write access constants
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 96d146b2e2f0ed82cbdc52b11d92c049da50e2cb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746073"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438400"
 ---
 # <a name="file-readwrite-access-constants"></a>파일 읽기/쓰기 액세스 상수
 
@@ -25,13 +23,13 @@ ms.locfileid: "57746073"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이러한 상수는 파일에 대해 요청된 액세스 형식("a", "r" 또는 "w")을 지정합니다. [변환 모드](../c-runtime-library/file-translation-constants.md)("b" 또는 "t") 및 [디스크에 커밋 모드](../c-runtime-library/commit-to-disk-constants.md)("c" 또는 "n") 둘 다 액세스 형식으로 지정할 수 있습니다.
 
 액세스 형식은 다음 표에 설명되어 있습니다.
 
-|액세스 형식|설명|
+|액세스 유형|Description|
 |----------|----------------|
 |**"r"**|읽기 위해 엽니다. 파일이 없거나 찾을 수 없는 경우 파일 열기 호출이 실패합니다.|
 |**"w"**|쓰기 위해 빈 파일을 엽니다. 지정한 파일이 있으면 이 파일의 내용은 삭제됩니다.|

@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e367ccc875eedf63e4f47018598662af2dfcf7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331401"
 ---
 # <a name="crbmap-class"></a>CRBMap 클래스
 
-이 클래스에는 빨강-검정 이진 트리를 사용 하 여 매핑 구조를 나타냅니다.
+이 클래스는 빨간색-검은색 이진 트리를 사용하여 매핑 구조를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,47 +35,47 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>매개 변수
 
 *K*<br/>
-Key 요소 형식입니다.
+키 요소 유형입니다.
 
-*V*<br/>
+*Ⅴ*<br/>
 값 요소 형식입니다.
 
-*KTraits*<br/>
-복사 하거나 주요 요소를 이동 하는 데 사용 되는 코드입니다. 참조 [CElementTraits 클래스](../../atl/reference/celementtraits-class.md) 대 한 자세한 내용은 합니다.
+*크트레이스*<br/>
+키 요소를 복사하거나 이동하는 데 사용되는 코드입니다. 자세한 내용은 [CElementTraits 클래스를](../../atl/reference/celementtraits-class.md) 참조하십시오.
 
-*VTraits*<br/>
-값 요소 이동 하거나 복사 하는 데 사용 되는 코드입니다.
+*브이트레이스*<br/>
+값 요소를 복사하거나 이동하는 데 사용되는 코드입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRBMap::CRBMap](#crbmap)|생성자입니다.|
 |[CRBMap::~CRBMap](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CRBMap::Lookup](#lookup)|키 또는 값을 조회 하려면이 메서드는 `CRBMap` 개체입니다.|
-|[CRBMap::RemoveKey](#removekey)|요소를 제거 하려면이 메서드를 호출 합니다 `CRBMap` 키를 지정 된 개체입니다.|
-|[CRBMap::SetAt](#setat)|Map에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.|
+|[CRBMap::조회](#lookup)|이 메서드를 호출하여 개체의 `CRBMap` 키 또는 값을 찾습니다.|
+|[CRBMap::제거키](#removekey)|키가 주어지면 이 메서드를 `CRBMap` 호출하여 개체에서 요소를 제거합니다.|
+|[CRBMap::SetAt](#setat)|이 메서드를 호출하여 요소 쌍을 맵에 삽입합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CRBMap` 지정된 된 형식의 관리 되는 주요 요소 및 연결 된 값의 순서 있는 배열 매핑 배열에 지원을 제공 합니다. 각 키에 연결 된 값을 하나만 가질 수 있습니다. 이진 트리 (키 및 값 구성) 요소가 저장 되 구조체를 사용 하 여 [CRBMap::SetAt](#setat) 메서드. 사용 하 여 요소를 제거할 수 있습니다 합니다 [CRBMap::RemoveKey](#removekey) 메서드를 지정 된 키 값을 가진 요소를 삭제 합니다.
+`CRBMap`는 지정된 형식의 매핑 배열에 대한 지원을 제공하여 키 요소및 관련 값의 정렬된 배열을 관리합니다. 각 키에는 하나의 연결된 값만 있을 수 있습니다. 요소(키와 값으로 구성됨)는 [CRBMap:SetAt](#setat) 메서드를 사용하여 이진 트리 구조에 저장됩니다. [CRBMap::RemoveKey](#removekey) 메서드를 사용하여 요소를 제거할 수 있으며, 이 메서드는 지정된 키 값으로 요소를 삭제합니다.
 
-트리를 이동 가능 메서드를 사용 하 여 같은 [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)하십시오 [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), 및 [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)합니다.
+[CRBTree:GetHeadPosition,](../../atl/reference/crbtree-class.md#getheadposition) [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)및 [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnextvalue)값과 같은 메서드를 사용 하 고 트리를 트래버스 가능 하 게 됩니다.
 
-합니다 *KTraits* 하 고 *VTraits* 매개 변수는 복사 하거나 요소를 이동 하는 데 필요한 추가 코드를 포함 traits 클래스입니다.
+*KTraits* 및 *VTraits* 매개 변수는 요소를 복사하거나 이동하는 데 필요한 추가 코드를 포함하는 특성 클래스입니다.
 
-`CRBMap` 파생 됩니다 [CRBTree](../../atl/reference/crbtree-class.md), 빨강-검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 합니다. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) 각 키에 대 한 여러 값을 허용 하는 변형입니다. 너무에서 파생 됩니다 `CRBTree`를 사용 하 여 다양 한 기능을 공유 하므로 및 `CRBMap`합니다.
+`CRBMap`빨간색-검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 [CRBTree에서](../../atl/reference/crbtree-class.md)파생 됩니다. [CRBMultiMap은](../../atl/reference/crbmultimap-class.md) 각 키에 대해 여러 값을 허용하는 변형입니다. 그것은 너무에서 `CRBTree`파생 된 그래서 많은 `CRBMap`기능을 공유 합니다.
 
-대안을 둘 다 `CRBMap` 하 고 `CRBMultiMap` 에서 제공 하는 합니다 [CAtlMap](../../atl/reference/catlmap-class.md) 클래스입니다. 소수의 요소를 저장 해야 하는 경우 사용을 고려 합니다 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 대신 합니다.
+둘 다에 `CRBMap` `CRBMultiMap` 대한 대안이며 [CAtlMap](../../atl/reference/catlmap-class.md) 클래스에서 제공됩니다. 소수의 요소만 저장해야 하는 경우 대신 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 사용하는 것이 좋습니다.
 
-자세한 내용은 다양 한 컬렉션 클래스 및 해당 기능 및 성능 특성에 대 한 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.
+다양한 컬렉션 클래스와 그 기능 및 성능 특성에 대한 자세한 내용은 [ATL 컬렉션 클래스를](../../atl/atl-collection-classes.md)참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -85,9 +85,9 @@ Key 요소 형식입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlcoll.h
+**헤더:** 아틀콜.h
 
-##  <a name="crbmap"></a>  CRBMap::CRBMap
+## <a name="crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap
 
 생성자입니다.
 
@@ -98,19 +98,19 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="parameters"></a>매개 변수
 
 *nBlockSize*<br/>
-블록 크기입니다.
+블록의 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-합니다 *nBlockSize* 매개 변수는 새 요소가 필요한 경우 할당 된 메모리 양 측정 한 것입니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 합니다. 기본값을 한 번에 10 요소에 대 한 공간을 할당 됩니다.
+*nBlockSize* 매개 변수는 새 요소가 필요할 때 할당된 메모리 양을 측정한 값입니다. 블록 크기가 클수록 메모리 할당 루틴에 대한 호출이 줄어들지만 더 많은 리소스를 사용합니다. 기본값은 한 번에 10개의 요소에 대한 공간을 할당합니다.
 
-기본 클래스에 대 한 설명서를 참조 하세요 [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 정보에 대 한 합니다.
+사용 가능한 다른 방법에 대한 자세한 내용은 기본 클래스 [CRBTree에](../../atl/reference/crbtree-class.md) 대한 설명서를 참조하십시오.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMap::~CRBMap
+## <a name="crbmapcrbmap"></a><a name="dtor"></a>CRBMap::~CRBMap
 
 소멸자입니다.
 
@@ -120,13 +120,13 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>설명
 
-할당 된 리소스를 해제 합니다.
+할당된 리소스를 해제합니다.
 
-기본 클래스에 대 한 설명서를 참조 하세요 [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 정보에 대 한 합니다.
+사용 가능한 다른 방법에 대한 자세한 내용은 기본 클래스 [CRBTree에](../../atl/reference/crbtree-class.md) 대한 설명서를 참조하십시오.
 
-##  <a name="lookup"></a>  CRBMap::Lookup
+## <a name="crbmaplookup"></a><a name="lookup"></a>CRBMap::조회
 
-키 또는 값을 조회 하려면이 메서드는 `CRBMap` 개체입니다.
+이 메서드를 호출하여 개체의 `CRBMap` 키 또는 값을 찾습니다.
 
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const throw(...);
@@ -136,27 +136,27 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-조회 요소를 식별 하는 키를 지정 합니다.
+*키*<br/>
+조회할 요소를 식별하는 키를 지정합니다.
 
-*값*<br/>
-조회 값을 수신 하는 변수입니다.
+*value*<br/>
+조회된 값을 받는 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드의 첫 번째 형태는 키 발견 되 면 true, 그렇지 않으면 false를 반환 합니다. 두 번째 및 세 번째 폼에 대 한 포인터를 반환 된 [CPair](crbtree-class.md#cpair_class)합니다.
+메서드의 첫 번째 형식은 키가 발견되면 true를 반환합니다(그렇지 않으면 false). 두 번째 및 세 번째 양식은 [CPair에](crbtree-class.md#cpair_class)대한 포인터를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-기본 클래스에 대 한 설명서를 참조 하세요 [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 정보에 대 한 합니다.
+사용 가능한 다른 방법에 대한 자세한 내용은 기본 클래스 [CRBTree에](../../atl/reference/crbtree-class.md) 대한 설명서를 참조하십시오.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]
 
-##  <a name="removekey"></a>  CRBMap::RemoveKey
+## <a name="crbmapremovekey"></a><a name="removekey"></a>CRBMap::제거키
 
-요소를 제거 하려면이 메서드를 호출 합니다 `CRBMap` 키를 지정 된 개체입니다.
+키가 주어지면 이 메서드를 `CRBMap` 호출하여 개체에서 요소를 제거합니다.
 
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -164,24 +164,24 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-제거 하려는 키에 해당 하는 요소 쌍입니다.
+*키*<br/>
+제거할 요소 쌍에 해당하는 키입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-키 검색 및 제거, 실패 시 false 이면 true를 반환 합니다.
+키가 발견되고 제거된 경우 true를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-기본 클래스에 대 한 설명서를 참조 하세요 [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 정보에 대 한 합니다.
+사용 가능한 다른 방법에 대한 자세한 내용은 기본 클래스 [CRBTree에](../../atl/reference/crbtree-class.md) 대한 설명서를 참조하십시오.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]
 
-##  <a name="setat"></a>  CRBMap::SetAt
+## <a name="crbmapsetat"></a><a name="setat"></a>CRBMap::SetAt
 
-Map에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 요소 쌍을 맵에 삽입합니다.
 
 ```
 POSITION SetAt(
@@ -191,27 +191,27 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>매개 변수
 
-*key*<br/>
-추가할 키 값을 `CRBMap` 개체입니다.
+*키*<br/>
+개체에 추가할 키 `CRBMap` 값입니다.
 
-*값*<br/>
-에 추가할 값을 `CRBMap` 개체입니다.
+*value*<br/>
+개체에 추가할 값입니다. `CRBMap`
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-에 있는 키/값 요소 쌍의 위치를 반환 합니다 `CRBMap` 개체입니다.
+개체에서 키/값 요소 쌍의 위치를 `CRBMap` 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`SetAt` 일치 하는 키가 있을 경우 기존 요소를 바꿉니다. 키가 없는 경우 새 키/값 쌍이 생성 됩니다.
+`SetAt`일치하는 키가 발견되면 기존 요소를 대체합니다. 키가 없는 경우 새 키/값 쌍이 만들어집니다.
 
-기본 클래스에 대 한 설명서를 참조 하세요 [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 정보에 대 한 합니다.
+사용 가능한 다른 방법에 대한 자세한 내용은 기본 클래스 [CRBTree에](../../atl/reference/crbtree-class.md) 대한 설명서를 참조하십시오.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CRBTree 클래스](../../atl/reference/crbtree-class.md)<br/>
 [CAtlMap 클래스](../../atl/reference/catlmap-class.md)<br/>

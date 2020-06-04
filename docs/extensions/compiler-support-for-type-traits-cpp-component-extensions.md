@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516218"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172532"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>형식 특성에 대한 컴파일러 지원(C++/CLI 및 C++/CX)
 
@@ -74,7 +74,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
 ## <a name="all-runtimes"></a>모든 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식 특성은 라이브러리를 작성하는 프로그래머에게 특히 유용합니다.
 
@@ -82,7 +82,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
 다음 목록에 있는 코드 예제는 C++/CLI로만 작성되었습니다. 그러나 해당 형식 특성은 달리 명시되지 않은 경우 C++/CX에서도 지원됩니다. “플랫폼 형식”이란 용어는 Windows 런타임 형식 또는 공용 언어 런타임 형식 중 하나를 가리킵니다.
 
-- `__has_assign(` *type* `)`
+- `__has_assign(` *형식* `)`
 
    플랫폼 또는 네이티브 형식에 복사 대입 연산자가 있으면 **true**를 반환합니다.
 
@@ -96,7 +96,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_copy(` *type* `)`
+- `__has_copy(` *형식* `)`
 
    플랫폼 또는 네이티브 형식에 복사 생성자가 있으면 **true**를 반환합니다.
 
@@ -110,9 +110,9 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_finalizer(` *type* `)`
+- `__has_finalizer(` *형식* `)`
 
-   C++/CX에서는 지원되지 않습니다. CLR 형식에 종료자가 있으면 **true**를 반환합니다. 자세한 내용은 [방법: 클래스 및 구조체 정의 및 사용의 소멸자 및 종료자(C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)를 참조하세요.
+   (/Cx에서 C++지원 되지 않음) CLR 형식에 종료 자가 있는 경우 **true** 를 반환 합니다. 자세한 내용은 [방법: 클래스 및 구조체 정의 및 사용 (C++/Cli)의 소멸자 및 종료자](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 를 참조 하세요.
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_nothrow_assign(` *type* `)`
+- `__has_nothrow_assign(` *형식* `)`
 
    복사 대입 연산자에 빈 예외 사양이 있으면 **true**를 반환합니다.
 
@@ -143,7 +143,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_nothrow_constructor(` *type* `)`
+- `__has_nothrow_constructor(` *형식* `)`
 
    기본 생성자에 빈 예외 사양이 있으면 **true**를 반환합니다.
 
@@ -159,7 +159,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_nothrow_copy(` *type* `)`
+- `__has_nothrow_copy(` *형식* `)`
 
    복사 생성자에 빈 예외 사양이 있으면 **true**를 반환합니다.
 
@@ -175,7 +175,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_trivial_assign(` *type* `)`
+- `__has_trivial_assign(` *형식* `)`
 
    형식에 컴파일러에서 생성된 trivial 대입 연산자가 있으면 **true**를 반환합니다.
 
@@ -189,7 +189,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_trivial_constructor(` *type* `)`
+- `__has_trivial_constructor(` *형식* `)`
 
    형식에 컴파일러에서 생성된 trivial 생성자가 있으면 **true**를 반환합니다.
 
@@ -203,7 +203,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_trivial_copy(` *type* `)`
+- `__has_trivial_copy(` *형식* `)`
 
    형식에 컴파일러에서 생성된 trivial 복사 생성자가 있으면 **true**를 반환합니다.
 
@@ -217,7 +217,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_trivial_destructor(` *type* `)`
+- `__has_trivial_destructor(` *형식* `)`
 
    형식에 컴파일러에서 생성된 trivial 소멸자가 있으면 **true**를 반환합니다.
 
@@ -232,7 +232,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_user_destructor(` *type* `)`
+- `__has_user_destructor(` *형식* `)`
 
    플랫폼 또는 네이티브 형식에 사용자가 선언한 소멸자가 있으면 **true**를 반환합니다.
 
@@ -249,7 +249,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__has_virtual_destructor(` *type* `)`
+- `__has_virtual_destructor(` *형식* `)`
 
    형식에 가상 소멸자가 있으면 **true**를 반환합니다.
 
@@ -268,7 +268,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_abstract(` *type* `)`
+- `__is_abstract(` *형식* `)`
 
    형식이 추상 형식이면 **true**를 반환합니다. 네이티브 추상 형식에 대한 자세한 내용은 [추상 클래스](../cpp/abstract-classes-cpp.md)를 참조하세요.
 
@@ -291,7 +291,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
    첫 번째 형식이 두 번째 형식의 기본 클래스이거나 두 형식이 같으면 **true**를 반환합니다.
 
-   `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 예를 들어 첫 번째 형식이 [인터페이스 클래스](interface-class-cpp-component-extensions.md)이고 두 번째 형식이 인터페이스를 구현하면 **true**를 반환합니다.
+   `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 예를 들어 첫 번째 형식이 **인터페이스 클래스**이고 두 번째 형식이 인터페이스를 구현하면 [true](interface-class-cpp-component-extensions.md)를 반환합니다.
 
     ```cpp
     // is_base_of.cpp
@@ -308,7 +308,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_class(` *type* `)`
+- `__is_class(` *형식* `)`
 
    형식이 네이티브 클래스 또는 구조체이면 **true**를 반환합니다.
 
@@ -322,7 +322,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    첫 번째 형식을 두 번째 형식으로 변환할 수 있으면 **true**를 반환합니다.
 
@@ -340,9 +340,9 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_delegate(` *type* `)`
+- `__is_delegate(` *형식* `)`
 
-   `type`이 대리자이면 **true**를 반환합니다. 자세한 내용은 [delegate(C++/CLI 및 C++/CX)](delegate-cpp-component-extensions.md)를 참조하세요.
+   **이 대리자이면** true`type`를 반환합니다. 자세한 내용은 [delegate(C++/CLI 및 C++/CX)](delegate-cpp-component-extensions.md)를 참조하세요.
 
     ```cpp
     delegate void MyDel();
@@ -351,7 +351,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_empty(` *type* `)`
+- `__is_empty(` *형식* `)`
 
    형식에 인스턴스 데이터 멤버가 없으면 **true**를 반환합니다.
 
@@ -367,7 +367,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_enum(` *type* `)`
+- `__is_enum(` *형식* `)`
 
    형식이 네이티브 열거형이면 **true**를 반환합니다.
 
@@ -389,7 +389,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_interface_class(` *type* `)`
+- `__is_interface_class(` *형식* `)`
 
    플랫폼 인터페이스가 전달되면 **true**를 반환합니다. 자세한 내용은 [인터페이스 클래스](interface-class-cpp-component-extensions.md)를 참조하세요.
 
@@ -403,7 +403,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_pod(` *type* `)`
+- `__is_pod(` *형식* `)`
 
    형식이 생성자가 없거나 프라이빗 또는 보호된 비정적 멤버가 없고, 기본 클래스가 없으며, 가상 함수가 없는 클래스 또는 공용 구조체이면 **true**를 반환합니다. POD에 대한 자세한 내용은 C++ 표준, 섹션 8.5.1/1, 9/4 및 3.9/10을 참조하세요.
 
@@ -419,7 +419,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_polymorphic(` *type* `)`
+- `__is_polymorphic(` *형식* `)`
 
    네이티브 형식에 가상 함수가 있으면 **true**를 반환합니다.
 
@@ -435,7 +435,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_ref_array(` *type* `)`
+- `__is_ref_array(` *형식* `)`
 
    플랫폼 배열이 전달되면 **true**를 반환합니다. 자세한 내용은 [배열](arrays-cpp-component-extensions.md)을 참조하세요.
 
@@ -447,7 +447,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_ref_class(` *type* `)`
+- `__is_ref_class(` *형식* `)`
 
    참조 클래스가 전달되면 **true**를 반환합니다. 사용자 정의 참조 형식에 대한 자세한 내용은 [클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)를 참조하세요.
 
@@ -460,7 +460,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_sealed(` *type* `)`
+- `__is_sealed(` *형식* `)`
 
    sealed로 표시된 플랫폼 또는 네이티브 형식이 전달되면 **true**를 반환합니다. 자세한 내용은 [sealed](sealed-cpp-component-extensions.md)를 참조하세요.
 
@@ -471,7 +471,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_simple_value_class(` *type* `)`
+- `__is_simple_value_class(` *형식* `)`
 
    가비지 수집된 힙에 대한 참조가 없는 값 형식이 전달되면 **true**를 반환합니다. 사용자 정의 값 형식에 대한 자세한 내용은 [클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)를 참조하세요.
 
@@ -489,7 +489,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_union(` *type* `)`
+- `__is_union(` *형식* `)`
 
    형식이 공용 구조체이면 **true**를 반환합니다.
 
@@ -506,7 +506,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
     }
     ```
 
-- `__is_value_class(` *type* `)`
+- `__is_value_class(` *형식* `)`
 
    값 형식이 전달되면 **true**를 반환합니다. 사용자 정의 값 형식에 대한 자세한 내용은 [클래스 및 구조체](classes-and-structs-cpp-component-extensions.md)를 참조하세요.
 
@@ -520,7 +520,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 플랫폼에서 종료자를 지원하지 않으므로 `__has_finalizer(`*type*`)` 형식 특성은 지원되지 않습니다.
 
@@ -530,7 +530,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 (이 기능에는 플랫폼별 설명이 없습니다.)
 
@@ -538,7 +538,7 @@ Microsoft C++ 컴파일러는 컴파일 시간에 형식의 다양한 특성을 
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 **예제**
 

@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5f93aaa79fd7c3664ecf80d5007d5954002bce4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857257"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160647"
 ---
 # <a name="__unaligned"></a>__unaligned
 
 **Microsoft 전용**입니다. **__Unaligned** 한정자를 사용 하 여 포인터를 선언 하면 컴파일러에서 포인터가 정렬 되지 않은 데이터를 처리 한다고 가정 합니다. 따라서 플랫폼에 맞게 코드를 생성 하 여 포인터를 통해 정렬 되지 않은 읽기와 쓰기를 처리 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 한정자는 포인터로 주소가 지정 된 데이터의 맞춤을 설명 합니다. 포인터 자체는 정렬 된 것으로 간주 됩니다.
 
@@ -39,6 +39,6 @@ ms.locfileid: "74857257"
 
 - [구조체 맞춤 예제](../build/x64-software-conventions.md#examples-of-structure-alignment)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

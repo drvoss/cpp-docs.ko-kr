@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
 ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273419"
 ---
 # <a name="importing-using-def-files"></a>DEF 파일을 사용하여 가져오기
 
-사용 하려는 경우 **__declspec (dllimport)** .def 파일을 함께 잘못 된 코딩 문제가 발생할 수 있는 가능성을 줄이기 위해 상수 대신 데이터를 사용 하려면.def 파일을 변경 해야 합니다.
+.def 파일과 함께 **__declspec(dllimport)** 을 사용하도록 선택하는 경우 CONSTANT 대신 DATA를 사용하도록 .def 파일을 변경하여 잘못된 코딩으로 인해 문제가 발생할 가능성을 줄여야 합니다.
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-다음 표에서 이유를 보여 줍니다.
+다음 표에서는 이유를 보여 줍니다.
 
-|키워드|가져오기 라이브러리에 내보냅니다.|내보내기|
+|키워드|가져오기 라이브러리에서 내보내기|내보내기|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-사용 하 여 **__declspec (dllimport)** 상수를 모두 나열 하 고는 `imp` .lib DLL에서에서 데코 레이트 되지 않은 이름과 버전 가져오기 명시적 연결을 허용 하기 위해 만들어지는 라이브러리입니다. 사용 하 여 **__declspec (dllimport)** 및 데이터 목록만 `imp` 버전의 이름입니다.
+**__declspec(dllimport)** 및 CONSTANT를 사용하면 명시적 연결을 허용하도록 만들어진 .lib DLL 가져오기 라이브러리에서 `imp` 버전과 데코레이트되지 않은 이름이 모두 나열됩니다. **__declspec(dllimport)** 및 DATA를 사용하면 이름의 `imp` 버전만 나열됩니다.
 
-상수를 사용 하면 다음과 같은 코드 구문이 중 사용할 수 있는지에 액세스 하려면 `ulDataInDll`:
+CONSTANT를 사용하는 경우 다음 코드 구문 중 하나를 사용하여 `ulDataInDll`에 액세스할 수 있습니다.
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-그러나.def 파일에 데이터를 사용 하는 경우 다음 정의 사용 하 여 컴파일한 코드 에서만 액세스할 수 있습니다 변수의 `ulDataInDll`:
+그러나 .def 파일에서 DATA를 사용하는 경우에는 다음 정의로 컴파일된 코드만 `ulDataInDll` 변수에 액세스할 수 있습니다.
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,10 +57,10 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-상수를 사용 하 여 이므로 더 위험한 변수에 대 한 포인터 가져오기 주소 테이블을 추가 수준의 간접 참조를 사용 하지 않으면 잠재적으로 액세스할 수 없습니다-변수 자체가 없습니다. 이러한 유형의 문제는 가져오기 주소 테이블은 되기 때문에 현재 읽기 전용 컴파일러 및 링커에 자주 액세스 위반으로 나타날 수 있습니다.
+CONSTANT를 사용하는 경우 추가 수준의 간접 참조를 사용하는 것을 잊으면 변수 자체가 아니라 변수를 가리키는 가져오기 주소 테이블의 포인터에 액세스할 수 있으므로 더 위험합니다. 가져오기 주소 테이블은 현재 컴파일러와 링커에서 읽기 전용으로 만들어지므로 이런 유형의 문제는 종종 액세스 위반으로 나타날 수 있습니다.
 
-이 경우를 고려 하는.def 파일에 상수를 발견 하는 경우 현재 MSVC 링커는 경고가 발생 합니다. 상수를 사용 하는 유일한 이유는 헤더 파일에 나열 되지 않은 일부 개체 파일을 다시 컴파일할 수 없는 경우 **__declspec (dllimport)** 프로토타입을에 있습니다.
+현재 MSVC 링커는 .def 파일에서 CONSTANT를 확인하면 이 경우를 설명하기 위해 경고를 실행합니다. 실제로 CONSTANT를 사용하는 이유는 헤더 파일의 프로토타입에 **__declspec(dllimport)** 이 나열되어 있지 않은 일부 개체 파일을 다시 컴파일할 수 없는 경우뿐입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [애플리케이션으로 가져오기](importing-into-an-application.md)

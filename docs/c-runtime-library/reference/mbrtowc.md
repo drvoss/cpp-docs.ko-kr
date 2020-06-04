@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952441"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919184"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -49,7 +51,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>매개 변수
 
 *wchar*<br/>
-변환 된 와이드 문자열 ( **wchar_t**형식)을 받을 와이드 문자의 주소입니다. 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
+변환 된 와이드 문자열 (형식 **wchar_t**)을 받을 와이드 문자의 주소입니다. 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
 
 *mbchar*<br/>
 바이트 시퀀스(멀티바이트 문자)의 주소입니다.
@@ -60,7 +62,7 @@ size_t mbrtowc(
 *mbstate*<br/>
 변환 상태 개체에 대한 포인터입니다. 이 값이 null 포인터이면 함수는 정적 내부 변환 상태 개체를 사용합니다. 내부 **mbstate_t** 개체는 스레드로부터 안전 하지 않으므로 항상 고유한 *mbstate* 인수를 전달 하는 것이 좋습니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 다음 값 중 하나입니다.
 
@@ -82,7 +84,9 @@ size_t mbrtowc(
 
 *Mbchar* 가 null 포인터가 아닌 경우 함수는 *mbchar* 의 *count* 바이트를 검사 하 여 다음 멀티 바이트 문자를 완료 하는 데 필요한 바이트 수를 확인 합니다. 다음 문자가 올바르면 해당 하는 멀티 바이트 문자는 null 포인터가 아닌 경우 *wchar* 에 저장 됩니다. 문자가 해당 하는 와이드 null 문자인 경우 *mbstate* 의 결과 상태는 초기 변환 상태입니다.
 
-**Mbrtowc** 함수는 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) by 다시 시작할와 다릅니다. 동일 하거나 다른 다시 시작 가능 함수에 대 한 후속 호출의 경우 변환 상태가 *mbstate* 에 저장 됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어 **wcstombs**대신 **wcsrtombs** 에 대 한 후속 호출을 사용 하는 경우 응용 프로그램은 **wcslen** 대신 **wcsrlen** 을 사용 해야 합니다.
+**Mbrtowc** 함수는 다시 시작할에 의해 [_mbtowc_l mbtowc](mbtowc-mbtowc-l.md) 와 다릅니다. 동일 하거나 다른 다시 시작 가능 함수에 대 한 후속 호출의 경우 변환 상태가 *mbstate* 에 저장 됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어 **wcstombs**대신 **wcsrtombs** 에 대 한 후속 호출을 사용 하는 경우 응용 프로그램은 **wcslen** 대신 **wcsrlen** 을 사용 해야 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -209,8 +213,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

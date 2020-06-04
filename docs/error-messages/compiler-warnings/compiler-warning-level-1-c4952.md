@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4952
 ms.assetid: 593324f0-5cfe-42fb-b221-2f71308765dd
-ms.openlocfilehash: c2e9b88125655d9ea0abe3e65500b149289ba83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560705edeb0bbdd6be760736a8d4a19d914133d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393287"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174572"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>컴파일러 경고(수준 1) C4952
 
-> '*함수*': 프로그램 데이터베이스에 프로필 데이터가 없습니다 '*pgd_file*'
+> '*function*': 프로그램 데이터베이스 '*pgd_file*'에 프로필 데이터가 없습니다.
 
 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)를 사용할 때 컴파일러에서 `/LTCG:PGINSTRUMENT` 이후 다시 컴파일된 입력 모듈을 검색했습니다. 이 모듈에는 새 함수(*function*)가 있습니다.
 

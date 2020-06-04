@@ -6,20 +6,20 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f1064fdf434560c3130d1254512470cc5bc1ee0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448217"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370691"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt; 열거형
 
 ||||
 |-|-|-|
-|[future_errc](#future_errc)|[future_status](#future_status)|[launch](#launch)|
+|[future_errc](#future_errc)|[future_status](#future_status)|[시작](#launch)|
 
-## <a name="future_errc"></a>  future_errc 열거형
+## <a name="future_errc-enumeration"></a><a name="future_errc"></a>future_errc 열거
 
 [future_error](../standard-library/future-error-class.md) 클래스에서 보고한 모든 오류에 대해 기호화된 이름을 제공합니다.
 
@@ -32,7 +32,7 @@ class future_errc {
    };
 ```
 
-## <a name="future_status"></a>  future_status 열거형
+## <a name="future_status-enumeration"></a><a name="future_status"></a>future_status 열거
 
 timed wait 함수가 반환할 수 있는 이유에 대해 기호화된 이름을 제공합니다.
 
@@ -44,7 +44,7 @@ enum future_status{
 };
 ```
 
-## <a name="launch"></a>  launch 열거형
+## <a name="launch-enumeration"></a><a name="launch"></a>시작 열거형
 
 템플릿 함수 [async](../standard-library/future-functions.md#async)에 가능한 모드를 설명하는 비트 마스크 형식을 나타냅니다.
 
@@ -55,6 +55,6 @@ class launch{
    };
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<future>](../standard-library/future.md)
+[\<미래의>](../standard-library/future.md)

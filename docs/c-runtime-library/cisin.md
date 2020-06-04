@@ -1,8 +1,9 @@
 ---
 title: _CIsin
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - _CIsin
+- _o__CIsin
 api_location:
 - msvcr80.dll
 - msvcr100.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: 66f26e9fa4dd08d18b15deca4efa40c236e092c9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: b7c3ba2c771d7659a7ca0ba2e64ade9068c2b390
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944540"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917349"
 ---
 # <a name="_cisin"></a>_CIsin
 
@@ -46,11 +48,13 @@ void __cdecl _CIsin();
 
 결과 값이 부동 소수점 스택의 맨 위에 푸시됩니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 **플랫폼:** x86
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)<br/>

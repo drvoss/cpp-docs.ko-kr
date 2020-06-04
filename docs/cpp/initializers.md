@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123970"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423743"
 ---
 # <a name="initializers"></a>이니셜라이저
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-다음과 같은 내용이 출력됩니다.
+다음 출력이 표시됩니다.
 
 ```Output
 agg1: c: 1
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>참조 초기화
 
-참조 형식의 변수는 참조 형식이 파생된 형식의 개체 또는 참조 형식이 파생된 형식으로 변환될 수 있는 형식의 개체를 사용하여 초기화되어야 합니다. 예를 들면 다음과 같습니다.:
+참조 형식의 변수는 참조 형식이 파생된 형식의 개체 또는 참조 형식이 파생된 형식으로 변환될 수 있는 형식의 개체를 사용하여 초기화되어야 합니다. 다음은 그 예입니다.
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ int main()
 
 참조 형식 변수는 다음에서만 이니셜라이저 없이 선언될 수 있습니다.
 
-- 함수 선언(프로토타입). 예를 들면 다음과 같습니다.:
+- 함수 선언(프로토타입). 다음은 그 예입니다.
 
     ```cpp
     int func( int& );
     ```
 
-- 함수 반환 형식 선언. 예를 들면 다음과 같습니다.:
+- 함수 반환 형식 선언. 다음은 그 예입니다.
 
     ```cpp
     int& func( int& );
     ```
 
-- 참조 형식 클래스 멤버의 선언. 예를 들면 다음과 같습니다.:
+- 참조 형식 클래스 멤버의 선언. 다음은 그 예입니다.
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- **Extern**으로 명시적으로 지정 된 변수 선언입니다. 예를 들면 다음과 같습니다.:
+- **Extern**으로 명시적으로 지정 된 변수 선언입니다. 다음은 그 예입니다.
 
     ```cpp
     extern int& iVal;

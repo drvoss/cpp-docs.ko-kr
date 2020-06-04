@@ -1,10 +1,12 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916791"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -68,10 +71,10 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 밑입니다.
 
-*y*<br/>
+*x.y*<br/>
 지수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *X*<sup>*y*</sup>의 값을 반환 합니다. 오버플로 또는 언더플로 시 오류 메시지는 인쇄되지 않습니다.
 
@@ -87,9 +90,11 @@ long double pow( long double x, int y );  // C++ only
 
 **pow** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-는 C++ 오버 로드를 허용 하므로 **pow**의 다양 한 오버 로드를 호출할 수 있습니다. C 프로그램에서 **pow** 은 항상 두 개의 **double** 값을 사용 하 고 **double** 값을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **pow**의 다양 한 오버 로드를 호출할 수 있습니다. C 프로그램에서 **pow** 은 항상 두 개의 **double** 값을 사용 하 고 **double** 값을 반환 합니다.
 
 `pow(int, int)` 오버로드는 더 이상 사용할 수 없습니다. 이 오버 로드를 사용 하는 경우 컴파일러는 [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)를 내보낼 수 있습니다. 이 문제를 방지 하려면 첫 번째 매개 변수를 **double**, **float**또는 **long** **double**로 캐스팅 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -97,7 +102,7 @@ long double pow( long double x, int y );  // C++ only
 |-|-|-|
 |**pow**, **powf**, **powl**|\<math.h>|\<math.h> 또는 \<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -120,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

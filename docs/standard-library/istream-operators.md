@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363033"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 연산자
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>연산자&gt;&gt;
 
 스트림에서 문자 및 문자열을 추출합니다.
 
@@ -56,23 +56,23 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ch* \
+*채널*\
 단일 문자입니다.
 
-*Istr*\
+*이스트르 (동안)*\
 스트림입니다.
 
-*str* \
-문자열
+*Str*\
+문자열입니다.
 
-*val* \
+*발*\
 형식입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스트림
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 `basic_istream` 클래스도 여러 가지 추출 연산자를 정의합니다. 자세한 내용은 [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt)를 참조하세요.
 
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-`N - 1` 요소를 추출 하 여 *str*에서 시작 하는 배열에 저장 합니다. `Istr.`[너비가](../standard-library/ios-base-class.md#width) 0 보다 크면 *N* 은 `Istr.width`; 그렇지 않으면 선언할 수 있는 `Elem`의 가장 큰 배열 크기입니다. 함수는 저장 되는 모든 추출 된 요소 후 `Elem()` 값을 항상 저장 합니다. 추출은 파일의 끝, 값 `Elem(0)` (추출 되지 않음) 또는 [ws](../standard-library/istream-functions.md#ws)에서 삭제 되는 모든 요소 (추출 되지 않음)에서 일찍 중지 됩니다. 함수가 요소를 추출 하지 않는 경우 `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`를 호출 합니다. 어떤 경우 든 `Istr.width(0)`를 호출 하 고 *Istr*을 반환 합니다.
+요소까지 `N - 1` 추출하여 *str에서*시작하는 배열에 저장합니다. `Istr.` [너비가](../standard-library/ios-base-class.md#width) 0보다 크면 `Istr.width` *N은* ; 그렇지 않으면 선언할 수 있는 가장 `Elem` 큰 배열의 크기입니다. 함수는 항상 저장 `Elem()` 하는 추출 된 요소 후 값을 저장 합니다. 추출은 파일 의 끝에서 일찍, 값이 `Elem(0)` 있는 문자(추출되지 않은 문자) 또는 [ws에](../standard-library/istream-functions.md#ws)의해 삭제될 요소(추출되지 않은 요소)에서 중지됩니다. 함수가 요소를 추출하지 않으면 `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`을 호출합니다. 어쨌든 *Istr을* `Istr.width(0)` 호출하고 반환합니다.
 
-**보안 정보** 입력 스트림에서 추출 되는 null로 끝나는 문자열은 대상 버퍼 *str*의 크기를 초과 하면 안 됩니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
+**보안 참고 사항** 입력 스트림에서 추출되는 null-terminateed 문자열은 대상 버퍼 *str의*크기를 초과해서는 안 됩니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
 함수 템플릿:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-가능 하면 요소를 추출 하 여 *Ch*에 저장 합니다. 그렇지 않으면 `is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`를 호출 합니다. 어떤 경우 든 *Istr*을 반환 합니다.
+가능하면 요소를 추출하여 *Ch*. 그렇지 않으면 `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`을 호출합니다. 어쨌든 *Istr*.
 
 함수 템플릿:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-`Istr >> val`를 반환 하 고 rvalue 참조를 `Istr` 하 여 프로세스의 lvalue로 변환 합니다.
+rvalue `Istr >> val` 참조를 프로세스의 lvalue로 `Istr` 변환합니다.
 
 ### <a name="example"></a>예제
 
@@ -168,6 +168,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[\<istream>](../standard-library/istream.md)
+[\<아이스트림>](../standard-library/istream.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-ms.openlocfilehash: b0dfb547904d409399ad1a0d7824f9d4fdeb5f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9a3ea9e33adc8a26f34324a8660c835f08b3007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213683"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== Operator (Microsoft::WRL)
 
-에 대 한 같음 연산자 [ComPtr](comptr-class.md) 하 고 [ComPtrRef](comptrref-class.md) 개체입니다.
+[ComPtr](comptr-class.md) 및 [comptrref](comptrref-class.md) 개체에 대 한 같음 연산자입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -63,7 +63,7 @@ WRL_NOTHROW bool operator==(
 
 ## <a name="return-value"></a>반환 값
 
-**true 이면** 개체가 같으면이 고, 그렇지 않으면 **false**합니다.
+개체가 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -71,6 +71,6 @@ WRL_NOTHROW bool operator==(
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)

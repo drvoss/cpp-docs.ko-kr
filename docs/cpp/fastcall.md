@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4b650542a3a85c8f0008374abef02686c5491a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188924"
 ---
-# <a name="fastcall"></a>__fastcall
+# <a name="__fastcall"></a>__fastcall
 
 **Microsoft 전용**
 
-합니다 **__fastcall** 호출 규칙 지정 함수에 대 한 인수를 가능 하면 레지스터로 전달 하도록 합니다. 이 호출 규칙은 x86 아키텍처에만 적용됩니다. 다음 목록에서는 이러한 호출 규칙의 구현을 보여 줍니다.
+**__Fastcall** 호출 규칙은 가능 하면 함수에 대 한 인수를 레지스터에 전달 하도록 지정 합니다. 이 호출 규칙은 x86 아키텍처에만 적용됩니다. 다음 목록에서는 이러한 호출 규칙의 구현을 보여 줍니다.
 
 |요소|구현|
 |-------------|--------------------|
 |인수 전달 순서|왼쪽에서 오른쪽으로 인수 목록에서 발견된 처음 두 개의 DWORD 이하 인수는 ECX 및 EDX 레지스터로 전달되고, 다른 모든 인수는 오른쪽에서 왼쪽으로 스택에 전달됩니다.|
 |스택 유지 관리 책임|호출된 함수가 스택에서 인수를 꺼냅니다.|
-|이름 데코레이션 규칙|At 기호 (\@) 맨 앞 이름 앞에 at 기호 뒤에 바이트 수 (10 진수) 매개 변수에서 목록이 이름에 접미사로 합니다.|
+|이름 데코레이션 규칙|At 기호 (\@)는 이름 앞에 붙습니다. 매개 변수 목록에서 부호와 그 뒤에 오는 바이트 수 (10 진수)는 이름을 접미사로 갖습니다.|
 |대/소문자 변환 규칙|대/소문자 변환은 수행되지 않습니다.|
 
 > [!NOTE]
 > 이후 컴파일러 버전은 다른 레지스터를 사용하여 매개 변수를 저장할 수도 있습니다.
 
-사용 하는 [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션을로 컴파일 모듈에서 각 함수 사용 하면 **__fastcall** 함수가 충돌 하는 특성을 사용 하 여 선언 된 함수의 이름은 경우가 아니면 `main` .
+[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션을 사용 하면 함수가 충돌 하는 특성을 사용 하 여 선언 되거나 함수 이름이 `main`되지 않는 한 모듈의 각 함수를 **__fastcall** 으로 컴파일합니다.
 
-합니다 **__fastcall** 키워드 수락 하 고 ARM 및 x64를 대상으로 하는 컴파일러에서 무시 아키텍처는 x64 칩, 규칙에 따라 처음 네 개의 인수가 가능 하면 레지스터로 전달 되 고 추가 인수 전달 됩니다 스택에 합니다. 자세한 내용은 [x64 호출 규칙](../build/x64-calling-convention.md)합니다. ARM 칩의 경우 최대 4개의 정수 인수와 8개의 부동 소수점 인수가 레지스터로 전달될 수 있으며 추가 인수는 스택에 전달됩니다.
+ARM 및 x64 아키텍처를 대상으로 하는 컴파일러에서는 **__fastcall** 키워드를 허용 하 고 무시 합니다. x64 칩에서 규칙에 따라 처음 네 개의 인수가 가능한 경우 레지스터에 전달 되 고 추가 인수가 스택에 전달 됩니다. 자세한 내용은 [X64 호출 규칙](../build/x64-calling-convention.md)을 참조 하세요. ARM 칩의 경우 최대 4개의 정수 인수와 8개의 부동 소수점 인수가 레지스터로 전달될 수 있으며 추가 인수는 스택에 전달됩니다.
 
 비정적 클래스 함수의 경우 함수가 아웃오브 라인으로 정의되면 호출 규칙 한정자를 아웃오브 라인 정의에서 지정하지 않아도 됩니다. 즉, 클래스 비정적 멤버 메서드의 경우 선언하는 동안 지정된 호출 규칙이 정의 시 가정됩니다. 다음의 클래스 정의를 가정해 봅니다.
 
@@ -55,7 +55,7 @@ void CMyClass::mymethod() { return; }
 void __fastcall CMyClass::mymethod() { return; }
 ```
 
-이전 버전과 호환성에 대 한 **_fastcall** 에 대 한 동의어가 **__fastcall** 하지 않으면 컴파일러 옵션 [/Za \(언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 는 지정 합니다.
+이전 버전과의 호환성을 위해 **_fastcall** 는 컴파일러 옵션 [/za \(언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 고 **__fastcall** 의 동의어입니다.
 
 ## <a name="example"></a>예제
 
@@ -72,7 +72,7 @@ typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fl
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)<br/>
-[C++ 키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)

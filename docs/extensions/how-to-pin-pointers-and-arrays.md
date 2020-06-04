@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-ms.openlocfilehash: ae8c1da79f41cf9209f2765ce5aa2f7ca3d34aea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8dc42690f0f56b97b2af3ed54dfb17d49b081695
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515688"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172219"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>방법: 포인터 및 배열 고정
 

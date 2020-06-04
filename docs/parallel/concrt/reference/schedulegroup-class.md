@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143263"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424232"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 클래스
 
@@ -28,19 +28,19 @@ ms.locfileid: "77143263"
 class ScheduleGroup;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[~ ScheduleGroup 소멸자](#dtor)||
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[ID](#id)|그룹이 속한 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.|
+|[Id](#id)|그룹이 속한 스케줄러 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.|
 |[참조](#reference)|일정 그룹 참조 횟수를 증가시킵니다.|
 |[릴리스](#release)|일정 그룹 참조 횟수를 감소시킵니다.|
 |[ScheduleTask](#scheduletask)|일정 그룹 내에서 경량 작업을 예약 합니다.|

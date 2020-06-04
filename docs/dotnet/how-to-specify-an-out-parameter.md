@@ -1,31 +1,31 @@
 ---
-title: '방법: Out 지정 매개 변수'
+title: '방법: out 매개 변수 지정'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387222"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545446"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>방법: Out 지정 매개 변수
+# <a name="how-to-specify-an-out-parameter"></a>방법: out 매개 변수 지정
 
-이 샘플에는 함수 매개 변수는 out 매개 변수를 지정 하는 방법 및 C# 프로그램에서 해당 함수를 호출 하는 방법을 보여 줍니다.
+이 샘플에서는 함수 매개 변수가 `out` 매개 변수이 고 C# 프로그램에서 해당 함수를 호출 하는 방법을 지정 하는 방법을 보여 줍니다.
 
-시각적 개체에는 out 매개 변수를 지정 하는 C++ 사용 하 여 <xref:System.Runtime.InteropServices.OutAttribute> 합니다.
+`out` 매개 변수는 <xref:System.Runtime.InteropServices.OutAttribute>를 C++ 사용 하 여에 지정 됩니다.
 
 ## <a name="example"></a>예제
 
-이 샘플의 첫 번째 부분은 시각적 개체 C++ 는 out 매개 변수를 사용 하 여 함수를 포함 하는 형식이 있는 DLL입니다.
+이 샘플의 첫 번째 부분에서는 DLL C++ 을 만듭니다. `out` 매개 변수를 사용 하 여 함수를 포함 하는 형식을 정의 합니다.
 
-```
+```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>예제
+이 소스 파일은 이전 C# 예제에서 만든 C++ 구성 요소를 사용 하는 클라이언트입니다.
 
-이 C# 시각적 개체를 사용 하는 클라이언트 C++ 앞의 예제에서 만든 구성 요소입니다.
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;
@@ -55,6 +53,6 @@ class TestClass {
 a string
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203439"
 ---
 # <a name="fatal-error-c1209"></a>심각한 오류 C1209
 
@@ -23,4 +23,4 @@ ms.locfileid: "62375069"
 
 C1209를 해결하려면 사용 중인 컴파일러와 함께 제공되는 공용 언어 런타임을 설치합니다.
 
-자세한 내용은 [Friend 어셈블리 (c + +)](../../dotnet/friend-assemblies-cpp.md)합니다.
+자세한 내용은 [Friend 어셈블리 (C++)](../../dotnet/friend-assemblies-cpp.md)를 참조 하세요.

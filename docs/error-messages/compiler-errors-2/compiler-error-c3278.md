@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382090"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201437"
 ---
 # <a name="compiler-error-c3278"></a>컴파일러 오류 C3278
 
-> 직접 호출 인터페이스 또는 순수 메서드 '*메서드*' 런타임 시 실패
+> 인터페이스 또는 순수 메서드 '*method*'의 직접 호출이 런타임에 실패 합니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 인터페이스 메서드 또는 순수 메서드를 호출했지만 허용되지 않습니다.
 

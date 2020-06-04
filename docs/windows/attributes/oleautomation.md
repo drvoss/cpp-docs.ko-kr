@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214688"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514354"
 [oleautomation]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Oleautomation** C++ 특성은 [oleautomation](/windows/win32/Midl/oleautomation) MIDL 특성과 동일한 기능을 포함 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69514354"
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)

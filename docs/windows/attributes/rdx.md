@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214632"
 ---
 # <a name="rdx"></a>rdx
 
@@ -26,19 +26,19 @@ ms.locfileid: "62407499"
 ### <a name="parameters"></a>매개 변수
 
 *key*<br/>
-이름 키를 만들거나 열 수입니다.
+만들거나 열 키의 이름입니다.
 
 *valuename*<br/>
-(선택 사항) 설정할 값 필드를 지정 합니다. 이 이름의 값 필드 없는 키에서에 추가 됩니다.
+필드 설정할 값 필드를 지정 합니다. 이 이름을 가진 값 필드가 키에 아직 없는 경우 추가 됩니다.
 
 *regtype*<br/>
-추가 되는 레지스트리 키의 형식입니다. 다음 중 하나일 수 있습니다: `text`, `dword`를 `binary`, 또는 `CString`합니다.
+추가 되는 레지스트리 키의 형식입니다. 다음 중 하나일 수 있습니다. `text`, `dword`, `binary`또는 `CString`.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-합니다 **rdx** C++ 특성을 만들거나 기존 COM 구성 요소에 대 한 레지스트리 키를 수정 합니다. 특성 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로 추가 합니다. `RegistryDataExchange`레지스트리 및 데이터 멤버 간 데이터 전송을 위해 BEGIN_RDX_MAP 매크로 결과 삽입 하는 함수를 사용할 수 있습니다
+**Rdx** C++ 특성은 COM 구성 요소에 대 한 기존 레지스트리 키를 만들거나 수정 합니다. 특성은 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로를 추가 합니다. BEGIN_RDX_MAP 매크로의 결과로 삽입 된 함수인 `RegistryDataExchange`레지스트리 및 데이터 멤버 간에 데이터를 전송 하는 데 사용할 수 있습니다.
 
-이 특성은 함께에서 사용할 수 있습니다 합니다 [coclass](coclass.md), [progid](progid.md), 또는 [vi_progid](vi-progid.md) 특성 또는 다음 중 하나를 암시 하는 기타 특성입니다.
+이 특성은 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성 또는 이러한 특성 중 하나를 암시 하는 기타 특성과 함께 사용할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -46,7 +46,7 @@ ms.locfileid: "62407499"
 
 |||
 |-|-|
-|**적용 대상**|**클래스** 나 **구조체** 멤버|
+|**적용 대상**|**클래스** 또는 **구조체** 멤버|
 |**반복 가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
@@ -55,7 +55,7 @@ ms.locfileid: "62407499"
 
 ## <a name="example"></a>예제
 
-다음 코드는 MyValue CMyClass COM 구성 요소를 설명 하는 시스템 이라는 레지스트리 키를 추가 합니다.
+다음 코드는 CMyClass COM 구성 요소를 설명 하는 시스템에 MyValue 라는 레지스트리 키를 추가 합니다.
 
 ```cpp
 // cpp_attr_ref_rdx.cpp
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [COM 특성](com-attributes.md)<br/>
 [registration_script](registration-script.md)

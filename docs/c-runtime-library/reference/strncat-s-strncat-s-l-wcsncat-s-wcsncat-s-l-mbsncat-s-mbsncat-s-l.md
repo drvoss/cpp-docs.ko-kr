@@ -1,6 +1,6 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -8,6 +8,10 @@ api_name:
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
+- _o__mbsncat_s
+- _o__mbsncat_s_l
+- _o_strncat_s
+- _o_wcsncat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +56,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626177"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919338"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -153,7 +158,7 @@ errno_t _mbsncat_s_l(
 *strDest*<br/>
 Null 종료 대상 문자열입니다.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 대상 버퍼의 크기입니다.
 
 *strSource*<br/>
@@ -165,25 +170,25 @@ Null 종료 소스 문자열입니다.
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 정상적으로 실행되는 경우 0을 반환하고 오류 시에는 오류 코드를 반환합니다.
 
 ### <a name="error-conditions"></a>오류 조건
 
-|*strDestination*|*numberOfElements*|*strSource*|반환 값|*Strdestination* 의 내용|
+|*strDestination*|*이면 numberofelements 이벤트가*|*strSource*|반환 값|*Strdestination* 의 내용|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL** 또는 종결 되지 않음|any|any|**EINVAL**|수정 안 됨|
-|any|any|**NULL**|**EINVAL**|수정 안 됨|
+|any|any|**N**|**EINVAL**|수정 안 됨|
 |any|0 또는 너무 작음|any|**ERANGE**|수정 안 됨|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이러한 함수는 *Strsource* 의 첫 *D* 문자를 *strsource*의 끝에 추가 합니다. 여기서 *D* 는 개수와 *strsource*의 길이 중 더 작은 *수* 입니다. 이러한 *D* 문자를 추가 하는 것이 *strdest* (크기가 *numberofelements*로 제공 됨) 내에 포함 되 고 여전히 null 종결자를 위한 공간을 유지 하는 경우 해당 문자는의 *원래 종료 null에서 시작 하 여 추가 됩니다. strDest*와 새 종료 null이 추가 됩니다. 그렇지 않으면 *Strdest*[0]이 null 문자로 설정 되 고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다.
+이러한 함수는 *Strsource* 의 첫 *D* 문자를 *strsource*의 끝에 추가 합니다. 여기서 *D* 는 개수와 *strsource*의 길이 중 더 작은 *수* 입니다. 이러한 *D* 문자를 추가 하는 것이 *Strdest* (크기가 *numberofelements*로 제공 됨) 내에 포함 되 고 여전히 null 종결자에 대 한 공간을 유지 하는 경우 *strdest*의 원래 종료 null에서 시작 하 여 해당 문자가 추가 되 고 새 종료 null이 추가 됩니다. 그렇지 않으면 *Strdest*[0]이 null 문자로 설정 되 고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다.
 
-위 단락의 설명에는 예외가 적용됩니다. *Count* 가 [_truncate](../../c-runtime-library/truncate.md) 인 경우 종료 null을 추가할 수 있는 공간을 유지 하면서 *strsource* 에 *자동으로 추가* 됩니다.
+위 단락의 설명에는 예외가 적용됩니다. *Count* 가 [_TRUNCATE](../../c-runtime-library/truncate.md) 인 경우에는 해당 하 *는 것은 끝 null* 을 추가할 수 있는 공간을 유지 하면서 *strsource* 에 자동으로 추가 됩니다.
 
-예를 들어 개체에 적용된
+예를 들면 다음과 같습니다.
 
 ```C
 char dst[5];
@@ -191,15 +196,15 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-는 세 문자를 버퍼의 5 자 길이에 추가 하도록 **strncat_s** 에 요청 하는 것을 의미 합니다. 이렇게 하면 null 종결자를 위한 공간이 확보 되지 않으므로 문자열을 0 **strncat_s** 하 고 잘못 된 매개 변수 처리기를 호출 합니다.
+는 두 문자를 버퍼의 문자 5 자에 추가 하 **strncat_s** 를 요청 하는 것을 의미 합니다. 이렇게 하면 null 종결자를 위한 공간이 확보 되지 않으므로 문자열을 0으로 **strncat_s** 하 고 잘못 된 매개 변수 처리기를 호출 합니다.
 
-잘림 동작이 필요한 경우에는 TRUNCATE 또는 *size* 매개 변수를 적절 하 게 조정 합니다 **(_d)** .
+잘림 동작이 필요한 경우 **_TRUNCATE** 를 사용 하거나 *크기* 매개 변수를 적절 하 게 조정 합니다.
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-or
+또는
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -209,7 +214,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 *Strsource* 또는 *Strsource* 가 **NULL**이거나 *Numberofelements* 가 0 이면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는 매개 변수를 수정 하지 않고 **EINVAL** 를 반환 합니다.
 
-**wcsncat_s** 및 **_mbsncat_s** 는 **strncat_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcsncat_s** 의 문자열 인수와 반환 값은 와이드 문자 문자열입니다. **_mbsncat_s** 의 해당 문자는 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**wcsncat_s** 및 **_mbsncat_s** 는 **strncat_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **Wcsncat_s** 문자열 인수와 반환 값은 와이드 문자열입니다. **_mbsncat_s** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -217,7 +222,9 @@ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 �
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -376,8 +383,8 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
 ## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

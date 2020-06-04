@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 38239942b99a29b5777deef8000d9f1ab85b10e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 554210ab0a26bc54a716a389a1660c4cbd42a209
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492196"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168659"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>집계 및 클래스 팩터리 매크로
 
@@ -47,11 +47,11 @@ ms.locfileid: "69492196"
 
 **헤더:**
 
-##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE
+## <a name="declare_aggregatable"></a><a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE
 
 개체를 집계할 수 있도록 지정 합니다.
 
-```
+```cpp
 DECLARE_AGGREGATABLE( x )
 ```
 
@@ -62,17 +62,17 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="remarks"></a>설명
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) 는이 매크로를 포함 하 여 기본 집계 모델을 지정 합니다. 이 기본값을 재정의 하려면 클래스 정의에 [DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable) 또는 [DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable) 매크로 중 하나를 지정 합니다.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) 는이 매크로를 포함 하 여 기본 집계 모델을 지정 합니다. 이 기본값을 재정의 하려면 클래스 정의에서 [DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable) 또는 [DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable) 매크로 중 하나를 지정 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_classfactory"></a>  DECLARE_CLASSFACTORY
+## <a name="declare_classfactory"></a><a name="declare_classfactory"></a>DECLARE_CLASSFACTORY
 
 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 을 클래스 팩터리로 선언 합니다.
 
-```
+```cpp
 DECLARE_CLASSFACTORY()
 ```
 
@@ -84,11 +84,11 @@ DECLARE_CLASSFACTORY()
 
 [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]
 
-##  <a name="ccomclassfactory_class"></a>CComClassFactory 클래스
+## <a name="ccomclassfactory-class"></a><a name="ccomclassfactory_class"></a>CComClassFactory 클래스
 
 이 클래스는 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) 인터페이스를 구현 합니다.
 
-```
+```cpp
 class CComClassFactory : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```
@@ -111,17 +111,17 @@ ATL은 클래스 팩터리를 선언 하는 세 가지 다른 매크로를 제�
 
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) 단일 [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 개체를 생성 하는 [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)을 사용 합니다.
 
-##  <a name="declare_classfactory_ex"></a>  DECLARE_CLASSFACTORY_EX
+## <a name="declare_classfactory_ex"></a><a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX
 
 를 `cf` 클래스 팩터리로 선언 합니다.
 
-```
+```cpp
 DECLARE_CLASSFACTORY_EX( cf )
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*cf*<br/>
+*f*<br/>
 진행 클래스 팩터리 개체를 구현 하는 클래스의 이름입니다.
 
 ### <a name="remarks"></a>설명
@@ -134,32 +134,32 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2
+## <a name="declare_classfactory2"></a><a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2
 
 [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) 을 클래스 팩터리로 선언 합니다.
 
-```
+```cpp
 DECLARE_CLASSFACTORY2( lic )
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *lic*<br/>
-진행 , `VerifyLicenseKey` `GetLicenseKey`및 를구현하는클래스입니다.`IsLicenseValid`
+진행 , `GetLicenseKey`및 `IsLicenseValid`를 구현 `VerifyLicenseKey`하는 클래스입니다.
 
 ### <a name="remarks"></a>설명
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 기본 클래스 팩터리로 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY2 매크로를 포함 하 여이 기본값을 재정의 합니다.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 기본 클래스 팩터리로 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY2 매크로를 포함 하 여이 기본값을 재정의 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>CComClassFactory2 클래스
+## <a name="ccomclassfactory2-class"></a><a name="ccomclassfactory2_class"></a>CComClassFactory2 클래스
 
 이 클래스는 [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) 인터페이스를 구현 합니다.
 
-```
+```cpp
 template <class license>
 class  CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>매개 변수
 
-*license*<br/>
+*사용권이*<br/>
 다음 정적 함수를 구현 하는 클래스입니다.
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -181,42 +181,42 @@ class  CComClassFactory2 : public IClassFactory2,
 
 `CComClassFactory2`[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)의 확장인 [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) 인터페이스를 구현 합니다. `IClassFactory2`라이선스를 통해 개체 생성을 제어 합니다. 사용이 허가 된 컴퓨터에서 실행 되는 클래스 팩터리는 런타임 라이선스 키를 제공할 수 있습니다. 이 라이선스 키를 사용 하면 전체 컴퓨터 라이선스가 없는 경우 응용 프로그램에서 개체를 인스턴스화할 수 있습니다.
 
-ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 기본 클래스 팩터리로 선언 하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory)포함 되어 있습니다. 을 사용 `CComClassFactory2`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY2](#declare_classfactory2) 매크로를 지정 합니다. 예를 들어:
+ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 을 기본 클래스 팩터리로 선언 하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory)포함 되어 있습니다. 을 사용 `CComClassFactory2`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY2](#declare_classfactory2) 매크로를 지정 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-`CMyLicense`의 템플릿 `CComClassFactory2`매개 변수는 정적 `GetLicenseKey`함수 `VerifyLicenseKey`, 및 `IsLicenseValid`를 구현 해야 합니다. 다음은 간단한 라이선스 클래스의 예제입니다.
+`CMyLicense`의 `CComClassFactory2`템플릿 매개 변수는 정적 함수 `VerifyLicenseKey` `GetLicenseKey`, 및 `IsLicenseValid`를 구현 해야 합니다. 다음은 간단한 라이선스 클래스의 예제입니다.
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]
 
-`CComClassFactory2`및 라이선스 모두 `CComClassFactory2Base` 에서파생 됩니다. `CComClassFactory2Base`차례로는 및 `IClassFactory2` **\< CComObjectRootEx CComGlobalsThreadModel >** 에서 파생 됩니다.
+`CComClassFactory2`및 라이선스 모두 `CComClassFactory2Base` 에서 *license*파생 됩니다. `CComClassFactory2Base`차례로는 및 `IClassFactory2` **CComObjectRootEx\< CComGlobalsThreadModel >** 에서 파생 됩니다.
 
-##  <a name="declare_classfactory_auto_thread"></a>  DECLARE_CLASSFACTORY_AUTO_THREAD
+## <a name="declare_classfactory_auto_thread"></a><a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD
 
 [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) 을 클래스 팩터리로 선언 합니다.
 
-```
+```cpp
 DECLARE_CLASSFACTORY_AUTO_THREAD()
 ```
 
 ### <a name="remarks"></a>설명
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 기본 클래스 팩터리로 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY_AUTO_THREAD 매크로를 포함 하 여이 기본값을 재정의 합니다.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 기본 클래스 팩터리로 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY_AUTO_THREAD 매크로를 포함 하 여이 기본값을 재정의 합니다.
 
-여러 아파트에서 개체를 만들 때 (in-proc 서버에서) DECLARE_CLASSFACTORY_AUTO_THREAD를 클래스에 추가 합니다.
+여러 아파트에서 개체를 만들 때 (in-proc 서버에서) 클래스에 DECLARE_CLASSFACTORY_AUTO_THREAD를 추가 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 클래스
+## <a name="ccomclassfactoryautothread-class"></a><a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 클래스
 
 이 클래스는 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) 인터페이스를 구현 하 고 여러 아파트에서 개체를 만들 수 있도록 합니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
-```
+```cpp
 class CComClassFactoryAutoThread : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```
@@ -225,15 +225,15 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactoryAutoThread`는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md)와 유사 하지만 여러 아파트에서 개체를 만들 수 있습니다. 이 지원을 활용 하려면 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)에서 EXE 모듈을 파생 시키십시오.
 
-ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 기본 클래스 팩터리로 선언 하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory)포함 되어 있습니다. 을 사용 `CComClassFactoryAutoThread`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) 매크로를 지정 합니다. 예를 들어:
+ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 을 기본 클래스 팩터리로 선언 하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory)포함 되어 있습니다. 을 사용 `CComClassFactoryAutoThread`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) 매크로를 지정 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="declare_classfactory_singleton"></a>  DECLARE_CLASSFACTORY_SINGLETON
+## <a name="declare_classfactory_singleton"></a><a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON
 
 [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) 을 클래스 팩터리로 선언 합니다.
 
-```
+```cpp
 DECLARE_CLASSFACTORY_SINGLETON( obj )
 ```
 
@@ -244,20 +244,20 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="remarks"></a>설명
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 기본 클래스 팩터리로 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY_SINGLETON 매크로를 포함 하 여이 기본값을 재정의 합니다.
+[CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 기본 클래스 팩터리로 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 를 지정 하는 [DECLARE_CLASSFACTORY](#declare_classfactory) 매크로가 포함 되어 있습니다. 그러나 개체의 클래스 정의에 DECLARE_CLASSFACTORY_SINGLETON 매크로를 포함 하 여이 기본값을 재정의 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 클래스
+## <a name="ccomclassfactorysingleton-class"></a><a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 클래스
 
 이 클래스는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 에서 파생 되며 [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) 를 사용 하 여 단일 개체를 생성 합니다.
 
 > [!IMPORTANT]
->  이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
-```
+```cpp
 template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
@@ -271,27 +271,27 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="remarks"></a>설명
 
-ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 `CComClassFactory`를 기본 클래스 팩터리로 선언하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory) 포함되어 있습니다. 을 사용 `CComClassFactorySingleton`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) 매크로를 지정 합니다. 예:
+ATL 개체는 일반적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md)에서 파생 하 여 클래스 팩터리를 가져옵니다. 이 클래스에는 `CComClassFactory`를 기본 클래스 팩터리로 선언하는 매크로 [DECLARE_CLASSFACTORY](#declare_classfactory) 포함되어 있습니다. 을 사용 `CComClassFactorySingleton`하려면 개체의 클래스 정의에 [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) 매크로를 지정 합니다. 다음은 그 예입니다.
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
-##  <a name="declare_get_controlling_unknown"></a>  DECLARE_GET_CONTROLLING_UNKNOWN
+## <a name="declare_get_controlling_unknown"></a><a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN
 
 가상 함수 `GetControllingUnknown`를 선언 합니다.
 
-```
+```cpp
 DECLARE_GET_CONTROLLING_UNKNOWN()
 ```
 
 ### <a name="remarks"></a>설명
 
-`GetControllingUnknown` 에서`CComAggregateCreator`와 같이 정의 되지 않은 컴파일러 오류 메시지가 표시 되는 경우이 매크로를 개체에 추가 합니다.
+에서 `GetControllingUnknown` `CComAggregateCreator`와 같이 정의 되지 않은 컴파일러 오류 메시지가 표시 되는 경우이 매크로를 개체에 추가 합니다.
 
-##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE
+## <a name="declare_not_aggregatable"></a><a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE
 
 개체를 집계할 수 없도록 지정 합니다.
 
-```
+```cpp
 DECLARE_NOT_AGGREGATABLE( x )
 ```
 
@@ -302,19 +302,19 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="remarks"></a>설명
 
-DECLARE_NOT_AGGREGATABLE는 개체에 대 한 집계를 시도 하는 경우 오류 (CLASS_E_NOAGGREGATION) 를반환합니다.`CreateInstance`
+개체에 `CreateInstance` 대 한 집계를 시도 하는 경우 DECLARE_NOT_AGGREGATABLE에서 오류 (CLASS_E_NOAGGREGATION)를 반환 합니다.
 
-기본적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md) 는 개체를 집계할 수 있도록 지정 하는 [DECLARE_AGGREGATABLE](#declare_aggregatable) 매크로를 포함 합니다. 이 기본 동작을 재정의 하려면 클래스 정의에 DECLARE_NOT_AGGREGATABLE를 포함 합니다.
+기본적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 개체를 집계할 수 있도록 지정 하는 [DECLARE_AGGREGATABLE](#declare_aggregatable) 매크로가 포함 되어 있습니다. 이 기본 동작을 재정의 하려면 클래스 정의에 DECLARE_NOT_AGGREGATABLE를 포함 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE
+## <a name="declare_only_aggregatable"></a><a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE
 
 개체를 집계 하도록 지정 합니다.
 
-```
+```cpp
 DECLARE_ONLY_AGGREGATABLE( x )
 ```
 
@@ -325,19 +325,19 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="remarks"></a>설명
 
-DECLARE_ONLY_AGGREGATABLE는 개체를 집계할 수 `CoCreate` 없는 개체로 만들려고 할 경우 오류 (E_FAIL)를 발생 시킵니다.
+개체를 집계할 수 `CoCreate` 없는 개체로 만들려고 하면 오류가 발생 DECLARE_ONLY_AGGREGATABLE (E_FAIL).
 
-기본적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md) 는 개체를 집계할 수 있도록 지정 하는 [DECLARE_AGGREGATABLE](#declare_aggregatable) 매크로를 포함 합니다. 이 기본 동작을 재정의 하려면 클래스 정의에 DECLARE_ONLY_AGGREGATABLE를 포함 합니다.
+기본적으로 [CComCoClass](../../atl/reference/ccomcoclass-class.md) 에는 개체를 집계할 수 있도록 지정 하는 [DECLARE_AGGREGATABLE](#declare_aggregatable) 매크로가 포함 되어 있습니다. 이 기본 동작을 재정의 하려면 클래스 정의에 DECLARE_ONLY_AGGREGATABLE를 포함 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]
 
-##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE
+## <a name="declare_poly_aggregatable"></a><a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE
 
-개체를 만들 때  **\< ccompolyobject** *x* **>** 인스턴스가 만들어지도록 지정 합니다.
+개체를 만들 때 ** \< ccompolyobject** *x* **>** 인스턴스가 만들어지도록 지정 합니다.
 
-```
+```cpp
 DECLARE_POLY_AGGREGATABLE( x )
 ```
 
@@ -348,25 +348,25 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="remarks"></a>설명
 
-생성 하는 동안 알 수 없는 외부 값이 확인 됩니다. NULL 인 경우 `IUnknown` 는 집계할 수 없는 개체에 대해 구현 됩니다. 외부 unknown이 NULL `IUnknown` 이 아닌 경우는 집계 된 개체에 대해 구현 됩니다.
+생성 하는 동안 알 수 없는 외부 값이 확인 됩니다. NULL 인 경우 `IUnknown` 는 집계할 수 없는 개체에 대해 구현 됩니다. 외부 unknown이 NULL이 아닌 경우는 `IUnknown` 집계 된 개체에 대해 구현 됩니다.
 
-DECLARE_POLY_AGGREGATABLE를 사용 하는 이점은 집계 된 사례와 집계할 `CComAggObject` 수 `CComObject` 없는 사례를 처리 하기 위해 모듈에서 및를 모두 사용 하지 않도록 하는 것입니다. 단일 `CComPolyObject` 개체는 두 경우를 모두 처리 합니다. 즉, 모듈에는 vtable의 복사본 하 나와 함수의 복사본이 하나만 있습니다. Vtable이 큰 경우 모듈 크기를 크게 줄일 수 있습니다. 그러나 vtable이 작은 경우를 사용 하면 집계 `CComPolyObject` 된 개체 또는 집계할 수 없는 개체 `CComAggObject` `CComObject`에 대해 최적화 되지 않으므로를 사용 하 여 모듈 크기가 약간 커질 수 있습니다.
+DECLARE_POLY_AGGREGATABLE를 사용 하는 경우의 장점은 집계 된 사례 `CComAggObject` 와 `CComObject` 집계할 수 없는 사례를 처리 하기 위해 모듈에서 및를 모두 사용 하지 않도록 하는 것입니다. 단일 `CComPolyObject` 개체는 두 경우를 모두 처리 합니다. 즉, 모듈에는 vtable의 복사본 하 나와 함수의 복사본이 하나만 있습니다. Vtable이 큰 경우 모듈 크기를 크게 줄일 수 있습니다. 그러나 vtable이 작은 경우를 사용 하면 집계 `CComPolyObject` 된 개체 또는 집계할 수 없는 개체 `CComAggObject` 에 대해 최적화 되지 않으므로를 사용 하 여 모듈 크기가 약간 커질 수 있습니다 `CComObject`.
 
-ATL 컨트롤 마법사를 사용 하 여 모든 컨트롤을 만드는 경우 DECLARE_POLY_AGGREGATABLE 매크로는 개체에서 자동으로 선언 됩니다.
+ATL 컨트롤 마법사를 사용 하 여 모든 컨트롤을 만드는 경우 DECLARE_POLY_AGGREGATABLE 매크로가 개체에 자동으로 선언 됩니다.
 
-##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
+## <a name="declare_protect_final_construct"></a><a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT
 
 개체를 삭제 하지 않도록 보호 합니다. ( [가 중이](ccomobjectrootex-class.md#finalconstruct)아닌 경우) 내부 집계 된 개체가 참조 횟수를 증가 시킨 다음 개수를 0으로 감소 시킵니다.
 
-```
+```cpp
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```
 
-##  <a name="declare_view_status"></a>  DECLARE_VIEW_STATUS
+## <a name="declare_view_status"></a><a name="declare_view_status"></a>DECLARE_VIEW_STATUS
 
 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 삽입 하 여 컨테이너에 VIEWSTATUS 플래그를 지정 합니다.
 
-```
+```cpp
 DECLARE_VIEW_STATUS( statusFlags )
 ```
 
@@ -379,6 +379,6 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로](../../atl/reference/atl-macros.md)

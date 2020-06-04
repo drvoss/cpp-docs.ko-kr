@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890135"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423962"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 연산자
 
@@ -35,13 +35,13 @@ operator&(
 
 ### <a name="parameters"></a>매개 변수
 
-*left* \
+*왼쪽*\
 각각의 요소를 비트 `AND`로 결합할 두 bitset 중 첫 번째입니다.
 
-*right* \
+*오른쪽*\
 각각의 요소를 비트 `AND`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `AND` 연산을 수행한 결과인 bitset입니다.
 
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 비트 시퀀스의 텍스트 표현을 출력 스트림에 삽입합니다.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -86,16 +86,16 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-*right* \
+*오른쪽*\
 출력 스트림에 문자열로 삽입할 **bitset\<N>** 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `ostr`비트 시퀀스의 텍스트 표현입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수 `<< 연산자` 오버로드를 사용하여 bitset을 먼저 문자열로 변환하지 않고 쓸 수 있습니다. 템플릿 함수는 다음을 효과적으로 실행합니다.
+템플릿 함수 오버 `operator<<`로드를 사용 하 여 bitset을 먼저 문자열로 변환 하지 않고 쓸 수 있습니다. 템플릿 함수는 다음을 효과적으로 실행합니다.
 
 `ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
@@ -134,7 +134,7 @@ int main( )
 
 bitset에 대한 비트 문자의 문자열을 읽습니다.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -146,18 +146,18 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 bitset에 삽입할 입력 스트림에 입력되는 문자열입니다.
 
-*right* \
+*오른쪽*\
 입력 스트림에서 비트를 수신하는 bitset입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-템플릿 함수는 *i_str* 문자열을 반환 합니다.
+템플릿 함수는 *i_str*문자열을 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수는 `operator>>`를 오버로드하여 `bitset(str)`값을 bitset *right*에 저장합니다. 여기서 `str`은 *i_str*에서 추출된 [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` 형식의 개체입니다.
+`operator>>` 템플릿 함수 오버 로드는 bitset에 `bitset(str)`값 `str` *오른쪽* 에 저장 합니다. 여기서는 *`< CharType, Traits, allocator< CharType > >&`* 에서 추출 된 [basic_string](basic-string-class.md) i_str 형식의 개체입니다.
 
-템플릿 함수는 *i_str*에서 요소를 추출하여 다음이 될 때까지 bitset에 삽입합니다.
+템플릿 함수는 *i_str* 에서 요소를 추출 하 여 다음이 될 때까지 bitset에 삽입 합니다.
 
 - 모든 비트 요소가 입력 스트림에서 추출되어 bitset에 저장될 때까지
 
@@ -228,13 +228,13 @@ operator^(
 
 ### <a name="parameters"></a>매개 변수
 
-*left* \
+*왼쪽*\
 각각의 요소를 비트 `EXCLUSIVE-OR`로 결합할 두 bitset 중 첫 번째입니다.
 
-*right* \
+*오른쪽*\
 각각의 요소를 비트 `EXCLUSIVE-OR`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.
 
@@ -280,13 +280,13 @@ operator|(
 
 ### <a name="parameters"></a>매개 변수
 
-*left* \
+*왼쪽*\
 각각의 요소를 비트 `OR`로 결합할 두 bitset 중 첫 번째입니다.
 
-*right* \
+*오른쪽*\
 각각의 요소를 비트 `OR`로 결합할 두 valarray 중 두 번째입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 요소가 *left* 및 *right*의 해당 요소에 대해 `OR` 연산을 수행한 결과인 bitset입니다.
 

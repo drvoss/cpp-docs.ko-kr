@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232945"
 ---
 # <a name="initializing-scalar-types"></a>스칼라 형식 초기화
 
@@ -48,7 +48,7 @@ ms.locfileid: "56151145"
 
 - 파일 범위 수준에서 선언된 변수를 초기화할 수 있습니다. 외부 수준에서 변수를 명시적으로 초기화하지 않는 경우 해당 변수는 기본적으로 0으로 초기화됩니다.
 
-- 상수 식을 사용하면 **static** *storage-class-specifier*로 선언된 모든 글로벌 변수를 초기화할 수 있습니다. **static**으로 선언될 변수는 프로그램 실행이 시작될 때 초기화됩니다. 전역 **static** 변수를 명시적으로 초기화하지 않는 경우 해당 변수는 기본적으로 0으로 초기화되고 포인터 형식을 갖는 모든 멤버에 null 포인터가 할당됩니다.
+- 상수 식을 사용하면 **static** *storage-class-specifier*로 선언된 모든 전역 변수를 초기화할 수 있습니다. **static**으로 선언될 변수는 프로그램 실행이 시작될 때 초기화됩니다. 전역 **static** 변수를 명시적으로 초기화하지 않는 경우 해당 변수는 기본적으로 0으로 초기화되고 포인터 형식을 갖는 모든 멤버에 null 포인터가 할당됩니다.
 
 - **auto** 또는 **register** 스토리지 클래스 지정자로 선언된 변수는 해당 변수가 선언된 블록에 실행 제어가 전달될 때마다 초기화됩니다. **auto** 또는 **register** 변수의 선언에서 이니셜라이저를 생략하는 경우 변수의 초기 값이 정의되지 않습니다. 자동 및 레지스터 값의 경우 이니셜라이저는 상수가 되는 것으로 제한되지 않습니다. 따라서 이니셜라이저는 함수가 호출되어도 이전에 정의된 값을 포함하는 모든 식일 수 있습니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "56151145"
 
 - 식별자 선언에 블록 범위가 있으며 식별자에 외부 링크가 있는 경우 선언이 초기화를 가질 수 없습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 다음 예제에서는 초기화를 보여 줍니다.
 
@@ -104,6 +104,6 @@ int function( void )
 
 전역 변수 `GLOBAL`은 외부 수준에서 선언되므로 전역 수명을 가집니다. 지역 변수 `LOCAL`은 **auto** 스토리지 클래스를 가지며 선언된 함수를 실행하는 동안에만 주소를 가집니다. 따라서 `LOCAL`의 주소와 함께 **static** 포인터 변수 `lp`를 초기화할 수 없습니다. `GLOBAL`의 주소가 항상 동일하므로 **static** 포인터 변수 `gp`는 해당 주소로 초기화될 수 있습니다. 마찬가지로 `*rp`는 지역 변수이며 비상수 이니셜라이저를 가질 수 있으므로 `rp`는 초기화될 수 있습니다. 블록을 입력할 때마다 `LOCAL`에 새 주소가 지정되며 이 주소는 `rp`에 할당됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [초기화](../c-language/initialization.md)

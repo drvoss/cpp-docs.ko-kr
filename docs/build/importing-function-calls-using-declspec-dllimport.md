@@ -1,60 +1,62 @@
 ---
 title: __declspec(dllimport)을 사용하여 함수 호출 가져오기
-ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
+description: DLL 데이터 및 함수를 호출할 때 __declspec(dllimport)를 사용하는 방법 및 이유.
+ms.date: 05/03/2020
 helpviewer_keywords:
 - importing function calls [C++]
 - dllimport attribute [C++], function call imports
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 8635cf5d389f72972f471a4fd53ed56c3497bfe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 515fbdb2824c1eaf41e822adeae1a16d3072eec4
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188797"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765723"
 ---
-# <a name="importing-function-calls-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 함수 호출 가져오기
+# <a name="importing-function-calls-using-__declspecdllimport"></a>`__declspec(dllimport)`을 사용해 함수 호출 가져오기
 
-다음 코드 예제를 사용 하는 방법을 보여 줍니다 **_declspec(dllimport)** 는 응용 프로그램으로 DLL에서 함수 호출을 가져옵니다. 가정 `func1` 포함 된.exe 파일에서 별도 DLL에 상주 하는 함수를 **주** 함수입니다.
+**`__declspec(dllimport)`** 을 사용하여 호출에 주석을 달면 호출이 더 빨라질 수 있습니다. **`__declspec(dllimport)`** 은 내보낸 DLL 데이터에 액세스할 때 항상 필요합니다.
 
-없이 **__declspec (dllimport)**,이 코드를 지정 합니다.
+## <a name="import-a-function-from-a-dll"></a>DLL에서 함수 가져오기
 
-```
+다음 코드 예제에서는 **`__declspec(dllimport)`** 을 사용하여 DLL의 함수 호출을 애플리케이션으로 가져오는 방법을 보여줍니다. `func1`은 **main** 함수를 포함하는 실행 파일과는 별도의 DLL에 있는 함수라고 가정합니다.
+
+이 코드에서 **`__declspec(dllimport)`** 이 없는 경우:
+
+```C
 int main(void)
 {
    func1();
 }
 ```
 
-컴파일러에서는 다음과 같은 코드를 생성 합니다.
+컴파일러는 다음과 같은 코드를 생성합니다.
 
-```
+```asm
 call func1
 ```
 
-및 링커에 다음과 같은 호출으로 변환 합니다.
+그리고 링커는 호출을 다음과 같이 변환합니다.
 
-```
+```asm
 call 0x4000000         ; The address of 'func1'.
 ```
 
-하는 경우 `func1` 에 있는 다른 DLL 링커가 직접 확인할 수 없습니다의 주소를 알 수 없으므로 있어 `func1` 됩니다. 16 비트 환경의 링커는 올바른 주소를 사용 하 여 런타임 시 로더가 패치 하 게 하는.exe 파일의 목록에이 코드 주소를 추가 합니다. 32 비트 및 64 비트 환경에서 링커는 해당 주소를 알고이 썽크를 생성 합니다. 32 비트 환경에서 썽크 다음과 같습니다.
+다른 DLL에 `func1`이 있으면 링커는 `func1`의 주소를 알 수 없기 때문에 이 주소를 직접 확인할 수 없습니다. 32비트 및 64비트 환경에서 링커는 알려진 주소에 썽크를 생성합니다. 32비트 환경에서 썽크는 다음과 같습니다.
 
-```
+```asm
 0x40000000:    jmp DWORD PTR __imp_func1
 ```
 
-여기 `imp_func1` 에 대 한 주소는 `func1` .exe 파일의 가져오기 주소 테이블의 슬롯입니다. 따라서 모든 주소는 링커에 알 수입니다. 로더만 제대로 작동 하려면 모든 항목에 대 한 로드 시.exe 파일의 가져오기 주소 테이블을 업데이트 해야 합니다.
+여기서 `__imp_func1`은 실행 파일의 가져오기 주소 테이블에 있는 `func1` 슬롯의 주소입니다. 이러한 모든 주소는 링커에게 알려집니다. 모든 것이 제대로 작동하도록 로더는 로드 시 실행 파일의 가져오기 주소 테이블을 업데이트하기만 하면 됩니다.
 
-따라서 사용 하 여 **__declspec (dllimport)** 향상 되므로 필요 하지 않은 경우 링커는 썽크를 생성 하지 않습니다. 썽크는 코드의 길이 더 큰 (RISC 시스템에서는 몇 가지 지침 수 있음) 캐시 성능을 저하 시킬 수 있습니다. 컴파일러에 알릴 때는 함수는 DLL을 하는 경우에를 간접 호출을 생성할 수 것입니다.
+따라서 **`__declspec(dllimport)`** 을 사용하는 것이 좋습니다. 썽크가 필요 없는 경우에는 링커가 썽크를 생성하지 않기 때문입니다. 썽크로 인해 코드가 더 커져(RISC 시스템에서는 몇 가지 명령일 수 있음) 캐시 성능이 저하될 수 있습니다. 컴파일러에게 이 함수가 DLL에 있음을 알려주면 컴파일러가 간접 호출을 생성할 수 있습니다.
 
-이제이 코드:
+따라서 이 코드는
 
-```
+```C
 __declspec(dllimport) void func1(void);
 int main(void)
 {
@@ -62,16 +64,16 @@ int main(void)
 }
 ```
 
-이 명령을 생성 합니다.
+이러한 명령을 생성합니다.
 
-```
+```asm
 call DWORD PTR __imp_func1
 ```
 
-썽크 및 no `jmp` 명령, 코드는 작고 빠릅니다.
+썽크가 없고 `jmp` 명령이 없으므로 코드가 더 작고 더 빠릅니다. 전체 프로그램 최적화를 사용하여 **`__declspec(dllimport)`** 없이 동일한 효과를 얻을 수도 있습니다. 자세한 내용은 [/GL(전체 프로그램 최적화)](reference/gl-whole-program-optimization.md)을 참조하세요.
 
-반면에 DLL 내에서 함수 호출에 대 한 원하지 않는 간접 호출 해야 합니다. 함수의 주소를 알고 있습니다. 시간과 공간을 로드 하 고 간접 호출 전에 함수의 주소를 저장할 필요 하므로 빠르고 작은 직접 호출은 항상 됩니다. 사용 하려는 **__declspec (dllimport)** 자체 DLL 외부에서 DLL 함수를 호출할 때. 사용 하지 마세요 **__declspec (dllimport)** 해당 DLL을 빌드할 때 DLL 내부 함수입니다.
+DLL 내 함수 호출의 경우 사용자는 간접 호출을 사용하지 않아도 되기를 바랍니다. 링커는 함수의 주소를 이미 알고 있습니다. 간접 호출 전에 함수의 주소를 로드하고 저장하는 데 추가 시간 및 공간이 필요합니다. 직접 호출은 항상 더 빠르고 더 작아야 합니다. 사용자는 DLL 자체의 외부에서 DLL 함수를 호출하는 경우에만 **`__declspec(dllimport)`** 를 사용하기를 원합니다. DLL을 빌드할 때 해당 DLL 내 함수에 **`__declspec(dllimport)`** 을 사용하지 마세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [애플리케이션으로 가져오기](importing-into-an-application.md)

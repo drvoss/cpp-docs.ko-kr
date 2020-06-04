@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: 8440ddf510f99618c28a6b6d585c8628df85f9cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516028"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171946"
 ---
 # <a name="string--ccli-and-ccx"></a>String(C++/CLI 및 C++/CX)
 
@@ -19,7 +19,7 @@ Windows 런타임 및 공용 언어 런타임은 할당된 메모리가 자동�
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-Windows 런타임 아키텍처에서는 `String` 데이터 형식이 `Platform` 네임스페이스에 있어야 합니다. 편의를 위해, Visual C++에서는 `Platform::String`의 동의어인 `string` 데이터 형식도 `default` 네임스페이스에 제공합니다.
+Windows 런타임 아키텍처에서는 `String` 데이터 형식이 `Platform` 네임스페이스에 있어야 합니다. 편의를 위해, Visual C++에서는 `string`의 동의어인 `Platform::String` 데이터 형식도 `default` 네임스페이스에 제공합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -63,7 +63,7 @@ using namespace default;
 
 컴파일러 옵션: **/clr**
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 문자열을 연결하고 비교하는 방법을 보여 줍니다.
 

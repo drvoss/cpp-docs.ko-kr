@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171933"
 ---
 # <a name="type-forwarding-ccli"></a>형식 전달(C++/CLI)
 
@@ -33,13 +33,13 @@ Windows 런타임에서는 이 기능이 지원되지 않습니다.
 
 ### <a name="parameters"></a>매개 변수
 
-*new*<br/>
+*신규*<br/>
 형식 정의를 이동하는 대상 어셈블리입니다.
 
 *type*<br/>
 정의를 다른 어셈블리로 이동하는 형식입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 구성 요소(어셈블리)가 제공되고 클라이언트 애플리케이션에서 사용된 후에 형식 전달을 사용하여 구성 요소(어셈블리)의 형식을 다른 어셈블리로 이동하고 업데이트된 구성 요소(및 필요한 추가 어셈블리)를 제공할 수 있으며, 다시 컴파일하지 않고도 클라이언트 애플리케이션이 계속 실행됩니다.
 

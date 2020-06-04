@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689833"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215282"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -24,18 +24,18 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>매개 변수
 
-*Elem* \
+*Elem*\
 와이드 문자 요소 형식입니다.
 
-*Maxcode* \
+*Maxcode*\
 로캘 패싯에 대한 최대 문자 수입니다.
 
-*모드* \
+*모드*\
 로캘 패싯에 대한 구성 정보입니다.
 
 ## <a name="remarks"></a>주의
 
-이 클래스 템플릿에서는 u t f-2 또는 u c f-4로 인코드된 와이드 문자와 u t f-UTF-16LE로 인코딩된 바이트 스트림 (모드 & little_endian 또는 u t f-16이 아닌 경우) 사이를 변환 합니다.
+이 클래스 템플릿은 utf-8 또는 u c s-4로 인코드된 와이드 문자와 u t f-UTF-16LE로 인코딩된 바이트 스트림 (모드 & little_endian 또는 u t f-16이 아닌 경우) 간을 변환 합니다.
 
 바이트 스트림은 이진 파일에 작성해야 하며, 텍스트 파일에 작성하는 경우 손상될 수 있습니다.
 
@@ -43,4 +43,4 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 헤더: \<codecvt >
 
-네임 스페이스: std
+네임스페이스: std

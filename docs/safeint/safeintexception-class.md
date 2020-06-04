@@ -11,12 +11,12 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349949"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 클래스
 
@@ -35,15 +35,15 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-name                                                    | 설명
+속성                                                    | Description
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | `SafeIntException` 개체를 만듭니다.
+[세이프인트예외::세이프인트예외](#safeintexception) | `SafeIntException` 개체를 만듭니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [SafeInt 클래스](../safeint/safeint-class.md)는 `SafeIntException` 클래스를 사용하는 유일한 클래스입니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `SafeIntException`
 
@@ -53,7 +53,7 @@ name                                                    | 설명
 
 **네임스페이스:** msl::utilities
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>세이프인트예외::세이프인트예외
 
 `SafeIntException` 개체를 만듭니다.
 
@@ -67,10 +67,10 @@ SafeIntException(
 
 ### <a name="parameters"></a>매개 변수
 
-*code*<br/>
+*코드*<br/>
 [in] 발생한 오류를 설명하는 열거형 데이터 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 가능한 *code* 값은 Safeint.h 파일에서 정의됩니다. 편의를 위해 여기에도 가능한 값이 나와 있습니다.
 

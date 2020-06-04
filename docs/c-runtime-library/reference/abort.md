@@ -1,8 +1,9 @@
 ---
 title: abort
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - abort
+- _o_abort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 3f183d6fbf9d7bce7f638e44cdc3f3b450def57b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f330d53df5af0efa41f4e3b3bb843bdc95210c70
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943984"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910911"
 ---
 # <a name="abort"></a>abort
 
@@ -45,7 +47,7 @@ ms.locfileid: "70943984"
 void abort( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **abort** 는 호출 프로세스에 대 한 제어를 반환 하지 않습니다. 기본적으로 중단 신호 처리기를 확인하고, 설정된 경우 `SIGABRT`를 표시합니다. 그런 다음 **abort** 는 현재 프로세스를 종료 하 고 부모 프로세스에 종료 코드를 반환 합니다.
 
@@ -53,7 +55,7 @@ void abort( void );
 
 **Microsoft 전용**
 
-기본적으로 디버그 런타임 라이브러리를 사용 하 여 앱을 빌드할 때 **abort** 루틴은가 발생 하기 전에 `SIGABRT` 오류 메시지를 표시 합니다. 콘솔 모드에서 실행되는 콘솔 앱에 대해서는 메시지가 `STDERR`로 전송됩니다. 창 모드에서 실행되는 Windows 데스크톱 앱 및 콘솔 앱은 메시지 상자에 메시지를 표시합니다. 메시지를 표시하지 않으려면 [_set_abort_behavior](set-abort-behavior.md)를 사용하여 `_WRITE_ABORT_MSG` 플래그를 지웁니다. 표시되는 메시지는 사용 중인 런타임 환경 버전에 따라 달라집니다. 최신 버전의 시각적 개체 C++를 사용 하 여 빌드한 응용 프로그램의 경우 메시지는 다음과 유사 합니다.
+기본적으로 디버그 런타임 라이브러리를 사용 하 여 앱을 빌드할 때 **abort** 루틴은가 발생 하기 전에 `SIGABRT` 오류 메시지를 표시 합니다. 콘솔 모드에서 실행되는 콘솔 앱에 대해서는 메시지가 `STDERR`로 전송됩니다. 창 모드에서 실행되는 Windows 데스크톱 앱 및 콘솔 앱은 메시지 상자에 메시지를 표시합니다. 메시지를 표시하지 않으려면 [_set_abort_behavior](set-abort-behavior.md)를 사용하여 `_WRITE_ABORT_MSG` 플래그를 지웁니다. 표시되는 메시지는 사용 중인 런타임 환경 버전에 따라 달라집니다. 최신 버전의 Visual C++를 사용 하 여 빌드한 응용 프로그램의 경우 메시지는 다음과 유사 합니다.
 
 > R6010 ()이 호출 되었습니다.
 
@@ -65,19 +67,21 @@ C 런타임 라이브러리의 이전 버전에서는 다음과 같은 메시지
 
 일반 정품 빌드와 디버그 빌드 모두에서 **abort** 는 중단 신호 처리기가 설정 되었는지 여부를 확인 합니다. 기본이 아닌 신호 처리기가 설정 된 경우 **abort** 는를 `raise(SIGABRT)`호출 합니다. 중단 신호 처리기 함수를 `SIGABRT` 신호와 연결하려면 [signal](signal.md) 함수를 사용합니다. 사용자 지정 작업(예: 리소스 정리 또는 정보 기록)을 수행하고 처리기 함수에서 자체 오류 코드로 앱을 종료할 수 있습니다. 사용자 지정 신호 처리기가 정의 되지 않은 경우 **abort** 는 신호를 `SIGABRT` 발생 시 키 지 않습니다.
 
-기본적으로 데스크톱 또는 콘솔 앱의 디버그가 아닌 빌드에서는 **중단** 한 다음 Windows 오류 보고 서비스 메커니즘 (이전에 Dr 이라고 함)을 호출 합니다. Watson)을 호출하여 Microsoft에 오류를 보고합니다. `_set_abort_behavior`를 호출하고 `_CALL_REPORTFAULT` 플래그를 설정하거나 마스킹하여 이 동작을 활성화 또는 비활성화할 수 있습니다. 플래그가 설정되면 "문제로 인해 프로그램이 정상 작동을 중지합니다."와 같은 내용의 메시지 상자가 표시됩니다. 사용자는 **디버그** 단추를 사용하여 디버거를 호출하는 방법 또는 **프로그램 닫기** 단추를 사용하여 운영 체제에 의해 정의된 오류 코드와 함께 앱을 종료하는 방법을 선택할 수 있습니다.
+기본적으로 데스크톱 또는 콘솔 앱의 디버그가 아닌 빌드에서는 **중단** 한 다음 Windows 오류 보고 서비스 메커니즘 (이전의 dr. Watson)을 호출 하 여 오류를 Microsoft에 보고 합니다. `_set_abort_behavior`를 호출하고 `_CALL_REPORTFAULT` 플래그를 설정하거나 마스킹하여 이 동작을 활성화 또는 비활성화할 수 있습니다. 플래그가 설정되면 "문제로 인해 프로그램이 정상 작동을 중지합니다."와 같은 내용의 메시지 상자가 표시됩니다. 사용자는 **디버그** 단추를 사용하여 디버거를 호출하는 방법 또는 **프로그램 닫기** 단추를 사용하여 운영 체제에 의해 정의된 오류 코드와 함께 앱을 종료하는 방법을 선택할 수 있습니다.
 
-Windows 오류 보고 처리기가 호출 되지 않으면 **중단** 을 호출 하 여 종료 코드 3으로 프로세스를 [종료 하 고](exit-exit-exit.md) 제어를 부모 프로세스 또는 운영 체제에 반환 합니다. `_exit`는 스트림 버퍼를 플러시하지 않거나 `atexit`/`_onexit` 프로세싱을 수행합니다.
+Windows 오류 보고 처리기가 호출 되지 않으면 **abort** 를 호출 하 여 프로세스를 종료 코드 3으로 종료 하 고 부모 프로세스 또는 운영 체제에 대 한 제어를 반환 [_exit](exit-exit-exit.md) 합니다. `_exit`는 스트림 버퍼를 플러시하지 않거나 `atexit`/`_onexit` 프로세싱을 수행합니다.
 
 CRT 디버깅에 대한 자세한 내용은 [CRT 디버깅 기술](/visualstudio/debugger/crt-debugging-techniques)을 참조하세요.
 
 **Microsoft 전용 종료**
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**abort**|\<process.h> 또는 \<stdlib.h>|
+|**중단이**|\<process.h> 또는 \<stdlib.h>|
 
 ## <a name="example"></a>예제
 
@@ -115,7 +119,7 @@ int main( void )
 File could not be opened: No such file or directory
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [abort 사용](../../cpp/using-abort.md)<br/>
 [abort 함수](../../c-language/abort-function-c.md)<br/>

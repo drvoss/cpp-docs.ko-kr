@@ -1,6 +1,6 @@
 ---
 title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbcl2
 - _ismbcl1
@@ -8,6 +8,12 @@ api_name:
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
+- _o__ismbcl0
+- _o__ismbcl0_l
+- _o__ismbcl1
+- _o__ismbcl1_l
+- _o__ismbcl2
+- _o__ismbcl2_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 04560b7dd3a7188531e247499bc2ffd18bc23ca5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953849"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919733"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -99,9 +106,9 @@ int _ismbcl2_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *C* < = 255이 고 해당 **_ismbb** 루틴이 있는 경우 (예: **_ismbcalnum** 가 **_ismbbalnum**에 해당 하는 경우) 결과는 해당 **_ismbb** 루틴의 반환 값입니다.
+이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. *C* <= 255이 고 해당 **_ismbb** 루틴이 있는 경우 (예: **_ismbcalnum** **_ismbbalnum**에 해당 하는 경우) 결과는 해당 **_ismbb** 루틴의 반환 값입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -111,16 +118,18 @@ int _ismbcl2_l(
 
 |루틴에서 반환된 값|테스트 조건(코드 페이지 932만 해당)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 비간지: 0x8140<=*c*<=0x889E.|
-|**_ismbcl0_l**|JIS 비간지: 0x8140<=*c*<=0x889E.|
-|**_ismbcl1**|JIS 수준-1: 0x889F<=*c*<=0x9872.|
-|**_ismbcl1_l**|JIS 수준-1: 0x889F<=*c*<=0x9872.|
-|**_ismbcl2**|JIS 수준-2: 0x989F<=*c*<=0xEAA4.|
-|**_ismbcl2_l**|JIS 수준-2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl0**|JIS 비 간지: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS 비 간지: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS 수준-1:0x889F<=*c*<= 0x9872|
+|**_ismbcl1_l**|JIS 수준-1:0x889F<=*c*<= 0x9872|
+|**_ismbcl2**|JIS 수준-2:0X989f<<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS 수준-2:0X989f<<=*c*<= 0xEAA4.|
 
 함수는 지정 된 값 *c* 가 위에서 설명한 테스트 조건과 일치 하는지 확인 하지만 *c* 가 유효한 멀티 바이트 문자 인지는 확인 하지 않습니다. 하위 바이트 범위가 0x00 – 0x3F, 0x7F 또는 0xFD – 0xFF인 경우 이러한 함수는 0이 아닌 값을 반환하여 문자가 테스트 조건을 충족함을 나타냅니다. [_ismbbtrail](ismbbtrail-ismbbtrail-l.md)을 사용하여 멀티바이트 문자가 정의되었는지 여부를 테스트합니다.
 
-**최종 코드 페이지 932 관련**
+**최종 코드 페이지 932 특정**
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -133,9 +142,9 @@ int _ismbcl2_l(
 |**_ismbcl2**|\<mbstring.h>|
 |**_ismbcl2_l**|\<mbstring.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [문자 분류](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)<br/>

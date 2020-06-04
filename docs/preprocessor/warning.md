@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683339"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416186"
 ---
 # <a name="warning-pragma"></a>경고 pragma
 
@@ -37,8 +37,8 @@ ms.locfileid: "74683339"
 |------------------------|-------------|
 |*1, 2, 3, 4*|주어진 수준을 지정된 경고에 적용합니다. 또한 기본적으로 해제 된 지정 된 경고를 설정 합니다.|
 |*default*|경고 동작을 기본값으로 다시 설정합니다. 또한 기본적으로 해제 된 지정 된 경고를 설정 합니다. 문서화된 기본 수준에서 경고가 생성됩니다.<br /><br /> 자세한 내용은 [기본적으로 해제 되어 있는 컴파일러 경고](../preprocessor/compiler-warnings-that-are-off-by-default.md)를 참조 하세요.|
-|*하지*|지정 된 경고 메시지를 실행 하지 않습니다.|
-|*메시지가*|지정된 경고를 오류로 보고합니다.|
+|*disable*|지정 된 경고 메시지를 실행 하지 않습니다.|
+|*error*|지정된 경고를 오류로 보고합니다.|
 |*once*|지정된 메시지를 한 번만 표시합니다.|
 |*미주*|pragma의 현재 상태를 스택에 푸시하고 다음 줄에 지정된 경고를 비활성화한 후 pragma 상태가 다시 설정되도록 경고 스택을 표시합니다.|
 
@@ -54,10 +54,10 @@ ms.locfileid: "74683339"
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -93,7 +93,7 @@ int main() {
 
 Pragma `warning( push )`는 모든 경고에 대 한 현재 경고 상태를 저장 합니다. Pragma `warning( push, n )`는 모든 경고에 대 한 현재 상태를 저장 하 고 전역 경고 수준을 *n*으로 설정 합니다.
 
-Pragma `warning( pop )`는 스택에 푸시되는 마지막 경고 상태를 팝 합니다. *밀어넣기* 와 *pop* 사이에 경고 상태에 대 한 모든 변경 내용이 취소 됩니다. 다음 예제를 고려해 보세요.
+Pragma `warning( pop )`는 스택에 푸시되는 마지막 경고 상태를 팝 합니다. *밀어넣기* 와 *pop* 사이에 경고 상태에 대 한 모든 변경 내용이 취소 됩니다. 다음 예를 살펴보세요.
 
 ```cpp
 #pragma warning( push )
@@ -116,6 +116,6 @@ Pragma `warning( pop )`는 스택에 푸시되는 마지막 경고 상태를 팝
 
 경고를 표시 하지 않는 컴파일러 옵션에 대 한 자세한 내용은 [/fi](../build/reference/fi-name-forced-include-file.md) 및 [/w](../build/reference/compiler-option-warning-level.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,19 +1,16 @@
 ---
 title: '&lt;예외 > (C++ 문서 주석)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988299"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439868"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -35,9 +32,9 @@ ms.locfileid: "74988299"
 제네릭 형식에 대한 cref 참조를 만드는 방법에 대한 자세한 내용은 [\<see>](see-visual-cpp.md)를 참조하세요.
 
 *description*<br/>
-설명.
+설명
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [/doc](doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
@@ -67,6 +64,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)

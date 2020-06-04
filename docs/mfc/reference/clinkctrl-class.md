@@ -1,5 +1,5 @@
 ---
-title: CLinkCtrl 클래스
+title: 클링Ctrl 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CLinkCtrl
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 37d9e624c40f0d6aa7f3d3fa1ed3d97ffa478ee7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aa1f630b448c60a0eeb6a905ed6eef6f84a2ff8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372251"
 ---
-# <a name="clinkctrl-class"></a>CLinkCtrl 클래스
+# <a name="clinkctrl-class"></a>클링Ctrl 클래스
 
 Windows의 공용 SysLink 컨트롤의 기능을 제공합니다.
 
@@ -55,35 +55,35 @@ class CLinkCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CLinkCtrl::CLinkCtrl](#clinkctrl)|`CLinkCtrl` 개체를 생성합니다.|
+|[클링Ctrl:::클링Ctrl](#clinkctrl)|`CLinkCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CLinkCtrl::Create](#create)|링크 컨트롤을 만들고이를 `CLinkCtrl` 개체에 연결 합니다.|
-|[CLinkCtrl::CreateEx](#createex)|확장 스타일을 사용 하 여 링크 컨트롤을 만들고이를 `CLinkCtrl` 개체에 연결 합니다.|
-|[CLinkCtrl::GetIdealHeight](#getidealheight)|링크 컨트롤의 이상적인 높이를 검색 합니다.|
-|[CLinkCtrl::GetIdealSize](#getidealsize)|링크의 지정 된 너비에 따라 현재 링크 컨트롤에 대 한 링크 텍스트의 기본 설정 높이를 계산 합니다.|
-|[CLinkCtrl::GetItem](#getitem)|링크 컨트롤 항목의 상태 및 특성을 검색 합니다.|
-|[CLinkCtrl::GetItemID](#getitemid)|링크 컨트롤 항목의 ID를 검색 합니다.|
-|[CLinkCtrl::GetItemState](#getitemstate)|링크 컨트롤 항목의 상태를 검색 합니다.|
-|[CLinkCtrl::GetItemUrl](#getitemurl)|링크 컨트롤 항목이 나타내는 URL을 검색 합니다.|
-|[CLinkCtrl::HitTest](#hittest)|사용자가 지정 된 링크를 클릭 했는지 여부를 확인 합니다.|
-|[CLinkCtrl::SetItem](#setitem)|링크 컨트롤 항목의 상태 및 특성을 설정 합니다.|
-|[CLinkCtrl::SetItemID](#setitemid)|링크 컨트롤 항목의 ID를 설정 합니다.|
-|[CLinkCtrl::SetItemState](#setitemstate)|링크 컨트롤 항목의 상태를 설정 합니다.|
-|[CLinkCtrl::SetItemUrl](#setitemurl)|링크 컨트롤 항목으로 표시 되는 URL을 설정 합니다.|
+|[CLinkCtrl::만들기](#create)|링크 컨트롤을 만들고 개체에 `CLinkCtrl` 연결합니다.|
+|[CLinkCtrl::만들기](#createex)|확장 된 스타일을 가진 링크 컨트롤을 `CLinkCtrl` 만들고 개체에 연결 합니다.|
+|[클링Ctrl::GetIdeal높이](#getidealheight)|링크 컨트롤의 이상적인 높이를 검색합니다.|
+|[클링크터링::겟아이노어사이즈](#getidealsize)|링크의 지정된 너비에 따라 현재 링크 컨트롤에 대한 링크 텍스트의 기본 높이를 계산합니다.|
+|[CLinkCtrl::GetItem](#getitem)|링크 컨트롤 항목의 상태 및 특성을 검색합니다.|
+|[클링Ctrl:::GetItemID](#getitemid)|링크 컨트롤 항목의 ID를 검색합니다.|
+|[CLinkCtrl::겟아이템 상태](#getitemstate)|링크 제어 항목의 상태를 검색합니다.|
+|[CLinkCtrl:::GetItemUrl](#getitemurl)|링크 컨트롤 항목으로 표시되는 URL을 검색합니다.|
+|[클링Ctrl::히트 테스트](#hittest)|사용자가 지정된 링크를 클릭했는지 여부를 확인합니다.|
+|[CLinkCtrl::세트항목](#setitem)|링크 컨트롤 항목의 상태와 특성을 설정합니다.|
+|[CLinkCtrl::세트항목ID](#setitemid)|링크 컨트롤 항목의 ID를 설정합니다.|
+|[CLinkCtrl::세트항목 상태](#setitemstate)|링크 제어 항목의 상태를 설정합니다.|
+|[CLinkCtrl:::세트항목Url](#setitemurl)|링크 컨트롤 항목으로 표시되는 URL을 설정합니다.|
 
 ## <a name="remarks"></a>설명
 
-"링크 컨트롤"은 하이퍼텍스트 링크를 창에 포함 하는 편리한 방법을 제공 합니다. 실제 컨트롤은 표시 된 텍스트를 렌더링 하 고 사용자가 포함 된 링크를 클릭할 때 적절 한 응용 프로그램을 시작 하는 창입니다. 한 컨트롤 내에서 여러 링크가 지원 되며 0부터 시작 하는 인덱스를 사용 하 여 액세스할 수 있습니다.
+"링크 컨트롤"은 창에 하이퍼텍스트 링크를 포함할 수 있는 편리한 방법을 제공합니다. 실제 컨트롤은 표시가 표시된 텍스트를 렌더링하고 사용자가 포함된 링크를 클릭할 때 적절한 응용 프로그램을 실행하는 창입니다. 하나의 컨트롤 내에서 여러 링크가 지원되며 0기반 인덱스로 액세스할 수 있습니다.
 
-이 컨트롤과 클래스는 `CLinkCtrl` Windows XP 이상에서 실행 되는 프로그램에만 사용할 수 있습니다.
+이 컨트롤(및 `CLinkCtrl` 따라서 클래스)은 Windows XP 및 이후 에서 실행되는 프로그램에서만 사용할 수 있습니다.
 
-자세한 내용은 Windows SDK의 [Syslink 컨트롤](/windows/win32/Controls/syslink-overview) 을 참조 하십시오.
+자세한 내용은 Windows SDK의 [SysLink 제어를](/windows/win32/Controls/syslink-overview) 참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -99,7 +99,7 @@ class CLinkCtrl : public CWnd
 
 **헤더:** afxcmn.h
 
-##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl
+## <a name="clinkctrlclinkctrl"></a><a name="clinkctrl"></a>클링Ctrl:::클링Ctrl
 
 `CLinkCtrl` 개체를 생성합니다.
 
@@ -107,9 +107,9 @@ class CLinkCtrl : public CWnd
 CLinkCtrl();
 ```
 
-##  <a name="create"></a>  CLinkCtrl::Create
+## <a name="clinkctrlcreate"></a><a name="create"></a>CLinkCtrl::만들기
 
-링크 컨트롤을 만들고이를 `CLinkCtrl` 개체에 연결 합니다.
+링크 컨트롤을 만들고 개체에 `CLinkCtrl` 연결합니다.
 
 ```
 virtual BOOL Create(
@@ -128,45 +128,45 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="parameters"></a>매개 변수
 
 *lpszLinkMarkup*<br/>
-표시할 표시 된 텍스트가 들어 있는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 [Syslink 컨트롤 개요](/windows/win32/Controls/syslink-overview)항목의 "태그 및 링크 액세스" 섹션을 참조 하세요.
+표시할 표시된 텍스트를 포함하는 0-종료된 문자열에 대한 포인터입니다. 자세한 내용은 [SysLink 컨트롤의 개요](/windows/win32/Controls/syslink-overview)항목에서 "마크업 및 링크 액세스" 섹션을 참조하십시오.
 
 *dwStyle*<br/>
-링크 컨트롤의 스타일을 지정 합니다. 컨트롤 스타일의 조합을 적용 합니다. 자세한 내용은의 [공용 컨트롤 스타일](/windows/win32/Controls/common-control-styles) `Windows SDK` 을 참조 하십시오.
+링크 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용합니다. 자세한 내용은 [에서](/windows/win32/Controls/common-control-styles) `Windows SDK` 일반 제어 스타일을 참조하십시오.
 
 *rect*<br/>
-링크 컨트롤의 크기와 위치를 지정 합니다. 이는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 일 수 있습니다.
+링크 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
-링크 컨트롤의 부모 창을 지정 합니다. NULL이 아니어야 합니다.
+링크 컨트롤의 상위 창을 지정합니다. NULL이 아니어야 합니다.
 
 *nID*<br/>
-링크 컨트롤의 ID를 지정 합니다.
+링크 컨트롤의 ID를 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-초기화에 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+초기화가 성공한 경우 TRUE; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-두 단계로 개체 `CLinkCtrl` 를 구성 합니다. 먼저 생성자를 호출한 다음을 호출 `Create`하 여 링크 컨트롤을 만들고이를 `CLinkCtrl` 개체에 연결 합니다. 컨트롤과 함께 확장 된 windows 스타일을 사용 하려는 경우 대신 `Create` [Clinkctrl:: createex](#createex) 를 호출 합니다.
+두 단계로 `CLinkCtrl` 객체를 생성합니다. 먼저 생성자 호출 한 `Create`다음 호출 합니다 . `CLinkCtrl` 컨트롤에서 확장 된 창 스타일을 사용 하려면 [CLinkCtrl::CreateEx](#createex) 대신 호출 `Create`합니다.
 
-`Create` 메서드의 두 번째 형태는 사용 되지 않습니다. *LpszLinkMarkup* 매개 변수를 지정 하는 첫 번째 폼을 사용 합니다.
+`Create` 메서드의 두 번째 형식은 더 이상 사용되지 않습니다. *lpszLinkMarkup* 매개 변수를 지정하는 첫 번째 양식을 사용합니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 두 개의 링크 컨트롤에 `m_Link1` 액세스 `m_Link2`하는 데 사용 되는 및 라는 두 개의 변수를 정의 합니다.
+다음 코드 예제에서는 두 개의 `m_Link1` 링크 `m_Link2`컨트롤에 액세스하는 데 사용되는 명명된 변수와 의 두 변수를 정의합니다.
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 다른 링크 컨트롤의 위치를 기반으로 한 링크 컨트롤을 만듭니다. 리소스 로더는 응용 프로그램이 시작 될 때 첫 번째 링크 컨트롤을 만듭니다. 응용 프로그램이 OnInitDialog 메서드를 입력 하면 첫 번째 링크 컨트롤의 위치를 기준으로 두 번째 링크 컨트롤을 만듭니다. 그런 다음 표시 되는 텍스트에 맞게 두 번째 링크 컨트롤의 크기를 조정 합니다.
+다음 코드 예제는 다른 링크 컨트롤의 위치에 따라 하나의 링크 컨트롤을 만듭니다. 리소스 로더는 응용 프로그램이 시작될 때 첫 번째 링크 컨트롤을 만듭니다. 응용 프로그램이 OnInitDialog 메서드를 입력하면 첫 번째 링크 컨트롤의 위치를 기준으로 두 번째 링크 컨트롤을 만듭니다. 그런 다음 두 번째 링크 컨트롤의 크기를 조정하여 표시되는 텍스트에 맞춥습니다.
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]
 
-##  <a name="createex"></a>  CLinkCtrl::CreateEx
+## <a name="clinkctrlcreateex"></a><a name="createex"></a>CLinkCtrl::만들기
 
-확장 스타일을 사용 하 여 링크 컨트롤을 만들고이를 `CLinkCtrl` 개체에 연결 합니다.
+확장 된 스타일을 가진 링크 컨트롤을 `CLinkCtrl` 만들고 개체에 연결 합니다.
 
 ```
 virtual BOOL CreateEx(
@@ -187,52 +187,52 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="parameters"></a>매개 변수
 
 *lpszLinkMarkup*<br/>
-표시할 표시 된 텍스트가 들어 있는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 [Syslink 컨트롤 개요](/windows/win32/Controls/syslink-overview)항목의 "태그 및 링크 액세스" 섹션을 참조 하세요.
+표시할 표시된 텍스트를 포함하는 0-종료된 문자열에 대한 포인터입니다. 자세한 내용은 [SysLink 컨트롤의 개요](/windows/win32/Controls/syslink-overview)항목에서 "마크업 및 링크 액세스" 섹션을 참조하십시오.
 
 *dwExStyle*<br/>
-링크 컨트롤의 확장 스타일을 지정 합니다. 확장 된 Windows 스타일의 목록에 대해서는 Windows SDK의 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 에 대 한 *dwexstyle* 매개 변수를 참조 하세요.
+링크 컨트롤의 확장 스타일을 지정합니다. 확장 된 Windows 스타일 목록은 Windows SDK에서 [CreateWindowEx에](/windows/win32/api/winuser/nf-winuser-createwindowexw) 대한 *dwExStyle* 매개 변수를 참조하십시오.
 
 *dwStyle*<br/>
-링크 컨트롤의 스타일을 지정 합니다. 컨트롤 스타일의 조합을 적용 합니다. 자세한 내용은 Windows SDK의 [공용 컨트롤 스타일](/windows/win32/Controls/common-control-styles) 을 참조 하세요.
+링크 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용합니다. 자세한 내용은 Windows SDK의 [일반 제어 스타일을](/windows/win32/Controls/common-control-styles) 참조하십시오.
 
 *rect*<br/>
-링크 컨트롤의 크기와 위치를 지정 합니다. 이는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 일 수 있습니다.
+링크 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
-링크 컨트롤의 부모 창을 지정 합니다. NULL이 아니어야 합니다.
+링크 컨트롤의 상위 창을 지정합니다. NULL이 아니어야 합니다.
 
 *nID*<br/>
-링크 컨트롤의 ID를 지정 합니다.
+링크 컨트롤의 ID를 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-초기화에 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
+초기화가 성공한 경우 TRUE; 그렇지 않으면 거짓.
 
 ### <a name="remarks"></a>설명
 
-대신 `CreateEx` [Create](#create) 를 사용 하 여 확장 된 Windows 스타일 상수를 적용 합니다.
+만들기 `CreateEx` 대신 [확장된](#create) Windows 스타일 상수를 적용합니다.
 
-`CreateEx` 메서드의 두 번째 형태는 사용 되지 않습니다. *LpszLinkMarkup* 매개 변수를 지정 하는 첫 번째 폼을 사용 합니다.
+`CreateEx` 메서드의 두 번째 형식은 더 이상 사용되지 않습니다. *lpszLinkMarkup* 매개 변수를 지정하는 첫 번째 양식을 사용합니다.
 
-##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight
+## <a name="clinkctrlgetidealheight"></a><a name="getidealheight"></a>클링Ctrl::GetIdeal높이
 
-링크 컨트롤의 이상적인 높이를 검색 합니다.
+링크 컨트롤의 이상적인 높이를 검색합니다.
 
 ```
 int GetIdealHeight() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-컨트롤의 이상적인 높이 (픽셀)입니다.
+컨트롤의 이상적인 높이(픽셀 단위)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight)의 동작을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight)Win32 메시지의 동작을 구현합니다.
 
-##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize
+## <a name="clinkctrlgetidealsize"></a><a name="getidealsize"></a>클링크터링::겟아이노어사이즈
 
-링크의 지정 된 너비에 따라 현재 링크 컨트롤에 대 한 링크 텍스트의 기본 설정 높이를 계산 합니다.
+링크의 지정된 너비에 따라 현재 링크 컨트롤에 대한 링크 텍스트의 기본 높이를 계산합니다.
 
 ```
 int GetIdealSize(
@@ -242,24 +242,24 @@ int GetIdealSize(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
-|*cxMaxWidth*|진행 링크의 최대 너비 (픽셀)입니다.|
-|[out] \* *pSize*|Windows [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다. 이 메서드가 반환 될 때 `SIZE` 구조체의 *cy* 멤버는 *cxmaxwidth*로 지정 된 링크 텍스트 너비에 이상적인 링크 텍스트 높이를 포함 합니다. 구조체의 *cx* 멤버는 실제로 필요한 링크 텍스트 너비를 포함 합니다.|
+|*cx맥스폭*|【인】 링크의 최대 너비(픽셀)입니다.|
+|【아웃】 \* *p사이즈*|Windows [SIZE](/windows/win32/api/windef/ns-windef-size) 구조에 대한 포인터입니다. 이 메서드가 반환하면 `SIZE` 구조체의 *cy* 멤버에는 *cxMaxWidth로*지정된 링크 텍스트 너비에 대한 이상적인 링크 텍스트 높이가 포함되어 있습니다. 구조체의 *cx* 멤버에는 실제로 필요한 링크 텍스트 너비가 포함되어 있습니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-링크 텍스트의 기본 설정 높이 (픽셀)입니다. 반환 값은 `SIZE` 구조체의 *cy* 멤버 값과 동일 합니다.
+링크 텍스트의 기본 높이(픽셀)입니다. 반환 값은 구조의 *cy* 멤버 값과 `SIZE` 동일합니다.
 
 ### <a name="remarks"></a>설명
 
-이 `GetIdealSize` 메서드에 대 한 예제는 [clinkctrl:: Create](#create)의 예제를 참조 하세요.
+`GetIdealSize` 메서드의 예는 [CLinkCtrl:만들기](#create)의 예제를 참조하십시오.
 
 이 메서드는 Windows SDK에 설명 된 [LM_GETIDEALSIZE](/windows/win32/Controls/lm-getidealsize) 메시지를 보냅니다.
 
-##  <a name="getitem"></a>  CLinkCtrl::GetItem
+## <a name="clinkctrlgetitem"></a><a name="getitem"></a>CLinkCtrl::GetItem
 
-링크 컨트롤 항목의 상태 및 특성을 검색 합니다.
+링크 컨트롤 항목의 상태 및 특성을 검색합니다.
 
 ```
 BOOL GetItem(PLITEM pItem) const;
@@ -268,19 +268,19 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="parameters"></a>매개 변수
 
 *pItem*<br/>
-항목 정보를 받을 [litem](/windows/win32/api/commctrl/ns-commctrl-litem) 구조에 대 한 포인터입니다.
+항목 정보를 수신하는 [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 구조에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [LM_GETITEM](/windows/win32/Controls/lm-getitem)의 동작을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 LM_GETITEM Win32 [메시지의](/windows/win32/Controls/lm-getitem)동작을 구현합니다.
 
-##  <a name="getitemid"></a>  CLinkCtrl::GetItemID
+## <a name="clinkctrlgetitemid"></a><a name="getitemid"></a>클링Ctrl:::GetItemID
 
-링크 컨트롤 항목의 ID를 검색 합니다.
+링크 컨트롤 항목의 ID를 검색합니다.
 
 ```
 BOOL GetItemID(
@@ -295,32 +295,32 @@ BOOL GetItemID(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
-*strID*<br/>
-지정 된 항목의 ID를 포함 하는 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.
+*스트리드 (것)들*<br/>
+지정된 항목의 ID를 포함하는 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.
 
 *szID*<br/>
-지정 된 항목의 ID를 포함 하는 null로 끝나는 문자열입니다.
+지정된 항목의 ID를 포함하는 null-종료된 문자열입니다.
 
 *cchID*<br/>
-*Szid* 버퍼의 문자 크기입니다.
+*szID* 버퍼의 문자 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 > [!NOTE]
->  이 함수는 *Szid 또는 대해* 의 버퍼가 MAX_LINKID_TEXT 보다 작은 경우에도 FALSE를 반환 합니다.
+> 또한 이 함수는 *szID 또는 strID의* 버퍼가 MAX_LINKID_TEXT 보다 작은 경우 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-특정 링크 컨트롤 항목의 ID를 검색 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_GETITEM](/windows/win32/Controls/lm-getitem) 를 참조 하세요.
+특정 링크 컨트롤 항목의 ID를 검색합니다. 자세한 내용은 Windows SDK에서 [LM_GETITEM](/windows/win32/Controls/lm-getitem) Win32 메시지를 참조하십시오.
 
-##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState
+## <a name="clinkctrlgetitemstate"></a><a name="getitemstate"></a>CLinkCtrl::겟아이템 상태
 
-링크 컨트롤 항목의 상태를 검색 합니다.
+링크 제어 항목의 상태를 검색합니다.
 
 ```
 BOOL GetItemState(
@@ -331,26 +331,26 @@ BOOL GetItemState(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
 *pnState*<br/>
-지정 된 상태 항목의 값입니다.
+지정된 상태 항목의 값입니다.
 
-*stateMask*<br/>
-가져올 상태 항목을 설명 하는 플래그의 조합입니다. 값 목록은 `state` [litem](/windows/win32/api/commctrl/ns-commctrl-litem) 구조에서 멤버에 대 한 설명을 참조 하세요. 허용 되는 항목은에서 `state`허용 하는 항목과 동일 합니다.
+*상태 마스크*<br/>
+얻을 상태 항목을 설명하는 플래그의 조합입니다. 값 목록은 `state` [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 구조의 멤버 설명을 참조하십시오. 허용 가능한 항목은 에서 `state`허용되는 항목과 동일합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-특정 링크 컨트롤 항목의 지정 된 상태 항목 값을 검색 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_GETITEM](/windows/win32/Controls/lm-getitem) 를 참조 하세요.
+특정 링크 컨트롤 항목의 지정된 상태 항목의 값을 검색합니다. 자세한 내용은 Windows SDK에서 [LM_GETITEM](/windows/win32/Controls/lm-getitem) Win32 메시지를 참조하십시오.
 
-##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl
+## <a name="clinkctrlgetitemurl"></a><a name="getitemurl"></a>CLinkCtrl:::GetItemUrl
 
-링크 컨트롤 항목이 나타내는 URL을 검색 합니다.
+링크 컨트롤 항목으로 표시되는 URL을 검색합니다.
 
 ```
 BOOL GetItemUrl(
@@ -365,32 +365,32 @@ BOOL GetItemUrl(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
-*strUrl*<br/>
-지정 된 항목으로 표시 되는 URL을 포함 하는 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.
+*스트렐*<br/>
+지정된 항목으로 표시되는 URL을 포함하는 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 개체
 
 *szUrl*<br/>
-지정 된 항목으로 표시 되는 URL을 포함 하는 null로 끝나는 문자열입니다.
+지정된 항목으로 표시되는 URL을 포함하는 null-종료된 문자열
 
 *cchUrl*<br/>
-*Szurl* 버퍼의 문자 크기입니다.
+*szURL* 버퍼의 문자 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 > [!NOTE]
->  이 함수는 *Szurl 또는 strUrl* 의 버퍼가 MAX_LINKID_TEXT 보다 작은 경우에도 FALSE를 반환 합니다.
+> *또한 szUrl 또는 strUrl의* 버퍼가 MAX_LINKID_TEXT 보다 작은 경우 FALSE를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-지정 된 링크 컨트롤 항목이 나타내는 URL을 검색 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_GETITEM](/windows/win32/Controls/lm-getitem) 를 참조 하세요.
+지정된 링크 컨트롤 항목으로 표시되는 URL을 검색합니다. 자세한 내용은 Windows SDK에서 [LM_GETITEM](/windows/win32/Controls/lm-getitem) Win32 메시지를 참조하십시오.
 
-##  <a name="hittest"></a>  CLinkCtrl::HitTest
+## <a name="clinkctrlhittest"></a><a name="hittest"></a>클링Ctrl::히트 테스트
 
-사용자가 지정 된 링크를 클릭 했는지 여부를 확인 합니다.
+사용자가 지정된 링크를 클릭했는지 여부를 확인합니다.
 
 ```
 BOOL HitTest(PLHITTESTINFO phti) const;
@@ -399,19 +399,19 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="parameters"></a>매개 변수
 
 *phti*<br/>
-사용자가 클릭 `LHITTESTINFO` 한 링크에 대 한 정보를 포함 하는 구조체에 대 한 포인터입니다.
+사용자가 클릭한 `LHITTESTINFO` 링크에 대한 정보가 포함된 구조체에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [LM_HITTEST](/windows/win32/Controls/lm-hittest)의 동작을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 [LM_HITTEST](/windows/win32/Controls/lm-hittest)Win32 메시지의 동작을 구현합니다.
 
-##  <a name="setitem"></a>  CLinkCtrl::SetItem
+## <a name="clinkctrlsetitem"></a><a name="setitem"></a>CLinkCtrl::세트항목
 
-링크 컨트롤 항목의 상태 및 특성을 설정 합니다.
+링크 컨트롤 항목의 상태와 특성을 설정합니다.
 
 ```
 BOOL SetItem(PLITEM pItem);
@@ -420,19 +420,19 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="parameters"></a>매개 변수
 
 *pItem*<br/>
-설정할 정보를 포함 하는 [Litem](/windows/win32/api/commctrl/ns-commctrl-litem) 구조체에 대 한 포인터입니다.
+설정할 정보가 포함된 [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 구조에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [LM_SETITEM](/windows/win32/Controls/lm-setitem)의 동작을 구현 합니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 [LM_SETITEM](/windows/win32/Controls/lm-setitem)Win32 메시지의 동작을 구현합니다.
 
-##  <a name="setitemid"></a>  CLinkCtrl::SetItemID
+## <a name="clinkctrlsetitemid"></a><a name="setitemid"></a>CLinkCtrl::세트항목ID
 
-링크 컨트롤 항목의 ID를 검색 합니다.
+링크 컨트롤 항목의 ID를 검색합니다.
 
 ```
 BOOL SetItemID(
@@ -442,23 +442,23 @@ BOOL SetItemID(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
 *szID*<br/>
-지정 된 항목의 ID를 포함 하는 null로 끝나는 문자열입니다.
+지정된 항목의 ID를 포함하는 null-종료된 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-특정 링크 컨트롤 항목의 ID를 설정 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_SETITEM](/windows/win32/Controls/lm-setitem) 를 참조 하세요.
+특정 링크 컨트롤 항목의 ID를 설정합니다. 자세한 내용은 Windows SDK에서 [LM_SETITEM](/windows/win32/Controls/lm-setitem) Win32 메시지를 참조하십시오.
 
-##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState
+## <a name="clinkctrlsetitemstate"></a><a name="setitemstate"></a>CLinkCtrl::세트항목 상태
 
-링크 컨트롤 항목의 상태를 검색 합니다.
+링크 제어 항목의 상태를 검색합니다.
 
 ```
 BOOL SetItemState(
@@ -469,26 +469,26 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
 *pnState*<br/>
-설정 되는 지정 된 상태 항목의 값입니다.
+설정 중인 지정된 상태 항목의 값입니다.
 
-*stateMask*<br/>
-설정 되는 상태 항목을 설명 하는 플래그의 조합입니다. 값 목록은 `state` [litem](/windows/win32/api/commctrl/ns-commctrl-litem) 구조에서 멤버에 대 한 설명을 참조 하세요. 허용 되는 항목은에서 `state`허용 하는 항목과 동일 합니다.
+*상태 마스크*<br/>
+설정 중인 상태 항목을 설명하는 플래그의 조합입니다. 값 목록은 `state` [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 구조의 멤버 설명을 참조하십시오. 허용 가능한 항목은 에서 `state`허용되는 항목과 동일합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-특정 링크 컨트롤 항목의 지정 된 상태 항목 값을 설정 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_SETITEM](/windows/win32/Controls/lm-setitem) 를 참조 하세요.
+특정 링크 컨트롤 항목의 지정된 상태 항목의 값을 설정합니다. 자세한 내용은 Windows SDK에서 [LM_SETITEM](/windows/win32/Controls/lm-setitem) Win32 메시지를 참조하십시오.
 
-##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl
+## <a name="clinkctrlsetitemurl"></a><a name="setitemurl"></a>CLinkCtrl:::세트항목Url
 
-링크 컨트롤 항목으로 표시 되는 URL을 설정 합니다.
+링크 컨트롤 항목으로 표시되는 URL을 설정합니다.
 
 ```
 BOOL SetItemUrl(
@@ -498,21 +498,21 @@ BOOL SetItemUrl(
 
 ### <a name="parameters"></a>매개 변수
 
-*iLink*<br/>
-링크 컨트롤 항목의 인덱스입니다.
+*아이 링크*<br/>
+링크 제어 항목의 인덱스입니다.
 
 *szUrl*<br/>
-지정 된 항목으로 표시 되는 URL을 포함 하는 null로 끝나는 문자열입니다.
+지정된 항목으로 표시되는 URL을 포함하는 null-종료된 문자열
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
+성공에 TRUE를 반환, 실패에 FALSE.
 
 ### <a name="remarks"></a>설명
 
-지정 된 링크 컨트롤 항목으로 표시 되는 URL을 설정 합니다. 자세한 내용은 Windows SDK의 Win32 메시지 [LM_SETITEM](/windows/win32/Controls/lm-setitem) 를 참조 하세요.
+지정된 링크 컨트롤 항목으로 표시되는 URL을 설정합니다. 자세한 내용은 Windows SDK에서 [LM_SETITEM](/windows/win32/Controls/lm-setitem) Win32 메시지를 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368141"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
 
@@ -30,26 +30,26 @@ struct ITopologyExecutionResource;
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[ITopologyExecutionResource:: GetId](#getid)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|
-|[ITopologyExecutionResource:: GetNext](#getnext)|열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.|
+|[이토폴로지실행리소스::GetId](#getid)|이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.|
+|[i토폴로지실행리소스::GetNext](#getnext)|열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.|
 
 ## <a name="remarks"></a>설명
 
-이 인터페이스는 일반적으로 리소스 관리자에서 관찰 되는 시스템의 토폴로지를 탐색 하는 데 사용 됩니다.
+이 인터페이스는 일반적으로 리소스 관리자에서 관찰한 대로 시스템의 토폴로지 이동에 사용됩니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `ITopologyExecutionResource`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** concrtrm. h
+**헤더:** concrtrm.h
 
 **네임스페이스:** 동시성
 
-## <a name="getid"></a>ITopologyExecutionResource:: GetId 메서드
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>itopology실행리소스::GetId 방법
 
 이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.
 
@@ -61,7 +61,7 @@ virtual unsigned int GetId() const = 0;
 
 이 실행 리소스에 대한 리소스 관리자의 고유 식별자입니다.
 
-## <a name="getnext"></a>ITopologyExecutionResource:: GetNext 메서드
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>itopology실행리소스::GetNext 방법
 
 열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.
 
@@ -75,4 +75,4 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)
+[동시성 네임스페이스](concurrency-namespace.md)

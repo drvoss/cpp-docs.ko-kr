@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299766"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166760"
 ---
 # <a name="general-property-page-project"></a>일반 속성 페이지(프로젝트)
 
 ::: moniker range=">=vs-2019"
 
-이 항목은 Windows 용 Visual Studio 프로젝트에 적용 됩니다. Linux 프로젝트의 경우 [linux C++ 속성 페이지 참조](../../linux/prop-pages-linux.md)를 참조 하세요. Cmake 프로젝트의 경우 [Visual Studio의 cmake 프로젝트](../cmake-projects-in-visual-studio.md)를 참조 하세요.
+이 항목은 Windows 용 Visual Studio 프로젝트에 적용 됩니다. Linux 프로젝트의 경우 [linux C++ 속성 페이지 참조](../../linux/prop-pages-linux.md)를 참조 하세요. Cmake 프로젝트의 경우 [Visual Studio의 cmake 프로젝트](../cmake-projects-in-visual-studio.md)를 참조 하세요. Android 프로젝트의 경우 [일반 프로젝트 속성 ( C++android)](/cpp/cross-platform/general-android-prop-page)을 참조 하세요. Android 메이크파일 프로젝트의 경우 [일반 프로젝트 속성 ( C++ android 메이크파일)](/cpp/cross-platform/general-makefile-android-prop-page) 을 참조 하세요.
 
 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하면 왼쪽 창의 **구성 속성** 노드 아래에 있는 **일반** 속성 페이지에 다음 속성이 표시 됩니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "68299766"
 
    이 프로젝트에서 생성하는 파일 이름을 지정합니다. 기본적으로 이 속성은 매크로 $(ProjectName)에서 지정한 파일 이름입니다.
 
-- **구성 형식**
+- **구성 유형**
 
   선택할 수 있는 여러 구성 형식이 있습니다.
 
@@ -88,11 +88,11 @@ ms.locfileid: "68299766"
 
    Windows 7 또는 Windows Vista를 대상으로 하려면 해당 플랫폼에 대해 Windows SDK 8.1이 이전 버전과 호환되므로 **8.1** 값을 사용합니다. 또한 targetver.h에서 **_WIN32_WINNT**에 대한 적절한 값을 정의해야 합니다. Windows 7의 경우 0x0601입니다. [WINVER 및 _WIN32_WINNT 수정](../../porting/modifying-winver-and-win32-winnt.md)을 참조하세요.
 
-   Visual Studio에 포함된 Windows XP 플랫폼 도구 집합을 설치하여 Windows XP 및 Windows 2003 Server 프로젝트를 빌드하는 현재 버전의 라이브러리를 사용할 수 있습니다. 이 플랫폼 도구 집합을 다운로드하고 사용하는 방법에 대한 자세한 내용은 [Windows XP용 프로그램 구성](../configuring-programs-for-windows-xp.md)을 참조하세요. 플랫폼 도구 세트를 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 세트 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
+   Visual Studio에 포함된 Windows XP 플랫폼 도구 집합을 설치하여 Windows XP 및 Windows 2003 Server 프로젝트를 빌드하는 현재 버전의 라이브러리를 사용할 수 있습니다. 이 플랫폼 도구 집합을 다운로드하고 사용하는 방법에 대한 자세한 내용은 [Windows XP용 프로그램 구성](../configuring-programs-for-windows-xp.md)을 참조하세요. 플랫폼 도구 집합을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
 
 - **플랫폼 도구 집합**
 
-   프로젝트가 다른 버전의 Visual C++ 라이브러리 및 컴파일러를 대상으로 할 수 있도록 허용합니다. Visual Studio C++ 프로젝트는 visual studio에 의해 설치 된 기본 도구 집합 또는 WINDOWX XP에서 실행할 수 있는 실행 파일을 만드는 도구 집합을 비롯 한 여러 이전 버전의 visual studio에서 설치 된 도구 집합 중 하나를 대상으로 할 수 있습니다. 플랫폼 도구 집합 [을 변경 하는 방법에 대 한 자세한 내용은 방법: 대상 프레임워크 및 플랫폼 도구 세트 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
+   프로젝트가 다른 버전의 Visual C++ 라이브러리 및 컴파일러를 대상으로 할 수 있도록 허용합니다. Visual Studio C++ 프로젝트는 visual studio에 의해 설치 된 기본 도구 집합을 대상으로 하거나, Windows XP에서 실행 될 수 있는 실행 파일을 만드는 도구 집합을 포함 하 여 여러 이전 버전의 visual studio에서 설치한 도구 집합 중 하나를 대상으로 할 수 플랫폼 도구 집합을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
 
 - **C++언어 표준**
 
@@ -102,7 +102,7 @@ ms.locfileid: "68299766"
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio 2015 및 Visual Studio 2017에서 **솔루션 탐색기**의 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하면 왼쪽 창의 **구성 속성** 노드 아래에 있는 **일반** 속성 페이지가 표시 됩니다. 속성의 두 섹션:
+Visual Studio 2015 및 Visual Studio 2017에서 **솔루션 탐색기**의 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하면 왼쪽 창의 **구성 속성** 노드 아래에 있는 **일반** 속성 페이지에 속성의 두 섹션이 표시 됩니다.
 
 - 일반
 
@@ -126,7 +126,7 @@ Visual Studio 2015 및 Visual Studio 2017에서 **솔루션 탐색기**의 프�
 
    Windows 7 또는 Windows Vista를 대상으로 하려면 해당 플랫폼에 대해 Windows SDK 8.1이 이전 버전과 호환되므로 **8.1** 값을 사용합니다. 또한 targetver.h에서 **_WIN32_WINNT**에 대한 적절한 값을 정의해야 합니다. Windows 7의 경우 0x0601입니다. [WINVER 및 _WIN32_WINNT 수정](../../porting/modifying-winver-and-win32-winnt.md)을 참조하세요.
 
-   Visual Studio에 포함된 Windows XP 플랫폼 도구 집합을 설치하여 Windows XP 및 Windows 2003 Server 프로젝트를 빌드하는 현재 버전의 라이브러리를 사용할 수 있습니다. 이 플랫폼 도구 집합을 다운로드하고 사용하는 방법에 대한 자세한 내용은 [Windows XP용 프로그램 구성](../configuring-programs-for-windows-xp.md)을 참조하세요. 플랫폼 도구 세트를 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 세트 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
+   Visual Studio에 포함된 Windows XP 플랫폼 도구 집합을 설치하여 Windows XP 및 Windows 2003 Server 프로젝트를 빌드하는 현재 버전의 라이브러리를 사용할 수 있습니다. 이 플랫폼 도구 집합을 다운로드하고 사용하는 방법에 대한 자세한 내용은 [Windows XP용 프로그램 구성](../configuring-programs-for-windows-xp.md)을 참조하세요. 플랫폼 도구 집합을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
 
 - **출력 디렉터리**
 
@@ -162,17 +162,17 @@ Visual Studio 2015 및 Visual Studio 2017에서 **솔루션 탐색기**의 프�
 
 - **플랫폼 도구 집합**
 
-   프로젝트가 다른 버전의 Visual C++ 라이브러리 및 컴파일러를 대상으로 할 수 있도록 허용합니다. Visual Studio C++ 프로젝트는 visual studio에 의해 설치 된 기본 도구 집합 또는 WINDOWX XP에서 실행할 수 있는 실행 파일을 만드는 도구 집합을 비롯 한 여러 이전 버전의 visual studio에서 설치 된 도구 집합 중 하나를 대상으로 할 수 있습니다. 플랫폼 도구 집합 [을 변경 하는 방법에 대 한 자세한 내용은 방법: 대상 프레임워크 및 플랫폼 도구 세트 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
+   프로젝트가 다른 버전의 Visual C++ 라이브러리 및 컴파일러를 대상으로 할 수 있도록 허용합니다. Visual Studio C++ 프로젝트는 visual studio에 의해 설치 된 기본 도구 집합을 대상으로 하거나, Windows XP에서 실행 될 수 있는 실행 파일을 만드는 도구 집합을 포함 하 여 여러 이전 버전의 visual studio에서 설치한 도구 집합 중 하나를 대상으로 할 수 플랫폼 도구 집합을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](../how-to-modify-the-target-framework-and-platform-toolset.md)을 참조하세요.
 
 - **관리 증분 빌드 사용**
 
    관리 프로젝트의 경우 이를 통해 어셈블리를 생성할 때 외부 표시 유형을 검색할 수 있습니다. 관리 프로젝트에 대한 변경 내용이 다른 프로젝트에 표시되지 않는 경우 종속 프로젝트가 다시 빌드되지 않습니다. 그러면 관리 프로젝트를 포함하는 솔루션에서 빌드 시간을 크게 개선할 수 있습니다.
 
 ## <a name="project-defaults"></a>프로젝트 기본값
- 
+
 프로젝트 기본값 섹션의 속성은 수정할 수 있는 기본 속성을 나타냅니다. 이러한 속성에 대한 정의는 *설치 디렉터리*\VC\VCProjectDefaults의 .props 파일에서 확인할 수 있습니다.
 
-- **구성 형식**
+- **구성 유형**
 
   선택할 수 있는 여러 구성 형식이 있습니다.
 
@@ -230,6 +230,6 @@ Visual Studio 2015 및 Visual Studio 2017에서 **솔루션 탐색기**의 프�
 
 ::: moniker-end
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)
+[C++프로젝트 속성 페이지 참조](property-pages-visual-cpp.md)

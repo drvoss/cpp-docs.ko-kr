@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327979"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165901"
 ---
 # <a name="compiler-error-c3733"></a>컴파일러 오류 C3733
 
-'event': COM 이벤트를 지정 하는 것에 대 한 구문이 잘못 되었습니다 '__interface'를 잊으셨나요?
+' event ': COM 이벤트를 지정 하기 위한 구문이 잘못 되었습니다. ' __interface '를 잊은 경우
 
-COM 이벤트에 대 한 잘못 된 구문이 사용 되었습니다. 이 오류를 해결 하려면 이벤트 형식을 변경 하거나 COM 이벤트 규칙을 준수 하는 구문은 수정 합니다.
+COM 이벤트에 잘못 된 구문이 사용 되었습니다. 이 오류를 해결 하려면 이벤트 유형을 변경 하거나 구문을 수정 하 여 COM 이벤트 규칙을 준수 합니다.
 
-다음 샘플에서는 C3733 오류가 생성 됩니다.
+다음 샘플에서는 C3733를 생성 합니다.
 
 ```
 #define _ATL_ATTRIBUTES 1

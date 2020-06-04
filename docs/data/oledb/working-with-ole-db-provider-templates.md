@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165790"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209245"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>OLE DB 공급자 템플릿을 사용하여 작업
 
@@ -34,7 +34,7 @@ OLE DB 공급자 템플릿을 사용하여 작업하는 방법에 대한 자세�
 
 - [공급자가 지원하지 않는 데이터 변환](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿 참조](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)

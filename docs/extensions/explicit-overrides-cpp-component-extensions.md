@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172375"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>명시적 재정의(C++/CLI 및 C++/CX)
 
@@ -39,9 +39,9 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-definition*<br/>
 재정의 함수를 정의하는 함수 본문 문입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-명시적 재정의는 메서드 시그니처의 별칭을 만들거나 동일한 시그니처로 다른 메서드 구현을 제공하는 데 사용합니다.
+명시적 재정의를 사용 하 여 메서드 시그니처의 별칭을 만들거나 동일한 서명을 가진 메서드에 대해 다른 구현을 제공 합니다.
 
 상속된 형식 및 상속된 형식 멤버의 동작을 수정하는 방법에 대한 자세한 내용은 [재정의 지정자](override-specifiers-cpp-component-extensions.md)를 참조하세요.
 
@@ -53,7 +53,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 네이티브 코드 또는 `/clr:oldSyntax`로 컴파일된 코드의 명시적 재정의에 대한 자세한 내용은 [명시적 재정의](../cpp/explicit-overrides-cpp.md)를 참조하세요.
 
@@ -61,7 +61,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 명시적 재정의를 사용하지 않는, 기본 인터페이스 멤버의 간단한 암시적 재정의 및 구현을 보여 줍니다.
 

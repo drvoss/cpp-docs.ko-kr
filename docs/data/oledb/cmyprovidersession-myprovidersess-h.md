@@ -1,5 +1,5 @@
 ---
-title: CCustomSession (CustomSess.H)
+title: CCustomSession(CustomSess.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyprovidersession
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4775f21c1e0fa7666d24b4d6a55e099bc6ae55a2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230583"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079751"
 ---
-# <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
+# <a name="ccustomsession-customsessh"></a>CCustomSession(CustomSess.H)
 
-*사용자 지정*Sess.H 선언 및 OLE DB 세션 개체에 대 한 구현을 포함 합니다. 데이터 원본 개체 세션 개체를 만들고이 소비자와 공급자 간의 대화를 나타냅니다. 여러 개의 세션을 하나의 데이터 원본에 대 한 열 수 있습니다. 상속 목록 `CCustomSession` 따릅니다.
+*사용자 지정* 세션에는 OLE DB 세션 개체에 대 한 선언 및 구현이 포함 되어 있습니다. 데이터 원본 개체는 세션 개체를 만들고 소비자와 공급자 간의 대화를 나타냅니다. 하나의 데이터 원본에 대해 여러 동시 세션을 열 수 있습니다. `CCustomSession`에 대 한 상속 목록은 다음과 같습니다.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSession
-class ATL_NO_VTABLE CCustomSession : 
+class ATL_NO_VTABLE CCustomSession :
    public CComObjectRootEx<CComSingleThreadModel>,
    public IGetDataSourceImpl<CCustomSession>,
    public IOpenRowsetImpl<CCustomSession>,
@@ -35,12 +35,12 @@ class ATL_NO_VTABLE CCustomSession :
    public IDBCreateCommandImpl<CCustomSession, CCustomCommand>
 ```
 
-세션 개체에서 상속 `IGetDataSource`, `IOpenRowset`를 `ISessionProperties`, 및 `IDBCreateCommand`합니다. `IGetDataSource` 인터페이스를 사용 하면 세션을 만든 데이터 원본을 검색 합니다. 사용자가 만든 데이터 원본 또는 데이터 소스를 제공할 수 있는 기타 정보에서 속성을 가져올 해야 할 경우에 유용 합니다. `ISessionProperties` 세션에 대 한 모든 속성을 처리 하는 인터페이스입니다. 합니다 `IOpenRowset` 고 `IDBCreateCommand` 인터페이스는 데이터베이스 작업을 수행 하는 데 사용 됩니다. 공급자 명령을 지 원하는 경우 구현 된 `IDBCreateCommand` 인터페이스입니다. 명령을 실행 하는 명령 개체를 만드는 사용 됩니다. 공급자가 항상 구현 하는 `IOpenRowset` 개체입니다. 행 집합 공급자에서 생성 하는 것이 됩니다. 기본 행 집합 (예를 들어 `"select * from mytable"`) 공급자에서입니다.
+Session 개체는 `IGetDataSource`, `IOpenRowset`, `ISessionProperties`및 `IDBCreateCommand`에서 상속 됩니다. `IGetDataSource` 인터페이스를 사용 하면 세션에서이를 만든 데이터 원본을 검색할 수 있습니다. 이는 사용자가 만든 데이터 원본 또는 데이터 원본이 제공할 수 있는 기타 정보에서 속성을 가져와야 하는 경우에 유용 합니다. `ISessionProperties` 인터페이스는 세션에 대 한 모든 속성을 처리 합니다. `IOpenRowset` 및 `IDBCreateCommand` 인터페이스는 데이터베이스 작업을 수행 하는 데 사용 됩니다. 공급자가 명령을 지 원하는 경우 `IDBCreateCommand` 인터페이스를 구현 합니다. 명령을 실행할 수 있는 명령 개체를 만드는 데 사용 됩니다. 공급자는 항상 `IOpenRowset` 개체를 구현 합니다. 공급자에서 행 집합을 생성 하는 데 사용 됩니다. 공급자의 기본 행 집합 (예: `"select * from mytable"`)입니다.
 
-마법사는 세 가지 세션 클래스를 생성 합니다. `CCustomSessionColSchema`, `CCustomSessionPTSchema`, 및 `CCustomSessionTRSchema`합니다. 이러한 세션은 스키마 행 집합에 사용 됩니다. 스키마 행 집합 공급자는 소비자가 실행 된 쿼리 또는 fetch 데이터 소비자에 게 메타 데이터를 반환할 수 있습니다. 메타 데이터를 인출 하는 것은 공급자의 기능을 찾는 것 보다 훨씬 빠를 수 있습니다.
+또한이 마법사는 `CCustomSessionColSchema`, `CCustomSessionPTSchema`및 `CCustomSessionTRSchema`의 세 가지 세션 클래스를 생성 합니다. 이러한 세션은 스키마 행 집합에 사용 됩니다. 공급자는 스키마 행 집합을 사용 하 여 소비자가 쿼리를 실행 하거나 데이터를 가져올 필요 없이 소비자에 게 메타 데이터를 반환할 수 있습니다. 메타 데이터 페치는 공급자의 기능을 찾는 것 보다 훨씬 빠를 수 있습니다.
 
-OLE DB 사양에는 구현 하는 공급자는 `IDBSchemaRowset` 인터페이스 스키마 행 집합 형식을 지 원하는 3: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES, 고 DBSCHEMA_TABLES입니다. 마법사는 각 스키마 행 집합에 대 한 구현을 생성합니다. 마법사에서 생성 된 각 클래스를 포함 한 `Execute` 메서드. 이 `Execute` 메서드를 지 원하는 테이블, 열 및 데이터 형식에 대 한 공급자에 게 데이터를 반환할 수 있습니다. 이 데이터는 컴파일 타임에 알려집니다.
+OLE DB 사양에서는 `IDBSchemaRowset` 인터페이스를 구현 하는 공급자가 DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES 및 DBSCHEMA_TABLES의 세 가지 스키마 행 집합 형식을 지원 해야 합니다. 마법사는 각 스키마 행 집합에 대 한 구현을 생성 합니다. 마법사에서 생성 되는 각 클래스에는 `Execute` 메서드가 포함 되어 있습니다. 이 `Execute` 메서드에서는 지원 되는 테이블, 열 및 데이터 형식에 대 한 데이터를 공급자에 게 반환할 수 있습니다. 이 데이터는 컴파일 타임에 알 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [공급자 마법사가 생성하는 파일](../../data/oledb/provider-wizard-generated-files.md)<br/>

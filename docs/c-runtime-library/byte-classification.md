@@ -8,12 +8,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 9c00d0c0165bdae15ba5fc413d00a99bf4601b21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171569"
 ---
 # <a name="byte-classification"></a>바이트 분류
 
@@ -26,7 +26,7 @@ ms.locfileid: "50632403"
 
 ## <a name="multibyte-character-byte-classification-routines"></a>멀티바이트 문자의 바이트 분류 루틴
 
-|루틴에서 반환된 값|바이트 테스트 조건|
+|루틴|바이트 테스트 조건|
 |-------------|-------------------------|
 |[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|선행 바이트입니다. 테스트 결과는 현재 로캘의 **LC_CTYPE** 범주 설정에 따라 다릅니다.|
 |[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|**isalnum** &#124;&#124; **_ismbbkalnum**|
@@ -46,7 +46,7 @@ ms.locfileid: "50632403"
 |[_mbsbtype, _mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|문자열 내 바이트의 형식 반환|
 |[mbsinit](../c-runtime-library/reference/mbsinit.md)|멀티 바이트 문자 변환의 상태를 추적합니다.|
 
-\<limits.h>에 정의된 **MB_LEN_MAX** 매크로는 멀티바이트 문자의 최대 길이(바이트)까지 확장됩니다. \<stdlib.h>에 정의된 **MB_CUR_MAX**는 현재 로캘 내 모든 멀티바이트 문자의 최대 길이(바이트)까지 확장됩니다.
+**limits.h>에 정의된** MB_LEN_MAX\< 매크로는 멀티바이트 문자의 최대 길이(바이트)까지 확장됩니다. **stdlib.h>에 정의된** MB_CUR_MAX\<는 현재 로캘 내 모든 멀티바이트 문자의 최대 길이(바이트)까지 확장됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

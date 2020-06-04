@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion, cast operators
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
 ms.openlocfilehash: e3d892a5aede4cd2d6a980b440875f0ac9837120
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312665"
 ---
 # <a name="cast-operators"></a>캐스트 연산자
 
@@ -26,6 +26,6 @@ ms.locfileid: "56147947"
 
 형식 캐스팅이 만들어지면 컴파일러에서 *cast-expression*을 *type-name* 형식으로 처리합니다. 모든 스칼라 형식의 개체로 또는 다른 모든 스칼라 형식에서 변환하는 데 캐스트를 사용할 수 있습니다. [할당 변환](../c-language/assignment-conversions.md)에 나와 있는 대로 명시적 형식 캐스팅은 암시적 변환 결과를 확인하는 동일한 규칙으로 제한됩니다. 캐스팅에 대한 추가 제한은 특정 형식의 실제 크기 또는 표현에서 발생할 수 있습니다. 정수 계열 형식의 실제 크기에 대한 자세한 내용은 [기본 형식 스토리지](../c-language/storage-of-basic-types.md)를 참조하세요. 형식 캐스팅에 대한 자세한 내용은 [형식 캐스팅 변환](../c-language/type-cast-conversions.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [캐스트 연산자: ()](../cpp/cast-operator-parens.md)

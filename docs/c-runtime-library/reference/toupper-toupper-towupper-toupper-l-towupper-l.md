@@ -1,12 +1,17 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
+- _o__toupper
+- _o__toupper_l
+- _o__towupper_l
+- _o_toupper
+- _o_towupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957913"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913877"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -86,7 +92,7 @@ int _towupper_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 루틴은 가능한 경우 *c*의 복사본을 변환 하 고 결과를 반환 합니다.
 
@@ -94,7 +100,7 @@ int _towupper_l(
 
 오류를 나타내기 위해 예약된 반환 값은 없습니다.
 
-**Toupper** 에서 예상 결과를 제공 하기 위해 [__isascii](isascii-isascii-iswascii.md) 및 [islower](islower-iswlower-islower-l-iswlower-l.md) 는 둘 다 0이 아닌 값을 반환 해야 합니다.
+**Toupper** 가 예상 결과를 제공 하도록 하려면 [__isascii](isascii-isascii-iswascii.md) 및 [islower](islower-iswlower-islower-l-iswlower-l.md) 가 둘 다 0이 아닌 값을 반환 해야 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -104,6 +110,8 @@ int _towupper_l(
 
 [데이터 변환 루틴](../../c-runtime-library/data-conversion.md)
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
@@ -112,7 +120,7 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** 및 **_towupper_l** 에는 로캘 종속성이 없으며 직접 호출할 수 없습니다. **_Totupper_l**에서 내부용으로 사용 하기 위해 제공 됩니다.
+> **_toupper_l** 및 **_towupper_l** 에는 로캘 종속성이 없으며 직접 호출할 수 없습니다. **_Totupper_l**에서 내부용으로 제공 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -122,15 +130,15 @@ int _towupper_l(
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
 [to 함수](../../c-runtime-library/to-functions.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>
 [to 함수](../../c-runtime-library/to-functions.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

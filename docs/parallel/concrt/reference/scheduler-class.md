@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142008"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427352"
 ---
 # <a name="scheduler-class"></a>Scheduler 클래스
 
@@ -38,31 +38,31 @@ ms.locfileid: "77142008"
 class Scheduler;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[Scheduler](#ctor)|`Scheduler` 클래스의 개체는 팩터리 메서드를 사용 하거나 암시적 으로만 만들 수 있습니다.|
 |[~ Scheduler 소멸자](#dtor)|`Scheduler` 클래스의 개체는 모든 외부 참조가 존재 하지 않는 경우 암시적으로 제거 됩니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[연결](#attach)|스케줄러를 호출 컨텍스트에 연결 합니다. 이 메서드가 반환 된 후에는 호출 컨텍스트가 스케줄러에 의해 관리 되 고 스케줄러는 현재 스케줄러가 됩니다.|
 |[만들기](#create)|`_Policy` 매개 변수에서 동작을 설명 하는 새 스케줄러를 만들고, 스케줄러에 초기 참조를 배치 하 고,이에 대 한 포인터를 반환 합니다.|
-|[CreateScheduleGroup](#createschedulegroup)|오버로드됨. 스케줄러 내에 새 일정 그룹을 만듭니다. `_Placement` 매개 변수를 사용 하는 버전은 새로 만든 일정 그룹 내의 태스크가 해당 매개 변수로 지정 된 위치에서 실행 될 때 편향 되도록 합니다.|
+|[CreateScheduleGroup](#createschedulegroup)|오버로드되었습니다. 스케줄러 내에 새 일정 그룹을 만듭니다. `_Placement` 매개 변수를 사용 하는 버전은 새로 만든 일정 그룹 내의 태스크가 해당 매개 변수로 지정 된 위치에서 실행 될 때 편향 되도록 합니다.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|스케줄러에 대 한 현재 가상 프로세서 수를 반환 합니다.|
 |[GetPolicy](#getpolicy)|스케줄러를 만든 정책의 복사본을 반환 합니다.|
-|[ID](#id)|스케줄러에 대 한 고유 식별자를 반환 합니다.|
+|[Id](#id)|스케줄러에 대 한 고유 식별자를 반환 합니다.|
 |[IsAvailableLocation](#isavailablelocation)|지정 된 위치를 스케줄러에서 사용할 수 있는지 여부를 확인 합니다.|
 |[참조](#reference)|스케줄러 참조 횟수를 증가 시킵니다.|
 |[RegisterShutdownEvent](#registershutdownevent)|스케줄러를 종료 하 고 자체를 소멸 시킬 때 `_Event` 매개 변수에 전달 된 Windows 이벤트 핸들이 신호를 받도록 합니다. 이벤트가 신호를 받을 때 스케줄러에 예약 된 모든 작업이 완료 됩니다. 이 메서드를 통해 여러 종료 이벤트를 등록할 수 있습니다.|
 |[릴리스](#release)|스케줄러 참조 횟수를 감소시킵니다.|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|기본 스케줄러 정책을 런타임 기본값으로 다시 설정 합니다. 다음에 기본 스케줄러를 만들 때 런타임 기본 정책 설정이 사용 됩니다.|
-|[ScheduleTask](#scheduletask)|오버로드됨. 스케줄러 내에서 경량 작업을 예약 합니다. 간단한 작업은 런타임에 의해 결정되는 일정 그룹에 배치됩니다. `_Placement` 매개 변수를 사용하는 버전은 작업이 지정된 위치에서 실행되도록 합니다.|
+|[ScheduleTask](#scheduletask)|오버로드되었습니다. 스케줄러 내에서 경량 작업을 예약 합니다. 간단한 작업은 런타임에 의해 결정되는 일정 그룹에 배치됩니다. `_Placement` 매개 변수를 사용하는 버전은 작업이 지정된 위치에서 실행되도록 합니다.|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|사용자 정의 정책을 사용 하 여 기본 스케줄러를 만들 수 있습니다. 이 메서드는 프로세스 내에 기본 스케줄러가 없는 경우에만 호출할 수 있습니다. 기본 정책이 설정 된 후에는 `SetDefaultSchedulerPolicy` 또는 [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) 메서드에 대 한 다음 유효한 호출이 나타날 때까지 적용 된 상태로 유지 됩니다.|
 
 ## <a name="remarks"></a>설명

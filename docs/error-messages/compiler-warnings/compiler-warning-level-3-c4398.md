@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198668"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>컴파일러 경고(수준 3) C4398
 
-> '*변수*': appdomain이 여러 개 프로세스별 전역 개체가 제대로 작동 하지 않으면 __declspec (appdomain)를 사용 하는 것이 좋습니다.
+> '*variable*': 여러 appdomain에서 프로세스별 전역 개체가 제대로 작동 하지 않을 수 있습니다. __declspec (appdomain) 사용 고려
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-갖는 가상 함수와 [__clrcall](../../cpp/clrcall.md) 만들어지도록의 네이티브 형식에 호출 규칙을 응용 프로그램 도메인 vtable 당. 여러 응용 프로그램 도메인에서 사용 하는 경우 이러한 변수 올바르게 해결할 수는 없습니다.
+네이티브 형식에서 [__clrcall](../../cpp/clrcall.md) 호출 규칙을 사용 하는 가상 함수를 사용 하면 응용 프로그램 도메인 vtable 마다 생성 됩니다. 이러한 변수는 여러 응용 프로그램 도메인에서 사용 되는 경우 올바르게 수정 되지 않을 수 있습니다.
 
-명시적으로 변수를 표시 하 여이 경고를 해결할 수 있습니다 `__declspec(appdomain)`합니다. Visual Studio 2017 이전 Visual Studio의 버전을 사용 하 여 컴파일하면이 경고를 해결할 수 있습니다 **/clr: pure**, 기본적으로 appdomain 당 전역 변수를 만드는 합니다. **/clr: pure** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+변수 `__declspec(appdomain)`명시적으로 표시 하 여이 경고를 해결할 수 있습니다. Visual studio 2017 이전의 Visual Studio 버전에서는 **/clr: pure**를 사용 하 여 컴파일하여이 경고를 해결할 수 있습니다. 이렇게 하면 기본적으로 appdomain 당 전역 변수가 만들어집니다. **/Clr: pure** 컴파일러 옵션은 visual studio 2015에서는 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-자세한 내용은 [appdomain](../../cpp/appdomain.md) 하 고 [응용 프로그램 도메인 및 시각적 개체 C++ ](../../dotnet/application-domains-and-visual-cpp.md)합니다.
+자세한 내용은 [appdomain](../../cpp/appdomain.md) 및 [응용 프로그램 도메인 및 시각적 개체 C++ ](../../dotnet/application-domains-and-visual-cpp.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-다음 샘플에서는 C4398 오류가 발생 합니다.
+다음 샘플에서는 C4398를 생성 합니다.
 
 ```cpp
 // C4398.cpp

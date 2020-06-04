@@ -9,11 +9,11 @@ helpviewer_keywords:
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
 ms.openlocfilehash: 3594ca0f2dfcc294fa7a3d44268150ac5507e547
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232275"
 ---
 # <a name="punctuation-and-special-characters"></a>문장 부호 및 특수 문자
 
@@ -23,8 +23,8 @@ C 문자 집합의 문장 부호와 특수 문자는 프로그램 텍스트의 �
 
 `punctuator`: one of **( )   [ ]   { }   \*   ,   :   =   ;   ... #**
 
-이러한 문자는 C에서 특별한 의미를 갖고 있으며, 문자의 사용법은 이 설명서 전반에 설명되어 있습니다. 파운드 기호(**#**)는 [전처리 지시문](../preprocessor/preprocessor-directives.md)에서만 발생할 수 있습니다.
+이러한 문자는 C에서 특별한 의미를 갖고 있으며, 문자의 사용법은 이 설명서 전반에 설명되어 있습니다. 파운드 기호( **#** )는 [전처리 지시문](../preprocessor/preprocessor-directives.md)에서만 발생할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 요소](../c-language/elements-of-c.md)

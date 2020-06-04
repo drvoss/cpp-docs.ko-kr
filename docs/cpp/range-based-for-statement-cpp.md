@@ -2,12 +2,12 @@
 title: 범위 기반 for 문(C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188352"
 ---
 # <a name="range-based-for-statement-c"></a>범위 기반 for 문(C++)
 
@@ -22,11 +22,11 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>설명
 
-범위 기반 사용 **에 대 한** "범위"를 반복할 수 있는 모든 것으로 정의 되어 있는 실행 해야 하는 루프를 생성 하는 문-예를 들어 `std::vector`, 또는 다른 C++ 표준 라이브러리 시퀀스 범위가 정의한를 `begin()` 고 `end()`입니다. 에 선언 된 이름을 합니다 `for-range-declaration` 부분은 로컬 합니다 **에 대 한** 문을에서 다시 선언할 수 없습니다 `expression` 또는 `statement`. 합니다 [자동](../cpp/auto-cpp.md) 에서 키워드는 것이 좋습니다는 `for-range-declaration` 문의 일부입니다.
+범위 기반 **for** 문을 사용 하 여 "범위"를 통해 실행 되어야 하는 루프를 생성할 수 있습니다. "범위"는 `std::vector`또는 범위가 `begin()` 및 `end()`정의 된 다른 C++ 표준 라이브러리 시퀀스와 같이 반복 될 수 있는 것으로 정의 됩니다. `for-range-declaration` 부분에 선언 된 이름은 **for** 문에 로컬 이며 `expression` 또는 `statement`에서 다시 선언할 수 없습니다. 문의 `for-range-declaration` 부분에 [auto](../cpp/auto-cpp.md) 키워드가 기본 설정 되어 있는지 확인 합니다.
 
-**Visual Studio 2017 새로운 기능:**  Range-based for 루프에 더 이상 동일한 유형의 begin() 및 end() 반환 개체가 필요하지 않습니다. 이 기능을 사용하면 end()가 Ranges-V3 제안에 정의된 대로 범위에서 사용되는 sentinel 개체를 반환할 수 있습니다. 자세한 내용은 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)(범위 기반 for 루프 일반화) 및 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)(GitHub의 range-v3 라이브러리)를 참조하세요.
+**Visual Studio 2017의 새로운 작업:**  범위 기반 for 루프에는 더 이상 동일한 형식의 begin () 및 end () 반환 개체가 필요 하지 않습니다. 이 기능을 사용하면 end()가 Ranges-V3 제안에 정의된 대로 범위에서 사용되는 sentinel 개체를 반환할 수 있습니다. 자세한 내용은 [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0)(범위 기반 for 루프 일반화) 및 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)(GitHub의 range-v3 라이브러리)를 참조하세요.
 
-범위를 기준으로이 코드가 사용 하는 방법을 보여 줍니다. **에 대 한** 배열 및 벡터를 반복 하는 루프:
+이 코드는 범위 기반 **for** 루프를 사용 하 여 배열 및 벡터를 반복 하는 방법을 보여 줍니다.
 
 ```cpp
 // range-based-for.cpp
@@ -83,7 +83,7 @@ int main()
 }
 ```
 
-다음과 같이 출력됩니다.
+출력은 다음과 같습니다.
 
 ```Output
 1 2 3 4 5 6 7 8 9 10
@@ -96,9 +96,9 @@ end of integer array test
 end of vector test
 ```
 
-범위 기반 **에 대 한** 루프를 종료 하는 경우 하나가 `statement` 실행:를 [중단](../cpp/break-statement-cpp.md), [반환](../cpp/return-statement-cpp.md), 또는 [goto](../cpp/goto-statement-cpp.md) 에 레이블이 지정 된 범위 기반 외부 문으로 **에 대 한** 루프입니다. A [계속](../cpp/continue-statement-cpp.md) 범위 기반의 문을 **에 대 한** 루프 현재 반복만 종료 합니다.
+범위 **기반 for 루프는** `statement` 중 하나가 실행 될 때 종료 됩니다. 즉, 범위 기반 **for** 루프 외부의 레이블 문으로 [중단](../cpp/break-statement-cpp.md), [반환](../cpp/return-statement-cpp.md)또는 [이동](../cpp/goto-statement-cpp.md) 합니다. 범위 기반 **for** 루프의 [continue](../cpp/continue-statement-cpp.md) 문은 현재 반복만 종료 합니다.
 
-염두에 이러한 팩트에 대 한 범위 기반 **에 대 한**:
+범위 기반에 대 한 다음 사항에 유의 **하세요.**
 
 - 배열을 자동으로 인식합니다.
 
@@ -106,7 +106,7 @@ end of vector test
 
 - 기타 항목에 대해 `begin()` 및 `end()` 인수 종속성 조회를 사용합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [auto](../cpp/auto-cpp.md)<br/>
 [반복 문](../cpp/iteration-statements-cpp.md)<br/>

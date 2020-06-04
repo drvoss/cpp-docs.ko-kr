@@ -30,6 +30,6 @@ ms.locfileid: "68375881"
 |&#92;'|작은따옴표|39|
 |&#92;&#92;|백슬래시|92|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자](../c-language/characters.md)<br/>

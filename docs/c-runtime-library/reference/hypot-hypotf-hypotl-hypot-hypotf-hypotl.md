@@ -1,6 +1,6 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919837"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -85,7 +89,7 @@ long double _hypotl(
 *x*, *y*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 하면 **hypot** 는 빗변의 길이를 반환 합니다. 오버플로 시 **hypot** 는 INF (infinity)를 반환 하 고 **Errno** 변수는 **ERANGE**로 설정 됩니다. **_Matherr** 를 사용 하 여 오류 처리를 수정할 수 있습니다.
 
@@ -97,13 +101,15 @@ long double _hypotl(
 
 이전 표준과의 호환성을 위해 선행 밑줄이 있는 함수 버전이 제공됩니다. 해당 동작은 선행 밑줄이 없는 버전과 동일합니다. 새 코드에는 선행 밑줄이 없는 버전을 사용하는 것이 좋습니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -127,7 +133,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

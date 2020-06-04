@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214801"
 ---
 # <a name="lcid"></a>lcid
 
@@ -23,9 +23,9 @@ ms.locfileid: "69514545"
 [lcid]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Lcid** C++ 특성은 [lcid](/windows/win32/Midl/lcid) MIDL 특성의 기능을 구현 합니다. 라이브러리 블록에 대 한 로캘을 구현 하려면 [module](module-cpp.md) 특성에 대해 **lcid =** `lcid` 매개 변수를 사용 합니다.
+**Lcid** C++ 특성은 [lcid](/windows/win32/Midl/lcid) MIDL 특성의 기능을 구현 합니다. 라이브러리 블록에 대 한 로캘을 구현 하려면 [module](module-cpp.md) 특성에 **lcid =** `lcid` 매개 변수를 사용 합니다.
 
 ## <a name="example"></a>예제
 
@@ -55,7 +55,7 @@ __interface IStatic {
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [매개 변수 특성](parameter-attributes.md)

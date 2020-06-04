@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188616"
 ---
 # <a name="built-in-types-c"></a>기본 제공 형식 (C++)
 
@@ -66,7 +69,7 @@ ms.locfileid: "75301498"
 
 ### <a name="built-in-type-size-restrictions"></a>기본 제공 형식 크기 제한
 
-|범주|형식|내용|
+|범주|형식|목차|
 |--------------|----------|--------------|
 |정수 계열|**char**|**Char** 형식은 일반적으로 기본 실행 문자 집합의 멤버를 포함 하는 정수 계열 형식입니다. 기본적으로 MICROSOFT C++에서는 ASCII입니다.<br /><br /> 컴파일러 C++ 는 **char**, **signed char**및 **unsigned char** 형식의 변수를 서로 다른 형식으로 처리 합니다. /J 컴파일 옵션을 사용 하지 않는 한 **char** 형식의 변수는 기본적으로 **signed char** 형식으로 지정 된 **int** 로 승격 됩니다. 이 경우 **부호 없는 char** 형식으로 처리 되 고 부호 확장 없이 **int** 로 승격 됩니다.|
 ||**bool**|**Bool** 형식은 **true** 또는 **false**의 두 값 중 하나를 가질 수 있는 정수 계열 형식입니다. 크기는 지정되지 않습니다.|
@@ -89,7 +92,7 @@ ms.locfileid: "75301498"
 |형식|크기|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1바이트|
-|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2바이트|
+|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2bytes|
 |**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4바이트|
 |**double**, **__int64**, **long double**, **long long**|8바이트|
 
@@ -99,6 +102,6 @@ ms.locfileid: "75301498"
 
 형식 변환에 대한 자세한 내용은 [표준 변환](standard-conversions.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 형식 범위](data-type-ranges.md)

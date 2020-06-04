@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368649"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>레코드 집합: 합계 및 다른 집계 결과 구하기(ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2019 이상에서는 MFC ODBC 소비자 마법사를 사용할 수 없습니다. 여전히 수동으로 소비자를 만들 수 있습니다.
 
-이 항목은 MFC ODBC 클래스에 적용됩니다.
+이 토픽은 MFC ODBC 클래스에 적용됩니다.
 
 이 항목에서는 다음 [SQL](../../data/odbc/sql.md) 키워드를 사용하여 집계 결과를 얻는 방법을 설명합니다.
 
@@ -36,10 +36,10 @@ ms.locfileid: "65707839"
 
 - **COUNT** 모든 데이터 형식의 열에 있는 레코드의 수를 계산합니다.
 
-이러한 SQL 함수를 사용하여 데이터 원본에서 레코드를 추출하는 대신 데이터 원본의 레코드에 대한 통계 정보를 가져옵니다. 일반적으로 만든 레코드 집합은 값을 포함하는 단일 레코드(모든 열이 집계된 경우)로 구성됩니다. (**GROUP BY** 절을 사용하면 둘 이상의 레코드가 있을 수 있습니다.) 이 값은 SQL 함수에 의해 수행된 계산 또는 추출의 결과입니다.
+이러한 SQL 함수를 사용하여 데이터 원본에서 레코드를 추출하는 대신 데이터 원본의 레코드에 대한 통계 정보를 가져옵니다. 일반적으로 만든 레코드 집합은 값을 포함하는 단일 레코드(모든 열이 집계된 경우)로 구성됩니다. **그룹 BY** 절을 사용하는 경우 레코드가 두 개 이상있을 수 있습니다. 이 값은 SQL 함수에서 수행한 계산 또는 추출의 결과입니다.
 
 > [!TIP]
->  SQL **GROUP BY** 절(및 가능하면 **HAVING** 절)을 SQL 문에 추가하려면 `m_strFilter`의 끝에 추가합니다. 예:
+> SQL **GROUP BY** 절(및 가능하면 **HAVING** 절)을 SQL 문에 추가하려면 `m_strFilter`의 끝에 추가합니다. 다음은 그 예입니다.
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -48,7 +48,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 열을 필터링하고 정렬하여 집계 결과를 얻는 데 사용하는 레코드 수를 제한할 수 있습니다.
 
 > [!CAUTION]
->  일부 집계 연산자는 집계하는 열에서 다른 데이터 형식을 반환합니다.
+> 일부 집계 연산자는 집계하는 열에서 다른 데이터 형식을 반환합니다.
 
 - **SUM** 및 **AVG**는 다음으로 큰 데이터 형식을 반환할 수 있습니다(예: `int`로 호출하면 **LONG** 또는 **double**을 반환함).
 
@@ -68,7 +68,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     다음으로 바꿉니다.
+     다음 구문으로 바꿉니다.
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -77,7 +77,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 1. 레코드 집합을 엽니다. 집계 작업의 결과는 `m_dblSumSales`에 남아 있습니다.
 
 > [!NOTE]
->  마법사는 실제로 헝가리어 접두사 없이 데이터 멤버 이름을 할당합니다. 예를 들어 마법사는 앞에 그림에 사용된 `m_lSales` 이름 대신 Sales 열에 대해 `m_Sales`를 생성합니다.
+> 마법사는 실제로 헝가리어 접두사 없이 데이터 멤버 이름을 할당합니다. 예를 들어 마법사는 앞에 그림에 사용된 `m_lSales` 이름 대신 Sales 열에 대해 `m_Sales`를 생성합니다.
 
 [CRecordView](../../mfc/reference/crecordview-class.md) 클래스를 사용하여 데이터를 보는 경우 새 데이터 멤버 값을 표시하도록 DDX 함수 호출을 변경해야 합니다. 이 경우 다음에서 변경합니다.
 
@@ -85,7 +85,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-대상:
+아래와 같이 변경합니다.
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
@@ -94,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>참고 항목
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[레코드 집합 레코드 집합의 레코드 선택 방법(ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[레코드 집합: 레코드 집합의 레코드 선택 방법(ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

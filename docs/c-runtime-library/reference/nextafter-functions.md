@@ -1,6 +1,6 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -10,6 +10,13 @@ api_name:
 - nexttoward
 - nexttowardf
 - nexttowardl
+- _o__nextafter
+- _o_nextafter
+- _o_nextafterf
+- _o_nextafterl
+- _o_nexttoward
+- _o_nexttowardf
+- _o_nexttowardl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857725"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909340"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -90,26 +98,28 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 *x*<br/>
 시작할 부동 소수점 값입니다.
 
-*y*<br/>
+*x.y*<br/>
 종료할 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *Y*방향으로 *x* 이후 반환 형식에 대 한 표현 가능한 다음 부동 소수점 값을 반환 합니다. *X* 와 *y* 가 같으면 함수는 반환 형식으로 변환 된 *y*를 반환 하며 예외는 트리거되지 않습니다. *X* 가 *y*와 같지 않고 결과가 denormal 이거나 0 이면 **FE_UNDERFLOW** 및 **FE_INEXACT** 부동 소수점 예외 상태가 설정 되 고 올바른 결과가 반환 됩니다. *X* 또는 *y* 중 하나가 NAN 이면 반환 값은 입력 nan 중 하나입니다. *X* 가 유한 하 고 결과가 무한 이거나 형식에서 표현할 수 없는 경우에는 올바르게 서명 된 INFINITY 또는 NAN이 반환 되 고, **FE_OVERFLOW** 및 **FE_INEXACT** 부동 소수점 예외 상태가 설정 되며, **errno** 가 **ERANGE**로 설정 됩니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *Y*의 매개 변수 형식을 제외한 **nextafter** 및 **nextafter** 패밀리는 동일 합니다. *X* 와 *y* 가 같으면 반환 되는 값은 *y* 반환 형식으로 변환 됩니다.
 
-는 C++ 오버 로드를 허용 하므로 cmath > \<포함 하는 경우 **float** 및 **long** **double** 형식을 반환 하는 **nextafter 및** **nextafter** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 및 **nextafter** 및 **nextafter** 항상 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 \<하므로 cmath>> 포함 하는 경우 **float** 및 **long** **double** 형식을 반환 하는 **nextafter 및** **nextafter** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 및 **nextafter** 및 **nextafter** 항상 **double**을 반환 합니다.
 
 **_Nextafter** 및 **_Nextafterf** 함수는 Microsoft 전용입니다. **_Nextafterf** 함수는 x 64 용으로 컴파일하는 경우에만 사용할 수 있습니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> 또는 \<cmath>|
+|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nextafter**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> 또는 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 또는 \<cfloat>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.

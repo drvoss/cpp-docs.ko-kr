@@ -1,17 +1,18 @@
 ---
 title: 사용자 정의 리터럴 (C++)
-ms.date: 12/10/2019
+description: 표준 C++에서 사용자 정의 리터럴의 용도 및 용도에 대해 설명 합니다.
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301303"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090568"
 ---
 # <a name="user-defined-literals"></a>사용자 정의 리터럴
 
-에 C++는 정수, 문자, 부동 소수점, 문자열, 부울 및 포인터의 5 가지 주요 범주가 있습니다.  C++ 11부터 이러한 범주에 따라 사용자 고유의 리터럴을 정의하여 일반적인 구문에 대한 구문 바로 가기를 제공하고 형식 안전성을 높일 수 있습니다. 예를 들어 Distance 클래스가 있다고 가정합니다. 킬로미터와 마일에 대해 리터럴을 하나씩 정의하고 간단히 auto d = 42.0_km or auto d = 42.0_mi를 작성하여 사용자가 측정 단위를 명시적으로 지정하도록 장려할 수 있습니다. 사용자 정의 리터럴에 성능상의 이점이나 단점은 없습니다. 주로 편의상 또는 컴파일 시간 형식 추론을 위해 사용됩니다. 표준 라이브러리에는 std: string에 대 한 사용자 정의 리터럴, std:: complex 및 \<chrono > 헤더의 시간 단위 및 기간 작업에 대 한 사용자 정의 리터럴이 있습니다.
+에 C++는 정수, 문자, 부동 소수점, 문자열, 부울 및 포인터의 6 가지 주요 범주가 있습니다. C++ 11부터 이러한 범주에 따라 고유한 리터럴을 정의 하 여 일반적인 관용구 구문 바로 가기를 제공 하 고 형식 안전성을 높일 수 있습니다. 예를 들어 `Distance` 클래스가 있다고 가정해 보겠습니다. 킬로미터와 마일의 리터럴을 정의 하 고, 사용자가 `auto d = 42.0_km` 또는 `auto d = 42.0_mi`를 작성 하 여 측정 단위에 대해 명시적으로 지정할 수 있습니다. 사용자 정의 리터럴에는 성능상의 이점이 나 단점은 없습니다. 주로 편의상 또는 컴파일 시간 형식 추론을 위한 것입니다. 표준 라이브러리에는 `std::string`, `std::complex`, \<chrono > 헤더의 시간 및 기간 작업에 대 한 사용자 정의 리터럴이 있습니다.
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -40,74 +41,85 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-앞의 예제에서 연산자 이름은 사용자가 제공하는 이름에 대한 자리 표시자이지만 선행 밑줄이 필요합니다. (표준 라이브러리 에서만 밑줄 없이 리터럴을 정의할 수 있습니다.) 반환 형식은 리터럴이 수행 하는 변환 또는 기타 작업을 사용자 지정 하는 위치입니다. 또한 이러한 모든 연산자를 `constexpr`로 정의할 수 있습니다.
+앞의 예제에서 연산자 이름은 사용자가 제공하는 이름에 대한 자리 표시자이지만 선행 밑줄이 필요합니다. (표준 라이브러리 에서만 밑줄 없이 리터럴을 정의할 수 있습니다.) 반환 형식은 리터럴에 의해 수행 된 변환이 나 기타 작업을 사용자 지정 하는 위치입니다. 또한 이러한 모든 연산자를 `constexpr`로 정의할 수 있습니다.
 
 ## <a name="cooked-literals"></a>가공된 리터럴
 
-소스 코드에서 사용자 정의 여부에 관계없이 모든 리터럴은 본질적으로 `101`, `54.7`, `"hello"` 또는 `true`와 같은 영숫자 문자의 시퀀스입니다. 컴파일러는 시퀀스를 정수, float, const char\* 문자열 등으로 해석 합니다. 리터럴 값에 할당 된 컴파일러가 어떤 형식을 입력으로 허용 하는 사용자 정의 리터럴은 비공식적으로 *가공 된 literal*이라고 합니다. `_r` 및 `_t`를 제외한 위의 모든 연산자는 가공된 리터럴입니다. 예를 들어 리터럴 `42.0_km`는 _b와 유사한 서명을 가진 _km이라는 연산자에 바인딩하고 리터럴 `42_km`은 _a와 유사한 서명을 가진 연산자에 바인딩합니다.
+소스 코드에서 사용자 정의 여부에 관계 없이 모든 리터럴은 기본적으로 `101`, `54.7`, `"hello"` 또는 `true`와 같은 영숫자의 시퀀스입니다. 컴파일러는 시퀀스를 정수, float, const char\* 문자열 등으로 해석 합니다. 리터럴 값에 할당 된 컴파일러가 어떤 형식을 입력으로 허용 하는 사용자 정의 리터럴은 비공식적으로 *가공 된 literal*이라고 합니다. `_r` 및 `_t`를 제외한 위의 모든 연산자는 가공된 리터럴입니다. 예를 들어 리터럴 `42.0_km`는 _b와 유사한 서명을 가진 _km이라는 연산자에 바인딩하고 리터럴 `42_km`은 _a와 유사한 서명을 가진 연산자에 바인딩합니다.
 
-다음 예제에서는 사용자 정의 리터럴을 통해 호출자에게 명시적으로 입력을 지정하도록 장려하는 방법을 보여 줍니다. `Distance`를 생성하려면 사용자가 적절한 사용자 정의 리터럴을 사용하여 킬로미터 또는 마일을 명시적으로 지정해야 합니다. 물론 다른 방법으로 동일한 결과를 얻을 수도 있지만 사용자 정의 리터럴이 대체 방법보다 더 간단합니다.
+다음 예제에서는 사용자 정의 리터럴을 통해 호출자에게 명시적으로 입력을 지정하도록 장려하는 방법을 보여 줍니다. `Distance`를 생성하려면 사용자가 적절한 사용자 정의 리터럴을 사용하여 킬로미터 또는 마일을 명시적으로 지정해야 합니다. 다른 방법으로 동일한 결과를 얻을 수 있지만 사용자 정의 리터럴은 대체 방법 보다 더 자세한 정보를 얻을 수 없습니다.
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-리터럴 숫자는 10진수를 사용해야 합니다. 그렇지 않으면 숫자가 정수로 해석되며 형식이 연산자와 호환되지 않습니다. 또한 부동 소수점 입력의 경우 형식은 **long double**이어야 하며 정수 계열 형식의 경우 **long**long 이어야 합니다.
+리터럴 번호는 10 진수를 사용 해야 합니다. 그렇지 않으면 숫자가 정수로 해석 되 고 형식이 연산자와 호환 되지 않습니다. 부동 소수점 입력의 경우 형식은 **long double**이어야 하며 정수 계열 형식의 경우 **long**long 이어야 합니다.
 
 ## <a name="raw-literals"></a>원시 리터럴
 
-원시 사용자 정의 리터럴에서 정의한 연산자는 리터럴을 char 값의 시퀀스로 받아들이며 해당 시퀀스를 숫자, 문자열 또는 기타 형식으로 해석하는 것은 사용자가 결정합니다. 이 페이지의 앞부분에 나온 연산자 목록에서 `_r` 및 `_t`는 원시 리터럴을 정의하는 데 사용할 수 있습니다.
+원시 사용자 정의 리터럴에서 정의 하는 연산자는 리터럴을 char 값의 시퀀스로 받아들입니다. 해당 시퀀스를 숫자나 문자열 또는 다른 형식으로 해석할 수 있습니다. 이 페이지의 앞부분에 나온 연산자 목록에서 `_r` 및 `_t`는 원시 리터럴을 정의하는 데 사용할 수 있습니다.
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-원시 리터럴을 사용하여 컴파일러가 수행하는 것과 다른 입력 시퀀스의 사용자 지정 해석을 제공할 수 있습니다. 예를 들어 `4.75987` 시퀀스를 IEEE 754 부동 소수점 형식 대신 사용자 지정 10진수 형식으로 변환하는 리터럴을 정의할 수 있습니다. 가공된 리터럴과 마찬가지로, 원시 리터럴을 사용하여 입력 시퀀스의 컴파일 타임 유효성 검사를 수행할 수도 있습니다.
+원시 리터럴을 사용 하 여 컴파일러의 일반 동작과 다른 입력 시퀀스의 사용자 지정 해석을 제공할 수 있습니다. 예를 들어 `4.75987` 시퀀스를 IEEE 754 부동 소수점 형식 대신 사용자 지정 10진수 형식으로 변환하는 리터럴을 정의할 수 있습니다. 가공 된 리터럴과 같은 원시 리터럴을 사용 하 여 입력 시퀀스의 컴파일 타임 유효성 검사를 수행할 수도 있습니다.
 
 ### <a name="example-limitations-of-raw-literals"></a>예제: 원시 리터럴의 제한 사항
 

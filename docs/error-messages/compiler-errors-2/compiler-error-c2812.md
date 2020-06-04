@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-ms.openlocfilehash: 88b071f38cf41db9c929d25ffd526b3f2b7ca468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cec92982646c64e6c5b669df328e4836d4f44df8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202104"
 ---
 # <a name="compiler-error-c2812"></a>컴파일러 오류 C2812
 
-> \#/clr을 사용한 가져오기가 지원 되지 않습니다: pure 및 /clr: safe
+> \#가져오기는/clr: pure 및/clr: safe를 사용 하 여 지원 되지 않습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**/clr: pure** 및 **/clr: safe** Visual Studio 2015에서 사용 되지 않고 Visual Studio 2017에서 지원 되지 않는 컴파일러 옵션입니다.
+**/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-[#import 지시문](../../preprocessor/hash-import-directive-cpp.md) 지원 되지 않습니다 **/clr: pure** 및 **/clr: safe** 때문에 `#import` 네이티브 컴파일러 지원 라이브러리를 사용 해야 합니다.
+[#import 지시문](../../preprocessor/hash-import-directive-cpp.md) 은 `#import` 네이티브 컴파일러 지원 라이브러리를 사용 해야 하므로 **/clr: pure** 및 **/clr: safe** 에서 지원 되지 않습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C2812를 생성합니다.
+다음 샘플에서는 C2812를 생성 합니다.
 
 ```cpp
 // C2812.cpp

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
-ms.translationtype: HT
+ms.openlocfilehash: 36c64a74310c72df38021aebd8abb3ee430da3f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108404"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375890"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>연습: 프로젝트 및 솔루션 작업(C++)
 
@@ -22,13 +22,13 @@ Visual Studio에서는 프로젝트와 솔루션으로 작업을 구성합니다
 
 ## <a name="before-you-start"></a>시작하기 전에
 
-이 연습을 완료하려면 Visual Studio 2017 이상이 필요합니다. 복사본이 필요한 경우 다음과 같은 간단한 가이드를 참조하세요. [Visual Studio에서 C++ 지원을 설치합니다](../build/vscpp-step-0-installation.md). 아직 설치하지 않았다면 "Hello, World" 자습서를 통해 설치한 후, 다음 단계를 수행하여 C++ 구성 요소가 올바르게 설치되고 모두 작동하는지 확인합니다.
+이 연습을 완료하려면 Visual Studio 2017 이상이 필요합니다. 복사본이 필요한 경우, [Visual Studio에서 C++ 지원 설치](../build/vscpp-step-0-installation.md)에 대한 간단한 가이드를 참조하세요. 아직 설치하지 않았다면 "Hello, World" 자습서를 통해 설치한 후, 다음 단계를 수행하여 C++ 구성 요소가 올바르게 설치되고 모두 작동하는지 확인합니다.
 
 C++ 언어의 기본적인 사항을 이해하고 컴파일러, 링커 및 디버거가 사용되는 용도를 파악하면 도움이 됩니다. 이 자습서에서는 Windows 및 메뉴, 대화 상자를 사용하는 방법에 익숙하다고 가정합니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
-프로젝트를 만들려면 먼저 프로젝트 형식 템플릿을 선택합니다. 각 프로젝트 형식에 대해 Visual Studio에서는 컴파일러 설정을 지정하고 형식에 따라 시작 코드를 생성합니다. 이 시작 코드는 나중에 수정할 수 있습니다. 다음 단계는 사용 중인 Visual Studio 버전에 따라 다릅니다. 이 페이지의 왼쪽 위에 있는 버전 선택기가 올바른 버전으로 설정되어 있는지 확인합니다.
+프로젝트를 만들려면 먼저 프로젝트 형식 템플릿을 선택합니다. 각 프로젝트 형식에 대해 Visual Studio에서는 컴파일러 설정을 지정하고 형식에 따라 시작 코드를 생성합니다. 이 시작 코드는 나중에 수정할 수 있습니다. 다음 단계는 사용 중인 Visual Studio 버전에 따라 다릅니다. 선호하는 버전의 Visual Studio에 대한 설명서를 보려면 **버전** 선택기 컨트롤을 사용합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
 
 ::: moniker range="vs-2019"
 
@@ -104,7 +104,7 @@ C++ 언어의 기본적인 사항을 이해하고 컴파일러, 링커 및 디�
 
 1. **솔루션 탐색기** 창이 Visual Studio에 표시되지 않으면 메뉴 모음에서 **보기** > **솔루션 탐색기**를 선택합니다.
 
-1. **솔루션 탐색기**에서 **Game** 프로젝트를 선택합니다. 메뉴 모음에서 **프로젝트** > **클래스 추가**를 선택합니다.
+1. **솔루션 탐색기**에서 **Game** 프로젝트를 선택합니다. 메뉴 모음에서**클래스 추가** **프로젝트를** > 선택합니다.
 
 1. **클래스 추가** 대화 상자에서 **클래스 이름** 상자에 *Cardgame*을 입력합니다. 기본 파일 이름과 설정을 수정하지 마십시오. **확인** 단추를 선택합니다.
 
@@ -245,7 +245,7 @@ C++ 언어의 기본적인 사항을 이해하고 컴파일러, 링커 및 디�
 
    빌드가 실패한 경우 코드를 이전 단계에서 표시된 코드와 비교합니다.
 
-1. 프로젝트를 실행하려면 메뉴 모음에서 **디버그** > **디버그하지 않고 시작**을 선택합니다. 콘솔 창이 나타나고 출력은 다음과 같습니다.
+1. 프로젝트를 실행하려면 메뉴 모음에서 디버깅 없이 **디버그** > **시작을 선택합니다.** 콘솔 창이 나타나고 출력은 다음과 같습니다.
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.

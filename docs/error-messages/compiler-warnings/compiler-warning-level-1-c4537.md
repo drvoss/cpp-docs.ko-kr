@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4537
 ms.assetid: 9454493c-d419-475e-8f35-9c00233c9329
-ms.openlocfilehash: 2f97be4e1aaa5143df685cb95935d350e6f02534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81058f153228d3d8fbf4097c140962d0cb9677e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186363"
 ---
 # <a name="compiler-warning-level-1-c4537"></a>컴파일러 경고(수준 1) C4537
 
-> '*개체*': '*연산자*' 비 UDT 형식에 적용
+> '*object*': '*OPERATOR*'가 UDT 형식이 아닌 형식에 적용 되었습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-참조 개체 (사용자 정의 형식)가 필요 합니다. 여기서 전달 되었습니다. 참조 개체는 아닌 인라인 어셈블러 코드로 차이 만들 수 있습니다. 컴파일러 생성 코드 처럼 *개체* 인스턴스.
+개체 (사용자 정의 형식)가 필요한 위치에 참조가 전달 되었습니다. 참조는 개체가 아니지만 인라인 어셈블러 코드는이를 구분할 수 없습니다. 컴파일러는 *개체가* 인스턴스인 것 처럼 코드를 생성 합니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C4537 생성 및이 해결 하는 방법을 보여 줍니다.
+다음 샘플에서는 C4537를 생성 하 고 수정 하는 방법을 보여 줍니다.
 
 ```cpp
 // C4537.cpp

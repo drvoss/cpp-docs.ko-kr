@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s, _wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942019"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915190"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -67,16 +70,16 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 변수 값을 저장하는 버퍼입니다.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 *버퍼*의 크기입니다.
 
 *varname*<br/>
 환경 변수 이름입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 시 0, 실패 시 오류 코드가 나타납니다.
 
@@ -86,7 +89,7 @@ errno_t _wdupenv_s(
 
 ## <a name="remarks"></a>설명
 
-**_Dupenv_s** 함수는 *varname*에 대 한 환경 변수 목록을 검색 합니다. 변수가 발견 되 면 **_dupenv_s** 는 버퍼를 할당 하 고 변수 값을 버퍼에 복사 합니다. 버퍼의 주소 및 길이가 *buffer* 및 *numberofelements*에서 반환 됩니다. **_Dupenv_s** 는 버퍼 자체를 할당 하 여 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)에 대 한 보다 편리한 대안을 제공 합니다.
+**_Dupenv_s** 함수는 *varname*에 대 한 환경 변수 목록을 검색 합니다. 변수가 있으면 **_dupenv_s** 는 버퍼를 할당 하 고 변수 값을 버퍼에 복사 합니다. 버퍼의 주소 및 길이가 *buffer* 및 *numberofelements*에서 반환 됩니다. 버퍼 자체를 할당 하 여 **_dupenv_s** [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)보다 편리한 방법을 제공 합니다.
 
 > [!NOTE]
 > [free](free.md)를 호출하여 메모리를 확보하는 것은 호출하는 프로그램이 해야 할 일입니다.
@@ -95,13 +98,15 @@ errno_t _wdupenv_s(
 
 버퍼 크기에 관심이 없는 경우에는 *Numberofelements*에 대해 **NULL** 을 전달할 수 있습니다.
 
-**_dupenv_s** 는 Windows 운영 체제에서 대/소문자를 구분 하지 않습니다. **_dupenv_s** 는 전역 변수 **_environ** 이 가리키는 환경의 복사본을 사용 하 여 환경에 액세스 합니다. **_Environ**의 토론은 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) 의 설명을 참조 하세요.
+**_dupenv_s** 은 Windows 운영 체제에서 대/소문자를 구분 하지 않습니다. **_dupenv_s** 는 전역 변수 **_environ** 가 가리키는 환경의 복사본을 사용 하 여 환경에 액세스 합니다. **_Environ**에 대 한 설명은 [Getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) 의 설명을 참조 하세요.
 
 *버퍼* 의 값은 환경 변수 값의 복사본입니다. 이를 수정 하면 환경에 영향을 주지 않습니다. [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) 함수를 사용하여 환경 변수 값을 수정합니다.
 
-**_wdupenv_s** 는 **_dupenv_s**의 와이드 문자 버전입니다. **_wdupenv_s** 의 인수는 와이드 문자 문자열입니다. **_Wenviron** 전역 변수는 **_environ**의 와이드 문자 버전입니다. **_Wenviron**에서 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) 에 대 한 설명을 참조 하세요.
+**_wdupenv_s** 은 **_dupenv_s**의 와이드 문자 버전입니다. **_wdupenv_s** 의 인수는 와이드 문자 문자열입니다. **_Wenviron** 전역 변수는 **_environ**의 와이드 문자 버전입니다. **_Wenviron**에 대 한 자세한 내용은 [Getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) 의 설명을 참조 하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -114,7 +119,7 @@ errno_t _wdupenv_s(
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -142,7 +147,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
 [환경 상수](../../c-runtime-library/environmental-constants.md)<br/>

@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a512aa974cb57072915f887f0c2a20ed1263ffa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258678"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326911"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 클래스
 
-힙 포인터를 관리 하는 것에 대 한 스마트 포인터 클래스입니다.
+힙 포인터를 관리하기 위한 스마트 포인터 클래스입니다.
 
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,35 +34,35 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 #### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-힙에 저장 될 개체 형식입니다.
+힙에 저장할 개체 유형입니다.
 
-*Allocator*<br/>
-사용 하는 메모리 할당 클래스입니다.
+*할당자*<br/>
+사용할 메모리 할당 클래스입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CHeapPtr::CHeapPtr](#cheapptr)|생성자입니다.|
+|[밥프트르:::CHeapPtr](#cheapptr)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CHeapPtr::Allocate](#allocate)|개체를 저장 하는 힙에 메모리를 할당 하려면이 메서드를 호출 합니다.|
-|[CHeapPtr::Reallocate](#reallocate)|힙에서 메모리를 다시 할당 하려면이 메서드를 호출 합니다.|
+|[CHeapPtr::할당](#allocate)|이 메서드를 호출하여 힙에 메모리를 할당하여 개체를 저장합니다.|
+|[CHeapPtr::재할당](#reallocate)|힙에 메모리를 다시 할당하려면 이 메서드를 호출합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CHeapPtr::operator =](#operator_eq)|대입 연산자입니다.|
+|[CHeapPtr::연산자 =](#operator_eq)|할당 연산자입니다.|
 
 ## <a name="remarks"></a>설명
 
-`CHeapPtr` 파생 됩니다 [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) 기본적으로 CRT 루틴을 사용 하 고 (에 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 할당 및 메모리를 해제 합니다. 클래스 [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) 힙 포인터 목록을 만드는 데 사용할 수 있습니다. 참고 항목 [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), COM 메모리 할당 루틴을 사용 합니다.
+`CHeapPtr`[CHeapPtrBase에서](../../atl/reference/cheapptrbase-class.md) 파생되며 기본적으로 CRT [루틴(CCRTAllocator)을](../../atl/reference/ccrtallocator-class.md)사용하여 메모리를 할당하고 사용합니다. 클래스 [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) 힙 포인터 목록을 생성 하는 데 사용할 수 있습니다. COM 메모리 할당 루틴을 사용하는 [CComHeapPtr을](../../atl/reference/ccomheapptr-class.md)참조하십시오.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -74,9 +74,9 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 **헤더:** atlcore.h
 
-##  <a name="allocate"></a>  CHeapPtr::Allocate
+## <a name="cheapptrallocate"></a><a name="allocate"></a>CHeapPtr::할당
 
-개체를 저장 하는 힙에 메모리를 할당 하려면이 메서드를 호출 합니다.
+이 메서드를 호출하여 힙에 메모리를 할당하여 개체를 저장합니다.
 
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -84,22 +84,22 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*nElements*<br/>
-할당할 메모리 양을 계산 하는 데 사용 되는 요소의 수입니다. 기본값은 1입니다.
+*n엘리먼츠*<br/>
+할당할 메모리 양을 계산하는 데 사용되는 요소 수입니다. 기본값은 1입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-True를 반환 했습니다. 메모리가 할당 실패 하면 false를 합니다.
+메모리가 성공적으로 할당된 경우 true를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-할당자 루틴은 저장 하는 힙에 충분 한 메모리를 예약 하는 데 *nElement* 생성자에서 정의 된 형식의 개체입니다.
+할당자 루틴은 생성자에 정의된 형식의 *nElement* 개체를 저장하기 위해 힙에 충분한 메모리를 예약하는 데 사용됩니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a>밥프트르:::CHeapPtr
 
 생성자입니다.
 
@@ -111,18 +111,18 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*p*<br/>
-기존 힙 포인터를 또는 `CHeapPtr`합니다.
+*P*<br/>
+기존 힙 포인터 `CHeapPtr`또는 .
 
 ### <a name="remarks"></a>설명
 
-기존 포인터를 사용 하 여 힙 포인터를 만들 수 있습니다 또는 `CHeapPtr` 개체입니다. 그렇다면 새 `CHeapPtr` 새 포인터 및 리소스 관리에 대 한 책임을 지지 하는 개체입니다.
+힙 포인터는 선택적으로 기존 포인터 또는 개체를 `CHeapPtr` 사용하여 만들 수 있습니다. 이 경우 새 `CHeapPtr` 개체는 새 포인터 및 리소스를 관리해야 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-##  <a name="operator_eq"></a>  CHeapPtr::operator =
+## <a name="cheapptroperator-"></a><a name="operator_eq"></a>CHeapPtr::연산자 =
 
 대입 연산자입니다.
 
@@ -133,20 +133,20 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>매개 변수
 
-*p*<br/>
+*P*<br/>
 기존 `CHeapPtr` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-업데이트 된 참조를 반환 합니다 `CHeapPtr`합니다.
+업데이트된 에 대한 `CHeapPtr`참조를 반환합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+## <a name="cheapptrreallocate"></a><a name="reallocate"></a>CHeapPtr::재할당
 
-힙에서 메모리를 다시 할당 하려면이 메서드를 호출 합니다.
+힙에 메모리를 다시 할당하려면 이 메서드를 호출합니다.
 
 ```
 bool Reallocate(size_t nElements) throw();
@@ -154,18 +154,18 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*nElements*<br/>
-할당할 메모리 양을 계산 하는 데 사용 하는 요소의 새 수입니다.
+*n엘리먼츠*<br/>
+할당할 메모리 양을 계산하는 데 사용되는 요소의 새 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-True를 반환 했습니다. 메모리가 할당 실패 하면 false를 합니다.
+메모리가 성공적으로 할당된 경우 true를 반환합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [CHeapPtrBase 클래스](../../atl/reference/cheapptrbase-class.md)<br/>
 [CCRTAllocator 클래스](../../atl/reference/ccrtallocator-class.md)<br/>

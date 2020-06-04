@@ -18,22 +18,22 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6312d14dc681736ee396d5c7af6c50ba8d72cd3a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375827"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
+|[연산자!=](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;=](#op_gt_eq)|
+|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|[연산자&lt;=](#op_lt_eq)|
 |[연산자==](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 하나의 `thread::id` 개체가 다른 개체보다 크거나 같은지를 확인합니다.
 
@@ -45,13 +45,13 @@ bool operator>= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Left < Right)`
 
@@ -59,7 +59,7 @@ bool operator>= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 하나의 `thread::id` 개체가 다른 개체보다 큰지를 확인합니다.
 
@@ -71,13 +71,13 @@ bool operator> (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `Right < Left`
 
@@ -85,7 +85,7 @@ bool operator> (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 하나의 `thread::id` 개체가 다른 개체보다 작거나 같은지를 확인합니다.
 
@@ -97,13 +97,13 @@ bool operator<= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Right < Left)`
 
@@ -111,7 +111,7 @@ bool operator<= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 하나의 `thread::id` 개체가 다른 개체보다 작은지를 확인합니다.
 
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-전체 순서에서 *왼쪽* 이 *오른쪽* 앞에 오면 **true** 이 고, 그렇지 않으면 **false**입니다.
+**true** 경우 *왼쪽* 총 순서에서 *오른쪽* 앞에 옵니다. 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
@@ -139,7 +139,7 @@ bool operator<(
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자!=
 
 두 `thread::id` 개체가 다른지 비교합니다.
 
@@ -151,13 +151,13 @@ bool operator!= (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `!(Left == Right)`
 
@@ -165,7 +165,7 @@ bool operator!= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
 
 두 `thread::id` 개체가 같은지 비교합니다.
 
@@ -177,21 +177,21 @@ bool operator== (
 
 ### <a name="parameters"></a>매개 변수
 
-*비어*\
+*왼쪽*\
 왼쪽 `thread::id` 개체입니다.
 
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-두 개체가 동일한 실행 스레드를 나타내면 **true** 이 고, 두 개체가 모두 실행 스레드를 나타내지 않으면입니다. 그렇지 않으면 **false**입니다.
+두 개체가 동일한 실행 스레드를 나타내거나 두 개체가 실행 스레드를 나타내지 않는 경우 **true입니다.** 그렇지 **않으면, 거짓**.
 
 ### <a name="remarks"></a>설명
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
 
 `thread::id` 개체의 텍스트 표현을 스트림에 삽입합니다.
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ostr*\
+*오스트 ()오스트 ()*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 개체입니다.
 
-*A-id*\
+*자료*\
 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*Ostr*.
+*오스트 .*
 
 ### <a name="remarks"></a>설명
 
-이 함수는 *Ostr*에 *Id* 를 삽입 합니다.
+이 함수는 *Id를* *Ostr에*삽입합니다.
 
 두 `thread::id` 개체가 비교 결과 같으면 해당 개체의 삽입된 텍스트 표현은 동일합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<thread>](../standard-library/thread.md)
+[\<스레드>](../standard-library/thread.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2154
 ms.assetid: 98d6b044-5a3a-43ad-95fa-9b916b22468a
-ms.openlocfilehash: 74335a35b23f0e5c4f1ee22f01e4f9887c4a3c85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1404f8f2e7f9ab00146b39adf1cd3d375fbde9b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207183"
 ---
 # <a name="compiler-error-c2154"></a>컴파일러 오류 C2154
 
@@ -19,4 +19,4 @@ ms.locfileid: "62175545"
 
 열거형 형식의 기본 형식만 가져올 수 있습니다.
 
-자세한 내용은 [형식 특성에 대 한 컴파일러 지원](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.
+자세한 내용은 [형식 특성에 대한 컴파일러 지원](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하세요.

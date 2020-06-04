@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4532
+title: 컴파일러 경고(수준 1) C4532
 ms.date: 11/04/2016
 f1_keywords:
 - C4532
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: b47eb192bc01e6fe2c6c9423ed2c672f16c6818f
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 97ef7093aa56b41b869979e09d77fc448c6cf43d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186441"
 ---
-# <a name="compiler-warning-level-1-c4532"></a>컴파일러 경고 (수준 1) C4532
+# <a name="compiler-warning-level-1-c4532"></a>컴파일러 경고(수준 1) C4532
 
 ' continue ': 종료를 처리 하는 동안 __finally/finally 블록 밖으로 점프 하면 정의 되지 않은 동작이 발생 합니다.
 

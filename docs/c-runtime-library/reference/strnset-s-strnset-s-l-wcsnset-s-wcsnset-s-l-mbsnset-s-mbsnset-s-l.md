@@ -1,6 +1,6 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset_s_l
 - _strnset_s
@@ -8,6 +8,10 @@ api_name:
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
+- _o__mbsnset_s
+- _o__mbsnset_s_l
+- _o__strnset_s
+- _o__wcsnset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +63,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626143"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911213"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -118,10 +123,10 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*문자열*<br/>
 변경할 문자열입니다.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 *Str* 버퍼의 크기입니다.
 
 *c*<br/>
@@ -133,23 +138,25 @@ errno_t _mbsnset_s_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 정상적으로 실행되는 경우 0이고 그렇지 않으면 오류 코드입니다.
 
 이러한 함수는 해당 인수의 유효성을 검사합니다. *Str* 이 올바른 null 종료 문자열이 아니거나 size 인수가 0 보다 작거나 같으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 오류 코드를 반환 하 고 **errno** 를 해당 오류 코드로 설정 합니다. 보다 구체적인 값이 적용 되지 않는 경우 기본 오류 코드는 **EINVAL** 입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이러한 함수는 *str* 의 처음 *카운트* 문자를 *c*로 설정 합니다. *Count* 가 *str*의 크기 보다 크면 *count*대신 *str* 의 크기가 사용 됩니다. *Count* 가 *numberofelements* 보다 크고이 두 매개 변수가 *str*의 크기 보다 크면 오류가 발생 합니다.
 
-**_wcsnset_s** 및 **_mbsnset_s** 는 **_strnset_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsnset_s** 의 문자열 인수는 와이드 문자열입니다. **_mbsnset_s** 의 문자열은 amultibyte입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+**_wcsnset_s** 및 **_mbsnset_s** 는 **_strnset_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsnset_s** 의 문자열 인수는 와이드 문자열입니다. **_mbsnset_s** 는 amultibyte 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -193,8 +200,8 @@ After:  **** is a test
 ## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

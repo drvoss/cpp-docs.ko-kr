@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0018
 ms.assetid: 1a3d9e40-6a35-4a74-b6ba-8079f7a82217
-ms.openlocfilehash: 7d6dbc207e4c22e11a227544fcd3d9053df87384
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2289bef85e245d3302a007549d876c23ee4b277b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298102"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191935"
 ---
 # <a name="project-build-warning-prj0018"></a>프로젝트 빌드 경고 PRJ0018
 
 다음 환경 변수를 찾을 수 없습니다.
 
-환경 변수 정의 되지 않았습니다. 이 오류는 정의 되지 않은 환경 변수를 나열 합니다.
+환경 변수가 정의 되어 있지 않습니다. 이 오류는 정의 되지 않은 환경 변수를 나열 합니다.
 
-참조 [사용자 지정 빌드 명령에 대 한 매크로](../../build/reference/common-macros-for-build-commands-and-properties.md) 빌드 프로세스에서 매크로 대 한 정보에 대 한 합니다.
+빌드 프로세스의 매크로에 대 한 자세한 내용은 [사용자 지정 빌드 명령에 대 한 매크로](../../build/reference/common-macros-for-build-commands-and-properties.md) 를 참조 하세요.

@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405731"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754778"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 클래스
 
-ID2D1Geometry에 대 한 래퍼입니다.
+ID2D1지오메트리에 대한 래퍼입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -67,51 +67,51 @@ class CD2DGeometry : public CD2DResource;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|CD2DGeometry 개체를 생성합니다.|
-|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|소멸자입니다. D2D 기 하 도형 개체가 소멸 될 때 호출 됩니다.|
+|[CD2D지오메트리: :CD2D지오메트리](#cd2dgeometry)|CD2D지오메트리 오브젝트를 생성합니다.|
+|[CD2D 지오메트리: :~CD2D지오메트리](#_dtorcd2dgeometry)|소멸자입니다. D2D 형상 객체가 소멸될 때 호출됩니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DGeometry::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|지정한 기를 사용 하 여이 기 하이 도형을 결합 하 고 결과 ID2D1SimplifiedGeometrySink에 저장 합니다.|
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|이 기 하 도형과 지정한 기 하 도형의 교차를 설명 합니다. 지정 된 flattening 허용 오차를 사용 하 여 비교를 수행 합니다.|
-|[CD2DGeometry::ComputeArea](#computearea)|였 기 하 도형의 면적을 계산 하 여 지정 된 매트릭스를 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.|
-|[CD2DGeometry::ComputeLength](#computelength)|가 각 세그먼트에는 롤백된 것 처럼 geometry의 길이 계산 합니다.|
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|였 기 하 도형에 따라 지정된 된 거리에 지점 및 탄젠트 벡터를 계산 하 여 지정 된 매트릭스를 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.|
-|[CD2DGeometry::Destroy](#destroy)|CD2DGeometry 개체를 제거합니다. (재정의 [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DGeometry::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|기 하 여 채운 영역 지정된 flattening 허용 오차를 지정 하는 지정된 된 지점에 포함 됩니다 있는지 여부를 나타냅니다.|
-|[CD2DGeometry::Get](#get)|반환 ID2D1Geometry 인터페이스|
-|[CD2DGeometry::GetBounds](#getbounds)||
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|지정한 스트로크 너비 및 스타일에 의해 확장 된 및 지정 된 행렬으로 변환 된 후에 기 하 도형의 경계를 가져옵니다.|
-|[CD2DGeometry::IsValid](#isvalid)|리소스 유효성을 검사 (재정의 [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DGeometry::Outline](#outline)|기 하 도형의 윤곽선을 계산 하 고 결과 ID2D1SimplifiedGeometrySink를 작성 합니다.|
-|[CD2DGeometry::Simplify](#simplify)|포함 선 및 (선택 사항) 입방 형 3 차원 곡선을 ID2D1SimplifiedGeometrySink를 결과 기록 하는 기 하 도형의 단순화 된 버전을 만듭니다.|
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|기 하 도형의 스트로크에 지정한 스트로크 두께, 스타일 및 변환 주어진 지정된 된 점이 포함 되는지 여부를 결정 합니다.|
-|[CD2DGeometry::Tessellate](#tessellate)|지정된 된 매트릭스를 사용 하 여 변환 된 기 하 도형을 포함 하 고 지정 된 허용 오차를 사용 하 여 평면화 하는 시계 방향으로 돌아가는 삼각형 집합을 만듭니다.|
-|[CD2DGeometry::Widen](#widen)|기 하 도형을 지정에 따라 확장 하 고 받은 후 결과 ID2D1SimplifiedGeometrySink 쓸 지정된 행렬으로 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.|
+|[CD2D 지오메트리::연결](#attach)|기존 리소스 인터페이스를 개체에 연결합니다.|
+|[CD2D 지오메트리::결합형상](#combinewithgeometry)|이 형상을 지정된 형상과 결합하고 결과를 ID2D1단순화지오메스티싱크에 저장합니다.|
+|[CD2D 지오메트리::비교With지오메트리](#comparewithgeometry)|이 형상과 지정된 형상 간의 교차를 설명합니다. 비교는 지정된 평탄화 공차를 사용하여 수행됩니다.|
+|[CD2D 지오메트리::계산 영역](#computearea)|지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 병합된 후 형상의 면적을 계산합니다.|
+|[CD2D 지오메트리::계산 길이](#computelength)|각 세그먼트가 선으로 언롤된 것처럼 형상의 길이를 계산합니다.|
+|[CD2D 지오메트리::계산포인트길이](#computepointatlength)|지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 평평해진 후 형상을 따라 지정된 거리에서 점및 접선 벡터를 계산합니다.|
+|[CD2D지오메트리::D에스트로이](#destroy)|CD2D지오메트리 오브젝트를 삭제합니다. [(CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)재정의.)|
+|[CD2D지오메트리: :D](#detach)|개체에서 리소스 인터페이스 분리|
+|[CD2D 지오메트리::채우기포함점](#fillcontainspoint)|형상으로 채워진 영역에 지정된 평탄화 공차가 주어진 지정된 점이 포함될지 여부를 나타냅니다.|
+|[CD2D 지오메트리 : : Get](#get)|ID2D1 지오메트리 인터페이스 반환|
+|[CD2D지오메트리::겟바운드](#getbounds)||
+|[CD2D지오메트리: :GetWidened바운드](#getwidenedbounds)|지정된 스트로크 너비및 스타일에 의해 넓혀지고 지정된 행렬에 의해 변환된 후 형상의 경계를 가져옵니다.|
+|[CD2D 지오메트리::유효하지 않음](#isvalid)|리소스 유효성 [검사(CD2DResource 재정의::유효합니다.)](../../mfc/reference/cd2dresource-class.md#isvalid)|
+|[CD2D 지오메트리::윤곽선](#outline)|지오메트리의 윤곽을 계산하고 결과를 ID2D1단순화지오메스티싱크에 씁니다.|
+|[CD2D 지오메트리::단순화](#simplify)|선만 포함하고(선택적으로) 입방 베지어 곡선을 포함하는 형상의 단순화된 버전을 작성하고 그 결과를 ID2D1단순화된 지오메트리싱크에 씁니다.|
+|[CD2D 지오메트리::스트로크포함포인트](#strokecontainspoint)|지정된 획 두께, 스타일 및 변환에 지정된 점이 지오메트리의 획에 포함되는지 여부를 결정합니다.|
+|[CD2D지오메트리: 테셀레이트](#tessellate)|지정한 행렬을 사용하여 변환되고 지정한 허용 오차를 사용하여 평면화된 기하 도형을 포괄하는 시계 방향으로 돌아가는 삼각형 집합을 만듭니다.|
+|[CD2D 지오메트리: :확대](#widen)|지정된 스트로크로 형상을 넓히고 지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 병합된 후 ID2D1단순화된 GeometryySink에 결과를 씁니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|반환 ID2D1Geometry 인터페이스|
+|[CD2D 지오메트리::연산자 ID2D1 지오메트리*](#operator_id2d1geometry_star)|ID2D1 지오메트리 인터페이스 반환|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry 포인터입니다.|
+|[CD2D 지오메트리:m_pGeometry](#m_pgeometry)|ID2D1Geometry에 대한 포인터입니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2D자원](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DGeometry`
 
@@ -119,30 +119,30 @@ class CD2DGeometry : public CD2DResource;
 
 **헤더:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2D 지오메트리: :~CD2D지오메트리
 
-소멸자입니다. D2D 기 하 도형 개체가 소멸 될 때 호출 됩니다.
+소멸자입니다. D2D 형상 객체가 소멸될 때 호출됩니다.
 
 ```
 virtual ~CD2DGeometry();
 ```
 
-##  <a name="attach"></a>  CD2DGeometry::Attach
+## <a name="cd2dgeometryattach"></a><a name="attach"></a>CD2D 지오메트리::연결
 
-기존 개체에 대 한 리소스 인터페이스를 연결.
+기존 리소스 인터페이스를 개체에 연결합니다.
 
-```
+```cpp
 void Attach(ID2D1Geometry* pResource);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*pResource*<br/>
-기존 리소스 인터페이스입니다. NULL 일 수 없습니다.
+*Presource*<br/>
+기존 리소스 인터페이스입니다. NULL일 수 없음
 
-##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2D지오메트리: :CD2D지오메트리
 
-CD2DGeometry 개체를 생성합니다.
+CD2D지오메트리 오브젝트를 생성합니다.
 
 ```
 CD2DGeometry(
@@ -152,15 +152,15 @@ CD2DGeometry(
 
 ### <a name="parameters"></a>매개 변수
 
-*pParentTarget*<br/>
-렌더링 대상에 대 한 포인터입니다.
+*p부모 대상*<br/>
+렌더 대상에 대한 포인터입니다.
 
-*bAutoDestroy*<br/>
-개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.
+*b오토파괴*<br/>
+개체가 소유자(pParentTarget)에 의해 소멸됨을 나타냅니다.
 
-##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry
+## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2D 지오메트리::결합형상
 
-지정한 기를 사용 하 여이 기 하이 도형을 결합 하 고 결과 ID2D1SimplifiedGeometrySink에 저장 합니다.
+이 형상을 지정된 형상과 결합하고 결과를 ID2D1단순화지오메스티싱크에 저장합니다.
 
 ```
 BOOL CombineWithGeometry(
@@ -173,28 +173,28 @@ BOOL CombineWithGeometry(
 
 ### <a name="parameters"></a>매개 변수
 
-*inputGeometry*<br/>
-이 인스턴스와 결합 기하학입니다.
+*입력 지오메트리*<br/>
+이 인스턴스와 결합할 형상입니다.
 
-*combineMode*<br/>
-수행할 결합 작업의 형식입니다.
+*결합 모드*<br/>
+수행할 결합 작업의 유형입니다.
 
-*inputGeometryTransform*<br/>
-결합 하기 전의 inputGeometry에 적용할 변환입니다.
+*입력지오메지오메트리 변환*<br/>
+결합하기 전에 입력지오메트리에 적용할 변환입니다.
 
-*geometrySink*<br/>
+*지오메트리 싱크*<br/>
 결합 작업의 결과입니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사에서 각 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점들 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry
+## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2D 지오메트리::비교With지오메트리
 
-이 기 하 도형과 지정한 기 하 도형의 교차를 설명 합니다. 지정 된 flattening 허용 오차를 사용 하 여 비교를 수행 합니다.
+이 형상과 지정된 형상 간의 교차를 설명합니다. 비교는 지정된 평탄화 공차를 사용하여 수행됩니다.
 
 ```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -205,22 +205,22 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 
 ### <a name="parameters"></a>매개 변수
 
-*inputGeometry*<br/>
-테스트할 기 하 도형입니다.
+*입력 지오메트리*<br/>
+테스트할 형상입니다.
 
-*inputGeometryTransform*<br/>
-InputGeometry에 적용할 변환입니다.
+*입력지오메지오메트리 변환*<br/>
+입력에 적용할 변환Geometry입니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사에서 각 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점들 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="computearea"></a>  CD2DGeometry::ComputeArea
+## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2D 지오메트리::계산 영역
 
-였 기 하 도형의 면적을 계산 하 여 지정 된 매트릭스를 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.
+지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 병합된 후 형상의 면적을 계산합니다.
 
 ```
 BOOL ComputeArea(
@@ -231,22 +231,22 @@ BOOL ComputeArea(
 
 ### <a name="parameters"></a>매개 변수
 
-*worldTransform*<br/>
-면적을 계산 하기 전에이 기 하이 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+해당 영역을 계산하기 전에 이 형상에 적용할 변환입니다.
 
-*area*<br/>
-이 메서드는 반환 될 때이 기 하 도형의 결합된의 변환 된 버전의 영역에 대 한 포인터를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+*영역*<br/>
+이 메서드가 반환되면 이 형상의 변형되고 병합된 버전의 영역에 대한 포인터가 포함됩니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="computelength"></a>  CD2DGeometry::ComputeLength
+## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2D 지오메트리::계산 길이
 
-가 각 세그먼트에는 롤백된 것 처럼 geometry의 길이 계산 합니다.
+각 세그먼트가 선으로 언롤된 것처럼 형상의 길이를 계산합니다.
 
 ```
 BOOL ComputeLength(
@@ -257,22 +257,22 @@ BOOL ComputeLength(
 
 ### <a name="parameters"></a>매개 변수
 
-*worldTransform*<br/>
-해당 길이 계산 하기 전에 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+길이를 계산하기 전에 형상에 적용할 변환입니다.
 
 *length*<br/>
-이 메서드가 반환 하는 경우 기 하 도형의 길이에 대 한 포인터를 포함 합니다. 길이 닫힌된 기 하 도형에 대 한 암시적 닫는 세그먼트를 포함합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+이 메서드가 반환되면 형상 길이에 대한 포인터가 포함됩니다. 닫힌 형상의 경우 길이에 암시적 닫는 세그먼트가 포함됩니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength
+## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2D 지오메트리::계산포인트길이
 
-였 기 하 도형에 따라 지정된 된 거리에 지점 및 탄젠트 벡터를 계산 하 여 지정 된 매트릭스를 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.
+지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 평평해진 후 형상을 따라 지정된 거리에서 점및 접선 벡터를 계산합니다.
 
 ```
 BOOL ComputePointAtLength(
@@ -286,47 +286,47 @@ BOOL ComputePointAtLength(
 ### <a name="parameters"></a>매개 변수
 
 *length*<br/>
-지점 및 찾을 탄젠트 기 하 도형 따라 거리입니다. 이 간격 0 미만인 경우이 메서드는 첫 번째 기 하 도형 지점을 계산 합니다. 이 거리는 geometry의 길이 보다 클 경우이 메서드는 마지막 기 하 도형 점을 계산 합니다.
+찾을 점과 접선의 지오메트리를 따라 가는 거리입니다. 이 거리가 0이 아니라면 이 방법은 형상의 첫 번째 점을 계산합니다. 이 거리가 형상의 길이보다 크면 이 방법은 형상의 마지막 점을 계산합니다.
 
-*worldTransform*<br/>
-지정 된 지점 및 탄젠트를 계산 하기 전에 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+지정된 점과 접선을 계산하기 전에 형상에 적용할 변환입니다.
 
-*point*<br/>
-기 하 도형에 따라 지정 된 거리에 위치 합니다. 기 하 도형 비어 있는 경우이 여기서 포함 NaN x 및 y 값입니다.
+*지점*<br/>
+형상을 따라 지정된 거리의 위치입니다. 형상이 비어 있으면 이 점에는 NaN을 x 및 y 값으로 포함합니다.
 
-*unitTangentVector*<br/>
-이 메서드는 반환 될 때 탄젠트 벡터 기 하 도형에 따라 지정된 된 거리에 대 한 포인터를 포함 합니다. 기 하 도형 비어 있으면이 벡터 포함 NaN x 및 y 값입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+*단위탄젠트벡터*<br/>
+이 메서드가 반환되면 지오메트리를 따라 지정된 거리에 있는 접선 벡터에 대한 포인터가 포함됩니다. 형상이 비어 있으면 이 벡터에는 NaN이 x 및 y 값으로 포함됩니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="destroy"></a>  CD2DGeometry::Destroy
+## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a>CD2D지오메트리::D에스트로이
 
-CD2DGeometry 개체를 제거합니다.
+CD2D지오메트리 오브젝트를 삭제합니다.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DGeometry::Detach
+## <a name="cd2dgeometrydetach"></a><a name="detach"></a>CD2D지오메트리: :D
 
-개체에서 리소스 인터페이스를 분리합니다.
+개체에서 리소스 인터페이스 분리
 
 ```
 ID2D1Geometry* Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-분리 된 리소스 인터페이스에 대 한 포인터입니다.
+분리된 리소스 인터페이스에 대한 포인터입니다.
 
-##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint
+## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2D 지오메트리::채우기포함점
 
-기 하 여 채운 영역 지정된 flattening 허용 오차를 지정 하는 지정된 된 지점에 포함 됩니다 있는지 여부를 나타냅니다.
+형상으로 채워진 영역에 지정된 평탄화 공차가 주어진 지정된 점이 포함될지 여부를 나타냅니다.
 
 ```
 BOOL FillContainsPoint(
@@ -338,35 +338,35 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
+*지점*<br/>
 테스트할 점입니다.
 
-*worldTransform*<br/>
-포함을 테스트 하기 전에 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+구속을 테스트하기 전에 형상에 적용할 변환입니다.
 
-*contains*<br/>
-이 메서드는 반환 될 때이 TRUE 이면 기 하 여 채운 영역; 요소는 bool 값을 포함 합니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+*포함*<br/>
+이 메서드가 반환될 때 형상으로 채워진 영역에 점이 포함된 경우 TRUE인 bool 값이 포함됩니다. 그렇지 않으면 false입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-숫자 정확도는 정확 하 게 기하학적 경로 및 경로 교차 계산 됩니다. 채우기가 허용 오차 보다 작은 없는 지점 내에서 여전히 간주 됩니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+정확한 기하학적 경로 및 경로 교차가 계산되는 숫자 정확도입니다. 점분이 허용오차보다 적게 누락된 점은 여전히 내부로 간주됩니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="get"></a>  CD2DGeometry::Get
+## <a name="cd2dgeometryget"></a><a name="get"></a>CD2D 지오메트리 : : Get
 
-반환 ID2D1Geometry 인터페이스
+ID2D1 지오메트리 인터페이스 반환
 
 ```
 ID2D1Geometry* Get();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ID2D1Geometry 인터페이스 또는 개체가 아직 초기화 되지 않은 경우 NULL 포인터입니다.
+개체가 아직 초기화되지 않은 경우 ID2D1Geometry 인터페이스 또는 NULL에 대한 포인터입니다.
 
-##  <a name="getbounds"></a>  CD2DGeometry::GetBounds
+## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2D지오메트리::겟바운드
 
 ```
 BOOL GetBounds(
@@ -376,14 +376,14 @@ CD2DRectF& bounds) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*worldTransform*<br/>
-*bounds*
+*월드 트랜스포메이션*<br/>
+*범위*
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds
+## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2D지오메트리: :GetWidened바운드
 
-지정한 스트로크 너비 및 스타일에 의해 확장 된 및 지정 된 행렬으로 변환 된 후에 기 하 도형의 경계를 가져옵니다.
+지정된 스트로크 너비및 스타일에 의해 넓혀지고 지정된 행렬에 의해 변환된 후 형상의 경계를 가져옵니다.
 
 ```
 BOOL GetWidenedBounds(
@@ -396,26 +396,26 @@ BOOL GetWidenedBounds(
 
 ### <a name="parameters"></a>매개 변수
 
-*strokeWidth*<br/>
-기 하 도형 윤곽선을 스트로크 하 여 확장에 사용 되는 양입니다.
+*스트로크 폭*<br/>
+윤곽선을 쓰다듬어 형상을 넓게 하는 양입니다.
 
-*strokeStyle*<br/>
-기 하 도형 확대 되는 선의 스타일입니다.
+*스트로크 스타일*<br/>
+형상을 넓혀주는 획의 스타일입니다.
 
-*worldTransform*<br/>
-기 하 도형 변환 되 고 기 하 도형에 스트로크 후 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+형상이 변형된 후 형상이 스트로크된 후 형상에 적용할 변환입니다.
 
-*bounds*<br/>
-이 메서드는 반환 될 때 확장 된 기의 범위를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+*범위*<br/>
+이 메서드가 반환되면 확대된 형상의 경계가 포함됩니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사에서 각 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점들 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="isvalid"></a>  CD2DGeometry::IsValid
+## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2D 지오메트리::유효하지 않음
 
 리소스 유효성 검사
 
@@ -423,33 +423,33 @@ BOOL GetWidenedBounds(
 virtual BOOL IsValid() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-리소스 유효 하면 TRUE 그렇지 않으면 FALSE입니다.
+TRUE 리소스가 유효한 경우; 그렇지 않으면 거짓.
 
-##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry
+## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a>CD2D 지오메트리:m_pGeometry
 
-ID2D1Geometry 포인터입니다.
+ID2D1Geometry에 대한 포인터입니다.
 
 ```
 ID2D1Geometry* m_pGeometry;
 ```
 
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*
+## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2D 지오메트리::연산자 ID2D1 지오메트리*
 
-반환 ID2D1Geometry 인터페이스
+ID2D1 지오메트리 인터페이스 반환
 
 ```
 operator ID2D1Geometry*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-ID2D1Geometry 인터페이스 또는 개체가 아직 초기화 되지 않은 경우 NULL 포인터입니다.
+개체가 아직 초기화되지 않은 경우 ID2D1Geometry 인터페이스 또는 NULL에 대한 포인터입니다.
 
-##  <a name="outline"></a>  CD2DGeometry::Outline
+## <a name="cd2dgeometryoutline"></a><a name="outline"></a>CD2D 지오메트리::윤곽선
 
-기 하 도형의 윤곽선을 계산 하 고 결과 ID2D1SimplifiedGeometrySink를 작성 합니다.
+지오메트리의 윤곽을 계산하고 결과를 ID2D1단순화지오메스티싱크에 씁니다.
 
 ```
 BOOL Outline(
@@ -460,22 +460,22 @@ BOOL Outline(
 
 ### <a name="parameters"></a>매개 변수
 
-*worldTransform*<br/>
-기 하 도형 윤곽선에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+형상 윤곽선에 적용할 변환입니다.
 
-*geometrySink*<br/>
-기 하 도형 변환 개요 ID2D1SimplifiedGeometrySink 추가 됩니다.
+*지오메트리 싱크*<br/>
+형상 변환 윤곽선이 추가되는 ID2D1단순화지오메스티시싱크.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="simplify"></a>  CD2DGeometry::Simplify
+## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a>CD2D 지오메트리::단순화
 
-포함 선 및 (선택 사항) 입방 형 3 차원 곡선을 ID2D1SimplifiedGeometrySink를 결과 기록 하는 기 하 도형의 단순화 된 버전을 만듭니다.
+선만 포함하고(선택적으로) 입방 베지어 곡선을 포함하는 형상의 단순화된 버전을 작성하고 그 결과를 ID2D1단순화된 지오메트리싱크에 씁니다.
 
 ```
 BOOL Simplify(
@@ -487,25 +487,25 @@ BOOL Simplify(
 
 ### <a name="parameters"></a>매개 변수
 
-*simplificationOption*<br/>
-간소화 된 기 하 도형 곡선을 포함 해야 하는지 여부를 지정 하는 값입니다.
+*단순화 옵션*<br/>
+단순화된 형상에 곡선이 포함되어야 하는지 여부를 지정하는 값입니다.
 
-*worldTransform*<br/>
-간소화 된 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+단순화된 형상에 적용할 변환입니다.
 
-*geometrySink*<br/>
-ID2D1SimplifiedGeometrySink는 단순한 기 하 도형이 추가 됩니다.
+*지오메트리 싱크*<br/>
+단순화된 형상이 추가되는 ID2D1단순화지오메스티시싱크.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint
+## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2D 지오메트리::스트로크포함포인트
 
-기 하 도형의 스트로크에 지정한 스트로크 두께, 스타일 및 변환 주어진 지정된 된 점이 포함 되는지 여부를 결정 합니다.
+지정된 획 두께, 스타일 및 변환에 지정된 점이 지오메트리의 획에 포함되는지 여부를 결정합니다.
 
 ```
 BOOL StrokeContainsPoint(
@@ -519,31 +519,31 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>매개 변수
 
-*point*<br/>
+*지점*<br/>
 포함 여부를 테스트할 점입니다.
 
-*strokeWidth*<br/>
+*스트로크 폭*<br/>
 적용할 스트로크의 두께입니다.
 
-*strokeStyle*<br/>
-적용할 선의 스타일입니다.
+*스트로크 스타일*<br/>
+적용할 스트로크 스타일입니다.
 
-*worldTransform*<br/>
-스트로크 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+획이 된 형상에 적용할 변환입니다.
 
-*contains*<br/>
-이 메서드가 반환 하는 경우 기 하 도형의 스트로크에 지정된 된 지점이 포함 된 경우 TRUE로 설정 하는 부울 값을 포함 합니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
+*포함*<br/>
+이 메서드가 반환될 때 형상의 스트로크에 지정된 점이 포함된 경우 TRUE로 설정된 부울 값이 포함됩니다. 그렇지 않으면 false입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.
 
-*flatteningTolerance*<br/>
-숫자 정확도는 정확 하 게 기하학적 경로 및 경로 교차 계산 됩니다. 허용 오차 보다 작은 스트로크가 없는 지점 내에서 여전히 간주 됩니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+정확한 기하학적 경로 및 경로 교차가 계산되는 숫자 정확도입니다. 공차보다 적은 획이 누락된 점은 여전히 내부로 간주됩니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="tessellate"></a>  CD2DGeometry::Tessellate
+## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2D지오메트리: 테셀레이트
 
-지정된 된 매트릭스를 사용 하 여 변환 된 기 하 도형을 포함 하 고 지정 된 허용 오차를 사용 하 여 평면화 하는 시계 방향으로 돌아가는 삼각형 집합을 만듭니다.
+지정한 행렬을 사용하여 변환되고 지정한 허용 오차를 사용하여 평면화된 기하 도형을 포괄하는 시계 방향으로 돌아가는 삼각형 집합을 만듭니다.
 
 ```
 BOOL Tessellate(
@@ -554,22 +554,22 @@ BOOL Tessellate(
 
 ### <a name="parameters"></a>매개 변수
 
-*worldTransform*<br/>
-이 기 하 도형 또는 NULL로 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+이 형상 또는 NULL에 적용할 변환입니다.
 
-*tessellationSink*<br/>
-ID2D1TessellationSink는 없을 추가 됩니다.
+*테셀레이션싱크*<br/>
+테셀레이션이 추가되는 ID2D1테셀레이션싱크입니다.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-##  <a name="widen"></a>  CD2DGeometry::Widen
+## <a name="cd2dgeometrywiden"></a><a name="widen"></a>CD2D 지오메트리: :확대
 
-기 하 도형을 지정에 따라 확장 하 고 받은 후 결과 ID2D1SimplifiedGeometrySink 쓸 지정된 행렬으로 변환 하 고 지정 된 허용 오차를 사용 하 여 결합 합니다.
+지정된 스트로크로 형상을 넓히고 지정된 행렬에 의해 변환되고 지정된 공차를 사용하여 병합된 후 ID2D1단순화된 GeometryySink에 결과를 씁니다.
 
 ```
 BOOL Widen(
@@ -582,25 +582,25 @@ BOOL Widen(
 
 ### <a name="parameters"></a>매개 변수
 
-*strokeWidth*<br/>
-기 하 도형 확대 변환에 사용 되는 양입니다.
+*스트로크 폭*<br/>
+형상을 넓을 수 있는 양입니다.
 
-*strokeStyle*<br/>
-기 하 도형 또는 NULL로 적용할 선의 스타일입니다.
+*스트로크 스타일*<br/>
+형상 또는 NULL에 적용할 스트로크 스타일입니다.
 
-*worldTransform*<br/>
-이 클래스는 확대 후 기 하 도형에 적용할 변환입니다.
+*월드 트랜스포메이션*<br/>
+확대한 후 형상에 적용할 변환입니다.
 
-*geometrySink*<br/>
-ID2D1SimplifiedGeometrySink는 확장 된 기 추가 됩니다.
+*지오메트리 싱크*<br/>
+ID2D1단순화된 형상이 추가되는 형상싱크.
 
-*flatteningTolerance*<br/>
-기 하 도형의 다각형 근사 점 사이의 거리에 최대 범위입니다. 값이 작을수록 결과가 정확해 하지만 실행 속도 느려집니다.
+*평탄화내성*<br/>
+기하 도형의 다각형 근사에서 각 점 사이의 거리에 허용되는 최대 범위입니다. 값이 작을수록 결과가 정확해지지만 실행 속도는 느려집니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.
+메서드가 성공하면 TRUE를 반환합니다. 그렇지 않으면 FALSE를 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [클래스](../../mfc/reference/mfc-classes.md)

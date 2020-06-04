@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213566"
 ---
 # <a name="swap-function-wrl"></a>Swap 함수 (WRL)
 
@@ -35,16 +35,16 @@ WRL_NOTHROW inline void Swap(
 
 ## <a name="return-value"></a>반환 값
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-두 개의 지정 된 인수 값을 교환 합니다.
+지정 된 두 인수 값을 교환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** internal.h
+**헤더:** internal. h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)

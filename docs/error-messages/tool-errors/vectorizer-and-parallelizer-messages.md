@@ -8,24 +8,24 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857460"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182203"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>벡터화 도우미 및 병렬화 도우미 메시지
 
-Microsoft를 사용할 수 있습니다 C++ 컴파일러 옵션 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 하 고 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 설정 하는 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 출력 원인은 코드 및 해당 작업에 대 한 정보 메시지입니다. 이 문서는 이유 코드 및 메시지를 설명합니다.
+Microsoft C++ 컴파일러 옵션 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 를 사용 하 여 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 를 설정 하 여 해당 활동에 대 한 이유 코드 및 정보 메시지를 출력할 수 있습니다. 이 문서는 이유 코드 및 메시지를 설명합니다.
 
-## <a name="BKMK_InformationalMessages"></a> 정보 메시지
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>정보 메시지
 
 지정한 보고 수준에 따라 각 루프에 대해 다음과 같은 정보 메시지 중 하나가 표시됩니다.
 
 이유 코드에 대한 정보는 이 문서의 다음 부분을 참조하십시오.
 
-|알림 메시지|설명|
+|알림 메시지|Description|
 |---------------------------|-----------------|
 |5001|`Loop vectorized.`|
 |5002|`Loop not vectorized due to reason '*description*'.`|
@@ -33,15 +33,15 @@ Microsoft를 사용할 수 있습니다 C++ 컴파일러 옵션 [/Qpar-report](.
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-다음 섹션에서는 벡터화 도우미 및 평행 화 도우미 가능한 이유 코드를 나열합니다.
+다음 섹션에서는 평행 화 도우미 및 벡터화에 대 한 가능한 이유 코드를 나열 합니다.
 
-## <a name="BKMK_ReasonCode50x"></a> 5xx 이유 코드
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>5xx 이유 코드
 
-5*xx* 이유 코드를 평행 화 도우미와 벡터화에 적용 합니다.
+5*xx* 이유 코드는 평행 화 도우미 및 벡터화에 모두 적용 됩니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
-|500|몇 가지 사례를 설명 하는 제네릭 메시지-예를 들어, 루프 포함 여러 종료 또는 루프 헤더가 유도 변수의 증가 시켜 끝나지 않습니다.|
+|500|여러 가지 사례를 포함 하는 일반 메시지-예를 들어 루프가 여러 번 종료 되거나, 루프 헤더가 유도 변수를 증가 시켜 끝나지 않습니다.|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,9 +198,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> 10xx 이유 코드
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>10xx 이유 코드
 
-10 개*xx* 이유 코드를 평행 화 도우미에 적용 합니다.
+10*xx* 이유 코드는 평행 화 도우미에 적용 됩니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> 11xx 이유 코드
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>11xx 이유 코드
 
-11*xx* 이유 코드 벡터화에 적용 합니다.
+11*xx* 이유 코드는 벡터화에 적용 됩니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> 12xx 이유 코드
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>12xx 이유 코드
 
-12*xx* 이유 코드 벡터화에 적용 합니다.
+12*xx* 이유 코드는 벡터화에 적용 됩니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -630,9 +630,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> 13xx 이유 코드
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>13xx 이유 코드
 
-13*xx* 이유 코드 벡터화에 적용 합니다.
+13*xx* 이유 코드는 벡터화에 적용 됩니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> 14xx 이유 코드
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>14xx 이유 코드
 
-14*xx* 이유 코드는 벡터화와 호환 되지 않는 일부 옵션이 지정 된 경우 발생 합니다.
+14*xx* 이유 코드는 벡터화와 호환 되지 않는 일부 옵션이 지정 된 경우에 발생 합니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -834,9 +834,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> 15xx 이유 코드
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>15xx 이유 코드
 
-15 개의*xx* 이유 코드는 앨리어싱에 적용 합니다. 앨리어싱은 메모리의 한 영역에 두 가지 다른 이름으로 접근할 때 일어납니다.
+15*xx* 이유 코드는 앨리어싱에 적용 됩니다. 앨리어싱은 메모리의 한 영역에 두 가지 다른 이름으로 접근할 때 일어납니다.
 
 |이유 코드|설명|
 |-----------------|-----------------|
@@ -962,12 +962,12 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C /C++ 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md)
 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[자동 벡터화 in Visual Studio 2012 – 개요](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
+[Visual Studio 2012의 자동 벡터화-개요](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop ()](../../preprocessor/loop.md) \
 [/Q 옵션 (하위 수준 작업)](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report (자동 평행 화 도우미 보고 수준)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report(자동 벡터화 도우미 보고 수준)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f23d5aff2bac65363086c077af45e35c3263f65
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372168"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750576"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 클래스
 
-합니다 `CRecentDockSiteInfo` 클래스는에 대 한 최신 상태 정보를 저장 하는 도우미 클래스를 [CPane 클래스](../../mfc/reference/cpane-class.md)합니다.
+클래스는 `CRecentDockSiteInfo` [CPane](../../mfc/reference/cpane-class.md)클래스에 대한 최신 상태 정보를 저장하는 도우미 클래스입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -51,13 +51,13 @@ class CRecentDockSiteInfo : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |`CRecentDockSiteInfo::CRecentDockSiteInfo`|기본 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
 |[CRecentDockSiteInfo::CleanUp](#cleanup)||
 |[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||
@@ -68,7 +68,7 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||
 |[CRecentDockSiteInfo::Init](#init)||
 |[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||
-|[CRecentDockSiteInfo::operator =](#operator_eq)||
+|[CRecentDockSiteInfo::연산자 =](#operator_eq)||
 |[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||
 |[CRecentDockSiteInfo::SetInfo](#setinfo)||
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||
@@ -77,7 +77,7 @@ class CRecentDockSiteInfo : public CObject
 
 `CRecentDockSiteInfo` 클래스는 데이터 관리 클래스입니다. 이 클래스는 도킹과 부동 간에 전환될 때 `CPane`의 마지막 상태를 추적합니다. 사용자가 도킹 가능한 부동 창을 두 번 클릭하면 도킹됩니다. 도킹된 창을 두 번 클릭하면 이전 위치, 크기 및 상태로 돌아갑니다. 마찬가지로 창이 다시 도킹되면 이전 도킹 위치로 돌아갑니다. 이 데이터 클래스를 통해 이 작업을 수행할 수 있습니다. 이 클래스의 멤버는 도킹된 창에 대한 상태 정보를 저장하므로 애플리케이션에서 직접 수정할 수 없습니다.
 
-`CRecentDockSiteInfo` 개체는 창을 만들 때마다 생성됩니다. 각 `CPane` 개체에는 멤버 변수 [M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo),이 정보를 저장 합니다.
+`CRecentDockSiteInfo` 개체는 창을 만들 때마다 생성됩니다. 각 `CPane` 개체에는 이 정보를 저장할 멤버 변수 [CPane:.m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)있습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -89,15 +89,15 @@ class CRecentDockSiteInfo : public CObject
 
 **헤더:** afxrecentDockSiteInfo.h
 
-##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp
+## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a>CRecentDockSiteInfo::정리
 
-```
+```cpp
 void CleanUp();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo
+## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a>CRecentDockSiteInfo::CRecentDockSiteInfo
 
 ```
 CRecentDockSiteInfo(CPane* pBar);
@@ -105,21 +105,21 @@ CRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pBar*<br/>
+【인】 *pBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider
+## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a>CRecentDockSiteInfo::GetRecentDefaultPane 분배기
 
 ```
 CPaneDivider* GetRecentDefaultPaneDivider();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent
+## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a>CRecentDockSiteInfo::GetRecentDockedPercent
 
 ```
 int GetRecentDockedPercent(BOOL bForSlider);
@@ -127,13 +127,13 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect
+## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a>CRecentDockSiteInfo::GetRecentDockedRect
 
 ```
 CRect& GetRecentDockedRect(BOOL bForSlider);
@@ -141,13 +141,13 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes
+## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a>CRecentDockSiteInfo::GetRecentListOfpanes
 
 ```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
@@ -155,13 +155,13 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer
+## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a>CRecentDockSiteInfo::GetRecentPaneContainer
 
 ```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
@@ -169,13 +169,13 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer
+## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a>CRecentDockSiteInfo::GetRecentTabContainer
 
 ```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
@@ -183,21 +183,21 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="init"></a>  CRecentDockSiteInfo::Init
+## <a name="crecentdocksiteinfoinit"></a><a name="init"></a>CRecentDockSiteInfo::이니트
 
-```
+```cpp
 void Init();
 ```
 
 ### <a name="remarks"></a>설명
 
-##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane
+## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a>CRecentDockSiteInfo::최근레프트파인
 
 ```
 BOOL IsRecentLeftPane(BOOL bForSlider);
@@ -205,13 +205,13 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
+【인】 *b포슬라이더*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =
+## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a>CRecentDockSiteInfo::연산자 =
 
 ```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
@@ -219,15 +219,15 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *src*<br/>
+【인】 *src*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
-##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes
+## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a>CRecentDockSiteInfo::SaveListofRecentpanes
 
-```
+```cpp
 void SaveListOfRecentPanes(CList<HWND,
     HWND>& lstOrg,
     BOOL bForSlider);
@@ -235,13 +235,13 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *CList<HWND*<br/>
-[in] *lstOrg*<br/>
-[in] *bForSlider*<br/>
+【인】 *CList<HWND*<br/>
+【인】 *lstOrg*<br/>
+【인】 *b포슬라이더*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo
+## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a>CRecentDockSiteInfo::SetInfo
 
 ```
 virtual void SetInfo(
@@ -251,12 +251,12 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *bForSlider*<br/>
-[in] *srcInfo*<br/>
+【인】 *b포슬라이더*<br/>
+【인】 *srcInfo*<br/>
 
 ### <a name="remarks"></a>설명
 
-##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo
+## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a>CRecentDockSiteInfo::스토어독정보
 
 ```
 virtual void StoreDockInfo(
@@ -266,12 +266,12 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-[in] *pRecentContainer*<br/>
-[in] *pTabbedBar*<br/>
+【인】 *p최근 컨테이너*<br/>
+【인】 *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)<br/>

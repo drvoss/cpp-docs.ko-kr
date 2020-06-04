@@ -4,15 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 86da5081fbe63728b062879838ac3ffe78504ccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707747"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211486"
 ---
 # <a name="consumer-wizard-generated-classes"></a>소비자 마법사 생성 클래스
-
 
 ::: moniker range="vs-2019"
 
@@ -28,7 +27,7 @@ Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 �
 
 - 특성 사용 소비자를 선택할 경우 "_*ClassName*Accessor" 형식의 이름을 가진 사용자 레코드 클래스가 삽입됩니다. 즉, 명령 클래스만 텍스트 편집기에서 볼 수 있고 사용자 레코드 클래스는 삽입된 코드로만 볼 수 있습니다. 삽입된 코드를 보는 방법에 대한 자세한 내용은 [삽입된 코드 디버그](/visualstudio/debugger/how-to-debug-injected-code)를 참조하세요.
 
-다음 예제에서는 `Northwind` 데이터베이스의 `Products` 테이블에 생성된 명령 클래스를 사용하여 명령 클래스 및 사용자 레코드 클래스에 대한 마법사 생성 소비자 코드를 보여 줍니다.
+다음 예제에서는 `Products` 데이터베이스의 `Northwind` 테이블에 생성된 명령 클래스를 사용하여 명령 클래스 및 사용자 레코드 클래스에 대한 마법사 생성 소비자 코드를 보여 줍니다.
 
 ## <a name="templated-user-record-classes"></a>템플릿 기반 사용자 레코드 클래스
 

@@ -1,5 +1,5 @@
 ---
-title: CSliderCtrl 클래스
+title: C슬라이더Ctrl 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CSliderCtrl
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8fffdfc002b25fdcd72dcbbf53e7e6c321f55296
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502514"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751268"
 ---
-# <a name="csliderctrl-class"></a>CSliderCtrl 클래스
+# <a name="csliderctrl-class"></a>C슬라이더Ctrl 클래스
 
 Windows의 공용 슬라이더 컨트롤의 기능을 제공합니다.
 
@@ -95,63 +95,63 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CSliderCtrl::CSliderCtrl](#csliderctrl)|`CSliderCtrl` 개체를 생성합니다.|
+|[CSliderCtrl:::C슬라이더Ctrl](#csliderctrl)|`CSliderCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|속성|Description|
 |----------|-----------------|
-|[CSliderCtrl::ClearSel](#clearsel)|슬라이더 컨트롤에서 현재 선택 영역을 지웁니다.|
-|[CSliderCtrl::ClearTics](#cleartics)|슬라이더 컨트롤에서 현재 눈금 표시를 제거 합니다.|
-|[CSliderCtrl::Create](#create)|슬라이더 컨트롤을 만들어 `CSliderCtrl` 개체에 연결 합니다.|
-|[CSliderCtrl::CreateEx](#createex)|지정 된 Windows 확장 스타일을 사용 하 여 슬라이더 컨트롤을 만들고 `CSliderCtrl` 개체에 연결 합니다.|
-|[CSliderCtrl::GetBuddy](#getbuddy)|지정 된 위치에 있는 슬라이더 컨트롤 버디 창의 핸들을 검색 합니다.|
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|슬라이더 컨트롤의 채널 크기를 검색 합니다.|
-|[CSliderCtrl::GetLineSize](#getlinesize)|슬라이더 컨트롤의 줄 크기를 검색 합니다.|
-|[CSliderCtrl::GetNumTics](#getnumtics)|슬라이더 컨트롤의 눈금 표시 수를 검색 합니다.|
-|[CSliderCtrl::GetPageSize](#getpagesize)|슬라이더 컨트롤의 페이지 크기를 검색 합니다.|
-|[CSliderCtrl::GetPos](#getpos)|슬라이더의 현재 위치를 검색 합니다.|
-|[CSliderCtrl::GetRange](#getrange)|슬라이더의 최소 및 최대 위치를 검색 합니다.|
-|[CSliderCtrl::GetRangeMax](#getrangemax)|슬라이더의 최대 위치를 검색 합니다.|
-|[CSliderCtrl::GetRangeMin](#getrangemin)|슬라이더의 최소 위치를 검색 합니다.|
-|[CSliderCtrl::GetSelection](#getselection)|현재 선택 영역의 범위를 검색 합니다.|
-|[CSliderCtrl::GetThumbLength](#getthumblength)|현재 trackbar 컨트롤의 슬라이더 길이를 검색 합니다.|
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|슬라이더 컨트롤의 엄지 단추 크기를 검색 합니다.|
-|[CSliderCtrl::GetTic](#gettic)|지정 된 눈금 표시의 위치를 검색 합니다.|
-|[CSliderCtrl::GetTicArray](#getticarray)|슬라이더 컨트롤에 대 한 눈금 표시 위치의 배열을 검색 합니다.|
-|[CSliderCtrl::GetTicPos](#getticpos)|클라이언트 좌표로 지정 된 눈금 표시의 위치를 검색 합니다.|
-|[CSliderCtrl::GetToolTips](#gettooltips)|슬라이더 컨트롤에 할당 된 도구 설명 컨트롤에 대 한 핸들을 검색 합니다 (있는 경우).|
-|[CSliderCtrl::SetBuddy](#setbuddy)|창을 슬라이더 컨트롤에 대 한 버디 창으로 할당 합니다.|
-|[CSliderCtrl::SetLineSize](#setlinesize)|슬라이더 컨트롤의 줄 크기를 설정 합니다.|
-|[CSliderCtrl::SetPageSize](#setpagesize)|슬라이더 컨트롤의 페이지 크기를 설정 합니다.|
-|[CSliderCtrl::SetPos](#setpos)|슬라이더의 현재 위치를 설정 합니다.|
-|[CSliderCtrl::SetRange](#setrange)|슬라이더의 최소 및 최대 위치를 설정 합니다.|
-|[CSliderCtrl::SetRangeMax](#setrangemax)|슬라이더의 최대 위치를 설정 합니다.|
-|[CSliderCtrl::SetRangeMin](#setrangemin)|슬라이더의 최소 위치를 설정 합니다.|
-|[CSliderCtrl::SetSelection](#setselection)|현재 선택 영역의 범위를 설정 합니다.|
-|[CSliderCtrl::SetThumbLength](#setthumblength)|현재 trackbar 컨트롤의 슬라이더 길이를 설정 합니다.|
-|[CSliderCtrl::SetTic](#settic)|지정 된 눈금 표시의 위치를 설정 합니다.|
-|[CSliderCtrl::SetTicFreq](#setticfreq)|슬라이더 컨트롤 증가값 당 눈금 표시의 빈도를 설정 합니다.|
-|[CSliderCtrl::SetTipSide](#settipside)|Trackbar 컨트롤에서 사용 하는 도구 설명 컨트롤을 배치 합니다.|
-|[CSliderCtrl::SetToolTips](#settooltips)|도구 설명 컨트롤을 슬라이더 컨트롤에 할당 합니다.|
+|[CSliderCtrl::클리어셀](#clearsel)|슬라이더 컨트롤에서 현재 선택 영역을 지웁봅을 선택합니다.|
+|[CSliderCtrl::클리어틱스](#cleartics)|슬라이더 컨트롤에서 현재 눈금 표시를 제거합니다.|
+|[CSliderCtrl::만들기](#create)|슬라이더 컨트롤을 만들고 개체에 `CSliderCtrl` 연결합니다.|
+|[CSliderCtrl::만들기](#createex)|지정된 Windows 확장 스타일을 사용하여 슬라이더 컨트롤을 만들고 `CSliderCtrl` 개체에 연결합니다.|
+|[CSliderCtrl:::GetBuddy](#getbuddy)|지정된 위치에서 핸들을 슬라이더 컨트롤 버디 창으로 검색합니다.|
+|[CSliderCtrl::GetChannelRect](#getchannelrect)|슬라이더 컨트롤의 채널 크기를 검색합니다.|
+|[CSliderCtrl::GetLineSize](#getlinesize)|슬라이더 컨트롤의 줄 크기를 검색합니다.|
+|[CSliderCtrl:::GetNumtics](#getnumtics)|슬라이더 컨트롤에서 눈금 표시 수를 검색합니다.|
+|[CSliderCtrl::GetPageSize](#getpagesize)|슬라이더 컨트롤의 페이지 크기를 검색합니다.|
+|[CSliderCtrl::GetPos](#getpos)|슬라이더의 현재 위치를 검색합니다.|
+|[CSliderCtrl::GetRange](#getrange)|슬라이더의 최소 및 최대 위치를 검색합니다.|
+|[C슬라이더Ctrl::겟레인지맥스](#getrangemax)|슬라이더의 최대 위치를 검색합니다.|
+|[CSliderCtrl::GetRangeMin](#getrangemin)|슬라이더의 최소 위치를 검색합니다.|
+|[CSliderCtrl::Getselection](#getselection)|현재 선택 영역의 범위를 검색합니다.|
+|[CSliderCtrl::GetThumbLength](#getthumblength)|현재 트랙 바 컨트롤에서 슬라이더의 길이를 검색합니다.|
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|슬라이더 컨트롤의 엄지 손가락 크기를 검색합니다.|
+|[CSliderCtrl::Gettic](#gettic)|지정된 눈금 표시의 위치를 검색합니다.|
+|[CSliderCtrl::GetticArray](#getticarray)|슬라이더 컨트롤에 대 한 틱 마크 위치의 배열을 검색 합니다.|
+|[CSliderCtrl::Getticpos](#getticpos)|클라이언트 좌표에서 지정된 눈금 표시의 위치를 검색합니다.|
+|[CSliderCtrl::getToolTips](#gettooltips)|슬라이더 컨트롤에 할당 된 도구 설명 컨트롤에 핸들을 검색 합니다(있는 경우).|
+|[CSliderCtrl:::세트버디](#setbuddy)|창을 슬라이더 컨트롤의 버디 창으로 할당합니다.|
+|[CSliderCtrl::설정선 크기](#setlinesize)|슬라이더 컨트롤의 선 크기를 설정합니다.|
+|[C슬라이더Ctrl::세트 페이지 크기](#setpagesize)|슬라이더 컨트롤의 페이지 크기를 설정합니다.|
+|[CSliderCtrl::SetPos](#setpos)|슬라이더의 현재 위치를 설정합니다.|
+|[CSliderCtrl::세트 레인지](#setrange)|슬라이더의 최소 및 최대 위치를 설정합니다.|
+|[C슬라이더Ctrl::세트레인지맥스](#setrangemax)|슬라이더의 최대 위치를 설정합니다.|
+|[C슬라이더Ctrl::세트레인지민](#setrangemin)|슬라이더의 최소 위치를 설정합니다.|
+|[CSliderCtrl::세트 선택](#setselection)|현재 선택 영역의 범위를 설정합니다.|
+|[C슬라이더Ctrl::세트엄지손가락 길이](#setthumblength)|현재 트랙바 컨트롤에서 슬라이더의 길이를 설정합니다.|
+|[CSliderCtrl::Settic](#settic)|지정된 눈금 표시의 위치를 설정합니다.|
+|[CSliderCtrl:::세틱프렉](#setticfreq)|슬라이더 컨트롤 증분당 눈금 표시 빈도를 설정합니다.|
+|[CSliderCtrl::SetTipSide](#settipside)|트랙 바 컨트롤에서 사용하는 도구 설명 컨트롤을 배치합니다.|
+|[CSliderCtrl::설정 도구 팁](#settooltips)|도구 설명 컨트롤을 슬라이더 컨트롤에 할당합니다.|
 
 ## <a name="remarks"></a>설명
 
-"슬라이더 컨트롤" (trackbar 라고도 함)은 슬라이더와 선택적 눈금 표시를 포함 하는 창입니다. 사용자가 마우스나 방향 키 중 하나를 사용 하 여 슬라이더를 움직이면 컨트롤이 변경 내용을 나타내는 알림 메시지를 보냅니다.
+"슬라이더 컨트롤"(트랙바이라고도 함)은 슬라이더와 선택적 눈금 표시가 포함된 창입니다. 사용자가 슬라이더를 이동하면 마우스 또는 방향 키를 사용하여 컨트롤이 알림 메시지를 보내 변경 을 나타냅니다.
 
-슬라이더 컨트롤은 사용자가 범위에서 불연속 값 또는 연속 값 집합을 선택 하려는 경우에 유용 합니다. 예를 들어 슬라이더 컨트롤을 사용 하 여 사용자가 슬라이더를 지정 된 눈금으로 이동 하 여 키보드의 반복 주기를 설정할 수 있습니다.
+슬라이더 컨트롤은 사용자가 범위에서 불연속 값 또는 연속값 집합을 선택하도록 할 때 유용합니다. 예를 들어 슬라이더 컨트롤을 사용하여 사용자가 슬라이더를 지정된 눈금 표시로 이동하여 키보드의 반복 속도를 설정할 수 있습니다.
 
-이 컨트롤 (및 `CSliderCtrl` 클래스)은 windows 95/98 및 windows NT 버전 3.51 이상에서 실행 되는 프로그램에만 사용할 수 있습니다.
+이 컨트롤(및 `CSliderCtrl` 따라서 클래스)은 Windows 95/98 및 Windows NT 버전 3.51 이상에서 실행되는 프로그램에서만 사용할 수 있습니다.
 
-슬라이더는 만들 때 사용자가 지정 하는 증분 단위로 이동 합니다. 예를 들어 슬라이더의 범위를 5로 지정 하는 경우 슬라이더는 슬라이더 컨트롤의 왼쪽에 있는 위치와 범위의 각 증가값에 대 한 위치 하나를 6 개 까지만 차지할 수 있습니다. 일반적으로 이러한 각 위치는 눈금 표시로 식별 됩니다.
+슬라이더는 만들 때 지정한 증분으로 이동합니다. 예를 들어 슬라이더의 범위가 5이어야 한다고 지정하면 슬라이더는 슬라이더 컨트롤의 왼쪽에 있는 위치와 범위의 각 증분에 대해 하나의 위치등 6개의 위치만 차지할 수 있습니다. 일반적으로 이러한 각 위치는 눈금 표시로 식별됩니다.
 
-`Create` 의`CSliderCtrl`멤버 함수 및 생성자를 사용 하 여 슬라이더를 만듭니다. 슬라이더 컨트롤을 만든 후에는의 `CSliderCtrl` 멤버 함수를 사용 하 여 많은 속성을 변경할 수 있습니다. 슬라이더에 대한 최소 및 최대 위치 설정, 눈금 표시 그리기, 선택 범위 설정 및 슬라이더 위치 조정을 변경할 수 있습니다.
+의 생성자 및 멤버 함수를 `Create` 사용하여 `CSliderCtrl`슬라이더를 만듭니다. 슬라이더 컨트롤을 만든 후에는 멤버 함수를 `CSliderCtrl` 사용하여 많은 속성을 변경할 수 있습니다. 슬라이더에 대한 최소 및 최대 위치 설정, 눈금 표시 그리기, 선택 범위 설정 및 슬라이더 위치 조정을 변경할 수 있습니다.
 
-사용 `CSliderCtrl`에 대 한 자세한 내용은 [컨트롤](../../mfc/controls-mfc.md) 및 [CSliderCtrl 사용](../../mfc/using-csliderctrl.md)을 참조 하세요.
+사용에 `CSliderCtrl`대한 자세한 내용은 [컨트롤](../../mfc/controls-mfc.md) 및 [CSliderCtrl 사용](../../mfc/using-csliderctrl.md)을 참조하십시오.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -165,35 +165,35 @@ class CSliderCtrl : public CWnd
 
 **헤더:** afxcmn.h
 
-##  <a name="clearsel"></a>  CSliderCtrl::ClearSel
+## <a name="csliderctrlclearsel"></a><a name="clearsel"></a>CSliderCtrl::클리어셀
 
-슬라이더 컨트롤에서 현재 선택 영역을 지웁니다.
+슬라이더 컨트롤에서 현재 선택 영역을 지웁봅을 선택합니다.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bRedraw*<br/>
-다시 그리기 플래그입니다. 이 매개 변수가 TRUE 이면 선택 영역이 지워진 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
+플래그를 다시 그립니다. 이 매개변수가 TRUE이면 선택 영역을 지운 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
 
-##  <a name="cleartics"></a>  CSliderCtrl::ClearTics
+## <a name="csliderctrlcleartics"></a><a name="cleartics"></a>CSliderCtrl::클리어틱스
 
-슬라이더 컨트롤에서 현재 눈금 표시를 제거 합니다.
+슬라이더 컨트롤에서 현재 눈금 표시를 제거합니다.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *bRedraw*<br/>
-다시 그리기 플래그입니다. 이 매개 변수가 TRUE 이면 눈금 표시가 지워진 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
+플래그를 다시 그립니다. 이 매개변수가 TRUE이면 눈금 표시를 지운 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
 
-##  <a name="create"></a>  CSliderCtrl::Create
+## <a name="csliderctrlcreate"></a><a name="create"></a>CSliderCtrl::만들기
 
-슬라이더 컨트롤을 만들어 `CSliderCtrl` 개체에 연결 합니다.
+슬라이더 컨트롤을 만들고 개체에 `CSliderCtrl` 연결합니다.
 
 ```
 virtual BOOL Create(
@@ -206,32 +206,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *dwStyle*<br/>
-슬라이더 컨트롤의 스타일을 지정 합니다. Windows SDK에 설명 된 [슬라이더 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles)의 조합을 컨트롤에 적용 합니다.
+슬라이더 컨트롤의 스타일을 지정합니다. Windows SDK에 설명된 [슬라이더 컨트롤 스타일의](/windows/win32/Controls/trackbar-control-styles)조합을 컨트롤에 적용합니다.
 
 *rect*<br/>
-슬라이더 컨트롤의 크기와 위치를 지정 합니다. 이는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조 일 수 있습니다.
+슬라이더 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
 
 *pParentWnd*<br/>
-슬라이더 컨트롤의 부모 창 (일반적 `CDialog`으로)을 지정 합니다. NULL이 아니어야 합니다.
+슬라이더 컨트롤의 부모 창(일반적으로 )을 `CDialog`지정합니다. NULL이 아니어야 합니다.
 
 *nID*<br/>
-슬라이더 컨트롤의 ID를 지정 합니다.
+슬라이더 컨트롤의 ID를 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
+초기화가 성공한 경우 0이 아닙니다. 그렇지 않으면 0.
 
 ### <a name="remarks"></a>설명
 
-두 단계로을 `CSliderCtrl` 생성 합니다. 먼저 생성자를 호출한 다음을 호출 `Create`합니다 .이 메서드는 슬라이더 컨트롤을 만들고이를 `CSliderCtrl` 개체에 연결 합니다.
+두 단계로 `CSliderCtrl` 구성합니다. 먼저 생성자 호출 한 다음 `Create`슬라이더 컨트롤을 만들고 `CSliderCtrl` 개체에 연결 하는 호출 합니다.
 
-*Dwstyle*에 대해 설정 된 값에 따라 슬라이더 컨트롤은 세로 방향 또는 가로 방향 중 하나를 사용할 수 있습니다. 둘 중 어느 쪽에 나 양쪽에 눈금 표시를 포함할 수 있습니다. 연속 값의 범위를 지정 하는 데에도 사용할 수 있습니다.
+*dwStyle에*대해 설정된 값에 따라 슬라이더 컨트롤에는 수직 또는 수평 방향이 있을 수 있습니다. 양쪽, 양쪽 또는 둘 다에 눈금 표시가 있을 수 있습니다. 연속 값의 범위를 지정하는 데 사용할 수도 있습니다.
 
-슬라이더 컨트롤에 확장 창 스타일을 적용 하려면 대신 `Create` [createex](#createex) 를 호출 합니다.
+슬라이더 컨트롤에 확장 창 스타일을 적용하려면 대신 `Create` [CreateEx를](#createex) 호출합니다.
 
-##  <a name="createex"></a>  CSliderCtrl::CreateEx
+## <a name="csliderctrlcreateex"></a><a name="createex"></a>CSliderCtrl::만들기
 
-컨트롤 (자식 창)을 만들고이 `CSliderCtrl` 를 개체에 연결 합니다.
+컨트롤(하위 창)을 만들고 `CSliderCtrl` 개체와 연결합니다.
 
 ```
 virtual BOOL CreateEx(
@@ -245,29 +245,29 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>매개 변수
 
 *dwExStyle*<br/>
-만들려는 컨트롤의 확장 스타일을 지정 합니다. 확장 된 Windows 스타일의 목록에 대해서는 Windows SDK의 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 에 대 한 *dwexstyle* 매개 변수를 참조 하세요.
+생성되는 컨트롤의 확장 스타일을 지정합니다. 확장 된 Windows 스타일 목록은 Windows SDK에서 [CreateWindowEx에](/windows/win32/api/winuser/nf-winuser-createwindowexw) 대한 *dwExStyle* 매개 변수를 참조하십시오.
 
 *dwStyle*<br/>
-슬라이더 컨트롤의 스타일을 지정 합니다. Windows SDK에 설명 된 [슬라이더 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles)의 조합을 컨트롤에 적용 합니다.
+슬라이더 컨트롤의 스타일을 지정합니다. Windows SDK에 설명된 [슬라이더 컨트롤 스타일의](/windows/win32/Controls/trackbar-control-styles)조합을 컨트롤에 적용합니다.
 
 *rect*<br/>
-*PParentWnd*의 클라이언트 좌표에서 만들 창의 크기와 위치를 설명 하는 [RECT](/previous-versions/dd162897\(v=vs.85\)) 구조체에 대 한 참조입니다.
+*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
 
 *pParentWnd*<br/>
-컨트롤의 부모 창에 대 한 포인터입니다.
+컨트롤의 부모인 창에 대한 포인터입니다.
 
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-`CreateEx` [Create](#create) 대신 **WS_EX_** 를 사용 하 여 windows 확장 스타일 앞에 지정 된 확장 된 windows 스타일을 적용 합니다.
+만들기 `CreateEx` 대신 [Create](#create) Windows 확장 스타일 **서문 WS_EX_** 지정된 확장 된 Windows 스타일을 적용합니다.
 
-##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl
+## <a name="csliderctrlcsliderctrl"></a><a name="csliderctrl"></a>CSliderCtrl:::C슬라이더Ctrl
 
 `CSliderCtrl` 개체를 생성합니다.
 
@@ -275,9 +275,9 @@ virtual BOOL CreateEx(
 CSliderCtrl();
 ```
 
-##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy
+## <a name="csliderctrlgetbuddy"></a><a name="getbuddy"></a>CSliderCtrl:::GetBuddy
 
-지정 된 위치에 있는 슬라이더 컨트롤 버디 창의 핸들을 검색 합니다.
+지정된 위치에서 핸들을 슬라이더 컨트롤 버디 창으로 검색합니다.
 
 ```
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
@@ -286,98 +286,98 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="parameters"></a>매개 변수
 
 *fLocation*<br/>
-검색할 두 개의 버디 창 핸들을 나타내는 부울 값입니다. 다음 값 중 하나입니다.
+검색할 두 개의 버디 창 핸들을 나타내는 부울 값입니다. 다음 값 중 하나를 사용할 수 있습니다.
 
-- TRUE는 슬라이더 왼쪽에 있는 버디에 대 한 핸들을 검색 합니다. Slider 컨트롤이 TBS_VERT 스타일을 사용 하는 경우 메시지는 슬라이더 위의 버디를 검색 합니다.
+- TRUE 슬라이더의 왼쪽에 있는 버디에 핸들을 검색합니다. 슬라이더 컨트롤이 TBS_VERT 스타일을 사용하는 경우 메시지는 슬라이더 위의 버디를 검색합니다.
 
-- FALSE는 슬라이더의 오른쪽에 있는 버디에 대 한 핸들을 검색 합니다. Slider 컨트롤이 TBS_VERT 스타일을 사용 하는 경우 메시지는 슬라이더 아래에 있는 버디를 검색 합니다.
+- FALSE 슬라이더의 오른쪽에 있는 버디에 핸들을 검색합니다. 슬라이더 컨트롤이 TBS_VERT 스타일을 사용하는 경우 메시지는 슬라이더 아래의 버디를 검색합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*Flocation*에 지정 된 위치에 있는 버디 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대 한 포인터 이거나, 해당 위치에 버디 창이 없는 경우 NULL입니다.
+*fLocation에*의해 지정된 위치의 버디 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터 또는 해당 위치에 버디 창이 없는 경우 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)의 동작을 구현 합니다. Slider 컨트롤 스타일에 대 한 설명은 Windows SDK의 [Trackbar 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles) 을 참조 하세요.
+이 멤버 함수는 Windows SDK에 설명된 대로 [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)Win32 메시지의 동작을 구현합니다. 슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect
+## <a name="csliderctrlgetchannelrect"></a><a name="getchannelrect"></a>CSliderCtrl::GetChannelRect
 
-슬라이더 컨트롤 채널에 대 한 경계 사각형의 크기와 위치를 검색 합니다.
+슬라이더 컨트롤의 채널에 대한 경계 사각형의 크기와 위치를 검색합니다.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *lprc*<br/>
-함수가 반환 될 때 채널 경계 사각형의 크기와 위치를 포함 하는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체에 대 한 포인터입니다.
+함수가 반환될 때 채널경계 사각형의 크기와 위치를 포함하는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-채널은 슬라이더가 이동 하는 영역이 며 범위를 선택할 때 강조 표시를 포함 합니다.
+채널은 슬라이더가 이동하고 범위를 선택할 때 강조 표시가 포함된 영역입니다.
 
-##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize
+## <a name="csliderctrlgetlinesize"></a><a name="getlinesize"></a>CSliderCtrl::GetLineSize
 
-슬라이더 컨트롤의 줄 크기를 검색 합니다.
+슬라이더 컨트롤에 대 한 줄의 크기를 검색합니다.
 
 ```
 int GetLineSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-슬라이더 컨트롤의 줄 크기입니다.
+슬라이더 컨트롤에 대 한 줄의 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-줄 크기는 TB_LINEUP 및 TB_LINEDOWN 알림에 대해 슬라이더가 이동 하는 정도에 영향을 줍니다. 줄 크기의 기본 설정은 1입니다.
+줄 크기는 TB_LINEUP 및 TB_LINEDOWN 알림에 대해 슬라이더가 이동하는 양에 영향을 줍니다. 선 크기의 기본 설정은 1입니다.
 
-##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics
+## <a name="csliderctrlgetnumtics"></a><a name="getnumtics"></a>CSliderCtrl:::GetNumtics
 
-슬라이더 컨트롤의 눈금 표시 수를 검색 합니다.
+슬라이더 컨트롤에서 눈금 표시 수를 검색합니다.
 
 ```
 UINT GetNumTics() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 슬라이더 컨트롤의 눈금 표시 수입니다.
 
-##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize
+## <a name="csliderctrlgetpagesize"></a><a name="getpagesize"></a>CSliderCtrl::GetPageSize
 
-슬라이더 컨트롤의 페이지 크기를 검색 합니다.
+슬라이더 컨트롤에 대 한 페이지의 크기를 검색합니다.
 
 ```
 int GetPageSize() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-슬라이더 컨트롤의 페이지 크기입니다.
+슬라이더 컨트롤에 대 한 페이지의 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-페이지 크기는 TB_PAGEUP 및 TB_PAGEDOWN 알림에 대해 슬라이더가 이동 하는 정도에 영향을 줍니다.
+페이지 크기는 TB_PAGEUP 및 TB_PAGEDOWN 알림에 대해 슬라이더가 이동하는 정도에 영향을 줍니다.
 
-##  <a name="getpos"></a>  CSliderCtrl::GetPos
+## <a name="csliderctrlgetpos"></a><a name="getpos"></a>CSliderCtrl::GetPos
 
-슬라이더 컨트롤에서 슬라이더의 현재 위치를 검색 합니다.
+슬라이더 컨트롤에서 슬라이더의 현재 위치를 검색합니다.
 
 ```
 int GetPos() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 위치입니다.
 
-##  <a name="getrange"></a>  CSliderCtrl::GetRange
+## <a name="csliderctrlgetrange"></a><a name="getrange"></a>CSliderCtrl::GetRange
 
-슬라이더 컨트롤에서 슬라이더의 최대 및 최소 위치를 검색 합니다.
+슬라이더 컨트롤에서 슬라이더의 최대 및 최소 위치를 검색합니다.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -386,44 +386,44 @@ void GetRange(
 ### <a name="parameters"></a>매개 변수
 
 *nMin*<br/>
-최소 위치를 수신 하는 정수에 대 한 참조입니다.
+최소 위치를 받는 정수에 대한 참조입니다.
 
 *nMax*<br/>
-최대 위치를 수신 하는 정수에 대 한 참조입니다.
+최대 위치를 받는 정수에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 *Nmin* 및 *n 일별 최대*에서 참조 하는 정수에 값을 복사 합니다.
+이 함수는 *nMin* 및 *nMax에서*참조하는 정수에 값을 복사합니다.
 
-##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax
+## <a name="csliderctrlgetrangemax"></a><a name="getrangemax"></a>C슬라이더Ctrl::겟레인지맥스
 
-슬라이더 컨트롤에서 슬라이더의 최대 위치를 검색 합니다.
+슬라이더 컨트롤에서 슬라이더의 최대 위치를 검색합니다.
 
 ```
 int GetRangeMax() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤의 최대 위치입니다.
 
-##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin
+## <a name="csliderctrlgetrangemin"></a><a name="getrangemin"></a>CSliderCtrl::GetRangeMin
 
-슬라이더 컨트롤에서 슬라이더의 최소 위치를 검색 합니다.
+슬라이더 컨트롤에서 슬라이더의 최소 위치를 검색합니다.
 
 ```
 int GetRangeMin() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 컨트롤의 최소 위치입니다.
 
-##  <a name="getselection"></a>  CSliderCtrl::GetSelection
+## <a name="csliderctrlgetselection"></a><a name="getselection"></a>CSliderCtrl::Getselection
 
-슬라이더 컨트롤에서 현재 선택 영역의 시작 및 끝 위치를 검색 합니다.
+슬라이더 컨트롤에서 현재 선택 영역의 시작 및 끝 위치를 검색합니다.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -432,43 +432,43 @@ void GetSelection(
 ### <a name="parameters"></a>매개 변수
 
 *nMin*<br/>
-현재 선택 영역의 시작 위치를 수신 하는 정수에 대 한 참조입니다.
+현재 선택 영역의 시작 위치를 받는 정수를 참조합니다.
 
 *nMax*<br/>
-현재 선택 영역의 끝 위치를 받는 정수에 대 한 참조입니다.
+현재 선택 영역의 끝 위치를 받는 정수를 참조합니다.
 
-##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
+## <a name="csliderctrlgetthumblength"></a><a name="getthumblength"></a>CSliderCtrl::GetThumbLength
 
-현재 trackbar 컨트롤의 슬라이더 길이를 검색 합니다.
+현재 트랙 바 컨트롤에서 슬라이더의 길이를 검색합니다.
 
 ```
 int GetThumbLength() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-슬라이더의 길이 (픽셀)입니다.
+슬라이더의 길이(픽셀)입니다.
 
 ### <a name="remarks"></a>설명
 
 이 메서드는 Windows SDK에 설명 된 [TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength) 메시지를 보냅니다.
 
-##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect
+## <a name="csliderctrlgetthumbrect"></a><a name="getthumbrect"></a>CSliderCtrl::GetThumbRect
 
-슬라이더 컨트롤에서 슬라이더 (엄지 단추)에 대 한 경계 사각형의 크기와 위치를 검색 합니다.
+슬라이더 컨트롤에서 슬라이더(엄지 손가락)에 대한 경계 사각형의 크기와 위치를 검색합니다.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *lprc*<br/>
-함수가 반환 될 때 `CRect` 슬라이더의 경계 사각형을 포함 하는 개체에 대 한 포인터입니다.
+함수가 `CRect` 반환될 때 슬라이더에 대한 경계 사각형이 포함된 개체에 대한 포인터입니다.
 
-##  <a name="gettic"></a>  CSliderCtrl::GetTic
+## <a name="csliderctrlgettic"></a><a name="gettic"></a>CSliderCtrl::Gettic
 
-슬라이더 컨트롤에서 눈금 표시의 위치를 검색 합니다.
+슬라이더 컨트롤에서 눈금 표시의 위치를 검색합니다.
 
 ```
 int GetTic(int nTic) const;
@@ -477,27 +477,27 @@ int GetTic(int nTic) const;
 ### <a name="parameters"></a>매개 변수
 
 *nTic*<br/>
-눈금 표시를 식별 하는 인덱스 (0부터 시작)입니다.
+눈금 표시를 식별하는 0기반 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 눈금 표시의 위치 이거나, *Ntic* 가 유효한 인덱스를 지정 하지 않는 경우-1입니다.
+*nTic이* 유효한 인덱스를 지정하지 않은 경우 지정된 눈금 표시 또는 - 1의 위치입니다.
 
-##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray
+## <a name="csliderctrlgetticarray"></a><a name="getticarray"></a>CSliderCtrl::GetticArray
 
-슬라이더 컨트롤의 눈금 표시 위치를 포함 하는 배열의 주소를 검색 합니다.
+슬라이더 컨트롤에 대 한 눈금 표시의 위치를 포함 하는 배열의 주소를 검색합니다.
 
 ```
 DWORD* GetTicArray() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-슬라이더 컨트롤의 눈금 표시 위치를 포함 하는 배열의 주소입니다.
+슬라이더 컨트롤에 대 한 틱 마크 위치를 포함 하는 배열의 주소입니다.
 
-##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos
+## <a name="csliderctrlgetticpos"></a><a name="getticpos"></a>CSliderCtrl::Getticpos
 
-슬라이더 컨트롤에서 눈금 표시의 현재 실제 위치를 검색 합니다.
+슬라이더 컨트롤에서 눈금 표시의 현재 물리적 위치를 검색합니다.
 
 ```
 int GetTicPos(int nTic) const;
@@ -506,33 +506,33 @@ int GetTicPos(int nTic) const;
 ### <a name="parameters"></a>매개 변수
 
 *nTic*<br/>
-눈금 표시를 식별 하는 인덱스 (0부터 시작)입니다.
+눈금 표시를 식별하는 0기반 인덱스입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-지정 된 눈금 표시의 실제 위치 (클라이언트 좌표) 이거나, *Ntic* 가 유효한 인덱스를 지정 하지 않은 경우-1입니다.
+클라이언트 좌표에서 지정된 눈금 표시의 물리적 위치 또는 *nTic이* 유효한 인덱스를 지정하지 않는 경우 -1입니다.
 
-##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips
+## <a name="csliderctrlgettooltips"></a><a name="gettooltips"></a>CSliderCtrl::getToolTips
 
-슬라이더 컨트롤에 할당 된 도구 설명 컨트롤에 대 한 핸들을 검색 합니다 (있는 경우).
+슬라이더 컨트롤에 할당 된 도구 설명 컨트롤에 핸들을 검색 합니다(있는 경우).
 
 ```
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터 또는 도구 설명이 사용 되지 않는 경우 NULL입니다. 슬라이더 컨트롤이 TBS_TOOLTIPS 스타일을 사용 하지 않는 경우 반환 값은 NULL입니다.
+도구 설명이 사용되지 않는 경우 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체 또는 NULL에 대한 포인터입니다. 슬라이더 컨트롤이 TBS_TOOLTIPS 스타일을 사용하지 않는 경우 반환 값은 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)의 동작을 구현 합니다. 이 멤버 함수는 컨트롤에 대 `CToolTipCtrl` 한 핸들 대신 개체를 반환 합니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)Win32 메시지의 동작을 구현합니다. 이 멤버 함수는 `CToolTipCtrl` 컨트롤에 핸들 대신 개체를 반환합니다.
 
-Slider 컨트롤 스타일에 대 한 설명은 Windows SDK의 [Trackbar 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles) 을 참조 하세요.
+슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy
+## <a name="csliderctrlsetbuddy"></a><a name="setbuddy"></a>CSliderCtrl:::세트버디
 
-창을 슬라이더 컨트롤에 대 한 버디 창으로 할당 합니다.
+창을 슬라이더 컨트롤의 버디 창으로 할당합니다.
 
 ```
 CWnd* SetBuddy(
@@ -542,29 +542,29 @@ CWnd* SetBuddy(
 
 ### <a name="parameters"></a>매개 변수
 
-*pWndBuddy*<br/>
-슬라이더 컨트롤의 버디 `CWnd` 로 설정 되는 개체에 대 한 포인터입니다.
+*pwndBuddy*<br/>
+슬라이더 컨트롤의 `CWnd` 버디로 설정 될 개체에 대 한 포인터입니다.
 
 *fLocation*<br/>
-버디 창을 표시할 위치를 지정 하는 값입니다. 이 값은 다음 중 하나일 수 있습니다.
+버디 창을 표시할 위치를 지정하는 값입니다. 이 값은 다음 중 하나일 수 있습니다.
 
-- TRUE 이면 trackbar 컨트롤이 TBS_HORZ 스타일을 사용 하는 경우 버디가 트랙 표시줄의 왼쪽에 표시 됩니다. Trackbar에서 TBS_VERT 스타일을 사용 하는 경우 buddy는 trackbar 컨트롤 위에 표시 됩니다.
+- TRUE 트랙바 컨트롤이 TBS_HORZ 스타일을 사용하는 경우 버디가 트랙바의 왼쪽에 나타납니다. 트랙바에서 TBS_VERT 스타일을 사용하는 경우 버디가 트랙바 컨트롤 위에 나타납니다.
 
-- FALSE trackbar 컨트롤에서 TBS_HORZ 스타일을 사용 하는 경우 버디가 트랙 표시줄의 오른쪽에 표시 됩니다. Trackbar에서 TBS_VERT 스타일을 사용 하는 경우 buddy는 trackbar 컨트롤 아래에 나타납니다.
+- FALSE 트랙바 컨트롤이 TBS_HORZ 스타일을 사용하는 경우 버디가 트랙바 오른쪽에 나타납니다. 트랙바에서 TBS_VERT 스타일을 사용하는 경우 버디가 트랙바 컨트롤 아래에 나타납니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-해당 위치에서 슬라이더 컨트롤에 이전에 할당 된 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대 한 포인터입니다.
+해당 위치에서 슬라이더 컨트롤에 이전에 할당된 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy)의 동작을 구현 합니다. 이 멤버 함수는 `CWnd` 개체에 대 한 포인터를 사용 하 여 반환 값과 매개 변수 모두에 대 한 창 핸들을 사용 하지 않습니다.
+이 멤버 함수는 Windows SDK에 설명된 대로 TBM_SETBUDDY Win32 [메시지의](/windows/win32/Controls/tbm-setbuddy)동작을 구현합니다. 이 멤버 함수는 반환 `CWnd` 값과 매개 변수 모두에 대해 창 핸들이 아닌 개체에 대한 포인터를 사용합니다.
 
-Slider 컨트롤 스타일에 대 한 설명은 Windows SDK의 [Trackbar 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles) 을 참조 하세요.
+슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize
+## <a name="csliderctrlsetlinesize"></a><a name="setlinesize"></a>CSliderCtrl::설정선 크기
 
-슬라이더 컨트롤의 줄 크기를 설정 합니다.
+슬라이더 컨트롤의 줄 크기를 설정합니다.
 
 ```
 int SetLineSize(int nSize);
@@ -573,19 +573,19 @@ int SetLineSize(int nSize);
 ### <a name="parameters"></a>매개 변수
 
 *nSize*<br/>
-슬라이더 컨트롤의 줄 바꿈 크기입니다.
+슬라이더 컨트롤의 새 줄 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 줄 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-줄 크기는 TB_LINEUP 및 TB_LINEDOWN 알림에 대해 슬라이더가 이동 하는 정도에 영향을 줍니다.
+줄 크기는 TB_LINEUP 및 TB_LINEDOWN 알림에 대해 슬라이더가 이동하는 양에 영향을 줍니다.
 
-##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize
+## <a name="csliderctrlsetpagesize"></a><a name="setpagesize"></a>C슬라이더Ctrl::세트 페이지 크기
 
-슬라이더 컨트롤의 페이지 크기를 설정 합니다.
+슬라이더 컨트롤의 페이지 크기를 설정합니다.
 
 ```
 int SetPageSize(int nSize);
@@ -596,32 +596,32 @@ int SetPageSize(int nSize);
 *nSize*<br/>
 슬라이더 컨트롤의 새 페이지 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이전 페이지 크기입니다.
 
 ### <a name="remarks"></a>설명
 
-페이지 크기는 TB_PAGEUP 및 TB_PAGEDOWN 알림에 대해 슬라이더가 이동 하는 정도에 영향을 줍니다.
+페이지 크기는 TB_PAGEUP 및 TB_PAGEDOWN 알림에 대해 슬라이더가 이동하는 정도에 영향을 줍니다.
 
-##  <a name="setpos"></a>  CSliderCtrl::SetPos
+## <a name="csliderctrlsetpos"></a><a name="setpos"></a>CSliderCtrl::SetPos
 
-슬라이더 컨트롤에서 슬라이더의 현재 위치를 설정 합니다.
+슬라이더 컨트롤에서 슬라이더의 현재 위치를 설정합니다.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-*nPos*<br/>
-새 슬라이더 위치를 지정 합니다.
+*Npos*<br/>
+새 슬라이더 위치를 지정합니다.
 
-##  <a name="setrange"></a>  CSliderCtrl::SetRange
+## <a name="csliderctrlsetrange"></a><a name="setrange"></a>CSliderCtrl::세트 레인지
 
-슬라이더 컨트롤에서 슬라이더의 범위 (최소 및 최대 위치)를 설정 합니다.
+슬라이더 컨트롤에서 슬라이더의 범위(최소 및 최대 위치)를 설정합니다.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -637,13 +637,13 @@ void SetRange(
 슬라이더의 최대 위치입니다.
 
 *bRedraw*<br/>
-다시 그리기 플래그입니다. 이 매개 변수가 TRUE 이면 범위가 설정 된 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
+다시 그리기 플래그입니다. 이 매개변수가 TRUE이면 범위를 설정한 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
 
-##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax
+## <a name="csliderctrlsetrangemax"></a><a name="setrangemax"></a>C슬라이더Ctrl::세트레인지맥스
 
-슬라이더 컨트롤에서 슬라이더의 최대 범위를 설정 합니다.
+슬라이더 컨트롤에서 슬라이더의 최대 범위를 설정합니다.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -655,13 +655,13 @@ void SetRangeMax(
 슬라이더의 최대 위치입니다.
 
 *bRedraw*<br/>
-다시 그리기 플래그입니다. 이 매개 변수가 TRUE 이면 범위가 설정 된 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
+다시 그리기 플래그입니다. 이 매개변수가 TRUE이면 범위를 설정한 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
 
-##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin
+## <a name="csliderctrlsetrangemin"></a><a name="setrangemin"></a>C슬라이더Ctrl::세트레인지민
 
-슬라이더 컨트롤에서 슬라이더의 최소 범위를 설정 합니다.
+슬라이더 컨트롤에서 슬라이더의 최소 범위를 설정합니다.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -673,13 +673,13 @@ void SetRangeMin(
 슬라이더의 최소 위치입니다.
 
 *bRedraw*<br/>
-다시 그리기 플래그입니다. 이 매개 변수가 TRUE 이면 범위가 설정 된 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
+다시 그리기 플래그입니다. 이 매개변수가 TRUE이면 범위를 설정한 후 슬라이더가 다시 그려집니다. 그렇지 않으면 슬라이더가 다시 그려지지 않습니다.
 
-##  <a name="setselection"></a>  CSliderCtrl::SetSelection
+## <a name="csliderctrlsetselection"></a><a name="setselection"></a>CSliderCtrl::세트 선택
 
-슬라이더 컨트롤에서 현재 선택 영역에 대 한 시작 및 끝 위치를 설정 합니다.
+슬라이더 컨트롤에서 현재 선택 영역의 시작 및 끝 위치를 설정합니다.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -691,43 +691,43 @@ void SetSelection(
 슬라이더의 시작 위치입니다.
 
 *nMax*<br/>
-슬라이더의 끝 위치입니다.
+슬라이더의 종료 위치입니다.
 
-##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
+## <a name="csliderctrlsetthumblength"></a><a name="setthumblength"></a>C슬라이더Ctrl::세트엄지손가락 길이
 
-현재 trackbar 컨트롤의 슬라이더 길이를 설정 합니다.
+현재 트랙바 컨트롤에서 슬라이더의 길이를 설정합니다.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
-|*nLength*|진행 슬라이더의 길이 (픽셀)입니다.|
+|*nLength*|【인】 슬라이더의 길이(픽셀 단위)입니다.|
 
 ### <a name="remarks"></a>설명
 
-이 메서드를 사용 하려면 trackbar 컨트롤을 [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) style으로 설정 해야 합니다.
+이 방법을 사용하려면 트랙바 컨트롤을 [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) 스타일로 설정해야 합니다.
 
 이 메서드는 Windows SDK에 설명 된 [TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 trackbar 컨트롤에 `m_sliderCtrl`액세스 하는 데 사용 되는 변수를 정의 합니다. 또한이 예제에서는 trackbar 컨트롤의 `thumbLength`thumb 구성 요소 기본 길이를 저장 하는 데 사용 되는 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
+다음 코드 예제에서는 현재 `m_sliderCtrl`트랙바 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 이 예제에서는 트랙바 컨트롤의 thumb 구성 요소의 기본 길이를 저장하는 데 사용되는 `thumbLength`변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 trackbar 컨트롤의 thumb 구성 요소를 기본 길이의 두 배로 설정 합니다.
+다음 코드 예제는 트랙바 컨트롤의 thumb 구성 요소를 기본 길이의 두 배로 설정합니다.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]
 
-##  <a name="settic"></a>  CSliderCtrl::SetTic
+## <a name="csliderctrlsettic"></a><a name="settic"></a>CSliderCtrl::Settic
 
-슬라이더 컨트롤에서 눈금 표시의 위치를 설정 합니다.
+슬라이더 컨트롤에서 눈금 표시의 위치를 설정합니다.
 
 ```
 BOOL SetTic(int nTic);
@@ -736,17 +736,17 @@ BOOL SetTic(int nTic);
 ### <a name="parameters"></a>매개 변수
 
 *nTic*<br/>
-눈금 표시의 위치입니다. 이 매개 변수는 양수 값을 지정 해야 합니다.
+눈금 표시의 위치입니다. 이 매개 변수는 양수 값을 지정해야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-눈금 표시가 설정 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
+눈금 표시가 설정된 경우 0이 아닙니다. 그렇지 않으면 0.
 
-##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq
+## <a name="csliderctrlsetticfreq"></a><a name="setticfreq"></a>CSliderCtrl:::세틱프렉
 
-슬라이더에 눈금 표시가 표시 되는 빈도를 설정 합니다.
+눈금 표시가 슬라이더에 표시되는 빈도를 설정합니다.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -757,13 +757,13 @@ void SetTicFreq(int nFreq);
 
 ### <a name="remarks"></a>설명
 
-예를 들어 frequency를 2로 설정 하면 슬라이더 범위의 다른 모든 증가값에 대해 눈금 표시가 표시 됩니다. 빈도의 기본 설정은 1입니다. 즉, 범위의 모든 증분이 눈금 표시와 연결 됩니다.
+예를 들어 빈도가 2로 설정된 경우 슬라이더 범위의 다른 모든 증분에 대해 눈금 표시가 표시됩니다. 주파수의 기본 설정은 1입니다(즉, 범위의 모든 증분은 눈금 표시와 연결됩니다).
 
-이 함수를 사용 하려면 TBS_AUTOTICKS 스타일을 사용 하 여 컨트롤을 만들어야 합니다. 자세한 내용은 [CSliderCtrl:: Create](#create)를 참조 하세요.
+이 함수를 사용하려면 TBS_AUTOTICKS 스타일로 컨트롤을 만들어야 합니다. 자세한 내용은 [CSliderCtrl::만들기](#create)를 참조하십시오.
 
-##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
+## <a name="csliderctrlsettipside"></a><a name="settipside"></a>CSliderCtrl::SetTipSide
 
-Trackbar 컨트롤에서 사용 하는 도구 설명 컨트롤을 배치 합니다.
+트랙 바 컨트롤에서 사용하는 도구 설명 컨트롤을 배치합니다.
 
 ```
 int SetTipSide(int nLocation);
@@ -771,35 +771,35 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>매개 변수
 
-*nLocation*<br/>
-도구 설명 컨트롤이 표시 되는 위치를 나타내는 값입니다. 사용할 수 있는 값 목록은 Windows SDK의 설명에 따라 Win32 메시지 [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)를 참조 하세요.
+*n위치*<br/>
+도구 설명 컨트롤을 표시할 위치를 나타내는 값입니다. 가능한 값 목록은 Windows SDK에 설명된 대로 [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)Win32 메시지를 참조하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-Tooltip 컨트롤의 이전 위치를 나타내는 값입니다. 반환 값은 *Nlocation*에 사용할 수 있는 값 중 하 나와 같습니다.
+도구 설명 컨트롤의 이전 위치를 나타내는 값입니다. 반환 값은 *nLocation*에 대해 가능한 값 중 하나와 같습니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 TBM_SETTIPSIDE의 동작을 구현 합니다. TBS_TOOLTIPS 스타일을 사용 하는 슬라이더 컨트롤 도구 설명을 표시 합니다. Slider 컨트롤 스타일에 대 한 설명은 Windows SDK의 [Trackbar 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles) 을 참조 하세요.
+이 멤버 함수는 Windows SDK에 설명된 대로 TBM_SETTIPSIDE Win32 메시지의 동작을 구현합니다. TBS_TOOLTIPS 스타일 표시 도구 설명팁을 사용하는 슬라이더 컨트롤입니다. 슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips
+## <a name="csliderctrlsettooltips"></a><a name="settooltips"></a>CSliderCtrl::설정 도구 팁
 
-도구 설명 컨트롤을 슬라이더 컨트롤에 할당 합니다.
+도구 설명 컨트롤을 슬라이더 컨트롤에 할당합니다.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
 ### <a name="parameters"></a>매개 변수
 
 *pWndTip*<br/>
-슬라이더 컨트롤과 함께 사용할 도구 설명을 포함 하는 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터입니다.
+슬라이더 컨트롤과 함께 사용할 도구 설명이 포함된 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)의 동작을 구현 합니다. TBS_TOOLTIPS 스타일을 사용 하 여 slider 컨트롤을 만들면 슬라이더의 현재 위치를 표시 하는 슬라이더 옆에 표시 되는 기본 도구 설명 컨트롤을 만듭니다. Slider 컨트롤 스타일에 대 한 설명은 Windows SDK의 [Trackbar 컨트롤 스타일](/windows/win32/Controls/trackbar-control-styles) 을 참조 하세요.
+이 멤버 함수는 Windows SDK에 설명된 대로 TBM_SETTOOLTIPS Win32 [메시지의](/windows/win32/Controls/tbm-settooltips)동작을 구현합니다. TBS_TOOLTIPS 스타일로 슬라이더 컨트롤을 만들면 슬라이더 옆에 슬라이더의 현재 위치가 표시되는 기본 도구 설명 컨트롤이 만들어집니다. 슬라이더 컨트롤 스타일에 대한 설명은 Windows SDK의 [트랙바 컨트롤 스타일을](/windows/win32/Controls/trackbar-control-styles) 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

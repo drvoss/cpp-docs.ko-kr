@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213345"
 ---
 # <a name="connecting-to-a-data-source"></a>데이터 소스에 연결
 
-ODBC 데이터 소스 특정 집합이 데이터를 해당 데이터와 데이터 원본 이름을 사용 하 여 표현할 수 있는 데이터 원본의 위치에 액세스 하는 데 필요한 정보입니다. 프로그램의 관점에서 데이터 원본 데이터, DBMS, 네트워크 (있는 경우) 및 ODBC를 포함 합니다.
+ODBC 데이터 원본은 데이터의 특정 집합, 데이터에 액세스 하는 데 필요한 정보 및 데이터 원본 이름을 사용 하 여 설명할 수 있는 데이터 원본의 위치입니다. 프로그램의 관점에서 볼 때 데이터 원본에는 데이터, DBMS, 네트워크 (있는 경우) 및 ODBC가 포함 됩니다.
 
-데이터 원본에서 제공 하는 데이터에 액세스 하려면 프로그램 데이터 원본에 대 한 연결을 먼저 설정 해야 합니다. 데이터에 대 한 모든 액세스는 해당 연결을 통해 관리 됩니다.
+데이터 원본에서 제공 하는 데이터에 액세스 하려면 먼저 프로그램에서 데이터 원본에 대 한 연결을 설정 해야 합니다. 모든 데이터 액세스는 해당 연결을 통해 관리 됩니다.
 
-데이터 원본 연결 클래스에 의해 캡슐화 됩니다 [CDatabase](../../mfc/reference/cdatabase-class.md)합니다. 경우는 `CDatabase` 개체가 데이터 원본에 연결 되어, 할 수 있습니다.
+데이터 원본 연결은 클래스 [CDatabase](../../mfc/reference/cdatabase-class.md)에 의해 캡슐화 됩니다. `CDatabase` 개체가 데이터 원본에 연결 된 경우 다음을 수행할 수 있습니다.
 
-- 생성할 [레코드 집합](../../mfc/reference/crecordset-class.md), 어떤 쿼리나 테이블에서 레코드를 선택 합니다.
+- 테이블 또는 쿼리에서 레코드를 선택 하는 레코드 [집합](../../mfc/reference/crecordset-class.md)을 생성 합니다.
 
-- 관리할 [트랜잭션을](../../data/odbc/transaction-odbc.md), 모든 일괄 처리 업데이트는 한 번에 데이터 소스에 커밋할 (또는 데이터 원본이 변경 되므로 다시 전체 트랜잭션이 롤백됩니다.)-데이터 원본에 필요한 수준의 트랜잭션 지 원하는 경우.
+- 데이터 원본에서 필요한 트랜잭션 수준을 지 원하는 경우 [트랜잭션을](../../data/odbc/transaction-odbc.md)관리 하 고, 업데이트를 일괄 처리 하 여 데이터 원본에 한꺼번에 커밋 (또는 전체 트랜잭션을 롤백합니다.
 
-- 직접 실행 [SQL](../../data/odbc/sql.md) 문입니다.
+- [SQL](../../data/odbc/sql.md) 문을 직접 실행 합니다.
 
-데이터 원본 연결을 사용 하 여 작업을 마친 후 닫으면는 `CDatabase` 개체와 삭제 또는 새 연결에 다시 사용 합니다. 데이터 원본 연결에 대 한 자세한 내용은 참조 하세요. [데이터 원본 (ODBC)](../../data/odbc/data-source-odbc.md)합니다.
+데이터 원본 연결 작업을 마치면 `CDatabase` 개체를 닫고 제거 하거나 새 연결에 다시 사용 합니다. 데이터 원본 연결에 대 한 자세한 내용은 [데이터 원본 (ODBC)](../../data/odbc/data-source-odbc.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [ODBC 및 MFC](../../data/odbc/odbc-and-mfc.md)

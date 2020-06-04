@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213709"
 ---
 # <a name="move-function"></a>Move 함수
 
@@ -33,24 +33,24 @@ inline typename RemoveReference<T>::Type&& Move(
 인수 형식입니다.
 
 *arg*<br/>
-이동 하는 인수입니다.
+이동할 인수입니다.
 
 ## <a name="return-value"></a>반환 값
 
-매개 변수 *arg* 참조 또는 rvalue 참조 특성 후 있으면 제거 되었습니다.
+참조 또는 rvalue 참조 특성 (있는 경우)에 대 한 매개 변수 *인수가* 제거 되었습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-다른 곳에서 지정 된 인수를 이동합니다.
+지정 된 인수를 한 위치에서 다른 위치로 이동 합니다.
 
-자세한 내용은 참조는 **이동 의미 체계** 부분 [Rvalue 참조 선언 자: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)합니다.
+자세한 내용은 [Rvalue 참조 선언 자: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)의 **의미 체계 이동** 섹션을 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** internal.h
+**헤더:** internal. h
 
-**네임스페이스:** Microsoft::WRL::Details
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)

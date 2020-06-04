@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371508"
 ---
 # <a name="ftmbase-class"></a>FtmBase 클래스
 
@@ -48,33 +48,33 @@ class FtmBase :
 
 ## <a name="remarks"></a>설명
 
-자세한 내용은 [RuntimeClass 클래스](runtimeclass-class.md)합니다.
+자세한 내용은 [런타임클래스 클래스](runtimeclass-class.md)를 참조하십시오.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| 이름                         | 설명                                        |
+| 속성                         | Description                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase::FtmBase](#ftmbase) | `FtmBase` 클래스의 새 인스턴스를 초기화합니다. |
 
 ### <a name="public-methods"></a>Public 메서드
 
-| 이름                                                               | 설명                                                                                                                                                          |
+| 속성                                                               | Description                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | (GIT) 전역 인터페이스 테이블을 만듭니다.                                                                                                                              |
-| [FtmBase::DisconnectObject](#disconnectobject)                     | 개체에 모든 외부 연결을 강제로 해제합니다. 개체의 서버 개체의 구현의 종료 하기 전에이 메서드를 호출 합니다.                |
-| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | 지정된 된 개체의 지정 된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 상한값을 가져옵니다.                                                |
-| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | COM 해당 프록시에 대 한 코드를 포함 하는 DLL을 찾기 위해 사용 하 여 CLSID를 가져옵니다. COM 프록시 초기화 되지 않은 인스턴스를 만들려면이 DLL을 로드 합니다. |
-| [FtmBase::MarshalInterface](#marshalinterface)                     | 일부 클라이언트 프로세스에서 프록시 개체를 초기화 하는 데 필요한 데이터를 스트림으로 씁니다.                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | 마샬링된 데이터 패킷을 삭제합니다.                                                                                                                                    |
-| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | 새로 만든된 프록시를 초기화 하 고 해당 프록시에 인터페이스 포인터를 반환 합니다.                                                                                    |
+| [FtmBase::만들기 글로벌 인터페이스테이블](#createglobalinterfacetable) | GIT(전역 인터페이스 테이블)를 만듭니다.                                                                                                                              |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | 개체에 대한 모든 외부 연결을 강제로 해제합니다. 개체의 서버는 종료하기 전에 이 메서드의 개체 구현을 호출합니다.                |
+| [FtmBase::겟마샬사이즈맥스](#getmarshalsizemax)                   | 지정된 개체에서 지정된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 대한 상한을 가져옵니다.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | COM이 해당 프록시에 대한 코드를 포함하는 DLL을 찾는 데 사용하는 CLSID를 가져옵니다. COM은 이 DLL을 로드하여 프록시의 초기화되지 않은 인스턴스를 만듭니다. |
+| [FtmBase::마샬인터페이스](#marshalinterface)                     | 일부 클라이언트 프로세스에서 프록시 개체를 초기화하는 데 필요한 데이터를 스트림에 씁니다.                                                                          |
+| [FtmBase::릴리스마샬데이터](#releasemarshaldata)                 | 마샬링된 데이터 패킷을 삭제합니다.                                                                                                                                    |
+| [FtmBase::마샬링 인터페이스](#unmarshalinterface)                 | 새로 만든 프록시를 초기화하고 해당 프록시에 인터페이스 포인터를 반환합니다.                                                                                    |
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-| 이름                                | 설명                                       |
+| 속성                                | Description                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [FtmBase::marshaller_](#marshaller) | 자유 스레드된 마샬러에 대 한 참조를 보유합니다. |
+| [FtmBase::marshaller_](#marshaller) | 스레드가 없는 마샬러에 대한 참조를 보유합니다. |
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -86,9 +86,9 @@ class FtmBase :
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::만들기 글로벌 인터페이스테이블
 
-(GIT) 전역 인터페이스 테이블을 만듭니다.
+GIT(전역 인터페이스 테이블)를 만듭니다.
 
 ```cpp
 static HRESULT CreateGlobalInterfaceTable(
@@ -98,20 +98,20 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>매개 변수
 
-*git*<br/>
-이 작업이 완료 될 때 전역 인터페이스 테이블에 대 한 포인터입니다.
+*Git*<br/>
+이 작업이 완료되면 전역 인터페이스 테이블에 대한 포인터가 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-자세한 내용은 참조 하세요.는 `IGlobalInterfaceTable` 항목에는 `COM Interfaces` 의 하위를 `COM Reference` MSDN 라이브러리의 항목입니다.
+자세한 내용은 MSDN 라이브러리의 `IGlobalInterfaceTable` `COM Interfaces` `COM Reference` 주제 하위 주제에 대한 항목을 참조하십시오.
 
-## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::DisconnectObject
 
-개체에 모든 외부 연결을 강제로 해제합니다. 개체의 서버 개체의 구현의 종료 하기 전에이 메서드를 호출 합니다.
+개체에 대한 모든 외부 연결을 강제로 해제합니다. 개체의 서버는 종료하기 전에 이 메서드의 개체 구현을 호출합니다.
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -124,11 +124,11 @@ STDMETHODIMP DisconnectObject(
 *dwReserved*<br/>
 나중에 사용하도록 예약되어 있습니다. 0이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="ftmbase"></a>FtmBase::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
 
 `FtmBase` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -136,9 +136,9 @@ STDMETHODIMP DisconnectObject(
 FtmBase();
 ```
 
-## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase::겟마샬사이즈맥스
 
-지정된 된 개체의 지정 된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 상한값을 가져옵니다.
+지정된 개체에서 지정된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 대한 상한을 가져옵니다.
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -154,34 +154,34 @@ STDMETHODIMP GetMarshalSizeMax(
 ### <a name="parameters"></a>매개 변수
 
 *riid*<br/>
-마샬링될 인터페이스의 식별자에 대 한 참조입니다.
+마샬링할 인터페이스의 식별자를 참조합니다.
 
-*pv*<br/>
-인터페이스 포인터를 마샬링할 수 있습니다. NULL 일 수 있습니다.
+*태양광 발전*<br/>
+마샬링할 인터페이스 포인터; NULL이 될 수 있습니다.
 
-*dwDestContext*<br/>
-대상 위치 지정된 된 인터페이스를 컨텍스트 마샬링해야 합니다.
+*dwDest컨텍스트*<br/>
+지정된 인터페이스를 마샬링하지 않을 대상 컨텍스트입니다.
 
-하나 이상의 MSHCTX 열거형 값을 지정 합니다.
+하나 이상의 MSHCTX 열거 값을 지정합니다.
 
-현재 역마샬링 발생할 수 있습니다 (MSHCTX_INPROC) 현재 프로세스의 다른 아파트 또는 현재 프로세스 (MSHCTX_LOCAL)와 동일한 컴퓨터에서 다른 프로세스에서.
+현재 마샬링 해제는 현재 프로세스의 다른 아파트(MSHCTX_INPROC) 또는 현재 프로세스(MSHCTX_LOCAL)와 동일한 컴퓨터의 다른 프로세스에서 발생할 수 있습니다.
 
-*pvDestContext*<br/>
-사용 하도록 예약 됩니다. NULL 이어야 합니다.
+*pvDest컨텍스트*<br/>
+향후 사용을 위해 예약; NULL이어야 합니다.
 
 *mshlflags*<br/>
-클라이언트 프로세스에 다시 전송할 데이터를 마샬링할 수 인지 여부를 나타내는 플래그-일반적인 사례-여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록 합니다. 하나 이상의 MSHLFLAGS 열거형 값을 지정 합니다.
+마샬링할 데이터가 클라이언트 프로세스(일반적인 경우)로 다시 전송될지 또는 여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록되는지 여부를 나타내는 플래그입니다. 하나 이상의 MSHLFLAGS 열거 값을 지정합니다.
 
 *pSize*<br/>
-이 작업이 완료 될 때 마샬링 스트림에 쓸 데이터의 양에 상한을에 대 한 포인터입니다.
+이 작업이 완료되면 마샬링 스트림에 기록할 데이터 양에 대한 상한에 대한 포인터가 됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 이 고, 그렇지 E_FAIL 또는 E_NOINTERFACE
+성공하면 S_OK; 그렇지 않으면 E_FAIL 또는 E_NOINTERFACE.
 
-## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
 
-COM 해당 프록시에 대 한 코드를 포함 하는 DLL을 찾기 위해 사용 하 여 CLSID를 가져옵니다. COM 프록시 초기화 되지 않은 인스턴스를 만들려면이 DLL을 로드 합니다.
+COM이 해당 프록시에 대한 코드를 포함하는 DLL을 찾는 데 사용하는 CLSID를 가져옵니다. COM은 이 DLL을 로드하여 프록시의 초기화되지 않은 인스턴스를 만듭니다.
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -197,33 +197,33 @@ STDMETHODIMP GetUnmarshalClass(
 ### <a name="parameters"></a>매개 변수
 
 *riid*<br/>
-마샬링될 인터페이스의 식별자에 대 한 참조입니다.
+마샬링할 인터페이스의 식별자를 참조합니다.
 
-*pv*<br/>
-마샬링될; 인터페이스에 대 한 포인터 호출자가 원하는 인터페이스에 대 한 포인터 없는 경우 NULL 일 수 있습니다.
+*태양광 발전*<br/>
+마샬링할 인터페이스에 대한 포인터; 호출자에게 원하는 인터페이스에 대한 포인터가 없는 경우 NULL이 될 수 있습니다.
 
-*dwDestContext*<br/>
-대상 위치 지정된 된 인터페이스를 컨텍스트 마샬링해야 합니다.
+*dwDest컨텍스트*<br/>
+지정된 인터페이스를 마샬링하지 않을 대상 컨텍스트입니다.
 
-하나 이상의 MSHCTX 열거형 값을 지정 합니다.
+하나 이상의 MSHCTX 열거 값을 지정합니다.
 
-역마샬링 하거나 현재 프로세스 (MSHCTX_INPROC)의 다른 아파트에서 현재 프로세스 (MSHCTX_LOCAL)와 동일한 컴퓨터에서 다른 프로세스에서 발생할 수 있습니다.
+마샬링 해제는 현재 프로세스의 다른 아파트(MSHCTX_INPROC) 또는 현재 프로세스와 동일한 컴퓨터의 다른 프로세스(MSHCTX_LOCAL)에서 발생할 수 있습니다.
 
-*pvDestContext*<br/>
-사용 하도록 예약 됩니다. NULL 이어야 합니다.
+*pvDest컨텍스트*<br/>
+향후 사용을 위해 예약; NULL이어야 합니다.
 
 *mshlflags*<br/>
-이 작업이 완료 될 때 클라이언트 프로세스에서 프록시를 만드는 데 사용할 CLSID에 대 한 포인터입니다.
+이 작업이 완료되면 클라이언트 프로세스에서 프록시를 만드는 데 사용할 CLSID에 대한 포인터입니다.
 
 *pCid*
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 그렇지 않으면 S_FALSE입니다.
+성공하면 S_OK; 그렇지 않으면, S_FALSE.
 
-## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::마샬인터페이스
 
-일부 클라이언트 프로세스에서 프록시 개체를 초기화 하는 데 필요한 데이터를 스트림으로 씁니다.
+일부 클라이언트 프로세스에서 프록시 개체를 초기화하는 데 필요한 데이터를 스트림에 씁니다.
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -239,46 +239,46 @@ STDMETHODIMP MarshalInterface(
 ### <a name="parameters"></a>매개 변수
 
 *pStm*<br/>
-마샬링 중 사용할 스트림에 대 한 포인터입니다.
+마샬링 중에 사용할 스트림에 대한 포인터입니다.
 
 *riid*<br/>
-마샬링될 인터페이스의 식별자에 대 한 참조입니다. 이 인터페이스에서 파생 되어야 합니다는 `IUnknown` 인터페이스입니다.
+마샬링할 인터페이스의 식별자를 참조합니다. 이 인터페이스는 `IUnknown` 인터페이스에서 파생되어야 합니다.
 
-*pv*<br/>
-마샬링될; 인터페이스 포인터에 대 한 포인터 호출자가 원하는 인터페이스에 대 한 포인터 없는 경우 NULL 일 수 있습니다.
+*태양광 발전*<br/>
+마샬링할 인터페이스 포인터에 대한 포인터; 호출자에게 원하는 인터페이스에 대한 포인터가 없는 경우 NULL이 될 수 있습니다.
 
-*dwDestContext*<br/>
-대상 위치 지정된 된 인터페이스를 컨텍스트 마샬링해야 합니다.
+*dwDest컨텍스트*<br/>
+지정된 인터페이스를 마샬링하지 않을 대상 컨텍스트입니다.
 
-하나 이상의 MSHCTX 열거형 값을 지정 합니다.
+하나 이상의 MSHCTX 열거 값을 지정합니다.
 
-역마샬링 현재 프로세스 (MSHCTX_LOCAL)와 동일한 컴퓨터에서 다른 프로세스 또는 현재 프로세스 (MSHCTX_INPROC)의 다른 아파트에서 발생할 수 있습니다.
+마샬링 해제는 현재 프로세스의 다른 아파트(MSHCTX_INPROC) 또는 현재 프로세스(MSHCTX_LOCAL)와 동일한 컴퓨터의 다른 프로세스에서 발생할 수 있습니다.
 
-*pvDestContext*<br/>
+*pvDest컨텍스트*<br/>
 나중에 사용하도록 예약되어 있습니다. 0이어야 합니다.
 
 *mshlflags*<br/>
-클라이언트 프로세스에 다시 전송할 데이터를 마샬링할 수 인지 여부를 지정-일반적인 사례-여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록 합니다.
+마샬링할 데이터를 클라이언트 프로세스(일반적인 경우)로 다시 전송할지 아니면 여러 클라이언트에서 검색할 수 있는 전역 테이블에 기록할지 여부를 지정합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-인터페이스 포인터를 성공적으로 마샬링될 S_OK입니다.
+S_OK 인터페이스 포인터가 성공적으로 마샬링되었습니다.
 
-지정된 된 인터페이스 E_NOINTERFACE 지원 되지 않습니다.
+E_NOINTERFACE 지정된 인터페이스가 지원되지 않습니다.
 
-스트림을 STG_E_MEDIUMFULL 꽉 찼습니다.
+STG_E_MEDIUMFULL 스트림이 가득 찼습니다.
 
-E_FAIL 작업에 실패 했습니다.
+E_FAIL 작업이 실패했습니다.
 
-## <a name="marshaller"></a>FtmBase::marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase::marshaller_
 
-자유 스레드된 마샬러에 대 한 참조를 보유합니다.
+스레드가 없는 마샬러에 대한 참조를 보유합니다.
 
 ```cpp
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::릴리스마샬데이터
 
 마샬링된 데이터 패킷을 삭제합니다.
 
@@ -291,15 +291,15 @@ STDMETHODIMP ReleaseMarshalData(
 ### <a name="parameters"></a>매개 변수
 
 *pStm*<br/>
-제거할 데이터 패킷을 포함 하는 스트림에 대 한 포인터입니다.
+소멸할 데이터 패킷을 포함하는 스트림에 대한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase::마샬링 인터페이스
 
-새로 만든된 프록시를 초기화 하 고 해당 프록시에 인터페이스 포인터를 반환 합니다.
+새로 만든 프록시를 초기화하고 해당 프록시에 인터페이스 포인터를 반환합니다.
 
 ```cpp
 STDMETHODIMP UnmarshalInterface(
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>매개 변수
 
 *pStm*<br/>
-인터페이스 포인터를 역 마샬링해야 하는 스트림에 대 한 포인터입니다.
+인터페이스 포인터가 마샬링되지 않도록 하는 스트림에 대한 포인터입니다.
 
 *riid*<br/>
-역 마샬링해야 하는 인터페이스의 식별자에 대 한 참조입니다.
+마샬링되지 않을 인터페이스의 식별자를 참조합니다.
 
 *ppv*<br/>
-이 작업이 완료 되 면에서 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소 *riid*합니다. 이 작업에 성공 하면 **ppv* 마샬링해야 하는 인터페이스의 요청 된 인터페이스 포인터를 포함 합니다.
+이 작업이 완료되면 *riid에서*요청된 인터페이스 포인터를 받는 포인터 변수의 주소입니다. 이 작업이 성공하면 **ppv에는* 마샬링되지 않은 인터페이스의 요청된 인터페이스 포인터가 포함되어 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 s_ok이 고 이 고, 그렇지 E_NOINTERFACE 또는 E_FAIL입니다.
+성공하면 S_OK; 그렇지 않으면 E_NOINTERFACE 또는 E_FAIL.

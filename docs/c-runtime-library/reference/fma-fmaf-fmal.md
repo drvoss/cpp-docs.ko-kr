@@ -1,10 +1,13 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914947"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -83,19 +87,19 @@ long double fmal(
 *x*<br/>
 곱할 첫 번째 값입니다.
 
-*y*<br/>
+*x.y*<br/>
 곱할 두 번째 값입니다.
 
-*z*<br/>
+*-*<br/>
 추가할 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 `(x * y) + z`를 반환합니다. 반환 값은 현재 반올림 형식을 사용하여 반올림됩니다.
 
 그렇지 않으면 다음 값 중 하나를 반환할 수 있습니다.
 
-|문제점|반환|
+|문제|반환 값|
 |-----------|------------|
 |*x* = 무한대, *y* = 0 또는<br /><br /> *x* = 0, *y* = 무한대|NaN|
 |*x* 또는 *y* = 정확한 ± infinity, *z* = 반대 기호가 있는 무한대|NaN|
@@ -108,19 +112,21 @@ long double fmal(
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **fma** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fma** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **fma** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fma** 는 항상 **double**을 사용 하 고 반환 합니다.
 
 이 함수는 무한 정밀도에 도달한 것처럼 값을 계산하고 최종 결과를 반올림합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
 |기능|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**, **fanf**|\<math.h>|\<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

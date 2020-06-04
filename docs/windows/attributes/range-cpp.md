@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214619"
 ---
 # <a name="range-c"></a>range(C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "69514146"
 *high*<br/>
 상위 범위 값입니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Range** C++ 특성에는 [range](/windows/win32/Midl/range) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -64,7 +64,7 @@ __interface ICustom {
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>

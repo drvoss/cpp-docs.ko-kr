@@ -1,21 +1,19 @@
 ---
-title: '안전 라이브러리: C++ 표준 라이브러리'
+title: '안전한 라이브러리: C++ 표준 라이브러리'
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454552"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446089"
 ---
-# <a name="safe-libraries-c-standard-library"></a>안전 라이브러리: C++ 표준 라이브러리
+# <a name="safe-libraries-c-standard-library"></a>안전한 라이브러리: C++ 표준 라이브러리
 
 C++ 표준 라이브러리를 비롯하여 Microsoft C++와 함께 제공되는 라이브러리에 대한 몇 가지 향상된 기능을 통해 더욱 안전해졌습니다.
 
@@ -40,10 +38,10 @@ C++ 표준 라이브러리의 일부 메서드는 버퍼 오버런이나 다른 
 
 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)
 
-[Checked Iterators](../standard-library/checked-iterators.md)
+[확인된 반복기](../standard-library/checked-iterators.md)
 
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)
+[디버그 반복기 지원](../standard-library/debug-iterator-support.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)

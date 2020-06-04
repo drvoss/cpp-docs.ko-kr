@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142627"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427364"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group 클래스
 
@@ -30,23 +30,23 @@ ms.locfileid: "77142627"
 class structured_task_group;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
-|[structured_task_group](#ctor)|오버로드됨. 새 `structured_task_group` 개체를 생성합니다.|
+|[structured_task_group](#ctor)|오버로드되었습니다. 새 `structured_task_group` 개체를 생성합니다.|
 |[~ structured_task_group 소멸자](#dtor)|`structured_task_group` 개체를 제거합니다. 소멸자가 예외로 인해 스택 해제의 결과로 실행 되는 경우가 아니면 소멸자를 실행 하기 전에 개체에 대해 `wait` 또는 `run_and_wait` 메서드를 호출 해야 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|속성|Description|
 |----------|-----------------|
 |[cancel](#cancel)|이 작업 그룹을 기반으로 하는 작업의 하위 트리를 취소 하려고 하는 것이 가장 좋습니다. 작업 그룹에 대해 예약 된 모든 작업은 가능 하면 전이적으로 취소 됩니다.|
 |[is_canceling](#is_canceling)|작업 그룹이 현재 취소를 진행 중인지 여부를 호출자에 게 알립니다. 이는 `cancel` 메서드가 `structured_task_group` 개체에 대해 호출 되었음을 나타내는 것은 아닙니다 .이는이 메서드가 **true**를 반환 하도록 하는 것입니다. `structured_task_group` 개체가 인라인으로 실행 중이 고 작업 트리에서 추가 된 작업 그룹이 취소 된 경우에 발생할 수 있습니다. 런타임에서 취소가이 `structured_task_group` 개체를 통해 전달 되는 시간을 미리 확인할 수 있는 경우에도 **true** 가 반환 됩니다.|
-|[run](#run)|오버로드됨. `structured_task_group` 개체에 대 한 작업을 예약 합니다. 호출자는 `_Task_handle` 매개 변수에 전달 된 `task_handle` 개체의 수명을 관리 합니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.|
-|[run_and_wait](#run_and_wait)|오버로드됨. 전체 취소 지원에 대 한 `structured_task_group` 개체의 지원을 사용 하 여 호출 컨텍스트에서 인라인으로 실행할 작업을 예약 합니다. `task_handle` 개체가 `run_and_wait`에 매개 변수로 전달 되는 경우 호출자는 `task_handle` 개체의 수명을 관리 하는 일을 담당 합니다. 그러면 함수는 `structured_task_group` 개체의 모든 작업이 완료 되거나 취소 될 때까지 대기 합니다.|
+|[run](#run)|오버로드되었습니다. `structured_task_group` 개체에 대 한 작업을 예약 합니다. 호출자는 `_Task_handle` 매개 변수에 전달 된 `task_handle` 개체의 수명을 관리 합니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.|
+|[run_and_wait](#run_and_wait)|오버로드되었습니다. 전체 취소 지원에 대 한 `structured_task_group` 개체의 지원을 사용 하 여 호출 컨텍스트에서 인라인으로 실행할 작업을 예약 합니다. `task_handle` 개체가 `run_and_wait`에 매개 변수로 전달 되는 경우 호출자는 `task_handle` 개체의 수명을 관리 하는 일을 담당 합니다. 그러면 함수는 `structured_task_group` 개체의 모든 작업이 완료 되거나 취소 될 때까지 대기 합니다.|
 |[대기한](#wait)|`structured_task_group`의 모든 작업이 완료 되거나 취소 될 때까지 대기 합니다.|
 
 ## <a name="remarks"></a>설명

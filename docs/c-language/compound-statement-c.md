@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312572"
 ---
 # <a name="compound-statement-c"></a>복합 문 (C)
 
@@ -19,7 +19,7 @@ ms.locfileid: "56152159"
 ## <a name="syntax"></a>구문
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 이 예제에서 `i`가 0보다 클 경우 복합 문 내부의 모든 문이 순서대로 실행됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문](../c-language/statements-c.md)

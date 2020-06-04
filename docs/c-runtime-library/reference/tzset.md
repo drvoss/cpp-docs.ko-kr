@@ -1,8 +1,9 @@
 ---
 title: _tzset
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tzset
+- _o__tzset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: e9ea454ede370a20779b5852b426b418db81757c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957557"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912141"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -48,16 +50,16 @@ void _tzset( void );
 
 ## <a name="remarks"></a>설명
 
-**_Tzset** 함수는 **TZ** 환경 변수의 현재 설정을 사용 하 여 세 개의 전역 변수 **_na**, **_daylight**및 **_tzname**에 값을 할당 합니다. 이러한 변수는 [_ftime](ftime-ftime32-ftime64.md) 및 [LOCALTIME](localtime-localtime32-localtime64.md) 함수에서 utc (협정 세계시)를 현지 시간으로 수정 하는 데 사용 되 고 [시간](time-time32-time64.md) 함수는 시스템 시간에서 utc를 계산 하는 데 사용 됩니다. 다음 구문을 사용 하 여 **TZ** 환경 변수를 설정 합니다.
+**_Tzset** 함수는 **TZ** 환경 변수의 현재 설정을 사용 하 여 세 개의 전역 변수 **_daylight**, **_timezone**및 **_tzname**에 값을 할당 합니다. 이러한 변수는 [_ftime](ftime-ftime32-ftime64.md) 및 [LOCALTIME](localtime-localtime32-localtime64.md) 함수에서 utc (협정 세계시)를 현지 시간으로 수정 하는 데 사용 되 고 [시간](time-time32-time64.md) 함수는 시스템 시간에서 utc를 계산 하는 데 사용 됩니다. 다음 구문을 사용 하 여 **TZ** 환경 변수를 설정 합니다.
 
-> **set TZ=** _tzn_ \[ **+** &#124; **-** ]*hh*\[ **:** _mm_\[ **:** _ss_] ][*dzn*]
+> **set TZ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_]] [*dzn*]
 
 |매개 변수|설명|
 |-|-|
 | *tzn* | 3자의 표준 시간대 이름(예: PST)입니다. 현지 시간에서 UTC로의 올바른 오프셋을 지정해야 합니다. |
 | *hh* | UTC와 현지 시간 사이의 차이(시간)입니다. 양수 값에 선택적인 (+) 부호입니다. |
-| *mm* | 분. *Hh* 에서 콜론 ( **:** )으로 구분 합니다. |
-| *ss* | 초. *Mm* 에서 콜론 ( **:** )으로 구분 합니다. |
+| *1* | 분. *Hh* 에서 콜론 (**:**)으로 구분 합니다. |
+| *ss* | 초. *Mm* 에서 콜론 (**:**)으로 구분 합니다. |
 | *dzn* | 3자의 일광 절약 시간 표준 시간대(예: PDT)입니다. 표준 시간대에 일광 절약 시간이 적용 되지 않는 경우에는 *dzn*에 대 한 값 없이 **TZ** 를 설정 합니다. C 런타임 라이브러리에서는 DST(일광 절약 시간) 계산 구현을 위한 미국의 규칙이 사용된다고 가정합니다. |
 
 > [!NOTE]
@@ -65,13 +67,13 @@ void _tzset( void );
 
 예를 들어 독일의 현재 표준 시간대에 해당 하는 **TZ** 환경 변수를 설정 하려면 명령줄에 다음을 입력 합니다.
 
-> **set TZ=GST-1GDT**
+> **설정 TZ = GST-1GDT**
 
 이 명령은 GST를 사용하여 독일 표준 시간을 나타내고, UTC는 독일보다 한 시간 뒤, 즉 독일은 UTC보다 한 시간 앞이라고 가정하며, 독일은 일광 절약 시간을 준수한다고 가정합니다.
 
-**TZ** 값이 설정 되지 않은 경우 **_tzset** 는 운영 체제에서 지정한 표준 시간대 정보를 사용 하려고 시도 합니다. Windows 운영 체제에서 이 정보는 제어판의 날짜/시간 애플리케이션에 지정되어 있습니다. **_Tzset** 는이 정보를 얻을 수 없는 경우 기본적으로 태평양 표준 시간대를 나타내는 PST8PDT를 사용 합니다.
+**TZ** 값이 설정 되지 않은 경우 **_tzset** 는 운영 체제에서 지정한 표준 시간대 정보를 사용 하려고 시도 합니다. Windows 운영 체제에서 이 정보는 제어판의 날짜/시간 애플리케이션에 지정되어 있습니다. **_Tzset** 이 정보를 얻을 수 없는 경우 기본적으로 태평양 표준 시간대를 의미 하는 PST8PDT를 사용 합니다.
 
-**TZ** 환경 변수 값에 따라 **_tzset** 가 호출 될 때 다음 값이 전역 변수 _nstinta, **_daylight**및 **_tzname** 에 할당 됩니다.
+**TZ** 환경 변수 값에 따라 **_tzset** 를 호출할 때 **_daylight**, **_timezone**및 **_tzname** 전역 변수에 다음 값이 할당 됩니다.
 
 |전역 변수|설명|기본값|
 |---------------------|-----------------|-------------------|
@@ -80,7 +82,9 @@ void _tzset( void );
 |**_tzname**[0]|**TZ** 환경 변수에서 표준 시간대 이름의 문자열 값입니다. **TZ** 가 설정 되지 않은 경우 비어 있습니다.|PST|
 |**_tzname**[1]|일광 절약 시간 표준 시간대의 문자열 값입니다. **TZ** 환경 변수에서 일광 절약 시간 표준 시간대가 생략 된 경우 비어 있습니다.|PDT|
 
-**_Na** 에 대해 앞의 표에 표시 된 기본값 및 **_TZNAME** 배열은 "PST8PDT"에 해당 합니다. DST 영역을 **TZ** 환경 변수에서 생략 하는 경우 **_na** 값은 0이 고 [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)및 [localtime](localtime-localtime32-localtime64.md) 함수는 해당 dst 플래그에 대해 0을 반환 합니다.
+위의 표에 나와 있는 **_daylight** 및 **_tzname** 배열의 기본값은 "PST8PDT"에 해당 합니다. DST 영역을 **TZ** 환경 변수에서 생략 하는 경우 **_daylight** 값은 0이 고 [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)및 [localtime](localtime-localtime32-localtime64.md) 함수는 dst 플래그에 대해 0을 반환 합니다.
+
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -125,7 +129,7 @@ _timezone = 28800
 _tzname[0] = Pacific Standard Time
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

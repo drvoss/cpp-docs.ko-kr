@@ -4,10 +4,10 @@ ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "75791695"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 도움말 및 커뮤니티

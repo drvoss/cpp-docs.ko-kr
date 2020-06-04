@@ -5,19 +5,18 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 - VC.Project.VCCLCompilerTool.ForcedIncludeFiles
 - VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles
-- /fi
 helpviewer_keywords:
 - FI compiler option [C++]
 - -FI compiler option [C++]
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6460f75e2cad81bc1dcc540e3c687de5d0dc0d32
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293058"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439792"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI(강제 포함 파일 이름 지정)
 
@@ -31,7 +30,7 @@ ms.locfileid: "62293058"
 
 ## <a name="remarks"></a>설명
 
-이 옵션은 명령줄, CL 환경 변수 또는 명령 파일에 지정된 모든 소스 파일의 첫 행에 있는 `#include` 지시문에 큰 따옴표로 파일을 지정하는 것과 동일한 효과가 있습니다. 여러 개의 **/FI** 옵션을 사용하면 파일은 CL에 의해 처리되는 순서대로 포함됩니다.
+이 옵션은 명령줄, CL 환경 변수 또는 명령 파일에 지정 된 모든 소스 파일의 첫 번째 줄에 있는 `#include` 지시문에 큰따옴표를 사용 하 여 파일을 지정 하는 것과 동일한 효과를 가집니다. 여러 **/fi** 옵션을 사용 하는 경우 파일은 CL에서 처리 하는 순서 대로 포함 됩니다.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
@@ -39,15 +38,15 @@ ms.locfileid: "62293058"
 
 1. **C/C++** 폴더를 클릭합니다.
 
-1. **고급** 속성 페이지를 클릭합니다.
+1. **고급** 속성 페이지를 클릭 합니다.
 
-1. **강제 포함 파일** 속성을 수정합니다.
+1. **강제 포함 파일** 속성을 수정 합니다.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [출력 파일(/F) 옵션](output-file-f-options.md)<br/>
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>

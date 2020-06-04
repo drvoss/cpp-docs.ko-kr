@@ -1,21 +1,24 @@
 ---
 title: ref class 및 ref struct(C++/CLI 및 C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172570"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 및 ref struct(C++/CLI 및 C++/CX)
 
@@ -54,7 +57,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 자세한 내용은 Windows 런타임 및 공용 언어 런타임 섹션에서 이 매개 변수에 대한 언어별 설명을 참조하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 **ref class** 또는 **value class**를 사용하여 선언된 개체의 기본 멤버 접근성은 **private**입니다. 또한 **ref struct** 또는 **value struct**를 사용하여 선언된 개체의 기본 멤버 접근성은 **public**입니다.
 
@@ -70,7 +73,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [클래스, 구조체 및 공용 구조체](../cpp/classes-and-structs-cpp.md)
 
-- [방법: 클래스 및 구조체 정의 및 사용의 소멸자 및 종료자(C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [방법: 클래스 및 구조체 정의 및 사용 (C++/cli)의 소멸자 및 종료자](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [사용자 정의 연산자(C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -82,9 +85,9 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-[Ref 클래스 및 구조체](../cppcx/ref-classes-and-structs-c-cx.md) 및 [값 클래스 및 구조체](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx)를 참조하세요.
+[Ref 클래스 및 구조체](../cppcx/ref-classes-and-structs-c-cx.md) 및 [값 클래스 및 구조체](../cppcx/value-classes-and-structs-c-cx.md)를 참조하세요.
 
 ### <a name="parameters"></a>매개 변수
 
@@ -101,7 +104,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 다음 표에는 C++/CLI와 관련된, **모든 런타임** 섹션에 표시된 구문과의 차이점이 나와 있습니다.
 

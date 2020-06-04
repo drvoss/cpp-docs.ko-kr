@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810631"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "77415705"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio의 C++ 개발 개요
 
@@ -47,7 +47,7 @@ Visual Studio는 IntelliSense, 검색 및 디버깅을 완벽하게 지원하여
 
 ## <a name="add-to-source-control"></a>소스 제어에 추가
 
-소스 제어를 사용하면 여러 개발자 간 작업을 조정하고, 진행 중인 작업을 프로덕션 코드에서 분리하고, 소스 코드를 백업할 수 있습니다. Visual Studio에서는 해당 **팀 탐색기** 창을 통해 Git 및 [TFVC\(Team Foundation 버전 제어\)](/azure/devops/repos/tfvc/)를 지원합니다. 
+소스 제어를 사용하면 여러 개발자 간 작업을 조정하고, 진행 중인 작업을 프로덕션 코드에서 분리하고, 소스 코드를 백업할 수 있습니다. Visual Studio에서는 해당 **팀 탐색기** 창을 통해 Git 및 [TFVC\(Team Foundation 버전 제어\)](/azure/devops/repos/tfvc/)를 지원합니다.
 
 ::: moniker range="vs-2019"
 
@@ -99,7 +99,7 @@ Windows 프로그램 또는 DLL에는 일반적으로 대화 상자, 아이콘, 
 
 컴파일러(cl.exe) 및 다양한 빌드 관련 독립 실행형 도구(예: NMAKE 및 LIB)를 명령줄에서 바로 사용할 수도 있습니다. 자세한 내용은 [명령줄에서 C/C++ 코드 빌드](../build/building-on-the-command-line.md) 및 [C/C++ 빌드 참조](../build/reference/c-cpp-building-reference.md)를 참조하세요.
 
-## <a name="debug"></a>Debug
+## <a name="debug"></a>디버그
 
 **F5** 키를 눌러 디버깅을 시작할 수 있습니다. 설정한 모든 중단점에서 실행이 일시 중지됩니다(**F9**를 누를 경우). 한 번에 한 줄씩 코드를 단계별로 진행하며(**F10**) 변수 또는 레지스터의 값을 확인할 수 있고, 일부 사례에서는 코드 변경 후 다시 컴파일하지 않고 디버깅을 계속할 수도 있습니다. 다음 그림에서는 중단점에서 실행이 중지되는 디버깅 세션을 보여 줍니다. 데이터 구조 멤버의 값은 **조사식 창**에 표시됩니다.
 
@@ -117,7 +117,7 @@ Visual Studio에는 Boost.Test, Google Test 및 CTest에 대한 지원뿐만 아
 
 ## <a name="analyze"></a>분석
 
-Visual Studio에는 소스 코드에서 잠재적인 문제를 감지할 수 있는 정적 코드 분석 도구가 포함되어 있습니다. 이러한 도구에는 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 규칙 검사기의 구현이 포함됩니다. 자세한 내용은 [C/C++용 코드 분석 개요](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)를 참조하세요.
+Visual Studio에는 소스 코드에서 잠재적인 문제를 감지할 수 있는 정적 코드 분석 도구가 포함되어 있습니다. 이러한 도구에는 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 규칙 검사기의 구현이 포함됩니다. 자세한 내용은 [C/C++용 코드 분석 개요](/cpp/code-quality/code-analysis-for-c-cpp-overview)를 참조하세요.
 
 ## <a name="deploy-completed-applications"></a>완성된 애플리케이션 배포
 

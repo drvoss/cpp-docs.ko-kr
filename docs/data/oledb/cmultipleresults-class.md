@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88bc956c3a08c6dddbd7d26a18cfc10f778cabcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211832"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 클래스
 
-사용 하 여 여러 결과 집합을 처리 하는 명령을 싶다면 `CMultipleResults` 에 대 한는 `CCommand` 템플릿 인수 *TMultiple*합니다.
+명령을 사용 하 여 여러 결과 집합을 처리 하려면 `CCommand` 템플릿 인수 *Tmultiple*에 `CMultipleResults`를 사용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,15 +25,15 @@ ms.locfileid: "62230829"
 class CMultipleResults
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-여러 결과 처리 하도록 설정 [CCommand](../../data/oledb/ccommand-class.md) 이 클래스에서 상속 해야 합니다.
+여러 결과 집합을 처리 하려면 [CCommand](../../data/oledb/ccommand-class.md) 가이 클래스에서 상속 해야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atldbcli
+**헤더:** atldbcli.h
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[OLE DB 소비자 템플릿(C++)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

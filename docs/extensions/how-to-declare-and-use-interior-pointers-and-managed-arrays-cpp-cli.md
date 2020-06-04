@@ -1,19 +1,19 @@
 ---
-title: '방법: 내부 포인터 및 관리형 배열 선언 및 사용(C++/CLI)'
+title: '방법: 내부 포인터 및 관리되는 배열 선언 및 사용(C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 88308e0ba79a8272b2fc323b9219a29e234b25ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181982"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>방법: 내부 포인터 및 관리형 배열 선언 및 사용(C++/CLI)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>방법: 내부 포인터 및 관리되는 배열 선언 및 사용(C++/CLI)
 
 다음 C++/CLI 샘플에서는 배열에 대한 내부 포인터를 선언하고 사용하는 방법을 보여 줍니다.
 

@@ -1,8 +1,9 @@
 ---
 title: _CIexp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIexp
+- _o__CIexp
 api_location:
 - msvcr120.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: c901442bc7874e75dc0be03c72953dbacb67add3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944695"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918038"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -36,7 +38,7 @@ ms.locfileid: "70944695"
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 void __cdecl _CIexp();
 ```
 
@@ -46,11 +48,13 @@ void __cdecl _CIexp();
 
 결과 값이 스택의 맨 위에 푸시됩니다.
 
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](global-state.md)를 참조 하세요.
+
 ## <a name="requirements"></a>요구 사항
 
 **플랫폼:** x86
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [사전순 함수 참조](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148012"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745883"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>사용되지 않는 함수 선언 및 정의 폼
 
@@ -28,9 +28,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 `int`와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다(선언이 권장되기는 함).
 
-ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 예:
+ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 예를 들어:
 
-```
+```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
 int a;                 /* an error when compiling with /Za */
 {
@@ -39,7 +39,7 @@ int a;                 /* an error when compiling with /Za */
 
 다음과 같이 이 선언을 프로토타입으로 다시 작성해야 합니다.
 
-```
+```cpp
 void funct1( int a, ... )
 {
 }
@@ -49,6 +49,6 @@ void funct1( int a, ... )
 
 다음 섹션 [C 함수 정의](../c-language/c-function-definitions.md)에서는 이전 스타일 구문을 포함하여 함수 정의를 위한 구문을 보여 줍니다. 이전 스타일 구문에서 매개 변수 목록의 비터미널은 *identifier-list*입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [함수 개요](../c-language/overview-of-functions.md)

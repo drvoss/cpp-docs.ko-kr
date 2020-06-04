@@ -2,7 +2,6 @@
 title: '방법: 리소스 만들기 (C++)'
 ms.date: 02/14/2019
 f1_keywords:
-- vc.editors.resource
 - vc.resvw.add.MFC
 - vs.resourceview.F1
 - vc.editors.insertresource
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5527b7c46b728a4a009a56fca3fea52bf5ef9bf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444969"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214424"
 ---
 # <a name="how-to-create-resources-c"></a>방법: 리소스 만들기 (C++)
 
@@ -120,9 +119,9 @@ Windows 데스크톱 응용 프로그램 프로젝트에 C++ 리소스를 추가
 | **리소스 종류** | 만들려는 리소스의 종류를 지정 합니다.<br/><br/>커서 및 대화 상자 리소스 범주를 확장 하 여에 있는 추가 리소스를 표시할 수 *있습니다. \Microsoft Visual Studio \<version\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. .Rct 파일을 추가 해야 하는 경우 여기에 배치 하거나 다른 [포함 경로](../windows/how-to-specify-include-directories-for-resources.md)를 지정 합니다. 트리 컨트롤의 최상위 수준에 표시 되는 리소스는 Visual Studio에서 제공 하는 기본 리소스입니다. .Rct 파일의 리소스는 해당 범주의 두 번째 수준에 나타납니다. 추가할 수 있는 .rct 파일의 수에는 미리 설정 된 제한이 없습니다.<br/><br/> |
 | **새로 만들기** | **리소스 유형** 상자에서 선택한 유형을 기반으로 리소스를 만들고 해당 편집기에서 리소스를 엽니다.<br/><br/>예를 들어, 대화 상자 리소스를 만들면 [대화 상자 편집기](../windows/dialog-editor.md)에서 리소스를 엽니다. |
 | **가져오기** | **가져오기** 대화 상자를 열어 현재 프로젝트로 가져올 리소스로 이동 합니다.<br/><br/>비트맵, 아이콘, 커서, HTML, 소리 (.)를 가져올 수 있습니다. WAV) 또는 사용자 지정 리소스 파일을 지정 합니다. |
-| **사용자 지정** | **새 사용자 지정 리소스** 대화 상자를 열고 사용자 지정 리소스를 만듭니다.<br/><br/>에는 사용자 지정 리소스 종류의 이름을 입력할 수 있는 텍스트 상자를 제공 하는 **리소스 종류** 속성도 포함 되어 있습니다. 종료 C++ 하면 자동으로 이름을 대문자로 표시 합니다. 사용자 지정 리소스는 [이진 편집기](../windows/binary-editor.md)에서만 편집 됩니다. |
+| **Custom** | **새 사용자 지정 리소스** 대화 상자를 열고 사용자 지정 리소스를 만듭니다.<br/><br/>에는 사용자 지정 리소스 종류의 이름을 입력할 수 있는 텍스트 상자를 제공 하는 **리소스 종류** 속성도 포함 되어 있습니다. 종료 C++ 하면 자동으로 이름을 대문자로 표시 합니다. 사용자 지정 리소스는 [이진 편집기](../windows/binary-editor.md)에서만 편집 됩니다. |
 
-새 리소스를 만들면 Visual C++은 `IDD_Dialog1`과 같은 고유 이름을 할당합니다. 연결 된 리소스 편집기 또는 [속성 창](/visualstudio/ide/reference/properties-window)에서 리소스 속성을 편집 하 여이 리소스 ID를 사용자 지정할 수 있습니다.
+새 리소스를 만드는 경우 시각적 C++ 개체에 고유한 이름이 할당 됩니다 (예: `IDD_Dialog1`). 연결 된 리소스 편집기 또는 [속성 창](/visualstudio/ide/reference/properties-window)에서 리소스 속성을 편집 하 여이 리소스 ID를 사용자 지정할 수 있습니다.
 
 > [!NOTE]
 > Visual Studio에서 예약 된 리소스 이름 또는 ID를 지정 하지 마세요. 예약 된 이름은 `DESIGNINFO`, `HWB`및 `TEXTINCLUDE`이며 예약 된 ID는 `255`입니다.

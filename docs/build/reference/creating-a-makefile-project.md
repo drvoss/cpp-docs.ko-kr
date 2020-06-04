@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866127"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169892"
 ---
 # <a name="create-a-c-makefile-project"></a>C++ 메이크파일 프로젝트 만들기
 
@@ -76,7 +76,7 @@ Visual Studio 2017 이상에서 메이크파일 프로젝트 템플릿은 C++ �
 
 특정 프로젝트 설정 또는 컴파일러 옵션이 잘못 설정된 경우IntelliSense가 메이크파일 프로젝트에서 실패합니다. IntelliSense가 예상대로 작동할 수 있게 다음 단계에 따라 메이크파일 프로젝트를 구성합니다.
 
-1. **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
+1. **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
 1. **구성 속성** 노드를 확장합니다.
 
@@ -86,7 +86,7 @@ Visual Studio 2017 이상에서 메이크파일 프로젝트 템플릿은 C++ �
 
    - **포함 검색 경로** 속성을 설정하여 컴파일러가 메이크파일 프로젝트의 전처리기 지시문에 전달되는 파일 참조를 확인하기 위해 검색할 디렉터리 목록을 지정합니다. 자세한 내용은 [/I(추가 포함 디렉터리)](i-additional-include-directories.md)를 참조하세요.
 
-    - 명령 창에서 CL.EXE를 사용하여 빌드된 프로젝트의 경우, **INCLUDE** 환경 변수를 설정하여 컴파일러가 메이크파일 프로젝트의 전처리기 지시문에 전달되는 파일 참조를 확인하기 위해 검색할 디렉터리를 지정합니다.
+   - 명령 창에서 CL.EXE를 사용하여 빌드된 프로젝트의 경우, **INCLUDE** 환경 변수를 설정하여 컴파일러가 메이크파일 프로젝트의 전처리기 지시문에 전달되는 파일 참조를 확인하기 위해 검색할 디렉터리를 지정합니다.
 
    - **강제 포함** 속성을 설정하여 메이크파일 프로젝트를 빌드할 때 처리할 헤더 파일을 지정합니다. 자세한 내용은 [/FI(강제 포함 파일 이름 지정)](fi-name-forced-include-file.md)를 참조하세요.
 
@@ -102,7 +102,7 @@ Visual Studio 2017 이상에서 메이크파일 프로젝트 템플릿은 C++ �
 
 다음에 Visual Studio 개발 환경에서 메이크파일 프로젝트를 열 때 메이크파일 프로젝트에서 **솔루션 정리** 명령을 실행한 다음, **솔루션 빌드** 명령을 실행합니다. IntelliSense는 IDE에서 제대로 작동해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IntelliSense 사용](/visualstudio/ide/using-intellisense)<br>
 [NMAKE 참조](nmake-reference.md)<br>

@@ -1,4 +1,4 @@
----
+﻿---
 title: DLL 종류
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,65 +6,65 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: 9e66fa1c24ea00961d99eef02c15526eff4eb533
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: dae44d2dd39597420ce2a2c4e1642e8a7f0784e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221483"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328497"
 ---
 # <a name="kinds-of-dlls"></a>DLL 종류
 
-이 항목에서는 빌드할 DLL의 종류를 결정 하는 데 유용한 정보를 제공 합니다.
+이 항목에서는 빌드할 DLL의 종류를 결정하는 데 도움이 되는 정보를 제공합니다.
 
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 사용 가능한 Dll의 종류
+## <a name="different-kinds-of-dlls-available"></a><a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 사용할 수 있는 여러 종류의 DLL
 
-Visual Studio를 사용하면 MFC(Microsoft Foundation Class) 라이브러리를 사용하지 않는 C 또는 C++에서 Win32 DLL을 빌드할 수 있습니다. Win32 응용 프로그램 마법사를 사용하여 비 MFC DLL 프로젝트를 만들 수 있습니다.
+Visual Studio를 사용하면 MFC(Microsoft Foundation Class) 라이브러리를 사용하지 않는 Win32 DLL을 C 또는 C++에서 빌드할 수 있습니다. Win32 애플리케이션 마법사를 사용하여 비MFC DLL 프로젝트를 만들 수 있습니다.
 
-MFC 라이브러리 자체는 정적 링크 라이브러리나 여러 DLL에서 MFC DLL 마법사와 함께 사용할 수 있습니다. DLL이 MFC를 사용하는 경우 Visual Studio는 세 가지 DLL 개발 시나리오를 지원합니다.
+MFC 라이브러리 자체는 MFC DLL 마법사로 정적 연결 라이브러리나 다수의 DLL에서 사용할 수 있습니다. DLL이 MFC를 사용 중인 경우 Visual Studio는 다음과 같은 세 가지 DLL 개발 시나리오를 지원합니다.
 
-- MFC를 정적으로 연결하는 일반 MFC DLL 작성
+- 정적으로 MFC를 연결하는 기본 MFC DLL 빌드
 
-- MFC를 동적으로 연결하는 일반 MFC DLL 작성
+- 동적으로 MFC를 연결하는 기본 MFC DLL 빌드
 
-- 항상 동적으로 MFC를 연결하는 MFC 확장 DLL 작성
-
-### <a name="what-do-you-want-to-know-more-about"></a>추가 정보
-
-- [비 MFC DLL: 개요](non-mfc-dlls-overview.md)
-
-- [정적으로 MFC에 링크 된 기본 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
-
-- [동적으로 MFC에 링크 된 기본 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
-
-- [MFC 확장명 DLL: 개요](extension-dlls-overview.md)
-
-- [사용할 DLL 종류 결정](#_core_which_kind_of_dll_to_use)
-
-##  <a name="_core_which_kind_of_dll_to_use"></a> 사용할 DLL 종류 결정
-
-DLL에서 MFC를 사용 하지 않는 경우 비 MFC Win32 DLL을 빌드하려면 Visual Studio를 사용 합니다. 중요 한 디스크 공간 및 메모리를 소모 (정적 또는 동적) DLL을 MFC에 링크 합니다. DLL이 실제로 MFC를 사용 하지 않는 한 MFC에 링크 하지 말아야 합니다.
-
-DLL은 MFC를 사용하고 MFC 또는 비 MFC 응용 프로그램에서 사용할 경우에 동적으로 MFC에 링크된 기본 MFC DLL 또는 정적으로 MFC에 링크된 기본 MFC DLL을 빌드해야 합니다. 대부분의 경우 DLL의 파일 크기가 훨씬 작고 공유 버전의 MFC를 사용하여 메모리를 크게 절약할 수 있기 때문에 MFC에 동적으로 연결되는 일반 MFC DLL을 사용합니다. 정적으로 MFC에 링크하면 DLL의 파일 크기가 더 커지며 MFC 라이브러리 코드의 고유한 개인 복사본이 로드되므로 잠재적으로 추가 메모리를 차지합니다.
-
-동적으로 MFC에 링크 한 DLL은 MFC를 직접 링크할 필요가 없기 때문에 정적으로 MFC에 링크 한 DLL 보다 빠르게 빌드할 수 있습니다. 링커가 디버그 정보를 압축 해야 합니다는 디버그 빌드에서 특히 그렇습니다. 디버그 정보가 이미 들어 있는 dll에 링크 하 여 DLL 내에 압축 해야 할 디버그 정보가 줄어듭니다 있습니다.
-
-동적으로 MFC에 링크 한 단점은 공유 Dll Mfcx0.dll 및 Msvcrxx.dll (또는 유사한 파일) DLL과 함께 배포 해야 합니다는 것입니다. MFC Dll은 재배포할 수 있지만 여전히 설치 프로그램에서 Dll를 설치 해야 합니다. 또한 한 Msvcrxx.dll을 둘 다 프로그램과 MFC Dll에서 사용 되는 C 런타임 라이브러리가 포함를 발송 해야 합니다.
-
-DLL을 MFC 실행 파일만 사용 하는 경우 기본 MFC DLL 또는 MFC 확장 DLL 빌드 중에서 선택을 해야 합니다. 기존의 MFC 클래스에서 파생 된 다시 사용할 수 있는 클래스를 구현 하는 DLL 또는 응용 프로그램과 DLL 간에 MFC 파생 개체를 전달 해야 하는 경우에 MFC 확장 DLL을 빌드해야 합니다.
-
-DLL을 동적으로 MFC에 링크하는 경우 DLL을 사용하여 MFC DLL을 재배포할 수 있습니다. 이 아키텍처는 디스크 공간을 절약하고 메모리 사용량을 최소화하는 여러 실행 파일 간에 클래스 라이브러리를 공유하는 데 특히 유용합니다.
+- 항상 MFC를 동적으로 연결하는 MFC 확장 DLL 빌드
 
 ### <a name="what-do-you-want-to-know-more-about"></a>추가 정보
 
 - [비 MFC DLL: 개요](non-mfc-dlls-overview.md)
 
-- [정적으로 MFC에 링크 된 기본 MFC Dll](regular-dlls-statically-linked-to-mfc.md)
+- [정적으로 MFC에 연결된 기본 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [동적으로 MFC에 링크 된 기본 MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [동적으로 MFC에 연결된 기본 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 확장명 DLL: 개요](extension-dlls-overview.md)
 
-## <a name="see-also"></a>참고자료
+- [사용할 DLL의 종류](#_core_which_kind_of_dll_to_use)
 
-[C를 만들기 /C++ Visual Studio에서 Dll](dlls-in-visual-cpp.md)
+## <a name="deciding-which-kind-of-dll-to-use"></a><a name="_core_which_kind_of_dll_to_use"></a> 사용할 DLL의 종류 결정
+
+DLL에서 MFC를 사용하지 않는 경우 Visual Studio를 사용하여 비 MFC Win32 DLL을 빌드합니다. DLL을 MFC에 연결하면(정적으로 또는 동적으로) 상당한 디스크 공간과 메모리를 차지합니다. DLL이 실제로 MFC를 사용하지 않는다면 MFC에 연결해서는 안 됩니다.
+
+DLL이 MFC를 사용하고 MFC 애플리케이션이나 비 MFC 애플리케이션에서 사용되는 경우에는 동적으로 MFC에 연결하는 기본 MFC DLL이나 정적으로 MFC에 연결하는 기본 MFC DLL을 빌드해야 합니다. DLL의 파일 크기가 훨씬 작고 MFC의 공유 버전을 사용하여 메모리를 절약하는 것이 중요할 수 있으므로 대부분의 경우는 MFC에 동적으로 연결하는 기본 MFC DLL을 사용하는 것이 좋습니다. 정적으로 MFC에 연결하는 경우 MFC 라이브러리 코드의 프라이빗 복사본을 로드하기 때문에 DLL의 파일 크기가 커지고 추가 메모리를 차지할 가능성이 있습니다.
+
+MFC에 동적으로 연결하는 DLL을 빌드하는 것은 MFC 자체를 연결할 필요가 없으므로 정적으로 MFC에 연결하는 DLL을 빌드하는 것보다 빠릅니다. 이는 링커가 디버그 정보를 압축해야 하는 디버그 빌드에서 특히 그렇습니다. 이미 디버그 정보를 포함하는 DLL과 연결하면 DLL 내에서 압축할 디버그 정보가 줄어듭니다.
+
+MFC에 동적으로 연결하는 것의 단점 한 가지는 공유 DLL Mfcx0.dll 및 Msvcrxx.dll(또는 유사한 파일)을 DLL과 함께 배포해야 한다는 것입니다. MFC DLL은 자유롭게 재배포할 수 있지만 그래도 여전히 설치 프로그램에 DLL을 설치해야 합니다. 또한 프로그램 및 MFC DLL 자체에서 사용되는 C 런타임 라이브러리를 포함하는 Msvcrxx.dll을 제공해야 합니다.
+
+MFC 실행 파일에서만 DLL이 사용되는 경우에는 기본 MFC DLL 빌드와 MFC 확장 DLL 빌드 중에서 선택할 수 있습니다. DLL이 기존 MFC 클래스에서 파생된 다시 사용할 수 있는 클래스를 구현하거나 애플리케이션과 DLL 간에 MFC 파생 개체를 전달해야 하는 경우에는 MFC 확장 DLL을 빌드해야 합니다.
+
+DLL이 동적으로 MFC에 연결하는 경우 DLL을 사용하여 MFC DLL을 재배포할 수 있습니다. 이 아키텍처는 디스크 공간을 절약하고 메모리 사용을 최소화하기 위해 여러 실행 파일 간에 클래스 라이브러리를 공유하는 데 특히 유용합니다.
+
+### <a name="what-do-you-want-to-know-more-about"></a>추가 정보
+
+- [비 MFC DLL: 개요](non-mfc-dlls-overview.md)
+
+- [정적으로 MFC에 연결된 기본 MFC DLL](regular-dlls-statically-linked-to-mfc.md)
+
+- [동적으로 MFC에 연결된 기본 MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
+
+- [MFC 확장명 DLL: 개요](extension-dlls-overview.md)
+
+## <a name="see-also"></a>참조
+
+[Visual Studio에서 C/C++ DLL 만들기](dlls-in-visual-cpp.md)

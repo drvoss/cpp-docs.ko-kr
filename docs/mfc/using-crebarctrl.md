@@ -1,19 +1,17 @@
 ---
 title: CReBarCtrl 사용
 ms.date: 11/19/2018
-f1_keywords:
-- CReBarCtrl
 helpviewer_keywords:
 - child windows [MFC], rebar controls
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411908"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441955"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl 사용
 
@@ -21,11 +19,11 @@ rebar 컨트롤은 자식 창에 대한 컨테이너로 사용됩니다. 다른 
 
 다음 그림에서는 두 개의 밴드가 있는 rebar 컨트롤을 보여 줍니다. 밴드 하나에는 그리퍼 막대, 텍스트 레이블("주소") 및 콤보 상자 자식 창이 포함됩니다. 다른 밴드에는 그리퍼 막대, 텍스트 레이블 및 플랫 도구 모음(자식 창과 함께 구현)이 포함됩니다.
 
-![두 개의 밴드가 있는 rebar 컨트롤](../mfc/media/vc4ruz1.gif "두 개의 밴드가 있는 Rebar 컨트롤")
+![두 개의 밴드가 있는 Rebar 컨트롤](../mfc/media/vc4ruz1.gif "밴드가 2개 있는 rebar 컨트롤")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
 
-- [CReBar와 CReBarCtrl 비교](../mfc/crebar-vs-crebarctrl.md)
+- [CReBar와 CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
 
 - [Rebar 컨트롤 만들기](../mfc/creating-a-rebar-control.md)
 
@@ -37,6 +35,6 @@ rebar 컨트롤은 자식 창에 대한 컨테이너로 사용됩니다. 다른 
 
 - [Rebar 컨트롤에서 알림 메시지 처리](../mfc/processing-notification-messages-in-a-rebar-control.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컨트롤](../mfc/controls-mfc.md)

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244012"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425642"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 연산자
 
@@ -49,7 +49,7 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 *오른쪽*\
 `iterator` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반복기 개체가 같지 않으면 **true**이고, 반복기 개체가 같으면 **false**입니다.
 
@@ -119,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> 연산자 = =
+## <a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.
 
@@ -153,15 +153,15 @@ iterator 형식의 개체입니다.
 *오른쪽*\
 iterator 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true** 반복기 개체가 같지 않으면 **false** 반복기 개체가 같지 않은 경우.
+반복기 개체가 같으면 **true** 이 고, 그렇지 않으면입니다. 반복기 개체가 같지 않으면 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
 반복기 개체가 컨테이너의 동일한 요소로 주소 지정되면 서로 같습니다. 두 반복기가 컨테이너의 다른 요소를 가리키면 반복기가 같지 않습니다.
 
-첫 번째 두 템플릿 연산자는 두 경우에 true를 반환 *왼쪽* 하 고 *오른쪽* 동일한 반복기를 저장 합니다. 세 번째 템플릿 연산자는 두 경우에 true를 반환 *왼쪽* 하 고 *오른쪽* 동일한 스트림 포인터를 저장 합니다. 네 번째 템플릿 연산자는 `left.equal (right)`를 반환합니다.
+처음 두 템플릿 연산자는 *왼쪽과* *오른쪽* 에 동일한 반복기가 저장 된 경우에만 true를 반환 합니다. 세 번째 템플릿 연산자는 *왼쪽과* *오른쪽* 에 동일한 스트림 포인터를 저장 하는 경우에만 true를 반환 합니다. 네 번째 템플릿 연산자는 `left.equal (right)`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -242,7 +242,7 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 *오른쪽*\
 `iterator` 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작으면 **true**이고, 오른쪽 반복기보다 크거나 같으면 **false**입니다.
 
@@ -316,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> 연산자&lt;=
+## <a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.
 
@@ -333,7 +333,7 @@ iterator 형식의 개체입니다.
 *오른쪽*\
 iterator 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작거나 같으면 **true**이고, 오른쪽 반복기보다 크면 **false**입니다.
 
@@ -428,7 +428,7 @@ iterator 형식의 개체입니다.
 *오른쪽*\
 iterator 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크면 **true**이고, 오른쪽 반복기보다 작거나 같으면 **false**입니다.
 
@@ -500,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> 연산자&gt;=
+## <a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.
 
@@ -517,7 +517,7 @@ iterator 형식의 개체입니다.
 *오른쪽*\
 iterator 형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크거나 같으면 **true**이고, 오른쪽 반복기보다 작으면 **false**입니다.
 
@@ -595,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a> operator +
+## <a name="op_add"></a>연산자 +
 
 반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소의 주소를 지정하는 `move_iterator` 또는 `reverse_iterator`를 반환합니다.
 
@@ -621,9 +621,9 @@ const move_iterator 또는 const reverse_iterator가 오프셋되는 위치의 �
 *오른쪽*\
 오프셋할 반복기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-합계를 반환 합니다 *오른쪽* +  *_Off*합니다.
+*_Off* * + 합계* 를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -674,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a> 연산자-
+## <a name="operator-"></a>연산자
 
 다른 반복기에서 하나의 반복기를 빼고 차이를 반환합니다.
 
@@ -698,7 +698,7 @@ Tdiff operator-(
 *오른쪽*\
 반복기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 반복기 간의 차이입니다`.`
 

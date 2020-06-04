@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498194"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587389"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE(터미널 서버 인식 애플리케이션 만들기)
 
@@ -30,13 +30,13 @@ ms.locfileid: "69498194"
 
 응용 프로그램이 터미널 서버를 인식 하지 못하는 경우 (레거시 응용 프로그램이 라고도 함) 터미널 서버는 레거시 응용 프로그램을 수정 하 여 다중 사용자 환경에서 제대로 작동 하도록 합니다. 예를 들어 터미널 서버는 가상 Windows 폴더를 만들어 각 사용자가 시스템의 Windows 디렉터리를 가져오는 대신 Windows 폴더를 가져옵니다. 이를 통해 사용자는 자신의 INI 파일에 액세스할 수 있습니다. 또한 터미널 서버는 레거시 응용 프로그램에 대 한 레지스트리를 일부 조정 합니다. 이러한 수정을 통해 터미널 서버에서 레거시 응용 프로그램을 로드 하는 속도가 느려집니다.
 
-응용 프로그램이 터미널 서버를 인식 하는 경우에는 설치 중에 INI 파일을 사용 하거나 **HKEY_CURRENT_USER** 레지스트리에 쓰지 않아야 합니다.
+터미널 서버를 인식 하는 응용 프로그램은 설치 하는 동안 INI 파일을 사용 하거나 **HKEY_CURRENT_USER** 레지스트리에 쓰지 않아야 합니다.
 
 /TSAWARE를 사용 하 고 응용 프로그램에서 계속 INI 파일을 사용 하는 경우 시스템의 모든 사용자가 파일을 공유 합니다. 허용 되는 경우에도 응용 프로그램을/TSAWARE에 연결할 수 있습니다. 그렇지 않으면/TSAWARE: NO를 사용 해야 합니다.
 
 /TSAWARE 옵션은 Windows 및 콘솔 응용 프로그램에 대해 기본적으로 사용 하도록 설정 되어 있습니다. 자세한 내용은 [/SUBSYSTEM](subsystem-specify-subsystem.md) 및 [/VERSION](version-version-information.md) 를 참조 하세요.
 
-/TSAWARE는 드라이버, VxDs 또는 Dll에 사용할 수 없습니다.
+/TSAWARE는 드라이버 또는 Dll에 사용할 수 없습니다.
 
 응용 프로그램이/TSAWARE에 연결 된 경우 DUMPBIN [/헤더](headers.md) 는 해당 효과에 대 한 정보를 표시 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "69498194"
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)<br/>

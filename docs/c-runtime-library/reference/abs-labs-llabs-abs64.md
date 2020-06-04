@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857855"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171413"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -72,11 +72,11 @@ float abs( float n );   // C++ only
 *n*<br/>
 숫자 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **Abs**, **labs**, **llabs** 및 **_abs64** 함수는 매개 변수 *n*의 절대값을 반환 합니다. 반환되는 오류가 없습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 는 C++ 오버 로드를 허용 하므로 **long**, **long** **long**, **float**, **double**및 **long** **double** 값을 사용 하 고 반환 하는 **abs** 오버 로드를 호출할 수 있습니다. 이러한 오버로드는 \<cmath> 헤더에 정의됩니다. C 프로그램에서 **abs** 는 항상 **int**를 사용 하 고 반환 합니다.
 
@@ -84,9 +84,9 @@ float abs( float n );   // C++ only
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
+|루틴|필수 C 헤더|필수 C++ 헤더|
 |-------------|-----------------------|---------------------------|
-|**abs**, **labs**, **llabs**|\<math.h> 또는 \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> 또는 \<math.h>|
+|**abs**, **랩**, **llabs**|\<math.h> 또는 \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> 또는 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 또는 \<stdlib.h>|
 
 에서 C++오버 로드 된 **abs** 버전을 사용 하려면 \<cmath > 헤더를 포함 해야 합니다.
@@ -148,7 +148,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>

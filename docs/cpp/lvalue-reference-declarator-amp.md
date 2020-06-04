@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 7710b6f1efc2de770b26ad50923bde2ee5200f61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178069"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Lvalue 참조 선언 자: &amp;
 
@@ -24,13 +24,13 @@ ms.locfileid: "62209556"
 type-id & cast-expression
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 lvalue 참조를 개체의 또 다른 이름으로 간주할 수 있습니다. lvalue 참조 선언은 참조 선언자가 뒤에 나오는 선택적 지정자 목록으로 구성됩니다. 참조는 초기화되어야 하고 변경될 수 없습니다.
 
 주소가 지정된 포인터 형식으로 변환될 수 있는 개체는 유사한 참조 형식으로도 변환될 수 있습니다. 예를 들어 주소가 `char *` 형식으로 변환될 수 있는 개체는 `char &` 형식으로도 변환될 수 있습니다.
 
-참조 선언을 [주소 연산자](../cpp/address-of-operator-amp.md) 사용과 혼동하지 마십시오. `&` *식별자* 앞에 **int** 또는 **char**와 같은 형식이 있는 경우 `&` *식별자*는 해당 형식에 대한 참조로 선언됩니다. `&` *식별자* 앞에 형식이 없는 경우에는 주소 연산자와 용도가 같습니다.
+참조 선언을 [주소 연산자](../cpp/address-of-operator-amp.md)사용과 혼동 하지 마십시오. `&`*식별자* 앞에 **int** 또는 **char**와 같은 형식이 있는 경우 *식별자* 는 해당 형식에 대 한 참조로 선언 됩니다. `&`*식별자* 가 형식이 아닌 경우에는 주소 연산자의 사용법이 사용 됩니다.
 
 ## <a name="example"></a>예제
 

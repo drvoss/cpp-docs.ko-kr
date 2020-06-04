@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 8021b6e4650a03b16c96711b8afe4f5fa57d2f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185349"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>컴파일러 경고(수준 4) C4435
 
@@ -39,7 +39,7 @@ class B : public virtual A  // C4435
 {};
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
 [/vd(생성 치환 사용 안 함)](../../build/reference/vd-disable-construction-displacements.md)

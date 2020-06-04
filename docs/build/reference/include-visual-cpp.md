@@ -1,19 +1,18 @@
 ---
-title: '&lt;포함 > (C++ 문서 주석)'
+title: '> 포함 &lt;(C++ 문서 설명)'
 ms.date: 11/04/2016
 f1_keywords:
-- include
 - <include>
 helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: b7d1033aa5b6c95c0db8eb9debf74596dc214fb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291329"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439512"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -36,7 +35,7 @@ ms.locfileid: "62291329"
 *name*<br/>
 주석 앞에 오는 태그의 이름 지정자입니다. `name`에는 `id`가 있습니다.
 
-*ID*<br/>
+*id*<br/>
 주석 앞에 오는 태그의 ID입니다.  이름을 단일 또는 이중 따옴표로 묶습니다.
 
 ## <a name="remarks"></a>설명
@@ -110,6 +109,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [XML 문서](xml-documentation-visual-cpp.md)

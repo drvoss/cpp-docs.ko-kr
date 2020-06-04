@@ -10,11 +10,11 @@ helpviewer_keywords:
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313532"
 ---
 # <a name="arguments"></a>인수
 
@@ -36,7 +36,7 @@ ms.locfileid: "56148727"
 
 프로토타입의 매개 변수 목록에 `void` 키워드만 포함되어 있으면 컴파일러는 함수 호출의 인수 수와 정의의 매개 변수 수를 0으로 가정합니다. 인수가 발견되면 진단 메시지가 표시됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 포인터를 인수로 사용합니다.
 
@@ -77,6 +77,6 @@ swap( &x, &y )
 
 `swap`의 프로토타입에 각 매개 변수에 대한 인수 형식이 포함되므로 컴파일러는 `swap`에 대한 인수에서 형식 검사를 수행합니다. 프로토타입과 정의의 괄호 안에 포함된 식별자는 같을 수도 있고 다를 수도 있습니다. 중요한 것은 인수의 형식이 프로토타입과 정의 둘 다의 매개 변수 목록에 포함된 형식과 일치한다는 점입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [함수 호출](../c-language/function-calls.md)

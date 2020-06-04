@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210914"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>마법사 생성 접근자의 필드 상태 데이터 멤버
 
@@ -44,18 +44,18 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
@@ -66,7 +66,7 @@ public:
 
 상태 값을 사용하여 특정 필드에 NULL 값을 설정할 수도 있습니다. 이렇게 하면 필드 값을 0이 아닌 NULL로 구분하려는 경우에 도움이 됩니다. NULL이 유효한 값인지 또는 특수 값인지 여부와 애플리케이션에서 NULL을 처리하는 방법을 결정해야 합니다. OLE DB에서는 제네릭 NULL 값을 지정하는 올바른 수단으로 DBSTATUS_S_ISNULL을 정의합니다. 소비자가 데이터를 읽고 값이 Null이면 상태 필드가 DBSTATUS_S_ISNULL로 설정됩니다. 소비자가 NULL 값을 설정하려는 경우 공급자를 호출하기 전에 상태 값을 DBSTATUS_S_ISNULL로 설정합니다.
 
-다음으로, Oledb.h를 열고 DBSTATUSENUM을 검색합니다. DBSTATUSENUM 열거형 값과 0이 아닌 상태의 숫자 값을 일치시킬 수 있습니다. 열거형 이름을 통해 오류를 확인할 수 없는 경우 [OLE DB 프로그래머 가이드](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)의 **데이터 값 바인딩** 섹션에서 **상태** 항목을 참조하세요. 이 항목에는 데이터를 가져오거나 설정할 때 사용되는 상태 값 표가 포함되어 있습니다. 길이 값에 대한 자세한 내용은 동일한 섹션의 **길이** 항목을 참조하세요.
+다음으로, Oledb.h를 열고 DBSTATUSENUM을 검색합니다. DBSTATUSENUM 열거형 값과 0이 아닌 상태의 숫자 값을 일치시킬 수 있습니다. 열거형 이름을 통해 오류를 확인할 수 없는 경우 **OLE DB 프로그래머 가이드**의 **데이터 값 바인딩** 섹션에서 [상태](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) 항목을 참조하세요. 이 항목에는 데이터를 가져오거나 설정할 때 사용되는 상태 값 표가 포함되어 있습니다. 길이 값에 대한 자세한 내용은 동일한 섹션의 **길이** 항목을 참조하세요.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>열의 길이 또는 상태 검색
 

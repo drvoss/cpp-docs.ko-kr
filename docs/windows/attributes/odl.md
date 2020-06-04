@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2627be876f0c46bb7d72c2c6b825cf76e24b1eb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514322"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214736"
 ---
 # <a name="odl"></a>odl
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514322"
 [odl]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **Odl** C++ 특성에는 [odl](/windows/win32/Midl/odl) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -62,7 +62,7 @@ public:
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [인터페이스 특성](interface-attributes.md)

@@ -4,16 +4,16 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 7e0a2d9a342446acbb62ea64031e84e03855e026
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630817"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075823"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>컴파일러 버전 별 컴파일러 경고
 
-컴파일러는 [/Wv](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션을 사용 하 여 지정한 버전 이후에 도입 된 경고를 표시 하지 않을 수 있습니다. 이 옵션은 새 도구 집합 버전을 도입할 때 빌드 프로세스를 관리 하 고 일시적으로 새 경고를 표시 하지 않으려는 경우에 유용 합니다. 이 옵션은 경고를 표시 하지 않고 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 영구적으로 표시 하지 않습니다. 항상 가장 높은 일반 경고 수준 `/W4`에서 컴파일하는 것이 좋으며, 실제로는 빌드에서 옵션을 제거 하는 `/Wv` 것이 좋습니다.
+컴파일러는 [/Wv](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션을 사용 하 여 지정한 버전 이후에 도입 된 경고를 표시 하지 않을 수 있습니다. 이 옵션은 새 도구 집합 버전을 도입할 때 빌드 프로세스를 관리 하 고 일시적으로 새 경고를 표시 하지 않으려는 경우에 유용 합니다. 이 옵션은 경고를 표시 하지 않고 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 영구적으로 표시 하지 않습니다. 항상 가장 높은 일반 경고 수준으로 컴파일하고, `/W4`하 고, 실제로 빌드에서 `/Wv` 옵션을 제거 하는 것이 좋습니다.
 
 이러한 버전의 컴파일러는 새로운 경고를 도입 했습니다.
 
@@ -39,15 +39,15 @@ ms.locfileid: "69630817"
 | Visual Studio 2017 버전 15.9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-주 번호, 주 번호, 부 번호, 주 번호, 부 번호, 빌드 번호를 `/Wv` 옵션으로 지정할 수 있습니다. 컴파일러는 지정 된 수로 시작 하는 버전과 일치 하는 모든 경고를 보고 하 고 지정 된 수보다 많은 버전에 대 한 모든 경고를 표시 하지 않습니다. 예를 들어 `/Wv:17` Visual Studio 2012의 모든 버전에서 발생 하는 경고를 보고 하 고 Visual Studio 2013 (버전 18) 이상의 컴파일러에서 발생 하는 경고를 표시 하지 않습니다. Visual Studio 2015 업데이트 2 이상에서 도입 된 경고를 표시 하지 않으려면를 사용할 `/Wv:19.00.23506`수 있습니다. Visual `/Wv:19.11` studio 2017 버전 15.5 이전 버전의 visual studio에서 도입 된 경고를 보고 하는 데 사용 하 고 visual studio 2017 버전 15.5 이상에서 도입 된 경고는 표시 하지 않습니다.
+`/Wv` 옵션에는 주 번호, 주 번호, 부 번호, 주 번호, 부 번호, 빌드 번호만 지정할 수 있습니다. 컴파일러는 지정 된 수로 시작 하는 버전과 일치 하는 모든 경고를 보고 하 고 지정 된 수보다 많은 버전에 대 한 모든 경고를 표시 하지 않습니다. 예를 들어 `/Wv:17`는 Visual Studio 2012의 모든 버전에 도입 된 경고를 보고 하 고, Visual Studio 2013 (버전 18) 이상에서 컴파일러에 의해 발생 하는 경고를 표시 하지 않습니다. Visual Studio 2015 업데이트 2 이상에서 도입 된 경고를 표시 하지 않으려면 `/Wv:19.00.23506`를 사용할 수 있습니다. `/Wv:19.11`를 사용 하 여 visual studio 2017 버전 15.5 이전 버전의 Visual Studio에서 도입 된 경고를 보고 하지만 Visual Studio 2017 버전 15.5 이상에서 도입 된 경고는 표시 하지 않습니다.
 
-다음 섹션에서는 `/Wv` 컴파일러 옵션을 사용 하 여 표시 하지 않을 C++ 수 있는 각 버전의 시각적 개체에서 발생 하는 경고를 나열 합니다. 옵션 `/Wv` 은 지정 된 버전의 컴파일러를 predate 하는 나열 되지 않은 경고를 표시 하지 않습니다.
+다음 섹션에서는 `/Wv` 컴파일러 옵션을 사용 하 여 표시 하지 C++ 않을 수 있는 각 버전의 시각적 개체에서 발생 하는 경고를 나열 합니다. `/Wv` 옵션은 지정 된 버전의 컴파일러를 predate 하는 나열 되지 않은 경고를 표시 하지 않습니다.
 
 ::: moniker range=">= vs-2019"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW에 도입 된 경고 (컴파일러 버전 19.20.27004.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.15`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.15`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -56,10 +56,9 @@ ms.locfileid: "69630817"
 ::: moniker-end
 ::: moniker range=">= vs-2017"
 
-
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 버전 15.8에 도입 된 경고 (컴파일러 버전 19.15.26726.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.14`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.14`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -85,7 +84,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 버전 15.7에 도입 된 경고 (컴파일러 버전 19.14.26428.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.13`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.13`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -94,7 +93,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 버전 15.6에 도입 된 경고 (컴파일러 버전 19.13.26128.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.12`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.12`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -102,7 +101,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 버전 15.5에 도입 된 경고 (컴파일러 버전 19.12.25830.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.11`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.11`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -116,7 +115,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 버전 15.3에 도입 된 경고 (컴파일러 버전 19.11.25506.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.10`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.10`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -138,7 +137,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM (컴파일러 버전 19.10.25017.0)에 도입 된 경고
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.00`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -151,7 +150,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 업데이트 3에 도입 된 경고 (컴파일러 버전 19.00.24215.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.00.23918`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23918`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -162,7 +161,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 업데이트 2에 도입 된 경고 (컴파일러 버전 19.00.23918.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.00.23506`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23506`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -173,7 +172,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 업데이트 1에 도입 된 경고 (컴파일러 버전 19.00.23506.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:19.00.23026`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23026`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -184,7 +183,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM (컴파일러 버전 19.00.23026.0)에 도입 된 경고
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:18`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:18`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -243,7 +242,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013에 도입 된 경고 (컴파일러 버전 18.00.21005.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:17`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:17`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -272,7 +271,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012에 도입 된 경고 (컴파일러 버전 번호가 17.00.51106.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:16`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:16`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -305,7 +304,7 @@ ms.locfileid: "69630817"
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|' name '의 volatile 액세스는/volatile: < iso의 영향을 받습니다. | ms > 설정 __iso_volatile_load/store 내장 함수 사용 고려 |
+| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -315,7 +314,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010에 도입 된 경고 (컴파일러 버전 16.00.40219.01)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:15`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:15`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -331,7 +330,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008에 도입 된 경고 (컴파일러 버전 15.00.21022.08)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:14`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:14`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -346,7 +345,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005에 도입 된 경고 (컴파일러 버전 14.00.50727.762)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:13`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:13`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -489,7 +488,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003에 도입 된 경고 (컴파일러 버전 13.10.3077)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:13.00.9466`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:13.00.9466`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -525,7 +524,7 @@ ms.locfileid: "69630817"
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002에 도입 된 경고 (컴파일러 버전 13.00.9466)
 
-이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션 `/Wv:12`을 사용 하 여 억제 됩니다.
+이러한 경고 및 이후 버전의 모든 경고는 `/Wv:12`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
 
 |||
 |-|-|
@@ -672,10 +671,10 @@ ms.locfileid: "69630817"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C/C++ 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md) \
 [컴파일러 경고 C4000-C5999](compiler-warnings-c4000-c5999.md) \
 [/Wv 컴파일러 옵션](../../build/reference/compiler-option-warning-level.md) \
 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
-[warning](../../preprocessor/warning.md)
+[경고](../../preprocessor/warning.md)

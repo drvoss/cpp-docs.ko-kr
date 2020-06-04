@@ -2,12 +2,12 @@
 title: Visual Studio에서 C++ Linux 프로젝트 구성
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "80150968"
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
 
@@ -17,9 +17,9 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 ::: moniker-end
 
-이 토픽에서는 [Visual Studio에서 새로운 C++ Linux 프로젝트 만들기](create-a-new-linux-project.md)에서 설명된 대로 C++ Linux 프로젝트를 구성하는 방법을 설명합니다. CMake Linux 프로젝트의 경우 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요. 
+이 토픽에서는 [Visual Studio에서 새로운 C++ Linux 프로젝트 만들기](create-a-new-linux-project.md)에서 설명된 대로 C++ Linux 프로젝트를 구성하는 방법을 설명합니다. CMake Linux 프로젝트의 경우 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.
 
-물리적 Linux 머신, 가상 머신 또는 [Linux용 Windows 하위 시스템](/windows/wsl/about)(WSL)을 대상으로 지정하도록 Linux 프로젝트를 구성할 수 있습니다. 
+물리적 Linux 머신, 가상 머신 또는 [Linux용 Windows 하위 시스템](/windows/wsl/about)(WSL)을 대상으로 지정하도록 Linux 프로젝트를 구성할 수 있습니다.
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 ![빌드 이벤트](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> 원격 시스템에서 헤더용 IntelliSense
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> 원격 시스템에서 헤더용 IntelliSense
 
 **연결 관리자**에서 새 연결을 추가하면 Visual Studio는 원격 시스템의 컴파일러용 포함 디렉터리를 자동으로 검색합니다. 그런 다음, Visual Studio는 해당 파일을 압축하여 로컬 Windows 컴퓨터의 디렉터리에 복사합니다. 그러면 Visual Studio 또는 CMake 프로젝트에서 해당 연결을 사용할 때마다 해당 디렉터리의 헤더가 IntelliSense를 제공하는 데 사용됩니다.
 

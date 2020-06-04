@@ -5,11 +5,11 @@ helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
 ms.openlocfilehash: f927d977d818bed28c5fd7392f7933cd1a63ced3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157749"
 ---
 # <a name="summary-of-constants"></a>상수 요약
 
@@ -32,7 +32,7 @@ ms.locfileid: "56150027"
 &nbsp;&nbsp;&nbsp;&nbsp;**E** *sign*<sub>opt</sub> *digit-sequence*
 
 *sign*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
+&nbsp;&nbsp;&nbsp;&nbsp; **+ -**
 
 *digit-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
@@ -82,7 +82,7 @@ ms.locfileid: "56150027"
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
 *character-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**'** *c-char-sequence* **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **'** *c-char-sequence* **'**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**L'** *c-char-sequence* **'**
 
 *integer-suffix*:<br/>
@@ -94,7 +94,7 @@ ms.locfileid: "56150027"
 &nbsp;&nbsp;&nbsp;&nbsp;*c-char-sequence* *c-char*
 
 *c-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;작은따옴표(**'**), 백슬래시(**\\**) 또는 줄 바꿈 문자 escape-sequence를 제외한 원본 문자 집합의 모든 멤버
+&nbsp;&nbsp;&nbsp;&nbsp;작은따옴표( **'** ), 백슬래시( **\\** ) 또는 줄 바꿈 문자 escape-sequence를 제외한 원본 문자 집합의 모든 멤버
 
 *escape-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*simple-escape-sequence*<br/>
@@ -102,18 +102,18 @@ ms.locfileid: "56150027"
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence*
 
 *simple-escape-sequence*: 다음 중 하나<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\a \b \f \n \r \t \v**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\' \\" \\\ \\?**
+&nbsp;&nbsp;&nbsp;&nbsp; **\a \b \f \n \r \t \v**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\' \\" \\\ \\?**
 
 *octal-escape-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\\** *octal-digit* *octal-digit* *octal-digit*
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit* *octal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\\** *octal-digit* *octal-digit* *octal-digit*
 
 *hexadecimal-escape-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\x** *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\x** *hexadecimal-digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-escape-sequence* *hexadecimal-digit*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [어휘 문법](../c-language/lexical-grammar.md)<br/>

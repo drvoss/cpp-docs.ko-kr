@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211512"
 ---
 # <a name="consumer-wizard-generated-methods"></a>소비자 마법사 생성 메서드
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-다음 예제에서는 동일한 명령을 반복해서 실행할 때 `OpenAll` 및 `CloseAll`을 호출할 수 있는 방법을 보여 줍니다. `CloseAll` 대신 `Close` 및 `ReleaseCommand`를 호출하는 변형을 보여 주는 [CCommand::Close](../../data/oledb/ccommand-close.md)의 코드 예제와 비교합니다.
+다음 예제에서는 동일한 명령을 반복해서 실행할 때 `OpenAll` 및 `CloseAll`을 호출할 수 있는 방법을 보여 줍니다. [ 대신 ](../../data/oledb/ccommand-close.md) 및 `Close`를 호출하는 변형을 보여 주는 `ReleaseCommand`CCommand::Close`CloseAll`의 코드 예제와 비교합니다.
 
 ```cpp
 int main(int argc, char* argv[])

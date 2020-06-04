@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214814"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "69514513"
 *expression*<br/>
 하나 이상의 C 언어 식입니다. 빈 인수 슬롯을 사용할 수 있습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-**Last_is** C++ 특성은 [last_is](/windows/win32/Midl/last-is) MIDL 특성과 동일한 기능을 포함 합니다.
+**Last_is** C++ 특성에는 [last_is](/windows/win32/Midl/last-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -49,7 +49,7 @@ ms.locfileid: "69514513"
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>

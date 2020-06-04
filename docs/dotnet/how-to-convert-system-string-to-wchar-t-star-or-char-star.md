@@ -1,5 +1,5 @@
 ---
-title: '방법: System:: string을 wchar_t * 또는 char * 변환합니다'
+title: '방법: System::String을 wchar_t* 또는 char*로 변환'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387502"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545044"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>방법: System:: string을 wchar_t * 또는 char * 변환합니다
+# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>방법: System::String을 wchar_t* 또는 char*로 변환
 
-사용할 수 있습니다 `PtrToStringChars` 변환할 Vcclr.h에서 <xref:System.String> 네이티브 `wchar_t *` 또는 `char *`합니다.  이 항상 CLR 문자열은 내부적으로 유니코드 있으므로 와이드 유니코드 문자열 포인터를 반환 합니다. 다음 예제에서와 같이 와이드 문자열에서 변환할 수 있습니다.
+Vcclr에서 `PtrToStringChars`를 사용 하 여 <xref:System.String>를 네이티브 `wchar_t *` 또는 `char *`로 변환할 수 있습니다.  CLR 문자열은 내부적으로 유니코드 이므로 항상 와이드 유니코드 문자열 포인터를 반환 합니다. 그런 다음, 다음 예제와 같이 와이드에서 변환할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-```
+```cpp
 // convert_string_to_wchar.cpp
 // compile with: /clr
 #include < stdio.h >
@@ -64,6 +64,6 @@ Hello
 Hello
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

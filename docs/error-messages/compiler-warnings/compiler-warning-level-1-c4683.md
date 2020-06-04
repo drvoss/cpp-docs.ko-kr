@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-ms.openlocfilehash: 264753ece6cbabded21df8e6b9dbb463f811e8a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86cf8f6d894d6efaa1b49977634956dc1979a98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375160"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175431"
 ---
 # <a name="compiler-warning-level-1-c4683"></a>컴파일러 경고(수준 1) C4683
 
-> '*함수*': 이벤트 소스에 'out'-여러 이벤트 처리기를 후크 하는 경우 주의 해야 합니다; 매개 변수
+> '*function*': 이벤트 소스에 ' out ' 매개 변수가 있습니다. 여러 이벤트 처리기를 후크 하는 경우 주의 해야 합니다.
 
 ## <a name="remarks"></a>설명
 
-둘 이상의 이벤트 싱크를 COM 이벤트 원본에 수신 하는 경우에 out 매개 변수 값을 무시할 수 있습니다.
+둘 이상의 이벤트 싱크가 COM 이벤트 소스를 수신 대기 하는 경우 out 매개 변수 값은 무시 될 수 있습니다.
 
-다음과 같은 상황에서 메모리 누수가 발생할 수 있는 고려해 야 합니다.
+메모리 누수는 다음과 같은 경우에 발생 합니다.
 
-1. 메서드는 내부적으로 할당 된 예를 들어 BSTR out 매개 변수가 하는 경우 *입니다.
+1. 메서드에 내부적으로 할당 되는 out 매개 변수가 있는 경우 (예: BSTR *)
 
-2. 이벤트 처리기를 여러 개 있으면 (멀티 캐스트 이벤트입니다).
+2. 이벤트에 두 개 이상의 처리기가 있는 경우 (는 멀티 캐스트 이벤트)입니다.
 
-Out 매개 변수를 둘 이상의 처리기에 의해 설정 되지만 호출 사이트에만 처리기가 반환 하는 마지막 것입니다는 누수에 대 한 이유가 있습니다.
+누수가 발생 하는 이유는 out 매개 변수가 둘 이상의 처리기에 의해 설정 되 고 마지막 처리기에 의해서만 호출 사이트로 반환 되기 때문입니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플 C4683 생성 및이 해결 하는 방법을 보여 줍니다.
+다음 샘플에서는 C4683를 생성 하 고 수정 하는 방법을 보여 줍니다.
 
 ```cpp
 // C4683.cpp

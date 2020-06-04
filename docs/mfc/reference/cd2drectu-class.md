@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369105"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 클래스
 
@@ -31,23 +31,23 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|오버로드됨. 생성 된 `CD2DRectU` 에서 개체 `D2D1_RECT_U` 개체입니다.|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|오버로드되었습니다. 개체에서 `D2D1_RECT_U` `CD2DRectU` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|반환 된 **부울** 식에 유효 하지 않은 데이터 (NULL)이 포함 되어 있는지 여부를 나타내는 값입니다.|
+|[CD2DRectU::이스널](#isnull)|식에 유효한 데이터(NULL)가 포함되어 있지 않은지 여부를 나타내는 **부울** 값을 반환합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|이름|Description|
+|속성|Description|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|변환 `CD2DRectU` 에 `CRect` 개체입니다.|
+|[CD2DRectU::연산자 CRect](#operator_crect)|개체로 `CD2DRectU` `CRect` 변환합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `D2D1_RECT_U`
 
@@ -57,7 +57,7 @@ class CD2DRectU : public D2D1_RECT_U;
 
 **헤더:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU
 
 CRect 개체에서 CD2DRectU 개체를 생성합니다.
 
@@ -79,41 +79,41 @@ CD2DRectU(
 소스 사각형
 
 *uLeft*<br/>
-원본 왼쪽된 좌표
+소스 왼쪽 좌표
 
-*uTop*<br/>
-원본 위쪽 좌표
+*유톱*<br/>
+소스 상단 좌표
 
 *uRight*<br/>
-원본 오른쪽 좌표
+소스 오른쪽 좌표
 
 *uBottom*<br/>
-원본 아래쪽 좌표입니다.
+소스 하단 좌표
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::이스널
 
-식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.
+식에 유효한 데이터(Null)가 포함되어 있지 않은지 여부를 나타내는 부울 값을 반환합니다.
 
 ```
 BOOL IsNull() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-사각형의 위쪽, 왼쪽, 아래쪽 및 오른쪽 값을 0으로 모두 같을 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
+사각형의 위쪽, 왼쪽, 아래쪽 및 오른쪽 값이 모두 0인 경우 TRUE입니다. 그렇지 않으면 거짓.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::연산자 CRect
 
-CD2DRectU CRect 개체로 변환합니다.
+CD2DRectU를 CRect 개체로 변환합니다.
 
 ```
 operator CRect();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 D2D 사각형의 현재 값입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스](../../mfc/reference/mfc-classes.md)

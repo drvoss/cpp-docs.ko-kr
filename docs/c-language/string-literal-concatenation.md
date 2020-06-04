@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157796"
 ---
 # <a name="string-literal-concatenation"></a>문자열 리터럴 연결
 
@@ -29,13 +29,13 @@ ken into two or more pieces."
 
 문자열 연결은 이전에 백슬래시를 사용한 모든 위치에 사용할 수 있습니다. 두 줄 이상의 문자열을 입력하려면 뒤에 줄 바꿈 문자를 추가하면 됩니다.
 
-문자열 리터럴 내에서 줄을 강제로 추가하려면 다음과 같이 줄을 나눌 문자열 지점에 줄 바꿈 이스케이프 시퀀스(**\n**)를 입력합니다.
+문자열 리터럴 내에서 줄을 강제로 추가하려면 다음과 같이 줄을 나눌 문자열 지점에 줄 바꿈 이스케이프 시퀀스( **\n**)를 입력합니다.
 
 ```
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-문자열은 소스 코드의 모든 열에서 시작할 수 있으며 긴 문자열은 다음 줄의 임의 열에서 계속될 수 있으므로 소스 코드를 읽기 쉽도록 문자열을 배치할 수 있습니다. 어떤 경우든 출력 시의 화면 표현에는 영향이 없습니다. 예:
+문자열은 소스 코드의 모든 열에서 시작할 수 있으며 긴 문자열은 다음 줄의 임의 열에서 계속될 수 있으므로 소스 코드를 읽기 쉽도록 문자열을 배치할 수 있습니다. 어떤 경우든 출력 시의 화면 표현에는 영향이 없습니다. 예를 들어:
 
 ```
 printf_s ( "This is the first half of the string, "
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 변환 6단계에서는 인접 문자열 리터럴 또는 인접 와이드 문자열 리터럴의 임의 시퀀스로 지정된 멀티바이트 문자 시퀀스가 단일 멀티바이트 문자 시퀀스로 연결됩니다. 따라서 실행 중에 문자열 리터럴을 수정할 수 있도록 프로그램을 설계하지 마십시오. ANSI C 표준은 문자열의 수정 결과가 정의되지 않도록 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C 문자열 리터럴](../c-language/c-string-literals.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 7a9559f1aac9f0bd26b35dd03729ab86ad695b04
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182773"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371758"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>C++ 데스크톱 개발에 Visual Studio IDE 사용
 
 Visual Studio IDE(통합 개발 환경)는 정적 분석 및 강력한 디버깅 도구를 사용하여 크고 작은 코드 프로젝트를 관리하고, 코드를 작성 및 리팩터링하고, 오류를 감지 및 수정하는 데 도움이 되는 기능 집합을 제공합니다. 이 문서 집합은 프로젝트를 관리하고 코드를 작성, 테스트 및 디버깅한 다음, 다른 컴퓨터에 배포하는 데 필요한 각 단계를 안내하도록 설계되었습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 아직 Visual Studio를 설치하지 않았다면, 지금이 적기입니다. 다운로드 링크와 빠른 연습은 [Visual Studio에서 C++ 지원 설치](../build/vscpp-step-0-installation.md)를 참조합니다. 일반적으로 Visual Studio 설치 방법 및 문제 해결 팁에 대한 자세한 내용은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)를 참조합니다. 기본적으로 C++ 컴파일러, 도구 및 라이브러리가 설치되어 있지 않으므로 Visual Studio를 설치할 때 이들을 포함하려면 **C++를 사용한 데스크톱 개발** 워크로드를 선택했는지 확인합니다.
 
@@ -30,7 +30,7 @@ Visual Studio 2019를 가져오려면 [Visual Studio 다운로드](https://www.v
 
 **Visual Studio 2017 설치**
 
-Visual Studio 2017을 가져오려면 [Visual Studio의 이전 버전 다운로드](https://www.visualstudio.com/vs/older-downloads/)에서 다운로드하면 됩니다. Visual Studio를 설치할 때 기본적으로 설치되지 않으므로, C++ 개발 도구를 포함해야 합니다. Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)를 참조하고 페이지의 버전 선택기를 **Visual Studio 2017**로 설정합니다.
+Visual Studio 2017을 가져오려면 [Visual Studio의 이전 버전 다운로드](https://www.visualstudio.com/vs/older-downloads/)에서 다운로드하면 됩니다. Visual Studio를 설치할 때 기본적으로 설치되지 않으므로, C++ 개발 도구를 포함해야 합니다. Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)를 참조하세요. Visual Studio 2017에 대한 지침을 보려면 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017로 설정합니다. 페이지의 목조 테이블 맨 위에 있습니다.
 
 **Visual Studio 2015 설치**
 

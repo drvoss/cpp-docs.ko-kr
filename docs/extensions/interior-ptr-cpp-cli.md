@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515698"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172154"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr(C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr(C++/CLI)
 
 *내부 포인터*는 개체 자체가 아닌 참조 형식 내부에 대한 포인터를 선언합니다. 내부 포인터는 참조 핸들, 값 형식, boxed 형식 핸들, 관리되는 형식의 멤버 또는 관리되는 배열의 요소를 가리킬 수 있습니다.
 
@@ -56,7 +56,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 *initializer*<br/>
 참조 형식의 멤버, 관리되는 배열의 요소 또는 네이티브 포인터에 할당할 수 있는 다른 모든 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 네이티브 포인터는 개체의 인스턴스를 이동시키는 가비지 수집기로부터 도출되는 관리되는 힙에서 위치를 변경하는 항목을 추적할 수 없습니다. 포인터가 인스턴스를 제대로 참조하려면 런타임은 포인터를 새로 위치가 지정된 개체로 업데이트해야 합니다.
 
@@ -74,7 +74,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 내부 포인터에 대한 자세한 내용은 다음을 참조하십시오.
 
-- [방법: 내부 포인터 및 관리형 배열의 선언 및 사용(C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [방법: 내부 포인터 및 관리되는 배열 선언 및 사용(C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
 - [방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
@@ -86,7 +86,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 샘플에서는 참조 형식으로 내부 포인터를 선언하고 사용하는 방법을 보여 줍니다.
 

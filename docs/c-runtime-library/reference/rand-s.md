@@ -1,8 +1,9 @@
 ---
 title: rand_s
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand_s
+- _o_rand_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949652"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919535"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -52,17 +54,19 @@ errno_t rand_s(unsigned int* randomValue);
 *randomValue*<br/>
 생성 된 값을 보유할 정수에 대 한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 정상적으로 실행되는 경우 0이고 그렇지 않으면 오류 코드입니다. 입력 포인터 _randomValue_ 가 null 포인터인 경우이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우이 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. 다른 이유로 인해 함수가 실패 하면 *_randomValue_ 는 0으로 설정 됩니다.
 
 ## <a name="remarks"></a>설명
 
-**Rand_s** 함수는 입력 포인터에 0 ~ **UINT_MAX** 범위의 의사 난수 정수를 씁니다. **Rand_s** 함수는 운영 체제를 사용 하 여 암호 보안 난수를 생성 합니다. [Srand](srand.md) 함수에 의해 생성 된 초기값은 사용 하지 않으며 [rand](rand.md)에서 사용 하는 난수 시퀀스에도 영향을 주지 않습니다.
+**Rand_s** 함수는 입력 포인터에 **UINT_MAX** 범위 0의 의사 난수 정수를 씁니다. **Rand_s** 함수는 운영 체제를 사용 하 여 암호 보안 난수를 생성 합니다. [Srand](srand.md) 함수에 의해 생성 된 초기값은 사용 하지 않으며 [rand](rand.md)에서 사용 하는 난수 시퀀스에도 영향을 주지 않습니다.
 
-**Rand_s** 함수를 사용 하려면 다음 예제와 같이 선언 되는 함수에 대 한 포함 문 이전에 상수 **_CRT_RAND_S** 를 정의 해야 합니다.
+**Rand_s** 함수를 사용 하려면 다음 예제와 같이 함수를 선언 하기 위한 포함 문 앞에 상수 **_CRT_RAND_S** 정의 해야 합니다.
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
@@ -153,7 +157,7 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

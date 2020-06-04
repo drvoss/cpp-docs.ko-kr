@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2aa922ebeadb374a7eac73a0f452376472b00984
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206030"
 ---
 # <a name="compiler-error-c2383"></a>컴파일러 오류 C2383
 
-'*기호*':이 기호에 기본 인수를 사용할 수 없습니다
+'*symbol*':이 기호에는 기본 인수를 사용할 수 없습니다.
 
-C++ 컴파일러 함수에 대 한 포인터에서 기본 인수를 허용 하지 않습니다.
+컴파일러 C++ 는 함수에 대 한 포인터에 기본 인수를 허용 하지 않습니다.
 
-이 코드는 Microsoft에서 허용 된 C++ Visual Studio 2005 이전 버전의 컴파일러 하지만 이제는 오류를 제공 합니다. 시각적 개체의 모든 버전에서 작동 하는 코드에 대 한 C++을 함수에 포인터 인수를 기본 값을 할당 하지 않습니다.
+이 코드는 Visual Studio 2005 이전 C++ 버전의 Microsoft 컴파일러에서 허용 되었지만 이제 오류를 제공 합니다. 모든 버전의 Visual C++에서 작동 하는 코드의 경우 함수 포인터 인수에 기본값을 할당 하지 마십시오.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 C2383를 생성 하 고 가능한 솔루션을 보여 줍니다.
+다음 예제에서는 C2383를 생성 하 고 가능한 해결 방법을 보여 줍니다.
 
 ```cpp
 // C2383.cpp

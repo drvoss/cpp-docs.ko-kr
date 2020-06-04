@@ -1,19 +1,19 @@
 ---
-title: 컴파일러 경고 (수준 1) C4677
+title: 컴파일러 경고(수준 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5b31fd22c917b2c0f505ca189425f8160f62f748
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051378"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175547"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>컴파일러 경고 (수준 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>컴파일러 경고(수준 1) C4677
 
 ' function ': 전용이 아닌 멤버의 시그니처에 어셈블리 전용 형식 ' private_type '이 (가) 있습니다.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - structure members, padding and alignment
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
 ms.openlocfilehash: 0f9c70ed074a11800b707aa48ec8e0e2f8b4f999
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325366"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>구조체 멤버 채우기 및 맞춤
 
@@ -23,6 +23,6 @@ ms.locfileid: "56148116"
 
 정수 계열 형식의 크기가 같으며 다음 비트 필드가 비트 필드의 일반 할당 요구 사항에 따라 적용되는 경계를 벗어나지 않고 현재 할당 단위에 맞는 경우 인접 비트 필드는 동일한 1, 2 또는 4바이트 할당 단위로 압축됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [구조체, 공용 구조체, 열거형 및 비트 필드](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388958"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209316"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 
-행 집합을 열기 전에 알려야 공급자 책갈피를 사용 하려고 합니다. 이 위해 설정 된 `DBPROP_BOOKMARKS` 속성을 **true** 속성을 설정 합니다. 공급자 특수 BOOKMARK_ENTRY 매크로 사용 해야 하므로 열 0으로 책갈피를 검색 및 `CBookmark` 정적 접근자를 사용 하는 경우 클래스입니다. `CBookmark` 책갈피 버퍼의 길이 (바이트)를 인수가 있는 템플릿 클래스가입니다. 책갈피에 필요한 버퍼의 길이 공급자에 따라 달라 집니다. 다음 예제에서와 같이 ODBC OLE DB 공급자를 사용 하는 경우 버퍼에는 4 바이트 여야 합니다.
+행 집합을 열기 전에 책갈피를 사용 하려는 공급자에 게 지시 해야 합니다. 이렇게 하려면 속성 집합에서 `DBPROP_BOOKMARKS` 속성을 **true** 로 설정 합니다. 공급자는 책갈피를 열 0으로 검색 하므로 정적 접근자를 사용 하는 경우 특수 매크로 BOOKMARK_ENTRY 및 `CBookmark` 클래스를 사용 해야 합니다. `CBookmark`는 인수가 책갈피 버퍼의 길이 (바이트) 인 템플릿 클래스입니다. 책갈피에 필요한 버퍼의 길이는 공급자에 따라 달라 집니다. 다음 예제와 같이 ODBC OLE DB 공급자를 사용 하는 경우 버퍼는 4 바이트 여야 합니다.
 
 ```cpp
 class CProducts
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-그런 후 다음 코드에서 사용됩니다.
+그러면 아래 코드처럼 사용합니다.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-사용 하는 경우 `CDynamicAccessor`, 버퍼 런타임에 동적으로 설정 합니다. 특수 버전을 사용할 수 있습니다이 경우 `CBookmark` 버퍼 길이 지정 하지 않습니다. 함수를 사용 하 여 `GetBookmark` 이 코드 샘플에 표시 된 대로 현재 레코드에서 책갈피를 검색 하려면:
+`CDynamicAccessor`사용 하는 경우 버퍼는 런타임에 동적으로 설정 됩니다. 이 경우에는 버퍼 길이를 지정 하지 않는 `CBookmark`의 특수 버전을 사용할 수 있습니다. 다음 코드 샘플과 같이 함수 `GetBookmark`를 사용 하 여 현재 레코드에서 책갈피를 검색 합니다.
 
 ```cpp
 CTable<CDynamicAccessor> product;
@@ -55,8 +55,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-공급자의 책갈피 지원에 대 한 자세한 내용은 [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)합니다.
+공급자에서 책갈피를 지 원하는 방법에 대 한 자세한 내용은 [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [접근자 사용](../../data/oledb/using-accessors.md)

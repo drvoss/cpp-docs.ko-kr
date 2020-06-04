@@ -1,6 +1,6 @@
 ---
 title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -8,6 +8,12 @@ api_name:
 - _wcslwr_s
 - _strlwr_s
 - _wcslwr_s_l
+- _o__mbslwr_s
+- _o__mbslwr_s_l
+- _o__strlwr_s
+- _o__strlwr_s_l
+- _o__wcslwr_s
+- _o__wcslwr_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625797"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919949"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -138,24 +145,24 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*str*<br/>
+*문자열*<br/>
 소문자로 변환할 Null 종료 문자열입니다.
 
-*numberOfElements*<br/>
+*이면 numberofelements 이벤트가*<br/>
 버퍼의 크기입니다.
 
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 정상적으로 실행되는 경우 0이고 오류가 발생하는 경우 0이 아닌 오류 코드입니다.
 
 이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. *Str* 이 올바른 null 종료 문자열이 아니면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 함수는 **EINVAL** 를 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. *Numberofelements* 가 문자열의 길이 보다 작은 경우에도 함수는 **EINVAL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**_Strlwr_s** 함수는 제자리에서 *str* 의 대문자를 소문자로 변환 합니다. **_mbslwr_s** 는 **_strlwr_s**의 멀티 바이트 문자 버전입니다. **_wcslwr_s** 는 **_strlwr_s**의 와이드 문자 버전입니다.
+**_Strlwr_s** 함수는 현재 위치의 모든 *대문자를 소문자로* 변환 합니다. **_mbslwr_s** 은 **_strlwr_s**의 멀티 바이트 문자 버전입니다. **_wcslwr_s** 은 **_strlwr_s**의 와이드 문자 버전입니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -163,7 +170,9 @@ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 �
 
 이러한 함수의 디버그 라이브러리 버전은 먼저 0xFE를 사용 하 여 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)를 사용하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -221,6 +230,6 @@ Upper: THE STRING TO END ALL STRINGS!
 ## <a name="see-also"></a>참조
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[로캘](../../c-runtime-library/locale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>
