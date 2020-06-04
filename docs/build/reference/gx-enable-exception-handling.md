@@ -1,4 +1,4 @@
----
+﻿---
 title: /GX(예외 처리 사용)
 ms.date: 11/19/2019
 f1_keywords:

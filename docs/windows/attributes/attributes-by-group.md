@@ -1,4 +1,4 @@
----
+﻿---
 title: 그룹별 특성
 ms.custom: index-page
 ms.date: 10/02/2018

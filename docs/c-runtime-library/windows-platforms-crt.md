@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows 플랫폼(CRT)
 ms.date: 02/02/2018
 helpviewer_keywords:

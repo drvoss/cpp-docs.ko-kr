@@ -1,4 +1,4 @@
----
+﻿---
 title: /Gy(함수 수준 링크 사용)
 ms.date: 11/04/2016
 f1_keywords:

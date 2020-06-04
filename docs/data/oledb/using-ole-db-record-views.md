@@ -1,4 +1,4 @@
----
+﻿---
 title: OLE DB 레코드 뷰 사용
 ms.date: 10/24/2018
 helpviewer_keywords:

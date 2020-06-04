@@ -19,7 +19,7 @@ C++ 표준 라이브러리를 비롯하여 Microsoft C++와 함께 제공되는 
 
 C++ 표준 라이브러리의 일부 메서드는 버퍼 오버런이나 다른 코드 오류를 발생시킬 수 있기 때문에 잠재적으로 안전하지 않은 것으로 식별되었습니다. 이러한 메서드는 사용하지 않는 것이 좋으며, 이러한 메서드를 대체하기 위해 보다 안전한 새 메서드를 만들었습니다. 이러한 새 메서드는 모두 `_s`로 끝납니다.
 
-반복기와 알고리즘도 보다 안전하게 만들기 위해 여러 가지 기능이 향상되었습니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md), [디버그 반복기 지원](../standard-library/debug-iterator-support.md) 및 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 참조하세요.
+반복기와 알고리즘도 보다 안전하게 만들기 위해 여러가지 기능이 향상되었습니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md), [디버그 반복기 지원](../standard-library/debug-iterator-support.md) 및 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 

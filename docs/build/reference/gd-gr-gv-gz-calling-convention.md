@@ -1,4 +1,4 @@
----
+﻿---
 title: /Gd, /Gr, /Gv, /Gz(호출 규칙)
 ms.date: 09/05/2018
 f1_keywords:
@@ -52,6 +52,7 @@ ms.locfileid: "82825528"
 
 **/Gd**, **/Gr**, **/Gv**와 **/Gz**는 [/clr:safe](clr-common-language-runtime-compilation.md) 또는 **/clr:pure**와 호환되지 않습니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않으며 Visual Studio 2017 이상에서는 지원되지 않습니다.
 
+
 > [!NOTE]
 > 기본적으로 x86 프로세서에서 C++ 멤버 함수는 [__thiscall](../../cpp/thiscall.md)을 사용합니다.
 
@@ -59,7 +60,8 @@ ms.locfileid: "82825528"
 
 이러한 컴파일러 옵션은 C++ 메서드 및 함수의 이름 데코레이션에는 영향을 주지 않습니다. `extern "C"`로 선언되지 않은 한 C++ 메서드와 함수는 다른 이름 데코레이션 구성표를 사용합니다. 자세한 내용은 [데코레이트된 이름](decorated-names.md)을 참조합니다.
 
-호출 규칙에 대한 자세한 내용은 [호출 규칙](../../cpp/calling-conventions.md)을 참조합니다.
+
+호출 규칙에 대한 자세한 내용은  [호출 규칙](../../cpp/calling-conventions.md)을 참조합니다.
 
 ## <a name="__cdecl-specifics"></a>__cdecl 특성
 
@@ -69,12 +71,15 @@ C의 경우 `__cdecl` 명명 규칙은 앞에 밑줄 (`_`)이 있는 함수 이�
 
 ## <a name="__fastcall-specifics"></a>__fastcall 특성
 
-`__fastcall`  함수의 인수 중 일부는 레지스터(x86 프로세서, ECX 및 EDX의 경우)에 전달되고 나머지는 오른쪽에서 왼쪽으로 스택에 푸시됩니다. 호출된 루틴은 반환하기 전에 스택에서 이러한 인수를 팝합니다. 일반적으로 **/Gr**은 실행 시간을 줄입니다.
+
+`__fastcall` 함수의 인수 중 일부는 레지스터(x86 프로세서, ECX 및 EDX의 경우)에 전달되고 나머지는 오른쪽에서 왼쪽으로 스택에 푸시됩니다. 호출된 루틴은 반환하기 전에 스택에서 이러한 인수를 팝합니다. 일반적으로 **/Gr**은 실행 시간을 줄입니다.
+
 
 > [!NOTE]
 > 인라인 어셈블리 언어로 작성된 함수에 대해 `__fastcall` 호출 규칙을 사용하는 것을 주의해야 합니다. 레지스터 사용이 컴파일러의 사용과 충돌할 수 있습니다.
 
 C의 경우 명명 `__fastcall` 규칙은 앞에 at 기호 (**\@**) 뒤에 함수 인수의 크기 (바이트)가 오는 함수 이름을 사용 합니다. 대/소문자 변환은 수행되지 않습니다. 컴파일러는 이 템플릿을 명명 규칙에 사용합니다.
+
 
 `@function_name@number`
 
@@ -86,6 +91,7 @@ C의 경우 명명 `__fastcall` 규칙은 앞에 at 기호 (**\@**) 뒤에 함�
 
 C의 경우 명명 `__stdcall` 규칙은 앞에 밑줄 (**\_**)이 오고 그 뒤에 () 기호 ()와 함수의**\@** 인수 크기 (바이트)를 차례로 사용 합니다. 대/소문자 변환은 수행되지 않습니다. 컴파일러는 이 템플릿을 명명 규칙에 사용합니다.
 
+
 `_functionname@number`
 
 ## <a name="__vectorcall-specifics"></a>__vectorcall 특성
@@ -94,6 +100,7 @@ C의 경우 명명 `__stdcall` 규칙은 앞에 밑줄 (**\_**)이 오고 그 �
 
 C의 경우 명명 `__vectorcall` 규칙은 함수 이름 뒤에 두 개의 at 기호 ()**\@** 를 사용 하 고 함수 인수의 크기 (바이트)를 사용 합니다. 대/소문자 변환은 수행되지 않습니다. 컴파일러는 이 템플릿을 명명 규칙에 사용합니다.
 
+
 `functionname@@number`
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
@@ -101,6 +108,7 @@ C의 경우 명명 `__vectorcall` 규칙은 함수 이름 뒤에 두 개의 at �
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
 
 1. **C/c + +** > **고급** 속성 페이지를 선택 합니다.
+
 
 1. **호출 규칙** 속성을 수정합니다.
 

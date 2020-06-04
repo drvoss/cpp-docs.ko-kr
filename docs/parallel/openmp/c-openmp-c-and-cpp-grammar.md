@@ -1,4 +1,4 @@
----
+﻿---
 title: C. OpenMP C 및 C++ 문법
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
@@ -229,7 +229,7 @@ term<sub>opt</sub> 구문 표현은 해당 용어가 대체 내의 선택사항�
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *identifier*
 
-**/\*C++의 경우\*/**
+**/\* C++의 경우 \*/**
 
 *variable-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>

@@ -1,4 +1,4 @@
----
+﻿---
 title: C 및 Wind32를 사용한 다중 스레딩
 ms.date: 08/09/2019
 helpviewer_keywords:

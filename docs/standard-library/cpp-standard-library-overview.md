@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ 표준 라이브러리 개요
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "68452445"
 ---
 # <a name="c-standard-library-overview"></a>C++ 표준 라이브러리 개요
 
-모든 C++ 라이브러리 엔터티가 하나 이상의 표준 헤더에서 선언되거나 정의됩니다. 이 구현에는 C++ 표준에서는 필요 없는 두 개의 추가 헤더, 즉 \<hash_map> 및 \<hash_set>가 포함됩니다. 이 구현에서 지원되는 헤더의 전체 목록을 보려면 [C++ 표준 라이브러리 헤더 파일](../standard-library/cpp-standard-library-header-files.md)을 참조하세요.
+모든 C++ 라이브러리 엔터티가 하나 이상의 표준 헤더에서 선언되거나 정의됩니다. 이 구현에는 C++ 표준에서는 필요 없는 두 개의 추가 헤더, 즉 <hash_map> 및 <hash_set>가 포함됩니다. 이 구현에서 지원되는 헤더의 전체 목록을 보려면 [C++ 표준 라이브러리 헤더 파일](../standard-library/cpp-standard-library-header-files.md)을 참조하세요.
 
 C++ 라이브러리의 독립형 구현에서는 이러한 헤더의 하위 집합만을 제공합니다.
 
@@ -28,7 +28,7 @@ C++ 라이브러리의 독립형 구현에서는 이러한 헤더의 하위 집�
 
 C++ 라이브러리 헤더에는 광범위한 두 개의 하위 영역이 있습니다.
 
-- [iostreams](../standard-library/iostreams-conventions.md) 규칙입니다.
+- [iostreams](../standard-library/iostreams-conventions.md) 규칙.
 
 - [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md) 규칙입니다.
 

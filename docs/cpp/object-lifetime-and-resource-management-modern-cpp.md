@@ -1,4 +1,4 @@
----
+﻿---
 title: 개체 수명 및 리소스 관리(RAII)
 description: 리소스 누수를 방지 하려면 최신 C++ RAII의 원칙을 따릅니다.
 ms.date: 11/19/2019

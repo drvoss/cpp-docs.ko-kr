@@ -1,4 +1,4 @@
----
+﻿---
 title: 컨트롤 전송
 ms.date: 11/04/2016
 helpviewer_keywords:

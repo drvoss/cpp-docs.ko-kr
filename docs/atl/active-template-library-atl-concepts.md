@@ -1,4 +1,4 @@
----
+﻿---
 title: ATL(액티브 템플릿 라이브러리) 개념
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -35,7 +35,7 @@ ATL에서의 컬렉션 및 열거자 구현과 만들기에 대해 설명합니�
 복합 컨트롤을 만들기 위한 단계별 지침을 제공합니다. 복합 컨트롤은 다른 ActiveX 컨트롤 또는 Windows 컨트롤을 포함할 수 있는 ActiveX 컨트롤의 형식입니다.
 
 [ATL 컨트롤 포함 FAQ](../atl/atl-control-containment-faq.md)<br/>
-'기본 사항' in current translation is more common/proper though.
+ATL 컨트롤을 통한 호스팅과 관련된 기본사항을 설명합니다.
 
 [ATL COM 속성 페이지](../atl/atl-com-property-pages.md)<br/>
 COM 속성 페이지의 지정 및 구현 방법을 보여 줍니다.

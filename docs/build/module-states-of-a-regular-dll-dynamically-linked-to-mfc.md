@@ -1,4 +1,4 @@
----
+﻿---
 title: 동적으로 MFC에 연결된 기본 MFC DLL의 모듈 상태
 ms.date: 11/04/2016
 helpviewer_keywords:

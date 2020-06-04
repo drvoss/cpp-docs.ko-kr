@@ -1,4 +1,4 @@
----
+﻿---
 title: 문서 템플릿 및 문서-뷰 만들기 프로세스
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -20,7 +20,7 @@ ms.locfileid: "62389611"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>문서 템플릿 및 문서/뷰 만들기 프로세스
 
-연관된 뷰, 프레임워크 창이 있는 문서를 만드는 복잡한 프로세스를 관리하기 위해 프레임워크는 SDI 응용 프로그램을 위한  [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)과 MDI 응용 프로그램을 위한 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)이라는 두 가지 문서 템플릿 클래스를 사용합니다. `CSingleDocTemplate`는 한 번에 한 가지 형식의 한 문서를 만들고 저장할 수 있습니다. `CMultiDocTemplate`은 한가지 형식의 열려 있는 많은 문서 목록을 유지합니다.
+연관된 뷰, 프레임워크 창이 있는 문서를 만드는 복잡한 프로세스를 관리하기 위해 프레임워크는 SDI 응용 프로그램을 위한 [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)과 MDI 응용 프로그램을 위한 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)이라는 두 가지 문서 템플릿 클래스를 사용합니다. `CSingleDocTemplate`는 한 번에 한 가지 형식의 한 문서를 만들고 저장할 수 있습니다. `CMultiDocTemplate`은 한가지 형식의 열려 있는 많은 문서 목록을 유지합니다.
 
 일부 응용 프로그램은 여러 문서 형식을 지원합니다. 예를 들어, 응용 프로그램은 텍스트 문서 및 그래픽 문서를 지원할 수 있습니다. 이러한 응용 프로그램에서 사용자가 파일 메뉴에서 새로 만들기 명령을 선택하면 대화 상자에는 열 수 있는 새 문서 형식 목록이 표시됩니다. 지원되는 각 문서 형식에 대해 응용 프로그램은 고유한 문서 템플릿 개체를 사용합니다. 다음 그림은 두 가지 문서 형식을 지원하고 여러 열린 문서를 보여주는 MDI 응용 프로그램의 구성을 보여줍니다.
 

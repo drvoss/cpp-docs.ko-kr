@@ -1,4 +1,4 @@
----
+﻿---
 title: /Og(전역 최적화)
 ms.date: 09/22/2017
 f1_keywords:
@@ -22,7 +22,7 @@ ms.locfileid: "62320294"
 ---
 # <a name="og-global-optimizations"></a>/Og(전역 최적화)
 
-더 이상 사용되지 않습니다. 로컬 및 전역 최적화, 자동 레지스터 할당 및 루프 최적화를 제공합니다. [/o1 (크기 최소화)](o1-o2-minimize-size-maximize-speed.md) 나 [/o2 (속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 중 하나를 사용하는 것이 좋습니다.
+더 이상 사용되지 않습니다. 로컬 및 전역 최적화, 자동 레지스터 할당 및 루프 최적화를 제공합니다. [/O1(크기 최소화)](o1-o2-minimize-size-maximize-speed.md)나 [/O2(속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 중 하나를 사용하는 것이 좋습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ ms.locfileid: "62320294"
 
 ## <a name="remarks"></a>설명
 
-**/Og** 는 더 이상 사용되지 않습니다. 이제 이러한 최적화는 기본적으로 적용됩니다. 최적화에 대한 자세한 내용은 [/o1, / o2 (크기 최소화, 속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 및 [/Ox (대부분의 속도 최적화 사용)](ox-full-optimization.md)를 참조합니다.
+**/Og**는 더 이상 사용되지 않습니다. 이제 이러한 최적화는 기본적으로 적용됩니다. 최적화에 대한 자세한 내용은 [/O1, /O2 (크기 최소화, 속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 및 [/Ox(대부분의 속도 최적화 사용)](ox-full-optimization.md)를 참조합니다.
 
 **/Og**에서는 다음 최적화를 사용할 수 있습니다.
 

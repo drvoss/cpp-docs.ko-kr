@@ -25,7 +25,8 @@ ATL은 개체에 대한 기본 클래스 팩터리 및 집계 모델을 정의�
 
 - [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) 클래스 팩터리를 [CComClassFactory](../atl/reference/ccomclassfactory-class.md)가 되도록 선언합니다.
 
-- [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) 개체를 집계될 수 있도록 선언합니다.
+- [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) 개체를 집계될 수 있도록 선언 합니다.
+
 
 클래스 정의에서 다른 매크로를 지정하여 이러한 기본값 중 하나를 재정의할 수 있습니다. 예를 들어 `CComClassFactory` 대신 [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)를 사용하려면 [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) 매크로를 지정합니다.
 

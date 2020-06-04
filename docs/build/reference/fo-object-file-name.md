@@ -1,4 +1,4 @@
----
+﻿---
 title: /Fo(개체 파일 이름)
 description: Visual Studio의 Microsoft C++ /Fo(개체 파일 이름) 컴파일러 옵션에 대한 참조 가이드입니다.
 ms.date: 04/20/2020

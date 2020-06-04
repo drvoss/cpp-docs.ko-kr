@@ -1,4 +1,4 @@
----
+﻿---
 title: allocator_base 클래스
 ms.date: 11/04/2016
 f1_keywords:
@@ -154,6 +154,7 @@ const_pointer address(const_reference val);
 ### <a name="parameters"></a>매개 변수
 
 *발*\
+
 주소를 검색하는 개체의 const 또는 nonconst 값입니다.
 
 ### <a name="return-value"></a>Return Value

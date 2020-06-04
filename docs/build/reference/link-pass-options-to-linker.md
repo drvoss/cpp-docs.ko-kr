@@ -1,4 +1,4 @@
----
+﻿---
 title: /link(옵션을 링커로 전달)
 ms.date: 03/25/2019
 f1_keywords:
@@ -33,7 +33,8 @@ ms.locfileid: "67155776"
 
 ## <a name="remarks"></a>설명
 
-**/link** 옵션과 및 링커 옵션은 반드시 어떤 파일 이름과 CL 옵션 뒤에 있어야 합니다. 사이 공백을 않습니다 **/l i n** 및 링커 옵션입니다. 자세한 내용은 [MSVC 링커 참조](linking.md)를 살펴봅니다.
+**/link** 옵션과 및 링커 옵션은 반드시 어떤 파일 이름과 CL 옵션 뒤에 있어야 합니다. **/link**와 `linker-options` 사이에는 공백이 있어야 합니다. 자세한 내용은 [MSVC 링커 참조](linking.md)를 살펴봅니다.
+
 
 ## <a name="example"></a>예제
 

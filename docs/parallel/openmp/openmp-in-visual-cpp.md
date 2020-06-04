@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual C++의 OpenMP
 ms.date: 03/20/2019
 helpviewer_keywords:
@@ -31,4 +31,5 @@ OpenMP 아키텍처 심사 위원회에서 버전 2.0 사양에 설명된 대로
 컴파일러가 `#pragma omp`를 처리 하도록 합니다.
 
 [미리 정의된 매크로](../../preprocessor/predefined-macros.md)<br/>
+
 미리 정의된 ANSI C 및 Microsoft C++ 구현 매크로의 이름을 지정합니다. _OPENMP 매크로를 참조하세요.

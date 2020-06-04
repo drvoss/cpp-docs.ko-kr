@@ -1,4 +1,4 @@
----
+﻿---
 title: 컨트롤 추가(ATL 자습서, 2부)
 ms.custom: get-started-article
 ms.date: 08/19/2019

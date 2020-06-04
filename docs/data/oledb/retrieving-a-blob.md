@@ -1,4 +1,4 @@
----
+﻿---
 title: BLOB 검색
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -31,7 +31,7 @@ END_COLUMN_MAP()
 };
 ```
 
-그런 후 다음 코드에서 사용됩니다.
+그런 다음 다음 코드에 의해 사용합니다:
 
 ```cpp
 CTable<CAccessor<CCategories>> categories;

@@ -1,4 +1,4 @@
----
+﻿---
 title: '연습: 자체 동적 연결 라이브러리 만들기 및 사용(C++)'
 description: C++를 사용하여 Visual Studio에서 Windows DLL(동적 연결 라이브러리)을 만듭니다.
 ms.custom: conceptual

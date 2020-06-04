@@ -1,4 +1,4 @@
----
+﻿---
 title: OpenMP 라이브러리 참조
 ms.date: 12/02/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc

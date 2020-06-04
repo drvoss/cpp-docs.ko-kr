@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC 애플리케이션 마법사
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,6 +20,7 @@ MFC 응용 프로그램 마법사는 컴파일할 때 Windows 실행 (exe) 응�
 
 > [!NOTE]
 > 선택한 옵션에 따라 마법사는 프로젝트에서 추가 파일을 만듭니다. 예를 들어 [고급 기능](../../mfc/reference/advanced-features-mfc-application-wizard.md) 페이지에서 컨텍스트 **구분 도움말을** 선택하면 마법사에서 프로젝트의 도움말 파일을 컴파일하는 데 필요한 파일을 만듭니다. 마법사가 만드는 파일에 대한 자세한 내용은 [Visual Studio C++ 프로젝트에 대해 만든 파일 형식을](../../build/reference/file-types-created-for-visual-cpp-projects.md)참조하고 프로젝트에서 Readme.txt 파일을 참조하십시오.
+
 
 ## <a name="overview"></a>개요
 
@@ -60,6 +61,8 @@ MFC 응용 프로그램 마법사는 컴파일할 때 Windows 실행 (exe) 응�
   - 이 프로젝트는 ActiveX 컨트롤을 지원합니다. 자세한 내용은 [ActiveX 컨트롤 만들기에 대한 작업 시퀀스를](../../mfc/sequence-of-operations-for-creating-activex-controls.md)참조하십시오.
 
   - 이 프로젝트는 [자동화,](../../mfc/automation.md) [MAPI,](../../mfc/mapi-support-in-mfc.md)Windows 소켓 또는 활성 [접근성에](../../mfc/windows-sockets-in-mfc.md)대한 지원을 제공하지 않습니다.
+   - 프로젝트에서 [Automation](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows 소켓](../../mfc/windows-sockets-in-mfc.md) 또는 Active Accessibility에 대한 지원은 없습니다.
+
 
   - 이 프로젝트는 **탐색기** 도킹 창, **출력** 도킹 창 및 **속성** 도킹 창을 지원합니다.
 
@@ -75,9 +78,12 @@ MFC 응용 프로그램 마법사는 컴파일할 때 Windows 실행 (exe) 응�
 
   - 프로젝트의 자식 프레임 클래스는 [CMDIChildWndEx 클래스에서](../../mfc/reference/cmdichildwndex-class.md)파생됩니다.
 
+   - 프로젝트 자식 프레임 클래스는 [CMDIChildWndEx 클래스](../../mfc/reference/cmdichildwndex-class.md)에서 파생됩니다.
+
 이러한 기본 설정을 변경하려면 마법사의 왼쪽 열에 있는 적절한 탭 제목을 클릭하고 나타나는 페이지에서 변경합니다.
 
 MFC 응용 프로그램 프로젝트를 만든 후 Visual C++ [코드 마법사를](../../ide/adding-functionality-with-code-wizards-cpp.md)사용하여 프로젝트에 개체 또는 컨트롤을 추가할 수 있습니다.
+
 
 ## <a name="see-also"></a>참고 항목
 

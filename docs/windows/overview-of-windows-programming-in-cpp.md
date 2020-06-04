@@ -1,4 +1,4 @@
----
+﻿---
 title: C++의 Windows 프로그래밍 개요
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
@@ -19,10 +19,9 @@ C++로 만들 수 있는 몇 가지 광범위한 Windows 응용 프로그램 범
 
 C++ 콘솔 응용 프로그램은 콘솔 창의 명령줄에서 실행되며 텍스트 출력만 표시할 수 있습니다. 자세한 내용은 [C++ 콘솔 앱 프로젝트 만들기를](../get-started/tutorial-console-cpp.md)참조하십시오.
 
-## <a name="native-desktop-client-applications"></a>네이티브 데스크톱 클라이언트 응용 프로그램
+## <a name="native-desktop-CLIent-applications"></a>네이티브 데스크톱 클라이언트 응용 프로그램
 
 *네이티브 데스크톱 클라이언트 응용 프로그램은* 원래 네이티브 Windows C API [또는 COM(구성 요소 개체 모델) API를](/windows/win32/apiindex/windows-api-list) 사용하여 운영 체제에 액세스하는 C 또는 C++ 창응용 프로그램입니다. 이러한 API는 대부분 C로 작성됩니다. 네이티브 데스크톱 앱을 만드는 방법은 운영 체제 이벤트를 처리하는 C 스타일 메시지 루프를 사용하여 Win32 API를 사용하여 직접 프로그래밍할 수 있습니다. 또는 Win32를 래핑하는 가볍게 개체 지향 C++ 라이브러리인 *Microsoft 파운데이션* 클래스(MFC)를 사용하여 프로그래밍할 수 있습니다. 두 방법 모두 유니버설 Windows 플랫폼(UWP)에 비해 "최신"으로 간주되지는 않지만 둘 다 여전히 완벽하게 지원되며 오늘날 전 세계에서 수백만 줄의 코드가 실행되고 있습니다. 창에서 실행되는 Win32 응용 프로그램은 개발자가 Windows 프로시저 함수 내에서 Windows 메시지와 함께 명시적으로 작업해야 합니다. 이름에도 불구하고 Win32 응용 프로그램은 32비트(x86) 또는 64비트(x64) 바이너리로 컴파일할 수 있습니다. 비주얼 스튜디오 IDE에서 x86 및 Win32는 동의어입니다.
-
 기존 Windows C++ 프로그래밍을 시작하려면 [Win32 및 C++로 시작하기를](/windows/win32/LearnWin32/learn-to-program-for-windows)참조하십시오. Win32에 대한 이해를 얻은 후에는 [MFC 데스크톱 응용 프로그램에](../mfc/mfc-desktop-applications.md)대해 더 쉽게 알아볼 수 있습니다. 정교한 그래픽을 사용하는 기존 C++ 데스크톱 응용 프로그램의 예는 [Hilo: Windows용 C++ 응용 프로그램 개발을](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)참조하십시오.
 
 ### <a name="c-or-net"></a>C ++ 또는 .NET?
@@ -57,7 +56,7 @@ Visual Studio 2017 버전 15.4 이상에서는 Windows 응용 프로그램 패�
 
 DirectX 게임은 PC 또는 Xbox에서 실행할 수 있습니다. 자세한 내용은 [DirectX 그래픽 및 게임](/windows/win32/directx)을 참조하십시오.
 
-## <a name="sql-server-database-clients"></a>SQL Server 데이터베이스 클라이언트
+## <a name="sql-server-database-CLIents"></a>SQL Server 데이터베이스 클라이언트
 
 네이티브 코드에서 SQL Server 데이터베이스에 액세스하려면 ODBC 또는 OLE DB를 사용합니다. 자세한 내용은 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)를 참조하세요.
 
