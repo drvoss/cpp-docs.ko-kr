@@ -1,24 +1,24 @@
 ---
 title: 컴파일러 옵션 범주별 목록
-description: Microsoft C/C++ 컴파일러 명령줄 옵션 범주별 참조 목록입니다.
-ms.date: 02/09/2020
+description: Microsoft C/c + + 컴파일러 명령줄 옵션 범주별 참조 목록입니다.
+ms.date: 06/03/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0275e6e5459f01d6ab8428274cc5e2313ab3066d
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422789"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421340"
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 
 이 문서에는 컴파일러 옵션의 범주별 목록이 포함되어 있습니다. 사전순 목록에 대해서는 [컴파일러 옵션 사전순](compiler-options-listed-alphabetically.md)목록을 참조 하세요.
 
-## <a name="optimization"></a>Optimization
+## <a name="optimization"></a>최적화
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|작은 코드를 만듭니다.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|빠른 코드를 만듭니다.|
@@ -34,7 +34,7 @@ ms.locfileid: "79422789"
 
 ## <a name="code-generation"></a>코드 생성
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/arch](arch-x86.md)|코드 생성 시 SSE 또는 SSE2 명령을 사용합니다. (x86 전용)|
 |[/clr](clr-common-language-runtime-compilation.md)|공용 언어 런타임에 실행할 출력 파일을 생성합니다.|
@@ -54,11 +54,12 @@ ms.locfileid: "79422789"
 |[/Gs](gs-control-stack-checking-calls.md)|스택 프로브를 제어합니다.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|정적 스레드 로컬 스토리지를 사용하여 할당한 데이터의 파이버 안전을 지원합니다.|
 |[/guard:cf](guard-enable-control-flow-guard.md)|제어 흐름 가드 보안 검사를 추가합니다.|
+|[/c가드: ehcont](guard-enable-eh-continuation-metadata.md)|EH 연속 메타 데이터를 사용 하도록 설정 합니다.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 호출 규칙을 사용합니다(x86 및 x64에만 해당).|
 |[/Gw](gw-optimize-global-data.md)|전체 프로그램 전역 데이터 최적화를 사용하도록 설정합니다.|
 |[/GX](gx-enable-exception-handling.md)|사용되지 않습니다. 동기 예외 처리를 사용합니다. 대신 [/EH](eh-exception-handling-model.md) 를 사용합니다.|
 |[/Gy](gy-enable-function-level-linking.md)|함수 수준 링크를 사용합니다.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않습니다. 빠른 검사를 사용하도록 설정합니다. [/RTC1](rtc-run-time-error-checks.md)과 동일합니다.|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|사용되지 않습니다. 빠른 검사를 사용하도록 설정합니다. ( [/RTC1](rtc-run-time-error-checks.md)와 동일)|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 호출 규칙을 사용합니다(x86 (x86 전용)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|레지스터에 전달된 매개 변수를 함수 시작 시 스택의 해당 위치에 기록합니다. 이 컴파일러 옵션은 x64 컴파일러 (네이티브 및 크로스 컴파일)에만 사용할 수 있습니다.|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|핫 패치할 수 있는 이미지를 만듭니다.|
@@ -78,7 +79,7 @@ ms.locfileid: "79422789"
 
 ## <a name="output-files"></a>출력 파일
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|XML 파일에 대해 문서 주석을 처리합니다.|
 |[/FA](fa-fa-listing-file.md)|어셈블리 목록 파일을 구성합니다.|
@@ -89,19 +90,19 @@ ms.locfileid: "79422789"
 |[/Fm](fm-name-mapfile.md)|맵 파일을 만듭니다.|
 |[/Fo](fo-object-file-name.md)|개체 파일을 만듭니다.|
 |[/Fp](fp-name-dot-pch-file.md)|미리 컴파일된 헤더 파일 이름을 지정합니다.|
-|[/FR,/Fr](fr-fr-create-dot-sbr-file.md)|브라우저 파일 *`.sbr`* 생성 된 이름입니다.|
+|[/FR,/Fr](fr-fr-create-dot-sbr-file.md)|생성 된 *`.sbr`* 브라우저 파일의 이름입니다.|
 
 ## <a name="preprocessor"></a>전처리기
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) 지시문에 전달된 파일 참조를 확인하기 위해 검색할 디렉터리를 지정합니다.|
 |[/C](c-preserve-comments-during-preprocessing.md)|전처리하는 동안 주석을 유지합니다.|
-|[/D](d-preprocessor-definitions.md)|상수와 매크로를 정의합니다.|
+|[D](d-preprocessor-definitions.md)|상수와 매크로를 정의합니다.|
 |[/E](e-preprocess-to-stdout.md)|전처리기 출력을 표준 출력에 복사합니다.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|전처리기 출력을 표준 출력에 복사합니다.|
 |[/FI](fi-name-forced-include-file.md)|지정된 포함 파일을 전처리합니다.|
-|[/FU](fu-name-forced-hash-using-file.md)|파일 이름을 [#using](../../preprocessor/hash-using-directive-cpp.md) 지시문에 전달된 것처럼 강제 사용합니다.|
+|[/FU](fu-name-forced-hash-using-file.md)|는 [#using](../../preprocessor/hash-using-directive-cpp.md) 지시문에 전달 된 것 처럼 파일 이름을 사용 하도록 합니다.|
 |[/Fx](fx-merge-injected-code.md)|삽입된 코드와 소스 파일을 병합합니다.|
 |[/I](i-additional-include-directories.md)|포함 파일의 디렉터리를 검색합니다.|
 |[/P](p-preprocess-to-a-file.md)|전처리기 출력을 파일에 씁니다.|
@@ -111,7 +112,7 @@ ms.locfileid: "79422789"
 
 ## <a name="language"></a>언어
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|컴파일 시간에 **constexpr** 평가를 제어 합니다.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|소스 코드에서 [#pragma omp](../../preprocessor/omp.md) 를 활성화합니다.|
@@ -127,30 +128,30 @@ ms.locfileid: "79422789"
 |[/Ze](za-ze-disable-language-extensions.md)|사용되지 않습니다. C89 언어 확장을 사용 합니다.|
 |[/Zf](zf.md)|병렬 빌드에서 PDB 생성 시간을 향상 시킵니다.|
 |[/ZH](zh.md)|디버그 정보에서 체크섬에 대해 MD5, SHA-1 또는 SHA-256을 지정 합니다.|
-|[/ZI](z7-zi-zi-debug-information-format.md)|편집하며 계속하기와 호환되는 프로그램 데이터베이스에 디버깅 정보를 포함합니다. (x86 전용)|
-|[/Zi](z7-zi-zi-debug-information-format.md)|완전한 디버깅 정보를 생성합니다.|
-|[/Zl](zl-omit-default-library-name.md)|*`.obj`* 파일에서 기본 라이브러리 이름을 제거 합니다.|
+|[Zi](z7-zi-zi-debug-information-format.md)|편집하며 계속하기와 호환되는 프로그램 데이터베이스에 디버깅 정보를 포함합니다. (x86 전용)|
+|[/ZI](z7-zi-zi-debug-information-format.md)|완전한 디버깅 정보를 생성합니다.|
+|[/Zl](zl-omit-default-library-name.md)|파일에서 기본 라이브러리 이름을 제거 합니다 *`.obj`* .|
 |[/Zp](zp-struct-member-alignment.md) *n*|구조체 멤버를 압축합니다.|
 |[/Zs](zs-syntax-check-only.md)|구문만 확인합니다.|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows 런타임에서 실행할 출력 파일을 생성 합니다.|
 
 ## <a name="linking"></a>연결
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|스택 크기를 설정합니다.|
 |[/LD](md-mt-ld-use-run-time-library.md)|DLL(동적 연결 라이브러리)을 만듭니다.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|디버그 DLL(동적 연결 라이브러리)을 만듭니다.|
 |[/link](link-pass-options-to-linker.md)|지정된 옵션을 LINK에 전달합니다.|
 |[/LN](ln-create-msil-module.md)|MSIL 모듈을 만듭니다.|
-|[/MD](md-mt-ld-use-run-time-library.md)|*Msvcrt.lib*를 사용 하 여 다중 스레드 DLL을 만들도록 컴파일합니다.|
+|[Md](md-mt-ld-use-run-time-library.md)|*Msvcrt.lib*를 사용 하 여 다중 스레드 DLL을 만들도록 컴파일합니다.|
 |[/MDd](md-mt-ld-use-run-time-library.md)|*Msvcrtd.lib*를 사용 하 여 디버그 다중 스레드 DLL을 만들도록 컴파일합니다.|
 |[/MT](md-mt-ld-use-run-time-library.md)|*Libcmt.lib*를 사용 하 여 다중 스레드 실행 파일을 만들기 위해 컴파일합니다.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|*Libcmtd.lib*를 사용 하 여 디버그 다중 스레드 실행 파일을 만들기 위해 컴파일합니다.|
 
 ## <a name="miscellaneous"></a>기타
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|컴파일러 옵션을 나열합니다.|
 |[@](at-specify-a-compiler-response-file.md)|지시 파일을 지정합니다.|
@@ -164,7 +165,7 @@ ms.locfileid: "79422789"
 |[/H](h-restrict-length-of-external-names.md)|사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다.|
 |[/HELP](help-compiler-command-line-help.md)|컴파일러 옵션을 나열합니다.|
 |[/J](j-default-char-type-is-unsigned.md)|기본 `char` 형식을 변경합니다.|
-|[/JMC](jmc.md)|네이티브 C++ 내 코드만 디버깅 옵션을 지원합니다.|
+|[/JMC](jmc.md)|네이티브 c + + 내 코드만 디버깅을 지원 합니다.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|컴파일러와 링커는 Windows 커널에서 실행할 수 있는 이진 파일을 만듭니다.|
 |[/MP](mp-build-with-multiple-processes.md)|여러 개의 소스 파일을 동시에 빌드합니다.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|초기 화면 배너를 표시하지 않습니다.|
@@ -173,7 +174,7 @@ ms.locfileid: "79422789"
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|C 소스 파일을 지정합니다.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|모든 소스 파일을 C로 지정 합니다.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|C++ 소스 파일을 지정합니다.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|모든 원본 파일은 C++를 지정 합니다.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|모든 소스 파일을 c + +로 지정 합니다.|
 |[/V](v-version-number.md)|사용되지 않습니다. 버전 문자열을 설정합니다.|
 |[/w](compiler-option-warning-level.md)|모든 경고를 사용하지 않습니다.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|출력 경고 수준을 설정합니다.|
@@ -198,20 +199,20 @@ ms.locfileid: "79422789"
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|호환 되는 문자만을 위한 UTF-8 파일의 유효성을 검사 합니다.|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|진단 메시지의 형식을 제어 합니다.|
 |[/permissive-](permissive-standards-conformance.md)|표준 규칙 모드를 설정 합니다.|
-|[/std](std-specify-language-standard-version.md)|C++ 표준 버전 호환성 선택기입니다.|
+|[/std](std-specify-language-standard-version.md)|C + + 표준 버전 호환성 선택기입니다.|
 
 ## <a name="experimental-options"></a>실험적 옵션
 
-실험적 옵션은 특정 버전의 컴파일러 에서만 지원 될 수 있습니다. 다른 컴파일러 버전에서 다르게 동작할 수도 있습니다. 주로 [ C++ Microsoft 팀 블로그](https://devblogs.microsoft.com/cppblog/)에서 실험적 옵션에 대 한 최상의 설명서를 사용할 수 있습니다.
+실험적 옵션은 특정 버전의 컴파일러 에서만 지원 될 수 있습니다. 다른 컴파일러 버전에서 다르게 동작할 수도 있습니다. 일반적으로 실험적 옵션에 대 한 설명서는 [Microsoft c + + 팀 블로그](https://devblogs.microsoft.com/cppblog/)에 있습니다.
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
-|[/s실험적: 모듈](experimental-module.md)|실험적 모듈 지원을 사용 하도록 설정 합니다.|
-|[/s실험적: 전처리기](experimental-preprocessor.md)|실험적 규격 전처리기 지원을 사용 하도록 설정 합니다.|
+|[/experimental:module](experimental-module.md)|실험적 모듈 지원을 사용 하도록 설정 합니다.|
+|[/experimental:preprocessor](experimental-preprocessor.md)|실험적 규격 전처리기 지원을 사용 하도록 설정 합니다.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>사용 되지 않고 제거 되는 컴파일러 옵션
 
-|옵션|목적|
+|옵션|용도|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|사용되지 않습니다. 대신 [/LN (Create MSIL Module)](ln-create-msil-module.md) 를 사용하세요.|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)| 사용되지 않습니다. 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다. |
@@ -232,6 +233,6 @@ ms.locfileid: "79422789"
 
 ## <a name="see-also"></a>참고 항목
 
-[C/C++ 빌드 참조](c-cpp-building-reference.md)\
+[C/c + + 빌드 참조](c-cpp-building-reference.md)\
 [MSVC 컴파일러 옵션](compiler-options.md)\
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

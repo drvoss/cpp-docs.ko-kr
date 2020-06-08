@@ -1,11 +1,12 @@
 ---
 title: floor, floorf, floorl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - floorf
 - floorl
 - floor
 - _o_floor
+- _o_floorf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 3455e9f1fb7f49e686b2d7ae315a413c829f87ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507003"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -70,7 +71,7 @@ long double floorl(
 *x*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 **Floor** 함수는 *x*보다 작거나 같은 가장 큰 정수를 나타내는 부동 소수점 값을 반환 합니다. 반환되는 오류가 없습니다.
 
@@ -88,7 +89,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**바닥**, **floorf**, **floorl**|\<math.h>|
 
@@ -129,7 +130,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

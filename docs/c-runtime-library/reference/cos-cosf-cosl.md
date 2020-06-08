@@ -1,11 +1,12 @@
 ---
 title: cos, cosf, cosl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - cos
 - cosf
 - cosl
 - _o_cos
+- _o_cosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917239"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506899"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -65,7 +66,7 @@ long double cos( long double x );  // C++ only
 *x*<br/>
 각도(라디안)입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 *X*의 코사인입니다. *X* 가 263 보다 크거나 같은 경우 또는-263 보다 작거나 같은 경우 결과에 중요 한 손실이 발생 합니다.
 
@@ -92,7 +93,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **dou
 
 [Sin, sinf, sinf](sin-sinf-sinl.md)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

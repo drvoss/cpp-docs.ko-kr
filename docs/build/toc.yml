@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs(스택 검사 호출 제어)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard(제어 흐름 보호 사용)
+                - name: '/guard:cf(제어 흐름 보호 사용)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (EH 연속 메타데이터 사용)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: '-GT(파이버 안전 스레드 로컬 스토리지 지원)'
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw(전역 데이터 최적화)
