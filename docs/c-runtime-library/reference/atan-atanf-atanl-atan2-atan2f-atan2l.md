@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920069"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506782"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-**X** (**atan**, **atanf**및 **atanf**)의 아크탄젠트 또는 **y**/**x** (**atan2**, **atan2f**및 **atan2l**)의 아크탄젠트를 계산 합니다.
+**X** (**atan**, **atanf**및 **atanf**)의 아크탄젠트 또는 **y** / **x** (**atan2**, **atan2f**및 **atan2l**)의 아크탄젠트를 계산 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -80,9 +81,9 @@ long double atan2( long double y, long double x );  // C++ only
 *x*, *y*<br/>
 임의의 숫자입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
-**atan** 는-π/2 ~ π/2 라디안 범위에서 *x* 의 아크탄젠트를 반환 합니다. **atan2** 는-π에서 π 라디안 까지의 *y*/*x* 의 아크탄젠트를 반환 합니다. *X* 가 0 이면 **atan** 는 0을 반환 합니다. **Atan2** 의 두 매개 변수가 모두 0 인 경우 함수는 0을 반환 합니다. 모든 결과는 라디안 단위입니다.
+**atan** 는-π/2 ~ π/2 라디안 범위에서 *x* 의 아크탄젠트를 반환 합니다. **atan2** 는 *y* / -π에서 π 라디안 까지의 y*x* 의 아크탄젠트를 반환 합니다. *X* 가 0 이면 **atan** 는 0을 반환 합니다. **Atan2** 의 두 매개 변수가 모두 0 인 경우 함수는 0을 반환 합니다. 모든 결과는 라디안 단위입니다.
 
 **atan2** 는 두 매개 변수의 부호를 사용 하 여 반환 값의 사분면을 결정 합니다.
 
@@ -92,7 +93,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-**Atan** 함수는 *x*의 아크탄젠트 (역 탄젠트 함수)를 계산 합니다. **atan2** 는 *y*/*x* 의 아크탄젠트를 계산 합니다. *x* 가 0 이면 **atan2** 는 *y가 양수인 경우 π* /2를 반환 하 고 y *가 음수인* 경우에는 π/2를 반환 하 고 *y* 가 0 이면 0을 반환 합니다.
+**Atan** 함수는 *x*의 아크탄젠트 (역 탄젠트 함수)를 계산 합니다. **atan2** 는 *y*x의 아크탄젠트를 계산 / *x* 합니다. *x* 가 0 이면 **atan2** 는 y가 양수인 *경우* π/2를 반환 하 고 y *가* 음수인 경우에는 π/2를 반환 하 고 *y* 가 0 이면 0을 반환 합니다.
 
 **atan** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
@@ -137,7 +138,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

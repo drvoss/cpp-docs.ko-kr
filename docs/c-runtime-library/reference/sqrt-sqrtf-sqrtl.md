@@ -1,11 +1,12 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
 - _o_sqrt
+- _o_sqrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506886"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -78,7 +79,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **dou
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 **Sqrt** 함수는 *x*의 제곱근을 반환 합니다. 기본적으로 *x* 가 음수 이면 **Sqrt** 가 무한 NaN을 반환 합니다.
 
@@ -90,7 +91,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **dou
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**sqrt**, **sqrtf**, **sqrtf**|\<math.h>|\<cmath>|
 
@@ -121,7 +122,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

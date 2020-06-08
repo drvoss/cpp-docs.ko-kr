@@ -1,7 +1,7 @@
 ---
 title: /permissive-(표준 준수)
-description: Microsoft C++ /허용-(표준 준수) 컴파일러 옵션에 대한 참조 가이드입니다.
-ms.date: 04/14/2020
+description: Microsoft c + +/permissive-(표준 준수) 컴파일러 옵션에 대 한 참조 가이드입니다.
+ms.date: 06/04/2020
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -11,53 +11,53 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 695f84e64f07128ac7744dc99e736f2a71ab3e79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337410"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507029"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive-(표준 준수)
 
-컴파일러에 표준 준수 모드를 지정합니다. 이 옵션을 사용하면 코드에서 적합성 문제를 식별하고 수정하여 보다 정확하고 이식성이 뛰어난 문제를 식별할 수 있습니다.
+컴파일러에 대 한 표준 규칙 모드를 지정 합니다. 이 옵션을 사용 하면 코드에서 규칙 문제를 식별 하 고 수정 하 여 보다 정확 하 고 이식 가능 하 게 만들 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
-> **/허용-**
+> **`/permissive-`**
 
 ## <a name="remarks"></a>설명
 
-이 옵션은 Visual Studio 2017 이상에서 지원됩니다.
+이 옵션은 Visual Studio 2017 이상에서 지원 됩니다.
 
-**/허용 컴파일러** 옵션을 사용하여 표준 준수 컴파일러 동작을 지정할 수 있습니다. 이 옵션은 허용 동작을 사용하지 않도록 설정하고 엄격한 준수를 위해 [/Zc](zc-conformance.md) 컴파일러 옵션을 설정합니다. IDE에서 이 옵션은 IntelliSense 엔진이 부적합 코드에 밑줄을 긋게 합니다.
+**`/permissive-`** 컴파일러 옵션을 사용 하 여 표준을 준수 하는 컴파일러 동작을 지정할 수 있습니다. 이 옵션은 관대 한 동작을 사용 하지 않도록 설정 하 고 [**`/Zc`**](zc-conformance.md) 엄격한 규칙에 대 한 컴파일러 옵션을 설정 합니다. IDE에서이 옵션을 사용 하면 IntelliSense 엔진에서 순응 하지 않는 코드에 밑줄이 표시 됩니다.
 
-기본적으로 **/허용-** 옵션은 Visual Studio 2017 버전 15.5 및 이후 버전에서 만든 새 프로젝트에서 설정됩니다. 이전 버전에서는 기본적으로 설정되지 않았습니다. 옵션이 설정되면 컴파일러는 C++11 이전 코드의 몇 가지 일반적인 버그를 포함하여 비표준 언어 구문이 코드에서 검색될 때 진단 오류 또는 경고를 생성합니다.
+기본적으로 **`/permissive-`** 이 옵션은 Visual Studio 2017 버전 15.5 이상 버전에서 만든 새 프로젝트에 설정 되어 있습니다. 이전 버전에서는 기본적으로 설정 되어 있지 않습니다. 옵션이 설정 되 면 코드에서 비표준 언어 구문이 검색 될 때 컴파일러에서 진단 오류 또는 경고를 생성 합니다. 이러한 구문에는 C + + 11 이전 코드의 몇 가지 일반적인 버그가 포함 됩니다.
 
-**/허용-** 옵션은 Windows 가을 크리에이터 SDK(10.0.16299.0)에서 시작하는 소프트웨어 개발 키트(SDK) 또는 Windows 드라이버 키트(WDK)와 같은 최신 Windows 키트의 거의 모든 헤더 파일과 호환됩니다. 이전 버전의 SDK는 다양한 소스 코드 준수 이유로 **/permissive-에서** 컴파일하지 못할 수 있습니다. 컴파일러와 SDK는 서로 다른 릴리스 일정에 따라 제공되므로 몇 가지 문제가 남아 있습니다. 특정 헤더 파일 문제에 대 한, 아래 [의 Windows 헤더 문제를](#windows-header-issues) 참조 하십시오.
+**`/permissive-`** 이 옵션은 windows에서 10.0.16299.0 (소프트웨어 개발 키트) 또는 WDK (Windows 드라이버 키트)와 같은 최신 Windows 키트의 거의 모든 헤더 파일과 호환 됩니다. 이전 버전의 SDK는 **`/permissive-`** 다양 한 소스 코드 규칙의 이유로에서 컴파일되지 않을 수 있습니다. 컴파일러와 Sdk는 서로 다른 릴리스 타임 라인에서 제공 되므로 몇 가지 문제가 남아 있습니다. 특정 헤더 파일 문제에 대 한 자세한 내용은 아래의 [Windows 헤더 문제](#windows-header-issues) 를 참조 하세요.
 
-**/허용-옵션은** [/Zc:referenceBinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc:strictStrings](zc-strictstrings-disable-string-literal-type-conversion.md)및 [/Zc:rvalueCast](zc-rvaluecast-enforce-type-conversion-rules.md) 옵션을 따라 동작에 맞게 설정합니다. 이러한 옵션은 기본적으로 비준수 동작으로 설정됩니다. 이 동작을 재정의하기 위해 명령줄에 **/permissive-** 후에 특정 **/Zc** 옵션을 전달할 수 있습니다.
+**`/permissive-`** 옵션은 [**`/Zc:referenceBinding`**](zc-referencebinding-enforce-reference-binding-rules.md) , [**`/Zc:strictStrings`**](zc-strictstrings-disable-string-literal-type-conversion.md) 및 옵션을 [**`/Zc:rvalueCast`**](zc-rvaluecast-enforce-type-conversion-rules.md) 준수 하는 동작으로 설정 합니다. 이러한 옵션은 기본적으로 순응 하지 않는 동작으로 설정 됩니다. **`/Zc`** 명령줄에서 특정 옵션을 전달 **`/permissive-`** 하 여이 동작을 재정의할 수 있습니다.
 
-Visual Studio 2017 버전 15.3에서 시작하는 컴파일러 버전에서 **/허용-옵션은** [/Zc:ternary](zc-ternary.md) 옵션을 설정합니다. 또한 컴파일러는 2단계 이름 조회에 대한 더 많은 요구 사항을 구현합니다. **/허용-** 옵션이 설정되면 컴파일러는 함수 및 클래스 템플릿 정의를 구문 분석하고 템플릿에 사용되는 종속 및 비종속 이름을 식별합니다. 이 릴리스에서는 이름 종속성 분석만 수행됩니다.
+Visual Studio 2017 버전 15.3에서 시작 하는 컴파일러 버전에서는 옵션을 **`/permissive-`** 설정 합니다 [**`/Zc:ternary`**](zc-ternary.md) . 또한 컴파일러는 2 단계 이름 조회에 대 한 요구 사항을 추가로 구현 합니다. **`/permissive-`** 옵션이 설정 되 면 컴파일러는 함수와 클래스 템플릿 정의를 구문 분석 하 고 템플릿에 사용 되는 종속 및 종속 되지 않은 이름을 식별 합니다. 이 릴리스에서는 이름 종속성 분석만 수행 됩니다.
 
-표준이 구현에 남기는 환경별 확장 및 언어 영역은 **/허용-의**영향을 받지 않습니다. 예를 들어 Microsoft 특정 `__declspec`호출 규칙 및 구조화 된 예외 처리 키워드 및 컴파일러 별 pragma 지시문 또는 **특성은 /permissive-mode에서** 컴파일러에 의해 플래그가 지정 되지 않습니다.
+표준에서 구현까지 유지 하는 환경 관련 확장 및 언어 영역은의 영향을 받지 않습니다 **`/permissive-`** . 예를 들어 Microsoft 전용 `__declspec` 호출 규칙 및 구조적 예외 처리 키워드, 컴파일러 관련 pragma 지시문 또는 특성은 컴파일러가 모드에서 플래그 지정 되지 않습니다 **`/permissive-`** .
 
-**/허용-** 옵션은 현재 컴파일러 버전의 적합성 지원을 사용하여 비준수언어 구문이 결정됩니다. 이 옵션은 코드가 C++ 표준의 특정 버전을 준수하는지 여부를 결정하지 않습니다. 최신 초안 표준에 대해 구현된 모든 컴파일러 지원을 사용하려면 [/std:latest](std-specify-language-standard-version.md) 옵션을 사용합니다. 컴파일러 지원을 현재 구현된 C++17 표준으로 제한하려면 [/std:c++17](std-specify-language-standard-version.md) 옵션을 사용합니다. 컴파일러 지원을 C++14 표준과 더 가깝게 일치하도록 제한하려면 [기본값인 /std:c++14](std-specify-language-standard-version.md) 옵션을 사용합니다.
+**`/permissive-`** 이 옵션은 현재 컴파일러 버전의 규칙 지원 기능을 사용 하 여 일치 하지 않는 언어 구문을 확인 합니다. 옵션은 코드가 특정 버전의 c + + 표준에 맞는지 확인 하지 않습니다. 최신 초안 표준에 대해 구현 된 모든 컴파일러 지원을 사용 하도록 설정 하려면 [**`/std:c++latest`**](std-specify-language-standard-version.md) 옵션을 사용 합니다. 현재 구현 된 c + + 17 표준에 대 한 컴파일러 지원을 제한 하려면 [**`/std:c++17`**](std-specify-language-standard-version.md) 옵션을 사용 합니다. 컴파일러 지원이 c + + 14 표준에 더 가깝게 일치 하도록 제한 하려면 [**`/std:c++14`**](std-specify-language-standard-version.md) 기본값 인 옵션을 사용 합니다.
 
-모든 C++11, C++14 또는 C++17 표준 준수 코드가 모든 버전의 Visual Studio 2017에서 MSVC 컴파일러에서 지원되는 것은 아닙니다. Visual Studio 버전에 따라 **/permissive-option은** 2단계 이름 조회의 일부 측면과 관련된 문제를 감지하지 못하고, 비const 참조를 임시로 바인딩하고, 복사 초기화를 직접 초기화로 처리하며, 초기화에서 여러 사용자 정의 변환을 허용하거나 논리 연산자를 위한 대체 토큰 및 기타 지원되지 않는 준수 영역을 사용할 수 있습니다. Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)을 참조하세요. **/허용-를**최대한 얻으려면 Visual Studio를 최신 버전으로 업데이트합니다.
+모든 버전의 Visual Studio 2017에서 MSVC 컴파일러가 c + + 11, c + + 14 또는 c + + 17 표준을 준수 하는 코드를 지원 하지는 않습니다. Visual Studio의 버전에 따라 **`/permissive-`** 옵션은 2 단계 이름 조회의 일부 측면에서 문제를 검색 하지 못할 수 있습니다. 즉, 임시에 대 한 비 const 참조를 바인딩 하거나, 복사 init를 직접 init로 처리 하거나, 초기화에서 여러 사용자 정의 변환을 허용 하거나, 논리 연산자에 대 한 대체 토큰 및 기타 지원 되지 않는 규칙 영역을 지원 합니다. Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)을 참조하세요. 을 최대한 활용 하려면 **`/permissive-`** Visual Studio를 최신 버전으로 업데이트 하세요.
 
-### <a name="how-to-fix-your-code"></a>코드를 수정하는 방법
+### <a name="how-to-fix-your-code"></a>코드를 수정 하는 방법
 
-다음은 **/허용-를**사용할 때 비준수로 검색되는 코드의 몇 가지 예와 함께 문제를 해결하는 제안된 방법입니다.
+다음은를 사용 하는 경우 호환 되지 않는 것으로 검색 되는 코드의 몇 가지 예로 **`/permissive-`** ,이 문제를 해결 하는 제안 된 방법이 있습니다.
 
-#### <a name="use-default-as-an-identifier-in-native-code"></a>기본값을 네이티브 코드에서 식별자로 사용
+#### <a name="use-default-as-an-identifier-in-native-code"></a>네이티브 코드에서 식별자로 기본값 사용
 
 ```cpp
 void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="look-up-members-in-dependent-base"></a>종속 기반에서 멤버 찾기
+#### <a name="look-up-members-in-dependent-base"></a>종속 된 기본에서 멤버 조회
 
 ```cpp
 template <typename T>
@@ -85,7 +85,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>멤버 선언에 정규화된 이름 사용
+#### <a name="use-of-qualified-names-in-member-declarations"></a>멤버 선언에 정규화 된 이름 사용
 
 ```cpp
 struct A {
@@ -95,7 +95,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>멤버 초기화에서 여러 조합원 초기화
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>멤버 이니셜라이저에서 여러 공용 구조체 멤버를 초기화 합니다.
 
 ```cpp
 union U
@@ -110,7 +110,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>숨겨진 친구 이름 조회 규칙
+#### <a name="hidden-friend-name-lookup-rules"></a>숨겨진 friend 이름 조회 규칙
 
 ```cpp
 // Example 1
@@ -138,7 +138,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>배열 경계에 범위 열거형 사용
+#### <a name="use-scoped-enums-in-array-bounds"></a>배열 범위에서 범위가 지정 된 열거형 사용
 
 ```cpp
 enum class Color {
@@ -150,7 +150,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>네이티브 코드의 각 코드에 사용
+#### <a name="use-for-each-in-native-code"></a>네이티브 코드에서 각에 대해 사용
 
 ```cpp
 void func() {
@@ -165,7 +165,7 @@ void func() {
 }
 ```
 
-#### <a name="use-of-atl-attributes"></a>ATL 속성 사용
+#### <a name="use-of-atl-attributes"></a>ATL 특성 사용
 
 ```cpp
 // Example 1
@@ -236,19 +236,19 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 #### <a name="ambiguous-conditional-operator-arguments"></a>모호한 조건부 연산자 인수
 
-Visual Studio 2017 버전 15.3 이전의 컴파일러 버전에서 컴파일러는 표준에 의해 모호한 것으로 간주되는 `?:` 조건부 연산자(또는 삼차 연산자)에 대한 인수를 수락했습니다. **/허용 모드에서** 컴파일러는 이전 버전에서 진단 없이 컴파일된 경우 하나 이상의 진단을 발행합니다.
+Visual Studio 2017 이전 15.3 버전의 컴파일러에서는 컴파일러가 `?:` 표준에서 모호한 것으로 간주 되는 조건 연산자 (또는 삼항 연산자)에 대 한 인수를 수락 했습니다. **`/permissive-`** 모드에서 이제 컴파일러는 이전 버전에서 진단 하지 않고 컴파일한 경우 하나 이상의 진단을 실행 합니다.
 
-이 변경으로 인해 발생할 수 있는 일반적인 오류는 다음과 같습니다.
+이러한 변경으로 인해 발생할 수 있는 일반적인 오류는 다음과 같습니다.
 
-- 오류 C2593: '연산자?' 모호하다
+- **`error C2593`**`: 'operator ?' is ambiguous`
 
-- 오류 C2679: 바이너리 '?': 형식 'B'의 오른쪽 사용후연을 취하는 연산자가 없습니다 (또는 허용 가능한 변환이 없음)
+- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- 오류 C2678: 바이너리 '?': 'A' 유형의 왼쪽 된 사용 심연을 사용 하는 연산자 (또는 허용 가능한 변환없음)
+- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- 오류 C2446: ':': 'B'에서 'A'로 변환없음
+- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
 
-이 문제를 일으킬 수 있는 일반적인 코드 패턴은 일부 클래스 C가 다른 형식 T의 비명시적 생성자와 T 형식에 대한 비명시적 변환 연산자 모두를 제공하는 경우입니다. 이 경우 두 번째 인수를 세 번째 인수의 유형으로 변환하고 세 번째 인수를 두 번째 인수의 유형으로 변환하는 것은 모두 유효한 변환입니다. 둘 다 유효하기 때문에 표준에 따라 모호합니다.
+이 문제를 발생 시킬 수 있는 일반적인 코드 패턴은 일부 클래스 C에서 다른 형식 T의 비 명시적 생성자와 명시적 변환 연산자를 둘 다 제공 하는 경우를 T 형식으로 제공 하는 경우입니다. 이 경우 두 번째 인수를 세 번째 인수의 형식으로 변환 하 고 세 번째 인수를 두 번째 인수의 형식으로 변환 하는 것은 유효한 변환입니다. 둘 다 유효 하므로 표준에 따라 모호 합니다.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -268,7 +268,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-T가 null-terminated 문자열 형식 중 하나를 나타내고 실제 `const char *` `const char16_t *`인수가 해당 형식의 문자열 `?:` 리터럴인 경우 이 일반적인 패턴에 중요한 예외가 있습니다. C++17이 의미체계를 C++14에서 변경했습니다. 결과적으로 예제 2의 코드는 **/std:c++14에서** 허용되고 **/zc:3.3ary** 또는 **/허용-가** 사용될 때 **/std:c++17에서** 거부됩니다.
+T가 null로 종료 되는 문자열 형식 (예:, 등) 중 하나를 나타내고의 `const char *` `const char16_t *` 실제 인수가 `?:` 해당 형식의 문자열 리터럴인 경우이 일반적인 패턴에 대 한 중요 한 예외가 있습니다. C + + 17에는 c + + 14의 의미 체계가 변경 되었습니다. 따라서 **`/std:c++14`** **`/std:c++17`** **`/Zc:ternary`** 또는 **`/permissive-`** 가 사용 될 때 예 2의 코드는에서 허용 되 고 거부 됩니다.
 
 ```cpp
 // Example 2: exception from the above
@@ -289,7 +289,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-오류가 발생할 수 있는 또 다른 경우는 형식의 `void`한 인수가 있는 조건부 연산자입니다. 이 경우 ASSERT와 같은 매크로에서 일반적일 수 있습니다.
+오류가 표시 될 수 있는 또 다른 경우는 형식의 인수 하나를 사용 하는 조건부 연산자입니다 **`void`** . 이 경우는 ASSERT와 같은 매크로에서 일반적 일 수 있습니다.
 
 ```cpp
 // Example 3: void arguments
@@ -300,7 +300,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-또한 조건부 연산자 결과 형식이 **/Zc:ternary** 및 **/허용-** 아래에서 변경될 수 있는 템플릿 메타프로그래밍에서 오류가 표시될 수 있습니다. 이 문제를 해결하는 한 가지 방법은 결과 형식에서 [std:remove_reference](../../standard-library/remove-reference-class.md) 사용하는 것입니다.
+또한 템플릿 메타 프로그래밍에서 오류가 표시 될 수 있습니다. 여기서 조건 연산자 결과 형식은 및에서 변경 될 수 있습니다 **`/Zc:ternary`** **`/permissive-`** . 이 문제를 해결 하는 한 가지 방법은 결과 형식에서를 사용 하는 것입니다 [`std::remove_reference`](../../standard-library/remove-reference-class.md) .
 
 ```cpp
 // Example 4: different result types
@@ -312,9 +312,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>2단계 이름 조회
+#### <a name="two-phase-name-look-up"></a>2 단계 이름 조회
 
-**/permissive-** 옵션이 설정되면 컴파일러는 함수 및 클래스 템플릿 정의를 구문 분석하여 2단계 이름 조회에 필요한 대로 템플릿에 사용되는 종속 및 비종속 이름을 식별합니다. Visual Studio 2017 버전 15.3에서는 이름 종속성 분석이 수행됩니다. 특히 템플릿 정의의 컨텍스트에서 선언되지 않은 비종속 이름은 ISO C++ 표준에서 요구하는 진단 메시지를 발생시게 됩니다. Visual Studio 2017 버전 15.7에서는 정의 컨텍스트에서 인수 종속 조회가 필요한 비종속 이름의 바인딩도 수행됩니다.
+**`/permissive-`** 옵션이 설정 되 면 컴파일러는 함수 및 클래스 템플릿 정의를 구문 분석 하 여 2 단계 이름 조회에 필요에 따라 템플릿에 사용 되는 종속 및 종속 되지 않은 이름을 식별 합니다. Visual Studio 2017 버전 15.3에서 이름 종속성 분석이 수행 됩니다. 특히 템플릿 정의의 컨텍스트에서 선언 되지 않은 종속 되지 않은 이름은 ISO c + + 표준에 필요한 진단 메시지를 발생 시킵니다. Visual Studio 2017 버전 15.7에서는 정의 컨텍스트에서 인수 종속 조회를 필요로 하는 종속 되지 않은 이름의 바인딩만 수행 됩니다.
 
 ```cpp
 // dependent base
@@ -340,17 +340,17 @@ int main()
 }
 ```
 
-2단계 조회에 대한 레거시 동작을 원하지만 **/허용-동작을** 원한다면 **/Zc:twoPhase-** 옵션을 추가합니다.
+2 단계 조회에 대 한 레거시 동작을 원하는 경우 동작을 원하지 않을 경우 **`/permissive-`** 옵션을 추가 **`/Zc:twoPhase-`** 합니다.
 
-### <a name="windows-header-issues"></a>윈도우 헤더 문제
+### <a name="windows-header-issues"></a>Windows 헤더 문제
 
-**/허용-** 옵션은 Windows 가을 크리에이터 업데이트 SDK (10.0.16299.0) 또는 Windows 드라이버 키트 (WDK) 버전 1709 전에 윈도우 키트의 버전에 대 한 너무 엄격 하다. Windows 또는 장치 드라이버 코드에서 **/허용-를** 사용하려면 최신 버전의 Windows 키트로 업데이트하는 것이 좋습니다.
+**`/permissive-`** 이 옵션은 windows에서 10.0.16299.0 (Windows 드라이버 키트) 버전 1709 이전 버전의 Windows 키트에 비해 너무 엄격 합니다. **`/permissive-`** Windows 또는 장치 드라이버 코드에서 사용할 최신 버전의 Windows 키트로 업데이트 하는 것이 좋습니다.
 
-Windows 2018년 4월 업데이트 SDK(10.0.17134.0), Windows 가을 크리에이터 업데이트 SDK(10.0.16299.0) 또는 Windows 드라이버 키트(WDK) 1709의 특정 헤더 파일은 **여전히 /permissive-의**사용과 호환되지 않는 문제가 있습니다. 이러한 문제를 해결하려면 이러한 헤더를 필요로 하는 소스 코드 파일로만 헤더 사용을 제한하고 특정 소스 코드 파일을 컴파일할 때 **/permissive-** 옵션을 제거하는 것이 좋습니다.
+Windows 4 월 2018 업데이트 SDK (10.0.17134.0)에 있는 특정 헤더 파일, Windows에 대 한 10.0.16299.0 (windows의 작성자 업데이트 SDK) 또는 WDK (Windows 드라이버 키트) 1709에는를 사용 하는 것과 호환 되지 않는 문제가 있습니다 **`/permissive-`** . 이러한 문제를 해결 하려면 이러한 헤더를 필요로 하는 소스 코드 파일로만 사용 하는 것을 제한 하 고 **`/permissive-`** 특정 소스 코드 파일을 컴파일할 때 옵션을 제거 하는 것이 좋습니다.
 
-Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한 WinRT WRL 헤더는 **/permissive-로**정리되지 않습니다. 이러한 문제를 해결하려면 **/허용-를**사용하지 않거나 **/Zc:twoPhase-를** 사용하여 다음 헤더를 사용하지 마십시오. **/permissive-**
+Windows 4 월 2018 업데이트 SDK (10.0.17134.0)에서 릴리스된 이러한 WinRT WRL 헤더는 정리 되지 않습니다 **`/permissive-`** . 이러한 문제를 해결 하려면를 사용 하지 않거나 **`/permissive-`** **`/permissive-`** **`/Zc:twoPhase-`** 다음 헤더를 사용할 때를 사용 합니다.
 
-- 윈트/wrl/async.h의 문제
+- Winrt/wrl/async의 문제
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
@@ -359,15 +359,15 @@ Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- winrt/wrl/implements에서 문제 발생합니다.h
+- Winrt/wrl/구현에 문제가 있습니다.
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한 사용자 모드 헤더는 **/허용-로**정리되지 않습니다. 이러한 문제를 해결하려면 이러한 헤더로 작업할 때 **/허용-를** 사용하지 마십시오.
+Windows 4 월 2018 업데이트 SDK (10.0.17134.0)에서 릴리스된 이러한 사용자 모드 헤더는 정리 되지 않습니다 **`/permissive-`** . 이러한 문제를 해결 하려면 **`/permissive-`** 이러한 헤더로 작업할 때를 사용 하지 마세요.
 
-- 음/Tune.h의 문제
+- Um/튠의 문제
 
    ```Output
    C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
@@ -376,13 +376,13 @@ Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- um/spddkhlp.h의 문제
+- Um/spddkhlp에 문제가 있습니다.
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
    ```
 
-- 움/refptrco.h의 문제
+- Um/refptrco의 문제
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
@@ -390,11 +390,11 @@ Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-이러한 문제는 Windows 가을 크리에이터 업데이트 SDK(10.0.16299.0)의 사용자 모드 헤더에만 해당됩니다.
+이러한 문제는 Windows가 10.0.16299.0 (Windows가 나 크리에이터 업데이트 SDK)의 사용자 모드 헤더에만 해당 됩니다.
 
-- um/Query.h에서 의 문제
+- Um/Query .h의 문제
 
-   **/허용 컴파일러** 스위치를 사용하는 경우 `tagRESTRICTION` 대/소문자(RTOr) 멤버 'or'로 인해 구조가 컴파일되지 않습니다.
+   **`/permissive-`** 컴파일러 스위치를 사용 하는 경우 `tagRESTRICTION` 구조체는 Case (rtor) 멤버 ' or '로 인해 컴파일되지 않습니다.
 
    ```cpp
    struct tagRESTRICTION
@@ -416,21 +416,21 @@ Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한
    };
    ```
 
-   이 문제를 해결하려면 **/허용 옵션** 없이 Query.h를 포함하는 파일을 컴파일합니다.
+   이 문제를 해결 하려면 옵션 없이 resource.h를 포함 하는 파일을 컴파일합니다. **`/permissive-`**
 
-- um/cellularapi_oem.h에서 발행
+- Um/cellularapi_oem에 문제가 있습니다.
 
-   **/허용 컴파일러** 스위치를 사용하는 경우 정방향 `enum UICCDATASTOREACCESSMODE` 선언은 경고를 일으킵니다.
+   컴파일러 스위치를 사용 하는 경우 **`/permissive-`** 의 전방 선언으로 `enum UICCDATASTOREACCESSMODE` 인해 경고가 발생 합니다.
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   범위가 변경되지 않은 열거형의 전달 선언은 Microsoft 확장입니다. 이 문제를 해결하려면 **/허용 옵션** 없이 cellularapi_oem.h를 포함하는 파일을 컴파일하거나 [/wd](compiler-option-warning-level.md) 옵션을 사용하여 C4471을 무음으로 설정합니다.
+   범위가 없는 열거형의 전방 선언은 Microsoft 확장입니다. 이 문제를 해결 하려면 옵션 없이 cellularapi_oem를 포함 하는 파일을 컴파일하거나, 옵션을 사용 하 여 **`/permissive-`** [**`/wd`**](compiler-option-warning-level.md) 경고 C4471 합니다.
 
-- um/omscript.h에서 발행
+- Um/omscript .h의 문제
 
-   C++03에서는 문자열 리터럴에서 BSTR(형식 def에서 'wchar_t*'로 변환)은 더 이상 사용되지 않지만 허용됩니다. C++11에서는 변환이 더 이상 허용되지 않습니다.
+   C + + 03에서 문자열 리터럴을 BSTR (' wchar_t * '로의 typedef)로 변환 하는 것은 더 이상 사용 되지 않지만 허용 됩니다. C + + 11에서는 변환이 더 이상 허용 되지 않습니다.
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -439,25 +439,25 @@ Windows 2018년 4월 업데이트 SDK(10.0.17134.0)에서 릴리스된 이러한
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   이 문제를 해결하려면 **/허용 옵션없이** omscript.h를 포함하는 파일을 컴파일하거나 **/Zc:strictStrings-를** 대신 사용합니다.
+   이 문제를 해결 하려면 옵션 없이 omscript. h를 포함 하는 파일을 컴파일하거나 **`/permissive-`** 대신을 사용 **`/Zc:strictStrings-`** 합니다.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
-Visual Studio 2017 버전 15.5 이상 버전에서는 다음 절차를 사용합니다.
+Visual Studio 2017 버전 15.5 이상 버전에서 다음 절차를 따르십시오.
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다.
 
-1. 구성 **속성** > **C/C++** > **언어** 속성 페이지를 선택합니다.
+1. **구성 속성**  >  **C/c + +**  >  **언어** 속성 페이지를 선택 합니다.
 
-1. 적합성 **모드** 속성 값을 **예(/허용-)로**변경합니다. **확인을** 선택하거나 **적용을** 선택하여 변경 내용을 저장합니다.
+1. **규칙 모드** 속성 값을 **예 (/permissive-)** 로 변경 합니다. **확인** 또는 **적용** 을 선택 하 여 변경 내용을 저장 합니다.
 
-Visual Studio 2017 버전 15.5 이전 버전에서는 다음 절차를 사용합니다.
+Visual Studio 2017 버전 15.5 이전 버전에서 다음 절차를 사용 합니다.
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다.
 
-1. 구성 **속성** > **C/C++** > 명령줄 속성 페이지를**선택합니다.**
+1. **구성 속성**  >  **C/c + +**  >  **명령줄** 속성 페이지를 선택 합니다.
 
-1. **추가 옵션** 상자에 **/허용 컴파일러** 옵션을 입력합니다. **확인을** 선택하거나 **적용을** 선택하여 변경 내용을 저장합니다.
+1. **추가 옵션** 상자에 **/permissive-** 컴파일러 옵션을 입력 합니다. **확인** 또는 **적용** 을 선택 하 여 변경 내용을 저장 합니다.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
 

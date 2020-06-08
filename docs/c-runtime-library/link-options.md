@@ -30,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351108"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506860"
 ---
 # <a name="link-options"></a>링크 옵션
 
@@ -43,7 +43,7 @@ CRT 라이브러리 디렉터리에는 코드를 변경하지 않고도 특정 C
 
 이러한 개체의 CLR 순수 모드 버전은 Visual Studio 2015에서 사용되지 않으며 Visual Studio 2017에서 지원되지 않습니다. 네이티브 및 /clr 코드에는 일반 버전을 사용합니다.
 
-|네이티브 및 /clr|순수 모드|Description|
+|네이티브 및 /clr|순수 모드|설명|
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|기본 파일 변환 모드를 이진으로 설정합니다. [_fmode](../c-runtime-library/fmode.md)를 참조하세요.|
 |chkstk.obj|해당 없음|CRT를 사용하지 않는 경우 스택 검사 및 alloca를 지원합니다.|
@@ -51,7 +51,7 @@ CRT 라이브러리 디렉터리에는 코드를 변경하지 않고도 특정 C
 |exe_initialize_mta.lib|해당 없음|글로벌 스마트 포인터에서 COM 개체를 사용할 수 있도록 EXE 시작 시 MTA 아파트를 초기화합니다. 이 옵션은 종료하는 동안 MTA 아파트 참조를 누출하므로 DLL에 사용하지 마세요. 이 링크는 combase.h를 포함하고 _EXE_INITIALIZE_MTA를 정의하는 것과 같습니다. |
 |fp10.obj|해당 없음|기본 정밀도 컨트롤을 64비트로 변경합니다. [부동 소수점 지원](../c-runtime-library/floating-point-support.md)을 참조하세요.|
 |invalidcontinue.obj|pinvalidcontinue.obj|아무 작업도 수행하지 않는 기본 잘못된 매개 변수 처리기를 설정합니다. 즉, CRT 함수에 전달된 잘못된 매개 변수는 단순히 errno를 설정하고 오류 결과를 반환합니다.|
-|legacy_stdio_float_rounding.obj|해당 없음|Windows 10 19041 유니버설 C 런타임을 사용하여 부동 점 값(예: [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)사용 시)을 인쇄하는 것이 수정되었습니다. 이제 정확하게 표현 가능한 부동 점 숫자를 반올림하고 [fesetenv가](../c-runtime-library/reference/fesetenv1.md)요청한 부동 점 반올림을 존중합니다. 이 동작 업데이트는 Visual Studio 2019 버전 16.2 이상에서 사용할 수 있습니다. 레거시 동작은 이전 버전의 Visual Studio에서 사용하거나 이 링크 옵션을 제공하여 사용됩니다.|
+|legacy_stdio_float_rounding .obj|해당 없음|Windows 10 19041 유니버설 C 런타임에 대해 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)를 사용 하는 경우와 같이 부동 소수점 값 인쇄는 수정 되었습니다. 이제 정확 하 게 표현 가능한 부동 소수점 숫자를 정확 하 게 반올림 하 고 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)에서 요청 하는 부동 소수점 반올림을 고려 합니다. 이 동작 업데이트는 Visual Studio 2019 버전 16.2 이상에서 사용할 수 있습니다. 레거시 동작은 이전 버전의 Visual Studio에서 사용 되거나이 링크 옵션을 제공 하 여 사용 됩니다.|
 |loosefpmath.obj|해당 없음|부동 소수점 코드에서 비정상적인 값을 허용하도록 합니다.|
 |newmode.obj|pnewmode.obj|[malloc](../c-runtime-library/reference/malloc.md)가 실패 시 새 처리기를 호출하도록 합니다. [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) 및 [realloc](../c-runtime-library/reference/realloc.md)를 참조하세요.|
 |noarg.obj|pnoarg.obj|argc 및 argv의 모든 처리를 사용하지 않도록 설정합니다.|
