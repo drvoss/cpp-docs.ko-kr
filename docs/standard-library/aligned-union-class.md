@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae6ef629535238b9406216afd9f680a5c1e1afe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690103"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623797"
 ---
 # <a name="aligned_union-class"></a>aligned_union 클래스
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-*Len* \
+*길이가*\
 공용 구조체에서 가장 큰 형식의 맞춤 값입니다.
 
-*형식*\
+*종류*\
 기본 공용 구조체의 고유 형식입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿을 사용 하 여 초기화 되지 않은 저장소에 공용 구조체를 저장 하는 데 필요한 맞춤 및 크기를 가져옵니다. 멤버 typedef `type` *형식*에 나열 된 모든 형식의 저장소에 적합 한 POD 형식을 이름으로 합니다. 최소 크기는 *Len*입니다. 형식 `std::size_t`의 정적 멤버 `alignment_value`에는 *형식*에 나열 된 모든 형식에 필요한 가장 엄격한 맞춤이 포함 되어 있습니다.
+클래스 템플릿을 사용 하 여 초기화 되지 않은 저장소에 공용 구조체를 저장 하는 데 필요한 맞춤 및 크기를 가져옵니다. 멤버 typedef는 `type` *형식*에 나열 된 모든 형식의 저장소에 적합 한 POD 형식의 이름을, 최소 크기는 *Len*입니다. 형식의 정적 멤버는 `alignment_value` `std::size_t` *형식*에 나열 된 모든 형식에 필요한 가장 엄격한 맞춤을 포함 합니다.
 
 ## <a name="example"></a>예제
 
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of 클래스](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[alignment_of 클래스](alignment-of-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c2af00ac32b3013820a3109783c4bf7eb42ec445
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302317"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623726"
 ---
 # <a name="alignment_of-class"></a>alignment_of 클래스
 
@@ -30,17 +30,17 @@ struct alignment_of;
 *Ty*\
 형식이 쿼리입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 형식 쿼리는 *Ty*형식의 맞춤 값을 보유 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits >
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[<type_traits>](../standard-library/type-traits.md)\
-[aligned_storage 클래스](../standard-library/aligned-storage-class.md)
+[<type_traits>](type-traits.md)\
+[aligned_storage 클래스](aligned-storage-class.md)

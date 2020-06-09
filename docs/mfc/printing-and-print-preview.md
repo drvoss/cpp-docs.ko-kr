@@ -8,29 +8,29 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 70740922ec7f2030d14eebee72144a373550aacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26ced8172a36d34883d6b65997bb3a81fdc3c319
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625273"
 ---
 # <a name="printing-and-print-preview"></a>인쇄 및 인쇄 미리 보기
 
-MFC 클래스를 통해 프로그램의 문서에 대 한 인쇄 및 인쇄 미리 보기를 지 원하는 [CView](../mfc/reference/cview-class.md)합니다. 기본 인쇄 및 인쇄 미리 보기에 대 한 뷰 클래스를 재정의 하기만 [OnDraw](../mfc/reference/cview-class.md#ondraw) 멤버 함수를 계속 수행 해야 합니다. 해당 함수는 실제 프린터에 대 한 프린터 장치 컨텍스트를 화면에 보기 그리거나 화면에서 프린터를 시뮬레이션 하는 장치 컨텍스트에 대 수입니다.
+MFC는 [CView](reference/cview-class.md)클래스를 통해 프로그램의 문서에 대 한 인쇄 및 인쇄 미리 보기를 지원 합니다. 기본 인쇄 및 인쇄 미리 보기의 경우 보기 클래스의 [OnDraw](reference/cview-class.md#ondraw) 멤버 함수를 재정의 하면 됩니다. 이 함수는 화면의 보기, 실제 프린터의 프린터 장치 컨텍스트 또는 화면에서 프린터를 시뮬레이트하는 장치 컨텍스트에 그릴 수 있습니다.
 
-또한 다중 페이지 문서 인쇄 및 페이지를 매기에 인쇄 된 문서에 머리글 및 바닥글을 추가 하려면 미리 보기를 관리 하는 코드를 추가할 수 있습니다.
+또한 여러 페이지 문서 인쇄 및 미리 보기를 관리 하는 코드를 추가 하 고 인쇄 된 문서의 페이지를 표시 하 고 머리글 및 바닥글을 추가할 수 있습니다.
 
-다음이의 문서 인쇄가 Microsoft Foundation 클래스 라이브러리 (MFC)에서 구현 되는 방법 및 프레임 워크에 이미 기본 제공 인쇄 아키텍처를 활용 하는 방법을 설명 합니다. 문서는 또한 MFC 인쇄 미리 보기 기능을 쉽게 구현에서 지 원하는 방법 및 사용 하 여 해당 기능을 수정 하는 방법에 설명 합니다.
+이 문서 패밀리에서는 MFC 라이브러리 (MFC)에서 인쇄를 구현 하는 방법 및 프레임 워크에 이미 기본 제공 되는 인쇄 아키텍처를 활용 하는 방법에 대해 설명 합니다. 또한 MFC에서 인쇄 미리 보기 기능을 쉽게 구현 하는 방법과이 기능을 사용 하 고 수정 하는 방법을 설명 합니다.
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아야 할 내용
 
-- [인쇄](../mfc/printing.md)
+- [인쇄](printing.md)
 
-- [인쇄 미리 보기 아키텍처](../mfc/print-preview-architecture.md)
+- [인쇄 미리 보기 아키텍처](print-preview-architecture.md)
 
-- [샘플](../overview/visual-cpp-samples.md)
+- [예제](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)
+[사용자 인터페이스 요소](user-interface-elements-mfc.md)

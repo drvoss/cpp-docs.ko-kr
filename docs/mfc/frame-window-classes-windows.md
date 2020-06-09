@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-ms.openlocfilehash: 3e56bd0f449992118db75a44c39b6e0e15cb0d86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c0a1e1e93433e0fbe07c11eb350216173e74d84
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392795"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625847"
 ---
 # <a name="frame-window-classes-windows"></a>프레임 창 클래스(Windows)
 
-프레임 창은 windows 응용 프로그램 또는 응용 프로그램의 일부 프레임입니다. 프레임 창에는 일반적으로 뷰, 도구 모음 및 상태 표시줄과 같은 다른 창을 포함 합니다. 경우 `CMDIFrameWnd`를 포함할 수 `CMDIChildWnd` 직접 개체입니다.
+프레임 창은 응용 프로그램 또는 응용 프로그램의 일부를 프레임으로 하는 창입니다. 프레임 창에는 일반적으로 보기, 도구 모음 및 상태 표시줄과 같은 다른 창이 포함 됩니다. 의 경우 `CMDIFrameWnd` 개체를 간접적으로 포함할 수 있습니다 `CMDIChildWnd` .
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-SDI 응용 프로그램의 주 프레임 창에 대 한 기본 클래스입니다. 기본 다른 모든 프레임 창 클래스에 대 한 클래스는 또한만 합니다.
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+SDI 응용 프로그램의 주 프레임 창에 대 한 기본 클래스입니다. 또한 다른 모든 프레임 창 클래스에 대 한 기본 클래스입니다.
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
 MDI 응용 프로그램의 주 프레임 창에 대 한 기본 클래스입니다.
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
 MDI 응용 프로그램의 문서 프레임 창에 대 한 기본 클래스입니다.
 
-[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
-일반적으로 부동 도구 모음을 표시 하는 절반 높이 프레임 창입니다.
+[CMiniFrameWnd](reference/cminiframewnd-class.md)<br/>
+절반 높이 프레임 창은 일반적으로 부동 도구 모음 주위에 표시 됩니다.
 
-[클래스에서 파생하는 대신](../mfc/reference/coleipframewnd-class.md)<br/>
-준비에서 서버 문서를 편집 하는 경우 프레임 창 보기를 제공 합니다.
+[클래스에서 파생하는 대신](reference/coleipframewnd-class.md)<br/>
+서버 문서를 편집 하는 동안 보기에 대 한 프레임 창을 제공 합니다.
 
-## <a name="related-class"></a>관련된 클래스
+## <a name="related-class"></a>관련 클래스
 
-클래스 `CMenu` 에 응용 프로그램의 메뉴에 액세스할 수 있는 인터페이스를 제공 합니다. 런타임에 메뉴를 동적으로 조작 하는 데 유용 예를 들어, 추가 또는 컨텍스트에 따라 메뉴 항목을 삭제 하는 경우. 메뉴는 대부분의 프레임 창에서 사용한 있지만 데도 사용할 수 있습니다 다른 비 자식 창 및 대화 상자를 사용 하 여 합니다.
+클래스 `CMenu` 는 응용 프로그램의 메뉴에 액세스 하는 데 사용할 수 있는 인터페이스를 제공 합니다. 런타임에 동적으로 메뉴를 조작 하는 데 유용 합니다. 예를 들어 컨텍스트에 따라 메뉴 항목을 추가 하거나 삭제 하는 경우입니다. 메뉴는 프레임 창에서 가장 자주 사용 되지만 대화 상자 및 기타 비 자식 창 에서도 사용할 수 있습니다.
 
-[CMenu](../mfc/reference/cmenu-class.md)<br/>
-캡슐화를 `HMENU` 응용 프로그램의 메뉴 모음 및 팝업 메뉴에 대 한 핸들입니다.
+[CMenu](reference/cmenu-class.md)<br/>
+`HMENU`응용 프로그램의 메뉴 모음 및 팝업 메뉴에 대 한 핸들을 캡슐화 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 개요](../mfc/class-library-overview.md)
+[클래스 개요](class-library-overview.md)
