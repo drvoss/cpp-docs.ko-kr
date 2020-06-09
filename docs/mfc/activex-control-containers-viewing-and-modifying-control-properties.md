@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617365"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정
 
@@ -21,7 +21,7 @@ ms.locfileid: "70907800"
 
 ActiveX 컨트롤 컨테이너 애플리케이션에 포함된 컨트롤이 사용될 경우, 리소스 편집기에서 컨트롤의 속성을 보고 수정할 수 있습니다. 또한 디자인 타임 중에 리소스 편집기를 사용해서 속성 값을 설정할 수도 있습니다. 그런 다음 리소스 편집기는 프로젝트의 리소스 파일에 이러한 값을 자동으로 저장합니다. 그런 다음에는 이 컨트롤의 어떤 인스턴스라도 해당 속성이 이러한 값으로 초기화됩니다.
 
-이 절차에서는 사용자가 컨트롤을 사용자의 프로젝트에 삽입했다고 가정합니다. 자세한 내용은 [ActiveX 컨트롤 컨테이너: 컨트롤 컨테이너 응용 프로그램](../mfc/inserting-a-control-into-a-control-container-application.md)에 컨트롤 삽입
+이 절차에서는 사용자가 컨트롤을 사용자의 프로젝트에 삽입했다고 가정합니다. 자세한 내용은 [ActiveX 컨트롤 컨테이너: 컨트롤 컨테이너 응용 프로그램에 컨트롤 삽입](inserting-a-control-into-a-control-container-application.md)을 참조 하세요.
 
 컨트롤의 속성을 확인하는 첫 번째 단계는 프로젝트의 대화 상자 템플릿에 컨트롤 인스턴스를 추가하는 것입니다.
 
@@ -39,6 +39,6 @@ ActiveX 컨트롤 컨테이너 애플리케이션에 포함된 컨트롤이 사�
 
 **속성** 대화 상자를 사용 하 여 새 속성을 즉시 수정 하 고 테스트할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[ActiveX 컨트롤 컨테이너](../mfc/activex-control-containers.md)
+[ActiveX 컨트롤 컨테이너](activex-control-containers.md)

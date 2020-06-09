@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425702"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626125"
 ---
 # <a name="mfc-library-versions"></a>MFC 라이브러리 버전
 
@@ -77,9 +77,9 @@ Mfc 헤더 파일에는 MFC 라이브러리, Win32 라이브러리, OLE 라이�
 
 MFC ANSI/MBCS 라이브러리 버전은 ASCII와 같은 싱글바이트 문자 집합과 Shift-jis와 같은 멀티 바이트 문자 집합을 모두 지원 합니다. MFC 유니코드 라이브러리 버전은 UTF-16LE 와이드 문자로 인코딩된 형식으로 유니코드를 지원 합니다. U t f-8로 인코딩된 유니코드 지원을 위해 MFC의 ANSI/MBCS 라이브러리 버전을 사용 합니다.
 
-IDE에서 싱글바이트, 멀티 바이트 또는 와이드 문자 유니코드 문자열 및 문자 지원을 사용 하도록 프로젝트 구성을 설정 하려면 **프로젝트 속성** 대화 상자를 사용 합니다. **구성 속성** > **일반** 페이지에서 **문자 집합** 속성을 **설정 안 함** 으로 설정 하 여 싱글바이트 문자 집합을 사용 합니다. 멀티 **바이트** 문자 집합을 사용 하도록 속성을 설정 하거나 **유니코드 문자 집합** 을 사용 하 여 u t f-16으로 인코딩된 유니코드를 사용 하도록 설정 합니다.
+IDE에서 싱글바이트, 멀티 바이트 또는 와이드 문자 유니코드 문자열 및 문자 지원을 사용 하도록 프로젝트 구성을 설정 하려면 **프로젝트 속성** 대화 상자를 사용 합니다. **구성 속성**  >  **일반** 페이지에서 **문자 집합** 속성을 **설정 안 함** 으로 설정 하 여 싱글바이트 문자 집합을 사용 하도록 설정 합니다. 멀티 **바이트** 문자 집합을 사용 하도록 속성을 설정 하거나 **유니코드 문자 집합** 을 사용 하 여 u t f-16으로 인코딩된 유니코드를 사용 하도록 설정 합니다.
 
-MFC 프로젝트는 유니코드 \_전처리기 기호를 사용 하 여 u t f-16 와이드 문자 유니코드 지원을 나타내고 mbcs를 \_하 여 MBCS 지원을 표시 합니다. 이러한 옵션은 프로젝트에서 함께 사용할 수 없습니다.
+MFC 프로젝트에서는 전처리기 기호 유니코드를 사용 \_ 하 여 utf-16 와이드 문자 유니코드 지원과 mbcs \_ 지원을 나타내는 mbcs를 사용 합니다. 이러한 옵션은 프로젝트에서 함께 사용할 수 없습니다.
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC 정적 라이브러리 명명 규칙
 
@@ -101,10 +101,10 @@ MFC에 대 한 정적 라이브러리는 다음 명명 규칙을 사용 합니�
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 정적 링크 라이브러리, 릴리스 버전|
 |NAFXCWD.LIB|MFC 정적 링크 라이브러리, 디버그 버전|
-|UAFXCW.LIB|유니코드를 지 원하는 MFC 정적 연결 라이브러리, 릴리스 버전|
-|UAFXCWD.LIB|유니코드를 지 원하는 MFC 정적 연결 라이브러리, 디버그 버전|
-|AFXNMCD.LIB|Mfc 대화 상자 컨트롤이 없는 MFC 정적 링크 라이브러리, 릴리스 버전|
-|AFXNMCDD.LIB|Mfc 대화 상자 컨트롤이 없는 MFC 정적 링크 라이브러리, 디버그 버전|
+|UAFXCW. LIB|유니코드를 지 원하는 MFC 정적 연결 라이브러리, 릴리스 버전|
+|UAFXCWD. LIB|유니코드를 지 원하는 MFC 정적 연결 라이브러리, 디버그 버전|
+|AFXNMCD. LIB|Mfc 대화 상자 컨트롤이 없는 MFC 정적 링크 라이브러리, 릴리스 버전|
+|AFXNMCDD. LIB|Mfc 대화 상자 컨트롤이 없는 MFC 정적 링크 라이브러리, 디버그 버전|
 
 기본 이름 및 .pdb 확장명을 가진 디버거 파일은 각 정적 라이브러리에도 사용할 수 있습니다.
 
@@ -129,16 +129,16 @@ MFC Dll에는 이진 호환성을 나타내는 *버전* 번호가 있습니다. 
 
 응용 프로그램에서 든, MFC 확장명 DLL에서 든 상관 없이 MFC의 공유 DLL 버전에 동적으로 연결 하는 경우 일치 하는 MFC*버전*을 포함 해야 합니다. 제품을 배포할 때 DLL 또는 MFC*버전*.dll.
 
-응용 프로그램과 함께 배포할 수 C++ 있는 visual dll 목록은 [Microsoft Visual Studio 2017 및 Microsoft Visual Studio 2017 SDK (유틸리티 및 Buildserver 파일 포함)](/visualstudio/productinfo/2017-redistribution-vs) 또는 [Visual Studio 2019 용 배포 가능 코드](/visualstudio/releases/2019/redistribution)에 대 한 배포 가능 코드를 참조 하세요.
+응용 프로그램과 함께 배포할 수 있는 Visual C++ Dll 목록은 [Microsoft Visual Studio 2017 및 Microsoft Visual Studio 2017 SDK 용 배포 가능 코드 (유틸리티 및 BuildServer 파일 포함)](/visualstudio/productinfo/2017-redistribution-vs) 또는 [Visual Studio 2019 용 배포 가능 코드](/visualstudio/releases/2019/redistribution)를 참조 하세요.
 
 MFC의 MBCS 및 유니코드 지원에 대 한 자세한 내용은 [유니코드 및 mbcs (멀티 바이트 문자 집합) 지원](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)을 참조 하세요.
 
 ## <a name="dynamic-link-library-support"></a>동적 연결 라이브러리 지원
 
-정적 또는 공유 동적 MFC 라이브러리를 사용 하 여 MFC 실행 파일이 나 mfc가 아닌 실행 파일에서 사용할 수 있는 Dll을 만들 수 있습니다. 이를 "일반 Dll" 또는 "일반 MFC Dll" 이라고 하며,이를 MFC 응용 프로그램 및 MFC Dll 에서만 사용할 수 있는 MFC 확장명 Dll과 구분할 수 있습니다. MFC 정적 라이브러리를 사용 하 여 빌드한 DLL은 **USRDLL\_** 전처리기 기호를 정의 하기 때문에 이전 참조에서 USRDLL 라고도 합니다. MFC 공유 Dll을 사용 하는 DLL은 **AFXDLL\_** 전처리기 기호를 정의 하기 때문에 이전 참조에서 AFXDLL 라고도 합니다.
+정적 또는 공유 동적 MFC 라이브러리를 사용 하 여 MFC 실행 파일이 나 mfc가 아닌 실행 파일에서 사용할 수 있는 Dll을 만들 수 있습니다. 이를 "일반 Dll" 또는 "일반 MFC Dll" 이라고 하며,이를 MFC 응용 프로그램 및 MFC Dll 에서만 사용할 수 있는 MFC 확장명 Dll과 구분할 수 있습니다. Mfc 정적 라이브러리를 사용 하 여 작성 된 DLL을 이전 참조의 USRDLL 라고도 합니다 .이는 MFC DLL 프로젝트가 전처리기 기호 ** \_ USRDLL**를 정의 하기 때문입니다. MFC 공유 Dll을 사용 하는 DLL은 전처리기 기호 ** \_ AFXDLL**를 정의 하기 때문에 이전 참조에서 AFXDLL 라고도 합니다.
 
 MFC 정적 라이브러리에 연결 하 여 DLL 프로젝트를 만드는 경우 MFC 공유 Dll 없이 DLL을 배포할 수 있습니다. DLL 프로젝트가 가져오기 라이브러리 MFC*버전*에 연결 되는 경우 LIB 또는 MFC*버전*의 .lib 인 경우 일치 하는 MFC 공유 DLL mfc*버전*을 배포 해야 합니다. Dll 또는 MFC*버전*.DLL을 dll과 함께 사용 합니다. 자세한 내용은 [dll](../build/dlls-in-visual-cpp.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[일반 MFC 항목](../mfc/general-mfc-topics.md)
+[일반 MFC 항목](general-mfc-topics.md)

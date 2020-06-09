@@ -9,35 +9,35 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 69270cc5663406f2c5d38ffccdbd35f39298a3d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66a9ef7fd49ea81ddac4779aa6d1c3f12fbe4c55
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354190"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617372"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>포함된 MonthCalendar 컨트롤 액세스
 
-포함된 월 캘린더 제어 개체는 `CDateTimeCtrl` [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) 멤버 함수를 호출하여 개체에서 액세스할 수 있습니다.
+포함 된 month calendar 컨트롤 개체는 `CDateTimeCtrl` [Getmonthcalctrl](reference/cdatetimectrl-class.md#getmonthcalctrl) 멤버 함수를 호출 하 여 개체에서 액세스할 수 있습니다.
 
 > [!NOTE]
-> 포함된 월 달력 컨트롤은 날짜 및 시간 선택기 컨트롤에 **DTS_UPDOWN** 스타일 집합이 없는 경우에만 사용됩니다.
+> 포함 된 month calendar 컨트롤은 날짜 및 시간 선택 컨트롤에 **DTS_UPDOWN** 스타일이 설정 되어 있지 않은 경우에만 사용 됩니다.
 
-이 기능은 포함된 컨트롤이 표시되기 전에 특정 특성을 수정하려는 경우에 유용합니다. 이렇게 하려면 **DTN_DROPDOWN** 알림을 처리하고, 월 캘린더 [컨트롤(CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)사용)을 검색하고 수정합니다. 안타깝게도 월 달력 컨트롤은 영구적이지 않습니다.
+이는 포함 된 컨트롤이 표시 되기 전에 특정 특성을 수정 하려는 경우에 유용 합니다. 이 작업을 수행 하려면 **DTN_DROPDOWN** 알림을 처리 하 고 month calendar 컨트롤 ( [CDateTimeCtrl:: getmonthcalctrl](reference/cdatetimectrl-class.md#getmonthcalctrl)사용)을 검색 한 후 수정 합니다. 그러나 month calendar 컨트롤은 영구적이 지 않습니다.
 
-즉, 사용자가 월 캘린더 컨트롤의 표시를 요청하면 새 월 캘린더 컨트롤이 **만들어집니다(DTN_DROPDOWN** 알림 이전). 사용자가 해제하면 컨트롤이 DTN_CLOSEUP **알림** 후 소멸됩니다. 즉, 포함된 컨트롤이 표시되기 전에 수정한 모든 특성은 포함된 컨트롤을 해제할 때 손실됩니다.
+즉, 사용자가 month calendar 컨트롤의 표시를 요청 하면 새 month calendar 컨트롤이 생성 됩니다 ( **DTN_DROPDOWN** 알림 이전). 사용자가 해제할 때 컨트롤이 제거 됩니다 ( **DTN_CLOSEUP** 알림 이후). 즉, 포함 된 컨트롤이 표시 되기 전에 수정 하는 모든 특성은 포함 된 컨트롤이 해제 될 때 손실 됩니다.
 
-다음 예제에서는 **DTN_DROPDOWN** 알림에 대 한 처리기를 사용 하 여이 절차를 보여 줍니다. 코드는 [SetMonthCalColor를](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor)호출하여 월 달력 컨트롤의 배경 색을 회색으로 변경합니다. 코드는 다음과 같습니다.
+다음 예제에서는 **DTN_DROPDOWN** 알림에 대 한 처리기를 사용 하 여이 절차를 보여 줍니다. 이 코드는 [Setmonthcalcolor](reference/cdatetimectrl-class.md#setmonthcalcolor)에 대 한 호출을 사용 하 여 month calendar 컨트롤의 배경색을 회색으로 변경 합니다. 코드는 다음과 같습니다.
 
-[!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#5](codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
 
-앞에서 설명했듯이 포함된 컨트롤이 해제될 때 두 가지 예외를 제외하고 월 달력 컨트롤의 속성에 대한 모든 수정 사항이 손실됩니다. 첫 번째 예외인 월 달력 컨트롤의 색상은 이미 논의되었습니다. 두 번째 예외는 월 달력 컨트롤에서 사용하는 글꼴입니다. [CDateTimeCtrl::SetMonthCalFont를](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont)호출하여 기본 글꼴을 수정할 수 있습니다. 다음 예제(날짜 `m_dtPicker` 및 시간 제어 개체는 위치)에서는 한 가지 가능한 메서드를 보여 줍니다.
+앞에서 설명한 것 처럼 month calendar 컨트롤의 속성에 대 한 모든 수정 사항은 포함 된 컨트롤을 해제할 때 두 가지 예외를 제외 하 고 손실 됩니다. Month calendar 컨트롤의 색에 대 한 첫 번째 예외는 이미 설명 되어 있습니다. 두 번째 예외는 month calendar 컨트롤에서 사용 하는 글꼴입니다. 기존 글꼴의 핸들을 전달 하 여 [CDateTimeCtrl:: SetMonthCalFont](reference/cdatetimectrl-class.md#setmonthcalfont)를 호출 하 여 기본 글꼴을 수정할 수 있습니다. 다음 예제 (여기서 `m_dtPicker` 는 날짜 및 시간 컨트롤 개체)는 가능한 한 가지 방법을 보여 줍니다.
 
-[!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#6](codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
 
-에 대한 호출을 `CDateTimeCtrl::SetMonthCalFont`통해 글꼴이 변경되면 다음에 한 달 달력이 표시될 때 새 글꼴이 저장되고 사용됩니다.
+을 호출 하 여 글꼴이 변경 되 면 `CDateTimeCtrl::SetMonthCalFont` 새 글꼴이 저장 되 고 다음에 월 달력이 표시 될 때 사용 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[CDateTimeCtrl 사용](../mfc/using-cdatetimectrl.md)<br/>
-[컨트롤](../mfc/controls-mfc.md)
+[CDateTimeCtrl 사용](using-cdatetimectrl.md)<br/>
+[컨트롤](controls-mfc.md)

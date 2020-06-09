@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153556"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616994"
 ---
 # <a name="deprecated-ansi-apis"></a>사용되지 않는 ANSI API
 
-Microsoft Foundation 클래스 (MFC) 라이브러리는 클래스 및 유니코드 문자 집합을 기반으로 하는 방법으로 마이그레이션합니다. 따라서 여러 MFC 메서드의 ANSI 버전이 사용 되지 않습니다. 이후 응용 프로그램에서는 이러한 메서드의 유니코드 버전을 사용 합니다.
+MFC (Microsoft Foundation Class) 라이브러리는 유니코드 문자 집합을 기반으로 하는 클래스 및 메서드로 마이그레이션됩니다. 따라서 여러 MFC 메서드의 ANSI 버전은 더 이상 사용 되지 않습니다. 이후 응용 프로그램에서 이러한 메서드의 유니코드 버전을 사용 합니다.
 
-과 Windows Vista에서 제공 되는 Windows 공용 컨트롤 버전 6.1 사용 하 여 시작 합니다. 다음 ANSI 메서드 사용 되지 않습니다.
+Windows 공용 컨트롤 버전 6.1부터 Windows Vista에서 제공 되는 다음 ANSI 메서드는 더 이상 사용 되지 않습니다.
 
 ## <a name="cbutton-class"></a>CButton 클래스
 
@@ -49,7 +49,7 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
 
 ## <a name="clinkctrl-class"></a>CLinkCtrl 클래스
 
-전체 클래스를 사용 하는 사용 되지 않습니다.
+전체 클래스는 더 이상 사용 되지 않습니다.
 
 ## <a name="clistctrl-class"></a>CListCtrl 클래스
 
@@ -150,6 +150,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[Windows Vista 공용 컨트롤의 빌드 요구 사항](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Windows Vista 공용 컨트롤의 빌드 요구 사항](build-requirements-for-windows-vista-common-controls.md)
