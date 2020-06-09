@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349949"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615417"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 클래스
 
 `SafeInt` 클래스는 `SafeIntException`을 사용하여 수학 연산을 완료할 수 없는 이유를 확인합니다.
 
 > [!NOTE]
-> 이 라이브러리의 최신 버전은 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)에 있습니다.
+> 이 라이브러리의 최신 버전은에 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,13 +35,13 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-속성                                                    | Description
+이름                                                    | Description
 ------------------------------------------------------- | ------------------------------------
-[세이프인트예외::세이프인트예외](#safeintexception) | `SafeIntException` 개체를 만듭니다.
+[SafeIntException:: SafeIntException](#safeintexception) | `SafeIntException` 개체를 만듭니다.
 
 ## <a name="remarks"></a>설명
 
-[SafeInt 클래스](../safeint/safeint-class.md)는 `SafeIntException` 클래스를 사용하는 유일한 클래스입니다.
+[SafeInt 클래스](safeint-class.md)는 `SafeIntException` 클래스를 사용하는 유일한 클래스입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -53,7 +53,7 @@ class SafeIntException;
 
 **네임스페이스:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>세이프인트예외::세이프인트예외
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException:: SafeIntException
 
 `SafeIntException` 개체를 만듭니다.
 
@@ -67,7 +67,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>매개 변수
 
-*코드*<br/>
+*code*<br/>
 [in] 발생한 오류를 설명하는 열거형 데이터 값입니다.
 
 ### <a name="remarks"></a>설명
