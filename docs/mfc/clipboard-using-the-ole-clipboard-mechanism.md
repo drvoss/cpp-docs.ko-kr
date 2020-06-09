@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: da0b99e6c9c803f3c3a4c09d67853649a4bac314
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626053"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>클립보드: OLE 클립보드 메커니즘 사용
 
 OLE는 클립보드를 통해 데이터를 전송 하기 위해 표준 형식 및 일부 OLE 관련 형식을 사용 합니다.
 
-응용 프로그램에서 데이터를 잘라내거나 복사할 때 데이터는 나중에 붙여넣기 작업에서 사용 하기 위해 클립보드에 저장 됩니다. 이 데이터는 다양 한 형식입니다. 사용자가 클립보드에서 데이터를 붙여 넣을 때 응용 프로그램에서 사용할 형식을 선택할 수 있습니다. 사용자가 특별히 붙여넣기를 사용 하 여 특정 형식을 요구 하지 않는 한 가장 많은 정보를 제공 하는 형식을 선택 하도록 응용 프로그램을 작성 해야 합니다. 계속 하기 전에 [데이터 개체 및 데이터 소스 (OLE)](../mfc/data-objects-and-data-sources-ole.md) 항목을 읽어야 할 수 있습니다. 이러한 작업은 데이터 전송의 기본 사항과 응용 프로그램에서이를 구현 하는 방법에 대 한 기본 사항을 설명 합니다.
+응용 프로그램에서 데이터를 잘라내거나 복사할 때 데이터는 나중에 붙여넣기 작업에서 사용 하기 위해 클립보드에 저장 됩니다. 이 데이터는 다양 한 형식입니다. 사용자가 클립보드에서 데이터를 붙여 넣을 때 응용 프로그램에서 사용할 형식을 선택할 수 있습니다. 사용자가 특별히 붙여넣기를 사용 하 여 특정 형식을 요구 하지 않는 한 가장 많은 정보를 제공 하는 형식을 선택 하도록 응용 프로그램을 작성 해야 합니다. 계속 하기 전에 [데이터 개체 및 데이터 소스 (OLE)](data-objects-and-data-sources-ole.md) 항목을 읽어야 할 수 있습니다. 이러한 작업은 데이터 전송의 기본 사항과 응용 프로그램에서이를 구현 하는 방법에 대 한 기본 사항을 설명 합니다.
 
 Windows는 클립보드를 통해 데이터를 전송 하는 데 사용할 수 있는 여러 표준 형식을 정의 합니다. 여기에는 메타 파일, 텍스트, 비트맵 등이 포함 됩니다. OLE는 다양 한 OLE 관련 형식도 정의 합니다. 이러한 표준 형식에 지정 된 것 보다 더 자세한 정보를 필요로 하는 응용 프로그램의 경우 고유한 사용자 지정 클립보드 형식을 등록 하는 것이 좋습니다. 이 작업을 수행 하려면 Win32 API 함수 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 를 사용 합니다.
 
@@ -31,18 +31,18 @@ Windows는 클립보드를 통해 데이터를 전송 하는 데 사용할 수 �
 
 [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아야 할 내용
 
-- [데이터 복사 및 붙여넣기](../mfc/clipboard-copying-and-pasting-data.md)
+- [데이터 복사 및 붙여넣기](clipboard-copying-and-pasting-data.md)
 
-- [다른 형식 추가](../mfc/clipboard-adding-other-formats.md)
+- [다른 형식 추가](clipboard-adding-other-formats.md)
 
-- [Windows 클립보드 사용](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Windows 클립보드 사용](clipboard-using-the-windows-clipboard.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE](ole-background.md)
 
-- [OLE 데이터 개체 및 데이터 원본 및 균일 한 데이터 전송](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE 데이터 개체 및 데이터 원본 및 균일 한 데이터 전송](data-objects-and-data-sources-ole.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클립보드](../mfc/clipboard.md)
+[클립보드](clipboard.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: bf243089ee8f4e26930e183b007a108e38f444e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4e4c5ab0167d49c9ee892f39f18892edd004c3f6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623698"
 ---
 # <a name="allocator_variable_size-class"></a>allocator_variable_size 클래스
 
-[max_variable_size](../standard-library/max-variable-size-class.md)에서 관리되는 길이를 사용하는 [cache_freelist](../standard-library/cache-freelist-class.md) 형식의 캐시를 사용하여 *Type* 형식의 개체에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다.
+[Max_variable_size](max-variable-size-class.md)에서 길이가 관리 되는 [cache_freelist](cache-freelist-class.md) 형식의 캐시를 사용 하 여 *형식 형식의 개체* 에 대 한 저장소 할당 및 해제를 관리 하는 개체에 대해 설명 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,14 +35,14 @@ class allocator_variable_size;
 
 ## <a name="remarks"></a>설명
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로는 다음 명령문에서 이 클래스를 *name* 매개 변수로 전달합니다.`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl) 매크로는 다음 문에서이 클래스를 *name* 매개 변수로 전달 합니다.`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<allocators>
+**헤더:**\<allocators>
 
 **네임스페이스:** stdext
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

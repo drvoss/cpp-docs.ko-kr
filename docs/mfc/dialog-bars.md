@@ -8,29 +8,29 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052e0b8a085c052f73d3c6540521f57fdfbb9c51
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389637"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624892"
 ---
 # <a name="dialog-bars"></a>대화 상자 모음
 
-대화 상자 막대는 도구 모음에서 일종의 [컨트롤 막대](../mfc/control-bars.md) 하는 모든 종류의 컨트롤을 포함할 수 있습니다. 모덜리스 대화 상자에서의 특징을 있기 때문에 [CDialogBar](../mfc/reference/cdialogbar-class.md) 개체는 더 강력한 도구 모음을 제공 합니다.
+대화 상자 모음은 모든 종류의 컨트롤을 포함할 수 있는 일종의 [컨트롤 모음](control-bars.md) 입니다. 모덜리스 대화 상자의 특성을 가지 므로 [CDialogBar](reference/cdialogbar-class.md) 개체는 보다 강력한 도구 모음을 제공 합니다.
 
-여러 키 간에 차이가 도구 모음 및 `CDialogBar` 개체입니다. A `CDialogBar` 시각적 개체를 사용 하 여 만들 수 있는 대화 상자 템플릿 리소스에서 개체가 만들어질 C++ 대화 상자 편집기 및 모든 종류의 Windows 컨트롤을 포함할 수 있습니다. 사용자는 컨트롤을 컨트롤에서 탭 수입니다. 및 부모 조정 된 경우이를 그대로 둘 수도 또는 부모 프레임 창의 일부를 사용 하 여 대화 상자 막대에 맞게 맞춤 스타일을 지정할 수 있습니다. 다음 그림에는 다양 한 컨트롤을 사용 하 여 대화 상자 막대를 보여 줍니다.
+도구 모음과 개체 간에는 몇 가지 주요 차이점이 있습니다 `CDialogBar` . `CDialogBar`개체는 대화 상자 템플릿 리소스에서 생성 되며, Visual C++ 대화 상자 편집기를 사용 하 여 만들 수 있으며 모든 종류의 Windows 컨트롤을 포함할 수 있습니다. 사용자가 컨트롤에서 컨트롤로 tab 키를 누를 수 있습니다. 또한 맞춤 스타일을 지정 하 여 부모 프레임 창의 모든 부분을 포함 하는 대화 상자 표시줄을 정렬 하거나 부모 크기를 조정 하는 경우에는 그대로 둘 수 있습니다. 다음 그림은 다양 한 컨트롤을 포함 하는 대화 상자 모음을 보여 줍니다.
 
-![VC 대화 상자 막대](../mfc/media/vc378t1.gif "VC 대화 상자 모음") <br/>
-대화 상자 모음
+![VC 대화 상자 막대](../mfc/media/vc378t1.gif "VC 대화 상자 막대") <br/>
+대화 상자 표시줄
 
-작업 측면에서는 `CDialogBar` 개체가 같은 모덜리스 대화 상자를 사용 합니다. 대화 상자 편집기를 사용 하 여 디자인 하 고 대화 상자 리소스를 만들어야 합니다.
+다른 측면에서는 개체 작업을 `CDialogBar` 모덜리스 대화 상자와 함께 사용 하는 것과 같습니다. 대화 상자 편집기를 사용 하 여 대화 상자 리소스를 디자인 하 고 만들 수 있습니다.
 
-대화 상자 막대의 장점 중 하나입니다 단추 이외의 컨트롤을 포함할 수 있습니다.
+대화 상자 표시줄의 virtues 중 하나는 단추 이외의 컨트롤을 포함할 수 있다는 것입니다.
 
-고유한 대화 상자 클래스에서 파생 시키는 것 `CDialog`, 대화 상자 막대에 대 한 사용자 고유의 클래스를 일반적으로 파생 되지 않은 합니다. 같은 대화 상자 막대는 주 창 하는 모든 대화 상자 막대 컨트롤 알림 메시지를 확장 **BN_CLICKED** 하거나 **에서 EN_CHANGE**, 가로 막대형, 주 창 대화의 부모로 전송 됩니다.
+에서 고유한 대화 상자 클래스를 파생 하는 것은 `CDialog` 일반적 이지만 일반적으로 대화 상자 모음에 대 한 고유한 클래스를 파생 하지 않습니다. 대화 상자 모음은 주 창에 대 한 확장 이며 **BN_CLICKED** 또는 **EN_CHANGE**와 같은 대화 상자 컨트롤 알림 메시지는 주 창인 대화 상자 모음의 부모로 전송 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)<br/>
-[샘플](../overview/visual-cpp-samples.md)
+[사용자 인터페이스 요소](user-interface-elements-mfc.md)<br/>
+[예제](../overview/visual-cpp-samples.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078834"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616031"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>예: 메뉴 명령을 통해 대화 상자 표시
 
@@ -25,13 +25,13 @@ ms.locfileid: "80078834"
 
 - 메뉴 명령을 통해 모덜리스 대화 상자를 표시 합니다.
 
-두 샘플 프로시저는 모두 MFC 응용 프로그램을 위한 것 이며 [Mfc 응용 프로그램 마법사](../mfc/reference/mfc-application-wizard.md)를 사용 하 여 만든 응용 프로그램에서 작동 합니다.
+두 샘플 프로시저는 모두 MFC 응용 프로그램을 위한 것 이며 [Mfc 응용 프로그램 마법사](reference/mfc-application-wizard.md)를 사용 하 여 만든 응용 프로그램에서 작동 합니다.
 
 프로시저는 다음 이름 및 값을 사용 합니다.
 
 |항목|이름 또는 값|
 |----------|-------------------|
-|응용 프로그램|DisplayDialog|
+|애플리케이션|DisplayDialog|
 |메뉴 명령입니다.|보기 메뉴의 테스트 명령 명령 ID = ID_VIEW_TEST|
 |대화 상자|테스트 대화 상자 Class = CTestDialog; 헤더 파일 = TestDialog .h; Variable = testdlg, ptestdlg|
 |명령 처리기|OnViewTest|
@@ -44,7 +44,7 @@ ms.locfileid: "80078834"
 
 1. 대화 상자에 대 한 클래스를 추가 합니다. 자세한 내용은 [클래스 추가를](../ide/adding-a-class-visual-cpp.md) 참조 하세요.
 
-1. **클래스 뷰**에서 문서 클래스 (CDisplayDialogDoc)를 선택 합니다. **속성** 창에서 **이벤트** 단추를 클릭합니다. 메뉴 명령의 ID (ID_VIEW_TEST)를 두 번 클릭 합니다. 그런 다음 아래쪽 화살표를 클릭 하 고 **\<추가 > OnViewTest**를 선택 합니다.
+1. **클래스 뷰**에서 문서 클래스 (CDisplayDialogDoc)를 선택 합니다. **속성** 창에서 **이벤트** 단추를 클릭합니다. 메뉴 명령의 ID (ID_VIEW_TEST)를 두 번 클릭 합니다. 그런 다음 아래쪽 화살표를 클릭 하 고 ** \<Add> onviewtest**를 선택 합니다.
 
    MDI 응용 프로그램의 메인프레임에 메뉴 명령을 추가한 경우 응용 프로그램 클래스 (CDisplayDialogApp)를 대신 선택 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "80078834"
    #include "TestDialog.h"
    ```
 
-1. 다음 코드를 추가 하 여 함수를 구현 `OnViewTest` 합니다.
+1. 다음 코드를에 추가 하 여 `OnViewTest` 함수를 구현 합니다.
 
    ```cpp
    CTestDialog testdlg;
@@ -99,7 +99,7 @@ ms.locfileid: "80078834"
    delete m_pTestDlg;
    ```
 
-   - 다음 코드를 추가 하 여 함수를 구현 `OnViewTest` 합니다.
+   - 다음 코드를에 추가 하 여 `OnViewTest` 함수를 구현 합니다.
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -112,5 +112,5 @@ ms.locfileid: "80078834"
 
 ## <a name="see-also"></a>참고 항목
 
-[대화 상자](../mfc/dialog-boxes.md)<br/>
-[모달 및 모덜리스 대화 상자](../mfc/modal-and-modeless-dialog-boxes.md)
+[대화 상자](dialog-boxes.md)<br/>
+[모달 및 모덜리스 대화 상자](modal-and-modeless-dialog-boxes.md)

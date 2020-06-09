@@ -6,12 +6,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: 9e430a86c2ac08bde0f031a4c91b9ae5c6f570f3
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 49d21bd4ce5aae23d5fc4c74567bc1c1d5a43570
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907498"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616231"
 ---
 # <a name="creating-the-month-calendar-control"></a>MonthCalendar 컨트롤 만들기
 
@@ -23,19 +23,19 @@ ms.locfileid: "70907498"
 
 1. 달력 컨트롤의 속성 대화 상자를 사용해서 필요한 스타일을 지정합니다.
 
-1. [멤버 변수 추가 마법사](../ide/adding-a-member-variable-visual-cpp.md) 를 사용 하 여 컨트롤 속성으로 [Cmonthcalctrl](../mfc/reference/cmonthcalctrl-class.md) 형식의 멤버 변수를 추가 합니다. 이 멤버를 사용하여 `CMonthCalCtrl` 멤버 함수를 호출할 수 있습니다.
+1. [멤버 변수 추가 마법사](../ide/adding-a-member-variable-visual-cpp.md) 를 사용 하 여 컨트롤 속성으로 [Cmonthcalctrl](reference/cmonthcalctrl-class.md) 형식의 멤버 변수를 추가 합니다. 이 멤버를 사용하여 `CMonthCalCtrl` 멤버 함수를 호출할 수 있습니다.
 
-1. [클래스 마법사](reference/mfc-class-wizard.md) 를 사용 하 여 처리 해야 하는 월 달력 컨트롤 알림 메시지에 대 한 대화 상자 클래스의 처리기 함수를 매핑할 수 있습니다 ( [메시지를 함수에 매핑](../mfc/reference/mapping-messages-to-functions.md)참조).
+1. [클래스 마법사](reference/mfc-class-wizard.md) 를 사용 하 여 처리 해야 하는 월 달력 컨트롤 알림 메시지에 대 한 대화 상자 클래스의 처리기 함수를 매핑할 수 있습니다 ( [메시지를 함수에 매핑](reference/mapping-messages-to-functions.md)참조).
 
-1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)에서 `CMonthCalCtrl` 개체에 대 한 추가 스타일을 설정 합니다.
+1. [OnInitDialog](reference/cdialog-class.md#oninitdialog)에서 개체에 대 한 추가 스타일을 설정 `CMonthCalCtrl` 합니다.
 
 ### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>비모달 창에서 CMonthCalCtrl을 사용하려면
 
 1. 뷰 또는 창 클래스에서 컨트롤을 정의합니다.
 
-1. 부모 창의 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler 함수 (컨트롤을 서브클래싱 하는 경우)의 초기에는 [oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)에서 컨트롤의 [Create](../mfc/reference/cmonthcalctrl-class.md#create) 멤버 함수를 호출 합니다. 컨트롤의 스타일을 설정합니다.
+1. 부모 창의 [OnCreate](reference/cwnd-class.md#oncreate) handler 함수 (컨트롤을 서브클래싱 하는 경우)의 초기에는 [oninitialupdate](reference/cview-class.md#oninitialupdate)에서 컨트롤의 [Create](reference/cmonthcalctrl-class.md#create) 멤버 함수를 호출 합니다. 컨트롤의 스타일을 설정합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CMonthCalCtrl 사용](../mfc/using-cmonthcalctrl.md)<br/>
-[컨트롤](../mfc/controls-mfc.md)
+[CMonthCalCtrl 사용](using-cmonthcalctrl.md)<br/>
+[컨트롤](controls-mfc.md)

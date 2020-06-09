@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688525"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623673"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 클래스
 
@@ -39,14 +39,14 @@ class allocator<void> {
 };
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스는 **void**형식에 대 한 클래스 템플릿 [할당자](../standard-library/allocator-class.md) 를 명시적으로 특수화 합니다. 생성자와 대입 연산자는 클래스 템플릿과 동일 하 게 동작 하지만 다음 유형만 정의 합니다.
+클래스는 **void**형식에 대 한 클래스 템플릿 [할당자](allocator-class.md) 를 명시적으로 특수화 합니다. 생성자와 대입 연산자는 클래스 템플릿과 동일 하 게 동작 하지만 다음 유형만 정의 합니다.
 
-- [const_pointer](../standard-library/allocator-class.md#const_pointer).
+- [const_pointer](allocator-class.md#const_pointer).
 
-- [pointer](../standard-library/allocator-class.md#pointer).
+- [포인터](allocator-class.md#pointer).
 
-- [value_type](../standard-library/allocator-class.md#value_type).
+- [value_type](allocator-class.md#value_type).
 
-- 다시 [바인딩](../standard-library/allocator-class.md#rebind)중첩 된 클래스 템플릿입니다.
+- 다시 [바인딩](allocator-class.md#rebind)중첩 된 클래스 템플릿입니다.
