@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58546d26293ad48a39a36b98ba4bfdabb68385ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405822"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622691"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance 멤버 함수
 
-[CWinApp](../mfc/reference/cwinapp-class.md) 클래스의 [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) 멤버 함수는 사용자가 응용 프로그램을 종료하는 경우와 같이 응용 프로그램 복사본의 종료 시마다 호출됩니다.
+[CWinApp](reference/cwinapp-class.md) 클래스의 [exitinstance](reference/cwinapp-class.md#exitinstance) 멤버 함수는 응용 프로그램 복사본이 종료 될 때마다 (일반적으로 사용자가 응용 프로그램을 종료 한 결과로) 호출 됩니다.
 
-그래픽 장치 인터페이스(GDI) 메모리 해제나 프로그램 실행 중 사용된 메모리 할당 해제와 같은 별도의 정리 작업이 필요한 경우 `ExitInstance`를 재정의합니다. 문서나 뷰와 같은 표준 항목의 정리는 프레임워크에서 제공되기도 하지만, 해당 개체에 대한 별도의 정리 작업 수행을 위한 다른 재정의 가능 함수를 사용합니다.
+`ExitInstance`GDI (그래픽 장치 인터페이스) 리소스를 해제 하거나 프로그램 실행 중에 사용 되는 메모리의 할당을 취소 하는 등 특별 한 정리 처리가 필요한 경우 재정의 합니다. 그러나 문서 및 뷰와 같은 표준 항목의 정리는 프레임 워크에서 제공 되며, 해당 개체와 관련 된 특수 한 정리를 수행 하기 위한 재정의 가능한 다른 함수도 제공 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CWinApp: 애플리케이션 클래스](../mfc/cwinapp-the-application-class.md)
+[CWinApp: 애플리케이션 클래스](cwinapp-the-application-class.md)

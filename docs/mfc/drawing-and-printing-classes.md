@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing classes [MFC]
 - graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
-ms.openlocfilehash: 64bcb958b2ba896000cdfc9de78fb8a38e8462c5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 63f116cb9b71efaf174e841a76e9aab155ef863c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618955"
 ---
 # <a name="drawing-and-printing-classes"></a>클래스 그리기 및 인쇄
 
@@ -20,4 +20,4 @@ Windows에서 모든 그래픽은 출력은 DC(디바이스 컨텍스트)라는 
 
 ## <a name="see-also"></a>참고 항목
 
-[클래스 개요](../mfc/class-library-overview.md)
+[클래스 개요](class-library-overview.md)

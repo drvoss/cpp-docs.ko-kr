@@ -7,24 +7,24 @@ helpviewer_keywords:
 - communications, tree controls
 - tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
-ms.openlocfilehash: 920608724ebb362b91efdcb3eab50b80acd20474
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f480cdad2fce53f830b8067083a8a4be4b4e4848
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151261"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619656"
 ---
 # <a name="communicating-with-a-tree-control"></a>트리 컨트롤과 통신
 
-다른 메서드를 사용 하 여 멤버 함수를 호출 하는 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 개체를 생성 하는 방식에 따라 개체:
+개체 생성 방법에 따라 [CTreeCtrl](reference/ctreectrl-class.md) 개체에서 멤버 함수를 호출 하는 데 다른 메서드를 사용 합니다.
 
-- 형식의 멤버 변수를 사용 하 여 대화 상자에서 트리 컨트롤 경우 `CTreeCtrl` 대화 상자 클래스에서 만든 합니다.
+- 트리 컨트롤이 대화 상자에 있는 경우 `CTreeCtrl` 대화 상자 클래스에서 만든 형식의 멤버 변수를 사용 합니다.
 
-- 트리 컨트롤을 자식 창 인 경우 사용 된 `CTreeCtrl` 개체를 생성 하는 사용 되는 개체 (또는 포인터).
+- 트리 컨트롤이 자식 창인 경우 `CTreeCtrl` 개체를 생성 하는 데 사용한 개체 (또는 포인터)를 사용 합니다.
 
-- 사용 중인 경우는 `CTreeView` 개체, 함수를 사용 하 여 [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) 트리 컨트롤에 대 한 참조를 가져오려고 합니다. 이 값을 사용 하 여 다른 참조를 초기화 하거나에 대 한 참조의 주소를 할당할 수 있습니다는 `CTreeCtrl` 포인터입니다.
+- 개체를 사용 하는 경우 `CTreeView` [ctreeview:: GetTreeCtrl](reference/ctreeview-class.md#gettreectrl) 함수를 사용 하 여 트리 컨트롤에 대 한 참조를 가져옵니다. 이 값을 사용 하 여 다른 참조를 초기화 하거나 참조 주소를 포인터에 할당할 수 있습니다 `CTreeCtrl` .
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CTreeCtrl 사용](../mfc/using-ctreectrl.md)<br/>
-[컨트롤](../mfc/controls-mfc.md)
+[CTreeCtrl 사용](using-ctreectrl.md)<br/>
+[컨트롤](controls-mfc.md)

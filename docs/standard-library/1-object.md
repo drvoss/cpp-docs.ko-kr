@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246544"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620921"
 ---
-# <a name="1-object"></a>_1 개체
+# <a name="_1-object"></a>_1 개체
 
 대체 가능한 인수에 대한 자리 표시자입니다.
 
@@ -29,7 +29,7 @@ namespace placeholders {
 
 ## <a name="remarks"></a>설명
 
-개체 `_1, _2, ... _M` 자리 표시자 지정 하는 첫 번째, 두 번째,..., m 번째 인수를 반환 하는 개체를 함수 호출에서 각각 [바인딩할](../standard-library/functional-functions.md#bind)합니다. bind 식을 평가할 때 N번째 인수를 삽입해야 하는 위치를 지정하려면 `_N`을 사용합니다.
+개체는 `_1, _2, ... _M` [bind](functional-functions.md#bind)에서 반환 하는 개체에 대 한 함수 호출에서 각각 첫 번째, 두 번째, ..., mth 인수를 지정 하는 자리 표시자입니다. bind 식을 평가할 때 N번째 인수를 삽입해야 하는 위치를 지정하려면 `_N`을 사용합니다.
 
 이 구현에서 `M`의 값은 20입니다.
 

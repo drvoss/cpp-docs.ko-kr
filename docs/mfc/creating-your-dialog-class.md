@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620507"
 ---
 # <a name="creating-your-dialog-class"></a>대화 상자 클래스 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "71685648"
 
 .H 파일에서 다음을 수행 합니다.
 
-- 대화 상자 클래스에 대 한 클래스 선언입니다. 클래스는 [CDialog](../mfc/reference/cdialog-class.md)에서 파생 됩니다.
+- 대화 상자 클래스에 대 한 클래스 선언입니다. 클래스는 [CDialog](reference/cdialog-class.md)에서 파생 됩니다.
 
 .Cpp 파일에서 다음을 수행 합니다.
 
@@ -31,9 +31,9 @@ ms.locfileid: "71685648"
 
 - 대화 상자에 대 한 표준 생성자입니다.
 
-- [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) 멤버 함수의 재정의입니다. 이 함수를 편집 합니다. 대화 [상자 데이터 교환 및 유효성 검사](../mfc/dialog-data-exchange-and-validation.md)의 뒷부분에 설명 된 대로 대화 상자 데이터 교환 및 유효성 검사 기능에 사용 됩니다.
+- [DoDataExchange](reference/cwnd-class.md#dodataexchange) 멤버 함수의 재정의입니다. 이 함수를 편집 합니다. 대화 [상자 데이터 교환 및 유효성 검사](dialog-data-exchange-and-validation.md)의 뒷부분에 설명 된 대로 대화 상자 데이터 교환 및 유효성 검사 기능에 사용 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[코드 마법사로 대화 상자 클래스 만들기](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[MFC에서 대화 상자 작업](../mfc/life-cycle-of-a-dialog-box.md)
+[코드 마법사로 대화 상자 클래스 만들기](creating-a-dialog-class-with-code-wizards.md)<br/>
+[MFC에서 대화 상자를 통해 작업](life-cycle-of-a-dialog-box.md)

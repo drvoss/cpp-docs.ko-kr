@@ -10,24 +10,24 @@ helpviewer_keywords:
 - CWinApp class [MFC], OnIdle method [MFC]
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
-ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17595713f942c7fe7784fa2a12adbcc583cad418
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394564"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619841"
 ---
 # <a name="onidle-member-function"></a>OnIdle 멤버 함수
 
-Windows 메시지가 처리되지 않고 있는 경우 프레임워크는 [CWinApp](../mfc/reference/cwinapp-class.md)의 멤버 함수 [OnIdle](../mfc/reference/cwinapp-class.md#onidle)을 호출합니다(MFC 라이브러리 참조에서 설명).
+Windows 메시지를 처리 하 고 있지 않은 경우 프레임 워크는 [CWinApp](reference/cwinapp-class.md) 멤버 함수 [OnIdle](reference/cwinapp-class.md#onidle) (MFC 라이브러리 참조에 설명 됨)을 호출 합니다.
 
-백그라운드 작업을 수행하려면 `OnIdle`을 재정의합니다. 기본 버전은 도구 모음 버튼과 같은 사용자 인터페이스 개체의 상태를 업데이트하고 작업 과정에서 프레임워크가 생성한 임시 개체를 정리합니다. 다음 그림은 큐에 메시지가 없는 경우 메시지 루프가 `OnIdle`을  호출하는 방식을 보여줍니다.
+`OnIdle`백그라운드 작업을 수행 하려면를 재정의 합니다. 기본 버전은 도구 모음 단추와 같은 사용자 인터페이스 개체의 상태를 업데이트 하 고 해당 작업을 수행 하는 과정에서 프레임 워크에서 만든 임시 개체의 정리를 수행 합니다. 다음 그림은 큐에 메시지가 없을 때 메시지 루프가를 호출 하는 방법을 보여 줍니다 `OnIdle` .
 
 ![메시지 루프 프로세스](../mfc/media/vc387c1.gif "메시지 루프 프로세스") <br/>
 메시지 루프
 
-유휴 루프에서 수행할 수 있는 작업에 대한 자세한 내용은 [유휴 루프 처리](../mfc/idle-loop-processing.md)를 참조합니다.
+유휴 루프에서 수행할 수 있는 작업에 대 한 자세한 내용은 [유휴 루프 처리](idle-loop-processing.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CWinApp: 애플리케이션 클래스](../mfc/cwinapp-the-application-class.md)
+[CWinApp: 애플리케이션 클래스](cwinapp-the-application-class.md)
