@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623259"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>창 메모리 할당 및 할당 취소
 
-사용 하지 마십시오는 C++ **삭제할** 프레임 창 또는 보기를 제거 하는 연산자입니다. 대신, 호출 된 `CWnd` 멤버 함수 `DestroyWindow`합니다. 프레임 창 따라서 할당 되는 연산자를 사용 하 여 힙에 **새**합니다. 프레임 창 또는 전역 스택 프레임에 할당할 때 주의 해야 합니다. 다른 windows 가능 하면 스택 프레임에 할당 되어야 합니다.
+C + + **delete** 연산자를 사용 하 여 프레임 창이 나 뷰를 제거 하지 마세요. 대신 `CWnd` 멤버 함수를 호출 `DestroyWindow` 합니다. 따라서 프레임 창은 **new**연산자를 사용 하 여 힙에 할당 되어야 합니다. 스택 프레임 또는 전역적으로 프레임 창을 할당할 때는 주의 해야 합니다. 가능한 경우 다른 창이 스택 프레임에 할당 되어야 합니다.
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아야 할 내용
 
-- [창 만들기](../mfc/creating-windows.md)
+- [창 만들기](creating-windows.md)
 
-- [창 소멸 시퀀스](../mfc/window-destruction-sequence.md)
+- [창 소멸 시퀀스](window-destruction-sequence.md)
 
-- [해당 HWND에서에서 CWnd 분리](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [CWnd를 해당 HWND에서 분리](detaching-a-cwnd-from-its-hwnd.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[창 개체 제거](../mfc/destroying-window-objects.md)
+[창 개체 소멸시키기](destroying-window-objects.md)

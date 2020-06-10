@@ -5,38 +5,38 @@ helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f36c977453d338b9e9bbd2462c1a8830ffe258
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620070"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>방법: 기존 MFC 리본을 리본 리소스로 변환
 
-리본 리소스는 시각화, 수정 및 수동으로 코딩 된 리본 보다 유지 관리 하기 쉽습니다. 이 항목에서는 MFC 프로젝트에 수동으로 코딩 된 리본을 리본 리소스로 변환 하는 방법을 설명 합니다.
+리본 리소스는 수동으로 코딩 된 리본 보다 시각화, 수정 및 유지 관리 하기가 더 쉽습니다. 이 항목에서는 MFC 프로젝트에서 수동으로 코딩 된 리본을 리본 리소스로 변환 하는 방법에 대해 설명 합니다.
 
-예를 들어, MFC 리본 클래스를 사용 하는 코드가 있는 기존 MFC 프로젝트 있어야 [CMFCRibbonBar 클래스](../mfc/reference/cmfcribbonbar-class.md)합니다.
+MFC 리본 클래스 (예: [Cmfcribbon Bar 클래스](reference/cmfcribbonbar-class.md))를 사용 하는 코드가 있는 기존 mfc 프로젝트가 있어야 합니다.
 
-### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>MFC 리본을 리본 리소스로 변환
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>MFC 리본을 리본 리소스로 변환 하려면
 
-1. Visual Studio에서 기존 MFC 프로젝트를 엽니다 소스 파일 위치는 `CMFCRibbonBar` 개체 초기화 됩니다. 일반적으로 mainfrm.cpp 파일이 있습니다. 리본 메뉴에 대 한 초기화 코드 뒤에 다음 코드를 추가 합니다.
+1. Visual Studio의 기존 MFC 프로젝트에서 개체가 초기화 된 소스 파일을 엽니다 `CMFCRibbonBar` . 일반적으로이 파일은 mainfrm.cpp입니다. 리본에 대 한 초기화 코드 뒤에 다음 코드를 추가 합니다.
 
 ```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
 ```
 
-   파일을 저장한 후 닫습니다.
+   파일을 저장하고 닫습니다.
 
-1. 빌드 및 MFC 응용 프로그램을 실행 한 다음 메모장에서 RibbonOutput.txt 열고 해당 내용을 복사 합니다.
+1. MFC 응용 프로그램을 빌드하고 실행 한 다음 메모장에서 리본을 열고 내용을 복사 합니다.
 
-1. Visual Studio에서에 **프로젝트** 메뉴에서 클릭 **리소스 추가**합니다. 에 **리소스 추가** 대화 상자에서 **리본** 클릭 하 고 **새**합니다.
+1. Visual Studio의 **프로젝트** 메뉴에서 **리소스 추가**를 클릭 합니다. **리소스 추가** 대화 상자에서 **리본** 을 선택한 다음 **새로 만들기**를 클릭 합니다.
 
-   Visual Studio는 리본 리소스를 만들고 디자인 뷰에서 열립니다. 리본 리소스 ID는에 표시 되는 idr_ribbon1입니다 **리소스 뷰**합니다. 리본 메뉴 ribbon1.mfcribbon ms XML 파일에서 정의 됩니다.
+   Visual Studio에서 리본 리소스를 만들고 디자인 뷰에서 엽니다. 리본 리소스 ID는 IDR_RIBBON1 **리소스 뷰**에 표시 됩니다. 리본은 ribbon1.xml. .mfcribbon-ms XML 파일에 정의 되어 있습니다.
 
-1. Visual Studio에서 ribbon1.mfcribbon ms, 열고 해당 내용을 삭제 후 RibbonOutput.txt 앞에서 복사한 내용을 붙여 넣습니다. 저장 하 고 ribbon1.mfcribbon ms를 닫습니다.
+1. Visual Studio에서 ribbon1.xml을 열고, 해당 내용을 삭제 한 다음, 이전에 복사한 리본 .mfcribbon-ms의 내용을 붙여넣습니다. Ribbon1.xml. .mfcribbon-ms를 저장 하 고 닫습니다.
 
-1. 다시 CMFCRibbonBar 개체를 초기화 하는 소스 파일을 열고 (일반적으로 mainfrm.cpp) 주석 기존 코드를 리본. 다음 코드를 주석으로 처리 하는 코드 뒤에 추가 합니다.
+1. Cmfc리본 표시줄 개체가 초기화 된 원본 파일 (일반적으로 mainfrm.cpp)을 다시 열고 기존 리본 코드를 주석으로 처리 합니다. 주석 처리 한 코드 뒤에 다음 코드를 추가 합니다.
 
 ```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
@@ -44,6 +44,6 @@ ms.locfileid: "62389491"
 
 1. 프로젝트를 빌드하고 프로그램을 실행 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[리본 디자이너(MFC)](../mfc/ribbon-designer-mfc.md)
+[리본 디자이너(MFC)](ribbon-designer-mfc.md)

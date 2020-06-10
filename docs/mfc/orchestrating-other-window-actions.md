@@ -9,17 +9,17 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92a42766b96836dad527ce9191901270ff369ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622140"
 ---
 # <a name="orchestrating-other-window-actions"></a>기타 창 작업 조정
 
-프레임 창 상황에 맞는 도움말 같은 세미 모달 상태를 오케스트레이션 및 인쇄 미리 보기. 인쇄 미리 보기의 프레임 창의 역할에 대 한 참조 [인쇄 및 인쇄 미리 보기](../mfc/printing-and-print-preview.md)합니다.
+프레임 창은 상황에 맞는 도움말 및 인쇄 미리 보기와 같은 오케스트레이션 semimodal 상태를 제공 합니다. 인쇄 미리 보기의 프레임 창 역할에 대 한 설명은 인쇄 [및 인쇄 미리 보기](printing-and-print-preview.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[프레임 창 사용](../mfc/using-frame-windows.md)
+[프레임 창 사용](using-frame-windows.md)
