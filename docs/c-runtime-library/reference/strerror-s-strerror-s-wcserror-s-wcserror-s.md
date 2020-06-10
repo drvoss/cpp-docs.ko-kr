@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918390"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664328"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -62,22 +62,22 @@ ms.locfileid: "82918390"
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *버퍼*<br/>
 오류 문자열을 저장할 버퍼입니다.
 
-*이면 numberofelements 이벤트가*<br/>
-버퍼의 크기입니다.
+*sizeInBytes*<br/>
+버퍼의 바이트 수입니다.
+
+*sizeInWords*<br/>
+버퍼의 단어 수입니다.
 
 *errnum*<br/>
 오류 번호입니다.
@@ -116,15 +119,15 @@ errno_t __wcserror_s(
 *strErrMsg*<br/>
 사용자 제공 메시지
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 성공시 0, 실패시 오류 코드.
 
 ### <a name="error-condtions"></a>오류 조건
 
-|*버퍼*|*이면 numberofelements 이벤트가*|*strErrMsg*|*버퍼* 의 내용|
+|*버퍼*|*sizeInBytes/Sizeinbytes*|*strErrMsg*|*버퍼* 의 내용|
 |--------------|------------------------|-----------------|--------------------------|
-|**N**|any|any|해당 없음|
+|**NULL**|any|any|해당 없음|
 |any|0|any|수정 안 됨|
 
 ## <a name="remarks"></a>설명
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 *StrErrMsg* 가 **NULL**인 경우 **_strerror_s** 는 오류를 생성 한 마지막 라이브러리 호출에 대 한 시스템 오류 메시지를 포함 하는 *버퍼* 의 문자열을 반환 합니다. 오류 메시지 문자열은 줄 바꿈 문자('\n')로 종료됩니다. *StrErrMsg* 가 **NULL**과 같지 않은 경우 **_strerror_s** 는 문자열 메시지, 콜론, 공백, 오류가 발생 한 마지막 라이브러리 호출에 대 한 시스템 오류 메시지 및 줄 바꿈 문자를 순서 대로 포함 하는 *버퍼* 에 문자열을 반환 합니다. 문자열 메시지는 94자 이하여야 합니다.
 
-이러한 함수는 길이가 *Numberofelements* -1을 초과 하는 경우 오류 메시지를 자릅니다. *버퍼* 의 결과 문자열은 항상 null로 종료 됩니다.
+이러한 함수는 길이가 버퍼 1의 크기를 초과 하는 경우 오류 메시지를 자릅니다. *버퍼* 의 결과 문자열은 항상 null로 종료 됩니다.
 
 **_Strerror_s** 의 실제 오류 번호는 변수 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)에 저장 됩니다. [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 변수를 통해 시스템 오류 메시지에 액세스합니다. 이 변수는 오류 번호순으로 정렬된 메시지 배열입니다. **_strerror_s** 는 **errno** 값을 **_sys_errlist**변수에 대 한 인덱스로 사용 하 여 적절 한 오류 메시지에 액세스 합니다. 변수 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 의 값은 **_sys_errlist** 배열의 최대 요소 수로 정의 됩니다. 정확한 결과를 생성 하려면 라이브러리 루틴이 오류와 함께 반환 되는 즉시 **_strerror_s** 를 호출 합니다. 그렇지 않으면 **strerror_s** 또는 **_strerror_s** 에 대 한 후속 호출에서 **errno** 값을 덮어쓸 수 있습니다.
 
@@ -176,7 +179,7 @@ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 �
 
 [perror](perror-wperror.md)의 예를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>
