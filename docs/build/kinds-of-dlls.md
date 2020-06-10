@@ -1,4 +1,4 @@
----
+﻿---
 title: DLL 종류
 ms.date: 05/06/2019
 helpviewer_keywords:

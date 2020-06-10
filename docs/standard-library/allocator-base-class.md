@@ -1,4 +1,4 @@
----
+﻿---
 title: allocator_base 클래스
 ms.date: 11/04/2016
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: /QIfist(_ftol 사용 안 함)
 ms.date: 11/04/2016
 f1_keywords:

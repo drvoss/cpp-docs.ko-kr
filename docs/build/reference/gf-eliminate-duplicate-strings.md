@@ -1,4 +1,4 @@
----
+﻿---
 title: /GF(중복 문자열 제거)
 ms.date: 11/04/2016
 f1_keywords:
@@ -45,12 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
+
 > 편집 및 계속에 사용되는 [/ZI](z7-zi-zi-debug-information-format.md) 옵션은 **/GF** 옵션을 자동으로 설정합니다.
+
 
 > [!NOTE]
 > **/GF** 컴파일러 옵션은 각 고유 문자열에 대해 주소 지정 가능한 섹션을 만듭니다. 기본적으로 개체 파일에는 최대 65,536개의 주소 지정 가능한 섹션이 포함될 수 있습니다. 프로그램에 65,536개 이상의 문자열이 포함된 경우 [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) 컴파일러 옵션을 사용하여 더 많은 섹션을 만듭니다.
 
 **/GF는** [/O1](o1-o2-minimize-size-maximize-speed.md) 또는 [/O2를](o1-o2-minimize-size-maximize-speed.md) 사용할 때 적용됩니다.
+**/GF**는 [/O1](o1-o2-minimize-size-maximize-speed.md) 또는 **/O2**가 사용될 때 적용됩니다.
+
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 

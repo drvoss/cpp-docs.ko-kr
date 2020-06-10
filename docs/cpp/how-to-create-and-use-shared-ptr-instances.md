@@ -1,4 +1,4 @@
----
+﻿---
 title: '방법: shared_ptr 인스턴스 만들기 및 사용'
 ms.custom: how-to
 ms.date: 11/19/2019

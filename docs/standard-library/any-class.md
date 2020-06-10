@@ -1,4 +1,4 @@
----
+﻿---
 title: any 클래스
 ms.date: 04/04/2019
 f1_keywords:

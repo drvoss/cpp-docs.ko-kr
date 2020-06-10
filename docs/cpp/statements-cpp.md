@@ -1,4 +1,4 @@
----
+﻿---
 title: 문 (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -38,6 +38,6 @@ C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요
 
 예외 처리 문에 대한 자세한 내용은 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)를 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목 
 
 [C++ 언어 참조](../cpp/cpp-language-reference.md)

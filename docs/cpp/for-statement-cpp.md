@@ -1,4 +1,4 @@
----
+﻿---
 title: for 문 (C++)
 description: Microsoft 비주얼 스튜디오 C++의 문에 대한 표준 C++를 참조하십시오.
 f1_keywords:
@@ -105,6 +105,8 @@ for (int i = 10; i > 0; i--) {
 
 **for** 문의 세 필드는 일반적으로 초기화, 종료 테스트 및 증분에 사용되지만 이러한 용도로 제한되지는 않습니다. 예를 들어, 다음 코드는 0부터 4까지의 숫자를 인쇄합니다. 이 경우 `statement`은 null 문입니다.
 
+**for** 문의 세 필드는 일반적으로 초기화, 종료 테스트 및 증가에 사용되지만 이러한 용도로만 제한되지 않습니다. 예를 들어, 다음 코드는 0에서 4까지의 숫자를 출력합니다. 이 경우 `statement`는 null 문입니다.
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -132,6 +134,7 @@ for (int i = 0 ; i < 5 ; i++) {
 기본적으로 [/Ze](../build/reference/za-ze-disable-language-extensions.md)에서 **for** 루프에 선언된 변수는 **for** 루프의 둘러싸는 범위가 끝날 때까지 범위에 남아 있습니다.
 
 [/Zc:forScope를](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 사용하면 을 지정할 `/Za`필요 없이 for 루프에 대해 선언된 변수의 표준 동작을 사용할 수 있습니다.
+/ Zc : forScope는 `/Za`를 지정할 필요없이 for 루프에 선언된 변수의 표준 동작을 가능하게 합니다.
 
 **for** 루프의 범위 차이를 사용하여 다음과 `/Ze` 같이 변수를 다시 선언할 수도 있습니다.
 

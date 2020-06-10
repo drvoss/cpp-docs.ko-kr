@@ -24,7 +24,8 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 
 ## <a name="remarks"></a>주의
 
-특수화 `treat_as_floating_point<Rep>`가 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 파생되는 경우에만 `Rep`를 부동 소수점 형식으로 처리할 수 있습니다. 클래스 템플릿은 사용자 정의 형식에 대해 특수화될 수 있습니다.
+
+`Rep`는 `treat_as_floating_point<Rep>` 특수화가 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 파생되는 경우에만 부동 소수점 형식으로 처리할 수 있습니다. 클래스 템플릿은 사용자 정의 형식에 대해 특수화될 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 

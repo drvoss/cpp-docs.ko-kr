@@ -1,4 +1,4 @@
----
+﻿---
 title: /favor(아키텍처에 맞게 최적화)
 ms.date: 11/04/2016
 f1_keywords:

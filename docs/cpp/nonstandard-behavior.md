@@ -1,4 +1,4 @@
----
+﻿---
 title: 비표준 동작
 ms.date: 05/06/2019
 helpviewer_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: COM 및 .NET의 C++ 특성
 ms.custom: index-page
 ms.date: 11/19/2018

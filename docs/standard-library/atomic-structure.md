@@ -1,4 +1,4 @@
----
+﻿---
 title: atomic 구조체
 ms.date: 04/20/2018
 f1_keywords:
@@ -52,7 +52,7 @@ struct atomic;
 
 ## <a name="remarks"></a>설명
 
-*Ty* 형식은 *일반적으로 복사할 수*이어야 합니다. 즉, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 를 사용 하 여 바이트를 복사 하면 원래 개체와 동일한 지 비교 하는 유효한 *Ty* 개체가 생성 되어야 합니다. [Compare_exchange_weak](#compare_exchange_weak) 및 [compare_exchange_strong](#compare_exchange_strong) 멤버 함수는 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 를 사용 하 여 두 개의 *Ty* 값이 같은지 여부를 확인 합니다. 이러한 함수는 *Ty*정의 `operator==`를 사용 하지 않습니다. Ty 형식의 값을 `atomic` 복사 `memcpy` 하는 데 사용 하는 멤버 함수입니다.
+*Ty* 형식은 *사소하게 복사할 수* 있어야 합니다. 즉, [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)를 사용하여 바이트를 복사하면 원래 개체와 비교하여 동일한 유효한 *Ty* 개체가 생성되어야 합니다. [compare_exchange_weak](#compare_exchange_weak) 및 [compare_exchange_strong](#compare_exchange_strong) 멤버 함수는 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)를 사용하여 두 개의 *Ty* 값이 같은지 여부를 확인합니다. 이러한 함수는 *Ty* 정의 `operator==`를 사용하지 않습니다. `atomic` 멤버 함수는 `memcpy`를 사용하여 *Ty* 형식의 값을 복사합니다.
 
 모든 포인터 형식에 대한 부분 특수화인 **atomic\<Ty \* >** 가 있습니다. 특수화를 사용하면 관리되는 포인터 값에 오프셋을 더하거나 값에서 오프셋을 뺄 수 있습니다. 산술 연산은 `ptrdiff_t` 형식의 인수를 사용하고, 일반 주소 산술과 일관되도록 *Ty*의 크기에 따라 해당 인수를 조정합니다.
 
@@ -74,7 +74,7 @@ struct atomic;
 
 **네임스페이스:** std
 
-## <a name="atomic"></a>atomic:: atomic
+## <a name="atomic"></a>atomic::atomic
 
 atomic 개체를 생성합니다.
 
@@ -135,7 +135,7 @@ Ty operator=(
 
 *Value*을 반환 합니다.
 
-## <a name="op_inc"></a>atomic:: operator + +
+## <a name="op_inc"></a>atomic::operator++
 
 저장된 값을 증가시킵니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.
 
@@ -150,7 +150,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 처음 두 연산자는 증가 된 값을 반환 합니다. 마지막 두 연산자는 증가값 앞의 값을 반환 합니다. 연산자는 [memory_order](atomic-enums.md)을 `memory_order_seq_cst` 사용 합니다.
 
-## <a name="op_add_eq"></a>atomic:: operator + =
+## <a name="op_add_eq"></a>atomic::operator +=
 
 지정된 값을 저장된 값에 더합니다. 정수 계열 및 포인터 특수화에서만 사용됩니다.
 
@@ -189,7 +189,7 @@ Ty atomic<Ty>::operator--() noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-처음 두 연산자는 감소 된 값을 반환 합니다. 마지막 두 연산자는 감소 전에 값을 반환 합니다. 연산자는 [memory_order](atomic-enums.md)을 `memory_order_seq_cst` 사용 합니다.
+처음 두 연산자는 감소된 값을 반환합니다. 마지막 두 연산자는 감소 전의 값을 반환합니다. 연산자는 `memory_order_seq_cst` [memory_order](atomic-enums.md)를 사용합니다.
 
 ## <a name="op_sub_eq"></a> atomic::operator-=
 
@@ -217,7 +217,7 @@ Ty atomic<Ty>::operator-=(
 
 이 연산자는 `memory_order_seq_cst` [memory_order](atomic-enums.md)을 사용 합니다.
 
-## <a name="op_and_eq"></a>atomic:: operator & =
+## <a name="op_and_eq"></a>atomic::operator&=
 
 지정된 값과 **\*this**에 저장된 값에 대하여 비트 and를 수행합니다. 정수 계열 특수화에서만 사용됩니다.
 
@@ -629,7 +629,7 @@ Ty atomic::load(
 
 ### <a name="return-value"></a>반환 값
 
-**\*this**에 저장 된 검색 된 값입니다.
+**\*this**에 저장된 검색된 값입니다.
 
 ## <a name="store"></a> atomic::store
 

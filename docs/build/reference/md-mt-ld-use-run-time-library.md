@@ -1,4 +1,4 @@
----
+﻿---
 title: /MD,-MT,-LD (런타임 라이브러리 사용)
 ms.date: 07/17/2019
 f1_keywords:

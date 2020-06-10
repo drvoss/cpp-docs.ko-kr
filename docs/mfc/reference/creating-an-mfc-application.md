@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC 애플리케이션 만들기
 ms.date: 08/28/2019
 helpviewer_keywords:

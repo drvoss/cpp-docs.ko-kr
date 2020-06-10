@@ -1,4 +1,4 @@
----
+﻿---
 title: /Qvec-report(자동 벡터화 도우미 보고 수준)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
@@ -11,7 +11,7 @@ ms.locfileid: "62319254"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report(자동 벡터화 도우미 보고 수준)
 
-컴파일러의 [자동 벡터화 도우미](../../parallel/auto-parallelization-and-auto-vectorization.md) 보고 기능을 사용하도록 설정하고  컴파일하는 동안 출력할 정보 메시지의 수준을 지정합니다.
+컴파일러의 [자동 벡터화 도우미](../../parallel/auto-parallelization-and-auto-vectorization.md) 보고 기능을 사용하도록 설정하고 컴파일하는 동안 출력할 정보 메시지의 수준을 지정합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -33,7 +33,7 @@ ms.locfileid: "62319254"
 
 1. **솔루션 탐색기**에서 프로젝트의 바로가기 메뉴를 열고 **속성**을 선택합니다.
 
-1. **속성 페이지** 대화 상자의 **C/C++** 에서 **명령줄**을 선택합니다.
+1. **속성 페이지** 대화 상자의 **C/C++**에서 **명령줄**을 선택합니다.
 
 1. **추가 옵션** 상자에 `/Qvec-report:1` 또는 `/Qvec-report:2`를 입력합니다.
 

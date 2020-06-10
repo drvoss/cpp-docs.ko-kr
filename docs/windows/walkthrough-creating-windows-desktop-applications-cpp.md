@@ -1,4 +1,4 @@
----
+﻿---
 title: '연습: 기존 Windows 데스크톱 응용 프로그램 만들기 (c + +)'
 description: Visual Studio, c + + 및 Win32 API를 사용 하 여 최소한의 기존 Windows 데스크톱 응용 프로그램을 만드는 방법
 ms.custom: get-started-article
@@ -16,7 +16,7 @@ ms.locfileid: "84206208"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>연습: 기존 Windows 데스크톱 응용 프로그램 만들기 (c + +)
 
-이 연습에서는 Visual Studio에서 기존 Windows 데스크톱 응용 프로그램을 만드는 방법을 보여 줍니다. 만들 예제 응용 프로그램은 Windows API를 사용 하 여 "Hello, Windows desktop"을 표시 합니다. 줍니다. 이 연습에서 개발하는 코드를 패턴으로 사용하여 다른 Windows 데스크톱 애플리케이션을 만들 수 있습니다.
+이 연습에서는 Visual Studio에서 기존 Windows 데스크톱 응용 프로그램을 만드는 방법을 보여 줍니다. 만들 예제 응용 프로그램은 Windows API를 사용하여 "Hello, Windows desktop"을 표시 합니다. 줍니다. 이 연습에서 개발하는 코드를 패턴으로 사용하여 다른 Windows 데스크톱 애플리케이션을 만들 수 있습니다.
 
 Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 함)는 Windows 응용 프로그램을 만들기 위한 C 언어 기반 프레임 워크입니다. 1980 년대이 존재 하 고 수십 년 동안 Windows 응용 프로그램을 만드는 데 사용 되었습니다. Windows API를 기반으로 더 많은 고급 및 프로그램 간 프레임 워크를 만들었습니다. 예를 들어, MFC, ATL, .NET 프레임 워크입니다. C + +/WinRT로 작성 된 UWP 및 스토어 앱에 대 한 최신 Windows 런타임 코드는 아래 Windows API를 사용 합니다. Windows API에 대 한 자세한 내용은 [WINDOWS Api 인덱스](/windows/win32/apiindex/windows-api-list)를 참조 하십시오. Windows 응용 프로그램을 만드는 방법에는 여러 가지가 있지만 위의 프로세스는 첫 번째입니다.
 
@@ -25,7 +25,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- Microsoft Windows 7 이상 버전을 실행하는 컴퓨터. 최상의 개발 환경을 위해서는 Windows 10이 권장됩니다.
+- Microsoft Windows 7 이상 버전의 컴퓨터가 필요하며, 최상의 개발 환경을 위해서는 Windows 10이 권장됩니다.
 
 - Visual Studio. Visual Studio를 다운로드 및 설치하는 방법에 대한 자세한 내용은 [Visual Studio 설치](/visualstudio/install/install-visual-studio)를 참조하세요. 설치 관리자를 실행할 때 **C++를 사용한 데스크톱 개발** 워크로드를 선택해야 합니다. Visual Studio를 설치할 때 이 워크로드를 설치하지 않은 경우 걱정하지 마세요. 설치 관리자를 다시 실행하고 바로 설치할 수 있습니다.
 
@@ -144,6 +144,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
    > 이러한 추가 단어 (예:, 또는)는 무엇 인가요 `CALLBACK` `HINSTANCE` `_In_` ? 기존 Windows API는 typedef 및 전처리기 매크로를 광범위 하 게 사용 하 여 호출 규칙, **__declspec** 선언 및 컴파일러 pragma와 같은 플랫폼별 코드와 형식에 대 한 일부 세부 정보를 추상화 합니다. Visual Studio에서는 IntelliSense [요약 정보](/visualstudio/ide/using-intellisense#quick-info) 기능을 사용 하 여 이러한 형식 정의 및 매크로가 정의 하는 내용을 확인할 수 있습니다. 마우스를 관심 있는 단어 위에 가리키거나, 선택 하 고 **ctrl** + **K**, **ctrl** + **I** 를 눌러 정의가 포함 된 작은 팝업 창으로 이동 합니다. 자세한 내용은 [Using IntelliSense](/visualstudio/ide/using-intellisense)을 참조하세요. 매개 변수 및 반환 형식은 종종 *SAL 주석을* 사용 하 여 프로그래밍 오류를 파악 하는 데 도움이 됩니다. 자세한 내용은 [SAL 주석을 사용 하 여 c/c + + 코드 오류 줄이기](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)를 참조 하세요.
 
 1. Windows 데스크톱 프로그램 &lt; 에는 windows> 필요 합니다. &lt;tchar.h>는 매크로를 정의 합니다 `TCHAR` . 매크로는 유니코드 기호가 프로젝트에 정의 되어 있는 경우에는 **wchar_t** 으로 확인 되 고, 그렇지 않으면 **char**로 확인 됩니다.  항상 유니코드를 사용 하 여 빌드하는 경우에는 TCHAR.H가 필요 하지 않으며 **wchar_t** 직접만 사용할 수 있습니다.
+
 
    ```cpp
    #include <windows.h>
@@ -588,7 +589,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
    ![DesktopApp 프로젝트 실행](../build/media/desktop-app-project-run-157.PNG "DesktopApp 프로젝트 실행")
 
-지금까지 이 연습을 완료 하 고 기존 Windows 데스크톱 응용 프로그램을 빌드 했습니다.
+지금까지 이 연습을 완료하고 기존 Windows 데스크톱 응용 프로그램을 빌드 했습니다.
 
 ## <a name="see-also"></a>참고 항목
 

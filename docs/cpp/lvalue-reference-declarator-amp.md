@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Lvalue 참조 선언 자: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -71,7 +71,7 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목 
 
 [참조](../cpp/references-cpp.md)<br/>
 [참조 형식 함수 인수](../cpp/reference-type-function-arguments.md)<br/>

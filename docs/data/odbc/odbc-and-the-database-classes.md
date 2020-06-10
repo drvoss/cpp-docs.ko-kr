@@ -1,4 +1,4 @@
----
+﻿---
 title: ODBC 및 데이터베이스 클래스
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -25,4 +25,4 @@ MFC ODBC 데이터베이스 클래스는 일반적으로 [CDatabase](../../mfc/r
 
 ## <a name="see-also"></a>참고 항목
 
-[ODBC 기본 사항](../../data/odbc/odbc-basics.md)
+

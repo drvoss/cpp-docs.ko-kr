@@ -1,4 +1,4 @@
----
+﻿---
 title: 특수 CWinApp 서비스
 ms.date: 11/04/2016
 f1_keywords:

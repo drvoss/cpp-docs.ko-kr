@@ -1,4 +1,4 @@
----
+﻿---
 title: /J(부호 없는 기본 문자 형식)
 ms.date: 11/04/2016
 f1_keywords:
@@ -58,3 +58,4 @@ ANSI C 및 C++는 형식의 `char` 특정 구현이 필요하지 않습니다. �
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>
 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)
+

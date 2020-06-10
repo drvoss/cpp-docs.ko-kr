@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC DLL 관련 질문과 대답
 ms.date: 05/06/2019
 helpviewer_keywords:

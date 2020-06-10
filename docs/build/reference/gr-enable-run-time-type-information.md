@@ -1,4 +1,4 @@
----
+﻿---
 title: /GR(런타임 형식 정보 사용)
 ms.date: 11/04/2016
 f1_keywords:

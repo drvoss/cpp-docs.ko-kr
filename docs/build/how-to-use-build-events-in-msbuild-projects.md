@@ -1,4 +1,4 @@
----
+﻿---
 title: '방법: MSBuild 프로젝트에서 빌드 이벤트 사용'
 ms.date: 11/04/2016
 helpviewer_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: ASSERT 대신 VERIFY 사용
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -47,6 +47,8 @@ free( buf );
 - `free()`가 할당된 적이 없는 메모리의 해제를 시도합니다.
 
 ASSERT를 올바르게 사용하려면 코드 샘플을 다음과 같이 변경해야 합니다.
+
+ASSERT를 올바르게 사용하려면 다음과 같이 코드 샘플을 변경해야 합니다.
 
 ```
 enum {

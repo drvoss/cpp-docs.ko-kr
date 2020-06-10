@@ -1,4 +1,4 @@
----
+﻿---
 title: /arch(x64)
 ms.date: 10/01/2019
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
@@ -69,3 +69,4 @@ Intel Advanced Vector Extensions 512 지침을 사용할 수 있습니다.
 [/arch(최소 CPU 아키텍처)](arch-minimum-cpu-architecture.md)<br/>
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)
+

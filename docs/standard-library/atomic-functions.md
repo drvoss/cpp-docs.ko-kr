@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;atomic&gt; 함수'
 ms.date: 07/11/2018
 f1_keywords:

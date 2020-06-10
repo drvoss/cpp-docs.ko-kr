@@ -1,4 +1,4 @@
----
+﻿---
 title: CComObjectRootEx 구현
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,7 +14,9 @@ ms.locfileid: "62197473"
 ---
 # <a name="implementing-ccomobjectrootex"></a>CComObjectRootEx 구현
 
+
 [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)는 필수적입니다. 모든 ATL 개체는 하나의 `CComObjectRootEx` 인스턴스나 [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) 상속이 있어야 합니다. `CComObjectRootEx`는 COM 맵 엔트리를 기반으로 하는 기본 `QueryInterface` 메커니즘을 제공합니다.
+
 
 COM 맵을 통해, 클라이언트가 인터페이스를 쿼리하면 개체의 인터페이스가 클라이언트에 표시됩니다. 쿼리는 `CComObjectRootEx::InternalQueryInterface`를 통해 수행됩니다. `InternalQueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다.
 

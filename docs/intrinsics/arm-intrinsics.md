@@ -1,4 +1,4 @@
----
+﻿---
 title: ARM 내장 함수
 description: 비주얼 스튜디오에서 Microsoft C++ 컴파일러에서 지원하는 ARM64 내장 함수의 참조 목록입니다.
 ms.date: 09/02/2019

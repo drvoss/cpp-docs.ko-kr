@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC DLL 마법사, 애플리케이션 설정
 ms.date: 11/04/2016
 f1_keywords:

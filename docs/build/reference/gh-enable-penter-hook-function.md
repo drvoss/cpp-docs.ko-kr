@@ -1,4 +1,4 @@
----
+﻿---
 title: /Gh(_penter 후크 함수 사용)
 ms.date: 11/04/2016
 f1_keywords:

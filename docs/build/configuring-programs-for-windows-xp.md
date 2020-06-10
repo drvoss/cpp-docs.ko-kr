@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows XP용 프로그램 구성
 description: Visual Studio에서 C++ Windows XP 도구 집합을 설치하고 사용하는 방법입니다.
 ms.date: 03/16/2020

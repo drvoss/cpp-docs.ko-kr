@@ -1,4 +1,4 @@
----
+﻿---
 title: TLS
 ms.date: 08/09/2019
 helpviewer_keywords:
@@ -103,7 +103,7 @@ __declspec( thread ) int tls_i = 1;
    `sizeof`초기화 되는 개체를 포함 하는 식은 자신에 대 한 참조를 나타내지 않으며 c 및 c + +에서 모두 사용할 수 있습니다.
 
    C + +는 스레드 로컬 저장소 기능에 대 한 향후 개선 사항으로 인해 스레드 데이터를 동적으로 초기화할 수 없습니다.
-
+   
 - Windows Vista 이전의 Windows 운영 체제에는 `__declspec( thread )` 몇 가지 제한 사항이 있습니다. DLL에서 데이터 또는 개체를로 선언 하는 경우 `__declspec( thread )` 동적으로 로드 되는 경우 보호 오류가 발생할 수 있습니다. DLL이 [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)로 로드 된 후에는 코드에서 데이터를 참조할 때마다 시스템 오류가 발생 합니다 `__declspec( thread )` . 런타임에 스레드에 대한 전역 변수 공간이 할당되기 때문에, 이 공간의 크기는 애플리케이션의 요구 사항과 정적으로 연결되는 모든 DLL의 요구 사항을 계산하여 결정됩니다. 를 사용 하 `LoadLibrary` 는 경우로 선언 된 스레드 지역 변수를 허용 하도록이 공간을 확장할 수 없습니다 `__declspec( thread )` . Dll이로 로드 될 수 있는 경우 DLL에서 [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)와 같은 tls api를 사용 하 여 tls를 할당 `LoadLibrary` 합니다.
 
 ## <a name="see-also"></a>참고 항목

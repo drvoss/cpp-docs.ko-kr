@@ -25,7 +25,7 @@ struct steady_clock;
 
 Windows에서 `steady_clock`은 `QueryPerformanceCounter`의 래퍼 함수입니다.
 
-`now`에 대한 첫 번째 호출에서 반환되는 값이 항상 `now`에 대한 순차적 호출에서 반환되는 값보다 작거나 같을 경우 클록은 *단조*입니다. 클록이 *단조*이고 클록 틱 간 시간이 지속적이면 해당 클록은 *지속*입니다.
+`now`에 대한 첫 번째 호출에서 반환되는 값이 항상 `now`에 대한 순차적 호출에서 반환되는 값보다 작거나 같을 경우 클록은 *monotonic*입니다. 클록이 *monotonic*이고 클록 틱간 시간이 지속적이면 해당 클록은 *steady*입니다.
 
 `high_resolution_clock`은 `steady_clock`의 typedef 입니다.
 

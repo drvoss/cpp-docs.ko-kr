@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC DLL 마법사가 생성하는 클래스 및 함수
 ms.date: 11/04/2016
 helpviewer_keywords:
