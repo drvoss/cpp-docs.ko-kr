@@ -14,103 +14,103 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 330f66b1f46542082637645ad53da016b434d4a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621758"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>예외: MFC 예외 매크로에서 변환
 
-이 항목은 고급 항목입니다.
+이는 고급 항목입니다.
 
-이 문서에서는 Microsoft Foundation Class 매크로로 작성된 기존 코드를 변환하는 **방법(TRY**, **CATCH**, **THROW**등)을 사용하여 C++ 예외 처리 키워드 **try,** **catch**및 **throw를**사용하는 방법에 대해 설명합니다. 다룰 주제는 다음과 같습니다.
+이 문서에서는 c + + 예외 처리 키워드 **try**, **catch**및 **Throw**를 사용 하기 위해 **try**, **catch**, **throw**등으로 작성 된 기존 코드를 변환 하는 방법을 설명 합니다. 다룰 주제는 다음과 같습니다.
 
 - [변환 이점](#_core_advantages_of_converting)
 
-- [예외 매크로가 있는 코드를 C++ 예외를 사용하도록 변환](#_core_doing_the_conversion)
+- [C + + 예외를 사용 하는 예외 매크로로 코드 변환](#_core_doing_the_conversion)
 
-## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>변환의 장점
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>변환의 이점
 
-MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점을 알고 있어야 하지만 기존 코드를 변환할 필요는 없습니다. 이러한 차이점과 코드 동작의 후속 변경 사항은 [예외: 버전 3.0의 예외 매크로 변경사항에서](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)설명합니다.
+MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점을 알고 있어야 하지만 기존 코드를 변환할 필요가 없는 경우가 있습니다. 이러한 차이점과 코드 동작의 이후 변경 사항은 [예외: 버전 3.0의 예외 매크로 변경](exceptions-changes-to-exception-macros-in-version-3-0.md)사항에 설명 되어 있습니다.
 
-변환의 주요 장점은 다음과 같습니다.
+변환의 주요 이점은 다음과 같습니다.
 
-- C++ 예외 처리 키워드를 사용하는 코드는 약간 더 작은 으로 컴파일됩니다. EXE 또는 . Dll.
+- C + + 예외 처리 키워드를 사용 하는 코드는 약간 더 작은 값으로 컴파일됩니다. EXE 또는. GDIPLUS.DLL.
 
-- C++ 예외 처리 키워드는 더 다양합니다: 복사할 수 있는 모든 데이터 형식의 예외를 **char**처리할 수 있습니다(int, **float,** char 등) 매크로는 클래스**int** `CException` 및 이에서 파생된 클래스의 예외만 처리합니다.
+- C + + 예외 처리 키워드는 더 다양 하 게 사용할 수 있습니다. 즉, 복사 될 수 있는 모든 데이터 형식 (**int**, **float**, **char**등)의 예외를 처리할 수 있는 반면 매크로는 클래스 및이 클래스에서 파생 된 클래스의 예외만 처리 `CException` 합니다.
 
-매크로와 키워드의 가장 큰 차이점은 매크로를 사용하는 코드가 예외가 범위를 벗어날 때 "자동으로" catch된 예외를 삭제한다는 것입니다. 키워드를 사용하는 코드는 그렇지 않으므로 catch된 예외를 명시적으로 삭제해야 합니다. 자세한 내용은 [예외: 예외 catch 및 삭제 예외](../mfc/exceptions-catching-and-deleting-exceptions.md)문서를 참조하십시오.
+매크로와 키워드의 주요 차이점은 "자동" 매크로를 사용 하는 코드는 예외가 범위를 벗어날 때 catch 된 예외를 삭제 하는 것입니다. 키워드를 사용 하는 코드는 그렇지 않으므로 catch 된 예외를 명시적으로 삭제 해야 합니다. 자세한 내용은 예외 [: 예외 catch 및 삭제](exceptions-catching-and-deleting-exceptions.md)문서를 참조 하세요.
 
-또 다른 차이점은 구문입니다. 매크로 및 키워드에 대한 구문은 세 가지 면에서 다릅니다.
+또 다른 차이점은 구문입니다. 매크로와 키워드의 구문은 다음과 같은 세 가지 측면에서 다릅니다.
 
 1. 매크로 인수 및 예외 선언:
 
-   **CATCH** 매크로 호출에는 다음과 같은 구문이 있습니다.
+   **CATCH** 매크로 호출의 구문은 다음과 같습니다.
 
-   **캐치** *(exception_class,* *exception_object_pointer_name)* **)**
+   **CATCH (** *exception_class*, *exception_object_pointer_name* **)**
 
-   클래스 이름과 개체 포인터 이름 사이의 쉼표를 확인합니다.
+   클래스 이름과 개체 포인터 이름 사이의 쉼표를 확인 합니다.
 
-   **catch** 키워드에 대한 예외 선언은 이 구문을 사용합니다.
+   **Catch** 키워드에 대 한 예외 선언에는 다음 구문이 사용 됩니다.
 
-   **캐치(exception_type** *exception_type* *exception_name)* **)**
+   **catch (** *exception_type* *exception_name* **)**
 
-   이 예외 선언 문은 catch 블록이 처리하는 예외 유형을 나타냅니다.
+   이 exception 선언문은 catch 블록이 처리 하는 예외의 형식을 나타냅니다.
 
-2. 캐치 블록의 구분:
+2. Catch 블록의 Delimitation:
 
-   매크로를 사용하면 **CATCH** 매크로(인수)가 첫 번째 catch 블록을 시작합니다. **AND_CATCH** 매크로는 후속 캐치 블록을 시작하고 **END_CATCH** 매크로는 캐치 블록의 시퀀스를 종료합니다.
+   매크로를 사용 하 여 **catch** 매크로 (인수 포함)는 첫 번째 catch 블록을 시작 합니다. **AND_CATCH** 매크로는 후속 catch 블록을 시작 하 고 **END_CATCH** 매크로는 catch 블록의 시퀀스를 종료 합니다.
 
-   키워드를 사용하면 **catch** 키워드(예외 선언)가 각 catch 블록을 시작합니다. **END_CATCH** 매크로에 대응하는 것은 없습니다. 캐치 블록은 닫는 중괄호로 끝납니다.
+   키워드를 사용 하 여 **catch** 키워드 (예외 선언 포함)는 각 catch 블록을 시작 합니다. **END_CATCH** 매크로에 상응 하는 항목이 없습니다. catch 블록은 닫는 중괄호로 끝납니다.
 
-3. throw 식:
+3. Throw 식:
 
-   매크로는 **THROW_LAST** 사용하여 현재 예외를 다시 throw합니다. 인수없이 **throw** 키워드는 동일한 효과를 가합니다.
+   매크로는 **THROW_LAST** 을 사용 하 여 현재 예외를 다시 THROW 합니다. 인수가 없는 **throw** 키워드는 동일한 효과를 가집니다.
 
-## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>개종하기
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>변환 수행
 
-#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>매크로를 사용하여 코드를 변환하여 C++ 예외 처리 키워드를 사용하려면
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>C + + 예외 처리 키워드를 사용 하기 위해 매크로를 사용 하 여 코드를 변환 하려면
 
-1. MFC 매크로 **TRY,** catch , **AND_CATCH,** **END_CATCH,** **throw**및 **THROW_LAST**모든 발생을 찾습니다. **AND_CATCH**
+1. **TRY**, **CATCH**, **AND_CATCH**, **END_CATCH**, **THROW**및 **THROW_LAST**MFC 매크로의 모든 항목을 찾습니다.
 
-2. 다음 매크로의 모든 발생을 바꾸거나 삭제합니다.
+2. 다음 매크로의 모든 항목을 바꾸거나 삭제 합니다.
 
-   **TRY** **(시도로**교체)
+   **시도** ( **try**로 바꾸기)
 
-   **캐치** **(캐치로**교체)
+   **Catch** ( **catch**로 바꾸기)
 
-   **AND_CATCH** **(캐치로**교체)
+   **AND_CATCH** ( **CATCH**로 바꾸기)
 
-   **END_CATCH(삭제)**
+   **END_CATCH** (삭제)
 
-   **던지기** **(던지기로**교체)
+   **Throw** ( **throw**로 바꾸기)
 
-   **THROW_LAST** **(던지기로**교체)
+   **THROW_LAST** ( **THROW**로 바꾸기)
 
-3. 유효한 예외 선언을 형성할 수 있도록 매크로 인수를 수정합니다.
+3. 올바른 예외 선언을 구성 하도록 매크로 인수를 수정 합니다.
 
    예를 들어 다음을 변경합니다.
 
-   [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
    to
 
-   [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. 필요에 따라 예외 개체를 삭제할 수 있도록 catch 블록의 코드를 수정합니다. 자세한 내용은 [예외: 예외 catch 및 삭제 예외](../mfc/exceptions-catching-and-deleting-exceptions.md)문서를 참조하십시오.
+4. 필요에 따라 예외 개체를 삭제 하도록 catch 블록의 코드를 수정 합니다. 자세한 내용은 예외 [: 예외 catch 및 삭제](exceptions-catching-and-deleting-exceptions.md)문서를 참조 하세요.
 
-다음은 MFC 예외 매크로를 사용하는 예외 처리 코드의 예입니다. 다음 예제의 코드에서 매크로를 사용 하므로 예외가 `e` 자동으로 삭제 됩니다.
+다음은 MFC 예외 매크로를 사용 하는 예외 처리 코드의 예제입니다. 다음 예제의 코드는 매크로를 사용 하기 때문에 예외가 `e` 자동으로 삭제 됩니다.
 
-[!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#8](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
 
-다음 예제의 코드는 C++ 예외 키워드를 사용하므로 예외를 명시적으로 삭제해야 합니다.
+다음 예제의 코드는 c + + 예외 키워드를 사용 하므로 예외를 명시적으로 삭제 해야 합니다.
 
-[!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
+[!code-cpp[NVC_MFCExceptions#9](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-자세한 내용은 [예외: MFC 매크로 및 C++ 예외 사용.](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+자세한 내용은 [예외: MFC 매크로 및 c + + 예외 사용](exceptions-using-mfc-macros-and-cpp-exceptions.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[예외 처리](../mfc/exception-handling-in-mfc.md)<br/>
+[예외 처리](exception-handling-in-mfc.md)<br/>

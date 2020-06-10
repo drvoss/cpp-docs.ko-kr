@@ -9,28 +9,28 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bdaa76dc68467dce1021d9b5f54eaafa248c529
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624268"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>상태 표시줄을 만드는 방법
 
-MFC 상태 표시줄을 만드는 두 가지 클래스를 제공 합니다. [CStatusBar](../mfc/reference/cstatusbar-class.md) 하 고 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (하는 Windows 공용 컨트롤 API를 래핑하여). `CStatusBar` 모든 기능을 제공 모음 공용 컨트롤 상태에 대 한 자동으로 상호 작용 하는 메뉴 및 도구 모음 및 있습니다;에 대 한 다양 한 일반적인 필수 컨트롤 설정 및 구조 처리 그러나 결과 실행 파일 일반적으로 보다 커지는 경우가 사용 하 여 만든 `CStatusBarCtrl`합니다.
+MFC는 상태 표시줄을 만드는 두 가지 클래스를 제공 합니다. [Cstatusbar](reference/cstatusbar-class.md) and [CStatusBarCtrl](reference/cstatusbarctrl-class.md) (Windows 공용 컨트롤 API 래핑). `CStatusBar`는 상태 표시줄 공용 컨트롤의 모든 기능을 제공 하 고, 메뉴와 도구 모음을 자동으로 조작 하며, 필요한 몇 가지 공용 컨트롤 설정 및 구조를 처리 합니다. 그러나 결과로 생성 되는 실행 파일은 일반적으로를 사용 하 여 만든 것 보다 큽니다 `CStatusBarCtrl` .
 
-`CStatusBarCtrl` 일반적으로 결과를 더 작은 실행 파일을 사용할 수도 `CStatusBarCtrl` 상태 표시줄을 MFC 아키텍처에 통합 하려는 경우. 사용 하려는 경우 `CStatusBarCtrl` 및 상태 표시줄을 MFC 아키텍처 통합, 상태 표시줄을 MFC 컨트롤 조작에 전달할 추가 주의 해야 합니다. 이 통신; 어렵지 않습니다. 그러나 사용 하는 경우에 필요 없는 추가 작업 것 `CStatusBar`입니다.
+`CStatusBarCtrl`일반적으로는 작은 실행 파일을 생성 하며, `CStatusBarCtrl` 상태 표시줄을 MFC 아키텍처에 통합 하지 않으려는 경우를 사용 하는 것이 좋습니다. 을 사용 하 `CStatusBarCtrl` 고 상태 표시줄을 mfc 아키텍처에 통합 하려는 경우 상태 표시줄 컨트롤 조작을 mfc에 전달 하려면 추가 주의를 기울여야 합니다. 이 통신은 어렵지 않습니다. 그러나를 사용 하는 경우에는 불필요 한 추가 작업이 있습니다 `CStatusBar` .
 
-Visual C++ 상태 표시줄 공용 컨트롤을 활용 하려면 두 가지 방법을 제공 합니다.
+Visual C++는 상태 표시줄 공용 컨트롤을 활용 하는 두 가지 방법을 제공 합니다.
 
-- 상태 표시줄을 만드는 `CStatusBar`, 다음 호출 [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) 에 액세스 하는 `CStatusBarCtrl` 멤버 함수입니다.
+- 을 사용 하 여 상태 표시줄을 만든 `CStatusBar` 다음 [cstatusbar:: GetStatusBarCtrl](reference/cstatusbar-class.md#getstatusbarctrl) 를 호출 하 여 멤버 함수에 대 한 액세스 권한을 얻습니다 `CStatusBarCtrl` .
 
-- 상태 표시줄을 만드는 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)의 생성자입니다.
+- [CStatusBarCtrl](reference/cstatusbarctrl-class.md)의 생성자를 사용 하 여 상태 표시줄을 만듭니다.
 
-두 방법 중 하나는 상태 표시줄 컨트롤의 멤버 함수에 액세스할 수 있습니다. 호출 하는 경우 `CStatusBar::GetStatusBarCtrl`에 대 한 참조를 반환 하는 `CStatusBarCtrl` 개체 멤버 함수의 집합 중 하나를 사용할 수 있습니다. 참조 [CStatusBar](../mfc/reference/cstatusbar-class.md) 정보를 생성 하 고 상태를 사용 하 여 표시줄을 만드는 방법에 대 한 `CStatusBar`합니다.
+두 메서드 모두 상태 표시줄 컨트롤의 멤버 함수에 대 한 액세스를 제공 합니다. 를 호출 하면 `CStatusBar::GetStatusBarCtrl` `CStatusBarCtrl` 두 멤버 함수 집합을 사용할 수 있도록 개체에 대 한 참조를 반환 합니다. 을 사용 하 여 상태 표시줄을 생성 하 고 만드는 방법에 대 한 자세한 내용은 [Cstatusbar](reference/cstatusbar-class.md) 를 참조 하십시오 `CStatusBar` .
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CStatusBarCtrl 사용](../mfc/using-cstatusbarctrl.md)<br/>
-[컨트롤](../mfc/controls-mfc.md)
+[CStatusBarCtrl 사용](using-cstatusbarctrl.md)<br/>
+[컨트롤](controls-mfc.md)

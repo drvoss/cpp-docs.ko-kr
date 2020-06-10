@@ -7,19 +7,19 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ba197174e95e42cd237c875f39f07801cb3dbe
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619308"
 ---
 # <a name="command-targets"></a>명령 대상
 
-그림 [프레임 워크에서 명령](../mfc/user-interface-objects-and-command-ids.md) 메뉴 항목 등 개체를 클릭할 때 발생 하는 명령을 수행 하는 프레임 워크를 호출 하는 처리기 함수는 사용자 인터페이스 개체 간 연결을 보여줍니다.
+[프레임 워크](user-interface-objects-and-command-ids.md) 의 그림 명령은 사용자 인터페이스 개체 (예: 메뉴 항목)와 프레임 워크가 개체가 클릭 될 때 결과 명령을 수행 하기 위해 호출 하는 처리기 함수를 연결 하는 것을 보여 줍니다.
 
-Windows는 메시지에 대 한 처리기가 호출 됩니다 창에 직접 명령 메시지 없는 메시지를 보냅니다. 그러나 후보 개체 수가 명령 경로 프레임 워크-"명령 대상" 라는-일반적으로 명령에 대 한 처리기를 호출 하는 중입니다. 처리기 함수의 명령과 표준 Windows 메시지에 대 한 동일한 방식으로 작동 하지만 호출 되는 메커니즘은 서로에 설명 된 대로 [프레임 워크가 처리기를 호출 하는 방법을](../mfc/how-the-framework-calls-a-handler.md)합니다.
+Windows에서는 명령 메시지가 아닌 메시지를 메시지 처리기가 있는 창에 직접 보냅니다. 그러나이 프레임 워크는 명령에 대 한 처리기를 일반적으로 호출 하는 여러 후보 개체 ("명령 대상" 이라고 함)로 명령을 라우팅합니다. 처리기 함수는 명령 및 표준 Windows 메시지에 대해 동일한 방식으로 작동 하지만,이 함수를 호출 하는 메커니즘은 [프레임 워크가 처리기를 호출 하는 방법](how-the-framework-calls-a-handler.md)에 설명 된 대로 서로 다릅니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[프레임워크의 메시지 및 명령](../mfc/messages-and-commands-in-the-framework.md)
+[프레임워크의 메시지 및 명령](messages-and-commands-in-the-framework.md)

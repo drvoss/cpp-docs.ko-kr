@@ -8,19 +8,19 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus during execution
 ms.assetid: 722c7c00-4be2-4967-877d-f96aaa604396
-ms.openlocfilehash: 00d045932a4b196e23a2853e87fe42f7722cfadd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b7da3871cae21da45fbb449e703ff6d8bc5f0e7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365236"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622448"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>프로그램 실행 중 메뉴 조작
 
-클래스를 사용 하 여 `CMenu` 메뉴 및 메뉴 항목에서 바로 조작할 수 있습니다. `CMenu` Windows HMENU 핸들을 캡슐화 하 고 메뉴를 사용 하 여 작업에 대 한 멤버 함수를 제공 합니다.
+클래스를 사용 `CMenu` 하 여 메뉴 및 메뉴 항목을 즉석에서 조작 합니다. `CMenu`Windows HMENU 핸들을 캡슐화 하 고 메뉴 작업을 위한 멤버 함수를 제공 합니다.
 
-클래스에 대 한 개요를 참조 하십시오 [CMenu](../mfc/reference/cmenu-class.md) 세부 정보에 대 한 합니다.
+자세한 내용은 클래스 [CMenu](reference/cmenu-class.md) 개요를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[메뉴](../mfc/menus-mfc.md)
+[메뉴](menus-mfc.md)

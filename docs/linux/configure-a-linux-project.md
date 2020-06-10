@@ -2,12 +2,12 @@
 title: Visual Studio에서 C++ Linux 프로젝트 구성
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623591"
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
 
@@ -126,7 +126,7 @@ sudo apt install zip
 ## <a name="see-also"></a>참조
 
 [컴파일러 설정 및 빌드 속성](../build/working-with-project-properties.md)<br/>
-[C++ 일반 속성(Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++ 디렉터리(Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[소스 복사 프로젝트 속성(Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[빌드 이벤트 속성(Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ 일반 속성(Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++ 디렉터리(Linux C++)](prop-pages/directories-linux.md)<br/>
+[소스 복사 프로젝트 속성(Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[빌드 이벤트 속성(Linux C++)](prop-pages/build-events-linux.md)

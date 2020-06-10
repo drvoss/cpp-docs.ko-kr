@@ -1,21 +1,21 @@
 ---
-title: 머리글 항목&#39;의 모양 사용자 지정
+title: 머리글 항목&#39;s 모양 사용자 지정
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bf1bdad6a0408746b50b6b0dcbecbce308f5ede
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617080"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>머리글 항목&#39;의 모양 사용자 지정
+# <a name="customizing-the-header-item39s-appearance"></a>머리글 항목&#39;s 모양 사용자 지정
 
-헤더 컨트롤 ([CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create))을 처음 만들 때 *dwstyle* 매개 변수를 설정 하면 헤더 항목의 모양 및 동작을 정의 하거나 헤더 컨트롤의 동작을 정의할 수 있습니다.
+헤더 컨트롤 ([CHeaderCtrl:: create](reference/cheaderctrl-class.md#create))을 처음 만들 때 *dwstyle* 매개 변수를 설정 하면 헤더 항목의 모양 및 동작을 정의 하거나 헤더 컨트롤의 동작을 정의할 수 있습니다.
 
 다음은 설정할 수 있는 스타일 및 해당 용도에 대 한 샘플링입니다.
 
@@ -29,11 +29,11 @@ ms.locfileid: "69508712"
 
 - 헤더 컨트롤을 숨겨야 함을 나타내려면 **HDS_HIDDEN** 스타일을 사용 합니다.
 
-   **HDS_HIDDEN** 스타일은 헤더 컨트롤이 시각적 컨트롤이 아니라 데이터 컨테이너로 사용 됨을 나타냅니다. 이 스타일은 컨트롤을 자동으로 숨기지 않지만 대신의 `CHeaderCtrl::Layout`동작에 영향을 줍니다. `WINDOWPOS` 구조체의 *cy* 멤버에서 반환 된 값은 컨트롤이 사용자에 게 표시 되지 않아야 함을 나타내는 0이 됩니다.
+   **HDS_HIDDEN** 스타일은 헤더 컨트롤이 시각적 컨트롤이 아니라 데이터 컨테이너로 사용 됨을 나타냅니다. 이 스타일은 컨트롤을 자동으로 숨기지 않지만 대신의 동작에 영향을 줍니다 `CHeaderCtrl::Layout` . 구조체의 *cy* 멤버에서 반환 된 값은 `WINDOWPOS` 컨트롤이 사용자에 게 표시 되지 않아야 함을 나타내는 0이 됩니다.
 
-이러한 속성에 대 한 자세한 내용은 Windows SDK [항목](/windows/win32/Controls/header-controls) 을 참조 하세요. 헤더 컨트롤에 항목을 추가 하는 방법에 대 한 자세한 내용은 [헤더 컨트롤에 항목 추가](../mfc/adding-items-to-the-header-control.md)를 참조 하세요.
+이러한 속성에 대 한 자세한 내용은 Windows SDK [항목](/windows/win32/Controls/header-controls) 을 참조 하세요. 헤더 컨트롤에 항목을 추가 하는 방법에 대 한 자세한 내용은 [헤더 컨트롤에 항목 추가](adding-items-to-the-header-control.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[CHeaderCtrl 사용](../mfc/using-cheaderctrl.md)<br/>
-[컨트롤](../mfc/controls-mfc.md)
+[CHeaderCtrl 사용](using-cheaderctrl.md)<br/>
+[컨트롤](controls-mfc.md)

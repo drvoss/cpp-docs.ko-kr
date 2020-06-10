@@ -1,5 +1,5 @@
 ---
-title: 이진 편집기 (C++)
+title: 바이너리 편집기 (c + +)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 591a6714f1adabb30fda446cad0e79e2c28c30ad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615344"
 ---
-# <a name="binary-editor-c"></a>이진 편집기 (C++)
+# <a name="binary-editor-c"></a>바이너리 편집기 (c + +)
 
 > [!CAUTION]
 > **바이너리 편집기** 에서 대화 상자, 이미지 또는 메뉴와 같은 리소스를 편집 하는 것은 위험 합니다. 잘못된 편집으로 리소스가 손상되어 해당 네이티브 편집기에서 읽지 못하게 될 수 있습니다.
 
 **이진 편집기** 를 사용 하면 16 진수 또는 ASCII 형식의 이진 수준에서 리소스를 편집할 수 있습니다. 또한 [찾기 명령](/visualstudio/ide/reference/find-command) 을 사용하여 ASCII 문자열 또는 16진수 바이트를 검색할 수도 있습니다. Visual Studio 환경에서 지원 하지 않는 사용자 지정 리소스 또는 리소스 형식을 보거나 사소한 변경 작업을 수행 해야 하는 경우에만 **이진 편집기** 를 사용 합니다. Express 버전에서는 **바이너리 편집기** 를 사용할 수 없습니다.
 
-- 새 파일에서 **이진 편집기** 를 열려면 메뉴 **파일** > **새** > **파일**로 이동 하 고 편집할 파일 유형을 선택한 다음 **열기** 단추 옆의 드롭다운 화살표를 선택 하 고 **이진 편집기**를 사용 하 > **여 열기** 를 선택 합니다.
+- 새 파일에서 **이진 편집기** 를 열려면 메뉴 **파일**새 파일로 이동 하 여  >  **New**  >  **File**편집 하려는 파일 유형을 선택한 다음 **열기** 단추 옆의 드롭다운 화살표를 선택 하 고 이진 편집기 **로 열기**를 선택  >  **Binary Editor**합니다.
 
-- 기존 파일에서 **이진 편집기** 를 열려면 메뉴 **파일** >  > **파일** **열기** 로 이동 하 여 편집 하려는 파일을 선택한 다음 **열기** 단추 옆의 드롭다운 화살표를 선택 하 고 **이진 편집기**를 사용 하 > **여 열기** 를 선택 합니다.
+- 기존 파일에서 **이진 편집기** 를 열려면 메뉴 **파일**열기로 이동 하 여  >  **Open**  >  **File**편집 하려는 파일을 선택한 다음 **열기** 단추 옆의 드롭다운 화살표를 선택 하 고 이진 편집기 **로 열기**를 선택  >  **Binary Editor**합니다.
 
-   ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   ![바이너리 편집기](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    **바이너리 편집기** 에 표시 되는 대화 상자의 이진 데이터
 
 **이진 편집기** (0X20 ~ 0x7e)에는 특정 ASCII 값만 표시 됩니다. 확장 문자는 **이진 편집기**의 오른쪽 패널 ASCII 값 섹션에 마침표로 표시 됩니다. 인쇄 가능한 문자는 ASCII 값 32 ~ 126입니다.
@@ -69,7 +69,7 @@ ms.locfileid: "80215243"
 1. **연결 프로그램** 대화 상자에서 **바이너리 편집기**를 선택합니다.
 
 > [!NOTE]
-> 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](../windows/image-editor-for-icons.md) 및 **바이너리 편집기** 를 사용할 수 있습니다. 편집할 관리되는 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함된 리소스를 편집할 수 없습니다.
+> 관리 되는 프로젝트에서 리소스 파일로 작업 하려면 [이미지 편집기](image-editor-for-icons.md) 및 **바이너리 편집기** 를 사용할 수 있습니다. 편집할 관리되는 리소스는 연결된 리소스여야 합니다. Visual Studio 리소스 편집기에서는 포함된 리소스를 편집할 수 없습니다.
 
 ### <a name="to-edit-a-resource"></a>리소스를 편집하려면
 
@@ -90,7 +90,7 @@ ms.locfileid: "80215243"
 
 ASCII 문자열 또는 16 진수 바이트를 검색할 수 있습니다. 예를 들어 *hello*를 찾으려면 문자열 *hello* 또는 해당 16 진수 값 *48 65 6c 6c 6F*를 검색할 수 있습니다.
 
-1. 메뉴 **편집** > [찾기](/visualstudio/ide/reference/find-command)로 이동 합니다.
+1. 메뉴로 이동 하 여 찾기를 **편집**  >  [Find](/visualstudio/ide/reference/find-command)합니다.
 
 1. **찾을 내용** 상자의 드롭다운 목록에서 이전 검색 문자열을 선택 하거나 찾으려는 데이터를 입력 합니다.
 
@@ -100,13 +100,13 @@ ASCII 문자열 또는 16 진수 바이트를 검색할 수 있습니다. 예를
 
 일반 리소스 스크립트 (.rc) 파일 구문을 사용 하 여 별도의 파일에 리소스를 배치한 다음 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **리소스 포함**을 선택 하 여 해당 파일을 포함 하 여 새 사용자 지정 또는 데이터 리소스를 만들 수 있습니다.
 
-1. 사용자 지정 또는 데이터 리소스가 포함된[.rc 파일을 만듭니다](../windows/how-to-create-a-resource-script-file.md) .
+1. 사용자 지정 또는 데이터 리소스가 포함된[.rc 파일을 만듭니다](how-to-create-a-resource-script-file.md) .
 
    null로 끝나는 따옴표가 붙은 문자열이나 10진수, 16진수 또는 8진수 형식의 정수로 .rc 파일의 사용자 지정 데이터를 입력할 수 있습니다.
 
 1. **솔루션 탐색기**에서 프로젝트의 .rc 파일을 마우스 오른쪽 단추로 클릭 하 고 **리소스 포함**을 선택 합니다.
 
-1. **컴파일 타임 지시문** 상자에 사용자 지정 리소스를 포함 하는 파일의 이름을 제공 하는 `#include` 문을 입력 합니다. 예를 들면 다음과 같습니다.
+1. **컴파일 타임 지시문** 상자에 `#include` 사용자 지정 리소스를 포함 하는 파일의 이름을 제공 하는 문을 입력 합니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     #include mydata.rc
@@ -123,8 +123,8 @@ ASCII 문자열 또는 16 진수 바이트를 검색할 수 있습니다. 예를
 
 ## <a name="requirements"></a>요구 사항
 
-없음
+None
 
 ## <a name="see-also"></a>참고 항목
 
-[리소스 편집기](../windows/resource-editors.md)
+[리소스 편집기](resource-editors.md)

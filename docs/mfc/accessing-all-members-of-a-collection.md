@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: ae866b71d2a9f001c56b2c61d99749cab824b313
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392988"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616490"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>컬렉션의 모든 멤버에 액세스
 
@@ -34,33 +34,33 @@ ms.locfileid: "62392988"
 
 - [맵 반복](#_core_to_iterate_a_map)
 
-### <a name="_core_to_iterate_an_array"></a> 배열을 반복하려면
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a> 배열을 반복하려면
 
 1. `GetAt` 멤버 함수에서 순차적인 인덱스 번호를 사용합니다.
 
-   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
    이 예제에서는 `CPerson` 개체에 대한 포인터를 포함하는 형식화된 포인터 배열을 사용합니다. 이 배열은 미리 정의된 비템플릿 클래스 중 하나인 `CObArray`클래스에서 파생됩니다. `GetAt` 는 `CPerson` 개체에 대한 포인터를 반환합니다. 형식화된 포인터 컬렉션 클래스(배열 또는 목록)의 경우 첫 번째 매개 변수는 기본 클래스를 지정하고, 두 번째 매개 변수는 저장할 형식을 지정합니다.
 
-   `CTypedPtrArray` 클래스도 오버 로드는 **[ ]** 연산자 요소 배열에 액세스 하는 일반적인 배열-아래 첨자 구문을 사용할 수 있도록 합니다. 대체 하는 문은 본문에는 **에 대 한** 위의 루프는
+   `CTypedPtrArray`또한 클래스는 일반적인 배열 첨자 구문을 사용 하 여 배열의 요소에 액세스할 수 있도록 **[]** 연산자를 오버 로드 합니다. 위의 for 루프 본문에서 문 대신 **사용할** 수 있습니다.
 
-   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
    이 연산자는 **const** 버전과 비**const** 버전 모두에 존재합니다. **const** 배열에 대해 호출되는 **const** 버전은 대입문의 오른쪽에만 나타날 수 있습니다.
 
-### <a name="_core_to_iterate_a_list"></a> 목록을 반복하려면
+### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> 목록을 반복하려면
 
 1. `GetHeadPosition` 및 `GetNext` 멤버 함수를 사용하여 목록 작업을 수행합니다.
 
-   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
    이 예제에서는 형식화된 포인터 목록을 사용하여 `CPerson` 개체에 대한 포인터를 포함합니다. 목록 선언은 [배열을 반복하려면](#_core_to_iterate_an_array) 절차의 배열에 대한 선언과 유사하지만 `CObList`클래스에서 파생됩니다. `GetNext` 는 `CPerson` 개체에 대한 포인터를 반환합니다.
 
-### <a name="_core_to_iterate_a_map"></a> 맵을 반복하려면
+### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a> 맵을 반복하려면
 
 1. 다음 예제와 같이 `GetStartPosition` 을 사용하여 맵을 시작 부분을 가져오고 `GetNextAssoc` 를 사용하여 맵에서 다음 키 및 값을 반복적으로 가져옵니다.
 
-   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
    이 예제에서는 형식화된 포인터 컬렉션 대신, `CString` 키를 사용하고 `CPerson` 개체에 대한 포인터를 저장하는 단순 맵 템플릿을 사용합니다. `GetNextAssoc`와 같은 액세스 함수를 사용하는 경우 클래스는 `CPerson` 개체에 대한 포인터를 제공합니다. 대신 비템플릿 맵 컬렉션 중 하나를 사용하는 경우에는 반환된 `CObject` 포인터를 `CPerson`에 대한 포인터로 캐스팅해야 합니다.
 
@@ -69,10 +69,10 @@ ms.locfileid: "62392988"
 
    템플릿 솔루션은 보다 간단하며 더 나은 형식 안전성을 제공하는 데 도움이 됩니다. 비템플릿 코드는 여기에서 볼 수 있듯이 더 복잡합니다.
 
-   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
-자세한 내용은 [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md)를 참조하세요.
+자세한 내용은 [CObject 컬렉션의 모든 개체 삭제](deleting-all-objects-in-a-cobject-collection.md)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[컬렉션](../mfc/collections.md)
+[컬렉션](collections.md)

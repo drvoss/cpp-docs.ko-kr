@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤을 사용 하 여'
+title: 'ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤 사용'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,59 +8,59 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620768"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤을 사용 하 여
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤 사용
 
-일부 SDI 등의 응용 프로그램 또는 MDI 응용 프로그램에서 응용 프로그램의 창에서 컨트롤을 포함 해야 합니다. 합니다 **만들기** 시각적 개체에 의해 삽입 된 래퍼 클래스의 멤버 함수 C++, 대화 상자에 대 한 필요 없이 동적으로 컨트롤의 인스턴스를 만들 수 있습니다.
+SDI 또는 MDI 응용 프로그램과 같은 일부 응용 프로그램에서는 응용 프로그램의 창에 컨트롤을 포함 하는 것이 좋습니다. Visual C++으로 삽입 된 래퍼 클래스의 **Create** member 함수는 대화 상자 없이 동적으로 컨트롤의 인스턴스를 만들 수 있습니다.
 
-합니다 **만들기** 멤버 함수에 다음 매개 변수:
+**Create** member 함수에는 다음과 같은 매개 변수가 있습니다.
 
 *lpszWindowName*<br/>
-(해당 되는 경우) 컨트롤의 텍스트 또는 캡션 속성에 표시할 텍스트 포인터입니다.
+컨트롤의 Text 또는 Caption 속성 (있는 경우)에 표시 되는 텍스트에 대 한 포인터입니다.
 
 *dwStyle*<br/>
-Windows 스타일입니다. 전체 목록을 참조 하세요 [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol)합니다.
+Windows 스타일. 전체 목록은 [CWnd:: CreateControl](reference/cwnd-class.md#createcontrol)을 참조 하세요.
 
 *rect*<br/>
-컨트롤의 크기와 위치를 지정합니다.
+컨트롤의 크기와 위치를 지정 합니다.
 
 *pParentWnd*<br/>
-일반적으로 컨트롤의 부모 창 지정을 `CDialog`입니다. 않아야 **NULL**합니다.
+컨트롤의 부모 창 (일반적으로)을 지정 합니다 `CDialog` . **NULL**이 아니어야 합니다.
 
 *nID*<br/>
-컨트롤 ID를 지정 하 고 컨트롤에 참조 컨테이너에서 사용할 수 있습니다.
+컨트롤 ID를 지정 하 고 컨테이너에서 컨트롤을 참조 하는 데 사용할 수 있는 컨트롤 ID를 지정 합니다.
 
-SDI 응용 프로그램의 폼 보기에서이 함수를 사용 하 여 동적으로 만들려면 ActiveX 컨트롤의 예로 것입니다. 컨트롤의 인스턴스를 만들 수 있습니다는 `WM_CREATE` 응용 프로그램의 처리기입니다.
+이 함수를 사용 하 여 동적으로 ActiveX 컨트롤을 만드는 한 가지 예는 SDI 응용 프로그램의 폼 보기입니다. 그런 다음 `WM_CREATE` 응용 프로그램의 처리기에서 컨트롤의 인스턴스를 만들 수 있습니다.
 
-예를 들어 `CMyView` 는 기본 뷰 클래스 `CCirc` 래퍼 클래스 및 가변 원형 H는 헤더 (합니다. H) 래퍼 클래스의 파일입니다.
+이 예제에서 `CMyView` 는 주 뷰 클래스이 고, `CCirc` 은 래퍼 클래스 이며,는 CIRC입니다. H는 헤더 (. H) 래퍼 클래스의 파일입니다.
 
-이 기능을 구현 하는 것은 4 단계 프로세스입니다.
+이 기능을 구현 하는 과정은 네 단계로 구성 됩니다.
 
-### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>동적으로 대화 상자가 아닌 창에서 ActiveX 컨트롤을 만들려면
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>대화 상자가 아닌 창에서 동적으로 ActiveX 컨트롤을 만들려면
 
-1. 가변 원형 삽입 CMYVIEW에서 H입니다. H, 직전의 `CMyView` 클래스 정의:
+1. CIRC를 삽입 합니다. CMYVIEW의 H. H는 클래스 정의 바로 앞에 `CMyView` 있습니다.
 
-   [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+   [!code-cpp[NVC_MFC_AxCont#12](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
 
-1. 멤버 변수 추가 (형식의 `CCirc`)의 보호 된 섹션에는 `CMyView` 클래스 CMYVIEW에 정의 합니다. H:
+1. `CCirc`CMYVIEW에 있는 클래스 정의의 보호 된 섹션에 멤버 변수 (형식)를 추가 `CMyView` 합니다. 넣기
 
-   [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
-    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
+   [!code-cpp[NVC_MFC_AxCont#13](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+    [!code-cpp[NVC_MFC_AxCont#14](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
 
-1. 추가 된 `WM_CREATE` 클래스에 메시지 처리기 `CMyView`합니다.
+1. `WM_CREATE`클래스에 메시지 처리기를 추가 `CMyView` 합니다.
 
-1. 처리기 함수에서 `CMyView::OnCreate`, 컨트롤의 호출 `Create` 함수를 사용 하는 **이** 부모 창으로 포인터:
+1. 처리기 함수에서 `CMyView::OnCreate` `Create` **이** 포인터를 부모 창으로 사용 하 여 컨트롤의 함수를 호출 합니다.
 
-   [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
-1. 프로젝트를 다시 빌드합니다. 응용 프로그램의 뷰를 만들 때마다 Circ 컨트롤을 동적으로 생성 됩니다.
+1. 프로젝트를 다시 빌드합니다. 응용 프로그램의 뷰를 만들 때마다 Circ 컨트롤이 동적으로 생성 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[ActiveX 컨트롤 컨테이너](../mfc/activex-control-containers.md)
+[ActiveX 컨트롤 컨테이너](activex-control-containers.md)

@@ -8,38 +8,38 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626267"
 ---
 # <a name="memory-management"></a>메모리 관리
 
-다음의 항목들을 통하여 메모리 관리와 관련된 MFC(Microsoft Foundation Class Library)의 일반 서비스를 활용하는 방법에 대해 설명합니다. 메모리 할당은 프레임 할당과 힙 할당의 두 가지 주요 범주로 나눌 수 있습니다.
+이 문서 그룹에서는 메모리 관리와 관련 된 MFC (MFC 라이브러리)의 범용 서비스를 활용 하는 방법을 설명 합니다. 메모리 할당은 프레임 할당과 힙 할당 이라는 두 가지 주요 범주로 나눌 수 있습니다.
 
-두 할당 기술의 큰 차이점 중 하나는 프레임 할당을 사용하면 일반적으로 실제 메모리 블록 자체에서 작업하는 반면 힙 할당에서는 항상 메모리 블록에 대한 포인터가 제공된다는 것입니다. 두 스키마의 또 다른 주요 차이점은 프레임 객체가 자동으로 삭제되는 반면 힙 객체는 프로그래머가 명시적으로 삭제해야 한다는 것입니다.
+두 할당 방법의 주요 차이점은 프레임 할당을 사용 하는 경우 일반적으로 실제 메모리 블록 자체를 사용 하는 것 이지만 힙 할당을 사용 하는 경우 항상 메모리 블록에 대 한 포인터를 제공 한다는 것입니다. 두 스키마의 또 다른 주요 차이점은 프레임 개체가 자동으로 삭제 되는 반면, 힙 개체는 프로그래머가 명시적으로 삭제 해야 한다는 것입니다.
 
-MFC를 사용하지 않는 Windows용 프로그램의 메모리 관리에 대한 정보는 Windows SDK의 [메모리 관리](/windows/win32/memory/memory-management)를 참조하십시오.
+Windows 용 프로그램의 메모리 관리에 대 한 비 MFC 정보는 Windows SDK의 [메모리 관리](/windows/win32/memory/memory-management) 를 참조 하세요.
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아야 할 내용
 
-- [프레임 할당](../mfc/memory-management-frame-allocation.md)
+- [프레임 할당](memory-management-frame-allocation.md)
 
-- [힙 할당](../mfc/memory-management-heap-allocation.md)
+- [힙 할당](memory-management-heap-allocation.md)
 
-- [배열에 대한 메모리 할당](../mfc/memory-management-examples.md)
+- [배열에 대 한 메모리 할당](memory-management-examples.md)
 
-- [힙에서 배열에 대한 메모리 할당 해제](../mfc/memory-management-examples.md)
+- [힙의 배열에 대 한 메모리 할당을 취소 합니다.](memory-management-examples.md)
 
-- [데이터 구조에 대한 메모리 할당](../mfc/memory-management-examples.md)
+- [데이터 구조에 대 한 메모리 할당](memory-management-examples.md)
 
-- [개체에 대한 메모리 할당](../mfc/memory-management-examples.md)
+- [개체에 대 한 메모리 할당](memory-management-examples.md)
 
-- [크기 조정 가능한 메모리 블록](../mfc/memory-management-resizable-memory-blocks.md)
+- [크기 조정 가능한 메모리 블록](memory-management-resizable-memory-blocks.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[개념](../mfc/mfc-concepts.md)<br/>
-[일반 MFC 항목](../mfc/general-mfc-topics.md)
+[개념](mfc-concepts.md)<br/>
+[일반 MFC 항목](general-mfc-topics.md)

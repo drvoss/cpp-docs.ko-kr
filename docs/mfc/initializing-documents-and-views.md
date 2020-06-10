@@ -8,19 +8,19 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e970d6e8a166283f82575b309cf023f48899403
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626348"
 ---
 # <a name="initializing-documents-and-views"></a>문서 및 뷰 초기화
 
-문서 두 가지 방법으로 만들어지므로 문서 클래스에는 두 가지 방법을 모두 지원 해야 합니다. 먼저 사용자 새 파일 명령을 사용 하 여 새 빈 문서를 만들 수 있습니다. 이 경우의 재정의에서 문서를 초기화 합니다 [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) 클래스의 멤버 함수 [CDocument](../mfc/reference/cdocument-class.md)합니다. 둘째, 사용자 파일에서 읽은 내용을 새 문서를 만들려면 파일 메뉴에서 열기 명령을 사용할 수 있습니다. 이 경우의 재정의에서 문서를 초기화 합니다 [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) 클래스의 멤버 함수 `CDocument`합니다. 모두 초기화가 동일한 경우 두 재정의에서 공용 멤버 함수를 호출할 수 있습니다 또는 `OnOpenDocument` 호출할 수 있습니다 `OnNewDocument` 정리 문서를 초기화 하 여 다음 열기 작업을 완료 합니다.
+문서는 두 가지 방법으로 만들어지므로 문서 클래스는 두 가지 방법을 모두 지원 해야 합니다. 먼저 사용자가 File New 명령을 사용 하 여 비어 있는 새 문서를 만들 수 있습니다. 이 경우 [CDocument](reference/cdocument-class.md)클래스의 [onnewdocument](reference/cdocument-class.md#onnewdocument) 멤버 함수 재정의에서 문서를 초기화 합니다. 두 번째로, 사용자는 파일 메뉴의 열기 명령을 사용 하 여 파일에서 콘텐츠를 읽는 새 문서를 만들 수 있습니다. 이 경우 클래스의 [Onopendocument](reference/cdocument-class.md#onopendocument) 멤버 함수 재정의에서 문서를 초기화 `CDocument` 합니다. 두 초기화가 모두 동일한 경우 두 재정의에서 공통 멤버 함수를 호출 하거나 `OnOpenDocument` `OnNewDocument` 를 호출 하 여 정리 문서를 초기화 한 다음 열기 작업을 완료할 수 있습니다.
 
-뷰는 해당 문서를 만든 후에 생성 됩니다. 뷰를 초기화 하려면 가장 좋은 시간은 프레임 워크에서 문서, 프레임 창 및 뷰 만들기를 완료 한 후입니다. 재정의 하 여 보기를 초기화할 수 있습니다 합니다 [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) 멤버 함수 [CView](../mfc/reference/cview-class.md)합니다. 문서 변경 될 때마다 다시 초기화 하거나 아무 것도 조정 해야 할 경우, 재정의할 수 있습니다 [OnUpdate](../mfc/reference/cview-class.md#onupdate)합니다.
+문서를 만든 후에 뷰가 생성 됩니다. 뷰를 초기화 하는 가장 좋은 시기는 프레임 워크가 문서, 프레임 창 및 뷰 만들기를 완료 한 후입니다. [CView](reference/cview-class.md)의 [oninitialupdate](reference/cview-class.md#oninitialupdate) 멤버 함수를 재정의 하 여 뷰를 초기화할 수 있습니다. 문서가 변경 될 때마다 다시 초기화 하거나 조정 해야 하는 경우 [OnUpdate](reference/cview-class.md#onupdate)을 재정의할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[문서 및 뷰 초기화 및 정리](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+[문서 및 뷰 초기화 및 정리](initializing-and-cleaning-up-documents-and-views.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8874b9f99d3a5756b4ce66e2f5732f856bdd7078
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622625"
 ---
 # <a name="file-and-database-classes"></a>파일 및 데이터베이스 클래스
 
@@ -19,14 +19,14 @@ ms.locfileid: "79442392"
 
 다음 클래스 범주는 데이터 지 속성을 지원 합니다.
 
-- [파일 i/o 클래스](../mfc/file-i-o-classes.md)
+- [파일 I/O 클래스](file-i-o-classes.md)
 
-- [OLE DB 클래스](../mfc/ole-db-classes.md)
+- [OLE DB 클래스](ole-db-classes.md)
 
-- [DAO 클래스](../mfc/dao-classes.md)
+- [DAO 클래스](dao-classes.md)
 
-- [ODBC 클래스](../mfc/odbc-classes.md)
+- [ODBC 클래스](odbc-classes.md)
 
 ## <a name="see-also"></a>참고 항목
 
-[클래스 개요](../mfc/class-library-overview.md)
+[클래스 개요](class-library-overview.md)

@@ -15,84 +15,84 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: d804486b612906f537b6ed1665dfc0cec5149826
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364546"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621194"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 컨트롤: Serialize
 
-이 문서에서는 ActiveX 컨트롤을 직렬화하는 방법에 대해 설명합니다. 직렬화는 디스크 파일과 같은 영구 저장소 매체를 읽거나 쓰는 프로세스입니다. Microsoft 파운데이션 클래스(MFC) 라이브러리는 클래스의 `CObject`직렬화를 위한 기본 제공 지원을 제공합니다. `COleControl`속성 교환 메커니즘을 사용하여 ActiveX 컨트롤로 이 지원을 확장합니다.
+이 문서에서는 ActiveX 컨트롤을 serialize 하는 방법을 설명 합니다. Serialization은 디스크 파일 등의 영구 저장소 미디어에서 읽거나 쓰는 프로세스입니다. MFC (Microsoft Foundation Class) 라이브러리는 클래스의 serialization에 대 한 기본 제공 지원을 제공 합니다 `CObject` . `COleControl`속성 교환 메커니즘을 사용 하 여이 지원을 ActiveX 컨트롤에 확장 합니다.
 
 >[!IMPORTANT]
-> ActiveX는 새로운 개발에 사용해서는 안 되는 레거시 기술입니다. ActiveX를 대체하는 최신 기술에 대한 자세한 내용은 [ActiveX 컨트롤](activex-controls.md)을 참조하십시오.
+> ActiveX는 새로운 개발에 사용 하지 않아야 하는 레거시 기술입니다. ActiveX를 대체 하는 최신 기술에 대 한 자세한 내용은 [Activex Controls](activex-controls.md)을 참조 하세요.
 
-ActiveX 컨트롤에 대한 직렬화는 [COleControl::DoPropExchange를](../mfc/reference/colecontrol-class.md#dopropexchange)재정의하여 구현됩니다. 컨트롤 개체를 로드하고 저장하는 동안 호출되는 이 함수는 멤버 변수 또는 멤버 변수로 구현된 모든 속성을 변경 알림과 함께 저장합니다.
+ActiveX 컨트롤에 대 한 Serialization은 [COleControl::D oPropExchange](reference/colecontrol-class.md#dopropexchange)를 재정의 하 여 구현 됩니다. 컨트롤 개체를 로드 하 고 저장 하는 동안 호출 되는이 함수는 멤버 변수 또는 변경 알림이 포함 된 멤버 변수를 사용 하 여 구현 된 모든 속성을 저장 합니다.
 
-다음 항목에서는 ActiveX 컨트롤 직렬화와 관련된 주요 문제를 다룹니다.
+다음 항목에서는 ActiveX 컨트롤을 serialize 하는 것과 관련 된 주요 문제를 다룹니다.
 
-- 컨트롤 `DoPropExchange` 개체를 직렬화하는 함수 구현
+- `DoPropExchange`컨트롤 개체를 serialize 하는 함수 구현
 
-- [직렬화 프로세스 사용자 지정](#_core_customizing_the_default_behavior_of_dopropexchange)
+- [Serialization 프로세스 사용자 지정](#_core_customizing_the_default_behavior_of_dopropexchange)
 
 - [버전 지원 구현](#_core_implementing_version_support)
 
 ## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>DoPropExchange 함수 구현
 
-ActiveX 컨트롤 마법사를 사용하여 제어 프로젝트를 생성하면 [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)의 기본 구현을 포함하여 여러 기본 처리기 함수가 컨트롤 클래스에 자동으로 추가됩니다. 다음 예제에서는 ActiveX 컨트롤 마법사로 만든 클래스에 추가된 코드를 보여 주며,
+ActiveX 컨트롤 마법사를 사용 하 여 컨트롤 프로젝트를 생성 하는 경우에는 [COleControl::D oPropExchange](reference/colecontrol-class.md#dopropexchange)의 기본 구현을 비롯 하 여 몇 가지 기본 처리기 함수가 컨트롤 클래스에 자동으로 추가 됩니다. 다음 예제에서는 ActiveX 컨트롤 마법사를 사용 하 여 만든 클래스에 추가 된 코드를 보여 줍니다.
 
-[!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#43](codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]
 
-속성을 영구적으로 만들려면 속성 교환 `DoPropExchange` 함수에 호출을 추가하여 수정합니다. 다음 예제에서는 CircleShape 속성의 기본값이 **TRUE인**사용자 지정 부울 CircleShape 속성의 직렬화를 보여 줍니다.
+속성을 영구적으로 설정 하려면 `DoPropExchange` 속성 교환 함수에 대 한 호출을 추가 하 여을 수정 합니다. 다음 예제에서는 사용자 지정 부울 CircleShape 속성의 serialization을 보여 줍니다. 여기서 CircleShape 속성의 기본값은 **TRUE**입니다.
 
-[!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
-[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
+[!code-cpp[NVC_MFC_AxSer#1](codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
+[!code-cpp[NVC_MFC_AxSer#2](codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]
 
-다음 표에는 컨트롤의 속성을 직렬화하는 데 사용할 수 있는 속성 교환 함수가 나열되어 있습니다.
+다음 표에서는 컨트롤의 속성을 serialize 하는 데 사용할 수 있는 속성 교환 함수를 보여 줍니다.
 
-|부동산 교환 기능|용도|
+|속성 교환 함수|목적|
 |---------------------------------|-------------|
-|**PX_Blob () )**|BLOB(이진 대문자) 데이터 속성을 직렬화합니다.|
-|**PX_Bool ()**|부울 형식 속성을 직렬화합니다.|
-|**PX_Color () )**|형식 색상 속성을 직렬화합니다.|
-|**PX_Currency () )**|유형 **CY(통화)** 속성을 직렬화합니다.|
-|**PX_Double () )**|형식 **이중** 속성을 직렬화합니다.|
-|**PX_Font ()**|글꼴 유형 속성을 직렬화합니다.|
-|**PX_Float () )**|형식 **float** 속성을 직렬화합니다.|
-|**PX_IUnknown ()**|형식의 `LPUNKNOWN`속성을 직렬화합니다.|
-|**PX_Long ()**|형식 **long** 속성을 직렬화합니다.|
-|**PX_Picture () )**|유형 그림 속성을 직렬화합니다.|
-|**PX_Short () )**|형식 **짧은** 속성을 직렬화합니다.|
-|**PXstring () )**|형식 `CString` 속성을 직렬화합니다.|
-|**PX_ULong () )**|형식 **ULONG** 속성을 직렬화합니다.|
-|**PX_UShort ()**|**USHORT** 형식 속성을 직렬화합니다.|
+|**PX_Blob ()**|형식 BLOB (Binary Large Object) 데이터 속성을 serialize 합니다.|
+|**PX_Bool ()**|형식 부울 속성을 serialize 합니다.|
+|**PX_Color ()**|형식 색 속성을 serialize 합니다.|
+|**PX_Currency ()**|**CY** (currency) 형식 속성을 serialize 합니다.|
+|**PX_Double ()**|형식 **double** 속성을 serialize 합니다.|
+|**PX_Font ()**|글꼴 형식 속성을 serialize 합니다.|
+|**PX_Float ()**|**Float** 속성 형식을 serialize 합니다.|
+|**PX_IUnknown ()**|형식의 속성을 serialize `LPUNKNOWN` 합니다.|
+|**PX_Long ()**|**Long** 형식의 속성을 serialize 합니다.|
+|**PX_Picture ()**|형식 그림 속성을 serialize 합니다.|
+|**PX_Short ()**|**Short** 형식의 속성을 serialize 합니다.|
+|**PXstring ()**|형식 속성을 serialize `CString` 합니다.|
+|**PX_ULong ()**|**ULONG** 속성 형식을 serialize 합니다.|
+|**PX_UShort ()**|**USHORT** 속성 형식을 serialize 합니다.|
 
-이러한 속성 교환 함수에 대한 자세한 내용은 *MFC 참조에서* [OLE 컨트롤의 지속성을](../mfc/reference/persistence-of-ole-controls.md) 참조하십시오.
+이러한 속성 교환 함수에 대 한 자세한 내용은 *MFC 참조*에서 [OLE 컨트롤의 지 속성](reference/persistence-of-ole-controls.md) 을 참조 하세요.
 
 ## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>DoPropExchange의 기본 동작 사용자 지정
 
-(이전 항목에 `DoPropertyExchange` 도시 된 대로)의 기본 구현 기본 `COleControl`클래스에 대 한 호출을 만듭니다. 이렇게 하면 컨트롤의 사용자 지정 속성만 직렬화하는 것보다 더 많은 저장소 공간을 사용하는 `COleControl`에서 자동으로 지원되는 속성 집합을 직렬화합니다. 이 호출을 제거하면 개체가 중요하게 간주하는 속성만 직렬화할 수 있습니다. 컨트롤에 대 한 호출을 명시적으로 **PX_** 추가 하지 않는 한 컨트롤을 저장 하거나 로드 할 때 컨트롤이 구현 된 모든 stock 속성 상태 직렬화 되지 않습니다.
+이전 항목과 같이의 기본 구현에서는 `DoPropertyExchange` 기본 클래스를 호출 합니다 `COleControl` . 그러면에서 자동으로 지원 되는 속성 집합이 serialize 되어 `COleControl` 컨트롤의 사용자 지정 속성만 직렬화 하는 것 보다 더 많은 저장 공간을 사용 합니다. 이 호출을 제거 하면 중요 한 것으로 생각 되는 속성만 개체에서 serialize 할 수 있습니다. 컨트롤에 구현 된 모든 스톡 속성 상태는 명시적으로 **PX_** 호출을 추가 하지 않는 한 컨트롤 개체를 저장 하거나 로드할 때 serialize 되지 않습니다.
 
 ## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>버전 지원 구현
 
-버전 지원을 사용하면 수정된 ActiveX 컨트롤을 사용하여 새 영구 속성을 추가할 수 있으며 이전 버전의 컨트롤에서 만든 영구 상태를 검색하고 로드할 수 있습니다. 컨트롤의 버전을 영구 데이터의 일부로 사용할 수 있도록 하려면 컨트롤 `DoPropExchange` 함수에서 [COleControl::ExchangeVersion을](../mfc/reference/colecontrol-class.md#exchangeversion) 호출합니다. ActiveX 컨트롤 마법사를 사용하여 ActiveX 컨트롤을 만든 경우 이 호출이 자동으로 삽입됩니다. 버전 지원이 필요하지 않은 경우 제거할 수 있습니다. 그러나 제어 크기의 비용은 버전 지원에서 제공하는 추가 유연성을 위해 매우 작습니다(4바이트).
+버전 지원을 통해 수정 된 ActiveX 컨트롤을 사용 하 여 새 영구 속성을 추가 하 고 이전 버전의 컨트롤에서 만든 영구 상태를 검색 하 고 로드할 수 있습니다. 컨트롤의 버전을 영구 데이터의 일부로 사용할 수 있도록 하려면 컨트롤의 함수에서 [COleControl:: ExchangeVersion](reference/colecontrol-class.md#exchangeversion) 를 호출 `DoPropExchange` 합니다. Activex 컨트롤 마법사를 사용 하 여 ActiveX 컨트롤을 만든 경우에는이 호출이 자동으로 삽입 됩니다. 버전 지원이 필요 하지 않은 경우 제거할 수 있습니다. 그러나 컨트롤 크기의 비용은 버전 지원에서 제공 하는 추가 유연성을 위해 매우 작습니다 (4 바이트).
 
-ActiveX 컨트롤 마법사로 컨트롤을 만들지 않은 경우 `COleControl::ExchangeVersion` `DoPropExchange` 함수 시작 시 다음 줄을 삽입하여 다음 을 `COleControl::DoPropExchange`호출합니다( 호출 전) :
+ActiveX 컨트롤 마법사를 사용 하 여 컨트롤을 만들지 않은 경우를 `COleControl::ExchangeVersion` `DoPropExchange` 호출 하기 전에 함수 시작 부분에 다음 줄을 삽입 하 여에 대 한 호출을 추가 합니다 `COleControl::DoPropExchange` .
 
-[!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
+[!code-cpp[NVC_MFC_AxSer#1](codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]
+[!code-cpp[NVC_MFC_AxSer#3](codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-모든 **DWORD를** 버전 번호로 사용할 수 있습니다. ActiveX 컨트롤 마법사에서 생성한 `_wVerMajor` 프로젝트가 기본값으로 사용됩니다. `_wVerMinor` 이러한 상수는 프로젝트의 ActiveX 제어 클래스의 구현 파일에 정의된 전역 상수입니다. `DoPropExchange` 함수의 나머지 부분에서 는 언제든지 [CPropExchange::GetVersion를](../mfc/reference/cpropexchange-class.md#getversion) 호출하여 저장하거나 검색하는 버전을 검색할 수 있습니다.
+버전 번호로 **DWORD** 를 사용할 수 있습니다. ActiveX 컨트롤 마법사에 의해 생성 된 프로젝트는 `_wVerMinor` 및를 `_wVerMajor` 기본값으로 사용 합니다. 이러한 상수는 프로젝트의 ActiveX 컨트롤 클래스의 구현 파일에 정의 된 전역 상수입니다. 함수의 나머지 부분 내에서 언제 `DoPropExchange` 든 지 [Cpropexchange:: GetVersion](reference/cpropexchange-class.md#getversion) 를 호출 하 여 저장 하거나 검색 하는 버전을 검색할 수 있습니다.
 
-다음 예제에서는 이 샘플 컨트롤의 버전 1에는 "ReleaseDate" 속성만 있습니다. 버전 2는 "OriginalDate" 속성을 추가합니다. 컨트롤이 이전 버전에서 영구 상태를 로드하도록 지시되면 새 속성에 대한 멤버 변수를 기본값으로 초기화합니다.
+다음 예제에서이 샘플 컨트롤의 버전 1에는 "ReleaseDate" 속성만 있습니다. 버전 2는 "OriginalDate" 속성을 추가 합니다. 이전 버전에서 영구 상태를 로드 하도록 컨트롤에 지시 하는 경우 새 속성에 대 한 멤버 변수를 기본값으로 초기화 합니다.
 
-[!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
+[!code-cpp[NVC_MFC_AxSer#4](codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]
+[!code-cpp[NVC_MFC_AxSer#3](codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]
 
-기본적으로 컨트롤은 이전 데이터를 최신 형식으로 "변환"합니다. 예를 들어 컨트롤의 버전 2가 버전 1에 의해 저장된 데이터를 로드하는 경우 다시 저장될 때 버전 2 형식을 작성합니다. 컨트롤이 마지막 읽기 형식으로 데이터를 저장하도록 하려면 **FALSE를** 호출할 `ExchangeVersion`때 세 번째 매개 변수로 전달합니다. 이 세 번째 매개 변수는 선택 사항이며 기본적으로 **TRUE입니다.**
+기본적으로 "컨트롤은 이전 데이터를 최신 형식으로 변환 합니다. 예를 들어, 컨트롤의 버전 2가 버전 1에서 저장 한 데이터를 로드 하는 경우 다시 저장할 때 버전 2 형식을 작성 합니다. 컨트롤이 마지막으로 읽은 형식으로 데이터를 저장 하도록 하려면를 호출할 때 **FALSE** 를 세 번째 매개 변수로 전달 `ExchangeVersion` 합니다. 이 세 번째 매개 변수는 선택 사항이 며 기본적으로 **TRUE** 입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)
+[MFC ActiveX 컨트롤](mfc-activex-controls.md)

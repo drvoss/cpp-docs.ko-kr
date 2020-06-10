@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 3fba3a3c6cd3fecbda7f46575b1d72c450c44019
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f2cd03afbb09dff38298454658c3d3dc2dfa6a8a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619357"
 ---
 # <a name="collections"></a>컬렉션
 
@@ -35,11 +35,11 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 > [!NOTE]
 > 코드에 이미 비템플릿 컬렉션 클래스가 사용되는 경우 이를 계속 사용할 수 있습니다. 고유 데이터 형식에 대해 새로운 형식 안전 컬렉션 클래스를 작성하는 경우 템플릿 기반의 신규 클래스를 사용하는 것이 좋습니다.
 
-## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>컬렉션 셰이프
+## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>컬렉션 모양
 
 컬렉션 클래스는 "모양" 및 요소의 유형에 따라 분류됩니다. 모양은 컬렉션에서 개체가 구성 및 저장되는 방법을 나타냅니다. MFC는 세 가지 컬렉션 모양으로 목록, 배열 및 맵(사전이라고도 부름)을 제공합니다. 특정 프로그래밍 문제에 가장 적합한 컬렉션 모양을 선택하면 됩니다.
 
-제공된 세 가지 컬렉션 모양에 대해서는 이 항목의 뒷 부분에서 간단히 설명합니다. 프로그램에 가장 적합한 셰이프의 기능을 비교하려면 컬렉션 클래스 [선택에 대한 권장 사항을](../mfc/recommendations-for-choosing-a-collection-class.md)참조하십시오.
+제공된 세 가지 컬렉션 모양에 대해서는 이 항목의 뒷 부분에서 간단히 설명합니다. 프로그램에 가장 적합 한 것을 결정 하는 데 도움이 되는 셰이프의 기능을 비교 하려면 [컬렉션 클래스 선택에 대 한 권장 사항](recommendations-for-choosing-a-collection-class.md)을 참조 하세요.
 
 - 목록
 
@@ -55,13 +55,13 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 
 ## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>템플릿 기반 컬렉션 클래스
 
-모든 형식의 개체를 포함하는 형식 안전 컬렉션을 구현하는 가장 쉬운 방법은 MFC 템플릿 기반 클래스 중 하나를 사용하는 것입니다. 이러한 클래스의 예는 MFC 샘플 [COLLECT](../overview/visual-cpp-samples.md)를 참조하십시오.
+모든 형식의 개체를 포함하는 형식 안전 컬렉션을 구현하는 가장 쉬운 방법은 MFC 템플릿 기반 클래스 중 하나를 사용하는 것입니다. 이러한 클래스의 예제는 MFC 샘플 [수집](../overview/visual-cpp-samples.md)을 참조 하세요.
 
 다음 표에서는 MFC 템플릿 기반의 컬렉션 클래스를 보여줍니다.
 
 ### <a name="collection-template-classes"></a>컬렉션 템플릿 클래스
 
-|컬렉션 내용|배열|목록|지도|
+|컬렉션 내용|배열|목록|Maps|
 |-------------------------|------------|-----------|----------|
 |임의 형식의 개체의 컬렉션|`CArray`|`CList`|`CMap`|
 |임의 형식의 개체에 대한 포인터 컬렉션|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
@@ -72,7 +72,7 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 
 ### <a name="nontemplate-collection-classes"></a>비템플릿 컬렉션 클래스
 
-|배열|목록|지도|
+|배열|목록|Maps|
 |------------|-----------|----------|
 |`CObArray`|`CObList`|`CMapPtrToWord`|
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|
@@ -82,7 +82,7 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-컬렉션 클래스 [선택 권장 사항의](../mfc/recommendations-for-choosing-a-collection-class.md) MFC 컬렉션 클래스 테이블의 특성은 이러한 특성(셰이프 제외)으로 MFC 컬렉션 클래스를 설명합니다.
+[컬렉션 클래스 선택에 대 한 권장 사항](recommendations-for-choosing-a-collection-class.md) 에 있는 Mfc 컬렉션 클래스의 특징은 이러한 특성 (셰이프 제외)을 기준으로 mfc 컬렉션 클래스를 설명 합니다.
 
 - 클래스에서 C++ 템플릿이 사용되는지 여부
 
@@ -96,25 +96,25 @@ Microsoft Foundation Class 라이브러리는 개체 그룹을 관리하기 위�
 
 #### <a name="general-collection-class-tasks"></a>일반 컬렉션 클래스 작업
 
-- [컬렉션 클래스 선택에 대한 권장 사항](../mfc/recommendations-for-choosing-a-collection-class.md)
+- [컬렉션 클래스 선택에 대한 권장 사항](recommendations-for-choosing-a-collection-class.md)
 
-- [방법: 형식이 안전한 컬렉션 만들기](../mfc/how-to-make-a-type-safe-collection.md)
+- [방법: 형식이 안전한 컬렉션 만들기](how-to-make-a-type-safe-collection.md)
 
-- [스택 및 큐 컬렉션 만들기](../mfc/creating-stack-and-queue-collections.md)
+- [스택 및 큐 컬렉션 만들기](creating-stack-and-queue-collections.md)
 
-- [배열 ::추가](../mfc/reference/carray-class.md#add)
+- [CArray:: Add](reference/carray-class.md#add)
 
 #### <a name="template-based-collection-class-tasks"></a>템플릿 기반 컬렉션 클래스 작업
 
-- [템플릿 기반 클래스](../mfc/template-based-classes.md)
+- [템플릿 기반 클래스](template-based-classes.md)
 
 #### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>컬렉션의 멤버에 액세스(템플릿 기반 또는 비기반)
 
-- [컬렉션의 모든 멤버에 액세스](../mfc/accessing-all-members-of-a-collection.md)
+- [컬렉션의 모든 멤버에 액세스](accessing-all-members-of-a-collection.md)
 
-- [CObject 컬렉션의 모든 개체 삭제](../mfc/deleting-all-objects-in-a-cobject-collection.md)
+- [CObject 컬렉션의 모든 개체 삭제](deleting-all-objects-in-a-cobject-collection.md)
 
 ## <a name="see-also"></a>참고 항목
 
-[개념](../mfc/mfc-concepts.md)<br/>
-[일반 MFC 항목](../mfc/general-mfc-topics.md)
+[개념](mfc-concepts.md)<br/>
+[일반 MFC 항목](general-mfc-topics.md)

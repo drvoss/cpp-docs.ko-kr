@@ -10,19 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42f21e2441f8ba3d2c6a13503c928880fe100f04
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240662"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623164"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>프레임 창에서 파일 끌어서 놓기
 
-프레임 창에는 파일 탐색기 또는 파일 관리자를 사용 하 여 관계를 관리합니다.
+프레임 창은 파일 탐색기 또는 파일 관리자와의 관계를 관리 합니다.
 
-재정의에서 호출 몇 가지 초기화를 추가 합니다 `CWinApp` 멤버 함수 `InitInstance`에 설명 된 대로 [CWinApp: 응용 프로그램 클래스](../mfc/cwinapp-the-application-class.md), 프레임 창 프레임 창에 끌어서 놓을 파일 탐색기 또는 파일 관리자에서 파일을 직접 열 수도 있습니다. 참조 [파일 관리자 끌어서 놓기](../mfc/special-cwinapp-services.md)합니다.
+CWinApp: Application Class에 설명 된 대로 멤버 함수 재정의에 몇 가지 초기화 호출을 추가 하 여 `CWinApp` `InitInstance` 프레임 창에서 파일 탐색기 또는 파일 관리자의 파일을 간접적으로 열고 프레임 창에 놓을 수 있습니다. [CWinApp: The Application Class](cwinapp-the-application-class.md) [파일 관리자 끌어서 놓기를](special-cwinapp-services.md)참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[프레임 창 사용](../mfc/using-frame-windows.md)
+[프레임 창 사용](using-frame-windows.md)

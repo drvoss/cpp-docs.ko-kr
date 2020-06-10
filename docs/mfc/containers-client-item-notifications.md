@@ -6,48 +6,48 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54b1b2a64685b00fb265e0f80c1f6ad878a7da85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623013"
 ---
 # <a name="containers-client-item-notifications"></a>컨테이너: 클라이언트 항목 알림
 
-이 문서에서는 MFC 프레임 워크 클라이언트 응용 프로그램의 문서에서 항목을 수정 하는 서버 응용 프로그램을 호출 하는 재정의 가능 함수를 설명 합니다.
+이 문서에서는 서버 응용 프로그램이 클라이언트 응용 프로그램의 문서에 있는 항목을 수정할 때 MFC 프레임 워크에서 호출 하는 재정의 가능한 함수에 대해 설명 합니다.
 
-[COleClientItem](../mfc/reference/coleclientitem-class.md) 서버 응용 프로그램이 라고도 하는 구성 요소 응용 프로그램에서 요청에 대 한 응답으로 호출 되는 몇 가지 재정의 가능 함수를 정의 합니다. 이러한 함수는 일반적으로 알림으로 작동합니다. 컨테이너 응용 프로그램을의 위치 및 편집, 항목을 조작 하는 경우 사용자가 변경한 내용을 변경 또는 스크롤, 활성화 등의 다양 한 이벤트를 알려 줍니다.
+[COleClientItem](reference/coleclientitem-class.md) 는 서버 응용 프로그램이 라고도 하는 구성 요소 응용 프로그램의 요청에 대 한 응답으로 호출 되는 재정의 가능한 여러 함수를 정의 합니다. 이러한 재정의 가능는 일반적으로 알림 역할을 합니다. 스크롤, 활성화, 위치 변경 및 사용자가 항목을 편집 하거나 조작 하는 경우 수행 하는 변경 내용 등과 같은 다양 한 이벤트를 컨테이너 응용 프로그램에 알려 줍니다.
 
-프레임 워크에 컨테이너 응용 프로그램에 대 한 호출을 통해 변경 내용 알립니다 `COleClientItem::OnChange`, 함수로 구현이 필요 합니다. 이 보호 된 함수는 두 개의 인수를 받습니다. 첫 번째 서버 항목을 변경한 이유를 지정 합니다.
+프레임 워크는 구현이 필요한 재정의 가능한 함수인를 호출 하 여 컨테이너 응용 프로그램에 변경 내용을 알립니다 `COleClientItem::OnChange` . 이 protected 함수는 두 개의 인수를 받습니다. 첫 번째는 서버가 항목을 변경한 이유를 지정 합니다.
 
 |알림|의미|
 |------------------|-------------|
-|**OLE_CHANGED**|OLE 항목의 모양을 변경 되었습니다.|
+|**OLE_CHANGED**|OLE 항목의 모양이 변경 되었습니다.|
 |**OLE_SAVED**|OLE 항목이 저장 되었습니다.|
-|**OLE_CLOSED**|OLE 항목이 사용 중지 되었습니다.|
-|**OLE_RENAMED**|OLE 항목을 포함 하는 서버 문서가 바뀌었습니다.|
-|**OLE_CHANGED_STATE**|OLE 항목은 다른 한 상태에서 변경 되었습니다.|
-|**OLE_CHANGED_ASPECT**|OLE 항목의 그리기 모양은 프레임 워크에 의해 변경 되었습니다.|
+|**OLE_CLOSED**|OLE 항목이 닫혔습니다.|
+|**OLE_RENAMED**|OLE 항목을 포함 하는 서버 문서의 이름이 변경 되었습니다.|
+|**OLE_CHANGED_STATE**|OLE 항목이 한 상태에서 다른 상태로 변경 되었습니다.|
+|**OLE_CHANGED_ASPECT**|프레임 워크에서 OLE 항목의 그리기 측면을 변경 했습니다.|
 
-이러한 값은는 **OLE_NOTIFICATION** AFXOLE에 정의 된 열거형입니다. 8.
+이러한 값은 AFXOLE에 정의 된 **OLE_NOTIFICATION** 열거형에서 가져온 것입니다. 넣기.
 
-이 함수에서 두 번째 인수에는 항목을 변경 하는 방법 또는 어떤 상태로 전환 되었음을 지정 합니다.
+이 함수에 대 한 두 번째 인수는 항목이 변경 된 방법 또는 입력 한 상태를 지정 합니다.
 
-|첫 번째 인수는 경우|두 번째 인수|
+|첫 번째 인수가 인 경우|두 번째 인수|
 |----------------------------|---------------------|
-|**OLE_SAVED** 또는 **OLE_CLOSED**|사용 되지 않습니다.|
-|**OLE_CHANGED**|변경 된 OLE 항목의 모양을 지정 합니다.|
-|**OLE_CHANGED_STATE**|입력 상태를 설명 합니다 (*emptyState*, *loadedState*를 *openState*를 *activeState*, 또는  *activeUIState*).|
+|**OLE_SAVED** 또는 **OLE_CLOSED**|는 사용 되지 않습니다.|
+|**OLE_CHANGED**|변경 된 OLE 항목의 측면을 지정 합니다.|
+|**OLE_CHANGED_STATE**|입력 중인 상태 (*emptyState*, *loadedState*, *Openstate*, *activestate*또는 *activeUIState*)를 설명 합니다.|
 
-클라이언트 항목을 가정할 수 상태에 대 한 자세한 내용은 참조 하세요. [컨테이너: 클라이언트 항목 상태](../mfc/containers-client-item-states.md)합니다.
+클라이언트 항목에서 가정할 수 있는 상태에 대 한 자세한 내용은 [컨테이너: 클라이언트-항목 상태](containers-client-item-states.md)를 참조 하세요.
 
-프레임 워크 호출 `COleClientItem::OnGetItemPosition` 경우 항목이 활성화 되 고 내부 편집 합니다. 구현은 내부 편집을 지 원하는 응용 프로그램에 필요 합니다. MFC 응용 프로그램 마법사를 항목의 좌표를 할당 하는 기본 구현을 제공 합니다 `CRect` 인수로 전달 되는 개체 `OnGetItemPosition`합니다.
+프레임 워크는 `COleClientItem::OnGetItemPosition` 내부 편집을 위해 항목을 활성화할 때를 호출 합니다. 내부 편집을 지 원하는 응용 프로그램의 경우 구현이 필요 합니다. MFC 응용 프로그램 마법사는 `CRect` 에 대 한 인수로 전달 되는 개체에 항목의 좌표를 할당 하는 기본 구현을 제공 합니다 `OnGetItemPosition` .
 
-내부 편집 하는 동안 OLE 항목의 위치 또는 크기가 변경 되 면 항목의 위치 및 클리핑 사각형에 대 한 컨테이너의 정보를 업데이트 해야 하 고 서버 변경 내용에 대 한 정보를 받아야 합니다. 프레임 워크 호출 `COleClientItem::OnChangeItemPosition` 이 목적입니다. MFC 응용 프로그램 마법사는 기본 클래스의 함수를 호출 하는 재정의 제공 합니다. 응용 프로그램 마법사가 작성 하는 함수를 편집 해야 프로그램 `COleClientItem`-클라이언트 항목 개체에 의해 보존 된 모든 정보를 업데이트 하는 함수는 클래스를 파생 합니다.
+내부 편집 중에 OLE 항목의 위치 또는 크기가 변경 되는 경우 항목의 위치 및 클리핑 사각형에 대 한 컨테이너 정보를 업데이트 하 고 서버에서 변경 내용에 대 한 정보를 받아야 합니다. 프레임 워크는 `COleClientItem::OnChangeItemPosition` 이 목적을 위해를 호출 합니다. MFC 응용 프로그램 마법사는 기본 클래스의 함수를 호출 하는 재정의를 제공 합니다. `COleClientItem`함수가 클라이언트-항목 개체에 의해 유지 되는 정보를 업데이트 하도록 응용 프로그램 마법사가 파생 클래스에 대해 작성 하는 함수를 편집 해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[컨테이너](../mfc/containers.md)<br/>
-[컨테이너: 클라이언트 항목 상태](../mfc/containers-client-item-states.md)<br/>
-[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+[컨테이너](containers.md)<br/>
+[컨테이너: 클라이언트 항목 상태](containers-client-item-states.md)<br/>
+[COleClientItem:: OnChangeItemPosition](reference/coleclientitem-class.md#onchangeitemposition)

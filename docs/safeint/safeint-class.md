@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620949"
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 
 정수 오버플로를 방지할 수 있도록 정수 기본 형식을 확장하고 다양한 형식의 정수 비교를 허용합니다.
 
 > [!NOTE]
-> 이 라이브러리의 최신 버전은 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)에 있습니다.
+> 이 라이브러리의 최신 버전은에 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -39,23 +39,23 @@ class SafeInt;
 | E         |  오류 처리 정책을 정의하는 열거형 데이터 형식입니다. |
 | U         |  보조 피연산자에 대한 정수 또는 부울 매개 변수의 형식입니다. |
 
-| 매개 변수  |  설명 |
+| 매개 변수  |  Description |
 |---------|-----------------|
 | *rhs*      |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *Ⅰ*        |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *비트*     |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
+| *i*        |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
+| *비트씩*     |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| 속성                          |  Description |
+| 이름                          |  설명 |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  기본 생성자입니다. |
 
-### <a name="assignment-operators"></a>대입 연산자
+### <a name="assignment-operators"></a>할당 연산자
 
-| 속성  |  구문 |
+| Name  |  구문 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>캐스팅 연산자
 
-| 속성              |  구문 |
+| Name              |  구문 |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>비교 연산자
 
-| 속성  |  구문 |
+| Name  |  구문 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>산술 연산자
 
-| 속성  |  구문 |
+| Name  |  구문 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>논리 연산자
 
-| 속성     |  구문 |
+| Name     |  구문 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > `SafeInt` 클래스는 모든 종류의 정수를 허용하지만, 부호 없는 형식에서 성능이 향상됩니다.
 
-`E`는 `SafeInt`에서 사용하는 오류 처리 메커니즘입니다. SafeInt 라이브러리와 함께 두 가지 오류 처리 메커니즘이 제공됩니다. 기본 정책은 `SafeIntErrorPolicy_SafeIntException`으로, 오류가 발생하면 [SafeIntException 클래스](../safeint/safeintexception-class.md) 예외가 throw됩니다. 다른 정책은 `SafeIntErrorPolicy_InvalidParameter`로, 오류가 발생하면 프로그램을 중지합니다.
+`E`는 `SafeInt`에서 사용하는 오류 처리 메커니즘입니다. SafeInt 라이브러리와 함께 두 가지 오류 처리 메커니즘이 제공됩니다. 기본 정책은 `SafeIntErrorPolicy_SafeIntException`으로, 오류가 발생하면 [SafeIntException 클래스](safeintexception-class.md) 예외가 throw됩니다. 다른 정책은 `SafeIntErrorPolicy_InvalidParameter`로, 오류가 발생하면 프로그램을 중지합니다.
 
 오류 정책을 사용자 지정하는 두 가지 옵션이 있습니다. 첫 번째 옵션은 `SafeInt`를 만들 때 `E` 매개 변수를 설정하는 것입니다. 하나의 `SafeInt`에 대해서만 오류 처리 정책을 변경하려는 경우 이 옵션을 사용합니다. 다른 옵션은 `SafeInt` 라이브러리를 포함하기 전에 _SAFEINT_DEFAULT_ERROR_POLICY를 사용자 지정 오류 처리 클래스로 정의하는 것입니다. 코드의 모든 `SafeInt` 클래스 인스턴스에 대해 기본 오류 처리 정책을 변경하려는 경우 이 옵션을 사용합니다.
 
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **네임스페이스:** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>세이프인트::세이프인트
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
 
 `SafeInt` 개체를 생성합니다.
 
@@ -257,13 +257,13 @@ SafeInt (
 
 ### <a name="parameters"></a>매개 변수
 
-*Ⅰ*<br/>
+*i*<br/>
 [in] 새로운 `SafeInt` 개체의 값입니다. 생성자에 따라 T 또는 U 형식의 매개 변수여야 합니다.
 
-*B*<br/>
+*b*<br/>
 [in] 새로운 `SafeInt` 개체의 부울 값입니다.
 
-*U*<br/>
+*u*<br/>
 [in] U 형식의 `SafeInt`입니다. 새로운 `SafeInt` 개체는 *u*와 동일한 값을 갖지만 T 형식입니다.
 
 U `SafeInt`에 저장된 데이터의 형식입니다. 부울, 문자 또는 정수 형식일 수 있습니다. 정수 형식인 경우 부호 있는 형식이나 부호 없는 형식으로, 8비트에서 64비트 사이일 수 있습니다.

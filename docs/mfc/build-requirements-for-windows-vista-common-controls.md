@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630852"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619736"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Windows 공용 컨트롤에 대 한 빌드 요구 사항
 
@@ -50,8 +50,8 @@ Visual Studio IDE를 사용 하 여 Windows 공용 컨트롤을 사용 하는 �
 #endif
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[일반 MFC 항목](../mfc/general-mfc-topics.md)<br/>
-[계층 구조 차트](../mfc/hierarchy-chart.md)<br/>
-[사용되지 않는 ANSI API](../mfc/deprecated-ansi-apis.md)
+[일반 MFC 항목](general-mfc-topics.md)<br/>
+[계층 구조 차트](hierarchy-chart.md)<br/>
+[사용되지 않는 ANSI API](deprecated-ansi-apis.md)

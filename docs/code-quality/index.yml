@@ -6,12 +6,12 @@ metadata:
   description: Visual Studio를 사용하여 C 및 C++ 코드 품질을 분석하는 방법을 알아봅니다.
   ms.topic: landing-page
   ms.date: 05/26/2020
-  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: cb4015d2890e24568373ff97d884e4aa24ddcf71
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108410"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506758"
 landingContent:
 - title: C 및 C++ 코드 분석
   linkLists:
@@ -27,8 +27,6 @@ landingContent:
     links:
     - text: 오류에 대한 C/C++ 코드 분석 연습
       url: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - text: C/C++ 코드 오류를 줄이기 위한 SAL 주석 사용
-      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
 - title: 코드 분석 참조
   linkLists:
   - linkListType: overview
@@ -41,3 +39,29 @@ landingContent:
       url: code-analysis-for-cpp-corecheck.md
     - text: C++ 코드 분석 경고
       url: code-analysis-for-c-cpp-warnings.md
+- title: 오류를 줄이기 위한 SAL 주석 사용
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SAL 이해
+      url: understanding-sal.md
+  - linkListType: get-started
+    links:
+    - text: SAL 예제
+      url: best-practices-and-examples-sal.md
+  - linkListType: how-to-guide
+    links:
+    - text: 함수 매개 변수 및 반환 값에 주석 지정
+      url: annotating-function-parameters-and-return-values.md
+    - text: 함수 동작에 주석 지정
+      url: annotating-function-behavior.md
+    - text: 구조체 및 클래스에 주석 지정
+      url: annotating-structs-and-classes.md
+    - text: 잠금 동작에 주석 지정
+      url: annotating-locking-behavior.md
+    - text: 주석 적용 시기 및 위치 지정
+      url: specifying-when-and-where-an-annotation-applies.md
+  - linkListType: reference
+    links:
+    - text: SAL 주석 내장 함수
+      url: intrinsic-functions.md

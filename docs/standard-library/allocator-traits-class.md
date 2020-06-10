@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617410"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits 클래스
 
-클래스 템플릿은 *할당자 형식을*보완 하는 개체를 설명 합니다. 할당자 형식은 할당된 스토리지를 관리하는 데 사용되는 할당자 개체를 설명하는 형식입니다. 특히 할당자 형식 `Alloc`에 대해서는 할당자를 사용할 수 있는 컨테이너에 필요한 모든 정보를 확인하기 위해 `allocator_traits<Alloc>`를 사용할 수 있습니다. 자세한 내용은 기본 [allocator 클래스](../standard-library/allocator-class.md)를 참조하세요.
+클래스 템플릿은 *할당자 형식을*보완 하는 개체를 설명 합니다. 할당자 형식은 할당된 스토리지를 관리하는 데 사용되는 할당자 개체를 설명하는 형식입니다. 특히 할당자 형식 `Alloc`에 대해서는 할당자를 사용할 수 있는 컨테이너에 필요한 모든 정보를 확인하기 위해 `allocator_traits<Alloc>`를 사용할 수 있습니다. 자세한 내용은 기본 [allocator 클래스](allocator-class.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -60,7 +60,7 @@ template <class Alloc>
 
 ## <a name="members"></a>멤버
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -82,14 +82,14 @@ template <class Alloc>
 
 |||
 |-|-|
-|[allocate](#allocate)|지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.|
-|[construct](#construct)|지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.|
-|[deallocate](#deallocate)|지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.|
-|[destroy](#destroy)|지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.|
+|[할당](#allocate)|지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.|
+|[구축](#construct)|지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.|
+|[할당](#deallocate)|지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.|
+|[삭제](#destroy)|지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.|
 |[max_size](#max_size)|지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.|
 
-### <a name="allocate"></a>추가로
+### <a name="allocate"></a><a name="allocate"></a>추가로
 
 지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.
 
@@ -102,13 +102,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
-*개수* \
+*수*\
 할당할 요소의 수입니다.
 
-*힌트* \
+*힌트*\
 요청 이전에 할당된 개체의 주소를 찾음으로써 스토리지에 대한 요청을 충족하여 할당자 개체를 지원할 수 있는 `const_pointer`입니다. Null 포인터는 힌트 없음으로 처리됩니다.
 
 #### <a name="return-value"></a>반환 값
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 해당 식이 잘 구성되어 있는 경우 두 번째 메서드는 `al.allocate(count, hint)`를 반환하고, 아닌 경우 `al.allocate(count)`를 반환합니다.
 
-### <a name="construct"></a>구축
+### <a name="construct"></a><a name="construct"></a>구축
 
 지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
-*ptr* \
+*ptr*\
 개체를 생성할 위치에 대한 포인터입니다.
 
-*args* \
+*args*\
 개체 생성자에 전달되는 인수 목록입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 해당 식이 잘 구성되어 있는 경우 정적 멤버 함수는 `al.construct(ptr, args...)`를 호출하고, 아닌 경우 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`를 평가합니다.
 
-### <a name="deallocate"></a>할당
+### <a name="deallocate"></a><a name="deallocate"></a>할당
 
 지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.
 
@@ -155,22 +155,22 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
-*ptr* \
+*ptr*\
 할당을 취소할 개체의 시작 위치에 대한 포인터입니다.
 
-*개수* \
+*수*\
 할당을 취소할 개체의 수입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 메서드는 `al.deallocate(ptr, count)`를 호출합니다.
 
 이 메서드는 아무것도 throw하지 않습니다.
 
-### <a name="destroy"></a>삭제
+### <a name="destroy"></a><a name="destroy"></a>삭제
 
 지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
-*ptr* \
+*ptr*\
 개체의 위치에 대한 포인터입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.destroy(ptr)`를 호출하고, 아닌 경우 `ptr->~Uty()`를 평가합니다.
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a><a name="max_size"></a>max_size
 
 지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.max_size()`를 반환하고, 아닌 경우 `numeric_limits<size_type>::max()`를 반환합니다.
 
-### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.
 
@@ -218,13 +218,13 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>매개 변수
 
-*al* \
+*항상*\
 할당자 개체입니다.
 
 #### <a name="return-value"></a>반환 값
 
-형식이 올바른 형식이 면이 메서드는 `al.select_on_container_copy_construction()`를 반환 합니다. 그렇지 않으면 *al*을 반환 합니다.
+`al.select_on_container_copy_construction()`형식이 올바른 형식이 면이 메서드는을 반환 하 고 그렇지 않으면 *al*을 반환 합니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 메서드는 연결된 컨테이너를 복사하여 생성할 할당자를 지정하는 데 사용됩니다.

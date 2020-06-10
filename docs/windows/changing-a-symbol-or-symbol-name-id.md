@@ -35,29 +35,29 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623075"
 ---
 # <a name="how-to-manage-symbols"></a>방법: 기호 관리
 
-새 리소스 또는 리소스 개체를 만들 때 개발 환경에서 기본 기호 이름 (예: `IDD_DIALOG1`)을 할당 합니다. [속성 창](/visualstudio/ide/reference/properties-window) 를 사용 하 여 기본 기호 이름을 변경 하거나 이미 리소스와 연결 된 기호의 이름을 변경할 수 있습니다.
+새 리소스 또는 리소스 개체를 만들 때 개발 환경에서는 기본 기호 이름 (예:)을 할당 `IDD_DIALOG1` 합니다. [속성 창](/visualstudio/ide/reference/properties-window) 를 사용 하 여 기본 기호 이름을 변경 하거나 이미 리소스와 연결 된 기호의 이름을 변경할 수 있습니다.
 
 단일 리소스와 연결 된 기호의 경우 **속성** 창을 사용 하 여 기호 값을 변경할 수도 있습니다. [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md) 를 사용 하 여 현재 리소스에 할당 되지 않은 기호의 값을 변경할 수 있습니다.
 
-일반적으로 모든 기호 정의는 `Resource.h`에 저장 됩니다. 그러나 예를 들어 같은 디렉터리에서 둘 이상의 리소스 파일을 사용할 수 있도록 이 포함 파일 이름을 변경해야 할 수 있습니다.
+일반적으로 모든 기호 정의는에 저장 됩니다 `Resource.h` . 그러나 예를 들어 같은 디렉터리에서 둘 이상의 리소스 파일을 사용할 수 있도록 이 포함 파일 이름을 변경해야 할 수 있습니다.
 
 > [!NOTE]
-> 프로젝트에 .rc 파일이 아직 없는 경우 [방법: 리소스 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조 하세요.
+> 프로젝트에 .rc 파일이 아직 없는 경우 [방법: 리소스 만들기](how-to-create-a-resource-script-file.md)를 참조 하세요.
 
 ## <a name="symbol-name-restrictions"></a>기호 이름 제한
 
 기호 이름에 대한 제한은 다음과 같습니다.
 
-- 헤더 파일에서 기호 정의 충돌을 방지 하려면 모든 [기호가](../windows/symbols-resource-identifiers.md) 응용 프로그램 범위 내에서 고유 해야 합니다.
+- 헤더 파일에서 기호 정의 충돌을 방지 하려면 모든 [기호가](symbols-resource-identifiers.md) 응용 프로그램 범위 내에서 고유 해야 합니다.
 
 - 기호 이름에 유효한 문자는 A-Z, a-z, 0-9 및 밑줄(_)입니다.
 
@@ -70,16 +70,16 @@ ms.locfileid: "80215206"
    기호를 정의하는 헤더 파일은 리소스 컴파일러/편집기 및 C++ 프로그램에서 리소스 파일에 정의된 리소스를 참조하는 데 사용됩니다. 대/소문자만 다른 두 기호 이름에 대해 C++ 프로그램은 별도의 두 기호로 보지만 리소스 컴파일러/편집기는 두 이름이 하나의 단일 기호를 나타내는 것으로 봅니다.
 
 > [!NOTE]
-> 아래에 설명 된 표준 기호 이름 구성표 (ID * _ [keyword])를 따르지 않고 기호 이름이 리소스 스크립트 컴파일러에 알려진 키워드와 동일 하 게 발생 하는 경우 리소스 스크립트 파일을 작성 하려고 하면 임의의 오류 생성이 발생 합니다. 이것은 진단 하기 어렵습니다. 이를 방지하려면 표준 이름 지정 체계를 준수하세요.
+> 아래에 설명 된 표준 기호 이름 구성표 (ID * _ [keyword])를 따르지 않고 기호 이름이 리소스 스크립트 컴파일러에 알려진 키워드와 동일 하 게 발생 하는 경우 리소스 스크립트 파일을 작성 하려고 하면 진단 하기 어려운 무작위 오류 생성이 발생 합니다. 이를 방지하려면 표준 이름 지정 체계를 준수하세요.
 
 기호 이름에는 해당 이름이 나타내는 리소스 또는 개체의 종류를 나타내는 설명 접두사가 있습니다. 이러한 설명 접두사는 텍스트 조합 ID로 시작합니다. MFC (Microsoft Foundation Class) 라이브러리는 다음 표에 나와 있는 기호 명명 규칙을 사용 합니다.
 
 |범주|접두사|기능|
 |--------------|------------|---------|
 |리소스|IDR_, IDD_, IDC_, IDI_, IDB_|액셀러레이터 키 또는 메뉴 (및 연결 된 리소스 또는 사용자 지정 리소스), 대화 상자, 커서, 아이콘, 비트맵|
-|메뉴 항목|ID_|메뉴 항목|
-|Commands|ID_|명령|
-|컨트롤 및 자식 창|IDC_|Control|
+|메뉴 항목|ID_|Menu item|
+|명령|ID_|명령|
+|컨트롤 및 자식 창|IDC_|제어|
 |문자열|IDS_|문자열 테이블의 문자열|
 |MFC|AFX_|미리 정의된 MFC 기호에 예약됨|
 
@@ -96,7 +96,7 @@ ms.locfileid: "80215206"
 
 ## <a name="symbol-value-restrictions"></a>기호 값 제한
 
-기호 값은 `#define` 전처리기 지시문에 대 한 일반적인 방식으로 표현 되는 정수일 수 있습니다. 다음은 기호 값의 몇 가지 예입니다.
+기호 값은 전처리기 지시문에 대 한 일반적인 방법으로 표현 되는 정수일 수 있습니다 `#define` . 다음은 기호 값의 몇 가지 예입니다.
 
 ```
 18
@@ -119,7 +119,7 @@ ms.locfileid: "80215206"
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- 인수가 값 정의로 전처리기 매크로를 사용할 수 없습니다. 다음 예제는 컴파일 시간에 계산 되는 `ID`에 관계 없이 유효한 식이 아닙니다.
+- 인수가 값 정의로 전처리기 매크로를 사용할 수 없습니다. 다음 예제는 컴파일 타임에이 반환 되는 결과에 관계 없이 유효한 식이 아닙니다 `ID` .
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
@@ -189,7 +189,7 @@ ms.locfileid: "80215206"
 
 1. 읽기 전용 **기호 지시문** 상자에서 `#include` 컴파일러 지시문을 사용 하 여 읽기 전용 기호를 보관할 파일을 지정 합니다.
 
-   이 파일은 주 기호 헤더 파일에 일반적으로 사용 되는 파일 이름이 기 때문에 `Resource.h`호출 하지 마세요.
+   파일은 `Resource.h` 기본 기호 헤더 파일에 일반적으로 사용 되는 파일 이름 이므로 호출 하지 마십시오.
 
    > [!NOTE]
    > **읽기 전용 기호 지시문** 상자에 입력 한 내용은 입력 한 대로 정확 하 게 리소스 파일에 포함 됩니다. 입력한 내용에 맞춤법이나 구문 오류가 없는지 확인하세요.
@@ -214,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>참고 항목
 
-[리소스 식별자(기호)](../windows/symbols-resource-identifiers.md)<br/>
-[방법: 기호 만들기](../windows/creating-new-symbols.md)<br/>
-[미리 정의된 기호 ID](../windows/predefined-symbol-ids.md)<br/>
+[리소스 식별자 (기호)](symbols-resource-identifiers.md)<br/>
+[방법: 기호 만들기](creating-new-symbols.md)<br/>
+[미리 정의 된 기호 Id](predefined-symbol-ids.md)<br/>

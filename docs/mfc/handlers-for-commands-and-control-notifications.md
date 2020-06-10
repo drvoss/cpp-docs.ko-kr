@@ -10,12 +10,12 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: 43b6a517b680a5f6ff092337fbf3d90dd0115dd7
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: cc89cbfde0a1eba5dc736b40c178d4a4fde37a4d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907977"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625775"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>명령 및 컨트롤 알림에 대한 처리기
 
@@ -23,18 +23,18 @@ ms.locfileid: "70907977"
 
 규칙은 표시 하는 사용자 인터페이스 개체에 대해 두 범주 모두에서 처리기의 이름을 표시 하는 것을 제안 합니다. 따라서 편집 메뉴의 잘라내기 명령에 대 한 처리기의 이름을 지정할 수 있습니다.
 
-[!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
+[!code-cpp[NVC_MFCMessageHandling#4](codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-잘라내기 명령은 응용 프로그램에서 일반적으로 구현 되기 때문에 프레임 워크는 Cut 명령의 명령 ID를 **ID_EDIT_CUT**로 이미 합니다. 미리 정의 된 모든 명령 Id 목록은 AFXRES.H 파일을 참조 하세요. 넣기. 자세한 내용은 [표준 명령](../mfc/standard-commands.md)을 참조 하세요.
+잘라내기 명령은 응용 프로그램에서 일반적으로 구현 되기 때문에 프레임 워크는 **ID_EDIT_CUT**으로 cut 명령의 명령 ID를 기본적으로 합니다. 미리 정의 된 모든 명령 Id 목록은 AFXRES.H 파일을 참조 하세요. 넣기. 자세한 내용은 [표준 명령](standard-commands.md)을 참조 하세요.
 
 또한 규칙은 "내 단추" 라는 레이블이 지정 된 단추의 **BN_CLICKED** 알림 메시지에 대 한 처리기를 제안 합니다.
 
-[!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
+[!code-cpp[NVC_MFCMessageHandling#5](codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
 
-응용 프로그램 관련 사용자 인터페이스 개체와 동일 하기 때문에이 명령을 ID **IDC_MY_BUTTON** 에 할당할 수 있습니다.
+응용 프로그램 관련 사용자 인터페이스 개체와 동일 하기 때문에이 명령을 **IDC_MY_BUTTON** ID로 할당할 수 있습니다.
 
 두 메시지 범주 모두 인수를 사용 하지 않으며 값을 반환 하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[메시지 처리기 함수 선언](../mfc/declaring-message-handler-functions.md)
+[메시지 처리기 함수 선언](declaring-message-handler-functions.md)

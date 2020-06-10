@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626504"
 ---
 # <a name="creating-windows"></a>창 만들기
 
-프레임 워크 framework 프로그램에서 해야 windows의 대부분을 자동으로 만듭니다. [문서/뷰 만들기](../mfc/document-view-creation.md) 프레임 워크의 문서 및 뷰를 사용 하 여 연결 된 프레임 창을 만드는 방법을 보여 줍니다. 하지만 특수 한 용도의 창을 직접 만들 수 있습니다-포함 하 여 고유한 자식 프레임 창 또는 보기-windows 프레임 워크에서 제공 하는 것 외에도 합니다.
+프레임 워크는 프레임 워크 프로그램에 필요한 대부분의 창을 자동으로 만듭니다. [문서/뷰 만들기](document-view-creation.md) 는 프레임 워크가 문서 및 뷰와 연결 된 프레임 창을 만드는 방법을 보여 줍니다. 그러나 특별 한 목적을 위해 프레임 워크에서 제공 하는 창 뿐만 아니라 프레임 창 또는 보기의 고유한 자식 창을 포함 하 여 고유한 창을 만들 수 있습니다.
 
-## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아볼 항목
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아야 할 내용
 
-- [창 "classes"를 등록](../mfc/registering-window-classes.md) (달리 C++ 창 개체)
+- ["클래스" 창 등록](registering-window-classes.md) (c + + 창 개체와 반대)
 
-- [일반 창 만들기 시퀀스](../mfc/general-window-creation-sequence.md)
+- [일반 창 만들기 시퀀스](general-window-creation-sequence.md)
 
-- [창 개체 제거](../mfc/destroying-window-objects.md)
+- [창 개체 소멸](destroying-window-objects.md)
 
-- [창 개체 작업](../mfc/working-with-window-objects.md)
+- [창 개체 작업](working-with-window-objects.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[창 개체](../mfc/window-objects.md)
+[창 개체](window-objects.md)

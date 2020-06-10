@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364979"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623606"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; macros
 
@@ -30,7 +30,7 @@ ms.locfileid: "81364979"
 
 ## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-할당자 클래스 템플릿을 생성합니다.
+할당자 클래스 템플릿을 생성 합니다.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "81364979"
 
 ### <a name="remarks"></a>설명
 
-매크로는 `template <class Type> class name {.....}` 동기화 필터와 `template <> class name<void> {.....}` `sync` 형식의 `cache`캐시를 사용하는 할당자 클래스 템플릿을 함께 정의하는 템플릿 정의 및 특수화를 생성합니다.
+매크로는 `template <class Type> class name {.....}` `template <> class name<void> {.....}` 동기화 필터 및 형식의 캐시를 사용 하는 할당자 클래스 템플릿을 함께 정의 하는 템플릿 정의와 특수화를 생성 합니다 `sync` `cache` .
 
 rebind를 컴파일할 수 있는 컴파일러의 경우, 결과 템플릿 정의는 다음과 같습니다.
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>참고 항목
 
-[\<할당자>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

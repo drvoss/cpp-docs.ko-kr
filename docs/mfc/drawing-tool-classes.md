@@ -8,38 +8,38 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-ms.openlocfilehash: 96bda696a310fdd59a124abea2d29bc5001c3ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 161144161566293079d4c51324c5c481578ebd5b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407980"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626467"
 ---
 # <a name="drawing-tool-classes"></a>그리기 도구 클래스
 
-이러한 클래스를 그릴 장치 컨텍스트에서 사용 되는 그리기 도구를 캡슐화 합니다.
+이러한 클래스는 장치 컨텍스트에서 그리는 데 사용 되는 그리기 도구를 캡슐화 합니다.
 
-[CGdiObject](../mfc/reference/cgdiobject-class.md)<br/>
-GDI 그리기 도구에 대 한 기본 클래스입니다.
+[CGdiObject](reference/cgdiobject-class.md)<br/>
+GDI 그리기 도구의 기본 클래스입니다.
 
-[CBrush](../mfc/reference/cbrush-class.md)<br/>
-장치 컨텍스트에서 현재 브러시도 선택할 수 있는 GDI 브러시를 캡슐화 합니다. 그리고 있는 개체의 내부를 채우는 브러시 사용 됩니다.
+[CBrush](reference/cbrush-class.md)<br/>
+장치 컨텍스트에서 현재 브러시로 선택할 수 있는 GDI 브러시를 캡슐화 합니다. 브러시는 그려지는 개체의 내부를 채우는 데 사용 됩니다.
 
-[CPen](../mfc/reference/cpen-class.md)<br/>
-장치 컨텍스트에서 현재 펜으로 선택할 수 있는 GDI 펜을 캡슐화 합니다. 개체의 테두리 선을 그릴 펜 사용 됩니다.
+[CPen](reference/cpen-class.md)<br/>
+장치 컨텍스트에서 현재 펜으로 선택할 수 있는 GDI 펜을 캡슐화 합니다. 펜은 개체의 테두리 선을 그리는 데 사용 됩니다.
 
-[CFont](../mfc/reference/cfont-class.md)<br/>
-장치 컨텍스트에서 현재 글꼴을 선택할 수 있는 GDI 글꼴을 캡슐화 합니다.
+[CFont](reference/cfont-class.md)<br/>
+장치 컨텍스트에서 현재 글꼴로 선택할 수 있는 GDI 글꼴을 캡슐화 합니다.
 
-[CBitmap](../mfc/reference/cbitmap-class.md)<br/>
-비트맵을 조작 하기 위한 인터페이스를 제공 하는 GDI 비트맵을 캡슐화 합니다.
+[CBitmap](reference/cbitmap-class.md)<br/>
+비트맵을 조작 하기 위한 인터페이스를 제공 하 여 GDI 비트맵을 캡슐화 합니다.
 
-[CPalette](../mfc/reference/cpalette-class.md)<br/>
-응용 프로그램 및 표시와 같은 색 출력 장치 사이의 인터페이스 사용에 대 한 GDI 색상표를 캡슐화합니다.
+[CPalette](reference/cpalette-class.md)<br/>
+응용 프로그램과 컬러 출력 장치 (예: 디스플레이) 간에 인터페이스로 사용 하기 위한 GDI 색상표를 캡슐화 합니다.
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-표시 하 고 사각형 개체를 이동 및 크기 조정에 대 한 사용자 인터페이스를 처리 합니다.
+[CRectTracker](reference/crecttracker-class.md)<br/>
+사각형 개체의 크기를 조정 하 고 이동 하기 위한 사용자 인터페이스를 표시 하 고 처리 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[클래스 개요](../mfc/class-library-overview.md)
+[클래스 개요](class-library-overview.md)
