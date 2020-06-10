@@ -1,0 +1,91 @@
+### YamlMime:Landing
+title: 컴파일러 내장 및 어셈블리 언어
+summary: Visual Studio가 최대 성능 및 제어를 위해 하위 수준의 프로세서 특정 코드를 만드는 방법을 알아봅니다.
+metadata:
+  title: 컴파일러 내장 및 어셈블리 언어
+  description: Visual Studio에는 하위 수준의 프로그래밍 작업을 위해 어셈블러 및 컴파일러 내장 함수가 포함되어 있습니다.
+  ms.topic: landing-page
+  ms.date: 05/26/2020
+  ms.openlocfilehash: f50d2541bd9fd7ca0071cc6ff76397b3dd240843
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507824"
+landingContent:
+- title: 컴파일러 내장 함수 사용
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 컴파일러 내장 함수 개요
+      url: ../intrinsics/compiler-intrinsics.md
+  - linkListType: reference
+    links:
+    - text: ARM 내장 함수
+      url: ../intrinsics/arm-intrinsics.md
+    - text: ARM64 내장 함수
+      url: ../intrinsics/arm64-intrinsics.md
+    - text: x86 내장 목록
+      url: ../intrinsics/x86-intrinsics-list.md
+    - text: x64(amd64) 내장 목록
+      url: ../intrinsics/x64-amd64-intrinsics-list.md
+    - text: 모든 아키텍처에서 사용할 수 있는 내장 함수
+      url: ../intrinsics/intrinsics-available-on-all-architectures.md
+    - text: 사전순 내장 함수 목록
+      url: ../intrinsics/alphabetical-listing-of-intrinsic-functions.md
+- title: Microsoft C/C++에서 x86용 인라인 어셈블리 사용
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 인라인 어셈블러 개요
+      url: ../assembler/inline/inline-assembler-overview.md
+  - linkListType: concept
+    links:
+    - text: __asm 키워드
+      url: ../assembler/inline/asm.md
+  - linkListType: how-to-guide
+    links:
+    - text: __asm 블록에서 어셈블리 언어 사용
+      url: ../assembler/inline/using-assembly-language-in-asm-blocks.md
+    - text: __asm 블록에서 C 또는 C++ 사용
+      url: ../assembler/inline/using-c-or-cpp-in-asm-blocks.md
+    - text: 레지스터 사용 및 유지
+      url: ../assembler/inline/using-and-preserving-registers-in-inline-assembly.md
+    - text: 인라인 어셈블리에서 C++ 함수 호출
+      url: ../assembler/inline/calling-cpp-functions-in-inline-assembly.md
+    - text: 인라인 어셈블리 최적화
+      url: ../assembler/inline/optimizing-inline-assembly.md
+- title: ARM 및 ARM64 어셈블러 사용
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ARM 및 ARM64 어셈블러 참조
+      url: ../assembler/arm/arm-assembler-reference.md
+    - text: ARM 및 ARM64 어셈블러 명령줄 참조
+      url: ../assembler/arm/arm-assembler-command-line-reference.md
+    - text: ARM 및 ARM64 어셈블러 진단 메시지
+      url: ../assembler/arm/arm-assembler-diagnostic-messages.md
+    - text: ARM 및 ARM64 어셈블러 지시문
+      url: ../assembler/arm/arm-assembler-directives.md
+- title: x86 및 x64 어셈블러 사용
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: x86용 Microsoft 매크로 어셈블러 및 x64 참조
+      url: ../assembler/masm/microsoft-macro-assembler-reference.md
+    - text: x64용 MASM (ml64.exe)
+      url: ../assembler/masm/masm-for-x64-ml64-exe.md
+    - text: ML 및 ML64 명령줄 참조
+      url: ../assembler/masm/ml-and-ml64-command-line-reference.md
+    - text: 지시문 참조
+      url: ../assembler/masm/directives-reference.md
+    - text: 기호 참조
+      url: ../assembler/masm/symbols-reference.md
+    - text: 연산자 참조
+      url: ../assembler/masm/operators-reference.md
+    - text: MASM BNF 문법
+      url: ../assembler/masm/masm-bnf-grammar.md
+    - text: ML 및 ML64 오류 메시지
+      url: ../assembler/masm/ml-error-messages.md
+    - text: 프로세서 제조업체 프로그래밍 설명서
+      url: ../assembler/masm/processor-manufacturer-programming-manuals.md

@@ -1,0 +1,185 @@
+### YamlMime:Hub
+title: Microsoft C++, C 및 어셈블러 설명서
+summary: C++, C 및 어셈블리 언어를 사용하여 플랫폼과 디바이스용 애플리케이션, 서비스 및 도구를 개발하는 방법을 알아봅니다.
+brand: visual-studio
+metadata:
+  title: Microsoft C/C++ 설명서
+  description: C++를 사용하여 플랫폼과 디바이스용 애플리케이션, 서비스 및 도구를 개발하는 방법을 알아봅니다.
+  ms.prod: visual-cpp
+  ms.topic: hub-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 06/04/2020
+  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507844"
+highlightedContent:
+  items:
+  - title: Visual Studio 설치 및 C++ 작업 선택
+    itemType: download
+    url: build/vscpp-step-0-installation.md
+  - title: Visual Studio의 C++ 시작
+    itemType: overview
+    url: overview/visual-cpp-in-visual-studio.md
+  - title: Visual Studio 및 C++ 시작
+    itemType: get-started
+    url: get-started/tutorial-console-cpp.md
+  - title: Visual Studio의 새로운 C++ 기능
+    itemType: whats-new
+    url: overview/what-s-new-for-visual-cpp-in-visual-studio.md
+conceptualContent:
+  title: C++ 및 C 시작
+  items:
+  - title: Visual Studio IDE 사용 방법 알아보기
+    links:
+    - text: Visual Studio 둘러보기 시작
+      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      itemType: overview
+    - text: 리포지토리에서 코드 열기
+      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      itemType: tutorial
+    - text: 코드 작성 및 편집
+      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      itemType: tutorial
+    - text: 코드 빌드
+      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      itemType: tutorial
+    - text: 코드 디버그
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+    - text: 코드 테스트
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+  - title: Visual Studio에서 C++ 및 C 앱 작성
+    links:
+    - text: 콘솔 앱 만들기
+      url: get-started/tutorial-console-cpp.md
+      itemType: tutorial
+    - text: Win32 Windows 데스크톱 앱 만들기
+      url: windows/walkthrough-creating-windows-desktop-applications-cpp.md
+      itemType: tutorial
+    - text: MFC Windows 데스크톱 앱 만들기
+      url: mfc/reference/creating-an-mfc-application.md
+      itemType: tutorial
+    - text: Windows DLL 만들기
+      url: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+      itemType: tutorial
+    - text: 정적 라이브러리 만들기
+      url: build/walkthrough-creating-and-using-a-static-library-cpp.md
+      itemType: tutorial
+    - text: .NET 구성 요소 만들기
+      url: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+      itemType: tutorial
+    - text: 유니버설 Windows 플랫폼 앱 만들기
+      url: /windows/uwp/cpp-and-winrt-apis/get-started
+      itemType: tutorial
+  - title: 명령줄 도구 사용
+    links:
+    - text: C++ 코드 컴파일
+      url: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C 코드 컴파일
+      url: build/walkthrough-compile-a-c-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C++/CX 컴파일
+      url: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+      itemType: tutorial
+    - text: C++/CLI 컴파일
+      url: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+      itemType: tutorial
+  - title: Visual Studio Code에서 C++ 및 C 사용
+    links:
+    - text: Visual Studio Code 시작
+      url: https://code.visualstudio.com/docs
+      itemType: tutorial
+    - text: Microsoft C/C++ 확장 설치
+      url: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+      itemType: tutorial
+    - text: Windows에서 Microsoft C/C++ 사용
+      url: https://code.visualstudio.com/docs/cpp/config-msvc
+      itemType: tutorial
+    - text: Linux용 Windows 하위 시스템에서 C++ 사용
+      url: https://code.visualstudio.com/docs/cpp/config-wsl
+      itemType: tutorial
+    - text: Linux에서 C++ 사용
+      url: https://code.visualstudio.com/docs/cpp/config-linux
+      itemType: tutorial
+    - text: MacOS에서 C++ 사용
+      url: https://code.visualstudio.com/docs/cpp/config-clang-mac
+      itemType: tutorial
+tools:
+  title: 언어 및 프레임워크
+  items:
+  - title: C++
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cpp/index.yml
+  - title: C
+    imageSrc: https://docs.microsoft.com/media/logos/logo_C.svg
+    url: c-language/index.yml
+  - title: Microsoft 어셈블러
+    imageSrc: media/index/logo-asm.svg
+    url: intrinsics/index.yml
+  - title: Windows 런타임용 C++/CX
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cppcx/visual-c-language-reference-c-cx.md
+  - title: .NET용 C++/CLI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+  - title: ATL(액티브 템플릿 라이브러리)
+    imageSrc: media/index/logo-atl.svg
+    url: atl/atl-com-desktop-components.md
+  - title: MFC(Microsoft Foundation Class)
+    imageSrc: media/index/logo-mfc.svg
+    url: mfc/mfc-desktop-applications.md
+  - title: Windows 런타임용 C++/WinRT
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: /windows/uwp/cpp-and-winrt-apis/
+additionalContent:
+  sections:
+  - title: C++, C 작업, 기능 및 라이브러리
+    summary: Visual Studio 도구를 사용하여 플랫폼 선택을 개발합니다.
+    items:
+    - title: 작업
+      links:
+      - text: 유니버설 Windows 플랫폼 개발
+        url: cppcx/universal-windows-apps-cpp.md
+      - text: Windows 데스크톱 개발
+        url: windows/windows-desktop-applications-cpp.md
+      - text: Linux 개발
+        url: linux/index.yml
+      - text: 모바일 개발
+        url: cross-platform/index.yml
+      - text: 게임 개발
+        url: /windows/uwp/gaming/e2e/
+    - title: 기능
+      links:
+      - text: 코드 편집 및 리팩터링
+        url: ide/writing-and-refactoring-code-cpp.md
+      - text: 코드 프로젝트 빌드
+        url: build/projects-and-build-systems-cpp.md
+      - text: 코드 디버그
+        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+      - text: 코드 분석
+        url: code-quality/index.yml
+      - text: 앱 성능 향상
+        url: https://docs.microsoft.com/visualstudio/profiling
+      - text: 코드 포팅 및 업그레이드
+        url: porting/visual-cpp-porting-and-upgrading-guide.md
+    - title: 라이브러리
+      links:
+      - text: C++ 표준 라이브러리 참조
+        url: standard-library/cpp-standard-library-reference.md
+      - text: C 런타임 라이브러리 참조
+        url: c-runtime-library/c-run-time-library-reference.md
+      - text: MFC 및 ATL Windows 데스크톱 라이브러리
+        url: mfc/mfc-and-atl.md
+      - text: 병렬 프로그래밍 라이브러리
+        url: parallel/parallel-programming-in-visual-cpp.md
+      - text: 클라우드 및 네트워킹 라이브러리
+        url: cloud/cloud-and-web-programming-in-visual-cpp.md
+      - text: 유니버설 Windows 플랫폼 라이브러리
+        url: cppcx/namespaces-reference-c-cx.md
+  footer: '[블로그](https://devblogs.microsoft.com/cppblog/) - [트위터](https://twitter.com/visualc) - [스택 오버플로](https://stackoverflow.com/questions/tagged/visual-c++) - [문제 보고](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html) - C++ 문서에 참여: [기여자 가이드](https://docs.microsoft.com/contribute/)를 참조하세요.'
