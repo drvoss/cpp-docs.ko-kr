@@ -1,15 +1,15 @@
 ---
 title: Visual Studio 프로젝트의 Clang/LLVM 지원
-ms.date: 08/30/2019
+ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 8d7d7fec979d3e7b8f665e56094ee1c309e3b686
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a1dfef033bffd3d7f1d24233752d7beae11af8e
+ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323112"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84332281"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio 프로젝트의 Clang/LLVM 지원
 
@@ -35,7 +35,7 @@ Clang을 사용하도록 Visual Studio 프로젝트를 구성하려면 **솔루�
 
 ![Clang 구성 요소 설치](media/clang-msbuild-prop-page.png)
 
-Visual Studio와 함께 번들로 제공되는 Clang 도구를 사용하는 경우 추가 단계가 필요하지 않습니다. Windows 프로젝트의 경우 Visual Studio는 기본적으로 [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) 모드에서 Clang을 호출하고 표준 라이브러리의 Microsoft 구현과 연결됩니다. 기본적으로 **clang-cl.exe**는 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`에 있습니다.
+Visual Studio와 함께 번들로 제공되는 Clang 도구를 사용하는 경우 추가 단계가 필요하지 않습니다. Windows 프로젝트의 경우 Visual Studio는 기본적으로 [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) 모드에서 Clang을 호출하고 표준 라이브러리의 Microsoft 구현과 연결됩니다. 기본적으로 **clang-cl.exe**는 *%VCINSTALLDIR%\\Tools\\Llvm\\bin\\* 및 *%VCINSTALLDIR%\\Tools\\Llvm\\x64\\bin\\* 에 있습니다.
 
 사용자 지정 Clang 설치를 사용하는 경우 사용자 지정 Clang 설치 루트를 첫 번째 디렉터리로 추가하여 **프로젝트** > **속성** > **VC++ 디렉터리** > **구성 속성** > **실행 파일 디렉터리**를 수정하거나 `LLVMInstallDir` 속성의 값을 변경할 수 있습니다. 자세한 내용은 [사용자 지정 LLVM 위치 설정](#custom_llvm_location)을 참조하세요.
 
