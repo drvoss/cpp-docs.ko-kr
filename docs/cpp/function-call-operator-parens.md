@@ -1,6 +1,6 @@
 ---
 title: '함수 호출 연산자: ()'
-ms.date: 11/04/2016
+ms.date: 06/11/2020
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -10,48 +10,54 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+no-loc:
+- opt
+ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179772"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777307"
 ---
 # <a name="function-call-operator-"></a>함수 호출 연산자: ()
 
-후 위 식 뒤에 함수 호출 연산자 **()** 가 오는 경우 함수 호출이 지정 됩니다.
+함수 호출은 함수를 *`postfix-expression`* 식별 하는 식으로 구성 되 고 함수 호출 연산자,로 구성 된의 일종입니다 **`()`** . 개체는 `operator ()` 개체에 대 한 함수 호출 의미 체계를 제공 하는 함수를 선언할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
-```
-postfix-expression
-( [argument-expression-list ] )
-```
+> *`postfix-expression`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>설명
 
-함수 호출 연산자의 인수는 쉼표로 구분된 0개 이상의 식(함수의 실제 인수)입니다.
+함수 호출 연산자에 대 한 인수는 *`argument-expression-list`* 쉼표로 구분 된 식 목록에서 제공 됩니다. 이러한 식의 값은 인수로 함수에 전달 됩니다. *인수 식 목록은* 비워 둘 수 있습니다. C + + 17 이전에는 함수 식 및 인수 식의 계산 순서가 지정 되지 않으며 순서에 관계 없이 발생할 수 있습니다. C + + 17 이상에서 함수 식은 인수 식 또는 기본 인수 앞에서 계산 됩니다. 인수 식은 결정 되지 않은 시퀀스에서 계산 됩니다.
 
-*후 위 식은* 함수 식별자 또는 함수 포인터 값과 같은 함수 주소로 계산 되어야 하 고, *인수 식 목록은* 값 (인수)이 함수로 전달 되는 식 목록 (쉼표로 구분)입니다. *argument-expression-list* 인수는 비워둘 수 있습니다.
+는 *`postfix-expression`* 호출할 함수를 식별 합니다. 함수 주소로 계산 되어야 합니다. 다음과 같은 여러 가지 형태를 사용할 수 있습니다.
 
-*후 위 식은* 다음 형식 중 하나 여야 합니다.
+- 함수 또는 함수 개체 이름 또는 포인터
+- 함수 또는 함수 개체를 참조 하는 lvalue 식입니다.
+- 명시적 또는 묵시적 멤버 함수 접근자입니다.
+
+에서 지정 하는 함수는 *`postfix-expression`* 오버 로드 된 함수 일 수 있습니다. 오버 로드 확인에 대 한 일반적인 규칙은 호출할 실제 함수를 결정 합니다.
+
+몇 가지 예제 선언:
 
 - `T` 형식을 반환하는 함수. 선언 예제:
 
     ```cpp
-    T func( int i )
+    T func( int i );
     ```
 
 - `T` 형식을 반환하는 함수의 포인터. 선언 예제:
 
     ```cpp
-    T (*func)( int i )
+    T (*func)( int i );
     ```
 
 - `T` 형식을 반환하는 함수의 참조. 선언 예제:
 
     ```cpp
-    T (&func)(int i)
+    T (&func)(int i);
     ```
 
 - `T` 형식을 반환하는 멤버 포인터 함수 역참조. 함수 호출 예제:
@@ -97,7 +103,7 @@ Welcome to C++
 
 ## <a name="function-call-results"></a>함수 호출 결과
 
-함수가 참조 형식으로 선언되지 않은 경우 함수 호출은 r-value로 평가됩니다. 참조가 있는 함수는 l-values로 평가하고 대입문의 왼쪽에서 다음과 같이 사용될 수 있습니다.
+함수가 참조 형식으로 선언 되지 않은 경우 함수 호출은 rvalue로 평가 됩니다. 참조 반환 형식이 있는 함수는 lvalues로 계산 됩니다. 이러한 함수는 다음에 표시 된 것 처럼 대입문의 왼쪽에서 사용할 수 있습니다.
 
 ```cpp
 // expre_Function_Call_Results.cpp
@@ -129,9 +135,9 @@ int main()
 }
 ```
 
-위의 코드는 *x* 및 *y* 좌표를 나타내는 전용 데이터 개체를 포함 하는 `Point`라는 클래스를 정의 합니다. 이러한 데이터 개체를 수정하고 해당 값을 검색해야 합니다. 이 프로그램은 이러한 클래스를 위한 여러 디자인 중 하나이며, `GetX`와 `SetX` 또는 `GetY`와 `SetY` 함수는 사용할 수 있는 디자인입니다.
+위의 코드는 `Point` *x* 및 *y* 좌표를 나타내는 전용 데이터 개체를 포함 하는 라는 클래스를 정의 합니다. 이러한 데이터 개체를 수정하고 해당 값을 검색해야 합니다. 이 프로그램은 이러한 클래스를 위한 여러 디자인 중 하나이며, `GetX`와 `SetX` 또는 `GetY`와 `SetY` 함수는 사용할 수 있는 디자인입니다.
 
-클래스 형식, 클래스 형식에 대한 포인터 또는 클래스 형식에 대한 참조를 반환하는 함수는 멤버 선택 연산자에 대한 왼쪽 피연산자로 사용할 수 있습니다. 따라서 다음 코드를 사용할 수 있습니다.
+클래스 형식, 클래스 형식에 대한 포인터 또는 클래스 형식에 대한 참조를 반환하는 함수는 멤버 선택 연산자에 대한 왼쪽 피연산자로 사용할 수 있습니다. 다음 코드는 유효 합니다.
 
 ```cpp
 // expre_Function_Results2.cpp
@@ -179,5 +185,5 @@ int main() {
 ## <a name="see-also"></a>참고 항목
 
 [후위 식](../cpp/postfix-expressions.md)<br/>
-[C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [함수 호출](../c-language/function-call-c.md)
