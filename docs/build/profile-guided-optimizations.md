@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 46619e77861b6a3a78d74ce6c6d9173a3a5f270f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857320"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777320"
 ---
 # <a name="profile-guided-optimizations"></a>프로필 기반 최적화
 
@@ -48,6 +48,9 @@ ms.locfileid: "64857320"
    **/LTCG** 및 [/USEPROFILE](reference/useprofile.md) 링커 옵션을 모두 사용하여 최적화된 이미지를 만듭니다. 이 단계에서는 입력으로 `.pgd` 파일을 사용합니다. **/USEPROFILE**을 지정할 경우 필요에 따라 **PGD=** _filename_ 인수를 추가하여 `.pgd` 파일의 기본값이 아닌 이름이나 위치를 지정할 수 있습니다. 사용되지 않는 **/PGD** 링커 옵션을 사용하여 이 이름을 지정할 수도 있습니다. **/LTCG** 및 **/USEPROFILE**의 조합은 사용되지 않는 **/LTCG:PGOPTIMIZE** 및 **/LTCG:PGUPDATE** 링커 옵션을 대체합니다.
 
 최적화된 실행 파일을 만들고 나중에 더 최적화된 이미지를 만드는 데 추가 프로파일링이 유용한지를 확인할 수 있습니다. 계측된 이미지와 해당 `.pgd` 파일을 사용할 수 있는 경우 추가 테스트 실행을 수행하고 동일한 **/LTCG** 및 **/USEPROFILE** 링커 옵션을 사용하여 최신 `.pgd` 파일로 최적화된 이미지를 다시 빌드할 수 있습니다.
+
+> [!NOTE]
+> `.pgc` 및 `.pgd` 파일은 둘 다 이진 파일 형식입니다. 소스 제어 시스템에 저장된 경우 텍스트 파일에 적용될 수 있는 자동 변환을 수행하면 안 됩니다.
 
 ## <a name="optimizations-performed-by-pgo"></a>PGO에서 수행하는 최적화
 
