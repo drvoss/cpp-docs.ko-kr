@@ -1,25 +1,25 @@
 ---
 title: WINVER 및 _WIN32_WINNT 업데이트
-description: 업그레이드 된 Visual Studio C++ 프로젝트에서 WINVER 및 _WIN32_WINNT 매크로를 업데이트 하는 시기와 방법을 설명 합니다.
-ms.date: 01/22/2020
+description: 업그레이드 된 Visual Studio c + + 프로젝트에서 WINVER 및 _WIN32_WINNT 매크로를 업데이트 하는 시기와 방법을 설명 합니다.
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725698"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141056"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>WINVER 및 _WIN32_WINNT 업데이트
 
-Windows SDK를 사용 하는 경우 코드를 실행할 수 있는 Windows 버전을 지정할 수 있습니다. 전처리기 매크로 **WINVER** 및 **_WIN32_WINNT** 코드에서 지 원하는 최소 운영 체제 버전을 지정 합니다. Visual Studio 및 Microsoft C++ 컴파일러는 WINDOWS 7 SP1 이상을 대상으로 지원 합니다. 이전 도구 집합에는 Windows XP SP4, Windows Server 2003 SP4, Vista 및 Windows Server 2008에 대 한 지원이 포함 됩니다. Windows 95, Windows 98, Windows ME, Windows NT 및 Windows 2000은 지원 되지 않습니다.
+Windows SDK를 사용 하는 경우 코드를 실행할 수 있는 Windows 버전을 지정할 수 있습니다. 전처리기 매크로 **WINVER** 및 **_WIN32_WINNT** 코드에서 지 원하는 최소 운영 체제 버전을 지정 합니다. Visual Studio 및 Microsoft c + + 컴파일러는 Windows 7 SP1 이상 버전을 대상으로 지원 합니다. 이전 도구 집합에는 Windows XP SP2, Windows Server 2003 SP1, Vista 및 Windows Server 2008에 대 한 지원이 포함 됩니다. Windows 95, Windows 98, Windows ME, Windows NT 및 Windows 2000은 지원 되지 않습니다.
 
 이전 프로젝트를 업그레이드 하는 경우 **WINVER** 또는 **_WIN32_WINNT** 매크로를 업데이트 해야 할 수 있습니다. 지원 되지 않는 버전의 Windows에 대 한 값이 할당 된 경우 이러한 매크로와 관련 된 컴파일 오류가 표시 될 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 매크로를 수정 하려면 헤더 파일 (예: Windows를 대상으로 하는 일부 프로젝트 템플릿에 포함 된 *targetver. h*)에서 다음 줄을 추가 합니다.
 
@@ -96,6 +96,6 @@ Windows SDK를 사용 하는 경우 코드를 실행할 수 있는 Windows 버�
 
 이러한 매크로의 의미에 대한 자세한 내용은 [Windows 헤더 사용](/windows/win32/WinProg/using-the-windows-headers)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Visual C++ 변경 기록](../porting/visual-cpp-change-history-2003-2015.md)
