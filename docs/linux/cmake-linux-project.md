@@ -1,14 +1,14 @@
 ---
 title: Visual Studio에서 Linux CMake 프로젝트 만들기 및 구성
 description: Visual Studio에서 Linux CMake 프로젝트를 만들고, 구성, 편집 및 컴파일하는 방법
-ms.date: 05/03/2020
+ms.date: 06/22/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: c12e32801c992f6ba3675327b9ae537890202a4c
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 2149b102c452149070d59c9645ce34a5977a6057
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765762"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269730"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 만들기 및 구성
 
@@ -120,7 +120,13 @@ Linux용 Windows 하위 시스템을 대상으로 지정하려면 주 도구 모
 
 ![Linux에서 CMake 캐시 생성](media/cmake-linux-1.png "Linux에서 CMake 캐시 생성")
 
+### <a name="intellisense"></a>IntelliSense
+
 원격 Linux 시스템의 헤더에 IntelliSense 지원을 제공하기 위해 Visual Studio는 Linux 머신에서 로컬 Windows 머신의 디렉터리에 IntelliSense를 자동으로 복사합니다. 자세한 내용은 [원격 헤더를 위한 IntelliSense](configure-a-linux-project.md#remote_intellisense)를 참조하세요.
+
+### <a name="locale"></a>로캘
+
+자세한 내용은 [Linux 대상 로캘](configure-a-linux-project.md#locale)을 참조하세요.
 
 ## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> CMake 프로젝트 디버그
 
