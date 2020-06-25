@@ -1,13 +1,13 @@
 ---
 title: Visual Studio에서 C++ Linux 프로젝트 구성
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623591"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269743"
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
 
@@ -122,6 +122,10 @@ sudo apt install zip
 ![원격 로깅](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a> Linux 대상 로캘
+
+Visual Studio에서는 설치된 패키지를 관리하거나 구성하지 않으므로 Visual Studio 언어 설정이 Linux 대상으로 전파되지 않습니다. **출력** 창에 표시되는 빌드 오류와 같은 메시지는 Linux 대상의 언어와 로캘을 사용하여 표시됩니다. Linux 대상에서 원하는 로캘을 구성해야 합니다.
 
 ## <a name="see-also"></a>참조
 
