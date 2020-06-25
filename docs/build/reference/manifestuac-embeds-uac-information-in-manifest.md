@@ -1,6 +1,6 @@
 ---
 title: /MANIFESTUAC(매니페스트에 UAC 정보 포함)
-ms.date: 11/04/2016
+ms.date: 06/12/2020
 f1_keywords:
 - VC.Project.VCLinkerTool.UACUIAccess
 - VC.Project.VCLinkerTool.UACExecutionLevel
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96719c6f6f5359afb03b967524b1f65db6dc664a
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321373"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334936"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC(매니페스트에 UAC 정보 포함)
 
@@ -23,60 +23,59 @@ UAC(사용자 계정 컨트롤) 정보를 program 매니페스트에 포함할�
 
 ## <a name="syntax"></a>구문
 
-```
-/MANIFESTUAC
-/MANIFESTUAC:NO
-/MANIFESTUAC:fragment
-/MANIFESTUAC:level=_level
-/MANIFESTUAC:uiAccess=_uiAccess
-```
+> **`/MANIFESTUAC`**\
+> **`/MANIFESTUAC:NO`**\
+> **`/MANIFESTUAC:`**_`level`_\
+> **`/MANIFESTUAC:`**_`uiAccess`_\
+> **`/MANIFESTUAC:`**_`fragment`_
 
 ### <a name="parameters"></a>매개 변수
 
-*fragment*<br/>
-포함 된 문자열을 `level` 및 `uiAccess` 값입니다. 자세한 내용은이 항목의 뒷부분에 나오는 주의 섹션을 참조 하세요.
+**`NO`**<br/>
+링커는 프로그램 매니페스트에 UAC 정보를 포함 하지 않습니다.
 
-*_level*<br/>
-중 하나 *asInvoker*하십시오 *highestAvailable*, 또는 *requireAdministrator*합니다. AsInvoker 기본값은입니다. 자세한 내용은이 항목의 뒷부분에 나오는 주의 섹션을 참조 하세요.
+*`level`*<br/>
+**`level=`** 다음에, 또는 중 하나를 입력 **`'asInvoker'`** **`'highestAvailable'`** **`'requireAdministrator'`** 합니다. 기본값은 **`'asInvoker'`** 입니다. 자세한 내용은 [설명](#remarks) 섹션을 참조하세요.
 
-*_uiAccess*<br/>
-**true 이면** 응용 프로그램 사용자 인터페이스 보호 수준을 무시 하 고, 그렇지 않으면 데스크톱에서 상위 권한 창에 대 한 입력을 원하면 **false**합니다. 기본값으로 **false**합니다. 로 **true** 사용자 인터페이스 접근성 응용 프로그램에 대해서만 합니다.
+*`uiAccess`*<br/>
+**`uiAccess='true'`** 응용 프로그램에서 사용자 인터페이스 보호 수준을 무시 하 고 바탕 화면에서 더 높은 권한 창에 대 한 입력을 구동 하려면 그렇지 않으면 **`uiAccess='false'`** 입니다. 기본값은 **`uiAccess='false'`** 입니다. **`uiAccess='true'`** 사용자 인터페이스 접근성 응용 프로그램의 경우에만이 인수를로 설정 합니다.
+
+*`fragment`*<br/>
+및 값을 포함 하는 문자열입니다 *`level`* *`uiAccess`* . 선택적으로 큰따옴표로 묶을 수 있습니다. 자세한 내용은 [설명](#remarks) 섹션을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-명령줄에서 여러 /MANIFESTUAC 옵션을 지정 하는 경우 입력 한 개가 우선적으로 적용 합니다.
+**`/MANIFESTUAC`** 명령줄에서 여러 옵션을 지정 하는 경우 마지막으로 입력 한 항목은 우선적으로 적용 됩니다.
 
-/MANIFESTUAC:level에 대 한 선택 항목은 다음과 같습니다.
+선택 항목은 다음과 같습니다 **`/MANIFESTUAC:`** _`level`_ .
 
-- `asInvoker`: 응용 프로그램을 시작한 프로세스와 동일한 권한으로 실행 됩니다. 응용 프로그램을 선택 하 여 높은 권한 수준으로 승격할 수도 있습니다 **관리자 권한으로 실행**합니다.
+- **`level='asInvoker'`**: 응용 프로그램이 시작 된 프로세스와 동일한 권한 수준에서 실행 됩니다. **관리자 권한으로 실행**을 선택 하 여 응용 프로그램을 더 높은 권한 수준으로 상승 시킬 수 있습니다.
 
-- highestAvailable: 응용 프로그램은 가능한 가장 높은 권한 수준을 사용 하 여 실행 됩니다. 응용 프로그램을 시작한 사용자가 Administrators 그룹의 멤버인 경우이 옵션은 requireAdministrator 동일 합니다. 가장 높은 사용 가능한 사용 권한 수준이 열기 프로세스의 수준 보다 높은 경우 시스템 자격 증명을 묻는 됩니다.
+- **`level='highestAvailable'`**: 응용 프로그램이 가능한 가장 높은 권한 수준에서 실행 됩니다. 응용 프로그램을 시작 하는 사용자가 Administrators 그룹의 구성원 인 경우이 옵션은와 동일 합니다 **`level='requireAdministrator'`** . 사용 가능한 가장 높은 권한 수준이 여는 프로세스의 수준 보다 높으면 시스템에서 자격 증명을 묻는 메시지를 표시 합니다.
 
-- requireAdministrator: 응용 프로그램은 관리자 권한으로 실행 됩니다. 응용 프로그램을 시작 하는 사용자는 Administrators 그룹의 구성원 이어야 합니다. 열기 프로세스를 관리자 권한으로 실행 하지 않는 경우 시스템 자격 증명을 묻는 됩니다.
+- **`level='requireAdministrator'`**: 응용 프로그램이 관리자 권한을 사용 하 여 실행 됩니다. 응용 프로그램을 시작 하는 사용자는 Administrators 그룹의 구성원 이어야 합니다. 열기 프로세스가 관리 권한으로 실행 되 고 있지 않으면 시스템에서 자격 증명을 묻는 메시지를 표시 합니다.
 
-/MANIFESTUAC:fragment 옵션을 사용 하 여 한 번에 수준 및 uiAccess 값을 지정할 수 있습니다. 조각 다음 형식 이어야 합니다.
+*`level`* *`uiAccess`* 옵션을 사용 하 여 한 번에 및 값을 모두 지정할 수 있습니다 **`/MANIFESTUAC:`** _`fragment`_ . 조각은 다음과 같은 형식 이어야 합니다.
 
-```
-"level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"
-```
+> **`/MANIFESTUAC:`** \[ **`"`** ] **`level=`** { **`'asInvoker'`** | **`'highestAvailable'`** | **`'requireAdministrator'`** } **`uiAccess=`** { **`'true'`** | **`'false'`** } \[ **`"`** ]
+
+예:
+
+**`/MANIFESTUAC:"level='highestAvailable' uiAccess='true'"`**
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성** 노드를 확장합니다.
+1. **구성 속성**  >  **링커**  >  **매니페스트 파일** 속성 페이지를 선택 합니다.
 
-1. 확장 된 **링커** 노드.
-
-1. 선택 된 **매니페스트 파일** 속성 페이지.
-
-1. 수정 된 **사용 사용자 계정 컨트롤 (UAC)** 를 **UAC 실행 수준**, 및 **UAC UI 보호 건너뛰기** 속성입니다.
+1. Uac **(사용자 계정 컨트롤) 사용**, **uac 실행 수준**및 **uac 무시 UI 보호** 속성을 수정 합니다.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면
 
 1. See <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>을 참조하십시오.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)

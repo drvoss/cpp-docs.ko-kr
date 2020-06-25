@@ -1,6 +1,6 @@
 ---
 title: SafeInt 함수
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622070"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334917"
 ---
 # <a name="safeint-functions"></a>SafeInt 함수
 
-SafeInt 라이브러리는 [SafeInt 클래스](safeint-class.md) 인스턴스를 만들지 않고도 사용할 수 있는 여러 함수를 제공합니다. 단일 수학 연산을 정수 오버플로에서 보호하려는 경우 이 함수를 사용할 수 있습니다. 여러 개의 수학 연산을 보호하려면 `SafeInt` 개체를 만들어야 합니다. 이 함수를 여러 번 사용하는 것보다 `SafeInt` 개체를 만드는 것이 더 효율적입니다.
+SafeInt 라이브러리는 [SafeInt 클래스](safeint-class.md) 인스턴스를 만들지 않고도 사용할 수 있는 여러 함수를 제공합니다. 단일 수학 연산을 정수 오버플로에서 보호하려는 경우 이 함수를 사용할 수 있습니다. 여러 개의 수학 연산을 보호하려면 `SafeInt` 개체를 만들어야 합니다. `SafeInt`이러한 함수를 여러 번 사용 하는 것 보다 개체를 만드는 것이 더 효율적입니다.
 
 이 함수를 사용하면 먼저 동일한 형식으로 변환하지 않고도 서로 다른 두 형식의 매개 변수를 비교하거나 수학 연산을 수행할 수 있습니다.
 
@@ -51,7 +51,7 @@ SafeInt 라이브러리는 [SafeInt 클래스](safeint-class.md) 인스턴스를
 
 ## <a name="in-this-section"></a>섹션 내용
 
-함수                      | Description
+기능                      | 설명
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | 두 숫자를 더하고 오버플로를 방지합니다.
 [SafeCast](#safecast)         | 한 형식의 매개 변수를 다른 형식으로 캐스팅합니다.
@@ -136,10 +136,10 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>매개 변수
 
 *트*<br/>
-[in] 제수입니다. T 형식이어야 합니다.
+[in] 피제수입니다. T 형식이어야 합니다.
 
 *u*<br/>
-[in] 피제수입니다. U 형식이어야 합니다.
+[in] 제수입니다. U 형식이어야 합니다.
 
 *result*<br/>
 [out] `SafeDivide`에서 결과를 저장하는 매개 변수입니다.
@@ -150,7 +150,7 @@ inline bool SafeDivide (
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
-두 숫자를 비교하여 같은지 확인합니다.
+두 숫자를 비교 하 여 같은지 여부를 확인 합니다.
 
 ```cpp
 template<typename T, typename U>
@@ -250,7 +250,7 @@ inline bool SafeLessThan (
 [in] 첫 번째 숫자입니다. `T` 형식이어야 합니다.
 
 *u*<br/>
-[in] 두 번째 숫자입니다. `U` 형식이어야 합니다.
+진행 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -346,7 +346,7 @@ inline bool SafeMultiply (
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
-두 개의 숫자가 같지 않은지 확인합니다.
+두 숫자가 같지 않은 지 여부를 확인 합니다.
 
 ```cpp
 template<typename T, typename U>
@@ -366,7 +366,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>반환 값
 
-*t*와 *u*가 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.
+*t* 와 *u* 가 같지 않으면 **true** 이 고, 그렇지 않으면 **false**입니다.
 
 ### <a name="remarks"></a>설명
 

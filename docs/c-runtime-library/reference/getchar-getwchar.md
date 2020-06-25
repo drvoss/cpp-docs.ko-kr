@@ -1,6 +1,6 @@
 ---
 title: getchar, getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920338"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334970"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Return Value
 
-읽은 문자를 반환합니다. 읽기 오류 또는 파일 끝 조건을 나타내려면 **getchar** 은 **EOF**를 반환 하 고 **getwchar** 는 **weof**를 반환 합니다. **Getchar**의 경우 **ferror** 또는 **feof** 를 사용 하 여 오류 또는 파일 끝을 확인 합니다.
+읽은 문자를 반환합니다. 이러한 함수는 입력을 대기 하 고 입력을 사용할 수 있을 때까지 반환 되지 않습니다.
+
+읽기 오류 또는 파일 끝 조건을 나타내려면 **getchar** 은 **EOF**를 반환 하 고 **getwchar** 는 **weof**를 반환 합니다. **Getchar**의 경우 **ferror** 또는 **feof** 를 사용 하 여 오류 또는 파일 끝을 확인 합니다.
 
 ## <a name="remarks"></a>설명
 
 각 루틴은 **stdin** 에서 단일 문자를 읽고 다음 문자를 가리키도록 연결 된 파일 포인터를 증가 시킵니다. **getchar** 는 [_fgetchar](fgetc-fgetwc.md)와 동일 하지만 함수 및 매크로로 구현 됩니다.
 
-이러한 함수는 호출 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md)을 참조하세요.
+이러한 함수는 또한 호출 스레드를 잠그고 스레드로부터 안전 합니다. 잠기지 않는 버전의 경우 [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md)을 참조하세요.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
