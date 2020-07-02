@@ -1,4 +1,4 @@
----
+﻿---
 title: 사용자 지정 빌드 단계 및 빌드 이벤트 이해
 ms.date: 08/29/2019
 helpviewer_keywords:

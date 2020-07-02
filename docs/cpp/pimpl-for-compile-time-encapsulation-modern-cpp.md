@@ -1,4 +1,4 @@
----
+﻿---
 title: 컴파일 타임 캡슐화에 대한 Pimpl(최신 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual

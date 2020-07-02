@@ -42,7 +42,7 @@ ms.locfileid: "68449062"
 
 [인수 포함 사용자 지정 조작자](../standard-library/custom-manipulators-with-arguments.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 
 
 [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

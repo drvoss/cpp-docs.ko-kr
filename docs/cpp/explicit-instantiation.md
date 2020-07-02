@@ -1,4 +1,4 @@
----
+﻿---
 title: 명시적 인스턴스화
 ms.date: 11/04/2016
 helpviewer_keywords:

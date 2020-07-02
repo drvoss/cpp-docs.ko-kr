@@ -29,7 +29,7 @@ C++ 표준 라이브러리에서 잠재적으로 안전하지 않은 메서드�
 
 C4996 경고를 비활성화하는 다른 방법은 다음과 같습니다.
 
-- [/D(전처리기 정의)](../build/reference/d-preprocessor-definitions.md) 컴파일러 옵션을 사용합니다.
+- [/D (전처리기 정의)](../build/reference/d-preprocessor-definitions.md) 컴파일러 옵션을 사용합니다.
 
    > cl /D_SCL_SECURE_NO_WARNINGS [기타 컴파일러 옵션] myfile .cpp
 
@@ -43,7 +43,7 @@ C4996 경고를 비활성화하는 다른 방법은 다음과 같습니다.
    #pragma warning(disable:4996)
    ```
 
-**/w\<l>\<n>** 컴파일러 옵션을 사용하여 경고 C4996의 수준을 수동으로 변경할 수도 있습니다. 예를 들어 C4996 경고를 수준 4로 설정하려면 다음 코드를 사용합니다.
+**/w\<l>\<n>** 컴파일러 옵션을 사용하여 경고 C4996의 수준을 수동으로 변경할 수도 있습니다. 예를들어 C4996 경고를 수준 4로 설정하려면 다음 코드를 사용합니다.
 
 > cl /w44996 [other compiler options] myfile.cpp
 

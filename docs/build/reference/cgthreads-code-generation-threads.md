@@ -33,7 +33,7 @@ ms.locfileid: "62294696"
 
 ## <a name="remarks"></a>설명
 
-**/cgthreads** 옵션은 cl.exe 스레드 최대 수를 사용하여 병렬로 컴파일의 최적화 및 코드 생성 단계를 지정합니다. **/cgthreads**와 `number` 인수 사이에 공백이 있을 수 있습니다. 기본적으로 cl.exe에서는 **/cgthreads4**가 지정된 것처럼 4개의 스레드를 사용합니다. 더 많은 프로세서 코어를 사용할 수 있는 경우에는 더 큰 `number` 값으로 인해 빌드 시간이 줄어들 수 있습니다. 이 옵션은 [/GL (전체 프로그램 최적화)](gl-whole-program-optimization.md)와 결합된 경우에 특히 유용합니다.
+**/cgthreads** 옵션은 컴파일의 최적화 및 코드 생성 단계를 위해 병렬로 cl.exe가 사용하는 최대 스레드 수를 지정합니다. **/cgthreads**와 `number` 인수 사이에는 공백이 없어야 합니다. 기본적으로 cl.exe는 **/cgthreads4**가 지정된 것처럼 네 개의 스레드를 사용합니다. 더 많은 프로세서 코어를 사용할 수 있으면 더 큰 `number` 값으로 빌드 시간을 향상시킬 수 있습니다. 이 옵션은 [/GL (전체 프로그램 최적화)](gl-whole-program-optimization.md)와 결합할 때 특히 유용합니다.
 
 빌드에 여러 수준의 병렬 처리를 지정할 수 있습니다. Msbuild.exe 스위치인 **/maxcpucount** 병렬로 실행할 수 있는 MSBuild 프로세스의 수를 지정 합니다. 합니다 [/MP (여러 프로세스로 빌드)](mp-build-with-multiple-processes.md) 컴파일러 플래그는 동시에 소스 파일을 컴파일하는 cl.exe 프로세스의 수를 지정 합니다. 합니다 **/cgthreads** 옵션 각 cl.exe 프로세스에서 사용 되는 스레드 수를 지정 합니다. 프로세서는 프로세서 코어와 동일한 수의 스레드를 동시에 실행할 수 있으므로 이러한 모든 옵션에 대해 동시에 더 큰 값을 지정하는 것은 유용하지 않으며 오히려 역효과가 일어날 수 있습니다. 병렬로 프로젝트를 빌드하는 방법에 대 한 자세한 내용은 참조 하세요. [병렬로 여러 프로젝트 빌드](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)합니다.
 

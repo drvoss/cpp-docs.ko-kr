@@ -1,4 +1,4 @@
----
+﻿---
 title: /GL(전체 프로그램 최적화)
 ms.date: 11/04/2016
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: /Ox (대부분의 속도 최적화 사용)
 ms.date: 10/18/2018
 f1_keywords:
@@ -32,7 +32,7 @@ ms.locfileid: "62320099"
 
 **/Ox** 컴파일러 옵션은 다음 옵션을 조합하여 사용하는 것과 같습니다.
 
-- [/Ob(인라인 함수 확장)](ob-inline-function-expansion.md)option 매개 변수 자리에는 2를 넣습니다. ( **/Ob2**)
+- [/Ob(인라인 함수 확장)](ob-inline-function-expansion.md)option 매개 변수 자리에는 2를 넣습니다. (**/Ob2**)
 
 - [/Og(전역 최적화)](og-global-optimizations.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "62320099"
 
 - [/Od(디버그 사용 안 함)](od-disable-debug.md)
 
-**/Ox** 컴파일러 옵션을 [/Os(작은 코드 선호)](os-ot-favor-small-code-favor-fast-code.md)와 결합한 **/Oxs**를 지정하면 **/Ox** 컴파일러 옵션의 속도에 대한 치우침을 없앨 수 있습니다. 결합된 옵션은 더 작은 코드 크기를 선호합니다.  **/Oxs** 옵션은 **/Ox** **/Os**가 순서대로 나타날 때와 완전히 동일합니다.
+**/Ox** 컴파일러 옵션을 [/Os(작은 코드 선호)](os-ot-favor-small-code-favor-fast-code.md)와 결합한 **/Oxs**를 지정하면 **/Ox** 컴파일러 옵션의 속도에 대한 치우침을 없앨 수 있습니다. 결합된 옵션은 더 작은 코드 크기를 선호합니다. **/Oxs** 옵션은 **/Ox** **/Os**가 순서대로 나타날 때와 완전히 동일합니다.
 
 릴리스 빌드에 대한 모든 사용 가능한 파일 수준 최적화를 적용하려면 **/Ox**대신 [/O2(속도 최대화)](o1-o2-minimize-size-maximize-speed.md)를, **/Oxs** 대신 [/O1(크기 최소화)](o1-o2-minimize-size-maximize-speed.md)를 지정하는것이 좋습니다. 릴리스에서 더 많은 최적화를 적용하려면 [/GL(전체 프로그램 최적화)](gl-whole-program-optimization.md) 컴파일러 옵션과 [/LTCG(링크 타임 코드 생성)](ltcg-link-time-code-generation.md) 링커 옵션을 고려합니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "62320099"
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성**에서 **C/C++** 를 연 다음 **최적화** 속성 페이지를 선택합니다.
+1. **구성 속성**에서 **C/C++**를 연 다음 **최적화** 속성 페이지를 선택합니다.
 
 1. **최적화** 속성을 수정합니다.
 

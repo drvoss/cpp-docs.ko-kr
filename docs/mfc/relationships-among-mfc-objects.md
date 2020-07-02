@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC 개체 간 관계
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -40,6 +40,7 @@ ms.locfileid: "81372816"
 |보기|[GetDocument에](../mfc/reference/cview-class.md#getdocument) 전화하여 문서를 가져옵니다.<br /><br /> [GetParentFrame을](../mfc/reference/cwnd-class.md#getparentframe) 호출하여 프레임 창을 가져옵니다.|
 |문서 프레임 창|현재 보기를 얻으려면 [GetActiveView에](../mfc/reference/cframewnd-class.md#getactiveview) 전화합니다.<br /><br /> [GetActiveDocument를](../mfc/reference/cframewnd-class.md#getactivedocument) 호출하여 문서를 현재 보기에 연결합니다.|
 |MDI 프레임 창|[MDIGetActive에](../mfc/reference/cmdiframewnd-class.md#mdigetactive) 전화하여 현재 활성 [CMDIChildWnd를](../mfc/reference/cmdichildwnd-class.md)가져옵니다.|
+
 
 일반적으로 프레임 창에는 하나의 뷰가 있지만 스플리터 창과 마찬가지로 동일한 프레임 창에는 여러 뷰가 포함되는 경우가 있습니다. 프레임 창은 현재 활성 뷰에 대한 포인터를 유지합니다. 포인터는 다른 뷰가 활성화될 때마다 업데이트됩니다.
 

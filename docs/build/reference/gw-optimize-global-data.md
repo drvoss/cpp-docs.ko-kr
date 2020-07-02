@@ -1,4 +1,4 @@
----
+﻿---
 title: /Gw(전역 데이터 최적화)
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,7 +32,9 @@ ms.locfileid: "66450140"
 
 또한 [/OPT:ICF](opt-optimizations.md)와 [/LTCG](ltcg-link-time-code-generation.md) 링커 옵션을 함께 사용하여 **/Gw**옵션으로 컴파일된 여러 개체 파일에서 동일한 모든 읽기 전용 전역 데이터를 병합할 수 있습니다.
 
-자세한 내용은 C++ 팀 블로그에서 [/Gw 컴파일러 스위치 소개](https://devblogs.microsoft.com/cppblog/introducing-gw-compiler-switch/)를 참조하세요.
+
+자세한 내용은 C++ 팀 블로그에서 [/Gw 컴파일러 스위치 소개](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)를 참조하세요.
+
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 

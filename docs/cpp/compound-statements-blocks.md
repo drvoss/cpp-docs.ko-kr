@@ -1,5 +1,5 @@
----
-title: 복합 문(블록)
+﻿---
+title: 복합문(블록)
 ms.date: 11/04/2016
 f1_keywords:
 - '}'
@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81337334"
 ---
-# <a name="compound-statements-blocks"></a>복합 문(블록)
+# <a name="compound-statements-blocks"></a>복합문(블록)
 
 복합 문은 중괄호({**}**)로 둘러싸인 0개 이상의 문으로 구성됩니다. 복합 문은 원하는 어느 곳에서든 사용할 수 있습니다. 복합 문은 일반적으로 "블록"이라고 합니다.
 

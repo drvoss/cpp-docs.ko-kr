@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;algorithm&gt; 함수'
 ms.date: 11/04/2016
 f1_keywords:

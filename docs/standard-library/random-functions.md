@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;random&gt; 함수'
 ms.date: 09/04/2019
 f1_keywords:

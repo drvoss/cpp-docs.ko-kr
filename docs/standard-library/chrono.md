@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
@@ -21,7 +21,7 @@ ms.locfileid: "72689874"
 
 표준 헤더 \<chrono>를 포함하여 지속되는 시간과 순간의 시간을 표현하고 다룰 수 있는 클래스와 함수를 정의합니다.
 
-Visual Studio 2015부터 `steady_clock`의 구현이 조성에 및 단 조성에의 C++ 표준 요구 사항을 충족 하도록 변경 되었습니다. 현재 `steady_clock`은 QueryPerformanceCounter()를 기반으로 하며 `high_resolution_clock`은 `steady_clock`에 대한 typedef입니다. 결과적으로 Microsoft C++ 컴파일러 `steady_clock::time_point`는 이제 `chrono::time_point<steady_clock>`에 대 한 typedef입니다. 그러나이 규칙은 다른 구현에 반드시 필요한 것은 아닙니다.
+Visual Studio 2015부터 `steady_clock`의 구현은 안전성과 단조성이 C++ 표준 요구 사항을 충족하도록 변경되었습니다. 현재 `steady_clock`은 QueryPerformanceCounter()를 기반으로 하며 `high_resolution_clock`은 `steady_clock`에 대한 typedef입니다. 결과적으로 Microsoft C++ 컴파일러 `steady_clock::time_point`는 이제 `chrono::time_point<steady_clock>`에 대한 typedef입니다. 그러나 이 규칙은 다른 구현에 반드시 필요한 것은 아닙니다.
 
 ## <a name="requirements"></a>요구 사항
 

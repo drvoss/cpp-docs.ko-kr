@@ -1,4 +1,4 @@
----
+﻿---
 title: 클래스 멤버 개요
 ms.date: 11/04/2016
 helpviewer_keywords:

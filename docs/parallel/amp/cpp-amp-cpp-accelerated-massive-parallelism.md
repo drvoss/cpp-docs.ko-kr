@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ AMP(C++ Accelerated Massive Parallelism)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -40,3 +40,5 @@ C++AMP(C++ Accelerated Massive Parallelism)는 개별 그래픽 카드에서 일
 [네이티브 코드 블로그의 병렬 프로그래밍](https://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
 [C++다운로드할 AMP 샘플 프로젝트](https://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
 [동시성 C++ 시각화 도우미를 사용 하 여 AMP 코드 분석](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+
+

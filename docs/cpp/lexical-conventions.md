@@ -1,4 +1,4 @@
----
+﻿---
 title: 어휘 규칙
 description: 키워드, 식별자, C++ 리터럴 및 문자 집합과 같은 프로그램의 기본 요소에 대해 설명 합니다.
 ms.custom: index-page

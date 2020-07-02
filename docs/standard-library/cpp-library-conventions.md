@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ 라이브러리 규칙
 ms.date: 11/04/2016
 helpviewer_keywords:

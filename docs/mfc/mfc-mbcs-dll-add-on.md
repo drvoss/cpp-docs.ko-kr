@@ -1,4 +1,4 @@
----
+﻿---
 title: MFC MBCS DLL 추가 기능
 ms.date: 12/02/2019
 helpviewer_keywords:

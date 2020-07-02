@@ -1,4 +1,4 @@
----
+﻿---
 title: 기준 계수(ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -31,6 +31,7 @@ COM은 `IUnknown` 메서드인 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunk
 
 > [!NOTE]
 > -derive된 개체가 `CComObject` **새** 연산자를 사용하여 생성되면 참조 수는 0입니다. 따라서 `CComObject`-derived `AddRef` 개체를 성공적으로 만든 후 호출해야 합니다.
+
 
 ## <a name="see-also"></a>참고 항목
 
