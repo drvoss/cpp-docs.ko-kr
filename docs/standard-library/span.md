@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813537"
 ---
 # <a name="ltspangt"></a>&lt;span&gt;
 
-는 `span` 연속 된 개체 시퀀스에 대 한 뷰입니다. 빠르고 경계가 안전한 액세스를 제공 합니다. 또는와 달리 `vector` `array` 액세스를 제공 하는 요소를 "소유" 하지 않습니다. 
+는 `span` 연속 된 개체 시퀀스에 대 한 뷰입니다. 빠르고 경계가 안전한 액세스를 제공 합니다. 또는와 달리 `vector` `array` 액세스를 제공 하는 요소를 "소유" 하지 않습니다.
 
 자세한 내용은 [span 클래스](span-class.md) 를 참조 하세요. 범위를 사용할 수 있는 방법의 예는 다음과 같습니다.
 

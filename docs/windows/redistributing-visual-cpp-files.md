@@ -8,21 +8,21 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 46192fe7ff5b29c22a5001cc460c74f5ddf6d1bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a450f65689251c67a5326bd772d09d5c4abb74
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737498"
 ---
 # <a name="redistributing-visual-c-files"></a>Visual C++ 파일 재배포
 
 > [!NOTE]
-> Visual C++ 런타임 파일 중 하나의 다운로드를 찾고 있습니까? [Microsoft 웹 사이트로](https://www.microsoft.com/) 이동 하 고 검색 상자에  **C++ 비주얼 재배포 가능** 을 입력 합니다. 컴퓨터 아키텍처(예: 64비트 Windows를 실행하는 경우 x64) 및 필요한 Visual C++ 버전(예: 2015)의 재배포 가능 패키지를 다운로드하여 설치합니다.
+> Visual C++ 런타임 파일 중 하나의 다운로드를 찾고 있습니까? [Microsoft 웹 사이트로](https://www.microsoft.com/) 이동 하 고 검색 상자에 **Visual C++ 재배포 가능 패키지** 를 입력 합니다. 컴퓨터 아키텍처(예: 64비트 Windows를 실행하는 경우 x64) 및 필요한 Visual C++ 버전(예: 2015)의 재배포 가능 패키지를 다운로드하여 설치합니다.
 
 애플리케이션을 배포할 때 이 애플리케이션을 지원하는 데 필요한 파일도 배포해야 합니다. Microsoft에서 이러한 파일을 제공하는 경우 파일을 다시 배포할 수 있는지 여부를 확인합니다. Visual Studio 사용 조건을 검토하려면 IDE의 Microsoft Visual Studio 정보 대화 상자에서 사용 조건 연결을 참조하거나, [Microsoft 소프트웨어 사용 조건](https://visualstudio.microsoft.com/license-terms/mlt687465/) 파일을 다운로드합니다. 특정 버전의 Visual Studio에 대한 Microsoft 소프트웨어 사용 조건의 "배포 가능 코드" 섹션에서 언급된 "REDIST 목록"을 보려면 [Microsoft Visual Studio 2017 및 Microsoft Visual Studio 2017 SDK용 배포 가능 코드(유틸리티 및 BuildServer 파일 포함)](/visualstudio/productinfo/2017-redistribution-vs)를 참조하세요. Visual Studio 2015의 경우 [Microsoft Visual Studio 2015 및 Microsoft Visual Studio 2015 SDK용 배포 가능 코드](/visualstudio/productinfo/2015-redistribution-vs)를 참조하세요. 재배포 가능 파일에 대한 자세한 내용은 [재배포할 DLL 확인](determining-which-dlls-to-redistribute.md) 및 [배포 예제](deployment-examples.md)를 참조하세요.
 
-재배포 가능한 Visual C++ 파일을 배포하려면 Visual Studio에 포함된 Visual C++ 재배포 가능 패키지(VCRedist\_x86.exe, VCRedist\_x64.exe 또는 VCRedist\_arm.exe)를 사용할 수 있습니다. Visual Studio 2017에서 이러한 파일은 Program Files[(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ 폴더에 있습니다. 여기서 _edition_은 설치된 Visual Studio 버전이고, _lib-version_은 재배포할 라이브러리 버전입니다. Visual Studio 2015에서 이러한 파일은 Program Files[(x86)]\Microsoft Visual Studio *version*\VC\redist\\*locale*\\의 Visual Studio 설치 디렉터리 아래에 있습니다. 다른 옵션은 Visual Studio 2017의 Program Files[(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\ VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ 폴더에 있는 재배포 가능 병합 모듈(.msm 파일)을 사용하는 것입니다. Visual Studio 2015에서 이러한 파일은 Program Files[(x86)]\common Files\Merge Modules\\에 있습니다. 애플리케이션 실행 파일이 들어 있는 폴더인 *애플리케이션 로컬 폴더*에 재배포 가능한 Visual C++ DLL을 직접 설치할 수도 있습니다. 서비스 편의를 위해 이 설치 위치를 사용하지 않는 것이 좋습니다.
+재배포 가능한 Visual C++ 파일을 배포하려면 Visual Studio에 포함된 Visual C++ 재배포 가능 패키지(VCRedist\_x86.exe, VCRedist\_x64.exe 또는 VCRedist\_arm.exe)를 사용할 수 있습니다. Visual Studio 2019에서 이러한 파일은 Program Files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ Vc \\ redist \\ MSVC \\ v142 폴더 또는 program files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ Vc \\ redist \\ MSVC \\ _lib-version_ 폴더에서 찾을 수 있습니다. 여기서 _edition_ 은 Visual Studio 버전을 설치 하 고 _lib-version_ 은 재배포할 라이브러리의 버전입니다. Visual Studio 2017에서 이러한 파일은 Program Files [(x86)] \\ Microsoft Visual Studio \\ 2017 \\ _edition_ \\ VC \\ Redist \\ MSVC \\ _lib-Version_ 폴더에서 찾을 수 있습니다. 여기서 _edition_ 은 Visual Studio 버전을 설치 하 고 _lib-버전_ 은 재배포할 라이브러리의 버전입니다. Visual Studio 2015에서 이러한 파일은 Program Files[(x86)]\Microsoft Visual Studio *version*\VC\redist\\*locale*\\의 Visual Studio 설치 디렉터리 아래에 있습니다. 또 다른 옵션은 Visual Studio 2019의 Program Files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ Vc \\ redist \\ MSVC \\ v142 \\ MergeModules 또는 program files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _edition_ \\ vc \\ redist \\ MSVC \\ _lib-version_ \\ MergeModules 폴더에서 찾을 수 있는 재배포 가능 병합 모듈 (.msm 파일)을 사용 하는 것입니다. Visual Studio 2017는 Program Files [(x86)] \\ Microsoft Visual Studio \\ 2017 \\ _edition_ \\ VC \\ Redist \\ MSVC \\ _lib-version_ \\ MergeModules 폴더에서 찾을 수 있습니다. Visual Studio 2015에서 이러한 파일은 Program Files[(x86)]\common Files\Merge Modules에 있습니다. 애플리케이션 실행 파일이 들어 있는 폴더인 *애플리케이션 로컬 폴더*에 재배포 가능한 Visual C++ DLL을 직접 설치할 수도 있습니다. 서비스 편의를 위해 이 설치 위치를 사용하지 않는 것이 좋습니다.
 
 Visual C++ 재배포 가능 패키지는 모든 Visual C++ 라이브러리를 설치하고 등록합니다. 재배포 가능 패키지를 사용하는 경우 애플리케이션 설치의 필수 구성 요소로 대상 시스템에서 실행되도록 설정해야 합니다. Visual C++ 라이브러리의 자동 업데이트를 사용하기 때문에 이러한 배포 패키지를 사용하는 것이 좋습니다. 이러한 패키지를 사용하는 방법에 대한 예제는 [연습: Visual C++ 재배포 가능 패키지를 사용하여 Visual C++ 애플리케이션 배포](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)를 참조하세요.
 

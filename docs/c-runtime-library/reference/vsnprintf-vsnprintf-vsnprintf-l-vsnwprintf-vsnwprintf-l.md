@@ -1,6 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
-ms.date: 11/04/2016
+ms.date: 06/24/2020
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737583"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -142,7 +142,7 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 출력을 위한 스토리지 위치입니다.
 
 *count*<br/>
@@ -161,17 +161,19 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>반환 값
 
-**Vsnprintf** 함수는 null 종결 문자를 제외 하 고 작성 된 문자 수를 반환 합니다. *Count* 로 지정 된 버퍼 크기가 *format* 및 *argptr*로 지정 된 출력을 포함 하기에 충분히 크지 않은 경우, **vsnprintf** 의 반환 값은 null 문자를 제외 하 고 작성 되는 문자 수입니다 ( *개수가* 충분히 큰 경우). 반환 값이 *개수* -1 보다 큰 경우 출력이 잘렸습니다. 반환 값 -1은 인코딩 오류가 발생했음을 나타냅니다.
+**Vsnprintf** 함수는 null 종결 문자를 제외 하 고 작성 된 문자 수를 반환 합니다. *Count* 로 지정 된 버퍼 크기가 *format* 및 *argptr*로 지정 된 출력을 포함 하는 데 충분히 크지 않은 경우 **vsnprintf** 의 반환 값은 null 문자를 제외 하 고 작성 되는 문자 수입니다 ( *개수가* 충분히 큰 경우). 반환 값이 *개수* -1 보다 큰 경우 출력이 잘렸습니다. 반환 값 -1은 인코딩 오류가 발생했음을 나타냅니다.
 
 **_Vsnprintf** 및 **_vsnwprintf** 함수는 쓸 문자 수가 *count*보다 작거나 같은 경우 쓴 문자 수를 반환 합니다. 작성할 문자 수가 *count*보다 큰 경우 이러한 함수는 출력이 잘린 것을 나타내는-1을 반환 합니다.
 
-이러한 모든 함수에서 반환하는 값에는 작성 여부와 관계없이 종결 null이 포함되지 않습니다. *Count* 가 0 인 경우 반환 되는 값은 함수에서 작성 하는 문자 수 이며 종료 null을 포함 하지 않습니다. 이 결과를 사용하여 문자열과 해당 종결 null에 대해 충분한 버퍼 공간을 할당한 다음 함수를 다시 호출하여 버퍼를 채울 수 있습니다.
+이러한 모든 함수에서 반환 되는 값에는 쓰기가 기록 되었는지 여부에 관계 없이 종료 null이 포함 되지 않습니다.
 
-*Format* 이 **null**이거나 *buffer* 가 **null** 이 고 *count* 가 0과 같지 않은 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
+- *Count* 가 0이 고 *buffer* 가 **NULL**이면 함수가 쓸 수 있는 문자 수가 반환 됩니다. 이 값은 종료 **NULL**을 고려 하지 않습니다. 이 결과를 사용하여 문자열과 해당 종결 null에 대해 충분한 버퍼 공간을 할당한 다음 함수를 다시 호출하여 버퍼를 채울 수 있습니다.
+- *Count* 가 0 이지만 *버퍼가* **NULL**이 아닌 경우 아무 것도 쓰여지지 않으며 함수는를 반환 `-1` 합니다.
+- *Format* 이 **null**이거나 *buffer* 가 **null** 이 고 *Count* 가 0이 아닌 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이러한 각 함수는 인수 목록에 대 한 포인터를 가져온 다음 데이터의 형식을 지정 하 고 *버퍼*에 의해 가리키는 메모리에 문자 *수를 계산* 합니다. **Vsnprintf** 함수는 출력을 자르는 경우에도 항상 null 종결자를 씁니다. **_Vsnprintf** 및 **_vsnwprintf**를 사용할 때 버퍼는 끝에 공간이 있는 경우에만 null로 종료 됩니다. 즉, 쓰려는 문자 수가 *count*보다 작은 경우에만 null이 종료 됩니다.
+이러한 각 함수는 인수 목록에 대 한 포인터를 가져온 다음 데이터의 형식을 지정 하 고 *버퍼*에 의해 가리키는 메모리에 문자 *수를 계산* 합니다. **Vsnprintf** 함수는 출력을 자르는 경우에도 항상 null 종결자를 씁니다. **_Vsnprintf** 및 **_vsnwprintf**를 사용 하는 경우 버퍼는 끝에 공간이 있는 경우에만 null로 종료 됩니다. 즉, 쓰려는 문자 수가 *count*보다 작은 경우에만 null이 종료 됩니다.
 
 > [!IMPORTANT]
 > 특정 종류의 보안 위험을 방지 하려면 *형식이* 사용자 정의 문자열이 아닌지 확인 합니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
@@ -181,13 +183,13 @@ int _vsnwprintf_l(
 >
 > **Vsnprintf** 는 항상 종료 null을 작성 하므로 *count* 매개 변수는 버퍼의 크기와 같을 수 있습니다.
 
-Visual Studio 2015 및 Windows 10의 일부 터 RT부터 **vsnprintf** 는 더 이상 **_vsnprintf**와 동일 하지 않습니다. **Vsnprintf** 함수는 C99 표준을 준수 합니다. 이전 버전의 Visual Studio code와의 호환성을 위해 **_vnsprintf** 유지 됩니다.
+Visual Studio 2015 및 Windows 10의 일부 터 RT부터 **vsnprintf** 는 더 이상 **_vsnprintf**와 동일 하지 않습니다. **Vsnprintf** 함수는 C99 표준을 준수 합니다. 이전 Visual Studio code와의 호환성을 위해 **_vnsprintf** 유지 됩니다.
 
 **_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고는 동일 합니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -198,7 +200,7 @@ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하
 
 |루틴에서 반환된 값|필수 헤더(C)|필수 헤더(C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 또는  \<cstdio>|
+|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 또는 \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> 또는 \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> 또는 \<cwchar>|
 
 **_Vsnprintf**, **_vsnprintf_l**, **_Vsnwprintf** 및 **_vsnwprintf_l** 함수는 Microsoft 전용입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
@@ -281,12 +283,12 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf 함수](../../c-runtime-library/vprintf-functions.md)<br/>
 [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
