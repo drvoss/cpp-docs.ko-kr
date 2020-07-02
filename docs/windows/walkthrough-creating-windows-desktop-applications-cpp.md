@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813611"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>연습: 기존 Windows 데스크톱 응용 프로그램 만들기 (c + +)
 
@@ -57,7 +57,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
    ![DesktopApp 프로젝트에 새 항목 추가](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 프로젝트에 새 항목 추가")
 
-1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택 합니다.
+1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택합니다.
 
    ![DesktopApp 프로젝트에 .cpp 파일 추가](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 프로젝트에 .cpp 파일 추가")
 
@@ -83,7 +83,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
    ![DesktopApp 프로젝트에 새 항목 추가](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 프로젝트에 새 항목 추가")
 
-1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택 합니다.
+1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택합니다.
 
    ![DesktopApp 프로젝트에 .cpp 파일 추가](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 프로젝트에 .cpp 파일 추가")
 
@@ -113,7 +113,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
    ![DesktopApp 프로젝트에 새 항목 추가](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp 프로젝트에 새 항목 추가")
 
-1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택 합니다.
+1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. **이름** 상자에 파일 이름을 입력 합니다 (예: *HelloWindowsDesktop*). **추가**를 선택합니다.
 
    ![DesktopApp 프로젝트에 .cpp 파일 추가](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp 프로젝트에 .cpp 파일 추가")
 
@@ -390,7 +390,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
    ```
 
    `HDC`에서 코드는 창의 클라이언트 영역에 그리는 데 사용 되는 장치 컨텍스트에 대 한 핸들입니다. `BeginPaint`및 함수를 사용 `EndPaint` 하 여 클라이언트 영역에서 그리기를 준비 하 고 완료 합니다. `BeginPaint`클라이언트 영역에서 그리는 데 사용 되는 디스플레이 장치 컨텍스트에 대 한 핸들을 반환 합니다. `EndPaint`그리기 요청을 종료 하 고 장치 컨텍스트를 해제 합니다.
-   
+
 1. 응용 프로그램은 일반적으로 다른 여러 메시지를 처리 합니다. 예를 들어 창을 처음 만들 때를 [WM_CREATE](/windows/win32/winmsg/wm-create) 창이 닫히면 [WM_DESTROY](/windows/win32/winmsg/wm-destroy) 합니다. 다음 코드에서는 기본적인 전체 `WndProc` 함수를 보여 줍니다.
 
    ```cpp
@@ -589,7 +589,7 @@ Windows API (Win32 API, Windows Desktop API 및 Windows Classic API 라고도 �
 
    ![DesktopApp 프로젝트 실행](../build/media/desktop-app-project-run-157.PNG "DesktopApp 프로젝트 실행")
 
-지금까지 이 연습을 완료하고 기존 Windows 데스크톱 응용 프로그램을 빌드 했습니다.
+축하합니다! 이 연습을 완료 하 고 기존 Windows 데스크톱 응용 프로그램을 빌드 했습니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 3b3f239b05b1cf7661929333e2d616acce6bedb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737478"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 클래스
 
@@ -27,31 +27,33 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="members"></a>멤버
 
+이 클래스의 멤버 함수는 가상입니다. 설명서는 [Cdoctemplate](../../mfc/reference/cdoctemplate-class.md) 및 [cdoctemplate](../../mfc/reference/ccmdtarget-class.md) 을 참조 하세요.
+
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|`CMultiDocTemplate` 개체를 생성합니다.|
+|[CMultiDocTemplate:: CMultiDocTemplate](#cmultidoctemplate)|`CMultiDocTemplate` 개체를 생성합니다.|
 
 ## <a name="remarks"></a>설명
 
-MDI 응용 프로그램은 주 프레임 창을 사용자가 문서를 표시하는 0개 이상의 문서 프레임 창을 열 수 있는 작업 영역으로 사용합니다. MDI에 대한 자세한 설명은 *소프트웨어 설계에 대한 Windows 인터페이스 지침을*참조하십시오.
+MDI 응용 프로그램은 주 프레임 창을 사용자가 문서를 표시 하는 0 개 이상의 문서 프레임 창을 열 수 있는 작업 영역으로 사용 합니다. MDI에 대 한 자세한 설명은 *소프트웨어 디자인을 위한 Windows 인터페이스 지침*을 참조 하세요.
 
-문서 템플릿은 세 가지 유형의 클래스 간의 관계를 정의합니다.
+문서 템플릿은 다음과 같은 세 가지 유형의 클래스 간 관계를 정의 합니다.
 
-- [CDocument에서](../../mfc/reference/cdocument-class.md)파생된 문서 클래스입니다.
+- [CDocument](../../mfc/reference/cdocument-class.md)에서 파생 되는 문서 클래스입니다.
 
-- 위에 나열된 문서 클래스의 데이터를 표시하는 뷰 클래스입니다. [CView](../../mfc/reference/cview-class.md)에서 `CScrollView` `CFormView` `CEditView`이 클래스를 파생할 수 있습니다. (직접 사용할 `CEditView` 수도 있습니다.)
+- 위에 나열 된 문서 클래스의 데이터를 표시 하는 뷰 클래스입니다. 이 클래스는 [CView](../../mfc/reference/cview-class.md),, 또는에서 파생 시킬 수 있습니다 `CScrollView` `CFormView` `CEditView` . 직접를 사용할 수도 있습니다 `CEditView` .
 
-- 뷰를 포함하는 프레임 창 클래스입니다. MDI 문서 템플릿의 경우 `CMDIChildWnd`에서 이 클래스를 파생하거나 문서 프레임 창의 동작을 사용자 지정할 필요가 없는 경우 자신의 클래스를 파생하지 않고 [CMDIChildWnd를](../../mfc/reference/cmdichildwnd-class.md) 직접 사용할 수 있습니다.
+- 뷰를 포함 하는 프레임 창 클래스입니다. MDI 문서 템플릿의 경우에서이 클래스를 파생 `CMDIChildWnd` 시키거나, 문서 프레임 창의 동작을 사용자 지정할 필요가 없는 경우 고유한 클래스를 파생 시 키 지 않고 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) 를 직접 사용할 수 있습니다.
 
-MDI 응용 프로그램은 둘 이상의 문서 유형을 지원할 수 있으며 서로 다른 유형의 문서를 동시에 열 수 있습니다. 응용 프로그램에는 지원하는 각 문서 유형에 대해 하나의 문서 템플릿이 있습니다. 예를 들어 MDI 응용 프로그램이 스프레드시트와 텍스트 문서를 모두 `CMultiDocTemplate` 지원하는 경우 응용 프로그램에두 개의 개체가 있습니다.
+MDI 응용 프로그램은 둘 이상의 문서 형식을 지원할 수 있으며, 다른 형식의 문서는 동시에 열 수 있습니다. 응용 프로그램에는 지 원하는 각 문서 유형에 대 한 문서 템플릿이 하나 있습니다. 예를 들어 MDI 응용 프로그램에서 스프레드시트와 텍스트 문서를 모두 지 원하는 경우 응용 프로그램에는 두 개의 `CMultiDocTemplate` 개체가 있습니다.
 
-응용 프로그램은 사용자가 새 문서를 만들 때 문서 템플릿을 사용합니다. 응용 프로그램이 둘 이상의 문서 유형을 지원하는 경우 프레임워크는 문서 템플릿에서 지원되는 문서 형식의 이름을 가져옵니다. 사용자가 문서 형식을 선택하면 응용 프로그램은 문서 클래스 개체, 프레임 창 개체 및 뷰 개체를 만들어 서로 연결합니다.
+응용 프로그램은 사용자가 새 문서를 만들 때 문서 템플릿을 사용 합니다. 응용 프로그램에서 둘 이상의 문서 유형을 지 원하는 경우 프레임 워크는 문서 템플릿에서 지원 되는 문서 유형의 이름을 가져오고 파일 새로 만들기 대화 상자의 목록에 표시 합니다. 사용자가 문서 유형을 선택 하면 응용 프로그램은 문서 클래스 개체, 프레임 창 개체 및 뷰 개체를 만들어 서로 연결 합니다.
 
-생성자 이외의 멤버 함수를 `CMultiDocTemplate` 호출할 필요가 없습니다. 프레임워크는 개체를 내부적으로 처리합니다. `CMultiDocTemplate`
+생성자를 제외 하 고의 멤버 함수를 호출할 필요가 없습니다 `CMultiDocTemplate` . 프레임 워크는 `CMultiDocTemplate` 개체를 내부적으로 처리 합니다.
 
-자세한 `CMultiDocTemplate`내용은 문서 [템플릿 및 문서/보기 작성 프로세스를](../../mfc/document-templates-and-the-document-view-creation-process.md)참조하십시오.
+에 대 한 자세한 내용은 `CMultiDocTemplate` [문서 템플릿 및 문서/뷰 만들기 프로세스](../../mfc/document-templates-and-the-document-view-creation-process.md)를 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -67,7 +69,7 @@ MDI 응용 프로그램은 둘 이상의 문서 유형을 지원할 수 있으�
 
 **헤더:** afxwin.h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate:: CMultiDocTemplate
 
 `CMultiDocTemplate` 개체를 생성합니다.
 
@@ -82,9 +84,9 @@ CMultiDocTemplate(
 ### <a name="parameters"></a>매개 변수
 
 *nIDResource*<br/>
-문서 유형에 사용된 리소스의 ID를 지정합니다. 여기에는 메뉴, 아이콘, 액셀러레이터 테이블 및 문자열 리소스가 포함될 수 있습니다.
+문서 유형과 함께 사용 되는 리소스의 ID를 지정 합니다. 여기에는 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스가 포함 될 수 있습니다.
 
-문자열 리소스는 '\n' 문자로 구분된 최대 7개의 하위 문자열로 구성됩니다(하위 문자열이 포함되지 않은 경우 '\n' 문자는 자리 표시자로 필요하지만 후행 '\n' 문자는 필요하지 않습니다.) 이러한 하위 문자열은 문서 형식을 설명합니다. 하위 문자열에 대한 자세한 내용은 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)을 참조하십시오. 이 문자열 리소스는 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 다음은 그 예입니다.
+문자열 리소스는 ' \n ' 문자로 구분 된 최대 7 개의 부분 문자열로 구성 됩니다. 부분 문자열이 포함 되지 않은 경우 ' \n ' 문자는 자리 표시자로 필요 하지만 후행 ' \n ' 문자는 필요 하지 않습니다. 이러한 부분 문자열은 문서 유형을 설명 합니다. 부분 문자열에 대 한 자세한 내용은 [Cdoctemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)을 참조 하세요. 이 문자열 리소스는 응용 프로그램의 리소스 파일에 있습니다. 예를 들면 다음과 같습니다.
 
 ```RC
 // MYCALC.RC
@@ -94,22 +96,22 @@ BEGIN
 END
 ```
 
-문자열은 '\n' 문자로 시작합니다. 이는 첫 번째 하위 문자열이 MDI 응용 프로그램에 사용되지 않으므로 포함되지 않기 때문입니다. 문자열 편집기에서 이 문자열을 편집할 수 있습니다. 전체 문자열은 7개의 개별 항목이 아니라 문자열 편집기의 단일 항목으로 나타납니다.
+첫 번째 하위 문자열이 MDI 응용 프로그램에 사용 되지 않으므로 포함 되지 않기 때문에 문자열은 ' \n ' 문자로 시작 합니다. 문자열 편집기를 사용 하 여이 문자열을 편집할 수 있습니다. 전체 문자열은 7 개의 개별 항목이 아니라 문자열 편집기에서 단일 항목으로 나타납니다.
 
-이러한 리소스 유형에 대한 자세한 내용은 [리소스 편집기](../../windows/resource-editors.md)를 참조하십시오.
+이러한 리소스 유형에 대 한 자세한 내용은 [리소스 편집기](../../windows/resource-editors.md)를 참조 하십시오.
 
-*pDoc클래스*<br/>
-문서 클래스의 `CRuntimeClass` 개체를 가리킵니다. 이 클래스는 `CDocument`문서를 나타내기 위해 정의한 -파생 클래스입니다.
+*pDocClass*<br/>
+`CRuntimeClass`문서 클래스의 개체를 가리킵니다. 이 클래스는 `CDocument` 문서를 나타내기 위해 정의 하는 파생 클래스입니다.
 
-*pFrame클래스*<br/>
-프레임 창 `CRuntimeClass` 클래스의 개체를 가리킵니다. 이 클래스는 `CMDIChildWnd`-derived 클래스일 수도 `CMDIChildWnd` 있고 문서 프레임 창에 대한 기본 동작을 원하는 경우 그 자체일 수도 있습니다.
+*pFrameClass*<br/>
+는 `CRuntimeClass` 프레임 창 클래스의 개체를 가리킵니다. 이 클래스는 파생 클래스 일 수도 있고 `CMDIChildWnd` `CMDIChildWnd` 문서 프레임 창에 대 한 기본 동작을 원하는 경우 자체가 될 수도 있습니다.
 
-*pView클래스*<br/>
-뷰 클래스의 `CRuntimeClass` 개체를 가리킵니다. 이 클래스는 `CView`문서를 표시하도록 정의하는 -derive 클래스입니다.
+*pViewClass*<br/>
+`CRuntimeClass`뷰 클래스의 개체를 가리킵니다. 이 클래스는 `CView` 문서를 표시 하기 위해 정의 하는 파생 클래스입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램이 지원하는 `CMultiDocTemplate` 각 문서 형식에 대해 하나의 개체를 `CWinApp::AddDocTemplate` 동적으로 할당하고 각 개체를 응용 프로그램 클래스의 `InitInstance` 멤버 함수에서 전달합니다.
+응용 프로그램에서 `CMultiDocTemplate` 지 원하는 각 문서 형식에 대해 개체를 동적으로 할당 하 고 `CWinApp::AddDocTemplate` `InitInstance` 응용 프로그램 클래스의 멤버 함수에서 각 항목을에 전달 합니다.
 
 ### <a name="example"></a>예제
 
@@ -121,8 +123,8 @@ END
 
 ## <a name="see-also"></a>참고 항목
 
-[CDoc템플릿 클래스](../../mfc/reference/cdoctemplate-class.md)<br/>
+[CDocTemplate 클래스](../../mfc/reference/cdoctemplate-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
-[CDoc템플릿 클래스](../../mfc/reference/cdoctemplate-class.md)<br/>
+[CDocTemplate 클래스](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CSingleDocTemplate 클래스](../../mfc/reference/csingledoctemplate-class.md)<br/>
 [CWinApp 클래스](../../mfc/reference/cwinapp-class.md)

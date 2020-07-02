@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 410d339789ef4a29a6760a4118f967b22f4f3a8c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813580"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -95,15 +95,20 @@ double wcstod_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
-**strtod** 는 표현이 오버플로를 발생 시키는 경우를 제외 하 고 부동 소수점 숫자의 값을 반환 합니다 .이 경우 함수는 +/-**HUGE_VAL**을 반환 합니다. **HUGE_VAL** 부호는 표현할 수 없는 값의 부호와 일치 합니다. **strtod** 는 변환을 수행할 수 없거나 언더플로가 발생 하는 경우 0을 반환 합니다.
+**strtod** 는 표현이 오버플로를 발생 시키는 경우를 제외 하 고 부동 소수점 숫자의 값을 반환 합니다 .이 경우 함수는 +/-**HUGE_VAL**을 반환 합니다. **HUGE_VAL** 부호는 표현할 수 없는 값의 부호와 일치 합니다. **strtod** `0` 변환을 수행할 수 없거나 언더플로가 발생 하는 경우 strtod는를 반환 합니다.
 
-**wcstod** 는와 유사 값을 **strtod**로 반환 합니다. 두 함수 모두 오버플로 또는 언더플로가 발생 하면 **errno** 가 **ERANGE** 로 설정 되 고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 이 코드 및 기타 반환 코드에 대 한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 를 참조 하세요.
+**wcstod** 는와 유사 값을 **strtod**로 반환 합니다.
+
+- 두 함수 모두 오버플로 또는 언더플로가 발생 하는 경우 **errno** 는 **ERANGE** 로 설정 됩니다.
+- 매개 변수가 잘못 된 경우 **errno** 가 **EINVAL** 로 설정 되 고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다.
+
+이 코드 및 기타 반환 코드에 대 한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-각 함수는 입력 문자열 *Strsource* 를 **double**로 변환 합니다. **Strtod** 함수는 *strsource* 를 배정밀도 값으로 변환 합니다. **strtod** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 의 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수 있습니다. **wcstod** 은 **strtod**;의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+각 함수는 입력 문자열 *Strsource* 를 **double**로 변환 합니다. **Strtod** 함수는 *strsource* 를 배정밀도 값으로 변환 합니다. **strtod** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 의 읽기를 중지 합니다. 이 문자는 null 종결 문자일 수 있습니다. **wcstod** 은 **strtod**;의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -122,7 +127,7 @@ double wcstod_l(
 
 [*공백*] [*sign*] {*숫자* [*기* 하 *자릿수*] &#124; *기* 하 *숫자*} [{**e** &#124; **e**} [*sign*] *자릿수*] [*공백*] [*sign*] {**0x** &#124; **0x**} {*hexdigits* [*기* *hexdigits*] &#124; *기* 수가 *hexdigits*} [**{p** &#124; **p**}*[sign*] *hexdigits*] [*공백*] [*sign*] {**INF** &#124; **INFINITY**} [*공백*] [*sign*] **NAN** [*시퀀스*]
 
-선행 *공백* (옵션)은 공백과 탭 문자로 구성 될 수 있으며,이는 무시 됩니다. *sign* 은 더하기 (+) 또는 빼기 (-) 중 하나입니다. *숫자* 는 하나 이상의 10 진수입니다. *hexdigits* 는 하나 이상의 16 진수입니다. *기* 수는 기 수 점 문자입니다. 기본 "C" 로캘의 마침표 (.) 이거나, 현재 로캘이 다르거나 *로캘이* 지정 된 경우 로캘별 값입니다. *시퀀스* 는 영숫자 또는 밑줄 문자의 시퀀스입니다. 10 진수 및 16 진수 형식 모두에서 기 수 지점 문자 앞에 숫자가 표시 되지 않으면 하나 이상이 기 수 점 문자 뒤에와 야 합니다. Decimal 형식에서 10 진수 뒤에는 기본 문자 (**e** 또는 **e**)와 선택적으로 부호 있는 정수로 구성 된 지수가 올 수 있습니다. 16 진수 형식에서는 16 진수 뒤에 지수가 올 수 있습니다. 여기에는 소개 문자 (**p** 또는 **p**)와 지 수를 2의 거듭제곱으로 나타내는 선택적으로 서명 된 16 진수 정수로 구성 됩니다. 두 형태 모두에서 지 수 부분이 나 기 수 지점 이외의 문자를 표시 하지 않는 경우 기 수 점 문자는 문자열의 마지막 숫자를 따르는 것으로 간주 됩니다. Case는 **INF** 및 **NAN** 형식 모두에서 무시 됩니다. 이러한 형식 중 하나에 맞지 않는 첫 번째 문자는 검색을 중지 합니다.
+선행 *공백* (옵션)은 공백과 탭 문자로 구성 될 수 있으며,이는 무시 됩니다. *sign* 은 더하기 (+) 또는 빼기 (-) 중 하나입니다. *숫자* 는 하나 이상의 10 진수입니다. *hexdigits* 는 하나 이상의 16 진수입니다. *기* 수는 기 수 점 문자입니다. 기본 "C" 로캘의 마침표 (.) 이거나, 현재 로캘이 다르거나 *로캘이* 지정 된 경우 로캘별 값입니다. *시퀀스* 는 영숫자 또는 밑줄 문자의 시퀀스입니다. 10 진수 및 16 진수 형식 모두에서 기 수 지점 문자 앞에 숫자가 표시 되지 않으면 하나 이상이 기 수 점 문자 뒤에와 야 합니다. Decimal 형식에서 10 진수 뒤에는 기본 문자 (**e** 또는 **e**)와 선택적으로 부호 있는 정수로 구성 된 지수가 올 수 있습니다. 16 진수 형식에서는 16 진수 뒤에 지수가 올 수 있습니다. 여기에는 소개 문자 (**p** 또는 **p**)와 지 수를 2의 거듭제곱으로 나타내는 선택적으로 서명 된 16 진수 정수로 구성 됩니다. 두 형식 모두, 지 수 부분이 나 기 수 지점 문자가 없는 경우 문자열의 마지막 숫자를 따르는 기 수 지점 문자를 가정 합니다. Case는 **INF** 및 **NAN** 형식 모두에서 무시 됩니다. 이러한 형식 중 하나에 맞지 않는 첫 번째 문자는 검색을 중지 합니다.
 
 이러한 함수의 버전 간 RT 버전은 포트란 스타일 (**d** 또는 **d**) 지 수 문자의 변환을 지원 하지 않습니다. 이러한 비표준 확장은 CRT의 이전 버전에서 지원되었으므로 코드에 대한 중요한 변경 사항일 수 있습니다. 버전 간 RT 버전은 이전 버전에서 지원 되지 않는 16 진수 문자열 및 INF 및 NAN 값의 라운드트립을 지원 합니다. 이로 인해 코드의 주요 변경 사항이 발생할 수도 있습니다. 예를 들어 문자열 "0x1a"는 이전 버전에서 0.0으로 **strtod** 에 의해 해석 되지만, 이전 버전에서는 26.0로 해석 됩니다.
 
@@ -200,13 +205,13 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[문자열을 숫자 값으로 변환하는 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[로캘을](../../c-runtime-library/locale.md)<br/>
+[문자열-숫자 값 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

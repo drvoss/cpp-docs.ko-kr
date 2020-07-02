@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (CET 섀도 스택 호환)
-ms.date: 02/19/2019
+ms.date: 06/30/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 2c807d91d69b967fd62e01a077711dede5f55c44
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813565"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (CET 섀도 스택 호환)
 
@@ -19,22 +19,25 @@ ms.locfileid: "84421303"
 
 ## <a name="syntax"></a>구문
 
-> **/CETCOMPAT** \[ **: 아니요**]
+> **`/CETCOMPAT`**\
+> **`/CETCOMPAT:NO`**
 
 ## <a name="arguments"></a>인수
 
-**아니요**<br/>
+**`NO`**<br/>
 실행 파일을 CET 섀도 스택과 호환 되는 것으로 표시 하지 않도록 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
 CET (제어 흐름 적용 기술) 섀도 스택은 ROP (반환 지향 프로그래밍) 기반 맬웨어 공격 으로부터 보호 하는 기능을 제공 하는 컴퓨터 프로세서 기능입니다. 자세한 내용은 [Intel 제어 흐름 적용 기술 미리 보기](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)를 참조 하세요.
 
-**/CETCOMPAT** 링커 옵션은 이진을 CET 섀도 스택 호환으로 표시 하도록 링커에 지시 합니다. **/CETCOMPAT: NO** 는 이진을 CET 섀도 스택과 호환 되지 않는 것으로 표시 합니다. 명령줄에서 두 옵션을 모두 지정 하는 경우 지정 된 마지막 항목을 사용 합니다. 이 스위치는 현재 x86 및 x64 아키텍처에만 적용 됩니다.
+**`/CETCOMPAT`** 링커 옵션은 CET 섀도 스택 호환으로 이진 파일을 표시 하도록 링커에 지시 합니다. **`/CETCOMPAT:NO`** 이진 파일을 CET 섀도 스택과 호환 되지 않는 것으로 표시 합니다. 명령줄에서 두 옵션을 모두 지정 하는 경우 지정 된 마지막 항목을 사용 합니다. 이 스위치는 현재 x86 및 x64 아키텍처에만 적용 됩니다.
 
-**/CETCOMPAT** 옵션은 Visual Studio 2019 Preview 3 도구 집합부터 사용할 수 있습니다.
+**`/CETCOMPAT`** 이 옵션은 Visual Studio 2019부터 사용할 수 있습니다.
 
-### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Visual Studio에서/CETCOMPAT 링커 옵션을 설정 하려면
+### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>`/CETCOMPAT`Visual Studio에서 링커 옵션을 설정 하려면
+
+Visual Studio 2019 버전 16.7부터:
 
 1. 프로젝트에 대한 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 작업](../working-with-project-properties.md)을 참조하세요.
 
@@ -42,8 +45,15 @@ CET (제어 흐름 적용 기술) 섀도 스택은 ROP (반환 지향 프로그�
 
 1. **CET 섀도 스택 호환** 속성을 선택 합니다.
 
-1. 드롭다운 컨트롤에서 **예 (/CETCOMPAT)** 를 선택 하 여 EH 연속 메타 데이터를 사용 하도록 설정 하거나 **no (/CETCOMPAT: No)** 를 선택 하 여 사용 하지 않도록 설정 합니다.
+1. 드롭다운 컨트롤에서 **`Yes (/CETCOMPAT)`** EH 연속 메타 데이터를 사용 하도록 설정 하거나 **`No (/CETCOMPAT:NO)`** 사용 하지 않도록 선택 합니다.
 
+이전 버전의 Visual Studio 2019:
+
+1. 프로젝트에 대한 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 작업](../working-with-project-properties.md)을 참조하세요.
+
+1. **구성 속성**  >  **링커**  >  **명령줄** 속성 페이지를 선택 합니다.
+
+1. **추가 옵션** 편집 컨트롤에서 *`/CETCOMPAT`* EH 연속 메타 데이터를 사용 하도록 설정 하거나 *`/CETCOMPAT:NO`* 명시적으로 사용 하지 않도록 설정 하려면를 추가 합니다.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면
 

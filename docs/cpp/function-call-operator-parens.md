@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813552"
 ---
 # <a name="function-call-operator-"></a>함수 호출 연산자: ()
 
-함수 호출은 함수를 *`postfix-expression`* 식별 하는 식으로 구성 되 고 함수 호출 연산자,로 구성 된의 일종입니다 **`()`** . 개체는 `operator ()` 개체에 대 한 함수 호출 의미 체계를 제공 하는 함수를 선언할 수 있습니다.
+함수 호출은 *`postfix-expression`* 함수 또는 호출 가능 개체로 계산 되 고 함수 호출 연산자가 있는 식으로 구성 된의 일종입니다 **`()`** . 개체는 `operator ()` 개체에 대 한 함수 호출 의미 체계를 제공 하는 함수를 선언할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>설명
 
 함수 호출 연산자에 대 한 인수는 *`argument-expression-list`* 쉼표로 구분 된 식 목록에서 제공 됩니다. 이러한 식의 값은 인수로 함수에 전달 됩니다. *인수 식 목록은* 비워 둘 수 있습니다. C + + 17 이전에는 함수 식 및 인수 식의 계산 순서가 지정 되지 않으며 순서에 관계 없이 발생할 수 있습니다. C + + 17 이상에서 함수 식은 인수 식 또는 기본 인수 앞에서 계산 됩니다. 인수 식은 결정 되지 않은 시퀀스에서 계산 됩니다.
 
-는 *`postfix-expression`* 호출할 함수를 식별 합니다. 함수 주소로 계산 되어야 합니다. 다음과 같은 여러 가지 형태를 사용할 수 있습니다.
+는 *`postfix-expression`* 호출할 함수로 평가 됩니다. 다음과 같은 여러 가지 형태를 사용할 수 있습니다.
 
-- 함수 또는 함수 개체 이름 또는 포인터
-- 함수 또는 함수 개체를 참조 하는 lvalue 식입니다.
-- 명시적 또는 묵시적 멤버 함수 접근자입니다.
+- 현재 범위 또는 제공 된 함수 인수의 범위에서 표시 되는 함수 식별자입니다.
+- 함수, 함수 포인터, 호출 가능 개체 또는 하나에 대 한 참조로 계산 되는 식입니다.
+- 명시적 이거나 묵시적 인 멤버 함수 접근자
+- 멤버 함수에 대 한 역참조 된 포인터입니다.
 
-에서 지정 하는 함수는 *`postfix-expression`* 오버 로드 된 함수 일 수 있습니다. 오버 로드 확인에 대 한 일반적인 규칙은 호출할 실제 함수를 결정 합니다.
+는 *`postfix-expression`* 오버 로드 된 함수 식별자 또는 오버 로드 된 멤버 함수 접근자 일 수 있습니다. 오버 로드 확인에 대 한 규칙은 호출할 실제 함수를 결정 합니다. 멤버 함수가 virtual 인 경우 호출할 함수는 런타임에 결정 됩니다.
 
 몇 가지 예제 선언:
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737561"
 ---
 # <a name="error_category-class"></a>error_category 클래스
 
@@ -37,9 +37,9 @@ virtual ~error_category();
 error_category(const error_category&) = delete
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-미리 정의된 두 개의 `error_category`generic_category[ 및 ](../standard-library/system-error-functions.md#generic_category)system_category[ 개체가 ](../standard-library/system-error-functions.md#system_category)를 구현합니다.
+미리 정의된 두 개의 [generic_category](../standard-library/system-error-functions.md#generic_category) 및 [system_category](../standard-library/system-error-functions.md#system_category) 개체가 `error_category`를 구현합니다.
 
 ## <a name="members"></a>멤버
 
@@ -49,12 +49,12 @@ error_category(const error_category&) = delete
 |-|-|
 |[value_type](#value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[default_error_condition](#default_error_condition)|오류 조건 개체에 대한 오류 코드 값을 저장합니다.|
-|[equivalent](#equivalent)|오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.|
+|[상응](#equivalent)|오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.|
 |[generic_category](#generic)||
 |[message](#message)|지정된 오류 코드의 이름을 반환합니다.|
 |[name](#name)|범주 이름을 반환합니다.|
@@ -64,10 +64,10 @@ error_category(const error_category&) = delete
 
 |||
 |-|-|
-|[operator=](#op_as)||
-|[연산자==](#op_eq_eq)|`error_category` 개체가 같은지 테스트합니다.|
-|[operator!=](#op_neq)|`error_category` 개체가 같지 않은지 테스트합니다.|
-|[operator<](#op_lt)|[error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.|
+|[연산자 =](#op_as)||
+|[연산자 = =](#op_eq_eq)|`error_category` 개체가 같은지 테스트합니다.|
+|[연산자! =](#op_neq)|`error_category` 개체가 같지 않은지 테스트합니다.|
+|[연산자<](#op_lt)|[error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.|
 
 ## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
@@ -79,16 +79,16 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*_Errval*\
+`_Errval`\
 [error_condition](../standard-library/error-condition-class.md)에 저장할 오류 코드 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
 `error_condition(_Errval, *this)`를 반환합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-### <a name="equivalent"></a><a name="equivalent"></a>상응
+### <a name="equivalent"></a><a name="equivalent"></a> 해당 항목
 
 오류 개체가 동일한지 여부를 지정하는 값을 반환합니다.
 
@@ -115,11 +115,11 @@ virtual bool equivalent(const error_code& _Code,
 
 범주와 값이 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-첫 번째 구성원 함수는 `*this == _Cond.category() && _Cond.value() == _Errval`를 반환합니다.
+첫 번째 멤버 함수는 `*this == _Cond.category() && _Cond.value() == _Errval`을 반환합니다.
 
-두 번째 구성원 함수는 `*this == _Code.category() && _Code.value() == _Errval`를 반환합니다.
+두 번째 멤버 함수는 `*this == _Code.category() && _Code.value() == _Errval`를 반환합니다.
 
 ### <a name="generic_category"></a><a name="generic"></a>generic_category
 
@@ -137,16 +137,16 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="parameters"></a>매개 변수
 
-*val*\
+*짧은*\
 설명할 오류 코드 값입니다.
 
 #### <a name="return-value"></a>반환 값
 
-범주에 대 한 오류 코드 *val* 의 설명이 포함 된 이름을 반환 합니다.
+범주에 대 한 오류 코드 *val* 의 설명이 포함 된 이름을 반환 합니다. 오류 코드를 인식할 수 없는 경우는를 반환 `"unknown error"` 합니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-### <a name="name"></a><a name="name"></a>이름의
+### <a name="name"></a><a name="name"></a> 이름
 
 범주 이름을 반환합니다.
 
@@ -181,11 +181,11 @@ bool operator==(const error_category& right) const;
 
 개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-이 구성원 연산자는 `this == &right`를 반환합니다.
+이 멤버 연산자는 `this == &right`를 반환합니다.
 
-### <a name="operator"></a><a name="op_neq"></a> operator!=
+### <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 `error_category` 개체가 같지 않은지 테스트합니다.
 
@@ -200,13 +200,13 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>반환 값
 
-`error_category` 개체가 *오른쪽*에 전달 된 `error_category` 개체와 같지 않으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**true** `error_category` 개체가 오른쪽에 전달 된 개체와 같지 않으면 true `error_category` 이 고 *right*, 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-멤버 연산자는 `(!*this == right)`을 반환합니다.
+멤버 연산자는 `(!*this == right)`를 반환합니다.
 
-### <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 [error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.
 
@@ -221,11 +221,11 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>반환 값
 
-**개체가 비교를 위해 전달된** 개체보다 작으면 `error_category`true`error_category`이고, 그렇지 않으면 **false**입니다.
+`error_category` 개체가 비교를 위해 전달된 `error_category` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
-멤버 연산자는 `this < &right`을 반환합니다.
+멤버 연산자는 `this < &right`를 반환합니다.
 
 ### <a name="system_category"></a><a name="system"></a>system_category
 
@@ -233,7 +233,7 @@ bool operator<(const error_category& right) const;
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a><a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
 저장된 오류 코드 값을 나타내는 형식입니다.
 
@@ -241,6 +241,6 @@ const error_category& system_category();
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>설명
 
 이 형식 정의는 **int**의 동의어입니다.

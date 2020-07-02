@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813524"
 ---
 # <a name="cfileexception-class"></a>CFileException 클래스
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|Description|
+|Name|설명|
 |----------|-----------------|
 |[CFileException:: CFileException](#cfileexception)|`CFileException` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CFileException:: ErrnoToException](#errnotoexception)|런타임 오류 번호에 해당 하는 코드를 반환 합니다.|
 |[CFileException:: GetErrorMessage](#geterrormessage)|예외를 설명 하는 메시지를 검색 합니다.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|Name|Description|
+|Name|설명|
 |----------|-----------------|
 |[CFileException:: m_cause](#m_cause)|예외 원인에 해당 하는 이식 가능한 코드를 포함 합니다.|
 |[CFileException:: m_lOsError](#m_loserror)|관련 된 운영 체제 오류 번호를 포함 합니다.|
@@ -205,11 +205,11 @@ int m_cause;
 | `CFileException::diskFull` | 13: 디스크가 꽉 찼습니다. |
 | `CFileException::endOfFile` | 14: 파일의 끝에 도달 했습니다. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> 이러한 `CFileException` 원인 열거자는 `CArchiveException` 원인 열거자와는 다릅니다.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic`는 사용되지 않습니다. 대신 `genericException`를 사용하세요. 응용 프로그램에서 **제네릭을** 사용 하 고/clr을 사용 하 여 빌드한 경우에는 결과 구문 오류를 쉽게 해독할 수 없습니다.
 
 ### <a name="example"></a>예제
 

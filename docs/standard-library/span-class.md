@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813511"
 ---
 # <a name="span-class-c-standard-library"></a>span 클래스 (c + + 표준 라이브러리)
 
@@ -92,7 +92,7 @@ class span;
 | [element_type](#element_type) | Span 요소의 형식입니다. |
 | [반복](#iterator) | 범위에 대 한 반복기의 형식입니다. |
 | [놓고](#pointer) | 요소에 대한 포인터의 형식입니다. |
-| [참조일](#reference) | 요소에 대한 참조의 형식입니다. |
+| [reference](#reference) | 요소에 대한 참조의 형식입니다. |
 | [reverse_iterator](#reverse_iterator) | 범위에 대 한 역방향 반복기의 형식입니다. |
 | [size_type](#size_type) | 범위에 있는 두 요소 간의 부호 없는 거리에 대 한 결과의 형식입니다. |
 | [value_type](#value_type) | 또는 한정자가 없는 요소의 형식입니다 `const` `volatile` . |
@@ -100,7 +100,7 @@ class span;
 |[거칠](#span)| 을 생성 `span` 합니다.|
 | **반복기 지원** | **설명** |
 |[시작](#begin) | 범위의 첫 번째 요소를 가리키는 반복기를 가져옵니다.|
-|[end](#end) | 범위의 끝을 가리키는 반복기를 가져옵니다. |
+|[종단](#end) | 범위의 끝을 가리키는 반복기를 가져옵니다. |
 |[rbegin](#rbegin) | 범위의 마지막 요소를 가리키는 역방향 반복기를 가져옵니다. 즉, 역방향 범위의 시작 부분입니다.|
 |[rend](#rend) | 범위의 앞을 가리키는 역방향 반복기를 가져옵니다. 즉, 역방향 범위의 끝입니다.|
 | **액세스 요소**| **설명** |
@@ -109,12 +109,12 @@ class span;
 |[앞뒤](#front) | 범위의 첫 번째 요소를 가져옵니다.|
 |[연산자\[\]](#op_at) | 지정 된 위치에 있는 요소에 액세스 합니다.|
 | **관찰자** | **설명** |
-|[비우려면](#empty)| 범위가 비어 있는지 여부를 테스트 합니다.|
+|[empty](#empty)| 범위가 비어 있는지 여부를 테스트 합니다.|
 |[size](#size) | 범위에 있는 요소 수를 가져옵니다.|
 |[size_bytes](#size_bytes) | 범위의 크기 (바이트)를 가져옵니다.|
 | **하위 뷰** | **설명**|
-| [기본](#first_view) | 범위 앞에서 하위 범위를 가져옵니다.|
-| [최신](#last_view) | 범위 뒷면에서 하위 범위를 가져옵니다.|
+| [first](#first_view) | 범위 앞에서 하위 범위를 가져옵니다.|
+| [last](#last_view) | 범위 뒷면에서 하위 범위를 가져옵니다.|
 | [하위 범위](#sub_view) | 범위 내 어디에서 나 하위 범위를 가져옵니다.|
 | **연산자** | **설명** |
 |[span:: operator =](#op_eq)| 범위를 바꿉니다.|
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {
