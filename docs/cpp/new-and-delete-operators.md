@@ -1,51 +1,51 @@
 ---
 title: new 및 delete 연산자
-ms.date: 11/19/2019
+description: C + + language new 및 delete 연산자를 사용 하 여 할당을 제어할 수 있습니다.
+ms.date: 07/07/2020
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
-ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: fd170c1500e2d80879fdd89f7d825930189ae942
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e609d1fdbd4f945ab8709c554d1396100027c4c1
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367880"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127864"
 ---
-# <a name="new-and-delete-operators"></a>new 및 delete 연산자
+# <a name="new-and-delete-operators"></a>`new` 및 `delete` 연산자
 
-C++는 [새](new-operator-cpp.md) 및 [삭제](delete-operator-cpp.md) 연산자를 사용하여 개체의 동적 할당 및 할당 할당을 지원합니다. 이러한 연산자는 사용 가능한 저장소라고 하는 풀에서 개체에 대한 메모리를 할당합니다. **새** 연산자는 특수 함수 [연산자 new를](new-operator-cpp.md)호출하고 **delete** 연산자는 특수 함수 [연산자가 delete를](delete-operator-cpp.md)호출합니다.
+C + +에서는 및 연산자를 사용 하 여 개체의 동적 할당 및 할당 취소를 지원 [`new`](new-operator-cpp.md) [`delete`](delete-operator-cpp.md) 합니다. 이러한 연산자는 사용 가능한 저장소라고 하는 풀에서 개체에 대한 메모리를 할당합니다. **`new`** 연산자는 특수 함수를 호출 [`operator new`](new-operator-cpp.md) 하 고 **`delete`** 연산자는 특수 함수를 호출 합니다 [`operator delete`](delete-operator-cpp.md) .
 
-C++ 표준 라이브러리의 **새** 함수는 메모리 할당에 실패할 경우 std:bad_alloc 예외를 throw하는 C++ 표준에 지정된 동작을 지원합니다. 당신은 여전히 **새로운**의 비 던지기 버전을 원하는 경우 , nothrownew.obj와 프로그램을 연결합니다. 그러나 nothrownew.obj와 연결하면 C++ 표준 라이브러리의 새 기본 **연산자가** 더 이상 작동하지 않습니다.
+**`new`** C + + 표준 라이브러리의 함수는 c + + 표준에 지정 된 동작을 지원 합니다 .이는 `std::bad_alloc` 메모리 할당이 실패 하는 경우 예외를 throw 하는 것입니다. 을 throw 하지 않는 버전의를 계속 사용 하려면 **`new`** 프로그램을에 연결 *`nothrownew.obj`* 합니다. 그러나와 연결 하는 경우 *`nothrownew.obj`* **`operator new`** c + + 표준 라이브러리의 기본값은 더 이상 작동 하지 않습니다.
 
-C 런타임 라이브러리 및 C++ 표준 라이브러리를 구성하는 라이브러리 파일 목록은 [CRT 라이브러리 피처를](../c-runtime-library/crt-library-features.md)참조하십시오.
+C 런타임 라이브러리 및 c + + 표준 라이브러리의 라이브러리 파일 목록은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조 하세요.
 
-## <a name="the-new-operator"></a><a id="new_operator"> </a> 새 연산자
+## <a name="the-new-operator"></a><a id="new_operator"> </a> `new` 연산자
 
-프로그램에서 다음과 같은 명령문이 발생하면 **함수 연산자 에**대한 호출이 새로 이어집니다.
+컴파일러는 다음과 같은 문을 함수 호출로 변환 합니다 **`operator new`** .
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-저장소의 0바이트에 대한 요청인 경우 **연산자 new는** 고유한 개체에 대한 포인터를 반환합니다(즉, **연산자 새에** 대한 반복 호출은 다른 포인터를 반환합니다). 할당 요청에 대한 메모리가 부족한 경우 새 `std::bad_alloc` **연산자가** 예외를 throw하거나 throw되지 않는 **연산자 새** 지원에 연결된 경우 **nullptr을** 반환합니다.
+요청이 0 바이트의 저장소에 대 한 것 이면는 **`operator new`** 고유 개체에 대 한 포인터를 반환 합니다. 즉, 반복 되는 호출은 **`operator new`** 다른 포인터를 반환 합니다. 할당 요청을 위한 메모리가 부족 한 경우에서 **`operator new`** 예외를 throw `std::bad_alloc` 합니다. 또는 **`nullptr`** throw 되지 않는 지원에 연결 된 경우이 메서드는를 반환 **`operator new`** 합니다.
 
-메모리를 해제하고 할당을 다시 시도하는 루틴을 작성할 수 있습니다. 자세한 내용은 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 참조하십시오. 복구 체계에 대한 자세한 내용은 이 항목의 메모리 부족 처리 섹션을 참조하십시오.
+메모리를 확보 하 고 할당을 다시 시도 하는 루틴을 작성할 수 있습니다. 자세한 내용은 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md)를 참조하세요. 복구 체계에 대 한 자세한 내용은 [메모리 부족 처리](#handling-insufficient-memory) 섹션을 참조 하십시오.
 
-**연산자 새** 함수에 대한 두 범위는 다음 표에 설명되어 있습니다.
+다음 표에서는 함수에 대 한 두 가지 범위에 대해 **`operator new`** 설명 합니다.
 
-### <a name="scope-for-operator-new-functions"></a>연산자 새 함수의 범위
+### <a name="scope-for-operator-new-functions"></a>함수 범위 `operator new`
 
-|연산자|범위|
-|--------------|-----------|
-|**::연산자 신규**|Global|
-|*클래스 이름* **::연산자 새**|클래스|
+| 연산자 | Scope |
+|--|--|
+| **`::operator new`** | 전역 |
+| *클래스-이름***`::operator new`** | 클래스 |
 
-**새 연산자에** 대한 첫 `size_t` 번째 인수는 \<형식(stddef.h> 정의된 형식)이어야 하며 반환 형식은 항상 **void입니다.** <strong>\*</strong>
+에 대 한 첫 번째 인수는 **`operator new`** `size_t` 에 정의 된 형식 이어야 하며 \<stddef.h> 반환 형식은 항상 **`void*`** 입니다.
 
-전역 **연산자 새** 함수는 **새** 연산자가 기본 제공 형식의 개체, 사용자 정의 **연산자 새** 함수를 포함하지 않는 클래스 형식의 개체 및 모든 형식의 배열을 할당하는 데 사용될 때 호출됩니다. **새** 연산자가 **새 연산자가** 정의된 클래스 형식의 개체를 할당하는 데 사용되는 경우 해당 클래스의 **연산자가 새 연산자가** 호출됩니다.
+전역 **`operator new`** 함수는 **`new`** 연산자를 사용 하 여 기본 제공 형식의 개체, 사용자 정의 함수를 포함 하지 않는 클래스 형식의 개체 **`operator new`** 및 모든 형식의 배열을 할당할 때 호출 됩니다. 연산자를 **`new`** 사용 하 여이 정의 된 클래스 형식의 개체를 할당 하는 경우 **`operator new`** 해당 클래스의 **`operator new`** 가 호출 됩니다.
 
-클래스에 대해 정의된 **연산자 새** 함수는 해당 클래스 형식의 개체에 대한 전역 **연산자 새** 함수를 숨기는 정적 멤버 함수(따라서 가상일 수 없음)입니다. **새** 메모리를 할당하고 지정된 값으로 설정하는 데 새 값이 사용되는 경우를 고려하십시오.
+**`operator new`** 클래스에 대해 정의 된 함수는 **`operator new`** 해당 클래스 형식의 개체에 대 한 전역 함수를 숨기는 정적 멤버 함수 (가상 일 수 없음)입니다. 를 사용 하 여 **`new`** 메모리를 할당 하 고 지정 된 값으로 설정 하는 경우를 고려 합니다.
 
 ```cpp
 #include <malloc.h>
@@ -74,13 +74,13 @@ int main()
 }
 ```
 
-**괄호에서 새** 에 제공된 인수는 `Blanks::operator new` `chInit` 인수로 전달됩니다. 그러나 전역 **연산자 새** 함수가 숨어져 다음과 같은 코드가 오류를 생성합니다.
+괄호 안에 제공 된 인수가 **`new`** 인수로 전달 됩니다 `Blanks::operator new` `chInit` . 그러나 전역 함수는 **`operator new`** 숨겨져 있으며 다음과 같은 코드를 통해 오류를 생성 합니다.
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-컴파일러는 클래스 선언에서 멤버 배열 **새** 및 **삭제** 연산자를 지원합니다. 다음은 그 예입니다.
+컴파일러는 **`new`** 클래스 선언에서 멤버 배열 및 연산자를 지원 합니다 **`delete`** . 예를 들면 다음과 같습니다.
 
 ```cpp
 class MyClass
@@ -104,7 +104,7 @@ int main()
 
 ### <a name="handling-insufficient-memory"></a>메모리 부족 처리
 
-실패한 메모리 할당에 대한 테스트는 다음과 같이 수행할 수 있습니다.
+실패 한 메모리 할당에 대 한 테스트는 다음과 같이 수행할 수 있습니다.
 
 ```cpp
 #include <iostream>
@@ -119,28 +119,28 @@ int main() {
 }
 ```
 
-실패한 메모리 할당 요청을 처리하는 또 다른 방법이 있습니다. 이러한 오류를 처리하는 사용자 지정 복구 루틴을 작성한 다음 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 런타임 함수를 호출하여 함수를 등록합니다.
+실패 한 메모리 할당 요청을 처리 하는 다른 방법이 있습니다. 이러한 오류를 처리 하는 사용자 지정 복구 루틴을 작성 한 다음 런타임 함수를 호출 하 여 함수를 등록 [`_set_new_handler`](../c-runtime-library/reference/set-new-handler.md) 합니다.
 
-## <a name="the-delete-operator"></a><a id="delete_operator"> </a> 삭제 연산자
+## <a name="the-delete-operator"></a><a id="delete_operator"> </a> `delete` 연산자
 
-**새** 연산자사용을 사용하여 동적으로 할당된 메모리는 **delete** 연산자로 해제할 수 있습니다. delete 연산자는 **연산자 삭제** 함수를 호출하여 메모리를 사용 가능한 풀로 다시 해제합니다. **delete** 연산자 사용 으로 인해 클래스 소멸자(있는 경우)가 호출됩니다.
+연산자를 사용 하 여 동적으로 할당 되는 메모리는 **`new`** 연산자를 사용 하 여 해제할 수 있습니다 **`delete`** . Delete 연산자는 **`operator delete`** 사용 가능한 풀로 메모리를 다시 확보 하는 함수를 호출 합니다. 연산자를 사용 **`delete`** 하면 클래스 소멸자 (있는 경우)도 호출 됩니다.
 
-전역 및 클래스 **범위연산자 삭제** 함수가 있습니다. 지정된 클래스에 대해 하나의 **연산자 삭제** 함수만 정의할 수 있습니다. 이 정의된 경우 전역 **연산자 삭제** 함수를 숨깁니다. 전역 **연산자 delete** 함수는 항상 모든 형식의 배열에 대해 호출됩니다.
+전역 및 클래스 범위의 **`operator delete`** 함수가 있습니다. 지정 된 **`operator delete`** 클래스에 대 한 함수는 하나만 정의할 수 있습니다. 정의 되 면 전역 함수를 숨깁니다 **`operator delete`** . 전역 **`operator delete`** 함수는 항상 모든 형식의 배열에 대해 호출 됩니다.
 
-전역 **연산자가** 함수를 삭제합니다. 전역 **연산자 삭제** 및 클래스 멤버 **연산자 삭제** 함수에 대해 두 가지 양식이 있습니다.
+전역 **`operator delete`** 함수입니다. 전역 **`operator delete`** 및 클래스 멤버 함수에는 다음과 같은 두 가지 형식이 **`operator delete`** 있습니다.
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-지정된 클래스에는 앞의 두 양식 중 하나만 존재할 수 있습니다. 첫 번째 양식은 할당 `void *`할당 할 개체에 대한 포인터를 포함하는 형식의 단일 인수를 취합니다. 두 번째 양식인 크기의 할당 위치는 두 개의 인수를 사용하며, 그 중 첫 번째 는 할당 할 메모리 블록에 대한 포인터이고 두 번째 는 할당 할 바이트 수입니다. 두 양식의 반환 **void** 형식이 무효화됩니다(연산자**삭제는** 값을 반환할 수 없음).
+지정 된 클래스에 대해 앞의 두 형태 중 하나만 있을 수 있습니다. 첫 번째 폼은 **`void *`** 할당을 취소할 개체에 대 한 포인터를 포함 하는 형식의 단일 인수를 사용 합니다. 두 번째 형식의 크기 할당 취소는 두 개의 인수를 사용 합니다. 첫 번째 형식은 할당을 취소할 메모리 블록에 대 한 포인터이 고, 두 번째 형식은 할당을 취소할 바이트 수입니다. 두 형식의 반환 형식은 **`void`** ( **`operator delete`** 값을 반환할 수 없음)입니다.
 
-두 번째 양식의 목적은 삭제할 개체의 올바른 크기 범주를 검색하는 속도를 높이는 것입니다. 두 번째 양식은 **연산자가** 기본 클래스에서 함수를 삭제하여 파생 클래스의 개체를 삭제하는 데 사용할 때 유용합니다.
+두 번째 폼의 목적은 삭제할 개체의 올바른 크기 범주에 대 한 검색 속도를 높이는 것입니다. 이 정보는 할당 자체 근처에 저장 되지 않으며 캐시 되지 않은 가능성이 높습니다. 두 번째 형태는 **`operator delete`** 기본 클래스의 함수를 사용 하 여 파생 클래스의 개체를 삭제 하는 경우에 유용 합니다.
 
-**연산자 삭제** 함수는 정적입니다. 따라서 가상이 될 수 없습니다. **운영자 삭제** 함수는 멤버 액세스 제어 에 설명된 대로 액세스 [제어를](member-access-control-cpp.md)준수합니다.
+**`operator delete`** 함수는 정적 이므로 가상 일 수 없습니다. **`operator delete`** 함수는 [멤버 Access Control](member-access-control-cpp.md)에 설명 된 대로 access control을 따르는 합니다.
 
-다음 예제에서는 사용자 정의 **연산자 새** 및 **연산자 삭제** 함수를 할당 및 메모리 할당 할당을 기록하도록 설계되어 보여 주며,
+다음 예에서는 **`operator new`** **`operator delete`** 할당을 기록 하 고 메모리 할당을 취소 하기 위해 디자인 된 사용자 정의 및 함수를 보여 줍니다.
 
 ```cpp
 #include <iostream>
@@ -188,9 +188,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-앞의 코드를 사용하여 "메모리 누수"를 검색할 수 있습니다. 메모리 누수는 사용 가능한 저장소에 할당되었지만 비워지지 않은 메모리를 의미합니다. 이 검색을 수행하려면 전역 **신규** 및 **삭제** 연산자가 메모리 할당 및 할당 할당을 계산하도록 재정의됩니다.
+위의 코드를 사용 하 여 "메모리 누수", 즉 사용 가능한 저장소에 할당 되었지만 해제 되지 않은 메모리를 검색할 수 있습니다. 누수를 감지 하기 위해 전역 **`new`** 및 **`delete`** 연산자는 메모리의 할당 및 할당 취소를 계산 하도록 다시 정의 됩니다.
 
-컴파일러는 클래스 선언에서 멤버 배열 **새** 및 **삭제** 연산자를 지원합니다. 다음은 그 예입니다.
+컴파일러는 **`new`** 클래스 선언에서 멤버 배열 및 연산자를 지원 합니다 **`delete`** . 예를 들어:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

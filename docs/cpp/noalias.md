@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377441"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127873"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
 **Microsoft 전용**
 
-**noalias** 함수 호출을 수정 하거나 표시 되는 전역 상태를 참조 하지 않는 것을 의미를 메모리에만 수정 하 고 *직접* 포인터 매개 변수가 (첫 번째 수준의 간접 참조).
+**`noalias`** 는 함수 호출에서 표시 되는 전역 상태를 수정 하거나 참조 하지 않으며 포인터 매개 변수 (첫 번째 수준의 간접 참조)로 *직접* 가리키는 메모리를 수정 하지 않음을 의미 합니다.
 
-함수는 주석이 달린 경우 **noalias**, 최적화 프로그램에는 자체 매개 변수 외에도 포인터 매개 변수의 첫 번째 수준의 간접 참조 참조 되거나 수정 되는 함수 내에서 가정할 수 있습니다. 표시되는 전역 상태는 컴파일 범위 외부에서 정의되거나 참조되지 않는 모든 데이터의 집합이며 해당 주소는 사용되지 않습니다. 컴파일 범위는 모든 소스 파일 ([/LTCG (링크 타임 코드 생성)](../build/reference/ltcg-link-time-code-generation.md) 빌드) 또는 단일 원본 파일 (비 **/LTCG** 빌드).
+함수에로 주석이 지정 된 경우 **`noalias`** 최적화 프로그램은 매개 변수 자체와 포인터 매개 변수의 첫 번째 수준 간접 참조만 함수 내에서 참조 되거나 수정 된다고 가정할 수 있습니다.
 
-합니다 **noalias** 주석은 주석이 추가 된 함수 본문에만 적용 됩니다. 함수로 표시 **__declspec(noalias)** 함수로 반환 된 포인터의 별칭을 지정 하는 데 영향을 주지 않습니다.
+**`noalias`** 주석은 주석이 추가 된 함수의 본문 내 에서만 적용 됩니다. 함수를로 표시 하면 **`__declspec(noalias)`** 함수에서 반환 하는 포인터의 앨리어싱에 영향을 주지 않습니다.
 
-별칭 지정에 영향을 줄 수 있는 다른 주석을 참조 하세요 [__declspec(restrict)](../cpp/restrict.md)합니다.
+별칭에 영향을 줄 수 있는 다른 주석은를 참조 하십시오 [`__declspec(restrict)`](../cpp/restrict.md) .
 
 ## <a name="example"></a>예제
 
-다음 샘플의 사용법을 보여 줍니다 **__declspec(noalias)** 합니다.
+다음 샘플에서는를 사용 하는 방법을 보여 줍니다 **`__declspec(noalias)`** .
 
-때 함수 `multiply` 메모리 액세스에 주석이 지정 되어 있는지 **__declspec(noalias)**, 컴파일러에 알려 준다는이 함수는 매개 변수 목록의 포인터를 통해 제외 하 고 전역 상태를 수정 하지 않습니다.
+`multiply`메모리에 액세스 하는 함수에 주석이 추가 되 면 **`__declspec(noalias)`** 이 함수는 매개 변수 목록에서 포인터를 제외 하 고 전역 상태를 수정 하지 않음을 컴파일러에 알립니다.
 
 ```C
 // declspec_noalias.c
@@ -98,8 +98,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [C++ 키워드](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)
