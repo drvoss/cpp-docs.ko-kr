@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
 ms.openlocfilehash: b8fc355503055af8b928874ced39cb8224901d3e
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058609"
@@ -50,7 +51,7 @@ void __declspec(naked) __cdecl _pexit( void );
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>

@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058622"
@@ -19,7 +20,7 @@ ms.locfileid: "86058622"
 
 **#Line** 지시문은 전처리기에 줄 번호 및 파일 이름에 대 한 컴파일러의 보고 된 값을 지정 된 줄 번호 및 파일 이름으로 설정 하도록 지시 합니다.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>구문
 
 > **`#line`***숫자 시퀀스* ["*filename*"]
 
@@ -72,6 +73,6 @@ This code is on line 21, in file hello.cpp
 __LINE__, __FILE__ );}
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [전처리기 지시문](../preprocessor/preprocessor-directives.md)
