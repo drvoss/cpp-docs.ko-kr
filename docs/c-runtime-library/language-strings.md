@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438257"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373606"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전별 지원되는 언어 목록은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)(부록 A: 제품 동작)를 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 태그** 열에 있는 임의의 값일 수 있습니다. 사용 가능한 로캘 이름 및 관련 값을 열거하는 코드 예제는 [NLS: 이름 기반 API 샘플](/windows/win32/intl/nls--name-based-apis-sample)을 참조하세요.
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전에서 지원 되는 언어 목록은 [부록 a:](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS Lcid의 제품 동작 \[ : Windows 언어 코드 식별자 (lcid) 참조를 참조 하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 태그** 열에 있는 임의의 값일 수 있습니다. 사용 가능한 로캘 이름 및 관련 값을 열거하는 코드 예제는 [NLS: 이름 기반 API 샘플](/windows/win32/intl/nls--name-based-apis-sample)을 참조하세요.
 
 ## <a name="additional-supported-language-strings"></a>지원되는 추가 언어 문자열
 

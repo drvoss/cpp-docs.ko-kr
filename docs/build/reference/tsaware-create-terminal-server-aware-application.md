@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587389"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373894"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE(터미널 서버 인식 애플리케이션 만들기)
 
@@ -42,7 +42,7 @@ ms.locfileid: "82587389"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
 1. **Linker** 폴더를 클릭합니다.
 
@@ -59,4 +59,4 @@ ms.locfileid: "82587389"
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)<br/>
 [사용자 관련 정보 저장](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[터미널 서비스 환경의 레거시 응용 프로그램](https://msdn.microsoft.com/library/aa382957.aspx)
+[터미널 서비스 환경의 레거시 응용 프로그램](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))

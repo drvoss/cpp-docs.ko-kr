@@ -1,15 +1,15 @@
 ---
 title: 규칙 집합을 사용하여 실행할 C++ 규칙 지정
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269717"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373855"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용하여 실행할 C++ 규칙 지정
 
@@ -17,7 +17,7 @@ Visual Studio에서 코드 분석과 관련 된 특정 프로젝트 요구 사�
 
 **Visual Studio 2017 버전 15.7 이상:** 모든 텍스트 편집기를 사용 하 여 사용자 지정 규칙 집합을 만들고 사용 하는 빌드 시스템에 관계 없이 명령줄 빌드에서 적용할 수 있습니다. 자세한 내용은 [/analyze: 규칙 집합](/cpp/build/reference/analyze-code-analysis)을 참조 하세요.
 
-Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual Studio IDE에서 C/c + + 프로젝트를 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거하고, 필요에 따라 코드 분석으로 규칙이 위반된 것으로 확인될 때 발생하는 작업을 변경합니다.
+Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual Studio IDE에서 C/c + + 프로젝트를 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거 하 고, 필요에 따라 코드 분석에서 규칙이 위반 된 것으로 확인 될 때 발생 하는 동작을 변경 합니다.
 
 새 사용자 지정 규칙 집합을 만들려면 새 파일 이름을 사용 하 여 저장 합니다. 사용자 지정 규칙 집합이 프로젝트에 자동으로 할당 됩니다.
 
@@ -236,17 +236,19 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
 스키마 요소 세부 정보:
 
-- TLocalization: 규칙 집합 파일의 이름을 포함 하는 지역화 정보, 규칙 집합 파일의 설명, 지역화 된 리소스를 포함 하는 리소스 어셈블리의 이름, 지역화 된 리소스의 기본 이름 등을 포함 합니다.
-- TRuleHintPaths: 규칙 집합 파일을 검색 하는 데 힌트로 사용 되는 파일 경로입니다.
-- TName: 현재 규칙 집합 파일의 이름입니다.
-- TDescription: 현재 규칙 집합 파일에 대 한 설명입니다.
-- TInclude: 규칙 작업을 포함 하는 포함 된 규칙 집합의 경로입니다.
-- TIncludeAll: 모든 규칙에 대 한 규칙 동작입니다.
-- TRule: 규칙 작업을 포함 하는 규칙 ID입니다.
-- TRules: 하나 이상의 규칙의 컬렉션입니다.
-- TRuleSet: 지역화 정보, 규칙 힌트 경로로 구성 된 규칙 집합 파일 형식으로 모든 정보, 정보, 규칙 정보, 이름, 설명 및 도구 버전 정보를 포함 합니다.
-- TRuleAction: 오류, 경고, 정보, 숨김, 없음 등의 규칙 동작을 설명 하는 열거형입니다.
-- TIncludeAction: 오류, 경고, 정보, 숨김, 없음 또는 기본값과 같은 규칙 동작을 설명 하는 열거형입니다.
-- TIncludeAllAction: 오류, 경고, 정보 또는 숨김과 같은 규칙 동작을 설명 하는 열거형입니다.
+| Schema 요소 | Description |
+|--------------------|--------------|
+| `TLocalization` | 규칙 집합 파일의 이름, 규칙 집합 파일의 설명, 지역화 된 리소스를 포함 하는 리소스 어셈블리의 이름 및 지역화 된 리소스의 기본 이름을 포함 하는 지역화 정보 |
+| `TRuleHintPaths` | 규칙 집합 파일을 검색 하기 위한 힌트로 사용 되는 파일 경로 |
+| `TName` | 현재 규칙 집합 파일의 이름입니다. |
+| `TDescription` | 현재 규칙 집합 파일의 설명입니다. |
+| `TInclude` | 규칙 작업을 포함 하는 포함 된 규칙 집합의 경로 |
+| `TIncludeAll` | 모든 규칙에 대 한 규칙 동작 |
+| `TRule` | 규칙 동작을 포함 하는 규칙 ID |
+| `TRules` | 하나 이상의 규칙 컬렉션 |
+| `TRuleSet` | 지역화 정보, 규칙 힌트 경로로 구성 된 규칙 집합 파일 형식으로 모든 정보, 정보 포함, 규칙 정보, 이름, 설명 및 도구 버전 정보를 포함 합니다. |
+| `TRuleAction` | 오류, 경고, 정보, 숨김 또는 없음과 같은 규칙 동작을 설명 하는 열거형입니다. |
+| `TIncludeAction` | 오류, 경고, 정보, 숨김, 없음 또는 기본값과 같은 규칙 동작을 설명 하는 열거형입니다. |
+| `TIncludeAllAction` | 오류, 경고, 정보 또는 숨김과 같은 규칙 동작을 설명 하는 열거형입니다. |
 
 규칙 집합의 예를 보려면 [텍스트 편집기에서 규칙 집합을 만들려면](#to-create-a-rule-set-in-a-text-editor)를 참조 하거나에 저장 된 기본 규칙 집합을 참조 하십시오 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
