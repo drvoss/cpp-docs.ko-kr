@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367058"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403870"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>레코드 집합: 데이터 열 동적 바인딩(ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "81367058"
 - [런타임에 동적으로 열을 바인딩하는 방법](#_core_how_to_bind_columns_dynamically)
 
 > [!NOTE]
-> 이 항목은 대량 행 페치가 구현되지 않은 `CRecordset`에서 파생된 개체에 적용됩니다. 여기서 설명하는 방법은 대량 행 페치를 사용 중인 경우 일반적으로 권장되지 않습니다. 대량 행 가져오기에 대한 자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)를](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)참조하십시오.
+> 이 항목은 대량 행 페치가 구현되지 않은 `CRecordset`에서 파생된 개체에 적용됩니다. 여기서 설명하는 방법은 대량 행 페치를 사용 중인 경우 일반적으로 권장되지 않습니다. 대량 행 페치에 대 한 자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)를 참조 하세요.
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> 동적으로 열을 바인딩하려는 경우
 
@@ -45,7 +45,7 @@ ms.locfileid: "81367058"
 
 레코드 집합은 여전히 디자인 타임에 알고 있는 열에 대한 데이터 멤버를 포함합니다. 또한 새 열이 대상 테이블에 추가되었는지 여부를 동적으로 결정하고, 추가된 경우 해당 새 열을 할당된 스토리지(레코드 집합 데이터 멤버가 아닌)에 동적으로 바인딩하는 약간의 추가 코드도 포함합니다.
 
-삭제된 테이블 또는 열 등의 다른 동적 바인딩 사례는 이 토픽에서 다루지 않습니다. 그러한 경우에는 ODBC API 호출을 더 직접적으로 사용해야 합니다. 자세한 내용은 MSDN 라이브러리 CD의 ODBC SDK *프로그래머 참조*를 참조하세요.
+삭제된 테이블 또는 열 등의 다른 동적 바인딩 사례는 이 토픽에서 다루지 않습니다. 그러한 경우에는 ODBC API 호출을 더 직접적으로 사용해야 합니다. 자세한 내용은 [ODBC 프로그래머 참조](/sql/odbc/reference/odbc-programmer-s-reference)를 참조 하세요.
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 동적으로 열을 바인딩하는 방법
 
@@ -81,7 +81,7 @@ ms.locfileid: "81367058"
 
    한 가지 방법은 하나 이상의 동적 목록을 만드는 것입니다(예: 새 열의 이름에 대한 목록, 해당 결과 값에 대한 목록 및 해당 데이터 형식에 대한 목록(필요한 경우)). 이 목록, 특히 값 목록은 해당 정보 및 바인딩에 필요한 스토리지를 제공합니다. 다음 그림은 목록 만들기를 보여줍니다.
 
-   ![동적으로 바인딩할 열 목록 작성](../../data/odbc/media/vc37w61.gif "동적으로 바인딩할 열 목록 만들기")<br/>
+   ![동적으로 바인딩할 열 목록 만들기](../../data/odbc/media/vc37w61.gif "동적으로 바인딩할 열 목록 만들기")<br/>
    동적으로 바인딩할 열 목록 만들기
 
 1. 각 추가된 열에 대한 기본 레코드 집합의 `DoFieldExchange` 함수에 RFX 함수 호출을 추가합니다. 해당 RFX 호출은 추가 열을 포함한 레코드를 페치하는 작업과 레코드 집합 데이터 멤버 또는 동적으로 제공된 멤버용 스토리지에 열을 바인딩하는 작업을 수행합니다.
@@ -140,14 +140,14 @@ ms.locfileid: "81367058"
 1. 각 열에 있는 데이터의 값을 포함하는 Dynamic-Column-Values를
 Columns-to-Bind-Dynamically와 병렬로 만듭니다.
 
-   예를 들어 그림에서는 현재 레코드의 실제 전화 번호인 "555-1212"를 포함하는 `CString` 개체와 같은 하나의 요소가 있는 동적 열-값(목록 4)을 보여 주며 있습니다.
+   예를 들어 다음 그림에서는 하나의 요소가 있는 동적 열 값 (목록 4)을 보여 줍니다. `CString` 현재 레코드의 실제 전화 번호를 포함 하는 개체는 "555-1212"입니다.
 
    가장 일반적인 경우 Dynamic-Column-Values는 `CString` 형식의 요소를 포함합니다. 다양한 데이터 형식의 열을 처리하는 경우 다양한 형식의 요소를 포함할 수 있는 목록이 필요합니다.
 
-앞의 프로시저의 결과는 두 가지 주요 목록인 열-바인딩-동적으로 열의 이름을 포함하고 현재 레코드의 열에 있는 값을 포함하는 동적-열-값입니다.
+위의 절차 결과는 두 가지 주요 목록입니다. 열-바인딩-열 이름과 현재 레코드의 열 값을 포함 하는 동적 열 값을 동적으로 포함 합니다.
 
 > [!TIP]
-> 새 열 중 일부의 데이터 형식이 다른 경우 열 목록에서 각 해당 요소의 형식을 어떻게든 정의하는 항목을 포함하는 추가 병렬 목록을 원할 수 있습니다. (원한다면 이를 위해 AFX_RFX_BOOL, AFX_RFX_BYTE 등의 값을 사용할 수 있습니다. 이러한 상수는 AFXDB에 정의되어 있습니다. H.) 열 데이터 형식을 나타내는 방법에 따라 목록 유형을 선택합니다.
+> 새 열 중 일부의 데이터 형식이 다른 경우 열 목록에서 각 해당 요소의 형식을 어떻게든 정의하는 항목을 포함하는 추가 병렬 목록을 원할 수 있습니다. (원한다면 이를 위해 AFX_RFX_BOOL, AFX_RFX_BYTE 등의 값을 사용할 수 있습니다. 이러한 상수는 AFXDB에 정의 되어 있습니다. H.) 열 데이터 형식을 표시 하는 방법에 따라 목록 유형을 선택 합니다.
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> RFX 호출을 추가하여 열 바인딩
 
@@ -175,4 +175,4 @@ RFX 함수에 대한 자세한 내용은 *클래스 라이브러리 참조*의 [
 ## <a name="see-also"></a>참고 항목
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[레코드 집합: 대형 데이터 항목 작업(ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[레코드 집합: 대량 데이터 항목 작업 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

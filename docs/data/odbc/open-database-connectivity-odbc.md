@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213085"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403805"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC(Open Database Connectivity)
 
 MFC(Microsoft Foundation Classes) 라이브러리는 ODBC(Open Database Connectivity)를 사용하여 프로그래밍하는 데 필요한 클래스를 제공합니다. Visual Studio 2015 및 SQL Server 2012 ODBC는 SQL 데이터 원본에 연결 하는 기본 방법입니다.
 
-MFC를 사용 하지 않고 ODBC API를 사용 하는 방법에 대 한 자세한 내용은 MSDN의 [odbc (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK를 참조 하십시오.
+MFC를 사용 하지 않고 ODBC API를 사용 하는 방법에 대 한 자세한 내용은 [odbc (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) 설명서를 참조 하세요.
 
 ## <a name="in-this-section"></a>섹션 내용
 
@@ -61,13 +61,13 @@ MFC를 사용 하지 않고 ODBC API를 사용 하는 방법에 대 한 자세�
 
 - [ODBC 설치 및 시작](installing-and-getting-started-with-odbc.md)
 
-- [ODBC 데이터베이스 애플리케이션 디자인과 작성](design-and-create-an-odbc-database-application.md)
+- [ODBC 데이터베이스 응용 프로그램 디자인 및 만들기](design-and-create-an-odbc-database-application.md)
 
-- [ODBC에서 데이터베이스 폼(레코드 뷰) 사용](use-database-forms-record-views-with-odbc.md)
+- [ODBC에서 데이터베이스 폼 (레코드 뷰) 사용](use-database-forms-record-views-with-odbc.md)
 
-- [ODBC를 사용하여 다른 사용자와 작업](use-odbc-to-work-with-other-users.md)
+- [ODBC를 사용 하 여 다른 사용자와 작업](use-odbc-to-work-with-other-users.md)
 
-- [ODBC 데이터베이스 연결을 사용한 작업](work-with-odbc-database-connections.md)
+- [ODBC 데이터베이스 연결 작업](work-with-odbc-database-connections.md)
 
 - [ODBC 및 드라이버 작업](work-with-odbc-and-drivers.md)
 
@@ -77,4 +77,4 @@ MFC를 사용 하지 않고 ODBC API를 사용 하는 방법에 대 한 자세�
 
 ## <a name="see-also"></a>참고 항목
 
-[데이터 액세스 프로그래밍(MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[데이터 액세스 프로그래밍 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

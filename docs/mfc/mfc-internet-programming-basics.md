@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615567"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405028"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 인터넷 프로그래밍 기본 사항
 
@@ -48,7 +48,7 @@ MFC는 인터넷 프로그래밍을 지 원하는 클래스를 제공 합니다.
 
 - [HTML 기본 사항](html-basics.md)
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 - [인터넷의 ActiveX 컨트롤](activex-controls-on-the-internet.md)
 
@@ -68,11 +68,9 @@ MFC는 인터넷 프로그래밍을 지 원하는 클래스를 제공 합니다.
 
 - [DHTML 컨트롤에 대한 ATL 지원](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>자세한 내용은 웹 사이트를
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>추가 정보를 위한 웹 사이트
 
-Microsoft 인터넷 기술에 대 한 자세한 내용은 [MSDN (Microsoft Developer Network)](https://go.microsoft.com/fwlink/p/?linkid=56322) 웹 사이트를 참조 하십시오. 링크는 예 고 없이 변경 될 수 있습니다.
-
-개발자를 위한이 웹 사이트에는 Microsoft 개발 도구 및 기술 사용에 대 한 정보와 최근 및 예정 된 회의에 대 한 주요 스토리가 포함 되어 있습니다. 이 페이지에서 .NET 및 XML 개발자 센터를 비롯 한 많은 관련 개발자 사이트로 이동할 수 있습니다. 베타 Sdk 및 샘플을 다운로드할 수도 있습니다.
+Microsoft 인터넷 기술에 대 한 자세한 내용은 [Microsoft Docs](https://docs.microsoft.com/)를 참조 하십시오.
 
 [W3C (World Wide Web 컨소시엄)](https://go.microsoft.com/fwlink/p/?linkid=37125) 는 HTML, HTTP, CGI 및 기타 World Wide Web 기술에 대 한 사양을 게시 합니다.
 

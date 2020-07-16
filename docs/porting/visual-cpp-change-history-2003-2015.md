@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: a045b04e5a57e9963b2ad374fbdfdd533bde0a05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51de46487d85f4b8d7d357a0d1842f3d3192fff7
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374161"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404797"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 
@@ -38,7 +38,7 @@ ms.locfileid: "81374161"
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Visual Studio 2015 규칙 변경 내용
 
-### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> CRT(C 런타임 라이브러리)
+### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>CRT (C 런타임 라이브러리)
 
 #### <a name="general-changes"></a>일반 변경 내용
 
@@ -46,7 +46,7 @@ ms.locfileid: "81374161"
 
    CRT 라이브러리는 범용 CRT(ucrtbase)(대부분 표준 기능이 포함됨) 및 VC 런타임 라이브러리(vcruntime)라는 두 개의 이진 파일로 리팩터링되었습니다. vcruntime 라이브러리에는 예외 처리 및 내장 함수와 같은 컴파일러 관련 기능이 포함되어 있습니다. 링커가 자동으로 새로운 기본 라이브러리를 사용하므로 기본 프로젝트 설정을 사용하면 이 변경 내용이 영향을 주지 않습니다. 프로젝트의 **링커** 속성 **모든 기본 라이브러리 무시**를 **예**로 설정했거나 명령줄에서 `/NODEFAULTLIB` 링커 옵션을 사용 중이면 새 리팩터링된 라이브러리를 포함하도록 **추가 종속성** 속성에서 라이브러리 목록을 업데이트해야 합니다. 이전 CRT 라이브러리(libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib)를 해당하는 리팩터링된 라이브러리로 바꿉니다. 두 리팩터링된 라이브러리에는 각각 정적(.lib) 및 동적(.dll) 버전과 릴리스(접미사 없음) 및 디버그("d" 접미사 사용) 버전이 있습니다. 동적 버전에는 연결할 가져오기 라이브러리가 포함됩니다. 리팩터링된 두 라이브러리는 유니버설 CRT(구체적으로 ucrtbase.dll 또는 ucrtbase.lib, ucrtbased.dll 또는 ucrtbased.lib)와 VC 런타임 라이브러리(libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib 및 vcruntimed*version*.dll)입니다. Visual Studio 2015 및 Visual Studio 2017의 *버전*은 모두 140입니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.
 
-#### <a name="localeh"></a>\<locale.h>
+#### \<locale.h>
 
 - **localeconv**
 
@@ -54,13 +54,13 @@ ms.locfileid: "81374161"
 
    스레드 로컬을 사용하는 경우 `localeconv`를 사용하는지 확인해야 합니다. 코드에서 `lconv` 데이터가 글로벌 로캘에 대해 반환되었다고 가정하는 경우 이를 해결해야 합니다.
 
-#### <a name="mathh"></a>\<math.h>
+#### \<math.h>
 
 - **수식 라이브러리 함수의 C++ 오버로드**
 
-   이전 버전에서 \<math.h>는 수식 라이브러리 함수에 대한 일부 C++ 오버로드를 정의했습니다. 오버로드의 나머지 부분은 \<cmath > header에 위치했습니다. \<math.h>에만 포함된 코드에서는 함수 오버로드 확인과 관련된 문제가 발생할 수 있었습니다. 이제 C++ 오버로드는 \<math.h>에서 제거되었고, \<cmath>에만 있습니다.
+   이전 버전에서는 \<math.h> 수학 라이브러리 함수에 대 한 일부 c + + 오버 로드를 정의 했습니다. 나머지 오버 로드는 \<cmath> 헤더에 있습니다. 포함 된 코드에만 \<math.h> 함수 오버 로드 확인에 문제가 있을 수 있습니다. 이제 c + + 오버 로드는에서 제거 되었고 \<math.h> 에서만 찾을 수 있습니다 \<cmath> .
 
-   오류를 해결하려면 \<cmath>를 포함하여 \<math.h>에서 제거된 함수 선언을 가져옵니다. 다음과 같은 함수는 이동되었습니다.
+   오류를 해결 하려면를 포함 하 여 \<cmath> 에서 제거 된 함수의 선언을 가져옵니다 \<math.h> . 다음과 같은 함수는 이동되었습니다.
 
   - `double abs(double)` 및 `float abs(float)`
 
@@ -68,13 +68,13 @@ ms.locfileid: "81374161"
 
   - `float` 및 `long double` 버전의 부동 소수점 함수 `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` 및 `trunc`
 
-  \<math.h> 헤더만 포함된 `abs`를 부동 소수점 형식과 함께 사용하는 코드가 있으면 부동 소수점 버전은 더 이상 지원되지 않습니다. 이제 호출은 오류가 생성되는 부동 소수점 인수가 포함되더라도 `abs(int)`로 확인됩니다.
+  `abs`머리글만 포함 하는 부동 소수점 형식과 함께를 사용 하는 코드가 있는 경우 \<math.h> 부동 소수점 버전을 더 이상 사용할 수 없습니다. 이제 호출은 오류가 생성되는 부동 소수점 인수가 포함되더라도 `abs(int)`로 확인됩니다.
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-  이 경고를 해결하려면 `abs`에 대한 호출을 `abs`의 부동 소수점 버전(예: double 인수에 대한 `fabs` 또는 float 인수에 대한 `fabsf`)으로 바꾸거나, \<cmath> 헤더를 포함하고 `abs`를 계속 사용합니다.
+  이 경고에 대 한 해결 방법은의 호출을 `abs` `abs` double 인수 또는 float 인수와 같은의 부동 소수점 버전으로 바꾸거나 `fabs` `fabsf` 헤더를 포함 하 \<cmath> 고 계속 사용 `abs` 하는 것입니다.
 
 - **부동 소수점 적합성**
 
@@ -94,27 +94,27 @@ ms.locfileid: "81374161"
 
    이는 네이티브 또는 혼합 코드(`/clr`)에 대한 주요 변경 내용이 아니지만 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일된 코드의 경우 이 변경 내용으로 인해 코드가 컴파일되지 않을 수 있습니다. 코드를 `/clr:pure`로 컴파일할 경우 이 변경으로 인한 빌드 오류를 해결하려면 `#include <new>` 또는 `#include <new.h>`를 추가해야 합니다. `/clr:pure` 옵션은 Visual Studio 2015에서 사용되지 않으며 Visual Studio 2017에서 지원되지 않습니다. “순수”해야하는 코드는 C#으로 포팅되어야 합니다.
 
-#### <a name="processh"></a>\<process.h>
+#### \<process.h>
 
 - **_beginthread 및 _beginthreadex**
 
    [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 및 [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 함수는 현재 스레드 기간에 대한 스레드 프로시저가 정의된 모듈에 대한 참조를 포함합니다. 이를 통해 스레드 실행이 완료될 때까지 모듈이 언로드되지 않도록 보장할 수 있습니다.
 
-#### <a name="stdargh"></a>\<stdarg.h>
+#### \<stdarg.h>
 
 - **va_start 및 참조 형식**
 
    이제 C++ 코드를 컴파일할 때 [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)는 컴파일 시간에 전달된 인수가 참조 형식이 아닌지 유효성을 검사합니다. 참조 형식 인수는 C++ 표준에 따라 금지됩니다.
 
-#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a> \<stdio.h> 및 \<conio.h>
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h>및\<conio.h>
 
 - **printf 및 scanf 함수 패밀리는 현재 인라인으로 정의됩니다.**
 
-   모든 `printf` 및 `scanf` 함수의 정의는 \<stdio.h>, \<conio.h> 및 기타 CRT 헤더로 인라인으로 이동되었습니다. 이 주요 변경 내용으로 인해 해당하는 CRT 헤더를 포함하지 않고 이러한 함수를 로컬로 선언한 프로그램에 대한 링커 오류(LNK2019, 확인되지 않은 외부 기호)가 발생합니다. 가능하면 코드를 업데이트하여 인라인 함수 및 CRT 헤더를 포함(즉, `#include <stdio.h>` 추가)해야 합니다. 하지만 이러한 헤더 파일을 포함하도록 코드를 수정하지 않으려면 대체 솔루션으로 링커 입력 legacy_stdio_definitions.lib에 라이브러리를 추가합니다.
+   모든 `printf` 및 `scanf` 함수의 정의가 \<stdio.h> , \<conio.h> 및 기타 CRT 헤더로 인라인으로 이동 되었습니다. 이 주요 변경 내용으로 인해 해당하는 CRT 헤더를 포함하지 않고 이러한 함수를 로컬로 선언한 프로그램에 대한 링커 오류(LNK2019, 확인되지 않은 외부 기호)가 발생합니다. 가능하면 코드를 업데이트하여 인라인 함수 및 CRT 헤더를 포함(즉, `#include <stdio.h>` 추가)해야 합니다. 하지만 이러한 헤더 파일을 포함하도록 코드를 수정하지 않으려면 대체 솔루션으로 링커 입력 legacy_stdio_definitions.lib에 라이브러리를 추가합니다.
 
    이 라이브러리를 IDE의 링커 입력에 추가하려면 프로젝트 노드의 상황에 맞는 메뉴를 열고, **속성**을 선택한 다음, **프로젝트 속성** 대화 상자에서 **링커**를 선택하고, **링커 입력**을 편집하여 `legacy_stdio_definitions.lib`를 세미콜론으로 구분된 목록에 추가합니다.
 
-   프로젝트가 Visual Studio 2015 이전의 릴리스로 컴파일된 고정 라이브러리와 연결되면 링커에서 확인되지 않은 외부 기호가 보고될 수 있습니다. 이러한 오류는 _imp_\*의 `_iob` `_iob_func`형태로 특정 \<stdio.h> 함수에 대한 내부 정의 또는 관련 가져오기를 참조할 수 있습니다. 프로젝트를 업그레이드할 때 C++ 컴파일러 및 라이브러리의 최신 버전으로 모든 고정 라이브러리를 다시 컴파일하는 것이 좋습니다. 라이브러리가 소스를 사용할 수 없는 타사 라이브러리이면 타사로부터 업데이트된 라이브러리를 요청하거나 이전 버전의 컴파일러 및 라이브러리를 사용하여 컴파일하는 별도의 DLL로 해당 라이브러리 사용을 캡슐화해야 합니다.
+   프로젝트가 Visual Studio 2015 이전의 릴리스로 컴파일된 고정 라이브러리와 연결되면 링커에서 확인되지 않은 외부 기호가 보고될 수 있습니다. 이러한 오류는 `_iob` `_iob_func` imp 형식의 특정 함수에 대 한, 또는 관련 된 가져오기에 \<stdio.h> _imp_대 한 내부 정의를 참조할 수 있습니다 \* . 프로젝트를 업그레이드할 때 C++ 컴파일러 및 라이브러리의 최신 버전으로 모든 고정 라이브러리를 다시 컴파일하는 것이 좋습니다. 라이브러리가 소스를 사용할 수 없는 타사 라이브러리이면 타사로부터 업데이트된 라이브러리를 요청하거나 이전 버전의 컴파일러 및 라이브러리를 사용하여 컴파일하는 별도의 DLL로 해당 라이브러리 사용을 캡슐화해야 합니다.
 
     > [!WARNING]
     > Windows SDK 8.1 이하와 연결되어 있으면 이러한 확인되지 않은 외부 기호 오류가 발생할 수 있습니다. 이 경우 앞에 설명된 대로 링커 입력에 legacy_stdio_definitions.lib를 추가하여 오류를 해결해야 합니다.
@@ -225,7 +225,7 @@ ms.locfileid: "81374161"
 
 - **snprintf 및 vsnprintf**
 
-   현재 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 및 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 함수가 구현됩니다. 이전 코드에서는 이러한 함수의 매크로 버전이 CRT 라이브러리에서 구현되지 않았기 때문에 해당 매크로 버전의 정의를 제공했지만 새 버전에서는 더 이상 필요하지 않습니다. 현재 \<stdio.h>를 포함하기 전에 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 또는 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)가 매크로로 정의되면 컴파일이 실패하고 매크로가 정의된 위치를 나타내는 오류가 발생합니다.
+   현재 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 및 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 함수가 구현됩니다. 이전 코드에서는 이러한 함수의 매크로 버전이 CRT 라이브러리에서 구현되지 않았기 때문에 해당 매크로 버전의 정의를 제공했지만 새 버전에서는 더 이상 필요하지 않습니다. [Snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 또는 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 가를 포함 하기 전에 매크로로 정의 된 경우 \<stdio.h> 이제 컴파일이 실패 하 고 매크로가 정의 된 위치를 나타내는 오류가 표시 됩니다.
 
    일반적으로 이 문제를 해결하려면 사용자 코드에서 `snprintf` 또는 `vsnprintf`라는 선언을 삭제합니다.
 
@@ -235,13 +235,13 @@ ms.locfileid: "81374161"
 
 - **FILE 캡슐화**
 
-   이전 버전에서는 \<전체 FILE 형식이 stdio.h> 공개적으로 정의되었기 때문에 사용자 코드가 FILE에 도달하여 내부를 수정할 수 있었습니다. 해당 라이브러리가 구현 세부 정보를 숨기도록 변경되었습니다. 이 변경 내용과 함께 \<stdio.h>에 정의된 FILE은 이제 불투명 형식이고 해당 멤버는 CRT 외부에서 액세스할 수 없습니다.
+   이전 버전에서는 전체 파일 형식이에서 공개적으로 정의 되었으므로 \<stdio.h> 사용자 코드를 파일에 연결 하 고 해당 내부를 수정할 수 있었습니다. 해당 라이브러리가 구현 세부 정보를 숨기도록 변경되었습니다. 이 변경의 일환으로에 정의 된 파일 \<stdio.h> 은 이제 불투명 형식이 며 CRT 자체 외부에서 해당 멤버에 액세스할 수 없습니다.
 
 - **_outp 및 _inp**
 
    [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md) 및 [_inpd](../c-runtime-library/inp-inpw-inpd.md) 함수가 제거되었습니다.
 
-#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h> 및 \<sys/stat.h>
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h>, \<sys/stat.h>
 
 - **strtof 및 wcstof**
 
@@ -259,7 +259,7 @@ ms.locfileid: "81374161"
 
    `smallheap` 링크 옵션이 제거되었습니다. [링크 옵션](../c-runtime-library/link-options.md)을 참조하세요.
 
-#### <a name="stringh"></a>\<string.h>
+#### \<string.h>
 
 - **wcstok**
 
@@ -273,9 +273,9 @@ ms.locfileid: "81374161"
 
    쉽게 이식하도록 이전 서명과 함께 새 `_wcstok` 함수가 추가되었습니다. C++ 코드를 컴파일할 때 이전 서명이 포함된 `wcstok`의 인라인 오버로드도 있습니다. 이 오버로드는 deprecated로 선언되었습니다. C 코드에서 _CRT_NON_CONFORMING_WCSTOK를 정의하여 `_wcstok`를 `wcstok` 위치에서 사용하도록 할 수 있습니다.
 
-#### <a name="timeh"></a>\<time.h>
+#### \<time.h>
 
-- **시계**
+- **클럭을**
 
    이전 버전에서 [clock](../c-runtime-library/reference/clock.md) 함수는 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime)(영문)을 사용하여 구현되었습니다. 이 구현을 통해 clock 함수는 시스템 시간에 따라 달라지므로 단조일 필요가 없었습니다. clock 함수는 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) (영문)를 기준으로 다시 구현되었으며 현재는 단조입니다.
 
@@ -297,23 +297,23 @@ ms.locfileid: "81374161"
 
 - **timespec 및 TIME_UTC**
 
-   이제 \<time.h> 헤더는 C11 표준의 `timespec` 형식 및 `timespec_get` 함수를 정의합니다. 또한 `timespec_get` 함수와 함께 사용할 TIME_UTC 매크로가 이제 정의됩니다. 이 업데이트는 이러한 식별자에서 충돌하는 정의가 있는 코드의 주요 변경 내용입니다.
+   \<time.h>이제 헤더는 `timespec` `timespec_get` C11 표준에서 형식과 함수를 정의 합니다. 또한 `timespec_get` 함수와 함께 사용할 TIME_UTC 매크로가 이제 정의됩니다. 이 업데이트는 이러한 식별자에서 충돌하는 정의가 있는 코드의 주요 변경 내용입니다.
 
 - **CLOCKS_PER_SEC**
 
    현재 CLOCKS_PER_SEC 매크로는 C 언어에 필요한 형식 `clock_t`의 정수로 확장됩니다.
 
-#### <a name="c-standard-library"></a><a name="BK_STL"></a>C++ 표준 라이브러리
+#### <a name="c-standard-library"></a><a name="BK_STL"></a>C + + 표준 라이브러리
 
-새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. (_MSC_VER 컴파일러의 주요 버전(예: Visual Studio 2013)의 1800을 포함하는 매크로입니다.) 이 검사는 DLL 혼합을 감지할 수 없으며 Visual Studio 2008 이전과 관련된 혼합을 감지할 수 없습니다.
+새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전을 포함 하는 매크로입니다. 예를 들어 Visual Studio 2013의 경우 1800입니다. 이 검사에서는 DLL 혼합을 감지할 수 없으며 Visual Studio 2008이 하를 포함 하는 혼합을 감지할 수 없습니다.
 
 - **C++ 표준 라이브러리 포함 파일**
 
-   C++ 표준 라이브러리 헤더의 포함 구조가 일부 변경되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. Visual Studio 2015에서 두 개 이상의 헤더 변경 내용이 사용자 코드에 영향을 줍니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째로 이제 \<tuple>은 모든 \<array>를 포함하지 않고 `std::array`를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 이제 `std::array`를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.
+   C++ 표준 라이브러리 헤더의 포함 구조가 일부 변경되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. Visual Studio 2015에서 두 개 이상의 헤더 변경 내용이 사용자 코드에 영향을 줍니다. 첫 번째에는가 \<string> 더 이상 포함 되지 않습니다 \<iterator> . 두 번째는 \<tuple> 이제를 `std::array` 포함 하지 않고 코드를 나눌 수 있는 모든를 포함 하지 않고를 선언 합니다 \<array> . 코드에는 "array" 라는 변수가 있고 using 지시문 "using namespace std;"가 있으며를 포함 하는 c + + 표준 라이브러리 헤더 (예:)를 포함 하 여 \<functional> \<tuple> 이제가 선언 `std::array` 됩니다.
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md)의 \<chrono> 구현은 지속성 및 단조성에 대한 C++ 표준 요구 사항을 충족하도록 변경되었습니다. 이제 `steady_clock`은 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)를 기반으로 하며 `high_resolution_clock`은 `steady_clock`에 대한 typedef입니다. 따라서 이제 Visual Studio에서 `steady_clock::time_point`는 `chrono::time_point<steady_clock>`에 대한 typedef이지만, 다른 구현에 이를 반드시 적용할 필요는 없습니다.
+   \<chrono>조성에 및 단 조성에에 대 한 c + + 표준 요구 사항을 충족 하기 위해 [steady_clock](../standard-library/steady-clock-struct.md) 의 구현이 변경 되었습니다. 이제 `steady_clock`은 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)를 기반으로 하며 `high_resolution_clock`은 `steady_clock`에 대한 typedef입니다. 따라서 이제 Visual Studio에서 `steady_clock::time_point`는 `chrono::time_point<steady_clock>`에 대한 typedef이지만, 다른 구현에 이를 반드시 적용할 필요는 없습니다.
 
 - **allocators 및 const**
 
@@ -331,7 +331,7 @@ ms.locfileid: "81374161"
 
 - **const 요소**
 
-   C++ 표준에서는 const 요소의 컨테이너(예: vector\<const T> 또는 set\<const T>)를 항상 금지했습니다. Visual Studio 2013 이하에서는 해당 컨테이너를 허용했습니다. 현재 버전에서는 해당 컨테이너가 컴파일되지 않습니다.
+   C + + 표준에는 항상 vector 또는 set 같은 const 요소의 컨테이너를 사용할 수 \<const T> \<const T> 없습니다. Visual Studio 2013 이하에서는 해당 컨테이너를 허용했습니다. 현재 버전에서는 해당 컨테이너가 컴파일되지 않습니다.
 
 - **std::allocator::deallocate**
 
@@ -339,11 +339,11 @@ ms.locfileid: "81374161"
 
 - **hash_map 및 hash_set**
 
-   비표준 헤더 파일 \<hash_map> 및 \<hash_set>은 Visual Studio 2015에서 사용되지 않고, 이후 릴리스에서 제거될 예정입니다. 대신에 \<unordered_map> 및 \<unordered_set>을 사용하세요.
+   비표준 헤더 파일 \<hash_map> 및 \<hash_set> 은 Visual Studio 2015에서 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다. 대신 \<unordered_map> 및 \<unordered_set>을 사용하세요.
 
 - **비교 연산자 및 operator()**
 
-   현재 연관 컨테이너(\<map> 패밀리)에서 const 호출 가능 함수 호출 연산자를 포함하려면 비교 연산자가 필요합니다. 현재 비교 연산자 클래스 선언에서 다음 코드는 컴파일되지 않습니다.
+   이제 결합형 컨테이너 ( \<map> 패밀리)가 const 호출 가능 함수 호출 연산자를 비교 연산자 해야 합니다. 현재 비교 연산자 클래스 선언에서 다음 코드는 컴파일되지 않습니다.
 
     ```cpp
     bool operator()(const X& a, const X& b)
@@ -393,7 +393,7 @@ ms.locfileid: "81374161"
 
    Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.
 
-#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> 동시성 런타임
+#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>동시성 런타임
 
 - **concurrency::Context::Yield와 충돌하는 Windows.h의 Yield 매크로**
 
@@ -413,11 +413,11 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 이러한 차이가 소스 코드나 다른 빌드 아티팩트에 영향을 줄 수도 있지만 Visual Studio 버전 업데이트 간의 이진 호환성에는 영향을 주지 않습니다. *주요 변경 내용*이 보다 심각하면 이진 호환성에 영향을 줄 수 있지만 이러한 종류의 이진 호환성 중단은 주 버전의 Visual Studio 사이에서만 발생합니다(예: Visual Studio 2013과 Visual Studio 2015 사이). Visual Studio 2013과 Visual Studio 2015 사이에 발생한 주요 변경 내용에 대한 자세한 내용은 [Visual Studio 2015 규칙 변경 내용](#VC_2015)을 참조하세요.
 
-- [비주얼 스튜디오 2015의 적합성 개선 사항](#VS_RTM)
+- [Visual Studio 2015의 규칙 향상](#VS_RTM)
 
 - [업데이트 1의 규칙 향상](#VS_Update1)
 
-- [업데이트 2의 적합성 개선 사항](#VS_Update2)
+- [업데이트 2의 규칙 향상](#VS_Update2)
 
 - [업데이트 3의 규칙 향상](#VS_Update3)
 
@@ -449,7 +449,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - mstest.exe를 사용하여 명령줄의 C++/CLI에서 단위 테스트를 더 이상 실행할 수 없습니다. 대신에 vstest.console.exe를 사용하세요. [VSTest.Console.exe 명령줄 옵션](/visualstudio/test/vstest-console-options)을 참조하세요.
 
-- **변경 가능한 키워드**
+- **mutable 키워드**
 
    이전에 오류 없이 컴파일했던 위치에서 **변경 가능** 스토리지 클래스 지정자가 더 이상 허용되지 않습니다. 현재 컴파일러에서는 오류 C2071(스토리지 클래스가 잘못되었습니다.)을 표시합니다. 표준에 따라 **mutable** 지정자는 클래스 데이터 멤버의 이름에만 적용되고, const 또는 정적으로 선언된 이름과 참조 멤버에는 적용할 수 없습니다.
 
@@ -472,7 +472,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **char_16_t 및 char32_t**
 
-   이제 이러한 형식은 `char32_t` 기본 제공으로 처리되므로 **typedef에서**더 이상 사용하거나 별칭으로 사용할 `char16_t` 수 없습니다. 사용자와 라이브러리 작성자가 `char16_t` 및 `char32_t`를 각각 `uint16_t` 및 `uint32_t`의 별칭으로 정의하는 것이 일반적이었습니다.
+   `char16_t` `char32_t` 이러한 형식은 이제 기본 제공으로 처리 되므로 **typedef**에서 또는 별칭으로 더 이상 사용할 수 없습니다. 사용자와 라이브러리 작성자가 `char16_t` 및 `char32_t`를 각각 `uint16_t` 및 `uint32_t`의 별칭으로 정의하는 것이 일반적이었습니다.
 
     ```cpp
     #include <cstdint>
@@ -566,7 +566,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   코드를 업데이트하려면 예외 개체의 복사 생성자가 **공용이고** **명시적으로**표시되지 않았는지 확인합니다.
+   코드를 업데이트 하려면 예외 개체에 대 한 복사 생성자가 **public** 이 고 **명시적**으로 표시 되지 않았는지 확인 합니다.
 
    값으로 예외를 catch하려면 예외 개체가 복사 가능해야 합니다. 다음 코드는 Visual Studio 2013에서 컴파일되었지만, Visual Studio 2015에서는 컴파일되지 않습니다.
 
@@ -641,7 +641,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **Placement new 및 delete**
 
-   삭제 **연산자가** C++14 표준을 준수하도록 변경되었습니다. 표준 변경에 대한 자세한 내용은 [C++ 크기 지정된 할당 해제](https://isocpp.org/files/papers/n3778.html)(영문)를 참조하세요. 변경 내용은 크기 매개 변수를 차지하는 전역 **삭제** 연산자의 형태를 추가합니다. 주요 변경 내용에 따르면 이전에는 **placement new** 연산자에 해당하도록 같은 서명으로 **delete** 연산자를 사용하면 placement new가 사용된 지점에서 컴파일러 오류(C2956)가 발생했습니다. 이 지점은 컴파일러가 적절하게 일치하는 **delete** 연산자를 식별하려고 하는 코드의 위치이기 때문입니다.
+   **Delete** 연산자는 c + + 14 표준을 준수 하도록 변경 되었습니다. 표준 변경에 대한 자세한 내용은 [C++ 크기 지정된 할당 해제](https://isocpp.org/files/papers/n3778.html)(영문)를 참조하세요. 변경 내용에는 크기 매개 변수를 사용 하는 전역 **delete** 연산자의 형식이 추가 됩니다. 주요 변경 내용에 따르면 이전에는 **placement new** 연산자에 해당하도록 같은 서명으로 **delete** 연산자를 사용하면 placement new가 사용된 지점에서 컴파일러 오류(C2956)가 발생했습니다. 이 지점은 컴파일러가 적절하게 일치하는 **delete** 연산자를 식별하려고 하는 코드의 위치이기 때문입니다.
 
    `void operator delete(void *, size_t)` 함수는 C++11의 **placement new** 함수 `void * operator new(size_t, size_t)`에 해당하는 **placement delete** 연산자였습니다. C++14 크기 지정된 할당 해제를 사용하면 이 delete 함수는 현재 *일반 할당 해제 함수*(글로벌 **delete** 연산자)입니다. 표준에 따르면 placement new를 사용하여 해당하는 delete 함수를 조회하고 usual deallocation 함수를 찾으면 프로그램에 잘못된 형식이 사용됩니다.
 
@@ -658,11 +658,11 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     enum class my_type : size_t {};
     ```
 
-   그런 다음, `size_t` 대신 이 형식을 두 번째 인수로 사용하도록 **placement new** 및 **delete**의 정의를 변경합니다. 또한 새 형식을 전달하기 위해 새 배치에 대한 호출을 업데이트하고(예: 정수 값에서 변환하는 데 사용) `static_cast<my_type>` **새** 및 **삭제의** 정의를 업데이트하여 정수 유형으로 다시 캐스팅해야 합니다. 이를 위해 **열거형은** 사용할 필요가 없습니다. 멤버가 있는 `size_t` 클래스 형식도 작동합니다.
+   그런 다음, `size_t` 대신 이 형식을 두 번째 인수로 사용하도록 **placement new** 및 **delete**의 정의를 변경합니다. 새 형식을 전달 하 고 (예:를 사용 하 여 `static_cast<my_type>` 정수 값에서 변환) new 및 **delete** 의 정의를 업데이트 하 여 다시 정수 형식으로 캐스팅 해야 합니다. **new** 이에 대 한 **열거형** 을 사용할 필요가 없습니다. 멤버가 포함 된 클래스 형식 `size_t` 도 작동 합니다.
 
    또 다른 솔루션은 **placement new**를 함께 제거하는 것입니다. 코드에서 **placement new**를 사용하여 placement 인수가 할당되거나 삭제되는 개체 크기와 같은 메모리 풀을 구현하면 사용자 지정 메모리 풀 코드를 바꾸는 데는 크기 지정된 할당 해제 기능이 적합할 수 있고, placement 함수를 제거하고, placement 함수 대신 인수가 두 개인 **delete** 연산자만 사용할 수 있습니다.
 
-   코드를 바로 업데이트하지 않으려면 컴파일러 옵션 `/Zc:sizedDealloc-`를 사용하여 이전 동작으로 되돌릴 수 있습니다. 이 옵션을 사용하는 경우 2인수 삭제 함수가 존재하지 않으며 **배치 삭제** 연산자와 충돌이 발생하지 않습니다.
+   코드를 바로 업데이트하지 않으려면 컴파일러 옵션 `/Zc:sizedDealloc-`를 사용하여 이전 동작으로 되돌릴 수 있습니다. 이 옵션을 사용 하면 인수가 두 개인 delete 함수가 존재 하지 않으며 **placement delete** 연산자와 충돌 하지 않습니다.
 
 - **공용 구조체 데이터 멤버**
 
@@ -1004,7 +1004,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     //other partial specializations here
     ```
 
-- **전달 선언에 대해 적용되는 규칙입니다. (C.에만 적용)**
+- **전방 선언에 적용 되는 규칙입니다. C에만 적용 됩니다.**
 
    다음 코드는 C2065를 생성합니다.
 
@@ -1217,7 +1217,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **이제 alignof가 키워드임**
 
-   다음 코드는 오류 C2332를 생성합니다. ‘class’: 태그 이름이 누락되었습니다. 코드를 수정하려면 클래스의 이름을 바꾸거나 클래스가 **alignof와**동일한 작업을 수행하는 경우 클래스를 새 키워드로 바꿉니다.
+   다음 코드는 오류 C2332를 생성합니다. ‘class’: 태그 이름이 누락되었습니다. 코드를 수정 하려면 클래스의 이름을 바꾸거나 클래스에서 **alignof**와 동일한 작업을 수행 하는 경우에는 클래스를 new 키워드로 바꾸어야 합니다.
 
     ```cpp
     class alignof{}
@@ -1496,7 +1496,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    오류를 해결하려면 `S2`에서 `S1()`에 대한 호출을 생성자로부터 제거하고 필요한 경우 다른 함수에 삽입합니다.
 
-- **{}포인터로 변환을 방지합니다.**
+- **{}포인터로의 변환을 방지 합니다.**
 
    다음 코드는 C2439를 생성합니다. ‘S::p’: 멤버를 초기화할 수 없습니다.
 
@@ -1633,7 +1633,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **__declspec(노브테이블) 선언은 일관성이 있어야 합니다.**
+- **novtable (__declspec) 선언은 일치 해야 합니다.**
 
    `__declspec` 선언은 모든 라이브러리에서 일관되어야 합니다. 다음 코드는 ODR(단일 정의 규칙) 위반을 생성합니다.
 
@@ -1697,7 +1697,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     C c;
     ```
 
-### <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>업데이트 1의 적합성 개선 사항
+### <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>업데이트 1의 규칙 향상
 
 - **개인 가상 기본 클래스 및 간접 상속**
 
@@ -1739,7 +1739,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   \- 또는-
+   \- 또는 -
 
     ```cpp
     class base;  // as above
@@ -1773,7 +1773,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   또한 컴파일러가 특정 진단을 제공하지는 않지만 인라인 연산자 **new는** 잘못된 형태로 간주됩니다.
+   또한 컴파일러가 특정 진단을 제공 하지는 않지만, 인라인 operator **new** 는 잘못 된 형식으로 간주 됩니다.
 
 - ***비클래스 형식에서 'operator *type**()'(사용자 정의 변환) 호출
 
@@ -2294,7 +2294,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - `volatile` **멤버 변수가 암시적으로 정의된 생성자와 대입 연산자를 막음**
 
-   이전 버전의 컴파일러는 **volatile** 멤버 변수가 있는 클래스가 기본 복사/이동 생성자 및 기본 복사 대입 연산자를 자동으로 생성하도록 허용했습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 이제 컴파일러는 **휘발성** 멤버 변수가 있는 클래스를 사소한 구성 및 할당 연산자가 있는 클래스로 간주하여 이러한 연산자의 기본 구현이 자동으로 생성되지 않도록 합니다. 이러한 클래스가 공용 구조체(또는 클래스 내의 익명 공용 구조체)의 멤버이면 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)의 복사/이동 생성자 및 복사/이동 대입 연산자는 삭제된 것으로 암시적으로 정의됩니다. 명시적으로 정의하지 않고 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)를 만들거나 복사하려 하면 오류가 발생하며 컴파일러에서 결과적으로 컴파일러 오류 C2280을 발생합니다.
+   이전 버전의 컴파일러는 **volatile** 멤버 변수가 있는 클래스가 기본 복사/이동 생성자 및 기본 복사 대입 연산자를 자동으로 생성하도록 허용했습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 이제 컴파일러는 **volatile** 멤버 변수가 있는 클래스에 특수 한 생성 및 대입 연산자가 있는 것으로 간주 하 여 이러한 연산자의 기본 구현이 자동으로 생성 되는 것을 방지 합니다. 이러한 클래스가 공용 구조체(또는 클래스 내의 익명 공용 구조체)의 멤버이면 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)의 복사/이동 생성자 및 복사/이동 대입 연산자는 삭제된 것으로 암시적으로 정의됩니다. 명시적으로 정의하지 않고 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)를 만들거나 복사하려 하면 오류가 발생하며 컴파일러에서 결과적으로 컴파일러 오류 C2280을 발생합니다.
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2463,7 +2463,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    이러한 방식으로 작성된 코드를 수정하려면 연산자 정의를 헤더 파일에서 해당하는 소스 파일로 이동해야 합니다.
 
-### <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>업데이트 3의 적합성 개선 사항
+### <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>업데이트 3의 규칙 향상
 
 - **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)
 
@@ -2804,7 +2804,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     int y = x;
     ```
 
-   이 `x` 코드는 이제 형식의 `std::initializer_list<int>` 유형으로 확인 하 고 **int** `x` 를 입력 하려고 하는 다음 줄에 오류가 발생 합니다. (기본적으로 변환이 없습니다.) 이 코드를 수정하려면 **int를** 사용하여 **자동**을 대체하십시오.
+   이 코드는 이제 `x` 형식으로 확인 `std::initializer_list<int>` 되 고 `x` **int**형식에 할당 하려고 하는 다음 줄에서 오류를 발생 시킵니다. 기본적으로 변환 되지 않습니다. 이 코드를 수정 하려면 **int** 를 사용 하 여 **auto**를 바꿉니다.
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    Visual Studio 2012에서 `E1` 식의 `E1::b`는 글로벌 범위에서 `::E1`로 확인되었습니다. Visual Studio 2013에서 `E1` 식의 `E1::b`는 `main()`의 `typedef E2` 정의로 확인되며 `::E2` 형식을 갖습니다.
 
-- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. **가상** 함수가 있지만 **가상** 함수가 있는 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 후 **가상** 함수 테이블에 포인터를 삽입합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
+- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 가상 **함수가 있지만** **가상** 함수가 포함 된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 **가상** 함수 테이블에 포인터를 삽입 합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   코드에서 이전 릴리스에서 최적화하려고 시도한 장소를 찾으려면 컴파일러 옵션과 함께 `/W3` 해당 릴리스의 컴파일러를 사용하고 C4370 경고를 켭니다. 다음은 그 예입니다.
+   코드에서 이전 릴리스가 최적화 하려고 했던 위치를 찾으려면 해당 릴리스의 컴파일러를 컴파일러 옵션과 함께 사용 하 `/W3` 고 경고 C4370를 설정 합니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     #pragma warning(default:4370)
@@ -2932,7 +2932,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - `#include <algorithm>` 또는 `std::min()`를 호출하는 경우 `std::max()`을 사용해야 합니다.
 
-- 기존 코드에서 이전 릴리스의 시뮬레이션된 범위 열거형(네임스페이스로 래핑된 기존 비범위 열거형)을 사용하는 경우 변경해야 합니다. 예를 들어 `std::future_status::future_status` 형식을 참조한 경우 이제는 `std::future_status`로 지정해야 합니다. 그러나 대부분의 코드는 영향을 받지 않습니다. 예를 들어 `std::future_status::ready`는 계속 컴파일됩니다.
+- 기존 코드에서 이전 릴리스의 시뮬레이션 된 범위가 지정 된 열거형을 사용 하는 경우 (네임 스페이스로 래핑된 기존의 범위가 지정 되지 않은 열거형) 변경 해야 합니다. 예를 들어 `std::future_status::future_status` 형식을 참조한 경우 이제는 `std::future_status`로 지정해야 합니다. 그러나 대부분의 코드는 영향을 받지 않습니다. 예를 들어 `std::future_status::ready`는 계속 컴파일됩니다.
 
 - `explicit operator bool()`이 operator unspecified-bool-type()보다 더 엄격합니다. `explicit operator bool()`은 bool로의 명시적 변환(예: `shared_ptr<X> sp`의 경우 `static_cast<bool>(sp)` 및 `bool b(sp)`가 유효함)을 허용할 뿐만 아니라 bool로의 부울 테스트 가능한 "컨텍스트 변환"(예: `if (sp)`, `!sp`, `sp &&`)도 허용합니다. 그러나 `explicit operator bool()`은 bool로의 암시적 변환을 금지하므로 `bool b = sp;`로 지정할 수 없으며 bool 반환 형식의 경우 `return sp`로 지정할 수 없습니다.
 
@@ -2942,17 +2942,17 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - `reference_wrapper`, `ref()` 및 `cref()`는 이제 임시 개체에 대한 바인딩을 금지합니다.
 
-- \<random>은 이제 컴파일 타임 사전 조건을 엄격하게 적용합니다.
+- \<random>은 이제 컴파일 타임 사전 조건을 엄격 하 게 적용 합니다.
 
 - 다양한 C++ 표준 라이브러리 형식 특성에는 "T가 완전한 형식이어야 함"이라는 사전 조건이 있습니다. 이제 컴파일러에서 이 사전 조건을 더욱 엄격하게 적용하지만 모든 상황에서 적용할 수 있는 것은 아닙니다. C++ 표준 라이브러리 사전 조건을 위반하면 정의되지 않은 동작이 발생하기 때문에 표준에서는 적용이 보장되지 않습니다.
 
 - C++ 표준 라이브러리는 `/clr:oldSyntax`를 지원하지 않습니다.
 
-- common_type<>에 대한 C++11 사양으로 인해 바람직하지 않은 예기치 않은 결과가 발생했습니다. 특히 common_type\<int, int>::type이 int&&를 반환하게 됩니다. 따라서 컴파일러는 라이브러리 작업 그룹 문제에 대한 제안된 해결 방법 2141을 구현하며, 이를 통해 common_type\<int, int="">::type이 int를 반환하게 됩니다.
+- Common_type<> 에 대 한 c + + 11 사양에 예기치 않은 결과가 발생 했습니다. 특히 common_type \<int, int> :: type은 int&&을 반환 합니다. 따라서 컴파일러는 라이브러리 작업 그룹 문제 2141에 대 한 제안 된 해결 방법을 구현 합니다. 그러면 common_type \<int, int=""> :: type에서 int를 반환 합니다.
 
-   이 변경의 부작용으로 ID 사례가 더 이상 작동하지 않습니다(common_type\<T>가 T 형식을 생성하지 않는 경우도 있음). 이 동작은 제안된 해결 방법을 준수하지만 이전 동작을 사용하는 모든 코드가 중단됩니다.
+   이러한 변경의 부작용으로 id 대/소문자가 더 이상 작동 하지 않습니다 (common_type \<T> 항상 형식 t가 되지 않음). 이 동작은 제안된 해결 방법을 준수하지만 이전 동작을 사용하는 모든 코드가 중단됩니다.
 
-   ID 형식 특성이 필요한 경우 \<type_traits>에 정의된 비표준 `std::identity`는 \<void>에 대해 작동하지 않으므로 사용하지 마세요. 대신 필요에 따라 고유한 ID 형식 특성을 구현합니다. 예를 들면 다음과 같습니다.
+   ID 형식 특성이 필요한 경우 `std::identity` 에 정의된 비표준 \<type_traits> 는 \<void>에 대해 작동하지 않으므로 사용하지 마세요. 대신 필요에 따라 고유한 ID 형식 특성을 구현합니다. 예를 들면 다음과 같습니다.
 
     ```cpp
     template < typename T> struct Identity {
@@ -2962,7 +2962,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="mfc-and-atl"></a>MFC 및 ATL
 
-- **비주얼 스튜디오 2013 만**: 유니 코드가 너무 인기가 MBCS의 사용이 크게 감소했기 때문에 MFC MBCS 라이브러리는 비주얼 스튜디오에 포함되지 않습니다. 여러 새로운 컨트롤과 메시지가 유니코드 전용이기 때문에 이 변경으로 인해 MFC는 Windows SDK 자체와 보다 밀접한 관계로 유지됩니다. 그러나 MFC MBCS 라이브러리를 계속 사용해야 하는 경우 MSDN 다운로드 센터의 [Visual Studio 2013용 멀티바이트 MFC 라이브러리](https://www.microsoft.com/download/details.aspx?id=40770)에서 다운로드할 수 있습니다. Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  (참고: MBCS DLL은 Visual Studio 2015 이상의 C++ 설치 구성 요소에 포함됩니다).
+- **Visual Studio 2013에만**해당: 유니코드가 널리 사용 되 고 MBCS의 사용이 크게 거부 되었기 때문에 MFC MBCS 라이브러리는 Visual Studio에 포함 되지 않습니다. 여러 새로운 컨트롤과 메시지가 유니코드 전용이기 때문에 이 변경으로 인해 MFC는 Windows SDK 자체와 보다 밀접한 관계로 유지됩니다. 그러나 MFC MBCS 라이브러리를 계속 사용 해야 하는 경우 [에는 Visual Studio 2013 용 멀티 바이트 Mfc 라이브러리](https://www.microsoft.com/download/details.aspx?id=40770)의 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  (참고: MBCS DLL은 Visual Studio 2015 이상의 C++ 설치 구성 요소에 포함됩니다).
 
 - MFC 리본에 대한 접근성이 변경되었습니다.  한 수준의 아키텍처 대신 이제 계층적 아키텍처가 있습니다. `CRibbonBar::EnableSingleLevelAccessibilityMode()`를 호출하여 기존 동작을 계속 사용할 수 있습니다.
 
@@ -3026,7 +3026,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - 컴파일러에서 [컴파일러 경고(수준 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) 및 C4701 경고를 실행할 수도 있습니다(이전에 실행하지 않은 경우). 컴파일러는 포인터 형식의 초기화되지 않은 지역 변수 사용에 대해 보다 강력한 검사를 적용합니다.
 
-- 새 링커 플래그 `/HIGHENTROPYVA`가 지정된 경우 Windows 8에서는 일반적으로 메모리 할당 시 64비트 주소가 반환됩니다. (Windows 8 이전에는 이러한 할당이 2GB 미만인 주소를 더 자주 반환합니다.) 이 변경 으로 인해 기존 코드에서 포인터 잘림 버그가 노출될 수 있습니다. 이 스위치는 기본적으로 켜져 있습니다. 이 동작을 사용하지 않으려면 `/HIGHENTROPYVA:NO`를 지정합니다.
+- 새 링커 플래그 `/HIGHENTROPYVA`가 지정된 경우 Windows 8에서는 일반적으로 메모리 할당 시 64비트 주소가 반환됩니다. Windows 8 이전에는 이러한 할당으로 2gb 미만의 주소가 반환 되는 경우가 많습니다. 이렇게 변경 하면 기존 코드에서 포인터 잘림 버그가 노출 될 수 있습니다. 이 스위치는 기본적으로 켜져 있습니다. 이 동작을 사용하지 않으려면 `/HIGHENTROPYVA:NO`를 지정합니다.
 
 - 관리되는 컴파일러(Visual Basic/C#)는 관리 빌드에 대해서도 `/HIGHENTROPYVA`를 지원합니다.  그러나 이 경우에는 `/HIGHENTROPYVAswitch`가 기본적으로 꺼져 있습니다.
 
@@ -3040,13 +3040,13 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="standard-library"></a>표준 라이브러리
 
-- C++98/03 및 C++11 표준 간의 주요 변경 내용에 따라 명시적 템플릿 인수를 사용하여 `make_pair()`를 호출하는 경우(예: `make_pair<int, int>(x, y)`) 일반적으로 Visual Studio 2012의 Visual C++에서 컴파일되지 않습니다. 해결 방법은 항상 `make_pair()` `make_pair(x, y)`에서와 같이 명시적 템플릿 인수 없이 호출하는 것입니다. 명시적 템플릿 인수를 제공하면 이 함수의 목적에서 벗어납니다. 결과 형식을 정밀하게 제어해야 하는 경우 `pair<short, short>(int1, int2)`와 같이 `make_pair` 대신 `pair`를 사용합니다.
+- C++98/03 및 C++11 표준 간의 주요 변경 내용에 따라 명시적 템플릿 인수를 사용하여 `make_pair()`를 호출하는 경우(예: `make_pair<int, int>(x, y)`) 일반적으로 Visual Studio 2012의 Visual C++에서 컴파일되지 않습니다. 솔루션은 `make_pair()` 에서와 같이 명시적 템플릿 인수 없이 항상를 호출 하는 것입니다 `make_pair(x, y)` . 명시적 템플릿 인수를 제공하면 이 함수의 목적에서 벗어납니다. 결과 형식을 정밀하게 제어해야 하는 경우 `pair<short, short>(int1, int2)`와 같이 `make_pair` 대신 `pair`를 사용합니다.
 
-- C++98/03 및 C++11 표준 간의 또 다른 주요 변경 사항: A가 암시적으로 B로 변환되고 B가 암시적으로 C로 변환할 수 있지만 A는 암시적으로 C, `pair<A, X>` C++98/03 및 `pair<C, X>`Visual Studio 2010으로 변환할 수 없는 경우(암시적 또는 명시적으로) . 다른 유형 인 X는 여기에 관심이 없으며 쌍의 첫 번째 형식에국한되지 않습니다. Visual Studio 2012의 C++ 컴파일러는 A가 암시적으로 C로 변환할 수 없다는 것을 감지하고 오버로드 해상도에서 쌍 변환을 제거합니다. 이 변경은 다양한 시나리오에서 유용합니다. 예를 들어 `func(const pair<int, int>&)` 및 `func(const pair<string, string>&)`을 오버로드하고 `pair<const char *, const char *>`에서 `func()`을 호출하면 이 변경 내용으로 컴파일합니다. 그러나 이 변경으로 인해 적극적인 쌍 변환을 사용한 코드가 손상됩니다. 일반적으로 이러한 코드는 `pair<C, X>`가 필요한 함수에 `make_pair(static_cast<B>(a), x)` 전달 등의 방법으로 변환의 일부를 명시적으로 수행하여 수정할 수 있습니다.
+- C + + 98/03과 c + + 11 표준 간의 또 다른 주요 변경 내용: A가 B로 암시적으로 변환 되 고 B가 암시적으로 C로 변환 될 수 있지만, A는 C, c + + 98/03 및 Visual Studio 2010로 암시적으로 변환할 수 없습니다 `pair<A, X>` (암시적 또는 명시적으로) `pair<C, X>` . 다른 형식 X는 여기에 관심이 없으며 쌍의 첫 번째 형식과 관련이 없습니다. Visual Studio 2012의 c + + 컴파일러는가 C로 암시적으로 변환할 수 없음을 감지 하 고 오버 로드 확인에서 쌍 변환을 제거 합니다. 이 변경은 다양한 시나리오에서 유용합니다. 예를 들어 `func(const pair<int, int>&)` 및 `func(const pair<string, string>&)`을 오버로드하고 `pair<const char *, const char *>`에서 `func()`을 호출하면 이 변경 내용으로 컴파일합니다. 그러나 이 변경으로 인해 적극적인 쌍 변환을 사용한 코드가 손상됩니다. 일반적으로 이러한 코드는 `pair<C, X>`가 필요한 함수에 `make_pair(static_cast<B>(a), x)` 전달 등의 방법으로 변환의 일부를 명시적으로 수행하여 수정할 수 있습니다.
 
 - Visual Studio 2010에서는 전처리기 머신으로 오버로드와 특수화를 제거하여 variadic 템플릿(예: `make_shared<T>(arg1, arg2, argN)`)을 10개 인수 제한까지 시뮬레이트했습니다. Visual Studio 2012에서 이 제한은 5개 인수로 축소되어 대부분의 사용자에 대한 컴파일 시간과 컴파일러 메모리 소비를 개선합니다. 그러나 프로젝트 수준에서 _VARIADIC_MAX를 10으로 명시적으로 정의하여 이전 제한을 설정할 수 있습니다.
 
-- C++11 17.6.4.3.1 [macro.names]/2에서는 C++ 표준 라이브러리 헤더가 포함된 경우 키워드를 매크로로 대체하는 것을 금지합니다. 이제 헤더가 매크로로 대체된 키워드를 검색하면 컴파일러 오류를 내보냅니다. (_ALLOW_KEYWORD_MACROS 정의하면 이러한 코드를 컴파일할 수 있지만 이러한 사용을 권장하지 는 않습니다. `new` 헤더는 `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`을 사용하여 자신을 포괄적으로 방어하기 때문에 기본적으로 매크로 형식이 허용됩니다. _ENFORCE_BAN_OF_MACRO_NEW 정의는 이름이 암시하는 작업을 정확히 수행합니다.
+- C++11 17.6.4.3.1 [macro.names]/2에서는 C++ 표준 라이브러리 헤더가 포함된 경우 키워드를 매크로로 대체하는 것을 금지합니다. 이제 헤더가 매크로로 대체된 키워드를 검색하면 컴파일러 오류를 내보냅니다. _ALLOW_KEYWORD_MACROS를 정의 하면 이러한 코드를 컴파일할 수 있지만이를 사용 하지 않는 것이 좋습니다. 단, `new` 헤더는를 사용 하 여 자체적으로 스스로 방어 하므로의 매크로 폼은 기본적으로 허용 됩니다 `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")` . _ENFORCE_BAN_OF_MACRO_NEW 정의는 이름이 암시하는 작업을 정확히 수행합니다.
 
 - 다양한 최적화 및 디버깅 검사를 구현하기 위해 C++ 표준 라이브러리는 Visual Studio 버전(2005, 2008, 2010, 2012) 간에 이진 호환성을 의도적으로 중단합니다. C++ 표준 라이브러리가 사용되는 경우 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 이진 파일(EXE 또는 DLL)에 혼합할 수 없고, 서로 다른 버전을 사용하여 컴파일된 이진 파일 간에 C++ 표준 라이브러리 개체를 전달할 수 없습니다. 개체 파일과 고정 라이브러리를 혼합(Visual Studio 2010으로 컴파일된 C++ 표준 라이브러리와 Visual Studio 2012의 C++ 컴파일러로 컴파일된 C++ 표준 라이브러리를 함께 사용)하면 _MSC_VER 불일치에 대한 링커 오류가 내보내집니다. 여기서 _MSC_VER은 컴파일러의 주 버전(Visual Studio 2012의 Visual C++의 경우 1700)을 포함하는 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual Studio 2008 이전 버전과 관련된 혼합을 검색할 수 없습니다.
 
@@ -3058,7 +3058,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="crt"></a>CRT
 
-- new 및 malloc()에 사용되는 C 런타임(CRT) 힙은 더 이상 private가 아닙니다. 이제 CRT에서 프로세스 힙을 사용합니다. 즉, DLL을 언로드할 때 힙이 소멸되지 않으므로 CRT에 정적으로 연결되는 DLL은 DLL 코드에 의해 할당된 메모리가 언로드되기 전에 정리되도록 해야 합니다.
+- new 및 malloc()에 사용되는 C 런타임(CRT) 힙은 더 이상 private가 아닙니다. 이제 CRT에서 프로세스 힙을 사용합니다. 즉, DLL이 언로드될 때 힙이 소멸 되지 않으므로 CRT에 정적으로 연결 되는 Dll은 DLL 코드에 의해 할당 된 메모리가 언로드되기 전에 정리 되었는지 확인 해야 합니다.
 
 - `iscsymf()` 함수는 음수 값으로 어설션됩니다.
 
@@ -3068,7 +3068,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="mfc-and-atl"></a>MFC 및 ATL
 
-- Fusion 지원(afxcomctl32.h)이 제거되었으므로 \<afxcomctl32.h>에 정의된 모든 메서드가 제거되었습니다. 헤더 파일 \<afxcomctl32.h> 및 \<afxcomctl32.inl>이 삭제되었습니다.
+- Fusion 지원 (afxcomctl32.h)을 제거 했습니다. 따라서에 정의 된 모든 메서드가 \<afxcomctl32.h> 제거 되었습니다. 헤더 파일 \<afxcomctl32.h> 및 \<afxcomctl32.inl> 가 삭제 되었습니다.
 
 - `CDockablePane::RemoveFromDefaultPaneDividier` 이름이 `CDockablePane::RemoveFromDefaultPaneDivider`로 변경되었습니다.
 
@@ -3264,7 +3264,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="ide"></a>IDE
 
-- 애플리케이션 종료 대화 상자에서 더 이상 애플리케이션을 종료하지 않습니다. 이전 릴리스에서는 `abort()` 또는 `terminate()` 함수가 애플리케이션의 일반 정품 빌드를 닫을 때 C 런타임 라이브러리가 콘솔 창이나 대화 상자에 애플리케이션 종료 메시지를 표시했습니다. “이 애플리케이션에서 비정상적인 종료를 런타임에 요청했습니다. 자세한 내용은 해당 애플리케이션의 지원 팀에 문의하세요.”라는 메시지가 표시되었습니다. Windows가 이후에 현재 종료 처리기를 표시했기 때문에 응용 프로그램 종료 메시지가 중복되었습니다. Visual Studio 2010부터 C 런타임 라이브러리가 메시지를 표시하지 않습니다. 또한 런타임에서 디버거가 시작되기 전에 애플리케이션이 종료되지 않도록 방지합니다. 이는 애플리케이션 종료 메시지의 이전 동작을 사용하는 경우에만 주요 변경 내용입니다.
+- 애플리케이션 종료 대화 상자에서 더 이상 애플리케이션을 종료하지 않습니다. 이전 릴리스에서는 `abort()` 또는 `terminate()` 함수가 애플리케이션의 일반 정품 빌드를 닫을 때 C 런타임 라이브러리가 콘솔 창이나 대화 상자에 애플리케이션 종료 메시지를 표시했습니다. “이 애플리케이션에서 비정상적인 종료를 런타임에 요청했습니다. 자세한 내용은 해당 애플리케이션의 지원 팀에 문의하세요.”라는 메시지가 표시되었습니다. Windows에서 현재 종료 처리기 (일반적으로 Windows 오류 보고 (Dr. Watson) 대화 상자 또는 Visual Studio 디버거)를 표시 하기 때문에 응용 프로그램 종료 메시지가 중복 되었습니다. Visual Studio 2010부터 C 런타임 라이브러리가 메시지를 표시하지 않습니다. 또한 런타임에서 디버거가 시작되기 전에 애플리케이션이 종료되지 않도록 방지합니다. 이는 애플리케이션 종료 메시지의 이전 동작을 사용하는 경우에만 주요 변경 내용입니다.
 
 - 특히 Visual Studio 2010에서는 IntelliSense가 C++/CLI 코드 또는 특성에 대해 작동하지 않고, **모든 참조 찾기**가 지역 변수에 대해 작동하지 않으며, 코드 모델이 가져온 어셈블리에서 형식 이름을 검색하거나 형식을 정규화된 이름으로 확인하지 않습니다.
 
@@ -3278,9 +3278,9 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="standard-library"></a>표준 라이브러리
 
-- \<iterator> 헤더가 더 이상 다른 많은 헤더 파일에 의해 자동으로 포함되지 않습니다. 대신, 헤더에 정의된 독립 실행형 반복기에 대한 지원이 필요한 경우 해당 헤더가 명시적으로 포함됩니다. 이전 빌드 도구인 VCBUILD.exe 또는 프로젝트 파일 접미사인 .vcproj 반복기를 사용하는 기존 프로젝트에 영향을 줍니다.
+- \<iterator>헤더는 더 이상 다른 많은 헤더 파일에 의해 자동으로 포함 되지 않습니다. 대신, 헤더에 정의된 독립 실행형 반복기에 대한 지원이 필요한 경우 해당 헤더가 명시적으로 포함됩니다. 이전 빌드 도구인 VCBUILD.exe 또는 프로젝트 파일 접미사인 .vcproj 반복기를 사용하는 기존 프로젝트에 영향을 줍니다.
 
-- \<algorithm> 헤더에서 checked_* and unchecked_\* 함수가 제거되었습니다. \<iterator>> 헤더에서 `checked_iterator` 클래스를 제거하고 `unchecked_array_iterator` 클래스를 추가했습니다.
+- 헤더에서는 \<algorithm> checked_ * 및 unchecked_ \* 함수를 제거 합니다. \<iterator>> 헤더에서 `checked_iterator` 클래스가 제거 되 고 `unchecked_array_iterator` 클래스가 추가 되었습니다.
 
 - `CComPtr::CComPtr(int)` 생성자가 제거되었습니다. 해당 생성자는 NULL 매크로에서 `CComPtr` 개체를 생성할 수 있게 해주지만 불필요하고 0이 아닌 정수에서 무의미한 생성을 허용했습니다.
 
@@ -3408,9 +3408,9 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - MFC 대화 상자의 컨트롤 탭 순서: MFC ActiveX 컨트롤이 탭 순서에 삽입된 경우 MFC 대화 상자에 있는 여러 컨트롤의 올바른 탭 순서를 방해합니다. 이 변경은 해당 문제를 해결합니다.
 
-   예를 들어 ActiveX 컨트롤 및 여러 개의 편집 컨트롤이 들어 있는 MFC 대화 상자 애플리케이션을 만듭니다. 편집 컨트롤의 탭 순서 중간에 ActiveX 컨트롤을 배치합니다. 응용 프로그램을 시작하고 ActiveX 컨트롤 다음에 탭 순서가 있는 편집 컨트롤을 클릭한 다음 탭을 클릭합니다.
+   예를 들어 ActiveX 컨트롤 및 여러 개의 편집 컨트롤이 들어 있는 MFC 대화 상자 애플리케이션을 만듭니다. 편집 컨트롤의 탭 순서 중간에 ActiveX 컨트롤을 배치합니다. 응용 프로그램을 시작 하 고 탭 순서가 ActiveX 컨트롤 뒤에 있는 편집 컨트롤을 클릭 한 다음 tab 키를 누릅니다 .이 변경 이전에는 탭 순서에서 다음 편집 컨트롤 대신 ActiveX 컨트롤 뒤에 있는 편집 컨트롤로 포커스가 이동 했습니다.
 
-- `CFileDialog`클래스: `CFileDialog` 클래스에 대한 사용자 지정 템플릿은 Windows Vista로 자동으로 이식할 수 없습니다. 여전히 사용할 수는 있지만 Windows Vista 스타일 대화 상자의 추가 기능이나 모양은 제공되지 않습니다.
+- `CFileDialog`클래스: 클래스의 사용자 지정 템플릿은 `CFileDialog` 자동으로 Windows Vista로 이식할 수 없습니다. 여전히 사용할 수는 있지만 Windows Vista 스타일 대화 상자의 추가 기능이나 모양은 제공되지 않습니다.
 
 - `CWnd` 클래스 및 `CFrameWnd` 클래스: `CWnd::GetMenuBarInfo` 메서드가 제거되었습니다.
 
@@ -3466,7 +3466,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="standard-library-2005"></a>표준 라이브러리(2005)
 
-- exception 클래스(\<exception> 헤더에 있음)가 `std` 네임스페이스로 이동되었습니다. 이전 버전에서는 이 클래스가 전역 네임스페이스에 있었습니다. 예외 클래스를 찾을 수 없다는 오류를 해결하려면 다음 using 문을 코드에 추가합니다. `using namespace std;`
+- 헤더에 있는 예외 클래스는 \<exception> `std` 네임 스페이스로 이동 되었습니다. 이전 버전에서는 이 클래스가 전역 네임스페이스에 있었습니다. 예외 클래스를 찾을 수 없다는 오류를 해결하려면 다음 using 문을 코드에 추가합니다. `using namespace std;`
 
 - `valarray::resize()`를 호출하는 경우 `valarray`의 내용이 손실되고 기본값으로 대체됩니다. `resize()` 메서드는 벡터처럼 동적으로 확장하는 대신 `valarray`를 다시 초기화합니다.
 

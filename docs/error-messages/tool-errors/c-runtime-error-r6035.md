@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: ff3cd0259df92aa5cdade3f78a240e69f8f6f7de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b92b1e2e123201d4f50422754b77f62b2ec943b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377474"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404400"
 ---
 # <a name="c-runtime-error-r6035"></a>C 런타임 오류 R6035
 
-Microsoft Visual C++ 런타임 라이브러리, 오류 R6035 - 이 응용 프로그램의 모듈은 해당 보안 쿠키에 의존하는 기능이 활성화되어 있는 동안 모듈의 전역 보안 쿠키를 초기화합니다.  __security_init_cookie 일찍 전화하십시오.
+Microsoft Visual C++ 런타임 라이브러리, 오류 R6035-해당 보안 쿠키를 신뢰 하는 함수가 활성화 되어 있는 동안이 응용 프로그램의 모듈에서 모듈의 전역 보안 쿠키를 초기화 하 고 있습니다.  이전에 __security_init_cookie를 호출 합니다.
 
-[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) 글로벌 보안 쿠키를 처음 사용하기 전에 호출해야 합니다.
+[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) 는 전역 보안 쿠키를 처음 사용 하기 전에 호출 해야 합니다.
 
-전역 보안 쿠키는 [/GS(버퍼 보안 검사)로](../../build/reference/gs-buffer-security-check.md) 컴파일된 코드및 구조화된 예외 처리를 사용하는 코드에서 버퍼 오버런 보호에 사용됩니다. 기본적으로 오버런 보호 함수에 입력하면 쿠키가 스택에 배치되고 종료시 스택의 값은 전역 쿠키와 비교됩니다. 버퍼 오버런이 발생하여 프로그램이 즉시 종료되었음을 나타냅니다.
+전역 보안 쿠키는 [/gs (버퍼 보안 검사)](../../build/reference/gs-buffer-security-check.md) 를 사용 하 여 컴파일된 코드에서 구조적 예외 처리를 사용 하는 코드에서 버퍼 오버런 보호에 사용 됩니다. 기본적으로, 오버런이 보호 된 함수에 대 한 항목에서 쿠키가 스택에 배치 되며 종료 시 스택의 값을 전역 쿠키와 비교 합니다. 이러한 차이점은 버퍼 오버런이 발생 하 여 프로그램을 즉시 종료 함을 나타냅니다.
 
-오류 R6035는 보호된 `__security_init_cookie` 함수를 입력한 후 호출이 이루어졌음을 나타냅니다. 실행을 계속하는 경우 스택의 쿠키가 더 이상 전역 쿠키와 일치하지 않으므로 스퓨리어스 버퍼 오버런이 검색됩니다.
+오류 R6035은 `__security_init_cookie` protected 함수를 입력 한 후에 대 한 호출을 했음을 나타냅니다. 실행이 계속 되 면 스택의 쿠키가 전역 쿠키와 더 이상 일치 하지 않기 때문에 의사 버퍼 오버런이 검색 됩니다.
 
-다음 DLL 예제를 고려하십시오. DLL 진입점은 [링커/ENTRY(진입점 기호)](../../build/reference/entry-entry-point-symbol.md) 옵션을 통해 DllEntryPoint로 설정됩니다. 이렇게 하면 일반적으로 전역 보안 쿠키를 초기화하는 CRT의 초기화를 무시하므로 DLL `__security_init_cookie`자체는 을 호출해야 합니다.
+다음 DLL 예제를 참조 하십시오. DLL 진입점은 링커 [/entry (진입점 기호)](../../build/reference/entry-entry-point-symbol.md) 옵션을 통해 즉 dllentrypoint로 설정 됩니다. 이렇게 하면 일반적으로 전역 보안 쿠키를 초기화 하는 CRT의 초기화가 무시 되므로 DLL 자체에서를 호출 해야 합니다 `__security_init_cookie` .
 
 ```
 // Wrong way to call __security_init_cookie
@@ -42,9 +42,9 @@ void DllInitialize() {
 }
 ```
 
-이 예제에서는 DllEntryPoint가 구조화된 예외 처리를 사용하므로 보안 쿠키를 사용하여 버퍼 오버런을 검색하기 때문에 R6035 오류가 생성됩니다. DllInitialize가 호출될 때까지 전역 보안 쿠키가 이미 스택에 배치되었습니다.
+이 예제에서는 즉 dllentrypoint에서 구조적 예외 처리를 사용 하므로 보안 쿠키를 사용 하 여 버퍼 오버런을 검색 하기 때문에 오류 R6035 생성 됩니다. DllInitialize가 호출 되 면 전역 보안 쿠키는 이미 스택에 배치 된 것입니다.
 
-올바른 방법은 이 예제에서 보여 주며 다음과 같은 방법을 보여 주며 다음과 같은 방법을 보여 주며 다음과 같은 방법을 보여 주며 다음과 같은 방법을
+이 예제에서는 올바른 방법을 보여 줍니다.
 
 ```
 // Correct way to call __security_init_cookie
@@ -63,11 +63,11 @@ void DllEntryHelper() {
 }
 ```
 
-이 경우 DllEntryPoint는 버퍼 오버런으로부터 보호되지 않습니다(로컬 문자열 버퍼가 없고 구조화된 예외 처리를 사용하지 않음). 따라서 안전하게 호출 `__security_init_cookie`할 수 있습니다. 그런 다음 보호되는 도우미 함수를 호출합니다.
+이 경우 즉 dllentrypoint는 버퍼 오버런 으로부터 보호 되지 않습니다 (로컬 문자열 버퍼가 없고 구조적 예외 처리를 사용 하지 않음). 따라서를 안전 하 게 호출할 수 있습니다 `__security_init_cookie` . 그런 다음 보호 되는 도우미 함수를 호출 합니다.
 
 > [!NOTE]
-> 오류 메시지 R6035는 x86 디버그 CRT에 의해서만 생성되며 구조화된 예외 처리에 대해서만 생성되지만 조건은 모든 플랫폼및 C++ EH와 같은 모든 형태의 예외 처리에 대한 오류입니다.
+> 오류 메시지 R6035는 x86 디버그 CRT 에서만 생성 되 고 구조적 예외 처리에만 발생 하지만 모든 플랫폼에서 발생 하는 오류와 c + + EH와 같은 모든 형태의 예외 처리에 대 한 오류입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[MSVC의 보안 기능](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)
+[MSVC의 보안 기능](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/)

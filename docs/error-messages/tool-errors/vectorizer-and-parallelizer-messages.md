@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182203"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405002"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>벡터화 도우미 및 병렬화 도우미 메시지
 
-Microsoft C++ 컴파일러 옵션 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 를 사용 하 여 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 를 설정 하 여 해당 활동에 대 한 이유 코드 및 정보 메시지를 출력할 수 있습니다. 이 문서는 이유 코드 및 메시지를 설명합니다.
+Microsoft c + + 컴파일러 옵션 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 를 사용 하 여 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 를 설정 하 여 해당 활동에 대 한 이유 코드 및 정보 메시지를 출력할 수 있습니다. 이 문서는 이유 코드 및 메시지를 설명합니다.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>정보 메시지
 
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>참고 항목
 
-[C/C++ 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md)
-[자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Visual Studio 2012의 자동 벡터화-개요](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[C/c + + 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md) 
+ [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Visual Studio 2012의 자동 벡터화-개요](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
 [#pragma loop ()](../../preprocessor/loop.md) \
 [/Q 옵션 (하위 수준 작업)](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report (자동 평행 화 도우미 보고 수준)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report(자동 벡터화 도우미 보고 수준)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-report (자동 벡터화 도우미 보고 수준)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

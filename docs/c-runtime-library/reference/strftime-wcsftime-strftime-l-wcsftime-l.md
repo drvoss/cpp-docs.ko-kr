@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920016"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404322"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -123,7 +123,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format* 인수는 하나 이상의 코드로 구성 됩니다. **printf**와 마찬가지로 형식 지정 코드 앞에 백분율 기호 (**%**)가 있습니다. 로 **%** 시작 하지 않는 문자는 변경 되지 않은 상태로 *strdest*로 복사 됩니다. 현재 로캘의 **LC_TIME** 범주는 **strftime**의 출력 형식에 영향을 줍니다. **LC_TIME**에 대 한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **Strftime** 및 **wcsftime** 함수는 현재 설정 된 로캘을 사용 합니다. 이러한 함수의 **_strftime_l** 및 **_wcsftime_l** 버전은 로캘을 매개 변수로 사용 하 고 현재 설정 된 로캘 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+*Format* 인수는 하나 이상의 코드로 구성 됩니다. **printf**와 마찬가지로 형식 지정 코드 앞에 백분율 기호 ( **%** )가 있습니다. 로 시작 하지 않는 문자 **%** 는 변경 되지 않은 상태로 *strdest*로 복사 됩니다. 현재 로캘의 **LC_TIME** 범주는 **strftime**의 출력 형식에 영향을 줍니다. **LC_TIME**에 대 한 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **Strftime** 및 **wcsftime** 함수는 현재 설정 된 로캘을 사용 합니다. 이러한 함수의 **_strftime_l** 및 **_wcsftime_l** 버전은 로캘을 매개 변수로 사용 하 고 현재 설정 된 로캘 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 **Strftime** 함수는 다음과 같은 서식 지정 코드를 지원 합니다.
 
@@ -168,7 +168,7 @@ size_t _wcsftime_l(
 |**% Z**|레지스트리 설정에 따라 로캘의 표준 시간대 이름 또는 표준 시간대 약어 중 하나입니다. 표준 시간대를 알 수 없는 경우 문자 없음|
 |**%%**|퍼센트 기호|
 
-**Printf** 함수와 마찬가지로 플래그는 **#** 서식 지정 코드에 접두사를 지정할 수 있습니다. 이 경우의 서식 코드 의미는 다음과 같이 변경됩니다.
+**Printf** 함수와 마찬가지로 **#** 플래그는 서식 지정 코드에 접두사를 지정할 수 있습니다. 이 경우의 서식 코드 의미는 다음과 같이 변경됩니다.
 
 |코드 형식|의미|
 |-----------------|-------------|
@@ -178,6 +178,9 @@ size_t _wcsftime_l(
 |**% #d**, **% #D**,% **#e**,% **#F**, **% #H**, **% #I**, **% #j**,% **#m**, **% #M**, **% #r**, **% #R,%**#S,% #T,% **#U**, **% #V**, **% #W**, **% #y**, **% #Y** **%#S** **%#T**|앞에 오는 0 또는 공백을 제거 합니다 (있는 경우).|
 
 **% V**, **% g**, **% g**에 의해 생성 되는 ISO 8601 주 및 주 기반 연도는 월요일에 시작 하는 주를 사용 합니다. 여기서 week 1은 1 월 4 일을 포함 하는 주입니다. 여기서 1은 연도를 4 일 이상 포함 하는 첫 번째 주입니다. 해당 연도의 첫 번째 월요일이 두 번째, 세 번째 또는 네 번째 이면 이전 일은 작년의 마지막 주에 포함 됩니다. 이러한 일의 경우 **% V** 은 (는) 53로 바뀌고 **% g** 와 **% g** 는 모두 이전 연도의 숫자로 대체 됩니다.
+
+> [!NOTE]
+> 에서 반환 된 포인터가 있는 함수 중 하나를 사용 하는 경우 `strftime` `tm` `gmtime` 및 지정자를 통해 인쇄 된 값 `%Z` `%z` 이 정확 하지 않습니다. 이는 `tm` C 표준에 지정 된 구조체에 표준 시간대 이름 또는 오프셋에 대 한 정보가 포함 되지 않기 때문입니다. 대신 표준 시간대 정보는 전역 변수 [ `_timezone` 및 `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)를 통해 채워집니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -194,9 +197,9 @@ size_t _wcsftime_l(
 
 [time](time-time32-time64.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[Locale](../../c-runtime-library/locale.md) <br/>
+[로캘](../../c-runtime-library/locale.md) <br/>
 [시간 관리](../../c-runtime-library/time-management.md) <br/>
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373478"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404062"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outp, _outp, _outpw, _outpd
 
@@ -61,15 +61,15 @@ ms.locfileid: "86373478"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *포트인*\
 포트 번호입니다.
 
-*속한 임의의 dataword, dataword*\
+*data_byte, data_word*\
 출력 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-함수는 데이터 출력을 반환합니다. 반환되는 오류가 없습니다.
+함수는 데이터 출력을 반환합니다. 오류가 반환 되지 않습니다.
 
 ## <a name="remarks"></a>설명
 
-`_outp`, `_outpw`및 `_outpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 출력 포트에 씁니다. *port* 인수는 0-65,535 범위에 속한 임의의 부호 없는 정수일 수 있고 *databyte*는 0–255 범위에 속한 임의의 정수일 수 있으며 *dataword*는 각각 정수, 부호 없는 정수(Short) 및 부호 없는 정수(Long) 범위에 속한 임의의 값일 수 있습니다.
+`_outp`, `_outpw`및 `_outpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 출력 포트에 씁니다. *Port* 인수는 0-65535 범위의 부호 없는 정수 일 수 있습니다. 0-255 범위의 정수 *data_byte* 수 있습니다. *data_word* 정수, 부호 없는 short 정수 및 부호 없는 정수 (정수)의 범위에 있는 임의의 값일 수 있습니다.
 
-이러한 함수는 i/o 포트에 직접 쓰기 때문에 사용자 모드 Windows 코드에서 사용할 수 없습니다. Windows 운영 체제에서 i/o 포트를 사용 하는 방법에 대 한 자세한 내용은 [직렬 통신](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))을 참조 하세요.
+이러한 함수는 i/o 포트에 직접 쓰기 때문에 사용자 모드 Windows 코드에서 사용할 수 없습니다.
+
+Windows 운영 체제에서 i/o 포트를 사용 하는 방법에 대 한 자세한 내용은 [직렬 통신](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))을 참조 하세요.
 
 및 `outp` `outpw` 이름은 이전 버전의 및 함수에 사용 되지 않는 이름입니다 `_outp` `_outpw` . 자세한 내용은 [POSIX 함수 이름](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)을 참조 하세요.
 
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>참고 항목
 
 [콘솔 및 포트 i/o](../c-runtime-library/console-and-port-i-o.md)\
-[sct.inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

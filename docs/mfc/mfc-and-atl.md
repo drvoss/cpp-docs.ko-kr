@@ -3,12 +3,12 @@ title: MFC 및 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0ad1eac7991655eae5ae1a328145e66031e40dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619929"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405041"
 ---
 # <a name="mfc-and-atl"></a>MFC 및 ATL
 
@@ -28,4 +28,4 @@ Visual Studio 2017 이상에서 MFC 및 ATL은 Visual Studio 설치 관리자 �
 |[ATL COM 데스크톱 구성 요소](../atl/atl-com-desktop-components.md)|ATL은 클래스 템플릿 및 기타 use 구문을 제공하여 C++에서 COM 개체 만들기를 간단하게 합니다.|
 |[ATL/MFC 공유 클래스](../atl-mfc-shared/atl-mfc-shared-classes.md)|MFC와 ATL에서 공유하는 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 및 기타 클래스에 대한 참조입니다.|
 |[리소스 파일 작업](../windows/working-with-resource-files.md)|리소스 편집기를 사용하면 문자열, 이미지 및 대화 상자와 같은 UI 리소스를 편집할 수 있습니다.|
-|[Visual Studio의 C++](../overview/visual-cpp-in-visual-studio.md)|MSDN 라이브러리의 모든 C++ 콘텐츠에 대한 부모 항목입니다.|
+|[Visual Studio의 C++](../overview/visual-cpp-in-visual-studio.md)|모든 c + + 설명서에 대 한 부모 항목입니다.|
