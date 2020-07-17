@@ -6,12 +6,12 @@ metadata:
   description: Microsoft C++ 및 Visual Studio 사용자를 위한 C++ 프로그래밍 참조.
   ms.topic: landing-page
   ms.date: 05/08/2020
-  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: 599559aa1b5f1bd992646b5bacc3f1c51fcf070f
+  ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108623"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86404952"
 landingContent:
 - title: Visual Studio의 C++ 알아보기
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
     links:
     - text: C++ 지원 Visual Studio의 Hello World
       url: ../build/vscpp-step-1-create.md
-    - text: C++에서 계산기 만들기
+    - text: C++에서 콘솔 계산기 만들기
       url: ../get-started/tutorial-console-cpp.md
   - linkListType: video
     links:
