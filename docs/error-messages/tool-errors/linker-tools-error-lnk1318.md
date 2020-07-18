@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183581"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446703"
 ---
 # <a name="linker-tools-error-lnk1318"></a>링커 도구 오류 LNK1318
 
@@ -24,7 +24,7 @@ ms.locfileid: "80183581"
 
 - 빌드 디렉터리에서 정리 작업을 수행 하 고 솔루션의 전체 빌드를 수행 합니다.
 
-- 컴퓨터를 다시 부팅 하거나, mspdbsrv.exe 프로세스가 중단 되거나 중지 되었는지 확인 하 고 TaskManager에서 중단 합니다.
+- 컴퓨터를 다시 부팅 하거나, TaskManager에서 중단 되거나 응답 하지 않는 mspdbsrv.exe 프로세스를 확인 하 고 종료 합니다.
 
 - 프로젝트 디렉터리에서 바이러스 검사를 해제 합니다.
 
