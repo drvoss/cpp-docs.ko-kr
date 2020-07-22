@@ -1,5 +1,5 @@
 ---
-title: 왼쪽 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;)
+title: 왼쪽 시프트 및 오른쪽 시프트 연산자 ( &gt; &gt; 및 &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825917"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404772"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽 시프트 및 오른쪽 시프트 연산자 ( &gt; &gt; 및 &lt; &lt; )
 
-비트 시프트 연산자는 *시프트 식* 의 비트를 오른쪽으로**&gt;** 이동 하는 오른쪽 시프트 연산자 ()와 *시프트 식* 의 비트를 왼쪽으로 이동 하는 왼쪽 시프트**&lt;** 연산자 ()입니다. <sup>1</sup>
+비트 시프트 연산자는 시프트 식의 비트를 오른쪽으로 이동 하는 오른쪽 시프트 연산자 ( **&gt;&gt;** )와 *shift-expression* **&lt;&lt;** *시프트 식* 의 비트를 왼쪽으로 이동 하는 왼쪽 시프트 연산자 ()입니다. <sup>1</sup>
 
 ## <a name="syntax"></a>구문
 
@@ -32,7 +32,7 @@ ms.locfileid: "82825917"
 ## <a name="remarks"></a>설명
 
 > [!IMPORTANT]
-> 다음 설명 및 예제는 x86 및 x64 아키텍처에 대해 Windows에서 유효 합니다. 왼쪽 시프트 및 오른쪽 시프트 연산자의 구현은 Windows에서 ARM 장치에 크게 차이가 있습니다. 자세한 내용은 [HELLO ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) 블로그 게시물의 "시프트 연산자" 섹션을 참조 하세요.
+> 다음 설명 및 예제는 x86 및 x64 아키텍처에 대해 Windows에서 유효 합니다. 왼쪽 시프트 및 오른쪽 시프트 연산자의 구현은 Windows에서 ARM 장치에 크게 차이가 있습니다. 자세한 내용은 [HELLO ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) 블로그 게시물의 "시프트 연산자" 섹션을 참조 하세요.
 
 ## <a name="left-shifts"></a>왼쪽 시프트
 
@@ -195,7 +195,7 @@ int main() {
 }
 ```
 
-## <a name="additional-details"></a>추가 세부 정보
+## <a name="additional-details"></a>추가 정보
 
 *가감* 식이 음수 이거나 *가감 식* 이 (승격 된) *시프트 식*의 비트 수보다 크거나 같은 경우 시프트 연산의 결과가 정의 되지 않습니다. *가감 식이* 0 이면 시프트 연산이 수행 되지 않습니다.
 
@@ -224,9 +224,9 @@ int main() {
 
 <sup>1</sup> c + + 11 iso 사양 (INCITS/ISO/IEC 14882-2011 [2012]), 섹션 5.8.2 및 5.8.3의 시프트 연산자에 대 한 설명은 다음과 같습니다.
 
-`E1 << E2`의 값은 `E1` 왼쪽 이동된 `E2` 비트 위치입니다. 비워진 비트는 0으로 채워집니다. 에 `E1` 부호 없는 형식이 있는 경우 결과 값은 **E1 x 2**<sup>**E2**</sup>이 고, 결과 형식에서 표현할 수 있는 최대값 보다 1이 넘는 모듈로 줄어듭니다. 그렇지 않고에 `E1` 부호 있는 형식과 음수가 아닌 값이 있고 **E1 × 2**<sup>**E2**</sup> 를 해당 하는 부호 없는 형식의 결과 형식으로 표현할 수 있는 경우 결과 형식으로 변환 된 값이 결과 값입니다. 그렇지 않으면 동작이 정의 되지 않습니다.
+`E1 << E2`의 값은 `E1` 왼쪽 이동된 `E2` 비트 위치입니다. 비워진 비트는 0으로 채워집니다. `E1`에 부호 없는 형식이 있는 경우 결과 값은 **E1 x 2**<sup>**E2**</sup>이 고, 결과 형식에서 표현할 수 있는 최대값 보다 1이 넘는 모듈로 줄어듭니다. 그렇지 않고 `E1` 에 부호 있는 형식과 음수가 아닌 값이 있고 **E1 × 2**<sup>**E2**</sup> 를 결과 형식의 해당 하는 부호 없는 형식으로 표현할 수 있는 경우 결과 형식으로 변환 된 값은 결과 값입니다. 그렇지 않으면 동작이 정의 되지 않습니다.
 
-`E1 >> E2`의 값은 `E1` 오른쪽 이동된 `E2` 비트 위치입니다. `E1` 에 부호 없는 형식이 있거나이 부호 `E1` 있는 형식이 고 음수가 아닌 값을 포함 하는 경우 결과 값은 **E1/2**<sup>**E2**</sup>의 몫의 정수 부분입니다. `E1`이 부호 있는 형식이고 음수인 경우 결과 값은 구현 시 정의됩니다.
+`E1 >> E2`의 값은 `E1` 오른쪽 이동된 `E2` 비트 위치입니다. `E1`에 부호 없는 형식이 있거나이 `E1` 부호 있는 형식이 고 음수가 아닌 값을 포함 하는 경우 결과 값은 **E1/2**<sup>**E2**</sup>의 몫의 정수 부분입니다. `E1`이 부호 있는 형식이고 음수인 경우 결과 값은 구현 시 정의됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

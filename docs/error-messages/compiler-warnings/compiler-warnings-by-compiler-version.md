@@ -4,27 +4,27 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d8d47e9dbfce9e22cf7aab2e3e7beab72d86c770
+ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075823"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491377"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>컴파일러 버전 별 컴파일러 경고
 
-컴파일러는 [/Wv](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션을 사용 하 여 지정한 버전 이후에 도입 된 경고를 표시 하지 않을 수 있습니다. 이 옵션은 새 도구 집합 버전을 도입할 때 빌드 프로세스를 관리 하 고 일시적으로 새 경고를 표시 하지 않으려는 경우에 유용 합니다. 이 옵션은 경고를 표시 하지 않고 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 영구적으로 표시 하지 않습니다. 항상 가장 높은 일반 경고 수준으로 컴파일하고, `/W4`하 고, 실제로 빌드에서 `/Wv` 옵션을 제거 하는 것이 좋습니다.
+컴파일러는 컴파일러 옵션을 사용 하 여 지정한 버전 이후에 도입 된 경고를 표시 하지 않을 수 있습니다 [`/Wv`](../../build/reference/compiler-option-warning-level.md) . 이 옵션은 새 도구 집합 버전을 도입할 때 빌드 프로세스를 관리 하 고 일시적으로 새 경고를 표시 하지 않으려는 경우에 유용 합니다. 이 옵션은 경고를 표시 하지 않고 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 영구적으로 표시 하지 않습니다. 항상 가장 높은 일반 경고 수준에서 컴파일하는 것이 좋으며 **`/W4`** , **`/Wv`** 실제로는 빌드에서 옵션을 제거 하는 것이 좋습니다.
 
 이러한 버전의 컴파일러는 새로운 경고를 도입 했습니다.
 
-| Product | 컴파일러 버전 번호 |
-|-|-|
+| 제품 | 컴파일러 버전 번호 |
+|--|--|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
 | Visual Studio 2005 | 14.00.50727.762 |
 | Visual Studio 2008 | 15.00.21022.08 |
 | Visual Studio 2010 | 16.00.40219.01 |
-| Visual Studio 2012 | 17.00.51106.1 |
+| Visual Studio 2012 | 번호가 17.00.51106.1 |
 | Visual Studio 2013 | 18.00.21005.1 |
 | Visual Studio 2015 RTM | 19.00.23026.0 |
 | Visual Studio 2015 업데이트 1 | 19.00.23506.0 |
@@ -38,30 +38,105 @@ ms.locfileid: "80075823"
 | Visual Studio 2017 버전 15.8 | 19.15.26726.0 |
 | Visual Studio 2017 버전 15.9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2019 버전 16.1 | 19.21.27702.0 |
+| Visual Studio 2019 버전 16.2 | 19.22.27905.0 |
+| Visual Studio 2019 버전 16.3 | 19.23.28105.0 |
+| Visual Studio 2019 버전 16.4 | 19.24.28314.0 |
+| Visual Studio 2019 버전 16.5 | 19.25.28610.0 |
+| Visual Studio 2019 버전 16.6 | 19.26.28805.0 |
 
-`/Wv` 옵션에는 주 번호, 주 번호, 부 번호, 주 번호, 부 번호, 빌드 번호만 지정할 수 있습니다. 컴파일러는 지정 된 수로 시작 하는 버전과 일치 하는 모든 경고를 보고 하 고 지정 된 수보다 많은 버전에 대 한 모든 경고를 표시 하지 않습니다. 예를 들어 `/Wv:17`는 Visual Studio 2012의 모든 버전에 도입 된 경고를 보고 하 고, Visual Studio 2013 (버전 18) 이상에서 컴파일러에 의해 발생 하는 경고를 표시 하지 않습니다. Visual Studio 2015 업데이트 2 이상에서 도입 된 경고를 표시 하지 않으려면 `/Wv:19.00.23506`를 사용할 수 있습니다. `/Wv:19.11`를 사용 하 여 visual studio 2017 버전 15.5 이전 버전의 Visual Studio에서 도입 된 경고를 보고 하지만 Visual Studio 2017 버전 15.5 이상에서 도입 된 경고는 표시 하지 않습니다.
+주 번호, 주 번호, 부 번호, 주 번호, 부 번호, 빌드 번호를 옵션으로 지정할 수 있습니다 **`/Wv`** . 컴파일러는 지정 된 수로 시작 하는 버전과 일치 하는 모든 경고를 보고 합니다. 지정 된 수보다 많은 버전에 대 한 모든 경고를 표시 하지 않습니다. 예를 들어 **`/Wv:17`** Visual Studio 2012의 모든 버전에서 발생 하는 경고를 보고 하 고 Visual Studio 2013 (버전 18) 이상의 컴파일러에서 발생 하는 경고를 표시 하지 않습니다. Visual Studio 2015 업데이트 2 이상에서 도입 된 경고를 표시 하지 않으려면를 사용할 수 있습니다 **`/Wv:19.00.23506`** . Visual studio **`/Wv:19.11`** 2017 버전 15.5 이전 버전의 visual studio에서 도입 된 경고를 보고 하는 데 사용 하 고 Visual studio 2017 버전 15.5 이상에서 도입 된 경고는 표시 하지 않습니다.
 
-다음 섹션에서는 `/Wv` 컴파일러 옵션을 사용 하 여 표시 하지 C++ 않을 수 있는 각 버전의 시각적 개체에서 발생 하는 경고를 나열 합니다. `/Wv` 옵션은 지정 된 버전의 컴파일러를 predate 하는 나열 되지 않은 경고를 표시 하지 않습니다.
+다음 섹션에서는 컴파일러 옵션을 사용 하 여 표시 하지 않을 수 있는 Visual C++의 각 버전에서 발생 하는 경고를 나열 합니다 **`/Wv`** . 옵션은 지정 된 버전의 컴파일러를 predate 하는 **`/Wv`** 나열 되지 않은 경고를 표시 하지 않습니다.
 
 ::: moniker range=">= vs-2019"
 
+## <a name="warnings-introduced-in-visual-studio-2019-version-166-compiler-version-1926288050"></a>Visual Studio 2019 버전 16.6에 도입 된 경고 (컴파일러 버전 19.26.28805.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.25`** .
+
+| Warning | 메시지 |
+|--|--|
+| C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
+| C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-165-compiler-version-1925286100"></a>Visual Studio 2019 버전 16.5에 도입 된 경고 (컴파일러 버전 19.25.28610.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.24`** .
+
+|Warning|메시지|
+|-|-|
+| C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
+| C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
+| C5063 | `'std::is_constant_evaluated' always evaluates to true in manifestly constant-evaluated expressions` |
+| C5108 | `__VA_OPT__ is reserved for use in variadic macros` |
+| C5204 | `'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly` |
+| C5205 | `delete of an abstract class 'type-name' that has a non-virtual destructor results in undefined behavior` |
+| C5206 | `deduced return types for coroutines is a non-standard extension` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-164-compiler-version-1924283140"></a>Visual Studio 2019 버전 16.4에 도입 된 경고 (컴파일러 버전 19.24.28314.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.23`** .
+
+| Warning | 메시지 |
+|--|--|
+| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | C2429 for language 기능에 해당 하는 경고
+| C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
+| C5202 | `a global module fragment can only contain preprocessor directives` |
+| C5203 | `a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-163-compiler-version-1923281050"></a>Visual Studio 2019 버전 16.3에 도입 된 경고 (컴파일러 버전 19.23.28105.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.22`** .
+
+| Warning | 메시지 |
+|--|--|
+| C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
+| C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-162-compiler-version-1922279050"></a>Visual Studio 2019 버전 16.2에 도입 된 경고 (컴파일러 버전 19.22.27905.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.21`** .
+
+| Warning | 메시지 |
+|--|--|
+| C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
+| C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
+| C5055 | `operator 'operator-name': deprecated between enumerations and floating-point types` |
+| C5056 | `operator 'operator-name': deprecated for array types` |
+| C5057 | `header unit reference to 'name' already exists.  Ignoring header unit 'header-name'` |
+| C5058 | `file system error: cannot find header file 'file-name' for header unit 'unit-name'` |
+| C5059 | `runtime checks and address sanitizer is not currently supported - disabling runtime checks` |
+| C5060 | `/Qpar and address sanitizer not currently supported - disabling auto-parallelization` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-161-compiler-version-1921277020"></a>Visual Studio 2019 버전 16.1에 도입 된 경고 (컴파일러 버전 19.21.27702.0)
+
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.20`** .
+
+| Warning | 메시지 |
+|--|--|
+| C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
+| C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
+
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW에 도입 된 경고 (컴파일러 버전 19.20.27004.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.15`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.15`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
+| C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
+| C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 버전 15.8에 도입 된 경고 (컴파일러 버전 19.15.26726.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.14`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.14`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
 | C4845 | `'__declspec(no_init_all)' is ignored if '/d1initall[0|1|2|3]' was not specified on the command line` |
@@ -84,52 +159,52 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 버전 15.7에 도입 된 경고 (컴파일러 버전 19.14.26428.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.13`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.13`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 버전 15.6에 도입 된 경고 (컴파일러 버전 19.13.26128.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.12`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.12`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 버전 15.5에 도입 된 경고 (컴파일러 버전 19.12.25830.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.11`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.11`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
 | C5039 | `'function': pointer or reference to potentially throwing function passed to extern C function under -EHc. Undefined behavior may occur if this function throws an exception.` |
-| C5040 | `dynamic exception specifications are valid only in C++14 and earlier; treating as noexcept(false)` |
+| 될 때 c5043 | `dynamic exception specifications are valid only in C++14 and earlier; treating as noexcept(false)` |
 | C5041 | `'definition': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17` |
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 버전 15.3에 도입 된 경고 (컴파일러 버전 19.11.25506.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.10`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.10`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
 | C4749 | `conditionally supported: description` |
-| C4768 | `__declspec attributes before linkage specification are ignored` |
+| C 4768 | `__declspec attributes before linkage specification are ignored` |
 | C4834 | `discarding return value of function with 'nodiscard' attribute` |
 | C4841 | `non-standard extension used: extension` |
 | C4842 | `the result of 'offsetof' applied to a type using multiple inheritance is not guaranteed to be consistent between compiler releases` |
 | C4869 | `'nodiscard' may only be applied to classes, enumerations, and functions with non-void return type` |
 | C4984 | `'if constexpr' is a C++17 language extension` |
 | C5033 | `'*storage-class*' is no longer a supported storage class` |
-| C5034 | `use of intrinsic 'intrinsic' causes function function to be compiled as guest code` |
+| 에서는 "c5034 | `use of intrinsic 'intrinsic' causes function function to be compiled as guest code` |
 | C5035 | `use of feature 'feature' causes function function to be compiled as guest code` |
 | C5036 | `varargs function pointer conversion when compiling with /hybrid:x86arm64 'type1' to 'type2'` |
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
@@ -137,12 +212,12 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM (컴파일러 버전 19.10.25017.0)에 도입 된 경고
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.00`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
-| C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
+| 4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
 | C4839 | `non-standard use of class 'class' as an argument to a variadic function` |
 | C4840 | `non-portable use of class 'class' as an argument to a variadic function` |
 
@@ -150,10 +225,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 업데이트 3에 도입 된 경고 (컴파일러 버전 19.00.24215.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23918`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.00.23918`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
@@ -161,21 +236,21 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 업데이트 2에 도입 된 경고 (컴파일러 버전 19.00.23918.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23506`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.00.23506`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4466 | `Could not perform coroutine heap elision` |
-| C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
+| C 4595 | `'class': non-member operator new or delete functions may not be declared inline` |
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 업데이트 1에 도입 된 경고 (컴파일러 버전 19.00.23506.0)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:19.00.23026`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:19.00.23026`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
@@ -183,10 +258,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM (컴파일러 버전 19.00.23026.0)에 도입 된 경고
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:18`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:18`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
 | C4455 | `'operator name': literal suffix identifiers that do not start with an underscore are reserved` |
@@ -214,7 +289,7 @@ ms.locfileid: "80075823"
 | C4582 | `'type': constructor is not implicitly called` |
 | C4583 | `'type': destructor is not implicitly called` |
 | C4587 | `'type': behavior change: constructor is no longer implicitly called` |
-| C4588 | `'type': behavior change: destructor is no longer implicitly called` |
+| 않습니다 | `'type': behavior change: destructor is no longer implicitly called` |
 | C4589 | `Constructor of abstract class 'type' ignores initializer for virtual base class 'type'` |
 | C4591 | `'constexpr' call-depth limit of number exceeded (/constexpr:depth<NUMBER>)` |
 | C4592 | `'type': symbol will be dynamically initialized (implementation limitation)` |
@@ -242,10 +317,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013에 도입 된 경고 (컴파일러 버전 18.00.21005.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:17`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:17`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
 | C4380 | `'type': A default constructor cannot be deprecated` |
@@ -271,10 +346,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012에 도입 된 경고 (컴파일러 버전 번호가 17.00.51106.1)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:16`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:16`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
 | C4416 | `__declspec(code_seg(...)) contains empty string: ignored` |
@@ -295,16 +370,16 @@ ms.locfileid: "80075823"
 | C4453 | `'type': A '[WebHostHidden]' type should not be used on the published surface of a public type that is not '[WebHostHidden]'` |
 | C4454 | `'type' is overloaded by more than the number of input parameters without having [DefaultOverload] specified. Picking 'declaration' as the default overload` |
 | C4471 | `'name': a forward declaration of an unscoped enumeration must have an underlying type (int assumed)` |
-| C4472 | `'name' is a native enum: add an access specifier (private/public) to declare a managed/WinRT enum` |
+| 4472 | `'name' is a native enum: add an access specifier (private/public) to declare a managed/WinRT enum` |
 | C4492 | `'type': matches base ref class method 'type', but is not marked 'override'` |
-| C4493 | `delete expression has no effect as the destructor of 'type' does not have 'public' accessibility` |
+| 4493 | `delete expression has no effect as the destructor of 'type' does not have 'public' accessibility` |
 | C4585 | `'type': A WinRT 'public ref class' must either be sealed or derive from an existing unsealed class` |
 | C4586 | `'type': A public type cannot be declared in a top-level namespace called 'Windows'` |
 | C4695 | `#pragma execution_character_set: 'argument' is not a supported argument: currently only 'UTF-8' is supported` |
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
+| C4746 | `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -314,10 +389,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010에 도입 된 경고 (컴파일러 버전 16.00.40219.01)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:15`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:15`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
 | C4574 | `'name' is defined to be '0': did you mean to use '#if name'?` |
@@ -330,10 +405,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008에 도입 된 경고 (컴파일러 버전 15.00.21022.08)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:14`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:14`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
 | C4491 | `'description': has an illegal IDL version format` |
@@ -345,10 +420,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005에 도입 된 경고 (컴파일러 버전 14.00.50727.762)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:13`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:13`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
 | C4333 | `'expression': right shift by too large amount, data loss` |
@@ -488,10 +563,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003에 도입 된 경고 (컴파일러 버전 13.10.3077)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:13.00.9466`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:13.00.9466`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
 | C4346 | `'type': dependent name is not a type` |
@@ -524,10 +599,10 @@ ms.locfileid: "80075823"
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002에 도입 된 경고 (컴파일러 버전 13.00.9466)
 
-이러한 경고 및 이후 버전의 모든 경고는 `/Wv:12`컴파일러 옵션을 사용 하 여 표시 되지 않습니다.
+이러한 경고 및 이후 버전의 모든 경고는 컴파일러 옵션을 사용 하 여 억제 됩니다 **`/Wv:12`** .
 
-|||
-|-|-|
+| Warning | 메시지 |
+|--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
 | C4165 | `'HRESULT' is being converted to 'bool'; are you sure this is what you want?` |
@@ -673,8 +748,8 @@ ms.locfileid: "80075823"
 
 ## <a name="see-also"></a>참고 항목
 
-[C/C++ 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + 컴파일러 및 빌드 도구 오류 및 경고](../compiler-errors-1/c-cpp-build-errors.md) \
 [컴파일러 경고 C4000-C5999](compiler-warnings-c4000-c5999.md) \
 [/Wv 컴파일러 옵션](../../build/reference/compiler-option-warning-level.md) \
 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
-[경고](../../preprocessor/warning.md)
+[warning](../../preprocessor/warning.md)

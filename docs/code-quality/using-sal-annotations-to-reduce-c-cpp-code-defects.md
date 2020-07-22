@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: bfd6a58c7dc8664dce91906279a62380768a5c65
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467116"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403896"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>C/C++ 코드 오류를 줄이기 위한 SAL 주석 사용
 
@@ -51,10 +51,6 @@ SAL은 Microsoft 소스 코드 주석 언어입니다. 소스 코드 주석을 �
 - [모범 사례 및 예제](../code-quality/best-practices-and-examples-sal.md)
 
      SAL 주석을 사용 하는 방법을 보여 주는 예제를 제공 합니다. 일반적인 문제에 대해서도 설명 합니다.
-
-## <a name="related-resources"></a>관련 리소스
-
-[코드 분석 팀 블로그](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>참고 항목
 
