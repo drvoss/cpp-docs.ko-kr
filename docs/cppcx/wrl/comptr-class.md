@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332255"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404553"
 ---
 # <a name="comptr-class"></a>ComPtr 클래스
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`기본 인터페이스 포인터를 나타내는 형식을 선언 합니다. 를 사용 하 여 `ComPtr<>` 변수를 선언한 다음 화살표 멤버 액세스 연산자 ()를 사용 `->` 하 여 인터페이스 멤버 함수에 액세스 합니다.
 
-스마트 포인터에 대 한 자세한 내용은 MSDN Library에서 [Com 코딩 방법](/windows/win32/LearnWin32/com-coding-practices) 문서의 "Com 스마트 포인터" 하위 섹션을 참조 하십시오.
+스마트 포인터에 대 한 자세한 내용은 [Com 코딩 방법](/windows/win32/LearnWin32/com-coding-practices) 문서의 "Com 스마트 포인터" 하위 섹션을 참조 하세요.
 
 ## <a name="members"></a>멤버
 
@@ -187,7 +187,7 @@ HRESULT As(
 
 첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿은 내부 도우미 특수화입니다. [Auto](../../cpp/auto-cpp.md) 형식 추론 키워드와 같은 c + + 언어 기능을 지원 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -210,7 +210,7 @@ WRL_NOTHROW HRESULT AsIID(
 *®*<br/>
 개체에 ID가 *riid*인 인터페이스가 있는 경우 *riid* 매개 변수로 지정 된 인터페이스에 대 한 이중 간접 포인터입니다. 그렇지 않으면에 대 한 포인터 `IUnknown` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -229,7 +229,7 @@ HRESULT AsWeak(
 *pWeakRef*<br/>
 이 작업이 완료 되 면 약한 참조 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
@@ -292,7 +292,7 @@ WRL_NOTHROW ComPtr(
 *다른*<br/>
 *U*형식의 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ### <a name="remarks"></a>설명
 
@@ -335,7 +335,7 @@ HRESULT CopyTo(
 *riid*<br/>
 인터페이스 ID입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 S_OK 합니다. 그렇지 않으면 암시적 작업이 실패 한 이유를 나타내는 HRESULT입니다 `QueryInterface` .
 
@@ -355,7 +355,7 @@ HRESULT CopyTo(
 T* Detach();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 개체가 나타내는 인터페이스에 대 한 포인터입니다 `ComPtr` .
 
@@ -367,7 +367,7 @@ T* Detach();
 T* Get() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이와 연결 된 인터페이스에 대 한 포인터 `ComPtr` 입니다.
 
@@ -380,7 +380,7 @@ T* const* GetAddressOf() const;
 T** GetAddressOf();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 변수의 주소입니다.
 
@@ -418,7 +418,7 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재에 대 한 약한 참조 `ComPtr` 입니다.
 
@@ -434,7 +434,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 템플릿 형식 이름으로 지정 된 형식에 대 한 포인터입니다.
 
@@ -481,7 +481,7 @@ WRL_NOTHROW ComPtr& operator=(
 *다른*<br/>
 형식 또는 다른 형식에 대 한 포인터, 참조 또는 rvalue 참조 `ComPtr` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재에 대 한 참조 `ComPtr` 입니다.
 
@@ -530,7 +530,7 @@ bool operator==(
 *b*<br/>
 다른 개체에 대 한 참조 `ComPtr` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 연산자는 `true` 개체 *a* 가 개체 *b*와 같으면를, 그렇지 않으면를 생성 `false` 합니다.
 
@@ -565,7 +565,7 @@ bool operator!=(
 *b*<br/>
 다른 개체에 대 한 참조 `ComPtr` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 첫 번째 연산자는 `true` 개체 *a가* 개체 *b*와 같지 않은 경우를, 그렇지 않으면를 생성 `false` 합니다.
 
@@ -579,7 +579,7 @@ bool operator!=(
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 인터페이스가이와 연결 된 경우 `ComPtr` [BoolStruct:: member](boolstruct-structure.md#member) 데이터 멤버의 주소이 고, 그렇지 않으면 `nullptr` 입니다.
 
@@ -603,7 +603,7 @@ InterfaceType *ptr_;
 T** ReleaseAndGetAddressOf();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이의 [ptr_](#ptr) 데이터 멤버 주소입니다 `ComPtr` .
 
@@ -615,7 +615,7 @@ T** ReleaseAndGetAddressOf();
 unsigned long Reset();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 인터페이스에 남아 있는 경우 참조의 수입니다 (있는 경우).
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>매개 변수
 
 *r*<br/>
-`ComPtr`입니다.
+`ComPtr`.

@@ -2,12 +2,12 @@
 title: '방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b1351a1c7858b00cffc454fa66831b3995aea804
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 511bf07950cfb50f67a2027b9051c3efd7cc3b45
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366424"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405054"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
 
@@ -25,7 +25,7 @@ DLL 또는 정적 라이브러리의 소스 코드가 있는 경우 `/ZW`를 사
 
 다른 언어로 호출자에게 기능을 노출하기 위해 라이브러리를 Windows 런타임 구성 요소로 변환할 수 있습니다. Windows 런타임 구성 요소는 .NET 및 JavaScript 소비자가 요구하는 방식으로 콘텐츠를 설명하는 .winmd 파일의 형태로 메타데이터를 포함한다는 점에서 일반적인 DLL과 다릅니다. API 요소를 다른 언어에 노출하기 위해 ref 클래스와 같은 C++/CX 구문을 추가하고 클래스를 공용으로 만들거나 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](../windows/windows-runtime-cpp-template-library-wrl.md)을 사용할 수 있습니다.  Windows 10 이상 버전에서는 C++/CX 대신 [C++/WinRT 라이브러리](https://github.com/microsoft/cppwinrt)를 사용할 수 있습니다.
 
-앞의 설명은 다르게 처리되어야 하는 COM 구성 요소의 경우에는 적용되지 않습니다. EXE 또는 DLL에 COM 서버가 있는 경우 [등록이 필요하지 않은 COM 구성 요소](/windows/win32/sbscs/creating-registration-free-com-objects)로 패키지하는 한 유니버설 Windows 프로젝트에서 사용할 수 있으며 콘텐츠 파일로 프로젝트에 추가하고 [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp)을 사용하여 인스턴스화할 수 있습니다. 자세한 내용은 [Windows 스토어 C++ 프로젝트에서 Free-COM DLL 사용](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/)을 참조하세요.
+앞의 설명은 다르게 처리되어야 하는 COM 구성 요소의 경우에는 적용되지 않습니다. EXE 또는 DLL에 COM 서버가 있는 경우 [등록이 필요하지 않은 COM 구성 요소](/windows/win32/sbscs/creating-registration-free-com-objects)로 패키지하는 한 유니버설 Windows 프로젝트에서 사용할 수 있으며 콘텐츠 파일로 프로젝트에 추가하고 [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp)을 사용하여 인스턴스화할 수 있습니다. 자세한 내용은 [Windows 스토어 C++ 프로젝트에서 Free-COM DLL 사용](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project)을 참조하세요.
 
 UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](../windows/windows-runtime-cpp-template-library-wrl.md)을 사용하여 Windows 런타임 구성 요소로 변환할 수 있습니다. WRL은 ATL 및 OLE의 모든 기능을 지원하지 않으므로 이러한 포트가 적합한지 여부는 COM 코드가 구성 요소에 필요한 COM, ATL 및 OLE의 어떤 기능에 얼마나 많이 의존하는지에 따라 달라집니다.
 
@@ -46,9 +46,9 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
 - [UWP 앱에서 Win32 DLL 사용](#BK_Win32DLL)
 
-- [UWP 앱에서 네이티브 C++ 정적 라이브러리 사용](#BK_StaticLib)
+- [UWP 앱에서 네이티브 c + + 정적 라이브러리 사용](#BK_StaticLib)
 
-- [C++ 라이브러리를 Windows 런타임 구성 요소로 포팅](#BK_WinRTComponent)
+- [Windows 런타임 구성 요소로 c + + 라이브러리 포팅](#BK_WinRTComponent)
 
 ## <a name="using-a-win32-dll-in-a-uwp-app"></a><a name="BK_Win32DLL"></a>UWP 앱에서 Win32 DLL 사용
 
@@ -151,7 +151,7 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
    이제 **솔루션 탐색기**는 프로젝트를 유니버설 Windows 프로젝트로 식별합니다.
 
-5. 미리 컴파일된 헤더 파일 이름이 올바른지 확인합니다. 미리 **컴파일된 헤더** 섹션에서 **미리 컴파일된 헤더 파일을** *pch.h에서* *stdafx.h로*변경합니다. 이렇게 하지 않으면 다음과 같은 오류가 표시됩니다.
+5. 미리 컴파일된 헤더 파일 이름이 올바른지 확인합니다. **미리 컴파일된** 헤더 섹션에서 **미리 컴파일된 헤더 파일** 을 *pch* 에서 *stdafx.h*로 변경 합니다. 이렇게 하지 않으면 다음과 같은 오류가 표시됩니다.
 
    > error C2857: '#include' statement specified with the /Ycpch.h command-line option was not found in the source file(오류 C2857: /Ycpch.h 명령줄 옵션과 함께 지정된 '#include' 문을 소스 파일에서 찾을 수 없습니다.)
 
@@ -161,11 +161,11 @@ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 
 
    유니버설 Windows 플랫폼용으로 컴파일할 경우 일부 기능을 사용할 수 없습니다. 모든 문제에 대한 컴파일러 오류가 표시됩니다. 클린 빌드를 수행할 때까지 이러한 문제를 해결하세요.
 
-7. 동일한 솔루션에서 UWP 앱에서 DLL을 사용하려면 UWP 프로젝트 노드의 바로 가기 메뉴를 열고**참조** **추가를** > 선택합니다.
+7. 동일한 솔루션의 uwp 앱에서 DLL을 사용 하려면 uwp 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 참조 **추가**를 선택  >  **Reference**합니다.
 
-   **프로젝트** > **솔루션에서**DLL 프로젝트 옆의 확인란을 선택하고 **확인** 단추를 선택합니다.
+   **프로젝트**  >  **솔루션**아래에서 DLL 프로젝트 옆에 있는 확인란을 선택 하 고 **확인** 단추를 선택 합니다.
 
-8. UWP 앱의 *pch.h* 파일에 라이브러리의 헤더 파일을 포함합니다.
+8. UWP 앱의 *.pch .h* 파일에 라이브러리의 헤더 파일을 포함 합니다.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -193,9 +193,9 @@ UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용할 수 
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>UWP 프로젝트에서 네이티브 C++ 정적 라이브러리를 사용하려면
 
-1. UWP 프로젝트의 프로젝트 속성에서 왼쪽 창에서 **구성 속성** > **링커** > **입력을** 선택합니다. 오른쪽 창에서 **추가 종속성** 속성의 라이브러리에 경로를 추가합니다. 예를 들어 출력을 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib에 배치하는 프로젝트 라이브러리의 경우 상대 경로 `Debug\MyNativeLibrary\MyNativeLibrary.lib`를 추가합니다.
+1. UWP 프로젝트에 대 한 프로젝트 속성의 왼쪽 창에서 **구성 속성**  >  **링커**  >  **입력** 을 선택 합니다. 오른쪽 창에서 **추가 종속성** 속성의 라이브러리에 경로를 추가합니다. 예를 들어 출력을 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib에 배치하는 프로젝트 라이브러리의 경우 상대 경로 `Debug\MyNativeLibrary\MyNativeLibrary.lib`를 추가합니다.
 
-2. 포함 문을 추가하여 *pch.h* 파일(있는 경우) 또는 필요에 따라 .cpp 파일에 헤더 파일을 참조하고 라이브러리를 사용하는 코드를 추가합니다.
+2. Include 문을 추가 하 *여 파일 (* 있는 경우) 또는 필요한 .cpp 파일에 헤더 파일을 참조 하 고 라이브러리를 사용 하는 코드를 추가 하기 시작 합니다.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ UWP 앱의 정적 라이브러리에서 네이티브 API를 사용하려는 경�
 
 5. 원래 프로젝트에서 추가할 모든 파일을 선택하고 **확인**을 선택합니다. 필요한 경우 하위 폴더를 대상으로 반복합니다.
 
-6. 이제 중복된 일부 코드가 있을 수도 있습니다. 미리 컴파일된 헤더가 두 개 이상 있는 경우(예: *stdafx.h* 및 *pch.h)* 보관할 헤더를 선택합니다. 유지할 헤더에 include 문과 같은 필요한 코드를 복사합니다. 그런 다음 다른 헤더를 삭제하고 프로젝트 속성의 **미리 컴파일된 헤더**에서 헤더 파일의 이름이 올바른지 확인합니다.
+6. 이제 중복된 일부 코드가 있을 수도 있습니다. 미리 컴파일된 헤더 (예를 들어 *stdafx.h* 및 *.pch .h*)가 두 개 이상 있는 경우 유지할 헤더를 하나 선택 합니다. 유지할 헤더에 include 문과 같은 필요한 코드를 복사합니다. 그런 다음 다른 헤더를 삭제하고 프로젝트 속성의 **미리 컴파일된 헤더**에서 헤더 파일의 이름이 올바른지 확인합니다.
 
    미리 컴파일된 헤더로 사용할 파일을 변경한 경우 각 파일에 대한 미리 컴파일된 헤더 옵션이 올바른지 확인합니다. 각 .cpp 파일을 차례로 선택하고 속성 창을 연 다음 **만들기(/Yc)** 로 설정되어야 하는 원하는 미리 컴파일된 헤더를 제외하고 모두 **사용(/Yu)** 으로 설정되어 있는지 확인합니다.
 

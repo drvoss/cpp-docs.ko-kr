@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170061"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373712"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)
 
@@ -21,7 +21,7 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 
 ## <a name="syntax"></a>구문
 
-> **/DYNAMICBASE**[ **: NO**]
+> **/DYNAMICBASE**[**: NO**]
 
 ## <a name="remarks"></a>설명
 
@@ -31,9 +31,9 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Visual Studio에서 이 링커 옵션을 설정하려면
 
-1. 프로젝트 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
+1. 프로젝트 **속성 페이지** 대화 상자를 엽니다. 자세한 정보는 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
 
-1. **구성 속성** > **링커** > **고급** 속성 페이지를 선택 합니다.
+1. **구성 속성**  >  **링커**  >  **고급** 속성 페이지를 선택 합니다.
 
 1. **임의 기준 주소** 속성을 수정 합니다.
 
@@ -46,4 +46,4 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 - [MSVC 링커 참조](linking.md)
 - [MSVC 링커 옵션](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Windows ISV 소프트웨어 보안 방어](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Windows ISV 소프트웨어 보안 방어](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

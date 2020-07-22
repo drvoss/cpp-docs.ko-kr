@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: ab7682c8344d6fc36ded03e7ef885c83d2f19ab7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 54644d9df546299be3b688f9745a121592938df6
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169047"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373621"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
@@ -21,7 +21,7 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 
 ## <a name="syntax"></a>구문
 
-> **/DYNAMICBASE**[ **: NO**]
+> **/DYNAMICBASE**[**: NO**]
 
 ## <a name="remarks"></a>설명
 
@@ -32,4 +32,4 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 ## <a name="see-also"></a>참고 항목
 
 - [EDITBIN 옵션](editbin-options.md)
-- [Windows ISV 소프트웨어 보안 방어](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Windows ISV 소프트웨어 보안 방어](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

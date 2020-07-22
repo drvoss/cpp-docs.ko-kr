@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: c24fdfdaef612059d5c2fbaaa58f10d83f5fe3a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8af104598f56aa6c8eb5a9a87905324700da3d37
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335239"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373673"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>연습: 명령줄에서 네이티브 C++ 프로그램 컴파일
 
@@ -130,7 +130,7 @@ Visual Studio용 Build Tools는 C 및 C++ 프로그램을 빌드하는 데 필�
    > "'cl'이 내부 또는 외부 명령, 실행 가능한 프로그램 또는 일괄 처리 파일로 인식되지 않습니다." 같은 오류, 오류 C1034 또는 오류 LNK1104가 표시되면 개발자 명령 프롬프트가 올바로 설정되지 않은 것입니다. 이 문제를 해결하는 방법을 보려면 **개발자 명령 프롬프트 열기** 섹션으로 돌아갑니다.
 
    > [!NOTE]
-   > 다른 컴파일러 또는 링커 오류나 경고가 표시되면 소스 코드를 검토하여 오류를 수정한 다음 저장하고 컴파일러를 다시 실행합니다. 특정 오류에 대한 자세한 내용을 보려면 이 MSDN 페이지의 검색 상자를 사용하여 오류 번호를 확인하세요.
+   > 다른 컴파일러 또는 링커 오류나 경고가 표시되면 소스 코드를 검토하여 오류를 수정한 다음 저장하고 컴파일러를 다시 실행합니다. 특정 오류에 관한 내용을 보려면 검색 상자를 사용하여 오류 번호를 검색합니다.
 
 1. hello.exe 프로그램을 실행하려면 명령 프롬프트에서 `hello`를 입력합니다.
 
@@ -146,7 +146,7 @@ Visual Studio용 Build Tools는 C 및 C++ 프로그램을 빌드하는 데 필�
 
 이 "Hello, World" 예제는 가장 간단한 C++ 프로그램입니다. 실제 프로그램에는 일반적으로 헤더 파일, 추가 소스 파일, 라이브러리 링크가 있습니다.
 
-이 연습의 단계를 사용하여 표시된 샘플 코드를 입력하는 대신 자체 C++ 코드를 빌드할 수 있습니다. 또한 이러한 단계를 통해 다른 곳에서 구할 수 있는 많은 C++ 코드 샘플 프로그램을 빌드할 수도 있습니다. 쓰기 가능한 모든 디렉터리에서 소스 코드를 배치하고 앱을 빌드할 수 있습니다. 기본적으로 Visual Studio IDE는 *source\\repos* 하위 폴더의 사용자 폴더에 프로젝트를 만듭니다. 이전 버전에서는 *Documents\\Visual Studio \<버전>\\* Projects* 폴더에 프로젝트가 배치될 수도 있습니다.
+이 연습의 단계를 사용하여 표시된 샘플 코드를 입력하는 대신 자체 C++ 코드를 빌드할 수 있습니다. 또한 이러한 단계를 통해 다른 곳에서 구할 수 있는 많은 C++ 코드 샘플 프로그램을 빌드할 수도 있습니다. 쓰기 가능한 모든 디렉터리에서 소스 코드를 배치하고 앱을 빌드할 수 있습니다. 기본적으로 Visual Studio IDE는 *source\\repos* 하위 폴더의 사용자 폴더에 프로젝트를 만듭니다. 이전 버전에서는 *Documents\\Visual Studio \<version>\\* Projects* 폴더에 프로젝트가 배치될 수도 있습니다.
 
 추가 소스 코드 파일이 있는 프로그램을 컴파일하려면 다음과 같이 명령줄에 모두 입력합니다.
 

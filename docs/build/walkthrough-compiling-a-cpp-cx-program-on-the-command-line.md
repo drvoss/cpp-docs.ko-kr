@@ -2,19 +2,19 @@
 title: '연습: 명령줄에서 C++/CX 프로그램 컴파일'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 83369fc7b458463ea1f44a347bbcd0ca4eb32224
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078203"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373686"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>연습: 명령줄에서 C++/CX 프로그램 컴파일
 
 > [!NOTE]
 > 새 UWP 앱 및 구성 요소의 경우 Windows 런타임 API에 대한 표준 C++ 17 언어 프로젝션인 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 사용하는 것이 좋습니다. C++/WinRT는 버전 1803부터 Windows 10 SDK에서 제공됩니다. C++/WinRT는 전적으로 헤더 파일에 구현되며 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-Microsoft C++ 컴파일러(MSVC)는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C++ 구성 요소 확장(C++/CX)을 지원합니다. C++/CX를 사용하여 UWP(유니버설 Windows 플랫폼) 및 Windows 데스크톱용 앱을 빌드할 수 있습니다. 자세한 내용은 [C++/CX 둘러보기](https://msdn.microsoft.com/magazine/dn166929.aspx) 및 [런타임 플랫폼용 구성 요소 확장](../extensions/component-extensions-for-runtime-platforms.md)을 참조하세요.
+Microsoft C++ 컴파일러(MSVC)는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C++ 구성 요소 확장(C++/CX)을 지원합니다. C++/CX를 사용하여 UWP(유니버설 Windows 플랫폼) 및 Windows 데스크톱용 앱을 빌드할 수 있습니다. 자세한 내용은 [C++/CX 둘러보기](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) 및 [런타임 플랫폼용 구성 요소 확장](../extensions/component-extensions-for-runtime-platforms.md)을 참조하세요.
 
 이 연습에서는 텍스트 편집기를 사용하여 기본적인 C++/CX 프로그램을 만든 다음 명령줄에서 컴파일합니다. 여기에 나와 있는 내용을 입력하는 대신 C++/CX 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C++/CX 코드 샘플을 사용할 수도 있습니다. 이 기술은 UI 요소가 없는 소형 모듈을 빌드하고 테스트하는 데 유용합니다.
 

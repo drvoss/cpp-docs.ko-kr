@@ -1,6 +1,6 @@
 ---
 title: locale 클래스
-ms.date: 03/19/2019
+ms.date: 07/20/2020
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 2581c5cdacc9e542f5d911860128dcf5526621ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
+ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367309"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872389"
 ---
 # <a name="locale-class"></a>locale 클래스
 
@@ -50,14 +50,14 @@ static locale::id id;
 
 이러한 패싯의 미리 정의된 그룹은 일반적으로 `setlocale` 함수에 의해 표준 C 라이브러리에서 관리되는 [로캘 범주](#category)를 나타냅니다.
 
-범주(LC_COLLATE)에는 `collate` 면이 포함됩니다.
+Category `collate` (LC_COLLATE)는 패싯을 포함 합니다.
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-범주(LC_CTYPE)에는 `ctype` 면이 포함됩니다.
+Category `ctype` (LC_CTYPE)는 패싯을 포함 합니다.
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-범주(LC_MONETARY)에는 `monetary` 면이 포함됩니다.
+Category `monetary` (LC_MONETARY)는 패싯을 포함 합니다.
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-범주(LC_NUMERIC)에는 `numeric` 면이 포함됩니다.
+Category `numeric` (LC_NUMERIC)는 패싯을 포함 합니다.
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-범주(LC_TIME)에는 `time` 면이 포함됩니다.
+Category `time` (LC_TIME)는 패싯을 포함 합니다.
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,18 +101,18 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-범주(LC_MESSAGES)에는 `messages` 면이 포함됩니다.
+Category `messages` (LC_MESSAGES)는 패싯을 포함 합니다.
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-마지막 범주는 POSIX에서 필요하지만 C 표준은 필요하지 않습니다.
+(마지막 범주는 POSIX에 필요 하지만 C 표준은 필요 하지 않습니다.)
 
-이러한 미리 정의된 면 중 일부는 `iostream` 텍스트 시퀀스로 숫자 값의 변환을 제어하는 클래스에서 사용됩니다.
+이러한 미리 정의 된 패싯 중 일부는 `iostream` 숫자 값과 텍스트 시퀀스 사이의 변환을 제어 하기 위해 클래스에서 사용 됩니다.
 
-클래스 로캘 개체는 또한 로캘 이름을 [string](../standard-library/string-typedefs.md#string) 클래스의 개체로 저장합니다. 잘못된 로캘 이름을 사용하여 로캘 패싯 또는 로캘 개체를 만들 경우 [runtime_erro](../standard-library/runtime-error-class.md) 클래스의 개체가 throw됩니다. 저장된 로캘 이름은 `"*"` 로캘 개체가 C 스타일 로캘이 개체로 표시되는 로캘과 정확히 일치한다고 확신할 수 없는 경우입니다. 그렇지 않으면 `locale_object` `setlocale(LC_ALL , locale_object.` [이름을](#name)`().c_str())`호출하여 일부 로캘 개체에 대해 표준 C 라이브러리 내에서 일치하는 로캘을 설정할 수 있습니다.
+클래스 로캘 개체는 또한 로캘 이름을 [string](../standard-library/string-typedefs.md#string) 클래스의 개체로 저장합니다. 잘못된 로캘 이름을 사용하여 로캘 패싯 또는 로캘 개체를 만들 경우 [runtime_erro](../standard-library/runtime-error-class.md) 클래스의 개체가 throw됩니다. 저장 된 로캘 이름은 `"*"` 로캘 개체에서 C 스타일 로캘이 개체로 표현 된 로캘과 정확히 일치 하는지 확신할 수 없는 경우입니다. 그렇지 않으면 `locale_object` name을 호출 하 여 일부 로캘 개체에 대해 표준 C 라이브러리 내에서 일치 하는 로캘을 설정할 수 있습니다 `setlocale(LC_ALL , locale_object.` [name](#name) `().c_str())` .
 
 이 구현에서는 정적 멤버 함수도 호출하여
 
@@ -120,13 +120,13 @@ messages<wchar_t>
 static locale empty();
 ```
 
-패싯이 없는 로캘 개체를 구성할 수 있습니다. 투명한 로캘이기도 합니다. 템플릿이 [has_facet](../standard-library/locale-functions.md#has_facet) 작동하고 [use_facet](../standard-library/locale-functions.md#use_facet) 투명한 로캘에서 요청된 면을 찾을 수 없는 경우 먼저 전역 로캘을 참조한 다음 투명한 경우 클래식 로캘을 참조합니다. 그래서, 당신은 쓸 수 있습니다 :
+패싯이 없는 로캘 개체를 구성할 수 있습니다. 또한 투명 한 로캘입니다. 템플릿 함수가 [has_facet](../standard-library/locale-functions.md#has_facet) [use_facet](../standard-library/locale-functions.md#use_facet) 하 고 투명 한 로캘에서 요청 된 패싯을 찾을 수 없는 경우에는 먼저 전역 로캘을 먼저 확인 한 다음 투명 한 경우 클래식 로캘을 참조 합니다. 따라서 다음과 같이 작성할 수 있습니다.
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-이후 [`cout`](../standard-library/iostream.md#cout) 삽입은 전역 로캘의 현재 상태에 의해 중재됩니다. 다음과 같이 작성할 수도 있습니다.
+에 대 한 후속 삽입 [`cout`](../standard-library/iostream.md#cout) 은 전역 로캘의 현재 상태에 따라 조정 됩니다. 다음과 같이 작성할 수도 있습니다.
 
 ```cpp
 locale loc(locale::empty(),
@@ -142,36 +142,36 @@ cout.imbue(loc);
 
 |생성자|Description|
 |-|-|
-|[로캘](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|
+|[locale](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
-|[범주](#category)|표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.|
+|[category](#category)|표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
 |멤버 함수|Description|
 |-|-|
 |[결합](#combine)|지정된 로캘의 패싯을 대상 로캘로 삽입합니다.|
-|[(이름)](#name)|저장된 로캘 이름을 반환합니다.|
+|[name](#name)|저장된 로캘 이름을 반환합니다.|
 
 ### <a name="static-functions"></a>정적 함수
 
 |||
 |-|-|
-|[고전적인](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
-|[글로벌](#global)|프로그램에 대한 기본 로컬을 다시 설정합니다.|
+|[기존](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
+|[global](#global)|프로그램에 대한 기본 로컬을 다시 설정합니다.|
 
 ### <a name="operators"></a>연산자
 
 |연산자|Description|
 |-|-|
-|[연산자 =](#op_eq)|로캘을 할당합니다.|
-|[연산자!=](#op_neq)|두 로캘이 다른지 테스트합니다.|
-|[연산자()](#op_call)|두 개의 `basic_string` 개체를 비교합니다.|
-|[연산자==](#op_eq_eq)|두 로캘이 같은지 테스트합니다.|
+|[연산자 =](#op_eq)|로캘을 할당 합니다.|
+|[연산자! =](#op_neq)|두 로캘이 다른지 테스트합니다.|
+|[연산자 ()](#op_call)|두 개의 `basic_string` 개체를 비교합니다.|
+|[연산자 = =](#op_eq_eq)|두 로캘이 같은지 테스트합니다.|
 
 ### <a name="classes"></a>클래스
 
@@ -182,11 +182,11 @@ cout.imbue(loc);
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<locale>
+**헤더:**\<locale>
 
 **네임스페이스:** std
 
-## <a name="localecategory"></a><a name="category"></a>로캘::카테고리
+## <a name="localecategory"></a><a name="category"></a>locale:: category
 
 표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.
 
@@ -204,29 +204,29 @@ static const int none = 0;
 
 ### <a name="remarks"></a>설명
 
-형식은 클래스 로캘에 로컬 비트 마스크 형식의 별개의 요소 그룹을 나타낼 수 있는 **int** 형식의 동의어또는 해당 C 로캘 범주를 나타내는 데 사용할 수 있습니다. 요소는 다음과 같습니다.
+형식은 클래스 로캘로 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용할 수 있는 **int** 형식의 동의어입니다. 요소는 다음과 같습니다.
 
-- `collate`, C 범주에 해당하는 LC_COLLATE
+- `collate`는 C 범주에 해당 LC_COLLATE
 
-- `ctype`, C 범주에 해당하는 LC_CTYPE
+- `ctype`는 C 범주에 해당 LC_CTYPE
 
-- `monetary`, C 범주에 해당하는 LC_MONETARY
+- `monetary`는 C 범주에 해당 LC_MONETARY
 
-- `numeric`, C 범주에 해당하는 LC_NUMERIC
+- `numeric`는 C 범주에 해당 LC_NUMERIC
 
-- `time`C 범주에 해당하는 LC_TIME
+- `time`는 C 범주에 해당 LC_TIME
 
-- `messages`LC_MESSAGES POSIX 범주에 해당
+- `messages`-POSIX 범주에 해당 LC_MESSAGES
 
-두 가지 더 유용한 값은 다음과 같습니다.
+보다 유용한 두 가지 값은 다음과 같습니다.
 
-- `none`을 사용하여 C 범주에 해당하지 않습니다.
+- `none`-C 범주에 해당 하지 않습니다.
 
-- `all`모든 범주의 C 조합에 해당하는 LC_ALL
+- `all`-모든 범주의 C 공용 구조체에 해당 LC_ALL
 
-&#124; 에서와 같이 이러한 상수와 함께 사용하여 `OR` 임의의 범주 그룹을 나타낼 수 있습니다. `time` `monetary`
+`OR`&#124;와 같이 이러한 상수를 사용 하 여 임의의 범주 그룹을 나타낼 수 있습니다 `monetary` `time` .
 
-## <a name="localeclassic"></a><a name="classic"></a>로캘::클래식
+## <a name="localeclassic"></a><a name="classic"></a>locale:: 클래식
 
 정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.
 
@@ -234,13 +234,13 @@ static const int none = 0;
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 C 로캘에 대한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-클래식 C 로캘은 표준 C 라이브러리 내의 미국 영어 ASCII 로캘입니다. 국제화되지 않은 프로그램에서 암시적으로 사용되는 로캘입니다.
+클래식 C 로캘은 표준 C 라이브러리 내에서 미국 영어 ASCII 로캘입니다. 국제화 되지 않은 프로그램에서 암시적으로 사용 되는 로캘입니다.
 
 ### <a name="example"></a>예제
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>로캘::결합
+## <a name="localecombine"></a><a name="combine"></a>locale:: combine
 
 지정된 로캘의 패싯을 대상 로캘로 삽입합니다.
 
@@ -295,9 +295,9 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 대상 로캘에 삽입할 패싯을 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-멤버 함수는 *source_locale*에 ** \*** `Facet` 나열된 면에 대체하거나 추가하는 로캘 개체를 반환합니다.
+멤버 함수는 source_locale에 나열 된 패싯을 대체 하거나 ** \* 이** 패싯을 추가 하는 로캘 개체를 반환 합니다 `Facet` . *source_locale*
 
 ### <a name="example"></a>예제
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet-class"></a><a name="facet_class"></a>페이스트 클래스
+## <a name="facet-class"></a><a name="facet_class"></a>패싯 클래스
 
 모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.
 
@@ -346,13 +346,13 @@ private:
 
 ### <a name="remarks"></a>설명
 
-클래스의 `facet`개체를 복사하거나 할당할 수 없습니다. `locale::facet` 클래스에서 파생된 개체는 생성하고 삭제할 수 있지만 기본 클래스 proper의 개체는 생성하고 삭제할 수 없습니다. 일반적으로 에서 와 `_Myfac` 같이 를 `facet` 생성할 `locale`때 파생된 개체를 생성합니다.`locale loc(locale::classic(), new _Myfac);`
+클래스의 개체를 복사 하거나 할당할 수 없습니다 `facet` . `locale::facet` 클래스에서 파생된 개체는 생성하고 삭제할 수 있지만 기본 클래스 proper의 개체는 생성하고 삭제할 수 없습니다. 일반적으로에서 `_Myfac` `facet` 와 같이을 생성할 때에서 파생 된 개체를 생성 합니다. `locale``locale loc(locale::classic(), new _Myfac);`
 
-이러한 경우 기본 클래스의 `facet` 생성자는 0 *참조* 인수를 가져야 합니다. 개체가 더 이상 필요하지 않으면 삭제되므로 개체의 수명을 책임지는 드문 경우에만 *비영참조* 인수를 제공합니다.
+이 경우 기본 클래스에 대 한 생성자에는 `facet` 0 *참조* 인수가 있어야 합니다. 개체가 더 이상 필요 하지 않은 경우 삭제 되므로 개체 수명에 대 한 책임을 지는 드문 경우에만 0이 아닌 *참조* 인수를 제공 합니다.
 
-## <a name="localeglobal"></a><a name="global"></a>로캘::글로벌
+## <a name="localeglobal"></a><a name="global"></a>locale:: global
 
-프로그램에 대한 기본 로캘을 다시 설정하며, 이 호출은 C 및 C++모두에 대한 전역 로캘에 영향을 줍니다.
+프로그램에 대한 기본 로캘을 다시 설정하며, 이 호출은 C 및 c + +의 전역 로캘에 영향을 줍니다.
 
 ```cpp
 static locale global(const locale& new_default_locale);
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 프로그램에서 기본 로캘로 사용할 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 기본 로캘이 다시 설정되기 전의 이전 로캘입니다.
 
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id-class"></a><a name="id_class"></a>ID 클래스
+## <a name="id-class"></a><a name="id_class"></a>id 클래스
 
 멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.
 
@@ -414,11 +414,11 @@ class id
 
 ### <a name="remarks"></a>설명
 
-멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. 클래스의 `id`개체를 복사하거나 할당할 수 없습니다.
+멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. 클래스의 개체를 복사 하거나 할당할 수 없습니다 `id` .
 
-## <a name="localelocale"></a><a name="locale"></a>로캘::로캘
+## <a name="localelocale"></a><a name="locale"></a>locale:: locale
 
-패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다. 또한 소멸자가 포함되어 있습니다.
+패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다. 소멸자도 포함 합니다.
 
 ```cpp
 locale();
@@ -454,23 +454,23 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째 및 세 번째 생성자는 모든 로캘 범주를 초기화하여 *locale_name*로캘 이름과 일치하는 동작을 갖도록 합니다. 나머지 생성자는 *from_locale*복사합니다.
+첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째와 세 번째 생성자는 *locale_name*로캘 이름과 일관 된 동작을 갖도록 모든 로캘 범주를 초기화 합니다. 나머지 생성자는 다음과 같은 예외를 제외 하 고 *from_locale*복사 합니다.
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-C & *new_category* 0이 아닌 범주 C에 해당하는 *다른* 면에서 대체합니다.
+C & *new_category* 가 0 *이 아닌 범주* c에 해당 하는 패싯을 대체 합니다.
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-replace_category *범주에* 해당하는 면에서 `replace_category & new_category` `locale(locale_name, all)` 대체됩니다.
+`locale(locale_name, all)`가 0이 아닌 *replace_category* 범주에 해당 하는 패싯을 바꿉니다 `replace_category & new_category` .
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-new_facet null 포인터가 *아닌* 경우 *new_facet*면에 *from_locale* 대체(또는 추가)합니다.
+*new_facet* 가 null 포인터가 아닌 경우 *new_facet*패싯 *from_locale* 를 대체 하거나이를에 추가 합니다.
 
-로캘 이름 *locale_name* null 포인터이거나 그렇지 않으면 유효하지 않은 경우 함수는 [runtime_error](../standard-library/runtime-error-class.md)throw합니다.
+로캘 이름 *locale_name* null 포인터 이거나 잘못 된 경우 함수는 [runtime_error](../standard-library/runtime-error-class.md)를 throw 합니다.
 
 ### <a name="example"></a>예제
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>로캘::이름
+## <a name="localename"></a><a name="name"></a>locale:: name
 
 저장된 로캘 이름을 반환합니다.
 
@@ -520,7 +520,7 @@ int main( ) {
 string name() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 로캘의 이름을 지정하는 문자열입니다.
 
@@ -551,15 +551,15 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>로캘:::연산자=
+## <a name="localeoperator"></a><a name="op_eq"></a>locale:: operator =
 
-로캘을 할당합니다.
+로캘을 할당 합니다.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>로캘:::연산자!=
+## <a name="localeoperator"></a><a name="op_neq"></a>locale:: operator! =
 
 두 로캘이 다른지 테스트합니다.
 
@@ -572,13 +572,13 @@ bool operator!=(const locale& right) const;
 *오른쪽*\
 같지 않음을 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-로캘이 동일한 로캘의 복사본이 아닌 경우 **true인** 부울 값입니다. 로캘이 동일한 로캘의 복사본인 경우 **false입니다.**
+로캘이 동일한 로캘의 복사본이 아닌 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본 인 경우 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
-두 로캘이 같은 로캘이거나 다른 로캘의 복사본인 경우 또는 이름이 동일한 경우 두 로캘이 동일합니다.
+두 로캘이 동일한 로캘이 면, 하나는 다른 것이 고, 다른 하나는 다른 로캘 이거나 동일한 이름인 경우 동일 합니다.
 
 ### <a name="example"></a>예제
 
@@ -620,9 +620,9 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>로캘::연산자()
+## <a name="localeoperator"></a><a name="op_call"></a>locale:: operator ()
 
-두 개의 `basic_string` 개체를 비교합니다.
+`basic_string`이 로캘의 std:: collate 패싯에 의해 정의 된 사전적 비교 규칙에 따라 두 개체를 비교 합니다 <charT> .
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -633,21 +633,15 @@ bool operator()(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-왼쪽 문자열입니다.
+*비어*\
+비교할 첫째 문자열입니다.
 
 *오른쪽*\
-오른쪽 문자열입니다.
+비교할 둘째 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-멤버 함수는 다음을 반환합니다.
-
-- 첫 번째 시퀀스가 두 번째 시퀀스보다 작은 것으로 비교되는 경우, -1
-
-- 두 번째 시퀀스가 첫 번째 시퀀스보다 작은 것으로 비교되는 경우, +1
-
-- 시퀀스가 같은 경우, 0
+- `true`*left* 가 사전순으로 보다 작은 경우 *이 고, 그렇지*않으면 `false` 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -673,8 +667,8 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 int main( )
 {
    using namespace std;
-   wchar_t *sa = L"ztesting";
-   wchar_t *sb = L"\0x00DFtesting";
+   const wchar_t *sa = L"ztesting";
+   const wchar_t *sb = L"\0x00DFtesting";
    basic_string<wchar_t> a( sa );
    basic_string<wchar_t> b( sb );
 
@@ -692,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>로캘:::연산자==
+## <a name="localeoperator"></a><a name="op_eq_eq"></a>locale:: operator = =
 
 두 로캘이 같은지 테스트합니다.
 
@@ -705,13 +699,13 @@ bool operator==(const locale& right) const;
 *오른쪽*\
 같은지 여부를 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-로캘이 동일한 로캘의 복사본인 경우 **true인** 부울 값입니다. 로캘이 동일한 로캘의 복사본이 아닌 경우 **false입니다.**
+로캘이 동일한 로캘의 복사본 인 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본이 아닌 경우 **false** 입니다.
 
 ### <a name="remarks"></a>설명
 
-두 로캘이 같은 로캘이거나 다른 로캘의 복사본인 경우 또는 이름이 동일한 경우 두 로캘이 동일합니다.
+두 로캘이 동일한 로캘이 면, 하나는 다른 것이 고, 다른 하나는 다른 로캘 이거나 동일한 이름인 경우 동일 합니다.
 
 ### <a name="example"></a>예제
 
@@ -757,9 +751,9 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[\<로캘>](../standard-library/locale.md)\
+[\<locale>](../standard-library/locale.md)\
 [코드 페이지](../c-runtime-library/code-pages.md)\
 [로캘 이름, 언어 및 국가/지역 문자열](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

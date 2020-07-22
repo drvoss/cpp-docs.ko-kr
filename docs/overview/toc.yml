@@ -30,7 +30,7 @@
       href: ../build/vscpp-step-1-create.md
     - name: C++ 콘솔 앱 프로젝트 빌드 및 실행
       href: ../build/vscpp-step-2-build.md
-    - name: 두 번째 C++ 앱 만들기
+    - name: C++에서 콘솔 계산기 만들기
       href: ../get-started/tutorial-console-cpp.md
     - name: UWP 앱 만들기
       href: /windows/uwp/cpp-and-winrt-apis/get-started

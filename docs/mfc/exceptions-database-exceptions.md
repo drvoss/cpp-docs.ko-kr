@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624665"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403727"
 ---
 # <a name="exceptions-database-exceptions"></a>예외: 데이터베이스 예외
 
@@ -38,7 +38,7 @@ ms.locfileid: "84624665"
 
 **AFX_SQL_ERROR_XXX**형식의 이름이 있는 프레임 워크에서 정의 된 반환 코드 외에도 일부 [Cdbexceptions](reference/cdbexception-class.md) 는 [ODBC](../data/odbc/odbc-basics.md) 반환 코드를 기반으로 합니다. 이러한 예외에 대 한 반환 코드에는 **SQL_ERROR_XXX**형식의 이름이 있습니다.
 
-데이터베이스 클래스에서 반환할 수 있는 프레임 워크 정의 및 ODBC 정의의 반환 코드는 클래스의 [m_nRetCode](reference/cdbexception-class.md#m_nretcode) 데이터 멤버 아래에 설명 되어 있습니다 `CDBException` . ODBC에서 정의한 반환 코드에 대 한 추가 정보는 MSDN Library의 ODBC SDK *프로그래머 참조* 에서 확인할 수 있습니다.
+데이터베이스 클래스에서 반환할 수 있는 프레임 워크 정의 및 ODBC 정의의 반환 코드는 클래스의 [m_nRetCode](reference/cdbexception-class.md#m_nretcode) 데이터 멤버 아래에 설명 되어 있습니다 `CDBException` . Odbc에서 정의한 반환 코드에 대 한 추가 정보는 [Odbc 프로그래머 참조](/sql/odbc/reference/odbc-programmer-s-reference)에서 사용할 수 있습니다.
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>DAO 예외에 사용 되는 오류 코드
 

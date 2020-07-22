@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: b982c3adf59789f6c48e7e0f54ed4e71539692ad
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630783"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404283"
 ---
 # <a name="fatal-error-c1083"></a>심각한 오류 C1083
 
 > *Filetype* 파일을 열 수 없습니다. '*file*': *message*
 
-필요한 파일을 찾을 수 없는 경우 컴파일러에서 C1083 오류를 생성 합니다. 이 오류는 여러 가지 원인으로 인해 발생할 수 있습니다. 잘못 된 포함 검색 경로 이거나 누락 된 헤더 파일이 나 misnamed 헤더 파일이 가장 일반적인 원인 이지만 다른 파일 형식 및 문제로 인해 C1083 발생할 수도 있습니다. 컴파일러에서이 오류를 생성 하는 일반적인 이유는 다음과 같습니다.
+필요한 파일을 찾을 수 없는 경우 컴파일러에서 C1083 오류를 생성 합니다. 이 오류의 원인은 다양합니다. 잘못 된 포함 검색 경로 이거나 누락 된 헤더 파일이 나 misnamed 헤더 파일이 가장 일반적인 원인 이지만 다른 파일 형식 및 문제로 인해 C1083 발생할 수도 있습니다. 컴파일러에서이 오류를 생성 하는 일반적인 이유는 다음과 같습니다.
 
 ## <a name="the-specified-file-name-is-wrong"></a>지정한 파일 이름이 잘못됨
 
@@ -25,11 +25,11 @@ ms.locfileid: "69630783"
 
 `#include <algorithm.h>`
 
-원하는 파일을 찾을 수 없습니다. 대부분 C++ 의 표준 라이브러리 헤더 파일에는 .h 파일 이름 확장명이 없습니다. \< 이`#include` 지시문은 알고리즘 > 헤더를 찾을 수 없습니다. 이 문제를 해결 하려면 다음 예제와 같이 올바른 파일 이름을 입력 했는지 확인 합니다.
+원하는 파일을 찾을 수 없습니다. 대부분의 c + + 표준 라이브러리 헤더 파일에는 .h 파일 이름 확장명이 없습니다. \<algorithm>이 지시문은 헤더를 찾을 수 없습니다 `#include` . 이 문제를 해결 하려면 다음 예제와 같이 올바른 파일 이름을 입력 했는지 확인 합니다.
 
 `#include <algorithm>`
 
-특정 C 런타임 라이브러리 헤더는 표준 포함 디렉터리의 하위 디렉터리에 있습니다. 예를 들어 sys/types. h를 포함 하려면 `#include` 지시문에 sys 하위 디렉터리 이름을 포함 해야 합니다.
+특정 C 런타임 라이브러리 헤더는 표준 포함 디렉터리의 하위 디렉터리에 있습니다. 예를 들어 sys/types. h를 포함 하려면 지시문에 sys 하위 디렉터리 이름을 포함 해야 합니다. `#include`
 
 `#include <sys/types.h>`
 
@@ -45,7 +45,7 @@ ms.locfileid: "69630783"
 
 `#include <stdio.h>`
 
-컴파일러는 빌드 환경에서 정의한 검색 경로, **/i** 컴파일러 옵션, **/x** 컴파일러 옵션 및 **INCLUDE** 환경 변수를 따릅니다. 파일을 찾는 데 사용 되는 검색 순서에 대 한 구체적인 정보를 비롯 한 자세한 내용은 [#include 지시문 (CC++/)](../../preprocessor/hash-include-directive-c-cpp.md) 및 [#import 지시문](../../preprocessor/hash-import-directive-cpp.md)을 참조 하세요.
+컴파일러는 빌드 환경에서 정의한 검색 경로, **/i** 컴파일러 옵션, **/x** 컴파일러 옵션 및 **INCLUDE** 환경 변수를 따릅니다. 파일을 찾는 데 사용 되는 검색 순서에 대 한 구체적인 정보를 비롯 한 자세한 내용은 [#include 지시문 (c/c + +)](../../preprocessor/hash-include-directive-c-cpp.md) 및 [#import 지시문](../../preprocessor/hash-import-directive-cpp.md)을 참조 하세요.
 
 포함 파일이 원본 디렉터리를 기준으로 하는 다른 디렉터리에 있고 include 지시문에서 상대 경로를 사용 하는 경우 꺾쇠 괄호 대신 큰따옴표를 사용 해야 합니다. 예를 들어 헤더 파일 myheader이 헤더 라는 프로젝트 소스의 하위 디렉터리에 있는 경우이 예에서는 파일을 찾지 못하고 C1083을 발생 시킵니다.
 
@@ -59,15 +59,15 @@ ms.locfileid: "69630783"
 
 `#include <headers\myheader.h>`
 
-그런 다음 파일을 찾을 수 없습니다. 포함 검색 경로에 지정 된 디렉터리에 상대적인 올바른 경로를 사용 합니다. 이 예에서는 include 검색 경로를 \path\example\, 로 변경 하거나 `#include` 지시문에서 headers \ path 세그먼트를 제거할 수 있습니다.
+그런 다음 파일을 찾을 수 없습니다. 포함 검색 경로에 지정 된 디렉터리에 상대적인 올바른 경로를 사용 합니다. 이 예에서는 include 검색 경로를 \path\example로 변경 \, 하거나 지시문에서 headers \ path 세그먼트를 제거할 수 있습니다 `#include` .
 
-## <a name="third-party-library-issues-and-vcpkg"></a>타사 라이브러리 문제 및 Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>타사 라이브러리 문제 및 vcpkg
 
-빌드의 일부로 타사 라이브러리를 구성 하려고 할 때이 오류가 표시 되 면 Visual C++ 패키지 관리자 인 [Vcpkg](../../vcpkg.md)을 사용 하 여 라이브러리를 설치 하 고 빌드합니다. Vcpkg는 크고 증가 하는 [타사 라이브러리 목록을](https://github.com/Microsoft/vcpkg/tree/master/ports)지원 하 고 프로젝트의 일부로 성공한 빌드에 필요한 모든 구성 속성 및 종속성을 설정 합니다. 자세한 내용은 관련 [시각적 C++ 블로그](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) 게시물을 참조 하세요.
+빌드의 일부로 타사 라이브러리를 구성 하려고 할 때이 오류가 표시 되는 경우 c + + 패키지 관리자 인 [vcpkg](../../vcpkg.md)을 사용 하 여 라이브러리를 설치 하 고 빌드합니다. vcpkg는 크고 증가 하는 [타사 라이브러리 목록을](https://github.com/Microsoft/vcpkg/tree/master/ports)지원 하 고 프로젝트의 일부로 성공한 빌드에 필요한 모든 구성 속성 및 종속성을 설정 합니다.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>파일이 프로젝트에 있지만 포함 검색 경로는 아닙니다.
 
-헤더 파일이 프로젝트의 일부로 **솔루션 탐색기** 에 나열 된 경우에도 파일은 소스 파일의 `#include` 또는 `#import` 지시문에 의해 참조 되 고 포함 검색 경로에 있는 컴파일러 에서만 찾을 수 있습니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다. **/X** 컴파일러 옵션은 포함 검색 경로에서 디렉터리를 제외 하는 데 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. **/X** 컴파일러 옵션에 대 한 자세한 내용은 [/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)를 참조 하세요.
+헤더 파일이 프로젝트의 일부로 **솔루션 탐색기** 에 나열 된 경우에도 파일은 `#include` 소스 파일의 또는 지시문에 의해 참조 되 `#import` 고 포함 검색 경로에 있는 컴파일러 에서만 찾을 수 있습니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다. **/X** 컴파일러 옵션은 포함 검색 경로에서 디렉터리를 제외 하는 데 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. **/X** 컴파일러 옵션에 대 한 자세한 내용은 [/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)를 참조 하세요.
 
 이 문제를 해결하려면 컴파일러가 포함되거나 가져온 파일을 찾는 데 사용하는 경로를 수정합니다. 새 프로젝트는 기본 포함 검색 경로를 사용 합니다. 프로젝트에 대 한 디렉터리를 추가 하려면 포함 검색 경로를 수정 해야 할 수 있습니다. 명령줄에서 컴파일하는 경우 **INCLUDE** 환경 변수 또는 **/i** 컴파일러 옵션에 경로를 추가 하 여 파일에 대 한 경로를 지정 합니다.
 
@@ -75,7 +75,7 @@ Visual Studio에서 포함 디렉터리 경로를 설정 하려면 프로젝트�
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>명령줄 INCLUDE 또는 LIB 환경이 설정 되지 않았습니다.
 
-명령줄에서 컴파일러를 호출하는 경우 대체로 환경 변수를 사용하여 검색 경로를 지정합니다. **INCLUDE** 또는 **LIB** 환경 변수에 설명 된 검색 경로가 올바르게 설정 되지 않은 경우 C1083 오류가 발생할 수 있습니다. 개발자 명령 프롬프트 바로 가기를 사용 하 여 명령줄 빌드에 대 한 기본 환경을 설정 하는 것이 좋습니다. 자세한 내용은 [명령줄에서 CC++ /빌드](../../build/building-on-the-command-line.md)를 참조 하세요. 환경 변수 [를 사용 하는 방법에 대 한 자세한 내용은 방법: 빌드에서](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)환경 변수를 사용 합니다.
+명령줄에서 컴파일러를 호출하는 경우 대체로 환경 변수를 사용하여 검색 경로를 지정합니다. **INCLUDE** 또는 **LIB** 환경 변수에 설명 된 검색 경로가 올바르게 설정 되지 않은 경우 C1083 오류가 발생할 수 있습니다. 개발자 명령 프롬프트 바로 가기를 사용 하 여 명령줄 빌드에 대 한 기본 환경을 설정 하는 것이 좋습니다. 자세한 내용은 [명령줄에서 c/c + + 빌드](../../build/building-on-the-command-line.md)를 참조 하세요. 환경 변수를 사용 하는 방법에 대 한 자세한 내용은 [방법: 빌드 시 환경 변수 사용](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)을 참조 하세요.
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>파일이 잠겼거나 사용 중일 수 있습니다.
 
@@ -93,7 +93,7 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 
 - SDK 또는 타사 라이브러리를 설치 했지만 SDK 또는 라이브러리를 설치한 후에는 새 개발자 명령 프롬프트 창을 열지 않았습니다. SDK 또는 라이브러리에서 파일을 **포함** 경로에 추가 하는 경우 이러한 환경 변수 변경을 선택 하기 위해 새 개발자 명령 프롬프트 창을 열어야 할 수 있습니다.
 
-- 이 파일은 관리 코드를 사용 하지만 **/clr** 컴파일러 옵션은 지정 되지 않았습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.
+- 이 파일은 관리 코드를 사용 하지만 **/clr** 컴파일러 옵션은 지정 되지 않았습니다. 자세한 내용은 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조 하세요.
 
 - 헤더를 미리 컴파일하는 데 사용 되는 것 보다 다른 **/analyze** 컴파일러 옵션 설정을 사용 하 여 파일을 컴파일합니다. 프로젝트에 대 한 헤더를 미리 컴파일하는 경우 모두 동일한 **/analyze** 설정을 사용 해야 합니다. 자세한 내용은 [/analyze(코드 분석)](../../build/reference/analyze-code-analysis.md)를 참조하세요.
 
@@ -116,8 +116,8 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 #include "stdio.h"  // OK
 ```
 
-IDE 또는 명령줄에서 C/C++ 프로젝트를 빌드하는 방법 및 환경 변수를 설정 하는 방법에 대 한 자세한 내용은 [프로젝트 및 빌드 시스템](../../build/projects-and-build-systems-cpp.md)을 참조 하세요.
+IDE 또는 명령줄에서 C/c + + 프로젝트를 빌드하는 방법 및 환경 변수를 설정 하는 방법에 대 한 자세한 내용은 [프로젝트 및 빌드 시스템](../../build/projects-and-build-systems-cpp.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)
