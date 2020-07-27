@@ -3,12 +3,12 @@ title: C++ 규칙 향상
 ms.date: 05/18/2020
 description: Visual Studio의 Microsoft C++는 C++20 언어 표준을 완전하게 준수하기 위해 점점 향상되고 있습니다.
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630496"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405106"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio의 C++ 규칙 향상
 
@@ -188,7 +188,7 @@ int i = 42;
 long j = std::identity<long>{}(i);
 ```
 
-다음 예제에서는 새 `std::identity`(\<functional>에서 정의됨)를 `std::type_identity`와 함께 사용하는 방법을 보여줍니다.
+다음 예제에서는 새 `std::identity`(\<functional>에서 정의됨)를 새 `std::type_identity`와 함께 사용하는 방법을 보여 줍니다.
 
 ```cpp
 #include <type_traits>
@@ -376,7 +376,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>표준 라이브러리 향상
 
-- 고정/지수 전체 자릿수를 가진 \<charconv> `to_chars()`. (버전 16.4에서는 일반 전체 자릿수를 사용할 계획입니다.)
+- 고정/지수 전체 자릿수를 가진 \<charconv> `to_chars()` (버전 16.4에서는 일반 전체 자릿수를 사용할 계획입니다.)
 - [P0020R6](https://wg21.link/p0020r6): atomic\<float>, atomic\<double>, atomic\<long double>
 - [P0463R1](https://wg21.link/p0463r1): endian
 - [P0482R6](https://wg21.link/p0482r6): char8_t에 대한 라이브러리 지원
@@ -1322,7 +1322,7 @@ int main()
 
 - 이전에는 동시성 라이브러리에 전달된 일부 시간 값이 오버플로되었습니다(예: `condition_variable::wait_for(seconds::max())`). 현재 수정된 이 오버플로는 임의의 29일 주기로 동작을 변경했습니다(기본 Win32 API에서 허용된 uint32_t 밀리초가 오버플로된 경우).
 
-- 이제 \<ctime> 헤더가 전역 네임스페이스에서 선언하는 것 외에 `std` 네임스페이스에서도 `timespec` 및 `timespec_get`을 올바르게 선언합니다.
+- 이제 \<ctime> 헤더가 전역 네임스페이스뿐 아니라 `std` 네임스페이스에서도 `timespec` 및 `timespec_get`을 올바르게 선언합니다.
 
 ### <a name="various-fixes-for-containers"></a>컨테이너에 대한 다양한 수정
 
@@ -1410,7 +1410,7 @@ struct Comparer  {
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11: 더 많은 라이브러리의 SFINAE 식 지원
 
-컴파일러는 SFINAE 식에 대한 지원을 계속 개선하고 있습니다. 이는 **decltype** 및 **constexpr** 식이 템플릿 매개 변수로 나타날 수 있는 템플릿 인수 추론 및 대체에 필요합니다. 자세한 내용은 [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)(Visual Studio 2017 RC의 SFINAE 식 향상)를 참조하세요.
+컴파일러는 SFINAE 식에 대한 지원을 계속 개선하고 있습니다. 이는 **decltype** 및 **constexpr** 식이 템플릿 매개 변수로 나타날 수 있는 템플릿 인수 추론 및 대체에 필요합니다. 자세한 내용은 [Expression SFINAE improvements in Visual Studio 2017 RC](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/)(Visual Studio 2017 RC의 SFINAE 식 향상)를 참조하세요.
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14: 집계용 NSDMI
 
@@ -1542,7 +1542,7 @@ C++17 컴파일러 변경에 대응하여 표준 라이브러리가 업데이트
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 라이브러리 기본 사항 V1
 
-[P0220R1](https://wg21.link/p0220r1)은 C++17에 대한 라이브러리 기본 사항 기술 사양을 표준으로 통합합니다. \<experimental/tuple>, \<experimental/optional>, \<experimental/functional>, \<experimental/any>, \<experimental/string_view>, \<experimental/memory>, \<experimental/memory_resource> 및 \<experimental/algorithm>의 업데이트를 다룹니다.
+[P0220R1](https://wg21.link/p0220r1)은 C++17에 대한 라이브러리 기본 사항 기술 사양을 표준으로 통합합니다. \<experimental/tuple>, \<experimental/optional>, \<experimental/functional>, \<experimental/any>, \<experimental/string_view>, \<experimental/memory>, \<experimental/memory_resource>, \<experimental/algorithm>의 업데이트를 포함합니다.
 
 ### <a name="c17-improving-class-template-argument-deduction-for-the-standard-library"></a>C++17: 표준 라이브러리의 클래스 템플릿 인수 추론 향상
 
@@ -1706,7 +1706,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C++17: 기본 문자열 변환 복구
 
-[P0682R1](https://wg21.link/p0682r1) P0067R5의 새 기본 문자열 변환 기능에서 새 헤더 \<charconv>로 이동하고 `std::error_code` 대신 `std::errc`를 사용하여 오류 처리 변경을 포함하는 다른 개선 사항을 만듭니다.
+[P0682R1](https://wg21.link/p0682r1) P0067R5의 새 기본 문자열 변환 함수를 새 헤더 \<charconv>로 이동하고 `std::error_code` 대신 `std::errc`를 사용하여 오류 처리 변경을 포함하는 다른 개선 사항을 만듭니다.
 
 ### <a name="c17-constexpr-for-char_traits-partial"></a>C++17: `char_traits`에 대한 **constexpr**(부분)
 
@@ -2996,7 +2996,7 @@ struct D : B<T>
 D<int> d;
 ```
 
-오류를 수정하려면 B() 식을 B\<T>()로 변경하세요.
+오류를 수정하려면 B() 식을 B\<T>()로 변경합니다.
 
 ### <a name="constexpr-aggregate-initialization"></a>**constexpr** 집계 초기화
 
