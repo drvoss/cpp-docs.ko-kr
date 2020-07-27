@@ -3,12 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630482"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446872"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -20,7 +20,7 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 - C++ 17 기능 및 정확성 수정에 대한 향상된 지원 및 모듈, 코루틴 등과 같은 C++ 20 기능에 대한 실험적 지원입니다. 자세한 내용은 [Visual Studio 2019의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
 
-- `/std:c++latest` 옵션에는 세 방향 비교를 위한 C++20 연산자 \<=> ("spaceship")의 초기 지원을 포함한 완료되지 않은 C++20 기능이 포함되어 있습니다.
+- `/std:c++latest` 옵션에는 세 방향 비교를 위한 C++20 연산자 \<=>(“spaceship”)의 초기 지원을 비롯하여 완료되지 않은 C++20 기능이 포함되어 있습니다.
 
 - C++ 컴파일러 스위치 `/Gm`은 이제 사용되지 않습니다. 명시적으로 정의된 경우 빌드 스크립트에서 `/Gm` 스위치를 사용하지 않도록 설정하는 것이 좋습니다. 하지만 "경고를 오류로 처리"(`/WX`)를 사용하는 경우 오류로 처리되지 않으므로 `/Gm`에 대한 사용 중단 경고를 안전하게 무시할 수도 있습니다.
 
@@ -62,7 +62,7 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
   - `std::copy`, `std::vector` 및 `std::string` 구문과 같은 `memmove`를 사용하여 코드의 최적화를 개선했습니다.
 
-- 직접 포함되지 않은 표준 라이브러리 파트가 컴파일되지 않도록 표준 라이브러리 실제 디자인을 최적화했습니다. 이 변경으로 인해 \<vector>만 포함된 빈 파일의 빌드 시간이 절반으로 단축되었습니다. 따라서 이전에 간접적으로 포함된 헤더의 `#include` 지시문을 추가해야 할 수 있습니다. 예를 들어 `std::out_of_range`를 사용하는 코드는 이제 `#include <stdexcept>`를 추가해야 할 수 있습니다. 스트림 삽입 연산자를 사용하는 코드는 이제 `#include <ostream>`을 추가해야 할 수 있습니다. 실제로 \<stdexcept> 또는 \<ostream> 구성 요소를 사용하는 번역 단위만 컴파일하는 데 처리량 비용을 지급한다는 장점이 있습니다.
+- 직접 포함되지 않은 표준 라이브러리 파트가 컴파일되지 않도록 표준 라이브러리 실제 디자인을 최적화했습니다. 이 변경으로 인해 \<vector>만 포함된 빈 파일의 빌드 시간이 절반으로 단축되었습니다. 따라서 이전에 간접적으로 포함된 헤더의 `#include` 지시문을 추가해야 할 수 있습니다. 예를 들어 `std::out_of_range`를 사용하는 코드는 이제 `#include <stdexcept>`를 추가해야 할 수 있습니다. 스트림 삽입 연산자를 사용하는 코드는 이제 `#include <ostream>`을 추가해야 할 수 있습니다. 실제로 \<stdexcept> 또는 \<ostream> 구성 요소를 사용하는 변환 단위만 컴파일하는 데 처리량 비용이 소요된다는 혜택이 있습니다.
 
 - 복사 작업, 순열(예: 반전 및 회전), 병렬 알고리즘 라이브러리의 처리량을 향상하고 코드 크기를 줄이기 위해 표준 라이브러리의 더 많은 곳에 `if constexpr`이 적용되었습니다.
 
@@ -70,7 +70,7 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 - 병렬 알고리즘 라이브러리의 런타임 동적 연결 검색은 더 이상 함수 포인터 배열을 저장하는 데 전체 페이지를 사용하지 않습니다. 이 메모리를 읽기 전용으로 표시하는 작업이 이제 보안과 관련이 없는 것으로 간주하였습니다.
 
-- `std::thread`의 생성자는 더 이상 스레드가 시작되기를 기다리지 않으며, 기본 C 라이브러리 `_beginthreadex`와 제공된 호출 가능 개체 간에 더 이상 너무 많은 함수 호출 레이어를 삽입하지 않습니다. 이전에 `std::thread`는 `_beginthreadex`와 제공된 호출 가능 개체 사이에 여섯 개의 함수를 배치했습니다. 이 숫자는 단 3개로 축소되었으며, 그중 2개만 `std::invoke`입니다. 이 변경을 통해 정확히 `std::thread`가 생성되는 시점에 시스템 시계가 변경된 경우 `std::thread`의 생성자가 중단되는 모호한 타이밍 버그가 해결됩니다.
+- `std::thread`의 생성자는 더 이상 스레드가 시작되기를 기다리지 않으며, 기본 C 라이브러리 `_beginthreadex`와 제공된 호출 가능 개체 간에 더 이상 너무 많은 함수 호출 레이어를 삽입하지 않습니다. 이전에 `std::thread`는 `_beginthreadex`와 제공된 호출 가능 개체 사이에 여섯 개의 함수를 배치했습니다. 이 숫자는 단 3개로 축소되었으며, 그중 2개만 `std::invoke`입니다. 이 변경을 통해 정확히 `std::thread`가 생성되는 시점에 시스템 시계가 변경된 경우 `std::thread`의 생성자가 응답을 중지하는 모호한 타이밍 버그가 해결됩니다.
 
 - `std::hash<std::filesystem::path>`를 구현할 때 도입된 `std::hash`에서 성능 회귀를 수정했습니다.
 
@@ -359,7 +359,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 ### <a name="conformance-improvements"></a>규칙 향상
 
 - \<any\>, \<string_view\>, `apply()`, `make_from_tuple()`을 추가했습니다.
-- \<optional\>, \<variant\>, `shared_ptr::weak_type` 및 \<cstdalign\>을 추가했습니다.
+- \<optional\>, \<variant\>, `shared_ptr::weak_type`, \<cstdalign\>을 추가했습니다.
 - `min(initializer_list)`, `max(initializer_list)`, `minmax(initializer_list)`, `min_element()`, `max_element()`, `minmax_element()`에서 C++14 `constexpr`을 사용하도록 설정했습니다.
 
 자세한 내용은 [Microsoft C++ 언어 규칙 테이블](../visual-cpp-language-conformance.md)을 참조하세요.
@@ -414,7 +414,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
 - 병렬 알고리즘 지원은 더 이상 실험적 지원이 아님
-- \<filesystem>의 새로운 구현
+- 새로운 \<filesystem> 구현
 - 기본 문자열 변환(부분)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 - `basic_string` 내부 증가 경로가 더 이상 `shrink_to_fit()` 경로에 없습니다.
 - `basic_string`의 변경 작업은 이제 할당되지 않은 빠른 경로와 할당된 느린 경로 함수에 팩터링되어 기능이 할당되므로 일반적인 재할당되지 않은 case가 호출자에 인라인될 가능성이 높아집니다.
 - `basic_string`의 변형 작업은 이제 크기를 조정하는 대신 원하는 상태로 재할당된 버퍼를 구성합니다. 예를 들어 문자열의 시작 부분에 있는 insert는 이제 정확히 한 번 삽입 후 콘텐츠를 이동합니다. 콘텐츠는 아래로 또는 새로 할당된 버퍼로 이동됩니다. 다시 할당하는 경우 먼저 새로 할당된 버퍼로 이동한 다음 아래로 이동하는 두 번 이동이 더 이상 수행되지 않습니다.
-- \<string\>에서 C 표준 라이브러리를 호출하는 작업은 이제 `errno`의 주소를 캐시하여 TLS와의 반복된 상호 작용을 제거합니다.
+- \<string\>에서 C 표준 라이브러리를 호출하는 작업은 이제 `errno` 주소를 캐시하여 TLS와의 반복된 상호 작용을 제거합니다.
 - `is_pointer` 구현이 간소화되었습니다.
 - 함수 기반 식 SFINAE가 `struct` 및 `void_t` 기반으로 변경되었습니다.
 - 이제 표준 라이브러리 알고리즘에서 반복기의 사후 증가를 방지합니다.
@@ -590,7 +590,7 @@ Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하�
 
 이제 원래 C++ 워크로드에 대한 보다 세분화된 설치 환경이 제공됩니다. 필요한 도구만 설치할 수 있도록 선택 가능한 구성 요소가 추가되었습니다. 설치 관리자 UI에 나열된 구성 요소에 대해 표시된 설치 크기는 정확하지 않으며 전체 크기는 이보다 클 수 있습니다.
 
-C++ 데스크톱 작업에서 Win32 프로젝트를 성공적으로 만들려면 도구 집합과 Windows SDK를 둘 다 설치해야 합니다. 제대로 작동하도록 권장(선택된) 구성 요소 **VC++ 2017 v141 도구 집합(x86, x64)** 및 **Windows 10 SDK(10.0.nnnnn)** 를 설치합니다. 필요한 도구가 설치되어 있지 않으면 프로젝트가 생성되지 않고 마법사가 중단됩니다.
+C++ 데스크톱 작업에서 Win32 프로젝트를 성공적으로 만들려면 도구 집합과 Windows SDK를 둘 다 설치해야 합니다. 제대로 작동하도록 권장(선택된) 구성 요소 **VC++ 2017 v141 도구 집합(x86, x64)** 및 **Windows 10 SDK(10.0.nnnnn)** 를 설치합니다. 필요한 도구가 설치되어 있지 않으면 프로젝트가 생성되지 않고 마법사가 응답을 중지합니다.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
@@ -598,7 +598,7 @@ Visual C++ 빌드 도구(이전에 독립 실행형 제품으로 제공)가 이�
 
 ## <a name="linux-development-with-c"></a>C++를 사용한 Linux 개발
 
-일반적으로 사용되는 확장인 [Linux 개발용 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)가 Visual Studio에 포함됩니다. 이 설치는 Linux 환경에서 실행되는 C++ 애플리케이션을 개발 및 디버깅하는 데 필요한 모든 사항을 제공합니다.
+일반적으로 사용되는 확장인 [Linux 개발용 Visual C++](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment)가 Visual Studio에 포함됩니다. 이 설치는 Linux 환경에서 실행되는 C++ 애플리케이션을 개발 및 디버깅하는 데 필요한 모든 사항을 제공합니다.
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 버전 15.2
 

@@ -1,23 +1,23 @@
 ---
-title: C++ 콘솔 앱 프로젝트 만들기
+title: C++에서 콘솔 계산기 만들기
 description: Visual C++에서 Hello World 콘솔 앱 및 계산기 앱 만들기
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80079285"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404452"
 ---
-# <a name="create-a-c-console-app-project"></a>C++ 콘솔 앱 프로젝트 만들기
+# <a name="create-a-console-calculator-in-c"></a>C++에서 콘솔 계산기 만들기
 
 ::: moniker range=">=vs-2019"
 
-C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio를 사용해 좀 더 어려운 문제인 계산기 앱을 개발해 보겠습니다.
+C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "Hello, world!" 애플리케이션입니다. 이 문서를 통해 Visual Studio에서 이 애플리케이션을 먼저 만든 후에 좀 더 어려운 계산기 앱을 만들겠습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -25,7 +25,7 @@ C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "H
 
 ## <a name="create-your-app-project"></a>앱 프로젝트 만들기
 
-Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다.   프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
+Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다. 프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
 
 1. Visual Studio를 방금 시작한 경우 Visual Studio 2019 대화 상자가 표시됩니다. **새 프로젝트 만들기**를 선택하여 시작합니다.
 
@@ -122,7 +122,7 @@ Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구�
 
    > 코드 이해:
    >
-   > - `#include` 문을 통해 다른 파일에 있는 코드를 참조할 수 있습니다. 경우에 따라 파일 이름이 꺾쇠 괄호( **\<\>** )로 묶여서 표시될 수 있습니다. 아니면 따옴표( **""** )로 묶일 수 있습니다. 일반적으로, C++ 표준 라이브러리를 참조할 때 꺾쇠 괄호를 사용하는 반면 다른 파일의 경우 따옴표를 사용합니다.
+   > - `#include` 문을 통해 다른 파일에 있는 코드를 참조할 수 있습니다. 경우에 따라 파일 이름이 꺾쇠 괄호( **\<\>** )로 묶여서 표시될 수 있습니다. 아니면 따옴표( **“ ”** )로 묶일 수 있습니다. 일반적으로, C++ 표준 라이브러리를 참조할 때 꺾쇠 괄호를 사용하는 반면 다른 파일의 경우 따옴표를 사용합니다.
    > - `using namespace std;` 줄은 이 파일에 사용할 C++ 표준 라이브러리의 항목을 가져오도록 컴파일러에 지시합니다. 이 줄이 없으면 라이브러리의 각 키워드에서는 해당 범위를 나타내는 `std::`가 앞에 와야 합니다. 예를 들어 해당 줄이 없으면 `cout`에 대한 참조는 각각 `std::cout`와 같이 작성되어야 합니다. 코드를 정리하기 위해 `using` 문을 추가합니다.
    > - C++인 표준 출력으로 인쇄하기 위해 `cout` 키워드를 사용합니다. **\<\<** 연산자는 어떤 항목이든지 표준 출력에 보내도록 컴파일러에 지시합니다.
    > - **endl** 키워드는 Enter 키와 같이 줄을 종료하고 커서를 다음 줄로 이동시킵니다. ""에 포함된 문자열 내에 `\n`을 배치하여 동일한 작업을 수행하는 것이 좋습니다. `endl`이 항상 버퍼를 플러시하고 프로그램의 성능을 저하시킬 수 있지만 매우 작은 앱이므로 가독성을 위해 대신 `endl`을 사용합니다.
@@ -381,7 +381,7 @@ Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구�
 
 ## <a name="next-steps"></a>다음 단계
 
-[C++용 Visual Studio에 대한 자세한 정보](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[C++용 Visual Studio에 대한 자세한 정보](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
@@ -395,7 +395,7 @@ C++ 프로그래머의 일반적인 시작점은 명령줄에서 실행되는 "H
 
 ## <a name="create-your-app-project"></a>앱 프로젝트 만들기
 
-Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다.   프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
+Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구성하고 ‘솔루션’을 사용하여 프로젝트를 구성합니다. 프로젝트에는 앱을 빌드하는 데 사용되는 모든 옵션, 구성 및 규칙이 포함됩니다. 또한 프로젝트의 모든 파일과 외부 파일 간의 관계를 관리합니다. 앱을 만들려면 먼저 새 프로젝트 및 솔루션을 만듭니다.
 
 1. Visual Studio의 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 창이 열립니다.
 
@@ -485,7 +485,7 @@ Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구�
 
    > 코드 이해:
    >
-   > - `#include` 문을 통해 다른 파일에 있는 코드를 참조할 수 있습니다. 경우에 따라 파일 이름이 꺾쇠 괄호( **\<\>** )로 묶여서 표시될 수 있습니다. 아니면 따옴표( **""** )로 묶일 수 있습니다. 일반적으로, C++ 표준 라이브러리를 참조할 때 꺾쇠 괄호를 사용하는 반면 다른 파일의 경우 따옴표를 사용합니다.
+   > - `#include` 문을 통해 다른 파일에 있는 코드를 참조할 수 있습니다. 경우에 따라 파일 이름이 꺾쇠 괄호( **\<\>** )로 묶여서 표시될 수 있습니다. 아니면 따옴표( **“ ”** )로 묶일 수 있습니다. 일반적으로, C++ 표준 라이브러리를 참조할 때 꺾쇠 괄호를 사용하는 반면 다른 파일의 경우 따옴표를 사용합니다.
    > - `#include "pch.h"`(또는 Visual Studio 2017 및 이전 버전`#include "stdafx.h"`) 줄은 미리 컴파일된 헤더라는 항목을 참조합니다. 해당 항목은 컴파일 시간을 개선하기 위해 전문 프로그래머에 의해 자주 사용되지만 이 자습서에서 다루지 않습니다.
    > - `using namespace std;` 줄은 이 파일에 사용할 C++ 표준 라이브러리의 항목을 가져오도록 컴파일러에 지시합니다. 이 줄이 없으면 라이브러리의 각 키워드에서는 해당 범위를 나타내는 `std::`가 앞에 와야 합니다. 예를 들어 해당 줄이 없으면 `cout`에 대한 참조는 각각 `std::cout`와 같이 작성되어야 합니다. 코드를 정리하기 위해 `using` 문을 추가합니다.
    > - C++인 표준 출력으로 인쇄하기 위해 `cout` 키워드를 사용합니다. **\<\<** 연산자는 어떤 항목이든지 표준 출력에 보내도록 컴파일러에 지시합니다.
@@ -752,6 +752,6 @@ Visual Studio는 ‘프로젝트’를 사용하여 앱에 대한 코드를 구�
 
 ## <a name="next-steps"></a>다음 단계
 
-[C++용 Visual Studio에 대한 자세한 정보](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[C++용 Visual Studio에 대한 자세한 정보](https://devblogs.microsoft.com/cppblog/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
