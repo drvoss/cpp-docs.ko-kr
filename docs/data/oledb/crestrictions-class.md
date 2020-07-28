@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220446"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 클래스
 
@@ -82,13 +82,13 @@ HRESULT Open(const CSession& session,
 진행 스키마 행 집합에 대 한 제한을 지정 합니다.
 
 *bBind*<br/>
-진행 열 맵을 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은 **true**로, 열 맵이 자동으로 바인딩됩니다. *Bbind* 를 **false** 로 설정 하면 수동으로 바인딩할 수 있도록 열 맵의 자동 바인딩이 방지 됩니다. (수동 바인딩은 OLAP 사용자에 게 특히 관심이 있습니다.)
+진행 열 맵을 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은입니다 **`true`** . 그러면 열 맵이 자동으로 바인딩됩니다. *Bbind* 를로 설정 하면 **`false`** 수동으로 바인딩할 수 있도록 열 맵의 자동 바인딩이 방지 됩니다. (수동 바인딩은 OLAP 사용자에 게 특히 관심이 있습니다.)
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 스키마 행 집합에 대해 최대 7 개의 제한을 지정할 수 있습니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: 7f0c6457cc0806a0f1764300cffa1c9878b8a600
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ec639004884d022fe6a827c2ec31d3201ea04657
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214219"
 ---
 # <a name="_mm_stream_sd"></a>_mm_stream_sd
 
@@ -34,8 +34,8 @@ void _mm_stream_sd(
 *Dest*\
 제한이 원본 데이터가 작성 될 위치에 대 한 포인터입니다.
 
-*Source*\
-진행 아래쪽 64 비트에 쓸 `double` 값을 포함 하는 128 비트 값입니다.
+*원본*\
+진행 아래쪽 64 비트에 쓸 값을 포함 하는 128 비트 값 **`double`** 입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -43,17 +43,17 @@ void _mm_stream_sd(
 
 ## <a name="requirements"></a>요구 사항
 
-|내장 함수|아키텍처|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_stream_sd`|SSE4a|
 
-**헤더 파일** \<intrin.h >
+**헤더 파일** \<intrin.h>
 
 ## <a name="remarks"></a>설명
 
-내장 함수는 `movntsd` 명령을 생성 합니다. 이 명령에 대 한 하드웨어 지원을 확인 하려면를 `__cpuid` 사용 `InfoType=0x80000001` 하 여 내장 함수를 호출 `CPUInfo[2] (ECX)`하 고의 6 비트를 확인 합니다. 하드웨어에서이 명령을 지 원하는 경우이 비트는 1이 고, 그렇지 않으면 0입니다.
+내장 함수는 명령을 생성 합니다 `movntsd` . 이 명령에 대 한 하드웨어 지원을 확인 하려면를 사용 하 여 내장 함수를 호출 하 `__cpuid` `InfoType=0x80000001` 고의 6 비트를 확인 `CPUInfo[2] (ECX)` 합니다. 하드웨어에서이 명령을 지 원하는 경우이 비트는 1이 고, 그렇지 않으면 0입니다.
 
-명령을 지원 하지 않는 하드웨어에서 `_mm_stream_sd` 내장 함수를 사용 하는 코드를 실행 하는 경우 결과를 예측할 수 없습니다. `movntsd`
+명령을 지원 하지 않는 하드웨어에서 내장 함수를 사용 하는 코드를 실행 하는 경우 `_mm_stream_sd` `movntsd` 결과를 예측할 수 없습니다.
 
 ## <a name="example"></a>예제
 
@@ -85,7 +85,7 @@ d[0] = -1, d[1] = 1
 
 Advanced 마이크로 장치, i n c .의 저작권 2007 부분 All rights reserved. 고급 마이크로 장치, i n c .의 권한으로 재현 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_mm_stream_ss](../intrinsics/mm-stream-ss.md)\
 [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)\

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214752"
 ---
 # <a name="compiler-error-c2143"></a>컴파일러 오류 C2143
 
-구문 오류: 'token2' 전에 ' token1' 누락
+구문 오류: ' token2 ' 앞에 ' token1 '가 없습니다.
 
-컴파일러 특정 토큰 (즉, 공백 문자 이외의 언어 요소)를 예상 하 고 다른 토큰이 발견 합니다.
+컴파일러가 특정 토큰 (공백 이외의 언어 요소)을 예상 하 고 다른 토큰을 발견 했습니다.
 
-확인 합니다 [ C++ 언어 참조](../../cpp/cpp-language-reference.md) 코드 구문이 잘못 되지 않는 확인 합니다. 컴파일러 문제를 발생 시키는 줄을 발견 한 후이 오류를 보고, 때문에 여러 줄 코드의 오류를 확인 합니다.
+[C + + 언어 참조](../../cpp/cpp-language-reference.md) 를 확인 하 여 코드의 구문이 잘못 된 위치를 확인 합니다. 컴파일러가 문제의 원인이 되는 줄을 발견 한 후에이 오류를 보고할 수 있으므로 오류 앞에 나오는 여러 줄의 코드를 확인 합니다.
 
-C2143은 다양 한 상황에서 발생할 수 있습니다.
+C2143는 다양 한 상황에서 발생할 수 있습니다.
 
-다음 예제와 같이 이름(`::`, `->` 및 `.`)을 정규화할 수 있는 연산자 다음에 키워드 `template`이 와야 하는 경우에 발생할 수 있습니다.
+이는 다음 `::` `->` `.` 예제와 같이 이름 (, 및)을 한정할 수 있는 연산자 뒤에 키워드가와 야 하는 경우에 발생할 수 있습니다 **`template`** .
 
 ```cpp
 class MyClass
@@ -35,7 +35,7 @@ class MyClass
 };
 ```
 
-기본적으로 C++는 `Ty::PutFuncType`이 템플릿이 아니라고 가정하기 때문에 다음 `<`는 보다 작음 기호로 해석됩니다.  꺾쇠 괄호로 올바르게 구문 분석될 수 있도록 `PutFuncType`이 템플릿임을 컴파일러에 명시적으로 알려야 합니다. 이 오류를 해결하려면 다음과 같이 종속 형식의 이름에서 `template` 키워드를 사용합니다.
+기본적으로 C++는 `Ty::PutFuncType`이 템플릿이 아니라고 가정하기 때문에 다음 `<`는 보다 작음 기호로 해석됩니다.  꺾쇠 괄호로 올바르게 구문 분석될 수 있도록 `PutFuncType`이 템플릿임을 컴파일러에 명시적으로 알려야 합니다. 이 오류를 해결 하려면 다음과 같이 **`template`** 종속 형식의 이름에 키워드를 사용 합니다.
 
 ```cpp
 class MyClass
@@ -47,7 +47,7 @@ class MyClass
 };
 ```
 
-C2143 발생할 수 있습니다 때 **/clr** 되 고 `using` 지시문에 구문 오류가:
+C2143는 **/clr** 을 사용 하 고 지시문에 **`using`** 구문 오류가 있는 경우에 발생할 수 있습니다.
 
 ```cpp
 // C2143a.cpp
@@ -56,7 +56,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;
 ```
 
-또한 사용 하지 않고 CLR 구문을 사용 하 여 소스 코드 파일을 컴파일하는 하려는 하는 경우 발생할 수 있습니다 **/clr**:
+또한 **/clr**을 사용 하지 않고 CLR 구문을 사용 하 여 소스 코드 파일을 컴파일하려고 시도 하는 경우에도 발생할 수 있습니다.
 
 ```cpp
 // C2143b.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-`if` 문 다음에 오는 첫 번째 비공백 문자는 왼쪽 괄호여야 합니다. 컴파일러는 다른 변환할 수 없습니다.
+문 뒤에 오는 공백이 아닌 첫 번째 문자는 **`if`** 왼쪽 괄호 여야 합니다. 컴파일러는 다른 항목을 변환할 수 없습니다.
 
 ```cpp
 // C2143c.cpp
@@ -108,7 +108,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK
 ```
 
-또는 레이블이 문에 첨부되지 않은 경우. 레이블을 자체적으로 배치 해야 하는 경우 예를 들어, 복합 문의 끝에 연결할 null 문:
+또는 레이블이 문에 첨부되지 않은 경우. 예를 들어, 복합 문의 끝에 레이블을 단독으로 저장 해야 하는 경우에는 null 문에 연결 합니다.
 
 ```cpp
 // C2143f.cpp
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-형식에 정규화 되지 않은 호출이 수행 될 때 오류가 발생할 수 있습니다는 C++ 표준 라이브러리:
+C + + 표준 라이브러리의 형식에 대해 정규화 되지 않은 호출이 수행 될 때 오류가 발생할 수 있습니다.
 
 ```cpp
 // C2143g.cpp
@@ -132,7 +132,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK
 ```
 
-또는 `typename` 키워드가 누락된 경우:
+또는 누락 된 키워드가 있습니다 **`typename`** .
 
 ```cpp
 // C2143h.cpp
@@ -164,7 +164,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK
 ```
 
-C 프로그램에서 함수의 시작 부분에서 변수를 선언 해야 하 고 함수 선언 되지 않은 명령을 실행 한 후 선언할 수 없습니다.
+C 프로그램에서 변수는 함수 시작 부분에 선언 되어야 하며 함수에서 선언 되지 않은 명령을 실행 한 후에 선언할 수 없습니다.
 
 ```C
 // C2143j.c

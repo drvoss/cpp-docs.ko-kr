@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909263"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189443"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -77,7 +77,7 @@ long double asin( long double x );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 여 **asin** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **asin** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 값을 사용 하 여 **asin** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **asin** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -91,7 +91,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double
 
 자세한 내용은 [acos, acosf, acosl](acos-acosf-acosl.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189781"
 ---
 # <a name="is-isw-routines"></a>is, isw 루틴
 
@@ -35,7 +35,7 @@ ms.locfileid: "70940182"
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym, iscsymf, __iscsym, \_ _iswcsym, \_ _iscsymf, \_ _iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
@@ -43,14 +43,14 @@ ms.locfileid: "70940182"
 
 이러한 루틴은 지정한 조건에 대해 문자를 테스트합니다.
 
-**is** 루틴은 -1(`EOF`)에서 **UCHAR_MAX**(0xFF)(포함)까지 정수 인수에 대해 의미 있는 결과를 생성합니다. 필요한 인수 형식은 `int`입니다.
+**is** 루틴은 -1(`EOF`)에서 **UCHAR_MAX**(0xFF)(포함)까지 정수 인수에 대해 의미 있는 결과를 생성합니다. 필요한 인수 형식은 **`int`** 입니다.
 
 > [!CAUTION]
-> **is** 루틴의 경우 `char` 형식의 인수를 전달하면 예기치 않은 결과가 발생할 수 있습니다. 값이 0x7F보다 큰 `char` 형식의 SBCS 또는 MBCS 싱글바이트 문자는 음수입니다. `char`이 전달되면 컴파일러는 값을 부호 있는 `int` 또는 부호 있는 **long**으로 변환할 수 있습니다. 이 값은 컴파일러에서 부호 확장될 수 있으며 예기치 않은 결과가 발생할 수 있습니다.
+> **Is** 루틴의 경우 형식의 인수를 전달 하면 **`char`** 예기치 않은 결과가 발생할 수 있습니다. 0x7F 보다 큰 형식의 SBCS 또는 MBCS 싱글바이트 문자는 **`char`** 음수입니다. **`char`** 이 전달 되 면 컴파일러에서 값을 또는로 변환할 수 있습니다 **`signed int`** **`signed long`** . 이 값은 컴파일러에서 부호 확장될 수 있으며 예기치 않은 결과가 발생할 수 있습니다.
 
-**isw** 루틴은 - 1(**WEOF**)에서 0xFFFF(포함)까지 정수 값에 대해 의미 있는 결과를 생성합니다. **wint_t** 데이터 형식은 **unsigned short**로 WCHAR.H에 정의됩니다. 와이드 문자 또는 와이드 문자 파일 끝(**WEOF**) 값을 가질 수 있습니다.
+**isw** 루틴은 - 1(**WEOF**)에서 0xFFFF(포함)까지 정수 값에 대해 의미 있는 결과를 생성합니다. **Wint_t** 데이터 형식은 WCHAR에 정의 되어 있습니다. H **`unsigned short`** , 와이드 문자 또는 와이드 문자 끝 (**weof**) 값을 포함할 수 있습니다.
 
-출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.
+출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.
 
 "C" 로캘에서 **is** 루틴에 대한 테스트 조건은 다음과 같습니다.
 
@@ -102,7 +102,7 @@ ASCII 문자(0x00-0x7F)
 **isw** 루틴의 경우 지정된 조건의 테스트 결과는 로캘과 무관합니다. **isw** 함수에 대한 테스트 조건은 다음과 같습니다.
 
 `iswalnum`<br/>
-`iswalpha` 또는 `iswdigit`
+`iswalpha` 또는 `iswdigit`입니다.
 
 `iswalpha`<br/>
 `iswcntrl`, `iswdigit`, `iswpunct`, `iswspace`가 모두 0인 구현 시 정의된 집합 중 하나인 와이드 문자. `iswalpha`는 `iswupper` 또는 `iswlower`가 0이 아닌 와이드 문자에 대해서는 0이 아닌 값을 반환합니다.
@@ -129,19 +129,19 @@ ASCII 문자의 와이드 문자 표현(0x0000-0x007F)
 
 |*desc* 인수 값|해당 iswctype( *c, desc* )|
 |------------------------------|----------------------------------------|
-|**_ALPHA**|**iswalpha(** `c` **)**|
+|**_ALPHA**|**iswalpha (** `c` **)**|
 |**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_CONTROL**|**iswcntrl(** `c` **)**|
 |**_DIGIT**|**iswdigit(** `c` **)**|
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph (** `c` **)**|
 |**_LOWER**|**iswlower(** `c` **)**|
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
-|**_PUNCT**|**iswpunct(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint (** `c` **)**|
+|**_PUNCT**|**iswpunct (** `c` **)**|
+|**_BLANK**|**iswblank (** `c` **)**|
 |**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper(** `c` **)**|
-|**_HEX**|**iswxdigit(** `c` **)**|
+|**_HEX**|**iswxdigit (** `c` **)**|
 
 `iswdigit`<br/>
 10진수 문자에 해당하는 와이드 문자
@@ -167,7 +167,7 @@ ASCII 문자의 와이드 문자 표현(0x0000-0x007F)
 `iswxdigit`<br/>
 16진수 문자에 해당하는 와이드 문자
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```C
 // crt_isfam.c
@@ -205,7 +205,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>출력
 
 ```Output
 00            AS  C                              .
@@ -338,10 +338,10 @@ int main( void )
 7f            AS  C                              .
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [문자 분류](../c-runtime-library/character-classification.md)<br/>
 [로캘](../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[멀티바이트 문자 시퀀스 해석](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[멀티 바이트 문자 시퀀스 해석](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to 함수](../c-runtime-library/to-functions.md)

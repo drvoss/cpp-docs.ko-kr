@@ -9,18 +9,18 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: b6ac9f7174baf1e0ebe41181c6a6f43e7bb3f5d1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cdcfee20cfdc5a6dc315d00ef024d1616900a2e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191107"
 ---
 # <a name="using-operators-in-__asm-blocks"></a>__asm 블록에서 연산자 사용
 
 **Microsoft 전용**
 
-`__asm` 블록은 **<<** 연산자와 같은 C++ C 또는 특정 연산자를 사용할 수 없습니다. 그러나 \* 연산자와 같이 C 및 MASM에서 공유 하는 연산자는 어셈블리 언어 연산자로 해석 됩니다. 예를 들어 `__asm` 블록 외부에서 대괄호 ( **[]** )는 바깥쪽 배열 첨자로 해석 됩니다. 여기서 C는 배열의 요소 크기를 자동으로 조정 합니다. `__asm` 블록 안에서 MASM 인덱스 연산자로 표시되며, 이 연산자는 임의의 데이터 개체 또는 레이블(배열만이 아님)로부터 크기를 조절하지 않은 바이트 오프셋을 만듭니다. 다음 코드에서는 차이점을 보여 줍니다.
+**`__asm`** 블록은 연산자와 같은 c 또는 c + + 관련 연산자를 사용할 수 없습니다 **<<** . 그러나 연산자와 같이 C 및 MASM에서 공유 하는 연산자 \* 는 어셈블리 언어 연산자로 해석 됩니다. 예를 들어 블록 외부에서 **`__asm`** 대괄호 (**[]**)는 바깥쪽 배열 첨자로 해석 됩니다 .이 경우 C는 배열의 요소 크기에 맞게 자동으로 조정 됩니다. 블록 안에는 **`__asm`** MASM 인덱스 연산자로 표시 됩니다 .이 연산자는 배열 뿐만 아니라 모든 데이터 개체 또는 레이블에서 크기를 조정 하는 바이트 오프셋을 생성 합니다. 다음 코드에서는 차이점을 보여 줍니다.
 
 ```cpp
 int array[10];
@@ -40,6 +40,6 @@ array[6] = 0;                   /* Store 0 at array + 24 */
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[__asm 블록에서 C 또는 C++ 사용](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[__Asm 블록에서 C 또는 c + + 사용](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

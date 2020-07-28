@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193967"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation 클래스
 
-이 클래스는 `_BeginOversubscription` 매개 변수를 **true**로 설정 하 여 `Context::Oversubscribe` 메서드를 이전에 호출 하지 않고 `_BeginOversubscription` 매개 변수를 **false** 로 설정한 상태에서 `Context::Oversubscribe` 메서드가 호출 될 때 throw 되는 예외를 설명 합니다.
+이 클래스는 매개 `Context::Oversubscribe` `_BeginOversubscription` 변수를 **`false`** `Context::Oversubscribe` 로 설정 하 여 메서드를 이전에 호출 하지 않고 매개 변수를로 설정 `_BeginOversubscription` **`true`** 하 여 메서드를 호출할 때 throw 되는 예외를 설명 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -29,11 +29,11 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|이름|설명|
 |----------|-----------------|
-|[invalid_oversubscribe_operation](#ctor)|오버로드됨. `invalid_oversubscribe_operation` 개체를 생성합니다.|
+|[invalid_oversubscribe_operation](#ctor)|오버로드되었습니다. `invalid_oversubscribe_operation` 개체를 생성합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `exception`
 
@@ -43,9 +43,9 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **헤더:** concrt .h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 `invalid_oversubscribe_operation` 개체를 생성합니다.
 
@@ -62,4 +62,4 @@ invalid_oversubscribe_operation() throw();
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)
+[concurrency 네임 스페이스](concurrency-namespace.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373552"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189677"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 로캘 이름, 언어 및 국가/지역 문자열
 
@@ -34,7 +34,7 @@ ms.locfileid: "86373552"
 
 로캘을 지정하는 데 코드 페이지만 사용하는 경우 [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)에서 보고한 대로 사용자의 기본 언어 및 국가/지역이 사용됩니다. 예를 들어, 영어(미국)로 구성된 사용자에게 `".1254"`(ANSI 터키어)를 로캘로 지정하는 경우 저장되는 로캘은 `English_United States.1254`입니다. 일관되지 않은 동작이 발생할 수 있으므로 이 양식을 사용하지 않는 것이 좋습니다.
 
-`C`의 *locale* 인수 값은 C 번역에 대한 최소 ANSI 표준에 맞는 환경을 지정합니다. `C` 로캘은 모든 **char** 데이터 형식이 1바이트이고, 해당 값이 항상 256보다 작은 것으로 간주합니다. *locale*에서 빈 문자열을 가리키면 로캘은 구현에서 정의된 네이티브 환경입니다.
+`C`의 *locale* 인수 값은 C 번역에 대한 최소 ANSI 표준에 맞는 환경을 지정합니다. `C`로캘은 모든 **`char`** 데이터 형식이 1 바이트이 고 해당 값이 항상 256 보다 작은 것으로 가정 합니다. *locale*에서 빈 문자열을 가리키면 로캘은 구현에서 정의된 네이티브 환경입니다.
 
 `setlocale` 범주를 사용하여 `_wsetlocale` 및 `LC_ALL` 함수에 대해 동시에 모든 로캘 범주를 지정할 수 있습니다. 범주를 모두 동일한 로캘로 설정하거나 이 양식을 사용하는 로캘 인수를 사용하여 범주를 각각 설정할 수 있습니다.
 

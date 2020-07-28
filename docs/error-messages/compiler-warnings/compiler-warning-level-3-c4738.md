@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 639fb14fc409a9954315184bab7ae1127460ea0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991699"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214414"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>컴파일러 경고(수준 3) C4738
 
@@ -19,7 +19,7 @@ ms.locfileid: "74991699"
 
 C4738는 할당, 캐스트, 전달 된 인수 또는 기타 작업의 결과를 반올림 하거나 작업에서 레지스터를 모두 실행 하 고 메모리를 사용 하는 데 필요한 (분산)를 경고 합니다. 이로 인해 성능이 저하 될 수 있습니다.
 
-이 경고를 해결 하 고 반올림을 방지 하려면 [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md) 로 컴파일하거나 `float`대신 `double`를 사용 합니다.
+이 경고를 해결 하 고 반올림을 방지 하려면 대신 [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md) 또는 use를 사용 하 여 컴파일합니다 **`double`** **`float`** .
 
 이 경고를 해결 하 고 레지스터의 실행을 방지 하려면 계산 순서를 변경 하 고 인라인 사용을 수정 합니다.
 

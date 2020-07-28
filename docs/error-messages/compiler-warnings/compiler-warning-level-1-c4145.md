@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 5028ae20c2413c98fa55bd81081552d22381cdbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19d2d1a018c7ee981f83aa6fa0914f1241c55538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163678"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220108"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>컴파일러 경고(수준 1) C4145
 
 'expression1': 관계식을 switch 식으로 사용했습니다. 'expression2'와 혼동할 수 있습니다.
 
-`switch` 문은 관계식을 제어 식으로 사용하므로 **case** 문에 대해 부울 값이 생성됩니다. *expression2*를 사용하시겠어요?
+**`switch`** 문은 관계식을 제어 식으로 사용 하 여 문에 부울 값을 반환 **`case`** 합니다. *expression2*를 사용하시겠어요?
 
 ## <a name="example"></a>예제
 

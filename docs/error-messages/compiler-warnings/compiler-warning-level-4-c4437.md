@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214388"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>컴파일러 경고(수준 4) C4437
 
@@ -19,7 +19,7 @@ ms.locfileid: "80185336"
 
 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.
 
-컴파일러에서 다음과 같은 특성의 `dynamic_cast` 작업이 발견되었습니다.
+컴파일러가 **`dynamic_cast`** 다음과 같은 특성을 가진 작업을 발견 했습니다.
 
 - 캐스트는 기본 클래스 포인터에서 파생된 클래스 포인터의 방향으로 수행됩니다.
 
@@ -29,11 +29,11 @@ ms.locfileid: "80185336"
 
 - 파생 클래스의 생성자 또는 소멸자에 캐스팅이 없거나 파생 클래스에서 추가로 상속 되는 일부 클래스가 있습니다 (그렇지 않은 경우 컴파일러 경고 C4436가 실행 됨).
 
-경고는 `dynamic_cast` 부분적으로 생성 된 개체에서 작동 하는 경우 올바르게 작동 하지 않을 수 있음을 나타냅니다.  이 상황은 경고에 명명 된 파생 클래스를 상속 하는 클래스의 소멸자 또는 생성자에서 바깥쪽 함수를 호출할 때 발생 합니다.  경고에 지정 된 파생 클래스가 더 이상 파생 되지 않거나 개체 생성 또는 소멸 중에 바깥쪽 함수를 호출 하지 않는 경우 경고를 무시할 수 있습니다.
+경고는가 **`dynamic_cast`** 부분적으로 생성 된 개체에서 작동 하는 경우 제대로 수행 되지 않을 수 있음을 나타냅니다.  이 상황은 경고에 명명 된 파생 클래스를 상속 하는 클래스의 소멸자 또는 생성자에서 바깥쪽 함수를 호출할 때 발생 합니다.  경고에 지정 된 파생 클래스가 더 이상 파생 되지 않거나 개체 생성 또는 소멸 중에 바깥쪽 함수를 호출 하지 않는 경우 경고를 무시할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 샘플에서는 C4437를 생성 하 고 누락 된 `vtordisp` 필드에서 발생 하는 코드 생성 문제를 보여 줍니다.
+다음 샘플에서는 C4437를 생성 하 고 누락 된 필드에서 발생 하는 코드 생성 문제를 보여 줍니다 `vtordisp` .
 
 ```cpp
 // C4437.cpp
@@ -85,4 +85,4 @@ int main()
 
 [dynamic_cast 연산자](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[컴파일러 경고(수준 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+[컴파일러 경고 (수준 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214258"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal(C++/CLI 및 C++/CX)
 
@@ -51,7 +51,7 @@ ms.locfileid: "80172141"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 **literal** 변수가 **static**을 암시함을 보여 줍니다.
+이 예에서는 **리터럴** 변수가를 의미 **`static`** 합니다.
 
 ```cpp
 // mcppv2_literal.cpp
@@ -127,4 +127,4 @@ class B {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

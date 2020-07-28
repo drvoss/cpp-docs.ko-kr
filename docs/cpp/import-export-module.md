@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: 가져오기 및 내보내기 선언을 사용하여 지정된 모듈에 정의된 형식 및 함수에 액세스하고 게시합니다.
-ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+description: 가져오기 및 내보내기 선언을 사용 하 여에 액세스 하 고 지정 된 모듈에 정의 된 형식과 함수를 게시할 수 있습니다.
+ms.openlocfilehash: 5be1618d7e64f6887cf78bd863d428d6710eaf7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187194"
 ---
 # <a name="module-import-export"></a>모듈, 가져오기, 내보내기
 
-**모듈,** **가져오기**및 **내보내기** 선언은 C++20에서 사용할 수 있으며 [/std:c++latest와](../build/reference/std-specify-language-standard-version.md)함께 [/experimental:module](../build/reference/experimental-module.md) 컴파일러 스위치가 필요합니다. 자세한 내용은 [C++의 모듈 개요를](modules-cpp.md)참조하십시오.
+**모듈**, **가져오기**및 **`export`** 선언은 c + + 20에서 사용할 수 있으며/std: [c + + 최신](../build/reference/std-specify-language-standard-version.md)와 함께 [/proers: module](../build/reference/experimental-module.md) 컴파일러 스위치가 필요 합니다. 자세한 내용은 [c + +의 모듈 개요](modules-cpp.md)를 참조 하세요.
 
-## <a name="module"></a>module
+## <a name="module"></a>모듈(module)
 
-모듈 구현 파일의 시작 부분에 **모듈** 선언을 배치하여 파일 내용이 명명된 모듈에 속하도록 지정합니다.
+모듈 구현 파일의 시작 부분에 **모듈** 선언을 놓고 파일 내용이 명명 된 모듈에 속하도록 지정 합니다.
 
 ```cpp
 module ModuleA;
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>내보내기
 
-**.ixx**확장이 있어야 하는 모듈의 기본 인터페이스 파일에 **내보내기 모듈** 선언을 사용합니다.
+모듈이 다음과 같은 기본 인터페이스 파일에 대해 **export 모듈** 선언을 사용 **합니다.**
 
 ```cpp
 export module ModuleA;
 ```
 
-인터페이스 파일에서 공용 인터페이스의 일부로 사용 되 려는 이름에 **내보내기** 수정자를 사용 합니다.
+인터페이스 파일에서 **`export`** 공용 인터페이스의 일부가 되도록 하려는 이름에 한정자를 사용 합니다.
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-내보내지 지 않는 이름은 모듈을 가져오는 코드에 표시되지 않습니다.
+내보내지 않는 이름은 모듈을 가져오는 코드에 표시 되지 않습니다.
 
 ```cpp
 //MyProgram.cpp
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-**내보내기** 키워드는 모듈 구현 파일에 나타나지 않을 수 있습니다. **내보내기가** 네임스페이스 이름에 적용되면 네임스페이스의 모든 이름이 내보내됩니다.
+**`export`** 키워드는 모듈 구현 파일에 표시 되지 않을 수 있습니다. **`export`** 이 네임 스페이스 이름에 적용 되 면 네임 스페이스의 모든 이름을 내보냅니다.
 
-## <a name="import"></a>수입
+## <a name="import"></a>import
 
-**가져오기** 선언을 사용하여 모듈의 이름을 프로그램에 표시합니다. 가져오기 선언은 모듈 선언 및 #include 지시문 이후에 나타나야 하지만 파일의 모든 선언 앞에 나타납니다.
+모듈의 이름을 프로그램에 표시 하려면 **가져오기** 선언을 사용 합니다. 가져오기 선언은 모듈 선언 후와 #include 지시문 뒤에, 파일의 모든 선언 앞에 나타나야 합니다.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>설명
 
-**가져오기와** **모듈은** 논리적 줄의 시작 부분에 나타날 때만 키워드로 처리됩니다.
+**Import** 와 **module** 은 모두 논리 줄의 시작 부분에 표시 되는 경우에만 키워드로 처리 됩니다.
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
-Microsoft C++에서 토큰 **가져오기** 및 **모듈은** 항상 식별자이며 매크로에 대한 인수로 사용될 때 는 절대 로키키워드가 아닙니다.
+Microsoft c + +에서 token **import** 및 **module** 은 항상 식별자 이며 매크로에 대 한 인수로 사용 되는 경우 키워드가 아닙니다.
 
 ### <a name="example"></a>예제
 
@@ -123,7 +123,7 @@ import // Always an identifier, never a keyword
 )
 ```
 
-**끝 마이크로 소프트 특정**
+**Microsoft 전용 종료**
 
 ## <a name="see-also"></a>참고 항목
 

@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246512"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187805"
 ---
 # <a name="how-to-design-for-exception-safety"></a>방법: 예외 안전성을 위한 디자인
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII를 사용 하 여 리소스 관리
 
-예외를 안전 하 게 하기 위해 함수는 `malloc` 또는 **새** 를 사용 하 여 할당 한 개체가 제거 되었는지 확인 하 고, 예외가 throw 되더라도 파일 핸들과 같은 모든 리소스를 닫거나 해제 해야 합니다. RAII ( *리소스 획득 시 초기화* )는 이러한 리소스의 관리를 자동 변수의 수명에 연결 합니다. 정상적인 반환 또는 예외로 인해 함수가 범위를 벗어나면 모든 완전히 생성된 자동 변수에 대한 소멸자가 호출됩니다. 스마트 포인터와 같은 RAII 래퍼 개체는 해당 소멸자에서 적합한 delete 또는 close 함수를 호출합니다. 예외로부터 안전한 코드에서는 각 리소스의 소유권을 특정 종류의 RAII 개체로 즉시 전달하는 것이 매우 중요합니다. `vector`, `string`, `make_shared`, `fstream`및 유사한 클래스는 리소스의 획득을 처리 합니다.  그러나 `unique_ptr` 및 기존 `shared_ptr` 구문은 개체 대신 사용자가 리소스를 획득 하기 때문에 특수 합니다. 따라서 *리소스 릴리스가 소멸 되는* 것으로 간주 되지만 RAII으로 불확실 합니다.
+예외를 안전 하 게 하려면 함수는 또는를 사용 하 여 할당 한 개체가 제거 되었는지 확인 하 `malloc` **`new`** 고, 예외가 throw 되더라도 파일 핸들과 같은 모든 리소스를 닫거나 해제 해야 합니다. RAII ( *리소스 획득 시 초기화* )는 이러한 리소스의 관리를 자동 변수의 수명에 연결 합니다. 정상적인 반환 또는 예외로 인해 함수가 범위를 벗어나면 모든 완전히 생성된 자동 변수에 대한 소멸자가 호출됩니다. 스마트 포인터와 같은 RAII 래퍼 개체는 해당 소멸자에서 적합한 delete 또는 close 함수를 호출합니다. 예외로부터 안전한 코드에서는 각 리소스의 소유권을 특정 종류의 RAII 개체로 즉시 전달하는 것이 매우 중요합니다. `vector`,, `string` `make_shared` , `fstream` 및 유사한 클래스는 리소스의 획득을 처리 합니다.  그러나 `unique_ptr` `shared_ptr` 리소스 취득은 개체 대신 사용자에 의해 수행 되므로 기존 생성은 특수 합니다. 따라서 *리소스 릴리스가 소멸* 되지만 RAII로 인 한 것은 아닙니다.
 
 ## <a name="the-three-exception-guarantees"></a>세 가지 예외 보장
 
@@ -121,5 +121,5 @@ public:
 
 ## <a name="see-also"></a>참고 항목
 
-[예외 C++ 및 오류 처리에 대 한 최신 모범 사례](errors-and-exception-handling-modern-cpp.md)<br/>
-[방법: 예외 코드와 예외가 아닌 코드 간 인터페이스](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[예외 및 오류 처리에 대 한 최신 c + + 모범 사례](errors-and-exception-handling-modern-cpp.md)<br/>
+[방법: 예외 코드와 비 예외 코드 간 인터페이스](how-to-interface-between-exceptional-and-non-exceptional-code.md)

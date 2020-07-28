@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2697ce5a790fffe762d97ca3380853514de6d437
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220264"
 ---
 # <a name="compiler-error-c2682"></a>컴파일러 오류 C2682
 
 casting_operator를 사용 하 여 ' type1 '에서 ' type2 ' (으)로 변환할 수 없습니다.
 
-캐스팅 연산자가 호환 되지 않는 형식 간에 변환 하려고 했습니다. 예를 들어 [dynamic_cast](../../cpp/dynamic-cast-operator.md) 연산자를 사용 하 여 포인터를 참조로 변환할 수 없습니다. `dynamic_cast` 연산자를 사용 하 여 한정자를 캐스트할 수 없습니다. 형식에 대 한 모든 한정자가 일치 해야 합니다.
+캐스팅 연산자가 호환 되지 않는 형식 간에 변환 하려고 했습니다. 예를 들어 [dynamic_cast](../../cpp/dynamic-cast-operator.md) 연산자를 사용 하 여 포인터를 참조로 변환할 수 없습니다. **`dynamic_cast`** 연산자를 사용 하 여 한정자를 캐스트할 수 없습니다. 형식에 대 한 모든 한정자가 일치 해야 합니다.
 
-`const_cast` 연산자를 사용 하 여 `const`, `volatile`또는 `__unaligned`와 같은 특성을 제거할 수 있습니다.
+연산자를 사용 **`const_cast`** 하 여, 또는와 같은 특성을 제거할 수 있습니다 **`const`** **`volatile`** **`__unaligned`** .
 
 다음 샘플에서는 C2682를 생성 합니다.
 

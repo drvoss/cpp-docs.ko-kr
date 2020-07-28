@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169593"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192628"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>인라인 어셈블리에서 C 함수 호출
 
 **Microsoft 전용**
 
-`__asm` 블록은 C 라이브러리 루틴을 비롯한 C 함수를 호출할 수 있습니다. 다음 예제에서는 `printf` 라이브러리 루틴을 호출합니다.
+**`__asm`** 블록은 c 라이브러리 루틴을 비롯 한 c 함수를 호출할 수 있습니다. 다음 예제에서는 `printf` 라이브러리 루틴을 호출합니다.
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -60,6 +60,6 @@ printf( format, hello, world );
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [인라인 어셈블러](../../assembler/inline/inline-assembler.md)<br/>

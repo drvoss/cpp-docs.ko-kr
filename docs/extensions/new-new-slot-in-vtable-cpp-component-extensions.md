@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "79544413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214245"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new(vtable의 새 슬롯)(C++/CLI 및 C++/CX)
 
-**new** 키워드는 가상 멤버의 새 슬롯이 vtable에 생성됨을 나타냅니다.
+**`new`** 키워드는 가상 멤버가 vtable에서 새 슬롯을 가져오도록 지정 합니다.
 
 ## <a name="all-runtimes"></a>모든 런타임
 
@@ -26,11 +26,11 @@ Windows 런타임에서는 지원되지 않습니다.
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`/clr` 컴파일에서 **new**는 가상 멤버의 새 슬롯이 vtable에 생성되고, 함수에서 기본 클래스 메서드를 재정의하지 않음을 나타냅니다.
+컴파일에서는 `/clr` **`new`** 가상 멤버가 vtable에서 새 슬롯을 가져오기 때문에 함수가 기본 클래스 메서드를 재정의 하지 않음을 나타냅니다.
 
-**new**를 사용하면 함수에 대한 IL에 newslot 한정자가 추가됩니다.  newslot에 대한 자세한 내용은 다음을 참조하세요.
+**`new`** 는 함수에 대 한 IL에 newslot 한정자를 추가 합니다.  newslot에 대한 자세한 내용은 다음을 참조하세요.
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -40,9 +40,9 @@ Windows 런타임에서는 지원되지 않습니다.
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
-다음 샘플에서는 **new**의 결과를 보여 줍니다.
+다음 샘플에서는의 효과를 보여 줍니다 **`new`** .
 
 ```cpp
 // newslot.cpp
@@ -105,5 +105,5 @@ E::f() called
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
 [Override 지정자](override-specifiers-cpp-component-extensions.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: c6d54cf8b6704eec2a9e6af890c5c80c67106995
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9b1c3d1de662451432fe4fa0f058c503dc1f7b39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220121"
 ---
 # <a name="compiler-warning-c4936"></a>컴파일러 경고 C4936
 
@@ -21,7 +21,7 @@ ms.locfileid: "80165004"
 
 **/Clr: pure** 컴파일러 옵션은 visual studio 2015에서는 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-`__declspec` 한정자가 사용되었지만 해당 `__declspec` 한정자는 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 옵션 중 하나로 컴파일된 경우에만 유효합니다.
+**`__declspec`** 한정자가 사용 되었지만 해당 **`__declspec`** 한정자는 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 옵션 중 하나로 컴파일된 경우에만 유효 합니다.
 
 자세한 내용은 [appdomain](../../cpp/appdomain.md) 및 [process](../../cpp/process.md)를 참조하세요.
 

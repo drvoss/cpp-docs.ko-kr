@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2151
 ms.assetid: 7f8dd83a-1f41-46d8-8778-0d1f79ed36c9
-ms.openlocfilehash: 34d197854530692c3e651474d3fc1ee220011d7d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20eb87002e3621965b5fc5429eab8fe41b040848
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214726"
 ---
 # <a name="compiler-error-c2151"></a>컴파일러 오류 C2151
 
 둘 이상의 언어 특성
 
-함수에 호출 규칙을 지정 하는 둘 이상의 키워드 (`__cdecl`, `__stdcall`또는 `__fastcall`)가 있습니다.
+함수에 **`__cdecl`** **`__stdcall`** **`__fastcall`** 호출 규칙을 지정 하는 두 개 이상의 키워드 (, 또는)가 있습니다.

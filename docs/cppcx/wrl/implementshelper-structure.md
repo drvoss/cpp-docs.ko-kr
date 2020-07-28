@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184945"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 구조체
 
@@ -35,31 +35,31 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>매개 변수
 
-*런타임클래스플래그T*<br/>
-하나 이상의 [RuntimeClassType](runtimeclasstype-enumeration.md) 열거형을 지정하는 플래그 필드입니다.
+*RuntimeClassFlagsT*<br/>
+하나 이상의 [RuntimeClassType](runtimeclasstype-enumeration.md) 열거자를 지정 하는 플래그 필드입니다.
 
-*일스트 (일스트)*<br/>
-인터페이스 아이디 목록입니다.
+*ILst*<br/>
+인터페이스 Id의 목록입니다.
 
 *IsDelegateToClass*<br/>
-의 `Implements` 현재 인스턴스가 *ILst의*첫 번째 인터페이스 ID의 기본 클래스인 경우 **true를** 지정합니다. 그렇지 **않으면, 거짓**.
+**`true`** 의 현재 인스턴스가 `Implements` *ilst*의 첫 번째 인터페이스 ID의 기본 클래스 이면를 지정 하 고 그렇지 않으면를 지정 **`false`** 합니다.
 
 ## <a name="remarks"></a>설명
 
-구현 구조를 구현하는 데 도움이 [됩니다.](implements-structure.md)
+[구현](implements-structure.md) 구조를 구현 하는 데 도움이 됩니다.
 
-이 템플릿은 인터페이스 목록을 통과하여 기본 클래스로 추가하고 을 활성화하는 `QueryInterface`데 필요한 정보로 추가합니다.
+이 템플릿은 인터페이스 목록을 트래버스하 고이를 기본 클래스로 추가 하 고를 사용 하도록 설정 하는 데 필요한 정보로 추가 `QueryInterface` 합니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-속성                                                    | Description
+Name                                                    | 설명
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[구현도우미::캔캐스트토](#cancastto)               | 지정된 인터페이스 ID에 대한 포인터를 가져옵니다.
-[구현도우미::캐스트알 수 없음](#casttounknown)       | 현재 `Implements` 구조에 대한 `IUnknown` 기본 인터페이스에 대한 포인터를 가져옵니다.
-[구현도우미::필어레이와이드](#fillarraywithiid) | 현재 0th 템플릿 매개 변수에 의해 지정된 인터페이스 ID를 지정된 배열 요소에 삽입합니다.
-[구현도우미::IdCount](#iidcount)                 | 현재 `Implements` 개체에서 구현된 인터페이스 아이디 수를 보유합니다.
+[ImplementsHelper:: CanCastTo](#cancastto)               | 지정 된 인터페이스 ID에 대 한 포인터를 가져옵니다.
+[ImplementsHelper:: CastToUnknown](#casttounknown)       | `IUnknown`현재 구조체의 기본 인터페이스에 대 한 포인터를 가져옵니다 `Implements` .
+[ImplementsHelper:: FillArrayWithIid](#fillarraywithiid) | 현재 0 번째 template 매개 변수에 지정 된 인터페이스 ID를 지정 된 배열 요소에 삽입 합니다.
+[ImplementsHelper:: IidCount](#iidcount)                 | 현재 개체에서 구현 된 인터페이스 Id의 수를 유지 합니다 `Implements` .
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -67,11 +67,11 @@ friend struct Details::ImplementsHelper;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
-**네임스페이스:** 마이크로소프트::WRL::D테일
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>구현도우미::캔캐스트토
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper:: CanCastTo
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -90,13 +90,13 @@ HRESULT CanCastTo(
 ### <a name="parameters"></a>매개 변수
 
 *riid*<br/>
-인터페이스 ID에 대한 참조입니다.
+인터페이스 ID에 대 한 참조입니다.
 
 *ppv*<br/>
-이 작업이 성공하면 riid 또는 *iid로* 지정된 인터페이스에 대한 *포인터입니다.*
+이 작업이 성공적으로 수행 되 면 *riid* 또는 *iid*에 의해 지정 된 인터페이스에 대 한 포인터입니다.
 
-*Iid*<br/>
-인터페이스 ID에 대한 참조입니다.
+*iid*<br/>
+인터페이스 ID에 대 한 참조입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -104,9 +104,9 @@ HRESULT CanCastTo(
 
 ### <a name="remarks"></a>설명
 
-지정된 인터페이스 ID에 대한 포인터를 가져옵니다.
+지정 된 인터페이스 ID에 대 한 포인터를 가져옵니다.
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>구현도우미::캐스트알 수 없음
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper:: CastToUnknown
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -116,13 +116,13 @@ IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Return Value
 
-기본 `IUnknown` 인터페이스에 대한 포인터입니다.
+기본 인터페이스에 대 한 포인터 `IUnknown` 입니다.
 
 ### <a name="remarks"></a>설명
 
-현재 `Implements` 구조에 대한 `IUnknown` 기본 인터페이스에 대한 포인터를 가져옵니다.
+`IUnknown`현재 구조체의 기본 인터페이스에 대 한 포인터를 가져옵니다 `Implements` .
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>구현도우미::필어레이와이드
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper:: FillArrayWithIid
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -135,16 +135,16 @@ void FillArrayWithIid(
 ### <a name="parameters"></a>매개 변수
 
 *index*<br/>
-이 작업에 대한 시작 배열 요소를 나타내는 0기반 인덱스입니다. 이 작업이 완료되면 *인덱스는* 1씩 증가합니다.
+이 작업의 시작 배열 요소를 나타내는 인덱스 (0부터 시작)입니다. 이 작업이 완료 되 면 *인덱스* 는 1 씩 증가 합니다.
 
-*아이드 (이드)*<br/>
-형식 IID의 배열입니다.
+*iid*<br/>
+Iid 형식의 배열입니다.
 
 ### <a name="remarks"></a>설명
 
-현재 0th 템플릿 매개 변수에 의해 지정된 인터페이스 ID를 지정된 배열 요소에 삽입합니다.
+현재 0 번째 template 매개 변수에 지정 된 인터페이스 ID를 지정 된 배열 요소에 삽입 합니다.
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>구현도우미::IdCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper:: IidCount
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>설명
 
-현재 `Implements` 개체에서 구현된 인터페이스 아이디 수를 보유합니다.
+현재 개체에서 구현 된 인터페이스 Id의 수를 유지 합니다 `Implements` .
