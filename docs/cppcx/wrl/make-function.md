@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213813"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220472"
 ---
 # <a name="make-function"></a>Make 함수
 
@@ -165,7 +165,7 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-`WRL::RuntimeClass`에서 상속 되는 사용자 지정 클래스입니다.
+에서 상속 되는 사용자 지정 클래스 `WRL::RuntimeClass` 입니다.
 
 *TArg1*<br/>
 지정 된 런타임 클래스로 전달 되는 인수 1의 형식입니다.
@@ -221,11 +221,11 @@ ComPtr<T> Make();
 *arg9*<br/>
 지정 된 런타임 클래스로 전달 되는 인수 9입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-성공 하면 `ComPtr<T>` 개체입니다. 그렇지 않으면 `nullptr`합니다.
+`ComPtr<T>`성공 하면 개체이 고, 그렇지 않으면 **`nullptr`** 입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 예제는 [방법: WRL 구성 요소 직접 인스턴스화](how-to-instantiate-wrl-components-directly.md) 를 참조 하 여이 함수와 [MICROSOFT:: WRL::D Etails:: makeandinitialize](makeandinitialize-function.md)간의 차이점을 알아봅니다.
 
@@ -237,4 +237,4 @@ ComPtr<T> Make();
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 네임 스페이스](microsoft-wrl-namespace.md)

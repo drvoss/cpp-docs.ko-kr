@@ -14,18 +14,18 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621758"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183814"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>예외: MFC 예외 매크로에서 변환
 
 이는 고급 항목입니다.
 
-이 문서에서는 c + + 예외 처리 키워드 **try**, **catch**및 **Throw**를 사용 하기 위해 **try**, **catch**, **throw**등으로 작성 된 기존 코드를 변환 하는 방법을 설명 합니다. 다룰 주제는 다음과 같습니다.
+이 문서에서는 c + + 예외 처리 키워드, 및를 사용 하기 위해 **TRY**, **CATCH**, **THROW**등의 Microsoft Foundation Class 매크로로 작성 된 기존 코드를 변환 하는 방법을 설명 합니다 **`try`** **`catch`** **`throw`** . 다룰 주제는 다음과 같습니다.
 
 - [변환 이점](#_core_advantages_of_converting)
 
@@ -39,7 +39,7 @@ MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점�
 
 - C + + 예외 처리 키워드를 사용 하는 코드는 약간 더 작은 값으로 컴파일됩니다. EXE 또는. GDIPLUS.DLL.
 
-- C + + 예외 처리 키워드는 더 다양 하 게 사용할 수 있습니다. 즉, 복사 될 수 있는 모든 데이터 형식 (**int**, **float**, **char**등)의 예외를 처리할 수 있는 반면 매크로는 클래스 및이 클래스에서 파생 된 클래스의 예외만 처리 `CException` 합니다.
+- C + + 예외 처리 키워드는 더 다양 하 게 사용할 수 있습니다. 즉,, 등을 통해 복사할 수 있는 모든 데이터 형식의 예외를 처리할 수 있는 **`int`** **`float`** **`char`** 반면 매크로는 클래스 및이 클래스에서 파생 된 클래스의 예외만 처리 `CException` 합니다.
 
 매크로와 키워드의 주요 차이점은 "자동" 매크로를 사용 하는 코드는 예외가 범위를 벗어날 때 catch 된 예외를 삭제 하는 것입니다. 키워드를 사용 하는 코드는 그렇지 않으므로 catch 된 예외를 명시적으로 삭제 해야 합니다. 자세한 내용은 예외 [: 예외 catch 및 삭제](exceptions-catching-and-deleting-exceptions.md)문서를 참조 하세요.
 
@@ -53,7 +53,7 @@ MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점�
 
    클래스 이름과 개체 포인터 이름 사이의 쉼표를 확인 합니다.
 
-   **Catch** 키워드에 대 한 예외 선언에는 다음 구문이 사용 됩니다.
+   키워드에 대 한 예외 선언에서는 **`catch`** 다음 구문을 사용 합니다.
 
    **catch (** *exception_type* *exception_name* **)**
 
@@ -63,11 +63,11 @@ MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점�
 
    매크로를 사용 하 여 **catch** 매크로 (인수 포함)는 첫 번째 catch 블록을 시작 합니다. **AND_CATCH** 매크로는 후속 catch 블록을 시작 하 고 **END_CATCH** 매크로는 catch 블록의 시퀀스를 종료 합니다.
 
-   키워드를 사용 하 여 **catch** 키워드 (예외 선언 포함)는 각 catch 블록을 시작 합니다. **END_CATCH** 매크로에 상응 하는 항목이 없습니다. catch 블록은 닫는 중괄호로 끝납니다.
+   키워드를 사용 하 여 **`catch`** 키워드 (예외 선언 포함)는 각 catch 블록을 시작 합니다. **END_CATCH** 매크로에 상응 하는 항목이 없습니다. catch 블록은 닫는 중괄호로 끝납니다.
 
 3. Throw 식:
 
-   매크로는 **THROW_LAST** 을 사용 하 여 현재 예외를 다시 THROW 합니다. 인수가 없는 **throw** 키워드는 동일한 효과를 가집니다.
+   매크로는 **THROW_LAST** 을 사용 하 여 현재 예외를 다시 THROW 합니다. **`throw`** 인수가 없는 키워드는 동일한 효과를 가집니다.
 
 ## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>변환 수행
 
@@ -77,17 +77,17 @@ MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점�
 
 2. 다음 매크로의 모든 항목을 바꾸거나 삭제 합니다.
 
-   **시도** ( **try**로 바꾸기)
+   **시도** (로 바꾸기 **`try`** )
 
-   **Catch** ( **catch**로 바꾸기)
+   **CATCH** (로 바꾸기 **`catch`** )
 
-   **AND_CATCH** ( **CATCH**로 바꾸기)
+   **AND_CATCH** (으)로 바꾸기 **`catch`**
 
    **END_CATCH** (삭제)
 
-   **Throw** ( **throw**로 바꾸기)
+   **THROW** (로 바꾸기 **`throw`** )
 
-   **THROW_LAST** ( **THROW**로 바꾸기)
+   **THROW_LAST** (으)로 바꾸기 **`throw`**
 
 3. 올바른 예외 선언을 구성 하도록 매크로 인수를 수정 합니다.
 
@@ -95,7 +95,7 @@ MFC 버전 3.0의 매크로 구현과 이전 버전의 구현 간의 차이점�
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   to
+   다음으로 변경:
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 

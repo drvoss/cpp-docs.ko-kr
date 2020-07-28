@@ -33,19 +33,19 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182748"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 네임스페이스 함수
 
 ||||
 |-|-|-|
 |[#C4](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
-|[EnableTracing](#enabletracing)|[무료](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[EnableTracing](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
 |[cancel_current_task](#cancel_current_task)|[해제](#clear)|[create_async](#create_async)|
@@ -54,7 +54,7 @@ ms.locfileid: "86446608"
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[받습니다](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[스왑을](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[대기한](#wait)|
@@ -73,7 +73,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 *_NumBytes*<br/>
 할당할 메모리의 바이트 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새로 할당 된 메모리에 대 한 포인터입니다.
 
@@ -108,9 +108,9 @@ bool asend(
 *_Data*<br/>
 보낼 데이터에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메서드가 반환 되기 전에 메시지를 수락 했으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 메서드가 반환 되기 전에 메시지를 수락 하면이 고, **`false`** 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -159,7 +159,7 @@ __declspec(noinline) auto create_async(const _Function& _Func)
 *_Func*<br/>
 Windows 런타임 비동기 구문을 만들 람다 또는 함수 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 IAsyncAction ^, IAsyncActionWithProgress \<TProgress> ^, iasyncoperation<tresult> \<TResult> ^ 또는 IAsyncOperationWithProgress ^로 표시 되는 비동기 구문 \<TResult, TProgress> 입니다. 반환된 인터페이스는 함수에 전달되는 람다의 시그니처에 종속됩니다.
 
@@ -187,7 +187,7 @@ void를 반환하는 람다는 작업을 생성합니다. `TResult` 형식의 �
 IResourceManager* __cdecl CreateResourceManager();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `IResourceManager` 인터페이스입니다.
 
@@ -199,7 +199,7 @@ IResourceManager* __cdecl CreateResourceManager();
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-PPL [작업](task-class.md) 개체를 만듭니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 `auto` 키워드 사용을 허용하기 때문에 주로 편의상 제공됩니다.
+PPL [작업](task-class.md) 개체를 만듭니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 키워드를 사용할 수 있기 때문에 주로 편의를 위해 제공 됩니다 **`auto`** .
 
 ```cpp
 template<typename T>
@@ -227,7 +227,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
 *_Task*<br/>
 만들 태스크입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 에서 유추 되는 형식의 새 작업입니다 `T` `_Param` .
 
@@ -249,7 +249,7 @@ UWP 앱에서 `_Param` 가 windows:: foundation:: iasyncoperation<tresult> \<T> 
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 추적이 올바르게 사용 하지 않도록 설정 된 경우 `S_OK` 이 반환 됩니다. 추적이 이전에 시작되지 않은 경우 `E_NOT_STARTED`가 반환됩니다.
 
@@ -261,7 +261,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl EnableTracing();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 추적이 올바르게 시작 된 경우 `S_OK` 가 반환 되 고, 그렇지 않으면 `E_NOT_STARTED` 이 반환 됩니다.
 
@@ -288,7 +288,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ## <a name="getexecutioncontextid"></a><a name="getexecutioncontextid"></a>GetExecutionContextId
 
@@ -298,7 +298,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
 unsigned int __cdecl GetExecutionContextId();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 실행 컨텍스트에 대 한 고유 식별자입니다.
 
@@ -314,7 +314,7 @@ unsigned int __cdecl GetExecutionContextId();
 IResourceManager::OSVersion __cdecl GetOSVersion();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 운영 체제를 나타내는 열거형 값입니다.
 
@@ -330,7 +330,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 unsigned int __cdecl GetProcessorCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 하드웨어 스레드 수입니다.
 
@@ -346,7 +346,7 @@ unsigned int __cdecl GetProcessorCount();
 unsigned int __cdecl GetProcessorNodeCount();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 NUMA 노드 또는 프로세서 패키지 수입니다.
 
@@ -364,7 +364,7 @@ NUMA 노드 또는 프로세서 패키지 수입니다.
 unsigned int __cdecl GetSchedulerId();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스케줄러에 대 한 고유 식별자입니다.
 
@@ -408,15 +408,15 @@ inline void interruption_point();
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없는 경우 `false`가 반환됩니다.
+현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없으면이 **`false`** 반환 됩니다.
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-현재 실행 중인 작업 그룹을 취소 하 고 있으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 현재 실행 중인 작업 그룹이 취소 되 면이 고, **`false`** 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -471,7 +471,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 *_PScheduleGroup*<br/>
 `ScheduleGroup` 메시징 블록의 전파 작업이 예약되는 `choice` 개체입니다. 사용된 `Scheduler` 개체는 일정 그룹에서 암시됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 개 이상의 입력 소스가 있는 `choice` 메시지 블록입니다.
 
@@ -524,7 +524,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 *_PScheduleGroup*<br/>
 `ScheduleGroup` 메시징 블록의 전파 작업이 예약되는 `multitype_join` 개체입니다. 사용된 `Scheduler` 개체는 일정 그룹에서 암시됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 개 이상의 입력 소스가 있는 `greedy multitype_join` 메시지 블록입니다.
 
@@ -578,7 +578,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 *_PScheduleGroup*<br/>
 `ScheduleGroup` 메시징 블록의 전파 작업이 예약되는 `multitype_join` 개체입니다. 사용된 `Scheduler` 개체는 일정 그룹에서 암시됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 두 개 이상의 입력 소스가 있는 `non_greedy multitype_join` 메시지 블록입니다.
 
@@ -599,7 +599,7 @@ task_handle<_Function> make_task(const _Function& _Func);
 *_Func*<br/>
 개체로 표시 되는 작업을 실행 하기 위해 호출 되는 함수입니다 `task_handle` . 이는 람다 함수, 함수에 대 한 포인터 또는 시그니처와 함께 함수 호출 연산자의 버전을 지 원하는 모든 개체 일 수 있습니다 `void operator()()` .
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `task_handle` 개체입니다.
 
@@ -679,7 +679,7 @@ C + + 표준 라이브러리 호환 메모리 할당자의 형식입니다.
 C + + 표준 라이브러리와 호환 되는 메모리 할당자의 인스턴스입니다.
 
 *_Func*<br/>
-순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다.
+순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용 하 고 만족 **`true`** 하지 않을 경우를 반환 **`false`** 합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다.
 
 *_Chunk_size*<br/>
 병렬 실행을 위해 두 개로 분할될 청크의 최소 크기입니다.
@@ -767,7 +767,7 @@ void parallel_for(
 각 반복에서 실행할 함수입니다. 이는 람다 식, 함수 포인터 또는 시그니처와 함께 함수 호출 연산자의 버전을 지 원하는 모든 개체 일 수 있습니다 `void operator()(_Index_type)` .
 
 *_Part*<br/>
-partitioner 개체에 대한 참조입니다. 인수는 `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
+partitioner 개체에 대한 참조입니다. 인수는 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -811,7 +811,7 @@ void parallel_for_each(
 범위의 각 요소에 적용 되는 사용자 정의 함수 개체입니다.
 
 *_Part*<br/>
-partitioner 개체에 대한 참조입니다. 인수는 `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
+partitioner 개체에 대한 참조입니다. 인수는 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1162,7 +1162,7 @@ Id 값의 `_Identity` 형식은 감소의 결과 형식과 동일 하며 `value_
 *_Range_fun*<br/>
 축소의 첫 번째 단계에서 사용 되는 함수입니다. 자세한 내용은 설명 부분을 참조 하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 축소의 결과입니다.
 
@@ -1209,7 +1209,7 @@ inline void parallel_sort(
 저장할 범위의 마지막 요소 하나 다음 위치를 주소 지정하는 임의 액세스 반복기입니다.
 
 *_Func*<br/>
-순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용하며 조건이 충족되면 **true** 를 반환하고, 충족되지 않으면 **false** 를 반환합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다.
+순서에 따라 연속적인 요소에 대해 충족될 비교 조건을 정의하는 사용자 정의 조건자 함수 개체입니다. 이진 조건자는 두 개의 인수를 사용 하 고 만족 **`true`** 하지 않을 경우를 반환 **`false`** 합니다. 이 비교 함수는 시퀀스의 요소 쌍에 대해 엄밀히 약한 순서를 적용해야 합니다.
 
 *_Chunk_size*<br/>
 병렬 실행을 위해 두 개로 분할 되는 청크의 최소 크기입니다.
@@ -1325,7 +1325,7 @@ first2,
 소스 범위의 각 요소에 적용되는 사용자 정의 단항 함수 개체입니다.
 
 *_Part*<br/>
-partitioner 개체에 대한 참조입니다. 인수는 `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 `const` [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
+partitioner 개체에 대한 참조입니다. 인수는 **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , simple_partitioner 또는 affinity_partitioner 중 하나일 수 있습니다 **`const`** [simple_partitioner](simple-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md) `&` . [affinity_partitioner](affinity-partitioner-class.md) 개체를 사용 하는 경우에는 참조가 const l-value 참조가 아니어야 하므로 알고리즘에서 이후 루프를 다시 사용 하기 위한 상태를 저장할 수 있습니다.
 
 *first2*<br/>
 작업을 수행할 두 번째 소스 범위에서 첫 번째 요소의 위치를 주소 지정하는 입력 반복기입니다.
@@ -1333,7 +1333,7 @@ partitioner 개체에 대한 참조입니다. 인수는 `const` [auto_partitione
 *_Binary_op*<br/>
 두 소스 범위에 쌍 단위 정방향으로 적용되는 사용자 정의 이진 함수 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수 개체에 의해 변형된 출력 요소를 받는 대상 범위에서 최종 요소의 하나 다음 위치를 주소 지정하는 출력 반복기입니다.
 
@@ -1391,7 +1391,7 @@ T receive(
 *_Filter_proc*<br/>
 메시지를 수락 해야 하는지 여부를 결정 하는 필터 함수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 원본에서 페이로드 형식의 값입니다.
 
@@ -1450,9 +1450,9 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 *_Data*<br/>
 보낼 데이터에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-메시지가 수락 되었으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 메시지가 수락 되었으면이 고, **`false`** 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1555,7 +1555,7 @@ task<_TaskType> task_from_exception(
 
 *_TaskOptions*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ## <a name="task_from_result"></a><a name="task_from_result"></a>task_from_result
 
@@ -1579,7 +1579,7 @@ inline task<void> task_from_result(
 
 *_TaskOptions*<br/>
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 ## <a name="trace_agents_register_name"></a><a name="trace_agents_register_name"></a>Trace_agents_register_name
 
@@ -1605,7 +1605,7 @@ void Trace_agents_register_name(
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-컨텍스트에서 정확히 한 소스의 데이터를 찾고 허용되는 값을 필터링할 수 있게 하는 일반 try-receive 구현입니다. 데이터가 준비 되지 않은 경우이 메서드는 **false**를 반환 합니다.
+컨텍스트에서 정확히 한 소스의 데이터를 찾고 허용되는 값을 필터링할 수 있게 하는 일반 try-receive 구현입니다. 데이터가 준비 되지 않은 경우이 메서드는를 반환 **`false`** 합니다.
 
 ```cpp
 template <class T>
@@ -1641,9 +1641,9 @@ bool try_receive(
 *_Filter_proc*<br/>
 메시지를 수락 해야 하는지 여부를 결정 하는 필터 함수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-`bool`페이로드가 배치 되었는지 여부를 나타내는 값 `_value` 입니다.
+**`bool`** 페이로드가 배치 되었는지 여부를 나타내는 값 `_value` 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1694,9 +1694,9 @@ auto when_all(
 *_TaskOptions*<br/>
 `task_options` 개체입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-모든 입력 작업이 성공적으로 완료 되 면 성공적으로 완료 되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::vector<T>>`가 됩니다. 입력 작업이 `void` 형식이면 이 함수의 출력 작업도 `task<void>`가 됩니다.
+모든 입력 작업이 성공적으로 완료 되 면 성공적으로 완료 되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::vector<T>>`가 됩니다. 입력 태스크가 형식이 면 **`void`** 출력 작업도이 됩니다 `task<void>` .
 
 ### <a name="remarks"></a>설명
 
@@ -1747,9 +1747,9 @@ auto when_any(
 *_CancellationToken*<br/>
 반환된 작업의 취소를 제어하는 취소 토큰입니다. 취소 토큰을 제공하지 않으면 결과 작업은 작업의 취소 토큰을 받으므로 완료됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-두 입력 작업 중 하나라도 성공적으로 완료되는 경우 완료되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::pair<T, size_t>>>`이 되며, 여기서 쌍의 첫 번째 요소는 완료되는 작업의 결과이고 두 번째 요소는 완료된 작업의 인덱스입니다. 입력 작업이 `void` 형식이면 출력은 `task<size_t>`이 됩니다. 여기서 결과는 완료되는 작업의 인덱스입니다.
+두 입력 작업 중 하나라도 성공적으로 완료되는 경우 완료되는 작업입니다. 입력 작업이 `T` 형식이면 이 함수의 출력은 `task<std::pair<T, size_t>>>`이 되며, 여기서 쌍의 첫 번째 요소는 완료되는 작업의 결과이고 두 번째 요소는 완료된 작업의 인덱스입니다. 입력 태스크가 형식이 면 **`void`** 출력은입니다 `task<size_t>` . 여기서 결과는 완료 된 작업의 인덱스입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1757,6 +1757,6 @@ auto when_any(
 
 자세한 내용은 [작업 병렬 처리](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [concurrency 네임 스페이스](concurrency-namespace.md)

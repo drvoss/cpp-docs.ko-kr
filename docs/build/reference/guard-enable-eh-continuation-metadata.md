@@ -1,5 +1,5 @@
 ---
-title: '/s가드: ehcont (EH 연속 메타 데이터 사용)'
+title: /guard:ehcont (EH 연속 메타데이터 사용)
 description: 'Microsoft c + +/guard: ehcont 컴파일러 옵션에 대 한 참조 가이드입니다.'
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190522"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/s가드: ehcont (EH 연속 메타 데이터 사용)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (EH 연속 메타데이터 사용)
 
 컴파일러에서 EH 연속 (EHCONT) 메타 데이터를 생성할 수 있도록 합니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "84421361"
 
 ROP 공격을 방지 하기 위해 섀도 스택을 사용할 수 있는 경우 공격자는 다른 악용 기술을 사용 하 여 이동 합니다. 사용할 수 있는 방법 중 하나는 [컨텍스트](/windows/win32/api/winnt/ns-winnt-context) 구조 내에서 명령 포인터 값을 손상 시키는 것입니다. 이 구조체는,, 등의 스레드 실행을 리디렉션하는 시스템 호출에 전달 `NtContinue` [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) 됩니다. `CONTEXT`구조는 메모리에 저장 됩니다. 포함 된 명령 포인터를 손상 하면 시스템 호출에서 공격자가 제어 하는 주소로 실행을 전송할 수 있습니다. 현재는 `NTContinue` 임의의 연속 지점과 함께 호출할 수 있습니다. 이는 섀도 스택을 사용할 때 명령 포인터의 유효성을 검사 하는 데 필수적입니다.
 
-`RtlRestoreContext`및 `NtContinue` 는 SEH (구조적 예외 처리) 예외 해제 중에 블록이 포함 된 대상 프레임에 대 한 해제를 사용 `__except` 합니다. 명령 포인터의 `__except` 유효성 검사에 실패 하기 때문에 블록의 명령 포인터가 그림자 스택에 있을 것으로 예상 되지 않습니다. **`/guard:ehcont`** 컴파일러 스위치는 "EH 연속 테이블"을 생성 합니다. 이진의 모든 유효한 예외 처리 연속 대상에 대 한 Rva의 정렬 된 목록을 포함 합니다. `NtContinue`는 먼저 사용자가 제공한 명령 포인터에 대 한 섀도 스택을 확인 하 고 명령 포인터가 없는 경우 명령 포인터가 포함 된 이진 파일에서 EH 연속 테이블을 확인 합니다. 포함 하는 이진이 테이블을 사용 하 여 컴파일되지 않은 경우 레거시 바이너리와의 호환성을 위해을 `NtContinue` 계속 사용할 수 있습니다. EHCONT 데이터가 없는 레거시 바이너리와 EHCONT 데이터를 포함 하지만 테이블 항목은 포함 하지 않는 이진 파일을 구분 하는 것이 중요 합니다. 전자는 이진 내의 모든 주소를 유효한 연속 대상으로 허용 합니다. 후자는 이진 내의 모든 주소를 유효한 연속 대상으로 허용 하지 않습니다.
+`RtlRestoreContext`및 `NtContinue` 는 SEH (구조적 예외 처리) 예외 해제 중에 블록이 포함 된 대상 프레임에 대 한 해제를 사용 **`__except`** 합니다. 명령 포인터의 **`__except`** 유효성 검사에 실패 하기 때문에 블록의 명령 포인터가 그림자 스택에 있을 것으로 예상 되지 않습니다. **`/guard:ehcont`** 컴파일러 스위치는 "EH 연속 테이블"을 생성 합니다. 이진의 모든 유효한 예외 처리 연속 대상에 대 한 Rva의 정렬 된 목록을 포함 합니다. `NtContinue`는 먼저 사용자가 제공한 명령 포인터에 대 한 섀도 스택을 확인 하 고 명령 포인터가 없는 경우 명령 포인터가 포함 된 이진 파일에서 EH 연속 테이블을 확인 합니다. 포함 하는 이진이 테이블을 사용 하 여 컴파일되지 않은 경우 레거시 바이너리와의 호환성을 위해을 `NtContinue` 계속 사용할 수 있습니다. EHCONT 데이터가 없는 레거시 바이너리와 EHCONT 데이터를 포함 하지만 테이블 항목은 포함 하지 않는 이진 파일을 구분 하는 것이 중요 합니다. 전자는 이진 내의 모든 주소를 유효한 연속 대상으로 허용 합니다. 후자는 이진 내의 모든 주소를 유효한 연속 대상으로 허용 하지 않습니다.
 
 **`/guard:ehcont`** 이진에 대해 EH 연속 대상 rva를 생성 하려면이 옵션을 컴파일러와 링커 둘 다에 전달 해야 합니다. 단일 `cl` 명령을 사용하여 이진 파일이 빌드된 경우 컴파일러는 옵션을 링커에 전달합니다. 또한 컴파일러는 옵션을 [**`/guard:cf`**](guard-enable-control-flow-guard.md) 링커에 전달 합니다. 개별적으로 컴파일 및 연결 하는 경우 이러한 옵션은 컴파일러 및 링커 명령 둘 다에서 설정 해야 합니다.
 

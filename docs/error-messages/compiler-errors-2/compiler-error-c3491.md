@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184477"
 ---
 # <a name="compiler-error-c3491"></a>컴파일러 오류 C3491
 
@@ -21,7 +21,7 @@ ms.locfileid: "74738325"
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- `mutable` 키워드를 사용하여 람다 식을 선언합니다. 또는
+- 키워드를 사용 하 여 람다 식을 선언 합니다. **`mutable`** 또는
 
 - 람다 식의 캡처 목록에 변수를 참조로 전달합니다.
 
@@ -41,7 +41,7 @@ int main()
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `mutable` 키워드로 람다 식을 선언하여 C3491을 해결합니다.
+다음 예에서는 키워드를 사용 하 여 람다 식을 선언 하는 방법으로 C3491를 확인 합니다 **`mutable`** .
 
 ```cpp
 // C3491b.cpp
@@ -53,6 +53,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [람다 식](../../cpp/lambda-expressions-in-cpp.md)

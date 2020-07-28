@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182501"
 ---
 # <a name="function-class"></a>function 클래스
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*Fty* \
+*Fty*\
 래핑할 함수 형식입니다.
 
-*Ax* \
+*Ax*\
 할당자 함수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿은 호출 시그니처가 `Ret(T1, T2, ..., TN)` 호출 래퍼입니다. 이를 사용하여 다양한 호출 가능 개체를 균일한 래퍼에 포함합니다.
+클래스 템플릿은 호출 시그니처가 인 호출 래퍼입니다 `Ret(T1, T2, ..., TN)` . 이를 사용하여 다양한 호출 가능 개체를 균일한 래퍼에 포함합니다.
 
 일부 멤버 함수는 원하는 대상 개체를 명명하는 피연산자를 사용합니다. 그러한 피연산자를 여러 방법으로 지정할 수 있습니다.
 
@@ -111,19 +111,19 @@ public:
 |-|-|
 |[function](#function)|비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[result_type](#result_type)|호출 가능 개체의 반환 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[assign](#assign)|이 함수 개체에 호출 가능 개체를 할당합니다.|
-|[swap](#swap)|두 개의 호출 가능 개체를 바꿉니다.|
-|[target](#target)|저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.|
+|[스왑을](#swap)|두 개의 호출 가능 개체를 바꿉니다.|
+|[대상](#target)|저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.|
 |[target_type](#target_type)|호출 가능 개체에 대한 형식 정보를 가져옵니다.|
 
 ### <a name="operators"></a>연산자
@@ -131,10 +131,10 @@ public:
 |||
 |-|-|
 |[연산자 지정 되지 않음](#op_unspecified)|저장된 호출 가능 개체가 있는지 테스트합니다.|
-|[operator()](#op_call)|호출 가능 개체를 호출합니다.|
-|[operator=](#op_eq)|저장된 호출 가능 개체를 바꿉니다.|
+|[연산자 ()](#op_call)|호출 가능 개체를 호출합니다.|
+|[연산자 =](#op_eq)|저장된 호출 가능 개체를 바꿉니다.|
 
-## <a name="assign"></a>할당
+## <a name="assign"></a><a name="assign"></a>할당
 
 이 함수 개체에 호출 가능 개체를 할당합니다.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>매개 변수
 
-*_Func* \
+*_Func*\
 호출 가능 개체입니다.
 
-*_Fnref* \
+*_Fnref*\
 호출 가능 개체가 포함된 참조 래퍼입니다.
 
-*Ax* \
+*Ax*\
 할당자 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 각각 `*this`에 의해 포함된 `callable object`를 `operand`로 전달된 호출 가능 개체로 바꿉니다. 둘 다 할당자 개체 *Ax*를 사용 하 여 저장소를 할당 합니다.
+멤버 함수는 각각에 있는를로 `callable object` **`*this`** 전달 된 호출 가능 개체로 바꿉니다 `operand` . 둘 다 할당자 개체 *Ax*를 사용 하 여 저장소를 할당 합니다.
 
-## <a name="function"></a>칩셋용으로
+## <a name="function"></a><a name="function"></a> 함수
 
 비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.
 
@@ -190,25 +190,25 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 복사할 함수 개체입니다.
 
-*Fx* \
+*Fx*\
 호출 가능 개체의 형식입니다.
 
-*_Func* \
+*_Func*\
 래핑할 호출 가능 개체입니다.
 
-*할당* \
+*#C4*\
 할당자 형식입니다.
 
-*Ax* \
+*Ax*\
 할당자입니다.
 
-*_Fnref* \
+*_Fnref*\
 래핑할 호출 가능 개체 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 처음 두 개의 생성자는 빈 `function` 개체를 생성합니다. 다음 세 개의 생성자는 피연산자로 전달된 호출 가능 개체를 포함하는 `function` 개체를 생성합니다. 마지막 두 개의 생성자는 할당자 개체 Ax를 사용하여 스토리지를 할당합니다.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>연산자 지정 되지 않음
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a>연산자 지정 되지 않음
 
 저장된 호출 가능 개체가 있는지 테스트합니다.
 
@@ -290,9 +290,9 @@ g is empty (correct).
 operator unspecified();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-연산자는 개체가 비어 있지 않은 경우에만 true 값을 사용 하 여 **bool** 로 변환할 수 있는 값을 반환 합니다. 이를 사용하여 개체가 비어 있는지 테스트합니다.
+연산자는 **`bool`** 개체가 비어 있지 않은 경우에만 true 값으로 변환할 수 있는 값을 반환 합니다. 이를 사용하여 개체가 비어 있는지 테스트합니다.
 
 ### <a name="example"></a>예제
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>연산자 ()
+## <a name="operator"></a><a name="op_call"></a>연산자 ()
 
 호출 가능 개체를 호출합니다.
 
@@ -337,15 +337,15 @@ result_type operator()(
 
 ### <a name="parameters"></a>매개 변수
 
-*TN* \
+*TN*\
 N번째 인수의 형식입니다.
 
-*tN* \
+*tN*\
 N번째 호출 인수입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `INVOKE(fn, t1, t2, ..., tN, Ret)`를 반환합니다. 여기서 `fn`은 `*this`에 저장된 대상 개체입니다. 이를 사용하여 래핑된 호출 가능 개체를 호출합니다.
+멤버 함수는 `INVOKE(fn, t1, t2, ..., tN, Ret)` 를 반환 합니다 `fn` . 여기서는에 저장 된 대상 개체입니다 **`*this`** . 이를 사용하여 래핑된 호출 가능 개체를 호출합니다.
 
 ### <a name="example"></a>예제
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
 저장된 호출 가능 개체를 바꿉니다.
 
@@ -390,21 +390,21 @@ template <class Fty>
 
 ### <a name="parameters"></a>매개 변수
 
-*npc* \
+*npc*\
 null 포인터 상수입니다.
 
-*오른쪽* \
+*오른쪽*\
 복사할 함수 개체입니다.
 
-*fn* \
+*fn*\
 래핑할 호출 가능 개체입니다.
 
-*fnref* \
+*fnref*\
 래핑할 호출 가능 개체 참조입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 각각 `*this`에 의해 포함된 호출 가능 개체를 피연산자로 전달된 호출 가능 개체로 바꿉니다.
+각 연산자는에 보유 한 호출 가능 개체를 **`*this`** 피연산자로 전달 된 호출 가능 개체로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a>result_type
 
 호출 가능 개체의 반환 형식입니다.
 
@@ -465,7 +465,7 @@ val == -3
 typedef Ret result_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식 정의는 템플릿의 호출 시그니처에서 `Ret` 형식의 동의어입니다. 이를 사용하여 래핑된 호출 가능 개체의 반환 형식을 결정합니다.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 두 개의 호출 가능 개체를 바꿉니다.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*오른쪽* \
+*오른쪽*\
 바꿀 함수 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 대상 개체를 `*this`와 *right*사이에서 바꿉니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
+멤버 함수는 대상 개체를 **`*this`** 와 *오른쪽*으로 바꿉니다. 일정한 시간에 이 작업을 수행하고 예외를 throw하지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>대상을
+## <a name="target"></a><a name="target"></a>대상을
 
 저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>매개 변수
 
-*Fty2* \
+*Fty2*\
 테스트할 대상 호출 가능 개체 형식입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-*Fty2* 형식 `T1, T2, ..., TN` 인수 형식에 대해 호출할 수 있어야 하 고 반환 형식 `Ret` 합니다. `target_type() == typeid(Fty2)`인 경우 멤버 템플릿 함수는 대상 개체의 주소를 반환하고, 그렇지 않으면 0을 반환합니다.
+*Fty2* 형식은 인수 형식 및 반환 형식에 대해 호출할 수 있어야 합니다 `T1, T2, ..., TN` `Ret` . `target_type() == typeid(Fty2)`인 경우 멤버 템플릿 함수는 대상 개체의 주소를 반환하고, 그렇지 않으면 0을 반환합니다.
 
-*Fty2* 형식은 `T1, T2, ..., TN` 인수 형식에 대해 호출할 수 있으며, `Ret`의 lvalue `fn, t1, t2, ..., tN`에 대해 각각 `Fty2, T1, T2, ..., TN` 형식이 올바르게 구성 된 경우에는 `INVOKE(fn, t1, t2, ..., tN)`로 **변환할 수 있습니다**.
+*Fty2* 형식은 인수 형식 및 반환 형식에 대해 호출할 수 `T1, T2, ..., TN` 있습니다. 즉, `Ret` 형식의 lvalue에 대해 각각 형식이 올바른 형식이 면이 고, `fn, t1, t2, ..., tN` `Fty2, T1, T2, ..., TN` `INVOKE(fn, t1, t2, ..., tN)` `Ret` 이이 아니면 **`void`** 로 변환할 수 있는 경우 `Ret` 입니다.
 
 ### <a name="example"></a>예제
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a>target_type
 
 호출 가능 개체에 대한 형식 정보를 가져옵니다.
 
@@ -627,9 +627,9 @@ no target == true
 const std::type_info& target_type() const;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `*this`가 비어 있으면 `typeid(void)`를 반환하고, 그렇지 않으면 `typeid(T)`를 반환합니다. 여기서 `T`는 대상 개체의 형식입니다.
+멤버 함수는가 비어 있으면를 반환 하 고 `typeid(void)` **`*this`** 그렇지 않으면를 반환 합니다 `typeid(T)` `T` . 여기서는 대상 개체의 형식입니다.
 
 ### <a name="example"></a>예제
 

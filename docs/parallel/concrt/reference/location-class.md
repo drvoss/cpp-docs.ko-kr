@@ -1,5 +1,5 @@
 ---
-title: location 클래스
+title: 위치 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - location
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139820"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182696"
 ---
-# <a name="location-class"></a>location 클래스
+# <a name="location-class"></a>위치 클래스
 
 하드웨어의 실제 위치에 대한 추상화입니다.
 
@@ -27,31 +27,31 @@ ms.locfileid: "77139820"
 class location;
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[location](#ctor)|오버로드되었습니다. `location` 개체를 생성합니다.|
 |[~ location 소멸자](#dtor)|`location` 개체를 제거합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[현재](#current)|호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.|
 |[from_numa_node](#from_numa_node)|지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[operator!=](#operator_neq)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|
-|[operator=](#operator_eq)|다른 `location` 개체의 내용을 여기에 할당합니다.|
-|[연산자==](#operator_eq_eq)|두 `location` 개체가 동일한 위치를 나타내는지 여부를 확인 합니다.|
+|[연산자! =](#operator_neq)|두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.|
+|[연산자 =](#operator_eq)|다른 `location` 개체의 내용을 여기에 할당합니다.|
+|[연산자 = =](#operator_eq_eq)|두 `location` 개체가 동일한 위치를 나타내는지 여부를 확인 합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `location`
 
@@ -59,9 +59,9 @@ class location;
 
 **헤더:** concrt .h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="dtor"></a>~ 위치
+## <a name="location"></a><a name="dtor"></a>~ 위치
 
 `location` 개체를 제거합니다.
 
@@ -69,7 +69,7 @@ class location;
 ~location();
 ```
 
-## <a name="current"></a>현재
+## <a name="current"></a><a name="current"></a>현재
 
 호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 `location` 개체를 반환합니다.
 
@@ -81,7 +81,7 @@ static location __cdecl current();
 
 호출 스레드가 실행 중인 가장 구체적인 장소를 나타내는 위치입니다.
 
-## <a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
 
 지정된 NUMA 노드를 나타내는 `location` 개체를 반환합니다.
 
@@ -98,7 +98,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 
 `_NumaNodeNumber` 매개 변수로 지정된 NUMA 노드를 나타내는 위치입니다.
 
-## <a name="ctor"></a>위치도
+## <a name="location"></a><a name="ctor"></a>위치도
 
 `location` 개체를 생성합니다.
 
@@ -132,7 +132,7 @@ location(
 
 기본적으로 생성되는 위치는 시스템 전체를 나타냅니다.
 
-## <a name="operator_neq"></a> operator!=
+## <a name="operator"></a><a name="operator_neq"></a>연산자! =
 
 두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.
 
@@ -143,13 +143,13 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="parameters"></a>매개 변수
 
 *_Rhs*<br/>
-피연산자 `location`입니다.
+피연산자 `location` .
 
 ### <a name="return-value"></a>Return Value
 
-두 위치가 다르면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 두 위치가 다르면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="operator_eq"></a>연산자 =
+## <a name="operator"></a><a name="operator_eq"></a>연산자 =
 
 다른 `location` 개체의 내용을 여기에 할당합니다.
 
@@ -164,7 +164,7 @@ location& operator= (const location& _Rhs);
 
 ### <a name="return-value"></a>Return Value
 
-## <a name="operator_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>연산자 = =
 
 두 `location` 개체가 동일한 위치를 나타내는지 여부를 확인 합니다.
 
@@ -175,12 +175,12 @@ bool operator== (const location& _Rhs) const;
 ### <a name="parameters"></a>매개 변수
 
 *_Rhs*<br/>
-피연산자 `location`입니다.
+피연산자 `location` .
 
 ### <a name="return-value"></a>Return Value
 
-두 위치가 동일 하면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 두 위치가 동일 하면이 고, **`false`** 그렇지 않으면입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)
+[concurrency 네임 스페이스](concurrency-namespace.md)

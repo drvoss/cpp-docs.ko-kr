@@ -1,5 +1,5 @@
 ---
-title: 로캘
+title: Locale
 ms.date: 04/11/2018
 f1_keywords:
 - c.international
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744387"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189586"
 ---
-# <a name="locale"></a>로캘
+# <a name="locale"></a>Locale
 
 *로캘*은 프로그램을 사용자 지정하는 데 사용할 수 있는 국가/지역 및 언어 설정을 참조합니다. 일부 로캘 종속 범주는 날짜 및 통화 값의 표시 형식을 포함합니다. 자세한 내용은 [로캘 범주](../c-runtime-library/locale-categories.md)를 참조하세요.
 
@@ -25,11 +25,11 @@ ms.locfileid: "57744387"
 
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)을 사용하여 각 스레드가 자체 로캘을 포함하는지 또는 프로그램의 모든 스레드가 동일한 로캘을 공유하는지를 제어합니다. 자세한 내용은 [로캘 및 코드 페이지](../text/locales-and-code-pages.md)를 참조하세요.
 
-다음 표에서 **_s**("보안") 접미사로 표시된 함수는 더 안전한 버전의 함수로 사용할 수 있습니다. 자세한 내용은 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)을 참조하세요.
+다음 표에서 **_s**("보안") 접미사로 표시된 함수는 더 안전한 버전의 함수로 사용할 수 있습니다. 자세한 내용은 [CRT의 보안 기능](../c-runtime-library/security-features-in-the-crt.md)을 참조하세요.
 
 ## <a name="locale-dependent-routines"></a>로캘 종속 루틴
 
-|루틴에서 반환된 값|기능|**setlocale** 범주 설정 종속성|
+|루틴에서 반환된 값|Windows Server Update Services와 함께|**setlocale** 범주 설정 종속성|
 |-------------|---------|---------------------------------------------|
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|문자를 부동 소수점 값으로 변환합니다.|**LC_NUMERIC**|
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|문자를 정수 값으로 변환합니다.|**LC_NUMERIC**|
@@ -47,7 +47,7 @@ ms.locfileid: "57744387"
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|멀티바이트 문자를 해당되는 와이드 문자로 변환합니다.|**LC_CTYPE**|
 |[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 함수|형식이 지정된 출력을 씁니다.|**LC_NUMERIC**(기수 문자 출력 여부 결정)|
 |[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 함수|형식이 지정된 입력을 읽습니다.|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
-|[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|프로그램에 대한 로캘을 선택합니다.|적용할 수 없음|
+|[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|프로그램에 대한 로캘을 선택합니다.|해당 없음|
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|두 문자열의 문자를 비교합니다.|**LC_COLLATE**|
 |[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)|대/소문자에 상관없이 두 문자열을 비교합니다.|**LC_CTYPE**|
 |[_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|두 문자열의 문자를 비교합니다(대/소문자 구분 없음).|**LC_COLLATE**|
@@ -56,8 +56,8 @@ ms.locfileid: "57744387"
 |[_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|두 문자열의 처음 **n**개 문자를 비교합니다(대/소문자 구분 없음).|**LC_COLLATE**|
 |[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|제공된 **format** 인수에 따라 날짜 및 시간 값의 형식을 지정합니다.|**LC_TIME**|
 |[_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md),[_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|현재 위치에서 제공된 문자열의 각 대문자를 소문자로 변환합니다.|**LC_CTYPE**|
-|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|문자열을 **double** 값으로 변환합니다.|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
-|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|문자열을 **long** 값으로 변환합니다.|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
+|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|문자열을 값으로 변환 합니다. **`double`**|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
+|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|문자열을 값으로 변환 합니다. **`long`**|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
 |[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|문자열을 부호 없는 long 값으로 변환합니다.|**LC_NUMERIC**(기수 문자 인식 여부 결정)|
 |[_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md),[_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|현재 위치에서 문자열의 각 소문자를 대문자로 변환합니다.|**LC_CTYPE**|
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|문자열을 로캘에 따라 데이터 정렬된 형식으로 변형합니다.|**LC_COLLATE**|

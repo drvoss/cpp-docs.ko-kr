@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939410"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220745"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -66,16 +66,16 @@ long double cabsl(
 
 ### <a name="parameters"></a>매개 변수
 
-*z*<br/>
+*-*<br/>
 복소수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *Z*의 절대값입니다.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **_Fcomplex** 또는 **_fcomplex** 값을 사용 하는 **cab** 의 오버 로드를 호출 하 고 **float** 또는 **long** **double** 값을 반환할 수 있습니다. C 프로그램에서 **cab** 는 항상 **_dcomplex** 값을 사용 하 여 **double** 값을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **_Fcomplex** 또는 **_Lcomplex** 값을 사용 하는 **cab** 의 오버 로드를 호출 하 고 또는 값을 반환할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **cab** 는 항상 **_Dcomplex** 값을 사용 하 고 값을 반환 **`double`** 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -83,9 +83,9 @@ long double cabsl(
 |-------------|--------------|------------------|
 |**cab**, **cabsf**, **cabsf**|\<complex.h>|\<ccomplex>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

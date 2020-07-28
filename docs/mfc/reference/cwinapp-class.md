@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 580ed06f82d0341bddb959df99f68c5fc244a3df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750678"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182930"
 ---
 # <a name="cwinapp-class"></a>CWinApp 클래스
 
@@ -213,151 +213,151 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CWinApp ::CWinApp](#cwinapp)|`CWinApp` 개체를 생성합니다.|
+|[CWinApp:: CWinApp](#cwinapp)|`CWinApp` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[CWinApp::AddDocTemplate](#adddoctemplate)|응용 프로그램의 사용 가능한 문서 템플릿 목록에 문서 템플릿을 추가합니다.|
-|[CWinApp::추가최신파일리스트](#addtorecentfilelist)|가장 최근에 사용한(MRU) 파일 목록에 파일 이름을 추가합니다.|
-|[CWinApp:::응용 프로그램 복구콜백](#applicationrecoverycallback)|응용 프로그램이 예기치 않게 종료될 때 프레임워크에서 호출됩니다.|
-|[CWinApp::닫기모든 문서](#closealldocuments)|열려 있는 모든 문서를 닫습니다.|
-|[CWinApp::만들기 프린터DC](#createprinterdc)|프린터 장치 컨텍스트를 만듭니다.|
-|[CWinApp::D엘레그트리](#delregtree)|지정된 키와 모든 하위 키를 삭제합니다.|
-|[CWinApp::D오 메시지 상자](#domessagebox)|응용 프로그램에 대한 [AfxMessageBox를](cstring-formatting-and-message-box-display.md#afxmessagebox) 구현합니다.|
-|[CWinApp::DoWaitCursor](#dowaitcursor)|대기 커서를 켜고 끕니다.|
-|[CWinApp::인에이블D2D지원](#enabled2dsupport)|응용 프로그램 D2D 지원을 활성화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.|
-|[CWinApp::사용HTML도움말](#enablehtmlhelp)|WinHelp 가 아니라 응용 프로그램에 대한 HTML도움말을 구현합니다.|
-|[CWinApp:::인에이블태스크바상호작용](#enabletaskbarinteraction)|작업 표시줄 상호 작용을 활성화합니다.|
-|[CWinApp::Exit인스턴스](#exitinstance)|응용 프로그램이 종료될 때 정리를 위해 재정의합니다.|
-|[CWinApp::GetApplicationRecovery매개 변수](#getapplicationrecoveryparameter)|응용 프로그램 복구 메서드에 대 한 입력 매개 변수를 검색합니다.|
-|[CWinApp::GetApplication복구간격](#getapplicationrecoverypinginterval)|다시 시작 관리자가 복구 콜백 함수가 반환될 때까지 기다리는 시간을 반환합니다.|
-|[CWinApp::GetApplication다시 시작 플래그](#getapplicationrestartflags)|다시 시작 관리자에 대한 플래그를 반환합니다.|
-|[CWinApp::GetApp레지스트리키](#getappregistrykey)|"소프트웨어"\레지스트리Key\ProfileName에 HKEY_CURRENT_USER\\키를 반환합니다.|
-|[CWinApp::GetDataRecovery처리기](#getdatarecoveryhandler)|응용 프로그램의 이 인스턴스에 대한 데이터 복구 처리기를 가져옵니다.|
-|[CWinApp::GetFirstDoc템플릿 포지션](#getfirstdoctemplateposition)|첫 번째 문서 템플릿의 위치를 검색합니다.|
-|[CWinApp:::GetHelpMode](#gethelpmode)|응용 프로그램에서 사용하는 도움말 유형을 검색합니다.|
-|[CWinApp::GetNextDocTemplate](#getnextdoctemplate)|문서 템플릿의 위치를 검색합니다. 재귀적으로 사용할 수 있습니다.|
-|[CWinApp::getprinterDevice기본값](#getprinterdevicedefaults)|프린터 장치 기본값을 검색합니다.|
-|[CWinApp::GetProfile바이너리](#getprofilebinary)|응용 프로그램의 의 항목에서 이진 데이터를 검색합니다. INI 파일입니다.|
-|[CWinApp::GetProfileInt](#getprofileint)|응용 프로그램의 항목에서 정수 를 검색합니다. INI 파일입니다.|
-|[CWinApp:::GetProfileString](#getprofilestring)|응용 프로그램의 의 항목에서 문자열을 검색합니다. INI 파일입니다.|
-|[CWinApp::getsectionKey](#getsectionkey)|HKEY_CURRENT_USER\\"소프트웨어"\레지스트리키\AppName\lpszSection에 대한 키를 반환합니다.|
-|[CWinApp::숨기기 응용 프로그램](#hideapplication)|모든 문서를 닫기 전에 응용 프로그램을 숨깁니다.|
-|[CWinApp::Html도움말](#htmlhelp)|Windows `HTMLHelp` 함수를 호출합니다.|
-|[CWinApp::Initinstance](#initinstance)|Windows 개체 를 만드는 등 Windows 인스턴스 초기화를 수행 하도록 재정의 합니다.|
-|[CWinApp::IsTaskbar상호작용 사용 가능](#istaskbarinteractionenabled)|Windows 7 작업 표시줄 상호 작용이 활성화되어 있는지 여부를 알려줍니다.|
-|[CWinApp ::로드 커서](#loadcursor)|커서 리소스를 로드합니다.|
-|[CWinApp ::로드 아이콘](#loadicon)|아이콘 리소스를 로드합니다.|
-|[CWinApp::로드OEM커서](#loadoemcursor)|OCR_ 상수가 WINDOWS에서 지정하는 **Windows** OEM 미리 정의된 커서를 로드합니다. H.|
-|[CWinApp ::로드OEM아이콘](#loadoemicon)|OIC_ 상수가 WINDOWS에서 지정하는 **Windows** OEM 미리 정의된 아이콘을 로드합니다. H.|
-|[CWinApp::로드스탠다드커서](#loadstandardcursor)|IDC_ 상수가 WINDOWS에서 지정하는 **Windows** 미리 정의된 커서를 로드합니다. H.|
-|[CWinApp :: 로드 스탠다드아이콘](#loadstandardicon)|**IDI_** 상수가 WINDOWS에서 지정하는 Windows 미리 정의된 아이콘을 로드합니다. H.|
-|[CWinApp:::OnDDECommand](#onddecommand)|동적 데이터 교환 (DDE) 실행 명령에 대 한 응답으로 프레임 워크에 의해 호출 됩니다.|
-|[CWinApp ::: 온들](#onidle)|응용 프로그램별 유휴 시간 처리를 수행하려면 재정의합니다.|
-|[CWinApp::오픈 문서파일](#opendocumentfile)|파일에서 문서를 여는 프레임워크에서 호출합니다.|
-|[CWinApp::P거칠은 커맨드라인](#parsecommandline)|명령줄에서 개별 매개 변수와 플래그를 구문 분석합니다.|
-|[CWinApp::P다시 번역 메시지](#pretranslatemessage)|메시지가 Windows [함수TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 및 [DispatchMessage로](/windows/win32/api/winuser/nf-winuser-dispatchmessage)전달되기 전에 메시지를 필터링합니다.|
-|[CWinApp::P로케이션메시지필터](#processmessagefilter)|응용 프로그램에 도달하기 전에 특정 메시지를 가로채는 것입니다.|
-|[CWinApp::P로키스셸커맨드](#processshellcommand)|명령줄 인수 및 플래그를 처리합니다.|
-|[CWinApp::P로스WndProc예외](#processwndprocexception)|응용 프로그램의 메시지 및 명령 처리기에 의해 throw된 처리되지 않은 모든 예외를 차단합니다.|
-|[CWinApp::등록](#register)|사용자 지정 등록을 수행합니다.|
-|[CWinApp::레지스터위드리스타트매니저](#registerwithrestartmanager)|응용 프로그램을 다시 시작 관리자에 등록합니다.|
-|[CWinApp::다시 열기이전파일다시 시작](#reopenpreviousfilesatrestart)|다시 시작 관리자가 응용 프로그램이 예기치 않게 종료될 때 열려 있던 파일을 다시 열지 여부를 결정합니다.|
-|[CWinApp::다시 시작 인스턴스](#restartinstance)|다시 시작 관리자에 의해 시작 된 응용 프로그램을 다시 시작 처리 합니다.|
-|[CWinApp::복원자동 저장파일다시 시작](#restoreautosavedfilesatrestart)|다시 시작 관리자가 응용 프로그램을 다시 시작할 때 자동 저장된 파일을 복원하는지 여부를 결정합니다.|
-|[CWinApp :: 실행](#run)|기본 메시지 루프를 실행합니다. 재정의하여 메시지 루프를 사용자 지정합니다.|
-|[CWinApp::실행 자동화](#runautomated)|**/자동화** 옵션에 대한 응용 프로그램의 명령줄을 테스트합니다. 더 이상 사용되지 않습니다. 대신 [ParseCommandLine](#parsecommandline)을 호출한 후 [CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated) 값을 사용합니다.|
-|[CWinApp:::실행 임베디드](#runembedded)|**/포함** 옵션에 대한 응용 프로그램의 명령줄을 테스트합니다. 더 이상 사용되지 않습니다. 대신, [ParseCommandLine을](#parsecommandline)호출 한 후 [CCommandLineInfo:m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded) 값을 사용 합니다.|
-|[CWinApp:::SaveAll수정](#saveallmodified)|수정된 모든 문서를 저장하라는 메시지를 사용자에게 표시합니다.|
-|[CWinApp::선택 프린터](#selectprinter)|인쇄 대화 상자를 통해 사용자가 이전에 표시한 프린터를 선택합니다.|
-|[CWinApp:::세트헬프 모드](#sethelpmode)|응용 프로그램에서 사용하는 도움말 유형을 설정하고 초기화합니다.|
-|[CWinApp::지원응용 프로그램 복구](#supportsapplicationrecovery)|다시 시작 관리자가 예기치 않게 종료된 응용 프로그램을 복구하는지 여부를 결정합니다.|
-|[CWinApp::지원자동 저장간격](#supportsautosaveatinterval)|다시 시작 관리자가 정기적으로 열려 있는 문서를 자동으로 저장하는지 여부를 결정합니다.|
-|[CWinApp::지원자동 저장다시 시작](#supportsautosaveatrestart)|다시 시작 관리자가 응용 프로그램을 다시 시작할 때 열려 있는 문서를 자동으로 저장하는지 여부를 결정합니다.|
-|[CWinApp::지원 다시 시작 관리자](#supportsrestartmanager)|응용 프로그램이 다시 시작 관리자를 지원하는지 여부를 결정합니다.|
-|[CWinApp::등록 취소](#unregister)|개체에 의해 등록된 것으로 알려진 `CWinApp` 모든 등록을 취소합니다.|
-|[CWinApp:::윈헬프](#winhelp)|Windows `WinHelp` 함수를 호출합니다.|
-|[CWinApp::쓰기 프로필 바이너리](#writeprofilebinary)|응용 프로그램의 항목에 이진 데이터를 씁니다. INI 파일입니다.|
-|[CWinApp::쓰기 프로필인트](#writeprofileint)|응용 프로그램의 항목에 정수를 씁니다. INI 파일입니다.|
-|[CWinApp::쓰기 프로필 스트링](#writeprofilestring)|응용 프로그램의 항목에 문자열을 씁니다. INI 파일입니다.|
+|[CWinApp:: AddDocTemplate](#adddoctemplate)|응용 프로그램의 사용 가능한 문서 템플릿 목록에 문서 템플릿을 추가 합니다.|
+|[CWinApp:: AddToRecentFileList](#addtorecentfilelist)|가장 최근에 사용한 (MRU) 파일 목록에 파일 이름을 추가 합니다.|
+|[CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)|응용 프로그램이 예기치 않게 종료 될 때 프레임 워크에서 호출 됩니다.|
+|[CWinApp:: CloseAllDocuments](#closealldocuments)|열려 있는 모든 문서를 닫습니다.|
+|[CWinApp:: Create프린터 Dc](#createprinterdc)|프린터 장치 컨텍스트를 만듭니다.|
+|[CWinApp::D elRegTree](#delregtree)|지정 된 키와 모든 하위 키를 삭제 합니다.|
+|[CWinApp::D oMessageBox](#domessagebox)|응용 프로그램에 대 한 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 을 구현 합니다.|
+|[CWinApp::D oWaitCursor](#dowaitcursor)|대기 커서를 켜고 끕니다.|
+|[CWinApp:: EnableD2DSupport](#enabled2dsupport)|응용 프로그램 D2D 지원을 사용 하도록 설정 합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.|
+|[CWinApp:: EnableHtmlHelp](#enablehtmlhelp)|WinHelp가 아닌 응용 프로그램에 대 한 HTMLHelp을 구현 합니다.|
+|[CWinApp:: Enabletask바 상호 작용](#enabletaskbarinteraction)|작업 표시줄 상호 작용을 사용 합니다.|
+|[CWinApp:: ExitInstance](#exitinstance)|응용 프로그램이 종료 될 때 정리 하도록 재정의 합니다.|
+|[CWinApp:: GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|응용 프로그램 복구 방법에 대 한 입력 매개 변수를 검색 합니다.|
+|[CWinApp:: GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|복구 콜백 함수가 반환 될 때까지 다시 시작 관리자가 대기 하는 시간을 반환 합니다.|
+|[CWinApp:: GetApplicationRestartFlags](#getapplicationrestartflags)|다시 시작 관리자에 대 한 플래그를 반환 합니다.|
+|[CWinApp:: GetAppRegistryKey](#getappregistrykey)|HKEY_CURRENT_USER "Software"의 키를 반환 \\ \RegistryKey\ProfileName.|
+|[CWinApp:: GetDataRecoveryHandler](#getdatarecoveryhandler)|이 응용 프로그램 인스턴스에 대 한 데이터 복구 처리기를 가져옵니다.|
+|[CWinApp:: Getfirstdoc서식 위치](#getfirstdoctemplateposition)|첫 번째 문서 템플릿의 위치를 검색 합니다.|
+|[CWinApp:: GetHelpMode](#gethelpmode)|응용 프로그램에서 사용 하는 도움말의 형식을 검색 합니다.|
+|[CWinApp:: GetNextDocTemplate](#getnextdoctemplate)|문서 템플릿의 위치를 검색 합니다. 재귀적으로 사용할 수 있습니다.|
+|[CWinApp:: Get프린터 Devicedefaults](#getprinterdevicedefaults)|프린터 장치 기본값을 검색 합니다.|
+|[CWinApp:: GetProfileBinary](#getprofilebinary)|응용 프로그램의 항목에서 이진 데이터를 검색 합니다. INI 파일.|
+|[CWinApp:: GetProfileInt](#getprofileint)|응용 프로그램의 항목에서 정수를 검색 합니다. INI 파일.|
+|[CWinApp:: GetProfileString](#getprofilestring)|응용 프로그램의 항목에서 문자열을 검색 합니다. INI 파일.|
+|[CWinApp:: Get섹션 키](#getsectionkey)|HKEY_CURRENT_USER "Software"의 키를 반환 \\ \RegistryKey\AppName\lpszSection.|
+|[CWinApp:: HideApplication](#hideapplication)|모든 문서를 닫기 전에 응용 프로그램을 숨깁니다.|
+|[CWinApp:: HtmlHelp](#htmlhelp)|`HTMLHelp`Windows 함수를 호출 합니다.|
+|[CWinApp:: InitInstance](#initinstance)|창 개체 만들기와 같은 Windows 인스턴스 초기화를 수행 하도록를 재정의 합니다.|
+|[CWinApp:: IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Windows 7 작업 표시줄 상호 작용이 사용 되는지 여부를 나타냅니다.|
+|[CWinApp:: LoadCursor](#loadcursor)|커서 리소스를 로드 합니다.|
+|[CWinApp:: LoadIcon](#loadicon)|아이콘 리소스를 로드 합니다.|
+|[CWinApp:: LoadOEMCursor](#loadoemcursor)|**OCR_** 상수가 windows에서 지정 하는 windows OEM 미리 정의 된 커서를 로드 합니다. 넣기.|
+|[CWinApp:: LoadOEMIcon](#loadoemicon)|**OIC_** 상수가 windows에서 지정 하는 windows OEM 미리 정의 된 아이콘을 로드 합니다. 넣기.|
+|[CWinApp:: LoadStandardCursor](#loadstandardcursor)|**IDC_** 상수가 windows에서 지정 하는 windows 미리 정의 된 커서를 로드 합니다. 넣기.|
+|[CWinApp:: LoadStandardIcon](#loadstandardicon)|WINDOWS에서 **IDI_** 상수가 지정 하는 windows 미리 정의 된 아이콘을 로드 합니다. 넣기.|
+|[CWinApp:: OnDDECommand](#onddecommand)|DDE (동적 데이터 교환) 실행 명령에 대 한 응답으로 프레임 워크에서 호출 됩니다.|
+|[CWinApp:: OnIdle](#onidle)|응용 프로그램별 유휴 시간 처리를 수행 하려면를 재정의 합니다.|
+|[CWinApp:: OpenDocumentFile](#opendocumentfile)|파일에서 문서를 열기 위해 프레임 워크에서 호출 됩니다.|
+|[CWinApp::P arseCommandLine](#parsecommandline)|명령줄에서 개별 매개 변수 및 플래그를 구문 분석 합니다.|
+|[CWinApp::P reTranslateMessage](#pretranslatemessage)|Windows 함수 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 및 [dispatchmessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)에 디스패치 되기 전에 메시지를 필터링 합니다.|
+|[CWinApp::P rocessMessageFilter](#processmessagefilter)|응용 프로그램에 도달 하기 전에 특정 메시지를 가로챕니다.|
+|[CWinApp::P rocessShellCommand](#processshellcommand)|명령줄 인수 및 플래그를 처리 합니다.|
+|[CWinApp::P rocessWndProcException](#processwndprocexception)|응용 프로그램의 메시지 및 명령 처리기가 throw 한 처리 되지 않은 모든 예외를 가로챕니다.|
+|[CWinApp:: Register](#register)|사용자 지정 된 등록을 수행 합니다.|
+|[CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)|다시 시작 관리자를 사용 하 여 응용 프로그램을 등록 합니다.|
+|[CWinApp:: ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|응용 프로그램이 예기치 않게 종료 될 때 열려 있던 파일을 다시 시작 관리자가 다시 열 지 여부를 결정 합니다.|
+|[CWinApp:: RestartInstance](#restartinstance)|다시 시작 관리자에 의해 시작 된 응용 프로그램 다시 시작을 처리 합니다.|
+|[CWinApp:: RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|다시 시작 관리자가 응용 프로그램을 다시 시작할 때 자동으로 저장 된 파일을 복원할지 여부를 결정 합니다.|
+|[CWinApp:: Run](#run)|기본 메시지 루프를 실행 합니다. 메시지 루프를 사용자 지정 하려면를 재정의 합니다.|
+|[CWinApp:: RunAutomated](#runautomated)|응용 프로그램의 명령줄에서 **/Automation** 옵션을 테스트 합니다. 사용되지 않습니다. 대신 [ParseCommandLine](#parsecommandline)를 호출한 후 [CCommandLineInfo:: m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated) 의 값을 사용 합니다.|
+|[CWinApp:: RunEmbedded](#runembedded)|응용 프로그램의 명령줄에서 **프로그램이/embedding** 옵션을 테스트 합니다. 사용되지 않습니다. 대신 [ParseCommandLine](#parsecommandline)를 호출한 후 [CCommandLineInfo:: m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded) 의 값을 사용 합니다.|
+|[CWinApp:: SaveAllModified](#saveallmodified)|사용자에 게 모든 수정 된 문서를 저장 하 라는 메시지를 표시 합니다.|
+|[CWinApp:: SelectPrinter](#selectprinter)|사용자가 인쇄 대화 상자를 통해 이전에 표시 한 프린터를 선택 합니다.|
+|[CWinApp:: SetHelpMode](#sethelpmode)|응용 프로그램에서 사용 하는 도움말의 형식을 설정 하 고 초기화 합니다.|
+|[CWinApp:: SupportsApplicationRecovery](#supportsapplicationrecovery)|다시 시작 관리자가 예기치 않게 종료 된 응용 프로그램을 복구할 지 여부를 결정 합니다.|
+|[CWinApp:: SupportsAutosaveAtInterval](#supportsautosaveatinterval)|다시 시작 관리자가 열려 있는 문서를 일정 한 간격으로 자동 저장 하는지 여부를 결정 합니다.|
+|[CWinApp:: SupportsAutosaveAtRestart](#supportsautosaveatrestart)|응용 프로그램이 다시 시작 될 때 다시 시작 관리자가 열려 있는 모든 문서를 자동으로 저장할지 여부를 결정 합니다.|
+|[CWinApp:: SupportsRestartManager](#supportsrestartmanager)|응용 프로그램에서 다시 시작 관리자를 지원 하는지 여부를 확인 합니다.|
+|[CWinApp:: 등록 취소](#unregister)|개체에서 등록 된 것으로 알려진 모든 항목의 등록을 취소 `CWinApp` 합니다.|
+|[CWinApp:: WinHelp](#winhelp)|`WinHelp`Windows 함수를 호출 합니다.|
+|[CWinApp:: WriteProfileBinary](#writeprofilebinary)|응용 프로그램의 항목에 이진 데이터를 씁니다. INI 파일.|
+|[CWinApp:: WriteProfileInt](#writeprofileint)|응용 프로그램의에 있는 항목에 정수를 씁니다. INI 파일.|
+|[CWinApp:: WriteProfileString](#writeprofilestring)|응용 프로그램의에 있는 항목에 문자열을 씁니다. INI 파일.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CWinApp::인에이블쉘오픈](#enableshellopen)|사용자가 Windows 파일 관리자에서 데이터 파일을 열 수 있습니다.|
-|[CWinApp::로드스트드 프로파일설정](#loadstdprofilesettings)|로드 표준. INI 파일 설정을 활성화하고 MRU 파일 목록 기능을 사용할 수 있습니다.|
-|[CWinApp:::에 컨텍스트 도움말](#oncontexthelp)|응용 프로그램 내에서 SHIFT+F1 도움말을 처리합니다.|
-|[CWinApp::온파일뉴](#onfilenew)|ID_FILE_NEW 명령을 구현합니다.|
-|[CWinApp::온파일 열기](#onfileopen)|ID_FILE_OPEN 명령을 구현합니다.|
-|[CWinApp::온파일 프린트셋업](#onfileprintsetup)|ID_FILE_PRINT_SETUP 명령을 구현합니다.|
-|[CWinApp:::에 도움](#onhelp)|현재 컨텍스트를 사용하여 애플리케이션 내에서 F1 도움말을 처리합니다.|
-|[CWinApp:::에 도움말 파인더](#onhelpfinder)|ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리합니다.|
-|[CWinApp:::온헬드 인덱스](#onhelpindex)|ID_HELP_INDEX 명령을 처리하고 기본 도움말 항목을 제공합니다.|
-|[CWinApp::에 도움 사용](#onhelpusing)|ID_HELP_USING 명령을 처리합니다.|
-|[CWinApp::레지스터쉘파일타입](#registershellfiletypes)|Windows 파일 관리자를 사용 하 여 모든 응용 프로그램의 문서 형식을 등록 합니다.|
-|[CWinApp ::SetAppID](#setappid)|응용 프로그램에 대한 응용 프로그램 사용자 모델 ID를 명시적으로 설정합니다. 이 메서드는 사용자 인터페이스가 사용자에게 표시되기 전에 호출해야 합니다(가장 좋은 장소는 응용 프로그램 생성자).|
-|[CWinApp:::세트레지스트리키](#setregistrykey)|응용 프로그램 설정을 대신 레지스트리에 저장합니다. INI 파일.|
-|[CWinApp::레지스터 쉘파일 형식](#unregistershellfiletypes)|Windows 파일 관리자를 사용 하 여 모든 응용 프로그램의 문서 형식을 등록 취소 합니다.|
+|[CWinApp:: EnableShellOpen](#enableshellopen)|사용자가 Windows 파일 관리자에서 데이터 파일을 열 수 있도록 허용 합니다.|
+|[CWinApp:: LoadStdProfileSettings](#loadstdprofilesettings)|표준을 로드 합니다. INI 파일을 설정 하 고 MRU 파일 목록 기능을 사용 하도록 설정 합니다.|
+|[CWinApp:: OnContextHelp](#oncontexthelp)|응용 프로그램 내에서 SHIFT + F1 도움말을 처리 합니다.|
+|[CWinApp:: OnFileNew](#onfilenew)|ID_FILE_NEW 명령을 구현 합니다.|
+|[CWinApp:: OnFileOpen](#onfileopen)|ID_FILE_OPEN 명령을 구현 합니다.|
+|[CWinApp:: OnFilePrintSetup](#onfileprintsetup)|ID_FILE_PRINT_SETUP 명령을 구현 합니다.|
+|[CWinApp:: OnHelp](#onhelp)|현재 컨텍스트를 사용하여 애플리케이션 내에서 F1 도움말을 처리합니다.|
+|[CWinApp:: OnHelpFinder](#onhelpfinder)|ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리 합니다.|
+|[CWinApp:: OnHelpIndex](#onhelpindex)|ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.|
+|[CWinApp:: OnHelpUsing](#onhelpusing)|ID_HELP_USING 명령을 처리 합니다.|
+|[CWinApp:: RegisterShellFileTypes](#registershellfiletypes)|응용 프로그램의 모든 문서 형식을 Windows 파일 관리자에 등록 합니다.|
+|[CWinApp:: SetAppID](#setappid)|응용 프로그램의 응용 프로그램 사용자 모델 ID를 명시적으로 설정 합니다. 사용자 인터페이스가 사용자에 게 표시 되기 전에이 메서드를 호출 해야 합니다. 가장 좋은 장소는 응용 프로그램 생성자입니다.|
+|[CWinApp:: SetRegistryKey](#setregistrykey)|응용 프로그램 설정이 대신 레지스트리에 저장 되도록 합니다. INI 파일.|
+|[CWinApp:: UnregisterShellFileTypes](#unregistershellfiletypes)|Windows 파일 관리자를 사용 하 여 모든 응용 프로그램의 문서 유형을 등록 취소 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CWinApp::m_bHelpMode](#m_bhelpmode)|사용자가 도움말 컨텍스트 모드에 있는지 나타냅니다(일반적으로 SHIFT+F1로 호출).|
-|[CWinApp::m_eHelpType](#m_ehelptype)|응용 프로그램에서 사용하는 도움말 유형을 지정합니다.|
-|[CWinApp::m_hInstance](#m_hinstance)|응용 프로그램의 현재 인스턴스를 식별합니다.|
-|[CWinApp::m_lpCmdLine](#m_lpcmdline)|응용 프로그램의 명령줄을 지정하는 null 종료 된 문자열을 가리킵니다.|
-|[CWinApp::m_nCmdShow](#m_ncmdshow)|창이 처음에 표시되는 방법을 지정합니다.|
-|[CWinApp::m_pActiveWnd](#m_pactivewnd)|OLE 서버가 활성 상태일 때 컨테이너 응용 프로그램의 기본 창에 대한 포인터입니다.|
-|[CWinApp::m_pszAppID](#m_pszappid)|응용 프로그램 사용자 모델 ID입니다.|
-|[CWinApp::m_pszAppName](#m_pszappname)|애플리케이션의 이름을 지정합니다.|
-|[CWinApp::m_pszExeName](#m_pszexename)|응용 프로그램의 모듈 이름입니다.|
-|[CWinApp::m_pszHelpFilePath](#m_pszhelpfilepath)|응용 프로그램의 도움말 파일에 대한 경로입니다.|
-|[CWinApp::m_pszProfileName](#m_pszprofilename)|응용 프로그램의 . INI 파일 이름입니다.|
-|[CWinApp::m_pszRegistryKey](#m_pszregistrykey)|응용 프로그램 프로필 설정을 저장하기 위한 전체 레지스트리 키를 결정하는 데 사용됩니다.|
+|[CWinApp:: m_bHelpMode](#m_bhelpmode)|사용자가 도움말 컨텍스트 모드 (일반적으로 SHIFT + f 1을 사용 하 여 호출 됨)에 있는지 여부를 나타냅니다.|
+|[CWinApp:: m_eHelpType](#m_ehelptype)|응용 프로그램에서 사용 하는 도움말의 유형을 지정 합니다.|
+|[CWinApp:: m_hInstance](#m_hinstance)|응용 프로그램의 현재 인스턴스를 식별 합니다.|
+|[CWinApp:: m_lpCmdLine](#m_lpcmdline)|응용 프로그램에 대 한 명령줄을 지정 하는 null로 끝나는 문자열을 가리킵니다.|
+|[CWinApp:: m_nCmdShow](#m_ncmdshow)|창을 처음에 표시 하는 방법을 지정 합니다.|
+|[CWinApp:: m_pActiveWnd](#m_pactivewnd)|OLE 서버가 활성 상태인 경우 컨테이너 응용 프로그램의 주 창에 대 한 포인터입니다.|
+|[CWinApp:: m_pszAppID](#m_pszappid)|응용 프로그램 사용자 모델 ID입니다.|
+|[CWinApp:: m_pszAppName](#m_pszappname)|애플리케이션의 이름을 지정합니다.|
+|[CWinApp:: m_pszExeName](#m_pszexename)|응용 프로그램의 모듈 이름입니다.|
+|[CWinApp:: m_pszHelpFilePath](#m_pszhelpfilepath)|응용 프로그램 도움말 파일의 경로입니다.|
+|[CWinApp:: m_pszProfileName](#m_pszprofilename)|응용 프로그램의입니다. INI 파일 이름입니다.|
+|[CWinApp:: m_pszRegistryKey](#m_pszregistrykey)|응용 프로그램 프로필 설정을 저장 하기 위한 전체 레지스트리 키를 결정 하는 데 사용 됩니다.|
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|다시 시작 관리자의 행동 방식을 결정하는 플래그입니다.|
-|[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|자동 저장 사이의 밀리초 길이입니다.|
-|[CWinApp::m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|응용 프로그램의 데이터 복구 처리기에 대한 포인터입니다.|
+|[CWinApp:: m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|다시 시작 관리자의 동작을 결정 하는 플래그입니다.|
+|[CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)|Autosaves 사이의 시간 (밀리초)입니다.|
+|[CWinApp:: m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|응용 프로그램의 데이터 복구 처리기에 대 한 포인터입니다.|
 
 ## <a name="remarks"></a>설명
 
-응용 프로그램 개체는 응용 프로그램(및 응용 프로그램의 각 인스턴스)을 초기화하고 응용 프로그램을 실행하기 위한 멤버 함수를 제공합니다.
+응용 프로그램 개체는 응용 프로그램을 초기화 하 고 응용 프로그램을 실행 하는 데 사용할 수 있는 멤버 함수를 제공 합니다.
 
-Microsoft Foundation 클래스를 사용하는 각 응용 프로그램에는 `CWinApp`에서 파생된 개체가 하나만 포함될 수 있습니다. 이 개체는 다른 C++ 전역 개체가 생성될 때 `WinMain` 생성되며 Windows에서 Microsoft Foundation 클래스 라이브러리에서 제공하는 함수를 호출할 때 이미 사용할 수 있습니다. 전역 수준에서 `CWinApp` 파생 개체를 선언합니다.
+Microsoft Foundation 클래스를 사용 하는 각 응용 프로그램은에서 파생 된 개체를 하나만 포함할 수 있습니다 `CWinApp` . 이 개체는 다른 c + + 전역 개체가 생성 될 때 생성 되며, Windows에서 MFC 라이브러리 제공 하는 함수를 호출할 때 이미 사용할 수 있습니다 `WinMain` . `CWinApp`전역 수준에서 파생 개체를 선언 합니다.
 
-에서 `CWinApp`응용 프로그램 클래스를 파생 하는 경우 [InitInstance](#initinstance) 멤버 함수를 재정의 하여 응용 프로그램의 기본 창 개체를 만듭니다.
+에서 응용 프로그램 클래스를 파생 하 `CWinApp` 는 경우 [InitInstance](#initinstance) 멤버 함수를 재정의 하 여 응용 프로그램의 주 창 개체를 만듭니다.
 
-`CWinApp` Microsoft 재단 클래스 라이브러리는 구성원 기능 외에도 `CWinApp` 개체 및 기타 전역 정보에 액세스하는 다음과 같은 전역 함수를 제공합니다.
+멤버 함수 외에도 `CWinApp` MFC 라이브러리는 `CWinApp` 개체 및 기타 전역 정보에 액세스 하는 다음과 같은 전역 함수를 제공 합니다.
 
-- [아fxGetApp](application-information-and-management.md#afxgetapp) 개체에 대한 포인터를 `CWinApp` 가져옵니다.
+- [AfxGetApp](application-information-and-management.md#afxgetapp) 개체에 대 한 포인터를 가져옵니다 `CWinApp` .
 
-- [AfxGet인스턴스핸들](application-information-and-management.md#afxgetinstancehandle) 현재 응용 프로그램 인스턴스에 대한 핸들을 가져옵니다.
+- [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle) 현재 응용 프로그램 인스턴스에 대 한 핸들을 가져옵니다.
 
-- [AfxGet리소스핸들](application-information-and-management.md#afxgetresourcehandle) 응용 프로그램의 리소스에 대한 핸들을 가져옵니다.
+- [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle) 응용 프로그램의 리소스에 대 한 핸들을 가져옵니다.
 
-- [AfxGetApp네임](application-information-and-management.md#afxgetappname) 응용 프로그램의 이름이 포함된 문자열에 대한 포인터를 가져옵니다. 또는 개체에 대한 포인터가 `CWinApp` 있는 경우 `m_pszExeName` 응용 프로그램의 이름을 얻는 데 사용합니다.
+- [AfxGetAppName](application-information-and-management.md#afxgetappname) 응용 프로그램의 이름을 포함 하는 문자열에 대 한 포인터를 가져옵니다. 또는 개체에 대 한 포인터가 있는 경우를 `CWinApp` 사용 하 여 `m_pszExeName` 응용 프로그램의 이름을 가져옵니다.
 
-[CWinApp: 다음의](../../mfc/cwinapp-the-application-class.md) 개요를 포함하여 `CWinApp` 클래스에 대한 자세한 내용은 응용 프로그램 클래스를 참조하십시오.
+다음에 대 한 개요를 비롯 하 여 클래스에 대 한 자세한 내용은 [CWinApp: 응용 프로그램 클래스](../../mfc/cwinapp-the-application-class.md) 를 참조 하세요 `CWinApp` .
 
-- `CWinApp`-파생 코드는 응용 프로그램 마법사에 의해 작성되었습니다.
+- `CWinApp`-응용 프로그램 마법사에서 작성 한 파생 코드입니다.
 
-- `CWinApp`응용 프로그램의 실행 순서에서 역할입니다.
+- `CWinApp`응용 프로그램의 실행 순서에서의 역할입니다.
 
-- `CWinApp`'의 기본 멤버 함수 구현.
+- `CWinApp`의 기본 멤버 함수 구현입니다.
 
-- `CWinApp`'의 키 재정의.
+- `CWinApp`키 재정의 가능.
 
-데이터 `m_hPrevInstance` 멤버가 더 이상 존재하지 않습니다. 응용 프로그램의 다른 인스턴스가 실행 되고 있는지 확인 하려면 명명 된 mutex를 사용 합니다. 뮤텍스 열기가 실패하면 실행 중인 응용 프로그램의 다른 인스턴스가 없습니다.
+`m_hPrevInstance`데이터 멤버가 더 이상 존재 하지 않습니다. 응용 프로그램의 다른 인스턴스가 실행 되 고 있는지 확인 하려면 명명 된 뮤텍스를 사용 합니다. 뮤텍스를 열 수 없으면 실행 중인 응용 프로그램의 다른 인스턴스가 없습니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -373,9 +373,9 @@ Microsoft Foundation 클래스를 사용하는 각 응용 프로그램에는 `CW
 
 **헤더:** afxwin.h
 
-## <a name="cwinappadddoctemplate"></a><a name="adddoctemplate"></a>CWinApp::AddDocTemplate
+## <a name="cwinappadddoctemplate"></a><a name="adddoctemplate"></a>CWinApp:: AddDocTemplate
 
-이 멤버 함수를 호출하여 응용 프로그램에서 유지 관리하는 사용 가능한 문서 템플릿 목록에 문서 템플릿을 추가합니다.
+이 멤버 함수를 호출 하 여 응용 프로그램에서 유지 관리 하는 사용 가능한 문서 템플릿 목록에 문서 템플릿을 추가 합니다.
 
 ```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
@@ -383,20 +383,20 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 ### <a name="parameters"></a>매개 변수
 
-*템플릿*<br/>
-추가할 포인터입니다. `CDocTemplate`
+*pTemplate*<br/>
+추가할에 대 한 포인터 `CDocTemplate` 입니다.
 
 ### <a name="remarks"></a>설명
 
-[RegisterShellFileType](#registershellfiletypes)을 호출하기 전에 모든 문서 템플릿을 응용 프로그램에 추가해야 합니다.
+[RegisterShellFileTypes](#registershellfiletypes)를 호출 하기 전에 모든 문서 템플릿을 응용 프로그램에 추가 해야 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]
 
-## <a name="cwinappaddtorecentfilelist"></a><a name="addtorecentfilelist"></a>CWinApp::추가최신파일리스트
+## <a name="cwinappaddtorecentfilelist"></a><a name="addtorecentfilelist"></a>CWinApp:: AddToRecentFileList
 
-MRU 파일 목록에 *lpszPathName을* 추가하려면 이 멤버 함수를 호출합니다.
+*LpszPathName* 를 MRU 파일 목록에 추가 하려면이 멤버 함수를 호출 합니다.
 
 ```
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
@@ -409,17 +409,17 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수를 사용하기 전에 [LoadStdProfileSettings](#loadstdprofilesettings) 멤버 함수를 호출하여 현재 MRU 파일 목록을 로드해야 합니다.
+이 멤버 함수를 사용 하기 전에 [Loadstdprofilesettings](#loadstdprofilesettings) 멤버 함수를 호출 하 여 현재 MRU 파일 목록을 로드 해야 합니다.
 
-프레임워크는 파일을 열거나 As 저장 명령을 실행하여 새 이름으로 파일을 저장할 때 이 멤버 함수를 호출합니다.
+프레임 워크는 파일을 열 때이 멤버 함수를 호출 하거나 다른 이름으로 저장 명령을 실행 하 여 새 이름으로 파일을 저장 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#36](../../mfc/reference/codesnippet/cpp/cwinapp-class_2.cpp)]
 
-## <a name="cwinappapplicationrecoverycallback"></a><a name="applicationrecoverycallback"></a>CWinApp:::응용 프로그램 복구콜백
+## <a name="cwinappapplicationrecoverycallback"></a><a name="applicationrecoverycallback"></a>CWinApp:: ApplicationRecoveryCallback
 
-응용 프로그램이 예기치 않게 종료될 때 프레임워크에서 호출됩니다.
+응용 프로그램이 예기치 않게 종료 될 때 프레임 워크에서 호출 됩니다.
 
 ```
 virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
@@ -428,23 +428,23 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ### <a name="parameters"></a>매개 변수
 
 *lpvParam*<br/>
-【인】 나중에 사용할 수 있습니다.
+진행 나중에 사용 하도록 예약 되어 있습니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 0입니다. 오류가 발생하면 0이 아닙니다.
+이 메서드가 성공 하면 0이 고, 그렇지 않으면 0입니다. 오류가 발생 하는 경우 0이 아닙니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램이 다시 시작 관리자를 지원하는 경우 프레임워크는 응용 프로그램이 예기치 않게 종료될 때 이 함수를 호출합니다.
+응용 프로그램에서 다시 시작 관리자를 지 원하는 경우 응용 프로그램이 예기치 않게 종료 될 때 프레임 워크에서이 함수를 호출 합니다.
 
-기본 구현은 `ApplicationRecoveryCallback` 을 `CDataRecoveryHandler` 사용하여 현재 열려 있는 문서 목록을 레지스트리에 저장합니다. 이 메서드는 파일을 자동으로 저장하지 않습니다.
+의 기본 구현에서는 `ApplicationRecoveryCallback` 를 사용 하 여 `CDataRecoveryHandler` 현재 열려 있는 문서의 목록을 레지스트리에 저장 합니다. 이 메서드는 파일을 자동으로 저장 하지 않습니다.
 
-동작을 사용자 지정하려면 파생 된 [CWinApp 클래스에서이](../../mfc/reference/cwinapp-class.md) 함수를 재정의하거나 [CWinApp::RegisterWithRestartManager에](#registerwithrestartmanager)매개 변수로 자신의 응용 프로그램 복구 방법을 전달합니다.
+동작을 사용자 지정 하려면 파생 된 [CWinApp 클래스](../../mfc/reference/cwinapp-class.md) 에서이 함수를 재정의 하거나 사용자 고유의 응용 프로그램 복구 메서드를 [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)에 대 한 매개 변수로 전달 합니다.
 
-## <a name="cwinappclosealldocuments"></a><a name="closealldocuments"></a>CWinApp::닫기모든 문서
+## <a name="cwinappclosealldocuments"></a><a name="closealldocuments"></a>CWinApp:: CloseAllDocuments
 
-종료하기 전에 열려 있는 모든 문서를 닫도록 이 멤버 함수를 호출합니다.
+종료 하기 전에이 멤버 함수를 호출 하 여 열려 있는 모든 문서를 닫습니다.
 
 ```cpp
 void CloseAllDocuments(BOOL bEndSession);
@@ -453,15 +453,15 @@ void CloseAllDocuments(BOOL bEndSession);
 ### <a name="parameters"></a>매개 변수
 
 *bEndSession*<br/>
-Windows 세션이 종료되는지 여부를 지정합니다. 세션이 종료되는 경우 true입니다. 그렇지 않으면 거짓.
+Windows 세션의 종료 여부를 지정 합니다. 세션이 종료 되는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-호출하기 전에 `CloseAllDocuments`응용 [프로그램을](#hideapplication) 호출합니다.
+를 호출 하기 전에 [HideApplication](#hideapplication) `CloseAllDocuments` 를 호출 합니다.
 
-## <a name="cwinappcreateprinterdc"></a><a name="createprinterdc"></a>CWinApp::만들기 프린터DC
+## <a name="cwinappcreateprinterdc"></a><a name="createprinterdc"></a>CWinApp:: Create프린터 Dc
 
-선택한 프린터에서 프린터 장치 컨텍스트(DC)를 만들려면 이 멤버 함수를 호출합니다.
+이 멤버 함수를 호출 하 여 선택한 프린터에서 프린터 DC (장치 컨텍스트)를 만듭니다.
 
 ```
 BOOL CreatePrinterDC(CDC& dc);
@@ -469,22 +469,22 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>매개 변수
 
-*Dc*<br/>
-프린터 장치 컨텍스트에 대한 참조입니다.
+*dc*<br/>
+프린터 장치 컨텍스트에 대 한 참조입니다.
 
 ### <a name="return-value"></a>Return Value
 
-프린터 장치 컨텍스트가 성공적으로 생성된 경우 0이 아닙니다. 그렇지 않으면 0.
+프린터 장치 컨텍스트가 성공적으로 생성 되 면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-`CreatePrinterDC`을 사용해 인쇄할 수 있도록 참조로 전달하는 장치 컨텍스트를 초기화합니다.
+`CreatePrinterDC`참조로 전달 하는 장치 컨텍스트를 초기화 하므로 인쇄 하는 데 사용할 수 있습니다.
 
-이 기능이 성공하면 인쇄를 완료하면 장치 컨텍스트를 삭제해야 합니다. [CDC](../../mfc/reference/cdc-class.md) 개체의 소멸자가 수행하도록 하거나 [CDC::DeleteDC를](../../mfc/reference/cdc-class.md#deletedc)호출하여 명시적으로 수행할 수 있습니다.
+함수가 성공적으로 실행 되 면 인쇄를 마치면 장치 컨텍스트를 제거 해야 합니다. [Cdc](../../mfc/reference/cdc-class.md) 개체의 소멸자가이를 수행 하도록 하거나 [Cdc::D eletedc](../../mfc/reference/cdc-class.md#deletedc)를 호출 하 여 명시적으로 수행할 수 있습니다.
 
-## <a name="cwinappcwinapp"></a><a name="cwinapp"></a>CWinApp ::CWinApp
+## <a name="cwinappcwinapp"></a><a name="cwinapp"></a>CWinApp:: CWinApp
 
-개체를 `CWinApp` 생성하고 응용 프로그램 이름으로 저장할 *lpszAppName을* 전달합니다.
+개체를 생성 하 `CWinApp` 고 응용 프로그램 이름으로 저장 될 *lpszAppName* 를 전달 합니다.
 
 ```
 CWinApp(LPCTSTR lpszAppName = NULL);
@@ -492,16 +492,16 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 
 ### <a name="parameters"></a>매개 변수
 
-*lpszApp이름*<br/>
-Windows에서 사용하는 응용 프로그램 이름을 포함하는 null 종료 문자열입니다. 이 인수가 제공되지 않거나 NULL인 경우 리소스 문자열 AFX_IDS_APP_TITLE 또는 실행 파일의 파일 이름을 `CWinApp` 사용합니다.
+*lpszAppName*<br/>
+Windows에서 사용 하는 응용 프로그램 이름을 포함 하는 null로 끝나는 문자열입니다. 이 인수를 제공 하지 않거나 NULL 인 경우는 `CWinApp` 리소스 문자열 AFX_IDS_APP_TITLE 또는 실행 파일의 파일 이름을 사용 합니다.
 
 ### <a name="remarks"></a>설명
 
-파생 클래스의 하나의 전역 `CWinApp`개체를 생성해야 합니다. 응용 프로그램에 개체가 하나만 `CWinApp` 있을 수 있습니다. 생성자는 `CWinApp` 개체의 멤버 함수를 `WinMain` 호출하여 응용 프로그램을 초기화하고 실행할 수 있도록 개체에 대한 포인터를 저장합니다.
+파생 클래스의 전역 개체 하나를 구성 해야 `CWinApp` 합니다. 응용 프로그램에 개체를 하나만 포함할 수 있습니다 `CWinApp` . 생성자는 개체 `CWinApp` `WinMain` 의 멤버 함수를 호출 하 여 응용 프로그램을 초기화 하 고 실행할 수 있도록 개체에 대 한 포인터를 저장 합니다.
 
-## <a name="cwinappdelregtree"></a><a name="delregtree"></a>CWinApp::D엘레그트리
+## <a name="cwinappdelregtree"></a><a name="delregtree"></a>CWinApp::D elRegTree
 
-특정 레지스트리 키와 모든 하위 키를 삭제합니다.
+특정 레지스트리 키와 모든 하위 키를 삭제 합니다.
 
 ```
 LONG DelRegTree(
@@ -516,26 +516,26 @@ LONG DelRegTree(
 
 ### <a name="parameters"></a>매개 변수
 
-*h부모키*<br/>
-레지스트리 키를 처리합니다.
+*hParentKey*<br/>
+레지스트리 키에 대 한 핸들입니다.
 
-*스트키 이름*<br/>
+*strKeyName*<br/>
 삭제할 레지스트리 키의 이름입니다.
 
-*Ptm*<br/>
-CAtlTransactionManager 개체에 대한 포인터입니다.
+*pTM*<br/>
+CAtlTransactionManager 개체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-함수가 성공하면 반환 값이 ERROR_SUCCESS. 함수가 실패하면 반환 값은 Winerror.h에 정의된 제로가 아닌 오류 코드입니다.
+함수가 성공 하면 반환 값은 ERROR_SUCCESS입니다. 함수가 실패 하면 반환 값은 Winerror.h에 정의 된 0이 아닌 오류 코드입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수를 호출하여 지정된 키와 하위 키를 삭제합니다.
+지정 된 키와 하위 키를 삭제 하려면이 함수를 호출 합니다.
 
-## <a name="cwinappdomessagebox"></a><a name="domessagebox"></a>CWinApp::D오 메시지 상자
+## <a name="cwinappdomessagebox"></a><a name="domessagebox"></a>CWinApp::D oMessageBox
 
-프레임워크는 이 멤버 함수를 호출하여 전역 함수 [AfxMessageBox에](cstring-formatting-and-message-box-display.md#afxmessagebox)대한 메시지 상자를 구현합니다.
+프레임 워크는이 멤버 함수를 호출 하 여 전역 함수 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)에 대 한 메시지 상자를 구현 합니다.
 
 ```
 virtual int DoMessageBox(
@@ -546,28 +546,28 @@ virtual int DoMessageBox(
 
 ### <a name="parameters"></a>매개 변수
 
-*lpsz프롬프트*<br/>
+*lpszPrompt*<br/>
 메시지 상자의 텍스트 주소입니다.
 
 *nType*<br/>
-메시지 상자 [스타일](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
+메시지 상자 [스타일](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)입니다.
 
-*니드프롬프트*<br/>
-도움말 컨텍스트 문자열에 대한 인덱스입니다.
+*nIDPrompt*<br/>
+도움말 컨텍스트 문자열의 인덱스입니다.
 
 ### <a name="return-value"></a>Return Value
 
-`AfxMessageBox`와 동일한 값을 반환합니다.
+와 동일한 값을 반환 합니다 `AfxMessageBox` .
 
 ### <a name="remarks"></a>설명
 
-메시지 상자를 열려면 이 멤버 함수를 호출하지 마십시오. 대신 `AfxMessageBox` 사용합니다.
+이 멤버 함수를 호출 하 여 메시지 상자를 열 수 없습니다. `AfxMessageBox`대신를 사용 합니다.
 
-이 멤버 함수를 재정의하여 응용 프로그램 `AfxMessageBox` 전체의 호출 처리를 사용자 지정합니다.
+응용 프로그램 전체 호출 처리를 사용자 지정 하려면이 멤버 함수를 재정의 `AfxMessageBox` 합니다.
 
-## <a name="cwinappdowaitcursor"></a><a name="dowaitcursor"></a>CWinApp::DoWaitCursor
+## <a name="cwinappdowaitcursor"></a><a name="dowaitcursor"></a>CWinApp::D oWaitCursor
 
-이 멤버 함수는 [CWaitCursor](../../mfc/reference/cwaitcursor-class.md), [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)및 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)를 구현하기 위해 프레임워크에서 호출됩니다.
+이 멤버 함수는 [Cwaitcursor](../../mfc/reference/cwaitcursor-class.md), [Cwaitcursor:: beginwaitcursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [Cwaitcursor:: endwaitcursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)및 [cwaitcursor:: RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)을 구현 하기 위해 프레임 워크에서 호출 됩니다.
 
 ```
 virtual void DoWaitCursor(int nCode);
@@ -576,25 +576,25 @@ virtual void DoWaitCursor(int nCode);
 ### <a name="parameters"></a>매개 변수
 
 *nCode*<br/>
-이 매개 변수가 1이면 대기 커서가 나타납니다. 0이면 참조 수를 증가하지 않고 대기 커서가 복원됩니다. -1이면 대기 커서가 종료됩니다.
+이 매개 변수가 1 이면 대기 커서가 표시 됩니다. 0 인 경우 참조 횟수를 증가 시 키 지 않고 대기 커서가 복원 됩니다. -1 인 경우 대기 커서가 종료 됩니다.
 
 ### <a name="remarks"></a>설명
 
-기본값은 모래 시계 커서를 구현합니다. `DoWaitCursor`참조 수를 유지합니다. 양수면 모래 시계 커서가 표시됩니다.
+기본값은 모래 시계 커서를 구현 합니다. `DoWaitCursor`참조 횟수를 유지 관리 합니다. 양수 이면 모래 시계 커서가 표시 됩니다.
 
-일반적으로 직접 호출하지는 `DoWaitCursor` 않지만 이 멤버 함수를 재정의하여 대기 커서를 변경하거나 대기 커서가 표시되는 동안 추가 처리를 수행할 수 있습니다.
+일반적으로를 직접 호출 하지는 않지만 대기 `DoWaitCursor` 커서를 표시 하는 동안 대기 커서를 변경 하거나 추가 처리를 수행 하도록이 멤버 함수를 재정의할 수 있습니다.
 
-대기 커서를 구현하는 보다 쉽고 간소화된 방법을 `CWaitCursor`위해 을 사용합니다.
+대기 커서를 구현 하는 보다 간단 하 고 간소화 된 방법을 사용 하려면을 사용 `CWaitCursor` 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#37](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]
 
-## <a name="cwinappenabled2dsupport"></a><a name="enabled2dsupport"></a>CWinApp::인에이블D2D지원
+## <a name="cwinappenabled2dsupport"></a><a name="enabled2dsupport"></a>CWinApp:: EnableD2DSupport
 
 Visual Studio 2010 SP1이 필요합니다.
 
-응용 프로그램 D2D 지원을 활성화합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.
+응용 프로그램 D2D 지원을 사용 하도록 설정 합니다. 주 창이 초기화되기 전에 이 메서드를 호출합니다.
 
 ```
 BOOL EnableD2DSupport(
@@ -604,19 +604,19 @@ BOOL EnableD2DSupport(
 
 ### <a name="parameters"></a>매개 변수
 
-*d2d팩토리타입*<br/>
-D2D 팩터리의 스레딩 모델과 생성되는 리소스입니다.
+*d2dFactoryType*<br/>
+D2D 팩터리의 스레딩 모델 및이 모델에서 만드는 리소스입니다.
 
-*쓰기팩토리타입*<br/>
-write 팩터리 개체를 공유하거나 격리할지 여부를 지정하는 값입니다.
+*writeFactoryType*<br/>
+쓰기 팩터리 개체를 공유할지 아니면 격리할 지를 지정 하는 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
-D2D 지원이 활성화된 경우 TRUE를 반환하고 FALSE - 그렇지 않으면
+D2D 지원을 사용 하도록 설정한 경우 TRUE를 반환 하 고 그렇지 않으면 FALSE를 반환 합니다.
 
-## <a name="cwinappenablehtmlhelp"></a><a name="enablehtmlhelp"></a>CWinApp::사용HTML도움말
+## <a name="cwinappenablehtmlhelp"></a><a name="enablehtmlhelp"></a>CWinApp:: EnableHtmlHelp
 
-`CWinApp`응용 프로그램의 도움을 위해 HTMLHelp를 사용 하려면 -derived 클래스의 생성자 내에서이 멤버 함수를 호출 합니다.
+`CWinApp`응용 프로그램 도움말에 HTMLHelp를 사용 하려면 파생 클래스의 생성자 내에서이 멤버 함수를 호출 합니다.
 
 ```cpp
 void EnableHtmlHelp();
@@ -624,9 +624,9 @@ void EnableHtmlHelp();
 
 ### <a name="remarks"></a>설명
 
-## <a name="cwinappenableshellopen"></a><a name="enableshellopen"></a>CWinApp::인에이블쉘오픈
+## <a name="cwinappenableshellopen"></a><a name="enableshellopen"></a>CWinApp:: EnableShellOpen
 
-일반적으로 `InitInstance` 재정의에서 이 함수를 호출하여 응용 프로그램의 사용자가 Windows 파일 관리자 내에서 파일을 두 번 클릭할 때 데이터 파일을 열 수 있도록 합니다.
+일반적으로 재정의에서이 함수를 호출 `InitInstance` 하 여 응용 프로그램의 사용자가 Windows 파일 관리자 내에서 파일을 두 번 클릭할 때 데이터 파일을 열 수 있도록 합니다.
 
 ```cpp
 void EnableShellOpen();
@@ -634,15 +634,15 @@ void EnableShellOpen();
 
 ### <a name="remarks"></a>설명
 
-이 `RegisterShellFileTypes` 함수와 함께 멤버 함수를 호출하거나 을 제공합니다. 문서 유형의 수동 등록을 위한 응용 프로그램과 함께 REG 파일.
+`RegisterShellFileTypes`이 함수와 함께 멤버 함수를 호출 하거나를 제공 합니다. 문서 유형 수동 등록을 위한 응용 프로그램의 REG 파일입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#38](../../mfc/reference/codesnippet/cpp/cwinapp-class_4.cpp)]
 
-## <a name="cwinappenabletaskbarinteraction"></a><a name="enabletaskbarinteraction"></a>CWinApp:::인에이블태스크바상호작용
+## <a name="cwinappenabletaskbarinteraction"></a><a name="enabletaskbarinteraction"></a>CWinApp:: Enabletask바 상호 작용
 
-작업 표시줄 상호 작용을 활성화합니다.
+작업 표시줄 상호 작용을 사용 합니다.
 
 ```
 BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
@@ -651,19 +651,19 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>매개 변수
 
 *bEnable*<br/>
-Windows 7 작업 표시줄과의 상호 작용을 활성화할지(TRUE) 또는 사용 안 함(FALSE)을 지정합니다.
+Windows 7 작업 표시줄과의 상호 작용을 사용 (TRUE) 하거나 사용 하지 않도록 (FALSE) 할지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-작업 표시줄 상호 작용을 사용하거나 사용하지 않도록 설정할 수 있는 경우 TRUE를 반환합니다.
+작업 표시줄 상호 작용을 사용 하거나 사용 하지 않도록 설정할 수 있으면 TRUE를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 주 창을 만들기 전에 호출 해야 합니다., 그렇지 않으면 어설션 하 고 FALSE를 반환 합니다.
+주 창을 만들기 전에이 메서드를 호출 해야 합니다. 그렇지 않으면 어설션 하 고 FALSE를 반환 합니다.
 
-## <a name="cwinappexitinstance"></a><a name="exitinstance"></a>CWinApp::Exit인스턴스
+## <a name="cwinappexitinstance"></a><a name="exitinstance"></a>CWinApp:: ExitInstance
 
-`Run` 멤버 함수 내에서 프레임워크에서 호출하여 응용 프로그램의 이 인스턴스를 종료합니다.
+`Run`응용 프로그램의이 인스턴스를 종료 하기 위해 멤버 함수 내에서 프레임 워크에 의해 호출 됩니다.
 
 ```
 virtual int ExitInstance();
@@ -671,21 +671,21 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>Return Value
 
-응용 프로그램의 종료 코드; 0은 오류가 없음을 나타내고 값이 0보다 큰 값은 오류를 나타냅니다. 이 값은 에서 `WinMain`반환 값으로 사용됩니다.
+응용 프로그램의 종료 코드입니다. 0은 오류가 없음을 나타내고 0 보다 큰 값은 오류를 나타냅니다. 이 값은의 반환 값으로 사용 됩니다 `WinMain` .
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수를 호출하지 말고 `Run` 멤버 함수 내에서 호출하지 마십시오.
+멤버 함수 내에서는 어디에서 나이 멤버 함수를 호출 하지 마세요 `Run` .
 
-이 함수의 기본 구현은 응용 프로그램의 에 프레임 워크 옵션을 씁니다. INI 파일입니다. 응용 프로그램이 종료될 때 정리하려면 이 함수를 재정의합니다.
+이 함수의 기본 구현은 응용 프로그램의에 프레임 워크 옵션을 씁니다. INI 파일. 응용 프로그램이 종료 될 때 정리 하려면이 함수를 재정의 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#39](../../mfc/reference/codesnippet/cpp/cwinapp-class_5.cpp)]
 
-## <a name="cwinappgetapplicationrecoveryparameter"></a><a name="getapplicationrecoveryparameter"></a>CWinApp::GetApplicationRecovery매개 변수
+## <a name="cwinappgetapplicationrecoveryparameter"></a><a name="getapplicationrecoveryparameter"></a>CWinApp:: GetApplicationRecoveryParameter
 
-응용 프로그램 복구 메서드에 대 한 입력 매개 변수를 검색합니다.
+응용 프로그램 복구 방법에 대 한 입력 매개 변수를 검색 합니다.
 
 ```
 virtual LPVOID GetApplicationRecoveryParameter();
@@ -693,17 +693,17 @@ virtual LPVOID GetApplicationRecoveryParameter();
 
 ### <a name="return-value"></a>Return Value
 
-응용 프로그램 복구 메서드의 기본 입력 매개 변수입니다.
+응용 프로그램 복구 방법에 대 한 기본 입력 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수의 기본 동작은 NULL을 반환합니다.
+이 함수의 기본 동작은 NULL을 반환 합니다.
 
-자세한 내용은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)을 참조하십시오.
+자세한 내용은 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)을 참조 하세요.
 
-## <a name="cwinappgetapplicationrecoverypinginterval"></a><a name="getapplicationrecoverypinginterval"></a>CWinApp::GetApplication복구간격
+## <a name="cwinappgetapplicationrecoverypinginterval"></a><a name="getapplicationrecoverypinginterval"></a>CWinApp:: GetApplicationRecoveryPingInterval
 
-다시 시작 관리자가 복구 콜백 함수가 반환될 때까지 기다리는 시간을 반환합니다.
+복구 콜백 함수가 반환 될 때까지 다시 시작 관리자가 대기 하는 시간을 반환 합니다.
 
 ```
 virtual DWORD GetApplicationRecoveryPingInterval();
@@ -711,17 +711,17 @@ virtual DWORD GetApplicationRecoveryPingInterval();
 
 ### <a name="return-value"></a>Return Value
 
-밀리초 단위의 시간 길이입니다.
+시간 길이 (밀리초)입니다.
 
 ### <a name="remarks"></a>설명
 
-다시 시작 관리자에 등록된 응용 프로그램이 예기치 않게 종료되면 응용 프로그램은 열려 있는 문서를 저장하려고 시도하고 복구 콜백 기능을 호출합니다. 기본 복구 콜백 기능은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)입니다.
+다시 시작 관리자에 등록 된 응용 프로그램이 예기치 않게 종료 되 면 응용 프로그램은 열려 있는 문서를 저장 하 고 복구 콜백 함수를 호출 합니다. 기본 복구 콜백 함수는 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)입니다.
 
-프레임워크가 복구 콜백 함수가 반환될 때까지 기다리는 시간은 ping 간격입니다. 재정의하거나 `CWinApp::GetApplicationRecoveryPingInterval` 에 사용자 지정 값을 제공하여 ping 간격을 사용자 지정할 수 있습니다. `RegisterWithRestartManager`
+프레임 워크에서 복구 콜백 함수가 반환 될 때까지 대기 하는 시간은 ping 간격입니다. `CWinApp::GetApplicationRecoveryPingInterval`를 재정의 하거나에 사용자 지정 값을 제공 하 여 ping 간격을 사용자 지정할 수 있습니다 `RegisterWithRestartManager` .
 
-## <a name="cwinappgetapplicationrestartflags"></a><a name="getapplicationrestartflags"></a>CWinApp::GetApplication다시 시작 플래그
+## <a name="cwinappgetapplicationrestartflags"></a><a name="getapplicationrestartflags"></a>CWinApp:: GetApplicationRestartFlags
 
-다시 시작 관리자에 대한 플래그를 반환합니다.
+다시 시작 관리자에 대 한 플래그를 반환 합니다.
 
 ```
 virtual DWORD GetApplicationRestartFlags();
@@ -729,15 +729,15 @@ virtual DWORD GetApplicationRestartFlags();
 
 ### <a name="return-value"></a>Return Value
 
-다시 시작 관리자의 플래그입니다. 기본 구현은 0을 반환합니다.
+다시 시작 관리자에 대 한 플래그입니다. 기본 구현에서는 0을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-다시 시작 관리자에 대 한 플래그는 기본 구현에 영향을 주지 않습니다. 그들은 나중에 사용하기 위해 제공됩니다.
+다시 시작 관리자에 대 한 플래그는 기본 구현에 영향을 주지 않습니다. 나중에 사용 하기 위해 제공 됩니다.
 
-[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)를 사용하여 다시 시작 관리자로 응용 프로그램을 등록할 때 플래그를 설정합니다.
+사용자는 [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)를 사용 하 여 다시 시작 관리자에 응용 프로그램을 등록할 때 플래그를 설정 합니다.
 
-다시 시작 관리자 플래그에 대 한 가능한 값은 다음과 같습니다.
+다시 시작 관리자 플래그에 사용할 수 있는 값은 다음과 같습니다.
 
 - RESTART_NO_CRASH
 
@@ -747,9 +747,9 @@ virtual DWORD GetApplicationRestartFlags();
 
 - RESTART_NO_REBOOT
 
-## <a name="cwinappgetappregistrykey"></a><a name="getappregistrykey"></a>CWinApp::GetApp레지스트리키
+## <a name="cwinappgetappregistrykey"></a><a name="getappregistrykey"></a>CWinApp:: GetAppRegistryKey
 
-"소프트웨어"\레지스트리키\프로필 이름에 대한 HKEY_CURRENT_USER\\대한 키를 반환합니다.
+HKEY_CURRENT_USER "Software"의 키를 반환 합니다. \\ \RegistryKey\ProfileName.
 
 ```
 HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
@@ -757,18 +757,18 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>매개 변수
 
-*Ptm*<br/>
+*pTM*<br/>
 `CAtlTransactionManager` 개체에 대한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-함수가 성공하면 응용 프로그램 키; 그렇지 않으면 NULL.
+함수가 성공 하는 경우 응용 프로그램 키 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="cwinappgetdatarecoveryhandler"></a><a name="getdatarecoveryhandler"></a>CWinApp::GetDataRecovery처리기
+## <a name="cwinappgetdatarecoveryhandler"></a><a name="getdatarecoveryhandler"></a>CWinApp:: GetDataRecoveryHandler
 
-응용 프로그램의 이 인스턴스에 대한 데이터 복구 처리기를 가져옵니다.
+이 응용 프로그램 인스턴스에 대 한 데이터 복구 처리기를 가져옵니다.
 
 ```
 virtual CDataRecoveryHandler *GetDataRecoveryHandler();
@@ -776,17 +776,17 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 
 ### <a name="return-value"></a>Return Value
 
-응용 프로그램의 이 인스턴스에 대한 데이터 복구 처리기입니다.
+이 응용 프로그램 인스턴스에 대 한 데이터 복구 처리기입니다.
 
 ### <a name="remarks"></a>설명
 
-다시 시작 관리자를 사용하는 각 응용 프로그램에는 [CDataRecoveryHandler 클래스의](../../mfc/reference/cdatarecoveryhandler-class.md)인스턴스가 하나 있어야 합니다. 이 클래스는 열려 있는 문서를 모니터링하고 파일을 자동으로 저장합니다. 의 동작은 `CDataRecoveryHandler` 다시 시작 관리자의 구성에 따라 달라집니다. 자세한 내용은 [CDataRecoveryHandler 클래스를](../../mfc/reference/cdatarecoveryhandler-class.md)참조하십시오.
+다시 시작 관리자를 사용 하는 각 응용 프로그램에는 [CDataRecoveryHandler 클래스](../../mfc/reference/cdatarecoveryhandler-class.md)의 인스턴스가 하나 있어야 합니다. 이 클래스는 open documents 및 작업 파일을 모니터링 하는 일을 담당 합니다. 의 동작은 `CDataRecoveryHandler` 다시 시작 관리자의 구성에 따라 달라 집니다. 자세한 내용은 [CDataRecoveryHandler 클래스](../../mfc/reference/cdatarecoveryhandler-class.md)를 참조 하세요.
 
-이 메서드는 Windows Vista보다 이전의 운영 체제에서 NULL을 반환합니다. 다시 시작 관리자는 Windows Vista 이전의 운영 체제에서 지원되지 않습니다.
+이 메서드는 Windows Vista 이전 운영 체제에서 NULL을 반환 합니다. 다시 시작 관리자는 Windows Vista 이전 운영 체제에서 지원 되지 않습니다.
 
-응용 프로그램에 현재 데이터 복구 처리기가 없는 경우 이 메서드는 하나를 만들고 포인터를 반환합니다.
+응용 프로그램에 현재 데이터 복구 처리기가 없는 경우이 메서드는 데이터 복구 처리기를 만들어 해당 처리기에 대 한 포인터를 반환 합니다.
 
-## <a name="cwinappgetfirstdoctemplateposition"></a><a name="getfirstdoctemplateposition"></a>CWinApp::GetFirstDoc템플릿 포지션
+## <a name="cwinappgetfirstdoctemplateposition"></a><a name="getfirstdoctemplateposition"></a>CWinApp:: Getfirstdoc서식 위치
 
 응용 프로그램에서 첫 번째 문서 템플릿의 위치를 가져옵니다.
 
@@ -796,15 +796,15 @@ POSITION GetFirstDocTemplatePosition() const;
 
 ### <a name="return-value"></a>Return Value
 
-반복 또는 개체 포인터 검색에 사용할 수 있는 POSITION 값입니다. 목록이 비어 있는 경우 NULL입니다.
+반복 또는 개체 포인터 검색에 사용할 수 있는 위치 값입니다. 목록이 비어 있으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-[GetNextDocTemplate호출에서](#getnextdoctemplate) 반환된 위치 값을 사용하여 첫 번째 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 개체를 가져옵니다.
+[GetNextDocTemplate](#getnextdoctemplate) 에 대 한 호출에서 반환 된 POSITION 값을 사용 하 여 첫 번째 [cdoctemplate](../../mfc/reference/cdoctemplate-class.md) 개체를 가져옵니다.
 
-## <a name="cwinappgethelpmode"></a><a name="gethelpmode"></a>CWinApp:::GetHelpMode
+## <a name="cwinappgethelpmode"></a><a name="gethelpmode"></a>CWinApp:: GetHelpMode
 
-응용 프로그램에서 사용하는 도움말 유형을 검색합니다.
+응용 프로그램에서 사용 하는 도움말의 형식을 검색 합니다.
 
 ```
 AFX_HELP_TYPE GetHelpMode();
@@ -812,11 +812,11 @@ AFX_HELP_TYPE GetHelpMode();
 
 ### <a name="return-value"></a>Return Value
 
-응용 프로그램에서 사용하는 도움말 유형입니다. 자세한 내용은 [CWinApp:m_eHelpType](#m_ehelptype) 를 참조하십시오.
+응용 프로그램에서 사용 하는 도움말 유형입니다. 자세한 내용은 [CWinApp:: m_eHelpType](#m_ehelptype) 를 참조 하세요.
 
-## <a name="cwinappgetnextdoctemplate"></a><a name="getnextdoctemplate"></a>CWinApp::GetNextDocTemplate
+## <a name="cwinappgetnextdoctemplate"></a><a name="getnextdoctemplate"></a>CWinApp:: GetNextDocTemplate
 
-*pos로*식별된 문서 템플릿을 *pos* 가져옵니다.
+*Pos*로 식별 된 문서 템플릿을 가져온 다음 *pos* 를 POSITION 값으로 설정 합니다.
 
 ```
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
@@ -824,24 +824,24 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*Pos*<br/>
-이전 호출 또는 `GetNextDocTemplate` [GetFirstDocTemplatePosition에](#getfirstdoctemplateposition)의해 반환된 위치 값에 대한 참조입니다. 이 호출에 의해 값이 다음 위치로 업데이트됩니다.
+*pos*<br/>
+`GetNextDocTemplate`또는 [Getfirstdoc템플릿 위치](#getfirstdoctemplateposition)에 대 한 이전 호출에서 반환 된 위치 값에 대 한 참조입니다. 이 호출을 통해 값이 다음 위치로 업데이트 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
-[CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 개체에 대한 포인터입니다.
+[Cdoctemplate](../../mfc/reference/cdoctemplate-class.md) 개체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-에 대한 `GetNextDocTemplate` 호출을 사용하여 초기 위치를 설정하는 경우 정방향 반복 루프에서 `GetFirstDocTemplatePosition`사용할 수 있습니다.
+`GetNextDocTemplate`를 호출 하 여 초기 위치를 설정 하는 경우 전방 반복 루프에서을 사용할 수 있습니다 `GetFirstDocTemplatePosition` .
 
-위치 값이 유효한지 확인해야 합니다. 유효하지 않은 경우 Microsoft 파운데이션 클래스 라이브러리의 디버그 버전이 어설션됩니다.
+위치 값이 유효한 지 확인 해야 합니다. 잘못 된 경우 MFC 라이브러리의 디버그 버전에서 어설션 합니다.
 
-검색된 문서 템플릿이 마지막으로 사용 가능한 경우 *pos의* 새 값이 NULL로 설정됩니다.
+검색 된 문서 템플릿을 마지막으로 사용할 수 있는 경우에는 *pos* 의 새 값이 NULL로 설정 됩니다.
 
-## <a name="cwinappgetprinterdevicedefaults"></a><a name="getprinterdevicedefaults"></a>CWinApp::getprinterDevice기본값
+## <a name="cwinappgetprinterdevicedefaults"></a><a name="getprinterdevicedefaults"></a>CWinApp:: Get프린터 Devicedefaults
 
-이 멤버 함수를 호출하여 인쇄할 프린터 장치 컨텍스트를 준비합니다.
+인쇄를 위해 프린터 장치 컨텍스트를 준비 하려면이 멤버 함수를 호출 합니다.
 
 ```
 BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>매개 변수
 
 *pPrintDlg*<br/>
-[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) 구조에 대한 포인터입니다.
+[Printdlg](/windows/win32/api/commdlg/ns-commdlg-printdlga) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -858,15 +858,15 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="remarks"></a>설명
 
-Windows 에서 현재 프린터 기본값을 검색합니다. 필요에 따라 INI 파일또는 인쇄 설정에서 사용자가 설정한 마지막 프린터 구성을 사용합니다.
+창에서 현재 프린터 기본값을 검색 합니다. 필요에 따라 INI 파일을 사용 하거나 인쇄 설정에서 사용자가 설정한 마지막 프린터 구성을 사용 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#40](../../mfc/reference/codesnippet/cpp/cwinapp-class_6.cpp)]
 
-## <a name="cwinappgetprofilebinary"></a><a name="getprofilebinary"></a>CWinApp::GetProfile바이너리
+## <a name="cwinappgetprofilebinary"></a><a name="getprofilebinary"></a>CWinApp:: GetProfileBinary
 
-이 멤버 함수를 호출하여 응용 프로그램 레지스트리 또는 의 지정된 섹션 내의 항목에서 이진 데이터를 검색합니다. INI 파일입니다.
+응용 프로그램 레지스트리 또는의 지정 된 섹션 내에서 항목에서 이진 데이터를 검색 하려면이 멤버 함수를 호출 합니다. INI 파일.
 
 ```
 BOOL GetProfileBinary(
@@ -881,14 +881,14 @@ BOOL GetProfileBinary(
 *lpszSection*<br/>
 항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다.
 
-*lpsz항목*<br/>
+*lpszEntry*<br/>
 값을 검색할 항목이 포함된 null로 끝나는 문자열을 가리킵니다.
 
 *ppData*<br/>
-데이터의 주소를 수신할 포인터를 가리킵니다.
+데이터의 주소를 수신 하는 포인터를 가리킵니다.
 
-*p바이트*<br/>
-데이터 크기(바이트)를 받게 되는 UINT를 가리킵니다.
+*pBytes*<br/>
+데이터의 크기 (바이트)를 받을 UINT를 가리킵니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -896,10 +896,10 @@ BOOL GetProfileBinary(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 대/소문자를 구분하지 않으므로 *lpszSection* 및 *lpszEntry* 매개 변수의 문자열은 경우에 따라 다를 수 있습니다.
+이 멤버 함수는 대/소문자를 구분 하지 않으므로 *lpszSection* 및 *lpszEntry* 매개 변수의 문자열은 대/소문자가 다를 수 있습니다.
 
 > [!NOTE]
-> `GetProfileBinary`버퍼를 할당하고 \* *ppData에서*해당 주소를 반환합니다. 호출자는 **delete []** 를 사용하여 버퍼를 해제할 책임이 있습니다.
+> `GetProfileBinary`버퍼를 할당 하 고 해당 주소를 \* *ppdata*로 반환 합니다. 호출자는 **delete []** 를 사용 하 여 버퍼를 해제 해야 합니다.
 
 > [!IMPORTANT]
 > 이 함수에서 반환된 데이터는 NULL로 끝나지 않아도 되며 호출자는 유효성 검사를 수행해야 합니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
@@ -908,9 +908,9 @@ BOOL GetProfileBinary(
 
 [!code-cpp[NVC_MFCWindowing#41](../../mfc/reference/codesnippet/cpp/cwinapp-class_7.cpp)]
 
-추가 예는 [CWinApp::WriteProfileBinary](#writeprofilebinary)을 참조하십시오.
+추가 예제를 보려면 [CWinApp:: WriteProfileBinary](#writeprofilebinary)를 참조 하십시오.
 
-## <a name="cwinappgetprofileint"></a><a name="getprofileint"></a>CWinApp::GetProfileInt
+## <a name="cwinappgetprofileint"></a><a name="getprofileint"></a>CWinApp:: GetProfileInt
 
 .INI 파일 또는 애플리케이션 레지스트리의 지정된 섹션 내에 있는 항목으로 정수 값을 검색하려면 이 멤버 함수를 호출합니다.
 
@@ -926,21 +926,21 @@ UINT GetProfileInt(
 *lpszSection*<br/>
 항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다.
 
-*lpsz항목*<br/>
+*lpszEntry*<br/>
 값을 검색할 항목이 포함된 null로 끝나는 문자열을 가리킵니다.
 
-*n기본값*<br/>
+*nDefault*<br/>
 프레임워크에서 항목을 찾을 수 없는 경우 반환할 기본값을 지정합니다.
 
 ### <a name="return-value"></a>Return Value
 
-함수가 성공하면 문자열의 정수 값은 지정된 항목 다음에 오게 됩니다. 함수에서 항목을 찾을 수 없는 경우 반환 값은 *nDefault* 매개 변수의 값입니다. 지정한 항목에 해당하는 값이 정수가 아닌 경우 반환 값은 0입니다.
+함수가 성공하면 문자열의 정수 값은 지정된 항목 다음에 오게 됩니다. 반환 값은 함수가 항목을 찾지 못하는 경우 *Ndefault* 매개 변수의 값입니다. 지정한 항목에 해당하는 값이 정수가 아닌 경우 반환 값은 0입니다.
 
-이 멤버 함수는 .INI 파일에서 값에 대한 16 진수 표기법을 지원합니다. 서명된 정수를 검색할 때 값을 **int로**캐스팅해야 합니다.
+이 멤버 함수는 .INI 파일에서 값에 대한 16 진수 표기법을 지원합니다. 부호 있는 정수를 검색 하는 경우 값을로 캐스팅 해야 합니다 **`int`** .
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 대/소문자를 구분하지 않으므로 *lpszSection* 및 *lpszEntry* 매개 변수의 문자열은 경우에 따라 다를 수 있습니다.
+이 멤버 함수는 대/소문자를 구분 하지 않으므로 *lpszSection* 및 *lpszEntry* 매개 변수의 문자열은 대/소문자가 다를 수 있습니다.
 
 > [!IMPORTANT]
 > 이 함수에서 반환된 데이터는 NULL로 끝나지 않아도 되며 호출자는 유효성 검사를 수행해야 합니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
@@ -949,11 +949,11 @@ UINT GetProfileInt(
 
 [!code-cpp[NVC_MFCWindowing#42](../../mfc/reference/codesnippet/cpp/cwinapp-class_8.cpp)]
 
-추가 예는 [CWinApp::WriteProfileInt](#writeprofileint)를 참조하십시오.
+추가 예제를 보려면 [CWinApp:: WriteProfileInt](#writeprofileint)를 참조 하십시오.
 
-## <a name="cwinappgetprofilestring"></a><a name="getprofilestring"></a>CWinApp:::GetProfileString
+## <a name="cwinappgetprofilestring"></a><a name="getprofilestring"></a>CWinApp:: GetProfileString
 
-이 멤버 함수를 호출하여 응용 프로그램의 레지스트리 또는 에서 지정된 섹션 내의 항목과 연결된 문자열을 검색합니다. INI 파일입니다.
+이 멤버 함수를 호출 하 여 응용 프로그램의 레지스트리 또는의 지정 된 섹션 내에서 항목과 관련 된 문자열을 검색 합니다. INI 파일.
 
 ```
 CString GetProfileString(
@@ -967,15 +967,15 @@ CString GetProfileString(
 *lpszSection*<br/>
 항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다.
 
-*lpsz항목*<br/>
-검색할 문자열이 포함된 null 종료된 문자열을 가리킵니다. 이 값은 NULL이 아니어야 합니다.
+*lpszEntry*<br/>
+는 문자열을 검색할 엔트리가 포함 된 null로 끝나는 문자열을 가리킵니다. 이 값은 NULL이 아니어야 합니다.
 
-*lpsz기본값*<br/>
-초기화 파일에서 항목을 찾을 수 없는 경우 지정된 항목의 기본 문자열 값을 가리킵니다.
+*lpszDefault*<br/>
+초기화 파일에서 항목을 찾을 수 없는 경우 지정 된 항목의 기본 문자열 값을 가리킵니다.
 
 ### <a name="return-value"></a>Return Value
 
-반환 값은 응용 프로그램의 의 문자열입니다. 문자열을 찾을 수 없는 경우 INI 파일 또는 *lpszDefault입니다.* 프레임워크에서 지원하는 최대 문자열 길이는 _MAX_PATH. *lpszDefault가* NULL이면 반환 값은 빈 문자열입니다.
+반환 값은 응용 프로그램의에 있는 문자열입니다. 문자열을 찾을 수 없는 경우 INI 파일 또는 *lpszDefault* 입니다. 프레임 워크에서 지 원하는 최대 문자열 길이는 _MAX_PATH입니다. *LpszDefault* 가 NULL 이면 반환 값은 빈 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -986,11 +986,11 @@ CString GetProfileString(
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-또 다른 예는 [CWinApp::GetProfileInt](#getprofileint)에 대한 예제를 참조하십시오.
+다른 예제를 보려면 [CWinApp:: GetProfileInt](#getprofileint)의 예제를 참조 하세요.
 
-## <a name="cwinappgetsectionkey"></a><a name="getsectionkey"></a>CWinApp::getsectionKey
+## <a name="cwinappgetsectionkey"></a><a name="getsectionkey"></a>CWinApp:: Get섹션 키
 
-"소프트웨어"를\\HKEY_CURRENT_USER 키를 반환합니다.\레지스트리Key\AppName\lpszSection.
+HKEY_CURRENT_USER "Software"의 키를 반환 합니다. \\ \RegistryKey\AppName\lpszSection.
 
 ```
 HKEY GetSectionKey(
@@ -1003,26 +1003,26 @@ HKEY GetSectionKey(
 *lpszSection*<br/>
 가져올 키의 이름입니다.
 
-*Ptm*<br/>
+*pTM*<br/>
 `CAtlTransactionManager` 개체에 대한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-함수가 성공하면 섹션 키; 그렇지 않으면 NULL.
+함수가 성공 하는 경우 섹션 키 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="cwinapphideapplication"></a><a name="hideapplication"></a>CWinApp::숨기기 응용 프로그램
+## <a name="cwinapphideapplication"></a><a name="hideapplication"></a>CWinApp:: HideApplication
 
-열려 있는 문서를 닫기 전에 응용 프로그램을 숨기려면 이 멤버 함수를 호출합니다.
+열려 있는 문서를 닫기 전에 응용 프로그램을 숨기려면이 멤버 함수를 호출 합니다.
 
 ```cpp
 void HideApplication();
 ```
 
-## <a name="cwinapphtmlhelp"></a><a name="htmlhelp"></a>CWinApp::Html도움말
+## <a name="cwinapphtmlhelp"></a><a name="htmlhelp"></a>CWinApp:: HtmlHelp
 
-HTMLHelp 응용 프로그램을 호출하려면 이 멤버 함수를 호출합니다.
+이 멤버 함수를 호출 하 여 HTMLHelp 응용 프로그램을 호출 합니다.
 
 ```
 virtual void HtmlHelp(
@@ -1033,20 +1033,20 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>매개 변수
 
 *dwData*<br/>
-추가 데이터를 지정합니다. 사용되는 값은 *nCmd* 매개 변수의 값에 따라 다릅니다. 기본값은 `0x000F` [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)의미합니다.
+추가 데이터를 지정 합니다. 사용 되는 값은 *Ncmd* 매개 변수의 값에 따라 달라 집니다. 기본값은 `0x000F` [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)입니다.
 
 *nCmd*<br/>
-요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 *dwData* 매개 변수에 미치는 영향은 Windows SDK의 [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) 또는 [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 함수에 설명된 *uCommand* 매개 변수를 참조하십시오.
+요청한 도움말의 형식을 지정합니다. 사용할 수 있는 값 목록과 이러한 값이 *Dwdata* 매개 변수에 영향을 주는 방법에 대 한 자세한 내용은이 항목에서 설명 [하는](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) *ucommand* 매개 변수를 참조 하십시오. Windows SDK의 API 함수 [를](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-또한 프레임워크는 HTMLHelp 응용 프로그램을 호출하기 위해 이 함수를 호출합니다.
+또한 프레임 워크는이 함수를 호출 하 여 HTMLHelp 응용 프로그램을 호출 합니다.
 
-응용 프로그램이 종료되면 프레임워크가 HTMLHelp 응용 프로그램을 자동으로 닫습니다.
+응용 프로그램이 종료 되 면 프레임 워크가 자동으로 HTMLHelp 응용 프로그램을 닫습니다.
 
-## <a name="cwinappinitinstance"></a><a name="initinstance"></a>CWinApp::Initinstance
+## <a name="cwinappinitinstance"></a><a name="initinstance"></a>CWinApp:: InitInstance
 
-Windows를 사용하면 동일한 프로그램의 여러 복사본을 동시에 실행할 수 있습니다.
+Windows에서는 동일한 프로그램의 여러 복사본을 동시에 실행할 수 있습니다.
 
 ```
 virtual BOOL InitInstance();
@@ -1054,24 +1054,24 @@ virtual BOOL InitInstance();
 
 ### <a name="return-value"></a>Return Value
 
-초기화가 성공하면 비영; 그렇지 않으면 0.
+초기화에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램 초기화는 개념적으로 두 섹션으로 나뉩니다: 프로그램이 처음 실행될 때 수행되는 일회성 응용 프로그램 초기화와 처음 을 포함하여 프로그램의 복사본이 실행될 때마다 실행되는 인스턴스 초기화가 있습니다. 프레임워크의 구현은 `WinMain` 이 함수를 호출합니다.
+응용 프로그램 초기화는 개념적으로 프로그램을 처음 실행할 때 수행 되는 일회성 응용 프로그램 초기화와 프로그램 복사본이 실행 될 때마다 처음으로 실행 되는 인스턴스 초기화 라는 두 개의 섹션으로 구분 됩니다. 프레임 워크의 구현에서 `WinMain` 이 함수를 호출 합니다.
 
-재정의하여 `InitInstance` Windows에서 실행 중인 응용 프로그램의 각 새 인스턴스를 초기화합니다. 일반적으로 주 창 `InitInstance` 개체를 생성하고 `CWinThread::m_pMainWnd` 해당 창을 가리키도록 데이터 멤버를 설정하도록 재정의합니다. 이 멤버 함수 재정의에 대한 자세한 내용은 [CWinApp: 응용 프로그램 클래스](../../mfc/cwinapp-the-application-class.md)를 참조하십시오.
+`InitInstance`를 재정의 하 여 Windows에서 실행 되는 응용 프로그램의 새 인스턴스를 초기화 합니다. 일반적으로를 재정의 `InitInstance` 하 여 주 창 개체를 생성 하 고 `CWinThread::m_pMainWnd` 해당 창을 가리키도록 데이터 멤버를 설정 합니다. 이 멤버 함수를 재정의 하는 방법에 대 한 자세한 내용은 [CWinApp: 응용 프로그램 클래스](../../mfc/cwinapp-the-application-class.md)를 참조 하세요.
 
 > [!NOTE]
-> MFC 응용 프로그램은 단일 스레드 아파트(STA)로 초기화되어야 합니다. 재정의에서 [CoInitializeEx를](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 호출하는 경우 COINIT_MULTITHREADED 대신 COINIT_APARTMENTTHREADED 지정합니다. `InitInstance`
+> MFC 응용 프로그램을 STA (단일 스레드 아파트)로 초기화 해야 합니다. 재정의에서 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 를 호출 하 `InitInstance` 는 경우 COINIT_MULTITHREADED 대신 COINIT_APARTMENTTHREADED를 지정 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]
 
-## <a name="cwinappistaskbarinteractionenabled"></a><a name="istaskbarinteractionenabled"></a>CWinApp::IsTaskbar상호작용 사용 가능
+## <a name="cwinappistaskbarinteractionenabled"></a><a name="istaskbarinteractionenabled"></a>CWinApp:: IsTaskbarInteractionEnabled
 
-Windows 7 작업 표시줄 상호 작용이 활성화되어 있는지 여부를 알려줍니다.
+Windows 7 작업 표시줄 상호 작용이 사용 되는지 여부를 나타냅니다.
 
 ```
 virtual BOOL IsTaskbarInteractionEnabled();
@@ -1079,15 +1079,15 @@ virtual BOOL IsTaskbarInteractionEnabled();
 
 ### <a name="return-value"></a>Return Value
 
-운영 체제가 Windows 7 이상인 경우 `EnableTaskbarInteraction` TRUE를 반환합니다.
+`EnableTaskbarInteraction`가 호출 되 고 운영 체제가 Windows 7 이상인 경우 TRUE를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-작업 표시줄 상호 작용은 MDI 응용 프로그램이 마우스 포인터가 응용 프로그램 작업 표시줄 단추 위에 있을 때 나타나는 별도의 탭된 축소판 그림에 MDI 자식의 내용을 표시한다는 것을 의미합니다.
+작업 표시줄 상호 작용 이란 MDI 응용 프로그램이 마우스 포인터가 응용 프로그램 작업 표시줄 단추 위에 있을 때 표시 되는 별도의 탭 미리 보기에 MDI 자식의 내용을 표시 한다는 것을 의미 합니다.
 
-## <a name="cwinapploadcursor"></a><a name="loadcursor"></a>CWinApp ::로드 커서
+## <a name="cwinapploadcursor"></a><a name="loadcursor"></a>CWinApp:: LoadCursor
 
-*lpszResourceName또는* 현재 실행 파일에서 *nIDResource에* 의해 지정된 커서 리소스를 로드합니다.
+*LpszResourceName* 에 의해 이름이 지정 된 커서 리소스를 로드 하거나 현재 실행 파일에서 *nIDResource* 에 의해 지정 된 커서 리소스를 로드 합니다.
 
 ```
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
@@ -1096,28 +1096,28 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 ### <a name="parameters"></a>매개 변수
 
 *lpszResourceName*<br/>
-커서 리소스의 이름을 포함하는 null 종료 된 문자열을 가리킵니다. 이 인수에 `CString` 대해 a를 사용할 수 있습니다.
+커서 리소스의 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다. 이 인수에는를 사용할 수 있습니다 `CString` .
 
 *nIDResource*<br/>
-커서 리소스의 ID입니다. 리소스 목록은 Windows SDK의 [LoadCursor를](/windows/win32/api/winuser/nf-winuser-loadcursorw) 참조하십시오.
+커서 리소스의 ID입니다. 리소스 목록은 Windows SDK의 [Loadcursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) 를 참조 하십시오.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 커서에 대한 핸들입니다. 그렇지 않으면 NULL.
+성공 하면 커서에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-`LoadCursor`커서가 이전에 로드되지 않은 경우에만 커서를 메모리에 로드합니다. 그렇지 않으면 기존 리소스의 핸들을 검색합니다.
+`LoadCursor`이전에 로드 되지 않은 경우에만 커서를 메모리로 로드 합니다. 그렇지 않으면 기존 리소스의 핸들을 검색 합니다.
 
-[LoadStandardCursor](#loadstandardcursor) 또는 [LoadOEMCursor](#loadoemcursor) 멤버 함수를 사용하여 미리 정의된 Windows 커서에 액세스합니다.
+미리 정의 된 Windows 커서에 액세스 하려면 [Loadstandardcursor](#loadstandardcursor) 또는 [loadstandardcursor](#loadoemcursor) 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]
 
-## <a name="cwinapploadicon"></a><a name="loadicon"></a>CWinApp ::로드 아이콘
+## <a name="cwinapploadicon"></a><a name="loadicon"></a>CWinApp:: LoadIcon
 
-*lpszResourceName또는* 실행 파일에서 *nIDResource에* 의해 지정된 아이콘 리소스를 로드합니다.
+*LpszResourceName* 또는 실행 파일에서 *nIDResource* 로 지정 된 아이콘 리소스를 로드 합니다.
 
 ```
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
@@ -1126,27 +1126,27 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 ### <a name="parameters"></a>매개 변수
 
 *lpszResourceName*<br/>
-아이콘 리소스의 이름을 포함 하는 null 종료 된 문자열을 가리킵니다. 이 인수에 `CString` 대해서도 사용할 수 있습니다.
+아이콘 리소스의 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다. 이 인수에를 사용할 수도 있습니다 `CString` .
 
 *nIDResource*<br/>
 아이콘 리소스의 ID 번호입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 아이콘에 대한 핸들; 그렇지 않으면 NULL.
+성공 하면 아이콘에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-`LoadIcon`아이콘이 이전에 로드되지 않은 경우에만 아이콘을 로드합니다. 그렇지 않으면 기존 리소스의 핸들을 검색합니다.
+`LoadIcon`이전에 로드 되지 않은 경우에만 아이콘을 로드 합니다. 그렇지 않으면 기존 리소스의 핸들을 검색 합니다.
 
-[LoadStandardIcon](#loadstandardicon) 또는 [LoadOEMIcon](#loadoemicon) 멤버 함수를 사용하여 미리 정의된 Windows 아이콘에 액세스할 수 있습니다.
+[LoadStandardIcon](#loadstandardicon) 또는 [loadoemicon](#loadoemicon) 멤버 함수를 사용 하 여 미리 정의 된 Windows 아이콘에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 이 멤버 함수는 Win32 API 함수 [LoadIcon을](/windows/win32/api/winuser/nf-winuser-loadiconw)호출하며, 크기가 SM_CXICON 및 시스템 메트릭 값을 SM_CYICON 아이콘만 로드할 수 있습니다.
+> 이 멤버 함수는 Win32 API 함수 [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)을 호출 하며, 크기가 SM_CXICON 및 SM_CYICON 시스템 메트릭 값을 준수 하는 아이콘만 로드할 수 있습니다.
 
-## <a name="cwinapploadoemcursor"></a><a name="loadoemcursor"></a>CWinApp::로드OEM커서
+## <a name="cwinapploadoemcursor"></a><a name="loadoemcursor"></a>CWinApp:: LoadOEMCursor
 
-*nIDCursor*에 의해 지정된 Windows 미리 정의된 커서 리소스를 로드합니다.
+*NIDCursor*로 지정 된 Windows 미리 정의 된 커서 리소스를 로드 합니다.
 
 ```
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
@@ -1154,16 +1154,16 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*니드커서*<br/>
-**OCR_** 미리 정의된 Windows 커서를 지정하는 상수 식별자를 매니페스트합니다. WINDOWS에서 `#define OEMRESOURCE` OCR_ `#include \<afxwin.h>` 상수에 액세스하려면 이전에 있어야 합니다. **OCR_** H.
+*nIDCursor*<br/>
+미리 정의 된 Windows 커서를 지정 하는 **OCR_** 매니페스트 상수 식별자입니다. `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS에서 **OCR_** 상수에 액세스 하려면 먼저가 있어야 합니다. 넣기.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 커서에 대한 핸들입니다. 그렇지 않으면 NULL.
+성공 하면 커서에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-`LoadOEMCursor` 또는 [LoadStandardCursor](#loadstandardcursor) 멤버 함수를 사용하여 미리 정의된 Windows 커서에 액세스합니다.
+`LoadOEMCursor`미리 정의 된 Windows 커서에 액세스 하려면 또는 [loadstandardcursor](#loadstandardcursor) 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1171,9 +1171,9 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 [!code-cpp[NVC_MFCWindowing#46](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]
 
-## <a name="cwinapploadoemicon"></a><a name="loadoemicon"></a>CWinApp ::로드OEM아이콘
+## <a name="cwinapploadoemicon"></a><a name="loadoemicon"></a>CWinApp:: LoadOEMIcon
 
-*nIDIcon*.
+*NIDIcon*로 지정 된 Windows 미리 정의 된 아이콘 리소스를 로드 합니다.
 
 ```
 HICON LoadOEMIcon(UINT nIDIcon) const;
@@ -1181,20 +1181,20 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*니디콘*<br/>
-미리 정의된 Windows 아이콘을 지정하는 **OIC_** 매니페스트 상수 식별자를 명시합니다. WINDOWS에서 `#define OEMRESOURCE` `#include \<afxwin.h>` **OIC_** 상수에 액세스하려면 이전에 있어야 합니다. H.
+*nIDIcon*<br/>
+미리 정의 된 Windows 아이콘을 지정 하는 **OIC_** 매니페스트 상수 식별자입니다. `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS에서 **OIC_** 상수에 액세스 하려면 먼저가 있어야 합니다. 넣기.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 아이콘에 대한 핸들; 그렇지 않으면 NULL.
+성공 하면 아이콘에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-또는 `LoadOEMIcon` [LoadStandardIcon](#loadstandardicon) 멤버 함수를 사용하여 미리 정의된 Windows 아이콘에 액세스합니다.
+`LoadOEMIcon`또는 [LoadStandardIcon](#loadstandardicon) 멤버 함수를 사용 하 여 미리 정의 된 Windows 아이콘에 액세스할 수 있습니다.
 
-## <a name="cwinapploadstandardcursor"></a><a name="loadstandardcursor"></a>CWinApp::로드스탠다드커서
+## <a name="cwinapploadstandardcursor"></a><a name="loadstandardcursor"></a>CWinApp:: LoadStandardCursor
 
-*lpszCursorName* 지정 하는 Windows 미리 정의 된 커서 리소스를 로드 합니다.
+*LpszCursorName* 가 지정 하는 미리 정의 된 Windows 커서 리소스를 로드 합니다.
 
 ```
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
@@ -1202,48 +1202,48 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*lpszCursor이름*<br/>
-**IDC_** 미리 정의된 Windows 커서를 지정하는 상수 식별자를 매니페스트합니다. 이러한 식별자는 WINDOWS에서 정의됩니다. H. 다음 목록은 *lpszCursorName에*대해 가능한 미리 정의된 값과 의미를 보여 주며 다음과 같이 표시됩니다.
+*lpszCursorName*<br/>
+미리 정의 된 Windows 커서를 지정 하는 **IDC_** 매니페스트 상수 식별자입니다. 이러한 식별자는 WINDOWS에서 정의 됩니다. 넣기. 다음 목록에서는 *lpszCursorName*에 대해 가능한 미리 정의 된 값과 의미를 보여 줍니다.
 
 - IDC_ARROW 표준 화살표 커서
 
 - IDC_IBEAM 표준 텍스트 삽입 커서
 
-- Windows에서 시간이 많이 걸리는 작업을 수행할 때 사용되는 IDC_WAIT 모래 시계 커서
+- Windows에서 시간이 많이 걸리는 작업을 수행할 때 사용 되는 IDC_WAIT 모래 시계 커서
 
-- 선택을 위한 IDC_CROSS 십자선 커서
+- 선택 영역에 대 한 십자 커서 IDC_CROSS
 
-- 똑바로 가리키는 IDC_UPARROW 화살표
+- 수직 위로 가리키는 IDC_UPARROW 화살표
 
-- IDC_SIZE 사용되지 않고 지원되지 않습니다. IDC_SIZEALL 사용
+- IDC_SIZE 사용 되지 않으며 지원 되지 않음 IDC_SIZEALL 사용
 
-- IDC_SIZEALL 네 개의 뾰족한 화살표입니다. 창 크기를 조정하는 데 사용할 커서입니다.
+- 4 방향 화살표를 IDC_SIZEALL 합니다. 창의 크기를 조정 하는 데 사용할 커서입니다.
 
-- IDC_ICON 사용되지 않으며 지원되지 않습니다. IDC_ARROW 사용합니다.
+- IDC_ICON 사용 되지 않으며 지원 되지 않습니다. IDC_ARROW를 사용 합니다.
 
-- IDC_SIZENWSE 왼쪽 상단과 오른쪽 아래 끝에 있는 양면 화살표
+- 왼쪽 위와 오른쪽 아래에 끝점이 있는 양방향 화살표 IDC_SIZENWSE
 
-- IDC_SIZENESW 오른쪽 상단과 왼쪽 아래 끝에 있는 양면 화살표
+- 오른쪽 위와 왼쪽 아래에 끝점이 있는 양방향 화살표를 IDC_SIZENESW 합니다.
 
-- IDC_SIZEWE 수평 양방향 화살표
+- IDC_SIZEWE 가로 양방향 화살표
 
-- IDC_SIZENS 수직 양방향 화살표
+- IDC_SIZENS 세로 양방향 화살표
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 커서에 대한 핸들입니다. 그렇지 않으면 NULL.
+성공 하면 커서에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-`LoadStandardCursor` 또는 [LoadOEMCursor](#loadoemcursor) 멤버 함수를 사용하여 미리 정의된 Windows 커서에 액세스합니다.
+`LoadStandardCursor`미리 정의 된 Windows 커서에 액세스 하려면 또는 [Loadoemcursor](#loadoemcursor) 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]
 
-## <a name="cwinapploadstandardicon"></a><a name="loadstandardicon"></a>CWinApp :: 로드 스탠다드아이콘
+## <a name="cwinapploadstandardicon"></a><a name="loadstandardicon"></a>CWinApp:: LoadStandardIcon
 
-*lpszIconName* 지정 하는 Windows 미리 정의 된 아이콘 리소스를 로드 합니다.
+*LpszIconName* 가 지정 하는 Windows 미리 정의 된 아이콘 리소스를 로드 합니다.
 
 ```
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
@@ -1252,19 +1252,19 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>매개 변수
 
 *lpszIconName*<br/>
-미리 정의된 Windows 아이콘을 지정하는 매니페스트 상수 식별자입니다. 이러한 식별자는 WINDOWS에서 정의됩니다. H. 가능한 미리 정의된 값 과 그 설명의 목록은 Windows SDK의 [LoadIcon에서](/windows/win32/api/winuser/nf-winuser-loadiconw) *lpIconName* 매개 변수를 참조하십시오.
+미리 정의 된 창 아이콘을 지정 하는 매니페스트 상수 식별자입니다. 이러한 식별자는 WINDOWS에서 정의 됩니다. 넣기. 사용할 수 있는 미리 정의 된 값 및 해당 설명의 목록은 Windows SDK의 [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw) 에서 *Lpiconname* 매개 변수를 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 아이콘에 대한 핸들; 그렇지 않으면 NULL.
+성공 하면 아이콘에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-`LoadStandardIcon` 또는 [LoadOEMIcon](#loadoemicon) 멤버 함수를 사용하여 미리 정의된 Windows 아이콘에 액세스합니다.
+`LoadStandardIcon`미리 정의 된 Windows 아이콘에 액세스 하려면 또는 [Loadoemicon](#loadoemicon) 멤버 함수를 사용 합니다.
 
-## <a name="cwinapploadstdprofilesettings"></a><a name="loadstdprofilesettings"></a>CWinApp::로드스트드 프로파일설정
+## <a name="cwinapploadstdprofilesettings"></a><a name="loadstdprofilesettings"></a>CWinApp:: LoadStdProfileSettings
 
-[InitInstance](#initinstance) 멤버 함수 내에서 이 멤버 함수를 호출하여 가장 최근에 사용한(MRU) 파일 및 마지막 미리 보기 상태의 목록을 활성화하고 로드합니다.
+[InitInstance](#initinstance) 멤버 함수 내에서이 멤버 함수를 호출 하 여 MRU (가장 최근에 사용 됨) 파일 및 마지막 미리 보기 상태 목록을 사용 하도록 설정 하 고 로드 합니다.
 
 ```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
@@ -1273,15 +1273,15 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ### <a name="parameters"></a>매개 변수
 
 *nMaxMRU*<br/>
-추적할 최근에 사용한 파일 수입니다.
+추적할 최근에 사용한 파일의 수입니다.
 
 ### <a name="remarks"></a>설명
 
-*nMaxMRU가* 0이면 MRU 목록이 유지되지 않습니다.
+*Nmaxmru* 가 0 이면 mru 목록이 유지 되지 않습니다.
 
-## <a name="cwinappm_bhelpmode"></a><a name="m_bhelpmode"></a>CWinApp::m_bHelpMode
+## <a name="cwinappm_bhelpmode"></a><a name="m_bhelpmode"></a>CWinApp:: m_bHelpMode
 
-TRUE 응용 프로그램이 도움말 컨텍스트 모드(일반적으로 SHIFT + F1로 호출됨)에 있는 경우 그렇지 않으면 거짓.
+응용 프로그램이 도움말 컨텍스트 모드에 있으면 TRUE이 고, SHIFT + f 1을 사용 하 여 호출 되는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
 ```
 BOOL m_bHelpMode;
@@ -1289,11 +1289,11 @@ BOOL m_bHelpMode;
 
 ### <a name="remarks"></a>설명
 
-도움말 컨텍스트 모드에서 커서는 물음표가 되고 사용자는 화면으로 이동할 수 있습니다. 도움말 모드에서 특수 처리를 구현하려는 경우 이 플래그를 검사합니다. `m_bHelpMode`는 BOOL 형식의 공용 변수입니다.
+도움말 컨텍스트 모드에서는 커서가 물음표가 되 고 사용자가 화면에 대 한 포인터를 이동할 수 있습니다. 도움말 모드에서 특수 처리를 구현 하려면이 플래그를 검사 합니다. `m_bHelpMode`BOOL 형식의 공용 변수입니다.
 
-## <a name="cwinappm_dwrestartmanagersupportflags"></a><a name="m_dwrestartmanagersupportflags"></a>CWinApp::m_dwRestartManagerSupportFlags
+## <a name="cwinappm_dwrestartmanagersupportflags"></a><a name="m_dwrestartmanagersupportflags"></a>CWinApp:: m_dwRestartManagerSupportFlags
 
-다시 시작 관리자의 행동 방식을 결정하는 플래그입니다.
+다시 시작 관리자의 동작을 결정 하는 플래그입니다.
 
 ```
 DWORD m_dwRestartManagerSupportFlags;
@@ -1301,25 +1301,25 @@ DWORD m_dwRestartManagerSupportFlags;
 
 ### <a name="remarks"></a>설명
 
-관리자를 다시 시작하려면 `m_dwRestartManagerSupportFlags` 원하는 동작으로 설정합니다. 다음 표에는 사용 가능한 플래그가 표시됩니다.
+다시 시작 관리자를 사용 하도록 설정 하려면를 `m_dwRestartManagerSupportFlags` 원하는 동작으로 설정 합니다. 다음 표에서는 사용할 수 있는 플래그를 보여 줍니다.
 
 |||
 |-|-|
-|플래그|Description|
-|AFX_RESTART_MANAGER_SUPPORT_RESTART|응용 프로그램은 [CWinApp를 사용하여 등록됩니다::RegisterWithRestartManager](#registerwithrestartmanager). 다시 시작 관리자는 예기치 않게 종료되는 경우 응용 프로그램을 다시 시작해야 합니다.|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|응용 프로그램이 다시 시작 관리자에 등록되고 다시 시작 관리자는 응용 프로그램을 다시 시작할 때 복구 콜백 함수를 호출합니다. 기본 복구 콜백 기능은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)입니다.|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|자동 저장이 활성화되고 다시 시작 관리자가 응용 프로그램을 다시 시작할 때 열려 있는 문서를 자동으로 저장합니다.|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|자동 저장이 활성화되고 다시 시작 관리자가 정기적으로 열려 있는 문서를 자동으로 저장합니다. 간격은 [CWinApp에](#m_nautosaveinterval)의해 정의됩니다 ::m_nAutosaveInterval .|
-|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|다시 시작 관리자는 예기치 않은 종료에서 응용 프로그램을 다시 시작한 후 이전에 열린 문서를 엽니다. [CDataRecoveryHandler 클래스는](../../mfc/reference/cdatarecoveryhandler-class.md) 열려 있는 문서 목록을 저장하고 복원하는 것을 처리합니다.|
-|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|다시 시작 관리자는 응용 프로그램을 다시 시작한 후 자동으로 저장된 파일을 복원하라는 메시지를 사용자에게 표시합니다. 클래스는 `CDataRecoveryHandler` 사용자를 쿼리합니다.|
-|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 연합.|
-|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 연합.|
-|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES, AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 연합.|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|노조는 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES, AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|플래그|설명|
+|AFX_RESTART_MANAGER_SUPPORT_RESTART|응용 프로그램은 [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)를 사용 하 여 등록 됩니다. 다시 시작 관리자는 응용 프로그램이 예기치 않게 종료 되는 경우 응용 프로그램을 다시 시작 해야 합니다.|
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|응용 프로그램은 다시 시작 관리자에 등록 되 고 다시 시작 관리자는 응용 프로그램을 다시 시작할 때 복구 콜백 함수를 호출 합니다. 기본 복구 콜백 함수는 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)입니다.|
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|자동 저장을 사용 하도록 설정 하 고 다시 시작 관리자는 응용 프로그램이 다시 시작 될 때 열린 모든 문서를 자동으로 저장 합니다.|
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|자동 저장을 사용 하도록 설정 하 고 다시 시작 관리자가 열려 있는 모든 문서를 일정 한 간격으로 자동 저장 합니다. 이 간격은 [CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)에 의해 정의 됩니다.|
+|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|예기치 않은 종료에서 응용 프로그램을 다시 시작한 후 다시 시작 관리자가 이전에 열린 문서를 엽니다. [CDataRecoveryHandler 클래스](../../mfc/reference/cdatarecoveryhandler-class.md) 는 열려 있는 문서 목록을 저장 하 고 복원 하는 것을 처리 합니다.|
+|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|다시 시작 관리자는 응용 프로그램을 다시 시작한 후 자동으로 저장 된 파일을 복원 하 라는 메시지를 표시 합니다. `CDataRecoveryHandler`클래스는 사용자를 쿼리 합니다.|
+|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER 및 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES의 합집합입니다.|
+|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 및 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES의 합집합입니다.|
+|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 및 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES의 합집합입니다.|
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 및 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES입니다.|
 
-## <a name="cwinappm_ehelptype"></a><a name="m_ehelptype"></a>CWinApp::m_eHelpType
+## <a name="cwinappm_ehelptype"></a><a name="m_ehelptype"></a>CWinApp:: m_eHelpType
 
-이 데이터 멤버의 형식은 `CWinApp` 클래스 내에서 정의되는 AFX_HELP_TYPE 수거된 형식입니다.
+이 데이터 멤버의 형식은 클래스 내에 정의 된 AFX_HELP_TYPE 열거형 형식입니다 `CWinApp` .
 
 ```
 AFX_HELP_TYPE m_eHelpType;
@@ -1327,7 +1327,7 @@ AFX_HELP_TYPE m_eHelpType;
 
 ### <a name="remarks"></a>설명
 
-AFX_HELP_TYPE 열거형은 다음과 같이 정의됩니다.
+AFX_HELP_TYPE 열거형은 다음과 같이 정의 됩니다.
 
 ```
 enum AFX_HELP_TYPE {
@@ -1336,13 +1336,13 @@ enum AFX_HELP_TYPE {
     };
 ```
 
-- 응용 프로그램의 도움말을 HTML 도움말로 설정하려면 [SetHelpMode를](#sethelpmode) 호출하고 을 지정합니다. `afxHTMLHelp`
+- 응용 프로그램의 도움말을 HTML 도움말로 설정 하려면 [SetHelpMode](#sethelpmode) 를 호출 하 고를 지정 `afxHTMLHelp` 합니다.
 
-- 응용 프로그램의 도움말을 WinHelp로 설정하려면 를 호출하고 `SetHelpMode` 지정합니다. `afxWinHelp`
+- 응용 프로그램의 도움말을 WinHelp로 설정 하려면를 호출 하 `SetHelpMode` 고를 지정 `afxWinHelp` 합니다.
 
-## <a name="cwinappm_hinstance"></a><a name="m_hinstance"></a>CWinApp::m_hInstance
+## <a name="cwinappm_hinstance"></a><a name="m_hinstance"></a>CWinApp:: m_hInstance
 
-에 Windows에서 전달된 *hInstance* `WinMain`매개 변수에 해당합니다.
+Windows에서에 전달한 *Hinstance* 매개 변수에 해당 `WinMain` 합니다.
 
 ```
 HINSTANCE m_hInstance;
@@ -1350,15 +1350,15 @@ HINSTANCE m_hInstance;
 
 ### <a name="remarks"></a>설명
 
-`m_hInstance` 데이터 멤버는 Windows에서 실행 중인 응용 프로그램의 현재 인스턴스에 대한 핸들입니다. 이 값은 전역 함수 [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)에서 반환됩니다. `m_hInstance`은 HINSTANCE 형식의 공용 변수입니다.
+`m_hInstance`데이터 멤버는 Windows에서 실행 되는 응용 프로그램의 현재 인스턴스에 대 한 핸들입니다. 이는 전역 함수 [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)에서 반환 됩니다. `m_hInstance`는 HINSTANCE 형식의 공용 변수입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]
 
-## <a name="cwinappm_lpcmdline"></a><a name="m_lpcmdline"></a>CWinApp::m_lpCmdLine
+## <a name="cwinappm_lpcmdline"></a><a name="m_lpcmdline"></a>CWinApp:: m_lpCmdLine
 
-에 Windows에서 전달되는 *lpCmdLine* `WinMain`매개 변수에 해당합니다.
+Windows에서로 전달 된 *Lpcmdline* 매개 변수에 해당 합니다 `WinMain` .
 
 ```
 LPTSTR m_lpCmdLine;
@@ -1366,15 +1366,15 @@ LPTSTR m_lpCmdLine;
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램의 명령줄을 지정하는 null 종료 된 문자열을 가리킵니다. 응용 `m_lpCmdLine` 프로그램을 시작할 때 사용자가 입력한 모든 명령줄 인수에 액세스하는 데 사용합니다. `m_lpCmdLine`는 LPTSTR 형식의 공용 변수입니다.
+응용 프로그램에 대 한 명령줄을 지정 하는 null로 끝나는 문자열을 가리킵니다. `m_lpCmdLine`응용 프로그램이 시작 될 때 사용자가 입력 한 명령줄 인수에 액세스 하려면를 사용 합니다. `m_lpCmdLine`는 LPTSTR 형식의 공용 변수입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
-## <a name="cwinappm_nautosaveinterval"></a><a name="m_nautosaveinterval"></a>CWinApp::m_nAutosaveInterval
+## <a name="cwinappm_nautosaveinterval"></a><a name="m_nautosaveinterval"></a>CWinApp:: m_nAutosaveInterval
 
-자동 저장 사이의 밀리초 길이입니다.
+Autosaves 사이의 시간 (밀리초)입니다.
 
 ```
 int m_nAutosaveInterval;
@@ -1382,11 +1382,11 @@ int m_nAutosaveInterval;
 
 ### <a name="remarks"></a>설명
 
-설정된 간격으로 열려 있는 문서를 자동으로 저장하도록 다시 시작 관리자를 구성할 수 있습니다. 응용 프로그램이 파일을 자동으로 저장하지 않으면 이 매개 변수는 영향을 주지 않습니다.
+설정 된 간격으로 열린 문서를 자동으로 저장 하도록 restart manager를 구성할 수 있습니다. 응용 프로그램에서 파일을 저장 하지 않는 경우이 매개 변수는 영향을 주지 않습니다.
 
-## <a name="cwinappm_ncmdshow"></a><a name="m_ncmdshow"></a>CWinApp::m_nCmdShow
+## <a name="cwinappm_ncmdshow"></a><a name="m_ncmdshow"></a>CWinApp:: m_nCmdShow
 
-에 Windows에서 전달된 *nCmdShow* `WinMain`매개 변수에 해당합니다.
+Windows에서로 전달 된 *Ncmdshow* 매개 변수에 해당 `WinMain` 합니다.
 
 ```
 int m_nCmdShow;
@@ -1394,25 +1394,25 @@ int m_nCmdShow;
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램의 `m_nCmdShow` 기본 창에 대 한 [CWnd::ShowWindow를](../../mfc/reference/cwnd-class.md#showwindow) 호출할 때 인수로 전달 해야 합니다. `m_nCmdShow`는 **int**형식의 공용 변수입니다.
+`m_nCmdShow`응용 프로그램의 주 창에 대해 [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) 를 호출 하는 경우를 인수로 전달 해야 합니다. `m_nCmdShow`는 형식의 공용 변수입니다 **`int`** .
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]
 
-## <a name="cwinappm_pactivewnd"></a><a name="m_pactivewnd"></a>CWinApp::m_pActiveWnd
+## <a name="cwinappm_pactivewnd"></a><a name="m_pactivewnd"></a>CWinApp:: m_pActiveWnd
 
-이 데이터 멤버를 사용하여 OLE 서버 응용 프로그램이 활성화된 OLE 컨테이너 응용 프로그램의 기본 창에 대한 포인터를 저장합니다.
+이 데이터 멤버를 사용 하 여 OLE 서버 응용 프로그램 내부 활성화 된 ole 컨테이너 응용 프로그램의 주 창에 대 한 포인터를 저장할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-이 데이터 멤버가 NULL이면 응용 프로그램이 활성 상태가 아닙니다.
+이 데이터 멤버가 NULL 이면 응용 프로그램이 활성 상태로 활성화 되지 않습니다.
 
-프레임 창이 OLE 컨테이너 응용 프로그램에서 활성화될 때 프레임워크는 이 멤버 변수를 설정합니다.
+프레임 워크는 프레임 창이 OLE 컨테이너 응용 프로그램에 의해 활성화 된 경우이 멤버 변수를 설정 합니다.
 
-## <a name="cwinappm_pdatarecoveryhandler"></a><a name="m_pdatarecoveryhandler"></a>CWinApp::m_pDataRecoveryHandler
+## <a name="cwinappm_pdatarecoveryhandler"></a><a name="m_pdatarecoveryhandler"></a>CWinApp:: m_pDataRecoveryHandler
 
-응용 프로그램의 데이터 복구 처리기에 대한 포인터입니다.
+응용 프로그램의 데이터 복구 처리기에 대 한 포인터입니다.
 
 ```
 CDataRecoveryHandler* m_pDataRecoveryHandler;
@@ -1420,9 +1420,9 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램의 데이터 복구 처리기는 열린 문서를 모니터링하고 자동으로 저장합니다. 프레임워크는 데이터 복구 처리기를 사용하여 응용 프로그램이 예기치 않게 종료된 후 다시 시작될 때 자동 저장된 파일을 복원합니다. 자세한 내용은 [CDataRecoveryHandler 클래스를](../../mfc/reference/cdatarecoveryhandler-class.md)참조하십시오.
+응용 프로그램의 데이터 복구 처리기는 열린 문서를 모니터링 하 고 자동으로 저장 합니다. 프레임 워크는 데이터 복구 처리기를 사용 하 여 응용 프로그램이 예기치 않게 종료 된 후 다시 시작 될 때 자동으로 저장 된 파일을 복원 합니다. 자세한 내용은 [CDataRecoveryHandler 클래스](../../mfc/reference/cdatarecoveryhandler-class.md)를 참조 하세요.
 
-## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a>CWinApp::m_pszAppName
+## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a>CWinApp:: m_pszAppName
 
 애플리케이션의 이름을 지정합니다.
 
@@ -1432,12 +1432,12 @@ LPCTSTR m_pszAppName;
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램 이름은 [CWinApp](#cwinapp) 생성자로 전달된 매개 변수에서 올 수 있으며, 지정되지 않은 경우 id가 있는 리소스 문자열에 AFX_IDS_APP_TITLE 수 있습니다. 리소스에서 응용 프로그램 이름을 찾을 수 없는 경우 프로그램의 에서 제공됩니다. EXE 파일 이름입니다.
+응용 프로그램 이름은 [CWinApp](#cwinapp) 생성자에 전달 된 매개 변수에서 가져올 수 있으며, 지정 되지 않은 경우 ID가 AFX_IDS_APP_TITLE 인 리소스 문자열로 가져올 수 있습니다. 리소스에서 응용 프로그램 이름을 찾을 수 없는 경우 프로그램의에서 가져옵니다. EXE 파일 이름입니다.
 
-글로벌 함수 [AfxGetAppName에](application-information-and-management.md#afxgetappname)의해 반환됩니다. `m_pszAppName`는 **형식 const char의**<strong>\*</strong>공용 변수입니다.
+전역 함수 [AfxGetAppName](application-information-and-management.md#afxgetappname)에서 반환 됩니다. `m_pszAppName`는 **const char**형식의 공용 변수입니다 <strong>\*</strong> .
 
 > [!NOTE]
-> `m_pszAppName`에 값을 할당하는 경우 힙에 동적으로 할당되어야 합니다. `CWinApp` 소멸자는 이 포인터를 통해 **무료()를**호출합니다. `_tcsdup`많은 사람들이 () 런타임 라이브러리 함수를 사용하여 할당을 수행하려고 합니다. 또한 새 값을 할당하기 전에 현재 포인터와 연결된 메모리를 확보합니다. 다음은 그 예입니다.
+> 에 값을 할당 하는 경우 `m_pszAppName` 힙에 동적으로 할당 되어야 합니다. `CWinApp`소멸자는 this 포인터를 사용 하 여 **free**()를 호출 합니다. `_tcsdup`() 런타임 라이브러리 함수를 사용 하 여 할당을 수행 하려고 합니다. 또한 새 값을 할당 하기 전에 현재 포인터와 연결 된 메모리를 해제 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1445,9 +1445,9 @@ LPCTSTR m_pszAppName;
 
 [!code-cpp[NVC_MFCWindowing#65](../../mfc/reference/codesnippet/cpp/cwinapp-class_19.cpp)]
 
-## <a name="cwinappm_pszexename"></a><a name="m_pszexename"></a>CWinApp::m_pszExeName
+## <a name="cwinappm_pszexename"></a><a name="m_pszexename"></a>CWinApp:: m_pszExeName
 
-확장자 없이 응용 프로그램의 실행 파일의 이름을 포함 합니다.
+확장명이 없는 응용 프로그램 실행 파일의 이름을 포함 합니다.
 
 ```
 LPCTSTR m_pszExeName;
@@ -1455,16 +1455,16 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>설명
 
-[m_pszAppName](#m_pszappname)달리 이 이름은 공백을 포함할 수 없습니다. `m_pszExeName`는 **형식 const char의**<strong>\*</strong>공용 변수입니다.
+[M_pszAppName](#m_pszappname)와 달리이 이름에는 공백을 사용할 수 없습니다. `m_pszExeName`는 **const char**형식의 공용 변수입니다 <strong>\*</strong> .
 
 > [!NOTE]
-> `m_pszExeName`에 값을 할당하는 경우 힙에 동적으로 할당되어야 합니다. `CWinApp` 소멸자는 이 포인터를 통해 **무료()를**호출합니다. `_tcsdup`많은 사람들이 () 런타임 라이브러리 함수를 사용하여 할당을 수행하려고 합니다. 또한 새 값을 할당하기 전에 현재 포인터와 연결된 메모리를 확보합니다. 다음은 그 예입니다.
+> 에 값을 할당 하는 경우 `m_pszExeName` 힙에 동적으로 할당 되어야 합니다. `CWinApp`소멸자는 this 포인터를 사용 하 여 **free**()를 호출 합니다. `_tcsdup`() 런타임 라이브러리 함수를 사용 하 여 할당을 수행 하려고 합니다. 또한 새 값을 할당 하기 전에 현재 포인터와 연결 된 메모리를 해제 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
-## <a name="cwinappm_pszhelpfilepath"></a><a name="m_pszhelpfilepath"></a>CWinApp::m_pszHelpFilePath
+## <a name="cwinappm_pszhelpfilepath"></a><a name="m_pszhelpfilepath"></a>CWinApp:: m_pszHelpFilePath
 
-응용 프로그램의 도움말 파일에 대한 경로를 포함합니다.
+응용 프로그램의 도움말 파일에 대 한 경로를 포함 합니다.
 
 ```
 LPCTSTR m_pszHelpFilePath;
@@ -1472,16 +1472,16 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>설명
 
-기본적으로 프레임워크는 "를 `m_pszHelpFilePath` 사용하여 응용 프로그램의 이름으로 초기화합니다. HLP"가 추가되었습니다. 도움말 파일의 이름을 변경하려면 `m_pszHelpFilePath` 원하는 도움말 파일의 전체 이름이 포함된 문자열을 가리키도록 설정합니다. 이 작업을 수행하는 편리한 장소는 응용 프로그램의 [InitInstance](#initinstance) 함수입니다. `m_pszHelpFilePath`는 **형식 const char의**<strong>\*</strong>공용 변수입니다.
+기본적으로 프레임 워크는 `m_pszHelpFilePath` "를 사용 하 여 응용 프로그램의 이름으로 초기화 됩니다. .HLP "가 추가 되었습니다. 도움말 파일의 이름을 변경 하려면 `m_pszHelpFilePath` 원하는 도움말 파일의 전체 이름이 포함 된 문자열을 가리키도록 설정 합니다. 이 작업을 수행 하는 편리한 장소는 응용 프로그램의 [InitInstance](#initinstance) 함수입니다. `m_pszHelpFilePath`는 **const char**형식의 공용 변수입니다 <strong>\*</strong> .
 
 > [!NOTE]
-> `m_pszHelpFilePath`에 값을 할당하는 경우 힙에 동적으로 할당되어야 합니다. `CWinApp` 소멸자는 이 포인터를 통해 **무료()를**호출합니다. `_tcsdup`많은 사람들이 () 런타임 라이브러리 함수를 사용하여 할당을 수행하려고 합니다. 또한 새 값을 할당하기 전에 현재 포인터와 연결된 메모리를 확보합니다. 다음은 그 예입니다.
+> 에 값을 할당 하는 경우 `m_pszHelpFilePath` 힙에 동적으로 할당 되어야 합니다. `CWinApp`소멸자는 this 포인터를 사용 하 여 **free**()를 호출 합니다. `_tcsdup`() 런타임 라이브러리 함수를 사용 하 여 할당을 수행 하려고 합니다. 또한 새 값을 할당 하기 전에 현재 포인터와 연결 된 메모리를 해제 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
-## <a name="cwinappm_pszprofilename"></a><a name="m_pszprofilename"></a>CWinApp::m_pszProfileName
+## <a name="cwinappm_pszprofilename"></a><a name="m_pszprofilename"></a>CWinApp:: m_pszProfileName
 
-응용 프로그램의 이름을 포함합니다. INI 파일입니다.
+응용 프로그램의 이름을 포함 합니다. INI 파일.
 
 ```
 LPCTSTR m_pszProfileName;
@@ -1489,16 +1489,16 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>설명
 
-`m_pszProfileName`는 **형식 const char의**<strong>\*</strong>공용 변수입니다.
+`m_pszProfileName`는 **const char**형식의 공용 변수입니다 <strong>\*</strong> .
 
 > [!NOTE]
-> `m_pszProfileName`에 값을 할당하는 경우 힙에 동적으로 할당되어야 합니다. `CWinApp` 소멸자는 이 포인터를 통해 **무료()를**호출합니다. `_tcsdup`많은 사람들이 () 런타임 라이브러리 함수를 사용하여 할당을 수행하려고 합니다. 또한 새 값을 할당하기 전에 현재 포인터와 연결된 메모리를 확보합니다. 다음은 그 예입니다.
+> 에 값을 할당 하는 경우 `m_pszProfileName` 힙에 동적으로 할당 되어야 합니다. `CWinApp`소멸자는 this 포인터를 사용 하 여 **free**()를 호출 합니다. `_tcsdup`() 런타임 라이브러리 함수를 사용 하 여 할당을 수행 하려고 합니다. 또한 새 값을 할당 하기 전에 현재 포인터와 연결 된 메모리를 해제 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
-## <a name="cwinappm_pszregistrykey"></a><a name="m_pszregistrykey"></a>CWinApp::m_pszRegistryKey
+## <a name="cwinappm_pszregistrykey"></a><a name="m_pszregistrykey"></a>CWinApp:: m_pszRegistryKey
 
-레지스트리 또는 INI 파일에서 응용 프로그램 프로필 설정이 저장되는 위치를 결정하는 데 사용됩니다.
+레지스트리 또는 INI 파일에서 응용 프로그램 프로필 설정이 저장 되는 위치를 확인 하는 데 사용 됩니다.
 
 ```
 LPCTSTR m_pszRegistryKey;
@@ -1506,15 +1506,15 @@ LPCTSTR m_pszRegistryKey;
 
 ### <a name="remarks"></a>설명
 
-일반적으로 이 데이터 멤버는 읽기 전용으로 처리됩니다.
+일반적으로이 데이터 멤버는 읽기 전용으로 취급 됩니다.
 
-- 값은 레지스트리 키에 저장됩니다. 응용 프로그램 프로필 설정의 이름은 다음 레지스트리 키에 추가됩니다 HKEY_CURRENT_USER.
+- 값은 레지스트리 키에 저장 됩니다. 응용 프로그램 프로필 설정의 이름이 다음 레지스트리 키에 추가 됩니다. HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
-`m_pszRegistryKey`에 값을 할당하는 경우 힙에 동적으로 할당되어야 합니다. `CWinApp` 소멸자는 이 포인터를 통해 **무료()를**호출합니다. `_tcsdup`많은 사람들이 () 런타임 라이브러리 함수를 사용하여 할당을 수행하려고 합니다. 또한 새 값을 할당하기 전에 현재 포인터와 연결된 메모리를 확보합니다. 다음은 그 예입니다.
+에 값을 할당 하는 경우 `m_pszRegistryKey` 힙에 동적으로 할당 되어야 합니다. `CWinApp`소멸자는 this 포인터를 사용 하 여 **free**()를 호출 합니다. `_tcsdup`() 런타임 라이브러리 함수를 사용 하 여 할당을 수행 하려고 합니다. 또한 새 값을 할당 하기 전에 현재 포인터와 연결 된 메모리를 해제 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
-## <a name="cwinappm_pszappid"></a><a name="m_pszappid"></a>CWinApp::m_pszAppID
+## <a name="cwinappm_pszappid"></a><a name="m_pszappid"></a>CWinApp:: m_pszAppID
 
 응용 프로그램 사용자 모델 ID입니다.
 
@@ -1524,9 +1524,9 @@ LPCTSTR m_pszAppID;
 
 ### <a name="remarks"></a>설명
 
-## <a name="cwinapponcontexthelp"></a><a name="oncontexthelp"></a>CWinApp:::에 컨텍스트 도움말
+## <a name="cwinapponcontexthelp"></a><a name="oncontexthelp"></a>CWinApp:: OnContextHelp
 
-응용 프로그램 내에서 SHIFT+F1 도움말을 처리합니다.
+응용 프로그램 내에서 SHIFT + F1 도움말을 처리 합니다.
 
 ```
 afx_msg void OnContextHelp();
@@ -1534,13 +1534,13 @@ afx_msg void OnContextHelp();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )` 함수를 사용하려면 클래스 메시지 맵에 문을 추가하고 액셀러레이터 테이블 항목(일반적으로 SHIFT+F1)을 추가해야 합니다. `CWinApp`
+`ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )` `CWinApp` 클래스 메시지 맵에 문을 추가 하 고 액셀러레이터 키 테이블 항목 (일반적으로 SHIFT + F1)을 추가 하 여이 멤버 함수를 사용 하도록 설정 해야 합니다.
 
-`OnContextHelp`응용 프로그램을 도움말 모드로 전환합니다. 커서가 화살표와 물음표로 변경되고 사용자는 마우스 포인터를 이동하고 왼쪽 마우스 버튼을 눌러 대화 상자, 창, 메뉴 또는 명령 단추를 선택할 수 있습니다. 이 멤버 함수는 커서 아래의 개체의 도움말 컨텍스트를 검색하고 해당 도움말 컨텍스트를 통해 Windows 함수 WinHelp를 호출합니다.
+`OnContextHelp`응용 프로그램을 도움말 모드로 전환 합니다. 커서가 화살표와 물음표로 바뀌고 사용자는 마우스 포인터를 이동 하 고 마우스 왼쪽 단추를 눌러 대화 상자, 창, 메뉴 또는 명령 단추를 선택할 수 있습니다. 이 멤버 함수는 커서 아래에 있는 개체의 도움말 컨텍스트를 검색 하 고 해당 도움말 컨텍스트를 사용 하 여 Windows 함수 WinHelp를 호출 합니다.
 
-## <a name="cwinapponddecommand"></a><a name="onddecommand"></a>CWinApp:::OnDDECommand
+## <a name="cwinapponddecommand"></a><a name="onddecommand"></a>CWinApp:: OnDDECommand
 
-기본 프레임 창DDE 실행 메시지를 수신 하는 경우 프레임 워크에 의해 호출 됩니다.
+주 프레임 창에 DDE 실행 메시지가 수신 될 때 프레임 워크에서 호출 됩니다.
 
 ```
 virtual BOOL OnDDECommand(LPTSTR lpszCommand);
@@ -1549,23 +1549,23 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ### <a name="parameters"></a>매개 변수
 
 *lpszCommand*<br/>
-응용 프로그램에서 수신한 DDE 명령 문자열을 가리킵니다.
+응용 프로그램에서 받은 DDE 명령 문자열을 가리킵니다.
 
 ### <a name="return-value"></a>Return Value
 
-명령이 처리되는 경우 0이 아닙니다. 그렇지 않으면 0.
+명령이 처리 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-기본 구현은 명령이 문서를 여는 요청인지 여부를 확인하고, 이 경우 지정된 문서를 엽니다. Windows 파일 관리자는 일반적으로 사용자가 데이터 파일을 두 번 클릭할 때 이러한 DDE 명령 문자열을 보냅니다. 인쇄 명령과 같은 다른 DDE 실행 명령을 처리하려면 이 함수를 재정의합니다.
+기본 구현에서는 명령이 문서를 열기 위한 요청 인지 여부를 확인 하 고, 지정 된 경우 지정 된 문서를 엽니다. Windows 파일 관리자는 일반적으로 사용자가 데이터 파일을 두 번 클릭할 때 이러한 DDE 명령 문자열을 보냅니다. 인쇄할 명령과 같은 다른 DDE 실행 명령을 처리 하려면이 함수를 재정의 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]
 
-## <a name="cwinapponfilenew"></a><a name="onfilenew"></a>CWinApp::온파일뉴
+## <a name="cwinapponfilenew"></a><a name="onfilenew"></a>CWinApp:: OnFileNew
 
-ID_FILE_NEW 명령을 구현합니다.
+ID_FILE_NEW 명령을 구현 합니다.
 
 ```
 afx_msg void OnFileNew();
@@ -1573,9 +1573,9 @@ afx_msg void OnFileNew();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_FILE_NEW, OnFileNew )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 이 기능을 사용하면 새 파일 명령의 실행을 처리합니다.
+`ON_COMMAND( ID_FILE_NEW, OnFileNew )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 된 경우이 함수는 File New 명령의 실행을 처리 합니다.
 
-기본 동작 및 이 멤버 함수를 재정의하는 방법에 대한 지침은 [기술 참고 22를](../../mfc/tn022-standard-commands-implementation.md) 참조하십시오.
+기본 동작에 대 한 자세한 내용과이 멤버 함수를 재정의 하는 방법에 대 한 지침은 [Technical Note 22](../../mfc/tn022-standard-commands-implementation.md) 를 참조 하십시오.
 
 ### <a name="example"></a>예제
 
@@ -1583,9 +1583,9 @@ afx_msg void OnFileNew();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-## <a name="cwinapponfileopen"></a><a name="onfileopen"></a>CWinApp::온파일 열기
+## <a name="cwinapponfileopen"></a><a name="onfileopen"></a>CWinApp:: OnFileOpen
 
-ID_FILE_OPEN 명령을 구현합니다.
+ID_FILE_OPEN 명령을 구현 합니다.
 
 ```
 afx_msg void OnFileOpen();
@@ -1593,9 +1593,9 @@ afx_msg void OnFileOpen();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 이 기능을 사용하면 파일 열기 명령의 실행을 처리합니다.
+`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 된 경우이 함수는 File Open 명령의 실행을 처리 합니다.
 
-기본 동작 및 이 멤버 함수를 재정의하는 방법에 대한 지침은 [기술 참고 22를](../../mfc/tn022-standard-commands-implementation.md)참조하십시오.
+이 멤버 함수를 재정의 하는 방법에 대 한 기본 동작 및 지침에 대 한 자세한 내용은 [Technical Note 22](../../mfc/tn022-standard-commands-implementation.md)를 참조 하십시오.
 
 ### <a name="example"></a>예제
 
@@ -1603,9 +1603,9 @@ afx_msg void OnFileOpen();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-## <a name="cwinapponfileprintsetup"></a><a name="onfileprintsetup"></a>CWinApp::온파일 프린트셋업
+## <a name="cwinapponfileprintsetup"></a><a name="onfileprintsetup"></a>CWinApp:: OnFilePrintSetup
 
-ID_FILE_PRINT_SETUP 명령을 구현합니다.
+ID_FILE_PRINT_SETUP 명령을 구현 합니다.
 
 ```
 afx_msg void OnFilePrintSetup();
@@ -1613,9 +1613,9 @@ afx_msg void OnFilePrintSetup();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 이 기능을 사용하면 파일 인쇄 명령의 실행을 처리합니다.
+`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 된 경우이 함수는 파일 인쇄 명령의 실행을 처리 합니다.
 
-기본 동작 및 이 멤버 함수를 재정의하는 방법에 대한 지침은 [기술 참고 22를](../../mfc/tn022-standard-commands-implementation.md)참조하십시오.
+이 멤버 함수를 재정의 하는 방법에 대 한 기본 동작 및 지침에 대 한 자세한 내용은 [Technical Note 22](../../mfc/tn022-standard-commands-implementation.md)를 참조 하십시오.
 
 ### <a name="example"></a>예제
 
@@ -1623,7 +1623,7 @@ afx_msg void OnFilePrintSetup();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-## <a name="cwinapponhelp"></a><a name="onhelp"></a>CWinApp:::에 도움
+## <a name="cwinapponhelp"></a><a name="onhelp"></a>CWinApp:: OnHelp
 
 현재 컨텍스트를 사용하여 애플리케이션 내에서 F1 도움말을 처리합니다.
 
@@ -1633,17 +1633,17 @@ afx_msg void OnHelp();
 
 ### <a name="remarks"></a>설명
 
-일반적으로 F1 키에 대한 가속기 키 항목도 추가됩니다. F1 키를 사용하도록 설정하는 것은 요구 사항이 아닌 규칙일 뿐입니다.
+일반적으로 F1 키에 대 한 액셀러레이터 키 항목을 추가 합니다. F1 키를 사용 하도록 설정 하는 것은 요구 사항이 아니라 유일한 규칙입니다.
 
-이 멤버 `ON_COMMAND( ID_HELP, OnHelp )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 활성화된 경우 사용자가 F1 키를 누를 때 프레임워크에서 호출합니다.
+`ON_COMMAND( ID_HELP, OnHelp )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 하면 사용자가 F1 키를 누를 때 프레임 워크에서 호출 됩니다.
 
-이 메시지 처리기 함수의 기본 구현은 현재 창, 대화 상자 또는 메뉴 항목에 해당하는 도움말 컨텍스트를 결정한 다음 WINHELP를 호출합니다. Exe. 현재 사용할 수 있는 컨텍스트가 없는 경우 함수는 기본 컨텍스트를 사용합니다.
+이 메시지 처리기 함수의 기본 구현에서는 현재 창, 대화 상자 또는 메뉴 항목에 해당 하는 도움말 컨텍스트를 결정 한 다음 WINHELP.EXE를 호출 합니다. 현재 컨텍스트를 사용할 수 없는 경우 함수는 기본 컨텍스트를 사용 합니다.
 
-이 멤버 함수를 재정의하여 도움말 컨텍스트를 현재 포커스가 있는 창, 대화 상자, 메뉴 항목 또는 도구 모음 단추 이외의 것으로 설정합니다. 원하는 `WinHelp` 도움말 컨텍스트 ID로 호출합니다.
+현재 포커스가 있는 창, 대화 상자, 메뉴 항목 또는 도구 모음 단추가 아닌 다른 항목으로 도움말 컨텍스트를 설정 하려면이 멤버 함수를 재정의 합니다. `WinHelp`원하는 도움말 컨텍스트 ID를 사용 하 여를 호출 합니다.
 
-## <a name="cwinapponhelpfinder"></a><a name="onhelpfinder"></a>CWinApp:::에 도움말 파인더
+## <a name="cwinapponhelpfinder"></a><a name="onhelpfinder"></a>CWinApp:: OnHelpFinder
 
-ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리합니다.
+ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령을 처리 합니다.
 
 ```
 afx_msg void OnHelpFinder();
@@ -1651,11 +1651,11 @@ afx_msg void OnHelpFinder();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 활성화된 경우 프레임워크는 응용 프로그램의 사용자가 표준 `WinHelp` **HELP_FINDER** 항목으로 호출할 도움말 찾기 명령을 선택할 때 이 메시지 처리기 함수를 호출합니다.
+`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 된 경우 응용 프로그램의 사용자가 `WinHelp` 표준 **HELP_FINDER** 항목을 사용 하 여를 호출 하기 위해 Help Finder 명령을 선택할 때 프레임 워크는이 메시지 처리기 함수를 호출 합니다.
 
-## <a name="cwinapponhelpindex"></a><a name="onhelpindex"></a>CWinApp:::온헬드 인덱스
+## <a name="cwinapponhelpindex"></a><a name="onhelpindex"></a>CWinApp:: OnHelpIndex
 
-ID_HELP_INDEX 명령을 처리하고 기본 도움말 항목을 제공합니다.
+ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.
 
 ```
 afx_msg void OnHelpIndex();
@@ -1663,11 +1663,11 @@ afx_msg void OnHelpIndex();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 활성화된 경우 프레임워크는 응용 프로그램의 사용자가 표준 `WinHelp` **HELP_INDEX** 항목으로 호출할 도움말 Index 명령을 선택할 때 이 메시지 처리기 함수를 호출합니다.
+`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 사용 하도록 설정 된 경우 응용 프로그램 사용자가 Help Index 명령을 선택 하 여 `WinHelp` 표준 **HELP_INDEX** 토픽으로 호출할 때 프레임 워크가이 메시지 처리기 함수를 호출 합니다.
 
-## <a name="cwinapponhelpusing"></a><a name="onhelpusing"></a>CWinApp::에 도움 사용
+## <a name="cwinapponhelpusing"></a><a name="onhelpusing"></a>CWinApp:: OnHelpUsing
 
-ID_HELP_USING 명령을 처리합니다.
+ID_HELP_USING 명령을 처리 합니다.
 
 ```
 afx_msg void OnHelpUsing();
@@ -1675,11 +1675,11 @@ afx_msg void OnHelpUsing();
 
 ### <a name="remarks"></a>설명
 
-이 멤버 `ON_COMMAND( ID_HELP_USING, OnHelpUsing )` 함수를 `CWinApp` 사용하려면 클래스 메시지 맵에 문을 추가해야 합니다. 프레임워크는 응용 프로그램의 사용자가 표준 `WinHelp` **HELP_HELPONHELP** 항목으로 응용 프로그램을 호출하는 도움말 사용 명령을 선택하면 이 메시지 처리기 함수를 호출합니다.
+`ON_COMMAND( ID_HELP_USING, OnHelpUsing )` `CWinApp` 이 멤버 함수를 사용 하려면 클래스 메시지 맵에 문을 추가 해야 합니다. 응용 프로그램의 사용자가 `WinHelp` 표준 **HELP_HELPONHELP** 항목을 사용 하 여 응용 프로그램을 호출 하기 위해 명령을 사용 하는 도움말을 선택 하면 프레임 워크가이 메시지 처리기 함수를 호출 합니다.
 
-## <a name="cwinapponidle"></a><a name="onidle"></a>CWinApp ::: 온들
+## <a name="cwinapponidle"></a><a name="onidle"></a>CWinApp:: OnIdle
 
-유휴 시간 처리를 수행하려면 이 멤버 함수를 재정의합니다.
+유휴 시간 처리를 수행 하려면이 멤버 함수를 재정의 합니다.
 
 ```
 virtual BOOL OnIdle(LONG lCount);
@@ -1687,45 +1687,45 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>매개 변수
 
-*l카운트*<br/>
-응용 프로그램의 메시지 큐가 `OnIdle` 비어 있을 때 매번 증가하는 카운터가 호출됩니다. 이 개수는 새 메시지가 처리될 때마다 0으로 재설정됩니다. *lCount* 매개 변수를 사용하여 메시지를 처리하지 않고 응용 프로그램이 유휴 상태였던 상대적인 기간을 확인할 수 있습니다.
+*lCount*<br/>
+`OnIdle`응용 프로그램의 메시지 큐가 비어 있을 때가 호출 될 때마다 증가 하는 카운터입니다. 이 개수는 새 메시지가 처리 될 때마다 0으로 다시 설정 됩니다. *Lcount* 매개 변수를 사용 하 여 메시지를 처리 하지 않고 응용 프로그램이 유휴 상태로 유지 된 시간의 상대적인 길이를 확인할 수 있습니다.
 
 ### <a name="return-value"></a>Return Value
 
-비영제로 더 많은 유휴 처리 시간을 수신; 더 이상 유휴 시간이 필요하지 않은 경우 0입니다.
+0이 아니면 유휴 처리 시간을 더 받습니다. 유휴 시간을 더 이상 요구 하지 않는 경우 0입니다.
 
 ### <a name="remarks"></a>설명
 
-`OnIdle`응용 프로그램의 메시지 큐가 비어 있을 때 기본 메시지 루프에서 호출됩니다. 재정의를 사용하여 사용자 고유의 백그라운드 유휴 처리기 작업을 호출합니다.
+`OnIdle`는 응용 프로그램의 메시지 큐가 비어 있을 때 기본 메시지 루프에서 호출 됩니다. 재정의를 사용 하 여 사용자 고유의 백그라운드 유휴 처리기 작업을 호출 합니다.
 
-`OnIdle`유휴 처리 시간이 필요하지 않다는 것을 나타내기 위해 0을 반환해야 합니다. *lCount* 매개 변수는 메시지 큐가 비어 있고 새 메시지가 처리될 때마다 0으로 재설정될 때마다 호출될 때마다 증가됩니다. `OnIdle` 이 개수에 따라 다른 유휴 루틴을 호출할 수 있습니다.
+`OnIdle`는 유휴 처리 시간이 필요 하지 않음을 나타내려면 0을 반환 해야 합니다. *Lcount* 매개 변수는 `OnIdle` 메시지 큐가 비어 있을 때가 호출 될 때마다 증가 하며 새 메시지가 처리 될 때마다 0으로 다시 설정 됩니다. 이 수에 따라 다른 유휴 루틴을 호출할 수 있습니다.
 
-다음은 유휴 루프 처리를 요약합니다.
+다음은 유휴 루프 처리를 요약 합니다.
 
-1. Microsoft Foundation 클래스 라이브러리의 메시지 루프가 메시지 큐를 검사하고 `OnIdle` 보류 중인 메시지를 찾지 못하면 응용 프로그램 개체를 호출하고 *0을 lCount* 인수로 제공합니다.
+1. MFC 라이브러리의 메시지 루프가 메시지 큐를 확인 하 고 보류 중인 메시지를 찾지 못하면 `OnIdle` 응용 프로그램 개체에 대해를 호출 하 고 *lcount* 인수로 0을 제공 합니다.
 
-2. `OnIdle`은 일부 처리를 수행하고 추가 처리를 수행하기 위해 다시 호출해야 함을 나타내기 위해 0이 아닌 값을 반환합니다.
+2. `OnIdle`일부 처리를 수행 하 고 0이 아닌 값을 반환 하 여 추가 처리를 위해 다시 호출 해야 함을 표시 합니다.
 
-3. 메시지 루프는 메시지 큐를 다시 확인합니다. 보류 중인 메시지가 없는 `OnIdle` 경우 다시 호출되어 *lCount* 인수를 증가시입니다.
+3. 메시지 루프는 메시지 큐를 다시 확인 합니다. 보류 중인 메시지가 없으면를 다시 호출 하 `OnIdle` 여 *lcount* 인수를 증가 시킵니다.
 
-4. 결국 `OnIdle` 모든 유휴 작업 처리를 완료하고 0을 반환합니다. 이렇게 하면 메시지 루프가 `OnIdle` 메시지 큐에서 다음 메시지가 수신될 때까지 호출을 중지하도록 지시하며, 이 때 인수가 0으로 설정된 상태로 유휴 주기가 다시 시작됩니다.
+4. 결국는 `OnIdle` 모든 유휴 작업의 처리를 완료 하 고 0을 반환 합니다. 이는 메시지 큐에서 다음 메시지를 받을 때까지 메시지 루프에서 호출을 중지 하도록 지시 합니다 `OnIdle` .이 시점에서 인수를 0으로 설정 하 여 유휴 주기가 다시 시작 됩니다.
 
-응용 프로그램이 반환될 `OnIdle` 때까지 `OnIdle` 사용자 입력을 처리할 수 없으므로 긴 작업을 수행하지 마십시오.
+`OnIdle`응용 프로그램에서가 반환 될 때까지 사용자 입력을 처리할 수 없기 때문에에서 긴 작업을 수행 하지 마십시오 `OnIdle` .
 
 > [!NOTE]
-> 업데이트의 `OnIdle` 기본 구현은 메뉴 항목 및 도구 모음 단추와 같은 사용자 인터페이스 개체를 명령하고 내부 데이터 구조 정리를 수행합니다. 따라서 재정의하는 `OnIdle`경우 재정의한 `lCount` 버전에서 호출해야 `CWinApp::OnIdle` 합니다. 먼저 모든 기본 클래스 유휴 처리(즉, `OnIdle` 기본 클래스가 0을 반환할 때까지)를 호출합니다. 기본 클래스 처리가 완료되기 전에 작업을 수행해야 하는 경우 기본 클래스 구현을 검토하여 작업을 수행할 적절한 *lCount를* 선택합니다.
+> 의 기본 구현은 `OnIdle` 메뉴 항목 및 도구 모음 단추와 같은 사용자 인터페이스 개체를 업데이트 하 고 내부 데이터 구조 정리를 수행 합니다. 따라서를 재정의 하 `OnIdle` `CWinApp::OnIdle` 는 경우 재정의 된 버전의를 사용 하 여를 호출 해야 합니다 `lCount` . 먼저 모든 기본 클래스 유휴 처리를 호출 합니다. 즉, 기본 클래스에서 `OnIdle` 0을 반환 합니다. 기본 클래스 처리가 완료 되기 전에 작업을 수행 해야 하는 경우 기본 클래스 구현을 검토 하 여 작업을 수행할 수 있는 적절 한 *Lcount* 를 선택 합니다.
 
-메시지 큐에서 `OnIdle` 메시지를 검색할 때마다 호출하지 않으려면 [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)을 재정의할 수 있습니다. 응용 프로그램이 매우 짧은 타이머를 설정했거나 시스템에서 WM_SYSTIMER 메시지를 보내는 `OnIdle` 경우 반복적으로 호출되어 성능이 저하됩니다.
+메시지 `OnIdle` 큐에서 메시지를 검색할 때마다를 호출 하지 않으려면 [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)을 재정의할 수 있습니다. 응용 프로그램에서 매우 짧은 타이머를 설정 했거나 시스템이 WM_SYSTIMER 메시지를 전송 하는 경우가 `OnIdle` 반복적으로 호출 되 고 성능이 저하 됩니다.
 
 ### <a name="example"></a>예제
 
-다음 두 예제에서 를 `OnIdle`사용하는 방법을 보여 주십습니다. 첫 번째 예제는 *lCount* 인수를 사용하여 두 개의 유휴 작업을 처리하여 작업의 우선 순위를 지정합니다. 첫 번째 작업은 우선 순위가 높으며 가능하면 수행해야 합니다. 두 번째 작업은 덜 중요하며 사용자 입력이 오래 일시 중지된 경우에만 수행해야 합니다. `OnIdle`의 기본 클래스 버전에 대한 호출을 기록합니다. 두 번째 예제는 우선 순위가 다른 유휴 작업 그룹을 관리합니다.
+다음 두 예제에서는를 사용 하는 방법을 보여 줍니다 `OnIdle` . 첫 번째 예제에서는 *Lcount* 인수를 사용 하 여 작업의 우선 순위를 지정 하는 두 개의 유휴 작업을 처리 합니다. 첫 번째 작업은 높은 우선 순위 이며 가능 하면 항상 수행 해야 합니다. 두 번째 작업은 더 중요 하지 않으며 사용자 입력에 긴 일시 중지가 있는 경우에만 수행 해야 합니다. 의 기본 클래스 버전에 대 한 호출을 확인 합니다 `OnIdle` . 두 번째 예제에서는 다른 우선 순위로 유휴 작업 그룹을 관리 합니다.
 
 [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]
 
-## <a name="cwinappopendocumentfile"></a><a name="opendocumentfile"></a>CWinApp::오픈 문서파일
+## <a name="cwinappopendocumentfile"></a><a name="opendocumentfile"></a>CWinApp:: OpenDocumentFile
 
-프레임워크는 이 메서드를 호출하여 응용 프로그램에 대해 명명된 [CDocument](../../mfc/reference/cdocument-class.md) 파일을 엽니다.
+프레임 워크는이 메서드를 호출 하 여 응용 프로그램에 대 한 명명 된 [CDocument](../../mfc/reference/cdocument-class.md) 파일을 엽니다.
 
 ```
 virtual CDocument* OpenDocumentFile(
@@ -1735,27 +1735,27 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>매개 변수
 
-*lpsz파일이름*<br/>
-【인】 열 파일의 이름입니다.
+*lpszFileName*<br/>
+진행 열 파일의 이름입니다.
 
 *bAddToMRU*<br/>
-【인】 TRUE는 문서가 가장 최근 파일 중 하나임을 나타냅니다. FALSE는 문서가 최신 파일 중 하나가 아님을 나타냅니다.
+진행 TRUE는 문서가 가장 최근 파일 중 하나 임을 나타냅니다. FALSE는 문서가 가장 최근 파일 중 하나가 아님을 나타냅니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하는 `CDocument` 경우에 대한 포인터; 그렇지 않으면 NULL.
+성공 하면에 대 한 포인터 `CDocument` 이 고, 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-해당 이름이 있는 문서가 이미 열려 있는 경우 해당 문서가 포함된 첫 번째 프레임 창에 포커스가 표시됩니다. 응용 프로그램이 여러 문서 템플릿을 지원하는 경우 프레임워크는 파일 이름 확장명을 사용하여 문서를 로드하는 데 적합한 문서 템플릿을 찾습니다. 성공하면 문서 템플릿은 프레임 창과 문서에 대한 보기를 만듭니다.
+해당 이름을 가진 문서가 이미 열려 있는 경우 해당 문서를 포함 하는 첫 번째 프레임 창에 포커스가 표시 됩니다. 응용 프로그램에서 여러 문서 템플릿을 지 원하는 경우 프레임 워크는 파일 이름 확장명을 사용 하 여 문서 로드를 시도 하는 적절 한 문서 템플릿을 찾습니다. 성공 하면 문서 템플릿이 문서에 대 한 프레임 창과 뷰를 만듭니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
-## <a name="cwinappparsecommandline"></a><a name="parsecommandline"></a>CWinApp::P거칠은 커맨드라인
+## <a name="cwinappparsecommandline"></a><a name="parsecommandline"></a>CWinApp::P arseCommandLine
 
-이 멤버 함수를 호출하여 명령줄을 구문 분석하고 매개 변수를 한 번에 하나씩 [CCommandLineInfo::ParseParam로](../../mfc/reference/ccommandlineinfo-class.md#parseparam)보냅니다.
+이 멤버 함수를 호출 하 여 명령줄을 구문 분석 하 고 매개 변수를 한 번에 하나씩 [CCommandLineInfo::P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)로 보냅니다.
 
 ```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
@@ -1764,27 +1764,27 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ### <a name="parameters"></a>매개 변수
 
 *rCmdInfo*<br/>
-[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) 개체에 대한 참조입니다.
+[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) 개체에 대 한 참조입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램 마법사를 사용하여 새 MFC 프로젝트를 시작하면 응용 프로그램 `CCommandLineInfo`마법사에서 의 `ProcessShellCommand` `ParseCommandLine` 로컬 인스턴스를 만든 다음 [InitInstance](#initinstance) 멤버 함수를 호출합니다. 명령줄은 아래에 설명된 경로를 따릅니다.
+응용 프로그램 마법사를 사용 하 여 새 MFC 프로젝트를 시작 하면 응용 프로그램 마법사가의 로컬 인스턴스를 만든 `CCommandLineInfo` 다음 `ProcessShellCommand` `ParseCommandLine` [InitInstance](#initinstance) 멤버 함수에서 및를 호출 합니다. 명령줄은 아래에 설명 된 경로를 따릅니다.
 
-1. `InitInstance`에서 생성된 후 `CCommandLineInfo` 개체가 `ParseCommandLine`로 전달됩니다.
+1. 에서 생성 된 `InitInstance` `CCommandLineInfo` 개체는에 전달 됩니다 `ParseCommandLine` .
 
-2. `ParseCommandLine`그런 `CCommandLineInfo::ParseParam` 다음 각 매개 변수에 대해 한 번 반복적으로 호출합니다.
+2. `ParseCommandLine`그런 다음 `CCommandLineInfo::ParseParam` 은 각 매개 변수에 대해 한 번씩 반복적으로를 호출 합니다.
 
-3. `ParseParam`개체를 `CCommandLineInfo` 채웁니다. [ProcessShellCommand](#processshellcommand)
+3. `ParseParam``CCommandLineInfo` [Processshellcommand](#processshellcommand)에 전달 되는 개체를 채웁니다.
 
-4. `ProcessShellCommand`은 명령줄 인수 와 플래그를 처리합니다.
+4. `ProcessShellCommand`명령줄 인수와 플래그를 처리 합니다.
 
-필요에 따라 직접 `ParseCommandLine` 전화할 수 있습니다.
+필요에 따라를 직접 호출할 수 있습니다 `ParseCommandLine` .
 
-명령줄 플래그에 대한 설명은 [CCommandLineInfo:m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)를 참조하십시오.
+명령줄 플래그에 대 한 자세한 내용은 [CCommandLineInfo:: m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)를 참조 하세요.
 
-## <a name="cwinapppretranslatemessage"></a><a name="pretranslatemessage"></a>CWinApp::P다시 번역 메시지
+## <a name="cwinapppretranslatemessage"></a><a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-Windows 함수 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 및 [DispatchMessage에](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 전달되기 전에 창 메시지를 필터링하기 위해 이 함수를 재정의하는 기본 구현은 `CWinApp::PreTranslateMessage` 가속기 키 번역을 수행하므로 재정의된 버전에서 멤버 함수를 호출해야 합니다.
+Windows 함수 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 및 [dispatchmessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 로 디스패치 되기 전에이 함수를 재정의 하 여 창 메시지를 필터링 합니다. 기본 구현에서는 액셀러레이터 키 변환을 수행 하므로 `CWinApp::PreTranslateMessage` 재정의 된 버전에서 멤버 함수를 호출 해야 합니다.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,15 +1793,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>매개 변수
 
 *pMsg*<br/>
-처리할 메시지가 포함된 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조에 대한 포인터입니다.
+처리할 메시지를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-메시지가 완전히 처리되고 `PreTranslateMessage` 더 이상 처리되지 않아야 하는 경우 Nonzero입니다. 메시지가 정상적인 방식으로 처리되어야 하는 경우 0입니다.
+에서 메시지를 완전히 처리 `PreTranslateMessage` 하 고 추가로 처리 하지 않아야 하는 경우 0이 아닙니다. 메시지를 일반적인 방식으로 처리 해야 하는 경우 0입니다.
 
-## <a name="cwinappprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinApp::P로케이션메시지필터
+## <a name="cwinappprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinApp::P rocessMessageFilter
 
-프레임워크의 후크 함수는 이 멤버 함수를 호출하여 특정 Windows 메시지를 필터링하고 응답합니다.
+프레임 워크의 후크 함수는이 멤버 함수를 호출 하 여 특정 Windows 메시지를 필터링 하 고 응답 합니다.
 
 ```
 virtual BOOL ProcessMessageFilter(
@@ -1812,24 +1812,24 @@ virtual BOOL ProcessMessageFilter(
 ### <a name="parameters"></a>매개 변수
 
 *code*<br/>
-후크 코드를 지정합니다. 이 멤버 함수는 코드를 사용하여 *lpMsg를* 처리하는 방법을 결정합니다.
+후크 코드를 지정 합니다. 이 멤버 함수는 코드를 사용 하 여 Lpmsg를 처리 하는 방법을 결정 *합니다.*
 
 *lpMsg*<br/>
-윈도우 [MSG](/windows/win32/api/winuser/ns-winuser-msg)트러처에 대한 포인터입니다.
+Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg)t)에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-메시지가 처리되는 경우 0이 아닙니다. 그렇지 않으면 0.
+메시지가 처리 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-후크 함수는 이벤트를 응용 프로그램의 일반 메시지 처리로 보내기 전에 처리합니다.
+후크 함수는 응용 프로그램의 일반 메시지 처리에 전송 되기 전에 이벤트를 처리 합니다.
 
-이 고급 기능을 재정의하는 경우 기본 클래스 버전을 호출하여 프레임워크의 후크 처리를 유지관리해야 합니다.
+이 고급 기능을 재정의 하는 경우에는 기본 클래스 버전을 호출 하 여 프레임 워크의 후크 처리를 유지 해야 합니다.
 
-## <a name="cwinappprocessshellcommand"></a><a name="processshellcommand"></a>CWinApp::P로키스셸커맨드
+## <a name="cwinappprocessshellcommand"></a><a name="processshellcommand"></a>CWinApp::P rocessShellCommand
 
-이 멤버 함수는 [InitInstance에서](#initinstance) `CCommandLineInfo` *rCmdInfo로*식별된 개체에서 전달된 매개 변수를 수락하고 표시된 작업을 수행하기 위해 호출됩니다.
+이 멤버 함수는 [InitInstance](#initinstance) `CCommandLineInfo` *rcmdinfo*로 식별 되는 개체에서 전달 되는 매개 변수를 수락 하 고 표시 된 작업을 수행 하기 위해 InitInstance에서 호출 됩니다.
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -1838,25 +1838,25 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ### <a name="parameters"></a>매개 변수
 
 *rCmdInfo*<br/>
-[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) 개체에 대한 참조입니다.
+[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) 개체에 대 한 참조입니다.
 
 ### <a name="return-value"></a>Return Value
 
-셸 명령이 성공적으로 처리되는 경우 0이 아닙니다. 0이면 InitInstance 에서 FALSE를 [반환합니다.](#initinstance)
+셸 명령이 성공적으로 처리 되는 경우 0이 아닙니다. 0 인 경우 [InitInstance](#initinstance)에서 FALSE를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램 마법사를 사용하여 새 MFC 프로젝트를 시작하면 응용 프로그램 `CCommandLineInfo`마법사에서 의 `ProcessShellCommand` 로컬 인스턴스를 만든 `InitInstance` 다음 멤버 함수에서 호출 및 [ParseCommandLine을](#parsecommandline) 호출합니다. 명령줄은 아래에 설명된 경로를 따릅니다.
+응용 프로그램 마법사를 사용 하 여 새 MFC 프로젝트를 시작 하면 응용 프로그램 마법사가의 로컬 인스턴스를 만든 `CCommandLineInfo` 다음를 호출 `ProcessShellCommand` 하 고 멤버 함수에서 [ParseCommandLine](#parsecommandline) 를 호출 합니다 `InitInstance` . 명령줄은 아래에 설명 된 경로를 따릅니다.
 
-1. `InitInstance`에서 생성된 후 `CCommandLineInfo` 개체가 `ParseCommandLine`로 전달됩니다.
+1. 에서 생성 된 `InitInstance` `CCommandLineInfo` 개체는에 전달 됩니다 `ParseCommandLine` .
 
-2. `ParseCommandLine`그런 다음 [CCommandLineInfo::ParseParam을](../../mfc/reference/ccommandlineinfo-class.md#parseparam) 반복적으로 호출하여 각 매개 변수에 대해 한 번씩 호출합니다.
+2. `ParseCommandLine`그런 다음 [CCommandLineInfo::P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam) 를 반복 해 서 각 매개 변수에 대해 한 번씩 호출 합니다.
 
-3. `ParseParam``CCommandLineInfo` 다음에 전달되는 개체를 `ProcessShellCommand`채웁니다.
+3. `ParseParam``CCommandLineInfo`에 전달 되는 개체를 채웁니다 `ProcessShellCommand` .
 
-4. `ProcessShellCommand`은 명령줄 인수 와 플래그를 처리합니다.
+4. `ProcessShellCommand`명령줄 인수와 플래그를 처리 합니다.
 
-[CCommandLineInfo:m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)식별된 `CCommandLineInfo` `CCommandLineInfo` 개체의 데이터 멤버는 클래스 내에서 정의된 다음 줄임마이드 형식입니다.
+`CCommandLineInfo` [CCommandLineInfo:: m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)으로 식별 되는 개체의 데이터 멤버는 클래스 내에 정의 된 다음과 같은 열거형 형식입니다 `CCommandLineInfo` .
 
 ```
 enum {
@@ -1868,11 +1868,11 @@ enum {
     };
 ```
 
-이러한 각 값에 대한 간략한 `CCommandLineInfo::m_nShellCommand`설명은 을 참조하십시오.
+이러한 각 값에 대 한 간략 한 설명은를 참조 하십시오 `CCommandLineInfo::m_nShellCommand` .
 
-## <a name="cwinappprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinApp::P로스WndProc예외
+## <a name="cwinappprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinApp::P rocessWndProcException
 
-프레임워크는 처리기가 응용 프로그램의 메시지 또는 명령 처리기 중 하나에서 throw된 예외를 catch하지 않을 때마다 이 멤버 함수를 호출합니다.
+처리기가 응용 프로그램의 메시지 또는 명령 처리기 중 하나에서 throw 된 예외를 catch 하지 않을 때마다 프레임 워크는이 멤버 함수를 호출 합니다.
 
 ```
 virtual LRESULT ProcessWndProcException(
@@ -1882,27 +1882,27 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>매개 변수
 
-*전자*<br/>
-catch되지 않은 예외에 대한 포인터입니다.
+*e*<br/>
+Catch 되지 않은 예외에 대 한 포인터입니다.
 
 *pMsg*<br/>
-프레임워크가 예외를 throw하게 한 Windows 메시지에 대한 정보가 포함된 [MSG](/windows/win32/api/winuser/ns-winuser-msg)트러처입니다.
+프레임 워크에서 예외를 throw 한 windows 메시지에 대 한 정보를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg)t)입니다.
 
 ### <a name="return-value"></a>Return Value
 
-Windows로 반환해야 하는 값입니다. 일반적으로 이것은 창 메시지에 대한 0L, 명령 메시지에 대한 1L (TRUE)입니다.
+Windows에 반환 해야 하는 값입니다. 일반적으로 windows 메시지의 경우 0L, 명령 메시지의 경우 1L (TRUE)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수를 직접 호출하지 마십시오.
+이 멤버 함수를 직접 호출 하지 마세요.
 
-이 멤버 함수의 기본 구현은 메시지 상자를 만듭니다. catch되지 않은 예외가 메뉴, 도구 모음 또는 가속기 명령 실패로 시작된 경우 메시지 상자에 "Command failed" 메시지가 표시됩니다. 그렇지 않으면 "내부 응용 프로그램 오류" 메시지가 표시 됩니다.
+이 멤버 함수의 기본 구현에서는 메시지 상자를 만듭니다. Catch 되지 않은 예외가 메뉴, 도구 모음 또는 액셀러레이터 명령 오류로 인해 발생 하는 경우 메시지 상자에 "명령 실패" 메시지가 표시 됩니다. 그렇지 않으면 "내부 응용 프로그램 오류" 메시지를 표시 합니다.
 
-이 멤버 함수를 재정의하여 예외를 전역으로 처리합니다. 메시지 상자를 표시하려는 경우에만 기본 기능을 호출합니다.
+예외에 대 한 전역 처리를 제공 하려면이 멤버 함수를 재정의 합니다. 메시지 상자를 표시 하려는 경우에만 기본 기능을 호출 합니다.
 
-## <a name="cwinappregister"></a><a name="register"></a>CWinApp::등록
+## <a name="cwinappregister"></a><a name="register"></a>CWinApp:: Register
 
-에서 처리되지 않는 `RegisterShellFileTypes`모든 등록 작업을 수행합니다.
+에서 처리 하지 않는 등록 작업을 수행 `RegisterShellFileTypes` 합니다.
 
 ```
 virtual BOOL Register();
@@ -1914,11 +1914,11 @@ virtual BOOL Register();
 
 ### <a name="remarks"></a>설명
 
-기본 구현은 TRUE를 반환합니다. 이 함수를 재정의하여 사용자 지정된 등록 단계를 제공합니다.
+기본 구현에서는 단순히 TRUE를 반환 합니다. 사용자 지정 된 등록 단계를 제공 하려면이 함수를 재정의 합니다.
 
-## <a name="cwinappregistershellfiletypes"></a><a name="registershellfiletypes"></a>CWinApp::레지스터쉘파일타입
+## <a name="cwinappregistershellfiletypes"></a><a name="registershellfiletypes"></a>CWinApp:: RegisterShellFileTypes
 
-이 멤버 함수를 호출하여 응용 프로그램의 모든 문서 유형을 Windows 파일 관리자에 등록합니다.
+이 멤버 함수를 호출 하 여 모든 응용 프로그램의 문서 형식을 Windows 파일 관리자에 등록 합니다.
 
 ```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
@@ -1926,23 +1926,23 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>매개 변수
 
-*b컴파트 (것)들*<br/>
-【인】 TRUE는 셸 명령에 대한 등록 항목을 추가하여 사용자가 셸에서 직접 파일을 인쇄하거나 파일을 프린터 개체로 드래그하여 인쇄할 수 있도록 합니다. 또한 기본 아이콘 키를 추가합니다. 기본적으로 이 매개 변수는 이전 버전과의 호환성을 위해 FALSE입니다.
+*bCompat*<br/>
+진행 TRUE로 설정 하면 셸 명령에 대 한 등록 항목을 인쇄 및 인쇄 하 여 사용자가 셸에서 직접 파일을 인쇄 하거나 파일을 프린터 개체로 끌어 놓을 수 있습니다. 또한 DefaultIcon 키를 추가 합니다. 이 매개 변수는 이전 버전과의 호환성을 위해 기본적으로 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이렇게 하면 사용자가 파일 관리자 내에서 응용 프로그램에서 만든 데이터 파일을 두 번 클릭하여 열 수 있습니다. 응용 `RegisterShellFileTypes` 프로그램의 각 문서 템플릿에 대해 [AddDocTemplate를](#adddoctemplate) 호출한 후 호출합니다. 또한 호출할 때 [EnableShellOpen](#enableshellopen) `RegisterShellFileTypes`멤버 함수를 호출합니다.
+이를 통해 사용자는 파일 관리자 내에서 응용 프로그램을 두 번 클릭 하 여 응용 프로그램에서 만든 데이터 파일을 열 수 있습니다. `RegisterShellFileTypes`응용 프로그램의 각 문서 템플릿에 대해 [Adddoctemplate](#adddoctemplate) 을 호출한 후를 호출 합니다. 또한를 호출할 때 [EnableShellOpen](#enableshellopen) 멤버 함수를 호출 `RegisterShellFileTypes` 합니다.
 
-`RegisterShellFileTypes`응용 프로그램이 유지 관리하는 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 개체 목록을 거치며 각 문서 템플릿에 대해 Windows가 파일 연결을 위해 유지 관리하는 등록 데이터베이스에 항목을 추가합니다. 파일 관리자는 사용자가 데이터 파일을 두 번 클릭할 때 이러한 항목을 사용하여 데이터 파일을 엽니다. 이렇게 하면 을 발송할 필요가 없습니다. 응용 프로그램과 함께 REG 파일.
+`RegisterShellFileTypes`응용 프로그램에서 유지 관리 하는 [Cdoctemplate](../../mfc/reference/cdoctemplate-class.md) 개체의 목록을 반복 하 고, 각 문서 템플릿에 대해 Windows에서 파일 연결에 대해 유지 관리 하는 등록 데이터베이스에 항목을 추가 합니다. 파일 관리자는 이러한 항목을 사용 하 여 사용자가 두 번 클릭 하면 데이터 파일을 엽니다. 이렇게 하면를 제공할 필요가 없습니다. 응용 프로그램을 사용 하는 REG 파일.
 
 > [!NOTE]
-> `RegisterShellFileTypes`사용자가 관리자 권한으로 프로그램을 실행하는 경우에만 작동합니다. 프로그램에 관리자 권한이 없는 경우 레지스트리 키를 변경할 수 없습니다.
+> `RegisterShellFileTypes`사용자가 관리자 권한으로 프로그램을 실행 하는 경우에만 작동 합니다. 프로그램에 관리자 권한이 없는 경우 레지스트리 키를 변경할 수 없습니다.
 
-등록 데이터베이스가 이미 지정된 파일 이름 확장명을 다른 파일 형식과 연결하면 새 연결이 만들어지지 않습니다. 이 `CDocTemplate` 정보를 등록하는 데 필요한 문자열 형식은 클래스를 참조하십시오.
+등록 데이터베이스에서 지정 된 파일 이름 확장명을 다른 파일 형식과 이미 연결한 경우에는 새 연결을 만들지 않습니다. `CDocTemplate`이 정보를 등록 하는 데 필요한 문자열 형식은 클래스를 참조 하세요.
 
-## <a name="cwinappregisterwithrestartmanager"></a><a name="registerwithrestartmanager"></a>CWinApp::레지스터위드리스타트매니저
+## <a name="cwinappregisterwithrestartmanager"></a><a name="registerwithrestartmanager"></a>CWinApp:: RegisterWithRestartManager
 
-응용 프로그램을 다시 시작 관리자에 등록합니다.
+다시 시작 관리자를 사용 하 여 응용 프로그램을 등록 합니다.
 
 ```
 virtual HRESULT RegisterWithRestartManager(
@@ -1962,31 +1962,31 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|매개 변수|Description|
-|*b레지스터리커버콜백*|【인】 TRUE는 응용 프로그램의 이 인스턴스가 복구 콜백 함수를 사용했음을 나타냅니다. FALSE는 그렇지 않음을 나타냅니다. 프레임워크는 응용 프로그램이 예기치 않게 종료될 때 복구 콜백 함수를 호출합니다. 자세한 내용은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)을 참조하십시오.|
-|*strRestart식별자*|【인】 다시 시작 관리자의 이 인스턴스를 식별하는 고유 문자열입니다. 다시 시작 관리자 식별자는 응용 프로그램의 각 인스턴스에 대해 고유합니다.|
-|*pwzCommandLineArgs*|【인】 명령줄에서 추가 인수를 포함 하는 문자열입니다.|
-|*dwRestart플래그*|【인】 다시 시작 관리자에 대한 선택적 플래그입니다. 자세한 내용은 주의 섹션을 참조하세요.|
-|*p리복구콜백*|【인】 복구 콜백 기능입니다. 이 함수는 LPVOID 매개 변수를 입력으로 가져 와서 DWORD를 반환해야 합니다. 기본 복구 콜백 `CWinApp::ApplicationRecoveryCallback`함수는 .|
-|*lpvParam*|【인】 복구 콜백 함수의 입력 매개 변수입니다. 자세한 내용은 [CWinApp:::응용 프로그램 복구호출](#applicationrecoverycallback)을 참조하십시오.|
-|*dwPing 간격*|【인】 다시 시작 관리자가 복구 콜백 함수가 반환될 때까지 기다리는 시간입니다. 이 매개 변수는 밀리초 단위입니다.|
-|*dwCallbackFlags*|【인】 복구 콜백 함수에 전달된 플래그입니다. 다음에 사용하도록 예약됩니다.|
+|매개 변수|설명|
+|*bRegisterRecoveryCallback*|진행 TRUE는 응용 프로그램의이 인스턴스가 복구 콜백 함수를 사용 함을 나타냅니다. FALSE는 그렇지 않음을 나타냅니다. 응용 프로그램이 예기치 않게 종료 되 면 프레임 워크에서 복구 콜백 함수를 호출 합니다. 자세한 내용은 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)을 참조 하세요.|
+|*strRestartIdentifier*|진행 다시 시작 관리자의 인스턴스를 식별 하는 고유 문자열입니다. 다시 시작 관리자 식별자는 응용 프로그램의 각 인스턴스에 대해 고유 합니다.|
+|*pwzCommandLineArgs*|진행 명령줄에서 추가 인수를 포함 하는 문자열입니다.|
+|*dwRestartFlags*|진행 다시 시작 관리자에 대 한 선택적 플래그입니다. 자세한 내용은 주의 섹션을 참조하세요.|
+|*pRecoveryCallback*|진행 복구 콜백 함수입니다. 이 함수는 LPVOID 매개 변수를 입력으로 사용 하 고 DWORD를 반환 해야 합니다. 기본 복구 콜백 함수는 `CWinApp::ApplicationRecoveryCallback` 입니다.|
+|*lpvParam*|진행 복구 콜백 함수에 대 한 입력 매개 변수입니다. 자세한 내용은 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)을 참조 하세요.|
+|*dwPingInterval*|진행 복구 콜백 함수가 반환 될 때까지 다시 시작 관리자가 대기 하는 시간입니다. 이 매개 변수는 밀리초 단위입니다.|
+|*dwCallbackFlags*|진행 복구 콜백 함수에 전달 된 플래그입니다. 다음에 사용하도록 예약됩니다.|
 
 ### <a name="return-value"></a>Return Value
 
-메서드가 성공했는지 S_OK. 그렇지 않으면 오류 코드입니다.
+메서드가 성공 하면 S_OK 하 고, 그렇지 않으면 오류 코드입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램에서 파일 자동 저장에 대한 기본 MFC 구현을 `RegisterWithRestartManager`사용하는 경우 의 간단한 버전을 사용해야 합니다. 응용 프로그램의 `RegisterWithRestartManager` 자동 저장 동작을 사용자 지정하려는 경우 복잡한 버전을 사용합니다.
+응용 프로그램에서 작업 파일에 대 한 기본 MFC 구현을 사용 하는 경우의 간단한 버전을 사용 해야 합니다 `RegisterWithRestartManager` . `RegisterWithRestartManager`응용 프로그램의 자동 저장 동작을 사용자 지정 하려면의 복합 버전을 사용 합니다.
 
-*strRestartIdentifier에*대 한 빈 문자열로이 `RegisterWithRestartManager` 메서드를 호출 하는 경우 다시 시작 관리자의이 인스턴스에 대 한 고유 식별자 문자열을 만듭니다.
+*StrRestartIdentifier*에 대 한 빈 문자열을 사용 하 여이 메서드를 호출 하는 경우는 `RegisterWithRestartManager` 다시 시작 관리자의이 인스턴스에 대 한 고유 식별자 문자열을 만듭니다.
 
-응용 프로그램이 예기치 않게 종료되면 다시 시작 관리자는 명령줄에서 응용 프로그램을 다시 시작하고 고유한 다시 시작 식별자를 선택적 인수로 제공합니다. 이 시나리오에서는 프레임 `RegisterWithRestartManager` 워크는 두 번 호출 합니다. 첫 번째 호출은 문자열 식별자에 대한 빈 문자열이 있는 [CWinApp::InitInstance에서](#initinstance) 제공됩니다. 그런 다음 [CWinApp::ProcessShellCommand는](#processshellcommand) 고유한 다시 시작 식별자를 호출합니다. `RegisterWithRestartManager`
+응용 프로그램이 예기치 않게 종료 되 면 다시 시작 관리자가 명령줄에서 응용 프로그램을 다시 시작 하 고 고유한 다시 시작 식별자를 선택적 인수로 제공 합니다. 이 시나리오에서 프레임 워크는 `RegisterWithRestartManager` 두 번 호출 합니다. 첫 번째 호출은 [CWinApp:: InitInstance](#initinstance) 에서 문자열 식별자에 대 한 빈 문자열을 가져옵니다. 그런 다음 [CWinApp::P](#processshellcommand) 메서드는 `RegisterWithRestartManager` 고유한 다시 시작 식별자를 사용 하 여 rocessshellcommand를 호출 합니다.
 
-다시 시작 관리자에 응용 프로그램을 등록하면 다시 시작 관리자가 응용 프로그램을 모니터링합니다. 응용 프로그램이 예기치 않게 종료되면 다시 시작 관리자는 종료 프로세스 중에 복구 콜백 함수를 호출합니다. 다시 시작 관리자는 복구 콜백 함수의 응답을 위해 *dwPingInterval을* 기다립니다. 이 시간 내에 복구 콜백 함수가 응답하지 않으면 응용 프로그램은 복구 콜백 기능을 실행하지 않고 종료됩니다.
+다시 시작 관리자를 사용 하 여 응용 프로그램을 등록 하면 다시 시작 관리자가 응용 프로그램을 모니터링 합니다. 응용 프로그램이 예기치 않게 종료 되는 경우 다시 시작 관리자는 종료 프로세스 중에 복구 콜백 함수를 호출 합니다. 다시 시작 관리자는 복구 콜백 함수의 응답에 대해 *dwPingInterval* 를 대기 합니다. 이 시간 내에 복구 콜백 함수가 응답 하지 않으면 복구 콜백 함수를 실행 하지 않고 응용 프로그램이 종료 됩니다.
 
-기본적으로 dwRestartFlags는 지원되지 않지만 나중에 사용할 수 있습니다. *dwRestartFlags에* 대 한 가능한 값은 다음과 같습니다.
+기본적으로 dwRestartFlags은 지원 되지 않지만 나중에 사용 하기 위해 제공 됩니다. *DwRestartFlags* 에 사용할 수 있는 값은 다음과 같습니다.
 
 - RESTART_NO_CRASH
 
@@ -1996,9 +1996,9 @@ virtual HRESULT RegisterWithRestartManager(
 
 - RESTART_NO_REBOOT
 
-## <a name="cwinappreopenpreviousfilesatrestart"></a><a name="reopenpreviousfilesatrestart"></a>CWinApp::다시 열기이전파일다시 시작
+## <a name="cwinappreopenpreviousfilesatrestart"></a><a name="reopenpreviousfilesatrestart"></a>CWinApp:: ReopenPreviousFilesAtRestart
 
-다시 시작 관리자가 응용 프로그램이 예기치 않게 종료될 때 열려 있던 파일을 다시 열지 여부를 결정합니다.
+응용 프로그램이 예기치 않게 종료 될 때 열려 있던 파일을 다시 시작 관리자가 다시 열 지 여부를 결정 합니다.
 
 ```
 virtual BOOL ReopenPreviousFilesAtRestart() const;
@@ -2006,11 +2006,11 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 다시 시작 관리자가 이전에 열려 있는 파일을 다시 연다는 것을 나타냅니다. FALSE는 다시 시작 관리자가 하지 않음을 나타냅니다.
+TRUE 이면 다시 시작 관리자가 이전에 연 파일을 다시 엽니다. FALSE는 다시 시작 관리자가 그렇지 않음을 나타냅니다.
 
-## <a name="cwinapprestartinstance"></a><a name="restartinstance"></a>CWinApp::다시 시작 인스턴스
+## <a name="cwinapprestartinstance"></a><a name="restartinstance"></a>CWinApp:: RestartInstance
 
-다시 시작 관리자에 의해 시작 된 응용 프로그램을 다시 시작 처리 합니다.
+다시 시작 관리자에 의해 시작 된 응용 프로그램 다시 시작을 처리 합니다.
 
 ```
 virtual BOOL CWinApp::RestartInstance();
@@ -2018,17 +2018,17 @@ virtual BOOL CWinApp::RestartInstance();
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 데이터 복구 처리기가 이전에 열린 문서를 여는 경우; 데이터 복구 처리기에 오류가 있거나 이전에 열려 있는 문서가 없는 경우 FALSE입니다.
+데이터 복구 처리기가 이전에 열린 문서를 여는 경우 TRUE입니다. 데이터 복구 처리기에 오류가 있거나 이전에 열린 문서가 없는 경우 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-다시 시작 관리자가 응용 프로그램을 다시 시작하면 프레임워크에서 이 메서드를 호출합니다. 이 메서드는 데이터 복구 처리기를 검색 하 고 자동 저장 된 파일을 복원 합니다. 이 메서드호출 [CDataRecoveryHandler::RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments) 사용자가 자동 저장 된 파일을 복원 하려는 여부를 확인 합니다.
+다시 시작 관리자가 응용 프로그램을 다시 시작 하면 프레임 워크에서이 메서드를 호출 합니다. 이 메서드는 데이터 복구 처리기를 검색 하 고 자동으로 저장 된 파일을 복원 합니다. 이 메서드는 [CDataRecoveryHandler:: RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments) 를 호출 하 여 사용자가 자동으로 저장 된 파일을 복원 하려고 할지 여부를 결정 합니다.
 
-이 메서드는 [CDataRecoveryHandler에서](../../mfc/reference/cdatarecoveryhandler-class.md) 열려 있는 문서가 없다고 판단하는 경우 FALSE를 반환합니다. 열려 있는 문서가 없는 경우 응용 프로그램이 일반적으로 시작됩니다.
+이 메서드는 [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) 가 열려 있는 문서가 없음을 확인 하는 경우 FALSE를 반환 합니다. 열려 있는 문서가 없으면 응용 프로그램이 일반적으로 시작 됩니다.
 
-## <a name="cwinapprestoreautosavedfilesatrestart"></a><a name="restoreautosavedfilesatrestart"></a>CWinApp::복원자동 저장파일다시 시작
+## <a name="cwinapprestoreautosavedfilesatrestart"></a><a name="restoreautosavedfilesatrestart"></a>CWinApp:: RestoreAutosavedFilesAtRestart
 
-다시 시작 관리자가 응용 프로그램을 다시 시작할 때 자동 저장된 파일을 복원하는지 여부를 결정합니다.
+다시 시작 관리자가 응용 프로그램을 다시 시작할 때 자동으로 저장 된 파일을 복원할지 여부를 결정 합니다.
 
 ```
 virtual BOOL RestoreAutosavedFilesAtRestart() const;
@@ -2036,11 +2036,11 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 다시 시작 관리자가 자동 저장된 파일을 복원했음을 나타냅니다. FALSE는 다시 시작 관리자가 하지 않음을 나타냅니다.
+TRUE는 다시 시작 관리자가 자동으로 저장 된 파일을 복원 함을 나타냅니다. FALSE는 다시 시작 관리자가 그렇지 않음을 나타냅니다.
 
-## <a name="cwinapprun"></a><a name="run"></a>CWinApp :: 실행
+## <a name="cwinapprun"></a><a name="run"></a>CWinApp:: Run
 
-기본 메시지 루프를 제공합니다.
+기본 메시지 루프를 제공 합니다.
 
 ```
 virtual int Run();
@@ -2048,17 +2048,17 @@ virtual int Run();
 
 ### <a name="return-value"></a>Return Value
 
-`WinMain`에서 반환되는 **int** 값입니다.
+**`int`** 에서 반환 하는 값입니다 `WinMain` .
 
 ### <a name="remarks"></a>설명
 
-`Run`응용 프로그램이 WM_QUIT 메시지를 받을 때까지 Windows 메시지를 획득하고 디스패치합니다. 응용 프로그램의 메시지 큐에 현재 메시지가 `Run` 없는 경우 [OnIdle을](#onidle) 호출하여 유휴 시간 처리를 수행합니다. 들어오는 메시지는 특수 처리를 위해 [PreTranslateMessage](#pretranslatemessage) 멤버 함수로 이동한 다음 표준 키보드 번역을 위한 Windows 함수로 `TranslateMessage` 이동합니다. 마지막으로 Windows `DispatchMessage` 함수가 호출됩니다.
+`Run`응용 프로그램이 WM_QUIT 메시지를 받을 때까지 Windows 메시지를 가져와 디스패치합니다. 응용 프로그램의 메시지 큐에 현재 메시지가 없으면 OnIdle을 `Run` 호출 [OnIdle](#onidle) 하 여 유휴 시간 처리를 수행 합니다. 들어오는 메시지는 특수 처리를 위해 [PreTranslateMessage](#pretranslatemessage) 멤버 함수로 이동 하 고 `TranslateMessage` 표준 키보드 변환의 경우 windows 함수로 이동 합니다. 마지막으로 `DispatchMessage` windows 함수가 호출 됩니다.
 
-`Run`재정의된 경우는 거의 없지만 특수 한 동작을 제공하기 위해 재정의할 수 있습니다.
+`Run`는 거의 재정의 되지 않지만 특수 동작을 제공 하도록 재정의할 수 있습니다.
 
-## <a name="cwinapprunautomated"></a><a name="runautomated"></a>CWinApp::실행 자동화
+## <a name="cwinapprunautomated"></a><a name="runautomated"></a>CWinApp:: RunAutomated
 
-이 함수를 호출하여 클라이언트 응용 프로그램에서 서버 응용 프로그램이 시작되었는지 여부를 나타내는 **"/Automation"** 또는 **"자동화"** 옵션이 있는지 확인합니다.
+이 함수를 호출 하 여 " **/Automation**" 또는 " **-Automation**" 옵션이 있는지 여부를 확인 합니다 .이 옵션은 클라이언트 응용 프로그램에서 서버 응용 프로그램을 시작 했는지 여부를 나타냅니다.
 
 ```
 BOOL RunAutomated();
@@ -2066,15 +2066,15 @@ BOOL RunAutomated();
 
 ### <a name="return-value"></a>Return Value
 
-옵션이 발견되면 0이 아닙니다. 그렇지 않으면 0.
+옵션이 있으면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-있는 경우 명령줄에서 옵션이 제거됩니다. OLE 자동화에 대한 자세한 내용은 [자동화 서버](../../mfc/automation-servers.md)문서를 참조하십시오.
+있는 경우 옵션이 명령줄에서 제거 됩니다. OLE 자동화에 대 한 자세한 내용은 [자동화 서버](../../mfc/automation-servers.md)문서를 참조 하세요.
 
-## <a name="cwinapprunembedded"></a><a name="runembedded"></a>CWinApp:::실행 임베디드
+## <a name="cwinapprunembedded"></a><a name="runembedded"></a>CWinApp:: RunEmbedded
 
-이 함수를 호출하여 **"/포함"** 또는 **"-포함"** 옵션이 있는지 여부를 확인합니다.
+이 함수를 호출 하 여 " **프로그램이/embedding**" 또는 " **-포함**" 옵션이 있는지 여부를 확인 합니다 .이 옵션은 클라이언트 응용 프로그램에서 서버 응용 프로그램을 시작 했는지 여부를 나타냅니다.
 
 ```
 BOOL RunEmbedded();
@@ -2082,15 +2082,15 @@ BOOL RunEmbedded();
 
 ### <a name="return-value"></a>Return Value
 
-옵션이 발견되면 0이 아닙니다. 그렇지 않으면 0.
+옵션이 있으면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-있는 경우 명령줄에서 옵션이 제거됩니다. 포함에 대한 자세한 내용은 [서버: 서버 구현](../../mfc/servers-implementing-a-server.md)문서를 참조하십시오.
+있는 경우 옵션이 명령줄에서 제거 됩니다. 포함에 대 한 자세한 내용은 서버 [: 서버 구현](../../mfc/servers-implementing-a-server.md)문서를 참조 하세요.
 
-## <a name="cwinappsaveallmodified"></a><a name="saveallmodified"></a>CWinApp:::SaveAll수정
+## <a name="cwinappsaveallmodified"></a><a name="saveallmodified"></a>CWinApp:: SaveAllModified
 
-응용 프로그램의 주 프레임 창을 닫을 때 또는 WM_QUERYENDSESSION 메시지를 통해 모든 문서를 저장 하기 위해 프레임 워크에 의해 호출 됩니다.
+응용 프로그램의 주 프레임 창을 닫을 때 또는 WM_QUERYENDSESSION 메시지를 통해 모든 문서를 저장 하기 위해 프레임 워크에서 호출 됩니다.
 
 ```
 virtual BOOL SaveAllModified();
@@ -2098,15 +2098,15 @@ virtual BOOL SaveAllModified();
 
 ### <a name="return-value"></a>Return Value
 
-응용 프로그램을 종료하는 것이 안전한 경우 비제로; 0이 안전하지 않은 경우 응용 프로그램을 종료합니다.
+응용 프로그램을 종료 하는 데 안전한 경우 0이 아님 응용 프로그램을 종료 하는 것이 안전 하지 않은 경우 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수의 기본 구현은 응용 프로그램 내의 모든 수정된 문서에 대해 [CDocument::SaveModified](../../mfc/reference/cdocument-class.md#savemodified) 멤버 함수를 차례로 호출합니다.
+이 멤버 함수의 기본 구현에서는 [CDocument:: SaveModified](../../mfc/reference/cdocument-class.md#savemodified) 멤버 함수를 호출 하 여 응용 프로그램 내의 모든 수정 된 문서를 차례로 호출 합니다.
 
-## <a name="cwinappselectprinter"></a><a name="selectprinter"></a>CWinApp::선택 프린터
+## <a name="cwinappselectprinter"></a><a name="selectprinter"></a>CWinApp:: SelectPrinter
 
-이 멤버 함수를 호출하여 특정 프린터를 선택하고 인쇄 대화 상자에서 이전에 선택한 프린터를 놓습니다.
+이 멤버 함수를 호출 하 여 특정 프린터를 선택 하 고 이전에 인쇄 대화 상자에서 선택한 프린터를 해제 합니다.
 
 ```cpp
 void SelectPrinter(
@@ -2117,22 +2117,22 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>매개 변수
 
-*h데브 네임스*<br/>
-특정 프린터의 드라이버, 장치 및 출력 포트 이름을 식별하는 [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)트러크에 대한 핸들입니다.
+*hDevNames*<br/>
+특정 프린터의 드라이버, 장치 및 출력 포트 이름을 식별 하는 [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)t)에 대 한 핸들입니다.
 
-*h데브 모드*<br/>
-프린터의 장치 초기화 및 환경에 대한 정보를 지정하는 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) 구조에 대한 핸들입니다.
+*hDevMode*<br/>
+프린터의 장치 초기화 및 환경에 대 한 정보를 지정 하는 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) 구조체에 대 한 핸들입니다.
 
-*b프리올드*<br/>
-이전에 선택한 프린터를 해제합니다.
+*bFreeOld*<br/>
+이전에 선택한 프린터를 해제 합니다.
 
 ### <a name="remarks"></a>설명
 
-*hDevMode* 및 *hDevNames가* 모두 `SelectPrinter` NULL인 경우 현재 기본 프린터를 사용합니다.
+*Hdevmode* 및 *HDEVNAMES* 가 모두 NULL 인 경우는 `SelectPrinter` 현재 기본 프린터를 사용 합니다.
 
-## <a name="cwinappsethelpmode"></a><a name="sethelpmode"></a>CWinApp:::세트헬프 모드
+## <a name="cwinappsethelpmode"></a><a name="sethelpmode"></a>CWinApp:: SetHelpMode
 
-응용 프로그램의 도움말 유형을 설정합니다.
+응용 프로그램의 도움말 형식을 설정 합니다.
 
 ```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
@@ -2140,18 +2140,18 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 ### <a name="parameters"></a>매개 변수
 
-*e도움말 유형*<br/>
-사용할 도움말 유형을 지정합니다. 자세한 내용은 [CWinApp:m_eHelpType](#m_ehelptype) 를 참조하십시오.
+*eHelpType*<br/>
+사용할 도움말의 유형을 지정 합니다. 자세한 내용은 [CWinApp:: m_eHelpType](#m_ehelptype) 를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램의 도움말 유형을 설정합니다.
+응용 프로그램의 도움말 형식을 설정 합니다.
 
-응용 프로그램의 도움말 유형을 HTML도움말로 설정하려면 [EnableHTMLHelp](#enablehtmlhelp)를 호출할 수 있습니다. 호출하면 `EnableHTMLHelp`응용 프로그램에서 HTML도움말을 도움말 응용 프로그램으로 사용해야 합니다. WinHelp를 사용하도록 변경하려면 `SetHelpMode` *eHelpType을* `afxWinHelp`로 호출하고 설정할 수 있습니다.
+응용 프로그램의 도움말 형식을 HTMLHelp로 설정 하려면 [EnableHTMLHelp](#enablehtmlhelp)를 호출 하면 됩니다. 를 호출 하면 `EnableHTMLHelp` 응용 프로그램은 HTMLHelp를 도움말 응용 프로그램으로 사용 해야 합니다. WinHelp를 사용 하도록 변경 하려는 경우를 호출 하 `SetHelpMode` 고 *Ehelptype* 을로 설정할 수 있습니다 `afxWinHelp` .
 
-## <a name="cwinappsetregistrykey"></a><a name="setregistrykey"></a>CWinApp:::세트레지스트리키
+## <a name="cwinappsetregistrykey"></a><a name="setregistrykey"></a>CWinApp:: SetRegistryKey
 
-응용 프로그램 설정을 INI 파일 대신 레지스트리에 저장합니다.
+응용 프로그램 설정이 INI 파일 대신 레지스트리에 저장 되도록 합니다.
 
 ```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
@@ -2160,19 +2160,19 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="parameters"></a>매개 변수
 
-*lpsz레지스트리키*<br/>
-키 의 이름을 포함하는 문자열에 대한 포인터입니다.
+*lpszRegistryKey*<br/>
+키의 이름을 포함 하는 문자열에 대 한 포인터입니다.
 
-*니디레지스트리키*<br/>
-레지스트리 키의 이름을 포함하는 문자열 리소스의 ID입니다.
+*nIDRegistryKey*<br/>
+레지스트리 키의 이름을 포함 하는 문자열 리소스의 ID입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 *m_pszRegistryKey*을 `GetProfileInt`설정합니다. `GetProfileString` `WriteProfileInt` `WriteProfileString` `CWinApp` 이 함수가 호출된 경우 가장 최근에 사용한(MRU) 파일 목록도 레지스트리에 저장됩니다. 레지스트리 키는 일반적으로 회사의 이름입니다. \\ HKEY_CURRENT_USER\Software<회사 이름\> \\<응용\> \\ 프로그램 이름<섹션 이름\> \\<\>값 이름의 키에 저장됩니다.
+이 함수는 *m_pszRegistryKey* `GetProfileInt` 의,, `GetProfileString` `WriteProfileInt` 및 `WriteProfileString` 멤버 함수 `CWinApp` 에서 사용 되는 m_pszRegistryKey를 설정 합니다. 이 함수가 호출 되 면 가장 최근에 사용한 (MRU) 파일의 목록도 레지스트리에 저장 됩니다. 레지스트리 키는 일반적으로 회사의 이름입니다. 이 파일은 다음 형식의 키에 저장 됩니다. HKEY_CURRENT_USER \Software \\<회사 이름 \> \\<응용 프로그램 이름 \> \\<섹션 이름 \> \\<값 이름 \> 입니다.
 
-## <a name="cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a>CWinApp::지원응용 프로그램 복구
+## <a name="cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a>CWinApp:: SupportsApplicationRecovery
 
-다시 시작 관리자가 예기치 않게 종료된 응용 프로그램을 복구하는지 여부를 결정합니다.
+다시 시작 관리자가 예기치 않게 종료 된 응용 프로그램을 복구할 지 여부를 결정 합니다.
 
 ```
 virtual BOOL SupportsApplicationRecovery() const;
@@ -2180,11 +2180,11 @@ virtual BOOL SupportsApplicationRecovery() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 다시 시작 관리자가 응용 프로그램을 복구했음을 나타냅니다. FALSE는 다시 시작 관리자가 하지 않음을 나타냅니다.
+TRUE는 다시 시작 관리자가 응용 프로그램을 복구 함을 나타냅니다. FALSE는 다시 시작 관리자가 그렇지 않음을 나타냅니다.
 
-## <a name="cwinappsupportsautosaveatinterval"></a><a name="supportsautosaveatinterval"></a>CWinApp::지원자동 저장간격
+## <a name="cwinappsupportsautosaveatinterval"></a><a name="supportsautosaveatinterval"></a>CWinApp:: SupportsAutosaveAtInterval
 
-다시 시작 관리자가 정기적으로 열려 있는 문서를 자동으로 저장하는지 여부를 결정합니다.
+다시 시작 관리자가 열려 있는 문서를 일정 한 간격으로 자동 저장 하는지 여부를 결정 합니다.
 
 ```
 virtual BOOL SupportsAutosaveAtInterval() const;
@@ -2192,11 +2192,11 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 다시 시작 관리자가 열려 있는 문서를 자동으로 저장했음을 나타냅니다. FALSE는 다시 시작 관리자가 하지 않음을 나타냅니다.
+TRUE는 다시 시작 관리자가 열려 있는 문서를 자동으로 저장 함을 나타냅니다. FALSE는 다시 시작 관리자가 그렇지 않음을 나타냅니다.
 
-## <a name="cwinappsupportsautosaveatrestart"></a><a name="supportsautosaveatrestart"></a>CWinApp::지원자동 저장다시 시작
+## <a name="cwinappsupportsautosaveatrestart"></a><a name="supportsautosaveatrestart"></a>CWinApp:: SupportsAutosaveAtRestart
 
-다시 시작 관리자가 응용 프로그램을 다시 시작할 때 열려 있는 문서를 자동으로 저장하는지 여부를 결정합니다.
+응용 프로그램이 다시 시작 될 때 다시 시작 관리자가 열려 있는 모든 문서를 자동으로 저장할지 여부를 결정 합니다.
 
 ```
 virtual BOOL SupportsAutosaveAtRestart() const;
@@ -2204,11 +2204,11 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 응용 프로그램이 다시 시작될 때 다시 시작 관리자가 열려 있는 문서를 자동으로 저장했음을 나타냅니다. FALSE는 다시 시작 관리자가 하지 않음을 나타냅니다.
+TRUE는 응용 프로그램이 다시 시작 될 때 다시 시작 관리자가 열려 있는 문서를 자동으로 저장 함을 나타냅니다. FALSE는 다시 시작 관리자가 그렇지 않음을 나타냅니다.
 
-## <a name="cwinappsupportsrestartmanager"></a><a name="supportsrestartmanager"></a>CWinApp::지원 다시 시작 관리자
+## <a name="cwinappsupportsrestartmanager"></a><a name="supportsrestartmanager"></a>CWinApp:: SupportsRestartManager
 
-응용 프로그램이 다시 시작 관리자를 지원하는지 여부를 결정합니다.
+응용 프로그램에서 다시 시작 관리자를 지원 하는지 여부를 확인 합니다.
 
 ```
 virtual BOOL SupportsRestartManager() const;
@@ -2216,11 +2216,11 @@ virtual BOOL SupportsRestartManager() const;
 
 ### <a name="return-value"></a>Return Value
 
-TRUE는 응용 프로그램이 다시 시작 관리자를 지원했음을 나타냅니다. FALSE는 응용 프로그램이 그렇지 않음을 나타냅니다.
+TRUE는 응용 프로그램이 다시 시작 관리자를 지원함을 나타냅니다. FALSE는 응용 프로그램이 그렇지 않음을 나타냅니다.
 
-## <a name="cwinappunregister"></a><a name="unregister"></a>CWinApp::등록 취소
+## <a name="cwinappunregister"></a><a name="unregister"></a>CWinApp:: 등록 취소
 
-응용 프로그램 개체에 의해 등록된 모든 파일등록을 취소합니다.
+응용 프로그램 개체에서 등록 된 모든 파일의 등록을 취소 합니다.
 
 ```
 virtual BOOL Unregister();
@@ -2232,21 +2232,21 @@ virtual BOOL Unregister();
 
 ### <a name="remarks"></a>설명
 
-이 `Unregister` 함수는 응용 프로그램 개체및 등록 함수에 의해 수행되는 [등록을](#register) 취소합니다. 일반적으로 두 함수는 MFC에서 암시적으로 호출되므로 코드에 나타나지 않습니다.
+`Unregister`함수는 응용 프로그램 개체 및 [Register](#register) 함수에서 수행 하는 등록을 취소 합니다. 일반적으로 두 함수는 MFC에서 암시적으로 호출 되므로 코드에 표시 되지 않습니다.
 
-이 함수를 재정의하여 사용자 지정 등록 취소 단계를 수행합니다.
+사용자 지정 등록 취소 단계를 수행 하려면이 함수를 재정의 합니다.
 
-## <a name="cwinappunregistershellfiletypes"></a><a name="unregistershellfiletypes"></a>CWinApp::레지스터 쉘파일 형식
+## <a name="cwinappunregistershellfiletypes"></a><a name="unregistershellfiletypes"></a>CWinApp:: UnregisterShellFileTypes
 
-이 멤버 함수를 호출하여 Windows 파일 관리자를 사용하여 응용 프로그램의 모든 문서 유형을 등록 취소합니다.
+Windows 파일 관리자를 사용 하 여 모든 응용 프로그램의 문서 유형을 등록 취소 하려면이 멤버 함수를 호출 합니다.
 
 ```cpp
 void UnregisterShellFileTypes();
 ```
 
-## <a name="cwinappwinhelp"></a><a name="winhelp"></a>CWinApp:::윈헬프
+## <a name="cwinappwinhelp"></a><a name="winhelp"></a>CWinApp:: WinHelp
 
-WinHelp 응용 프로그램을 호출 하려면이 멤버 함수를 호출 합니다.
+이 멤버 함수를 호출 하 여 WinHelp 응용 프로그램을 호출 합니다.
 
 ```
 virtual void WinHelp(
@@ -2257,24 +2257,24 @@ virtual void WinHelp(
 ### <a name="parameters"></a>매개 변수
 
 *dwData*<br/>
-추가 데이터를 지정합니다. 사용되는 값은 *nCmd* 매개 변수의 값에 따라 다릅니다.
+추가 데이터를 지정 합니다. 사용 되는 값은 *Ncmd* 매개 변수의 값에 따라 달라 집니다.
 
 *nCmd*<br/>
-요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 *dwData* 매개 변수에 미치는 영향은 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 함수를 참조하십시오.
+요청한 도움말의 형식을 지정합니다. 가능한 값 목록과이 값이 *Dwdata* 매개 변수에 영향을 주는 방법은 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-또한 프레임워크는 이 함수를 호출하여 WinHelp 응용 프로그램을 호출합니다.
+또한 프레임 워크는이 함수를 호출 하 여 WinHelp 응용 프로그램을 호출 합니다.
 
-응용 프로그램이 종료되면 프레임워크가 WinHelp 응용 프로그램을 자동으로 닫습니다.
+응용 프로그램이 종료 되 면 프레임 워크가 자동으로 WinHelp 응용 프로그램을 닫습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCWindowing#53](../../mfc/reference/codesnippet/cpp/cwinapp-class_28.cpp)]
 
-## <a name="cwinappwriteprofilebinary"></a><a name="writeprofilebinary"></a>CWinApp::쓰기 프로필 바이너리
+## <a name="cwinappwriteprofilebinary"></a><a name="writeprofilebinary"></a>CWinApp:: WriteProfileBinary
 
-이 멤버 함수를 호출하여 이진 데이터를 응용 프로그램 레지스트리 또는 의 지정된 섹션에 작성합니다. INI 파일입니다.
+응용 프로그램 레지스트리의 지정 된 섹션 또는에 이진 데이터를 쓰려면이 멤버 함수를 호출 합니다. INI 파일.
 
 ```
 BOOL WriteProfileBinary(
@@ -2287,16 +2287,16 @@ BOOL WriteProfileBinary(
 ### <a name="parameters"></a>매개 변수
 
 *lpszSection*<br/>
-항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 단면이 없으면 만들어집니다. 섹션의 이름은 대/소문자 독립적입니다. 문자열은 대문자와 소문자의 조합일 수 있습니다.
+항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 섹션이 없으면 생성 됩니다. 섹션 이름은 대/소문자를 구분 합니다. 문자열은 대/소문자를 임의로 조합 하 여 사용할 수 있습니다.
 
-*lpsz항목*<br/>
-값을 쓸 항목을 포함하는 null 종료 된 문자열을 가리킵니다. 지정된 섹션에 항목이 없으면 항목이 만들어집니다.
+*lpszEntry*<br/>
+값을 쓸 항목을 포함 하는 null로 끝나는 문자열을 가리킵니다. 지정 된 섹션에 항목이 없으면 해당 항목이 생성 됩니다.
 
-*Pdata*<br/>
-기록할 데이터를 가리킵니다.
+*pData*<br/>
+쓸 데이터를 가리킵니다.
 
-*n바이트*<br/>
-쓸 바이트 수를 포함합니다.
+*nBytes*<br/>
+쓸 바이트 수를 포함 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2304,15 +2304,15 @@ BOOL WriteProfileBinary(
 
 ### <a name="example"></a>예제
 
-이 예제에서는 MFC 응용 프로그램의 모든 함수에서 `WriteProfileBinary` 사용할 `GetProfileBinary` 수 있는 방법을 설명하는 CWinApp 클래스를 사용하는 데 사용합니다. `CWinApp* pApp = AfxGetApp();`
+이 예제에서는를 사용 하 여 `CWinApp* pApp = AfxGetApp();` `WriteProfileBinary` `GetProfileBinary` MFC 응용 프로그램의 모든 함수에서 사용할 수 있는 방법을 보여 주는 CWinApp 클래스를 가져옵니다.
 
 [!code-cpp[NVC_MFCWindowing#54](../../mfc/reference/codesnippet/cpp/cwinapp-class_29.cpp)]
 
-또 다른 예는 [CWinApp::GetProfileBinary](#getprofilebinary)에 대한 예제를 참조하십시오.
+다른 예제를 보려면 [CWinApp:: GetProfileBinary](#getprofilebinary)의 예제를 참조 하세요.
 
-## <a name="cwinappwriteprofileint"></a><a name="writeprofileint"></a>CWinApp::쓰기 프로필인트
+## <a name="cwinappwriteprofileint"></a><a name="writeprofileint"></a>CWinApp:: WriteProfileInt
 
-이 멤버 함수를 호출하여 지정된 값을 응용 프로그램 레지스트리 또는 의 지정된 섹션에 작성합니다. INI 파일입니다.
+응용 프로그램 레지스트리의 지정 된 섹션에 지정 된 값을 쓰려면이 멤버 함수를 호출 합니다. INI 파일.
 
 ```
 BOOL WriteProfileInt(
@@ -2324,13 +2324,13 @@ BOOL WriteProfileInt(
 ### <a name="parameters"></a>매개 변수
 
 *lpszSection*<br/>
-항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 단면이 없으면 만들어집니다. 섹션의 이름은 대/소문자 독립적입니다. 문자열은 대문자와 소문자의 조합일 수 있습니다.
+항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 섹션이 없으면 생성 됩니다. 섹션 이름은 대/소문자를 구분 합니다. 문자열은 대/소문자를 임의로 조합 하 여 사용할 수 있습니다.
 
-*lpsz항목*<br/>
-값을 쓸 항목을 포함하는 null 종료 된 문자열을 가리킵니다. 지정된 섹션에 항목이 없으면 항목이 만들어집니다.
+*lpszEntry*<br/>
+값을 쓸 항목을 포함 하는 null로 끝나는 문자열을 가리킵니다. 지정 된 섹션에 항목이 없으면 해당 항목이 생성 됩니다.
 
-*n값*<br/>
-쓸 값을 포함합니다.
+*N 값*<br/>
+쓸 값을 포함 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2338,15 +2338,15 @@ BOOL WriteProfileInt(
 
 ### <a name="example"></a>예제
 
-이 `CWinApp* pApp = AfxGetApp();` 예제에서는 CWinApp 클래스에서 MFC 응용 `WriteProfileString`프로그램의 `WriteProfileInt` `GetProfileString`모든 `GetProfileInt` 함수에서 사용할 수 있는 방법을 예제로 사용합니다.
+이 예제에서는를 사용 `CWinApp* pApp = AfxGetApp();` 하 여 `WriteProfileString` ,, 및가 `WriteProfileInt` `GetProfileString` `GetProfileInt` MFC 응용 프로그램의 모든 함수에서 사용 될 수 있는 방법을 보여 주는 CWinApp 클래스를 가져옵니다.
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-또 다른 예는 [CWinApp::GetProfileInt](#getprofileint)에 대한 예제를 참조하십시오.
+다른 예제를 보려면 [CWinApp:: GetProfileInt](#getprofileint)의 예제를 참조 하세요.
 
-## <a name="cwinappwriteprofilestring"></a><a name="writeprofilestring"></a>CWinApp::쓰기 프로필 스트링
+## <a name="cwinappwriteprofilestring"></a><a name="writeprofilestring"></a>CWinApp:: WriteProfileString
 
-이 멤버 함수를 호출하여 지정된 문자열을 응용 프로그램 레지스트리 또는 의 지정된 섹션에 작성합니다. INI 파일입니다.
+이 멤버 함수를 호출 하 여 지정 된 문자열을 응용 프로그램 레지스트리의 지정 된 섹션 또는에 씁니다. INI 파일.
 
 ```
 BOOL WriteProfileString(
@@ -2358,13 +2358,13 @@ BOOL WriteProfileString(
 ### <a name="parameters"></a>매개 변수
 
 *lpszSection*<br/>
-항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 단면이 없으면 만들어집니다. 섹션의 이름은 대/소문자 독립적입니다. 문자열은 대문자와 소문자의 조합일 수 있습니다.
+항목이 포함된 섹션을 지정하는 null로 끝나는 문자열을 가리킵니다. 섹션이 없으면 생성 됩니다. 섹션 이름은 대/소문자를 구분 합니다. 문자열은 대/소문자를 임의로 조합 하 여 사용할 수 있습니다.
 
-*lpsz항목*<br/>
-값을 쓸 항목을 포함하는 null 종료 된 문자열을 가리킵니다. 지정된 섹션에 항목이 없으면 항목이 만들어집니다. 이 매개 변수가 NULL이면 *lpszSection에서* 지정한 섹션이 삭제됩니다.
+*lpszEntry*<br/>
+값을 쓸 항목을 포함 하는 null로 끝나는 문자열을 가리킵니다. 지정 된 섹션에 항목이 없으면 해당 항목이 생성 됩니다. 이 매개 변수가 NULL 이면 *lpszSection* 에서 지정한 섹션이 삭제 됩니다.
 
-*lpsz값*<br/>
-쓸 문자열을 가리킵니다. 이 매개 변수가 NULL이면 *lpszEntry* 매개 변수에서 지정한 항목이 삭제됩니다.
+*lpszValue*<br/>
+쓸 문자열을 가리킵니다. 이 매개 변수가 NULL 이면 *lpszEntry* 매개 변수로 지정 된 항목이 삭제 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2374,11 +2374,11 @@ BOOL WriteProfileString(
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-또 다른 예는 [CWinApp::GetProfileInt](#getprofileint)에 대한 예제를 참조하십시오.
+다른 예제를 보려면 [CWinApp:: GetProfileInt](#getprofileint)의 예제를 참조 하세요.
 
-## <a name="cwinappsetappid"></a><a name="setappid"></a>CWinApp ::SetAppID
+## <a name="cwinappsetappid"></a><a name="setappid"></a>CWinApp:: SetAppID
 
-응용 프로그램에 대한 응용 프로그램 사용자 모델 ID를 명시적으로 설정합니다. 이 메서드는 사용자에게 사용자 인터페이스가 표시되기 전에 호출해야 합니다(가장 좋은 장소는 응용 프로그램 생성자).
+응용 프로그램의 응용 프로그램 사용자 모델 ID를 명시적으로 설정 합니다. 사용자 인터페이스가 사용자에 게 표시 되기 전에이 메서드를 호출 해야 합니다. 가장 좋은 장소는 응용 프로그램 생성자입니다.
 
 ```cpp
 void SetAppID(LPCTSTR lpcszAppID);
@@ -2387,11 +2387,11 @@ void SetAppID(LPCTSTR lpcszAppID);
 ### <a name="parameters"></a>매개 변수
 
 *lpcszAppID*<br/>
-응용 프로그램 사용자 모델 ID를 지정합니다.
+응용 프로그램 사용자 모델 ID를 지정 합니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [CWinThread 클래스](../../mfc/reference/cwinthread-class.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

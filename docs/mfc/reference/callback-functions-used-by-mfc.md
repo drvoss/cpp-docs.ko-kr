@@ -7,18 +7,18 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 8d84f939795e768c6b1356dcd8dc291421aedfdc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371134"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183437"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 
-세 가지 콜백 함수가 Microsoft 파운데이션 클래스 라이브러리에 나타납니다. 이러한 콜백 함수는 [CDC::에 전달됩니다::열문 개체](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)및 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). 모든 콜백 함수는 예외를 콜백 경계를 넘어 throw할 수 없으므로 Windows로 돌아가기 전에 MFC 예외를 트랩해야 합니다. 예외에 대한 자세한 내용은 [예외](../../mfc/exception-handling-in-mfc.md)문서를 참조하십시오.
+MFC 라이브러리에는 세 가지 콜백 함수가 표시 됩니다. 이러한 콜백 함수는 Cdc: [: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [Cdc:: GrayString](../../mfc/reference/cdc-class.md#graystring)및 [cdc:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)에 전달 됩니다. 모든 콜백 함수는 콜백 경계에서 예외가 throw 될 수 없으므로 Windows로 반환 하기 전에 MFC 예외를 트래핑 해야 합니다. 예외에 대 한 자세한 내용은 [예외](../../mfc/exception-handling-in-mfc.md)문서를 참조 하세요.
 
-|속성||
+|Name||
 |----------|-----------------|
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -28,9 +28,9 @@ ms.locfileid: "81371134"
 
 **헤더:** afxwin.h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>CDC에 대 한 콜백 함수::열거 개체
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>CDC:: EnumObjects에 대 한 콜백 함수
 
-*ObjectFunc* 이름은 응용 프로그램에서 제공한 함수 이름의 자리 표시자입니다.
+*Objectfunc* name은 응용 프로그램에서 제공 하는 함수 이름에 대 한 자리 표시자입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -43,22 +43,22 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>매개 변수
 
 *lpszLogObject*<br/>
-개체의 논리적 특성에 대한 정보가 포함된 [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) 또는 [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) 데이터 구조를 가리킵니다.
+개체의 논리적 특성에 대 한 정보를 포함 하는 [Logpen](/windows/win32/api/Wingdi/ns-wingdi-logpen) 또는 [logpen](/windows/win32/api/wingdi/ns-wingdi-logbrush) 데이터 구조를 가리킵니다.
 
 *lpData*<br/>
-함수에 전달된 응용 프로그램 `EnumObjects` 제공 데이터를 가리킵니다.
+함수에 전달 되는 응용 프로그램 제공 데이터를 가리킵니다 `EnumObjects` .
 
 ### <a name="return-value"></a>Return Value
 
-콜백 함수는 **int.** 이 반환값은 사용자 정의입니다. 콜백 함수가 0을 `EnumObjects` 반환하면 열거가 일찍 중지됩니다.
+콜백 함수는를 반환 합니다 **`int`** . 이 반환 값은 사용자가 정의 합니다. 콜백 함수에서 0을 반환 하는 경우는 `EnumObjects` 초기에 열거를 중지 합니다.
 
 ### <a name="remarks"></a>설명
 
 실제 이름을 내보내야 합니다.
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>CDC에 대 한 콜백 함수::회색 스트링
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>CDC:: GrayString에 대 한 콜백 함수
 
-*OutputFunc는* 응용 프로그램에서 제공하는 콜백 함수 이름의 자리 표시자입니다.
+*Outputfunc* 는 응용 프로그램에서 제공 하는 콜백 함수 이름에 대 한 자리 표시자입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -71,26 +71,26 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 ### <a name="parameters"></a>매개 변수
 
-*Hdc*<br/>
-에 의해 지정된 `nWidth` 너비와 높이의 비트맵을 사용하여 메모리 장치 `nHeight` `GrayString`컨텍스트를 식별합니다.
+*hDC*<br/>
+이상 및에 지정 된 너비와 높이의 비트맵을 사용 하 여 메모리 장치 컨텍스트를 식별 `nWidth` `nHeight` `GrayString` 합니다.
 
 *lpData*<br/>
 그릴 문자열을 가리킵니다.
 
 *nCount*<br/>
-출력할 문자 수를 지정합니다.
+출력할 문자 수를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공을 나타내기 위해 콜백 함수의 반환 값은 TRUE여야 합니다. 그렇지 않으면 FALSE입니다.
+성공 여부를 나타내려면 콜백 함수의 반환 값은 TRUE 여야 합니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-콜백*함수(OutputFunc)는**(x*, *y)가*아닌 좌표(0,0)를 기준으로 이미지를 그려야 합니다.
+콜백 함수 (*Outputfunc*)는 (*x*, *y*)가 아닌 좌표 (0, 0)를 기준으로 이미지를 그려야 합니다.
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>CDC에 대 한 콜백 함수::SetAbortProc
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>CDC:: SetAbortProc에 대 한 콜백 함수
 
-*AbortFunc이라는* 이름은 응용 프로그램에서 제공하는 함수 이름의 자리 표시자입니다.
+*AbortFunc* 이름은 응용 프로그램에서 제공 하는 함수 이름에 대 한 자리 표시자입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -102,23 +102,23 @@ BOOL CALLBACK EXPORT AbortFunc(
 
 ### <a name="parameters"></a>매개 변수
 
-*Hpr*<br/>
-장치 컨텍스트를 식별합니다.
+*hPr*<br/>
+장치 컨텍스트를 식별 합니다.
 
-*코드*<br/>
-오류가 발생했는지 여부를 지정합니다. 오류가 발생하지 않은 경우 0입니다. 인쇄 관리자가 현재 디스크 공간이 부족하고 응용 프로그램이 대기하는 경우 더 많은 디스크 공간을 사용할 수 있게 되면 SP_OUTOFDISK. *코드가* SP_OUTOFDISK 경우 응용 프로그램은 인쇄 작업을 중단할 필요가 없습니다. 그렇지 않으면 `PeekMessage` 또는 `GetMessage` Windows 함수를 호출하여 Print Manager에 양보해야 합니다.
+*code*<br/>
+오류가 발생 했는지 여부를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. 현재 인쇄 관리자의 디스크 공간이 부족 하 고 응용 프로그램이 대기 하는 경우 더 많은 디스크 공간을 사용할 수 있게 되 면 SP_OUTOFDISK 됩니다. *코드가* SP_OUTOFDISK 경우에는 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 그렇지 않으면 `PeekMessage` 또는 Windows 함수를 호출 하 여 인쇄 관리자에 게 양보 해야 합니다 `GetMessage` .
 
 ### <a name="return-value"></a>Return Value
 
-인쇄 작업을 계속하는 경우 중단 처리기 함수의 반환 값은 0이 아닌 경우, 취소된 경우 0입니다.
+중단 처리기 함수의 반환 값은 인쇄 작업을 계속 진행 하는 경우 0이 아니고 취소 된 경우 0입니다.
 
 ### <a name="remarks"></a>설명
 
-실제 이름은 [CDC:SetAbortProc의](../../mfc/reference/cdc-class.md#setabortproc)비고 섹션에 설명된 대로 내보내야 합니다.
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)의 설명 섹션에 설명 된 대로 실제 이름을 내보내야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [구조체, 스타일, 콜백 및 메시지 맵](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC::열거 객체](../../mfc/reference/cdc-class.md#enumobjects)<br/>
-[CDC::세타보르트프락](../../mfc/reference/cdc-class.md#setabortproc)<br/>
-[CDC::그레이스트링](../../mfc/reference/cdc-class.md#graystring)
+[CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)

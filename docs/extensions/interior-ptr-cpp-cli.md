@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172154"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214271"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr(C++/CLI)
 
@@ -45,10 +45,10 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>매개 변수
 
 *cv_qualifier*<br/>
-**const** 또는 **volatile** 한정자입니다.
+**`const`** 또는 **`volatile`** 한정자입니다.
 
 *type*<br/>
-‘이니셜라이저’의 형식입니다.
+‘이니셜라이저’의 형식입니다.**
 
 *var*<br/>
 **interior_ptr** 변수의 이름입니다.
@@ -66,7 +66,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 내부 포인터가 스택에만 존재하므로 내부 포인터의 주소는 관리되지 않는 포인터를 생성합니다.
 
-**interior_ptr**은 암시적으로 **bool**로 변환되므로 조건문에 사용할 수 있습니다.
+**interior_ptr** 는로의 암시적 변환이 있으므로 **`bool`** 조건문에서 사용할 수 있습니다.
 
 가비지 수집된 힙에서 이동할 수 없는 개체를 가리키는 내부 포인터를 선언하는 방법에 대한 자세한 내용은 [pin_ptr](pin-ptr-cpp-cli.md)을 참조하세요.
 
@@ -76,17 +76,17 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 - [방법: 내부 포인터 및 관리되는 배열 선언 및 사용(C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [방법: interior_ptr 키워드를 사용 하 여 값 형식 선언 (c + +/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
 - [방법: 내부 포인터 및 네이티브 포인터를 사용하여 함수 오버로드(C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [방법: const 키워드를 사용하여 내부 포인터 선언(C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [방법: const 키워드(C++/CLI)를 사용하여 내부 포인터 선언](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>요구 사항
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 샘플에서는 참조 형식으로 내부 포인터를 선언하고 사용하는 방법을 보여 줍니다.
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

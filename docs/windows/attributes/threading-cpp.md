@@ -1,17 +1,17 @@
 ---
-title: 스레딩 (C++ COM 특성)
+title: 스레딩 (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193070"
 ---
 # <a name="threading-c"></a>threading(C++)
 
@@ -28,23 +28,23 @@ COM 개체의 스레딩 모델을 지정 합니다.
 *model*<br/>
 필드 다음 스레딩 모델 중 하나입니다.
 
-- `apartment` (아파트 스레딩)
+- `apartment`(아파트 스레딩)
 
-- `neutral` (사용자 인터페이스가 없는 구성 요소 .NET Framework)
+- `neutral`(사용자 인터페이스가 없는 .NET Framework 구성 요소)
 
-- `single` (단순 스레딩)
+- `single`(단순 스레딩)
 
-- `free` (자유 스레딩)
+- `free`(자유 스레딩)
 
-- `both` (아파트 및 자유 스레딩)
+- `both`(아파트 및 자유 스레딩)
 
 기본값은 `apartment`입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**스레딩** C++ 특성은 생성 된 .idl 파일에 표시 되지 않지만 COM 개체의 구현에 사용 됩니다.
+**스레딩** c + + 특성은 생성 된 .idl 파일에 표시 되지 않지만 COM 개체의 구현에 사용 됩니다.
 
-ATL 프로젝트에서 [coclass](coclass.md) 특성도 있으면 *model* 에 지정 된 스레딩 모델이 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) 클래스에 템플릿 매개 변수로 전달 되 고 `coclass` 특성에 의해 삽입 됩니다.
+ATL 프로젝트에서 [coclass](coclass.md) 특성도 있는 경우 *model* 에 지정 된 스레딩 모델은 특성에 의해 삽입 된 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) 클래스에 템플릿 매개 변수로 전달 됩니다 `coclass` .
 
 또한 **스레딩** 특성은 [event_source](event-source.md)에 대 한 액세스를 보호 합니다.
 
@@ -58,8 +58,8 @@ ATL 프로젝트에서 [coclass](coclass.md) 특성도 있으면 *model* 에 지
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|아니요|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
 |**필수 특성**|**coclass**|
 |**잘못된 특성**|없음|
 
@@ -70,5 +70,5 @@ ATL 프로젝트에서 [coclass](coclass.md) 특성도 있으면 *model* 에 지
 [COM 특성](com-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>
 [클래스 특성](class-attributes.md)<br/>
-[이전 코드를 위한 다중 스레드 지원(Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
+[이전 코드에 대 한 다중 스레딩 지원 (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [중립 아파트](/windows/win32/cossdk/neutral-apartments)

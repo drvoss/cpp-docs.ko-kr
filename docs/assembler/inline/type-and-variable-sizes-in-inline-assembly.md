@@ -13,12 +13,12 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: bc98c8561a7fd06f875781802558cdd7e71a67ec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e244aaa8ea849b558b77c3f1569820079f6f76c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169242"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191614"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>인라인 어셈블리의 형식 및 다양한 크기
 
@@ -28,11 +28,11 @@ ms.locfileid: "80169242"
 
 - **LENGTH** 연산자는 배열의 요소 수를 반환할 수 있습니다. 배열이 아닌 변수에 대해 값 1을 반환합니다.
 
-- **Size** 연산자는 C 또는 C++ 변수의 크기를 반환할 수 있습니다. 변수의 크기는 해당 **길이** 와 **형식의**곱입니다.
+- **Size** 연산자는 c 또는 c + + 변수의 크기를 반환할 수 있습니다. 변수의 크기는 해당 **길이** 와 **형식의**곱입니다.
 
-- **형식** 연산자는 C 또는 C++ 형식 또는 변수의 크기를 반환할 수 있습니다. 변수가 배열인 경우 **형식은** 배열의 단일 요소 크기를 반환 합니다.
+- **형식** 연산자는 c 또는 c + + 형식 또는 변수의 크기를 반환할 수 있습니다. 변수가 배열인 경우 **형식은** 배열의 단일 요소 크기를 반환 합니다.
 
-예를 들어 프로그램에 8 개 요소 **정수** 배열이 있는 경우
+예를 들어 프로그램에 8 개의 요소 배열이 있는 경우 **`int`**
 
 ```cpp
 int arr[8];
@@ -42,12 +42,12 @@ int arr[8];
 
 |__asm|C|크기|
 |-------------|-------|----------|
-|**길이** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
-|**크기** arr|`sizeof`(arr)|32|
-|Arr **형식**|`sizeof`(arr[0])|4|
+|**길이** arr|`sizeof(arr)/sizeof(arr[0])`|8|
+|**크기** arr|`sizeof(arr)`|32|
+|Arr **형식**|`sizeof(arr[0])`|4|
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[__asm 블록에서 어셈블리 언어 사용](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
+[__Asm 블록에서 어셈블리 언어 사용](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

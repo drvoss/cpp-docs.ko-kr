@@ -1,5 +1,5 @@
 ---
-title: 이벤트 클래스(WRL)
+title: 이벤트 클래스 (WRL)
 ms.date: 09/24/2018
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27a90bb801d1b6869b2391227464bb215dd42538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220485"
 ---
-# <a name="event-class-wrl"></a>이벤트 클래스(WRL)
+# <a name="event-class-wrl"></a>이벤트 클래스 (WRL)
 
 이벤트를 나타냅니다.
 
@@ -32,15 +32,15 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-속성                   | Description
+이름                   | 설명
 ---------------------- | ------------------------------------------------
-[이벤트::이벤트](#event) | `Event` 클래스의 새 인스턴스를 초기화합니다.
+[Event:: Event](#event) | `Event` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-operators"></a>Public 연산자
 
-속성                                 | Description
+Name                                 | 설명
 ------------------------------------ | ------------------------------------------------------------------------
-[이벤트::연산자=](#operator-assign) | 현재 `Event` 인스턴스에 `Event` 지정된 참조를 할당합니다.
+[Event:: operator =](#operator-assign) | 지정 된 `Event` 참조를 현재 인스턴스에 할당 합니다 `Event` .
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -50,11 +50,11 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** 코어래퍼.h
+**헤더:** corewrappers.h
 
-**네임스페이스:** 마이크로소프트::WRL::래퍼
+**네임 스페이스:** Microsoft:: WRL:: 래퍼
 
-## <a name="eventevent"></a><a name="event"></a>이벤트::이벤트
+## <a name="eventevent"></a><a name="event"></a>Event:: Event
 
 `Event` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>매개 변수
 
-*H*<br/>
-이벤트에 대한 핸들. 기본적으로 *h는* `nullptr`에 초기화됩니다.
+*h*<br/>
+이벤트에 대한 핸들. 기본적으로 *h* 는로 초기화 됩니다 **`nullptr`** .
 
-## <a name="eventoperator"></a><a name="operator-assign"></a>이벤트::연산자=
+## <a name="eventoperator"></a><a name="operator-assign"></a>Event:: operator =
 
-현재 `Event` 인스턴스에 `Event` 지정된 참조를 할당합니다.
+지정 된 `Event` 참조를 현재 인스턴스에 할당 합니다 `Event` .
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,9 +84,9 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>매개 변수
 
-*H*<br/>
-인스턴스에 대한 rvalue `Event` 참조입니다.
+*h*<br/>
+인스턴스에 대 한 rvalue 참조 `Event` 입니다.
 
 ### <a name="return-value"></a>Return Value
 
-현재 `Event` 인스턴스에 대한 포인터입니다.
+현재 인스턴스에 대 한 포인터 `Event` 입니다.

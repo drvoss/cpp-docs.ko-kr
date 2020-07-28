@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916883"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220771"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -79,7 +79,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **acos** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **acos** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **acos** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **acos** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -139,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

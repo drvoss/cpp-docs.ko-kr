@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189287"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -65,7 +65,7 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>Return Value
 
-**fgetc** 는 **int** 로 읽은 문자를 반환 하거나 **EOF** 를 반환 하 여 오류 또는 파일의 끝을 표시 합니다. **fgetwc** 는 [wint_t](../../c-runtime-library/standard-types.md)로 반환 하거나, 오류 또는 파일의 끝을 나타내기 위해 **weof** 를 반환 하는 와이드 문자를 반환 합니다. 두 함수 모두에서 **feof** **ferror** 를 사용 하 여 오류와 파일 끝 조건을 구분 합니다. 읽기 오류가 발생하는 경우 스트림에 대한 오류 표시기가 설정됩니다. *Stream* 이 **NULL**인 경우 **Fgetc** 및 **fgetwc** 는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EOF**를 반환 합니다.
+**fgetc** 는로 읽은 문자를 반환 **`int`** 하거나 **EOF** 를 반환 하 여 오류 또는 파일의 끝을 표시 합니다. **fgetwc** 는 [wint_t](../../c-runtime-library/standard-types.md)로 반환 하거나, 오류 또는 파일의 끝을 나타내기 위해 **weof** 를 반환 하는 와이드 문자를 반환 합니다. 두 함수 모두에서 **feof** **ferror** 를 사용 하 여 오류와 파일 끝 조건을 구분 합니다. 읽기 오류가 발생하는 경우 스트림에 대한 오류 표시기가 설정됩니다. *Stream* 이 **NULL**인 경우 **Fgetc** 및 **fgetwc** 는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EOF**를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -89,7 +89,7 @@ wint_t fgetwc(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> 또는 \<wchar.h>|

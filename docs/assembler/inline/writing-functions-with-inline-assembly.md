@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3ce42147693f0c4c180076c627ef88c182745186
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169060"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191003"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>인라인 어셈블리로 함수 작성
 
@@ -76,10 +76,10 @@ int power2( int num, int power )
 
 인라인 버전의 `power2` 함수는 이름으로 인수를 참조하며 프로그램의 나머지 부분과 동일한 소스 파일에 나타납니다. 또한 이 버전에는 더 적은 어셈블리 명령이 필요합니다.
 
-인라인 버전의 `power2`가 C `return` 문을 실행하지 않으므로 경고 수준 2 이상에서 컴파일할 경우 해롭지 않은 경고가 발생합니다. 함수가 값을 반환하지만 `return` 문이 없을 경우 컴파일러가 그 사실을 알릴 수 없습니다. [#Pragma 경고](../../preprocessor/warning.md) 를 사용 하 여이 경고를 생성 하지 않도록 설정할 수 있습니다.
+인라인 버전의는 `power2` C 문을 실행 하지 않기 때문에 **`return`** 경고 수준 2 이상에서 컴파일하는 경우에는 무해 한 경고가 발생 합니다. 함수는 값을 반환 하지만 컴파일러가 문이 없을 때이를 알 수 없습니다 **`return`** . [#Pragma 경고](../../preprocessor/warning.md) 를 사용 하 여이 경고를 생성 하지 않도록 설정할 수 있습니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[__asm 블록에서 C 또는 C++ 사용](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[__Asm 블록에서 C 또는 c + + 사용](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

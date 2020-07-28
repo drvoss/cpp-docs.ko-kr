@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2adfd0de21a5dc7a1f3aa65041a6b8a9a9cf1d69
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742797"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189508"
 ---
 # <a name="memory-allocation"></a>메모리 할당
 
@@ -21,7 +21,7 @@ ms.locfileid: "57742797"
 
 ## <a name="memory-allocation-routines"></a>메모리 할당 루틴
 
-|루틴에서 반환된 값|기능|
+|루틴에서 반환된 값|Windows Server Update Services와 함께|
 |-------------|---------|
 |[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|스택에서 메모리 할당|
 |[calloc](../c-runtime-library/reference/calloc.md)|할당된 블록에서 모든 바이트를 0으로 초기화하는 배열에 스토리지 할당|
@@ -30,7 +30,7 @@ ms.locfileid: "57742797"
 |[operator delete&#91;&#93;](../c-runtime-library/delete-operator-crt.md)|할당된 블록 확보|
 |[_expand](../c-runtime-library/reference/expand.md)|이동하지 않고 메모리 블록을 확장명 또는 축소|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|**_expand**의 디버그 버전이며, 런타임 라이브러리의 디버그 버전에서만 사용할 수 있습니다.|
-|[free](../c-runtime-library/reference/free.md)|할당된 블록 확보|
+|[늘릴](../c-runtime-library/reference/free.md)|할당된 블록 확보|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|**free**의 디버그 버전이며, 런타임 라이브러리의 디버그 버전에서만 사용할 수 있습니다.|
 |[_freea](../c-runtime-library/reference/freea.md)|스택에서 할당된 블록 확보|
 |[_get_heap_handle](../c-runtime-library/reference/get-heap-handle.md)|CRT 힙의 Win32 HANDLE을 가져옵니다.|
@@ -49,7 +49,7 @@ ms.locfileid: "57742797"
 |[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|**malloc**에 대한 **_set_new_mode**에서 설정한 새 처리기 모드를 나타내는 정수를 반환합니다.|
 |[realloc](../c-runtime-library/reference/realloc.md)|새 크기로 블록 다시 할당|
 |[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|**realloc**의 디버그 버전이며, 런타임 라이브러리의 디버그 버전에서만 사용할 수 있습니다.|
-|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|**new** 연산자가 실패하고(메모리 할당) C++ 표준 라이브러리의 컴파일을 사용하도록 설정하는 경우 오류 처리 메커니즘을 사용하도록 설정합니다.|
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|**`new`** 연산자가 메모리를 할당 하는 데 실패 하 고 c + + 표준 라이브러리의 컴파일을 사용 하도록 설정 하는 경우 오류 처리 메커니즘 사용|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|**malloc**에 대한 새 처리기 모드를 설정합니다.|
 
 ## <a name="see-also"></a>참고 항목

@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: aec4df98413bf34ac1e2966d012bb905edd4775e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e12855127e417472eb88c951b71881240b808013
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214206"
 ---
 # <a name="__noop"></a>__noop
 
 **Microsoft 전용**
 
-`__noop` 내장 함수는 함수를 무시 하도록 지정 합니다. 인수 목록은 구문 분석 되지만 인수에 대해서는 코드가 생성 되지 않습니다. 가변 개수의 인수를 사용 하는 전역 디버그 함수에서 사용 하기 위한 것입니다.
+**`__noop`** 내장 함수는 함수를 무시 하도록 지정 합니다. 인수 목록은 구문 분석 되지만 인수에 대해서는 코드가 생성 되지 않습니다. 가변 개수의 인수를 사용 하는 전역 디버그 함수에서 사용 하기 위한 것입니다.
 
-컴파일러는 컴파일 시간에 `__noop` 내장 함수를 0으로 변환 합니다.
+컴파일러는 **`__noop`** 컴파일 타임에 내장 함수를 0으로 변환 합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드는 `__noop`를 사용 하는 방법을 보여 줍니다.
+다음 코드에서는를 사용 하는 방법을 보여 줍니다 **`__noop`** .
 
 ```cpp
 // compiler_intrinsics__noop.cpp

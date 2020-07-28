@@ -4,26 +4,26 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245617"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187701"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>방법: 예외 코드와 비 예외 코드 간 인터페이스
 
 이 문서에서는 C++ 모듈에서 일관된 예외 처리를 구현하는 방법 및 예외 경계에서 이러한 예외를 오류 코드에서 및 오류 코드로 변환하는 방법을 설명합니다.
 
-경우에 따라 C++ 모듈은 예외를 사용하지 않는 코드(비예외 코드)와 인터페이스로 연결해야 합니다. 이러한 인터페이스를 *예외 경계*라고 합니다. 예를 들어 C++ 프로그램에서 `CreateFile` Wind32 함수를 호출할 수 있습니다. `CreateFile`는 예외를 throw 하지 않습니다. 대신 `GetLastError` 함수로 검색할 수 있는 오류 코드를 설정 합니다. C++ 프로그램이 특수한 경우라면 일관된 예외 기반의 오류 처리 정책을 지키는 것이 좋습니다. 비예외 코드와 인터페이스로 연결하므로 예외의 중단을 원하지 않을 것이며 C++ 모듈에서 예외 및 비예외 기반 오류 정책의 혼합을 원하지도 않을 것입니다.
+경우에 따라 C++ 모듈은 예외를 사용하지 않는 코드(비예외 코드)와 인터페이스로 연결해야 합니다. 이러한 인터페이스를 *예외 경계*라고 합니다. 예를 들어 C++ 프로그램에서 `CreateFile` Wind32 함수를 호출할 수 있습니다. `CreateFile`은 예외를 throw하지 않습니다. 대신 `GetLastError` 함수로 검색할 수 있는 오류 코드를 설정합니다. C++ 프로그램이 특수한 경우라면 일관된 예외 기반의 오류 처리 정책을 지키는 것이 좋습니다. 비예외 코드와 인터페이스로 연결하므로 예외의 중단을 원하지 않을 것이며 C++ 모듈에서 예외 및 비예외 기반 오류 정책의 혼합을 원하지도 않을 것입니다.
 
-## <a name="calling-non-exceptional-functions-from-c"></a>에서 비 예외 함수 호출C++
+## <a name="calling-non-exceptional-functions-from-c"></a>C + +에서 비 예외 함수 호출
 
 C++에서 비예외 함수를 호출하는 경우 오류를 검색한 다음 예외를 throw할 수 있는 C++ 함수에서 해당 함수를 래핑합니다. 이러한 래퍼 함수를 디자인하는 경우 먼저 제공을 위해 throw 없음, 강력 또는 기본 같이 예외 보장의 형식을 결정합니다. 두 번째로 예외가 throw된 경우 모든 리소스(예: 파일 핸들)가 올바르게 해제되도록 함수를 디자인합니다. 일반적으로 이는 스마트 포인터 또는 유사한 리소스 관리자를 사용하여 리소스를 소유함을 의미합니다. 디자인 고려 사항에 대 한 자세한 내용은 [방법: 예외 보안 디자인](how-to-design-for-exception-safety.md)을 참조 하세요.
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 Win32 `CreateFile` 및 `ReadFile` 함수를 사용하여 내부적으로 두 파일을 읽고 여는 C++ 함수를 보여 줍니다.  `File` 클래스는 파일 핸들에 대한 RAII(Resource Acquisition Is Initialization) 래퍼입니다. 해당 생성자는 "파일을 찾을 수 없음" 상태를 감지하고 C++ 모듈(이 예제에서 `main()` 함수)의 호출 스택 위로 오류를 전파하기 위해 예외를 throw합니다. `File` 개체가 완전히 생성된 후 예외가 throw된 경우 소멸자는 파일 핸들을 해제하기 위해 자동으로 `CloseHandle`을 호출합니다. (원하는 경우 ATL (액티브 템플릿 라이브러리) `CHandle` 클래스를 같은 용도로 사용 하거나 `unique_ptr` 사용자 지정 deleter 함께 사용할 수 있습니다.) Win32 및 CRT Api를 호출 하는 함수는 오류를 검색 C++ 한 다음 로컬로 정의 된 `ThrowLastErrorIf` 함수를 사용 하 여 예외를 throw 합니다. 그러면이 함수는 `runtime_error` 클래스에서 파생 된 `Win32Exception` 클래스를 사용 합니다. 이 예제의 모든 함수는 강력한 예외 보장을 제공합니다. 언제든지 이러한 함수에서 예외가 throw되면 리소스가 손실되지 않고 프로그램 상태가 수정되지 않습니다.
+다음 예제에서는 Win32 `CreateFile` 및 `ReadFile` 함수를 사용하여 내부적으로 두 파일을 읽고 여는 C++ 함수를 보여 줍니다.  `File` 클래스는 파일 핸들에 대한 RAII(Resource Acquisition Is Initialization) 래퍼입니다. 해당 생성자는 "파일을 찾을 수 없음" 상태를 감지하고 C++ 모듈(이 예제에서 `main()` 함수)의 호출 스택 위로 오류를 전파하기 위해 예외를 throw합니다. `File` 개체가 완전히 생성된 후 예외가 throw된 경우 소멸자는 파일 핸들을 해제하기 위해 자동으로 `CloseHandle`을 호출합니다. (원하는 경우 ATL (액티브 템플릿 라이브러리) `CHandle` 클래스를 동일한 용도로 사용 하거나 `unique_ptr` 사용자 지정 deleter와 함께 사용할 수 있습니다.) Win32 및 CRT Api를 호출 하는 함수는 오류를 검색 한 다음 로컬로 정의 된 함수를 사용 하 여 c + + 예외를 throw 합니다 `ThrowLastErrorIf` .이 함수는 `Win32Exception` 클래스에서 파생 된 클래스를 사용 합니다 `runtime_error` . 이 예제의 모든 함수는 강력한 예외 보장을 제공합니다. 언제든지 이러한 함수에서 예외가 throw되면 리소스가 손실되지 않고 프로그램 상태가 수정되지 않습니다.
 
 ```cpp
 // compile with: /EHsc
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-예외에서 오류 코드로 변환하는 경우 잠재적인 문제 하나는 대개 예외에서 저장될 수 있는 다양한 정보가 오류 코드에 포함되지 않는다는 점입니다. 이를 해결 하기 위해 throw 될 수 있는 각 예외 형식에 대 한 **catch** 블록을 제공 하 고, 오류 코드로 변환 되기 전에 예외에 대 한 세부 정보를 기록 하기 위해 로깅을 수행할 수 있습니다. 이 방법은 여러 함수가 모두 동일한 **catch** 블록 집합을 사용 하는 경우 많은 코드 반복을 만들 수 있습니다. 코드 반복을 방지 하는 좋은 방법은 **try** 블록과 **catch** 블록을 구현 하 고 **try** 블록에서 호출 되는 함수 개체를 허용 하는 하나의 개인 유틸리티 함수로 이러한 블록을 리팩터링 하는 것입니다. 각 공용 함수에서 람다 식으로 유틸리티 함수에 코드를 전달합니다.
+예외에서 오류 코드로 변환하는 경우 잠재적인 문제 하나는 대개 예외에서 저장될 수 있는 다양한 정보가 오류 코드에 포함되지 않는다는 점입니다. 이를 해결 하기 위해 **`catch`** throw 될 수 있는 각 예외 형식에 대 한 블록을 제공 하 고, 오류 코드로 변환 되기 전에 예외 정보를 기록 하기 위해 로깅을 수행할 수 있습니다. 이 방법은 여러 함수가 모두 동일한 블록 집합을 사용 하는 경우 많은 코드 반복을 만들 수 있습니다 **`catch`** . 코드 반복을 방지 하는 좋은 방법은 및 블록을 구현 하 **`try`** **`catch`** 고 블록에서 호출 되는 함수 개체를 허용 하는 하나의 개인 유틸리티 함수로 이러한 블록을 리팩터링 하는 것입니다 **`try`** . 각 공용 함수에서 람다 식으로 유틸리티 함수에 코드를 전달합니다.
 
 ```cpp
 template<typename Func>
@@ -232,9 +232,9 @@ bool DiffFiles3(const string& file1, const string& file2)
 }
 ```
 
-람다 식에 대한 자세한 내용은 [람다 식](lambda-expressions-in-cpp.md)을 참조하세요.
+람다 식에 대 한 자세한 내용은 [람다 식](lambda-expressions-in-cpp.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[예외 C++ 및 오류 처리에 대 한 최신 모범 사례](errors-and-exception-handling-modern-cpp.md)<br/>
+[예외 및 오류 처리에 대 한 최신 c + + 모범 사례](errors-and-exception-handling-modern-cpp.md)<br/>
 [방법: 예외 안전성을 위한 디자인](how-to-design-for-exception-safety.md)<br/>

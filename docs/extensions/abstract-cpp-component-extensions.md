@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516168"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214297"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract(C++/CLI 및 C++/CX)
 
@@ -29,11 +29,11 @@ ms.locfileid: "65516168"
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`***반환 형식* *멤버 함수-식별자* **() abstract;**
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 예제 구문에서는 클래스를 추상으로 선언합니다. *class-declaration* 구성 요소는 네이티브 C++ 선언(**class** 또는 **struct**)이거나, `/ZW` 또는 `/clr` 컴파일러 옵션을 지정한 경우 C++ 확장 선언(**ref class** 또는 **ref struct**)일 수 있습니다.
+첫 번째 예제 구문에서는 클래스를 추상으로 선언합니다. *클래스 선언* 구성 요소는 네이티브 c + + 선언 (* * * * 또는) 이거나 또는 컴파일러 옵션이 지정 된 경우** `class` **`struct`** c + + 확장 선언 (** ref 클래스 * * 또는 **ref 구조체**) 일 수 있습니다 `/ZW` `/clr` .
 
 두 번째 예제 구문에서는 가상 멤버 함수를 추상으로 선언합니다. 함수를 추상으로 선언하는 것은 함수를 순수 가상 함수로 선언하는 것과 같습니다. 멤버 함수를 추상으로 선언하면 바깥쪽 클래스가 추상으로 선언됩니다.
 
@@ -41,11 +41,11 @@ ms.locfileid: "65516168"
 
 컴파일 시간에 `__is_abstract(type)` 형식 특성을 사용하여 형식이 추상인지 여부를 검색할 수 있습니다. 자세한 내용은 [형식 특성에 대한 컴파일러 지원](compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하세요.
 
-**abstract** 키워드는 상황에 맞는 재정의 지정자입니다. 상황에 맞는 키워드에 대한 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. 재정의 지정자에 대한 자세한 내용은 [방법: 네이티브 컴파일에 재정의 지정자 선언](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)을 참조하세요.
+**abstract** 키워드는 상황에 맞는 재정의 지정자입니다. 상황에 맞는 키워드에 대한 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. 재정의 지정자에 대 한 자세한 내용은 [방법: 네이티브 컴파일에 재정의 지정자 선언](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)을 참조 하세요.
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-자세한 내용은 [Ref 클래스 및 구조체](../cppcx/ref-classes-and-structs-c-cx.md)를 참조하세요.
+자세한 내용은 [Ref 클래스 및 구조체](../cppcx/ref-classes-and-structs-c-cx.md)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -102,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

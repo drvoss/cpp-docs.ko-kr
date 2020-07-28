@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: e125a532f87533958ec43ed5580665ad4108856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400801"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214362"
 ---
 # <a name="compiler-warning-level-4-c4463"></a>컴파일러 경고 (수준 4) C4463
 
-> 오버플로. 할당 *값* 의 값만 포함할 수 있는 비트 필드에 *low_value* 에 *high_value*
+> 오버플로 *low_value* *high_value* 에만 값을 보유할 수 있는 비트 필드에 *값* 할당
 
-할당 된 *값* 비트 필드를 보유할 수 있는 값의 범위를 벗어났습니다. 부호 있는 비트 필드 형식에 부호에 대 한 비트 우선 순서를 사용 하면 *n* 부호 있는 비트 필드는-2는 비트 필드 크기 범위<sup>n-1</sup> 2<sup>n-1</sup>-1, 부호 없는 동안 비트 필드 범위가 0에서 2로<sup>n</sup>-1입니다.
+할당 된 *값* 이 비트 필드에서 보유할 수 있는 값 범위를 벗어납니다. 부호 있는 비트 필드 형식은 부호에 대해 상위 비트를 사용 하므로 *n* 이 비트 필드 크기인 경우 부호 있는 비트 필드의 범위는-2<sup>n-1</sup> -2<sup>n-1</sup>-1이 고, 부호 없는 비트 필드의 범위는 0에서 2<sup>n</sup>-1 사이입니다.
 
 ## <a name="example"></a>예제
 
-형식의 비트 필드에 값 3 할당 하려고 했기 때문에이 예제에서는 생성 C4463 `int` 크기가 2는 범위가-2에서 1로 합니다.
+이 예제에서는 크기가 2 인 형식의 비트 필드에 값 3을 할당 하려고 하기 때문에 C4463를 생성 **`int`** 합니다. 범위는-2에서 1 사이입니다.
 
-이 문제를 해결 하려면 허용 되는 범위의 값으로 할당 된 값을 변경할 수 있습니다. 비트 필드는 0에서 3 사이에 부호 없는 값을 보유할 것을 하는 경우에 선언 형식을 변경할 수 있습니다 `unsigned`합니다. 필드에 범위-4-3 값을 보유할 것을 하는 경우 3 비트 필드 크기를 변경할 수 있습니다.
+이 문제를 해결 하려면 할당 된 값을 허용 된 범위의 특정 값으로 변경할 수 있습니다. 비트 필드에서 0에서 3 범위의 부호 없는 값을 유지 하려면 선언 형식을로 변경 하면 됩니다 **`unsigned`** . 필드에-4에서 3 사이의 값을 저장 하려는 경우 비트 필드 크기를 3으로 변경할 수 있습니다.
 
 ```cpp
 // C4463_overflow.cpp

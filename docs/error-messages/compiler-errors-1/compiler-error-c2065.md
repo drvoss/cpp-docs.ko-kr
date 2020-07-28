@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214817"
 ---
 # <a name="compiler-error-c2065"></a>컴파일러 오류 C2065
 
 > '*identifier*': 선언 되지 않은 식별자입니다.
 
-컴파일러가 식별자에 대 한 선언을 찾을 수 없습니다. 이 오류는 여러 가지 원인으로 인해 발생할 수 있습니다. C2065의 가장 일반적인 원인은 식별자가 선언 되지 않았거나, 식별자의 철자가 틀렸거나, 식별자가 선언 된 헤더가 파일에 포함 되어 있지 않거나, 식별자에 범위 한정자 (예: `cout` 대신)가 없는 것입니다. `std::cout`. 의 C++선언에 대 한 자세한 내용은 [선언 및 정의 (C++)](../../cpp/declarations-and-definitions-cpp.md)를 참조 하세요.
+컴파일러가 식별자에 대 한 선언을 찾을 수 없습니다. 이 오류의 원인은 다양합니다. C2065의 가장 일반적인 원인은 식별자가 선언 되지 않았거나, 식별자의 철자가 틀렸거나, 식별자가 선언 된 헤더가 파일에 포함 되어 있지 않거나, 식별자에 범위 한정자 (예: 대신)가 없는 것입니다 `cout` `std::cout` . C + +의 선언에 대 한 자세한 내용은 [선언 및 정의 (c + +)](../../cpp/declarations-and-definitions-cpp.md)를 참조 하세요.
 
 다음은 몇 가지 일반적인 문제 및 해결 방법입니다.
 
 ## <a name="the-identifier-is-undeclared"></a>식별자가 선언 되지 않았습니다.
 
-식별자가 변수 또는 함수 이름인 경우이를 선언 해야 사용할 수 있습니다. 함수를 사용 하려면 함수 선언에도 해당 매개 변수의 형식이 포함 되어야 합니다. 를 사용 하 여 `auto`변수를 선언 하는 경우 컴파일러는 해당 이니셜라이저에서 형식을 유추할 수 있어야 합니다.
+식별자가 변수 또는 함수 이름인 경우이를 선언 해야 사용할 수 있습니다. 함수를 사용 하려면 함수 선언에도 해당 매개 변수의 형식이 포함 되어야 합니다. 를 사용 하 여 변수를 선언 하는 경우 **`auto`** 컴파일러는 해당 이니셜라이저에서 형식을 유추할 수 있어야 합니다.
 
-식별자가 클래스 또는 구조체의 멤버 이거나 네임 스페이스에 선언 된 경우 클래스 또는 구조체 이름 또는 네임 스페이스 이름 (구조체, 클래스 또는 네임 스페이스 범위 외부에서 사용 되는 경우)으로 정규화 되어야 합니다. `using` 또는와 `using namespace std;`같은 지시문을 통해 네임 스페이스를 범위로 가져와야 하거나,와 `using std::string;`같은 `using` 선언으로 멤버 이름을 가져와야 합니다. 그렇지 않으면 정규화 되지 않은 이름이 현재 범위에서 선언 되지 않은 식별자로 간주 됩니다.
+식별자가 클래스 또는 구조체의 멤버 이거나 네임 스페이스에 선언 된 경우 클래스 또는 구조체 이름 또는 네임 스페이스 이름 (구조체, 클래스 또는 네임 스페이스 범위 외부에서 사용 되는 경우)으로 정규화 되어야 합니다. 또는와 같은 지시문을 통해 네임 스페이스를 범위로 가져와야 **`using`** `using namespace std;` 하거나,와 같은 선언으로 멤버 이름을 가져와야 합니다 **`using`** `using std::string;` . 그렇지 않으면 정규화 되지 않은 이름이 현재 범위에서 선언 되지 않은 식별자로 간주 됩니다.
 
-식별자가 `class` 또는 `struct`와 같은 사용자 정의 형식에 대 한 태그 이면 태그의 형식을 선언 해야만 사용할 수 있습니다. 예를 들어 코드에서 `struct SomeStruct { /*...*/ };` 변수 `SomeStruct myStruct;` 를 선언 하려면 선언이 있어야 합니다.
+식별자가 또는와 같은 사용자 정의 형식에 대 한 태그 이면 **`class`** **`struct`** 태그의 형식을 선언 해야만 사용할 수 있습니다. 예를 들어 `struct SomeStruct { /*...*/ };` 코드에서 변수를 선언 하려면 선언이 있어야 합니다 `SomeStruct myStruct;` .
 
-식별자가 형식 별칭이 면 `using` 선언을 사용 하 여 형식을 선언 하거나 `typedef` 사용 하기 전에 형식을 선언 해야 합니다. 예를 들어를에 대 `using my_flags = std::ios_base::fmtflags;` 한 `std::ios_base::fmtflags`형식 별칭으로 `my_flags` 사용 하려면 먼저를 선언 해야 합니다.
+식별자가 형식 별칭이 면 선언을 사용 하 여 형식을 선언 **`using`** 하거나 사용 하기 전에 형식을 선언 해야 합니다 **`typedef`** . 예를 들어를 `using my_flags = std::ios_base::fmtflags;` `my_flags` 에 대 한 형식 별칭으로 사용 하려면 먼저를 선언 해야 합니다 `std::ios_base::fmtflags` .
 
 ## <a name="example-misspelled-identifier"></a>예: 잘못 된 식별자
 
@@ -51,9 +51,9 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>예: 범위가 없는 식별자 사용
 
-식별자의 범위가 올바르게 지정 되지 않은 경우이 오류가 발생할 수 있습니다. 를 사용할 `cout`때 C2065가 표시 되 면이는 원인입니다. 표준 C++ 라이브러리 함수 및 연산자가 네임 스페이스로 정규화 되지 않았거나 `std` `using` 지시문을 사용 하 여 네임 스페이스를 현재 범위로 전환 하지 않은 경우 컴파일러는 해당 함수를 찾을 수 없습니다. 이 문제를 해결 하려면 식별자 이름을 정규화 하거나 `using` 지시문을 사용 하 여 네임 스페이스를 지정 해야 합니다.
+식별자의 범위가 올바르게 지정 되지 않은 경우이 오류가 발생할 수 있습니다. 를 사용할 때 C2065 `cout` 가 표시 되 면이는 원인입니다. C + + 표준 라이브러리 함수 및 연산자가 네임 스페이스로 정규화 되지 않았거나 `std` 지시문을 사용 하 여 네임 스페이스를 현재 범위로 전환 하지 않은 경우 **`using`** 컴파일러는 해당 함수를 찾을 수 없습니다. 이 문제를 해결 하려면 식별자 이름을 정규화 하거나 지시문을 사용 하 여 네임 스페이스를 지정 해야 합니다 **`using`** .
 
-이 예에서는 및 `cout` `endl` 가 `std` 네임 스페이스에 정의 되어 있기 때문에 컴파일되지 않습니다.
+이 예에서는 `cout` 및 `endl` 가 네임 스페이스에 정의 되어 있기 때문에 컴파일되지 않습니다 `std` .
 
 ```cpp
 // C2065_scope.cpp
@@ -69,13 +69,13 @@ int main() {
 }
 ```
 
-`class` ,`struct`또는 형식`enum class` 내에서 선언 된 식별자는 해당 범위 외부에서 사용할 때 바깥쪽 범위의 이름으로도 정규화 되어야 합니다.
+, 또는 형식 내에서 선언 된 식별자 **`class`** **`struct`** **`enum class`** 는 해당 범위 외부에서 사용할 때 바깥쪽 범위의 이름으로도 정규화 되어야 합니다.
 
 ## <a name="example-precompiled-header-isnt-first"></a>예: 미리 컴파일된 헤더는 먼저 수행 되지 않습니다.
 
 #Include, #define, #pragma 등의 전처리기 지시문을 미리 컴파일된 헤더 파일 #include 앞에 배치 하는 경우이 오류가 발생할 수 있습니다. 소스 파일이 미리 컴파일된 헤더 파일을 사용 하는 경우 (즉, **/yu** 컴파일러 옵션을 사용 하 여 컴파일된 경우) 미리 컴파일된 헤더 파일 이전의 모든 전처리기 지시문이 무시 됩니다.
 
-이 예제는 미리 컴파일된 헤더 `cout` 파일 `endl` 앞에 포함 되기 \<때문에 무시 되는 iostream > 헤더에가 정의 되어 있기 때문에 컴파일되지 않습니다. 이 예를 빌드하려면 세 개의 파일을 모두 만든 다음, stdafx.h를 컴파일한 다음 C2065_pch을 컴파일합니다.
+이 예제는 `cout` `endl` \<iostream> 미리 컴파일된 헤더 파일 앞에 포함 되기 때문에 무시 되는 헤더에가 정의 되어 있기 때문에 컴파일되지 않습니다. 이 예를 빌드하려면 세 개의 파일을 모두 만든 다음 stdafx.h를 컴파일한 다음 C2065_pch을 컴파일합니다.
 
 ```cpp
 // pch.h (stdafx.h in Visual Studio 2017 and earlier)
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-이 문제를 해결 하려면 iostream >의 \<#include를 미리 컴파일된 헤더 파일에 추가 하거나, 미리 컴파일된 헤더 파일이 원본 파일에 포함 된 후 이동 합니다.
+이 문제를 해결 하려면 #include를 \<iostream> 미리 컴파일된 헤더 파일에 추가 하거나, 미리 컴파일된 헤더 파일이 소스 파일에 포함 된 후에이 파일을 이동 합니다.
 
 ## <a name="example-missing-header-file"></a>예: 헤더 파일이 누락 됨
 
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Initializer_list > 헤더를 \<포함 하지 않고 이니셜라이저 목록을 사용 하는 경우 또 다른 가능한 원인이 있습니다.
+또 다른 가능한 원인은 헤더를 포함 하지 않고 이니셜라이저 목록을 사용 하는 경우입니다 \<initializer_list> .
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,7 +134,7 @@ int main() {
 }
 ```
 
-, 또는 `VC_EXTRALEAN` 을`WIN32_EXTRA_LEAN`정의 하는 경우 Windows 데스크톱 앱 소스 파일에이 오류가 표시 될 수 있습니다. `WIN32_LEAN_AND_MEAN` 이러한 전처리기 매크로는 windows .h 및 afxv\_w32.slammer에서 일부 헤더 파일을 제외 하 여 컴파일을 가속화 합니다. Windows .h 및 afxv_w32에서 제외 된 항목에 대 한 최신 설명을 확인 하세요.
+, 또는을 정의 하는 경우 Windows 데스크톱 앱 소스 파일에이 오류가 표시 될 수 있습니다 `VC_EXTRALEAN` `WIN32_LEAN_AND_MEAN` `WIN32_EXTRA_LEAN` . 이러한 전처리기 매크로는 windows .h 및 afxv w32.slammer에서 일부 헤더 파일 \_ 을 제외 하 여 컴파일을 가속화 합니다. Windows. h 및 afxv_w32에서 제외 된 항목에 대 한 최신 설명을 확인 하세요.
 
 ## <a name="example-missing-closing-quote"></a>예: 닫는 따옴표가 없습니다.
 
@@ -155,7 +155,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>예: for 루프 범위 외부에서 반복기 사용
 
-이 오류는 `for` 루프에서 반복기 변수를 선언한 다음 `for` 루프 범위 밖의 반복기 변수를 사용 하려고 할 때 발생할 수 있습니다. 컴파일러는 기본적으로 [/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 컴파일러 옵션을 사용 하도록 설정 합니다. 자세한 내용은 [디버그 반복기 지원](../../standard-library/debug-iterator-support.md) 을 참조 하세요.
+이 오류는 루프에서 반복기 변수를 선언한 **`for`** 다음 루프 범위 밖의 반복기 변수를 사용 하려고 할 때 발생할 수 있습니다 **`for`** . 컴파일러는 기본적으로 [/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 컴파일러 옵션을 사용 하도록 설정 합니다. 자세한 내용은 [디버그 반복기 지원](../../standard-library/debug-iterator-support.md) 을 참조 하세요.
 
 ```cpp
 // C2065_iter.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>예제: C++/CLI 형식 추론 오류
+## <a name="example-ccli-type-deduction-failure"></a>예: c + +/CLI 형식 추론 오류
 
-이 오류는 제네릭 함수를 호출할 때 사용 되는 매개 변수에서 의도 한 형식 인수를 추론할 수 없는 경우 발생할 수 있습니다. 자세한 내용은 [제네릭 함수 (C++/cli)](../../extensions/generic-functions-cpp-cli.md)를 참조 하세요.
+이 오류는 제네릭 함수를 호출할 때 사용 되는 매개 변수에서 의도 한 형식 인수를 추론할 수 없는 경우 발생할 수 있습니다. 자세한 내용은 [제네릭 함수 (c + +/cli)](../../extensions/generic-functions-cpp-cli.md)를 참조 하세요.
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>예제: C++/CLI 특성 매개 변수
+## <a name="example-ccli-attribute-parameters"></a>예: c + +/CLI 특성 매개 변수
 
-이 오류는 Visual Studio 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수도 있습니다. 시각적 C++ 특성에 대 한 매개 변수 검사입니다.
+이 오류는 Visual Studio 2005에 대해 수행 된 컴파일러 규칙 작업의 결과로 생성 될 수도 있습니다. Visual C++ 특성에 대 한 매개 변수 검사입니다.
 
 ```cpp
 // C2065_attributes.cpp

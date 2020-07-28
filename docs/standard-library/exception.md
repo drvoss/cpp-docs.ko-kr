@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457912"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193655"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -19,13 +19,13 @@ ms.locfileid: "68457912"
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<exception>
+**헤더:**\<exception>
 
 **네임스페이스:** std
 
 ## <a name="members"></a>멤버
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ ms.locfileid: "68457912"
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|`terminate_handler`로 사용하는 데 적합한 함수에 대한 포인터를 설명하는 형식입니다.|
 |[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|`unexpected_handler`로 사용하는 데 적합한 함수에 대한 포인터를 설명하는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -45,10 +45,10 @@ ms.locfileid: "68457912"
 |[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|중첩 된 경우를 캐스팅 하 고 예외를 throw 합니다.|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|프로그램을 종료할 때 호출할 새 `terminate_handler`를 설정합니다.|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|예기치 않은 예외가 발생할 경우를 위해 새 `unexpected_handler`를 설정합니다.|
-|[terminate](../standard-library/exception-functions.md#terminate)|종료 처리기를 호출합니다.|
+|[끝나야](../standard-library/exception-functions.md#terminate)|종료 처리기를 호출합니다.|
 |[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|중첩 된 경우 예외를 throw 합니다.|
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|throw된 예외가 현재 처리 중인 경우만 **true**를 반환합니다.|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|예기치 않은 처리기를 호출합니다.|
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|**`true`** Throw 된 예외가 현재 처리 되 고 있는 경우에만를 반환 합니다.|
+|[없는](../standard-library/exception-functions.md#unexpected)|예기치 않은 처리기를 호출합니다.|
 
 ### <a name="classes"></a>클래스
 
@@ -58,7 +58,7 @@ ms.locfileid: "68457912"
 |[exception 클래스](../standard-library/exception-class.md)|이 클래스는 특정 식과 C++ 표준 라이브러리로 throw된 모든 예외에 대한 기본 클래스로 사용됩니다.|
 |[nested_exception 클래스](../standard-library/nested-exception-class.md)|이 클래스는 나중에 사용할 수 있도록 캡처되고 저장할 수 있는 예외를 설명 합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

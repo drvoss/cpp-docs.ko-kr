@@ -2,12 +2,12 @@
 title: Partial 클래스(C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740486"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185465"
 ---
 # <a name="partial-classes-ccx"></a>Partial 클래스(C++/CX)
 
@@ -17,23 +17,23 @@ partial 클래스는 사용자가 클래스 정의의 한 부분을 수정할 �
 
 partial 클래스를 정의하려면 클래스 키 바로 앞에 `partial` 키워드를 사용합니다. 그렇지 않으면 일반 클래스 정의가 됩니다. `partial ref class` 와 같은 키워드는 공백 문자를 포함하는 컨텍스트 키워드입니다. 부분 정의는 다음 생성자에서 지원됩니다.
 
-- `class` 또는 `struct`
+- **`class`** 또는 **`struct`**
 
-- `ref class` 또는 `ref struct`
+- **`ref class`** 또는 **`ref struct`**
 
-- `value class` 또는 `value struct`
+- **`value class`** 또는 **`value struct`**
 
-- `enum` 또는 `enum class`
+- **`enum`** 또는 **`enum class`**
 
-- `ref interface`, `interface class`, `interface struct`또는 `__interface`
+- `ref interface`, **`interface class`** , **`interface struct`** 또는 **' __interface**
 
-- `union`
+- **`union`**
 
-이 예제에서는 partial `ref class`를 보여 줍니다.
+이 예제에서는 부분을 보여 줍니다 **`ref class`** .
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>목차
+## <a name="contents"></a>콘텐츠
 
 partial 클래스 정의에서 `partial` 키워드를 생략할 경우 전체 클래스 정의에 포함될 수 있는 모든 내용이 포함될 수 있습니다. 여기에는 한 가지 경우를 제외하고, 기본 클래스, 데이터 멤버, 멤버 함수, 열거형, friend 선언 및 특성과 같은 모든 유효한 생성자가 포함됩니다. 정적 데이터 멤버의 인라인 정의가 허용됩니다.
 
@@ -61,7 +61,7 @@ Declaration #5는 `partial` 키워드를 사용하지 않으며 선언이 *MyCla
 
 클래스의 모든 부분 클래스 정의는 어휘적으로 해당 클래스의 전체 정의보다 앞에 나와야 하지만 클래스의 정방향 선언보다 앞에 나올 필요는 없습니다. 클래스의 전체 정의가 없는 경우 부분 클래스 선언만 정방향 선언이 될 수 있습니다.
 
-`class` 및 `struct` 와 같은 모든 클래스 키가 일치해야 합니다. 예를 들어, `partial class X {}; struct X {};`만 생성합니다.
+및와 같은 모든 클래스 키 **`class`** 가 **`struct`** 일치 해야 합니다. 예를 들어, `partial class X {}; struct X {};`만 생성합니다.
 
 다음 예제에서는 번호 및 순서 지정을 보여 줍니다. 클래스가 이미 정의되어 있으므로 마지막 partial 선언은 실패합니다.
 
@@ -85,9 +85,9 @@ partial 클래스는 템플릿이 될 수 없습니다.
 
 partial 클래스는 번역 단위를 벗어날 수 없습니다.
 
-`partial` 키워드는 `ref class` 키워드 또는 `value class` 키워드와 함께만 사용할 수 있습니다.
+키워드는 `partial` **`ref class`** 키워드 또는 키워드와 함께 사용할 때만 지원 됩니다 **`value class`** .
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 예제는 두 코드 파일에 걸쳐 `Address` 클래스를 정의합니다. 디자이너가 `Address.details.h` 를 수정하고 사용자가 `Address.h`를 수정합니다. 첫 번째 파일의 클래스 정의만 `partial` 키워드를 사용합니다.
 
@@ -95,8 +95,8 @@ partial 클래스는 번역 단위를 벗어날 수 없습니다.
 
 [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[형식 시스템](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[네임스페이스 참조](../cppcx/namespaces-reference-c-cx.md)
+[유형 시스템](../cppcx/type-system-c-cx.md)<br/>
+[C + +/CX 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[네임 스페이스 참조](../cppcx/namespaces-reference-c-cx.md)

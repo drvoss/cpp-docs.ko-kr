@@ -2,18 +2,18 @@
 title: 컴파일러 경고(수준 3 및 4) C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cadba931af9c4497ec78938c37f94fe13daab0af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214323"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>컴파일러 경고(수준 3 및 4) C4244
 
 'conversion': 'type1'에서 'type2'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 
-정수 형식은 더 작은 정수 형식으로 변환됩니다. *Type1* 이 `int`이 고 *type2* 가 `int`보다 작은 경우이는 수준 4 경고입니다. 그렇지 않으면 수준 3 (`unsigned int`형식의 변수에 [__int64](../../cpp/int8-int16-int32-int64.md) 형식의 값이 할당 됩니다. 데이터 손실이 발생했을 수 있습니다.
+정수 형식은 더 작은 정수 형식으로 변환됩니다. *Type1* 이이 **`int`** 고 *type2* 가 보다 작은 경우이는 수준 4 경고입니다 **`int`** . 그렇지 않으면 수준 3 (형식의 변수에 [__int64](../../cpp/int8-int16-int32-int64.md) 형식 값이 할당 됨 **`unsigned int`** )입니다. 데이터 손실이 발생했을 수 있습니다.
 
 C4244 오류가 발생하는 경우 호환되는 형식을 사용하도록 프로그램을 변경하거나 코드에 일부 논리를 추가하여 가능한 값의 범위가 사용 중인 형식과 항상 호환되는지 확인해야 합니다.
 

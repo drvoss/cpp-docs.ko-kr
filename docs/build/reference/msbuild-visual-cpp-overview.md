@@ -4,16 +4,16 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 010fa244ed77ea782fa76be959c58ff1e1b254a9
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190496"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ 프로젝트용 MSBuild 내부
 
-IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장하는 경우 Visual Studio는 프로젝트 설정을 프로젝트 파일에 씁니다. 프로젝트 파일에는 프로젝트에 고유한 설정이 포함 되어 있습니다. 그러나 프로젝트를 빌드하는 데 필요한 모든 설정이 포함 되어 있지는 않습니다. 프로젝트 파일에는 추가 `Import`지원 파일*의 네트워크를 포함하는*  요소가 들어 있습니다. 지원 파일에는 프로젝트를 빌드하는 데 필요한 나머지 속성, 대상 및 설정이 포함 되어 있습니다.
+IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장하는 경우 Visual Studio는 프로젝트 설정을 프로젝트 파일에 씁니다. 프로젝트 파일에는 프로젝트에 고유한 설정이 포함 되어 있습니다. 그러나 프로젝트를 빌드하는 데 필요한 모든 설정이 포함 되어 있지는 않습니다. 프로젝트 파일에는 추가 *지원 파일*의 네트워크를 포함하는 `Import` 요소가 들어 있습니다. 지원 파일에는 프로젝트를 빌드하는 데 필요한 나머지 속성, 대상 및 설정이 포함 되어 있습니다.
 
 지원 파일의 대부분의 대상 및 속성은 빌드 시스템을 구현하는 용도로 존재합니다. 이 문서에서는 MSBuild 명령줄에서 지정할 수 있는 유용한 대상과 속성을 설명 합니다. 더 많은 대상과 속성을 검색하려면 지원 파일 디렉터리에서 파일을 살펴봅니다.
 
@@ -23,47 +23,47 @@ IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*버전*\\vctargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets\\
 
   대상에서 사용되는 기본 대상 파일(.targets) 및 속성 파일(.props)을 포함합니다. 기본적으로 $(VCTargetsPath) 매크로는 이 디렉터리를 참조합니다. *버전* 자리 표시자는 visual studio 버전: V160 For visual studio 2019, V150 For visual studio 2017를 참조 합니다.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*버전*\\vctargets\\*platform*\\\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets \\ 플랫폼 \\ *플랫폼*\\
 
   해당 부모 디렉터리의 대상과 속성을 재정의하는 플랫폼별 대상 및 속성 파일을 포함합니다. 이 디렉터리에는 이 디렉터리에 있는 대상에서 사용되는 작업을 정의하는 DLL도 포함됩니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*버전*\\vctargets\\*플랫폼*\\platformtoolsets *집합\\도구 집합*\\\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
 
   빌드가 지정된 *도구 집합*을 사용하여 C++ 애플리케이션을 생성하도록 하는 디렉터리를 포함합니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다. *도구 집합* 자리 표시자는 도구 집합 하위 디렉터리를 나타냅니다.
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\
+- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets\\
 
   대상에서 사용되는 기본 대상 파일(.targets) 및 속성 파일(.props)을 포함합니다. 기본적으로 $(VCTargetsPath) 매크로는 이 디렉터리를 참조합니다.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\플랫폼\\*플랫폼*\\
+- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets \\ 플랫폼 \\ *플랫폼*\\
 
   해당 부모 디렉터리의 대상과 속성을 재정의하는 플랫폼별 대상 및 속성 파일을 포함합니다. 이 디렉터리에는 이 디렉터리에 있는 대상에서 사용되는 작업을 정의하는 DLL도 포함됩니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\플랫폼\\*플랫폼*\\platformtoolsets *집합*\\\\
+- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
 
   빌드가 지정된 *도구 집합*을 사용하여 C++ 애플리케이션을 생성하도록 하는 디렉터리를 포함합니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다. *도구 집합* 자리 표시자는 도구 집합 하위 디렉터리를 나타냅니다.
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 및 이전 버전
 
-- *drive*:\\Program Files *(X86)* \\MSBuild\\Microsoft .cpp (x86)\\v 4.0\\*버전*\\
+- *드라이브*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp (x86) \\ v 4.0 \\ *버전*\\
 
   대상에서 사용되는 기본 대상 파일(.targets) 및 속성 파일(.props)을 포함합니다. 기본적으로 $(VCTargetsPath) 매크로는 이 디렉터리를 참조합니다.
 
-- *drive*:\\Program Files *(X86)* \\MSBuild\\Microsoft .cpp\\v *4.0\\* *플랫폼*\\플랫폼\\\\
+- *드라이브*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ *버전* \\ 플랫폼 \\ *플랫폼*\\
 
   해당 부모 디렉터리의 대상과 속성을 재정의하는 플랫폼별 대상 및 속성 파일을 포함합니다. 이 디렉터리에는 이 디렉터리에 있는 대상에서 사용되는 작업을 정의하는 DLL도 포함됩니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다.
 
-- *drive*:\\Program Files *(X86)* \\MSBuild\\Microsoft .cpp\\v *4.0\\플랫폼\\플랫폼*\\*플랫폼*\\*도구 집합*\\\\
+- *드라이브*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ *버전* \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
 
   빌드가 지정된 *도구 집합*을 사용하여 C++ 애플리케이션을 생성하도록 하는 디렉터리를 포함합니다. *버전* 자리 표시자는 V110 For visual studio 2012, V120 for Visual Studio 2013 및 V140 For visual studio 2015입니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다. *도구 집합* 자리 표시자는 도구 집합 하위 디렉터리를 나타냅니다. 예를 들어 Visual Studio 2015 도구 집합을 사용 하 여 Windows 앱을 빌드하는 것은 v140입니다. 또는 Visual Studio 2013 도구 집합을 사용 하 여 Windows XP 용 빌드를 v120_xp 합니다.
 
-- *drive*:\\Program Files *(X86)* \\MSBuild\\Microsoft .cpp\\v 4.0\\플랫폼\\*플랫폼*\\platformtoolsets *집합*\\\\
+- *드라이브*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v4.0 \\ \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
 
   빌드에서 Visual Studio 2008 또는 Visual Studio 2010 응용 프로그램을 생성할 수 있도록 하는 경로에는 *버전이*포함 되지 않습니다. 이러한 버전에서 *platform* 자리 표시자는 Itanium, Win32 또는 x64 하위 디렉터리를 나타냅니다. *toolset* 자리 표시자는 v90 또는 v100 도구 집합 하위 디렉터리를 나타냅니다.
 
@@ -71,11 +71,11 @@ IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장
 
 지원 파일 디렉터리에는 다음과 같은 확장을 사용하는 파일이 포함되어 있습니다.
 
-| 내선 번호 | Description |
+| 내선 번호 | 설명 |
 | --------- | ----------- |
 | .targets | 대상에서 실행되는 작업을 지정하는 `Target` XML 요소를 포함합니다. 또한 파일 및 명령줄 옵션을 작업 매개 변수에 할당하는 데 사용되는 `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup` 및 사용자 정의 `Item` 요소를 포함할 수 있습니다.<br /><br /> 자세한 내용은 [Target 요소(MSBuild)](/visualstudio/msbuild/target-element-msbuild)를 참조하세요. |
 | .props | 빌드하는 동안 사용되는 파일 및 매개 변수 설정을 지정하는 `Property Group` 및 사용자 정의 `Property` XML 요소를 포함합니다.<br /><br /> 또한 추가 설정을 지정하는 `ItemDefinitionGroup` 및 사용자 정의 `Item` XML 요소를 포함할 수 있습니다. 항목 정의 그룹에 정의 된 항목은 속성과 비슷하지만 명령줄에서 액세스할 수 없습니다. Visual Studio 프로젝트 파일은 속성 대신 항목을 사용하여 설정을 나타내는 경우가 많습니다.<br /><br /> 자세한 내용은 [ItemGroup 요소 (msbuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [Itemdefinitiongroup 요소 (Msbuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)및 [Item 요소 (msbuild)](/visualstudio/msbuild/item-element-msbuild)를 참조 하세요. |
-| .xml | IDE 사용자 인터페이스 요소를 선언 하 고 초기화 하는 XML 요소를 포함 합니다. 예를 들면 속성 시트, 속성 페이지, textbox 컨트롤 및 listbox 컨트롤 등이 있습니다.<br /><br /> .xml 파일은 MSBuild가 아닌 IDE를 직접 지원합니다. 그러나 IDE 속성의 값은 빌드 속성과 항목에 할당됩니다.<br /><br /> 대부분의 .xml 파일은 로캘별 하위 디렉터리에 있습니다. 예를 들어 영어 (미국) 지역의 파일은 $ (VCTargetsPath)\\1033\\에 있습니다. |
+| .xml | IDE 사용자 인터페이스 요소를 선언 하 고 초기화 하는 XML 요소를 포함 합니다. 예를 들면 속성 시트, 속성 페이지, textbox 컨트롤 및 listbox 컨트롤 등이 있습니다.<br /><br /> .xml 파일은 MSBuild가 아닌 IDE를 직접 지원합니다. 그러나 IDE 속성의 값은 빌드 속성과 항목에 할당됩니다.<br /><br /> 대부분의 .xml 파일은 로캘별 하위 디렉터리에 있습니다. 예를 들어 영어 (미국) 지역의 파일은 $ (VCTargetsPath) 1033에 \\ \\ 있습니다. |
 
 ## <a name="user-targets-and-properties"></a>사용자 대상 및 속성
 
@@ -99,17 +99,17 @@ MSBuild를 효과적으로 사용 하기 위해 유용 하 고 관련 된 속성
 
 ### <a name="useenv-property"></a>UseEnv 속성
 
-기본적으로 현재 프로젝트의 플랫폼별 설정은 PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION 및 PLATFORM 환경 변수를 재정의합니다. 환경 변수가 재정의 되지 않도록 하려면 `UseEnv` 속성을 **true** 로 설정 합니다.
+기본적으로 현재 프로젝트의 플랫폼별 설정은 PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION 및 PLATFORM 환경 변수를 재정의합니다. `UseEnv`환경 변수가 재정의 되지 않도록 하려면 속성을로 설정 합니다 **`true`** .
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
 ### <a name="targets"></a>대상
 
-Visual Studio 지원 파일에는 수백 가지 대상이 있습니다. 그러나 대부분은 사용자가 무시할 수 있는 시스템 기반 대상입니다. 대부분의 시스템 대상은 "PrepareFor", "Compute", "Before", "After", "Pre" 또는 "Post"로 시작 하는 이름 앞에 밑줄 (`_`)이 붙습니다.
+Visual Studio 지원 파일에는 수백 가지 대상이 있습니다. 그러나 대부분은 사용자가 무시할 수 있는 시스템 기반 대상입니다. 대부분의 시스템 대상에는 밑줄 ()이 붙습니다 `_` . 또는 "PrepareFor", "Compute", "Before", "After", "Pre" 또는 "Post"로 시작 하는 이름이 있습니다.
 
 다음 표에는 몇 가지 유용한 사용자 기반 대상이 나열되어 있습니다.
 
-| 대상 | Description |
+| Target | 설명 |
 | ------ | ----------- |
 | BscMake | Microsoft Browse Information Maintenance Utility 도구(bscmake.exe)를 실행합니다. |
 | 빌드 | 프로젝트를 빌드합니다.<br /><br /> 이 대상은 프로젝트의 기본값입니다. |
@@ -119,10 +119,10 @@ Visual Studio 지원 파일에는 수백 가지 대상이 있습니다. 그러�
 | 링크 | MSVC 링커 도구(link.exe)를 실행합니다. |
 | ManifestResourceCompile | 매니페스트에서 리소스 목록을 추출한 다음, Microsoft Windows Resource Compiler 도구(rc.exe)를 실행합니다. |
 | Midl | MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구(midl.exe)를 실행합니다. |
-| 다시 작성 | 프로젝트를 정리한 다음, 빌드합니다. |
+| 다시 빌드 | 프로젝트를 정리한 다음, 빌드합니다. |
 | ResourceCompile | Microsoft Windows 리소스 컴파일러 도구(rc.exe)를 실행합니다. |
 | XdcMake | XML 문서 도구(xdcmake.exe)를 실행합니다. |
-| Xsd | XML 스키마 정의 도구(xsd.exe)를 실행합니다. *다음 참고를 참조하세요.* |
+| Xsd | XML 스키마 정의 도구(xsd.exe)를 실행합니다. *아래 참고 사항을 참조하세요.* |
 
 > [!NOTE]
 > Visual Studio 2017부터 **xsd** 파일에 대한 C++ 프로젝트 지원이 사용되지 않습니다. **CppCodeProvider.dll**을 수동으로 GAC에 추가하여 **Microsoft.VisualC.CppCodeProvider**를 계속 사용할 수 있습니다.
@@ -134,10 +134,10 @@ Visual Studio 지원 파일에는 수백 가지 대상이 있습니다. 그러�
 [CL 작업](/visualstudio/msbuild/cl-task)\
 [CPPClean 작업](/visualstudio/msbuild/cppclean-task)\
 [LIB 작업](/visualstudio/msbuild/lib-task)\
-[작업\ 연결](/visualstudio/msbuild/link-task)
+[작업 연결](/visualstudio/msbuild/link-task)\
 [MIDL 작업](/visualstudio/msbuild/midl-task)\
 [MT 작업](/visualstudio/msbuild/mt-task)\
 [RC 작업](/visualstudio/msbuild/rc-task)\
-[Setenv 작업](/visualstudio/msbuild/setenv-task)\
-[Vcmessage 작업](/visualstudio/msbuild/vcmessage-task)\
+[SetEnv 작업](/visualstudio/msbuild/setenv-task)\
+[VCMessage 작업](/visualstudio/msbuild/vcmessage-task)\
 [XDCMake 작업](/visualstudio/msbuild/xdcmake-task)

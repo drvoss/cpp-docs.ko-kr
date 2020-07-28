@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220550"
 ---
 # <a name="comptr-class"></a>ComPtr 클래스
 
@@ -90,20 +90,20 @@ friend class ComPtr;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-Name            | Description
+Name            | 설명
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T* 템플릿 매개 변수로 지정 된 형식의 동의어입니다.
 
 ### <a name="public-constructors"></a>Public 생성자
 
-Name                             | Description
+Name                             | 설명
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr:: ComPtr](#comptr)        | `ComPtr` 클래스의 새 인스턴스를 초기화합니다. 오버로드는 기본, 복사, 이동 및 변환 생성자를 제공합니다.
 [ComPtr:: ~ ComPtr](#tilde-comptr) | 의 인스턴스를 초기화 하지 `ComPtr` 않습니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                                      | Description
+이름                                                      | 설명
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtr:: As](#as)                                         | 지정 된 `ComPtr` 템플릿 매개 변수로 식별 되는 인터페이스를 나타내는 개체를 반환 합니다.
 [ComPtr:: AsIID](#asiid)                                   | 지정 된 `ComPtr` 인터페이스 ID로 식별 되는 인터페이스를 나타내는 개체를 반환 합니다.
@@ -119,14 +119,14 @@ Name                             | Description
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-Name                                        | Description
+Name                                        | 설명
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr:: InternalAddRef](#internaladdref)   | 이와 연결 된 인터페이스의 참조 횟수를 늘립니다 `ComPtr` .
 [ComPtr:: InternalRelease](#internalrelease) | 이와 연결 된 인터페이스에서 COM 해제 작업을 수행 `ComPtr` 합니다.
 
 ### <a name="public-operators"></a>Public 연산자
 
-Name                                                                                           | Description
+Name                                                                                           | 설명
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr:: operator&](#operator-ampersand)                                                       | 현재의 주소를 검색 합니다 `ComPtr` .
 [ComPtr:: operator->](#operator-arrow)                                                          | 현재 템플릿 매개 변수에 지정된 형식에 대한 포인터를 검색합니다.
@@ -137,7 +137,7 @@ Name                                                                            
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-Name                 | Description
+Name                 | 설명
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::p tr_](#ptr) | 이에 연결 되어 있고이에서 관리 하는 인터페이스에 대 한 포인터를 포함 `ComPtr` 합니다.
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>설명
 
-이 도우미 함수는 STDMETHOD 매크로를 사용 하 여 발생 하는 불필요 한 오버 헤드를 제거 합니다. 이 함수 `IUnknown` `private` 는 대신 형식을 사용 `virtual` 합니다.
+이 도우미 함수는 STDMETHOD 매크로를 사용 하 여 발생 하는 불필요 한 오버 헤드를 제거 합니다. 이 함수 `IUnknown` **`private`** 는 대신 형식을 사용 **`virtual`** 합니다.
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 연산자는 `true` 개체 *a* 가 개체 *b*와 같으면를, 그렇지 않으면를 생성 `false` 합니다.
+첫 번째 연산자는 **`true`** 개체 *a* 가 개체 *b*와 같으면를, 그렇지 않으면를 생성 **`false`** 합니다.
 
-두 번째 및 세 번째 연산자는 `true` 개체 *a* 가와 같으면 `nullptr` 이 고, 그렇지 않으면 `false` 입니다.
+두 번째 및 세 번째 연산자는 **`true`** 개체 *a* 가와 같으면 **`nullptr`** 이 고, 그렇지 않으면 **`false`** 입니다.
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 연산자는 `true` 개체 *a가* 개체 *b*와 같지 않은 경우를, 그렇지 않으면를 생성 `false` 합니다.
+첫 번째 연산자는 **`true`** 개체 *a* 가 개체 *b*와 같지 않으면를, 그렇지 않으면를 생성 **`false`** 합니다.
 
-두 번째 및 세 번째 연산자는 `true` 개체 *a* 가와 같지 않으면를 `nullptr` , 그렇지 않으면를 생성 `false` 합니다.
+두 번째 및 세 번째 연산자는 **`true`** 개체 *a* 가와 같지 않으면를 **`nullptr`** , 그렇지 않으면를 생성 **`false`** 합니다.
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Return Value
 
-인터페이스가이와 연결 된 경우 `ComPtr` [BoolStruct:: member](boolstruct-structure.md#member) 데이터 멤버의 주소이 고, 그렇지 않으면 `nullptr` 입니다.
+인터페이스가이와 연결 된 경우 `ComPtr` [BoolStruct:: member](boolstruct-structure.md#member) 데이터 멤버의 주소이 고, 그렇지 않으면 **`nullptr`** 입니다.
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>매개 변수
 
 *r*<br/>
-`ComPtr`.
+`ComPtr`입니다.

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a51e87980eba90eb4e543a3d07a44c1b170334e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751497"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214557"
 ---
 # <a name="compiler-error-c2992"></a>컴파일러 오류 C2992
 
 'class': 형식 매개 변수 목록이 잘못되었거나 없습니다.
 
-클래스 앞에 `template` 또는 **generic** 키워드가 오며 매개 변수가 없거나 잘못되었습니다.
+클래스 앞에 **`template`** 또는 **제네릭** 키워드가 없거나 잘못 된 매개 변수가 있습니다.
 
 ## <a name="example"></a>예제
 

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814438"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188637"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>_MBCS와 TCHAR.H 데이터 형식 사용
+# <a name="using-tcharh-data-types-with-_mbcs"></a>_MBCS와 TCHAR.H 데이터 형식 사용
 
 **Microsoft 전용**
 
@@ -21,7 +21,7 @@ ms.locfileid: "57814438"
 
 - 멀티바이트 바이트, 문자 및 문자열을 적절하게 처리하는 SBCS 루틴. 이 경우 문자열 인수는 **char&#42;** 형식이어야 합니다. 예를 들어 **_tprintf**는 **printf**에 매핑되며, **printf**에 대한 문자열 인수는 **char&#42;** 형식입니다. 문자열 형식으로 **_TCHAR** 일반 텍스트 데이터 형식을 사용하는 경우, **_TCHAR&#42;** 이 **char&#42;** 에 매핑되므로 **printf**에 대한 공식 및 실제 매개 변수 형식은 일치합니다.
 
-- MBCS 관련 루틴. 이 경우 문자열 인수는 __unsigned char&#42;__ 형식이어야 합니다. 예를 들어 **_tcsrev**는 **_mbsrev**에 매핑되며, __unsigned char&#42;__ 형식의 문자열을 반환합니다. 마찬가지로 문자열 형식으로 **_TCHAR** 일반 텍스트 데이터 형식을 사용하는 경우, **_TCHAR**이 **char** 형식에 매핑되므로 잠재적인 형식 충돌이 있습니다.
+- MBCS 관련 루틴. 이 경우 문자열 인수는 __unsigned char&#42;__ 형식이어야 합니다. 예를 들어 **_tcsrev**는 **_mbsrev**에 매핑되며, __unsigned char&#42;__ 형식의 문자열을 반환합니다. 또한 문자열 형식에 대 한 **_TCHAR** 일반 텍스트 데이터 형식을 사용 하는 경우 **_TCHAR** 가 형식에 매핑되므로 형식 충돌이 발생할 수 있습니다 **`char`** .
 
 이러한 형식 충돌(및 이로 인한 C 컴파일러 경고 또는 C++ 컴파일러 오류)을 방지하기 위한 방법으로는 다음 세 가지가 있습니다.
 
@@ -60,11 +60,11 @@ ms.locfileid: "57814438"
    #define _tcschr _mbschr
    ```
 
-이 방법을 사용할 때는 문자열 인수 및 문자열 반환 값에 적절한 데이터 형식이 사용되도록 주의해야 합니다. 형식 캐스팅을 사용하여 적절한 형식 일치를 보장하거나 **_TXCHAR** 일반 텍스트 데이터 형식을 사용할 수 있습니다. **_TXCHAR**은 SBCS 코드에서 **char** 형식으로 맵핑되지만, MBCS 코드에서는 **unsigned char** 형식으로 맵핑됩니다. 일반 텍스트 매크로에 대한 자세한 내용은 [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)을 참조하세요.
+이 방법을 사용할 때는 문자열 인수 및 문자열 반환 값에 적절한 데이터 형식이 사용되도록 주의해야 합니다. 형식 캐스팅을 사용하여 적절한 형식 일치를 보장하거나 **_TXCHAR** 일반 텍스트 데이터 형식을 사용할 수 있습니다. **_TXCHAR** 는 **`char`** SBCS 코드의 형식에 매핑되고 **`unsigned char`** MBCS 코드의 형식에 매핑됩니다. 일반 텍스트 매크로에 대한 자세한 내용은 [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)을 참조하세요.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [국제화](../c-runtime-library/internationalization.md)<br/>
 [범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)<br/>

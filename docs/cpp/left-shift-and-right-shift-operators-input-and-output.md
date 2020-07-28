@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404772"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186960"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽 시프트 및 오른쪽 시프트 연산자 ( &gt; &gt; 및 &lt; &lt; )
 
@@ -176,7 +176,7 @@ int main() {
 
 시프트 연산자 양쪽에 있는 식은 정수 계열 형식이어야 합니다. 정수 계열 확장은 [표준 변환](standard-conversions.md)에 설명 된 규칙에 따라 수행 됩니다. 결과의 형식은 승격 된 *시프트 식*의 형식과 같습니다.
 
-다음 예제에서는 **char** 형식의 변수가 **int**로 승격 됩니다.
+다음 예제에서 형식의 변수는 **`char`** 로 승격 됩니다 **`int`** .
 
 ```cpp
 #include <iostream>

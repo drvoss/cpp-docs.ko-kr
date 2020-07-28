@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220758"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -68,7 +68,7 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Return Value
 
-**Acosh** 함수는 *x*의 역 하이퍼볼릭 코사인 (원호 하이퍼볼릭 코사인)을 반환 합니다. 이러한 함수는 도메인 *x* ≥ 1에서 유효 합니다. *X* 가 1 보다 작은 경우 `errno` 는로 `EDOM` 설정 되 고 결과는 quiet NaN입니다. *X* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
+**Acosh** 함수는 *x*의 역 하이퍼볼릭 코사인 (원호 하이퍼볼릭 코사인)을 반환 합니다. 이러한 함수는 도메인 *x* ≥ 1에서 유효 합니다. *X* 가 1 보다 작은 경우 `errno` 는로 설정 되 `EDOM` 고 결과는 quiet NaN입니다. *X* 가 quiet NaN, 무한 또는 무한대 이면 동일한 값이 반환 됩니다.
 
 |입력|SEH 예외|`_matherr` 예외|
 |-----------|-------------------|--------------------------|
@@ -77,13 +77,13 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +를 사용 하는 경우 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **acosh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **acosh** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +를 사용 하는 경우 또는 값을 사용 하 고 반환 하는 **acosh** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **acosh** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
@@ -117,7 +117,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>

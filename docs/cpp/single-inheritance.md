@@ -10,12 +10,12 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365607"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186362"
 ---
 # <a name="single-inheritance"></a>단일 상속
 
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 각 클래스가 파생되는 기본 클래스는 파생 클래스의 선언 이전에 선언됩니다. 기본 클래스에 대한 전방 참조 선언만을 제공하는 것으로는 부족하며 완전한 선언을 제공해야 합니다.
 
-앞의 예제에서는 액세스 **지정자 공용이** 사용됩니다. 공용, 보호 및 개인 상속의 의미는 [멤버 액세스 제어에](../cpp/member-access-control-cpp.md) 설명되어 있습니다.
+앞의 예제에서는 액세스 지정자를 **`public`** 사용 합니다. Public, protected 및 private 상속의 의미는 멤버 Access Control에 설명 되어 [있습니다.](../cpp/member-access-control-cpp.md)
 
 다음 그림과 같이 클래스 하나를 여러 특정 클래스의 기본 클래스로 사용할 수 있습니다.
 
@@ -154,4 +154,4 @@ int main() {
 `Document` 클래스는 `PrintNameOf` 함수를 포함하므로 도서관에 있는 각 책의 이름을 인쇄할 수 있습니다. 그러나 `Book`의 페이지 수, `HelpFile`의 바이트 수 등 문서 형식과 관련된 일부 정보는 생략될 수 있습니다.
 
 > [!NOTE]
-> 기본 클래스를 강제로 적용하여 `PrintNameOf`와 같은 함수를 구현하는 방식은 최적의 디자인이 아닌 경우가 많습니다. [가상 함수는](../cpp/virtual-functions.md) 다른 디자인 대안을 제공합니다.
+> 기본 클래스를 강제로 적용하여 `PrintNameOf`와 같은 함수를 구현하는 방식은 최적의 디자인이 아닌 경우가 많습니다. [가상 함수](../cpp/virtual-functions.md) 는 다른 디자인 대안을 제공 합니다.
