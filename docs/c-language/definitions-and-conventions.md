@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226381"
 ---
 # <a name="definitions-and-conventions"></a>정의 및 규칙
 
@@ -28,7 +28,7 @@ ms.locfileid: "62234439"
 |특성|설명|
 |---------------|-----------------|
 |*nonterminal*|기울임꼴은 비터미널을 나타냅니다.|
-|**const**|굵게 표시된 터미널은 다음과 같이 입력해야 할 리터럴 예약어 및 기호입니다. 이 컨텍스트의 문자는 항상 대/소문자를 구분합니다.|
+|**`const`**|굵게 표시된 터미널은 다음과 같이 입력해야 할 리터럴 예약어 및 기호입니다. 이 컨텍스트의 문자는 항상 대/소문자를 구분합니다.|
 |<sub>opt</sub>|뒤에 <sub>opt</sub>가 오는 비터미널은 항상 선택 사항입니다.|
 |default typeface|이 서체로 설명되거나 나열된 집합의 문자는 C 문에서 단말로 사용할 수 있습니다.|
 

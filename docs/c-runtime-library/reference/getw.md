@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226218"
 ---
 # <a name="_getw"></a>_getw
 
@@ -58,7 +58,7 @@ int _getw(
 
 ## <a name="remarks"></a>설명
 
-**_Getw** 함수는 *스트림과* 연결 된 파일에서 **int** 형식의 다음 이진 값을 읽고 읽지 않은 다음 문자를 가리키도록 연결 된 파일 포인터 (있는 경우)를 증가 시킵니다. **_getw** 는 스트림의 항목에 대 한 특별 한 맞춤을 가정 하지 않습니다. **정수** 형식의 크기와 **int** 형식 내 바이트의 순서가 시스템 마다 다르기 때문에 **_getw** 에서 포팅 문제가 발생할 수 있습니다.
+**_Getw** 함수는 스트림과 연결 된 파일에서 형식의 다음 이진 값을 읽고 **`int`** 읽지 *stream* 않은 다음 문자를 가리키도록 연결 된 파일 포인터 (있는 경우)를 증가 시킵니다. **_getw** 는 스트림의 항목에 대 한 특별 한 맞춤을 가정 하지 않습니다. **_getw** **`int`** 형식의 크기와 형식 내 바이트의 순서가 시스템 마다 다르기 때문에 _getw를 사용 하는 데 문제가 발생할 수 있습니다 **`int`** .
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 

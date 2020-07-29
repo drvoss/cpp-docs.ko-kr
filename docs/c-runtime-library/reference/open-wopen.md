@@ -34,12 +34,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-ms.openlocfilehash: 4ce6e9aebe5d058143ad737f9c9db5bb68b30b1f
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: f57ad33fe09938e0f04d0ca2615898fa2cdbd642
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150730"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226205"
 ---
 # <a name="_open-_wopen"></a>_open, _wopen
 
@@ -63,7 +63,7 @@ int _wopen(
 ### <a name="parameters"></a>매개 변수
 
 *filename*<br/>
-파일 이름입니다.
+파일 이름.
 
 *oflag*<br/>
 허용되는 연산의 종류
@@ -81,21 +81,21 @@ int _wopen(
 | **EEXIST** | **_O_CREAT** 및 **_O_EXCL** 플래그가 지정 되었지만 *파일 이름이* 이미 있습니다. |
 | **EINVAL** | *Oflag* 또는 *pmode* 인수가 잘못 되었습니다. |
 | **EMFILE** | 사용할 수 있는 추가 파일 설명자가 없습니다. 열려 있는 파일이 너무 많습니다. |
-| **ENOENT** | 파일 또는 경로를 찾을 수 없습니다. |
+| **ENOENT (** | 파일 또는 경로를 찾을 수 없습니다. |
 
-이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
 **_Open** 함수는 파일 *이름* 으로 지정 된 파일을 열고, 지정 된 대로 *지연*에 의해 지정 된 대로 읽기 또는 쓰기를 위해 준비 합니다. **_wopen** 은 **_open**의 와이드 문자 버전입니다. **_wopen** 에 대 한 *파일 이름* 인수는 와이드 문자열입니다. **_wopen** 와 **_open** 는 동일 하 게 동작 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_topen**|**_open**|**_open**|**_wopen**|
 
-*oflag* 는 \<fcntl. h >에 정의 된 다음 매니페스트 상수 또는 상수 조합 중 하나 이상으로 구성 된 정수 식입니다.
+*oflag* 는에 정의 된 다음 매니페스트 상수 또는 상수 조합 중 하나 이상으로 구성 된 정수 식입니다 \<fcntl.h> .
 
 |*oflag* 상수|동작|
 |-|-|
@@ -104,7 +104,7 @@ int _wopen(
 | **_O_CREAT** | 파일을 만든 다음 쓰기 위해 엽니다. *Filename* 에 지정 된 파일이 존재 하는 경우에는 영향을 주지 않습니다. **_O_CREAT** 를 지정 하는 경우 *pmode* 인수가 필요 합니다. |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | 파일을 임시로 만든 다음 가능한 경우 디스크로 플러시하지 않습니다. **_O_CREAT** 를 지정 하는 경우 *pmode* 인수가 필요 합니다. |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | 파일을 임시로 만듭니다. 마지막 파일 설명자가 닫히면 파일이 삭제됩니다. **_O_CREAT** 를 지정 하는 경우 *pmode* 인수가 필요 합니다. |
-| **_O_CREAT** &#124; `_O_EXCL` | *Filename* 으로 지정한 파일이 있으면 오류 값을 반환 합니다. **_O_CREAT**와 함께 사용 하는 경우에만 적용 됩니다. |
+| **_O_CREAT** &#124;`_O_EXCL` | *Filename* 으로 지정한 파일이 있으면 오류 값을 반환 합니다. **_O_CREAT**와 함께 사용 하는 경우에만 적용 됩니다. |
 | **_O_NOINHERIT** | 공유 파일 설명자의 생성을 방지합니다. |
 | **_O_RANDOM** | 캐싱이 디스크에서 임의 액세스를 위해 최적화되며 이에 제한되지 않습니다. |
 | **_O_RDONLY** | 읽으려는 경우에만 파일을 엽니다. **_O_RDWR** 또는 **_O_WRONLY**와 함께 지정할 수 없습니다. |
@@ -121,13 +121,13 @@ int _wopen(
 
 **_O_WTEXT** 를 사용 하 여 읽기 위해 파일을 여는 경우 **_open** 는 파일의 시작 부분을 읽고 BOM (바이트 순서 표시)을 확인 합니다. BOM이 있으면 해당 파일은 BOM에 따라 UTF-8 또는 UTF-16LE로 처리됩니다. BOM이 없으면 해당 파일은 ANSI로 처리됩니다. **_O_WTEXT**를 사용 하 여 쓰기 위해 파일을 열면 u t f-16이 사용 됩니다. 이전 설정 또는 바이트 순서 표시와 상관 없이 **_O_U8TEXT** 사용 되는 경우 파일은 항상 u t f-8로 열립니다. **_O_U16TEXT** 사용 되는 경우 파일은 항상 u t f-16으로 열립니다.
 
-**_O_WTEXT**, **_O_U8TEXT**또는 **_O_U16TEXT**를 사용 하 여 파일을 유니코드 모드에서 열면 입력 함수는 파일에서 읽은 데이터를 형식 **wchar_t**로 저장 된 utf-16 데이터로 변환 합니다. 유니코드 모드에서 연 파일에 쓰는 함수는 u t f-16 데이터를 포함 하는 버퍼가 **wchar_t**형식으로 저장 되어야 합니다. 이 파일이 UTF-8로 인코딩되면 UTF-16 데이터는 쓸 때 UTF-8로 변환되고 이 파일의 UTF-8로 인코딩된 내용은 읽을 때 UTF-16으로 변환됩니다. 유니코드 모드에서 홀수 바이트를 읽거나 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다. 프로그램에 UTF-8로 저장된 데이터를 읽거나 쓰려는 경우 유니코드 모드 대신 텍스트 또는 이진 파일 모드를 사용합니다. 필수 인코딩은 사용자가 변환해야 합니다.
+**_O_WTEXT**, **_O_U8TEXT**또는 **_O_U16TEXT**를 사용 하 여 파일을 유니코드 모드에서 열면 입력 함수는 파일에서 읽은 데이터를 형식으로 저장 된 utf-16 데이터로 변환 합니다 **`wchar_t`** . 유니코드 모드에서 연 파일에 쓰는 함수는 UTF-16 데이터가 포함 된 버퍼가 형식으로 저장 되어야 **`wchar_t`** 합니다. 이 파일이 UTF-8로 인코딩되면 UTF-16 데이터는 쓸 때 UTF-8로 변환되고 이 파일의 UTF-8로 인코딩된 내용은 읽을 때 UTF-16으로 변환됩니다. 유니코드 모드에서 홀수 바이트를 읽거나 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다. 프로그램에 UTF-8로 저장된 데이터를 읽거나 쓰려는 경우 유니코드 모드 대신 텍스트 또는 이진 파일 모드를 사용합니다. 필수 인코딩은 사용자가 변환해야 합니다.
 
-**_O_WRONLY** |  **_O_APPEND** (추가 모드) 및 **_O_WTEXT**, **_O_U16TEXT**또는 **_O_U8TEXT**를 사용 하 여 **_open** 를 호출 하면 먼저 파일을 열고, BOM을 읽고, 쓰기 전용으로 다시 열 려 합니다. 읽고 쓰기 위해 파일을 여는데 실패하면 쓰기 위해서만 파일을 열고 유니코드 모드 설정에 기본값을 사용합니다.
+**_open** **_O_WRONLY**  |  **_O_APPEND** (추가 모드) 및 **_O_WTEXT**, **_O_U16TEXT**또는 **_O_U8TEXT**를 사용 하 여 _open를 호출 하는 경우 먼저 파일을 열고, BOM을 읽고, 쓰기 전용으로 다시 열 려 합니다. 읽고 쓰기 위해 파일을 여는데 실패하면 쓰기 위해서만 파일을 열고 유니코드 모드 설정에 기본값을 사용합니다.
 
 둘 이상의 매니페스트 상수를 사용 하 여 *oflag* 인수를 구성 하는 경우 상수는 비트 or 연산자 ( **&#124;** )와 결합 됩니다. 이진 및 텍스트 모드에 대한 자세한 내용은 [텍스트 및 이진 모드 파일 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)를 참조하세요.
 
-*Pmode* 인수는 **_O_CREAT** 가 지정 된 경우에만 필요 합니다. 파일이 이미 있는 경우 *pmode* 는 무시 됩니다. 그렇지 않으면 *pmode* 는 새 파일이 처음으로 닫힐 때 설정 되는 파일 사용 권한 설정을 지정 합니다. **_open** 사용 권한을 설정 하기 전에 *pmode* 에 현재 파일 사용 권한 마스크를 적용 합니다. 자세한 내용은 [_umask](umask.md)를 참조 하세요. *pmode* 는 \<sys\stat.h >에 정의 된 다음 매니페스트 상수 중 하나 또는 둘 다를 포함 하는 정수 식입니다.
+*Pmode* 인수는 **_O_CREAT** 가 지정 된 경우에만 필요 합니다. 파일이 이미 있는 경우 *pmode* 는 무시 됩니다. 그렇지 않으면 *pmode* 는 새 파일이 처음으로 닫힐 때 설정 되는 파일 사용 권한 설정을 지정 합니다. **_open** 사용 권한을 설정 하기 전에 *pmode* 에 현재 파일 사용 권한 마스크를 적용 합니다. 자세한 내용은 [_umask](umask.md)를 참조 하세요. *pmode* 는에 정의 된 다음 매니페스트 상수 중 하나 또는 둘 다를 포함 하는 정수 식입니다 \<sys\stat.h> .
 
 |*pmode*|의미|
 |-|-|
@@ -135,7 +135,7 @@ int _wopen(
 | **_S_IWRITE** | 쓰기를 허용합니다. 실제로는 읽기 및 쓰기를 모두 허용합니다. |
 | **_S_IREAD** &#124; **_S_IWRITE** | 읽기 및 쓰기를 허용합니다. |
 
-두 상수가 모두 지정 된 경우 비트 or 연산자 ( **&#124;** )와 조인 됩니다. Windows에서는 모든 파일을 읽을 수 있으므로 쓰기 전용 권한은 설정할 수 없습니다. 따라서 **_S_IWRITE** 모드와 **_S_IREAD** |  **_S_IWRITE** 는 동일 합니다.
+두 상수가 모두 지정 된 경우 비트 or 연산자 ( **&#124;** )를 사용 하 여 조인 됩니다. Windows에서는 모든 파일을 읽을 수 있으므로 쓰기 전용 권한은 설정할 수 없습니다. 따라서 **_S_IWRITE** 모드와 **_S_IREAD**  |  **_S_IWRITE** 는 동일 합니다.
 
 다른 운영 체제에서 유효한 pmode를 지정 하는 경우에도, 다른 운영 체제에서 유효한 *pmode* 를 지정 하는 *경우에도*, **_S_IREAD** 및 **_S_IWRITE** 의 일부 조합이 아닌 값이 *oflag* 지정 된 경우,이 함수는 디버그 모드에서 어설션을 생성 하 고 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 함수는-1을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다.
 
@@ -146,7 +146,7 @@ int _wopen(
 |**_open**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 |**_wopen**|\<io.h> 또는 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 
-**_open** 및 **_wopen** 는 Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+**_open** 및 **_wopen** 는 Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -200,9 +200,9 @@ Open succeeded on input file
 Open succeeded on output file
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[하위 수준 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
