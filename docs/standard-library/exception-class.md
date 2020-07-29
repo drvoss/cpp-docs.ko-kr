@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fd3fb3c48e9501b7aaf90bca14ea98530b245ec0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228273"
 ---
 # <a name="exception-class"></a>exception 클래스
 
@@ -34,13 +34,13 @@ class exception {
 
 ## <a name="remarks"></a>설명
 
-특히 이 기본 클래스는 [\<stdexcept>](../standard-library/stdexcept.md)에 정의된 표준 예외 클래스의 루트입니다. `what`에서 반환된 C 문자열 값은 기본 생성자에 의해서는 지정되지 않지만 특정 파생 클래스의 생성자에 의해 구현이 정의된 C 문자열로 정의될 수 있습니다. 멤버 함수는 예외를 발생시키지 않습니다.
+특히이 기본 클래스는에 정의 된 표준 예외 클래스의 루트입니다 [\<stdexcept>](../standard-library/stdexcept.md) . `what`에서 반환된 C 문자열 값은 기본 생성자에 의해서는 지정되지 않지만 특정 파생 클래스의 생성자에 의해 구현이 정의된 C 문자열로 정의될 수 있습니다. 멤버 함수는 예외를 발생시키지 않습니다.
 
-**Int** 매개 변수를 사용 하면 메모리를 할당 하지 않도록 지정할 수 있습니다. **Int** 값은 무시 됩니다.
+**`int`** 매개 변수를 사용 하면 메모리를 할당 하지 않도록 지정할 수 있습니다. 의 값은 **`int`** 무시 됩니다.
 
 > [!NOTE]
 > 생성자 `exception(const char* const &message)` 및 `exception(const char* const &message, int)`는 C++ 표준 라이브러리에 대한 Microsoft 확장입니다.
 
 ## <a name="example"></a>예제
 
-`exception` 클래스에서 상속된 표준 예외 클래스 사용의 예는 [\<stdexcept>](../standard-library/stdexcept.md)를 참조하세요.
+클래스에서 상속 되는 표준 예외 클래스를 사용 하는 예제는 `exception` 에 정의 된 클래스를 참조 하세요 [\<stdexcept>](../standard-library/stdexcept.md) .

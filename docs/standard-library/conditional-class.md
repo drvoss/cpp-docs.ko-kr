@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228377"
 ---
 # <a name="conditional-class"></a>conditional 클래스
 
@@ -41,14 +41,14 @@ B가 false인 경우의 형식 결과입니다.
 
 ## <a name="remarks"></a>설명
 
-*B* 가 **true**로 `conditional<B, T1, T2>::type` 평가 되 면 템플릿 멤버 typedef가 *T1* 로 평가 되 고 *b* 가 **false**로 평가 되 면 *T2* 로 계산 됩니다.
+B가로 계산 되 면 템플릿 멤버 typedef가 `conditional<B, T1, T2>::type` *T1* 로 평가 되 *B* **`true`** 고 *b* 가로 계산 되 면 *T2* 로 계산 **`false`** 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37118772f7cefd6f380ceb01908da55500ee7ab5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337517"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228234"
 ---
 # <a name="istrstream-class"></a>istrstream 클래스
 
@@ -33,7 +33,7 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[istrstream](#istrstream)|`istrstream` 형식의 개체를 생성합니다.|
 
@@ -42,15 +42,15 @@ class istrstream : public istream
 |멤버 함수|Description|
 |-|-|
 |[rdbuf](#rdbuf)|스트림의 연결된 `strstreambuf` 개체에 대한 포인터를 반환합니다.|
-|[Str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze)를 호출한 다음 제어되는 시퀀스의 시작 부분에 대한 포인터를 반환합니다.|
+|[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze)를 호출한 다음 제어되는 시퀀스의 시작 부분에 대한 포인터를 반환합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<strstream >
+**헤더:**\<strstream>
 
 **네임스페이스:** std
 
-## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream:: istrstream
 
 `istrstream` 형식의 개체를 생성합니다.
 
@@ -72,17 +72,17 @@ istrstream(
 
 ### <a name="parameters"></a>매개 변수
 
-*횟수*\
-*버퍼(ptr)의*길이입니다.
+*수*\
+버퍼의 길이 (*ptr*)입니다.
 
-*Ptr*\
+*ptr*\
 버퍼가 초기화되는 콘텐츠입니다.
 
 ### <a name="remarks"></a>설명
 
-모든 생성자는 클래스 [strstreambuf의](../standard-library/strstreambuf-class.md)저장된 개체인 `sb` istream(sb)을 호출하여 기본 클래스를 초기화합니다. [istream](../standard-library/istream-typedefs.md#istream)**sb** 처음 두 생성자도 호출 `sb` `strstreambuf` **(const)** `char` \* `ptr`, 0)을 호출하여 초기화합니다. 나머지 두 생성자는 대신 `strstreambuf`호출합니다(const `ptr` **const** `char` `count` *) , ).
+모든 생성자는 [istream](../standard-library/istream-typedefs.md#istream)(**sb**)을 호출 하 여 기본 클래스를 초기화 `sb` 합니다. 여기서은 [strstreambuf](../standard-library/strstreambuf-class.md)클래스의 저장 된 개체입니다. 처음 두 생성자는를 `sb` 호출 하 여도 초기화 `strstreambuf( ( const char *) ptr, 0 )` 합니다. 나머지 두 생성자는 대신를 호출 `strstreambuf( ( const char *) ptr, count )` 합니다.
 
-## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream:: rdbuf
 
 스트림의 연결된 strstreambuf 개체에 대한 포인터를 반환합니다.
 
@@ -102,7 +102,7 @@ strstreambuf *rdbuf() const
 
 `rdbuf`를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
-## <a name="istrstreamstr"></a><a name="str"></a>istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>istrstream:: str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze)를 호출한 다음 제어되는 시퀀스의 시작 부분에 대한 포인터를 반환합니다.
 
@@ -116,15 +116,15 @@ char *str();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) -> [str을 반환합니다.](../standard-library/strstreambuf-class.md#str)
+멤버 함수는 [rdbuf](#rdbuf)  ->  [str](../standard-library/strstreambuf-class.md#str)을 반환 합니다.
 
 ### <a name="example"></a>예제
 
-을 사용하는 `str`샘플은 [strstream::str을](../standard-library/strstreambuf-class.md#str) 참조하십시오.
+를 사용 하는 샘플은 [strstream:: str](../standard-library/strstreambuf-class.md#str) 을 참조 하세요 `str` .
 
 ## <a name="see-also"></a>참고 항목
 
-[Istream](../standard-library/istream-typedefs.md#istream)\
-[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[istream](../standard-library/istream-typedefs.md#istream)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

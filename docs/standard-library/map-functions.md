@@ -5,16 +5,16 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: e7876b37bfc006eaecf2f1e36273c5ae8689dad4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8cc4a82e08963902f9ba5c21ace759c47bdd0014
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228221"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 함수
 
-## <a name="swap_multimap"></a>swap (map)
+## <a name="swap-map"></a><a name="swap_multimap"></a>swap (map)
 
 두 map의 요소를 교환합니다.
 
@@ -30,18 +30,18 @@ void swap(
 *오른쪽*\
 교환할 요소를 제공 하는 맵 또는 요소를 *왼쪽*맵과 교환할 지도입니다.
 
-*왼쪽*\
+*비어*\
 지도 *오른쪽*의 요소와 교환할 요소를 포함 하는 맵입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 `left`멤버 함수를 실행 하기 위해 컨테이너 클래스 맵에서 특수화 된 알고리즘입니다. [swap](../standard-library/map-class.md#swap)(`right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 템플릿 함수가 이러한 방식으로 오버로드되어 함수를 호출할 때 템플릿이 고유하게 일치하지 않으면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수, **템플릿** \< **클래스 t**> **void swap**( **t &** , **t &** )의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
+템플릿 함수는 멤버 함수를 실행 하기 위해 컨테이너 클래스 맵에서 특수화 된 알고리즘입니다 `left` .[ swap](../standard-library/map-class.md#swap)( `right` ). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. **`template`** \< **class T**> 알고리즘 클래스에서 템플릿 함수 **void swap**( **t&**, **t&**)의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
 
 ### <a name="example"></a>예제
 
-[의 템플릿 버전을 사용하는 예제는 멤버 함수 ](../standard-library/map-class.md#swap)map::swap`swap`에 대한 코드 예제를 참조하세요.
+`swap`의 템플릿 버전을 사용하는 예제는 멤버 함수 [map::swap](../standard-library/map-class.md#swap)에 대한 코드 예제를 참조하세요.
 
-## <a name="swap"></a>swap (multimap)
+## <a name="swap-multimap"></a><a name="swap"></a>swap (multimap)
 
 두 multimap의 요소를 교환합니다.
 
@@ -57,13 +57,13 @@ void swap(
 *오른쪽*\
 교환할 요소를 제공 하는 multimap 이거나, multimap *left*의 요소와 교환할 요소를 포함 하는 multimap입니다.
 
-*왼쪽*\
+*비어*\
 Multimap *right*의 요소와 교환할 요소를 포함 하는 multimap입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 `left`멤버 함수를 실행 하기 위해 컨테이너 클래스 맵에서 특수화 된 알고리즘입니다. [swap](../standard-library/multimap-class.md#swap) (`right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 템플릿 함수가 이러한 방식으로 오버로드되어 함수를 호출할 때 템플릿이 고유하게 일치하지 않으면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수, **템플릿** \< **클래스 t**> **void swap**( **t &** , **t &** )의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
+템플릿 함수는 멤버 함수를 실행 하기 위해 컨테이너 클래스 multimap에서 실행 되는 컨테이너 클래스 맵에서 특수화 된 알고리즘입니다 `left` .[ swap](../standard-library/multimap-class.md#swap) ( `right` ). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. **`template`** \< **class T**> 알고리즘 클래스에서 템플릿 함수 **void swap**( **t&**, **t&**)의 일반 버전은 할당에 따라 작동 하 고 속도가 느립니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.
 
 ### <a name="example"></a>예제
 
-[의 템플릿 버전을 사용하는 예제는 멤버 함수 ](../standard-library/multimap-class.md#swap)multimap::swap`swap`에 대한 코드 예제를 참조하세요.
+`swap`의 템플릿 버전을 사용하는 예제는 멤버 함수 [multimap::swap](../standard-library/multimap-class.md#swap)에 대한 코드 예제를 참조하세요.
