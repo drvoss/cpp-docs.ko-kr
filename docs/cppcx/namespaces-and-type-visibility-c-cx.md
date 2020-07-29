@@ -2,22 +2,22 @@
 title: 네임스페이스 및 형식 표시 유형(C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230976"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>네임스페이스 및 형식 표시 유형(C++/CX)
 
-네임스페이스는 관련된 기능을 가진 형식을 그룹화하고 라이브러리의 이름 충돌을 방지하기 위한 표준 C++ 구조입니다. Windows 런타임 형식 시스템에 사용자 고유의 코드를 포함 하는 모든 공용 Windows 런타임 형식에 네임 스페이스 범위에서 네임 스페이스에서 선언 되어야 합니다는 필요 합니다. 전역 범위에서 선언되거나 다른 클래스 안에 중첩된 public 형식은 컴파일 타임 오류를 발생시킵니다.
+네임스페이스는 관련된 기능을 가진 형식을 그룹화하고 라이브러리의 이름 충돌을 방지하기 위한 표준 C++ 구조입니다. Windows 런타임 형식 시스템을 사용 하려면 네임 스페이스 범위에서 네임 스페이스에 있는 모든 공용 Windows 런타임 형식을 포함 하 여 해당 코드를 포함 해야 합니다. 전역 범위에서 선언되거나 다른 클래스 안에 중첩된 public 형식은 컴파일 타임 오류를 발생시킵니다.
 
 .winmd 파일은 루트 네임스페이스와 이름이 같아야 합니다. 예를 들어 이름이 A.B.C.MyClass인 클래스는 이름이 A.winmd, A.B.winmd 또는 A.B.C.winmd인 메타데이터 파일에 정의된 경우에만 인스턴스화될 수 있습니다. 실행 파일의 이름은 .winmd 파일 이름과 일치하지 않아도 됩니다.
 
 ## <a name="type-visibility"></a>형식 표시 유형
 
-Windows 런타임 형식 네임 스페이스에서-표준와 달리 C++ 형식-사설 또는 공용 액세스 가능성을 갖도록 합니다. 기본적으로 액세스 가능성은 private입니다. public 형식만 메타데이터에 표시되므로 C++ 이외의 언어로 작성될 수 있는 응용 프로그램과 구성 요소에서 사용될 수 있습니다. 일반적으로 표시되는 형식은 .NET 언어 또는 JavaScript에서 지원되지 않는 C++ 관련 개념을 노출할 수 없기 때문에 표시되는 형식에 대한 규칙은 표시되지 않는 형식에 대한 규칙보다 제한적입니다.
+네임 스페이스에서 표준 c + + 형식과 달리 Windows 런타임 형식에는 private 또는 public 액세스 가능성이 있습니다. 기본적으로 액세스 가능성은 private입니다. public 형식만 메타데이터에 표시되므로 C++ 이외의 언어로 작성될 수 있는 응용 프로그램과 구성 요소에서 사용될 수 있습니다. 일반적으로 표시되는 형식은 .NET 언어 또는 JavaScript에서 지원되지 않는 C++ 관련 개념을 노출할 수 없기 때문에 표시되는 형식에 대한 규칙은 표시되지 않는 형식에 대한 규칙보다 제한적입니다.
 
 > [!NOTE]
 > 메타데이터는 .NET 언어 및 JavaScript에서 런타임에만 사용됩니다. C++ 응용 프로그램 또는 구성 요소가 다른 C++ 응용 프로그램 또는 구성 요소(모두 C++로 작성된 Windows 구성 요소 포함)와 통신 중인 경우 메타데이터의 런타임 사용이 필요하지 않습니다.
@@ -33,27 +33,27 @@ private ref 클래스, 인터페이스 또는 대리자에서는 public 액세�
 |한정자|의미|메타데이터로 내보낼지 여부|
 |private|기본 액세스 가능성입니다. 표준 C++에서와 동일한 의미를 갖습니다.|아니요|
 |protected|응용 프로그램 또는 구성 요소와 메타데이터에서 표준 C++에서와 동일한 의미를 갖습니다.|예|
-|public|표준 C++에서와 동일한 의미를 갖습니다.|예|
+|공공|표준 C++에서와 동일한 의미를 갖습니다.|예|
 |`public protected` 또는 `protected public`|액세스 가능성이 메타데이터에서는 protected이고 응용 프로그램 또는 구성 요소에서는 public입니다.|예|
 |`protected private` 또는 `private protected`|메타데이터에서는 표시되지 않고 응용 프로그램 또는 구성 요소에서는 액세스 가능성이 protected입니다.||
 |`internal` 또는 `private public`|멤버가 응용 프로그램 또는 구성 요소에서는 public이지만 메타데이터에서는 표시되지 않습니다.|아니요|
 
-## <a name="windows-runtime-namespaces"></a>Windows 런타임 네임 스페이스
+## <a name="windows-runtime-namespaces"></a>네임 스페이스 Windows 런타임
 
-Windows API는 Windows에서 선언 된 형식으로 구성 됩니다::\* 네임 스페이스입니다. 이러한 네임스페이스는 Windows용으로 예약되어 있으며 해당 네임스페이스에는 형식을 추가할 수 없습니다. **개체 브라우저**의 windows.winmd 파일에서 이러한 네임스페이스를 볼 수 있습니다. 이러한 네임스페이스에 대한 설명은 [Windows API](/uwp/api/)를 참조하세요.
+Windows API는 Windows:: 네임 스페이스에 선언 된 형식으로 구성 됩니다 \* . 이러한 네임스페이스는 Windows용으로 예약되어 있으며 해당 네임스페이스에는 형식을 추가할 수 없습니다. **개체 브라우저**의 windows.winmd 파일에서 이러한 네임스페이스를 볼 수 있습니다. 이러한 네임스페이스에 대한 설명은 [Windows API](/uwp/api/)를 참조하세요.
 
 ## <a name="ccx-namespaces"></a>C++/CX 네임스페이스
 
-C++/CX 투영을 Windows 런타임 형식 시스템의 일부로 이러한 네임 스페이스의 특정 형식을 정의 합니다.
+C + +/CX는 Windows 런타임 형식 시스템의 프로젝션의 일부로 이러한 네임 스페이스의 특정 형식을 정의 합니다.
 
 |||
 |-|-|
 |**Namespace**|**설명**|
-|default|기본 제공되는 숫자 및 char16 형식을 포함하고 있습니다. 이러한 형식은 모든 네임스페이스에서 범위 내에 있는 것으로 간주되므로 `using` 문이 필요하지 않습니다.|
-|플랫폼|와 같은 Windows 런타임 형식에 해당 하는 주로 공용 형식이 포함 되어 있습니다 `Array<T>`, `String`를 `Guid`, 및 `Boolean`합니다. `Platform::Agile<T>` 및 `Platform::Box<T>`와 같은 특수한 도우미 형식도 포함합니다.|
-|Platform::Collections|Windows 런타임 컬렉션 인터페이스를 구현 하는 구체적 컬렉션 클래스를 포함 `IVector`, `IMap`등입니다. 이러한 형식은 platform.winmd가 아니라 헤더 파일인 collection.h에 정의되어 있습니다.|
+|기본값|기본 제공되는 숫자 및 char16 형식을 포함하고 있습니다. 이러한 형식은 모든 네임 스페이스에서 범위 내에 있고 **`using`** 문은 필요 하지 않습니다.|
+|플랫폼|,, 및와 같은 Windows 런타임 형식에 해당 하는 공용 형식을 주로 포함 `Array<T>` `String` `Guid` `Boolean` 합니다. `Platform::Agile<T>` 및 `Platform::Box<T>`와 같은 특수한 도우미 형식도 포함합니다.|
+|Platform::Collections|Windows 런타임 컬렉션 인터페이스, 등을 구현 하는 구체적 컬렉션 클래스를 포함 합니다 `IVector` `IMap` . 이러한 형식은 platform.winmd가 아니라 헤더 파일인 collection.h에 정의되어 있습니다.|
 |Platform::Details|컴파일러가 사용하며 공용으로는 사용되지 않는 형식을 포함합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[형식 시스템(C++/CX)](../cppcx/type-system-c-cx.md)
+[형식 시스템 (c + +/CX)](../cppcx/type-system-c-cx.md)

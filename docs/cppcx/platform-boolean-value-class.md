@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9297c0062a3c64a4e830e083b515aef41416e527
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230963"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 값 클래스
 
-부울 값을 나타냅니다. `bool`에 해당합니다.
+부울 값을 나타냅니다. 에 해당 하는 **`bool`** 입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,10 +34,10 @@ public value struct Boolean
 
 **지원 되는 최소 서버:** Windows Server 2012
 
-**네임스페이스:** 플랫폼
+**네임스페이스:** Platform
 
-**메타데이터:** platform.winmd
+**메타 데이터:** platform.object
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Platform 네임스페이스](../cppcx/platform-namespace-c-cx.md)

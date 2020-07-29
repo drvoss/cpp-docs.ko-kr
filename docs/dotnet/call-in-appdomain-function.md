@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230898"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain 함수
 
@@ -45,21 +45,21 @@ RetType call_in_appdomain(
 함수를 호출할 appdomain입니다.
 
 *voidFunc*<br/>
-N 개의 매개 변수를 사용 하는 `void` 함수에 대 한 포인터입니다 (0 < = N < = 15).
+**`void`** N 개의 매개 변수를 사용 하는 함수에 대 한 포인터입니다 (0 <= n <= 15).
 
 *nonvoidFunc*<br/>
-N 개의 매개 변수를 사용 하는 비`void` 함수에 대 한 포인터입니다 (0 < = N < = 15).
+**`void`** N 개의 매개 변수를 사용 하는 비 함수에 대 한 포인터입니다 (0 <= n <= 15).
 
 *arg1 ... argN*<br/>
-다른 appdomain의 `voidFunc` 또는 `nonvoidFunc`에 전달 되는 매개 변수는 0 ~ 15입니다.
+다른 appdomain에 전달 되는 매개 변수는 0 ~ 15 `voidFunc` `nonvoidFunc` 입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-지정 된 응용 프로그램 도메인에서 `voidFunc` 또는 `nonvoidFunc`를 실행 한 결과입니다.
+`voidFunc` `nonvoidFunc` 지정 된 응용 프로그램 도메인에서 또는를 실행 한 결과입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`call_in_appdomain`에 전달 된 함수의 인수는 CLR 형식이 아니어야 합니다.
+에 전달 된 함수의 인수는 `call_in_appdomain` CLR 형식이 아니어야 합니다.
 
 ## <a name="example"></a>예제
 
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더 파일** \<msclr\appdomain.h >
+**헤더 파일** \<msclr\appdomain.h>
 
 Msclr **네임 스페이스**

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ada10b5989b714ec4c75a24de1bbb101e1f51ee6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164911"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230768"
 ---
 # <a name="compiler-warning-c4957"></a>컴파일러 경고 C4957
 
@@ -21,9 +21,9 @@ ms.locfileid: "80164911"
 
 캐스트로 인해 확인할 수 없는 이미지가 발생합니다.
 
-일부 캐스트는 안전합니다(예: 사용자 정의 변환을 트리거하는 `static_cast` 및 `const_cast`). [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) 는 확인할 수 있는 코드를 생성합니다.
+일부 캐스트는 안전 합니다 (예: **`static_cast`** 사용자 정의 변환과를 트리거하는 **`const_cast`** ). [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) 는 확인할 수 있는 코드를 생성합니다.
 
-자세한 내용은 [순수형 및 안정형 코드C++(/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조 하세요.
+자세한 내용은 [순수형 및 안정형 코드 (c + +/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조 하세요.
 
 **/Clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
