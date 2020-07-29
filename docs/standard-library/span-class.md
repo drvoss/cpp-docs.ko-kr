@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813511"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217456"
 ---
 # <a name="span-class-c-standard-library"></a>span 클래스 (c + + 표준 라이브러리)
 
@@ -86,8 +86,8 @@ class span;
 
 | **형식 정의** | **설명** |
 |-|-|
-| [const_pointer](#pointer) | 요소에 대 한 포인터의 형식 `const` 입니다. |
-| [const_reference](#reference) | 요소에 대 한 참조의 형식 `const` 입니다. |
+| [const_pointer](#pointer) | 요소에 대 한 포인터의 형식 **`const`** 입니다. |
+| [const_reference](#reference) | 요소에 대 한 참조의 형식 **`const`** 입니다. |
 | [difference_type](#difference_type) | 두 요소 사이의 부호가 있는 거리의 형식입니다. |
 | [element_type](#element_type) | Span 요소의 형식입니다. |
 | [반복](#iterator) | 범위에 대 한 반복기의 형식입니다. |
@@ -95,9 +95,9 @@ class span;
 | [reference](#reference) | 요소에 대한 참조의 형식입니다. |
 | [reverse_iterator](#reverse_iterator) | 범위에 대 한 역방향 반복기의 형식입니다. |
 | [size_type](#size_type) | 범위에 있는 두 요소 간의 부호 없는 거리에 대 한 결과의 형식입니다. |
-| [value_type](#value_type) | 또는 한정자가 없는 요소의 형식입니다 `const` `volatile` . |
+| [value_type](#value_type) | 또는 한정자가 없는 요소의 형식입니다 **`const`** **`volatile`** . |
 | **생성자** | **설명** |
-|[거칠](#span)| 을 생성 `span` 합니다.|
+|[거칠](#span)| `span`을 생성합니다.|
 | **반복기 지원** | **설명** |
 |[시작](#begin) | 범위의 첫 번째 요소를 가리키는 반복기를 가져옵니다.|
 |[종단](#end) | 범위의 끝을 가리키는 반복기를 가져옵니다. |
@@ -105,7 +105,7 @@ class span;
 |[rend](#rend) | 범위의 앞을 가리키는 역방향 반복기를 가져옵니다. 즉, 역방향 범위의 끝입니다.|
 | **액세스 요소**| **설명** |
 |[뒤로](#back) | 범위의 마지막 요소를 가져옵니다.|
-|[데이터](#data) | 범위에 있는 첫 번째 요소의 주소를 가져옵니다.|
+|[data](#data) | 범위에 있는 첫 번째 요소의 주소를 가져옵니다.|
 |[앞뒤](#front) | 범위의 첫 번째 요소를 가져옵니다.|
 |[연산자\[\]](#op_at) | 지정 된 위치에 있는 요소에 액세스 합니다.|
 | **관찰자** | **설명** |
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-`true`인 경우 `this->size() == 0` 을 반환 합니다. 그렇지 않으면 `false`입니다.
+**`true`** 인 경우 `this->size() == 0` 을 반환 합니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="example"></a>예제
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-범위 요소에 대 한 포인터 및 포인터의 형식입니다 `const` .
+범위 요소에 대 한 포인터 및 포인터의 형식입니다 **`const`** .
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-범위 요소에 대 한 참조 및 참조의 형식 `const` 입니다.
+범위 요소에 대 한 참조 및 참조의 형식 **`const`** 입니다.
 
 ```cpp
 using reference = T&;
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-범위 내에서 또는 한정자가 없는 요소의 형식입니다 `const` `volatile` .
+범위 내에서 또는 한정자가 없는 요소의 형식입니다 **`const`** **`volatile`** .
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

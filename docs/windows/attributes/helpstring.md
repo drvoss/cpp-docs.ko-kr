@@ -1,17 +1,17 @@
 ---
-title: helpstring (C++ COM 특성)
+title: helpstring (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166967"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217261"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166967"
 
 ## <a name="remarks"></a>설명
 
-**Helpstring** C++ 특성은 [helpstring](/windows/win32/Midl/helpstring) MIDL 특성과 동일한 기능을 포함 합니다.
+**Helpstring** c + + 특성에는 [helpstring](/windows/win32/Midl/helpstring) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -42,10 +42,10 @@ ms.locfileid: "80166967"
 
 |||
 |-|-|
-|**적용 대상**|**인터페이스**, **typedef**, **클래스**, 메서드, 속성|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|**인터페이스**, **`typedef`** , **`class`** , 메서드, 속성|
+|**불가능**|예|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

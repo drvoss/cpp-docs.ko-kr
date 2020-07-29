@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a8227fcb482267946ea7ba08ee352c43e1ac6f6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217462"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218002"
 ---
 # <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Microsoft 전용**
 
-64 비트 정수 변환의 x64 확장 버전을 스칼라 단 정밀도 부동 소수점 값 (`cvtsi2ss`) 명령으로 생성 합니다.
+64 비트 정수 변환의 x64 확장 버전을 스칼라 단 정밀도 부동 소수점 값 () 명령으로 생성 합니다 `cvtsi2ss` .
 
 ## <a name="syntax"></a>구문
 
@@ -32,26 +32,26 @@ __m128 _mm_cvtsi64x_ss(
 ### <a name="parameters"></a>매개 변수
 
 *은*\
-진행 네 `__m128` 개의 단 정밀도 부동 소수점 값을 포함 하는 구조체입니다.
+진행 **`__m128`** 네 개의 단 정밀도 부동 소수점 값을 포함 하는 구조체입니다.
 
 *b*\
 진행 부동 소수점 값으로 변환할 64 비트 정수입니다.
 
 ## <a name="return-value"></a>반환 값
 
-변환 결과에 해당 하는 첫 번째 부동 소수점 값을 갖는 구조체입니다.`__m128` 다른 세 값은에서 변경 되지 않은상태로 복사 됩니다.
+**`__m128`** 변환 결과에 해당 하는 첫 번째 부동 소수점 값을 갖는 구조체입니다. 다른 세 값 *은에서 변경*되지 않은 상태로 복사 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|내장 함수|아키텍처|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|X64|
 
-**헤더 파일** \<intrin.h >
+**헤더 파일** \<intrin.h>
 
 ## <a name="remarks"></a>설명
 
-구조체 `__m128` 는 xmm 레지스터를 나타내므로 내장 함수는 시스템 메모리의 *b* 값을 xmm 레지스터로 이동할 수 있도록 허용 합니다.
+**`__m128`** 구조체는 xmm 레지스터를 나타내므로 내장 함수는 시스템 메모리의 *b* 값을 xmm 레지스터로 이동할 수 있도록 허용 합니다.
 
 이 루틴은 내장 루틴으로만 사용할 수 있습니다.
 
@@ -89,7 +89,7 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [__m128](../cpp/m128.md)\
 [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

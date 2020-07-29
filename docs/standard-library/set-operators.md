@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425162"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217508"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 연산자
 
-## <a name="op_neq"></a>operator! = (set)
+## <a name="operator-set"></a><a name="op_neq"></a>operator! = (set)
 
 연산자의 좌변에 있는 set 개체가 우변에 있는 set 개체와 같지 않은지 테스트합니다.
 
@@ -35,7 +35,7 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -43,7 +43,7 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="return-value"></a>Return Value
 
-집합이 같으면 **true**이고 집합이 같지 않으면 **false**입니다.
+**`true`** 집합이 같지 않으면입니다. **`false`** 집합이 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>연산자&lt; (set)
+## <a name="operatorlt-set"></a><a name="op_lt"></a>연산자 &lt; (set)
 
 연산자의 좌변에 set 개체가 우변에 있는 set 개체보다 작은지 테스트합니다.
 
@@ -96,7 +96,7 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -104,7 +104,7 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 set가 연산자 우변의 set보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 set가 연산자 우변의 set 보다 엄격 하 게 작으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>연산자&lt;= (set)
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = (set)
 
 연산자의 좌변에 있는 set 개체가 우변에 있는 set 개체보다 작거나 같은지 테스트합니다.
 
@@ -157,7 +157,7 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -165,7 +165,7 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 set가 연산자 우변의 set보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 set가 연산자 우변의 set 보다 작거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a>operator = = (set)
+## <a name="operator-set"></a><a name="op_eq_eq"></a>operator = = (set)
 
 연산자의 좌변에 있는 set 개체가 우변에 있는 set 개체와 같은지 테스트합니다.
 
@@ -226,7 +226,7 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -234,7 +234,7 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 set가 연산자 우변의 set와 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 set가 연산자 우변의 집합과 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>연산자&gt; (set)
+## <a name="operatorgt-set"></a><a name="op_gt"></a>연산자 &gt; (set)
 
 연산자의 좌변에 있는 set 개체가 우변에 있는 set 개체보다 큰지 테스트합니다.
 
@@ -288,7 +288,7 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -296,7 +296,7 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 set가 연산자 우변의 set보다 크면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 set가 연산자 우변의 set 보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>연산자&gt;= (set)
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = (set)
 
 연산자의 좌변에 있는 set 개체가 우변에 있는 set 개체보다 크거나 같은지 테스트합니다.
 
@@ -349,7 +349,7 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `set` 형식의 개체입니다.
 
 *오른쪽*\
@@ -357,7 +357,7 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 set가 연산자 우변의 set보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 집합이 목록의 오른쪽에 있는 집합 보다 크거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a>operator! = (multiset)
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator! = (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체와 같지 않은지 테스트합니다.
 
@@ -418,7 +418,7 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -426,7 +426,7 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="return-value"></a>Return Value
 
-multiset가 같으면 **true**이고 multiset가 같지 않으면 **false**입니다.
+**`true`** 집합 또는 다중 집합이 같지 않으면이 고, 그렇지 않으면입니다. **`false`** set 또는 다중 집합이 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a>연산자&lt; (multiset)
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>연산자 &lt; (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체보다 작은지 테스트합니다.
 
@@ -480,7 +480,7 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -488,7 +488,7 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 multiset가 연산자 우변의 multiset보다 엄격하게 작으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 multiset가 연산자 우변의 multiset 보다 엄격 하 게 작으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a>연산자&lt;= (multiset)
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체보다 작거나 같은지 테스트합니다.
 
@@ -546,7 +546,7 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -554,7 +554,7 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 multiset가 연산자 우변의 multiset보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 multiset가 연산자 우변의 multiset 보다 작거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a>operator = = (multiset)
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체와 같은지 테스트합니다.
 
@@ -621,7 +621,7 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -629,7 +629,7 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 multiset가 연산자 우변의 multiset와 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 multiset가 연산자 우변의 multiset와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a>연산자&gt; (multiset)
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>연산자 &gt; (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체보다 큰지 테스트합니다.
 
@@ -683,7 +683,7 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -691,7 +691,7 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 multiset가 연산자 우변의 multiset보다 크면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 multiset가 연산자 우변의 multiset 보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a>연산자&gt;= (multiset)
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = (multiset)
 
 연산자의 좌변에 있는 multiset 개체가 우변에 있는 multiset 개체보다 크거나 같은지 테스트합니다.
 
@@ -749,7 +749,7 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `multiset` 형식의 개체입니다.
 
 *오른쪽*\
@@ -757,7 +757,7 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 multiset가 연산자 우변의 multiset보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 multiset가 목록의 오른쪽에 있는 multiset 보다 크거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 

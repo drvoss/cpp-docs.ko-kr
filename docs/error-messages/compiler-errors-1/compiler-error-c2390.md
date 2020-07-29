@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 48012c0fe31b2017cad29cc98992c9b1121efa7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745046"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221187"
 ---
 # <a name="compiler-error-c2390"></a>컴파일러 오류 C2390
 
@@ -21,7 +21,7 @@ ms.locfileid: "74745046"
 
 가능한 해결 방법은 다음과 같습니다.
 
-- 식별자가 함수인 경우 `extern` 저장소를 사용 하 여 선언 합니다.
+- 식별자가 함수인 경우 저장소를 사용 하 여 선언 **`extern`** 합니다.
 
 - 식별자가 정식 매개 변수 또는 지역 변수인 경우 자동 저장소를 사용 하 여 선언 합니다.
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213881"
 ---
 # <a name="call-class"></a>call 클래스
 
@@ -39,30 +39,30 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 *_FunctorType*<br/>
 이 블록에서 수락할 수 있는 함수의 서명입니다.
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[전화할](#ctor)|오버로드되었습니다. `call` 메시징 블록을 생성합니다.|
-|[~ call 소멸자](#dtor)|`call` 메시징 블록을 소멸 시킵니다.|
+|[call](#ctor)|오버로드되었습니다. `call` 메시징 블록을 생성합니다.|
+|[~ call 소멸자](#dtor)|메시징 블록을 소멸 시킵니다 `call` .|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|입력 메시지에 대해 call 함수를 실행 합니다.|
-|[process_message](#process_message)|이 `call` 메시징 블록에서 수락 된 메시지를 처리 합니다.|
-|[propagate_message](#propagate_message)|`ISource` 블록에서이 `call` 메시징 블록으로 메시지를 비동기적으로 전달 합니다. 소스 블록에서 호출 되는 경우 `propagate` 메서드에서 호출 됩니다.|
-|[send_message](#send_message)|`ISource` 블록에서이 `call` 메시징 블록으로 메시지를 동기적으로 전달 합니다. 소스 블록에서 호출 되는 경우 `send` 메서드에서 호출 됩니다.|
+|[process_message](#process_message)|이 메시징 블록에서 수락 된 메시지를 처리 `call` 합니다.|
+|[propagate_message](#propagate_message)|`ISource`블록에서이 메시징 블록으로 메시지를 비동기적으로 전달 `call` 합니다. `propagate`소스 블록에서 호출 하는 경우 메서드에 의해 호출 됩니다.|
+|[send_message](#send_message)|`ISource`블록에서이 메시징 블록으로 메시지를 동기적으로 전달 `call` 합니다. `send`소스 블록에서 호출 하는 경우 메서드에 의해 호출 됩니다.|
 |[supports_anonymous_source](#supports_anonymous_source)|`supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다. [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source)을 재정의 합니다.|
 
 ## <a name="remarks"></a>설명
 
 자세한 내용은 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)을 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [ITarget](itarget-class.md)
 
@@ -74,9 +74,9 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 **헤더:** agents.h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="ctor"></a>전화할
+## <a name="call"></a><a name="ctor"></a>전화할
 
 `call` 메시징 블록을 생성합니다.
 
@@ -125,19 +125,19 @@ call(
 
 런타임은 `_PScheduler` 또는 `_PScheduleGroup` 매개 변수를 지정하지 않는 경우 기본 스케줄러를 사용합니다.
 
-`_Call_method` 형식은이 `call` 메시징 블록이 메시지를 처리 하기 위해 호출 하는 시그니처 `void (T const &)`를 사용 하는 함수입니다.
+형식은 `_Call_method` `void (T const &)` 메시지를 `call` 처리 하기 위해이 메시징 블록에서 호출 하는 시그니처가 있는 함수입니다.
 
-`filter_method` 형식은 제공 된 메시지를 수락 해야 하는지 여부를 확인 하기 위해이 `call` 메시징 블록에서 호출 하는 시그니처 `bool (T const &)`를 사용 하는 함수입니다.
+형식은 `filter_method` `bool (T const &)` 제공 된 메시지를 `call` 수락 해야 하는지 여부를 확인 하기 위해이 메시징 블록에 의해 호출 되는 시그니처가 포함 된 함수입니다.
 
-## <a name="dtor"></a>~ 호출
+## <a name="call"></a><a name="dtor"></a>~ 호출
 
-`call` 메시징 블록을 소멸 시킵니다.
+메시징 블록을 소멸 시킵니다 `call` .
 
 ```cpp
 ~call();
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 입력 메시지에 대해 call 함수를 실행 합니다.
 
@@ -150,9 +150,9 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 처리할 메시지에 대 한 포인터입니다.
 
-## <a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a>process_message
 
-이 `call` 메시징 블록에서 수락 된 메시지를 처리 합니다.
+이 메시징 블록에서 수락 된 메시지를 처리 `call` 합니다.
 
 ```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -163,9 +163,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 처리할 메시지에 대 한 포인터입니다.
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-`ISource` 블록에서이 `call` 메시징 블록으로 메시지를 비동기적으로 전달 합니다. 소스 블록에서 호출 되는 경우 `propagate` 메서드에서 호출 됩니다.
+`ISource`블록에서이 메시징 블록으로 메시지를 비동기적으로 전달 `call` 합니다. `propagate`소스 블록에서 호출 하는 경우 메서드에 의해 호출 됩니다.
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ virtual message_status propagate_message(
 
 대상에서 메시지를 사용 하 여 수행 하기로 결정 한 내용을 나타내는 [message_status](concurrency-namespace-enums.md) 입니다.
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-`ISource` 블록에서이 `call` 메시징 블록으로 메시지를 동기적으로 전달 합니다. 소스 블록에서 호출 되는 경우 `send` 메서드에서 호출 됩니다.
+`ISource`블록에서이 메시징 블록으로 메시지를 동기적으로 전달 `call` 합니다. `send`소스 블록에서 호출 하는 경우 메서드에 의해 호출 됩니다.
 
 ```cpp
 virtual message_status send_message(
@@ -207,7 +207,7 @@ virtual message_status send_message(
 
 대상에서 메시지를 사용 하 여 수행 하기로 결정 한 내용을 나타내는 [message_status](concurrency-namespace-enums.md) 입니다.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 `supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다.
 
@@ -217,9 +217,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Return Value
 
-블록에서 제공 된 메시지를 연기 하지 않으므로 **true** 입니다.
+**`true`** 블록은 제공 된 메시지를 연기 하지 않기 때문입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)<br/>
-[transformer 클래스](transformer-class.md)
+[concurrency 네임 스페이스](concurrency-namespace.md)<br/>
+[변환기 클래스](transformer-class.md)

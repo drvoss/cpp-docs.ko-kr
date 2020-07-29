@@ -31,14 +31,14 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 59346dfded63aec315304f76c9bed753a4db1224
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217469"
 ---
-# <a name="sharedptr-class"></a>shared_ptr 클래스
+# <a name="shared_ptr-class"></a>shared_ptr 클래스
 
 동적으로 할당된 개체 주위에 참조 횟수가 계산되는 스마트 포인터를 래핑합니다.
 
@@ -51,13 +51,13 @@ class shared_ptr;
 
 ## <a name="remarks"></a>설명
 
-클래스 `shared_ptr` 는 참조 횟수를 사용 하 여 리소스를 관리 하는 개체를 설명 합니다. `shared_ptr` 개체는 null 포인터를 소유하거나 보유한 리소스에 대한 포인터를 보유합니다. 둘 이상의 `shared_ptr` 개체가 리소스를 소유할 수 있습니다. 특정 리소스를 소유하는 마지막 `shared_ptr` 개체가 삭제되면 리소스가 해제됩니다.
+`shared_ptr`클래스는 참조 횟수를 사용 하 여 리소스를 관리 하는 개체를 설명 합니다. `shared_ptr` 개체는 null 포인터를 소유하거나 보유한 리소스에 대한 포인터를 보유합니다. 둘 이상의 `shared_ptr` 개체가 리소스를 소유할 수 있습니다. 특정 리소스를 소유하는 마지막 `shared_ptr` 개체가 삭제되면 리소스가 해제됩니다.
 
 가 `shared_ptr` 다시 할당 되거나 다시 설정 되 면 리소스의 소유를 중지 합니다.
 
 특정 멤버 함수에 대해 언급된 경우를 제외하고 템플릿 인수 `T`는 불완전한 형식일 수 있습니다.
 
-`G*` 형식의 리소스 포인터 또는 `shared_ptr<G>`에서 `shared_ptr<T>` 개체가 생성된 경우 포인터 형식 `G*`를 `T*`로 변환할 수 있어야 합니다. 변환할 수 없는 경우 코드는 컴파일되지 않습니다. 예:
+`G*` 형식의 리소스 포인터 또는 `shared_ptr<G>`에서 `shared_ptr<T>` 개체가 생성된 경우 포인터 형식 `G*`를 `T*`로 변환할 수 있어야 합니다. 변환할 수 없는 경우 코드는 컴파일되지 않습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 #include <memory>
@@ -107,21 +107,21 @@ null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블
 
 인수 없이 - 결과 개체는 빈 `shared_ptr` 개체 또는 빈 `weak_ptr` 개체입니다.
 
-`ptr` - 관리할 리소스에 대한 `Other*` 형식의 포인터입니다. `T`는 완전한 형식이어야 합니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면 식을 `delete ptr`계산 합니다.
+`ptr` - 관리할 리소스에 대한 `Other*` 형식의 포인터입니다. `T`는 완전한 형식이어야 합니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면 식을 계산 `delete ptr` 합니다.
 
-`ptr, deleter` - 관리할 리소스에 대한 `Other*` 형식의 포인터 및 해당 리소스에 대한 삭제자입니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면는 잘 정의 되어야 하 `deleter(ptr)`는를 호출 합니다.
+`ptr, deleter` - 관리할 리소스에 대한 `Other*` 형식의 포인터 및 해당 리소스에 대한 삭제자입니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면는 `deleter(ptr)` 잘 정의 되어야 하는를 호출 합니다.
 
-`ptr, deleter, alloc` -- 관리할 리소스에 대한 `Other*` 형식의 포인터, 해당 리소스에 대한 삭제자 및 할당하고 해제해야 하는 스토리지를 관리할 할당자입니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면는 잘 정의 되어야 하 `deleter(ptr)`는를 호출 합니다.
+`ptr, deleter, alloc` -- 관리할 리소스에 대한 `Other*` 형식의 포인터, 해당 리소스에 대한 삭제자 및 할당하고 해제해야 하는 스토리지를 관리할 할당자입니다. 제어 블록을 할당할 수 없기 때문에 함수가 실패 하면는 `deleter(ptr)` 잘 정의 되어야 하는를 호출 합니다.
 
 `sp` - 관리할 리소스를 소유하는 `shared_ptr<Other>` 개체입니다.
 
 `wp` - 관리할 리소스를 가리키는 `weak_ptr<Other>` 개체입니다.
 
-`ap` - 관리할 리소스에 대한 포인터를 보유하는 `auto_ptr<Other>` 개체입니다. 함수가 성공 하면를 호출 `ap.release()`하 고 그렇지 않으면를 변경 하지 않고 그대로 둡니다. `ap`
+`ap` - 관리할 리소스에 대한 포인터를 보유하는 `auto_ptr<Other>` 개체입니다. 함수가 성공 하면를 호출 하 `ap.release()` 고 그렇지 않으면를 변경 하지 않고 그대로 둡니다 `ap` .
 
 모든 경우에서 포인터 형식 `Other*`를 `T*`로 변환할 수 있어야 합니다.
 
-## <a name="thread-safety"></a>스레드로부터의 안전성
+## <a name="thread-safety"></a>스레드 보안
 
 개체가 소유권을 공유하는 복사본이더라도 다중 스레드가 여러 `shared_ptr` 개체를 동시에 읽고 쓸 수 있습니다.
 
@@ -132,23 +132,23 @@ null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블
 | **생성자** | |
 |[shared_ptr](#shared_ptr)|`shared_ptr`를 생성합니다.|
 |[~ shared_ptr](#dtorshared_ptr)|`shared_ptr`을 삭제합니다.|
-| **Typedefs** | |
+| **정의** | |
 |[element_type](#element_type)|요소의 형식입니다.|
 |[weak_type](#weak_type)|요소에 대 한 약한 포인터의 형식입니다.|
 | **멤버 함수** | |
 |[get](#get)|소유하는 리소스의 주소를 가져옵니다.|
 |[owner_before](#owner_before)|`shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.|
 |[reset](#reset)|소유하는 리소스를 대체합니다.|
-|[swap](#swap)|두 `shared_ptr` 개체를 교환합니다.|
+|[스왑을](#swap)|두 `shared_ptr` 개체를 교환합니다.|
 |[unique](#unique)|소유하는 리소스가 고유한지 테스트합니다.|
 |[use_count](#use_count)|리소스 소유자 수를 계산합니다.|
 | **연산자** | |
-|[operator bool](#op_bool)|소유하는 리소스가 있는지 테스트합니다.|
-|[operator*](#op_star)|지정된 값을 가져옵니다.|
-|[operator=](#op_eq)|소유하는 리소스를 대체합니다.|
+|[연산자 bool](#op_bool)|소유하는 리소스가 있는지 테스트합니다.|
+|[연산자](#op_star)|지정된 값을 가져옵니다.|
+|[연산자 =](#op_eq)|소유하는 리소스를 대체합니다.|
 |[연산자&gt;](#op_arrow)|지정된 값으로 포인터를 가져옵니다.|
 
-## <a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a>element_type
 
 요소의 형식입니다.
 
@@ -159,7 +159,7 @@ using element_type = remove_extent_t<T>; // C++17
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수의 `T`동의어입니다. `element_type`
+`element_type`이 형식은 템플릿 매개 변수의 동의어입니다 `T` .
 
 ### <a name="example"></a>예제
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a> get
+## <a name="get"></a><a name="get"></a>가져오기
 
 소유하는 리소스의 주소를 가져옵니다.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>연산자 bool
+## <a name="operator-bool"></a><a name="op_bool"></a>연산자 bool
 
 소유하는 리소스가 있는지 테스트합니다.
 
@@ -232,7 +232,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>설명
 
-연산자는 **true** `get() != nullptr`값을 반환 하 고 그렇지 않으면 **false**를 반환 합니다.
+연산자는 **`true`** when 인 경우 값을 반환 `get() != nullptr` 하 고 그렇지 않으면을 반환 **`false`** 합니다.
 
 ### <a name="example"></a>예제
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>연산자
+## <a name="operator"></a><a name="op_star"></a>연산자
 
 지정된 값을 가져옵니다.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
 소유하는 리소스를 대체합니다.
 
@@ -323,7 +323,7 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 복사 하거나 이동할 공유 포인터입니다.
 
 *ap*\
-이동할 자동 포인터입니다. 오버 `auto_ptr` 로드는 c + + 11에서 더 이상 사용 되지 않으며 c + + 17에서 제거 되었습니다.
+이동할 자동 포인터입니다. `auto_ptr`오버 로드는 c + + 11에서 더 이상 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
 *최대*\
 소유권을 적용할 개체에 대 한 고유 포인터입니다. *up* 은 호출 후 개체를 소유 하지 않습니다.
@@ -336,7 +336,7 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 
 ### <a name="remarks"></a>설명
 
-모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자가 실패 하면 변경 되지 않은 `*this` 상태로 유지 됩니다.
+연산자는 모두에서 현재 소유한 리소스에 대 한 참조 횟수를 감소 하 **`*this`** 고,에 대 한 피연산자 시퀀스에 의해 이름이 지정 된 리소스의 소유권을에 할당 **`*this`** 합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자가 실패 하면 **`*this`** 변경 되지 않은 상태로 유지 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>연산자->
+## <a name="operator-"></a><a name="op_arrow"></a>연산자->
 
 지정된 값으로 포인터를 가져옵니다.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a>owner_before
 
 `shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.
 
@@ -419,13 +419,13 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 ### <a name="parameters"></a>매개 변수
 
 *ptr*\
-`shared_ptr` 또는에 대 한 lvalue 참조 입니다.`weak_ptr`
+또는에 대 한 lvalue 참조 `shared_ptr` `weak_ptr` 입니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 멤버 함수는가 이전 `*this` `ptr`에 정렬 된 경우 true를 반환 합니다.
+템플릿 멤버 함수는 **`*this`** 가 이전에 정렬 된 경우 true를 반환 합니다 `ptr` .
 
-## <a name="reset"></a>다시 설정
+## <a name="reset"></a><a name="reset"></a>다시 설정
 
 소유하는 리소스를 대체합니다.
 
@@ -469,7 +469,7 @@ void reset(
 
 ### <a name="remarks"></a>설명
 
-모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자가 실패 하면 변경 되지 않은 `*this` 상태로 유지 됩니다.
+연산자는 모두에서 현재 소유한 리소스에 대 한 참조 횟수를 감소 하 **`*this`** 고,에 대 한 피연산자 시퀀스에 의해 이름이 지정 된 리소스의 소유권을에 할당 **`*this`** 합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자가 실패 하면 **`*this`** 변경 되지 않은 상태로 유지 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
 
 `shared_ptr`를 생성합니다.
 
@@ -621,7 +621,7 @@ shared_ptr(
 
 ### <a name="remarks"></a>설명
 
-각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 소유하는 개체를 생성합니다. 생성자 `shared_ptr(const weak_ptr<Other>& wp)` 는 [bad_weak_ptr](bad-weak-ptr-class.md) if `wp.expired()`형식의 exception 개체를 throw 합니다.
+각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 소유하는 개체를 생성합니다. 생성자는 `shared_ptr(const weak_ptr<Other>& wp)` 인 경우 [bad_weak_ptr](bad-weak-ptr-class.md) 형식의 예외 개체를 throw `wp.expired()` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
 
 `shared_ptr`을 삭제합니다.
 
@@ -685,7 +685,7 @@ int main()
 
 ### <a name="remarks"></a>설명
 
-소멸자는 현재 `*this`가 소유한 리소스의 참조 수를 줄입니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다.
+소멸자는에서 현재 소유 하 고 있는 리소스에 대 한 참조 횟수를 감소 시킵니다 **`*this`** . 참조 수가 0으로 감소하면 리소스가 해제됩니다.
 
 ### <a name="example"></a>예제
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 두 `shared_ptr` 개체를 교환합니다.
 
@@ -737,7 +737,7 @@ void swap(shared_ptr& sp) noexcept;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 이후 *sp*에서 소유 하 여 `*this` 원래 소유 한 리소스를 유지 하 고, 원래 *sp* 가 소유한 리소스를 `*this`이후에 소유 합니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.
+멤버 함수는 이후 sp에서 소유 하 여 원래 소유 한 리소스를 유지 하 **`*this`** 고, 원래 *sp* 가 소유한 리소스를 이후에 소유 *sp* **`*this`** 합니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>고유
+## <a name="unique"></a><a name="unique"></a>고유
 
 소유하는 리소스가 고유한지 테스트합니다. 이 함수는 c + + 17에서 사용 되지 않으며 c + + 20에서 제거 되었습니다.
 
@@ -793,7 +793,7 @@ bool unique() const noexcept;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는에서 `*this`소유 하 고 있는 `shared_ptr` 리소스를 소유 하 고 있지 않은 경우 **true** 를 반환 하 고, 그렇지 않으면 **false**를 반환 합니다.
+멤버 함수는 **`true`** `shared_ptr` 에서 소유 하 고 있는 리소스를 소유 하 고 있지 않은 경우 **`*this`** 를 반환 하 고, 그렇지 않으면를 반환 **`false`** 합니다.
 
 ### <a name="example"></a>예제
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a>use_count
 
 리소스 소유자 수를 계산합니다.
 
@@ -832,7 +832,7 @@ long use_count() const noexcept;
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 `*this`의 소유인 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.
+멤버 함수는 `shared_ptr` 에서 소유 하는 리소스를 소유 하는 개체의 수를 반환 합니다 **`*this`** .
 
 ### <a name="example"></a>예제
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a>weak_type
 
 요소에 대 한 약한 포인터의 형식입니다.
 
@@ -871,9 +871,9 @@ using weak_type = weak_ptr<T>; // C++17
 
 ### <a name="remarks"></a>설명
 
-정의 `weak_type` 는 c + + 17에서 추가 되었습니다.
+`weak_type`정의는 c + + 17에서 추가 되었습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\

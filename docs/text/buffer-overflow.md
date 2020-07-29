@@ -6,16 +6,16 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217326"
 ---
 # <a name="buffer-overflow"></a>버퍼 오버플로
 
-다양한 문자 크기를 갖는 문자를 버퍼에 넣을 때 문제가 발생할 수 있습니다. 문자열 `sz`의 문자를 `rgch`버퍼에 복사하는 다음 코드를 살펴봅시다.
+문자 크기를 변경 하면 문자를 버퍼에 넣을 때 문제가 발생할 수 있습니다. 문자열의 문자를 버퍼로 복사 하는 다음 코드를 고려 합니다 `sz` `rgch` .
 
 ```cpp
 cb = 0;
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-여기서 문제는 마지막 바이트는 선행 바이트를 복사 했습니다. 다음 예는 버퍼 오버플로가 발생할 수 있으므로 문제가 해결된 것은 아닙니다.
+질문은: 마지막 바이트가 선행 바이트를 복사 했습니까? 다음은 버퍼를 잠재적으로 오버플로될 수 있으므로 문제를 해결 하지 않습니다.
 
 ```cpp
 cb = 0;
@@ -35,7 +35,7 @@ while( cb < sizeof( rgch ) )
 }
 ```
 
-`_mbccpy`를 사용하면 올바른 작업을 할 수 있습니다. 문자가 싱글 또는 더블 바이트인지 관계없이 문자 전체를 복사합니다. 하지만 이 예제에서도 문자가 두 바이트로 구성되어 있다면 복사할 마지막 문자가 버퍼에 들어가지 않을 수 있다는 것을 고려하지 않습니다. 올바른 예제는 다음과 같습니다.
+`_mbccpy`이 호출은 올바른 작업을 수행 하려고 시도 합니다. 즉, 1 바이트 또는 2 바이트 인지에 관계 없이 전체 문자를 복사 합니다. 그러나 문자의 너비가 2 바이트 이면 복사 된 마지막 문자가 버퍼에 맞지 않을 수 있다는 것을 고려 하지 않습니다. 올바른 솔루션은 다음과 같습니다.
 
 ```cpp
 cb = 0;
@@ -47,12 +47,12 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }
 ```
 
-이 코드는 `_mbclen`을 사용하여 `sz`가 가리키는 현재 문자의 크기를 점검하여 루프에서의 버퍼 오버플로우를 방지합니다. `_mbsnbcpy` 함수를 사용하면 **while** 루프 코드를 다음과 같이 한 줄로 바꿀 수 있습니다. 예를 들어:
+이 코드는를 사용 하 여 `_mbclen` 가 가리키는 현재 문자의 크기를 테스트 하는 루프 테스트에서 가능한 버퍼 오버플로를 테스트 `sz` 합니다. 함수를 호출 하 여 `_mbsnbcpy` 루프의 코드를 **`while`** 한 줄의 코드로 바꿀 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[멀티바이트 문자 집합(MBCS) 프로그래밍 팁](../text/mbcs-programming-tips.md)
+[MBCS 프로그래밍 팁](../text/mbcs-programming-tips.md)

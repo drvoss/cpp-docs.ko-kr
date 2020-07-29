@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e52b16965d849f992731c4ff4254fd218b944269
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217755"
 ---
-# <a name="isnothrowconstructible-class"></a>is_nothrow_constructible 클래스
+# <a name="is_nothrow_constructible-class"></a>is_nothrow_constructible 클래스
 
 지정된 인수 형식을 사용할 경우 형식이 생성 가능한지와 throw되지 않는 것으로 알려져 있는지를 테스트합니다.
 
@@ -34,14 +34,14 @@ struct is_nothrow_constructible;
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Args*의 인수 형식을 사용 하 여 형식이 *T* 인 경우 true이 고, 생성자는 throw 되지 않는 컴파일러에 의해 생성 가능 됩니다. 그렇지 않으면 false입니다. 변수  정의가 `T t(std::declval<Args>()...);` 올바른 형식이 면 T 형식은 생성 가능입니다. *T* 와 *Args* 의 모든 형식은 완전 한 형식, **void**또는 알 수 없는 바인딩된 배열 이어야 합니다.
+형식 조건자의 인스턴스는 *Args*의 인수 형식을 사용 하 여 형식이 *T* 인 경우 true이 고, 생성자는 throw 되지 않는 컴파일러에 의해 생성 가능 됩니다. 그렇지 않으면 false입니다. 변수 정의가 올바른 형식이 면 *T* 형식은 생성 가능입니다 `T t(std::declval<Args>()...);` . *T* 와 *Args* 의 모든 형식은 완전 한 형식, **`void`** 또는 범위를 알 수 없는 배열 이어야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

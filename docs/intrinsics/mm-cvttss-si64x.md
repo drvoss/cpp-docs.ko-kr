@@ -7,18 +7,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217423"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217989"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 전용**
 
-잘림에 대 한 배정밀도 부동 소수점 숫자를 64 비트 정수 (`cvttss2si`) 명령으로 변환 하는 x64 확장 버전을 내보냅니다.
+잘림에 대 한 배정밀도 부동 소수점 숫자를 64 비트 정수 () 명령으로 변환 하는 x64 확장 버전을 내보냅니다 `cvttss2si` .
 
 ## <a name="syntax"></a>구문
 
@@ -30,8 +30,8 @@ __int64 _mm_cvttss_si64x(
 
 ### <a name="parameters"></a>매개 변수
 
-*value*\
-진행 단 `__m128` 정밀도 부동 소수점 값을 포함 하는 구조체입니다.
+*기본값*\
+진행 **`__m128`** 단 정밀도 부동 소수점 값을 포함 하는 구조체입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -39,15 +39,15 @@ __int64 _mm_cvttss_si64x(
 
 ## <a name="requirements"></a>요구 사항
 
-|내장 함수|아키텍처|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**헤더 파일** \<intrin.h >
+**헤더 파일** \<intrin.h>
 
 ## <a name="remarks"></a>설명
 
-내장 함수는와 `_mm_cvtss_si64x` 는 달리 부정확 한 변환은 0으로 잘립니다. 구조는 `__m128` xmm 레지스터를 나타내므로 생성 된 명령은 xmm 레지스터에서 시스템 메모리로 데이터를 이동 합니다.
+내장 함수는와 `_mm_cvtss_si64x` 는 달리 부정확 한 변환은 0으로 잘립니다. 구조는 **`__m128`** xmm 레지스터를 나타내므로 생성 된 명령은 xmm 레지스터에서 시스템 메모리로 데이터를 이동 합니다.
 
 이 루틴은 내장 루틴으로만 사용할 수 있습니다.
 
@@ -87,7 +87,7 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [__m128](../cpp/m128.md)\
 [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

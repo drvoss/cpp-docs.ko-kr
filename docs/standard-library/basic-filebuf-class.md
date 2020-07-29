@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219315"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 클래스
 
@@ -71,7 +71,7 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 클래스 템플릿은 외부 파일에 저장 된 요소의 시퀀스를 대상으로 하는 문자 특성이 *Tr*클래스에 의해 결정 되는 *Char_T*형식 요소의 전송을 제어 하는 스트림 버퍼에 대해 설명 합니다.
 
 > [!NOTE]
-> 형식의 개체는 `basic_filebuf` __ \* __ `char_type` *Char_T*형식 매개 변수에 의해 지정 된와 관계 없이 char 형식의 내부 버퍼를 사용 하 여 만들어집니다. 즉, 유니코드 문자열 **wchar_t** (문자 포함)은 내부 버퍼에 기록 되기 전에 ANSI 문자열 (문자 **포함)** 로 변환 됩니다. 유니코드 문자열을 버퍼에 저장 하려면 **wchar_t** 형식의 새 버퍼를 만들고 메서드를 사용 하 여 설정 [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` 합니다. 이 동작을 보여 주는 예제를 보려면 아래를 참조하세요.
+> 형식의 개체는 `basic_filebuf` __ \* __ `char_type` *Char_T*형식 매개 변수에 의해 지정 된와 관계 없이 char 형식의 내부 버퍼를 사용 하 여 만들어집니다. 즉, 유니코드 문자열 ( **`wchar_t`** 문자 포함)은 **`char`** 내부 버퍼에 기록 되기 전에 ANSI 문자열 (문자 포함)로 변환 됩니다. 유니코드 문자열을 버퍼에 저장 하려면 형식의 새 버퍼를 만들고 **`wchar_t`** 메서드를 사용 하 여 설정 [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` 합니다. 이 동작을 보여 주는 예제를 보려면 아래를 참조하세요.
 
 클래스의 개체는 `basic_filebuf<Char_T, Tr>` `FILE` 열려 있는 파일과 연결 된 스트림을 제어 하는 개체를 지정 하는 파일 포인터를 저장 합니다. 또한 보호된 멤버 함수 [overflow](#overflow) 및 [underflow](#underflow)에서 사용하도록 두 가지 파일 변환 패싯에 대한 포인터를 저장합니다. 자세한 내용은 [`basic_filebuf::open`](#open)를 참조하세요.
 
@@ -265,15 +265,15 @@ typedef Char_T char_type;
 basic_filebuf<Char_T, Tr> *close();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일 포인터가 null 포인터인 경우 멤버 함수는 null 포인터를 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`close`은 `fclose(fp)`를 호출합니다. 해당 함수가 0이 아닌 값을 반환하는 경우 이 함수는 null 포인터를 반환합니다. 아닌 경우 **this**를 반환하여 파일을 성공적으로 닫았음을 나타냅니다.
+`close`은 `fclose(fp)`를 호출합니다. 해당 함수가 0이 아닌 값을 반환하는 경우 이 함수는 null 포인터를 반환합니다. 그렇지 않으면 **`this`** 파일이 성공적으로 닫 혔 음을 나타내기 위해를 반환 합니다.
 
-와이드 스트림의 경우 스트림을 연 이후 또는에 대 한 마지막 호출 이후에 삽입이 발생 한 경우 `streampos` 함수는를 호출 합니다 [`overflow`](#overflow) . 또한 필요에 따라 호출 하는 파일 변환 패싯을 사용 하 여 초기 변환 상태를 복원 하는 데 필요한 모든 시퀀스를 삽입 합니다 `fac` `fac.unshift` . Char 형식의 생성 된 각 요소 `byte` 는 **char** `fp` 폼의 후속 호출로 인해 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다 `fputc(byte, fp)` . 또는 쓰기에 대 한 호출이 `fac.unshift` 실패 하면 함수는 성공 하지 않습니다.
+와이드 스트림의 경우 스트림을 연 이후 또는에 대 한 마지막 호출 이후에 삽입이 발생 한 경우 `streampos` 함수는를 호출 합니다 [`overflow`](#overflow) . 또한 필요에 따라 호출 하는 파일 변환 패싯을 사용 하 여 초기 변환 상태를 복원 하는 데 필요한 모든 시퀀스를 삽입 합니다 `fac` `fac.unshift` . 형식의 생성 된 각 요소 `byte` **`char`** 는 `fp` 폼의 후속 호출로 인해 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다 `fputc(byte, fp)` . 또는 쓰기에 대 한 호출이 `fac.unshift` 실패 하면 함수는 성공 하지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -340,9 +340,9 @@ typedef typename traits_type::int_type int_type;
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-파일 포인터가 null이 아닌 경우 **true** 입니다.
+**`true`** 파일 포인터가 null이 아닌 경우입니다.
 
 ### <a name="example"></a>예제
 
@@ -411,9 +411,9 @@ basic_filebuf<Char_T, Tr> *open(
 *보호*\
 _Fsopen의 *shflag* 매개 변수에 해당 하는 기본 파일 열기 보호는 [_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-버퍼가 이미 열려 있는 경우 또는 파일 포인터가 null 포인터인 경우 함수는 null 포인터를 반환 합니다. 아닌 경우 **this**를 반환합니다.
+버퍼가 이미 열려 있는 경우 또는 파일 포인터가 null 포인터인 경우 함수는 null 포인터를 반환 합니다. 그렇지 않으면를 반환 **`this`** 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -450,7 +450,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 *오른쪽*\
 [basic_filebuf](../standard-library/basic-filebuf-class.md) 개체에 대한 rvalue 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 __* This__를 반환 합니다.
 
@@ -471,7 +471,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 *_Meta*\
 버퍼 또는에 삽입할 문자 `traits_type::eof` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공할 수 없는 경우를 반환 `traits_type::eof` 합니다. 그렇지 않으면를 반환 `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` 합니다.
 
@@ -498,7 +498,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 *_Meta*\
 버퍼에 삽입할 문자 또는 `traits_type::eof`입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공할 수 없는 경우를 반환 `traits_type::eof` 합니다. 그렇지 않으면를 반환 `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` 합니다.
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 함수에서 위치를 사용할 수 있는 경우 `putback` 이 작업을 수행할 수 있습니다. 이렇게 하려면 다음 포인터를 해당 위치를 가리키도록 설정 하 고 `ch` 해당 위치에 저장 합니다.
 
-- 함수가 요소를 입력 스트림에 다시 푸시할 수 있는 경우 `ungetc` **char**형식의 요소에 대해를 호출 하는 등의 작업을 수행할 수 있습니다.
+- 함수가 요소를 입력 스트림에 다시 푸시할 수 있는 경우 `ungetc` 형식의 요소에 대해를 호출 하는 등의 작업을 수행할 수 있습니다 **`char`** .
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
 
@@ -542,7 +542,7 @@ virtual pos_type seekoff(
 *_Which*\
 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 새 위치 또는 잘못된 스트림 위치를 반환합니다.
 
@@ -572,7 +572,7 @@ virtual pos_type seekpos(
 *_Which*\
 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일 포인터가 `fp` null 포인터인 경우 함수가 실패 합니다. 그렇지 않으면를 호출 하 여 스트림 위치를 변경 하려고 `fsetpos(fp, &fposn)` `fposn` 합니다. 여기서는 `fpos_t` 에 저장 된 개체입니다 `pos` . 성공하면 함수는 `pos`을 반환합니다. 실패하면 잘못된 스트림 위치를 반환합니다. 스트림 위치가 잘못되었는지를 확인하려면 반환 값을 `pos_type(off_type(-1))`과 비교합니다.
 
@@ -582,7 +582,7 @@ virtual pos_type seekpos(
 
 읽기 및 쓰기용으로 열린 파일의 경우 입력 스트림과 출력 스트림이 나란히 배치됩니다. 삽입 및 추출 사이를 전환 하려면 또는를 호출 해야 [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) 합니다 [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) . `pubseekoff`(및 `seekoff` )에 대 한 호출에는 텍스트 스트림, 이진 스트림 및 와이드 스트림에 대 한 다양 한 제한이 있습니다.
 
-와이드 스트림의 경우 스트림이 열린 이후 또는 `streampos`에 대한 마지막 호출 이후 삽입이 발생하면 함수는 [overflow](#overflow)를 호출합니다. 또한 필요에 따라 호출 하는 파일 변환 패싯을 사용 하 여 초기 변환 상태를 복원 하는 데 필요한 모든 시퀀스를 삽입 합니다 `fac` `fac.unshift` . Char 형식의 생성 된 각 요소 `byte` 는 **char** `fp` 폼의 후속 호출로 인해 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다 `fputc(byte, fp)` . 또는 쓰기에 대 한 호출이 `fac.unshift` 실패 하면 함수는 성공 하지 않습니다.
+와이드 스트림의 경우 스트림이 열린 이후 또는 `streampos`에 대한 마지막 호출 이후 삽입이 발생하면 함수는 [overflow](#overflow)를 호출합니다. 또한 필요에 따라 호출 하는 파일 변환 패싯을 사용 하 여 초기 변환 상태를 복원 하는 데 필요한 모든 시퀀스를 삽입 합니다 `fac` `fac.unshift` . 형식의 생성 된 각 요소 `byte` **`char`** 는 `fp` 폼의 후속 호출로 인해 파일 포인터로 지정 된 연결 된 스트림에 기록 됩니다 `fputc(byte, fp)` . 또는 쓰기에 대 한 호출이 `fac.unshift` 실패 하면 함수는 성공 하지 않습니다.
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
 
@@ -602,13 +602,13 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 *수*\
 버퍼의 크기입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `fp` 파일 포인터가 null 포인터인 경우 보호된 멤버 함수는 0을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-`setbuf``setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`을 호출 하 여 `count` *_Buffer* 에서 시작 하는 요소의 배열을 스트림의 버퍼로 제공 합니다. 해당 함수가 0이 아닌 값을 반환하는 경우 이 함수는 null 포인터를 반환합니다. 아닌 경우 성공을 알리기 위해 **this**를 반환합니다.
+`setbuf``setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`을 호출 하 여 `count` *_Buffer* 에서 시작 하는 요소의 배열을 스트림의 버퍼로 제공 합니다. 해당 함수가 0이 아닌 값을 반환하는 경우 이 함수는 null 포인터를 반환합니다. 그렇지 않으면를 반환 **`this`** 하 고 성공 신호를 반환 합니다.
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
 
@@ -631,7 +631,7 @@ void swap(basic_filebuf& right);
 virtual int sync();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 파일 포인터가 null 포인터인 경우 0을 반환 합니다 `fp` . 그렇지 않으면 [오버플로](#overflow) 를 모두 호출 하 고 `fflush(fp)` 보류 중인 모든 출력을 스트림으로 플러시하는 경우에만 0을 반환 합니다.
 
@@ -651,7 +651,7 @@ typedef Tr traits_type;
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공할 수 없는 경우를 반환 `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) 합니다. 그렇지 않으면 `ch` 설명 섹션에 설명 된 대로 변환 된을 반환 합니다.
 
@@ -661,7 +661,7 @@ virtual int_type underflow();
 
 - 읽기 위치를 사용할 수 있는 경우 `ch` 읽기 위치에 저장 된 요소로를 사용 하 고 입력 버퍼에 대 한 다음 포인터를 앞으로 이동 합니다.
 
-- 폼의 연속 호출에서와 같이 **char**형식의 요소를 하나 이상 읽고 `fgetc(fp)` `ch` `Char_T` 파일 변환 패싯을 사용 하 여 필요에 따라 호출 하는 형식의 요소로 변환할 수 있습니다 `fac` `fac.in` . 읽기 또는 변환이 실패하면 함수가 성공하지 못합니다.
+- 폼의 후속 호출에서와 같이 형식의 요소를 하나 이상 읽고 **`char`** `fgetc(fp)` `ch` `Char_T` 파일 변환 패싯을 사용 하 여 필요에 따라 호출 하는 형식의 요소로 변환할 수 있습니다 `fac` `fac.in` . 읽기 또는 변환이 실패하면 함수가 성공하지 못합니다.
 
 ## <a name="see-also"></a>참고 항목
 
