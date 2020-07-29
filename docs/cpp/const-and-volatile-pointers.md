@@ -7,43 +7,43 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: 10dd3de05c5dd0b8de7399eaf36834ea22cd208a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8fd25777d1169ba281fbee173c1c8f5673c8b56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180396"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227571"
 ---
 # <a name="const-and-volatile-pointers"></a>const 및 volatile 포인터
 
-[Const](const-cpp.md) 및 [volatile](volatile-cpp.md) 키워드는 포인터가 처리 되는 방식을 변경 합니다. **Const** 키워드는 초기화 후 포인터를 수정할 수 없도록 지정 합니다. 이 포인터는 이후에 수정 되지 않도록 보호 됩니다.
+[Const](const-cpp.md) 및 [volatile](volatile-cpp.md) 키워드는 포인터가 처리 되는 방식을 변경 합니다. **`const`** 키워드는 초기화 후 포인터를 수정할 수 없도록 지정 합니다. 포인터가 이후에 수정 되지 않도록 보호 됩니다.
 
-**Volatile** 키워드는 뒤에 오는 이름과 연결 된 값을 사용자 응용 프로그램에 포함 되지 않은 다른 작업으로 수정할 수 있도록 지정 합니다. 따라서 **volatile** 키워드는 인터럽트 서비스 루틴과의 통신에 사용 되는 여러 프로세스나 글로벌 데이터 영역에서 액세스할 수 있는 공유 메모리의 개체를 선언 하는 데 유용 합니다.
+**`volatile`** 키워드는 뒤에 오는 이름과 연결 된 값을 사용자 응용 프로그램에 포함 되지 않은 다른 작업으로 수정할 수 있도록 지정 합니다. 따라서 키워드는 **`volatile`** 인터럽트 서비스 루틴과의 통신에 사용 되는 여러 프로세스나 글로벌 데이터 영역에서 액세스할 수 있는 공유 메모리의 개체를 선언 하는 데 유용 합니다.
 
-이름이 **volatile**로 선언 된 경우 컴파일러는 프로그램에서 액세스할 때마다 메모리에서 값을 다시 로드 합니다. 개체의 최적화 횟수가 상당히 줄어들게 됩니다. 이 키워드는 개체 상태가 예기치 않게 변경되는 경우 예상 가능한 프로그램 성능을 보장하는 유일한 방법이기도 합니다.
+이름이로 선언 된 경우 **`volatile`** 컴파일러는 프로그램에서 액세스할 때마다 메모리에서 값을 다시 로드 합니다. 개체의 최적화 횟수가 상당히 줄어들게 됩니다. 이 키워드는 개체 상태가 예기치 않게 변경되는 경우 예상 가능한 프로그램 성능을 보장하는 유일한 방법이기도 합니다.
 
-포인터가 가리키는 개체를 **const** 또는 **volatile**로 선언 하려면 형식의 선언을 사용 합니다.
+포인터가 가리키는 개체를 또는로 선언 하려면 **`const`** **`volatile`** 형식의 선언을 사용 합니다.
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-포인터의 값 (즉, 포인터에 저장 된 실제 주소 ( **const** 또는 **volatile**)을 선언 하려면 다음 형식의 선언을 사용 합니다.
+포인터의 값 (즉, 포인터에 저장 된 실제 주소)을 또는로 선언 하려면 **`const`** **`volatile`** 형식의 선언을 사용 합니다.
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-언어 C++ 는 **const**로 선언 된 개체 또는 포인터의 수정을 허용 하는 할당을 방지 합니다. 그와 같은 할당은 개체 또는 포인터가 선언된 정보를 제거하기 때문에 원래의 선언 의도에 위배됩니다. 다음의 선언을 살펴보세요.
+C + + 언어는로 선언 된 개체 또는 포인터의 수정을 허용 하는 할당을 방지 합니다 **`const`** . 그와 같은 할당은 개체 또는 포인터가 선언된 정보를 제거하기 때문에 원래의 선언 의도에 위배됩니다. 다음의 선언을 살펴보세요.
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-앞의 두 개체 ( **const char**형식의`cch`, char 형식의 `ch` **)** 에 대 한 앞의 선언이 있을 경우 다음과 같은 선언/초기화가 유효 합니다.
+위의 두 개체 ( `cch` **const char**형식의, 및 형식의 경우)에 대 한 이전 선언이 `ch` 있을 **char)** 경우 다음과 같은 선언/초기화가 유효 합니다.
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-`pch2` 선언은 상수 개체가 수정될 수 있는 포인터를 선언하기 때문에 허용되지 않습니다. `pch3` 선언은 포인터가 아니라 상수 임을 지정 합니다. 선언에는 `pch2` 선언이 허용 되지 않기 때문에 허용 되지 않습니다.
+`pch2` 선언은 상수 개체가 수정될 수 있는 포인터를 선언하기 때문에 허용되지 않습니다. 선언에서는 `pch3` 포인터가 개체가 아니라 상수 임을 지정 합니다. 선언이 허용 되지 않는 것과 같은 이유로 선언이 허용 되지 않습니다 `pch2` .
 
 다음 8개의 할당에서는 포인터를 통한 할당과 이전 선언에 대한 포인터 값의 변경을 표시합니다. 이제 `pch1`을 통해 `pch8`에 대한 초기화가 올바르다고 가정합니다.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-**Volatile**로 선언 된 포인터 또는 **const** 와 **volatile**의 혼합으로 동일한 규칙을 준수 합니다.
+로 선언 **`volatile`** 되거나 및의 혼합으로 선언 된 **`const`** 포인터 **`volatile`** 는 동일한 규칙을 준수 합니다.
 
-**Const** 개체에 대 한 포인터는 함수 선언에서 다음과 같이 자주 사용 됩니다.
+개체에 대 한 포인터 **`const`** 는 함수 선언에서 다음과 같이 자주 사용 됩니다.
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-앞의 문은 함수 ( [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md))를 선언 합니다 .이 함수는 세 인수 중 두 개가 **char**에 대 한 포인터 형식입니다. 인수가 값이 아닌 참조로 전달 되기 때문에 함수가 **const**로 선언 되지 않은 `strSource` 경우 `strDestination` 및 `strSource`를 모두 수정할 수 있습니다. **Const** 로 `strSource`을 선언 하면 `strSource` 호출 된 함수에 의해 변경 될 수 없는 호출자가 보장 됩니다.
+앞의 문은 함수 ( [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md))를 선언 합니다 .이 함수는 세 개의 인수 중 두 개는에 대 한 포인터 형식입니다 **`char`** . 인수가 값이 아닌 참조로 전달 되기 때문에 함수는를 모두 수정할 수 있으며,가 `strDestination` `strSource` `strSource` 로 선언 되지 않은 경우에는를 자유롭게 수정할 수 있습니다 **`const`** . As를 선언 `strSource` 하면 **`const`** `strSource` 호출 된 함수에 의해 변경 될 수 없는 호출자가 보장 됩니다.
 
 > [!NOTE]
-> *Typename* <strong>\*</strong> 에서 **const** *typename* <strong>\*</strong>로의 표준 변환이 있으므로 `char *` 형식의 인수를 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)에 전달할 수 있습니다. 그러나 반대의 경우도 마찬가지입니다. 개체 또는 포인터에서 **const** 특성을 제거할 수 있는 암시적 변환은 없습니다.
+> *Typename* 에서 typename으로 표준 변환이 있으므로 <strong>\*</strong> **`const`** *typename* <strong>\*</strong> strcpy_s 형식의 인수를 전달할 수 있습니다 `char *` . [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 그러나 반대의 경우도 마찬가지입니다. 개체 또는 포인터에서 특성을 제거할 수 있는 암시적 변환은 없습니다 **`const`** .
 
-지정 된 형식의 **const** 포인터는 같은 형식의 포인터에 할당할 수 있습니다. 그러나 **const** 가 아닌 포인터는 **const** 포인터에 할당할 수 없습니다. 다음 코드는 올바른 할당과 잘못된 할당을 보여 줍니다.
+**`const`** 지정 된 형식의 포인터는 같은 형식의 포인터에 할당할 수 있습니다. 그러나 포인터에는 **`const`** 포인터를 할당할 수 없습니다 **`const`** . 다음 코드는 올바른 할당과 잘못된 할당을 보여 줍니다.
 
 ```cpp
 // const_pointer.cpp
@@ -126,5 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[포인터](pointers-cpp.md)
-[원시 포인터](raw-pointers.md)
+[포인터](pointers-cpp.md) 
+ [원시 포인터](raw-pointers.md)
