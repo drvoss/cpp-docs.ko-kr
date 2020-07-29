@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232991"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 클래스
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*실제 유형*\
-부동점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*RealType*\
+부동 소수점 결과 형식으로, 기본적으로로 설정 **`double`** 됩니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="example"></a>예제
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_상수_분포
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::p iecewise_constant_distribution
 
 분포를 생성합니다.
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째 I*\
+*firstI*\
 대상 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
-*라스트I*\
+*lastI*\
 대상 범위에 있는 마지막 요소의 입력 반복기입니다.
 
-*첫 번째W*\
+*firstW*\
 가중치 범위에 있는 첫 번째 요소의 입력 반복기입니다.
 
-*간격*\
+*구간*\
 분포의 간격이 있는 [initializer_list](../cpp/initializers.md)입니다.
 
-*횟수*\
+*수*\
 분포 범위의 요소 수입니다.
 
 *xmin*\
 분포 범위의 가장 작은 값입니다.
 
-*엑스 맥스*\
+*xmax*\
 분포 범위의 가장 큰 값입니다. *xmin*보다 커야 합니다.
 
-*웨이트 펀크*\
-분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값을 모두 **두 배로**변환할 수 있어야 합니다.
+*weightfunc*\
+분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 모두로 변환할 수 있어야 합니다 **`double`** .
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-이니셜자 목록 *간격과* 함수 *weightfunc에서*생성된 가중치의 간격으로 분포 개체를 구성합니다.
+이니셜라이저 목록 *간격* 및 *weightfunc*함수에서 생성 된 가중치에서 간격을 사용 하 여 분포 개체를 생성 합니다.
 
 다음과 같이 정의된 생성자는
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-`xmin,xmax`[]에 균일하게 분포된 *카운트* 간격이 있는 분포 객체를 구성하고, 함수 *weightfunc에*따라 각 간격 가중치를 할당하고 *weightfunc은* 하나의 `double`매개 변수를 수락하고 반환 값을 가져야 하며 둘 다 변환할 수 있습니다. **사전 조건:**`xmin < xmax`
+weightfunc 함수에 따라 각 간격 가중치를 할당 하 여 []에 대해 균등 하 게 분포 된 *개수* 간격으로 분포 개체를 생성 하 `xmin,xmax` 고, *weightfunc* 는 하나의 매개 변수를 사용 하 고 반환 값을 가져야 합니다 .이 두 값은 모두로 변환할 수 있습니다 *weightfunc* **`double`** . **사전 조건:**`xmin < xmax`
 
 다음과 같이 정의된 생성자는
 
@@ -316,9 +316,9 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-은 *parm을* 저장된 매개 변수 구조로 사용하여 배포 개체를 구성합니다.
+*parm* 를 저장 된 매개 변수 구조로 사용 하 여 분포 개체를 생성 합니다.
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p아람_타입
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p aram_type
 
 분포의 모든 매개 변수를 저장합니다.
 
@@ -350,5 +350,5 @@ struct param_type {
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)\
+[\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

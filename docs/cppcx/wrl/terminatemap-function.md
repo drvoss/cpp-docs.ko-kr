@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2aa4d6733d2a4e458ff8abff192778d52a4522b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233498"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 함수
 
@@ -29,20 +29,20 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>매개 변수
 
-*name*<br/>
+*모듈*<br/>
 [모듈](module-class.md)입니다.
 
-*serverName*<br/>
+*서버*<br/>
 매개 변수 *모듈로*지정 된 모듈에 있는 클래스 팩터리의 하위 집합 이름입니다.
 
 *forceTerminate*<br/>
-활성화 여부에 관계 없이 클래스 팩터리를 종료 하려면 **true로 설정** 합니다. **false** 이면 팩터리가 활성 상태인 경우 클래스 팩터리를 종료 하지 않습니다.
+**`true`** 활성 상태에 관계 없이 클래스 팩터리를 종료 하려면 **`false`** 팩터리가 활성 상태인 경우 클래스 팩터리를 종료 하지 않으려면입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-모든 클래스 팩터리가 종료 되었으면 **true** 입니다. 그렇지 않으면 **false**입니다.
+**`true`** 모든 클래스 팩터리가 종료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 지정 된 모듈에서 클래스 팩터리를 종료 합니다.
 
@@ -54,4 +54,4 @@ inline bool TerminateMap(
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft::WRL::Details 네임스페이스](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 네임 스페이스](microsoft-wrl-details-namespace.md)

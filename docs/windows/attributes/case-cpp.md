@@ -1,21 +1,21 @@
 ---
-title: case (C++ COM 특성)
+title: case (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232809"
 ---
 # <a name="case-c"></a>case(C++)
 
-**Union**의 [switch_type](switch-type.md) 특성과 함께 사용 됩니다.
+에서 [switch_type](switch-type.md) 특성과 함께 사용 **`union`** 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,19 +28,19 @@ ms.locfileid: "80167341"
 *value*<br/>
 처리를 제공 하는 데 사용할 수 있는 입력 값입니다. **값** 의 형식은 다음 형식 중 하나일 수 있습니다.
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 또는 이러한 형식의 식별자입니다.
 
 ## <a name="remarks"></a>설명
 
-**Case** C++ 특성에는 **case** MIDL 특성과 동일한 기능이 있습니다. 이 특성은 [switch_type](switch-type.md) 특성에만 사용 됩니다.
+**Case** c + + 특성에는 **case** MIDL 특성과 동일한 기능이 있습니다. 이 특성은 [switch_type](switch-type.md) 특성에만 사용 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -69,10 +69,10 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**적용 대상**|**클래스** 또는 **구조체** 의 멤버|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|또는의 멤버 **`class`****`struct`**|
+|**불가능**|아니요|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

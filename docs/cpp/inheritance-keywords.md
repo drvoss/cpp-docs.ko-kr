@@ -18,16 +18,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233732"
 ---
 # <a name="inheritance-keywords"></a>상속 키워드
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
 ```
 class [__single_inheritance] class-name;
@@ -37,25 +37,25 @@ class [__virtual_inheritance] class-name;
 
 각 항목이 나타내는 의미는 다음과 같습니다.
 
-*클래스 이름*<br/>
+*클래스-이름*<br/>
 선언되는 클래스의 이름입니다.
 
-C++를 사용하면 클래스의 정의 이전에 클래스 멤버에 대한 포인터를 선언할 수 있습니다. 다음은 그 예입니다.
+C++를 사용하면 클래스의 정의 이전에 클래스 멤버에 대한 포인터를 선언할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 class S;
 int S::*p;
 ```
 
-위의 코드에서 `p` 클래스 S의 정수 멤버에 대 한 포인터로 선언 됩니다. 그러나 `class S` 이 코드에는 아직 정의되지 않았습니다. 선언된 것일 뿐입니다. 컴파일러는 이러한 포인터를 발견하면 포인터의 일반화된 표현을 만들어야 합니다. 표현의 크기는 지정된 상속 모델에 따라 달라집니다. 상속 모델을 컴파일러에 지정하는 방법에는 다음 네 가지가 있습니다.
+위의 코드에서 `p` 는 클래스 S의 정수 멤버에 대 한 포인터로 선언 됩니다. 그러나 `class S` 이 코드에 아직 정의 되지 않은 경우만 선언 되었습니다. 컴파일러는 이러한 포인터를 발견하면 포인터의 일반화된 표현을 만들어야 합니다. 표현의 크기는 지정된 상속 모델에 따라 달라집니다. 상속 모델을 컴파일러에 지정하는 방법에는 다음 네 가지가 있습니다.
 
-- **포인터-멤버 표현** 아래의 IDE에서
+- IDE의 **멤버 포인터 표현** 에서
 
-- [/vmg](../build/reference/vmb-vmg-representation-method.md) 스위치를 사용하는 커맨드 라인에서
+- [/Vmg](../build/reference/vmb-vmg-representation-method.md) 스위치를 사용 하는 명령줄에서
 
-- [pointers_to_members](../preprocessor/pointers-to-members.md) 사용
+- [Pointers_to_members](../preprocessor/pointers-to-members.md) pragma 사용
 
-- 상속 키워드를 사용하여 **__single_inheritance**, **__multiple_inheritance**및 **__virtual_inheritance**. 이 방법은 클래스별로 상속 모델을 제어합니다.
+- 상속 키워드 **`__single_inheritance`** , 및 사용 **`__multiple_inheritance`** **`__virtual_inheritance`** . 이 방법은 클래스별로 상속 모델을 제어합니다.
 
     > [!NOTE]
     >  항상 클래스를 정의한 후 클래스 멤버에 대한 포인터를 선언하면 이러한 옵션을 사용할 필요가 없습니다.
@@ -74,10 +74,10 @@ int S::*p;
 > [!NOTE]
 > 클래스 멤버 포인터 표현의 동일한 정방향 선언이 해당 클래스의 멤버에 대한 포인터를 선언하는 각 변환 단위에서 발생해야 하며, 이 선언은 멤버에 대한 포인터가 선언되기 전에 발생해야 합니다.
 
-이전 버전과의 호환성을 위해 **_single_inheritance** **_multiple_inheritance**및 **_virtual_inheritance** **__single_inheritance**동의어인 **__multiple_inheritance**및 **__virtual_inheritance** 컴파일러 옵션 [/Za \(Disable 언어 확장)이](../build/reference/za-ze-disable-language-extensions.md) 지정되어 있습니다.
+이전 버전과의 호환성을 위해 **_single_inheritance**, **_multiple_inheritance**및 **_virtual_inheritance** 는 **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** 컴파일러 옵션 [/za \( 사용 안 함 언어 확장](../build/reference/za-ze-disable-language-extensions.md) 을 지정 하지 않는 경우, 및에 대 한 동의어입니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

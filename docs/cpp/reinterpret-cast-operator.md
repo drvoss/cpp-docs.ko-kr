@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233602"
 ---
 # <a name="reinterpret_cast-operator"></a>reinterpret_cast 연산자
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>설명
 
-**Reinterpret_cast** 연산자의 오용은 안전 하지 않을 수 있습니다. 원하는 변환이 본질적으로 낮은 수준이 아닌 한 다른 캐스트 연산자 중 하나를 사용해야 합니다.
+연산자의 오용은 **`reinterpret_cast`** 안전 하지 않을 수 있습니다. 원하는 변환이 본질적으로 낮은 수준이 아닌 한 다른 캐스트 연산자 중 하나를 사용해야 합니다.
 
-**Reinterpret_cast** 연산자는 `int*``char*`, 기본적으로 안전 하지 않은 `Unrelated_class*`으로 `One_class*` 등의 변환에 사용할 수 있습니다.
+연산자는 기본적으로 **`reinterpret_cast`** **`char*`** **`int*`** `One_class*` 안전 하지 않은 (예:) 또는로의 변환에 사용할 수 있습니다 `Unrelated_class*` .
 
-**Reinterpret_cast** 결과는 원래 형식으로 다시 캐스팅 하는 것 외에는 안전 하 게 사용할 수 없습니다. 다른 용도로 사용하는 경우에는 기껏해야 이식할 수 없는 결과가 생성됩니다.
+의 결과는 **`reinterpret_cast`** 원래 형식으로 다시 캐스팅 되는 것 외에는 안전 하 게 사용할 수 없습니다. 다른 용도로 사용하는 경우에는 기껏해야 이식할 수 없는 결과가 생성됩니다.
 
-**Reinterpret_cast** 연산자는 **const**, **volatile**또는 **__unaligned** 특성으로 캐스트할 수 없습니다. 이러한 특성을 제거 하는 방법에 대 한 자세한 내용은 [Const_cast 연산자](../cpp/const-cast-operator.md) 를 참조 하세요.
+**`reinterpret_cast`** 연산자는 **`const`** , **`volatile`** 또는 특성으로 캐스트할 수 없습니다 **`__unaligned`** . 이러한 특성을 제거 하는 방법에 대 한 자세한 내용은 [Const_cast 연산자](../cpp/const-cast-operator.md) 를 참조 하세요.
 
-**Reinterpret_cast** 연산자는 null 포인터 값을 대상 형식의 null 포인터 값으로 변환 합니다.
+**`reinterpret_cast`** 연산자는 null 포인터 값을 대상 형식의 null 포인터 값으로 변환 합니다.
 
-**Reinterpret_cast** 의 한 가지 실제적인 사용은 해시 함수에 있습니다. 해시 함수는 두 개의 고유 값이 동일한 인덱스로 끝나지 않는 방식으로 값을 인덱스에 매핑합니다.
+는 **`reinterpret_cast`** 해시 함수에 있습니다 .이 함수는 두 개의 고유 값이 동일한 인덱스로 끝나지 않는 방식으로 값을 인덱스에 매핑합니다.
 
 ```cpp
 #include <iostream>
@@ -77,9 +77,9 @@ Output:
 64829
 ```
 
-**Reinterpret_cast** 를 사용 하 여 포인터를 정수 계열 형식으로 처리할 수 있습니다. 결과는 비트 이동되고 자신과 XOR 연산이 수행되어 고유한 인덱스(높은 확률로 고유함)를 생성합니다. 이 인덱스는 표준 C 스타일 캐스트를 통해 함수의 반환 형식으로 잘립니다.
+를 **`reinterpret_cast`** 사용 하면 포인터를 정수 계열 형식으로 처리할 수 있습니다. 결과는 비트 이동되고 자신과 XOR 연산이 수행되어 고유한 인덱스(높은 확률로 고유함)를 생성합니다. 이 인덱스는 표준 C 스타일 캐스트를 통해 함수의 반환 형식으로 잘립니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [캐스팅 연산자](../cpp/casting-operators.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

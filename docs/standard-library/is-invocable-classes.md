@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076449"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233108"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r 클래스
 
-이러한 템플릿은 지정 된 인수 형식을 사용 하 여 형식을 호출할 수 있는지 여부를 결정 합니다. `is_invocable_r` 및 `is_nothrow_invocable_r`는 호출 결과를 특정 형식으로 변환할 수 있는지도 결정 합니다. `is_nothrow_invocable` 및 `is_nothrow_invocable_r`는 호출에서 예외를 throw 하지 않는 것으로 알려진 있는지도 결정 합니다. C + + 17에 추가 되었습니다.
+이러한 템플릿은 지정 된 인수 형식을 사용 하 여 형식을 호출할 수 있는지 여부를 결정 합니다. `is_invocable_r``is_nothrow_invocable_r`또한 호출 결과를 특정 형식으로 변환할 수 있는지 여부를 확인 합니다. `is_nothrow_invocable``is_nothrow_invocable_r`또한 예외를 throw 하지 않도록 호출 하는 것이 알려진 경우를 확인 합니다. C + + 17에 추가 되었습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>매개 변수
 
-*호출 가능*\
+*호출*\
 쿼리할 호출 가능 형식입니다.
 
 *Args*\
 쿼리할 인수 형식입니다.
 
-*변환할* 수 있는\
+*컨버터블*\
 *호출 가능* 결과의 형식은로 변환할 수 있어야 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`is_invocable` 형식 조건자는 확인 되지 않은 *컨텍스트에서 인수 인수를 사용* 하 여 호출할 *수 있는 호출 가능 형식을 호출할* 수 있는 경우 true입니다.
+`is_invocable`형식 조건자는 확인 되지 않은 컨텍스트에서 인수 인수를 사용 하 여 호출할 수 있는 *Args* *호출* 가능 형식을 호출할 수 있는 경우 true입니다.
 
-`is_invocable_r` 형식 조건자는 확인 되지 않은 *컨텍스트에서 인수 인수* 를 사용 하 여 호출할 *수 있는 호출 가능 형식을 호출할* 수 있는 경우 true 이며, *변환할*수 있는 결과 형식을 생성 합니다.
+`is_invocable_r`형식 조건자는 확인 되지 않은 컨텍스트에서 인수 인수를 사용 하 여 호출할 수 있는 *Args* *호출* 가능 형식을 호출할 수 있는 경우 true 이며, *변환할*수 있는 결과 형식을 생성 합니다.
 
-`is_nothrow_invocable` 형식 조건자는 확인 되지 않은 *컨텍스트에서 인수 인수* 를 사용 하 여 호출할 수 있는 호출 가능 형식이 호출 될 수 있는 경우 true이 고, 이러한 호출은 예외를 throw 하지 않는 것으로 *알려져 있습니다.*
+형식 조건자는 호출 가능 `is_nothrow_invocable` 형식이 확인 되지 않은 컨텍스트에서 인수 인수를 사용 하 여 *Args* 호출 될 수 있는 경우 true이 고, 이러한 호출은 예외를 throw 하지 않는 것으로 알려져 *있습니다* .
 
-`is_nothrow_invocable_r` 형식 조건자는 확인 되지 않은 *컨텍스트에서 인수 인수* 를 사용 하 *여 호출 가능 형식으로* *변환할 수*있는 결과 형식을 생성 하 고 이러한 호출을 예외를 throw 하지 않는 것으로 알려진 경우 true입니다.
+형식 조건자는 확인 되지 않은 `is_nothrow_invocable_r` 컨텍스트에서 인수 인수를 사용 하 여 호출 될 수 *Args* *있는 호출* 가능 형식을 호출 하 여 *변환할*수 있는 결과 형식을 생성 하 고 이러한 호출이 예외를 throw 하지 않는 것으로 알려진 경우 true입니다.
 
-매개 변수 pack *Args* 의 *변환*가능 하 고, *호출 가능*하 고, 형식에 대 한 각 형식은 완전 한 형식, 알 수 없는 범위 배열 또는 cv 정규화 된 **void**여야 합니다. 그렇지 않으면 조건자의 동작이 정의 되지 않습니다.
+매개 변수 pack *Args* 의 *변환*가능 하 고, *호출 가능*하 고, 형식은 모두 완전 한 형식, 알 수 없는 범위 배열 또는 cv 한정 형식 이어야 합니다 **`void`** . 그렇지 않으면 조건자의 동작이 정의 되지 않습니다.
 
 ## <a name="example"></a>예제
 
@@ -116,7 +116,7 @@ int main()
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits >
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 

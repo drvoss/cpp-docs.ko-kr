@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-ms.openlocfilehash: 52f8338423b5e3366b85207477b3b1ee5e9c399f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bcb3650ca98922559f23c6c2536c3076cc522ad0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163104"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233277"
 ---
 # <a name="compiler-warning-level-1-c4311"></a>컴파일러 경고(수준 1) C4311
 
 'variable' : 'type'에서 'type'(으)로 포인터가 잘립니다.
 
-이 경고는 64비트 포인터 잘림 문제를 검색합니다. 예를 들어 코드가 64비트 아키텍처에 대해 컴파일된 경우 포인터(64비트)의 값을 `int`(32비트)에 할당하면 값이 잘립니다. 자세한 내용은 [포인터 사용에 대 한 규칙](/windows/win32/WinProg64/rules-for-using-pointers)을 참조 하세요.
+이 경고는 64비트 포인터 잘림 문제를 검색합니다. 예를 들어 코드를 64 비트 아키텍처로 컴파일하면 **`int`** (32 비트)에 할당 된 경우 (64 비트) 포인터의 값이 잘립니다. 자세한 내용은 [포인터 사용에 대 한 규칙](/windows/win32/WinProg64/rules-for-using-pointers)을 참조 하세요.
 
 경고 C4311의 일반적인 원인에 대 한 자세한 내용은 [일반적인 컴파일러 오류](/windows/win32/WinProg64/common-compiler-errors)를 참조 하세요.
 

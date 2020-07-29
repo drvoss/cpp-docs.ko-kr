@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211738"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>우선 순위 및 식 평가 순서
 
@@ -25,7 +25,7 @@ C 연산자의 우선 순위와 결합성은 식의 피연산자 그룹화 및 �
 | 기호 <sup>1</sup> | 연산 유형 | associativity |
 |-------------|-----------------------|-------------------|
 | `[` `]` `(` `)` `.` `->`<br/>`++` `--` (후위) | 식 | 왼쪽에서 오른쪽 |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (전위) | 단항 | 오른쪽에서 왼쪽 |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (전위) | 단항 | 오른쪽에서 왼쪽 |
 | *형식 캐스팅* | 단항 | 오른쪽에서 왼쪽 |
 | `*` `/` `%` | 곱하기 | 왼쪽에서 오른쪽 |
 | `+` `-` | 더하기 | 왼쪽에서 오른쪽 |
