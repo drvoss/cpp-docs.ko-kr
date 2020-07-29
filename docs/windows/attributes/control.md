@@ -1,19 +1,19 @@
 ---
-title: control (C++ COM 특성)
+title: control (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 59f1a6d1ad940f79693f9c5e37c1fe6527da3805
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224463"
 ---
-# <a name="control"></a>제어
+# <a name="control"></a>컨트롤
 
 사용자 정의 형식이 컨트롤 임을 지정 합니다.
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214944"
 [control]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**컨트롤** 특성은 [coclass](coclass.md) 특성을 의미 합니다. **컨트롤** C++ 특성에는 [제어](/windows/win32/Midl/control) MIDL 특성과 동일한 기능이 있습니다.
+**컨트롤** 특성은 [coclass](coclass.md) 특성을 의미 합니다. **Control** c + + 특성에는 [제어](/windows/win32/Midl/control) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -50,8 +50,8 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|아니요|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

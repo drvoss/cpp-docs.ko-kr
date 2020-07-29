@@ -1,17 +1,17 @@
 ---
-title: hidden (C++ COM 특성)
+title: hidden (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224437"
 ---
 # <a name="hidden"></a>hidden
 
@@ -23,9 +23,9 @@ ms.locfileid: "80168098"
 [hidden]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Hidden** C++ 특성에는 [hidden](/windows/win32/Midl/hidden) MIDL 특성과 동일한 기능이 있습니다.
+**Hidden** c + + 특성에는 [hidden](/windows/win32/Midl/hidden) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -37,9 +37,9 @@ ms.locfileid: "80168098"
 
 |||
 |-|-|
-|**적용 대상**|**인터페이스**, **클래스**, **구조체**, 메서드, 속성|
-|**반복 가능**|아니요|
-|**필수 특성**|**coclass** ( **클래스** 또는 **구조체**에 적용 된 경우)|
+|**적용 대상**|**인터페이스**, **`class`** , **`struct`** , 메서드, 속성|
+|**불가능**|아니요|
+|**필수 특성**|**coclass** (또는에 적용 된 경우 **`class`** **`struct`** )|
 |**잘못된 특성**|없음|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
