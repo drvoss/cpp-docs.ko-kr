@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943223"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221967"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -56,16 +56,16 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 생성할 복소수의 실수 부분입니다.
 
-*imaginary*<br/>
+*가상*<br/>
 생성할 복소수의 허수 부분입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-지정 된 부동 소수점 형식의 값에 대 한 복소수 (*실수*, *허수부* \* )를 나타내는 **_dcomplex**, **_dcomplex**또는 **_dcomplex** 구조체입니다.
+지정 **_Dcomplex**된*real*부동 **_Fcomplex**소수점 형식의 값에 대 한 복소수 (실수, *허수부* )를 나타내는 _Dcomplex, _Fcomplex 또는 **_Lcomplex** 구조체입니다 \* .
 
 ## <a name="remarks"></a>설명
 
-**_Cbuild**, **_Fcbuild**및 **_LCbuild** 함수는 복합 형식 만들기를 간소화 합니다. [Creal, crealf, creal](creal-crealf-creall.md) 및 [cimag, cimagf, cimagf](cimag-cimagf-cimagl.md) 함수를 사용 하 여 표현 된 복소수의 실수 및 허수 부분을 검색 합니다.
+**_Cbuild**, **_FCbuild**및 **_LCbuild** 함수는 복합 형식 만들기를 간소화 합니다. [Creal, crealf, creal](creal-crealf-creall.md) 및 [cimag, cimagf, cimagf](cimag-cimagf-cimagl.md) 함수를 사용 하 여 표현 된 복소수의 실수 및 허수 부분을 검색 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -73,9 +73,9 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-이러한 함수는 Microsoft 전용입니다. **_Dcomplex**, **_Dcomplex**및 **_dcomplex** 형식은 각각 구현 되지 않은 C99 네이티브 형식 **double _complex**, **float __l**및 **long double _dcomplex**에 해당 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+이러한 함수는 Microsoft 전용입니다. **_Dcomplex**, **_Fcomplex**및 **_Lcomplex** 형식은 각각 구현 되지 않은 C99 네이티브 형식, 및에 해당 **`double _Complex`** **`float _Complex`** **`long double _Complex`** 합니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>

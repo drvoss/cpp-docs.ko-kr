@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: c49ceec72be62d8ff3125f04d97bbb6952501677
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8eee77afebdc78ef7c5b3b9ecacb8762b354567
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370985"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222292"
 ---
 # <a name="max_none-class"></a>max_none 클래스
 
@@ -38,25 +38,25 @@ class max_none
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*최대*|`freelist`에 저장할 요소의 최대 수를 결정하는 max 클래스입니다.|
+|*최대값*|`freelist`에 저장할 요소의 최대 수를 결정하는 max 클래스입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
 |멤버 함수|Description|
 |-|-|
 |[allocated](#allocated)|할당된 메모리 블록의 수를 늘립니다.|
-|[할당](#deallocated)|할당된 메모리 블록의 수를 줄입니다.|
-|[전체](#full)|사용 가능한 목록에 더 많은 메모리 블록을 추가할지 여부를 지정하는 값을 반환합니다.|
+|[되거나](#deallocated)|할당된 메모리 블록의 수를 줄입니다.|
+|[full](#full)|사용 가능한 목록에 더 많은 메모리 블록을 추가할지 여부를 지정하는 값을 반환합니다.|
 |[출시](#released)|사용 가능한 목록에서 메모리 블록의 수를 줄입니다.|
 |[saved](#saved)|사용 가능한 목록에서 메모리 블록의 수를 늘립니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<allocators>
+**헤더:**\<allocators>
 
 **네임스페이스:** stdext
 
-## <a name="max_noneallocated"></a><a name="allocated"></a>max_none::할당
+## <a name="max_noneallocated"></a><a name="allocated"></a>max_none:: 할당 됨
 
 할당된 메모리 블록의 수를 늘립니다.
 
@@ -72,9 +72,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 아무 작업도 수행하지 않습니다. 새 연산자에 의해 `cache_freelist::allocate` 각 **new**성공적인 호출 후에 호출됩니다. *_Nx* 인수는 연산자 **new에**의해 할당 된 청크의 메모리 블록 의 수입니다.
+이 멤버 함수는 아무 작업도 수행하지 않습니다. 이 메서드는에 대 한 각 호출이 성공한 후에 호출 됩니다 `cache_freelist::allocate` **`new`** . 인수 *_Nx* 은 (는) 연산자에 의해 할당 된 청크의 메모리 블록 수입니다 **`new`** .
 
-## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none::d 할당
+## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none::d eallocated 됨
 
 할당된 메모리 블록의 수를 줄입니다.
 
@@ -90,9 +90,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 아무 작업도 수행하지 않습니다. 이 멤버 함수는 연산자 `cache_freelist::deallocate` **삭제에**대한 호출이 각 후에 호출됩니다. *_Nx* 인수는 연산자 **삭제에**의해 할당 된 청크의 메모리 블록 수입니다.
+멤버 함수는 아무 작업도 수행하지 않습니다. 이 멤버 함수는에 대 한 각 호출 후에 호출 됩니다 `cache_freelist::deallocate` **`delete`** . 인수 *_Nx* 은 연산자에 의해 할당 취소 된 청크의 메모리 블록 수입니다 **`delete`** .
 
-## <a name="max_nonefull"></a><a name="full"></a>max_none::전체
+## <a name="max_nonefull"></a><a name="full"></a>max_none:: full
 
 사용 가능한 목록에 더 많은 메모리 블록을 추가할지 여부를 지정하는 값을 반환합니다.
 
@@ -102,13 +102,13 @@ bool full();
 
 ### <a name="return-value"></a>Return Value
 
-이 멤버 함수는 항상 **true를 반환합니다.**
+이 멤버 함수는 항상 **`true`** 를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출이 **true를** `deallocate` 반환하면 메모리 블록을 사용 중 목록에 넣습니다. **false를** `deallocate` 반환하는 경우 **운영자가 삭제하여** 블록을 할당 해제합니다.
+이 멤버 함수는 `cache_freelist::deallocate`에서 호출됩니다. 호출에서을 반환 하는 경우 **`true`** `deallocate` 사용 가능한 목록에 메모리 블록을 저장 하 고,을 반환 하면 **`false`** `deallocate` 연산자를 호출 하 여 **`delete`** 블록의 할당을 취소 합니다.
 
-## <a name="max_nonereleased"></a><a name="released"></a>max_none::발매
+## <a name="max_nonereleased"></a><a name="released"></a>max_none:: 해제 됨
 
 사용 가능한 목록에서 메모리 블록의 수를 줄입니다.
 
@@ -120,7 +120,7 @@ void released();
 
 이 멤버 함수는 아무 작업도 수행하지 않습니다. 현재 max 클래스의 `released` 멤버 함수는 사용 가능한 목록에서 메모리 블록을 제거할 때마다 `cache_freelist::allocate`에서 호출됩니다.
 
-## <a name="max_nonesaved"></a><a name="saved"></a>max_none::저장
+## <a name="max_nonesaved"></a><a name="saved"></a>max_none:: saved
 
 사용 가능한 목록에서 메모리 블록의 수를 늘립니다.
 
@@ -134,4 +134,4 @@ void saved();
 
 ## <a name="see-also"></a>참고 항목
 
-[\<할당자>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

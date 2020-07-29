@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b45cdb5c3d4608296cca34ad6a0be6e25b588d28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455615"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222305"
 ---
 # <a name="iterator-struct"></a>iterator 구조체
 
-사용자 정의 반복기 클래스가 s와 `iterator_trait`제대로 작동 하는지 확인 하는 데 사용 되는 빈 기본 구조체입니다.
+사용자 정의 반복기 클래스가 s와 제대로 작동 하는지 확인 하는 데 사용 되는 빈 기본 구조체입니다 `iterator_trait` .
 
 ## <a name="syntax"></a>구문
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference`(템플릿 매개 변수 `Reference`의 동의어)
 
-`value_type` 는 **const** `Type` `pointer`  및 참조의 개체에 있는 점이 const의 개체를 지정 하는 경우에도 상수 형식이 면 안 됩니다. `Type`
+는 `value_type` `pointer` 의 개체에 있는 점과 **`const`** `Type` 참조는의 개체를 지정 하 **`const`** 는 경우에도 상수 형식이 아니어야 합니다 `Type` .
 
 ## <a name="example"></a>예제
 
@@ -55,12 +55,12 @@ struct iterator {
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<iterator>
+**헤더:**\<iterator>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

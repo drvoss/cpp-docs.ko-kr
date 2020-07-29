@@ -1,17 +1,17 @@
 ---
-title: appobject (C++ COM 특성)
+title: appobject (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222162"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,7 +25,7 @@ Coclass를 전체 .exe 응용 프로그램과 연결 된 응용 프로그램 개
 
 ## <a name="remarks"></a>설명
 
-**Appobject** C++ 특성은 [appobject](/windows/win32/Midl/appobject) MIDL 특성과 동일한 기능을 포함 합니다.
+**Appobject** c + + 특성에는 [appobject](/windows/win32/Midl/appobject) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|예|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
 |**필수 특성**|`coclass`|
-|**잘못된 특성**|None|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

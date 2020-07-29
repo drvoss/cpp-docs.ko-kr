@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942851"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221941"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -88,18 +88,18 @@ long double _copysignl(
 *x*<br/>
 결과의 크기로 반환되는 부동 소수점 값입니다.
 
-*y*<br/>
+*x.y*<br/>
 결과의 부호로 반환되는 부동 소수점 값입니다.
 
 [부동 소수점 지원 루틴](../../c-runtime-library/floating-point-support.md)
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **Copysign** 함수는 *x* 의 크기와 *y*의 부호를 결합 하는 부동 소수점 값을 반환 합니다. 반환되는 오류가 없습니다.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **copysign** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **copysign** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **copysign** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **copysign** 은 항상를 사용 하 고 반환 **`double`** 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -108,9 +108,9 @@ long double _copysignl(
 |**_copysign**|\<float.h>|
 |**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [_chgsign, _chgsignf, _chgsignl](chgsign-chgsignf-chgsignl.md)<br/>

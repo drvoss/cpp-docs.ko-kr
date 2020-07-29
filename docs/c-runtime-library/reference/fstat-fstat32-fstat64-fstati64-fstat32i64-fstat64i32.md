@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221902"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -132,7 +132,7 @@ Stat.h에서는 Types.h에 정의된 [_dev_t](../../c-runtime-library/standard-t
 
 이러한 함수의 변형은 32비트 또는 64비트 시간 형식과 32비트 또는 64비트 파일 길이를 지원합니다. 첫 번째 숫자 접미사 (**32** 또는 **64**)는 사용 된 시간 형식의 크기를 나타냅니다. 두 번째 접미사는 **i32** 또는 **i64**중 하나 이며, 파일 크기가 32 비트 또는 64 비트 정수로 표시 되는지를 나타냅니다.
 
-**_fstat** 은 **_fstat64i32**와 동일 하며, **구조체** **_stat** 에는 64 비트 시간이 포함 됩니다. 이는 **_USE_32BIT_TIME_T** 정의 되지 않는 한 true 이며,이 경우 이전 동작이 적용 됩니다. **_fstat** 는 32 비트 시간을 사용 하 고 **struct** **_stat** 는 32 비트 시간을 포함 합니다. **_Fstati64**에도 마찬가지입니다.
+**_fstat** 은 **_fstat64i32**와 같으며 **`struct`** **_stat** 에는 64 비트 시간이 포함 됩니다. 이는 **_USE_32BIT_TIME_T** 정의 되지 않는 한 true 이며,이 경우 이전 동작이 적용 됩니다. **_fstat** 는 32 비트 시간을 사용 하 고 **`struct`** **_stat** 는 32 비트 시간을 포함 합니다. **_Fstati64**에도 마찬가지입니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -151,7 +151,7 @@ Stat.h에서는 Types.h에 정의된 [_dev_t](../../c-runtime-library/standard-t
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fstat**|\<sys/stat.h> 및 \<sys/types.h>|
 |**_fstat32**|\<sys/stat.h> 및 \<sys/types.h>|
@@ -227,7 +227,7 @@ File size     : 16
 Time modified : Wed May 07 15:25:11 2003
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

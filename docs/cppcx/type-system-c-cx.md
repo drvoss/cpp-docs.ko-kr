@@ -2,12 +2,12 @@
 title: 형식 시스템(C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221551"
 ---
 # <a name="type-system-ccx"></a>형식 시스템(C++/CX)
 
@@ -38,8 +38,8 @@ C + +로 작성 된 유니버설 Windows 플랫폼 앱을 컴파일하는 경우
 |||
 |-|-|
 |**메타데이터에 게시됨**|**메타데이터에 게시되지 않음**|
-|public|private|
-|protected|internal|
+|공공|private|
+|protected|내부|
 |public protected|private protected|
 
 **개체 브라우저** 를 사용하여 .winmd 파일의 내용을 볼 수 있습니다. Windows에 포함 된 Windows 런타임 구성 요소는 Windows winmd 파일에 있습니다. 기본 winmd 파일에는 c + +/CX에 사용 되는 기본 형식이 포함 되어 있으며, platform은 Platform 네임 스페이스의 추가 형식을 포함 합니다. 기본적으로 이러한 3 개의 winmd 파일은 유니버설 Windows 플랫폼 앱에 대 한 모든 c + + 프로젝트에 포함 되어 있습니다.
@@ -63,7 +63,7 @@ Windows API 자체는 네임스페이스로 구성된 효율적인 클래스 라
 
 Windows 런타임은 UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean 및 String의 기본 형식을 정의 합니다. C + +/CX는 기본 네임 스페이스에서 uint16, uint32, uint64, int16, int32, int64, float32, float64 및 char16 기본 숫자 형식을 지원 합니다. Boolean과 String은 둘 다 Platform 네임스페이스에 정의됩니다.
 
-또한 c + +/CX는 `unsigned char` Windows 런타임에서 지원 되지 않으며 공용 api에서 사용할 수 없는와 동일한 uint8를 정의 합니다.
+또한 c + +/CX는 **`unsigned char`** Windows 런타임에서 지원 되지 않으며 공용 api에서 사용할 수 없는와 동일한 uint8를 정의 합니다.
 
 기본 형식을 [Platform::IBox Interface](../cppcx/platform-ibox-interface.md) 인터페이스에서 래핑하여 nullable로 만들 수 있습니다. 자세한 내용은 [값 클래스 및 구조체](../cppcx/value-classes-and-structs-c-cx.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
 
@@ -71,7 +71,7 @@ Windows 런타임은 UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single,
 
 ### <a name="strings"></a>문자열
 
-Windows 런타임 문자열은 변경할 수 없는 16 비트 유니코드 문자 시퀀스입니다. Windows 런타임 문자열은으로 프로젝션 됩니다 `Platform::String^` . 이 클래스는 문자열 작성, 조작 및 `wchar_t`간의 변환을 위한 메서드를 제공합니다.
+Windows 런타임 문자열은 변경할 수 없는 16 비트 유니코드 문자 시퀀스입니다. Windows 런타임 문자열은으로 프로젝션 됩니다 `Platform::String^` . 이 클래스는 문자열 생성, 조작 및 변환을 위한 메서드를 제공 **`wchar_t`** 합니다.
 
 자세한 내용은 [문자열](../cppcx/strings-c-cx.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
 

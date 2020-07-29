@@ -1,22 +1,22 @@
 ---
 title: dynamic_cast 연산자
-description: C++ Language dynamic_cast 연산자의 개요입니다.
+description: C + + 언어 dynamic_cast 연산자의 개요입니다.
 ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 15609aeaef815ff89ca196876e1143090c65221b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221642"
 ---
 # <a name="dynamic_cast-operator"></a>dynamic_cast 연산자
 
-피연산자 `expression` `type-id`형식의 개체로 변환 합니다.
+피연산자를 `expression` 형식의 개체로 변환 합니다 `type-id` .
 
 ## <a name="syntax"></a>구문
 
@@ -24,19 +24,19 @@ ms.locfileid: "80189496"
 dynamic_cast < type-id > ( expression )
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`type-id`는 포인터 이거나 이전에 정의 된 클래스 형식에 대 한 참조 또는 "void에 대 한 포인터" 여야 합니다. `expression`이 포인터인 경우 `type-id`의 형식은 포인터여야 하며 `type-id`이 참조인 경우에는 l 값이어야 합니다.
+는 `type-id` 포인터 이거나 이전에 정의 된 클래스 형식에 대 한 참조 또는 "void에 대 한 포인터" 여야 합니다. `type-id`이 포인터인 경우 `expression`의 형식은 포인터여야 하며 `type-id`이 참조인 경우에는 l 값이어야 합니다.
 
 정적 변환과 동적 캐스팅 간의 차이점에 대 한 설명과 각각을 사용 하는 것이 적절 한 경우 [static_cast](../cpp/static-cast-operator.md) 를 참조 하세요.
 
-관리 코드에서 **dynamic_cast** 동작에는 다음과 같은 두 가지 주요 변경 사항이 있습니다.
+관리 코드에서의 동작에는 다음과 같은 두 가지 주요 변경 사항이 있습니다 **`dynamic_cast`** .
 
-- boxed 열거형의 기본 형식에 대 한 포인터 **dynamic_cast** 는 런타임에 실패 하 고 변환 된 포인터 대신 0을 반환 합니다.
+- **`dynamic_cast`** boxed 열거형의 기본 형식에 대 한 포인터는 런타임에 실패 하 여 변환 된 포인터 대신 0을 반환 합니다.
 
-- `type-id` 값 형식에 대 한 내부 포인터이 고 런타임에 캐스팅이 실패 하는 경우 **dynamic_cast** 은 더 이상 예외를 throw 하지 않습니다.  이제 cast는를 throw 하는 대신 0 포인터 값을 반환 합니다.
+- **`dynamic_cast`**`type-id`가 런타임에 캐스팅이 실패 하는 값 형식에 대 한 내부 포인터인 경우에서 더 이상 예외를 throw 하지 않습니다.  이제 cast는를 throw 하는 대신 0 포인터 값을 반환 합니다.
 
-`type-id` `expression`의 명확 하 게 액세스할 수 있는 직접 또는 간접 기본 클래스에 대 한 포인터인 경우 `type-id` 형식의 고유 하위 개체에 대 한 포인터가 결과입니다. 예를 들면 다음과 같습니다.
+`type-id`이의 모호 하 게 액세스할 수 있는 직접 또는 간접 기본 클래스에 대 한 포인터인 경우 `expression` 형식의 고유 하위 개체에 대 한 포인터가 `type-id` 결과입니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_1.cpp
@@ -55,7 +55,7 @@ void f(D* pd) {
 
 이러한 형식의 변환은 파생 클래스에서 파생 된 클래스에 대 한 클래스 계층 구조를 포인터로 이동 하기 때문에 "업 캐스트" 이라고 합니다. 업 캐스트는 암시적 변환입니다.
 
-`type-id` void * 인 경우에는 `expression`의 실제 형식을 결정 하는 런타임 검사가 수행 됩니다. 결과는 `expression`가 가리키는 전체 개체에 대 한 포인터입니다. 예를 들면 다음과 같습니다.
+`type-id`가 void * 인 경우의 실제 형식을 결정 하는 런타임 검사가 수행 됩니다 `expression` . 결과는가 가리키는 전체 개체에 대 한 포인터입니다 `expression` . 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -74,9 +74,9 @@ void f() {
 }
 ```
 
-`type-id` void *가 아닌 경우 `expression`에서 가리키는 개체를 `type-id`가 가리키는 형식으로 변환할 수 있는지 여부를 확인 하는 런타임 검사가 수행 됩니다.
+`type-id`이 void *가 아닌 경우에는에서 가리키는 개체가 `expression` 가 가리키는 형식으로 변환 될 수 있는지 확인 하는 런타임 검사가 수행 됩니다 `type-id` .
 
-`expression` 형식이 `type-id`형식의 기본 클래스인 경우 `expression` 실제로 `type-id`형식의 전체 개체를 가리키는지 여부를 확인 하는 런타임 검사가 수행 됩니다. True 이면 결과는 `type-id`형식의 전체 개체에 대 한 포인터입니다. 예를 들면 다음과 같습니다.
+의 형식이 형식의 `expression` 기본 클래스인 경우 `type-id` `expression` 실제로 형식의 전체 개체를 가리키는지 여부를 확인 하는 런타임 검사가 수행 됩니다 `type-id` . True 이면 결과는 형식의 전체 개체에 대 한 포인터입니다 `type-id` . 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_3.cpp
@@ -97,9 +97,9 @@ void f() {
 
 여러 상속의 경우 모호성에 대 한 가능성이 도입 됩니다. 다음 그림에 표시 된 클래스 계층 구조를 살펴보겠습니다.
 
-CLR 형식의 경우 변환이 암시적으로 수행 될 수 있는 경우 연산이 수행 되지 않거나, 동적 검사를 수행 하 고 변환이 실패 하는 경우 **nullptr** 를 반환 하는 MSIL `isinst` 명령 **dynamic_cast** 합니다.
+CLR 형식의 경우 **`dynamic_cast`** 변환이 암시적으로 수행 될 수 있는 경우 또는 `isinst` 동적 검사를 수행 하 고 변환에 실패 하는 경우를 반환 하는 MSIL 명령으로 발생 합니다 **`nullptr`** .
 
-다음 샘플에서는 **dynamic_cast** 를 사용 하 여 클래스가 특정 형식의 인스턴스인지 여부를 확인 합니다.
+다음 샘플에서는 **`dynamic_cast`** 를 사용 하 여 클래스가 특정 형식의 인스턴스인지 여부를 확인 합니다.
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -122,10 +122,10 @@ int main() {
 }
 ```
 
-![다중 상속을 보여 주는 클래스 계층 구조](../cpp/media/vc39011.gif "여러 상속을 보여 주는 클래스 계층 구조") <br/>
+![여러 상속을 보여 주는 클래스 계층 구조](../cpp/media/vc39011.gif "여러 상속을 보여 주는 클래스 계층 구조") <br/>
 여러 상속을 보여 주는 클래스 계층 구조
 
-`D` 형식의 개체에 대 한 포인터는 `B` 또는 `C`로 안전 하 게 캐스팅 될 수 있습니다. 그러나 `D` `A` 개체를 가리키도록 캐스팅 된 경우 `A`의 인스턴스는 어떻게 되나요? 이렇게 하면 캐스팅 오류가 모호해 집니다. 이 문제를 해결 하기 위해 두 가지 명확한 캐스트를 수행할 수 있습니다. 예를 들면 다음과 같습니다.
+형식의 개체에 대 한 포인터는 `D` 또는로 안전 하 게 캐스팅 될 수 있습니다 `B` `C` . 그러나 `D` 가 개체를 가리키도록 캐스팅 된 경우 `A` 의 인스턴스는 `A` 어떻게 되나요? 이렇게 하면 캐스팅 오류가 모호해 집니다. 이 문제를 해결 하기 위해 두 가지 명확한 캐스트를 수행할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_4.cpp
@@ -148,14 +148,14 @@ void f() {
 ![가상 기본 클래스를 보여 주는 클래스 계층 구조](../cpp/media/vc39012.gif "가상 기본 클래스를 보여 주는 클래스 계층 구조") <br/>
 가상 기본 클래스를 보여 주는 클래스 계층 구조
 
-이 계층에서 `A`은 가상 기본 클래스입니다. 클래스 `E` 인스턴스와 `A` 하위 개체에 대 한 포인터를 지정 하면 `B`에 대 한 포인터에 대 한 **dynamic_cast** 은 모호성으로 인해 실패 합니다. 먼저 전체 `E` 개체로 다시 캐스팅 한 다음 명확한 방법으로 계층을 백업 하 여 올바른 `B` 개체에 도달 해야 합니다.
+이 계층에서 `A` 는 가상 기본 클래스입니다. 클래스의 인스턴스와 하위 개체에 대 한 포인터를 지정 하면 `E` `A` **`dynamic_cast`** 에 대 한 포인터는 `B` 모호성으로 인해 실패 합니다. 먼저 전체 개체로 다시 캐스팅 `E` 한 다음 명확한 방법으로 계층을 백업 하 여 올바른 개체에 연결 해야 합니다 `B` .
 
 다음 그림에 표시 된 클래스 계층 구조를 살펴보겠습니다.
 
-![중복 기본 클래스를 보여 주는 클래스 계층 구조](../cpp/media/vc39013.gif "중복된 기본 클래스를 보여 주는 클래스 계층 구조") <br/>
+![중복된 기본 클래스를 보여 주는 클래스 계층 구조](../cpp/media/vc39013.gif "중복된 기본 클래스를 보여 주는 클래스 계층 구조") <br/>
 중복된 기본 클래스를 보여 주는 클래스 계층 구조
 
-`E` 형식의 개체와 `D` 하위 개체에 대 한 포인터를 지정 하 여 `D` 하위 개체에서 맨 왼쪽 `A` 하위 개체로 이동할 때 세 가지 변환을 수행할 수 있습니다. `D` 포인터에서 `E` 포인터로의 변환 ( **dynamic_cast** 또는 암시적 변환)을 `E`에서 `B`, 마지막으로 `B`에서 `A`로의 암시적 변환을 **dynamic_cast** 수행할 수 있습니다. 예를 들면 다음과 같습니다.
+형식의 개체와 하위 개체에 대 한 포인터를 지정 하 여 하위 개체 `E` `D` 에서 맨 왼쪽 하위 개체로 이동할 때 `D` `A` 세 가지 변환을 수행할 수 있습니다. 포인터를 포인터로 변환 하 고, **`dynamic_cast`** `D` 에서로의 변환 `E` ( **`dynamic_cast`** 또는 암시적 변환)을 수행한 다음 `E` `B` ,에서로의 암시적 변환을 `B` `A` 수행할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -173,9 +173,9 @@ void f(D* pd) {
 }
 ```
 
-**Dynamic_cast** 연산자를 사용 하 여 "교차 캐스트"를 수행할 수도 있습니다. 같은 클래스 계층 구조를 사용 하는 경우 전체 개체가 `E`형식인 한 `B` 하위 개체에서 `D` 하위 개체로 포인터를 캐스팅할 수 있습니다.
+**`dynamic_cast`** 연산자를 사용 하 여 "교차 캐스트"를 수행할 수도 있습니다. 같은 클래스 계층 구조를 사용 하는 경우 `B` 전체 개체가 형식이 면 하위 개체에서 하위 개체로 포인터를 캐스팅할 수 있습니다 `D` `E` .
 
-교차 캐스트를 고려 하 여 두 단계에서 가장 왼쪽 `A` 하위 개체에 대 한 포인터로 `D`으로의 변환을 수행할 수 있습니다. `D`에서 `B`사이의 교차 캐스트를 수행한 다음 `B`에서 `A`로의 암시적 변환을 수행할 수 있습니다. 예를 들면 다음과 같습니다.
+교차 캐스트를 고려 하 여 `D` 두 단계에서 가장 왼쪽에 있는 하위 개체에 대 한 포인터로 포인터를 변환 하는 것이 실제로 가능 `A` 합니다. 에서로의 교차 캐스트를 수행한 `D` `B` 다음에서로의 암시적 변환을 수행할 수 있습니다 `B` `A` . 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_6.cpp
@@ -192,9 +192,9 @@ void f(D* pd) {
 }
 ```
 
-Null 포인터 값은 **dynamic_cast**하 여 대상 형식의 null 포인터 값으로 변환 됩니다.
+Null 포인터 값은에 의해 대상 형식의 null 포인터 값으로 변환 됩니다 **`dynamic_cast`** .
 
-`dynamic_cast < type-id > ( expression )`를 사용 하는 경우 `expression`를 `type-id`형식으로 안전 하 게 변환할 수 없는 경우 런타임 검사로 인해 캐스팅이 실패 합니다. 예를 들면 다음과 같습니다.
+를 사용 하 `dynamic_cast < type-id > ( expression )` 는 경우를 `expression` 형식으로 안전 하 게 변환할 수 없는 경우 `type-id` 런타임 검사로 인해 캐스팅이 실패 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // dynamic_cast_7.cpp
@@ -209,9 +209,9 @@ void f() {
 }
 ```
 
-포인터 형식으로의 실패 한 캐스트 값은 null 포인터입니다. 참조 형식으로의 캐스팅이 실패 하면 [Bad_cast 예외가](../cpp/bad-cast-exception.md)throw 됩니다.   `expression`에서 유효한 개체를 가리키지 않거나 참조 하지 않는 경우 `__non_rtti_object` 예외가 throw 됩니다.
+포인터 형식으로의 실패 한 캐스트 값은 null 포인터입니다. 참조 형식으로의 캐스팅이 실패 하면 [Bad_cast 예외가](../cpp/bad-cast-exception.md)throw 됩니다.   `expression`가 유효한 개체를 가리키지 않거나 참조 하지 않는 경우 `__non_rtti_object` 예외가 throw 됩니다.
 
-`__non_rtti_object` 예외에 대 한 설명은 [typeid](../cpp/typeid-operator.md) 를 참조 하십시오.
+예외에 대 한 설명은 [typeid](../cpp/typeid-operator.md) 를 참조 하십시오 `__non_rtti_object` .
 
 ## <a name="example"></a>예제
 
@@ -294,4 +294,4 @@ Can't cast to C
 ## <a name="see-also"></a>참고 항목
 
 [캐스팅 연산자](../cpp/casting-operators.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

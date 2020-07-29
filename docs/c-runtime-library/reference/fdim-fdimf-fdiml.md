@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941295"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221915"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -78,10 +78,10 @@ long double fdiml(
 *x*<br/>
 첫 번째 값입니다.
 
-*y*<br/>
+*x.y*<br/>
 두 번째 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *X* 와 *y*의 양수 차이를 반환 합니다.
 
@@ -92,7 +92,7 @@ long double fdiml(
 
 그렇지 않으면 다음 오류 중 하나를 반환할 수 있습니다.
 
-|문제점|반환|
+|문제|반환 값|
 |-----------|------------|
 |오버플로 범위 오류|+HUGE_VAL, +HUGE_VALF 또는 +HUGE_VALL|
 |언더플로 범위 오류|올바른 값(반올림 후)|
@@ -102,19 +102,19 @@ long double fdiml(
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **fdim** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **fdim** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **fdim** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **fdim** 은 항상를 사용 하 고 반환 **`double`** 합니다.
 
-NaN 처리를 제외 하 고이 함수는와 동일 `fmax(x - y, 0)`합니다.
+NaN 처리를 제외 하 고이 함수는와 동일 `fmax(x - y, 0)` 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

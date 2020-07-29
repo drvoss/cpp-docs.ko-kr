@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; 연산자'
+title: '&lt;string_view &gt; 연산자'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076399"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222239"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 연산자
+# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 연산자
 
-이러한 연산자를 사용 하 여 두 개의 string_view 개체, string_view 및 암시적 변환이 제공 되는 다른 문자열 개체 (예 [: std:: string](basic-string-class.md)또는 **char\*** )를 비교 합니다.
+이러한 연산자를 사용 하 여 두 개의 string_view 개체, string_view 및 암시적 변환이 제공 되는 다른 문자열 개체 (예 [: std:: string](basic-string-class.md)또는 **char \* **)를 비교 합니다.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[연산자==](#op_eq_eq)|[연산자 "" sv](#op_sv)|
+|[연산자! =](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;=](#op_gt_eq)|
+|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|[연산자&lt;=](#op_lt_eq)|
+|[연산자 = =](#op_eq_eq)|[연산자 "" sv](#op_sv)|
 
-## <a name="operator"></a><a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 개체가 우변에 있는 개체와 같지 않은지 테스트합니다.
 
@@ -57,17 +57,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 개체와 사전순으로 않으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 개체와 사전순으로 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Convertible_string_type* 에서 다른 쪽의 string_view에 대 한 암시적 변환이 존재 해야 합니다.
 
@@ -96,23 +96,23 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 개체와 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 개체와 같으면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Convertible_string_type* 에서 다른 쪽의 string_view에 대 한 암시적 변환이 존재 해야 합니다.
 
 비교는 문자 시퀀스에 대 한 쌍으로 사전순으로 비교 됩니다. 동일한 수의 요소를 포함 하 고 요소가 모두 같으면 두 개체가 같습니다.
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 작음을 테스트 sidestring_view
 
@@ -135,17 +135,17 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 사전순으로 면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 사전순으로 면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Convertible_string_type* 에서 다른 쪽의 string_view에 대 한 암시적 변환이 존재 해야 합니다.
 
@@ -196,19 +196,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 작거나 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 작거나 같으면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-[연산자&lt;](#op_lt)를 참조 하세요.
+[Operator &lt; ](#op_lt)를 참조 하세요.
 
 ## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
 
@@ -225,18 +225,18 @@ inline basic_ostream<CharType, Traits>& operator<<(
 *Ostr*\
 쓸 출력 스트림입니다.
 
-*Str*\
+*문자열*\
 출력 스트림에 입력 될 string_view입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 쓸 출력 스트림입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 연산자를 사용 하 여 string_view 콘텐츠를 출력 스트림에 삽입 합니다. 예를 들어 [std:: cout](iostream.md#cout)을 사용 합니다.
 
-## <a name="operatorgt"></a><a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 개체가 우변에 있는 개체보다 큰지 테스트합니다.
 
@@ -259,19 +259,19 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 string_view 개체 보다 사전순으로 면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 string_view 개체 보다 크면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-[연산자&lt;](#op_lt)를 참조 하세요.
+[Operator &lt; ](#op_lt)를 참조 하세요.
 
 ## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+*비어*\
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
 *오른쪽*\
-변환할 수 있는 문자열 형식 또는 `basic_string_view` 형식의 개체입니다.
+변환할 수 있는 문자열 형식 이거나 비교할 형식의 개체 `basic_string_view` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 크거나 같으면 **true** 이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **false**입니다.
+**`true`** 연산자의 좌 변에 있는 개체가 우변에 있는 개체 보다 크거나 같으면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-[연산자&lt;](#op_lt)를 참조 하세요.
+[Operator &lt; ](#op_lt)를 참조 하세요.
 
 ## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>연산자 "" sv (string_view 리터럴)
 
-문자열 리터럴에서 string_view를 생성 합니다. 네임 스페이스 `std::literals::string_view_literals`필요 합니다.
+문자열 리터럴에서 string_view를 생성 합니다. 네임 스페이스가 필요 `std::literals::string_view_literals` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>참고 항목
 
-[\<string_view >](../standard-library/string-view.md)
+[\<string_view>](../standard-library/string-view.md)

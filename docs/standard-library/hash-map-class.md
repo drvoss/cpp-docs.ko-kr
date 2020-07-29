@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e8c0da199d8a1e9ba388b960fe07ab6ad6fcf4bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 063b71100af536a249949a1084ab208b6266fd8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375461"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222472"
 ---
 # <a name="hash_map-class"></a>hash_map 클래스
 
@@ -114,17 +114,17 @@ class hash_map
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 hash_map에 저장되는 키 데이터 형식입니다.
 
-*형식*\
+*입력할*\
 hash_map에 저장되는 요소 데이터 형식입니다.
 
-*특성*\
+*특징이*\
 두 요소 값을 정렬 키로 비교하여 상대 순서를 확인할 수 있는 클래스 비교 중 하나와 요소의 키 값을 `size_t` 형식의 부호 없는 정수에 매핑하는 단항 조건자인 해시 함수의 두 개체를 포함하는 형식입니다. 이 인수는 선택 사항이며 hash_compare<`Key`, less<`Key`> >가 기본값입니다.
 
 *할당자*\
-hash_map의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은\<<const `Key` `Type` ,>> 할당자 쌍입니다.
+hash_map의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 할당자>입니다 \<pair <const `Key`, `Type`> .
 
 ## <a name="remarks"></a>설명
 
@@ -140,7 +140,7 @@ hash_map은
 
 - 요소의 데이터 값은 키 값과 구별되기 때문에 쌍 연관 컨테이너입니다.
 
-- 클래스 템플릿은 제공하는 기능이 일반적이므로 요소 또는 키로 포함된 특정 데이터 유형과 독립적입니다. 요소에 사용될 데이터 형식과 키는 대신 비교 함수 및 할당자와 함께 클래스 템플릿에서 매개 변수로 지정됩니다.
+- 클래스 템플릿은 제공 된 기능이 일반적 이므로 요소 또는 키로 포함 된 데이터의 특정 형식과 독립적 이기 때문입니다. 요소에 사용될 데이터 형식과 키는 대신 비교 함수 및 할당자와 함께 클래스 템플릿에서 매개 변수로 지정됩니다.
 
 해시는 정렬보다 훨씬 효율적입니다. 성공적인 해시는 정렬 방식에 대한 컨테이너의 요소 수 로그에 비례하는 시간과 비교할 때 삽입, 삭제, 찾기를 일정한 평균 시간 이내에 수행합니다. hash_map 요소의 값은 연관된 키 값을 제외하고 직접적으로 변경할 수 있습니다. 대신, 이전 요소와 관련된 키 값을 삭제하고 새 요소와 연결된 새 키 값을 삽입해야 합니다.
 
@@ -148,9 +148,9 @@ hash_map은
 
 애플리케이션에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 hash_map입니다. 이 형식의 구조체를 위한 모델은 정의를 제공하는 연관 문자열 값이 있고 고유하게 나타나는 키 단어의 정렬된 목록입니다. 대신, 단어에 둘 이상의 올바른 정의가 있어서 키가 고유하지 않은 경우 hash_multimap은 선택한 컨테이너가 됩니다. 반면에 단어 목록만 저장하는 경우에는 hash_set이 올바른 컨테이너가 됩니다. 단어를 여러 번 중복할 수 있는 경우 hash_multiset이 적절한 컨테이너 구조입니다.
 
-hash_map 클래스 [value_compare](../standard-library/value-compare-class.md)저장된 해시 *Traits* 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> 클래스의 개체와 동일하게 동작해야 합니다. 특히 모든 값에 대 한 유형 `Traits` `Key` *키의* *키* , 호출 `size_t`() 형식의 값의 분포를 생성 합니다 .
+Hash_map은 [value_compare](../standard-library/value-compare-class.md)클래스의 저장 된 해시 *특성* 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는<키 [hash_compare](../standard-library/hash-compare-class.md) 클래스의 개체와 동일 하 게 동작 해야 합니다 \<Key>>. 특히, *key*형식의 모든 값 *키* 에 대해 호출 `Traits` ()은 `Key` 형식의 값 분포를 생성 합니다 `size_t` .
 
-일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 술어 f(xy)는 두 개의 인수 `x` 개체와 `y` **true** 또는 **false의**반환 값이 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_map에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, f(x, y)  및 f(y, x)가 모두 false인 경우 x 및 y 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
+일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 f (x y)는 두 인수 개체 `x` 및 `y` 및 반환 값이 또는 인 함수 개체입니다 **`true`** **`false`** . 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_map에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, f(x, y)  및 f(y, x)가 모두 false인 경우 x 및 y 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.
 
 제어된 시퀀스의 실제 요소 순서는 해시 함수, 순서 지정 함수 및 컨테이너 개체에 저장된 해시 테이블의 현재 크기에 따라 달라집니다. 해시 테이블의 현재 크기를 확인할 수 없으므로 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 명확히 가리키고 있는 반복기만 무효화됩니다.
 
@@ -158,75 +158,75 @@ hash_map 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
-|[Hash_map](#hash_map)|비어 있거나 다른 `hash_map`의 전체 또는 일부의 복사본인 `hash_map`을 생성합니다.|
+|[hash_map](#hash_map)|비어 있거나 다른 `hash_map`의 전체 또는 일부의 복사본인 `hash_map`을 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 개체의 `hash_map` 클래스를 나타내는 형식입니다.|
-|[const_iterator](#const_iterator)|`const`에 있는 `hash_map` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|
-|[const_pointer](#const_pointer)|에서 **const** 요소에 대한 포인터를 제공하는 `hash_map`형식입니다.|
-|[const_reference](#const_reference)|**const** 작업을 읽고 수행하기 위해 에 `hash_map` 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.|
-|[const_reverse_iterator](#const_reverse_iterator)|의 **모든 const** 요소를 읽을 수 있는 양방향 이터레이터를 `hash_map`제공하는 형식입니다.|
+|[const_iterator](#const_iterator)|의 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** `hash_map` .|
+|[const_pointer](#const_pointer)|의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** `hash_map` .|
+|[const_reference](#const_reference)|**`const`** `hash_map` 작업을 읽고 수행 하기 위해에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다 **`const`** .|
+|[const_reverse_iterator](#const_reverse_iterator)|의 모든 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** `hash_map` .|
 |[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 `hash_map`의 요소의 개수를 표현하는 데 사용할 수 있습니다.|
-|[반복기](#iterator)|`hash_map`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
+|[반복](#iterator)|`hash_map`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[key_compare](#key_compare)|`hash_map`의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|
 |[key_type](#key_type)|`hash_map`의 각 요소를 구성하는 정렬 키 개체를 설명하는 형식입니다.|
 |[mapped_type](#mapped_type)|`hash_map` 내에 저장된 데이터 형식을 나타내는 형식입니다.|
-|[포인터(pointer)](#pointer)|`hash_map`의 요소에 대한 포인터를 제공하는 형식입니다.|
-|[참조](#reference)|`hash_map` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|
+|[놓고](#pointer)|`hash_map`의 요소에 대한 포인터를 제공하는 형식입니다.|
+|[reference](#reference)|`hash_map` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|
 |[reverse_iterator](#reverse_iterator)|역순 `hash_map`의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|
 |[size_type](#size_type)|`hash_map`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
-|[Value_type](#value_type)|두 요소를 정렬 키로 비교하여 `hash_map`에서 상대적 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.|
+|[value_type](#value_type)|두 요소를 정렬 키로 비교하여 `hash_map`에서 상대적 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
 
 |멤버 함수|Description|
 |-|-|
-|[에](#at)|지정된 키 값이 있는 `hash_map`의 요소를 찾습니다.|
+|[at](#at)|지정된 키 값이 있는 `hash_map`의 요소를 찾습니다.|
 |[시작](#begin)|`hash_map`의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|
 |[cbegin](#cbegin)|`hash_map`의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|
-|[엔드 (것)엔드](#cend)|`hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
-|[명확한](#clear)|`hash_map`의 모든 요소를 지웁니다.|
+|[cend](#cend)|`hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
+|[해제](#clear)|`hash_map`의 모든 요소를 지웁니다.|
 |[count](#count)|키가 매개 변수로 지정된 키와 일치하는 `hash_map`의 요소 수를 반환합니다.|
 |[crbegin](#crbegin)|역순 `hash_map`에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|
 |[crend](#crend)|역순 `hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|
 |[emplace](#emplace)|생성된 요소를 `hash_map`에 삽입합니다.|
 |[emplace_hint](#emplace_hint)|배치 힌트를 사용하여 생성된 요소를 `hash_map`에 삽입합니다.|
-|[빈](#empty)|`hash_map`가 비어 있는지 여부를 테스트합니다.|
-|[end](#end)|`hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|
+|[empty](#empty)|`hash_map`가 비어 있는지 여부를 테스트합니다.|
+|[종단](#end)|`hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|
 |[equal_range](#equal_range)|지정된 키보다 더 큰 키를 가진 `hash_map`의 첫 번째 요소와 지정된 키보다 더 크거나 같은 키를 가진 `hash_map`의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.|
 |[erase](#erase)|`hash_map`의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.|
-|[찾을](#find)|지정된 키와 같은 키를 가진 `hash_map` 내 요소의 위치를 가리키는 반복기를 반환합니다.|
+|[find](#find)|지정된 키와 같은 키를 가진 `hash_map` 내 요소의 위치를 가리키는 반복기를 반환합니다.|
 |[get_allocator](#get_allocator)|`allocator`을 생성하는 데 사용되는 `hash_map` 개체의 복사본을 반환합니다.|
-|[삽입](#insert)|`hash_map`에 요소 또는 요소의 범위를 삽입합니다.|
+|[insert](#insert)|`hash_map`에 요소 또는 요소의 범위를 삽입합니다.|
 |[key_comp](#key_comp)|`hash_map`에서 지정된 키보다 크거나 같은 키 값을 가진 첫 번째 요소에 반복기를 반환합니다.|
 |[lower_bound](#lower_bound)|`hash_map`에서 지정된 키보다 크거나 같은 키 값을 가진 첫 번째 요소에 반복기를 반환합니다.|
 |[max_size](#max_size)|`hash_map`의 최대 길이를 반환합니다.|
 |[rbegin](#rbegin)|역순 `hash_map`에서 첫 번째 요소를 참조하는 반복기를 반환합니다.|
 |[rend](#rend)|역순 `hash_map`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|
-|[크기](#size)|`hash_map`에 있는 요소 수를 반환합니다.|
-|[스왑](#swap)|두 `hash_map`의 요소를 교환합니다.|
+|[size](#size)|`hash_map`에 있는 요소 수를 반환합니다.|
+|[스왑을](#swap)|두 `hash_map`의 요소를 교환합니다.|
 |[upper_bound](#upper_bound)|`hash_map`에서 지정된 키보다 큰 키 값을 가진 첫 번째 요소에 반복기를 반환합니다.|
 |[value_comp](#value_comp)|`hash_map`에서 요소 값의 정렬에 사용되는 비교 개체의 복사본을 검색합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[operator&#91;&#93;](#op_at)|지정된 키 값을 사용하여 `hash_map`에 요소를 삽입합니다.|
-|[hash_map::연산자=](#op_eq)|`hash_map`의 요소를 다른 `hash_map`의 복사본으로 대체합니다.|
+|[hash_map:: operator =](#op_eq)|`hash_map`의 요소를 다른 `hash_map`의 복사본으로 대체합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<hash_map>
+**헤더:**\<hash_map>
 
 **네임스페이스:** stdext
 
-## <a name="hash_mapallocator_type"></a><a name="allocator_type"></a>hash_map:allocator_type
+## <a name="hash_mapallocator_type"></a><a name="allocator_type"></a>hash_map:: allocator_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -241,7 +241,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="hash_mapat"></a><a name="at"></a>hash_map:에서
+## <a name="hash_mapat"></a><a name="at"></a>hash_map:: at
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -256,9 +256,9 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |-|-|
-|*키*|찾을 요소의 키 값입니다.|
+|*key*|찾을 요소의 키 값입니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -295,7 +295,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mapbegin"></a><a name="begin"></a>hash_map::시작
+## <a name="hash_mapbegin"></a><a name="begin"></a>hash_map:: begin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -356,7 +356,7 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="hash_mapcbegin"></a><a name="cbegin"></a>hash_map::cbegin
+## <a name="hash_mapcbegin"></a><a name="cbegin"></a>hash_map:: cbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -400,7 +400,7 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="hash_mapcend"></a><a name="cend"></a>hash_map::cend
+## <a name="hash_mapcend"></a><a name="cend"></a>hash_map:: cend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -451,7 +451,7 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="hash_mapclear"></a><a name="clear"></a>hash_map::클리어
+## <a name="hash_mapclear"></a><a name="clear"></a>hash_map:: clear
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -501,12 +501,12 @@ The size of the hash_map is initially 2.
 The size of the hash_map after clearing is 0.
 ```
 
-## <a name="hash_mapconst_iterator"></a><a name="const_iterator"></a>hash_map:const_iterator
+## <a name="hash_mapconst_iterator"></a><a name="const_iterator"></a>hash_map:: const_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
 
-hash_map의 **const** 요소 하나를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.
+Hash_map의 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** .
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
@@ -516,22 +516,22 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.
 
-hash_map `const_iterator` 정의된 요소는 [value_type](#value_type)개체인 요소, 즉 `pair< const Key, Type >`형식의 요소를 가리키며, 첫 번째 멤버는 요소의 키이고 두 번째 멤버는 요소가 보유한 매핑된 데이텀입니다.
+`const_iterator`Hash_map 정의 된는 형식이 인 [value_type](#value_type)개체인 요소를 가리킵니다 .이는 `pair< const Key, Type >` 첫 번째 멤버가 요소에 대 한 키이 고 두 번째 멤버가 요소에 의해 보유 되는 매핑된 데이텀의 경우입니다.
 
-hash_map 요소를 `const_iterator` `cIter` 가리키는 점을 참조하려면 연산자사용을 `->` 사용합니다.
+`const_iterator` `cIter` Hash_map의 요소를 가리키는를 역참조 하려면 연산자를 사용 `->` 합니다.
 
-요소에 대한 키 값에 액세스하려면 `cIter->first`에 해당하는 `(*cIter).first`을 사용합니다. 요소에 대해 매핑된 데이텀 값에 액세스하려면 `cIter->second`에 `(*cIter).second`해당하는 을 사용합니다.
+요소에 대 한 키의 값에 액세스 하려면 `cIter->first` 에 해당 하는를 사용 `(*cIter).first` 합니다. 요소에 대 한 매핑된 데이텀의 값에 액세스 하려면 `cIter->second` 에 해당 하는를 사용 `(*cIter).second` 합니다.
 
 ### <a name="example"></a>예제
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="hash_mapconst_pointer"></a><a name="const_pointer"></a>hash_map:const_pointer
+## <a name="hash_mapconst_pointer"></a><a name="const_pointer"></a>hash_map:: const_pointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
 
-hash_map에서 **const** 요소에 대한 포인터를 제공하는 형식입니다.
+Hash_map의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** .
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
@@ -543,12 +543,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_map 개체의 요소에 액세스해야 합니다.
 
-## <a name="hash_mapconst_reference"></a><a name="const_reference"></a>hash_map:const_reference
+## <a name="hash_mapconst_reference"></a><a name="const_reference"></a>hash_map:: const_reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
 
-**const** 작업을 읽고 수행하기 위해 hash_map에 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.
+**`const`** 작업을 읽고 수행 하기 위해 hash_map에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다 **`const`** .
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
@@ -599,12 +599,12 @@ The key of the first element in the hash_map is 1.
 The data value of the first element in the hash_map is 10.
 ```
 
-## <a name="hash_mapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_map:const_reverse_iterator
+## <a name="hash_mapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_map:: const_reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
 
-hash_map의 모든 **const** 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.
+Hash_map의 모든 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** .
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse)iterator const_reverse_iterator;
@@ -614,17 +614,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` 형식은 요소 값을 수정할 수 없으며 hash_map을 역방향으로 반복하는 데 사용됩니다.
 
-hash_map `const_reverse_iterator` 정의된 요소는 [value_type](#value_type)객체인 요소, 즉 `pair` \< 유형 **구성 요소 키, 유형**>, 첫 번째 멤버는 요소의 키이고 두 번째 멤버는 요소가 보유한 매핑된 데이텀인 요소를 가리킵니다.
+`const_reverse_iterator`Hash_map 정의 된는 형식이 인 [value_type](#value_type)개체인 요소를 가리킵니다 .이는 `pair` \< **const Key, Type**> 첫 번째 멤버가 요소에 대 한 키이 고 두 번째 멤버가 요소에 의해 보유 되는 매핑된 데이텀의 경우입니다.
 
 hash_map의 요소를 가리키는 `const_reverse_iterator` `crIter`를 역참조하려면 **->** 연산자를 사용합니다.
 
-요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`) **.first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **첫 번째**.
+요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`) **.first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **첫 번째**입니다.
 
 ### <a name="example"></a>예제
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
-## <a name="hash_mapcount"></a><a name="count"></a>hash_map::카운트
+## <a name="hash_mapcount"></a><a name="count"></a>hash_map:: count
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -637,7 +637,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 hash_map에서 일치시킬 요소의 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -648,7 +648,7 @@ hash_map에 정렬 키가 매개 변수 키와 일치하는 요소가 있는 경
 
 멤버 함수는 다음 범위에 있는 *x* 요소의 수를 반환합니다.
 
-\[lower_bound *(키),* upper_bound *(키)*)
+\[lower_bound (*키*), upper_bound (*키*))
 
 고유한 결합형 컨테이너인 hash_map의 경우 0 또는 1입니다.
 
@@ -696,7 +696,7 @@ The number of elements in hm1 with a sort key of 2 is: 1.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="hash_mapcrbegin"></a><a name="crbegin"></a>hash_map::crbegin
+## <a name="hash_mapcrbegin"></a><a name="crbegin"></a>hash_map:: crbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -748,7 +748,7 @@ int main( )
 The first element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="hash_mapcrend"></a><a name="crend"></a>hash_map::크렌드
+## <a name="hash_mapcrend"></a><a name="crend"></a>hash_map:: crend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -803,7 +803,7 @@ int main( )
 The last element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="hash_mapdifference_type"></a><a name="difference_type"></a>hash_map::d이퍼런스_타입
+## <a name="hash_mapdifference_type"></a><a name="difference_type"></a>hash_map::d ifference_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -873,7 +873,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 20.
 ```
 
-## <a name="hash_mapemplace"></a><a name="emplace"></a>hash_map::엠플레이스
+## <a name="hash_mapemplace"></a><a name="emplace"></a>hash_map:: emplace
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -891,13 +891,13 @@ emplace(
 
 |매개 변수|설명|
 |-|-|
-|*발*|`hash_map`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_map](../standard-library/hash-map-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
+|*짧은*|`hash_map`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_map](../standard-library/hash-map-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
 
 ### <a name="return-value"></a>Return Value
 
 `emplace` 멤버 함수는 해당 부울 구성 요소가 삽입이 수행된 경우 true를 반환하고, 해당 키가 순서 지정 시 동일한 값을 가지고 해당 반복기 구성 요소에서 새 요소가 삽입되었거나 요소가 이미 있었던 주소를 반환하는 요소가 `hash_map`에 이미 들어 있었던 경우에는 false를 반환합니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수에서 반환되는 `pr` 쌍의 **bool** 구성 `pr.second`요소에 액세스하려면 을 `*(pr.second)`사용하고 이 구성 요소를 참조하려면 을 사용합니다.
+이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. **`bool`** 이 멤버 함수가 반환 하는 쌍의 구성 요소에 액세스 하려면 `pr` 를 사용 하 고 해당 구성 요소를 `pr.second` 역참조 하려면를 사용 `*(pr.second)` 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -932,7 +932,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="hash_mapemplace_hint"></a><a name="emplace_hint"></a>hash_map:emplace_hint
+## <a name="hash_mapemplace_hint"></a><a name="emplace_hint"></a>hash_map:: emplace_hint
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -950,7 +950,7 @@ iterator emplace_hint(
 
 |매개 변수|설명|
 |-|-|
-|*발*|`hash_map`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_map](../standard-library/hash-map-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
+|*짧은*|`hash_map`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_map](../standard-library/hash-map-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|
 |*_Where*|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|
 
 ### <a name="return-value"></a>Return Value
@@ -961,7 +961,7 @@ iterator emplace_hint(
 
 요소의 [hash_map::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.
 
-삽입 지점이 *바로 _Where*따라 오는 경우 삽입은 로그 시간 대신 상각 된 일정한 시간에 발생할 수 있습니다.
+삽입 지점이 *_Where*바로 다음에 오는 경우에는 로그 시간 대신 분할 상환 일정 시간에 삽입이 발생할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -992,7 +992,7 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="hash_mapempty"></a><a name="empty"></a>hash_map::비어 있음
+## <a name="hash_mapempty"></a><a name="empty"></a>hash_map:: empty
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1005,7 +1005,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Return Value
 
-hash_map이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
+**`true`** hash_map 비어 있으면이 고, 그렇지 않으면입니다. **`false`** hash_map 비어 있지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1043,7 +1043,7 @@ The hash_map hm1 is not empty.
 The hash_map hm2 is empty.
 ```
 
-## <a name="hash_mapend"></a><a name="end"></a>hash_map::끝
+## <a name="hash_mapend"></a><a name="end"></a>hash_map:: end
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1062,7 +1062,7 @@ hash_map에서 마지막 요소 다음에 나오는 위치의 주소를 지정�
 
 ### <a name="remarks"></a>설명
 
-`end`는 hash_map 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.
+`end`는 반복기가 hash_map의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다.
 
 `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
@@ -1114,7 +1114,7 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="hash_mapequal_range"></a><a name="equal_range"></a>hash_map:equal_range
+## <a name="hash_mapequal_range"></a><a name="equal_range"></a>hash_map:: equal_range
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1129,14 +1129,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 검색 중인 hash_map에서 요소의 정렬 키와 비교할 인수 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
 반복기 쌍. 여기서 첫 번째 반복기는 키의 [lower_bound](#lower_bound)이고 두 번째 반복기는 키의 [upper_bound](#upper_bound)입니다.
 
-멤버 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **먼저** 하한 이터레이터를 반참조하려면 \*( `pr` **첫 번째)를**참조하십시오. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **두 번째** 및 상한 이터레이터를 \*반참조하려면 ( `pr` **두 번째)를**참조하십시오.
+멤버 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **첫째** , 하 한 반복기를 역참조 하려면 \* ()를 사용 `pr` 합니다. **첫 번째**). 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **둘째** , 상한 반복기를 역참조 하려면 (를 사용 \* `pr` 합니다. **second**).
 
 ### <a name="remarks"></a>설명
 
@@ -1201,7 +1201,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="hash_maperase"></a><a name="erase"></a>hash_map::지우기
+## <a name="hash_maperase"></a><a name="erase"></a>hash_map:: erase
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1221,13 +1221,13 @@ size_type erase(const key_type& key);
 *_Where*\
 hash_map에서 제거할 요소의 위치입니다.
 
-*첫 번째*\
+*기본*\
 hash_map에서 제거되는 첫 번째 요소의 위치입니다.
 
-*마지막*\
+*최신*\
 hash_map에서 제거되는 마지막 요소 바로 뒤의 위치입니다.
 
-*키*\
+*키인지*\
 hash_map에서 제거할 요소의 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1325,7 +1325,7 @@ After another element with a key equal to that
 of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ```
 
-## <a name="hash_mapfind"></a><a name="find"></a>hash_map::찾기
+## <a name="hash_mapfind"></a><a name="find"></a>hash_map:: find
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1340,7 +1340,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 검색 중인 hash_map에서 요소의 정렬 키와 일치 여부를 확인할 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1349,9 +1349,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>설명
 
-`find`정렬 키가 비교 가능성 보다 작은 관계에 따라 순서를 유도하는 이진 조건자 아래의 인수 키와 동일한 hash_map 요소를 해결하는 이터레이터를 반환합니다.
+`find`hash_map의 요소를 주소 지정 하는 반복기를 반환 합니다 .이는 정렬 키가 작음 비교 가능 보다 작음 관계를 기준으로 순서를 지정 하는 이진 조건자 아래의 인수 키와 동일 합니다.
 
-반환 `find` 값이 [const_iterator](#const_iterator)할당된 경우 hash_map 개체를 수정할 수 없습니다. 의 반환 값이 `find` [변경자에](#iterator)할당된 경우 hash_map 개체를 수정할 수 있습니다.
+의 반환 값 `find` 이 [const_iterator](#const_iterator)에 할당 되는 경우 hash_map 개체를 수정할 수 없습니다. 의 반환 값 `find` 이 [iterator](#iterator)에 할당 되는 경우 hash_map 개체를 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1404,7 +1404,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_mapget_allocator"></a><a name="get_allocator"></a>hash_map:get_allocator
+## <a name="hash_mapget_allocator"></a><a name="get_allocator"></a>hash_map:: get_allocator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1480,7 +1480,7 @@ int main( )
 }
 ```
 
-## <a name="hash_maphash_map"></a><a name="hash_map"></a>hash_map:hash_map
+## <a name="hash_maphash_map"></a><a name="hash_map"></a>hash_map:: hash_map
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1535,11 +1535,11 @@ hash_map(
 
 |매개 변수|설명|
 |-|-|
-|*알*|이 hash_map 개체에 사용할 저장소 할당자 클래스는 기본값입니다. `Allocator`|
-|*광고*|hash_map의 요소 순서를 지정하는 데 사용되는 상수 `Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
+|*항상*|이 hash_map 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator` 입니다.|
+|*생략*|hash_map의 요소 순서를 지정하는 데 사용되는 상수 `Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
 |*오른쪽*|생성된 map이 복사본으로 지정될 hash_map입니다.|
-|*첫 번째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|*마지막*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
+|*첫째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
+|*최신*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
 |*IList*|initializer_list|
 
 ### <a name="remarks"></a>설명
@@ -1550,15 +1550,15 @@ hash_map(
 
 모든 생성자는 hash_map의 키 간 순서를 설정하는 데 사용되며 나중에 [key_comp](#key_comp)를 호출하여 반환할 수 있는 `Traits` 형식의 함수 개체를 저장합니다.
 
-처음 세 생성자는 빈 초기 hash_map 지정하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교*함수(Comp)의*형식을 지정하고 세 번째 생성자는 사용할 할당자*형식(Al)을*명시적으로 지정합니다. **explicit** 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.
+처음 세 생성자는 빈 초기 hash_map을 지정 하 고, 두 번째 생성자는 요소의 순서를 설정 하는 데 사용할 비교 함수 (*Comp*)의 형식을 지정 하며, 세 번째 생성자는 사용할 할당자 형식 (*Al*)을 명시적으로 지정 합니다. 키워드는 **`explicit`** 특정 종류의 자동 형식 변환을 표시 하지 않습니다.
 
-네 번째 생성자는 *hash_map 오른쪽의*복사본을 지정합니다.
+네 번째 생성자는 hash_map *오른쪽*의 복사본을 지정 합니다.
 
 다음 3개 생성자는 hash_map의 범위 `[First, Last)`를 복사하며, 범위 내에서 클래스 `Traits` 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.
 
-마지막 생성자는 hash_map *오른쪽으로 이동합니다.*
+마지막 생성자는 hash_map *오른쪽*으로 이동 합니다.
 
-## <a name="hash_mapinsert"></a><a name="insert"></a>hash_map::삽입
+## <a name="hash_mapinsert"></a><a name="insert"></a>hash_map:: insert
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1593,26 +1593,26 @@ iterator insert(
 
 |매개 변수|설명|
 |-|-|
-|*발*|hash_map이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 hash_map에 삽입될 요소의 값입니다.|
+|*짧은*|hash_map이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 hash_map에 삽입될 요소의 값입니다.|
 |*_Where*|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|
-|*첫 번째*|hash_map에서 복사할 첫 번째 요소의 위치입니다.|
-|*마지막*|hash_map에서 복사할 마지막 요소 바로 다음 위치입니다.|
+|*first*|hash_map에서 복사할 첫 번째 요소의 위치입니다.|
+|*last*|hash_map에서 복사할 마지막 요소 바로 다음 위치입니다.|
 
 ### <a name="return-value"></a>Return Value
 
-첫 `insert` 번째 멤버 함수는 삽입이 이루어진 경우 bool 구성 요소가 true로 반환되고 hash_map 이미 순서에 동등한 값을 가진 요소가 있고 변경기 구성 요소가 새 요소가 삽입된 주소 또는 요소가 이미 있는 위치를 반환하는 경우 false를 반환합니다.
+첫 번째 `insert` 멤버 함수는 부울 구성 요소가 삽입이 수행 된 경우 true를 반환 하 고, 해당 키가 순서 지정 시 동일한 값을 가지 며, 반복기 구성 요소에서 새 요소가 삽입 되었거나 요소가 이미 있었던 주소를 반환 하 hash_map는 요소가 이미 포함 되어 있는 경우 false를 반환 하는 쌍을 반환 합니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr`. **첫 번째,** 그리고 그것을 \*반하는, 사용 ( `pr`. **첫 번째)를**참조하십시오. 이 멤버 함수에서 반환된 `pr` 쌍의 **bool** 구성 `pr`요소에 액세스하려면 을 사용합니다. **두 번째**, 그리고 그것을 \* `pr`반하는, 사용 ( . **두 번째)를**참조하십시오.
+이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr`. **first**를 사용 하 고 역참조 하려면 \* ()를 사용 `pr` 합니다. **첫 번째**). **`bool`** 이 멤버 함수가 반환 하는 쌍의 구성 요소에 액세스 하려면를 `pr` 사용 `pr` 합니다. **second**를 사용 하 고 역참조 하려면 \* ( `pr` . **second**).
 
-두 `insert` 번째 멤버 함수인 힌트 버전은 새 요소가 hash_map 삽입된 위치를 가리키는 이터레이터를 반환합니다.
+두 번째 `insert` 멤버 함수 힌트 버전은 새 요소가 hash_map 삽입 된 위치를 가리키는 반복기를 반환 합니다.
 
-마지막 두 `insert` 멤버 함수는 삽입된 값을 구사한다는 점을 제외하면 처음 두 함수와 동일하게 동작합니다.
+마지막 두 `insert` 멤버 함수는 삽입 된 값을 구문으로 이동 한다는 점을 제외 하 고 처음 두 함수와 동일 하 게 동작 합니다.
 
 ### <a name="remarks"></a>설명
 
 요소의 [value_type](../standard-library/map-class.md#value_type)은 쌍이므로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.
 
-삽입 지점이 *바로 _Where*따라 오는 경우 삽입 시간이 아닌 삽입의 힌트 버전에 대한 상각 상수 시간에 삽입이 발생할 수 있습니다.
+삽입 지점이 *_Where*바로 다음에 오는 경우에는 로그 시간이 아니라 insert의 힌트 버전에 대 한 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
 
 세 번째 멤버 함수는 지정된 set의 *[First, Last)* 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 hash_map에 요소 값의 시퀀스를 삽입합니다.
 
@@ -1724,7 +1724,7 @@ After the move insertion, hm4 contains:
 2 => b
 ```
 
-## <a name="hash_mapiterator"></a><a name="iterator"></a>hash_map::이터레이터
+## <a name="hash_mapiterator"></a><a name="iterator"></a>hash_map:: iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1737,19 +1737,19 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>설명
 
-hash_map `iterator` 정의된 요소는 [value_type](#value_type)오브젝트인 데, 즉 형식 **쌍 구성 요소 인 구성 요소, 유형>,\<** 첫 번째 멤버는 요소의 키이며 두 번째 멤버는 요소가 보유한 매핑된 데이텀입니다.
+`iterator`Hash_map 정의 된는 [value_type](#value_type)의 개체인 요소를 가리킵니다 .이는 첫 번째 멤버가 요소에 대 한 키이 고 두 번째 멤버가 요소에 의해 보유 된 매핑된 데이텀이 고 ** \<const Key, Type> , 형식 쌍** 입니다.
 
-다중 맵의 요소를 가리키는 **이터레이터를** `Iter` 참조하려면 연산자 사용을 `->` 사용합니다.
+**iterator** `Iter` Multimap의 요소를 가리키는 반복기를 역참조 하려면 연산자를 사용 `->` 합니다.
 
-요소에 대한 키의 값에 액세스하려면 `Iter` -> **first**를 사용합니다. 이 항목은 (\* `Iter`). **첫 번째**. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `Iter` -> **second**를 사용합니다. 이 항목은 (\* `Iter`). **두 번째**.
+요소에 대한 키의 값에 액세스하려면 `Iter` -> **first**를 사용합니다. 이 항목은 (\* `Iter`). **첫 번째**입니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `Iter` -> **second**를 사용합니다. 이 항목은 (\* `Iter`). **초**.
 
-형식을 `iterator` 사용하여 요소값을 수정할 수 있습니다.
+형식을 `iterator` 사용 하 여 요소의 값을 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
 `iterator`을 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="hash_mapkey_comp"></a><a name="key_comp"></a>hash_map:key_comp
+## <a name="hash_mapkey_comp"></a><a name="key_comp"></a>hash_map:: key_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1770,7 +1770,7 @@ hash_map이 요소의 순서를 지정하는 데 사용하는 함수 개체를 �
 
 **bool operator**(**const Key&** `left`**, const Key&** `right`);를
 
-정의합니다. 이 함수는 `left`가 앞에 오며 정렬 순서가 `right`와 같지 않으면 **true**를 반환합니다.
+**`true`** `left` 가 보다 앞에 있고가 정렬 순서에서와 같지 않으면를 반환 합니다 `right` .
 
 ### <a name="example"></a>예제
 
@@ -1825,7 +1825,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mapkey_compare"></a><a name="key_compare"></a>hash_map:key_compare
+## <a name="hash_mapkey_compare"></a><a name="key_compare"></a>hash_map:: key_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1846,7 +1846,7 @@ typedef Traits key_compare;
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
-## <a name="hash_mapkey_type"></a><a name="key_type"></a>hash_map:key_type
+## <a name="hash_mapkey_type"></a><a name="key_type"></a>hash_map:: key_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1867,7 +1867,7 @@ typedef Key key_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="hash_maplower_bound"></a><a name="lower_bound"></a>hash_map:lower_bound
+## <a name="hash_maplower_bound"></a><a name="lower_bound"></a>hash_map:: lower_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1882,14 +1882,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 검색 중인 hash_map에서 요소의 정렬 키와 비교할 인수 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
 인수 키보다 크거나 같은 키가 들어 있는 hash_map 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_map에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.
 
-`lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_map 개체는 수정할 수 없습니다. 의 `lower_bound` 반환 값이 `iterator`에 할당된 경우 hash_map 개체를 수정할 수 있습니다.
+`lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_map 개체는 수정할 수 없습니다. 의 반환 값이에 `lower_bound` 할당 되는 경우 `iterator` hash_map 개체를 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1944,7 +1944,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_mapmapped_type"></a><a name="mapped_type"></a>hash_map:mapped_type
+## <a name="hash_mapmapped_type"></a><a name="mapped_type"></a>hash_map:: mapped_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1965,7 +1965,7 @@ typedef Type mapped_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="hash_mapmax_size"></a><a name="max_size"></a>hash_map:max_size
+## <a name="hash_mapmax_size"></a><a name="max_size"></a>hash_map:: max_size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2004,7 +2004,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mapoperator"></a><a name="op_at"></a>hash_map::연산자[]
+## <a name="hash_mapoperator"></a><a name="op_at"></a>hash_map:: operator []
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2019,9 +2019,9 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |-|-|
-|*키*|삽입할 요소의 키 값입니다.|
+|*key*|삽입할 요소의 키 값입니다.|
 
 ### <a name="return-value"></a>Return Value
 
@@ -2035,7 +2035,7 @@ Type& operator[](Key&& key);
 
 `m[ key] = DataValue`;
 
-여기서 DataValue는 *키* `mapped_type` 값이 있는 요소의 값입니다.
+여기서 DataValue는 키 `mapped_type` 값이 *key*인 요소의 값입니다.
 
 `operator[]`를 사용하여 요소를 삽입하는 경우 반환된 참조는 삽입이 기존 요소를 변경하는지 또는 새 요소를 생성하는지 여부를 나타내지 않습니다. 멤버 함수 [find](../standard-library/map-class.md#find) 및 [insert](../standard-library/map-class.md#insert)는 지정된 키가 포함된 요소가 삽입 전에 이미 있는지 여부를 확인하는 데 사용할 수 있습니다.
 
@@ -2101,7 +2101,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mapoperator"></a><a name="op_eq"></a>hash_map::연산자=
+## <a name="hash_mapoperator"></a><a name="op_eq"></a>hash_map:: operator =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2122,7 +2122,7 @@ hash_map& operator=(hash_map&& right);
 
 ### <a name="remarks"></a>설명
 
-`hash_map`에서 기존 요소를 지워면 `operator=` *오른쪽의* 내용을 을 복사하거나 이동합니다. `hash_map`
+에서 기존 요소를 지운 후에 `hash_map` 는 `operator=` 의 내용을로 복사 하거나 이동 *right* `hash_map` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2162,7 +2162,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mappointer"></a><a name="pointer"></a>hash_map::p
+## <a name="hash_mappointer"></a><a name="pointer"></a>hash_map::p ointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2175,11 +2175,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>설명
 
-형식을 `pointer` 사용하여 요소값을 수정할 수 있습니다.
+형식을 `pointer` 사용 하 여 요소의 값을 수정할 수 있습니다.
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_map 개체의 요소에 액세스해야 합니다.
 
-## <a name="hash_maprbegin"></a><a name="rbegin"></a>hash_map::rbegin
+## <a name="hash_maprbegin"></a><a name="rbegin"></a>hash_map:: rbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2263,7 +2263,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the first element in the reversed hash_map is 2.
 ```
 
-## <a name="hash_mapreference"></a><a name="reference"></a>hash_map::참조
+## <a name="hash_mapreference"></a><a name="reference"></a>hash_map:: reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2326,7 +2326,7 @@ The data value of first element in the hash_map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="hash_maprend"></a><a name="rend"></a>hash_map::rend
+## <a name="hash_maprend"></a><a name="rend"></a>hash_map:: rend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2416,7 +2416,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the last element in the reversed hash_map is 2.
 ```
 
-## <a name="hash_mapreverse_iterator"></a><a name="reverse_iterator"></a>hash_map:reverse_iterator
+## <a name="hash_mapreverse_iterator"></a><a name="reverse_iterator"></a>hash_map:: reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2431,17 +2431,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator` 형식은 요소 값을 수정할 수 없으며 hash_map을 역방향으로 반복하는 데 사용됩니다.
 
-hash_map에 의해 정의된 `reverse_iterator`는 **pair\<const Key, Type>** 형식의 [value_type](#value_type) 개체인 요소를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.
+`reverse_iterator`Hash_map 정의 된는 [value_type](#value_type)의 개체인 요소를 가리킵니다 .이는 첫 번째 멤버가 요소에 대 한 키이 고 두 번째 멤버가 요소에 의해 보유 된 매핑된 데이텀이 고, 형식 **쌍 \<const Key, Type> **입니다.
 
 hash_map의 요소를 가리키는 `reverse_iterator` `rIter`를 역참조하려면 -> 연산자를 사용합니다.
 
-요소에 대한 키의 값에 액세스하려면 `rIter` -> **first**를 사용합니다. 이 항목은 (\* `rIter`). **첫 번째**. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `rIter` -> **second**를 사용합니다. 이 항목은 (\* `rIter`). **첫 번째**.
+요소에 대한 키의 값에 액세스하려면 `rIter` -> **first**를 사용합니다. 이 항목은 (\* `rIter`). **첫 번째**입니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `rIter` -> **second**를 사용합니다. 이 항목은 (\* `rIter`). **첫 번째**입니다.
 
 ### <a name="example"></a>예제
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="hash_mapsize"></a><a name="size"></a>hash_map::크기
+## <a name="hash_mapsize"></a><a name="size"></a>hash_map:: size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2491,7 +2491,7 @@ The hash_map length is 1.
 The hash_map length is now 2.
 ```
 
-## <a name="hash_mapsize_type"></a><a name="size_type"></a>hash_map:size_type
+## <a name="hash_mapsize_type"></a><a name="size_type"></a>hash_map:: size_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2508,7 +2508,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="hash_mapswap"></a><a name="swap"></a>hash_map:스왑
+## <a name="hash_mapswap"></a><a name="swap"></a>hash_map:: swap
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2582,7 +2582,7 @@ After swapping with hm2, hash_map hm1 is: 100 200.
 After swapping with hm3, hash_map hm1 is: 300.
 ```
 
-## <a name="hash_mapupper_bound"></a><a name="upper_bound"></a>hash_map:upper_bound
+## <a name="hash_mapupper_bound"></a><a name="upper_bound"></a>hash_map:: upper_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2597,14 +2597,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 검색 중인 hash_map에서 요소의 정렬 키 값과 비교할 인수 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
 인수 키보다 큰 키가 들어 있는 hash_map 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_map에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.
 
-반환 값이 `const_iterator`에 할당된 경우 hash_map 개체는 수정할 수 없습니다. `iterator`에 반환 값이 할당된 경우 hash_map 개체를 수정할 수 있습니다.
+반환 값이 `const_iterator`에 할당된 경우 hash_map 개체는 수정할 수 없습니다. 반환 값이에 할당 되는 경우 `iterator` hash_map 개체를 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -2660,7 +2660,7 @@ The 1st element of hm1 with a key greater than that
 of the initial element of hm1 is: 20.
 ```
 
-## <a name="hash_mapvalue_comp"></a><a name="value_comp"></a>hash_map:value_comp
+## <a name="hash_mapvalue_comp"></a><a name="value_comp"></a>hash_map:: value_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2677,11 +2677,11 @@ hash_map이 요소의 순서를 지정하는 데 사용하는 비교 함수 개�
 
 ### <a name="remarks"></a>설명
 
-hash_map *m의*경우 두 요소 *e1* *(k1*, *d1)* 및 *e2* *(k2*, *d2)가* [value_type](#value_type)형식의 개체인 경우 *k1과* *k2가* [key_type](#key_type) 및 `m.key_comp()(k1, k2)` *d1* 및 *d2형식의* 키인 경우 [mapped_type](#mapped_type) `m.value_comp()(e1, e2)` 형식의 데이터입니다. 저장된 개체는 멤버 함수
+Hash_map *m*의 경우 두 요소인 *e1* (*k1*, *d1*) 및 *e2* (*k2*, *d2*)는 [value_type](#value_type)형식의 개체이 고, 여기서 *k1* 와 *k2* 는 [key_type](#key_type) 형식의 키이 고 *d1* 및 *d2* 는 [mapped_type](#mapped_type)형식의 데이터입니다. 그런 다음는와 `m.value_comp()(e1, e2)` 동일 `m.key_comp()(k1, k2)` 합니다. 저장된 개체는 멤버 함수
 
 `bool operator(value_type& left, value_type& right);`
 
-정의합니다. 이 함수는 `left`의 키 값이 앞에 오고 정렬 순서의 `right` 키 값과 같지 않으면 **true**를 반환합니다.
+**`true`** 의 키 값 `left` 이 보다 앞에 오고가 정렬 순서에서의 키 값과 같지 않은 경우를 반환 합니다 `right` .
 
 ### <a name="example"></a>예제
 
@@ -2728,7 +2728,7 @@ int main( )
 }
 ```
 
-## <a name="hash_mapvalue_type"></a><a name="value_type"></a>hash_map:value_type
+## <a name="hash_mapvalue_type"></a><a name="value_type"></a>hash_map:: value_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2741,7 +2741,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>설명
 
-`value_type`연관 컨테이너의 `pair<const key_type, mapped_type>` 키가 `pair<key_type, mapped_type>` 비상반복기 또는 참조를 사용하여 변경되지 않을 수 있기 때문에 선언됩니다.
+`value_type`는 `pair<const key_type, mapped_type>` `pair<key_type, mapped_type>` 비상수 반복기 또는 참조를 사용 하 여 연관 컨테이너의 키를 변경할 수 없기 때문에이 아니라로 선언 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -2805,5 +2805,5 @@ The values of the mapped elements are: 10 20 30.
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

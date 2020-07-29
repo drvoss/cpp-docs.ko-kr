@@ -1,17 +1,17 @@
 ---
-title: db_column (C++ COM 특성)
+title: db_column (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 4ce57443480e35e7a4c7b9e872e41777662ddc20
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167292"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222149"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,8 +25,8 @@ ms.locfileid: "80167292"
 
 ### <a name="parameters"></a>매개 변수
 
-*서수*<br/>
-데이터를 바인딩할 행 집합의 필드에 해당 하는 서 수 열 번호 (`DBCOLUMNINFO` 서 수) 또는 열 이름 (ANSI 또는 유니코드 문자열)입니다. 숫자를 사용 하는 경우 연속 서 수를 건너뛸 수 있습니다 (예: 1, 2, 3, 5). 사용 하는 OLE DB 공급자가 지 원하는 경우 이름에 공백이 포함 될 수 있습니다. 예를 들어, 다음 형식 중 하나를 사용할 수 있습니다.
+*ordinal*<br/>
+`DBCOLUMNINFO`데이터를 바인딩할 행 집합의 필드에 해당 하는 서 수 열 번호 (서 수) 또는 열 이름 (ANSI 또는 유니코드 문자열)입니다. 숫자를 사용 하는 경우 연속 서 수를 건너뛸 수 있습니다 (예: 1, 2, 3, 5). 사용 하는 OLE DB 공급자가 지 원하는 경우 이름에 공백이 포함 될 수 있습니다. 예를 들어, 다음 형식 중 하나를 사용할 수 있습니다.
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
@@ -37,10 +37,10 @@ ms.locfileid: "80167292"
 필드 열 항목에 대 한 OLE DB [형식 표시기](/previous-versions/windows/desktop/ms711251(v=vs.85)) 입니다.
 
 *전체 자릿수*<br/>
-필드 열 항목에 사용할 전체 자릿수입니다. 자세한 내용은 [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 의 `bPrecision` 요소에 대 한 설명을 참조 하십시오.
+필드 열 항목에 사용할 전체 자릿수입니다. 자세한 내용은 `bPrecision` [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 의 요소에 대 한 설명을 참조 하세요.
 
 *scale*<br/>
-필드 열 항목에 사용할 소수 자릿수입니다. 자세한 내용은 [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 의 `bScale` 요소에 대 한 설명을 참조 하세요.
+필드 열 항목에 사용할 소수 자릿수입니다. 자세한 내용은 `bScale` [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 의 요소에 대 한 설명을 참조 하세요.
 
 *status*<br/>
 필드 이 열의 상태를 유지 하는 데 사용 되는 멤버 변수입니다. 상태는 열 값이 데이터 값 인지 아니면 다른 값 (예: NULL) 인지를 나타냅니다. 가능한 값은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하세요.
@@ -50,17 +50,17 @@ ms.locfileid: "80167292"
 
 ## <a name="remarks"></a>설명
 
-지정 된 테이블 열을 행 집합의 변수에 **db_column** 바인딩합니다. OLE DB `IAccessor`기반 바인딩에 참여할 수 있는 멤버 데이터를 구분 합니다. 이 특성은 OLE DB consumer 매크로 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)및 [COLUMN_ENTRY](../../data/oledb/column-entry.md)를 사용 하 여 일반적으로 정의 된 열 맵을 설정 합니다. 이러한 OLE DB [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 를 조작 하 여 지정 된 열을 바인딩합니다. **Db_column** 특성으로 표시 하는 각 멤버는 열 맵의 한 항목을 열 항목의 형식으로 사용 합니다. 따라서이 특성은 명령 또는 테이블 클래스에서 열 맵을 배치 하는 곳에 호출 합니다.
+지정 된 테이블 열을 행 집합의 변수에 **db_column** 바인딩합니다. OLE DB 기반 바인딩에 참여할 수 있는 멤버 데이터를 구분 `IAccessor` 합니다. 이 특성은 OLE DB consumer 매크로 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)및 [COLUMN_ENTRY](../../data/oledb/column-entry.md)를 사용 하 여 일반적으로 정의 된 열 맵을 설정 합니다. 이러한 OLE DB [DBBINDING 구조체](/previous-versions/windows/desktop/ms716845(v=vs.85)) 를 조작 하 여 지정 된 열을 바인딩합니다. **Db_column** 특성으로 표시 하는 각 멤버는 열 맵의 한 항목을 열 항목의 형식으로 사용 합니다. 따라서이 특성은 명령 또는 테이블 클래스에서 열 맵을 배치 하는 곳에 호출 합니다.
 
 [Db_table](db-table.md) 또는 [db_command](db-command.md) 특성과 함께 **db_column** 를 사용 합니다.
 
-소비자 특성 공급자가 클래스에 이 특성을 적용하는 경우 컴파일러는 클래스의 이름을 _\_*YourClassName*Accessor로 바꿉니다. 여기서 *YourClassName*은 클래스에 지정한 이름입니다. 컴파일러는 또한YourClassName\_Accessor에서 파생되는 *YourClassName*이라는 클래스를 만듭니다.  클래스 뷰에 두 클래스 모두 표시됩니다.
+소비자 특성 공급자가 클래스에 이 특성을 적용하는 경우 컴파일러는 클래스의 이름을 _\_*YourClassName*Accessor로 바꿉니다. 여기서 *YourClassName*은 클래스에 지정한 이름입니다. 컴파일러는 또한 \_*YourClassName*Accessor에서 파생되는 *YourClassName*이라는 클래스를 만듭니다.  클래스 뷰에 두 클래스 모두 표시됩니다.
 
 응용 프로그램에서 사용 되는이 특성의 예는 [Multiread](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-이 샘플은 테이블의 열을 **long** 데이터 멤버에 바인딩하고 상태 및 길이 필드를 지정 합니다.
+이 샘플은 테이블의 열을 **`long`** 데이터 멤버에 바인딩하고 상태 및 길이 필드를 지정 합니다.
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>예제
 
-이 샘플에서는 네 개의 열을 **long**, 문자열, 타임 스탬프 및 `DB_NUMERIC` 정수 (순서 대로)로 바인딩합니다.
+이 샘플에서는 네 개의 열을 **`long`** , 문자열, 타임 스탬프 및 `DB_NUMERIC` 정수로 바인딩합니다.
 
 ```cpp
 // db_column_2.cpp
@@ -104,10 +104,10 @@ class CProducts {
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**, 멤버, 메서드|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|**`class`**, **`struct`** , 멤버, 메서드|
+|**불가능**|예|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
