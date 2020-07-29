@@ -134,16 +134,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 0f619ee086264dfbd18298ca2c50189894f77db8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a19567b5878853d1fdfa86948ff1eeb37794089
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373090"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215506"
 ---
 # <a name="unordered_set-class"></a>unordered_set 클래스
 
-클래스 템플릿은 형식의 `const Key`요소의 다양한 길이 시퀀스를 제어하는 개체를 설명합니다. 시퀀스는 해시 함수로 약하게 정렬됩니다. 즉, 시퀀스를 버킷이라고 하는 하위 시퀀스의 정렬된 집합으로 분할합니다. 비교 함수는 각 버킷 내에서 요소 쌍이 동일하게 정렬되었는지 여부를 확인합니다. 각 요소는 정렬 키와 값으로 사용됩니다. 시퀀스는 최소한 모든 버킷이 대략 동일한 크기일 경우 시퀀스의 요소 수와 상관없이 작업 수를 사용하여 임의 요소를 조회, 삽입, 제거하는 방식으로 나타냅니다(일정 시간). 모든 요소가 하나의 버킷에 있는 최악의 경우에는 작업 수가 시퀀스의 요소 수에 비례합니다(선형 시간). 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
+클래스 템플릿은 형식의 다양 한 길이 요소 시퀀스를 제어 하는 개체를 설명 합니다 `const Key` . 시퀀스는 해시 함수로 약하게 정렬됩니다. 즉, 시퀀스를 버킷이라고 하는 하위 시퀀스의 정렬된 집합으로 분할합니다. 비교 함수는 각 버킷 내에서 요소 쌍이 동일하게 정렬되었는지 여부를 확인합니다. 각 요소는 정렬 키와 값으로 사용됩니다. 시퀀스는 최소한 모든 버킷이 대략 동일한 크기일 경우 시퀀스의 요소 수와 상관없이 작업 수를 사용하여 임의 요소를 조회, 삽입, 제거하는 방식으로 나타냅니다(일정 시간). 모든 요소가 하나의 버킷에 있는 최악의 경우에는 작업 수가 시퀀스의 요소 수에 비례합니다(선형 시간). 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -158,16 +158,16 @@ class unordered_set;
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 키 형식입니다.
 
-*해시*\
+*해시로*\
 해시 함수 개체 형식입니다.
 
 *Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*Alloc*\
+*#C4*\
 할당자 클래스입니다.
 
 ## <a name="members"></a>멤버
@@ -182,65 +182,65 @@ class unordered_set;
 |[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|
 |[const_reference](#const_reference)|요소에 대한 상수 참조의 형식입니다.|
 |[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|
-|[해시 ()에셔](#hasher)|해시 함수의 형식입니다.|
-|[반복기](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
+|[hasher](#hasher)|해시 함수의 형식입니다.|
+|[반복](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
 |[key_equal](#key_equal)|비교 함수의 형식입니다.|
 |[key_type](#key_type)|정렬 키의 형식입니다.|
 |[local_iterator](#local_iterator)|제어되는 시퀀스에 대한 버킷 반복기의 형식입니다.|
-|[포인터(pointer)](#pointer)|요소에 대한 포인터의 형식입니다.|
-|[참조](#reference)|요소에 대한 참조의 형식입니다.|
+|[놓고](#pointer)|요소에 대한 포인터의 형식입니다.|
+|[reference](#reference)|요소에 대한 참조의 형식입니다.|
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
-|[Value_type](#value_type)|요소의 형식입니다.|
+|[value_type](#value_type)|요소의 형식입니다.|
 
 ### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[시작](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
-|[양동이](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|
+|[bucket](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|
 |[bucket_count](#bucket_count)|버킷 개수를 가져옵니다.|
 |[bucket_size](#bucket_size)|버킷의 크기를 가져옵니다.|
 |[cbegin](#cbegin)|제어되는 시퀀스의 시작을 지정합니다.|
-|[엔드 (것)엔드](#cend)|제어되는 시퀀스의 끝을 지정합니다.|
-|[명확한](#clear)|모든 요소를 제거합니다.|
+|[cend](#cend)|제어되는 시퀀스의 끝을 지정합니다.|
+|[해제](#clear)|모든 요소를 제거합니다.|
 |[count](#count)|지정한 키와 일치하는 요소의 수를 찾습니다.|
 |[emplace](#emplace)|생성된 요소를 추가합니다.|
 |[emplace_hint](#emplace_hint)|힌트와 함께 생성된 요소를 추가합니다.|
-|[빈](#empty)|요소가 있는지 여부를 테스트합니다.|
-|[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|
+|[empty](#empty)|요소가 있는지 여부를 테스트합니다.|
+|[종단](#end)|제어되는 시퀀스의 끝을 지정합니다.|
 |[equal_range](#equal_range)|지정된 키와 일치하는 범위를 찾습니다.|
 |[erase](#erase)|지정된 위치에 있는 요소를 제거합니다.|
-|[찾을](#find)|지정된 키와 일치하는 요소를 찾습니다.|
+|[find](#find)|지정된 키와 일치하는 요소를 찾습니다.|
 |[get_allocator](#get_allocator)|저장된 할당자 개체를 가져옵니다.|
 |[hash_function](#hash)|저장된 해시 함수 개체를 가져옵니다.|
-|[삽입](#insert)|요소를 추가합니다.|
+|[insert](#insert)|요소를 추가합니다.|
 |[key_eq](#key_eq)|저장된 비교 함수 개체를 가져옵니다.|
 |[load_factor](#load_factor)|버킷당 평균 요소 수를 계산합니다.|
 |[max_bucket_count](#max_bucket_count)|최대 버킷 개수를 가져옵니다.|
 |[max_load_factor](#max_load_factor)|버킷당 최대 요소 수를 가져오거나 설정합니다.|
 |[max_size](#max_size)|제어되는 시퀀스의 최대 크기를 가져옵니다.|
-|[재 탕](#rehash)|해시 테이블을 다시 빌드합니다.|
-|[크기](#size)|요소 수를 계산합니다.|
-|[스왑](#swap)|두 컨테이너의 내용을 바꿉니다.|
+|[rehash](#rehash)|해시 테이블을 다시 빌드합니다.|
+|[size](#size)|요소 수를 계산합니다.|
+|[스왑을](#swap)|두 컨테이너의 내용을 바꿉니다.|
 |[unordered_set](#unordered_set)|컨테이너 개체를 만듭니다.|
 
 ### <a name="operators"></a>연산자
 
 |||
 |-|-|
-|[unordered_set::연산자=](#op_eq)|해시 테이블을 복사합니다.|
+|[unordered_set:: operator =](#op_eq)|해시 테이블을 복사합니다.|
 
 ## <a name="remarks"></a>설명
 
-개체는 저장된 두 개체, [unordered_set::key_equal](#key_equal) 형식의 비교 함수 개체 및 [unordered_set::hasher](#hasher)형식의 해시 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 멤버 함수를 호출하여 첫 번째 저장된 개체에`()`액세스합니다unordered_set:key_eq; [unordered_set::key_eq](#key_eq) [unordered_set::hash_function](#hash)`()`멤버 함수를 호출하여 두 번째 저장된 개체에 액세스합니다. 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 클래스 템플릿 [unordered_multiset 클래스와](../standard-library/unordered-multiset-class.md)달리 `unordered_set` 형식의 `key_eq()(X, Y)` 개체는 제어된 시퀀스의 두 요소에 대해 항상 false임을 확인합니다. (키는 고유합니다.)
+개체는 두 개의 저장 된 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. [unordered_set:: key_equal](#key_equal) 형식의 비교 함수 개체와 [unordered_set:: hasher](#hasher)형식의 해시 함수 개체입니다. [Unordered_set:: key_eq](#key_eq)멤버 함수를 호출 하 여 첫 번째 저장 된 개체에 액세스 하 `()` 고, 멤버 함수 [unordered_set:: hash_function](#hash)를 호출 하 여 두 번째 저장 된 개체에 액세스 합니다 `()` . 특히 `X` 형식의 모든 값 `Y` 및 `Key`의 경우 두 인수 값이 순서 지정이 동일할 경우 호출 `key_eq()(X, Y)`에서 true를 반환하며, 호출 `hash_function()(keyval)`은 형식 `size_t`의 값 분포를 생성합니다. 클래스 템플릿 [Unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)와 달리 형식의 개체는 제어 되는 `unordered_set` `key_eq()(X, Y)` 시퀀스의 두 요소에 대해 항상 false가 되도록 합니다. (키는 고유합니다.)
 
-개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입하면 [unordered_set:load_factor](#load_factor) `()` 최대 부하 계수를 초과하는 경우 컨테이너는 버킷 수를 늘리고 필요에 따라 해시 테이블을 다시 작성합니다.
+개체는 또한 최대 로드 비율(버킷당 최대 평균 요소 수를 원하는 대로 지정)를 저장합니다. 요소를 삽입 하면 [unordered_set:: load_factor](#load_factor) `()` 가 최대 로드 비율을 초과 하면 컨테이너는 버킷 수를 늘리고 필요에 따라 해시 테이블을 다시 작성 합니다.
 
 제어된 시퀀스의 실제 요소 순서는 해시 함수, 비교 함수, 삽입 순서, 최대 로드 비율, 현재 버킷 수에 따라 달라집니다. 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 하지만 동일하게 정렬된 요소의 하위 집합은 제어된 시퀀스에서 항상 인접해 있습니다.
 
-개체는 [unordered_set:allocator_type](#allocator_type)형식의 저장된 할당자 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당하고 해제합니다. 이러한 할당자 개체는 형식의 `allocator`개체와 동일한 외부 인터페이스를 가져야 합니다. 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.
+개체는 [unordered_set:: allocator_type](#allocator_type)형식의 저장 된 할당자 개체를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 이러한 할당자 개체에는 형식의 개체와 동일한 외부 인터페이스가 있어야 합니다 `allocator` . 컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.
 
-## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:: allocator_type
 
 스토리지 관리를 위한 할당자의 형식입니다.
 
@@ -294,12 +294,12 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*n버킷*\
+*nbucket*\
 버킷 번호입니다.
 
 ### <a name="remarks"></a>설명
 
-처음 두 개의 멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *n버킷의* 첫 번째 요소(또는 빈 버킷의 끝 바로 너머)를 가리키는 전달 이터레이터를 반환합니다.
+처음 두 개의 멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *nbucket* 첫 번째 요소 (또는 빈 버킷의 끝 바로 다음)를 가리키는 전방 반복기를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a><a name="bucket"></a>양동이
+## <a name="bucket"></a><a name="bucket"></a>버킷
 
 키 값에 대한 버킷 개수를 가져옵니다.
 
@@ -367,12 +367,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키발 (것)과*\
+*keyval*\
 매핑할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 키 값 *keyval에*해당하는 버킷 번호를 반환합니다.
+멤버 함수는 현재 키 값 *keyval*에 해당 하는 버킷 번호를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -507,12 +507,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*n버킷*\
+*nbucket*\
 버킷 번호입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 버킷 번호 *n버킷의*크기를 반환합니다.
+멤버 함수는 버킷 번호 *nbucket*크기를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -554,7 +554,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-범위의 첫 번째 요소를 해결하는 **구성요소** 이터레이터를 반환합니다.
+**`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
 ```cpp
 const_iterator cbegin() const;
@@ -562,13 +562,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Return Value
 
-범위의 첫 번째 요소 또는 빈 범위의 끝 바로 너머의 위치를 가리키는 **const** 정방향 액세스 거점 `cbegin() == cend()`입니다(빈 범위의 경우).
+**`const`** 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 전방 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()` ).
 
 ### <a name="remarks"></a>설명
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
-`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 지원 및 `begin()` `cbegin()`을 지원하는 모든 종류의 수정 가능(non-const) 컨테이너로 간주합니다. **const**
+`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 및를 지 원하는 수정 가능 (비 **`const`** ) 컨테이너로 가정 `begin()` `cbegin()` 합니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -578,9 +578,9 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>엔드 (것)엔드
+## <a name="cend"></a><a name="cend"></a>cend
 
-범위의 마지막 요소 바로 너머의 위치를 해결하는 **구성요소** 이터레이터를 반환합니다.
+**`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
 ```cpp
 const_iterator cend() const;
@@ -588,13 +588,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Return Value
 
-범위의 끝 바로 너머를 가리키는 **const** 정방향 액세스 이터레이터입니다.
+**`const`** 범위 끝의 바로 다음을 가리키는 전방 액세스 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
-`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 지원 및 `end()` `cend()`을 지원하는 모든 종류의 수정 가능(non-const) 컨테이너로 간주합니다. **const**
+`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 및를 지 원하는 수정 가능 (비 **`const`** ) 컨테이너로 가정 `end()` `cend()` 합니다.
 
 ```cpp
 auto i1 = Container.end();
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="clear"></a><a name="clear"></a>명확한
+## <a name="clear"></a><a name="clear"></a>해제
 
 모든 요소를 제거합니다.
 
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [unordered_set::지우기](#erase) `(` [unordered_set::시작](#begin) `(),` [unordered_set::end](#end)`())`.
+멤버 함수는 [unordered_set:: erase](#erase) `(` [unordered_set:: begin](#begin) `(),` [unordered_set:: end](#end)를 호출 `())` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a><a name="count"></a>횟수
+## <a name="count"></a><a name="count"></a>수
 
 지정한 키와 일치하는 요소의 수를 찾습니다.
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키발 (것)과*\
+*keyval*\
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [unordered_set::equal_range](#equal_range)`(keyval)`구분된 범위의 요소 수를 반환합니다.
+멤버 함수는 [unordered_set:: equal_range](#equal_range)로 구분 된 범위의 요소 수를 반환 합니다 `(keyval)` .
 
 ### <a name="example"></a>예제
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>엠플레이스
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
@@ -972,14 +972,14 @@ Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-*Args*\
+*args*\
 값이 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_set에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.
 
 ### <a name="return-value"></a>Return Value
 
-삽입이 이루어진 경우 **bool** 구성 요소가 true로 반환되고 순서에 동일한 값이 있는 키와 변경기 구성 요소가 새 요소가 삽입된 주소 또는 요소가 이미 있는 위치를 `unordered_set` 반환하는 요소가 이미 포함된 경우 false가 반환됩니다. `pair`
+`pair` **`bool`** 구성 요소가 삽입이 수행 된 경우 true를 반환 하 고,에 해당 키에 동일한 값이 있는 요소가 이미 포함 되어 있는 경우에는 false를 반환 `unordered_set` 하 고, 해당 반복기 구성 요소는 새 요소가 삽입 되었거나 요소가 이미 있었던 주소를 반환 하는입니다.
 
-이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. 이 멤버 함수에서 반환된 `pr` 쌍의 **bool** 구성 `pr.second`요소에 액세스하려면 을 사용합니다.
+이 멤버 함수가 반환하는 `pr` 쌍의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 해당 구성 요소를 역참조하려면 `*(pr.first)`를 사용합니다. **`bool`** 이 멤버 함수가 반환 하는 쌍의 구성 요소에 액세스 하려면를 `pr` 사용 `pr.second` 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -987,7 +987,7 @@ Args&&... args);
 
 삽입 중에 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다.
 
-코드 예제의 경우 [set::emplace](../standard-library/set-class.md#emplace)를 참조하십시오.
+코드 예제를 보려면 [set:: emplace](../standard-library/set-class.md#emplace)를 참조 하세요.
 
 ## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
 
@@ -1002,10 +1002,10 @@ Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-*Args*\
+*args*\
 unordered_set가 해당 요소를 이미 포함하고 있지 않거나, 보다 일반적으로는 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 unordered_set에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.
 
-*어디*\
+*위치*\
 올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1022,7 +1022,7 @@ unordered_set가 해당 요소를 이미 포함하고 있지 않거나, 보다 �
 
 코드 예제를 보려면 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)를 참조하세요.
 
-## <a name="empty"></a><a name="empty"></a>빈
+## <a name="empty"></a><a name="empty"></a>비우려면
 
 요소가 있는지 여부를 테스트합니다.
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a><a name="end"></a>끝
+## <a name="end"></a><a name="end"></a>종단
 
 제어되는 시퀀스의 끝을 지정합니다.
 
@@ -1102,12 +1102,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*n버킷*\
+*nbucket*\
 버킷 번호입니다.
 
 ### <a name="remarks"></a>설명
 
-처음 두 멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *n버킷의*끝 바로 너머를 가리키는 전달 이터레이터를 반환합니다.
+처음 두 멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *n 버킷의*끝 바로 다음을 가리키는 전방 반복기를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키발 (것)과*\
+*keyval*\
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 *keyval과*동등한 `X` 순서를 가진 제어된 시퀀스의 요소만`[X.first, X.second)` 구분하는 일련의 이터레이터를 반환합니다. 이러한 요소가 없는 경우 두 반복기는 `end()`입니다.
+멤버 함수는 `X` `[X.first, X.second)` *keyval*와 동일한 순서로 정렬 된 제어 되는 시퀀스의 요소만 구분 하는 반복기 쌍을 반환 합니다. 이러한 요소가 없는 경우 두 반복기는 `end()`입니다.
 
 ### <a name="example"></a>예제
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a><a name="erase"></a>지우기
+## <a name="erase"></a><a name="erase"></a>지우는
 
 지정된 위치에서 unordered_set의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.
 
@@ -1236,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>매개 변수
 
-*어디*\
+*위치*\
 제거할 요소의 위치입니다.
 
-*첫 번째*\
+*기본*\
 제거할 첫 번째 요소의 위치입니다.
 
-*마지막*\
+*최신*\
 제거할 마지막 요소 바로 다음 위치입니다.
 
-*키*\
+*키인지*\
 제거할 요소의 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1258,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 코드 예제를 보려면 [set::erase](../standard-library/set-class.md#erase)를 참조하세요.
 
-## <a name="find"></a><a name="find"></a>찾을
+## <a name="find"></a><a name="find"></a>찾아낼
 
 지정된 키와 일치하는 요소를 찾습니다.
 
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*키발 (것)과*\
+*keyval*\
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는`(keyval).first` [unordered_set:equal_range.](#equal_range)
+멤버 함수는 [unordered_set:: equal_range](#equal_range) `(keyval).first` 을 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a><a name="hasher"></a>해시 ()에셔
+## <a name="hasher"></a><a name="hasher"></a>hasher
 
 해시 함수의 형식입니다.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a><a name="insert"></a>삽입
+## <a name="insert"></a><a name="insert"></a>넣거나
 
 unordered_set에 요소 또는 요소의 범위를 삽입합니다.
 
@@ -1460,30 +1460,30 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>매개 변수
 
-*발*\
+*짧은*\
 키가 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_set에 삽입되는 요소의 값입니다.
 
-*어디*\
+*위치*\
 올바른 삽입 지점 검색을 시작할 위치입니다.
 
-*발티 (주)*\
-unordered_set [value_type](../standard-library/map-class.md#value_type)요소를 생성하는 데 사용할 수 있는 인수 형식을 지정하고 *Val을* 인수로 완전 전달하는 템플릿 매개 변수입니다.
+*ValTy*\
+Unordered_set에서 [value_type](../standard-library/map-class.md#value_type)요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 사용 하는 템플릿 매개 변수입니다.
 
-*첫 번째*\
+*기본*\
 복사할 첫 번째 요소의 위치입니다.
 
-*마지막*\
+*최신*\
 복사할 마지막 요소 바로 다음 위치입니다.
 
-*입력이터*\
+*InputIterator*\
 [value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.
 
-*일리스트*\
-요소를 복사할 [initializer_list.](../standard-library/initializer-list.md)
+*IList*\
+요소를 복사할 [initializer_list](../standard-library/initializer-list.md) 입니다.
 
 ### <a name="return-value"></a>Return Value
 
-단일 요소 멤버 함수(1) 및 (2)는 삽입이 이루어진 경우 **bool** 구성 요소가 true인 [쌍을](../standard-library/pair-structure.md) 반환하고 unordered_set 순서에 동일한 값을 가진 요소를 이미 포함하는 경우 false를 반환합니다. 반환 값 쌍의 이터레이터 구성 요소는 **bool** 구성 요소가 true인 경우 새로 삽입된 요소를 가리키거나 **bool** 구성 요소가 false인 경우 기존 요소를 가리킵니다.
+단일 요소 멤버 함수 (1) 및 (2)는 [pair](../standard-library/pair-structure.md) **`bool`** 구성 요소가 삽입 된 경우 true이 고 unordered_set에 이미 키에 동일한 값이 있는 요소가 이미 포함 되어 있는 경우 false 인 쌍을 반환 합니다. 반환 값 쌍의 반복기 구성 요소는 구성 요소가 true 인 경우 새로 삽입 된 요소를 가리키거나 **`bool`** 구성 요소가 false 인 경우에는 기존 요소를 가리킵니다 **`bool`** .
 
 힌트가 있는 단일 요소 멤버 함수 (3) 및 (4)는 새 요소가 unordered_set에 삽입된 위치를 가리키는 반복기를 반환하고 동일한 키가 있는 요소가 존재하는 경우에는 기존 요소를 가리키는 반복기를 반환합니다.
 
@@ -1493,21 +1493,21 @@ unordered_set [value_type](../standard-library/map-class.md#value_type)요소를
 
 요소를 하나만 삽입하는 중 예외가 throw되었으나 컨테이너의 해시 함수에서 발생하지 않은 경우에는 컨테이너의 상태가 수정되지 않습니다. 예외가 해시 함수에서 throw된 경우 결과는 정의되어 있지 않습니다. 여러 요소를 삽입하는 중 예외가 throw되면 컨테이너는 지정되지 않았으나 유효한 상태로 남아 있습니다.
 
-단일 요소 멤버 함수에서 반환되는 의 이터레이터 구성 요소에 `pair` `pr` 액세스하려면 `pr.first`을 사용합니다. 반환된 쌍 내에서 거리터를 참조하려면`*pr.first`요소를 제공합니다. **bool** 구성 요소에 액세스하려면 을 사용합니다. `pr.second` 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.
+`pair` `pr` 단일 요소 멤버 함수에서 반환 된의 반복기 구성 요소에 액세스 하려면를 사용 하 `pr.first` 고 반환 된 쌍 내에서 반복기를 역참조 하려면를 사용 하 여 `*pr.first` 요소를 제공 합니다. 구성 요소에 액세스 하려면를 **`bool`** 사용 `pr.second` 합니다. 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.
 
 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `unordered_set<V>::value_type`은 `const V`입니다.
 
-범위 멤버 함수(5)는 범위의 `[First, Last)`이터레이터에 의해 해결된 각 요소에 해당하는 unordered_set 요소 값의 시퀀스를 삽입합니다. 따라서 *Last가* 삽입되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.
+범위 멤버 함수 (5)는 범위에서 반복기가 주소를 지정 하는 각 요소에 해당 하는 unordered_set에 요소 값의 시퀀스를 삽입 `[First, Last)` 합니다. 따라서 *Last* 는 삽입 되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.
 
-초기화자 목록 멤버 함수(6)는 [initializer_list](../standard-library/initializer-list.md) 사용하여 요소를 unordered_set 복사합니다.
+이니셜라이저 목록 멤버 함수 (6)는 [initializer_list](../standard-library/initializer-list.md) 을 사용 하 여 요소를 unordered_set에 복사 합니다.
 
 생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [set::emplace](../standard-library/set-class.md#emplace) 및 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)를 참조하세요.
 
-코드 예제는 [set::insert](../standard-library/set-class.md#insert)를 참조하십시오.
+코드 예제를 보려면 [set:: insert](../standard-library/set-class.md#insert)를 참조 하세요.
 
-## <a name="iterator"></a><a name="iterator"></a>반복기
+## <a name="iterator"></a><a name="iterator"></a>반복
 
-unordered_set 요소를 읽을 수 있는 상수 [전달 이터레이터를](../standard-library/forward-iterator-tag-struct.md) 제공하는 형식입니다.
+Unordered_set의 요소를 읽을 수 있는 상수 [전방 반복기](../standard-library/forward-iterator-tag-struct.md) 를 제공 하는 형식입니다.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1515,7 +1515,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>예제
 
-**시작에** [대한](../standard-library/set-class.md#begin) 예제는 보고 를 선언하고 사용 하는 방법에 대 한 예제입니다.
+**반복기**를 선언 하 고 사용 하는 방법에 대 한 예제는 [begin](../standard-library/set-class.md#begin) 의 예제를 참조 하세요.
 
 ## <a name="key_eq"></a><a name="key_eq"></a>key_eq
 
@@ -1659,7 +1659,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는`(float)`[unordered_set::크기](#size)`() / (float)`[unordered_set:bucket_count,](#bucket_count)`()`버킷당 평균 요소 수를 반환합니다.
+멤버 함수는 `(float)` 버킷 당 평균 요소 수를[unordered_set:: size](#size) `() / (float)` [unordered_set:: bucket_count](#bucket_count) `()` 를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1878,12 +1878,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>매개 변수
 
-*요소*\
+*이용한*\
 새로운 최대 로드 비율입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 저장된 최대 로드 비율을 반환합니다. 두 번째 멤버 함수는 저장된 최대 하중 계수를 *계수로*대체합니다.
+첫 번째 멤버 함수는 저장된 최대 로드 비율을 반환합니다. 두 번째 멤버 함수는 저장 된 최대 로드 비율을 *인수로*바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -2006,11 +2006,11 @@ unordered_set& operator=(unordered_set&& right);
 ### <a name="parameters"></a>매개 변수
 
 *오른쪽*\
-[unordered_set](../standard-library/unordered-set-class.md) `unordered_set`로 복사됩니다.
+로 복사 되는 [unordered_set](../standard-library/unordered-set-class.md) `unordered_set` 입니다.
 
 ### <a name="remarks"></a>설명
 
-`unordered_set`의 기존 요소를 지워낸 `operator=` 후 `unordered_set`에 있는 내용을 복사하거나 *로* 이동합니다.
+에서 기존 요소를 지운 후에 `unordered_set` 는 `operator=` 의 내용을로 복사 하거나 이동 *right* `unordered_set` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a><a name="reference"></a>참조
+## <a name="reference"></a><a name="reference"></a>참조일
 
 요소에 대한 참조의 형식입니다.
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a><a name="rehash"></a>재 탕
+## <a name="rehash"></a><a name="rehash"></a>rehash
 
 해시 테이블을 다시 빌드합니다.
 
@@ -2151,12 +2151,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>매개 변수
 
-*n버킷*\
+*nbuckets*\
 요청된 버킷 수입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 버킷 수를 최소 n버킷으로 변경하고 필요에 따라 해시 테이블을 다시 *작성합니다.*
+멤버 함수는 버킷 수를 최소한 *nbuckets* 변경 하 고 필요에 따라 해시 테이블을 다시 빌드합니다.
 
 ### <a name="example"></a>예제
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a><a name="size"></a>크기
+## <a name="size"></a><a name="size"></a>크기가
 
 요소 수를 계산합니다.
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 두 컨테이너의 내용을 바꿉니다.
 
@@ -2334,7 +2334,7 @@ void swap(unordered_set& right);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스를 `*this` *오른쪽으로*바꿉니다. [unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`경우 일정한 시간에 예외를 발생시키며 형식의 `Tr`저장된 특성 개체를 복사한 결과로만 예외를 발생시키며 두 개의 제어된 시퀀스의 요소를 지정하는 참조, 포인터 또는 이터레이터를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
+멤버 함수는 제어 되는 시퀀스를 **`*this`** 과 *오른쪽*으로 바꿉니다. [Unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()` 는 일정 한 시간에이 작업을 수행 하 고, 형식의 저장 된 특성 개체를 복사 하는 경우에만 예외를 throw 하 `Tr` 고, 두 개의 제어 된 시퀀스에서 요소를 지정 하는 참조, 포인터 또는 반복기를 무효화 하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
 
 ### <a name="example"></a>예제
 
@@ -2437,16 +2437,16 @@ unordered_set(
 
 ### <a name="parameters"></a>매개 변수
 
-*입력이터*\
+*InputIterator*\
 반복기 형식입니다.
 
-*알*\
+*항상*\
 저장할 할당자 개체입니다.
 
-*광고*\
+*생략*\
 저장할 비교 함수 개체입니다.
 
-*해시*\
+*해시로*\
 저장할 해시 함수 개체입니다.
 
 *bucket_count*\
@@ -2455,24 +2455,24 @@ unordered_set(
 *오른쪽*\
 복사할 컨테이너입니다.
 
-*일리스트*\
+*IList*\
 복사할 요소를 포함하는 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 *Right에*의해 제어되는 시퀀스의 복사본을 지정합니다. 두 번째 생성자는 빈 제어 시퀀스를 지정합니다. 세 번째 생성자는 *오른쪽을* 이동하여 시퀀스의 복사본을 지정네 번째 생성자는 initializer_list 사용하여 복사할 요소를 지정합니다. 아홉 번째 생성자는 `[first, last)` 요소 값의 시퀀스를 삽입합니다.
+첫 번째 생성자는 *Right*로 제어 되는 시퀀스의 복사본을 지정 합니다. 두 번째 생성자는 빈 제어 시퀀스를 지정합니다. 세 번째 생성자는 *오른쪽* 에서 여덟 번째까지 이동 하 여 시퀀스의 복사본을 지정 합니다 .이 생성자는 initializer_list를 사용 하 여 복사할 요소를 지정 합니다. 아홉 번째 생성자는 `[first, last)` 요소 값의 시퀀스를 삽입합니다.
 
-모든 생성자는 또한 여러 개의 저장된 값을 초기화합니다. 복사 생성자의 경우 값은 *오른쪽*에서 가져옵니다. 그렇지 않은 경우는 다음과 같습니다.
+모든 생성자는 또한 여러 개의 저장된 값을 초기화합니다. 복사 생성자의 경우 값은 *오른쪽*에서 가져옵니다. 그렇지 않은 경우:
 
-버킷의 최소 수는 인수 *bucket_count*bucket_count.)입니다. 그렇지 않으면 구현 정의 값으로 여기에 설명된 기본값입니다. `N0`
+버킷 최소 수는 인수 *bucket_count*(있는 경우)입니다. 그렇지 않으면 여기에 구현 정의 값으로 설명 된 기본값입니다 `N0` .
 
-해시 함수 개체는 해시 *인수입니다.* 그렇지 않으면 `Hash()`입니다.
+해시 함수 개체는 인수 *해시*(있는 경우)입니다. 그렇지 않으면 `Hash()` 입니다.
 
-비교 함수 개체는 *인수 Comp입니다.* 그렇지 않으면 `Comp()`입니다.
+비교 함수 개체는 인수 *Comp*(있는 경우)입니다. 그렇지 않으면 `Comp()` 입니다.
 
-할당자 개체는 *인수 Al*. 그렇지 않으면 `Alloc()`.
+할당자 개체는 *Al*인수입니다 (있는 경우). 그렇지 않으면 `Alloc()` 입니다.
 
-## <a name="value_type"></a><a name="value_type"></a>Value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 요소의 형식입니다.
 

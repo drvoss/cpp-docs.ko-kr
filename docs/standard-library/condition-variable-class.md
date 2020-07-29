@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222552"
 ---
 # <a name="condition_variable-class"></a>condition_variable 클래스
 
-`condition_variable` 형식의 `mutex`가 있는 경우 `unique_lock<mutex>` 클래스를 사용하여 이벤트를 대기합니다. 이 형식의 개체는 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 형식의 개체보다 성능이 더 나을 수 있습니다.
+`unique_lock<mutex>` 형식의 `mutex`가 있는 경우 `condition_variable` 클래스를 사용하여 이벤트를 대기합니다. 이 형식의 개체는 [condition_variable_any<unique_lock \<mutex> > ](../standard-library/condition-variable-any-class.md)형식의 개체 보다 성능이 더 좋을 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ ms.locfileid: "79427166"
 class condition_variable;
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="constructors"></a>생성자
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|
 |[wait_until](#wait_until)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|
 
-## <a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
 
 `condition_variable` 개체를 생성합니다.
 
@@ -66,9 +66,9 @@ condition_variable();
 
 ### <a name="remarks"></a>설명
 
-메모리가 부족한 경우 생성자에서 [ 오류 코드가 있는 ](../standard-library/system-error-class.md)system_error`not_enough_memory` 개체를 throw합니다. 몇 가지 다른 리소스를 사용할 수 없기 때문에 개체를 생성할 수 없는 경우 생성자에서 `system_error` 오류 코드가 있는 `resource_unavailable_try_again` 개체를 throw합니다.
+메모리가 부족한 경우 생성자에서 `not_enough_memory` 오류 코드가 있는 [system_error](../standard-library/system-error-class.md) 개체를 throw합니다. 몇 가지 다른 리소스를 사용할 수 없기 때문에 개체를 생성할 수 없는 경우 생성자에서 `resource_unavailable_try_again` 오류 코드가 있는 `system_error` 개체를 throw합니다.
 
-## <a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
 Condition_variable 핸들을 나타내는 구현 관련 형식을 반환합니다.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type`은 동시성 런타임 내부 데이터 구조에 대한 포인터로 정의됩니다.
 
-## <a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a>notify_all
 
 `condition_variable` 개체를 대기 중인 모든 스레드를 차단 해제합니다.
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a>notify_one
 
 `condition_variable` 개체를 기다리는 스레드 중 하나를 차단 해제합니다.
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>대기한
+## <a name="wait"></a><a name="wait"></a>대기한
 
 스레드를 차단합니다.
 
@@ -110,10 +110,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ### <a name="parameters"></a>매개 변수
 
 *Lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 개체입니다.
+[Unique_lock \<mutex> ](../standard-library/unique-lock-class.md) 개체입니다.
 
 *Pred*\
-**True** 또는 **false**를 반환 하는 식입니다.
+또는를 반환 하는 식입니다 **`true`** **`false`** .
 
 ### <a name="remarks"></a>설명
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a>wait_for
 
 스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.
 
@@ -146,23 +146,23 @@ bool wait_for(
 ### <a name="parameters"></a>매개 변수
 
 *Lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 개체입니다.
+[Unique_lock \<mutex> ](../standard-library/unique-lock-class.md) 개체입니다.
 
 *Rel_time*\
 스레드가 대기 모드를 해제하기 전까지의 시간을 지정하는 `chrono::duration` 개체입니다.
 
 *Pred*\
-**True** 또는 **false**를 반환 하는 식입니다.
+또는를 반환 하는 식입니다 **`true`** **`false`** .
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 메서드는 *Rel_time* 경과할 때 대기가 종료 되는 경우 `cv_status::timeout`를 반환 합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.
+첫 번째 메서드는 `cv_status::timeout` *Rel_time* 경과할 때 대기가 종료 될 경우를 반환 합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.
 
 두 번째 메서드는 *Pred*의 값을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 메서드는 `condition_variable` 개체가 [notify_one](#notify_one) 또는 [notify_all](#notify_all) 에 대 한 호출로 신호를 받거나 시간 간격이 *Rel_time* 경과할 때까지 차단 됩니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
+첫 번째 메서드는 `condition_variable` 개체가 [notify_one](#notify_one) 또는 [notify_all](#notify_all) 에 대 한 호출로 신호를 받거나 시간 간격 *Rel_time* 경과할 때까지 차단 됩니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.
 
 사실 두 번째 방법은 다음 코드를 실행합니다.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a>wait_until
 
 스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.
 
@@ -204,19 +204,19 @@ bool wait_until(
 ### <a name="parameters"></a>매개 변수
 
 *Lck*\
-[unique_lock\<mutex>](../standard-library/unique-lock-class.md) 개체입니다.
+[Unique_lock \<mutex> ](../standard-library/unique-lock-class.md) 개체입니다.
 
 *Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 개체입니다.
 
 *Pred*\
-**True** 또는 **false**를 반환 하는 식입니다.
+또는를 반환 하는 식입니다 **`true`** **`false`** .
 
 ### <a name="return-value"></a>Return Value
 
-`cv_status` 형식을 반환 하는 메서드는 *Abs_time* 경과할 때 대기가 종료 되는 경우 `cv_status::timeout`을 반환 합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.
+형식을 반환 하는 메서드는 `cv_status` `cv_status::timeout` *Abs_time* 경과할 때 대기가 종료 될 경우를 반환 합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.
 
-**Bool** 을 반환 하는 메서드는 *Pred*의 값을 반환 합니다.
+을 반환 하는 메서드는 **`bool`** *Pred*의 값을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 

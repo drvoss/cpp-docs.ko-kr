@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404322"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215142"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -90,7 +90,7 @@ size_t _wcsftime_l(
 출력 문자열입니다.
 
 *크기*<br/>
-*Strdest* 버퍼의 크기 이며 문자 (**char** 또는 **wchar_t**)로 측정 됩니다.
+*Strdest* 버퍼의 크기 ( **`char`** 또는 **`wchar_t`** )입니다.
 
 *format*<br/>
 형식 컨트롤 문자열입니다.

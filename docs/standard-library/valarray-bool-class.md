@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9145a6c75850fec78ca821b236133cc6c38beda9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688751"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215428"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 클래스
 
-클래스 템플릿 valarray의 특수화 된 버전은 **bool**형식의 요소에 **> \<Type** .
+형식의 요소에 대 한 클래스 템플릿 **valarray \<Type> ** 의 특수화 된 버전입니다 **`bool`** .
 
 ## <a name="syntax"></a>구문
 
@@ -73,11 +73,11 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<valarray>
+**헤더:**\<valarray>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [valarray 클래스](../standard-library/valarray-class.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

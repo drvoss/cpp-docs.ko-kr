@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215155"
 ---
 # <a name="data-type-mappings"></a>데이터 형식 매핑
 
@@ -44,16 +44,16 @@ ms.locfileid: "57749102"
 
 ### <a name="generic-text-data-type-mappings"></a>일반 텍스트 데이터 형식 매핑
 
-|일반 텍스트<br /><br /> 데이터 형식 이름|SBCS(_UNICODE,<br /><br /> _MBCS 정의되지<br /><br /> 않음)|_MBCS<br /><br /> 정의|_UNICODE<br /><br /> 정의|
+|일반 텍스트<br /><br /> 데이터 형식 이름|SBCS(_UNICODE,<br /><br /> _MBCS 정의되지<br /><br /> 않음)|_MBCS<br /><br /> 정의되는 위치|_UNICODE<br /><br /> 정의되는 위치|
 |--------------------------------------|----------------------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|
 |`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` 또는 `_TEXT`|효과 없음(전처리기에 의해 제거됨)|효과 없음(전처리기에 의해 제거됨)|`L`(다음 문자 또는 문자열을 유니코드 문자 또는 문자열로 변환)|
 
 ## <a name="see-also"></a>참고 항목

@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214891"
 ---
 # <a name="stack-stlclr"></a>stack(STL/CLR)
 
-이 템플릿 클래스는 마지막으로 실행 되는 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터 `stack`를 사용 하 여 기본 컨테이너를 푸시 다운 스택으로 관리할 수 있습니다.
+이 템플릿 클래스는 마지막으로 실행 되는 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `stack` 기본 컨테이너를 푸시 다운 스택으로 관리할 수 있습니다.
 
-아래 설명에서 `GValue`는 두 번째가 참조 형식이 아닌 경우에는 *값* 과 동일 하 여 `Value^`됩니다. 마찬가지로, 후자가 ref 형식이 아닌 `GContainer`는 *컨테이너* 와 동일 합니다 .이 경우 `Container^`됩니다.
+아래 설명에서 후자가 `GValue` ref 형식이 아닌 경우는 *값* 과 같습니다 `Value^` . 마찬가지로, `GContainer` 후자가 ref 형식이 아닌 경우는 *컨테이너* 와 동일 합니다 `Container^` .
 
 ## <a name="syntax"></a>구문
 
@@ -88,7 +88,7 @@ template<typename Value,
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/stack >
+**헤더:**\<cliext/stack>
 
 **네임 스페이스:** cliext
 
@@ -124,21 +124,21 @@ template<typename Value,
 |연산자|설명|
 |--------------|-----------------|
 |[stack::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|
-|[operator!= (stack)(STL/CLR)](#op_neq)|`stack` 개체가 다른 `stack` 개체와 다른 지 여부를 확인 합니다.|
-|[operator< (stack)(STL/CLR)](#op_lt)|`stack` 개체가 다른 `stack` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator<= (stack)(STL/CLR)](#op_lteq)|`stack` 개체가 다른 `stack` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator== (stack)(STL/CLR)](#op_eq)|`stack` 개체가 다른 `stack` 개체와 같은지 여부를 확인 합니다.|
-|[operator> (stack)(STL/CLR)](#op_gt)|`stack` 개체가 다른 `stack` 개체 보다 큰지 여부를 확인 합니다.|
-|[operator>= (stack)(STL/CLR)](#op_gteq)|`stack` 개체가 다른 `stack` 개체 보다 크거나 같은지 여부를 확인 합니다.|
+|[operator! = (stack) (STL/CLR)](#op_neq)|`stack`개체가 다른 개체와 다른 지 여부를 확인 `stack` 합니다.|
+|[operator< (stack)(STL/CLR)](#op_lt)|`stack`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `stack` 합니다.|
+|[연산자<= (stack) (STL/CLR)](#op_lteq)|`stack`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `stack` 합니다.|
+|[operator = = (stack) (STL/CLR)](#op_eq)|`stack`개체가 다른 개체와 같은지 여부를 확인 `stack` 합니다.|
+|[연산자> (stack) (STL/CLR)](#op_gt)|`stack`개체가 다른 개체 보다 큰지 여부를 확인 `stack` 합니다.|
+|[연산자>= (stack) (STL/CLR)](#op_gteq)|`stack`개체가 다른 개체 보다 크거나 같은지 여부를 확인 `stack` 합니다.|
 
 ## <a name="interfaces"></a>인터페이스
 
 |인터페이스|설명|
 |---------------|-----------------|
 |<xref:System.ICloneable>|개체를 복제 합니다.|
-|IStack\<값, 컨테이너 >|일반 컨테이너 어댑터를 유지 관리 합니다.|
+|IStack\<Value, Container>|일반 컨테이너 어댑터를 유지 관리 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 개체는 *값* 요소를 저장 하 고 요청 시 증가 하는 *컨테이너*형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 개체는 마지막 요소만 푸시하는 데 대 한 액세스를 제한 하 여 LIFO 큐 또는 스택이 라고도 하는 마지막으로 실행 되는 큐를 구현 합니다.
 
@@ -156,12 +156,12 @@ void assign(stack<Value, Container>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `right.get_container()`를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 스택의 전체 콘텐츠를 변경할 수 있습니다.
+멤버 함수는 `right.get_container()` 를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 스택의 전체 콘텐츠를 변경할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -208,7 +208,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
@@ -252,7 +252,7 @@ c b a
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 *Container*의 동의어입니다.
 
@@ -294,7 +294,7 @@ a b c
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수 요소 수를 설명 합니다.
 
@@ -352,9 +352,9 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`와 동일 합니다. 스택이 비어 있는지 여부를 테스트 하는 데 사용 합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)와 동일 `() == 0` 합니다. 스택이 비어 있는지 여부를 테스트 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -407,7 +407,7 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
@@ -469,9 +469,9 @@ a b c d e
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 `GValue` 형식의 개체를 설명 하는 형식입니다. (`GValue`은 `value_type` 또는 `value_type^` `value_type` 참조 형식인 경우)입니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다. 은 `GValue` `value_type` 이거나 `value_type^` `value_type` 가 참조 형식인 경우입니다.
 
 ### <a name="example"></a>예제
 
@@ -527,7 +527,7 @@ c b a
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 기본 컨테이너에 대 한 핸들을 반환 합니다. 이를 사용 하 여 컨테이너 래퍼에서 적용 되는 제한을 무시 합니다.
 
@@ -571,12 +571,12 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -623,7 +623,7 @@ a b c
 void pop();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소를 제거 합니다. 이를 사용 하 여 스택에서 한 요소 만큼 스택을 단축할 수 있습니다.
 
@@ -671,9 +671,9 @@ a b
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스의 끝에 `val` 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 스택에 추가 합니다.
+멤버 함수는 제어 되는 `val` 시퀀스의 끝에 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 스택에 추가 합니다.
 
 ### <a name="example"></a>예제
 
@@ -712,7 +712,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -761,9 +761,9 @@ a b x
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아닌 지 여부에 관심이 있으면 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`을 참조 하세요.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -815,7 +815,7 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -869,13 +869,13 @@ explicit stack(container_type% wrapped);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 개체입니다.
 
 *둘러싼*<br/>
 사용할 래핑된 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
@@ -887,13 +887,13 @@ explicit stack(container_type% wrapped);
 
 `stack(stack<Value, Container>% right);`
 
-`right.get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 stack 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+의 복사본 인 래핑된 컨테이너를 만듭니다 `right.get_container()` . 이를 사용 하 여 stack 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `stack(stack<Value, Container>^ right);`
 
-`right->get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 `*right`stack 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+의 복사본 인 래핑된 컨테이너를 만듭니다 `right->get_container()` . 이를 사용 하 여 스택 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 `*right` 합니다.
 
 생성자는 다음과 같습니다.
 
@@ -957,7 +957,7 @@ x x x x x
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
@@ -1007,7 +1007,7 @@ a b c
 reference top();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)에 액세스 합니다.
 
@@ -1059,7 +1059,7 @@ a b x
 property value_type top_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 액세스 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)를 읽거나 씁니다.
 
@@ -1111,7 +1111,7 @@ a b x
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 템플릿 매개 변수 *값*의 동의어입니다.
 
@@ -1161,15 +1161,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left == right)`를 반환 합니다. 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left == right)` . 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>연산자&lt; (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>연산자 &lt; (stack) (STL/CLR)
 
 스택이 비교 보다 낮습니다.
 
@@ -1232,15 +1232,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-연산자 함수는 `left[i] < right[i]`에도 해당 `!(right[i] < left[i])` `i` 가장 낮은 위치에 대해 true를 반환 합니다. 그렇지 않으면 `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <`를 반환 `right->size()`이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 에 정렬 되는지 여부를 테스트할 수 있습니다.
+연산자 함수는 해당 하는 가장 낮은 위치에 대해서도 true를 반환 합니다 `i` `!(right[i] < left[i])` `left[i] < right[i]` . 그렇지 않으면 `left->` [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) 를 반환 합니다 `() <` `right->size()` .이 메서드를 사용 하 여 두 스택이 요소에 의해 비교 될 때 *왼쪽* 이 *오른쪽* 에 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>연산자&lt;= (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator &lt; = (stack) (STL/CLR)
 
 스택 보다 작거나 같음 비교입니다.
 
@@ -1303,15 +1303,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(right < left)`를 반환 합니다. 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(right < left)` . 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1374,15 +1374,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 `i`각 위치에 대해 `right[i]``left[i] ==` 경우에만 true를 반환 합니다. 이를 사용 하 여 두 개의 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
+Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 각 위치에 대해가 인 경우에만 true를 반환 합니다 `i` `left[i] ==` `right[i]` . 이를 사용 하 여 두 개의 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>연산자&gt; (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>연산자 &gt; (stack) (STL/CLR)
 
 스택이 비교 보다 큽니다.
 
@@ -1445,15 +1445,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `right` `<` `left`반환 합니다. 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
+연산자 함수는를 반환 합니다 `right` `<` `left` . 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>연산자&gt;= (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator &gt; = (stack) (STL/CLR)
 
 스택이 크거나 같음 비교입니다.
 
@@ -1516,15 +1516,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left < right)`를 반환 합니다. 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 앞에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left < right)` . 이를 사용 하 여 두 스택을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 앞에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 

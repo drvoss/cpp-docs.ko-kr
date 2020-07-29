@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825706"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215194"
 ---
 # <a name="opt-optimizations"></a>/OPT(최적화)
 
@@ -30,9 +30,9 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 
 ## <a name="syntax"></a>구문
 
-> **/OPT:**{**REF** | **NEF**} \
-> **/Opt:**{**ICF**[**=**_반복_] | **Noicf**} \
-> **/OPT:**{**LBR** | **NOLBR**}
+> **/OPT:**{**REF**  |  **NEF**} \
+> **/Opt:**{**ICF**[ **=** _반복_] | **Noicf**} \
+> **/OPT:**{**LBR**  |  **NOLBR**}
 
 ## <a name="arguments"></a>인수
 
@@ -42,22 +42,22 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 
 /OPT: REF를 사용 하는 경우 LINK는 *comdat*라는 참조 되지 않은 패키지 함수와 데이터를 제거 합니다. 이러한 최적화를 전이적 COMDAT 제거라고 합니다. **/Opt: REF** 옵션은 증분 링크도 사용 하지 않도록 설정 합니다.
 
-클래스 선언 내에 정의 된 인라인 함수 및 멤버 함수는 항상 Comdat입니다. 개체 파일의 모든 함수는 [/gy](gy-enable-function-level-linking.md) 옵션을 사용 하 여 컴파일된 경우 comdat로 생성 됩니다. Comdat에 **const** 데이터를 저장 하려면를 사용 `__declspec(selectany)`하 여 선언 해야 합니다. 제거 또는 정리를 위해 데이터를 지정 하는 방법에 대 한 자세한 내용은 [selectany](../../cpp/selectany.md)를 참조 하세요.
+클래스 선언 내에 정의 된 인라인 함수 및 멤버 함수는 항상 Comdat입니다. 개체 파일의 모든 함수는 [/gy](gy-enable-function-level-linking.md) 옵션을 사용 하 여 컴파일된 경우 comdat로 생성 됩니다. **`const`** Comdat에 데이터를 저장 하려면를 사용 하 여 선언 해야 합니다 `__declspec(selectany)` . 제거 또는 정리를 위해 데이터를 지정 하는 방법에 대 한 자세한 내용은 [selectany](../../cpp/selectany.md)를 참조 하세요.
 
 기본적으로/opt: **eef** 또는 [/debug](debug-generate-debug-info.md) 가 지정 되지 않은 경우에는 **/opt: REF** 가 링커에 의해 활성화 됩니다. 이 기본값을 재정의 하 고 참조 되지 않는 Comdat를 프로그램에 유지 하려면 **/opt: 없음 ef**를 지정 합니다. [/INCLUDE](include-force-symbol-references.md) 옵션을 사용 하 여 특정 기호의 제거를 재정의할 수 있습니다.
 
 [/Debug](debug-generate-debug-info.md) 를 지정 하면 **/opt** 의 기본값 **은 없습니다.** 및 모든 함수가 이미지에 유지 됩니다. 이 기본값을 재정의 하 고 디버그 빌드를 최적화 하려면 **/opt: REF**를 지정 합니다. 이를 통해 실행 파일의 크기를 줄일 수 있으며 디버그 빌드에서도 유용한 최적화를 수행할 수 있습니다. 또한 디버그 빌드에서 동일한 함수를 유지 하기 위해 **/opt: NOICF** 를 지정 하는 것이 좋습니다. 이렇게 하면 스택 추적을 읽고 다른 방식으로는 함께 정리될 함수에서 중단점을 쉽게 설정할 수 있습니다.
 
-**ICF**\[Icf**=**_반복_] &#124; **noicf**
+**ICF** \[ ICF **=** _반복_] &#124; **Noicf**
 
-**ICF**\[ICF**=**_반복_]을 사용 하 여 동일한 COMDAT 정리를 수행 합니다. 중복 COMDAT는 링커 출력에서 제거될 수 있습니다. 선택적인 *반복* 매개 변수는 중복을 위해 기호를 트래버스하는 횟수를 지정 합니다. 기본 반복 횟수는 1입니다. 추가 반복에서 이전 반복의 정리를 통해 발견되지 않은 중복 항목을 더 많이 찾을 수도 있습니다.
+**ICF** \[ **=** _반복_]을 사용 하 여 동일한 COMDAT 정리를 수행 합니다. 중복 COMDAT는 링커 출력에서 제거될 수 있습니다. 선택적인 *반복* 매개 변수는 중복을 위해 기호를 트래버스하는 횟수를 지정 합니다. 기본 반복 횟수는 1입니다. 추가 반복에서 이전 반복의 정리를 통해 발견되지 않은 중복 항목을 더 많이 찾을 수도 있습니다.
 
 /Opt: **NOICF** 또는 [/debug](debug-generate-debug-info.md) 가 지정 되지 않은 경우 기본적으로 **/opt: ICF** 는 링커에 의해 사용 하도록 설정 됩니다. 이 기본값을 재정의 하 고 Comdat가 프로그램에서 접힌 되지 않도록 하려면 **/opt: NOICF**를 지정 합니다.
 
 디버그 빌드에서는 명시적으로 **/opt: ICF** 를 지정 하 여 COMDAT 정리를 사용 하도록 설정 해야 합니다. 그러나 **/opt: ICF** 는 동일한 데이터 또는 함수를 병합할 수 있으므로 스택 추적에 표시 되는 함수 이름을 변경할 수 있습니다. 또한 특정 함수에서 중단점을 설정 하거나 디버거의 일부 데이터를 검사 하는 것은 불가능 하며, 코드를 한 단계씩 실행할 때 예기치 않은 함수를 사용할 수 있습니다. 코드의 동작은 동일 하지만 디버거 프레젠테이션은 매우 복잡할 수 있습니다. 따라서 작은 코드의 이점이 이러한 단점 보다 큰 경우를 제외 하 고는 디버그 빌드에서 **/opt: ICF** 를 사용 하지 않는 것이 좋습니다.
 
 > [!NOTE]
-> **/Opt: ICF** 는 다른 함수 또는 읽기 전용 데이터 멤버 ( **/gy**를 사용 하 여 컴파일될 때 **const** 변수)에 동일한 주소를 할당할 수 있으므로 함수 또는 읽기 전용 데이터 멤버의 고유 주소에 종속 된 프로그램을 중단할 수 있습니다. 자세한 내용은 [/Gy(함수 수준 링크 사용)](gy-enable-function-level-linking.md)를 참조하세요.
+> **/Opt: ICF** 는 다른 함수 또는 읽기 전용 데이터 멤버 (즉,/gy를 사용 하 여 컴파일된 변수)에 동일한 주소를 할당할 수 있으므로 **`const`** 함수 **/Gy**또는 읽기 전용 데이터 멤버의 고유 주소에 종속 된 프로그램을 중단할 수 있습니다. 자세한 내용은 [/Gy(함수 수준 링크 사용)](gy-enable-function-level-linking.md)를 참조하세요.
 
 **Lbr** &#124; **nolbr**
 
@@ -81,9 +81,9 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 OPT:ICF 또는 OPT:REF 링커 옵션을 설정하려면
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성** > **링커** > **최적화** 속성 페이지를 선택 합니다.
+1. **구성 속성**  >  **링커**  >  **최적화** 속성 페이지를 선택 합니다.
 
 1. 다음 속성 중 하나를 수정합니다.
 
@@ -93,9 +93,9 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 OPT:LBR 링커 옵션을 설정하려면
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조하세요.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성** > **링커** > **명령줄** 속성 페이지를 선택 합니다.
+1. **구성 속성**  >  **링커**  >  **명령줄** 속성 페이지를 선택 합니다.
 
 1. **추가 옵션**에 옵션을 입력 합니다.
 

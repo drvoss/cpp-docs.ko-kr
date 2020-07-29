@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d91fe64e7d06a80402a0a540be8f63d98ea96d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424832"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222487"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 연산자
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체와 같지 않은지 테스트합니다.
 
@@ -35,7 +35,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -43,7 +43,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="return-value"></a>Return Value
 
-deque 개체가 같지 않으면 **true**이고, deque 개체가 같으면 **false**입니다.
+**`true`** deque 개체가 같지 않으면이 고, 그렇지 않으면입니다. **`false`** deque 개체가 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체보다 작은지 테스트합니다.
 
@@ -86,7 +86,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -94,7 +94,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 deque가 연산자 우변의 deque보다 작으며 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 deque이 연산자 우변의 deque 보다 작거나 같지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체보다 작거나 같은지 테스트합니다.
 
@@ -141,7 +141,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -149,7 +149,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 deque가 연산자 우변의 deque보다 작거나 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 deque이 연산자 우변의 deque 보다 작거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체와 같은지 테스트합니다.
 
@@ -196,7 +196,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -204,7 +204,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 deque가 연산자 우변의 deque와 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 deque이 연산자 우변의 deque과 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -244,7 +244,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체보다 큰지 테스트합니다.
 
@@ -254,7 +254,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -262,7 +262,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 deque가 연산자 우변의 deque보다 크면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 deque이 연산자 우변의 deque 보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 deque 개체가 우변에 있는 deque 개체보다 크거나 같은지 테스트합니다.
 
@@ -310,7 +310,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `deque` 형식의 개체입니다.
 
 *오른쪽*\
@@ -318,7 +318,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 deque가 연산자 우변의 deque보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 deque이 연산자 우변의 deque 보다 크거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 

@@ -11,24 +11,24 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 57e481c131a6e4a1111b1ed88217b891d6fc96a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a0f62f951fb6de4b32a27511ae38e1346cbc22e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215753"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; 형식 정의
 
 ||||
 |-|-|-|
-|[filebuf](#filebuf)|[fstream](#fstream)|[ifstream](#ifstream)|
+|[filebuf](#filebuf)|[a m](#fstream)|[ifstream](#ifstream)|
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
 |[wifstream](#wifstream)|[wofstream](#wofstream)|
 
-## <a name="filebuf"></a><a name="filebuf"></a>파일 부프
+## <a name="filebuf"></a><a name="filebuf"></a>filebuf
 
-char `basic_filebuf` 템플릿 **char** 매개 변수에 특화된 형식입니다.
+`basic_filebuf`템플릿 매개 변수에서 특수화 된 형식 **`char`** 입니다.
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>설명
 
-형식은 기본 문자 특성이 **있는** 문자 문자 형식의 요소에 특화된 클래스 템플릿 [basic_filebuf](../standard-library/basic-filebuf-class.md)동의어입니다.
+이 형식은 [basic_filebuf](../standard-library/basic-filebuf-class.md) **`char`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_filebuf의 동의어입니다.
 
-## <a name="fstream"></a><a name="fstream"></a>fstream
+## <a name="fstream"></a><a name="fstream"></a>a m
 
-char `basic_fstream` 템플릿 **char** 매개 변수에 특화된 형식입니다.
+`basic_fstream`템플릿 매개 변수에서 특수화 된 형식 **`char`** 입니다.
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 클래스 템플릿 [basic_fstream](../standard-library/basic-fstream-class.md)동의어로 기본 문자 특성이 **있는** 문자 형식의 요소에 대해 특수합니다.
+이 형식은 [basic_fstream](../standard-library/basic-fstream-class.md) **`char`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_fstream의 동의어입니다.
 
 ## <a name="ifstream"></a><a name="ifstream"></a>ifstream
 
-파일에서 직렬로 싱글바이트 문자 데이터를 읽는 데 사용할 스트림을 정의합니다. `ifstream`는 **char에**대한 클래스 `basic_ifstream` 템플릿을 전문으로하는 typedef입니다.
+파일에서 직렬로 싱글바이트 문자 데이터를 읽는 데 사용할 스트림을 정의합니다. `ifstream`는의 클래스 템플릿을 특수화 하는 typedef `basic_ifstream` 입니다 **`char`** .
 
-이중 와이드 `wifstream`문자를 **wchar_t** 읽을 `basic_ifstream` 수있는 유형 def도 있습니다. 자세한 내용은 [wifstream](../standard-library/fstream-typedefs.md#wifstream)을 참조하세요.
+`wifstream` `basic_ifstream` 더블 와이드 문자를 읽도록 특수화 된 typedef도 있습니다 **`wchar_t`** . 자세한 내용은 [wifstream](../standard-library/fstream-typedefs.md#wifstream)을 참조하세요.
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 클래스 템플릿 [basic_ifstream](../standard-library/basic-ifstream-class.md)대 한 동의어이며 기본 문자 특성을 가진 문자 형식 char의 요소에 대해 전문화되어 있습니다. 예제는 다음과 같습니다.
+이 형식은 기본 문자 특성을 포함 하는 char 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ifstream](../standard-library/basic-ifstream-class.md)의 동의어입니다. 예제는 다음과 같습니다.
 
 ```cpp
 using namespace std;
@@ -76,9 +76,9 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a><a name="ofstream"></a>의 흐름
+## <a name="ofstream"></a><a name="ofstream"></a>ofstream
 
-char `basic_ofstream` 템플릿 **char** 매개 변수에 특화된 형식입니다.
+`basic_ofstream`템플릿 매개 변수에서 특수화 된 형식 **`char`** 입니다.
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 클래스 템플릿 [basic_ofstream](../standard-library/basic-ofstream-class.md)동의어로 기본 문자 특성이 **있는** 문자 형식의 요소에 대해 특수합니다.
+이 형식은 [basic_ofstream](../standard-library/basic-ofstream-class.md) **`char`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_ofstream의 동의어입니다.
 
 ## <a name="wfstream"></a><a name="wfstream"></a>wfstream
 
-wchar_t `basic_fstream` 템플릿 **wchar_t** 매개 변수에 특화된 형식입니다.
+`basic_fstream`템플릿 매개 변수에서 특수화 된 형식 **`wchar_t`** 입니다.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 기본 문자 특성이 있는 **wchar_t** 형식 의 요소에 특화된 클래스 템플릿 [basic_fstream](../standard-library/basic-fstream-class.md)동의어입니다.
+이 형식은 [basic_fstream](../standard-library/basic-fstream-class.md) **`wchar_t`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_fstream의 동의어입니다.
 
-## <a name="wifstream"></a><a name="wifstream"></a>위스트림 (것)과
+## <a name="wifstream"></a><a name="wifstream"></a>wifstream
 
-wchar_t `basic_ifstream` 템플릿 **wchar_t** 매개 변수에 특화된 형식입니다.
+`basic_ifstream`템플릿 매개 변수에서 특수화 된 형식 **`wchar_t`** 입니다.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 기본 문자 특성이 있는 형식 **wchar_t** 요소에 특화된 클래스 템플릿 [basic_ifstream](../standard-library/basic-ifstream-class.md)동의어입니다.
+이 형식은 [basic_ifstream](../standard-library/basic-ifstream-class.md) **`wchar_t`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_ifstream의 동의어입니다.
 
 ## <a name="wofstream"></a><a name="wofstream"></a>wofstream
 
-wchar_t `basic_ofstream` 템플릿 **wchar_t** 매개 변수에 특화된 형식입니다.
+`basic_ofstream`템플릿 매개 변수에서 특수화 된 형식 **`wchar_t`** 입니다.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>설명
 
-형식은 기본 문자 특성이 있는 **wchar_t** 형식의 요소에 특화된 클래스 템플릿 [basic_ofstream](../standard-library/basic-ofstream-class.md)동의어입니다.
+이 형식은 [basic_ofstream](../standard-library/basic-ofstream-class.md) **`wchar_t`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_ofstream의 동의어입니다.
 
 ## <a name="wfilebuf"></a><a name="wfilebuf"></a>wfilebuf
 
-wchar_t `basic_filebuf` 템플릿 **wchar_t** 매개 변수에 특화된 형식입니다.
+`basic_filebuf`템플릿 매개 변수에서 특수화 된 형식 **`wchar_t`** 입니다.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,7 +134,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>설명
 
-형식은 기본 문자 특성이 있는 형식 **wchar_t** 요소에 특화된 클래스 템플릿 [basic_filebuf](../standard-library/basic-filebuf-class.md)동의어입니다.
+이 형식은 [basic_filebuf](../standard-library/basic-filebuf-class.md) **`wchar_t`** 기본 문자 특성을 포함 하는 형식의 요소에 대해 특수화 된 클래스 템플릿 basic_filebuf의 동의어입니다.
 
 ## <a name="see-also"></a>참고 항목
 

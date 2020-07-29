@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 36851eab86a32fab9294129cf1918e0add528eb3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215662"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 연산자
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 다른지를 테스트합니다.
 
@@ -43,7 +43,7 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `iterator` 형식의 개체입니다.
 
 *오른쪽*\
@@ -51,7 +51,7 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="return-value"></a>Return Value
 
-반복기 개체가 같지 않으면 **true**이고, 반복기 개체가 같으면 **false**입니다.
+**`true`** 반복기 개체가 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 반복기 개체가 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -119,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체와 같은지를 테스트합니다.
 
@@ -147,7 +147,7 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 iterator 형식의 개체입니다.
 
 *오른쪽*\
@@ -155,7 +155,7 @@ iterator 형식의 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-반복기 개체가 같으면 **true** 이 고, 그렇지 않으면입니다. 반복기 개체가 같지 않으면 **false** 입니다.
+**`true`** 반복기 개체가 같으면이 고, 그렇지 않으면입니다. **`false`** 반복기 개체가 같지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -225,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작은지를 테스트합니다.
 
@@ -236,7 +236,7 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `iterator` 형식의 개체입니다.
 
 *오른쪽*\
@@ -244,7 +244,7 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="return-value"></a>Return Value
 
-식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작으면 **true**이고, 오른쪽 반복기보다 크거나 같으면 **false**입니다.
+**`true`** 식의 좌 변에 있는 반복기가 식의 오른쪽에 있는 반복기 보다 작은 경우 **`false`** 오른쪽에 있는 반복기 보다 크거나 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -316,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 작거나 같은지를 테스트합니다.
 
@@ -327,7 +327,7 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 iterator 형식의 개체입니다.
 
 *오른쪽*\
@@ -335,7 +335,7 @@ iterator 형식의 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 작거나 같으면 **true**이고, 오른쪽 반복기보다 크면 **false**입니다.
+**`true`** 식의 좌 변에 있는 반복기가 식 오른쪽에 있는 반복기 보다 작거나 같으면이 고, 그렇지 않으면입니다. 이 **`false`** 가 오른쪽에 있는 반복기 보다 크면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -411,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 큰지를 테스트합니다.
 
@@ -422,7 +422,7 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 iterator 형식의 개체입니다.
 
 *오른쪽*\
@@ -430,7 +430,7 @@ iterator 형식의 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크면 **true**이고, 오른쪽 반복기보다 작거나 같으면 **false**입니다.
+**`true`** 식의 좌 변에 있는 반복기가 식의 오른쪽에 있는 반복기 보다 크면이 고, 그렇지 않으면입니다. **`false`** 오른쪽의 반복기 보다 작거나 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -500,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 반복기 개체가 우변에 있는 반복기 개체보다 크거나 같은지를 테스트합니다.
 
@@ -511,7 +511,7 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 iterator 형식의 개체입니다.
 
 *오른쪽*\
@@ -519,7 +519,7 @@ iterator 형식의 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-식 왼쪽에 있는 반복기가 식 오른쪽에 있는 반복기보다 크거나 같으면 **true**이고, 오른쪽 반복기보다 작으면 **false**입니다.
+**`true`** 식의 좌 변에 있는 반복기가 식의 오른쪽에 있는 반복기 보다 크거나 같으면이 고, 그렇지 않으면입니다. **`false`** 오른쪽의 반복기 보다 작은 경우입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -595,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a>연산자 +
+## <a name="operator"></a><a name="op_add"></a>연산자 +
 
 반복기에 오프셋을 추가하고 새 오프셋 위치에서 삽입된 요소의 주소를 지정하는 `move_iterator` 또는 `reverse_iterator`를 반환합니다.
 
@@ -623,7 +623,7 @@ const move_iterator 또는 const reverse_iterator가 오프셋되는 위치의 �
 
 ### <a name="return-value"></a>Return Value
 
-*_Off* * + 합계* 를 반환 합니다.
+_Off *합계를*반환 합니다  +  *_Off*.
 
 ### <a name="example"></a>예제
 
@@ -674,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>연산자
+## <a name="operator-"></a><a name="operator-"></a>연산자
 
 다른 반복기에서 하나의 반복기를 빼고 차이를 반환합니다.
 
@@ -692,7 +692,7 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 반복기입니다.
 
 *오른쪽*\

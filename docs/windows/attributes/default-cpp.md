@@ -1,5 +1,5 @@
 ---
-title: default (C++ COM 특성)
+title: default (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167188"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215272"
 ---
 # <a name="default-c"></a>default(C++)
 
@@ -28,7 +28,7 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 ### <a name="parameters"></a>매개 변수
 
 *interface1*<br/>
-기본 인터페이스는 **default** 특성으로 정의된 클래스에 따라 개체를 만드는 스크립팅 환경에 사용할 수 있습니다.
+특성으로 정의 된 클래스에 따라 개체를 만드는 스크립팅 환경에 사용할 수 있는 기본 인터페이스입니다 **`default`** .
 
 지정된 기본 인터페이스가 없는 경우 처음에 발생하는 비 소스 인터페이스가 기본값으로 사용됩니다.
 
@@ -39,11 +39,11 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 
 ## <a name="remarks"></a>설명
 
-**default** C++ 특성에는 [default](/windows/win32/Midl/default) MIDL 특성과 동일한 기능이 있습니다. **default** 특성을 [case](case-cpp.md) 특성과 함께 사용할 수도 있습니다.
+**`default`** C + + 특성에는 [기본](/windows/win32/Midl/default) MIDL 특성과 동일한 기능이 있습니다. **`default`** 특성은 [case](case-cpp.md) 특성에도 사용 됩니다.
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 coclass의 정의에 **기본값** 을 사용 하 여 `ICustomDispatch`를 기본 프로그래밍 인터페이스로 지정 하는 방법을 보여 줍니다.
+다음 코드에서는 **`default`** coclass의 정의에서를 사용 하 여를 `ICustomDispatch` 기본 프로그래밍 인터페이스로 지정 하는 방법을 보여 줍니다.
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-[source](source-cpp.md) 특성에는 **default**사용 방법에 대한 예제도 있습니다.
+[원본](source-cpp.md) 특성에는를 사용 하는 방법에 대 한 예제도 있습니다 **`default`** .
 
 ## <a name="requirements"></a>요구 사항
 
@@ -99,10 +99,10 @@ int main() {
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**, 데이터 멤버|
-|**반복 가능**|예|
-|**필수 특성**|**coclass** ( **클래스** 또는 **구조체**에 적용 된 경우)|
-|**잘못된 특성**|None|
+|**적용 대상**|**`class`**, **`struct`** , 데이터 멤버|
+|**불가능**|예|
+|**필수 특성**|**coclass** (또는에 적용 된 경우 **`class`** **`struct`** )|
+|**잘못된 특성**|없음|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

@@ -1,17 +1,17 @@
 ---
-title: length_is (C++ COM 특성)
+title: length_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e6ab9ec0f6f55ab0be9624b7343b087b41f2a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214788"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215246"
 ---
 # <a name="length_is"></a>length_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "80214788"
 *expression*<br/>
 하나 이상의 C 언어 식입니다. 빈 인수 슬롯을 사용할 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Length_is** C++ 특성에는 [length_is](/windows/win32/Midl/length-is) MIDL 특성과 동일한 기능이 있습니다.
+**Length_is** c + + 특성에는 [length_is](/windows/win32/Midl/length-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -42,8 +42,8 @@ ms.locfileid: "80214788"
 
 |||
 |-|-|
-|**적용 대상**|**구조체** 또는 **공용 구조체**의 필드, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|아니요|
+|**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
+|**불가능**|예|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6e31220fa6b15d958e94e82322467cd73e1c3a6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452781"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215701"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible Class
+# <a name="is_default_constructible-class"></a>is_default_constructible Class
 
 형식에 기본 생성자가 있는지 테스트합니다.
 
@@ -31,7 +31,7 @@ struct is_default_constructible;
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *T* 형식이 기본 생성자가 있는 클래스 형식인 경우 true이 고 그렇지 않은 경우 false입니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. *T* 형식은 완전 한 형식, **void**또는 범위를 알 수 없는 배열 이어야 합니다.
+형식 조건자의 인스턴스는 *T* 형식이 기본 생성자가 있는 클래스 형식인 경우 true이 고 그렇지 않은 경우 false입니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. *T* 형식은 완전 한 형식, **`void`** 또는 범위를 알 수 없는 배열 이어야 합니다.
 
 ## <a name="example"></a>예제
 
@@ -69,10 +69,10 @@ is_default_constructible<Simple2> == false
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

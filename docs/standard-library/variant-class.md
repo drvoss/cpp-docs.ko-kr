@@ -1,5 +1,5 @@
 ---
-title: 변형 클래스
+title: variant 클래스
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215402"
 ---
-# <a name="variant-class"></a>변형 클래스
+# <a name="variant-class"></a>variant 클래스
 
-언제 든 지 변형의 인스턴스에도 해당 대체 형식 중 하나의 값을 보유 하거나 또는 값을 보유 합니다.
+지정 된 시간의 모든 변형 인스턴스는 대체 유형 중 하나의 값을 보유 하거나 값을 보유 하지 않습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,24 +35,24 @@ template <class... Types>
 
 |||
 |-|-|
-|[Variant](#variant)|`variant` 형식의 개체를 생성합니다.|
+|[variant](#variant)|`variant` 형식의 개체를 생성합니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[emplace](#emplace)|새 포함 된 값을 만듭니다.|
-|[index](#index)|포함 된 값의 인덱스를 반환합니다.|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|반환 **false** 변형 값을 보유 하는 경우.|
+|[index](#index)|포함 된 값의 인덱스를 반환 합니다.|
+|[스왑을](#swap)||
+|[valueless_by_exception](#emplace)|**`false`** 변형에 값이 포함 된 경우를 반환 합니다.|
 
 ### <a name="operators"></a>연산자
 
 |||
 |-|-|
-|[operator=](#op_eq)|변형을 다른 변형의 복사본으로 바꿉니다.|
+|[연산자 =](#op_eq)|Variant를 다른 variant의 복사본으로 바꿉니다.|
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 새 포함 된 값을 만듭니다.
 
@@ -67,17 +67,17 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> 인덱스
+## <a name="index"></a><a name="index"></a>인덱싱할
 
-포함 된 값의 인덱스를 반환합니다.
+포함 된 값의 인덱스를 반환 합니다.
 
 ```cpp
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> Variant
+## <a name="variant"></a><a name="variant"></a>변형은
 
-`variant` 형식의 개체를 생성합니다. 소멸자가 포함 됩니다.
+`variant` 형식의 개체를 생성합니다. 소멸자도 포함 합니다.
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -116,12 +116,12 @@ template <class Alloc, size_t I, class U, class... Args>
 
 ### <a name="parameters"></a>매개 변수
 
-*Al*\
+*항상*\
 이 개체에 사용할 할당자 클래스입니다.
 
-## <a name="op_eq"></a> 연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
-변형을 다른 변형의 복사본으로 바꿉니다.
+Variant를 다른 variant의 복사본으로 바꿉니다.
 
 ```cpp
 variant& operator=(const variant&);
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> 교환
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-반환 **false** 변형 값을 보유 하는 경우.
+**`false`** 변형에 값이 포함 된 경우를 반환 합니다.
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

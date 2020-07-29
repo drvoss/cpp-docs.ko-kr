@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214947"
 ---
 # <a name="value-classes-and-structs-ccx"></a>값 클래스 및 구조체(C++/CX)
 
-*값 구조체* 또는 *값 클래스는* Windows 런타임 호환 POD("일반 이전 데이터 구조")입니다. 크기가 고정되어 있고 필드로만 구성되어 있으며 ref 클래스와는 달리 속성이 없습니다.
+*값 구조체* 또는 *값 클래스* 는 Windows 런타임 호환 POD ("일반 이전 데이터 구조")입니다. 크기가 고정되어 있고 필드로만 구성되어 있으며 ref 클래스와는 달리 속성이 없습니다.
 
 다음 예제에서는 값 구조체를 선언하고 초기화하는 방법을 보여 줍니다.
 
@@ -48,17 +48,17 @@ ms.locfileid: "81752900"
     ts3.str = "Another way to init a value struct.";
 ```
 
-값 형식의 변수가 다른 변수에 할당되면 두 변수가 각각 고유한 데이터 복사본을 갖도록 값이 복사됩니다. *값 구조체* 는 공용 데이터 필드만 포함된 고정된 크기의 구조체이고, `value struct` 키워드를 사용하여 선언됩니다.
+값 형식의 변수가 다른 변수에 할당되면 두 변수가 각각 고유한 데이터 복사본을 갖도록 값이 복사됩니다. *값 구조체* 는 공용 데이터 필드만 포함 하 고 키워드를 사용 하 여 선언 되는 고정 크기 구조체입니다 **`value struct`** .
 
-*값 클래스* 는 필드에 public 액세스 가능성이 명시적으로 부여되어야 한다는 점을 제외하고 `value struct` 와 비슷합니다. `value class` 키워드를 사용하여 선언됩니다.
+*값 클래스* 는 **`value struct`** 필드에 public 액세스 가능성이 명시적으로 부여 되어야 한다는 점을 제외 하 고와 동일 합니다. 키워드를 사용 하 여 선언 **`value class`** 됩니다.
 
-값 구조체 또는 값 클래스는 기본 숫자 형식, 열거형 `Platform::String^`클래스 또는 [플랫폼::IBox \<T>^](../cppcx/platform-ibox-interface.md) 여기서 T는 숫자 형식 또는 열거형 클래스 또는 값 클래스 또는 구조체로만 필드로 포함될 수 있습니다. `IBox<T>^` 필드의 값은 `nullptr`로 지정할 수 있습니다. 이는 *null 허용 형식*개념이 C++에서 구현되는 방법입니다.
+값 구조체 또는 값 클래스는 기본 숫자 형식, 열거형 클래스, `Platform::String^` 또는 [Platform: \<T> ^ : ibox](../cppcx/platform-ibox-interface.md) 만 필드로 포함할 수 있습니다. 여기서 T는 숫자 형식 또는 열거형 클래스 또는 값 클래스 또는 구조체입니다. `IBox<T>^`필드는 값을 가질 수 있습니다 **`nullptr`** .이는 c + +에서 *nullable 값 형식의*개념을 구현 하는 방법입니다.
 
 `Platform::String^` 또는 `IBox<T>^` 형식을 멤버로 포함하는 값 클래스 또는 값 구조체는 `memcpy`할 수 없습니다.
 
-`value class` 또는 `value struct` 의 모든 멤버가 공용이고 메타데이터로 내보내지기 때문에 표준 C++ 형식은 멤버로 허용되지 않습니다. 이것은 `private` 또는 `internal` 표준 C++ 형식을 포함할 수 있는 ref 클래스와 다릅니다.
+또는의 모든 멤버는 **`value class`** **`value struct`** 공용 이며 메타 데이터로 내보내기 때문에 표준 c + + 형식은 멤버로 허용 되지 않습니다. 이는 **`private`** 또는 **`internal`** 표준 c + + 형식을 포함할 수 있는 ref 클래스와 다릅니다.
 
-다음 코드 조각은 `Coordinates` 및 `City` 형식을 값 구조체로 선언합니다. `City` 데이터 멤버 중 하나는 `GeoCoordinates` 형식입니다. `value struct` 에는 다른 값 구조체가 멤버로 포함될 수 있습니다.
+다음 코드 조각은 `Coordinates` 및 `City` 형식을 값 구조체로 선언합니다. `City` 데이터 멤버 중 하나는 `GeoCoordinates` 형식입니다. 에는 **`value struct`** 다른 값 구조체가 멤버로 포함 될 수 있습니다.
 
 [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>Nullable 값 형식
 
-앞에서 설명한 것처럼 값 클래스 또는 값 구조체에는 [플랫폼::IBox\<T>^와](../cppcx/platform-ibox-interface.md)같은 형식의 필드가 있을 수 `IBox<int>^`있습니다. 이러한 필드에는 `int` 형식에 대해 유효한 모든 숫자 값 또는 `nullptr`값을 지정할 수 있습니다. 매개 변수가 선택적으로 선언되었거나 값 형식에 값이 지정될 필요가 없는 메서드에 nullable 필드를 인수로 전달할 수 있습니다.
+앞에서 설명한 것 처럼 값 클래스 또는 값 구조체는 [Platform:: \<T> ^ ibox](../cppcx/platform-ibox-interface.md)형식의 필드를 포함할 수 있습니다 (예:) `IBox<int>^` . 이러한 필드에는 형식에 대해 유효한 모든 숫자 값이 포함 **`int`** 되거나 값이 포함 될 수 있습니다 **`nullptr`** . 매개 변수가 선택적으로 선언되었거나 값 형식에 값이 지정될 필요가 없는 메서드에 nullable 필드를 인수로 전달할 수 있습니다.
 
 다음 예제에서는 null 허용 필드가 있는 구조체를 초기화하는 방법을 보여 줍니다.
 
@@ -147,9 +147,9 @@ public:
 };
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[유형 시스템(C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[네임스페이스 참조](../cppcx/namespaces-reference-c-cx.md)<br/>
+[형식 시스템 (c + +/CX)](../cppcx/type-system-c-cx.md)<br/>
+[C + +/CX 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[네임 스페이스 참조](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref 클래스 및 구조체(C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)
