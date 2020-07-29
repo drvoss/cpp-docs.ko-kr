@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204132"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227090"
 ---
 # <a name="scope-c"></a>범위 (C++)
 
@@ -31,9 +31,9 @@ ms.locfileid: "83204132"
 
 - **로컬 범위** 매개 변수 이름을 포함 하 여 함수 또는 람다 내에 선언 된 이름에는 로컬 범위가 있습니다. 흔히 "지역" 이라고 합니다. 선언 지점에서 함수 또는 람다 본문의 끝까지 볼 수 있습니다. 로컬 범위는이 문서의 뒷부분에서 설명 하는 블록 범위의 일종입니다.
 
-- **클래스 범위** 클래스 멤버의 이름에는 선언 지점에 관계 없이 클래스 정의 전체에서 확장 되는 클래스 범위가 있습니다. 클래스 멤버 액세스 가능성은 **public**, **private**및 **protected** 키워드를 통해 추가로 제어 됩니다. Public 또는 protected 멤버는 멤버 선택 연산자 (를 사용 해야만 액세스할 수 있습니다 **.** or **->** ) 또는 멤버 포인터 연산자 (**.** <strong>\*</strong> 또는)를 가리킵니다 **->** <strong>\*</strong> .
+- **클래스 범위** 클래스 멤버의 이름에는 선언 지점에 관계 없이 클래스 정의 전체에서 확장 되는 클래스 범위가 있습니다. 클래스 멤버 액세스 가능성은 **`public`** , 및 키워드를 통해 추가로 제어 됩니다 **`private`** **`protected`** . Public 또는 protected 멤버는 멤버 선택 연산자 (를 사용 해야만 액세스할 수 있습니다 **.** or **->** ) 또는 멤버 포인터 연산자 (**.** <strong>\*</strong> 또는)를 가리킵니다 **->** <strong>\*</strong> .
 
-- **문 범위** **For**, **if**, **while**또는 **switch** 문에 선언 된 이름은 문 블록이 끝날 때까지 표시 됩니다.
+- **문 범위** ,, 또는 문에 선언 된 이름은 **`for`** **`if`** **`while`** **`switch`** 문 블록이 끝날 때까지 표시 됩니다.
 
 - **함수 범위** [레이블에](labeled-statements.md) 는 함수 범위가 있으므로 선언 지점 앞에도 함수 본문 전체에 표시 됩니다. 함수 범위를 사용 하면 `goto cleanup` 레이블이 선언 되기 전에와 같은 문을 작성할 수 있습니다 `cleanup` .
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>클래스 이름 숨기기
 
-함수, 개체, 변수 또는 열거자를 동일한 코드에서 선언하여 클래스 이름을 숨길 수 있습니다. 그러나 키워드 **클래스**의 접두사가 있는 경우에도 클래스 이름에 액세스할 수 있습니다.
+함수, 개체, 변수 또는 열거자를 동일한 코드에서 선언하여 클래스 이름을 숨길 수 있습니다. 그러나 키워드 앞에 키워드를 추가 하는 경우에도 클래스 이름에 액세스할 수 있습니다 **`class`** .
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > 클래스 이름 ( `Account` )이 호출 되는 모든 장소에서 키워드 클래스를 사용 하 여 전역 범위 변수 계정과 구분 해야 합니다. 이 규칙은 범위 결정 연산자(::)의 왼쪽에 클래스 이름이 나타나는 경우에는 적용되지 않습니다. 범위 결정 연산자의 왼쪽에 있는 이름은 항상 클래스 이름으로 간주됩니다.
 
-다음 예제에서는 `Account` **class** 키워드를 사용 하 여 형식의 개체에 대 한 포인터를 선언 하는 방법을 보여 줍니다.
+다음 예제에서는 `Account` 키워드를 사용 하 여 형식의 개체에 대 한 포인터를 선언 하는 방법을 보여 줍니다 **`class`** .
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-`Account`앞의 문에서 이니셜라이저 (괄호 안에 있음)의는 전역 범위를 가지 며 **double**형식입니다.
+`Account`앞의 문에서 이니셜라이저의 (괄호 안에 있음)에는 전역 범위가 있습니다. 즉, 형식입니다 **`double`** .
 
 > [!NOTE]
 > 이 예제와 같이 식별자 이름을 다시 사용하는 것은 좋지 않은 프로그래밍 스타일로 간주됩니다.
 
-클래스 개체의 선언 및 초기화에 대 한 자세한 내용은 [클래스, 구조체 및 공용 구조체](../cpp/classes-and-structs-cpp.md)를 참조 하세요. **New** 및 **delete** 사용 가능한 저장소 연산자를 사용 하는 방법에 대 한 자세한 내용은 [new 및 delete 연산자](new-and-delete-operators.md)를 참조 하세요.
+클래스 개체의 선언 및 초기화에 대 한 자세한 내용은 [클래스, 구조체 및 공용 구조체](../cpp/classes-and-structs-cpp.md)를 참조 하세요. 및 무료 저장소 연산자를 사용 하는 방법에 대 한 자세한 내용은 **`new`** **`delete`** [new 및 delete 연산자](new-and-delete-operators.md)를 참조 하세요.
 
 ## <a name="hiding-names-with-global-scope"></a>전역 범위를 사용 하 여 이름 숨기기
 

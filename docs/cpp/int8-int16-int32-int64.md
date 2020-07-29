@@ -22,18 +22,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7888a282fffbaa2a23783c3875e02838fd0b1826
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227402"
 ---
 # <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
 **Microsoft 전용**
 
-Microsoft C/C++는 크기가 지정된 정수 형식을 지원합니다. **__int**<em>n</em> 형식 지정자를 사용하여 8, 16, 32 또는 64비트 정수 변수를 선언할 수 있습니다. 여기서 *n*은 8, 16, 32 또는 64입니다.
+Microsoft C/C++는 크기가 지정된 정수 형식을 지원합니다. 형식 지정자를 사용 하 여 8, 16, 32 또는 64 비트 정수 변수를 선언할 수 있습니다 **`__intN`** ***`N`*** . 여기서은 8, 16, 32 또는 64입니다.
 
 다음 예제에서는 이러한 형식의 크기가 지정된 정수 각각에 대해 변수 하나를 선언합니다.
 
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-**__int8**, **__int16** 및 **__int32** 형식은 동일한 크기를 가진 ANSI 형식에 대한 동의어이고, 여러 플랫폼에서 동일하게 동작하는 이식 가능한 코드 작성에 유용합니다. **__Int8** 데이터 형식은 **char**형식과 동의어이 고, **__int16** 는 **short**형식과 동의어 이며, **__int32** 는 **int**형식과 동의어입니다. **__Int64** 형식은 **long long**형식의 동의어입니다.
+**`__int8`**, 및 형식은 **`__int16`** **`__int32`** 동일한 크기의 ANSI 형식에 대 한 동의어 이며 여러 플랫폼에서 동일 하 게 동작 하는 이식 가능한 코드를 작성 하는 데 유용 합니다. **`__int8`** 데이터 형식은 형식과 동의어이 고 **`char`** , **`__int16`** 는 형식과 동의어 이며, **`short`** **`__int32`** 는 형식과 **`int`** 동의어입니다. 형식은 **`__int64`** 형식과 동의어입니다 **`long long`** .
 
-이전 버전과의 호환성을 위해 **_int8**, **_int16**, **_int32**및 **_int64** 는 컴파일러 옵션 [/za __int8 언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 **고 __int16,** **__int32**, **__int64**및 **\(** 의 동의어입니다.
+이전 버전과의 호환성을 위해,, **`_int8`** **`_int16`** **`_int32`** 및 **`_int64`** 는 **`__int8`** **`__int16`** **`__int32`** **`__int64`** 컴파일러 옵션 [ `/Za` \( 사용 안 함 언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 고,, 및의 동의어입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-다음 예제에서는 __int *xx* 매개 변수가 **int**로 승격되는 것을 보여 줍니다.
+다음 샘플에서는 `__intN` 매개 변수가로 승격 됨을 보여 줍니다 **`int`** .
 
 ```cpp
 // sized_int_types.cpp
@@ -73,9 +73,7 @@ int main()
 func
 ```
 
-**Microsoft 전용 종료**
-
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C++ 키워드](../cpp/keywords-cpp.md)<br/>
 [기본 제공 형식](../cpp/fundamental-types-cpp.md)<br/>

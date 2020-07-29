@@ -1,14 +1,14 @@
 ---
-title: 클래스, 구조체 및 공용 구조체에 대한 보조 기 초기화
-description: C++ 클래스, 구조체 또는 공용 구조체와 함께 중괄호 초기화 사용
+title: 클래스, 구조체 및 공용 구조체에 대 한 중괄호 초기화
+description: 모든 c + + 클래스, 구조체 또는 공용 구조체에 중괄호 초기화 사용
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d862ff01ef7375c9d46791f7549d8a07682c3586
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374070"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227428"
 ---
 # <a name="brace-initialization"></a>중괄호 초기화
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-클래스 또는 구조체에 생성자가 없는 경우 클래스에서 멤버가 선언되는 순서대로 목록 요소를 제공합니다. 클래스에 생성자가 있는 경우 매개 변수의 순서로 요소를 제공합니다. 형식에 암시적 또는 명시적으로 선언된 기본 생성자가 있는 경우 빈 중괄호를 사용하여 기본 중괄호 초기화를 사용할 수 있습니다. 예를 들어 다음 클래스는 기본 및 비기본 중괄호 초기화를 모두 사용하여 초기화될 수 있습니다.
+클래스 또는 구조체에 생성자가 없는 경우 클래스에서 멤버를 선언 하는 순서 대로 목록 요소를 제공 합니다. 클래스에 생성자가 있는 경우 매개 변수의 순서 대로 요소를 제공 합니다. 형식에 암시적 또는 명시적으로 선언 된 기본 생성자가 있는 경우에는 기본 중괄호 초기화를 사용할 수 있습니다 (빈 중괄호 포함). 예를 들어 다음 클래스는 기본 및 기본이 아닌 중괄호 초기화를 모두 사용 하 여 초기화할 수 있습니다.
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-클래스에 기본이 아닌 생성자가 있는 경우 중괄호 초기화에 클래스 멤버가 나타나는 순서는 멤버가 선언되는 순서가 아니라 해당 매개 변수가 `class_a` 생성자에 표시되는 순서입니다(이전 예제와 같이). 그렇지 않으면 형식에 선언된 생성자가 없는 경우 멤버가 중괄호 초기화자에 나타나는 순서는 멤버가 선언된 순서와 동일합니다. 이 경우 원하는 만큼 공개 멤버를 초기화할 수 있지만 멤버를 건너뛸 수는 없습니다. 다음 예제에서는 선언된 생성자가 없을 때 중괄호 초기화에 사용되는 순서를 보여 주며 있습니다.
+클래스에 기본 생성자가 아닌 생성자가 있는 경우에는 해당 매개 변수가 생성자에 표시 되는 순서 이며, 앞의 예제에서와 같이 멤버가 선언 되는 순서는 아닙니다 `class_a` . 그렇지 않고 형식에 선언 된 생성자가 없는 경우에는 멤버가 중괄호 이니셜라이저에 표시 되는 순서가 선언 된 순서와 동일 합니다. 이 경우 원하는 만큼 public 멤버를 초기화할 수 있지만 멤버를 건너뛸 수는 없습니다. 다음 예제에서는 선언 된 생성자가 없을 때 중괄호 초기화에 사용 되는 순서를 보여 줍니다.
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-기본 생성자가 명시적으로 선언되었지만 삭제된 것으로 표시된 경우 기본 중괄호 초기화를 사용할 수 없습니다.
+기본 생성자를 명시적으로 선언 했지만 삭제 된 것으로 표시 한 경우에는 기본 중괄호 초기화를 사용할 수 없습니다.
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-일반적으로 초기화를 수행하는 모든 곳에서 중괄호 초기화를 사용할 수 있습니다(예: 함수 매개 변수 또는 반환 값 또는 **새** 키워드)
+일반적으로 초기화를 수행 하는 경우 (예: 함수 매개 변수 또는 반환 값 또는 키워드를 사용 하 여) 중괄호 초기화를 사용할 수 있습니다 **`new`** .
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-**/std:c++17** 모드에서는 빈 중괄호 초기화에 대한 규칙이 약간 더 제한적입니다. [파생 생성자 및 확장 된 집계 초기화를](constructors-cpp.md#extended_aggregate)참조하십시오.
+**/Std: c + + 17** 모드에서 빈 중괄호 초기화에 대 한 규칙은 약간 더 제한적입니다. [파생 된 생성자 및 확장 된 집계 초기화](constructors-cpp.md#extended_aggregate)를 참조 하세요.
 
 ## <a name="initializer_list-constructors"></a>initializer_list 생성자
 
-[initializer_list 클래스는](../standard-library/initializer-list-class.md) 생성자 및 기타 컨텍스트에서 사용할 수 있는 지정된 형식의 개체 목록을 나타냅니다. 중괄호 초기화를 사용하여 initializer_list 생성할 수 있습니다.
+[Initializer_list 클래스](../standard-library/initializer-list-class.md) 는 생성자와 다른 컨텍스트에서 사용할 수 있는 지정 된 형식의 개체 목록을 나타냅니다. 중괄호 초기화를 사용 하 여 initializer_list를 생성할 수 있습니다.
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
-> 이 클래스를 사용하려면 [ \<initializer_list>](../standard-library/initializer-list.md) 헤더를 포함해야 합니다.
+> 이 클래스를 사용 하려면 헤더를 포함 해야 합니다 [\<initializer_list>](../standard-library/initializer-list.md) .
 
-A를 `initializer_list` 복사할 수 있습니다. 이 경우 새 목록의 구성원은 원래 목록의 구성원에 대한 참조입니다.
+을 `initializer_list` 복사할 수 있습니다. 이 경우 새 목록의 멤버는 원래 목록의 멤버에 대 한 참조입니다.
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-표준 라이브러리 컨테이너 클래스 `string`및 `wstring`및 `regex`및 `initializer_list` 에 생성자가 있습니다. 다음 예제는 이러한 생성자로 중괄호 초기화를 수행하는 방법을 보여 주며 있습니다.
+표준 라이브러리 컨테이너 클래스와, 및에 `string` 는 `wstring` `regex` 생성자가 있습니다 `initializer_list` . 다음 예제에서는 이러한 생성자를 사용 하 여 중괄호 초기화를 수행 하는 방법을 보여 줍니다.
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-ms.openlocfilehash: f9a3ea9e33adc8a26f34324a8660c835f08b3007
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4774d4801f917691610a457105fc6690ab030a44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213683"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226908"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== Operator (Microsoft::WRL)
 
@@ -55,15 +55,15 @@ WRL_NOTHROW bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*a*<br/>
+*은*<br/>
 왼쪽 개체입니다.
 
 *b*<br/>
 오른쪽 개체입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-개체가 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**`true`** 개체가 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -73,4 +73,4 @@ WRL_NOTHROW bool operator==(
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 네임 스페이스](microsoft-wrl-namespace.md)
