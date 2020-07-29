@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230378"
 ---
 # <a name="concurrency-namespace"></a>동시성 네임스페이스
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedefs
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |`runtime_object_identity`|각 메시지 인스턴스에는 복제하고 메시지 구성 요소 간에 전달될 때 따라가는 ID가 있습니다. 이 ID는 메시지 개체의 주소가 될 수 없습니다.|
 |`task_status`|작업의 종료 상태를 나타내는 형식입니다. 유효한 값은 `completed` 및 `canceled`입니다.|
@@ -83,7 +83,7 @@ namespace concurrency;
 |[invalid_link_target 클래스](invalid-link-target-class.md)|이 클래스는 메시징 블록의 `link_target` 메서드를 호출하고 메시징 블록이 대상에 연결할 수 없는 경우 발생하는 예외를 설명합니다. 메시징 블록에 허용되는 링크 수를 초과했거나 동일한 소스에 특정 대상을 두 번 연결하려고 시도한 결과일 수 있습니다.|
 |[invalid_multiple_scheduling 클래스](invalid-multiple-scheduling-class.md)|이 클래스는 `wait` 또는 `run_and_wait` 메서드에 대한 중간 호출 없이 `task_group` 또는 `structured_task_group` 개체의 `run` 메서드를 사용하여 `task_handle` 개체가 여러 번 예약하는 경우 발생하는 예외를 설명합니다.|
 |[invalid_operation 클래스](invalid-operation-class.md)|이 클래스는 잘못된 작업이 수행될 때 throw되는 예외로, 동시성 런타임에서 throw된 다른 예외 형식으로 보다 정확하게 설명되지 않은 예외를 설명합니다.|
-|[invalid_oversubscribe_operation 클래스](invalid-oversubscribe-operation-class.md)|이 클래스는 `_BeginOversubscription` 매개 변수를 `true`로 설정하여 `Context::Oversubscribe` 메서드를 이전에 호출하지 않고 `_BeginOversubscription` 매개 변수를 `false`로 설정하여 `Context::Oversubscribe` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.|
+|[invalid_oversubscribe_operation 클래스](invalid-oversubscribe-operation-class.md)|이 클래스는 매개 `Context::Oversubscribe` `_BeginOversubscription` 변수를 **`false`** `Context::Oversubscribe` 로 설정 하 여 메서드를 이전에 호출 하지 않고 매개 변수를로 설정 `_BeginOversubscription` **`true`** 하 여 메서드를 호출할 때 throw 되는 예외를 설명 합니다.|
 |[invalid_scheduler_policy_key 클래스](invalid-scheduler-policy-key-class.md)|이 클래스는 잘못되었거나 알 수 없는 키가 `SchedulerPolicy` 개체 생성자에 전달된 경우 또는 `SchedulerPolicy` 개체의 `SetPolicyValue` 메서드에 `SetConcurrencyLimits` 메서드와 같은 기타 방법으로 변경해야 하는 키가 전달된 경우 발생하는 예외를 설명합니다.|
 |[invalid_scheduler_policy_thread_specification 클래스](invalid-scheduler-policy-thread-specification-class.md)|이 클래스는 `MinConcurrency` 키의 값이 `MaxConcurrency` 키의 값보다 작도록 `SchedulerPolicy` 개체의 동시성 제한을 설정하려고 시도하는 경우 발생하는 예외를 설명합니다.|
 |[invalid_scheduler_policy_value 클래스](invalid-scheduler-policy-value-class.md)|이 클래스는 `SchedulerPolicy` 개체의 정책 키가 해당 키에 잘못된 값으로 설정된 경우 발생하는 예외를 설명합니다.|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>구조체
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |[DispatchState 구조체](dispatchstate-structure.md)|`DispatchState` 구조체는 `IExecutionContext::Dispatch` 메서드에 상태를 전송하는 데 사용됩니다. `IExecutionContext` 인터페이스에 대해 `Dispatch` 메서드가 호출되는 상황을 설명합니다.|
 |[IExecutionContext 구조체](iexecutioncontext-structure.md)|지정된 가상 프로세서에서 실행되고 협조적으로 컨텍스트가 전환될 수 있는 실행 컨텍스트에 대한 인터페이스입니다.|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>열거형
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent`에 유효한 상태입니다.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|에이전트 라이브러리에서 제공하는 추적 기능을 사용하여 추적할 수 있는 이벤트 형식입니다.|
@@ -173,13 +173,13 @@ namespace concurrency;
 
 ### <a name="functions"></a>Functions
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |[Alloc 함수](concurrency-namespace-functions.md#alloc)|동시성 런타임 캐싱 하위 할당기에서 지정된 크기의 메모리 블록을 할당합니다.|
 |[asend 함수](concurrency-namespace-functions.md#asend)|오버로드되었습니다. 대상 블록에 데이터를 전파하는 작업을 예약하는 비동기 전송 작업입니다.|
 |[cancel_current_task 함수](concurrency-namespace-functions.md#cancel_current_task)|현재 실행 중인 작업을 취소합니다. 이 함수는 작업 실행을 중단하도록 작업 본문 내에서 호출될 수 있으며 `canceled` 상태로 들어가도록 할 수 있습니다.<br /><br /> `task`의 본문에 없는 경우에 이 함수를 호출하는 것은 지원되는 시나리오가 아닙니다. 이렇게 하면 응용 프로그램에서 충돌 또는 응답 하지 않는 등의 정의 되지 않은 동작이 발생 합니다.|
 |[create_async 함수](concurrency-namespace-functions.md#create_async)|사용자가 제공한 람다 또는 함수 개체를 기준으로 Windows 런타임 비동기 구문을 만듭니다. `create_async`의 반환 형식은 메서드에 전달된 람다의 시그니처에 따라 `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` 또는 `IAsyncOperationWithProgress<TResult, TProgress>^` 중 하나입니다.|
-|[create_task 함수](concurrency-namespace-functions.md#create_task)|오버로드되었습니다. PPL [작업](task-class.md) 개체를 만듭니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 `auto` 키워드 사용을 허용하기 때문에 주로 편의상 제공됩니다.|
+|[create_task 함수](concurrency-namespace-functions.md#create_task)|오버로드되었습니다. PPL [작업](task-class.md) 개체를 만듭니다. 작업 생성자를 사용하는 곳이면 어디에나 `create_task`를 사용할 수 있습니다. 작업을 만드는 동안 키워드를 사용할 수 있기 때문에 주로 편의를 위해 제공 됩니다 **`auto`** .|
 |[CreateResourceManager 함수](concurrency-namespace-functions.md#createresourcemanager)|동시성 런타임 리소스 관리자의 singleton 인스턴스를 나타내는 인터페이스를 반환합니다. 리소스 관리자는 서로 협력하려는 스케줄러에 리소스를 할당해야 합니다.|
 |[DisableTracing 함수](concurrency-namespace-functions.md#disabletracing)|동시성 런타임에서 추적을 사용하지 않도록 설정합니다. ETW 추적이 기본적으로 등록되지 않으므로 이 함수는 사용되지 않습니다.|
 |[EnableTracing 함수](concurrency-namespace-functions.md#enabletracing)|동시성 런타임에서 추적을 사용하도록 설정합니다. 이제 ETW 추적이 기본적으로 설정되므로 이 함수는 사용되지 않습니다.|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[GetProcessorNodeCount 함수](concurrency-namespace-functions.md#getprocessornodecount)|기본 시스템의 NUMA 노드 또는 프로세서 패키지 수를 반환합니다.|
 |[GetSchedulerId 함수](concurrency-namespace-functions.md#getschedulerid)|`IScheduler` 인터페이스를 구현하는 스케줄러에 할당할 수 있는 고유 식별자를 반환합니다.|
 |[interruption_point 함수](concurrency-namespace-functions.md#interruption_point)|취소를 위한 중단 지점을 만듭니다. 이 함수가 호출된 컨텍스트에서 취소가 진행 중이면 현재 실행 중인 병렬 작업의 실행을 중단하는 내부 예외가 발생합니다. 취소가 진행되고 있지 않으면 함수에서 아무 작업도 하지 않습니다.|
-|[is_current_task_group_canceling 함수](concurrency-namespace-functions.md#is_current_task_group_canceling)|현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없는 경우 `false`가 반환됩니다.|
+|[is_current_task_group_canceling 함수](concurrency-namespace-functions.md#is_current_task_group_canceling)|현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없으면이 **`false`** 반환 됩니다.|
 |[make_choice 함수](concurrency-namespace-functions.md#make_choice)|오버로드되었습니다. 선택적 `choice` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
 |[make_greedy_join 함수](concurrency-namespace-functions.md#make_greedy_join)|오버로드되었습니다. 선택적 `greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
 |[make_join 함수](concurrency-namespace-functions.md#make_join)|오버로드되었습니다. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|
@@ -220,7 +220,7 @@ namespace concurrency;
 
 ### <a name="operators"></a>연산자
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |[연산자! =](concurrency-namespace-operators.md#operator_neq)|연산자의 좌변에 있는 `concurrent_vector` 개체가 우변에 있는 `concurrent_vector` 개체와 같지 않은지 테스트합니다.|
 |[연산자&&](concurrency-namespace-operators.md#operator_amp_amp)|오버로드되었습니다. 인수로 제공 된 두 작업이 모두 성공적으로 완료 되 면 완료 되는 작업을 만듭니다.|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>상수
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|동시성 런타임의 에이전트 라이브러리에서 발생하는 ETW 이벤트를 설명하는 범주 GUID({B9B5B78C-0713-4898-A21A-C67949DCED07})입니다.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|작업 또는 태스크와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|
@@ -258,6 +258,6 @@ namespace concurrency;
 
 **헤더:** pplconcrt.h, concrt. h, concrtrm.h, concurrent_priority_queue .h, concurrent_queue, concurrent_unordered_map .h, concurrent_unordered_set, concurrent_vector, internal_concurrent_hash, internal_split_ordered_list, ppl, pplcancellation_token, pplinterface.h, ppltasks.h,. h,. h,,
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [참조](reference-concurrency-runtime.md)
