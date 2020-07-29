@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955198"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229443"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -68,22 +68,22 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>매개 변수
 
-*drive*<br/>
+*드라이브나*<br/>
 디스크 드라이브입니다.
 
-*buffer*<br/>
+*버퍼*<br/>
 경로의 스토리지 위치입니다.
 
 *maxlen*<br/>
-경로의 최대 길이 (문자): **_getdcwd** 의 경우 **char** , **_wgetdcwd**의 경우 **wchar_t**
+경로의 최대 길이 (문자): **`char`** **_getdcwd** 및 **`wchar_t`** **_wgetdcwd**의 최대 길이입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-**_getdcwd_nolock** 및 **_wgetdcwd_nolock** 은 다른 스레드의 간섭 으로부터 보호 되지 않는다는 점을 제외 하 고 각각 **_getdcwd** 및 **_wgetdcwd**와 동일 합니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
+**_getdcwd_nolock** 및 **_wgetdcwd_nolock** 는 다른 스레드의 간섭 으로부터 보호 되지 않는다는 점을 제외 하 고 각각 **_getdcwd** 및 **_wgetdcwd**와 동일 합니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 애플리케이션과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
@@ -98,9 +98,9 @@ wchar_t *_wgetdcwd_nolock(
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506886"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229365"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -75,11 +75,11 @@ long double sqrtl(
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하는 **sqrt** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **sqrt** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 형식을 사용 하는 **sqrt** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **sqrt** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **Sqrt** 함수는 *x*의 제곱근을 반환 합니다. 기본적으로 *x* 가 음수 이면 **Sqrt** 가 무한 NaN을 반환 합니다.
 

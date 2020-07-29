@@ -44,12 +44,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957980"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229352"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -84,7 +84,7 @@ int _swscanf_s_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 저장된 데이터
 
 *format*<br/>
@@ -96,7 +96,7 @@ int _swscanf_s_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 반환 값은 오류에 대 한 **EOF** 이거나, 첫 번째 변환 전에 문자열의 끝에 도달한 경우입니다.
 
@@ -106,7 +106,7 @@ int _swscanf_s_l(
 
 ## <a name="remarks"></a>설명
 
-**Sscanf_s** 함수는 *버퍼* 에서 각 *인수*에 의해 지정 된 위치로 데이터를 읽습니다. 형식 문자열 뒤의 인수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터를 지정 합니다. 덜 안전한 버전을 달리 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), 버퍼 크기 매개 변수는 형식 필드 문자를 사용할 때 필요한 **c**, **C**, **s**, **S**, 또는 컨트롤 집합에 포함 된 문자열 **[]** 합니다. 문자의 버퍼 크기는 해당 크기를 필요로 하는 각 버퍼 매개 변수 바로 뒤에 추가 매개 변수로 제공해야 합니다. 예를 들어 문자열을 읽고 있는 경우 해당 문자열에 대한 버퍼 크기가 다음과 같이 전달됩니다.
+**Sscanf_s** 함수는 *버퍼* 에서 각 *인수*에 의해 지정 된 위치로 데이터를 읽습니다. 형식 문자열 뒤의 인수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터를 지정 합니다. 낮은 수준의 보안 버전 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)달리, 형식 필드 문자 **c**, **c**, **s**, **s**를 사용 하거나 **[]** 로 묶은 문자열 제어 집합을 사용할 때는 버퍼 크기 매개 변수가 필요 합니다. 문자의 버퍼 크기는 해당 크기를 필요로 하는 각 버퍼 매개 변수 바로 뒤에 추가 매개 변수로 제공해야 합니다. 예를 들어 문자열을 읽고 있는 경우 해당 문자열에 대한 버퍼 크기가 다음과 같이 전달됩니다.
 
 ```C
 wchar_t ws[10];
@@ -132,15 +132,15 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 자세한 내용은 참조 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 및 [scanf 형식 필드 문자](../../c-runtime-library/scanf-type-field-characters.md)를 참조하세요.
 
 > [!NOTE]
-> Size 매개 변수는 **size_t**가 아닌 **부호**있는 형식입니다. 64 비트 대상에 대해 컴파일하는 경우 정적 캐스트를 사용 하 여 **_countof** 또는 **sizeof** 결과를 올바른 크기로 변환 합니다.
+> Size 매개 변수는 size_t이 **`unsigned`** 아니라 형식 **size_t**입니다. 64 비트 대상에 대해 컴파일하는 경우 정적 캐스트를 사용 하 여 **_countof** 또는 **`sizeof`** 결과를 올바른 크기로 변환 합니다.
 
 *Format* 인수는 입력 필드의 해석을 제어 하 고 **scanf_s** 함수에 대 한 *format* 인수와 동일한 폼 및 함수를 포함 합니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
 
-**swscanf_s** 는 **sscanf_s**의 와이드 문자 버전입니다. **swscanf_s** 에 대 한 인수는 와이드 문자 문자열입니다. **sscanf_s** 는 멀티 바이트 16 진수 문자를 처리 하지 않습니다. **swscanf_s** 는 유니코드 전자 16 진수 또는 "호환성 영역" 문자를 처리 하지 않습니다. 그렇지 않으면 **swscanf_s** 와 **sscanf_s** 가 동일 하 게 동작 합니다.
+**swscanf_s** 은 **sscanf_s**의 와이드 문자 버전입니다. **swscanf_s** 인수는 와이드 문자 문자열입니다. **sscanf_s** 는 멀티 바이트 16 진수 문자를 처리 하지 않습니다. **swscanf_s** 는 유니코드 전자 16 진수 또는 "호환성 영역" 문자를 처리 하지 않습니다. 그렇지 않으면 **swscanf_s** 와 **sscanf_s** 는 동일 하 게 동작 합니다.
 
 **_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고는 동일 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -154,7 +154,7 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 |**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**, **_swscanf_s_l**|\<stdio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -196,10 +196,10 @@ Integer:  = 15
 Real:     = 15.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

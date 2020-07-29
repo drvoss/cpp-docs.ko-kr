@@ -118,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918315"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229339"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -206,7 +206,7 @@ int _wstat64i32(
 
 이러한 함수의 변형은 32비트 또는 64비트 시간 형식 및 32비트 또는 64비트 파일 길이를 지원합니다. 첫 번째 숫자 접미사 (**32** 또는 **64**)는 사용 된 시간 형식의 크기를 나타냅니다. 두 번째 접미사는 **i32** 또는 **i64**중 하나 이며, 파일 크기가 32 비트 또는 64 비트 정수로 표시 되는지를 나타냅니다.
 
-**_stat** 은 **_stat64i32**와 동일 하며, **구조체** **_stat** 에는 64 비트 시간이 포함 됩니다. 이는 **_USE_32BIT_TIME_T** 정의 되지 않는 한 true 이며,이 경우 이전 동작이 적용 됩니다. **_stat** 는 32 비트 시간을 사용 하 고 **struct** **_stat** 는 32 비트 시간을 포함 합니다. **_Stati64**에도 마찬가지입니다.
+**_stat** 은 **_stat64i32**와 같으며 **`struct`** **_stat** 에는 64 비트 시간이 포함 됩니다. 이는 **_USE_32BIT_TIME_T** 정의 되지 않는 한 true 이며,이 경우 이전 동작이 적용 됩니다. **_stat** 는 32 비트 시간을 사용 하 고 **`struct`** **_stat** 는 32 비트 시간을 포함 합니다. **_Stati64**에도 마찬가지입니다.
 
 > [!NOTE]
 > **_Wstat** Windows Vista 기호화 된 링크에서 작동 하지 않습니다. 이 경우 **_wstat** 는 항상 파일 크기를 0으로 보고 합니다. **_stat** 는 기호화 된 링크와 제대로 작동 합니다.
@@ -260,8 +260,8 @@ SYS\STAT.에 정의 된 **_stat** 구조체입니다. H에는 다음 필드가 �
 
 |루틴에서 반환된 값|필수 헤더|선택적 헤더|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> 다음에 \<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> 다음에 \<sys/stat.h> 또는 \<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>다음으로\<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>뒤에 \<sys/stat.h> 또는\<wchar.h>|\<errno.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -328,7 +328,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229131"
 ---
 # <a name="binary-operators"></a>이항 연산자
 
@@ -19,7 +19,7 @@ ms.locfileid: "80181306"
 
 ## <a name="redefinable-binary-operators"></a>다시 정의 가능 이항 연산자
 
-|연산자|이름|
+|연산자|Name|
 |--------------|----------|
 |**,**|쉼표|
 |**!=**|같지 않음|
@@ -36,15 +36,15 @@ ms.locfileid: "80181306"
 |**-=**|빼기/할당|
 |**->**|멤버 선택|
 |**->&#42;**|멤버 포인터 선택|
-|**/**|나누기|
+|**/**|사업부|
 |**/=**|나누기/할당|
 |**<**|보다 작음|
-|**<<**|왼쪽 {1}|
+|**<<**|왼쪽 |
 |**<<=**|왼쪽 시프트/할당|
 |**<=**|작거나 같음|
 |**=**|할당|
 |**==**|등호|
-|**>**|보다 큼|
+|**>**|초과|
 |**>=**|크거나 같음|
 |**>>**|오른쪽 Shift|
 |**>>=**|오른쪽 시프트/할당|
@@ -56,13 +56,13 @@ ms.locfileid: "80181306"
 
 이항 연산자 함수를 비정적 멤버로 선언하려면 해당 함수를 다음과 같은 형태로 선언해야 합니다.
 
-> *ret-형식* **operator** *op* **(** *arg* **)**
+> *ret-형식* **`operator`** *op* **(** *arg* **)**
 
 여기서 *ret* 는 반환 형식이 고, *op* 는 앞의 표에 나와 있는 연산자 중 하나 이며, *arg* 는 모든 형식의 인수입니다.
 
 이항 연산자 함수를 전역 함수로 선언하려면 해당 함수를 다음과 같은 형태로 선언해야 합니다.
 
-> *ret-형식* **operator** *op* **(** _arg1_ **,** _arg2_ **)**
+> *ret-형식* **`operator`** *op* **(** _arg1_**,** _arg2_ **)**
 
 여기서 *ret-형식* 및 *op* 는 멤버 연산자 함수에 대해 설명 된 대로, *arg1* 및 *arg2* 는 인수입니다. 인수 중 하나 이상이 클래스 형식이어야 합니다.
 
@@ -71,4 +71,4 @@ ms.locfileid: "80181306"
 
 ## <a name="see-also"></a>참고 항목
 
-[연산자 오버로드](../cpp/operator-overloading.md)
+[연산자 오버 로드](../cpp/operator-overloading.md)
