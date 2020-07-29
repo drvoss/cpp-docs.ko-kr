@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224593"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread 클래스
 
-각 스레드에 대해 별도의 캐시 개체를 제공하는 [동기화 필터에](../standard-library/allocators-header.md) 대해 설명합니다.
+각 스레드에 대해 별도의 캐시 개체를 제공 하는 [동기화 필터](../standard-library/allocators-header.md) 에 대해 설명 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -50,11 +50,11 @@ class sync_per_thread
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<allocators>
+**헤더:**\<allocators>
 
 **네임스페이스:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::할당
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: allocate
 
 메모리 블록을 할당합니다.
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 구성원 함수는 현재 스레드에 속하는 캐시 개체에 대한 `cache::allocate(count)` 호출 결과를 반환합니다. 현재 스레드에 대해 캐시 개체가 할당되지 않은 경우에는 먼저 캐시 개체가 할당됩니다.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d eallocate
 
 지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*Ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
+|*ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
 |*count*|스토리지에서 할당을 취소할 개체의 수입니다.|
 
 ### <a name="remarks"></a>설명
 
 구성원 함수는 현재 스레드에 속하는 캐시 개체에 대해 `deallocate`를 호출합니다. 현재 스레드에 대해 캐시 개체가 할당되지 않은 경우에는 먼저 캐시 개체가 할당됩니다.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::같음
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: equals
 
 두 캐시가 같은지 비교합니다.
 
@@ -108,10 +108,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Return Value
 
-false **는** 이 개체 또는 현재 스레드의 *기타에* 대해 캐시 개체가 할당되지 않은 경우 false입니다. 그렇지 않으면 두 캐시 개체에 `operator==`를 적용한 결과가 반환됩니다.
+**`false`** 이 개체 또는 현재 스레드의 *다른* 에 대해 캐시 개체가 할당 되지 않은 경우입니다. 그렇지 않으면 두 캐시 개체에 `operator==`를 적용한 결과가 반환됩니다.
 
 ### <a name="remarks"></a>설명
 
 ## <a name="see-also"></a>참고 항목
 
-[\<할당자>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

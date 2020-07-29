@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8648258f17bff577ba1c0dde5016f5f284b82e25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224840"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 연산자
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체와 같지 않은지 테스트합니다.
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -45,7 +45,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>Return Value
 
-목록이 같지 않으면 **true**이고 목록이 같으면 **false**입니다.
+**`true`** 목록이 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 목록이 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -76,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 작은지 테스트합니다.
 
@@ -88,7 +88,7 @@ bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -96,7 +96,7 @@ bool operator<(
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작지만 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 작거나 같지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 작거나 같은지 테스트합니다.
 
@@ -143,7 +143,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -151,7 +151,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 작거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체와 같은지 테스트합니다.
 
@@ -198,7 +198,7 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -206,7 +206,7 @@ bool operator==(
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록과 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록과 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -237,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 큰지 테스트합니다.
 
@@ -249,7 +249,7 @@ bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -257,7 +257,7 @@ bool operator>(
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 크면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 크거나 같은지 테스트합니다.
 
@@ -304,7 +304,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `list` 형식의 개체입니다.
 
 *오른쪽*\
@@ -312,7 +312,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 크거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 

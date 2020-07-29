@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 4d41ffcfccbd7ef65ed86df79bffec1209a88cd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: beb5cd1e13de1a10546f28d4a7eb98e45b6e9af1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327661"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224268"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 클래스
 
-`CComMultiThreadModelNoCS`는 중요한 섹션 잠금 또는 잠금 해제 기능 없이 변수값을 증분하고 감소시키는 스레드 안전 방법을 제공합니다.
+`CComMultiThreadModelNoCS`임계 영역 잠금 또는 잠금 해제 기능 없이 변수 값을 증가 및 감소 시키는 스레드로부터 안전한 메서드를 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,37 +35,37 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::자동 임계 섹션](#autocriticalsection)|참조 클래스 [CComFakecriticalsection](../../atl/reference/ccomfakecriticalsection-class.md).|
-|[CComMultiThreadModelNoCS::중요 섹션](#criticalsection)|참조 `CComFakeCriticalSection`클래스 .|
-|[CComMultiThreadModelNoCS::스레드 모델NoCS](#threadmodelnocs)|참조 `CComMultiThreadModelNoCS`클래스 .|
+|[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)클래스를 참조 합니다.|
+|[CComMultiThreadModelNoCS:: CriticalSection](#criticalsection)|References 클래스 `CComFakeCriticalSection` 입니다.|
+|[CComMultiThreadModelNoCS:: ThreadModelNoCS](#threadmodelnocs)|References 클래스 `CComMultiThreadModelNoCS` 입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::D](#decrement)|(정적) 스레드 안전 방식으로 지정된 변수의 값을 감소시입니다.|
-|[CComMultiThreadModelNoCS::증분](#increment)|(정적) 스레드 안전 방식으로 지정된 변수의 값을 증분합니다.|
+|[CComMultiThreadModelNoCS::D ecrement](#decrement)|정적인 스레드로부터 안전한 방식으로 지정 된 변수의 값을 감소 시킵니다.|
+|[CComMultiThreadModelNoCS:: 증가값](#increment)|정적인 스레드로부터 안전한 방식으로 지정 된 변수의 값을 증가 시킵니다.|
 
 ## <a name="remarks"></a>설명
 
-`CComMultiThreadModelNoCS`[CComMultiThreadModel은](../../atl/reference/ccommultithreadmodel-class.md) 변수를 증분 및 감소시키기 위한 스레드 안전 메서드를 제공한다는 점에서 유사합니다. 그러나 `CComMultiThreadModelNoCS`. `Lock` `Unlock`
+`CComMultiThreadModelNoCS`는 변수를 증가 및 감소 시킬 수 있는 스레드로부터 안전한 메서드를 제공 한다는 점에서 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 와 비슷합니다. 그러나를 통해 임계 영역 클래스를 참조 하는 경우 `CComMultiThreadModelNoCS` 및와 같은 `Lock` 메서드 `Unlock` 는 아무 작업도 수행 하지 않습니다.
 
-일반적으로 `CComMultiThreadModelNoCS` `ThreadModelNoCS` **typedef** 이름을 통해 사용합니다. 이 **형식 def는** `CComMultiThreadModelNoCS`에서 `CComMultiThreadModel`정의됩니다. 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).
+일반적으로 `CComMultiThreadModelNoCS` 는 이름을 통해를 사용 `ThreadModelNoCS` **`typedef`** 합니다. 이 **`typedef`** 는 `CComMultiThreadModelNoCS` , `CComMultiThreadModel` 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)에 정의 되어 있습니다.
 
 > [!NOTE]
-> 전역 **typedef** 이름 [CComObjectThread 모델](atl-typedefs.md#ccomobjectthreadmodel) 및 [CComGlobalsThread Model](atl-typedefs.md#ccomglobalsthreadmodel) 은 을 참조하지 `CComMultiThreadModelNoCS`않습니다.
+> **`typedef`** [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) 및 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) 전역 이름은 참조 하지 않습니다 `CComMultiThreadModelNoCS` .
 
-에 추가 `CComMultiThreadModelNoCS` 된 `AutoCriticalSection` 정의 `CriticalSection`및 . `ThreadModelNoCS` 이 후자의 두 **typedef** 이름은 중요한 섹션을 가져오고 해제하는 것과 관련된 빈 메서드를 제공하는 [CComFakeCriticalSection을](../../atl/reference/ccomfakecriticalsection-class.md)참조합니다.
+외에 `ThreadModelNoCS` 도 `CComMultiThreadModelNoCS` 및을 `AutoCriticalSection` 정의 `CriticalSection` 합니다. 이러한 후자의 두 **`typedef`** 이름에는 임계 영역을 가져오고 해제 하는 것과 관련 된 빈 메서드를 제공 하는 [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)가 참조 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlbase.h
+**헤더:** 서 기. h
 
-## <a name="ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::자동 임계 섹션
+## <a name="ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection
 
-을 `CComMultiThreadModelNoCS`사용하는 경우 **typedef** 이름은 `AutoCriticalSection` [클래스 CComFakeCriticalSection을](../../atl/reference/ccomfakecriticalsection-class.md)참조합니다.
+를 사용 하 `CComMultiThreadModelNoCS` 는 경우 **`typedef`** 이름이 `AutoCriticalSection` [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)클래스를 참조 합니다.
 
 ```
 typedef CComFakeCriticalSection AutoCriticalSection;
@@ -73,25 +73,25 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>설명
 
-임계 `CComFakeCriticalSection` 섹션을 제공하지 않기 때문에 해당 메서드는 아무 것도 수행하지 않습니다.
+는 `CComFakeCriticalSection` 임계 영역을 제공 하지 않으므로 해당 메서드는 아무 작업도 수행 하지 않습니다.
 
-[CComMultiThread모델](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel에도](../../atl/reference/ccomsinglethreadmodel-class.md) 에 `AutoCriticalSection`대한 정의가 포함되어 있습니다. 다음 표에서는 스레딩 모델 클래스와 다음에 참조되는 `AutoCriticalSection`임계 섹션 클래스 간의 관계를 보여 주며 있습니다.
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 에는에 대 한 정의도 포함 되어 `AutoCriticalSection` 있습니다. 다음 표에서는에서 참조 하는 스레딩 모델 클래스와 임계 영역 클래스 간의 관계를 보여 줍니다 `AutoCriticalSection` .
 
-|정의된 클래스|참조된 클래스|
+|클래스 정의|참조 된 클래스|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-`AutoCriticalSection`은 에서 **typedef** 이름 [CriticalSection을](#criticalsection)사용할 수 있습니다. CRT 시작 `AutoCriticalSection` 코드를 제거하려는 경우 전역 개체 또는 정적 클래스 멤버에 지정해서는 안 됩니다.
+뿐만 아니라 `AutoCriticalSection` **`typedef`** [CriticalSection](#criticalsection)이름도 사용할 수 있습니다. `AutoCriticalSection`CRT 시작 코드를 제거 하려는 경우에는 전역 개체 또는 정적 클래스 멤버에를 지정 하면 안 됩니다.
 
 ### <a name="example"></a>예제
 
-[CComMultiThread 모델::자동 임계 섹션](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)을 참조하십시오.
+[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)를 참조 하세요.
 
-## <a name="ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS::중요 섹션
+## <a name="ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS:: CriticalSection
 
-을 `CComMultiThreadModelNoCS`사용하는 경우 **typedef** 이름은 `CriticalSection` [클래스 CComFakeCriticalSection을](../../atl/reference/ccomfakecriticalsection-class.md)참조합니다.
+를 사용 하 `CComMultiThreadModelNoCS` 는 경우 **`typedef`** 이름이 `CriticalSection` [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)클래스를 참조 합니다.
 
 ```
 typedef CComFakeCriticalSection CriticalSection;
@@ -99,25 +99,25 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>설명
 
-임계 `CComFakeCriticalSection` 섹션을 제공하지 않기 때문에 해당 메서드는 아무 것도 수행하지 않습니다.
+는 `CComFakeCriticalSection` 임계 영역을 제공 하지 않으므로 해당 메서드는 아무 작업도 수행 하지 않습니다.
 
-[CComMultiThread모델](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel에도](../../atl/reference/ccomsinglethreadmodel-class.md) 에 `CriticalSection`대한 정의가 포함되어 있습니다. 다음 표에서는 스레딩 모델 클래스와 다음에 참조되는 `CriticalSection`임계 섹션 클래스 간의 관계를 보여 주며 있습니다.
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 에는에 대 한 정의도 포함 되어 `CriticalSection` 있습니다. 다음 표에서는에서 참조 하는 스레딩 모델 클래스와 임계 영역 클래스 간의 관계를 보여 줍니다 `CriticalSection` .
 
-|정의된 클래스|참조된 클래스|
+|클래스 정의|참조 된 클래스|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-`CriticalSection`은 에서 **typedef** 이름을 `AutoCriticalSection`사용할 수 있습니다. CRT 시작 `AutoCriticalSection` 코드를 제거하려는 경우 전역 개체 또는 정적 클래스 멤버에 지정해서는 안 됩니다.
+외에도 `CriticalSection` 이름을 사용할 수 있습니다 **`typedef`** `AutoCriticalSection` . `AutoCriticalSection`CRT 시작 코드를 제거 하려는 경우에는 전역 개체 또는 정적 클래스 멤버에를 지정 하면 안 됩니다.
 
 ### <a name="example"></a>예제
 
-[CComMultiThread 모델::자동 임계 섹션](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)을 참조하십시오.
+[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)를 참조 하세요.
 
-## <a name="ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::D
+## <a name="ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::D ecrement
 
-이 정적 함수는 Win32 함수 [인터록데어션을](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)호출하여 *p.*
+이 정적 함수는 *p*로 가리키는 변수의 값을 감소 시키는 Win32 함수 [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)를 호출 합니다.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -125,20 +125,20 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*P*<br/>
-【인】 감소될 변수에 대한 포인터입니다.
+*®*<br/>
+진행 감소 시킬 변수에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-감소 결과가 0이면 0을 `Decrement` 반환합니다. 감소 결과가 0이 아닌 경우 반환 값도 0이 아닌 것이지만 감소의 결과와 같지 않을 수 있습니다.
+감소 결과가 0 이면는 `Decrement` 0을 반환 합니다. 감소 결과 값이 0이 아니면 반환 값도 0이 아니라 감소의 결과와 다를 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-**연동Decrement는** 두 개 이상의 스레드가 동시에 이 변수를 사용하는 것을 방지합니다.
+**InterlockedDecrement** 은이 변수를 사용 하 여 두 개 이상의 스레드가 동시에 수행 되지 않도록 방지 합니다.
 
-## <a name="ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS::증분
+## <a name="ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS:: 증가값
 
-이 정적 함수는 Win32 함수 [인터록Increment를](/windows/win32/api/winnt/nf-winnt-interlockedincrement)호출하여 *p로*가리키는 변수의 값을 증가시
+이 정적 함수는 *p*로 가리키는 변수의 값을 증가 시키는 Win32 함수 [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)를 호출 합니다.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -146,20 +146,20 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*P*<br/>
-【인】 증분할 변수에 대한 포인터입니다.
+*®*<br/>
+진행 증가 시킬 변수에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-증분 결과가 0이면 **증분은** 0을 반환합니다. 증분 결과가 0이 아닌 경우 반환 값도 0이 아니지만 증분 결과와 같지 않을 수 있습니다.
+증가값의 결과가 0 이면 **increment** 는 0을 반환 합니다. 증가값의 결과가 0이 아닌 경우 반환 값도 0이 아니라 증가값의 결과와 다를 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-**연동InlockedIncre는** 두 개 이상의 스레드가 동시에 이 변수를 사용하는 것을 방지합니다.
+**InterlockedIncrement** 은이 변수를 사용 하 여 두 개 이상의 스레드가 동시에 수행 되지 않도록 방지 합니다.
 
-## <a name="ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::스레드 모델NoCS
+## <a name="ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS:: ThreadModelNoCS
 
-을 `CComMultiThreadModelNoCS`사용할 때 **typedef** `ThreadModelNoCS` `CComMultiThreadModelNoCS`이름은 단순히 참조합니다.
+를 사용 하 `CComMultiThreadModelNoCS` 는 경우 **`typedef`** 이름은를 `ThreadModelNoCS` 참조 하기만 `CComMultiThreadModelNoCS` 합니다.
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -167,23 +167,23 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="remarks"></a>설명
 
-[CComMultiThread모델](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel에도](../../atl/reference/ccomsinglethreadmodel-class.md) 에 `ThreadModelNoCS`대한 정의가 포함되어 있습니다. 다음 표에서는 스레딩 모델 클래스와 다음에 참조되는 `ThreadModelNoCS`클래스 간의 관계를 보여 주며 있습니다.
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) 및 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 에는에 대 한 정의도 포함 되어 `ThreadModelNoCS` 있습니다. 다음 표에서는에서 참조 하는 클래스와 스레딩 모델 클래스 간의 관계를 보여 줍니다 `ThreadModelNoCS` .
 
-|정의된 클래스|참조된 클래스|
+|클래스 정의|참조 된 클래스|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComMultiThreadModelNoCS`|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
 
-`ThreadModelNoCS` 의 `CComMultiThreadModelNoCS` 정의는 및 `CComMultiThreadModel` `CComSingleThreadModel`을 와 대칭을 제공한다는 점에 유의하십시오. 예를 들어 다음과 같은 `CComMultiThreadModel::AutoCriticalSection` **형식 def를**선언한 샘플 코드가 있다고 가정합니다.
+에서의 정의는 및에 대 `ThreadModelNoCS` `CComMultiThreadModelNoCS` 한 대칭을 제공 합니다 `CComMultiThreadModel` `CComSingleThreadModel` . 예를 들어의 샘플 코드는 다음을 선언 했다고 가정 합니다 `CComMultiThreadModel::AutoCriticalSection` **`typedef`** .
 
 [!code-cpp[NVC_ATL_COM#37](../../atl/codesnippet/cpp/ccommultithreadmodelnocs-class_1.h)]
 
-에 대해 `ThreadModel` 지정된 클래스에 `CComMultiThreadModelNoCS`관계없이 `_ThreadModel` (예 :) 그에 따라 해결됩니다.
+에 대해 지정 된 클래스 `ThreadModel` (예:)에 관계 없이 `CComMultiThreadModelNoCS` 는 `_ThreadModel` 그에 따라 확인 됩니다.
 
 ### <a name="example"></a>예제
 
-[CComMultiThread 모델::자동 임계 섹션](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)을 참조하십시오.
+[CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

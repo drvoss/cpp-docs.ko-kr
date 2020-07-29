@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8ea3a106e8819bf067203f220ca51e17b87bfe46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225464"
 ---
 # <a name="compiler-error-c2632"></a>컴파일러 오류 C2632
 
@@ -26,7 +26,7 @@ ms.locfileid: "74754695"
 int float i;   // C2632
 ```
 
-이 오류는 Visual Studio .NET 2003에 대해 수행 된 컴파일러 규칙 작업의 결과로도 생성 될 수 있습니다. 이제 `bool` 적절 한 형식입니다. 이전 버전에서 `bool`는 typedef 이며 해당 이름을 사용 하 여 식별자를 만들 수 있습니다.
+이 오류는 Visual Studio .NET 2003에 대해 수행 된 컴파일러 규칙 작업의 결과로도 생성 될 수 있습니다. **`bool`** 는 이제 적절 한 형식입니다. 이전 버전에서는 **`bool`** typedef 이며 해당 이름을 사용 하 여 식별자를 만들 수 있습니다.
 
 다음 샘플에서는 C2632를 생성 합니다.
 
@@ -36,4 +36,4 @@ int float i;   // C2632
 void f(int bool);   // C2632
 ```
 
-Visual Studio .NET 2003 및 visual Studio .NET 버전 C++의 visual studio에서 코드를 모두 사용할 수 있도록이 오류를 해결 하려면 식별자의 이름을 바꿉니다.
+이 오류를 해결 하려면 Visual Studio .NET 2003 및 Visual Studio .NET 버전 Visual C++ 모두에서 코드가 유효 하도록 식별자의 이름을 바꿉니다.
