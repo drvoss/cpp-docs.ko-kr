@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218717"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-문자열을 **long** **정수 (long)** 로 변환 합니다.
+문자열을 정수로 변환 합니다 **`long long`** .
 
 ## <a name="syntax"></a>구문
 
@@ -73,7 +73,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 변환할 문자열입니다.
 
 *locale*<br/>
@@ -81,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>Return Value
 
-각 함수는 입력 문자를 숫자로 해석 하 여 생성 되는 **long** **long** 값을 반환 합니다. **Atoll** 의 반환 값은 입력을 해당 형식의 값으로 변환할 수 없는 경우 0입니다.
+각 함수는 **`long long`** 입력 문자를 숫자로 해석 하 여 생성 된 값을 반환 합니다. **Atoll** 의 반환 값은 입력을 해당 형식의 값으로 변환할 수 없는 경우 0입니다.
 
 큰 양의 정수 값을 사용 하는 오버플로의 경우 **atoll** 는 **LLONG_MAX**을 반환 하 고, 큰 음의 정수 값을 사용 하는 오버플로의 경우 **LLONG_MIN**을 반환 합니다.
 
@@ -89,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>설명
 
-이러한 함수는 문자열을 **long** **long** 정수 값으로 변환 합니다.
+이러한 함수는 문자열을 **`long long`** 정수 값으로 변환 합니다.
 
 입력 문자열은 지정된 형식의 숫자 값으로 해석될 수 있는 문자 시퀀스입니다. 함수는 숫자의 일부로 인식할 수 없는 첫 번째 문자에서 입력 문자열 읽기를 중지합니다. 이 문자는 문자열을 종결하는 null 문자('\0' 또는 L'\0')일 수 있습니다.
 
@@ -170,11 +170,11 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

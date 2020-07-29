@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913964"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218548"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-**new** 연산자에서 메모리 할당에 실패하는 경우 오류 처리 메커니즘에 제어를 전달합니다.
+**`new`** 연산자가 메모리 할당에 실패 하는 경우 오류 처리 메커니즘에 제어를 전달 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -58,7 +58,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>설명
 
-C + + **_set_new_handler** 함수는 **new** 연산자가 메모리 할당에 실패 하는 경우 컨트롤을 얻는 예외 처리 함수를 지정 합니다. **New** 가 실패 하는 경우 런타임 시스템은 **_set_new_handler**에 인수로 전달 된 예외 처리 함수를 자동으로 호출 합니다. 새 .h에 정의 된 **_PNH**은 **int** 형식을 반환 하 고 **size_t**형식의 인수를 사용 하는 함수에 대 한 포인터입니다. **Size_t** 를 사용 하 여 할당할 공간의 크기를 지정 합니다.
+C + + **_set_new_handler** 함수는 **`new`** 연산자가 메모리 할당에 실패 하는 경우 컨트롤을 얻는 예외 처리 함수를 지정 합니다. 가 **`new`** 실패 하면 런타임 시스템은 **_set_new_handler**에 인수로 전달 된 예외 처리 함수를 자동으로 호출 합니다. 새 .h에 정의 된 **_PNH**는 형식을 반환 하 **`int`** 고 **size_t**형식의 인수를 사용 하는 함수에 대 한 포인터입니다. **Size_t** 를 사용 하 여 할당할 공간의 크기를 지정 합니다.
 
 기본 처리기가 없습니다.
 
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 **_set_new_handler**에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리 할당에 실패 한 경우 **malloc** 는 **새** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 합니다. 기본값을 재정의하려면 다음을
+C++ [_set_new_mode](set-new-mode.md) 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 **_set_new_handler**에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리를 할당 하지 못할 때 **malloc** 이 **`new`** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 기본값을 재정의하려면 다음을
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 초기 프로그램 또는 Newmode.obj에 대한 링크에서 호출합니다.
 
-사용자 정의 `operator new` 를 제공 하는 경우 오류 발생 시 새 처리기 함수가 자동으로 호출 되지 않습니다.
+사용자 정의를 `operator new` 제공 하는 경우 오류 발생 시 새 처리기 함수가 자동으로 호출 되지 않습니다.
 
 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md)를 참조하세요.
 
@@ -167,7 +167,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

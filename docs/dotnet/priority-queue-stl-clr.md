@@ -51,18 +51,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: e21e7ba4dc3a4ed270548506ac1a9e37a2c1a23a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c5a37cc76f6ac3a3f92cf54b440960d7476daa9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208470"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211038"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue(STL/CLR)
 
-템플릿 클래스는 액세스가 제한 된 다양 한 길이의 정렬 된 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터 `priority_queue`를 사용 하 여 기본 컨테이너를 우선 순위 큐로 관리 합니다.
+템플릿 클래스는 액세스가 제한 된 다양 한 길이의 정렬 된 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `priority_queue` 기본 컨테이너를 우선 순위 큐로 관리 합니다.
 
-아래 설명에서 `GValue`는 두 번째가 참조 형식이 아닌 경우에는 *값* 과 동일 하 여 `Value^`됩니다. 마찬가지로, 후자가 ref 형식이 아닌 `GContainer`는 *컨테이너* 와 동일 합니다 .이 경우 `Container^`됩니다.
+아래 설명에서 후자가 `GValue` ref 형식이 아닌 경우는 *값* 과 같습니다 `Value^` . 마찬가지로, `GContainer` 후자가 ref 형식이 아닌 경우는 *컨테이너* 와 동일 합니다 `Container^` .
 
 ## <a name="syntax"></a>구문
 
@@ -85,7 +85,7 @@ template<typename Value,
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/queue >
+**헤더:**\<cliext/queue>
 
 **네임 스페이스:** cliext
 
@@ -114,7 +114,7 @@ template<typename Value,
 |[priority_queue::size(STL/CLR)](#size)|요소 수를 계산합니다.|
 |[priority_queue::top(STL/CLR)](#top)|우선 순위가 가장 높은 요소에 액세스 합니다.|
 |[priority_queue::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사 합니다.|
-|[priority_queue::value_comp(STL/CLR)](#value_comp)|두 요소에 대 한 순서 지정 대리자를 복사합니다.|
+|[priority_queue::value_comp(STL/CLR)](#value_comp)|두 요소의 순서 지정 대리자를 복사합니다.|
 
 |속성|설명|
 |--------------|-----------------|
@@ -129,25 +129,25 @@ template<typename Value,
 |인터페이스|설명|
 |---------------|-----------------|
 |<xref:System.ICloneable>|개체를 복제 합니다.|
-|IPriorityQueue\<값, 컨테이너 >|일반 컨테이너 어댑터를 유지 관리 합니다.|
+|IPriorityQueue\<Value, Container>|일반 컨테이너 어댑터를 유지 관리 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-개체는 `Container`형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 및 해제 하 여 `Value` 요소를 저장 하 고 요청 시 증가 합니다. 시퀀스를 힙으로 정렬 된 상태로 유지 합니다 .이는 우선 순위가 가장 높은 요소 (최상위 요소)를 쉽게 액세스 하 고 제거할 수 있습니다. 개체는 새 요소를 푸시하는 데 대 한 액세스를 제한 하 고 우선 순위가 가장 높은 요소만 팝 하 여 우선 순위 큐를 구현 합니다.
+개체는 `Container` 요소를 저장 하 고 요청 시 증가 하는 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 `Value` 합니다. 시퀀스를 힙으로 정렬 된 상태로 유지 합니다 .이는 우선 순위가 가장 높은 요소 (최상위 요소)를 쉽게 액세스 하 고 제거할 수 있습니다. 개체는 새 요소를 푸시하는 데 대 한 액세스를 제한 하 고 우선 순위가 가장 높은 요소만 팝 하 여 우선 순위 큐를 구현 합니다.
 
-개체는 [priority_queue:: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. Priority_queue를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않는 경우 기본값은 `operator<(value_type, value_type)`비교입니다. 멤버 함수 [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`를 호출 하 여이 저장 된 개체에 액세스 합니다.
+개체는 [priority_queue:: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. Priority_queue를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않으면 기본값은 비교입니다 `operator<(value_type, value_type)` . 멤버 함수 [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)를 호출 하 여이 저장 된 개체에 액세스 `()` 합니다.
 
-이러한 대리자 개체는 [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)형식의 값에 대해 엄격 하 고 약한 순서를 적용 해야 합니다. 즉, 두 키 `X` 및 `Y`에 대해 다음을 수행 합니다.
+이러한 대리자 개체는 [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)형식의 값에 대해 엄격 하 고 약한 순서를 적용 해야 합니다. 즉, 다음과 같은 두 가지 키 `X` 가 `Y` 있습니다.
 
-`value_comp()(X, Y)`는 모든 호출에 대해 동일한 부울 결과를 반환 합니다.
+`value_comp()(X, Y)`모든 호출에 대해 동일한 부울 결과를 반환 합니다.
 
-`value_comp()(X, Y)` true 이면 `value_comp()(Y, X)`은 false 여야 합니다.
+`value_comp()(X, Y)`이 true 이면은 false 여야 합니다 `value_comp()(Y, X)` .
 
-`value_comp()(X, Y)` true 이면 `Y`하기 전에 `X` 순서가 지정 된 것입니다.
+`value_comp()(X, Y)`이 true 이면 `X` 가 앞에 정렬 된 것입니다 `Y` .
 
-`!value_comp()(X, Y) && !value_comp()(Y, X)` true 이면 `X` 및 `Y`는 동일한 순서를 갖는 것으로 간주 됩니다.
+`!value_comp()(X, Y) && !value_comp()(Y, X)`가 true 이면 `X` 및 `Y` 는 동일한 순서를 갖는 것으로 간주 됩니다.
 
-제어 되는 시퀀스에서 `Y` 앞에 오는 모든 요소 `X`의 경우 `key_comp()(Y, X)`가 false입니다. 기본 대리자 개체의 경우 키가 값을 감소 시 키 지 않습니다.
+제어 되는 `X` 시퀀스의 앞에 오는 모든 요소의 경우 `Y` `key_comp()(Y, X)` 는 false입니다. 기본 대리자 개체의 경우 키가 값을 감소 시 키 지 않습니다.
 
 따라서 우선 순위가 가장 높은 요소는 다른 요소 보다 먼저 정렬 되지 않는 요소 중 하나입니다.
 
@@ -173,12 +173,12 @@ void assign(priority_queue<Value, Container>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `right.get_container()`를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 큐의 전체 내용을 변경 합니다.
+멤버 함수는 `right.get_container()` 를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 큐의 전체 내용을 변경 합니다.
 
 ### <a name="example"></a>예제
 
@@ -225,7 +225,7 @@ c a b
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
@@ -269,7 +269,7 @@ c b a
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다.
 
@@ -311,7 +311,7 @@ c a b
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수 요소 수를 설명 합니다.
 
@@ -369,9 +369,9 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Priority_queue:: size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`와 동일 합니다. 이를 사용 하 여 priority_queue 비어 있는지 여부를 테스트 합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Priority_queue:: size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)와 동일 `() == 0` 합니다. 이를 사용 하 여 priority_queue 비어 있는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -424,7 +424,7 @@ typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
@@ -486,9 +486,9 @@ e d b a c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 `GValue` 형식의 개체를 설명 하는 형식입니다. (`GValue`은 `value_type` 또는 `value_type^` `value_type` 참조 형식인 경우)입니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다. 은 `GValue` `value_type` 이거나 `value_type^` `value_type` 가 참조 형식인 경우입니다.
 
 ### <a name="example"></a>예제
 
@@ -544,7 +544,7 @@ c b a
 container_type get_container();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 기본 컨테이너를 반환 합니다. 이를 사용 하 여 컨테이너 래퍼에서 적용 되는 제한을 무시 합니다.
 
@@ -587,12 +587,12 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -639,7 +639,7 @@ c a b
 void pop();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 우선 순위가 가장 높은 요소를 제거 합니다. 이를 사용 하 여 한 번에 하나의 요소로 큐를 단축 합니다.
 
@@ -713,10 +713,10 @@ template<typename InIt>
 *pred*<br/>
 제어 되는 시퀀스의 순서 조건자입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 개체 또는 범위입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
@@ -728,13 +728,13 @@ template<typename InIt>
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-정렬 조건자 `right.value_comp()`를 사용 하 여 `right.get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 첫 번째 제어 되는 시퀀스를 지정 합니다 .이 시퀀스는 동일한 순서 조건자를 사용 하 여 queue 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본입니다.
+순서 조건자가 포함 된의 복사본 인 래핑된 컨테이너를 만듭니다 `right.get_container()` `right.value_comp()` . 이를 사용 하 여 첫 번째 제어 되는 시퀀스를 지정 합니다 .이 시퀀스는 동일한 순서 조건자를 사용 하 여 queue 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본입니다.
 
 생성자는 다음과 같습니다.
 
 `priority_queue(priority_queue<Value, Container>^ right);`
 
-정렬 조건자 `right->value_comp()`를 사용 하 여 `right->get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 동일한 순서 조건자를 사용 하 여 `*right`큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+순서 조건자가 포함 된의 복사본 인 래핑된 컨테이너를 만듭니다 `right->get_container()` `right->value_comp()` . 이를 사용 하 여 동일한 순서 조건자를 사용 하 여 큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 `*right` 합니다.
 
 생성자는 다음과 같습니다.
 
@@ -752,19 +752,19 @@ template<typename InIt>
 
 `template<typename InIt> priority_queue(InIt first, InIt last);`
 
-기본 순서 조건자를 사용 하 여 빈 래핑된 컨테이너를 만든 다음 시퀀스 [`first`, `last`)를 푸시합니다. 지정 된 순서 조건자를 사용 하 여 지정 된 eqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
+기본 순서 조건자를 사용 하 여 빈 래핑된 컨테이너를 만든 다음 시퀀스 [ `first` ,)를 푸시합니다 `last` . 지정 된 순서 조건자를 사용 하 여 지정 된 eqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
 
 생성자는 다음과 같습니다.
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-순서 조건자 *pred*를 사용 하 여 빈 래핑된 컨테이너를 만든 다음 시퀀스 [`first`, `last`)를 푸시합니다. 지정 된 순서 조건자를 사용 하 여 지정 된 seqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
+순서 조건자 *pred*를 사용 하 여 빈 래핑된 컨테이너를 만든 다음 시퀀스 [ `first` ,)를 푸시합니다 `last` . 지정 된 순서 조건자를 사용 하 여 지정 된 seqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
 
 생성자는 다음과 같습니다.
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-순서 조건자 *pred*을 사용 하 여 빈 래핑된 컨테이너를 만든 다음, *연속* 의 모든 요소와 [`first`, `last`)를 푸시합니다. 지정 된 순서 조건자를 사용 하 여 기존 컨테이너 및 지정 된 seqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
+순서 조건자 *pred*을 사용 하 여 빈 래핑된 컨테이너를 만든 다음, *연속* 의 모든 요소와 시퀀스 [ `first` ,)를 푸시합니다 `last` . 지정 된 순서 조건자를 사용 하 여 기존 컨테이너 및 지정 된 seqeuence에서 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -874,9 +874,9 @@ a c b
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `val` 값이 포함 된 요소를 제어 되는 시퀀스에 삽입 하 고 제어 되는 시퀀스의 순서를 다시 정렬 하 여 힙 규칙을 유지 합니다. 이를 사용 하 여 다른 요소를 큐에 추가 합니다.
+멤버 함수는 제어 되는 시퀀스에 값이 포함 된 요소를 삽입 하 `val` 고 제어 되는 시퀀스의 순서를 다시 정렬 하 여 힙 규칙을 유지 합니다. 이를 사용 하 여 다른 요소를 큐에 추가 합니다.
 
 ### <a name="example"></a>예제
 
@@ -915,7 +915,7 @@ c a b
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -964,9 +964,9 @@ x a b
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [priority_queue:: empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`를 참조 하세요.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [priority_queue:: empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -1018,7 +1018,7 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -1067,7 +1067,7 @@ size difference = 2
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
@@ -1117,7 +1117,7 @@ c a b
 reference top();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 최상위 (가장 높은 우선 순위) 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 우선 순위가 가장 높은 요소를 알고 있으면이 요소에 액세스 합니다.
 
@@ -1163,7 +1163,7 @@ int main()
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 최상위 (가장 높은 우선 순위) 요소에 액세스 합니다. 이를 사용 하면 우선 순위가 가장 높은 요소를 읽거나 쓸 수 있습니다.
 
@@ -1207,7 +1207,7 @@ x a b
 
 ## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a>priority_queue:: value_comp (STL/CLR)
 
-두 요소에 대 한 순서 지정 대리자를 복사합니다.
+두 요소의 순서 지정 대리자를 복사합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1215,9 +1215,9 @@ x a b
 value_compare^ value_comp();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 두 값을 비교 하는 데 사용할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 이를 통해 두 값을 비교할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1274,7 +1274,7 @@ compare(L'b', L'a') = True
 binary_delegate<value_type, value_type, int> value_compare;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 첫 번째 인수가 두 번째 인수 앞에 정렬 되는지 여부를 결정 하는 대리자의 동의어입니다.
 
@@ -1333,7 +1333,7 @@ compare(L'b', L'a') = True
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 템플릿 매개 변수 *값*의 동의어입니다.
 

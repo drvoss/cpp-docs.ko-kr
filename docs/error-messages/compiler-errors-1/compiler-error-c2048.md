@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2048
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
-ms.openlocfilehash: 039be85541a7cd3864187433e5b3299bca7d067e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 483e4d706a1c08899e6cd6e1ec561a21ed805014
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740132"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210438"
 ---
 # <a name="compiler-error-c2048"></a>컴파일러 오류 C2048
 
 기본값이 둘 이상입니다.
 
-`switch` 문에 `default` 레이블이 여러 개 포함되어 있습니다. 오류를 해결하려면 `default` 레이블 중 하나를 삭제합니다.
+**`switch`** 문에 레이블이 여러 개 포함 되어 있습니다 **`default`** . **`default`** 오류를 해결 하려면 레이블 중 하나를 삭제 합니다.
 
 다음 샘플에서는 C2048을 생성합니다.
 
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-가능한 해결 방법:
+해결 방법:
 
 ```cpp
 // C2048b.cpp

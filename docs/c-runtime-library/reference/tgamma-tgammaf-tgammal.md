@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218522"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -99,7 +99,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **tgamma** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **tgamma** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **tgamma** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **tgamma** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 X가 자연수인 경우 이 함수는 (x-1)의 계승을 반환합니다.
 
@@ -107,13 +107,13 @@ X가 자연수인 경우 이 함수는 (x-1)의 계승을 반환합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

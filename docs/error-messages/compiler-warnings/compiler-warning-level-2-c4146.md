@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: cf0c6e9e2c33887082f945f3f2200d808ac13cd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174260"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218158"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>컴파일러 경고 (수준 2) C4146
 
@@ -21,15 +21,15 @@ ms.locfileid: "80174260"
 
 실질적으로 프로그래머는 최소 정수 값 (-2147483648)을 표현 하려고 할 때 발생 합니다. 식이 다음 두 단계로 처리 되기 때문에이 값을-2147483648로 쓸 수 없습니다.
 
-1. 숫자 2147483648가 계산 됩니다. 2147483647의 최대 정수 값 보다 크므로 2147483648 형식이 [int](../../c-language/integer-types.md)가 아니라 `unsigned int`합니다.
+1. 숫자 2147483648가 계산 됩니다. 2147483647의 최대 정수 값 보다 크므로 2147483648의 형식은 [int](../../c-language/integer-types.md)가 아닙니다 **`unsigned int`** .
 
 1. 단항 마이너스는 값에 적용 되며, 부호 없는 결과는 2147483648이 되기도 합니다.
 
-결과의 부호 없는 형식으로 인해 예기치 않은 동작이 발생할 수 있습니다. 비교에 결과를 사용 하는 경우 예를 들어 다른 피연산자가 `int`경우 부호 없는 비교가 사용 될 수 있습니다. 이는 아래 예제 프로그램이 한 줄만 인쇄 하는 이유를 설명 합니다.
+결과의 부호 없는 형식으로 인해 예기치 않은 동작이 발생할 수 있습니다. 비교에 결과를 사용 하는 경우 예를 들어 다른 피연산자가 인 경우 부호 없는 비교가 사용 될 수 있습니다 **`int`** . 이는 아래 예제 프로그램이 한 줄만 인쇄 하는 이유를 설명 합니다.
 
-`((unsigned int)1) > 2147483648`가 false 이기 때문에 예상 되는 두 번째 줄 `1 is greater than the most negative int`은 인쇄 되지 않습니다.
+가 false 이기 때문에 예상 되는 두 번째 줄은 `1 is greater than the most negative int` 인쇄 되지 않습니다 `((unsigned int)1) > 2147483648` .
 
-**서명 된 INT**형식이 있는 C4146의 INT_MIN를 사용 하 여이를 방지할 수 있습니다.
+형식이 인 C4146의 INT_MIN를 사용 하 여이를 방지할 수 **`signed int`** 있습니다.
 
 ## <a name="example"></a>예제
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218652"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -83,7 +83,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **lgamma** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **lgamma** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **lgamma** 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **lgamma** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 X가 유리수 인 경우이 함수는 (x-1)의 계승값에 대 한 로그를 반환 합니다.
 
@@ -91,13 +91,13 @@ X가 유리수 인 경우이 함수는 (x-1)의 계승값에 대 한 로그를 �
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

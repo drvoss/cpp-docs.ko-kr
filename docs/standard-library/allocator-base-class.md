@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205004"
 ---
 # <a name="allocator_base-class"></a>allocator_base 클래스
 
@@ -65,19 +65,19 @@ class allocator_base
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[allocator_base](#allocator_base)|`allocator_base` 형식의 개체를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
 |[const_pointer](#const_pointer)|할당자에 의해 관리되는 개체 형식에 대한 상수 포인터를 제공하는 형식입니다.|
 |[const_reference](#const_reference)|할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.|
 |[difference_type](#difference_type)|할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.|
 |[놓고](#pointer)|할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.|
-|[참조일](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|
+|[reference](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|
 |[size_type](#size_type)|형식의 개체가 할당할 수 있는 시퀀스의 길이를 나타낼 수 있는 부호 없는 정수 형식입니다 `allocator_base` .|
 |[value_type](#value_type)|할당자에 의해 관리되는 형식입니다.|
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |멤버 함수|Description|
 |-|-|
-|[_Charalloc](#charalloc)|**Char**형식의 배열에 대 한 저장소를 할당 합니다.|
-|[_Chardealloc](#chardealloc)|**Char**형식의 요소가 포함 된 배열에 대 한 저장소를 해제 합니다.|
+|[_Charalloc](#charalloc)|형식의 배열에 대 한 저장소를 할당 **`char`** 합니다.|
+|[_Chardealloc](#chardealloc)|형식의 요소가 포함 된 배열에 대 한 저장소를 해제 **`char`** 합니다.|
 |[address](#address)|값이 지정된 개체의 주소를 찾습니다.|
 |[할당](#allocate)|적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.|
 |[구축](#construct)|지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
 
-**Char**형식의 배열에 대 한 저장소를 할당 합니다.
+형식의 배열에 대 한 저장소를 할당 **`char`** 합니다.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -114,7 +114,7 @@ char *_Charalloc(size_type count);
 |---------------|-----------------|
 |*count*|할당할 배열의 요소 수입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당된 개체에 대한 포인터입니다.
 
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
 
-**Char**형식의 요소가 포함 된 배열에 대 한 저장소를 해제 합니다.
+형식의 요소가 포함 된 배열에 대 한 저장소를 해제 **`char`** 합니다.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -139,7 +139,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 rebind를 컴파일할 수 없는 컴파일러로 컴파일할 때 컨테이너에 의해 사용됩니다. 동기화 필터의 `deallocate` 함수를 호출하여 사용자 정의 할당자에 대해 `_Chardealloc`를 구현합니다. `*this`와 같은지를 비교하여 같은 크기와 형식의 배열 개체를 할당하는 할당자 개체에 대해 `_Charalloc`를 호출함으로써 포인터 ptr이 이미 반환된 상태여야 합니다. `_Chardealloc`은 예외를 throw할 수 없습니다.
+이 멤버 함수는 rebind를 컴파일할 수 없는 컴파일러로 컴파일할 때 컨테이너에 의해 사용됩니다. 동기화 필터의 `deallocate` 함수를 호출하여 사용자 정의 할당자에 대해 `_Chardealloc`를 구현합니다. `_Charalloc` **`*this`** 같은 크기와 형식의 배열 개체를 할당 하 여와 비교 하는 할당자 개체에 대 한 호출에서 포인터 ptr이 이전에 반환 되어야 합니다. `_Chardealloc`은 예외를 throw할 수 없습니다.
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: address
 
@@ -156,7 +156,7 @@ const_pointer address(const_reference val);
 *짧은*\
 주소를 검색하는 개체의 const 또는 nonconst 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 각각 const 또는 nonconst 값으로 발견된 개체에 대한 const 또는 nonconst 포인터입니다.
 
@@ -182,7 +182,7 @@ pointer allocate(size_type _Nx);
 |*_Nx*|할당할 배열의 요소 수입니다.|
 |*_Hint*|이 매개 변수는 무시됩니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당된 개체에 대한 포인터입니다.
 
@@ -203,7 +203,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*오른쪽*|복사할 할당자 개체입니다.|
 
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*ptr*|개체를 생성할 위치에 대한 포인터입니다.|
 |*짧은*|생성되는 개체를 초기화할 값입니다.|
@@ -256,7 +256,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
 |*_Nx*|스토리지에서 할당을 취소할 개체의 수입니다.|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*ptr*|소멸될 개체의 주소를 지정하는 포인터입니다.|
 
@@ -299,7 +299,7 @@ typedef std::ptrdiff_t difference_type;
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 할당할 수 있는 요소의 수입니다.
 

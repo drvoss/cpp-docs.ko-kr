@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-ms.openlocfilehash: 7417c651fde6bef781bb6eb2e081cd3ad8ecc3a0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b033d95b127a45451a776cdc336ea7d2649d3716
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87209749"
 ---
 # <a name="compiler-error-c2217"></a>컴파일러 오류 C2217
 
@@ -21,9 +21,9 @@ ms.locfileid: "74741302"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면
 
-1. 인터럽트 (`__interrupt`) 함수를 `near`으로 선언 했습니다. 인터럽트 함수를 `far`해야 합니다.
+1. Interrupt ( `__interrupt` ) 함수를로 선언 `near` 했습니다. 인터럽트 함수는 여야 합니다 `far` .
 
-1. `__stdcall`또는 `__fastcall`으로 선언 된 인터럽트 함수입니다. 인터럽트 함수는 C 호출 규칙을 사용 해야 합니다.
+1. , 또는로 선언 된 인터럽트 함수 **`__stdcall`** **`__fastcall`** 인터럽트 함수는 C 호출 규칙을 사용 해야 합니다.
 
 ## <a name="example"></a>예제
 

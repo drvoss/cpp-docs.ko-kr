@@ -7,16 +7,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 5a4a2d65ba7367b5568603b5f08a07c6d85cc4a5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218301"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 
-행 집합을 열기 전에 책갈피를 사용 하려는 공급자에 게 지시 해야 합니다. 이렇게 하려면 속성 집합에서 `DBPROP_BOOKMARKS` 속성을 **true** 로 설정 합니다. 공급자는 책갈피를 열 0으로 검색 하므로 정적 접근자를 사용 하는 경우 특수 매크로 BOOKMARK_ENTRY 및 `CBookmark` 클래스를 사용 해야 합니다. `CBookmark`는 인수가 책갈피 버퍼의 길이 (바이트) 인 템플릿 클래스입니다. 책갈피에 필요한 버퍼의 길이는 공급자에 따라 달라 집니다. 다음 예제와 같이 ODBC OLE DB 공급자를 사용 하는 경우 버퍼는 4 바이트 여야 합니다.
+행 집합을 열기 전에 책갈피를 사용 하려는 공급자에 게 지시 해야 합니다. 이렇게 하려면 `DBPROP_BOOKMARKS` 속성 집합에서 속성을로 설정 **`true`** 합니다. 공급자는 책갈피를 열 0으로 검색 하므로 `CBookmark` 정적 접근자를 사용 하는 경우 특수 매크로 BOOKMARK_ENTRY 및 클래스를 사용 해야 합니다. `CBookmark`는 인수가 책갈피 버퍼의 길이 (바이트) 인 템플릿 클래스입니다. 책갈피에 필요한 버퍼의 길이는 공급자에 따라 달라 집니다. 다음 예제와 같이 ODBC OLE DB 공급자를 사용 하는 경우 버퍼는 4 바이트 여야 합니다.
 
 ```cpp
 class CProducts
@@ -30,7 +30,7 @@ public:
 };
 ```
 
-그러면 아래 코드처럼 사용합니다.
+그런 다음, 다음 코드에서 사용 됩니다.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -41,7 +41,7 @@ CSession session;
 product.Open(session, "Products", &propset);
 ```
 
-`CDynamicAccessor`사용 하는 경우 버퍼는 런타임에 동적으로 설정 됩니다. 이 경우에는 버퍼 길이를 지정 하지 않는 `CBookmark`의 특수 버전을 사용할 수 있습니다. 다음 코드 샘플과 같이 함수 `GetBookmark`를 사용 하 여 현재 레코드에서 책갈피를 검색 합니다.
+를 사용 하는 경우 `CDynamicAccessor` 버퍼는 런타임에 동적으로 설정 됩니다. 이 경우 버퍼 길이를 지정 하지 않는의 특수 버전을 사용할 수 있습니다 `CBookmark` . 다음 코드 샘플과 같이 함수를 사용 `GetBookmark` 하 여 현재 레코드에서 책갈피를 검색 합니다.
 
 ```cpp
 CTable<CDynamicAccessor> product;

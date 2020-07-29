@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d1547ae7dd3b6adb33271e93e85022f04859886
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211608"
 ---
 # <a name="required-and-optional-header-files"></a>필수 및 선택적 헤더 파일
 
@@ -24,7 +24,7 @@ ms.locfileid: "57744527"
 |미리 정의된 상수|많은 라이브러리 루틴이 헤더 파일에 정의된 상수를 참조합니다. 예를 들어 `_open` 루틴은 헤더 파일 FCNTL.H에 정의된 `_O_CREAT`와 같은 상수를 사용합니다.|
 |형식 정의|일부 라이브러리 루틴은 구조를 반환하거나 구조를 인수로 사용합니다. 예를 들어 스트림 입/출력 루틴은 STDIO.H에 정의된 `FILE` 형식의 구조를 사용합니다.|
 
-런타임 라이브러리 헤더 파일은 ANSI/ISO C 표준 권장 스타일로 함수 선언을 제공합니다. 컴파일러는 연결된 함수 선언 후에 발생하는 모든 루틴 참조에 대해 형식 검사를 수행합니다. 함수 선언은 기본값인 `int`가 아닌 일부 형식의 값을 반환하는 루틴의 경우 특히 중요합니다. 컴파일러는 해당 선언에 적절한 반환 값을 지정하지 않는 루틴이 예기치 않은 결과를 발생시킬 수 있는 `int`를 반환하는 것으로 간주합니다. 자세한 내용은 [형식 검사](../c-runtime-library/type-checking-crt.md)를 참조하세요.
+런타임 라이브러리 헤더 파일은 ANSI/ISO C 표준 권장 스타일로 함수 선언을 제공합니다. 컴파일러는 연결된 함수 선언 후에 발생하는 모든 루틴 참조에 대해 형식 검사를 수행합니다. 함수 선언은 기본값인가 아닌 일부 형식의 값을 반환 하는 루틴의 경우 특히 중요 **`int`** 합니다. 선언에 적절 한 반환 값을 지정 하지 않은 루틴은 컴파일러가를 반환 하는 것으로 간주 되어 **`int`** 예기치 않은 결과가 발생할 수 있습니다. 자세한 내용은 [형식 검사](../c-runtime-library/type-checking-crt.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
