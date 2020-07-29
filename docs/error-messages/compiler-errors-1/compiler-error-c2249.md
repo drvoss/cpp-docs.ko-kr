@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212802"
 ---
 # <a name="compiler-error-c2249"></a>컴파일러 오류 C2249
 
 ' member ': 가상 기본 ' class '에 선언 된 액세스 멤버에 액세스할 수 있는 경로가 없습니다.
 
-`member`는 public이 아닌 `virtual` 기본 클래스 또는 구조체에서 상속 됩니다.
+는 `member` public이 아닌 **`virtual`** 기본 클래스 또는 구조체에서 상속 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -42,7 +42,7 @@ int main() {
 
 ## <a name="example"></a>예제
 
-C2249는 C++ 표준 라이브러리에서 다른 스트림으로 스트림을 할당 하려고 하는 경우에도 발생할 수 있습니다.  다음 샘플에서는 C2249를 생성 합니다.
+C2249는 c + + 표준 라이브러리에서 다른 스트림으로 스트림을 할당 하려고 하는 경우에도 발생할 수 있습니다.  다음 샘플에서는 C2249를 생성 합니다.
 
 ```cpp
 // C2249_2.cpp

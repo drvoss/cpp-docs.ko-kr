@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172480"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219756"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>매개 변수
 
-*type-parameter*<br/>
+*유형-매개 변수*<br/>
 제한되는 형식 매개 변수 중 하나입니다.
 
 *constraint list*<br/>
@@ -37,13 +37,13 @@ where type-parameter: constraint list
 
 이 목록은 클래스를 포함할 수도 있습니다. 형식 인수가 기본 클래스 제약 조건을 만족하려면 제약 조건과 같은 클래스이거나 제약 조건에서 파생되어야 합니다.
 
-**gcnew()** 를 지정하여 형식 인수에 매개 변수가 없는 public 생성자가 있어야 함을 나타내거나, **ref class**를 지정하여 형식 인수가 클래스, 인터페이스, 대리자 또는 배열 형식을 비롯한 참조 형식이어야 함을 나타내거나, **value class**를 지정하여 형식 인수가 값 형식이어야 함을 나타낼 수도 있습니다. Nullable\<T>를 제외한 모든 값 형식을 지정할 수 있습니다.
+**gcnew()** 를 지정하여 형식 인수에 매개 변수가 없는 public 생성자가 있어야 함을 나타내거나, **ref class**를 지정하여 형식 인수가 클래스, 인터페이스, 대리자 또는 배열 형식을 비롯한 참조 형식이어야 함을 나타내거나, **value class**를 지정하여 형식 인수가 값 형식이어야 함을 나타낼 수도 있습니다. Nullable를 제외한 모든 값 형식을 \<T> 지정할 수 있습니다.
 
 제네릭 매개 변수를 제약 조건으로 지정할 수도 있습니다. 제한된 형식에 대해 제공되는 형식 인수는 제약 조건의 형식이거나 제약 조건의 형식에서 파생되어야 합니다. 이를 naked 형식 제약 조건이라고 합니다.
 
 ## <a name="remarks"></a>설명
 
-제약 조건 절은 **where**, 형식 매개 변수, 콜론( **:** ), 형식 매개 변수에 대한 제한 특성을 지정하는 제약 조건을 순서대로 결합하여 구성합니다. **where**는 상황에 맞는 키워드입니다. 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. **where** 절이 여러 개이면 공백으로 구분합니다.
+제약 조건 절은 **where**, 형식 매개 변수, 콜론(**:**), 형식 매개 변수에 대한 제한 특성을 지정하는 제약 조건을 순서대로 결합하여 구성합니다. **where**는 상황에 맞는 키워드입니다. 자세한 내용은 [상황에 맞는 키워드](context-sensitive-keywords-cpp-component-extensions.md)를 참조하세요. **where** 절이 여러 개이면 공백으로 구분합니다.
 
 제약 조건은 제네릭 형식 또는 메서드의 인수로 사용할 수 있는 형식에 대한 제한을 배치하기 위해 형식 매개 변수에 적용됩니다.
 
@@ -64,7 +64,7 @@ ref class List {};
 
 형식 인수의 클래스의 정적 메서드는 형식 매개 변수를 통해 호출할 수 없고, 실제 명명된 형식을 통해서만 호출할 수 있습니다.
 
-제약 조건은 **int** 또는 **double**과 같은 기본 제공 형식을 포함하여 값 형식일 수 없습니다. 값 형식은 파생된 클래스를 가질 수 없기 때문에, 하나의 클래스만 제약 조건을 만족할 수 있을 것입니다. 이러한 경우에 해당 제네릭을 특정 값 형식으로 대체한 형식 매개 변수를 사용하여 다시 작성할 수 있습니다.
+제약 조건은 또는와 같은 기본 제공 형식을 포함 하는 값 형식일 수 없습니다 **`int`** **`double`** . 값 형식은 파생된 클래스를 가질 수 없기 때문에, 하나의 클래스만 제약 조건을 만족할 수 있을 것입니다. 이러한 경우에 해당 제네릭을 특정 값 형식으로 대체한 형식 매개 변수를 사용하여 다시 작성할 수 있습니다.
 
 제약 조건은 알 수 없는 형식이 메서드나 인터페이스를 지원함을 나타내지 않을 경우 컴파일러에서 메서드나 알 수 없는 형식의 다른 기능을 사용할 수 없으므로 일부 경우에 있어 필요합니다.
 
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-형식 매개 변수가 여러 개이면, 형식 매개 변수마다 하나의 **where** 절을 사용합니다. 다음은 그 예입니다.
+형식 매개 변수가 여러 개이면, 형식 매개 변수마다 하나의 **where** 절을 사용합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // generics_constraints_3.cpp
@@ -100,7 +100,7 @@ ref class Dictionary {};
 
 - 제약 조건은 추상 기본 클래스와 같은 클래스 형식일 수도 있습니다. 그러나 제약 조건은 값 형식 또는 sealed 클래스일 수 없습니다.
 
-- 제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 다음은 그 예입니다.
+- 제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 예를 들어:
 
     ```cpp
     // generics_constraints_4.cpp
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [제네릭](generics-cpp-component-extensions.md)

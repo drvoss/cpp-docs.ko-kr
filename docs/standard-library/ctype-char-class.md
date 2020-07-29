@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688157"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220966"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 클래스
 
-클래스는 char 형식에 대 한 클래스 템플릿 `ctype\<CharType>`의 명시적 특수화로, **char**형식의 문자에 대 한 다양 한 속성의 특징을 지정할 수 있도록 로캘 패싯으로 사용할 수 있는 **개체를 설명**합니다.
+클래스는 형식에 대 한 클래스 템플릿의 명시적 특수화로 `ctype\<CharType>` **`char`** , 형식 문자에 대 한 다양 한 속성의 특성을 지정할 수 있는 로캘 패싯으로 사용할 수 있는 개체를 설명 **`char`** 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -104,19 +104,19 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 명시적 특수화는 다음과 같은 여러 가지 방법으로 클래스 템플릿과 다릅니다.
 
-- Ctype < `char` > 클래스의 개체는 ctype 마스크 테이블의 첫 번째 요소에 대 한 포인터, `ctype_base::mask` 형식의 UCHAR_MAX + 1 개 요소에 대 한 포인터를 저장 합니다. 또한 ctype\< **Elem**> 개체가 삭제된 경우 배열을 삭제해야 할지(`operator delete[]`를 사용하여) 여부를 나타내는 부울 개체도 저장합니다.
+- 클래스의 개체는 `ctype<char>` ctype 마스크 테이블의 첫 번째 요소에 대 한 포인터, 형식의 UCHAR_MAX + 1 개 요소 배열을 저장 `ctype_base::mask` 합니다. 또한 `operator delete[]` ctype 개체가 제거 될 때 배열을 삭제 해야 하는지 여부를 나타내는 부울 개체를 저장 \< **Elem**> 합니다.
 
-- 유일한 public 생성자를 사용 하 여 `tab`, ctype 마스크 테이블 및 `del`를 지정 하 고, ctype < `char` > 개체가 제거 될 때 배열을 삭제 해야 하는 경우 true 인 부울 개체와 참조 횟수 매개 변수 refs를 지정할 수 있습니다.
+- 유일한 public 생성자를 사용 하면 `tab` , ctype 마스크 테이블을 지정 하 고, `del` 개체를 제거할 때 배열을 삭제 해야 하는 경우 True 인 부울 개체와 `ctype<char>` 참조 횟수 매개 변수 refs를 지정할 수 있습니다.
 
-- 보호 된 멤버 함수 `table`은 저장 된 ctype 마스크 테이블을 반환 합니다.
+- Protected 멤버 함수는 `table` 저장 된 ctype 마스크 테이블을 반환 합니다.
 
-- Ctype 마스크 테이블의 최소 요소 수를 지정 하 `table_size` 정적 멤버 개체입니다.
+- 정적 멤버 개체는 `table_size` ctype 마스크 테이블의 최소 요소 수를 지정 합니다.
 
-- 보호 된 정적 멤버 함수 `classic_table` ("C" 로캘에 적합 한 ctype 마스크 테이블을 반환 합니다.
+- 보호 된 정적 멤버 함수 `classic_table` ("C" 로캘에 해당 하는 ctype 마스크 테이블을 반환 합니다.
 
 - 보호된 가상 멤버 함수 [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) 또는 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)이 없습니다. 해당 공용 멤버 함수는 동일한 작업을 자체적으로 수행합니다.
 
@@ -124,12 +124,12 @@ protected:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<locale>
+**헤더:**\<locale>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[facet 클래스](locale-class.md#facet_class)\
+[패싯 클래스](locale-class.md#facet_class)\
 [ctype_base 클래스](../standard-library/ctype-base-class.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

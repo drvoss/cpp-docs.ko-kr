@@ -1,5 +1,5 @@
 ---
-title: 통합
+title: Unions
 ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187962"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213140"
 ---
-# <a name="unions"></a>통합
+# <a name="unions"></a>Unions
 
 > [!NOTE]
 > C + + 17 이상에서 **std:: variant** 클래스는 공용 구조체에 대 한 형식 안전 대안입니다.
 
-**Union** 은 모든 멤버가 동일한 메모리 위치를 공유 하는 사용자 정의 형식입니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.
+는 **`union`** 모든 멤버가 동일한 메모리 위치를 공유 하는 사용자 정의 형식입니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.
 
 공용 구조체는 개체는 많고 메모리는 제한된 경우 메모리를 보존하는 데 유용할 수 있습니다. 그러나 언제든지 기록된 마지막 멤버에 액세스할 수 있도록 해야 하므로 특별히 주의하여 올바르게 사용해야 합니다. 멤버 형식에 특수한 생성자가 있으면 추가 코드를 작성하여 해당 멤버를 명시적으로 생성하고 삭제해야 합니다. 공용 구조체를 사용하기 전에 해결하려는 문제가 기본 클래스와 파생 클래스 중 어떤 클래스를 사용하여 더 잘 표현할 수 있는지를 고려해야 합니다.
 
@@ -41,7 +41,7 @@ union [name]  { member-list };
 
 ## <a name="declaring-a-union"></a>공용 구조체 선언
 
-**Union 키워드를** 사용 하 여 공용 구조체의 선언을 시작 하 고 멤버 목록을 중괄호로 묶습니다.
+키워드를 사용 하 여 공용 구조체의 선언을 시작 **`union`** 하 고 멤버 목록을 중괄호로 묶습니다.
 
 ```cpp
 // declaring_a_union.cpp
@@ -633,7 +633,7 @@ int main()
 
 `NumericType` 공용 구조체는 다음 그림과 같이 개념적으로 메모리에 배열됩니다.
 
-![숫자 형식 union의 데이터 저장소](../cpp/media/vc38ul1.png "NumericType 공용 구조체에 데이터 저장") <br/>
+![숫자 형식 공용 구조체에 데이터 저장](../cpp/media/vc38ul1.png "NumericType 공용 구조체에 데이터 저장") <br/>
 NumericType 공용 구조체에 데이터 스토리지
 
 ## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>익명 공용 구조체
@@ -648,15 +648,15 @@ union  {  member-list  }
 
 명명 된 공용 구조체에 대 한 제한 사항 외에도 익명 공용 구조체에는 다음과 같은 추가 제한이 적용 됩니다.
 
-- 또한 파일 또는 네임 스페이스 범위에 선언 된 경우 **정적** 으로 선언 해야 합니다.
+- 또한 **`static`** 파일 또는 네임 스페이스 범위에서 선언 된 것 처럼 선언 해야 합니다.
 
-- **Public** 멤버만 포함할 수 있습니다. 익명 공용 구조체의 **전용** 및 **보호 된** 멤버는 오류를 생성 합니다.
+- 멤버는 멤버만 가질 수 있으며 **`public`** **`private`** **`protected`** 익명 공용 구조체의 멤버는 오류를 생성 합니다.
 
 - 멤버 함수를 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)<br/>
-[키워드](../cpp/keywords-cpp.md)<br/>
+[C++ 키워드](../cpp/keywords-cpp.md)<br/>
 [class](../cpp/class-cpp.md)<br/>
 [struct](../cpp/struct-cpp.md)

@@ -42,16 +42,16 @@ helpviewer_keywords:
 - _tcstoll function
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
-ms.openlocfilehash: 2cb8d47ce9f045d3652d1523d1f39c8be72f8997
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 047932a1f1474d443179a37b3dbc4fde6c995a99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912438"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213478"
 ---
 # <a name="strtoll-_strtoll_l-wcstoll-_wcstoll_l"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
-문자열을 **long** **long** 값으로 변환 합니다.
+문자열을 값으로 변환 **`long long`** 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -106,7 +106,7 @@ long long _wcstoll_l(
 
 ## <a name="remarks"></a>설명
 
-**Strtoll** 함수는 *strtoll* 를 **long** **long**으로 변환 합니다. 두 함수는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *Strsource* 의 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수도 있고 *base*보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다. **wcstoll** 는 **strtoll**의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.
+**Strtoll** 함수는 *strtoll* 를로 변환 합니다 **`long long`** . 두 함수는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *Strsource* 의 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수도 있고 *base*보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다. **wcstoll** 는 **strtoll**의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -123,7 +123,7 @@ long long _wcstoll_l(
 
 **strtoll** 은 다음 형식의 문자열을 가리키도록 *strtoll* 가 필요 합니다.
 
-> [*공백*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*숫자* &#124; *문자*]
+> [*공백*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*숫자* &#124; *문자*]
 
 공백은 무시 되는 공백 및 탭 문자로 구성 *될 수 있습니다* . *숫자* 는 하나 이상의 10 진수입니다. *문자* 는 하나 이상의 문자 ' a ' ~ ' z ' (또는 ' a ' ~ ' z ')입니다. 이 형식에 맞지 않는 첫 번째 문자가 발견되면 검색이 중지됩니다. *Base* 가 2에서 36 사이인 경우 숫자의 밑으로 사용 됩니다. *Base* 가 0 인 경우 *strsource* 가 가리키는 문자열의 초기 문자를 사용 하 여 밑을 결정 합니다. 첫 번째 문자가 '0'이고 두 번째 문자가 'x' 또는 'X'가 아니면 문자열은 8진수 정수로 해석됩니다. 첫 번째 문자가 '0'이고 두 번째 문자가 'x' 또는 'X'이면 문자열은 16진수 정수로 해석됩니다. 첫 번째 문자가 '1'~'9' 이면 문자열은 10진수 정수로 해석됩니다. 문자 'a'~'z' 또는 'A'~'Z'에는 값 10~35가 할당됩니다. 할당된 값이 *밑*보다 작은 문자만 사용할 수 있습니다. 밑의 범위를 벗어난 첫 번째 문자가 발견되면 검색이 중지됩니다. 예를 들어 *base* 가 0이 고 검색 된 첫 번째 문자가 ' 0 ' 이면 8 진수 정수로 간주 되며 ' 8 ' 또는 ' 9 ' 문자는 검색을 중지 합니다.
 
@@ -136,13 +136,13 @@ long long _wcstoll_l(
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[문자열을 숫자 값으로 변환하는 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[문자열-숫자 값 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

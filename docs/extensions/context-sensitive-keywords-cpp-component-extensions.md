@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219744"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>상황에 맞는 키워드(C++/CLI 및 C++/CX)
 
@@ -38,7 +38,7 @@ ms.locfileid: "80182177"
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [리터럴](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -70,9 +70,9 @@ ms.locfileid: "80182177"
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
-다음 코드 예제에서는 적절한 컨텍스트에서 상황에 맞는 키워드 **property**를 사용하여 속성과 변수를 정의할 수 있음을 보여 줍니다.
+다음 코드 예제에서는 적절 한 컨텍스트에서 상황에 맞는 키워드를 **`property`** 사용 하 여 속성 및 변수를 정의할 수 있음을 보여 줍니다.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -101,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 75cfdc33c21059e190fd04f4cd1b73716e74ac42
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213582"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -59,9 +59,9 @@ int fpclassify(
 *x*<br/>
 테스트할 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**fpclassify** 는 인수 *x*의 부동 소수점 클래스를 나타내는 정수 값을 반환 합니다. 다음 표에서는 >에 \<정의 된 **fpclassify**에서 반환 되는 가능한 값을 보여 줍니다.
+**fpclassify** 는 인수 *x*의 부동 소수점 클래스를 나타내는 정수 값을 반환 합니다. 다음 표에서는에 정의 된 **fpclassify**에서 반환 되는 가능한 값을 보여 줍니다 \<math.h> .
 
 |값|설명|
 |-----------|-----------------|
@@ -73,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>설명
 
-C에서 **fpclassify** 는 매크로입니다. 에서 C++ **fpclassify** 는 **float**, **double**또는 **long** **double**의 인수 형식을 사용 하 여 오버 로드 된 함수입니다. 두 경우 모두 반환되는 값은 인수 식의 유효 형식에 따라 결정되고 중간 표현의 영향은 받지 않습니다. 예를 들어, 보통 **double** 또는 **long** **double** 값은 **float**로 변환 될 때 infinity, denormal 또는 0 값이 될 수 있습니다.
+C에서 **fpclassify** 는 매크로입니다. c + +에서 **fpclassify** 는, 또는의 인수 형식을 사용 하 여 오버 로드 된 함수입니다 **`float`** **`double`** **`long double`** . 두 경우 모두 반환되는 값은 인수 식의 유효 형식에 따라 결정되고 중간 표현의 영향은 받지 않습니다. 예를 들어 일반 **`double`** 또는 값은으로 **`long double`** 변환 될 때 infinity, denormal 또는 0 값이 될 수 있습니다 **`float`** .
 
 ## <a name="requirements"></a>요구 사항
 
@@ -81,9 +81,9 @@ C에서 **fpclassify** 는 매크로입니다. 에서 C++ **fpclassify** 는 **f
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> 또는 \<cmath>|
 
-**Fpclassify** 매크로 및 **FPCLASSIFY** 함수는 ISO C99 및 c + + 11 사양을 따릅니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+**Fpclassify** 매크로 및 **FPCLASSIFY** 함수는 ISO C99 및 c + + 11 사양을 따릅니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

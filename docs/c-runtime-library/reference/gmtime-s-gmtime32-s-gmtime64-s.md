@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916225"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213556"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -85,8 +85,8 @@ errno_t _gmtime64_s(
 
 |*tmDest*|*sourceTime*|반환 값|*Tmdest* 의 값|
 |-----------|------------|------------|--------------------|
-|**N**|any|**EINVAL**|수정되지 않습니다.|
-|Not **NULL** (유효한 메모리를 가리킴)|**N**|**EINVAL**|모든 필드가 -1로 설정됩니다.|
+|**NULL**|any|**EINVAL**|수정되지 않습니다.|
+|Not **NULL** (유효한 메모리를 가리킴)|**NULL**|**EINVAL**|모든 필드가 -1로 설정됩니다.|
 |**NULL** 이 아님|< 0|**EINVAL**|모든 필드가 -1로 설정됩니다.|
 
 처음 두 오류 조건의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
@@ -98,7 +98,7 @@ errno_t _gmtime64_s(
 > [!NOTE]
 > 대상 환경에서는 일광 절약 시간이 적용되는지 확인해야 합니다. C 런타임 라이브러리에서는 일광 절약 시간 계산 구현을 위한 미국의 규칙이 사용된다고 가정합니다.
 
-다음 표와 같이 각 구조 필드는 **int**형식입니다.
+다음 표와 같이 각 구조 필드는 형식입니다 **`int`** .
 
 |필드|설명|
 |-|-|
@@ -122,7 +122,7 @@ errno_t _gmtime64_s(
 
 |루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> 또는 \<시간>|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> 또는 \<time.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -170,7 +170,7 @@ int main( void )
 Coordinated universal time is Fri Apr 25 20:12:33 2003
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

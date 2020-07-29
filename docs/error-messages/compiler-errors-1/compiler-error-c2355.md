@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2355
 ms.assetid: 0a947881-d61f-4f98-8409-32140f39500b
-ms.openlocfilehash: e44501f7df05a8b277cd52107ff35c4c4d30578f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4e78d20fb59beead08aaddcf85138f845cfc0390
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212763"
 ---
 # <a name="compiler-error-c2355"></a>컴파일러 오류 C2355
 
 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
 
-`this` 포인터는 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 내에서만 유효합니다. 이 오류는 클래스 선언 외부에서 멤버 함수 정의의 클래스 범위가 제대로 정규화되지 않은 경우 발생할 수 있습니다. 또한 `this` 포인터가 클래스에 선언되지 않은 함수에서 사용되는 경우에도 오류가 발생할 수 있습니다.
+포인터는 비정적 **`this`** 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 내 에서만 사용할 수 있습니다. 이 오류는 클래스 선언 외부에서 멤버 함수 정의의 클래스 범위가 제대로 정규화되지 않은 경우 발생할 수 있습니다. **`this`** 클래스에 선언 되지 않은 함수에서 포인터가 사용 되는 경우에도 오류가 발생할 수 있습니다.
 
 이 문제를 해결하려면 멤버 함수 정의가 클래스의 멤버 함수 선언과 일치하는지, 정적으로 선언되지 않았는지 확인합니다. 데이터 멤버 이니셜라이저의 경우 데이터 멤버가 정적으로 선언되지 않았는지 확인합니다.
 

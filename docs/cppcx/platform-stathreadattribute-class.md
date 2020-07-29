@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183381"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213023"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 클래스
 
@@ -38,25 +38,25 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-methods"></a>Public 메서드
 
-STAThreadAttribute 특성에서 상속 [platform:: object 클래스](../cppcx/platform-object-class.md)합니다. STAThreadAttribute도 다음 멤버를 오버로드하거나 포함합니다.
+STAThreadAttribute 특성은 [Platform:: Object 클래스](../cppcx/platform-object-class.md)에서 상속 됩니다. STAThreadAttribute도 다음 멤버를 오버로드하거나 포함합니다.
 
-|이름|설명|
+|Name|설명|
 |----------|-----------------|
-|[STAThreadAttribute::Equals](#equals)|지정한 개체와 현재 개체가 같은지 여부를 확인합니다.|
+|[STAThreadAttribute::Equals](#equals)|지정된 개체가 현재 개체와 같은지 확인합니다.|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|
 |[STAThreadAttribute::ToString](#tostring)|현재 개체를 나타내는 문자열을 반환합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `Platform`
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** collection.h
+**헤더:** collection .h
 
-**네임스페이스:** 플랫폼
+**네임스페이스:** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 STAThreadAttribute 클래스의 새 인스턴스를 초기화합니다.
 
@@ -66,9 +66,9 @@ STAThreadAttribute 클래스의 새 인스턴스를 초기화합니다.
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
 
-지정한 개체와 현재 개체가 같은지 여부를 확인합니다.
+지정된 개체가 현재 개체와 같은지 확인합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -79,13 +79,13 @@ public:virtual override bool Equals( Object^ obj );
 ### <a name="parameters"></a>매개 변수
 
 *obj*<br/>
-비교할 개체입니다.
+비교할 개체.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-**true 이면** 개체가 같으면이 고, 그렇지 않으면 **false**합니다.
+**`true`** 개체가 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
 
 이 인스턴스의 해시 코드를 반환합니다.
 
@@ -95,11 +95,11 @@ public:virtual override bool Equals( Object^ obj );
 public:int GetHashCode();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 이 인스턴스의 해시 코드입니다.
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
 
 현재 개체를 나타내는 문자열을 반환합니다.
 
@@ -109,10 +109,10 @@ public:int GetHashCode();
 public:String^ ToString();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 현재 개체를 나타내는 문자열입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[플랫폼 Namespace](platform-namespace-c-cx.md)
+[Platform 네임 스페이스](platform-namespace-c-cx.md)

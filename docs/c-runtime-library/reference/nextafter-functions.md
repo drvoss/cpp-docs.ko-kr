@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909340"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213517"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -109,7 +109,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 *Y*의 매개 변수 형식을 제외한 **nextafter** 및 **nextafter** 패밀리는 동일 합니다. *X* 와 *y* 가 같으면 반환 되는 값은 *y* 반환 형식으로 변환 됩니다.
 
-C + +에서는 오버 로드를 허용 \<하므로 cmath>> 포함 하는 경우 **float** 및 **long** **double** 형식을 반환 하는 **nextafter 및** **nextafter** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 및 **nextafter** 및 **nextafter** 항상 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로를 포함 하 \<cmath> 는 경우이 반환 및 형식에 대해 **nextafter** 및 **nextafter** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 후에 **nextafter** **nextafter** 항상를 반환 **`double`** 합니다.
 
 **_Nextafter** 및 **_Nextafterf** 함수는 Microsoft 전용입니다. **_Nextafterf** 함수는 x 64 용으로 컴파일하는 경우에만 사용할 수 있습니다.
 
@@ -124,7 +124,7 @@ C + +에서는 오버 로드를 허용 \<하므로 cmath>> 포함 하는 경우 
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
