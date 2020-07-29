@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232367"
 ---
 # <a name="annotating-locking-behavior"></a>잠금 동작에 주석 지정
 
@@ -62,7 +62,7 @@ SAL은 임계 영역, 뮤텍스, 스핀 잠금 및 기타 리소스 개체와 �
 
 다음 표에서는 잠금 주석을 보여 줍니다.
 
-|주석|Description|
+|주석|설명|
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|함수에 주석을 달고 사후 상태에서 함수가 `expr`로 명명된 잠금 개체의 단독 잠금 수를 하나 증가시킴을 나타냅니다.|
 |`_Acquires_lock_(expr)`|함수에 주석을 달고 사후 상태에서 함수가 `expr`로 명명된 잠금 개체의 잠금 수를 하나 증가시킴을 나타냅니다.|
@@ -87,7 +87,7 @@ SAL은 임계 영역, 뮤텍스, 스핀 잠금 및 기타 리소스 개체와 �
 
 특정 잠금 개체는 연결된 잠금 함수의 구현에 의해 노출되지 않습니다.  다음 표에서는 이러한 노출되지 않는 잠금 개체에서 작동하는 함수에 주석을 사용하도록 설정하는 SAL 내장 변수를 보여 줍니다.
 
-|주석|Description|
+|주석|설명|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|취소 스핀 잠금을 설명합니다.|
 |`_Global_critical_region_`|임계 영역을 설명합니다.|
@@ -98,7 +98,7 @@ SAL은 임계 영역, 뮤텍스, 스핀 잠금 및 기타 리소스 개체와 �
 
 다음 표에서는 공유 데이터 액세스에 대한 주석을 보여 줍니다.
 
-|주석|Description|
+|주석|설명|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|변수에 주석을 추가하고 변수가 엑세스될 때마다 `expr`로 명명된 잠금 개체의 잠금 수가 1개 이상임을 나타냅니다.|
 |`_Interlocked_`|변수에 주석을 추가하며 `_Guarded_by_(_Global_interlock_)`와 동일합니다.|
@@ -109,14 +109,14 @@ SAL은 임계 영역, 뮤텍스, 스핀 잠금 및 기타 리소스 개체와 �
 
 스마트 잠금은 일반적으로 기본 잠금을 래핑하고 수명 주기를 관리 합니다. 다음 표에서는 의미 체계를 지 원하는 스마트 잠금과 RAII 코딩 패턴에서 사용할 수 있는 주석을 보여 줍니다 `move` .
 
-|주석|Description|
+|주석|설명|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|분석기에 스마트 잠금을 획득 했다고 가정 합니다. 이 주석에는 참조 잠금 형식이 매개 변수로 필요 합니다.|
 |`_Analysis_assume_smart_lock_released_`|스마트 잠금이 해제 된 것으로 가정 하 여 분석기에 지시 합니다. 이 주석에는 참조 잠금 형식이 매개 변수로 필요 합니다.|
 |`_Moves_lock_(target, source)`|`move constructor`개체에서로 잠금 상태를 전송 하는 작업을 설명 합니다 `source` `target` . 는 `target` 새로 생성 된 개체로 간주 되기 때문에 이전에 있던 모든 상태를 손실 하 고 상태로 바꿉니다 `source` . `source`또한는 잠금 수 또는 별칭 대상이 없는 clean 상태로 다시 설정 되지만이를 가리키는 별칭은 변경 되지 않습니다.|
 |`_Replaces_lock_(target, source)`|`move assignment operator`원본에서 상태를 전송 하기 전에 대상 잠금이 해제 되는 의미 체계에 대해 설명 합니다. 이를 앞에 오는의 조합으로 간주할 수 있습니다 `_Moves_lock_(target, source)` `_Releases_lock_(target)` .|
 |`_Swaps_locks_(left, right)`|해당 개체를 가정 하 고 해당 상태를 교환 하는 표준 동작에 대해 설명 합니다 `swap` `left` `right` . 교환 되는 상태에는 잠금 수와 앨리어싱 대상 (있는 경우)이 포함 됩니다. 및 개체를 가리키는 별칭 `left` 은 `right` 변경 되지 않고 그대로 유지 됩니다.|
-|`_Detaches_lock_(detached, lock)`|잠금 래퍼 형식이 포함 된 리소스를 사용 하 여 연결 끊기가을 허용 하는 시나리오를 설명 합니다. 이는 내부 포인터를 사용 하는 방법과 유사 `std::unique_ptr` 합니다. 프로그래머는이를 통해 포인터를 추출 하 고 스마트 포인터 컨테이너를 깨끗 한 상태로 유지할 수 있습니다. 유사한 논리는에서 지원 되며 `std::unique_lock` 사용자 지정 잠금 래퍼로 구현할 수 있습니다. 분리 된 잠금에는 상태 (잠금 수 및 별칭 지정 대상 (있는 경우))가 유지 되는 반면, 래퍼는 잠금 횟수를 포함 하지 않고 별칭을 포함 하도록 다시 설정 됩니다. 잠금 수에 대 한 작업은 없습니다 (릴리스 및 획득). 이 주석은 `_Moves_lock_` 분리 된 인수가가 아니라는 것을 제외 하 고는와 정확히 동일 하 게 동작 합니다 `return` `this` .|
+|`_Detaches_lock_(detached, lock)`|잠금 래퍼 형식이 포함 된 리소스를 사용 하 여 연결 끊기가을 허용 하는 시나리오를 설명 합니다. 이는 내부 포인터를 사용 하는 방법과 유사 `std::unique_ptr` 합니다. 프로그래머는이를 통해 포인터를 추출 하 고 스마트 포인터 컨테이너를 깨끗 한 상태로 유지할 수 있습니다. 유사한 논리는에서 지원 되며 `std::unique_lock` 사용자 지정 잠금 래퍼로 구현할 수 있습니다. 분리 된 잠금에는 상태 (잠금 수 및 별칭 지정 대상 (있는 경우))가 유지 되는 반면, 래퍼는 잠금 횟수를 포함 하지 않고 별칭을 포함 하도록 다시 설정 됩니다. 잠금 수에 대 한 작업은 없습니다 (릴리스 및 획득). 이 주석은 `_Moves_lock_` 분리 된 인수가가 아니라는 것을 제외 하 고는와 정확히 동일 하 게 동작 합니다 **`return`** **`this`** .|
 
 ## <a name="see-also"></a>참고 항목
 

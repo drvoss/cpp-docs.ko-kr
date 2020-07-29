@@ -1,17 +1,17 @@
 ---
-title: 제한 됨C++ (COM 특성)
+title: 제한 (c + + COM 특성)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230028"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,12 +27,12 @@ ms.locfileid: "80166369"
 
 ### <a name="parameters"></a>매개 변수
 
-*인터페이스로*<br/>
+*interfaces*<br/>
 COM 개체에서 임의로 호출할 수 없는 하나 이상의 인터페이스입니다. 이 매개 변수는 클래스에 적용 된 경우에만 유효 합니다.
 
 ## <a name="remarks"></a>설명
 
-**제한** C++ 된 특성에는 [제한](/windows/win32/Midl/restricted) 된 MIDL 특성과 동일한 기능이 있습니다.
+**제한** 된 c + + 특성에는 [제한](/windows/win32/Midl/restricted) 된 MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**적용 대상**|인터페이스 메서드, **인터페이스**, **클래스**, **구조체**|
-|**반복 가능**|예|
-|**필수 특성**|**coclass** ( **클래스** 또는 **구조체**에 적용 된 경우)|
-|**잘못된 특성**|None|
+|**적용 대상**|인터페이스 메서드, **인터페이스**, **`class`** ,**`struct`**|
+|**불가능**|예|
+|**필수 특성**|**coclass** (또는에 적용 된 경우 **`class`** **`struct`** )|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

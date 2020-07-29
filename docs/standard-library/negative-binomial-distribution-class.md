@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367961"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212204"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution 클래스
 
@@ -72,18 +72,18 @@ public:
 ### <a name="parameters"></a>매개 변수
 
 *IntType*\
-정수 결과 유형, 기본값은 **int.** 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+정수 결과 형식으로, 기본적으로로 설정 **`int`** 됩니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
-클래스 템플릿은 네거티브 이항 분포 불연속 확률 함수에 따라 배포되는 사용자 지정 정수 형식 또는 제공되지 않은 경우 **int** 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+**`int`** 음수 이항 분포 불연속 확률 함수에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 정수 형식 또는 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-속성 `k()` 멤버와 `p()` 현재 저장된 배포 매개 변수 값 *k* 및 *p를* 각각 반환합니다.
+속성 멤버 `k()` 및는 `p()` 각각 현재 저장 된 분포 매개 변수 값 *k* 및 *p* 를 반환 합니다.
 
 속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
@@ -93,9 +93,9 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-음수 이항 분포 불연속 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [네거티브 이항 분포를](https://go.microsoft.com/fwlink/p/?linkid=400516)참조하십시오.
+음수 이항 분포 불연속 확률 함수에 대 한 자세한 내용은 Wolfram MathWorld 문서 [음수 이항 분포](https://go.microsoft.com/fwlink/p/?linkid=400516)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -217,11 +217,11 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
 
 분포를 생성합니다.
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*k*\
+*시계의*\
 `k` 분포 매개 변수입니다.
 
-*P*\
+*®*\
 `p` 분포 매개 변수입니다.
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
@@ -249,20 +249,20 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p아람_타입
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 
-struct param_type {`<`typedef negative_binomial_distribution> distribution_type> result_type; param_type (result_type k = 1, 더블 p = 0.5); result_type k() const; double p() const;
+구조체 param_type {typedef negative_binomial_distribution `<` result_type> distribution_type; param_type (result_type k = 1, double p = 0.5); result_type k () const; double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>매개 변수
 
-*k*\
+*시계의*\
 `k` 분포 매개 변수입니다.
 
-*P*\
+*®*\
 `p` 분포 매개 변수입니다.
 
 *오른쪽*\
@@ -276,4 +276,4 @@ struct param_type {`<`typedef negative_binomial_distribution> distribution_type>
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

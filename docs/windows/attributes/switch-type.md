@@ -1,17 +1,17 @@
 ---
-title: switch_type (C++ COM 특성)
+title: switch_type (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211933"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -30,11 +30,11 @@ type
 *type*<br/>
 스위치 형식은 정수, 문자, 부울 또는 열거형 형식일 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Switch_type** C++ 특성에는 [switch_type](/windows/win32/Midl/switch-type) MIDL 특성과 동일한 기능이 있습니다.
+**Switch_type** c + + 특성에는 [switch_type](/windows/win32/Midl/switch-type) MIDL 특성과 동일한 기능이 있습니다.
 
-C++특성은 캡슐화 된 [공용 구조체](/windows/win32/Midl/encapsulated-unions)를 지원 하지 않습니다. [캡슐화 되지 않은 공용 구조체](/windows/win32/Midl/nonencapsulated-unions) 는 다음 형식 으로만 지원 됩니다.
+C + + 특성은 [캡슐화 된 공용 구조체](/windows/win32/Midl/encapsulated-unions)를 지원 하지 않습니다. [캡슐화 되지 않은 공용 구조체](/windows/win32/Midl/nonencapsulated-unions) 는 다음 형식 으로만 지원 됩니다.
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,8 +63,8 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**적용 대상**|**typedef**|
-|**반복 가능**|아니요|
+|**적용 대상**|**`typedef`**|
+|**불가능**|예|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -74,4 +74,4 @@ struct SizedValue2 {
 
 [IDL 특성](idl-attributes.md)<br/>
 [Typedef, Enum, Union 및 Struct 특성](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[내보내기가](export.md)

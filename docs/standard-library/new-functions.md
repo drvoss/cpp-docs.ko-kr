@@ -6,16 +6,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212178"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 함수
 
-## <a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -25,7 +25,7 @@ new_handler get_new_handler() noexcept;
 
 현재 `new_handler`를 반환합니다.
 
-## <a name="launder"></a>launder
+## <a name="launder"></a><a name="launder"></a>launder
 
 ```cpp
 template <class T>
@@ -39,7 +39,7 @@ template <class T>
 
 ### <a name="return-value"></a>Return Value
 
-X를 가리키는 *T\** 형식의 값입니다.
+X를 가리키는 *T \* * 형식의 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a>nothrow
 
-**New** 및 **delete**의 **nothrow** 버전에 대 한 인수로 사용할 개체를 제공 합니다.
+및 버전의 인수로 사용할 개체를 제공 합니다 **`nothrow`** **`new`** **`delete`** .
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -73,9 +73,9 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="example"></a>예제
 
-[를 함수 매개 변수로 사용하는 방법의 예제는 ](../standard-library/new-operators.md#op_new)operator new[ 및 ](../standard-library/new-operators.md#op_new_arr)operator new&#91;&#93;`std::nothrow_t`를 참조하세요.
+`std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#op_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.
 
-## <a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
 
 **Operator new** 가 메모리 할당 시도에 실패할 때 호출 되는 사용자 함수를 설치 합니다.
 
@@ -86,7 +86,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>매개 변수
 
 *Pnew*\
-설치할 `new_handler`입니다.
+`new_handler`설치할입니다.
 
 ### <a name="return-value"></a>Return Value
 

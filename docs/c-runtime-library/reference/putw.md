@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232432"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,7 +65,7 @@ int _putw(
 
 ## <a name="remarks"></a>설명
 
-**_Putw** 함수는 **int** 형식의 이진 값을 스트림의 현재 위치에 씁니다 *.* **_putw** 은 스트림의 항목 맞춤에 영향을 주지 않으며 특수 한 맞춤을 가정 하지도 않습니다. **_putw** 는 주로 이전 라이브러리와의 호환성을 위해 사용 됩니다. **Int** 의 크기와 **int** 내 바이트의 순서가 시스템 마다 다르기 때문에 **_putw** 에서 이식성 문제가 발생할 수 있습니다.
+**_Putw** 함수는 **`int`** 스트림의 현재 위치에 형식의 이진 값을 씁니다 *.* **_putw** 은 스트림의 항목 맞춤에 영향을 주지 않으며 특수 한 맞춤을 가정 하지도 않습니다. **_putw** 는 주로 이전 라이브러리와의 호환성을 위해 사용 됩니다. 의 크기 **_putw** **`int`** 와 내의 바이트 순서가 **`int`** 시스템 마다 다르기 때문에 _putw에서 이식성 문제가 발생할 수 있습니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 

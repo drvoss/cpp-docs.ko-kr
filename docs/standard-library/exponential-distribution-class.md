@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a281f7fd77c0a68fca3a8fcfa163758ec464f1d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212360"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution 클래스
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*실제 유형*\
-부동 점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*RealType*\
+부동 소수점 결과 형식으로, 기본적으로로 설정 **`double`** 됩니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-*URNG (우롱)는*\
-난수 생성기 엔진입니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*URNG*\
+난수 생성기 엔진입니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
-클래스 템플릿은 사용자가 지정한 정수 형식의 값을 생성하는 분포를 설명하거나 지수 분포에 따라 배포된 값이 제공되지 않으면 **double을** 입력합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+지 수 분포에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 정수 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 속성 멤버 함수 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 지수 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Exponential Distribution](https://go.microsoft.com/fwlink/p/?linkid=401098)(지수 분포)을 참조하세요.
 
@@ -167,11 +167,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:: exponential_distribution
 
 분포를 생성합니다.
 
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*람다*\
+*lambda*\
 `lambda` 분포 매개 변수입니다.
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 매개 변수 패키지입니다.
 
 ### <a name="remarks"></a>설명
@@ -196,7 +196,7 @@ explicit exponential_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p아람_타입
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 
@@ -213,7 +213,7 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
-*람다*\
+*lambda*\
 `lambda` 분포 매개 변수입니다.
 
 *오른쪽*\
@@ -227,4 +227,4 @@ struct param_type {
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

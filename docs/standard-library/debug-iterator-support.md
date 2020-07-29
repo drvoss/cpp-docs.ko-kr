@@ -1,5 +1,5 @@
 ---
-title: 디버그 반복기 지원
+title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231587"
 ---
-# <a name="debug-iterator-support"></a>디버그 반복기 지원
+# <a name="debug-iterator-support"></a>Debug Iterator Support
 
 Visual C++ 런타임 라이브러리는 부정확한 반복기 사용을 검색하고 런타임에 대화 상자를 어설션하고 표시합니다. Debug Iterator Support를 사용하도록 설정하려면 프로그램 컴파일 시 C++ 표준 라이브러리 및 C 런타임 라이브러리의 디버그 버전을 사용해야 합니다. 자세한 내용은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요. 확인된 반복기를 사용하는 방법에 대한 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
@@ -28,7 +28,7 @@ C++ 표준은 멤버 함수로 인해 컨테이너에 대한 반복기가 어떻
 
 - push 또는 insert를 사용하여 [vector](../standard-library/vector.md)의 크기를 줄이면 `vector`에 대한 반복기가 무효화됩니다.
 
-## <a name="invalid-iterators"></a>잘못된 반복기
+## <a name="invalid-iterators"></a>잘못 된 반복기
 
 이 샘플 프로그램을 디버그 모드에서 컴파일하면 이 프로그램이 런타임에 어설션되고 종료됩니다.
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-이 예제에서는 함수 대신 람다 식 `[] (int& elem) { elem *= 2; }`를 사용합니다. 이 선택은 비슷한 함수가 같은 실패를 일으키는 어설션 실패와 아무런 관련이 없지만 람다는 간단한 함수 개체 작업을 수행하는 매우 유용한 방법입니다. 람다 식에 대한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조하세요.
+이 예제에서는 함수 대신 람다 식 `[] (int& elem) { elem *= 2; }`를 사용합니다. 이 선택은 비슷한 함수가 같은 실패를 일으키는 어설션 실패와 아무런 관련이 없지만 람다는 간단한 함수 개체 작업을 수행하는 매우 유용한 방법입니다. 람다 식에 대 한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조 하세요.
 
-## <a name="iterators-going-out-of-scope"></a>범위 밖으로 이동하는 반복기
+## <a name="iterators-going-out-of-scope"></a>범위 밖으로 이동 하는 반복기
 
-또한 디버그 반복기 검사를 수행 **하면 for 루프** 범위가 종료 될 때 **for** 루프에서 선언 된 반복기 변수가 범위를 벗어났습니다.
+또한 디버그 반복기 검사를 수행 하면 루프 **`for`** 범위가 종료 될 때 루프에서 선언 된 반복기 변수가 범위를 벗어났습니다 **`for`** .
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -175,4 +175,4 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)
+[C + + 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)

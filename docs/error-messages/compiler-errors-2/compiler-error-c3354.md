@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3354
 ms.assetid: 185de401-231e-4999-a149-172ee4c69d84
-ms.openlocfilehash: e5945b2112d1d03e4f18944d15028229cce4b668
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fdc5de7493decf1f44617ab22a00fb5e8852116f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738598"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231977"
 ---
 # <a name="compiler-error-c3354"></a>컴파일러 오류 C3354
 
 'function': 대리자를 만드는 데 사용되는 함수는 'type' 반환 형식을 사용할 수 없습니다.
 
-다음 형식은 `delegate`에 대한 반환 형식으로 부적합합니다.
+다음 형식은의 반환 형식으로 사용할 수 없습니다 **`delegate`** .
 
 - 함수 포인터
 

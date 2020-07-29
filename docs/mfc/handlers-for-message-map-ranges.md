@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231912"
 ---
 # <a name="handlers-for-message-map-ranges"></a>메시지 맵 범위에 대한 처리기
 
@@ -143,7 +143,7 @@ ms.locfileid: "84621688"
 
 `OnButtonClicked`단일 **BN_CLICKED** 메시지에 대 한 처리기는 매개 변수를 사용 하지 않습니다. 단추 범위에 대 한 동일한 처리기는 하나의 **UINT**를 사용 합니다. 추가 매개 변수를 사용 하면 **BN_CLICKED** 메시지 생성을 담당 하는 특정 컨트롤을 식별할 수 있습니다.
 
-예제에 표시 된 코드는 일반적으로 메시지 범위 내에서로 전달 된 값을 변환 하 고이에 대 한 것을 어설션 합니다. `int` 그런 다음 클릭 한 단추에 따라 몇 가지 작업을 수행할 수 있습니다.
+예제에 표시 된 코드는 일반적으로 메시지 범위 내에서로 전달 된 값을 변환 하 고이에 대 한 것을 어설션 합니다. **`int`** 그런 다음 클릭 한 단추에 따라 몇 가지 작업을 수행할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

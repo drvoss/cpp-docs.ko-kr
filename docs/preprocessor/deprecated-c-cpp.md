@@ -7,19 +7,19 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 6caf5283aea848186c8bd6f9dd2009bb8d8ee8b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 52d9deb4ad68dacc99fab9d12bc9eb21bc0d360e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231613"
 ---
 # <a name="deprecated-pragma"></a>deprecated pragma
 
-**사용 되지 않는** pragma를 사용 하면 함수, 형식 또는 다른 식별자가 이후 릴리스에서 더 이상 지원 되지 않거나 더 이상 사용 되지 않음을 나타낼 수 있습니다.
+Pragma를 사용 하면 **`deprecated`** 함수, 형식 또는 다른 식별자가 이후 릴리스에서 더 이상 지원 되지 않거나 더 이상 사용 되지 않음을 나타낼 수 있습니다.
 
 > [!NOTE]
-> C + + 14 `[[deprecated]]` 특성에 대 한 자세한 내용과 Microsoft `__declspec(deprecated)` 한정자 또는 사용 **되지 않는** pragma 대신 해당 특성을 사용 하는 경우에 대 한 지침은 [의 C++특성 ](../cpp/attributes.md)을 참조 하세요.
+> C + + 14 `[[deprecated]]` 특성 및 Microsoft 한정자 나 pragma 대신 해당 특성을 사용 해야 하는 경우에 대 한 지침에 대 한 자세한 내용은 `__declspec(deprecated)` **`deprecated`** [c + +의 특성](../cpp/attributes.md)을 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -27,13 +27,13 @@ ms.locfileid: "80167630"
 
 ## <a name="remarks"></a>설명
 
-컴파일러가 **사용 되지 않는** pragma로 지정 된 식별자를 발견 하면 컴파일러 경고 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)이 발생 합니다.
+컴파일러가 pragma로 지정 된 식별자를 발견 하면 **`deprecated`** 컴파일러 경고 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)이 발생 합니다.
 
 매크로 이름을 사용하지 않을 수 있습니다. 매크로 이름을 따옴표로 묶지 않으면 매크로 확장이 발생합니다.
 
-**사용 되지** 않는 pragma는 일치 하는 모든 식별자에 대해 작동 하 고 서명을 고려 하지 않으므로 오버 로드 된 함수의 사용 중단 특정 버전을 사용 하는 것이 가장 적합 한 옵션이 아닙니다. 범위 안에 함수 이름이 일치한다면 경고가 발생합니다.
+Pragma가 **`deprecated`** 일치 하는 모든 식별자에 대해 작동 하 고 서명을 고려 하지 않으므로 오버 로드 된 함수의 사용 중단 특정 버전을 사용 하는 것이 가장 좋은 방법은 아닙니다. 범위에 있는 일치 하는 함수 이름은 모두 경고를 트리거합니다.
 
-가능 하면 사용 **되지 않는** Pragma 대신 c + + 14 `[[deprecated]]` 특성을 사용 하는 것이 좋습니다. Microsoft 전용 [__declspec (사용 되지 않음)](../cpp/deprecated-cpp.md) 선언 한정자는 **사용 되지 않는** pragma 보다 많은 경우에도 더 적합 합니다. `[[deprecated]]` attribute 및 `__declspec(deprecated)` 한정자를 사용 하면 오버 로드 된 특정 형식의 오버 로드 된 함수에 대해 사용 되지 않는 상태를 지정할 수 있습니다. 진단경고는 특성 또는 한정자가 적용되는 특정 오버로드 된 함수에 대한 참조에만 나타납니다.
+가능 하면 pragma 대신 c + + 14 특성을 사용 하는 것이 좋습니다 `[[deprecated]]` **`deprecated`** . Microsoft 전용 [__declspec (사용 되지 않음)](../cpp/deprecated-cpp.md) 선언 한정자를 사용 하는 것도 pragma가 아닌 많은 경우에 더 적합 합니다 **`deprecated`** . `[[deprecated]]`특성 및 `__declspec(deprecated)` 한정자를 사용 하면 오버 로드 된 함수의 특정 형식에 대해 사용 되지 않는 상태를 지정할 수 있습니다. 진단 경고는 특성이 나 한정자가 적용 되는 특정 오버 로드 된 함수에 대 한 참조에만 표시 됩니다.
 
 ## <a name="example"></a>예제
 

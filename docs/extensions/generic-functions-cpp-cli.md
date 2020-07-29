@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516378"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216013"
 ---
 # <a name="generic-functions-ccli"></a>제네릭 함수(C++/CLI)
 
@@ -22,13 +22,13 @@ ms.locfileid: "65516378"
 
 ## <a name="all-platforms"></a>모든 플랫폼
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 일부 플랫폼에는 이 기능이 적용되지 않습니다.
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Windows 런타임에서는 이 기능이 지원되지 않습니다.
 
@@ -53,17 +53,17 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>매개 변수
 
-*특성*<br/>
+*attributes*<br/>
 (선택 사항) 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하세요.
 
-*modifiers*<br/>
-(선택 사항) static 등의 함수 한정자입니다.  가상 메서드는 제네릭이 될 수 없으므로 **virtual**은 허용되지 않습니다.
+*수정자*<br/>
+(선택 사항) static 등의 함수 한정자입니다.  **`virtual`** 가상 메서드는 제네릭일 수 없으므로 허용 되지 않습니다.
 
-*return-type*<br/>
+*반환 형식*<br/>
 메서드에서 반환되는 형식입니다. 반환 형식이 void이면 반환 값이 필요하지 않습니다.
 
 *identifier*<br/>
-함수 이름.
+함수 이름입니다.
 
 *type-parameter identifier(s)*<br/>
 쉼표로 구분된 식별자 목록입니다.
@@ -74,10 +74,10 @@ return-type identifier<type-parameter identifier(s)>
 *type-parameter-constraints-clauses*<br/>
 형식 인수로 사용할 수 있는 형식에 대한 제한을 지정하며, [제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)에 지정된 형식을 사용합니다.
 
-*function-body*<br/>
+*함수 본문*<br/>
 형식 매개 변수 식별자를 참조할 수 있는 메서드 본문입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 제네릭 함수는 제네릭 형식 매개 변수를 사용하여 선언된 함수입니다. 클래스 또는 구조체의 메서드이거나 독립 실행형 함수일 수 있습니다. 단일 제네릭 선언에서 제네릭 형식 매개 변수를 대체하는 실제 형식만 다른 함수 제품군을 암시적으로 선언합니다.
 
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
 [제네릭](generics-cpp-component-extensions.md)

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404308"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231860"
 ---
 # <a name="cbutton-class"></a>CButton 클래스
 
@@ -95,13 +95,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|Description|
+|Name|설명|
 |----------|-----------------|
 |[CButton:: CButton](#cbutton)|`CButton` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CButton:: Create](#create)|Windows 단추 컨트롤을 만들고이를 개체에 연결 `CButton` 합니다.|
 |[CButton::D rawItem](#drawitem)|소유자가 그린 개체를 그리려면를 재정의 `CButton` 합니다.|
@@ -170,7 +170,7 @@ class CButton : public CWnd
 
 `CButton`대화 상자 리소스에서 개체를 만드는 경우 `CButton` 사용자가 대화 상자를 닫으면 개체가 자동으로 소멸 됩니다.
 
-`CButton`창 내에서 개체를 만드는 경우 해당 개체를 삭제 해야 할 수 있습니다. `CButton` **새** 함수를 사용 하 여 힙에서 개체를 만드는 경우에는 개체에 대해 **delete** 를 호출 하 여 사용자가 Windows 단추 컨트롤을 닫을 때 해당 개체를 제거 해야 합니다. 스택에서 개체를 만들거나 `CButton` 부모 대화 상자 개체에 포함 하는 경우 자동으로 삭제 됩니다.
+`CButton`창 내에서 개체를 만드는 경우 해당 개체를 삭제 해야 할 수 있습니다. `CButton`함수를 사용 하 여 힙에서 개체를 만드는 경우 **`new`** **`delete`** 사용자가 Windows 단추 컨트롤을 닫을 때 개체에 대해를 호출 하 여 개체를 제거 해야 합니다. 스택에서 개체를 만들거나 `CButton` 부모 대화 상자 개체에 포함 하는 경우 자동으로 삭제 됩니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*lpszNote*|제한이 호출자가 할당 및 할당 취소를 담당 하는 버퍼에 대 한 포인터입니다. 반환 값이 TRUE 이면 버퍼에는 현재 명령 링크 컨트롤과 연결 된 메모 텍스트가 포함 됩니다. 그렇지 않으면 버퍼는 변경 되지 않습니다.|
 |*cchNote*|[in, out] 부호 없는 정수 변수에 대 한 포인터입니다.<br /><br /> 이 메서드가 호출 되 면 변수는 *lpszNote* 매개 변수로 지정 된 버퍼의 크기를 포함 합니다.<br /><br /> 이 메서드가 반환 될 때 반환 값이 TRUE 이면 변수는 현재 명령 링크 컨트롤과 연결 된 메모의 크기를 포함 합니다. 반환 값이 FALSE 이면 변수는 메모를 포함 하는 데 필요한 버퍼 크기를 포함 합니다.|
@@ -506,7 +506,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*pInfo*|제한이 현재 분할 단추 컨트롤에 대 한 정보를 수신 하는 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 구조체에 대 한 포인터입니다. 호출자는 구조체를 할당 해야 합니다.|
 
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*pSize*|제한이 사각형에 대 한 설명을 받는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.|
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 단추 컨트롤의 현재 상태를 나타내는 값의 조합을 포함 하는 비트 필드입니다. 다음 표에서는 가능한 값을 나열 합니다.
 
-|단추 상태|Value|Description|
+|단추 상태|Value|설명|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|초기 상태입니다.|
 |BST_CHECKED|0x0001|단추 컨트롤이 선택 됩니다.|
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*fDropDown*|진행 BST_DROPDOWNPUSHED 상태를 설정 하려면 TRUE로 설정 합니다. 그렇지 않으면 FALSE입니다.|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*fElevationRequired*|진행 상태를 설정 하려면 TRUE `elevation required` 이 고, 그렇지 않으면 FALSE입니다.|
 
@@ -882,7 +882,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*lpszNote*|진행 명령 링크 컨트롤에 대 한 메모 텍스트로 설정 된 유니코드 문자열에 대 한 포인터입니다.|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*chGlyph*|진행 분할 단추 드롭다운 화살표로 사용할 문자 모양을 지정 하는 문자입니다.|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*pSplitImageList*|진행 현재 분할 단추 컨트롤에 할당할 [CImageList](../../mfc/reference/cimagelist-class.md) 개체에 대 한 포인터입니다.|
 
@@ -968,7 +968,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*pInfo*|진행 현재 분할 단추 컨트롤을 정의 하는 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 구조체에 대 한 포인터입니다.|
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*pSize*|진행 경계 사각형을 설명 하는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*uSplitStyle*|진행 분할 단추 스타일의 비트 조합입니다. 자세한 내용은 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 구조체의 멤버를 참조 하십시오.|
 

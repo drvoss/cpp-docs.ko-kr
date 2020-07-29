@@ -6,18 +6,18 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: c8cf1801d0262e3a2995d520604374ea22352fa0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4eb490ecf51abea324f20395279bff2d74b7af77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141891"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215857"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>방법: 데이터 파이프라인에서 transformer 사용
 
 이 항목에는 데이터 파이프라인에서 [concurrency:: 변환기](../../parallel/concrt/reference/transformer-class.md) 클래스를 사용 하는 방법을 보여 주는 기본 예제가 포함 되어 있습니다. 데이터 파이프라인을 사용 하 여 이미지 처리를 수행 하는 전체 예제는 [연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)를 참조 하세요.
 
-*데이터 파이프라인* 은 동시 프로그래밍의 일반적인 패턴입니다. 데이터 파이프라인은 일련의 단계로 구성 되며, 각 단계는 작업을 수행 하 고 해당 작업의 결과를 다음 단계로 전달 합니다. `transformer` 클래스는 입력 값을 받고 해당 값에 대해 작업을 수행한 다음 사용할 다른 구성 요소에 대 한 결과를 생성 하기 때문에 데이터 파이프라인의 핵심 구성 요소입니다.
+*데이터 파이프라인* 은 동시 프로그래밍의 일반적인 패턴입니다. 데이터 파이프라인은 일련의 단계로 구성 되며, 각 단계는 작업을 수행 하 고 해당 작업의 결과를 다음 단계로 전달 합니다. `transformer`클래스는 입력 값을 받고 해당 값에 대해 작업을 수행한 다음 사용할 다른 구성 요소에 대 한 결과를 생성 하기 때문에 데이터 파이프라인의 핵심 구성 요소입니다.
 
 ## <a name="example"></a>예제
 
@@ -37,20 +37,20 @@ ms.locfileid: "77141891"
 
 [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
 
-이 예에서 생성되는 출력은 다음과 같습니다.
+이 예제는 다음과 같은 출력을 생성합니다.
 
 ```Output
 The result is -42.
 ```
 
-데이터 파이프라인의 단계에서 형식이 입력 값과 다른 값을 출력 하는 것이 일반적입니다. 이 예제에서 두 번째 단계는 `int` 형식의 값을 입력으로 사용 하 고 해당 값의 제곱근 (`double`)을 출력으로 생성 합니다.
+데이터 파이프라인의 단계에서 형식이 입력 값과 다른 값을 출력 하는 것이 일반적입니다. 이 예제에서 두 번째 단계는 형식의 값을 **`int`** 입력으로 사용 하 고 해당 값 (a)의 제곱근을 **`double`** 출력으로 생성 합니다.
 
 > [!NOTE]
 > 이 예제의 데이터 파이프라인은 설명을 위한 것입니다. 각 변환 작업은 거의 작업을 수행 하지 않으므로 메시지 전달을 수행 하는 데 필요한 오버 헤드는 데이터 파이프라인을 사용 하는 경우의 이점 보다 클 수 있습니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
-예제 코드를 복사 하 여 Visual Studio 프로젝트에 붙여넣거나, `data-pipeline.cpp` 이름이 지정 된 파일에 붙여 넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.
+예제 코드를 복사 하 여 Visual Studio 프로젝트에 붙여넣거나 라는 파일에 붙여 넣은 `data-pipeline.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.
 
 > **cl.exe/EHsc data-pipeline**
 

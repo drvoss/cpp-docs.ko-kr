@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232471"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -75,7 +75,7 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>매개 변수
 
-*buffer*<br/>
+*버퍼*<br/>
 버퍼에 대한 포인터입니다.
 
 *c*<br/>
@@ -84,15 +84,15 @@ const wchar_t *wmemchr(
 *count*<br/>
 검사할 문자 수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 하면 *버퍼*에서 *c* 의 첫 번째 위치에 대 한 포인터를 반환 합니다. 그렇지 않으면 NULL을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-`memchr`버퍼의 첫 번째 *카운트* 문자에서 처음 발견 되는 *c* 를 찾습니다.`wmemchr` *C* 를 찾거나 첫 번째 *카운트* 문자를 확인 한 경우 중지 합니다.
+`memchr``wmemchr` *버퍼*의 첫 번째 *카운트* 문자에서 처음 발견 되는 *c* 를 찾습니다. *C* 를 찾거나 첫 번째 *카운트* 문자를 확인 한 경우 중지 합니다.
 
-C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 취하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. 매크로 \_CRT\_const올바른\_ 오버 로드는 이러한 함수의 const 및 비 const 버전을 모두 사용할 수 있는 경우에 정의 됩니다.\_ 에서 두 C++ 오버 로드에 대 한 비**const** 동작이 필요한 경우 C++에는 const\_반환 \_기호를 정의 합니다.
+C에서 이러한 함수는 **`const`** 첫 번째 인수에 대 한 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 포인터를 사용 하는 오버 로드는에 대 한 포인터를 반환 합니다 .가 아닌에 대 한 포인터를 사용 하는 **`const`** **`const`** 버전은가 **`const`** 아닌에 대 한 포인터를 반환 합니다 **`const`** . \_ \_ \_ \_ **`const`** 이러한 함수의 및 비 버전을 모두 **`const`** 사용할 수 있는 경우 매크로 CRT CONST 올바른 오버 로드를 정의 합니다. **`const`** C + +에서 두 c + + 오버 로드에 대 한 동작이 필요 하지 않은 경우에는 CONST 반환 기호를 정의 \_ \_ 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -101,7 +101,7 @@ C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 
 |`memchr`|\<memory.h> 또는 \<string.h>|
 |`wmemchr`|\<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -150,7 +150,7 @@ Search char: r
 Result:      r found at position 12
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

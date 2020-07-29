@@ -1,17 +1,17 @@
 ---
-title: C + + 최신 c + + 시작
+title: C++ 시작하기 - 최신 C++
 description: 최신 c + +의 새로운 프로그래밍 관용구 및 해당 근거에 대해 설명 합니다.
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550799"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232198"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>C + + 최신 c + + 시작
+# <a name="welcome-back-to-c---modern-c"></a>C++ 시작하기 - 최신 C++
 
 C + +는 생성 되기 때문에 전 세계에서 가장 널리 사용 되는 프로그래밍 언어 중 하나입니다. 잘 작성된 C++ 프로그램은 빠르고 효율적입니다. 이 언어는 다른 언어 보다 더 유연 합니다. 가장 높은 수준의 추상화에서 작동 하 고 실리콘 수준에서 아래로 작동할 수 있습니다. C + +는 매우 최적화 된 표준 라이브러리를 제공 합니다. 이를 통해 하위 수준 하드웨어 기능에 액세스 하 여 속도를 최대화 하 고 메모리 요구 사항을 최소화할 수 있습니다. C + +를 사용 하 여 다양 한 범위의 앱을 만들 수 있습니다. 게임, 장치 드라이버 및 고성능 과학 소프트웨어 포함 된 프로그램. Windows 클라이언트 앱. 다른 프로그래밍 언어에 대 한 라이브러리와 컴파일러는 c + +로 작성 됩니다.
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>범위 기반 `for` 루프
 
-배열 및 컨테이너에 대 한 C 스타일 반복은 인덱싱 오류가 발생 하기 쉬우므로 형식에도 지루한 것입니다. 이러한 오류를 제거 하 고 코드를 더 읽기 쉽게 만들려면 `for` 표준 라이브러리 컨테이너와 원시 배열 모두에 범위 기반 루프를 사용 합니다. 자세한 내용은 [범위 기반 `for` 문](../cpp/range-based-for-statement-cpp.md)을 참조 하세요.
+배열 및 컨테이너에 대 한 C 스타일 반복은 인덱싱 오류가 발생 하기 쉬우므로 형식에도 지루한 것입니다. 이러한 오류를 제거 하 고 코드를 더 읽기 쉽게 만들려면 **`for`** 표준 라이브러리 컨테이너와 원시 배열 모두에 범위 기반 루프를 사용 합니다. 자세한 내용은 [범위 기반 `for` 문](../cpp/range-based-for-statement-cpp.md)을 참조 하세요.
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ C 스타일 프로그래밍에서 함수 *포인터*를 사용 하 여 함수를
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-람다 식은 `[=](int i) { return i > x && i < y; }` 형식의 단일 인수를 사용 하 `int` 고 인수가 보다 큰지 여부를 나타내는 부울을 반환 하는 "함수"로 읽을 수 있습니다 `x` `y` . 주변 컨텍스트의 변수와 변수 `x` 는 `y` 람다에서 사용할 수 있습니다. 는 `[=]` 이러한 변수를 값으로 *캡처하도록* 지정 합니다. 즉, 람다 식에는 해당 값의 자체 복사본이 있습니다.
+람다 식은 `[=](int i) { return i > x && i < y; }` 형식의 단일 인수를 사용 하 **`int`** 고 인수가 보다 큰지 여부를 나타내는 부울을 반환 하는 "함수"로 읽을 수 있습니다 `x` `y` . 주변 컨텍스트의 변수와 변수 `x` 는 `y` 람다에서 사용할 수 있습니다. 는 `[=]` 이러한 변수를 값으로 *캡처하도록* 지정 합니다. 즉, 람다 식에는 해당 값의 자체 복사본이 있습니다.
 
 ## <a name="exceptions"></a>예외
 
@@ -214,9 +214,9 @@ C 스타일 프로그래밍에서 함수 *포인터*를 사용 하 여 함수를
 
 공용 구조체는 여러 형식의 멤버가 동일한 메모리 위치를 차지할 수 있도록 하 여 메모리를 절약 하는 C 스타일 프로그래밍에서 일반적으로 사용 됩니다. 그러나 공용 구조체는 형식이 안전 하지 않으며 프로그래밍 오류가 발생 하기 쉽습니다. C + + 17은 [`std::variant`](../standard-library/variant-class.md) 공용 구조체에 대 한 보다 강력 하 고 안전한 방법으로 클래스를 도입 합니다. [`std::visit`](../standard-library/variant-functions.md#visit)함수를 사용 하 여 형식이 안전한 방식으로 형식의 멤버에 액세스할 수 있습니다 `variant` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[C + + 언어 참조](../cpp/cpp-language-reference.md)\
+[C++ 언어 참조](../cpp/cpp-language-reference.md)\
 [람다 식](../cpp/lambda-expressions-in-cpp.md)\
-[C + + 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)\
+[C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)\
 [Microsoft C++ 언어 규칙 테이블](../overview/visual-cpp-language-conformance.md)

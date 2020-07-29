@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e337e5b54706c1ae9d566131c98fd178c523f87e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216182"
 ---
 # <a name="compiler-error-c2494"></a>컴파일러 오류 C2494
 
-필터 식 또는 __finally/finally 블록 내에서 ' keyword '를 호출할 수 없습니다.
+> 필터 식 또는 __finally/finally 블록 내에서 '*keyword*'를 호출할 수 없습니다.
 
-`__finally` 또는 finally 블록에 `keyword`를 사용할 수 없습니다.
+또는 블록에서 *키워드* 를 사용할 수 없습니다 **`__finally`** **`finally`** .
 
 다음 샘플에서는 C2494를 생성 합니다.
 

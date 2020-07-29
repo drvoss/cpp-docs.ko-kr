@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545272"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216390"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>방법: 마샬링 라이브러리 확장명
 
 이 항목에서는 마샬링 라이브러리를 확장 하 여 데이터 형식 간에 더 많은 변환을 제공 하는 방법에 대해 설명 합니다. 사용자는 라이브러리에서 현재 지원 되지 않는 데이터 변환에 대해 마샬링 라이브러리를 확장할 수 있습니다.
 
-[Marshal_context 클래스](../dotnet/marshal-context-class.md)를 사용 하거나 사용 하지 않고 두 가지 방법 중 하나를 사용 하 여 마샬링 라이브러리를 확장할 수 있습니다. 항목 [ C++ 의 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md) 를 검토 하 여 새 변환에 컨텍스트가 필요한 지 여부를 확인 합니다.
+[Marshal_context 클래스](../dotnet/marshal-context-class.md)를 사용 하거나 사용 하지 않고 두 가지 방법 중 하나를 사용 하 여 마샬링 라이브러리를 확장할 수 있습니다. 새 변환에 컨텍스트가 필요한 지 여부를 확인 하려면 [c + +의 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md) 항목을 검토 하세요.
 
 두 경우 모두, 먼저 새 마샬링 변환을 위한 파일을 만듭니다. 표준 마샬링 라이브러리 파일의 무결성을 유지 하기 위해이 작업을 수행 합니다. 프로젝트를 다른 컴퓨터 또는 다른 프로그래머에 게 이식 하려면 새 마샬링 파일을 나머지 프로젝트와 함께 복사 해야 합니다. 이러한 방식으로 프로젝트를 받는 사용자는 새 변환을 받게 되며 라이브러리 파일을 수정할 필요가 없습니다.
 
@@ -30,11 +30,11 @@ ms.locfileid: "79545272"
 
    - windows 데이터 형식에 대 한 marshal_windows.
 
-   - 표준 라이브러리 데이터 형식 C++ 에 대 한 marshal_cppstd.
+   - c + + 표준 라이브러리 데이터 형식에 대 한 marshal_cppstd.
 
    - ATL 데이터 형식에 대 한 marshal_atl.
 
-1. 이러한 단계 끝에 있는 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서 TO는 변환할 형식입니다 .는에서 변환할 형식이 고 `from`은 변환할 매개 변수입니다.
+1. 이러한 단계 끝에 있는 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서 TO는 변환할 형식입니다 .는에서 변환할 형식입니다 `from` .는 변환 될 매개 변수입니다.
 
 1. 변환 논리에 대 한 주석을 `from` 매개 변수를의 개체로 변환 하 여 변환 된 개체를 입력 하 고 반환 하는 코드로 바꿉니다.
 
@@ -59,19 +59,19 @@ namespace msclr {
 
    - windows 데이터 형식에 대 한 marshal_windows.
 
-   - 표준 라이브러리 데이터 형식 C++ 에 대 한 marshal_cppstd.
+   - c + + 표준 라이브러리 데이터 형식에 대 한 marshal_cppstd.
 
    - ATL 데이터 형식에 대 한 marshal_atl.
 
-1. 이러한 단계 끝에 있는 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서 TO는 변환할 형식입니다. 여기서는 변환할 형식이 고, `toObject`은 결과를 저장할 포인터이 고, `fromObject`은 변환할 매개 변수입니다.
+1. 이러한 단계 끝에 있는 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서 TO는 변환할 형식입니다 .는에서 변환할 형식입니다 `toObject` .는 결과를 저장할 포인터이 고은 `fromObject` 변환할 매개 변수입니다.
 
-1. `toPtr`를 해당 하는 빈 값으로 초기화 하는 코드를 초기화 하는 방법에 대 한 설명을 바꿉니다. 예를 들어 포인터가 포인터인 경우 `NULL`로 설정 합니다.
+1. 코드를 초기화 하는 방법에 대 한 주석을 `toPtr` 적절 한 빈 값으로 초기화 하는 주석을 바꿉니다. 예를 들어 포인터가 포인터인 경우로 설정 `NULL` 합니다.
 
-1. `from` 매개 변수를 형식의 개체로 변환 하는 코드를 *사용 하 여* 변환 논리에 대 한 설명을 바꿉니다. 변환 된이 개체는 `toPtr`에 저장 됩니다.
+1. 변환 논리에 대 한 주석을 `from` 매개 변수를 형식의 개체로 변환 하는 코드로 바꿉니다 *TO* . 변환 된이 개체는에 저장 됩니다 `toPtr` .
 
-1. `toObject` 설정에 대 한 설명을 변환 된 개체에 `toObject` 설정 하는 코드로 바꿉니다.
+1. 설정에 대 한 주석을 `toObject` 변환 된 개체로 설정 하는 코드로 바꿉니다 `toObject` .
 
-1. 네이티브 리소스 정리에 대 한 설명을 `toPtr`에 의해 할당 된 메모리를 해제 하는 코드로 바꿉니다. `new`를 사용 하 여 메모리를 할당 `toPtr` 경우 `delete`를 사용 하 여 메모리를 해제 합니다.
+1. 에 의해 할당 된 메모리를 해제 하는 코드를 사용 하 여 네이티브 리소스 정리에 대 한 설명을 바꿉니다 `toPtr` . `toPtr`를 사용 하 여 메모리 **`new`** 를 할당 한 경우를 사용 하 여 메모리를 **`delete`** 해제 합니다.
 
 ```
 namespace msclr {
@@ -268,4 +268,4 @@ Native zip code: 98111
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)
+[C + +의 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)
