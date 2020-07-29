@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a33f7c55fa2825eae1c7d8b9d8ab78e4ed5274
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225334"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>컴파일러 경고(수준 1) C4807
 
 'operation': 'type' 형식과 'type' 형식의 부호 있는 비트 필드를 함께 사용하는 것은 안전하지 않습니다.
 
-이 경고는 1비트 부호 있는 비트 필드를 `bool` 변수와 비교할 때 생성됩니다. 1비트 부호 있는 비트 필드에는 -1 또는 0 값만 포함할 수 있으므로 `bool`과 비교하는 것은 위험합니다. 1비트 부호 없는 비트 필드는 `bool` 과 동일하며 0 또는 1만 포함할 수 있으므로 `bool` 과 함께 사용해도 경고가 생성되지 않습니다.
+이 경고는 1 비트 부호 있는 비트 필드를 변수와 비교할 때 생성 됩니다 **`bool`** . 1 비트 부호 있는 비트 필드에는-1 또는 0 값만 포함할 수 있으므로과 비교 하는 것은 위험 **`bool`** 합니다. **`bool`** 과는 동일 하 **`bool`** 고 0 또는 1만 포함할 수 있으므로 혼합 및 1 비트 부호 없는 비트 필드에 대 한 경고가 생성 되지 않습니다.
 
 ## <a name="example"></a>예제
 

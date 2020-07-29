@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620164"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225061"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>예외: 버전 3.0의 예외 매크로 변경 사항
 
@@ -34,7 +34,7 @@ MFC 버전 3.0 이상에서 예외 처리 매크로는 c + + 예외를 사용 �
 
 [!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-컨트롤은 항상 일치 하는 예외 선언을 사용 하 여 첫 번째 **catch** 블록으로 전달 되기 때문에이 코드는 버전 3.0에서 다르게 동작 합니다. Throw 식의 결과입니다.
+컨트롤이 항상 **`catch`** 일치 하는 예외 선언을 사용 하 여 첫 번째 블록으로 전달 되기 때문에이 코드는 버전 3.0에서 다르게 동작 합니다. Throw 식의 결과입니다.
 
 [!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 

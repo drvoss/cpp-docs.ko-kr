@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224996"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용
 
@@ -93,13 +93,13 @@ ActiveX 컨트롤의 보다 강력한 사용 중 하나는 데이터 바인딩�
 
 1. 속성 **이름** 상자에 속성 이름을 입력 합니다. `MyProp`이 예에서는를 사용 합니다.
 
-1. **속성 유형** 드롭다운 목록 상자에서 데이터 형식을 선택 합니다. 이 예에서는 **short** 를 사용 합니다.
+1. **속성 유형** 드롭다운 목록 상자에서 데이터 형식을 선택 합니다. **`short`** 이 예에서는를 사용 합니다.
 
 1. **구현 형식**에서 **Get/Set 메서드**를 클릭합니다.
 
 1. IDL 특성 탭에서 **바인딩**가능, **requestedit**, **displaybind**및 **defaultbind** 확인란을 선택 하 여 프로젝트의 속성 정의에 특성을 추가 합니다. IDL 파일. 이러한 특성은 컨트롤을 사용자에 게 표시 하 고 스톡 속성을 바인딩 가능한 기본 속성으로 설정 합니다.
 
-1. **Finish**를 클릭합니다.
+1. **마침**을 클릭합니다.
 
 1. 다음 코드가 포함 되도록 함수 본문을 수정 합니다 `SetMyProp` .
 
