@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506782"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232614"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -81,7 +81,7 @@ long double atan2( long double y, long double x );  // C++ only
 *x*, *y*<br/>
 임의의 숫자입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **atan** 는-π/2 ~ π/2 라디안 범위에서 *x* 의 아크탄젠트를 반환 합니다. **atan2** 는 *y* / -π에서 π 라디안 까지의 y*x* 의 아크탄젠트를 반환 합니다. *X* 가 0 이면 **atan** 는 0을 반환 합니다. **Atan2** 의 두 매개 변수가 모두 0 인 경우 함수는 0을 반환 합니다. 모든 결과는 라디안 단위입니다.
 
@@ -97,7 +97,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 인수를 사용 하는 **atan** 및 **atan2** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **atan** 및 **atan2** 는 항상 **이중** 인수를 사용 하 고 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 인수를 사용 하는 **atan** 및 **atan2** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **atan** 및 **atan2** 는 항상 인수를 사용 **`double`** 하 고를 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
