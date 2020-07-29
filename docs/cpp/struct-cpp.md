@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231119"
 ---
 # <a name="struct-c"></a>struct (C++)
 
-**struct** 키워드는 구조체의 형식 및/또는 구조체 형식 변수를 정의합니다.
+키워드는 구조체 형식 **`struct`** 및/또는 구조체 형식의 변수를 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -29,44 +29,44 @@ ms.locfileid: "62330585"
 
 #### <a name="parameters"></a>매개 변수
 
-*template-spec*<br/>
-선택적으로 사용할 수 있으며 템플릿을 지정입니다. 자세한 내용은 참조 [템플릿 지정](templates-cpp.md)합니다.
+*템플릿-사양*<br/>
+선택적 템플릿 지정입니다. 자세한 내용은 [템플릿 사양](templates-cpp.md)을 참조 하세요.
 
 *struct*<br/>
-구조체를 사용하기 위한 **struct** 키워드 입니다.
+**`struct`** 키워드입니다.
 
-*ms-decl-spec*<br/>
-선택적 스토리지 클래스 지정입니다. 자세한 내용은 [__declspec](../cpp/declspec.md) 키워드를 참조합니다.
+*ms decl-사양*<br/>
+선택적 스토리지 클래스 지정입니다. 자세한 내용은 [__declspec](../cpp/declspec.md) 키워드를 참조 하세요.
 
-*tag*<br/>
-구조체에 주어진 형식 이름입니다. 태그는 구조체의 범위 내에서 예약어가 됩니다. 태그는 선택 사항입니다. 생략할 경우 익명 구조체가 정의됩니다. 자세한 내용은 [익명 클래스 형식](../cpp/anonymous-class-types.md)을 참조합니다.
+*태그가*<br/>
+구조체에 지정된 형식 이름입니다. 태그는 구조체의 범위 내에서 예약어가 됩니다. 태그는 선택 사항입니다. 생략할 경우 익명 구조체가 정의됩니다. 자세한 내용은 [익명 클래스 형식](../cpp/anonymous-class-types.md)을 참조 하세요.
 
 *base-list*<br/>
-이 구조체가 해당 멤버를 파생할 클래스 또는 구조체의 선택적 목록입니다. 자세한 내용은 [기본 클래스](../cpp/base-classes.md)를 참조하세요. 각 기본 클래스 또는 구조체 이름 앞에는 액세스 지정자 ([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)) 및 [virtual](../cpp/virtual-cpp.md) 키워드가 올 수 있습니다. 자세한 내용은 [클래스 멤버에 대한 액세스 제어](member-access-control-cpp.md)의 멤버 액세스 테이블을 참조하세요.
+이 구조체가 해당 멤버를 파생할 클래스 또는 구조체의 선택적 목록입니다. 자세한 내용은 [기본 클래스](../cpp/base-classes.md) 를 참조 하세요. 각 기본 클래스 또는 구조체 이름 앞에는 액세스 지정자 ([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)) 및 [virtual](../cpp/virtual-cpp.md) 키워드가 올 수 있습니다. 자세한 내용은 [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md) 의 멤버 액세스 테이블을 참조 하세요.
 
-*member-list*<br/>
-구조체 멤버 목록입니다. 더 자세한 정보는 [클래스 멤버 개요](../cpp/class-member-overview.md) 를 참조합니다. 여기에서 유일한 차이점 **구조체** 대신 사용 됩니다 **클래스**합니다.
+*멤버 목록*<br/>
+구조체 멤버 목록입니다. 자세한 내용은 [클래스 멤버 개요](../cpp/class-member-overview.md) 를 참조 하세요. 여기서는를 대신 사용 한다는 점만 다릅니다 **`struct`** **`class`** .
 
 *declarators*<br/>
-구조체의 이름을 지정 하는 선언 자 목록입니다. 선언자 목록은 구조체 형식의 하나 이상의 인스턴스를 선언합니다. 구조체의 모든 데이터 멤버를 선언 자 이니셜라이저 목록을 포함할 수 있습니다 **공용**합니다. 데이터 멤버는 이니셜라이저 목록은 구조에서 흔히 **공용** 기본적으로 합니다.  자세한 내용은 [선언자 개요](../cpp/overview-of-declarators.md)를 참조하세요.
+구조체의 이름을 지정 하는 선언 자 목록입니다. 선언자 목록은 구조체 형식의 하나 이상의 인스턴스를 선언합니다. 구조체의 모든 데이터 멤버가 인 경우 선언 자는 이니셜라이저 목록을 포함할 수 있습니다 **`public`** . 이니셜라이저 목록은 기본적으로 데이터 멤버가 이기 때문에 구조에서 일반적 **`public`** 입니다.  자세한 내용은 [선언 자 개요](../cpp/overview-of-declarators.md) 를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
 구조체 형식은 사용자 정의 복합 형식입니다. 이 형식은 다른 형식을 가질 수 있는 필드 또는 멤버로 구성됩니다.
 
-C++에서 구조체는 맴버가 기본적으로 **public**이라는 점을 제외하면 클래스와 같습니다.
+C + +에서 구조체는 클래스와 동일 합니다. 단, 해당 멤버는 **`public`** 기본적으로입니다.
 
-관리 되는 클래스 및 구조체에 대 한 자세한 내용은 C++/CLI, 참조 [클래스 및 구조체](../extensions/classes-and-structs-cpp-component-extensions.md)합니다.
+C + +/CLI의 관리 되는 클래스 및 구조체에 대 한 자세한 내용은 [클래스 및 구조체](../extensions/classes-and-structs-cpp-component-extensions.md)를 참조 하세요.
 
 ## <a name="using-a-structure"></a>구조체 사용
 
-C에서는 명시적으로 **struct** 키워드를 사용하여 구조체를 선언합니다. C++에서는 형식이 정의된 후에 **struct** 키워드를 사용할 필요가 없습니다.
+C에서는 키워드를 명시적으로 사용 하 여 구조체를 선언 해야 합니다 **`struct`** . C + +에서는 **`struct`** 형식을 정의한 후 키워드를 사용할 필요가 없습니다.
 
 닫는 중괄호와 세미콜론 사이에 쉼표로 구분된 변수 이름을 하나 이상 넣어 구조체 형식이 정의될 때 변수를 선언하는 옵션이 있습니다.
 
 구조체 변수를 초기화할 수 있습니다. 각 변수의 초기화는 중괄호로 묶어야 합니다.
 
-관련 정보는 [class](../cpp/class-cpp.md), [union](../cpp/unions.md)과 [enum](../cpp/enumerations-cpp.md)을 참조합니다.
+관련 내용은 [클래스](../cpp/class-cpp.md), [공용 구조체](../cpp/unions.md)및 [열거형](../cpp/enumerations-cpp.md)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
