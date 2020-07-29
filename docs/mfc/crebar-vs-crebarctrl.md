@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228637"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar와 CReBarCtrl 비교
 
@@ -24,7 +24,7 @@ Visual C++은 rebar 공용 컨트롤을 활용 하는 두 가지 방법을 제�
 - 를 사용 하 여 rebar를 만든 `CReBar` 다음 [CReBar:: Getre ctrl](reference/crebar-class.md#getrebarctrl) 을 호출 하 여 멤버 함수에 대 한 액세스를 가져옵니다 `CReBarCtrl` .
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`는 rebar 개체의 **this** 포인터를 캐스팅 하는 인라인 멤버 함수입니다. 이는 런타임에 함수 호출에 오버 헤드가 없음을 의미 합니다.
+    >  `CReBar::GetReBarCtrl`는 rebar 개체의 포인터를 캐스팅 하는 인라인 멤버 함수입니다 **`this`** . 이는 런타임에 함수 호출에 오버 헤드가 없음을 의미 합니다.
 
 - [Cre바 ctrl](reference/crebarctrl-class.md)의 생성자를 사용 하 여 rebar를 만듭니다.
 

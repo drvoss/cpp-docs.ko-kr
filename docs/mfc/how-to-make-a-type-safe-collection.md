@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228624"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>방법: 형식이 안전한 컬렉션 만들기
 
@@ -63,7 +63,7 @@ MFC 라이브러리은 c + + 템플릿을 기반으로 하는 미리 정의 된 
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>비템플릿 컬렉션 클래스 사용
 
-Mfc는 MFC 버전 1.0에 도입 된 컬렉션 클래스도 지원 합니다. 이러한 클래스는 템플릿을 기반으로 하지 않습니다. 지원 되는 형식인,, 및의 데이터를 포함 하는 데 사용할 수 있습니다 `CObject*` `UINT` `DWORD` `CString` . 이러한 미리 정의 된 컬렉션 (예: `CObList` )을 사용 하 여에서 파생 된 개체의 컬렉션을 유지할 수 있습니다 `CObject` . 또한 MFC는 `UINT` 및 void 포인터 (*)와 같은 기본 형식을 포함 하는 미리 정의 된 다른 컬렉션을 제공 `void` 합니다. 그러나 일반적으로 보다 구체적인 클래스와 해당 파생 클래스의 개체를 저장 하는 고유한 형식 안전 컬렉션을 정의 하는 것이 유용한 경우가 많습니다. 템플릿을 기반으로 하지 않는 컬렉션 클래스를 사용 하 여이 작업을 수행 하는 것은 템플릿 기반 클래스를 사용 하는 것 보다 더 복잡 합니다.
+Mfc는 MFC 버전 1.0에 도입 된 컬렉션 클래스도 지원 합니다. 이러한 클래스는 템플릿을 기반으로 하지 않습니다. 지원 되는 형식인,, 및의 데이터를 포함 하는 데 사용할 수 있습니다 `CObject*` `UINT` `DWORD` `CString` . 이러한 미리 정의 된 컬렉션 (예: `CObList` )을 사용 하 여에서 파생 된 개체의 컬렉션을 유지할 수 있습니다 `CObject` . 또한 MFC는 `UINT` 및 void 포인터 ()와 같은 기본 형식을 포함 하는 미리 정의 된 다른 컬렉션을 제공 **`void*`** 합니다. 그러나 일반적으로 보다 구체적인 클래스와 해당 파생 클래스의 개체를 저장 하는 고유한 형식 안전 컬렉션을 정의 하는 것이 유용한 경우가 많습니다. 템플릿을 기반으로 하지 않는 컬렉션 클래스를 사용 하 여이 작업을 수행 하는 것은 템플릿 기반 클래스를 사용 하는 것 보다 더 복잡 합니다.
 
 비템플릿 컬렉션을 사용 하 여 형식이 안전한 컬렉션을 만드는 방법에는 두 가지가 있습니다.
 

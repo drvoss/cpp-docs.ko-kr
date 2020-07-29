@@ -19,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: ca5056303f77f112e18ef09d606789a5b1c92acd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0568b3abbcd5776eab4d0ab9748bcbcd79c2a84b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228611"
 ---
 # <a name="memory-management-examples"></a>메모리 관리: 예
 
@@ -46,13 +46,13 @@ ms.locfileid: "84626311"
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>힙에서 바이트 배열 (또는 기본 데이터 형식)을 할당 하려면
 
-1. 이 예제에 표시 된 배열 구문과 함께 **new** 연산자를 사용 합니다.
+1. **`new`** 이 예제에 표시 된 배열 구문과 연산자를 사용 합니다.
 
    [!code-cpp[NVC_MFC_Utilities#2](codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>힙에서 배열을 할당 취소 하려면
 
-1. 다음과 같이 **delete** 연산자를 사용 합니다.
+1. 다음과 같이 연산자를 사용 합니다 **`delete`** .
 
    [!code-cpp[NVC_MFC_Utilities#3](codesnippet/cpp/memory-management-examples_3.cpp)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "84626311"
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>힙에서 데이터 구조를 할당 하려면
 
-1. 다음 예에 표시 된 것 처럼 **new** 를 사용 하 여 힙에서 데이터 구조를 할당 하 고 **삭제** 하 여 할당을 취소 합니다.
+1. **`new`** 다음 예제와 같이를 사용 하 여 힙에서 데이터 구조를 할당 하 고 할당을 취소 합니다 **`delete`** .
 
    [!code-cpp[NVC_MFC_Utilities#5](codesnippet/cpp/memory-management-examples_5.cpp)]
 
@@ -84,13 +84,13 @@ ms.locfileid: "84626311"
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>힙에 개체를 할당 하려면
 
-1. 개체에 대 한 포인터를 반환 하는 **new** 연산자를 사용 하 여 힙에 개체를 할당 합니다. **Delete 연산자를** 사용 하 여 삭제 합니다.
+1. **`new`** 개체에 대 한 포인터를 반환 하는 연산자를 사용 하 여 힙에 개체를 할당 합니다. 연산자를 사용 **`delete`** 하 여 삭제 합니다.
 
    다음 힙 및 프레임 예제에서는 생성자가 인수를 사용 하지 않는다고 가정 합니다 `CPerson` .
 
    [!code-cpp[NVC_MFC_Utilities#7](codesnippet/cpp/memory-management-examples_7.cpp)]
 
-   생성자에 대 한 인수가 `CPerson` **char**에 대 한 포인터인 경우 프레임 할당에 대 한 문은 다음과 같습니다.
+   생성자에 대 한 인수가 `CPerson` 에 대 한 포인터인 경우 **`char`** 프레임 할당에 대 한 문은 다음과 같습니다.
 
    [!code-cpp[NVC_MFC_Utilities#8](codesnippet/cpp/memory-management-examples_8.cpp)]
 
