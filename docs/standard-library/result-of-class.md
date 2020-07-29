@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: ab575ac31936e7003f19fc2ceb3c5b1727d0728c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202313"
 ---
 # <a name="result_of-class"></a>result_of 클래스
 
@@ -37,23 +37,23 @@ template<class T>
 
 ### <a name="parameters"></a>매개 변수
 
-*Fn* \
+*Fn*\
 쿼리할 호출 가능 형식입니다.
 
-*Argtypes* \
+*ArgTypes*\
 쿼리할 호출 가능 형식에 대한 인수 목록의 형식입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이 템플릿을 사용 하 여 컴파일 타임에 `Fn` (`ArgTypes`)의 결과 형식을 확인할 수 있습니다. 여기서 *Fn* 은 호출 가능 형식 이거나 함수에 대 한 참조 이거나 호출 가능 형식에 대 한 참조 이며, *argtypes*에서 형식의 인수 목록을 사용 하 여 호출 됩니다. 클래스 템플릿의 `type` 멤버는 확인 되지 않은 식 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 형식이 올바른 경우 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`의 결과 형식에 이름을 입력 합니다. 그렇지 않으면 클래스 템플릿에 `type` 멤버가 없습니다. 매개 변수 팩 *argtypes* 의 형식 *Fn* 및 모든 형식은 완전 한 형식, **void**또는 알 수 없는 바인딩된 배열 이어야 합니다. C + + 17의 [invoke_result](invoke-result-class.md) 에는 더 이상 사용 되지 않습니다.
+이 템플릿을 사용 하 여 컴파일 타임에 ()의 결과 형식을 확인할 수 `Fn` `ArgTypes` 있습니다. 여기서 *Fn* 은 호출 가능 형식, 함수에 대 한 참조 또는 호출 가능 형식에 대 한 참조 이거나 *argtypes*에서 형식의 인수 목록을 사용 하 여 호출 됩니다. `type`클래스 템플릿의 멤버는 확인 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 되지 않은 식이 올바른 형식인 경우 결과 형식의 이름을 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 로 합니다. 그렇지 않으면 클래스 템플릿에 멤버가 없습니다 `type` . 매개 변수 팩 *argtypes* 의 형식 *Fn* 및 모든 형식은 완전 한 형식, **`void`** 또는 범위를 알 수 없는 배열 이어야 합니다. C + + 17의 [invoke_result](invoke-result-class.md) 에는 더 이상 사용 되지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke_result 클래스](invoke-result-class.md)

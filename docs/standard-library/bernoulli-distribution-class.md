@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230261"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution 클래스
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*URNG (우롱)는*\
-균일 한 난수 생성기 엔진입니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*URNG*\
+단일 난수 생성기 엔진입니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
-클래스는 Bernoulli 분포 불연속 확률 함수에 따라 분산된 **bool**형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+이 클래스는 **`bool`** 베르누이 분포 불연속 확률 함수에 따라 분포 된 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 베르누이 분포 이산 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [베르누이 분포](https://go.microsoft.com/fwlink/p/?linkid=398467)를 참조하세요.
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:: bernoulli_distribution
 
 분포를 생성합니다.
 
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*P*\
+*®*\
 저장된 `p` 분포 매개 변수입니다.
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>설명
@@ -183,17 +183,17 @@ explicit bernoulli_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p아람_타입
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p aram_type
 
 분포의 매개 변수를 포함합니다.
 
-param_type = typedef bernoulli_distribution distribution_type; param_type (더블 p = 0.5); 더블 p() const;
+구조체 param_type {typedef bernoulli_distribution distribution_type; param_type (이중 p = 0.5); double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>매개 변수
 
-*P*\
+*®*\
 저장된 `p` 분포 매개 변수입니다.
 
 ### <a name="remarks"></a>설명
@@ -204,4 +204,4 @@ param_type = typedef bernoulli_distribution distribution_type; param_type (더�
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

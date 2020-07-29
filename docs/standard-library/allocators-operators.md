@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: a21708ca090b0db561391308f347d90b77c62645
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204562"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 연산자
 
@@ -33,14 +33,14 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*비어*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
 |*오른쪽*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-할당자 개체가 같지 않으면 **true**이고 할당자 개체가 같으면 **false**입니다.
+**`true`** 할당자 개체가 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 할당자 개체가 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -59,14 +59,14 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*비어*|같은지를 테스트할 할당자 개체 중 하나입니다.|
 |*오른쪽*|같은지를 테스트할 할당자 개체 중 하나입니다.|
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-할당자 개체가 같으면 **true**이고 할당자 개체가 같지 않으면 **false**입니다.
+**`true`** 할당자 개체가 같으면이 고, 그렇지 않으면입니다. **`false`** 할당자 개체가 같지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 

@@ -5,16 +5,16 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368920"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203730"
 ---
 # <a name="default_searcher-class"></a>default_searcher 클래스
 
-A는 `default_searcher` 개체의 생성자에서 지정된 시퀀스를 검색하는 작업에 대한 함수 개체 유형입니다. 검색은 개체의 함수 호출 연산자에게 제공된 다른 시퀀스 내에서 수행됩니다. `default_searcher` [호출st::검색](algorithm-functions.md#search) 검색을 수행 합니다.
+는 `default_searcher` 개체의 생성자에 지정 된 시퀀스를 검색 하는 작업에 대 한 함수 개체 형식입니다. 검색은 개체의 함수 호출 연산자에 제공 된 다른 시퀀스 내에서 수행 됩니다. 는 `default_searcher` [std:: search](algorithm-functions.md#search) 를 호출 하 여 검색을 수행 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -41,11 +41,11 @@ class default_searcher
 | **생성자** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **연산자** | |
-| [연산자()](#operator-call) | |
+| [연산자 ()](#operator-call) | |
 
 ## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher 생성자
 
-시퀀스를 `default_searcher` 사용하여 함수 객체를 검색하고 같음 조건자로 구성합니다.
+`default_searcher`검색할 시퀀스와 같음 조건자를 사용 하 여 함수 개체를 생성 합니다.
 
 ```cpp
 default_searcher(                   // C++17
@@ -67,18 +67,18 @@ constexpr default_searcher(         // C++20
 *pat_last*\
 검색할 시퀀스의 끝입니다.
 
-*Pred*\
-시퀀스 요소에 대한 선택적 같음 비교 조건자입니다. 같음 비교 유형이 지정되지 않은 `std::equal_to`경우 기본값은 입니다.
+*pred*\
+시퀀스 요소에 대 한 선택적 같음 비교 조건자입니다. 같음 비교 형식이 지정 되지 않은 경우 기본값은 `std::equal_to` 입니다.
 
 ### <a name="remarks"></a>설명
 
-*BinaryPredicate* 또는 *ForwardIterator* 형식의 복사 생성자가 throw하는 예외를 throw합니다.
+*BinaryPredicate* 또는 *forwarditerator* 형식의 복사 생성자에서 throw 된 예외를 throw 합니다.
 
-이 클래스는 C++17의 새로운 클래스입니다. C ++20은 생성자.를 `constexpr`만들었습니다.
+이 클래스는 c + + 17의 새로운 클래스입니다. C + + 20에서 생성자를 만들었습니다 **`constexpr`** .
 
-## <a name="operator"></a><a name="operator-call"></a>연산자()
+## <a name="operator"></a><a name="operator-call"></a>연산자 ()
 
-함수 연산자의 호출 연산자입니다. 생성자에 지정된 `[first, last)` 시퀀스에 대한 인수 시퀀스 내에서 검색합니다.
+함수 연산자의 호출 연산자입니다. 인수 시퀀스에서 `[first, last)` 생성자에 지정 된 시퀀스를 검색 합니다.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>매개 변수
 
-*첫 번째*\
-내에서 검색할 시퀀스의 초기 요소입니다.
+*기본*\
+에서 검색할 시퀀스의 초기 요소입니다.
 
-*마지막*\
-내에서 검색할 시퀀스의 끝입니다.
+*최신*\
+에서 검색할 시퀀스의 끝입니다.
 
 ### <a name="remarks"></a>설명
 
-반복기 쌍을 반환합니다. 초기 이터레이터 *i는* 다음의 효과적인 결과입니다.
+반복기 쌍을 반환합니다. 초기 반복기는 다음의 효과적인 *결과입니다.*
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-쌍의 두 번째 이터레이터는 *i** 마지막인 경우 *마지막입니다.* *last* 그렇지 않으면 다음의 효과적인 결과입니다.
+*I**가 *last*인 경우 쌍의 두 번째 반복기는 *마지막* 입니다. 그렇지 않으면 다음의 효과적인 결과입니다.
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-이 클래스는 C++17의 새로운 클래스입니다. C ++20은 통화 `constexpr`연산자로 만들었습니다.
+이 클래스는 c + + 17의 새로운 클래스입니다. C + + 20에서 호출 연산자를 만들었습니다 **`constexpr`** .
 
 ## <a name="see-also"></a>참고 항목
 
-[\<기능>](functional.md)\
-[알고리즘 기능](algorithm-functions.md)\
-[std::검색](algorithm-functions.md#search)
+[\<functional>](functional.md)\
+[알고리즘 함수](algorithm-functions.md)\
+[std:: search](algorithm-functions.md#search)

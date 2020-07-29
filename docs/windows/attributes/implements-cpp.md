@@ -1,21 +1,21 @@
 ---
-title: 구현 (C++ COM 특성)
+title: implements (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217235"
 ---
 # <a name="implements-c"></a>implements(C++)
 
-IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스를 지정 합니다.
+IDL coclass의 멤버가 되도록 강제 적용 되는 디스패치 인터페이스를 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,14 +27,14 @@ IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스
 ### <a name="parameters"></a>매개 변수
 
 *interfaces*<br/>
-쉼표로 구분한 목록 IDL coclass 소속 될 인터페이스입니다. 단일 인터페이스를 지정 하는 간단한 메서드는 **구현 (** *interface_name* **)** 합니다.
+IDL coclass의 멤버가 되는 쉼표로 구분 된 인터페이스 목록입니다. 단일 인터페이스를 지정 하는 줄임 메서드는 **(** *interface_name* **)** 를 구현 합니다.
 
-*dispinterfaces*<br/>
-쉼표로 구분한 목록 IDL coclass 소속 될 dispinterface입니다. 단일 dispinterface를 지정 하는 간단한 메서드는 **구현 (dispinterface =** *dispinterface_name* **)** 합니다.
+*dispinterface*<br/>
+IDL coclass의 멤버가 되는 쉼표로 구분 된의 목록입니다. 단일를 지정 하는 줄임 메서드는 **(dispinterface =** *dispinterface_name* **)** 을 구현 합니다.
 
 ## <a name="remarks"></a>설명
 
-기본적으로만 COM 인터페이스 기본 클래스는 `coclass` IDL coclass에 추가 됩니다. **구현** IDL 되도록 다른 인터페이스를 강제 적용 하면 `coclass` 멤버입니다.
+기본적으로의 기본 클래스인 COM 인터페이스만 `coclass` IDL coclass에 추가 됩니다. **implements** 를 사용 하면 다른 인터페이스를 IDL 멤버로 강제할 수 있습니다 `coclass` .
 
 ## <a name="requirements"></a>요구 사항
 
@@ -42,8 +42,8 @@ IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스
 
 |||
 |-|-|
-|**적용 대상**|**class**, **struct**|
-|**반복 가능**|예|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -51,9 +51,9 @@ IDL coclass의 구성원으로 강제 적용 되는 디스패치 인터페이스
 
 ## <a name="example"></a>예제
 
-다음 예제는 세 부분으로 이루어져:.idl 파일 및 연결 된.h 파일 및 C++ 파일입니다.
+다음 예제는 세 부분으로 구성 됩니다. .idl 파일 및 관련 .h 파일과 c + + 파일입니다.
 
-컴파일러를 사용할 수 있는 다음.idl 파일을 가정 합니다.
+컴파일러에서 사용할 수 있는 다음 .idl 파일을 가정 합니다.
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>예제
 
-및 다음.h 파일 컴파일러에 사용 가능 하도록 해야 합니다.
+또한 컴파일러에서 사용할 수 있어야 하는 다음 .h 파일을 사용할 수 있습니다.
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>예제
 
-를 구현 하지 않고 다음 프로그램에서 `IBar1`, `IBar2`, 및 `ISna` 에 위치 하지 것입니다는 `coclass` 생성된 된 IDL에서.
+다음 프로그램에서를 구현 하지 않고, `IBar1` , `IBar2` 및는 `ISna` `coclass` 생성 된 IDL에 있지 않습니다.
 
 ```cpp
 // attr_implements.cpp
@@ -484,7 +484,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
 [클래스 특성](class-attributes.md)

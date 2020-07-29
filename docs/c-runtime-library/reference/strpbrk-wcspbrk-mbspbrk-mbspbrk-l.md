@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231314"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 Null로 종료되는 검색 대상 문자열입니다.
 
 *strCharSet*<br/>
@@ -137,15 +137,15 @@ Null 종료 문자 집합입니다.
 
 ## <a name="remarks"></a>설명
 
-함수 `strpbrk` 는 *strcharset*의 문자 집합에 속하는 *str* 의 첫 번째 문자에 대 한 포인터를 반환 합니다. 종료 null 문자는 검색에 포함되지 않습니다.
+`strpbrk`함수는 *strcharset*의 문자 집합에 속하는 *str* 의 첫 번째 문자에 대 한 포인터를 반환 합니다. 종료 null 문자는 검색에 포함되지 않습니다.
 
 `wcspbrk` 및 `_mbspbrk` 는 `strpbrk`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcspbrk`의 인수 및 반환 값은 와이드 문자열이며 `_mbspbrk`의 인수와 반환 값은 멀티바이트 문자열입니다.
 
-`_mbspbrk`는 매개 변수의 유효성을 검사합니다. *Str* 또는 *STRCHARSET* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `_mbspbrk` 는 NULL을 반환 `errno` 하 고를 EINVAL로 설정 합니다. `strpbrk` 및 `wcspbrk`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`_mbspbrk`는 매개 변수의 유효성을 검사합니다. *Str* 또는 *STRCHARSET* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우는 `_mbspbrk` NULL을 반환 하 고를 `errno` EINVAL로 설정 합니다. `strpbrk` 및 `wcspbrk`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 `_mbspbrk`는 [size_t](../../c-runtime-library/standard-types.md) 형식의 값이 아닌 포인터를 반환한다는 점을 제외하면 `_mbspbrk`는 `_mbscspn`과 유사합니다.
 
-C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 취하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS은 이러한 함수의 **const** 및 비**const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. 두 c + + 오버 로드에 대 한 비**const** 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
+C에서 이러한 함수는 **`const`** 첫 번째 인수에 대 한 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 포인터를 사용 하는 오버 로드는에 대 한 포인터를 반환 합니다 .가 아닌에 대 한 포인터를 사용 하는 **`const`** **`const`** 버전은가 **`const`** 아닌에 대 한 포인터를 반환 합니다 **`const`** . **`const`** 이러한 함수의 및 비 버전을 모두 사용할 수 있는 경우 매크로 _CRT_CONST_CORRECT_OVERLOADS 정의 됩니다 **`const`** . **`const`** 두 c + + 오버 로드에 대 한 비 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
 
 출력 값은 로캘의 LC_CTYPE 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -202,10 +202,10 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

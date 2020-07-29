@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911362"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216897"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -99,7 +99,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>Return Value
 
-**Lround** 및 **llround** 함수는 가장 가까운 **long** 또는 **long** **long** 정수를 *x*로 반환 합니다. 중간값은 부동 소수점 반올림 모드의 설정에 관계없이 0에서 멀어지는 쪽으로 반올림됩니다. 반환되는 오류가 없습니다.
+**Lround** 및 **llround** 함수는 가장 가까운 **`long`** 또는 정수를 **`long long`** *x*로 반환 합니다. 중간값은 부동 소수점 반올림 모드의 설정에 관계없이 0에서 멀어지는 쪽으로 반올림됩니다. 반환되는 오류가 없습니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
@@ -107,7 +107,7 @@ long long llroundl(
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **lround** 또는 **llround** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **lround** 및 **llround** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 값을 사용 하 고 반환 하는 **lround** 또는 **llround** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **lround** 및 **llround** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -155,7 +155,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

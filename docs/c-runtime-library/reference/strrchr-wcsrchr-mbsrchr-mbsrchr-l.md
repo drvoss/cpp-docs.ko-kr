@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911150"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231301"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -120,7 +120,7 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 검색할 Null 종료 문자열입니다.
 
 *c*<br/>
@@ -135,13 +135,13 @@ const unsigned char *_mbsrchr_l(
 
 ## <a name="remarks"></a>설명
 
-함수 `strrchr` 는 *str*에서 *c* ( **char**로 변환)의 마지막 항목을 찾습니다. 검색에는 종료형 null 문자를 포함합니다.
+`strrchr`함수는 str에서 *c* (로 변환 됨)의 마지막 항목을 찾습니다 **`char`** . *str* 검색에는 종료형 null 문자를 포함합니다.
 
 `wcsrchr` 및 `_mbsrchr` 는 `strrchr`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcsrchr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsrchr`의 인수와 반환 값은 멀티바이트 문자열입니다.
 
-C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 취하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS은 이러한 함수의 **const** 및 비**const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. 두 c + + 오버 로드에 대 한 비**const** 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
+C에서 이러한 함수는 **`const`** 첫 번째 인수에 대 한 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 포인터를 사용 하는 오버 로드는에 대 한 포인터를 반환 합니다 .가 아닌에 대 한 포인터를 사용 하는 **`const`** **`const`** 버전은가 **`const`** 아닌에 대 한 포인터를 반환 합니다 **`const`** . **`const`** 이러한 함수의 및 비 버전을 모두 사용할 수 있는 경우 매크로 _CRT_CONST_CORRECT_OVERLOADS 정의 됩니다 **`const`** . **`const`** 두 c + + 오버 로드에 대 한 비 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
 
-`_mbsrchr`는 매개 변수의 유효성을 검사합니다. *Str* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `errno` 는 EINVAL로 설정 되 `_mbsrchr` 고는 0을 반환 합니다. `strrchr` 및 `wcsrchr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`_mbsrchr`는 매개 변수의 유효성을 검사합니다. *Str* 이 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `errno` 는 EINVAL로 설정 되 고는 `_mbsrchr` 0을 반환 합니다. `strrchr` 및 `wcsrchr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 출력 값은 로캘의 LC_CTYPE 범주 설정에 따라 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조 하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -168,10 +168,10 @@ C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 
 
 `strrchr` 사용 예제는 [strchr](strchr-wcschr-mbschr-mbschr-l.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

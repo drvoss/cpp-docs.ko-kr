@@ -43,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc8ccfc628a0f0c5dd649dbb5cf3bd0b552b5d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216884"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-**Struct** **TM** 이 나타내는 utc 시간을 **time_t** 형식이 나타내는 utc 시간으로 변환 합니다.
+Tm이 나타내는 UTC 시간을 **`struct`** **tm** **time_t** 형식이 나타내는 utc 시간으로 변환 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -71,7 +71,7 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>매개 변수
 
 *timeptr*\
-변환할 **struct** **tm** 의 UTC 시간에 대 한 포인터입니다.
+변환할 UTC 시간에 대 한 포인터 **`struct`** **tm** 입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -91,7 +91,7 @@ __time64_t _mkgmtime64(
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ```C
 // crt_mkgmtime.c
@@ -182,7 +182,7 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)\
 [asctime, _wasctime](asctime-wasctime.md)\

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367084"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216520"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>레코드 집합: 레코드 집합 만들기 및 닫기(ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-`Open`을 호출한 후 개체의 멤버 함수와 데이터 멤버를 사용하여 레코드 작업을 수행합니다. 경우에 따라 데이터 원본에서 변경 내용을 포함하도록 레코드 집합을 다시 쿼리하거나 새로 고칠 수도 있습니다. 자세한 내용은 [레코드 집합: 레코드 집합(ODBC) 다시 쿼리를](../../data/odbc/recordset-requerying-a-recordset-odbc.md)참조하십시오.
+`Open`을 호출한 후 개체의 멤버 함수와 데이터 멤버를 사용하여 레코드 작업을 수행합니다. 경우에 따라 데이터 원본에서 변경 내용을 포함하도록 레코드 집합을 다시 쿼리하거나 새로 고칠 수도 있습니다. 자세한 내용은 [레코드 집합: 레코드 집합 다시 쿼리 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)를 참조 하세요.
 
 > [!TIP]
-> 개발 중에 사용하는 연결 문자열은 최종 사용자에게 필요한 연결 문자열과 다를 수 있습니다. 이와 관련하여 응용 프로그램을 일반화하는 것에 대한 아이디어는 [데이터 원본: ODBC(연결 관리)를](../../data/odbc/data-source-managing-connections-odbc.md)참조하십시오.
+> 개발 중에 사용하는 연결 문자열은 최종 사용자에게 필요한 연결 문자열과 다를 수 있습니다. 이와 관련 하 여 응용 프로그램을 일반화 하는 방법에 대 한 아이디어는 [데이터 소스: 연결 관리 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)를 참조 하세요.
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 레코드 집합 옵션 설정
 
@@ -106,7 +106,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 1. 레코드 집합 개체를 삭제합니다.
 
-   함수의 스택 프레임에 선언한 경우 개체가 범위를 벗어나면 개체가 자동으로 삭제됩니다. 그렇지 않으면 **삭제** 연산자를 삭제합니다.
+   함수의 스택 프레임에 선언한 경우 개체가 범위를 벗어나면 개체가 자동으로 삭제됩니다. 그렇지 않으면 연산자를 사용 **`delete`** 합니다.
 
 `Close`는 레코드 집합의 `HSTMT` 핸들을 해제합니다. C++ 개체를 삭제하지 않습니다.
 
@@ -114,4 +114,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [레코드 집합: 스크롤(ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[레코드 집합: 레코드 추가, 업데이트 및 삭제(ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[레코드 집합: 레코드 추가, 업데이트 및 삭제 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

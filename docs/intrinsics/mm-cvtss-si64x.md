@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc6e33da5ac7b25727f6e24c3af6e6a926b29847
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230508"
 ---
 # <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Microsoft 전용**
 
-스칼라 단일 정밀도 부동 소수점 숫자를 64 비트 정수 (`cvtss2si`) 명령으로 변환 하는 x64 확장 버전을 생성 합니다.
+스칼라 단일 정밀도 부동 소수점 숫자를 64 비트 정수 () 명령으로 변환 하는 x64 확장 버전을 생성 합니다 `cvtss2si` .
 
 ## <a name="syntax"></a>구문
 
@@ -30,8 +30,8 @@ __int64 _mm_cvtss_si64x(
 
 ### <a name="parameters"></a>매개 변수
 
-*value*\
-진행 부동 `__m128` 소수점 값을 포함 하는 구조체입니다.
+*기본값*\
+진행 **`__m128`** 부동 소수점 값을 포함 하는 구조체입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -39,15 +39,15 @@ __int64 _mm_cvtss_si64x(
 
 ## <a name="requirements"></a>요구 사항
 
-|내장 함수|아키텍처|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_cvtss_si64x`|X64|
 
-**헤더 파일** \<intrin.h >
+**헤더 파일** \<intrin.h>
 
 ## <a name="remarks"></a>설명
 
-구조체 값의 첫 번째 요소는 정수로 변환 되 고 반환 됩니다. MXCSR의 반올림 제어 비트는 반올림 동작을 결정 하는 데 사용 됩니다. 기본 반올림 모드는 가장 가까운 값으로 반올림 됩니다. 소수 부분이 0.5 이면 짝수로 반올림 됩니다. 구조체는 `__m128` xmm 레지스터를 나타내므로 내장 함수는 xmm 레지스터의 값을 사용 하 여 시스템 메모리에 씁니다.
+구조체 값의 첫 번째 요소는 정수로 변환 되 고 반환 됩니다. MXCSR의 반올림 제어 비트는 반올림 동작을 결정 하는 데 사용 됩니다. 기본 반올림 모드는 가장 가까운 값으로 반올림 됩니다. 소수 부분이 0.5 이면 짝수로 반올림 됩니다. 구조체는 **`__m128`** xmm 레지스터를 나타내므로 내장 함수는 xmm 레지스터의 값을 사용 하 여 시스템 메모리에 씁니다.
 
 이 루틴은 내장 루틴으로만 사용할 수 있습니다.
 
@@ -87,7 +87,7 @@ int main()
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [__m128d](../cpp/m128d.md)\
 [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

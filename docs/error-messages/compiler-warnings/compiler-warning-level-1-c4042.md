@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 0ffc4c4aeb7d37ffa45f503a34fd369d36c00ce4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cd8d8addb8441bd32d242c4f4858104048f7a62e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197074"
 ---
 # <a name="compiler-warning-level-1-c4042"></a>컴파일러 경고 (수준 1) C4042
 
@@ -19,13 +19,13 @@ ms.locfileid: "80164211"
 
 이 컨텍스트에서는 지정 된 저장소 클래스를이 식별자와 함께 사용할 수 없습니다. 컴파일러는 기본 저장소 클래스를 대신 사용 합니다.
 
-- *식별자* 가 함수인 경우 `extern`합니다.
+- **`extern`***식별자* 가 함수인 경우입니다.
 
-- **auto**, *식별자* 가 정식 매개 변수 또는 지역 변수입니다.
+- **`auto`***식별자* 가 정식 매개 변수 또는 지역 변수인 경우입니다.
 
 - *식별자* 가 전역 변수인 경우 저장소 클래스가 없습니다.
 
-이 경고는 매개 변수 선언에 **register** 이외의 저장소 클래스를 지정 하 여 발생할 수 있습니다.
+이 경고는 **`register`** 매개 변수 선언에 이외의 저장소 클래스를 지정 하 여 발생할 수 있습니다.
 
 다음 샘플에서는 C4042를 생성 합니다.
 

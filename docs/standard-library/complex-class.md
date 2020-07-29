@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230093"
 ---
 # <a name="complex-class"></a>complex 클래스
 
-클래스 템플릿은 `Type`형식의 두 개체를 저장 하는 개체를 설명 합니다. 하나는 복소수의 실수부를 나타내고 다른 하나는 허수 부분을 나타냅니다.
+클래스 템플릿은 형식의 두 개체를 저장 하는 개체를 설명 합니다 `Type` . 하나는 복소수의 실수부를 나타내고 다른 하나는 허수 부분을 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>설명
 
-`Type`클래스의 개체는 다음과 같습니다.
+클래스의 개체 `Type` :
 
 - 기본 동작과 함께 공용 기본 생성자, 소멸자, 복사 생성자 및 대입 연산자를 포함합니다.
 
@@ -38,17 +38,17 @@ class complex
 
 - 필요에 따라 기본 동작으로 부동 소수점 형식을 위해 정의된 산술 연산자 및 수학 함수를 정의합니다.
 
-특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. `Type` 클래스의 개체에 대 한 작업은 예외를 throw 할 수 없습니다.
+특히 복사본 생성과 뒤에 할당이 이어지는 기본 생성 간에는 차이가 없을 수도 있습니다. 클래스의 개체에 대 한 작업은 `Type` 예외를 throw 할 수 없습니다.
 
-3 개의 부동 소수점 형식에 대 한 클래스 템플릿 복합의 명시적 특수화가 있습니다. 이 구현에서 `Type` 다른 형식의 값은 실제 계산에 대해 **double** 로 형식 캐스팅 `Type`형식의 저장 된 개체에 **double** 결과가 다시 할당 됩니다.
+3 개의 부동 소수점 형식에 대 한 클래스 템플릿 복합의 명시적 특수화가 있습니다. 이 구현에서 다른 형식의 값은 `Type` **`double`** 실제 계산에 대해 형식 캐스팅 되며, **`double`** 결과는 형식의 저장 된 개체에 다시 할당 됩니다 `Type` .
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="constructors"></a>생성자
 
 |||
 |-|-|
-|[complex](#complex)|지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.|
+|[하므로](#complex)|지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -67,13 +67,13 @@ class complex
 
 |||
 |-|-|
-|[operator*=](#op_star_eq)|대상 복소수와 요소를 곱합니다. 요소는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
-|[operator+=](#op_add_eq)|대상 복소수에 숫자를 더합니다. 여기서 더해지는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
-|[operator-=](#operator-_eq)|대상 복소수에서 숫자를 뺍니다. 여기서 빼는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
+|[연산자 * =](#op_star_eq)|대상 복소수와 요소를 곱합니다. 요소는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
+|[operator + =](#op_add_eq)|대상 복소수에 숫자를 더합니다. 여기서 더해지는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
+|[연산자-=](#operator-_eq)|대상 복소수에서 숫자를 뺍니다. 여기서 빼는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
 |[operator/=](#op_div_eq)|대상 복소수를 제수로 나눕니다. 제수는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
-|[operator=](#op_eq)|대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
+|[연산자 =](#op_eq)|대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.|
 
-## <a name="complex"></a>하므로
+## <a name="complex"></a><a name="complex"></a>하므로
 
 지정된 실수 및 허수 부분을 사용하거나 다른 복소수의 복사본으로 복소수를 생성합니다.
 
@@ -95,12 +95,12 @@ constexpr complex(
 *_ImagVal*\
 생성되고 있는 복소수를 초기화하는데 사용되는 허수 부분의 값입니다.
 
-*Complexnum*\
+*complexNum*\
 해당 실수 및 허수 부분이 생성되고 있는 복소수를 초기화하는데 사용되는 복소수입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 저장 된 실제 부분 *\_realval로,* 및 저장 된 허수 부분을 *\_imagval*로 초기화 합니다. 두 번째 생성자는 저장 된 실제 부분을 `complexNum.real()`로 초기화 하 고 저장 된 허수 부분을 `complexNum.imag()`로 초기화 합니다.
+첫 번째 생성자는 저장 된 실제 부분을 * \_ realval로,* 로 초기화 하 고 저장 된 허수 부분을 * \_ imagval*로 초기화 합니다. 두 번째 생성자는 저장 된 실수 부분을로 초기화 하 `complexNum.real()` 고, 저장 된 허수 부분을로 초기화 합니다 `complexNum.imag()` .
 
 이 구현에서 변환기가 멤버 템플릿 함수를 지원하지 않는 경우는 결과는 다음과 같습니다.
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a>imag
 
 복소수의 허수 구성 요소를 추출합니다.
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>연산자 * =
+## <a name="operator"></a><a name="op_star_eq"></a>연산자 * =
 
 대상 복소수와 요소를 곱합니다. 요소는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>operator + =
+## <a name="operator"></a><a name="op_add_eq"></a>operator + =
 
 대상 복소수에 숫자를 더합니다. 여기서 더해지는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>연산자-=
+## <a name="operator-"></a><a name="operator-_eq"></a>연산자-=
 
 대상 복소수에서 숫자를 뺍니다. 여기서 빼는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.
 
@@ -414,7 +414,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-*Complexnum*\
+*complexNum*\
 대상 복소수에서 뺄 복소수입니다.
 
 *_RealPart*\
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a>operator/=
 
 대상 복소수를 제수로 나눕니다. 제수는 복소수이거나 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.
 
@@ -522,7 +522,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>매개 변수
 
-*Complexnum*\
+*complexNum*\
 대상 복소수에서 뺄 복소수입니다.
 
 *_RealPart*\
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
 대상 복소수에 숫자를 할당합니다. 여기서 할당되는 숫자는 복소수이거나 대상 복소수의 실수부 및 허수부와 동일한 형식일 수 있습니다.
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>실제로
+## <a name="real"></a><a name="real"></a>실제로
 
 복소수의 실수 구성 요소를 가져오거나 설정합니다.
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 복소수의 실수부와 허수부를 나타내는 데 사용되는 데이터 형식을 표시하는 형식입니다.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>설명
 
-`value_type`은 클래스 복합 `Type` 템플릿 매개 변수의 동의어입니다.
+`value_type`는 클래스 복합 `Type` 템플릿 매개 변수의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -782,4 +782,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

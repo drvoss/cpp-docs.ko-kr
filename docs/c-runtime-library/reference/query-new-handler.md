@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216845"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -47,13 +47,13 @@ _PNH _query_new_handler(
 );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **_Set_new_handler**에서 설정한 대로 현재 새 처리기 루틴의 주소를 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-C++ **_Query_new_handler** 함수는 C++ [_set_new_handler](set-new-handler.md) 함수에 의해 설정 된 현재 예외 처리 함수의 주소를 반환 합니다. **_set_new_handler** 는 **new** 연산자가 메모리 할당에 실패 하는 경우 제어를 얻기 위한 예외 처리 함수를 지정 하는 데 사용 됩니다. 자세한 내용은 C++ 언어 참조의 [new 및 delete 연산자](../../cpp/new-and-delete-operators.md)에 대한 설명을 참조하세요.
+C + + **_query_new_handler** 함수는 c + + [_set_new_handler](set-new-handler.md) 함수로 설정 된 현재 예외 처리 함수의 주소를 반환 합니다. **_set_new_handler** 는 **`new`** 연산자가 메모리 할당에 실패 하는 경우 제어를 얻기 위한 예외 처리 함수를 지정 하는 데 사용 됩니다. 자세한 내용은 C++ 언어 참조의 [new 및 delete 연산자](../../cpp/new-and-delete-operators.md)에 대한 설명을 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -61,13 +61,13 @@ C++ **_Query_new_handler** 함수는 C++ [_set_new_handler](set-new-handler.md) 
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[늘릴](free.md)<br/>

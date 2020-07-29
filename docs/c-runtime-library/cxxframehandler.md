@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: db856850688e378cde9eaa1fb510cb325ce0644b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6350568bdba41da90609dfd5e2e60269e7d729f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170984"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217040"
 ---
 # <a name="__cxxframehandler"></a>__CxxFrameHandler
 
@@ -45,25 +45,25 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 #### <a name="parameters"></a>매개 변수
 
 *pExcept*<br/>
-가능한 `catch` 문에 전달되는 예외 레코드입니다.
+가능한 문에 전달 되는 예외 레코드입니다 **`catch`** .
 
-*pRN*<br/>
+*.Prn*<br/>
 예외를 처리하는 데 사용되는 스택 프레임에 대한 동적 정보입니다. 자세한 내용은 ehdata.h를 참조하세요.
 
 *pContext*<br/>
 컨텍스트입니다. Intel 프로세서에는 사용되지 않습니다.
 
-*pDC*<br/>
+*컨트롤러가*<br/>
 함수 시작 및 스택 프레임에 대한 추가 정보입니다.
 
 ## <a name="return-value"></a>Return Value
 
-*try-except Statement*에서 사용하는 [필터 식](../cpp/try-except-statement.md) 값 중 하나입니다.
+[try-except Statement](../cpp/try-except-statement.md)에서 사용하는 *필터 식* 값 중 하나입니다.
 
 ## <a name="remarks"></a>설명
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |__CxxFrameHandler|excpt.h, ehdata.h|

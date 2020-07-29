@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216507"
 ---
 # <a name="cdatasource-class"></a>CDataSource 클래스
 
@@ -87,21 +87,21 @@ class CDataSource
 |[GetInitializationString](#getinitializationstring)|현재 열려 있는 데이터 원본의 초기화 문자열을 검색 합니다.|
 |[GetProperties](#getproperties)|연결 된 데이터 원본에 대해 현재 설정 된 속성 값을 가져옵니다.|
 |[GetProperty](#getproperty)|연결 된 데이터 소스에 대해 현재 설정 된 단일 속성의 값을 가져옵니다.|
-|[열기](#open)|`CLSID`, `ProgID`또는 호출자가 제공한 `CEnumerator` 모니커를 사용 하 여 공급자 (데이터 원본)에 대 한 연결을 만듭니다.|
+|[열기](#open)|`CLSID`, `ProgID` 또는 `CEnumerator` 호출자가 제공한 모니커를 사용 하 여 공급자 (데이터 원본)에 대 한 연결을 만듭니다.|
 |[OpenFromFileName](#openfromfilename)|사용자가 제공한 파일 이름으로 지정된 파일에서 데이터 소스를 엽니다.|
 |[OpenFromInitializationString](#openfrominitializationstring)|초기화 문자열로 지정 된 데이터 소스를 엽니다.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|사용자가 이전에 만든 데이터 연결 파일을 선택 하 여 해당 데이터 원본을 열 수 있도록 허용 합니다.|
 |[OpenWithServiceComponents](#openwithservicecomponents)|데이터 연결 대화 상자를 사용 하 여 데이터 원본 개체를 엽니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-단일 연결에 대해 하나 이상의 데이터베이스 세션을 만들 수 있습니다. 이러한 세션은 `CSession`으로 표시 됩니다. `CSession::Open`를 사용 하 여 세션을 만들려면 먼저 [Cdatasource:: Open](../../data/oledb/cdatasource-open.md) 을 호출 하 여 연결을 열어야 합니다.
+단일 연결에 대해 하나 이상의 데이터베이스 세션을 만들 수 있습니다. 이러한 세션은로 표시 됩니다 `CSession` . 를 사용 하 여 세션을 만들기 전에 연결을 열려면 [Cdatasource:: Open](../../data/oledb/cdatasource-open.md) 을 호출 해야 합니다 `CSession::Open` .
 
-`CDataSource`를 사용 하는 방법에 대 한 예제는 [CatDB](../../overview/visual-cpp-samples.md) 샘플을 참조 하세요.
+를 사용 하는 방법에 대 한 예제는 `CDataSource` [CatDB](../../overview/visual-cpp-samples.md) 샘플을 참조 하세요.
 
 ## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: Close
 
-`m_spInit` 포인터를 해제 하 여 연결을 닫습니다.
+포인터를 해제 하 여 연결을 닫습니다 `m_spInit` .
 
 ### <a name="syntax"></a>구문
 
@@ -126,13 +126,13 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 제한이 초기화 문자열에 대 한 포인터입니다.
 
 *bIncludePassword*<br/>
-진행 문자열이 암호를 포함 하는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.
+[in] **`true`** 문자열에 암호가 포함 된 경우 그렇지 않으면 **`false`** 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 결과 초기화 문자열을 사용 하 여 나중에이 데이터 원본 연결을 다시 열 수 있습니다.
 
@@ -153,11 +153,11 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 Windows SDK *OLE DB 프로그래머 참조* 에서 [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 단일 속성을 가져오려면 [GetProperty](../../data/oledb/cdatasource-getproperty.md)를 사용 합니다.
 
@@ -182,19 +182,19 @@ HRESULT GetProperty(const GUID& guid,
 진행 반환할 속성의 속성 ID입니다.
 
 *pVariant*<br/>
-제한이 `GetProperty` 속성의 값을 반환 하는 variant에 대 한 포인터입니다.
+제한이 에서 속성의 값을 반환 하는 variant에 대 한 포인터 `GetProperty` 입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 여러 속성을 얻으려면 [GetProperties](../../data/oledb/cdatasource-getproperties.md)를 사용 합니다.
 
 ## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: Open
 
-`CLSID`, `ProgID`또는 `CEnumerator` 모니커를 사용 하 여 데이터 원본에 대 한 연결을 열거나 사용자에 게 로케이터 대화 상자를 표시 합니다.
+, 또는 모니커를 사용 하 여 데이터 원본에 대 한 연결을 열거나 `CLSID` `ProgID` `CEnumerator` 사용자에 게 로케이터 대화 상자를 표시 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -239,8 +239,8 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>매개 변수
 
-*clsid*<br/>
-진행 데이터 공급자의 `CLSID`입니다.
+*가*<br/>
+진행 `CLSID`데이터 공급자의입니다.
 
 *pPropSet*<br/>
 진행 설정할 속성 및 값을 포함 하는 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 구조체의 배열에 대 한 포인터입니다. Windows SDK에서 *OLE DB 프로그래머 참조* 의 [속성 집합 및 속성 그룹](/previous-versions/windows/desktop/ms713696(v=vs.85)) 을 참조 하세요.
@@ -263,8 +263,8 @@ HRESULT Open(LPCSTR szProgID,
 *szProgID*<br/>
 [in] 프로그램 식별자입니다.
 
-*enumerator*<br/>
-진행 호출자가 `CLSID`를 지정 하지 않을 때 연결을 열기 위한 모니커를 가져오는 데 사용 되는 [CEnumerator](../../data/oledb/cenumerator-class.md) 개체입니다.
+*열거*<br/>
+진행 호출자가를 지정 하지 않을 때 연결을 열기 위한 모니커를 가져오는 데 사용 되는 [CEnumerator](../../data/oledb/cenumerator-class.md) 개체 `CLSID` 입니다.
 
 *hWnd*<br/>
 [in] 대화 상자의 부모가 될 창의 핸들입니다. *HWnd* 매개 변수를 사용 하는 함수 오버 로드를 사용 하면 서비스 구성 요소가 자동으로 호출 됩니다. 자세한 내용은 설명 부분을 참조 하십시오.
@@ -272,19 +272,19 @@ HRESULT Open(LPCSTR szProgID,
 *dwPromptOptions*<br/>
 [in] 표시할 로케이터 대화 상자의 스타일을 결정합니다. 가능한 값은 Msdasc.h를 참조하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *HWnd* 매개 변수를 사용 하는 메서드 오버 로드는 oledb32.dll의 서비스 구성 요소를 사용 하 여 데이터 소스 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 포함 되어 있습니다. 자세한 내용은 [OLE DB 프로그래머 가이드](/previous-versions/windows/desktop/ms713643(v=vs.85))에서 OLE DB 참조를 참조 하세요.
 
-*HWnd* 매개 변수를 사용 하지 않는 메서드 오버 로드는 oledb32.dll에서 서비스 구성 요소를 사용 하지 않고 데이터 소스 개체를 엽니다. 이러한 함수 오버 로드를 사용 하 여 연 [Cdatasource](../../data/oledb/cdatasource-class.md) 개체는 서비스 구성 요소의 기능을 활용할 수 없습니다.
+*HWnd* 매개 변수를 사용 하지 않는 메서드 오버 로드는 oledb32.dll의 서비스 구성 요소를 사용 하지 않고 데이터 소스 개체를 엽니다. 이러한 함수 오버 로드를 사용 하 여 연 [Cdatasource](../../data/oledb/cdatasource-class.md) 개체는 서비스 구성 요소의 기능을 활용할 수 없습니다.
 
 ### <a name="example"></a>예제
 
-다음 코드에서는 OLE DB 템플릿을 사용하여 Jet 4.0 데이터 소스를 여는 방법을 보여 줍니다. Jet 데이터 소스를 OLE DB 데이터 소스로 처리합니다. 그러나 `Open`에 대 한 호출에는 DBPROPSET_DBINIT 및 DBPROPSET_JETOLEDB_DBINIT에 대 한 두 개의 속성 집합이 필요 하므로 DBPROP_JETOLEDB_DATABASEPASSWORD를 설정할 수 있습니다.
+다음 코드에서는 OLE DB 템플릿을 사용하여 Jet 4.0 데이터 소스를 여는 방법을 보여 줍니다. Jet 데이터 소스를 OLE DB 데이터 소스로 처리합니다. 그러나에 대 한 호출에는 `Open` 두 개의 속성 집합이 필요 합니다. 하나는 DBPROPSET_DBINIT이 고 다른 하나는 DBPROPSET_JETOLEDB_DBINIT에 대해 설정 되므로 DBPROP_JETOLEDB_DATABASEPASSWORD를 설정할 수 있습니다.
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
@@ -305,11 +305,11 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 데이터 연결 파일 (.udl 파일)에 대 한 자세한 내용은 Windows SDK의 [데이터 연결 API 개요](/previous-versions/windows/desktop/ms718102(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 oledb32.dll에 있는 서비스 구성 요소를 사용하여 데이터 원본 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 들어 있습니다. 자세한 내용은 [OLE DB 프로그래머 가이드](/previous-versions/windows/desktop/ms713643(v=vs.85))에서 OLE DB 참조를 참조 하세요.
 
@@ -330,15 +330,15 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 진행 초기화 문자열입니다.
 
 *fPromptForInfo*<br/>
-진행 이 인수를 **true**로 설정 하면 `OpenFromInitializationString` DBPROP_INIT_PROMPT 속성을 DBPROMPT_COMPLETEREQUIRED로 설정 합니다 .이는 추가 정보가 필요한 경우에만 사용자에 게 메시지를 표시 하도록 지정 합니다. 이는 초기화 문자열이 암호를 필요로 하는 데이터베이스를 지정 하지만 해당 문자열에 암호가 포함 되지 않는 경우에 유용 합니다. 데이터베이스에 연결 하려고 할 때 사용자에 게 암호 (또는 다른 누락 된 정보)를 입력 하 라는 메시지가 표시 됩니다.
+진행 이 인수를로 설정 하면 **`true`** `OpenFromInitializationString` DBPROP_INIT_PROMPT 속성이 DBPROMPT_COMPLETEREQUIRED로 설정 되며,이는 추가 정보가 필요한 경우에만 사용자에 게 메시지를 표시 하도록 지정 합니다. 이는 초기화 문자열이 암호를 필요로 하는 데이터베이스를 지정 하지만 해당 문자열에 암호가 포함 되지 않는 경우에 유용 합니다. 데이터베이스에 연결 하려고 할 때 사용자에 게 암호 (또는 다른 누락 된 정보)를 입력 하 라는 메시지가 표시 됩니다.
 
-기본값은 **false**로, 사용자에 게 메시지가 표시 되지 않도록 지정 합니다 (DBPROMPT_NOPROMPT DBPROP_INIT_PROMPT 설정).
+기본값은입니다 .이 값은 **`false`** 사용자에 게 메시지가 표시 되지 않도록 지정 합니다 (DBPROMPT_NOPROMPT DBPROP_INIT_PROMPT 설정).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 oledb32.dll에 있는 서비스 구성 요소를 사용하여 데이터 원본 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 들어 있습니다.
 
@@ -365,11 +365,11 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 *szInitialDirectory*<br/>
 [in] 로케이터 대화 상자에 표시할 초기 디렉터리입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 oledb32.dll에 있는 서비스 구성 요소를 사용하여 데이터 원본 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 들어 있습니다. 자세한 내용은 [OLE DB 프로그래머 가이드](/previous-versions/windows/desktop/ms713643(v=vs.85))에서 OLE DB 참조를 참조 하세요.
 
@@ -391,8 +391,8 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>매개 변수
 
-*clsid*<br/>
-진행 데이터 공급자의 `CLSID`입니다.
+*가*<br/>
+진행 `CLSID`데이터 공급자의입니다.
 
 *szProgID*<br/>
 [in] 데이터 공급자의 프로그램 ID입니다.
@@ -403,11 +403,11 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 *ulPropSets*<br/>
 진행 *PPropSet* 인수에 전달 된 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 구조체의 수입니다. 이 값이 0 이면 공급자는 *pPropset*를 무시 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 oledb32.dll에 있는 서비스 구성 요소를 사용하여 데이터 원본 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 들어 있습니다. 자세한 내용은 [OLE DB 프로그래머 가이드](/previous-versions/windows/desktop/ms713643(v=vs.85))에서 OLE DB 참조를 참조 하세요.
 

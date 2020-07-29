@@ -66,12 +66,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 520e272955884b6701f12576e2f5d5c86fe25684
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911138"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216715"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -120,7 +120,7 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 설정할 Null 종료 문자열입니다.
 
 *이면 numberofelements 이벤트가*<br/>
@@ -140,7 +140,7 @@ errno_t _mbsset_s_l(
 
 ## <a name="remarks"></a>설명
 
-**_Strset_s** 함수는 null 종결 문자를 제외 하 고 *str* 의 모든 문자를 *c* ( **char**로 변환)로 설정 합니다. **_wcsset_s** 및 **_mbsset_s** 는 **_strset_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. 인수 및 반환 값의 데이터 형식은 버전에 따라 달라집니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_Strset_s** 함수는 종료 null 문자를 제외 하 고 *str* 의 모든 문자를 *c* (로 변환)로 설정 합니다 **`char`** . **_wcsset_s** 및 **_mbsset_s** 는 **_strset_s**의 와이드 문자 및 멀티 바이트 문자 버전입니다. 인수 및 반환 값의 데이터 형식은 버전에 따라 달라집니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -189,10 +189,10 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
