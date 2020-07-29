@@ -13,16 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228728"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 및 ref struct(C++/CLI 및 C++/CX)
 
-**ref class** 또는 **ref struct** 확장은 ‘개체 수명’이 자동 관리되는 클래스나 구조체를 선언합니다. 개체에 더 이상 액세스할 수 없거나 개체가 범위를 벗어나면 메모리가 해제됩니다.
+**ref class** 또는 **ref struct** 확장은 ‘개체 수명’이 자동 관리되는 클래스나 구조체를 선언합니다.** 개체에 더 이상 액세스할 수 없거나 개체가 범위를 벗어나면 메모리가 해제됩니다.
 
 ## <a name="all-runtimes"></a>모든 런타임
 
@@ -41,7 +41,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>매개 변수
 
 *class_access*<br/>
-(선택 사항) 어셈블리 외부 클래스 또는 구조체의 접근성입니다. 가능한 값은 **public** 및 **private**입니다(**private**이 기본값임). 중첩 클래스 또는 구조체에는 *class_access* 지정자를 사용할 수 없습니다.
+(선택 사항) 어셈블리 외부 클래스 또는 구조체의 접근성입니다. 가능한 값은 **`public`** 및 **`private`** ( **`private`** 기본값)입니다. 중첩 클래스 또는 구조체에는 *class_access* 지정자를 사용할 수 없습니다.
 
 *name*<br/>
 클래스 또는 구조체의 이름입니다.
@@ -50,7 +50,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 (선택 사항) 유효한 한정자는 [abstract](abstract-cpp-component-extensions.md) 및 [sealed](sealed-cpp-component-extensions.md)입니다.
 
 *inherit_access*<br/>
-(선택 사항) *base_type*의 접근성입니다. 허용되는 접근성은 **public**뿐입니다(**public**이 기본값임).
+(선택 사항) *base_type*의 접근성입니다. 유일 하 게 허용 되는 액세스 가능성은 이며 기본값은입니다 **`public`** **`public`** .
 
 *base_type*<br/>
 (선택 사항) 기본 형식입니다. 그러나 값 형식은 기본 형식으로 작동할 수 없습니다.
@@ -59,9 +59,9 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>설명
 
-**ref class** 또는 **value class**를 사용하여 선언된 개체의 기본 멤버 접근성은 **private**입니다. 또한 **ref struct** 또는 **value struct**를 사용하여 선언된 개체의 기본 멤버 접근성은 **public**입니다.
+**Ref 클래스** 또는 **값 클래스** 를 사용 하 여 선언 된 개체의 기본 멤버 액세스 가능성은 **`private`** 입니다. **Ref struct** 또는 **value struct** 를 사용 하 여 선언 된 개체의 기본 멤버 액세스 가능성은 **`public`** 입니다.
 
-참조 형식이 다른 참조 형식에서 상속받는 경우 기본 클래스의 가상 함수는 [override](override-cpp-component-extensions.md)를 사용하여 명시적으로 재정의하거나 [new(vtable의 새 슬롯)](new-new-slot-in-vtable-cpp-component-extensions.md)를 사용하여 숨겨야 합니다. 파생 클래스 함수도 **virtual**로 명시적으로 표시해야 합니다.
+참조 형식이 다른 참조 형식에서 상속받는 경우 기본 클래스의 가상 함수는 [override](override-cpp-component-extensions.md)를 사용하여 명시적으로 재정의하거나 [new(vtable의 새 슬롯)](new-new-slot-in-vtable-cpp-component-extensions.md)를 사용하여 숨겨야 합니다. 파생 클래스 함수도 명시적으로로 표시 되어야 합니다 **`virtual`** .
 
 컴파일 시간에 형식이 **ref class**, **ref struct**, **value class**, **value struct**인지 여부를 검색하려면 `__is_ref_class (type)`, `__is_value_class (type)` 또는 `__is_simple_value_class (type)`를 사용합니다. 자세한 내용은 [형식 특성에 대한 컴파일러 지원](compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하세요.
 
@@ -69,19 +69,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [클래스 및 구조체 인스턴스화](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [참조 형식에 대한 C++ 스택 의미 체계](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [참조 형식에 대 한 c + + 스택 의미 체계](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [클래스, 구조체 및 공용 구조체](../cpp/classes-and-structs-cpp.md)
 
-- [방법: 클래스 및 구조체 정의 및 사용 (C++/cli)의 소멸자 및 종료자](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [방법: 클래스 및 구조체 정의 및 사용 (c + +/CLI)의 소멸자 및 종료자](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [사용자 정의 연산자(C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
 - [사용자 정의 변환(C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [방법: C#에서 사용하기 위해 네이티브 클래스 래핑](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [방법: C에서 사용 하기 위해 네이티브 클래스 래핑 #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-- [제네릭 클래스(C++/CLI)](generic-classes-cpp-cli.md)
+- [제네릭 클래스 (c + +/CLI)](generic-classes-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
@@ -123,4 +123,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

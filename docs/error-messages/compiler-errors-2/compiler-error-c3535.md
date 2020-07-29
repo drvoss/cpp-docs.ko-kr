@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228793"
 ---
 # <a name="compiler-error-c3535"></a>컴파일러 오류 C3535
 
 ' u s e r '에서 ' type2 '의 형식을 추론할 수 없습니다.
 
-`auto` 키워드에 의해 선언 된 변수의 형식은 초기화 식의 형식에서 추론할 수 없습니다. 예를 들어 초기화 식이 형식이 아닌 `void`로 계산 되는 경우이 오류가 발생 합니다.
+키워드로 선언 된 변수의 형식은 **`auto`** 초기화 식의 형식에서 추론할 수 없습니다. 예를 들어 초기화 식이 형식이 아닌로 계산 되는 경우이 오류가 발생 합니다 **`void`** .
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-1. 초기화 식의 형식이 `void`되지 않았는지 확인 합니다.
+1. 초기화 식의 형식이이 아닌지 확인 **`void`** 합니다.
 
 1. 선언이 기본 형식에 대 한 포인터가 아닌지 확인 합니다. 자세한 내용은 [기본 형식](../../cpp/fundamental-types-cpp.md)을 참조 하세요.
 
@@ -29,7 +29,7 @@ ms.locfileid: "74761558"
 
 ## <a name="example"></a>예제
 
-다음 예에서는 초기화 식이 `void`로 계산 되기 때문에 C3535를 생성 합니다.
+다음 예에서는 초기화 식이로 계산 되기 때문에 C3535를 생성 합니다 **`void`** .
 
 ```cpp
 // C3535a.cpp
@@ -44,7 +44,7 @@ int main()
 
 ## <a name="example"></a>예제
 
-다음 예에서는 문이 변수 `x`를 추론 된 형식에 대 한 포인터로 선언 하지만 이니셜라이저 식의 형식이 double 이기 때문에 C3535를 생성 합니다. 따라서 컴파일러가 변수의 형식을 추론할 수 없습니다.
+다음 예에서는 문이 변수를 `x` 추론 된 형식에 대 한 포인터로 선언 하지만 이니셜라이저 식의 형식이 double 이기 때문에 c3535를 생성 합니다. 따라서 컴파일러가 변수의 형식을 추론할 수 없습니다.
 
 ```cpp
 // C3535b.cpp
@@ -58,7 +58,7 @@ int main()
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 변수 `p` 추론 된 형식에 대 한 포인터를 선언 하지만 초기화 식이 포인터 형식이 아니기 때문에 C3535를 생성 합니다.
+다음 예제에서는 변수가 `p` 추론 된 형식에 대 한 포인터를 선언 하지만 초기화 식이 포인터 형식이 아니기 때문에 c3535를 생성 합니다.
 
 ```cpp
 // C3535c.cpp

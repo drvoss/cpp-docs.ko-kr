@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 993d391f28a59afc8926748f2e6f34ab441657dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228858"
 ---
 # <a name="compiler-error-c3496"></a>컴파일러 오류 C3496
 
 'this'는 항상 값으로 캡처됩니다. '&'가 무시되었습니다.
 
-참조에 의해 `this` 포인터를 캡처할 수 없습니다.
+포인터를 참조로 캡처할 수 없습니다 **`this`** .
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- 값으로 `this` 포인터를 캡처합니다.
+- **`this`** 값으로 포인터를 캡처합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `this` 포인터에 대한 참조가 람다 식의 캡처 목록에 나타나므로 C3496을 생성합니다.
+다음 예제에서는 포인터에 대 한 참조가 **`this`** 람다 식의 캡처 목록에 나타나기 때문에 C3496를 생성 합니다.
 
 ```cpp
 // C3496.cpp
@@ -40,6 +40,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [람다 식](../../cpp/lambda-expressions-in-cpp.md)

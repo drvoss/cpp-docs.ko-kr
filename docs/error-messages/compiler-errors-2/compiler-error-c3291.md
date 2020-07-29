@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3291
 ms.assetid: ed2e9f89-8dbc-4387-bc26-cc955e840858
-ms.openlocfilehash: eb98be3677de6c93fdb7bedf7c0d482115891697
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4e8bc312bc10fb5ddc82d811f686004f08603d06
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760142"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228871"
 ---
 # <a name="compiler-error-c3291"></a>컴파일러 오류 C3291
 
 'default' : trivial 속성의 이름이 될 수 없습니다.
 
-trivial 속성은 `default`로 이름을 바꿀 수 없습니다. 자세한 내용은 [property](../../extensions/property-cpp-component-extensions.md) 를 참조하세요.
+Trivial 속성의 이름을 지정할 수 없습니다 **`default`** . 자세한 내용은 [property](../../extensions/property-cpp-component-extensions.md) 를 참조하세요.
 
 ## <a name="example"></a>예제
 
