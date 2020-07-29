@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223826"
 ---
-# <a name="std-specify-language-standard-version"></a>/std(언어 표준 버전 지정)
+# <a name="std-specify-language-standard-version"></a>`/std`(언어 표준 버전 지정)
 
 지정된 C++ 언어 표준 버전에서 지원되는 C++ 언어 기능을 사용합니다.
 
@@ -29,9 +29,9 @@ ms.locfileid: "84507068"
 
 기본 **`/std:c++14`** 옵션을 사용 하면 MSVC 컴파일러에서 구현 하는 c + + 14 기능 집합을 사용할 수 있습니다. 이 옵션은 최신 버전의 언어 표준에서 변경 되거나 새로 추가 된 기능에 대 한 컴파일러 및 표준 라이브러리 지원을 사용 하지 않도록 설정 합니다. 이전 버전의 MSVC 컴파일러에서 이미 구현 된 일부 c + + 17 기능을 사용 하지 않도록 설정 하지 않습니다. Visual Studio 2015 업데이트 2에서 사용 가능한 기능에 대 한 종속성을 이미 가져온 사용자에 대 한 주요 변경 내용을 방지 하기 위해 옵션을 지정 하면 이러한 기능이 활성화 된 상태로 유지 됩니다 **`/std:c++14`** .
 
-- [중괄호로 묶인 init 목록을 사용한 auto 규칙](https://wg21.link/n3922)
+- [중괄호로 묶인에 대 한 규칙 `auto` -초기화 목록](https://wg21.link/n3922)
 
-- [템플릿 template-parameters의 typename](https://wg21.link/n4051)
+- [`typename`템플릿 템플릿-매개 변수](https://wg21.link/n4051)
 
 - [삼중자 제거](https://wg21.link/n4086)
 

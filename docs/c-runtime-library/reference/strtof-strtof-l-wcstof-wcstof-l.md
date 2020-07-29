@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233966"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -101,7 +101,7 @@ float wcstof_l(
 
 ## <a name="remarks"></a>설명
 
-각 함수는 입력 문자열 *Strsource* 를 **float**로 변환 합니다. **Strtof** 함수는 *strsource* 를 단 정밀도 값으로 변환 합니다. **strtof** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수 있습니다. **wcstof** 는 **strtof**의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.
+각 함수는 입력 문자열 *Strsource* 를로 변환 **`float`** 합니다. **Strtof** 함수는 *strsource* 를 단 정밀도 값으로 변환 합니다. **strtof** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 읽기를 중지 합니다. 이 문자는 종료 null 문자일 수 있습니다. **wcstof** 는 **strtof**의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -120,7 +120,7 @@ float wcstof_l(
 
 [*공백*] [*sign*] [*숫자*] [__.__ *숫자*] [{**e** &#124; **e**} [*sign*] *숫자*]
 
-공백은 무시 되는 공백 및 탭 문자로 구성 *될 수 있습니다* . *sign* 은 더하기 (**+**) 또는 빼기 (**-**);입니다. 및 *숫자* 는 하나 이상의 10 진수입니다. 기수 문자 앞에 숫자가 없는 경우 기수 문자 뒤에는 숫자가 하나 이상 있어야 합니다. 10 진수 뒤에는 기본 문자 (**e** 또는 **e**)와 선택적으로 부호 있는 정수로 구성 된 지수가 올 수 있습니다. 지수 부분과 기수 문자가 모두 없으면 기수 문자는 문자열의 마지막 숫자를 따르는 것으로 간주합니다. 이 형식에 맞지 않는 첫 번째 문자가 발견되면 검색이 중지됩니다.
+공백은 무시 되는 공백 및 탭 문자로 구성 *될 수 있습니다* . *sign* 은 더하기 ( **+** ) 또는 빼기 ( **-** )이 고 *숫자* 는 하나 이상의 10 진수입니다. 기수 문자 앞에 숫자가 없는 경우 기수 문자 뒤에는 숫자가 하나 이상 있어야 합니다. 10 진수 뒤에는 기본 문자 (**e** 또는 **e**)와 선택적으로 부호 있는 정수로 구성 된 지수가 올 수 있습니다. 지수 부분과 기수 문자가 모두 없으면 기수 문자는 문자열의 마지막 숫자를 따르는 것으로 간주합니다. 이 형식에 맞지 않는 첫 번째 문자가 발견되면 검색이 중지됩니다.
 
 이러한 함수의 버전 간 RT 버전은 포트란 스타일 (**d** 또는 **d**) 지 수 문자의 변환을 지원 하지 않습니다. 이러한 비표준 확장은 CRT의 이전 버전에서 지원되었으므로 코드에 대한 중요한 변경 사항일 수 있습니다.
 
@@ -128,8 +128,8 @@ float wcstof_l(
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> 또는 \<stdlib.h>|
-|**wcstof**, **_wcstof_l**|C: \<stdlib.h> 또는 \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> 또는 \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> c + +: &lt; b> 또는\<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> 또는 \<wchar.h> c + +: &lt; b> \<stdlib.h> 또는\<wchar.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -163,13 +163,13 @@ string = 3.14159This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[문자열을 숫자 값으로 변환하는 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[문자열-숫자 값 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

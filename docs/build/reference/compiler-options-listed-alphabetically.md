@@ -4,12 +4,12 @@ description: Microsoft C/c + + 컴파일러 명령줄 옵션의 사전순으로 
 ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 41a2f6617e879a00101205f3505e70831f9efd50
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180931"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223891"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>컴파일러 옵션 사전순 목록
 
@@ -37,7 +37,7 @@ ms.locfileid: "86180931"
 | [`/E`](e-preprocess-to-stdout.md) | 전처리기 출력을 표준 출력에 복사합니다. |
 | [`/EH`](eh-exception-handling-model.md) | 예외 처리 모델을 지정합니다. |
 | [`/EP`](ep-preprocess-to-stdout-without-hash-line-directives.md) | 전처리기 출력을 표준 출력에 복사합니다. |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 사용되지 않습니다. 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다. |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 더 이상 사용되지 않습니다. 오류 보고는 [WER (Windows 오류 보고)](/windows/win32/wer/windows-error-reporting) 설정에 의해 제어 됩니다. |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 실행 문자 집합을 설정 합니다. |
 | [`/experimental:module`](experimental-module.md) | 실험적 모듈 지원을 사용 하도록 설정 합니다. |
 | [`/experimental:preprocessor`](experimental-preprocessor.md) | 실험적 규격 전처리기 지원을 사용 하도록 설정 합니다. |
@@ -59,32 +59,32 @@ ms.locfileid: "86180931"
 | [`/FU`](fu-name-forced-hash-using-file.md) | 지시문에 전달 된 것 처럼 파일 이름을 강제로 사용 합니다 [`#using`](../../preprocessor/hash-using-directive-cpp.md) . |
 | [`/Fx`](fx-merge-injected-code.md) | 삽입된 코드와 소스 파일을 병합합니다. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Windows 애플리케이션에 맞게 코드를 최적화합니다. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | `__cdecl` 호출 규칙을 사용합니다. x86 전용입니다. |
-| [`/Ge`](ge-enable-stack-probes.md) | 사용되지 않습니다. 스택 프로브를 활성화합니다. |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | **`__cdecl`** 호출 규칙을 사용 합니다 (x 86에만 해당). |
+| [`/Ge`](ge-enable-stack-probes.md) | 더 이상 사용되지 않습니다. 스택 프로브를 활성화합니다. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | 문자열 풀링을 사용합니다. |
 | [`/GH`](gh-enable-pexit-hook-function.md) | 후크 함수 `_pexit`를 호출합니다. |
 | [`/Gh`](gh-enable-penter-hook-function.md) | 후크 함수 `_penter`를 호출합니다. |
 | [`/GL`](gl-whole-program-optimization.md) | 전체 프로그램 최적화를 사용합니다. |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | 사용되지 않습니다. 최소 재빌드를 사용합니다. |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | 더 이상 사용되지 않습니다. 최소 재빌드를 사용합니다. |
 | [`/GR`](gr-enable-run-time-type-information.md) | RTTI(런타임 형식 정보)를 사용합니다. |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | `__fastcall` 호출 규칙을 사용합니다. x86 전용입니다. |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | **`__fastcall`** 호출 규칙을 사용 합니다 (x 86에만 해당). |
 | [`/GS`](gs-buffer-security-check.md) | 보안 검사를 버퍼링합니다. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | 스택 프로브를 제어합니다. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | 정적 스레드 로컬 스토리지를 사용하여 할당한 데이터의 파이버 안전을 지원합니다. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | 제어 흐름 가드 보안 검사를 추가합니다. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | EH 연속 메타 데이터를 사용 하도록 설정 합니다. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | `__vectorcall` 호출 규칙을 사용합니다(x86 및 x64에만 해당). |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | **`__vectorcall`** 호출 규칙을 사용 합니다. 및 x64에만 해당). |
 | [`/Gw`](gw-optimize-global-data.md) | 전체 프로그램 전역 데이터 최적화를 사용하도록 설정합니다. |
-| [`/GX`](gx-enable-exception-handling.md) | 사용되지 않습니다. 동기 예외 처리를 사용합니다. [`/EH`](eh-exception-handling-model.md)대신를 사용 합니다. |
+| [`/GX`](gx-enable-exception-handling.md) | 더 이상 사용되지 않습니다. 동기 예외 처리를 사용합니다. [`/EH`](eh-exception-handling-model.md)대신를 사용 합니다. |
 | [`/Gy`](gy-enable-function-level-linking.md) | 함수 수준 링크를 사용합니다. |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 사용되지 않습니다. 와 동일 [`/RTC1`](rtc-run-time-error-checks.md) 합니다. |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | `__stdcall` 호출 규칙을 사용합니다. x86 전용입니다. |
-| [`/H`](h-restrict-length-of-external-names.md) | 사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다. |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 더 이상 사용되지 않습니다. 와 동일 [`/RTC1`](rtc-run-time-error-checks.md) 합니다. |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | **`__stdcall`** 호출 규칙을 사용 합니다 (x 86에만 해당). |
+| [`/H`](h-restrict-length-of-external-names.md) | 더 이상 사용되지 않습니다. 외부 공개 이름의 길이를 제한합니다. |
 | [`/HELP`](help-compiler-command-line-help.md) | 컴파일러 옵션을 나열합니다. |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 레지스터에 전달된 매개 변수를 함수 시작 시 스택의 해당 위치에 기록합니다. 이 컴파일러 옵션은 x64 컴파일러 (네이티브 및 크로스 컴파일)에만 사용할 수 있습니다. |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | 핫 패치 가능한 이미지를 만듭니다. |
 | [`/I`](i-additional-include-directories.md) | 포함 파일의 디렉터리를 검색합니다. |
-| [`/J`](j-default-char-type-is-unsigned.md) | 기본 `char` 형식을 변경합니다. |
+| [`/J`](j-default-char-type-is-unsigned.md) | 기본 형식을 변경 **`char`** 합니다. |
 | [`/JMC`](jmc.md) | 네이티브 c + + 내 코드만 디버깅을 지원 합니다. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | 컴파일러와 링커는 Windows 커널에서 실행할 수 있는 이진 파일을 만듭니다. |
 | [`/LD`](md-mt-ld-use-run-time-library.md) | DLL(동적 연결 라이브러리)을 만듭니다. |
@@ -101,7 +101,7 @@ ms.locfileid: "86180931"
 | [`/O2`](o1-o2-minimize-size-maximize-speed.md) | 빠른 코드를 만듭니다. |
 | [`/Ob`](ob-inline-function-expansion.md) | 인라인 확장을 제어합니다. |
 | [`/Od`](od-disable-debug.md) | 최적화를 사용하지 않습니다. |
-| [`/Og`](og-global-optimizations.md) | 사용되지 않습니다. 전역 최적화를 사용합니다. |
+| [`/Og`](og-global-optimizations.md) | 더 이상 사용되지 않습니다. 전역 최적화를 사용합니다. |
 | [`/Oi`](oi-generate-intrinsic-functions.md) | 내장 함수를 생성합니다. |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | [`#pragma omp`](../../preprocessor/omp.md)소스 코드에서 지시문을 사용 하도록 설정 합니다. |
 | [`/Os`](os-ot-favor-small-code-favor-fast-code.md) | 코드 크기를 우선으로 합니다. |
@@ -111,8 +111,8 @@ ms.locfileid: "86180931"
 | [`/P`](p-preprocess-to-a-file.md) | 전처리기 출력을 파일에 씁니다. |
 | [`/permissive-`](permissive-standards-conformance.md) | 표준 규칙 모드를 설정 합니다. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | 빠른 초월수를 생성합니다. |
-| [`/QIfist`](qifist-suppress-ftol.md) | 사용되지 않습니다. 부동 소수점 형식에서 정수 계열 형식으로 변환해야 할 때 `_ftol` 이 사용되지 않도록 합니다. x86 전용입니다. |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | `fwait` 블록 내에 있는 `try` 명령을 제거합니다. |
+| [`/QIfist`](qifist-suppress-ftol.md) | 더 이상 사용되지 않습니다. 부동 소수점 형식에서 정수 계열 형식으로 변환해야 할 때 `_ftol` 이 사용되지 않도록 합니다. x86 전용입니다. |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | `fwait`블록 내에 있는 명령을 제거 **`try`** 합니다. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Intel JCC erratum 마이크로코드 업데이트의 성능 영향을 완화 합니다. |
 | [/Qpar (자동 평행 화 도우미)](qpar-auto-parallelizer.md) | [#pragma loop()](../../preprocessor/loop.md) 지시문으로 표시되는 루프의 자동 병렬화를 사용하도록 설정합니다. |
 | [`/Qsafe_fp_loads`](qsafe-fp-loads.md) | 부동 소수점 값에 대한 정수 이동 명령을 사용하고 특정 부동 소수점 부하 최적화를 사용하지 않도록 설정합니다. |
@@ -132,7 +132,7 @@ ms.locfileid: "86180931"
 | [`/U`](u-u-undefine-symbols.md) | 미리 정의된 매크로를 제거합니다. |
 | [`/u`](u-u-undefine-symbols.md) | 미리 정의된 모든 매크로를 제거합니다. |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | 원본 및 실행 문자 집합을 u t f-8로 설정 합니다. |
-| [`/V`](v-version-number.md) | 사용되지 않습니다. .obj 파일 버전 문자열을 설정합니다. |
+| [`/V`](v-version-number.md) | 더 이상 사용되지 않습니다. .obj 파일 버전 문자열을 설정합니다. |
 | [`/validate-charset`](validate-charset-validate-for-compatible-characters.md) | 호환 되는 문자만을 위한 UTF-8 파일의 유효성을 검사 합니다. |
 | [`/vd`](vd-disable-construction-displacements.md) | 숨겨진 vtordisp 클래스 멤버를 사용하거나 사용하지 않습니다. |
 | [`/vmb`](vmb-vmg-representation-method.md) | 멤버의 포인터에 best case를 사용합니다. |
@@ -149,19 +149,19 @@ ms.locfileid: "86180931"
 | [`/we`](compiler-option-warning-level.md) | 지정된 경고를 오류로 처리합니다. |
 | [`/WL`](wl-enable-one-line-diagnostics.md) | 명령줄에서 C++ 소스 코드를 컴파일할 때 오류 및 경고 메시지에 한 줄 진단을 사용합니다. |
 | [`/wo`](compiler-option-warning-level.md) | 지정된 경고를 한 번만 표시합니다. |
-| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | 더 이상 사용되지 않습니다. 64비트 이식성 문제를 검색합니다. |
+| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | 사용되지 않습니다. 64비트 이식성 문제를 검색합니다. |
 | [`/Wv`](compiler-option-warning-level.md) | 지정된 버전의 컴파일러 이후에 도입된 경고를 표시하지 않습니다. |
 | [`/WX`](compiler-option-warning-level.md) | 모든 경고를 오류로 처리합니다. |
 | [`/X`](x-ignore-standard-include-paths.md) | 표준 포함 디렉터리를 무시합니다. |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | 현재 빌드에서 미리 컴파일된 다른 모든 헤더 컴파일러 옵션을 무시합니다. |
 | [`/Yc`](yc-create-precompiled-header-file.md) | 미리 컴파일된 헤더 파일을 만듭니다. |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | 사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. [`/Zi`](z7-zi-zi-debug-information-format.md)대신를 사용 합니다. |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | 더 이상 사용되지 않습니다. 모든 개체 파일에 완전한 디버깅 정보를 저장합니다. [`/Zi`](z7-zi-zi-debug-information-format.md)대신를 사용 합니다. |
 | [`/Yl`](yl-inject-pch-reference-for-debug-library.md) | 디버그 라이브러리를 만들 때 PCH 참조를 삽입합니다. |
 | [`/Yu`](yu-use-precompiled-header-file.md) | 빌드하는 동안 미리 컴파일된 헤더 파일을 사용합니다. |
 | [`/Z7`](z7-zi-zi-debug-information-format.md) | C 7.0 호환 디버깅 정보를 생성 합니다. |
 | [`/Za`](za-ze-disable-language-extensions.md) | 언어 확장을 사용하지 않습니다. |
 | [`/Zc`](zc-conformance.md) | 표준 동작을 지정 합니다. |
-| [`/Ze`](za-ze-disable-language-extensions.md) | 사용되지 않습니다. 언어 확장을 사용합니다. |
+| [`/Ze`](za-ze-disable-language-extensions.md) | 더 이상 사용되지 않습니다. 언어 확장을 사용합니다. |
 | [`/Zf`](zf.md) | 병렬 빌드에서 PDB 생성 시간을 향상 시킵니다. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Visual Studio 2015에서 제거 되었습니다. 함수 프로토타입을 생성합니다. |
 | [`/ZH`](zh.md) | 디버그 정보에서 체크섬에 대해 MD5, SHA-1 또는 SHA-256을 지정 합니다. |

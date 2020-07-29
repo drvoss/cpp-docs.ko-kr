@@ -30,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234135"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -66,13 +66,13 @@ long double expm1l(
 *x*<br/>
 부동 소수점 지수 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**Expm1** 함수는 성공 하면 e<sup>x</sup> -1을 나타내는 부동 소수점 값을 반환 합니다. 오버플로 시 **expm1** 는 **HUGE_VAL**를 반환 하 고 **expm1f** 는 **HUGE_VALF**를 반환 하며 Expm1l **는 HUGE_VALL** **를 반환 하며** **errno는** **ERANGE**로 설정 됩니다. 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+**Expm1** 함수는 성공 하면 e<sup>x</sup> -1을 나타내는 부동 소수점 값을 반환 합니다. 오버플로 시 **expm1** 는 **HUGE_VAL**을 반환 하 고, **expm1f** 는 **HUGE_VALF**를 반환 하며, **Expm1l** 는 **HUGE_VALL**을 반환 하 고 **errno** 는 **ERANGE**로 설정 됩니다. 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **expm1** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **expm1** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 값을 사용 하 고 반환 하는 **expm1** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **expm1** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -80,9 +80,9 @@ long double expm1l(
 |-------------|---------------------|
 |**expm1**, **expm1f**, **expm1l**|\<math.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373699"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223930"
 ---
 # <a name="await-enable-coroutine-support"></a>/await(코루틴 지원 사용)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86373699"
 
 ## <a name="remarks"></a>설명
 
-**/Swait** 컴파일러 옵션을 사용 하면 c + + 코 루틴 및 키워드 **co_await**, **co_yield**및 **co_return**에 대 한 컴파일러 지원을 사용할 수 있습니다. 이 옵션은 기본적으로 해제되어 있습니다. Visual Studio의 코 루틴 지원에 대 한 자세한 내용은 [Visual Studio 팀 블로그](https://devblogs.microsoft.com/cppblog/category/coroutine/)를 참조 하세요. 코 루틴 표준 제안에 대 한 자세한 내용은 [N4628 작업 초안, 코 루틴 용 c + + 확장 기술 사양](https://wg21.link/n4628)을 참조 하십시오.
+**/Swait** 컴파일러 옵션을 사용 하면 c + + 코 루틴 및 키워드, 및에 대 한 컴파일러 지원을 사용할 수 있습니다 **`co_await`** **`co_yield`** **`co_return`** . 이 옵션은 기본적으로 해제되어 있습니다. Visual Studio의 코 루틴 지원에 대 한 자세한 내용은 [Visual Studio 팀 블로그](https://devblogs.microsoft.com/cppblog/category/coroutine/)를 참조 하세요. 코 루틴 표준 제안에 대 한 자세한 내용은 [N4628 작업 초안, 코 루틴 용 c + + 확장 기술 사양](https://wg21.link/n4628)을 참조 하십시오.
 
 **/Swait** 옵션은 Visual Studio 2015부터 사용할 수 있습니다.
 

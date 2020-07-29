@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222994"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 클래스
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442577"
 class CMapWordToOb : public CObject
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
-`CMapWordToOb`의 멤버 함수는 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)클래스의 멤버 함수와 비슷합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. **Char** 에 대 한 `CString` 또는 **const** 포인터가 함수 매개 변수 또는 반환 값으로 표시 되는 경우에는 단어를 대체 합니다.
+의 멤버 함수는 `CMapWordToOb` [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)클래스의 멤버 함수와 비슷합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. `CString`또는 **`const`** 포인터가 **`char`** 함수 매개 변수 또는 반환 값으로 표시 되는 경우에는 단어를 대체 합니다.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|이 map의 요소 수를 반환 합니다.|
 |[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|해시 테이블의 현재 요소 수를 확인 합니다.|
@@ -87,21 +87,21 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|`SetAt`에 대 한 연산자 대체 (map)에 요소를 삽입 합니다.|
+|[CMapWordToOb:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|에 요소를 삽입 합니다 (에 대 한 연산자 대체) `SetAt` .|
 
 ## <a name="remarks"></a>설명
 
-`CMapWordToOb`는 IMPLEMENT_SERIAL 매크로를 통합 하 여 요소의 serialization 및 덤프를 지원 합니다. 각 요소는 오버 로드 된 삽입 ( **<<** ) 연산자 또는 `Serialize` 멤버 함수를 사용 하 여 맵이 보관 파일에 저장 되는 경우 차례로 serialize 됩니다.
+`CMapWordToOb`는 IMPLEMENT_SERIAL 매크로를 통합 하 여 요소의 serialization 및 덤프를 지원 합니다. 각 요소는 맵이 오버 로드 된 삽입 ( **<<** ) 연산자를 사용 하거나 멤버 함수를 사용 하 여 보관 파일에 저장 되는 경우에 차례로 serialize 됩니다 `Serialize` .
 
-개별 단어 `CObject` 요소에 대 한 덤프가 필요한 경우 덤프 컨텍스트의 깊이를 1 이상으로 설정 해야 합니다.
+개별 단어 요소에 대 한 덤프가 필요한 경우 `CObject` 덤프 컨텍스트의 깊이를 1 이상으로 설정 해야 합니다.
 
-`CMapWordToOb` 개체가 삭제 되거나 해당 요소가 제거 되 면 `CObject` 포인터가 제거 됩니다. `CObject` 포인터에서 참조 하는 개체는 제거 되지 않습니다.
+`CMapWordToOb`개체가 삭제 되거나 해당 요소가 제거 되 면 `CObject` 포인터가 제거 됩니다. 포인터가 참조 하는 개체는 `CObject` 제거 되지 않습니다.
 
-`CMapWordToOb`에 대 한 자세한 내용은 [컬렉션](../../mfc/collections.md)문서를 참조 하세요.
+에 대 한 자세한 내용은 `CMapWordToOb` [컬렉션](../../mfc/collections.md)문서를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 

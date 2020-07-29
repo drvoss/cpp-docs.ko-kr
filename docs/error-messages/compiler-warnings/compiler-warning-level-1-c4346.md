@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187247"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223202"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>컴파일러 경고(수준 1) C4346
 
 ' name ': 종속 이름이 형식이 아닙니다.
 
-형식으로 처리 해야 하는 종속 이름이 있는 경우 [typename](../../cpp/typename.md) 키워드를 입력 해야 합니다. 모든 버전의 Visual C++에서 동일 하 게 작동 하는 코드의 경우 선언에 `typename`를 추가 합니다.
+형식으로 처리 해야 하는 종속 이름이 있는 경우 [typename](../../cpp/typename.md) 키워드를 입력 해야 합니다. 모든 버전의 Visual C++에서 동일 하 게 작동 하는 코드의 경우 **`typename`** 선언에를 추가 합니다.
 
 다음 샘플에서는 C4346를 생성 합니다.
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-다음 샘플에서는 **typename** 키워드가 필요한 다른 예를 보여 줍니다.
+다음 샘플에서는 키워드가 필요한 다른 예를 보여 줍니다 **`typename`** .
 
 ```cpp
 // C4346b.cpp

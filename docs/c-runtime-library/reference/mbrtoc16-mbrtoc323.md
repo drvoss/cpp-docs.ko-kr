@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234070"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>매개 변수
 
 *대상이*\
-변환할 UTF-8 멀티 바이트 문자에 해당 하는 **char16_t** 또는 **char32_t** 에 대 한 포인터입니다. Null 인 경우 함수는 값을 저장 하지 않습니다.
+**`char16_t`** 변환할 utf-8 멀티 바이트 문자에 해당 하는 또는에 대 한 포인터 **`char32_t`** 입니다. Null 인 경우 함수는 값을 저장 하지 않습니다.
 
 *원본*\
 변환할 UTF-8 멀티 바이트 문자열에 대 한 포인터입니다.
@@ -91,7 +91,7 @@ UTF-8 멀티 바이트 문자열을 하나 이상의 출력 문자로 해석 하
 
 **Mbrtoc16** 함수는 *원본* 에서 최대 *max_bytes* 바이트까지 읽어 첫 번째 완전 하 고 유효한 utf-8 멀티 바이트 문자를 찾은 다음 해당 하는 utf-16 문자를 *대상*에 저장 합니다. 문자에서 서로게이트 쌍과 같은 둘 이상의 UTF-16 출력 문자가 필요한 경우 *상태* 값은 다음에 **mbrtoc16**에 대 한 호출 시 *destination* 에 다음 utf-16 문자를 저장 하도록 설정 됩니다. **Mbrtoc32** 함수는 동일 하지만 출력이 u t f-32 문자로 저장 됩니다.
 
-*Source* 가 null 인 경우 이러한 함수는 *대상* `""` 에 **null** *인수를 사용*하는 호출에 해당 하는 호출 (비어 있고 null로 끝나는 문자열) 및 *max_bytes*에 대해 1을 반환 합니다. *대상* 및 *max_bytes* 전달 된 값은 무시 됩니다.
+*Source* 가 null 인 경우 이러한 함수는 *대상*에 **null** 인수를 사용 하는 호출에 해당 하는 호출 `""` (비어 있고 null로 끝나는 문자열) 및 *source* *max_bytes*에 대해 1을 반환 합니다. *대상* 및 *max_bytes* 전달 된 값은 무시 됩니다.
 
 *Source* 가 null이 아닌 경우 함수는 문자열의 시작 부분에서 시작 하 고 최대 *max_bytes* 바이트까지 검사 하 여 모든 이동 시퀀스를 포함 하 여 다음 utf-8 멀티 바이트 문자를 완료 하는 데 필요한 바이트 수를 결정 합니다. 검사 된 바이트에 유효 하 고 완전 한 UTF-8 멀티 바이트 문자가 포함 된 경우이 함수는 문자를 해당 하는 16 비트 또는 32 비트 와이드 문자로 변환 합니다. *Destination* 이 null이 아닌 경우 함수는 대상에 첫 번째 (및 가능한 경우) 결과 문자를 저장 합니다. 추가 출력 문자가 필요한 경우에는 값이 *상태로*설정 되므로 이후에 함수를 호출할 때 추가 문자가 출력 되 고 값-3이 반환 됩니다. 출력 문자가 더 이상 필요 하지 않으면 *state* 가 초기 이동 상태로 설정 됩니다.
 
@@ -101,13 +101,13 @@ UTF-8 멀티 바이트 문자열을 하나 이상의 출력 문자로 해석 하
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../data-conversion.md)\
 [로캘을](../locale.md)\

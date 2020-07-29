@@ -16,12 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223176"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>예외: MFC 매크로 및 C++ 예외 사용
 
@@ -49,7 +49,7 @@ ms.locfileid: "84622735"
 
 ## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Catch 블록 내의 Try 블록
 
-**CATCH** 블록 내에 있는 **try** 블록 내에서 현재 예외를 다시 throw 할 수 없습니다. 다음 예제는 올바르지 않습니다.
+**`try`** **CATCH** 블록 내에 있는 블록 내에서 현재 예외를 다시 throw 할 수 없습니다. 다음 예제는 올바르지 않습니다.
 
 [!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 

@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234005"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -115,7 +115,7 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 설정할 Null 종료 문자열입니다.
 
 *c*<br/>
@@ -130,7 +130,7 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>설명
 
-**_Strset** 함수는 *str* 의 종료 null 문자를 제외한 모든 문자를 **char**로 변환 된 *c*로 설정 합니다. **_wcsset** 및 **_mbsset_l** 는 **_strset**의 와이드 문자 및 멀티 바이트 문자 버전 이며, 인수 및 반환 값의 데이터 형식은 그에 따라 다릅니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+**_Strset** 함수는 *str* 의 모든 문자 (null 종결 문자 제외)를로 변환 된 *c*로 설정 합니다 **`char`** . **_wcsset** 및 **_mbsset_l** 는 **_strset**의 와이드 문자 및 멀티 바이트 문자 버전 이며, 인수 및 반환 값의 데이터 형식은 그에 따라 다릅니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 **_mbsset** 은 해당 매개 변수의 유효성을 검사 합니다. *Str* 이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 **_Mbsset** **NULL** 을 반환 하 고 **errno** 를 **EINVAL**로 설정 합니다. **_strset** 및 **_wcsset** 는 매개 변수의 유효성을 검사 하지 않습니다.
 
@@ -184,10 +184,10 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>

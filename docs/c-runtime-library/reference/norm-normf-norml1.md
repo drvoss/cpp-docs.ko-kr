@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234057"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -59,26 +59,26 @@ long double norm( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>매개 변수
 
-*z*<br/>
+*-*<br/>
 복소수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 *Z*의 제곱 크기입니다.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하므로 **_Fcomplex** 또는 **_fcomplex** 값을 사용 하 고 **float** 또는 **long double** **값을 반환 하는 일반적인** 오버 로드를 호출할 수 있습니다. C 프로그램에서 일반은 항상 **_d** **값을 사용** 하 여 **double** 값을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **_Fcomplex** 또는 **_Lcomplex** 값을 사용 하 고 또는 값 **을 반환 하는 일반적인** 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 일반은 항상 **_Dcomplex** 값을 **사용 하 고** 값을 반환 **`double`** 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴에서 반환된 값|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|일반, **normf** **, 없음** **ml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**, **_Fcomplex**및 **_Fcomplex** 형식은 각각 C99에서 구현 되지 않은 네이티브 형식으로 **서, float**, **Double _complex**및 **long double _complex**의 Microsoft 관련 항목입니다.  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+**_Fcomplex**, **_Dcomplex**및 **_Lcomplex** 형식은 각각 Microsoft에서 구현 되지 않은 네이티브 C99 유형 **float _Complex**, **double _Complex**및 **long double _Complex**에 해당 합니다.  호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

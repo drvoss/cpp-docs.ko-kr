@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169749"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223917"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>호출 규칙, 매개 변수, 반환 형식
 
@@ -27,9 +27,9 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>매개 변수
 
 *pidd*<br/>
-다양 한 가져오기 관련 데이터의 오프셋, 바인딩 정보에 대 한 타임 스탬프 및 설명자 콘텐츠에 대 한 추가 정보를 제공 하는 특성 집합을 포함 하는 `ImgDelayDescr`에 대 한 `const` 포인터입니다. 현재 설명자의 주소가 상대 가상 주소 임을 나타내는 `dlattrRva`특성은 하나 뿐입니다. 자세한 내용은 *delayimp.lib*의 선언을 참조 하세요.
+**`const`** `ImgDelayDescr` 다양 한 가져오기 관련 데이터의 오프셋, 바인딩 정보에 대 한 타임 스탬프 및 설명자 콘텐츠에 대 한 추가 정보를 제공 하는 특성 집합을 포함 하는에 대 한 포인터입니다. 현재 `dlattrRva` 설명자의 주소가 상대 가상 주소 임을 나타내는 특성은 하나 뿐입니다. 자세한 내용은 *delayimp.lib*의 선언을 참조 하세요.
 
-`PCImgDelayDescr` 구조체의 정의는 [구조체 및 상수 정의](structure-and-constant-definitions.md)를 참조 하세요.
+구조체에 대 한 정의는 `PCImgDelayDescr` [구조체 및 상수 정의](structure-and-constant-definitions.md)를 참조 하세요.
 
 *ppfnIATEntry*<br/>
 가져온 함수의 주소로 업데이트 되는 지연 로드 가져오기 주소 테이블 (IAT)의 슬롯에 대 한 포인터입니다. 도우미 루틴은 반환 하는 것과 동일한 값을이 위치에 저장 해야 합니다.
@@ -50,11 +50,11 @@ FARPROC WINAPI __delayLoadHelper2(
 
 ## <a name="remarks"></a>설명
 
-도우미 함수의 호출 규칙은 `__stdcall`입니다. 반환 값의 형식은 관련이 없으므로 FARPROC가 사용 됩니다. 이 함수에는 C 링크가 있습니다.
+도우미 함수에 대 한 호출 규칙은 **`__stdcall`** 입니다. 반환 값의 형식은 관련이 없으므로 FARPROC가 사용 됩니다. 이 함수에는 C 링크가 있습니다.
 
 도우미 루틴을 알림 후크로 사용하지 않으려는 경우에는 지연 로드 도우미의 반환 값을 전달된 함수 포인터 위치에 저장해야 합니다. 이러한 경우 사용자 코드가 반환할 적절한 함수 포인터 찾기를 담당합니다. 그러면 링커가 생성한 썽크 코드가 해당 반환 값을 가져오기의 실제 대상으로 인식하여 해당 대상으로 직접 이동합니다.
 
-## <a name="sample"></a>샘플
+## <a name="sample"></a>예제
 
 다음 코드는 간단한 후크 함수를 구현하는 방법을 보여줍니다.
 

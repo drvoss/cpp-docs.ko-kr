@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234239"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -99,7 +99,7 @@ int _cwscanf_s_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공적으로 변환되고 할당된 필드 수입니다. 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 파일의 끝에서 읽으려고 시도 하는 경우 반환 값은 **EOF** 입니다. 키보드 입력이 운영 체제 명령줄 수준에서 리디렉션될 때 발생할 수 있습니다. 반환 값이 0이면 할당된 필드가 없음을 의미합니다.
 
@@ -107,16 +107,16 @@ int _cwscanf_s_l(
 
 ## <a name="remarks"></a>설명
 
-**_Cscanf_s** 함수는 콘솔에서 *인수로*지정 된 위치로 데이터를 직접 읽습니다. [_getche](getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. 이 형식은 입력 필드의 해석을 제어 하 고 [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) 함수의 *format* 매개 변수와 동일한 양식 및 기능을 포함 합니다. **_Cscanf_s** 는 일반적으로 입력 문자를 에코 하는 반면, 마지막 호출이 **_ungetch**에 대해 수행 되는 경우에는이 작업을 수행 하지 않습니다.
+**_Cscanf_s** 함수는 콘솔에서 *인수로*지정 된 위치로 데이터를 직접 읽습니다. [_getche](getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수 *는 형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. 이 형식은 입력 필드의 해석을 제어 하 고 [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) 함수에 대 한 *형식* 매개 변수와 동일한 형식 및 기능을 가집니다. **_Cscanf_s** 는 일반적으로 입력 문자를 에코 하지만 마지막 호출이 **_ungetch**된 경우에는이를 수행 하지 않습니다.
 
-**Scanf** 패밀리에 있는 다른 안전한 버전의 함수와 마찬가지로 **_cscanf_s** 및 **_cswscanf_s** 에는 형식 필드 문자 **c**, **c**, **s**, **s**및 **[** 에 대 한 크기 인수가 필요 합니다. 자세한 내용은 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하세요.
+**Scanf** 패밀리에 있는 다른 보안 버전의 함수와 마찬가지로 **_cscanf_s** 및 **_cswscanf_s** 에는 형식 필드 문자 **c**, **c**, **s**, **s**및 **[** 에 대 한 크기 인수가 필요 합니다. 자세한 내용은 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하세요.
 
 > [!NOTE]
-> Size 매개 변수는 **size_t**가 아닌 **부호**있는 형식입니다.
+> Size 매개 변수는 size_t이 **`unsigned`** 아니라 형식 **size_t**입니다.
 
-**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 경우를 제외 하 고는 동일 합니다.
+**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고는 동일 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -130,7 +130,7 @@ int _cwscanf_s_l(
 |**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -171,9 +171,9 @@ int main( void )
 You entered 1 2 3
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[콘솔 및 포트 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909644"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234161"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -94,7 +94,7 @@ long double exp2l(
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long double** 형식을 사용 하 고 반환 하는 **exp2** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **exp2** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **exp2** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **exp2** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -106,7 +106,7 @@ C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long double** 
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

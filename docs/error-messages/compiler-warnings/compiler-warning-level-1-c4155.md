@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-ms.openlocfilehash: 3e455ad67c9a36cfa4b52711ce60ce46ef6afac2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 74369ce9eae123143caf15434506acf6e6e2e50e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223293"
 ---
 # <a name="compiler-warning-level-1-c4155"></a>컴파일러 경고(수준 1) C4155
 
 'delete' 배열 형식을 사용하지 않고 배열 식을 삭제했습니다.
 
-배열을 삭제하려면 **삭제** 의 배열 형식을 사용해야 합니다. 이 경고는 ANSI 호환성(/Za)에서만 발생합니다.
+배열을 삭제 하려면의 배열 형식을 **`delete`** 사용 해야 합니다. 이 경고는 ANSI 호환성(/Za)에서만 발생합니다.
 
 ## <a name="example"></a>예제
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233979"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -95,7 +95,7 @@ double wcstod_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **strtod** 는 표현이 오버플로를 발생 시키는 경우를 제외 하 고 부동 소수점 숫자의 값을 반환 합니다 .이 경우 함수는 +/-**HUGE_VAL**을 반환 합니다. **HUGE_VAL** 부호는 표현할 수 없는 값의 부호와 일치 합니다. **strtod** `0` 변환을 수행할 수 없거나 언더플로가 발생 하는 경우 strtod는를 반환 합니다.
 
@@ -108,7 +108,7 @@ double wcstod_l(
 
 ## <a name="remarks"></a>설명
 
-각 함수는 입력 문자열 *Strsource* 를 **double**로 변환 합니다. **Strtod** 함수는 *strsource* 를 배정밀도 값으로 변환 합니다. **strtod** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 의 읽기를 중지 합니다. 이 문자는 null 종결 문자일 수 있습니다. **wcstod** 은 **strtod**;의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+각 함수는 입력 문자열 *Strsource* 를로 변환 **`double`** 합니다. **Strtod** 함수는 *strsource* 를 배정밀도 값으로 변환 합니다. **strtod** 는 숫자의 일부분으로 인식할 수 없는 첫 번째 문자에서 문자열 *strsource* 의 읽기를 중지 합니다. 이 문자는 null 종결 문자일 수 있습니다. **wcstod** 은 **strtod**;의 와이드 문자 버전입니다. *Strsource* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -210,7 +210,7 @@ string = 10110134932
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[로캘을](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [문자열-숫자 값 함수](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

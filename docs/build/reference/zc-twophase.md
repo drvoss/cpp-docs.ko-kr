@@ -9,16 +9,16 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 712503d08221d29a61323946008f2f36a467cb31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438645"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234330"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2단계 이름 조회를 사용하지 않도록 설정)
 
-**/Permissive-** 아래의 C++ **/Zc: twophase-** 옵션은 컴파일러에 준수 하지 않는 원래 Microsoft 컴파일러 동작을 사용 하 여 클래스 템플릿 및 함수 템플릿을 구문 분석 하 고 인스턴스화합니다.
+**/Permissive-** 아래의 **/Zc: twoPhase-** 옵션은 컴파일러에서 준수 하지 않는 원래 Microsoft c + + 컴파일러 동작을 사용 하 여 클래스 템플릿 및 함수 템플릿을 구문 분석 하 고 인스턴스화합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -42,7 +42,7 @@ Visual Studio 2017 버전 15.3 이상: [/Permissive-](permissive-standards-confo
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   템플릿 선언 `template <typename T>`, 클래스 헤드 `class Derived`및 기본 클래스 목록 `public Base<T>` 구문 분석 되지만 템플릿 본문은 토큰 스트림으로 캡처됩니다.
+   템플릿 선언, `template <typename T>` , 클래스 헤드 `class Derived` 및 기본 클래스 목록이 `public Base<T>` 구문 분석 되지만 템플릿 본문은 토큰 스트림으로 캡처됩니다.
 
 - 함수 템플릿을 구문 분석할 때 컴파일러는 함수 서명만 구문 분석 합니다. 함수 본문은 구문 분석 되지 않습니다. 대신 토큰 스트림으로 캡처됩니다.
 
@@ -92,7 +92,7 @@ zctwophase.cpp
 Microsoft one-phase
 ```
 
-**/Permissive-** 아래의 규칙 모드에서 컴파일될 때이 프로그램은 컴파일러가 템플릿에 도달할 때 `func`의 두 번째 오버 로드가 표시 되지 않기 때문에 "`Standard two-phase`"을 출력 합니다. **/Zc: twoPhase-** 를 추가 하면 프로그램에서 "`Microsoft one-phase`"을 출력 합니다. 출력은 **/permissive-** 를 지정 하지 않는 경우와 동일 합니다.
+**/Permissive-** 아래에서 규칙 모드로 컴파일될 때이 프로그램은 `Standard two-phase` `func` 컴파일러가 템플릿에 도달할 때의 두 번째 오버 로드가 표시 되지 않기 때문에 ""를 출력 합니다. **/Zc: twoPhase-** 를 추가 하면 프로그램이 ""를 인쇄 `Microsoft one-phase` 합니다. 출력은 **/permissive-** 를 지정 하지 않는 경우와 동일 합니다.
 
 *종속 이름은* 템플릿 매개 변수에 종속 된 이름입니다. 이러한 이름에는 **/zc: twoPhase-** 와도 다른 조회 동작이 있습니다. 규칙 모드에서 종속 이름은 템플릿의 정의 지점에서 바인딩되지 않습니다. 대신, 컴파일러가 템플릿을 인스턴스화할 때이를 찾습니다. 종속 함수 이름을 사용 하는 함수 호출의 경우 이름이 템플릿 정의의 호출 사이트에서 표시 되는 함수에 바인딩됩니다. 인수 종속 조회의 추가 오버 로드는 템플릿 정의의 지점 및 템플릿 인스턴스화 시점에 추가 됩니다.
 
@@ -150,21 +150,21 @@ func(int)
 NS::func(NS::S)
 ```
 
-**/Permissive-** 아래의 규칙 모드에서 호출 `tfunc(1729)` `void func(long)` 오버 로드로 확인 됩니다. **/Zc: twoPhase-** 에서와 같이 `void func(int)` 오버 로드로 확인 되지 않습니다. 정규화 되지 않은 `func(int)`는 템플릿 정의 후에 선언 되 고 인수 종속 조회를 통해 찾을 수 없기 때문입니다. 그러나 `void func(S)`는 인수 종속 조회에 참여 하므로 템플릿 함수 다음에 선언 된 경우에도 호출 `tfunc(s)`에 대해 설정 된 오버 로드에 추가 됩니다.
+**/Permissive-** 아래의 규칙 모드에서 호출은 `tfunc(1729)` 오버 로드를 확인 합니다 `void func(long)` . `void func(int)` **/Zc: twoPhase-** 에서와 같이 오버 로드로 확인 되지 않습니다. 이는 정규화 `func(int)` 되지 않은이 템플릿 정의 후에 선언 되 고 인수 종속 조회를 통해 찾을 수 없기 때문입니다. `void func(S)`는 인수 종속 조회에 참여 하므로 템플릿 함수 다음에 선언 된 경우에도 호출에 대해 설정 된 오버 로드에 추가 됩니다 `tfunc(s)` .
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2 단계 규칙에 맞게 코드를 업데이트 합니다.
 
-이전 버전의 컴파일러에서는 `template` 키워드가 필요 하지 않으며 표준에 C++ 필요한 모든 곳에서 `typename`. 이러한 키워드는 컴파일러가 조회의 첫 번째 단계에서 종속 이름을 구문 분석 해야 하는 방법을 구분 하기 위해 일부 위치에서 필요 합니다. 다음은 그 예입니다.
+이전 버전의 컴파일러에는 **`template`** **`typename`** c + + 표준에 필요한 키워드가 필요 하지 않습니다. 이러한 키워드는 컴파일러가 조회의 첫 번째 단계에서 종속 이름을 구문 분석 해야 하는 방법을 구분 하기 위해 일부 위치에서 필요 합니다. 예를 들면 다음과 같습니다.
 
 `T::Foo<a || b>(c);`
 
-준수 하는 컴파일러는 `T`범위에서 변수로 `Foo`를 구문 분석 합니다. 즉,이 코드는 왼쪽 피연산자로 `T::foo < a`를 사용 하 고 오른쪽 피연산자와 `b > (c)`는 논리적 or 식입니다. `Foo`를 함수 템플릿으로 사용 하는 경우 `template` 키워드를 추가 하 여 템플릿이 되도록 지정 해야 합니다.
+준수 하는 컴파일러는 `Foo` 의 범위에서 변수로 구문을 분석 `T` 합니다. 즉,이 코드는 `T::foo < a` 왼쪽 피연산자와 오른쪽 피연산자로를 사용 하는 논리 또는 식입니다 `b > (c)` . 을 함수 템플릿으로 사용 하 `Foo` 는 경우 키워드를 추가 하 여 템플릿이 되도록 지정 해야 합니다 **`template`** .
 
 `T::template Foo<a || b>(c);`
 
-Visual Studio 2017 버전 15.3 이상에서 **/permissive-** 및 **/Zc: twoPhase가** 지정 된 경우 컴파일러는 `template` 키워드 없이이 코드를 허용 합니다. 이 코드는 제한 된 방식 으로만 템플릿을 구문 분석 하므로 `a || b`의 인수를 사용 하 여 코드를 함수 템플릿에 대 한 호출로 해석 합니다. 위의 코드는 첫 번째 단계에서는 구문 분석 되지 않습니다. 두 번째 단계에서는 `T::Foo`가 변수가 아니라 템플릿이 되도록 지시할 수 있는 충분 한 컨텍스트가 있으므로 컴파일러는 키워드 사용을 적용 하지 않습니다.
+Visual Studio 2017 버전 15.3 이상에서 **/permissive-** 및 **/Zc: twoPhase** 를 지정 하면 컴파일러가 키워드 없이이 코드를 허용 **`template`** 합니다. 코드를의 인수를 사용 하는 함수 템플릿에 대 한 호출로 해석 `a || b` 합니다 .이는 제한 된 방식 으로만 템플릿을 구문 분석 하기 때문입니다. 위의 코드는 첫 번째 단계에서는 구문 분석 되지 않습니다. 두 번째 단계에서는가 변수가 아니라 템플릿이 된다는 것을 알 수 있는 충분 한 컨텍스트가 `T::Foo` 있으므로 컴파일러가 키워드 사용을 적용 하지 않습니다.
 
-이 동작은 함수 템플릿 본문의 이름 앞에 `typename` 키워드를 제거 하거나 이니셜라이저, 기본 인수 및 noexcept 인수를 제거 하 여 볼 수도 있습니다. 다음은 그 예입니다.
+이 동작은 **`typename`** 함수 템플릿 본문의 이름 앞에 키워드를 제거 하거나 이니셜라이저, 기본 인수 및 noexcept 인수를 제거 하 여 볼 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 template<typename T>
@@ -174,7 +174,7 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-함수 본문에서 `typename` 키워드를 사용 하지 않는 경우이 코드는 **/Permissive-/zc: twoPhase-** 에서 컴파일되지만 **/permissive-** 만으로는 사용 되지 않습니다. `typename` 키워드는 `TYPE` 종속 되어 있음을 나타내는 데 필요 합니다. 이 본문은 **/zc: twoPhase**에서 구문 분석 되지 않으므로 컴파일러 does't에 키워드가 필요 합니다. **/Permissive-** 규칙 모드에서 `typename` 키워드가 없는 코드는 오류를 생성 합니다. Visual Studio 2017 버전 15.3 이상에서 코드를 준수 하도록 마이그레이션하려면 `typename` 키워드가 없는 위치에 삽입 합니다.
+함수 본문에서 키워드를 사용 하지 않는 경우 **`typename`** 이 코드는 **/permissive-/Zc: twoPhase-** 에서 컴파일되지만 **/permissive-** 만으로는 사용 되지 않습니다. **`typename`** 키워드는가 종속 됨을 나타내는 데 필요 합니다 `TYPE` . 이 본문은 **/zc: twoPhase**에서 구문 분석 되지 않으므로 컴파일러 does't에 키워드가 필요 합니다. **/Permissive-** 규칙 모드에서 키워드가 없는 코드는 **`typename`** 오류를 생성 합니다. Visual Studio 2017 버전 15.3 이상에서 코드를 준수 하도록 마이그레이션하려면 **`typename`** 키워드가 누락 된 위치에 키워드를 삽입 합니다.
 
 마찬가지로, 다음 코드 샘플을 고려해 보세요.
 
@@ -186,15 +186,15 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-**/Permissive-/zc: twoPhase-** 및 이전 컴파일러에서 컴파일러는 2 줄의 `template` 키워드만 필요 합니다. 규칙 모드에서 컴파일러는 이제 `T::X<T>` 템플릿이 템플릿인 것을 나타내기 위해 줄 4의 `template` 키워드가 필요 합니다. 이 키워드가 누락 된 코드를 찾고 코드를 표준에 맞게 설정 합니다.
+**/Permissive-/zc: twoPhase-** 및 이전 컴파일러에서 컴파일러는 **`template`** 2 줄의 키워드만 필요 합니다. 규칙 모드에서 컴파일러는 이제 **`template`** 가 템플릿인 것을 나타내기 위해 4 줄의 키워드가 필요 합니다 `T::X<T>` . 이 키워드가 누락 된 코드를 찾고 코드를 표준에 맞게 설정 합니다.
 
-규칙 문제에 대 한 자세한 내용은 [ C++ Visual Studio의 규칙 향상](../../overview/cpp-conformance-improvements.md) 및 [비표준 동작](../../cpp/nonstandard-behavior.md)을 참조 하세요.
+규칙 문제에 대 한 자세한 내용은 [Visual Studio의 c + + 규칙 향상](../../overview/cpp-conformance-improvements.md) 및 [비표준 동작](../../cpp/nonstandard-behavior.md)을 참조 하세요.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **구성 속성** > **C/C++**  > **명령줄** 속성 페이지를 선택합니다.
+1. **구성 속성**  >  **C/c + +**  >  **명령줄** 속성 페이지를 선택 합니다.
 
 1. **/Zc: twoPhase** 를 포함 하도록 **추가 옵션** 속성을 수정한 다음 **확인**을 선택 합니다.
 

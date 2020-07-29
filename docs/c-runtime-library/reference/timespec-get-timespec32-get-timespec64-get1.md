@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911814"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233927"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -85,7 +85,7 @@ epoch 시작 이후 지난 시간(초 및 나노초)으로 설정된 구조체 �
 
 **Microsoft 전용**
 
-이러한 함수는 **TIME_UTC** *기본* 값 으로만 지원 합니다. 이는 *time_spec* 값을 epoch 시작, 자정, 1 월 1 일, 1970 Utc (협정 세계시) 이후의 시간 (초) 및 나노초 수로 설정 합니다. **구조체** **_timespec32**에서 **tv_sec** 는 **__time32_t** 값입니다. **구조체** **_timespec64**에서 **tv_sec** 는 **__time64_t** 값입니다. **구조체** **timespec**에서 **tv_sec** 은 전처리기 매크로 _USE_32BIT_TIME_T 정의 되었는지 여부에 따라 32 비트 또는 64 비트 길이의 **time_t** 형식입니다. **Timespec_get** 함수는 _USE_32BIT_TIME_T 정의 된 경우 **_timespec32_get** 를 호출 하는 인라인 함수입니다. 그렇지 않으면 **_timespec64_get**를 호출 합니다.
+이러한 함수는 **TIME_UTC** *기본* 값 으로만 지원 합니다. 이는 *time_spec* 값을 epoch 시작, 자정, 1 월 1 일, 1970 Utc (협정 세계시) 이후의 시간 (초) 및 나노초 수로 설정 합니다. **`struct`** **_Timespec32**에서 **tv_sec** 는 **__time32_t** 값입니다. **`struct`** **_Timespec64**에서 **tv_sec** 는 **__time64_t** 값입니다. **`struct`** **Timespec**에서 **tv_sec** 은 전처리기 매크로 _USE_32BIT_TIME_T 정의 되었는지 여부에 따라 32 비트 또는 64 비트 길이의 **time_t** 형식입니다. **Timespec_get** 함수는 _USE_32BIT_TIME_T 정의 된 경우 **_timespec32_get** 를 호출 하는 인라인 함수입니다. 그렇지 않으면 **_timespec64_get**를 호출 합니다.
 
 **Microsoft 전용 종료**
 
@@ -95,11 +95,11 @@ epoch 시작 이후 지난 시간(초 및 나노초)으로 설정된 구조체 �
 
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> 또는 \<time.h>|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h> , c + +: \<ctime> 또는\<time.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
