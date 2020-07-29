@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231041"
 ---
 # <a name="virtual-functions"></a>가상 함수
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 `NameOf` 함수가 `Base`의 포인터를 통해 호출되건 `Derived`의 포인터를 통해 호출되건 관계없이 `Derived`에 대한 함수를 호출합니다. `Derived` 가 가상 함수이고 `NameOf` 및 `pBase`가 모두 `pDerived` 형식의 개체를 가리키므로 `Derived`에 대한 함수를 호출합니다.
 
-가상 함수는 클래스 형식의 개체에 대해서만 호출 되므로 전역 또는 정적 함수를 **가상**으로 선언할 수 없습니다.
+가상 함수는 클래스 형식의 개체에 대해서만 호출 되므로 전역 함수 또는 정적 함수를로 선언할 수 없습니다 **`virtual`** .
 
-**Virtual** 키워드는 파생 클래스에서 재정의 함수를 선언할 때 사용할 수 있지만 필요 하지 않습니다. 가상 함수의 재정의는 항상 가상입니다.
+**`virtual`** 키워드는 파생 클래스에서 재정의 함수를 선언 하는 경우에 사용할 수 있지만 필요 하지 않습니다. 가상 함수의 재정의는 항상 가상입니다.
 
 기본 클래스의 가상 함수는 *순수 지정자*를 사용 하 여 선언 된 경우를 제외 하 고 정의 해야 합니다. 순수 가상 함수에 대 한 자세한 내용은 [추상 클래스](../cpp/abstract-classes-cpp.md)를 참조 하세요.
 
