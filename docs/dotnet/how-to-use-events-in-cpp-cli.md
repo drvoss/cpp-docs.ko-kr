@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545176"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225685"
 ---
 # <a name="how-to-use-events-in-ccli"></a>방법: C++/CLI에서 이벤트 사용
 
@@ -476,7 +476,7 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-기본 클래스 이벤트를 재정의 하거나 숨기도록 단순 이벤트를 지정할 수 없습니다.  모든 이벤트의 접근자 함수를 정의한 다음 각 접근자 함수에 `new` 또는 `override` 키워드를 지정 해야 합니다.
+기본 클래스 이벤트를 재정의 하거나 숨기도록 단순 이벤트를 지정할 수 없습니다.  모든 이벤트의 접근자 함수를 정의한 다음 **`new`** `override` 각 접근자 함수에서 또는 키워드를 지정 해야 합니다.
 
 ```cpp
 // mcppv2_events5_a.cpp

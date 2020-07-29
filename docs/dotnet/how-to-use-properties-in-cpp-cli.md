@@ -1,24 +1,24 @@
 ---
-title: '방법: 속성에서 사용 하 여 C++/CLI'
+title: '방법: C++/CLI에서 속성 사용'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225672"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>방법: 속성에서 사용 하 여 C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>방법: C++/CLI에서 속성 사용
 
-이 문서에서는 속성을 사용 하는 방법을 보여 줍니다. C++/CLI입니다.
+이 문서에서는 c + +/CLI에서 속성을 사용 하는 방법을 보여 줍니다.
 
 ## <a name="basic-properties"></a>기본 속성
 
-기본 속성에 대 한-할당 및 전용 데이터 멤버를 검색만 있는-컴파일러에만 속성의 데이터 형식이 지정 된 경우 항목을 자동으로 제공 하기 때문에 set 접근자 함수 및 명시적으로 get을 정의할 필요가 없습니다. 이 코드는 기본 속성을 보여 줍니다.
+단순히 전용 데이터 멤버를 할당 하 고 검색 하는 기본 속성의 경우 get 및 set 접근자 함수를 명시적으로 정의 하지 않아도 됩니다. 속성의 데이터 형식을 지정 하는 경우 컴파일러에서 자동으로이 함수를 제공 하기 때문입니다. 이 코드는 기본 속성을 보여 줍니다.
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>정적 속성
 
-이 코드 샘플에는 선언 및 정적 속성을 사용 하는 방법을 보여 줍니다.  정적 속성을 클래스의 정적 멤버만 액세스할 수 있습니다.
+이 코드 샘플은 정적 속성을 선언 하 고 사용 하는 방법을 보여 줍니다.  정적 속성은 클래스의 정적 멤버에만 액세스할 수 있습니다.
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -84,13 +84,13 @@ int main() {
 
 ## <a name="indexed-properties"></a>인덱싱된 속성
 
-인덱싱된 속성에는 일반적으로 아래 첨자 연산자를 사용 하 여 액세스 되는 데이터 구조를 노출 합니다.
+인덱싱된 속성은 일반적으로 첨자 연산자를 사용 하 여 액세스 되는 데이터 구조를 노출 합니다.
 
-인덱싱된 기본 속성이 사용 하는 경우 클래스 이름을 참조 하 여 데이터 구조를 액세스할 수 있습니다 하지만 사용자 정의 인덱싱된 속성을 사용 하는 경우 데이터 구조에 액세스 하려면 속성 이름을 지정 해야 합니다.
+인덱싱된 기본 속성을 사용 하는 경우 클래스 이름을 참조 하 여 데이터 구조에 액세스할 수 있지만 사용자 정의 인덱싱된 속성을 사용 하는 경우 속성 이름을 지정 하 여 데이터 구조에 액세스 해야 합니다.
 
-작성 된 인덱서를 사용 하는 방법에 대 한 정보에 대 한 C#를 참조 하세요 [방법: 사용 된 C# 인덱서 (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)합니다.
+C #으로 작성 된 인덱서를 사용 하는 방법에 대 한 자세한 내용은 [방법: c # 인덱서 사용 (c + +/cli)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)을 참조 하세요.
 
-이 코드 샘플에는 기본 및 사용자 정의 인덱싱된 속성을 사용 하는 방법을 보여 줍니다.
+이 코드 예제에서는 기본 및 사용자 정의 인덱싱된 속성을 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-다음 샘플에서는 기본 인덱서를 사용 하 여 호출 하는 방법을 보여 줍니다.는 `this` 포인터입니다.
+다음 샘플에서는 포인터를 사용 하 여 기본 인덱서를 호출 하는 방법을 보여 줍니다 **`this`** .
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-이 샘플에 사용 하는 방법을 보여 줍니다 <xref:System.Reflection.DefaultMemberAttribute> 기본 인덱서를 지정 합니다.
+이 샘플에서는를 사용 하 여 기본 인덱서를 지정 하는 방법을 보여 줍니다 <xref:System.Reflection.DefaultMemberAttribute> .
 
 ```cpp
 // specify_default_indexer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-다음 샘플은 이전 예제에서 만든 메타 데이터를 사용 합니다.
+다음 샘플에서는 이전 예제에서 만든 메타 데이터를 사용 합니다.
 
 ```cpp
 // consume_default_indexer.cpp
@@ -211,7 +211,7 @@ int main() {
 
 ## <a name="virtual-properties"></a>가상 속성
 
-이 코드 샘플에는 가상 속성 선언 및 사용 방법을 보여 줍니다.
+이 코드 샘플에서는 가상 속성을 선언 하 고 사용 하는 방법을 보여 줍니다.
 
 ```cpp
 // mcppv2_property_4.cpp
@@ -259,9 +259,9 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>추상 및 봉인 된 속성
 
-하지만 [추상](../extensions/abstract-cpp-component-extensions.md) 및 [봉인](../extensions/sealed-cpp-component-extensions.md) 키워드는 ECMA에서 유효한 것으로 지정 됩니다 C++microsoft /CLI 사양 C++ 컴파일러에 지정할 수 없습니다 하 trivial 속성 또는에 trivial이 아닌 속성의 속성 선언입니다.
+Microsoft c + + 컴파일러의 경우에는 [abstract](../extensions/abstract-cpp-component-extensions.md) 및 [SEALED](../extensions/sealed-cpp-component-extensions.md) 키워드를 ECMA c + +/cli 사양에 유효한 것으로 지정 하더라도 trivial 속성에는 지정할 수 없으며 trivial 속성의 속성 선언에는 지정할 수 없습니다.
 
-Sealed 또는 추상 속성을 선언 하는 특수 속성을 정의 하 고 다음 지정 해야 합니다 `abstract` 또는 `sealed` 키워드 get 및 set 접근자 함수.
+Sealed 또는 abstract 속성을 선언 하려면 trivial 속성을 정의한 다음 **`abstract`** **`sealed`** get 및 set 접근자 함수에서 또는 키워드를 지정 해야 합니다.
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>다차원 속성
 
-다차원 속성 비표준 개수의 매개 변수를 사용 하는 속성 접근자 메서드 정의를 사용할 수 있습니다.
+다차원 속성을 사용 하 여 비표준 개수의 매개 변수를 사용 하는 속성 접근자 메서드를 정의할 수 있습니다.
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -368,7 +368,7 @@ int main() {
 1.1
 ```
 
-## <a name="overloading-property-accessors"></a>속성 접근자를 오버 로드
+## <a name="overloading-property-accessors"></a>속성 접근자 오버 로드
 
 다음 예제에서는 인덱싱된 속성을 오버 로드 하는 방법을 보여 줍니다.
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[속성](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2043
 ms.assetid: 6cc829f3-c6ea-43ae-8a3f-303ecf6c7dc6
-ms.openlocfilehash: c46f5d361165881e48e6425ff6f5b7b55c00d9c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d39831bfcdbb79810548336ee2cb6c90b197f449
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225594"
 ---
 # <a name="compiler-error-c2043"></a>컴파일러 오류 C2043
 
 break가 잘못되었습니다.
 
-[break](../../cpp/break-statement-cpp.md) 는 `do`, `for`, `while`또는 `switch` 문 내에서만 사용할 수 있습니다.
+[Break](../../cpp/break-statement-cpp.md) 는,, 또는 문 내 에서만 유효 **`do`** **`for`** **`while`** **`switch`** 합니다.
