@@ -18,7 +18,7 @@ ms.locfileid: "87234356"
 
 **`/Zc`** 컴파일러 옵션을 사용 하 여 표준 또는 Microsoft 전용 컴파일러 동작을 지정할 수 있습니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 > **`/Zc:`**_옵션_{,_옵션_}
 

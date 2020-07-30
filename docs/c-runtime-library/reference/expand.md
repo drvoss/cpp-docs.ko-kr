@@ -63,7 +63,7 @@ void *_expand(
 *size*<br/>
 새 크기(바이트)입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 **_expand** 는 다시 할당 된 메모리 블록에 대 한 void 포인터를 반환 합니다. **realloc**와 달리 **_expand**은 블록을 이동 하 여 크기를 변경할 수 없습니다. 따라서 이동 하지 않고 블록을 확장 하는 데 사용할 수 있는 메모리가 충분 한 경우 **_expand** 에 대 한 *memblock* 매개 변수가 반환 값과 동일 합니다.
 
