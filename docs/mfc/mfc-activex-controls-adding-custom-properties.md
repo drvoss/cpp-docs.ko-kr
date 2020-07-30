@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626142"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230495"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 컨트롤: 사용자 지정 속성 추가
 
@@ -62,11 +62,11 @@ ms.locfileid: "84626142"
 
 1. **구현 형식**에서 **Get/Set 메서드**를 클릭합니다.
 
-1. **속성 유형** 상자에서 **short**를 선택 합니다.
+1. **속성 유형** 상자에서를 선택 **`short`** 합니다.
 
 1. Get 및 Set 함수의 고유 이름을 입력 하거나 기본 이름을 적용 합니다.
 
-1. **Finish**를 클릭합니다.
+1. **마침**을 클릭합니다.
 
 ## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>사용자 지정 속성에 대 한 속성 추가 마법사 변경 내용
 

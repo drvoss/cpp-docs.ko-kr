@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212164"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232159"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 클래스
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-`ICommandImpl`에서 파생 된 클래스입니다.
+에서 파생 된 클래스 `ICommandImpl` 입니다.
 
 *CommandBase*<br/>
 명령 인터페이스입니다. 기본값은 `ICommand`입니다.
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|명령을 실행할 때 취소할 것인지 여부를 나타냅니다.|
 |[m_bIsExecuting](#bisexecuting)|명령이 현재 실행 중인지 여부를 나타냅니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Command 개체의 필수 인터페이스입니다.
 
@@ -116,7 +116,7 @@ Command 개체의 필수 인터페이스입니다.
 STDMETHOD(Cancel)();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *OLE DB 프로그래머 참조*에서 [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 을 참조 하세요.
 
@@ -152,30 +152,30 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 사용자의 행 집합 클래스를 나타내는 템플릿 클래스 멤버입니다. 일반적으로 마법사를 통해 생성 됩니다.
 
 *pUnkOuter*<br/>
-진행 행 집합이 집계의 일부로 생성 되는 경우 `IUnknown` 제어 인터페이스에 대 한 포인터입니다. 그렇지 않으면 null입니다.
+진행 `IUnknown`행 집합이 집계의 일부로 생성 되는 경우 제어 인터페이스에 대 한 포인터이 고, 그렇지 않으면 null입니다.
 
 *riid*<br/>
-진행 `ICommand::Execute`의 *riid* 에 해당 합니다.
+진행 의 *riid* 에 해당 `ICommand::Execute` 합니다.
 
 *pParams*<br/>
-[in/out] `ICommand::Execute`의 *Pparams* 에 해당 합니다.
+[in/out] 의 *Pparams* 에 해당 `ICommand::Execute` 합니다.
 
 *pcRowsAffected*<br/>
-`ICommand::Execute`의 *pcRowsAffected* 에 해당 합니다.
+의 *pcRowsAffected* 에 해당 `ICommand::Execute` 합니다.
 
 *ppRowset*<br/>
-[in/out] `ICommand::Execute`의 *ppRowset* 에 해당 합니다.
+[in/out] 의 *ppRowset* 에 해당 `ICommand::Execute` 합니다.
 
 *pRowsetObj*<br/>
 제한이 행 집합 개체에 대 한 포인터입니다. 일반적으로이 매개 변수는 사용 되지 않지만, COM 개체로 전달 하기 전에 행 집합에서 더 많은 작업을 수행 해야 하는 경우에 사용할 수 있습니다. *PRowsetObj* 의 수명은 *ppRowset*에 의해 바인딩됩니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-표준 HRESULT 값입니다. 일반적인 값 목록은 `ICommand::Execute`를 참조 하세요.
+표준 HRESULT 값입니다. `ICommand::Execute`일반적인 값 목록은를 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-둘 이상의 행 집합을 만들거나 다른 행 집합을 만들기 위한 고유한 조건을 제공 하려면 `Execute`내에서 `CreateRowset`에 대 한 다른 호출을 수행 합니다.
+둘 이상의 행 집합을 만들거나 다른 행 집합을 만들기 위한 고유한 조건을 제공 하려면 내에서에 대 한 다른 호출을 수행 `CreateRowset` `Execute` 합니다.
 
 *OLE DB 프로그래머 참조* 에서 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 를 참조 하세요.
 
@@ -197,11 +197,11 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 *OLE DB 프로그래머 참조*에서 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 를 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요청 된 송신 인터페이스는이 함수가 만드는 행 집합 개체에서 가져온 인터페이스입니다.
 
-`Execute` [CreateRowset](../../data/oledb/icommandimpl-createrowset.md)를 호출 합니다. 기본 구현을 재정의 하 여 두 개 이상의 행 집합을 만들거나 다른 행 집합을 만들기 위한 고유한 조건을 제공 합니다.
+`Execute`[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)를 호출 합니다. 기본 구현을 재정의 하 여 두 개 이상의 행 집합을 만들거나 다른 행 집합을 만들기 위한 고유한 조건을 제공 합니다.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
@@ -218,7 +218,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 *OLE DB 프로그래머 참조*에서 [ICommand:: getdbsession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 을 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 세션에서 속성을 검색 하는 데 유용 합니다.
 
@@ -242,9 +242,9 @@ ICommandImpl();
 unsigned m_bCancel:1;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-명령 클래스의 `Execute` 메서드에서이 변수를 검색 하 고 적절 하 게 취소할 수 있습니다.
+`Execute`명령 클래스의 메서드에서이 변수를 검색 하 고 적절 하 게 취소할 수 있습니다.
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
@@ -256,9 +256,9 @@ unsigned m_bCancel:1;
 unsigned m_bCancelWhenExecuting:1;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-기본값은 **true** (취소할 수 있음)입니다.
+기본값은 **`true`** (취소 가능)입니다.
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
@@ -270,11 +270,11 @@ unsigned m_bCancelWhenExecuting:1;
 unsigned m_bIsExecuting:1;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-명령 클래스의 `Execute` 메서드는이 변수를 **true**로 설정할 수 있습니다.
+`Execute`명령 클래스의 메서드는이 변수를로 설정할 수 있습니다 **`true`** .
 
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

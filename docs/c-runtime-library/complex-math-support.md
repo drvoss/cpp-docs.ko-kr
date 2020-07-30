@@ -7,16 +7,16 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66186094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215181"
 ---
 # <a name="c-complex-math-support"></a>C 복합 수학식 지원
 
-Microsoft CRT(C 런타임 라이브러리)는 ISO C99에 따라 필요한 모든 함수를 포함하여 복합 수학식 라이브러리 함수를 제공합니다. 컴파일러는 **complex** 또는 **_Complex** 키워드를 직접 지원하지 않습니다. 따라서 Microsoft 구현은 구조 형식을 사용하여 복소수를 나타냅니다.
+Microsoft CRT(C 런타임 라이브러리)는 ISO C99에 따라 필요한 모든 함수를 포함하여 복합 수학식 라이브러리 함수를 제공합니다. 컴파일러는 또는 키워드를 직접 지원 하지 않으므로 **`complex`** **`_Complex`** Microsoft 구현에서는 구조체 형식을 사용 하 여 복소수를 나타냅니다.
 
 이러한 함수는 수정을 통해 성능을 균형있게 분배하도록 구현됩니다. 올바르게 반올림된 결과를 생성하는 것은 막대한 비용이 들 수 있으므로 이러한 함수는 올바르게 반올림된 결과에 대한 근사치를 효율적으로 생성하도록 설계됩니다. 부정확성이 더 큰 경우도 있을 수 있지만 대부분은 생성된 결과가 올바르게 반올림된 결과의 +/-1 ulp 내에 있습니다.
 
@@ -28,15 +28,15 @@ complex.h 헤더의 Microsoft 구현은 C99 표준 기본 복합 형식에 대�
 
 |표준 형식|Microsoft 형식|
 |-|-|
-|**float complex** 또는 **float _Complex**|**_Fcomplex**|
-|**double complex** 또는 **double _Complex**|**_Dcomplex**|
-|**long double complex** 또는 **long double _Complex**|**_Lcomplex**|
+|**`float complex`** 또는 **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** 또는 **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** 또는 **`long double _Complex`**|**_Lcomplex**|
 
 math.h 헤더는 [_cabs](../c-runtime-library/reference/cabs.md) 함수에 사용되는 별도 형식 **struct _complex**를 정의합니다. **struct _complex** 형식은 동등한 복합 수학 함수 [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)에서 사용되지 않습니다.
 
 ## <a name="complex-constants-and-macros"></a>복합 상수 및 매크로
 
-**I**는 `{ 0.0f, 1.0f }`에 의해 초기화된 **부동** 복합 형식 **_Fcomplex**로 정의됩니다.
+**I** 는로 초기화 **_Fcomplex** 복합 형식으로 정의 됩니다 `{ 0.0f, 1.0f }` .
 
 ## <a name="trigonometric-functions"></a>삼각 함수
 

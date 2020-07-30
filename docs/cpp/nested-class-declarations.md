@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367898"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227285"
 ---
 # <a name="nested-class-declarations"></a>중첩 클래스 선언
 
@@ -63,7 +63,7 @@ int main()
 > [!NOTE]
 > 중첩 클래스는 클래스 범위 내에서 형식만 선언하며, 중첩 클래스의 포함된 개체가 만들어지지는 않습니다. 위의 예제에서는 두 중첩 클래스를 선언하지만 이러한 클래스 형식의 개체는 선언하지 않습니다.
 
-중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  다음은 그 예입니다.
+중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  예를 들면 다음과 같습니다.
 
 ```cpp
 // nested_class_declarations_2.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-앞의 예제에서는 *정규화된 형식 이름* 구문을 사용하여 함수 이름을 선언합니다. 다음 선언은
+앞의 예제에서 정규화 된 *형식 이름* 구문은 함수 이름을 선언 하는 데 사용 됩니다. 다음 선언은
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-"`read` 클래스의 범위에 있는 `BufferedInput` 클래스의 멤버인 `BufferedIO` 함수"를 의미합니다. 이 선언은 *정규화된 형식 이름* 구문을 사용하므로 다음 양식의 구문이 가능합니다.
+"`read` 클래스의 범위에 있는 `BufferedInput` 클래스의 멤버인 `BufferedIO` 함수"를 의미합니다. 이 선언은 *정규화 된 형식 이름* 구문을 사용 하기 때문에 다음과 같은 형식의 구문을 사용할 수 있습니다.
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-앞의 선언은 이전 선언과 동일하지만 클래스 이름 대신 **typedef** 이름을 사용합니다.
+앞의 선언은 이전 선언과 동일 하지만 **`typedef`** 클래스 이름 대신 이름을 사용 합니다.
 
 ## <a name="friend-functions-in-nested-classes"></a>중첩 클래스의 Friend 함수
 

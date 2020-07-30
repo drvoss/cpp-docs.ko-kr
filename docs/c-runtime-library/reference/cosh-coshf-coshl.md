@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917224"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213608"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -71,11 +71,11 @@ long double cosh( long double x );  // C++ only
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|없음|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**부정확 한**+**오버플로**|**오버플로**|
+|*x* ≥ 7.104760 e + 002|**부정확 한** + **오버플로**|**오버플로**|
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **cosh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **cosh** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **cosh** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **cosh** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -91,7 +91,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **dou
 
 [Sinh, sinhf, sinhf](sinh-sinhf-sinhl.md)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

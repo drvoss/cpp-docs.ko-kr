@@ -1,17 +1,17 @@
 ---
-title: max_is (C++ COM 특성)
+title: max_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166759"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201312"
 ---
 # <a name="max_is"></a>max_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166759"
 
 ## <a name="remarks"></a>설명
 
-**Max_is** C++ 특성에는 [max_is](/windows/win32/Midl/max-is) MIDL 특성과 동일한 기능이 있습니다.
+**Max_is** c + + 특성에는 [max_is](/windows/win32/Midl/max-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -38,9 +38,9 @@ ms.locfileid: "80166759"
 
 |||
 |-|-|
-|**적용 대상**|**구조체** 또는 **공용 구조체**의 필드, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|예|
-|**필수 특성**|None|
+|**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
+|**불가능**|예|
+|**필수 특성**|없음|
 |**잘못된 특성**|**size_is**|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

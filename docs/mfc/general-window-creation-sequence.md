@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618749"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223163"
 ---
 # <a name="general-window-creation-sequence"></a>일반 창 만들기 시퀀스
 
 자식 창과 같은 사용자 고유의 창을 만들 때 프레임 워크는 [문서/뷰 만들기](document-view-creation.md)에 설명 된 것과 동일한 프로세스를 사용 합니다.
 
-MFC에서 제공 하는 모든 창 클래스는 [2 단계 생성을 사용](one-stage-and-two-stage-construction-of-objects.md)합니다. 즉, c + + **new** 연산자를 호출 하는 동안 생성자는 c + + 개체를 할당 하 고 초기화 하지만 해당 Windows 창을 만들지 않습니다. 이렇게 하려면 나중에 window 개체의 [Create](reference/cwnd-class.md#create) member 함수를 호출 합니다.
+MFC에서 제공 하는 모든 창 클래스는 [2 단계 생성을 사용](one-stage-and-two-stage-construction-of-objects.md)합니다. 즉, c + + 연산자를 호출 하는 동안 **`new`** 생성자는 c + + 개체를 할당 하 고 초기화 하지만 해당 Windows 창을 만들지 않습니다. 이렇게 하려면 나중에 window 개체의 [Create](reference/cwnd-class.md#create) member 함수를 호출 합니다.
 
 `Create`멤버 함수는 Windows 창을 만들어 `HWND` c + + 개체의 공용 데이터 멤버 [m_hWnd](reference/cwnd-class.md#m_hwnd)에 저장 합니다. `Create`는 생성 매개 변수에 대 한 완전 한 유연성을 제공 합니다. 를 호출 하기 전에 `Create` 프레임에 대 한 아이콘 및 클래스 스타일을 설정 하기 위해 [AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass) 전역 함수를 사용 하 여 창 클래스를 등록할 수 있습니다.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168836"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230002"
 ---
 # <a name="cadapt-class"></a>CAdapt 클래스
 
@@ -39,15 +39,15 @@ class CAdapt
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[CAdapt:: CAdapt](#cadapt)|생성자입니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CAdapt:: operator const T&](#operator_const_t_amp)|에 대 **const** `m_T`한 const 참조를 반환 합니다.|
+|[CAdapt:: operator const T&](#operator_const_t_amp)|**`const`** 에 대 한 참조를 반환 `m_T` 합니다.|
 |[CAdapt:: operator T&](#operator_t_amp)|`m_T`에 대한 참조를 반환합니다.|
 |[CAdapt:: operator <](#operator_lt)|조정된 형식의 개체를 `m_T`와 비교합니다.|
 |[CAdapt:: operator =](#operator_eq)|조정된 형식의 개체를 `m_T`에 할당합니다.|
@@ -55,15 +55,15 @@ class CAdapt
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CAdapt:: m_T](#m_t)|조정되는 데이터입니다.|
 
 ## <a name="remarks"></a>설명
 
-`CAdapt`는 개체의 주소 이외의 주소를 반환하도록 연산자의 주소(`operator &`)를 다시 정의하는 클래스를 래핑하는 데 사용되는 간단한 템플릿입니다. 이러한 클래스의 예로 ATL의 `CComBSTR`, `CComPtr`, `CComQIPtr` 클래스 및 컴파일러 COM 지원 클래스인 `_com_ptr_t`가 있습니다. 이러한 클래스는 모두 데이터 멤버 중 하나의 주소를 반환 하도록 연산자 주소를 다시 정의 합니다 (의 `CComBSTR`경우 BSTR, 다른 클래스의 경우 인터페이스 포인터).
+`CAdapt`는 개체의 주소 이외의 주소를 반환하도록 연산자의 주소(`operator &`)를 다시 정의하는 클래스를 래핑하는 데 사용되는 간단한 템플릿입니다. 이러한 클래스의 예로 ATL의 `CComBSTR`, `CComPtr`, `CComQIPtr` 클래스 및 컴파일러 COM 지원 클래스인 `_com_ptr_t`가 있습니다. 이러한 클래스는 모두 데이터 멤버 중 하나의 주소를 반환 하도록 연산자 주소를 다시 정의 합니다 (의 경우 BSTR `CComBSTR` , 다른 클래스의 경우 인터페이스 포인터).
 
-`CAdapt`의 주 역할은 클래스 *T*에서 정의한 연산자의 주소를 숨기는 것 이지만 여전히 조정 된 클래스의 특성을 유지 합니다. `CAdapt`*t*형식의 public 멤버 `CAdapt` [m_T](#m_t)를 유지 하 고, 변환 연산자, 비교 연산자 및 복사 생성자를 정의 하 여의 특수화가 *t*형식의 개체인 것 처럼 처리 될 수 있도록 하는 방식으로이 역할을 되도록 합니다.
+`CAdapt`의 주 역할은 클래스 *T*에서 정의한 연산자의 주소를 숨기는 것 이지만 여전히 조정 된 클래스의 특성을 유지 합니다. `CAdapt`*t*형식의 public 멤버 [m_T](#m_t)를 유지 하 고, 변환 연산자, 비교 연산자 및 복사 생성자를 정의 하 여의 특수화가 `CAdapt` *t*형식의 개체인 것 처럼 처리 될 수 있도록 하는 방식으로이 역할을 되도록 합니다.
 
 어댑터 클래스 `CAdapt`는 일부 컨테이너 스타일 클래스가 연산자 주소를 사용하여 포함된 개체의 주소를 가져올 수 있기 때문에 유용합니다. 연산자의 주소를 다시 정의하면 일반적으로 컴파일 오류가 발생하고 "작동"해야 하는 클래스에서 조정되지 않은 형식이 사용되지 않아 이 요구 사항에 맞지 않게 됩니다. `CAdapt`가 이러한 문제에 대한 해결 방법을 제공합니다.
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>설명
 
-이 **공용** 데이터 멤버는 [operator const t&](#operator_const_t_amp) 및 [operator t&](#operator_t_amp)를 사용 하 여 직접 또는 간접적으로 액세스할 수 있습니다.
+이 **`public`** 데이터 멤버는 [연산자 const t&](#operator_const_t_amp) 및 [operator t&](#operator_t_amp)를 사용 하 여 직접 또는 간접적으로 액세스할 수 있습니다.
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
 
-[M_T](#m_t) 멤버에 대 한 **const** 참조를 반환 하 여 어댑터 개체가 *T*형식의 개체인 것 처럼 처리 될 수 있도록 합니다.
+**`const`** [M_T](#m_t) 멤버에 대 한 참조를 반환 하 여 어댑터 개체가 *T*형식의 개체인 것 처럼 처리 될 수 있도록 합니다.
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>Return Value
 
-에 **const** 대 `m_T`한 const 참조입니다.
+**`const`** 에 대 한 참조 `m_T` 입니다.
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt:: operator T&amp;
 
@@ -144,7 +144,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="return-value"></a>Return Value
 
-과 `m_T` *rsrc*간의 비교 결과입니다.
+`m_T`과 *rsrc*간의 비교 결과입니다.
 
 ## <a name="cadaptoperator-"></a><a name="operator_eq"></a>CAdapt:: operator =
 

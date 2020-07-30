@@ -4,14 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319583"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224359"
 ---
-# <a name="example-implementing-a-property-page"></a>예: 속성 페이지 구현
+# <a name="example-implementing-a-property-page"></a>예제: 속성 페이지 구현
 
 ::: moniker range="vs-2019"
 
@@ -53,7 +53,7 @@ Visual Studio 2019 이상에서는 ATL 속성 페이지 마법사를 사용할 �
 |----------|-----------|
 |제목|TextDocument|
 |문서 문자열|VCUE TextDocument 속성|
-|Helpfile|*\<빈>*|
+|Helpfile|*\<blank>*|
 
 이 마법사 페이지에서 설정한 값은 `IPropertyPage::GetPageInfo`를 호출할 때 속성 페이지 컨테이너로 반환됩니다. 그 이후의 문자열 처리는 컨테이너에 따라 다르지만, 일반적으로 사용자에게 페이지를 식별하는 데 사용됩니다. 제목은 일반적으로 페이지 위쪽의 탭에 표시되고, 문서 문자열은 상태 표시줄이나 도구 설명에 표시될 수 있습니다(표준 속성 프레임에서는 이 문자열이 사용되지 않음).
 
@@ -90,7 +90,7 @@ Visual Studio 2019 이상에서는 ATL 속성 페이지 마법사를 사용할 �
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-또한 `IPropertyPageImpl` 기본 클래스를 참조해야 합니다. `CDocProperties` 클래스에 다음 **typedef**를 추가합니다.
+또한 기본 클래스를 참조 하 `IPropertyPageImpl` 고 클래스에 다음을 추가 해야 합니다 **`typedef`** `CDocProperties` .
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 

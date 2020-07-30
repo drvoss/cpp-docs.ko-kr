@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 3766a93d7cba9096ce3ff775d94c17a85456fb00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215675"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator 클래스
 
@@ -36,13 +36,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*\
+*입력할*\
 입력 스트림에서 추출할 개체의 형식입니다.
 
-*Chartype*\
-`istream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **char**입니다.
+*CharType*\
+`istream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **`char`** 입니다.
 
-*특성*\
+*특징이*\
 `istream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`< `CharType`>입니다.
 
 *거리*\
@@ -52,13 +52,13 @@ null이 아닌 저장된 포인터를 사용하여 istream_iterator 클래스를
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[istream_iterator](#istream_iterator)|기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
 |[char_type](#char_type)|`istream_iterator`의 문자 형식을 허용하는 형식입니다.|
 |[istream_type](#istream_type)|`istream_iterator`의 스트림 형식을 허용하는 형식입니다.|
@@ -68,17 +68,17 @@ null이 아닌 저장된 포인터를 사용하여 istream_iterator 클래스를
 
 |연산자|Description|
 |-|-|
-|[연산자*](#op_star)|역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.|
-|[연산자 >](#op_arrow)|멤버의 값을 반환합니다(있는 경우).|
-|[연산자++](#op_add_add)|입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|
+|[연산자](#op_star)|역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.|
+|[연산자->](#op_arrow)|멤버의 값을 반환합니다(있는 경우).|
+|[operator + +](#op_add_add)|입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<iterator>
+**헤더:**\<iterator>
 
 **네임스페이스:** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:: char_type
 
 `istream_iterator`의 문자 형식을 허용하는 형식입니다.
 
@@ -126,7 +126,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:: istream_iterator
 
 기본 `istream_iterator`로 스트림의 끝 반복기를 구성하거나 반복기의 스트림 형식에 초기화된 `istream_iterator`로 구성합니다.
 
@@ -143,7 +143,7 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 입력 스트림 포인터를 null 포인터로 초기화하고 스트림의 끝 반복기를 만듭니다. 두 번째 생성자는 입력 스트림 포인터를 *&_Istr*초기화한 다음 형식의 `Type`개체를 추출하고 저장하려고 시도합니다.
+첫 번째 생성자는 입력 스트림 포인터를 null 포인터로 초기화하고 스트림의 끝 반복기를 만듭니다. 두 번째 생성자는 *&_Istr*를 사용 하 여 입력 스트림 포인터를 초기화 한 다음 형식의 개체를 추출 하 고 저장 하려고 `Type` 합니다.
 
 스트림의 끝 반복기를 사용하여 `istream_iterator`가 스트림의 끝에 도달했는지 테스트할 수 있습니다.
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:: istream_type
 
 `istream_iterator`의 스트림 형식을 허용하는 형식입니다.
 
@@ -191,13 +191,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `basic_istream`\< **CharType**, **Traits**>의 동의어입니다.
+형식은의 동의어입니다 `basic_istream` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>예제
 
 `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istream_iterator](#istream_iterator)를 참조하세요.
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator::연산자*
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator:: operator *
 
 역참조 연산자는 `Type`에서 주소 지정하는 형식 `istream_iterator`의 저장된 개체를 반환합니다.
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Return Value
 
-형식의 `Type`저장된 개체입니다.
+형식의 저장 된 개체 `Type` 입니다.
 
 ### <a name="example"></a>예제
 
@@ -241,7 +241,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator::연산자-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator:: operator-&gt;
 
 멤버의 값을 반환합니다(있는 경우).
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator::연산자++
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator:: operator + +
 
 입력 스트림에서 증가된 개체를 추출하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 멤버 연산자는 입력 스트림에서 추출된 형식의 `Type` 증분 개체에 대한 참조를 반환하고 두 번째 멤버 함수는 개체의 복사본을 반환합니다.
+첫 번째 멤버 연산자는 입력 스트림에서 추출 된 형식의 증가 된 개체에 대 한 참조를 반환 `Type` 하 고 두 번째 멤버 함수는 개체의 복사본을 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -337,7 +337,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:: traits_type
 
 `istream_iterator`의 특성 형식을 허용하는 형식입니다.
 
@@ -387,7 +387,7 @@ int main( )
 ## <a name="see-also"></a>참고 항목
 
 [input_iterator_tag 구조체](../standard-library/input-iterator-tag-struct.md)\
-[이터레이터 구조체](../standard-library/iterator-struct.md)\
-[\<>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[iterator 구조체](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

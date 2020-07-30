@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232536"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Return Value
 
-fgetchar는 읽은 문자를 **int** 로 반환 하거나 오류 `EOF` 또는 파일의 끝을 나타내기 위해를 반환 합니다. ** \_** fgetwchar는 파일의 오류 [wint_t](../../c-runtime-library/standard-types.md)또는 끝을 나타내기 위해 읽기 또는 반환 `WEOF` 된 문자에 해당 하는 와이드 문자를 wint_t 반환 합니다. ** \_** 두 함수 모두에서 **feof** **ferror** 를 사용 하 여 오류와 파일 끝 조건을 구분 합니다.
+** \_ fgetchar** 는로 읽은 문자를 반환 **`int`** 하거나, `EOF` 오류 또는 파일의 끝을 나타내기 위해를 반환 합니다. ** \_ fgetwchar** 는 [wint_t](../../c-runtime-library/standard-types.md) `WEOF` 파일의 오류 또는 끝을 나타내기 위해 읽기 또는 반환 된 문자에 해당 하는 와이드 문자를 wint_t 반환 합니다. 두 함수 모두에서 **feof** **ferror** 를 사용 하 여 오류와 파일 끝 조건을 구분 합니다.
 
 ## <a name="remarks"></a>설명
 
 이러한 함수는 **stdin**에서 단일 문자를 읽습니다. 그러고 나서 다음 문자를 가리킬 연결된 파일 포인터(정의된 경우)를 늘립니다. 스트림이 파일 끝에 있는 경우 스트림에 대한 파일 끝 표시기가 설정됩니다.
 
-**_fgetchar** 는와 동일 `fgetc( stdin )`합니다. **Getchar**와 동일 하지만 함수 및 매크로가 아닌 함수로만 구현 됩니다. **_fgetwchar** 은 **_fgetchar**의 와이드 문자 버전입니다.
+**_fgetchar** 는와 동일 `fgetc( stdin )` 합니다. **Getchar**와 동일 하지만 함수 및 매크로가 아닌 함수로만 구현 됩니다. **_fgetwchar** 은 **_fgetchar**의 와이드 문자 버전입니다.
 
 이러한 함수는 ANSI 표준과 호환되지 않습니다.
 
@@ -78,7 +78,7 @@ fgetchar는 읽은 문자를 **int** 로 반환 하거나 오류 `EOF` 또는 �
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 또는 \<wchar.h>|
@@ -123,7 +123,7 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

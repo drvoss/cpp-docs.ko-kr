@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219120"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 함수
 
@@ -79,27 +79,27 @@ N번째 호출 인수입니다.
 
 ### <a name="remarks"></a>설명
 
-`FT, T1, T2, ..., TN` 형식은 생성 가능 이어야 하 고 `INVOKE(fn, t1, ..., tN)`는 `w1, w2, ..., wN`일부 값에 대해 유효한 식 이어야 합니다.
+형식은 생성 가능 이어야 하며 `FT, T1, T2, ..., TN` `INVOKE(fn, t1, ..., tN)` 일부 값에 대해 유효한 식 이어야 합니다 `w1, w2, ..., wN` .
 
-첫 번째 템플릿 함수는 약한 결과 형식이 포함된 전달 호출 래퍼 `g`를 반환합니다. `g(u1, u2, ..., uM)`의 효과는`<FT cv (V1, V2, ..., VN)>::type)`[invoke_result](../standard-library/invoke-result-class.md) `INVOKE(f, v1, v2, ..., vN,` 됩니다. 여기서 `cv`은 `g`의 cv 한정자이 고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정 된 대로 결정 됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록이 포함된 호출 가능 개체가 생성됩니다.
+첫 번째 템플릿 함수는 약한 결과 형식이 포함된 전달 호출 래퍼 `g`를 반환합니다. 의 효과는 `g(u1, u2, ..., uM)` `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)입니다 `<FT cv (V1, V2, ..., VN)>::type)` . 여기서 `cv` 는의 cv 한정자이 `g` 고 바인딩된 인수의 값과 형식은 `v1, v2, ..., vN` 아래 지정 된 대로 결정 됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록이 포함된 호출 가능 개체가 생성됩니다.
 
-두 번째 템플릿 함수는 `g`의 동의어인 중첩된 형식 `result_type`이 포함된 전달 호출 래퍼 `RTy`를 반환합니다. `g(u1, u2, ..., uM)`의 결과는 `INVOKE(f, v1, v2, ..., vN, RTy)`입니다. 여기서 `cv`는 `g`의 cv 한정자이고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정된 대로 결정됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록 및 지정된 반환 형식이 포함된 호출 가능 개체가 생성됩니다.
+두 번째 템플릿 함수는 `RTy`의 동의어인 중첩된 형식 `result_type`이 포함된 전달 호출 래퍼 `g`를 반환합니다. `g(u1, u2, ..., uM)`의 결과는 `INVOKE(f, v1, v2, ..., vN, RTy)`입니다. 여기서 `cv`는 `g`의 cv 한정자이고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정된 대로 결정됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록 및 지정된 반환 형식이 포함된 호출 가능 개체가 생성됩니다.
 
-바인딩된 인수 `v1, v2, ..., vN` 및 해당 형식 `V1, V2, ..., VN`의 값은 다음과 같이 `ti` 호출 시 `Ti` 형식에 대한 해당 인수 `bind`의 형식 및 호출 래퍼 `cv`의 cv 한정자 `g`에 따라 결정됩니다.
+바인딩된 인수 `v1, v2, ..., vN` 및 해당 형식 `V1, V2, ..., VN`의 값은 다음과 같이 `bind` 호출 시 `Ti` 형식에 대한 해당 인수 `ti`의 형식 및 호출 래퍼 `g`의 cv 한정자 `cv`에 따라 결정됩니다.
 
 `ti`가 `reference_wrapper<T>` 형식인 경우 `vi` 인수의 값은 `ti.get()`이고 해당 형식 `Vi`의 값은 `T&`입니다.
 
-`std::is_bind_expression<Ti>::value` 값이 **true** 이면 인수 `vi` `ti(u1, u2, ..., uM)` 되 고 해당 형식이 `Vi` `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`입니다.
+의 값이이 `std::is_bind_expression<Ti>::value` **`true`** 고 인수가이 `vi` 고 형식이 이면이 고 `ti(u1, u2, ..., uM)` `Vi` `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type` , 그렇지 않으면입니다.
 
-`std::is_placeholder<Ti>::value` `j` 값이 0이 아닌 경우 `vi` 인수는 `uj`이 고 해당 형식 `Vi`은 `Uj&`입니다.
+의 값이 `j` 0이 아닌 경우 인수는이 `std::is_placeholder<Ti>::value` `vi` `uj` 고 해당 형식은입니다 `Vi` `Uj&` .
 
-그렇지 않으면 인수 `vi` `ti` 되 고 해당 형식 `Vi` `Ti` `cv` `&`입니다.
+그렇지 않으면 인수가 `vi` 이 `ti` 고 해당 형식은 `Vi` `Ti` `cv` `&` 입니다.
 
 예를 들어 `f(int, int)` 함수의 경우 `bind(f, _1, 0)` 식은 전달 호출 래퍼 `cw`를 반환하므로 `cw(x)`가 `f(x, 0)`을 호출합니다. `bind(f, 0, _1)` 식은 전달 호출 래퍼 `cw`를 반환하므로 `cw(x)`가 `f(0, x)`를 반환합니다.
 
-`bind`에 대 한 호출의 인수 개수와 인수 `fn`은 호출 가능 개체 `fn`전달 될 수 있는 인수 수와 같아야 합니다. 예를 들어 `bind(cos, 1.0)` 올바르고 `bind(cos)`와 `bind(cos, _1, 0.0)`가 모두 올바르지 않습니다.
+및 인수에 대 한 호출의 인수 개수는 `bind` `fn` 호출 가능 개체에 전달할 수 있는 인수 수와 같아야 합니다 `fn` . 예를 들어, `bind(cos, 1.0)` 는 올바르지만 `bind(cos)` 와는 모두 `bind(cos, _1, 0.0)` 올바르지 않습니다.
 
-`bind`에서 반환된 호출 래퍼에 대한 함수 호출의 인수 개수는 `is_placeholder<PH>::value` 호출의 모든 자리 표시자 인수에 대한 `bind`의 번호가 가장 높은 값보다 크거나 같아야 합니다. 예를 들어 `bind(cos, _2)(0.0, 1.0)`는 정확 하 고 `cos(1.0)`를 반환 하며 `bind(cos, _2)(0.0)`는 올바르지 않습니다.
+`bind`에서 반환된 호출 래퍼에 대한 함수 호출의 인수 개수는 `bind` 호출의 모든 자리 표시자 인수에 대한 `is_placeholder<PH>::value`의 번호가 가장 높은 값보다 크거나 같아야 합니다. 예를 들어 `bind(cos, _2)(0.0, 1.0)` 은 올바르고을 반환 하며 `cos(1.0)` `bind(cos, _2)(0.0)` 는 올바르지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -166,7 +166,7 @@ template <class Operation, class Type>
 *func*\
 단항 함수 개체로 변환할 이항 함수 개체입니다.
 
-*왼쪽*\
+*비어*\
 이항 함수 개체의 첫 번째 인수가 바인딩되는 값입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -177,7 +177,7 @@ template <class Operation, class Type>
 
 함수 바인더는 일종의 함수 어댑터입니다. 함수 개체를 반환 하므로 특정 형식의 함수 컴퍼지션에서 사용 하 여 더 복잡 하 고 강력한 식을 생성할 수 있습니다.
 
-*Func* 가 `Operation` 형식의 개체이 고 `c` 상수 이면 `bind1st( func, c )` [binder1st](../standard-library/binder1st-class.md) 클래스 생성자 `binder1st<Operation>(func, c)`와 동일 하며를 사용 하는 것이 더 편리 합니다.
+*Func* 가 형식의 개체이 `Operation` 고 `c` 가 상수인 경우 `bind1st( func, c )` 은 [binder1st](../standard-library/binder1st-class.md) 클래스 생성자와 같으며를 `binder1st<Operation>(func, c)` 사용 하는 것이 더 편리 합니다.
 
 ### <a name="example"></a>예제
 
@@ -271,7 +271,7 @@ template <class Operation, class Type>
 
 함수 바인더는 일종의 함수 어댑터입니다. 함수 개체를 반환 하므로 특정 형식의 함수 컴퍼지션에서 사용 하 여 더 복잡 하 고 강력한 식을 생성할 수 있습니다.
 
-*Func* 가 `Operation` 형식의 개체이 고 `c` 상수 이면 `bind2nd(func, c)` [binder2nd](../standard-library/binder2nd-class.md) 클래스 생성자 `binder2nd<Operation>(func, c)`와 동일 하 고 더 편리 하 게 사용할 수 있습니다.
+*Func* 가 형식의 개체이 `Operation` 고 `c` 가 상수인 경우 `bind2nd(func, c)` 은 [binder2nd](../standard-library/binder2nd-class.md) 클래스 생성자와 동일 하 `binder2nd<Operation>(func, c)` 고 더 편리 하 게 사용할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -342,7 +342,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
-인수에 대해 비트 AND 연산 (이진 `operator&`)을 수행 하는 미리 정의 된 함수 개체입니다.
+인수에서 비트 AND 연산 (이진)을 수행 하는 미리 정의 된 함수 개체 `operator&` 입니다.
 
 ```cpp
 template <class Type = void>
@@ -367,7 +367,7 @@ struct bit_and<void>
 *형식*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator&`를 지원하는 모든 형식입니다.
 
-*왼쪽*\
+*비어*\
 비트 AND 연산의 왼쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *T*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
 *오른쪽*\
@@ -383,7 +383,7 @@ struct bit_and<void>
 
 ## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
-인수에 대해 비트 보수 (NOT) 연산 (단항 `operator~`)을 수행 하는 미리 정의 된 함수 개체입니다. C + + 14에 추가 되었습니다.
+인수에 대해 비트 보수 (NOT) 연산 (단항)을 수행 하는 미리 정의 된 함수 개체입니다 `operator~` . C + + 14에 추가 되었습니다.
 
 ```cpp
 template <class Type = void>
@@ -403,7 +403,7 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*\
+*입력할*\
 이항 `operator~`를 지원하는 형식입니다.
 
 *오른쪽*\
@@ -419,7 +419,7 @@ struct bit_not<void>
 
 ## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
-인수에 대해 비트 OR 연산 (`operator|`)을 수행 하는 미리 정의 된 함수 개체입니다.
+인수에 대해 비트 OR 연산 ()을 수행 하는 미리 정의 된 함수 개체 `operator|` 입니다.
 
 ```cpp
 template <class Type = void>
@@ -444,7 +444,7 @@ struct bit_or<void>
 *형식*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator|`를 지원하는 모든 형식입니다.
 
-*왼쪽*\
+*비어*\
 비트 OR 연산의 왼쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *T*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
 *오른쪽*\
@@ -460,7 +460,7 @@ struct bit_or<void>
 
 ## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
-인수에 대해 비트 XOR 연산 (이진 `operator^`)을 수행 하는 미리 정의 된 함수 개체입니다.
+인수에 대해 비트 XOR 연산 (이진)을 수행 하는 미리 정의 된 함수 개체 `operator^` 입니다.
 
 ```cpp
 template <class Type = void>
@@ -485,7 +485,7 @@ struct bit_xor<void>
 *형식*, *T*, *U*\
 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator^`를 지원하는 모든 형식입니다.
 
-*왼쪽*\
+*비어*\
 비트 XOR 연산의 왼쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *T*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
 *오른쪽*\
@@ -516,7 +516,7 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 *Ty*\
 래핑할 인수의 형식입니다.
 
-*인수*\
+*인수가*\
 래핑할 인수입니다.
 
 ### <a name="remarks"></a>설명
@@ -567,7 +567,7 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="parameters"></a>매개 변수
 
-*호출 가능*\
+*호출*\
 호출할 개체의 형식입니다.
 
 *Args*\
@@ -579,26 +579,26 @@ invoke_result_t<Callable, Args...>
 *args*\
 호출 인수입니다.
 
-*사양*\
-**Noexcept** 사양 `std::is_nothrow_invocable_v<Callable, Args>)`입니다.
+*사양의*\
+**`noexcept`** 사양 `std::is_nothrow_invocable_v<Callable, Args>)` 입니다.
 
 ### <a name="remarks"></a>설명
 
-매개 변수 *인수*를 사용 하 여 호출 가능 개체 *fn* 을 호출 합니다. 실제로 `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`의사 (pseudo) 함수 `INVOKE(f, t1, t2, ..., tN)`은 다음 중 하나를 의미 합니다.
+매개 변수 *인수*를 사용 하 여 호출 가능 개체 *fn* 을 호출 합니다. 실제로 `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` 의사 (pseudo) 함수는 `INVOKE(f, t1, t2, ..., tN)` 다음 중 하나를 의미 합니다.
 
-- `(t1.*f)(t2, ..., tN)`가 `f` 클래스의 멤버 함수에 대한 포인터이고, `T`이 `t1` 형식의 개체이거나 `T` 형식의 개체에 대한 참조 또는 `T`에서 파생된 형식의 개체에 대한 참조인 경우 `T`입니다. 즉, `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` true 이면입니다.
+- `f`가 `T` 클래스의 멤버 함수에 대한 포인터이고, `t1`이 `T` 형식의 개체이거나 `T` 형식의 개체에 대한 참조 또는 `T`에서 파생된 형식의 개체에 대한 참조인 경우 `(t1.*f)(t2, ..., tN)`입니다. 즉,가 true 인 경우입니다 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` .
 
-- `f` `(t1.get().*f)(t2, ..., tN)` `T` 클래스의 멤버 함수에 대 한 포인터이 고 `std::decay_t<decltype(t1)>`은 `std::reference_wrapper`의 특수화입니다.
+- `(t1.get().*f)(t2, ..., tN)``f`가 클래스의 멤버 함수에 대 한 포인터 `T` 이 고는 `std::decay_t<decltype(t1)>` 의 특수화입니다 `std::reference_wrapper` .
 
-- `f`이 `T` 클래스의 멤버 함수에 대 한 포인터이 고 `t1`가 이전 형식 중 하나가 아닌 경우 `((*t1).*f)(t2, ..., tN)`.
+- `((*t1).*f)(t2, ..., tN)``f`가 클래스의 멤버 함수에 대 한 포인터이 `T` 고가 `t1` 이전 형식 중 하나가 아닌 경우
 
-- N == 1이며 `t1.*f`가 `f` 클래스의 멤버 데이터에 대한 포인터이고, `T`이 `t1` 형식의 개체이거나 `T` 형식의 개체에 대한 참조 또는 `T`에서 파생된 형식의 개체에 대한 참조인 경우 `T`입니다.  즉, `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` true 이면입니다.
+- N == 1이며 `f`가 `T` 클래스의 멤버 데이터에 대한 포인터이고, `t1`이 `T` 형식의 개체이거나 `T` 형식의 개체에 대한 참조 또는 `T`에서 파생된 형식의 개체에 대한 참조인 경우 `t1.*f`입니다.  즉,가 true 인 경우입니다 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` .
 
-- N = = 1이 고 `f`가 클래스 `T`의 멤버 데이터에 대 한 포인터이 고 `std::decay_t<decltype(t1)>`는 `std::reference_wrapper`의 특수화 인 경우 `t1.get().*f`.
+- `t1.get().*f`N = = 1이 고는 `f` 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `std::decay_t<decltype(t1)>` 의 특수화입니다 `std::reference_wrapper` .
 
-- N = = 1이 고 `f`가 클래스 `T`의 멤버 데이터에 대 한 포인터이 고 `t1`이 이전 형식 중 하나가 아닌 경우 `(*t1).*f` 합니다.
+- `(*t1).*f`N = = 1이 고 `f` 는 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `t1` 이전 형식 중 하나가 아닙니다.
 
-- 다른 모든 경우에서는 `f(t1, t2, ..., tN)`입니다.
+- 다른 모든 경우에는 `f(t1, t2, ..., tN)`.
 
 호출 가능 개체의 결과 형식에 대 한 자세한 내용은 [invoke_result](invoke-result-class.md)를 참조 하세요. 호출 가능 형식에 대 한 조건자는 [is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r 클래스](is-invocable-classes.md)를 참조 하세요.
 
@@ -687,7 +687,7 @@ unspecified mem_fn(RTy Ty::*pm);
 
 ### <a name="parameters"></a>매개 변수
 
-*Rty*\
+*RTy*\
 래핑된 함수의 반환 형식입니다.
 
 *Ty*\
@@ -695,11 +695,11 @@ unspecified mem_fn(RTy Ty::*pm);
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 약한 결과 형식으로 `cw`간단한 호출 래퍼를 반환 합니다 .이는 식 `cw(t, a2, ..., aN)` `INVOKE(pm, t, a2, ..., aN)`와 동일 합니다. 예외를 throw 하지 않습니다.
+템플릿 함수는 약한 결과 형식의 간단한 호출 래퍼를 반환 합니다 .이는 `cw` 식이 `cw(t, a2, ..., aN)` 와 동일 합니다 `INVOKE(pm, t, a2, ..., aN)` . 예외를 throw 하지 않습니다.
 
-반환 된 호출 래퍼는 *해당 형식이 인수를 사용* 하지 않는 cv 한정자 `cv`를 사용 하는 멤버 함수에 대 한 포인터인 경우에만 `std::unary_function<cv Ty*, RTy>`에서 파생 되 고 중첩 형식 `result_type`을 *rty* 의 동의어로, 중첩 형식 `argument_type`를 `cv Ty*`의 동의어로 정의 합니다.
+반환 된 호출 래퍼는 해당 `std::unary_function<cv Ty*, RTy>` `result_type` *RTy* `argument_type` `cv Ty*` 형식이 인수 *를* `cv` 사용 하지 않는 cv 한정자를 사용 하는 멤버 함수에 대 한 포인터인 경우에만에서 파생 되 고 중첩 된 형식을 rty 및 중첩 형식의 동의어로 정의 합니다.
 
-반환 된 호출 래퍼는 `std::binary_function<cv Ty*, T2, RTy>`에서 파생 되 고, 중첩 된 형식을 *Rty*의 동의어로 정의 하 고 `first argument_type`, 중첩 형식 `result_type`를 `cv Ty*`의 동의어로 정의 하 고, *Ty* 형식이 `second argument_type` 형식의 인수 하나를 사용 하는 cv 한정자 `T2`를 사용 하는 멤버 함수에 대 한 포인터인 경우에만 `cv`)에서 중첩 된 형식을 `T2`)로 정의 합니다.
+반환 된 호출 래퍼는 `std::binary_function<cv Ty*, T2, RTy>` `result_type` *RTy* `first argument_type` `cv Ty*` `second argument_type` `T2` *Ty* 형식이 형식의 `cv` 인수 하나를 사용 하는 cv 한정자를 사용 하는 멤버 함수에 대 한 포인터인 경우에만 `T2` (및에서 중첩 된 형식을 rty의 동의어로, 중첩 된 형식을의 동의어로, 중첩 된 형식을의 동의어로 정의)에서 파생 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -764,7 +764,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 
 ### <a name="return-value"></a>Return Value
 
-**또는** 형식의 **const** 또는 `mem_fun_t`non_const`mem_fun1_t` 함수 개체입니다.
+**`const`** 또는 형식의 또는 **non_const** 함수 개체입니다 `mem_fun_t` `mem_fun1_t` .
 
 ### <a name="example"></a>예제
 
@@ -851,7 +851,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 
 ### <a name="return-value"></a>Return Value
 
-`mem_fun_ref_t` 또는 `mem_fun1_ref_t`형식의 **const** 또는 `non_const` 함수 개체입니다.
+**`const`** `non_const` 또는 형식의 함수 개체입니다 `mem_fun_ref_t` `mem_fun1_ref_t` .
 
 ### <a name="example"></a>예제
 
@@ -942,7 +942,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="parameters"></a>매개 변수
 
-*조건자*\
+*가*\
 부정할 단항 조건자입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -951,7 +951,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="remarks"></a>설명
 
-`unary_negate` 단항 조건자 `predicate(x)`생성 된 경우 `!predicate(x)`반환 됩니다.
+`unary_negate`이 단항 조건자에서 생성 되 면이 `predicate(x)` 반환 됩니다 `!predicate(x)` .
 
 ### <a name="example"></a>예제
 
@@ -1023,7 +1023,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="remarks"></a>설명
 
-`binary_negate` 이진 조건자 `binary_predicate(x, y)`생성 된 경우 `!binary_predicate(x, y)`반환 됩니다.
+`binary_negate`이 이진 조건자에서 생성 된 경우를 `binary_predicate(x, y)` 반환 `!binary_predicate(x, y)` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1081,7 +1081,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 
 ## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
-`not_fn` 함수 템플릿은 호출 가능 개체를 사용 하 여 호출 가능 개체를 반환 합니다. 반환 된 호출 가능 개체는 나중에 일부 인수를 사용 하 여 호출 될 때 해당 개체를 원래 호출 가능 개체로 전달 하 고 결과를 논리적으로 부정 합니다. 래핑된 호출 가능 개체의 const 한정자 및 값 범주 동작을 유지 합니다. `not_fn`은 c + + 17의 새로운 기능은 사용 되지 않는 `std::not1`, `std::not2`, `std::unary_negate`및 `std::binary_negate`를 대체 합니다.
+`not_fn`함수 템플릿은 호출 가능 개체를 사용 하 여 호출 가능 개체를 반환 합니다. 반환 된 호출 가능 개체는 나중에 일부 인수를 사용 하 여 호출 될 때 해당 개체를 원래 호출 가능 개체로 전달 하 고 결과를 논리적으로 부정 합니다. 래핑된 호출 가능 개체의 const 한정자 및 값 범주 동작을 유지 합니다. `not_fn`는 c + + 17에서 새로 사용 되며, 더 이상 사용 되지 않는 `std::not1` ,, 및를 대체 합니다 `std::not2` `std::unary_negate` `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1095,7 +1095,7 @@ template <class Callable>
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는이 표시 클래스를 기반으로 `return call_wrapper(std::forward<Callable>(func))`와 같은 호출 래퍼를 반환 합니다.
+템플릿 함수는 `return call_wrapper(std::forward<Callable>(func))` 이 표시 클래스를 기반으로 하 여와 같은 호출 래퍼를 반환 합니다.
 
 ```cpp
 class call_wrapper
@@ -1124,7 +1124,7 @@ private:
 };
 ```
 
-호출 가능 개체 *func* 의 명시적 생성자에는 `MoveConstructible`요구 사항을 충족 하기 위해 `std::decay_t<Callable>` 형식이 필요 하 고 `is_constructible_v<FD, Callable>` true 여야 합니다. `std::forward<Callable>(func)`에서 `fd` 래핑된 호출 가능 개체를 초기화 하 고 `fd`생성 시 throw 되는 예외를 throw 합니다.
+호출 가능 개체 *func* 의 명시적 생성자에는 `std::decay_t<Callable>` 의 요구 사항을 충족 하는 형식이 필요 `MoveConstructible` 하며,이는 true 여야 합니다 `is_constructible_v<FD, Callable>` . 에서 래핑된 호출 가능 개체를 `fd` 초기화 `std::forward<Callable>(func)` 하 고 생성 시 throw 되는 예외를 throw `fd` 합니다.
 
 래퍼는 다음과 같이 lvalue 또는 rvalue 참조 범주 및 const 한정자로 구분 된 호출 연산자를 노출 합니다.
 
@@ -1135,7 +1135,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-처음 두 개는 `return !std::invoke(fd, std::forward<Args>(args)...)`와 동일 합니다. 두 번째 두 개는 `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`와 동일 합니다.
+처음 두 개는와 동일 합니다 `return !std::invoke(fd, std::forward<Args>(args)...)` . 두 번째 두 개는와 동일 합니다 `return !std::invoke(std::move(fd), std::forward<Args>(args)...)` .
 
 ### <a name="example"></a>예제
 
@@ -1198,9 +1198,9 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 템플릿 함수는 단항 함수 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **결과**> (\* `pfunc`)를 반환 합니다.
+첫 번째 템플릿 함수는 단항 함수 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` , **Result**> ()을 반환 합니다 \* `pfunc` .
 
-두 번째 템플릿 함수는 이진 함수 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> (\* `pfunc`)를 반환 합니다.
+두 번째 템플릿 함수는 이진 함수 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> ()을 반환 합니다 \* `pfunc` .
 
 ### <a name="remarks"></a>설명
 
@@ -1316,10 +1316,10 @@ template <class FT>
 *FT*\
 함수 개체에서 제어되는 형식입니다.
 
-*f1*\
+*보려면*\
 첫 번째 함수 개체입니다.
 
-*f2*\
+*키*\
 두 번째 함수 개체입니다.
 
 ### <a name="remarks"></a>설명

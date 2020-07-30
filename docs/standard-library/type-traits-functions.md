@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: bc25c82629139c5bc2f6fa53d3555068374dca35
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367989"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215532"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 함수
 
@@ -32,7 +32,7 @@ ms.locfileid: "81367989"
 
 ## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
 
-*From* 형식의 값을 *받는* 문자에 할당할 수 있는지 여부를 테스트합니다.
+형식 *에서* 값을 형식에 할당할 수 있는지 *여부를 테스트* 합니다.
 
 ```cpp
 template <class To, class From>
@@ -49,7 +49,7 @@ struct is_assignable;
 
 ### <a name="remarks"></a>설명
 
-평가되지 않은 `declval<To>() = declval<From>()` 식은 올바른 형식이어야 합니다. *From* 및 *To* 모두 완전한 형식, **void**또는 알 수 없는 바인딩의 배열이어야 합니다.
+평가되지 않은 `declval<To>() = declval<From>()` 식은 올바른 형식이어야 합니다. 및 *둘 다 완전 한 형식* , *To* **`void`** 또는 범위를 알 수 없는 배열 이어야 합니다.
 
 ## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
 
@@ -62,12 +62,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Ty* 형식이 복사 할당 연산자가 있는 클래스인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다. is_assignable\<Ty&, const Ty&>와 동일합니다.
+형식 조건자의 인스턴스는 *Ty* 형식이 복사 할당 연산자를 가진 클래스인 경우 true이 고 그렇지 않은 경우 false입니다. Is_assignable와 동일 \<Ty&, const Ty&> 합니다.
 
 ## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
 
@@ -80,12 +80,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Ty* 형식이 복사 생성자가 있는 클래스인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다.
+형식 조건자의 인스턴스는 *Ty* 형식이 복사 생성자가 있는 클래스인 경우 true이 고 그렇지 않은 경우 false입니다.
 
 ### <a name="example"></a>예제
 
@@ -132,12 +132,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-*T*\
+*트*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *T* 형식이 기본 생성자가 있는 클래스 형식인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. *T형식은* 완전한 형식, **void**또는 알 수 없는 바인딩배열이어야 합니다.
+형식 조건자의 인스턴스는 *T* 형식이 기본 생성자가 있는 클래스 형식인 경우 true이 고 그렇지 않은 경우 false입니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. *T* 형식은 완전 한 형식, **`void`** 또는 범위를 알 수 없는 배열 이어야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -184,7 +184,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-*T*\
+*트*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
@@ -202,16 +202,16 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-*T*\
+*트*\
 평가할 형식입니다.
 
 ### <a name="remarks"></a>설명
 
-이동 작업을 사용하여 *T* 형식을 생성할 수 있는 경우 true로 평가하는 형식 조건자입니다. 이 조건자는 `is_constructible<T, T&&>`와 같습니다.
+이동 작업을 사용 하 여 *T* 형식을 생성할 수 있는 경우 true로 평가 되는 형식 조건자입니다. 이 조건자는 `is_constructible<T, T&&>`와 같습니다.
 
 ## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
 
-형식에 **nothrow** 이동 할당 연산자가 있는지 테스트합니다.
+형식에 **`nothrow`** 이동 할당 연산자가 있는지 테스트 합니다.
 
 ```cpp
 template <class Ty>
@@ -220,12 +220,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Ty* 형식에 nothrow 이동 할당 연산자가 있는 경우 true를 유지하며 그렇지 않으면 false를 보유합니다.
+형식 조건자의 인스턴스는 *Ty* 형식에 nothrow 이동 할당 연산자가 있는 경우 true이 고 그렇지 않은 경우 false입니다.
 
 ## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
@@ -262,14 +262,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-*T*\
+*트*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *T* 형식이 사소한 복사 할당 연산자가 있는 클래스인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다.
+형식 조건자의 인스턴스는 형식 *T* 가 trivial 복사 할당 연산자를 가진 클래스인 경우 true이 고 그렇지 않은 경우 false입니다.
 
-*클래스 T에* 대한 할당 생성자는 암시적으로 제공된 경우, 클래스 *T에는* 가상 함수가 없으며, 클래스 *T에는* 가상 기반이 없으며, 클래스 형식의 모든 비정적 데이터 멤버의 클래스에는 사소한 할당 연산자가 있으며 클래스 배열의 모든 비정적 데이터 멤버의 클래스에는 사소한 할당 연산자가 있습니다.
+클래스 *t* 에 대 한 할당 생성자는 암시적으로 제공 되 고, 클래스 *t* 에 가상 함수가 없고, 클래스 t에 가상 베이스가 없고, 클래스 *t* 형식의 모든 비정적 데이터 멤버의 클래스에 trivial 대입 연산자가 있으며, 클래스 배열 형식의 모든 비정적 데이터 멤버의 클래스에 trivial 대입 연산자가 있는 경우 trivial입니다.
 
 ## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
 
@@ -282,20 +282,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Ty* 형식이 사소한 이동 할당 연산자가 있는 클래스인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다.
+형식 조건자의 인스턴스는 *Ty* 형식이 trivial 이동 할당 연산자를 가진 클래스인 경우 true이 고 그렇지 않은 경우 false입니다.
 
-다음과 같은 경우 *클래스 Ty에* 대한 이동 할당 연산자는 간단합니다.
+클래스에 대 한 이동 할당 연산자 *는 다음과* 같은 경우 trivial입니다.
 
 암시적으로 제공된 경우
 
-클래스 *Ty에는* 가상 함수가 없습니다.
+*Ty* 클래스에 가상 함수가 없습니다.
 
-클래스 *Ty에는* 가상 기반이 없습니다.
+*Ty* 클래스에 가상 기본이 없습니다.
 
 클래스 형식의 모든 비정적 데이터 멤버의 클래스에 trivial 이동 할당 연산자가 있는 경우
 
@@ -312,26 +312,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 형식이 쿼리입니다.
 
 ### <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 *Ty* 형식이 사소한 이동 생성자가 있는 클래스인 경우 true를 유지하며 그렇지 않으면 false를 보유합니다.
+형식 조건자의 인스턴스는 *Ty* 형식이 trivial 이동 생성자가 있는 클래스인 경우 true이 고 그렇지 않은 경우 false입니다.
 
-*Ty* 클래스에 대한 이동 생성자는 다음과 같은 경우 간단합니다.
+*클래스의 이동 생성자는 다음과* 같은 경우 trivial입니다.
 
 암시적으로 선언된 경우
 
 매개 변수 형식이 암시적 선언의 형식과 동일한 경우
 
-클래스 *Ty에는* 가상 함수가 없습니다.
+*Ty* 클래스에 가상 함수가 없습니다.
 
-클래스 *Ty에는* 가상 기반이 없습니다.
+*Ty* 클래스에 가상 기본이 없습니다.
 
 클래스에 휘발성 비정적 데이터 멤버가 없는 경우
 
-클래스 *Ty의* 모든 직접 베이스에는 사소한 이동 생성자가 있습니다.
+클래스의 모든 직접 *기본에 trivial* 이동 생성자가 있습니다.
 
 클래스 형식의 모든 비정적 데이터 멤버의 클래스에 Trivial 이동 생성자가 있는 경우
 

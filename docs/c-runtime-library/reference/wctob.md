@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215090"
 ---
 # <a name="wctob"></a>wctob
 
@@ -58,7 +58,7 @@ int wctob(
 
 ## <a name="remarks"></a>설명
 
-**Wctob** 함수는 멀티 바이트 문자의 길이가 정확히 1 바이트 이면 *wchar* 에 포함 된 와이드 문자를 return **int** 값으로 전달 된 해당 멀티 바이트 문자로 변환 합니다.
+**Wctob** 함수는 *wchar* **`int`** 멀티 바이트 문자의 길이가 정확히 1 바이트 이면 wchar에 포함 된 와이드 문자를 반환 값으로 전달 된 해당 멀티 바이트 문자로 변환 합니다.
 
 **Wctob** 이 실패 하 고 해당 하는 멀티 바이트 문자를 찾을 수 없는 경우 함수는 **Errno** 를 **eilseq** 로 설정 하 고-1을 반환 합니다.
 
@@ -106,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222526"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-C 표준 라이브러리 헤더 \<stddef. h >를 포함 하 고 `std` 네임 스페이스에 연결 된 이름을 추가 합니다. 이 헤더를 포함 하면 C 표준 라이브러리 헤더의 외부 링크를 사용 하 여 선언한 이름이 `std` 네임 스페이스에 선언 됩니다.
+C 표준 라이브러리 헤더를 포함 \<stddef.h> 하 고 네임 스페이스에 연결 된 이름을 추가 합니다 `std` . 이 헤더를 포함 하면 C 표준 라이브러리 헤더의 외부 링크를 사용 하 여 선언한 이름이 네임 스페이스에 선언 됩니다 `std` .
 
 > [!NOTE]
-> \<cstddef > 형식 **바이트** 를 포함 하며 **wchar_t**형식을 포함 하지 않습니다.
+> \<cstddef>에는 형식 **바이트가** 포함 되 고 형식은 포함 되지 않습니다 **`wchar_t`** .
 
 ## <a name="syntax"></a>구문
 
@@ -52,7 +52,7 @@ namespace std {
 맞춤 요구 사항이 모든 스칼라 형식에 비해 최소한의 정렬 요구 사항이 며 모든 컨텍스트에서 맞춤 요구 사항이 지원 되는 POD 형식입니다.
 
 *nullptr_t*\
-**Nullptr** 식의 형식에 대 한 동의어입니다. **Nullptr** 주소를 사용할 수는 없지만 lvalue 인 다른 *nullptr_t* 개체의 주소를 가져올 수 있습니다.
+식 형식의 동의어 **`nullptr`** 입니다. 주소를 만들 수는 없지만 **`nullptr`** lvalue 인 다른 *nullptr_t* 개체의 주소를 사용할 수 있습니다.
 
 ## <a name="byte-class"></a>byte 클래스
 
@@ -77,8 +77,8 @@ template <class IntType>
     IntType to_integer(byte b) noexcept;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

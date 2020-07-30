@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2673
 ms.assetid: 780230c0-619b-4a78-b01d-ff5886306741
-ms.openlocfilehash: 5ade00d0b912a44c0916e5ce5aa7f23b2cc91cf8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1a27b41c11905a509889d46da655900b69070445
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216117"
 ---
 # <a name="compiler-error-c2673"></a>컴파일러 오류 C2673
 
 ' function ': 전역 함수에는 ' this ' 포인터가 없습니다.
 
-전역 함수가 `this`에 액세스 하려고 했습니다.
+전역 함수에서 액세스 하려고 했습니다 **`this`** .
 
 다음 샘플에서는 C2673를 생성 합니다.
 

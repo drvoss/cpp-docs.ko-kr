@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226674"
 ---
 # <a name="catllist-class"></a>CAtlList 클래스
 
@@ -67,20 +67,20 @@ class CAtlList
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CAtlList:: INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CAtlList:: CAtlList](#catllist)|생성자입니다.|
 |[표시 되는 목록:: ~ Clllist](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[이상 목록:: AddHead](#addhead)|목록의 맨 위에 요소를 추가 하려면이 메서드를 호출 합니다.|
 |[이상 목록:: Add헤드 목록](#addheadlist)|목록의 맨 위에 기존 목록을 추가 하려면이 메서드를 호출 합니다.|
@@ -113,7 +113,7 @@ class CAtlList
 
 ## <a name="remarks"></a>설명
 
-클래스 `CAtlList` 는 순차적으로 또는 값으로 액세스할 수 있는 고유 하지 않은 개체의 순서가 지정 된 목록을 지원 합니다. `CAtlList`목록은 이중으로 연결 된 목록 처럼 동작 합니다. 각 목록에는 head와 tail이 있으며 새 요소 (또는 경우에 따라 목록)를 목록의 끝에 추가 하거나 특정 요소 앞 이나 뒤에 삽입할 수 있습니다.
+`CAtlList`클래스는 순차적으로 또는 값으로 액세스할 수 있는 고유 하지 않은 개체의 순서가 지정 된 목록을 지원 합니다. `CAtlList`목록은 이중으로 연결 된 목록 처럼 동작 합니다. 각 목록에는 head와 tail이 있으며 새 요소 (또는 경우에 따라 목록)를 목록의 끝에 추가 하거나 특정 요소 앞 이나 뒤에 삽입할 수 있습니다.
 
 대부분의 `CAtlList` 메서드는 위치 값을 사용 합니다. 이 값은 메서드가 요소를 저장 하는 실제 메모리 위치를 참조 하는 데 사용 되며 직접 계산 하거나 예측 해서는 안 됩니다. 목록에서 *n*번째 요소에 액세스 해야 하는 경우, [다음](#findindex) 메서드는 지정 된 인덱스에 대 한 해당 위치 값을 반환 합니다. [GetNext](#getnext) 및 catllist:: [getprev](#getprev) 메서드를 사용 하 여 목록의 개체를 반복할 수 있습니다.
 
@@ -248,7 +248,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="remarks"></a>설명
 
-`CAtlList` 개체에 대 한 생성자입니다. 블록 크기는 새 요소가 필요할 때 할당 된 메모리의 양을 측정 한 것입니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출이 줄어들지만 더 많은 리소스를 사용 합니다.
+개체에 대 한 생성자 `CAtlList` 입니다. 블록 크기는 새 요소가 필요할 때 할당 된 메모리의 양을 측정 한 것입니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출이 줄어들지만 더 많은 리소스를 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -266,7 +266,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 모든 할당 된 리소스를 해제 합니다 .이를 비롯 하 여 모든 요소를 목록에서 제거 하려면 [RemoveAll::](#removeall) 에 대 한 호출을 포함 합니다.
 
-디버그 빌드에서에 대 한 호출 후에 `RemoveAll`도 목록에 일부 요소가 포함 되 면 어설션 오류가 발생 합니다.
+디버그 빌드에서에 대 한 호출 후에도 목록에 일부 요소가 포함 되 면 어설션 오류가 발생 `RemoveAll` 합니다.
 
 ## <a name="catllistfind"></a><a name="find"></a>자세한 목록:: Find
 
@@ -343,9 +343,9 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="remarks"></a>설명
 
-목록이 **const**인 경우는 요소의 `GetAt` 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
+목록이 이면는 **`const`** `GetAt` 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
 
-목록이 **const**가 아닌 경우에 `GetAt` 는 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
+목록이이 아니면는 **`const`** `GetAt` 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
 
 디버그 빌드에서는 *pos* 가 NULL 인 경우 어설션 오류가 발생 합니다.
 
@@ -384,9 +384,9 @@ const E& GetHead() const throw();
 
 ### <a name="remarks"></a>설명
 
-목록이 **const**인 경우 목록의 맨 `GetHead` 위에 있는 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
+목록이 인 경우 **`const`** 목록의 맨 `GetHead` 위에 있는 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
 
-목록이 **const**가 아닌 경우 목록 맨 `GetHead` 위에 있는 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
+목록이가 아닌 경우 **`const`** `GetHead` 목록 맨 위에 있는 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
 
 디버그 빌드에서는 목록 헤드가 NULL을 가리키는 경우 어설션 오류가 발생 합니다.
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>매개 변수
 
 *pos*<br/>
-에 대 `GetNext`한 이전 호출에서 반환 되는 위치 값으로, [gellist:: geor adposition](#getheadposition)또는 `CAtlList` 기타 메서드입니다.
+에 대 한 이전 호출에서 반환 되는 위치 값으로, `GetNext` [gellist:: Geor adposition](#getheadposition)또는 기타 `CAtlList` 메서드입니다.
 
 ### <a name="return-value"></a>Return Value
 
-목록이 **const**인 경우 목록에서 `GetNext` 다음 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
+목록이 이면 목록에서 **`const`** `GetNext` 다음 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
 
-목록이 **const**가 아닌 경우 목록에서 `GetNext` 다음 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
+목록이이 아니면 목록에서 **`const`** `GetNext` 다음 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>매개 변수
 
 *pos*<br/>
-에 대 `GetPrev`한 이전 호출에서 반환 되는 위치 값 ( [GetTailPosition](#gettailposition)) 또는 기타 `CAtlList` 메서드입니다.
+에 대 한 이전 호출에서 반환 되는 위치 값 ( `GetPrev` [GetTailPosition](#gettailposition)) 또는 기타 `CAtlList` 메서드입니다.
 
 ### <a name="return-value"></a>Return Value
 
-목록이 **const**인 경우 목록 요소의 `GetPrev` 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
+목록이 인 경우 **`const`** `GetPrev` 목록 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
 
-목록이 **const**가 아닌 경우 목록 요소 `GetPrev` 에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
+목록이이 아니면 **`const`** `GetPrev` 목록의 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -485,9 +485,9 @@ const E& GetTail() const throw();
 
 ### <a name="remarks"></a>설명
 
-목록이 **const**인 경우 목록의 맨 `GetTail` 위에 있는 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
+목록이 인 경우 **`const`** 목록의 맨 `GetTail` 위에 있는 요소의 복사본을 반환 합니다. 이를 통해 메서드를 대입문의 오른쪽 에서만 사용 하 고 목록을 수정 하지 않도록 보호할 수 있습니다.
 
-목록이 **const**가 아닌 경우 목록 맨 `GetTail` 위에 있는 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
+목록이가 아닌 경우 **`const`** `GetTail` 목록 맨 위에 있는 요소에 대 한 참조를 반환 합니다. 이를 통해 대입문의 한쪽에서 메서드를 사용할 수 있으므로 목록 항목을 수정할 수 있습니다.
 
 디버그 빌드에서는 목록의 tail이 NULL을 가리키는 경우 어설션 오류가 발생 합니다.
 
@@ -668,7 +668,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="remarks"></a>설명
 
-*Pos* 에서 참조 하는 요소가 제거 되 고 메모리가 해제 됩니다. 를 사용 `RemoveAt` 하 여 목록의 헤드 또는 꼬리를 제거할 수 있습니다.
+*Pos* 에서 참조 하는 요소가 제거 되 고 메모리가 해제 됩니다. 를 사용 하 여 `RemoveAt` 목록의 헤드 또는 꼬리를 제거할 수 있습니다.
 
 디버그 빌드에서는 목록이 유효 하지 않거나 요소를 제거 하 여 목록 구조에 속하지 않는 메모리에 액세스 하는 경우 어설션 오류가 발생 합니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: fff116ef04967a1887eaa075d92d3ea0283d5427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50c10eb4ff617f4bcdc69d2e1781a9920b9eb0e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187533"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233563"
 ---
 # <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 
@@ -134,19 +134,19 @@ _variant_t(
 새 `VARIANT` 개체로 복사할 `_variant_t` 개체입니다.
 
 *pVarSrc*<br/>
-새 `_variant_t` 개체로 복사할 `VARIANT` 개체에 대 한 포인터입니다.
+`VARIANT`새 개체로 복사할 개체에 대 한 포인터 `_variant_t` 입니다.
 
 *var_t_Src*<br/>
 새 `_variant_t` 개체로 복사할 `_variant_t` 개체입니다.
 
 *fCopy*<br/>
-**False**이면 제공 된 `VARIANT` 개체가 `VariantCopy`으로 새 복사본을 만들지 않고 새 `_variant_t` 개체에 연결 됩니다.
+인 경우 **`false`** 제공 된 `VARIANT` 개체는를 사용 하 `_variant_t` 여 새 복사본을 만들지 않고 새 개체에 연결 됩니다 `VariantCopy` .
 
 *ISrc, sSrc*<br/>
 새 `_variant_t` 개체로 복사할 정수 값입니다.
 
 *vtSrc*<br/>
-새 `_variant_t` 개체의 `VARTYPE`입니다.
+`VARTYPE`새 개체에 대 한 `_variant_t` 입니다.
 
 *fltSrc, dblSrc*<br/>
 새 `_variant_t` 개체에 복사될 숫자 값입니다.
@@ -161,13 +161,13 @@ _variant_t(
 새 `_variant_t` 개체로 복사할 문자열입니다.
 
 *bSrc*<br/>
-새 `_variant_t` 개체로 복사 될 **부울** 값입니다.
+**`bool`** 새 개체에 복사할 값 `_variant_t` 입니다.
 
 *pIUknownSrc*<br/>
-새 `_variant_t` 개체에 캡슐화 될 VT_UNKNOWN 개체에 대 한 COM 인터페이스 포인터입니다.
+새 개체로 캡슐화 될 VT_UNKNOWN 개체에 대 한 COM 인터페이스 포인터 `_variant_t` 입니다.
 
 *pDispSrc*<br/>
-새 `_variant_t` 개체에 캡슐화 될 VT_DISPATCH 개체에 대 한 COM 인터페이스 포인터입니다.
+새 개체로 캡슐화 될 VT_DISPATCH 개체에 대 한 COM 인터페이스 포인터 `_variant_t` 입니다.
 
 *원본 없음*<br/>
 새 `DECIMAL` 개체로 복사할 `_variant_t` 값입니다.
@@ -176,66 +176,66 @@ _variant_t(
 새 `BYTE` 개체로 복사할 `_variant_t` 값입니다.
 
 *cSrc*<br/>
-새 `_variant_t` 개체로 복사할 **문자** 값입니다.
+**`char`** 새 개체에 복사할 값 `_variant_t` 입니다.
 
 *usSrc*<br/>
-새 `_variant_t` 개체로 복사할 **부호 없는 short** 값입니다.
+**`unsigned short`** 새 개체에 복사할 값 `_variant_t` 입니다.
 
 *ulSrc*<br/>
-새 `_variant_t` 개체로 복사할 **부호 없는 long** 값입니다.
+**`unsigned long`** 새 개체에 복사할 값 `_variant_t` 입니다.
 
 *iSrc*<br/>
-새 `_variant_t` 개체로 복사할 **정수** 값입니다.
+**`int`** 새 개체로 복사할 값 `_variant_t` 입니다.
 
 *uiSrc*<br/>
-새 `_variant_t` 개체로 복사할 **부호 없는 정수** 값입니다.
+**`unsigned int`** 새 개체로 복사할 값 `_variant_t` 입니다.
 
 *i8Src*<br/>
-새 `_variant_t` 개체에 복사할 **__int64** 값입니다.
+**`__int64`** 새 개체로 복사할 값 `_variant_t` 입니다.
 
 *ui8Src*<br/>
-새 `_variant_t` 개체에 복사할 **부호 없는 __int64** 값입니다.
+새 개체에 복사할 **부호 없는 __int64** 값 `_variant_t` 입니다.
 
 ## <a name="remarks"></a>설명
 
-- **_variant_t ()** `VT_EMPTY`빈 `_variant_t` 개체를 생성 합니다.
+- **_variant_t ()** 빈 `_variant_t` 개체를 생성 `VT_EMPTY` 합니다.
 
-- **_variant_t (variant &** *varsrc* **)** `VARIANT` 개체의 복사본에서 `_variant_t` 개체를 생성 합니다. 변형 형식이 유지됩니다.
+- **_variant_t (variant&** *varsrc***)** `_variant_t`개체의 복사본에서 개체를 생성 `VARIANT` 합니다.     변형 형식이 유지됩니다.
 
-- **_variant_t (variant** <strong>\*</strong> *pvarsrc* **)** `VARIANT` 개체의 복사본에서 `_variant_t` 개체를 생성 합니다. 변형 형식이 유지됩니다.
+- **_variant_t (variant** <strong>\*</strong> *pvarsrc***)** 는 `_variant_t` 개체의 복사본에서 개체를 생성 `VARIANT` 합니다.     변형 형식이 유지됩니다.
 
-- **_variant_t (_variant_t &** *var_t_Src* **)** 다른 `_variant_t` 개체에서 `_variant_t` 개체를 생성 합니다. 변형 형식이 유지됩니다.
+- **_variant_t (_variant_t&** *var_t_Src***)** `_variant_t`다른 개체에서 개체를 생성 `_variant_t` 합니다.     변형 형식이 유지됩니다.
 
-- **_variant_t (variant &** *varsrc* **, bool**`fCopy` **)** 기존 `VARIANT` 개체에서 `_variant_t` 개체를 생성 합니다. *Fcopy* 가 **False**인 경우 **VARIANT** 개체는 복사를 만들지 않고 새 개체에 연결 됩니다.
+- **_variant_t (variant&** *varsrc* **, bool** `fCopy` **)** 는 `_variant_t` 기존 개체에서 개체를 생성 `VARIANT` 합니다.       *Fcopy* 가 인 경우 **`false`** **VARIANT** 개체는 복사를 만들지 않고 새 개체에 연결 됩니다.
 
-- **_variant_t (short***sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** VT_I2 형식의 `_variant_t` 개체 또는 **short** 정수 값에서 VT_BOOL를 생성 합니다. 다른 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
+- **_variant_t (short***sSrc* **, VARTYPE** `vtSrc` **= VT_I2)** 는 `_variant_t` VT_I2 형식의 개체 또는 정수 값에서 VT_BOOL를 생성 **`short`** 합니다.       다른 모든 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
 
-- **_variant_t (long**`lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** 정수 ( **long** ) 값에서 VT_I4, VT_BOOL 또는 VT_ERROR 형식의 `_variant_t` 개체를 생성 합니다. 다른 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
+- **_variant_t (long** `lSrc` **, VARTYPE** `vtSrc` **= VT_I4)** 는 `_variant_t` 정수 값에서 VT_I4, VT_BOOL 또는 VT_ERROR 형식의 개체를 생성 **`long`** 합니다.       다른 모든 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
 
-- **_variant_t (float**`fltSrc` **)** **Float** 숫자 값에서 VT_R4 형식의 `_variant_t` 개체를 생성 합니다.
+- **_variant_t (float** `fltSrc` **)** 는 `_variant_t` 숫자 값에서 VT_R4 형식의 개체를 생성 **`float`** 합니다.    
 
-- **_variant_t (이중**`dblSrc` **, VARTYPE**`vtSrc` **= VT_R8)** **Double** 숫자 값에서 VT_R8 또는 VT_DATE 형식의 `_variant_t` 개체를 생성 합니다. 다른 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
+- **_variant_t (double** `dblSrc` **, VARTYPE** `vtSrc` **= VT_R8)** 는 `_variant_t` VT_R8 형식의 개체 또는 숫자 값에서 VT_DATE를 생성 **`double`** 합니다.       다른 모든 `VARTYPE` E_INVALIDARG 오류가 발생 합니다.
 
-- **_variant_t (CY &** `cySrc` **)** `CY` 개체에서 VT_CY 형식의 `_variant_t` 개체를 생성 합니다.
+- **CY&(_variant_t ** `cySrc` **)** 는 `_variant_t` 개체에서 VT_CY 형식의 개체를 생성 `CY` 합니다.    
 
-- **_variant_t (_bstr_t &** `bstrSrc` **)** `_bstr_t` 개체에서 VT_BSTR 형식의 `_variant_t` 개체를 생성 합니다. 새 `BSTR`이 할당됩니다.
+- **_variant_t (_bstr_t&** `bstrSrc` **)** 는 `_variant_t` 개체에서 VT_BSTR 형식의 개체를 생성 `_bstr_t` 합니다.     새 `BSTR`이 할당됩니다.
 
-- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc*  **)** 유니코드 문자열에서 VT_BSTR 형식의 `_variant_t` 개체를 생성 합니다. 새 `BSTR`이 할당됩니다.
+- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc*  **)** 는 `_variant_t` 유니코드 문자열에서 VT_BSTR 형식의 개체를 생성 합니다. 새 `BSTR`이 할당됩니다.
 
-- **_variant_t (char** <strong>\*</strong>`strSrc` **)** 문자열에서 VT_BSTR 형식의 `_variant_t` 개체를 생성 합니다. 새 `BSTR`이 할당됩니다.
+- **_variant_t (char** <strong>\*</strong> `strSrc` **)** 는 `_variant_t` 문자열에서 VT_BSTR 형식의 개체를 생성 합니다.     새 `BSTR`이 할당됩니다.
 
-- **_variant_t (bool**`bSrc` **)** **BOOL** 값에서 VT_BOOL 형식의 `_variant_t` 개체를 생성 합니다.
+- **_variant_t (bool** `bSrc` **)** `_variant_t` 값에서 VT_BOOL 형식의 개체를 생성 **`bool`** 합니다.    
 
-- **_variant_t (IUnknown** <strong>\*</strong>`pIUknownSrc` **, bool**`fAddRef` **= true)** COM 인터페이스 포인터에서 VT_UNKNOWN 형식의 `_variant_t` 개체를 생성 합니다. `fAddRef` **true**이면 제공 된 인터페이스 포인터에서 `AddRef`를 호출 하 여 `_variant_t` 개체가 제거 될 때 발생 하는 `Release`에 대 한 호출과 일치 시킵니다. 제공 된 인터페이스 포인터에 대 한 `Release`를 호출 하는 것은 사용자에 게 있습니다. `fAddRef` **false**이면이 생성자는 제공 된 인터페이스 포인터의 소유권을 갖습니다. 제공 된 인터페이스 포인터에서 `Release`를 호출 하지 마세요.
+- **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool** `fAddRef` **= true)** `_variant_t`COM 인터페이스 포인터에서 VT_UNKNOWN 형식의 개체를 생성 합니다.       `fAddRef`가 이면 **`true`** 제공 된 `AddRef` 인터페이스 포인터에 대해를 호출 하 여 `Release` 개체가 제거 될 때 발생 하는에 대 한 호출과 일치 시킵니다 `_variant_t` . `Release`제공 된 인터페이스 포인터에서를 호출 해야 합니다. `fAddRef`가 이면 **`false`** 이 생성자는 제공 된 인터페이스 포인터의 소유권을 갖습니다. `Release` 제공 된 인터페이스 포인터에서를 호출 하지 마세요.
 
-- **_variant_t (IDispatch** <strong>\*</strong>`pDispSrc` **, bool**`fAddRef` **= true)** COM 인터페이스 포인터에서 VT_DISPATCH 형식의 `_variant_t` 개체를 생성 합니다. `fAddRef` **true**이면 제공 된 인터페이스 포인터에서 `AddRef`를 호출 하 여 `_variant_t` 개체가 제거 될 때 발생 하는 `Release`에 대 한 호출과 일치 시킵니다. 제공 된 인터페이스 포인터에 대 한 `Release`를 호출 하는 것은 사용자에 게 있습니다. `fAddRef` **false**이면이 생성자는 제공 된 인터페이스 포인터의 소유권을 갖습니다. 제공 된 인터페이스 포인터에서 `Release`를 호출 하지 마세요.
+- **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool** `fAddRef` **= true)** `_variant_t`COM 인터페이스 포인터에서 VT_DISPATCH 형식의 개체를 생성 합니다.       `fAddRef`가 이면 **`true`** 제공 된 `AddRef` 인터페이스 포인터에 대해를 호출 하 여 `Release` 개체가 제거 될 때 발생 하는에 대 한 호출과 일치 시킵니다 `_variant_t` . `Release`제공 된 인터페이스 포인터에서를 호출 해야 합니다. `fAddRef`가 이면 **`false`** 이 생성자는 제공 된 인터페이스 포인터의 소유권을 갖습니다. `Release` 제공 된 인터페이스 포인터에서를 호출 하지 마세요.
 
-- **_variant_t (10 진수 &** `decSrc` **)** `DECIMAL` 값에서 VT_DECIMAL 형식의 `_variant_t` 개체를 생성 합니다.
+- **_variant_t (DECIMAL&** `decSrc` **)** `_variant_t` 값에서 VT_DECIMAL 형식의 개체를 생성 `DECIMAL` 합니다.    
 
-- **_variant_t (바이트**`bSrc` **)** `BYTE` 값에서 `VT_UI1` 형식의 `_variant_t` 개체를 생성 합니다.
+- **_variant_t (BYTE** `bSrc` **)** 는 `_variant_t` 값에서 형식의 개체를 생성 `VT_UI1` `BYTE` 합니다.    
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_variant_t 클래스](../cpp/variant-t-class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213296"
 ---
 # <a name="pointers-to-members"></a>pointers_to_members
 
@@ -25,7 +25,7 @@ ms.locfileid: "84226089"
 
    - 선택적 스토리지 클래스 지정자.
 
-   - 선택적 **const** 및 **volatile** 지정자입니다.
+   - 선택적 **`const`** 및 **`volatile`** 지정자입니다.
 
    - 형식 지정자: 형식의 이름 클래스가 아니라 가리키는 멤버의 형식입니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "84226089"
 
    - __`*`__ 연산자입니다.
 
-   - 선택적 **const** 및 **volatile** 지정자입니다.
+   - 선택적 **`const`** 및 **`volatile`** 지정자입니다.
 
    - 멤버에 대한 포인터의 이름을 지정하는 식별자
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-앞의 예제에서 `pwCaption` 는 형식의 클래스 멤버에 대 한 포인터입니다 `Window` `char*` . `pwCaption`의 형식은 `char * Window::*`입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.
+앞의 예제에서 `pwCaption` 는 형식의 클래스 멤버에 대 한 포인터입니다 `Window` **`char*`** . `pwCaption`의 형식은 `char * Window::*`입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

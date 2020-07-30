@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195358"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>플랫폼, 기본값 및 cli 네임스페이스(C++/CLI 및 C++/CX)
 
@@ -40,17 +40,17 @@ Visual Studio에서는 프로젝트를 만들 때 프로젝트의 기본 네임�
 using namespace cli;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-C++/CLI에서는 **cli** 네임스페이스를 지원합니다. `/clr`로 컴파일하는 경우 구문 섹션에 **using** 문이 있는 것으로 간주됩니다.
+C++/CLI에서는 **cli** 네임스페이스를 지원합니다. 를 사용 하 여 컴파일할 때 `/clr` **`using`** 구문 섹션의 문이 암시 됩니다.
 
 다음 언어 기능은 **cli** 네임스페이스에 있습니다.
 
 - [배열](arrays-cpp-component-extensions.md)
 
-- [interior_ptr(C++/CLI)](interior-ptr-cpp-cli.md)
+- [interior_ptr (c + +/CLI)](interior-ptr-cpp-cli.md)
 
-- [pin_ptr(C++/CLI)](pin-ptr-cpp-cli.md)
+- [pin_ptr (c + +/CLI)](pin-ptr-cpp-cli.md)
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
@@ -58,7 +58,7 @@ C++/CLI에서는 **cli** 네임스페이스를 지원합니다. `/clr`로 컴파
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 코드 예제에서는 **cli** 네임스페이스의 기호를 코드에서 사용자 정의 기호로 사용할 수 있음을 보여 줍니다.  그러나 사용자 정의 기호로 사용한 경우 같은 이름의 **cli** 언어 요소에 대한 참조를 명시적 또는 암시적으로 한정해야 합니다.
 
@@ -80,4 +80,4 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

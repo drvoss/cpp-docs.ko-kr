@@ -15,18 +15,18 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 20eefa2be6d0e0df4585834bae5c37cd258610a7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621929"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214141"
 ---
 # <a name="destroying-frame-windows"></a>프레임 창 제거
 
 MFC 프레임 워크는 프레임 워크 문서와 뷰와 연결 된 창에 대 한 생성 뿐만 아니라 창 소멸을 관리 합니다. 추가 창을 만드는 경우 제거 해야 합니다.
 
-프레임 워크에서 사용자가 프레임 창을 닫으면 창의 기본 [OnClose](reference/cwnd-class.md#onclose) 처리기는 [DestroyWindow](reference/cwnd-class.md#destroywindow)를 호출 합니다. Windows 창이 제거 될 때 호출 되는 마지막 멤버 함수는 [OnNcDestroy](reference/cwnd-class.md#onncdestroy)입니다 .이 함수는 정리를 수행 하 고 [기본](reference/cwnd-class.md#default) 멤버 함수를 호출 하 여 windows 정리를 수행 하며, 마지막으로 가상 멤버 함수 [PostNcDestroy](reference/cwnd-class.md#postncdestroy)를 호출 합니다. 의 [CFrameWnd](reference/cframewnd-class.md) 구현은 `PostNcDestroy` c + + 창 개체를 삭제 합니다. 프레임 창에는 c + + **delete** 연산자를 사용 하면 안 됩니다. 대신 `DestroyWindow`를 사용하세요.
+프레임 워크에서 사용자가 프레임 창을 닫으면 창의 기본 [OnClose](reference/cwnd-class.md#onclose) 처리기는 [DestroyWindow](reference/cwnd-class.md#destroywindow)를 호출 합니다. Windows 창이 제거 될 때 호출 되는 마지막 멤버 함수는 [OnNcDestroy](reference/cwnd-class.md#onncdestroy)입니다 .이 함수는 정리를 수행 하 고 [기본](reference/cwnd-class.md#default) 멤버 함수를 호출 하 여 windows 정리를 수행 하며, 마지막으로 가상 멤버 함수 [PostNcDestroy](reference/cwnd-class.md#postncdestroy)를 호출 합니다. 의 [CFrameWnd](reference/cframewnd-class.md) 구현은 `PostNcDestroy` c + + 창 개체를 삭제 합니다. 프레임 창에는 c + + 연산자를 사용 하면 안 **`delete`** 됩니다. 대신 `DestroyWindow`를 사용하세요.
 
 주 창이 닫히면 응용 프로그램이 닫힙니다. 저장 하지 않은 문서가 수정 된 경우 프레임 워크는 문서를 저장 해야 하는지 여부를 묻는 메시지 상자를 표시 하 고 필요한 경우 적절 한 문서가 저장 되도록 합니다.
 

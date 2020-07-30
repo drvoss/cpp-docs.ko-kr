@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3ca56ce3c02915c88f70907d024aea3930a1aa1e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74736713"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197542"
 ---
 # <a name="compiler-error-c3869"></a>컴파일러 오류 C3869
 
 gcnew 제약 조건에 빈 매개 변수 목록 ' () '가 없습니다.
 
-빈 매개 변수 목록을 사용 하지 않고 `gcnew` 특수 제약 조건을 지정 했습니다. 자세한 내용은 [제네릭 형식 매개 변수에 대C++한 제약 조건 (/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 을 참조 하세요.
+**`gcnew`** 빈 매개 변수 목록을 사용 하지 않고 특수 제약 조건을 지정 했습니다. 자세한 내용은 [제네릭 형식 매개 변수에 대 한 제약 조건 (c + +/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 을 참조 하세요.
 
 ## <a name="example"></a>예제
 

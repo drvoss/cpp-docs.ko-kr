@@ -1,17 +1,17 @@
 ---
-title: last_is (C++ COM 특성)
+title: last_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7aa8acb52d19bc7f70513e44770817ae7fc403b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214814"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224411"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "80214814"
 *expression*<br/>
 하나 이상의 C 언어 식입니다. 빈 인수 슬롯을 사용할 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Last_is** C++ 특성에는 [last_is](/windows/win32/Midl/last-is) MIDL 특성과 동일한 기능이 있습니다.
+**Last_is** c + + 특성에는 [last_is](/windows/win32/Midl/last-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -42,8 +42,8 @@ ms.locfileid: "80214814"
 
 |||
 |-|-|
-|**적용 대상**|**구조체** 또는 **공용 구조체**의 필드, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|아니요|
+|**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

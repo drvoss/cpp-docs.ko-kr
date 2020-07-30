@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217677"
 ---
 # <a name="output-file-stream-member-functions"></a>Output File Stream Member 함수
 
@@ -17,9 +17,9 @@ ms.locfileid: "68453062"
 
 ## <a name="the-open-function-for-output-streams"></a>출력 스트림에 대한 open 함수
 
-출력 파일 스트림 ([ofstream](../standard-library/basic-ofstream-class.md))을 사용 하려면 해당 스트림을 생성자 또는 `open` 함수의 특정 디스크 파일에 연결 해야 합니다. `open` 함수를 사용 하는 경우 일련의 파일을 사용 하 여 동일한 stream 개체를 다시 사용할 수 있습니다. 어떤 경우든 파일을 설명하는 인수는 동일합니다.
+출력 파일 스트림 ([ofstream](../standard-library/basic-ofstream-class.md))을 사용 하려면 해당 스트림을 생성자 또는 함수의 특정 디스크 파일에 연결 해야 합니다 `open` . 함수를 사용 하는 경우 일련의 파일을 사용 하 여 `open` 동일한 stream 개체를 다시 사용할 수 있습니다. 어떤 경우든 파일을 설명하는 인수는 동일합니다.
 
-출력 스트림과 연결 된 파일을 열 때 일반적으로 `open_mode` 플래그를 지정 합니다. `ios` 클래스에서 열거자로 정의되는 이러한 플래그는 비트 OR(&#124;) 연산자를 사용하여 결합할 수 있습니다. 열거자 목록은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
+출력 스트림과 연결 된 파일을 열 때 일반적으로 플래그를 지정 `open_mode` 합니다. `ios` 클래스에서 열거자로 정의되는 이러한 플래그는 비트 OR(&#124;) 연산자를 사용하여 결합할 수 있습니다. 열거자 목록은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
 
 흔히 볼 수 있는 세 가지 출력 스트림에서는 모드 옵션이 사용됩니다.
 
@@ -65,7 +65,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>쓰기
 
-함수 `write` 는 출력 파일 스트림에 메모리 블록을 씁니다. 길이 인수가 기록되는 바이트 수를 지정합니다. 이 예에서는 출력 파일 스트림을 만들고 `Date` 구조체의 이진 값을 해당 스트림에 씁니다.
+`write`함수는 출력 파일 스트림에 메모리 블록을 씁니다. 길이 인수가 기록되는 바이트 수를 지정합니다. 이 예에서는 출력 파일 스트림을 만들고 `Date` 구조체의 이진 값을 해당 스트림에 씁니다.
 
 ```cpp
 // write_function.cpp
@@ -86,7 +86,7 @@ int main( )
 }
 ```
 
-Null 문자에 도달할 때 함수가중지되지않으므로전체클래스구조가작성됩니다.`write` 함수는 두 개의 인수, 즉 **char** 포인터와 쓸 문자 수를 사용 합니다. 구조체 개체의 주소 앞에 **char** <strong>\*</strong> 로 캐스팅 해야 합니다.
+`write`Null 문자에 도달할 때 함수가 중지 되지 않으므로 전체 클래스 구조가 작성 됩니다. 함수는 두 개의 인수, 즉 **`char`** 포인터와 쓸 문자 수를 사용 합니다. **`char`** <strong>\*</strong> 구조 개체의 주소 앞에 필요한 캐스트를 확인 합니다.
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 및 tellp 함수
 
@@ -94,30 +94,30 @@ Null 문자에 도달할 때 함수가중지되지않으므로전체클래스구
 
 ## <a name="the-close-function-for-output-streams"></a>출력 스트림에 대한 close 함수
 
-멤버 `close` 함수는 출력 파일 스트림과 연결 된 디스크 파일을 닫습니다. 모든 디스크 출력을 완료하려면 파일을 닫아야 합니다. 필요한 경우 소멸자는 `ofstream` 파일을 닫지만 동일한 스트림 개체에 대해 다른 파일을 열어야 `close` 하는 경우에는 함수를 사용할 수 있습니다.
+`close`멤버 함수는 출력 파일 스트림과 연결 된 디스크 파일을 닫습니다. 모든 디스크 출력을 완료하려면 파일을 닫아야 합니다. 필요한 경우 소멸자는 `ofstream` 파일을 닫지만 `close` 동일한 스트림 개체에 대해 다른 파일을 열어야 하는 경우에는 함수를 사용할 수 있습니다.
 
-출력 스트림 소멸자는 생성자 또는 `open` 멤버 함수가 파일을 연 경우에만 스트림 파일을 자동으로 닫습니다. 이미 열려 있는 파일에 대 한 파일 설명자를 생성자에 전달 하거나 `attach` 멤버 함수를 사용 하는 경우 파일을 명시적으로 닫아야 합니다.
+출력 스트림 소멸자는 생성자 또는 멤버 함수가 파일을 연 경우에만 스트림 파일을 자동으로 닫습니다 `open` . 이미 열려 있는 파일에 대 한 파일 설명자를 생성자에 전달 하거나 멤버 함수를 사용 하는 경우 `attach` 파일을 명시적으로 닫아야 합니다.
 
-## <a name="vclrferrorprocessingfunctionsanchor10"></a> 오류 처리 함수
+## <a name="error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> 오류 처리 함수
 
 스트림에 쓰는 중에 오류를 테스트하려면 다음 구성원 함수를 사용합니다.
 
 |함수|반환 값|
 |--------------|------------------|
-|[bad](basic-ios-class.md#bad)|복구할 수 없는 오류가 발생하는 경우 **true**를 반환합니다.|
-|[fail](basic-ios-class.md#fail)|복구할 수 없는 오류 또는 "정상" 상황(예: 변환 오류)이 발생하거나 파일을 찾을 수 없는 경우 **true**를 반환합니다. 를 호출한 후에는 0 인수를 `clear` 사용 하 여 처리를 다시 시작할 수 있습니다.|
-|[good](basic-ios-class.md#good)|복구 가능 여부와 관계없이 오류 조건이 없으며 파일 끝 플래그가 설정되어 있지 않은 경우 **true**를 반환합니다.|
-|[eof](basic-ios-class.md#eof)|파일 끝 조건에서 **true**를 반환합니다.|
-|[clear](basic-ios-class.md#clear)|내부 오류 상태를 설정합니다. 기본 인수를 사용하여 호출된 경우에는 모든 오류 비트를 지웁니다.|
-|[rdstate](basic-ios-class.md#rdstate|현재 오류 상태를 반환합니다.|
+|[불량](basic-ios-class.md#bad)|**`true`** 복구할 수 없는 오류가 있으면를 반환 합니다.|
+|[통과](basic-ios-class.md#fail)|**`true`** 복구할 수 없는 오류 또는 "예상" 조건 (예: 변환 오류)이 있거나 파일이 없으면를 반환 합니다. 를 호출한 후에는 0 인수를 사용 하 여 처리를 다시 시작할 수 있습니다 `clear` .|
+|[좋음](basic-ios-class.md#good)|**`true`** 오류 조건 (복구할 수 없음 또는 기타)이 없고 파일 끝 플래그가 설정 되지 않은 경우를 반환 합니다.|
+|[객체](basic-ios-class.md#eof)|**`true`** 파일 끝 조건을 반환 합니다.|
+|[해제](basic-ios-class.md#clear)|내부 오류 상태를 설정합니다. 기본 인수를 사용하여 호출된 경우에는 모든 오류 비트를 지웁니다.|
+|rdstate (기본-ios-클래스. md # rdstate|현재 오류 상태를 반환합니다.|
 
-**!** 연산자와 `fail` 동일한 기능을 수행 하기 위해 연산자가 오버 로드 됩니다. 따라서 다음 식은
+**!** 연산자와 동일한 기능을 수행 하기 위해 연산자가 오버 로드 됩니다 `fail` . 따라서 다음 식은
 
 ```cpp
 if(!cout)...
 ```
 
-다음과 동일합니다.
+이는 다음과 동등합니다.
 
 ```cpp
 if(cout.fail())...
@@ -135,8 +135,8 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-**Void\*()** 연산자는 파일의 끝을 `good` 테스트 하지 않으므로와 동일 하지 않습니다.
+**Void \* ()** 연산자는 `good` 파일의 끝을 테스트 하지 않으므로와 동일 하지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [출력 스트림](../standard-library/output-streams.md)

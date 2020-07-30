@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910995"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233992"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 검색할 Null 종료 문자열입니다.
 
 *strSearch*<br/>
@@ -137,12 +137,12 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="remarks"></a>설명
 
-함수 `strstr` 는 *str*에서 처음 발견 되는 *strsearch* 에 대 한 포인터를 반환 합니다. 종료 null 문자는 검색에 포함되지 않습니다. `wcsstr`은 `strstr`의 와이드 문자 버전이고 `_mbsstr`은 멀티바이트 버전입니다. `wcsstr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsstr`의 인수와 반환 값은 멀티바이트 문자열입니다. `_mbsstr`는 매개 변수의 유효성을 검사합니다. *Str* 또는 *STRSEARCH* 가 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `_mbsstr` 는 `errno` EINVAL로 설정 하 고 0을 반환 합니다. `strstr` 및 `wcsstr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
+`strstr`함수는 *str*에서 처음 발견 되는 *strsearch* 에 대 한 포인터를 반환 합니다. 종료 null 문자는 검색에 포함되지 않습니다. `wcsstr`은 `strstr`의 와이드 문자 버전이고 `_mbsstr`은 멀티바이트 버전입니다. `wcsstr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsstr`의 인수와 반환 값은 멀티바이트 문자열입니다. `_mbsstr`는 매개 변수의 유효성을 검사합니다. *Str* 또는 *STRSEARCH* 가 NULL 인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 `_mbsstr` 는 `errno` EINVAL로 설정 하 고 0을 반환 합니다. `strstr` 및 `wcsstr`는 매개 변수의 유효성을 검사하지 않습니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
 > [!IMPORTANT]
 > 이러한 함수에서는 버퍼 오버런 문제로 인한 위협이 발생할 수 있습니다. 버퍼 오버런은 시스템 공격에 이용될 수 있습니다. 버퍼 오버런 문제가 발생하면 임의 코드를 실행할 수 있게 되어 보증하지 않은 방식으로 권한이 상승할 수 있기 때문입니다. 자세한 내용은 [버퍼 오버런 방지](/windows/win32/SecBP/avoiding-buffer-overruns)를 참조하세요.
 
-C에서 이러한 함수는 첫 번째 인수에 대 한 **const** 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. **Const** 에 대 한 포인터를 사용 하는 오버 로드는 **const**에 대 한 포인터를 반환 합니다. 비**const** 에 대 한 포인터를 사용 하는 버전은 비**const**에 대 한 포인터를 반환 합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS은 이러한 함수의 **const** 및 비**const** 버전을 모두 사용할 수 있는 경우 정의 됩니다. 두 c + + 오버 로드에 대 한 비**const** 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
+C에서 이러한 함수는 **`const`** 첫 번째 인수에 대 한 포인터를 사용 합니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. 에 대 한 포인터를 사용 하는 오버 로드는에 대 한 포인터를 반환 합니다 .가 아닌에 대 한 포인터를 사용 하는 **`const`** **`const`** 버전은 **`const`** 이외의에 대 한 포인터를 반환 **`const`** 합니다 **`const`** 이러한 함수의 및 비 버전을 모두 사용할 수 있는 경우 매크로 _CRT_CONST_CORRECT_OVERLOADS 정의 됩니다 **`const`** . **`const`** 두 c + + 오버 로드에 대 한 비 동작이 필요한 경우 기호 _CONST_RETURN 정의 합니다.
 
 출력 값은 LC_CTYPE의 로캘 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](setlocale-wsetlocale.md)를 참조 하세요. **_L** 접미사가 없는 이러한 함수 버전은이 로캘 종속 동작에 현재 로캘을 사용 합니다. **_l** 접미사가 있는 버전은 전달 된 로캘 매개 변수를 대신 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
@@ -202,10 +202,10 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

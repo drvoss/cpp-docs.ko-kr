@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213634"
 ---
 # <a name="calloc"></a>calloc
 
@@ -58,7 +58,7 @@ void *calloc(
 
 ## <a name="return-value"></a>Return Value
 
-**calloc** 은 할당 된 공간에 대 한 포인터를 반환 합니다. 반환 값이 가리킨 스토리지 공간은 모든 형식의 개체 스토리지를 위해 적절하게 정렬되도록 보장됩니다. **Void**이외의 형식에 대 한 포인터를 가져오려면 반환 값에 형식 캐스팅을 사용 합니다.
+**calloc** 은 할당 된 공간에 대 한 포인터를 반환 합니다. 반환 값이 가리킨 스토리지 공간은 모든 형식의 개체 스토리지를 위해 적절하게 정렬되도록 보장됩니다. 이외의 형식에 대 한 포인터를 가져오려면 **`void`** 반환 값에 형식 캐스팅을 사용 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -68,7 +68,7 @@ void *calloc(
 
 Microsoft 구현에서 *number* 또는 *size* 가 0 인 경우 **calloc** 는 크기가 0이 아닌 할당 된 블록에 대 한 포인터를 반환 합니다. 반환 된 포인터를 통해 읽거나 쓰려고 하면 정의 되지 않은 동작이 발생 합니다.
 
-**calloc** 는 c + + [_set_new_mode](set-new-mode.md) 함수를 사용 하 여 *새 처리기 모드*를 설정 합니다. 새 처리기 모드는 실패 시 **calloc** 가 [_set_new_handler](set-new-handler.md)설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **calloc** 는 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **calloc** 에서 메모리를 할당 하지 못할 때 **새** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 기본값을 재정의하려면 다음 코드를
+**calloc** 는 c + + [_set_new_mode](set-new-mode.md) 함수를 사용 하 여 *새 처리기 모드*를 설정 합니다. 새 처리기 모드는 실패 시 **calloc** 가 [_set_new_handler](set-new-handler.md)설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **calloc** 는 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **calloc** 에서 메모리를 할당 하지 못할 경우 **`new`** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 기본값을 재정의하려면 다음 코드를
 
 ```C
 _set_new_mode(1);
@@ -78,7 +78,7 @@ _set_new_mode(1);
 
 응용 프로그램이 C 런타임 라이브러리의 디버그 버전에 연결 된 경우 **calloc** 은 [_calloc_dbg](calloc-dbg.md)를 확인 합니다. 디버깅 프로세스 동안 힙을 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.
 
-**calloc** 는 및 `__declspec(noalias)` `__declspec(restrict)`로 표시 됩니다. 즉, 함수가 전역 변수를 수정 하지 않도록 보장 하 고 반환 된 포인터에 별칭이 지정 되지 않습니다. 자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md)를 참조하세요.
+**calloc** 는 및로 표시 됩니다 `__declspec(noalias)` `__declspec(restrict)` . 즉, 함수가 전역 변수를 수정 하지 않도록 보장 하 고 반환 된 포인터에 별칭이 지정 되지 않습니다. 자세한 내용은 [noalias](../../cpp/noalias.md) 및 [restrict](../../cpp/restrict.md)를 참조하세요.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -117,7 +117,7 @@ int main( void )
 Allocated 40 long integers
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [늘릴](free.md)<br/>

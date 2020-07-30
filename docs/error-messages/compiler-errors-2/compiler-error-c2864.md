@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cfa928c84fbf6c841e3caaf51dda526a7ae184fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212659"
 ---
 # <a name="compiler-error-c2864"></a>컴파일러 오류 C2864
 
 > '*멤버 이름*': in 클래스 이니셜라이저가 있는 정적 데이터 멤버는 volatile이 아닌 const 정수 계열 형식을 포함 해야 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`volatile`,`const`또는 정수 형식이 아닌 형식으로 정의 된 `static` 데이터 멤버를 초기화 하려면 멤버 정의 문을 사용 합니다. 선언에서 초기화할 수 없습니다.
+,가 **`static`** 아닌 또는 정수 계열 형식으로 정의 된 데이터 멤버를 초기화 하려면 **`volatile`** **`const`** 멤버 정의 문을 사용 합니다. 선언에서 초기화할 수 없습니다.
 
 ## <a name="example"></a>예제
 

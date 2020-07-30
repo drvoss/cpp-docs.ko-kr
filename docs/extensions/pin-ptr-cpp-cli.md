@@ -10,16 +10,16 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172037"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230560"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr(C++/CLI)
 
-공용 언어 런타임에서만 사용되는 ‘고정 포인터’를 선언합니다.
+공용 언어 런타임에서만 사용되는 ‘고정 포인터’를 선언합니다.**
 
 ## <a name="all-runtimes"></a>모든 런타임
 
@@ -31,7 +31,7 @@ Windows 런타임에서는 이 언어 기능이 지원되지 않습니다.
 
 ## <a name="common-language-runtime"></a>공용 언어 런타임
 
-‘고정 포인터’는 가리키는 개체가 가비지 수집된 힙에서 이동하지 않도록 하는 내부 포인터입니다. 즉, 공용 언어 런타임에서 고정 포인터의 값을 변경하지 않습니다. 비관리형 함수 호출을 확인하는 동안 주소가 예기치 않게 변경되지 않도록 관리형 클래스의 주소를 비관리형 함수에 전달하는 경우에 필요합니다.
+‘고정 포인터’는 가리키는 개체가 가비지 수집된 힙에서 이동하지 않도록 하는 내부 포인터입니다.** 즉, 공용 언어 런타임에서 고정 포인터의 값을 변경하지 않습니다. 비관리형 함수 호출을 확인하는 동안 주소가 예기치 않게 변경되지 않도록 관리형 클래스의 주소를 비관리형 함수에 전달하는 경우에 필요합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -42,10 +42,10 @@ Windows 런타임에서는 이 언어 기능이 지원되지 않습니다.
 ### <a name="parameters"></a>매개 변수
 
 *cv_qualifier*<br/>
-**const** 또는 **volatile** 한정자입니다. 기본적으로 고정 포인터는 **volatile**입니다. 고정 포인터를 **volatile**로 선언하는 것은 중복이지만 오류는 아닙니다.
+**`const`** 또는 **`volatile`** 한정자입니다. 기본적으로 고정 포인터는 **`volatile`** 입니다. 중복 되지만 고정 포인터를 선언 하는 데 오류가 발생 하지는 않습니다 **`volatile`** .
 
 *type*<br/>
-‘이니셜라이저’의 형식입니다.
+‘이니셜라이저’의 형식입니다.**
 
 *var*<br/>
 **pin_ptr** 변수의 이름입니다.
@@ -95,7 +95,7 @@ Windows 런타임에서는 이 언어 기능이 지원되지 않습니다.
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 예제에서는 **pin_ptr**을 사용하여 배열의 첫 번째 요소 위치를 제한합니다.
 

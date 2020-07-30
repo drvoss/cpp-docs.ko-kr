@@ -3,12 +3,12 @@ title: SAL 이해
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403987"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226049"
 ---
 # <a name="understanding-sal"></a>SAL 이해
 
@@ -78,7 +78,7 @@ wchar_t * wmemcpy(
 
 SAL은 사용 패턴으로 분류 되는 네 가지 기본 종류의 매개 변수를 정의 합니다.
 
-|범주|매개 변수 주석|Description|
+|범주|매개 변수 주석|설명|
 |--------------|--------------------------|-----------------|
 |**호출 되는 함수에 대 한 입력**|`_In_`|데이터는 호출 된 함수에 전달 되 고 읽기 전용으로 처리 됩니다.|
 |**호출 되는 함수에 대 한 입력 및 호출자에 게 출력**|`_Inout_`|사용 가능한 데이터는 함수로 전달 되 고 잠재적으로 수정 됩니다.|
@@ -359,7 +359,7 @@ Visual Studio Code 분석에서는가 역참조 되기 전에이 함수가 NULL�
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>예: \_ \_ Out과 함께 성공 주석 \_\_
 
-대부분의 개체에 주석을 적용할 수 있습니다.  특히 전체 함수에 주석을 추가할 수 있습니다.  함수의 가장 명백한 특징 중 하나는 성공 또는 실패할 수 있다는 것입니다. 그러나 버퍼와 크기 간의 연결과 마찬가지로 C/c + +는 함수 성공 또는 실패를 나타낼 수 없습니다. 주석을 사용 하면 `_Success_` 함수의 성공 여부를 말할 수 있습니다.  주석에 대 한 매개 변수는 `_Success_` true 이면 함수가 성공 했음을 나타내는 식입니다. 식에는 주석 파서가 처리할 수 있는 모든 항목이 있을 수 있습니다. 함수가 반환 된 후의 주석 효과는 함수가 성공 하는 경우에만 적용 됩니다. 이 예제에서는 `_Success_` 가와 상호 작용 하 여 `_Out_` 적절 한 작업을 수행 하는 방법을 보여 줍니다. 키워드를 사용 하 여 `return` 반환 값을 나타낼 수 있습니다.
+대부분의 개체에 주석을 적용할 수 있습니다.  특히 전체 함수에 주석을 추가할 수 있습니다.  함수의 가장 명백한 특징 중 하나는 성공 또는 실패할 수 있다는 것입니다. 그러나 버퍼와 크기 간의 연결과 마찬가지로 C/c + +는 함수 성공 또는 실패를 나타낼 수 없습니다. 주석을 사용 하면 `_Success_` 함수의 성공 여부를 말할 수 있습니다.  주석에 대 한 매개 변수는 `_Success_` true 이면 함수가 성공 했음을 나타내는 식입니다. 식에는 주석 파서가 처리할 수 있는 모든 항목이 있을 수 있습니다. 함수가 반환 된 후의 주석 효과는 함수가 성공 하는 경우에만 적용 됩니다. 이 예제에서는 `_Success_` 가와 상호 작용 하 여 `_Out_` 적절 한 작업을 수행 하는 방법을 보여 줍니다. 키워드를 사용 하 여 **`return`** 반환 값을 나타낼 수 있습니다.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

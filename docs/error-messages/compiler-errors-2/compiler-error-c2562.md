@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2562
 ms.assetid: 2c41e511-9952-4b98-9976-6b1523613e1b
-ms.openlocfilehash: 78536fdc0c2a6a6e9c4842fdea6423037496b30b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7efc94cc859bbee6db0ce973135c7501fd79ae1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206941"
 ---
 # <a name="compiler-error-c2562"></a>컴파일러 오류 C2562
 
 ' identifier ': ' void ' 함수에서 값을 반환 합니다.
 
-함수는 `void`로 선언 되지만 값을 반환 합니다.
+함수는로 선언 **`void`** 되었지만 값을 반환 합니다.
 
 이 오류는 잘못 된 함수 프로토타입이 원인일 수 있습니다.
 

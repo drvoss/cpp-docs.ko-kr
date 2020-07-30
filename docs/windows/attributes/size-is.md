@@ -1,17 +1,17 @@
 ---
-title: size_is (C++ COM 특성)
+title: size_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213842"
 ---
 # <a name="size_is"></a>size_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166252"
 
 ## <a name="remarks"></a>설명
 
-**Size_is** C++ 특성에는 [size_is](/windows/win32/Midl/size-is) MIDL 특성과 동일한 기능이 있습니다.
+**Size_is** c + + 특성에는 [size_is](/windows/win32/Midl/size-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -42,9 +42,9 @@ ms.locfileid: "80166252"
 
 |||
 |-|-|
-|**적용 대상**|**구조체** 또는 **공용 구조체**의 필드, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|예|
-|**필수 특성**|None|
+|**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
+|**불가능**|예|
+|**필수 특성**|없음|
 |**잘못된 특성**|`max_is`|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

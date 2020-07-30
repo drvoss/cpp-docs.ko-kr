@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234018"
 ---
 # <a name="set_terminate-crt"></a>set_terminate(CRT)
 
@@ -60,7 +60,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 다중 스레드 환경에서 terminate 함수는 각 스레드에 대해 개별적으로 유지 관리됩니다. 각 새 스레드는 자체 terminate 함수를 설치해야 합니다. 따라서 각 스레드는 자체 종료 처리를 담당합니다.
 
-**Terminate_function** 형식은 EH로 정의 됩니다. H는 **void**를 반환 하는 사용자 정의 종료 함수에 대 한 포인터로 *termFunction* . 사용자 지정 함수 *termFunction* 는 인수를 사용할 수 없으며 해당 호출자로 반환 되어서는 안 됩니다. 이 경우 [abort](abort.md) 가 호출 됩니다. *TermFunction*내에서 예외를 throw 할 수 없습니다.
+**Terminate_function** 형식은 EH로 정의 됩니다. H는을 반환 하는 *termFunction* 사용자 정의 종료 함수에 대 한 포인터입니다 **`void`** . 사용자 지정 함수 *termFunction* 는 인수를 사용할 수 없으며 해당 호출자로 반환 되어서는 안 됩니다. 이 경우 [abort](abort.md) 가 호출 됩니다. *TermFunction*내에서 예외를 throw 할 수 없습니다.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -85,10 +85,10 @@ typedef void ( *terminate_function )( );
 
 [terminate](terminate-crt.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)<br/>
-[중단이](abort.md)<br/>
+[abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [끝나야](terminate-crt.md)<br/>

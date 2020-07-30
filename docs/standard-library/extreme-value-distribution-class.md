@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 865fac1f1452e30b64a0ada9b115186916ff491c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212347"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution 클래스
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*실제 유형*\
-부동 점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*RealType*\
+부동 소수점 결과 형식으로, 기본적으로로 설정 **`double`** 됩니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-*URNG (우롱)는*\
-난수 생성기 엔진입니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*URNG*\
+난수 생성기 엔진입니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
-클래스 템플릿은 사용자가 지정한 부동 지점 형식의 값을 생성하는 분포를 설명하거나 극단적인 값 분포에 따라 배포된 값이 없는 경우 **double을** 입력합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+클래스 템플릿은 극단적인 값 분포에 따라 분포 된 경우 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 `a` 및 `b` 각각에 대한 값을 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 극단값 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Extreme Value Distribution](https://go.microsoft.com/fwlink/p/?linkid=401110)(극단값 분포)을 참조하세요.
 
@@ -177,11 +177,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:: extreme_value_distribution
 
 분포를 생성합니다.
 
@@ -198,7 +198,7 @@ explicit extreme_value_distribution(const param_type& parm);
 *b_value*\
 `b` 분포 매개 변수입니다.
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
 
 ### <a name="remarks"></a>설명
@@ -209,7 +209,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::p아람_타입
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

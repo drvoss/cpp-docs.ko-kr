@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623351"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215974"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>단일 문서에 뷰 여러 개 추가
 
@@ -65,7 +65,7 @@ Mywinapp의 include 섹션에 다음 줄을 삽입 *합니다. CPP*:
 
 프로젝트에 클래스를 추가한 후에는 일부 뷰 클래스 멤버의 액세스 가능성을 변경 해야 합니다.
 
-*Newview를 수정 합니다. H* 는 생성자 및 소멸자에 대해 액세스 지정자를 **protected** 에서 **public** 으로 변경 합니다. 이렇게 하면 클래스를 동적으로 만들고 소멸 하 고 표시 되기 전에 뷰 모양을 수정할 수 있습니다.
+*Newview를 수정 합니다. H* , **`protected`** **`public`** 생성자 및 소멸자에 대해 액세스 지정자를에서로 변경 합니다. 이렇게 하면 클래스를 동적으로 만들고 소멸 하 고 표시 되기 전에 뷰 모양을 수정할 수 있습니다.
 
 변경 내용을 저장 하 고 다음 단계를 계속 합니다.
 

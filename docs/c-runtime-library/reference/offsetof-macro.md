@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951258"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213504"
 ---
 # <a name="offsetof-macro"></a>offsetof 매크로
 
@@ -50,13 +50,13 @@ size_t offsetof(
 *memberName*<br/>
 부모 데이터 구조에서 오프셋을 결정할 멤버의 이름입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **offsetof** 는 부모 데이터 구조의 시작 부분에서 지정 된 멤버의 오프셋 (바이트)을 반환 합니다. 이는 비트 필드의 경우 정의되지 않습니다.
 
 ## <a name="remarks"></a>설명
 
-**Offsetof** 매크로는 *structName* 에 지정 된 구조체의 시작 부분에서 **size_t**형식의 값으로 *memberName* 의 오프셋 (바이트)을 반환 합니다. **Struct** 키워드를 사용 하 여 형식을 지정할 수 있습니다.
+**Offsetof** 매크로는 *structName* 에 의해 지정 된 구조의 시작 부분에서 **size_t**형식 값으로 *memberName* 의 오프셋 (바이트)을 반환 합니다. 키워드를 사용 하 여 형식을 지정할 수 있습니다 **`struct`** .
 
 > [!NOTE]
 > **offsetof** 는 함수가 아니므로 C 프로토타입을 사용 하 여 설명할 수 없습니다.
@@ -67,12 +67,12 @@ size_t offsetof(
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>

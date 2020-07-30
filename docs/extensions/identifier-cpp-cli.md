@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172180"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219692"
 ---
 # <a name="__identifier-ccli"></a>__identifier(C++/CLI)
 
@@ -37,11 +37,11 @@ __identifier(C++_keyword)
 
 컴파일러 옵션: `/ZW`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 **예제**
 
-다음 예제에서는 C#으로 **template** 클래스를 만들고 DLL로 배포합니다. **template** 클래스를 사용하는 C++/CLI 프로그램에서, **__identifier** 키워드는 **template**이 표준 C++ 키워드라는 팩트를 숨깁니다.
+다음 예제에서는 라는 클래스가 `template` c #에서 만들어지고 DLL로 배포 됩니다. 클래스를 사용 하는 c + +/CLI 프로그램에서 `template` **`__identifier`** 키워드는 `template` 표준 c + + 키워드인 팩트를 숨깁니다.
 
 ```csharp
 // identifier_template.cs
@@ -71,9 +71,9 @@ int main() {
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
-다음 예제에서는 C#으로 **template** 클래스를 만들고 DLL로 배포합니다. **template** 클래스를 사용하는 C++/CLI 프로그램에서, **__identifier** 키워드는 **template**이 표준 C++ 키워드라는 팩트를 숨깁니다.
+다음 예제에서는 라는 클래스가 `template` c #에서 만들어지고 DLL로 배포 됩니다. 클래스를 사용 하는 c + +/CLI 프로그램에서 `template` **`__identifier`** 키워드는 `template` 표준 c + + 키워드인 팩트를 숨깁니다.
 
 ```csharp
 // identifier_template.cs
@@ -96,5 +96,5 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

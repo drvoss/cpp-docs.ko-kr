@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25fbb23ee7ecb7e55377aed74effe8bfa43a1597
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371283"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218366"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier 클래스
 
@@ -36,17 +36,17 @@ class ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-속성                                                                                | Description
+Name                                                                                | 설명
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[모듈::릴리스 통보자::~릴리스](#releasenotifier-tilde-releasenotifier) | 클래스의 현재 인스턴스를 초기화합니다. `Module::ReleaseNotifier`
-[모듈::릴리즈어::릴리즈어](#releasenotifier-releasenotifier)        | `Module::ReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
+[Module:: ReleaseNotifier:: ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | 클래스의 현재 인스턴스를 초기화 `Module::ReleaseNotifier` 합니다.
+[Module:: ReleaseNotifier:: ReleaseNotifier](#releasenotifier-releasenotifier)        | `Module::ReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-속성                                                         | Description
+이름                                                         | 설명
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[모듈::릴리스통보자::호출](#releasenotifier-invoke)   | 구현될 때 모듈의 마지막 개체가 해제되면 이벤트 처리기를 호출합니다.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | `Module::ReleaseNotifier` **true의**매개변수로 객체가 생성된 경우 현재 개체를 삭제합니다.
+[Module:: ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | 구현될 때 모듈의 마지막 개체가 해제되면 이벤트 처리기를 호출합니다.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | `Module::ReleaseNotifier`의 매개 변수를 사용 하 여 개체를 생성 한 경우 현재 개체를 삭제 **`true`** 합니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -54,19 +54,19 @@ class ReleaseNotifier;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** 모듈.h
+**헤더:** module .h
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>모듈::릴리스 통보자::~릴리스
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Module:: ReleaseNotifier:: ~ ReleaseNotifier
 
-클래스의 현재 인스턴스를 초기화합니다. `Module::ReleaseNotifier`
+클래스의 현재 인스턴스를 초기화 `Module::ReleaseNotifier` 합니다.
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>모듈::릴리스통보자::호출
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Module:: ReleaseNotifier:: Invoke
 
 구현될 때 모듈의 마지막 개체가 해제되면 이벤트 처리기를 호출합니다.
 
@@ -74,15 +74,15 @@ WRL_NOTHROW virtual ~ReleaseNotifier();
 virtual void Invoke() = 0;
 ```
 
-## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>모듈::릴리스통보자::릴리즈
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Module:: ReleaseNotifier:: Release
 
-`Module::ReleaseNotifier` **true의**매개변수로 객체가 생성된 경우 현재 개체를 삭제합니다.
+`Module::ReleaseNotifier`의 매개 변수를 사용 하 여 개체를 생성 한 경우 현재 개체를 삭제 **`true`** 합니다.
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>모듈::릴리즈어::릴리즈어
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Module:: ReleaseNotifier:: ReleaseNotifier
 
 `Module::ReleaseNotifier` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -93,4 +93,4 @@ ReleaseNotifier(bool release) throw();
 ### <a name="parameters"></a>매개 변수
 
 *릴리스*<br/>
-`true`메서드가 호출될 `Release` 때 이 인스턴스를 삭제합니다. `false` 이 인스턴스를 삭제하지 않습니다.
+**`true`** 메서드가 호출 될 때이 인스턴스를 삭제 하려면이 `Release` 고, **`false`** 이 인스턴스를 삭제 하지 않으려면입니다.

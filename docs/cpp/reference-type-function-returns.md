@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233628"
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 
@@ -86,7 +86,7 @@ y = 9
 
 참조 형식의 선언에는 다음 경우를 제외하고 이니셜라이저를 포함해야 합니다.
 
-- 명시적 **extern** 선언
+- 명시적 **`extern`** 선언
 
 - 클래스 멤버의 선언
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-이 경우 컴파일러에서 경고를 발생 시킵니다. `warning C4172: returning address of local variable or temporary`. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.
+컴파일러는 다음과 같은 경우에 경고를 발생 시킵니다 `warning C4172: returning address of local variable or temporary` .. 간단한 프로그램에서는 메모리 위치를 덮어쓰기 전에 호출자가 참조에 액세스하는 경우 일반적으로 액세스 위반이 발생하지 않습니다. 이 경우는 순전히 운이 작용한 것입니다. 경고에 주의하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;선택적&gt; 연산자'
+title: '&lt;선택적 &gt; 연산자'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373627"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224684"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;선택적&gt; 연산자
+# <a name="ltoptionalgt-operators"></a>&lt;선택적 &gt; 연산자
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 `optional` 개체가 우변에 있는 `optional` 개체와 같은지 테스트합니다.
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
-## <a name="operator"></a><a name="op_neq"></a>연산자!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 `optional` 개체가 우변에 있는 `optional` 개체와 같지 않은지 테스트합니다.
 
@@ -59,11 +59,11 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 ### <a name="remarks"></a>설명
 
@@ -83,15 +83,15 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작지만 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 작거나 같지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
@@ -107,15 +107,15 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 작거나 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -135,15 +135,15 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 목록이 연산자 우변의 목록보다 크면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`** 연산자 좌 변의 목록이 연산자 우변의 목록 보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -163,15 +163,15 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+*비어*\
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 *오른쪽*\
-형식의 `optional`개체 `nullopt_t`. `T`
+, 또는 형식의 개체 `optional` 입니다 `nullopt_t` `T` .
 
 ### <a name="return-value"></a>Return Value
 
-연산자 좌변의 `optional`가 연산자 우변의 `optional`보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.
+**`true`**`optional`연산자 좌 변의가 연산자 우변의 보다 크거나 같으면이 고, `optional` 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 

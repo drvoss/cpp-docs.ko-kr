@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182034"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228715"
 ---
 # <a name="generic-delegates-ccli"></a>제네릭 대리자(C++/CLI)
 
@@ -39,9 +39,9 @@ generic < [class | typename] type-parameter-identifiers>
 [제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)에 지정된 형식을 사용합니다.
 
 *accessibility-modifiers*<br/>
-(선택 사항) 접근성 한정자(예: **public**, **private**)입니다.
+필드 액세스 가능성 한정자 (예 **`public`** : **`private`** ).
 
-*result-type*<br/>
+*결과-형식*<br/>
 대리자의 반환 형식입니다.
 
 *identifier*<br/>
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [제네릭](generics-cpp-component-extensions.md)

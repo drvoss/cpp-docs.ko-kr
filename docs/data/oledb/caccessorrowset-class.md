@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233485"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 클래스
 
@@ -64,19 +64,19 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 |||
 |-|-|
-|[Bind](#bind)|[CCommand:: Open](../../data/oledb/ccommand-open.md)에서 `bBind`가 **false** 로 지정 된 경우에 사용 되는 바인딩을 만듭니다.|
+|[바인딩하며](#bind)|바인딩을 만듭니다 ( `bBind` **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)에서로 지정 된 경우에 사용 됨).|
 |[CAccessorRowset](#caccessorrowset)|생성자입니다.|
 |[닫기](#close)|행 집합 및 접근자를 닫습니다.|
 |[FreeRecordMemory](#freerecordmemory)|현재 레코드에서 해제 해야 하는 모든 열을 해제 합니다.|
 |[GetColumnInfo](#getcolumninfo)|[IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))를 구현 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-접근자를 관리 `TAccessor` 클래스입니다. 클래스 *trowset* 은 행 집합을 관리 합니다.
+클래스 `TAccessor` 는 접근자를 관리 합니다. 클래스 *trowset* 은 행 집합을 관리 합니다.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: Bind
 
-[CCommand:: Open](../../data/oledb/ccommand-open.md)에서 `bBind` **false** 로 지정한 경우 바인딩을 만듭니다.
+`bBind` **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)에서로 지정한 경우 바인딩을 만듭니다.
 
 ### <a name="syntax"></a>구문
 
@@ -84,7 +84,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 HRESULT Bind();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
@@ -108,7 +108,7 @@ CAccessorRowset();
 void Close();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 연결 된 모든 메모리를 해제 합니다.
 
@@ -141,11 +141,11 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 *OLE DB 프로그래머 참조*에서 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 를 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 사용자는 반환 된 열 정보와 문자열 버퍼를 해제 해야 합니다. [Cdynamicaccessor](../../data/oledb/cdynamicaccessor-class.md) 를 사용 하 고 바인딩을 재정의 해야 하는 경우이 메서드의 두 번째 버전을 사용 합니다.
 

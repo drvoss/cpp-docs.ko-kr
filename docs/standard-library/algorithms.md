@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 4b49b3c296d3afcbb26af028dc0b4a885444a897
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617640"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205225"
 ---
 # <a name="algorithms"></a>알고리즘
 
@@ -33,7 +33,7 @@ ms.locfileid: "84617640"
 
 - X y와 *같은*식-  -  *Y* *x* 및 *Y* 는 임의 액세스 반복기 이외의 반복기 일 수 있으며 수학적 의미로 사용 됩니다. **-** 이러한 값을 확인 해야 하는 경우 함수는 연산자를 반드시 계산 하지 않습니다. *X*n 및 x n과 같은 식의 경우에도 마찬가지입니다  +  *N* *X*  -  *N*. 여기서 *N* 은 정수 형식입니다.
 
-여러 알고리즘은에서와 같이 쌍으로 비교 하 여 bool 결과를 생성 하는 조건자를 사용 `operator==` 합니다. **bool** 조건자 함수 `operator==` 또는 해당 대체 항목은 피연산자 중 하나를 변경하면 안 됩니다. 이 메서드는 평가할 때마다 동일한 **bool** 결과를 생성 해야 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다.
+여러 알고리즘은를 사용 하 여 결과를 생성 하는 등의 쌍 비교를 수행 하는 조건자를 사용 `operator==` **`bool`** 합니다. 조건자 함수 `operator==` 또는 해당 대체 항목은 피연산자 중 하나를 변경하면 안 됩니다. 이는 평가할 때마다 동일한 결과를 생성 해야 **`bool`** 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다.
 
 여러 알고리즘이 시퀀스의 요소 쌍에 대해 엄격하고 약한 순서를 적용해야 하는 조건자를 사용합니다. 조건자 *pred*(*X*, *Y*):
 
@@ -45,9 +45,9 @@ ms.locfileid: "84617640"
 
 이러한 알고리즘 중 일부는 조건자 *x* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*x*, *y*) 및 `greater` (*x*, *y*)를 암시적으로 사용 합니다. 그러나 *X* Y와 같은 조건자는 \<= *Y* and *X* > =  *Y* 이 요구 사항을 충족 하지 않습니다.
 
-First, last) 범위에서 반복기에 의해 지정 된 요소의 시퀀스는 \[ *First* *Last* **<** (0, last first) 범위의 각 *n* 에 대해 \[ *Last*  -  *First*(*n*, *M* *last*  -  *first*) 조건자 \! ( \* (*first*  +  *M*) < \* (*first*  +  *N*))가 true 인 경우 연산자에 의해 순서가 지정 된 시퀀스입니다. 요소는 오름차순으로 정렬 됩니다. 조건자 함수 `operator<` 또는이 함수에 대 한 대체는 피연산자 중 하나를 변경 하지 않아야 합니다. 이 메서드는 평가할 때마다 동일한 **bool** 결과를 생성 해야 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다. 또한 비교하는 피연산자에 엄격하고 약한 순서를 적용해야 합니다.
+First, last) 범위에서 반복기에 의해 지정 된 요소의 시퀀스는 \[ *First* *Last* **<** (0, last first) 범위의 각 *n* 에 대해 \[ *Last*  -  *First*(*n*, *M* *last*  -  *first*) 조건자 \! ( \* (*first*  +  *M*) < \* (*first*  +  *N*))가 true 인 경우 연산자에 의해 순서가 지정 된 시퀀스입니다. 요소는 오름차순으로 정렬 됩니다. 조건자 함수 `operator<` 또는이 함수에 대 한 대체는 피연산자 중 하나를 변경 하지 않아야 합니다. 이는 평가할 때마다 동일한 결과를 생성 해야 **`bool`** 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다. 또한 비교하는 피연산자에 엄격하고 약한 순서를 적용해야 합니다.
 
-범위에서 반복기에 의해 지정 된 요소의 시퀀스는 \[ `First` `Last` 1의 `operator<` 각 *N* \[ , *Last*  -  *first*) 조건자 \! ( \* _first_  <  \* (*first*  +  *N*))가 true 인 경우에 의해 정렬 되는 힙입니다. 첫 번째 요소는 가장 큰 요소입니다. 그 외의 내부 구조는 템플릿 함수 [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)및 [push_heap](algorithm-functions.md#push_heap)에만 알려집니다. 정렬 된 시퀀스와 마찬가지로 조건자 함수 `operator<` 또는이에 대 한 대체 함수는 피연산자 중 하나를 변경 하지 않아야 하 고 비교 하는 피연산자에서 엄격한 약한 순서를 적용 해야 합니다. 이 메서드는 평가할 때마다 동일한 **bool** 결과를 생성 해야 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다.
+범위에서 반복기에 의해 지정 된 요소의 시퀀스는 \[ `First` `Last` 1의 `operator<` 각 *N* \[ , *Last*  -  *first*) 조건자 \! ( \* _first_  <  \* (*first*  +  *N*))가 true 인 경우에 의해 정렬 되는 힙입니다. 첫 번째 요소는 가장 큰 요소입니다. 그 외의 내부 구조는 템플릿 함수 [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)및 [push_heap](algorithm-functions.md#push_heap)에만 알려집니다. 정렬 된 시퀀스와 마찬가지로 조건자 함수 `operator<` 또는이에 대 한 대체 함수는 피연산자 중 하나를 변경 하지 않아야 하 고 비교 하는 피연산자에서 엄격한 약한 순서를 적용 해야 합니다. 이는 평가할 때마다 동일한 결과를 생성 해야 **`bool`** 하며, 두 피연산자 중 하나의 복사본을 피연산자로 대체할 경우 동일한 결과를 생성 해야 합니다.
 
 C + + 표준 라이브러리 알고리즘은 [\<algorithm>](algorithm.md) 및 [\<numeric>](numeric.md) 헤더 파일에 있습니다.
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234226"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -69,21 +69,21 @@ lldiv_t div(
 
 ### <a name="parameters"></a>매개 변수
 
-*numer*<br/>
+*숫자로*<br/>
 분자입니다.
 
 *denom*<br/>
 분모입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**int** 형식의 인수를 사용 하 여 호출 된 **div** 는 몫과 나머지를 구성 하는 **div_t**형식의 구조체를 반환 합니다. **Long** 형식의 인수를 포함 하는 반환 값은 **ldiv_t**이 고 **long** **long** 형식의 인수를 포함 하는 반환 값은 **lldiv_t**입니다. **div_t**, **ldiv_t**및 **lldiv_t** 는 stdlib.h >에 \<정의 되어 있습니다.
+형식의 인수를 사용 하 여 호출 된 **div** 는 **`int`** 몫과 나머지를 구성 하는 **div_t**형식의 구조체를 반환 합니다. 형식의 인수를 포함 하는 반환 값 **`long`** 이 **ldiv_t**되 고 형식의 인수를 포함 하는 반환 값이 **`long long`** **lldiv_t**됩니다. **div_t**, **ldiv_t**및 **lldiv_t** 는에 정의 되어 \<stdlib.h> 있습니다.
 
 ## <a name="remarks"></a>설명
 
-**Div** 함수는 *숫자로* 을 *denom* 로 나눈 다음 몫과 나머지를 계산 합니다. [Div_t](../../c-runtime-library/standard-types.md) 구조체에는 몫, **q**및 나머지가 포함 **됩니다.** 몫의 부호는 수학적 몫의 부호와 같습니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.
+**Div** 함수는 *숫자로* 을 *denom* 로 나눈 다음 몫과 나머지를 계산 합니다. [Div_t](../../c-runtime-library/standard-types.md) 구조체에는 몫, **q**및 나머지가 포함 **됩니다.** 몫의 부호는 수학적 몫의 부호와 동일 합니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.
 
-**Long** 또는 **long** **long** 형식의 인수를 사용 하는 C++ **div** 의 오버 로드는 코드 에서만 사용할 수 있습니다. 반환 형식 [ldiv_t](../../c-runtime-library/standard-types.md) 및 [lldiv_t](../../c-runtime-library/standard-types.md) 에는 **div_t**멤버와 동일한 의미를 갖는 **q** 및 **rem**멤버가 포함 되어 있습니다.
+또는 형식의 인수를 사용 하는 **div** 의 오버 로드는 **`long`** **`long long`** c + + 코드 에서만 사용할 수 있습니다. 반환 형식 [ldiv_t](../../c-runtime-library/standard-types.md) 및 [lldiv_t](../../c-runtime-library/standard-types.md) 에는 **div_t**멤버와 동일한 의미를 갖는 **q** 및 **rem**멤버가 포함 되어 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -91,7 +91,7 @@ lldiv_t div(
 |-------------|---------------------|
 |**div**, **ldiv**, **lldiv**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -131,7 +131,7 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

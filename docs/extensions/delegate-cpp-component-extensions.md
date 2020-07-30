@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219731"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate(C++/CLI 및 C++/CX)
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>매개 변수
 
-*access*<br/>
-(선택 사항) 대리자의 접근성으로, **public**(기본값) 또는 **private**일 수 있습니다. **const** 또는 **volatile** 키워드를 사용하여 함수 프로토타입을 한정할 수도 있습니다.
+*액세스*<br/>
+필드 (기본값) 또는 일 수 있는 대리자의 접근성입니다 **`public`** **`private`** . 함수 프로토타입은 또는 키워드를 사용 하 여 정규화 할 수도 있습니다 **`const`** **`volatile`** .
 
-*return-type*<br/>
+*반환 형식*<br/>
 함수 프로토타입의 반환 형식입니다.
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>매개 변수
 
-*access*<br/>
+*액세스*<br/>
 (선택 사항) 어셈블리 외부의 대리자 접근성은 public 또는 private일 수 있습니다.  기본값은 private입니다.  클래스 내부의 대리자에는 모든 접근성이 있을 수 있습니다.
 
 *function_declaration*<br/>
 대리자에 바인딩할 수 있는 함수의 시그니처입니다. 대리자의 반환 형식은 모든 관리형 형식일 수 있습니다. 상호 운용성을 위해 대리자의 반환 형식으로 CLS 형식을 사용하는 것이 좋습니다.
 
-바인딩되지 않은 대리자를 정의하려면 *function_declaration*의 첫 번째 매개 변수가 개체에 대한 **this** 포인터의 형식이어야 합니다.
+바인딩되지 않은 대리자를 정의 하려면 *function_declaration* 의 첫 번째 매개 변수가 **`this`** 개체에 대 한 포인터의 형식 이어야 합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -127,7 +127,7 @@ function_declaration
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 예제에서는 대리자를 선언, 초기화 및 호출하는 방법을 보여 줍니다.
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

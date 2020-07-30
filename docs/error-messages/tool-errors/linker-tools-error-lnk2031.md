@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225204"
 ---
 # <a name="linker-tools-error-lnk2031"></a>링커 도구 오류 LNK2031
 
 > "*function_declaration*" *decorated_name*;에 대해 p/invoke를 생성할 수 없습니다. 메타 데이터에 누락 된 호출 규칙이 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-네이티브 함수를 순수 이미지로 가져오는 경우 네이티브 컴파일 및 순수 컴파일 간에 암시적 호출 규칙이 서로 다르다는 점에 주의 해야 합니다. 순수 이미지에 대 한 자세한 내용은 [순수형 및 안정형 코드C++(/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조 하세요.
+네이티브 함수를 순수 이미지로 가져오는 경우 네이티브 컴파일 및 순수 컴파일 간에 암시적 호출 규칙이 서로 다르다는 점에 주의 해야 합니다. 순수 이미지에 대 한 자세한 내용은 [순수형 및 안정형 코드 (c + +/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)를 참조 하세요.
 
 **/Clr: pure** 컴파일러 옵션은 visual studio 2015에서는 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>예제
 
-다음 샘플에서는 순수 이미지에서 네이티브 함수를 사용 하는 방법을 보여 줍니다. 명시적 **__cdecl** 호출 규칙 지정자를 확인 합니다.
+다음 샘플에서는 순수 이미지에서 네이티브 함수를 사용 하는 방법을 보여 줍니다. 명시적 **`__cdecl`** 호출 규칙 지정자를 확인 합니다.
 
 ```cpp
 // LNK2031_c.cpp

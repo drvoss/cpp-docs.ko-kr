@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911194"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231327"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -127,7 +127,7 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 변경할 문자열입니다.
 
 *c*<br/>
@@ -145,7 +145,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>설명
 
-**_Strnset** 함수는 *str* 의 처음 *카운트* 문자를 *c* 로 ( **char**로 변환) 설정 합니다. *Count* 가 *str*의 길이 보다 크면 *count*대신 *str* 의 길이가 사용 됩니다.
+**_Strnset** 함수는 *str* 의 처음 *카운트* 문자를 최대 *c* (로 변환)로 설정 합니다 **`char`** . *Count* 가 *str*의 길이 보다 크면 *count*대신 *str* 의 길이가 사용 됩니다.
 
 **_wcsnset** 및 **_mbsnset** 는 **_strnset**의 와이드 문자 및 멀티 바이트 문자 버전입니다. **_Wcsnset** 문자열 인수와 반환 값은 와이드 문자열입니다. **_mbsnset** 의 이러한 문자열은 멀티 바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
@@ -198,10 +198,10 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

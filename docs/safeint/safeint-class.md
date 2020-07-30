@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219354"
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 
@@ -33,7 +33,7 @@ class SafeInt;
 
 ### <a name="parameters"></a>매개 변수
 
-| 템플릿  |  Description |
+| 템플릿  |  설명 |
 |--------|------------|
 | T         |  `SafeInt`로 대체되는 정수 또는 부울 매개 변수의 형식입니다. |
 | E         |  오류 처리 정책을 정의하는 열거형 데이터 형식입니다. |
@@ -187,7 +187,7 @@ SafeInt 개체를 사용 하 여 논리 비교를 수행 하는 경우 비교는
 
 - `((uint)~0) > -1`
 
-첫 번째 문은 **true**이고, 두 번째 문은 `false`입니다. 0의 비트 부정 연산은 0xFFFFFFFF입니다. 두 번째 문에서 기본 비교 연산자는 0xFFFFFFFF와 0xFFFFFFFF를 비교하고 두 값이 같다고 간주합니다. 클래스에 대 한 비교 연산자는 `SafeInt` 두 번째 매개 변수가 음수 이지만 첫 번째 매개 변수가 부호 없는 임을 인식 합니다. 따라서 비트 표현이 동일 하더라도 `SafeInt` 논리 연산자는 부호 없는 정수가-1 보다 크다는 것을 인식 합니다.
+첫 번째 문은로 확인 **`true`** 되지만 두 번째 문은로 확인 **`false`** 됩니다. 0의 비트 부정 연산은 0xFFFFFFFF입니다. 두 번째 문에서 기본 비교 연산자는 0xFFFFFFFF와 0xFFFFFFFF를 비교하고 두 값이 같다고 간주합니다. `SafeInt` 클래스의 비교 연산자는 첫 번째 매개 변수는 부호가 없지만 두 번째 매개 변수는 음수임을 인식합니다. 따라서 비트 표현은 동일하지만, `SafeInt` 논리 연산자에서 부호 없는 정수가 -1보다 크다고 인식합니다.
 
 `SafeInt` 클래스와 `?:` 3개로 구성된 연산자를 함께 사용할 때는 주의하세요. 다음 코드 줄이 있다고 가정합니다.
 
@@ -201,7 +201,7 @@ Int x = flag ? SafeInt<unsigned int>(y) : -1;
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-`flag`가 `false`이면, 컴파일러는 `x`에 값 -1을 할당하는 대신 예외를 throw합니다. 따라서 이 동작을 방지하려면 다음과 같은 올바른 코드 줄을 사용해야 합니다.
+`flag`가 이면 **`false`** 컴파일러는-1 값을에 할당 하는 대신 예외를 throw `x` 합니다. 따라서 이 동작을 방지하려면 다음과 같은 올바른 코드 줄을 사용해야 합니다.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;

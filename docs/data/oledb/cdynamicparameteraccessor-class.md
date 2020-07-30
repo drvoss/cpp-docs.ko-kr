@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 9c326c337ff210ef9de26b3fd88c0d853832b260
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216468"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 클래스
 
@@ -131,7 +131,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|버퍼에 저장된 지정된 매개 변수의 상태를 설정합니다.|
 |[SetParamString](#setparamstring)|버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 설정합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 공급자는 이 클래스를 사용할 소비자에 대해 `ICommandWithParameters` 를 지원해야 합니다.
 
@@ -161,7 +161,7 @@ BLOB 데이터를 처리 하는 방법을 지정 합니다. 기본값은 DBBLOBH
 *nBlobSize*<br/>
 최대 BLOB 크기 (바이트)입니다. 이 값에 대 한 열 데이터는 BLOB으로 처리 됩니다. 기본값은 8000입니다. 자세한 내용은 [Cdynamicaccessor:: SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 를 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 BLOB 처리에 대 한 자세한 내용은 [cdynamicaccessor:: cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) 생성자를 참조 하세요.
 
@@ -197,9 +197,9 @@ void* GetParam(TCHAR* pParamName) const throw();
 *pData*<br/>
 제한이 버퍼에서 검색 된 데이터를 포함 하는 메모리에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-템플릿이 아닌 버전의 경우는 버퍼에서 검색 된 데이터를 포함 하는 메모리를 가리킵니다. 템플릿 버전의 경우 success에 대해 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+템플릿이 아닌 버전의 경우는 버퍼에서 검색 된 데이터를 포함 하는 메모리를 가리킵니다. 템플릿 기반 버전의 경우 **`true`** 성공 시 또는 실패 시를 반환 **`false`** 합니다.
 
 `GetParam`를 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 검색 합니다. [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) 을 사용 하 여 버퍼에서 문자열 매개 변수 데이터를 검색 합니다.
 
@@ -213,7 +213,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 DB_UPARAMS GetParamCount() const throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 매개 변수 수입니다.
 
@@ -234,7 +234,7 @@ bool GetParamIO(DBORDINAL nParam,
 [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예는 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 을 참조 하세요.
 
 *pParamIO*<br/>
-지정 된 매개 변수의 `DBPARAMIO` 형식 (입력 또는 출력)을 포함 하는 변수에 대 한 포인터입니다. 아래와 같이 정의됩니다.
+`DBPARAMIO`지정 된 매개 변수의 형식 (입력 또는 출력)을 포함 하는 변수에 대 한 포인터입니다. 아래와 같이 정의됩니다.
 
 ```cpp
 typedef DWORD DBPARAMIO;
@@ -246,9 +246,9 @@ enum DBPARAMIOENUM {
 };
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 ## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: GetParamLength
 
@@ -271,9 +271,9 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 *pLength*<br/>
 [out] 지정된 매개 변수의 길이(바이트)를 포함하는 변수에 대한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 재정의는 성공 시 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다. 두 번째 재정의는 매개 변수 길이를 포함하는 메모리를 가리킵니다.
+첫 번째 재정의는 **`true`** 성공 또는 실패 시 반환 **`false`** 됩니다. 두 번째 재정의는 매개 변수 길이를 포함하는 메모리를 가리킵니다.
 
 ## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: GetParamName
 
@@ -290,7 +290,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 *nParam*<br/>
 [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예는 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 을 참조 하세요.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 매개 변수의 이름입니다.
 
@@ -315,9 +315,9 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 *pStatus*<br/>
 제한이 지정 된 매개 변수의 DBSTATUS 상태를 포함 하는 변수에 대 한 포인터입니다. DBSTATUS 값에 대 한 자세한 내용은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하거나 oledb에서 dbstatus를 검색 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 재정의는 성공 시 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다. 두 번째 재정의는 지정 된 매개 변수의 상태를 포함 하는 메모리를 가리킵니다.
+첫 번째 재정의는 **`true`** 성공 또는 실패 시 반환 **`false`** 됩니다. 두 번째 재정의는 지정 된 매개 변수의 상태를 포함 하는 메모리를 가리킵니다.
 
 ## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: GetParamString
 
@@ -347,7 +347,7 @@ bool GetParamString(DBORDINAL nParam,
 [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예는 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 을 참조 하세요.
 
 *strOutput*<br/>
-제한이 지정 된 매개 변수의 ANSI (`CSimpleStringA`) 또는 유니코드 (`CSimpleStringW`) 문자열 데이터입니다. `CString`형식의 매개 변수를 전달 해야 합니다. 예를 들면 다음과 같습니다.
+제한이 `CSimpleStringA`지정 된 매개 변수의 ANSI () 또는 유니코드 ( `CSimpleStringW` ) 문자열 데이터입니다. 형식의 매개 변수를 전달 해야 합니다 `CString` . 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
 
@@ -357,11 +357,11 @@ bool GetParamString(DBORDINAL nParam,
 *pMaxLen*<br/>
 제한이 *Pbuffer* (종료 NULL을 포함 하는 문자)에서 가리키는 버퍼 크기에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-*Pbuffer* 가 NULL 인 경우이 메서드는 *pMaxLen* 가 가리키는 메모리에 필요한 버퍼 크기를 설정 하 고 데이터를 복사 하지 않고 **true** 를 반환 합니다.
+*Pbuffer* 가 NULL 인 경우이 메서드는 *pMaxLen* 가 가리키는 메모리에 필요한 버퍼 크기를 설정 하 고 **`true`** 데이터를 복사 하지 않고 반환 합니다.
 
 버퍼 *pbuffer* 가 전체 문자열을 포함 하기에 충분히 크지 않은 경우이 메서드는 실패 합니다.
 
@@ -386,9 +386,9 @@ bool GetParamType(DBORDINAL nParam,
 *pType*<br/>
 제한이 지정 된 매개 변수의 데이터 형식을 포함 하는 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 ## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: SetParam
 
@@ -427,9 +427,9 @@ bool SetParam(TCHAR* pParamName,
 *status*<br/>
 진행 DBSTATUS 열 상태입니다. DBSTATUS 값에 대 한 자세한 내용은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하거나 oledb에서 dbstatus를 검색 하십시오.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 `SetParam`를 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 설정 합니다. [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) 을 사용 하 여 버퍼에 문자열 매개 변수 데이터를 설정 합니다.
 
@@ -452,9 +452,9 @@ bool SetParamLength(DBORDINAL nParam,
 *length*<br/>
 진행 지정 된 매개 변수의 길이 (바이트)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 ## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: SetParamStatus
 
@@ -475,9 +475,9 @@ bool SetParamStatus(DBORDINAL nParam,
 *status*<br/>
 진행 지정 된 매개 변수의 DBSTATUS 상태입니다. DBSTATUS 값에 대 한 자세한 내용은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하거나 oledb에서 dbstatus를 검색 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 ## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: SetParamString
 
@@ -504,11 +504,11 @@ bool SetParamString(DBORDINAL nParam,
 *status*<br/>
 진행 지정 된 매개 변수의 DBSTATUS 상태입니다. DBSTATUS 값에 대 한 자세한 내용은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하거나 oledb에서 dbstatus를 검색 하십시오.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-성공 하면 **true** 를 반환 하 고 실패 하면 **false** 를 반환 합니다.
+**`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-*pstring*에 대해 지정 된 최대 크기 보다 큰 문자열을 설정 하려고 하면 `SetParamString` 실패 합니다.
+`SetParamString`*pstring*에 대해 지정 된 최대 크기 보다 큰 문자열을 설정 하려고 하면가 실패 합니다.
 
 `SetParamString`를 사용 하 여 버퍼에 문자열 매개 변수 데이터를 설정 합니다. [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 을 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 설정 합니다.
 

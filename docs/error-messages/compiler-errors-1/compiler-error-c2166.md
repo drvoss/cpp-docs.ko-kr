@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2166
 ms.assetid: 12789c3a-cc76-48bb-ae2e-64283e0964ed
-ms.openlocfilehash: 73b3c29c5e4bdd22a50330a8a90aad37a9d45cbf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a292a7d654861c265457ad26b009ae6f4b9cb54e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216338"
 ---
 # <a name="compiler-error-c2166"></a>컴파일러 오류 C2166
 
 l-value가 const 개체를 지정합니다.
 
-코드에서 `const`로 선언된 항목을 수정하려고 합니다.
+코드는 선언 된 항목을 수정 하려고 **`const`** 합니다.
 
 다음 샘플에서는 C2166을 생성합니다.
 

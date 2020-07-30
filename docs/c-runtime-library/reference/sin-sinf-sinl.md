@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507016"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216728"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -79,7 +79,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **sin** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **sin** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **sin** 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **sin** 은 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 

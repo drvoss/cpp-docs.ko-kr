@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: d76b08a31cacdc4e2e367a236ce98ec5204ac3e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163065"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233264"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>컴파일러 경고(수준 1) C4312
 
 'identifier' : 'type1'에서 더 큰 'type2'(으)로의 변환입니다.
 
-이 경고는 32비트 값을 64비트 포인터 형식에 할당하려는 식도를 감지합니다. 예를 들어 32비트 `int` 또는 `long`을 64비트 포인터로 캐스팅합니다.
+이 경고는 64 비트 포인터 형식 (예: 32 비트 **`int`** 또는 64 비트 포인터로 캐스팅)에 32 비트 값을 할당 하려는 시도를 검색 **`long`** 합니다.
 
 이 변환은 부호 확장이 발생할 경우 32비트에 맞는 포인터 값에서도 안전하지 않을 수 있습니다. 음의 32비트 정수가 64비트 포인터 형식에 할당될 경우 부호 확장으로 인해 포인터 값이 정수의 값과 다른 메모리 주소를 참조할 수 있습니다.
 

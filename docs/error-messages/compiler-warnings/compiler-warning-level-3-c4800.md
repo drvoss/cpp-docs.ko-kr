@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220017"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>컴파일러 경고 (수준 4) C4800
 
@@ -23,7 +23,7 @@ Visual Studio 2019 이상:
 C4800는 Visual Studio 2015 이전 버전의 수준 3 경고입니다.
 > '*type*': 값을 bool ' true ' 또는 ' f a l s e '로 강제 적용 합니다 (성능 경고).
 
-이 경고는 값이 암시적으로 `bool`형식으로 변환 될 때 생성 됩니다. 일반적으로이 메시지는 `bool` 변수에 `int` 변수를 할당 하는 경우에 발생 합니다. `int` 변수에는 **true** 및 **false**값만 포함 되 고 `bool`형식으로 다시 선언할 수 있습니다. `bool`형식을 사용 하도록 식을 다시 작성할 수 없는 경우 식에 "`!=0`"를 추가 하 여 식 형식 `bool`수 있습니다. 식을 형식 `bool`로 캐스팅 하면 경고가 발생 하지 않습니다.
+이 경고는 값이 암시적으로 형식으로 변환 될 때 생성 됩니다 **`bool`** . 일반적으로이 메시지는 변수에 변수와 **`int`** **`bool`** **`int`** 만 포함 되어 **`true`** **`false`** 있고 형식으로 다시 선언 될 수 있는 변수에 변수를 할당 하는 경우에 발생 합니다 **`bool`** . 형식을 사용 하도록 식을 다시 작성할 수 없는 경우 식에 ""를 추가 하 여 식 **`bool`** 형식을 지정할 수 있습니다 `!=0` **`bool`** . 식을 형식으로 캐스팅 하면 **`bool`** 경고가 발생 하지 않습니다.
 
 ::: moniker range=">= vs-2017"
 이 경고는 Visual Studio 2017에서 내보내지 않습니다.

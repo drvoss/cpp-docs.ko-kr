@@ -9,47 +9,47 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232692"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT(함수 내보내기)
 
-프로그램에서 함수 이름 또는 서 수 데이터를 내보냅니다.
+프로그램에서 이름 또는 서 수 또는 데이터를 기준으로 함수를 내보냅니다.
 
 ## <a name="syntax"></a>구문
 
-> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>[**,NONAME**]][**,DATA**]
+> **/Export:**<em>entryname</em>[**, \@ **<em>ordinal</em>[**, NONAME**]] [**, DATA**]
 
 ## <a name="remarks"></a>설명
 
-합니다 **/내보내기** 옵션에는 다른 프로그램 함수를 호출 하거나 데이터를 사용할 수 있도록 프로그램에서 내보낼 함수 또는 데이터 항목을 지정 합니다. 내보내기는 일반적으로 DLL에 정의 됩니다.
+**/Export** 옵션은 다른 프로그램에서 함수를 호출 하거나 데이터를 사용할 수 있도록 프로그램에서 내보낼 함수 또는 데이터 항목을 지정 합니다. 내보내기는 일반적으로 DLL에 정의 됩니다.
 
-합니다 *entryname* 호출 프로그램에서 사용 하는 것은 함수 또는 데이터 항목의 이름입니다. *서 수* 지정 하지 않으면 경우는 범위는 1부터 65535의 내보내기 테이블에 인덱스를 지정 합니다 *서*, 링크 값을 할당 합니다. 합니다 **NONAME** 키워드는 서 수로만 없이 함수를 내보냅니다는 *entryname*합니다.
+*Entryname* 은 호출 프로그램에서 사용할 함수 또는 데이터 항목의 이름입니다. *서 수* 는 1에서 65535 사이의 내보내기 테이블에 인덱스를 지정 합니다. *서 수*를 지정 하지 않으면 LINK에서 1을 할당 합니다. **NONAME** 키워드는 *entryname*없이 서 수로만 함수를 내보냅니다.
 
-합니다 **데이터** 키워드 내보낸된 항목이 데이터 항목 임을 지정 합니다. 사용 하 여 클라이언트 프로그램에서 데이터 항목을 선언 해야 합니다 **extern __declspec (dllimport)** 합니다.
+**Data** 키워드는 내보낸 항목이 데이터 항목 임을 지정 합니다. 클라이언트 프로그램의 데이터 항목은 **dllimport (extern __declspec)** 를 사용 하 여 선언 해야 합니다.
 
-사용 하 여 권장 되는 순서 대로 나열 된 정의 내보내는 데는 다음과 같은 네 가지가 있습니다.
+정의를 내보내는 방법에는 다음 네 가지 방법이 있습니다. 권장 되는 사용 순서 대로 나열 됩니다.
 
-1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) 소스 코드
+1. 소스 코드의 [__declspec (dllexport)](../../cpp/dllexport-dllimport.md)
 
-1. [내보내기를](exports.md) .def 파일에서 문
+1. .Def 파일의 [EXPORTS](exports.md) 문
 
-1. LINK 명령에는 /EXPORT 사양
+1. LINK 명령의 /EXPORT 사양
 
-1. A [주석](../../preprocessor/comment-c-cpp.md) 폼의 소스 코드에 지시문 `#pragma comment(linker, "/export: definition ")`합니다.
+1. 폼의 소스 코드에 있는 [주석](../../preprocessor/comment-c-cpp.md) 지시문 `#pragma comment(linker, "/export: definition ")` 입니다.
 
-동일한 프로그램에서 이러한 모든 메서드를 사용할 수 있습니다. 링크 내보내기를 포함 하는 프로그램을 빌드할 때 문제가 빌드에서.exp 파일을 사용 하지 않으면 가져오기 라이브러리도를 만듭니다.
+이러한 모든 메서드는 동일한 프로그램에서 사용할 수 있습니다. LINK가 내보내기를 포함 하는 프로그램을 빌드하는 경우 빌드에서 .exp 파일을 사용 하지 않는 한 가져오기 라이브러리도 만듭니다.
 
-LINK 사용 하 여 데코 레이트 형식의 식별자입니다. .Obj 파일을 만들 때 컴파일러에서 식별자를 데코레이팅합니다. 하는 경우 *entryname* 해당 데코 레이트 되지 않은 링커 지정 됩니다 (소스 코드에 표시) 된 대로 양식의 링크 이름 일치 시 키 려 합니다. 고유한 일치를 찾을 수 없으면 링크는 오류 메시지를 발급 합니다. 사용 하 여는 [DUMPBIN](dumpbin-reference.md) 가져올 도구는 [데코 레이트 된 이름](decorated-names.md) 을 링커에 지정 해야 할 때 식별자의 형식입니다.
+링크에서 데코레이팅된 형식의 식별자를 사용 합니다. 컴파일러는 .obj 파일을 만들 때 식별자를 데코 레이트 합니다. *Entryname* 가 소스 코드에 표시 되는 데코레이팅되지 않은 형식으로 링커에 지정 된 경우 링크는 이름과 일치 하도록 시도 합니다. 고유한 일치 항목을 찾을 수 없는 경우 링크에서 오류 메시지를 발행 합니다. 링커에 대해 지정 해야 하는 경우 [DUMPBIN](dumpbin-reference.md) 도구를 사용 하 여 식별자의 [데코레이팅된 이름](decorated-names.md) 형식을 가져옵니다.
 
 > [!NOTE]
-> 데코 레이트 된 형식의 선언 된 C 식별자를 지정 하지 마세요 `__cdecl` 또는 `__stdcall`합니다.
+> 또는로 선언 된 C 식별자의 데코레이팅된 형식을 지정 하지 마세요 **`__cdecl`** **`__stdcall`** .
 
-데코 레이트 되지 않은 함수 이름을 내보내고에 빌드 구성에 따라 다른 내보내기 (예를 들어 32 비트 또는 64 비트 빌드) 해야 할 경우에 각 구성에 대 한 다른 DEF 파일을 사용할 수 있습니다. (조건부 전처리기 지시문 DEF 파일에는 허용 되지 않습니다.) 사용할 수 있습니다는 `#pragma comment` 는 여기에 표시 된 함수 선언 전에 지시문 `PlainFuncName` 데코 레이트 되지 않은 이름 및 `_PlainFuncName@4` 함수의 트 데코 레이 된 이름:
+데코레이팅되지 않은 함수 이름을 내보내야 하 고 빌드 구성에 따라 다른 내보내기를 포함 하는 경우 (예: 32 비트 또는 64 비트 빌드) 각 구성에 대해 서로 다른 DEF 파일을 사용할 수 있습니다. 전처리기 조건부 지시문은 DEF 파일에서 사용할 수 없습니다. 또는 `#pragma comment` 여기에 표시 된 것 처럼 함수 선언 앞에 지시문을 사용할 수 있습니다. 여기서 `PlainFuncName` 은 데코레이팅되지 않은 이름이 고 `_PlainFuncName@4` 은 데코레이팅된 함수 이름입니다.
 
 ```cpp
 #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
@@ -60,15 +60,15 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. 선택 된 **구성 속성** > **링커** > **명령줄** 속성 페이지.
+1. **구성 속성**  >  **링커**  >  **명령줄** 속성 페이지를 선택 합니다.
 
-1. 에 대 한 옵션을 입력 합니다 **추가 옵션** 상자입니다.
+1. **추가 옵션** 상자에 옵션을 입력 합니다.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)

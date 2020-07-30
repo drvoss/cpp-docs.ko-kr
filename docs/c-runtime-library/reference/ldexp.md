@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216923"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,18 +80,18 @@ long double ldexpl(
 *x*<br/>
 부동 소수점 값입니다.
 
-*.exp*<br/>
+*exp*<br/>
 정수 지수입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**Ldexp** 함수는 성공한 경우 *x* \* 2<sup>*exp*</sup> 의 값을 반환 합니다. 오버플로 시와 *x*의 부호에 따라 **ldexp** 는 +/- **HUGE_VAL**을 반환 합니다. **errno** 값은 **ERANGE**로 설정 됩니다.
+**Ldexp** 함수는 *x* \* 성공한 경우 x 2<sup>*exp*</sup> 의 값을 반환 합니다. 오버플로 시와 *x*의 부호에 따라 **ldexp** 는 +/- **HUGE_VAL**을 반환 합니다. **errno** 값은 **ERANGE**로 설정 됩니다.
 
 **Errno** 및 가능한 오류 반환 값에 대 한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하는 **ldexp** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **ldexp** 는 항상 **double** 과 **int** 를 사용 하 고 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 형식을 사용 하는 **ldexp** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **ldexp** 는 항상 및을 사용 **`double`** **`int`** 하 고을 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 

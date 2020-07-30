@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 137d09cb510a27a495c91b343a56dd11b41b42b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232055"
 ---
 # <a name="compiler-error-c3018"></a>컴파일러 오류 C3018
 
 'var1': OpenMP 'for' 문의 테스트 식 또는 증가 식에는 인덱스 변수 'var2'를 사용해야 합니다.
 
-OpenMP 문의 `for` 루프는 인덱스에 사용하는 것과 동일한 변수를 해당 테스트 식과 증가 식에 사용해야 합니다.
+**`for`** OpenMP 문의 루프는 인덱스에 사용 되는 것과 동일한 변수를 해당 테스트 및 증분으로 사용 해야 합니다.
 
 다음 샘플에서는 C3018을 생성합니다.
 

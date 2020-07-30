@@ -1,17 +1,17 @@
 ---
-title: first_is (C++ COM 특성)
+title: first_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167019"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228065"
 ---
 # <a name="first_is"></a>first_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80167019"
 
 ## <a name="remarks"></a>설명
 
-**First_is** C++ 특성에는 [first_is](/windows/win32/Midl/first-is) MIDL 특성과 동일한 기능이 있습니다.
+**First_is** c + + 특성에는 [first_is](/windows/win32/Midl/first-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**적용 대상**|**구조체** 또는 **공용 구조체**의 필드, 인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
+|**불가능**|아니요|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

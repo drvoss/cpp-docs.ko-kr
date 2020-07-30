@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217209"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive-(표준 준수)
 
@@ -40,7 +40,7 @@ ms.locfileid: "84507029"
 
 Visual Studio 2017 버전 15.3에서 시작 하는 컴파일러 버전에서는 옵션을 **`/permissive-`** 설정 합니다 [**`/Zc:ternary`**](zc-ternary.md) . 또한 컴파일러는 2 단계 이름 조회에 대 한 요구 사항을 추가로 구현 합니다. **`/permissive-`** 옵션이 설정 되 면 컴파일러는 함수와 클래스 템플릿 정의를 구문 분석 하 고 템플릿에 사용 되는 종속 및 종속 되지 않은 이름을 식별 합니다. 이 릴리스에서는 이름 종속성 분석만 수행 됩니다.
 
-표준에서 구현까지 유지 하는 환경 관련 확장 및 언어 영역은의 영향을 받지 않습니다 **`/permissive-`** . 예를 들어 Microsoft 전용 `__declspec` 호출 규칙 및 구조적 예외 처리 키워드, 컴파일러 관련 pragma 지시문 또는 특성은 컴파일러가 모드에서 플래그 지정 되지 않습니다 **`/permissive-`** .
+표준에서 구현까지 유지 하는 환경 관련 확장 및 언어 영역은의 영향을 받지 않습니다 **`/permissive-`** . 예를 들어 Microsoft 전용 **`__declspec`** 호출 규칙 및 구조적 예외 처리 키워드, 컴파일러 관련 pragma 지시문 또는 특성은 컴파일러가 모드에서 플래그 지정 되지 않습니다 **`/permissive-`** .
 
 **`/permissive-`** 이 옵션은 현재 컴파일러 버전의 규칙 지원 기능을 사용 하 여 일치 하지 않는 언어 구문을 확인 합니다. 옵션은 코드가 특정 버전의 c + + 표준에 맞는지 확인 하지 않습니다. 최신 초안 표준에 대해 구현 된 모든 컴파일러 지원을 사용 하도록 설정 하려면 [**`/std:c++latest`**](std-specify-language-standard-version.md) 옵션을 사용 합니다. 현재 구현 된 c + + 17 표준에 대 한 컴파일러 지원을 제한 하려면 [**`/std:c++17`**](std-specify-language-standard-version.md) 옵션을 사용 합니다. 컴파일러 지원이 c + + 14 표준에 더 가깝게 일치 하도록 제한 하려면 [**`/std:c++14`**](std-specify-language-standard-version.md) 기본값 인 옵션을 사용 합니다.
 

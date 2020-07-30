@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d38307c4ae19e5f87d0dbcca8943dc1c3f239917
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376556"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232900"
 ---
 # <a name="sync_per_container-class"></a>sync_per_container 클래스
 
-각 할당자 개체에 대해 별도의 캐시 개체를 제공하는 [동기화 필터에](../standard-library/allocators-header.md) 대해 설명합니다.
+각 할당자 개체에 대해 별도의 캐시 개체를 제공 하는 [동기화 필터](../standard-library/allocators-header.md) 에 대해 설명 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,11 +40,11 @@ class sync_per_container
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<allocators>
+**헤더:**\<allocators>
 
 **네임스페이스:** stdext
 
-## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::같음
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container:: equals
 
 두 캐시가 같은지 비교합니다.
 
@@ -61,10 +61,10 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="return-value"></a>Return Value
 
-멤버 함수는 항상 **false**를 반환합니다.
+멤버 함수는 항상 **`false`** 를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
 ## <a name="see-also"></a>참고 항목
 
-[\<할당자>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

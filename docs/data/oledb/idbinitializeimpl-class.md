@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210771"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218327"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 클래스
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-`IDBInitializeImpl`에서 파생 된 클래스입니다.
+에서 파생 된 클래스 `IDBInitializeImpl` 입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 |||
 |-|-|
-|[Initialize](#initialize)|공급자를 시작 합니다.|
+|[초기화](#initialize)|공급자를 시작 합니다.|
 |[묵시적](#uninitialize)|공급자를 중지 합니다.|
 
 ### <a name="data-members"></a>데이터 멤버
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_dwStatus](#dwstatus)|데이터 원본 플래그입니다.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|DB 속성 정보의 구현에 대 한 포인터입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 열거자의 선택적 인터페이스 및 데이터 소스 개체에 대 한 필수 인터페이스입니다.
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 IDBInitializeImpl();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 모든 데이터 멤버를 초기화 합니다.
 
@@ -115,7 +115,7 @@ IDBInitializeImpl();
 STDMETHOD(Initialize)(void);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *OLE DB 프로그래머 참조*에서 [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 를 참조 하세요.
 
@@ -129,7 +129,7 @@ STDMETHOD(Initialize)(void);
 STDMETHOD(Uninitialize)(void);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *OLE DB 프로그래머 참조*에서 [IDBInitialize:: 초기화](/previous-versions/windows/desktop/ms719648(v=vs.85)) 취소를 참조 하세요.
 
@@ -143,9 +143,9 @@ STDMETHOD(Uninitialize)(void);
 DWORD m_dwStatus;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이러한 플래그는 데이터 원본 개체에 대 한 다양 한 특성의 상태를 지정 하거나 표시 합니다. 다음 **열거형** 값 중 하나 이상을 포함 합니다.
+이러한 플래그는 데이터 원본 개체에 대 한 다양 한 특성의 상태를 지정 하거나 표시 합니다. 다음 값 중 하나 이상을 포함 합니다 **`enum`** .
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -174,4 +174,4 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

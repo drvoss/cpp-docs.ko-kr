@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: e206ea8d67bb333065bf43f7f9c2dc373a5a5258
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213335"
 ---
 # <a name="lambda-expressions-in-c"></a>C++의 람다 식
 
@@ -45,7 +45,7 @@ void abssort(float* x, unsigned n) {
 
 ![람다 식의 구조 요소](../cpp/media/lambdaexpsyntax.png "람다 식의 구조 요소")
 
-1. *캡처 절* ( C++ 사양에서 *람다 lambda-introducer* 라고도 함)
+1. *capture 절* (c + + 사양의 *lambda-introducer* 라고도 함)
 
 1. *매개 변수 목록* 필드. ( *람다 선언 자*라고도 함)
 
@@ -63,7 +63,7 @@ void abssort(float* x, unsigned n) {
 
 빈 캡처 절인 `[ ]`는 람다 식의 본문이 바깥쪽 범위의 변수에 액세스하지 않음을 나타냅니다.
 
-기본 캡처 모드 (표준 구문에서*캡처-기본값* )를 사용 하 여 람다 식에서 참조 되는 외부 변수를 캡처하는 방법을 나타낼 수 있습니다. `[&]`은 참조 하는 모든 변수를 참조로 캡처하고 `[=]`는 값으로 캡처되는 것을 의미 합니다. 기본 캡처 모드를 사용하고 특정 변수에 대해서는 반대 모드를 지정할 수 있습니다. 예를 들어, 람다 본문이 외부 변수 `total`에 참조별로 액세스하고 외부 변수 `factor`에 값별로 액세스하는 경우 다음 캡처 절이 동일합니다.
+기본 캡처 모드 (표준 구문에서*캡처-기본값* )를 사용 하 여 람다에서 참조 되는 외부 변수를 캡처하는 방법을 나타낼 수 있습니다. `[&]` 즉, 참조 하는 모든 변수가 참조로 캡처되고 값을 사용 하 `[=]` 여 캡처되고 있음을 의미 합니다. 기본 캡처 모드를 사용하고 특정 변수에 대해서는 반대 모드를 지정할 수 있습니다. 예를 들어, 람다 본문이 외부 변수 `total`에 참조별로 액세스하고 외부 변수 `factor`에 값별로 액세스하는 경우 다음 캡처 절이 동일합니다.
 
 ```cpp
 [&total, factor]
@@ -76,7 +76,7 @@ void abssort(float* x, unsigned n) {
 
 캡처 기본값을 사용 하는 경우에는 람다에 언급 된 변수만 캡처됩니다.
 
-캡처 절에 캡처-기본 `&`포함 된 경우 해당 캡처 절의 `capture`에 `& identifier`형식이 있을 수 `identifier` 없습니다. 마찬가지로 캡처 절에 캡처-기본 `=`포함 되어 있는 경우 해당 캡처 절의 `capture`에 `= identifier`형식이 있을 수 없습니다. **이** 식별자는 캡처 절에서 두 번 이상 나타날 수 없습니다. 다음 코드 조각은 몇 가지 사례를 보여 줍니다.
+캡처 절이 캡처 기본값을 포함 하는 경우 `&` `identifier` `capture` 해당 캡처 절의에는 형식이 있을 수 없습니다 `& identifier` . 마찬가지로 캡처 절에 캡처 기본값을 포함 하는 경우에 `=` `capture` 는 해당 캡처 절의 형식이가 될 수 없습니다 `= identifier` . 캡처링 절에는 식별자 또는가 **`this`** 두 번 이상 나타날 수 없습니다. 다음 코드 조각은 몇 가지 사례를 보여 줍니다.
 
 ```cpp
 struct S { void f(int i); };
@@ -100,15 +100,15 @@ void f(Args... args) {
 }
 ```
 
-클래스 메서드의 본문에서 람다 식을 사용 하려면 **이** 포인터를 캡처 절에 전달 하 여 바깥쪽 클래스의 메서드 및 데이터 멤버에 대 한 액세스를 제공 합니다.
+클래스 메서드의 본문에서 람다 식을 사용 하려면 **`this`** 포인터를 캡처 절에 전달 하 여 바깥쪽 클래스의 메서드 및 데이터 멤버에 대 한 액세스를 제공 합니다.
 
-**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **이** 포인터는 캡처 절에 `*this`를 지정 하 여 값으로 캡처될 수 있습니다. 값으로 캡처는 람다 식을 사용 하는 익명 함수 개체인 전체 *클로저*가 람다가 호출 되는 모든 호출 사이트에 복사 됨을 의미 합니다. 값으로 캡처는 람다가 병렬 또는 비동기 작업 (특히 NUMA와 같은 특정 하드웨어 아키텍처)에서 실행 되는 경우에 유용 합니다.
+**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): **`this`** **`*this`** 캡처 절에를 지정 하 여 값에 의해 포인터를 캡처할 수 있습니다. 값으로 캡처는 람다 식을 사용 하는 익명 함수 개체인 전체 *클로저*가 람다가 호출 되는 모든 호출 사이트에 복사 됨을 의미 합니다. 값으로 캡처는 람다가 병렬 또는 비동기 작업 (특히 NUMA와 같은 특정 하드웨어 아키텍처)에서 실행 되는 경우에 유용 합니다.
 
 클래스 메서드를 사용 하 여 람다 식을 사용 하는 방법을 보여 주는 예제는 [람다 식의 예제](../cpp/examples-of-lambda-expressions.md)에서 "예제: 메서드에 람다 식 사용"을 참조 하세요.
 
 캡처 절을 사용하는 경우 특히 람다를 다중 스레딩과 함께 사용할 때는 다음과 같은 사항에 유의해야 합니다.
 
-- 참조 캡처는 외부 변수를 수정하는 데 사용할 수 있지만 값 캡처는 사용할 수 없습니다 **변경** 가능한 복사본은 복사할 수 있지만 원본은 수정할 수 없습니다.
+- 참조 캡처는 외부 변수를 수정하는 데 사용할 수 있지만 값 캡처는 사용할 수 없습니다 ( **`mutable`** 복사본은 수정할 수 있지만 원본은 수정할 수 없습니다.)
 
 - 참조 캡처는 외부 변수에 대한 업데이트를 반영하지만 값 캡처는 반영하지 않습니다.
 
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-**C++ 14**에서 매개 변수 형식이 제네릭이 면 auto 키워드를 형식 지정자로 사용할 수 있습니다. 이렇게 하면 함수 호출 연산자를 템플릿으로 만들도록 컴파일러에 지시합니다. 매개 변수 목록에 있는 각 auto 인스턴스는 고유한 형식 매개 변수와 같습니다.
+**C + + 14**에서 매개 변수 형식이 제네릭인 경우 **`auto`** 키워드를 형식 지정자로 사용할 수 있습니다. 이렇게 하면 함수 호출 연산자를 템플릿으로 만들도록 컴파일러에 지시합니다. **`auto`** 매개 변수 목록에 있는 각 인스턴스는 고유한 형식 매개 변수와 같습니다.
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -149,15 +149,15 @@ auto y = [] (auto first, auto second)
 
 람다 식은 다른 람다 식을 인수로 사용할 수 있습니다. 자세한 내용은 [람다 식의 예제](../cpp/examples-of-lambda-expressions.md)항목에서 "고차 람다 식"을 참조 하세요.
 
-매개 변수 목록은 선택 사항이 기 때문에 람다 식에 인수를 전달 하지 않고 람다 선언 자에 *예외 사양*, *후행 반환 형식*또는 **변경**가능이 포함 되지 않은 경우 빈 괄호를 생략할 수 있습니다.
+매개 변수 목록은 선택 사항이 기 때문에 람다 식에 인수를 전달 하지 않고 람다 선언 자에 *예외 사양*, *후행 반환 형식*또는가 포함 되지 않은 경우 빈 괄호를 생략할 수 있습니다 **`mutable`** .
 
 ### <a name="mutable-specification"></a>변경 가능한 사양
 
-일반적으로 람다의 함수 호출 연산자는 값 단위로 const 이지만 **mutable** 키워드를 사용 하면이를 취소할 수 없습니다. 변경할 수 있는 데이터 멤버는 생성 하지 않습니다. 변경 가능한 사양을 사용하면 람다 식의 본문이 값별로 캡처되는 변수를 수정할 수 있습니다. 이 문서의 뒷부분에 나오는 몇 가지 예제에서는 **변경**가능한를 사용 하는 방법을 보여 줍니다.
+일반적으로 람다의 함수 호출 연산자는 값 단위로 const 이지만 키워드를 사용 하면 **`mutable`** 이를 취소할 수 없습니다. 변경할 수 있는 데이터 멤버는 생성 하지 않습니다. 변경 가능한 사양을 사용하면 람다 식의 본문이 값별로 캡처되는 변수를 수정할 수 있습니다. 이 문서의 뒷부분에 나오는 일부 예제에서는를 사용 하는 방법을 보여 줍니다 **`mutable`** .
 
 ### <a name="exception-specification"></a>예외 사양
 
-람다 식이 어떠한 예외도 throw하지 않음을 나타내기 위해 `noexcept` 예외 사양을 사용할 수 있습니다. 일반적인 함수와 마찬가지로, 람다 식이 `noexcept` C++ 예외 사양을 선언 하 고 람다 본문에서 다음과 같이 예외를 throw 하는 경우 Microsoft 컴파일러에서 경고를 생성 합니다 [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) .
+예외 사양을 사용 하 여 **`noexcept`** 람다 식이 예외를 throw 하지 않음을 나타낼 수 있습니다. 일반적인 함수와 마찬가지로, 람다 식이 예외 사양을 선언 하 고 람다 본문에서 다음과 같이 예외를 throw 하는 경우 Microsoft c + + 컴파일러는 경고 [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) 를 생성 합니다 **`noexcept`** .
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -168,13 +168,13 @@ int main() // C4297 expected
 }
 ```
 
-자세한 내용은 [예외 사양(throw)](../cpp/exception-specifications-throw-cpp.md)를 참조합니다.
+자세한 내용은 [예외 사양 (throw)](../cpp/exception-specifications-throw-cpp.md)을 참조 하세요.
 
-### <a name="return-type"></a>반환 유형
+### <a name="return-type"></a>반환 형식
 
-람다 식의 반환 형식은 자동으로 추론됩니다. *후행 반환 형식을*지정 하지 않는 한 [auto](../cpp/auto-cpp.md) 키워드를 사용할 필요가 없습니다. *후행 반환 형식은* 일반 메서드 또는 함수의 반환 형식 부분과 유사 합니다. 그러나 반환 형식은 매개 변수 목록 뒤에 와야 하며 반환 형식 앞에 trailing-return-type 키워드 `->`를 포함해야 합니다.
+람다 식의 반환 형식은 자동으로 추론됩니다. [`auto`](../cpp/auto-cpp.md) *후행 반환 형식을*지정 하지 않으면 키워드를 사용할 필요가 없습니다. *후행 반환 형식은* 일반 메서드 또는 함수의 반환 형식 부분과 유사 합니다. 그러나 반환 형식은 매개 변수 목록 다음에와 야 합니다. 반환 형식 앞에 후행 반환 형식 키워드를 포함 해야 합니다 **`->`** .
 
-람다 본문에 return 문이 하나만 포함되거나 식이 값을 반환하지 않으면 람다 식의 반환 형식 부분을 생략할 수 있습니다. 람다 본문에 단일 return 문이 포함되어 있으면 컴파일러는 반환 식의 형식에서 반환 형식을 추론합니다. 그렇지 않으면 컴파일러는 반환 형식을 **void**로 추론 합니다. 이 원칙을 설명하는 다음 예제 코드 조각을 참조하십시오.
+람다 본문에 return 문이 하나만 포함되거나 식이 값을 반환하지 않으면 람다 식의 반환 형식 부분을 생략할 수 있습니다. 람다 본문에 단일 return 문이 포함되어 있으면 컴파일러는 반환 식의 형식에서 반환 형식을 추론합니다. 그렇지 않으면 컴파일러는 반환 형식을로 추론 합니다 **`void`** . 이 원칙을 설명하는 다음 예제 코드 조각을 참조하십시오.
 
 ```cpp
 auto x1 = [](int i){ return i; }; // OK: return type is int
@@ -194,7 +194,7 @@ auto x2 = []{ return{ 1, 2 }; };  // ERROR: return type is void, deducing
 
 - 로컬로 선언된 변수
 
-- 클래스 데이터 멤버 (클래스 내부에서 선언 되 고 **이** 는 캡처됨)
+- 클래스 데이터 멤버 (클래스 내부에서 선언 되 고 **`this`** 캡처되는 경우)
 
 - 정적 스토리지 기간이 있는 모든 변수(예: 전역 변수)
 
@@ -220,7 +220,7 @@ int main()
 0
 ```
 
-`n` 변수는 값별로 캡처되므로 람다 식을 호출한 후 해당 값이 `0`으로 유지됩니다. **Mutable** 지정을 사용 하면 람다 내에서 `n` 수정할 수 있습니다.
+`n` 변수는 값별로 캡처되므로 람다 식을 호출한 후 해당 값이 `0`으로 유지됩니다. **`mutable`** 사양은 `n` 람다 내에서 수정할 수 있습니다.
 
 람다 식은 자동 스토리지 기간이 있는 변수만 캡처할 수 있지만 람다 식의 본문에서는 정적 스토리지 기간이 있는 변수를 사용할 수 있습니다. 다음 예제는 `generate` 함수 및 람다 식을 사용하여 `vector` 개체의 각 요소에 값을 할당합니다. 람다 식은 정적 변수를 수정하여 다음 요소의 값을 생성합니다.
 
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 자세한 내용은 [generate](../standard-library/algorithm-functions.md#generate)를 참조 하세요.
 
-다음 코드 예제에서는 이전 예제의 함수를 사용 하 고 `generate_n`C++ 표준 라이브러리 알고리즘을 사용 하는 람다 식의 예제를 추가 합니다. 이 람다 식은 `vector` 개체의 요소를 이전의 두 요소의 합에 할당합니다. **변경** 가능한 키워드를 사용 하 여 람다 식의 본문이 외부 변수 `x`의 복사본을 수정 하 고 람다 식이 값별로 캡처하는 `y`수 있습니다. 람다 식이 원래 변수 `x` 및 `y`를 값별로 캡처하기 때문에 람다가 실행된 후에도 값이 `1`로 유지됩니다.
+다음 코드 예제에서는 이전 예제의 함수를 사용 하 고 c + + 표준 라이브러리 알고리즘을 사용 하는 람다 식의 예제를 추가 합니다 `generate_n` . 이 람다 식은 `vector` 개체의 요소를 이전의 두 요소의 합에 할당합니다. **`mutable`** 람다 식의 본문이 외부 변수 `x` 및 `y` (람다 식이 값별로 캡처)의 복사본을 수정할 수 있도록 키워드가 사용 됩니다. 람다 식이 원래 변수 `x` 및 `y`를 값별로 캡처하기 때문에 람다가 실행된 후에도 값이 `1`로 유지됩니다.
 
 ```cpp
 // compile with: /W4 /EHsc
@@ -322,9 +322,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 자세한 내용은 [generate_n](../standard-library/algorithm-functions.md#generate_n)를 참조 하세요.
 
-## <a name="constexpr-lambda-expressions"></a>constexpr 람다 식
+## <a name="constexpr-lambda-expressions"></a>`constexpr`람다 식
 
-**Visual Studio 2017 버전 15.3 이상** ( [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)과 함께 사용 가능): 람다 식은 상수 식 내에서 허용 되는 각 데이터 멤버의 초기화가 허용 될 때 `constexpr`으로 선언 되거나 상수 식에 사용 될 수 있습니다.
+**Visual Studio 2017 버전 15.3 이상** (에서 사용 가능 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): 람다 식은 **`constexpr`** 상수 식 내에서 허용 되는 각 데이터 멤버의 초기화가 허용 되는 경우 상수 식에 사용 되거나 사용 될 수 있습니다.
 
 ```cpp
     int y = 32;
@@ -340,7 +340,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     }
 ```
 
-람다는 결과가 `constexpr` 함수의 요구 사항을 충족 하는 경우 암시적으로 `constexpr` 됩니다.
+람다는 **`constexpr`** 결과가 함수의 요구 사항을 충족 하는 경우 암시적입니다 **`constexpr`** .
 
 ```cpp
     auto answer = [](int n)
@@ -351,7 +351,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     constexpr int response = answer(10);
 ```
 
-람다가 암시적 또는 명시적으로 `constexpr`경우 함수 포인터로 변환 하면 `constexpr` 함수가 생성 됩니다.
+람다가 암시적 또는 명시적 이면 **`constexpr`** 함수 포인터로의 변환은 함수를 생성 합니다 **`constexpr`** .
 
 ```cpp
     auto Increment = [](int n)
@@ -364,9 +364,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 ## <a name="microsoft-specific"></a>Microsoft 전용
 
-람다는 **ref 클래스**, **ref 구조체**, **값 클래스**또는 **값 구조체**와 같은 CLR (공용 언어 런타임) 관리 되는 엔터티에서 지원 되지 않습니다.
+람다는 **`ref class`** ,, **`ref struct`** **`value class`** 또는와 같은 CLR (공용 언어 런타임) 관리 되는 엔터티에서 지원 되지 **`value struct`** 않습니다.
 
-[__Declspec](../cpp/declspec.md)와 같은 Microsoft 전용 한정자를 사용 하는 경우 `parameter-declaration-clause`바로 다음에 람다 식에 삽입할 수 있습니다. 예를 들면 다음과 같습니다.
+등의 Microsoft 전용 한정자를 사용 하는 경우 [`__declspec`](../cpp/declspec.md) 바로 뒤에 람다 식에 삽입할 수 있습니다 `parameter-declaration-clause` . 예를 들면 다음과 같습니다.
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -379,6 +379,6 @@ Visual Studio는 c + + 11 표준 람다 기능 외에도 임의의 호출 규칙
 ## <a name="see-also"></a>참조
 
 [C++ 언어 참조](../cpp/cpp-language-reference.md)<br/>
-[C++ 표준 라이브러리의 함수 개체](../standard-library/function-objects-in-the-stl.md)<br/>
+[C + + 표준 라이브러리의 함수 개체](../standard-library/function-objects-in-the-stl.md)<br/>
 [함수 호출](../cpp/function-call-cpp.md)<br/>
-[for_each](../standard-library/algorithm-functions.md#for_each)
+[`for_each`](../standard-library/algorithm-functions.md#for_each)

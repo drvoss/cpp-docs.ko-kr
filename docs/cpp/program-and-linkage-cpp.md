@@ -2,12 +2,12 @@
 title: 변환 단위 및 링크 (c + +)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108397"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227194"
 ---
 # <a name="translation-units-and-linkage"></a>변환 단위 및 링크
 
@@ -44,7 +44,7 @@ C + + 20에서 [모듈](modules-cpp.md) 은 헤더 파일 대신 향상 된 기�
 
 *Free 함수* 는 전역 또는 네임 스페이스 범위에서 정의 되는 함수입니다. Const가 아닌 전역 변수와 free 함수는 기본적으로 *외부 링크*를 포함 합니다. 프로그램의 모든 변환 단위에서 볼 수 있습니다. 따라서 다른 전역 개체는 해당 이름을 가질 수 없습니다. *내부 링크* 를 포함 하거나 링크를 포함 *하지* 않는 기호는 선언 된 변환 단위 내 에서만 표시 됩니다. 이름에 내부 링크가 있으면 동일한 이름이 다른 변환 단위에 있을 수 있습니다. 클래스 정의 나 함수 본문 내에 선언 된 변수에는 링크가 없습니다.
 
-명시적으로 **정적**으로 선언 하 여 전역 이름에 내부 링크를 강제로 적용할 수 있습니다. 이렇게 하면 해당 표시 유형이 선언 된 것과 동일한 변환 단위로 표시 됩니다. 이 컨텍스트에서 **static** 은 지역 변수에 적용 될 때와는 다른 것을 의미 합니다.
+로 명시적으로 선언 하 여 전역 이름에 내부 링크를 강제로 적용할 수 있습니다 **`static`** . 이렇게 하면 해당 표시 유형이 선언 된 것과 동일한 변환 단위로 표시 됩니다. 이 컨텍스트에서 **`static`** 은 지역 변수에 적용 될 때와는 다른 것을 의미 합니다.
 
 다음 개체는 기본적으로 내부 링크를 포함 합니다.
 
@@ -53,7 +53,7 @@ C + + 20에서 [모듈](modules-cpp.md) 은 헤더 파일 대신 향상 된 기�
 - 형식 정의
 - 네임 스페이스 범위의 정적 개체
 
-Const 개체 외부 링크를 제공 하려면 **extern** 으로 선언 하 고 값을 할당 합니다.
+Const 개체 외부 링크를 제공 하려면로 선언 하 **`extern`** 고 값을 할당 합니다.
 
 ```cpp
 extern const int value = 42;

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404849"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222760"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 개요
 
@@ -60,7 +60,7 @@ void StandardMethod() {
 
 - 데이터: 데이터는 세 개의 배열로 구성 됩니다. 모든의 순위 (1)와 길이 (5)가 동일 합니다.
 
-- 반복: 첫 번째 `for` 루프는 배열의 요소를 반복 하는 메커니즘을 제공 합니다. 합계를 계산 하기 위해 실행 하려는 코드는 첫 번째 블록에 포함 되어 있습니다 `for` .
+- 반복: 첫 번째 **`for`** 루프는 배열의 요소를 반복 하는 메커니즘을 제공 합니다. 합계를 계산 하기 위해 실행 하려는 코드는 첫 번째 블록에 포함 되어 있습니다 **`for`** .
 
 - Index: `idx` 변수가 배열의 개별 요소에 액세스 합니다.
 
@@ -225,7 +225,7 @@ for (int i = 0; i < 5; i++)
 
 다음 표에서는 및 클래스 간의 유사점과 차이점을 요약 하 여 보여 줍니다 `array` `array_view` .
 
-|Description|array 클래스|array_view 클래스|
+|설명|array 클래스|array_view 클래스|
 |-----------------|-----------------|-----------------------|
 |Rank가 결정 된 경우|컴파일 시간에.|컴파일 시간에.|
 |범위가 결정 되 면|런타임에.|런타임에.|
@@ -238,7 +238,7 @@ for (int i = 0; i < 5; i++)
 
 공유 메모리는 CPU와 가속기 모두에서 액세스할 수 있는 메모리입니다. 공유 메모리를 사용 하면 CPU와 가속기 간에 데이터를 복사 하는 오버 헤드가 감소 하거나 크게 줄어듭니다. 메모리가 공유 되더라도 CPU와 가속기 모두 동시에 액세스할 수 없으며, 이렇게 하면 정의 되지 않은 동작이 발생 합니다.
 
-`array`개체를 사용 하 여 연결 된 가속기가 지 원하는 경우 공유 메모리 사용에 대 한 세분화 된 제어를 지정할 수 있습니다. 액셀러레이터 키가 공유 메모리를 지원 하는지 여부는 공유 메모리가 지원 되는 경우 **true** 를 반환 하는 액셀러레이터 키의 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) 속성에 의해 결정 됩니다. 공유 메모리가 지원 되는 경우 액셀러레이터에 대 한 메모리 할당에 대 한 기본 [Access_type 열거형](reference/concurrency-namespace-enums-amp.md#access_type) 은 속성에 의해 결정 됩니다 `default_cpu_access_type` . 기본적으로 `array` 및 `array_view` 개체는 연결 된 `access_type` 기본와 동일 하 게 사용 `accelerator` 됩니다.
+`array`개체를 사용 하 여 연결 된 가속기가 지 원하는 경우 공유 메모리 사용에 대 한 세분화 된 제어를 지정할 수 있습니다. 액셀러레이터 키가 공유 메모리를 지원 하는지 여부는 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) **`true`** 공유 메모리가 지원 될 때 반환 되는 액셀러레이터의 supports_cpu_shared_memory 속성에 의해 결정 됩니다. 공유 메모리가 지원 되는 경우 액셀러레이터에 대 한 메모리 할당에 대 한 기본 [Access_type 열거형](reference/concurrency-namespace-enums-amp.md#access_type) 은 속성에 의해 결정 됩니다 `default_cpu_access_type` . 기본적으로 `array` 및 `array_view` 개체는 연결 된 `access_type` 기본와 동일 하 게 사용 `accelerator` 됩니다.
 
 의 [array:: Cpu_access_type 데이터 멤버](reference/array-class.md#cpu_access_type) 속성을 `array` 명시적으로 설정 하면 공유 메모리가 사용 되는 방식에 대 한 세분화 된 제어를 실행 하 여 계산 커널의 메모리 액세스 패턴에 따라 하드웨어의 성능 특성에 맞게 앱을 최적화할 수 있습니다. 는 `array_view` 연결 된와 동일한를 반영 `cpu_access_type` `array` 하거나, array_view 데이터 소스 없이 생성 된 경우에는 `access_type` 먼저 저장소를 할당 하도록 하는 환경을 반영 합니다. 즉, 호스트 (CPU)에서 처음으로 액세스 하는 경우에는 CPU 데이터 소스에 대해 생성 된 것 처럼 동작 하 고 캡처와 연결 된의를 공유 합니다. 그러나에서 처음으로 액세스 하는 경우에는에서 `access_type` `accelerator_view` 만든에 `accelerator_view` 대해 만들어진 것 처럼 동작 하 `array` `accelerator_view` 고의를 공유 합니다 `array` `access_type` .
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>수학 라이브러리
 
-C++ AMP는 두 가지 수학 라이브러리를 포함 합니다. [Concurrency::p Recise_math 네임 스페이스](../../parallel/amp/reference/concurrency-precise-math-namespace.md) 의 배정밀도 라이브러리는 배정밀도 함수를 지원 합니다. 하드웨어에 대 한 배정밀도 지원이 여전히 필요 하지만 단 정밀도 함수를 지원 합니다. [C99 사양 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)을 준수 합니다. 액셀러레이터는 완전 한 배정밀도를 지원 해야 합니다. [Accelerator:: Supports_double_precision 데이터 멤버](reference/accelerator-class.md#supports_double_precision)의 값을 확인 하 여 수행 여부를 결정할 수 있습니다. [Concurrency:: Fast_math 네임 스페이스](../../parallel/amp/reference/concurrency-fast-math-namespace.md)의 fast math 라이브러리에는 다른 수학 함수 집합이 포함 되어 있습니다. 피연산자만 지 원하는 이러한 함수는 `float` 보다 빠르게 실행 되지만 배정밀도 수학 라이브러리의 함수 만큼 정확 하지는 않습니다. 함수는 헤더 파일에 포함 되 \<amp_math.h> 고 모든 함수는로 선언 됩니다 `restrict(amp)` . 헤더 파일의 함수는 \<cmath> `fast_math` 및 `precise_math` 네임 스페이스로 모두 가져옵니다. **Restrict** 키워드는 버전과 C++ AMP 버전을 구분 하는 데 사용 됩니다 \<cmath> . 다음 코드는 compute 도메인에 있는 각 값에 대해 fast 메서드를 사용 하 여 밑이 10 인 로그를 계산 합니다.
+C++ AMP는 두 가지 수학 라이브러리를 포함 합니다. [Concurrency::p Recise_math 네임 스페이스](../../parallel/amp/reference/concurrency-precise-math-namespace.md) 의 배정밀도 라이브러리는 배정밀도 함수를 지원 합니다. 하드웨어에 대 한 배정밀도 지원이 여전히 필요 하지만 단 정밀도 함수를 지원 합니다. [C99 사양 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)을 준수 합니다. 액셀러레이터는 완전 한 배정밀도를 지원 해야 합니다. [Accelerator:: Supports_double_precision 데이터 멤버](reference/accelerator-class.md#supports_double_precision)의 값을 확인 하 여 수행 여부를 결정할 수 있습니다. [Concurrency:: Fast_math 네임 스페이스](../../parallel/amp/reference/concurrency-fast-math-namespace.md)의 fast math 라이브러리에는 다른 수학 함수 집합이 포함 되어 있습니다. 피연산자만 지 원하는 이러한 함수는 **`float`** 보다 빠르게 실행 되지만 배정밀도 수학 라이브러리의 함수 만큼 정확 하지는 않습니다. 함수는 헤더 파일에 포함 되 \<amp_math.h> 고 모든 함수는로 선언 됩니다 `restrict(amp)` . 헤더 파일의 함수는 \<cmath> `fast_math` 및 `precise_math` 네임 스페이스로 모두 가져옵니다. **`restrict`** 키워드는 \<cmath> 버전과 C++ AMP 버전을 구분 하는 데 사용 됩니다. 다음 코드는 compute 도메인에 있는 각 값에 대해 fast 메서드를 사용 하 여 밑이 10 인 로그를 계산 합니다.
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ C++ AMP는 가속 그래픽 프로그래밍을 위해 디자인 된 그래픽 �
 
 - [Writeonly_texture_view 클래스](../../parallel/amp/reference/writeonly-texture-view-class.md): 질감에 대 한 쓰기 전용 액세스를 제공 합니다.
 
-- Short vector Library: **int**, `uint` , **float**, **double**, 일반 또는 [unorm](../../parallel/amp/reference/unorm-class.md) [을 기반](../../parallel/amp/reference/norm-class.md)으로 하는 길이 2, 3 및 4의 짧은 벡터 형식 집합을 정의 합니다.
+- Short vector Library: **`int`** ,, `uint` **`float`** , **`double`** , 일반 또는 [unorm](../../parallel/amp/reference/unorm-class.md) [norm](../../parallel/amp/reference/norm-class.md)을 기반으로 하는 길이 2, 3 및 4의 짧은 벡터 형식 집합을 정의 합니다.
 
 ## <a name="universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱
 

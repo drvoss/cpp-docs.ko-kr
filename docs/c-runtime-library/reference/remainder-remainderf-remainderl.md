@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216806"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -68,19 +68,19 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>Return Value
 
-*X* / *y*의 부동 소수점 나머지입니다. *Y* 값이 0.0 이면 **나머지가** 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)를 참조 하세요.
+*X*y의 부동 소수점 나머지입니다  /  *y*. *Y* 값이 0.0 이면 **나머지가** 자동 NaN을 반환 합니다. **Printf** 패밀리의 자동 NaN 표현에 대 한 자세한 내용은 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-**나머지** 함수 *는 x* = *n*  / *y* \* *y* / *y*  - *x* / *y* *r*  + *r*과 같은 *x*y의 부동 소수점 나머지 r을 계산 합니다. 여기서 *n*은 *x*y의 값에 가장 가까운 정수이 고 *n*은 *n*x y &#124; = 1/2 일 경우에도 &#124; 마찬가지입니다. *R* = 0 인 경우 *r* 은 *x*와 동일한 부호를 가집니다.
+**나머지** 함수는 x n y r과 같은 *x*y의 부동 소수점 나머지 *r* 을 계산 합니다  /  *y* *x*  =  *n* \* *y*  +  *r*. 여기서 *n*은 *x*y의 값에 가장 가까운 정수이  /  *y* 고 *n*은 *n*  -  *x*  /  *y* &#124; = 1/2 일 경우에도 &#124; 마찬가지입니다. *R* = 0 인 경우 *r* 은 *x*와 동일한 부호를 가집니다.
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **나머지** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **나머지** 는 항상 두 개의 **double** 인수를 사용 하 고 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **나머지** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **나머지** 는 항상 두 개의 인수를 사용 **`double`** 하 고를 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더(C)|필수 헤더(C++)|
+|함수|필수 헤더(C)|필수 헤더(C++)|
 |--------------|---------------------|-|
 |**나머지**, **remainderf**, **remainderl**|\<math.h>|\<cmath> 또는 \<math.h>|
 
@@ -108,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

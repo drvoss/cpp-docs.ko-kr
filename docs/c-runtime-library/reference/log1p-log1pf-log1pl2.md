@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911422"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218587"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -98,9 +98,9 @@ long double log1pl(
 
 ## <a name="remarks"></a>설명
 
-*X* 가 0에 가까워지면 **log1p** 함수는를 `log(x + 1)` 사용 하는 것 보다 더 정확 하 게 사용할 수 있습니다.
+X가 0에 가까워지면 **log1p** 함수는를 사용 하는 것 보다 더 정확 하 게 사용할 수 있습니다 `log(x + 1)` . *x*
 
-C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **log1p** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **log1p** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **log1p** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **log1p** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 *X* 가 자연 수 인 경우이 함수는 (*x* -1)의 계승값에 대 한 로그를 반환 합니다.
 
@@ -108,13 +108,13 @@ C + +는 오버 로드를 허용 하기 때문에 **float** 및 **long** **doubl
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

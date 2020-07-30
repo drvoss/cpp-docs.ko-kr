@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225113"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid(C++/CLI 및 C++/CX)
 
@@ -45,7 +45,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 형식 이름.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 C++/CX에서 typeId는 런타임 형식 정보에서 생성된 [Platform::Type](../cppcx/platform-type-class.md)을 반환합니다.
 
@@ -66,23 +66,23 @@ type::typeid
 *type*<br/>
 `System::Type` 개체를 가져오려는 형식(추상 선언자)의 이름입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`typeid`는 컴파일 시간에 형식의 <xref:System.Type>을 가져오는 데 사용됩니다.
+**`typeid`** 는 <xref:System.Type> 컴파일 시간에 형식에 대 한를 가져오는 데 사용 됩니다.
 
-`typeid`는 런타임에 <xref:System.Type.GetType%2A> 또는 <xref:System.Object.GetType%2A>을 사용하여 형식의 System::Type을 가져오는 것과 비슷합니다. 그러나 typeid는 형식 이름만 매개 변수로 허용합니다.  형식 인스턴스를 사용하여 System::Type 이름을 가져오려는 경우 GetType을 사용합니다.
+**`typeid`** 는 `System::Type` 런타임에 또는를 사용 하 여 형식에 대 한를 가져오는 것과 비슷합니다 <xref:System.Type.GetType%2A> <xref:System.Object.GetType%2A> . 그러나에서는 **`typeid`** 형식 이름만 매개 변수로 허용 합니다.  형식의 인스턴스를 사용 하 여 해당 `System::Type` 이름을 가져오려면를 사용 `GetType` 합니다.
 
-GetType은 런타임에 반환할 형식을 평가하는 반면, `typeid`는 컴파일 시간에 형식 이름(형식)을 평가할 수 있어야 합니다.
+**`typeid`** 는 컴파일 시간에 형식 이름 (형식)을 계산할 수 있어야 하는 반면 GetType은 런타임에 반환 될 형식을 평가 합니다.
 
-`typeid`는 네이티브 형식 이름 또는 네이티브 형식 이름의 공용 언어 런타임 별칭을 사용할 수 있습니다. 자세한 내용은 [C++ 네이티브 형식에 해당하는 .NET Framework 형식(C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)을 참조하세요.
+**`typeid`** 네이티브 형식 이름에 대해 네이티브 형식 이름 또는 공용 언어 런타임 별칭을 사용할 수 있습니다. 자세한 내용은 [c + + 네이티브 형식에 해당 하는 .NET Framework (c + +/cli)를](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) 참조 하세요.
 
-`typeid`는 네이티브 형식에서도 실행되지만, 여전히 System::Type을 반환합니다.  type_info 구조체를 가져오려면 [typeid 연산자](../cpp/typeid-operator.md)를 사용합니다.
+**`typeid`** 는 여전히을 반환 하지만 네이티브 형식 에서도 작동 `System::Type` 합니다.  Type_info 구조체를 가져오려면 [ `typeid` Operator](../cpp/typeid-operator.md)를 사용 합니다.
 
 ### <a name="requirements"></a>요구 사항
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 예제에서는 typeid 키워드와 `GetType()` 멤버를 비교합니다.
 
@@ -116,7 +116,7 @@ G
 System.Single*
 ```
 
-다음 샘플에서는 System::Type 형식의 변수를 사용하여 형식의 특성을 가져올 수 있음을 보여 줍니다.  또한 일부 형식의 경우 `typeid`를 사용하려면 typedef를 만들어야 함을 보여 줍니다.
+다음 샘플에서는 System::Type 형식의 변수를 사용하여 형식의 특성을 가져올 수 있음을 보여 줍니다.  또한 일부 형식의 경우 사용할 typedef를 만들어야 함을 보여 줍니다 **`typeid`** .
 
 ```cpp
 // keyword__typeid_2.cpp
@@ -190,4 +190,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

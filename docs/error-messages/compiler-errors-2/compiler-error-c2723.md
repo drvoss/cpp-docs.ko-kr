@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f723fcc0a3d9626f01f2059a3d9363801221bca0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737454"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216052"
 ---
 # <a name="compiler-error-c2723"></a>컴파일러 오류 C2723
 
 'function' : 함수 정의에는 'specifier' 지정자를 사용할 수 없습니다.
 
-클래스 정의가 클래스 선언 외부에 있는 경우 지정자가 나타날 수 없습니다. `virtual` 지정자는 클래스 선언 내의 멤버 함수 선언에 대해서만 지정할 수 있습니다.
+클래스 정의가 클래스 선언 외부에 있는 경우 지정자가 나타날 수 없습니다. **`virtual`** 지정자는 클래스 선언 내의 멤버 함수 선언에만 지정할 수 있습니다.
 
 다음 샘플에서는 C2723 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.
 

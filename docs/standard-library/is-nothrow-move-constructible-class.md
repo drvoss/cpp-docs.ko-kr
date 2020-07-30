@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 115a1b6c2157a139786c0b8762a9a614bbcd6deb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217729"
 ---
-# <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible 클래스
+# <a name="is_nothrow_move_constructible-class"></a>is_nothrow_move_constructible 클래스
 
-형식에 **nothrow** 이동 생성자가 있는지 테스트합니다.
+형식에 이동 생성자가 있는지 테스트 **`nothrow`** 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,10 +35,10 @@ struct is_nothrow_move_constructible;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913500"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234278"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -109,13 +109,13 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="remarks"></a>설명
 
-**_Beginthread** 함수는 *start_address*에서 루틴 실행을 시작 하는 스레드를 만듭니다. *Start_address* 의 루틴은 **__cdecl** (네이티브 코드의 경우) 또는 **__clrcall** (관리 코드) 호출 규칙을 사용 해야 하며 반환 값이 없어야 합니다. 스레드가 루틴에서 반환되면 자동으로 종료됩니다. 스레드에 대한 자세한 내용은 [이전 코드를 위한 다중 스레드 지원(Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조하세요.
+**_Beginthread** 함수는 *start_address*에서 루틴 실행을 시작 하는 스레드를 만듭니다. *Start_address* 의 루틴은 **`__cdecl`** (네이티브 코드) 또는 **__clrcall** (관리 코드) 호출 규칙을 사용 해야 하 고 반환 값이 없어야 합니다. 스레드가 루틴에서 반환되면 자동으로 종료됩니다. 스레드에 대한 자세한 내용은 [이전 코드를 위한 다중 스레드 지원(Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조하세요.
 
 **_beginthreadex** 는 **_beginthread** 보다 더 가깝게 Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API와 비슷합니다. **_beginthreadex** 는 다음과 같은 방식으로 **_beginthread** 와 다릅니다.
 
 - **_beginthreadex** 에는 *initflag*, *Security*및 **threadaddr**의 세 가지 추가 매개 변수가 있습니다. 새 스레드는 지정 된 보안을 사용 하 여 일시 중단 된 상태로 만들 수 있으며, 스레드 식별자 인 *thrdaddr*를 사용 하 여 액세스할 수 있습니다.
 
-- **_Beginthreadex** 에 전달 된 *start_address* 루틴은 **__stdcall** (네이티브 코드의 경우) 또는 **__clrcall** (관리 코드) 호출 규칙을 사용 해야 하며 스레드 종료 코드를 반환 해야 합니다.
+- **_Beginthreadex** 에 전달 된 *start_address* 루틴은 **`__stdcall`** (네이티브 코드의 경우) 또는 **__clrcall** (관리 코드) 호출 규칙을 사용 해야 하며, 스레드 종료 코드를 반환 해야 합니다.
 
 - **_beginthreadex** 는-1l이 아닌 실패 시 0을 반환 합니다.
 
@@ -327,10 +327,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread, _endthreadex](endthread-endthreadex.md)
-- [중단이](abort.md)
+- [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

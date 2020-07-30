@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914661"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216936"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -197,7 +197,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>설명
 
-**_Itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa** 함수는 지정 된 *값* 인수의 숫자를 null로 끝나는 문자열로 변환 하 고 결과 (_itoa, **_ltoa**, **_ultoa**의 경우 33 자, **_i64toa 및** **_ui64toa** **의 경우**65)를 *버퍼*에 저장 합니다. *기* 수가 10이 고 *값* 이 음수인 경우 저장 된 문자열의 첫 번째 문자는 빼기 기호 (**-**)입니다. **_Itow**, **_ltow**, **_ultow**, **_i64tow**및 **_ui64tow** 함수는 각각 **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa**의 와이드 문자 버전입니다.
+**_Itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa** 함수는 지정 된 *값* 인수의 숫자를 null로 끝나는 문자열로 변환 하 고 결과 (_itoa, **_ltoa**, **_ultoa**의 경우 33 자, **_i64toa 및** **_ui64toa** **의 경우**65)를 *버퍼*에 저장 합니다. *기* 수가 10이 고 *값* 이 음수인 경우 저장 된 문자열의 첫 번째 문자는 빼기 기호 ( **-** )입니다. **_Itow**, **_ltow**, **_ultow**, **_i64tow**및 **_ui64tow** 함수는 각각 **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**및 **_ui64toa**의 와이드 문자 버전입니다.
 
 > [!IMPORTANT]
 > 이러한 함수는 너무 작은 버퍼의 끝을 지나서 쓸 수 있습니다. 버퍼 오버런을 방지 하려면 *버퍼가* 변환 된 숫자와 후행 null 문자 및 부호 문자를 포함할 만큼 충분히 큰지 확인 합니다. 이러한 함수를 잘못 사용할 경우 코드에서 심각한 보안 문제가 발생할 수 있습니다.
@@ -233,14 +233,14 @@ POSIX 이름 **itoa**, **ltoa**및 **ultoa** 는 **_itoa**, **_ltoa**및 **_ulto
 
 ||||
 |-|-|-|
-|Functions|radix|Macros|
+|Functions|radix|매크로|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-이 예제에서는 변환 횟수 매크로를 사용 하 여 기본 2에 **부호 없는 long long** 을 포함할 수 있는 크기의 버퍼를 정의 합니다.
+이 예제에서는 변환 횟수 매크로를 사용 하 여 기본 2에를 포함할 수 있을 만큼 충분히 많은 버퍼를 정의 합니다 **`unsigned long long`** .
 
 ```cpp
 #include <wchar.h>
@@ -349,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)<br/>

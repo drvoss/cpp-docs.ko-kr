@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228754"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>컴파일러 경고 (수준 4) C4471
 
 '*enumeration*': 범위가 없는 열거형의 전방 선언에는 내부 형식이 있어야 합니다 (int로 가정).
 
-기본 형식에 대 한 지정자 없이 범위가 지정 되지 않은 열거형의 전방 선언을 찾았습니다. 기본적으로 Visual C++ 은 `int`가 열거형의 기본 형식 이라고 가정 합니다. 이로 인해 열거형 정의에 다른 형식이 사용 된 경우, 예를 들어 다른 명시적 형식이 지정 된 경우 또는 이니셜라이저가 암시적으로 다른 형식이 암시적으로 설정 된 경우 문제가 발생할 수 있습니다. 이식성 문제가 있을 수도 있습니다. 다른 컴파일러는 열거형의 기본 형식 `int`를 가정 하지 않습니다.
+기본 형식에 대 한 지정자 없이 범위가 지정 되지 않은 열거형의 전방 선언을 찾았습니다. 기본적으로 Visual C++ **`int`** 는 열거형의 기본 형식으로 가정 합니다. 이로 인해 열거형 정의에 다른 형식이 사용 된 경우, 예를 들어 다른 명시적 형식이 지정 된 경우 또는 이니셜라이저가 암시적으로 다른 형식이 암시적으로 설정 된 경우 문제가 발생할 수 있습니다. 이식성 문제가 있을 수도 있습니다. 다른 컴파일러 **`int`** 는 열거형의 기본 형식 이라고 가정 하지 않습니다.
 
 이 경고는 기본적으로 해제 되어 있습니다. /Wall 또는/w*N*4471을 사용 하 여 명령줄에서 사용 하도록 설정 하거나 소스 파일에 #pragma [경고](../../preprocessor/warning.md) 를 사용할 수 있습니다.
 

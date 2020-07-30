@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 96f2ccc29eed5c1fa4e29f69d18ae6503417f211
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212724"
 ---
 # <a name="compiler-error-c2513"></a>컴파일러 오류 C2513
 
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-대신 `typedef`를 삭제 하 여 집계 이니셜라이저 목록을 사용 하 여 변수를 정의 하는 것이 좋습니다 .이는 형식과 동일한 이름의 변수를 만들고 형식 이름을 숨기 므로 사용 하지 않는 것이 좋습니다.
+대신 **`typedef`** 집계 이니셜라이저 목록을 사용 하 여 변수를 정의 하기 위해를 삭제 하는 것이 좋습니다 .이는 형식과 동일한 이름의 변수를 만들고 형식 이름을 숨기 므로 사용 하지 않는 것이 좋습니다.

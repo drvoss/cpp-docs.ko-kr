@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231964"
 ---
 # <a name="compiler-error-c3409"></a>컴파일러 오류 C3409
 
 > 빈 특성 블록은 사용할 수 없습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 대괄호가 컴파일러에서 [특성](../../windows/attributes-alphabetical-reference.md) 블록으로 해석 되었지만 특성이 없습니다.
 
-람다 식 정의의 일부로 대괄호를 사용 하는 경우 컴파일러에서이 오류를 생성할 수 있습니다. 컴파일러가 대괄호가 람다 식 또는 특성 블록의 정의에 포함 되어 있는지 여부를 컴파일러에서 확인할 수 없는 경우이 오류가 발생 합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../cpp/lambda-expressions-in-cpp.md)을 참조하세요.
+람다 식 정의의 일부로 대괄호를 사용 하는 경우 컴파일러에서이 오류를 생성할 수 있습니다. 컴파일러가 대괄호가 람다 식 또는 특성 블록의 정의에 포함 되어 있는지 여부를 컴파일러에서 확인할 수 없는 경우이 오류가 발생 합니다. 람다 식에 대 한 자세한 내용은 [람다 식](../../cpp/lambda-expressions-in-cpp.md)을 참조 하세요.
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 람다 식이 `mutable` 사양을 사용 하지만 매개 변수 목록을 제공 하지 않기 때문에 C3409를 생성 합니다. 컴파일러가 대괄호가 람다 식 또는 특성 블록의 정의에 포함 되는지 여부를 확인할 수 없습니다.
+다음 예제에서는 람다 식에서 **`mutable`** 사양을 사용 하지만 매개 변수 목록을 제공 하지 않기 때문에 C3409를 생성 합니다. 컴파일러가 대괄호가 람다 식 또는 특성 블록의 정의에 포함 되는지 여부를 확인할 수 없습니다.
 
 ```cpp
 // C3409b.cpp
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>참고 항목
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[특성도](../../windows/attributes-alphabetical-reference.md)<br/>
 [람다 식](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [람다 식 구문](../../cpp/lambda-expression-syntax.md)

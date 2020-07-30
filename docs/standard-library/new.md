@@ -1,25 +1,25 @@
 ---
-title: '&lt;new&gt;'
+title: '&lt;신규&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <new>
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457684"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212165"
 ---
-# <a name="ltnewgt"></a>&lt;new&gt;
+# <a name="ltnewgt"></a>&lt;신규&gt;
 
 프로그램이 제어하는 스토리지의 할당 및 해제를 제어하는 여러 형식 및 함수를 정의합니다. 또한 스토리지 관리 오류에 대한 보고를 위해 구성 요소를 정의합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<new>
+**헤더:**\<new>
 
 **네임스페이스:** std
 
@@ -33,9 +33,9 @@ ms.locfileid: "68457684"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|**New** 및 **delete**의 **nothrow** 버전에 대 한 인수로 사용할 개체를 제공 합니다.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|및 버전의 인수로 사용할 개체를 제공 합니다 **`nothrow`** **`new`** **`delete`** .|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -43,7 +43,7 @@ ms.locfileid: "68457684"
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 |[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ ms.locfileid: "68457684"
 |[bad_array_new_length 클래스](../standard-library/bad-array-new-length.md)||
 |[nothrow_t 클래스](../standard-library/nothrow-t-structure.md)|이 클래스는 함수가 예외를 발생시키는 대신 null 포인터를 반환하여 할당 오류를 보고해야 함을 나타내기 위해 new 연산자에 대한 함수 매개 변수로 사용됩니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d730441772f021bbece9af8313229543e432b2d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197295"
 ---
 # <a name="compiler-warning-c4485"></a>컴파일러 경고 C4485
 
 ' override_function ': 기본 ref 클래스 메서드 ' base_class_function '과 (와) 일치 하지만 ' new ' 또는 ' override '로 표시 되어 있지 않습니다. ' new ' (및 ' virtual ')를 가정 합니다.
 
-접근자는 `virtual` 키워드를 사용 하거나 사용 하지 않고 기본 클래스 접근자 함수를 사용 하 여 재정의 하지만 `override` 또는 `new` 지정자는 재정의 함수 시그니처의 일부가 아닙니다. 이 경고를 해결 하려면 `new` 또는 `override` 지정자를 추가 합니다.
+접근자는 키워드를 사용 하거나 사용 하지 않고 **`virtual`** 기본 클래스 접근자 함수를 재정의 하지만 `override` 또는 지정자는 **`new`** 재정의 함수 시그니처의 일부가 아닙니다. **`new`** 또는 `override` 지정자를 추가 하 여이 경고를 해결 합니다.
 
 자세한 내용은 [override](../../extensions/override-cpp-component-extensions.md) 및 [new (vtable의 새 슬롯)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) 를 참조 하세요.
 

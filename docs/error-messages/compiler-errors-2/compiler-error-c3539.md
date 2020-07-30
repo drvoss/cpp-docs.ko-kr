@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 813da5a2fd79c191df731937e58100d749f8690c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223410"
 ---
 # <a name="compiler-error-c3539"></a>컴파일러 오류 C3539
 
 ' type ': 템플릿 인수는 ' a u t o '를 포함 하는 형식일 수 없습니다.
 
-표시 된 템플릿 인수 형식은 `auto` 키워드의 사용을 포함할 수 없습니다.
+표시 된 템플릿 인수 형식은 키워드의 사용을 포함할 수 없습니다 **`auto`** .
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-1. `auto` 키워드를 사용 하 여 템플릿 인수를 지정 하지 마십시오.
+1. 키워드를 사용 하 여 템플릿 인수를 지정 하지 마십시오 **`auto`** .
 
 ## <a name="example"></a>예제
 

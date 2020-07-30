@@ -8,38 +8,38 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 6136557bd436fb9964498384f277d48e8525a027
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253996"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228546"
 ---
 # <a name="ready-to-use-map-classes"></a>바로 사용할 수 있는 맵 클래스
 
-다음 클래스는 즉시 사용할 수 있는 맵 클래스입니다.
+다음 클래스는 바로 사용할 수 있는 맵 클래스입니다.
 
 [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
-사용 하 여 **void** 다른를 찾기 위한 키로 포인터 **void** 포인터입니다.
+**`void`** 다른 포인터를 찾기 위해 포인터를 키로 사용 **`void`** 합니다.
 
 [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
-사용 하 여 **void** 형식의 데이터를 찾는 방법에 대 한 키 사용 되는 포인터 **WORD**합니다.
+**`void`** 포인터를 키로 사용 하 여 **WORD**형식의 데이터를 찾습니다.
 
 [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
-사용 하 여 `CString` 개체를 찾는 데 키로 `CObject` 포인터입니다.
+는 `CString` 포인터를 찾기 위해 개체를 키로 사용 `CObject` 합니다.
 
 [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
-사용 하 여 `CString` 개체를 찾는 데 키로 **void** 포인터입니다.
+는 `CString` 포인터를 찾기 위해 개체를 키로 사용 **`void`** 합니다.
 
 [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
-사용 하 여 `CString` 개체를 다른를 찾기 위한 키로 `CString` 개체입니다.
+`CString`개체를 키로 사용 하 여 다른 개체를 찾습니다 `CString` .
 
 [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
-형식의 데이터를 사용 하 여 **WORD** 찾으려고 `CObject` 포인터입니다.
+**단어** 형식의 데이터를 사용 하 여 `CObject` 포인터를 찾습니다.
 
 [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
-형식의 데이터를 사용 하 여 **WORD** 찾으려고 **void** 포인터입니다.
+**단어** 형식의 데이터를 사용 하 여 **`void`** 포인터를 찾습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../mfc/class-library-overview.md)

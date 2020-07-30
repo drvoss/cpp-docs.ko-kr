@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 432cb1b6910db5ea735288edfbf6aa9e10f0a486
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d351ae064b8c9bdd0599a1d6981166371a62af58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190289"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216611"
 ---
 # <a name="calling-conventions"></a>호출 규칙
 
@@ -21,15 +21,15 @@ X64 프로세서의 호출 규칙에 대 한 자세한 내용은 [호출 규칙]
 
 ## <a name="topics-in-this-section"></a>이 섹션의 항목
 
-- [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`및 기타)
+- [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md) ( **`__cdecl`** , **`__stdcall`** , **`__fastcall`** 및 기타)
 
 - [호출 예제: 함수 프로토타입 및 호출](../cpp/calling-example-function-prototype-and-call.md)
 
-- [Naked 함수 호출을 사용 하 여 사용자 지정 프롤로그/에필로그 코드 작성](../cpp/naked-function-calls.md)
+- [naked 함수 호출을 사용하여 사용자 지정 프롤로그/에필로그 코드 작성](../cpp/naked-function-calls.md)
 
 - [부동 소수점 보조 프로세서 및 호출 규칙](../cpp/floating-point-coprocessor-and-calling-conventions.md)
 
-- [사용 되지 않는 호출 규칙](../cpp/obsolete-calling-conventions.md)
+- [사용되지 않는 호출 규칙](../cpp/obsolete-calling-conventions.md)
 
 ## <a name="see-also"></a>참고 항목
 

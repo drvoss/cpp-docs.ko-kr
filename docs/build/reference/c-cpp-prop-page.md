@@ -4,12 +4,12 @@ description: Visual Studio Microsoft C/c + + 프로젝트 속성 페이지 속�
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229742"
 ---
 # <a name="cc-property-pages"></a>C/c + + 속성 페이지
 
@@ -120,8 +120,8 @@ Windows 런타임 언어 확장을 사용 합니다. [`/ZW`](zw-windows-runtime-
 
 - **기본값**
 - **Disabled** -기본적으로 켜져 있는 인라인 확장을 사용 하지 않도록 설정 합니다.
-- , 또는로 표시 된 함수만 **__inline** 확장 **`inline`** `__forceinline` `__inline` 합니다. 또는 c + + 멤버 함수에서 클래스 선언 내에 정의 된 또는입니다.
-- 또는로 표시 된 **모든 적절** 한 확장 함수와 **`inline`** `__inline` 컴파일러에서 선택 하는 다른 함수 확장은 컴파일러의 판단에 따라 발생 하며 (종종 *자동 인라이닝*이라고 함)
+- , 또는로 표시 된 함수만 **__inline** 확장 **`inline`** **`__forceinline`** **`__inline`** 합니다. 또는 c + + 멤버 함수에서 클래스 선언 내에 정의 된 또는입니다.
+- 또는로 표시 된 **모든 적절** 한 확장 함수와 **`inline`** **`__inline`** 컴파일러에서 선택 하는 다른 함수 확장은 컴파일러의 판단에 따라 발생 하며 (종종 *자동 인라이닝*이라고 함)
 
 ### <a name="enable-intrinsic-functions"></a>내장 함수 사용
 
@@ -255,7 +255,7 @@ C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력을 파일에
 #### <a name="choices"></a>선택 사항
 
 - **예** -가드 집합을 사용 하 여 보안 검사를 사용 하도록 설정 [`/guard:cf`](guard-enable-control-flow-guard.md) 합니다.
-- ‘아니요’
+- **아니요**
 
 ### <a name="enable-function-level-linking"></a>함수 수준 링크 사용
 
@@ -317,7 +317,7 @@ CVE 2017-5753에 대 한 스펙터 완화 [`/Qspectre`](qspectre.md)을 설정 �
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Wchar_t를 기본 제공 형식으로 처리
 
-지정 된 경우 형식은에 **`wchar_t`** `__wchar_t` 매핑되는 것과 같은 방식으로에 매핑되는 네이티브 형식이 됩니다 **`short`** `__int16` . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)는 기본적으로 설정 되어 있습니다.
+지정 된 경우 형식은에 **`wchar_t`** **`__wchar_t`** 매핑되는 것과 같은 방식으로에 매핑되는 네이티브 형식이 됩니다 **`short`** **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)는 기본적으로 설정 되어 있습니다.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>For 루프 범위 강제 규칙
 
@@ -434,10 +434,10 @@ ASM 목록 파일의 상대 경로 또는 이름을 지정 합니다. 파일 또
 
 #### <a name="choices"></a>선택 사항
 
-- **__cdecl** - `__cdecl` c + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 `__stdcall` `__fastcall` .
-- **__fastcall** - `__fastcall` c + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 `__cdecl` `__stdcall` . 모든 `__fastcall` 함수에는 프로토타입이 있어야 합니다.
-- **__stdcall** - `__stdcall` c + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 `__cdecl` `__fastcall` . 모든 `__stdcall` 함수에는 프로토타입이 있어야 합니다.
-- **__vectorcall** - `__vectorcall` c + + 멤버 함수 및, 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 `__cdecl` `__fastcall` `__stdcall` . 모든 `__vectorcall` 함수에는 프로토타입이 있어야 합니다.
+- **`__cdecl`**- **`__cdecl`** C + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 **`__stdcall`** **`__fastcall`** .
+- **`__fastcall`**- **`__fastcall`** C + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 **`__cdecl`** **`__stdcall`** . 모든 **`__fastcall`** 함수에는 프로토타입이 있어야 합니다.
+- **`__stdcall`**- **`__stdcall`** C + + 멤버 함수 및 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 **`__cdecl`** **`__fastcall`** . 모든 **`__stdcall`** 함수에는 프로토타입이 있어야 합니다.
+- **`__vectorcall`**- **`__vectorcall`** C + + 멤버 함수 및, 또는로 표시 된 함수를 제외한 모든 함수에 대해 호출 규칙을 지정 합니다 **`__cdecl`** **`__fastcall`** **`__stdcall`** . 모든 **`__vectorcall`** 함수에는 프로토타입이 있어야 합니다.
 
 ### <a name="compile-as"></a>다음으로 컴파일
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228845"
 ---
 # <a name="compiler-error-c3499"></a>컴파일러 오류 C3499
 
 반환 형식이 void로 지정된 람다가 값을 반환할 수 없습니다.
 
-`void` 를 반환 형식으로 지정하는 람다 식이 값을 반환하거나 람다 식이 둘 이상의 문을 포함하고 값을 반환하지만 반환 형식을 지정하지 않을 경우 컴파일러에서 이 오류를 생성합니다.
+를 반환 형식으로 지정 하는 람다 식이 **`void`** 값을 반환 하거나 람다 식에 둘 이상의 문이 포함 되어 있고 값을 반환 하지만 반환 형식을 지정 하지 않는 경우 컴파일러에서이 오류를 생성 합니다.
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [람다 식](../../cpp/lambda-expressions-in-cpp.md)

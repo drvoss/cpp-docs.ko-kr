@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919184"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229430"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -51,7 +51,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>매개 변수
 
 *wchar*<br/>
-변환 된 와이드 문자열 (형식 **wchar_t**)을 받을 와이드 문자의 주소입니다. 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
+변환 된 와이드 문자열 (형식)을 받을 와이드 문자의 주소입니다 **`wchar_t`** . 반환 와이드 문자가 필요하지 않으면 이 값은 null 포인터일 수 있습니다.
 
 *mbchar*<br/>
 바이트 시퀀스(멀티바이트 문자)의 주소입니다.
@@ -213,8 +213,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [멀티 바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

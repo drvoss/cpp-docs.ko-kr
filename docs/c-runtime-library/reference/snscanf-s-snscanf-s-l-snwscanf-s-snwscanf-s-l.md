@@ -52,12 +52,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229404"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -107,7 +107,7 @@ int __cdecl _snwscanf_s_l(
 *argument_list*<br/>
 서식 문자열에 따라 할당할 선택적 인수입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 반환 값은 오류에 대 한 **EOF** 이거나, 첫 번째 변환 전에 문자열의 끝에 도달한 경우입니다. 자세한 내용은 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)을 참조하세요.
 
@@ -122,11 +122,11 @@ int __cdecl _snwscanf_s_l(
 버퍼 크기 매개 변수는 형식 필드 문자 **c**, **c**, **s**, **s**및 **[** 에 필요 합니다. 자세한 내용은 [scanf 형식 필드 문자](../../c-runtime-library/scanf-type-field-characters.md)를 참조하세요.
 
 > [!NOTE]
-> Size 매개 변수는 **size_t**가 아닌 **부호**있는 형식입니다.
+> Size 매개 변수는 size_t이 **`unsigned`** 아니라 형식 **size_t**입니다.
 
-**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 경우를 제외 하 고는 동일 합니다.
+**_L** 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 한다는 점을 제외 하 고는 동일 합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -140,7 +140,7 @@ int __cdecl _snwscanf_s_l(
 |**_snscanf_s**, **_snscanf_s_l**|\<stdio.h>|
 |**_snwscanf_s**, **_snwscanf_s_l**|\<stdio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -177,6 +177,6 @@ _snscanf_s converted 2 fields: 15 and 12.000000
 _snwscanf_s converted 2 fields: 15 and 12.000000
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220810"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>수명 및 표시 유형에 대한 요약
 
@@ -20,13 +20,13 @@ ms.locfileid: "75299080"
 
 |특성:<br /><br /> Level|항목|스토리지 클래스<br /><br /> 지정자|결과:<br /><br /> 수명|표시 유형|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|파일 범위|변수 정의|**static**|전역|이 항목이 발생하는 소스 파일의 나머지 부분|
-||변수 선언|**extern**|전역|이 항목이 발생하는 소스 파일의 나머지 부분|
-||함수 프로토타입 또는 정의|**static**|전역|단일 소스 파일|
-||함수 프로토타입|**extern**|전역|소스 파일의 나머지 부분|
-|블록 범위|변수 선언|**extern**|전역|블록|
-||변수 정의|**static**|전역|블록|
-||변수 정의|**auto** 또는 **register**|로컬|블록|
+|파일 범위|변수 정의|**`static`**|전역|이 항목이 발생하는 소스 파일의 나머지 부분|
+||변수 선언|**`extern`**|전역|이 항목이 발생하는 소스 파일의 나머지 부분|
+||함수 프로토타입 또는 정의|**`static`**|전역|단일 소스 파일|
+||함수 프로토타입|**`extern`**|전역|소스 파일의 나머지 부분|
+|블록 범위|변수 선언|**`extern`**|전역|블록|
+||변수 정의|**`static`**|전역|블록|
+||변수 정의|**`auto`** 또는 **`register`**|로컬|블록|
 
 ## <a name="example"></a>예제
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215883"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>연습: C++ AMP 애플리케이션 디버깅
 
@@ -30,7 +30,7 @@ ms.locfileid: "86404719"
 
 - 타일의 모든 스레드를 코드의 특정 위치에 실행 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 시작 하기 전에:
 
@@ -215,7 +215,7 @@ ms.locfileid: "86404719"
 
 ## <a name="debugging-the-cpu-code"></a>CPU 코드 디버그
 
-이 절차에서는 로컬 Windows 디버거를 사용 하 여이 응용 프로그램의 CPU 코드가 올바른지 확인 합니다. 이 응용 프로그램에서 특히 흥미로운 CPU 코드의 세그먼트는 `for` 함수의 루프입니다 `reduction_sum_gpu_kernel` . GPU에서 실행 되는 트리 기반 병렬 감소를 제어 합니다.
+이 절차에서는 로컬 Windows 디버거를 사용 하 여이 응용 프로그램의 CPU 코드가 올바른지 확인 합니다. 이 응용 프로그램에서 특히 흥미로운 CPU 코드의 세그먼트는 **`for`** 함수의 루프입니다 `reduction_sum_gpu_kernel` . GPU에서 실행 되는 트리 기반 병렬 감소를 제어 합니다.
 
 ### <a name="to-debug-the-cpu-code"></a>CPU 코드를 디버깅 하려면
 

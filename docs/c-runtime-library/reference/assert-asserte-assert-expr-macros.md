@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: 26a1439e4de8824edd11af1afd455d2b2c31c088
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232640"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로
 
@@ -60,7 +60,7 @@ _ASSERTE( booleanExpression );
 
 **_ASSERT_EXPR**, **_ASSERT** 및 **_ASSERTE** 매크로를 사용 하 여 디버깅 프로세스 중 가정을 확인 하는 데 필요한 깔끔하고 간단한 메커니즘을 응용 프로그램에 제공 합니다. 이들 매크로는 애플리케이션의 정품 빌드 시 호출되지 않도록 `#ifdef` 문에 포함할 필요가 없으므로 매우 유연합니다. 이 유연성을 얻으려면 [_DEBUG](../../c-runtime-library/debug.md) 매크로를 사용합니다. **_ASSERT_EXPR**, **_ASSERT** 및 **_ASSERTE** 는 컴파일 시간에 **_DEBUG** 정의 된 경우에만 사용할 수 있습니다. **_DEBUG** 정의 되지 않은 경우 전처리 중에 이러한 매크로에 대 한 호출이 제거 됩니다.
 
-*BooleanExpression* 인수 **를 _ASSERT** 및 **_ASSERTE** 평가 하 고 결과가 **false** (0) 이면 진단 메시지를 인쇄 하 고 [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) 를 호출 하 여 디버그 보고서를 생성 합니다. **_ASSERT_EXPR** **_ASSERT** 매크로는 간단한 진단 메시지를 출력 하 고, 메시지에 실패 한 식의 문자열 표현을 포함 하 고, **_ASSERT_EXPR** 는 메시지 *문자열을* 진단 메시지에 포함 **_ASSERTE** 합니다. *BooleanExpression* 가 0이 아닌 값으로 계산 되 면 이러한 매크로는 아무 작업도 수행 하지 않습니다.
+*BooleanExpression* 인수를 **_ASSERT** 및 **_ASSERTE** 평가 하 고 결과가 **_ASSERT_EXPR** **`false`** (0) 이면 진단 메시지를 인쇄 하 고 [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) 를 호출 하 여 디버그 보고서를 생성 합니다. _ASSERT_EXPR **_ASSERT** 매크로는 간단한 진단 메시지를 출력 하 고, 메시지에 실패 한 식의 문자열 표현을 포함 하 고, **_ASSERT_EXPR** 는 메시지 *문자열을* 진단 메시지에 포함 **_ASSERTE** 합니다. *BooleanExpression* 가 0이 아닌 값으로 계산 되 면 이러한 매크로는 아무 작업도 수행 하지 않습니다.
 
 **_ASSERT_EXPR**, **_ASSERT** 및 **_ASSERTE** 를 **_CrtDbgReportW**호출 하면 모든 출력이 와이드 문자로 됩니다. **_ASSERTE** *booleanExpression* 에서 유니코드 문자를 올바르게 인쇄 하 고 *메시지*에 유니코드 문자를 인쇄 **_ASSERT_EXPR** 합니다.
 
@@ -78,9 +78,9 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 보고 프로세스에 대한 자세한 내용은 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) 함수를 참조하세요. 어설션 실패를 해결하고 이들 매크로를 디버깅 오류 처리 메커니즘으로 사용하는 방법에 대한 자세한 내용은 [확인 및 보고에 매크로 사용](/visualstudio/debugger/macros-for-reporting)을 참조하세요.
 
-**_ASSERT** 매크로 외에도 [ASSERT](assert-macro-assert-wassert.md) 매크로를 사용 하 여 프로그램 논리를 확인할 수 있습니다. 이 매크로는 라이브러리의 디버그 및 릴리스 버전에서 둘 다 사용할 수 있습니다. [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) 디버그 매크로는 디버그 보고서 생성에도 사용할 수 있지만 식을 계산하지 않습니다. **_RPT** 매크로는 간단한 보고서를 생성 합니다. **_RPTF** 매크로에는 생성 된 보고서에서 보고서 매크로가 호출 된 소스 파일과 줄 번호가 포함 되어 있습니다. 이러한 매크로의 와이드 문자 버전을 사용할 수 있습니다 ( **_RPTW**, **_RPTFW**). 와이드 문자 문자열이 모든 문자열 매개 변수 및 출력에 사용된다는 점을 제외하고 와이드 문자 버전은 반각 문자 버전과 똑같습니다.
+**_ASSERT** 매크로 외에도 [ASSERT](assert-macro-assert-wassert.md) 매크로를 사용 하 여 프로그램 논리를 확인할 수 있습니다. 이 매크로는 라이브러리의 디버그 및 릴리스 버전에서 둘 다 사용할 수 있습니다. [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) 디버그 매크로는 디버그 보고서 생성에도 사용할 수 있지만 식을 계산하지 않습니다. **_RPT** 매크로는 간단한 보고서를 생성 합니다. **_RPTF** 매크로에는 생성 된 보고서에서 보고서 매크로가 호출 된 소스 파일과 줄 번호가 포함 되어 있습니다. 이러한 매크로의 와이드 문자 버전을 사용할 수 있습니다 (**_RPTW**, **_RPTFW**). 와이드 문자 문자열이 모든 문자열 매개 변수 및 출력에 사용된다는 점을 제외하고 와이드 문자 버전은 반각 문자 버전과 똑같습니다.
 
-**_ASSERT_EXPR** **_ASSERT** 및 **_ASSERTE** 는 매크로 이며 \<crtdbg.h를 포함 하 여 사용할 수 있지만, 이러한 매크로가 다른 런타임 함수를 호출 하기 때문에 **>** 정의 되 면 응용 프로그램은 C 런타임 라이브러리의 디버그 버전과 연결 해야 합니다.
+**_ASSERT_EXPR** **_ASSERT** 및 **_ASSERTE** 는 매크로 이며를 포함 하 여 사용할 수 있지만 \<crtdbg.h> , 이러한 매크로는 다른 런타임 함수를 호출 하므로 **_DEBUG** 정의 될 때 응용 프로그램은 C 런타임 라이브러리의 디버그 버전과 연결 해야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -90,7 +90,7 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 ## <a name="example"></a>예제
 
-이 프로그램에서는 **_ASSERT** 및 **_ASSERTE** 매크로를 호출 하 여 `string1 == string2`조건을 테스트 합니다. 조건이 실패하면 이들 매크로가 진단 메시지를 출력합니다. 이 프로그램에서는 매크로의 **_RPT** 및 **_RPTF** 그룹도 **printf** 함수 대신 실행 됩니다.
+이 프로그램에서는 **_ASSERT** 및 **_ASSERTE** 매크로를 호출 하 여 조건을 테스트 `string1 == string2` 합니다. 조건이 실패하면 이들 매크로가 진단 메시지를 출력합니다. 이 프로그램에서는 매크로의 **_RPT** 및 **_RPTF** 그룹도 **printf** 함수 대신 실행 됩니다.
 
 ```C
 // crt_ASSERT_macro.c
@@ -167,5 +167,5 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 ## <a name="see-also"></a>참고 항목
 
 [디버그 루틴](../../c-runtime-library/debug-routines.md)<br/>
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[assert 매크로, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
 [_RPT, _RPTF, _RPTW, _RPTFW 매크로](rpt-rptf-rptw-rptfw-macros.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 737c9e669990f4de6ae18cdc7662c131ad61516f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233199"
 ---
 # <a name="coleexception-class"></a>COleException 클래스
 
@@ -31,23 +31,23 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[코레예외::P로키스](#process)|적발된 예외를 OLE 반환 코드로 변환합니다.|
+|[COleException::P rocess](#process)|Catch 된 예외를 OLE 반환 코드로 변환 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[콜레예외::m_sc](#m_sc)|예외의 원인을 나타내는 상태 코드를 포함합니다.|
+|[COleException:: m_sc](#m_sc)|예외에 대 한 이유를 나타내는 상태 코드를 포함 합니다.|
 
 ## <a name="remarks"></a>설명
 
-클래스에는 `COleException` 예외 이유를 나타내는 상태 코드를 포함하는 공용 데이터 멤버가 포함됩니다.
+클래스에는 `COleException` 예외에 대 한 이유를 나타내는 상태 코드를 포함 하는 공용 데이터 멤버가 포함 되어 있습니다.
 
-일반적으로 개체를 `COleException` 직접 만들지 않아야 합니다. 대신 [AfxThrowOleException을](exception-processing.md#afxthrowoleexception)호출해야 합니다.
+일반적으로 개체를 직접 만들지 마십시오 `COleException` . 대신 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)를 호출 해야 합니다.
 
-예외에 대한 자세한 내용은 [MFC(예외 처리)](../../mfc/exception-handling-in-mfc.md) 및 [예외: OLE 예외](../../mfc/exceptions-ole-exceptions.md)를 참조하십시오.
+예외에 대 한 자세한 내용은 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md) 및 [예외: OLE 예외](../../mfc/exceptions-ole-exceptions.md)문서를 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -61,9 +61,9 @@ class COleException : public CException
 
 **헤더:** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>콜레예외::m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException:: m_sc
 
-이 데이터 멤버에는 예외의 원인을 나타내는 OLE 상태 코드가 있습니다.
+이 데이터 멤버는 예외의 원인을 나타내는 OLE 상태 코드를 포함 합니다.
 
 ```
 SCODE m_sc;
@@ -71,17 +71,17 @@ SCODE m_sc;
 
 ### <a name="remarks"></a>설명
 
-이 변수의 값은 [AfxThrowOleException에](exception-processing.md#afxthrowoleexception)의해 설정됩니다.
+이 변수의 값은 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)에 의해 설정 됩니다.
 
-SCODE에 대한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조를](/windows/win32/com/structure-of-com-error-codes) 참조하십시오.
+이에 대 한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조](/windows/win32/com/structure-of-com-error-codes) 를 참조 하십시오.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>코레예외::P로키스
+## <a name="coleexceptionprocess"></a><a name="process"></a>COleException::P rocess
 
-**프로세스** 멤버 함수를 호출하여 CATCH된 예외를 OLE 상태 코드로 변환합니다.
+**Process** 멤버 함수를 호출 하 여 catch 된 예외를 OLE 상태 코드로 변환 합니다.
 
 ```
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -89,8 +89,8 @@ static SCODE PASCAL Process(const CException* pAnyException);
 
 ### <a name="parameters"></a>매개 변수
 
-*pAnyException*<br/>
-적발된 예외에 대한 포인터입니다.
+*는 Yexception*<br/>
+Catch 된 예외에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -99,9 +99,9 @@ OLE 상태 코드입니다.
 ### <a name="remarks"></a>설명
 
 > [!NOTE]
-> 이 함수는 **정적입니다.**
+> 이 함수는 **`static`** 입니다.
 
-SCODE에 대한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조를](/windows/win32/com/structure-of-com-error-codes) 참조하십시오.
+이에 대 한 자세한 내용은 Windows SDK의 [COM 오류 코드 구조](/windows/win32/com/structure-of-com-error-codes) 를 참조 하십시오.
 
 ### <a name="example"></a>예제
 

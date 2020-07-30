@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911395"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218574"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -97,7 +97,7 @@ float _logbf(
 
 **Logb** 함수는 *x* 가 무한 범위로 표현 된 것 처럼 부동 소수점 인수 *x*의 지 수 값을 추출 합니다. 인수 *x* 가 정규화 되지 않은 경우 정규화 된 것 처럼 처리 됩니다.
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **logb** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **logb** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **logb** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **logb** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 |입력|SEH 예외|Matherr 예외|
 |-----------|-------------------|-----------------------|
@@ -119,7 +119,7 @@ C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **dou
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

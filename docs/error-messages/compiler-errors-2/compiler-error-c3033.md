@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3033
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
-ms.openlocfilehash: 5d17f10e665a2c0ac86a10d90903e890b3c53386
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: df3e3f8472d1c274049e686de93488d556ff6f1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232016"
 ---
 # <a name="compiler-error-c3033"></a>컴파일러 오류 C3033
 
 'var': 'clause' 절의 변수는 const 한정 형식이 될 수 없습니다.
 
-특정 절에 전달된 값은 `const` 변수가 될 수 없습니다.
+특정 절에 전달 된 값은 변수가 될 수 없습니다 **`const`** .
 
 다음 샘플에서는 C3033을 생성합니다.
 

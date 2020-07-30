@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915090"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234200"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-**Double** 숫자를 문자열로 변환 합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [_ecvt_s](ecvt-s.md)를 참조하세요.
+숫자를 **`double`** 문자열로 변환 합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [_ecvt_s](ecvt-s.md)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -62,7 +62,7 @@ char *_ecvt(
 *dec*<br/>
 저장된 소수점 위치입니다.
 
-*로그인*<br/>
+*sign*<br/>
 변환된 숫자의 부호입니다.
 
 ## <a name="return-value"></a>Return Value
@@ -87,7 +87,7 @@ char *_ecvt(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
@@ -122,7 +122,7 @@ int main( void )
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>

@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218687"
 ---
 # <a name="floating-point-primitives"></a>부동 소수점 기본 형식
 
@@ -289,7 +289,7 @@ short __cdecl _fd_int(float* px, short exp);
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*.exp*<br/>
+*exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -311,7 +311,7 @@ short __cdecl _fdscale(float* px, long exp);
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*.exp*<br/>
+*exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -358,7 +358,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 *px*<br/>
 부동 소수점 인수에 대 한 포인터입니다.
 
-*.exp*<br/>
+*exp*<br/>
 정수 계열 형식인 지 수입니다.
 
 ### <a name="remarks"></a>설명
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>매개 변수
 
 *ps*<br/>
-**부호 없는** **short**의 배열로 표현 된 부동 소수점 값의 비트 표현에 대 한 포인터입니다.
+배열로 표현 된 부동 소수점 값의 비트 표현에 대 한 포인터입니다 **`unsigned short`** .
 
 ### <a name="remarks"></a>설명
 
-이러한 부동 소수점 기본 형식은 언더플로 되었습니다 부동 소수점 값의 소수 부분을 정규화 하 고 *특성*또는 편향 지수가 일치 하도록 조정 합니다. 값은 `_double_val`punning에 선언 된 `_ldouble_val`, `_float_val` 또는 형식을 통해 **부호 없는** **short** 배열로 변환 된 부동 소수점 형식의 비트 표현으로 전달 됩니다. 반환 값은 NaN 또는 infinity 인 경우 입력 부동 소수점 값에 대 한 **fpclassify** 의 결과이 고, 그렇지 않으면 출력 값입니다.
+이러한 부동 소수점 기본 형식은 언더플로 되었습니다 부동 소수점 값의 소수 부분을 정규화 하 고 *특성*또는 편향 지수가 일치 하도록 조정 합니다. 이 값은 **`unsigned short`** `_double_val` `_ldouble_val` `_float_val` punning에 선언 된, 또는 형식 union을 통해의 배열로 변환 된 부동 소수점 형식의 비트 표현으로 전달 됩니다. 반환 값은 NaN 또는 infinity 인 경우 입력 부동 소수점 값에 대 한 **fpclassify** 의 결과이 고, 그렇지 않으면 출력 값입니다.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -406,7 +406,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>설명
 
-이러한 부동 소수점 기본 형식은 *테이블*의 해당 상수 값으로 계수를 나타내는 order *n* 의 다항식에서 *x* 계산을 반환 합니다. 예를 들어 *table*\[0] = 3.0, *table*\[1] = 4.0, *table*\[2] = 5.0 및 *n* = 2 인 경우 다항식 5.0 x<sup>2</sup> + 4.0 x + 3.0를 나타냅니다. 이러한 다항식이 *x* 2.0에 대해 평가 되는 경우 결과는 31.0입니다. 이러한 함수는 내부적으로 사용 되지 않습니다.
+이러한 부동 소수점 기본 형식은 *테이블*의 해당 상수 값으로 계수를 나타내는 order *n* 의 다항식에서 *x* 계산을 반환 합니다. 예를 들어 *table* \[ 0] = 3.0, *table* \[ 1] = 4.0, *table* \[ 2] = 5.0 및 *n* = 2 인 경우 다항식 5.0 x<sup>2</sup> + 4.0 x + 3.0를 나타냅니다. 이러한 다항식이 *x* 2.0에 대해 평가 되는 경우 결과는 31.0입니다. 이러한 함수는 내부적으로 사용 되지 않습니다.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -446,7 +446,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 부동 소수점 함수 인수입니다.
 
 *제*<br/>
-, `sin` `cos`, 및 `-cos` 결과를 생성 하는 데 사용할 사분면 오프셋 (0, 1, 2 또는 3)입니다. `-sin`
+`sin`,, `cos` `-sin` 및 결과를 생성 하는 데 사용할 사분면 오프셋 (0, 1, 2 또는 3)입니다 `-cos` .
 
 ### <a name="remarks"></a>설명
 
@@ -454,11 +454,11 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ## <a name="requirements"></a>요구 사항
 
-헤더: \<math. h>
+헤더: \<math.h>
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

@@ -1,17 +1,17 @@
 ---
-title: defaultvtable (C++ COM 특성)
+title: defaultvtable (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: a15b3552e6b67fb0347a14c48414741edf31ac93
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168268"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215259"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -28,9 +28,9 @@ ms.locfileid: "80168268"
 *interface*<br/>
 COM 개체에 대 한 기본 vtable을 포함 하려는 지정 된 인터페이스입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Defaultvtable** C++ 특성에는 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 특성과 동일한 기능이 있습니다.
+**Defaultvtable** c + + 특성에는 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -68,8 +68,8 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|아니요|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
 |**필수 특성**|**coclass**|
 |**잘못된 특성**|없음|
 

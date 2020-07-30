@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 6d85e9b10831bc964706ef94d715b7a5d4ab4c50
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 634a78274a9c7a4ed75466b083f4ee4880401630
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366352"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230171"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution 클래스
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*실제 유형*\
-부동 점 결과 유형은 기본값으로 **두 배로**설정됩니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*RealType*\
+부동 소수점 결과 형식으로, 기본적으로로 설정 **`double`** 됩니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-*URNG (우롱)는*\
-균일 한 난수 생성기 엔진입니다. 가능한 형식은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+*URNG*\
+단일 난수 생성기 엔진입니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>설명
 
-클래스 템플릿은 사용자가 지정한 부동 점 형식의 값을 생성하는 분포를 설명하거나 Chi-Squared 분포에 따라 배포된 값이 제공되지 않으면 **double을** 입력합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+클래스 템플릿은 카이 제곱 분포에 따라 분포 된 경우 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-배포 클래스 및 해당 멤버에 대한 자세한 내용은 [ \<임의>](../standard-library/random.md)를 참조하십시오.
+배포 클래스 및 해당 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
 카이 제곱 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Chi-Squared Distribution](https://go.microsoft.com/fwlink/p/?linkid=400528)(카이 제곱 분포)을 참조하세요.
 
@@ -220,11 +220,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:: chi_squared_distribution
 
 분포를 생성합니다.
 
@@ -235,10 +235,10 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>매개 변수
 
-*N*\
+*개의*\
 `n` 분포 매개 변수입니다.
 
-*파름 ()와*\
+*parm*\
 분포를 생성하는 데 사용되는 매개 변수 구조입니다.
 
 ### <a name="remarks"></a>설명
@@ -249,7 +249,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p아람_타입
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 
@@ -266,7 +266,7 @@ struct param_type {
 
 ### <a name="parameters"></a>매개 변수
 
-*N*\
+*개의*\
 `n` 분포 매개 변수입니다.
 
 *오른쪽*\
@@ -280,4 +280,4 @@ struct param_type {
 
 ## <a name="see-also"></a>참고 항목
 
-[\<임의>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

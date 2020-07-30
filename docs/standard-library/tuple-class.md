@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215545"
 ---
 # <a name="tuple-class"></a>튜플 클래스
 
@@ -44,9 +44,9 @@ class tuple {
 *TN*\
 N번째 튜플 요소의 형식입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-클래스 템플릿은 `T1`, `T2`, ..., `TN`각각의 N 개 개체를 저장 하는 개체를 설명 합니다. 여기서 `0 <= N <= Nmax`합니다. 튜플 인스턴스 `tuple<T1, T2, ..., TN>`의 범위는 해당 템플릿 인수의 `N` 수입니다. 템플릿 인수 `Ti` 및 해당 형식의 저장 된 해당 값의 인덱스는 `i - 1`됩니다. 따라서이 설명서에서 1에서 N 사이의 형식으로 숫자를 표시 하는 동안 해당 인덱스 값의 범위는 0에서 N-1 사이입니다.
+클래스 템플릿은,, ... `T1` `T2` ,, `TN` 각각의 N 개 개체를 저장 하는 개체를 설명 `0 <= N <= Nmax` 합니다. 튜플 인스턴스의 범위는 `tuple<T1, T2, ..., TN>` `N` 해당 템플릿 인수의 개수입니다. 템플릿 인수 및 해당 형식의 저장 된 값의 인덱스는 `Ti` `i - 1` 입니다. 따라서이 설명서에서 1에서 N 사이의 형식으로 숫자를 표시 하는 동안 해당 인덱스 값의 범위는 0에서 N-1 사이입니다.
 
 ## <a name="example"></a>예제
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
 `tuple` 개체를 할당합니다.
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-\ *취소*
+*되지*\
 N번째 복사된 튜플 요소의 형식입니다.
 
 *오른쪽*\
 복사할 튜플입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-처음 두 멤버 연산자는 `*this`의 해당 요소에 *오른쪽* 의 요소를 할당 합니다. 세 번째 구성원 연산자는 `right.first`를 `*this`의 인덱스 0에 있는 요소에, `right.second`를 인덱스 1에 있는 요소에 할당합니다. 세 구성원 연산자는 모두 `*this`를 반환합니다.
+처음 두 멤버 연산자는의 요소를의 해당 *요소에 할당* 합니다 **`*this`** . 세 번째 멤버 연산자는 `right.first` 의 인덱스 0에 있는 요소 **`*this`** 와 인덱스 1의 요소에 할당 합니다 `right.second` . 세 개의 멤버 연산자는 모두 **`*this`** 를 반환 합니다.
 
 나머지 구성원 연산자도 앞의 연산자와 동일하지만 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 사용합니다.
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>스왑을
+## <a name="swap"></a><a name="tuple_swap"></a>스왑을
 
 두 튜플의 요소를 교환합니다.
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 튜플 *오른쪽*의 요소와 교환할 요소를 포함 하는 튜플입니다.
 
 *오른쪽*\
 요소를 *왼쪽*튜플의 요소와 교환 해야 하는 튜플입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 함수는 `left.swap(right)`을 실행합니다.
 
-## <a name="tuple"></a>튜플이
+## <a name="tuple"></a><a name="tuple"></a>튜플이
 
 `tuple` 개체를 생성합니다.
 
@@ -246,17 +246,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>매개 변수
 
-\ *취소*
+*되지*\
 N번째 복사된 튜플 요소의 형식입니다.
 
 *오른쪽*\
 복사할 튜플입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 생성자는 요소가 기본 생성되는 개체를 생성합니다.
 
-두 번째 생성자는 요소가 각 `P1`로 `P2` 인덱스의 요소를 초기화하여 `PN`, `Pi`, ..., `i - 1` 인수에서 복사 생성되는 개체를 생성합니다.
+두 번째 생성자는 요소가 각 `Pi`로 `i - 1` 인덱스의 요소를 초기화하여 `P1`, `P2`, ..., `PN` 인수에서 복사 생성되는 개체를 생성합니다.
 
 세 번째 및 네 번째 생성자는 해당 요소가 *오른쪽*의 해당 요소에서 복사 생성 되는 개체를 생성 합니다.
 

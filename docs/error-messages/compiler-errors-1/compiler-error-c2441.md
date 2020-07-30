@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205311"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207955"
 ---
 # <a name="compiler-error-c2441"></a>컴파일러 오류 C2441
 
 > '*variable*': __declspec (process)로 선언 된 기호는/clr: pure 모드에서 const 여야 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **/Clr: pure** 및 **/clr: safe** 컴파일러 옵션은 visual studio 2015에서 더 이상 사용 되지 않으며 visual studio 2017에서는 지원 되지 않습니다.
 
-기본적으로 변수는 **/clr: pure**아래의 응용 프로그램 도메인 별로 있습니다. **/Clr: pure** 아래에 `__declspec(process)` 표시 된 변수는 한 응용 프로그램 도메인에서 수정 되 고 다른 응용 프로그램 도메인에서 읽을 경우 오류가 발생 하기 쉽습니다.
+기본적으로 변수는 **/clr: pure**아래의 응용 프로그램 도메인 별로 있습니다. `__declspec(process)` **/Clr: pure** 로 표시 된 변수는 한 응용 프로그램 도메인에서 수정 되 고 다른 응용 프로그램 도메인에서 읽을 경우 오류가 발생 하기 쉽습니다.
 
-따라서 컴파일러는 프로세스 당 변수를 **/clr: pure**에서 `const` 하 여 모든 응용 프로그램 도메인에서 읽기 전용으로 설정 합니다.
+따라서 컴파일러는 프로세스 당 변수를 **`const`** **/clr: pure**아래에 적용 하므로 모든 응용 프로그램 도메인에서 읽기 전용으로 설정 됩니다.
 
 자세한 내용은 [process](../../cpp/process.md) and [/Clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조 하세요.
 

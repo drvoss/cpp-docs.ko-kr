@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919860"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232575"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -81,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 변환할 문자열입니다.
 
 *locale*<br/>
@@ -89,7 +89,7 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>Return Value
 
-각 함수는 입력 문자를 숫자로 해석 하 여 생성 된 **int** 값을 반환 합니다. 입력을 해당 형식의 값으로 변환할 수 없는 경우 반환 값은 **atoi** 및 **_wtoi**에 대해 0입니다.
+각 함수는 **`int`** 입력 문자를 숫자로 해석 하 여 생성 된 값을 반환 합니다. 입력을 해당 형식의 값으로 변환할 수 없는 경우 반환 값은 **atoi** 및 **_wtoi**에 대해 0입니다.
 
 긴 음의 정수 값을 사용 하는 오버플로의 경우 **LONG_MIN** 반환 됩니다. **atoi** and **_wtoi** 는 이러한 조건에 대해 **INT_MAX** 및 **INT_MIN** 를 반환 합니다. 범위를 벗어난 모든 경우에는 **errno** 가 **ERANGE**로 설정 됩니다. 전달 된 매개 변수가 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 0을 반환 합니다.
 
@@ -169,11 +169,11 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

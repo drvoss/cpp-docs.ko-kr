@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218054"
 ---
 # <a name="c-runtime-error-r6025"></a>C 런타임 오류 R6025
 
@@ -30,4 +30,4 @@ ms.locfileid: "80075121"
 
 순수 가상 함수 호출을 처리 하기 위해 인스턴스화된 개체가 없습니다.
 
-이 오류는 파생 클래스의 형식으로 캐스팅 하 여 만든 포인터를 통해 추상 기본 클래스에서 가상 함수를 호출 하는 경우에 발생 하지만 실제로는 기본 클래스에 대 한 포인터입니다. 이는 기본 클래스를 생성 하는 동안 **void** <strong>\*</strong> 를 만들 때 **void** <strong>\*</strong> 에서 클래스로 캐스팅 하는 경우에 발생할 수 있습니다.
+이 오류는 파생 클래스의 형식으로 캐스팅 하 여 만든 포인터를 통해 추상 기본 클래스에서 가상 함수를 호출 하는 경우에 발생 하지만 실제로는 기본 클래스에 대 한 포인터입니다. 이는 **`void`** <strong>\*</strong> **`void`** 기본 클래스를 생성 하는 동안를 만들 때를 클래스에 대 한 포인터로 캐스팅 하는 경우에 발생할 수 있습니다 <strong>\*</strong> .

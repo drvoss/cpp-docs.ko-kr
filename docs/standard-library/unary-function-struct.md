@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217378"
 ---
-# <a name="unaryfunction-struct"></a>unary_function 구조체
+# <a name="unary_function-struct"></a>unary_function 구조체
 
 단항 함수 개체를 제공하는 파생 클래스에 상속될 수 있는 형식을 정의하는 빈 기본 구조체입니다.
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>설명
 
-템플릿 구조체는 **result_type**`operator()`(**constargument_type&** ) **const** 형식의 구성원 함수를 정의하는 클래스의 기준으로 사용됩니다.
+템플릿 구조체는 **result_type** `operator()` ( **constargument_type&**) 형식의 멤버 함수를 정의 하는 클래스의 기본으로 사용 **`const`** 됩니다.
 
 이러한 모든 파생 단항 함수는 유일한 인수 유형을 **argument_type**으로, 반환 형식을 **result_type**로 참조할 수 있습니다.
 

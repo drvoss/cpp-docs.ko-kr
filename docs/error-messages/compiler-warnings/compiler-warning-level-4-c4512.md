@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218093"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>컴파일러 경고(수준 4) C4512
 
@@ -23,13 +23,13 @@ ms.locfileid: "74991008"
 
 이 경고를 방지하려면 클래스에 사용자 정의 할당 연산자를 지정합니다.
 
-또한 컴파일러는 할당 연산자 함수를 정의하지 않는 클래스에 대해서도 할당 연산자 함수를 생성합니다. 이 할당 연산자는 개체 데이터 멤버의 멤버 수준 복사본입니다. `const` 데이터 항목은 초기화한 후에는 수정할 수 없으므로 클래스에 `const` 항목이 포함되어 있으면 기본 할당 연산자가 작동하지 않습니다. C4512 경고가 발생하는 또 다른 원인은 참조 형식의 비정적 데이터 멤버 선언입니다. 복사할 수 없는 형식을 만들려는 경우에는 기본 복사 생성자 생성도 차단해야 합니다.
+또한 컴파일러는 할당 연산자 함수를 정의하지 않는 클래스에 대해서도 할당 연산자 함수를 생성합니다. 이 할당 연산자는 개체 데이터 멤버의 멤버 수준 복사본입니다. **`const`** 초기화 후에는 데이터 항목을 수정할 수 없으므로 클래스에 항목이 포함 되어 있으면 **`const`** 기본 할당 연산자가 작동 하지 않습니다. C4512 경고가 발생하는 또 다른 원인은 참조 형식의 비정적 데이터 멤버 선언입니다. 복사할 수 없는 형식을 만들려는 경우에는 기본 복사 생성자 생성도 차단해야 합니다.
 
 다음의 세 가지 방법 중 하나로 코드에 대한 C4512 경고를 해결할 수 있습니다.
 
 - 클래스에 대해 할당 연산자를 명시적으로 정의합니다.
 
-- 클래스의 데이터 항목에서 **const** 또는 reference 연산자를 제거 합니다.
+- **`const`** 클래스의 데이터 항목에서 또는 참조 연산자를 제거 합니다.
 
 - 경고를 표시 하지 않으려면 #pragma [warning](../../preprocessor/warning.md) 문을 사용 합니다.
 

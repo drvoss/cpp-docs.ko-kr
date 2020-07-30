@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229053"
 ---
 # <a name="cleaning-up-resources"></a>리소스 정리
 
@@ -26,7 +26,7 @@ ms.locfileid: "80180865"
 
 1. **__Try** 문 블록에서 리소스를 할당 합니다. 리소스가 할당되면 핸들은 양수 값으로 설정됩니다.
 
-1. **__Finally** 문 블록에서 해당 핸들 또는 플래그 변수가 0이 아니거나 NULL이 아닌 각 리소스를 해제 합니다.
+1. **`__finally`** 문 블록에서 해당 핸들 또는 플래그 변수가 0이 아니거나 NULL이 아닌 각 리소스를 해제 합니다.
 
 ## <a name="example"></a>예제
 
@@ -73,4 +73,4 @@ int main() {
 ## <a name="see-also"></a>참고 항목
 
 [종료 처리기 작성](../cpp/writing-a-termination-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[구조적 예외 처리(C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213530"
 ---
 # <a name="isnormal"></a>isnormal
 
-부동 소수점 값을 일반 값인지 여부를 결정 합니다.
+부동 소수점 값이 일반 값 인지 여부를 확인 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,11 +37,11 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>반환 값
 
-**isnormal** 0이 아닌 값을 반환 합니다 (**true** 에서 C++ 코드) 하는 경우 인수 *x* 은 0, subnormal, infinite로도 아니고 NaN입니다. 그렇지 않으면 **isnormal** 0을 반환 합니다 (**false** 에서 C++ 코드).
+**isnormal** 은 0이 아닌 값 ( **`true`** c + + 코드의 경우 *x* )을 반환 합니다. 그렇지 않은 경우 **isnormal** 은 0 ( **`false`** c + + 코드의 경우)을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**isnormal** 매크로가 C로 컴파일된 경우에 인라인 함수 템플릿을로 컴파일될 때 C++합니다.
+**isnormal** 은 c로 컴파일되는 매크로 이며 c + +로 컴파일될 때 인라인 함수 템플릿을 말합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -49,9 +49,9 @@ inline bool isnormal(
 |--------------|---------------------------|-------------------------------|
 |**isnormal**|\<math.h>|\<math.h> 또는 \<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30ca602ecc65099adff7300f730c500a31fe0ed5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227610"
 ---
 # <a name="break-statement-c"></a>break 문 (C++)
 
-**Break** 문은 해당 문이 표시 되는 가장 가까운 바깥쪽 루프 또는 조건문의 실행을 종료 합니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.
+**`break`** 문이 표시 되는 가장 가까운 바깥쪽 루프 또는 조건문의 실행을 종료 합니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -23,19 +23,19 @@ ms.locfileid: "80190484"
 break;
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Break** 문은 조건문과 함께 [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)및 [while](../cpp/while-statement-cpp.md) [loop 문을 사용](../cpp/switch-statement-cpp.md) 하 여 사용 됩니다.
+**`break`** 문은 조건문과 [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)및 [switch](../cpp/switch-statement-cpp.md) [while](../cpp/while-statement-cpp.md) loop 문을 사용 하 여 사용 됩니다.
 
-**Switch** 문에서 **break** 문은 프로그램이 **switch** 문 외부에서 다음 문을 실행 하도록 합니다. **Break** 문이 없으면 **default** 절을 포함 하 여 **switch** 문 끝에 대 한 일치 하는 **case** 레이블의 모든 문이 실행 됩니다.
+문에서 문은 **`switch`** **`break`** 프로그램이 문 외부의 다음 문을 실행 하도록 합니다 **`switch`** . 문이 없으면 **`break`** 절을 포함 하 여 일치 하는 **`case`** 레이블의 끝에 있는 모든 문이 **`switch`** **`default`** 실행 됩니다.
 
-루프에서 **break** 문은 가장 가까운 바깥쪽 **do**, **for**또는 **while** 문의 실행을 종료 합니다. 종료된 문 뒤에 문이 있는 경우 제어가 해당 문으로 전달됩니다.
+루프에서 **`break`** 문은 가장 가까운 바깥쪽 **`do`** , 또는 문의 실행을 종료 **`for`** **`while`** 합니다. 종료된 문 뒤에 문이 있는 경우 제어가 해당 문으로 전달됩니다.
 
-중첩 문 내에서 **break** 문은 바로이를 포함 하는 **do**, **for**, **switch**또는 **while** 문만 종료 합니다. **Return** 또는 **goto** 문을 사용 하 여 보다 깊게 중첩 된 구조에서 컨트롤을 전송할 수 있습니다.
+중첩 된 문 내에서 **`break`** 문은 **`do`** **`for`** **`switch`** 바로이를 둘러싼,, 또는 **`while`** 문만 종료 합니다. **`return`** 또는 문을 사용 하 여 **`goto`** 보다 깊게 중첩 된 구조에서 컨트롤을 전송할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 코드에서는 **for** 루프에서 **break** 문을 사용 하는 방법을 보여 줍니다.
+다음 코드에서는 루프에서 문을 사용 하는 방법을 보여 줍니다 **`break`** **`for`** .
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-다음 코드에서는 **while** 루프와 **do** 루프에서 **break** 를 사용 하는 방법을 보여 줍니다.
+다음 코드에서는 **`break`** **`while`** 루프와 루프에서를 사용 하는 방법을 보여 줍니다 **`do`** .
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-다음 코드에서는 switch 문에서 **break** 를 사용 하는 방법을 보여 줍니다. 각 사례를 별도로 처리 하려면 모든 경우에 **중단** 을 사용 해야 합니다. **break**를 사용 하지 않는 경우 코드 실행은 다음 사례로 진행 됩니다.
+다음 코드에서는 switch 문에서를 사용 하는 방법을 보여 줍니다 **`break`** . 각 사례를 **`break`** 개별적으로 처리 하려는 경우에는 항상를 사용 해야 합니다 .을 사용 하지 않는 경우 **`break`** 코드 실행은 다음 사례로 이동 합니다.
 
 ```cpp
 #include <iostream>
@@ -154,5 +154,5 @@ int main() {
 ## <a name="see-also"></a>참고 항목
 
 [점프 문](../cpp/jump-statements-cpp.md)<br/>
-[키워드](../cpp/keywords-cpp.md)<br/>
+[C++ 키워드](../cpp/keywords-cpp.md)<br/>
 [continue 문](../cpp/continue-statement-cpp.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219796"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>/clr을 사용한 C 스타일 캐스트(C++/CLI)
 
@@ -34,7 +34,7 @@ CLR 형식에서 사용할 경우, 컴파일러는 C 스타일 캐스트를 아�
 
 C 스타일 캐스트는 권장되지 않습니다. [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)로 컴파일하는 경우 [safe_cast](safe-cast-cpp-component-extensions.md)를 사용합니다.
 
-다음 샘플에서는 **const_cast**에 매핑되는 C 스타일 캐스트를 보여 줍니다.
+다음 샘플에서는에 매핑되는 C 스타일 캐스트를 보여 줍니다 **`const_cast`** .
 
 ```cpp
 // cstyle_casts_1.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-다음 샘플에서는 **safe_cast** 및 **const_cast**에 매핑되는 C 스타일 캐스트를 보여 줍니다.
+다음 샘플에서는 **safe_cast** 더하기에 매핑되는 C 스타일 캐스트를 보여 줍니다 **`const_cast`** .
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-다음 샘플에서는 **static_cast**에 매핑되는 C 스타일 캐스트를 보여 줍니다.
+다음 샘플에서는에 매핑되는 C 스타일 캐스트를 보여 줍니다 **`static_cast`** .
 
 ```cpp
 // cstyle_casts_4.cpp
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-다음 샘플에서는 **static_cast** 및 **const_cast**에 매핑되는 C 스타일 캐스트를 보여 줍니다.
+다음 샘플에서는 더하기에 매핑되는 C 스타일 캐스트를 보여 줍니다 **`static_cast`** **`const_cast`** .
 
 ```cpp
 // cstyle_casts_5.cpp
@@ -162,4 +162,4 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

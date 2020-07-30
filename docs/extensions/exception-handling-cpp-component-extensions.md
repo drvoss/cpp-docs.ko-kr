@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23d65bb8056672d12e3d40f9fcab1e58bab65a3d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182125"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219705"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>예외 처리(C++/CLI 및 C++/CX)
 
@@ -23,10 +23,10 @@ ms.locfileid: "80182125"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[관리되는 예외 사용의 기본 개념](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
-예외를 throw하고 **try**/**catch** 블록을 사용하는 방법을 설명합니다.
+[관리 되는 예외 사용의 기본 개념](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
+예외 throw 및 블록 사용에 대해 설명 합니다 **`try`** / **`catch`** .
 
-[/clr을 지정하는 경우 예외 처리 동작의 차이점](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
+[/Clr에서 예외 처리 동작의 차이점](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 C++ 예외 처리의 표준 동작과의 차이점을 설명합니다.
 
 [finally](../dotnet/finally.md)<br/>
@@ -35,17 +35,17 @@ Finally 키워드를 사용하는 방법을 설명합니다.
 [방법: 전역 예외 처리기 정의 및 설치](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 처리되지 않은 예외를 캡처하는 방법을 보여 줍니다.
 
-[방법: 네이티브 코드에서 MSIL이 throw한 예외 catch](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[방법: MSIL에서 Throw 된 네이티브 코드의 예외 Catch](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 네이티브 코드에서 CLR 및 C++ 예외를 catch하는 방법을 설명합니다.
 
 [방법: 전역 예외 처리기 정의 및 설치](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 처리되지 않은 예외를 catch하는 방법을 보여 줍니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
 
 [예외 처리](../cpp/exception-handling-in-visual-cpp.md)<br/>
 표준 C++의 예외 처리에 대해 설명합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

@@ -5,40 +5,40 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172648"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225165"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>특성 매개 변수 형식(C++/CLI 및 C++/CX)
 
 특성에 전달된 값은 컴파일 타임에 컴파일러에 알려야 합니다.  특성 매개 변수는 다음 형식일 수 있습니다.
 
-- **bool**
+- **`bool`**
 
-- **char**, **unsigned char**
+- **`char`**, **`unsigned char`**
 
-- **short**, **unsigned short**
+- **`short`**, **`unsigned short`**
 
-- **int**, **unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **long**, **unsigned long**
+- **`long`**, **`unsigned long`**
 
-- **__int64**, **unsigned __int64**
+- **`__int64`**, **unsigned __int64**
 
-- **float**, **double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*` 또는 `wchar_t*` 또는 `System::String*`
+- **`char*`** 또는 `wchar_t*` 또는`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>예제
 
@@ -67,7 +67,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 특성을 지정할 때 명명되지 않은 모든 (위치) 인수는 모든 명명된 인수 앞에 와야 합니다.
 
@@ -101,7 +101,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 특성 매개 변수는 이전 형식의 1차원 배열일 수 있습니다.
 

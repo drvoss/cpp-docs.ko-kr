@@ -5,12 +5,12 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926114"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233290"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>컴파일러 경고(수준 1) C4305
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-이 문제를 해결 하려면 올바른 형식의 값을 사용 하 여를 초기화 하거나 올바른 형식으로의 명시적 캐스트를 사용 합니다. 예를 들어, **double** (부동 소수점 리터럴의 기본 형식) 대신 2.71828 f와 같은 **float** 리터럴을 사용 하 여 **float** 변수를 초기화 하거나 **float** 인수를 사용 하는 생성자에 전달 합니다.
+이 문제를 해결 하려면 올바른 형식의 값을 사용 하 여를 초기화 하거나 올바른 형식으로의 명시적 캐스트를 사용 합니다. 예를 들어, **`float`** **`double`** 변수를 초기화 **`float`** 하거나 인수를 사용 하는 생성자에 전달 하기 위해 (부동 소수점 리터럴의 기본 형식) 대신 2.71828 f와 같은 리터럴을 사용 **`float`** 합니다.

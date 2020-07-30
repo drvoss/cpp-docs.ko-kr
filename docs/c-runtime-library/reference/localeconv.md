@@ -28,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916403"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218639"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -57,12 +57,12 @@ struct lconv *localeconv( void );
 |-|-|
 decimal_point,<br/>_W_decimal_point|비 통화 수량에 대 한 소수점 문자 포인터입니다.
 thousands_sep,<br/>_W_thousands_sep|비 통화 수량에 대 한 소수점 왼쪽의 숫자 그룹을 구분 하는 문자에 대 한 포인터입니다.
-그룹화|비 통화 수량에서 각 숫자 그룹의 크기를 포함 하는 **char**크기의 정수에 대 한 포인터입니다.
+그룹화|**`char`** 비 통화 수량에서 각 숫자 그룹의 크기를 포함 하는 크기가 지정 된 정수에 대 한 포인터입니다.
 int_curr_symbol,<br/>_W_int_curr_symbol|현재 로캘의 국제 통화 기호에 대 한 포인터입니다. 처음 세 문자는 *ISO 4217 Codes for the Representation of Currency and Funds* 표준에 정의된 대로 영문자 국제 통화 기호를 지정합니다. 네 번째 문자(null 문자 바로 앞)는 통화 수량에서 국제 통화 기호를 구분합니다.
 currency_symbol,<br/>_W_currency_symbol|현재 로캘의 현지 통화 기호에 대 한 포인터입니다.
 mon_decimal_point,<br/>_W_mon_decimal_point|통화 수량의 소수점 문자에 대 한 포인터입니다.
 mon_thousands_sep,<br/>_W_mon_thousands_sep|통화 수량에서 소수점 왼쪽에 있는 숫자 그룹의 구분 기호에 대 한 포인터입니다.
-mon_grouping|통화 수량에서 각 숫자 그룹의 크기를 포함 하는 **char**크기의 정수에 대 한 포인터입니다.
+mon_grouping|**`char`** 통화 수량에서 각 숫자 그룹의 크기를 포함 하는 크기 조정 된 정수에 대 한 포인터입니다.
 positive_sign,<br/>_W_positive_sign|음수가 아닌 통화 수량에 대한 부호를 나타내는 문자열입니다.
 negative_sign,<br/>_W_negative_sign|음수 통화 수량에 대한 부호를 나타내는 문자열입니다.
 int_frac_digits|국제적으로 서식이 지정된 통화 수량에서 소수점 오른쪽의 자릿수입니다.
@@ -74,9 +74,9 @@ n_sep_by_space|통화 기호가 음수 서식이 지정된 통화 수량에 대�
 p_sign_posn|음수가 아닌 서식이 지정된 통화 수량에서 양수 부호의 위치입니다.
 n_sign_posn|음수 서식이 지정된 통화 수량에서 양수 부호의 위치입니다.
 
-지정 된 경우를 제외 하 고 및 `char *` `wchar_t *` 버전이 포함 된 **lconv** 구조체의 멤버는 문자열에 대 한 포인터입니다. **""** **(또는** **wchar_t** <strong>\*</strong>)에 해당 하는 값 중 하나는 길이가 0 이거나 현재 로캘에서 지원 되지 않습니다. **Decimal_point** 및 **_W_decimal_point** 는 항상 지원 되며 0이 아닌 길이입니다.
+지정 된 경우를 제외 하 고 및 버전이 포함 된 **lconv** 구조체의 멤버 `char *` `wchar_t *` 는 문자열에 대 한 포인터입니다. **""** (또는 **L "** 의 경우)와 같은 이러한 **`wchar_t`** <strong>\*</strong> 값은 길이가 0 이거나 현재 로캘에서 지원 되지 않습니다. **Decimal_point** 및 **_W_decimal_point** 는 항상 지원 되며 0이 아닌 길이입니다.
 
-구조체의 **char** 멤버는 문자가 아닌 음수가 아닌 작은 숫자입니다. **CHAR_MAX**와 동일한 이러한 멤버는 현재 로캘에서 지원되지 않습니다.
+**`char`** 구조체의 멤버는 문자가 아닌 음수가 아닌 작은 숫자입니다. **CHAR_MAX**와 동일한 이러한 멤버는 현재 로캘에서 지원되지 않습니다.
 
 **그룹화** 및 **mon_grouping** 의 값은 다음 규칙에 따라 해석 됩니다.
 
@@ -130,9 +130,9 @@ n_sign_posn|음수 서식이 지정된 통화 수량에서 양수 부호의 위�
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [strcoll 함수](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

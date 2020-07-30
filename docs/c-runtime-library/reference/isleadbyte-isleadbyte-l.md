@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909544"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234083"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -68,7 +68,7 @@ int _isleadbyte_l( int c );
 
 **Isleadbyte** 매크로는 인수가 멀티 바이트 문자의 첫 번째 바이트인 경우 0이 아닌 값을 반환 합니다. **isleadbyte** 는-1 (**EOF**)에서 **UCHAR_MAX** (0xff) (포함) 사이의 모든 정수 인수에 대해 의미 있는 결과를 생성 합니다.
 
-**Isleadbyte** 의 예상 인수 형식은 **int**입니다. 부호 있는 문자가 전달 되는 경우 컴파일러는 부호 확장을 통해 정수로 변환 하 여 예측할 수 없는 결과를 생성 합니다.
+**Isleadbyte** 의 예상 인수 형식은입니다 **`int`** . 부호 있는 문자가 전달 되는 경우 컴파일러는 부호 확장을 통해 정수로 변환 하 여 예측할 수 없는 결과를 얻을 수 있습니다.
 
 **_L** 접미사가 있는이 함수의 버전은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다.
 
@@ -89,8 +89,8 @@ int _isleadbyte_l( int c );
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

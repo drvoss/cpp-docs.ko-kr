@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: 756fb6f17aa02fda9a19d501395c39a0b1f602f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be71bd9eac44c51a2e6a7cdeb925a1ca0b8b5dfb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231210"
 ---
 # <a name="event-handling-in-com"></a>COM에서 이벤트 처리
 
-COM 이벤트 처리에서 event_source [및](../windows/attributes/event-source.md) [event_receiver](../windows/attributes/event-receiver.md) 특성을 사용하여 이벤트 소스 및 이벤트 수신기를 각각 설정하여 을 지정합니다. `type` = `com` 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.
+COM 이벤트 처리에서는를 지정 하 여 [event_source](../windows/attributes/event-source.md) 및 [event_receiver](../windows/attributes/event-receiver.md) 특성을 사용 하 여 이벤트 소스와 이벤트 수신기를 설정 `type` = `com` 합니다. 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.
 
 ## <a name="declaring-events"></a>이벤트 선언
 
-이벤트 소스 클래스에서 인터페이스 선언에서 [__event](../cpp/event.md) 키워드를 사용하여 해당 인터페이스의 메서드를 이벤트로 선언합니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드에는 0개 이상의 매개 변수가 있을 수 있습니다(모두 매개 *변수에* 있어야 있음). 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.
+이벤트 소스 클래스에서 인터페이스 선언에 [__event](../cpp/event.md) 키워드를 사용 하 여 인터페이스의 메서드를 이벤트로 선언 합니다. 해당 인터페이스의 이벤트는 이를 인터페이스 메서드로 호출할 때 발생합니다. 이벤트 인터페이스의 메서드는 0 개 이상의 매개 변수를 가질 수 있습니다 .이 *매개 변수는 모두 매개 변수* 여야 합니다. 반환 형식은 void 또는 모든 정수 계열 형식이 될 수 있습니다.
 
 ## <a name="defining-event-handlers"></a>이벤트 처리기 정의
 
-이벤트 수신기 클래스에서는 처리될 이벤트와 일치하는 시그니처(반환 형식, 호출 규칙 및 인수)가 포함된 메서드인 이벤트 처리기를 정의합니다. COM 이벤트의 경우 호출 규칙이 일치할 필요는 없습니다. 자세한 내용은 아래 [레이아웃 종속 COM 이벤트를](#vcconeventhandlingincomanchorlayoutdependentcomevents) 참조하십시오.
+이벤트 수신기 클래스에서는 처리될 이벤트와 일치하는 시그니처(반환 형식, 호출 규칙 및 인수)가 포함된 메서드인 이벤트 처리기를 정의합니다. COM 이벤트의 경우 호출 규칙이 일치 하지 않아도 됩니다. 자세한 내용은 아래의 [레이아웃 종속 COM 이벤트](#vcconeventhandlingincomanchorlayoutdependentcomevents) 를 참조 하세요.
 
 ## <a name="hooking-event-handlers-to-events"></a>이벤트에 이벤트 처리기 후크
 
-또한 이벤트 수신기 클래스에서는 내장 함수 [__hook](../cpp/hook.md) 사용하여 이벤트를 이벤트 처리기와 연결하고 이벤트 처리기에서 이벤트를 분리하는 [__unhook.](../cpp/unhook.md) 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.
+또한 이벤트 수신기 클래스에서 내장 함수 [__hook](../cpp/hook.md) 를 사용 하 여 이벤트 처리기에 이벤트를 연결 하 고 [__unhook](../cpp/unhook.md) 이벤트 처리기에서 이벤트를 분리 합니다. 한 이벤트 처리기에 여러 이벤트를 후크하거나 한 이벤트에 여러 이벤트 처리기를 후크할 수 있습니다.
 
 > [!NOTE]
-> 일반적으로 COM 이벤트 수신기가 이벤트 소스 인터페이스 정의에 액세스할 수 있게 만드는 두 가지 방법이 있습니다. 첫 번째 방법은 아래와 같이 공용 헤더 파일을 공유하는 것입니다. 두 번째는 `embedded_idl` 가져오기 한정자와 함께 [#import](../preprocessor/hash-import-directive-cpp.md) 사용하여 이벤트 소스 형식 라이브러리가 .tlh 파일에 기록되고 특성 생성 코드가 보존되도록 하는 것입니다.
+> 일반적으로 COM 이벤트 수신기가 이벤트 소스 인터페이스 정의에 액세스할 수 있게 만드는 두 가지 방법이 있습니다. 첫 번째 방법은 아래와 같이 공용 헤더 파일을 공유하는 것입니다. 두 번째는 [#import](../preprocessor/hash-import-directive-cpp.md) 를 가져오기 한정자와 함께 사용 하는 것입니다. `embedded_idl` 따라서 특성 생성 코드를 유지 하 여 이벤트 원본 형식 라이브러리가 .tlh 파일에 기록 됩니다.
 
 ## <a name="firing-events"></a>이벤트 발생
 
-이벤트를 발생하려면 이벤트 소스 클래스의 **__event** 키워드로 선언된 인터페이스에서 메서드를 호출하기만 하면 됩니다. 처리기가 이벤트에 후크된 경우 처리기가 호출됩니다.
+이벤트를 발생 시키려면 **`__event`** 이벤트 소스 클래스에서 키워드로 선언 된 인터페이스에서 메서드를 호출 하면 됩니다. 처리기가 이벤트에 후크된 경우 처리기가 호출됩니다.
 
 ### <a name="com-event-code"></a>COM 이벤트 코드
 
@@ -161,9 +161,9 @@ MyHandler2 was called with value 123.
 
 레이아웃 종속성은 COM 프로그래밍에만 문제가 됩니다. 네이티브 및 관리되는 이벤트 처리에서 처리기의 시그니처(반환 형식, 호출 규칙 및 인수)는 해당 이벤트와 일치해야 하지만 처리기 이름은 해당 이벤트와 일치하지 않아도 됩니다.
 
-그러나 COM 이벤트 처리에서 **true의** `event_receiver` *layout_dependent* 매개 변수를 설정하면 이름 및 서명 일치가 적용됩니다. 즉, 이벤트 수신기에 있는 처리기의 이름 및 시그니처가 후크되어 있는 이벤트의 이름 및 시그니처와 정확하게 일치해야 합니다.
+그러나 COM 이벤트 처리에서의 *layout_dependent* 매개 변수를로 설정 하면 `event_receiver` **`true`** 이름 및 서명 일치가 적용 됩니다. 즉, 이벤트 수신기에 있는 처리기의 이름 및 시그니처가 후크되어 있는 이벤트의 이름 및 시그니처와 정확하게 일치해야 합니다.
 
-*layout_dependent* **false로**설정되면 호출 규칙 및 저장소 클래스(가상, 정적 등)를 호출 이벤트 메서드와 후킹 메서드(해당 대리자) 간에 혼합하고 일치시킬 수 있습니다. layout_dependent 것이 약간 더 *layout_dependent*=**효율적입니다.**
+*Layout_dependent* 를로 설정 하면 **`false`** 호출 하는 규칙 및 저장소 클래스 (가상, 정적 등)를 혼합 하 고 발생 시킬 수 있습니다. *Layout_dependent*하는 것이 약간 더 효율적입니다 = **`true`** .
 
 예를 들어, `IEventSource`가 다음 메서드를 사용하도록 정의되어 있다고 가정합니다.
 

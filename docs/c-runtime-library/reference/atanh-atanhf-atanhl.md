@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232601"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -74,13 +74,13 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 값을 사용 하 고 반환 하는 **atanh** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **atanh** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 값을 사용 하 고 반환 하는 **atanh** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **atanh** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**atanh**, **atanh**, **atanh**|\<math.h>|\<cmath> 또는 \<math.h>|
 
@@ -114,7 +114,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

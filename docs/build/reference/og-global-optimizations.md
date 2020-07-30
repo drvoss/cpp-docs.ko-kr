@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215207"
 ---
 # <a name="og-global-optimizations"></a>`/Og`(전역 최적화)
 
-사용되지 않습니다. 로컬 및 전역 최적화, 자동 등록 할당 및 루프 최적화를 제공 합니다. 대신 [ `/O1` (크기 최소화)](o1-o2-minimize-size-maximize-speed.md) 또는 [ `/O2` (속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 중 하나를 사용 하는 것이 좋습니다.
+더 이상 사용되지 않습니다. 로컬 및 전역 최적화, 자동 등록 할당 및 루프 최적화를 제공 합니다. 대신 [ `/O1` (크기 최소화)](o1-o2-minimize-size-maximize-speed.md) 또는 [ `/O2` (속도 최대화)](o1-o2-minimize-size-maximize-speed.md) 중 하나를 사용 하는 것이 좋습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,7 +49,7 @@ ms.locfileid: "86180853"
 
 - 자동 레지스터 할당
 
-   이러한 최적화를 통해 컴파일러는 자주 사용 되는 변수 및 부분식을 레지스터에 저장할 수 있습니다. `register`키워드는 무시 됩니다.
+   이러한 최적화를 통해 컴파일러는 자주 사용 되는 변수 및 부분식을 레지스터에 저장할 수 있습니다. **`register`** 키워드는 무시 됩니다.
 
 - 루프 최적화
 

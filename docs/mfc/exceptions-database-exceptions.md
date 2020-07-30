@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403727"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217963"
 ---
 # <a name="exceptions-database-exceptions"></a>예외: 데이터베이스 예외
 
@@ -54,11 +54,11 @@ DAO 오류, DAO 오류 개체 형식 및 DAO Errors 컬렉션에 대 한 추가 
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>데이터베이스 예외 처리 예제
 
-다음 예에서는 **new** 연산자를 사용 하 여 힙에서 [CRecordset](reference/crecordset-class.md)에서 파생 된 개체를 생성 한 다음 레코드 집합 (ODBC 데이터 원본 용)을 엽니다. DAO 클래스에 대 한 유사한 예제는 아래의 "DAO 예외 예제"를 참조 하십시오.
+다음 예제에서는 연산자를 사용 하 여 힙에서 [CRecordset](reference/crecordset-class.md)에서 파생 된 개체를 생성 한 **`new`** 다음 레코드 집합 (ODBC 데이터 원본 용)을 엽니다. DAO 클래스에 대 한 유사한 예제는 아래의 "DAO 예외 예제"를 참조 하십시오.
 
 ### <a name="odbc-exception-example"></a>ODBC 예외 예
 
-[Open](reference/crecordset-class.md#open) 멤버 함수는 ODBC 클래스에 대 한 [cdbexception](reference/cdbexception-class.md) 형식의 예외를 throw 할 수 있으므로이 코드는 `Open` **try** 블록을 사용 하 여 호출을 괄호로 묶습니다. 후속 **catch** 블록은를 catch 합니다 `CDBException` . 이라는 예외 개체 자체를 검사할 수도 `e` 있지만이 경우에는 레코드 집합을 만들 때 실패 한 것을 알 수 있습니다. **Catch** 블록은 메시지 상자를 표시 하 고 레코드 집합 개체를 삭제 하 여 정리 합니다.
+[Open](reference/crecordset-class.md#open) 멤버 함수는 ODBC 클래스에 대 한 [cdbexception](reference/cdbexception-class.md) 형식의 예외를 throw 할 수 있으므로이 코드는 블록을 사용 하 여 호출을 괄호로 묶습니다 `Open` **`try`** . 후속 **`catch`** 블록은를 catch 합니다 `CDBException` . 이라는 예외 개체 자체를 검사할 수도 `e` 있지만이 경우에는 레코드 집합을 만들 때 실패 한 것을 알 수 있습니다. **`catch`** 블록은 메시지 상자를 표시 하 고 레코드 집합 개체를 삭제 하 여 정리 합니다.
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917780"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216780"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -79,7 +79,7 @@ int _resetstkoflw( void );
 
 여기서 스택은 더 이상 가드 페이지를 포함하지 않습니다. 다음에 프로그램이 가드 페이지가 있어야 하는 끝 부분까지 계속 스택을 증가시킬 때 프로그램은 스택의 끝을 벗어나 쓰며 액세스 위반을 발생시킵니다.
 
-스택 오버플로 예외가 발생 한 후 복구가 수행 될 때마다 가드 페이지를 복원 하려면 **_resetstkoflw** 를 호출 합니다. 이 함수는 **__except** 블록의 주 본문 내부 또는 **__except** 블록 외부에서 호출할 수 있습니다. 그러나 사용할 때 몇 가지 제한 사항이 있습니다. **_resetstkoflw** 는 다음에서 호출 하면 안 됩니다.
+스택 오버플로 예외가 발생 한 후 복구가 수행 될 때마다 가드 페이지를 복원 하려면 **_resetstkoflw** 를 호출 합니다. 이 함수는 블록의 주 본문 내부 또는 블록 외부에서 호출할 수 있습니다 **`__except`** **`__except`** . 그러나 사용할 때 몇 가지 제한 사항이 있습니다. **_resetstkoflw** 는 다음에서 호출 하면 안 됩니다.
 
 - 필터 식
 
@@ -87,17 +87,17 @@ int _resetstkoflw( void );
 
 - 필터 함수에서 호출한 함수
 
-- **catch** 블록
+- **`catch`** 블록입니다.
 
-- **__Finally** 블록입니다.
+- **`__finally`** 블록입니다.
 
 이러한 지점에서 스택이 아직 충분하게 해제되지 않습니다.
 
-스택 오버플로 예외는 c + + 예외가 아닌 구조적 예외로 생성 되므로 **_resetstkoflw** 는 스택 오버플로 예외를 catch 하지 않기 때문에 일반 **catch** 블록에서 유용 하지 않습니다. 그러나 [_set_se_translator](set-se-translator.md)가 C++ 예외를 throw하는 구조적 예외 변환기를 구현하는 데 사용되는 경우(두 번째 예제) 스택 오버플로 예외는 C++ catch 블록에 의해 처리될 수 있는 C++ 예외를 발생시킵니다.
+스택 오버플로 예외는 c + + 예외가 아닌 구조적 예외로 생성 되므로 **_resetstkoflw** 는 **`catch`** 스택 오버플로 예외를 catch 하지 않기 때문에 일반 블록에서 유용 하지 않습니다. 그러나 [_set_se_translator](set-se-translator.md)가 C++ 예외를 throw하는 구조적 예외 변환기를 구현하는 데 사용되는 경우(두 번째 예제) 스택 오버플로 예외는 C++ catch 블록에 의해 처리될 수 있는 C++ 예외를 발생시킵니다.
 
 구조적 예외 변환기 함수에 의해 throw된 예외로부터 도달한 C++ catch 블록에서 **_resetstkoflw**를 호출하는 것은 안전하지 않습니다. 이 경우 catch 블럭 이전에 소멸적인 개체에 대한 소멸자가 호출되었어도 catch 블럭 외부까지 스택 공간이 비워지지 않고 스택 포인터가 다시 설정되지 않습니다. 이 함수는 스택 공간이 비워지고 스택 포인터가 다시 설정될 때까지 호출되지 않아야 합니다. 따라서 catch 블록을 종료한 후에만 이 함수를 호출해야 합니다. 이전 스택 오버플로에서 자체적으로 복구하려고 하는 catch 블록에서 수행되는 스택 오버플로가 복구할 수 없으며 catch 블록의 오버플로가 자체적으로 동일한 catch 블록에 의해 처리되는 예외를 트리거함에 따라 프로그램에서 응답을 중지하도록 할 수 있습니다.
 
-**__except** 블록 내에서와같이 올바른 위치에서 사용되는 경우에도 **_resetstkoflw**가 실패할 수 있는 상황이 있습니다. 스택을 해제한 이후에도 스택의 마지막 페이지에 쓰지 않고 **_resetstkoflw**를 실행할 수 있는 남은 스택 공간이 계속 부족한 경우 **_resetstkoflw**는 스택의 마지막 페이지를 가드 페이지로 다시 설정하고 실패를 나타내는 0을 반환합니다. 따라서 이 함수의 안전한 사용에는 스택을 사용하는 것이 안전하다는 가정 대신 반환 값을 확인하는 것이 포함되어야 합니다.
+블록 내에서와 같이 올바른 위치에서 사용 되는 경우에도 **_resetstkoflw** 실패할 수 있는 상황이 있습니다 **`__except`** . 스택을 해제한 이후에도 스택의 마지막 페이지에 쓰지 않고 **_resetstkoflw**를 실행할 수 있는 남은 스택 공간이 계속 부족한 경우 **_resetstkoflw**는 스택의 마지막 페이지를 가드 페이지로 다시 설정하고 실패를 나타내는 0을 반환합니다. 따라서 이 함수의 안전한 사용에는 스택을 사용하는 것이 안전하다는 가정 대신 반환 값을 확인하는 것이 포함되어야 합니다.
 
 구조적 예외 처리는 응용 프로그램이 **/clr** 로 컴파일될 때 **STATUS_STACK_OVERFLOW** 예외를 catch 하지 않습니다 ( [/Clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)참조).
 
@@ -309,6 +309,6 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [_alloca](alloca.md)<br/>

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 681f5a64c3e2902c66facbd4f0ac3a3663a7e79d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 715a823784aaa75f9abe349ef0a7ddc9e5d607d1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374251"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218353"
 ---
 # <a name="weakref-class"></a>WeakRef 클래스
 
@@ -40,32 +40,32 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[WeakRef::WeakRef 생성자](#weakref)|`WeakRef` 클래스의 새 인스턴스를 초기화합니다.|
-|[WeakRef::~WeakRef 소멸자](#tilde-weakref)|클래스의 현재 인스턴스를 초기화합니다. `WeakRef`|
+|[WeakRef::~WeakRef 소멸자](#tilde-weakref)|클래스의 현재 인스턴스를 초기화 `WeakRef` 합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[WeakRef::As 메서드](#as)|지정된 인터페이스를 나타내도록 지정된 `ComPtr` 포인터 매개 변수를 설정합니다.|
-|[WeakRef::AsIID 메서드](#asiid)|지정된 `ComPtr` 인터페이스 ID를 나타내도록 지정된 포인터 매개 변수를 설정합니다.|
+|[WeakRef::As 메서드](#as)|지정 된 인터페이스를 나타내도록 지정 된 `ComPtr` 포인터 매개 변수를 설정 합니다.|
+|[WeakRef::AsIID 메서드](#asiid)|지정 된 `ComPtr` 인터페이스 ID를 나타내도록 지정 된 포인터 매개 변수를 설정 합니다.|
 |[WeakRef::CopyTo 메서드](#copyto)|사용 가능한 경우 지정된 포인터 변수에 인터페이스에 대한 포인터를 할당합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[WeakRef::operator& 연산자](#operator-ampersand-operator)|현재 `WeakRef` `ComPtrRef` 개체를 나타내는 개체를 반환합니다.|
+|[WeakRef::operator& 연산자](#operator-ampersand-operator)|`ComPtrRef`현재 개체를 나타내는 개체를 반환 합니다 `WeakRef` .|
 
 ## <a name="remarks"></a>설명
 
-개체는 `WeakRef` 개체와 연결되고 유효하거나 유효하지 않을 수 있는 *강력한 참조를*유지 관리합니다. 강력한 `As()` 참조를 얻으려면 또는 `AsIID()` 메서드를 호출합니다. 강력한 참조가 유효한 경우 연결된 개체에 액세스할 수 있습니다. 강력한 참조가 올바르지 않은 경우(`nullptr`) 연결된 개체에 액세스할 수 없습니다.
+`WeakRef`개체는 개체와 연결 된 *강력한 참조*를 유지 관리 하며 유효 하거나 유효 하지 않을 수 있습니다. `As()`또는 메서드를 호출 `AsIID()` 하 여 강력한 참조를 가져옵니다. 강력한 참조가 유효한 경우 연결된 개체에 액세스할 수 있습니다. 강력한 참조가 잘못 된 경우 ( **`nullptr`** ) 연결 된 개체에 액세스할 수 없습니다.
 
-`WeakRef` 개체는 일반적으로 외부 스레드 또는 응용 프로그램에 의해 존재가 제어되는 개체를 나타내는 데 사용됩니다. 예를 들어 참조에서 `WeakRef` 파일 개체로 개체를 생성합니다. 파일이 열려 있는 동안 강력한 참조는 유효합니다. 그러나 파일이 닫히면 강력한 참조는 유효하지 않게 됩니다.
+`WeakRef`개체는 일반적으로 외부 스레드나 응용 프로그램에 의해 해당 존재가 제어 되는 개체를 나타내는 데 사용 됩니다. 예를 들어 `WeakRef` 파일 개체에 대 한 참조에서 개체를 생성 합니다. 파일이 열려 있는 동안 강력한 참조는 유효합니다. 그러나 파일이 닫히면 강력한 참조는 유효하지 않게 됩니다.
 
-Windows 10 SDK에서는 [As](#as), [AsIID](#asiid) 및 [CopyTo](#copyto) 메서드의 동작 변경이 있습니다. 이전에는 다음 코드에서와 같이 이러한 `WeakRef` 메서드를 호출한 후 를 `nullptr` 확인하여 강력한 참조가 성공적으로 수행되었는지 확인할 수 있습니다.
+Windows 10 SDK에서는 [As](#as), [AsIID](#asiid) 및 [CopyTo](#copyto) 메서드의 동작 변경이 있습니다. 이전에는 이러한 메서드를 호출한 후 `WeakRef` **`nullptr`** 다음 코드와 같이에 대해를 확인 하 여 강력한 참조를 성공적으로 가져왔는지 확인할 수 있습니다.
 
 ```cpp
 WeakRef wr;
@@ -84,7 +84,7 @@ if(wr == nullptr)
 }
 ```
 
-위의 코드는 Windows 10 SDK(이상)를 사용하는 경우 작동하지 않습니다. 대신 에 전달된 포인터를 `nullptr`확인합니다.
+위의 코드는 Windows 10 SDK(이상)를 사용하는 경우 작동하지 않습니다. 대신에 대해 전달 된 포인터를 확인 **`nullptr`** 합니다.
 
 ```cpp
 if (strongRef == nullptr)
@@ -105,17 +105,17 @@ if (strongRef == nullptr)
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>약점 ::~약자 레프 소멸자
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>WeakRef:: ~ WeakRef 소멸자
 
-클래스의 현재 인스턴스를 초기화합니다. `WeakRef`
+클래스의 현재 인스턴스를 초기화 `WeakRef` 합니다.
 
 ```cpp
 ~WeakRef();
 ```
 
-## <a name="weakrefas-method"></a><a name="as"></a>약점 ::방법으로
+## <a name="weakrefas-method"></a><a name="as"></a>WeakRef:: As 메서드
 
-지정된 인터페이스를 나타내도록 지정된 `ComPtr` 포인터 매개 변수를 설정합니다.
+지정 된 인터페이스를 나타내도록 지정 된 `ComPtr` 포인터 매개 변수를 설정 합니다.
 
 ```cpp
 template<typename U>
@@ -134,28 +134,28 @@ HRESULT As(
 *U*<br/>
 인터페이스 ID입니다.
 
-*Ptr*<br/>
-이 작업이 완료되면 매개 변수 *U를*나타내는 개체입니다.
+*ptr*<br/>
+이 작업이 완료 되 면 매개 변수 *U*를 나타내는 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-- 이 작업이 성공하면 S_OK. 그렇지 않으면 작업이 실패한 이유를 나타내는 HRESULT와 *ptr이* 로 `nullptr`설정됩니다.
+- 이 작업이 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 작업이 실패 한 이유를 나타내는 HRESULT와 *ptr* 이로 설정 됩니다 **`nullptr`** .
 
-- 이 작업이 성공하지만 현재 `WeakRef` 개체가 이미 릴리스된 경우 S_OK. 매개 변수 *PTR이* `nullptr`로 설정됩니다.
+- 이 작업이 성공 하지만 현재 개체가 이미 해제 된 경우를 S_OK `WeakRef` 합니다. 매개 변수 *ptr* 은로 설정 됩니다 **`nullptr`** .
 
-- 이 작업이 성공하지만 현재 `WeakRef` 개체가 매개 변수 *U에서*파생되지 않은 경우 S_OK. 매개 변수 *PTR이* `nullptr`로 설정됩니다.
+- 이 작업이 성공 하지만 현재 `WeakRef` 개체가 매개 변수 *U*에서 파생 되지 않은 경우 S_OK 합니다. 매개 변수 *ptr* 은로 설정 됩니다 **`nullptr`** .
 
 ### <a name="remarks"></a>설명
 
-매개 변수 *U가* `IWeakReference`에서 파생되지 않았거나 파생되지 `IInspectable`않은 경우 오류가 내보루게 됩니다.
+매개 변수 *U* 가 `IWeakReference` 이거나에서 파생 되지 않은 경우 오류가 발생 `IInspectable` 합니다.
 
 첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿은 [자동](../../cpp/auto-cpp.md) 형식 추론 키워드와 같은 C++ 언어 기능을 지원하는 내부 도우미 특수화입니다.
 
-Windows 10 SDK에서 시작하여 이 메서드는 `WeakRef` 약한 `nullptr` 참조를 가져올 수 없는 경우 인스턴스를 설정하지 않으므로 에 `WeakRef` `nullptr`대해 확인하는 오류 검사 코드를 피해야 합니다. 대신 *ptr을* `nullptr`확인합니다.
+Windows 10 SDK 부터는 약한 참조를 가져올 수 없는 경우이 메서드는 인스턴스를로 설정 하지 않으므로 `WeakRef` **`nullptr`** 에 대해를 확인 하는 오류 검사 코드를 사용 하지 않아야 합니다 `WeakRef` **`nullptr`** . 대신 *ptr* 을 선택 **`nullptr`** 합니다.
 
-## <a name="weakrefasiid-method"></a><a name="asiid"></a>약점 ::AsIID 방법
+## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef:: AsIID 메서드
 
-지정된 `ComPtr` 인터페이스 ID를 나타내도록 지정된 포인터 매개 변수를 설정합니다.
+지정 된 `ComPtr` 인터페이스 ID를 나타내도록 지정 된 포인터 매개 변수를 설정 합니다.
 
 ```cpp
 HRESULT AsIID(
@@ -169,26 +169,26 @@ HRESULT AsIID(
 *riid*<br/>
 인터페이스 ID입니다.
 
-*Ptr*<br/>
-이 작업이 완료되면 매개 변수 *riid를*나타내는 개체가 있습니다.
+*ptr*<br/>
+이 작업이 완료 되 면 매개 변수 *riid*를 나타내는 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-- 이 작업이 성공하면 S_OK. 그렇지 않으면 작업이 실패한 이유를 나타내는 HRESULT와 *ptr이* 로 `nullptr`설정됩니다.
+- 이 작업이 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 작업이 실패 한 이유를 나타내는 HRESULT와 *ptr* 이로 설정 됩니다 **`nullptr`** .
 
-- 이 작업이 성공하지만 현재 `WeakRef` 개체가 이미 릴리스된 경우 S_OK. 매개 변수 *PTR이* `nullptr`로 설정됩니다.
+- 이 작업이 성공 하지만 현재 개체가 이미 해제 된 경우를 S_OK `WeakRef` 합니다. 매개 변수 *ptr* 은로 설정 됩니다 **`nullptr`** .
 
-- 이 작업이 성공하지만 현재 `WeakRef` 개체가 매개 변수 *riid에서*파생되지 않는 S_OK. 매개 변수 *PTR이* `nullptr`로 설정됩니다. 자세한 내용은 설명 부분을 참조하세요.
+- 이 작업이 성공 하지만 현재 `WeakRef` 개체가 매개 변수 *riid*에서 파생 되지 않은 경우 S_OK 합니다. 매개 변수 *ptr* 은로 설정 됩니다 **`nullptr`** . 자세한 내용은 설명 부분을 참조하세요.
 
 ### <a name="remarks"></a>설명
 
-매개 변수 *riid에서* 파생되지 않은 경우 `IInspectable`오류가 내보내드립니다. 이 오류는 반환 값을 대체합니다.
+매개 변수 *riid* 가에서 파생 되지 않은 경우 오류가 발생 `IInspectable` 합니다. 이 오류는 반환 값을 대체합니다.
 
 첫 번째 템플릿은 코드에서 사용해야 하는 폼입니다. 두 번째 템플릿(여기에 표시되지 않지만 헤더 파일에서 선언됨)은 [자동](../../cpp/auto-cpp.md) 형식 추론 키워드와 같은 C++ 언어 기능을 지원하는 내부 도우미 특수화입니다.
 
-Windows 10 SDK에서 시작하여 이 메서드는 `WeakRef` 약한 `nullptr` 참조를 가져올 수 없는 경우 인스턴스를 설정하지 않으므로 에 `WeakRef` `nullptr`대해 확인하는 오류 검사 코드를 피해야 합니다. 대신 *ptr을* `nullptr`확인합니다.
+Windows 10 SDK 부터는 약한 참조를 가져올 수 없는 경우이 메서드는 인스턴스를로 설정 하지 않으므로 `WeakRef` **`nullptr`** 에 대해를 확인 하는 오류 검사 코드를 사용 하지 않아야 합니다 `WeakRef` **`nullptr`** . 대신 *ptr* 을 선택 **`nullptr`** 합니다.
 
-## <a name="weakrefcopyto-method"></a><a name="copyto"></a>약점::카피토 방법
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a>WeakRef:: CopyTo 메서드
 
 사용 가능한 경우 지정된 포인터 변수에 인터페이스에 대한 포인터를 할당합니다.
 
@@ -211,27 +211,27 @@ HRESULT CopyTo(
 ### <a name="parameters"></a>매개 변수
 
 *U*<br/>
-인터페이스를 `IInspectable` 포인터로 합니다. *U에서 U가* 파생되지 않으면 오류가 `IInspectable`내보내드립니다.
+인터페이스에 대 한 포인터 `IInspectable` 입니다. *U* 가에서 파생 되지 않은 경우 오류가 내보내집니다 `IInspectable` .
 
 *riid*<br/>
-인터페이스 ID입니다. *id에서 파생되지* 않은 경우 오류가 `IWeakReference`내보내드립니다.
+인터페이스 ID입니다. *Riid* 가에서 파생 되지 않은 경우 오류가 발생 `IWeakReference` 합니다.
 
-*Ptr*<br/>
-또는 `IInspectable` `IWeakReference`에 대한 이중 간접 포인터입니다.
+*ptr*<br/>
+또는에 대 한 이중 간접 `IInspectable` 포인터 `IWeakReference` 입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 자세한 내용은 **비고를**참조하십시오.
+성공하면 S_OK이고, 그렇지 않으면 실패를 설명하는 HRESULT가 발생합니다. 자세한 내용은 **설명 부분**을 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-반환 값 S_OK는 이 작업이 성공했음을 의미하지만 약한 참조가 강한 참조로 확인되었는지를 나타내지 않습니다. S_OK 반환되는 경우 해당 매개 변수 *p가* 강력한 참조인 지테스트합니다. 즉, 매개 변수 *p는* `nullptr`와 같지 않습니다.
+반환 값 S_OK는 이 작업이 성공했음을 의미하지만 약한 참조가 강한 참조로 확인되었는지를 나타내지 않습니다. S_OK 반환 되는 경우 *p* 매개 변수를 강력한 참조로 테스트 합니다. 즉, *p* 매개 변수는와 같지 않습니다 **`nullptr`** .
 
-Windows 10 SDK에서 시작하여 이 메서드는 `WeakRef` 약한 `nullptr` 참조를 가져올 수 없는 경우 인스턴스를 설정하지 않으므로 `WeakRef` 에 `nullptr`대한 검사를 확인하는 오류를 피해야 합니다. 대신 *ptr을* `nullptr`확인합니다.
+Windows 10 SDK 부터는 약한 참조를 가져올 수 없는 경우이 메서드는 인스턴스를로 설정 하지 않으므로 `WeakRef` **`nullptr`** 에 대해를 확인 하는 오류 검사 코드를 사용 하지 않아야 합니다 `WeakRef` **`nullptr`** . 대신 *ptr* 을 선택 **`nullptr`** 합니다.
 
-## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef::연산자&amp;
+## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef:: operator &amp; 연산자
 
-현재 `WeakRef` `ComPtrRef` 개체를 나타내는 개체를 반환합니다.
+`ComPtrRef`현재 개체를 나타내는 개체를 반환 합니다 `WeakRef` .
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()
@@ -239,13 +239,13 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 ### <a name="return-value"></a>Return Value
 
-현재 `ComPtrRef` `WeakRef` 개체를 나타내는 개체입니다.
+`ComPtrRef`현재 개체를 나타내는 개체 `WeakRef` 입니다.
 
 ### <a name="remarks"></a>설명
 
-이 연산자는 코드에서 사용할 수 없는 내부 도우미 연산자입니다.
+이는 코드에서 사용할 수 없는 내부 도우미 연산자입니다.
 
-## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>약점::약한 참조 생성자
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef:: WeakRef 생성자
 
 `WeakRef` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -274,9 +274,9 @@ WeakRef(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ptr*<br/>
-현재 `WeakRef` 개체를 초기화하는 기존 개체에 대한 포인터, 참조 또는 rvalue 참조입니다.
+*ptr*<br/>
+현재 개체를 초기화 하는 기존 개체에 대 한 포인터, 참조 또는 rvalue 참조 `WeakRef` 입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 빈 `WeakRef` 개체를 초기화합니다. 두 번째 생성자는 포인터에서 `WeakRef` `IWeakReference` 인터페이스로 개체를 초기화합니다. 세 번째 생성자는 참조에서 개체에 `WeakRef` 대한 `ComPtr<IWeakReference>` 개체를 초기화합니다. 네 번째 및 다섯 번째 생성자는 `WeakRef` 다른 `WeakRef` 개체에서 개체를 초기화합니다.
+첫 번째 생성자는 빈 개체를 초기화 합니다 `WeakRef` . 두 번째 생성자는 `WeakRef` 인터페이스에 대 한 포인터에서 개체를 초기화 합니다 `IWeakReference` . 세 번째 생성자는 개체 `WeakRef` 에 대 한 참조에서 개체를 초기화 `ComPtr<IWeakReference>` 합니다. 네 번째 및 다섯 번째 생성자는 `WeakRef` 다른 개체에서 개체를 초기화 합니다 `WeakRef` .

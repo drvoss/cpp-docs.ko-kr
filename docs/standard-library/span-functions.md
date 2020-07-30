@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: 6573ea061673091113244ada0ab0cd84bdd7db75
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217443"
 ---
 # <a name="ltspangt-functions"></a>&lt;span &gt; 함수
 
@@ -43,7 +43,7 @@ auto as_bytes(span<T, Extent> s) noexcept;
 *삭제*\
 원시 표현을 가져올 범위입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `span<const byte, S>`범위에 저장 된 첫 번째 항목에 대 한 `S` 입니다.`{reinterpret_cast<const std::byte*>(s.data()), s.size_bytes()}`
 
@@ -65,7 +65,7 @@ void main()
 
 ## <a name="as_writable_bytes"></a>`as_writable_bytes`
 
-`T` `const` 가가 아니면 범위에 있는 요소의 원시 바이트 표현의 읽기/쓰기 뷰를 가져옵니다.
+`T` **`const`** 가가 아니면 범위에 있는 요소의 원시 바이트 표현의 읽기/쓰기 뷰를 가져옵니다.
 
 ```cpp
 template <class T, size_t Extent>
@@ -83,7 +83,7 @@ auto as_writable_bytes(span<T, Extent> s) noexcept;
 *삭제*\
 원시 표현을 가져올 범위입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `span<byte, S>`범위에 저장 된 첫 번째 항목에 대 한 `S` 입니다.`{reinterpret_cast<std::byte*>(s.data()), s.size_bytes()}`
 

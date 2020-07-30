@@ -1,17 +1,17 @@
 ---
-title: rdx (C++ COM 특성)
+title: rdx (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214632"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232757"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,11 +32,11 @@ ms.locfileid: "80214632"
 필드 설정할 값 필드를 지정 합니다. 이 이름을 가진 값 필드가 키에 아직 없는 경우 추가 됩니다.
 
 *regtype*<br/>
-추가 되는 레지스트리 키의 형식입니다. 다음 중 하나일 수 있습니다. `text`, `dword`, `binary`또는 `CString`.
+추가 되는 레지스트리 키의 형식입니다. 는 `text` ,, `dword` `binary` 또는 중 하나일 수 `CString` 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Rdx** C++ 특성은 COM 구성 요소에 대 한 기존 레지스트리 키를 만들거나 수정 합니다. 특성은 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로를 추가 합니다. BEGIN_RDX_MAP 매크로의 결과로 삽입 된 함수인 `RegistryDataExchange`레지스트리 및 데이터 멤버 간에 데이터를 전송 하는 데 사용할 수 있습니다.
+**Rdx** c + + 특성은 COM 구성 요소에 대 한 기존 레지스트리 키를 만들거나 수정 합니다. 특성은 대상 멤버를 구현 하는 개체에 BEGIN_RDX_MAP 매크로를 추가 합니다. `RegistryDataExchange`BEGIN_RDX_MAP 매크로의 결과로 삽입 된 함수인를 사용 하 여 레지스트리와 데이터 멤버 간에 데이터를 전송할 수 있습니다.
 
 이 특성은 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성 또는 이러한 특성 중 하나를 암시 하는 기타 특성과 함께 사용할 수 있습니다.
 
@@ -46,8 +46,8 @@ ms.locfileid: "80214632"
 
 |||
 |-|-|
-|**적용 대상**|**클래스** 또는 **구조체** 멤버|
-|**반복 가능**|아니요|
+|**적용 대상**|**`class`** 또는 **`struct`** 구성원|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

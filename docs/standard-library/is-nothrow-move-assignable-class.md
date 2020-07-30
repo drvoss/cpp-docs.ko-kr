@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 92e3364843b5614c9fa108d33605b35962726aa2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217742"
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable 클래스
+# <a name="is_nothrow_move_assignable-class"></a>is_nothrow_move_assignable 클래스
 
-형식에 **nothrow** 이동 대입 연산자가 있는지 테스트합니다.
+형식에 **`nothrow`** 이동 할당 연산자가 있는지 테스트 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,10 +35,10 @@ struct is_nothrow_move_assignable;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

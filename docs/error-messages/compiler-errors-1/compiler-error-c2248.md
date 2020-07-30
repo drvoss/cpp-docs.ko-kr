@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212815"
 ---
 # <a name="compiler-error-c2248"></a>컴파일러 오류 C2248
 
 '*member*': '*class*' 클래스에 선언 된 '*access_level*' 멤버에 액세스할 수 없습니다.
 
-파생 클래스의 멤버는 기본 클래스의 `private` 멤버에 액세스할 수 없습니다. `private` 또는 `protected` 클래스 인스턴스의 멤버에 액세스할 수 없습니다.
+파생 클래스의 멤버는 **`private`** 기본 클래스의 멤버에 액세스할 수 없습니다. **`private`** 또는 **`protected`** 클래스 인스턴스의 멤버에는 액세스할 수 없습니다.
 
 ## <a name="example"></a>예제
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-C2248를 노출 하는 또 다른 규칙 문제는 템플릿 친구 및 전문화를 사용 하는 것입니다. 이 문제를 해결 하려면 빈 템플릿 매개 변수 목록 < > 또는 특정 템플릿 매개 변수를 사용 하 여 friend 템플릿 함수를 선언 합니다.
+C2248를 노출 하는 또 다른 규칙 문제는 템플릿 친구 및 전문화를 사용 하는 것입니다. 이 문제를 해결 하려면 빈 템플릿 매개 변수 목록 <> 또는 특정 템플릿 매개 변수를 사용 하 여 friend 템플릿 함수를 선언 합니다.
 
 ```cpp
 // C2248_template.cpp

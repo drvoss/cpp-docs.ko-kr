@@ -1,5 +1,5 @@
 ---
-title: C메모리예외 클래스
+title: CMemoryException 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71b17e777db9d6351192da7cffd075b3a64553bd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222929"
 ---
-# <a name="cmemoryexception-class"></a>C메모리예외 클래스
+# <a name="cmemoryexception-class"></a>CMemoryException 클래스
 
 메모리 부족 예외 상태를 나타냅니다.
 
@@ -29,15 +29,15 @@ class CMemoryException : public CSimpleException
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[C메모리예외::C메모리예외](#cmemoryexception)|`CMemoryException` 개체를 생성합니다.|
+|[CMemoryException:: CMemoryException](#cmemoryexception)|`CMemoryException` 개체를 생성합니다.|
 
 ## <a name="remarks"></a>설명
 
-더 이상의 자격이 필요하지 않거나 불가능합니다. 메모리 예외는 **새**에 의해 자동으로 throw됩니다. 예를 들어 을 사용하여 `malloc`사용자 고유의 메모리 함수를 작성하는 경우 메모리 예외를 throw해야 합니다.
+더 이상 정규화를 수행할 필요가 없습니다. 메모리 예외는에 의해 자동으로 throw 됩니다 **`new`** . 예를 들어를 사용 하 여 사용자 고유의 메모리 함수를 작성 하 `malloc` 는 경우 메모리 예외를 throw 해야 합니다.
 
-자세한 `CMemoryException`내용은 [MFC(예외 처리)](../../mfc/exception-handling-in-mfc.md)문서를 참조하십시오.
+에 대 한 자세한 내용은 `CMemoryException` [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)문서를 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -51,9 +51,9 @@ class CMemoryException : public CSimpleException
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afx.h
+**헤더:** afx
 
-## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>C메모리예외::C메모리예외
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException:: CMemoryException
 
 `CMemoryException` 개체를 생성합니다.
 
@@ -63,7 +63,7 @@ CMemoryException();
 
 ### <a name="remarks"></a>설명
 
-이 생성자는 직접 사용하지 말고 전역 함수 [AfxThrowMemoryException을](exception-processing.md#afxthrowmemoryexception)호출합니다. 이 전역 함수는 이전에 할당된 메모리에서 예외 개체를 생성하기 때문에 메모리 부족 상황에서 성공할 수 있습니다. 예외 처리에 대한 자세한 내용은 문서 [예외를](../exception-handling-in-mfc.md)참조하십시오.
+이 생성자는 직접 사용 하지 말고 [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)전역 함수를 호출 합니다. 이 전역 함수는 이전에 할당 된 메모리에서 예외 개체를 생성 하기 때문에 메모리 부족 상황에서 성공할 수 있습니다. 예외 처리에 대 한 자세한 내용은 [예외](../exception-handling-in-mfc.md)문서를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

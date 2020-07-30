@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957176"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218704"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
@@ -74,11 +74,11 @@ int _finitef(
 
 ## <a name="return-value"></a>반환 값
 
-X가 법선 또는 `_finite` subnormal 유한 값인 경우 `_finitef` 매크로와 및 함수는 0이 아닌 값을 반환 합니다. `isfinite` 인수가 무한 또는 NaN 인 경우 0을 반환 합니다. 인라인 C++ 템플릿 함수 `isfinite` 는 동일한 방식으로 동작 하지만 **true** 또는 **false**를 반환 합니다.
+`isfinite` `_finite` `_finitef` *X* 가 법선 또는 subnormal 유한 값인 경우 매크로와 및 함수는 0이 아닌 값을 반환 합니다. 인수가 무한 또는 NaN 인 경우 0을 반환 합니다. C + + 인라인 템플릿 함수는 `isfinite` 동일한 방식으로 동작 하지만 또는를 반환 합니다 **`true`** **`false`** .
 
 ## <a name="remarks"></a>설명
 
-`isfinite`는 C로 컴파일된 매크로 이며로 C++컴파일될 때 인라인 템플릿 함수를 말합니다. `_finite` 및`_finitef` 함수는 Microsoft 전용입니다. `_finitef` 함수는 x86, ARM 또는 ARM64 플랫폼용으로 컴파일된 경우에만 사용할 수 있습니다.
+`isfinite`는 C로 컴파일된 매크로 이며 c + +로 컴파일된 인라인 템플릿 함수입니다. `_finite`및 `_finitef` 함수는 Microsoft 전용입니다. `_finitef` 함수는 x86, ARM 또는 ARM64 플랫폼용으로 컴파일된 경우에만 사용할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -87,9 +87,9 @@ X가 법선 또는 `_finite` subnormal 유한 값인 경우 `_finitef` 매크로
 |`_finite`|\<float.h> 또는 \<math.h>|\<float.h>, \<math.h>, \<cfloat> 또는 \<cmath>|
 |`isfinite`, `_finitef`|\<math.h>|\<math.h> 또는 \<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

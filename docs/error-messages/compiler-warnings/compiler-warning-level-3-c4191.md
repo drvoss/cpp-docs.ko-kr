@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198967"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220030"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>컴파일러 경고(수준 3) C4191
 
@@ -25,11 +25,11 @@ ms.locfileid: "80198967"
 
 - 여러 크기, 형식 범주 또는 분류를 사용하는 인수 또는 반환 형식
 
-- 다양한 인수 목록 길이( `__cdecl`에서 짧은 목록이 varargs인 경우에도 긴 목록에서 짧은 목록으로 캐스트할 때만)
+- 서로 다른 인수 목록 길이 ( **`__cdecl`** short가 varargs 인 경우에도 긴 목록에서 짧은 목록으로 캐스트할 때만)
 
-- 함수의 포인터에 대해 별칭이 지정 된 데이터에 대 한 포인터입니다 ( **void** <strong>\*</strong>제외).
+- 함수의 포인터에 대해 별칭이 지정 된 데이터에 대 한 포인터입니다 (제외 **`void`** <strong>\*</strong> ).
 
-- `reinterpret_cast`에 오류 또는 경고를 생성하는 다른 형식 차이
+- 에 오류나 경고를 생성 하는 다른 형식 차이 **`reinterpret_cast`**
 
 결과 포인터를 통해 이 함수를 호출하면 프로그램에서 충돌이 발생할 수 있습니다.
 

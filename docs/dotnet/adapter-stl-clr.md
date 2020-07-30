@@ -48,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216442"
 ---
 # <a name="adapter-stlclr"></a>adapter(STL/CLR)
 
-STL/CLR 헤더 `<cliext/adapter>`는 두 개의 템플릿 클래스 (`collection_adapter` 및 `range_adapter`)를 지정 하 고 템플릿 함수 `make_collection`를 지정 합니다.
+STL/CLR 헤더는 `<cliext/adapter>` 두 개의 템플릿 클래스 ( `collection_adapter` 및 `range_adapter` ) 및 템플릿 함수를 지정 합니다 `make_collection` .
 
 ## <a name="syntax"></a>구문
 
@@ -67,7 +67,7 @@ STL/CLR 헤더 `<cliext/adapter>`는 두 개의 템플릿 클래스 (`collection
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/어댑터 >
+**헤더:**\<cliext/adapter>
 
 **네임 스페이스:** cliext
 
@@ -86,7 +86,7 @@ STL/CLR 헤더 `<cliext/adapter>`는 두 개의 템플릿 클래스 (`collection
 
 ## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-STL/CLR 컨테이너로 사용할 .NET 컬렉션을 래핑합니다. `collection_adapter`는 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. BCL (기본 클래스 라이브러리) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.
+STL/CLR 컨테이너로 사용할 .NET 컬렉션을 래핑합니다. 는 `collection_adapter` 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. BCL (기본 클래스 라이브러리) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -134,10 +134,10 @@ template<typename Key,
 |ICollection|요소 그룹을 유지 관리 합니다.|
 |IList|요소의 정렬 된 그룹을 유지 관리 합니다.|
 |IDictionary|{Key, value} 쌍의 집합을 유지 관리 합니다.|
-|IEnumerable\<값 >|형식화 된 요소를 통해 시퀀스 합니다.|
-|ICollection\<값 >|형식화 된 요소의 그룹을 유지 관리 합니다.|
-|IList\<값 >|형식화 된 요소의 정렬 된 그룹을 유지 관리 합니다.|
-|IDictionary\<값 >|형식화 된 {key, value} 쌍의 집합을 유지 관리 합니다.|
+|IEnumerable\<Value>|형식화 된 요소를 통해 시퀀스 합니다.|
+|ICollection\<Value>|형식화 된 요소의 그룹을 유지 관리 합니다.|
+|IList\<Value>|형식화 된 요소의 정렬 된 그룹을 유지 관리 합니다.|
+|IDictionary\<Value> |형식화 된 {key, value} 쌍의 집합을 유지 관리 합니다.|
 
 ### <a name="members"></a>멤버
 
@@ -160,13 +160,13 @@ template<typename Key,
 |[collection_adapter::size(STL/CLR)](#size)|요소 수를 계산합니다.|
 |[collection_adapter::swap(STL/CLR)](#swap)|두 컨테이너의 내용을 바꿉니다.|
 
-|연산자|설명|
+|연산자|Description|
 |--------------|-----------------|
 |[collection_adapter::operator=(STL/CLR)](#op_eq)|저장 된 BCL 핸들을 바꿉니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 클래스를 사용 하 여 BCL/CLR 컨테이너로 BCL 컨테이너를 조작 합니다. `collection_adapter`는 요소 시퀀스를 제어 하는 BCL 인터페이스에 대 한 핸들을 저장 합니다. `X` `collection_adapter` 개체는 요소를 순서 대로 방문 하는 데 사용 하는 입력 반복기 `X.begin()` 및 `X.end()` 쌍을 반환 합니다. 일부 특수화를 사용 하 여 제어 되는 시퀀스의 길이를 확인 하는 `X.size()`를 작성할 수도 있습니다.
+이 템플릿 클래스를 사용 하 여 BCL/CLR 컨테이너로 BCL 컨테이너를 조작 합니다. 은 `collection_adapter` BCL 인터페이스에 대 한 핸들을 저장 하며,이를 통해 요소의 시퀀스를 제어 합니다. `collection_adapter`개체는 `X` `X.begin()` `X.end()` 요소를 순서 대로 방문 하는 데 사용 하는 입력 반복기 쌍을 반환 합니다. 일부 특수화를 사용 하 여 제어 되는 `X.size()` 시퀀스의 길이를 결정할 수도 있습니다.
 
 ## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: base (STL/CLR)
 
@@ -178,7 +178,7 @@ template<typename Key,
 Coll^ base();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 저장 된 BCL 인터페이스 핸들을 반환 합니다.
 
@@ -222,7 +222,7 @@ base() same = True
 iterator begin();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 첫 번째 요소 또는 빈 시퀀스의 끝 바로 뒤를 지정 하는 입력 반복기를 반환 합니다.
 
@@ -278,37 +278,37 @@ collection_adapter(Coll^ collection);
 
 #### <a name="parameters"></a>매개 변수
 
-*collection*<br/>
+*컬렉션*<br/>
 래핑할 BCL 핸들입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
 `collection_adapter();`
 
-`nullptr`를 사용 하 여 저장 된 핸들을 초기화 합니다.
+을 사용 하 여 저장 된 핸들을 초기화 합니다 **`nullptr`** .
 
 생성자는 다음과 같습니다.
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-`right.`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`를 사용 하 여 저장 된 핸들을 초기화 합니다.
+`right.` [collection_adapter:: BASE (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)를 사용 하 여 저장 된 핸들을 초기화 `()` 합니다.
 
 생성자는 다음과 같습니다.
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-`right->`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`를 사용 하 여 저장 된 핸들을 초기화 합니다.
+`right->` [collection_adapter:: BASE (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)를 사용 하 여 저장 된 핸들을 초기화 `()` 합니다.
 
 생성자는 다음과 같습니다.
 
 `collection_adapter(Coll^ collection);`
 
-`collection`를 사용 하 여 저장 된 핸들을 초기화 합니다.
+을 사용 하 여 저장 된 핸들을 초기화 합니다 `collection` .
 
 ### <a name="example"></a>예제
 
@@ -367,7 +367,7 @@ x x x x x x
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 서명 된 요소 수를 설명 합니다.
 
@@ -419,7 +419,7 @@ end()-begin() = 3
 iterator end();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 끝 바로 뒤를 가리키는 입력 반복기를 반환 합니다.
 
@@ -464,9 +464,9 @@ a b c
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 입력 반복기로 사용 될 수 있는 `T1` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T1`이 형식은 제어 되는 시퀀스에 대 한 입력 반복기로 사용할 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -509,9 +509,9 @@ a b c
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 `IDictionary` 또는 `IDictionary<Value>`에 대 한 특수화에서 템플릿 매개 변수 `Key`의 동의어입니다. 그렇지 않으면 정의 되지 않습니다.
+형식은 `Key` 또는에 대 한 특수화에서 템플릿 매개 변수의 동의어이 고, `IDictionary` `IDictionary<Value>` 그렇지 않으면 정의 되지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -559,9 +559,9 @@ int main()
 typedef Value mapped_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 `IDictionary` 또는 `IDictionary<Value>`에 대 한 특수화에서 템플릿 매개 변수 `Value`의 동의어입니다. 그렇지 않으면 정의 되지 않습니다.
+형식은 `Value` 또는에 대 한 특수화에서 템플릿 매개 변수의 동의어이 고, `IDictionary` `IDictionary<Value>` 그렇지 않으면 정의 되지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -611,12 +611,12 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 저장 된 bcl 핸들을 *오른쪽*에 저장 된 bcl 핸들의 복사본으로 바꾸는 데 사용 합니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 저장 된 bcl 핸들을 *오른쪽*에 저장 된 bcl 핸들의 복사본으로 바꾸는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -666,7 +666,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -714,9 +714,9 @@ a b c
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. `IEnumerable` 또는 `IEnumerable<Value>`에 대 한 특수화에 정의 되어 있지 않습니다.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 또는에 대 한 특수화에 정의 되어 있지 않습니다 `IEnumerable` `IEnumerable<Value>` .
 
 ### <a name="example"></a>예제
 
@@ -757,7 +757,7 @@ size() = 6
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -804,12 +804,12 @@ void swap(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 콘텐츠와 바꿀 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 저장 된 BCL 핸들을 `*this`와 *right*사이에 교환 합니다.
+멤버 함수는 저장 된 BCL 핸들을 **`*this`** 와 *오른쪽*으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -871,9 +871,9 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-형식은 템플릿 매개 변수 *값*(특수화에 있는 경우)의 동의어입니다. 그렇지 않으면 `System::Object^`의 동의어입니다.
+형식은 템플릿 매개 변수 *값*(특수화에 있는 경우)의 동의어입니다. 그렇지 않으면의 동의어입니다 `System::Object^` .
 
 ### <a name="example"></a>예제
 
@@ -912,7 +912,7 @@ a b c
 
 ## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
 
-반복기 쌍에서 `range_adapter`를 만듭니다.
+`range_adapter`반복기 쌍에서을 만듭니다.
 
 ### <a name="syntax"></a>구문
 
@@ -932,9 +932,9 @@ template<typename Iter>
 *last*<br/>
 래핑할 두 번째 반복기입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`를 반환합니다. 이를 사용 하 여 반복기 쌍에서 `range_adapter<Iter>` 개체를 생성 합니다.
+템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 이를 사용 하 여 `range_adapter<Iter>` 반복기 쌍에서 개체를 생성 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1029,7 +1029,7 @@ template<typename Iter>
 |<xref:System.Collections.Generic.IEnumerable%601>|컬렉션의 형식화 된 요소를 반복 합니다.|
 |<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 관리 합니다.|
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 Range_adapter는 일련의 요소를 구분 하는 반복기 쌍을 저장 합니다. 개체는 요소를 순서 대로 반복할 수 있도록 하는 네 가지 BCL 인터페이스를 구현 합니다. 이 템플릿 클래스를 사용 하 여 BCL 컨테이너와 마찬가지로 STL/CLR 범위를 조작할 수 있습니다.
 
@@ -1045,12 +1045,12 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 저장 된 반복기 쌍을 *오른쪽*에 저장 된 반복기 쌍의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 저장 된 반복기 쌍을 *오른쪽*에 저장 된 반복기 쌍의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -1111,10 +1111,10 @@ range_adapter(Iter first, Iter last);
 *last*<br/>
 래핑할 두 번째 반복기입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 개체입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
@@ -1132,7 +1132,7 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-`*right`에 저장 된 쌍을 복사 하 여 저장 된 반복기 쌍을 초기화 합니다.
+에 저장 된 쌍을 복사 하 여 저장 된 반복기 쌍을 초기화 합니다 `*right` .
 
 생성자는 다음과 같습니다.
 

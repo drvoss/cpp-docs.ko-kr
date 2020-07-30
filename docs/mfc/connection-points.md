@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214154"
 ---
 # <a name="connection-points"></a>연결 지점
 
@@ -37,7 +37,7 @@ MFC는 [CConnectionPoint](reference/cconnectionpoint-class.md) 및 [ccmdtarget](
 
 클래스에서 구현 되는 각 연결 지점에 대해 연결 지점을 구현 하는 연결 부분을 선언 해야 합니다. 하나 이상의 연결 지점은 구현 하는 경우 클래스에서 단일 연결 맵도 선언 해야 합니다. 연결 맵은 ActiveX 컨트롤에서 지 원하는 연결 지점의 테이블입니다.
 
-다음 예에서는 간단한 연결 맵과 하나의 연결 지점을 보여 줍니다. 첫 번째 예제에서는 연결 맵과 점을 선언 합니다. 두 번째 예제에서는 맵과 점을 구현 합니다. 는 `CMyClass` 파생 클래스 여야 합니다 `CCmdTarget` . 첫 번째 예제에서 코드는 클래스 선언의 **protected** 섹션 아래에 삽입 됩니다.
+다음 예에서는 간단한 연결 맵과 하나의 연결 지점을 보여 줍니다. 첫 번째 예제에서는 연결 맵과 점을 선언 합니다. 두 번째 예제에서는 맵과 점을 구현 합니다. 는 `CMyClass` 파생 클래스 여야 합니다 `CCmdTarget` . 첫 번째 예제에서 코드는 클래스 선언에서 섹션 아래에 삽입 됩니다 **`protected`** .
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 

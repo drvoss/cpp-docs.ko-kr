@@ -1,17 +1,17 @@
 ---
-title: wire_marshal (C++ COM 특성)
+title: wire_marshal (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff01d20117e2f04aca96b0fee7489d7195cc7488
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215230"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213777"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -23,9 +23,9 @@ ms.locfileid: "80215230"
 [wire_marshal]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Wire_marshal** C++ 특성에는 [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 특성과 동일한 기능이 있습니다.
+**Wire_marshal** c + + 특성에는 [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -53,8 +53,8 @@ ms.locfileid: "80215230"
 
 |||
 |-|-|
-|**적용 대상**|**typedef**|
-|**반복 가능**|아니요|
+|**적용 대상**|**`typedef`**|
+|**불가능**|예|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

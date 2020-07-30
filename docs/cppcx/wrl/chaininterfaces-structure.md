@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211543"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 구조체
 
@@ -71,60 +71,60 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>매개 변수
 
 *I0*<br/>
-(필수) 인터페이스 ID 0.
+하다 인터페이스 ID 0입니다.
 
 *I1*<br/>
-(필수) 인터페이스 ID 1.
+하다 인터페이스 ID 1입니다.
 
 *I2*<br/>
-(선택 사항) 인터페이스 ID 2.
+필드 인터페이스 ID 2.
 
 *I3*<br/>
-(선택 사항) 인터페이스 ID 3.
+필드 인터페이스 ID 3.
 
 *I4*<br/>
-(선택 사항) 인터페이스 ID 4.
+필드 인터페이스 ID 4입니다.
 
 *I5*<br/>
-(선택 사항) 인터페이스 ID 5.
+필드 인터페이스 ID 5입니다.
 
 *I6*<br/>
-(선택 사항) 인터페이스 ID 6.
+필드 인터페이스 ID 6.
 
 *I7*<br/>
-(선택 사항) 인터페이스 ID 7.
+필드 인터페이스 ID 7.
 
 *I8*<br/>
-(선택 사항) 인터페이스 ID 8.
+필드 인터페이스 ID 8.
 
 *I9*<br/>
-(선택 사항) 인터페이스 ID 9.
+필드 인터페이스 ID 9입니다.
 
-*파생 유형*<br/>
-파생 된 형식입니다.
+*DerivedType*<br/>
+파생 형식입니다.
 
 *BaseType*<br/>
 파생 형식의 기본 형식입니다.
 
 *hasImplements*<br/>
-**true인**경우 구현 치수에서 파생되지 않는 클래스와 함께 [MixIn](mixin-structure.md) 구조를 사용할 수 [없다는](implements-structure.md) 부울 값입니다.
+인 경우 **`true`** [Implements](implements-structure.md) 구조체에서 파생 되지 않은 클래스와 함께 [MixIn](mixin-structure.md) 구조체를 사용할 수 없음을 의미 하는 부울 값입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-속성                                                   | Description
+Name                                                   | 설명
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[체인 인터페이스 ::캔 캐스트토](#cancastto)               | 지정된 인터페이스 ID를 `ChainInterface` 템플릿 매개 변수에 의해 정의된 각 특수화에 캐스팅할 수 있는지 여부를 나타냅니다.
-[체인 인터페이스::캐스팅알 수 없음](#casttounknown)       | *I0* 템플릿 매개 변수에 의해 정의된 형식의 인터페이스 `IUnknown`포인터를 에 대한 포인터로 캐스팅합니다.
-[체인 인터페이스::채우기배열WithIid](#fillarraywithiid) | *I0* 템플릿 매개 변수에 의해 정의된 인터페이스 ID를 지정된 인터페이스 ID 배열의 지정된 위치에 지정한 위치에 저장합니다.
-[체인 인터페이스::확인](#verify)                     | 템플릿 매개 변수 *I0에서* *I9을* 통해 정의된 `IUnknown` 각 인터페이스가 및/또는 `IInspectable`에서 상속되고 *I0이* *I1에서* *I9을*통해 상속되는지 확인합니다.
+[ChainInterfaces:: CanCastTo](#cancastto)               | 지정 된 인터페이스 ID를 템플릿 매개 변수로 정의 된 각 특수화로 캐스팅할 수 있는지 여부를 나타냅니다 `ChainInterface` .
+[ChainInterfaces:: CastToUnknown](#casttounknown)       | *I0* template 매개 변수에 의해 정의 된 형식의 인터페이스 포인터를에 대 한 포인터로 캐스팅 `IUnknown` 합니다.
+[ChainInterfaces:: FillArrayWithIid](#fillarraywithiid) | *I0* template 매개 변수에 의해 정의 된 인터페이스 id를 지정 된 인터페이스 id 배열의 지정 된 위치에 저장 합니다.
+[ChainInterfaces:: Verify](#verify)                     | *I0* 를 통해 *I9* 템플릿 매개 변수로 정의 된 각 인터페이스가 및/또는에서 상속 되 `IUnknown` `IInspectable` 고 *I0* 이 *I1* 에서 *I9*로 상속 하는지 확인 합니다.
 
-### <a name="protected-constants"></a>보호상수
+### <a name="protected-constants"></a>Protected 상수
 
-속성                                   | Description
+Name                                   | 설명
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[체인 인터페이스::이드카운트](#iidcount) | 템플릿 매개 변수 *I0에서* *I9까지*지정된 인터페이스에 포함된 인터페이스 의 총 수입니다.
+[ChainInterfaces:: IidCount](#iidcount) | *I9*을 통해 *I0* 템플릿 매개 변수로 지정 된 인터페이스에 포함 된 인터페이스 id의 총 수입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -134,13 +134,13 @@ struct ChainInterfaces<
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>체인 인터페이스 ::캔 캐스트토
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces:: CanCastTo
 
-지정된 인터페이스 ID를 기본이 아닌 템플릿 매개 변수에 의해 정의된 각 특수화에 캐스팅할 수 있는지 여부를 나타냅니다.
+지정 된 인터페이스 ID를 기본이 아닌 템플릿 매개 변수로 정의 된 각 특수화로 캐스팅할 수 있는지 여부를 나타냅니다.
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -155,15 +155,15 @@ __forceinline bool CanCastTo(
 인터페이스 ID입니다.
 
 *ppv*<br/>
-성공적으로 캐스팅된 마지막 인터페이스 ID에 대한 포인터입니다.
+성공적으로 캐스팅 된 마지막 인터페이스 ID에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-모든 캐스트 작업이 성공한 경우 **true입니다.** 그렇지 **않으면, 거짓**.
+**`true`** 모든 캐스트 작업이 성공 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>체인 인터페이스::캐스팅알 수 없음
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces:: CastToUnknown
 
-*I0* 템플릿 매개 변수에 의해 정의된 형식의 인터페이스 `IUnknown`포인터를 에 대한 포인터로 캐스팅합니다.
+*I0* template 매개 변수에 의해 정의 된 형식의 인터페이스 포인터를에 대 한 포인터로 캐스팅 `IUnknown` 합니다.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -173,9 +173,9 @@ __forceinline IUnknown* CastToUnknown();
 
 `IUnknown`에 대한 포인터입니다.
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>체인 인터페이스::채우기배열WithIid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces:: FillArrayWithIid
 
-*I0* 템플릿 매개 변수에 의해 정의된 인터페이스 ID를 지정된 인터페이스 ID 배열의 지정된 위치에 지정한 위치에 저장합니다.
+*I0* template 매개 변수에 의해 정의 된 인터페이스 id를 지정 된 인터페이스 id 배열의 지정 된 위치에 저장 합니다.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -187,14 +187,14 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>매개 변수
 
 *index*<br/>
-iids 배열에 인덱스 값을 *포인터합니다.*
+*Iid* 배열의 인덱스 값에 대 한 포인터입니다.
 
-*아이드 (이드)*<br/>
-인터페이스 아이디의 배열입니다.
+*iid*<br/>
+인터페이스 Id의 배열입니다.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>체인 인터페이스::이드카운트
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces:: IidCount
 
-템플릿 매개 변수 *I0에서* *I9까지*지정된 인터페이스에 포함된 인터페이스 의 총 수입니다.
+*I9*을 통해 *I0* 템플릿 매개 변수로 지정 된 인터페이스에 포함 된 인터페이스 id의 총 수입니다.
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -206,11 +206,11 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="remarks"></a>설명
 
-템플릿 매개 변수 *I0* 및 *I1이* 필요하며 *I2부터* *I9까지의* 매개 변수는 선택 사항입니다. 각 인터페이스의 IID 수는 일반적으로 1입니다.
+템플릿 매개 변수 *I0* 및 *I1* 이 필요 하며, *I9* 를 통한 *I2* 매개 변수는 선택 사항입니다. 각 인터페이스의 IID 수는 일반적으로 1입니다.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>체인 인터페이스::확인
+## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces:: Verify
 
-템플릿 매개 변수 *I0에서* *I9을* 통해 정의된 `IUnknown` 각 인터페이스가 및/또는 `IInspectable`에서 상속되고 *I0이* *I1에서* *I9을*통해 상속되는지 확인합니다.
+*I0* 를 통해 *I9* 템플릿 매개 변수로 정의 된 각 인터페이스가 및/또는에서 상속 되 `IUnknown` `IInspectable` 고 *I0* 이 *I1* 에서 *I9*로 상속 하는지 확인 합니다.
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
@@ -218,6 +218,6 @@ WRL_NOTHROW __forceinline static void Verify();
 
 ### <a name="remarks"></a>설명
 
-확인 작업이 실패하는 경우 `static_assert`에서 실패를 설명하는 오류 메시지를 내보냅니다.
+확인 작업이 실패 하는 경우는 오류 **`static_assert`** 를 설명 하는 오류 메시지를 내보냅니다.
 
-템플릿 매개 변수 *I0* 및 *I1이* 필요하며 *I2부터* *I9까지의* 매개 변수는 선택 사항입니다.
+템플릿 매개 변수 *I0* 및 *I1* 이 필요 하며, *I9* 를 통한 *I2* 매개 변수는 선택 사항입니다.

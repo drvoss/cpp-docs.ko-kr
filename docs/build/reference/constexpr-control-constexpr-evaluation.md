@@ -9,16 +9,16 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825593"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223865"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr(컨트롤 constexpr 평가)
 
-**/Oers** 컴파일러 옵션을 사용 하 여 컴파일 시간에 **constexpr** 평가에 대 한 매개 변수를 제어 합니다.
+컴파일 시간에 계산에 대 한 매개 변수를 제어 하려면 **/sers** 컴파일러 옵션을 사용 **`constexpr`** 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -28,15 +28,15 @@ ms.locfileid: "82825593"
 
 ## <a name="arguments"></a>인수
 
-**깊이**<em>n</em> 재귀 **constexpr** 함수 호출의 깊이를 *n* 수준으로 제한 합니다. 기본값은 512입니다.
+**깊이**<em>n</em> 재귀 함수 호출의 깊이 **`constexpr`** 를 *n* 수준으로 제한 합니다. 기본값은 512입니다.
 
-**backtrace**<em>n</em> 진단에서 최대 *n* 개의 **constexpr** 평가를 표시 합니다. 기본값은 10입니다.
+**backtrace**<em>n</em> 진단에서 최대 *n* 개의 평가를 표시 **`constexpr`** 합니다. 기본값은 10입니다.
 
-n **단계**는 *n* 단계 후 **constexpr** 평가<em>를 종료 합니다</em> . 기본값은 10만입니다.
+**steps**<em>N</em> n 단계 **`constexpr`** 를 완료 한 *N* 후 n 단계를 종료 합니다. 기본값은 10만입니다.
 
 ## <a name="remarks"></a>설명
 
-**/Sers** 컴파일러 옵션은 **constexpr** 식의 컴파일 타임 계산을 제어 합니다. 평가 단계, 재귀 수준 및 backtrace 깊이는 컴파일러에서 **constexpr** 평가에 너무 많은 시간을 소비 하지 않도록 제어 됩니다. **Constexpr** 언어 요소에 대 한 자세한 내용은 [Constexpr (c + +)](../../cpp/constexpr-cpp.md)을 참조 하세요.
+**/Sers** 컴파일러 옵션은 식의 컴파일 타임 계산을 제어 합니다 **`constexpr`** . 평가 단계, 재귀 수준 및 backtrace 깊이가 계산에 너무 많은 시간을 소비 하는 것을 방지 하기 위해 제어 됩니다 **`constexpr`** . 언어 요소에 대 한 자세한 내용은 **`constexpr`** [Constexpr (c + +)](../../cpp/constexpr-cpp.md)을 참조 하세요.
 
 **/Oere** 옵션은 Visual Studio 2015부터 사용할 수 있습니다.
 

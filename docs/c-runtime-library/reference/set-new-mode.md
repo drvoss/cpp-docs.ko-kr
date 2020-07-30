@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218535"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -57,7 +57,7 @@ int _set_new_mode( int newhandlermode );
 
 ## <a name="remarks"></a>설명
 
-C++ **_set_new_mode** 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 [_set_new_handler](set-new-handler.md)에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리 할당에 실패 한 경우 **malloc** 는 **새** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 합니다. 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md) 연산자를 참조하세요. 기본값을 재정의하려면 다음을
+C++ **_set_new_mode** 함수는 [malloc](malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 [_set_new_handler](set-new-handler.md)에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리를 할당 하지 못할 때 **malloc** 이 **`new`** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md) 연산자를 참조하세요. 기본값을 재정의하려면 다음을
 
 ```cpp
 _set_new_mode(1);
@@ -65,7 +65,7 @@ _set_new_mode(1);
 
 프로그램의 초기에 또는 Newmode .obj를 사용 하는 링크 ( [링크 옵션](../../c-runtime-library/link-options.md)참조).
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. *Newhandlermode* 가 0 또는 1이 아닌 경우 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 <strong>_set_new_mode</strong> 는-1을 반환 **errno** 하 고 `EINVAL`errno를로 설정 합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. *Newhandlermode* 가 0 또는 1이 아닌 경우 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 합니다. 계속 해 서 실행 하도록 허용한 경우 <strong>_set_new_mode</strong> 는-1을 반환 하 고 **errno** 를로 설정 `EINVAL` 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -77,7 +77,7 @@ _set_new_mode(1);
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

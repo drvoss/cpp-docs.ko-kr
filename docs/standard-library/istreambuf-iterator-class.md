@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 80bca2160f2e60938e9d0c85557b11a273c23264
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363057"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217703"
 ---
 # <a name="istreambuf_iterator-class"></a>istreambuf_iterator 클래스
 
-클래스 템플릿 istreambuf_iterator 문자 스트림 버퍼에서 문자 요소를 추출 하는 입력 이터레이터 개체를 설명 합니다., 그것은 `basic_streambuf` \< 저장 하는 개체를 통해 액세스 하는, **CharType에**대 한 형식 포인터, **특성**>.
+클래스 istreambuf_iterator 템플릿은 저장 된 개체를 통해 액세스 하는 입력 스트림 버퍼에서 문자 요소를 추출 하는 입력 반복기 개체에 대해 설명 합니다 .이 개체는에 대 한 형식 포인터입니다 `basic_streambuf` \< **CharType**, **Traits**> .
 
 ## <a name="syntax"></a>구문
 
@@ -39,11 +39,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>매개 변수
 
-*Chartype*\
+*CharType*\
 istreambuf_iterator의 문자 형식을 나타내는 형식입니다.
 
-*특성*\
-istreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*
+*특징이*\
+istreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 `char_traits` \< *CharType> . *입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -53,13 +53,13 @@ null이 아닌 저장된 포인터를 사용하여 istreambuf_iterator 클래스
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|입력 스트림에서 문자를 읽을 수 있도록 초기화된 `istreambuf_iterator`를 만듭니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|형식 이름|Description|
+|형식 이름|설명|
 |-|-|
 |[char_type](#char_type)|`ostreambuf_iterator`의 문자 형식을 허용하는 형식입니다.|
 |[int_type](#int_type)|`istreambuf_iterator`의 정수 형식을 허용하는 형식입니다.|
@@ -71,23 +71,23 @@ null이 아닌 저장된 포인터를 사용하여 istreambuf_iterator 클래스
 
 |멤버 함수|Description|
 |-|-|
-|[동등한](#equal)|두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.|
+|[다릅니다](#equal)|두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
-|[연산자*](#op_star)|역참조 연산자가 스트림의 다음 문자를 반환합니다.|
-|[연산자++](#op_add_add)|입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|
-|[연산자 >](#op_arrow)|멤버의 값을 반환합니다(있는 경우).|
+|[연산자](#op_star)|역참조 연산자가 스트림의 다음 문자를 반환합니다.|
+|[operator + +](#op_add_add)|입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|
+|[연산자->](#op_arrow)|멤버의 값을 반환합니다(있는 경우).|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<iterator>
+**헤더:**\<iterator>
 
 **네임스페이스:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:: char_type
 
 `ostreambuf_iterator`의 문자 형식을 허용하는 형식입니다.
 
@@ -97,7 +97,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>설명
 
-형식은 템플릿 매개 변수 *CharType의*동의어입니다.
+이 형식은 템플릿 매개 변수 *Chartype*의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -132,7 +132,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator::같음
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator:: equal
 
 두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.
 
@@ -147,11 +147,11 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="return-value"></a>Return Value
 
-`istreambuf_iterator`가 둘 다 스트림의 끝 반복기인 경우 또는 둘 다 스트림의 끝 반복기가 아닌 경우 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`** s가 `istreambuf_iterator` 스트림 끝 반복기 이거나 둘 다 스트림 끝 반복기가 아니면이 고, 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
-범위는 현재 위치 `istreambuf_iterator` 및 스트림의 끝 반복기에 의해 정의되지만 모든 비스트림 반복기는 `equal` 멤버 함수하에서 동일하므로 s를 사용하는 `istreambuf_iterator`모든 하위 범위를 정의할 수 없습니다. `==` 및 `!=` 연산자는 의미 체계가 동일합니다.
+범위는에서 `istreambuf_iterator` 현재 위치 및 스트림 끝 반복기로 정의 되지만 멤버 함수에서 끝이 아닌 모든 스트림 반복기가 동일 하기 때문에를 `equal` 사용 하 여 하위 범위를 정의할 수 없습니다 `istreambuf_iterator` . `==` 및 `!=` 연산자는 의미 체계가 동일합니다.
 
 ### <a name="example"></a>예제
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:: int_type
 
 `istreambuf_iterator`의 정수 형식을 허용하는 형식입니다.
 
@@ -212,7 +212,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:: istream_type
 
 `istreambuf_iterator`의 스트림 형식을 허용하는 형식입니다.
 
@@ -222,13 +222,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `basic_istream`\< **CharType**, **Traits**>의 동의어입니다.
+형식은의 동의어입니다 `basic_istream` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>예제
 
 `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator)를 참조하세요.
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:: istreambuf_iterator
 
 입력 스트림에서 문자를 읽을 수 있도록 초기화된 istreambuf_iterator를 생성합니다.
 
@@ -239,7 +239,7 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-*스트루프 (동부)는*\
+*strbuf*\
 `istreambuf_iterator`를 연결 중인 입력 스트림 버퍼입니다.
 
 *_Istr*\
@@ -247,7 +247,7 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 *strbuf를*사용하는 입력 스트림 버퍼 포인터를 초기화합니다. 두 번째 생성자는 *_Istr*입력 스트림 버퍼 포인터를 초기화합니다. `rdbuf`을 사용하여 결국 형식의 `CharType`개체를 추출하고 저장하려고 시도합니다.
+첫 번째 생성자는 *strbuf*를 사용 하 여 입력 스트림 버퍼 포인터를 초기화 합니다. 두 번째 생성자는 *_Istr*를 사용 하 여 입력 스트림 버퍼 포인터를 초기화 합니다. `rdbuf`그런 다음,는 결국 형식의 개체를 추출 하 고 저장 하려고 `CharType` 합니다.
 
 ### <a name="example"></a>예제
 
@@ -281,7 +281,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator::연산자*
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:: operator *
 
 역참조 연산자가 스트림의 다음 문자를 반환합니다.
 
@@ -321,7 +321,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator::연산자++
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:: operator + +
 
 입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 연산자는 결국 연결된 입력 `CharType` 스트림에서 형식의 개체를 추출하고 저장하려고 시도합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
+첫 번째 연산자는 궁극적으로 연결 된 입력 스트림에서 형식의 개체를 추출 하 고 저장 하려고 `CharType` 합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -366,7 +366,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator::연산자-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator:: operator-&gt;
 
 멤버의 값을 반환합니다(있는 경우).
 
@@ -376,9 +376,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>Return Value
 
-연산자가 ** & \* \*이 을**반환합니다.
+연산자는 ** & \* \* this**를 반환 합니다.
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:: streambuf_type
 
 istreambuf_iterator의 스트림 형식을 제공하는 형식입니다.
 
@@ -388,13 +388,13 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 `basic_streambuf`\< **CharType**, **Traits**>의 동의어입니다.
+형식은의 동의어입니다 `basic_streambuf` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>예제
 
 `istreambuf_type`을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator)를 참조하세요.
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:: traits_type
 
 `istream_iterator`의 특성 형식을 허용하는 형식입니다.
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>참고 항목
 
-[이터레이터 구조체](../standard-library/iterator-struct.md)\
-[\<>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 나사 안전](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[iterator 구조체](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

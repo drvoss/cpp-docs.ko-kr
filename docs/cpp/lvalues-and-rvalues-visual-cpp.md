@@ -1,20 +1,20 @@
 ---
-title: '값 범주: Lvalues 및 Rvalue (C++)'
+title: '값 범주: Lvalues 및 Rvalue (c + +)'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077232"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225971"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalue 및 Rvalue (C++)
 
-모든 C++ 식에는 형식이 있으며 *값 범주*에 속합니다. 값 범주는 식 평가 중에 임시 개체를 만들고 복사 하 고 이동할 때 컴파일러가 따라야 하는 규칙의 기본입니다.
+모든 c + + 식에는 형식이 있으며 *값 범주*에 속합니다. 값 범주는 식 평가 중에 임시 개체를 만들고 복사 하 고 이동할 때 컴파일러가 따라야 하는 규칙의 기본입니다.
 
 C + + 17 표준은 식 값 범주를 다음과 같이 정의 합니다.
 
@@ -26,9 +26,9 @@ C + + 17 표준은 식 값 범주를 다음과 같이 정의 합니다.
 
 다음 다이어그램에서는 범주 간의 관계를 보여 줍니다.
 
-![C++식 값 범주](media/value_categories.png "C++식 값 범주")
+![C + + 식 값 범주](media/value_categories.png "C + + 식 값 범주")
 
-Lvalue에는 프로그램에서 액세스할 수 있는 주소가 있습니다. Lvalue 식의 예로는 **const** 변수, 배열 요소, lvalue 참조, 비트 필드, 공용 구조체 및 클래스 멤버를 반환 하는 함수 호출을 비롯 한 변수 이름이 있습니다.
+Lvalue에는 프로그램에서 액세스할 수 있는 주소가 있습니다. Lvalue 식의 예로는 변수 **`const`** , 배열 요소, lvalue 참조, 비트 필드, 공용 구조체 및 클래스 멤버를 반환 하는 함수 호출을 포함 한 변수 이름이 있습니다.
 
 Prvalue 식에는 프로그램에서 액세스할 수 있는 주소가 없습니다. Prvalue 식의 예로는 리터럴, 참조 하지 않는 형식을 반환 하는 함수 호출, 식 평가 중에 생성 되었지만 컴파일러 에서만 액세스할 수 있는 임시 개체 등이 있습니다.
 
@@ -66,7 +66,7 @@ int main()
 > [!NOTE]
 > 이 항목의 예제는 연산자가 오버로드되지 않을 때 올바른 사용과 올바르지 않은 사용의 예를 보여 줍니다. 연산자를 오버로드하여 `j * 4`와 같은 식을 lvalue로 만들 수 있습니다.
 
-*Lvalue* 및 *rvalue* 용어는 개체 참조를 참조 하는 경우에 자주 사용 됩니다. 참조에 대 한 자세한 내용은 [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md) 및 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조 하세요.
+*Lvalue* 및 *rvalue* 용어는 개체 참조를 참조 하는 경우에 자주 사용 됩니다. 참조에 대 한 자세한 내용은 [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md) 및 [Rvalue 참조 선언 자:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -2,16 +2,16 @@
 title: 종속적인 형식에 대한 이름 확인
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227311"
 ---
 # <a name="name-resolution-for-dependent-types"></a>종속적인 형식에 대한 이름 확인
 
-템플릿 정의에서 정규화 된 이름의 **typename** 을 사용 하 여 지정 된 정규화 된 이름이 형식을 식별 함을 컴파일러에 알립니다. 자세한 내용은 [typename](../cpp/typename.md)을 참조 하세요.
+**`typename`** 템플릿 정의의 정규화 된 이름을 사용 하 여 지정 된 정규화 된 이름이 형식을 식별 함을 컴파일러에 알립니다. 자세한 내용은 [typename](../cpp/typename.md)을 참조 하세요.
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-종속 이름에 대 한 이름 조회는 템플릿 정의의 컨텍스트 모두에서 이름을 검사 합니다. 다음 예제에서는이 컨텍스트가 `myFunction(char)`및 템플릿 인스턴스화의 컨텍스트를 찾습니다. 다음 예제에서는 템플릿이 main에서 인스턴스화됩니다. 따라서 `MyNamespace::myFunction`는 인스턴스화 지점에서 표시 되 고 더 잘 일치 하는 것으로 선택 됩니다. `MyNamespace::myFunction`의 이름이 바뀐 경우 `myFunction(char)`이 대신 호출됩니다.
+종속 이름에 대 한 이름 조회는 템플릿 정의의 컨텍스트 모두에서 이름을 검사 합니다. 다음 예제에서이 컨텍스트는 `myFunction(char)` 및 템플릿 인스턴스화의 컨텍스트를 찾습니다. 다음 예제에서는 템플릿이 main에서 인스턴스화됩니다. 따라서가 `MyNamespace::myFunction` 인스턴스화 지점에서 표시 되 고 더 잘 일치 하는 것으로 선택 됩니다. `MyNamespace::myFunction`의 이름이 바뀐 경우 `myFunction(char)`이 대신 호출됩니다.
 
 모든 이름은 종속 이름인 것처럼 확인됩니다. 그러나 충돌 발생 가능성이 있을 경우 철저하게 정규화된 이름을 사용하는 것이 좋습니다.
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>템플릿 명확성
 
-Visual Studio 2012의 Visual C++는 "템플릿" 키워드를 사용하여 명확성에 대한 C++ 98/03/11 표준 규칙을 적용합니다. 다음 예제에서 Visual Studio 2010은 순응 하지 않는 줄과 순응 하는 줄을 모두 허용 합니다.  Visual Studio 2012의 Visual C++는 표준에 맞는 줄만 허용합니다.
+Visual Studio 2012는 "template" 키워드를 사용 하 여 명확성을 위해 c + + 98/03/11 표준 규칙을 적용 합니다. 다음 예제에서 Visual Studio 2010은 순응 하지 않는 줄과 순응 하는 줄을 모두 허용 합니다.  Visual Studio 2012은 맞는 줄만 허용 합니다.
 
 ```cpp
 #include <iostream>

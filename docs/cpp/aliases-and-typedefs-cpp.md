@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 7a45c4570341aca056b9d4c30ea496317a1ac96f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227675"
 ---
 # <a name="aliases-and-typedefs-c"></a>별칭 및 typedef(C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "80181566"
 using identifier = type;
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *identifier*<br/>
 별칭 이름입니다.
@@ -31,7 +31,7 @@ using identifier = type;
 
 별칭은 새 형식을 사용하지 않으며 기존 형식 이름의 의미를 변경할 수 없습니다.
 
-가장 간단한 별칭 형식은 c + + 03의 **typedef** 메커니즘과 동일 합니다.
+별칭의 가장 간단한 형태는 **`typedef`** c + + 03의 메커니즘과 동일 합니다.
 
 ```cpp
 // C++11
@@ -70,7 +70,7 @@ void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
-**Typedef** 메커니즘의 제한 사항은 템플릿에서 작동 하지 않는다는 것입니다. 그러나 C++ 11의 형식 별칭 구문을 사용하면 별칭 템플릿을 만들 수 있습니다.
+메커니즘의 제한 사항은 **`typedef`** 템플릿에서 작동 하지 않는다는 것입니다. 그러나 C++ 11의 형식 별칭 구문을 사용하면 별칭 템플릿을 만들 수 있습니다.
 
 ```cpp
 template<typename T> using ptr = T*;
@@ -81,7 +81,7 @@ ptr<int> ptr_int;
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 사용자 지정 할당자(이 경우 정수 벡터 형식)와 별칭 템플릿을 사용하는 방법을 데모로 보여 줍니다. **Int** 의 형식을 대체 하 여 기본 함수 코드에서 복잡 한 매개 변수 목록을 숨기는 편리한 별칭을 만들 수 있습니다. 코드 전반에 사용자 지정 할당자를 사용하여 가독성을 향상시키고 오타로 인한 버그의 위험을 줄일 수 있습니다.
+다음 예제에서는 사용자 지정 할당자(이 경우 정수 벡터 형식)와 별칭 템플릿을 사용하는 방법을 데모로 보여 줍니다. 모든 형식을로 대체 하 여 **`int`** 기본 함수 코드에서 복잡 한 매개 변수 목록을 숨기는 편리한 별칭을 만들 수 있습니다. 코드 전반에 사용자 지정 할당자를 사용하여 가독성을 향상시키고 오타로 인한 버그의 위험을 줄일 수 있습니다.
 
 ```cpp
 #include <stdlib.h>
@@ -141,13 +141,13 @@ int main ()
 
 ## <a name="typedefs"></a>Typedefs
 
-**Typedef** 선언에는 해당 범위 내에서 선언의 *형식 선언* 부분에서 제공 하는 형식에 대 한 이름이 도입 됩니다.
+선언에는 **`typedef`** 해당 범위 내에서 선언의 *형식 선언* 부분에서 제공 하는 형식에 대 한 이름이 도입 됩니다.
 
 typedef 선언을 사용하여 언어에서 이미 정의된 형식이나 사용자가 선언한 형식에 대한 보다 짧거나 의미 있는 이름을 생성할 수 있습니다. typedef 이름을 사용하면 변경될 수 있는 구현 정보를 캡슐화할 수 있습니다.
 
-**클래스**, **구조체**, **공용 구조체**및 **열거형** 선언과 달리 **typedef** 선언은 새 형식을 도입 하지 않으며 기존 형식에 대 한 새 이름을 도입 합니다.
+**`class`**,, **`struct`** **`union`** 및 선언과 달리 **`enum`** **`typedef`** 선언은 새 형식을 도입 하지 않으며 기존 형식에 대 한 새 이름을 도입 합니다.
 
-**Typedef** 를 사용 하 여 선언 된 이름은 다른 식별자 (문 레이블 제외)와 동일한 네임 스페이스를 차지 합니다. 따라서 클래스 형식으로 선언된 경우를 제외하고 이전에 선언된 이름과 동일한 식별자를 사용할 수 없습니다. 다음과 같은 예제를 참조하세요.
+를 사용 하 여 선언 **`typedef`** 된 이름은 다른 식별자 (문 레이블 제외)와 동일한 네임 스페이스를 차지 합니다. 따라서 클래스 형식으로 선언된 경우를 제외하고 이전에 선언된 이름과 동일한 식별자를 사용할 수 없습니다. 다음과 같은 예제를 참조하세요.
 
 ```cpp
 // typedef_names1.cpp
@@ -156,7 +156,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.
 ```
 
-다른 식별자와 관련 된 이름 숨기기 규칙은 또한 **typedef**를 사용 하 여 선언 된 이름의 표시 여부를 제어 합니다. 따라서 다음 예제는 C++에서 사용할 수 있습니다.
+다른 식별자와 관련 된 이름 숨기기 규칙은를 사용 하 여 선언 된 이름의 표시 여부도 제어 합니다 **`typedef`** . 따라서 다음 예제는 C++에서 사용할 수 있습니다.
 
 ```cpp
 // typedef_names2.cpp
@@ -210,9 +210,9 @@ int;  // Illegal declaration
 
 포인터, 함수 및 배열 형식을 비롯한 모든 형식을 typedef를 사용하여 선언할 수 있습니다. 정의의 표시 유형이 선언의 표시 유형과 동일한 경우 구조체 또는 공용 구조체 형식을 정의하기 전에 구조체 또는 공용 구조체 형식에 대한 포인터의 typedef 이름을 선언할 수 있습니다.
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
-**Typedef** 선언을 사용 하는 한 가지 방법은 선언을 더 균일 하 고 압축 하는 것입니다. 예를 들면 다음과 같습니다.
+**`typedef`** 선언을 사용 하는 한 가지 방법은 선언을 더 균일 하 고 압축 하는 것입니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 typedef char CHAR;          // Character type.
@@ -222,7 +222,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"
 ```
 
-**Typedef** 를 사용 하 여 동일한 선언에서 기본 및 파생 형식을 지정 하려면 선언 자를 쉼표로 구분 하면 됩니다. 예를 들면 다음과 같습니다.
+를 사용 하 여 **`typedef`** 동일한 선언에서 기본 및 파생 형식을 지정 하려면 선언 자를 쉼표로 구분 하면 됩니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 typedef char CHAR, *PSTR;
@@ -234,7 +234,7 @@ typedef char CHAR, *PSTR;
 typedef void DRAWF( int, int );
 ```
 
-위의 **typedef** 문 뒤에는 선언이 있습니다.
+위의 문 뒤에 **`typedef`** 는 선언이 있습니다.
 
 ```cpp
 DRAWF box;
@@ -246,7 +246,7 @@ DRAWF box;
 void box( int, int );
 ```
 
-**typedef** 는 종종 **struct** 와 결합 되어 사용자 정의 형식을 선언 하 고 이름을 지정 합니다.
+**`typedef`** 는와 결합 되어 **`struct`** 사용자 정의 형식을 선언 하 고 이름을 지정 하는 경우가 많습니다.
 
 ```cpp
 // typedef_specifier2.cpp
@@ -273,7 +273,7 @@ int main()
 
 ### <a name="re-declaration-of-typedefs"></a>typedef 다시 선언
 
-**Typedef** 선언을 사용 하 여 동일한 형식을 참조 하는 동일한 이름을 다시 선언할 수 있습니다. 예를 들면 다음과 같습니다.
+선언을 사용 하 여 동일한 **`typedef`** 형식을 참조 하는 동일한 이름을 다시 선언할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // FILE1.H
@@ -287,9 +287,9 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-프로그램 프로그램 *입니다. CPP* 에는 `CHAR`이름에 대 한 **typedef** 선언이 포함 된 두 개의 헤더 파일이 포함 되어 있습니다. 두 선언이 동일한 형식을 참조하는 한 이러한 재선언은 허용됩니다.
+프로그램 프로그램 *입니다. CPP* 에는 두 헤더 파일이 포함 되어 있으며 둘 다 **`typedef`** 이름에 대 한 선언을 포함 `CHAR` 합니다. 두 선언이 동일한 형식을 참조하는 한 이러한 재선언은 허용됩니다.
 
-**Typedef** 가 이전에 다른 형식으로 선언 된 이름을 다시 정의할 수 없습니다. 따라서 FILE2 인 경우 *입니다. H* 포함
+는 **`typedef`** 이전에 다른 형식으로 선언 된 이름을 다시 정의할 수 없습니다. 따라서 FILE2 인 경우 *입니다. H* 포함
 
 ```cpp
 // FILE2.H
@@ -309,9 +309,9 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>vs의 C++ typedef
+### <a name="typedefs-in-c-vs-c"></a>c + + 및 C + +의 typedef
 
-**Typedef 선언에서 명명** 되지 않은 구조체를 선언 하는 ANSI C 습관 때문에 클래스 형식에서 **typedef** 지정자를 사용 하는 것은 주로 지원 됩니다. 예를 들어 많은 C 프로그래머는 다음을 사용합니다.
+**`typedef`** 선언에서 명명 되지 않은 구조체를 선언 하는 ANSI C 연습 때문에 클래스 형식에 지정자를 사용 하는 것은 주로 지원 됩니다 **`typedef`** . 예를 들어 많은 C 프로그래머는 다음을 사용합니다.
 
 ```cpp
 // typedef_with_class_types1.cpp
@@ -335,7 +335,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;
 ```
 
-에서는 C++ **typedef** 이름과 실제 형식 ( **클래스**, **구조체**, **공용 구조체**및 **열거형** 키워드로 선언 됨) 간의 차이가 더 고유 합니다. **Typedef** 문에 이름이 없는 구조체를 선언 하는 c 사례는 여전히 작동 하지만 c에서는 표기법 밑수 이점을 제공 하지 않습니다.
+C + +에서 **`typedef`** 이름 및 실수 형식 (,, 및 키워드를 사용 하 여 선언 됨)의 차이는 **`class`** **`struct`** **`union`** **`enum`** 더 고유 합니다. 문에서 이름이 없는 구조체를 선언 하는 C 사례는 **`typedef`** 여전히 작동 하지만 c에서는 표기법 밑수 이점을 제공 하지 않습니다.
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -347,9 +347,9 @@ typedef struct {
 } POINT;
 ```
 
-앞의 예제에서는 명명 되지 않은 클래스 **typedef** 구문을 사용 하 여 `POINT` 이라는 클래스를 선언 합니다. `POINT`는 클래스 이름으로 간주되지만 다음과 같은 제한 사항이 이런 방식으로 생성된 이름에 적용됩니다.
+앞의 예제에서는 명명 `POINT` 되지 않은 클래스 구문을 사용 하 여 라는 클래스를 선언 합니다 **`typedef`** . `POINT`는 클래스 이름으로 간주되지만 다음과 같은 제한 사항이 이런 방식으로 생성된 이름에 적용됩니다.
 
-- 이름 (동의어)은 **클래스**, **구조체**또는 **공용 구조체** 접두사 뒤에 올 수 없습니다.
+- 이름 (동의어)은 **`class`** , 또는 접두사 뒤에 올 수 없습니다 **`struct`** **`union`** .
 
 - 해당 이름은 클래스 선언 내에서 생성자 또는 소멸자 이름으로 사용할 수 없습니다.
 

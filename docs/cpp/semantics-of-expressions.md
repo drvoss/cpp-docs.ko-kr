@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178851"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223605"
 ---
 # <a name="semantics-of-expressions"></a>식의 의미
 
-식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선 순위 및](../cpp/cpp-built-in-operators-precedence-and-associativity.md) [어휘 규칙](../cpp/lexical-conventions.md)의 결합성은 연산자가 식 C++ 에 적용 하는 관계를 보여 줍니다.)
+식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선 순위 및](../cpp/cpp-built-in-operators-precedence-and-associativity.md) [어휘 규칙](../cpp/lexical-conventions.md)의 결합성은 c + + 연산자가 식에 적용 하는 관계를 보여 줍니다.)
 
 ## <a name="order-of-evaluation"></a>평가 순서
 
@@ -52,11 +52,11 @@ int main()
 
 1. 다음으로 덧셈(+)의 우선 순위가 높으므로 `a`와 `b`를 곱한 값에 `c`가 더해집니다.
 
-1. 왼쪽 시프트 (< <)는 식에서 가장 낮은 우선 순위를 갖지만 두 번 발생 합니다. 왼쪽 시프트 연산자는 왼쪽에서 오른쪽으로 그룹화하므로 왼쪽 하위 식이 먼저 계산된 다음 오른쪽 하위 식이 계산됩니다.
+1. 왼쪽 시프트 (<<)는 식에서 가장 낮은 우선 순위를 갖지만 두 번 발생 합니다. 왼쪽 시프트 연산자는 왼쪽에서 오른쪽으로 그룹화하므로 왼쪽 하위 식이 먼저 계산된 다음 오른쪽 하위 식이 계산됩니다.
 
 괄호를 사용하여 하위 식을 그룹화할 경우 다음 그림에 표시된 것처럼 우선 순위 및 식이 계산되는 순서도 변경됩니다.
 
-![괄호를 사용 하는 식의 평가 순서](../cpp/media/vc38zv2.gif "괄호가 있는 식의 평가 순서") <br/>
+![괄호가 있는 식의 평가 순서](../cpp/media/vc38zv2.gif "괄호가 있는 식의 평가 순서") <br/>
 괄호를 사용 하는 식 계산 순서
 
 위의 그림에 있는 것과 같은 식은 전적으로 의도하지 않은 결과를 위해 계산되며, 이 경우에는 표준 출력 디바이스로 정보를 전송하기 위해 계산됩니다.
@@ -69,10 +69,10 @@ C++ 언어는 피연산자를 지정할 때 특정 호환성을 지정합니다.
 
 |필요한 형식|허용되는 형식|
 |-------------------|-------------------|
-|*type*|`const` *형식*<br /> `volatile` *형식*<br /> *type*&<br /> `const` *형식*&<br /> `volatile` *형식*&<br /> `volatile const` *형식*<br /> `volatile const` *형식*&|
-|*형식* \*|*형식* \*<br /> `const` *형식* \*<br /> `volatile` *형식* \*<br /> `volatile const` *형식* \*|
-|`const` *형식*|*type*<br /> `const` *형식*<br />`const` *형식*&|
-|`volatile` *형식*|*type*<br /> `volatile` *형식*<br /> `volatile` *형식*&|
+|*type*|**`const`***유형*<br /> **`volatile`***유형*<br /> *type*&<br /> **`const`***유형*&<br /> **`volatile`***유형*&<br /> `volatile const`*유형*<br /> `volatile const`*유형*&|
+|*유형*\*|*유형*\*<br /> **`const`***유형*\*<br /> **`volatile`***유형*\*<br /> `volatile const`*유형*\*|
+|**`const`***유형*|*type*<br /> **`const`***유형*<br />**`const`***유형*&|
+|**`volatile`***유형*|*type*<br /> **`volatile`***유형*<br /> **`volatile`***유형*&|
 
 항상 이전 규칙을 조합하여 사용할 수 있으므로 포인터가 필요한 지점에 volatile 개체에 대한 const 포인터를 제공할 수 있습니다.
 
@@ -88,13 +88,13 @@ func( i, ++i );
 
 C++ 언어에서는 함수 호출에 대한 인수가 계산되는 순서를 보장하지 않습니다. 따라서 위의 예제에서 매개 변수의 계산 방향이 왼쪽에서 오른쪽인지, 아니면 오른쪽에서 왼쪽인지에 따라 `func`는 매개 변수의 값으로 7과 8을 받거나 8과 8을 받을 수 있습니다.
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++시퀀스 위치 (Microsoft 전용)
+## <a name="c-sequence-points-microsoft-specific"></a>C + + 시퀀스 위치 (Microsoft 전용)
 
 식은 연속적인 "시퀀스 위치" 사이에서 개체의 값을 한 번만 수정할 수 있습니다.
 
 현재 C++ 언어 정의는 시퀀스 위치를 지정하지 않습니다. Microsoft C++는 C 연산자를 사용하고 오버로드된 연산자는 사용하지 않는 모든 식에 대해 ANSI C와 동일한 시퀀스 위치를 사용합니다. 연산자가 오버로드되면 연산자 시퀀스에서 함수 호출 시퀀스로 의미 체계가 변경됩니다. Microsoft C++는 다음 시퀀스 위치를 사용합니다.
 
-- 논리 AND 연산자 (& &)의 왼쪽 피연산자입니다. 계속하기 전에 논리 AND 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 AND 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.
+- 논리 AND 연산자 (&&)의 왼쪽 피연산자입니다. 계속하기 전에 논리 AND 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 AND 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.
 
 - 논리적 OR 연산자 (&#124;&#124;)의 왼쪽 피연산자입니다. 계속하기 전에 논리 OR 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 OR 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.
 

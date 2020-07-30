@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212997"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 구조체
 
-핸들의 일반적인 특성을 정의합니다.
+핸들의 공통 특성을 정의 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -32,16 +32,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-속성   | Description
+Name   | 설명
 ------ | ---------------------
 `Type` | 핸들의 동의어입니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-속성                                              | Description
+이름                                              | 설명
 ------------------------------------------------- | -----------------------------
-[핸들 해협::닫기](#close)                     | 지정된 핸들을 닫습니다.
-[핸들 해협::GetInvalid값](#getinvalidvalue) | 잘못된 핸들을 나타냅니다.
+[:: Close 수동](#close)                     | 지정 된 핸들을 닫습니다.
+[해당:: GetInvalidValue 수동 작업](#getinvalidvalue) | 는 잘못 된 핸들을 나타냅니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -49,13 +49,13 @@ struct HANDLETraits;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** 코어래퍼.h
+**헤더:** corewrappers.h
 
-**네임스페이스:** 마이크로소프트::WRL::래퍼::핸들 트레이츠
+**네임 스페이스:** Microsoft:: WRL:: 래퍼:: 핸드
 
-## <a name="handletraitsclose"></a><a name="close"></a>핸들 해협::닫기
+## <a name="handletraitsclose"></a><a name="close"></a>:: Close 수동
 
-지정된 핸들을 닫습니다.
+지정 된 핸들을 닫습니다.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>매개 변수
 
-*H*<br/>
-핸들을 닫습니다.
+*h*<br/>
+닫을 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-핸들 *h가* 성공적으로 닫힌 경우 **true;** 그렇지 **않으면, 거짓**.
+**`true`***핸들을* 성공적으로 닫았습니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>핸들 해협::GetInvalid값
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>해당:: GetInvalidValue 수동 작업
 
-잘못된 핸들을 나타냅니다.
+는 잘못 된 핸들을 나타냅니다.
 
 ```cpp
 inline static HANDLE GetInvalidValue();
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Return Value
 
-항상 INVALID_HANDLE_VALUE 반환합니다. (INVALID_HANDLE_VALUE Windows에서 정의합니다.)
+INVALID_HANDLE_VALUE 항상를 반환 합니다. (INVALID_HANDLE_VALUE는 Windows에서 정의 됩니다.)

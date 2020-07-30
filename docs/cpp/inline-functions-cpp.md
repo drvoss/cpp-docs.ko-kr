@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: 454a727f0c002dc476e5fdab217efc3dea716e14
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d2356d7813167f3973ac2748423c6af7f0b5573b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227415"
 ---
 # <a name="inline-functions-c"></a>인라인 함수(C++)
 
@@ -95,7 +95,7 @@ int main()
 
 [`/LTCG`](../build/reference/ltcg-link-time-code-generation.md)는 소스 코드에서 요청 되었는지 여부에 관계 없이 크로스 모듈을 인라인 합니다.
 
-### <a name="example-1"></a>예 1
+### <a name="example-1"></a>예제 1
 
 ```cpp
 // inline_keyword1.cpp
@@ -157,7 +157,7 @@ private:
 
 **Microsoft 전용 종료**
 
-**인라인** 지정자 사용에 대 한 자세한 내용은 다음을 참조 하세요.
+지정자 사용에 대 한 자세한 내용은 **`inline`** 다음을 참조 하세요.
 
 - [인라인 클래스 멤버 함수](../cpp/inline-functions-cpp.md)
 

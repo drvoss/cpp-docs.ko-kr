@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216546"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 클래스
 
@@ -48,26 +48,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-Name                                                             | Description
+Name                                                             | 설명
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT:: SyncLockWithStatusT](#synclockwithstatust) | `SyncLockWithStatusT` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="protected-constructors"></a>Protected 생성자
 
-Name                                                             | Description
+Name                                                             | 설명
 ---------------------------------------------------------------- | --------------------------------------------------------------
 [SyncLockWithStatusT:: SyncLockWithStatusT](#synclockwithstatust) | `SyncLockWithStatusT` 클래스의 새 인스턴스를 초기화합니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-이름                                         | Description
+이름                                         | 설명
 -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
 [SyncLockWithStatusT:: GetStatus](#getstatus) | 현재 개체의 대기 상태를 검색 합니다 `SyncLockWithStatusT` .
 [SyncLockWithStatusT:: IsLocked](#islocked)   | 현재 `SyncLockWithStatusT` 개체가 리소스를 소유 하 고 있는지 여부를 나타냅니다. 즉, `SyncLockWithStatusT` 개체가 *잠겨*있는지 여부를 나타냅니다.
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-Name                                    | Description
+Name                                    | 설명
 --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
 [SyncLockWithStatusT:: status_](#status) | 현재 개체를 기반으로 하는 개체에 대 한 잠금 작업 후 기본 대기 작업의 결과를 포함 합니다 `SyncLockWithStatusT` .
 
@@ -115,7 +115,7 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>Return Value
 
-**true** `SyncLockWithStatusT` 개체가 잠겨 있으면 true이 고, 그렇지 않으면 **false**입니다.
+**`true`**`SyncLockWithStatusT`개체가 잠겨 있으면이 고, 그렇지 않으면 **`false`** 입니다.
 
 ## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT:: status_
 
@@ -159,4 +159,4 @@ explicit SyncLockWithStatusT(
 
 `SyncLockWithStatusT` 클래스의 새 인스턴스를 초기화합니다.
 
-첫 번째 생성자는 다른 `SyncLockWithStatusT` 매개 변수를 통해 지정 된 다른에서 현재 개체를 초기화 한 `SyncLockWithStatusT` 다음 다른 개체를 무효화 합니다 *other* `SyncLockWithStatusT` . 두 번째 생성자는이 `protected` 고 현재 개체를 `SyncLockWithStatusT` 잘못 된 상태로 초기화 합니다.
+첫 번째 생성자는 다른 `SyncLockWithStatusT` 매개 변수를 통해 지정 된 다른에서 현재 개체를 초기화 한 `SyncLockWithStatusT` 다음 다른 개체를 무효화 합니다 *other* `SyncLockWithStatusT` . 두 번째 생성자는이 **`protected`** 고 현재 개체를 `SyncLockWithStatusT` 잘못 된 상태로 초기화 합니다.

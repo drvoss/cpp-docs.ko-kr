@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217937"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>예외: 예외의 개체 해제
 
@@ -30,9 +30,9 @@ ms.locfileid: "84622818"
 
 이 작업을 수행 하는 두 가지 주요 방법이 있습니다.
 
-- **Try** 및 **catch** 키워드를 사용 하 여 예외를 로컬로 처리 한 다음 문을 사용 하 여 모든 개체를 삭제 합니다.
+- 및 키워드를 사용 하 여 예외를 로컬로 처리 한 다음 문을 사용 하 여 **`try`** **`catch`** 모든 개체를 삭제 합니다.
 
-- 추가 처리를 위해 블록 외부에 예외를 throw 하기 전에 **catch** 블록에서 모든 개체를 제거 합니다.
+- **`catch`** 추가 처리를 위해 블록 외부에 예외를 throw 하기 전에 블록의 모든 개체를 삭제 합니다.
 
 이러한 두 가지 방법은 다음과 같은 문제 예에 대 한 해결 방법입니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "84622818"
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>개체를 삭제 한 후 예외 throw
 
-예외를 처리 하는 또 다른 방법은 다음 외부 예외 처리 컨텍스트에이를 전달 하는 것입니다. **Catch** 블록에서 로컬에 할당 된 개체를 정리 하 고 추가 처리를 위해 예외를 throw 할 수 있습니다.
+예외를 처리 하는 또 다른 방법은 다음 외부 예외 처리 컨텍스트에이를 전달 하는 것입니다. 블록에서 **`catch`** 로컬에 할당 된 개체를 정리 하 고 추가 처리를 위해 예외를 throw 할 수 있습니다.
 
 Throw 함수는 힙 개체의 할당을 취소할 수도 있고 그렇지 않을 수도 있습니다. 정상적인 경우를 반환 하기 전에 함수에서 항상 힙 개체의 할당을 취소 하는 경우 함수는 예외를 throw 하기 전에 힙 개체의 할당을 취소 해야 합니다. 반면, 함수는 일반적으로 반환 하기 전에 개체의 할당을 취소 하지 않는 경우 힙 개체의 할당을 취소 해야 하는지 여부를 사례별로 결정 해야 합니다.
 

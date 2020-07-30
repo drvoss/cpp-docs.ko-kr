@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206044"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>컴파일러 경고(수준 2) C4396
 
@@ -21,11 +21,11 @@ ms.locfileid: "80161817"
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- friend 함수 선언에서 `inline`, `__inline`또는 `__forceinline` 지정자를 제거합니다.
+- **`inline`** **`__inline`** **`__forceinline`** Friend 함수 선언에서, 또는 지정자를 제거 합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 `inline` 지정자를 사용하는 잘못된 friend 함수 선언을 보여 줍니다.
+다음 코드 예제에서는 지정자를 사용 하는 잘못 된 friend 함수 선언을 보여 줍니다 **`inline`** .
 
 ```cpp
 // C4396.cpp

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225152"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>개체 연산자에 대한 핸들(^)(C++/CLI 및 C++/CX)
 
-*핸들 선언자* (,`^`"hat"로 발음)는 시스템이 객체에 더 이상 액세스할 수 없다고 판단할 때 선언된 개체를 자동으로 삭제해야 한다는 의미로 형식 [지정자를](../cpp/overview-of-declarators.md) 수정합니다.
+*핸들 선언 자* ( `^` "hat"로 발음)는 시스템에서 개체에 더 이상 액세스할 수 없는 것으로 확인 될 때 선언 된 개체가 자동으로 삭제 되도록 하는 형식 [지정자](../cpp/overview-of-declarators.md) 를 수정 합니다.
 
 ## <a name="accessing-the-declared-object"></a>선언된 개체 액세스
 
@@ -38,9 +38,9 @@ ms.locfileid: "81358324"
 
 네이티브 C++ 포인터(`*`) 및 참조(`&`)는 관리되는 참조가 아니며 가비지 수집기는 참조하는 주소를 자동으로 업데이트할 수 없습니다. 이 문제를 해결하려면 핸들 선언자를 사용하여 가비지 수집기가 알고 있고 자동으로 업데이트할 수 있는 변수를 지정합니다.
 
-자세한 내용은 [네이티브 형식의 핸들 선언 방법을](../dotnet/how-to-declare-handles-in-native-types.md)참조하십시오.
+자세한 내용은 [방법: 네이티브 형식으로 핸들 선언](../dotnet/how-to-declare-handles-in-native-types.md)을 참조 하세요.
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 이 샘플은 관리되는 힙에서 참조 형식의 인스턴스를 만드는 방법을 보여 줍니다.  이 샘플은 또한 한 가지 핸들을 다른 핸들로 초기화하여 관리되는 가비지-수집 힙의 동일한 개체에서 두 개의 참조를 만들 수 있다는 점을 보여 줍니다. 핸들 하나에 [nullptr](nullptr-cpp-component-extensions.md)을 할당할 경우 개체가 가비지 수집 대상으로 표시되지 않습니다.
 
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-이 샘플에서는 `void*` 포인터를 사용하여 임의의 개체를 가리키는 일반적인 C++ 관용구가 참조 클래스에 대한 핸들을 보유할 수 있는 `Object^`으로 대체되는 작업을 보여 줍니다. 또한 배열, 대리자 등의 모든 형식을 개체 핸들로 변환할 수 있음을 보여 줍니다.
+이 샘플에서는 임의의 개체를 가리키는 포인터를 사용 하는 일반적인 c + + **`void*`** 식이 `Object^` 참조 클래스에 대 한 핸들을 보유할 수 있는로 대체 되는 것을 보여 줍니다. 또한 배열, 대리자 등의 모든 형식을 개체 핸들로 변환할 수 있음을 보여 줍니다.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-이 샘플에서는 기본 참조()`&`이 **int가** 가비지 수집힙에 저장될 수 있고 네이티브 참조가 관리되는 힙에서 개체 이동을 추적하지 않기 때문에 관리되는 형식의 **int** 멤버에 바인딩할 수 없다는 것을 보여 주었습니다. 해결 방법은 로컬 변수를 사용하거나 `&`를 `%`로 변경하여 추적 참조로 만드는 것입니다.
+이 샘플은 `&` **`int`** 가 **`int`** 가비지 수집 힙에 저장 될 수 있고 네이티브 참조는 관리 되는 힙에서 개체 이동을 추적 하지 않기 때문에 네이티브 참조 ()가 관리 되는 형식의 멤버에 바인딩할 수 없음을 보여 줍니다. 해결 방법은 로컬 변수를 사용하거나 `&`를 `%`로 변경하여 추적 참조로 만드는 것입니다.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)<br/>
 [추적 참조 연산자](tracking-reference-operator-cpp-component-extensions.md)

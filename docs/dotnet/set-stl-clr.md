@@ -89,18 +89,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: 38b0a3278efd10ef5cc989a5fc900bf82d377eae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76f67ad900e975ff084f5760e6830c6a5d229e86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214890"
 ---
 # <a name="set-stlclr"></a>set(STL/CLR)
 
-템플릿 클래스는 양방향 액세스 권한이 있는 다양한 길이의 요소 시퀀스를 제어하는 개체에 대해 설명합니다. 컨테이너를 `set` 사용하여 요소 시퀀스를 (거의) 균형 잡힌 정렬된 노드 트리로 관리하며 각 노드는 하나의 요소를 저장합니다.
+이 템플릿 클래스는 양방향 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 요소의 `set` 시퀀스를 (거의) 분산 된 노드 트리로 관리할 수 있습니다. 각 노드는 하나의 요소를 저장 합니다.
 
-아래 `GValue` 설명에서 는 .와 `GKey` *Key* `Key^`동일합니다.
+아래 설명에서는 `GValue` 와 동일 합니다 .이 `GKey` 경우 후자가 참조 형식이 아니면 *키* 와 동일 합니다 `Key^` .
 
 ## <a name="syntax"></a>구문
 
@@ -120,111 +120,111 @@ template<typename Key>
 
 ### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*Key*<br/>
 제어되는 시퀀스에 있는 요소의 키 구성 요소 형식입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<클라이펙트/세트>
+**헤더:**\<cliext/set>
 
-**네임 스페이스:** 클라이펙스트
+**네임 스페이스:** cliext
 
 ## <a name="declarations"></a>선언
 
-|형식 정의|Description|
+|형식 정의|설명|
 |---------------------|-----------------|
 |[set::const_iterator(STL/CLR)](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|
 |[set::const_reference(STL/CLR)](#const_reference)|요소에 대한 상수 참조의 형식입니다.|
 |[set::const_reverse_iterator(STL/CLR)](#const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|
-|[set::difference_type(STL/CLR)](#difference_type)|두 요소 사이의 (서명된) 거리의 유형입니다.|
-|[set::generic_container(STL/CLR)](#generic_container)|컨테이너에 대한 일반 인터페이스의 형식입니다.|
-|[set::generic_iterator(STL/CLR)](#generic_iterator)|컨테이너의 일반 인터페이스에 대한 이터레이터의 형식입니다.|
-|[set::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너의 일반 인터페이스에 대한 역방향 거역 의 형식입니다.|
-|[set::generic_value(STL/CLR)](#generic_value)|컨테이너에 대한 제네릭 인터페이스에 대한 요소의 형식입니다.|
+|[set::difference_type(STL/CLR)](#difference_type)|두 요소 사이의 (부호가 있을 수 있는) 거리의 형식입니다.|
+|[set::generic_container(STL/CLR)](#generic_container)|컨테이너에 대 한 제네릭 인터페이스의 형식입니다.|
+|[set::generic_iterator(STL/CLR)](#generic_iterator)|컨테이너의 제네릭 인터페이스에 대 한 반복기의 형식입니다.|
+|[set::generic_reverse_iterator(STL/CLR)](#generic_reverse_iterator)|컨테이너의 제네릭 인터페이스에 대 한 역방향 반복기의 형식입니다.|
+|[set::generic_value(STL/CLR)](#generic_value)|컨테이너의 제네릭 인터페이스에 대 한 요소의 형식입니다.|
 |[set::iterator(STL/CLR)](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
-|[set::key_compare(STL/CLR)](#key_compare)|두 키에 대한 순서 대리자입니다.|
+|[set::key_compare(STL/CLR)](#key_compare)|두 키에 대 한 순서 지정 대리자입니다.|
 |[set::key_type(STL/CLR)](#key_type)|정렬 키의 형식입니다.|
 |[set::reference(STL/CLR)](#reference)|요소에 대한 참조의 형식입니다.|
 |[set::reverse_iterator(STL/CLR)](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|
-|[set::size_type(STL/CLR)](#size_type)|두 요소 사이의 a(음수) 거리 유형입니다.|
-|[set::value_compare(STL/CLR)](#value_compare)|두 요소 값에 대한 순서 대리자입니다.|
+|[set::size_type(STL/CLR)](#size_type)|두 요소 사이의 (음수가 아닌) 거리의 형식입니다.|
+|[set::value_compare(STL/CLR)](#value_compare)|두 요소 값에 대 한 순서 지정 대리자입니다.|
 |[set::value_type(STL/CLR)](#value_type)|요소의 형식입니다.|
 
-|멤버 함수|Description|
+|멤버 함수|설명|
 |---------------------|-----------------|
 |[set::begin(STL/CLR)](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
 |[set::clear(STL/CLR)](#clear)|모든 요소를 제거합니다.|
-|[set::count(STL/CLR)](#count)|지정된 키와 일치하는 요소를 계산합니다.|
+|[set::count(STL/CLR)](#count)|지정 된 키와 일치 하는 요소 수를 셉니다.|
 |[set::empty(STL/CLR)](#empty)|요소가 있는지 여부를 테스트합니다.|
 |[set::end(STL/CLR)](#end)|제어되는 시퀀스의 끝을 지정합니다.|
 |[set::equal_range(STL/CLR)](#equal_range)|지정된 키와 일치하는 범위를 찾습니다.|
 |[set::erase(STL/CLR)](#erase)|지정된 위치에 있는 요소를 제거합니다.|
 |[set::find(STL/CLR)](#find)|지정된 키와 일치하는 요소를 찾습니다.|
 |[set::insert(STL/CLR)](#insert)|요소를 추가합니다.|
-|[set::key_comp(STL/CLR)](#key_comp)|두 키에 대한 순서 대리자를 복사합니다.|
-|[set::lower_bound(STL/CLR)](#lower_bound)|지정된 키와 일치하는 범위의 시작을 찾습니다.|
-|[set::make_value(STL/CLR)](#make_value)|값 개체를 생성합니다.|
+|[set::key_comp(STL/CLR)](#key_comp)|두 키에 대 한 순서 지정 대리자를 복사 합니다.|
+|[set::lower_bound(STL/CLR)](#lower_bound)|지정 된 키와 일치 하는 범위의 시작 부분을 찾습니다.|
+|[set::make_value(STL/CLR)](#make_value)|값 개체를 생성 합니다.|
 |[set::rbegin(STL/CLR)](#rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|
 |[set::rend(STL/CLR)](#rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|
 |[set::set(STL/CLR)](#set)|컨테이너 개체를 만듭니다.|
 |[set::size(STL/CLR)](#size)|요소 수를 계산합니다.|
 |[set::swap(STL/CLR)](#swap)|두 컨테이너의 내용을 바꿉니다.|
-|[set::to_array(STL/CLR)](#to_array)|제어된 시퀀스를 새 배열로 복사합니다.|
-|[set::upper_bound(STL/CLR)](#upper_bound)|지정된 키와 일치하는 범위의 끝을 찾습니다.|
-|[set::value_comp(STL/CLR)](#value_comp)|두 요소 값에 대한 순서 대리자를 복사합니다.|
+|[set::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사 합니다.|
+|[set::upper_bound(STL/CLR)](#upper_bound)|지정 된 키와 일치 하는 범위의 끝을 찾습니다.|
+|[set::value_comp(STL/CLR)](#value_comp)|두 요소 값에 대 한 순서 지정 대리자를 복사 합니다.|
 
-|연산자|Description|
+|연산자|설명|
 |--------------|-----------------|
 |[set::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|
-|[연산자!= (세트) (STL / CLR)](#op_neq)|개체가 `set` 다른 `set` 개체와 같지 않은지 확인합니다.|
-|[연산자<(세트) (STL/CLR)](#op_lt)|개체가 `set` 다른 `set` 개체보다 작은지 확인합니다.|
-|[연산자<= (세트) (STL / CLR)](#op_lteq)|개체가 `set` 다른 `set` 개체보다 적거나 같는지 여부를 결정합니다.|
-|[연산자 = (세트) (STL / CLR)](#op_eq)|개체가 `set` 다른 `set` 개체와 동일한지 여부를 결정합니다.|
-|[연산자>(세트) (STL/CLR)](#op_gt)|개체가 `set` 다른 `set` 개체보다 큰지 여부를 결정합니다.|
-|[operator>= (set)(STL/CLR)](#op_gteq)|개체가 `set` 다른 `set` 개체보다 크거나 같는지 여부를 결정합니다.|
+|[operator! = (set) (STL/CLR)](#op_neq)|`set`개체가 다른 개체와 다른 지 여부를 확인 `set` 합니다.|
+|[연산자< (set) (STL/CLR)](#op_lt)|`set`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `set` 합니다.|
+|[연산자<= (set) (STL/CLR)](#op_lteq)|`set`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `set` 합니다.|
+|[operator = = (set) (STL/CLR)](#op_eq)|`set`개체가 다른 개체와 같은지 여부를 확인 `set` 합니다.|
+|[연산자> (set) (STL/CLR)](#op_gt)|`set`개체가 다른 개체 보다 큰지 여부를 확인 `set` 합니다.|
+|[operator>= (set)(STL/CLR)](#op_gteq)|`set`개체가 다른 개체 보다 크거나 같은지 여부를 확인 `set` 합니다.|
 
 ## <a name="interfaces"></a>인터페이스
 
-|인터페이스|Description|
+|인터페이스|설명|
 |---------------|-----------------|
-|<xref:System.ICloneable>|개체를 복제합니다.|
-|<xref:System.Collections.IEnumerable>|요소를 통해 시퀀스합니다.|
-|<xref:System.Collections.ICollection>|요소 그룹을 유지 관리합니다.|
-|<xref:System.Collections.Generic.IEnumerable%601>|입력된 요소를 통해 시퀀스합니다.|
-|<xref:System.Collections.Generic.ICollection%601>|형식이 입력된 요소의 그룹을 유지 관리합니다.|
-|아이트리\<키, 가치>|일반 컨테이너를 유지 관리합니다.|
+|<xref:System.ICloneable>|개체를 복제 합니다.|
+|<xref:System.Collections.IEnumerable>|요소를 순서 대로 이동 합니다.|
+|<xref:System.Collections.ICollection>|요소 그룹을 유지 관리 합니다.|
+|<xref:System.Collections.Generic.IEnumerable%601>|형식화 된 요소를 통해 시퀀싱 합니다.|
+|<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 관리 합니다.|
+|ITree\<Key, Value>|일반 컨테이너를 유지 관리 합니다.|
 
 ## <a name="remarks"></a>설명
 
-개체는 제어하는 시퀀스에 대해 개별 노드로 할당하고 저장소를 해제합니다. 한 노드의 내용을 다른 노드로 복사하지 않고 노드 간의 링크를 변경하여 정렬된 유지되는 (거의) 균형 잡힌 트리에 요소를 삽입합니다. 즉, 나머지 요소를 방해하지 않고 요소를 자유롭게 삽입하고 제거할 수 있습니다.
+개체는 개별 노드로 제어 되는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 노드 간에 링크를 변경 하 여 계속 정렬 된 (거의) 분산 된 트리에 요소를 삽입 합니다. 즉, 나머지 요소를 방해 하지 않고 요소를 자유롭게 삽입 하 고 제거할 수 있습니다.
 
-개체는 저장된 대리자 개체를 [호출하여](../dotnet/set-key-compare-stl-clr.md)제어하는 시퀀스를 key_compare 정렬합니다. 집합을 생성할 때 저장된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정하지 않으면 기본값은 비교 `operator<(key_type, key_type)`입니다. 멤버 함수 [집합::key_comp(STL/CLR)를](../dotnet/set-key-comp-stl-clr.md)`()`호출하여 이 저장된 개체에 액세스합니다.
+개체는 [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 시퀀스를 정렬 합니다. 집합을 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않으면 기본값은 비교입니다 `operator<(key_type, key_type)` . 멤버 함수 [set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)멤버 함수를 호출 하 여이 저장 된 개체에 액세스 `()` 합니다.
 
-이러한 대리자 개체는 유형 [집합::key_type(STL/CLR)의](../dotnet/set-key-type-stl-clr.md)키에 대해 엄격한 약한 순서를 적용해야 합니다. 즉, 두 개의 `X` 키와 `Y`다음의 키에 대해 다음과 같은 의미입니다.
+이러한 대리자 개체는 [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)형식의 키에 대해 엄격 하 고 약한 순서를 적용 해야 합니다. 즉, 다음과 같은 두 가지 키 `X` 가 `Y` 있습니다.
 
-`key_comp()(X, Y)`모든 통화에서 동일한 부울 결과를 반환합니다.
+`key_comp()(X, Y)`모든 호출에 대해 동일한 부울 결과를 반환 합니다.
 
-true이면 `key_comp()(X, Y)` `key_comp()(Y, X)` 거짓이어야 합니다.
+`key_comp()(X, Y)`이 true 이면은 false 여야 합니다 `key_comp()(Y, X)` .
 
-true이면 `key_comp()(X, Y)` `X` 전에 `Y`주문했다고 합니다.
+`key_comp()(X, Y)`이 true 이면 `X` 가 앞에 정렬 된 것입니다 `Y` .
 
-만약 `!key_comp()(X, Y) && !key_comp()(Y, X)` 사실이라면, `X` `Y` 동등한 순서를 가지고 있다고합니다.
+`!key_comp()(X, Y) && !key_comp()(Y, X)`가 true 이면 `X` 및 `Y` 는 동일한 순서를 갖는 것으로 간주 됩니다.
 
-제어된 `X` 시퀀스에서 `Y` 앞에 오는 `key_comp()(Y, X)` 모든 요소의 경우 false입니다. (기본 대리자 개체의 경우 키는 값이 줄어들지 않습니다.) 템플릿 클래스 [집합과](../dotnet/set-stl-clr.md)달리 템플릿 `set` 클래스의 개체는 모든 요소에 대한 키가 고유할 필요가 없습니다. (둘 이상의 키는 동일한 순서를 가질 수 있습니다.)
+제어 되는 `X` 시퀀스의 앞에 오는 모든 요소의 경우 `Y` `key_comp()(Y, X)` 는 false입니다. 기본 대리자 개체의 경우 키가 값을 감소 시 키 지 않습니다. 템플릿 클래스 [집합과](../dotnet/set-stl-clr.md)달리 템플릿 클래스의 개체는 `set` 모든 요소에 대 한 키가 고유 하지 않아도 됩니다. 두 개 이상의 키가 동일한 정렬을 가질 수 있습니다.
 
-각 요소는 ey와 값 모두역할을 합니다. 시퀀스는 시퀀스의 요소 수의 로그백에 비례하는 여러 작업으로 임의의 요소를 조회, 삽입 및 제거할 수 있는 방식으로 표시됩니다(로그할리믹 시간). 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
+각 요소는 e 및 값으로 사용 됩니다. 시퀀스는 시퀀스의 요소 수에 대 한 로그 (로그 시간)에 비례 하는 여러 연산이 있는 임의 요소를 조회, 삽입 및 제거할 수 있도록 하는 방식으로 표현 됩니다. 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
 
-집합은 양방향 이터레이터를 지원하므로 제어된 시퀀스에서 요소를 지정하는 이터레이터가 주어진 인접 요소로 단계별로 이동이 가능합니다. 특수 헤드 노드는 [set::end(STL/CLR)에](../dotnet/set-end-stl-clr.md)`()`의해 반환되는 이터레이터에 해당합니다. 이 반복기를 삭제하여 제어된 시퀀스의 마지막 요소에 도달할 수 있습니다(있는 경우). 헤드 노드에 도달하기 위해 세트 거터레이터를 증분할 수 있으며, `end()`그런 다음 에 해당합니다. 그러나 `end()`에서 반환된 이터레이터를 참조할 수는 없습니다.
+집합은 양방향 반복기를 지원 합니다. 즉, 제어 되는 시퀀스에서 요소를 지정 하는 반복기를 사용 하 여 인접 한 요소를 한 단계씩 실행 할 수 있습니다. 특수 헤드 노드는 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)에서 반환 된 반복기에 해당 `()` 합니다. 제어 되는 시퀀스의 마지막 요소 (있는 경우)에 도달할 때까지이 반복기를 줄일 수 있습니다. 집합 반복기를 증가 시켜 헤드 노드에 도달할 수 있으며, 그런 다음와 비교 `end()` 합니다. 그러나에서 반환 된 반복기는 역 참조할 수 없습니다 `end()` .
 
-임의 액세스 이터레이터가 필요한 숫자 위치가 주어진 집합 요소를 직접 참조할 수 없습니다.
+숫자 위치가 지정 된 경우에는 임의 액세스 반복기를 필요로 하는 set 요소를 직접 참조할 수 없습니다.
 
-집합 iterator는 핸들을 연결된 집합 노드에 저장하고 핸들을 연결된 컨테이너에 저장합니다. 연관된 컨테이너 개체에만 이터레이터를 사용할 수 있습니다. 집합 이터레이터는 연결된 집합 노드가 일부 집합과 연결되어 있는 한 유효합니다. 또한 유효한 이터레이터는 이 거변이 가능하므로 `end()`이 거액이 같지 않은 한 지정한 요소 값에 액세스하거나 변경할 수 있습니다.
+집합 반복기는 연결 된 set 노드에 핸들을 저장 합니다. 그러면 핸들은 연결 된 컨테이너에 저장 됩니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 집합 반복기는 연결 된 집합 노드가 일부 집합에 연결 되어 있으면 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 dereferencable입니다 .이 반복기를 사용 하 여 지정 된 요소 값을 액세스 하거나 변경할 수 있습니다 .이는와 같지 않은 경우 `end()` 입니다.
 
-요소를 지우거나 제거하면 소멸자가 저장된 값에 대해 호출됩니다. 컨테이너를 파괴하여 모든 요소를 지웁습니다. 따라서 요소 형식이 ref 클래스인 컨테이너는 컨테이너보다 오래 되는 요소가 없음을 보장합니다. 그러나 핸들 컨테이너가 해당 요소를 *파괴하지는* 않습니다.
+요소를 지우거 나 제거 하면 저장 된 값에 대 한 소멸자가 호출 됩니다. 컨테이너를 삭제 하면 모든 요소가 지워집니다. 따라서 요소 형식이 ref 클래스 인 컨테이너는 컨테이너의 활성 요소가 없도록 합니다. 그러나 핸들의 컨테이너는 해당 요소 *를 소멸 시 키 지 않습니다.*
 
 ## <a name="members"></a>멤버
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>설정::시작(STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a>set:: begin (STL/CLR)
 
 제어되는 시퀀스의 시작을 지정합니다.
 
@@ -236,7 +236,7 @@ iterator begin();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스의 첫 번째 요소를 지정하거나 빈 시퀀스의 끝 바로 너머에 있는 양방향 이터레이터를 반환합니다. 이를 통해 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
+멤버 함수는 제어 되는 시퀀스의 첫 번째 요소 또는 빈 시퀀스의 끝 바로 뒤를 지정 하는 양방향 반복기를 반환 합니다. 이를 통해 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>설정 :: 지우기 (STL / CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a>set:: clear (STL/CLR)
 
 모든 요소를 제거합니다.
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [set::지우기(STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [set::begin(STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [set::end(STL/CLR)를](../dotnet/set-end-stl-clr.md)`())`효과적으로 호출합니다. 제어된 시퀀스가 비어 있는지 확인하는 데 사용합니다.
+멤버 함수는 [set:: erase (stl/clr)](../dotnet/set-erase-stl-clr.md) `(` [set:: begin (stl/clr)](../dotnet/set-begin-stl-clr.md) `(),` [set:: end (stl/clr)](../dotnet/set-end-stl-clr.md)를 효과적으로 호출 합니다 `())` . 이를 사용 하 여 제어 되는 시퀀스가 비어 있는지 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>설정::const_iterator(STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set:: const_iterator (STL/CLR)
 
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.
 
@@ -342,7 +342,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>설명
 
-형식은 제어된 시퀀스에 `T2` 대한 일정한 양방향 거처역할을 할 수 있는 지정되지 않은 형식의 개체를 설명합니다.
+`T2`이 형식은 제어 되는 시퀀스에 대 한 상수 양방향 반복기로 사용할 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>설정::const_reference(STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set:: const_reference (STL/CLR)
 
 요소에 대한 상수 참조의 형식입니다.
 
@@ -384,7 +384,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>설명
 
-형식은 요소에 대한 상수 참조를 설명합니다.
+요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -417,9 +417,9 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>설정::const_reverse_iterator(STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set:: const_reverse_iterator (STL/CLR)
 
-제어된 시퀀스에 대한 상수 역방향 이터레이터의 유형입니다.
+제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -429,7 +429,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>설명
 
-형식은 제어된 시퀀스에 `T4` 대한 상수 역방향 거역으로 사용할 수 있는 지정되지 않은 형식의 개체를 설명합니다.
+`T4`이 형식은 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>설정::개수(STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a>set:: count (STL/CLR)
 
 지정한 키와 일치하는 요소의 수를 찾습니다.
 
@@ -471,12 +471,12 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 *키와*동등한 순서를 가진 제어된 시퀀스의 요소 수를 반환합니다. 이를 통해 현재 제어되는 시퀀스에 있는 요소 중 지정된 키와 일치하는 요소의 수를 확인할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스에서 *키*와 동일한 정렬을 사용 하는 요소의 수를 반환 합니다. 이를 통해 현재 제어되는 시퀀스에 있는 요소 중 지정된 키와 일치하는 요소의 수를 확인할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -512,9 +512,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>세트::difference_type(STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>set::d ifference_type (STL/CLR)
 
-두 요소 사이의 서명된 거리의 유형입니다.
+두 요소 사이의 부호가 있는 거리의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -524,7 +524,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>설명
 
-형식은 음수 요소 수를 설명합니다.
+이 형식은 음수 요소 수를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>설정 ::비어 있음(STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a>set:: empty (STL/CLR)
 
 요소가 있는지 여부를 테스트합니다.
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [설정::크기(STL/CLR)와](../dotnet/set-size-stl-clr.md)`() == 0`동일합니다. 집합이 비어 있는지 여부를 테스트하는 데 사용합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 이는 [:: size (STL/CLR)를 설정](../dotnet/set-size-stl-clr.md)하는 것과 `() == 0` 같습니다. 이를 사용 하 여 집합이 비어 있는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>설정::끝(STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a>set:: end (STL/CLR)
 
 제어되는 시퀀스의 끝을 지정합니다.
 
@@ -631,7 +631,7 @@ iterator end();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스의 끝 바로 너머를 가리키는 양방향 이터레이터를 반환합니다. 제어된 시퀀스의 끝을 지정하는 이터레이터를 가져오는 데 사용합니다. 제어된 시퀀스의 길이가 변경되면 해당 상태는 변경되지 않습니다.
+멤버 함수는 제어 되는 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스의 끝을 지정 하는 반복기를 가져옵니다. 제어 되는 시퀀스의 길이가 변경 되 면 해당 상태는 변경 되지 않습니다.
 
 ### <a name="example"></a>예제
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>설정::equal_range(STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set:: equal_range (STL/CLR)
 
 지정된 키와 일치하는 범위를 찾습니다.
 
@@ -680,12 +680,12 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 한 쌍의 `cliext::pair<iterator, iterator>(` 이터레이터 [집합::lower_bound(STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [집합::upper_bound/CLR(STL/CLR)을](../dotnet/set-upper-bound-stl-clr.md)`(key))`반환합니다. 이를 사용하여 지정된 키와 일치하는 제어된 시퀀스의 현재 요소 범위를 결정합니다.
+멤버 함수는 iterator `cliext::pair<iterator, iterator>(` [set:: lower_bound (stl/clr)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [set:: upper_bound (stl/clr)](../dotnet/set-upper-bound-stl-clr.md)쌍을 반환 합니다 `(key))` . 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소의 범위를 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>설정::지우기(STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a>set:: erase (STL/CLR)
 
 지정된 위치에 있는 요소를 제거합니다.
 
@@ -742,27 +742,27 @@ size_type erase(key_type key)
 
 #### <a name="parameters"></a>매개 변수
 
-*첫 번째*<br/>
-지울 범위의 시작.
+*first*<br/>
+지울 범위의 시작입니다.
 
-*키*<br/>
+*key*<br/>
 지울 키 값입니다.
 
-*마지막*<br/>
+*last*<br/>
 지울 범위의 끝입니다.
 
-*어디*<br/>
+*where*<br/>
 지울 요소입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 *위치를*가리키는 제어된 시퀀스의 요소를 제거하고 제거된 요소 또는 [set::end(STL/CLR)](../dotnet/set-end-stl-clr.md) `()` 외에 남아 있는 첫 번째 요소를 지정하는 이터레이터를 반환합니다. 단일 요소를 제거하는 데 사용합니다.
+첫 번째 멤버 함수는 *where*가 가리키는 제어 되는 시퀀스의 요소를 제거 하 고, 요소가 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, 이러한 요소가 존재 하지 않는 경우 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) 를 반환 합니다. `()` 단일 요소를 제거 하는 데 사용 합니다.
 
-두 번째 멤버 함수는 범위 [,`first`에서 `last`제어된 시퀀스의 요소를 제거하고 제거된 요소 또는 이러한 요소가 없는 `end()` 경우 나머지 첫 번째 요소를 지정하는 이터레이터를 반환합니다. 이 요소를 사용하여 0개 이상의 연속 요소를 제거합니다.
+두 번째 멤버 함수는 [,) 범위에서 제어 되는 시퀀스의 요소를 제거 `first` `last` 하 고, 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, `end()` 이러한 요소가 없는 경우을 반환 합니다. 연속 된 요소를 0 개 이상 제거 하는 데 사용 합니다.
 
-세 번째 멤버 함수는 키에 동일한 순서를 가진 *key*제어된 시퀀스의 모든 요소를 제거하고 제거된 요소 수의 수를 반환합니다. 지정된 키와 일치하는 모든 요소를 제거하고 계산하는 데 사용합니다.
+세 번째 멤버 함수는 키가 *키*와 동일한 순서를 갖는 제어 되는 시퀀스의 요소를 제거 하 고 제거 된 요소 수의 개수를 반환 합니다. 이를 사용 하 여 지정 된 키와 일치 하는 모든 요소를 제거 하 고 개수를 계산 합니다.
 
-각 요소 지우기는 제어된 시퀀스의 요소 수의 로그릿hm에 비례하는 시간이 걸립니다.
+각 요소를 지울 때마다 제어 되는 시퀀스의 요소 수에 대 한 로그에 비례 하는 시간이 사용 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>설정::찾기(STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a>set:: find (STL/CLR)
 
 지정된 키와 일치하는 요소를 찾습니다.
 
@@ -824,12 +824,12 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-제어된 시퀀스에서 하나 이상의 요소가 *키와*동일한 순서를 지정하는 경우 멤버 함수는 이러한 요소 중 하나를 지정하는 이터레이터를 반환합니다. 그렇지 않으면 [set::end(STL/CLR)를](../dotnet/set-end-stl-clr.md)`()`반환합니다. 지정된 키와 일치하는 제어된 시퀀스에서 현재 요소를 찾는 데 사용합니다.
+제어 되는 시퀀스의 요소 중 하나 이상이 *key*와 동일한 정렬을 사용 하는 경우 멤버 함수는 이러한 요소 중 하나를 지정 하는 반복기를 반환 합니다. 그렇지 않으면 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)를 반환 `()` 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소를 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -868,9 +868,9 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>설정::generic_container(STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set:: generic_container (STL/CLR)
 
-컨테이너에 대한 일반 인터페이스의 형식입니다.
+컨테이너에 대 한 제네릭 인터페이스의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -882,7 +882,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>설명
 
-형식은 이 템플릿 컨테이너 클래스의 일반 인터페이스를 설명합니다.
+이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -932,9 +932,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>설정::generic_iterator(STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set:: generic_iterator (STL/CLR)
 
-컨테이너의 일반 인터페이스와 함께 사용할 이터레이터의 형식입니다.
+컨테이너의 제네릭 인터페이스와 함께 사용할 반복기의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -946,7 +946,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>설명
 
-형식은 이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 거터레이터를 설명합니다.
+형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 반복기를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -988,9 +988,9 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>설정::generic_reverse_iterator(STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set:: generic_reverse_iterator (STL/CLR)
 
-컨테이너의 일반 인터페이스와 함께 사용할 역방향 거역 의 형식입니다.
+컨테이너의 제네릭 인터페이스와 함께 사용할 역방향 반복기의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1002,7 +1002,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>설명
 
-형식은 이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 거점을 설명합니다.
+형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1044,7 +1044,7 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>설정::generic_value(STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set:: generic_value (STL/CLR)
 
 컨테이너의 제네릭 인터페이스와 함께 사용할 요소의 형식입니다.
 
@@ -1056,7 +1056,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>설명
 
-형식은 이 템플릿 컨테이너 `GValue` 클래스의 일반 인터페이스와 함께 사용할 저장된 요소 값을 설명하는 형식의 개체를 설명합니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>세트 ::삽입 (STL / CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a>set:: insert (STL/CLR)
 
 요소를 추가합니다.
 
@@ -1114,34 +1114,34 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>매개 변수
 
-*첫 번째*<br/>
-삽입할 범위의 시작.
+*first*<br/>
+삽입할 범위의 시작입니다.
 
-*마지막*<br/>
+*last*<br/>
 삽입할 범위의 끝입니다.
 
 *오른쪽*<br/>
 삽입할 열거형입니다.
 
-*발*<br/>
+*짧은*<br/>
 삽입할 키 값입니다.
 
-*어디*<br/>
-삽입 할 컨테이너의 위치 (힌트 만).
+*where*<br/>
+컨테이너에서 삽입할 위치 (힌트 전용)입니다.
 
 ### <a name="remarks"></a>설명
 
-각 멤버 함수는 나머지 카페랜드가 지정한 시퀀스를 삽입합니다.
+각 멤버 함수는 나머지 피연산자로 지정 된 시퀀스를 삽입 합니다.
 
-첫 번째 멤버 함수는 값 *val이*있는 요소를 삽입하고 `X`값 쌍을 반환합니다. true이면 `X.second` `X.first` 새로 삽입된 요소를 지정합니다. 그렇지 `X.first` 않으면 이미 존재하고 새 요소가 삽입되지 않은 동일한 순서가 있는 요소를 지정합니다. 단일 요소를 삽입하는 데 사용합니다.
+첫 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 삽입 하 고 값의 쌍을 반환 하는 시도한 합니다 `X` . `X.second`가 true 이면는 `X.first` 새로 삽입 된 요소를 지정 하 고, 그렇지 않은 경우에는 `X.first` 이미 존재 하는 순서 대로 요소를 지정 하며 새 요소가 삽입 되지 않습니다. 단일 요소를 삽입 하는 데 사용 합니다.
 
-두 번째 멤버 함수는 *값을*가진 요소를 삽입하고 *여기서* 힌트(성능 향상)를 사용하고 새로 삽입된 요소를 지정하는 이터레이터를 반환합니다. 알고 있는 요소에 인접할 수 있는 단일 요소를 삽입하는 데 사용합니다.
+두 번째 멤버 함수는 값이 *val*인 요소를 삽입 하 여 (성능을 향상 시키기 위해 *)를 힌트로 사용 하* 고, 새로 삽입 된 요소를 지정 하는 반복기를 반환 합니다. 이를 사용 하 여 사용자가 알고 있는 요소에 인접 한 단일 요소를 삽입할 수 있습니다.
 
-세 번째 멤버 함수는`first`시퀀스를 삽입합니다 [ , `last`). 다른 시퀀스에서 복사된 0개 이상의 요소를 삽입하는 데 사용합니다.
+세 번째 멤버 함수는 [,) 시퀀스를 삽입 합니다 `first` `last` . 이를 사용 하 여 다른 시퀀스에서 복사 되는 0 개 이상의 요소를 삽입 합니다.
 
-네 번째 멤버 함수는 *오른쪽에*지정된 시퀀스를 삽입합니다. 열거자가 설명한 시퀀스를 삽입하는 데 사용합니다.
+네 번째 멤버 함수는 *오른쪽*에 지정 된 시퀀스를 삽입 합니다. 이를 사용 하 여 열거자에서 설명 하는 시퀀스를 삽입 합니다.
 
-각 요소 삽입은 제어된 시퀀스의 요소 수의 로그릿hm에 비례하는 시간이 걸립니다. 그러나 삽입 점에 인접한 요소를 지정하는 힌트가 주어지면 상각 된 일정한 시간에 삽입이 발생할 수 있습니다.
+각 요소 삽입에는 제어 되는 시퀀스의 요소 수에 대 한 로그에 비례 하는 시간이 소요 됩니다. 그러나 삽입 지점 옆의 요소를 지정 하는 힌트가 지정 된 경우에는 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>설정 ::이터레이터 (STL / CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>set:: iterator (STL/CLR)
 
 제어되는 시퀀스에 대한 반복기의 형식입니다.
 
@@ -1226,7 +1226,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>설명
 
-형식은 제어된 시퀀스에 `T1` 대한 양방향 이터레이터 역할을 할 수 있는 지정되지 않은 형식의 개체를 설명합니다.
+`T1`이 형식은 제어 되는 시퀀스에 대 한 양방향 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1256,9 +1256,9 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>설정::key_comp(STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set:: key_comp (STL/CLR)
 
-두 키에 대한 순서 대리자를 복사합니다.
+두 키에 대 한 순서 지정 대리자를 복사 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1268,7 +1268,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스를 정렬하는 데 사용되는 순서 대리자를 반환합니다. 이를 통해 두 키를 비교할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 이를 통해 두 키를 비교할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1315,9 +1315,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>설정::key_compare(STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set:: key_compare (STL/CLR)
 
-두 키에 대한 순서 대리자입니다.
+두 키에 대 한 순서 지정 대리자입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1328,7 +1328,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>설명
 
-형식은 주요 인수의 순서를 결정하는 대리자의 동의어입니다.
+형식은 해당 키 인수의 순서를 결정 하는 대리자의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>설정::key_type(STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set:: key_type (STL/CLR)
 
 정렬 키의 형식입니다.
 
@@ -1387,7 +1387,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>설명
 
-형식은 템플릿 매개 변수 *Key의*동의어입니다.
+형식은 템플릿 매개 변수 *키*의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -1420,9 +1420,9 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>설정::lower_bound(STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set:: lower_bound (STL/CLR)
 
-지정된 키와 일치하는 범위의 시작을 찾습니다.
+지정 된 키와 일치 하는 범위의 시작 부분을 찾습니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1432,12 +1432,12 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 *키에* `X` 동등한 순서를 가지는 제어된 시퀀스의 첫 번째 요소를 결정합니다. 이러한 요소가 없으면 [set::end(STL/CLR)를](../dotnet/set-end-stl-clr.md)`()`반환합니다. 그렇지 않으면 을 지정하는 이터레이터를 반환합니다. `X` 지정된 키와 일치하는 제어된 시퀀스에서 현재 요소 시퀀스의 시작 부분을 찾는 데 사용합니다.
+멤버 함수는 `X` 제어 되는 시퀀스에서 *키*와 동일한 순서가 지정 된 첫 번째 요소를 확인 합니다. 이러한 요소가 없는 경우 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)를 반환 하 `()` 고 그렇지 않으면를 지정 하는 반복기를 반환 `X` 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 시작 부분을 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1477,9 +1477,9 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>설정 ::make_value (STL / CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set:: make_value (STL/CLR)
 
-값 개체를 생성합니다.
+값 개체를 생성 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1489,12 +1489,12 @@ static value_type make_value(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 사용할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `value_type` 키가 *키인*개체를 반환합니다. 이 함수를 사용하여 다른 여러 멤버 함수와 함께 사용하기에 적합한 개체를 작성합니다.
+멤버 함수는 키 `value_type` 가 *키*인 개체를 반환 합니다. 이를 사용 하 여 다른 여러 멤버 함수에서 사용 하기에 적합 한 개체를 작성 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>설정::연산자= (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>set:: operator = (STL/CLR)
 
 제어되는 시퀀스를 바꿉니다.
 
@@ -1540,7 +1540,7 @@ set<Key>% operator=(set<Key>% right);
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 *바로* 복사한 다음 을 반환합니다. `*this` 이를 사용하여 제어된 시퀀스를 *오른쪽의*제어된 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>설정::rbegin(STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set:: rbegin (STL/CLR)
 
 제어되는 역방향 시퀀스의 시작을 지정합니다.
 
@@ -1590,7 +1590,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스의 마지막 요소를 지정하거나 빈 시퀀스의 시작 부분 만 초과하는 역방향 이터레이터를 반환합니다. 따라서 역방향 시퀀스의 `beginning`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
+멤버 함수는 제어 되는 시퀀스의 마지막 요소 또는 빈 시퀀스의 시작 부분 바로 뒤를 지정 하는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `beginning`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>설정 ::참조 (STL / CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a>set:: reference (STL/CLR)
 
 요소에 대한 참조의 형식입니다.
 
@@ -1638,7 +1638,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>설명
 
-형식은 요소에 대한 참조를 설명합니다.
+요소에 대 한 참조를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>설정 ::렌드 (STL / CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a>set:: rend (STL/CLR)
 
 제어되는 역방향 시퀀스의 끝을 지정합니다.
 
@@ -1683,7 +1683,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스의 시작 부분 바로 너머를 가리키는 역방향 이터레이터를 반환합니다. 따라서 역방향 시퀀스의 `end`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 끝을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
+멤버 함수는 제어 되는 시퀀스의 시작 부분 바로 뒤를 가리키는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `end`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 끝을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>설정::reverse_iterator(STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set:: reverse_iterator (STL/CLR)
 
 제어되는 시퀀스에 대한 반대 반복기의 형식입니다.
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>설정 ::설정 (STL / CLR)
+## <a name="setset-stlclr"></a><a name="set"></a>set:: set (STL/CLR)
 
 컨테이너 개체를 만듭니다.
 
@@ -1785,67 +1785,67 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>매개 변수
 
-*첫 번째*<br/>
-삽입할 범위의 시작.
+*first*<br/>
+삽입할 범위의 시작입니다.
 
-*마지막*<br/>
+*last*<br/>
 삽입할 범위의 끝입니다.
 
-*Pred*<br/>
-제어된 시퀀스에 대한 조건자 정렬.
+*pred*<br/>
+제어 되는 시퀀스의 순서 조건자입니다.
 
 *오른쪽*<br/>
 삽입할 개체 또는 범위입니다.
 
 ### <a name="remarks"></a>설명
 
-생성자:
+생성자는 다음과 같습니다.
 
 `set();`
 
-기본 정렬 조건자와 `key_compare()`함께 요소가 없는 제어된 시퀀스를 초기화합니다. 기본 정렬 조건자와 함께 빈 초기 제어 시퀀스를 지정하는 데 사용합니다.
+기본 순서 조건자를 사용 하 여 요소 없이 제어 되는 시퀀스를 초기화 합니다 `key_compare()` . 기본 순서 조건자를 사용 하 여 빈 초기 제어 되는 시퀀스를 지정 하는 데 사용 합니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `explicit set(key_compare^ pred);`
 
-순서 조건자 지정을 사용하여 요소가 없는 제어된 시퀀스를 *초기화합니다.* 지정된 순서 지정 조건자와 함께 빈 초기 제어 시퀀스를 지정하는 데 사용합니다.
+순서 조건자 *pred*를 사용 하 여 요소 없이 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 지정 된 순서 조건자를 사용 하 여 빈 초기 제어 되는 시퀀스를 지정 합니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `set(set<Key>% right);`
 
-은 기본 순서 지정 조건자와 함께`right.begin()`[, `right.end()`시퀀스로 제어된 시퀀스를 초기화합니다. 기본 정렬 조건자와 함께 설정 개체 *오른쪽에*의해 제어 되는 시퀀스의 복사본인 초기 제어 된 시퀀스를 지정 하는 데 사용 합니다.
+기본 순서 조건자를 사용 하 여 시퀀스 [ `right.begin()` ,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다 `right.end()` . 이를 사용 하 여 초기 제어 되는 시퀀스를 지정 합니다 .이 시퀀스는 기본 순서 조건자를 사용 하 여 set 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본입니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `set(set<Key>^ right);`
 
-은 기본 순서 지정 조건자와 함께`right->begin()`[, `right->end()`시퀀스로 제어된 시퀀스를 초기화합니다. 기본 정렬 조건자와 함께 설정 개체 *오른쪽에*의해 제어 되는 시퀀스의 복사본인 초기 제어 된 시퀀스를 지정 하는 데 사용 합니다.
+기본 순서 조건자를 사용 하 여 시퀀스 [ `right->begin()` ,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다 `right->end()` . 이를 사용 하 여 초기 제어 되는 시퀀스를 지정 합니다 .이 시퀀스는 기본 순서 조건자를 사용 하 여 set 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본입니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `template<typename InIter> set(InIter first, InIter last);`
 
-은 기본 순서 지정 조건자와 함께`first`[, `last`시퀀스로 제어된 시퀀스를 초기화합니다. 이를 사용하여 제어된 시퀀스를 기본 순서 정렬 조건자와 함께 다른 시퀀스의 복사본으로 만듭니다.
+기본 순서 조건자를 사용 하 여 시퀀스 [ `first` ,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다 `last` . 이를 사용 하 여 제어 되는 시퀀스를 기본 순서 조건자를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`
 
-순서가 지정되는 조건자`first` *지정으로*제어된 시퀀스를 순서 [, ",)로 `last`초기화합니다. 이를 사용하여 지정된 순서 지정을 사용하여 제어된 시퀀스를 다른 시퀀스의 복사본으로 만듭니다.
+순서 조건자 pred를 사용 하 여 시퀀스 [ `first` , `last` )를 *pred*사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 지정 된 순서 조건자를 사용 하는 다른 시퀀스의 복사본으로 만듭니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-기본 정렬 조건자와 함께 열거자 *오른쪽에*의해 지정 된 시퀀스로 제어 된 시퀀스를 초기화 합니다. 제어된 시퀀스를 기본 정렬 조건자와 함께 열거자가 설명한 다른 시퀀스의 복사본으로 만드는 데 사용합니다.
+기본 순서 조건자를 사용 하 여 열거자 *오른쪽*으로 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 기본 순서 조건자를 사용 하 여 열거자에서 설명한 다른 시퀀스의 복사본으로 만듭니다.
 
-생성자:
+생성자는 다음과 같습니다.
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-순서 조건자가 미리 정해지도록 열거자 *오른쪽으로*지정한 시퀀스로 *pred*제어된 시퀀스를 초기화합니다. 제어된 시퀀스를 지정된 순서 지정어를 사용하여 열거자가 설명한 다른 시퀀스의 복사본으로 만드는 데 사용합니다.
+정렬 조건자 *pred*를 사용 하 여 열거자 *오른쪽*으로 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 지정 된 순서 조건자를 사용 하 여 제어 되는 시퀀스를 열거자에서 설명한 다른 시퀀스의 복사본으로 만듭니다.
 
 ### <a name="example"></a>예제
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>세트 ::크기 (STL / CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a>set:: size (STL/CLR)
 
 요소 수를 계산합니다.
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이 값을 사용하여 현재 제어된 시퀀스의 요소 수를 결정합니다. 시퀀스의 크기가 0이 아닌지 여부에 관계없이 [설정::empty(STL/CLR)를](../dotnet/set-empty-stl-clr.md)`()`참조하십시오.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [set:: empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -1987,9 +1987,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>설정::size_type(STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set:: size_type (STL/CLR)
 
-두 요소 사이의 서명된 거리의 유형입니다.
+두 요소 사이의 부호가 있는 거리의 형식입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1999,7 +1999,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>설명
 
-형식은 음수가 아닌 요소 수를 설명합니다.
+이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>세트 ::스왑 (STL / CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a>set:: swap (STL/CLR)
 
 두 컨테이너의 내용을 바꿉니다.
 
@@ -2052,7 +2052,7 @@ void swap(set<Key>% right);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스를 `this` *오른쪽으로*바꿉니다. 일정한 시간에 그렇게하고 예외를 throw하지 않습니다. 두 컨테이너의 내용을 교환하는 빠른 방법으로 사용합니다.
+멤버 함수는 제어 되는 시퀀스를 **`this`** 과 *오른쪽*으로 바꿉니다. 일정 한 시간에이를 수행 하 고 예외를 throw 하지 않습니다. 이를 사용 하 여 두 컨테이너의 콘텐츠를 신속 하 게 교환할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2103,9 +2103,9 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>설정::to_array(STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>set:: to_array (STL/CLR)
 
-제어된 시퀀스를 새 배열로 복사합니다.
+제어 되는 시퀀스를 새 배열에 복사 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2115,7 +2115,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스를 포함하는 배열을 반환합니다. 이를 사용하여 배열 형식으로 제어된 시퀀스의 복사본을 가져옵니다.
+멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
 ### <a name="example"></a>예제
 
@@ -2153,9 +2153,9 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>설정::upper_bound(STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set:: upper_bound (STL/CLR)
 
-지정된 키와 일치하는 범위의 끝을 찾습니다.
+지정 된 키와 일치 하는 범위의 끝을 찾습니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2165,12 +2165,12 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>매개 변수
 
-*키*<br/>
+*key*<br/>
 검색할 키 값입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 *키에* `X` 동등한 순서를 가지는 제어된 시퀀스의 마지막 요소를 결정합니다. 이러한 요소가 존재하지 않거나 `X` 제어된 시퀀스의 마지막 요소인 경우 [set::end(STL/CLR)를](../dotnet/set-end-stl-clr.md)`()`반환합니다. 그렇지 않으면 첫 번째 요소를 넘어 `X`서 지정 하는 이터레이터를 반환 합니다. 지정된 키와 일치하는 제어된 시퀀스에서 현재 요소 시퀀스의 끝을 찾는 데 사용합니다.
+멤버 함수는 `X` 제어 되는 시퀀스에서 *키*와 동일한 순서가 지정 된 마지막 요소를 확인 합니다. 이러한 요소가 없거나 `X` 가 제어 되는 시퀀스의 마지막 요소 이면 [set:: END (STL/CLR)](../dotnet/set-end-stl-clr.md)를 반환 하 `()` 고, 그렇지 않은 경우에는 첫 번째 요소를 지정 하는 반복기를 반환 합니다 `X` . 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 끝을 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2210,9 +2210,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>설정::value_comp(STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set:: value_comp (STL/CLR)
 
-두 요소 값에 대한 순서 대리자를 복사합니다.
+두 요소 값에 대 한 순서 지정 대리자를 복사 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2222,7 +2222,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어된 시퀀스를 정렬하는 데 사용되는 순서 대리자를 반환합니다. 두 요소 값을 비교하는 데 사용합니다.
+멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 두 요소 값을 비교 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2254,9 +2254,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>설정::value_compare(STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set:: value_compare (STL/CLR)
 
-두 요소 값에 대한 순서 대리자입니다.
+두 요소 값에 대 한 순서 지정 대리자입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2267,7 +2267,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>설명
 
-형식은 해당 값 인수의 순서를 결정하는 대리자의 동의어입니다.
+이 형식은 해당 값 인수의 순서를 결정 하는 대리자의 동의어입니다.
 
 ### <a name="example"></a>예제
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>설정::value_type(STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set:: value_type (STL/CLR)
 
 요소의 형식입니다.
 
@@ -2344,9 +2344,9 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>연산자!= (세트) (STL / CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operator! = (set) (STL/CLR)
 
-동일 비교를 나열하지 않습니다.
+목록이 같지 않음 비교입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2358,7 +2358,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2366,7 +2366,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 `!(left == right)`함수가 반환합니다. 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽과* 동일하게 정렬되지 않았는지 여부를 테스트하는 데 사용합니다.
+연산자 함수는를 반환 합니다 `!(left == right)` . 이를 사용 하 여 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2414,9 +2414,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>연산자(세트)&lt; (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>연산자 &lt; (set) (STL/CLR)
 
-비교보다 적게 나열합니다.
+비교 보다 작음 목록입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2428,7 +2428,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2436,7 +2436,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 함수는 true를 반환하는 `i` `!(right[i] < left[i])` 경우 가장 낮은 `left[i] < right[i]`위치에 대해서도 true입니다. 그렇지 않으면 `left->size() < right->size()` 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽* 앞에 정렬되었는지 여부를 테스트하는 데 사용합니다.
+연산자 함수는 해당 하는 가장 낮은 위치에 대해서도 true를 반환 합니다 `i` `!(right[i] < left[i])` `left[i] < right[i]` . 그렇지 않은 경우 `left->size() < right->size()` 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 정렬 되는지 여부를 테스트 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2484,9 +2484,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>연산자&lt;= (세트) (STL / CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operator &lt; = (set) (STL/CLR)
 
-비교보다 적거나 동일한 비교를 나열합니다.
+보다 작거나 같음 비교를 나열 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2498,7 +2498,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2506,7 +2506,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 `!(right < left)`함수가 반환합니다. 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽* 이후에 정렬되지 않았는지 여부를 테스트하는 데 사용합니다.
+연산자 함수는를 반환 합니다 `!(right < left)` . 이를 사용 하 여 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2554,9 +2554,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>연산자 = (세트) (STL / CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operator = = (set) (STL/CLR)
 
-동등한 비교를 나열합니다.
+동일한 비교를 나열 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2568,7 +2568,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2576,7 +2576,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 함수는 *왼쪽* 및 *오른쪽으로* 제어되는 시퀀스의 길이가 같고 `left[i] ==` `right[i]`각 위치에 `i`대해 true를 반환합니다. 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽과* 동일한 순서로 정렬되는지 여부를 테스트하는 데 사용합니다.
+Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 각 위치에 대해가 인 경우에만 true를 반환 합니다 `i` `left[i] ==` `right[i]` . 이를 사용 하 여 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2624,9 +2624,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>연산자(세트)&gt; (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>연산자 &gt; (set) (STL/CLR)
 
-비교보다 큰 목록입니다.
+비교 보다 큼을 나열 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2638,7 +2638,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2646,7 +2646,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 `right` `<` `left`함수가 반환합니다. 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽* 이후에 정렬되는지 여부를 테스트하는 데 사용합니다.
+연산자 함수는를 반환 합니다 `right` `<` `left` . 이를 사용 하 여 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2694,9 +2694,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>연산자&gt;= (세트) (STL / CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operator &gt; = (set) (STL/CLR)
 
-비교보다 크거나 같음나열합니다.
+보다 크거나 같음 비교를 나열 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2708,7 +2708,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>매개 변수
 
-*왼쪽*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
 *오른쪽*<br/>
@@ -2716,7 +2716,7 @@ template<typename Key>
 
 ### <a name="remarks"></a>설명
 
-연산자 `!(left < right)`함수가 반환합니다. 두 집합이 요소별로 요소를 비교할 때 *왼쪽이* *오른쪽* 앞에 정렬되지 않았는지 여부를 테스트하는 데 사용합니다.
+연산자 함수는를 반환 합니다 `!(left < right)` . 이를 사용 하 여 두 집합을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 앞에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 

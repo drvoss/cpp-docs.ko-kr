@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212294"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233459"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 클래스
 
-OLE DB 템플릿의 모든 접근자는이 클래스에서 파생 됩니다. `CAccessorBase`는 한 행 집합에서 여러 접근자를 관리할 수 있습니다. 또한 매개 변수 및 출력 열 모두에 대 한 바인딩을 제공 합니다.
+OLE DB 템플릿의 모든 접근자는이 클래스에서 파생 됩니다. `CAccessorBase`한 행 집합에서 여러 접근자를 관리할 수 있습니다. 또한 매개 변수 및 출력 열 모두에 대 한 바인딩을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -68,7 +68,7 @@ OLE DB 템플릿의 모든 접근자는이 클래스에서 파생 됩니다. `CA
 void Close();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [Releaseaccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 를 먼저 호출 해야 합니다.
 
@@ -87,7 +87,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 *nAccessor*<br/>
 [in] 접근자에 대한 0 오프셋의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 접근자 핸들입니다.
 
@@ -101,7 +101,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ULONG GetNumAccessors() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 클래스에서 만든 접근자의 수입니다.
 
@@ -120,9 +120,9 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 *nAccessor*<br/>
 [in] 접근자에 대한 0 오프셋의 수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-접근자가 autoaccessor 인 경우 **true** 를 반환 합니다. 그렇지 않으면 **false**를 반환합니다.
+**`true`** 접근자가 autoaccessor 이면를 반환 합니다. 그렇지 않으면를 반환 **`false`** 합니다.
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
@@ -137,13 +137,13 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>매개 변수
 
 *pUnk*<br/>
-진행 접근자를 만든 COM 개체의 `IUnknown` 인터페이스에 대 한 포인터입니다.
+진행 `IUnknown`접근자를 만든 COM 개체의 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md)에서 호출 됩니다.
 

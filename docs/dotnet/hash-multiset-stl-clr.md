@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-ms.openlocfilehash: 87315a24f314222f91e6aa0536ca442bf00f012c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f7858628b16f6ed2364a78186685fabb6d578ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221395"
 ---
 # <a name="hash_multiset-stlclr"></a>hash_multiset(STL/CLR)
 
-이 템플릿 클래스는 양방향 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 `hash_multiset`를 사용 하 여 일련의 요소를 해시 테이블로 관리 하 고, 각 테이블 항목에 양방향으로 연결 된 노드 목록을 저장 하 고, 각 노드에서 하나의 요소를 저장 합니다. 각 요소의 값은 시퀀스를 정렬 하기 위해 키로 사용 됩니다.
+이 템플릿 클래스는 양방향 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `hash_multiset` 일련의 요소를 해시 테이블로 관리 하 고, 각 테이블 항목은 양방향으로 연결 된 노드 목록을 저장 하며 각 노드는 하나의 요소를 저장 합니다. 각 요소의 값은 시퀀스를 정렬 하기 위해 키로 사용 됩니다.
 
-아래 설명에서 `GValue`은 `GKey`와 동일 합니다 .이 경우 두 번째가 참조 형식이 아닌 경우에는 *키* 와 동일 하 게 `Key^`됩니다.
+아래 설명에서는 `GValue` 와 동일 합니다 .이 `GKey` 경우 후자가 참조 형식이 아니면 *키* 와 동일 합니다 `Key^` .
 
 ## <a name="syntax"></a>구문
 
@@ -127,11 +127,11 @@ template<typename Key>
 ### <a name="parameters"></a>매개 변수
 
 *Key*<br/>
-제어 된 시퀀스의 요소 키 구성 요소의 형식입니다.
+제어되는 시퀀스에 있는 요소의 키 구성 요소 형식입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/hash_set >
+**헤더:**\<cliext/hash_set>
 
 **네임 스페이스:** cliext
 
@@ -198,39 +198,39 @@ template<typename Key>
 |<xref:System.Collections.ICollection>|요소 그룹을 유지 관리 합니다.|
 |<xref:System.Collections.Generic.IEnumerable%601>|형식화 된 요소를 통해 시퀀싱 합니다.|
 |<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 관리 합니다.|
-|IHash\<키, 값 >|일반 컨테이너를 유지 관리 합니다.|
+|IHash\<Key, Value>|일반 컨테이너를 유지 관리 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 개체는 양방향 연결 목록에서 개별 노드로 제어 되는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 액세스 속도를 높이기 위해 개체는 목록 (해시 테이블)에 다양 한 길이의 포인터 배열을 유지 관리 하므로 전체 목록을 sublists의 시퀀스로 효과적으로 관리할 수 있습니다. 노드 간에 링크를 변경 하 여 유지 하는 버킷에 요소를 삽입 합니다. 즉, 노드 내용을 다른 노드로 복사 하지 않습니다. 즉, 나머지 요소를 방해 하지 않고 요소를 자유롭게 삽입 하 고 제거할 수 있습니다.
 
-개체는 [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 각 버킷을 정렬 합니다. Hash_set를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않는 경우 기본값은 `operator<=(key_type, key_type)`비교입니다.
+개체는 [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 제어 하는 각 버킷을 정렬 합니다. Hash_set를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않으면 기본값은 비교입니다 `operator<=(key_type, key_type)` .
 
-멤버 함수 [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`를 호출 하 여 저장 된 대리자 개체에 액세스 합니다. 이러한 대리자 개체는 [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)형식의 키 사이에 동일한 순서를 정의 해야 합니다. 즉, 두 키 `X` 및 `Y`에 대해 다음을 수행 합니다.
+[Hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)멤버 함수를 호출 하 여 저장 된 대리자 개체에 액세스 `()` 합니다. 이러한 대리자 개체는 [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)형식의 키 사이에 동일한 순서를 정의 해야 합니다. 즉, 다음과 같은 두 가지 키 `X` 가 `Y` 있습니다.
 
-`key_comp()(X, Y)`는 모든 호출에 대해 동일한 부울 결과를 반환 합니다.
+`key_comp()(X, Y)`모든 호출에 대해 동일한 부울 결과를 반환 합니다.
 
-`key_comp()(X, Y) && key_comp()(Y, X)` true 이면 `X` 및 `Y`는 동일한 순서를 갖는 것으로 간주 됩니다.
+`key_comp()(X, Y) && key_comp()(Y, X)`가 true 이면 `X` 및 `Y` 는 동일한 순서를 갖는 것으로 간주 됩니다.
 
-`operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` 또는 `operator==(key_type, key_type)` 처럼 동작 하는 순서 지정 규칙은 eqivalent 정렬을 정의 합니다.
+처럼 동작 `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` 하거나 `operator==(key_type, key_type)` eqivalent 정렬을 정의 하는 순서 지정 규칙입니다.
 
-컨테이너는 키의 순서를 지정 하는 요소 (및 동일한 정수 값에 대 한 해시)가 버킷 내에 인접해 있는지 확인 합니다. 템플릿 클래스 [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)와 달리 템플릿 클래스 `hash_multiset`의 개체는 모든 요소에 대 한 키가 고유 하지 않아도 됩니다. 두 개 이상의 키가 동일한 정렬을 가질 수 있습니다.
+컨테이너는 키의 순서를 지정 하는 요소 (및 동일한 정수 값에 대 한 해시)가 버킷 내에 인접해 있는지 확인 합니다. 템플릿 클래스 [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)와 달리 템플릿 클래스의 개체는 `hash_multiset` 모든 요소에 대 한 키가 고유 하지 않아도 됩니다. 두 개 이상의 키가 동일한 정렬을 가질 수 있습니다.
 
-개체는 [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 지정 된 순서 지정 키를 포함할 버킷을 결정 합니다. 이 저장 된 개체에 액세스 하려면 멤버 함수 [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()`를 호출 하 여 키 값에 따라 달라 지는 정수 값을 가져옵니다. Hash_set를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않는 경우 기본값은 `System::Object::hash_value(key_type)`함수입니다. 즉, 모든 키 `X` 및 `Y`에 대해 다음을 수행 합니다.
+개체는 [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)형식의 저장 된 대리자 개체를 호출 하 여 지정 된 순서 지정 키를 포함할 버킷을 결정 합니다. 이 저장 된 개체는 멤버 함수 [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) 를 호출 `()` 하 여 키 값에 따라 달라 지는 정수 값을 가져오는 방식으로 액세스 합니다. Hash_set를 생성할 때 저장 된 대리자 개체를 지정할 수 있습니다. 대리자 개체를 지정 하지 않으면 기본값은 함수 `System::Object::hash_value(key_type)` 입니다. 즉, 모든 키 및에 `X` 대해 `Y` 다음을 수행 합니다.
 
-`hash_delegate()(X)`은 모든 호출에서 동일한 정수 결과를 반환 합니다.
+`hash_delegate()(X)`모든 호출에서 동일한 정수 결과를 반환 합니다.
 
-`X` 및 `Y`에 동일한 순서가 지정 된 경우 `hash_delegate()(X)`는 `hash_delegate()(Y)`와 동일한 정수 결과를 반환 해야 합니다.
+`X`및의 순서가 동일한 경우는 `Y` `hash_delegate()(X)` 와 동일한 정수 결과를 반환 해야 합니다 `hash_delegate()(Y)` .
 
 각 요소는 키와 값으로 사용 됩니다. 시퀀스는 시퀀스의 요소 수 (일정 한 시간)에 관계 없이 대부분의 작업을 사용 하 여 임의 요소를 조회, 삽입 및 제거할 수 있도록 하는 방식으로 표현 됩니다. 또한, 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 가리키고 있는 반복기만 무효화됩니다.
 
 그러나 해시 된 값이 균일 하 게 분산 되지 않은 경우 해시 테이블이 중복 제거 될 수 있습니다. 극단적인 경우--항상 동일한 값을 반환 하는 해시 함수의 경우 (조회, 삽입 및 제거) 시퀀스의 요소 수에 비례 합니다 (선형 시간). 컨테이너는 적절 한 해시 함수, 평균 버킷 크기 및 해시 테이블 크기 (총 버킷 수)를 선택 하는 것을 시도한 이러한 선택 항목의 일부 또는 전부를 재정의할 수 있습니다. 예를 들어 [hash_set:: max_load_factor (stl/clr)](../dotnet/hash-set-max-load-factor-stl-clr.md) 및 [hash_set:: rehash (stl/clr)](../dotnet/hash-set-rehash-stl-clr.md)함수를 참조 하세요.
 
-Hash_multiset은 양방향 반복기를 지원 합니다. 즉, 제어 되는 시퀀스에서 요소를 지정 하는 반복기를 사용 하 여 인접 한 요소를 한 단계씩 실행 할 수 있습니다. 특수 헤드 노드는 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`에서 반환 된 반복기에 해당 합니다. 제어 되는 시퀀스의 마지막 요소 (있는 경우)에 도달할 때까지이 반복기를 줄일 수 있습니다. Hash_multiset iterator를 증가 시켜 헤드 노드에 도달할 수 있습니다. 그러면 `end()`와 동일한 것으로 비교 됩니다. 그러나 `end()`에서 반환 된 반복기는 역 참조할 수 없습니다.
+Hash_multiset은 양방향 반복기를 지원 합니다. 즉, 제어 되는 시퀀스에서 요소를 지정 하는 반복기를 사용 하 여 인접 한 요소를 한 단계씩 실행 할 수 있습니다. 특수 헤드 노드는 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)에서 반환 된 반복기에 해당 `()` 합니다. 제어 되는 시퀀스의 마지막 요소 (있는 경우)에 도달할 때까지이 반복기를 줄일 수 있습니다. Hash_multiset iterator를 증가 시켜 헤드 노드에 도달할 수 있습니다. 그런 다음와 비교 `end()` 합니다. 그러나에서 반환 된 반복기는 역 참조할 수 없습니다 `end()` .
 
 임의 액세스 반복기를 필요로 하는 숫자 위치를 지정 하 여 hash_multiset 요소를 직접 참조할 수 없습니다.
 
-Hash_multiset 반복기는 연결 된 hash_multiset 노드에 대 한 핸들을 저장 합니다. 그러면 연결 된 컨테이너에 대 한 핸들을 저장 합니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 연결 된 hash_multiset 노드가 일부 hash_multiset와 연결 되어 있으면 hash_multiset 반복기는 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 dereferencable입니다 .이 반복기를 사용 하 여 지정 된 요소 값을 액세스 하거나 변경할 수 있습니다 .이는 `end()`와 같지 않은 경우입니다.
+Hash_multiset 반복기는 연결 된 hash_multiset 노드에 대 한 핸들을 저장 합니다. 그러면 연결 된 컨테이너에 대 한 핸들을 저장 합니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 연결 된 hash_multiset 노드가 일부 hash_multiset와 연결 되어 있으면 hash_multiset 반복기는 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 dereferencable입니다 .이 반복기를 사용 하 여 지정 된 요소 값을 액세스 하거나 변경할 수 있습니다 .이는와 같지 않은 경우 `end()` 입니다.
 
 요소를 지우거 나 제거 하면 저장 된 값에 대 한 소멸자가 호출 됩니다. 컨테이너를 삭제 하면 모든 요소가 지워집니다. 따라서 요소 형식이 ref 클래스 인 컨테이너는 컨테이너의 활성 요소가 없도록 합니다. 그러나 핸들의 컨테이너는 해당 요소 *를 소멸 시 키 지 않습니다.*
 
@@ -246,7 +246,7 @@ Hash_multiset 반복기는 연결 된 hash_multiset 노드에 대 한 핸들을 
 iterator begin();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 첫 번째 요소 또는 빈 시퀀스의 끝 바로 뒤를 지정 하는 양방향 반복기를 반환 합니다. 이를 통해 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -294,7 +294,7 @@ a b c
 int bucket_count();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 현재 버킷 수를 반환 합니다. 해시 테이블의 크기를 결정 하는 데 사용 합니다.
 
@@ -368,9 +368,9 @@ max_load_factor() = 0.25
 void clear();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [hash_multiset:: erase (](../dotnet/hash-multiset-erase-stl-clr.md) stl/clr)`(` [hash_multiset:: begin](../dotnet/hash-multiset-begin-stl-clr.md) (stl/clr)`(),` [HASH_MULTISET:: end (stl/clr](../dotnet/hash-multiset-end-stl-clr.md) )`())`를 효과적으로 호출 합니다. 이를 사용 하 여 제어 되는 시퀀스가 비어 있는지 확인 합니다.
+멤버 함수는 [hash_multiset:: erase (stl/clr)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset:: begin (stl/clr)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset:: end (stl/clr)](../dotnet/hash-multiset-end-stl-clr.md)를 효과적으로 호출 합니다 `())` . 이를 사용 하 여 제어 되는 시퀀스가 비어 있는지 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -426,9 +426,9 @@ size() = 0
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 상수 양방향 반복기로 사용 될 수 있는 `T2` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T2`이 형식은 제어 되는 시퀀스에 대 한 상수 양방향 반복기로 사용할 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -468,7 +468,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
@@ -513,9 +513,9 @@ a b c
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용 될 수 있는 `T4` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T4`이 형식은 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -560,9 +560,9 @@ size_type count(key_type key);
 *key*<br/>
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스에서 *키*와 동일한 정렬을 사용 하는 요소의 수를 반환 합니다. 지정된 된 키와 일치 하는 현재 제어 된 시퀀스의에서 요소 수를 확인 하려면 사용 합니다.
+멤버 함수는 제어 되는 시퀀스에서 *키*와 동일한 정렬을 사용 하는 요소의 수를 반환 합니다. 이를 통해 현재 제어되는 시퀀스에 있는 요소 중 지정된 키와 일치하는 요소의 수를 확인할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -608,7 +608,7 @@ count(L'C') = 0
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수 요소 수를 설명 합니다.
 
@@ -663,9 +663,9 @@ begin()-end() = -3
 bool empty();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`와 동일 합니다. 이를 사용 하 여 hash_multiset 비어 있는지 여부를 테스트 합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)와 동일 `() == 0` 합니다. 이를 사용 하 여 hash_multiset 비어 있는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -715,7 +715,7 @@ empty() = True
 iterator end();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스의 끝을 지정 하는 반복기를 가져옵니다. 제어 되는 시퀀스의 길이가 변경 되 면 해당 상태는 변경 되지 않습니다.
 
@@ -769,9 +769,9 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [hash_multiset:: lower_bound (](../dotnet/hash-multiset-lower-bound-stl-clr.md) stl/clr)`(key),` [hash_multiset:: upper_bound (stl/clr)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))``cliext::pair<iterator, iterator>(` 한 쌍의 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소의 범위를 확인 합니다.
+멤버 함수 `cliext::pair<iterator, iterator>(` [hash_multiset:: lower_bound (stl/clr)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset:: upper_bound (stl/clr)](../dotnet/hash-multiset-upper-bound-stl-clr.md)쌍의 반복기를 반환 합니다 `(key))` . 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소의 범위를 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -840,11 +840,11 @@ bool erase(key_type key)
 *where*<br/>
 지울 요소입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 where가 가리키는 제어 *되*는 시퀀스의 요소를 제거 하 고, 요소를 제거 하는 요소 뒤에 남아 있는 첫 번째 요소를 지정 하는 반복기를 반환 하 고, 이러한 요소가 없는 경우에는 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`을 반환 합니다. 단일 요소를 제거 하는 데 사용 합니다.
+첫 번째 멤버 함수는 where가 가리키는 제어 *되*는 시퀀스의 요소를 제거 하 고, 요소가 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, 이러한 요소가 없는 경우 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) 를 반환 합니다 `()` . 단일 요소를 제거 하는 데 사용 합니다.
 
-두 번째 멤버 함수는 [`first`, `last`) 범위에서 제어 되는 시퀀스의 요소를 제거 하 고, 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, 이러한 요소가 없는 경우 `end()` 합니다. 연속 된 요소를 0 개 이상 제거 하는 데 사용 합니다.
+두 번째 멤버 함수는 [,) 범위에서 제어 되는 시퀀스의 요소를 제거 `first` `last` 하 고, 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, `end()` 이러한 요소가 없는 경우을 반환 합니다. 연속 된 요소를 0 개 이상 제거 하는 데 사용 합니다.
 
 세 번째 멤버 함수는 키가 *키*와 동일한 순서를 갖는 제어 되는 시퀀스의 요소를 제거 하 고 제거 된 요소 수의 개수를 반환 합니다. 이를 사용 하 여 지정 된 키와 일치 하는 모든 요소를 제거 하 고 개수를 계산 합니다.
 
@@ -913,9 +913,9 @@ iterator find(key_type key);
 *key*<br/>
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-제어 되는 시퀀스의 요소 중 하나 이상이 *key*와 동일한 정렬을 사용 하는 경우 멤버 함수는 이러한 요소 중 하나를 지정 하는 반복기를 반환 합니다. 그렇지 않으면 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소를 찾을 수 있습니다.
+제어 되는 시퀀스의 요소 중 하나 이상이 *key*와 동일한 정렬을 사용 하는 경우 멤버 함수는 이러한 요소 중 하나를 지정 하는 반복기를 반환 합니다. 그렇지 않으면 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)를 반환 `()` 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소를 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -966,7 +966,7 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
@@ -1030,7 +1030,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 반복기를 설명 합니다.
 
@@ -1086,7 +1086,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.
 
@@ -1140,9 +1140,9 @@ c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 `GValue` 형식의 개체를 설명 하는 형식입니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -1194,7 +1194,7 @@ a
 hasher^ hash_delegate();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 키 값을 정수로 변환 하는 데 사용 되는 대리자를 반환 합니다. 키를 해시 하는 데 사용 합니다.
 
@@ -1263,16 +1263,16 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 제어 되는 시퀀스의 순서 조건자입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 개체 또는 범위입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
 `hash_multiset();`
 
-기본 순서 조건자 `key_compare()`기본 해시 함수를 사용 하 여 요소 없이 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 빈 초기 제어 되는 시퀀스를 지정 합니다.
+기본 순서 조건자와 기본 해시 함수를 사용 하 여 요소 없이 제어 되는 시퀀스를 초기화 `key_compare()` 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 빈 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
@@ -1290,31 +1290,31 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `hash_multiset(hash_multiset<Key>% right);`
 
-기본 순서 조건자와 기본 해시 함수를 사용 하 여 [`right.begin()`, `right.end()`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 hash_multiset 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+`right.begin()` `right.end()` 기본 순서 조건자와 기본 해시 함수를 사용 하 여 시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 hash_multiset 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `hash_multiset(hash_multiset<Key>^ right);`
 
-기본 순서 조건자와 기본 해시 함수를 사용 하 여 [`right->begin()`, `right->end()`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 hash_multiset 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+`right->begin()` `right->end()` 기본 순서 조건자와 기본 해시 함수를 사용 하 여 시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 기본 순서 조건자와 해시 함수를 사용 하 여 hash_multiset 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `template<typename InIter> hash_multiset(InIter first, InIter last);`
 
-기본 순서 조건자와 기본 해시 함수를 사용 하 여 [`first`, `last`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 기본 순서 조건자와 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
+`first` `last` 기본 순서 조건자와 기본 해시 함수를 사용 하 여 시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 기본 순서 조건자와 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
 
 생성자는 다음과 같습니다.
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`
 
-순서 조건자 *pred*및 기본 해시 함수를 사용 하 여 [`first`, `last`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 지정 된 순서 조건자와 기본 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
+순서 `first` `last` 조건자 *pred*및 기본 해시 함수를 사용 하 여 시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 지정 된 순서 조건자와 기본 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
 
 생성자는 다음과 같습니다.
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-pred `last``first`시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 하 고, 순서 조건자 *pred*을 사용 하 고, 해시 함수 *hashfn*을 사용 합니다. 이를 사용 하 여 제어 되는 시퀀스를 지정 된 순서 조건자와 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
+시퀀스 [ `first` , `last` ), 순서 조건자 *pred*및 해시 함수 *hashfn*을 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 지정 된 순서 조건자와 해시 함수를 사용 하 여 다른 시퀀스의 복사본으로 만듭니다.
 
 생성자는 다음과 같습니다.
 
@@ -1473,7 +1473,7 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
     hasher;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 키 값을 정수로 변환 하는 대리자를 설명 합니다.
 
@@ -1523,16 +1523,16 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 삽입할 범위의 끝입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 열거형입니다.
 
-*val*<br/>
+*짧은*<br/>
 삽입할 키 값입니다.
 
 *where*<br/>
 컨테이너에서 삽입할 위치 (힌트 전용)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 멤버 함수는 나머지 피연산자로 지정 된 시퀀스를 삽입 합니다.
 
@@ -1540,7 +1540,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 두 번째 멤버 함수는 값이 *val*인 요소를 삽입 하 여 (성능을 향상 시키기 위해 *)를 힌트로 사용 하* 고, 새로 삽입 된 요소를 지정 하는 반복기를 반환 합니다. 이를 사용 하 여 사용자가 알고 있는 요소에 인접 한 단일 요소를 삽입할 수 있습니다.
 
-세 번째 멤버 함수는 [`first`, `last`) 시퀀스를 삽입 합니다. 이를 사용 하 여 다른 시퀀스에서 복사 되는 0 개 이상의 요소를 삽입 합니다.
+세 번째 멤버 함수는 [,) 시퀀스를 삽입 합니다 `first` `last` . 이를 사용 하 여 다른 시퀀스에서 복사 되는 0 개 이상의 요소를 삽입 합니다.
 
 네 번째 멤버 함수는 *오른쪽*에 지정 된 시퀀스를 삽입 합니다. 이를 사용 하 여 열거자에서 설명 하는 시퀀스를 삽입 합니다.
 
@@ -1624,9 +1624,9 @@ a b b c x y
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 양방향 반복기로 사용 될 수 있는 `T1` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T1`이 형식은 제어 되는 시퀀스에 대 한 양방향 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1666,9 +1666,9 @@ a b c
 key_compare^key_comp();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 두 키 비교에 사용할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 이를 통해 두 키를 비교할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1726,7 +1726,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
     key_compare;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 해당 키 인수의 순서를 결정 하는 대리자의 동의어입니다.
 
@@ -1785,7 +1785,7 @@ compare(L'b', L'a') = True
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 템플릿 매개 변수 *키*의 동의어입니다.
 
@@ -1830,9 +1830,9 @@ a b c
 float load_factor();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `(float)`[hash_multiset:: size (stl/clr)](../dotnet/hash-multiset-size-stl-clr.md)`() /` [hash_multiset:: bucket_count (stl/clr)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`를 반환 합니다. 이를 사용 하 여 평균 버킷 크기를 결정 합니다.
+멤버 함수는 `(float)` [hash_multiset:: size (stl/clr)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset:: bucket_count (stl/clr)](../dotnet/hash-multiset-bucket-count-stl-clr.md)을 반환 합니다 `()` . 이를 사용 하 여 평균 버킷 크기를 결정 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1909,9 +1909,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스에서 *키* 로 동일한 버킷으로 해시 하 고 *키*와 동일한 순서를 갖는 첫 번째 요소 `X` 결정 합니다. 이러한 요소가 없는 경우 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`;을 반환 합니다. 그렇지 않으면 `X`를 지정 하는 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 시작 부분을 찾을 수 있습니다.
+멤버 함수는 `X` 제어 되는 시퀀스에서 *키* 로 동일한 버킷으로 해시 하 고 *키*와 동일한 순서를 갖는 첫 번째 요소를 확인 합니다. 이러한 요소가 없는 경우 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)를 반환 하 `()` 고, 그렇지 않으면를 지정 하는 반복기를 반환 `X` 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 시작 부분을 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1966,9 +1966,9 @@ static value_type make_value(key_type key);
 *key*<br/>
 사용할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 키가 *키*인 `value_type` 개체를 반환 합니다. 이를 사용 하 여 다른 여러 멤버 함수에서 사용 하기에 적합 한 개체를 작성 합니다.
+멤버 함수는 키 `value_type` 가 *키*인 개체를 반환 합니다. 이를 사용 하 여 다른 여러 멤버 함수에서 사용 하기에 적합 한 개체를 작성 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2013,7 +2013,7 @@ void max_load_factor(float new_factor);
 *new_factor*<br/>
 저장할 새 최대 로드 비율입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 현재 저장 된 최대 로드 비율을 반환 합니다. 이를 사용 하 여 최대 평균 버킷 크기를 결정 합니다.
 
@@ -2091,12 +2091,12 @@ hash_multiset<Key>% operator=(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -2144,7 +2144,7 @@ a b c
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 마지막 요소 또는 빈 시퀀스의 시작 부분 바로 뒤를 지정 하는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `beginning`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -2192,7 +2192,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -2237,9 +2237,9 @@ a b c
 void rehash();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 해시 테이블을 다시 작성 하 여 [hash_multiset:: load_factor (stl/clr)](../dotnet/hash-multiset-load-factor-stl-clr.md)`() <=` [hash_multiset:: max_load_factor (stl/clr)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)를 확인 합니다. 그렇지 않으면 해시 테이블의 크기는 삽입 후 필요에 따라 커집니다. (크기가 자동으로 감소 하지 않습니다.) 이를 사용 하 여 해시 테이블의 크기를 조정 합니다.
+멤버 함수는 해시 테이블을 다시 작성 하 여 [hash_multiset:: load_factor (stl/clr)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset:: max_load_factor (stl/clr)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)를 확인 합니다. 그렇지 않으면 해시 테이블의 크기는 삽입 후 필요에 따라 커집니다. (크기가 자동으로 감소 하지 않습니다.) 이를 사용 하 여 해시 테이블의 크기를 조정 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2311,7 +2311,7 @@ max_load_factor() = 0.25
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 시작 부분 바로 뒤를 가리키는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `end`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 끝을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -2360,7 +2360,7 @@ a b c
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어된 시퀀스에 대해 반대 반복기로 사용될 수 있는 지정되지 않은 `T3` 형식의 개체를 설명합니다.
 
@@ -2402,9 +2402,9 @@ c b a
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [hash_multiset:: empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`를 참조 하세요.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [hash_multiset:: empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -2456,7 +2456,7 @@ size() = 2 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -2506,12 +2506,12 @@ void swap(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 콘텐츠와 바꿀 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. 일정 한 시간에이를 수행 하 고 예외를 throw 하지 않습니다. 이를 사용 하 여 두 컨테이너의 콘텐츠를 신속 하 게 교환할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스를 **`this`** 과 *오른쪽*으로 바꿉니다. 일정 한 시간에이를 수행 하 고 예외를 throw 하지 않습니다. 이를 사용 하 여 두 컨테이너의 콘텐츠를 신속 하 게 교환할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2572,7 +2572,7 @@ a b c
 cli::array<value_type>^ to_array();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
@@ -2627,9 +2627,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 검색할 키 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스에서 *키* 로 동일한 버킷으로 해시 하 고 *키*와 동일한 순서를 갖는 마지막 요소 `X`를 결정 합니다. 이러한 요소가 없거나 `X`가 제어 되는 시퀀스의 마지막 요소인 경우 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`;를 반환 합니다. 그렇지 않으면 `X`를 벗어난 첫 번째 요소를 지정 하는 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 끝을 찾을 수 있습니다.
+멤버 함수는 `X` 제어 되는 시퀀스에서 *키* 로 동일한 버킷으로 해시 하 고 *키*와 동일한 순서를 갖는 마지막 요소를 확인 합니다. 이러한 요소가 없거나 `X` 가 제어 되는 시퀀스의 마지막 요소인 경우 [hash_multiset:: END (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)를 반환 하 `()` 고, 그렇지 않은 경우에는 첫 번째 요소를 지정 하는 반복기를 반환 합니다 `X` . 이를 사용 하 여 제어 되는 시퀀스에서 현재 지정 된 키와 일치 하는 요소 시퀀스의 끝을 찾을 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2679,7 +2679,7 @@ upper_bound(L'x')==end() = True
 value_compare^ value_comp();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 순서 지정 대리자를 반환 합니다. 두 요소 값을 비교 하는 데 사용 합니다.
 
@@ -2724,7 +2724,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
     value_compare;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 해당 값 인수의 순서를 결정 하는 대리자의 동의어입니다.
 
@@ -2768,7 +2768,7 @@ compare(L'b', L'a') = False
 typedef generic_value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 `generic_value`의 동의어입니다.
 

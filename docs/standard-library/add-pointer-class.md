@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: 8adeffd0352d04fe844b286ea7456c66e907a0a7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 74e8cf037f8adfb6fdd9338c3cd95e2363f8de75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619257"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222617"
 ---
 # <a name="add_pointer-class"></a>add_pointer 클래스
 
@@ -35,7 +35,7 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>설명
 
-멤버 **typedef** 는 `type` 와 동일한 형식의 이름을 갖습니다 `remove_reference<T>::type*` . 별칭은 `add_pointer_t` 멤버 **typedef** 에 액세스 하기 위한 바로 가기입니다 `type` .
+멤버 **`typedef`** `type` 이름은와 동일한 형식 `remove_reference<T>::type*` 입니다. 별칭은 `add_pointer_t` 멤버에 액세스 하는 바로 가기입니다 **`typedef`** `type` .
 
 참조에서 포인터를 만드는 것은 잘못이기 때문에 `add_pointer`가 포인터-형식을 만들기 전에 지정된 형식에서 참조(있는 경우)를 제거합니다. 결과적으로, 형식이 참조인지 걱정하지 않고도 `add_pointer`를 포함하여 형식을 사용할 수 있습니다.
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
-ms.openlocfilehash: 01b13aa160c39d71b793d30c6392a35c6a24e118
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d093207ba06a479b49902d5dd50029a5276d1439
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208197"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212919"
 ---
 # <a name="compiler-error-c2020"></a>컴파일러 오류 C2020
 
 ' member ': ' class ' 멤버 재정의
 
-기본 클래스 또는 구조체에서 상속 된 멤버가 다시 정의 됩니다. 상속 된 멤버는 기본 클래스에서 `virtual`로 선언 되지 않은 경우 다시 정의할 수 없습니다.
+기본 클래스 또는 구조체에서 상속 된 멤버가 다시 정의 됩니다. 상속 **`virtual`** 된 멤버는 기본 클래스에서로 선언 된 경우를 제외 하 고 다시 정의할 수 없습니다.

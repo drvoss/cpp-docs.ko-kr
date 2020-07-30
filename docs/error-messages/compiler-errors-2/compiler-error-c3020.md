@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232029"
 ---
 # <a name="compiler-error-c3020"></a>컴파일러 오류 C3020
 
 ' var ': OpenMP ' for ' 루프의 인덱스 변수는 루프 본문에서 수정할 수 없습니다.
 
-OpenMP `for` 루프는 `for` 루프 본문의 인덱스 (루프 카운터)를 수정할 수 없습니다.
+OpenMP **`for`** 루프가 루프 본문의 인덱스 (루프 카운터)를 수정할 수 없습니다 **`for`** .
 
 다음 샘플에서는 C3020를 생성 합니다.
 

@@ -1,17 +1,17 @@
 ---
-title: coclass (C++ COM 특성)
+title: coclass (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168333"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232796"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,11 +25,11 @@ Com 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.
 
 ## <a name="remarks"></a>설명
 
-**Coclass** C++ 특성은 생성 된 .idl 파일에 coclass 구문을 배치 합니다.
+**Coclass** c + + 특성은 생성 된 .idl 파일에 coclass 구문을 배치 합니다.
 
 Coclass를 정의할 때 [uuid](uuid-cpp-attributes.md), [version](version-cpp.md), [스레딩](threading-cpp.md), [vi_progid](vi-progid.md)및 [progid](progid.md) 특성도 지정할 수 있습니다. 이러한 항목 중 하나를 지정 하지 않으면 생성 됩니다.
 
-두 헤더 파일에 **coclass** 특성이 있는 클래스가 포함 되어 있고 GUID를 지정 하지 않는 경우 컴파일러는 두 클래스에 동일한 GUID를 사용 하 고이로 인해 MIDL 오류가 발생 합니다.  따라서 **coclass**를 사용 하는 경우 `uuid` 특성을 사용 해야 합니다.
+두 헤더 파일에 **coclass** 특성이 있는 클래스가 포함 되어 있고 GUID를 지정 하지 않는 경우 컴파일러는 두 클래스에 동일한 GUID를 사용 하 고이로 인해 MIDL 오류가 발생 합니다.  따라서 `uuid` **coclass**를 사용 하는 경우 특성을 사용 해야 합니다.
 
 **ATL 프로젝트**
 
@@ -39,29 +39,29 @@ Coclass를 정의할 때 [uuid](uuid-cpp-attributes.md), [version](version-cpp.m
 
 - 개체에 대 한 COM 클래스 팩터리를 지 원하는 코드 또는 데이터를 삽입 합니다.
 
-- `IUnknown`를 구현 하는 코드 또는 데이터를 삽입 하 고 개체를 COM에서 만들 수 있는 개체로 만듭니다.
+- 구현 하는 코드 또는 데이터를 삽입 하 `IUnknown` 고 개체를 COM에서 만들 수 있는 개체로 만듭니다.
 
 특히, 다음 기본 클래스는 대상 개체에 추가 됩니다.
 
 - [CComCoClass 클래스](../../atl/reference/ccomcoclass-class.md) 는 개체에 대 한 기본 클래스 팩터리 및 집계 모델을 제공 합니다.
 
-- [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md) 에는 [스레딩](threading-cpp.md) 특성에 의해 지정 된 스레딩 모델 클래스를 기반으로 하는 템플릿이 있습니다. `threading` 특성을 지정 하지 않으면 기본 스레딩 모델은 아파트입니다.
+- [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md) 에는 [스레딩](threading-cpp.md) 특성에 의해 지정 된 스레딩 모델 클래스를 기반으로 하는 템플릿이 있습니다. 특성을 `threading` 지정 하지 않으면 기본 스레딩 모델은 아파트입니다.
 
 - [IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) 는 대상 개체에 대해 [noncreatable](noncreatable.md) 특성이 지정 되지 않은 경우에 추가 됩니다.
 
 마지막으로, 포함 IDL을 사용 하 여 정의 되지 않은 모든 이중 인터페이스는 해당 [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) 클래스로 대체 됩니다. 이중 인터페이스가 포함 IDL에 정의 되어 있는 경우 기본 목록에 있는 특정 인터페이스는 수정 되지 않습니다.
 
-또한 **coclass** 특성은 삽입 된 코드를 통해 다음 함수를 사용할 수 있도록 하거나, `GetObjectCLSID`의 경우 기본 클래스 `CComCoClass`의 정적 메서드로 설정 합니다.
+또한 **coclass** 특성은 삽입 된 코드를 통해 또는의 경우 `GetObjectCLSID` 기본 클래스의 정적 메서드로 다음 함수를 사용할 수 있도록 합니다 `CComCoClass` .
 
-- `UpdateRegistry`는 대상 클래스의 클래스 팩터리를 등록 합니다.
+- `UpdateRegistry`대상 클래스의 클래스 팩터리를 등록 합니다.
 
-- 등록과 관련 된 `GetObjectCLSID`를 사용 하 여 대상 클래스의 CLSID를 가져올 수도 있습니다.
+- `GetObjectCLSID`등록과 관련 된를 사용 하 여 대상 클래스의 CLSID를 가져올 수도 있습니다.
 
-- 기본적으로 `GetObjectFriendlyName` "\<*대상 클래스 이름*> `Object`" 형식의 문자열을 반환 합니다. 이 함수가 이미 있으면 추가 되지 않습니다. 대상 클래스에이 함수를 추가 하 여 자동으로 생성 된 것 보다 친숙 한 이름을 반환 합니다.
+- `GetObjectFriendlyName`기본적으로는 "" 형식의 문자열을 반환 \<*target class name*> `Object` 합니다. 이 함수가 이미 있으면 추가 되지 않습니다. 대상 클래스에이 함수를 추가 하 여 자동으로 생성 된 것 보다 친숙 한 이름을 반환 합니다.
 
-- 등록과 관련 된 `GetProgID`는 [progid](progid.md) 특성으로 지정 된 문자열을 반환 합니다.
+- `GetProgID`등록과 관련 된는 [progid](progid.md) 특성으로 지정 된 문자열을 반환 합니다.
 
-- `GetVersionIndependentProgID`는 `GetProgID`와 동일한 기능을 갖지만 [vi_progid](vi-progid.md)에 지정 된 문자열을 반환 합니다.
+- `GetVersionIndependentProgID`에는와 동일한 기능이 `GetProgID` 있지만 [vi_progid](vi-progid.md)로 지정 된 문자열을 반환 합니다.
 
 COM 맵과 관련 된 다음과 같은 변경 내용은 대상 클래스에 적용 됩니다.
 
@@ -69,7 +69,7 @@ COM 맵과 관련 된 다음과 같은 변경 내용은 대상 클래스에 적�
 
 - [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) 매크로가 COM 맵에 삽입 됩니다.
 
-클래스의 .idl 파일에서 생성 된 coclass의 이름은 클래스와 동일한 이름을 갖습니다.  예를 들어 다음 샘플을 참조 하 여 coclass `CMyClass`의 클래스 ID에 액세스 하려면 MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서 `CLSID_CMyClass`를 사용 합니다.
+클래스의 .idl 파일에서 생성 된 coclass의 이름은 클래스와 동일한 이름을 갖습니다.  예를 들어, 다음 샘플을 참조 하 여 coclass에 대 한 클래스 ID에 액세스 하려면 `CMyClass` MIDL에서 생성 된 헤더 파일을 통해 클라이언트에서를 사용 `CLSID_CMyClass` 합니다.
 
 ## <a name="example"></a>예제
 
@@ -131,10 +131,10 @@ public:
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|아니요|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

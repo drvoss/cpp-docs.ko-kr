@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229300"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 대상 문자열 버퍼의 위치입니다.
 
 *dest_size*<br/>
-좁은/멀티 바이트 함수의 경우 **문자** 단위로 나타낸 대상 문자열 버퍼의 크기 이며, 와이드 함수의 경우에는 **wchar_t** 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다. 문자열 뒤의 종료에 대해이 크기의 계정을 확인 합니다 `NULL` .
+좁은/멀티 바이트 함수의 경우 대상 문자열 버퍼의 크기 **`char`** 이 고, **`wchar_t`** 넓은 함수의 경우 단위입니다. 이 값은 0 보다 크고 **RSIZE_MAX**보다 크지 않아야 합니다. 문자열 뒤의 종료에 대해이 크기의 계정을 확인 합니다 `NULL` .
 
 *src*<br/>
 null 종료 소스 문자열 버퍼입니다.
@@ -124,7 +124,7 @@ null 종료 소스 문자열 버퍼입니다.
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공하면 0이고, 실패하면 오류입니다.
 
