@@ -2,12 +2,12 @@
 title: Visual C++ 2003 ~ 2015의 새로운 기능
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e0fc576e8478a8d86d54daee22d797744eb870b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219458"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389937"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1850,7 +1850,7 @@ PROP_ENTRY_TYPE 및 PROP_ENTRY_TYPE_EX 기능을 확장하기 위해 새 매크�
 
 #### <a name="analyze-warnings"></a>/analyze 경고
 
-대부분의 `/analyze`(엔터프라이즈 코드 분석) 경고가 CRT(C 런타임), MFC 및 ATL 라이브러리에서 제거되었습니다.
+대부분의 **`/analyze`** (엔터프라이즈 코드 분석) 경고는 CRT (C 런타임), MFC 및 ATL 라이브러리에서 제거 되었습니다.
 
 #### <a name="animation-and-d2d-support"></a>애니메이션 및 D2D 지원
 

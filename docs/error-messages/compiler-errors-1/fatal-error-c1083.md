@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404283"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389781"
 ---
 # <a name="fatal-error-c1083"></a>심각한 오류 C1083
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404283"
 
 `#include <algorithm>`
 
-특정 C 런타임 라이브러리 헤더는 표준 포함 디렉터리의 하위 디렉터리에 있습니다. 예를 들어 sys/types. h를 포함 하려면 지시문에 sys 하위 디렉터리 이름을 포함 해야 합니다. `#include`
+특정 C 런타임 라이브러리 헤더는 표준 포함 디렉터리의 하위 디렉터리에 있습니다. 예를 들어를 포함 하려면 *`sys/types.h`* *`sys`* 지시문에 하위 디렉터리 이름을 포함 해야 합니다 `#include` .
 
 `#include <sys/types.h>`
 
@@ -45,9 +45,9 @@ ms.locfileid: "86404283"
 
 `#include <stdio.h>`
 
-컴파일러는 빌드 환경에서 정의한 검색 경로, **/i** 컴파일러 옵션, **/x** 컴파일러 옵션 및 **INCLUDE** 환경 변수를 따릅니다. 파일을 찾는 데 사용 되는 검색 순서에 대 한 구체적인 정보를 비롯 한 자세한 내용은 [#include 지시문 (c/c + +)](../../preprocessor/hash-include-directive-c-cpp.md) 및 [#import 지시문](../../preprocessor/hash-import-directive-cpp.md)을 참조 하세요.
+컴파일러는 빌드 환경, **`/I`** 컴파일러 옵션, **`/X`** 컴파일러 옵션 및 **INCLUDE** 환경 변수에서 정의한 검색 경로를 따릅니다. 파일을 찾는 데 사용 되는 검색 순서에 대 한 구체적인 정보를 비롯 한 자세한 내용은 [#include 지시문 (c/c + +)](../../preprocessor/hash-include-directive-c-cpp.md) 및 [#import 지시문](../../preprocessor/hash-import-directive-cpp.md)을 참조 하세요.
 
-포함 파일이 원본 디렉터리를 기준으로 하는 다른 디렉터리에 있고 include 지시문에서 상대 경로를 사용 하는 경우 꺾쇠 괄호 대신 큰따옴표를 사용 해야 합니다. 예를 들어 헤더 파일 myheader이 헤더 라는 프로젝트 소스의 하위 디렉터리에 있는 경우이 예에서는 파일을 찾지 못하고 C1083을 발생 시킵니다.
+포함 파일이 원본 디렉터리를 기준으로 하는 다른 디렉터리에 있고 include 지시문에서 상대 경로를 사용 하는 경우 꺾쇠 괄호 대신 큰따옴표를 사용 해야 합니다. 예를 들어 헤더 파일이 *`myheader.h`* 헤더 라는 프로젝트 소스의 하위 디렉터리에 있는 경우이 예에서는 파일을 찾지 못하고 C1083을 발생 시킵니다.
 
 `#include <headers\myheader.h>`
 
@@ -55,23 +55,23 @@ ms.locfileid: "86404283"
 
 `#include "headers\myheader.h"`
 
-상대 경로는 포함 검색 경로의 디렉터리와 함께 사용할 수도 있습니다. Visual Studio에서 **include** 환경 변수 또는 **포함 디렉터리** 경로에 디렉터리를 추가 하는 경우 include 지시문에 경로 부분을 추가 하지 마십시오. 예를 들어 헤더가 \path\example\headers\myheader.h에 있는 경우 Visual Studio의 **포함 디렉터리** 경로에 \path\example\headers\를 추가 하지만 `#include` 지시문은 파일을
+상대 경로는 포함 검색 경로의 디렉터리와 함께 사용할 수도 있습니다. Visual Studio에서 **include** 환경 변수 또는 **포함 디렉터리** 경로에 디렉터리를 추가 하는 경우 include 지시문에 경로 부분을 추가 하지 마십시오. 예를 들어 헤더가에 있으며 *`\path\example\headers\myheader.h`* *`\path\example\headers\`* Visual Studio에서 **포함 디렉터리** 경로에를 추가 하지만 `#include` 지시문은 파일을
 
 `#include <headers\myheader.h>`
 
-그런 다음 파일을 찾을 수 없습니다. 포함 검색 경로에 지정 된 디렉터리에 상대적인 올바른 경로를 사용 합니다. 이 예에서는 include 검색 경로를 \path\example로 변경 \, 하거나 지시문에서 headers \ path 세그먼트를 제거할 수 있습니다 `#include` .
+그런 다음 파일을 찾을 수 없습니다. 포함 검색 경로에 지정 된 디렉터리에 상대적인 올바른 경로를 사용 합니다. 이 예에서는 include 검색 경로를로 변경 *`\path\example\`* 하거나 *`headers\`* 지시문에서 경로 세그먼트를 제거할 수 있습니다 `#include` .
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>타사 라이브러리 문제 및 vcpkg
 
-빌드의 일부로 타사 라이브러리를 구성 하려고 할 때이 오류가 표시 되는 경우 c + + 패키지 관리자 인 [vcpkg](../../vcpkg.md)을 사용 하 여 라이브러리를 설치 하 고 빌드합니다. vcpkg는 크고 증가 하는 [타사 라이브러리 목록을](https://github.com/Microsoft/vcpkg/tree/master/ports)지원 하 고 프로젝트의 일부로 성공한 빌드에 필요한 모든 구성 속성 및 종속성을 설정 합니다.
+빌드의 일부로 타사 라이브러리를 구성 하려고 할 때이 오류가 표시 되는 경우 [`vcpkg`](../../vcpkg.md) c + + 패키지 관리자를 사용 하 여 라이브러리를 설치 하 고 작성 하는 것이 좋습니다. vcpkg는 크고 증가 하는 [타사 라이브러리 목록을](https://github.com/Microsoft/vcpkg/tree/master/ports)지원 하 고 프로젝트의 일부로 성공한 빌드에 필요한 모든 구성 속성 및 종속성을 설정 합니다.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>파일이 프로젝트에 있지만 포함 검색 경로는 아닙니다.
 
-헤더 파일이 프로젝트의 일부로 **솔루션 탐색기** 에 나열 된 경우에도 파일은 `#include` 소스 파일의 또는 지시문에 의해 참조 되 `#import` 고 포함 검색 경로에 있는 컴파일러 에서만 찾을 수 있습니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다. **/X** 컴파일러 옵션은 포함 검색 경로에서 디렉터리를 제외 하는 데 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. **/X** 컴파일러 옵션에 대 한 자세한 내용은 [/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)를 참조 하세요.
+헤더 파일이 프로젝트의 일부로 **솔루션 탐색기** 에 나열 된 경우에도 파일은 `#include` 소스 파일의 또는 지시문에 의해 참조 되 `#import` 고 포함 검색 경로에 있는 컴파일러 에서만 찾을 수 있습니다. 빌드 종류에 따라 다른 검색 경로가 사용될 수도 있습니다. **`/X`** 컴파일러 옵션은 포함 검색 경로에서 디렉터리를 제외 하는 데 사용할 수 있습니다. 이렇게 하면 각 빌드에서 이름은 같지만 다른 디렉터리에 보관되는 다른 포함 파일을 사용할 수 있습니다. 이는 전처리기 명령을 통한 조건부 컴파일의 대체 방법입니다. 컴파일러 옵션에 대 한 자세한 내용은 **`/X`** [ `/X` (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)를 참조 하세요.
 
-이 문제를 해결하려면 컴파일러가 포함되거나 가져온 파일을 찾는 데 사용하는 경로를 수정합니다. 새 프로젝트는 기본 포함 검색 경로를 사용 합니다. 프로젝트에 대 한 디렉터리를 추가 하려면 포함 검색 경로를 수정 해야 할 수 있습니다. 명령줄에서 컴파일하는 경우 **INCLUDE** 환경 변수 또는 **/i** 컴파일러 옵션에 경로를 추가 하 여 파일에 대 한 경로를 지정 합니다.
+이 문제를 해결하려면 컴파일러가 포함되거나 가져온 파일을 찾는 데 사용하는 경로를 수정합니다. 새 프로젝트는 기본 포함 검색 경로를 사용 합니다. 프로젝트에 대 한 디렉터리를 추가 하려면 포함 검색 경로를 수정 해야 할 수 있습니다. 명령줄에서 컴파일하는 경우 **INCLUDE** 환경 변수에 대 한 경로를 추가 하거나 **`/I`** 컴파일러 옵션을 추가 하 여 파일 경로를 지정 합니다.
 
-Visual Studio에서 포함 디렉터리 경로를 설정 하려면 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 왼쪽 창의 **구성 속성** 에서 **VC + + 디렉터리** 를 선택 하 고 **포함 디렉터리** 속성을 편집 합니다. Visual Studio에서 컴파일러가 검색 하는 사용자별 및 프로젝트별 디렉터리에 대 한 자세한 내용은 [VC + + 디렉터리 속성 페이지](../../build/reference/vcpp-directories-property-page.md)를 참조 하세요. **/I** 컴파일러 옵션에 대 한 자세한 내용은 [/I (추가 포함 디렉터리)](../../build/reference/i-additional-include-directories.md)를 참조 하세요.
+Visual Studio에서 포함 디렉터리 경로를 설정 하려면 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 왼쪽 창의 **구성 속성** 에서 **VC + + 디렉터리** 를 선택 하 고 **포함 디렉터리** 속성을 편집 합니다. Visual Studio에서 컴파일러가 검색 하는 사용자별 및 프로젝트별 디렉터리에 대 한 자세한 내용은 [VC + + 디렉터리 속성 페이지](../../build/reference/vcpp-directories-property-page.md)를 참조 하세요. 컴파일러 옵션에 대 한 자세한 내용은 **`/I`** [ `/I` (추가 포함 디렉터리)](../../build/reference/i-additional-include-directories.md)를 참조 하세요.
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>명령줄 INCLUDE 또는 LIB 환경이 설정 되지 않았습니다.
 
@@ -87,15 +87,15 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>미리 컴파일된 헤더가 미리 컴파일되지 않았음
 
-프로젝트가 미리 컴파일된 헤더를 사용하도록 구성되어 있는 경우 헤더 콘텐츠를 사용하는 파일이 컴파일될 수 있도록 관련 .pch 파일을 만들어야 합니다. 예를 들어 *pch .cpp* 파일 (Visual Studio 2017이 하 버전의*stdafx.h* )이 새 프로젝트의 프로젝트 디렉터리에 자동으로 만들어집니다. 먼저 해당 파일을 컴파일하여 미리 컴파일된 헤더 파일을 만듭니다. 일반적인 빌드 프로세스 디자인에서는이 작업이 자동으로 수행 됩니다. 자세한 내용은 [미리 컴파일된 헤더 파일 만들기](../../build/creating-precompiled-header-files.md)를 참조 하세요.
+미리 컴파일된 헤더를 사용 하도록 프로젝트를 구성 하는 경우 *`.pch`* 헤더 콘텐츠를 사용 하는 파일을 컴파일할 수 있도록 관련 파일을 만들어야 합니다. 예를 들어 *`pch.cpp`* *`stdafx.cpp`* Visual Studio 2017 및 이전 버전의 파일은 새 프로젝트에 대 한 프로젝트 디렉터리에 자동으로 만들어집니다. 먼저 해당 파일을 컴파일하여 미리 컴파일된 헤더 파일을 만듭니다. 일반적인 빌드 프로세스 디자인에서는이 작업이 자동으로 수행 됩니다. 자세한 내용은 [미리 컴파일된 헤더 파일 만들기](../../build/creating-precompiled-header-files.md)를 참조 하세요.
 
 ## <a name="additional-causes"></a>추가 원인
 
 - SDK 또는 타사 라이브러리를 설치 했지만 SDK 또는 라이브러리를 설치한 후에는 새 개발자 명령 프롬프트 창을 열지 않았습니다. SDK 또는 라이브러리에서 파일을 **포함** 경로에 추가 하는 경우 이러한 환경 변수 변경을 선택 하기 위해 새 개발자 명령 프롬프트 창을 열어야 할 수 있습니다.
 
-- 이 파일은 관리 코드를 사용 하지만 **/clr** 컴파일러 옵션은 지정 되지 않았습니다. 자세한 내용은 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조 하세요.
+- 이 파일은 관리 코드를 사용 하지만 컴파일러 옵션은 **`/clr`** 지정 되지 않았습니다. 자세한 내용은 [ `/clr` (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조 하세요.
 
-- 헤더를 미리 컴파일하는 데 사용 되는 것 보다 다른 **/analyze** 컴파일러 옵션 설정을 사용 하 여 파일을 컴파일합니다. 프로젝트에 대 한 헤더를 미리 컴파일하는 경우 모두 동일한 **/analyze** 설정을 사용 해야 합니다. 자세한 내용은 [/analyze(코드 분석)](../../build/reference/analyze-code-analysis.md)를 참조하세요.
+- **`/analyze`** 헤더를 미리 컴파일하는 데 사용 되는 것 보다 다른 컴파일러 옵션 설정을 사용 하 여 파일을 컴파일합니다. 프로젝트에 대 한 헤더를 미리 컴파일하는 경우 모두 동일한 설정을 사용 해야 합니다 **`/analyze`** . 자세한 내용은 [ `/analyze` (코드 분석)](../../build/reference/analyze-code-analysis.md)를 참조 하세요.
 
 - Linux 용 Windows 하위 시스템에서 파일 또는 디렉터리를 만들었습니다. 디렉터리 단위 대/소문자 구분을 사용 하도록 설정 하 고 지정 된 경로 또는 파일의 대/소문자가 디스크에 있는 경로 또는 파일의 대/소문자와 일치 하지 않습니다.
 

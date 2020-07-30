@@ -1,21 +1,21 @@
 ---
 title: 규칙 집합을 사용하여 실행할 C++ 규칙 지정
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373855"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389820"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용하여 실행할 C++ 규칙 지정
 
-Visual Studio에서 코드 분석과 관련 된 특정 프로젝트 요구 사항을 충족 하도록 사용자 지정 *규칙 집합* 을 만들고 수정할 수 있습니다. 기본 규칙 집합은에 저장 됩니다 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
+Visual Studio에서 코드 분석과 관련 된 특정 프로젝트 요구 사항을 충족 하도록 사용자 지정 *규칙 집합* 을 만들고 수정할 수 있습니다. 기본 규칙 집합은에 저장 됩니다 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 버전 15.7 이상:** 모든 텍스트 편집기를 사용 하 여 사용자 지정 규칙 집합을 만들고 사용 하는 빌드 시스템에 관계 없이 명령줄 빌드에서 적용할 수 있습니다. 자세한 내용은 [/analyze: 규칙 집합](/cpp/build/reference/analyze-code-analysis)을 참조 하세요.
+**Visual Studio 2017 버전 15.7 이상:** 모든 텍스트 편집기를 사용 하 여 사용자 지정 규칙 집합을 만들고 사용 하는 빌드 시스템에 관계 없이 명령줄 빌드에서 적용할 수 있습니다. 자세한 내용은 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)를 참조하세요.
 
 Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual Studio IDE에서 C/c + + 프로젝트를 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거 하 고, 필요에 따라 코드 분석에서 규칙이 위반 된 것으로 확인 될 때 발생 하는 동작을 변경 합니다.
 
@@ -23,19 +23,40 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>기존 규칙 집합 하나에서 사용자 지정 규칙을 만들려면
 
+::: moniker range="<=vs-2017"
+
 1. 솔루션 탐색기에서 프로젝트에 대 한 바로 가기 메뉴를 열고 **속성**을 선택 합니다.
 
-1. **속성** 탭에서 **코드 분석**을 선택 합니다.
+1. **속성 페이지** 대화 상자에서 **구성 속성** > **코드 분석** > **일반** 속성 페이지를 선택 합니다.
 
 1. **규칙 집합** 드롭다운 목록에서 다음 중 하나를 수행 합니다.
 
    - 사용자 지정하려는 규칙 집합을 선택합니다.
 
-     \- 또는 -
+     \- 또는-
 
    - **\<Browse...>** 목록에 없는 기존 규칙 집합을 지정 하려면 선택 합니다.
 
 1. **열기** 를 선택 하 여 규칙 집합 편집기에서 규칙을 표시 합니다.
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. 솔루션 탐색기에서 프로젝트에 대 한 바로 가기 메뉴를 열고 **속성**을 선택 합니다.
+
+1. **속성 페이지** 대화 상자에서 **구성 속성** > **코드 분석** > **Microsoft** 속성 페이지를 선택 합니다.
+
+1. **활성 규칙** 드롭다운 목록에서 다음 중 하나를 수행 합니다.
+
+   - 사용자 지정하려는 규칙 집합을 선택합니다.
+
+     \- 또는-
+
+   - **\<Browse...>** 목록에 없는 기존 규칙 집합을 지정 하려면 선택 합니다.
+
+1. **열기** 를 선택 하 여 규칙 집합 편집기에서 규칙을 표시 합니다.
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>규칙 집합 편집기에서 규칙 집합을 수정 하려면
 
@@ -77,41 +98,23 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>텍스트 편집기에서 규칙 집합을 만들려면
 
-텍스트 편집기에서 사용자 지정 규칙 집합을 만들고, 확장명을 사용 하 여 원하는 위치에 저장 하 `.ruleset` 고,에를 [/analyze: 규칙](/cpp/build/reference/analyze-code-analysis) 집합 컴파일러 옵션과 함께 적용할 수 있습니다.
+텍스트 편집기에서 사용자 지정 규칙 집합을 만들고, 확장명을 사용 하 여 위치에 저장 하 *`.ruleset`* 고, 컴파일러 옵션을 사용 하 여에 적용할 수 있습니다 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) .
 
 다음 예제에서는 시작 지점으로 사용할 수 있는 기본 규칙 집합 파일을 보여 줍니다.
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>규칙 집합 스키마
 
-다음 규칙 집합 스키마는 규칙 집합 파일의 XML 스키마를 설명 합니다. 규칙 집합 스키마는에 저장 됩니다 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . 이를 사용 하 여 프로그래밍 방식으로 사용자 지정 규칙 집합을 작성 하거나 사용자 지정 규칙 집합의 형식이 올바른지 여부를 확인할 수 있습니다. 자세한 내용은 [방법: XSD 스키마를 기반으로 XML 문서 만들기](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)를 참조 하세요.
+다음 규칙 집합 스키마는 규칙 집합 파일의 XML 스키마를 설명 합니다. 규칙 집합 스키마는에 저장 됩니다 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . 이를 사용 하 여 프로그래밍 방식으로 사용자 지정 규칙 집합을 작성 하거나 사용자 지정 규칙 집합의 형식이 올바른지 여부를 확인할 수 있습니다. 자세한 내용은 [방법: XSD 스키마를 기반으로 XML 문서 만들기](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)를 참조 하세요.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -236,7 +239,7 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
 스키마 요소 세부 정보:
 
-| Schema 요소 | Description |
+| Schema 요소 | 설명 |
 |--------------------|--------------|
 | `TLocalization` | 규칙 집합 파일의 이름, 규칙 집합 파일의 설명, 지역화 된 리소스를 포함 하는 리소스 어셈블리의 이름 및 지역화 된 리소스의 기본 이름을 포함 하는 지역화 정보 |
 | `TRuleHintPaths` | 규칙 집합 파일을 검색 하기 위한 힌트로 사용 되는 파일 경로 |
