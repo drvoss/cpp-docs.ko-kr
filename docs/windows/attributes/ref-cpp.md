@@ -1,17 +1,17 @@
 ---
-title: ref (C++ COM 특성)
+title: ref (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214593"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232744"
 ---
 # <a name="ref-c"></a>ref(C++)
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214593"
 [ref]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Ref** C++ 특성에는 [ref](/windows/win32/Midl/ref) MIDL 특성과 동일한 기능이 있습니다.
+**Ref** c + + 특성에는 [ref](/windows/win32/Midl/ref) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -49,8 +49,8 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**적용 대상**|**typedef**, interface 매개 변수, interface 메서드|
-|**반복 가능**|아니요|
+|**적용 대상**|**`typedef`**, interface 매개 변수, interface 메서드|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

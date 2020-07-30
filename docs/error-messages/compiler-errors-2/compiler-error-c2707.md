@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225425"
 ---
 # <a name="compiler-error-c2707"></a>컴파일러 오류 C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760441"
 
 특정 컨텍스트에서는 구조적 예외 처리 내장 함수를 사용할 수 없습니다.
 
-- 예외 필터 또는 `__except` 블록 외부 `_exception_code()`
+- `_exception_code()`예외 필터 또는 블록 외부 **`__except`**
 
-- 예외 필터 외부 `_exception_info()`
+- `_exception_info()`예외 필터 외부
 
-- `__finally` 블록 외부 `_abnormal_termination()`
+- `_abnormal_termination()`블록 외부 **`__finally`**
 
 오류를 해결 하려면 예외 처리 내장 함수를 적절 한 컨텍스트에 배치 해야 합니다.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170607"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221785"
 ---
 # <a name="c-bit-fields"></a>C++ 비트 필드
 
@@ -21,7 +21,7 @@ ms.locfileid: "80170607"
 
 *선언 자* **:** *상수 식*
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 (선택 사항) *선언 자* 는 프로그램에서 멤버에 액세스 하는 데 사용할 수 있는 이름입니다. 정수 형식(열거형 형식 포함)이어야 합니다. *상수 식은* 멤버가 구조에서 차지 하는 비트 수를 지정 합니다. 익명 비트 필드, 식별자가 없는 비트 필드 멤버를 안쪽 여백에 사용할 수 있습니다.
 
@@ -46,7 +46,7 @@ struct Date {
 ![날짜 개체의 메모리 레이아웃](../cpp/media/vc38uq1.png "날짜 개체의 메모리 레이아웃") <br/>
 날짜 개체의 메모리 레이아웃
 
-`nYear`은 8 비트 길이 이며 선언 된 형식 ( **unsigned** **short**)의 단어 경계를 오버플로 합니다. 따라서 새 **unsigned** **short**의 시작 부분에서 시작 됩니다. 모든 비트 필드가 기본 형식의 한 개체에 맞아야 할 필요는 없습니다. 선언에서 요청된 비트 수에 따라 새 스토리지 단위가 할당됩니다.
+는 `nYear` 8 비트 길이 이며 선언 된 형식의 단어 경계를 오버플로 **`unsigned short`** 합니다. 따라서 새의 시작 부분에서 시작 됩니다 **`unsigned short`** . 모든 비트 필드가 기본 형식의 한 개체에 맞아야 할 필요는 없습니다. 선언에서 요청된 비트 수에 따라 새 스토리지 단위가 할당됩니다.
 
 **Microsoft 전용**
 
@@ -70,12 +70,12 @@ struct Date {
 
 그런 다음 메모리 레이아웃은 다음 그림과 같습니다.
 
-![길이가 0&#45;인 비트 필드가 있는 날짜 개체의 레이아웃](../cpp/media/vc38uq2.png "길이가 0&#45;인 비트 필드가 있는 날짜 개체의 레이아웃") <br/>
+![0&#45;길이 비트 필드가 있는 날짜 개체의 레이아웃](../cpp/media/vc38uq2.png "0&#45;길이 비트 필드가 있는 날짜 개체의 레이아웃") <br/>
 길이가 0인 비트 필드가 있는 날짜 개체의 레이아웃
 
 비트 필드의 기본 형식은 [기본 제공](../cpp/fundamental-types-cpp.md)형식에 설명 된 대로 정수 계열 형식 이어야 합니다.
 
-`const T&` 형식 참조의 이니셜라이저가 `T`형식의 비트 필드를 참조 하는 lvalue 인 경우 참조는 비트 필드에 직접 바인딩되지 않습니다. 대신 참조는 비트 필드의 값을 포함 하는 임시 초기화 된에 바인딩됩니다.
+형식의 참조에 대 한 이니셜라이저가 `const T&` 형식의 비트 필드를 참조 하는 lvalue 인 경우 `T` 참조는 비트 필드에 직접 바인딩되지 않습니다. 대신 참조는 비트 필드의 값을 포함 하는 임시 초기화 된에 바인딩됩니다.
 
 ## <a name="restrictions-on-bit-fields"></a>비트 필드에 대한 제한
 
@@ -83,7 +83,7 @@ struct Date {
 
 - 비트 필드의 주소 가져오기
 
-- 비트 필드를 사용 하 여 비**const** 참조를 초기화 합니다.
+- **`const`** 비트 필드를 사용 하 여 참조가 아닌를 초기화 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

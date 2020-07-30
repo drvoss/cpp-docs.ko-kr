@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172284"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195579"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
 
@@ -22,7 +22,7 @@ ms.locfileid: "80172284"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 다음 C++/CLI 샘플에서는 값 형식에 **interior_ptr**을 사용하는 방법을 보여 줍니다.
 
@@ -67,11 +67,11 @@ int main() {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
-값 형식에서 **this** 포인터는 interior_ptr로 계산됩니다.
+값 형식에서 **`this`** 포인터는 interior_ptr로 평가 됩니다.
 
-값 형식 `V`의 비정적 멤버 함수 본문에서 **this**는 함수를 호출하는 개체의 주소 값을 갖는 `interior_ptr<V>` 형식의 표현입니다.
+값 형식의 비정적 멤버 함수 본문에서 `V` **`this`** 는 `interior_ptr<V>` 함수가 호출 되는 개체의 주소를 값으로 가지는 형식의 식입니다.
 
 ### <a name="code"></a>코드
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>Description
+### <a name="description"></a>설명
 
 다음 샘플은 정적 멤버에 주소 연산자를 사용하는 방법을 보여 줍니다.
 
@@ -129,4 +129,4 @@ hello
 
 ## <a name="see-also"></a>참고 항목
 
-[interior_ptr(C++/CLI)](interior-ptr-cpp-cli.md)
+[interior_ptr (c + +/CLI)](interior-ptr-cpp-cli.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872389"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224827"
 ---
 # <a name="locale-class"></a>locale 클래스
 
@@ -140,7 +140,7 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>생성자
 
-|생성자|Description|
+|생성자|설명|
 |-|-|
 |[locale](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|
 
@@ -161,12 +161,12 @@ cout.imbue(loc);
 
 |||
 |-|-|
-|[기존](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
+|[클래식](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|
 |[global](#global)|프로그램에 대한 기본 로컬을 다시 설정합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[연산자 =](#op_eq)|로캘을 할당 합니다.|
 |[연산자! =](#op_neq)|두 로캘이 다른지 테스트합니다.|
@@ -175,7 +175,7 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>클래스
 
-|클래스|Description|
+|클래스|설명|
 |-|-|
 |[패싯](#facet_class)|모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.|
 |[`id`](#id_class)|멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>설명
 
-형식은 클래스 로캘로 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용할 수 있는 **int** 형식의 동의어입니다. 요소는 다음과 같습니다.
+형식은 **`int`** 클래스 로캘로 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용 될 수 있는 형식의 동의어입니다. 요소는 다음과 같습니다.
 
 - `collate`는 C 범주에 해당 LC_COLLATE
 
@@ -234,7 +234,7 @@ static const int none = 0;
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 C 로캘에 대한 참조입니다.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 대상 로캘에 삽입할 패싯을 포함하는 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 멤버 함수는 source_locale에 나열 된 패싯을 대체 하거나 ** \* 이** 패싯을 추가 하는 로캘 개체를 반환 합니다 `Facet` . *source_locale*
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 프로그램에서 기본 로캘로 사용할 로캘입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 기본 로캘이 다시 설정되기 전의 이전 로캘입니다.
 
@@ -520,7 +520,7 @@ int main( ) {
 string name() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 로캘의 이름을 지정하는 문자열입니다.
 
@@ -572,9 +572,9 @@ bool operator!=(const locale& right) const;
 *오른쪽*\
 같지 않음을 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-로캘이 동일한 로캘의 복사본이 아닌 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본 인 경우 **false** 입니다.
+**`true`** 로캘이 동일한 로캘의 복사본이 아닌 경우 인 부울 값입니다. **`false`** 로캘이 동일한 로캘의 복사본 인 경우입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -639,9 +639,9 @@ bool operator()(
 *오른쪽*\
 비교할 둘째 문자열입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-- `true`*left* 가 사전순으로 보다 작은 경우 *이 고, 그렇지*않으면 `false` 입니다.
+- **`true`***left* 가 사전순으로 보다 작은 경우 *이 고, 그렇지*않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -699,9 +699,9 @@ bool operator==(const locale& right) const;
 *오른쪽*\
 같은지 여부를 테스트할 로캘 중 하나입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-로캘이 동일한 로캘의 복사본 인 경우 **true** 인 부울 값입니다. 로캘이 동일한 로캘의 복사본이 아닌 경우 **false** 입니다.
+**`true`** 로캘이 동일한 로캘의 복사본 인 경우 인 부울 값입니다. **`false`** 로캘이 동일한 로캘의 복사본이 아닌 경우입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -751,7 +751,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<locale>](../standard-library/locale.md)\
 [코드 페이지](../c-runtime-library/code-pages.md)\

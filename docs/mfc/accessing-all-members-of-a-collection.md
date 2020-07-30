@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616490"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214180"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>컬렉션의 모든 멤버에 액세스
 
@@ -42,11 +42,11 @@ ms.locfileid: "84616490"
 
    이 예제에서는 `CPerson` 개체에 대한 포인터를 포함하는 형식화된 포인터 배열을 사용합니다. 이 배열은 미리 정의된 비템플릿 클래스 중 하나인 `CObArray`클래스에서 파생됩니다. `GetAt` 는 `CPerson` 개체에 대한 포인터를 반환합니다. 형식화된 포인터 컬렉션 클래스(배열 또는 목록)의 경우 첫 번째 매개 변수는 기본 클래스를 지정하고, 두 번째 매개 변수는 저장할 형식을 지정합니다.
 
-   `CTypedPtrArray`또한 클래스는 일반적인 배열 첨자 구문을 사용 하 여 배열의 요소에 액세스할 수 있도록 **[]** 연산자를 오버 로드 합니다. 위의 for 루프 본문에서 문 대신 **사용할** 수 있습니다.
+   `CTypedPtrArray`또한 클래스는 일반적인 배열 첨자 구문을 사용 하 여 배열의 요소에 액세스할 수 있도록 **[]** 연산자를 오버 로드 합니다. 위의 루프 본문에서 문 대신 사용할 수 있습니다. **`for`**
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   이 연산자는 **const** 버전과 비**const** 버전 모두에 존재합니다. **const** 배열에 대해 호출되는 **const** 버전은 대입문의 오른쪽에만 나타날 수 있습니다.
+   이 연산자는 **`const`** 및 이외 버전에 모두 있습니다 **`const`** . **`const`** 배열에 대해 호출 되는 버전은 **`const`** 대입문의 오른쪽에만 나타날 수 있습니다.
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> 목록을 반복하려면
 

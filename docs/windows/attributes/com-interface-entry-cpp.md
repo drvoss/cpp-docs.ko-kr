@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry (C++ COM 특성)
+title: com_interface_entry (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215350"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry(C++)
 
@@ -29,11 +29,11 @@ ms.locfileid: "80168306"
 *com_interface_entry*<br/>
 항목의 실제 텍스트를 포함 하는 문자열입니다. 가능한 값 목록은 [COM_INTERFACE_ENTRY 매크로](../../atl/reference/com-interface-entry-macros.md)를 참조 하세요.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Com_interface_entry** C++ 특성은 문자열의 unabridged 콘텐츠를 대상 개체의 com 인터페이스 맵에 삽입 합니다. 특성이 대상 개체에 한 번 적용 되 면 항목이 기존 인터페이스 맵의 시작 부분에 삽입 됩니다. 특성이 동일한 대상 개체에 반복 해 서 적용 되 면 항목이 인터페이스 맵 시작 부분에서 수신 된 순서 대로 삽입 됩니다.
+**Com_interface_entry** c + + 특성은 문자열의 unabridged 콘텐츠를 대상 개체의 com 인터페이스 맵에 삽입 합니다. 특성이 대상 개체에 한 번 적용 되 면 항목이 기존 인터페이스 맵의 시작 부분에 삽입 됩니다. 특성이 동일한 대상 개체에 반복 해 서 적용 되 면 항목이 인터페이스 맵 시작 부분에서 수신 된 순서 대로 삽입 됩니다.
 
-이 특성을 사용하려면 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 `progid` 적용 되는 경우 `vi_progid` 및 `coclass`도 적용 됩니다.
+이 특성을 사용하려면 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어를 적용 하는 경우 `progid` `vi_progid` 및 `coclass` 도 적용 됩니다.
 
 **Com_interface_entry** 를 처음 사용 하는 경우에는 인터페이스 맵의 시작 부분에 새 인터페이스가 삽입 되기 때문에 다음 COM_INTERFACE_ENTRY 유형 중 하나 여야 합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "80168306"
 
 **Com_interface_entry** 특성을 추가로 사용 하 여 지원 되는 모든 COM_INTERFACE_ENTRY 유형을 사용할 수 있습니다.
 
-이 제한은 ATL이 인터페이스 맵의 첫 번째 항목을 id `IUnknown`사용 하기 때문에 필요 합니다. 따라서 항목은 유효한 인터페이스 여야 합니다. 예를 들어 다음 코드 샘플은 인터페이스 맵의 첫 번째 항목이 실제 COM 인터페이스를 지정 하지 않기 때문에 유효 하지 않습니다.
+이 제한은 ATL이 인터페이스 맵의 첫 번째 항목을 id로 사용 하기 때문에 필요 합니다 `IUnknown` . 따라서 항목은 유효한 인터페이스 여야 합니다. 예를 들어 다음 코드 샘플은 인터페이스 맵의 첫 번째 항목이 실제 COM 인터페이스를 지정 하지 않기 때문에 유효 하지 않습니다.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ ms.locfileid: "80168306"
 
 ## <a name="example"></a>예제
 
-다음 코드는 `CMyBaseClass`의 기존 COM 인터페이스 맵에 두 개의 항목을 추가 합니다. 첫 번째는 표준 인터페이스 이며 두 번째는 `IDebugTest` 인터페이스를 숨깁니다.
+다음 코드에서는의 기존 COM 인터페이스 맵에 두 개의 항목을 추가 합니다 `CMyBaseClass` . 첫 번째는 표준 인터페이스 이며 두 번째는 인터페이스를 숨깁니다 `IDebugTest` .
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-`CMyBaseClass`에 대 한 결과 COM 개체 맵은 다음과 같습니다.
+에 대 한 결과 COM 개체 맵은 다음과 같습니다 `CMyBaseClass` .
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,9 +109,9 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|예|
-|**필수 특성**|`coclass`, `progid`또는 `vi_progid`중 하나 이상입니다.|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
+|**필수 특성**|`coclass`, 또는 중 하나 이상입니다. `progid` `vi_progid`|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _bstr_t method [C++]
 - _bstr_t class
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
-ms.openlocfilehash: 3384da733586c828496a8728a0f5855f92eeec35
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 843d6aa0e04595143d7da585e95d58e97fe80db0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190471"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221837"
 ---
 # <a name="_bstr_t_bstr_t"></a>_bstr_t::_bstr_t
 
@@ -48,7 +48,7 @@ _bstr_t(
 *s1*<br/>
 복사할 `_bstr_t` 개체입니다.
 
-*s2*<br/>
+*s2'*<br/>
 멀티바이트 문자열입니다.
 
 *s3*<br/>
@@ -61,24 +61,24 @@ _bstr_t(
 기존 `BSTR` 개체입니다.
 
 *fCopy*<br/>
-FALSE 인 경우 `SysAllocString`를 호출 하 여 복사를 수행 하지 않고 *bstr* 인수를 새 개체에 연결 합니다.
+이면 **`false`** 를 호출 하 여 복사를 수행 하지 않고 *bstr* 인수를 새 개체에 연결 `SysAllocString` 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음 표는 `_bstr_t` 생성자에 대해 설명합니다.
 
-|생성자|설명|
+|생성자|Description|
 |-----------------|-----------------|
-|`_bstr_t( )`|Null `BSTR` 개체를 캡슐화 하는 기본 `_bstr_t` 개체를 생성 합니다.|
-|`_bstr_t( _bstr_t&`  `s1`  `)`|`_bstr_t` 개체를 다른 개체의 복사본으로 생성합니다.<br /><br /> 이 복사본은 새 항목을 만드는 대신 캡슐화 된 `BSTR` 개체의 참조 횟수를 증가 시키는 *단순* 복사본입니다.|
+|`_bstr_t( )`|`_bstr_t`Null 개체를 캡슐화 하는 기본 개체를 생성 `BSTR` 합니다.|
+|`_bstr_t( _bstr_t&`  `s1`  `)`|`_bstr_t` 개체를 다른 개체의 복사본으로 생성합니다.<br /><br /> 이 복사본은 *shallow* `BSTR` 새 항목을 만드는 대신 캡슐화 된 개체의 참조 횟수를 증가 시키는 단순 복사본입니다.|
 |`_bstr_t( char*`  `s2`  `)`|새 `_bstr_t` 개체를 만드는 `SysAllocString`을 호출하여 `BSTR` 개체를 생성한 다음 캡슐화합니다.<br /><br /> 이 생성자는 먼저 멀티바이트를 유니코드로 변환합니다.|
 |`_bstr_t( wchar_t*`  `s3`  `)`|새 `_bstr_t` 개체를 만드는 `SysAllocString`을 호출하여 `BSTR` 개체를 생성한 다음 캡슐화합니다.|
 |`_bstr_t( _variant_t&`  `var`  `)`|캡슐화된 VARIANT 개체에서 `_bstr_t` 개체를 먼저 검색하여 `_variant_t` 개체에서 `BSTR` 개체를 생성합니다.|
-|`_bstr_t( BSTR``bstr` `, bool``fCopy``)`|기존 `_bstr_t`(`BSTR` 문자열의 반대)에서 `wchar_t*` 개체를 생성합니다. *Fcopy* 가 false 이면 제공 된 `BSTR` `SysAllocString`를 사용 하 여 새 복사본을 만들지 않고 새 개체에 연결 됩니다.<br /><br /> 이 생성자는 형식 라이브러리 헤더의 래퍼 함수에서 사용되어 인터페이스 메서드에서 반환하는 `BSTR`을 캡슐화하고 그 소유권을 가집니다.|
+|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|기존 `_bstr_t`(`BSTR` 문자열의 반대)에서 `wchar_t*` 개체를 생성합니다. *Fcopy* 가 false 인 경우 제공 된는를 `BSTR` 사용 하 여 새 복사본을 만들지 않고 새 개체에 연결 됩니다 `SysAllocString` .<br /><br /> 이 생성자는 형식 라이브러리 헤더의 래퍼 함수에서 사용되어 인터페이스 메서드에서 반환하는 `BSTR`을 캡슐화하고 그 소유권을 가집니다.|
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_bstr_t 클래스](../cpp/bstr-t-class.md)<br/>
 [_variant_t 클래스](../cpp/variant-t-class.md)

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 9ceb903ec38bc0ad7cfdee1c59babd2379422ac3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302356"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230443"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE IUnknown 구현
 
 > [!NOTE]
 > 다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다. 따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다. 최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.
 
-OLE 2의 핵심에는 "OLE 구성 요소 개체 모델" 즉, COM이 있습니다. COM은 협동 개체가 서로 통신하는 방법에 대한 표준을 정의합니다. 여기에는 메서드가 개체에서 디스패치되는 방법을 포함하여 “개체"의 모양에 대한 세부 정보가 포함됩니다. 또한 COM은 모든 COM 호환 클래스가 파생되는 기본 클래스를 정의합니다. 이 기본 클래스는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)입니다. [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스를 C++ 클래스 라고 하지만 com은 한 언어에 국한 되지 않습니다. C, 파스칼 또는 com 개체의 이진 레이아웃을 지원할 수 있는 다른 언어로 구현할 수 있습니다.
+OLE 2의 핵심에는 "OLE 구성 요소 개체 모델" 즉, COM이 있습니다. COM은 협동 개체가 서로 통신하는 방법에 대한 표준을 정의합니다. 여기에는 메서드가 개체에서 디스패치되는 방법을 포함하여 “개체"의 모양에 대한 세부 정보가 포함됩니다. 또한 COM은 모든 COM 호환 클래스가 파생되는 기본 클래스를 정의합니다. 이 기본 클래스는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)입니다. [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스는 c + + 클래스 라고 하지만 com은 한 언어에 국한 되지 않습니다. c, 파스칼 또는 com 개체의 이진 레이아웃을 지원할 수 있는 다른 언어로 구현할 수 있습니다.
 
 OLE는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 에서 파생 된 모든 클래스를 "인터페이스"로 나타냅니다. [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 과 같은 "인터페이스"는 구현과 함께 전달 되지 않으므로이는 중요 한 차이점입니다. 해당 구현에서 수행하는 구체적인 작업이 아니라 개체가 통신하는 데 필요한 프로토콜만 정의하면 됩니다. 따라서 최대 유연성을 허용하는 시스템에 적합합니다. MFC의 역할은 MFC/C++ 프로그램의 기본 동작을 구현하는 것입니다.
 
@@ -45,9 +45,9 @@ public:
 ```
 
 > [!NOTE]
-> 필요한 특정 호출 규칙 세부 정보, 같은 `__stdcall`과 같이 필요한 특정 호출 규칙 정보는 이 그림에서 제외됩니다.
+> 과 같은 필요한 특정 호출 규칙 세부 정보 **`__stdcall`** 는이 그림에 대해 남아 있습니다.
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 멤버 함수는 개체의 메모리 관리를 제어 합니다. COM은 참조 개수 계산 스키마를 사용하여 개체를 추적합니다. C++에서처럼 개체가 직접 참조되지 않습니다. 대신 COM 개체는 항상 포인터를 통해 참조됩니다. 소유자가이 개체를 사용 하 여 작업을 수행할 때 개체를 해제 하려면 개체의 [릴리스](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 멤버가 호출 됩니다 .이는 기존 C++ 개체에 대해 수행 되는 operator delete를 사용 하는 것과는 반대입니다. 참조 개수 계산 메커니즘에서는 단일 개체에 대한 여러 참조를 관리할 수 있습니다. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 의 구현에서 개체에 대 한 참조 횟수를 유지 관리 합니다. 개체는 참조 횟수가 0에 도달할 때까지 삭제 되지 않습니다.
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 멤버 함수는 개체의 메모리 관리를 제어 합니다. COM은 참조 개수 계산 스키마를 사용하여 개체를 추적합니다. C++에서처럼 개체가 직접 참조되지 않습니다. 대신 COM 개체는 항상 포인터를 통해 참조됩니다. 소유자가이 개체를 사용 하 여 작업을 완료할 때 개체를 해제 하려면 기존 c + + 개체에 대해 수행 되는 operator delete를 사용 하는 대신 개체의 [릴리스](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 멤버를 호출 합니다. 참조 개수 계산 메커니즘에서는 단일 개체에 대한 여러 참조를 관리할 수 있습니다. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 의 구현에서 개체에 대 한 참조 횟수를 유지 관리 합니다. 개체는 참조 횟수가 0에 도달할 때까지 삭제 되지 않습니다.
 
 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 는 구현 관점에서 매우 간단 합니다. 다음은 간단한 구현입니다.
 
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)만 있는 경우 IPrintInterface를 가져오려면 `IPrintInterface`의 `IID`를 사용 하 여 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 를 호출 합니다. `IID`는 인터페이스를 고유하게 식별하는 128비트 숫자입니다. 사용자나 OLE에서 정의하는 각 인터페이스에 대해 `IID`가 있습니다. *PUnk* 가 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 개체에 대 한 포인터인 경우 iprintinterface를 검색 하는 코드는 다음과 같을 수 있습니다.
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)만 있는 경우 IPrintInterface를 가져오려면의를 사용 하 여 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 를 호출 합니다 `IID` `IPrintInterface` . `IID`는 인터페이스를 고유하게 식별하는 128비트 숫자입니다. 사용자나 OLE에서 정의하는 각 인터페이스에 대해 `IID`가 있습니다. *PUnk* 가 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 개체에 대 한 포인터인 경우 iprintinterface를 검색 하는 코드는 다음과 같을 수 있습니다.
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -90,7 +90,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-이는 매우 쉽지만 iprintinterface와 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스를 모두 지 원하는 개체를 구현 하는 방법은 간단 합니다. IPrintInterface는 iprintinterface를 구현 하 여 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)을 구현 하면 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 이 자동으로 지원 됩니다. 예를 들어:
+이는 매우 쉽지만 iprintinterface와 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스를 모두 지 원하는 개체를 구현 하는 방법은 간단 합니다. IPrintInterface는 iprintinterface를 구현 하 여 iprintinterface를 구현 하면 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 이 자동으로 지원 됩니다. [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 예를 들면 다음과 같습니다.
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -102,7 +102,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 의 구현은 위에 구현 된 것과 정확 하 게 동일 합니다. `CPrintObj::QueryInterface`은 다음과 같습니다.
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 의 구현은 위에 구현 된 것과 정확 하 게 동일 합니다. `CPrintObj::QueryInterface`다음과 같이 표시 됩니다.
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -240,7 +240,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 
 MFC/OLE에는 개념과 실행 측면에서 MFC의 "메시지 맵" 및 “디스패치 맵"과 유사한 “인터페이스 맵"의 구현이 포함됩니다. MFC 인터페이스 맵의 핵심 기능은 다음과 같습니다.
 
-- `CCmdTarget` 클래스에 기본 제공 되는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)의 표준 구현입니다.
+- 클래스에 기본 제공 되는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)의 표준 구현입니다 `CCmdTarget` .
 
 - [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 및 [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 로 수정 된 참조 횟수의 유지 관리
 
@@ -256,7 +256,7 @@ MFC/OLE에는 개념과 실행 측면에서 MFC의 "메시지 맵" 및 “디스
 
 집계에 대 한 자세한 내용은 [집계](/windows/win32/com/aggregation) 항목을 참조 하세요.
 
-MFC의 인터페이스 맵 지원은 `CCmdTarget` 클래스를 기반으로 합니다. `CCmdTarget` "은 (는) [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 구현과 관련 된 모든 멤버 함수 뿐만 아니라 참조 횟수를*가집니다*. 예를 들어 참조 횟수는 `CCmdTarget`에 있습니다. OLE COM을 지원하는 클래스를 만들려면 `CCmdTarget`에서 클래스를 파생시키고 다양한 매크로 및 `CCmdTarget`의 멤버 함수를 사용하여 원하는 인터페이스를 구현합니다. MFC의 구현에서는 중첩 클래스를 사용하여 위의 예제와 매우 유사하게 각 인터페이스 구현을 정의합니다. IUnknown의 표준 구현 및 반복되는 코드 일부를 제거하는 다양한 매크로를 사용하면 더 간단해집니다.
+MFC의 인터페이스 맵 지원은 `CCmdTarget` 클래스를 기반으로 합니다. `CCmdTarget`"*있음*" 참조 수와 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 구현과 관련 된 모든 멤버 함수 (예를 들어 참조 횟수는에 있음 `CCmdTarget` ). OLE COM을 지원하는 클래스를 만들려면 `CCmdTarget`에서 클래스를 파생시키고 다양한 매크로 및 `CCmdTarget`의 멤버 함수를 사용하여 원하는 인터페이스를 구현합니다. MFC의 구현에서는 중첩 클래스를 사용하여 위의 예제와 매우 유사하게 각 인터페이스 구현을 정의합니다. IUnknown의 표준 구현 및 반복되는 코드 일부를 제거하는 다양한 매크로를 사용하면 더 간단해집니다.
 
 ## <a name="interface-map-basics"></a>인터페이스 맵 기본 사항
 
@@ -274,9 +274,9 @@ MFC의 인터페이스 맵 지원은 `CCmdTarget` 클래스를 기반으로 합�
 
 6. 지원하는 인터페이스를 나타내는 각 중첩 클래스를 구현합니다.
 
-7. METHOD_PROLOGUE 매크로를 사용 하 여 `CCmdTarget`파생 된 부모 개체에 액세스할 수 있습니다.
+7. METHOD_PROLOGUE 매크로를 사용 하 여 부모, `CCmdTarget` 파생 개체에 액세스 합니다.
 
-8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 는 이러한 함수의 `CCmdTarget` 구현 (`ExternalAddRef`, `ExternalRelease`및 `ExternalQueryInterface`)에 위임할 수 있습니다.
+8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 는 `CCmdTarget` 이러한 함수 ( `ExternalAddRef` , 및)의 구현에 위임할 수 있습니다 `ExternalRelease` `ExternalQueryInterface` .
 
 위의 CPrintEditObj 예제는 다음과 같이 구현할 수 있습니다.
 
@@ -300,7 +300,7 @@ protected:
 };
 ```
 
-위의 선언은 `CCmdTarget`에서 파생 클래스를 만듭니다. DECLARE_INTERFACE_MAP 매크로는이 클래스에 사용자 지정 인터페이스 맵이 있음을 프레임 워크에 알립니다. 또한 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로는 중첩 클래스를 정의 합니다 .이 경우에는 CEditObj 및 Ceditobj를 사용 합니다. X는 "C"로 시작 하는 전역 클래스와 중첩 된 클래스를 구분 하는 데만 사용 되며, 인터페이스 클래스는 "I"로 시작 합니다. 이러한 클래스의 두 중첩 멤버, 각각 m_CEditObj와 m_CPrintObj가 만들어집니다. 매크로는 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 함수를 자동으로 선언 합니다. 따라서이 인터페이스와 관련 된 함수만 선언 합니다. EditObject 및 PrintObject (OLE 매크로 STDMETHOD를 사용 하 여 대상 플랫폼에 적절 한 **_stdcall** 및 가상 키워드를 제공 합니다.)
+위의 선언은 `CCmdTarget`에서 파생 클래스를 만듭니다. DECLARE_INTERFACE_MAP 매크로는이 클래스에 사용자 지정 인터페이스 맵이 있음을 프레임 워크에 알립니다. 또한 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로는 중첩 클래스 (이 경우 CEditObj 및 Ceditobj)를 정의 합니다. X는 "C"로 시작 하는 전역 클래스와 "I"로 시작 하는 인터페이스 클래스에서 중첩 된 클래스를 구분 하는 데만 사용 됩니다. 이러한 클래스의 두 중첩 멤버, 각각 m_CEditObj와 m_CPrintObj가 만들어집니다. 매크로는 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 함수를 자동으로 선언 합니다. 따라서이 인터페이스와 관련 된 함수만 선언 합니다. EditObject 및 PrintObject (OLE 매크로 STDMETHOD를 사용 하 여 대상 플랫폼에 적절 한 **_stdcall** 및 가상 키워드를 제공 합니다.
 
 이 클래스에 대해 인터페이스 맵을 구현하려면
 
@@ -311,7 +311,7 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-각각 IID_IPrintInterface IID는 m_CPrintObj와 연결하고 IID_IEditInterface는 m_CEditObj와 연결합니다. [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) (`CCmdTarget::ExternalQueryInterface`)의 `CCmdTarget` 구현에서는이 맵을 사용 하 여 요청 될 때 m_CPrintObj 및 m_CEditObj에 대 한 포인터를 반환 합니다. `IID_IUnknown`에 대한 항목은 포함할 필요가 없습니다. `IID_IUnknown`을 요청하는 경우 프레임워크는 맵의 첫 번째 인터페이스(이 경우 m_CPrintObj)를 사용합니다.
+각각 IID_IPrintInterface IID는 m_CPrintObj와 연결하고 IID_IEditInterface는 m_CEditObj와 연결합니다. `CCmdTarget` [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) ()의 구현은 `CCmdTarget::ExternalQueryInterface` 이 맵을 사용 하 여 m_CPrintObj에 대 한 포인터를 반환 하 고 요청 시 m_CEditObj 합니다. `IID_IUnknown`에 대한 항목은 포함할 필요가 없습니다. `IID_IUnknown`을 요청하는 경우 프레임워크는 맵의 첫 번째 인터페이스(이 경우 m_CPrintObj)를 사용합니다.
 
 BEGIN_INTERFACE_PART 매크로가 자동으로 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 함수를 선언 했더라도 이러한 함수를 구현 해야 합니다.
 
@@ -356,7 +356,7 @@ CEditPrintObj::CPrintObj에 대한 구현은 CEditPrintObj::CEditObj에 대한 �
 또한 프레임워크는 메시지 맵을 내부적으로 사용합니다. 따라서 이미 특정 인터페이스를 지원하고 프레임워크에서 제공하는 인터페이스에 대체 또는 추가 작업을 제공하는 프레임워크 클래스 `COleServerDoc`에서 파생시킬 수 있습니다. 프레임워크는 기본 클래스에서 인터페이스 맵 상속을 완벽하게 지원하기 때문에 가능합니다. 이것은 BEGIN_INTERFACE_MAP가 기본 클래스의 이름을 두 번째 매개 변수로 사용 하는 이유입니다.
 
 > [!NOTE]
-> 일반적으로 MFC 버전에서 해당 인터페이스의 포함된 특수화를 상속하는 것만으로는 MFC의 OLE 인터페이스 기본 제공 구현의 구현을 다시 사용할 수 없습니다. 포함 하는 `CCmdTarget`파생 개체에 대 한 액세스 권한을 얻기 위해 METHOD_PROLOGUE 매크로를 사용 하는 경우 `CCmdTarget`파생 개체에서 포함 된 개체의 *고정 오프셋* 을 암시 하므로이는 불가능 합니다. 예를 들어 `COleClientItem::XAdviseSink`의 MFC 구현에서 포함된 XMyAdviseSink를 파생시킬 수 없는데, XAdviseSink는 `COleClientItem` 개체의 맨 위로부터 특정 오프셋에 있기 때문입니다.
+> 일반적으로 MFC 버전에서 해당 인터페이스의 포함된 특수화를 상속하는 것만으로는 MFC의 OLE 인터페이스 기본 제공 구현의 구현을 다시 사용할 수 없습니다. 이는 METHOD_PROLOGUE 매크로를 사용 하 여 포함 된 파생 개체에 대 한 액세스 권한을 얻는 것이 `CCmdTarget` 파생 개체에서 포함 된 개체의 *고정 오프셋* 을 의미 하기 때문에 불가능 합니다 `CCmdTarget` . 예를 들어 `COleClientItem::XAdviseSink`의 MFC 구현에서 포함된 XMyAdviseSink를 파생시킬 수 없는데, XAdviseSink는 `COleClientItem` 개체의 맨 위로부터 특정 오프셋에 있기 때문입니다.
 
 > [!NOTE]
 > 그러나 MFC의 기본 동작을 원하는 모든 함수에 대한 MFC 구현에 위임할 수 있습니다. 이 작업은 `COleFrameHook` 클래스(많은 함수에서 m_xOleInPlaceUIWindow에 위임)에서 `IOleInPlaceFrame`(XOleInPlaceFrame)의 MFC 구현으로 수행합니다. 이 디자인은 여러 인터페이스를 구현하는 개체의 런타임 크기를 줄이기 위해 선택되었으며, 이전 섹션에서 사용된 m_pParent 같은 후방 포인터가 필요하지 않습니다.
@@ -365,11 +365,11 @@ CEditPrintObj::CPrintObj에 대한 구현은 CEditPrintObj::CEditObj에 대한 �
 
 MFC는 독립 실행형 COM 개체뿐만 아니라 집계도 지원합니다. 집계 자체는 여기에 설명 하기에 너무 복잡 한 주제입니다. 집계에 대 한 자세한 내용은 [집계](/windows/win32/com/aggregation) 항목을 참조 하세요. 여기서는 프레임워크 및 인터페이스 맵에 기본 제공되는 집계에 대한 지원에 대해 간략하게 설명합니다.
 
-집계를 사용 하는 방법에는 두 가지가 있습니다. (1) 집계를 지 원하는 COM 개체를 사용 하 고, (2) 다른 개체에서 집계할 수 있는 개체를 구현 합니다. 이러한 기능을 "집계 개체 사용" 및 “개체를 집계할 수 있도록 만들기"라고 합니다. MFC는 둘 다를 지원합니다.
+집계는 (1) 집계를 지원하는 COM 개체 사용, (2) 다른 개체에서 집계할 수 있는 개체 구현과 같은 두 가지 방법으로 사용할 수 있습니다. 이러한 기능을 "집계 개체 사용" 및 “개체를 집계할 수 있도록 만들기"라고 합니다. MFC는 둘 다를 지원합니다.
 
 ### <a name="using-an-aggregate-object"></a>집계 개체 사용
 
-집계 개체를 사용하려면 집계를 QueryInterface 메커니즘에 연결할 수 있는 몇 가지 방법이 있어야 합니다. 즉, 집계 개체는 개체의 네이티브 요소인 것처럼 동작해야 합니다. 이렇게 하면 중첩 된 개체가 IID에 매핑되는 INTERFACE_PART 매크로 외에도이를 MFC의 인터페이스 맵 메커니즘에 연결 하는 방법이 `CCmdTarget` 파생 클래스의 일부로 집계 개체를 선언할 수 있습니다. 이렇게 하려면 INTERFACE_AGGREGATE 매크로가 사용 됩니다. 이를 통해 인터페이스 맵 메커니즘에 통합 될 멤버 변수 ( [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 또는 파생 클래스에 대 한 포인터 여야 함)를 지정할 수 있습니다. `CCmdTarget::ExternalQueryInterface`가 호출 될 때 포인터가 NULL이 아닌 경우 프레임워크는 집계 개체의 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 멤버함수를 자동으로 호출하고, .요청된 `IID`가 `CCmdTarget`개체 자체에 의해 지원되는 네이티브 `IID`중 하나가 아닌 경우.
+집계 개체를 사용하려면 집계를 QueryInterface 메커니즘에 연결할 수 있는 몇 가지 방법이 있어야 합니다. 즉, 집계 개체는 개체의 네이티브 요소인 것처럼 동작해야 합니다. 이렇게 하면 중첩 된 개체가 IID에 매핑되는 INTERFACE_PART 매크로 외에도이를 MFC의 인터페이스 맵 메커니즘에 연결 하는 방법이 파생 클래스의 일부로 집계 개체를 선언할 수 있습니다 `CCmdTarget` . 이렇게 하려면 INTERFACE_AGGREGATE 매크로가 사용 됩니다. 이를 통해 인터페이스 맵 메커니즘에 통합 될 멤버 변수 ( [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 또는 파생 클래스에 대 한 포인터 여야 함)를 지정할 수 있습니다. `CCmdTarget::ExternalQueryInterface`가 호출 될 때 포인터가 NULL이 아닌 경우 프레임워크는 집계 개체의 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 멤버함수를 자동으로 호출하고, .요청된 `IID`가 `CCmdTarget`개체 자체에 의해 지원되는 네이티브 `IID`중 하나가 아닌 경우.
 
 #### <a name="to-use-the-interface_aggregate-macro"></a>INTERFACE_AGGREGATE 매크로를 사용하려면
 
@@ -379,7 +379,7 @@ MFC는 독립 실행형 COM 개체뿐만 아니라 집계도 지원합니다. �
 
 3. 특정 지점(일반적으로 `CCmdTarget::OnCreateAggregates` 중)에서 멤버 변수를 NULL이 아닌 다른 값으로 초기화합니다.
 
-예:
+예를 들면 다음과 같습니다.
 
 ```cpp
 class CAggrExample : public CCmdTarget
@@ -517,11 +517,11 @@ END_INTERFACE_PART(localClass)
 
 클래스가 구현 하는 각 인터페이스에 대해 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 쌍이 있어야 합니다. 이러한 매크로는 정의하는 OLE 인터페이스에서 파생된 로컬 클래스뿐만 아니라 해당 클래스의 포함된 멤버 변수를 정의합니다. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)및 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 멤버는 자동으로 선언 됩니다. 구현 되는 인터페이스의 일부인 다른 멤버 함수에 대 한 선언을 포함 해야 합니다. 이러한 선언은 BEGIN_INTERFACE_PART와 END_INTERFACE_PART 매크로 사이에 배치 됩니다.
 
-*Iface* 인수는 `IAdviseSink`, `IPersistStorage` 또는 사용자 지정 인터페이스와 같이 구현 하려는 OLE 인터페이스입니다.
+*Iface* 인수는 `IAdviseSink` , 또는 `IPersistStorage` 사용자 지정 인터페이스와 같이 구현 하려는 OLE 인터페이스입니다.
 
 *Localclass* 인수는 정의 되는 로컬 클래스의 이름입니다. 'X'는 이름 앞에 자동으로 추가됩니다. 이 명명 규칙은 이름이 동일한 전역 클래스와의 충돌을 방지하는 데 사용됩니다. 또한 포함 된 멤버의 이름에는 ' m_x ' 접두사가 접두사로 붙은 *Localclass* 이름과 동일 합니다.
 
-예를 들어:
+예를 들면 다음과 같습니다.
 
 ```cpp
 BEGIN_INTERFACE_PART(MyAdviseSink, IAdviseSink)
@@ -536,7 +536,7 @@ END_INTERFACE_PART(MyAdviseSink)
 IAdviseSink에서 파생된 XMyAdviseSink라는 로컬 클래스와 이 로컬 클래스가 선언되는 클래스의 멤버인 m_xMyAdviseSink.Note를 정의합니다.
 
 > [!NOTE]
-> `STDMETHOD`_로 시작 하는 줄은 기본적으로 OLE2에서 복사 됩니다. H 및가 약간 수정 되었습니다. OLE2에서 복사하면 해결하기 어려운 오류를 줄일 수 있습니다.
+> _로 시작 하는 줄은 `STDMETHOD` 기본적으로 OLE2에서 복사 됩니다. H 및가 약간 수정 되었습니다. OLE2에서 복사하면 해결하기 어려운 오류를 줄일 수 있습니다.
 
 ### <a name="begin_interface_map-and-end_interface_map--macro-descriptions"></a>BEGIN_INTERFACE_MAP 및 END_INTERFACE_MAP — 매크로 설명
 
@@ -585,7 +585,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-개체가 `IOleInPlaceFrameWindow`를 구현 하는 경우 클라이언트는 "가장 많이 파생 된" 인터페이스 (실제로 구현 하는 `IOleInPlaceFrameWindow` 인터페이스) 외에 `IOleUIWindow`, `IOleWindow`또는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)인터페이스 중 하나에서 `QueryInterface` 수 있습니다. 이를 처리 하려면 둘 이상의 INTERFACE_PART 매크로를 사용 하 여 각 및 모든 기본 인터페이스를 `IOleInPlaceFrameWindow` 인터페이스에 매핑할 수 있습니다.
+개체가를 구현 하는 경우 `IOleInPlaceFrameWindow` 클라이언트는 `QueryInterface` `IOleUIWindow` `IOleWindow` "가장 많이 파생 된" 인터페이스 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) `IOleInPlaceFrameWindow` (실제로 구현 하는 인터페이스) 외에, 또는 IUnknown 인터페이스 중 하나에 있을 수 있습니다. 이를 처리 하기 위해 두 개 이상의 INTERFACE_PART 매크로를 사용 하 여 각 및 모든 기본 인터페이스를 인터페이스에 매핑할 수 있습니다 `IOleInPlaceFrameWindow` .
 
 클래스 정의 파일:
 
@@ -623,7 +623,7 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 이 매크로는 클래스에서 집계 개체를 사용하고 있음을 프레임워크에 알리는 데 사용됩니다. BEGIN_INTERFACE_PART와 END_INTERFACE_PART 매크로 사이에 나타나야 합니다. 집계 개체는 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)에서 파생 된 별도의 개체입니다. 집계 및 INTERFACE_AGGREGATE 매크로를 사용 하 여 집계에서 지 원하는 모든 인터페이스가 개체에서 직접 지원 되는 것으로 표시 되도록 할 수 있습니다. *TheAggr* 인수는 단순히 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 에서 (직접 또는 간접적으로) 파생 된 클래스의 멤버 변수 이름입니다. 모든 INTERFACE_AGGREGATE 매크로는 인터페이스 맵에 배치 될 때 INTERFACE_PART 매크로를 따라야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)<br/>
+[번호로 기술 참고 사항](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

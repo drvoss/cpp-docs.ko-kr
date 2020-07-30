@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617504"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204991"
 ---
 # <a name="allocator-class"></a>allocator 클래스
 
@@ -79,7 +79,7 @@ class allocator
 
 **C++11 이상:** 할당자에서 이동 작업을 사용하려면 최소 할당자 인터페이스를 사용하고 복사 생성자, == 및 != 연산자, 할당 및 할당 취소를 구현하세요. 자세한 내용 및 예제는 [할당자](allocators.md)를 참조하세요.
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="constructors"></a>생성자
 
@@ -95,7 +95,7 @@ class allocator
 |[const_reference](#const_reference)|할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.|
 |[difference_type](#difference_type)|할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.|
 |[놓고](#pointer)|할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.|
-|[참조일](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|
+|[reference](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|
 |[size_type](#size_type)|형식의 개체가 할당할 수 있는 시퀀스의 길이를 나타낼 수 있는 부호 없는 정수 형식입니다 `allocator` .|
 |[value_type](#value_type)|할당자에 의해 관리되는 형식입니다.|
 
@@ -131,7 +131,7 @@ const_pointer address(const_reference val) const;
 *짧은*\
 주소를 검색하는 개체의 const 또는 nonconst 값입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 각각 const 또는 nonconst 값으로 발견된 개체에 대한 const 또는 nonconst 포인터입니다.
 
@@ -199,7 +199,7 @@ pointer allocate(size_type count, const void* _Hint);
 *_Hint*\
 할당자 개체를 지원할 수 있는 const 포인터는 요청 이전에 할당된 개체의 주소를 찾음으로써 스토리지의 요청을 충족시킵니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 할당된 개체에 대한 포인터이거나, 메모리가 할당되지 않은 경우 null입니다.
 
@@ -468,7 +468,7 @@ template <class _Other>
 
 #### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 **new** (( `void` \* ) `ptr` ) **형식** ()과 동일 `val` 합니다.
+첫 번째 멤버 함수는와 동일 `new ((void *) ptr) Type(val)` 합니다.
 
 #### <a name="example"></a>예제
 
@@ -678,7 +678,7 @@ The difference between the integer's addresses is: 8.
 size_type max_size() const;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 할당할 수 있는 요소의 수입니다.
 
@@ -753,7 +753,7 @@ template <class Other>
 *오른쪽*\
 다른 할당자 개체에 할당할 할당자 개체입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 할당자 개체에 대한 참조
 
@@ -874,7 +874,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 이 구조체는 구현 중인 컨테이너의 요소 형식과는 다른 형식의 메모리를 할당하는 데 유용합니다.
 
-멤버 클래스 템플릿은 다른 형식을 정의 합니다. 형식 이름 할당자를 제공 하는 경우 형식 이름 **할당자**를 제공 하는 것이 유일한 목적입니다 \<_ **Other**> **allocator** \< **Type**> .
+멤버 클래스 템플릿은 다른 형식을 정의 합니다. 형식 이름을 지정 하 여 형식 이름을 제공 하는 것이 유일한 목적입니다 `allocator<_Other>` `allocator<Type>` .
 
 예를 들어 형식의 할당자 개체가 지정 된 경우 `al` `A` 식을 사용 하 여 형식의 개체를 할당할 수 있습니다 `_Other` .
 

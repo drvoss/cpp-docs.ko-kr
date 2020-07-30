@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212451"
 ---
 # <a name="cfileexception-class"></a>CFileException 클래스
 
@@ -127,7 +127,7 @@ static int PASCAL ErrnoToException(int nErrno);
 *nErrno*<br/>
 런타임 include 파일 ERRNO에 정의 된 정수 오류 코드입니다. 넣기.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 런타임 라이브러리 오류 값에 해당 하는 열거형 값입니다.
 
@@ -161,7 +161,7 @@ virtual BOOL GetErrorMessage(
 *pnHelpContext*<br/>
 [in, out] 도움말 컨텍스트 ID를 받는 부호 없는 정수에 대 한 포인터입니다. 인 경우 `NULL` ID가 반환 되지 않습니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -185,9 +185,9 @@ int m_cause;
 
 ### <a name="remarks"></a>설명
 
-이 데이터 멤버는 **int**형식의 공용 변수입니다. 열거자와 해당 의미는 다음과 같습니다.
+이 데이터 멤버는 형식의 공용 변수입니다 **`int`** . 아래에 열거자와 해당 의미가 나와 있습니다.
 
-| 오류 | 값 및 의미 |
+| Error | 값 및 의미 |
 |--|--|
 | `CFileException::none` |    0: 오류가 발생하지 않았습니다. |
 | `CFileException::genericException` |    1: 지정되지 않은 오류가 발생했습니다. |
@@ -248,7 +248,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 *lOsError*<br/>
 운영 체제 관련 오류 코드입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 지정 된 운영 체제 오류 값에 해당 하는 열거 값입니다.
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218613"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -82,9 +82,9 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|반환 값|*Tmdest* 의 값|잘못된 매개 변수 처리기 호출|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**N**|any|**EINVAL**|수정 안 됨|예|
-|Not **NULL** (유효한 메모리를 가리킴)|**N**|**EINVAL**|모든 필드가 -1로 설정됨|예|
-|Not **NULL** (유효한 메모리를 가리킴)|0 보다 작거나 **_MAX__TIME64_T** 보다 큼|**EINVAL**|모든 필드가 -1로 설정됨|아니요|
+|**NULL**|any|**EINVAL**|수정 안 됨|예|
+|Not **NULL** (유효한 메모리를 가리킴)|**NULL**|**EINVAL**|모든 필드가 -1로 설정됨|예|
+|Not **NULL** (유효한 메모리를 가리킴)|0 보다 작거나 **_MAX__TIME64_T** 보다 큼|**EINVAL**|모든 필드가 -1로 설정됨|예|
 
 처음 두 오류 조건의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수가 호출됩니다. 계속 해 서 실행 하도록 허용한 경우 이러한 함수는 **errno** 를 **EINVAL** 로 설정 하 고 **EINVAL**를 반환 합니다.
 
@@ -101,7 +101,7 @@ errno_t _localtime64_s(
 
 **localtime_s** 은 **_localtime64_s**으로 계산 되는 인라인 함수 이며 **time_t** **__time64_t**와 동일 합니다. 컴파일러가 **time_t** 이전 32 비트 **time_t**으로 해석 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **localtime_s** **_localtime32_s**으로 평가 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
 
-구조체 형식 [tm](../../c-runtime-library/standard-types.md) 의 필드에는 각각 **int**인 다음 값이 저장 됩니다.
+구조체 형식 [tm](../../c-runtime-library/standard-types.md) 의 필드는 다음 값을 저장 하며, 각 값은입니다 **`int`** .
 
 |필드|설명|
 |-|-|
@@ -123,7 +123,7 @@ errno_t _localtime64_s(
 
 |루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> 또는 \<시간>|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> 또는 \<time.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -180,7 +180,7 @@ int main( void )
 Fri Apr 25 01:19:27 PM
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

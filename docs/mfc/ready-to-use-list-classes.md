@@ -8,26 +8,26 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56c9b2a2152fb3723ec5c400c59bb5885e734e24
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338521"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228559"
 ---
 # <a name="ready-to-use-list-classes"></a>바로 사용할 수 있는 목록 클래스
 
-다음 클래스는 즉시 사용할 수 있는 목록 클래스입니다.
+다음 클래스는 바로 사용할 수 있는 목록 클래스입니다.
 
 [CObList](../mfc/reference/coblist-class.md)<br/>
-클래스의 개체에 대 한 포인터를 저장 `CObject` 에서 파생 된 클래스의 개체를 `CObject` 는 링크 목록입니다.
+클래스의 개체에 대 한 포인터 `CObject` 또는 연결 된 목록에서 파생 된 클래스의 개체에 대 한 포인터를 저장 `CObject` 합니다.
 
 [CPtrList](../mfc/reference/cptrlist-class.md)<br/>
-에 대 한 포인터를 저장 **void** (제네릭 포인터)는 링크 목록에서입니다.
+**`void`** 연결 된 목록의 (제네릭 포인터)에 대 한 포인터를 저장 합니다.
 
 [CStringList](../mfc/reference/cstringlist-class.md)<br/>
-저장소 `CString` 연결 된 목록의 개체입니다.
+`CString`연결 된 목록에 개체를 저장 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [클래스 개요](../mfc/class-library-overview.md)

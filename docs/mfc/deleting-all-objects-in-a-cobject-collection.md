@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615903"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225074"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject 컬렉션의 모든 개체 삭제
 
@@ -38,7 +38,7 @@ ms.locfileid: "84615903"
 
 1. `GetHeadPosition`및 `GetNext` 를 사용 하 여 목록을 반복 합니다.
 
-1. 반복에서 발생 한 각 개체를 삭제 하려면 **delete** 연산자를 사용 합니다.
+1. **`delete`** 반복에서 발생 한 각 개체를 삭제 하려면 연산자를 사용 합니다.
 
 1. 함수를 호출 `RemoveAll` 하 여 해당 요소와 연결 된 개체가 삭제 된 후 목록에서 모든 요소를 제거 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "84615903"
 
 1. `GetSize`및 정수 인덱스 값을 사용 하 여 배열 전체를 반복 합니다.
 
-1. 반복에서 발생 하는 각 요소를 삭제 하려면 **delete** 연산자를 사용 합니다.
+1. **`delete`** 반복에서 발생 하는 각 요소를 삭제 하려면 연산자를 사용 합니다.
 
 1. 함수를 호출 `RemoveAll` 하 여 배열의 모든 요소를 삭제 한 후 제거 합니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "84615903"
 
 1. `GetStartPosition`및 `GetNextAssoc` 를 사용 하 여 배열을 반복 합니다.
 
-1. **Delete** 연산자를 사용 하 여 반복에서 발생 하는 각 지도 요소에 대 한 키 및/또는 값을 삭제 합니다.
+1. **`delete`** 반복에서 발생 하는 각 지도 요소에 대 한 키 및/또는 값을 삭제 하려면 연산자를 사용 합니다.
 
 1. 함수를 호출 `RemoveAll` 하 여 맵에서 삭제 된 모든 요소를 제거 합니다.
 

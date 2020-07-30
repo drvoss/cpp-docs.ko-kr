@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e66b3bd9f5e8058a4724746ba9ec5abd14cdae3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222467"
 ---
 # <a name="ios_base-class"></a>ios_base 클래스
 
@@ -121,21 +121,21 @@ ms.locfileid: "79424694"
 
 Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 정보를 저장합니다.
 
-- [`fmtflags`](#fmtflags)형식의 개체에 있는 형식 플래그입니다.
+- 형식의 개체에 있는 형식 플래그 [`fmtflags`](#fmtflags) 입니다.
 
-- [`iostate`](#iostate)형식의 개체에 있는 예외 마스크입니다.
+- 형식의 개체에 있는 예외 마스크 [`iostate`](#iostate) 입니다.
 
-- **Int**형식의 개체에 있는 필드 너비입니다.
+- 형식의 개체에 있는 필드 너비 **`int`** 입니다.
 
-- **Int**형식의 개체에 있는 표시 전체 자릿수입니다.
+- 형식의 개체에 있는 표시 전체 자릿수 **`int`** 입니다.
 
-- `locale`형식의 개체에 있는 로캘 개체입니다.
+- 형식의 개체에 있는 로캘 개체 `locale` 입니다.
 
-- **Long** 및 **void** 포인터 형식의 요소를 포함 하는 두 개의 확장 가능한 배열.
+- 형식의 요소와 포인터가 있는 두 개의 확장 가능한 배열 **`long`** **`void`**
 
-Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)형식의 개체 및 콜백 스택도 저장 합니다.
+클래스 ios_base의 개체는 스트림 상태 정보, 형식의 개체 [`iostate`](#iostate) 및 콜백 스택도 저장 합니다.
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="constructors"></a>생성자
 
@@ -170,46 +170,46 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 |[basefield](#fmtflags)|`dec` &#124; `hex` &#124; `oct`로 정의된 비트 마스크입니다.|
 |[beg](#seekdir)|시퀀스의 시작을 기준으로 한 검색을 지정합니다.|
 |[binary](#openmode)|파일을 텍스트 스트림이 아니라 이진 스트림으로 읽도록 지정합니다.|
-|[boolalpha](#fmtflags)|숫자 값이 아닌 이름 (예: **true** 및 **false**)으로 **bool** 형식의 개체를 삽입 또는 추출 하도록 지정 합니다.|
+|[boolalpha](#fmtflags)|**`bool`** 숫자 값이 아닌 이름 (예: 및)으로 형식의 개체를 삽입 또는 추출 하도록 지정 합니다 **`true`** **`false`** .|
 |[cur](#seekdir)|시퀀스 내에서 현재 위치를 기준으로 하는 검색을 지정합니다.|
 |[dec](#fmtflags)|10진수 형식의 정수 값을 삽입 또는 추출하도록 지정합니다.|
-|[end](#seekdir)|시퀀스의 끝을 기준으로 한 검색을 지정합니다.|
+|[종단](#seekdir)|시퀀스의 끝을 기준으로 한 검색을 지정합니다.|
 |[eofbit](#iostate)|스트림에서 추출할 때 파일 끝을 기록합니다.|
 |[failbit](#iostate)|스트림에서 유효한 필드를 추출하지 못하는 경우를 기록합니다.|
-|[고정](#fmtflags)|고정 소수점 형식(지수 필드 없음)의 부동 소수점 값을 삽입하도록 지정합니다.|
+|[fixed](#fmtflags)|고정 소수점 형식(지수 필드 없음)의 부동 소수점 값을 삽입하도록 지정합니다.|
 |[floatfield](#fmtflags)|`fixed` &#124; `scientific`으로 정의된 비트 마스크입니다.|
 |[goodbit](#iostate)|모든 상태 비트를 지웁니다.|
 |[hex](#fmtflags)|16진수 형식의 정수 값을 삽입 또는 추출하도록 지정합니다.|
 |[in](#openmode)|스트림에서 추출하도록 지정합니다.|
 |[internal](#fmtflags)|생성된 숫자 필드의 내부에 있는 점에서 채우기 문자를 삽입하여 필드 너비를 채웁니다.|
-|[left](#fmtflags)|왼쪽 맞춤을 지정합니다.|
-|[oct](#fmtflags)|8진수 형식의 정수 값을 삽입 또는 추출하도록 지정합니다.|
+|[비어](#fmtflags)|왼쪽 맞춤을 지정합니다.|
+|[진수로](#fmtflags)|8진수 형식의 정수 값을 삽입 또는 추출하도록 지정합니다.|
 |[out](#openmode)|스트림에 삽입하도록 지정합니다.|
-|[right](#fmtflags)|오른쪽 맞춤을 지정합니다.|
-|[scientific](#fmtflags)|공학용 형식(지수 필드 사용)의 부동 소수점 값을 삽입하도록 지정합니다.|
+|[오른쪽](#fmtflags)|오른쪽 맞춤을 지정합니다.|
+|[과학](#fmtflags)|공학용 형식(지수 필드 사용)의 부동 소수점 값을 삽입하도록 지정합니다.|
 |[showbase](#fmtflags)|생성된 정수 필드의 기수를 표시하는 접두사를 삽입하도록 지정합니다.|
 |[showpoint](#fmtflags)|생성된 부동 소수점 필드에서 소수점을 무조건 삽입하도록 지정합니다.|
 |[showpos](#fmtflags)|생성된 음수가 아닌 숫자 필드에 더하기 기호를 삽입하도록 지정합니다.|
 |[skipws](#fmtflags)|특정 추출 전에 선행 공백은 건너뛰도록 지정합니다.|
 |[trunc](#openmode)|해당 제어 개체가 만들어지면 기존 파일의 콘텐츠를 삭제하도록 지정합니다.|
 |[unitbuf](#fmtflags)|각 삽입 후 출력이 플러시되도록 합니다.|
-|[uppercase](#fmtflags)|특정 삽입의 소문자에 해당하는 대문자를 삽입하도록 지정합니다.|
+|[바꾸는](#fmtflags)|특정 삽입의 소문자에 해당하는 대문자를 삽입하도록 지정합니다.|
 
 ### <a name="functions"></a>Functions
 
 |||
 |-|-|
-|[failure](#failure)|멤버 클래스는 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)에서 멤버 함수 [clear](../standard-library/basic-ios-class.md#clear) 에 의해 throw 되는 모든 예외에 대 한 기본 클래스로 사용 됩니다.|
+|[실패로](#failure)|멤버 클래스는 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)에서 멤버 함수 [clear](../standard-library/basic-ios-class.md#clear) 에 의해 throw 되는 모든 예외에 대 한 기본 클래스로 사용 됩니다.|
 |[flags](#flags)|현재 플래그 설정을 설정하거나 반환합니다.|
 |[getloc](#getloc)|저장된 로캘 개체를 반환합니다.|
 |[imbue](#imbue)|로캘을 변경합니다.|
-|[Init](#init)|생성 될 때 표준 `iostream` 개체를 만듭니다.|
+|[Init](#init)|`iostream`생성 될 때 표준 개체를 만듭니다.|
 |[iword](#iword)|`iword`로 저장할 수 있는 값을 할당합니다.|
 |[전체 자릿수](#precision)|부동 소수점 숫자에 표시할 자릿수를 지정합니다.|
 |[pword](#pword)|`pword`로 저장할 수 있는 값을 할당합니다.|
 |[register_callback](#register_callback)|콜백 함수를 지정합니다.|
 |[setf](#setf)|지정된 플래그를 설정합니다.|
-|[sync_with_stdio](#sync_with_stdio)|`iostream` 및 C 런타임 라이브러리 작업이 소스 코드에 표시 되는 순서 대로 발생 하는지 확인 합니다.|
+|[sync_with_stdio](#sync_with_stdio)|`iostream`및 C 런타임 라이브러리 작업이 소스 코드에 표시 되는 순서 대로 발생 하는지 확인 합니다.|
 |[unsetf](#unsetf)|지정된 플래그가 해제되도록 합니다.|
 |[width](#width)|출력 스트림의 길이를 설정합니다.|
 |[xalloc](#xalloc)|변수가 스트림에 포함된다고 지정합니다.|
@@ -218,15 +218,15 @@ Ios_base 클래스의 개체는 스트림 상태 정보, [`iostate`](#iostate)�
 
 |||
 |-|-|
-|[operator=](#op_eq)|`ios_base` 개체에 사용할 대입 연산자입니다.|
+|[연산자 =](#op_eq)|`ios_base` 개체에 사용할 대입 연산자입니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<ios >
+**헤더:**\<ios>
 
 **네임스페이스:** std
 
-## <a name="event"></a>이벤트
+## <a name="event"></a><a name="event"></a> 이벤트
 
 이벤트 유형을 지정합니다.
 
@@ -241,17 +241,17 @@ enum event {
 
 이 형식은 [register_callback](#register_callback)에 등록된 함수의 인수로 사용되는 콜백 이벤트를 저장할 수 있는 개체에 대해 설명하는 열거 형식입니다. 고유 이벤트 값은 다음과 같습니다.
 
-- `copyfmt_event`하 여 [copyfmt](../standard-library/basic-ios-class.md#copyfmt)에 대 한 호출의 끝에서 발생 하는 콜백을 식별 합니다 .이는 [예외 마스크](../standard-library/ios-base-class.md) 를 복사 하기 직전입니다.
+- `copyfmt_event`- [copyfmt](../standard-library/basic-ios-class.md#copyfmt)호출의 끝에서 발생 하는 콜백을 식별 하기 위해 [예외 마스크](../standard-library/ios-base-class.md) 를 복사 하기 바로 전에 발생 합니다.
 
-- `erase_event`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)에 대 한 호출이 시작 될 때 또는 **이\*** 에 대 한 소멸자 호출의 시작 부분에서 발생 하는 콜백을 식별 합니다.
+- `erase_event`- [copyfmt](../standard-library/basic-ios-class.md#copyfmt)호출이 시작 될 때 또는 ** \* 이**에 대 한 소멸자 호출이 시작 될 때 발생 하는 콜백을 식별 합니다.
 
-- `imbue_event`는 함수가 반환 되기 직전에 [imbue](#imbue)에 대 한 호출의 끝에서 발생 하는 콜백을 식별 합니다.
+- `imbue_event`-함수가 반환 되기 직전에 [imbue](#imbue)에 대 한 호출의 끝에서 발생 하는 콜백을 식별 합니다.
 
 ### <a name="example"></a>예제
 
 예제는 [register_callback](#register_callback)을 참조하세요.
 
-## <a name="event_callback"></a>event_callback
+## <a name="event_callback"></a><a name="event_callback"></a>event_callback
 
 [register_call](#register_callback)에 전달된 함수에 대해 설명합니다.
 
@@ -279,9 +279,9 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="example"></a>예제
 
-[을 사용하는 예제는 ](#register_callback)register_call`event_callback`을 참조하세요.
+`event_callback`을 사용하는 예제는 [register_call](#register_callback)을 참조하세요.
 
-## <a name="failure"></a>실패로
+## <a name="failure"></a><a name="failure"></a>실패로
 
 `failure` 클래스는 예외로 throw된 모든 개체의 형식에 대한 기본 클래스를 `iostreams` 라이브러리의 함수별로 정의하여 스트림 버퍼 작업 중 검색된 오류를 보고합니다.
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>flags
+## <a name="flags"></a><a name="flags"></a>flags
 
 현재 플래그 설정을 설정하거나 반환합니다.
 
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>fmtflags
+## <a name="fmtflags"></a><a name="fmtflags"></a>fmtflags
 
 출력의 모양을 지정하는 상수입니다.
 
@@ -423,13 +423,13 @@ public:
 
 - `showbase` - 생성된 정수 필드의 기수를 표시하는 접두사를 삽입합니다.
 
-- `internal` - 생성된 숫자 필드의 내부에 있는 점에서 채우기 문자를 삽입하여 필요에 따라 필드 너비를 채웁니다. (필드 너비 설정에 대 한 자세한 내용은 [`setw`](../standard-library/iomanip-functions.md#setw))를 참조 하세요.
+- `internal` - 생성된 숫자 필드의 내부에 있는 점에서 채우기 문자를 삽입하여 필요에 따라 필드 너비를 채웁니다. 필드 너비 설정에 대 한 자세한 내용은을 참조 하십시오 [`setw`](../standard-library/iomanip-functions.md#setw) .
 
 - `left` - 생성된 필드(왼쪽 맞춤)의 끝 부분에서 채우기 문자를 삽입하여 필요에 따라 필드 너비를 채웁니다.
 
 - `right` - 생성된 필드(오른쪽 맞춤)의 시작 부분에서 채우기 문자를 삽입하여 필요에 따라 필드 너비를 채웁니다.
 
-- `boolalpha`: **bool** 형식의 개체를 숫자 값이 아닌 **true** 및 **false**와 같은 이름으로 삽입 하거나 추출 합니다.
+- `boolalpha`- **`bool`** 숫자 값이 아닌 이름 (예: 및)으로 형식의 개체를 삽입 하거나 추출 **`true`** **`false`** 합니다.
 
 - `fixed` - 고정 소수점 형식(지수 필드 없음)의 부동 소수점 값을 삽입합니다.
 
@@ -453,9 +453,9 @@ public:
 
 - `floatfield` - `fixed` &#124; `scientific`으로 정의됨
 
-이러한 형식 플래그를 수정하는 함수의 예는 [\<iomanip>](../standard-library/iomanip.md)를 참조하세요.
+이러한 형식 플래그를 수정 하는 함수의 예는를 참조 하십시오 [\<iomanip>](../standard-library/iomanip.md) .
 
-## <a name="getloc"></a>getloc
+## <a name="getloc"></a><a name="getloc"></a>getloc
 
 저장된 로캘 개체를 반환합니다.
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>imbue
+## <a name="imbue"></a><a name="imbue"></a>imbue
 
 로캘을 변경합니다.
 
@@ -504,15 +504,15 @@ locale imbue(const locale& _Loc);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 로캘 개체에 *_Loc* 을 저장 한 다음 콜백 이벤트와 `imbue_event`를 보고 합니다. 이전에 저장된 값을 반환합니다.
+멤버 함수는 로캘 개체에 *_Loc* 을 저장 한 다음 콜백 이벤트와를 보고 `imbue_event` 합니다. 이전에 저장된 값을 반환합니다.
 
 ### <a name="example"></a>예제
 
 샘플은 [basic_ios:: imbue](../standard-library/basic-ios-class.md#imbue)를 참조하세요.
 
-## <a name="init"></a>Cloud-init
+## <a name="init"></a><a name="init"></a>Cloud-init
 
-생성 될 때 표준 `iostream` 개체를 만듭니다.
+`iostream`생성 될 때 표준 개체를 만듭니다.
 
 ```cpp
 class Init { };
@@ -520,9 +520,9 @@ class Init { };
 
 ### <a name="remarks"></a>설명
 
-중첩 된 클래스는 임의의 정적 개체에 대 한 생성자를 실행 하기 전에도 표준 `iostream` 개체가 올바르게 생성 되도록 생성 하는 개체를 설명 합니다.
+중첩 된 클래스는 `iostream` 임의 정적 개체에 대 한 생성자를 실행 하기 전에도 생성으로 표준 개체가 올바르게 생성 되도록 하는 개체를 설명 합니다.
 
-## <a name="ios_base"></a>ios_base
+## <a name="ios_base"></a><a name="ios_base"></a>ios_base
 
 ios_base 개체를 생성합니다.
 
@@ -532,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>설명
 
-(보호된) 생성자는 아무 작업도 수행하지 않습니다. 나중에 `basic_ios::`[init](../standard-library/basic-ios-class.md#init) 를 호출할 때 개체를 안전 하 게 제거 하려면 먼저 개체를 초기화 해야 합니다. 따라서 클래스 ios_base에 대 한 안전 사용은 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)의 기본 클래스로만 사용 됩니다.
+(보호된) 생성자는 아무 작업도 수행하지 않습니다. Init를 나중에 호출 하는 경우 `basic_ios::` [init](../standard-library/basic-ios-class.md#init) 개체를 초기화 해야 안전 하 게 제거할 수 있습니다. 따라서 클래스 ios_base에 대 한 안전 사용은 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)의 기본 클래스로만 사용 됩니다.
 
-## <a name="iostate"></a>iostate
+## <a name="iostate"></a><a name="iostate"></a>iostate
 
 스트림의 상태를 설명하는 상수의 형식입니다.
 
@@ -560,9 +560,9 @@ public:
 
 - `failbit` - 스트림에서 유효한 필드를 추출하지 못하는 경우를 기록합니다.
 
-또한 `goodbit`에는 앞에서 언급 한 비트가 설정 되지 않은 (`goodbit` 0이 보장 됨)에도 유용한 값이 있습니다.
+또한 `goodbit` 앞에서 언급 한 비트가 설정 되지 않은 ( `goodbit` 0으로 보장 됨)에도 유용한 값이 있습니다.
 
-## <a name="iword"></a>iword
+## <a name="iword"></a><a name="iword"></a>iword
 
 `iword`로 저장할 수 있는 값을 할당합니다.
 
@@ -577,17 +577,17 @@ long& iword(int idx);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 **long**형식의 요소를 사용 하 여 확장 가능한 배열의 요소 *idx* 에 대 한 참조를 반환 합니다. 모든 요소는 효과적으로 존재하며 처음에는 0 값을 저장합니다. 반환 된 참조는 개체에 대 한 `iword`를 다음에 호출한 후, `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)에 대 한 호출에 의해 개체가 변경 된 후 또는 개체가 삭제 된 후에는 유효 하지 않습니다.
+멤버 함수는 형식의 요소를 사용 하 여 확장 가능한 배열의 요소 *idx* 에 대 한 참조를 반환 합니다 **`long`** . 모든 요소는 효과적으로 존재하며 처음에는 0 값을 저장합니다. 반환 된 참조는 개체에 대 한 다음 호출 후에는 개체를 `iword` copyfmt에 대 한 호출로 변경 `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)하거나 개체가 제거 된 후에 사용할 수 없습니다.
 
-*Idx* 가 음수 이거나 요소에 대해 고유한 저장소를 사용할 수 없는 경우 함수는`(badbit)` [`setstate`](../standard-library/basic-ios-class.md#setstate) 를 호출 하 고 고유 하지 않을 수 있는 참조를 반환 합니다.
+*Idx* 가 음수 이거나 요소에 대해 고유한 저장소를 사용할 수 없는 경우 함수는 [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` 고유 하지 않을 수 있는 참조를 호출 하 고 반환 합니다.
 
-`ios_base`형식의 모든 개체에서 사용할 고유 인덱스를 얻으려면 [`xalloc`](#xalloc)를 호출 합니다.
+형식의 모든 개체에서 사용할 고유 인덱스를 가져오려면를 `ios_base` 호출 [`xalloc`](#xalloc) 합니다.
 
 ### <a name="example"></a>예제
 
-`iword`사용 방법에 대 한 샘플은 [`xalloc`](#xalloc) 를 참조 하세요.
+을 [`xalloc`](#xalloc) 사용 하는 방법에 대 한 샘플은를 참조 하세요 `iword` .
 
-## <a name="openmode"></a>openmode
+## <a name="openmode"></a><a name="openmode"></a>openmode
 
 스트림과 상호 작용하는 방법을 설명합니다.
 
@@ -605,19 +605,19 @@ public:
 
 ### <a name="remarks"></a>설명
 
-형식은 여러 `iostream` 개체에 대해 여는 모드를 저장할 수 있는 개체를 설명 하는 `bitmask type`입니다. 고유 플래그 값(요소)은 다음과 같습니다.
+형식은 `bitmask type` 여러 개체의 여는 모드를 저장할 수 있는 개체를 설명 하는입니다 `iostream` . 고유 플래그 값(요소)은 다음과 같습니다.
 
-- 각 삽입 전에 스트림의 끝을 검색 하려면 `app`합니다.
+- `app`-각 삽입 전에 스트림의 끝을 검색 합니다.
 
-- 를 `ate`하 여 해당 제어 개체를 처음 만들 때 스트림의 끝을 검색 합니다.
+- `ate`-해당 제어 개체를 처음 만들 때 스트림의 끝을 검색 합니다.
 
-- `binary`파일을 텍스트 스트림이 아니라 이진 스트림으로 읽습니다.
+- `binary`-텍스트 스트림이 아니라 이진 스트림으로 파일을 읽습니다.
 
-- 스트림에서 추출을 허용 하려면 `in`합니다.
+- `in`-스트림에서 추출을 허용 합니다.
 
-- `out`하 여 스트림에 삽입을 허용 합니다.
+- `out`-스트림에 삽입을 허용 합니다.
 
-- `trunc`하 여 해당 제어 개체가 생성 될 때 기존 파일의 내용을 삭제 합니다.
+- `trunc`-제어 개체가 생성 될 때 기존 파일의 내용을 삭제 합니다.
 
 ### <a name="example"></a>예제
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a>연산자 =
 
 ios_base 개체에 대한 대입 연산자입니다.
 
@@ -656,11 +656,11 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="remarks"></a>설명
 
-연산자는 저장된 서식 정보를 복사하여 확장 가능한 배열의 새 복사본을 만듭니다. 그런 다음 **\*this**를 반환합니다. 콜백 스택은 복사되지 않습니다.
+연산자는 저장된 서식 정보를 복사하여 확장 가능한 배열의 새 복사본을 만듭니다. 그런 다음 ** \* 이**를 반환 합니다. 콜백 스택은 복사되지 않습니다.
 
 이 연산자는 `ios_base`에서 파생된 클래스에서만 사용됩니다.
 
-## <a name="precision"></a>소수
+## <a name="precision"></a><a name="precision"></a>소수
 
 부동 소수점 숫자에 표시할 자릿수를 지정합니다.
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>pword
+## <a name="pword"></a><a name="pword"></a>pword
 
 `pword`로 저장할 수 있는 값을 할당합니다.
 
@@ -716,22 +716,22 @@ void *& pword(int index);
 
 ### <a name="parameters"></a>매개 변수
 
-*인덱스*\
+*인덱싱할*\
 `pword`로 저장할 값의 인덱스입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 **void** 포인터 형식의 요소를 사용 하 여 확장 가능한 배열의 요소 *인덱스* 에 대 한 참조를 반환 합니다. 모든 요소는 효과적으로 존재하며 처음에는 null 포인터를 저장합니다. 반환 된 참조는 개체에 대 한 `pword`를 다음에 호출한 후, `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)에 대 한 호출에 의해 개체가 변경 된 후 또는 개체가 삭제 된 후에는 유효 하지 않습니다.
+멤버 함수는 포인터 형식의 요소를 사용 하 여 확장 가능한 배열의 요소 *인덱스* 에 대 한 참조를 반환 합니다 **`void`** . 모든 요소는 효과적으로 존재하며 처음에는 null 포인터를 저장합니다. 반환 된 참조는 개체에 대 한 다음 호출 후에는 개체를 `pword` copyfmt에 대 한 호출로 변경 `basic_ios::` [copyfmt](../standard-library/basic-ios-class.md#copyfmt)하거나 개체가 제거 된 후에 사용할 수 없습니다.
 
-*Index* 가 음수 이거나 요소에 대해 고유한 저장소를 사용할 수 없는 경우 함수는`(badbit)` [`setstate`](../standard-library/basic-ios-class.md#setstate) 를 호출 하 고 고유 하지 않을 수 있는 참조를 반환 합니다.
+*Index* 가 음수 이거나 요소에 대해 고유한 저장소를 사용할 수 없는 경우 함수는 [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` 고유 하지 않을 수 있는 참조를 호출 하 고 반환 합니다.
 
-`ios_base`형식의 모든 개체에서 사용할 고유 인덱스를 얻으려면 [`xalloc`](#xalloc)를 호출 합니다.
+형식의 모든 개체에서 사용할 고유 인덱스를 가져오려면를 `ios_base` 호출 [`xalloc`](#xalloc) 합니다.
 
 ### <a name="example"></a>예제
 
-`pword`사용에 대 한 예제는 [`xalloc`](#xalloc) 를 참조 하세요.
+`pword` 사용 예제는 [`xalloc`](#xalloc)를 참조하세요.
 
-## <a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a>register_callback
 
 콜백 함수를 지정합니다.
 
@@ -750,7 +750,7 @@ void register_callback(
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `{pfn, idx}` 쌍을 저장 된 콜백 스택 [콜백](../standard-library/ios-base-class.md)스택으로 푸시합니다. 콜백 이벤트 **ev** 를 보고 하면 함수가 `(*pfn)(ev, *this, idx)`식에 의해 레지스트리의 역순으로 호출 됩니다.
+멤버 함수는 쌍을 `{pfn, idx}` 저장 된 콜백 스택 [콜백 스택으로](../standard-library/ios-base-class.md)푸시합니다. 콜백 이벤트 **ev** 를 보고 하면 함수는 레지스트리의 역순으로 식에 의해 호출 됩니다 `(*pfn)(ev, *this, idx)` .
 
 ### <a name="example"></a>예제
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a>seekdir
+## <a name="seekdir"></a><a name="seekdir"></a>seekdir
 
 오프셋 작업에 대한 시작 지점을 지정합니다.
 
@@ -858,13 +858,13 @@ namespace std {
 
 ### <a name="remarks"></a>설명
 
-형식은 여러 `iostream` 클래스의 멤버 함수에 대 한 인수로 사용 되는 검색 모드를 저장할 수 있는 개체를 설명 하는 열거형 형식입니다. 고유 플래그 값은 다음과 같습니다.
+형식은 여러 클래스의 멤버 함수에 대 한 인수로 사용 되는 검색 모드를 저장할 수 있는 개체를 설명 하는 열거형 형식입니다 `iostream` . 고유 플래그 값은 다음과 같습니다.
 
-- 시퀀스의 시작 (배열, 스트림 또는 파일)을 기준으로 검색 (현재 읽기 또는 쓰기 위치 변경)을 `beg`합니다.
+- `beg`-시퀀스의 시작 (배열, 스트림 또는 파일)을 기준으로 검색 (현재 읽기 또는 쓰기 위치 변경) 합니다.
 
-- 시퀀스 내에서 현재 위치를 기준으로 검색 하려면 `cur`합니다.
+- `cur`-시퀀스 내에서 현재 위치를 기준으로 검색 합니다.
 
-- 시퀀스의 끝을 기준으로 검색 하려면 `end`합니다.
+- `end`-시퀀스의 끝을 기준으로 검색 합니다.
 
 ### <a name="example"></a>예제
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a>setf
+## <a name="setf"></a><a name="setf"></a>setf
 
 지정된 플래그를 설정합니다.
 
@@ -916,7 +916,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는`(_Mask | _Flags)` (선택한 비트 설정) [플래그](#flags) 를 효과적으로 호출한 다음 이전 형식 플래그를 반환 합니다. 두 번째 멤버 함수는 `flags(_Mask & fmtfl, flags & ~_Mask)`를 효과적으로 호출한 다음 (마스크에서 선택한 비트를 대체) 이전 형식 플래그를 반환 합니다.
+첫 번째 멤버 함수는 [플래그](#flags) `(_Mask | _Flags)` (선택한 비트 설정)를 효과적으로 호출한 다음 이전 형식 플래그를 반환 합니다. 두 번째 멤버 함수는를 효과적으로 호출한 `flags(_Mask & fmtfl, flags & ~_Mask)` 다음, 마스크에서 선택한 비트를 바꾸고, 이전 형식 플래그를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -942,9 +942,9 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a>sync_with_stdio
+## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a>sync_with_stdio
 
-`iostream` 및 C 런타임 라이브러리 작업이 소스 코드에 표시 되는 순서 대로 발생 하는지 확인 합니다.
+`iostream`및 C 런타임 라이브러리 작업이 소스 코드에 표시 되는 순서 대로 발생 하는지 확인 합니다.
 
 ```cpp
 static bool sync_with_stdio(
@@ -955,7 +955,7 @@ static bool sync_with_stdio(
 ### <a name="parameters"></a>매개 변수
 
 *_Sync*\
-모든 스트림이 `stdio`와 동기화 되어 있는지 여부를 나타냅니다.
+모든 스트림이와 동기화 되어 있는지 여부를 나타냅니다 `stdio` .
 
 ### <a name="return-value"></a>Return Value
 
@@ -963,9 +963,9 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>설명
 
-정적 멤버 함수는 처음에 **true**인 `stdio` sync 플래그를 저장 합니다. **True로 설정**하면이 플래그는 동일한 파일의 작업이 [`iostreams`](../standard-library/iostreams-conventions.md) 함수와 C++ 표준 라이브러리에 정의 된 함수 사이에서 제대로 동기화 되도록 합니다. 그렇지 않으면 동기화가 보장 될 수도 있고 그렇지 않을 수도 있지만 성능이 향상 될 수도 있습니다. 함수는 `stdio` Sync 플래그에 *_Sync* 를 저장 하 고 이전에 저장 된 값을 반환 합니다. 표준 스트림에 대 한 작업을 수행 하기 전에만이를 안전 하 게 호출할 수 있습니다.
+정적 멤버 함수는 `stdio` 동기화 플래그를 초기에 저장 **`true`** 합니다. **`true`** 인 경우이 플래그는 동일한 파일에 대 [`iostreams`](../standard-library/iostreams-conventions.md) 한 작업이 함수 및 c + + 표준 라이브러리에 정의 된 함수 간에 적절 하 게 동기화 되도록 합니다. 그렇지 않으면 동기화가 보장 될 수도 있고 그렇지 않을 수도 있지만 성능이 향상 될 수도 있습니다. 함수는 *_Sync* 를 `stdio` 동기화 플래그에 저장 하 고 이전에 저장 된 값을 반환 합니다. 표준 스트림에 대 한 작업을 수행 하기 전에만이를 안전 하 게 호출할 수 있습니다.
 
-## <a name="unsetf"></a>unsetf
+## <a name="unsetf"></a><a name="unsetf"></a>unsetf
 
 지정된 플래그가 해제되도록 합니다.
 
@@ -982,13 +982,13 @@ void unsetf(
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [플래그](#flags)(`~` *_Mask* **& 플래그**)를 효과적으로 호출 합니다 (선택한 비트 지우기).
+멤버 함수는 [플래그](#flags)( `~` *_Mask* **& 플래그**)를 효과적으로 호출 합니다 (선택한 비트 지우기).
 
 ### <a name="example"></a>예제
 
-`unsetf`사용에 대 한 샘플은 [ios_base:: setf](#setf) 를 참조 하세요.
+사용에 대 한 샘플은 [ios_base:: setf](#setf) 를 참조 하세요 `unsetf` .
 
-## <a name="width"></a>너비
+## <a name="width"></a><a name="width"></a>너비
 
 출력 스트림의 길이를 설정합니다.
 
@@ -1033,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a>xalloc
+## <a name="xalloc"></a><a name="xalloc"></a>xalloc
 
 변수가 스트림의 일부가 되도록 지정 합니다.
 
@@ -1047,7 +1047,7 @@ static int xalloc( );
 
 ### <a name="remarks"></a>설명
 
-[`iword`](#iword) 또는 [`pword`](#pword)멤버 함수를 호출할 때 반환 값을 고유 인덱스 인수로 사용할 수 있습니다.
+멤버 함수 또는를 호출할 때 반환 값을 고유 인덱스 인수로 사용할 수 있습니다 [`iword`](#iword) [`pword`](#pword) .
 
 ### <a name="example"></a>예제
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

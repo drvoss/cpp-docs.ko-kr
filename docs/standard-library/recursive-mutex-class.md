@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217612"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex 클래스
 
@@ -35,26 +35,26 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|`recursive_mutex` 개체를 생성합니다.|
 |[~recursive_mutex 소멸자](#dtorrecursive_mutex_destructor)|`recursive_mutex` 개체에서 사용하는 리소스를 모두 해제합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[lock](#lock)|스레드가 뮤텍스의 소유권을 가져올 때까지 호출 스레드를 차단합니다.|
 |[try_lock](#try_lock)|차단되지 않고 뮤텍스의 소유권을 가져오려고 시도합니다.|
-|[잠금을 해제](#unlock)|뮤텍스의 소유권을 해제합니다.|
+|[잠금을](#unlock)|뮤텍스의 소유권을 해제합니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<뮤텍스>
+**헤더:**\<mutex>
 
 **네임스페이스:** std
 
-## <a name="lock"></a><a name="lock"></a>잠금
+## <a name="lock"></a><a name="lock"></a>잠기지
 
 스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.
 
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Return Value
 
-메서드가 성공적으로 소유권을 `mutex` 획득하거나 호출 스레드가 이미 `mutex**; otherwise, **false`을 소유하고 있는 경우 **true**
+**`true`** 메서드가 성공적으로의 소유권을 얻거나 `mutex` 호출 스레드가를 이미 소유 하 고 있는 경우에는 `mutex**; otherwise, **false` 입니다.
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가 이미 `mutex`을 소유하고 있는 경우 함수는 즉시 **true를**반환하고 이전 잠금은 여전히 적용됩니다.
+호출 스레드가를 이미 소유 하 `mutex` 고 있으면 함수는를 즉시 반환 **`true`** 하며 이전 잠금은 적용 된 상태로 유지 됩니다.
 
-## <a name="unlock"></a><a name="unlock"></a>잠금을 해제
+## <a name="unlock"></a><a name="unlock"></a>잠금을
 
 뮤텍스의 소유권을 해제합니다.
 
@@ -119,4 +119,4 @@ void unlock();
 ## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[\<뮤텍스>](../standard-library/mutex.md)
+[\<mutex>](../standard-library/mutex.md)

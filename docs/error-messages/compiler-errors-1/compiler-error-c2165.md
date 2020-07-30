@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2165
 ms.assetid: b108313b-b8cb-4dce-b2ec-f2b31c9cdc87
-ms.openlocfilehash: 3bfaa07fa4524e5883b2744d5686e90fc9683016
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 29637dd9cb2b1faab537a970df9ef3d76fc26e0c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755683"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216351"
 ---
 # <a name="compiler-error-c2165"></a>컴파일러 오류 C2165
 
 'keyword': 데이터에 대한 포인터를 수정할 수 없습니다.
 
-`__stdcall`, `__cdecl`또는 `__fastcall` 키워드가 데이터에 대한 포인터를 수정하려고 시도합니다.
+**`__stdcall`**, **`__cdecl`** 또는 **`__fastcall`** 키워드가 데이터에 대 한 포인터를 수정 하려고 합니다.
 
 다음 샘플에서는 C2165를 생성합니다.
 

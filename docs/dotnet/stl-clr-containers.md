@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544840"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214869"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 컨테이너
 
-STL/CLR 라이브러리는 C++ 표준 라이브러리에 있는 것과 비슷하지만 .NET Framework의 관리 되는 환경에서 실행 되는 컨테이너로 구성 됩니다. 실제 C++ 표준 라이브러리를 사용 하 여 최신 상태로 유지 되지 않으며 레거시 지원을 위해 유지 관리 됩니다.
+STL/CLR 라이브러리는 c + + 표준 라이브러리에 있는 것과 유사한 컨테이너로 구성 되지만 .NET Framework의 관리 되는 환경에서 실행 됩니다. 실제 c + + 표준 라이브러리를 사용 하 여 최신 상태로 유지 되지 않으며 레거시 지원을 위해 유지 관리 됩니다.
 
-이 문서에서는 STL/CLR의 컨테이너에 대 한 개요를 제공 합니다. 예를 들어 컨테이너 요소에 대 한 요구 사항, 컨테이너에 삽입할 수 있는 요소 형식, 컨테이너의 요소에 대 한 소유권 문제 등이 있습니다. 해당 하는 경우 네이티브 C++ 표준 라이브러리와 STL/CLR의 차이점을 설명 합니다.
+이 문서에서는 STL/CLR의 컨테이너에 대 한 개요를 제공 합니다. 예를 들어 컨테이너 요소에 대 한 요구 사항, 컨테이너에 삽입할 수 있는 요소 형식, 컨테이너의 요소에 대 한 소유권 문제 등이 있습니다. 해당 하는 경우 네이티브 c + + 표준 라이브러리와 STL/CLR의 차이점을 언급 합니다.
 
 ## <a name="requirements-for-container-elements"></a>컨테이너 요소에 대한 요구 사항
 
@@ -37,7 +37,7 @@ STL/CLR 컨테이너에는 boxed 값 형식을 삽입할 수 없습니다.
 
 ### <a name="handles-to-reference-types"></a>참조 형식에 대 한 핸들
 
-참조 형식에 대 한 핸들을 STL/CLR 컨테이너에 삽입할 수 있습니다. CLR을 대상 C++ 으로 하는의 핸들은 native C++의 포인터와 유사 합니다. 자세한 내용은 [개체 연산자에 대 한 핸들 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)을 참조 하세요.
+참조 형식에 대 한 핸들을 STL/CLR 컨테이너에 삽입할 수 있습니다. CLR을 대상으로 하는 c + +의 핸들은 native c + +의 포인터와 유사 합니다. 자세한 내용은 [개체 연산자에 대 한 핸들 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)을 참조 하세요.
 
 #### <a name="example"></a>예제
 
@@ -136,7 +136,7 @@ int main()
 
 #### <a name="example"></a>예제
 
-다음 예제에서는 `cliext::set`에 Employee 개체를 삽입 하는 방법을 보여 줍니다.
+다음 예제에서는 Employee 개체를에 삽입 하는 방법을 보여 줍니다 `cliext::set` .
 
 ```cpp
 // cliext_container_valid_reference.cpp
@@ -229,11 +229,11 @@ int main()
 
 STL/CLR 컨테이너에 unboxed 값 형식을 삽입할 수도 있습니다. Unboxed 값 형식은 참조 형식에 *boxing* 되지 않은 값 형식입니다.
 
-값 형식 요소는 `int`와 같은 표준 값 형식 중 하나일 수도 있고 `value class`와 같은 사용자 정의 값 형식일 수도 있습니다. 자세한 내용은 [클래스 및 구조체](../extensions/classes-and-structs-cpp-component-extensions.md) 를 참조 하세요.
+값 형식 요소는와 같은 표준 값 형식 중 하나일 수 있으며, **`int`** 와 같은 사용자 정의 값 형식일 수도 있습니다 **`value class`** . 자세한 내용은 [클래스 및 구조체](../extensions/classes-and-structs-cpp-component-extensions.md) 를 참조 하세요.
 
 #### <a name="example"></a>예제
 
-다음 예에서는 Employee 클래스를 값 형식으로 설정 하 여 첫 번째 예제를 수정 합니다. 그런 다음이 값 형식은 첫 번째 예제와 마찬가지로 `cliext::set`에 삽입 됩니다.
+다음 예에서는 Employee 클래스를 값 형식으로 설정 하 여 첫 번째 예제를 수정 합니다. 그런 다음이 값 형식은 `cliext::set` 첫 번째 예제와 마찬가지로에 삽입 됩니다.
 
 ```cpp
 // cliext_container_valid_valuetype.cpp
@@ -312,4 +312,4 @@ STL/CLR의 컨테이너는 값 의미 체계에 적용 됩니다. 컨테이너�
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

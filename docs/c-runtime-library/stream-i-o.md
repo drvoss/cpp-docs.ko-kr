@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444614"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231249"
 ---
 # <a name="stream-io"></a>스트림 I/O
 
@@ -19,7 +19,7 @@ ms.locfileid: "79444614"
 
 ## <a name="stream-io-routines"></a>스트림 I/O 루틴
 
-|루틴에서 반환된 값|사용|
+|루틴에서 반환된 값|Windows Server Update Services와 함께|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|스트림 오류 표시기를 지웁니다.|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|스트림을 닫습니다.|
@@ -51,12 +51,12 @@ ms.locfileid: "79444614"
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|**stdin**에서 문자를 읽습니다(**fgetchar** 및 **fgetwchar**의 매크로 버전).|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|스트림 I/O 수준에서 허용되는 동시에 열리는 파일 수를 반환합니다.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|**stdin**에서 줄을 읽습니다.|
-|[_getw](../c-runtime-library/reference/getw.md)|스트림에서 이진 **int**를 읽습니다.|
+|[_getw](../c-runtime-library/reference/getw.md)|스트림에서 이진 읽기 **`int`**|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|서식이 지정된 데이터를 **stdout**에 씁니다.|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|문자를 스트림에 씁니다(**fputc** 및 **fputwc**의 매크로 버전).|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|문자를 **stdout**에 씁니다(**fputchar** 및 **fputwchar**의 매크로 버전).|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|스트림에 줄을 씁니다.|
-|[_putw](../c-runtime-library/reference/putw.md)|이진 **int**를 스트림에 씁니다.|
+|[_putw](../c-runtime-library/reference/putw.md)|스트림에 이진 쓰기 **`int`**|
 |[rewind](../c-runtime-library/reference/rewind.md)|파일 위치를 스트림의 시작 부분으로 이동합니다.|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|**tmpfile**에서 만든 임시 파일을 제거합니다.|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|**stdin**에서 서식이 지정된 데이터를 읽습니다.|

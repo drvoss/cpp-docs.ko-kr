@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218743"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -50,21 +50,21 @@ void *_alloca(
 *size*<br/>
 스택에서 할당할 바이트입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-**_Alloca** 루틴은 할당 된 공간에 대 한 **void** 포인터를 반환 합니다 .이는 모든 형식의 개체 저장소에 적절 하 게 정렬 됩니다. *Size* 가 0 인 경우 **_alloca** 길이가 0 인 항목을 할당 하 고 해당 항목에 대 한 유효한 포인터를 반환 합니다.
+**_Alloca** 루틴은 할당 된 **`void`** 공간에 대 한 포인터를 반환 합니다 .이는 모든 형식의 개체 저장소에 적절 하 게 정렬 됩니다. *Size* 가 0 인 경우 **_alloca** 길이가 0 인 항목을 할당 하 고 해당 항목에 대 한 유효한 포인터를 반환 합니다.
 
 공간을 할당할 수 없는 경우 스택 오버플로 예외가 생성됩니다. 스택 오버플로 예외는 C++ 예외가 아니며 구조적 예외입니다. C++ 예외 처리를 사용하는 대신 [SEH(구조적 예외 처리)](../../cpp/structured-exception-handling-c-cpp.md)를 사용해야 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **_alloca** 는 프로그램 스택에서 *크기* 바이트를 할당 합니다. 할당 된 공간은 호출 함수가 종료 될 때 자동으로 해제 됩니다 (할당이 범위를 벗어나는 경우에만). 따라서 **_alloca** 에서 반환 된 포인터 값을 [free](free.md)의 인수로 전달 하지 마십시오.
 
 EH (예외 처리기)에서 **_alloca** 를 명시적으로 호출 하는 데 제한 사항이 있습니다. x86급 프로세서에서 실행되는 EH 루틴은 고유한 메모리 프레임에서 작동합니다. 즉, 바깥쪽 함수 스택 포인터의 현재 위치를 기반으로 하지 않는 메모리 공간에서 해당 작업을 수행합니다. 가장 일반적인 구현에는 Windows NT SEH(구조적 예외 처리) 및 C++ catch 절 식이 포함됩니다. 따라서 다음 시나리오 중 하나에서 명시적으로 **_alloca** 를 호출 하면 호출 EH 루틴으로 돌아가는 동안 프로그램 오류가 발생 합니다.
 
-- Windows NT SEH 예외 필터 식: `__except ( _alloca() )`
+- Windows NT SEH 예외 필터 식:`__except ( _alloca() )`
 
-- Windows NT SEH 최종 예외 처리기: `__finally { _alloca() }`
+- Windows NT SEH 최종 예외 처리기:`__finally { _alloca() }`
 
 - C++ EH catch 절 식
 
@@ -73,7 +73,7 @@ EH (예외 처리기)에서 **_alloca** 를 명시적으로 호출 하는 데 �
 > [!IMPORTANT]
 > Windows XP에서 try/catch 블록 내에서 **_alloca** 를 호출 하는 경우 catch 블록에서 [_resetstkoflw](resetstkoflw.md) 를 호출 해야 합니다.
 
-위의 제한 사항 외에[/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션을 사용 하는 경우 **__except** 블록에 **_alloca** 를 사용할 수 없습니다. 자세한 내용은 [/clr 제한](../../build/reference/clr-restrictions.md)을 참조하세요.
+위의 제한 사항 외에[/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션을 사용 하는 경우 **_alloca** 블록에서 사용할 수 없습니다 **`__except`** . 자세한 내용은 [/clr Restrictions](../../build/reference/clr-restrictions.md)을 참조하십시오.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -81,7 +81,7 @@ EH (예외 처리기)에서 **_alloca** 를 명시적으로 호출 하는 데 �
 |-------------|---------------------|
 |**_alloca**|\<malloc.h>|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```C
 // crt_alloca.c
@@ -139,7 +139,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

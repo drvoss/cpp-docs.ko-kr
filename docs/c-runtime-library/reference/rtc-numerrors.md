@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: 72056208ca6d714f788ae325b90786f5be4ab443
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0af8596dbc7f48bc3f6b996219ec7c7a57749d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234031"
 ---
 # <a name="_rtc_numerrors"></a>_RTC_NumErrors
 
-RTC(런타임 오류 검사)에서 검색될 수 있는 오류의 총 수를 반환합니다. 이 숫자를 **for** 루프의 컨트롤로 사용할 수 있습니다. 루프의 각 값은 [_RTC_GetErrDesc](rtc-geterrdesc.md)에 전달됩니다.
+RTC(런타임 오류 검사)에서 검색될 수 있는 오류의 총 수를 반환합니다. 루프의 **`for`** 각 값이 [_RTC_GetErrDesc](rtc-geterrdesc.md)에 전달 되는 루프의 컨트롤로이 숫자를 사용할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,7 +44,7 @@ RTC(런타임 오류 검사)에서 검색될 수 있는 오류의 총 수를 반
 int _RTC_NumErrors( void );
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 오류의 총 수를 나타내는 값인 정수는 Visual C++ 런타임 오류 검사를 통해 검색할 수 있습니다.
 
@@ -60,7 +60,7 @@ int _RTC_NumErrors( void );
 
 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
 [런타임 오류 검사](../../c-runtime-library/run-time-error-checking.md)<br/>

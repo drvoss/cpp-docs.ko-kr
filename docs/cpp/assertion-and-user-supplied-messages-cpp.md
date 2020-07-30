@@ -7,16 +7,16 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-ms.openlocfilehash: d76f0c2f7dc5a4202bff3f93e097a1c186f4601a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a4861b3e1d17835f11f5e148d6b62051a6747f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226023"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>어설션 및 사용자 제공 메시지 (C++)
 
-이 C++ 언어는 응용 프로그램 디버깅에 도움이 되는 세 가지 오류 처리 메커니즘인 [#error 지시문](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) 키워드 및 [assert 매크로, _assert, _wassert 매크로를](../c-runtime-library/reference/assert-macro-assert-wassert.md) 지원 합니다. 세 가지 메커니즘 모두 오류 메시지를 제공하고 두 메커니즘은 소프트웨어 어설션도 테스트합니다. 소프트웨어 어설션은 프로그램의 특정 지점에서 true가 될 조건을 지정합니다. 컴파일 타임 어설션이 실패하는 경우 컴파일러에서 진단 메시지와 컴파일 오류를 생성합니다. 런타임 어설션이 실패하는 경우에는 운영 체제에서 진단 메시지를 제공하고 애플리케이션을 닫습니다.
+C + + 언어는 응용 프로그램 디버깅에 도움이 되는 세 가지 오류 처리 메커니즘인 [#error 지시문](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) 키워드 및 [assert 매크로, _assert, _wassert 매크로를](../c-runtime-library/reference/assert-macro-assert-wassert.md) 지원 합니다. 세 가지 메커니즘 모두 오류 메시지를 제공하고 두 메커니즘은 소프트웨어 어설션도 테스트합니다. 소프트웨어 어설션은 프로그램의 특정 지점에서 true가 될 조건을 지정합니다. 컴파일 타임 어설션이 실패하는 경우 컴파일러에서 진단 메시지와 컴파일 오류를 생성합니다. 런타임 어설션이 실패하는 경우에는 운영 체제에서 진단 메시지를 제공하고 애플리케이션을 닫습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -26,15 +26,15 @@ ms.locfileid: "80190562"
 
 - [Static_assert](../cpp/static-assert.md) 선언은 컴파일 타임에 적용 됩니다. 이 선언은 부울로 변환할 수 있는 사용자 지정 정수 계열 식으로 표현된 소프트웨어 어설션을 테스트합니다. 식이 0(false)으로 계산되는 경우 컴파일러는 사용자 지정 메시지를 발행하고 컴파일이 오류와 함께 실패합니다.
 
-   `static_assert` 선언은 디버깅 템플릿에 특히 유용합니다. 이는 템플릿 인수가 사용자 지정 식에 포함될 수 있기 때문입니다.
+   **`static_assert`** 선언은 템플릿 인수가 사용자 지정 식에 포함 될 수 있기 때문에 템플릿을 디버깅 하는 데 특히 유용 합니다.
 
 - [Assert 매크로, _assert _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 매크로는 런타임에 적용 됩니다. 이 매크로는 사용자 지정 식을 계산하며, 결과가 0인 경우 진단 메시지가 제공되고 애플리케이션이 닫힙니다. [_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 및 _ASSERTE와 같은 다른 많은 매크로는이 매크로와 비슷하지만 시스템 정의 또는 사용자 정의 진단 메시지를 실행 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[#error 지시문(C/C++)](../preprocessor/hash-error-directive-c-cpp.md)<br/>
-[assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
+[#error 지시문 (C/c + +)](../preprocessor/hash-error-directive-c-cpp.md)<br/>
+[assert 매크로, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
 [_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)<br/>
 [static_assert](../cpp/static-assert.md)<br/>
 [_STATIC_ASSERT 매크로](../c-runtime-library/reference/static-assert-macro.md)<br/>
-[템플릿](../cpp/templates-cpp.md)
+[모음](../cpp/templates-cpp.md)

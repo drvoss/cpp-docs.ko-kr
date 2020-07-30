@@ -24,12 +24,12 @@ f1_keywords:
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 834def5f1465f3ce0d903b0af31b67d0e7eb2543
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229287"
 ---
 # <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
@@ -52,7 +52,7 @@ int vfwscanf_s(
 
 ### <a name="parameters"></a>매개 변수
 
-*stream*<br/>
+*스트림*<br/>
 **FILE** 구조체에 대한 포인터입니다.
 
 *format*<br/>
@@ -61,7 +61,7 @@ int vfwscanf_s(
 *arglist*<br/>
 가변 인수 목록입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 이러한 각 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생 하거나 첫 번째 변환 전에 파일 스트림의 끝에 도달 하는 경우 반환 값은 **vfscanf_s** 및 **vfwscanf_s**에 대 한 **EOF** 입니다.
 
@@ -69,14 +69,14 @@ int vfwscanf_s(
 
 ## <a name="remarks"></a>설명
 
-**Vfscanf_s** 함수는 *스트림의* 현재 위치에서 *arglist* 인수 목록에 지정 된 위치로 데이터를 읽습니다 (있는 경우). 목록의 각 인수는 *형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. *format* 은 입력 필드의 해석을 제어 하 고 **scanf_s**에 대 한 *format* 인수와 동일한 양식 및 기능을 포함 합니다. *형식*에 대 한 설명은 [형식 사양 필드: Scanf 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) 를 참조 하세요. **vfwscanf_s** 는 **vfscanf_s**의 와이드 문자 버전입니다. **vfwscanf_s** 에 대 한 format 인수는 와이드 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 이러한 함수는 동일하게 작동합니다. **vfscanf_s** 는 현재 유니코드 스트림의 입력을 지원 하지 않습니다.
+**Vfscanf_s** 함수는 *스트림의* 현재 위치에서 *arglist* 인수 목록에 지정 된 위치로 데이터를 읽습니다 (있는 경우). 목록의 각 인수는 *형식의 형식*지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. *format* 은 입력 필드의 해석을 제어 하 고 **scanf_s**에 대 한 *format* 인수와 동일한 양식 및 기능을 포함 합니다. *형식*에 대 한 설명은 [형식 사양 필드: Scanf 및 wscanf 함수](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) 를 참조 하세요. **vfwscanf_s** 은 **vfscanf_s**의 와이드 문자 버전입니다. **vfwscanf_s** 에 대 한 format 인수는 와이드 문자 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 이러한 함수는 동일하게 작동합니다. **vfscanf_s** 는 현재 유니코드 스트림의 입력을 지원 하지 않습니다.
 
-보다 안전한 함수 ( **_s** 접미사 포함)와 다른 버전 간의 주요 차이점은 보다 안전한 함수에는 각 **c**, **c**, **s**, **s**및 **[** type 필드의 문자 크기가로 설정 되어야 한다는 것입니다. 변수 바로 다음에 인수로 전달 됩니다. 자세한 내용은 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 및 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하세요.
+보다 안전한 함수 ( **_s** 접미사 포함)와 다른 버전 간의 주요 차이점은 보다 안전한 함수에는 각 **c**, **c**, **s**, **s**및 **[** type] 필드의 크기가 변수 바로 다음에 오는 인수로 전달 되어야 한다는 것입니다. 자세한 내용은 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 및 [scanf 너비 사양](../../c-runtime-library/scanf-width-specification.md)을 참조하세요.
 
 > [!NOTE]
-> Size 매개 변수는 **size_t**가 아닌 **부호**있는 형식입니다.
+> Size 매개 변수는 size_t이 **`unsigned`** 아니라 형식 **size_t**입니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -84,12 +84,12 @@ int vfwscanf_s(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**vfscanf_s**|\<stdio.h>|
 |**vfwscanf_s**|\<stdio.h> 또는 \<wchar.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -159,7 +159,7 @@ a-string
 x
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>

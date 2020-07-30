@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178213"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233719"
 ---
 # <a name="__interface"></a>__interface
 
 **Microsoft 전용**
 
-Microsoft C++ 인터페이스는 다음과 같이 정의할 수 있습니다.
+Microsoft c + + 인터페이스는 다음과 같이 정의할 수 있습니다.
 
 - 0개 이상의 기본 인터페이스에서 상속할 수 있습니다.
 
@@ -37,9 +37,9 @@ Microsoft C++ 인터페이스는 다음과 같이 정의할 수 있습니다.
 modifier __interface interface-name {interface-definition};
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이러한 규칙을 사용 하 여 [클래스](../cpp/class-cpp.md) 또는 [구조체](../cpp/struct-cpp.md) 를 구현할 수 있지만 __interface 적용 됩니다. **__interface** C++
+이러한 규칙을 사용 하 여 c + + [클래스](../cpp/class-cpp.md) 또는 [구조체](../cpp/struct-cpp.md) 를 구현할 수 있지만이를 **`__interface`** 적용 합니다.
 
 예를 들어 다음은 샘플 인터페이스 정의입니다.
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** [novtable](../cpp/novtable.md) **__declspec** 한정자를 의미 합니다.
+**`__interface`**[novtable](../cpp/novtable.md) **`__declspec`** 한정자를 의미 합니다.
 
 ## <a name="example"></a>예제
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[키워드](../cpp/keywords-cpp.md)<br/>
+[C++ 키워드](../cpp/keywords-cpp.md)<br/>
 [인터페이스 특성](../windows/attributes/interface-attributes.md)

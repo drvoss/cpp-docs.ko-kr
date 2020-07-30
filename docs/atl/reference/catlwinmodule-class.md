@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229989"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 
@@ -34,14 +34,14 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CAtlWinModule:: CAtlWinModule](#catlwinmodule)|생성자입니다.|
 |[CAtlWinModule:: ~ CAtlWinModule](#dtor)|소멸자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[CAtlWinModule:: AddCreateWndData](#addcreatewnddata)|데이터 개체를 추가 합니다.|
 |[CAtlWinModule:: ExtractCreateWndData](#extractcreatewnddata)|창 모듈 데이터 개체에 대 한 포인터를 반환 합니다.|
@@ -62,7 +62,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule:: AddCreateWndData
 
-이 메서드는 `_AtlCreateWndData` 구조체를 초기화 하 고 추가 합니다.
+이 메서드는 구조체를 초기화 하 고 추가 `_AtlCreateWndData` 합니다.
 
 ```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,14 +71,14 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>매개 변수
 
 *pData*<br/>
-초기화 되어 현재 `_AtlCreateWndData` 모듈에 추가 되는 구조에 대 한 포인터입니다.
+`_AtlCreateWndData`초기화 되어 현재 모듈에 추가 되는 구조에 대 한 포인터입니다.
 
 *pObject*<br/>
-개체의 **this** 포인터에 대 한 포인터입니다.
+개체의 포인터에 대 한 포인터 **`this`** 입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조체를 초기화 하는 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 를 호출 합니다. 이 구조체는 창 프로시저에서 클래스 인스턴스를 가져오는 데 사용 되는 **this** 포인터를 저장 합니다.
+이 메서드는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조체를 초기화 하는 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 를 호출 합니다. 이 구조체는 **`this`** 창 프로시저에서 클래스 인스턴스를 가져오는 데 사용 되는 포인터를 저장 합니다.
 
 ## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule:: CAtlWinModule
 
@@ -106,7 +106,7 @@ CAtlWinModule();
 
 ## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule:: ExtractCreateWndData
 
-이 메서드는 `_AtlCreateWndData` 구조체에 대 한 포인터를 반환 합니다.
+이 메서드는 구조체에 대 한 포인터를 반환 합니다 `_AtlCreateWndData` .
 
 ```cpp
 void* ExtractCreateWndData();
@@ -114,7 +114,7 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Return Value
 
-AddCreateWndData를 사용 하 여 `_AtlCreateWndData` 이전에 추가 된 [CAtlWinModule::AddCreateWndData](#addcreatewnddata)구조에 대 한 포인터를 반환 하거나, 사용할 수 있는 개체가 없으면 NULL을 반환 합니다.
+`_AtlCreateWndData` [AddCreateWndData](#addcreatewnddata)를 사용 하 여 이전에 추가 된 구조에 대 한 포인터를 반환 하거나, 사용할 수 있는 개체가 없으면 NULL을 반환 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

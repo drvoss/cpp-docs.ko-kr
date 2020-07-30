@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222591"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같지 않은지 테스트합니다.
 
@@ -47,7 +47,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.
 
 *오른쪽*\
@@ -55,7 +55,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>Return Value
 
-숫자가 같지 않으면 **true**이고, 숫자가 같으면 **false**입니다.
+**`true`** 숫자가 같지 않으면입니다. **`false`** 숫자가 같으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -163,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a> 연산자\*
+## <a name="operator"></a><a name="op_star"></a>연산자\*
 
 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.
 
@@ -186,11 +186,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
-두 복소수 중 첫 번째 복소수 이거나 \* 연산을 통해 곱할 복소수의 매개 변수 형식에 해당 하는 숫자입니다.
+*비어*\
+두 복소수 중 첫 번째 복소수 이거나 연산을 통해 곱할 복소수의 매개 변수 형식에 해당 하는 숫자입니다 \* .
 
 *오른쪽*\
-두 복소수 중 두 번째 복소수 이거나 \* 연산을 통해 곱할 복소수의 매개 변수 형식에 해당 하는 숫자입니다.
+두 복소수 중 두 번째 복소수 이거나 연산을 통해 곱할 복소수의 매개 변수 형식에 해당 하는 숫자입니다 \* .
 
 ### <a name="return-value"></a>Return Value
 
@@ -260,7 +260,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>연산자 +
+## <a name="operator"></a><a name="op_add"></a>연산자 +
 
 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 더합니다.
 
@@ -286,7 +286,7 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 두 복소수 중 첫 번째 복소수이거나 + 연산으로 더할 복소수의 매개 변수 형식을 가진 숫자입니다.
 
 *오른쪽*\
@@ -400,7 +400,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>연산자
+## <a name="operator-"></a><a name="operator-"></a>연산자
 
 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 뺍니다.
 
@@ -426,7 +426,7 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 두 복소수 중 첫 번째 복소수이거나 + 연산으로 뺄 복소수의 매개 변수 형식을 가진 숫자입니다.
 
 *오른쪽*\
@@ -542,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>연산자
+## <a name="operator"></a><a name="op_div"></a>연산자
 
 하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 나눕니다.
 
@@ -565,7 +565,7 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 복소수이거나 / 연산으로 나눌 분모인 복소수의 매개 변수 형식을 가진 숫자입니다.
 
 *오른쪽*\
@@ -662,7 +662,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a>연산자&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
 
 지정된 복소수를 출력 스트림에 삽입합니다.
 
@@ -724,7 +724,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같은지 테스트합니다.
 
@@ -747,7 +747,7 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 같지 않은지 테스트할 매개 변수 형식의 복소수 또는 개체입니다.
 
 *오른쪽*\
@@ -755,7 +755,7 @@ bool operator==(
 
 ### <a name="return-value"></a>Return Value
 
-숫자가 같으면 **true**이고, 숫자가 같지 않으면 **false**입니다.
+**`true`** 숫자가 같으면이 고, 그렇지 않으면입니다. **`false`** 숫자가 같지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -863,7 +863,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a>연산자&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>연산자&gt;&gt;
 
 입력 스트림에서 복소수 값을 추출합니다.
 

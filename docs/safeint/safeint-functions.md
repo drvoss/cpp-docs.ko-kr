@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334917"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219341"
 ---
 # <a name="safeint-functions"></a>SafeInt 함수
 
@@ -51,7 +51,7 @@ SafeInt 라이브러리는 [SafeInt 클래스](safeint-class.md) 인스턴스를
 
 ## <a name="in-this-section"></a>섹션 내용
 
-기능                      | 설명
+함수                      | 설명
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | 두 숫자를 더하고 오버플로를 방지합니다.
 [SafeCast](#safecast)         | 한 형식의 매개 변수를 다른 형식으로 캐스팅합니다.
@@ -92,9 +92,9 @@ inline bool SafeAdd (
 *result*<br/>
 [out] `SafeAdd`에서 결과를 저장하는 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 **true**이고, 오류가 발생하면 **false**입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -116,9 +116,9 @@ inline bool SafeCast (
 *수행할 작업*<br/>
 [out] 새 숫자 형식에 대한 참조입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 **true**이고, 오류가 발생하면 **false**입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
@@ -144,9 +144,9 @@ inline bool SafeDivide (
 *result*<br/>
 [out] `SafeDivide`에서 결과를 저장하는 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 **true**이고, 오류가 발생하면 **false**입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -168,9 +168,9 @@ inline bool SafeEquals (
 *u*<br/>
 [in] 비교할 두 번째 숫자입니다. U 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t*와 *u*가 같으면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`***t* 와 *u* 가 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -196,9 +196,9 @@ inline bool SafeGreaterThan (
 *u*<br/>
 [in] 비교할 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t*가 *u*보다 크면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`***t* 가 *u*보다 크면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -224,9 +224,9 @@ inline bool SafeGreaterThanEquals (
 *u*<br/>
 [in] 비교할 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t*가 *u*보다 크거나 같으면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`***t* 가 *u*보다 크거나 같은 경우 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -252,9 +252,9 @@ inline bool SafeLessThan (
 *u*<br/>
 진행 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t*가 *u*보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`***t* 가 *u*보다 작은 경우 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -280,9 +280,9 @@ inline bool SafeLessThanEquals (
 *u*<br/>
 [in] 비교할 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t*가 *u*보다 작거나 같으면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`***t* 가 *u*보다 작거나 같은 경우 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -312,9 +312,9 @@ inline bool SafeModulus (
 *result*<br/>
 [out] `SafeModulus`에서 결과를 저장하는 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 **true**이고, 오류가 발생하면 **false**입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -340,9 +340,9 @@ inline bool SafeMultiply (
 *result*<br/>
 [out] `SafeMultiply`에서 결과를 저장하는 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 `true`이고, 오류가 발생하면 `false`입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -364,9 +364,9 @@ inline bool SafeNotEquals (
 *u*<br/>
 [in] 비교할 두 번째 숫자입니다. `U` 형식이어야 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-*t* 와 *u* 가 같지 않으면 **true** 이 고, 그렇지 않으면 **false**입니다.
+**`true`***t* 와 *u* 가 같지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -396,6 +396,6 @@ inline bool SafeSubtract (
 *result*<br/>
 [out] `SafeSubtract`에서 결과를 저장하는 매개 변수입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-오류가 발생하지 않으면 **true**이고, 오류가 발생하면 **false**입니다.
+**`true`** 오류가 발생 하지 않는 경우 **`false`** 오류가 발생 하면입니다.

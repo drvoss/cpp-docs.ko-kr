@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ab2164e4969a2320f67d479062808b33b0869f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688941"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212139"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-할당 된 배열 개체에 저장 된 시퀀스에 대 한 iostreams 작업을 지 원하는 여러 클래스 템플릿을 정의 합니다. 이러한 시퀀스는 클래스 템플릿 [basic_string](../standard-library/basic-string-class.md)의 개체와 쉽게 변환 됩니다.
+할당 된 배열 개체에 저장 된 시퀀스에 대 한 iostreams 작업을 지 원하는 여러 클래스 템플릿을 정의 합니다. 이러한 시퀀스는 [basic_string](../standard-library/basic-string-class.md)클래스 템플릿 개체와 쉽게 변환 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -72,50 +72,50 @@ void swap (
 
 |매개 변수|설명|
 |---------------|-----------------|
-|*left*|`sstream` 개체에 대한 참조입니다.|
-|*right*|`sstream` 개체에 대한 참조입니다.|
+|*비어*|`sstream` 개체에 대한 참조입니다.|
+|*오른쪽*|`sstream` 개체에 대한 참조입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`char *` 형식의 개체는 스트리밍을 위해 [\<strstream>](../standard-library/strstream.md)의 기능을 사용할 수 있습니다. 그러나 \<strstream >는 더 이상 사용 되지 않으며 \<sstream >를 사용 하는 것이 좋습니다.
+형식의 개체 `char *` 는의 기능을 사용 하 여 스트리밍할 수 있습니다 [\<strstream>](../standard-library/strstream.md) . 그러나 \<strstream>은 사용되지 않으며 \<sstream>을 사용하는 것이 좋습니다.
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |형식 이름|설명|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|**Char** 템플릿 매개 변수에서 특수화 된 형식 `basic_istringstream` 만듭니다.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|**Char** 템플릿 매개 변수에서 특수화 된 형식 `basic_ostringstream` 만듭니다.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|**Char** 템플릿 매개 변수에서 특수화 된 형식 `basic_stringbuf` 만듭니다.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|**Char** 템플릿 매개 변수에서 특수화 된 형식 `basic_stringstream` 만듭니다.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|**Wchar_t** 템플릿 매개 변수에서 특수화 된 형식 `basic_istringstream` 만듭니다.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|**Wchar_t** 템플릿 매개 변수에서 특수화 된 형식 `basic_ostringstream` 만듭니다.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|**Wchar_t** 템플릿 매개 변수에서 특수화 된 형식 `basic_stringbuf` 만듭니다.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|**Wchar_t** 템플릿 매개 변수에서 특수화 된 형식 `basic_stringstream` 만듭니다.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|`basic_istringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|`basic_ostringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|`basic_stringbuf`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|`basic_stringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|`basic_istringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|`basic_ostringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|`basic_stringbuf`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|`basic_stringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .|
 
 ### <a name="manipulators"></a>조작자
 
 |||
 |-|-|
-|[swap](../standard-library/sstream-functions.md#sstream_swap)|두 `sstream` 개체 간에 값을 교환합니다.|
+|[스왑을](../standard-library/sstream-functions.md#sstream_swap)|두 `sstream` 개체 간에 값을 교환합니다.|
 
 ### <a name="classes"></a>클래스
 
-|인스턴스|설명|
+|클래스|Description|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|배열 개체에 저장된 요소의 시퀀스에서 문자 특성이 `Tr` 클래스에 의해 결정되는 `Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명합니다.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|[Basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 클래스의 스트림 버퍼에서 문자를 `Elem`형식의 요소로 사용하여 요소 및 인코드된 개체의 추출을 제어하는 개체를 설명합니다. 특성은 클래스 `Tr`에 의해 결정되며 해당 요소는 클래스 `Alloc`의 할당자에 의해 할당됩니다.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|문자 특성이 있는 `Elem`형식의 요소가 있는 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 클래스의 스트림 버퍼에 요소 및 인코드된 개체 삽입을 제어하는 개체에 대해 설명합니다. 클래스 `Tr`에 의해 결정되고 해당 요소가 클래스 `Alloc`의 할당자에 의해 할당됩니다.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|`Elem` 형식의 요소가 있는 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> 클래스의 스트림 버퍼를 사용하여 요소 및 인코드된 개체의 삽입 및 추출을 제어하는 개체를 설명합니다. 문자 특성은 클래스 `Tr`에 의해 결정되고 해당 요소가 클래스 `Alloc`의 할당자에 의해 할당됩니다.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem** **Tr** `Alloc` `Elem` 문자 특성이 클래스에 의해 결정 되 `Tr` 고 해당 요소가 클래스의 할당자에 의해 할당 되는 형식의 요소가 있는 클래스 basic_stringbuf Elem, Tr,>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어 하는 개체에 대해 설명 합니다 `Alloc` .|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem** **Tr** `Alloc` `Elem` 문자 특성이 클래스에 의해 결정 되 `Tr` 고 해당 요소가 클래스의 할당자에 의해 할당 되는 형식의 요소가 있는 클래스 basic_stringbuf Elem, Tr,>의 스트림 버퍼에 요소 및 인코드된 개체 삽입을 제어 하는 개체에 대해 설명 합니다 `Alloc` .|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem** **Tr** `Alloc` `Elem` 문자 특성이 클래스에 의해 결정 되 `Tr` 고 해당 요소가 클래스의 할당자에 의해 할당 되는 형식의 요소가 있는 Elem, Tr,> basic_stringbuf 클래스의 스트림 버퍼를 사용 하 여 요소 및 인코드된 개체의 삽입 및 추출을 제어 하는 개체에 대해 설명 합니다 `Alloc` .|
 
 ## <a name="requirements"></a>요구 사항
 
-- **헤더:** \<sstream>
+- **헤더:**\<sstream>
 
 - **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 프로그래밍](../standard-library/iostream-programming.md)\
 [iostreams 규칙](../standard-library/iostreams-conventions.md)

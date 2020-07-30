@@ -1,5 +1,5 @@
 ---
-title: version (C++ COM 특성)
+title: version (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165992"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213803"
 ---
 # <a name="version-c"></a>version(C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "80165992"
 
 ## <a name="remarks"></a>설명
 
-**Version** C++ 특성은 [버전](/windows/win32/Midl/version) MIDL 특성과 동일한 기능을 포함 하며 생성 된 .idl 파일로 전달 됩니다.
+**버전** c + + 특성은 [버전](/windows/win32/Midl/version) MIDL 특성과 동일한 기능을 포함 하며 생성 된 .idl 파일로 전달 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -43,10 +43,10 @@ ms.locfileid: "80165992"
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|예|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
 |**필수 특성**|**coclass**|
-|**잘못된 특성**|None|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

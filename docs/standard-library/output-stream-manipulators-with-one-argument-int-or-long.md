@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
-ms.openlocfilehash: 93e4de25323514eb4105814b565dc3ddc3fbb737
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 203797eef95e3dab0c079e35baefcea99c3b966d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217664"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>하나의 인수를 포함하는 출력 스트림 조작자(int 또는 long)
 
-iostream 클래스 라이브러리는 매개 변수가 있는 조작자를 만들기 위한 매크로 집합을 제공합니다. 단일 **int** 또는 **long** 인수를 사용하는 조작자는 특별한 경우입니다. 단일 **int** 또는 **long** 인수(`setw`와 같은)를 허용하는 출력 스트림 조작자를 만들려면 \<iomanip>에 정의된 _Smanip 매크로를 사용해야 합니다. 이 예제에서는 지정된 수의 공백을 스트림에 삽입하는 `fillblank` 조작자를 정의합니다.
+iostream 클래스 라이브러리는 매개 변수가 있는 조작자를 만들기 위한 매크로 집합을 제공합니다. 단일 또는 인수를 사용 하는 조작자는 **`int`** **`long`** 특수 한 경우입니다. 단일 또는 인수 (예:)를 허용 하는 출력 스트림 조작자를 만들려면 **`int`** **`long`** `setw` 에 정의 되어 있는 _Smanip 매크로를 사용 해야 합니다 \<iomanip> . 이 예제에서는 지정된 수의 공백을 스트림에 삽입하는 `fillblank` 조작자를 정의합니다.
 
 ## <a name="example"></a>예제
 
@@ -46,6 +46,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[인수 포함 사용자 지정 조작자](../standard-library/custom-manipulators-with-arguments.md)
+[인수가 있는 사용자 지정 조작자](../standard-library/custom-manipulators-with-arguments.md)

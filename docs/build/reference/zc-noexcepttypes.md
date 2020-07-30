@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218951"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes(C++17 noexcept 규칙)
 
-C + + 17 표준에서는 `throw()` 에 대 한 별칭을 사용 하 고, `noexcept` `throw(` *`type-list`* `)` 및를 제거 하 `throw(...)` 고, 특정 형식에 포함 될 수 있습니다 `noexcept` . 이렇게 변경 하면 c + + 14 이전 버전을 따르는 코드에서 많은 소스 호환성 문제가 발생할 수 있습니다. **`/Zc:noexceptTypes`** 옵션은 c + + 17 표준에 대 한 준수를 지정 합니다. **`/Zc:noexceptTypes-`** 코드를 c + + 17 모드로 컴파일할 때 c + + 14 및 이전 동작을 허용 합니다.
+C + + 17 표준에서는 `throw()` 에 대 한 별칭을 사용 하 고, **`noexcept`** `throw(` *`type-list`* `)` 및를 제거 하 `throw(...)` 고, 특정 형식에 포함 될 수 있습니다 **`noexcept`** . 이렇게 변경 하면 c + + 14 이전 버전을 따르는 코드에서 많은 소스 호환성 문제가 발생할 수 있습니다. **`/Zc:noexceptTypes`** 옵션은 c + + 17 표준에 대 한 준수를 지정 합니다. **`/Zc:noexceptTypes-`** 코드를 c + + 17 모드로 컴파일할 때 c + + 14 및 이전 동작을 허용 합니다.
 
 ## <a name="syntax"></a>구문
 

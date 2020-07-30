@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2318
 ms.assetid: 169e30b9-df78-46cb-90bf-576ad3c32fd4
-ms.openlocfilehash: 0af0b0e0fbf8894e5f29482a80c05c9ed1ce141d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f608d0407c24bd01ed7b80dbef873dd30662661
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221252"
 ---
 # <a name="compiler-error-c2318"></a>컴파일러 오류 C2318
 
 이 catch 처리기와 관련된 try 블록이 없습니다.
 
-`catch` 처리기가 정의되어 있지만 `try` 블록 앞에 오지 않습니다.
+**`catch`** 처리기가 정의 되어 있지만 블록 앞에 오지 않습니다 **`try`** .
 
 다음 샘플에서는 C2318을 생성합니다.
 
@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-가능한 해결 방법:
+해결 방법:
 
 ```cpp
 // C2318b.cpp

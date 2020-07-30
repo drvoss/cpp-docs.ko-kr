@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455758"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212243"
 ---
-# <a name="ispod-class"></a>is_pod 클래스
+# <a name="is_pod-class"></a>is_pod 클래스
 
 형식이 POD인지 테스트합니다.
 
@@ -32,7 +32,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>설명
 
-`is_pod<T>::value`*T* 형식이 일반 이전 데이터 (POD) 인 경우 **true** 입니다. 그렇지 않으면 **false**입니다.
+`is_pod<T>::value`**`true`** *T* 형식이 일반 이전 데이터 (POD) 인지 여부입니다. 그렇지 않으면 **`false`** 입니다.
 
 산술 형식, 열거형 형식, 포인터 형식 및 멤버 형식에 대한 포인터는 POD입니다.
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)

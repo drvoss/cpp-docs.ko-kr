@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: bfd3ba64a33547b8a27e0f3bc896f39c94486464
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4f1b12795252b91a2c14877822e221ca86ab39e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372986"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214037"
 ---
 # <a name="record-field-exchange-functions"></a>레코드 필드 교환 함수
 
@@ -58,7 +58,7 @@ ms.locfileid: "81372986"
 
 ODBC 기반 클래스를 사용하고 대량 행 페치를 구현한 경우 데이터 소스 열에 해당하는 각 데이터 멤버에 대해 대량 RFX 함수를 호출하여 `DoBulkFieldExchange` 의 `CRecordset` 멤버 함수를 수동으로 재정의해야 합니다.
 
-ODBC 기반 클래스에서 벌크 행 페칭을 구현하지 않았거나 DAO 기반 클래스(사용되지 않음)를 사용하는 경우 ClassWizard는 `CRecordset` 레코드 `CDaoRecordset` 집합의 각 필드 데이터 멤버에 대해 RFX 함수(ODBC 클래스의 경우) 또는 DFX 함수(DAO 클래스의 경우)의 `DoFieldExchange` 멤버 함수를 무시합니다.
+ODBC 기반 클래스에서 대량 행 페치를 구현 하지 않았거나 DAO 기반 클래스 (사용 되지 않음)를 사용 하는 경우에는 클래스 마법사가 `DoFieldExchange` `CRecordset` `CDaoRecordset` 레코드 집합의 각 필드 데이터 멤버에 대해 RFX 함수 (ODBC 클래스의 경우) 또는 DFX 함수 (DAO 클래스의 경우)를 호출 하 여 또는의 멤버 함수를 재정의 합니다.
 
 레코드 필드 교환 함수는 프레임워크에서 `DoFieldExchange` 또는 `DoBulkFieldExchange`를 호출할 때마다 데이터를 전송합니다. 각 함수는 특정 데이터 형식을 전송합니다.
 
@@ -66,7 +66,7 @@ ODBC 기반 클래스에서 벌크 행 페칭을 구현하지 않았거나 DAO �
 
 동적으로 바인딩하는 데이터 열의 경우 [레코드 집합: 데이터 열 동적 바인딩 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)문서에 설명된 대로 RFX 또는 DFX 함수를 직접 호출할 수도 있습니다. 또한 Technical Note [43](../../mfc/tn043-rfx-routines.md) (ODBC) 및 Technical Note [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (DAO)에 설명된 대로 사용자 고유의 사용자 지정 RFX 또는 DFX 루틴을 작성할 수 있습니다.
 
-`DoFieldExchange` RFX 및 대량 RFX 함수가 함수에 `DoBulkFieldExchange` 나타나는 경우 [RFX_Text](#rfx_text) 및 [RFX_Text_Bulk]#rfx_text_bulk)을 참조하십시오. DFX 함수는 RFX 함수와 매우 유사합니다.
+및 함수에 표시 되는 RFX 및 대량 RFX 함수에 대 한 예제는 `DoFieldExchange` `DoBulkFieldExchange` [RFX_Text](#rfx_text) 및 [RFX_Text_Bulk] #rfx_text_bulk)를 참조 하세요. DFX 함수는 RFX 함수와 매우 유사합니다.
 
 ### <a name="rfx-functions-odbc"></a>RFX 함수(ODBC)
 
@@ -75,7 +75,7 @@ ODBC 기반 클래스에서 벌크 행 페칭을 구현하지 않았거나 DAO �
 |[RFX_Binary](#rfx_binary)|[CByteArray](cbytearray-class.md)형식의 바이트 배열을 전송합니다.|
 |[RFX_Bool](#rfx_bool)|부울 데이터를 전송합니다.|
 |[RFX_Byte](#rfx_byte)|단일 바이트 데이터를 전송합니다.|
-|[RFX_Date](#rfx_date)|[CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 TIMESTAMP_STRUCT 사용하여 시간 및 날짜 데이터를 전송합니다.|
+|[RFX_Date](#rfx_date)|[CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 TIMESTAMP_STRUCT를 사용 하 여 시간 및 날짜 데이터를 전송 합니다.|
 |[RFX_Double](#rfx_double)|배정밀도 부동 소수점 수 데이터를 전송합니다.|
 |[RFX_Int](#rfx_int)|정수 데이터를 전송합니다.|
 |[RFX_Long](#rfx_long)|정수(Long) 데이터를 전송합니다.|
@@ -117,7 +117,7 @@ ODBC 기반 클래스에서 벌크 행 페칭을 구현하지 않았거나 DAO �
 
 ## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
 
-`CRecordset` ODBC 형식 SQL_BINARY, SQL_VARBINARY 또는 SQL_LONGVARBINARY 데이터 원본에 있는 레코드의 열과 개체의 필드 데이터 멤버 간에 바이트 배열을 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 (SQL_BINARY, SQL_VARBINARY 또는 SQL_LONGVARBINARY 사이의 바이트 배열을 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -131,33 +131,33 @@ void RFX_Binary(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 [CByteArray](cbytearray-class.md)형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 지정 된 데이터 멤버에서 [CByteArray](cbytearray-class.md)형식의 값을 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *nMaxLength*<br/>
-전송되는 문자열 또는 배열의 최대 허용 길이입니다. *nMaxLength의* 기본값은 255입니다. 법적 값은 1~INT_MAX. 프레임워크는 데이터에 대해 이 양의 공간을 할당합니다. 최상의 성능을 위해 예상한 가장 큰 데이터 항목을 수용할 수 있을 만큼 큰 값을 전달합니다.
+전송 되는 문자열 또는 배열의 최대 허용 길이입니다. *Nmaxlength* 의 기본값은 255입니다. 올바른 값은 1 INT_MAX입니다. 프레임 워크는 데이터에이 크기의 공간을 할당 합니다. 최상의 성능을 위해 원하는 가장 큰 데이터 항목을 수용할 만큼 충분히 큰 값을 전달 합니다.
 
 ### <a name="remarks"></a>설명
 
-이러한 형식의 데이터 원본의 데이터는 레코드 집합의 유형과 `CByteArray` 매핑됩니다.
+이러한 형식의 데이터 원본에 있는 데이터는 레코드 집합의 형식에 매핑됩니다 `CByteArray` .
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
 
-`CRecordset` 개체의 필드 데이터 멤버와 ODBC 형식 SQL_BIT 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송 SQL_BIT 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -170,26 +170,26 @@ void RFX_Bool(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 BOOL 형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 BOOL 형식의 값은 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
 
-`CRecordset` 개체의 필드 데이터 멤버와 ODBC 형식 SQL_TINYINT 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송합니다.
+는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송 SQL_TINYINT 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -202,8 +202,8 @@ void RFX_Byte(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
@@ -213,15 +213,15 @@ void RFX_Byte(
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
 
-ODBC 형식 SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 데이터 원본에 있는 레코드의 열과 개체의 필드 데이터 멤버 간에 데이터를 전송하거나 `CTime` TIMESTAMP_STRUCT. `CRecordset`
+`CTime`개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 유형의 데이터 원본에 있는 레코드의 열 SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 간에 데이터를 전송 하거나 TIMESTAMP_STRUCT 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -244,34 +244,34 @@ void RFX_Date(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값; 전송할 값입니다. 함수의 다양한 버전은 값에 대해 서로 다른 데이터 형식을 취합니다.
+표시 된 데이터 멤버에 저장 된 값입니다. 전송할 값입니다. 함수의 다양 한 버전은 값에 대해 서로 다른 데이터 형식을 사용 합니다.
 
-함수의 첫 번째 버전은 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체를 참조합니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 이 값은 지정된 데이터 멤버에서 가져온 값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+함수의 첫 번째 버전은 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조를 사용 합니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우이 값은 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
-함수의 두 번째 버전은 구조를 `TIMESTAMP_STRUCT` 참조합니다. 호출 하기 전에 이 구조를 직접 설정 해야 합니다. 이 버전에는 DDX(대화 상자 데이터 교환) 지원이나 코드 마법사 지원을 사용할 수 없습니다. 함수의 세 번째 버전은 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체에 대한 참조를 사용한다는 점을 제외하면 첫 번째 버전과 유사하게 작동합니다.
+함수의 두 번째 버전은 구조체에 대 한 참조를 사용 합니다 `TIMESTAMP_STRUCT` . 이 구조는 호출 전에 직접 설정 해야 합니다. 이 버전에서는 DDX (대화 상자 데이터 교환) 지원 및 코드 마법사 지원도 모두 사용할 수 있습니다. 함수의 세 번째 버전은 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체에 대 한 참조를 사용 한다는 점을 제외 하 고 첫 번째 버전과 유사 하 게 작동 합니다.
 
 ### <a name="remarks"></a>설명
 
-함수 `CTime` 버전은 일부 중간 처리의 오버헤드를 부과하고 다소 제한된 범위를 가집니다. 이러한 요소 중 하나가 너무 제한적이라면 함수의 두 번째 버전을 사용합니다. 그러나 코드 마법사 와 DDX 지원이 부족하고 구조를 직접 설정하는 요구 사항에 유의하십시오.
+`CTime`함수의 버전은 일부 중간 처리의 오버 헤드를 적용 하며 범위는 약간 제한 됩니다. 이러한 요인 중 하나를 너무 제한 하는 경우 함수의 두 번째 버전을 사용 합니다. 그러나 코드 마법사와 DDX를 지원 하지 않으며 구조를 직접 설정 하는 요구 사항을 기억해 야 합니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
 
-개체의 필드 데이터 멤버와 ODBC 형식 SQL_DOUBLE 데이터 원본에 있는 레코드의 열 간에 **이중 부동 데이터** 전송합니다. `CRecordset`
+개체 **double float** 의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 이중 float 데이터를 전송 SQL_DOUBLE 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -284,26 +284,26 @@ void RFX_Double(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 **double**형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`double`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
 
-개체의 필드 데이터 멤버와 ODBC `CRecordset` 형식 SQL_SMALLINT 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송 SQL_SMALLINT 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -316,26 +316,26 @@ void RFX_Int(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 **int**형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`int`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
 
-개체의 필드 데이터 멤버와 ODBC `CRecordset` 형식 SQL_INTEGER 데이터 원본에 있는 레코드의 열 간에 긴 정수 데이터를 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 (long) 데이터를 전송 하는 SQL_INTEGER 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -349,26 +349,26 @@ value );
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 형식 **long의**값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`long`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
 
-ODBC 형식 SQL_LONGVARBINARY 또는 SQL_LONGVARCHAR 데이터 원본에 있는 레코드의 `CRecordset` 열과 개체의 필드 데이터 멤버 간에 [클래스 CLongBinary를](clongbinary-class.md) 사용하여 이진 큰 개체(BLOB) 데이터를 전송합니다.
+는 클래스 [CLongBinary](clongbinary-class.md) 를 사용 하 여 BLOB (binary large object) 데이터를 전송 합니다 .이 데이터는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 SQL_LONGVARBINARY 또는 SQL_LONGVARCHAR 사이에서 전송 됩니다.
 
 ### <a name="syntax"></a>구문
 
@@ -381,26 +381,26 @@ void RFX_LongBinary(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 `CLongBinary`형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 `CLongBinary` 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
 
-`CRecordset` 개체의 필드 데이터 멤버와 ODBC 형식 SQL_REAL 데이터 원본에 있는 레코드의 열 간에 부동 지점 데이터를 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 간에 부동 소수점 데이터를 전송 SQL_REAL 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -413,26 +413,26 @@ void RFX_Single(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 형식 **float의**값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`float`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
 
-ODBC 형식 SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL 또는 SQL_NUMERIC 데이터 원본에 대한 `CString` `CRecordset` 레코드의 필드 데이터 멤버와 레코드 열 간에 데이터를 전송합니다.
+`CString`는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 유형의 데이터 원본에 있는 레코드의 열 SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL 또는 SQL_NUMERIC 간에 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -448,31 +448,31 @@ void RFX_Text(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스의 `CFieldExchange`개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+클래스의 개체에 대 한 포인터 `CFieldExchange` 입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 `CString`형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 `CString` 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *nMaxLength*<br/>
-전송되는 문자열 또는 배열의 최대 허용 길이입니다. *nMaxLength의* 기본값은 255입니다. 법적 값은 1에서 INT_MAX)입니다. 프레임워크는 데이터에 대해 이 양의 공간을 할당합니다. 최상의 성능을 위해 예상한 가장 큰 데이터 항목을 수용할 수 있을 만큼 큰 값을 전달합니다.
+전송 되는 문자열 또는 배열의 최대 허용 길이입니다. *Nmaxlength* 의 기본값은 255입니다. 올바른 값은 1에서 INT_MAX)입니다. 프레임 워크는 데이터에이 크기의 공간을 할당 합니다. 최상의 성능을 위해 원하는 가장 큰 데이터 항목을 수용할 만큼 충분히 큰 값을 전달 합니다.
 
 *nColumnType*<br/>
-매개 변수에 주로 사용됩니다. 매개 변수의 데이터 형식을 나타내는 정수입니다. 형식은 **SQL_XXX**양식의 ODBC 데이터 형식입니다.
+주로 매개 변수에 사용 됩니다. 매개 변수의 데이터 형식을 나타내는 정수입니다. 형식은 **SQL_XXX**형식의 ODBC 데이터 형식입니다.
 
 *nScale*<br/>
-ODBC 형식 SQL_DECIMAL 또는 SQL_NUMERIC 값에 대한 배율을 지정합니다. *nScale은* 매개 변수 값을 설정할 때만 유용합니다. 자세한 내용은 *ODBC SDK 프로그래머 참조*부록 D의 "정밀도, 배율, 길이 및 디스플레이 크기" 항목을 참조하십시오.
+ODBC 유형 SQL_DECIMAL 또는 SQL_NUMERIC의 값에 대 한 소수 자릿수를 지정 합니다. *Nscale* 은 매개 변수 값을 설정할 때만 유용 합니다. 자세한 내용은 *ODBC SDK 프로그래머 참조*의 부록 D에서 "전체 자릿수, 소수 자릿수, 길이 및 표시 크기" 항목을 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-이러한 모든 유형의 데이터 원본에 있는 데이터는 `CString` 레코드 집합에 매핑됩니다.
+이러한 모든 형식의 데이터 원본에 있는 데이터는 레코드 집합의 및에서 매핑됩니다 `CString` .
 
 ### <a name="example"></a>예제
 
-이 예제에서는 에 `RFX_Text`대한 여러 호출을 보여 주며 있습니다. 또한 두 호출에 `CFieldExchange::SetFieldType`대해서도 확인합니다. 매개 변수의 경우 호출 `SetFieldType` 및 해당 RFX 호출을 작성해야 합니다. 출력 열 호출 및 관련 RFX 호출은 일반적으로 코드 마법사에 의해 작성됩니다.
+이 예제에서는에 대 한 여러 호출을 보여 줍니다 `RFX_Text` . 또한에 대 한 두 호출을 살펴봅니다 `CFieldExchange::SetFieldType` . 매개 변수의 경우에 대 한 호출과 해당 RFX 호출을 작성 해야 합니다 `SetFieldType` . 출력 열 호출 및 연결 된 RFX 호출은 일반적으로 코드 마법사를 통해 작성 됩니다.
 
 ```cpp
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -494,11 +494,11 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
 
-ODBC 데이터 원본의 열에서 -derive된 개체의 해당 배열로 `CRecordset`여러 바이트 데이터 행을 전송합니다.
+ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 바이트 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -513,43 +513,43 @@ void RFX_Binary_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgByteVals*<br/>
-BYTE 값의 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+바이트 값 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgByteVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgByteVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 *nMaxLength*<br/>
-*prgByteVals에*의해 가리키는 배열에 저장된 값의 최대 허용 길이입니다. 데이터가 잘리지 않도록 하려면 예상한 가장 큰 데이터 항목을 수용할 수 있을 만큼 큰 값을 전달합니다.
+*PrgByteVals*가 가리키는 배열에 저장 된 값의 최대 허용 길이입니다. 데이터가 잘리지 않도록 하려면 원하는 가장 큰 데이터 항목을 수용할 만큼 충분히 큰 값을 전달 합니다.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 형식의 SQL_BINARY, SQL_VARBINARY 또는 SQL_LONGVARBINARY 있을 수 있습니다. 레코드 집합은 BYTE에 대한 형식 포인터의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 형식의 SQL_BINARY, SQL_VARBINARY 또는 SQL_LONGVARBINARY 있을 수 있습니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를 BYTE로 정의 해야 합니다.
 
-*prgByteVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgByteVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트하려면 ODBC API 함수를 `SQLSetPos`사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
 
-ODBC 데이터 원본의 열에서 -derive된 개체의 해당 배열로 `CRecordset`여러 부울 데이터 행을 전송합니다.
+ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 부울 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -563,40 +563,40 @@ void RFX_Bool_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgBoolVals*<br/>
-BOOL 값 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+BOOL 값 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgBoolVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgBoolVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 유형의 SQL_BIT 있어야 합니다. 레코드 집합은 BOOL에 대한 형식 포인터의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 유형 SQL_BIT 있어야 합니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를 BOOL로 정의 해야 합니다.
 
-*prgBoolVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 자동으로 할당되고 크기는 행 집합 크기와 같습니다.
+*PrgBoolVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
 
-ODBC 데이터 원본의 열에서 -derive된 개체의 해당 배열로 `CRecordset`여러 단일 바이트 행을 전송합니다.
+ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 단일 바이트의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -610,40 +610,40 @@ void RFX_Byte_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgByteVals*<br/>
-BYTE 값의 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+바이트 값 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgByteVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgByteVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 형식의 SQL_TINYINT 있어야 합니다. 레코드 집합은 BYTE에 대한 형식 포인터의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 유형 SQL_TINYINT 있어야 합니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를 BYTE로 정의 해야 합니다.
 
-*prgByteVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgByteVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
 
-ODBC 데이터 원본의 열에서 -derive개체의 해당 배열로 `CRecordset`여러 TIMESTAMP_STRUCT 데이터 행을 전송합니다.
+ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 TIMESTAMP_STRUCT 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -657,40 +657,40 @@ void RFX_Date_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgTSVals*<br/>
-TIMESTAMP_STRUCT 값의 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다. TIMESTAMP_STRUCT 데이터 유형에 대한 자세한 내용은 *ODBC SDK 프로그래머*참조의 부록 D에서 "C 데이터 유형" 항목을 참조하십시오.
+TIMESTAMP_STRUCT 값 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다. TIMESTAMP_STRUCT 데이터 형식에 대 한 자세한 내용은 *ODBC SDK 프로그래머 참조*의 부록 D에서 "C 데이터 형식" 항목을 참조 하세요.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgTSVals가*가리키는 배열의 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgTSVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 유형의 SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 있을 수 있습니다. 레코드 집합은 TIMESTAMP_STRUCT 위해 형식 포인터의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 형식의 SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 있을 수 있습니다. 레코드 집합은 TIMESTAMP_STRUCT 포인터 형식의 필드 데이터 멤버를 정의 해야 합니다.
 
-*prgTSVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgTSVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
 
-ODBC 데이터 원본의 열에서 `CRecordset`-derive개체의 해당 배열로 이중 정밀도 부동 지점 데이터의 여러 행을 전송합니다.
+ODBC 데이터 원본의 열에서 파생 된 개체의 해당 배열까지 배정밀도 부동 소수점 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -704,40 +704,40 @@ void RFX_Double_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgDblVals*<br/>
-**이중** 값 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+값 배열에 대 한 포인터 **`double`** 입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgDblVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgDblVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 유형의 SQL_DOUBLE 있어야 합니다. 레코드 집합은 형식 포인터의 필드 데이터 멤버를 **두 배로**정의해야 합니다.
+데이터 원본 열에는 ODBC 유형 SQL_DOUBLE 있어야 합니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를로 정의 해야 합니다 **`double`** .
 
-*prgDblVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgDblVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
 
-개체의 필드 데이터 멤버와 ODBC `CRecordset` 형식 SQL_SMALLINT 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송합니다.
+개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송 SQL_SMALLINT 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -750,26 +750,26 @@ void RFX_Int(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[클래스 CFieldExchange의](cfieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 `CFieldExchange` 있는 작업에 대한 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 개체가 지정할 수 있는 작업에 대 한 자세한 내용은 `CFieldExchange` [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 **int**형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`int`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 ### <a name="example"></a>예제
 
-[RFX_Text](#rfx_text)를 참조하십시오.
+[RFX_Text](#rfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
 
-ODBC 데이터 원본의 열에서 -derive된 개체의 해당 배열로 긴 `CRecordset`정수 데이터의 여러 행을 전송합니다.
+ODBC 데이터 원본의 열에서 파생 개체의 해당 배열까지 long 정수 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -783,40 +783,40 @@ void RFX_Long_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgLongVals*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgLongVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgLongVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 유형의 SQL_INTEGER 있어야 합니다. 레코드 집합은 type 포인터의 필드 데이터 멤버를 **long으로**정의해야 합니다.
+데이터 원본 열에는 ODBC 유형 SQL_INTEGER 있어야 합니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를로 정의 해야 합니다 **`long`** .
 
-*prgLongVals* 및 *prgLengths를* NULL로 초기화하면 원하는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgLongVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
 
-ODBC 데이터 원본의 열에서 -derive된 개체의 해당 배열로 부동 지점 데이터의 여러 행을 `CRecordset`전송합니다.
+ODBC 데이터 원본의 열에서 파생 개체의 해당 배열에 부동 소수점 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -830,40 +830,40 @@ void RFX_Single_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgFltVals*<br/>
-**float** 값 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다.
+값 배열에 대 한 포인터 **`float`** 입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgFltVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgFltVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 형식의 SQL_REAL 있어야 합니다. 레코드 집합은 float 를 **참조할**형식 포인터의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 유형 SQL_REAL 있어야 합니다. 레코드 집합은 포인터 형식의 필드 데이터 멤버를로 정의 해야 합니다 **`float`** .
 
-*prgFltVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgFltVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-[RFX_Text_Bulk](#rfx_text_bulk)를 참조하십시오.
+[RFX_Text_Bulk](#rfx_text_bulk)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
 
-ODBC 데이터 원본의 열에서 -derive개체의 해당 배열로 `CRecordset`여러 문자 데이터 행을 전송합니다.
+ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 문자 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -878,35 +878,35 @@ void RFX_Text_Bulk(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-[CFieldExchange](cfieldexchange-class.md) 개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [문서 레코드 필드 교환: RFX 작동 방식을](../../data/odbc/record-field-exchange-how-rfx-works.md)참조하십시오.
+*pFX*<br/>
+[CFieldExchange](cfieldexchange-class.md) 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다. 자세한 내용은 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)문서를 참조 하세요.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *prgStrVals*<br/>
-LPSTR 값의 배열에 대한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송할 데이터를 저장합니다. ODBC의 현재 버전에서는 이러한 값이 유니코드가 될 수 없습니다.
+LPSTR 값 배열에 대 한 포인터입니다. 이 배열은 데이터 원본에서 레코드 집합으로 전송 될 데이터를 저장 합니다. 최신 버전의 ODBC를 사용 하는 경우 이러한 값은 유니코드로 설정할 수 없습니다.
 
 *prgLengths*<br/>
-긴 정수 배열에 대한 포인터입니다. 이 배열은 *prgStrVals에*의해 가리키는 배열에 각 값의 바이트로 길이를 저장합니다. 이 길이는 null 종료 문자를 제외합니다. 해당 데이터 항목에 Null 값이 포함된 경우 SQL_NULL_DATA 값이 저장됩니다. 자세한 내용은 ODBC `SQLBindCol` *SDK 프로그래머의 참조에서 ODBC*API 함수를 참조하십시오.
+Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgStrVals*가 가리키는 배열에 있는 각 값의 길이 (바이트)를 저장 합니다. 이 길이는 null 종결 문자를 제외 합니다. 해당 데이터 항목에 Null 값이 포함 되어 있으면 SQL_NULL_DATA 값이 저장 됩니다. 자세한 내용은 `SQLBindCol` *Odbc SDK 프로그래머 참조*의 odbc API 함수를 참조 하세요.
 
 *nMaxLength*<br/>
-null 종료 문자를 포함하여 *prgStrVals가*가리키는 배열에 저장된 값의 최대 허용 길이입니다. 데이터가 잘리지 않도록 하려면 예상한 가장 큰 데이터 항목을 수용할 수 있을 만큼 큰 값을 전달합니다.
+Null 종결 문자를 포함 하 여 *prgStrVals*가 가리키는 배열에 저장 된 값의 최대 허용 길이입니다. 데이터가 잘리지 않도록 하려면 원하는 가장 큰 데이터 항목을 수용할 만큼 충분히 큰 값을 전달 합니다.
 
 ### <a name="remarks"></a>설명
 
-데이터 원본 열에는 ODBC 유형의 SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL 또는 SQL_NUMERIC 있을 수 있습니다. 레코드 집합은 LPSTR 형식의 필드 데이터 멤버를 정의해야 합니다.
+데이터 원본 열에는 ODBC 형식의 SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL 또는 SQL_NUMERIC 있을 수 있습니다. 레코드 집합은 LPSTR 형식의 필드 데이터 멤버를 정의 해야 합니다.
 
-*prgStrVals* 및 *prgLengths를* NULL로 초기화하면 해당 배열이 가리키는 배열이 행 집합 크기와 동일한 크기로 자동으로 할당됩니다.
+*PrgStrVals* 및 *prgLengths* 를 NULL로 초기화 하면 해당 배열이 가리키는 배열이 자동으로 할당 되며, 크기는 행 집합 크기와 같습니다.
 
 > [!NOTE]
-> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로만 데이터를 전송합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC `SQLSetPos`API 함수를 사용해야 합니다.
+> 대량 레코드 필드 교환은 데이터 원본에서 레코드 집합 개체로 데이터를 전송 합니다. 레코드 집합을 업데이트할 수 있도록 하려면 ODBC API 함수를 사용 해야 합니다 `SQLSetPos` .
 
-자세한 내용은 [레코드 집합: 대량 레코드 가져오기(ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조하십시오.
+자세한 내용은 [레코드 집합: 대량 레코드 페치 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [레코드 필드 교환 (RFX)](../../data/odbc/record-field-exchange-rfx.md)문서를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-`DoBulkFieldExchange` 재정의에 수동으로 통화를 작성해야 합니다. 이 예제에서는 데이터 `RFX_Text_Bulk`전송에 대한 호출과 에 대한 호출을 `RFX_Long_Bulk`보여 주며 이러한 호출 앞에는 [CFieldExchange:SetFieldType](cfieldexchange-class.md#setfieldtype)에 대한 호출이 옵니다. 매개 변수의 경우 대량 RFX 함수 대신 RFX 함수를 호출해야 합니다.
+재정의에서 수동으로 호출을 작성 해야 합니다 `DoBulkFieldExchange` . 이 예제에서는 `RFX_Text_Bulk` `RFX_Long_Bulk` 데이터 전송에 대 한 호출 뿐만 아니라에 대 한 호출을 보여 줍니다. 이러한 호출은 앞에 [CFieldExchange:: SetFieldType](cfieldexchange-class.md#setfieldtype)를 호출 합니다. 매개 변수의 경우 대량 RFX 함수 대신 RFX 함수를 호출 해야 합니다.
 
 ```cpp
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -925,11 +925,11 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdb.h
+**헤더:** afxdb
 
 ## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 바이트 배열을 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 사이에 바이트 배열을 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -944,39 +944,39 @@ void AFXAPI DFX_Binary(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 [CByteArray](cbytearray-class.md)형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 지정 된 데이터 멤버에서 [CByteArray](cbytearray-class.md)형식의 값을 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *nPreAllocSize*<br/>
-프레임워크는 이 양의 메모리를 할당합니다. 데이터가 큰 경우 프레임워크는 필요에 따라 더 많은 공간을 할당합니다. 성능을 향상하려면 이 크기를 재할당을 방지할 수 있을 만큼 큰 값으로 설정합니다. 기본 크기는 AFXDAO에 정의되어 있습니다. H 파일은 AFX_DAO_BINARY_DEFAULT_SIZE.
+프레임 워크는이 크기의 메모리를 사전에 할당 합니다. 데이터가 더 큰 경우 프레임 워크에서 필요에 따라 더 많은 공간을 할당 합니다. 성능을 향상 시키려면이 크기를 재할당을 방지 하기에 충분히 큰 값으로 설정 합니다. 기본 크기는 AFXDAO에서 정의 됩니다. H 파일 AFX_DAO_BINARY_DEFAULT_SIZE입니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_DISABLE_FIELD_CACHE 이중 버퍼링을 사용하지 않으며 [SetFieldDirty](cdaorecordset-class.md#setfielddirty) 및 [SetFieldNull을](cdaorecordset-class.md#setfieldnull) 직접 호출해야 합니다. AFX_DAO_ENABLE_FIELD_CACHE 다른 가능한 값은 이중 버퍼링을 사용하며 필드를 더럽거나 Null로 표시하기 위해 추가 작업을 수행할 필요가 없습니다. 성능 및 메모리상의 이유로 이진 데이터가 상대적으로 작지 않으면 이 값을 사용하지 마십시오.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_DISABLE_FIELD_CACHE는 이중 버퍼링을 사용 하지 않으므로 [SetFieldDirty](cdaorecordset-class.md#setfielddirty) 및 [SetFieldNull](cdaorecordset-class.md#setfieldnull) 를 직접 호출 해야 합니다. 가능한 다른 값인 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 하며, 필드를 변경 하거나 Null로 표시 하기 위해 추가 작업을 수행할 필요가 없습니다. 성능 및 메모리의 이유로 이진 데이터가 비교적 작은 경우가 아니면이 값을 사용 하지 마십시오.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 모든 필드에 대해 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> 기본적으로 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)를 설정 하 여 모든 필드에 대 한 데이터를 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_BYTES 레코드 집합의 [CByteArray](cbytearray-class.md) 유형 간에 매핑됩니다.
+DAO의 형식 DAO_BYTES 간에 데이터가 매핑되고 레코드 집합에 [CByteArray](cbytearray-class.md) 형식이 있습니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -990,36 +990,36 @@ void AFXAPI DFX_Bool(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 BOOL 형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 BOOL 형식의 값은 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_BOOL 레코드 집합의 BOOL 유형 간에 매핑됩니다.
+데이터는 DAO의 형식 DAO_BOOL 사이에 매핑되고 레코드 집합에서 BOOL 형식으로 매핑됩니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1033,8 +1033,8 @@ void AFXAPI DFX_Byte(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
@@ -1043,10 +1043,10 @@ void AFXAPI DFX_Byte(
 표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 소스로 전송하기 위해 BYTE 형식의 값을 지정된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1054,15 +1054,15 @@ void AFXAPI DFX_Byte(
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 통화 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 통화 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1076,36 +1076,36 @@ void AFXAPI DFX_Currency(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 이 값은 [COleCurrency](colecurrency-class.md)형식의 지정된 데이터 멤버에서 가져온 값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우이 값은 [COleCurrency](colecurrency-class.md)형식의 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_CURRENCY 레코드 집합의 [COleCurrency](colecurrency-class.md) 유형 간에 매핑됩니다.
+DAO의 형식 DAO_CURRENCY 간에 데이터가 매핑되고 레코드 집합에 [COleCurrency](colecurrency-class.md) 형식이 있습니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 시간 및 날짜 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 시간 및 날짜 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1119,39 +1119,39 @@ void AFXAPI DFX_DateTime(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 함수는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체를 참조합니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 이 값은 지정된 데이터 멤버에서 가져온 값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 함수는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체에 대 한 참조를 사용 합니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우이 값은 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_DATE 레코드 집합의 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 유형 간에 매핑됩니다.
+DAO의 형식 DAO_DATE 간에 데이터가 매핑되고 레코드 집합에 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 형식이 있습니다.
 
 > [!NOTE]
-> `COleDateTime`DAO 클래스에서 이러한 목적을 위해 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 TIMESTAMP_STRUCT 대체합니다. `CTime`TIMESTAMP_STRUCT 여전히 ODBC 기반 데이터 액세스 클래스에 사용됩니다.
+> `COleDateTime`DAO 클래스에서이 목적에 대 한 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 TIMESTAMP_STRUCT를 대체 합니다. `CTime`및 TIMESTAMP_STRUCT은 여전히 ODBC 기반 데이터 액세스 클래스에 사용 됩니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 **이중 부동 데이터** 전송
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 **이중 float** 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1165,36 +1165,36 @@ void AFXAPI DFX_Double(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 **double**형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`double`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_R8 레코드 집합에 **double float** 유형 간에 매핑됩니다.
+DAO의 형식 DAO_R8 간에 데이터가 매핑되고 레코드 집합에 **double float** 형식이 있습니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 긴 정수 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 정수 (long) 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1208,36 +1208,36 @@ void AFXAPI DFX_Long(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 형식 **long의**값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`long`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_I4 레코드 집합에 **긴** 형식 간에 매핑됩니다.
+데이터는 DAO의 형식 DAO_I4와 **`long`** 레코드 집합의 형식 간에 매핑됩니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
 
-**중요 사항** 이 함수 대신 [DFX_Binary](#dfx_binary) 사용하는 것이 좋습니다.
+**중요** 이 함수 대신 [DFX_Binary](#dfx_binary) 를 사용 하는 것이 좋습니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1252,39 +1252,39 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 [CLongBinary](clongbinary-class.md)형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 지정 된 데이터 멤버에서 [CLongBinary](clongbinary-class.md)형식의 값을 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwPreAllocSize*<br/>
-프레임워크는 이 양의 메모리를 할당합니다. 데이터가 큰 경우 프레임워크는 필요에 따라 더 많은 공간을 할당합니다. 성능을 향상하려면 이 크기를 재할당을 방지할 수 있을 만큼 큰 값으로 설정합니다.
+프레임 워크는이 크기의 메모리를 사전에 할당 합니다. 데이터가 더 큰 경우 프레임 워크에서 필요에 따라 더 많은 공간을 할당 합니다. 성능을 향상 시키려면이 크기를 재할당을 방지 하기에 충분히 큰 값으로 설정 합니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DISABLE_FIELD_CACHE 이중 버퍼링을 사용하지 않습니다. 다른 가능한 값은 AFX_DAO_ENABLE_FIELD_CACHE. 이중 버퍼링을 사용하며 필드를 더럽거나 Null로 표시하기 위해 추가 작업을 수행할 필요가 없습니다. 성능 및 메모리상의 이유로 이진 데이터가 상대적으로 작지 않으면 이 값을 사용하지 마십시오.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DISABLE_FIELD_CACHE는 이중 버퍼링을 사용 하지 않습니다. 다른 가능한 값은 AFX_DAO_ENABLE_FIELD_CACHE입니다. 에서는 이중 버퍼링을 사용 하며, 필드를 변경 하거나 Null로 표시 하기 위해 추가 작업을 수행할 필요가 없습니다. 성능 및 메모리의 이유로 이진 데이터가 비교적 작은 경우가 아니면이 값을 사용 하지 마십시오.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-`DFX_LongBinary`MFC ODBC 클래스와의 호환성을 위해 제공됩니다. 함수는 `DFX_LongBinary` [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 `CLongBinary` 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 클래스를 사용하여 이진 대용량 개체(BLOB) 데이터를 전송합니다. 데이터는 DAO의 형식 DAO_BYTES 레코드 집합의 [CLongBinary](clongbinary-class.md) 유형 간에 매핑됩니다.
+`DFX_LongBinary`는 MFC ODBC 클래스와의 호환성을 위해 제공 됩니다. `DFX_LongBinary`함수는 `CLongBinary` [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 클래스를 사용 하 여 BLOB (binary large object) 데이터를 전송 합니다. DAO의 형식 DAO_BYTES 간에 데이터가 매핑되고 레코드 집합에 [CLongBinary](clongbinary-class.md) 형식이 있습니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 짧은 정수 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 short 정수 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1298,39 +1298,39 @@ void AFXAPI DFX_Short(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 **짧은**형식의 값은 지정된 데이터 멤버에서 가져온 값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`short`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_I2 레코드 집합에서 **짧은** 형식 간에 매핑됩니다.
+데이터는 DAO의 형식 DAO_I2와 **`short`** 레코드 집합의 형식 간에 매핑됩니다.
 
 > [!NOTE]
-> `DFX_Short`는 ODBC 기반 클래스의 [RFX_Int](#rfx_int) 동일합니다.
+> `DFX_Short`는 ODBC 기반 클래스의 [RFX_Int](#rfx_int) 와 동일 합니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
 
-[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부동 지점 데이터를 전송합니다.
+[CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부동 소수점 데이터를 전송 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1344,32 +1344,32 @@ void AFXAPI DFX_Single(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 형식 **float의**값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 형식의 값은 **`float`** 지정 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. `SetFieldDirty` 및 `SetFieldNull`을 직접 호출해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 형식 DAO_R4 레코드 집합에 **float** 유형 간에 매핑됩니다.
+데이터는 DAO의 형식 DAO_R4와 **`float`** 레코드 집합의 형식 간에 매핑됩니다.
 
 ### <a name="example"></a>예제
 
-[DFX_Text](#dfx_text)를 참조하십시오.
+[DFX_Text](#dfx_text)를 참조 하세요.
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
 
@@ -1388,31 +1388,31 @@ void AFXAPI DFX_Text(
 
 ### <a name="parameters"></a>매개 변수
 
-*Pfx*<br/>
-클래스 [CDaoFieldExchange의](cdaofieldexchange-class.md)개체에 대한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
+*pFX*<br/>
+[CDaoFieldExchange](cdaofieldexchange-class.md)클래스의 개체에 대 한 포인터입니다. 이 개체에는 각 함수 호출에 대한 컨텍스트를 정의하는 정보가 포함됩니다.
 
 *szName*<br/>
 데이터 열의 이름입니다.
 
 *value*<br/>
-표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송하는 경우 [CString](../../atl-mfc-shared/reference/cstringt-class.md)형식의 값은 지정된 데이터 멤버에서 가져온값입니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
+표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 데이터 원본으로 전송 하는 경우 지정 된 데이터 멤버에서 [CString](../../atl-mfc-shared/reference/cstringt-class.md)형식의 값을 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.
 
 *nPreAllocSize*<br/>
-프레임워크는 이 양의 메모리를 할당합니다. 데이터가 큰 경우 프레임워크는 필요에 따라 더 많은 공간을 할당합니다. 성능을 향상하려면 이 크기를 재할당을 방지할 수 있을 만큼 큰 값으로 설정합니다.
+프레임 워크는이 크기의 메모리를 사전에 할당 합니다. 데이터가 더 큰 경우 프레임 워크에서 필요에 따라 더 많은 공간을 할당 합니다. 성능을 향상 시키려면이 크기를 재할당을 방지 하기에 충분히 큰 값으로 설정 합니다.
 
 *dwBindOptions*<br/>
-변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값인 AFX_DAO_ENABLE_FIELD_CACHE 이중 버퍼링을 사용합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. [SetFieldDirty](cdaorecordset-class.md#setfielddirty) 및 [SetFieldNull을](cdaorecordset-class.md#setfieldnull) 직접 호출해야 합니다.
+변경된 레코드 집합 필드를 검색할 수 있도록 MFC의 이중 버퍼링 메커니즘을 활용할 수 있게 해주는 옵션입니다. 기본값 AFX_DAO_ENABLE_FIELD_CACHE는 이중 버퍼링을 사용 합니다. 다른 가능한 값은 AFX_DAO_DISABLE_FIELD_CACHE입니다. 이 값을 지정하면, MFC가 이 필드를 검사하지 않습니다. [SetFieldDirty](cdaorecordset-class.md#setfielddirty) 및 [SetFieldNull](cdaorecordset-class.md#setfieldnull) 를 직접 호출 해야 합니다.
 
 > [!NOTE]
-> [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)설정하여 기본적으로 데이터가 이중 버퍼링되는지 여부를 제어할 수 있습니다.
+> [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)을 설정 하 여 데이터를 기본적으로 이중 버퍼링 할지 여부를 제어할 수 있습니다.
 
 ### <a name="remarks"></a>설명
 
-데이터는 DAO의 DAO_CHAR 유형(또는 기호_UNICODE 정의된 경우 DAO_WCHAR) 및 레코드 집합의 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 유형 간에 매핑됩니다.  n
+데이터는 DAO에서 형식 DAO_CHAR 사이에 매핑되고 (_UNICODE 기호가 정의 된 경우 DAO_WCHAR) 레코드 집합에 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 을 입력 합니다.  n
 
 ### <a name="example"></a>예제
 
-이 예제에서는 에 `DFX_Text`대한 여러 호출을 보여 주며 있습니다. [또한 CDaoFieldExchange::SetFieldType에](cdaofieldexchange-class.md#setfieldtype)대한 두 호출도 확인합니다. 첫 번째 `SetFieldType` 호출과 **DFX** 호출을 작성해야 합니다. 두 번째 호출과 관련 **DFX** 호출은 일반적으로 클래스를 생성한 코드 마법사에 의해 작성됩니다.
+이 예제에서는에 대 한 여러 호출을 보여 줍니다 `DFX_Text` . [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype)에 대 한 두 번의 호출도 확인 합니다. 에 대 한 첫 번째 호출과 `SetFieldType` 해당 **DFX** 호출을 작성 해야 합니다. 두 번째 호출 및 이와 관련 된 **DFX** 호출은 일반적으로 클래스를 생성 한 코드 마법사를 통해 작성 됩니다.
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1432,7 +1432,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 ### <a name="requirements"></a>요구 사항
 
-**헤더:** afxdao.h
+**헤더:** afxdao
 
 ## <a name="see-also"></a>참고 항목
 

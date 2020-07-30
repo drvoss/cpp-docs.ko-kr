@@ -1,5 +1,5 @@
 ---
-title: C에 대 한 Microsoft 확장 하 고C++
+title: C 및 C++에 대한 Microsoft 확장
 ms.date: 06/14/2018
 helpviewer_keywords:
 - or_eq operator
@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231509"
 ---
-# <a name="microsoft-extensions-to-c-and-c"></a>C에 대 한 Microsoft 확장 하 고C++
+# <a name="microsoft-extensions-to-c-and-c"></a>C 및 C++에 대한 Microsoft 확장
 
 Visual C++는 다음과 같이 ANSI C 및 ANSI C++ 표준을 확장합니다.
 
-## <a name="keywords"></a>키워드
+## <a name="keywords"></a>키워드가
 
-여러 키워드가 추가되었습니다. 목록의 [키워드](../../cpp/keywords-cpp.md), 선행 밑줄이 두 개 있는 키워드에 시각적 개체는 C++ 확장 합니다.
+여러 키워드가 추가되었습니다. [키워드](../../cpp/keywords-cpp.md)목록에서 두 개의 선행 밑줄이 있는 키워드는 Visual C++ 확장명입니다.
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>정적 const 정수 (또는 열거형) 멤버의 클래스 정의
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>정적 const 정수 (또는 열거형) 멤버의 클래스 정의가 부족 합니다.
 
-표준에서 (**/Za**), 여기에 나와 있는 것 처럼 데이터 멤버에 대 한 클래스의 확장 정의 확인 해야 합니다.
+표준 (**/za**)에서 다음과 같이 데이터 멤버에 대 한 클래스 외부 정의를 만들어야 합니다.
 
 ```cpp
 class CMyClass  {
@@ -57,19 +57,19 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-아래 **/Ze**, 클래스의 확장 정의 static, const integral 및 const enum 데이터 멤버에 대 한 선택 사항입니다. static 및 const인 열거형 및 정수만 클래스에서 이니셜라이저를 포함할 수 있습니다. 초기화 식은 const 식이어야 합니다.
+**/Ze**에서 클래스 외부 정의는 static, const 정수 및 const 열거형 데이터 멤버의 경우 선택 사항입니다. static 및 const인 열거형 및 정수만 클래스에서 이니셜라이저를 포함할 수 있습니다. 초기화 식은 const 식이어야 합니다.
 
-오류를 한 클래스 정의 헤더 파일 및 헤더 파일 포함 되어 여러 소스 파일에 제공 된 경우를 방지 하려면 사용 하 여 [selectany](../../cpp/selectany.md)합니다. 예를 들어:
+헤더 파일에 클래스 외부 정의가 제공 되 고 헤더 파일이 여러 소스 파일에 포함 된 경우 오류를 방지 하려면 [selectany](../../cpp/selectany.md)을 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
 ```
 
-## <a name="casts"></a>캐스트
+## <a name="casts"></a>캐스팅
 
 C++ 컴파일러 및 C 컴파일러는 모두 이러한 종류의 비ANSI 캐스트를 지원합니다.
 
-- l-value를 생성하기 위한 비ANSI 캐스트. 예를 들어:
+- l-value를 생성하기 위한 비ANSI 캐스트. 예를 들면 다음과 같습니다.
 
    ```C
    char *p;
@@ -85,7 +85,7 @@ C++ 컴파일러 및 C 컴파일러는 모두 이러한 종류의 비ANSI 캐스
    p = ( char * )(( int * )p + 1 );
    ```
 
-- 데이터 포인터에 대한 함수 포인터의 비ANSI 캐스트. 예를 들어:
+- 데이터 포인터에 대한 함수 포인터의 비ANSI 캐스트. 예를 들면 다음과 같습니다.
 
    ```C
    int ( * pfunc ) ();
@@ -109,7 +109,7 @@ void myfunc( int x, char * c )
 { }
 ```
 
-## <a name="single-line-comments"></a>단일 줄 주석
+## <a name="single-line-comments"></a>한 줄로 된 주석
 
 C 컴파일러는 2개의 슬래시(//) 문자를 사용해서 시작되는 한 줄로 된 주석을 지원합니다.
 
@@ -121,7 +121,7 @@ C 컴파일러는 2개의 슬래시(//) 문자를 사용해서 시작되는 한 
 
 C 컴파일러는 다음과 같은 범위 관련 기능을 지원합니다.
 
-- Extern 항목 static으로 재정의 합니다.
+- 재정의의 extern 항목:
 
    ```C
    extern int clip();
@@ -129,14 +129,14 @@ C 컴파일러는 다음과 같은 범위 관련 기능을 지원합니다.
    {}
    ```
 
-- 동일한 범위 내에서 typedef 재정의 사용:
+- 동일한 범위 내에서 무해 한 typedef 재정의 사용:
 
    ```C
    typedef int INT;
    typedef int INT;
    ```
 
-- 함수 선언 자는 파일 범위를 가집니다.
+- 함수 선언 자에는 파일 범위가 있습니다.
 
    ```C
    void func1()
@@ -172,13 +172,13 @@ C 컴파일러는 다음과 같은 범위 관련 기능을 지원합니다.
 
 C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원합니다.
 
-- 혼합된 문자 및 문자열 상수 이니셜라이저에:
+- 이니셜라이저의 혼합 문자 및 문자열 상수:
 
    ```C
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- 비트 필드는 기본 형식 이외의 **부호 없는 int** 하거나 **int 서명**합니다.
+- 또는 이외의 기본 형식이 있는 비트 필드입니다 **`unsigned int`** **`signed int`** .
 
 - 형식을 포함하지 않는 선언자:
 
@@ -190,7 +190,7 @@ C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원�
    }
    ```
 
-- 구조체 및 공용 구조체의 마지막 필드와 크기가 지정 되지 않은 배열:
+- 구조체 및 공용 구조체의 마지막 필드로 배열을 크기 배열 합니다.
 
    ```C
    struct zero
@@ -200,7 +200,7 @@ C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원�
    };
    ```
 
-- 명명 되지 않은 (익명) 구조:
+- 명명 되지 않은 (익명) 구조체:
 
    ```C
    struct
@@ -210,7 +210,7 @@ C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원�
    };
    ```
 
-- 명명 되지 않은 (익명) 공용 구조체
+- 명명 되지 않은 (익명) 공용 구조체:
 
    ```C
    union
@@ -230,13 +230,13 @@ C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원�
    }
    ```
 
-## <a name="intrinsic-floating-point-functions"></a>부동 소수점 내장 함수
+## <a name="intrinsic-floating-point-functions"></a>내장 부동 소수점 함수
 
-모두 x86 C++ 컴파일러 및 C 컴파일러의 인라인 생성을 지원 합니다 `atan`, `atan2`, `cos`, `exp`, `log`를 `log10`, `sin`, `sqrt`, 및 `tan` 함수는 경우 **/Oi** 지정 됩니다. C 컴파일러의 경우, 이러한 내장 함수는 `errno` 변수를 설정하지 않기 때문에 이러한 내장 함수가 사용될 경우 ANSI 규칙을 준수할 수 없게 됩니다.
+C + + 컴파일러 및 c 컴파일러는 모두 `atan` `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` **/oi** 가 지정 된 경우,,,,,,, 및 함수의 인라인 생성을 지원 합니다. C 컴파일러의 경우, 이러한 내장 함수는 `errno` 변수를 설정하지 않기 때문에 이러한 내장 함수가 사용될 경우 ANSI 규칙을 준수할 수 없게 됩니다.
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const 포인터 매개 변수에 대 한 참조를 예상 하는 함수에는 비 const 포인터 매개 변수를 전달
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const 포인터 매개 변수에 대 한 참조가 필요한 함수에 const가 아닌 포인터 매개 변수 전달
 
-이 확장입니다 C++입니다. 사용 하 여이 코드는 컴파일되지 **/Ze**:
+C + +에 대 한 확장입니다. 이 코드는 **/ze**를 사용 하 여 컴파일합니다.
 
 ```cpp
 typedef   int   T;
@@ -258,21 +258,21 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646 합니다. H를 사용할 수 없습니다
+## <a name="iso646h-not-enabled"></a>ISO646. H 사용 안 함
 
-아래 **/Ze**, 텍스트 서식의 다음 연산자를 사용 하려는 경우 iso646.h 포함 해야 합니다.
+다음 연산자의 텍스트 형식을 사용 하려면 **/ze**에서 iso646를 포함 해야 합니다.
 
-- & & (및)
+- &&(및)
 
-- & = (and_eq)
+- &= (and_eq)
 
 - & (bitand)
 
-- &#124;(bitor)
+- &#124; (bitor)
 
 - ~ (compl)
 
-- ! (not)
+- ! 나타내지
 
 - ! = (not_eq)
 
@@ -280,13 +280,13 @@ void func ()
 
 - &#124;= (or_eq)
 
-- ^ (비트 xor)
+- ^ (xor)
 
-- ^= (xor_eq)
+- ^ = (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>리터럴 문자열의 주소에 const char [형식에서 const char (*)]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>문자열 리터럴의 주소에 const char [], const char (*) []가 아닌 형식이 있습니다.
 
-다음 예제에서는 출력 `char const (*)[4]` 아래에서 **/Za**, 하지만 `char const [4]` 아래에 있는 **/Ze**합니다.
+다음 예제는 `char const (*)[4]` **/za**아래에 있지만/ze에서 출력 됩니다 `char const [4]` . **/Ze**
 
 ```cpp
 #include <stdio.h>
@@ -298,8 +298,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [/Za, /Ze(언어 확장 사용 안 함)](za-ze-disable-language-extensions.md)
+- [/Za,/Ze (언어 확장 사용 안 함)](za-ze-disable-language-extensions.md)
 - [MSVC 컴파일러 옵션](compiler-options.md)
 - [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

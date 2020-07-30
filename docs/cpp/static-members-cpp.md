@@ -13,16 +13,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b79b65ab3cbf4565f31ad6717f8163c678697c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178563"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213192"
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
 
-클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 데이터 멤버가 **정적**으로 선언 되 면 클래스의 모든 개체에 대해 데이터의 복사본 하나만 유지 관리 됩니다.
+클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 선언 된 데이터 멤버는 **`static`** 클래스의 모든 개체에 대해 데이터의 복사본 하나만 유지 됩니다.
 
 정적 데이터 멤버는 지정된 클래스 형식의 개체에 속하지 않습니다. 결과적으로, 정적 데이터 멤버 선언은 정의로 간주되지 않습니다. 데이터 멤버는 클래스 범위에서 선언되지만 정의는 파일 범위에서 수행됩니다. 이러한 정적 멤버에는 외부 링크가 있습니다. 다음 예제에서는 이에 대해 설명합니다.
 
@@ -63,7 +63,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;
 ```
 
-정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택 ()을 사용 하 여 정적 멤버에 액세스할 수도 있습니다 **.** 및 **->** ) 연산자 예를 들면 다음과 같습니다.
+정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택 ()을 사용 하 여 정적 멤버에 액세스할 수도 있습니다 **.** 및 **->** ) 연산자가 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 BufferedOutput Console;
@@ -75,7 +75,7 @@ long nBytes = Console.bytecount;
 
 정적 데이터 멤버에는 클래스 멤버 액세스 규칙이 적용되므로 정적 데이터 멤버에 대한 전용 액세스는 클래스 멤버 함수 및 friend에만 허용됩니다. 이러한 규칙은 [멤버 Access Control](../cpp/member-access-control-cpp.md)에 설명 되어 있습니다. 예외는 정적 데이터 멤버가 해당 액세스 제한에 관계없이 파일 범위에서 정의되어야 한다는 것입니다. 데이터 멤버를 명시적으로 초기화하는 경우 이니셜라이저에 정의를 제공해야 합니다.
 
-정적 멤버의 형식은 클래스 이름으로 한정되지 않습니다. 따라서 `BufferedOutput::bytecount`의 형식은 **깁니다**.
+정적 멤버의 형식은 클래스 이름으로 한정되지 않습니다. 따라서의 형식은입니다 `BufferedOutput::bytecount` **`long`** .
 
 ## <a name="see-also"></a>참고 항목
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231704"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry 클래스
 
@@ -35,29 +35,29 @@ class multi_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>매개 변수
 
 *_Block*<br/>
-`multi_link_registry` 개체에 저장 되는 블록 데이터 형식입니다.
+개체에 저장 되는 블록 데이터 형식 `multi_link_registry` 입니다.
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|`multi_link_registry` 개체를 생성합니다.|
-|[~ multi_link_registry 소멸자](#dtor)|`multi_link_registry` 개체를 소멸 시킵니다.|
+|[~ multi_link_registry 소멸자](#dtor)|개체를 소멸 시킵니다 `multi_link_registry` .|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
-|[추가](#add)|`multi_link_registry` 개체에 대 한 링크를 추가 합니다. [Network_link_registry:: add](network-link-registry-class.md#add)를 재정의 합니다.|
-|[begin](#begin)|`multi_link_registry` 개체의 첫 번째 요소에 대 한 반복기를 반환 합니다. [Network_link_registry:: begin](network-link-registry-class.md#begin)을 재정의 합니다.|
-|[contains](#contains)|지정 된 블록에 대 한 `multi_link_registry` 개체를 검색 합니다. [Network_link_registry:: contains](network-link-registry-class.md#contains)를 재정의 합니다.|
-|[count](#count)|`multi_link_registry` 개체의 항목 수를 셉니다. [Network_link_registry:: count](network-link-registry-class.md#count)를 재정의 합니다.|
-|[remove](#remove)|`multi_link_registry` 개체에서 링크를 제거 합니다. [Network_link_registry:: remove](network-link-registry-class.md#remove)를 재정의 합니다.|
-|[set_bound](#set_bound)|`multi_link_registry` 개체가 보유할 수 있는 링크 수의 상한을 설정 합니다.|
+|[add](#add)|개체에 대 한 링크를 추가 `multi_link_registry` 합니다. [Network_link_registry:: add](network-link-registry-class.md#add)를 재정의 합니다.|
+|[시작](#begin)|개체의 첫 번째 요소에 대 한 반복기를 반환 `multi_link_registry` 합니다. [Network_link_registry:: begin](network-link-registry-class.md#begin)을 재정의 합니다.|
+|[contains](#contains)|지정 된 `multi_link_registry` 블록에 대 한 개체를 검색 합니다. [Network_link_registry:: contains](network-link-registry-class.md#contains)를 재정의 합니다.|
+|[count](#count)|개체의 항목 수를 셉니다 `multi_link_registry` . [Network_link_registry:: count](network-link-registry-class.md#count)를 재정의 합니다.|
+|[remove](#remove)|개체에서 링크를 제거 합니다 `multi_link_registry` . [Network_link_registry:: remove](network-link-registry-class.md#remove)를 재정의 합니다.|
+|[set_bound](#set_bound)|개체가 보유할 수 있는 링크 수의 상한을 설정 `multi_link_registry` 합니다.|
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [network_link_registry](network-link-registry-class.md)
 
@@ -67,11 +67,11 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 **헤더:** agents.h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="add"></a>추가
+## <a name="add"></a><a name="add"></a>추가
 
-`multi_link_registry` 개체에 대 한 링크를 추가 합니다.
+개체에 대 한 링크를 추가 `multi_link_registry` 합니다.
 
 ```cpp
 virtual void add(_EType _Link);
@@ -84,11 +84,11 @@ virtual void add(_EType _Link);
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 레지스트리에 링크가 이미 있는 경우 또는 `set_bound` 함수를 사용 하 여 바인딩된가 이미 설정 되어 있고 링크가 제거 된 후에 [invalid_link_target](invalid-link-target-class.md) 예외를 throw 합니다.
+이 메서드는 레지스트리에 링크가 이미 있는 경우 또는 바인딩된가 이미 함수를 사용 하 여 설정 되어 있고 링크가 제거 된 후에는 [invalid_link_target](invalid-link-target-class.md) 예외를 throw 합니다 `set_bound` .
 
-## <a name="begin"></a>시작
+## <a name="begin"></a><a name="begin"></a>시작
 
-`multi_link_registry` 개체의 첫 번째 요소에 대 한 반복기를 반환 합니다.
+개체의 첫 번째 요소에 대 한 반복기를 반환 `multi_link_registry` 합니다.
 
 ```cpp
 virtual iterator begin();
@@ -96,15 +96,15 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>Return Value
 
-`multi_link_registry` 개체에서 첫 번째 요소를 주소 지정 하는 반복기입니다.
+개체의 첫 번째 요소를 주소 지정 하는 반복기 `multi_link_registry` 입니다.
 
 ### <a name="remarks"></a>설명
 
-최종 상태는 `NULL` 링크로 표시 됩니다.
+End 상태는 링크로 표시 됩니다 `NULL` .
 
-## <a name="contains"></a>에서는
+## <a name="contains"></a><a name="contains"></a>에서는
 
-지정 된 블록에 대 한 `multi_link_registry` 개체를 검색 합니다.
+지정 된 `multi_link_registry` 블록에 대 한 개체를 검색 합니다.
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -113,15 +113,15 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>매개 변수
 
 *_Link*<br/>
-`multi_link_registry` 개체에서 검색할 블록에 대 한 포인터입니다.
+개체에서 검색할 블록에 대 한 포인터입니다 `multi_link_registry` .
 
 ### <a name="return-value"></a>Return Value
 
-지정 된 블록이 발견 되 면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 지정 된 블록이 발견 되었으면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="count"></a>수
+## <a name="count"></a><a name="count"></a>수
 
-`multi_link_registry` 개체의 항목 수를 셉니다.
+개체의 항목 수를 셉니다 `multi_link_registry` .
 
 ```cpp
 virtual size_t count();
@@ -131,7 +131,7 @@ virtual size_t count();
 
 `multi_link_registry` 개체에 있는 항목 수입니다.
 
-## <a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
 
 `multi_link_registry` 개체를 생성합니다.
 
@@ -139,9 +139,9 @@ virtual size_t count();
 multi_link_registry();
 ```
 
-## <a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
 
-`multi_link_registry` 개체를 소멸 시킵니다.
+개체를 소멸 시킵니다 `multi_link_registry` .
 
 ```cpp
 virtual ~multi_link_registry();
@@ -151,9 +151,9 @@ virtual ~multi_link_registry();
 
 메서드는 모든 링크가 제거 되기 전에 호출 되는 경우 [invalid_operation](invalid-operation-class.md) 예외를 throw 합니다.
 
-## <a name="remove"></a>삭제
+## <a name="remove"></a><a name="remove"></a>삭제
 
-`multi_link_registry` 개체에서 링크를 제거 합니다.
+개체에서 링크를 제거 합니다 `multi_link_registry` .
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -166,11 +166,11 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Return Value
 
-링크를 찾아 제거 했으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 링크를 찾아 제거 했으면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-`multi_link_registry` 개체가 보유할 수 있는 링크 수의 상한을 설정 합니다.
+개체가 보유할 수 있는 링크 수의 상한을 설정 `multi_link_registry` 합니다.
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -179,7 +179,7 @@ void set_bound(size_t _MaxLinks);
 ### <a name="parameters"></a>매개 변수
 
 *_MaxLinks*<br/>
-`multi_link_registry` 개체가 보유할 수 있는 최대 링크 수입니다.
+개체가 보유할 수 있는 최대 링크 수입니다 `multi_link_registry` .
 
 ### <a name="remarks"></a>설명
 
@@ -187,5 +187,5 @@ void set_bound(size_t _MaxLinks);
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)<br/>
+[concurrency 네임 스페이스](concurrency-namespace.md)<br/>
 [single_link_registry 클래스](single-link-registry-class.md)

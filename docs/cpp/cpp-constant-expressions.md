@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32d14650450d8047a5bc0e6cf7bb06788c9b3d81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221759"
 ---
 # <a name="c-constant-expressions"></a>C++ 상수 식
 
@@ -35,7 +35,7 @@ C ++에서는 다음 선언에 대해 상수 식(상수로 계산되는 식)이 
 
 - 상수 식을 사용하여 초기화되며 const로 선언된 값
 
-- **sizeof** 식
+- **`sizeof`** 산술식
 
 비정수 상수는 명시적이거나 암시적으로 상수 식에 사용할 수 있는 정수 계열 형식으로 변환해야 합니다. 따라서 다음 코드를 사용할 수 있습니다.
 
@@ -44,10 +44,10 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-상수 식에서는 정수 계열 형식에 대 한 명시적 변환이 적합 합니다. **sizeof** 연산자의 피연산자로 사용 되는 경우를 제외 하 고 다른 모든 형식과 파생 형식은 적합 하지 않습니다.
+상수 식에서는 정수 계열 형식에 대 한 명시적 변환이 적합 합니다. 연산자의 피연산자로 사용 되는 경우를 제외 하 고 다른 모든 형식과 파생 형식은 적합 하지 않습니다 **`sizeof`** .
 
 쉼표 연산자와 할당 연산자를 상수 식에 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[식의 형식](../cpp/types-of-expressions.md)
+[식 형식](../cpp/types-of-expressions.md)

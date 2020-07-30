@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179694"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213361"
 ---
 # <a name="labeled-statements"></a>레이블 문
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Goto 문**
+**goto 문**
 
-소스 프로그램에서 *식별자* 레이블의 모양은 레이블을 선언 합니다. [Goto](../cpp/goto-statement-cpp.md) 문만 *식별자* 레이블로 제어를 전달할 수 있습니다. 다음 코드 조각에서는 **goto** 문과 *식별자* 레이블의 사용을 보여 줍니다.
+소스 프로그램에서 *식별자* 레이블의 모양은 레이블을 선언 합니다. [Goto](../cpp/goto-statement-cpp.md) 문만 *식별자* 레이블로 제어를 전달할 수 있습니다. 다음 코드 조각은 **`goto`** 문과 *식별자* 레이블의 사용을 보여 줍니다.
 
 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다. 레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**Case 문**
+**case 문**
 
-**Case** 키워드 다음에 나타나는 레이블은 **switch** 문 외부에도 나타날 수 없습니다. 이 제한은 **default** 키워드에도 적용 됩니다. 다음 코드 조각에서는 **case** 레이블의 올바른 사용을 보여 줍니다.
+키워드 뒤에 오는 레이블은 **`case`** 문 외부에도 나타날 수 없습니다 **`switch`** . 이 제한은 키워드에도 적용 됩니다 **`default`** . 다음 코드 조각에서는 레이블의 올바른 사용을 보여 줍니다 **`case`** .
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>case 문의 레이블
 
-**Case** 키워드 다음에 나타나는 레이블은 **switch** 문 외부에도 나타날 수 없습니다. 이 제한은 **default** 키워드에도 적용 됩니다. 다음 코드 조각에서는 **case** 레이블의 올바른 사용을 보여 줍니다.
+키워드 뒤에 오는 레이블은 **`case`** 문 외부에도 나타날 수 없습니다 **`switch`** . 이 제한은 키워드에도 적용 됩니다 **`default`** . 다음 코드 조각에서는 레이블의 올바른 사용을 보여 줍니다 **`case`** .
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>goto 문의 레이블
 
-소스 프로그램에서 *식별자* 레이블의 모양은 레이블을 선언 합니다. [Goto](../cpp/goto-statement-cpp.md) 문만 *식별자* 레이블로 제어를 전달할 수 있습니다. 다음 코드 조각에서는 **goto** 문과 *식별자* 레이블의 사용을 보여 줍니다.
+소스 프로그램에서 *식별자* 레이블의 모양은 레이블을 선언 합니다. [Goto](../cpp/goto-statement-cpp.md) 문만 *식별자* 레이블로 제어를 전달할 수 있습니다. 다음 코드 조각은 **`goto`** 문과 *식별자* 레이블의 사용을 보여 줍니다.
 
 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다. 레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.
 
@@ -180,5 +180,5 @@ int main() {
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 문 개요](../cpp/overview-of-cpp-statements.md)<br/>
-[switch 문(C++)](../cpp/switch-statement-cpp.md)
+[C + + 문 개요](../cpp/overview-of-cpp-statements.md)<br/>
+[switch 문 (c + +)](../cpp/switch-statement-cpp.md)

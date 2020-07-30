@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224970"
 ---
 # <a name="combinable-class"></a>combinable 클래스
 
@@ -39,31 +39,31 @@ class combinable;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
-|[조합을](#ctor)|오버로드됨. 새 `combinable` 개체를 생성합니다.|
+|[조합을](#ctor)|오버로드되었습니다. 새 `combinable` 개체를 생성합니다.|
 |[~ 결합 가능한 소멸자](#dtor)|`combinable` 개체를 제거합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|이름|설명|
 |----------|-----------------|
-|[clear](#clear)|이전 사용에서 중간 계산 결과를 모두 지웁니다.|
-|[combine](#combine)|제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.|
+|[해제](#clear)|이전 사용에서 중간 계산 결과를 모두 지웁니다.|
+|[결합](#combine)|제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.|
 |[combine_each](#combine_each)|스레드 로컬 하위 계산 마다 제공 된 조합 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다. 최종 결과는 함수 개체에 의해 누적 됩니다.|
-|[local](#local)|오버로드됨. 스레드 전용 하위 계산에 대 한 참조를 반환 합니다.|
+|[로컬](#local)|오버로드되었습니다. 스레드 전용 하위 계산에 대 한 참조를 반환 합니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
-|[operator=](#operator_eq)|다른 `combinable` 개체의 `combinable` 개체에 할당 합니다.|
+|[연산자 =](#operator_eq)|`combinable`다른 개체에서 개체에 할당 `combinable` 합니다.|
 
 ## <a name="remarks"></a>설명
 
 자세한 내용은 [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `combinable`
 
@@ -71,9 +71,9 @@ class combinable;
 
 **헤더:** ppl. h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="clear"></a>해제
+## <a name="clear"></a><a name="clear"></a>해제
 
 이전 사용에서 중간 계산 결과를 모두 지웁니다.
 
@@ -81,7 +81,7 @@ class combinable;
 void clear();
 ```
 
-## <a name="ctor"></a>조합을
+## <a name="combinable"></a><a name="ctor"></a>조합을
 
 새 `combinable` 개체를 생성합니다.
 
@@ -100,20 +100,20 @@ combinable(const combinable& _Copy);
 초기화 함수 개체의 유형입니다.
 
 *_FnInitialize*<br/>
-`T`형식의 새 스레드 전용 값을 초기화 하기 위해 호출 되는 함수입니다. `T ()`시그니처와 함께 함수 호출 연산자를 지원 해야 합니다.
+형식의 새 스레드 전용 값을 초기화 하기 위해 호출 되는 함수입니다 `T` . 시그니처를 포함 하는 함수 호출 연산자를 지원 해야 합니다 `T ()` .
 
 *_Copy*<br/>
-이 항목에 복사할 기존 `combinable` 개체입니다.
+`combinable`이 항목에 복사할 기존 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 `T`형식에 대 한 기본 생성자를 사용 하 여 새 요소를 초기화 합니다.
+첫 번째 생성자는 형식에 대 한 기본 생성자를 사용 하 여 새 요소를 초기화 합니다 `T` .
 
-두 번째 생성자는 `_FnInitialize` 매개 변수로 제공 된 초기화 함수를 사용 하 여 새 요소를 초기화 합니다.
+두 번째 생성자는 매개 변수로 제공 된 초기화 함수를 사용 하 여 새 요소를 초기화 합니다 `_FnInitialize` .
 
 세 번째 생성자는 복사 생성자입니다.
 
-## <a name="dtor"></a>~ 결합 가능한
+## <a name="combinable"></a><a name="dtor"></a>~ 결합 가능한
 
 `combinable` 개체를 제거합니다.
 
@@ -121,7 +121,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```
 
-## <a name="combine"></a>결합
+## <a name="combine"></a><a name="combine"></a>결합
 
 제공 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다.
 
@@ -136,13 +136,13 @@ T combine(_Function _FnCombine) const;
 두 스레드 로컬 하위 계산을 결합 하기 위해 호출 될 함수 개체의 형식입니다.
 
 *_FnCombine*<br/>
-하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 서명은 `T (T, T)` 되거나 `T (const T&, const T&)`되며 결합형 및 교환 되어야 합니다.
+하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 서명은 `T (T, T)` 또는 이며 `T (const T&, const T&)` 결합성과 교환 해야 합니다.
 
 ### <a name="return-value"></a>Return Value
 
 모든 스레드 전용 하위 계산을 결합 한 최종 결과입니다.
 
-## <a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a>combine_each
 
 스레드 로컬 하위 계산 마다 제공 된 조합 함수를 호출 하 여 스레드 로컬 하위 계산 집합에서 최종 값을 계산 합니다. 최종 결과는 함수 개체에 의해 누적 됩니다.
 
@@ -157,9 +157,9 @@ void combine_each(_Function _FnCombine) const;
 단일 스레드 로컬 하위 계산을 결합 하기 위해 호출 될 함수 개체의 형식입니다.
 
 *_FnCombine*<br/>
-하나의 하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 서명은 `void (T)` 또는 `void (const T&)`이며 결합성과 교환 해야 합니다.
+하나의 하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 서명은 `void (T)` 또는 이며 `void (const T&)` 결합성과 교환 해야 합니다.
 
-## <a name="local"></a>로컬
+## <a name="local"></a><a name="local"></a>로컬
 
 스레드 전용 하위 계산에 대 한 참조를 반환 합니다.
 
@@ -172,15 +172,15 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>매개 변수
 
 *_Exists*<br/>
-부울에 대 한 참조입니다. 이 인수에서 참조 하는 부울 값은이 스레드에 하위 계산이 이미 존재 하는 경우 **true** 로 설정 되 고이 스레드에서 첫 번째 하위 계산 인 경우 **false** 로 설정 됩니다.
+부울에 대 한 참조입니다. 이 인수에서 참조 하는 부울 값은 **`true`** 이 스레드에 하위 계산이 이미 있는 경우로 설정 되 고,이 **`false`** 스레드의 첫 번째 하위 계산 인 경우로 설정 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
 스레드 전용 하위 계산에 대 한 참조입니다.
 
-## <a name="operator_eq"></a>연산자 =
+## <a name="operator"></a><a name="operator_eq"></a>연산자 =
 
-다른 `combinable` 개체의 `combinable` 개체에 할당 합니다.
+`combinable`다른 개체에서 개체에 할당 `combinable` 합니다.
 
 ```cpp
 combinable& operator= (const combinable& _Copy);
@@ -189,12 +189,12 @@ combinable& operator= (const combinable& _Copy);
 ### <a name="parameters"></a>매개 변수
 
 *_Copy*<br/>
-이 항목에 복사할 기존 `combinable` 개체입니다.
+`combinable`이 항목에 복사할 기존 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 `combinable` 개체에 대 한 참조입니다.
+이 개체에 대 한 참조 `combinable` 입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)
+[concurrency 네임 스페이스](concurrency-namespace.md)

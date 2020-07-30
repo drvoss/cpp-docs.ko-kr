@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 35c7cc72520cdb0675abf9c15574a49e33741d0b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 98f99bb5aec85a640eaf83a07fae3a1b667f7d91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228429"
 ---
 # <a name="source_link_manager-class"></a>source_link_manager 클래스
 
@@ -44,39 +44,39 @@ class source_link_manager;
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
-|`const_pointer`|`source_link_manager` 개체의 `const` 요소에 대 한 포인터를 제공 하는 형식입니다.|
-|`const_reference`|Const 작업을 읽고 수행 하기 위해 `source_link_manager` 개체에 저장 된 `const` 요소에 대 한 참조를 제공 하는 형식입니다.|
-|`iterator`|`source_link_manager` 개체의 모든 요소를 읽거나 수정할 수 있는 반복기를 제공 하는 형식입니다.|
-|`type`|`source_link_manager` 개체에서 관리 하는 링크 레지스트리의 형식입니다.|
+|`const_pointer`|개체의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** `source_link_manager` .|
+|`const_reference`|**`const`** `source_link_manager` Const 작업을 읽고 수행 하기 위해 개체에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다.|
+|`iterator`|개체의 모든 요소를 읽거나 수정할 수 있는 반복기를 제공 하는 형식입니다 `source_link_manager` .|
+|`type`|개체에서 관리 하는 링크 레지스트리의 형식입니다 `source_link_manager` .|
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
 |[source_link_manager](#ctor)|`source_link_manager` 개체를 생성합니다.|
-|[~ source_link_manager 소멸자](#dtor)|`source_link_manager` 개체를 소멸 시킵니다.|
+|[~ source_link_manager 소멸자](#dtor)|개체를 소멸 시킵니다 `source_link_manager` .|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|이름|설명|
 |----------|-----------------|
-|[add](#add)|`source_link_manager` 개체에 소스 링크를 추가 합니다.|
-|[begin](#begin)|`source_link_manager` 개체의 첫 번째 요소에 대 한 반복기를 반환 합니다.|
-|[contains](#contains)|이 `source_link_manager` 개체 내에서 지정 된 블록에 대 한 `network_link_registry`를 검색 합니다.|
-|[count](#count)|`source_link_manager` 개체의 연결 된 블록 수를 셉니다.|
-|[reference](#reference)|`source_link_manager` 개체에 대 한 참조를 가져옵니다.|
-|[register_target_block](#register_target_block)|이 `source_link_manager` 개체를 보유 하는 대상 블록을 등록 합니다.|
-|[release](#release)|`source_link_manager` 개체에 대 한 참조를 해제 합니다.|
-|[remove](#remove)|`source_link_manager` 개체에서 링크를 제거 합니다.|
-|[set_bound](#set_bound)|이 `source_link_manager` 개체에 추가할 수 있는 최대 소스 링크 수를 설정 합니다.|
+|[add](#add)|개체에 소스 링크를 추가 `source_link_manager` 합니다.|
+|[시작](#begin)|개체의 첫 번째 요소에 대 한 반복기를 반환 `source_link_manager` 합니다.|
+|[contains](#contains)|`network_link_registry`이 개체 내에서 지정 된 블록을 검색 합니다 `source_link_manager` .|
+|[count](#count)|개체의 연결 된 블록 수를 셉니다 `source_link_manager` .|
+|[reference](#reference)|개체에 대 한 참조를 가져옵니다 `source_link_manager` .|
+|[register_target_block](#register_target_block)|이 개체를 보유 하는 대상 블록을 등록 `source_link_manager` 합니다.|
+|[릴리스](#release)|개체에 대 한 참조를 해제 `source_link_manager` 합니다.|
+|[remove](#remove)|개체에서 링크를 제거 합니다 `source_link_manager` .|
+|[set_bound](#set_bound)|이 개체에 추가할 수 있는 최대 소스 링크 수를 설정 합니다 `source_link_manager` .|
 
 ## <a name="remarks"></a>설명
 
-현재 소스 블록은 참조 횟수가 계산 됩니다. 이는 링크에 대 한 동시 액세스를 허용 하 고 콜백을 통해 링크를 참조 하는 기능을 제공 하는 `network_link_registry` 개체의 래퍼입니다. 메시지 블록 (`target_block`s 또는 `propagator_block`s)은 소스 링크에 대해이 클래스를 사용 해야 합니다.
+현재 소스 블록은 참조 횟수가 계산 됩니다. 이는 링크에 대 한 `network_link_registry` 동시 액세스를 허용 하 고 콜백을 통해 링크를 참조 하는 기능을 제공 하는 개체의 래퍼입니다. 메시지 블록은 `target_block` `propagator_block` 소스 링크에 대해이 클래스를 사용 해야 합니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `source_link_manager`
 
@@ -84,11 +84,11 @@ class source_link_manager;
 
 **헤더:** agents.h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="add"></a>추가
+## <a name="add"></a><a name="add"></a>추가
 
-`source_link_manager` 개체에 소스 링크를 추가 합니다.
+개체에 소스 링크를 추가 `source_link_manager` 합니다.
 
 ```cpp
 void add(_EType _Link);
@@ -99,9 +99,9 @@ void add(_EType _Link);
 *_Link*<br/>
 추가할 블록에 대 한 포인터입니다.
 
-## <a name="begin"></a>시작
+## <a name="begin"></a><a name="begin"></a>시작
 
-`source_link_manager` 개체의 첫 번째 요소에 대 한 반복기를 반환 합니다.
+개체의 첫 번째 요소에 대 한 반복기를 반환 `source_link_manager` 합니다.
 
 ```cpp
 iterator begin();
@@ -109,15 +109,15 @@ iterator begin();
 
 ### <a name="return-value"></a>Return Value
 
-`source_link_manager` 개체에서 첫 번째 요소를 주소 지정 하는 반복기입니다.
+개체의 첫 번째 요소를 주소 지정 하는 반복기 `source_link_manager` 입니다.
 
 ### <a name="remarks"></a>설명
 
-반복기의 종료 상태는 `NULL` 링크로 표시 됩니다.
+반복기의 종료 상태는 링크로 표시 됩니다 `NULL` .
 
-## <a name="contains"></a>에서는
+## <a name="contains"></a><a name="contains"></a>에서는
 
-이 `source_link_manager` 개체 내에서 지정 된 블록에 대 한 `network_link_registry`를 검색 합니다.
+`network_link_registry`이 개체 내에서 지정 된 블록을 검색 합니다 `source_link_manager` .
 
 ```cpp
 bool contains(_EType _Link);
@@ -126,15 +126,15 @@ bool contains(_EType _Link);
 ### <a name="parameters"></a>매개 변수
 
 *_Link*<br/>
-`source_link_manager` 개체에서 검색할 블록에 대 한 포인터입니다.
+개체에서 검색할 블록에 대 한 포인터입니다 `source_link_manager` .
 
 ### <a name="return-value"></a>Return Value
 
-지정 된 블록이 발견 되 면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 지정 된 블록이 발견 되었으면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="count"></a>수
+## <a name="count"></a><a name="count"></a>수
 
-`source_link_manager` 개체의 연결 된 블록 수를 셉니다.
+개체의 연결 된 블록 수를 셉니다 `source_link_manager` .
 
 ```cpp
 size_t count();
@@ -142,19 +142,19 @@ size_t count();
 
 ### <a name="return-value"></a>Return Value
 
-`source_link_manager` 개체의 연결 된 블록 수입니다.
+개체의 연결 된 블록 수 `source_link_manager` 입니다.
 
-## <a name="reference"></a>참조일
+## <a name="reference"></a><a name="reference"></a>참조일
 
-`source_link_manager` 개체에 대 한 참조를 가져옵니다.
+개체에 대 한 참조를 가져옵니다 `source_link_manager` .
 
 ```cpp
 void reference();
 ```
 
-## <a name="register_target_block"></a>register_target_block
+## <a name="register_target_block"></a><a name="register_target_block"></a>register_target_block
 
-이 `source_link_manager` 개체를 보유 하는 대상 블록을 등록 합니다.
+이 개체를 보유 하는 대상 블록을 등록 `source_link_manager` 합니다.
 
 ```cpp
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
@@ -163,19 +163,19 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 ### <a name="parameters"></a>매개 변수
 
 *_PTarget*<br/>
-이 `source_link_manager` 개체를 보유 하는 대상 블록입니다.
+이 개체를 보유 하는 대상 블록 `source_link_manager` 입니다.
 
-## <a name="release"></a>릴리스
+## <a name="release"></a><a name="release"></a>릴리스
 
-`source_link_manager` 개체에 대 한 참조를 해제 합니다.
+개체에 대 한 참조를 해제 `source_link_manager` 합니다.
 
 ```cpp
 void release();
 ```
 
-## <a name="remove"></a>삭제
+## <a name="remove"></a><a name="remove"></a>삭제
 
-`source_link_manager` 개체에서 링크를 제거 합니다.
+개체에서 링크를 제거 합니다 `source_link_manager` .
 
 ```cpp
 bool remove(_EType _Link);
@@ -188,11 +188,11 @@ bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Return Value
 
-링크를 찾아 제거 했으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 링크를 찾아 제거 했으면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-이 `source_link_manager` 개체에 추가할 수 있는 최대 소스 링크 수를 설정 합니다.
+이 개체에 추가할 수 있는 최대 소스 링크 수를 설정 합니다 `source_link_manager` .
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -203,7 +203,7 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 최대 링크 수입니다.
 
-## <a name="ctor"></a>source_link_manager
+## <a name="source_link_manager"></a><a name="ctor"></a>source_link_manager
 
 `source_link_manager` 개체를 생성합니다.
 
@@ -211,9 +211,9 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```
 
-## <a name="dtor"></a>~ source_link_manager
+## <a name="source_link_manager"></a><a name="dtor"></a>~ source_link_manager
 
-`source_link_manager` 개체를 소멸 시킵니다.
+개체를 소멸 시킵니다 `source_link_manager` .
 
 ```cpp
 ~source_link_manager();
@@ -221,6 +221,6 @@ source_link_manager();
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)<br/>
+[concurrency 네임 스페이스](concurrency-namespace.md)<br/>
 [single_link_registry 클래스](single-link-registry-class.md)<br/>
 [multi_link_registry 클래스](multi-link-registry-class.md)

@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210932"
 ---
 # <a name="queue-stlclr"></a>queue(STL/CLR)
 
-이 템플릿 클래스는 선입 first (선입 first out) 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터 `queue`를 사용 하 여 기본 컨테이너를 큐로 관리 합니다.
+이 템플릿 클래스는 선입 first (선입 first out) 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `queue` 기본 컨테이너를 큐로 관리 합니다.
 
-아래 설명에서 `GValue`는 두 번째가 참조 형식이 아닌 경우에는 *값* 과 동일 하 여 `Value^`됩니다. 마찬가지로, 후자가 ref 형식이 아닌 `GContainer`는 *컨테이너* 와 동일 합니다 .이 경우 `Container^`됩니다.
+아래 설명에서 후자가 `GValue` ref 형식이 아닌 경우는 *값* 과 같습니다 `Value^` . 마찬가지로, `GContainer` 후자가 ref 형식이 아닌 경우는 *컨테이너* 와 동일 합니다 `Container^` .
 
 ## <a name="syntax"></a>구문
 
@@ -92,7 +92,7 @@ template<typename Value,
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/queue >
+**헤더:**\<cliext/queue>
 
 **네임 스페이스:** cliext
 
@@ -130,23 +130,23 @@ template<typename Value,
 |연산자|설명|
 |--------------|-----------------|
 |[queue::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|
-|[operator!= (queue)(STL/CLR)](#op_neq)|`queue` 개체가 다른 `queue` 개체와 다른 지 여부를 확인 합니다.|
-|[operator< (queue)(STL/CLR)](#op_lt)|`queue` 개체가 다른 `queue` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator<= (queue)(STL/CLR)](#op_lteq)|`queue` 개체가 다른 `queue` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator== (queue)(STL/CLR)](#op_eq)|`queue` 개체가 다른 `queue` 개체와 같은지 여부를 확인 합니다.|
-|[operator> (queue)(STL/CLR)](#op_gt)|`queue` 개체가 다른 `queue` 개체 보다 큰지 여부를 확인 합니다.|
-|[operator>= (queue)(STL/CLR)](#op_gteq)|`queue` 개체가 다른 `queue` 개체 보다 크거나 같은지 여부를 확인 합니다.|
+|[operator! = (queue) (STL/CLR)](#op_neq)|`queue`개체가 다른 개체와 다른 지 여부를 확인 `queue` 합니다.|
+|[연산자< (큐) (STL/CLR)](#op_lt)|`queue`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `queue` 합니다.|
+|[연산자<= (큐) (STL/CLR)](#op_lteq)|`queue`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `queue` 합니다.|
+|[operator = = (큐) (STL/CLR)](#op_eq)|`queue`개체가 다른 개체와 같은지 여부를 확인 `queue` 합니다.|
+|[연산자> (큐) (STL/CLR)](#op_gt)|`queue`개체가 다른 개체 보다 큰지 여부를 확인 `queue` 합니다.|
+|[operator>= (queue)(STL/CLR)](#op_gteq)|`queue`개체가 다른 개체 보다 크거나 같은지 여부를 확인 `queue` 합니다.|
 
 ## <a name="interfaces"></a>인터페이스
 
 |인터페이스|설명|
 |---------------|-----------------|
 |<xref:System.ICloneable>|개체를 복제 합니다.|
-|IQueue\<값, 컨테이너 >|일반 컨테이너 어댑터를 유지 관리 합니다.|
+|IQueue\<Value, Container>|일반 컨테이너 어댑터를 유지 관리 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-개체는 `Container`형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 및 해제 하 여 `Value` 요소를 저장 하 고 요청 시 증가 합니다. 개체는 첫 번째 요소를 푸시하는 경우에만 액세스를 제한 하 고 마지막 요소를 팝 하 여 선입 선출 큐 (FIFO 큐 라고도 함)를 구현 합니다.
+개체는 `Container` 요소를 저장 하 고 요청 시 증가 하는 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 할당 하 고 해제 `Value` 합니다. 개체는 첫 번째 요소를 푸시하는 경우에만 액세스를 제한 하 고 마지막 요소를 팝 하 여 선입 선출 큐 (FIFO 큐 라고도 함)를 구현 합니다.
 
 ## <a name="members"></a>멤버
 
@@ -162,12 +162,12 @@ void assign(queue<Value, Container>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `right.get_container()`를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 큐의 전체 내용을 변경 합니다.
+멤버 함수는 `right.get_container()` 를 기본 컨테이너에 할당 합니다. 이를 사용 하 여 큐의 전체 내용을 변경 합니다.
 
 ### <a name="example"></a>예제
 
@@ -214,7 +214,7 @@ a b c
 reference back();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)에 액세스 합니다.
 
@@ -266,7 +266,7 @@ a b x
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 액세스 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)를 읽거나 씁니다.
 
@@ -318,7 +318,7 @@ a b x
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
@@ -362,7 +362,7 @@ a b c
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다.
 
@@ -404,7 +404,7 @@ a b c
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수 요소 수를 설명 합니다.
 
@@ -462,9 +462,9 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`와 동일 합니다. 큐가 비어 있는지 여부를 테스트 하는 데 사용 합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [Queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)와 동일 `() == 0` 합니다. 큐가 비어 있는지 여부를 테스트 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -516,7 +516,7 @@ empty() = True
 reference front();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 첫 번째 요소에 액세스 합니다 (있는 경우).
 
@@ -568,7 +568,7 @@ x b c
 property value_type front_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 첫 번째 요소에 액세스 합니다. 이를 사용 하 여 첫 번째 요소가 있으면이를 읽거나 씁니다.
 
@@ -621,7 +621,7 @@ typedef Microsoft::VisualC::StlClr::IQueue<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
@@ -683,9 +683,9 @@ a b c d e
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 `GValue` 형식의 개체를 설명 하는 형식입니다. (`GValue`은 `value_type` 또는 `value_type^` `value_type` 참조 형식인 경우)입니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다. 은 `GValue` `value_type` 이거나 `value_type^` `value_type` 가 참조 형식인 경우입니다.
 
 ### <a name="example"></a>예제
 
@@ -741,7 +741,7 @@ a b c
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 기본 컨테이너를 반환 합니다. 이를 사용 하 여 컨테이너 래퍼에서 적용 되는 제한을 무시 합니다.
 
@@ -784,12 +784,12 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 컨테이너 어댑터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -836,7 +836,7 @@ a b c
 void pop();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소를 제거 합니다. 이를 사용 하 여 한 번에 하나의 요소로 큐를 단축 합니다.
 
@@ -884,9 +884,9 @@ b c
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `val` 값이 포함 된 요소를 큐의 끝에 추가 합니다. 이를 사용 하 여 큐에 요소를 추가 합니다.
+멤버 함수는 `val` 큐의 끝에 값이 포함 된 요소를 추가 합니다. 이를 사용 하 여 큐에 요소를 추가 합니다.
 
 ### <a name="example"></a>예제
 
@@ -930,13 +930,13 @@ explicit queue(container_type% wrapped);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 개체입니다.
 
 *둘러싼*<br/>
 사용할 래핑된 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
@@ -948,13 +948,13 @@ explicit queue(container_type% wrapped);
 
 `queue(queue<Value, Container>% right);`
 
-`right.get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 큐 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+의 복사본 인 래핑된 컨테이너를 만듭니다 `right.get_container()` . 이를 사용 하 여 큐 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `queue(queue<Value, Container>^ right);`
 
-`right->get_container()`의 복사본 인 래핑된 컨테이너를 만듭니다. 이를 사용 하 여 `*right`큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+의 복사본 인 래핑된 컨테이너를 만듭니다 `right->get_container()` . 이를 사용 하 여 큐 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 `*right` 합니다.
 
 생성자는 다음과 같습니다.
 
@@ -1018,7 +1018,7 @@ x x x x x
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -1067,9 +1067,9 @@ a b x
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`을 참조 하세요.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -1121,7 +1121,7 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -1170,7 +1170,7 @@ size difference = 2
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
@@ -1220,7 +1220,7 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 템플릿 매개 변수 *값*의 동의어입니다.
 
@@ -1270,15 +1270,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left == right)`를 반환 합니다. 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left == right)` . 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>연산자&lt; (큐) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>연산자 &lt; (큐) (STL/CLR)
 
 큐가 비교 보다 작음
 
@@ -1341,15 +1341,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-연산자 함수는 `left[i] < right[i]`에도 해당 `!(right[i] < left[i])` `i` 가장 낮은 위치에 대해 true를 반환 합니다. 그렇지 않으면 [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `left->`반환 `right->size()`이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 에 정렬 되는지 여부를 테스트할 수 있습니다.
+연산자 함수는 해당 하는 가장 낮은 위치에 대해서도 true를 반환 합니다 `i` `!(right[i] < left[i])` `left[i] < right[i]` . 그렇지 않으면 `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) 를 반환 합니다 `() <` `right->size()` .이 메서드를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 에 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>연산자&lt;= (큐) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = (큐) (STL/CLR)
 
 큐가 작거나 같음 비교입니다.
 
@@ -1412,15 +1412,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(right < left)`를 반환 합니다. 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(right < left)` . 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1483,15 +1483,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 `i`각 위치에 대해 `right[i]``left[i] ==` 경우에만 true를 반환 합니다. 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
+Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 각 위치에 대해가 인 경우에만 true를 반환 합니다 `i` `left[i] ==` `right[i]` . 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>연산자&gt; (큐) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>연산자 &gt; (큐) (STL/CLR)
 
 큐가 비교 보다 큽니다.
 
@@ -1554,15 +1554,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `right` `<` `left`반환 합니다. 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
+연산자 함수는를 반환 합니다 `right` `<` `left` . 이를 사용 하 여 두 큐를 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>연산자&gt;= (큐) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = (큐) (STL/CLR)
 
 큐가 보다 크거나 같음 비교입니다.
 
@@ -1625,15 +1625,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left < right)`를 반환 합니다. 이를 사용 하 여 두 큐를 요소 별로 비교할 *때* *왼쪽이 왼쪽* 에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left < right)` . 이를 사용 하 여 두 큐를 요소 별로 비교할 *때* *왼쪽이 왼쪽* 에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 

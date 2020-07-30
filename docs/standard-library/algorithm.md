@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205537"
 ---
 # <a name="ltalgorithmgt"></a>&lt;알고리즘&gt;
 
@@ -49,13 +49,13 @@ C++ 표준 라이브러리 알고리즘은 해당 목적 또는 요구 사항을
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|같지 않거나 지정한 조건을 충족하는 인접 요소 두 개를 검색합니다.|
-|[all_of](algorithm-functions.md#all_of)|지정 된 범위의 각 요소에 조건이 있을 경우 **true** 를 반환 합니다.|
-|[any_of](algorithm-functions.md#any_of)|지정 된 요소 범위에서 조건이 한 번 이상 있는 경우 **true** 를 반환 합니다.|
+|[all_of](algorithm-functions.md#all_of)|**`true`** 지정 된 범위의 각 요소에 조건이 있는 경우를 반환 합니다.|
+|[any_of](algorithm-functions.md#any_of)|**`true`** 지정 된 요소 범위에서 조건이 한 번 이상 있는 경우를 반환 합니다.|
 |[binary_search](algorithm-functions.md#binary_search)|정렬된 범위에 지정된 값과 같거나 이진 조건자가 지정한 의미에 따라 지정된 값과 같은 요소가 있는지 여부를 테스트합니다.|
 |[클램프](algorithm-functions.md#clamp)||
 |[copy](algorithm-functions.md#copy)|소스 범위의 요소를 대상 범위에 할당하여 요소의 소스 시퀀스 전체에서 반복하고 정방향으로 새 위치를 할당합니다.|
 |[copy_backward](algorithm-functions.md#copy_backward)|소스 범위의 요소를 대상 범위에 할당하여 요소의 소스 시퀀스 전체에서 반복하고 역방향으로 새 위치를 할당합니다.|
-|[copy_if](algorithm-functions.md#copy_if)|지정 된 조건에 대해 **true** 를 테스트 하는 지정 된 범위에 있는 모든 요소를 복사 합니다.|
+|[copy_if](algorithm-functions.md#copy_if)|**`true`** 지정 된 조건에 대해 테스트 하는 지정 된 범위에 있는 모든 요소를 복사 합니다.|
 |[copy_n](algorithm-functions.md#copy_n)|지정된 수의 요소를 복사합니다.|
 |[count](algorithm-functions.md#count)|해당 값이 지정된 값과 일치하는 요소의 개수를 반환합니다.|
 |[count_if](algorithm-functions.md#count_if)|해당 값이 지정된 조건과 일치하는 요소의 개수를 반환합니다.|
@@ -74,12 +74,12 @@ C++ 표준 라이브러리 알고리즘은 해당 목적 또는 요구 사항을
 |[generate_n](algorithm-functions.md#generate_n)|함수 개체에 의해 생성된 값을 범위 내 지정된 수의 요소에 할당하고 마지막에 할당된 값 하나 다음의 위치로 반환합니다.|
 |[내용이](algorithm-functions.md#includes)|요소 간 순서 지정 또는 동등성 기준을 이진 조건자로 지정할 수 있을 경우 하나의 정렬된 범위가 두 번째 정렬된 범위에 포함된 모든 요소를 포함할 수 있는지 여부를 테스트합니다.|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|두 연속 정렬 범위의 요소를 단일 정렬 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.|
-|[is_heap](algorithm-functions.md#is_heap)|지정 된 범위의 요소가 힙을 형성 하는 경우 **true** 를 반환 합니다.|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|지정 된 범위가 마지막 요소까지 힙을 형성 하는 경우 **true** 를 반환 합니다.|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|지정 된 범위에서 조건에 대해 **true** 를 테스트 하는 모든 요소가 **false**를 테스트 하는 요소 앞에 있으면 **true** 를 반환 합니다.|
+|[is_heap](algorithm-functions.md#is_heap)|**`true`** 지정 된 범위의 요소가 힙을 형성 하는 경우를 반환 합니다.|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|**`true`** 지정 된 범위가 마지막 요소까지 힙을 형성 하는 경우를 반환 합니다.|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|**`true`** 지정 된 범위에서 조건에 대해 테스트 하는 모든 요소가를 **`true`** 테스트 하는 요소 앞에 있는 경우를 반환 **`false`** 합니다.|
 |[is_permutation](algorithm-functions.md#is_permutation)|지정된 범위의 요소가 올바른 순열을 만드는지 여부를 결정합니다.|
-|[is_sorted](algorithm-functions.md#is_sorted)|지정 된 범위의 요소가 정렬 된 순서로 되어 있는 경우 **true** 를 반환 합니다.|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|지정 된 범위의 요소가 정렬 된 순서로 되어 있는 경우 **true** 를 반환 합니다.|
+|[is_sorted](algorithm-functions.md#is_sorted)|**`true`** 지정 된 범위의 요소가 정렬 된 순서 대로 되어 있으면를 반환 합니다.|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|**`true`** 지정 된 범위의 요소가 정렬 된 순서 대로 되어 있으면를 반환 합니다.|
 |[iter_swap](algorithm-functions.md#iter_swap)|지정된 반복기의 쌍이 참조하는 두 값을 교환합니다.|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|두 시퀀스를 요소별로 비교하여 둘 중 작은 것을 결정합니다.|
 |[lower_bound](algorithm-functions.md#lower_bound)|정렬된 범위에서 지정된 값보다 크거나 같은 값을 갖는 첫 번째 요소의 위치를 찾습니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.|
@@ -95,12 +95,12 @@ C++ 표준 라이브러리 알고리즘은 해당 목적 또는 요구 사항을
 |[&lt;alg &gt; 이동](algorithm-functions.md#alg_move)|지정된 범위와 연결된 요소를 이동합니다.|
 |[move_backward](algorithm-functions.md#move_backward)|한 반복기의 요소를 다른 반복기로 이동합니다. 이동은 지정된 범위의 마지막 요소에서 시작하고 해당 범위의 첫 번째 요소에서 끝납니다.|
 |[next_permutation](algorithm-functions.md#next_permutation)|원래 순서 지정을 사전순에 따라 다음으로 큰 순열(있는 경우)로 대체할 수 있도록 범위의 요소 순서를 재정렬합니다. 여기서 다음의 의미는 이진 조건자로 지정할 수 있습니다.|
-|[none_of](algorithm-functions.md#none_of)|지정 된 범위의 요소 사이에 조건이 나타나지 않는 경우 **true** 를 반환 합니다.|
+|[none_of](algorithm-functions.md#none_of)|**`true`** 지정 된 범위의 요소 사이에 조건이 없는 경우를 반환 합니다.|
 |[nth_element](algorithm-functions.md#nth_element)|요소 범위를 분할 하 여 범위에서 시퀀스의 *n*번째 요소를 정확 하 게 배치 하 여 그 앞의 모든 요소가 값 보다 작거나 같고 시퀀스에서 뒤에 나오는 모든 요소가 해당 요소 보다 크거나 같은 경우|
 |[partial_sort](algorithm-functions.md#partial_sort)|범위에 있는 지정된 수의 더 작은 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 정렬합니다.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|소스 범위의 요소를 대상 범위로 복사합니다. 여기서 소스 요소는 지정된 다른 이진 조건자보다 작거나 지정된 다른 이진 조건자로 정렬됩니다.|
 |[파티션마다](algorithm-functions.md#partition)|범위의 요소를 두 개의 연결되지 않은 집합으로 분류하고, 단항 조건자를 만족하는 요소는 만족하지 않는 요소보다 앞에 오도록 합니다.|
-|[partition_copy](algorithm-functions.md#partition_copy)|조건이 **true** 인 요소를 한 대상에 복사 하 고 조건이 **false** 인 요소를 다른 대상으로 복사 합니다. 지정된 범위의 요소여야 합니다.|
+|[partition_copy](algorithm-functions.md#partition_copy)|조건이 다른 대상에 해당 하는 요소를 대상으로 하는 요소를 복사 **`true`** **`false`** 합니다. 지정된 범위의 요소여야 합니다.|
 |[partition_point](algorithm-functions.md#partition_point)|지정된 범위에서 조건을 충족하지 않는 첫 번째 요소를 반환합니다. 조건을 충족하는 요소가 앞에, 그렇지 않는 요소는 뒤에 정렬됩니다.|
 |[pop_heap](algorithm-functions.md#pop_heap)|힙 맨 앞부터 범위의 끝에서 두 번째 위치 중에서 가장 큰 요소를 제거한 다음 나머지 요소로 새 힙을 구성합니다.|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|원래 순서 지정을 사전순에 따라 다음으로 큰 순열(있는 경우)로 대체할 수 있도록 범위의 요소 순서를 재정렬합니다. 여기서 다음의 의미는 이진 조건자로 지정할 수 있습니다.|

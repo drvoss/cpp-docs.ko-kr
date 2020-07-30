@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2718
 ms.assetid: 78cc71f8-c142-46fc-9aed-970635d74f0c
-ms.openlocfilehash: ecfb68856e63eaf3f60e93a79bac17c66d1af1fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8088fd62baeffb7d53a1be2b5bccae72913cdc12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216065"
 ---
 # <a name="compiler-error-c2718"></a>컴파일러 오류 C2718
 
 ' parameter ': __declspec (align (' # '))를 사용 하는 실제 매개 변수는 맞춰지지 않습니다.
 
-[Align](../../cpp/align-cpp.md) `__declspec` 한정자는 함수 매개 변수에 사용할 수 없습니다.
+[Align](../../cpp/align-cpp.md) **`__declspec`** 한정자는 함수 매개 변수에서 허용 되지 않습니다.
 
 다음 샘플에서는 C2718를 생성 합니다.
 

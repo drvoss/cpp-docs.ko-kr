@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453782"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224632"
 ---
 # <a name="stack-class"></a>stack 클래스
 
@@ -48,11 +48,11 @@ class stack
 
 ## <a name="remarks"></a>설명
 
-Stack 개체의 첫 `Type` 번째 템플릿 매개 변수에서 규정 된 클래스의 요소는 [value_type](#value_type) 와 동의어 이며, 두 번째 템플릿에서 규정 된 기본 컨테이너 클래스 `Container` 의 요소 형식과 일치 해야 합니다. 변수에. 해당 형식의 개체를 복사 하 고 해당 형식의 변수에 값을 할당할 수 있도록를 할당할 수 있어야합니다.`Type`
+`Type`Stack 개체의 첫 번째 템플릿 매개 변수에서 규정 된 클래스의 요소는 [value_type](#value_type) 와 동의어 이며, `Container` 두 번째 템플릿 매개 변수 규정 된 기본 컨테이너 클래스의 요소 형식과 일치 해야 합니다. 해당 `Type` 형식의 개체를 복사 하 고 해당 형식의 변수에 값을 할당할 수 있도록를 할당할 수 있어야 합니다.
 
-스택에 적합 한 기본 컨테이너 클래스에는 [deque](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md)및 [vector 클래스](../standard-library/vector-class.md),, `back` `push_back`및 `pop_back`의 작업을 지 원하는 기타 시퀀스 컨테이너가 포함 됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
+스택에 적합 한 기본 컨테이너 클래스에는 [deque](../standard-library/deque-class.md), [list 클래스](../standard-library/list-class.md)및 [vector 클래스](../standard-library/vector-class.md),, 및의 작업을 지 원하는 기타 시퀀스 컨테이너가 포함 됩니다 `back` `push_back` `pop_back` . 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
 
-스택 개체는 클래스 `Type` 의 요소가 같음 비교할 수 있는 경우에만 같음 비교할 수 있으며 클래스 `Type` 의 요소가 보다 작음 비교할 수 있는 경우에만 보다 작음입니다.
+스택 개체는 클래스의 요소가 같음 비교할 수 있는 경우에만 같음 비교할 수 `Type` 있으며 클래스의 요소가 보다 작음 비교할 수 있는 경우에만 보다 작음 `Type` 입니다.
 
 - stack 클래스는 LIFO(후입선출) 데이터 구조를 지원합니다. 쌓여 있는 접시 더미의 예로 이해할 수 있습니다. 요소(접시)는 기본 컨테이너의 끝에 있는 마지막 요소인 스택의 맨 위에서만 삽입하거나 검사하거나 제거할 수 있습니다. 맨 위 요소로만 액세스를 제한하는 것이 stack 클래스를 사용하는 이유입니다.
 
@@ -66,9 +66,9 @@ Stack 개체의 첫 `Type` 번째 템플릿 매개 변수에서 규정 된 클�
 
 |||
 |-|-|
-|[stack](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|
+|[겹치기](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -76,17 +76,17 @@ Stack 개체의 첫 `Type` 번째 템플릿 매개 변수에서 규정 된 클�
 |[size_type](#size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
 |[value_type](#value_type)|`stack`에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[empty](#empty)|`stack`이 비어 있는지를 테스트합니다.|
-|[pop](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|
+|[창을](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|
 |[push](#push)|`stack`의 맨 위에 요소를 추가합니다.|
 |[size](#size)|`stack`에 있는 요소 수를 반환합니다.|
 |[top](#top)|`stack`의 맨 위에 있는 요소에 대한 참조를 반환합니다.|
 
-## <a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a>container_type
 
 조정할 기본 컨테이너를 제공하는 형식입니다.
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack)의 예제를 참조하세요.
 
-## <a name="empty"></a> empty
+## <a name="empty"></a><a name="empty"></a>비우려면
 
 스택이 비어 있는지 테스트합니다.
 
@@ -112,9 +112,9 @@ typedef Container container_type;
 bool empty() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
-스택이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
+**`true`** 스택이 비어 있으면이 고, 그렇지 않으면입니다. **`false`** 스택이 비어 있지 않으면입니다.
 
 ### <a name="example"></a>예제
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>창을
+## <a name="pop"></a><a name="pop"></a>창을
 
 stack의 가장 윗부분의 요소를 제거합니다.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>누르기
+## <a name="push"></a><a name="push"></a>누르기
 
 스택의 맨 위에 요소를 추가 합니다.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a>크기가
 
 스택의 요소 수를 반환합니다.
 
@@ -262,7 +262,7 @@ The element at the top of the stack is 30.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스택의 현재 길이입니다.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 스택에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.
 
@@ -309,9 +309,9 @@ typedef typename Container::size_type size_type;
 
 ### <a name="example"></a>예제
 
-`size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)에 대한 예제를 참조하세요.
+`size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="stack"></a>겹치기
+## <a name="stack"></a><a name="stack"></a>겹치기
 
 비어 있거나 기본 컨테이너 개체의 복사본인 스택을 생성합니다.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>맨 위로
+## <a name="top"></a><a name="top"></a>맨 위로
 
 stack의 가장 윗부분의 요소에 대한 참조를 반환합니다.
 
@@ -375,7 +375,7 @@ reference top();
 const_reference top() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 스택의 맨 위에 있는 컨테이너의 마지막 요소에 대한 참조입니다.
 
@@ -383,7 +383,7 @@ const_reference top() const;
 
 구성원 함수를 적용하려면 스택이 비어 있지 않아야 합니다. 스택 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-의 `top` 반환 값이에 할당 `const_reference`된 경우에는 스택 개체를 수정할 수 없습니다. 의 `top` 반환 값이에 할당 `reference`되는 경우 스택 개체를 수정할 수 있습니다.
+의 반환 값이에 할당 된 경우에는 `top` `const_reference` 스택 개체를 수정할 수 없습니다. 의 반환 값이에 `top` 할당 되는 경우 `reference` 스택 개체를 수정할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 스택에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.
 
@@ -457,7 +457,7 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

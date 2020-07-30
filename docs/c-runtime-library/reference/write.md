@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916705"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211621"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +68,7 @@ int _write(
 
 파일이 텍스트 모드에서 열리면 각 줄 바꿈 문자는 출력에서 캐리지 리턴-줄 바꿈 쌍으로 바뀝니다. 대체는 반환 값에 영향을 주지 않습니다.
 
-파일이 유니코드 변환 모드에서 열리는 경우 (예: **_open** 또는 **_sopen** 를 사용 하 여 *fd* 를 연 경우와 **_O_WTEXT**포함 된 모드 매개 변수를 사용 하는 경우 **_O_U16TEXT**또는 **_O_U8TEXT**하거나, **fopen** 을 사용 하 여 연 경우 또는 ccs = **Unicode**, **ccs = utf-16le**또는 **ccs = u s f-8**을 포함 하는 모드 매개 변수를 사용 하 여 연 경우 또는 **_setmode**를 사용 하 여 모드를 유니코드 변환 모드로 변경한 경우*버퍼* 는 **u t f-16** 데이터를 포함 하는 **wchar_t** 배열에 대 한 포인터로 해석 됩니다. 이 모드에서 홀수 바이트를 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다.
+파일이 유니코드 변환 모드에서 열리는 경우 (예: **_open** 또는 **_sopen** 를 사용 하 여 *fd* 를 연 경우와 **_O_WTEXT**포함 된 모드 매개 변수를 사용 하는 경우 **_O_U16TEXT**또는 **_O_U8TEXT**하거나, **fopen** 을 사용 하 여 연 경우 또는 ccs = **Unicode**, **ccs = utf-16le**또는 **ccs = u s f-8**을 포함 하는 모드 매개 변수를 사용 하 여 연 경우 또는 **_setmode**를 사용 하 여 모드를 유니코드 변환 모드로 변경한 경우*버퍼* 는 **`wchar_t`** **utf-16** 데이터가 포함 된의 배열에 대 한 포인터로 해석 됩니다. 이 모드에서 홀수 바이트를 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -144,9 +144,9 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[하위 수준 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

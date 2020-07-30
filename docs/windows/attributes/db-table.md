@@ -1,17 +1,17 @@
 ---
-title: db_table (C++ COM 특성)
+title: db_table (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215285"
 ---
 # <a name="db_table"></a>db_table
 
@@ -39,13 +39,13 @@ OLE DB 테이블을 엽니다.
 
 ## <a name="remarks"></a>설명
 
-**db_table** 는 OLE DB 소비자가 테이블을 여는 데 사용 하는 [CTable](../../data/oledb/ctable-class.md) 개체를 만듭니다. 이 특성은 클래스 수준 에서만 사용할 수 있습니다. 인라인에서는 사용할 수 없습니다. `db_column`를 사용 하 여 테이블 열을 변수에 바인딩합니다. `db_param`를 사용 하 여 매개 변수 형식을 구분 (설정) 합니다.
+**db_table** 는 OLE DB 소비자가 테이블을 여는 데 사용 하는 [CTable](../../data/oledb/ctable-class.md) 개체를 만듭니다. 이 특성은 클래스 수준 에서만 사용할 수 있습니다. 인라인에서는 사용할 수 없습니다. `db_column`를 사용 하 여 테이블 열을 변수에 바인딩한 다음를 사용 하 여 `db_param` 매개 변수 형식을 구분 (설정) 합니다.
 
-소비자 특성 공급자가 클래스에 이 특성을 적용하는 경우 컴파일러는 클래스의 이름을 _\_*YourClassName*Accessor로 바꿉니다. 여기서 *YourClassName*은 클래스에 지정한 이름입니다. 컴파일러는 또한YourClassName\_Accessor에서 파생되는 *YourClassName*이라는 클래스를 만듭니다.  클래스 뷰에 두 클래스 모두 표시됩니다.
+소비자 특성 공급자가 클래스에 이 특성을 적용하는 경우 컴파일러는 클래스의 이름을 _\_*YourClassName*Accessor로 바꿉니다. 여기서 *YourClassName*은 클래스에 지정한 이름입니다. 컴파일러는 또한 \_*YourClassName*Accessor에서 파생되는 *YourClassName*이라는 클래스를 만듭니다.  클래스 뷰에 두 클래스 모두 표시됩니다.
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `CProducts`에서 사용할 Products 테이블을 엽니다.
+다음 예에서는에서 사용할 Products 테이블을 엽니다 `CProducts` .
 
 ```cpp
 // db_table.cpp
@@ -68,10 +68,10 @@ class CProducts {
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

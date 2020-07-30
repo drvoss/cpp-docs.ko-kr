@@ -1,5 +1,5 @@
 ---
-title: __alignof 연산자
+title: alignof 연산자
 ms.date: 12/17/2018
 f1_keywords:
 - __alignof_cpp
@@ -13,49 +13,44 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181540"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227636"
 ---
-# <a name="__alignof-operator"></a>__alignof 연산자
+# <a name="alignof-operator"></a>alignof 연산자
 
-C + + 11에는 지정 된 형식의 맞춤 (바이트)을 반환 하는 **alignof** 연산자가 도입 되었습니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.
-
-**Microsoft 전용**
-
-형식의 맞춤 요구 사항인 `size_t` 형식의 값을 반환 합니다.
+**`alignof`** 연산자는 지정 된 형식의 맞춤 (바이트)을 형식의 값으로 반환 합니다 **`size_t`** .
 
 ## <a name="syntax"></a>구문
 
 ```cpp
-  __alignof( type )
+alignof( type )
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
-|식|값|
-|----------------|-----------|
-|**__alignof (char)**|1|
-|**__alignof (short)**|2|
-|**__alignof (int)**|4|
-|**__alignof (\__int64)**|8|
-|**__alignof (부동 소수점)**|4|
-|**__alignof (double)**|8|
-|**__alignof (char\*)**|4|
+| 식 | 값 |
+|--|--|
+| **`alignof( char )`** | 1 |
+| **`alignof( short )`** | 2 |
+| **`alignof( int )`** | 4 |
+| **`alignof( long long )`** | 8 |
+| **`alignof( float )`** | 4 |
+| **`alignof( double )`** | 8 |
 
-**__Alignof** 값은 기본 형식의 `sizeof` 값과 동일 합니다. 그러나 다음과 같은 예제를 고려해야 합니다.
+**`alignof`** 값은 기본 형식의의 값과 동일 합니다 **`sizeof`** . 그러나 다음과 같은 예제를 고려해야 합니다.
 
 ```cpp
 typedef struct { int a; double b; } S;
-// __alignof(S) == 8
+// alignof(S) == 8
 ```
 
-이 경우 **__alignof** 값은 구조체에서 가장 큰 요소의 맞춤 요구 사항입니다.
+이 경우 **`alignof`** 값은 구조체에서 가장 큰 요소의 맞춤 요구 사항입니다.
 
 마찬가지로
 
@@ -63,17 +58,15 @@ typedef struct { int a; double b; } S;
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`__alignof(S)`가 `32`와 같은 경우
+`alignof(S)`이(가) `32`와 같은 경우
 
-**__Alignof** 사용 하는 한 가지 용도는 사용자 고유의 메모리 할당 루틴 중 하나에 대 한 매개 변수입니다. 예를 들어, 다음의 정의된 구조인 `S`가 지정된 경우 `aligned_malloc`이라는 메모리 할당 루틴을 호출하여 특정한 할당 경계에서 메모리를 할당할 수 있습니다.
+에서 사용 하는 한 가지 용도는 **`alignof`** 사용자 고유의 메모리 할당 루틴 중 하나에 대 한 매개 변수입니다. 예를 들어, 다음의 정의된 구조인 `S`가 지정된 경우 `aligned_malloc`이라는 메모리 할당 루틴을 호출하여 특정한 할당 경계에서 메모리를 할당할 수 있습니다.
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
 int n = 50; // array size
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 ```
-
-이전 버전과의 호환성을 위해 **_alignof** 는 컴파일러 옵션 [/za \(언어 확장 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md) 이 지정 된 경우를 제외 하 고 **__alignof** 의 동의어입니다.
 
 맞춤 수정에 대한 자세한 내용은 다음을 참조하세요.
 
@@ -83,17 +76,21 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [/Zp(구조체 멤버 맞춤)](../build/reference/zp-struct-member-alignment.md)
+- [/Zp (구조체 멤버 맞춤)](../build/reference/zp-struct-member-alignment.md)
 
 - [구조 맞춤 예](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 특정)
 
 X86 및 x64 관련 코드에서 맞춤의 차이점에 대한 자세한 내용은 다음을 참조하세요.
 
-- [x86 컴파일러와 충돌](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+- [X86 컴파일러와 충돌](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
-**Microsoft 전용 종료**
+### <a name="microsoft-specific"></a>Microsoft 전용
 
-## <a name="see-also"></a>참고 항목
+**`alignof`** 및 **`__alignof`** 는 Microsoft 컴파일러의 동의어입니다. C + + 11에서는 표준의 일부가 되기 전에 Microsoft 전용 **`__alignof`** 운영자가이 기능을 제공 했습니다. 이식성을 최대화 하려면 **`alignof`** Microsoft 전용 연산자 대신 연산자를 사용 해야 합니다 **`__alignof`** .
+
+이전 버전과의 호환성을 위해 **`_alignof`** 는 **`__alignof`** 컴파일러 옵션 [ `/Za` \( 언어 확장 사용 안 함](../build/reference/za-ze-disable-language-extensions.md) 을 지정 하지 않는 경우의 동의어입니다.
+
+## <a name="see-also"></a>참조
 
 [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

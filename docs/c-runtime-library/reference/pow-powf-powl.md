@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916791"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232445"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -90,9 +90,9 @@ long double pow( long double x, int y );  // C++ only
 
 **pow** 에는 SSE2 (스트리밍 SIMD 확장 2)를 사용 하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](set-sse2-enable.md)을 참조하세요.
 
-C + +에서는 오버 로드를 허용 하므로 **pow**의 다양 한 오버 로드를 호출할 수 있습니다. C 프로그램에서 **pow** 은 항상 두 개의 **double** 값을 사용 하 고 **double** 값을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 **pow**의 다양 한 오버 로드를 호출할 수 있습니다. C 프로그램에서 **pow** 은 항상 두 값을 사용 **`double`** 하 고 값을 반환 **`double`** 합니다.
 
-`pow(int, int)` 오버로드는 더 이상 사용할 수 없습니다. 이 오버 로드를 사용 하는 경우 컴파일러는 [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)를 내보낼 수 있습니다. 이 문제를 방지 하려면 첫 번째 매개 변수를 **double**, **float**또는 **long** **double**로 캐스팅 합니다.
+`pow(int, int)` 오버로드는 더 이상 사용할 수 없습니다. 이 오버 로드를 사용 하는 경우 컴파일러는 [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)를 내보낼 수 있습니다. 이 문제를 방지 하려면 첫 번째 매개 변수를 **`double`** , **`float`** 또는로 캐스팅 **`long double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
@@ -125,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

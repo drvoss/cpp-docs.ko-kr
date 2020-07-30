@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198486"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218119"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>컴파일러 경고(수준 4) C4127
 
 > 조건식이 상수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**If** 문 또는 **while** 루프의 제어 식이 상수로 계산 됩니다. Visual Studio 2015 업데이트 3부터 일반적인 자연 스러운 사용으로 인해, 1 또는 **true** 와 같은 trivial 상수는 식에서 연산의 결과가 아닌 경우 경고를 트리거하지 않습니다.
+**`if`** 문 또는 루프의 제어 식이 **`while`** 상수로 계산 됩니다. Visual Studio 2015 업데이트 3부터 일반적인 자연 스러운 사용으로 인해, 1 또는와 같은 trivial 상수는 **`true`** 식에서 연산의 결과가 아닌 경우 경고를 트리거하지 않습니다.
 
-루프를 중간에 종료 하기 때문에 **while** 루프의 제어 식이 상수인 경우 **while** 루프를 **for** loop로 바꾸는 것이 좋습니다. **For** 루프의 초기화, 종료 테스트 및 루프 증분을 생략할 수 있습니다. 이렇게 하면 `while(1)`와 마찬가지로 루프가 무한 하 고 **for** 문의 본문에서 루프를 종료할 수 있습니다.
+루프가 **`while`** 중간에서 종료 되기 때문에 루프의 제어 식이 상수인 경우 루프를 루프로 대체 하는 것이 좋습니다 **`while`** **`for`** . 루프의 초기화, 종료 테스트 및 루프 증분을 생략 하 여 루프를 **`for`** 무한 하 게 하 `while(1)` 고, 문의 본문에서 루프를 종료할 수 있습니다 **`for`** .
 
 ## <a name="example"></a>예제
 

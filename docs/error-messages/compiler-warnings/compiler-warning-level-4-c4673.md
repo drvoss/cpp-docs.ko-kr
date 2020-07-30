@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-ms.openlocfilehash: cd53aeb7f767b06c017c64caa55c916aa1e2b9c9
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e361077a5584ba97c7efe22b99ec46567fc9ba4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228741"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>컴파일러 경고(수준 4) C4673
 
 ' identifier '를 throw 하면 다음 형식이 catch 사이트에서 고려 되지 않습니다.
 
-**Catch** 블록에서 throw 개체를 처리할 수 없습니다. 처리할 수 없는 각 형식은이 경고를 포함 하는 줄 바로 다음에 오는 오류 출력에 나열 됩니다. 처리 되지 않은 각 형식에는 고유한 경고가 있습니다. 자세한 내용은 각 특정 형식에 대 한 경고를 참조 하세요.
+Throw 개체는 블록에서 처리할 수 없습니다 **`catch`** . 처리할 수 없는 각 형식은이 경고를 포함 하는 줄 바로 다음에 오는 오류 출력에 나열 됩니다. 처리 되지 않은 각 형식에는 고유한 경고가 있습니다. 자세한 내용은 각 특정 형식에 대 한 경고를 참조 하세요.
 
 다음 샘플에서는 C4673를 생성 합니다.
 

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - novtable __declspec keyword
 - __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
-ms.openlocfilehash: d101e73f2f8d476c50b1b80b8daa7994151d43af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccf544608bcba83af17702767562ef93d775b5a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227259"
 ---
 # <a name="novtable"></a>novtable
 
 **Microsoft 전용**
 
-**__Declspec** 확장 특성입니다.
+**`__declspec`** 확장 특성입니다.
 
-이 형식의 **__declspec** 은 모든 클래스 선언에 적용할 수 있지만 순수 인터페이스 클래스, 즉 자체적으로 인스턴스화되지 않을 클래스에만 적용 해야 합니다. **__Declspec** 은 컴파일러가 클래스의 생성자 및 소멸자에서 vfptr를 초기화 하는 코드를 생성 하는 것을 중지 합니다. 대부분의 경우 이렇게 하면 클래스와 연결된 vtable에 대한 참조만 제거되므로 링커가 이를 제거합니다. 이 형식의 **__declspec** 를 사용 하면 코드 크기가 상당히 줄어들 수 있습니다.
+이 형식은 **`__declspec`** 모든 클래스 선언에 적용할 수 있지만 순수 인터페이스 클래스, 즉 자체적으로 인스턴스화되지 않을 클래스에만 적용 해야 합니다. 는 **`__declspec`** 컴파일러가 클래스의 생성자 및 소멸자에서 vfptr을 초기화 하는 코드를 생성 하지 않도록 합니다. 대부분의 경우 이렇게 하면 클래스와 연결된 vtable에 대한 참조만 제거되므로 링커가 이를 제거합니다. 이 형식을 사용 **`__declspec`** 하면 코드 크기가 상당히 줄어들 수 있습니다.
 
-**Novtable** 로 표시 된 클래스를 인스턴스화하고 클래스 멤버에 액세스 하려고 하면 AV (액세스 위반)가 수신 됩니다.
+로 표시 된 클래스를 인스턴스화하고 **`novtable`** 클래스 멤버에 액세스 하려는 경우에는 AV (액세스 위반)를 받게 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -55,7 +55,7 @@ In Y
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[__declspec](../cpp/declspec.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[`__declspec`](../cpp/declspec.md)<br/>
+[C++ 키워드](../cpp/keywords-cpp.md)

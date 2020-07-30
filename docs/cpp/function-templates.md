@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179746"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232289"
 ---
 # <a name="function-templates"></a>함수 템플릿
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-이 코드는 인수 값을 바꾸는 함수 패밀리를 정의합니다. 이 템플릿에서 **int** 와 **long** 형식 및 사용자 정의 형식을 교환 하는 함수를 생성할 수 있습니다. 클래스의 복사 생성자와 대입 연산자가 제대로 정의된 경우 `MySwap`으로 클래스도 바꿀 수 있습니다.
+이 코드는 인수 값을 바꾸는 함수 패밀리를 정의합니다. 이 템플릿에서 **`int`** 및 **`long`** 형식과 사용자 정의 형식을 교환 하는 함수를 생성할 수 있습니다. 클래스의 복사 생성자와 대입 연산자가 제대로 정의된 경우 `MySwap`으로 클래스도 바꿀 수 있습니다.
 
 또한 컴파일러가 컴파일 시간에 *a* 및 *b* 매개 변수의 형식을 인식 하기 때문에 함수 템플릿에서는 서로 다른 형식의 개체를 교환 하지 못하도록 합니다.
 
@@ -44,7 +44,7 @@ MySwap( j, Hello );      //error
 
 컴파일러가 형식이 다른 매개 변수를 사용하여 `MySwap` 함수를 생성할 수 없으므로 두 번째 `MySwap` 호출은 컴파일 시간 오류를 트리거합니다. void 포인터가 사용된 경우 두 함수 호출 모두 올바르게 컴파일되지만 런타임에는 함수가 제대로 작동하지 않습니다.
 
-함수 템플릿에 대한 템플릿 인수는 명시적으로 지정할 수 있습니다. 다음은 그 예입니다.
+함수 템플릿에 대한 템플릿 인수는 명시적으로 지정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // function_templates2.cpp
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-템플릿 인수가 명시적으로 지정되면 함수 인수를 해당 함수 템플릿 매개 변수의 형식으로 변환하기 위해 표준 암시적 변환이 수행됩니다. 위의 예제에서 컴파일러는 `j`를 **char**형식으로 변환 합니다.
+템플릿 인수가 명시적으로 지정되면 함수 인수를 해당 함수 템플릿 매개 변수의 형식으로 변환하기 위해 표준 암시적 변환이 수행됩니다. 위의 예제에서 컴파일러는 형식으로 변환 됩니다 `j` **`char`** .
 
 ## <a name="see-also"></a>참고 항목
 
-[템플릿](../cpp/templates-cpp.md)<br/>
+[모음](../cpp/templates-cpp.md)<br/>
 [함수 템플릿 인스턴스화](../cpp/function-template-instantiation.md)<br/>
 [명시적 인스턴스화](../cpp/explicit-instantiation.md)<br/>
 [함수 템플릿의 명시적 특수화](../cpp/explicit-specialization-of-function-templates.md)

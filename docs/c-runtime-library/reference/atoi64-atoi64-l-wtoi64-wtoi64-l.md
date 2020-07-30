@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232562"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -86,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>매개 변수
 
-*문자열*<br/>
+*str*<br/>
 변환할 문자열입니다.
 
 *locale*<br/>
@@ -94,7 +94,7 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>Return Value
 
-각 함수는 입력 문자를 숫자로 해석 하 여 생성 된 **__int64** 값을 반환 합니다. 입력을 해당 형식의 값으로 변환할 수 없는 경우 **_atoi64** 의 반환 값은 0입니다.
+각 함수는 **`__int64`** 입력 문자를 숫자로 해석 하 여 생성 된 값을 반환 합니다. 입력을 해당 형식의 값으로 변환할 수 없는 경우 **_atoi64** 의 반환 값은 0입니다.
 
 큰 양의 정수 값을 사용 하는 오버플로의 경우 **_atoi64** 은 **I64_MAX** 을 반환 하 고, 큰 음의 정수 값을 사용 하 여 오버플로가 발생할 경우 **I64_MIN** 합니다.
 
@@ -181,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
-ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
+ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643637"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203911"
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
 
@@ -131,16 +131,16 @@ class array;
 |[const_reverse_iterator](#const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|
 |[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|
 |[반복](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
-|[포인터(pointer)](#pointer)|요소에 대한 포인터의 형식입니다.|
-|[참조일](#reference)|요소에 대한 참조의 형식입니다.|
+|[놓고](#pointer)|요소에 대한 포인터의 형식입니다.|
+|[reference](#reference)|요소에 대한 참조의 형식입니다.|
 |[reverse_iterator](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
 |멤버 함수|설명|
 |-|-|
-|[배열과](#array)|배열 개체를 생성합니다.|
-|[assign](#assign)|않게. 를 `fill`사용 합니다.) 모든 요소를 바꿉니다.|
+|[array](#array)|배열 개체를 생성합니다.|
+|[assign](#assign)|않게. `fill`를 사용 합니다.) 모든 요소를 바꿉니다.|
 |[at](#at)|지정된 위치에 있는 요소에 액세스합니다.|
 |[뒤로](#back)|마지막 요소에 액세스합니다.|
 |[시작](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
@@ -148,9 +148,9 @@ class array;
 |[cend](#cend)|배열 끝의 바로 다음을 가리키는 임의 액세스 const 반복기를 반환합니다.|
 |[crbegin](#crbegin)|역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.|
 |[crend](#crend)|역방향 배열 끝에 대해 const 반복기를 반환합니다.|
-|[데이터](#data)|첫 번째 요소의 주소를 가져옵니다.|
-|[비우려면](#empty)|요소가 있는지 테스트합니다.|
-|[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|
+|[data](#data)|첫 번째 요소의 주소를 가져옵니다.|
+|[empty](#empty)|요소가 있는지 테스트합니다.|
+|[종단](#end)|제어되는 시퀀스의 끝을 지정합니다.|
 |[칠할](#fill)|지정된 값을 가진 모든 요소를 바꿉니다.|
 |[앞뒤](#front)|첫 번째 요소에 액세스합니다.|
 |[max_size](#max_size)|요소 수를 계산합니다.|
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<array>
+**헤더:**\<array>
 
 **네임스페이스:** std
 
@@ -199,7 +199,7 @@ array(const array& right);
 
 기본 생성자 `array()`는 제어되는 시퀀스를 초기화되지 않은 상태(또는 기본 시퀀스를 초기화된 상태)로 유지합니다. 초기화되지 않은 제어되는 시퀀스를 지정하려면 이 생성자를 사용합니다.
 
-`array(const array& right)` Copy 생성자는 시퀀스 [*right*`.begin()`, *right*`.end()`)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 배열 개체 *right*에 의해 제어되는 시퀀스의 복사본인 초기의 제어되는 시퀀스를 지정하려면 이 생성자를 사용합니다.
+Copy 생성자는 `array(const array& right)` 시퀀스 [*right* `.begin()` , *right*)를 사용 하 여 제어 되는 시퀀스를 초기화 합니다 `.end()` . 배열 개체 *right*에 의해 제어되는 시퀀스의 복사본인 초기의 제어되는 시퀀스를 지정하려면 이 생성자를 사용합니다.
 
 ### <a name="example"></a>예제
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="arraycbegin"></a><a name="cbegin"></a>array:: cbegin
 
-범위의 첫 번째 요소를 주소 처리 하는 **const** 반복기를 반환 합니다.
+**`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Return Value
 
-범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 **상수** 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()`).
+**`const`** 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()` ).
 
 ### <a name="remarks"></a>설명
 
 `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.
 
-`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 및 `Container` `begin()` `cbegin()`를 지 원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 가정 합니다.
+`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 및를 지 원하는 수정 가능 (비 **`const`** ) 컨테이너로 가정 `begin()` `cbegin()` 합니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="arraycend"></a><a name="cend"></a>array:: cend
 
-범위에서 마지막 요소 바로 다음 위치의 주소를 나타내는 **const** 반복기를 반환 합니다.
+**`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
-`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 및 `Container` `end()` `cend()`를 지 원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 가정 합니다.
+`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container` 및를 지 원하는 수정 가능 (비 **`const`** ) 컨테이너로 가정 `end()` `cend()` 합니다.
 
 ```cpp
 auto i1 = Container.end();
@@ -1138,7 +1138,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자 *는의 각 요소를 제어* 되는 시퀀스의 해당 요소에 할당 하 고를 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자 *는의 각 요소를 제어* 되는 시퀀스의 해당 요소에 할당 하 고를 반환 **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -1502,7 +1502,7 @@ void swap(array& right);
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스를 `*this` 과 *오른쪽*으로 바꿉니다. `N`에 비례하여 많은 요소 할당과 생성자 호출을 수행합니다.
+멤버 함수는 제어 되는 시퀀스를 **`*this`** 과 *오른쪽*으로 바꿉니다. `N`에 비례하여 많은 요소 할당과 생성자 호출을 수행합니다.
 
 두 **배열** 인스턴스를 교환 하는 데 사용할 수 있는 비 멤버 [swap](array-functions.md#swap) 함수도 있습니다.
 
@@ -1602,4 +1602,4 @@ int main()
 
 ## <a name="see-also"></a>참고 항목
 
-[\<배열>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

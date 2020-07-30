@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cfa03706bc6030b337009f7228466a26e242aa6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213696"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221538"
 ---
 # <a name="mixin-structure"></a>MixIn 구조체
 
@@ -31,20 +31,20 @@ struct MixIn;
 
 ### <a name="parameters"></a>매개 변수
 
-*가져온*<br/>
+*파생*<br/>
 [Implements](implements-structure.md) 구조체에서 파생 된 형식입니다.
 
 *MixInType*<br/>
 기본 형식입니다.
 
 *hasImplements*<br/>
-*MixInType* 가 현재 구현에서 기본 형식에서 파생 되는 경우 **true** 입니다. 그렇지 않으면 **false** 입니다.
+**`true`***MixInType* 가 현재 구현에서 기본 형식으로 파생 되 면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 클래스가 Windows 런타임 및 클래스 COM 인터페이스에서 파생 되는 경우 클래스 선언 목록에는 먼저 Windows 런타임 인터페이스와 모든 클래식 COM 인터페이스를 나열 해야 합니다. **MixIn** 을 사용 하면 인터페이스를 올바른 순서로 지정할 수 있습니다.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `MixIn`
 
@@ -56,4 +56,4 @@ struct MixIn;
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft::WRL 네임스페이스](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 네임 스페이스](microsoft-wrl-namespace.md)

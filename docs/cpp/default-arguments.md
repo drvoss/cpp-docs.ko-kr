@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef0c81501fe37bd27a23daf2dd1c58b3e6a4f6c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221733"
 ---
 # <a name="default-arguments"></a>기본 인수
 
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-**Double**형식에 대해 이러한 함수 하나만 존재 한다는 사실을 반영 하기 위해 `print` 함수의 구현이 약간 변경 됩니다.
+`print`함수 구현은 형식에 대해 이러한 함수를 하나만 존재 한다는 사실을 반영 하기 위해 약간 변경 됩니다 **`double`** .
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 이후 선언에서 기본 인수를 더 추가할 수 있습니다.
 
-- 함수에 대한 포인터에 기본 인수를 제공할 수 있습니다. 예를 들면 다음과 같습니다.
+- 함수에 대한 포인터에 기본 인수를 제공할 수 있습니다. 예:
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

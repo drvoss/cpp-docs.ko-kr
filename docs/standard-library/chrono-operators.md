@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 82f0b7b0f55cf4d71ef7c0ed92a55ca0fa1139e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427208"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230145"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 연산자
 
-## <a name="operator-"></a>연산자
+## <a name="operator-"></a><a name="operator-"></a>연산자
 
 [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체의 빼기 또는 부정 연산자입니다.
 
@@ -39,27 +39,27 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-*시간*\
+*런타임*\
 `time_point` 개체입니다.
 
-*기간*\
+*최악*\
 `duration` 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
 첫 번째 함수는 간격 길이가 두 인수의 시간 간격 간 차이인 `duration` 개체를 반환합니다.
 
-두 번째 함수는 *시간*으로 지정 된 시점에서 치환 된 시간 간격의 부정을 기준으로 하는 지정 *시간을 나타내는*개체 `time_point`를 반환 합니다.
+두 번째 함수는 `time_point` *시간*으로 지정 된 시점에서 치환 된 시간 간격의 부정을 기준으로 하는 지정 시간을 나타내는 개체를 반환 *Dur*합니다.
 
-세 번째 함수는 *왼쪽과* *오른쪽*사이의 시간 간격을 나타내는 `duration` 개체를 반환 합니다.
+세 번째 함수는 `duration` *왼쪽과* *오른쪽*사이의 시간 간격을 나타내는 개체를 반환 합니다.
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체에 대한 같지 않음 연산자입니다.
 
@@ -77,7 +77,7 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -87,7 +87,7 @@ constexpr bool operator!=(
 
 각 함수는 `!(Left == Right)`를 반환합니다.
 
-## <a name="op_star"></a>연산자
+## <a name="operator"></a><a name="op_star"></a>연산자
 
 [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 곱하기 연산자입니다.
 
@@ -108,7 +108,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*\
+*최악*\
 `duration` 개체입니다.
 
 *Mult*\
@@ -116,13 +116,13 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="return-value"></a>Return Value
 
-각 함수는 간격 길이가 *Mult* 인 `duration` 개체를 반환 *합니다.*
+각 함수는 `duration` 간격 길이가 *Mult* 인 개체를 반환 합니다. *Dur*
 
 `is_convertible<Rep2, common_type<Rep1, Rep2>>`가 *true*가 아닌 한 첫 번째 함수는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
 `is_convertible<Rep1, common_type<Rep1, Rep2>>`가 *true*가 아닌 한 두 번째 함수는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
-## <a name="op_div"></a>연산자
+## <a name="operator"></a><a name="op_div"></a>연산자
 
 [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 나누기 연산자입니다.
 
@@ -142,13 +142,13 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*\
+*최악*\
 `duration` 개체입니다.
 
 *Div*\
 정수 값입니다.
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 개체입니다.
 
 *오른쪽*\
@@ -162,7 +162,7 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 `is_convertible<Rep2, common_type<Rep1, Rep2>>`가 *true*이고 `Rep2`가 `duration`의 인스턴스화가 아닌 경우 외에는 첫 번째 연산자가 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.
 
-## <a name="op_add"></a>연산자 +
+## <a name="operator"></a><a name="op_add"></a>연산자 +
 
 [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체를 추가합니다.
 
@@ -188,25 +188,25 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
 오른쪽 `duration` 또는 `time_point` 개체입니다.
 
-*시간*\
+*런타임*\
 `time_point` 개체입니다.
 
-*기간*\
+*최악*\
 `duration` 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 함수는 *왼쪽* 및 *오른쪽*간격의 합계와 동일한 시간 간격을 가진 `duration` 개체를 반환 합니다.
+첫 번째 함수는 `duration` *왼쪽* 및 *오른쪽*간격의 합계와 동일한 시간 간격을 가진 개체를 반환 합니다.
 
-두 번째 및 세 번째 함수는 특정 시점에서 간격 치환 지정 된 *시간을 나타내는*`time_point` 개체를 반환 *합니다.*
+두 번째 및 세 번째 함수는 특정 시점 `time_point` 에서 간격 치환 시간 *을*나타내는 개체를 반환 합니다 *Time*.
 
-## <a name="op_lt"></a> 연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
 
 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작은지 여부를 확인합니다.
 
@@ -224,7 +224,7 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -232,11 +232,11 @@ constexpr bool operator<(
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 함수는 *남은* 간격 길이가 *오른쪽*의 간격 길이 보다 작은 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
+첫 번째 함수는 **`true`** *남은* 간격 길이가 *오른쪽*의 간격 길이 보다 작은 경우를 반환 합니다. 그렇지 않으면 함수는를 반환 **`false`** 합니다.
 
-두 번째 함수는 *Left* 가 *Right*보다 앞에 오면 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
+두 번째 함수는 **`true`** *Left* 가 *Right*보다 앞에 오면를 반환 합니다. 그렇지 않으면 함수는를 반환 **`false`** 합니다.
 
-## <a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
 
 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작거나 같은지 여부를 확인합니다.
 
@@ -254,7 +254,7 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -264,7 +264,7 @@ constexpr bool operator<=(
 
 각 함수는 `!(Right < Left)`를 반환합니다.
 
-## <a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 두 `duration` 개체가 길이가 동일한 시간 간격을 나타내는지 여부 또는 두 `time_point` 개체가 동일한 시점을 나타내는지 여부를 확인합니다.
 
@@ -282,7 +282,7 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -290,11 +290,11 @@ constexpr bool operator==(
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 함수는 *Left* 와 *Right* 가 길이가 같은 시간 간격을 나타내는 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
+첫 번째 함수는 **`true`** *Left* 와 *Right* 가 길이가 같은 시간 간격을 나타내면를 반환 합니다. 그렇지 않으면 함수는를 반환 **`false`** 합니다.
 
-두 번째 함수는 *왼쪽과* *오른쪽* 이 동일한 시점을 나타내는 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.
+두 번째 함수는 **`true`** *Left* 와 *Right* 가 같은 지정 시간을 나타낼 경우를 반환 합니다. 그렇지 않으면 함수는를 반환 **`false`** 합니다.
 
-## <a name="op_gt"></a> 연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
 
 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 큰지 여부를 확인합니다.
 
@@ -312,7 +312,7 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -322,7 +322,7 @@ constexpr bool operator>(
 
 각 함수는 `Right < Left`를 반환합니다.
 
-## <a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
 
 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 크거나 같은지 여부를 확인합니다.
 
@@ -340,7 +340,7 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 또는 `time_point` 개체입니다.
 
 *오른쪽*\
@@ -350,7 +350,7 @@ constexpr bool operator>=(
 
 각 함수는 `!(Left < Right)`를 반환합니다.
 
-## <a name="op_modulo"></a>연산자 모듈로
+## <a name="operator-modulo"></a><a name="op_modulo"></a>연산자 모듈로
 
 [duration](../standard-library/duration-class.md) 개체에 대한 모듈로 연산용 연산자입니다.
 
@@ -370,13 +370,13 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>매개 변수
 
-*기간*\
+*최악*\
 `duration` 개체입니다.
 
 *Div*\
 정수 값입니다.
 
-*왼쪽*\
+*비어*\
 왼쪽 `duration` 개체입니다.
 
 *오른쪽*\
@@ -384,6 +384,6 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 함수는 간격 길이가 *기간* 모듈로 *Div*인 `duration` 개체를 반환 합니다.
+첫 번째 함수는 `duration` 간격 길이가 *기간* 모듈로 *Div*인 개체를 반환 합니다.
 
 두 번째 함수는 *왼쪽* 모듈로 *오른쪽*을 나타내는 값을 반환 합니다.

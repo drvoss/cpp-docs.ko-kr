@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216572"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 구조체
 
@@ -50,38 +50,38 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 *I0*<br/>
 인터페이스의 이름입니다.
 
-*은폐 유형*<br/>
-`RuntimeClass` `Implements` 및 `ChainInterfaces`에 대 한 지원 되는 인터페이스 아이 디 들 목록에 없는 인터페이스입니다.
+*CloakedType*<br/>
+`RuntimeClass`, 및의 경우 `Implements` `ChainInterfaces` 지원 되는 인터페이스 id 목록에 없는 인터페이스입니다.
 
 ## <a name="remarks"></a>설명
 
-인터페이스의 일반적인 특성을 구현합니다.
+인터페이스의 공통 특성을 구현 합니다.
 
-두 번째 템플릿은 은폐된 인터페이스에 대한 전문화입니다. 세 번째 템플릿은 Nil 매개 변수에 대한 전문화입니다.
+두 번째 템플릿은 숨겨진 인터페이스에 대 한 특수화입니다. 세 번째 템플릿은 Nil 매개 변수에 대 한 특수화입니다.
 
 ## <a name="members"></a>멤버
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>공용 유형 defs
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>Public Typedef
 
-속성   | Description
+Name   | 설명
 ------ | ------------------------------------------
 `Base` | *I0* 템플릿 매개 변수의 동의어입니다.
 
 ### <a name="public-methods"></a>Public 메서드
 
-속성                                                   | Description
+이름                                                   | 설명
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[인터페이스 특성 ::캔 캐스트토](#cancastto)               | 지정된 포인터를 `Base`에 대한 포인터에 캐스팅할 수 있는지 여부를 나타냅니다.
-[인터페이스특, 인터페이스: 캐스팅토베이스](#casttobase)             | 지정된 포인터를 에 대한 `Base`포인터로 캐스팅합니다.
-[인터페이스특성::캐스팅알 수 없음](#casttounknown)       | 지정된 포인터를 에 대한 `IUnknown`포인터로 캐스팅합니다.
-[인터페이스특성::필어레이와이드](#fillarraywithiid) | 인덱스 인수에서 지정한 배열 요소에 인터페이스 `Base` ID를 할당합니다.
-[인터페이스특성::확인](#verify)                     | 제대로 파생된 것을 `Base` 확인합니다.
+[InterfaceTraits:: CanCastTo](#cancastto)               | 지정 된 포인터를에 대 한 포인터로 캐스팅할 수 있는지 여부를 나타냅니다 `Base` .
+[InterfaceTraits:: CastToBase](#casttobase)             | 지정 된 포인터를에 대 한 포인터로 캐스팅 `Base` 합니다.
+[InterfaceTraits:: CastToUnknown](#casttounknown)       | 지정 된 포인터를에 대 한 포인터로 캐스팅 `IUnknown` 합니다.
+[InterfaceTraits:: FillArrayWithIid](#fillarraywithiid) | 의 인터페이스 ID를 `Base` 인덱스 인수로 지정 된 배열 요소에 할당 합니다.
+[InterfaceTraits:: Verify](#verify)                     | `Base`가 올바르게 파생 되었는지 확인 합니다.
 
 ### <a name="public-constants"></a>공용 상수
 
-속성                                   | Description
+Name                                   | 설명
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[인터페이스특성::이드카운트](#iidcount) | 현재 `InterfaceTraits` 개체와 연결된 인터페이스 아이디 수를 보유합니다.
+[InterfaceTraits:: IidCount](#iidcount) | 현재 개체와 연결 된 인터페이스 Id의 수를 유지 합니다 `InterfaceTraits` .
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -89,11 +89,11 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** implements.h
+**헤더:** .h를 구현 합니다.
 
-**네임스페이스:** 마이크로소프트::WRL::D테일
+**네임 스페이스:** Microsoft:: WRL::D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>인터페이스 특성 ::캔 캐스트토
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits:: CanCastTo
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -108,26 +108,26 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>매개 변수
 
-*Ptr*<br/>
-형식에 대한 포인터의 이름입니다.
+*ptr*<br/>
+형식에 대 한 포인터의 이름입니다.
 
 *riid*<br/>
-의 `Base`인터페이스 ID입니다.
+의 인터페이스 ID `Base` 입니다.
 
 *ppv*<br/>
-이 작업이 성공하면 *ppv는* 에 의해 `Base`지정된 인터페이스를 가리킵니다. 그렇지 않으면 *ppv가* `nullptr`로 설정됩니다.
+이 작업에 성공 하면 *ppv* 는로 지정 된 인터페이스를 가리킵니다 `Base` . 그렇지 않으면 *ppv* 가로 설정 됩니다 **`nullptr`** .
 
 ### <a name="return-value"></a>Return Value
 
-이 작업이 성공하고 *pTR이* 포인터에 `Base`캐스팅된 경우 **true입니다.** 그렇지 **않으면, 거짓**.
+**`true`** 이 작업이 성공 하 고 *ptr* 이에 대 한 포인터로 캐스팅 되 면이 고 `Base` , 그렇지 않으면 **`false`** 입니다.
 
 ### <a name="remarks"></a>설명
 
-지정된 포인터를 `Base`에 대한 포인터에 캐스팅할 수 있는지 여부를 나타냅니다.
+지정 된 포인터를에 대 한 포인터로 캐스팅할 수 있는지 여부를 나타냅니다 `Base` .
 
-자세한 `Base`내용은 [공용 Typedefs](#public-typedefs) 섹션을 참조하십시오.
+에 대 한 자세한 내용은 `Base` [Public typedef](#public-typedefs) 섹션을 참조 하십시오.
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>인터페이스특, 인터페이스: 캐스팅토베이스
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits:: CastToBase
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -141,10 +141,10 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-매개 변수 *ptr의*유형 .
+매개 변수 *ptr*의 유형입니다.
 
-*Ptr*<br/>
-*T*형에 대한 포인터 .
+*ptr*<br/>
+*T*형식에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -152,11 +152,11 @@ static __forceinline Base* CastToBase(
 
 ### <a name="remarks"></a>설명
 
-지정된 포인터를 에 대한 `Base`포인터로 캐스팅합니다.
+지정 된 포인터를에 대 한 포인터로 캐스팅 `Base` 합니다.
 
-자세한 `Base`내용은 [공용 Typedefs](#public-typedefs) 섹션을 참조하십시오.
+에 대 한 자세한 내용은 `Base` [Public typedef](#public-typedefs) 섹션을 참조 하십시오.
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>인터페이스특성::캐스팅알 수 없음
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits:: CastToUnknown
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -170,22 +170,22 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-매개 변수 *ptr의*유형 .
+매개 변수 *ptr*의 유형입니다.
 
-*Ptr*<br/>
-*T를*입력하는 포인터 .
+*ptr*<br/>
+*T*형식에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-파생되는 `Base` IUnknown에 대한 포인터입니다.
+가 파생 된 IUnknown에 대 한 포인터 `Base` 입니다.
 
 ### <a name="remarks"></a>설명
 
-지정된 포인터를 에 대한 `IUnknown`포인터로 캐스팅합니다.
+지정 된 포인터를에 대 한 포인터로 캐스팅 `IUnknown` 합니다.
 
-자세한 `Base`내용은 [공용 Typedefs](#public-typedefs) 섹션을 참조하십시오.
+에 대 한 자세한 내용은 `Base` [Public typedef](#public-typedefs) 섹션을 참조 하십시오.
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>인터페이스특성::필어레이와이드
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits:: FillArrayWithIid
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -199,20 +199,20 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>매개 변수
 
 *index*<br/>
-0기반 인덱스 값을 포함하는 필드에 대한 포인터입니다.
+0부터 시작 하는 인덱스 값을 포함 하는 필드에 대 한 포인터입니다.
 
-*아이드 (이드)*<br/>
-인터페이스 아이디의 배열입니다.
+*iid*<br/>
+인터페이스 Id의 배열입니다.
 
 ### <a name="remarks"></a>설명
 
-인덱스 인수에서 지정한 배열 요소에 인터페이스 `Base` ID를 할당합니다.
+의 인터페이스 ID를 `Base` 인덱스 인수로 지정 된 배열 요소에 할당 합니다.
 
-이 API의 이름과 는 달리 하나의 배열 요소만 수정됩니다. 전체 배열이 아닙니다.
+이 API의 이름과 반대로 하나의 배열 요소만 수정 됩니다. 전체 배열이 아닙니다.
 
-자세한 `Base`내용은 [공용 Typedefs](#public-typedefs) 섹션을 참조하십시오.
+에 대 한 자세한 내용은 `Base` [Public typedef](#public-typedefs) 섹션을 참조 하십시오.
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>인터페이스특성::이드카운트
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits:: IidCount
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -222,9 +222,9 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>설명
 
-현재 `InterfaceTraits` 개체와 연결된 인터페이스 아이디 수를 보유합니다.
+현재 개체와 연결 된 인터페이스 Id의 수를 유지 합니다 `InterfaceTraits` .
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>인터페이스특성::확인
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits:: Verify
 
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
 
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>설명
 
-제대로 파생된 것을 `Base` 확인합니다.
+`Base`가 올바르게 파생 되었는지 확인 합니다.
 
-자세한 `Base`내용은 [공용 Typedefs](#public-typedefs) 섹션을 참조하십시오.
+에 대 한 자세한 내용은 `Base` [Public typedef](#public-typedefs) 섹션을 참조 하십시오.

@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404940"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213270"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 제한 지정자는 함수 및 람다 선언에 적용할 수 있습니다. 제한 지정자는 C++ AMP(C++ Accelerated Massive Parallelism) 런타임을 사용하는 애플리케이션의 함수 동작 및 함수의 코드에 제한을 적용합니다.
 
 > [!NOTE]
-> **__Declspec** 저장소 클래스 특성의 일부인 **restrict** 키워드에 대 한 자세한 내용은 [restrict](../cpp/restrict.md)를 참조 하세요.
+> **`restrict`** 저장소 클래스 특성의 일부인 키워드에 대 한 자세한 내용은 **`__declspec`** [restrict](../cpp/restrict.md)를 참조 하세요.
 
-**Restrict** 절은 다음 형식을 사용 합니다.
+**`restrict`** 절은 다음 형식을 사용 합니다.
 
 |절|Description|
 |------------|-----------------|
@@ -31,7 +31,7 @@ ms.locfileid: "86404940"
 
 ## <a name="remarks"></a>설명
 
-**Restrict** 키워드는 상황별 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. **Restrict** 절이 없는 함수는 절이 있는 함수와 동일 합니다 `restrict(cpu)` .
+**`restrict`** 키워드는 상황별 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. 절이 없는 함수는 **`restrict`** 절이 있는 함수와 동일 합니다 `restrict(cpu)` .
 
 `restrict(amp)` 절이 있는 함수에는 다음 제한이 적용됩니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "86404940"
 
 - 함수 인라이닝 처리 가능해야 합니다.
 
-- 함수는 **int**, **unsigned int**, **float**및 **double** 변수만 선언할 수 있으며 이러한 형식만 포함 하는 클래스와 구조체를 선언할 수 있습니다. **bool** 도 허용 되지만 복합 형식에서 사용 하는 경우 4 바이트로 정렬 되어야 합니다.
+- 함수는,, 및 변수만 선언할 수 있으며 **`int`** **`unsigned int`** **`float`** **`double`** 이러한 형식만 포함 하는 클래스 및 구조체를 선언할 수 있습니다. **`bool`** 도 허용 되지만 복합 형식에서 사용 하는 경우 4 바이트로 정렬 되어야 합니다.
 
 - 람다 함수는 참조로 캡처할 수 없으며 포인터를 캡처할 수 없습니다.
 
@@ -61,19 +61,19 @@ ms.locfileid: "86404940"
 
   - 포인터에 대한 포인터
 
-  - **goto** 문.
+  - **`goto`** 할당문.
 
   - 레이블 문
 
-  - **try**, **catch**또는 **throw** 문
+  - **`try`**, **`catch`** 또는 **`throw`** 문
 
   - 전역 변수
 
   - 정적 변수 대신 [Tile_static 키워드](../cpp/tile-static-keyword.md) 를 사용 해야 합니다.
 
-  - 캐스트를 **dynamic_cast** 합니다.
+  - **`dynamic_cast`** 경향성.
 
-  - **Typeid** 연산자입니다.
+  - **`typeid`** 연산자입니다.
 
   - asm 선언
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226244"
 ---
 # <a name="filename-search-functions"></a>파일 이름 검색 함수
 
@@ -37,7 +37,7 @@ ms.locfileid: "75300312"
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `_findfirst` 함수는 `filespec` 인수에 지정된 파일과 일치하는 파일 이름의 첫 번째 인스턴스에 대한 정보를 제공합니다. `filespec` 에는 호스트 운영 체제에서 지원하는 와일드카드 문자를 임의로 조합하여 사용할 수 있습니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "75300312"
 대상 특성(예: `_A_RDONLY`)을 지정하여 찾기 작업을 제한할 수 있습니다. 이러한 특성은 `attrib` 구조의 `_finddata_t` 필드로 반환되며 다음과 같은 값일 수 있습니다(IO.h에 정의). 사용자는 이러한 값만 `attrib` 필드에 사용할 수 있다고 간주해서는 안 됩니다.
 
 `_A_ARCH`<br/>
-보관. **BACKUP** 명령으로 파일을 변경하고 지울 때마다 설정합니다. 값: 0x20
+보관 파일입니다. **BACKUP** 명령으로 파일을 변경하고 지울 때마다 설정합니다. 값: 0x20
 
 `_A_HIDDEN`<br/>
 숨김 파일입니다. **/AH** 옵션을 사용하지 않는 한 일반적으로 DIR 명령으로 표시되지 않습니다. 일반 파일 및 이 특성이 있는 파일에 대한 정보를 반환합니다. 값: 0x02
@@ -88,7 +88,7 @@ ms.locfileid: "75300312"
 
 `_find` 함수를 중첩할 수 있습니다. 예를 들어 `_findfirst` 또는 `_findnext` 에 대한 호출에서 하위 디렉터리인 파일을 찾는 경우 `_findfirst` 또는 `_findnext`에 대한 다른 호출로 새 검색을 시작할 수 있습니다.
 
-`_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`의 와이드 문자 버전입니다. 와이드 문자 버전의 구조 인수는 IO.h 및 Wchar.h에 정의된 `_wfinddata_t` 데이터 형식입니다. 이 데이터 형식의 필드는 `_finddata_t` 데이터 형식의 필드와 동일합니다. 단, `_wfinddata_t` 에서 이름 필드는 `wchar_t` 형식이 아니라 `char`형식입니다. 그 외에 `_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`와 동일하게 작동합니다.
+`_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`의 와이드 문자 버전입니다. 와이드 문자 버전의 구조 인수는 IO.h 및 Wchar.h에 정의된 `_wfinddata_t` 데이터 형식입니다. 이 데이터 형식의 필드는 데이터 형식의 필드와 동일 합니다 `_finddata_t` . 단, `_wfinddata_t` 이름 필드의 형식은 **`wchar_t`** 형식이 아니라 형식입니다 **`char`** . 그 외에 `_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`와 동일하게 작동합니다.
 
 `_findfirst` 및 `_findnext` 는 64비트 시간 형식을 사용합니다. 이전 32비트 시간 형식을 사용해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이러한 함수 중 이름에 `32` 접미사가 있는 버전은 32비트 시간 형식을 사용하고 `64` 접미사가 있는 버전은 64비트 시간 형식을 사용합니다.
 
@@ -96,17 +96,17 @@ ms.locfileid: "75300312"
 
 `_finddata_t` 는 실제로 `_finddata64i32_t` (또는 `_finddata32_t` 가 정의된 경우 `_USE_32BIT_TIME_T` )로 계산되는 매크로입니다. 다음 표에서는 `_finddata_t`의 변형을 요약하여 보여 줍니다.
 
-|구조|시간 형식|파일 크기 형식|
+|구조체|시간 형식|파일 크기 형식|
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t`는 `unsigned long`(32비트)에 대한 `typedef`입니다.
+`_fsize_t`는 **`typedef`** **`unsigned long`** (32 비트)의입니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```c
 // crt_find.c
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시스템 호출](../c-runtime-library/system-calls.md)

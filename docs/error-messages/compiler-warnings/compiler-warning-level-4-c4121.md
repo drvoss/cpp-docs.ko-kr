@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4121
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
-ms.openlocfilehash: 5bfe2ce5742c250f5f69c59d03888acb155e37a3
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0e5bdab6ff0d0508abaf5f726d1356102cfca04a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219978"
 ---
 # <a name="compiler-warning-level-4-c4121"></a>컴파일러 경고 (수준 4) C4121
 
@@ -35,7 +35,7 @@ struct s
 
 - 압축 크기를 경고를 발생시킨 멤버의 크기 이상으로 변경합니다. 예를 들어 이 조각에서는 `pack(2)`을 `pack(4)` 또는 `pack(8)`으로 변경합니다.
 
-- 멤버 선언을 크기별로 내림차순으로 다시 정렬합니다. 조각에서 `long long` 멤버가 `int` 앞에 오고 `int`가 `char` 앞에 오도록 구조체 멤버의 순서를 역순으로 바꿉니다.
+- 멤버 선언을 크기별로 내림차순으로 다시 정렬합니다. 코드 조각에서 구조체 멤버의 순서를 반대로 하 여 멤버를 앞에 오도록 하 고,가 **`long long`** **`int`** **`int`** 보다 앞에 오도록 합니다 **`char`** .
 
 이 경고는 컴파일러가 데이터 멤버 앞에 압축을 추가할 때만 발생합니다. 압축이 데이터 형식에 맞추지 않은 메모리 위치에 데이터를 배치했지만 안쪽 여백이 데이터 멤버 앞에 배치되지 않을 때는 발생하지 않습니다. 데이터가 데이터 크기의 배수인 경계에 맞추지 않으면 성능이 저하될 수 있습니다. 맞추지 않은 데이터의 읽기 및 쓰기로 인해 일부 아키텍처에 프로세스 오류가 발생할 수 있고 오류를 해결하려면 두 배나 세 배의 시간이 걸릴 수 있습니다. 맞추지 않은 데이터 액세스는 일부 RISC 아키텍처에 이식할 수 없습니다.
 

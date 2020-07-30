@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218665"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,7 +79,7 @@ wchar_t *_wgetdcwd(
 **NULL** 이 지정 된 경우이 함수는 **malloc**를 사용 하 여 최소 *maxlen* 크기의 버퍼를 할당 하 고 **_getdcwd** 의 반환 값은 할당 된 버퍼에 대 한 포인터입니다. **Free** 를 호출 하 고 포인터를 전달 하 여 버퍼를 해제할 수 있습니다.
 
 *maxlen*<br/>
-경로에 대 한 최대 길이를 지정 하는 0이 아닌 양의 정수 (문자: **_getdcwd** **의 경우 문자** , **_wgetdcwd** **wchar_t** 의 경우)입니다.
+경로의 최대 길이 (문자)를 지정 하는 0이 아닌 양의 정수로, **`char`** **_getdcwd** 및 _wgetdcwd에 대 한 **`wchar_t`** 입니다 **_wgetdcwd**.
 
 *Maxlen* 가 0 보다 작거나 같으면 잘못 된 매개 변수 처리기가 호출 됩니다. 자세한 내용은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)를 참조하세요.
 
@@ -122,7 +122,7 @@ wchar_t *_wgetdcwd(
 
 [_getdrive](getdrive.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

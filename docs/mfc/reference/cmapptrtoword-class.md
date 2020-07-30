@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 698e306896fd62888a84b6d6ce55fb4c9678187b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223033"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord 클래스
 
@@ -51,9 +51,9 @@ void 포인터로 키가 지정된 16비트 단어 맵을 지원합니다.
 class CMapPtrToWord : public CObject
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
-`CMapPtrToWord`의 멤버 함수는 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)클래스의 멤버 함수와 비슷합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. `CObject` 포인터가 함수 매개 변수 또는 반환 값으로 표시 되는 경우 WORD를 대체 합니다. 함수 매개 변수 또는 반환 값으로 **char** 에 대 한 `CString` 또는 **const** 포인터가 표시 되는 경우 포인터를 **void**로 대체 합니다.
+의 멤버 함수는 `CMapPtrToWord` [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)클래스의 멤버 함수와 비슷합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. `CObject`포인터가 함수 매개 변수 또는 반환 값으로 표시 되는 경우에는 단어를 대체 합니다. `CString`또는 **`const`** 포인터가 **`char`** 함수 매개 변수 또는 반환 값으로 표시 되는 경우 포인터를로 대체 **`void`** 합니다.
 
 `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CMapPtrToWord::CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|설명|
 |----------|-----------------|
 |[CMapPtrToWord:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|이 map의 요소 수를 반환 합니다.|
 |[CMapPtrToWord::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|해시 테이블의 현재 요소 수를 확인 합니다.|
@@ -87,21 +87,21 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
-|[CMapPtrToWord:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|`SetAt`에 대 한 연산자 대체 (map)에 요소를 삽입 합니다.|
+|[CMapPtrToWord:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|에 요소를 삽입 합니다 (에 대 한 연산자 대체) `SetAt` .|
 
 ## <a name="remarks"></a>설명
 
-`CMapWordToPtr` IMPLEMENT_DYNAMIC 매크로를 통합 하 여 런타임 형식 액세스를 지원 하 고 `CDumpContext` 개체를 덤프 합니다. 개별 지도 요소에 대 한 덤프가 필요한 경우 덤프 컨텍스트의 깊이를 1 이상으로 설정 해야 합니다.
+`CMapWordToPtr`IMPLEMENT_DYNAMIC 매크로를 통합 하 여 런타임 형식 액세스를 지원 하 고 개체를 덤프 `CDumpContext` 합니다. 개별 지도 요소에 대 한 덤프가 필요한 경우 덤프 컨텍스트의 깊이를 1 이상으로 설정 해야 합니다.
 
 단어 포인터 맵이 serialize 되지 않을 수 있습니다.
 
-`CMapPtrToWord` 개체가 삭제 되거나 해당 요소가 제거 되 면 포인터와 단어가 제거 됩니다. 키 포인터가 참조 하는 엔터티는 제거 되지 않습니다.
+`CMapPtrToWord`개체가 삭제 되거나 해당 요소가 제거 되 면 포인터와 단어가 제거 됩니다. 키 포인터가 참조 하는 엔터티는 제거 되지 않습니다.
 
-`CMapPtrToWord`에 대 한 자세한 내용은 [컬렉션](../../mfc/collections.md)문서를 참조 하세요.
+에 대 한 자세한 내용은 `CMapPtrToWord` [컬렉션](../../mfc/collections.md)문서를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 

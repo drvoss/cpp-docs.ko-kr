@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9603c132610e0cfb1e8f955be48271870527105b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218167"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219380"
 ---
 # <a name="setlocale-pragma"></a>setlocale pragma
 
@@ -29,7 +29,7 @@ ms.locfileid: "70218167"
 
 기본 *로캘 문자열* 은 ""입니다.
 
-"C" 로캘은 문자열의 각 문자를 **wchar_t**로 해당 값에 매핑합니다. 에 `setlocale` 유효한 다른 값은 [언어 문자열](../c-runtime-library/language-strings.md) 목록에 있는 항목입니다. 예를 들어 다음과 같이 지정할 수 있습니다.
+"C" 로캘은 문자열의 각 문자를 값으로에 매핑합니다 **`wchar_t`** . 에 유효한 다른 값 `setlocale` 은 [언어 문자열](../c-runtime-library/language-strings.md) 목록에 있는 항목입니다. 예를 들어 다음과 같이 지정할 수 있습니다.
 
 ```cpp
 #pragma setlocale("dutch")
@@ -37,6 +37,6 @@ ms.locfileid: "70218167"
 
 언어 문자열을 지정 하는 기능은 컴퓨터의 코드 페이지 및 언어 ID 지원에 따라 달라 집니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

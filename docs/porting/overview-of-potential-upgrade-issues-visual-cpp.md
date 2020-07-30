@@ -2,12 +2,12 @@
 title: 잠재적인 업그레이드 문제 개요(Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231639"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)
 
-Microsoft Visual C++ 6.0 이전 버전에서는 **wchar_t** 기본 제공 형식으로 구현 되지 않았지만, wchar에서 부호 없는 short에 대 한 typedef로 선언 되었습니다. C + + 표준에서는 **wchar_t** 기본 제공 형식 이어야 합니다. typedef 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual Studio에서 업그레이드하고 코드가 **wchar_t**를 **unsigned short**로 암시적으로 변환하려 하기 때문에 컴파일러 오류 C2664가 발생하는 경우 `/Zc:wchar_t-`를 설정하는 대신 오류를 수정하기 위해 코드를 변경하는 것이 좋습니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.
+Microsoft Visual C++ 6.0 이전 버전에서는 **`wchar_t`** 가 기본 제공 형식으로 구현 되지 않았지만, wchar에서 부호 없는 short에 대 한 typedef로 선언 되었습니다. C + + 표준에서는 **`wchar_t`** 가 기본 제공 형식 이어야 합니다. typedef 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual Studio에서 업그레이드 하 고 코드가를로 암시적으로 변환 하려고 하기 때문에 컴파일러 오류 C 2664 발생 한 경우를 설정 하는 **`wchar_t`** **`unsigned short`** 대신 오류를 수정 하는 코드를 변경 하는 것이 좋습니다 `/Zc:wchar_t-` . 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>/NODEFAULTLIB, /ENTRY 및 /NOENTRY 링커 옵션을 사용하여 업그레이드
 

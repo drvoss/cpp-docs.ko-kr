@@ -1,17 +1,17 @@
 ---
-title: ptr (C++ COM 특성)
+title: ptr (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166421"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224385"
 ---
 # <a name="ptr"></a>ptr
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166421"
 
 ## <a name="remarks"></a>설명
 
-**Ptr** C++ 특성에는 [ptr](/windows/win32/Midl/ptr) MIDL 특성과 동일한 기능이 있습니다.
+**Ptr** c + + 특성에는 [ptr](/windows/win32/Midl/ptr) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -37,10 +37,10 @@ ms.locfileid: "80166421"
 
 |||
 |-|-|
-|**적용 대상**|인터페이스 매개 변수, 인터페이스 메서드, **typedef**|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|인터페이스 매개 변수, 인터페이스 메서드,**`typedef`**|
+|**불가능**|아니요|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

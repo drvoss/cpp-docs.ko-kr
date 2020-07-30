@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aee23f72c5b0fb955b4dcc76a3f8c51eca7be70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204237"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -28,7 +28,7 @@ C++ 표준 라이브러리에서는 할당자에 대한 기본 구현을 제공�
 
 ## <a name="writing-your-own-allocator-c11"></a>고유한 할당자 작성(C++11)
 
-기본 할당자는 **new** 및 **delete** 를 사용 하 여 메모리를 할당 및 할당 취소 합니다. 공유 메모리를 사용하는 등의 다른 메모리 할당 방법을 사용하려면 고유한 할당자를 만들어야 합니다. C++11을 대상으로 지정하고 새 사용자 지정 할당자를 작성해야 할 경우 가능하면 최소 할당자로 설정하세요. 이전 스타일 할당자를 이미 구현했더라도 자동으로 제공되는 더 효율적인 `construct()` 메서드를 사용하기 위해 이전 스타일 할당자를 *최소 할당자*로 수정하는 것이 좋습니다.
+기본 할당자는 및를 사용 하 여 **`new`** **`delete`** 메모리를 할당 및 할당 취소 합니다. 공유 메모리를 사용하는 등의 다른 메모리 할당 방법을 사용하려면 고유한 할당자를 만들어야 합니다. C++11을 대상으로 지정하고 새 사용자 지정 할당자를 작성해야 할 경우 가능하면 최소 할당자로 설정하세요. 이전 스타일 할당자를 이미 구현했더라도 자동으로 제공되는 더 효율적인 `construct()` 메서드를 사용하기 위해 이전 스타일 할당자를 *최소 할당자*로 수정하는 것이 좋습니다.
 
 최소 할당자에는 훨씬 더 적은 상용구가 필요하고 최소 할당자를 사용하여 모든 작업을 수행하는 `allocate` 및 `deallocate` 멤버 함수에 포커스를 지정할 수 있습니다. 최소 할당자를 만들 때 아래 예제에 표시된 멤버를 제외한 멤버를 구현하지 마세요.
 

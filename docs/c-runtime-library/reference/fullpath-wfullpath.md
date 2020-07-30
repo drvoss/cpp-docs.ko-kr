@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231392"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -71,7 +71,7 @@ wchar_t *_wfullpath(
 상대 경로 이름입니다.
 
 *maxLength*<br/>
-절대 경로 이름 버퍼의 최대 길이 (*absPath*)입니다. 이 길이는 **_fullpath** 에 대 한 바이트 단위 이지만 **_wfullpath**의 경우 와이드 문자 (**wchar_t**)로 되어 있습니다.
+절대 경로 이름 버퍼의 최대 길이 (*absPath*)입니다. 이 길이는 **_fullpath** 에 대 한 바이트 단위 이지만 **`wchar_t`** **_wfullpath**의 경우 와이드 문자 ()입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -109,7 +109,7 @@ By default, this function's global state is scoped to the application. To change
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> 또는 \<wchar.h>|
@@ -151,7 +151,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

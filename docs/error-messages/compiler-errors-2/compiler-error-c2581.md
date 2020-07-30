@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a632d6a47afb29b8bb46761c3188391905eda842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206876"
 ---
 # <a name="compiler-error-c2581"></a>컴파일러 오류 C2581
 
 ' type ': static ' operator = ' 함수가 잘못 되었습니다.
 
-할당 (`=`) 연산자가 `static`잘못 선언 되었습니다. 할당 연산자를 `static`수 없습니다. 자세한 내용은 [사용자 정의 연산자 (C++/cli)](../../dotnet/user-defined-operators-cpp-cli.md)를 참조 하세요.
+대입 ( `=` ) 연산자가로 잘못 선언 되었습니다 **`static`** . 할당 연산자는 일 수 없습니다 **`static`** . 자세한 내용은 [사용자 정의 연산자 (c + +/cli)](../../dotnet/user-defined-operators-cpp-cli.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 

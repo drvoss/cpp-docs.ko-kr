@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 1d8651d1391ded2970a00a7429c36f341a438659
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 024bd2a100b8a0b871d98a5e6001858b55977565
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230365"
 ---
 # <a name="concurrent_priority_queue-class"></a>concurrent_priority_queue 클래스
 
@@ -51,7 +51,7 @@ template <typename T,
 
 ### <a name="public-typedefs"></a>공용 Typedefs
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
 |`allocator_type`|동시 우선 순위 큐의 할당자 클래스를 나타내는 형식입니다.|
 |`const_reference`|동시 우선 순위 큐에 저장된 형식의 요소에 대한 const 참조를 나타내는 형식입니다.|
@@ -61,33 +61,33 @@ template <typename T,
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
-|[concurrent_priority_queue](#ctor)|오버로드됨. 동시 우선 순위 큐를 생성합니다.|
+|[concurrent_priority_queue](#ctor)|오버로드되었습니다. 동시 우선 순위 큐를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|name|설명|
+|이름|설명|
 |----------|-----------------|
-|[clear](#clear)|동시 우선 순위의 모든 요소를 지웁니다. 이 메서드는 동시성이 보장 되지 않습니다.|
+|[해제](#clear)|동시 우선 순위의 모든 요소를 지웁니다. 이 메서드는 동시성이 보장 되지 않습니다.|
 |[empty](#empty)|이 메서드가 호출될 때 동시 우선 순위 큐가 비어 있는지를 테스트합니다. 이 메서드는 동시성이 보장 됩니다.|
 |[get_allocator](#get_allocator)|동시 우선 순위 큐를 생성하는 데 사용되는 할당자 복사본을 반환합니다. 이 메서드는 동시성이 보장 됩니다.|
-|[push](#push)|오버로드됨. 동시 우선 순위 큐에 요소를 추가 합니다. 이 메서드는 동시성이 보장 됩니다.|
+|[push](#push)|오버로드되었습니다. 동시 우선 순위 큐에 요소를 추가 합니다. 이 메서드는 동시성이 보장 됩니다.|
 |[size](#size)|동시 우선 순위 큐에 있는 요소의 수를 반환합니다. 이 메서드는 동시성이 보장 됩니다.|
-|[swap](#swap)|두 개의 동시 우선 순위 큐의 내용을 바꿉니다. 이 메서드는 동시성이 보장 되지 않습니다.|
+|[스왑을](#swap)|두 개의 동시 우선 순위 큐의 내용을 바꿉니다. 이 메서드는 동시성이 보장 되지 않습니다.|
 |[try_pop](#try_pop)|큐가 비어 있지 않은 경우 큐에서 우선 순위가 가장 높은 요소를 제거하고 반환합니다. 이 메서드는 동시성이 보장 됩니다.|
 
 ### <a name="public-operators"></a>Public 연산자
 
-|name|설명|
+|Name|설명|
 |----------|-----------------|
-|[operator=](#operator_eq)|오버로드됨. 다른 `concurrent_priority_queue` 개체의 내용을이 개체에 할당 합니다. 이 메서드는 동시성이 보장 되지 않습니다.|
+|[연산자 =](#operator_eq)|오버로드되었습니다. 다른 개체의 내용을 `concurrent_priority_queue` 이 개체에 할당 합니다. 이 메서드는 동시성이 보장 되지 않습니다.|
 
 ## <a name="remarks"></a>설명
 
-`concurrent_priority_queue` 클래스에 대 한 자세한 내용은 [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)를 참조 하세요.
+클래스에 대 한 자세한 내용은 `concurrent_priority_queue` [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)를 참조 하세요.
 
-## <a name="inheritance-hierarchy"></a>상속 계층
+## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 `concurrent_priority_queue`
 
@@ -95,9 +95,9 @@ template <typename T,
 
 **헤더:** concurrent_priority_queue. h
 
-**네임스페이스:** 동시성
+**네임 스페이스:** 동시성
 
-## <a name="clear"></a>해제
+## <a name="clear"></a><a name="clear"></a>해제
 
 동시 우선 순위의 모든 요소를 지웁니다. 이 메서드는 동시성이 보장 되지 않습니다.
 
@@ -107,9 +107,9 @@ void clear();
 
 ### <a name="remarks"></a>설명
 
-`clear`는 동시성이 보장 되지 않습니다. 이 메서드를 호출할 때 다른 스레드가 동시 우선 순위 큐에서 메서드를 호출 하 고 있지 않은지 확인 해야 합니다. `clear`는 메모리를 해제 하지 않습니다.
+`clear`는 동시성이 안전 하지 않습니다. 이 메서드를 호출할 때 다른 스레드가 동시 우선 순위 큐에서 메서드를 호출 하 고 있지 않은지 확인 해야 합니다. `clear`메모리를 해제 하지 않습니다.
 
-## <a name="ctor"></a>concurrent_priority_queue
+## <a name="concurrent_priority_queue"></a><a name="ctor"></a>concurrent_priority_queue
 
 동시 우선 순위 큐를 생성합니다.
 
@@ -163,19 +163,19 @@ concurrent_priority_queue(
 
 ### <a name="remarks"></a>설명
 
-모든 생성자는 `_Al` 할당자 개체를 저장 하 고 우선 순위 큐를 초기화 합니다.
+모든 생성자는 할당자 개체를 저장 `_Al` 하 고 우선 순위 큐를 초기화 합니다.
 
 첫 번째 생성자는 비어 있는 초기 우선 순위 큐를 지정 하 고 필요에 따라 할당자를 지정 합니다.
 
-두 번째 생성자는 초기 용량이 `_Init_capacity` 우선 순위 큐를 지정 하 고 필요에 따라 할당자를 지정 합니다.
+두 번째 생성자는 초기 용량으로 우선 순위 큐를 지정 `_Init_capacity` 하 고 필요에 따라 할당자를 지정 합니다.
 
-세 번째 생성자는 반복기 범위 [`_Begin`, `_End`)에서 제공 하는 값을 지정 하 고 필요에 따라 할당자를 지정 합니다.
+세 번째 생성자는 반복기 범위 [,)에서 제공 하는 값 `_Begin` `_End` 을 지정 하 고 필요에 따라 할당자를 지정 합니다.
 
-네 번째 및 다섯 번째 생성자는 `_Src`우선 순위 큐의 복사본을 지정 합니다.
+네 번째 및 다섯 번째 생성자는 우선 순위 큐의 복사본을 지정 합니다 `_Src` .
 
-여섯 번째와 일곱 번째 생성자는 `_Src`우선 순위 큐의 이동을 지정 합니다.
+여섯 번째와 일곱 번째 생성자는 우선 순위 큐의 이동을 지정 합니다 `_Src` .
 
-## <a name="empty"></a> empty
+## <a name="empty"></a><a name="empty"></a>비우려면
 
 이 메서드가 호출될 때 동시 우선 순위 큐가 비어 있는지를 테스트합니다. 이 메서드는 동시성이 보장 됩니다.
 
@@ -185,9 +185,9 @@ bool empty() const;
 
 ### <a name="return-value"></a>Return Value
 
-함수가 호출 된 순간에 우선 순위 큐가 비어 있으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 함수가 호출 된 순간에 우선 순위 큐가 비어 있으면이 고, **`false`** 그렇지 않으면입니다.
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 동시 우선 순위 큐를 생성하는 데 사용되는 할당자 복사본을 반환합니다. 이 메서드는 동시성이 보장 됩니다.
 
@@ -197,11 +197,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>Return Value
 
-`concurrent_priority_queue` 개체를 생성 하는 데 사용 되는 할당자의 복사본입니다.
+개체를 생성 하는 데 사용 되는 할당자의 복사본입니다 `concurrent_priority_queue` .
 
-## <a name="operator_eq"></a>연산자 =
+## <a name="operator"></a><a name="operator_eq"></a>연산자 =
 
-다른 `concurrent_priority_queue` 개체의 내용을이 개체에 할당 합니다. 이 메서드는 동시성이 보장 되지 않습니다.
+다른 개체의 내용을 `concurrent_priority_queue` 이 개체에 할당 합니다. 이 메서드는 동시성이 보장 되지 않습니다.
 
 ```cpp
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -216,9 +216,9 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 ### <a name="return-value"></a>Return Value
 
-이 `concurrent_priority_queue` 개체에 대 한 참조입니다.
+이 개체에 대 한 참조 `concurrent_priority_queue` 입니다.
 
-## <a name="push"></a>누르기
+## <a name="push"></a><a name="push"></a>누르기
 
 동시 우선 순위 큐에 요소를 추가 합니다. 이 메서드는 동시성이 보장 됩니다.
 
@@ -233,7 +233,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 동시 우선 순위 큐에 추가할 요소입니다.
 
-## <a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a>크기가
 
 동시 우선 순위 큐에 있는 요소의 수를 반환합니다. 이 메서드는 동시성이 보장 됩니다.
 
@@ -243,13 +243,13 @@ size_type size() const;
 
 ### <a name="return-value"></a>Return Value
 
-이 `concurrent_priority_queue` 개체의 요소 수입니다.
+이 개체의 요소 수 `concurrent_priority_queue` 입니다.
 
 ### <a name="remarks"></a>설명
 
-반환 된 크기는 `push`함수에 대 한 호출에 의해 추가 되는 모든 요소를 포함 하도록 보장 됩니다. 그러나 보류 중인 동시 작업의 결과를 반영 하지 않을 수 있습니다.
+반환 된 크기는 함수에 대 한 호출에 의해 추가 되는 모든 요소를 포함 하도록 보장 됩니다 `push` . 그러나 보류 중인 동시 작업의 결과를 반영 하지 않을 수 있습니다.
 
-## <a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 두 개의 동시 우선 순위 큐의 내용을 바꿉니다. 이 메서드는 동시성이 보장 되지 않습니다.
 
@@ -262,7 +262,7 @@ void swap(concurrent_priority_queue& _Queue);
 *_Queue*<br/>
 내용을 바꿀 `concurrent_priority_queue` 개체입니다.
 
-## <a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a>try_pop
 
 큐가 비어 있지 않은 경우 큐에서 우선 순위가 가장 높은 요소를 제거하고 반환합니다. 이 메서드는 동시성이 보장 됩니다.
 
@@ -277,9 +277,9 @@ bool try_pop(reference _Elem);
 
 ### <a name="return-value"></a>Return Value
 
-값이 팝 되었으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
+**`true`** 값이 팝 되었으면이 고, **`false`** 그렇지 않으면입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[concurrency 네임스페이스](concurrency-namespace.md)<br/>
+[concurrency 네임 스페이스](concurrency-namespace.md)<br/>
 [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)

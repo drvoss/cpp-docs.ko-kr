@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204887"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1은 `allocator_chunklist` 및 [sync_per_thread](sync-per-thread-class.md) 동기화 필터를 사용하여 노드를 할당합니다.
 
-블록 할당자는 캐시 또는 필터입니다. 캐시는 std:: size_t 형식의 인수 하나를 사용 하는 클래스 템플릿입니다. 단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다. Operator **new**를 사용 하 여 메모리를 가져와야 하지만 각 블록에 대해 operator **new** 를 별도로 호출할 필요는 없습니다. 예를 들어, 더 큰 블록에서 하위 할당을 수행하거나 후속 재할당을 위해 할당 취소된 블록을 캐시할 수 있습니다.
+블록 할당자는 캐시 또는 필터입니다. 캐시는 std:: size_t 형식의 인수 하나를 사용 하는 클래스 템플릿입니다. 단일 크기의 메모리 블록을 할당 및 할당 취소하는 블록 할당자를 정의합니다. 연산자를 사용 하 여 메모리 **`new`** 를 가져와야 하지만 각 블록에 대해 별도의 호출을 수행 하지 않아도 **`new`** 됩니다. 예를 들어, 더 큰 블록에서 하위 할당을 수행하거나 후속 재할당을 위해 할당 취소된 블록을 캐시할 수 있습니다.
 
 템플릿을 인스턴스화할 때 사용 되는 std:: size_t 인수의 값을 다시 바인딩할 수 없는 컴파일러의 경우 캐시의 멤버 함수에 전달 되는 _Sz 인수의 값이 할당 및 할당 취소가 될 필요는 없습니다.
 
@@ -139,7 +139,7 @@ _Lst1은 `allocator_chunklist` 및 [sync_per_thread](sync-per-thread-class.md) �
 
 ### <a name="classes"></a>클래스
 
-|클래스|Description|
+|클래스|설명|
 |-|-|
 |[allocator_base](allocator-base-class.md)|동기화 필터에서 사용자 정의 할당자를 만드는 데 필요한 기본 클래스 및 일반 함수를 정의합니다.|
 |[allocator_chunklist](allocator-chunklist-class.md)|[cache_chunklist](cache-chunklist-class.md) 유형의 캐시를 사용하여 개체에 대한 스토리지 할당 및 해제를 관리하는 개체를 설명합니다.|

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fc163255a5ab342938f56f8a22af3984a48e56a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190315"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216624"
 ---
 # <a name="_bstr_t-relational-operators"></a>_bstr_t 관계형 연산자
 
@@ -37,12 +37,12 @@ bool operator<=(const _bstr_t& str) const throw( );
 bool operator>=(const _bstr_t& str) const throw( );
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이러한 연산자는 두 `_bstr_t` 개체를 사전순으로 비교합니다. 연산자는 비교가 유지 되 면 TRUE를 반환 하 고 그렇지 않으면 FALSE를 반환 합니다.
+이러한 연산자는 두 `_bstr_t` 개체를 사전순으로 비교합니다. 연산자는 **`true`** 비교가 유지 되 면를 반환 하 고, 그렇지 않으면를 반환 **`false`** 합니다.
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [_bstr_t 클래스](../cpp/bstr-t-class.md)

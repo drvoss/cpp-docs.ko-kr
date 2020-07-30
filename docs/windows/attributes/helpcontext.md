@@ -1,17 +1,17 @@
 ---
-title: helpcontext (C++ COM 특성)
+title: helpcontext (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77c085f96e778b19886c4e6e3c8f07b43fbe8f2c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211985"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -30,7 +30,7 @@ ms.locfileid: "80167006"
 
 ## <a name="remarks"></a>설명
 
-**Helpcontext** C++ 특성은 [helpcontext](/windows/win32/Midl/helpcontext) MIDL 특성과 동일한 기능을 포함 합니다.
+**Helpcontext** c + + 특성에는 [helpcontext](/windows/win32/Midl/helpcontext) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -42,10 +42,10 @@ ms.locfileid: "80167006"
 
 |||
 |-|-|
-|**적용 대상**|**인터페이스**, **typedef**, **클래스**, 메서드, 속성|
-|**반복 가능**|예|
-|**필수 특성**|None|
-|**잘못된 특성**|None|
+|**적용 대상**|**인터페이스**, **`typedef`** , **`class`** , 메서드, 속성|
+|**불가능**|예|
+|**필수 특성**|없음|
+|**잘못된 특성**|없음|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213127"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-Virtual **키워드는** 가상 함수 또는 가상 기본 클래스를 선언 합니다.
+**`virtual`** 키워드는 가상 함수 또는 가상 기본 클래스를 선언 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -37,7 +37,7 @@ virtual [access-specifier] base-class-name
 멤버 함수를 선언합니다.
 
 *액세스-지정자*<br/>
-기본 클래스, **public**, **protected** 또는 **private**에 대 한 액세스 수준을 정의 합니다. **가상** 키워드 앞 이나 뒤에 올 수 있습니다.
+기본 클래스, 또는에 대 한 액세스 수준을 정의 **`public`** **`protected`** **`private`** 합니다. 키워드 앞 이나 뒤에 올 수 있습니다 **`virtual`** .
 
 *기본 클래스 이름*<br/>
 이전에 선언된 클래스 형식을 식별합니다.
@@ -50,4 +50,4 @@ virtual [access-specifier] base-class-name
 
 ## <a name="see-also"></a>참고 항목
 
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

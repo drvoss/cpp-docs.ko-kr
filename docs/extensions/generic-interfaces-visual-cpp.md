@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182021"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218028"
 ---
 # <a name="generic-interfaces-ccli"></a>제네릭 인터페이스(C++/CLI)
 
@@ -36,7 +36,7 @@ ms.locfileid: "80182021"
 (선택 사항) 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 **특성**을 참조하세요.
 
 *class-key*<br/>
-**class** 또는 **typename**입니다.
+**`class`** 또는 **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 쉼표로 구분된 식별자 목록입니다.
@@ -45,7 +45,7 @@ ms.locfileid: "80182021"
 [제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)에 지정된 형식을 사용합니다.
 
 *accessibility-modifiers*<br/>
-(선택 사항) 접근성 한정자(예: **public, private**)입니다.
+필드 액세스 가능성 한정자 (예: **public, private**).
 
 *identifier*<br/>
 인터페이스 이름입니다.
@@ -238,7 +238,7 @@ List2
 
 ## <a name="example"></a>예제
 
-이 예제에서는 제네릭 인터페이스 `IMyGenIface`와 `IMySpecializedInt`를 특수화하는, 제네릭이 아닌 두 인터페이스 `ImySpecializedString` 및 `IMyGenIface`을 선언합니다. 그런 다음, 두 클래스 `MyIntClass` 및 `MyStringClass`에서 특수화된 두 인터페이스를 구현합니다. 예제에서는 제네릭 인터페이스를 특수화하고, 제네릭 인터페이스와 제네릭이 아닌 인터페이스를 인스턴스화하고, 인터페이스에서 명시적으로 구현된 멤버를 호출하는 방법을 보여 줍니다.
+이 예제에서는 제네릭 인터페이스 `IMyGenIface`와 `IMyGenIface`를 특수화하는, 제네릭이 아닌 두 인터페이스 `IMySpecializedInt` 및 `ImySpecializedString`을 선언합니다. 그런 다음, 두 클래스 `MyIntClass` 및 `MyStringClass`에서 특수화된 두 인터페이스를 구현합니다. 예제에서는 제네릭 인터페이스를 특수화하고, 제네릭 인터페이스와 제네릭이 아닌 인터페이스를 인스턴스화하고, 인터페이스에서 명시적으로 구현된 멤버를 호출하는 방법을 보여 줍니다.
 
 ```cpp
 // generic_interface2.cpp
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [제네릭](generics-cpp-component-extensions.md)

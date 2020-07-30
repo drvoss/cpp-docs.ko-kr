@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a22ccfaf77c3be524bf7127eac3d76c7be827ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373120"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201858"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 연산자
 
 |||||
 |-|-|-|-|
-|[연산자!=](#op_neq)|[연산자==](#op_eq_eq)|[연산자!=](#op_neq_multimap)|[연산자==](#op_eq_eq_multimap)|
+|[연산자! =](#op_neq)|[연산자 = =](#op_eq_eq)|[연산자! =](#op_neq_multimap)|[연산자 = =](#op_eq_eq_multimap)|
 
-## <a name="operator"></a><a name="op_neq"></a>연산자!=
+## <a name="operator"></a><a name="op_neq"></a>연산자! =
 
 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.
 
@@ -28,7 +28,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `unordered_map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -36,7 +36,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="return-value"></a>Return Value
 
-unordered_maps 같지 않은 경우 **true;** 그들은 같은 경우 **false.**
+**`true`** unordered_maps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 같으면이 고, 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자==
+## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
 
 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.
 
@@ -92,7 +92,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `unordered_map` 형식의 개체입니다.
 
 *오른쪽*\
@@ -100,7 +100,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="return-value"></a>Return Value
 
-unordered_maps 같으면 **true;** 동일하지 않은 경우 **false.**
+**`true`** unordered_maps 같으면이 고, 그렇지 않으면입니다. **`false`** 동일 하지 않은 경우입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="operator"></a><a name="op_neq_multimap"></a>연산자!=
+## <a name="operator"></a><a name="op_neq_multimap"></a>연산자! =
 
 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.
 
@@ -156,7 +156,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `unordered_multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -164,7 +164,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="return-value"></a>Return Value
 
-unordered_multimaps 같지 않은 경우 **true;** 그들은 같은 경우 **false.**
+**`true`** unordered_multimaps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 같으면이 고, 그렇지 않으면입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>연산자==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>연산자 = =
 
 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.
 
@@ -221,7 +221,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 `unordered_multimap` 형식의 개체입니다.
 
 *오른쪽*\
@@ -229,7 +229,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="return-value"></a>Return Value
 
-unordered_multimaps 같으면 **true;** 동일하지 않은 경우 **false.**
+**`true`** unordered_multimaps 같으면이 고, 그렇지 않으면입니다. **`false`** 동일 하지 않은 경우입니다.
 
 ### <a name="remarks"></a>설명
 

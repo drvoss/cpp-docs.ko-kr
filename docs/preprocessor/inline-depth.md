@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: be57178280e278683b85db1413ff5724b5260aef
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219419"
 ---
 # <a name="inline_depth-pragma"></a>inline_depth pragma
 
@@ -25,22 +25,22 @@ ms.locfileid: "70220977"
 
 ## <a name="remarks"></a>설명
 
-이 pragma는 [inline](../cpp/inline-functions-cpp.md) 및 [__inline](../cpp/inline-functions-cpp.md)으로 표시 된 함수의 인라인을 제어 하거나 `/Ob` 옵션 아래에서 자동으로 인라인 처리 합니다.
+이 pragma는 [inline](../cpp/inline-functions-cpp.md) 및 [__inline](../cpp/inline-functions-cpp.md)로 표시 된 함수의 인라인을 제어 하거나 옵션 아래에서 자동으로 인라인 처리 합니다 `/Ob` .
 
 *n* 은 0에서 255 사이의 값이 될 수 있습니다. 여기서 255은 호출 그래프에서 무제한 깊이를 의미 합니다. 0 값은 인라인 확장을 금지 합니다. *N* 을 지정 하지 않으면 기본값 254이 사용 됩니다.
 
-**Inline_depth** pragma는 일련의 함수 호출을 확장할 수 있는 횟수를 제어 합니다. 예를 들어 인라인 깊이가 4 인 것으로 가정 합니다. A가 B를 호출 하 고 B가 C를 호출 하는 경우 세 호출은 모두 인라인으로 확장 됩니다. 그러나 가장 가까운 인라인 수준 확장이 2 인 경우 A와 B만 확장 되 고 C는 함수 호출로 유지 됩니다.
+**Inline_depth** pragma는 일련의 함수 호출이 확장 될 수 있는 횟수를 제어 합니다. 예를 들어 인라인 깊이가 4 인 것으로 가정 합니다. A가 B를 호출 하 고 B가 C를 호출 하는 경우 세 호출은 모두 인라인으로 확장 됩니다. 그러나 가장 가까운 인라인 수준 확장이 2 인 경우 A와 B만 확장 되 고 C는 함수 호출로 유지 됩니다.
 
 이 pragma를 사용 하려면 `/Ob` 컴파일러 옵션을 1 이상으로 설정 해야 합니다. 이 pragma를 사용하여 설정한 깊이는 pragma 뒤에 오는 첫 번째 함수 호출에 적용됩니다.
 
 인라인 깊이는 확장 하는 동안 감소할 수 있지만 증가 되지는 않습니다. 인라인 깊이가 6이 고 확장 하는 동안 전처리기는 값이 8 인 **inline_depth** pragma를 발견 하면 깊이는 6으로 유지 됩니다.
 
-**Inline_depth** pragma는로 `__forceinline`표시 된 함수에는 영향을 주지 않습니다.
+**Inline_depth** pragma는로 표시 된 함수에는 영향을 주지 않습니다 **`__forceinline`** .
 
 > [!NOTE]
 > 재귀 함수는 최대 16 깊이의 호출까지 인라인을 대체할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [inline_recursion](../preprocessor/inline-recursion.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232783"
 ---
 # <a name="db_command"></a>db_command
 
@@ -26,7 +26,7 @@ OLE DB 명령을 만듭니다.
 
 ### <a name="parameters"></a>매개 변수
 
-*명령을 사용합니다.*<br/>
+*command*<br/>
 OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 간단한 예제입니다.
 
 ```cpp
@@ -44,23 +44,23 @@ OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 
 
 *binding parameter block* 은 다음과 같이 정의됩니다.
 
-> **(\[ ** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
+> **( \[ ** *bindtype* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ , ...]]] **)**
 
-여기서
+각 항목이 나타내는 의미는 다음과 같습니다.
 
 - **(** 는 데이터 바인딩 블록의 시작을 표시합니다.
 
 - **\[***bindtype* **]** 은 다음과 같은 대/소문자를 구분 하지 않는 문자열 중 하나입니다.
 
-  - ** \[db_column]** 각 멤버 변수를 행 집합의 열에 바인딩합니다.
+  - ** \[ db_column]** 는 각 멤버 변수를 행 집합의 열에 바인딩합니다.
 
-  - ** \[bindto]** ** \[db_column**와 동일 합니다.
+  - ** \[ bindto]** ( ** \[ db_column]**)와 동일 합니다.
 
-  - ** \[in]** 멤버 변수를 입력 매개 변수로 바인딩합니다.
+  - ** \[ in]** 멤버 변수를 입력 매개 변수로 바인딩합니다.
 
-  - ** \[out]** 멤버 변수를 출력 매개 변수로 바인딩합니다.
+  - ** \[ out]** 멤버 변수를 출력 매개 변수로 바인딩합니다.
 
-  - in, out] ** \[** 멤버 변수를 입/출력 매개 변수로 바인딩합니다.
+  - ** \[ in, out]** 은 멤버 변수를 입/출력 매개 변수로 바인딩합니다.
 
 - *szVarX*, *nVarX*는 현재 범위 내에서 멤버 변수를 확인합니다.
 
@@ -242,7 +242,7 @@ int main() {
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**, 멤버, 메서드, 로컬|
+|**적용 대상**|**`class`**, **`struct`** , 멤버, 메서드, 로컬|
 |**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
@@ -252,4 +252,4 @@ int main() {
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 소비자 특성](ole-db-consumer-attributes.md)<br/>
-[독립 실행형 특성](stand-alone-attributes.md)
+[독립형 특성](stand-alone-attributes.md)

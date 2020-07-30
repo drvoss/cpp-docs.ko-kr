@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225178"
 ---
 # <a name="resource-compiler-error-rw2002"></a>리소스 컴파일러 오류 RW2002
 
@@ -21,9 +21,9 @@ ms.locfileid: "80190692"
 
 1. **액셀러레이터 키 형식이 필요 합니다 (ASCII 또는 VIRTKEY).**
 
-   `type` ACCELERATORS **문의** 필드는 ASCII 또는 VIRTKEY 값을 포함해야 합니다.
+   **액셀러레이터** 문의 *type* 필드에는 ASCII 또는 VIRTKEY 값이 포함 되어야 합니다.
 
-1. **액셀러레이터 키 테이블에 BEGIN이 필요 합니다.**
+1. **액셀러레이터 키 테이블에 BEGIN이 필요합니다.**
 
    **BEGIN** 키워드가 **ACCELERATORS** 키워드 바로 뒤에 와야 합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "80190692"
 
    **BEGIN** 키워드는 **DIALOG** 키워드 바로 뒤에와 야 합니다.
 
-1. **메뉴에 BEGIN이 필요 합니다.**
+1. **메뉴에 BEGIN이 필요합니다.**
 
    **BEGIN** 키워드가 **MENU** 키워드 바로 뒤에 와야 합니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "80190692"
 
 1. **제어 문자가 범위 [^ A-^ Z]를 벗어났습니다.**
 
-   **ACCELERATORS** 문의 제어 문자가 잘못되었습니다. 캐럿( **^** ) 뒤의 문자는 A에서 Z(포함) 사이여야 합니다.
+   **ACCELERATORS** 문의 제어 문자가 잘못되었습니다. 캐럿 () 다음에 나오는 문자는 **^** 와 Z (포함) 사이 여야 합니다.
 
 1. **빈 메뉴는 허용 되지 않습니다.**
 
@@ -59,17 +59,17 @@ ms.locfileid: "80190692"
 
    **End** 키워드는 **DIALOG** 문의 끝에 있어야 합니다. 앞의 문에서 왼쪽에 열려 있는 따옴표가 없는지 확인 합니다.
 
-1. **메뉴에 END가 필요 합니다.**
+1. **메뉴에 END가 필요합니다.**
 
    **MENU** 문의 끝에 **END** 키워드가 와야 합니다. 열려 있는 따옴표나 일치하지 않는 **BEGIN** 및 **END** 문 쌍이 없는지 확인합니다.
 
 1. **액셀러레이터 키 테이블에 쉼표가 필요 합니다.**
 
-   리소스 컴파일러에서는 `event` ACCELERATORS *문의* 및 **idvalue** 필드 사이에 쉼표가 있어야 합니다.
+   리소스 컴파일러는 **액셀러레이터** 문의 *이벤트* 와 *idvalue* 필드 사이에 쉼표가 있어야 합니다.
 
 1. **컨트롤 클래스 이름이 필요 합니다.**
 
-   **DIALOG** 문에서 **CONTROL** 문의 `class` 필드는 BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC 또는 사용자 정의 형식 중 하나 여야 합니다. 클래스의 철자가 정확한 지 확인 합니다.
+   **DIALOG** 문에서 **CONTROL** 문의 *CLASS* 필드는 BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC 또는 사용자 정의 형식 중 하나 여야 합니다. 클래스의 철자가 정확한 지 확인 합니다.
 
 1. **글꼴 이름이 필요 합니다.**
 
@@ -85,7 +85,7 @@ ms.locfileid: "80190692"
 
 1. **숫자 명령 값이 필요 합니다.**
 
-   리소스 컴파일러에서 **액셀러레이터 키** 에 숫자 *idvalue* 필드가 필요 합니다. `#define` 상수를 사용 하 여 값을 지정 했는지와 상수의 철자가 정확한 지 확인 합니다.
+   리소스 컴파일러에서 **액셀러레이터 키** 에 숫자 *idvalue* 필드가 필요 합니다. 상수를 사용 하 여 값을 `#define` 지정 했는지와 상수의 철자가 정확한 지 확인 합니다.
 
 1. **문자열 테이블에 숫자 상수가 필요 합니다.**
 
@@ -105,19 +105,19 @@ ms.locfileid: "80190692"
 
 1. **문자열 또는 상수 액셀러레이터 키 명령이 필요 합니다.**
 
-   리소스 컴파일러에서 액셀러레이터 키에 설정되는 키 종류를 확인할 수 없습니다. `event` ACCELERATORS **문의** 필드가 잘못되었을 수 있습니다.
+   리소스 컴파일러에서 액셀러레이터 키에 설정되는 키 종류를 확인할 수 없습니다. **액셀러레이터** 문의 *이벤트* 필드가 잘못 되었을 수 있습니다.
 
 1. **ID에 숫자가 필요 합니다.**
 
-   **DIALOG** 문에서 control 문의 `id` 필드에는 숫자가 필요 합니다. 컨트롤 ID에 대해 숫자나 `#define` 문이 있는지 확인 합니다.
+   **DIALOG** 문에서 control 문의 *id* 필드에는 숫자가 필요 합니다. `#define`컨트롤 ID에 대해 숫자나 문이 있는지 확인 합니다.
 
 1. **대화 상자 클래스에 따옴표 붙은 문자열이 필요 합니다.**
 
-   `class` DIALOG **문의 CLASS 옵션에 있는** 필드는 큰따옴표로 묶인 정수 또는 문자열이어야 합니다.
+   **DIALOG** 문의 class 옵션에 대 한 *class* 필드는 큰따옴표로 묶인 정수 또는 문자열 이어야 합니다.
 
 1. **대화 상자 제목에 따옴표 붙은 문자열이 필요 합니다.**
 
-   `captiontext` DIALOG **문의 CAPTION 옵션에 있는** 필드는 큰따옴표로 묶인 ASCII 문자열이어야 합니다.
+   **DIALOG** 문의 CAPTION 옵션에 있는 *captiontext* 필드는 큰따옴표로 묶인 ASCII 문자열 이어야 합니다.
 
 1. **파일을 찾을 수 없음: 파일 이름**
 
@@ -125,15 +125,15 @@ ms.locfileid: "80190692"
 
 1. **글꼴 이름은 서 수 여야 합니다.**
 
-   FONT 문의 *font 문의 pointsize* 필드는 문자열이 아닌 정수 여야 합니다.
+   *FONT* 문의 pointsize 필드는 문자열이 아닌 정수여야 합니다.
 
 1. **잘못 된 액셀러레이터**
 
-   `event` ACCELERATORS **문의** 필드가 인식되지 않았거나 3자 이상입니다.
+   **액셀러레이터** 문의 *이벤트* 필드가 인식 되지 않거나 길이가 2 자 보다 긴 경우
 
 1. **잘못 된 액셀러레이터 유형 (ASCII 또는 VIRTKEY)**
 
-   `type` ACCELERATORS **문의** 필드는 ASCII 또는 VIRTKEY 값을 포함해야 합니다.
+   **액셀러레이터** 문의 *type* 필드에는 ASCII 또는 VIRTKEY 값이 포함 되어야 합니다.
 
 1. **잘못 된 제어 문자**
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221122"
 ---
 # <a name="compiler-error-c2664"></a>컴파일러 오류 C 2664
 
 'function' : 인수 n을(를) 'type1'에서 'type2'(으)로 변환할 수 없습니다.
 
-이 매개 변수 변환 문제는 클래스의 인스턴스가 생성되고 `explicit` 키워드로 표시된 생성자에 대해 암시적 변환을 시도할 경우에 발생할 수 있습니다. 명시적 변환에 대 한 자세한 내용은 [사용자 정의 형식 변환](../../cpp/user-defined-type-conversions-cpp.md)을 참조 하세요.
+이 매개 변수 변환 문제는 클래스의 인스턴스를 만들고 키워드로 표시 된 생성자에 대해 암시적 변환을 시도 하는 경우에 발생할 수 있습니다 **`explicit`** . 명시적 변환에 대 한 자세한 내용은 [사용자 정의 형식 변환](../../cpp/user-defined-type-conversions-cpp.md)을 참조 하세요.
 
-개체에 대한 참조를 매개 변수로 사용하는 함수에 임시 개체를 전달하는 경우 해당 참조는 `const` 참조여야 합니다.
+개체에 대 한 참조를 매개 변수로 사용 하는 함수에 임시 개체가 전달 되는 경우 해당 참조는 참조 여야 합니다 **`const`** .
 
 함수가 정해진 형식이 아닌 매개 변수를 통해 전달되면 적절한 생성자를 사용하여 임시 개체가 생성됩니다. 그런 다음 이 임시 개체가 함수에 전달됩니다. 이러한 경우 임시 개체는 참조를 초기화하는 데 사용됩니다. 이전 버전의 언어에서 모든 참조는 임시 개체에 의해 초기화될 수 있었습니다.
 
@@ -31,7 +31,7 @@ C2664를 해결하려면
 
 C2664는 클래스에서 기본 클래스 중 하나의 멤버를 숨기는 경우에도 발생할 수 있습니다.
 
-자세한 내용은 [방법: System:: String을 wchar_t * 또는 char\*으로 변환 ](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)을 참조 하세요.
+자세한 내용은 [방법: System:: String을 wchar_t * 또는 char \* 로 변환](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>예제
 
-컴파일러는 C++ 표준 요구 사항에 따라 `const`를 적용합니다. 이 샘플은 C2664를 생성합니다.
+컴파일러는를 적용 하기 위한 c + + 표준 요구 사항을 적용 합니다 **`const`** . 이 샘플은 C2664를 생성합니다.
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-C2664는 Visual C++ 6.0에서 이후 버전으로 코드를 이식할 때 `wchar_t`를 사용해도 발생합니다. Visual C++ 6.0 및 이전 버전에서는 `wchar_t`가 `typedef`용 `unsigned short`였기 때문에 해당 형식으로 암시적으로 변환할 수 있었습니다. Visual C++ 6.0 이후 버전에서는 C++ 표준에 지정된 것과 같이 `wchar_t`가 고유 기본 제공 형식이고 더 이상 `unsigned short`로 암시적으로 변환할 수 없습니다. [/Zc: wchar_t (Wchar_t 네이티브 형식)을](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)참조 하세요.
+C 2664는 **`wchar_t`** Visual C++ 6.0에서 이후 버전으로 코드를 이식할 때를 사용 하는 경우에도 발생 합니다. Visual C++ 6.0 이전 버전에서는가 **`wchar_t`** **`typedef`** 에 대 한 **`unsigned short`** 이므로 해당 형식으로 암시적으로 변환할 수 있었습니다. Visual C++ 6.0 후에 **`wchar_t`** 는 c + + 표준에 지정 된 대로 자체 기본 제공 형식이 며는 더 이상로 암시적으로 변환할 수 없습니다 **`unsigned short`** . [/Zc: wchar_t (Wchar_t 네이티브 형식)을](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)참조 하세요.
 
 ## <a name="example"></a>예제
 

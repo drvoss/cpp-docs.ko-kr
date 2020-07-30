@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218626"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -76,7 +76,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 **localtime** 는 **_localtime64**로 계산 되는 인라인 함수 이며 **time_t** 는 **__time64_t**와 같습니다. 컴파일러가 **time_t** 이전 32 비트 **time_t**으로 해석 해야 하는 경우 **_USE_32BIT_TIME_T**를 정의할 수 있습니다. 이렇게 하면 **localtime** 이 **_localtime32**로 평가 됩니다. 2038년 1월 18일 이후에는 애플리케이션에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.
 
-구조체 형식 [tm](../../c-runtime-library/standard-types.md) 의 필드에는 각각 **int**인 다음 값이 저장 됩니다.
+구조체 형식 [tm](../../c-runtime-library/standard-types.md) 의 필드는 다음 값을 저장 하며, 각 값은입니다 **`int`** .
 
 |필드|설명|
 |-|-|
@@ -94,7 +94,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="remarks"></a>설명
 
-**Localtime** 함수는 [time_t](../../c-runtime-library/standard-types.md) 값으로 저장 된 시간을 변환 하 고 결과를 [tm](../../c-runtime-library/standard-types.md)형식의 구조에 저장 합니다. **Long** 값 *sourcetime* 은 자정 (00:00:00), 1970 년 1 월 1 일 자정 이후 경과 된 시간 (초)을 나타냅니다. 이 값은 일반적으로 [time](time-time32-time64.md) 함수에서 가져옵니다.
+**Localtime** 함수는 [time_t](../../c-runtime-library/standard-types.md) 값으로 저장 된 시간을 변환 하 고 결과를 [tm](../../c-runtime-library/standard-types.md)형식의 구조에 저장 합니다. **`long`** *Sourcetime* 값은 자정 (00:00:00), 1970 년 1 월 1 일 자정 이후 경과 된 시간 (초)을 나타냅니다. 이 값은 일반적으로 [time](time-time32-time64.md) 함수에서 가져옵니다.
 
 [Gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)및 **localtime** 의 32 비트 및 64 비트 버전은 모두 변환에 대해 스레드 당 단일 **tm** 구조를 사용 합니다. 이러한 루틴 중 하나를 호출할 때마다 이전 호출의 결과가 삭제됩니다.
 
@@ -111,7 +111,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 |루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<ctime> 또는 \<시간>|
+|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<ctime> 또는 \<time.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -158,7 +158,7 @@ int main( void )
 Tue Feb 12 10:05:58 AM
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

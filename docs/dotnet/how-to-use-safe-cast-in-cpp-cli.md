@@ -1,23 +1,23 @@
 ---
-title: '방법: safe_cast를 사용 하 여 C++/CLI'
+title: '방법: C++/CLI에서 safe_cast 사용'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ac19871bcdc5162b959f6d60103387551ac2a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225659"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>방법: safe_cast를 사용 하 여 C++/CLI
+# <a name="how-to-use-safe_cast-in-ccli"></a>방법: C++/CLI에서 safe_cast 사용
 
-이 문서에서 safe_cast를 사용 하는 방법을 보여 줍니다 C++/CLI 응용 프로그램입니다. Safe_cast에 대 한 내용은 C++/CX, 참조 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)합니다.
+이 문서에서는 c + +/CLI 응용 프로그램에서 safe_cast를 사용 하는 방법을 보여 줍니다. C + +/CX의 safe_cast에 대 한 자세한 내용은 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)을 참조 하세요.
 
-## <a name="upcasting"></a>업 캐스트
+## <a name="upcasting"></a>업캐스팅
 
-업 캐스트는 기본 클래스 중 하나에 파생된 형식에서 캐스팅입니다. 이 캐스트는 안전 하며 명시적 캐스트 표기법 필요 하지 않습니다. 다음 샘플에는 업 캐스트를 수행 하는 방법을 보여 줍니다 `safe_cast` 및 없이 합니다.
+업 캐스트는 파생 된 형식에서 기본 클래스 중 하나로 캐스팅 됩니다. 이 캐스팅은 안전 하며 명시적인 캐스트 표기법이 필요 하지 않습니다. 다음 샘플에서는 업 캐스트를 사용 하거나 사용 하지 않고 수행 하는 방법을 보여 줍니다 `safe_cast` .
 
 ```cpp
 // safe_upcast.cpp
@@ -66,9 +66,9 @@ in C::Test
 in B::Test2
 ```
 
-## <a name="downcasting"></a>다운 캐스팅
+## <a name="downcasting"></a>좋기는
 
-다운 캐스트는 기본 클래스에서 파생 된 클래스에 기본 클래스에서 캐스트입니다.  다운 캐스트는 런타임에 주소가 지정 된 개체는 파생된 클래스 개체를 처리 하는 경우에 안전 합니다.  와 달리 `static_cast`, `safe_cast` 동적 검사를 수행 하 고 throw <xref:System.InvalidCastException> 변환에 실패 하는 경우.
+다운 캐스트는 기본 클래스에서 기본 클래스에서 파생 된 클래스로의 캐스트입니다.  다운 캐스트는 런타임에 처리 된 개체가 실제로 파생 클래스 개체의 주소를 지정 하는 경우에만 안전 합니다.  와 달리는 **`static_cast`** `safe_cast` 동적 검사를 수행 하 고 <xref:System.InvalidCastException> 변환이 실패 하는 경우을 throw 합니다.
 
 ```cpp
 // safe_downcast.cpp
@@ -119,9 +119,9 @@ in C::Test()
 in B::Test2()
 ```
 
-## <a name="safecast-with-user-defined-conversions"></a>사용자 정의 변환 통한 safe_cast
+## <a name="safe_cast-with-user-defined-conversions"></a>사용자 정의 변환으로 safe_cast
 
-다음 샘플을 사용 하는 방법을 보여 줍니다 `safe_cast` 사용자 정의 변환을 호출 합니다.
+다음 샘플에서는를 사용 하 여 `safe_cast` 사용자 정의 변환을 호출할 수 있는 방법을 보여 줍니다.
 
 ```cpp
 // safe_cast_udc.cpp
@@ -174,13 +174,13 @@ in operator R^(V& v
 in operator V^(R^ r)
 ```
 
-## <a name="safecast-and-boxing-operations"></a>safe_cast 및 boxing 작업
+## <a name="safe_cast-and-boxing-operations"></a>safe_cast 및 boxing 작업
 
 ### <a name="boxing"></a>boxing
 
-Boxing은 컴파일러 삽입, 사용자 정의 변환으로 정의 됩니다.  따라서 사용할 수 있습니다 `safe_cast` CLR 힙에 값 상자에 있습니다.
+Boxing은 컴파일러가 삽입 한 사용자 정의 변환으로 정의 됩니다.  따라서를 사용 하 여 `safe_cast` CLR 힙의 값을 box 할 수 있습니다.
 
-다음 샘플에서는 간단 하 고 사용자 정의 값 형식과 boxing을 보여 줍니다.  `safe_cast` 상자 값 형식 변수는 네이티브 스택에 있도록 가비지 수집 힙에 변수에 할당할 수 있습니다.
+다음 샘플에서는 단순 및 사용자 정의 값 형식을 사용 하 여 boxing을 보여 줍니다.  `safe_cast`가비지 수집 힙의 변수에 할당 될 수 있도록 네이티브 스택에 있는 값 형식 변수를 boxing 합니다.
 
 ```cpp
 // safe_cast_boxing.cpp
@@ -206,7 +206,7 @@ int main() {
 }
 ```
 
-다음 샘플에서 사용자 정의 변환을 통해 boxing의 우선 순위를 보여 줍니다는 `safe_cast` 작업 합니다.
+다음 샘플에서는 작업의 사용자 정의 변환 보다 boxing이 우선 함을 보여 줍니다 `safe_cast` .
 
 ```cpp
 // safe_cast_boxing_2.cpp
@@ -241,9 +241,9 @@ int main() {
 
 ### <a name="unboxing"></a>unboxing
 
-Unboxing 컴파일러 삽입, 사용자 정의 변환이 정의 됩니다.  따라서 사용할 수 있습니다 `safe_cast` unbox CLR 힙에 값입니다.
+Unboxing은 컴파일러에 삽입 된 사용자 정의 변환으로 정의 됩니다.  따라서를 사용 하 여 `safe_cast` CLR 힙의 값을 unbox 수 있습니다.
 
-Boxing을 달리 unboxing 해야 하지만 사용자 정의 변환, unboxing은 명시적-, 의해 수행 되어야 합니다는 `static_cast`C 스타일 캐스팅, 또는 `safe_cast`; unboxing 암시적 수행할 수 없는 합니다.
+Unboxing은 사용자 정의 변환 이지만 boxing과 달리 unboxing은 명시적 이어야 합니다. 즉, C 스타일 캐스트 또는에서 수행 해야 합니다. **`static_cast`** `safe_cast` unboxing은 암시적으로 수행할 수 없습니다.
 
 ```cpp
 // safe_cast_unboxing.cpp
@@ -254,7 +254,7 @@ int main() {
 }
 ```
 
-다음 샘플에서는 값 형식 및 기본 형식을 사용 하 여 unboxing를 보여 줍니다.
+다음 샘플에서는 값 형식 및 기본 형식에 대 한 unboxing을 보여 줍니다.
 
 ```cpp
 // safe_cast_unboxing_2.cpp
@@ -300,9 +300,9 @@ int main() {
 }
 ```
 
-## <a name="safecast-and-generic-types"></a>safe_cast 및 제네릭 형식
+## <a name="safe_cast-and-generic-types"></a>safe_cast 및 제네릭 형식
 
-다음 샘플을 사용 하는 방법을 보여 줍니다 `safe_cast` 제네릭 형식으로 다운 캐스팅을 수행 하 합니다.
+다음 샘플에서는를 사용 하 여 `safe_cast` 제네릭 형식으로 다운 캐스트를 수행 하는 방법을 보여 줍니다.
 
 ```cpp
 // safe_cast_generic_types.cpp
@@ -329,6 +329,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)

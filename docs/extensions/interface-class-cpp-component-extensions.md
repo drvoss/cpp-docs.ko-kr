@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172167"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228702"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>인터페이스 클래스(C++/CLI 및 C++/CX)
 
@@ -32,16 +32,16 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>매개 변수
 
 *interface_access*<br/>
-어셈블리 외부에서 인터페이스의 접근성입니다.  가능한 값은 **public** 및 **private**입니다.  **private**이 기본값입니다. 중첩된 인터페이스에는 *interface_access* 지정자를 사용할 수 없습니다.
+어셈블리 외부에서 인터페이스의 접근성입니다.  가능한 값은 **`public`** 및 **`private`** 입니다.  **`private`** 가 기본값입니다. 중첩된 인터페이스에는 *interface_access* 지정자를 사용할 수 없습니다.
 
 *name*<br/>
 인터페이스의 이름입니다.
 
 *inherit_access*<br/>
-*base_interface*의 접근성입니다.  기본 인터페이스에 허용되는 접근성은 **public**(기본값)뿐입니다.
+*base_interface*의 접근성입니다.  기본 인터페이스에 대해 유일 하 게 허용 되는 액세스 가능성은 **`public`** (기본값)입니다.
 
 *base_interface*<br/>
-(선택 사항) 인터페이스 ‘이름’의 기본 인터페이스입니다.
+(선택 사항) 인터페이스 ‘이름’의 기본 인터페이스입니다.**
 
 ### <a name="remarks"></a>설명
 
@@ -51,7 +51,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 인터페이스는 클래스를 구현할 수 있는 방법을 정의합니다. 인터페이스는 클래스가 아니며, 클래스는 인터페이스를 구현할 수만 있습니다. 클래스가 인터페이스에서 선언된 함수를 정의하는 경우 함수가 재정의되지 않고 구현됩니다. 따라서 이름 조회는 인터페이스 멤버를 포함하지 않습니다.
 
-인터페이스에서 파생된 클래스 또는 구조체는 인터페이스의 모든 멤버를 구현해야 합니다. 인터페이스 ‘이름’을 구현하는 경우  *목록의 인터페이스도 구현해야 합니다.* `base_interface`
+인터페이스에서 파생된 클래스 또는 구조체는 인터페이스의 모든 멤버를 구현해야 합니다. 인터페이스 ‘이름’을 구현하는 경우 `base_interface` 목록의 인터페이스도 구현해야 합니다.**
 
 자세한 내용은 다음을 참조하세요.
 
@@ -63,7 +63,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 컴파일 시간에 `__is_interface_class(type)`을 사용하여 형식이 인터페이스인지 여부를 검색할 수 있습니다. 자세한 내용은 [형식 특성에 대한 컴파일러 지원](compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하세요.
 
-개발 환경에서 `interface class` 등의 키워드를 강조 표시하고 F1 키를 누르면 이 키워드에 대한 F1 도움말을 볼 수 있습니다.
+개발 환경에서는 키워드 (예:)를 강조 표시 하 고 F1 키를 눌러 이러한 키워드에 대 한 F1 도움말을 가져올 수 있습니다 **`interface class`** .
 
 ## <a name="windows-runtime"></a>Windows 런타임
 
@@ -85,7 +85,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 다음 코드 예제에서는 인터페이스를 통해 클록 함수의 동작을 정의할 수 있는 방법을 보여 줍니다.
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET 및 UWP용 구성 요소 확장](component-extensions-for-runtime-platforms.md)
+[.NET 및 UWP 용 구성 요소 확장](component-extensions-for-runtime-platforms.md)

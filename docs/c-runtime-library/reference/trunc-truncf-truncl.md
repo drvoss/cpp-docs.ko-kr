@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946000"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232393"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -62,23 +62,23 @@ float trunc( float x ); //C++ only
 *x*<br/>
 자를 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 성공 하면 0으로 반올림 되 고 *x*의 정수 값을 반환 합니다.
 
 그렇지 않으면 다음 중 하나를 반환할 수 있습니다.
 
-|문제점|반환|
+|문제|반환 값|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* =  ±0|x|
+|*x* = ± INFINITY|x|
+|*x* = ± 0|x|
 |*x* = NaN|NaN|
 
 오류는 [_matherr](matherr.md)에 지정된 대로 보고됩니다.
 
 ## <a name="remarks"></a>설명
 
-는 C++ 오버 로드를 허용 하기 때문에 **float** 및 **long** **double** 형식을 사용 하 고 반환 하는 **trunc** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **trunc** 은 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 형식을 사용 하 고 반환 하는 **trunc** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **trunc** 는 항상를 사용 하 고 반환 **`double`** 합니다.
 
 가장 큰 부동 소수점 값은 정확한 정수이므로 이 함수는 자체적으로는 오버플로되지 않습니다. 그러나 값을 정수값으로 반환하여 함수가 오버플로되도록 할 수 있습니다.
 
@@ -86,13 +86,13 @@ float trunc( float x ); //C++ only
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

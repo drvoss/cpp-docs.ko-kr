@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: a12900f3145f0dde797fe56c893442e1632cc01c
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213933"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP 앱 용 c + +로 비동기 작업 만들기
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404514"
 
 - 취소 토큰을 사용하여 내부 비동기 작업이 취소될 수 있도록 합니다.
 
-- `create_async` 함수의 동작은 이 함수에 전달된 작업 함수의 반환 형식에 따라 달라집니다. 작업( `task<T>` 또는 `task<void>`)을 반환하는 작업 함수는 `create_async`를 호출한 컨텍스트에서 동기적으로 실행됩니다. `T` 또는 `void` 를 반환하는 작업 함수는 임의의 컨텍스트에서 실행됩니다.
+- `create_async` 함수의 동작은 이 함수에 전달된 작업 함수의 반환 형식에 따라 달라집니다. 작업( `task<T>` 또는 `task<void>`)을 반환하는 작업 함수는 `create_async`를 호출한 컨텍스트에서 동기적으로 실행됩니다. `T`임의의 컨텍스트에서 반환 하거나 실행 하는 작업 함수입니다 **`void`** .
 
 - [concurrency::task::then](reference/task-class.md#then) 메서드를 사용하여 차례로 실행되는 작업의 체인을 만들 수 있습니다. UWP 앱에서 작업의 연속에 대 한 기본 컨텍스트는 해당 작업이 생성 된 방식에 따라 달라 집니다. 비동기 동작을 작업 생성자에 전달하거나 비동기 동작을 반환하는 람다 식을 전달하여 작업을 만든 경우 해당 작업의 모든 연속에 대한 기본 컨텍스트는 현재 컨텍스트입니다. 태스크가 비동기 작업에서 생성 되지 않은 경우에는 기본적으로 작업의 연속에 대해 임의 컨텍스트가 사용 됩니다. 기본 컨텍스트는 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 클래스를 사용하여 재정의할 수 있습니다.
 
@@ -63,7 +63,7 @@ Windows 런타임를 사용 하 여 다양 한 프로그래밍 언어의 가장 
 [Windows:: Foundation:: IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 결과를 반환하고 진행률을 보고하는 비동기 작업을 나타냅니다.
 
-여기서 *동작(action)* 은 비동기 작업에서 값을 생성하지 않음을 의미하고( `void`를 반환하는 함수와 유사함), *작업(operation)* 은 비동기 작업에서 값을 생성함을 의미합니다. *진행률(progress)* 은 작업에서 진행률 메시지를 호출자에게 보고할 수 있음을 의미합니다. JavaScript, .NET Framework 및 Visual C++에서는 ABI 경계를 넘어 사용할 수 있도록 이러한 인터페이스의 인스턴스를 만드는 방법을 자체적으로 제공합니다. Visual C++의 경우 PPL에서 [concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) 함수를 제공합니다. 이 함수는 작업의 완료를 나타내는 비동기 동작 또는 작업 Windows 런타임를 만듭니다. `create_async`함수는 작업 함수 (일반적으로 람다 식)를 사용 하 여 개체를 내부적으로 만들고 `task` 4 개의 비동기 Windows 런타임 인터페이스 중 하나에 해당 작업을 래핑합니다.
+*동작* 의 개념은 비동기 작업에서 값을 생성 하지 않음을 의미 합니다 (를 반환 하는 함수 라고 생각 **`void`** ). *작업(operation)* 은 비동기 작업에서 값을 생성함을 의미합니다. *진행률(progress)* 은 작업에서 진행률 메시지를 호출자에게 보고할 수 있음을 의미합니다. JavaScript, .NET Framework 및 Visual C++에서는 ABI 경계를 넘어 사용할 수 있도록 이러한 인터페이스의 인스턴스를 만드는 방법을 자체적으로 제공합니다. Visual C++의 경우 PPL에서 [concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) 함수를 제공합니다. 이 함수는 작업의 완료를 나타내는 비동기 동작 또는 작업 Windows 런타임를 만듭니다. `create_async`함수는 작업 함수 (일반적으로 람다 식)를 사용 하 여 개체를 내부적으로 만들고 `task` 4 개의 비동기 Windows 런타임 인터페이스 중 하나에 해당 작업을 래핑합니다.
 
 > [!NOTE]
 > `create_async`다른 언어 또는 다른 Windows 런타임 구성 요소에서 액세스할 수 있는 기능을 만들어야 하는 경우에만를 사용 합니다. 작업이 동일한 구성 요소에서 C++ 코드를 통해 생성되고 사용되는 것을 알고 있는 경우에는 `task` 클래스를 직접 사용합니다.
@@ -79,8 +79,8 @@ Windows 런타임를 사용 하 여 다양 한 프로그래밍 언어의 가장 
 
 |이 Windows 런타임 인터페이스를 만들려면|`create_async`|암시적 취소 토큰을 사용하기 위해 작업 함수에 전달할 매개 변수 형식|명시적 취소 토큰을 사용하기 위해 작업 함수에 전달할 매개 변수 형식|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|`void` 또는 `task<void>`|(없음)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|`void` 또는 `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** 디스크나`task<void>`|(없음)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** 디스크나`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` 또는 `task<T>`|(없음)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` 또는 `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -92,7 +92,7 @@ Windows 런타임를 사용 하 여 다양 한 프로그래밍 언어의 가장 
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>예: c + + Windows 런타임 구성 요소 만들기 및 C에서 사용\#
 
-XAML 및 c #을 사용 하 여 계산 집약적인 작업을 수행 하는 UI 및 c + + Windows 런타임 구성 요소를 정의 하는 앱을 고려 합니다. 이 예에서 C++ 구성 요소는 지정된 범위에서 소수인 수를 계산합니다. 네 Windows 런타임 가지 비동기 작업 인터페이스 간의 차이점을 보여 주기 위해 Visual Studio에서 **빈 솔루션** 을 만들고 이름을로 지정 하 여 시작 `Primes` 합니다. 그런 다음 솔루션에 **Windows 런타임 구성 요소** 프로젝트를 추가하고 이름을 `PrimesLibrary`로 지정합니다. 생성된 C++ 헤더 파일에 다음 코드를 추가합니다(이 예에서는 Class1.h의 이름을 Primes.h로 변경). 각 `public` 메서드는 네 가지 비동기 인터페이스 중 하나를 정의합니다. 값을 반환 하는 메서드는 [Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1) 개체를 반환 합니다. 진행률을 보고하는 메서드는 완료된 전체 작업의 백분율을 정의하는 `double` 값을 생성합니다.
+XAML 및 c #을 사용 하 여 계산 집약적인 작업을 수행 하는 UI 및 c + + Windows 런타임 구성 요소를 정의 하는 앱을 고려 합니다. 이 예에서 C++ 구성 요소는 지정된 범위에서 소수인 수를 계산합니다. 네 Windows 런타임 가지 비동기 작업 인터페이스 간의 차이점을 보여 주기 위해 Visual Studio에서 **빈 솔루션** 을 만들고 이름을로 지정 하 여 시작 `Primes` 합니다. 그런 다음 솔루션에 **Windows 런타임 구성 요소** 프로젝트를 추가하고 이름을 `PrimesLibrary`로 지정합니다. 생성된 C++ 헤더 파일에 다음 코드를 추가합니다(이 예에서는 Class1.h의 이름을 Primes.h로 변경). 각 **`public`** 메서드는 네 가지 비동기 인터페이스 중 하나를 정의 합니다. 값을 반환 하는 메서드는 [Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1) 개체를 반환 합니다. 진행률을 보고 하는 메서드는 **`double`** 완료 된 전체 작업의 백분율을 정의 하는 값을 생성 합니다.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -169,7 +169,7 @@ MainPage.xaml에서 `Grid` 요소를 업데이트하여 `ProgressRing` 요소와
 
 [!code-cpp[concrt-windowsstore-commonwords#3](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_8.h)]
 
-MainPage.cpp에 다음 `using` 문을 추가합니다.
+다음 **`using`** 문을 MainPage .cpp에 추가 합니다.
 
 [!code-cpp[concrt-windowsstore-commonwords#4](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_9.cpp)]
 

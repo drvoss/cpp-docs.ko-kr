@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229391"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -72,7 +72,7 @@ errno_t _wsopen_s(
 *pfh*<br/>
 파일 핸들 또는 오류 발생 시 -1
 
-*이름도*<br/>
+*filename*<br/>
 파일 이름.
 
 *oflag*<br/>
@@ -114,7 +114,7 @@ errno_t _wsopen_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-정수 식 *oflag* 는 fcntl. h>에 \<정의 된 하나 이상의 매니페스트 상수를 결합 하 여 구성 됩니다. 두 개 이상의 상수가 인수를 사용 하 여 *인수를 만들*경우 비트 or 연산자 ( **&#124;** )와 결합 됩니다.
+정수 *식의 값은에* 정의 된 하나 이상의 매니페스트 상수를 결합 하 여 구성 됩니다 \<fcntl.h> . 두 개 이상의 상수가 인수를 사용 하 여 *인수를 만들*경우 비트 or 연산자 ( **&#124;** )와 결합 됩니다.
 
 |*oflag* 상수|동작|
 |-|-|
@@ -138,11 +138,11 @@ errno_t _wsopen_s(
 
 파일 액세스 모드를 지정 하려면 **_O_RDONLY**, **_O_RDWR**또는 **_O_WRONLY**중 하나를 지정 해야 합니다. 액세스 모드의 기본값은 없습니다.
 
-**_O_WTEXT**, **_O_U8TEXT**또는 **_O_U16TEXT**를 사용 하 여 파일을 유니코드 모드에서 열면 입력 함수는 파일에서 읽은 데이터를 형식 **wchar_t**로 저장 된 utf-16 데이터로 변환 합니다. 유니코드 모드에서 연 파일에 쓰는 함수는 u t f-16 데이터를 포함 하는 버퍼가 **wchar_t**형식으로 저장 되어야 합니다. 이 파일이 UTF-8로 인코딩되면 UTF-16 데이터는 쓸 때 UTF-8로 변환되고 이 파일의 UTF-8로 인코딩된 내용은 읽을 때 UTF-16으로 변환됩니다. 유니코드 모드에서 홀수 바이트를 읽거나 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다. 프로그램에 UTF-8로 저장된 데이터를 읽거나 쓰려는 경우 유니코드 모드 대신 텍스트 또는 이진 파일 모드를 사용합니다. 필수 인코딩은 사용자가 변환해야 합니다.
+**_O_WTEXT**, **_O_U8TEXT**또는 **_O_U16TEXT**를 사용 하 여 파일을 유니코드 모드에서 열면 입력 함수는 파일에서 읽은 데이터를 형식으로 저장 된 utf-16 데이터로 변환 합니다 **`wchar_t`** . 유니코드 모드에서 연 파일에 쓰는 함수는 UTF-16 데이터가 포함 된 버퍼가 형식으로 저장 되어야 **`wchar_t`** 합니다. 이 파일이 UTF-8로 인코딩되면 UTF-16 데이터는 쓸 때 UTF-8로 변환되고 이 파일의 UTF-8로 인코딩된 내용은 읽을 때 UTF-16으로 변환됩니다. 유니코드 모드에서 홀수 바이트를 읽거나 쓰려고 하면 매개 변수 유효성 검사 오류가 발생합니다. 프로그램에 UTF-8로 저장된 데이터를 읽거나 쓰려는 경우 유니코드 모드 대신 텍스트 또는 이진 파일 모드를 사용합니다. 필수 인코딩은 사용자가 변환해야 합니다.
 
- |  **_O_WRONLY****_O_APPEND** (추가 모드) 및 **_O_WTEXT**, **_O_U16TEXT**또는 **_O_U8TEXT**를 사용 하 여 **_sopen_s** 를 호출 하는 경우 먼저 파일을 열고, BOM을 읽고, 쓰기 전용으로 다시 열 려 합니다. 읽고 쓰기 위해 파일을 여는데 실패하면 쓰기 위해서만 파일을 열고 유니코드 모드 설정에 기본값을 사용합니다.
+**_sopen_s** **_O_WRONLY**  |  **_O_APPEND** (추가 모드) 및 **_O_WTEXT**, **_O_U16TEXT**또는 **_O_U8TEXT**를 사용 하 여 _sopen_s를 호출 하는 경우 먼저 파일을 열고, BOM을 읽고, 쓰기 전용으로 다시 열 려 합니다. 읽고 쓰기 위해 파일을 여는데 실패하면 쓰기 위해서만 파일을 열고 유니코드 모드 설정에 기본값을 사용합니다.
 
-*Shflag* 인수는 다음 매니페스트 상수 중 하나로 구성 된 상수 식입니다 .이 상수는 share. h> \<에 정의 되어 있습니다.
+*Shflag* 인수는에 정의 된 다음 매니페스트 상수 중 하나로 구성 된 상수 식입니다 \<share.h> .
 
 |*shflag* 상수|동작|
 |-|-|
@@ -151,7 +151,7 @@ errno_t _wsopen_s(
 | **_SH_DENYRD** | 파일에 대한 읽기 액세스를 거부합니다. |
 | **_SH_DENYNO** | 읽기 및 쓰기 권한을 허용합니다. |
 
-**_Sopen**와 달리 *pmode* 인수는 항상 필수입니다. **_O_CREAT**지정 하는 경우 파일이 없으면 *pmode* 는 새 파일이 처음 닫힐 때 설정 되는 파일의 사용 권한 설정을 지정 합니다. 그렇지 않으면 *pmode* 가 무시 됩니다. *pmode* 는 sys\sta\stat.h>에 \<정의 된 **_S_IWRITE** 및 **_S_IREAD**매니페스트 상수 중 하나 또는 둘 다를 포함 하는 정수 식입니다. 두 상수가 지정된 경우 비트 OR 연산자를 사용하여 결합합니다. *Pmode* 의 의미는 다음과 같습니다.
+**_Sopen**와 달리 *pmode* 인수는 항상 필수입니다. **_O_CREAT**지정 하는 경우 파일이 없으면 *pmode* 는 새 파일이 처음 닫힐 때 설정 되는 파일의 사용 권한 설정을 지정 합니다. 그렇지 않으면 *pmode* 가 무시 됩니다. *pmode* 는에 정의 된 매니페스트 상수 **_S_IWRITE** 및 **_S_IREAD**중 하나 또는 둘 다를 포함 하는 정수 식입니다 \<sys\stat.h> . 두 상수가 지정된 경우 비트 OR 연산자를 사용하여 결합합니다. *Pmode* 의 의미는 다음과 같습니다.
 
 |*pmode*|의미|
 |-|-|
@@ -159,7 +159,7 @@ errno_t _wsopen_s(
 | **_S_IWRITE** | 쓰기를 허용합니다. 실제로는 읽기 및 쓰기를 모두 허용합니다. |
 | **_S_IREAD** &#124; **_S_IWRITE** | 읽기 및 쓰기를 허용합니다. |
 
-쓰기 권한이 부여되지 않은 경우 파일은 읽기 전용입니다. Windows 운영 체제에서 모든 파일을 읽을 수 있지만 쓰기 전용 권한을 부여할 수는 없습니다. 따라서 **_S_IWRITE** 모드와 **_S_IREAD** | **_S_IWRITE** 는 동일 합니다.
+쓰기 권한이 부여되지 않은 경우 파일은 읽기 전용입니다. Windows 운영 체제에서 모든 파일을 읽을 수 있지만 쓰기 전용 권한을 부여할 수는 없습니다. 따라서 **_S_IWRITE** 모드와 **_S_IREAD**  |  **_S_IWRITE** 는 동일 합니다.
 
 **_sopen_s** 사용 권한을 설정 하기 전에 *pmode* 에 현재 파일 사용 권한 마스크를 적용 합니다. [_umask](umask.md)를 참조하세요.
 
@@ -176,9 +176,9 @@ errno_t _wsopen_s(
 
 [_locking](locking.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[하위 수준 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404039"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231262"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>함수 매개 변수 및 반환 값에 주석 달기
 
@@ -167,7 +167,7 @@ ms.locfileid: "86404039"
 
      함수에서 읽는 배열에 대 한 포인터입니다. 배열의 크기는 `s` 모두 유효 해야 합니다.
 
-     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 `char` 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 `wchar_t` 합니다.
+     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ ms.locfileid: "86404039"
 
      이 예제에서 호출자는의 요소 버퍼를 제공 합니다 `size` `p1` . `MyStringCopy`이러한 요소 중 일부를 사용할 수 있도록 합니다. 무엇 보다도, `_Null_terminated_` 의 주석은 `PWSTR` `p1` 사후 상태에서 null로 종료 됨을 의미 합니다. 이러한 방식으로 올바른 요소 수는 여전히 잘 정의 되어 있지만 특정 요소 수는 필요 하지 않습니다.
 
-     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 `char` 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 `wchar_t` 합니다.
+     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ ms.locfileid: "86404039"
 
      함수에서 읽고 쓸 수 있는 배열에 대 한 포인터입니다. 크기 `s` 요소 이며 사전 상태 및 사후 상태에서 유효 합니다.
 
-     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 `char` 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 `wchar_t` 합니다.
+     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ ms.locfileid: "86404039"
 
      함수에서 읽고 쓰는 배열에 대 한 포인터입니다. 크기 `s` 요소 이며, 모든 요소는 사전 상태에서 유효 해야 하며 `c` 요소는 사후 상태에서 유효 해야 합니다.
 
-     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 `char` 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 `wchar_t` 합니다.
+     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ ms.locfileid: "86404039"
 
      즉, 사전 상태에서 버퍼에 있는 모든 요소는 사전 상태 `s` 및 사후 상태에서 유효 합니다.
 
-     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 `char` 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 `wchar_t` 합니다.
+     `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
 - `_In_reads_to_ptr_(p)`
 

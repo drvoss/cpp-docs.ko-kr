@@ -8,92 +8,92 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 9802669468cbbba89f23b8ac127358d1fc15ec9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2448a2661851f14fc6fe8747ca19495925442436
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226817"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: 창 개체 제거
 
-이 노트는 [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) 메서드의 사용에 대해 설명합니다. -derived 개체의 `CWnd`사용자 지정 할당을 수행하려는 경우 이 메서드를 사용합니다. 이 노트에서는 [CWnd::DestroyWindow를](../mfc/reference/cwnd-class.md#destroywindow) 사용하여 **삭제** 연산자 대신 C++ Windows 개체를 삭제해야 하는 이유에 대해서도 설명합니다.
+이 참고에서는 [CWnd::P ostncdestroy](../mfc/reference/cwnd-class.md#postncdestroy) 메서드를 사용 하는 방법을 설명 합니다. 파생 개체의 사용자 지정 할당을 수행 하려는 경우이 메서드를 사용 `CWnd` 합니다. 이 참고는 또한 [CWnd::D estroyWindow](../mfc/reference/cwnd-class.md#destroywindow) 를 사용 하 여 연산자 대신 c + + Windows 개체를 삭제 해야 하는 이유를 설명 합니다 **`delete`** .
 
-이 항목의 지침을 따르는 경우 정리 문제가 거의 없습니다. 이러한 문제는 삭제/무료 C++ 메모리를 잊어버리는 것, s와 같은 `HWND`시스템 리소스를 해제하는 것을 잊어내거나 개체를 너무 많이 해제하는 등의 문제로 인해 발생할 수 있습니다.
+이 항목의 지침을 따르면 정리 문제가 거의 발생 하지 않습니다. 이러한 문제는 c + + 메모리를 삭제 하거나 해제 하는 것과 같은 문제가 발생할 수 있습니다. s와 같은 시스템 리소스를 확보 `HWND` 하거나 개체를 너무 많이 해제 하는 등의 문제가 발생할 수 있습니다.
 
 ## <a name="the-problem"></a>문제
 
-각 windows 개체(파생된 클래스의 `CWnd`개체)는 C++ 개체와 `HWND`를 모두 나타냅니다. C++ 개체는 응용 프로그램의 힙에 할당되고 `HWND`s는 창 관리자가 시스템 리소스에 할당합니다. 창 개체를 삭제하는 방법에는 여러 가지가 있으므로 시스템 리소스 또는 메모리 누수를 방지하는 규칙 집합을 제공해야 합니다. 또한 이러한 규칙은 개체 및 Windows 핸들이 두 번 이상 소멸되는 것을 방지해야 합니다.
+각 windows 개체 (에서 파생 된 클래스의 개체 `CWnd` )는 c + + 개체와를 모두 나타냅니다 `HWND` . C + + 개체는 응용 프로그램의 힙에 할당 되 고는 `HWND` 창 관리자에 의해 시스템 리소스에 할당 됩니다. 여러 가지 방법으로 창 개체를 삭제할 수 있으므로 시스템 리소스 또는 메모리 누수를 방지 하는 규칙 집합을 제공 해야 합니다. 이러한 규칙은 개체와 Windows 핸들이 두 번 이상 제거 되는 것을 방지 해야 합니다.
 
-## <a name="destroying-windows"></a>윈도우 파괴
+## <a name="destroying-windows"></a>Windows 소멸
 
-다음은 Windows 개체를 파괴하는 두 가지 허용된 방법입니다.
+다음은 Windows 개체를 제거 하는 데 허용 되는 두 가지 방법입니다.
 
-- 전화 `CWnd::DestroyWindow` 또는 Windows `DestroyWindow`API .
+- `CWnd::DestroyWindow`또는 WINDOWS API를 호출 `DestroyWindow` 합니다.
 
-- **삭제** 연산자를 명시적으로 삭제합니다.
+- 연산자를 사용 하 여 명시적으로 삭제 **`delete`** 합니다.
 
-첫 번째 경우는 지금까지 가장 일반적입니다. 이 경우는 코드가 직접 호출되지 `DestroyWindow` 않는 경우에도 적용됩니다. 사용자가 프레임 창을 직접 닫으면 이 작업은 WM_CLOSE 메시지를 생성하고 이 메시지에 대한 `DestroyWindow.` 기본 응답은 부모 창이 `DestroyWindow` 소멸될 때 호출하는 것입니다.
+첫 번째 경우는 가장 일반적인 경우입니다. 이 경우 코드에서 직접 호출 하지 않는 경우에도 적용 됩니다 `DestroyWindow` . 사용자가 프레임 창을 직접 닫으면이 작업은 WM_CLOSE 메시지를 생성 하 고,이 메시지에 대 한 기본 응답은 부모 창이 소멸 될 때를 호출 하는 것입니다 .이 메시지에 대 한 기본 응답은 `DestroyWindow.` `DestroyWindow` 모든 자식에 대 한 Windows 호출
 
-두 번째 경우는 Windows 개체에서 **삭제** 연산자의 사용은 드물어야 합니다. 삭제를 **사용하는** 것이 올바른 선택인 경우는 다음과 같습니다.
+두 번째 경우는 **`delete`** Windows 개체에 대해 연산자를 사용 하는 것이 드물게 발생 합니다. 다음은를 사용 하는 **`delete`** 것이 올바른 선택 인 경우입니다.
 
-## <a name="auto-cleanup-with-cwndpostncdestroy"></a>CWnd::P로 자동 정리
+## <a name="auto-cleanup-with-cwndpostncdestroy"></a>CWnd::P ostNcDestroy를 사용 하 여 자동 정리
 
-시스템이 Windows 창을 파괴하면 창으로 전송된 마지막 Windows 메시지가 WM_NCDESTROY. 해당 `CWnd` 메시지의 기본 처리기는 [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`C++ `HWND` 개체에서 분리하고 가상 함수를 `PostNcDestroy`호출합니다. 일부 클래스는 이 함수를 재정의하여 C++ 개체를 삭제합니다.
+시스템이 Windows 창을 소멸 시킬 때 창으로 전송 된 마지막 Windows 메시지는 WM_NCDESTROY 됩니다. `CWnd`해당 메시지의 기본 처리기는 [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)입니다. `OnNcDestroy`는 `HWND` c + + 개체에서를 분리 하 고 가상 함수를 호출 `PostNcDestroy` 합니다. 일부 클래스는이 함수를 재정의 하 여 c + + 개체를 삭제 합니다.
 
-스택 프레임에 `CWnd::PostNcDestroy` 할당되거나 다른 개체에 포함된 창 개체에 적합한 기본 구현은 아무 작업도 수행하지 않습니다. 다른 개체 없이 힙에 할당되도록 설계된 창 개체에는 적합하지 않습니다. 즉, 다른 C++ 개체에 포함되지 않은 창 개체에는 적합하지 않습니다.
+의 기본 구현은 `CWnd::PostNcDestroy` 아무 작업도 수행 하지 않습니다 .이는 스택 프레임에 할당 되거나 다른 개체에 포함 된 창 개체에 적합 합니다. 이는 다른 개체 없이 힙에 할당 되도록 설계 된 창 개체에는 적합 하지 않습니다. 즉, 다른 c + + 개체에 포함 되지 않은 창 개체에는 적합 하지 않습니다.
 
-힙에 단독으로 할당되도록 설계된 클래스는 이 `PostNcDestroy` **삭제를**수행하는 메서드를 재정의합니다. 이 명령문은 C++ 개체와 연결된 모든 메모리를 해제합니다. 기본 소멸자가 `CWnd` null이 아닌 `DestroyWindow` *경우 m_hWnd* 호출하더라도 정리 단계에서 핸들이 분리되고 NULL이 null이기 때문에 무한 재귀로 이어지지 않습니다.
+힙에서 단독으로 할당 되도록 디자인 된 클래스는 `PostNcDestroy` **삭제**를 수행 하는 메서드를 재정의 합니다. 이 문은 c + + 개체와 연결 된 모든 메모리를 해제 합니다. `CWnd` `DestroyWindow` *M_hWnd* 가 null이 아닌 경우 기본 소멸자가를 호출 하더라도 정리 단계 중에 핸들이 분리 되 고 null 인 경우에는 무한 재귀가 발생 하지 않습니다.
 
 > [!NOTE]
-> 시스템은 일반적으로 `CWnd::PostNcDestroy` Windows WM_NCDESTROY 메시지를 `HWND` 처리하고 C++ 창 개체가 더 이상 연결되지 않은 후 호출합니다. 또한 시스템은 대부분의 `CWnd::PostNcDestroy` [CWnd::Create](../mfc/reference/cwnd-class.md#create) 호출의 구현에서 오류가 발생하면 호출합니다. 자동 정리 규칙은 이 항목의 후반부에서 설명합니다.
+> 일반적으로 시스템은 `CWnd::PostNcDestroy` Windows WM_NCDESTROY 메시지를 처리 한 후를 호출 하 고 `HWND` , 및 c + + 창 개체는 더 이상 연결 되지 않습니다. 또한 시스템은 `CWnd::PostNcDestroy` 오류가 발생 하는 경우 [CWnd:: Create](../mfc/reference/cwnd-class.md#create) 호출의 구현에서를 호출 합니다. 자동 정리 규칙은이 항목의 뒷부분에 설명 되어 있습니다.
 
 ## <a name="auto-cleanup-classes"></a>자동 정리 클래스
 
-다음 클래스는 자동 정리를 위해 설계되지 않았습니다. 일반적으로 다른 C++ 개체 또는 스택에 포함됩니다.
+다음 클래스는 자동 정리를 위해 설계 되지 않았습니다. 일반적으로 다른 c + + 개체에 포함 되거나 스택에 포함 됩니다.
 
-- 모든 표준 Windows`CStatic` `CEdit`컨트롤 `CListBox`( , " 및 등)
+- 모든 표준 Windows 컨트롤 ( `CStatic` , `CEdit` , `CListBox` 등).
 
-- 자식 창(예: `CWnd` 사용자 지정 컨트롤)에서 직접 파생됩니다.
+- 에서 직접 파생 된 모든 자식 창 `CWnd` (예: 사용자 지정 컨트롤)
 
-- 스플리터`CSplitterWnd`창 ()
+- 분할자 창 ( `CSplitterWnd` ).
 
-- 기본 컨트롤 막대(에서 `CControlBar`파생된 클래스는 컨트롤 막대 개체에 대해 자동 삭제를 사용하도록 설정하기 위한 [기술 참고 31](../mfc/tn031-control-bars.md) 참조).
+- 기본 컨트롤 막대 (에서 파생 된 클래스 `CControlBar` 는 컨트롤 막대 개체에 자동 삭제를 사용 하도록 설정 하는 [기술 참고 31](../mfc/tn031-control-bars.md) 참조)
 
-- 대화 상자`CDialog`() 스택 프레임에 모달 대화 상자를 위해 설계 되었습니다.
+- `CDialog`스택 프레임의 모달 대화 상자에 대해 디자인 된 대화 상자 ()입니다.
 
-- 을 제외한 `CFindReplaceDialog`모든 표준 대화 상자.
+- 을 제외한 모든 표준 대화 상자 `CFindReplaceDialog` 입니다.
 
-- ClassWizard에서 만든 기본 대화 상자입니다.
+- 클래스 마법사에서 만든 기본 대화 상자입니다.
 
-다음 클래스는 자동 정리를 위해 설계되었습니다. 일반적으로 힙에 자체적으로 할당됩니다.
+다음 클래스는 자동 정리를 위해 설계 되었습니다. 일반적으로 힙에 의해 자체적으로 할당 됩니다.
 
-- 주 프레임 창(직접 또는 간접적으로 `CFrameWnd`파생).
+- 주 프레임 창 (에서 직접 또는 간접적으로 파생 `CFrameWnd` ).
 
-- 보기 창 (직접 또는 간접적으로 `CView`파생).
+- 보기 창 (에서 직접 또는 간접적으로 파생 `CView` )
 
-이러한 규칙을 중단하려면 파생 클래스의 메서드를 `PostNcDestroy` 재정의해야 합니다. 클래스에 자동 정리를 추가하려면 기본 클래스를 호출한 다음 **이 삭제를**수행합니다. 클래스에서 자동 정리를 제거하려면 `CWnd::PostNcDestroy` 직접 기본 `PostNcDestroy` 클래스의 메서드 대신 직접 호출합니다.
+이러한 규칙을 중단 하려면 `PostNcDestroy` 파생 클래스에서 메서드를 재정의 해야 합니다. 자동 정리를 클래스에 추가 하려면 기본 클래스를 호출한 다음 **삭제**를 수행 합니다. 클래스에서 자동 정리를 제거 하려면 `CWnd::PostNcDestroy` `PostNcDestroy` 직접 기본 클래스의 메서드 대신을 직접 호출 합니다.
 
-자동 정리 동작을 변경하는 가장 일반적인 용도는 힙에 할당할 수 있는 모덜리스 대화 상자를 만드는 것입니다.
+자동 정리 동작을 변경 하는 가장 일반적인 용도는 힙에 할당 될 수 있는 모덜리스 대화 상자를 만드는 것입니다.
 
-## <a name="when-to-call-delete"></a>삭제 를 호출할 때
+## <a name="when-to-call-delete"></a>삭제를 호출 하는 경우
 
-C++ 메서드 `DestroyWindow` 또는 전역 `DestroyWindow` API중 하나를 사용하여 Windows 개체를 삭제하는 것이 좋습니다.
+`DestroyWindow`Windows 개체 (c + + 메서드 또는 전역 API)를 삭제 하려면를 호출 하는 것이 좋습니다 `DestroyWindow` .
 
-MDI 자식 `DestroyWindow` 창을 삭제하려면 전역 API를 호출하지 마십시오. 대신 가상 메서드를 `CWnd::DestroyWindow` 사용해야 합니다.
+`DestroyWindow`MDI 자식 창을 제거 하려면 전역 API를 호출 하지 마세요. 가상 메서드를 대신 사용 해야 합니다 `CWnd::DestroyWindow` .
 
-자동 정리를 수행하지 않는 C++ Window 개체의 경우 **삭제** 연산자사용으로 VTBL이 올바르게 파생된 클래스를 가리키지 않는 경우 `DestroyWindow` `CWnd::~CWnd` 소멸자에서 호출하려고 할 때 메모리 누수가 발생할 수 있습니다. 이 문제는 시스템에서 호출할 적절한 destroy 메서드를 찾을 수 없기 때문에 발생합니다. 삭제 `DestroyWindow` 대신 **delete** 사용하면 이러한 문제를 방지할 수 있습니다. 이는 미묘한 오류일 수 있으므로 디버그 모드로 컴파일하면 위험에 처한 경우 다음과 같은 경고가 생성됩니다.
+자동 정리를 수행 하지 않는 c + + 창 개체의 경우,이 연산자를 사용 하면 **`delete`** `DestroyWindow` `CWnd::~CWnd` VTBL이 올바르게 파생 된 클래스를 가리키지 않는 경우 소멸자에서를 호출 하려고 하면 메모리 누수가 발생할 수 있습니다. 이는 시스템에서 호출할 적절 한 소멸 메서드를 찾을 수 없기 때문에 발생 합니다. `DestroyWindow`대신를 사용 하면 **`delete`** 이러한 문제가 방지 됩니다. 이는 미묘한 오류가 될 수 있으므로 디버그 모드에서 컴파일하면 위험에 노출 되는 경우 다음과 같은 경고가 생성 됩니다.
 
 ```
 Warning: calling DestroyWindow in CWnd::~CWnd
     OnDestroy or PostNcDestroy in derived class will not be called
 ```
 
-자동 정리를 수행하는 C++ Windows 개체의 경우 을 `DestroyWindow`호출해야 합니다. **삭제** 연산자를 직접 사용하는 경우 MFC 진단 메모리 할당자는 메모리를 두 번 비웠다는 것을 알려줍니다. 두 번의 발생은 첫 번째 명시적 호출과 의 자동 정리 구현에서 **이를 삭제하는** 간접 호출입니다. `PostNcDestroy`
+자동 정리를 수행 하는 c + + Windows 개체의 경우를 호출 해야 합니다 `DestroyWindow` . 연산자를 직접 사용 하는 경우 **`delete`** MFC 진단 메모리 할당자는 메모리를 두 번 해제 했음을 알립니다. 두 항목은의 자동 정리 구현에서 **이를 삭제** 하기 위한 첫 번째 명시적 호출 및 간접 호출입니다 `PostNcDestroy` .
 
-자동 `DestroyWindow` 정리가 아닌 개체를 호출한 후에도 C++ 개체는 계속 주위에 있지만 *m_hWnd* NULL이 됩니다. 자동 `DestroyWindow` 정리 개체를 호출한 후 C++ 개체는 사라지고 `PostNcDestroy`의 자동 정리 구현에서 C++ delete 연산자가 해제됩니다.
+`DestroyWindow`자동 정리 개체가 아닌 개체에 대해를 호출한 후에는 c + + 개체는 계속 해 서 발생 하지만 *m_hWnd* NULL이 됩니다. `DestroyWindow`자동 정리 개체에서를 호출한 후 c + + 개체는의 자동 정리 구현에서 c + + delete 연산자에 의해 해제 됩니다 `PostNcDestroy` .
 
 ## <a name="see-also"></a>참고 항목
 
-[숫자별 기술 노트](../mfc/technical-notes-by-number.md)<br/>
+[번호로 기술 참고 사항](../mfc/technical-notes-by-number.md)<br/>
 [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)

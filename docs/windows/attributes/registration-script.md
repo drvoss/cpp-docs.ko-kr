@@ -1,17 +1,17 @@
 ---
-title: registration_script (C++ COM 특성)
+title: registration_script (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217222"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -25,12 +25,12 @@ ms.locfileid: "80214580"
 
 ### <a name="parameters"></a>매개 변수
 
-*스크립트도*<br/>
-사용자 지정 등록 스크립트 (.rgs) 파일의 전체 경로입니다. **None**값 (예: `script = "none"`)은 coclass에 등록 요구 사항이 없음을 나타냅니다.
+*스크립트*<br/>
+사용자 지정 등록 스크립트 (.rgs) 파일의 전체 경로입니다. 값 **없음**(예:)은 `script = "none"` coclass에 등록 요구 사항이 없음을 나타냅니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Registration_script** C++ 특성은 *스크립트로*지정 된 사용자 지정 등록 스크립트를 실행 합니다. 이 특성을 지정 하지 않으면 구성 요소 등록에 대 한 정보를 포함 하는 표준 .rgs 파일이 사용 됩니다. .Rgs 파일에 대 한 자세한 내용은 [ATL 레지스트리 구성 요소 (등록자)](../../atl/atl-registry-component-registrar.md)를 참조 하세요.
+**Registration_script** c + + 특성은 *스크립트로*지정 된 사용자 지정 등록 스크립트를 실행 합니다. 이 특성을 지정 하지 않으면 구성 요소 등록에 대 한 정보를 포함 하는 표준 .rgs 파일이 사용 됩니다. .Rgs 파일에 대 한 자세한 내용은 [ATL 레지스트리 구성 요소 (등록자)](../../atl/atl-registry-component-registrar.md)를 참조 하세요.
 
 이 특성을 사용하려면 [coclass](coclass.md), [progid](progid.md)또는 [vi_progid](vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.
 
@@ -63,9 +63,9 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **구조체**|
-|**반복 가능**|아니요|
-|**필수 특성**|`coclass`, `progid`또는 `vi_progid`중 하나 이상입니다.|
+|**적용 대상**|**`class`**, **`struct`**|
+|**불가능**|예|
+|**필수 특성**|`coclass`, 또는 중 하나 이상입니다. `progid` `vi_progid`|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

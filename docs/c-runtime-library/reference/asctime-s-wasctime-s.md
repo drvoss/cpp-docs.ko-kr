@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217014"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -81,7 +81,7 @@ errno_t _wasctime_s(
 결과를 저장 하는 데 사용 되는 버퍼의 크기입니다.
 
 *tmSource*<br/>
-시간/날짜 구조체입니다. 이 함수는 유효한 **struct** **tm** 개체에 대 한 포인터를 가정 합니다.
+시간/날짜 구조체입니다. 이 함수는 유효한 tm 개체에 대 한 포인터를 가정 **`struct`** **tm** 합니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -91,10 +91,10 @@ errno_t _wasctime_s(
 
 |*버퍼*|*이면 numberofelements 이벤트가*|*tmSource*|반환 값|*버퍼* 의 값|
 |--------------|------------------------|----------|------------|-----------------------|
-|**N**|모두|모두|**EINVAL**|수정 안 됨|
+|**NULL**|모두|모두|**EINVAL**|수정 안 됨|
 |Not **NULL** (유효한 메모리를 가리킴)|0|모두|**EINVAL**|수정 안 됨|
 |**NULL** 이 아님|0< 크기 < 26|모두|**EINVAL**|빈 문자열|
-|**NULL** 이 아님|>= 26|**N**|**EINVAL**|빈 문자열|
+|**NULL** 이 아님|>= 26|**NULL**|**EINVAL**|빈 문자열|
 |**NULL** 이 아님|>= 26|시간 구성 요소에 대한 잘못된 시간 구조체 또는 범위를 벗어난 값|**EINVAL**|빈 문자열|
 
 > [!NOTE]
@@ -118,7 +118,7 @@ errno_t _wasctime_s(
 
 또한 변환된 문자열은 현지 표준 시간대 설정에 따라 조정됩니다. 현지 시간 구성에 대한 정보는 [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) 및 [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 함수를 참조하고 표준 시간대 환경 및 전역 변수 정의에 대한 정보는 [_tzset](tzset.md) 함수를 참조하세요.
 
-**Asctime_s** 에서 생성 되는 문자열 결과는 정확히 26 자를 포함 하며 형식은 `Wed Jan 02 02:03:55 1980\n\0`입니다. 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자 및 null 문자는 문자열의 마지막 두 자리를 차지합니다. 두 번째 매개 변수로서 전달된 값은 이 크기 이상이어야 합니다. 더 작은 경우 오류 코드 **EINVAL**이 반환 됩니다.
+**Asctime_s** 에서 생성 되는 문자열 결과는 정확히 26 자를 포함 하며 형식은 `Wed Jan 02 02:03:55 1980\n\0` 입니다. 24시간제가 사용됩니다. 모든 필드에는 상수 너비가 있습니다. 줄 바꿈 문자 및 null 문자는 문자열의 마지막 두 자리를 차지합니다. 두 번째 매개 변수로서 전달된 값은 이 크기 이상이어야 합니다. 더 작은 경우 오류 코드 **EINVAL**이 반환 됩니다.
 
 **_wasctime_s** 은 **asctime_s**의 와이드 문자 버전입니다. **_wasctime_s** 와 **asctime_s** 는 동일 하 게 동작 합니다.
 
@@ -183,7 +183,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [시간 관리](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

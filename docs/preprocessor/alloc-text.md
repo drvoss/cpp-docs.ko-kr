@@ -8,12 +8,12 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 7ddb12b39e068dea42f7a47f7fd937424be43725
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c638c2026a493453aeb5aff00ba6273efb5f184e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216342"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219445"
 ---
 # <a name="alloc_text-pragma"></a>alloc_text pragma
 
@@ -21,13 +21,13 @@ ms.locfileid: "70216342"
 
 ## <a name="syntax"></a>구문
 
-> **#pragma alloc_text (** "*textsection*" **,** *function1* [ **,** *function2* ...] **)**
+> **#pragma alloc_text (** "*textsection*" **,** *function1* [**,** *function2* ...] **)**
 
 ## <a name="remarks"></a>설명
 
-**Alloc_text** pragma는 멤버 함수 또는 C++ 오버 로드 된 함수를 처리 하지 않습니다. C 링크를 사용 하 여 선언 된 함수, 즉 **extern "C"** 링크 사양으로 선언 된 함수에만 적용할 수 있습니다. C++ 링크가 있는 함수에 pragma를 사용하려고 하면 컴파일러 오류가 발생합니다.
+**Alloc_text** Pragma는 c + + 멤버 함수 또는 오버 로드 된 함수를 처리 하지 않습니다. C 링크를 사용 하 여 선언 된 함수, 즉 **extern "C"** 링크 사양으로 선언 된 함수에만 적용할 수 있습니다. C++ 링크가 있는 함수에 pragma를 사용하려고 하면 컴파일러 오류가 발생합니다.
 
-를 사용 하 여 `__based` 함수 주소를 지정 하는 것은 지원 되지 않으므로 섹션 위치를 지정 하려면 **alloc_text** pragma를 사용 해야 합니다. *Textsection* 으로 지정 된 이름은 큰따옴표로 묶어야 합니다.
+를 사용 하 여 함수 주소를 지정 하 **`__based`** 는 기능은 지원 되지 않으므로 섹션 위치를 지정 하려면 **alloc_text** pragma를 사용 해야 합니다. *Textsection* 으로 지정 된 이름은 큰따옴표로 묶어야 합니다.
 
 **Alloc_text** pragma는 지정 된 함수의 선언 뒤와 이러한 함수의 정의 앞에 나타나야 합니다.
 
@@ -39,6 +39,6 @@ ms.locfileid: "70216342"
 
 - 함수가 선언된 후, 그리고 함수가 정의되기 전에 사용되어야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Pragma 지시문 및 __pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

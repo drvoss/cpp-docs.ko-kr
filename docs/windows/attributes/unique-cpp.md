@@ -1,17 +1,17 @@
 ---
-title: unique (C++ COM 특성)
+title: unique (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201026"
 ---
 # <a name="unique-c"></a>unique(C++)
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214437"
 [unique]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Unique** C++ 특성에는 [고유한](/windows/win32/Midl/unique) MIDL 특성과 동일한 기능이 있습니다.
+**고유한** c + + 특성에는 [고유한](/windows/win32/Midl/unique) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -37,8 +37,8 @@ ms.locfileid: "80214437"
 
 |||
 |-|-|
-|**적용 대상**|**typedef**, **struct**, **union**, interface parameter, interface 메서드|
-|**반복 가능**|아니요|
+|**적용 대상**|**`typedef`**, **`struct`** , **`union`** , interface 매개 변수, interface 메서드|
+|**불가능**|예|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

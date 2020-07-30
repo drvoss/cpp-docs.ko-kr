@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187845"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227025"
 ---
 # <a name="using-declaration"></a>선언 사용
 
-Using **선언에** 는 using 선언이 표시 되는 선언적 영역에 대 한 이름이 도입 됩니다.
+선언에는 **`using`** using 선언이 표시 되는 선언적 영역에 대 한 이름이 도입 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>매개 변수
 
-*중첩 된 이름 지정자* 범위 확인 연산자에 의해 종료 되는 네임 스페이스, 클래스 또는 열거형 이름 및 범위 확인 연산자 (::)의 시퀀스입니다. 단일 범위 확인 연산자를 사용 하 여 전역 네임 스페이스의 이름을 도입할 수 있습니다. 키워드 **typename** 은 선택 사항이 며 기본 클래스에서 클래스 템플릿에 도입 될 때 종속 이름을 확인 하는 데 사용할 수 있습니다.
+*중첩 된 이름 지정자* 범위 확인 연산자에 의해 종료 되는 네임 스페이스, 클래스 또는 열거형 이름 및 범위 확인 연산자 (::)의 시퀀스입니다. 단일 범위 확인 연산자를 사용 하 여 전역 네임 스페이스의 이름을 도입할 수 있습니다. 키워드는 **`typename`** 선택 사항이 며 기본 클래스에서 클래스 템플릿에 도입 될 때 종속 이름을 확인 하는 데 사용할 수 있습니다.
 
 *정규화* 되지 않은 id 식별자, 오버 로드 된 연산자 이름, 사용자 정의 리터럴 연산자 또는 변환 함수 이름, 클래스 소멸자 이름 또는 템플릿 이름과 인수 목록 일 수 있는 정규화 되지 않은 id 식입니다.
 
-*선언 자 목록* 쉼표로 구분 된 [**typename**] *중첩 이름 지정자* 의 정규화 되지 않은 *id* 선언 자입니다 .이 목록에는 선택적으로 줄임표가 있습니다.
+*선언 자 목록* 쉼표로 구분 된 [ **`typename`** ] *중첩 이름 지정자* 의 정규화 되지 않은 *id* 선언 자입니다 .이 목록에는 선택적으로 줄임표가 있습니다.
 
 ## <a name="remarks"></a>설명
 
-Using 선언은 다른 곳에서 선언 된 엔터티의 동의어로 정규화 되지 않은 이름을 도입 합니다. 이를 통해 특정 네임 스페이스의 단일 이름이 표시 되는 선언 영역에서 명시적인 자격 없이 사용 될 수 있습니다. 이는 네임 스페이스의 *모든* 이름을 한정자 없이 사용할 수 있도록 [하는 using 지시문](../cpp/namespaces-cpp.md#using_directives)과는 대조적입니다. **Using** 키워드는 [형식 별칭](../cpp/aliases-and-typedefs-cpp.md)에도 사용 됩니다.
+Using 선언은 다른 곳에서 선언 된 엔터티의 동의어로 정규화 되지 않은 이름을 도입 합니다. 이를 통해 특정 네임 스페이스의 단일 이름이 표시 되는 선언 영역에서 명시적인 자격 없이 사용 될 수 있습니다. 이는 네임 스페이스의 *모든* 이름을 한정자 없이 사용할 수 있도록 [하는 using 지시문](../cpp/namespaces-cpp.md#using_directives)과는 대조적입니다. **`using`** 키워드는 [형식 별칭](../cpp/aliases-and-typedefs-cpp.md)에도 사용 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -125,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>예제
 
-Using 선언을 사용 하 여 선언 된 멤버는 명시적 한정자를 사용 하 여 참조할 수 있습니다. `::` 접두사는 전역 네임 스페이스를 참조 합니다.
+Using 선언을 사용 하 여 선언 된 멤버는 명시적 한정자를 사용 하 여 참조할 수 있습니다. `::`접두사는 전역 네임 스페이스를 참조 합니다.
 
 ```cpp
 // using_declaration3.cpp
@@ -167,7 +167,7 @@ In A::g
 
 Using 선언이 생성 되 면 선언에 의해 생성 된 동의어가 using 선언 지점에서 유효한 정의만 참조 합니다. Using 선언 후에 네임 스페이스에 추가 된 정의는 유효한 동의어가 아닙니다.
 
-**Using** 선언에 의해 정의 된 이름은 원래 이름에 대 한 별칭입니다. 원래 선언의 형식, 링크 또는 다른 특성에는 영향을 주지 않습니다.
+선언에 의해 정의 되는 이름은 **`using`** 원래 이름에 대 한 별칭입니다. 원래 선언의 형식, 링크 또는 다른 특성에는 영향을 주지 않습니다.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -213,11 +213,11 @@ void g() {
 }
 ```
 
-위의 예제에서 `using B::i` 문은 `g()` 함수에서 두 번째 `int i`를 선언 합니다. `B::f`에 의해 도입 된 함수 이름에 서로 다른 매개 변수 형식이 있으므로 `using B::f` 문은 `f(char)` 함수와 충돌 하지 않습니다.
+위의 예제에서 `using B::i` 문은 두 번째가 `int i` 함수에 선언 되도록 `g()` 합니다. `using B::f` `f(char)` 에서 제공 하는 함수 이름에 `B::f` 다른 매개 변수 형식이 있으므로 문이 함수와 충돌 하지 않습니다.
 
 ## <a name="example"></a>예제
 
-로컬 함수 선언은 선언을 사용 하 여 도입 된 함수와 동일한 이름과 형식을 가질 수 없습니다. 다음은 그 예입니다.
+로컬 함수 선언은 선언을 사용 하 여 도입 된 함수와 동일한 이름과 형식을 가질 수 없습니다. 예를 들어:
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -328,4 +328,4 @@ public:
 ## <a name="see-also"></a>참고 항목
 
 [네임스페이스](../cpp/namespaces-cpp.md)<br/>
-[키워드](../cpp/keywords-cpp.md)
+[C++ 키워드](../cpp/keywords-cpp.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2047
 ms.assetid: 686a5a81-3857-4753-84a0-5c2e7149cbee
-ms.openlocfilehash: b6e531487038ab7610be3c79b5acdd85d1073de4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f42a1f1dadcff95934236f153be7df7244bff8cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740119"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210581"
 ---
 # <a name="compiler-error-c2047"></a>컴파일러 오류 C2047
 
 기본값이 잘못되었습니다.
 
-`default` 키워드는 `switch` 문에만 나타날 수 있습니다.
+키워드는 **`default`** 문에만 나타날 수 있습니다 **`switch`** .
 
 다음 샘플에서는 C2047을 생성합니다.
 
@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-가능한 해결 방법:
+해결 방법:
 
 ```cpp
 // C2047b.cpp

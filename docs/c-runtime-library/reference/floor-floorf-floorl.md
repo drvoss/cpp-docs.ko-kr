@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507003"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218686"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -71,7 +71,7 @@ long double floorl(
 *x*<br/>
 부동 소수점 값입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 **Floor** 함수는 *x*보다 작거나 같은 가장 큰 정수를 나타내는 부동 소수점 값을 반환 합니다. 반환되는 오류가 없습니다.
 
@@ -83,7 +83,7 @@ long double floorl(
 
 ## <a name="remarks"></a>설명
 
-C + +에서는 오버 로드를 허용 하므로 **float** 및 **long** **double** 값을 사용 하 고 반환 하는 **바닥** 의 오버 로드를 호출할 수 있습니다. C 프로그램에서 **floor** 는 항상 **double**을 사용 하 고 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 및 값을 사용 하 고 반환 하는 **바닥** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **층** 은 항상를 사용 하 고 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 

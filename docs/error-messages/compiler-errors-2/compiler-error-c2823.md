@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-ms.openlocfilehash: ef07e1b542c4c3977f35de7ed9cd0f0a5358cedb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c277437bdc4622e7ae8a63eb9b0a553e0079bc02
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225386"
 ---
 # <a name="compiler-error-c2823"></a>컴파일러 오류 C2823
 
 > typedef 템플릿이 잘못 되었습니다.
 
-템플릿은 `typedef` 정의에서 사용할 수 없습니다.
+템플릿은 정의에서 허용 되지 않습니다 **`typedef`** .
 
 ## <a name="example"></a>예제
 

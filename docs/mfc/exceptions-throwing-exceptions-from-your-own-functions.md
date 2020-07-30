@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223189"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>예외: 자체 함수에서 예외 Throw
 
 Mfc 예외 처리 패러다임을 단독으로 사용 하 여 MFC 또는 다른 라이브러리의 함수에 의해 throw 된 예외를 catch 할 수 있습니다. 예외 조건을 발생 시킬 수 있는 함수를 작성 하는 경우 라이브러리 코드에서 throw 된 예외를 catch 하는 것 외에도 사용자 고유의 코드에서 예외를 throw 할 수 있습니다.
 
-예외가 throw 되 면 현재 함수의 실행이 중지 되 고 가장 안쪽의 예외 프레임의 **catch** 블록으로 직접 이동 합니다. 예외 메커니즘은 함수에서 정상적인 끝내기 경로를 무시 합니다. 따라서 일반적인 종료에서 삭제 되는 메모리 블록을 삭제 해야 합니다.
+예외가 throw 되 면 현재 함수의 실행이 중지 되 고 **`catch`** 가장 안쪽의 예외 프레임 블록으로 직접 이동 합니다. 예외 메커니즘은 함수에서 정상적인 끝내기 경로를 무시 합니다. 따라서 일반적인 종료에서 삭제 되는 메모리 블록을 삭제 해야 합니다.
 
 #### <a name="to-throw-an-exception"></a>예외를 throw 하려면
 

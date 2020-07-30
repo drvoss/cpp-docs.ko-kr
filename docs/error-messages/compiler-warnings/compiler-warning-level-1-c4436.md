@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a15220cb02a48fb11936b69e5830412f1221108
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162389"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230677"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>컴파일러 경고(수준 1) C4436
 
 생성자 또는 소멸자에서 가상 기본 'class1'에서 'class2'로의 dynamic_cast는 부분적으로 생성된 개체와 함께 실패할 수 있습니다.        /vd2를 사용해서 컴파일하거나 해당 #pragma vtordisp(2)에 'class2'를 정의하십시오.
 
-컴파일러에서 다음과 같은 특성의 `dynamic_cast` 작업이 발견되었습니다.
+컴파일러가 **`dynamic_cast`** 다음과 같은 특성을 가진 작업을 발견 했습니다.
 
 - 캐스트는 기본 클래스 포인터에서 파생된 클래스 포인터의 방향으로 수행됩니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "80162389"
 
 - 파생된 클래스 또는 파생 클래스에서 추가로 상속되는 일부 다른 클래스의 생성자 또는 소멸자에서 클래스가 발견되었습니다.
 
-경고는 부분적으로 생성된 개체에서 작동할 경우 `dynamic_cast`가 올바르게 작동하지 않을 수 있음을 나타냅니다.  이 경우는 파생된 생성자/소멸자가 추가로 파생된 일부 개체의 하위 개체에서 작동하는 경우에 발생합니다.  경고에 지정된 파생된 클래스가 더 이상 파생되지 않을 경우 경고를 무시해도 됩니다.
+경고는가 **`dynamic_cast`** 부분적으로 생성 된 개체에서 작동 하는 경우 제대로 수행 되지 않을 수 있음을 나타냅니다.  이 경우는 파생된 생성자/소멸자가 추가로 파생된 일부 개체의 하위 개체에서 작동하는 경우에 발생합니다.  경고에 지정된 파생된 클래스가 더 이상 파생되지 않을 경우 경고를 무시해도 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -77,4 +77,4 @@ int main()
 
 [dynamic_cast 연산자](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[컴파일러 경고(수준 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+[컴파일러 경고 (수준 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

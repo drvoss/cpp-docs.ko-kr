@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225048"
 ---
 # <a name="memory-management-frame-allocation"></a>메모리 관리: 프레임 할당
 
@@ -33,7 +33,7 @@ ms.locfileid: "84626297"
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-로컬 함수 변수의 경우 함수가 종료 될 때이 범위 전환이 발생 하지만 중첩 된 중괄호가 사용 되는 경우 프레임 변수의 범위는 함수 보다 작을 수 있습니다. 프레임 변수를 자동으로 삭제 하는 것은 매우 중요 합니다. 단순 기본 형식 (예: **int** 또는 **byte**), 배열 또는 데이터 구조에서 자동 삭제는 단순히 변수에 사용 되는 메모리를 회수 합니다. 변수는 범위를 벗어났기 때문에 액세스할 수 없습니다. 그러나 c + + 개체의 경우에는 자동 삭제 프로세스가 다소 복잡 합니다.
+로컬 함수 변수의 경우 함수가 종료 될 때이 범위 전환이 발생 하지만 중첩 된 중괄호가 사용 되는 경우 프레임 변수의 범위는 함수 보다 작을 수 있습니다. 프레임 변수를 자동으로 삭제 하는 것은 매우 중요 합니다. 단순 기본 형식 (예: **`int`** 또는 **바이트**), 배열 또는 데이터 구조에서 자동 삭제는 단순히 변수에 사용 되는 메모리를 회수 합니다. 변수는 범위를 벗어났기 때문에 액세스할 수 없습니다. 그러나 c + + 개체의 경우에는 자동 삭제 프로세스가 다소 복잡 합니다.
 
 개체가 프레임 변수로 정의 되 면 해당 생성자가 정의가 발견 된 지점에서 자동으로 호출 됩니다. 개체가 범위를 벗어나면 해당 소멸자는 개체에 대 한 메모리가 회수 되기 전에 자동으로 호출 됩니다. 이러한 자동 생성 및 소멸은 매우 편리 하지만 특히 소멸자의 자동 호출에 대해 알고 있어야 합니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620768"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214167"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤 사용
 
@@ -55,7 +55,7 @@ Windows 스타일. 전체 목록은 [CWnd:: CreateControl](reference/cwnd-class.
 
 1. `WM_CREATE`클래스에 메시지 처리기를 추가 `CMyView` 합니다.
 
-1. 처리기 함수에서 `CMyView::OnCreate` `Create` **이** 포인터를 부모 창으로 사용 하 여 컨트롤의 함수를 호출 합니다.
+1. 처리기 함수에서 포인터를 `CMyView::OnCreate` `Create` 부모 창으로 사용 하 여 컨트롤의 함수를 호출 합니다 **`this`** .
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229326"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT 매크로
 
@@ -47,11 +47,11 @@ _STATIC_ASSERT(
 
 ## <a name="remarks"></a>설명
 
-이 매크로는 [_ASSERT 및 _ASSERTE 매크로](assert-asserte-assert-expr-macros.md)와 유사 합니다. 단, *booleanExpression* 는 런타임이 아닌 컴파일 시간에 평가 됩니다. *BooleanExpression* 가 **FALSE** (0)로 평가 되는 경우 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 이 생성 됩니다.
+이 매크로는 [_ASSERT 및 _ASSERTE 매크로](assert-asserte-assert-expr-macros.md)와 비슷합니다. 단, *booleanExpression* 는 런타임이 아닌 컴파일 시간에 평가 됩니다. *BooleanExpression* 가 **FALSE** (0)로 평가 되는 경우 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 이 생성 됩니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 [sizeof](../../c-language/sizeof-operator-c.md) 가 **int** 가 2 바이트 보다 크거나 같은지와 [sizeof](../../c-language/sizeof-operator-c.md) **가 1** 바이트 인지 여부를 확인 합니다. 프로그램이 컴파일되지 않고 **long** 이 1 바이트 보다 크기 때문에 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 생성 됩니다.
+이 예제에서는 [sizeof](../../c-language/sizeof-operator-c.md) **`int`** a가 2 바이트 보다 크거나 같은지와 [sizeof](../../c-language/sizeof-operator-c.md) a가 1 바이트 인지 여부를 확인 합니다 **`long`** . 프로그램이 컴파일되지 않으며,가 1 바이트 보다 크기 때문에 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 생성 됩니다 **`long`** .
 
 ```C
 // crt__static_assert.c
@@ -77,7 +77,7 @@ int main()
 |-----------|---------------------|
 |**_STATIC_ASSERT**|\<crtdbg.h>|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
 [_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로](assert-asserte-assert-expr-macros.md)<br/>

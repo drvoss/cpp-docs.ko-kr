@@ -108,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 7a07f0cc66492c5e0c10c82a7a6971313e13d77b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225633"
 ---
 # <a name="list-stlclr"></a>list(STL/CLR)
 
-이 템플릿 클래스는 양방향 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너 `list`를 사용 하 여 요소 시퀀스를 각각 하나의 요소를 저장 하는 노드의 양방향 연결 된 목록으로 관리할 수 있습니다.
+이 템플릿 클래스는 양방향 액세스를 포함 하는 다양 한 길이의 요소 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 요소 `list` 시퀀스를 각각 하나의 요소를 저장 하는 노드의 양방향 연결 목록으로 관리 합니다.
 
-아래 설명에서 `GValue`는 두 번째가 참조 형식이 아닌 경우에는 *값* 과 동일 하 여 `Value^`됩니다.
+아래 설명에서 후자가 `GValue` ref 형식이 아닌 경우는 *값* 과 같습니다 `Value^` .
 
 ## <a name="syntax"></a>구문
 
@@ -143,7 +143,7 @@ template<typename Value>
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<cliext/list >
+**헤더:**\<cliext/list>
 
 **네임 스페이스:** cliext
 
@@ -177,7 +177,7 @@ template<typename Value>
 |[list::front(STL/CLR)](#front)|첫 번째 요소에 액세스합니다.|
 |[list::insert(STL/CLR)](#insert)|지정 된 위치에 요소를 추가 합니다.|
 |[list::list(STL/CLR)](#list)|컨테이너 개체를 만듭니다.|
-|[list::merge(STL/CLR)](#merge)|제어 되는 시퀀스를 정렬 된 두 개의 병합 합니다.|
+|[list::merge(STL/CLR)](#merge)|순서가 지정된 두 개의 제어되는 시퀀스를 병합합니다.|
 |[list::pop_back(STL/CLR)](#pop_back)|마지막 요소를 제거 합니다.|
 |[list::pop_front(STL/CLR)](#pop_front)|첫 번째 요소를 제거 합니다.|
 |[list::push_back(STL/CLR)](#push_back)|새 마지막 요소를 추가 합니다.|
@@ -189,7 +189,7 @@ template<typename Value>
 |[list::resize(STL/CLR)](#resize)|요소 수를 변경합니다.|
 |[list::reverse(STL/CLR)](#reverse)|제어 되는 시퀀스를 반대로 바꿉니다.|
 |[list::size(STL/CLR)](#size)|요소 수를 계산합니다.|
-|[list::sort(STL/CLR)](#sort)|제어 되는 시퀀스를 정렬합니다.|
+|[list::sort(STL/CLR)](#sort)|제어되는 시퀀스를 정렬합니다.|
 |[list::splice(STL/CLR)](#splice)|노드 간의 연결을 다시 붙입니다.|
 |[list::swap(STL/CLR)](#swap)|두 컨테이너의 내용을 바꿉니다.|
 |[list::to_array(STL/CLR)](#to_array)|제어 되는 시퀀스를 새 배열에 복사 합니다.|
@@ -203,12 +203,12 @@ template<typename Value>
 |연산자|설명|
 |--------------|-----------------|
 |[list::operator=(STL/CLR)](#op_as)|제어되는 시퀀스를 바꿉니다.|
-|[operator!= (list)(STL/CLR)](#op_neq)|`list` 개체가 다른 `list` 개체와 다른 지 여부를 확인 합니다.|
-|[operator< (list)(STL/CLR)](#op_lt)|`list` 개체가 다른 `list` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator<= (list)(STL/CLR)](#op_lteq)|`list` 개체가 다른 `list` 개체 보다 작거나 같은지 여부를 확인 합니다.|
-|[operator== (list)(STL/CLR)](#op_eq)|`list` 개체가 다른 `list` 개체와 같은지 여부를 확인 합니다.|
-|[operator> (list)(STL/CLR)](#op_gt)|`list` 개체가 다른 `list` 개체 보다 큰지 여부를 확인 합니다.|
-|[operator>= (list)(STL/CLR)](#op_gteq)|`list` 개체가 다른 `list` 개체 보다 크거나 같은지 여부를 확인 합니다.|
+|[operator! = (목록) (STL/CLR)](#op_neq)|`list`개체가 다른 개체와 다른 지 여부를 확인 `list` 합니다.|
+|[연산자< (목록) (STL/CLR)](#op_lt)|`list`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `list` 합니다.|
+|[연산자<= (목록) (STL/CLR)](#op_lteq)|`list`개체가 다른 개체 보다 작거나 같은지 여부를 확인 `list` 합니다.|
+|[operator = = (목록) (STL/CLR)](#op_eq)|`list`개체가 다른 개체와 같은지 여부를 확인 `list` 합니다.|
+|[연산자> (목록) (STL/CLR)](#op_gt)|`list`개체가 다른 개체 보다 큰지 여부를 확인 `list` 합니다.|
+|[operator>= (list)(STL/CLR)](#op_gteq)|`list`개체가 다른 개체 보다 크거나 같은지 여부를 확인 `list` 합니다.|
 
 ## <a name="interfaces"></a>인터페이스
 
@@ -219,17 +219,17 @@ template<typename Value>
 |<xref:System.Collections.ICollection>|요소 그룹을 유지 관리 합니다.|
 |<xref:System.Collections.Generic.IEnumerable%601>|형식화 된 요소를 통해 시퀀싱 합니다.|
 |<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 관리 합니다.|
-|IList\<값 >|일반 컨테이너를 유지 관리 합니다.|
+|IList\<Value>|일반 컨테이너를 유지 관리 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 개체는 양방향 링크 목록에서 개별 노드로 제어 되는 시퀀스에 대 한 저장소를 할당 하 고 해제 합니다. 노드 간에 링크를 변경 하 여 요소를 다시 정렬 합니다. 즉, 노드 내용을 다른 노드로 복사 하지 않습니다. 즉, 나머지 요소를 방해 하지 않고 요소를 자유롭게 삽입 하 고 제거할 수 있습니다. 따라서 목록은 템플릿 클래스 [큐 (stl/clr)](../dotnet/queue-stl-clr.md) 또는 템플릿 클래스 [스택 (stl/clr)](../dotnet/stack-stl-clr.md)의 기본 컨테이너에 적합 한 후보입니다.
 
-`list` 개체는 양방향 반복기를 지원 합니다. 즉, 제어 되는 시퀀스에서 요소를 지정 하는 반복기를 사용 하 여 인접 한 요소를 한 단계씩 실행 할 수 있습니다. 특수 헤드 노드는 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`에서 반환 된 반복기에 해당 합니다. 제어 되는 시퀀스의 마지막 요소 (있는 경우)에 도달할 때까지이 반복기를 줄일 수 있습니다. 목록 반복기를 증가 시켜 헤드 노드에 도달할 수 있습니다. 그러면 `end()`와 동일한 것으로 비교 됩니다. 그러나 `end()`에서 반환 된 반복기는 역 참조할 수 없습니다.
+`list`개체는 양방향 반복기를 지원 합니다. 즉, 제어 되는 시퀀스에서 요소를 지정 하는 반복기를 사용 하 여 인접 한 요소를 한 단계씩 실행 할 수 있습니다. 특수 헤드 노드는 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)에서 반환 된 반복기에 해당 `()` 합니다. 제어 되는 시퀀스의 마지막 요소 (있는 경우)에 도달할 때까지이 반복기를 줄일 수 있습니다. 목록 반복기를 증가 시켜 헤드 노드에 도달할 수 있습니다. 그런 다음와 비교 `end()` 합니다. 그러나에서 반환 된 반복기는 역 참조할 수 없습니다 `end()` .
 
 숫자 위치가 지정 된 경우에는 임의 액세스 반복기를 필요로 하는 목록 요소를 직접 참조할 수 없습니다. 따라서 목록은 템플릿 클래스 [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)의 기본 컨테이너로 사용할 *수 없습니다* .
 
-목록 반복기는 연결 된 목록 노드에 대 한 핸들을 저장 합니다. 그러면 핸들은 연결 된 컨테이너에 저장 됩니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 목록 반복기는 연결 된 목록 노드가 일부 목록과 연결 되어 있으면 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 dereferencable입니다 .이 반복기를 사용 하 여 지정 된 요소 값을 액세스 하거나 변경할 수 있습니다 .이는 `end()`와 같지 않은 경우입니다.
+목록 반복기는 연결 된 목록 노드에 대 한 핸들을 저장 합니다. 그러면 핸들은 연결 된 컨테이너에 저장 됩니다. 반복기는 연결 된 컨테이너 개체에만 사용할 수 있습니다. 목록 반복기는 연결 된 목록 노드가 일부 목록과 연결 되어 있으면 유효한 상태로 유지 됩니다. 또한 유효한 반복기는 dereferencable입니다 .이 반복기를 사용 하 여 지정 된 요소 값을 액세스 하거나 변경할 수 있습니다 .이는와 같지 않은 경우 `end()` 입니다.
 
 요소를 지우거 나 제거 하면 저장 된 값에 대 한 소멸자가 호출 됩니다. 컨테이너를 삭제 하면 모든 요소가 지워집니다. 따라서 요소 형식이 ref 클래스 인 컨테이너는 컨테이너의 활성 요소가 없도록 합니다. 그러나 핸들의 컨테이너는 해당 요소 *를 소멸 시 키 지 않습니다.*
 
@@ -259,17 +259,17 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 삽입할 범위의 끝입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 열거형입니다.
 
-*val*<br/>
+*짧은*<br/>
 삽입할 요소의 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 제어 되는 시퀀스를 값 *val*의 *count* 요소 반복으로 바꿉니다. 이를 사용 하 여 동일한 값을 갖는 요소로 컨테이너를 채웁니다.
 
-`InIt` 정수 형식이 면 두 번째 멤버 함수는 `assign((size_type)first, (value_type)last)`와 동일 하 게 동작 합니다. 그렇지 않으면 제어 되는 시퀀스를 [`first`, `last`) 시퀀스로 바꿉니다. 이를 사용 하 여 제어 되는 시퀀스를 다른 시퀀스로 복사 합니다.
+`InIt`가 정수 형식이 면 두 번째 멤버 함수는와 동일 하 게 동작 합니다 `assign((size_type)first, (value_type)last)` . 그렇지 않으면 제어 되는 시퀀스를 [ `first` ,) 시퀀스로 바꿉니다 `last` . 이를 사용 하 여 제어 되는 시퀀스를 다른 시퀀스로 복사 합니다.
 
 세 번째 멤버 함수는 제어 되는 시퀀스를 열거자 *오른쪽*으로 지정 된 시퀀스로 바꿉니다. 이를 사용 하 여 제어 되는 시퀀스를 열거자에서 설명 하는 시퀀스의 복사본으로 만듭니다.
 
@@ -327,7 +327,7 @@ a b c
 reference back();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)에 액세스 합니다.
 
@@ -378,7 +378,7 @@ a b x
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소에 액세스 합니다. 이를 사용 하 여 마지막 요소 (있는 경우)를 읽거나 씁니다.
 
@@ -429,7 +429,7 @@ a b x
 iterator begin();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 첫 번째 요소 또는 빈 시퀀스의 끝 바로 다음을 지정 하는 임의 액세스 반복기를 반환 합니다. 이를 통해 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -484,9 +484,9 @@ x y c
 void clear();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 list:: [erase (stl/clr)](../dotnet/list-erase-stl-clr.md)`(` list:: [begin (](../dotnet/list-begin-stl-clr.md) stl/clr)`(),` [LIST:: end (stl/clr)](../dotnet/list-end-stl-clr.md)`())`를 효과적으로 호출 합니다. 이를 사용 하 여 제어 되는 시퀀스가 비어 있는지 확인 합니다.
+멤버 함수는 [list:: erase (stl/clr)](../dotnet/list-erase-stl-clr.md) `(` [list:: begin (stl/clr)](../dotnet/list-begin-stl-clr.md) `(),` [list:: end (stl/clr)](../dotnet/list-end-stl-clr.md)를 효과적으로 호출 합니다 `())` . 이를 사용 하 여 제어 되는 시퀀스가 비어 있는지 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -541,9 +541,9 @@ size() = 0
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 상수 임의 액세스 반복기로 사용 될 수 있는 `T2` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T2`이 형식은 제어 되는 시퀀스에 대 한 상수 임의 액세스 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -582,7 +582,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 상수 참조를 설명 하는 형식입니다.
 
@@ -626,9 +626,9 @@ a b c
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용 될 수 있는 `T4` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T4`이 형식은 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -668,7 +668,7 @@ c b a
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 서명 된 요소 수를 설명 합니다.
 
@@ -722,9 +722,9 @@ begin()-end() = -3
 bool empty();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`와 동일 합니다. 목록이 비어 있는지 여부를 테스트 하는 데 사용 합니다.
+멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)와 동일 `() == 0` 합니다. 목록이 비어 있는지 여부를 테스트 하는 데 사용 합니다.
 
 ### <a name="example"></a>예제
 
@@ -773,7 +773,7 @@ empty() = True
 iterator end();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 끝 바로 다음을 가리키는 임의 액세스 반복기를 반환 합니다. 이를 사용 하 여 제어 되는 시퀀스의 끝을 지정 하는 반복기를 가져옵니다. 제어 되는 시퀀스의 길이가 변경 되 면 해당 상태는 변경 되지 않습니다.
 
@@ -841,13 +841,13 @@ iterator erase(iterator first, iterator last);
 *where*<br/>
 지울 요소입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 첫 번째 멤버 함수는 where가 가리키는 제어 *되*는 시퀀스의 요소를 제거 합니다. 단일 요소를 제거 하는 데 사용 합니다.
 
 두 번째 멤버 함수는 [`first`, `last`]의 범위에서 제어되는 시퀀스의 요소를 제거합니다. 연속 된 요소를 0 개 이상 제거 하는 데 사용 합니다.
 
-두 멤버 함수는 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, 이러한 요소가 없는 경우 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`를 반환 합니다.
+두 멤버 함수는 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하거나, 이러한 요소가 없는 경우 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) 를 반환 `()` 합니다.
 
 요소를 지울 때 요소 복사본의 수는 삭제의 끝과 시퀀스의 가까운 끝 사이에 있는 요소 수의 선형입니다. 시퀀스의 한쪽 끝에서 하나 이상의 요소를 지우면 요소 복사는 발생 하지 않습니다.
 
@@ -908,7 +908,7 @@ size() = 1
 reference front();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 이를 사용 하 여 첫 번째 요소가 있으면이를 읽거나 씁니다.
 
@@ -959,7 +959,7 @@ x b c
 property value_type front_item;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 속성은 비어 있지 않아야 하는 제어 되는 시퀀스의 첫 번째 요소에 액세스 합니다. 이를 사용 하 여 첫 번째 요소가 있으면이를 읽거나 씁니다.
 
@@ -1012,7 +1012,7 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 템플릿 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 하는 형식입니다.
 
@@ -1078,7 +1078,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 반복기를 설명 합니다.
 
@@ -1135,7 +1135,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은이 템플릿 컨테이너 클래스의 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.
 
@@ -1191,9 +1191,9 @@ a c c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 `GValue` 형식의 개체를 설명 하는 형식입니다.
+`GValue`이 템플릿 컨테이너 클래스의 제네릭 인터페이스에 사용할 저장 된 요소 값을 설명 하는 형식의 개체를 설명 하는 형식입니다.
 
 ### <a name="example"></a>예제
 
@@ -1263,16 +1263,16 @@ void insert(iterator where,
 *last*<br/>
 삽입할 범위의 끝입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 열거형입니다.
 
-*val*<br/>
+*짧은*<br/>
 삽입할 요소의 값입니다.
 
 *where*<br/>
 컨테이너에서 앞에 삽입할 위치입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 각 멤버 함수는 제어 되는 시퀀스의 *where* 가 가리키는 요소 앞에 나머지 피연산자로 지정 된 시퀀스를 삽입 합니다.
 
@@ -1280,11 +1280,11 @@ void insert(iterator where,
 
 두 번째 멤버 함수는 값 *val*의 *count* 요소 반복을 삽입 합니다. 동일한 값의 모든 복사본 인 연속 요소를 0 개 이상 삽입 하는 데 사용 합니다.
 
-`InIt`가 정수 형식이면 세 번째 멤버 함수는 `insert(where, (size_type)first, (value_type)last)`와 동일하게 동작합니다. 그렇지 않으면 [`first`, `last`) 시퀀스를 삽입 합니다. 이를 사용 하 여 다른 시퀀스에서 복사 된 0 개 이상의 연속 요소를 삽입 합니다.
+`InIt`가 정수 형식이면 세 번째 멤버 함수는 `insert(where, (size_type)first, (value_type)last)`와 동일하게 동작합니다. 그렇지 않으면 [,) 시퀀스를 `first` 삽입 `last` 합니다. 이를 사용 하 여 다른 시퀀스에서 복사 된 0 개 이상의 연속 요소를 삽입 합니다.
 
 네 번째 멤버 함수는 *오른쪽*에 지정 된 시퀀스를 삽입 합니다. 이를 사용 하 여 열거자에서 설명 하는 시퀀스를 삽입 합니다.
 
-단일 요소를 삽입할 때 요소 복사본의 수는 삽입 지점과 시퀀스의 가까운 끝 사이에 있는 요소 수의 선형입니다. 시퀀스의 한쪽 끝에 하나 이상의 요소를 삽입 하는 경우 요소 복사는 발생 하지 않습니다. `InIt` 입력 반복기 인 경우 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효과적으로 수행 합니다. `N` 요소를 삽입 하는 경우 요소 복사본의 수는 선형 이며, 삽입 지점과 시퀀스의 가까운 끝 사이에 있는 요소 수를 더한 값이 `N`.
+단일 요소를 삽입할 때 요소 복사본의 수는 삽입 지점과 시퀀스의 가까운 끝 사이에 있는 요소 수의 선형입니다. 시퀀스의 한쪽 끝에 하나 이상의 요소를 삽입 하는 경우 요소 복사는 발생 하지 않습니다. `InIt`가 입력 반복기 인 경우 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효과적으로 수행 합니다. 그렇지 않은 경우 `N` 요소를 삽입할 때 요소 복사본의 수는 선형이 `N` 고 삽입 지점과 시퀀스의 끝 부분 사이에 있는 요소 수를 더한 값입니다.
 
 ### <a name="example"></a>예제
 
@@ -1365,9 +1365,9 @@ a x b c y y a x b
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 형식은 제어 되는 시퀀스의 임의 액세스 반복기로 사용 될 수 있는 `T1` 지정 되지 않은 형식의 개체를 설명 합니다.
+`T1`이 형식은 제어 되는 시퀀스의 임의 액세스 반복기로 사용 될 수 있는 지정 되지 않은 형식의 개체를 설명 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1432,13 +1432,13 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *last*<br/>
 삽입할 범위의 끝입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 삽입할 개체 또는 범위입니다.
 
-*val*<br/>
+*짧은*<br/>
 삽입할 요소의 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 생성자는 다음과 같습니다.
 
@@ -1450,19 +1450,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(list<Value>% right);`
 
-[`right.begin()`, `right.end()`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 목록 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 `right.begin()` `right.end()` 합니다. 이를 사용 하 여 목록 개체 *오른쪽*에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `list(list<Value>^ right);`
 
-[`right->begin()`, `right->end()`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 핸들이 *right*인 목록 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
+시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 `right->begin()` `right->end()` 합니다. 이를 사용 하 여 핸들이 *right*인 목록 개체에 의해 제어 되는 시퀀스의 복사본 인 초기 제어 되는 시퀀스를 지정 합니다.
 
 생성자는 다음과 같습니다.
 
 `explicit list(size_type count);`
 
-*count* 요소를 사용 하 여 `value_type()`값을 포함 하는 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 모든 기본 값을 갖는 요소로 컨테이너를 채웁니다.
+각각 값을 포함 하는 *count* 요소를 사용 하 여 제어 되는 시퀀스를 초기화 합니다 `value_type()` . 이를 사용 하 여 모든 기본 값을 갖는 요소로 컨테이너를 채웁니다.
 
 생성자는 다음과 같습니다.
 
@@ -1476,7 +1476,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(InIt first, InIt last);`
 
-[`first`, `last`) 시퀀스를 사용 하 여 제어 되는 시퀀스를 초기화 합니다. 이를 사용 하 여 제어 되는 시퀀스를 다른 시퀀스의 복사본으로 만듭니다.
+시퀀스 [,)를 사용 하 여 제어 되는 시퀀스를 초기화 `first` `last` 합니다. 이를 사용 하 여 제어 되는 시퀀스를 다른 시퀀스의 복사본으로 만듭니다.
 
 생성자는 다음과 같습니다.
 
@@ -1551,7 +1551,7 @@ x x x x x x
 
 ## <a name="listmerge-stlclr"></a><a name="merge"></a>list:: merge (STL/CLR)
 
-제어 되는 시퀀스를 정렬 된 두 개의 병합 합니다.
+순서가 지정된 두 개의 제어되는 시퀀스를 병합합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -1566,16 +1566,16 @@ template<typename Pred2>
 *pred*<br/>
 요소 쌍에 대 한 비교자입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 병합할 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 *오른쪽* 에 의해 제어 되는 시퀀스에서 모든 요소를 제거 하 고 제어 되는 시퀀스에 삽입 합니다. 두 시퀀스 모두 `operator<` 하 여 이전에 정렬 되어야 합니다. 즉, 요소 중 하나를 진행 하는 동안 요소는 값으로 감소 해서는 안 됩니다. 또한 결과 시퀀스는 `operator<`정렬 됩니다. 값이 증가 하는 두 시퀀스를 값이 증가 하는 시퀀스로 병합 하려면이 멤버 함수를 사용 합니다.
+첫 번째 멤버 함수는 *오른쪽* 에 의해 제어 되는 시퀀스에서 모든 요소를 제거 하 고 제어 되는 시퀀스에 삽입 합니다. 두 시퀀스를 모두 이전에 정렬 해야 하는 `operator<` 경우--두 시퀀스 중 하나를 진행 하는 동안 요소는 값을 줄여야 합니다. 또한 결과 시퀀스는를 기준으로 정렬 됩니다 `operator<` . 값이 증가 하는 두 시퀀스를 값이 증가 하는 시퀀스로 병합 하려면이 멤버 함수를 사용 합니다.
 
-두 번째 멤버 함수는 첫 번째 멤버 함수와 동일 하 게 동작 합니다. 단, 시퀀스의 `Y` 요소 다음에 오는 모든 요소 `X`에 대해 `pred` -- `pred(X, Y)` false 여야 합니다. 이를 사용 하 여 지정 하는 조건자 함수 또는 대리자를 기준으로 정렬 된 두 시퀀스를 병합 합니다.
+두 번째 멤버 함수는 `pred`  --  `pred(X, Y)` 시퀀스의 요소 다음에 오는 모든 요소에 대해에서 `X` 시퀀스를 정렬 하는 것을 제외 하 고 첫 번째 멤버 함수와 동일 하 게 동작 합니다 `Y` . 이를 사용 하 여 지정 하는 조건자 함수 또는 대리자를 기준으로 정렬 된 두 시퀀스를 병합 합니다.
 
-두 함수 모두 안정적인 병합을 수행 합니다. 원래 제어 되는 시퀀스 중 하나에 있는 요소 쌍이 결과 제어 되는 시퀀스에서 반전 되지 않습니다. 또한 결과 제어 되는 시퀀스의 요소 쌍 `X` 및 `Y`에 동일한 `!(X < Y) && !(X < Y)` 순서가 지정 된 경우, 원래 제어 되는 시퀀스의 요소가 *right*로 제어 되는 시퀀스의 요소 앞에 나타납니다.
+두 함수 모두 안정적인 병합을 수행 합니다. 원래 제어 되는 시퀀스 중 하나에 있는 요소 쌍이 결과 제어 되는 시퀀스에서 반전 되지 않습니다. 또한 요소 쌍 `X` 과 `Y` 결과 제어 되는 시퀀스의 순서가 동일한 경우에는 `!(X < Y) && !(X < Y)` 원래 제어 되는 시퀀스의 요소가 *right*로 제어 되는 시퀀스의 요소 앞에 나타납니다.
 
 ### <a name="example"></a>예제
 
@@ -1658,12 +1658,12 @@ list<Value>% operator=(list<Value>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 복사할 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 연산자는 개체에 대해 *오른쪽* 으로 복사한 다음 `*this`반환 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
+멤버 연산자는 개체에 대해 *를 복사 하 고를 반환* **`*this`** 합니다. 이를 사용 하 여 제어 되는 시퀀스를 *오른쪽*에 있는 제어 되는 시퀀스의 복사본으로 바꿉니다.
 
 ### <a name="example"></a>예제
 
@@ -1709,7 +1709,7 @@ a b c
 void pop_back();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 마지막 요소를 제거 합니다. 이를 사용 하 여 다시 목록에 한 요소를 줄입니다.
 
@@ -1756,7 +1756,7 @@ a b
 void pop_front();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 비어 있지 않아야 하는 제어 되는 시퀀스의 첫 번째 요소를 제거 합니다. 이를 사용 하 여 맨 앞에 있는 요소 하나 만큼 목록을 단축할 수 있습니다.
 
@@ -1803,9 +1803,9 @@ b c
 void push_back(value_type val);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스의 끝에 `val` 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 목록에 추가 합니다.
+멤버 함수는 제어 되는 `val` 시퀀스의 끝에 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 목록에 추가 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1843,9 +1843,9 @@ a b c
 void push_front(value_type val);
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어 되는 시퀀스의 시작 부분에 `val` 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 목록에 추가 합니다.
+멤버 함수는 제어 되는 `val` 시퀀스의 시작 부분에 값이 포함 된 요소를 삽입 합니다. 이를 사용 하 여 다른 요소를 목록에 추가 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1883,7 +1883,7 @@ c b a
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 마지막 요소 또는 빈 시퀀스의 시작 부분 바로 뒤를 지정 하는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `beginning`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -1938,7 +1938,7 @@ a y x
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 요소에 대 한 참조를 설명 하는 형식입니다.
 
@@ -1995,12 +1995,12 @@ void remove(value_type val);
 
 #### <a name="parameters"></a>매개 변수
 
-*val*<br/>
+*짧은*<br/>
 제거할 요소의 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `((System::Object^)val)->Equals((System::Object^)x)` true (있는 경우) 인 제어 되는 시퀀스에서 요소를 제거 합니다. 이를 사용 하 여 지정 된 값을 가진 임의의 요소를 지울 수 있습니다.
+멤버 함수는 `((System::Object^)val)->Equals((System::Object^)x)` 가 true (있는 경우) 인 제어 되는 시퀀스에서 요소를 제거 합니다. 이를 사용 하 여 지정 된 값을 가진 임의의 요소를 지울 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2058,9 +2058,9 @@ template<typename Pred1>
 *pred*<br/>
 제거할 요소를 테스트 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `pred(X)` true 인 모든 요소 `X` 모든 요소를 제어 되는 시퀀스에서 제거 합니다. 이를 사용 하 여 함수 또는 대리자로 지정 된 조건을 충족 하는 모든 요소를 제거 합니다.
+멤버 함수는가 true 인 모든 요소를 제어 되는 시퀀스에서 제거 합니다 (지우기) `X` `pred(X)` . 이를 사용 하 여 함수 또는 대리자로 지정 된 조건을 충족 하는 모든 요소를 제거 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2116,7 +2116,7 @@ b b b
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스의 시작 부분 바로 뒤를 가리키는 역방향 반복기를 반환 합니다. 따라서 역방향 시퀀스의 `end`을 지정합니다. 이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 끝을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.
 
@@ -2178,12 +2178,12 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 제어 되는 시퀀스의 새 크기입니다.
 
-*val*<br/>
+*짧은*<br/>
 패딩 요소의 값입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`()` 예측이가 *new_size*을 반환 하는지 확인 합니다. 제어 되는 시퀀스를 더 길게 만들어야 하는 경우 첫 번째 멤버 함수는 `value_type()`값을 가진 요소를 추가 하는 반면 두 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 추가 합니다 제어 되는 시퀀스를 더 짧게 만들기 위해 두 멤버 함수는 마지막 요소 [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() -` `new_size` 시간을 효과적으로 지웁니다. 이를 사용 하 여 제어 되는 시퀀스의 크기 *new_size*현재 제어 되는 시퀀스를 트리밍 또는 패딩 하 여 확인 합니다.
+멤버 함수는 [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` 예측이가 *new_size*를 반환 하는지 확인 합니다. 제어 되는 시퀀스를 더 길게 만들어야 하는 경우 첫 번째 멤버 함수는 값 `value_type()` 이 인 요소를 추가 하는 반면 두 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 추가 합니다. 제어 되는 시퀀스를 더 짧게 만들기 위해 두 멤버 함수는 마지막 요소 [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) 시간을 효과적으로 지웁니다 `() -` `new_size` . 이를 사용 하 여 제어 되는 시퀀스의 크기 *new_size*현재 제어 되는 시퀀스를 트리밍 또는 패딩 하 여 확인 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2232,7 +2232,7 @@ x x x x x
 void reverse();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스에 있는 모든 요소의 순서를 반대로 바꿉니다. 요소 목록을 반영 하는 데 사용 합니다.
 
@@ -2279,7 +2279,7 @@ c b a
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 제어된 시퀀스에 대해 반대 반복기로 사용될 수 있는 지정되지 않은 `T3` 형식의 개체를 설명합니다.
 
@@ -2328,9 +2328,9 @@ x b a
 size_type size();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [목록:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`을 참조 하세요.
+멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 이를 사용 하 여 현재 제어 되는 시퀀스에 있는 요소 수를 확인 합니다. 시퀀스의 크기가 0이 아니면 [목록:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)를 참조 하세요 `()` .
 
 ### <a name="example"></a>예제
 
@@ -2381,7 +2381,7 @@ size() = 2 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 형식은 음수가 아닌 요소 수를 설명 합니다.
 
@@ -2421,7 +2421,7 @@ end()-begin() = 3
 
 ## <a name="listsort-stlclr"></a><a name="sort"></a>list:: sort (STL/CLR)
 
-제어 되는 시퀀스를 정렬합니다.
+제어되는 시퀀스를 정렬합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -2436,11 +2436,11 @@ template<typename Pred2>
 *pred*<br/>
 요소 쌍에 대 한 비교자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 제어 되는 시퀀스의 요소를 다시 정렬 하 여 `operator<`으로 정렬 되도록 합니다. 즉, 요소는 시퀀스를 진행 하는 동안 값이 감소 하지 않습니다. 이 멤버 함수를 사용 하 여 시퀀스를 오름차순으로 정렬 합니다.
+첫 번째 멤버 함수는 제어 되는 시퀀스의 요소를 순서 대로 정렬 하 여 `operator<` 시퀀스를 진행 하면서 요소를 기준으로 정렬 하지 않습니다. 이 멤버 함수를 사용 하 여 시퀀스를 오름차순으로 정렬 합니다.
 
-두 번째 멤버 함수는 첫 번째와 동일 하 게 동작 합니다. 단, 시퀀스는 `pred` -- `pred(X, Y)` `Y` `X` false를 기준으로 정렬 됩니다. 이를 사용 하 여 조건자 함수 또는 대리자에 의해 지정 된 순서로 시퀀스를 정렬 합니다.
+두 번째 멤버 함수는 첫 번째 멤버와 동일 하 게 동작 합니다. 단, `pred`  --  `pred(X, Y)` `X` 결과 시퀀스의 요소 다음에 오는 모든 요소에 대 한 시퀀스의 순서가 false입니다 `Y` . 이를 사용 하 여 조건자 함수 또는 대리자에 의해 지정 된 순서로 시퀀스를 정렬 합니다.
 
 두 함수 모두 안정적 정렬을 수행 합니다. 원래 제어 되는 시퀀스의 요소 쌍은 결과 제어 되는 시퀀스에서 반전 됩니다.
 
@@ -2506,19 +2506,19 @@ Splice 범위의 시작입니다.
 *last*<br/>
 Splice 범위의 끝입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 Splice 할 컨테이너입니다.
 
 *where*<br/>
 컨테이너에서 앞으로 splice 할 위치입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 제어 되는 시퀀스에서가 가리키는 요소 *바로* 앞에에 의해 제어 *되*는 시퀀스를 삽입 합니다. 또한 *오른쪽*에서 모든 요소를 제거 합니다. `%right` `this`같지 않아야 합니다. 이를 사용 하 여 한 목록을 다른 목록으로 결합 합니다.
+첫 번째 멤버 함수는 제어 되는 시퀀스에서가 가리키는 요소 *바로* 앞에에 의해 제어 *되*는 시퀀스를 삽입 합니다. 또한 *오른쪽*에서 모든 요소를 제거 합니다. `%right`와 같지 않아야 **`this`** 합니다. 이를 사용 하 여 한 목록을 다른 목록으로 결합 합니다.
 
-두 번째 멤버 함수는 *오른쪽* 에 의해 제어 되는 시퀀스에서 *먼저* 가리키는 요소를 제거 하 고 *where*가 가리키는 제어 되는 시퀀스의 요소 앞에 삽입 합니다. `where` `==` `first` `||` `where` `== ++first`에는 변경 내용이 발생 하지 않습니다. 이를 사용 하 여 한 목록에 있는 단일 요소를 다른 목록으로 결합 합니다.
+두 번째 멤버 함수는 *오른쪽* 에 의해 제어 되는 시퀀스에서 *먼저* 가리키는 요소를 제거 하 고 *where*가 가리키는 제어 되는 시퀀스의 요소 앞에 삽입 합니다. (인 경우 `where` `==` `first` `||` `where` `== ++first`변경 내용이 발생 하지 않습니다. 이를 사용 하 여 한 목록에 있는 단일 요소를 다른 목록으로 결합 합니다.
 
-세 번째 멤버 함수는 [`first`, `last`)로 지정 된 하위 범위를 where가 가리키는 제어 *되*는 시퀀스의 요소 *바로* 앞에에 의해 제어 되는 시퀀스에서 삽입 합니다. 또한 *right*로 제어 되는 시퀀스에서 원래 하위 범위를 제거 합니다. `this``==` `right` 경우 [`first`, `last`) 범위는 *where*가 가리키는 요소를 포함 하지 않아야 합니다. 이를 사용 하 여 하위 시퀀스 0 개 이상의 요소를 한 목록에서 다른 목록으로 결합 합니다.
+세 번째 멤버 함수는 [,)로 지정 된 하위 범위를 `first` `last` where가 가리키는 제어 *되*는 시퀀스의 요소 *바로* 앞에 있는 시퀀스에서 삽입 합니다. 또한 *right*로 제어 되는 시퀀스에서 원래 하위 범위를 제거 합니다. 인 경우 `right == this` 범위 [ `first` ,)는 `last` *where*가 가리키는 요소를 포함 하지 않아야 합니다. 이를 사용 하 여 하위 시퀀스 0 개 이상의 요소를 한 목록에서 다른 목록으로 결합 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2589,12 +2589,12 @@ void swap(list<Value>% right);
 
 #### <a name="parameters"></a>매개 변수
 
-*right*<br/>
+*오른쪽*<br/>
 콘텐츠와 바꿀 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-멤버 함수는 `*this`와 *right*사이에서 제어 되는 시퀀스를 바꿉니다. 일정 한 시간에이를 수행 하 고 예외를 throw 하지 않습니다. 이를 사용 하 여 두 컨테이너의 콘텐츠를 신속 하 게 교환할 수 있습니다.
+멤버 함수는 제어 되는 시퀀스를 **`*this`** 과 *오른쪽*으로 바꿉니다. 일정 한 시간에이를 수행 하 고 예외를 throw 하지 않습니다. 이를 사용 하 여 두 컨테이너의 콘텐츠를 신속 하 게 교환할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2651,7 +2651,7 @@ a b c
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 이를 사용 하 여 배열 형식으로 제어 되는 시퀀스의 복사본을 가져옵니다.
 
@@ -2707,11 +2707,11 @@ template<typename Pred2>
 *pred*<br/>
 요소 쌍에 대 한 비교자입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-첫 번째 멤버 함수는 이전 요소와 비교 되는 모든 요소를 제어 되는 시퀀스에서 제거 합니다. 요소 `X` 요소 `Y` 및 `X == Y`앞에 오면 멤버 함수는 `Y`를 제거 합니다. 이를 사용 하 여 동일 하 게 비교 되는 인접 요소의 모든 하위 시퀀스 복사본을 하나만 제거 합니다. [List:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`호출 하는 것과 같이 제어 되는 시퀀스가 정렬 된 경우 멤버 함수는 고유 값을 가진 요소만 남겨 둡니다. (그래서 이러한 이름을 갖습니다.)
+첫 번째 멤버 함수는 이전 요소와 같은 것으로 비교 되는 모든 요소를 제어 되는 시퀀스에서 제거 합니다 `X` . 요소가 요소와 앞에 오면 `Y` `X == Y` 멤버 함수는를 제거 `Y` 합니다. 이를 사용 하 여 동일 하 게 비교 되는 인접 요소의 모든 하위 시퀀스 복사본을 하나만 제거 합니다. [List:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)를 호출 하는 것과 같이 제어 되는 시퀀스를 정렬 하는 경우 `()` 멤버 함수는 고유 값이 있는 요소만 남겨 둡니다. (그래서 이러한 이름을 갖습니다.)
 
-두 번째 멤버 함수는 첫 번째 함수와 동일 하 게 동작 합니다. 단,이 함수는 `pred(X, Y)`에 대 한 요소 `X` 다음에 `Y` 각 요소를 제거 합니다. 이를 사용 하 여 사용자가 지정 하는 조건자 함수 또는 대리자를 만족 하는 인접 요소를 제외한 모든 하위 시퀀스의 복사본을 하나만 제거 합니다. `sort(pred)`를 호출 하는 것과 같이 제어 되는 시퀀스가 정렬 된 경우 멤버 함수는 다른 요소와 동일한 순서로 정렬 되지 않는 요소만 남겨 둡니다.
+두 번째 멤버 함수는 요소 다음에 나오는 각 요소를 제거 한다는 점을 제외 하 고 첫 번째 함수와 동일 하 게 동작 합니다 `Y` `X` `pred(X, Y)` . 이를 사용 하 여 사용자가 지정 하는 조건자 함수 또는 대리자를 만족 하는 인접 요소를 제외한 모든 하위 시퀀스의 복사본을 하나만 제거 합니다. 을 호출 하는 것과 같이 제어 되는 시퀀스를 정렬 하는 경우 `sort(pred)` 멤버 함수는 다른 요소와 동일한 순서를 갖지 않는 요소만 남겨 둡니다.
 
 ### <a name="example"></a>예제
 
@@ -2766,7 +2766,7 @@ a a
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 형식은 템플릿 매개 변수 *값*의 동의어입니다.
 
@@ -2815,15 +2815,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left == right)`를 반환 합니다. 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left == right)` . 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>연산자&lt; (목록) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>연산자 &lt; (목록) (STL/CLR)
 
 비교 보다 작음 목록입니다.
 
@@ -2884,15 +2884,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-연산자 함수는 `left[i] < right[i]`에도 해당 `!(right[i] < left[i])` `i` 가장 낮은 위치에 대해 true를 반환 합니다. 그렇지 않으면 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 에 정렬 되었는지 여부를 테스트 하는 데 사용 하 `left->size() < right->size()`를 반환 합니다.
+연산자 함수는 해당 하는 가장 낮은 위치에 대해서도 true를 반환 합니다 `i` `!(right[i] < left[i])` `left[i] < right[i]` . 그렇지 않은 경우이 메서드를 `left->size() < right->size()` 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 에 정렬 되는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>연산자&lt;= (목록) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = (목록) (STL/CLR)
 
 보다 작거나 같음 비교를 나열 합니다.
 
@@ -2953,15 +2953,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(right < left)`를 반환 합니다. 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(right < left)` . 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -3022,15 +3022,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 `i`각 위치에 대해 `right[i]``left[i] ==` 경우에만 true를 반환 합니다. 이를 사용 하 여 두 목록이 요소에 의해 비교 될 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
+Operator 함수는 *left* 및 *right* 로 제어 되는 시퀀스의 길이가 같고 각 위치에 대해가 인 경우에만 true를 반환 합니다 `i` `left[i] ==` `right[i]` . 이를 사용 하 여 두 목록이 요소에 의해 비교 될 때 *왼쪽* 이 *오른쪽* 과 동일 하 게 정렬 되었는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>연산자&gt; (목록) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>연산자 &gt; (목록) (STL/CLR)
 
 비교 보다 큼을 나열 합니다.
 
@@ -3091,15 +3091,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `right` `<` `left`반환 합니다. 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
+연산자 함수는를 반환 합니다 `right` `<` `left` . 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 다음에 정렬 되는지 여부를 테스트 합니다.
 
 ### <a name="example"></a>예제
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>연산자&gt;= (목록) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = (목록) (STL/CLR)
 
 보다 크거나 같음 비교를 나열 합니다.
 
@@ -3160,15 +3160,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>매개 변수
 
-*left*<br/>
+*비어*<br/>
 비교할 왼쪽 컨테이너입니다.
 
-*right*<br/>
+*오른쪽*<br/>
 비교할 오른쪽 컨테이너입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-Operator 함수는 `!(left` `<` `right)`반환 합니다. 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 앞에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
+연산자 함수는를 반환 합니다 `!(left` `<` `right)` . 이를 사용 하 여 두 목록을 요소 별로 비교할 때 *왼쪽* 이 *오른쪽* 앞에 정렬 되지 않는지 여부를 테스트할 수 있습니다.
 
 ### <a name="example"></a>예제
 

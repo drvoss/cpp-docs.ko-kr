@@ -6,16 +6,16 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216741"
 ---
 # <a name="signbit"></a>signbit
 
-부동 소수점 값이 음수 인지를 결정 합니다.
+부동 소수점 값이 음수 인지 여부를 확인 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,11 +44,11 @@ inline bool signbit(
 
 ## <a name="return-value"></a>반환 값
 
-**signbit** 0이 아닌 값을 반환 합니다 (**true** 에서 C++) 하는 경우 인수 *x* 음수 또는 음의 무한대가 있습니다. 0을 반환 합니다 (**false** 에서 C++) 인수가 음수가 아닌, 양의 무한대 또는 NAN 인 경우.
+인수가 음수 또는 음의 무한대 인 경우 **signbit** 는 0이 아닌 값 ( **`true`** c + +의 경우)을 반환 합니다. *x* **`false`** 인수가 음수가 아니거나 양의 무한대 또는 NAN 인 경우 0 (c + +)을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 
-**signbit** 매크로로 컴파일된 경우 오버 로드 된 인라인 함수를 C로 컴파일될 때 C++합니다.
+**signbit** 는 c로 컴파일될 때의 매크로 이며, c + +로 컴파일될 때 오버 로드 된 인라인 함수입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -56,9 +56,9 @@ inline bool signbit(
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> 또는 \<cmath>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

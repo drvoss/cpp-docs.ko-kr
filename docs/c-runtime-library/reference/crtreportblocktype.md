@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213595"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -53,15 +53,15 @@ int _CrtReportBlockType(
 *pBlock*<br/>
 유효한 디버그 힙 블록에 대한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-유효한 디버그 힙 포인터가 전달 되 면 **_CrtReportBlockType** 함수는 **int**형식의 블록 형식과 하위 형식을 반환 합니다. 잘못된 포인터를 전달한 경우 함수는 -1을 반환합니다.
+유효한 디버그 힙 포인터를 전달 하는 경우 **_CrtReportBlockType** 함수는의 형식으로 블록 형식과 하위 형식을 반환 합니다 **`int`** . 잘못된 포인터를 전달한 경우 함수는 -1을 반환합니다.
 
 ## <a name="remarks"></a>설명
 
-**_CrtReportBlockType**에서 반환 하는 형식 및 하위 형식을 추출 하려면 반환 값에 **_BLOCK_TYPE** 및 **_block_ubm** (모두 crtdbg.h에 정의 됨)을 사용 합니다.
+**_CrtReportBlockType**에서 반환 된 형식과 하위 형식을 추출 하려면 매크로 **_BLOCK_TYPE** 를 사용 하 고 반환 값에 **_BLOCK_SUBTYPE** (둘 다 crtdbg.h에서 정의 됨)을 사용 합니다.
 
-할당 블록 형식과 이러한 형식의 사용 방법에 대한 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.
+할당 블록 형식 및 사용 방법에 대 한 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -69,7 +69,7 @@ int _CrtReportBlockType(
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
@@ -134,7 +134,7 @@ Data: <          > CD CD CD CD CD CD CD CD CD CD
 Object dump complete.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [_CrtDoForAllClientObjects](crtdoforallclientobjects.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

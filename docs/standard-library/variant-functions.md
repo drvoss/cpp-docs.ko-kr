@@ -1,21 +1,21 @@
 ---
-title: '&lt;variant&gt; 함수'
+title: '&lt;변형 &gt; 함수'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
 - variant/std::get_if
 - variant/std::holds_alternative
 - variant/std::visit
-ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b39e75cb94f8439bba802925e6145dcf67942960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427622"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232835"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;variant&gt; 함수
+# <a name="ltvariantgt-functions"></a>&lt;변형 &gt; 함수
 
-## <a name="get"></a> get
+## <a name="get"></a><a name="get"></a>가져오기
 
 개체의 변형을 가져옵니다.
 
@@ -38,7 +38,7 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a>get_if
+## <a name="get_if"></a><a name="get_if"></a>get_if
 
 개체의 변형 (있는 경우)을 가져옵니다.
 
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a>holds_alternative
+## <a name="holds_alternative"></a><a name="holds_alternative"></a>holds_alternative
 
-변형이 있는 경우 **true** 를 반환 합니다.
+**`true`** 변형이 있으면를 반환 합니다.
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>스왑을
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a>variant_npos
+## <a name="variant_npos"></a><a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,7 +77,7 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a>열어
+## <a name="visit"></a><a name="visit"></a>열어
 
 다음 **variant**로 이동 합니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525295"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212945"
 ---
 # <a name="updating-rowsets"></a>행 집합 업데이트
 
@@ -31,7 +31,7 @@ ms.locfileid: "65525295"
 > [!NOTE]
 > Visual Studio 2019 이상에서는 ATL OLE DB 소비자 마법사를 사용할 수 없습니다. 수동으로 기능을 추가할 수는 있습니다. 자세한 내용은 [마법사를 사용하지 않고 소비자 만들기](creating-a-consumer-without-using-a-wizard.md)를 참조하세요.
 
-**ATL OLE DB 소비자 마법사**를 사용하여 소비자를 만드는 경우 **변경**, **삽입**, **삭제** 등의 세 확인란 중 하나 이상을 선택하여 업데이트 작업을 지원할 수 있습니다. 이러한 옵션을 선택하면, 선택한 변경 유형을 지원하도록 코드가 적절하게 수정됩니다. 그러나 마법사를 사용하지 않는 경우 업데이트를 지원하려면 다음 행 집합 속성을 `VARIANT_TRUE`로 설정해야 합니다.
+**ATL OLE DB 소비자 마법사**를 사용 하 여 소비자를 만드는 경우 **변경**, **삽입**및 **삭제**의 세 확인란 중 하나 이상을 선택 하 여 업데이트 작업을 지원할 수 있습니다. 이러한 옵션을 선택하면, 선택한 변경 유형을 지원하도록 코드가 적절하게 수정됩니다. 그러나 마법사를 사용하지 않는 경우 업데이트를 지원하려면 다음 행 집합 속성을 `VARIANT_TRUE`로 설정해야 합니다.
 
 - `DBPROPVAL_UP_CHANGE`를 사용하면 한 행의 데이터 값을 변경할 수 있습니다.
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (기본값)이면 현재 행이 다음 행으로 증가합니다(이 경우 삽입된 행을 가리킴).
+- **`false`** 기본값은 현재 행이 다음 행으로 증가 하도록 지정 합니다 .이 경우 삽입 된 행을 가리킵니다.
 
-- **true**이면 현재 행이 그대로 유지됩니다.
+- **`true`** 현재 행이 그대로 유지 되도록 지정 합니다.
 
 다음 코드에서는 `Products` 테이블의 열에 바인딩된 데이터 멤버의 값을 설정하고 `Insert`를 호출하여 행 집합의 100번째 행 뒤에 해당 값으로 새 행을 삽입합니다. 새 행에 정의되지 않은 데이터가 포함되지 않도록 모든 열 값을 설정하는 것이 좋습니다.
 
@@ -208,6 +208,6 @@ product.Update();                 // Update row 101 now
 
 ## <a name="see-also"></a>참고 항목
 
-[OLE DB 소비자 템플릿 작업](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[OLE DB 소비자 템플릿 사용](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 클래스](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

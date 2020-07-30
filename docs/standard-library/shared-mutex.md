@@ -45,28 +45,28 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 5dfb0e858bb412daf159ee9efc7dcc13be690886
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217482"
 ---
 # <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
-shared_mutex &lt;> 헤더는 여러 스레드에서 액세스할 수 있는 공유 데이터를 보호하기 위한 동기화 프리미티브를 제공합니다. 공유 mutex 클래스에서는 mutex 클래스가 제공하는 독점적 액세스 제어 기능을 사용할 수 있을 뿐 아니라, 비독점적 액세스를 위해 여러 스레드가 소유권을 공유할 수도 있습니다. 공유 뮤텍스를 사용하면 경쟁 조건을 발생시키지 않고 여러 스레드가 읽을 수 있는 동시에 스레드 하나가 독점적으로 쓸 수 있어야 하는리소스를 제어할 수 있습니다.
+&lt;Shared_mutex> 헤더는 여러 스레드에서 액세스할 수 있는 공유 데이터의 보호를 위한 동기화 기본 형식을 제공 합니다. 공유 mutex 클래스에서는 mutex 클래스가 제공하는 독점적 액세스 제어 기능을 사용할 수 있을 뿐 아니라, 비독점적 액세스를 위해 여러 스레드가 소유권을 공유할 수도 있습니다. 공유 뮤텍스를 사용하면 경쟁 조건을 발생시키지 않고 여러 스레드가 읽을 수 있는 동시에 스레드 하나가 독점적으로 쓸 수 있어야 하는리소스를 제어할 수 있습니다.
 
-&lt;헤더 `shared_mutex` shared_mutex> 클래스 및 `shared_timed_mutex`클래스 템플릿 `shared_lock`및 공유 `swap` 뮤텍스 지원을 위한 템플릿 함수를 정의합니다.
+헤더 &lt; shared_mutex>는 클래스 `shared_mutex` 및 `shared_timed_mutex` , 클래스 템플릿 `shared_lock` 및 `swap` 공유 뮤텍스 지원을 위한 템플릿 함수를 정의 합니다.
 
-|클래스|Description|
+|클래스|설명|
 |-------------|-----------------|
 |[shared_mutex 클래스](#class_shared_mutex)|에이전트 하나가 독점적으로 잠그거나 여러 에이전트가 비독점적으로 공유할 수 있는 공유 뮤텍스 형식입니다.|
 |[shared_timed_mutex 클래스](#class_shared_timed_mutex)|에이전트 하나가 독점적으로 잠그거나 여러 에이전트가 비독점적으로 공유할 수 있는 시간이 지정된 공유 뮤텍스 형식입니다.|
-|[shared_lock 클래스](#class_shared_lock)|시간 변경 된 잠금 작업 및 여러 에이전트에 의해 비 배타적 공유를 지원 하기 위해 공유 뮤 텍스래핑 클래스 템플릿입니다.|
+|[shared_lock 클래스](#class_shared_lock)|시간이 지정 된 잠금 작업을 지원 하 고 여러 에이전트가 배타로 공유 하지 않도록 공유 뮤텍스를 래핑하는 클래스 템플릿입니다.|
 
-|Functions|Description|
+|Functions|설명|
 |---------------|-----------------|
-|[스왑](#function_swap)|함수 매개 변수에서 참조하는 공유 뮤텍스 개체의 콘텐츠를 교환합니다.|
+|[스왑을](#function_swap)|함수 매개 변수에서 참조하는 공유 뮤텍스 개체의 콘텐츠를 교환합니다.|
 
 ## <a name="syntax"></a>구문
 
@@ -91,20 +91,20 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 - `unlock_shared` 메서드는 스레드를 호출하여 가져온 뮤텍스의 공유 소유권을 해제합니다.
 
-- `try_lock_shared` 메서드는 차단 없이 뮤텍스에 대한 공유 소유권을 가져오려고 시도합니다. 반환 유형은 **bool로** 변환할 수 있으며 메서드가 소유권을 얻는 경우 **true이지만** 그렇지 않으면 **false입니다.**
+- `try_lock_shared` 메서드는 차단 없이 뮤텍스에 대한 공유 소유권을 가져오려고 시도합니다. 반환 형식은로 변환할 수 **`bool`** 있으며, **`true`** 메서드가 소유권을 가져오면이 고, 그렇지 않으면입니다 **`false`** .
 
 `shared_timed_mutex` 클래스는 공유 뮤텍스 형식과 시간이 지정된 뮤텍스 형식의 요구 사항을 모두 충족하는 *시간이 지정된 공유 뮤텍스 형식*입니다.
 
 시간이 지정된 공유 뮤텍스 형식은 추가 메서드 `try_lock_shared_for` 및 `try_lock_shared_until`을 지원합니다.
 
-- `try_lock_shared_for` 메서드는 매개 변수에 의해 지정된 기간이 경과할 때까지 뮤텍스의 공유 소유권을 가져오려고 합니다. 기간이 양수가 아닌 경우 메서드는 `try_lock_shared`와 동일합니다. 공유 소유권을 가져오는 경우가 아니면 메서드는 지정된 기간 내에 결과를 반환하지 않습니다. 메서드가 소유권을 얻는 경우 반환 값은 **true이지만** 그렇지 않으면 **false입니다.**
+- `try_lock_shared_for` 메서드는 매개 변수에 의해 지정된 기간이 경과할 때까지 뮤텍스의 공유 소유권을 가져오려고 합니다. 기간이 양수가 아닌 경우 메서드는 `try_lock_shared`와 동일합니다. 공유 소유권을 가져오는 경우가 아니면 메서드는 지정된 기간 내에 결과를 반환하지 않습니다. 반환 값은 **`true`** 메서드가 소유권을 가져오는 경우이 고 그렇지 않은 경우입니다 **`false`** .
 
-- `try_lock_shared_until` 메서드는 지정된 절대 시간이 경과할 때까지 뮤텍스의 공유 소유권을 가져오려고 합니다. 지정한 시간이 이미 지난 경우 메서드는 `try_lock_shared`와 동일합니다. 공유 소유권을 가져오는 경우가 아니면 메서드는 지정된 기간 이전에 결과를 반환하지 않습니다. 메서드가 소유권을 얻는 경우 반환 값은 **true이지만** 그렇지 않으면 **false입니다.**
+- `try_lock_shared_until` 메서드는 지정된 절대 시간이 경과할 때까지 뮤텍스의 공유 소유권을 가져오려고 합니다. 지정한 시간이 이미 지난 경우 메서드는 `try_lock_shared`와 동일합니다. 공유 소유권을 가져오는 경우가 아니면 메서드는 지정된 기간 이전에 결과를 반환하지 않습니다. 반환 값은 **`true`** 메서드가 소유권을 가져오는 경우이 고 그렇지 않은 경우입니다 **`false`** .
 
-클래스 `shared_lock` 템플릿은 시간 초과 잠금 및 공유 뮤텍스로 소유권 이전지원을 확장합니다. 뮤텍스의 소유권은 생성 시나 생성 후에 가져와서 다른 `shared_lock` 개체로 전송할 수 있습니다. `shared_lock` 형식의 개체는 이동할 수는 있지만 복사할 수는 없습니다.
+`shared_lock`클래스 템플릿은 공유 뮤텍스로의 제한 된 잠금 및 소유권 전송에 대 한 지원을 확장 합니다. 뮤텍스의 소유권은 생성 시나 생성 후에 가져와서 다른 `shared_lock` 개체로 전송할 수 있습니다. `shared_lock` 형식의 개체는 이동할 수는 있지만 복사할 수는 없습니다.
 
 > [!WARNING]
-> Visual Studio 2015에서 시작되는 C++ 표준 라이브러리 동기화 유형은 Windows 동기화 기본 요소를 기반으로 하며 더 이상 ConcRT를 사용하지 않습니다(대상 플랫폼이 Windows XP인 경우 제외). &lt;shared_mutex> 정의된 형식은 ConcRT 형식이나 함수와 함께 사용해서는 안 됩니다.
+> Visual Studio 2015부터 c + + 표준 라이브러리 동기화 형식은 Windows 동기화 기본 형식을 기반으로 하며, 더 이상 ConcRT를 사용 하지 않습니다 (대상 플랫폼이 Windows XP 인 경우 제외). Shared_mutex>에 정의 된 형식은 &lt; 모든 ConcRT 형식 또는 함수와 함께 사용 하면 안 됩니다.
 
 ## <a name="classes"></a>클래스
 
@@ -169,7 +169,7 @@ public:
 
 ### <a name="shared_lock-class"></a><a name="class_shared_lock"></a> shared_lock 클래스
 
-클래스 `shared_lock` 템플릿은 범위 내에서 공유 뮤텍스 개체의 공유 소유권을 제어합니다. 템플릿 매개 변수는 공유 뮤텍스 형식이어야 합니다.
+클래스 템플릿은 `shared_lock` 범위 내에서 공유 뮤텍스 개체의 공유 소유권을 제어 합니다. 템플릿 매개 변수는 공유 뮤텍스 형식이어야 합니다.
 
 ```cpp
 class shared_lock {
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>Functions
 
-### <a name="swap"></a><a name="function_swap"></a>스왑
+### <a name="swap"></a><a name="function_swap"></a>스왑을
 
 `shared_lock` 개체를 교환합니다.
 

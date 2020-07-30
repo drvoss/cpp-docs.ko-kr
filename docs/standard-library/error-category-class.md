@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224879"
 ---
 # <a name="error_category-class"></a>error_category 클래스
 
@@ -82,7 +82,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 `_Errval`\
 [error_condition](../standard-library/error-condition-class.md)에 저장할 오류 코드 값입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 `error_condition(_Errval, *this)`를 반환합니다.
 
@@ -111,9 +111,9 @@ virtual bool equivalent(const error_code& _Code,
 *_Code*\
 비교할 [error_code](../standard-library/error-code-class.md) 개체입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
-범주와 값이 같으면 **true** 이 고, 그렇지 않으면입니다. 그렇지 않으면 **false**입니다.
+**`true`** 범주와 값이 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 #### <a name="remarks"></a>설명
 
@@ -140,7 +140,7 @@ virtual string message(error_code::value_type val) const = 0;
 *짧은*\
 설명할 오류 코드 값입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 범주에 대 한 오류 코드 *val* 의 설명이 포함 된 이름을 반환 합니다. 오류 코드를 인식할 수 없는 경우는를 반환 `"unknown error"` 합니다.
 
@@ -154,7 +154,7 @@ virtual string message(error_code::value_type val) const = 0;
 virtual const char *name() const = 0;
 ```
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
 범주 이름을 null 종료 바이트 문자열로 반환합니다.
 
@@ -177,9 +177,9 @@ bool operator==(const error_category& right) const;
 *오른쪽*\
 같은지 테스트할 개체입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
-개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.
+**`true`** 개체가 같으면이 고, 그렇지 않으면입니다. **`false`** 개체가 같지 않으면입니다.
 
 #### <a name="remarks"></a>설명
 
@@ -198,9 +198,9 @@ bool operator!=(const error_category& right) const;
 *오른쪽*\
 같지 않은지 테스트할 개체입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
-**true** `error_category` 개체가 오른쪽에 전달 된 개체와 같지 않으면 true `error_category` 이 고 *right*, 그렇지 않으면 **false**입니다.
+**`true`**`error_category`개체가 `error_category` *오른쪽*에 전달 된 개체와 같지 않으면이 고, 그렇지 않으면 **`false`** 입니다.
 
 #### <a name="remarks"></a>설명
 
@@ -219,9 +219,9 @@ bool operator<(const error_category& right) const;
 *오른쪽*\
 비교할 `error_category` 개체입니다.
 
-#### <a name="return-value"></a>반환 값
+#### <a name="return-value"></a>Return Value
 
-`error_category` 개체가 비교를 위해 전달된 `error_category` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.
+**`true`**`error_category`개체가 `error_category` 비교를 위해 전달 된 개체 보다 작은 경우 그렇지 않으면 **`false`** 입니다.
 
 #### <a name="remarks"></a>설명
 
@@ -243,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>설명
 
-이 형식 정의는 **int**의 동의어입니다.
+이 형식 정의는의 동의어입니다 **`int`** .

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-ms.openlocfilehash: 8ea4212eaddf14546827728b31299063021a959f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 286a9e6e12643d3dadd070e7c4cf4b2dd350c02c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989640"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219861"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>컴파일러 경고(수준 4) C4714
 
-' function ' 함수가 인라이닝 되지 __forceinline로 표시 되었습니다.
+> ' function ' 함수가 인라이닝 되지 __forceinline로 표시 되었습니다.
 
 지정 된 함수가 인라인 확장을 위해 선택 되었지만 컴파일러가 인라이닝을 수행 하지 않았습니다.
 
-`__forceinline`는 컴파일러에 대 한 `__inline`보다 더 강력한 표시 이지만 인라인은 여전히 컴파일러의 판단에 따라 수행 되지만 추론을 사용 하 여이 함수를 인라인 하는 이점을 확인 하지는 않습니다.
+**`__forceinline`** 는 컴파일러에 대 한 보다 강력한 표시 이지만 **`__inline`** 인라인은 여전히 컴파일러의 판단에 따라 수행 되지만 추론을 사용 하 여이 함수를 인라인 하는 이점을 확인 하지는 않습니다.
 
 경우에 따라 컴파일러는 기계적 이유로 특정 함수를 인라인 하지 않습니다. 예를 들어 컴파일러는 인라인 되지 않습니다.
 
-- SEH와 C++ EH를 혼합 하 여 발생 하는 함수입니다.
+- SEH와 c + + EH를 혼합 하 여 발생 하는 함수입니다.
 
 - -EHs/EHa/가 on 일 때 복사 생성 된 개체가 값으로 전달 되는 일부 함수
 
@@ -33,7 +33,7 @@ ms.locfileid: "74989640"
 
 - 가변 인수 목록을 사용 하는 함수입니다.
 
-- **Try** (C++ 예외 처리) 문을 사용 하는 함수입니다.
+- **`try`**(C + + 예외 처리) 문을 사용 하는 함수입니다.
 
 다음 샘플에서는 C4714를 생성 합니다.
 

@@ -2,16 +2,16 @@
 title: chrono 리터럴
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244896"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230158"
 ---
 # <a name="chrono-literals"></a>chrono 리터럴
 
-(C++14) \<chrono> 헤더는 12가지 [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)을 정의하여 시, 분, 초, 밀리초, 마이크로초 및 나노초를 나타내는 리터럴의 사용을 한층 쉽게 만듭니다. 각 사용자 정의 리터럴에는 정수 계열 및 부동 소수점 오버로드가 있습니다. 리터럴은 std::chrono가 범위에 있을 때 자동으로 범위로 가져오는 literals::chrono_literals 인라인 네임스페이스에서 정의됩니다.
+(C + + 14) \<chrono>헤더는 12 [개의 사용자 정의 리터럴을](../cpp/user-defined-literals-cpp.md) 정의 하 여 시간, 분, 초, 밀리초, 마이크로초 및 나노초를 나타내는 리터럴을 쉽게 사용할 수 있도록 합니다. 각 사용자 정의 리터럴에는 정수 계열 및 부동 소수점 오버로드가 있습니다. 리터럴은 std::chrono가 범위에 있을 때 자동으로 범위로 가져오는 literals::chrono_literals 인라인 네임스페이스에서 정의됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -58,9 +58,9 @@ inline namespace literals {
 } // inline namespace literals
 ```
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
-사용 하는 리터럴은 **long long** 인수 값 또는 해당 형식을 반환 합니다. 부동 소수점 인수를 사용하는 리터럴은 [duration](../standard-library/duration-class.md)을 반환합니다.
+인수를 사용 하는 리터럴은 **`long long`** 값 또는 해당 형식을 반환 합니다. 부동 소수점 인수를 사용하는 리터럴은 [duration](../standard-library/duration-class.md)을 반환합니다.
 
 ## <a name="example"></a>예제
 

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 51de46487d85f4b8d7d357a0d1842f3d3192fff7
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b68d9c857db35791486dfc0c1ee02a096a8f5a0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404797"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219471"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 
@@ -66,7 +66,7 @@ ms.locfileid: "86404797"
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` 및 `long double` 버전의 부동 소수점 함수 `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` 및 `trunc`
+  - **`float`** 및 **`long double`** 버전의 부동 소수점 함수,,,, `acos` `acosh` `asin` `asinh` `atan` , `atanh` `atan2` `cbrt` `ceil` `copysign` `cos` `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`trunc`
 
   `abs`머리글만 포함 하는 부동 소수점 형식과 함께를 사용 하는 코드가 있는 경우 \<math.h> 부동 소수점 버전을 더 이상 사용할 수 없습니다. 이제 호출은 오류가 생성되는 부동 소수점 인수가 포함되더라도 `abs(int)`로 확인됩니다.
 
@@ -275,7 +275,7 @@ ms.locfileid: "86404797"
 
 #### \<time.h>
 
-- **클럭을**
+- **clock**
 
    이전 버전에서 [clock](../c-runtime-library/reference/clock.md) 함수는 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime)(영문)을 사용하여 구현되었습니다. 이 구현을 통해 clock 함수는 시스템 시간에 따라 달라지므로 단조일 필요가 없었습니다. clock 함수는 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) (영문)를 기준으로 다시 구현되었으며 현재는 단조입니다.
 
@@ -451,7 +451,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **mutable 키워드**
 
-   이전에 오류 없이 컴파일했던 위치에서 **변경 가능** 스토리지 클래스 지정자가 더 이상 허용되지 않습니다. 현재 컴파일러에서는 오류 C2071(스토리지 클래스가 잘못되었습니다.)을 표시합니다. 표준에 따라 **mutable** 지정자는 클래스 데이터 멤버의 이름에만 적용되고, const 또는 정적으로 선언된 이름과 참조 멤버에는 적용할 수 없습니다.
+   **`mutable`** 이전에 오류 없이 컴파일된 위치에서는 저장소 클래스 지정 자가 더 이상 허용 되지 않습니다. 현재 컴파일러에서는 오류 C2071(스토리지 클래스가 잘못되었습니다.)을 표시합니다. 표준에 따라 **`mutable`** 지정자는 클래스 데이터 멤버의 이름에만 적용할 수 있으며 const 또는 static으로 선언 된 이름과 참조 멤버에는 적용할 수 없습니다.
 
    예를 들어, 다음 코드를 고려하세요.
 
@@ -468,11 +468,11 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     error C2071: 'S::r': illegal storage class
     ```
 
-   오류를 수정하려면 중복 **변경 가능** 키워드를 제거하세요.
+   오류를 해결 하려면 중복 키워드를 제거 합니다 **`mutable`** .
 
 - **char_16_t 및 char32_t**
 
-   `char16_t` `char32_t` 이러한 형식은 이제 기본 제공으로 처리 되므로 **typedef**에서 또는 별칭으로 더 이상 사용할 수 없습니다. 사용자와 라이브러리 작성자가 `char16_t` 및 `char32_t`를 각각 `uint16_t` 및 `uint32_t`의 별칭으로 정의하는 것이 일반적이었습니다.
+   **`char16_t`** **`char32_t`** **`typedef`** 이러한 형식은 이제 기본 제공으로 처리 되기 때문에 더 이상에서 또는 별칭으로 사용할 수 없습니다. 일반적으로 사용자와 라이브러리 작성자는 **`char16_t`** 및 **`char32_t`** `uint16_t` 를 각각 및의 별칭으로 정의 하는 것이 일반적 이었습니다 `uint32_t` .
 
     ```cpp
     #include <cstdint>
@@ -489,7 +489,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   코드를 업데이트하려면 **typedef** 선언을 제거하고 이들 이름과 충돌하는 다른 식별자의 이름을 바꿉니다.
+   코드를 업데이트 하려면 선언을 제거 하 **`typedef`** 고 이러한 이름과 충돌 하는 다른 식별자의 이름을 바꿉니다.
 
 - **비형식 템플릿 매개 변수**
 
@@ -522,7 +522,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    코드에서 이 오류를 해결하려면 사용하는 템플릿 인수 형식이 템플릿 매개 변수의 선언된 형식과 일치해야 합니다.
 
-- **__declspec(align)**
+- **`__declspec(align)`**
 
    컴파일러가 함수에서 `__declspec(align)` 을 더 이상 허용하지 않습니다. 이 구문은 항상 무시되었지만 이제 컴파일러 오류를 생성합니다.
 
@@ -551,7 +551,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   문제는 복사 생성자가 비공개라는 점입니다. 따라서 일반적인 예외 처리 과정에서처럼 개체를 복사할 수 없습니다. 복사 생성자가 **명시적**으로 선언될 경우에도 마찬가지입니다.
+   문제는 복사 생성자가 비공개라는 점입니다. 따라서 일반적인 예외 처리 과정에서처럼 개체를 복사할 수 없습니다. 복사 생성자가 선언 된 경우에도 마찬가지 **`explicit`** 입니다.
 
     ```cpp
     struct S
@@ -566,7 +566,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   코드를 업데이트 하려면 예외 개체에 대 한 복사 생성자가 **public** 이 고 **명시적**으로 표시 되지 않았는지 확인 합니다.
+   코드를 업데이트 하려면 예외 개체에 대 한 복사 생성자가이 **`public`** 고로 표시 되지 않아야 **`explicit`** 합니다.
 
    값으로 예외를 catch하려면 예외 개체가 복사 가능해야 합니다. 다음 코드는 Visual Studio 2013에서 컴파일되었지만, Visual Studio 2015에서는 컴파일되지 않습니다.
 
@@ -592,7 +592,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   참조에 대한 **catch**의 매개 변수 형식을 변경하여 이 문제를 해결할 수 있습니다.
+   에 대 한 매개 변수 형식을 참조로 변경 하면이 문제를 해결할 수 있습니다 **`catch`** .
 
     ```cpp
     catch (D& d)
@@ -641,9 +641,9 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **Placement new 및 delete**
 
-   **Delete** 연산자는 c + + 14 표준을 준수 하도록 변경 되었습니다. 표준 변경에 대한 자세한 내용은 [C++ 크기 지정된 할당 해제](https://isocpp.org/files/papers/n3778.html)(영문)를 참조하세요. 변경 내용에는 크기 매개 변수를 사용 하는 전역 **delete** 연산자의 형식이 추가 됩니다. 주요 변경 내용에 따르면 이전에는 **placement new** 연산자에 해당하도록 같은 서명으로 **delete** 연산자를 사용하면 placement new가 사용된 지점에서 컴파일러 오류(C2956)가 발생했습니다. 이 지점은 컴파일러가 적절하게 일치하는 **delete** 연산자를 식별하려고 하는 코드의 위치이기 때문입니다.
+   **`delete`** 연산자가 c + + 14 표준을 준수 하도록 변경 되었습니다. 표준 변경에 대한 자세한 내용은 [C++ 크기 지정된 할당 해제](https://isocpp.org/files/papers/n3778.html)(영문)를 참조하세요. 변경 내용에는 **`delete`** 크기 매개 변수를 사용 하는 전역 연산자의 폼이 추가 됩니다. 주요 변경 내용은 이전에 배치 new 연산자와 일치 하는 것과 같은 서명을 사용 하 여 이전에 배치 new 연산자를 사용 하는 경우 컴파일러 **`delete`** 오류 (C2956)를 받게 됩니다 .이는 컴파일러가 적절 한 일치 연산자를 식별 하는 코드의 위치 이기 때문입니다 **placement new** **`delete`** .
 
-   `void operator delete(void *, size_t)` 함수는 C++11의 **placement new** 함수 `void * operator new(size_t, size_t)`에 해당하는 **placement delete** 연산자였습니다. C++14 크기 지정된 할당 해제를 사용하면 이 delete 함수는 현재 *일반 할당 해제 함수*(글로벌 **delete** 연산자)입니다. 표준에 따르면 placement new를 사용하여 해당하는 delete 함수를 조회하고 usual deallocation 함수를 찾으면 프로그램에 잘못된 형식이 사용됩니다.
+   `void operator delete(void *, size_t)` 함수는 C++11의 **placement new** 함수 `void * operator new(size_t, size_t)`에 해당하는 **placement delete** 연산자였습니다. C + + 14 크기 할당 해제를 사용 하면이 delete 함수는 이제 *일반적인 할당 취소 함수* (global **`delete`** 연산자)입니다. 표준에 따르면 placement new를 사용하여 해당하는 delete 함수를 조회하고 usual deallocation 함수를 찾으면 프로그램에 잘못된 형식이 사용됩니다.
 
    예를 들어 코드에서 **placement new** 및 **placement delete**를 둘 다 정의한다고 가정합니다.
 
@@ -652,15 +652,15 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   정의한 **placement delete** 연산자와 새 글로벌 크기 지정된 **delete** 연산자 간에 함수 서명이 일치하기 때문에 문제가 발생합니다. **placement new** 및 **delete** 연산자에 대해 `size_t` 이외의 다른 연산자를 사용할 수 있는지를 고려하세요. `size_t` **typedef**이라는 형식은 컴파일러에 따라 결정되고, MSVC에서는 **unsigned int**의 경우 **typedef**입니다. 이 문제를 해결하려면 다음과 같은 열거된 형식을 사용하는 것이 좋습니다.
+   사용자가 정의한 **배치 delete** 연산자와 새 전역 크기 연산자 사이에 함수 서명이 일치 하기 때문에 문제가 발생 합니다 **`delete`** . `size_t` **배치 new** 및 연산자에 대해 이외의 다른 형식을 사용할 수 있는지 여부를 고려 **`delete`** 합니다. 의 형식은 컴파일러에 `size_t` **`typedef`** 따라 다르며, **`typedef`** MSVC의에 대 한입니다 **`unsigned int`** . 이 문제를 해결하려면 다음과 같은 열거된 형식을 사용하는 것이 좋습니다.
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   그런 다음, `size_t` 대신 이 형식을 두 번째 인수로 사용하도록 **placement new** 및 **delete**의 정의를 변경합니다. 새 형식을 전달 하 고 (예:를 사용 하 여 `static_cast<my_type>` 정수 값에서 변환) new 및 **delete** 의 정의를 업데이트 하 여 다시 정수 형식으로 캐스팅 해야 합니다. **new** 이에 대 한 **열거형** 을 사용할 필요가 없습니다. 멤버가 포함 된 클래스 형식 `size_t` 도 작동 합니다.
+   그런 다음 **배치 new** 의 정의를 변경 하 고 **`delete`** 이 유형을 대신 두 번째 인수로 사용 `size_t` 합니다. 새 형식 (예:를 사용 하 여 `static_cast<my_type>` 정수 값에서 변환)을 전달 하 고, 및의 정의를 업데이트 하 여 **`new`** **`delete`** 다시 정수 형식으로 캐스팅 하는 경우에는 placement new에 대 한 호출도 업데이트 해야 합니다. 이를 위해를 사용할 필요는 없습니다. **`enum`** 멤버를 포함 하는 클래스 형식 `size_t` 도 작동 합니다.
 
-   또 다른 솔루션은 **placement new**를 함께 제거하는 것입니다. 코드에서 **placement new**를 사용하여 placement 인수가 할당되거나 삭제되는 개체 크기와 같은 메모리 풀을 구현하면 사용자 지정 메모리 풀 코드를 바꾸는 데는 크기 지정된 할당 해제 기능이 적합할 수 있고, placement 함수를 제거하고, placement 함수 대신 인수가 두 개인 **delete** 연산자만 사용할 수 있습니다.
+   또 다른 솔루션은 **placement new**를 함께 제거하는 것입니다. 코드에서 placement **new** 를 사용 하 여 배치 인수가 할당 되거나 삭제 되는 개체의 크기인 메모리 풀을 구현 하는 경우 크기가 지정 된 할당 해제 기능이 사용자 지정 메모리 풀 코드를 대체 하는 데 적합할 수 있으며 배치 함수를 제거 하 고 배치 함수 대신 고유한 두 인수 연산자를 사용할 수 있습니다 **`delete`** .
 
    코드를 바로 업데이트하지 않으려면 컴파일러 옵션 `/Zc:sizedDealloc-`를 사용하여 이전 동작으로 되돌릴 수 있습니다. 이 옵션을 사용 하면 인수가 두 개인 delete 함수가 존재 하지 않으며 **placement delete** 연산자와 충돌 하지 않습니다.
 
@@ -949,7 +949,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     S1<S2> s;
     ```
 
-   오류를 해결하려면 이니셜라이저에서 `typename`을 제거합니다.
+   오류를 해결 하려면 이니셜라이저에서를 제거 **`typename`** 합니다.
 
     ```cpp
     S1() : T::type() // OK
@@ -974,7 +974,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **클래스 템플릿 내부 static_assert에서 사용되는 상수가 항상 실패합니다.**
 
-   다음 코드를 사용하면 `static_assert`가 항상 실패합니다.
+   다음 코드를 실행 하면이 **`static_assert`** 항상 실패 합니다.
 
     ```cpp
     template <size_t some_value>
@@ -987,7 +987,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     //other partial specializations here
     ```
 
-   이 문제를 해결하려면 값을 **구조체**로 래핑합니다.
+   이 문제를 해결 하려면 다음과 같이 값을 래핑합니다 **`struct`** .
 
     ```cpp
     template <size_t some_value>
@@ -1072,7 +1072,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   오류를 해결하려면 `bind: N::bind(...)`에 대한 호출을 정규화하면 됩니다. 하지만 이 변경이 선언되지 않은 식별자를 통한 매니페스트인 경우(C2065) **using** 선언을 사용하여 이 오류를 해결하는 것이 좋습니다.
+   오류를 해결하려면 `bind: N::bind(...)`에 대한 호출을 정규화하면 됩니다. 그러나이 변경 내용이 선언 되지 않은 식별자 (C2065)를 통해 매니페스트 되는 경우 대신 선언으로이를 수정 하는 것이 적합할 수 있습니다 **`using`** .
 
    이 패턴은 ComPtr 및 `Microsoft::WRL` 네임스페이스의 기타 형식에서 자주 발생합니다.
 
@@ -1215,17 +1215,17 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    코드를 수정하려면 catch 블록을 `catch (const D &)`로 변경할 수 있지만 대개 MFC TRY/CATCH 매크로를 사용하는 것이 더 좋은 해결 방법입니다.
 
-- **이제 alignof가 키워드임**
+- **`alignof`이제 키워드**
 
-   다음 코드는 오류 C2332를 생성합니다. ‘class’: 태그 이름이 누락되었습니다. 코드를 수정 하려면 클래스의 이름을 바꾸거나 클래스에서 **alignof**와 동일한 작업을 수행 하는 경우에는 클래스를 new 키워드로 바꾸어야 합니다.
+   다음 코드는 오류 C2332를 생성합니다. ‘class’: 태그 이름이 누락되었습니다. 코드를 수정 하려면 클래스의 이름을 변경 하거나 클래스에서와 동일한 작업을 수행 하는 경우 **`alignof`** 클래스를 new 키워드로 바꿉니다.
 
     ```cpp
     class alignof{}
     ```
 
-- **이제 constexpr이 키워드임**
+- **`constexpr`이제 키워드**
 
-   다음 코드는 이제 오류 C2059를 생성합니다. 구문 오류: ‘)’. 코드를 수정하려면 “constexpr”이라는 함수 또는 변수 이름을 바꿔야 합니다.
+   다음 코드는 이제 오류 C2059를 생성합니다. 구문 오류: ‘)’. 코드를 수정 하려면 호출 되는 모든 함수 또는 변수 이름을 바꾸어야 합니다 **`constexpr`** .
 
     ```cpp
     int constexpr() {return 1;}
@@ -1233,7 +1233,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **이동 가능한 형식은 const일 수 없음**
 
-   함수가 이동하지 않으려는 형식을 반환하면 해당 반환 형식은 **const**이면 안 됩니다.
+   함수가 이동할 형식을 반환 하는 경우 해당 반환 형식은이 아니어야 합니다 **`const`** .
 
 - **삭제된 복사 생성자**
 
@@ -1507,7 +1507,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   오류를 해결하려면 `0`을 둘러싼 중괄호를 제거하거나 이 예제에 표시된 대로 **nullptr**을 대신 사용합니다.
+   오류를 해결 하려면 `0` 다음 예제와 같이에서 중괄호를 제거 하거나 **`nullptr`** 대신을 사용 합니다.
 
     ```cpp
     struct S {
@@ -1582,7 +1582,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-   오류를 해결하려면 `j` 앞뒤에서 괄호를 제거하세요. 쉽게 구별할 수 있도록 괄호가 필요하면 **typedef**를 사용하세요.
+   오류를 해결하려면 `j` 앞뒤에서 괄호를 제거하세요. 명확성을 위해 괄호가 필요한 경우를 사용 **`typedef`** 합니다.
 
 - **컴파일러에서 생성되는 생성자 및 __declspec(novtable)**
 
@@ -1627,7 +1627,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     static_assert(std::is_convertible<D, B2>::value, "fail");
     ```
 
-   오류를 해결하려면 `D` 및 `B2`에 대한 포인터를 비교하도록 `static_assert`를 변경합니다.
+   오류를 해결 하려면 **`static_assert`** 및에 대 한 포인터를 비교 하도록를 변경 합니다 `D` `B2` .
 
     ```cpp
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
@@ -1635,7 +1635,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **novtable (__declspec) 선언은 일치 해야 합니다.**
 
-   `__declspec` 선언은 모든 라이브러리에서 일관되어야 합니다. 다음 코드는 ODR(단일 정의 규칙) 위반을 생성합니다.
+   **`__declspec`** 모든 라이브러리에서 선언이 일치 해야 합니다. 다음 코드는 ODR(단일 정의 규칙) 위반을 생성합니다.
 
     ```cpp
     //a.cpp
@@ -1739,7 +1739,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   \- 또는 -
+   \- 또는-
 
     ```cpp
     class base;  // as above
@@ -1755,7 +1755,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **오버로드된 operator new 및 operator delete**
 
-   이전 버전의 컴파일러는 비멤버 **operator new** 및 비멤버 **operator delete**를 정적으로 선언하고 글로벌 네임스페이스 이외의 네임스페이스에서 선언할 수 있었습니다.  이 이전 동작은 프로그램에서 프로그래머가 의도한 **new** 또는 **delete** 연산자 구현을 호출하지 않아서 잘못된 자동 런타임 동작이 발생하는 위험을 초래했습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2323이 발생합니다.
+   이전 버전의 컴파일러는 비멤버 **operator new** 및 비멤버 **operator delete**를 정적으로 선언하고 글로벌 네임스페이스 이외의 네임스페이스에서 선언할 수 있었습니다.  이 이전 동작은 프로그램에서 **`new`** 프로그래머가 의도 한 또는 연산자 구현을 호출 하지 않아서 잘못 된 자동 런타임 동작이 발생 하는 위험을 생성 **`delete`** 했습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C2323이 발생합니다.
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -1773,7 +1773,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   또한 컴파일러가 특정 진단을 제공 하지는 않지만, 인라인 operator **new** 는 잘못 된 형식으로 간주 됩니다.
+   또한 컴파일러가 특정 진단을 제공 하지는 않지만 인라인 연산자 **`new`** 는 형식이 잘못 된 것으로 간주 됩니다.
 
 - ***비클래스 형식에서 'operator *type**()'(사용자 정의 변환) 호출
 
@@ -1807,7 +1807,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **상세 형식 지정자의 중복 typename**
 
-   이전 버전의 컴파일러에서는 상세 형식 지정자에 **typename**을 허용했지만 이러한 방식으로 작성된 코드는 의미 체계가 잘못되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C3406이 발생합니다.
+   이전 버전의 컴파일러에서는 **`typename`** 상세 형식 지정자를 사용할 수 있지만 이러한 방식으로 작성 된 코드는 의미 체계가 잘못 되었습니다. 컴파일러는 이러한 방식으로 작성된 코드를 더 이상 허용하지 않으며, 대신 컴파일러 오류 C3406이 발생합니다.
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1915,7 +1915,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **switch 문 경고의 복원**
 
-   이전 버전의 컴파일러에서는 **switch** 문과 관련된 일부 경고를 제거했습니다. 이제 이러한 경고가 복원되었습니다. 이제 컴파일러에서 복원된 경고가 발생합니다. 이제 특정 사례(기본 사례 포함)와 관련된 경고가 switch 문의 마지막 줄 대신, 잘못된 사례가 포함된 줄에서 발생합니다. 이제 과거와는 다른 줄에서 해당 경고가 발생하므로 이전에 `#pragma warning(disable:####)` 을 사용하면 표시되지 않았던 경고가 더 이상 의도한 대로 숨겨지지 않을 수 있습니다. 이러한 경고를 의도한 대로 표시하지 않으려면 `#pragma warning(disable:####)` 지시문을 잘못된 첫 번째 사례 위의 줄로 이동해야 합니다. 복원된 경고는 다음과 같습니다.
+   이전 버전의 컴파일러에서는 문과 관련 된 일부 경고를 제거 했습니다. **`switch`** 이제 이러한 경고가 복원 되었습니다. 이제 컴파일러에서 복원된 경고가 발생합니다. 이제 특정 사례(기본 사례 포함)와 관련된 경고가 switch 문의 마지막 줄 대신, 잘못된 사례가 포함된 줄에서 발생합니다. 이제 과거와는 다른 줄에서 해당 경고가 발생하므로 이전에 `#pragma warning(disable:####)` 을 사용하면 표시되지 않았던 경고가 더 이상 의도한 대로 숨겨지지 않을 수 있습니다. 이러한 경고를 의도한 대로 표시하지 않으려면 `#pragma warning(disable:####)` 지시문을 잘못된 첫 번째 사례 위의 줄로 이동해야 합니다. 복원된 경고는 다음과 같습니다.
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -2205,9 +2205,9 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **SFINAE 식에 대한 부분 지원으로 인해 추가 경고 및 오류가 발생할 수 있습니다.**
 
-   이전 버전의 컴파일러는 SFINAE 식에 대한 지원 부족으로 **decltype** 지정자 내의 특정 종류의 식을 구문 분석하지 않았습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 지속적인 규칙 향상으로 인해 이제 컴파일러는 이러한 식을 구문 분석하고 SFINAE 식에 대한 부분 지원을 합니다. 결과적으로 이제 컴파일러는 이전 버전의 컴파일러가 구문 분석하지 않았던 식에서 경고 및 오류를 발생합니다.
+   이전 버전의 컴파일러는 **`decltype`** SFINAE 식에 대 한 지원 부족으로 지정자 내의 특정 식 종류를 구문 분석 하지 않았습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 지속적인 규칙 향상으로 인해 이제 컴파일러는 이러한 식을 구문 분석하고 SFINAE 식에 대한 부분 지원을 합니다. 결과적으로 이제 컴파일러는 이전 버전의 컴파일러가 구문 분석하지 않았던 식에서 경고 및 오류를 발생합니다.
 
-   이 새로운 동작이 아직 선언되지 않은 형식을 포함하는 **decltype** 식을 구문 분석할 때 결과적으로 컴파일러에서 컴파일러 오류 C2039가 발생합니다.
+   이 새로운 동작이 **`decltype`** 아직 선언 되지 않은 형식을 포함 하는 식을 구문 분석할 때 컴파일러에서 컴파일러 오류 C2039 발생 합니다.
 
     ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -2241,7 +2241,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   이 새로운 동작이 종속 이름이 형식임을 지정하기 위해 필요한 **typename** 키워드 사용이 누락된 **decltype** 식을 구문 분석할 때 컴파일러에서 컴파일러 오류 C2923과 함께 컴파일러 경고 C4346이 발생합니다.
+   이 새 동작에서 키워드를 **`decltype`** 사용 하는 데 필요한 식의 구문 분석 **`typename`** 을 통해 종속 이름이 형식이 되도록 지정 하는 경우 컴파일러에서 컴파일러 경고를 C4346 컴파일러 오류 C2923을 발생 시킵니다.
 
     ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -2292,9 +2292,9 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-- `volatile` **멤버 변수가 암시적으로 정의된 생성자와 대입 연산자를 막음**
+- **`volatile`****멤버 변수가 암시적으로 정의 된 생성자 및 대입 연산자를 방지** 합니다.
 
-   이전 버전의 컴파일러는 **volatile** 멤버 변수가 있는 클래스가 기본 복사/이동 생성자 및 기본 복사 대입 연산자를 자동으로 생성하도록 허용했습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 이제 컴파일러는 **volatile** 멤버 변수가 있는 클래스에 특수 한 생성 및 대입 연산자가 있는 것으로 간주 하 여 이러한 연산자의 기본 구현이 자동으로 생성 되는 것을 방지 합니다. 이러한 클래스가 공용 구조체(또는 클래스 내의 익명 공용 구조체)의 멤버이면 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)의 복사/이동 생성자 및 복사/이동 대입 연산자는 삭제된 것으로 암시적으로 정의됩니다. 명시적으로 정의하지 않고 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)를 만들거나 복사하려 하면 오류가 발생하며 컴파일러에서 결과적으로 컴파일러 오류 C2280을 발생합니다.
+   이전 버전의 컴파일러에서는 **`volatile`** 멤버 변수가 있는 클래스가 기본 복사/이동 생성자 및 기본 복사/이동 할당 연산자를 자동으로 생성 하도록 허용 했습니다. 이 이전 동작은 올바르지 않으며, C++ 표준을 준수하지 않습니다. 이제 컴파일러는 멤버 변수가 있는 클래스에 **`volatile`** trivial 생성 및 대입 연산자가 있는 것으로 간주 하 여 이러한 연산자의 기본 구현이 자동으로 생성 되는 것을 방지 합니다. 이러한 클래스가 공용 구조체(또는 클래스 내의 익명 공용 구조체)의 멤버이면 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)의 복사/이동 생성자 및 복사/이동 대입 연산자는 삭제된 것으로 암시적으로 정의됩니다. 명시적으로 정의하지 않고 공용 구조체(또는 익명 공용 구조체를 포함하는 클래스)를 만들거나 복사하려 하면 오류가 발생하며 컴파일러에서 결과적으로 컴파일러 오류 C2280을 발생합니다.
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2380,7 +2380,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **열거형의 정방향 선언은 WinRT 코드에서 허용되지 않음**(`/ZW`에만 영향을 줌)
 
-   WinRT(Windows 런타임)에 대해 컴파일된 코드는 **enum** 형식이 정방향 선언되는 것을 허용하지 않습니다. `/clr` 컴파일러 스위치를 사용하여 관리되는 C++ 코드가 .Net Framework에 대해 컴파일되는 경우와 비슷합니다. 이 동작을 통해 열거형의 크기를 항상 알 수 있으며 WinRT 형식 시스템에 올바르게 프로젝션될 수 있음을 확인합니다. 컴파일러는 이러한 방식으로 작성된 코드를 거부하고 컴파일러 오류 C3197과 함께 컴파일러 오류 C2599를 발생합니다.
+   Windows 런타임 (WinRT)에 대해 컴파일된 코드는 **`enum`** 관리 되는 c + + 코드가 컴파일러 스위치를 사용 하 여 .Net Framework에 대해 컴파일되는 경우와 마찬가지로 형식을 전방으로 선언할 수 없습니다 `/clr` . 이 동작을 통해 열거형의 크기를 항상 알 수 있으며 WinRT 형식 시스템에 올바르게 프로젝션될 수 있음을 확인합니다. 컴파일러는 이러한 방식으로 작성된 코드를 거부하고 컴파일러 오류 C3197과 함께 컴파일러 오류 C2599를 발생합니다.
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2467,7 +2467,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
 - **이제 std::is_convertable이 자체 할당을 검색함**(표준 라이브러리)
 
-   이전 버전의 `std::is_convertable` 형식 특성은 복사 생성자가 삭제되거나 private인 경우 클래스 형식의 자체 할당을 제대로 검색하지 못했습니다. 이제 복사 생성자가 삭제되거나 private인 클래스 형식에 적용할 때 `std::is_convertable<>::value`이 **false**로 올바르게 설정됩니다.
+   이전 버전의 `std::is_convertable` 형식 특성은 복사 생성자가 삭제되거나 private인 경우 클래스 형식의 자체 할당을 제대로 검색하지 못했습니다. 이제 `std::is_convertable<>::value` 는 **`false`** 삭제 된 또는 전용 복사 생성자를 사용 하 여 클래스 형식에 적용 될 때로 올바르게 설정 됩니다.
 
    이 변경과 관련된 컴파일러 진단은 없습니다.
 
@@ -2491,7 +2491,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   이전 버전의 컴파일러에서는 `std::is_convertable<>::value`가 **true**로 잘못 설정되었기 때문에 이 예제의 맨 아래에 있는 고정 어설션이 성공합니다. 이제 `std::is_convertable<>::value`이 **false**로 올바르게 설정되므로 정적 어설션이 실패합니다.
+   이전 버전의 컴파일러에서는가로 잘못 설정 되었기 때문에이 예제의 맨 아래에 있는 정적 어설션이 전달 `std::is_convertable<>::value` **`true`** 됩니다. 이제 `std::is_convertable<>::value` 이로 올바르게 설정 되어 **`false`** 정적 어설션이 실패 합니다.
 
 - **기본값으로 설정되었거나 삭제된 trivial 복사 및 이동 생성자가 액세스 지정자를 따름**
 
@@ -2723,7 +2723,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   이전 버전에서는 호출이 **가상** 호출이기 때문에 오류가 발생하지 않았지만 런타임에 프로그램의 작동이 중단될 수 있었습니다. 이제는 클래스가 final인 것으로 알려지기 때문에 링커 오류가 발생합니다. 이 예제에서 오류를 해결하려면 `S2::f`의 정의가 포함된 obj에 대해 링크합니다.
+   이전 버전에서는 호출이 호출 되기 때문에 오류가 발생 하지 않았지만 **`virtual`** 프로그램이 런타임에 충돌 합니다. 이제는 클래스가 final인 것으로 알려지기 때문에 링커 오류가 발생합니다. 이 예제에서 오류를 해결하려면 `S2::f`의 정의가 포함된 obj에 대해 링크합니다.
 
 - 네임스페이스의 friend 함수를 사용하는 경우 friend 함수를 참조하기 전에 다시 선언해야 합니다. 그렇지 않으면 이제 컴파일러가 ISO C++ 표준을 준수하므로 오류가 발생합니다. 예를 들어 이 예제는 더 이상 컴파일되지 않습니다.
 
@@ -2740,7 +2740,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-   이 코드를 수정하려면 **friend** 함수를 선언합니다.
+   이 코드를 수정 하려면 함수를 선언 합니다 **`friend`** .
 
     ```cpp
     namespace NS {
@@ -2797,14 +2797,14 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     }
     ```
 
-- 컴파일러가 ISO C++11을 준수하도록 변경되기 전에 다음 코드가 컴파일되고 `x`가 **int** 형식으로 확인되었습니다.
+- 컴파일러가 ISO c + + 11을 준수 하도록 하기 전에 다음 코드는를 컴파일하여 `x` 형식으로 확인 됩니다 **`int`** .
 
     ```cpp
     auto x = {0};
     int y = x;
     ```
 
-   이 코드는 이제 `x` 형식으로 확인 `std::initializer_list<int>` 되 고 `x` **int**형식에 할당 하려고 하는 다음 줄에서 오류를 발생 시킵니다. 기본적으로 변환 되지 않습니다. 이 코드를 수정 하려면 **int** 를 사용 하 여 **auto**를 바꿉니다.
+   이 코드는 이제 `x` 형식으로 확인 `std::initializer_list<int>` 되 고, 형식에 할당 하려고 하는 다음 줄에서 오류를 발생 시킵니다 `x` **`int`** . 기본적으로 변환 되지 않습니다. 이 코드를 수정 하려면를 사용 하 여를 **`int`** 바꿉니다 **`auto`** .
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
 
    Visual Studio 2012에서 `E1` 식의 `E1::b`는 글로벌 범위에서 `::E1`로 확인되었습니다. Visual Studio 2013에서 `E1` 식의 `E1::b`는 `main()`의 `typedef E2` 정의로 확인되며 `::E2` 형식을 갖습니다.
 
-- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 가상 **함수가 있지만** **가상** 함수가 포함 된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 **가상** 함수 테이블에 포인터를 삽입 합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
+- 개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 함수가 있지만 함수를 **`virtual`** 포함 하는 기본 클래스가 없는 경우 **`virtual`** 컴파일러의 개체 모델은 **`virtual`** 데이터 멤버 레이아웃 뒤의 함수 테이블에 포인터를 삽입 합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 다음 코드를 예로 들 수 있습니다.
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2867,7 +2867,7 @@ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므�
     };
     ```
 
-- Visual Studio 2013에서 x64의 `sizeof(S2)` 결과는 48이지만 이전 릴리스에서는 32로 계산됩니다. Visual Studio 2013 x64용 C++ 컴파일러에서 32로 계산되게 하려면 **가상** 함수가 포함된 더미 기본 클래스를 추가합니다.
+- Visual Studio 2013에서 x64의 `sizeof(S2)` 결과는 48이지만 이전 릴리스에서는 32로 계산됩니다. X 64 용 Visual Studio 2013 c + + 컴파일러에서이를 32으로 계산 하려면 함수가 포함 된 더미 기본 클래스를 추가 합니다 **`virtual`** .
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2952,7 +2952,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
    이러한 변경의 부작용으로 id 대/소문자가 더 이상 작동 하지 않습니다 (common_type \<T> 항상 형식 t가 되지 않음). 이 동작은 제안된 해결 방법을 준수하지만 이전 동작을 사용하는 모든 코드가 중단됩니다.
 
-   ID 형식 특성이 필요한 경우 `std::identity` 에 정의된 비표준 \<type_traits> 는 \<void>에 대해 작동하지 않으므로 사용하지 마세요. 대신 필요에 따라 고유한 ID 형식 특성을 구현합니다. 예를 들면 다음과 같습니다.
+   ID 형식 특성이 필요한 경우 `std::identity` 에 정의된 비표준 \<type_traits> 는 \<void>에 대해 작동하지 않으므로 사용하지 마세요. 대신 필요에 따라 고유한 ID 형식 특성을 구현합니다. 예는 다음과 같습니다.
 
     ```cpp
     template < typename T> struct Identity {
@@ -3000,7 +3000,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - `/Yl` 컴파일러 옵션이 변경되었습니다. 기본적으로 컴파일러는 이 옵션을 사용하며, 특정 조건에서 LNK2011 오류가 발생할 수 있습니다. 자세한 내용은 [/Yl(디버그 라이브러리에 대한 PCH 참조 삽입)](../build/reference/yl-inject-pch-reference-for-debug-library.md)를 참조하세요.
 
-- `/clr`을 사용하여 컴파일된 코드에서 **enum** 클래스 키워드는 CLR(공용 언어 런타임) 열거형이 아니라 C++11 열거형을 정의합니다. CLR 열거형을 정의하려면 해당 접근성에 대해 명시적이어야 합니다.
+- 를 사용 하 여 컴파일된 코드에서 `/clr` **`enum`** class 키워드는 CLR (공용 언어 런타임) 열거형이 아닌 c + + 11 열거형을 정의 합니다. CLR 열거형을 정의하려면 해당 접근성에 대해 명시적이어야 합니다.
 
 - 템플릿 키워드를 사용하여 종속 이름(c + + 언어 표준 준수)을 명시적으로 구분할 수 있습니다. 다음 예제에서 강조 표시된 템플릿 키워드는 모호성을 해결하는 데 필요합니다. 자세한 내용은 [종속 형식의 이름 확인](../cpp/name-resolution-for-dependent-types.md)을 참조하세요.
 
@@ -3232,9 +3232,9 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 ### <a name="compiler"></a>컴파일러
 
-- **auto** 키워드에 새로운 기본 의미가 있습니다. 이전 의미가 거의 사용되지 않았으므로 대부분의 애플리케이션은 이 변경의 영향을 받지 않습니다.
+- 키워드에는 **`auto`** 새로운 기본 의미가 있습니다. 이전 의미가 거의 사용되지 않았으므로 대부분의 애플리케이션은 이 변경의 영향을 받지 않습니다.
 
-- 새로운 **static_assert** 키워드가 도입되었으며, 코드에 해당 이름의 식별자가 이미 있는 경우 이름 충돌이 발생합니다.
+- 새 **`static_assert`** 키워드가 도입 되었습니다 .이 경우 코드에 해당 이름의 식별자가 이미 있는 경우 이름 충돌이 발생 합니다.
 
 - 새 람다 표기법 지원에서 IDL uuid 특성에 따옴표가 없는 GUID를 코딩하기 위한 지원은 제외됩니다.
 
@@ -3284,7 +3284,7 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - `CComPtr::CComPtr(int)` 생성자가 제거되었습니다. 해당 생성자는 NULL 매크로에서 `CComPtr` 개체를 생성할 수 있게 해주지만 불필요하고 0이 아닌 정수에서 무의미한 생성을 허용했습니다.
 
-   0으로 정의된 NULL에서는 `CComPtr`을 계속 생성할 수 있지만 리터럴 0이 아닌 정수에서 생성할 경우 실패합니다. **nullptr**을 대신 사용합니다.
+   0으로 정의된 NULL에서는 `CComPtr`을 계속 생성할 수 있지만 리터럴 0이 아닌 정수에서 생성할 경우 실패합니다. **`nullptr`** 대신를 사용 합니다.
 
 - 다음 `ctype` 멤버 함수가 제거되었습니다. `ctype::_Do_narrow_s`, `ctype::_Do_widen_s`, `ctype::_narrow_s`, `ctype::_widen_s` 애플리케이션이 이러한 멤버 함수 중 하나를 사용하는 경우 해당하는 비보안 버전인 `ctype::do_narrow`, `ctype::do_widen`, `ctype::narrow`, `ctype::widen`으로 대체해야 합니다.
 
@@ -3490,9 +3490,9 @@ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _IT
 
 - 파생 클래스를 통해 정적 데이터 멤버를 초기화할 수 없습니다([컴파일러 오류 C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).
 
-- **typedef**의 초기화가 표준에서 허용되지 않으며 이제 컴파일러 오류를 생성합니다([컴파일러 오류 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
+- 의 초기화는 **`typedef`** 표준에서 허용 되지 않으며 이제 컴파일러 오류 ([컴파일러 오류 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md))를 생성 합니다.
 
-- 이제 **bool**이 올바른 형식입니다([컴파일러 오류 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
+- **`bool`** 는 이제 적절 한 형식 ([컴파일러 오류 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md))입니다.
 
 - 이제 UDC가 오버로드된 연산자로 모호성을 만들 수 있습니다([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
 

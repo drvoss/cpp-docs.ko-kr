@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918185"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231379"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -107,26 +107,26 @@ long double scalblnl(
 *x*<br/>
 부동 소수점 값입니다.
 
-*.exp*<br/>
+*exp*<br/>
 정수 지수입니다.
 
 ## <a name="return-value"></a>Return Value
 
-**Scalbn** 함수는 성공할 경우 \* **FLT_RADIX**<sup>exp</sup> *값을 반환* 합니다. 오버플로 시 ( *x*의 부호에 따라) **scalbn** 는 +/- **HUGE_VAL**을 반환 합니다. **errno** 값은 **ERANGE**로 설정 됩니다.
+**Scalbn** 함수는 성공할 경우 FLT_RADIX exp *값을 반환* 합니다 \* **FLT_RADIX**<sup>exp</sup> . 오버플로 시 ( *x*의 부호에 따라) **scalbn** 는 +/- **HUGE_VAL**을 반환 합니다. **errno** 값은 **ERANGE**로 설정 됩니다.
 
 **Errno** 및 가능한 오류 반환 값에 대 한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조 하세요.
 
 ## <a name="remarks"></a>설명
 
-**FLT_RADIX** 은 \<float. h>를 네이티브 부동 소수점 기수로 서 정의 합니다. 이진 시스템에서는 값이 2이 고 **scalbn** 는 [ldexp](ldexp.md)와 동일 합니다.
+**FLT_RADIX** 은 \<float.h> 네이티브 부동 소수점 기수로 서에 정의 되 고, 이진 시스템에서는 값이 2이 고 **scalbn** 는 [ldexp](ldexp.md)와 동일 합니다.
 
-C + +에서는 오버 로드를 허용 하므로 **float** 또는 **long** **double** 형식을 사용 하 고 반환 하는 **scalbn** 및 **scalbln** 오버 로드를 호출할 수 있습니다. C 프로그램에서 **scalbn** 는 항상 **double** 과 **int** 를 사용 하 고 **double**을 반환 하며 **scalbln** 는 항상 **double** 과 **long** 을 사용 하며 **double**을 반환 합니다.
+C + +에서는 오버 로드를 허용 하므로 또는 형식을 사용 하 고 반환 하는 **scalbn** 및 **scalbln** 의 오버 로드를 호출할 수 있습니다 **`float`** **`long double`** . C 프로그램에서 **scalbn** 는 항상 및을 사용 **`double`** **`int`** 하 고를 반환 하며 **`double`** , **scalbln** 는 항상 및을 사용 하 **`double`** **`long`** 고를 반환 **`double`** 합니다.
 
 기본적으로이 함수의 전역 상태는 응용 프로그램으로 범위가 지정 됩니다. 이를 변경 하려면 [CRT의 전역 상태](../global-state.md)를 참조 하세요.
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|C 헤더|C++ 헤더|
+|함수|C 헤더|C++ 헤더|
 |--------------|--------------|------------------|
 |**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230274"
 ---
 # <a name="add_volatile-class"></a>add_volatile 클래스
 
-지정 된 형식에서 **휘발성** 형식을 만듭니다.
+지정 된 **`volatile`** 형식에서 형식을 만듭니다.
 
 ## <a name="syntax"></a>구문
 
@@ -35,7 +35,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>설명
 
-의 인스턴스에는 `add_volatile<T>` **typedef** `type` *t* 가 참조, 함수 또는 *T* 휘발성의 정규화 된 형식이 고 그렇지 않은 경우 **volatile** *t*인 멤버 typedef가 있습니다. 별칭은 `add_volatile_t` 멤버 **typedef** 에 액세스 하기 위한 바로 가기입니다 `type` .
+의 인스턴스에는 `add_volatile<T>` **`typedef`** `type` *t* 가 참조, 함수 또는 휘발성 한정 형식인 경우 t이 고, 그렇지 *T* 않으면 t 인 멤버가 있습니다 **`volatile`** *T*. 별칭은 `add_volatile_t` 멤버에 액세스 하는 바로 가기입니다 **`typedef`** `type` .
 
 ## <a name="example"></a>예제
 

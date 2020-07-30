@@ -2,24 +2,24 @@
 title: Concurrency 네임스페이스 연산자(AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228481"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 네임스페이스 연산자(AMP)
 
 ||||
 |-|-|-|
-|[연산자!=](#operator_neq)|[연산자 비율](#operator_mod)|[연산자*](#operator_star)|
-|[연산자+](#operator_add)|[연산자-](#operator-)|[연산자/](#operator_div)|
-|[연산자==](#operator_eq_eq)|
+|[연산자! =](#operator_neq)|[연산자](#operator_mod)|[연산자](#operator_star)|
+|[연산자 +](#operator_add)|[연산자](#operator-)|[연산자](#operator_div)|
+|[연산자 = =](#operator_eq_eq)|
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>연산자==
+## <a name="operator"></a><a name="operator_eq_eq"></a>연산자 = =
 
-지정된 인수가 같는지 여부를 결정합니다.
+지정 된 인수가 같은지 여부를 확인 합니다.
 
 ```cpp
 template <
@@ -37,18 +37,18 @@ bool operator== (
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-비교할 수 있는 틀 중 하나입니다.
+비교할 튜플 중 하나입니다.
 
 *_Rhs*<br/>
-비교할 수 있는 틀 중 하나입니다.
+비교할 튜플 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 
-tuples가 같으면 **true;** 그렇지 **않으면, 거짓**.
+**`true`** 튜플이 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="operator"></a><a name="operator_neq"></a>연산자!=
+## <a name="operator"></a><a name="operator_neq"></a>연산자! =
 
-지정된 인수가 같지 않은지 여부를 결정합니다.
+지정 된 인수가 같지 않은지 여부를 확인 합니다.
 
 ```cpp
 template <
@@ -66,18 +66,18 @@ bool operator!= (
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-비교할 수 있는 틀 중 하나입니다.
+비교할 튜플 중 하나입니다.
 
 *_Rhs*<br/>
-비교할 수 있는 틀 중 하나입니다.
+비교할 튜플 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 
-tuples가 같지 않은 경우 **true;** 그렇지 **않으면, 거짓**.
+**`true`** 튜플이 동일 하지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="operator"></a><a name="operator_add"></a>연산자+
+## <a name="operator"></a><a name="operator_add"></a>연산자 +
 
-지정된 인수의 구성 요소 별 합계를 계산합니다.
+지정 된 인수의 구성 요소 단위 합계를 계산 합니다.
 
 ```cpp
 template <
@@ -118,11 +118,11 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 ### <a name="return-value"></a>Return Value
 
-지정된 인수의 구성 요소 별 합계입니다.
+지정 된 인수의 구성 요소 단위 합계입니다.
 
-## <a name="operator-"></a><a name="operator-"></a>연산자-
+## <a name="operator-"></a><a name="operator-"></a>연산자
 
-지정된 인수 간의 구성 요소 별 차이를 계산합니다.
+지정 된 인수 사이의 구성 요소 단위 차이를 계산 합니다.
 
 ```cpp
 template <
@@ -156,18 +156,18 @@ _Tuple_type<_Rank>   operator-(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-빼는 인수입니다.
+뺄 인수입니다.
 
 *_Rhs*<br/>
-빼는 인수입니다.
+뺄 인수입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정된 인수 간의 구성 요소 별 차이입니다.
+지정 된 인수 사이의 구성 요소 단위 차이입니다.
 
-## <a name="operator"></a><a name="operator_star"></a>연산자*
+## <a name="operator"></a><a name="operator_star"></a>연산자
 
-지정된 인수의 구성 요소 별 곱을 계산합니다.
+지정 된 인수의 구성 요소 단위 곱을 계산 합니다.
 
 ```cpp
 template <
@@ -193,18 +193,18 @@ _Tuple_type<_Rank>   operator*(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-곱할 수 있는 투플 중 하나입니다.
+곱할 튜플 중 하나입니다.
 
 *_Rhs*<br/>
-곱할 수 있는 투플 중 하나입니다.
+곱할 튜플 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정된 인수의 구성 요소 별 제품입니다.
+지정 된 인수의 구성 요소 단위 곱입니다.
 
-## <a name="operator"></a><a name="operator_div"></a>연산자/
+## <a name="operator"></a><a name="operator_div"></a>연산자
 
-지정된 인수의 구성 요소 별 몫을 계산합니다.
+지정 된 인수의 구성 요소별 몫을 계산 합니다.
 
 ```cpp
 template <
@@ -230,18 +230,18 @@ _Tuple_type<_Rank>   operator/(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-나눌 튜플.
+나눌 튜플입니다.
 
 *_Rhs*<br/>
-로 나눌 튜플.
+나눌 튜플입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정된 인수의 구성 요소 별 몫입니다.
+지정 된 인수의 구성 요소별 몫입니다.
 
-## <a name="operator"></a><a name="operator_mod"></a>연산자 비율
+## <a name="operator"></a><a name="operator_mod"></a>연산자
 
-두 번째 지정된 인수에 의해 첫 번째 지정된 인수의 계수를 계산합니다.
+지정 된 두 번째 인수를 기준으로 지정 된 첫 번째 인수의 모듈러스를 계산 합니다.
 
 ```cpp
 template <
@@ -267,15 +267,15 @@ _Tuple_type<_Rank>   operator%(
 튜플 인수의 순위입니다.
 
 *_Lhs*<br/>
-조절자가 계산되는 튜플입니다.
+모듈로 계산 되는 튜플입니다.
 
 *_Rhs*<br/>
-튜플에 의해 조절.
+모듈로 이동할 튜플입니다.
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 지정된 인수의 결과는 두 번째 지정된 인수를 계수합니다.
+지정 된 첫 번째 인수 모듈러스의 결과는 두 번째 지정 된 인수입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[동시성 네임스페이스](concurrency-namespace-cpp-amp.md)
+[Concurrency 네임 스페이스](concurrency-namespace-cpp-amp.md)

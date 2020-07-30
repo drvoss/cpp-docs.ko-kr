@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127662"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212880"
 ---
 # <a name="compiler-error-c2059"></a>컴파일러 오류 C2059
 
@@ -19,7 +19,7 @@ ms.locfileid: "77127662"
 
 토큰에서 구문 오류가 발생 했습니다.
 
-다음 예에서는 `j`를 선언 하는 줄에 대 한 오류 메시지를 생성 합니다.
+다음 예제에서는를 선언 하는 줄에 대 한 오류 메시지를 생성 합니다 `j` .
 
 ```cpp
 // C2059e.cpp
@@ -31,9 +31,9 @@ ms.locfileid: "77127662"
 
 오류의 원인을 확인 하려면 오류 메시지에 나열 된 줄 뿐만 아니라 위의 줄을 검사 합니다. 줄을 검사 하면 문제에 대 한 단서가 나타나지 않는 경우 오류 메시지에 나열 된 줄과 그 위에 있는 여러 줄을 주석으로 처리 해 보세요.
 
-`typedef` 변수 바로 뒤에 오는 기호에서 오류 메시지가 발생 하면 소스 코드에 변수가 정의 되어 있는지 확인 합니다.
+변수 바로 뒤에 오는 기호에서 오류 메시지가 발생 하면 **`typedef`** 소스 코드에 변수가 정의 되어 있는지 확인 합니다.
 
-전처리기 기호 이름이 식별자로 다시 사용 되는 경우에는 C2059가 발생 합니다. 다음 예제에서 컴파일러는 열거형 요소 이름으로 유효 하지 않은 숫자 1로 `DIGITS.ONE`를 확인 합니다.
+전처리기 기호 이름이 식별자로 다시 사용 되는 경우에는 C2059가 발생 합니다. 다음 예제에서 컴파일러는 `DIGITS.ONE` 열거형 요소 이름으로 유효 하지 않은 숫자 1로 간주 합니다.
 
 ```cpp
 #define ONE 1
@@ -44,7 +44,7 @@ enum class DIGITS {
 };
 ```
 
-**/D**_기호_ **=** 를 사용 하 여 컴파일하는 경우에 발생할 수 있듯이 기호가 nothing으로 평가 되는 경우에는 C2059가 발생할 수 있습니다.
+**/D**_기호_ 를 **=** 사용 하 여 컴파일하는 경우에 발생할 수 있듯이 기호가 nothing으로 평가 되는 경우에는 C2059가 발생할 수 있습니다.
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-이 예에 표시 된 것 처럼 이름을 한정할 수 있는 연산자 (`::`, `->`및 `.`) 뒤에 `template`키워드가 오는 경우에는 C2059가 발생할 수 있습니다.
+`::` `->` `.` **`template`** 이 예에 표시 된 것 처럼 이름 (, 및)을 한정할 수 있는 연산자 뒤에 키워드를 입력 해야 하는 경우에는 C2059가 발생할 수 있습니다.
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-기본적으로 C++는 `AY::Rebind`이 템플릿이 아니라고 가정하기 때문에 다음 `<`는 보다 작음 기호로 해석됩니다.  꺾쇠 괄호로 올바르게 구문 분석될 수 있도록 `Rebind`이 템플릿임을 컴파일러에 명시적으로 알려야 합니다. 이 오류를 해결하려면 다음과 같이 종속 형식의 이름에서 `template` 키워드를 사용합니다.
+기본적으로 C++는 `AY::Rebind`이 템플릿이 아니라고 가정하기 때문에 다음 `<`는 보다 작음 기호로 해석됩니다.  꺾쇠 괄호로 올바르게 구문 분석될 수 있도록 `Rebind`이 템플릿임을 컴파일러에 명시적으로 알려야 합니다. 이 오류를 해결 하려면 다음과 같이 **`template`** 종속 형식의 이름에 키워드를 사용 합니다.
 
 ```cpp
 template <typename T> struct Allocator {

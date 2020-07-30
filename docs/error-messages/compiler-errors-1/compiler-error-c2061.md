@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1e1b13960c84d4e03c6316c451c690f8b5a6236e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212867"
 ---
 # <a name="compiler-error-c2061"></a>컴파일러 오류 C2061
 
 구문 오류: ' identifier ' 식별자입니다.
 
-컴파일러가 예상한 식별자를 찾지 못했습니다. 사용 하기 전에 `identifier`을 선언 했는지 확인 합니다.
+컴파일러가 예상한 식별자를 찾지 못했습니다. 를 `identifier` 사용 하기 전에가 선언 되었는지 확인 합니다.
 
-이니셜라이저를 괄호로 묶을 수 있습니다. 이 문제를 방지 하려면 선언 자를 괄호로 묶거나 `typedef`로 만듭니다.
+이니셜라이저를 괄호로 묶을 수 있습니다. 이 문제를 방지 하려면 선언 자를 괄호로 묶거나로 만듭니다 **`typedef`** .
 
 컴파일러가 식을 클래스 템플릿 인수로 검색 하는 경우에도이 오류가 발생할 수 있습니다. [typename](../../cpp/typename.md) 을 사용 하 여 컴파일러에 형식을 알립니다.
 

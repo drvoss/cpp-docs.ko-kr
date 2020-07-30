@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920249"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234148"
 ---
 # <a name="_expand"></a>_expand
 
@@ -71,7 +71,7 @@ void *_expand(
 
 블록을 이동 하지 않고 지정 된 크기로 확장 하는 데 사용할 수 있는 메모리가 충분 하지 않은 경우 함수는 **NULL**을 반환 합니다. **_expand** 는 요청한 것 보다 작은 크기로 확장 된 블록을 반환 하지 않습니다. 오류가 발생 하는 경우 **errno** 는 오류의 특성을 나타냅니다. **Errno**에 대 한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조 하세요.
 
-반환 값은 모든 형식의 개체 스토리지를 위해 적절하게 맞도록 보장되어 있는 스토리지 공간을 가리킵니다. 항목의 새 크기를 확인 하려면 **_msize**을 사용 합니다. **Void**이외의 형식에 대 한 포인터를 가져오려면 반환 값에 형식 캐스팅을 사용 합니다.
+반환 값은 모든 형식의 개체 스토리지를 위해 적절하게 맞도록 보장되어 있는 스토리지 공간을 가리킵니다. 항목의 새 크기를 확인 하려면 **_msize**을 사용 합니다. 이외의 형식에 대 한 포인터를 가져오려면 **`void`** 반환 값에 형식 캐스팅을 사용 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -88,7 +88,7 @@ void *_expand(
 
 ## <a name="requirements"></a>요구 사항
 
-|기능|필수 헤더|
+|함수|필수 헤더|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 
@@ -128,7 +128,7 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

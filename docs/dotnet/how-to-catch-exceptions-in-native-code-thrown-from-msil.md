@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545086"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221356"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>방법: 네이티브 코드에서 MSIL이 throw한 예외 catch
 
-네이티브 코드에서 MSIL의 네이티브 C++ 예외를 catch 할 수 있습니다.  `__try` 및 `__except`를 사용 하 여 CLR 예외를 catch 할 수 있습니다.
+네이티브 코드에서는 MSIL에서 네이티브 c + + 예외를 catch 할 수 있습니다.  및를 사용 하 여 CLR 예외를 catch 할 수 있습니다 `__try` **`__except`** .
 
-자세한 내용은 [예외 및 오류 처리에 대 한 C++ ](../cpp/errors-and-exception-handling-modern-cpp.md) [구조적 예외C++처리 (C/)](../cpp/structured-exception-handling-c-cpp.md) 및 최신 모범 사례를 참조 하세요.
+자세한 내용은 [구조적 예외 처리 (C/c + +)](../cpp/structured-exception-handling-c-cpp.md) 및 [예외 및 오류 처리에 대 한 최신 c + + 모범 사례](../cpp/errors-and-exception-handling-modern-cpp.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 

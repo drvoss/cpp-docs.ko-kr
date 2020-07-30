@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233368"
 ---
 # <a name="compiler-error-c3538"></a>컴파일러 오류 C3538
 
@@ -21,11 +21,11 @@ ms.locfileid: "74761545"
 
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-1. 목록에 있는 모든 `auto` 선언이 동일한 형식으로 추론되는지 확인합니다.
+1. **`auto`** 목록의 모든 선언이 동일한 형식으로 추론 되는지 확인 합니다.
 
 ## <a name="example"></a>예제
 
-다음 문은 3538 오류를 생성합니다. 각 문에서 여러 변수를 선언하지만 각각의 `auto` 키워드 사용이 동일한 형식으로 추론되지 않습니다.
+다음 문은 3538 오류를 생성합니다. 각 문은 여러 변수를 선언 하지만 키워드를 사용할 때마다 **`auto`** 동일한 형식으로 추론 되지 않습니다.
 
 ```cpp
 // C3538.cpp

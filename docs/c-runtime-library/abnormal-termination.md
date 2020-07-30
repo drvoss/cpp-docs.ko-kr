@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213660"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-시스템이 종료 처리기의 내부 목록을 실행하는 동안 [try-finally](../cpp/try-finally-statement.md) 문의 `__finally` 블록이 입력되었는지 여부를 나타냅니다.
+**`__finally`** 시스템에서 종료 처리기의 내부 목록을 실행 하는 동안 [try-catch 문의](../cpp/try-finally-statement.md) 블록을 입력 했는지 여부를 나타냅니다.
 
 ## <a name="syntax"></a>구문
 
@@ -40,7 +40,7 @@ int   _abnormal_termination(
 
 ## <a name="return-value"></a>Return Value
 
-시스템이 스택을 *해제*하면 **true**이고, 해제하지 않으면 **false**입니다.
+**`true`** 시스템이 스택을 해제 하면 *이 고* , 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -52,6 +52,6 @@ int   _abnormal_termination(
 |-------------|---------------------|
 |_abnormal_termination|excpt.h|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [try-finally 문](../cpp/try-finally-statement.md)

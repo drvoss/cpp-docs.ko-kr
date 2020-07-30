@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221876"
 ---
 # <a name="using-generic-text-mappings"></a>일반 텍스트 매핑 사용
 
 **Microsoft 전용**
 
-Microsoft 런타임 라이브러리는 다양한 해외 시장을 겨냥하여 코드 개발을 간소화하기 위해 다양한 데이터 형식, 루틴 및 기타 개체에 대해 Microsoft 전용 "일반 텍스트" 매핑을 제공합니다. 이러한 매핑은 TCHAR.H에 정의됩니다. 다음과 같은 이름 매핑을 사용하여 세 종류의 문자 세트에 대해 컴파일될 수 있는 제네릭 코드를 작성할 수 있습니다. 여기서 세 가지 문자 세트는 `#define` 문을 사용하여 정의한 매니페스트 상수에 따라 ASCII (SBCS), MBCS 또는 유니코드입니다. 제네릭 텍스트 매핑은 ANSI와 호환되지 않는 Microsoft 확장입니다.
+Microsoft 런타임 라이브러리는 다양한 해외 시장을 겨냥하여 코드 개발을 간소화하기 위해 다양한 데이터 형식, 루틴 및 기타 개체에 대해 Microsoft 전용 "일반 텍스트" 매핑을 제공합니다. 이러한 매핑은 TCHAR.H에 정의됩니다. 이러한 이름 매핑을 사용하면 `#define` 문을 사용하여 정의하는 매니페스트 상수에 따라, 세 가지 종류의 문자 집합, 즉 ASCII(SBCS), MBCS 또는 유니코드용으로 컴파일할 수 있는 일반 코드를 쓸 수 있습니다. 제네릭 텍스트 매핑은 ANSI와 호환되지 않는 Microsoft 확장입니다.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>일반 텍스트 매핑용 전처리기 지시문
 
@@ -50,17 +50,17 @@ Microsoft 런타임 라이브러리는 다양한 해외 시장을 겨냥하여 �
 
 예를 들어 TCHAR.H에 정의된 일반 텍스트 함수인 `_tcsrev`는 프로그램에 `MBCS`가 정의된 경우에는 `mbsrev`로 매핑되고, `_UNICODE`가 정의된 경우에는 `_wcsrev`로 매핑됩니다. 그렇지 않으면 `_tcsrev`는 `strrev`로 매핑됩니다.
 
-역시 TCHAR.H에 정의된 일반 텍스트 데이터 형식 `_TCHAR`도 `_MBCS`이 정의된 경우에는 `char` 형식에 매핑되고, `_UNICODE`가 정의된 경우에는 `wchar_t` 형식으로 매핑되고, 두 상수가 모두 정의되지 않은 경우에는 `char` 형식으로 매핑됩니다. 프로그래밍 편의를 위해 다른 데이터 형식 매핑이 TCHAR.H에 제공되지만 `_TCHAR`이 가장 유용한 형식입니다.
+`_TCHAR`Tchar.h에 정의 된 일반 텍스트 데이터 형식입니다. H는가 정의 된 경우 형식에 매핑되고, **`char`** `_MBCS` 가 정의 된 경우에는 형식으로 매핑되고, **`wchar_t`** `_UNICODE` **`char`** 상수가 정의 되어 있지 않으면를 입력 합니다. 프로그래밍 편의를 위해 다른 데이터 형식 매핑이 TCHAR.H에 제공되지만 `_TCHAR`이 가장 유용한 형식입니다.
 
 ### <a name="generic-text-data-type-mappings"></a>일반 텍스트 데이터 형식 매핑
 
 |일반 텍스트 데이터 형식 이름|SBCS(_UNICODE 및 MBCS가 정의되지 않음)|_MBCS 정의됨|_UNICODE 정의됨|
 |----------------------------------|--------------------------------------------|--------------------|-----------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` 또는 `_TEXT`|효과 없음(전처리기에 의해 제거됨)|효과 없음(전처리기에 의해 제거됨)|`L`(다음 문자 또는 문자열을 유니코드 문자 또는 문자열로 변환)|
 
 루틴, 변수 및 기타 개체의 일반 텍스트 매핑에 대한 전체 목록을 보려면 [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)을 참조하세요.
@@ -97,7 +97,7 @@ RetVal = strrev(szString);
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [일반 텍스트 매핑](../c-runtime-library/generic-text-mappings.md)<br/>
 [데이터 형식 매핑](../c-runtime-library/data-type-mappings.md)<br/>

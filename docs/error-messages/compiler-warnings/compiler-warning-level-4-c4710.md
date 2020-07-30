@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4710
 ms.assetid: 76381ec7-3fc1-4bee-9a0a-c2c8307b92e2
-ms.openlocfilehash: c39848b9b3e94e35c4d0c0937a0974b717c6bd8d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c30b98204f447f4d9d0ab8d687602a361d909363
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218067"
 ---
 # <a name="compiler-warning-level-4-c4710"></a>컴파일러 경고(수준 4) C4710
 
@@ -19,7 +19,7 @@ ms.locfileid: "80198178"
 
 지정 된 함수가 인라인 확장을 위해 선택 되었지만 컴파일러가 인라이닝을 수행 하지 않았습니다.
 
-인라인은 컴파일러의 판단에 의해 수행 됩니다. **Register** 키워드와 같은 **인라인** 키워드는 컴파일러에 대 한 힌트로 사용 됩니다. 컴파일러는 추론을 사용 하 여 속도를 위해 컴파일할 때 코드의 속도를 높이 거 나 특정 함수를 인라인으로 지정 하 여 공간을 컴파일하는 동안 코드를 더 작게 만드는 지 여부를 확인 합니다. 컴파일러는 공간을 컴파일하는 경우 매우 작은 함수만 인라인 합니다.
+인라인은 컴파일러의 판단에 의해 수행 됩니다. 키워드와 **`inline`** 같은 키워드는 **`register`** 컴파일러에 대 한 힌트로 사용 됩니다. 컴파일러는 추론을 사용 하 여 속도를 위해 컴파일할 때 코드의 속도를 높이 거 나 특정 함수를 인라인으로 지정 하 여 공간을 컴파일하는 동안 코드를 더 작게 만드는 지 여부를 확인 합니다. 컴파일러는 공간을 컴파일하는 경우 매우 작은 함수만 인라인 합니다.
 
 경우에 따라 컴파일러는 기계적 이유로 특정 함수를 인라인 하지 않습니다. 컴파일러가 함수를 인라인 할 수 없는 이유 목록은 [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) 를 참조 하세요.
 

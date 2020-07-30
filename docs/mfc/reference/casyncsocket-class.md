@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195098"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 클래스
 
@@ -200,7 +200,7 @@ virtual BOOL Accept(
 *lpSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이에 대 한 포인터입니다 (바이트). *LpSockAddrLen* 는 값-결과 매개 변수입니다. 처음에는 *lpSockAddr*가 가리키는 공간의 크기가 포함 되어야 합니다. 반환 시 반환 되는 주소의 실제 길이 (바이트)를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -255,7 +255,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 
 - 소켓이 피어에 의해 닫힌 경우 알림을 받으려는 FD_CLOSE 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -300,7 +300,7 @@ BOOL Attach(
 
 - 소켓이 피어에 의해 닫힌 경우 알림을 받으려는 FD_CLOSE 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공하는 경우 0이 아닙니다.
 
@@ -336,7 +336,7 @@ BOOL Bind (
 *nSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이 (바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 다음 목록에서는 반환 될 수 있는 몇 가지 오류에 대해 설명 합니다. 전체 목록은 [Windows 소켓 오류 코드](/windows/win32/winsock/windows-sockets-error-codes-2)를 참조 하세요.
 
@@ -416,7 +416,7 @@ BOOL Connect(
 *nSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이 (바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이로 인해 WSAEWOULDBLOCK 오류 코드가 표시 되 고 응용 프로그램에서 재정의 가능한 콜백을 사용 하는 경우 연결 작업이 완료 되 면 응용 프로그램에서 메시지를 받게 됩니다 `OnConnect` . 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -500,7 +500,7 @@ SOCK_STREAM 또는 SOCK_DGRAM.
 *lpszSockAddress*<br/>
 연결 된 소켓의 네트워크 주소를 포함 하는 문자열에 대 한 포인터입니다 (예: "128.56.22.8"). 이 매개 변수에 대 한 NULL 문자열을 전달 하면 `CAsyncSocket` 인스턴스가 모든 네트워크 인터페이스에서 클라이언트 작업을 수신 대기 해야 함을 나타냅니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -570,7 +570,7 @@ BOOL CreateEx(
 
 - 소켓 클로저의 알림을 받으려는 FD_CLOSE.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 [Create ()](#return-value-5)의 반환 값을 참조 하세요.
 
@@ -599,7 +599,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 *hSocket*<br/>
 소켓에 대 한 핸들을 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 개체에 대 한 포인터 `CAsyncSocket` 이거나 `CAsyncSocket` *hsocket*에 연결 된 개체가 없는 경우 NULL입니다.
 
@@ -615,7 +615,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 static int PASCAL GetLastError();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 반환 값은이 스레드에서 수행한 마지막 Windows 소켓 API 루틴에 대 한 오류 코드를 나타냅니다.
 
@@ -653,7 +653,7 @@ BOOL GetPeerName(
 *lpSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이에 대 한 포인터입니다 (바이트). 반환 시 *lpSockAddrLen* 인수는 반환 된 *lpSockAddr* 의 실제 크기 (바이트)를 포함 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -691,7 +691,7 @@ BOOL GetPeerNameEx(
 *rPeerPort*<br/>
 포트를 저장 하는 UINT에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -739,7 +739,7 @@ BOOL GetSockName(
 *lpSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이에 대 한 포인터입니다 (바이트).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -779,7 +779,7 @@ BOOL GetSockNameEx(
 *rSocketPort*<br/>
 포트를 저장 하는 UINT에 대 한 참조입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 값을 검색할 소켓 옵션입니다.
 
 *lpOptionValue*<br/>
-요청 된 옵션의 값이 반환 될 버퍼에 대 한 포인터입니다. 선택한 옵션과 연결 된 값이 buffer *lpOptionValue*에서 반환 됩니다. *LpOptionLen* 가 가리키는 정수는 원래이 버퍼의 크기 (바이트)를 포함 해야 합니다. 반환 될 때 반환 되는 값의 크기로 설정 됩니다. SO_LINGER의 경우이는 구조의 크기가 됩니다 `LINGER` . 다른 모든 옵션의 경우 옵션에 따라 BOOL 또는 **int**의 크기가 됩니다. 설명 섹션에서 옵션 및 해당 크기의 목록을 참조 하세요.
+요청 된 옵션의 값이 반환 될 버퍼에 대 한 포인터입니다. 선택한 옵션과 연결 된 값이 buffer *lpOptionValue*에서 반환 됩니다. *LpOptionLen* 가 가리키는 정수는 원래이 버퍼의 크기 (바이트)를 포함 해야 합니다. 반환 될 때 반환 되는 값의 크기로 설정 됩니다. SO_LINGER의 경우이는 구조의 크기가 됩니다 `LINGER` . 다른 모든 옵션의 경우 **`int`** 옵션에 따라 BOOL 또는의 크기가 됩니다. 설명 섹션에서 옵션 및 해당 크기의 목록을 참조 하세요.
 
 *lpOptionLen*<br/>
 *LpOptionValue* 버퍼의 크기에 대 한 포인터입니다 (바이트).
@@ -827,7 +827,7 @@ BOOL GetSockOpt(
 *n 수준*<br/>
 옵션이 정의 되는 수준입니다. 유일 하 게 지원 되는 수준은 SOL_SOCKET 및 IPPROTO_TCP입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 옵션을로 설정 하지 않은 경우 `SetSockOpt` `GetSockOpt` 은 옵션에 대 한 기본값을 반환 합니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -849,33 +849,33 @@ BOOL GetSockOpt(
 
 에 대해 지원 되는 옵션은 다음과 같습니다 `GetSockOpt` . 형식은 *lpOptionValue*로 주소를 지정 하는 데이터 형식을 식별 합니다. TCP_NODELAY 옵션은 수준 IPPROTO_TCP를 사용 합니다. 다른 모든 옵션은 수준 SOL_SOCKET를 사용 합니다.
 
-|값|형식|의미|
+|값|Type|의미|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|소켓이 수신 대기 중입니다.|
 |SO_BROADCAST|BOOL|소켓은 브로드캐스트 메시지의 전송에 대해 구성 됩니다.|
 |SO_DEBUG|BOOL|디버깅을 사용할 수 있습니다.|
 |SO_DONTLINGER|BOOL|True 이면 SO_LINGER 옵션을 사용할 수 없습니다.|
 |SO_DONTROUTE|BOOL|라우팅이 사용 하지 않도록 설정 되었습니다.|
-|SO_ERROR|**int**|오류 상태를 검색 하 고 선택을 취소 합니다.|
+|SO_ERROR|**`int`**|오류 상태를 검색 하 고 선택을 취소 합니다.|
 |SO_KEEPALIVE|BOOL|연결 유지를 보내고 있습니다.|
 |SO_LINGER|`struct LINGER`|현재 링거 옵션을 반환 합니다.|
 |SO_OOBINLINE|BOOL|Out-of-band 데이터는 일반 데이터 스트림에서 수신 됩니다.|
 |SO_RCVBUF|int|수신에 대 한 버퍼 크기입니다.|
 |SO_REUSEADDR|BOOL|소켓이 이미 사용 중인 주소에 바인딩될 수 있습니다.|
-|SO_SNDBUF|**int**|보낼 버퍼 크기입니다.|
-|SO_TYPE|**int**|소켓 형식입니다 (예: SOCK_STREAM).|
+|SO_SNDBUF|**`int`**|보낼 버퍼 크기입니다.|
+|SO_TYPE|**`int`**|소켓 형식입니다 (예: SOCK_STREAM).|
 |TCP_NODELAY|BOOL|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|
 
 에 대해 지원 되지 않는 BSD (Berkeley Software 배포판) 옵션 `GetSockOpt` 은 다음과 같습니다.
 
-|값|형식|의미|
+|값|Type|의미|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|낮은 워터 마크를 받습니다.|
-|SO_RCVTIMEO|**int**|수신 제한 시간입니다.|
-|SO_SNDLOWAT|**int**|낮은 워터 마크를 보냅니다.|
-|SO_SNDTIMEO|**int**|송신 제한 시간입니다.|
+|SO_RCVLOWAT|**`int`**|낮은 워터 마크를 받습니다.|
+|SO_RCVTIMEO|**`int`**|수신 제한 시간입니다.|
+|SO_SNDLOWAT|**`int`**|낮은 워터 마크를 보냅니다.|
+|SO_SNDTIMEO|**`int`**|송신 제한 시간입니다.|
 |IP_OPTIONS||IP 헤더의 옵션을 가져옵니다.|
-|TCP_MAXSEG|**int**|TCP 최대 세그먼트 크기를 가져옵니다.|
+|TCP_MAXSEG|**`int`**|TCP 최대 세그먼트 크기를 가져옵니다.|
 
 `GetSockOpt`지원 되지 않는 옵션을 사용 하 여를 호출 하면에서 반환 되는 오류 코드 WSAENOPROTOOPT이 반환 됩니다 `GetLastError` .
 
@@ -897,7 +897,7 @@ BOOL IOCtl(
 *lpArgument*<br/>
 *Lcommand*에 대 한 매개 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -936,7 +936,7 @@ BOOL Listen(int nConnectionBacklog = 5);
 *nConnectionBacklog*<br/>
 보류 중인 연결의 큐가 증가할 수 있는 최대 길이입니다. 유효한 범위는 1에서 5 사이입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1174,7 +1174,7 @@ void operator=(const CAsyncSocket& rSrc);
 operator SOCKET() const;
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공 하면 소켓 개체의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1208,7 +1208,7 @@ virtual int Receive(
 
 - MSG_OOB 대역 외 데이터를 처리 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `Receive` 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1299,7 +1299,7 @@ int ReceiveFrom(
 
 - MSG_OOB 대역 외 데이터를 처리 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `ReceiveFrom` 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고를 호출 하 여 특정 오류 코드를 검색할 수 있습니다 `GetLastError` . 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1377,7 +1377,7 @@ int ReceiveFromEx(
 
 - MSG_OOB 대역 외 데이터를 처리 합니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `ReceiveFromEx` 받은 바이트 수를 반환 합니다. 연결이 닫힌 경우 0을 반환 합니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고를 호출 하 여 특정 오류 코드를 검색할 수 있습니다 `GetLastError` . 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1447,7 +1447,7 @@ virtual int Send(
 
 - MSG_OOB 대역 외 데이터를 전송 합니다 (SOCK_STREAM에만 해당).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `Send` 전송 된 총 문자 수를 반환 합니다. 이는 *Nbuflen*이 나타내는 숫자 보다 적을 수 있습니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1542,7 +1542,7 @@ int SendTo(
 *nSockAddrLen*<br/>
 *LpSockAddr* 의 주소 길이 (바이트)입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `SendTo` 전송 된 총 문자 수를 반환 합니다. 이는 *Nbuflen*이 나타내는 숫자 보다 적을 수 있습니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1632,7 +1632,7 @@ int SendToEx(
 
 - MSG_OOB 대역 외 데이터를 전송 합니다 (SOCK_STREAM에만 해당).
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 오류가 발생 하지 않으면 `SendToEx` 전송 된 총 문자 수를 반환 합니다. 이는 *Nbuflen*이 나타내는 숫자 보다 적을 수 있습니다. 그렇지 않으면 SOCKET_ERROR 값이 반환 되 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1714,7 +1714,7 @@ BOOL SetSockOpt(
 *n 수준*<br/>
 옵션이 정의 되는 수준입니다. 유일 하 게 지원 되는 수준은 SOL_SOCKET 및 IPPROTO_TCP입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1756,7 +1756,7 @@ TCP_NODELAY 옵션은 Nagle 알고리즘을 사용 하지 않도록 설정 합�
 
 에 대해 지원 되는 옵션은 다음과 같습니다 `SetSockOpt` . 형식은 *lpOptionValue*로 주소를 지정 하는 데이터 형식을 식별 합니다.
 
-|값|형식|의미|
+|값|Type|의미|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|소켓에서 브로드캐스트 메시지의 전송을 허용 합니다.|
 |SO_DEBUG|BOOL|디버깅 정보를 기록합니다.|
@@ -1765,22 +1765,22 @@ TCP_NODELAY 옵션은 Nagle 알고리즘을 사용 하지 않도록 설정 합�
 |SO_KEEPALIVE|BOOL|연결 유지를 전송 합니다.|
 |SO_LINGER|`struct LINGER`|`Close`보내지 않은 데이터가 있으면 링거 합니다.|
 |SO_OOBINLINE|BOOL|일반 데이터 스트림에서 대역 외 데이터를 수신 합니다.|
-|SO_RCVBUF|**int**|수신에 대 한 버퍼 크기를 지정 합니다.|
+|SO_RCVBUF|**`int`**|수신에 대 한 버퍼 크기를 지정 합니다.|
 |SO_REUSEADDR|BOOL|소켓이 이미 사용 중인 주소에 바인딩될 수 있도록 허용 합니다. [바인딩](#bind)을 참조 하십시오.|
-|SO_SNDBUF|**int**|보낼 버퍼 크기를 지정 합니다.|
+|SO_SNDBUF|**`int`**|보낼 버퍼 크기를 지정 합니다.|
 |TCP_NODELAY|BOOL|보내기 통합을 위해 Nagle 알고리즘을 비활성화합니다.|
 
 에 대해 지원 되지 않는 BSD (Berkeley Software 배포판) 옵션 `SetSockOpt` 은 다음과 같습니다.
 
-|값|형식|의미|
+|값|Type|의미|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|소켓이 수신 대기 중입니다.|
-|SO_ERROR|**int**|오류 상태를 확인 하 고 선택을 취소 합니다.|
-|SO_RCVLOWAT|**int**|낮은 워터 마크를 받습니다.|
-|SO_RCVTIMEO|**int**|수신 시간 제한|
-|SO_SNDLOWAT|**int**|낮은 워터 마크를 보냅니다.|
-|SO_SNDTIMEO|**int**|송신 제한 시간입니다.|
-|SO_TYPE|**int**|소켓의 유형입니다.|
+|SO_ERROR|**`int`**|오류 상태를 확인 하 고 선택을 취소 합니다.|
+|SO_RCVLOWAT|**`int`**|낮은 워터 마크를 받습니다.|
+|SO_RCVTIMEO|**`int`**|수신 시간 제한|
+|SO_SNDLOWAT|**`int`**|낮은 워터 마크를 보냅니다.|
+|SO_SNDTIMEO|**`int`**|송신 제한 시간입니다.|
+|SO_TYPE|**`int`**|소켓의 유형입니다.|
 |IP_OPTIONS||IP 헤더의 옵션 필드를 설정 합니다.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown
@@ -1802,7 +1802,7 @@ BOOL ShutDown(int nHow = sends);
 
 - **= 2**
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0이 고, [GetLastError](#getlasterror)를 호출 하 여 특정 오류 코드를 검색할 수 있습니다. 이 멤버 함수에는 다음 오류가 적용 됩니다.
 
@@ -1868,7 +1868,7 @@ BOOL Socket(
 *nAddressFormat*<br/>
 주소 패밀리 사양입니다.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 성공하면 `TRUE`를 반환하고 실패하면 `FALSE`를 반환합니다.
 

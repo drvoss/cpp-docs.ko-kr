@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext (C++ COM 특성)
+title: helpstringcontext (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6d4a6b4ab2381fc9ebe0f237978c92fe0f656c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168151"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224450"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -28,9 +28,9 @@ ms.locfileid: "80168151"
 *contextID*<br/>
 **도움말** 파일의 32 비트 도움말 컨텍스트 식별자입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Helpstringcontext** C++ 특성에는 [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 특성과 동일한 기능이 있습니다.
+**Helpstringcontext** c + + 특성에는 [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -54,8 +54,8 @@ __interface IMyI
 
 |||
 |-|-|
-|**적용 대상**|**클래스**, **인터페이스**, 인터페이스 메서드|
-|**반복 가능**|아니요|
+|**적용 대상**|**`class`**, **인터페이스**, 인터페이스 메서드|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -67,4 +67,4 @@ __interface IMyI
 [인터페이스 특성](interface-attributes.md)<br/>
 [클래스 특성](class-attributes.md)<br/>
 [메서드 특성](method-attributes.md)<br/>
-[name](module-cpp.md)
+[모듈](module-cpp.md)

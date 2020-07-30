@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915743"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221889"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 경로의 스토리지 위치입니다.
 
 *maxlen*\
-경로의 최대 길이 (문자): char의 경우 **char** , **_wgetcwd**의 경우 **wchar_t** **_getcwd** 입니다.
+경로의 최대 길이 (문자): **`char`** **_getcwd** 및 **`wchar_t`** **_wgetcwd**의 최대 길이입니다.
 
 ## <a name="return-value"></a>Return Value
 
@@ -82,7 +82,7 @@ wchar_t *_wgetcwd(
 
 **_Getcwd** 함수는 기본 드라이브에 대 한 현재 작업 디렉터리의 전체 경로를 가져와 *버퍼*에 저장 합니다. 정수 인수 *maxlen* 는 경로에 대 한 최대 길이를 지정 합니다. 경로의 길이 (null 종결 문자 포함)가 *maxlen*를 초과 하면 오류가 발생 합니다. *Buffer* 인수는 **NULL**일 수 있습니다. **malloc**를 사용 하 여 경로를 저장 하는 최소 크기의 *maxlen* (필요한 경우에만) 버퍼가 자동으로 할당 됩니다. 이 버퍼는 나중에 **free** 를 호출 하 고 **_getcwd** 반환 값 (할당 된 버퍼에 대 한 포인터)으로 전달 하 여 해제할 수 있습니다.
 
-**_getcwd** 은 현재 작업 디렉터리의 경로를 나타내는 문자열을 반환 합니다. 현재 작업 디렉터리가 루트 이면 문자열이 백슬래시 (`\`)로 끝납니다. 현재 작업 디렉터리가 루트 이외의 디렉터리이면 문자열은 백슬래시가 아닌 디렉터리 이름으로 끝납니다.
+**_getcwd** 은 현재 작업 디렉터리의 경로를 나타내는 문자열을 반환 합니다. 현재 작업 디렉터리가 루트 이면 문자열이 백슬래시 ()로 끝납니다 `\` . 현재 작업 디렉터리가 루트 이외의 디렉터리이면 문자열은 백슬래시가 아닌 디렉터리 이름으로 끝납니다.
 
 **_wgetcwd** 은 **_getcwd**의 와이드 문자 버전입니다. **_wgetcwd** 의 *buffer* 인수와 반환 값은 와이드 문자열입니다. **_wgetcwd** 와 **_getcwd** 는 동일 하 게 동작 합니다.
 
@@ -140,7 +140,7 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [디렉터리 제어](../../c-runtime-library/directory-control.md)\
 [_chdir, _wchdir](chdir-wchdir.md)\
