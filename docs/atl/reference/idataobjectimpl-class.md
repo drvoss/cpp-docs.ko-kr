@@ -20,19 +20,19 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 618f8248a03297120ae2504bcb30ba8f080b184d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 379dd3304d96afcd2b0e98ec4a98f1bac64d4ad9
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329836"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470773"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 클래스
 
-이 클래스는 균일한 데이터 전송을 지원하고 연결을 관리하는 방법을 제공합니다.
+이 클래스는 Uniform Data Transfer을 지원 하 고 연결을 관리 하기 위한 메서드를 제공 합니다.
 
 > [!IMPORTANT]
-> 이 클래스와 해당 멤버는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -44,34 +44,34 @@ class IDataObjectImpl
 #### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-에서 파생된 클래스입니다. `IDataObjectImpl`
+에서 파생 된 클래스 `IDataObjectImpl` 입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|Description|
 |----------|-----------------|
-|[IDataObjectImpl::D조언](#dadvise)|데이터 개체와 조언 싱크 사이의 연결을 설정합니다. 이렇게 하면 조언 싱크 개체의 변경 내용 알림을 받을 수 있습니다.|
-|[IDataObjectImpl::Dunadvise](#dunadvise)|을 통해 `DAdvise`이전에 설정된 연결을 종료합니다.|
-|[IDataObjectImpl::에이넘어](#enumdadvise)|현재 권고 연결을 반복할 열거형기를 만듭니다.|
-|[IDataObjectImpl::에이넘 포맷등](#enumformatetc)|데이터 개체에서 지원하는 `FORMATETC` 구조를 반복할 열거체를 만듭니다. ATL 구현은 E_NOTIMPL 반환합니다.|
-|[IDataObjectImpl::FireDatachange](#firedatachange)|각 조언 싱크에 변경 알림을 다시 보냅니다.|
-|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|논리적으로 동등한 `FORMATETC` 구조를 더 복잡한 구조로 검색합니다. ATL 구현은 E_NOTIMPL 반환합니다.|
-|[IDataObjectImpl::GetData](#getdata)|데이터 개체에서 클라이언트로 데이터를 전송합니다. 데이터는 구조에 `FORMATETC` 설명되며 `STGMEDIUM` 구조를 통해 전송됩니다.|
-|[IDataObjectImpl::GetDataHere](#getdatahere)|`GetData`클라이언트를 제외한 것과 유사하게 `STGMEDIUM` 구조를 할당해야 합니다. ATL 구현은 E_NOTIMPL 반환합니다.|
-|[IDataObjectImpl::쿼리GetData](#querygetdata)|데이터 개체가 데이터 전송을 `FORMATETC` 위한 특정 구조를 지원하는지 여부를 결정합니다. ATL 구현은 E_NOTIMPL 반환합니다.|
-|[IData개체임플::세트데이터](#setdata)|클라이언트에서 데이터 개체로 데이터를 전송합니다. ATL 구현은 E_NOTIMPL 반환합니다.|
+|[IDataObjectImpl::D Advise](#dadvise)|데이터 개체와 advise 싱크 간의 연결을 설정 합니다. 이를 통해 advise 싱크에서 개체의 변경 내용에 대 한 알림을 받을 수 있습니다.|
+|[IDataObjectImpl::D Unadvise](#dunadvise)|이전에를 통해 설정 된 연결을 종료 `DAdvise` 합니다.|
+|[IDataObjectImpl:: EnumDAdvise](#enumdadvise)|현재 advise 연결을 반복 하는 열거자를 만듭니다.|
+|[IDataObjectImpl:: Enumformatetc 메서드의](#enumformatetc)|`FORMATETC`데이터 개체에서 지 원하는 구조체를 반복 하는 열거자를 만듭니다. ATL 구현은 E_NOTIMPL 반환 합니다.|
+|[IDataObjectImpl::FireDataChange](#firedatachange)|각 advise 싱크로 변경 알림을 다시 보냅니다.|
+|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|논리적으로 동일한 구조를 검색 하 여 `FORMATETC` 더 복잡 한 구조를 가져옵니다. ATL 구현은 E_NOTIMPL 반환 합니다.|
+|[IDataObjectImpl:: GetData](#getdata)|데이터 개체에서 클라이언트로 데이터를 전송 합니다. 데이터는 구조로 설명 되며 `FORMATETC` 구조를 통해 전송 됩니다 `STGMEDIUM` .|
+|[IDataObjectImpl:: GetDataHere](#getdatahere)|와 유사 합니다 `GetData` . 단, 클라이언트는 구조를 할당 해야 합니다 `STGMEDIUM` . ATL 구현은 E_NOTIMPL 반환 합니다.|
+|[IDataObjectImpl:: QueryGetData](#querygetdata)|데이터 개체에서 데이터를 전송 하기 위한 특정 구조를 지원 하는지 여부를 확인 `FORMATETC` 합니다. ATL 구현은 E_NOTIMPL 반환 합니다.|
+|[IDataObjectImpl:: SetData](#setdata)|클라이언트에서 데이터 개체로 데이터를 전송 합니다. ATL 구현은 E_NOTIMPL 반환 합니다.|
 
 ## <a name="remarks"></a>설명
 
-[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 인터페이스는 균일한 데이터 전송을 지원하는 메서드를 제공합니다. `IDataObject`표준 형식 구조 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 및 [STGMEDIUM를](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 사용하여 데이터를 검색하고 저장합니다.
+[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 인터페이스는 Uniform Data Transfer을 지 원하는 메서드를 제공 합니다. `IDataObject`[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 및 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 표준 형식 구조를 사용 하 여 데이터를 검색 하 고 저장 합니다.
 
-`IDataObject`또한 데이터 변경 알림을 처리하기 위해 싱크를 조언하는 연결을 관리합니다. 클라이언트가 데이터 개체에서 데이터 변경 알림을 받으려면 클라이언트는 조언 싱크라는 개체에 [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) 인터페이스를 구현해야 합니다. 그런 다음 클라이언트가 호출하면 `IDataObject::DAdvise`데이터 개체와 조언 싱크 사이에 연결이 설정됩니다.
+`IDataObject`는 데이터 변경 알림을 처리 하는 싱크를 알리기 위한 연결도 관리 합니다. 클라이언트에서 데이터 개체의 데이터 변경 알림을 수신 하려면 클라이언트는 advise 싱크 라는 개체에서 [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) 인터페이스를 구현 해야 합니다. 클라이언트는를 호출할 때 `IDataObject::DAdvise` 데이터 개체와 advise 싱크 간에 연결이 설정 됩니다.
 
-클래스는 `IDataObjectImpl` 디버그 `IDataObject` 빌드에서 `IUnknown` 덤프 장치에 정보를 전송하여 구현 및 구현의 기본 구현을 제공합니다.
+클래스는 `IDataObjectImpl` 의 기본 구현을 제공 `IDataObject` 하 고 `IUnknown` 디버그 빌드에서 정보를 덤프 장치로 전송 하 여를 구현 합니다.
 
-**관련 기사** [ATL 자습서,](../../atl/active-template-library-atl-tutorial.md) [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)
+**관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [atl 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -81,11 +81,11 @@ class IDataObjectImpl
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlctl.h
+**헤더:** 없음 ctl. h
 
-## <a name="idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::D조언
+## <a name="idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::D Advise
 
-데이터 개체와 조언 싱크 사이의 연결을 설정합니다.
+데이터 개체와 advise 싱크 간의 연결을 설정 합니다.
 
 ```
 HRESULT DAdvise(
@@ -97,15 +97,15 @@ HRESULT DAdvise(
 
 ### <a name="remarks"></a>설명
 
-이렇게 하면 조언 싱크 개체의 변경 내용 알림을 받을 수 있습니다.
+이를 통해 advise 싱크에서 개체의 변경 내용에 대 한 알림을 받을 수 있습니다.
 
-연결을 종료하려면 [DUnadvise](#dunadvise)로 전화하십시오.
+연결을 종료 하려면 [DUnadvise](#dunadvise)를 호출 합니다.
 
-[IDataObject::DWindows](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) SDK에서 조언참조.
+Windows SDK [IDataObject::D advise](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) 를 참조 하세요.
 
-## <a name="idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::Dunadvise
+## <a name="idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::D Unadvise
 
-[DAdvise](#dadvise)를 통해 이전에 설정된 연결을 종료합니다.
+이전에 지정한 연결을 ' d a 3에서 [종료 합니다.](#dadvise)
 
 ```
 HRESULT DUnadvise(DWORD dwConnection);
@@ -113,11 +113,11 @@ HRESULT DUnadvise(DWORD dwConnection);
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [iDataObject::DUnadvise를](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) 참조하십시오.
+Windows SDK [IDataObject::D unadvise](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) 를 참조 하세요.
 
-## <a name="idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl::에이넘어
+## <a name="idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl:: EnumDAdvise
 
-현재 권고 연결을 반복할 열거형기를 만듭니다.
+현재 advise 연결을 반복 하는 열거자를 만듭니다.
 
 ```
 HRESULT DAdvise(
@@ -129,11 +129,11 @@ HRESULT DAdvise(
 
 ### <a name="remarks"></a>설명
 
-[IDataObject::열거윈도우](/windows/win32/api/objidl/nf-objidl-idataobject-enumdadvise) SDK에서 조언.
+Windows SDK [IDataObject:: Enumd advise](/windows/win32/api/objidl/nf-objidl-idataobject-enumdadvise) 를 참조 하세요.
 
-## <a name="idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl::에이넘 포맷등
+## <a name="idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl:: Enumformatetc 메서드의
 
-데이터 개체에서 지원하는 `FORMATETC` 구조를 반복할 열거체를 만듭니다.
+`FORMATETC`데이터 개체에서 지 원하는 구조체를 반복 하는 열거자를 만듭니다.
 
 ```
 HRESULT EnumFormatEtc(
@@ -143,15 +143,15 @@ HRESULT EnumFormatEtc(
 
 ### <a name="remarks"></a>설명
 
-윈도우 SDK에서 [IDataObject::에이그넘포맷등](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 참조.
+Windows SDK에서 [IDataObject:: enumformatetc 메서드의](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 를 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
 E_NOTIMPL을 반환합니다.
 
-## <a name="idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDatachange
+## <a name="idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange
 
-현재 관리 중인 각 조언 싱크에 변경 알림을 다시 보냅니다.
+현재 관리 중인 각 advise 싱크로 변경 알림을 다시 보냅니다.
 
 ```
 HRESULT FireDataChange();
@@ -163,7 +163,7 @@ HRESULT FireDataChange();
 
 ## <a name="idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc
 
-논리적으로 동등한 `FORMATETC` 구조를 더 복잡한 구조로 검색합니다.
+논리적으로 동일한 구조를 검색 하 여 `FORMATETC` 더 복잡 한 구조를 가져옵니다.
 
 ```
 HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut);
@@ -175,11 +175,11 @@ E_NOTIMPL을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-참조 [IDataObject::GetCanFormat기타](/windows/win32/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) 윈도우 SDK에서.
+Windows SDK에서 [IDataObject:: GetCanonicalFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) 를 참조 하세요.
 
-## <a name="idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl::GetData
+## <a name="idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl:: GetData
 
-데이터 개체에서 클라이언트로 데이터를 전송합니다.
+데이터 개체에서 클라이언트로 데이터를 전송 합니다.
 
 ```
 HRESULT GetData(
@@ -189,13 +189,13 @@ HRESULT GetData(
 
 ### <a name="remarks"></a>설명
 
-*pformatetcIn* 매개 변수는 TYMED_MFPICT 저장소 매체 유형을 지정해야 합니다.
+*Pformatetcin* 매개 변수는 TYMED_MFPICT 저장소 미디어 유형을 지정 해야 합니다.
 
-[IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 윈도우 SDK를 참조하십시오.
+Windows SDK [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 를 참조 하세요.
 
-## <a name="idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl::GetDataHere
+## <a name="idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl:: GetDataHere
 
-`GetData`클라이언트를 제외한 것과 유사하게 `STGMEDIUM` 구조를 할당해야 합니다.
+와 유사 합니다 `GetData` . 단, 클라이언트는 구조를 할당 해야 합니다 `STGMEDIUM` .
 
 ```
 HRESULT GetDataHere(
@@ -209,11 +209,11 @@ E_NOTIMPL을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-[IDataObject::GetData여기](/windows/win32/api/objidl/nf-objidl-idataobject-getdatahere) 윈도우 SDK에서 참조하십시오.
+Windows SDK에서 [IDataObject:: GetDataHere](/windows/win32/api/objidl/nf-objidl-idataobject-getdatahere) 를 참조 하세요.
 
-## <a name="idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::쿼리GetData
+## <a name="idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl:: QueryGetData
 
-데이터 개체가 데이터 전송을 `FORMATETC` 위한 특정 구조를 지원하는지 여부를 결정합니다.
+데이터 개체에서 데이터를 전송 하기 위한 특정 구조를 지원 하는지 여부를 확인 `FORMATETC` 합니다.
 
 ```
 HRESULT QueryGetData(FORMATETC* pformatetc);
@@ -225,11 +225,11 @@ E_NOTIMPL을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IDataObject::QueryGetData를](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) 참조하십시오.
+Windows SDK [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) 를 참조 하세요.
 
-## <a name="idataobjectimplsetdata"></a><a name="setdata"></a>IData개체임플::세트데이터
+## <a name="idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl:: SetData
 
-클라이언트에서 데이터 개체로 데이터를 전송합니다.
+클라이언트에서 데이터 개체로 데이터를 전송 합니다.
 
 ```
 HRESULT SetData(
@@ -244,7 +244,7 @@ E_NOTIMPL을 반환합니다.
 
 ### <a name="remarks"></a>설명
 
-Windows SDK에서 [IDataObject::SetData를](/windows/win32/api/objidl/nf-objidl-idataobject-setdata) 참조하십시오.
+Windows SDK [IDataObject:: SetData](/windows/win32/api/objidl/nf-objidl-idataobject-setdata) 를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

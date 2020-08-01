@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e9cb8c452cc3eea32b6eed9bf23fb454344c105d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214089"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470942"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 클래스
 
@@ -49,13 +49,13 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[COleDataObject:: COleDataObject](#coledataobject)|`COleDataObject` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[COleDataObject:: Attach](#attach)|지정 된 OLE 데이터 개체를에 연결 `COleDataObject` 합니다.|
 |[COleDataObject:: AttachClipboard](#attachclipboard)|클립보드에 있는 데이터 개체를 연결 합니다.|
@@ -76,7 +76,7 @@ class COleDataObject
 
 이 클래스를 사용 하면 데이터가 지정 된 형식으로 존재 하는지 여부를 확인할 수 있습니다. 사용 가능한 데이터 형식을 열거 하거나 지정 된 형식을 사용할 수 있는지 여부를 확인 한 다음 기본 형식으로 데이터를 검색할 수도 있습니다. 개체 검색은 [CFile](../../mfc/reference/cfile-class.md), HGLOBAL 또는 구조체를 사용 하는 등 여러 가지 방법으로 수행할 수 있습니다 `STGMEDIUM` .
 
-자세한 내용은 Windows SDK [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 참조 하세요.
+자세한 내용은 Windows SDK [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 구조체를 참조 하세요.
 
 응용 프로그램에서 데이터 개체를 사용 하는 방법에 대 한 자세한 내용은 [데이터 개체 및 데이터 소스 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)문서를 참조 하세요.
 
@@ -189,7 +189,7 @@ BOOL GetData(
 데이터가 반환 되는 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 함수에서 반환 되는 값 중 하나일 수 있습니다.
 
 *lpStgMedium*<br/>
-데이터를 수신 하는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 가리킵니다.
+데이터를 수신 하는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 구조체를 가리킵니다.
 
 *lpFormatEtc*<br/>
 데이터가 반환 되는 형식을 설명 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다. *Cfformat*으로 지정 된 클립보드 형식을 벗어나는 추가 형식 정보를 지정 하려면이 매개 변수에 대 한 값을 제공 합니다. NULL 인 경우 기본값은 구조체의 다른 필드에 사용 됩니다 `FORMATETC` .
@@ -200,7 +200,7 @@ BOOL GetData(
 
 ### <a name="remarks"></a>설명
 
-자세한 내용은 Windows SDK에서 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)및 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 를 참조 하세요.
+자세한 내용은 Windows SDK에서 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)및 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 를 참조 하세요.
 
 자세한 내용은 Windows SDK에서 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 을 참조 하세요.
 

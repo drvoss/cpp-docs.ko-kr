@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214128"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470921"
 ---
 # <a name="colecontrol-class"></a>COleControl 클래스
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|`COleControl` 개체를 만듭니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|컨트롤의 현재 모양을 검색 합니다.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|앰비언트 BackColor 속성의 값을 반환 합니다.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|컨트롤의 모양을 업데이트 해야 할 때 프레임 워크에서 호출 됩니다.|
 |[COleControl::DrawMetafile](#drawmetafile)|메타 파일 장치 컨텍스트를 사용할 때 프레임 워크에서 호출 됩니다.|
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 정보를 요청 하는 형식을 지정 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체를 가리킵니다.
 
 *lpStgMedium*<br/>
-데이터가 반환 되는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체를 가리킵니다.
+데이터가 반환 되는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 구조체를 가리킵니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 데이터의 형식을 지정 하는 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 구조체에 대 한 포인터입니다.
 
 *lpStgMedium*<br/>
-데이터가 있는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) 구조체에 대 한 포인터입니다.
+데이터가 있는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 구조체에 대 한 포인터입니다.
 
 *bRelease*<br/>
 컨트롤에서 저장소 미디어를 해제 해야 하면 TRUE이 고, 그렇지 않으면입니다. 컨트롤에서 저장 미디어를 해제 하지 않아야 하면 FALSE입니다.
