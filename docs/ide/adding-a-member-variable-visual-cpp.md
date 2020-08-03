@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216000"
 ---
 # <a name="add-a-member-variable"></a>멤버 변수 추가
 
@@ -66,7 +66,7 @@ ms.locfileid: "58328963"
 
 - **Access**
 
-  멤버 변수에 대한 액세스를 설정합니다. 액세스 한정자는 다른 클래스가 멤버 변수에 포함되는 액세스를 지정하는 키워드입니다. 액세스 권한 지정에 대한 자세한 내용은 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)를 참조하세요. 멤버 변수 액세스 수준은 기본적으로 `public`으로 설정됩니다.
+  멤버 변수에 대한 액세스를 설정합니다. 액세스 한정자는 다른 클래스가 멤버 변수에 포함되는 액세스를 지정하는 키워드입니다. 액세스 권한 지정에 대한 자세한 내용은 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)를 참조하세요. 멤버 변수 액세스 수준은 기본적으로 **`public`** 으로 설정됩니다.
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
@@ -82,11 +82,11 @@ ms.locfileid: "58328963"
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
   - 대화 상자 컨트롤에 멤버 변수를 추가하는 경우 이 상자는 컨트롤이나 값에 대해 반환된 개체의 형식으로 채워집니다. **컨트롤**을 선택하는 경우 **변수 형식**은 **컨트롤 ID** 상자에서 선택한 컨트롤의 기본 클래스를 지정합니다. 대화 상자 컨트롤에 값이 포함될 수 있는 경우 및 **값**을 선택한 경우 **변수 형식**은 컨트롤이 포함할 수 있는 값에 적절한 형식을 지정합니다. 자세한 내용은 [대화 상자 컨트롤 및 변수 형식](#dialog-box-controls-and-variable-types)을 참조하세요.
 
@@ -123,11 +123,11 @@ ms.locfileid: "58328963"
 
 - **최소값**
 
-  변수 형식이 `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, [COLECurrency](../mfc/reference/colecurrency-class.md) 또는 [CTime](../atl-mfc-shared/reference/ctime-class.md)인 경우에만 사용할 수 있습니다. 소수 자릿수 또는 날짜 범위에 허용되는 가장 낮은 값을 나타냅니다.
+  변수 형식이 `BOOL`, **`int`** , `UINT`, **`long`** , `DWORD`, **`float`** , **`double`** , `BYTE`, **`short`** , [COLECurrency](../mfc/reference/colecurrency-class.md) 또는 [CTime](../atl-mfc-shared/reference/ctime-class.md)인 경우에만 사용할 수 있습니다. 소수 자릿수 또는 날짜 범위에 허용되는 가장 낮은 값을 나타냅니다.
 
 - **최대값**
 
-  변수 형식이 `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, `COLECurrency` 또는 `CTime`인 경우에만 사용할 수 있습니다. 소수 자릿수 또는 날짜 범위에 허용되는 가장 높은 값을 나타냅니다.
+  변수 형식이 `BOOL`, **`int`** , `UINT`, **`long`** , `DWORD`, **`float`** , **`double`** , `BYTE`, **`short`** , `COLECurrency` 또는 `CTime`인 경우에만 사용할 수 있습니다. 소수 자릿수 또는 날짜 범위에 허용되는 가장 높은 값을 나타냅니다.
 
 - **.h 파일**
 
@@ -149,21 +149,21 @@ MFC를 사용하여 만든 대화 상자 컨트롤에 멤버 변수를 추가하
 
 |컨트롤|컨트롤 형식|제어 변수 형식|변수 값 형식|최소값/최대값(값 형식에만 해당)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
-|애니메이션 컨트롤|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
-|단추|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|없음; 컨트롤에만 해당|해당 없음|
+|애니메이션 컨트롤|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|없음; 컨트롤에만 해당|N/A|
+|단추|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|없음; 컨트롤에만 해당|N/A|
 |확인란|CHECK|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|최소값/최대값|
 |콤보 상자|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|최대 문자|
 |날짜 시간 선택 컨트롤|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|최소값/최대값|
 |편집 상자|편집|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime` 또는 `COleCurrency`|최소값/최대값; 일부 지원 최대 문자|
-|바로 가기 키 컨트롤|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
+|바로 가기 키 컨트롤|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|없음; 컨트롤에만 해당|N/A|
 |목록 상자|LISTBOX|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|최대 문자|
-|목록 컨트롤|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
+|목록 컨트롤|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|없음; 컨트롤에만 해당|N/A|
 |MonthCalendar 컨트롤|SysMonthCal32|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|`CTime`|최소값/최대값|
-|Progress 컨트롤|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
+|Progress 컨트롤|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|없음; 컨트롤에만 해당|N/A|
 |Rich Edit 2 컨트롤|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|최대 문자|
 |Rich Edit 컨트롤|RICHEDIT|`CRichEditCtrl`|`CString`|최대 문자|
-|스크롤 막대(가로 또는 세로)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|최소값/최대값|
-|Slider 컨트롤|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|최소값/최대값|
-|Spin 컨트롤|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
-|탭 컨트롤|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
-|트리 컨트롤|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|없음; 컨트롤에만 해당|해당 없음|
+|스크롤 막대(가로 또는 세로)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|최소값/최대값|
+|Slider 컨트롤|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|최소값/최대값|
+|Spin 컨트롤|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|없음; 컨트롤에만 해당|N/A|
+|탭 컨트롤|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|없음; 컨트롤에만 해당|N/A|
+|트리 컨트롤|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|없음; 컨트롤에만 해당|N/A|

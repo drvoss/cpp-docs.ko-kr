@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-ms.openlocfilehash: 053720bcdf635a7e09363712259b558d93a2972c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6ad5a47230c6ba4bb2c0d636e50779b65483875
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233088"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229664"
 ---
 # <a name="identifiers-in-primary-expressions"></a>기본 식의 식별자
 
-식별자는 integral, **float**, `enum`, `struct`, **공용 구조체**, 배열, 포인터 또는 함수 형식일 수 있습니다. 식별자는 개체를 지정하는 것(이 경우 l-value임)으로 선언되거나 함수(이 경우 함수 지정자임)로 선언된 경우에 기본 식입니다. l-value의 정의는 [L-Value 및 R-Value 식](../c-language/l-value-and-r-value-expressions.md)을 참조하세요.
+식별자는 integral, **`float`** , **`enum`** , **`struct`** , **`union`** , array, pointer 또는 function 형식일 수 있습니다. 식별자는 개체를 지정하는 것(이 경우 l-value임)으로 선언되거나 함수(이 경우 함수 지정자임)로 선언된 경우에 기본 식입니다. l-value의 정의는 [L-Value 및 R-Value 식](../c-language/l-value-and-r-value-expressions.md)을 참조하세요.
 
 배열 식별자가 나타내는 포인터 값은 변수가 아닙니다. 따라서 배열 식별자는 할당 연산의 왼쪽 피연산자가 될 수 없으므로 수정 가능한 l-value가 아닙니다.
 

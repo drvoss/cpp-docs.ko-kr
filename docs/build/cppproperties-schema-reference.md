@@ -3,12 +3,12 @@ title: CppProperties.json 참조
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328726"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224060"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json 참조
 
@@ -28,7 +28,7 @@ CMake를 사용하지 않는 폴더 열기 프로젝트는 *CppProperties.json* 
 |`forcedInclude`|모든 컴파일 단위에 자동으로 포함될 헤더(MSVC에서 /FI에 매핑되거나 clang에서 -include에 매핑됨)|
 |`undefines`|정의되지 않은 매크로 목록(MSVC에서 /U에 매핑됨)|
 |`intelliSenseMode`|사용할 IntelliSense 엔진. MSVC, gcc 또는 Clang에 대해 미리 정의된 아키텍처 특정 변형 중 하나를 지정할 수 있습니다.|
-|`environments`|명령 프롬프트에서 환경 변수처럼 동작하고 ${env.\<변수>} 매크로를 사용하여 액세스하는 사용자 정의 변수 집합입니다.|
+|`environments`|명령 프롬프트에서 환경 변수처럼 동작하고 ${env.\<VARIABLE>} 매크로를 사용하여 액세스하는 사용자 정의 변수 집합입니다.|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode 값
 
@@ -85,7 +85,7 @@ Linux 워크로드가 설치되면 원격으로 Linux 및 WSL을 대상으로 �
 
 ## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> 사용자 정의 환경
 
-`environments` 속성 사용을 선택하면 *CppProperties.json*에서 전역으로 또는 구성별로 변수 집합을 정의할 수 있습니다. 이러한 변수는 폴더 열기 프로젝트의 컨텍스트에서 환경 변수처럼 동작하며 여기에서 정의된 후에는 *tasks.vs.json* 및 *launch.vs.json*에서 ${env.\<VARIABLE>} 구문을 사용하여 액세스할 수 있습니다. 그러나 Visual Studio에서 내부적으로 사용하는 모든 명령 프롬프트에서 실제 환경 변수로 반드시 설정되는 것은 아닙니다.
+`environments` 속성 사용을 선택하면 *CppProperties.json*에서 전역으로 또는 구성별로 변수 집합을 정의할 수 있습니다. 이러한 변수는 Open Folder 프로젝트의 컨텍스트에서 환경 변수처럼 동작하며, 여기에서 변수를 정의한 후 ${env.\<VARIABLE>} 구문을 사용하여 *tasks.vs.json* 및 *launch.vs.json*으로부터 액세스할 수 있습니다. 그러나 Visual Studio에서 내부적으로 사용하는 모든 명령 프롬프트에서 실제 환경 변수로 반드시 설정되는 것은 아닙니다.
 
 **Visual Studio 2019 버전 16.4 이상:** *CppProperties.json*에 정의된 구성별 변수는 `inheritEnvironments`를 설정할 필요 없이 디버그 대상 및 작업에 의해 자동으로 선택됩니다. 디버그 대상은 *CppProperties.json*에서 지정하는 환경과 함께 자동으로 시작됩니다.
 
@@ -160,7 +160,7 @@ Linux 워크로드가 설치되면 원격으로 Linux 및 WSL을 대상으로 �
 
 ## <a name="troubleshoot-intellisense-errors"></a>IntelliSense 오류 문제 해결
 
-기대하는 IntelliSense가 표시되지 않는 경우 **도구** > **옵션** > **텍스트 편집기** > **C/C++**  > **고급**으로 이동해 **로깅 사용**을 **참**으로 설정하여 문제를 해결할 수 있습니다. 먼저 **로깅 수준**은 5로, **로깅 필터**는 8로 설정해 보세요.
+기대하는 IntelliSense가 표시되지 않는 경우 **도구** > **옵션** > **텍스트 편집기** > **C/C++**  > **고급**으로 이동하고 **로깅 사용**을 **`true`** 로 설정하여 문제를 해결할 수 있습니다. 먼저 **로깅 수준**은 5로, **로깅 필터**는 8로 설정해 보세요.
 
 ![진단 로깅](media/diagnostic-logging.png)
 

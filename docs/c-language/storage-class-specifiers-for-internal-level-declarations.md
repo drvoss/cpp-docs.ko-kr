@@ -5,16 +5,16 @@ helpviewer_keywords:
 - storage class specifiers, internal
 - internal linkage, storage-class specifiers
 ms.assetid: feca8ab5-23df-4b6c-921a-4d51f9be35d7
-ms.openlocfilehash: efc9a4b080f7141c8ac9404804bf43fbe54c30c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41efdd0016d10a9c96ac3bb2fbe249c5990b6df1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345164"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211712"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>내부 수준 선언에 대한 스토리지 클래스 지정자
 
-내부 수준에서 변수 선언에 대한 네 가지 *storage-class-specifier* 터미널 중 하나를 사용할 수 있습니다. 이러한 선언에서 *storage-class-specifier*를 생략하는 경우 기본 스토리지 클래스는 **auto**입니다. 따라서 **auto** 키워드는 C 프로그램에서 거의 표시되지 않습니다.
+내부 수준 변수 선언에는 네 개의 *`storage-class-specifier`* 터미널 중 하나를 사용할 수 있습니다. 이러한 선언에서 *`storage-class-specifier`* 를 생략하면 기본 스토리지 클래스는 **`auto`** 입니다. 따라서 **`auto`** 키워드는 C 프로그램에서 거의 보이지 않습니다.
 
 ## <a name="see-also"></a>참조
 

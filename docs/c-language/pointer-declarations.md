@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232154"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211764"
 ---
 # <a name="pointer-declarations"></a>포인터 선언
 
@@ -40,9 +40,9 @@ ms.locfileid: "62232154"
 
 *type-specifier*는 개체의 형식을 제공합니다. 개체 형식은 기본, 구조체 또는 공용 구조체 형식일 수 있습니다. 포인터 변수는 함수, 배열 및 다른 포인터를 가리킬 수도 있습니다. 더 복잡한 포인터 형식의 선언 및 해석에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.
 
-*type-specifier*를 **void**로 만들면 포인터가 참조할 형식 지정이 지연됩니다. 그러한 항목이 "**void**에 대한 포인터"로 참조되고 `void *`로 작성됩니다. *void*에 대한 포인터로 선언된 변수를 사용하여 모든 형식의 개체를 가리킬 수 있습니다. 그러나 포인터나 포인터가 가리키는 개체에 대해 작업을 수행하려면 대개 포인터가 가리키는 형식이 각 작업에 대해 명시적으로 지정되어야 합니다. **char**<strong>\*</strong> 형식 및 **void**<strong>\*</strong> 형식의 변수는 형식 캐스팅 없이 대입과 호환됩니다. 형식 캐스팅을 사용하여 이러한 변환을 수행할 수 있습니다. 자세한 내용은 [형식 캐스팅 변환](../c-language/type-cast-conversions.md)을 참조하세요.
+*type-specifier*를 **`void`** 로 만들면 포인터가 참조할 형식 지정이 지연됩니다. 그러한 항목이 " **`void`** 에 대한 포인터"로 참조되고 `void *`로 작성됩니다. *void*에 대한 포인터로 선언된 변수를 사용하여 모든 형식의 개체를 가리킬 수 있습니다. 그러나 포인터나 포인터가 가리키는 개체에 대해 작업을 수행하려면 대개 포인터가 가리키는 형식이 각 작업에 대해 명시적으로 지정되어야 합니다. ( **`char`** <strong>\*</strong> 형식 및 **`void`** <strong>\*</strong> 형식의 변수는 형식 캐스팅 없이 대입과 호환됩니다.) 형식 캐스팅을 사용하여 이러한 변환을 수행할 수 있습니다. 자세한 내용은 [형식 캐스팅 변환](../c-language/type-cast-conversions.md)을 참조하세요.
 
-*type-qualifier*는 **const** 또는 **volatile**이거나 둘 다일 수 있습니다. 이 형식 한정자는 각각 프로그램 자체에서 포인터를 수정할 수 없거나(**const**), 프로그램 제어를 벗어나 일부 프로세스에서 포인터를 올바르게 수정할 수 있도록(**volatile**) 지정합니다. **const** 및 **volatile**에 대한 자세한 내용은 [형식 한정자](../c-language/type-qualifiers.md)를 참조하세요.
+*type-qualifier*는 **`const`** 또는 **`volatile`** 이거나 둘 다일 수 있습니다. 이 형식 한정자는 각각 프로그램 자체에서 포인터를 수정할 수 없거나( **`const`** ), 프로그램 제어를 벗어나 일부 프로세스에서 포인터를 올바르게 수정할 수 있도록( **`volatile`** ) 지정합니다. ( **`const`** 및 **`volatile`** 에 대한 자세한 내용은 [형식 한정자](../c-language/type-qualifiers.md)를 참조하세요.)
 
 *declarator*는 변수 이름을 지정하며 형식 한정자를 포함할 수 있습니다. 예를 들어, *declarator*가 배열을 나타낼 경우 포인터 형식이 배열에 대한 포인터로 수정됩니다.
 
@@ -56,26 +56,26 @@ ms.locfileid: "62232154"
 char *message; /* Declares a pointer variable named message */
 ```
 
-*message* 포인터는 형식이 **char**인 변수를 가리킵니다.
+*message* 포인터는 형식이 **`char`** 인 변수를 가리킵니다.
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-*pointers* 배열에 10개의 요소가 있고 각 요소는 형식이 **int**인 변수의 포인터입니다.
+*pointers* 배열에 10개의 요소가 있고 각 요소는 형식이 **`int`** 인 변수의 포인터입니다.
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-*pointer* 변수는 요소가 10개인 배열을 가리킵니다. 배열의 각 요소는 **int** 형식입니다.
+*pointer* 변수는 요소가 10개인 배열을 가리킵니다. 이 배열의 각 요소는 **`int`** 형식입니다.
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-*x* 포인터를 수정하여 다른 **int** 값을 가리킬 수 있지만 포인터가 가리키는 값은 수정할 수 없습니다.
+*x* 포인터를 수정하여 다른 **`int`** 값을 가리킬 수 있지만 포인터가 가리키는 값은 수정할 수 없습니다.
 
 ```
 const int some_object = 5 ;
@@ -85,7 +85,7 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-이 선언의 *y* 변수는 **int** 값에 대한 상수 포인터로 선언됩니다. 포인터가 가리키는 값은 수정할 수 있지만 포인터 자체는 항상 같은 위치, 즉 *fixed_object* 주소를 가리켜야 합니다. 마찬가지로 *z*는 상수 포인터지만 프로그램으로 값을 수정할 수 없는 **int**를 가리키도록 선언되기도 합니다. 추가 지정자인 **volatile**은 *z*로 가리킨 **const int** 값을 프로그램으로 수정할 수 없더라도 프로그램과 동시에 실행 중인 프로세스에서 올바르게 수정할 수 있음을 나타냅니다. *w* 선언은 가리킨 값을 프로그램이 변경할 수 없으며 프로그램이 포인터를 수정할 수 없도록 지정합니다.
+이 선언의 *y* 변수는 **`int`** 값에 대한 상수 포인터로 선언됩니다. 포인터가 가리키는 값은 수정할 수 있지만 포인터 자체는 항상 같은 위치, 즉 *fixed_object* 주소를 가리켜야 합니다. 마찬가지로 *z*는 상수 포인터지만 프로그램으로 값을 수정할 수 없는 **`int`** 를 가리키도록 선언되기도 합니다. 추가 지정자 **`volatile`** 은 *z*로 가리킨 **const int** 값을 프로그램으로 수정할 수 없더라도 프로그램과 동시에 실행 중인 프로세스에서 올바르게 수정할 수 있음을 나타냅니다. *w* 선언은 가리킨 값을 프로그램이 변경할 수 없으며 프로그램이 포인터를 수정할 수 없도록 지정합니다.
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-*line* 변수에 이름이 *list*인 구조체 형식이 있습니다. *list* 구조체 형식에는 세 가지 멤버가 있습니다. 첫째 멤버는 **char** 값에 대한 포인터이고 둘째 멤버는 **int** 값이며 셋째 멤버는 다른 *list* 구조체에 대한 포인터입니다.
+*line* 변수에 이름이 *list*인 구조체 형식이 있습니다. *list* 구조체 형식에는 세 가지 멤버가 있습니다. 첫째 멤버는 **`char`** 값에 대한 포인터이고 둘째 멤버는 **`int`** 값이며 셋째 멤버는 다른 *list* 구조체에 대한 포인터입니다.
 
 ```
 struct id

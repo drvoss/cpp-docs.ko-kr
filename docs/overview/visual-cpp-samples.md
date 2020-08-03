@@ -4,12 +4,12 @@ description: GitHub의 보관된 Visual Studio C++ 샘플 리포지토리에서 
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: 0862f6b512f7278f878ade53b320ad5298bccf68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80215100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226765"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ 샘플
 
@@ -246,7 +246,7 @@ Visual Studio에는 이전 버전의 C++ 샘플 코드가 포함되어 있습니
 | [ListHdr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 공용 컨트롤 MFC 클래스 `CListCtrl` 및 `CHeaderCtrl`을 사용하는 방법을 보여 줍니다. |
 | [MDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 문서 및 뷰를 사용하지 않는 MDI 애플리케이션입니다. |
 | [MDIDocVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 문서/뷰 아키텍처를 사용하는 업데이트된 버전의 MDI 샘플입니다. |
-| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | `CImage`, `__m64` 데이터 형식 및 DIB(장치 독립적 비트맵)를 사용하는 방법을 보여 줍니다. |
+| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | `CImage`, **`__m64`** 데이터 형식 및 DIB(장치 독립적 비트맵)를 사용하는 방법을 보여 줍니다. |
 | [Modeless](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | MFC `CDialog` 개체를 모덜리스 대화 상자로 사용하는 방법을 보여 줍니다. |
 | [Multipad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 사용자가 한 번에 여러 텍스트 파일을 열어 편집할 수 있는 간단한 텍스트 편집기입니다. |
 | [Npp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | 메모장과 유사한 인터페이스(SDI) 애플리케이션을 구현하는 방법을 보여 줍니다. 이를 통해 문자 메시지를 편집하고 Windows MAPI(메시징 API)를 통해 다른 사용자 또는 다른 시스템으로 보낼 수 있습니다. |

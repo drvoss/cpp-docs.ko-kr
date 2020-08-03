@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196744"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224021"
 ---
 # <a name="exporting-from-a-dll"></a>DLL에서 내보내기
 
@@ -25,7 +25,7 @@ DLL 파일의 레이아웃은 .exe 파일과 매우 유사합니다. 한 가지 
 
 - 모듈 정의(.def) 파일을 만든 다음 DLL을 빌드할 때 .def 파일을 사용합니다. [DLL에서 함수를 이름이 아닌 서수로 내보내](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)려면 이 방법을 사용합니다.
 
-- 함수 정의에서 **__declspec(dllexport)** 키워드를 사용합니다.
+- 함수 정의에 **`__declspec(dllexport)`** 키워드를 사용합니다.
 
 두 가지 방법으로 함수를 내보내는 경우 [__stdcall](../cpp/stdcall.md) 호출 규칙을 사용해야 합니다.
 

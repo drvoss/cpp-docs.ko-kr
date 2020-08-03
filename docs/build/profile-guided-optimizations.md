@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777320"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232731"
 ---
 # <a name="profile-guided-optimizations"></a>프로필 기반 최적화
 
@@ -68,7 +68,7 @@ ms.locfileid: "84777320"
 
 - **함수 레이아웃** – 호출 그래프와 프로파일링된 호출자/호출 수신자 동작에 따라 동일한 실행 경로를 따르는 경향이 있는 함수가 동일한 섹션에 배치됩니다.
 
-- **조건부 분기 최적화** - 값 프로브를 사용하여 프로필 기반 최적화에서 switch 문에 지정된 값이 다른 값보다 더 자주 사용되는지 확인할 수 있습니다.  그런 다음 switch 문에서 이 값을 끌어올 수 있습니다.  더 자주 true가 되는 블록에 따라 `if` 또는 `else` 블록이 먼저 배치되도록 최적화 프로그램에서 `if`...`else`의 순서를 지정할 수 있는 `if`...`else` 명령을 사용하여 동일한 작업을 수행할 수 있습니다.
+- **조건부 분기 최적화** - 값 프로브를 사용하여 프로필 기반 최적화에서 switch 문에 지정된 값이 다른 값보다 더 자주 사용되는지 확인할 수 있습니다.  그런 다음 switch 문에서 이 값을 끌어올 수 있습니다.  더 자주 true가 되는 블록에 따라 **`if`** 또는 **`else`** 블록이 먼저 배치되도록 최적화 프로그램에서 **`if`** ... **`else`** 의 순서를 지정할 수 있는 **`if`** ... **`else`** 명령을 사용하여 동일한 작업을 수행할 수 있습니다.
 
 - **데드 코드 분리** – 프로파일링 중에 호출되지 않는 코드를 섹션 집합의 끝에 추가되는 특별한 섹션으로 이동합니다. 그러면 실질적으로 이 섹션이 자주 사용되는 페이지 외의 섹션으로 유지됩니다.
 

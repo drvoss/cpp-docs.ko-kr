@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326081"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229625"
 ---
 # <a name="initializing-aggregate-types"></a>집합체 형식 초기화
 
@@ -51,7 +51,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 전용**
 
-배열의 최대 크기는 **size_t**에서 정의합니다. 헤더 파일 STDDEF.H에 정의된 **size_t**는 0x00000000~0x7CFFFFFF 범위의 `unsigned int`입니다.
+배열의 최대 크기는 **size_t**에서 정의합니다. 헤더 파일 STDDEF.H에 정의된 **size_t**는 0x00000000~0x7CFFFFFF 범위의 **`unsigned int`** 입니다.
 
 **Microsoft 전용 종료**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 이 생성에서 첫 번째 줄의 첫 번째 왼쪽 중괄호는 세 가지 구조체의 배열인 `nlist[0]`의 초기화를 시작합니다. 값 1, 2, 3은 첫 번째 구조체의 멤버 3개에 할당됩니다. 다음 오른쪽 중괄호가 값 3 다음에 발견되는 경우 `nlist[0]`의 초기화가 완료되며 세 가지 구조체 배열에서 나머지 두 구조체는 자동으로 0으로 초기화됩니다. 마찬가지로 `{ 4,5,6 }`은 `nlist`의 두 번째 행에서 첫 번째 구조체를 초기화합니다. `nlist[1]`의 나머지 두 구조체는 0으로 설정됩니다. 컴파일러가 다음 이니셜라이저 목록(`{ 7,8,9 }`)을 발견하는 경우 `nlist[2]` 초기화를 시도합니다. `nlist`에는 두 행만 있으므로 이 시도는 오류가 발생합니다.
 
-다음 예제에서 `int`의 세 가지 `x` 멤버는 각각 1, 2, 3으로 초기화됩니다.
+다음 예제에서 `x`의 세 **`int`** 멤버는 각각 1, 2, 3으로 초기화됩니다.
 
 ```C
 struct list

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6b6cf9ee7aab3f14b3cb4b48c10e59125391c14c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211777"
 ---
 # <a name="overview-of-c-statements"></a>C 문 개요
 
@@ -41,7 +41,7 @@ C 문은 토큰, 식 및 다른 문으로 구성되어 있습니다. 다른 문�
 
 식 문에는 [식 및 할당](../c-language/expressions-and-assignments.md)에 소개된 산술 연산자 또는 논리 연산자를 포함할 수 있는 C 식이 포함되어 있습니다. null 문은 빈 문입니다.
 
-모든 C 문은 이름과 콜론으로 구성된 식별 레이블로 시작될 수 있습니다. `goto` 문은 레이블 문만 인식하므로 레이블 문에 대해서는 `goto`와 함께 설명합니다. 자세한 내용은 [goto 문 및 레이블 문](../c-language/goto-and-labeled-statements-c.md)을 참조하세요.
+모든 C 문은 이름과 콜론으로 구성된 식별 레이블로 시작될 수 있습니다. **`goto`** 문은 레이블 문만 인식하므로 레이블 문에 대해서는 **`goto`** 와 함께 설명합니다. 자세한 내용은 [goto 문 및 레이블 문](../c-language/goto-and-labeled-statements-c.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

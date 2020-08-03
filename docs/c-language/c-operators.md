@@ -9,18 +9,18 @@ helpviewer_keywords:
 - associativity of operators
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
-ms.openlocfilehash: 139eedf54ab42ddc34b5c049abfcd1c2638c5efc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7868073f4932e4b77329e6df4a3de374bcf41ec9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326380"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227974"
 ---
 # <a name="c-operators"></a>C 연산자
 
 C 연산자는 [C++ 기본 제공 연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md)의 하위 집합입니다.
 
-연산자의 형식에는 다음 세 가지가 있습니다. 단항 식은 피연산자 앞에 추가된 단항 연산자 또는 식 뒤에 오는 **sizeof** 키워드로 구성됩니다. 식은 변수 이름이나 캐스트 식이 될 수 있습니다. 캐스트 식인 경우 괄호로 묶어야 합니다. 이항 식은 이항 연산자로 결합된 두 개의 피연산자로 구성됩니다. 삼진 식은 조건식 연산자로 결합된 세 개의 피연산자로 구성됩니다.
+연산자의 형식에는 다음 세 가지가 있습니다. 단항 식은 피연산자 앞에 추가된 단항 연산자 또는 식 뒤에 오는 **`sizeof`** 키워드로 구성됩니다. 식은 변수 이름이나 캐스트 식이 될 수 있습니다. 캐스트 식인 경우 괄호로 묶어야 합니다. 이항 식은 이항 연산자로 결합된 두 개의 피연산자로 구성됩니다. 삼진 식은 조건식 연산자로 결합된 세 개의 피연산자로 구성됩니다.
 
 C에는 다음과 같은 단항 연산자가 포함되어 있습니다.
 
@@ -28,7 +28,7 @@ C에는 다음과 같은 단항 연산자가 포함되어 있습니다.
 |------------|----------|
 |**-** **~** **!**|부정 및 보수 연산자|
 |**&#42;** **&**|간접 참조 및 주소 연산자|
-|**sizeof**|크기 연산자|
+|**`sizeof`**|크기 연산자|
 |**+**|단항 더하기 연산자|
 |**++** **--**|단항 증가 및 감소 연산자|
 

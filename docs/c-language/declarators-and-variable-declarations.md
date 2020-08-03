@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226453"
 ---
 # <a name="declarators-and-variable-declarations"></a>선언자 및 변수 선언
 
@@ -36,7 +36,7 @@ ms.locfileid: "62234532"
 __declspec(thread) char *var;
 ```
 
-`char`은 형식 지정자이고 `__declspec(thread)` 및 `*`는 한정자이며 `var`은 식별자의 이름입니다.
+**`char`** 은 형식 지정자이고 `__declspec(thread)` 및 `*`는 한정자이며 `var`은 식별자의 이름입니다.
 
 **Microsoft 전용 종료**
 

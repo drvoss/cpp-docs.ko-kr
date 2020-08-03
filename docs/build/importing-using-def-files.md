@@ -8,16 +8,16 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223969"
 ---
 # <a name="importing-using-def-files"></a>DEF 파일을 사용하여 가져오기
 
-.def 파일과 함께 **__declspec(dllimport)** 을 사용하도록 선택하는 경우 CONSTANT 대신 DATA를 사용하도록 .def 파일을 변경하여 잘못된 코딩으로 인해 문제가 발생할 가능성을 줄여야 합니다.
+.def 파일과 함께 **`__declspec(dllimport)`** 을 사용하도록 선택하는 경우 CONSTANT 대신 DATA를 사용하도록 .def 파일을 변경하여 잘못된 코딩으로 인해 문제가 발생할 가능성을 줄여야 합니다.
 
 ```
 // project.def
@@ -33,7 +33,7 @@ EXPORTS
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-**__declspec(dllimport)** 및 CONSTANT를 사용하면 명시적 연결을 허용하도록 만들어진 .lib DLL 가져오기 라이브러리에서 `imp` 버전과 데코레이트되지 않은 이름이 모두 나열됩니다. **__declspec(dllimport)** 및 DATA를 사용하면 이름의 `imp` 버전만 나열됩니다.
+**`__declspec(dllimport)`** 및 CONSTANT를 사용하면 명시적 연결을 허용하도록 만들어진 .lib DLL 가져오기 라이브러리에서 `imp` 버전과 데코레이트되지 않은 이름이 모두 나열됩니다. **`__declspec(dllimport)`** 및 DATA를 사용하면 이름의 `imp` 버전만 나열됩니다.
 
 CONSTANT를 사용하는 경우 다음 코드 구문 중 하나를 사용하여 `ulDataInDll`에 액세스할 수 있습니다.
 
@@ -59,7 +59,7 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 CONSTANT를 사용하는 경우 추가 수준의 간접 참조를 사용하는 것을 잊으면 변수 자체가 아니라 변수를 가리키는 가져오기 주소 테이블의 포인터에 액세스할 수 있으므로 더 위험합니다. 가져오기 주소 테이블은 현재 컴파일러와 링커에서 읽기 전용으로 만들어지므로 이런 유형의 문제는 종종 액세스 위반으로 나타날 수 있습니다.
 
-현재 MSVC 링커는 .def 파일에서 CONSTANT를 확인하면 이 경우를 설명하기 위해 경고를 실행합니다. 실제로 CONSTANT를 사용하는 이유는 헤더 파일의 프로토타입에 **__declspec(dllimport)** 이 나열되어 있지 않은 일부 개체 파일을 다시 컴파일할 수 없는 경우뿐입니다.
+현재 MSVC 링커는 .def 파일에서 CONSTANT를 확인하면 이 경우를 설명하기 위해 경고를 실행합니다. 실제로 CONSTANT를 사용하는 이유는 헤더 파일의 프로토타입에 **`__declspec(dllimport)`** 이 나열되어 있지 않은 일부 개체 파일을 다시 컴파일할 수 없는 경우뿐입니다.
 
 ## <a name="see-also"></a>참조
 

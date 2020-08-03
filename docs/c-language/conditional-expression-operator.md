@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749188"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217131"
 ---
 # <a name="conditional-expression-operator"></a>조건식 연산자
 
@@ -37,13 +37,13 @@ C에는 삼항 연산자인 조건식 연산자가 하나 있습니다( **? :** 
 
 - *expression* 및 *conditional-expression*이 둘 다 동일한 구조체, 공용 구조체 또는 포인터 형식인 경우 결과의 형식은 동일한 구조체, 공용 구조체 또는 포인터 형식입니다.
 
-- 피연산자가 둘 다 `void` 형식인 경우 결과의 형식은 `void`입니다.
+- 피연산자가 둘 다 **`void`** 형식인 경우 결과의 형식은 **`void`** 입니다.
 
-- 피연산자 중 하나가 임의의 형식의 개체에 대한 포인터이고 다른 피연산자가 `void`에 대한 포인터인 경우, 개체에 대한 포인터가 `void`에 대한 포인터로 변환되고 결과는 `void`에 대한 포인터입니다.
+- 피연산자 중 하나가 임의의 형식의 개체에 대한 포인터이고 다른 피연산자가 **`void`** 에 대한 포인터인 경우, 개체에 대한 포인터가 **`void`** 에 대한 포인터로 변환되고 결과는 **`void`** 에 대한 포인터입니다.
 
 - *expression* 또는 *conditional-expression*이 포인터이고 다른 피연산자가 값이 0인 상수 식인 경우 결과의 형식은 포인터 형식입니다.
 
-포인터에 대한 형식 비교에서 포인터가 가리키는 형식의 모든 형식 한정자(**const** 또는 `volatile`)는 중요하지 않지만 결과 형식은 조건의 두 구성 요소에서 한정자를 상속합니다.
+포인터에 대한 형식 비교에서 포인터가 가리키는 형식의 모든 형식 한정자( **`const`** 또는 **`volatile`** )는 중요하지 않지만 결과 형식은 조건의 두 구성 요소에서 한정자를 상속합니다.
 
 ## <a name="examples"></a>예
 

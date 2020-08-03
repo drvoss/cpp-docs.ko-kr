@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211790"
 ---
 # <a name="main-function-and-program-execution"></a>기본 함수 및 프로그램 실행
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>설명
 
-소스 프로그램 내의 함수는 하나 이상의 특정 작업을 수행합니다. **main** 함수는 각 작업을 수행하기 위해 이러한 함수를 호출할 수 있습니다. 다른 함수를 호출할 때 **main**은 실행이 함수의 첫 번째 문에서 시작될 수 있도록 해당 함수에 실행 제어를 전달합니다. 함수는 `return` 문이 실행되거나 함수 끝에 도달할 때 **main**에 제어를 반환합니다.
+소스 프로그램 내의 함수는 하나 이상의 특정 작업을 수행합니다. **main** 함수는 각 작업을 수행하기 위해 이러한 함수를 호출할 수 있습니다. 다른 함수를 호출할 때 **main**은 실행이 함수의 첫 번째 문에서 시작될 수 있도록 해당 함수에 실행 제어를 전달합니다. 함수는 **`return`** 문이 실행되거나 함수 끝에 도달할 때 **main**에 제어를 반환합니다.
 
 **main**을 포함한 모든 함수가 매개 변수를 가지도록 선언할 수 있습니다. "매개 변수" 또는 "정식 매개 변수"라는 용어는 함수에 전달되는 값을 받는 식별자를 가리킵니다. 매개 변수로의 인수 전달에 대한 자세한 내용은 [매개 변수](../c-language/parameters.md)를 참조하세요. 한 함수가 다른 함수를 호출할 때 호출된 함수는 호출 함수에서 해당 매개 변수에 대한 값을 받습니다. 이러한 값을 "인수"라고 합니다. 이 형식을 사용하여 명령줄에서 인수를 받을 수 있도록 **main**에 정식 매개 변수를 선언할 수 있습니다.
 

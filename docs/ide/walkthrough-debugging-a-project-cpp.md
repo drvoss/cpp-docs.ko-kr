@@ -6,18 +6,18 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219679"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>연습: 프로젝트 디버깅(C++)
 
 이 연습에서는 프로젝트를 테스트할 때 발견한 문제를 해결하려면 프로그램을 수정합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "67400972"
 
 1. 프로그램을 단계별로 실행하려면 메뉴 모음에서 **디버그** > **프로시저 단위 실행**을 선택하거나 **F10** 키를 선택합니다.
 
-   각 `Cardgame` 생성자가 실행된 후 `totalParticipants`의 값이 증가합니다. 각 `Cardgame` 인스턴스가 범위를 벗어나고 삭제될 때(소멸자가 호출될 때) `PlayGames` 기능이 반환되는 경우 `totalParticipants`가 감소합니다. `return` 문이 실행되기 바로 전에 `totalParticipants`는 0과 같습니다.
+   각 `Cardgame` 생성자가 실행된 후 `totalParticipants`의 값이 증가합니다. 각 `Cardgame` 인스턴스가 범위를 벗어나고 삭제될 때(소멸자가 호출될 때) `PlayGames` 기능이 반환되는 경우 `totalParticipants`가 감소합니다. **`return`** 문이 실행되기 바로 전에 `totalParticipants`는 0과 같습니다.
 
 1. 메뉴 모음에서 **디버그** > **실행**을 선택하거나 **F5** 키를 선택하여 종료될 때까지 프로그램을 단계별로 실행을 계속하거나 실행되게 합니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "67400972"
 **이전:** [연습: 프로젝트 테스트(C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 **다음:** [연습: 프로그램 배포(C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C++ 언어 참조](../cpp/cpp-language-reference.md)<br/>
 [프로젝트 및 빌드 시스템](../build/projects-and-build-systems-cpp.md)<br/>

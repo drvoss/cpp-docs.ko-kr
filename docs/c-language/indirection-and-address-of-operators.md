@@ -15,12 +15,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343889"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229638"
 ---
 # <a name="indirection-and-address-of-operators"></a>연산자 주소 및 간접 참조
 
@@ -58,7 +58,7 @@ double d;
 pa = &a[5];
 ```
 
-이 예제에서는 간접 참조 연산자( __&#42;__ )를 사용하여 `int`저장된 주소의 값`pa`에 액세스합니다. 값이 정수 변수 `x`에 할당됩니다.
+이 예제에서는 간접 참조 연산자( __&#42;__ )를 사용하여 `pa`에 저장된 주소의 **`int`** 값에 액세스합니다. 값이 정수 변수 `x`에 할당됩니다.
 
 ```C
 x = *pa;

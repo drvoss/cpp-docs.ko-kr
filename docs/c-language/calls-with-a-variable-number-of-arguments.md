@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032111"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227935"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>가변적인 개수의 인수를 사용하여 호출
 
@@ -24,7 +24,7 @@ ms.locfileid: "82032111"
 
 인수의 개수가 일정하지 않은 함수를 호출하려면 함수 호출에 인수를 몇 개 지정하십시오. 예를 들어, C 런타임 라이브러리의 `printf` 함수가 있습니다. 함수 호출은 매개 변수 목록이나 인수 형식 목록에 선언된 형식 이름마다 인수를 하나씩 포함해야 합니다.
 
-`__fastcall` 호출 규칙이 지정되지 않으면 함수 호출에 지정된 모든 인수가 스택에 배치됩니다. 함수에 대해 선언된 매개 변수 개수에 따라 스택에서 가져와 매개 변수에 할당할 인수의 개수가 결정됩니다. 스택에서 추가 인수를 검색하고 사용할 인수의 개수를 결정해야 합니다. STDARG.H 파일에는 일정하지 않은 개수의 인수를 사용하는 암수의 인수에 액세스하기 위한 ANSI 스타일 매크로가 있습니다. VARARGS.H에 있는 XENIX 스타일 매크로도 계속 지원됩니다.
+**`__fastcall`** 호출 규칙이 지정되지 않으면 함수 호출에 지정된 모든 인수가 스택에 배치됩니다. 함수에 대해 선언된 매개 변수 개수에 따라 스택에서 가져와 매개 변수에 할당할 인수의 개수가 결정됩니다. 스택에서 추가 인수를 검색하고 사용할 인수의 개수를 결정해야 합니다. STDARG.H 파일에는 일정하지 않은 개수의 인수를 사용하는 암수의 인수에 액세스하기 위한 ANSI 스타일 매크로가 있습니다. VARARGS.H에 있는 XENIX 스타일 매크로도 계속 지원됩니다.
 
 다음은 일정하지 않은 개수의 인수를 호출하는 함수에 대한 샘플 선언입니다.
 

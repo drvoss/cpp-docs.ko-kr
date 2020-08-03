@@ -5,18 +5,18 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: fd7d42ec5a76b92aa789a3a20f38e6b2c0fd2cb1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 50b630334cfd8752935b54549190d698fa5136bb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440415"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223982"
 ---
 # <a name="import-into-an-application-using-__declspecdllimport"></a>__declspec(dllimport)을 사용하여 애플리케이션으로 가져오기
 
-DLL에 정의된 공용 기호를 사용하는 프로그램은 해당 기호를 가져온다고 합니다. DLL을 사용하여 빌드하는 애플리케이션의 헤더 파일을 만드는 경우 공용 기호를 선언하는 데 **__declspec(dllimport)** 을 사용합니다. **__declspec(dllimport)** 키워드는 .def 파일을 사용하여 내보낼지 **__declspec(dllexport)** 키워드를 사용하여 내보낼지 관계없이 작동합니다.
+DLL에 정의된 공용 기호를 사용하는 프로그램은 해당 기호를 가져온다고 합니다. DLL을 사용하여 빌드하는 애플리케이션의 헤더 파일을 만드는 경우 공용 기호를 선언하는 데 **`__declspec(dllimport)`** 을 사용합니다. .def 파일을 사용하여 내보내든 **`__declspec(dllexport)`** 키워드를 사용하여 내보내든 **`__declspec(dllimport)`** 키워드가 작동합니다.
 
-코드를 더 읽기 쉽게 만들려면 **__declspec(dllimport)** 에 대한 매크로를 정의한 다음 이 매크로를 사용하여 가져온 각 기호를 선언합니다.
+코드를 더 읽기 쉽게 만들려면 **`__declspec(dllimport)`** 에 대한 매크로를 정의한 다음 이 매크로를 사용하여 가져온 각 기호를 선언합니다.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -25,7 +25,7 @@ DllImport int  j;
 DllImport void func();
 ```
 
-함수 선언에서 **__declspec(dllimport)** 사용은 선택적이지만 이 키워드를 사용하면 컴파일러가 보다 효율적인 코드를 생성합니다. 그러나 가져오는 실행 파일이 DLL의 공용 데이터 기호 및 개체에 액세스하는 데 **__declspec(dllimport)** 을 사용해야 합니다. DLL 사용자는 여전히 가져오기 라이브러리에 연결해야 합니다.
+함수 선언에서 **`__declspec(dllimport)`** 사용은 선택적이지만 이 키워드를 사용하면 컴파일러가 보다 효율적인 코드를 생성합니다. 그러나 가져오는 실행 파일이 DLL의 공용 데이터 기호 및 개체에 액세스하는 데 **`__declspec(dllimport)`** 을 사용해야 합니다. DLL 사용자는 여전히 가져오기 라이브러리에 연결해야 합니다.
 
 DLL과 클라이언트 애플리케이션 모두에 동일한 헤더 파일을 사용할 수 있습니다. 이렇게 하려면 DLL을 빌드하는지 또는 클라이언트 애플리케이션을 빌드하는지 나타내는 특수 전처리기 기호를 사용합니다. 예를 들어:
 

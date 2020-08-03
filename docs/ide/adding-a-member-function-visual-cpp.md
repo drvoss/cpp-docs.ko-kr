@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228689"
 ---
 # <a name="add-a-member-function"></a>멤버 함수 추가
 
@@ -46,10 +46,10 @@ ms.locfileid: "51693414"
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned int` |
-  | `double` | `long` | `unsigned long` |
-  | `float` | `short` | `void` |
-  | `HRESULT` | `unsigned char` | |
+  | **`char`** | **`int`** | **`unsigned int`** |
+  | **`double`** | **`long`** | **`unsigned long`** |
+  | **`float`** | **`short`** | **`void`** |
+  | `HRESULT` | **`unsigned char`** | |
 
 - **함수 이름**
 
@@ -61,9 +61,9 @@ ms.locfileid: "51693414"
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned char` |
-  | `double` | `long` | `unsigned int` |
-  | `float` | `short` | `unsigned long` |
+  | **`char`** | **`int`** | **`unsigned char`** |
+  | **`double`** | **`long`** | **`unsigned int`** |
+  | **`float`** | **`short`** | **`unsigned long`** |
 
 - **매개 변수 이름**
 
@@ -75,7 +75,7 @@ ms.locfileid: "51693414"
 
 - **Access**
 
-  멤버 함수에 대한 액세스를 설정합니다. 액세스 한정자는 다른 클래스의 멤버 함수 액세스 권한을 지정하는 키워드입니다. 액세스 권한 지정에 대한 자세한 내용은 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)를 참조하세요. 멤버 함수 액세스 수준은 기본적으로 `public`으로 설정됩니다.
+  멤버 함수에 대한 액세스를 설정합니다. 액세스 한정자는 다른 클래스의 멤버 함수 액세스 권한을 지정하는 키워드입니다. 액세스 권한 지정에 대한 자세한 내용은 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)를 참조하세요. 멤버 함수 액세스 수준은 기본적으로 **`public`** 으로 설정됩니다.
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)

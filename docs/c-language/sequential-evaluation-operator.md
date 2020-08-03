@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227779"
 ---
 # <a name="sequential-evaluation-operator"></a>순차적 확인 연산자
 
@@ -23,7 +23,7 @@ ms.locfileid: "62158523"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
 
-순차 계산 연산자의 왼쪽 피연산자는 `void` 식으로 계산됩니다. 연산 결과의 값 및 형식은 오른쪽 피연산자와 같습니다. 각 피연산자는 어떤 형식이든 될 수 있습니다. 순차 계산 연산자는 해당 피연산자 간에 형식 변환을 수행하지 않으며 l-value를 생성하지 않습니다. 첫째 피연산자 다음에 시퀀스 위치가 있는데, 이것은 왼쪽 피연산자의 계산으로 인해 발생한 의도하지 않은 모든 결과가 오른쪽 피연산자의 계산을 시작하기 전에 완료됨을 의미합니다. 자세한 내용은 [시퀀스 위치](../c-language/c-sequence-points.md)를 참조하세요.
+순차 계산 연산자의 왼쪽 피연산자는 **`void`** 식으로 계산됩니다. 연산 결과의 값 및 형식은 오른쪽 피연산자와 같습니다. 각 피연산자는 어떤 형식이든 될 수 있습니다. 순차 계산 연산자는 해당 피연산자 간에 형식 변환을 수행하지 않으며 l-value를 생성하지 않습니다. 첫째 피연산자 다음에 시퀀스 위치가 있는데, 이것은 왼쪽 피연산자의 계산으로 인해 발생한 의도하지 않은 모든 결과가 오른쪽 피연산자의 계산을 시작하기 전에 완료됨을 의미합니다. 자세한 내용은 [시퀀스 위치](../c-language/c-sequence-points.md)를 참조하세요.
 
 순차 계산 연산자는 하나의 식만 사용할 수 있는 컨텍스트에서 두 개 이상의 식을 계산하는 데 사용됩니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "62158523"
 for ( i = j = 1; i + j < 20; i += i, j-- );
 ```
 
-이 예제에서 **for** 문의 세 번째 식에 대한 각 피연산자는 독립적으로 계산됩니다. 왼쪽 피연산자 `i += i`가 먼저 계산된 다음 오른쪽 피연산자 `j--`가 계산됩니다.
+이 예제에서 **`for`** 문의 세 번째 식에 대한 각 피연산자는 독립적으로 계산됩니다. 왼쪽 피연산자 `i += i`가 먼저 계산된 다음 오른쪽 피연산자 `j--`가 계산됩니다.
 
 ```
 func_one( x, y + 2, z );

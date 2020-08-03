@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745883"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218795"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>사용되지 않는 함수 선언 및 정의 폼
 
@@ -26,7 +26,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-`int`와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다(선언이 권장되기는 함).
+**`int`** 와 동일한 크기의 정수 또는 포인터를 반환하는 함수는 선언을 가질 필요가 없습니다(선언이 권장되기는 함).
 
 ANSI C 표준에 부합하기 위해 줄임표를 사용하는 이전 스타일 함수 선언은 이제 /Za 옵션으로 컴파일할 때 오류를 생성하며 /Ze로 컴파일할 때 수준 4 경고를 생성합니다. 예를 들어:
 

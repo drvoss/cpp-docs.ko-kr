@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857114"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217170"
 ---
 # <a name="c-storage-classes"></a>C 스토리지 클래스
 
@@ -27,18 +27,18 @@ C에서는 다음과 같은 스토리지 클래스 지정자를 제공합니다.
 ## <a name="syntax"></a>구문
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec(** *extended-decl-modifier-seq* **)**  /\* Microsoft 전용 \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **`auto`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`register`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`static`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`__declspec (`** *extended-decl-modifier-seq* **`)`**  /\* Microsoft 전용 \*/
 
-`__declspec`를 제외하고 선언에서 *declaration-specifier*에 *storage-class-specifier*를 하나만 사용할 수 있습니다. 스토리지 클래스 사양을 만들지 않으면 블록 안의 선언이 자동 개체를 만듭니다.
+**`__declspec`** 을 제외하고 선언에서 *declaration-specifier*에 *storage-class-specifier*를 하나만 사용할 수 있습니다. 스토리지 클래스 사양을 만들지 않으면 블록 안의 선언이 자동 개체를 만듭니다.
 
-**auto** 또는 **register** 지정자를 사용하여 선언된 항목은 로컬 수명을 갖습니다. **static** 또는 `extern` 지정자를 사용하여 선언된 항목은 전역 수명을 갖습니다.
+**`auto`** 또는 **`register`** 지정자를 사용하여 선언된 항목은 로컬 수명을 갖습니다. **`static`** 또는 **`extern`** 지정자를 사용하여 선언된 항목은 전역 수명을 갖습니다.
 
-`typedef` 및 `__declspec`는 다른 *storage-class-specifier* 터미널 4개와 의미 체계가 다르므로 따로 설명합니다. `typedef`에 대한 자세한 내용은 [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요. `__declspec`에 대한 자세한 내용은 [확장된 스토리지 클래스 특성](../c-language/c-extended-storage-class-attributes.md)을 참조하세요.
+**`typedef`** 및 **`__declspec`** 은 다른 *storage-class-specifier* 터미널 4개와 의미 체계가 다르므로 따로 설명합니다. **`typedef`** 에 대한 자세한 내용은 [`typedef` 선언](../c-language/typedef-declarations.md)을 참조하세요. **`__declspec`** 에 대한 자세한 내용은 [확장된 스토리지 클래스 특성](../c-language/c-extended-storage-class-attributes.md)을 참조하세요.
 
 또한 소스 파일에서 변수 및 함수 선언의 배치가 스토리지 클래스와 표시 유형에 영향을 줍니다. 모든 함수 정의 밖의 선언은 "외부 수준"에 나타나며 함수 정의 안의 선언은 "내부 수준"에 나타납니다.
 

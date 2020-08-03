@@ -6,20 +6,20 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b858b2ed1b07c143ba24bacbc51c6bba50e3860
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231522"
 ---
 # <a name="importing-into-an-application"></a>애플리케이션으로 가져오기
 
 다음 두 가지 방법을 사용하여 함수를 애플리케이션으로 가져올 수 있습니다.
 
-- 주 애플리케이션의 함수 정의에 **__declspec(dllimport)** 키워드 사용
+- 주 애플리케이션의 함수 정의에서 **`__declspec(dllimport)`** 키워드 사용
 
-- **__declspec(dllimport)** 과 함께 모듈 정의(.def) 파일 사용
+- 모듈 정의(.def) 파일을 **`__declspec(dllimport)`** 과 함께 사용
 
 ## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.
 

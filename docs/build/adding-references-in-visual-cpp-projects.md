@@ -1,4 +1,4 @@
-﻿---
+---
 title: C++ 프로젝트에서 라이브러리 및 구성 요소 사용
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229911"
 ---
 # <a name="consuming-libraries-and-components"></a>라이브러리 및 구성 요소 사용
 
@@ -98,11 +98,11 @@ ActiveX 참조 속성은 COM 구성 요소에 대한 참조에만 사용할 수 
 
 - **로컬 위성 어셈블리 복사(C++/CLI)**
 
-   참조된 어셈블리의 위성 어셈블리를 빌드 중에 대상 위치에 자동으로 복사할지 지정합니다. **로컬 복사**가 **true**인 경우에만 사용됩니다.
+   참조된 어셈블리의 위성 어셈블리를 빌드 중에 대상 위치에 자동으로 복사할지 지정합니다. **로컬 복사**가 **`true`** 인 경우에만 사용됩니다.
 
 - **참조 어셈블리 출력**
 
-   이 어셈블리가 빌드 프로세스에서 사용되도록 지정합니다. **true**이면 빌드 중 어셈블리가 컴파일러 명령줄에서 사용됩니다.
+   이 어셈블리가 빌드 프로세스에서 사용되도록 지정합니다. **`true`** 이면 빌드 중 어셈블리가 컴파일러 명령줄에서 사용됩니다.
 
 ### <a name="project-to-project-reference-properties"></a>프로젝트 간 참조 속성
 
@@ -158,7 +158,7 @@ ActiveX 참조 속성은 COM 구성 요소에 대한 참조에만 사용할 수 
 
 - **강력한 이름**
 
-   참조된 어셈블리에 강력한 이름이 있는 경우`true` 입니다. 강력한 이름이 지정된 어셈블리의 버전은 고유합니다.
+   참조된 어셈블리에 강력한 이름이 있는 경우 **`true`** 입니다. 강력한 이름이 지정된 어셈블리의 버전은 고유합니다.
 
 - **Version**
 
@@ -166,4 +166,5 @@ ActiveX 참조 속성은 COM 구성 요소에 대한 참조에만 사용할 수 
 
 ## <a name="see-also"></a>참조
 
-
+[C++ 프로젝트 속성 페이지 참조](reference/property-pages-visual-cpp.md)<br>
+[Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](working-with-project-properties.md)

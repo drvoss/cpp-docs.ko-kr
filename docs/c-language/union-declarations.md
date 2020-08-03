@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291043"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213699"
 ---
 # <a name="union-declarations"></a>공용 구조체 선언
 
@@ -24,8 +24,8 @@ ms.locfileid: "62291043"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -44,14 +44,14 @@ ms.locfileid: "62291043"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
 
-**union** 형식의 변수는 해당 형식으로 정의된 값 중 하나를 저장합니다. 구조체 및 공용 구조체 선언에 같은 규칙이 적용됩니다. 공용 구조체에 비트 필드를 포함할 수도 있습니다.
+**`union`** 형식의 변수는 해당 형식으로 정의된 값 중 하나를 저장합니다. 구조체 및 공용 구조체 선언에 같은 규칙이 적용됩니다. 공용 구조체에 비트 필드를 포함할 수도 있습니다.
 
-공용 구조체 멤버는 불완전한 형식, `void` 형식 또는 함수 형식을 가질 수 없습니다. 따라서 멤버는 공용 구조체의 인스턴스가 될 수 없지만 선언할 공용 구조체 형식의 포인터가 될 수는 있습니다.
+공용 구조체 멤버는 불완전한 형식, **`void`** 형식 또는 함수 형식을 가질 수 없습니다. 따라서 멤버는 공용 구조체의 인스턴스가 될 수 없지만 선언할 공용 구조체 형식의 포인터가 될 수는 있습니다.
 
 공용 구조체 형식 선언은 템플릿만 가능합니다. 변수를 선언할 때까지는 메모리가 예약되지 않습니다.
 
 > [!NOTE]
-> 두 형식의 공용 구조체가 선언되고 값이 한 개 저장되지만 다른 형식으로 공용 구조체에 액세스하는 경우 결과를 신뢰할 수 없습니다. 예를 들어, **float** 및 `int`의 공용 구조체가 선언됩니다. **float** 값이 저장되지만 나중에 `int`로 값에 액세스합니다. 그러면 **float** 값의 내부 스토리지에 따라 값이 결정됩니다. 정수 값은 신뢰할 수 없습니다.
+> 두 형식의 공용 구조체가 선언되고 값이 한 개 저장되지만 다른 형식으로 공용 구조체에 액세스하는 경우 결과를 신뢰할 수 없습니다. 예를 들어, **`float`** 및 **`int`** 의 공용 구조체가 선언됩니다. **`float`** 값이 저장되지만 나중에 **`int`** 로 값에 액세스합니다. 그러면 **`float`** 값의 내부 스토리지에 따라 값이 결정됩니다. 정수 값은 신뢰할 수 없습니다.
 
 ## <a name="examples"></a>예
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-`screen` 배열에 2,000개의 요소가 있습니다. 배열의 각 요소는 멤버 2개(`window1` 및 `screenval`)가 있는 개별 공용 구조체입니다. `window1` 멤버는 비트 필드 멤버 2개(`icon` 및 `color`)가 있는 구조체입니다. `screenval` 멤버는 `int`입니다. 지정된 시간에 각 공용 구조체 요소는 `int`로 표현되는 `screenval`나 `window1`로 표현되는 구조체를 포함합니다.
+`screen` 배열에 2,000개의 요소가 있습니다. 배열의 각 요소는 멤버 2개(`window1` 및 `screenval`)가 있는 개별 공용 구조체입니다. `window1` 멤버는 비트 필드 멤버 2개(`icon` 및 `color`)가 있는 구조체입니다. `screenval` 멤버는 **`int`** 입니다. 지정된 시간에 각 공용 구조체 요소는 `screenval`로 표현되는 **`int`** 또는 `window1`로 표현되는 구조체를 포함합니다.
 
 **Microsoft 전용**
 

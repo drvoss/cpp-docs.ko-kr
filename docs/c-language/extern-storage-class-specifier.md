@@ -8,16 +8,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233836"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217105"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 스토리지 클래스 지정자
 
-**extern** 스토리지 클래스 지정자를 사용하여 선언된 변수는 다른 소스 파일에서 정의된 것과 같은 이름이 지정된 변수에 대한 참조입니다. 외부 수준 변수 정의를 표시하는 데 사용됩니다. **extern**으로 선언된 변수에는 자체에 할당된 스토리지가 없습니다. 이름만 있습니다.
+**`extern`** 스토리지 클래스 지정자를 사용하여 선언된 변수는 다른 소스 파일에서 정의된 것과 같은 이름이 지정된 변수에 대한 참조입니다. 외부 수준 변수 정의를 표시하는 데 사용됩니다. **`extern`** 으로 선언된 변수에는 자체에 할당된 스토리지가 없습니다. 이름만 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -59,9 +59,9 @@ void func(void)
 }
 ```
 
-이 예제에서 `i` 변수는 초기 값 1로 Source1.c에서 정의됩니다. Source2.c의 **extern** 선언은 해당 파일에서 'i'를 표시합니다.
+이 예제에서 `i` 변수는 초기 값 1로 Source1.c에서 정의됩니다. Source2.c의 **`extern`** 선언은 해당 파일에서 'i'를 표시합니다.
 
-`func` 함수에서는 **static** 포인터 변수 `external_i`를 초기화하는 데 전역 변수 `i`의 주소가 사용됩니다. 전역 변수에 **static** 수명이 있으므로, 즉 해당 주소가 프로그램 실행 중 변경되지 않으므로 이것이 가능합니다. 다음으로, `i` 변수는 `func`의 범위 내에서 초기 값 16이 있는 지역 변수로 정의됩니다. 이 정의 작업은 해당 이름을 지역 변수에 사용하여 숨겨진 외부 수준 `i`의 값에 영향을 주지 않습니다. 이제 `external_i` 포인터를 통해서만 전역 `i`의 값에 액세스할 수 있습니다.
+`func` 함수에서는 **`static`** 포인터 변수 `external_i`를 초기화하는 데 전역 변수 `i`의 주소가 사용됩니다. 전역 변수에 **`static`** 수명이 있으므로, 즉 해당 주소가 프로그램 실행 중 변경되지 않으므로 이것이 가능합니다. 다음으로, `i` 변수는 `func`의 범위 내에서 초기 값 16이 있는 지역 변수로 정의됩니다. 이 정의 작업은 해당 이름을 지역 변수에 사용하여 숨겨진 외부 수준 `i`의 값에 영향을 주지 않습니다. 이제 `external_i` 포인터를 통해서만 전역 `i`의 값에 액세스할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 

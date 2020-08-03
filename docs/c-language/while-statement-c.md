@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C]
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
-ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8095dd8672218239dbcfa879e3df929643e93d90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344736"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231405"
 ---
 # <a name="while-statement-c"></a>while 문 (C)
 
-`while` 문을 사용하면 지정된 식이 false가 될 때까지 문을 반복할 수 있습니다.
+**`while`** 문을 사용하면 지정된 식이 false가 될 때까지 문을 반복할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -27,13 +27,13 @@ ms.locfileid: "62344736"
 
 1. *expression*이 계산됩니다.
 
-1. *expression*이 처음에 false인 경우 `while` 문의 본문이 실행되지 않으며, `while` 문에서 프로그램의 다음 문으로 제어가 전달됩니다.
+1. 식이 처음에 false인 경우 **`while`** 문의 본문이 실행되지 않으며, **`while`** 문에서 프로그램의 다음 문으로 제어가 전달됩니다.
 
    *expression*이 true(0이 아님)인 경우 문의 본문이 실행되고 1단계부터 반복됩니다.
 
-`while` 문 본문 안에 있는 **break**, `goto` 또는 `return`이 실행될 때 해당 while 문도 종료될 수 있습니다. `while` 루프를 종료하지 않고 반복을 종료하려면 **continue** 문을 사용합니다. **continue** 문은 `while` 문의 다음 반복으로 제어를 전달합니다.
+문 본문 안에 있는 **`break`** , **`goto`** 또는 **`return`** 이 실행될 때 해당 **`while`** 문도 종료될 수 있습니다. **`while`** 루프를 종료하지 않고 반복을 종료하려면 **`continue`** 문을 사용합니다. **`continue`** 문은 **`while`** 문의 다음 반복으로 제어를 전달합니다.
 
-다음은 `while` 문의 예제입니다.
+다음은 **`while`** 문의 예제입니다.
 
 ```C
 while ( i >= 0 )
@@ -43,7 +43,7 @@ while ( i >= 0 )
 }
 ```
 
-이 예제에서는 `string2`의 문자를 `string1`에 복사합니다. `i`가 0보다 크거나 같은 경우 `string2[i]`가 `string1[i]`에 할당되고 `i`는 감소합니다. `i`가 0에 도달하거나 0 미만이면 `while` 문의 실행이 종료됩니다.
+이 예제에서는 `string2`의 문자를 `string1`에 복사합니다. `i`가 0보다 크거나 같은 경우 `string2[i]`가 `string1[i]`에 할당되고 `i`는 감소합니다. `i`가 0에 도달하거나 0 미만이면 **`while`** 문의 실행이 종료됩니다.
 
 ## <a name="see-also"></a>참조
 

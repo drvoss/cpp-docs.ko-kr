@@ -8,16 +8,16 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299119"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199986"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 및 레이블 문 (C)
 
-`goto` 문은 레이블에 제어를 전송합니다. 지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.
+**`goto`** 문은 레이블에 제어를 전송합니다. 지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,18 +26,18 @@ ms.locfileid: "75299119"
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *점프 문*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp; **`goto`**  *identifier*  **;**
 
 *labeled-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
 
-문 레이블은 `goto` 문에만 의미가 있으며 다른 모든 컨텍스트에서 레이블 문은 레이블에 관계없이 실행됩니다.
+문 레이블은 **`goto`** 문에만 의미가 있으며 다른 모든 컨텍스트에서 레이블 문은 레이블에 관계없이 실행됩니다.
 
-*jump-statement*는 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다. `goto` 이후에 오는 *identifier* 이름 집합은 해당 이름이 다른 식별자를 방해하지 않도록 자체 네임스페이스를 가지고 있습니다. 레이블을 다시 선언할 수 없습니다. 자세한 내용은 [네임스페이스](../c-language/name-spaces.md)를 참조하세요.
+*jump-statement*는 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다. **`goto`** 이후에 오는 *identifier* 이름 집합은 해당 이름이 다른 식별자를 방해하지 않도록 자체 네임스페이스를 가지고 있습니다. 레이블을 다시 선언할 수 없습니다. 자세한 내용은 [네임스페이스](../c-language/name-spaces.md)를 참조하세요.
 
-가능하면 `goto`보다 **break**, **continue** 및 `return` 문을 사용하는 것이 더 좋은 프로그래밍 방식입니다. **break** 문은 한 수준의 루프에서만 종료되므로 깊이 중첩된 루프 내에서 루프를 종료하려면 `goto`가 필요할 수도 있습니다.
+가능하면 **`goto`** 보다 **`break`** , **`continue`** 및 **`return`** 문을 사용하는 것이 더 좋은 프로그래밍 방식입니다. **`break`** 문은 한 수준의 루프에서만 종료되므로 깊이 중첩된 루프 내에서 루프를 종료하려면 **`goto`** 가 필요할 수도 있습니다.
 
-이 예제에서는 `goto` 문을 보여 줍니다.
+이 예제에서는 **`goto`** 문을 보여 줍니다.
 
 ```c
 // goto.c
@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-이 예제에서 `goto`가 5에 해당하는 경우 `stop` 문은 `i`이라는 레이블이 지정된 지점으로 제어를 전송합니다.
+이 예제에서는 `i`가 5에 해당하는 경우 **`goto`** 문은 `stop`이라는 레이블이 지정된 지점으로 제어를 전송합니다.
 
 ## <a name="see-also"></a>참조
 

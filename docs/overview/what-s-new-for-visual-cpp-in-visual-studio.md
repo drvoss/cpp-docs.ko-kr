@@ -3,12 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226791"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -249,7 +249,7 @@ Visual Studio 2017에는 C++ 환경에 대한 많은 업데이트와 수정이 �
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이러한 기능은 **`/std:c++17`** 옵션 아래에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
+컴파일러는 구조적 바인딩, **`constexpr`** 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 **`noexcept`** 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이러한 기능은 **`/std:c++17`** 옵션 아래에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements.md)을 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
@@ -296,7 +296,7 @@ Visual Studio 버전 15.7의 MSVC 컴파일러 도구 집합은 이제 C++ 표�
 
 Microsoft C++ 컴파일러는 Intel의 AVX-512를 지원합니다. AVX-512의 새로운 기능을 128비트 및 256비트 너비의 레지스터에 가져오는 벡터 길이 명령이 포함되어 있습니다.
 
-전체적으로 C++17 모드를 사용 중일 때 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 옵션을 사용하여 `noexcept`의 C++14 버전으로 되돌릴 수 있습니다. 이 옵션을 사용하면 모든 `throw()` 코드를 동시에 다시 작성하지 않고도 C++17을 준수하도록 소스 코드를 업데이트할 수 있습니다. 자세한 내용은 [동적 예외 사양 제거 및 noexcept](cpp-conformance-improvements.md#noexcept_removal)를 참조하세요.
+전체적으로 C++17 모드를 사용 중일 때 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 옵션을 사용하여 C++14 버전의 **`noexcept`** 로 되돌릴 수 있습니다. 이 옵션을 사용하면 모든 `throw()` 코드를 동시에 다시 작성하지 않고도 C++17을 준수하도록 소스 코드를 업데이트할 수 있습니다. 자세한 내용은 [동적 예외 사양 제거 및 noexcept](cpp-conformance-improvements.md#noexcept_removal)를 참조하세요.
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
@@ -314,7 +314,7 @@ Microsoft C++ 컴파일러는 Intel의 AVX-512를 지원합니다. AVX-512의 �
 - 이전에 코드가 영원히 잠기는 문제가 발생하던 `std::promise` 이동 할당 연산자가 해결되었습니다.
 - `atomic<T*>`를 `T*`로 암시적으로 변환할 때 발생하는 컴파일러 오류를 해결했습니다.
 - `pointer_traits<Ptr>`가 이제 `Ptr::rebind<U>`를 올바르게 검색합니다.
-- `move_iterator` 빼기 연산자에서 누락된 `const` 한정자를 수정했습니다.
+- `move_iterator` 빼기 연산자에서 누락된 **`const`** 한정자를 수정했습니다.
 - `propagate_on_container_copy_assignment` 및 `propagate_on_container_move_assignment`를 요청하는 상태 저장 사용자 정의 할당자의 silent bad codegen을 수정했습니다.
 - `atomic<T>`가 이제 오버로드된 `operator&()`를 허용합니다.
 - 잘못된 `bind()` 호출에 대한 컴파일러 진단이 약간 개선되었습니다.
@@ -335,8 +335,8 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 - Clang **-Wmicrosoft-exception-spec**에서 보고된 "선언의 예외 사양이 이전 선언과 일치하지 않습니다."도 수정되었습니다.
 - Clang과 C1XX에서 보고된 mem-initializer-list 순서 지정 경고도 수정되었습니다.
 - 순서가 지정되지 않은 컨테이너는 컨테이너 자체가 교환될 때 해시 함수 또는 조건자를 교환하지 않았습니다. 이제는 교환합니다.
-- 표준 라이브러리에서 non-`propagate_on_container_swap`(정의되지 않은 non-equal-allocator 동작 조건)을 검색할 때 예외를 throw하지 않으므로 이제 많은 컨테이너 교환 작업이 `noexcept`로 표시됩니다.
-- 많은 `vector<bool>` 연산이 이제 `noexcept`로 표시됩니다.
+- 표준 라이브러리에서 non-`propagate_on_container_swap`(정의되지 않은 non-equal-allocator 동작 조건)을 검색할 때 예외를 throw하지 않으므로 이제 많은 컨테이너 교환 작업이 **`noexcept`** 로 표시됩니다.
+- 많은 `vector<bool>` 연산이 이제 **`noexcept`** 로 표시됩니다.
 - 이제 표준 라이브러리에서 옵트아웃 이스케이프 해치와 일치하는 `value_type` 할당자(C++17 모드)를 적용합니다.
 - `basic_string`에 대한 self-range-insert에서 문자열의 내용이 뒤섞이는 일부 조건이 수정되었습니다. (참고: 벡터에 대한 self-range-insert는 여전히 표준 라이브러리에서 금지됩니다.)
 - `basic_string::shrink_to_fit()`는 더 이상 할당자 `propagate_on_container_swap`의 영향을 받지 않습니다.
@@ -360,7 +360,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 
 - \<any\>, \<string_view\>, `apply()`, `make_from_tuple()`을 추가했습니다.
 - \<optional\>, \<variant\>, `shared_ptr::weak_type`, \<cstdalign\>을 추가했습니다.
-- `min(initializer_list)`, `max(initializer_list)`, `minmax(initializer_list)`, `min_element()`, `max_element()`, `minmax_element()`에서 C++14 `constexpr`을 사용하도록 설정했습니다.
+- `min(initializer_list)`, `max(initializer_list)`, `minmax(initializer_list)`, `min_element()`, `max_element()`, `minmax_element()`에서 C++14 **`constexpr`** 을 사용하도록 설정했습니다.
 
 자세한 내용은 [Microsoft C++ 언어 규칙 테이블](../visual-cpp-language-conformance.md)을 참조하세요.
 
@@ -368,11 +368,11 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 
 - 몇 가지 C++17 추가 기능이 구현되었습니다. 자세한 내용은 [Microsoft C++ 언어 규칙 테이블](cpp-conformance-improvements.md#improvements_153)을 참조하세요.
 - 구현된 P0602R0 "variant 및 optional에서 복사/이동 사소성(triviality)을 전파해야 합니다".
-- 이제 표준 라이브러리에서 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 옵션을 통해 동적 RTTI를 해제할 수 있도록 공식적으로 허용합니다. `dynamic_pointer_cast()` 및 `rethrow_if_nested()`는 둘 다 기본적으로 `dynamic_cast`가 필요하므로 표준 라이브러리에서 이제 **`/GR-`** 아래에 `=delete`로 표시됩니다.
+- 이제 표준 라이브러리에서 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 옵션을 통해 동적 RTTI를 해제할 수 있도록 공식적으로 허용합니다. `dynamic_pointer_cast()` 및 `rethrow_if_nested()`는 둘 다 기본적으로 **`dynamic_cast`** 가 필요하므로 표준 라이브러리에서 이제 **`/GR-`** 아래에 `=delete`로 표시됩니다.
 - 동적 RTTI가 **`/GR-`** 을 통해 사용 중지된 경우에도 `typeid(SomeType)` 양식의 "정적 RTTI"는 계속 사용할 수 있으며, 몇 가지 표준 라이브러리 구성 요소를 지원합니다. 이제 표준 라이브러리에서 **`/D_HAS_STATIC_RTTI=0`** 을 통해 이 기능도 사용 중지할 수 있도록 지원합니다. 이 플래그는 `std::function`의 `std::any`, `target()` 및 `target_type()` 멤버 함수와 `std::shared_ptr` 및 `std::weak_ptr`의 `get_deleter()` friend 멤버 함수도 사용하지 않도록 설정합니다.
-- 이제 표준 라이브러리에서 조건부로 정의된 매크로 대신 C++14 `constexpr`을 무조건 사용합니다.
+- 이제 표준 라이브러리에서 조건부로 정의된 매크로 대신 C++14 **`constexpr`** 을 무조건 사용합니다.
 - 이제 표준 라이브러리에서 별칭 템플릿을 내부적으로 사용합니다.
-- 이제 표준 라이브러리에서 `nullptr_t{}` 대신 `nullptr`을 내부적으로 사용합니다. (NULL의 내부 사용은 완전히 금지되었습니다. 0-as-null의 내부 사용은 점차적으로 정리되고 있습니다.)
+- 이제 표준 라이브러리에서 `nullptr_t{}` 대신 **`nullptr`** 을 내부적으로 사용합니다. (NULL의 내부 사용은 완전히 금지되었습니다. 0-as-null의 내부 사용은 점차적으로 정리되고 있습니다.)
 - 이제 표준 라이브러리에서 `std::forward()`를 잘못된 스타일로 사용하는 대신 `std::move()`를 내부적으로 사용합니다.
 - `static_assert(false, "message")`을(를) `#error message`(으)로 변경했습니다. 이 변경으로 인해 `#error`에서 컴파일을 즉시 중지하기 때문에 컴파일러 진단이 향상됩니다.
 - 표준 라이브러리에서 더 이상 함수를 `__declspec(dllimport)`로 표시하지 않습니다. 최신 링커 기술에서는 이 선언자가 더 이상 필요하지 않습니다.
@@ -439,7 +439,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 버전
 
-- SEH(구조적 예외 처리)를 사용하는 함수로 `std::atomic`의 구현을 인라인하지 못하게 했던 `noexcept`와의 상호 작용이 해결되었습니다.
+- SEH(구조적 예외 처리)를 사용하는 함수로 `std::atomic` 구현을 인라인하지 못하게 했던 **`noexcept`** 와의 상호 작용이 해결되었습니다.
 - 표준 라이브러리의 내부 `_Deallocate()` 함수가 더 작은 코드로 최적화되어 더 많은 위치에 인라인될 수 있도록 변경되었습니다.
 - 재귀 대신 팩 확장을 사용하도록 `std::try_lock()`이 변경되었습니다.
 - 모든 잠금의 `std::lock()`에서 회전하는 대신 `lock()` 연산을 사용하도록 `try_lock()` 교착 상태 방지 알고리즘이 향상되었습니다.
@@ -456,7 +456,7 @@ Visual Studio 2017 RTM에서는 더 많은 표준 라이브러리가 개선되�
 - `basic_string`의 변형 작업은 이제 크기를 조정하는 대신 원하는 상태로 재할당된 버퍼를 구성합니다. 예를 들어 문자열의 시작 부분에 있는 insert는 이제 정확히 한 번 삽입 후 콘텐츠를 이동합니다. 콘텐츠는 아래로 또는 새로 할당된 버퍼로 이동됩니다. 다시 할당하는 경우 먼저 새로 할당된 버퍼로 이동한 다음 아래로 이동하는 두 번 이동이 더 이상 수행되지 않습니다.
 - \<string\>에서 C 표준 라이브러리를 호출하는 작업은 이제 `errno` 주소를 캐시하여 TLS와의 반복된 상호 작용을 제거합니다.
 - `is_pointer` 구현이 간소화되었습니다.
-- 함수 기반 식 SFINAE가 `struct` 및 `void_t` 기반으로 변경되었습니다.
+- 함수 기반 식 SFINAE가 **`struct`** 및 `void_t` 기반으로 변경되었습니다.
 - 이제 표준 라이브러리 알고리즘에서 반복기의 사후 증가를 방지합니다.
 - 64비트 시스템에서 32비트 할당자를 사용할 때의 잘림 경고가 수정되었습니다.
 - 이제는 가능한 경우 버퍼를 다시 사용하여 비POCMA non-equal-allocator case에서 `std::vector` 이동 할당이 더 효율적입니다.
@@ -657,7 +657,7 @@ Windows SDK Insider Preview의 빌드 17025부터 C++/WinRT가 Windows SDK에 �
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 버전
 
-- 새로운 C++ Core Guidelines 검사 항목에는 스마트 포인터 정확성, 올바른 전역 이니셜라이저 사용, `goto` 및 잘못된 캐스트 같은 구문 사용 플래그 지정이 포함됩니다.
+- 새로운 C++ Core Guidelines 검사 항목에는 스마트 포인터 정확성, 올바른 전역 이니셜라이저 사용, **`goto`** 및 잘못된 캐스트 같은 구문 사용 플래그 지정이 포함됩니다.
 
 - 15.3에서 나타나는 일부 경고 번호가 15.5에서는 더 이상 나타나지 않습니다. 이러한 경고는 더 구체적인 검사로 대체되었습니다.
 

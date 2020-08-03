@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft C++ 언어 규칙 테이블
 description: Microsoft C++ 규칙 테이블은 Visual Studio 버전에 따라 업데이트됩니다.
 ms.date: 05/18/2020
@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630457"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213946"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 언어 규칙 테이블
 
@@ -397,7 +397,7 @@ __VS 2019 16.6__은 Visual Studio 2019 버전 16.6에서 지원되는 기능을 
 
 ### <a name="notes"></a>참고
 
-<a name="note_A"></a> __A__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 모드에서는 동적 예외 사양이 구현되지 않은 상태로 남아 있으며 `throw()`는 여전히 `__declspec(nothrow)`의 동의어로 처리됩니다. C++17에서 동적 예외 사양은 P0003R5에 의해 대부분 제거되었으므로 1개의 vestige: `throw()`가 더 이상 사용되지 않으며 `noexcept`의 동의어로 작동해야 합니다. [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 모드에서 MSVC는 이제 `noexcept`, 즉 종료를 통한 적용과 동일한 동작을 `throw()`에 제공하여 표준을 준수합니다.
+<a name="note_A"></a> __A__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 모드에서는 동적 예외 사양이 구현되지 않은 상태로 남아 있으며 `throw()`는 여전히 `__declspec(nothrow)`의 동의어로 처리됩니다. C++17에서 동적 예외 사양은 P0003R5에 의해 대부분 제거되었으므로 1개의 vestige: `throw()`가 더 이상 사용되지 않으며 **`noexcept`** 의 동의어로 작동해야 합니다. [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 모드에서 MSVC는 이제 **`noexcept`** , 즉 종료를 통한 적용과 동일한 동작을 `throw()`에 제공하여 표준을 준수합니다.
 
 컴파일러 옵션 [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md)는 `__declspec(nothrow)`의 이전 동작을 요청합니다. `throw()`는 C++20에서 제거될 가능성이 있습니다. 표준 및 구현에서 이러한 변경 사항에 대한 응답으로 코드를 마이그레이션하는 것을 돕기 위해 예외 사양 문제에 대한 새로운 컴파일러 경고가 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 및 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 아래에 추가되었습니다.
 
@@ -407,7 +407,7 @@ __VS 2019 16.6__은 Visual Studio 2019 버전 16.6에서 지원되는 기능을 
 
 <a name="note_D"></a> __D__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 아래에서 표시하지 않을 수 있는 경고 [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md)로 지원됩니다.
 
-<a name="note_E"></a> __E__ 이것은 완전히 새로운 구현이기 때문에 이전의 `std::experimental` 버전과 호환되지 않으며, symlink 지원, 버그 수정 및 표준 필수 동작의 변경이 필요합니다. 지금은 \<filesystem>을 포함하면 새로운 `std::filesystem`과 이전 `std::experimental::filesystem`을 제공하고 \<experimental/filesystem>을 포함하면 오래된 실험 구현만을 제공합니다. 실험적 구현은 다음 ABI-breaking 라이브러리 릴리스에서 제거될 것입니다.
+<a name="note_E"></a> __E__ 이것은 완전히 새로운 구현이기 때문에 이전의 `std::experimental` 버전과 호환되지 않으며, symlink 지원, 버그 수정 및 표준 필수 동작의 변경이 필요합니다. 현재 \<filesystem>을 포함하면 새로운 `std::filesystem`과 이전 `std::experimental::filesystem`을 제공하고, \<experimental/filesystem>을 포함하면 이전 실험적 구현만 제공합니다. 실험적 구현은 다음 ABI-breaking 라이브러리 릴리스에서 제거될 것입니다.
 
 <a name="note_G"></a> __G__ 컴파일러 내장 함수에서 지원됩니다.
 

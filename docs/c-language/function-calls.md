@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227870"
 ---
 # <a name="function-calls"></a>함수 호출
 
@@ -20,7 +20,7 @@ ms.locfileid: "81334567"
 
 *expression* (*expression-list*<sub>opt</sub>)
 
-여기서 *expression*은 함수 이름이거나 함수 주소로 계산되며, *expression-list*는 쉼표로 구분된 식 목록입니다. 두 번째 식의 값은 함수로 전달되는 인수입니다. 함수가 값을 반환하지 않는 경우에는 `void`를 반환하는 함수로 선언합니다.
+여기서 *expression*은 함수 이름이거나 함수 주소로 계산되며, *expression-list*는 쉼표로 구분된 식 목록입니다. 두 번째 식의 값은 함수로 전달되는 인수입니다. 함수가 값을 반환하지 않는 경우에는 **`void`** 를 반환하는 함수로 선언합니다.
 
 함수가 호출 전에 선언되었는데 매개 변수와 관련한 정보는 제공되지 않으면 선언되지 않은 인수에 대해서는 일반적인 산술 변환이 진행됩니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "81334567"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 `switch` 문에서 호출되는 함수 호출을 보여 줍니다.
+이 예제에서는 **`switch`** 문에서 호출되는 함수 호출을 보여 줍니다.
 
 ```
 int main()
@@ -81,9 +81,9 @@ work( count, lift );
 
 정수 변수 `count` 및 `lift` 함수의 주소를 `work` 함수로 전달합니다. 함수 식별자가 포인터 식으로 계산되므로 함수 주소는 단순히 함수 식별자를 제공하는 방식으로 전달됩니다. 이러한 방식으로 함수 식별자를 사용하려면 식별자를 사용하기 전에 함수를 선언하거나 정의해야 합니다. 그지 않으면 식별자가 식별되지 않습니다. 이 경우에는 `work`에 대한 프로토타입이 `main` 함수 시작 부분에 제공됩니다.
 
-`function`의 `work` 매개 변수는 `int` 인수 하나를 가져와 **long** 값을 반환하는 함수에 대한 포인터로 선언됩니다. 매개 변수 이름을 묶는 괄호는 필수 항목입니다. 괄호가 없으면 선언은 **long** 값으로 포인터를 반환하는 함수를 지정합니다.
+`work`의 `function` 매개 변수는 **`int`** 인수 하나를 가져와 **`long`** 값을 반환하는 함수에 대한 포인터로 선언됩니다. 매개 변수 이름을 묶는 괄호는 필수 항목입니다. 괄호가 없으면 선언은 **`long`** 값으로 포인터를 반환하는 함수를 지정합니다.
 
-`work` 함수는 다음 함수 호출을 사용하여 **for** 루프 내에서 선택한 함수를 호출합니다.
+`work` 함수는 다음 함수 호출을 사용하여 **`for`** 루프 내에서 선택한 함수를 호출합니다.
 
 ```
 ( *function )( i );

@@ -2,12 +2,12 @@
 title: ARM ABI 규칙 개요
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320725"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229768"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 규칙 개요
 
@@ -201,7 +201,7 @@ Windows의 기본 커널 모드 스택은 3개 페이지(12KB)입니다. 커널 
 
 열거형은 포함된 값 하나 이상에 64비트 2배 워드 스토리지가 필요하지 않으면 32비트 정수 형식입니다. 이러한 저장소가 필요한 경우 열거형 수준이 64비트 정수 형식으로 올라갑니다.
 
-다른 플랫폼과의 호환성을 유지하기 위해 `wchar_t`는 `unsigned short`와 동일하게 정의됩니다.
+다른 플랫폼과의 호환성을 유지하기 위해 **`wchar_t`** 는 **`unsigned short`** 와 동일하게 정의됩니다.
 
 ## <a name="stack-walking"></a>스택 워크
 

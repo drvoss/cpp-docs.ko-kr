@@ -5,16 +5,16 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 196eb39d901b38ab7b005b03a933827ec4288218
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 540b938e2c4121f189216942bc06630fc61ee19c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335061"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220862"
 ---
 # <a name="c-abstract-declarators"></a>C 추상 선언자
 
-추상 선언자는 식별자 없이 하나 이상의 포인터, 배열 또는 함수 한정자로 구성되는 선언자입니다. 선언자에서 포인터 한정자(<strong>\*</strong>)는 항상 식별자 앞에 옵니다. 배열( **[ ]** ) 및 함수( **( )** ) 한정자는 식별자 뒤에 옵니다. 이 사실을 알고 있으면 추상 선언자에서 식별자가 나타날 위치를 확인하고 그에 따라 선언자를 해석할 수 있습니다. 복잡한 선언자에 대한 추가 정보 및 예제는 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요. 일반적으로 `typedef`는 선언자를 단순화하는 데 사용할 수 있습니다. [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요.
+추상 선언자는 식별자 없이 하나 이상의 포인터, 배열 또는 함수 한정자로 구성되는 선언자입니다. 선언자에서 포인터 한정자(<strong>\*</strong>)는 항상 식별자 앞에 옵니다. 배열( **[ ]** ) 및 함수( **( )** ) 한정자는 식별자 뒤에 옵니다. 이 사실을 알고 있으면 추상 선언자에서 식별자가 나타날 위치를 확인하고 그에 따라 선언자를 해석할 수 있습니다. 복잡한 선언자에 대한 추가 정보 및 예제는 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요. 일반적으로 **`typedef`** 는 선언자를 단순화하는 데 사용할 수 있습니다. [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요.
 
 추상 선언자는 복잡할 수 있습니다. 복잡한 추상 선언자에 있는 괄호는 선언의 복잡한 선언자에 있는 괄호와 마찬가지로 특정 해석을 지정합니다.
 

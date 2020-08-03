@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227818"
 ---
 # <a name="null-statement-c"></a>Null 문 (C)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64343414"
 
 ## <a name="remarks"></a>설명
 
-**do**, **for**, **if** 및 `while`과 같은 문의 경우 실행 가능 문이 문 본문으로 나타나야 합니다. null 문은 실제 문 본문이 필요하지 않는 경우 구문 요구 사항을 충족합니다.
+**`do`** , **`for`** , **`if`** , **`while`** 과 같은 문의 경우 실행 가능 문이 문 본문으로 나타나야 합니다. null 문은 실제 문 본문이 필요하지 않는 경우 구문 요구 사항을 충족합니다.
 
 다른 C 문에서처럼 null 문 앞에 레이블을 포함할 수 있습니다. 복합 문의 닫는 중괄호와 같이 문이 아닌 항목에 레이블을 지정하려면 null 문의 레이블을 지정하고 항목 바로 앞에 해당 문을 삽입하여 동일한 효과를 얻습니다.
 
@@ -35,7 +35,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-이 예제에서 **for** 문 `line[i++] = 0`의 루프 식은 `line`의 처음 10개 요소를 0개로 초기화합니다. 추가 문이 필요하지 않으므로 문 본문이 null 문입니다.
+이 예제에서 **`for`** 문 `line[i++] = 0`의 루프 식은 `line`의 처음 10개 요소를 0개로 초기화합니다. 추가 문이 필요하지 않으므로 문 본문이 null 문입니다.
 
 ## <a name="see-also"></a>참조
 

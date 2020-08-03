@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422837"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223943"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL에 실행 파일 링크
 
@@ -94,7 +94,7 @@ ms.locfileid: "79422837"
 
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) 또는 유사한 함수를 호출하여 DLL을 로드하고 모듈 핸들을 가져옵니다.
 
-- [GetProcAddress](getprocaddress.md)를 호출하여 애플리케이션이 호출하는 내보낸 각 함수에 대한 함수 포인터를 가져옵니다. 애플리케이션은 포인터를 통해 DLL 함수를 호출하기 때문에 컴파일러는 외부 참조를 생성하지 않으므로 가져오기 라이브러리와 연결할 필요가 없습니다. 그러나 사용자가 호출하는 내보낸 함수의 호출 시그니처를 정의하는 `typedef` 또는 `using` 문이 있어야 합니다.
+- [GetProcAddress](getprocaddress.md)를 호출하여 애플리케이션이 호출하는 내보낸 각 함수에 대한 함수 포인터를 가져옵니다. 애플리케이션은 포인터를 통해 DLL 함수를 호출하기 때문에 컴파일러는 외부 참조를 생성하지 않으므로 가져오기 라이브러리와 연결할 필요가 없습니다. 그러나 사용자가 호출하는 내보낸 함수의 호출 시그니처를 정의하는 **`typedef`** 또는 **`using`** 문이 있어야 합니다.
 
 - DLL을 사용한 작업이 완료되면 [FreeLibrary](freelibrary-and-afxfreelibrary.md)를 호출합니다.
 

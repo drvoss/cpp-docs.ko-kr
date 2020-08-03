@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229807"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio에서 C++ 빌드 시스템에 대해 폴더 열기 지원
 
@@ -119,7 +119,7 @@ MinGW-W64 구성을 추가하는 경우 JSON은 다음과 비슷합니다.
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense 진단 사용
 
-기대하는 IntelliSense가 표시되지 않는 경우 **도구** > **옵션** > **텍스트 편집기** > **C/C++**  > **고급**으로 이동하고 **로깅 사용**을 **true**로 설정하여 문제를 해결할 수 있습니다. 먼저 **로깅 수준**을 5로 설정하고 **로깅 필터**를 8로 설정해 봅니다.
+기대하는 IntelliSense가 표시되지 않는 경우 **도구** > **옵션** > **텍스트 편집기** > **C/C++**  > **고급**으로 이동하고 **로깅 사용**을 **`true`** 로 설정하여 문제를 해결할 수 있습니다. 먼저 **로깅 수준**을 5로 설정하고 **로깅 필터**를 8로 설정해 봅니다.
 
 ![진단 로깅](media/diagnostic-logging.png)
 

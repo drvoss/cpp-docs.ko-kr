@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229586"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8진 및 16진 문자 사양
 
@@ -22,7 +22,7 @@ ms.locfileid: "64343374"
 
 마찬가지로 16진수 이스케이프 시퀀스에 대해 하나 이상의 숫자를 사용해야 하지만 두 번째 숫자와 세 번째 숫자를 생략할 수 있습니다. 따라서 백스페이스 문자의 16진수 이스케이프 시퀀스를 **\x8**, **\x08** 또는 **\x008**로 지정할 수 있습니다.
 
-8진수 또는 16진수 이스케이프 시퀀스의 값은 문자 상수에 대한**unsigned char** 형식 및 와이드 문자 상수에 대한 `wchar_t` 형식의 표현할 수 있는 값 범위에 있어야 합니다. 와이드 문자 상수에 대한 자세한 내용은 [멀티바이트 및 와이드 문자](../c-language/multibyte-and-wide-characters.md)를 참조하세요.
+8진수 또는 16진수 이스케이프 시퀀스의 값은 문자 상수에 **`unsigned char`** 형식 및 와이드 문자 상수에 대한 **`wchar_t`** 형식의 표현할 수 있는 값 범위에 있어야 합니다. 와이드 문자 상수에 대한 자세한 내용은 [멀티바이트 및 와이드 문자](../c-language/multibyte-and-wide-characters.md)를 참조하세요.
 
 8진수 이스케이프 상수와 달리 이스케이프 시퀀스의 16진수 개수에는 제한이 없습니다. 16진수 이스케이프 시퀀스는 16진수가 아닌 첫 번째 문자에서 종결됩니다. 16진수에는 **a**부터 **f**까지의 문자가 포함되므로 이스케이프 시퀀스가 올바른 숫자에서 종결되도록 주의해야 합니다. 혼동을 피하기 위해 8진수나 16진수 문자 정의를 매크로 정의에 배치할 수 있습니다.
 

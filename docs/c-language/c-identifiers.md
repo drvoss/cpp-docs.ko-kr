@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325665"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223748"
 ---
 # <a name="c-identifiers"></a>C 식별자
 
@@ -34,7 +34,7 @@ int main()
 
 식별자가 선언되면 이후 프로그램 문에서 식별자를 사용하여 관련 값을 참조할 수 있습니다.
 
-문 레이블이라는 특수한 종류의 식별자는 `goto` 문에서 사용할 수 있습니다. 선언은 [선언 및 형식](../c-language/declarations-and-types.md)에서 설명하고, 문 레이블은 [goto 및 Labeled 문](../c-language/goto-and-labeled-statements-c.md)에서 설명합니다.
+문 레이블이라는 특수한 종류의 식별자는 **`goto`** 문에서 사용할 수 있습니다. 선언은 [선언 및 형식](../c-language/declarations-and-types.md)에서 설명하고, 문 레이블은 [goto 및 Labeled 문](../c-language/goto-and-labeled-statements-c.md)에서 설명합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -50,7 +50,7 @@ int main()
 *digit*: 다음 중 하나<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-식별자 이름의 첫 번째 문자는 `nondigit`여야 합니다. 즉, 첫 번째 문자는 밑줄 또는 대문자나 소문자여야 합니다. ANSI는 외부 식별자 이름에서 6개의 유효한 문자를 허용하고 내부(함수 내) 식별자의 이름에 대해 31자를 허용합니다. 외부 식별자(글로벌 범위에서 선언되거나 `extern` 스토리지 클래스로 선언된 식별자)는 링커 등의 다른 소프트웨어에서 처리되어야 하므로 추가 명명 제한이 적용될 수 있습니다.
+식별자 이름의 첫 번째 문자는 `nondigit`여야 합니다. 즉, 첫 번째 문자는 밑줄 또는 대문자나 소문자여야 합니다. ANSI는 외부 식별자 이름에서 6개의 유효한 문자를 허용하고 내부(함수 내) 식별자의 이름에 대해 31자를 허용합니다. 외부 식별자(글로벌 범위에서 선언되거나 **`extern`** 스토리지 클래스로 선언된 식별자)는 링커 등의 다른 소프트웨어에서 처리되어야 하므로 추가 명명 제한이 적용될 수 있습니다.
 
 **Microsoft 전용**
 

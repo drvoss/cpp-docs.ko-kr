@@ -7,16 +7,16 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: 66e99b18d181e9067e90398c35a61db2da66c301
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3229c98a0a6bbb0ebc4fa0ef055e4019bd6c7bd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328584"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229820"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>이름 대신 서수를 사용하여 DLL에서 함수 내보내기
 
-DLL에서 함수를 내보내는 가장 간단한 방법은 이름으로 내보내는 것입니다. 예를 들어 **__declspec(dllexport)** 을 사용하는 경우입니다. 그러나 대신 서수로 함수를 내보낼 수 있습니다. 이 기법에서는 **__declspec(dllexport)** 대신 .def 파일을 사용해야 합니다. 함수의 서수 값을 지정하려면 .def 파일의 함수 이름에 서수를 추가합니다. 서수 지정에 대한 자세한 내용은 [.def 파일을 사용하여 DLL에서 내보내기](exporting-from-a-dll-using-def-files.md)를 참조하세요.
+DLL에서 함수를 내보내는 가장 간단한 방법은 이름으로 내보내는 것입니다. 예를 들어 **`__declspec(dllexport)`** 을 사용하는 경우 이 문제가 발생합니다. 그러나 대신 서수로 함수를 내보낼 수 있습니다. 이 기법에서는 **`__declspec(dllexport)`** 대신 .def 파일을 사용해야 합니다. 함수의 서수 값을 지정하려면 .def 파일의 함수 이름에 서수를 추가합니다. 서수 지정에 대한 자세한 내용은 [.def 파일을 사용하여 DLL에서 내보내기](exporting-from-a-dll-using-def-files.md)를 참조하세요.
 
 > [!TIP]
 > DLL의 파일 크기를 최적화하려면 내보낸 각 함수에서 **NONAME** 특성을 사용합니다. **NONAME** 특성을 사용하면 서수는 함수 이름이 아니라 DLL의 내보내기 테이블에 저장됩니다. 이렇게 하면 많은 함수를 내보내는 경우 상당한 비용을 절감할 수 있습니다.

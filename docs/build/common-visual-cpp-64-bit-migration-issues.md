@@ -11,26 +11,26 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 004fe7ace6102feecbcb2f542b5b93268ae2f868
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 68f4dc4276c5cbce687477ca25ec69f0cb544acb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493322"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229859"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>일반적인 Visual C++ 64비트 마이그레이션 문제
 
 MSVC(Microsoft C++ 컴파일러)를 사용하여 64비트 Windows 운영 체제에서 실행되는 애플리케이션을 만들 때는 다음 문제를 고려해야 합니다.
 
-- `int`와 `long`은 64비트 Windows 운영 체제에서 32비트 값입니다. 64비트 플랫폼용으로 컴파일하려는 프로그램의 경우 포인터를 32비트 변수에 할당하지 않도록 주의해야 합니다. 포인터는 64비트 플랫폼에서 64비트이며, 이를 32비트 변수에 할당하면 포인터 값이 잘립니다.
+- **`int`** 및 **`long`** 은 64비트 Windows 운영 체제에서 32비트 값입니다. 64비트 플랫폼용으로 컴파일하려는 프로그램의 경우 포인터를 32비트 변수에 할당하지 않도록 주의해야 합니다. 포인터는 64비트 플랫폼에서 64비트이며, 이를 32비트 변수에 할당하면 포인터 값이 잘립니다.
 
 - `size_t`, `time_t` 및 `ptrdiff_t`는 64비트 Windows 운영 체제에서 64비트 값입니다.
 
 - Visual Studio 2005 이전 버전에서 `time_t`는 32비트 Windows 운영 체제에 사용되는 32비트 값입니다. `time_t`는 이제 기본적으로 64비트 정수입니다. 자세한 내용은 [시간 관리](../c-runtime-library/time-management.md)를 참조하세요.
 
-   코드의 어느 부분에서 `int` 값을 가져와 `size_t` 또는 `time_t` 값으로 처리하는지 알아야 합니다. 숫자가 32비트보다 커져 `int` 스토리지로 다시 전달될 때 데이터가 잘릴 수 있습니다.
+   코드의 어느 부분에서 **`int`** 값을 가져와 `size_t` 또는 `time_t` 값으로 처리하는지 알아야 합니다. 숫자가 32비트보다 커져 **`int`** 스토리지로 다시 전달될 때 데이터가 잘릴 수 있습니다.
 
-%x(16진수 `int` 형식) `printf` 한정자는 64비트 Windows 운영 체제에서 예상한 대로 작동하지 않습니다. 이 한정자는 전달된 값의 처음 32비트에 대해서만 작동합니다.
+%x(16진수 **`int`** 형식) `printf` 한정자는 64비트 Windows 운영 체제에서 예상한 대로 작동하지 않습니다. 이 한정자는 전달된 값의 처음 32비트에 대해서만 작동합니다.
 
 - 32비트 Windows 운영 체제에서 정수를 나타내려면 %I32x를 사용합니다.
 

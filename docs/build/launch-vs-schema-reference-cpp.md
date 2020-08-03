@@ -3,12 +3,12 @@ title: launch.vs.json 스키마 참조(C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: ff4713642ab95a9bbc31f1a06236de459e53f9c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323047"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223956"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.json 스키마 참조(C++)
 
@@ -27,8 +27,8 @@ ms.locfileid: "81323047"
 |`inheritEnvironments`|array|여러 원본에서 상속되는 환경 변수 집합을 지정합니다. *CMakeSettings.json* 또는 *CppProperties.json*과 같은 파일에 일부 변수를 정의하고 디버그 컨텍스트에 사용할 수 있도록 설정할 수 있습니다.  **Visual Studio 16.4:** : `env.VARIABLE_NAME` 구문을 사용하여 대상별로 환경 변수를 지정합니다. 변수를 설정 해제하려면 변수를 "Null"로 설정합니다.|
 |`args`|array|시작된 프로그램에 전달되는 명령줄 인수를 지정합니다.|
 |`currentDir`|string|빌드 대상의 전체 디렉터리 경로를 지정합니다. 이 매개 변수가 설정되어 있지 않으면 자동으로 검색됩니다.|
-|`noDebug`|boolean|시작된 프로그램을 디버그할지 여부를 지정합니다. 지정되지 않은 경우 이 매개 변수의 기본값은 `false`입니다.|
-|`stopOnEntry`|boolean|프로세스가 시작되고 디버거가 연결되는 즉시 중단할지 여부를 지정합니다. 이 매개 변수의 기본값은 `false`입니다.|
+|`noDebug`|boolean|시작된 프로그램을 디버그할지 여부를 지정합니다. 지정되지 않은 경우 이 매개 변수의 기본값은 **`false`** 입니다.|
+|`stopOnEntry`|boolean|프로세스가 시작되고 디버거가 연결되는 즉시 중단할지 여부를 지정합니다. 이 매개 변수의 기본값은 **`false`** 입니다.|
 |`remoteMachine`|string|프로그램이 시작된 원격 컴퓨터의 이름을 지정합니다.|
 |`env`|array| 사용자 지정 환경 변수의 키-값 목록을 지정합니다. env:{"myEnv":"myVal"}.|
 |`portName`|string|실행 중인 프로세스에 연결할 때 포트 이름을 지정합니다.|
@@ -58,9 +58,9 @@ ms.locfileid: "81323047"
 |`launchCompleteCommand`|string|디버거가 완전히 설정된 후 실행하여 대상 프로세스가 실행되게 하는 명령입니다. 허용되는 값은 "exec-run", "exec-continue", "None"입니다. 기본값은 "exec-run"입니다.|
 |`debugServerPath`|string|시작할 디버그 서버의 선택적 전체 경로입니다. 기본값은 Null입니다.|
 |`debugServerArgs`|string|선택적 디버그 서버 인수입니다. 기본값은 Null입니다.|
-|`filterStderr`|boolean|서버에서 시작한 패턴을 stderr 스트림에서 검색하고, stderr을 디버그 출력에 기록합니다. 기본값은 `false`입니다.|
+|`filterStderr`|boolean|서버에서 시작한 패턴을 stderr 스트림에서 검색하고, stderr을 디버그 출력에 기록합니다. 기본값은 **`false`** 입니다.|
 |`coreDumpPath`|string|지정된 프로그램에 대한 코어 덤프 파일의 선택적 전체 경로입니다. 기본값은 Null입니다.|
-externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다. `false`인 경우 콘솔이 시작되지 않습니다. 기본값은 `false`입니다. 참고:  이 옵션은 어떤 경우 기술적인 이유로 인해 무시됩니다.|
+externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다. **`false`** 인 경우 콘솔이 시작되지 않습니다. 기본값은 **`false`** 입니다. 참고:  이 옵션은 어떤 경우 기술적인 이유로 인해 무시됩니다.|
 |`pipeTransport`|string|있을 경우 디버거가 원격 컴퓨터에 연결할 때 Visual Studio와 MI 지원 디버거(예: gdb) 사이에 표준 입/출력을 릴레이하는 파이프와 다른 실행 파일을 사용하게 합니다. 허용되는 값: 하나 이상의 [파이프 전송 옵션](#pipe_transport_options).|
 
 ## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a> 설치 명령 시작
@@ -71,7 +71,7 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 |-|-|-|
 |`text`|string|실행할 디버거 명령입니다.|
 |`description`|string|명령에 대한 선택적 설명입니다.|
-|`ignoreFailures`|boolean|true이면 명령의 오류가 무시됩니다. 기본값은 `false`입니다.|
+|`ignoreFailures`|boolean|true이면 명령의 오류가 무시됩니다. 기본값은 **`false`** 입니다.|
 
 ## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a> 파이프 전송 옵션
 
@@ -84,7 +84,7 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 |`pipeArgs`|array|연결을 구성하기 위해 파이프 프로그램에 전달되는 명령줄 인수입니다.|
 |`debuggerPath`|string|대상 컴퓨터의 디버거에 대한 전체 경로(예: /usr/bin/gdb)입니다.|
 |`pipeEnv`|개체|파이프 프로그램에 전달되는 환경 변수입니다.|
-|`quoteArgs`|boolean|개별 인수에 공백이나 탭과 같은 문자를 포함하는 경우 따옴표로 묶어야 하나요? `false`인 경우 디버거 명령이 더 이상 자동으로 따옴표로 묶이지 않습니다. 기본값은 `true`입니다.|
+|`quoteArgs`|boolean|개별 인수에 공백이나 탭과 같은 문자를 포함하는 경우 따옴표로 묶어야 하나요? **`false`** 인 경우 디버거 명령이 더 이상 자동으로 따옴표로 묶이지 않습니다. 기본값은 **`true`** 입니다.|
 
 ## <a name="source-file-map-options"></a><a name="source_file_map_options"></a> 소스 파일 맵 옵션
 
@@ -93,4 +93,4 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 ||||
 |-|-|-|
 |`editorPath`|string|편집기에서 찾을 소스 코드의 위치입니다.|
-|`useForBreakpoints`|boolean|중단점을 설정할 때 이 소스 매핑을 사용해야 합니다. `false`인 경우 중단점 설정에 파일 이름과 줄 숫자만 사용됩니다. `true`인 경우 이 소스 매핑이 사용되는 경우에만 파일의 전체 경로와 줄 번호를 사용해 중단점이 설정됩니다. 아니면 중단점을 설정할 때 파일 이름과 줄 번호만 사용합니다. 기본값은 `true`입니다.|
+|`useForBreakpoints`|boolean|중단점을 설정할 때 이 소스 매핑을 사용해야 합니다. **`false`** 인 경우 중단점 설정에 파일 이름과 줄 숫자만 사용됩니다. **`true`** 인 경우 이 소스 매핑이 사용되는 경우에만 파일의 전체 경로와 줄 번호를 사용해 중단점이 설정됩니다. 아니면 중단점을 설정할 때 파일 이름과 줄 번호만 사용합니다. 기본값은 **`true`** 입니다.|

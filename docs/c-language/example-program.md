@@ -2,16 +2,16 @@
 title: 예제 프로그램
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da8c772a3534df2c865c18959329ac850e359160
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233941"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218860"
 ---
 # <a name="example-program"></a>예제 프로그램
 
-다음 C 소스 프로그램은 두 개의 소스 파일로 구성됩니다. 이 프로그램에서는 C 프로그램에서 가능한 다양한 선언 및 정의 중 몇 가지를 간략하게 보여 줍니다. 이 설명서의 이후 섹션에서는 이러한 선언, 정의 및 초기화를 작성하는 방법과 **static** 및 `extern` 등의 C 키워드를 사용하는 방법을 설명합니다. `printf` 함수는 C 헤더 파일 STDIO.H에서 선언됩니다.
+다음 C 소스 프로그램은 두 개의 소스 파일로 구성됩니다. 이 프로그램에서는 C 프로그램에서 가능한 다양한 선언 및 정의 중 몇 가지를 간략하게 보여 줍니다. 이 설명서의 이후 섹션에서는 이러한 선언, 정의 및 초기화를 작성하는 방법과 **`static`** , **`extern`** 등의 C 키워드를 사용하는 방법을 설명합니다. `printf` 함수는 C 헤더 파일 STDIO.H에서 선언됩니다.
 
 `main` 및 `max` 함수는 별도의 파일에 있는 것으로 간주되며, 프로그램의 실행은 `main` 함수로 시작됩니다. `main` 전에는 명시적 사용자 함수가 실행되지 않습니다.
 

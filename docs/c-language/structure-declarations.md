@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157807"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217053"
 ---
 # <a name="structure-declarations"></a>구조체 선언
 
@@ -26,8 +26,8 @@ ms.locfileid: "62157807"
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -53,7 +53,7 @@ ms.locfileid: "62157807"
 
 *struct-declaration-list*는 구조체 구성원의 형식 및 이름을 지정합니다. *struct-declaration-list* 인수에는 하나 이상의 변수 또는 비트 필드 선언이 포함됩니다.
 
-*struct-declaration-list*에 선언된 각 변수는 구조체 형식의 구성원으로 정의됩니다. *struct-declaration-list* 내 변수 선언의 형태는 선언에 스토리지 클래스 지정자 또는 이니셜라이저를 포함할 수 없다는 점을 제외하고 이 섹션에 설명된 다른 변수 선언과 동일합니다. 구조체 멤버에는 `void` 형식, 불완전한 형식 또는 함수 형식을 제외한 모든 변수 형식을 포함할 수 있습니다.
+*struct-declaration-list*에 선언된 각 변수는 구조체 형식의 구성원으로 정의됩니다. *struct-declaration-list* 내 변수 선언의 형태는 선언에 스토리지 클래스 지정자 또는 이니셜라이저를 포함할 수 없다는 점을 제외하고 이 섹션에 설명된 다른 변수 선언과 동일합니다. 구조체 멤버에는 **`void`** 형식, 불완전한 형식 또는 함수 형식을 제외한 모든 변수 형식을 포함할 수 있습니다.
 
 자신이 나타나는 구조체의 형식을 가지도록 멤버를 선언할 수 없습니다. 그러나 구조체 형식에 태그가 있는 한 자신이 나타나는 구조체 형식에 대한 포인터로 멤버를 선언할 수 있습니다. 이렇게 하면 연결된 구조체 목록을 만들 수 있습니다.
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` 구조체에는 `name`, `id` 및 `class`라는 세 개의 멤버가 있습니다. `name` 구성원은 20개의 요소를 가진 배열이며, `id` 및 `class`는 각각 `int` 및 **long** 형식이 지정된 단순 구성원입니다. `employee` 식별자는 구조체 식별자입니다.
+`employee` 구조체에는 `name`, `id` 및 `class`라는 세 개의 멤버가 있습니다. `name` 멤버는 20개 요소를 가진 배열이며, `id` 및 `class`는 각각 **`int`** 및 **`long`** 형식이 지정된 단순 멤버입니다. `employee` 식별자는 구조체 식별자입니다.
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-`complex` 구조체에는 **float** 형식이 지정된 `x` 및 `y`라는 두 가지 구성원이 있습니다. 구조체 형식에 태그가 없으므로 해당 형식은 명명되지 않은 형식 또는 익명 형식입니다.
+`complex` 구조체에는 **`float`** 형식이 지정된 `x` 및 `y`라는 두 가지 멤버가 있습니다. 구조체 형식에 태그가 없으므로 해당 형식은 명명되지 않은 형식 또는 익명 형식입니다.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-구조체의 처음 두 구성원은 `char` 변수와 **float** 값에 대한 포인터입니다. 세 번째 멤버인 `next`는 정의되는 구조체 형식에 대한 포인터로 선언됩니다(`sample`).
+구조체의 처음 두 멤버는 **`char`** 변수와 **`float`** 값에 대한 포인터입니다. 세 번째 멤버인 `next`는 정의되는 구조체 형식에 대한 포인터로 선언됩니다(`sample`).
 
 익명 구조체는 명명된 태그가 필요하지 않은 경우 유용할 수 있습니다. 하나의 선언이 모든 구조체 인스턴스를 정의하는 경우가 그렇습니다. 예를 들어:
 
@@ -149,9 +149,9 @@ struct somestruct
 
 컴파일러는 크기가 지정되지 않았거나 크기가 0인 배열을 구조체의 마지막 멤버로 허용합니다. 이는 다양한 상황에서 사용할 때 상수 배열의 크기가 다를 경우 유용할 수 있습니다. 이러한 구조체의 선언은 다음과 같습니다.
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
+**`struct`** *identifier* **{** *set-of-declarations* *type* <em>array-name</em> **\[]; };**
 
-크기가 지정되지 않은 배열은 구조체의 마지막 멤버로만 나타날 수 있습니다. 크기가 지정되지 않은 배열 선언을 포함하는 구조체는 바깥쪽 구조체에 멤버를 더 이상 선언하지 않는 한 다른 구조체 내에 중첩될 수 있습니다. 구조체에 멤버를 더 선언하는 경우 해당 배열은 허용되지 않습니다. `sizeof` 연산자는 이 형식의 배열이나 배열 자체에 적용될 경우 배열 크기가 0이라고 가정합니다.
+크기가 지정되지 않은 배열은 구조체의 마지막 멤버로만 나타날 수 있습니다. 크기가 지정되지 않은 배열 선언을 포함하는 구조체는 바깥쪽 구조체에 멤버를 더 이상 선언하지 않는 한 다른 구조체 내에 중첩될 수 있습니다. 구조체에 멤버를 더 선언하는 경우 해당 배열은 허용되지 않습니다. **`sizeof`** 연산자는 이 형식의 배열이나 배열 자체에 적용될 경우 배열 크기가 0이라고 가정합니다.
 
 다른 구조체 또는 공용 구조체의 멤버일 경우 선언자 없이 구조체 선언을 지정할 수도 있습니다. 필드 이름은 바깥쪽 구조체로 승격됩니다. 예를 들어, 이름이 없는 구조체는 다음과 같습니다.
 

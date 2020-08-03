@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c9f24b049ee8e9a33557f3262cd6abcc624957
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217066"
 ---
 # <a name="overview-of-functions"></a>함수 개요
 
@@ -20,7 +20,7 @@ ms.locfileid: "62232288"
 
 컴파일러는 프로토타입을 사용하여 이후 함수 호출의 인수 형식을 함수의 매개 변수와 비교하고 필요한 경우 인수의 형식을 매개 변수의 형식으로 변환합니다.
 
-함수 호출은 호출하는 함수에서 호출된 함수로 실행 제어를 전달합니다. 인수(있는 경우)는 호출된 함수에 값으로 전달됩니다. 호출된 함수에서 `return` 문이 실행되면 호출하는 함수에 제어가 반환되며 값이 함께 반환될 수도 있습니다.
+함수 호출은 호출하는 함수에서 호출된 함수로 실행 제어를 전달합니다. 인수(있는 경우)는 호출된 함수에 값으로 전달됩니다. 호출된 함수에서 **`return`** 문이 실행되면 호출하는 함수에 제어가 반환되며 값이 함께 반환될 수도 있습니다.
 
 ## <a name="see-also"></a>참조
 

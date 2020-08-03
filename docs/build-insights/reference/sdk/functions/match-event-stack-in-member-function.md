@@ -1,6 +1,6 @@
 ---
-title: 매치이벤트스택인멤버기능
-description: C ++ 빌드 인사이트 SDK MatchEventStackInMemberFunction 함수 함수 참조.
+title: MatchEventStackInMemberFunction
+description: C++ Build Insights SDK MatchEventStackInMemberFunction 함수 참조입니다.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: db02ce5656bf8970ead7b49d5580f7d81bebb1b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224138"
 ---
-# <a name="matcheventstackinmemberfunction"></a>매치이벤트스택인멤버기능
+# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-C++ 빌드 인사이트 SDK는 Visual Studio 2017 이상과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서의 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정합니다. 이 페이지의 목조 테이블 맨 위에 있습니다.
+C++ Build Insights SDK는 Visual Studio 2017 이상 버전과 호환됩니다. 이러한 버전에 대한 설명서를 보려면 이 문서에 대한 Visual Studio **버전** 선택기 컨트롤을 Visual Studio 2017 또는 Visual Studio 2019로 설정하세요. 이 페이지의 목차 맨 위에 있습니다.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-함수는 `MatchEventStackInMemberFunction` 멤버 함수의 매개 변수 목록에서 설명하는 특정 이벤트 계층 구조와 이벤트 스택을 일치시도록 사용됩니다. 일치하는 계층구조는 추가 처리를 위해 멤버 함수로 전달됩니다. 이벤트, 이벤트 스택 및 계층구조에 대한 자세한 내용은 [이벤트 테이블을](../event-table.md)참조하십시오.
+`MatchEventStackInMemberFunction` 함수는 이벤트 스택을 멤버 함수의 매개 변수 목록에 설명된 특정 이벤트 계층 구조와 일치하는지 비교하는 데 사용됩니다. 일치하는 계층 구조는 추가 처리를 위해 멤버 함수로 전달됩니다. 이벤트, 이벤트 스택 및 계층 구조에 대한 자세한 내용은 [이벤트 테이블](../event-table.md)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>매개 변수
 
-*인터페이스*\
+*TInterface*\
 멤버 함수를 포함하는 형식입니다.
 
 *TReturn*\
 멤버 함수의 반환 형식입니다.
 
 *T1*, ..., *T10*\
-일치할 이벤트 계층 구조를 설명하는 형식입니다.
+일치하는지 비교할 이벤트 계층 구조를 설명하는 형식입니다.
 
 *TExtraParams*\
-멤버 함수에서 허용하는 추가 매개 변수의 형식과 이벤트 계층 유형입니다.
+멤버 함수에서 허용하는 추가 매개 변수의 형식 및 이벤트 계층 구조 형식입니다.
 
 *TExtraArgs*\
-에 전달된 추가 인수의 `MatchEventStackInMemberFunction`형식입니다.
+`MatchEventStackInMemberFunction`에 전달된 추가 인수의 형식입니다.
 
-*이벤트 스택*\
-*T1에서* *T10까지*설명하는 이벤트 형식 계층 구조와 일치하는 이벤트 스택입니다.
+*eventStack*\
+*T1* ~ *T10*에 설명된 이벤트 유형 계층 구조와 일치하는지 비교할 이벤트 스택입니다.
 
-*개체Ptr*\
-*멤버Func가* 호출되는 개체에 대한 포인터입니다.
+*objectPtr*\
+*memberFunc*에 호출되는 개체에 대한 포인터입니다.
 
-*멤버펑*\
-일치할 이벤트 형식 계층 구조를 설명하는 멤버 함수입니다.
+*memberFunc*\
+일치하는지 비교할 이벤트 유형 계층 구조를 설명하는 멤버 함수입니다.
 
-*엑스트라 아르그*\
-이벤트 형식 계층 구조 매개 변수와 함께 *memberFunc에* 완벽하게 전달되는 인수입니다.
+*extraArgs*\
+이벤트 유형 계층 구조 매개 변수와 함께 *memberFunc*로 완벽하게 전달되는 인수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-일치가 성공한 경우 **true인** **bool** 값 또는 그렇지 않으면 **false입니다.**
+일치가 성공하면 **`true`** 이고 그렇지 않으면 **`false`** 인 **`bool`** 값입니다.
 
 ## <a name="remarks"></a>설명
 
-*eventStack의* 마지막 이벤트는 항상 일치하는 이벤트 유형 계층 구조의 마지막 항목과 일치합니다. 이벤트 유형 계층구조의 다른 모든 형식은 동일한 순서로 제공되는 경우 마지막 을 제외한 *eventStack의* 모든 위치와 일치할 수 있습니다.
+*eventStack*의 마지막 이벤트는 항상 일치하는지 비교할 이벤트 유형 계층 구조의 마지막 항목과 비교됩니다. 이벤트 유형 계층 구조에 있는 다른 모든 유형은 동일한 순서일 경우 마지막 항목을 제외하고 *eventStack*의 모든 위치와 일치하는지 비교될 수 있습니다.
 
-*T1부터* *T10* 매개 변수에 사용할 이벤트 유형은 *캡처 클래스*목록에서 선택됩니다. 이벤트 목록 및 이벤트 와 일치하는 데 사용할 수 있는 캡처 클래스는 [이벤트 테이블을](../event-table.md)참조하십시오.
+*T1* ~ *T10* 매개 변수에 사용할 이벤트 유형은 캡처 클래스 목록에서 선택됩니다. 일치하는지 비교하는 데 사용할 수 있는 이벤트 및 캡처 클래스의 목록은 [이벤트 테이블](../event-table.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 

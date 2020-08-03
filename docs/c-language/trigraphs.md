@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227753"
 ---
 # <a name="trigraphs"></a>삼중자
 
@@ -28,7 +28,7 @@ C 소스 프로그램의 소스 문자 집합은 7비트 ASCII 문자 집합에 
 
 C++17의 언어에서는 삼중자가 제거됩니다. 구현에서는 실제 원본 파일에서 *기본 원본 문자 집합*으로의 구현이 정의된 매핑의 일부분으로 삼중자가 계속 지원될 수도 있지만, 표준에 따라 구현에서 삼중자를 지원하지 않는 것이 좋습니다. C++14까지는 삼중자가 C에서처럼 지원됩니다.
 
-Visual C++에서는 삼중자 대체가 계속 지원되지만 기본적으로는 사용할 수 없습니다. 삼중자 대체를 사용하도록 설정하는 방법에 대한 자세한 내용은 [/Zc:trigraphs(삼중자 대체)](../build/reference/zc-trigraphs-trigraphs-substitution.md)를 참조하세요.
+Visual C++에서는 삼중자 대체가 계속 지원되지만 기본적으로는 사용할 수 없습니다. 삼중자 대체를 사용하도록 설정하는 방법에 대한 자세한 내용은 [`/Zc:trigraphs`(삼중자 대체)](../build/reference/zc-trigraphs-trigraphs-substitution.md)를 참조하세요.
 
 다음 표에서는 9개의 삼중자 시퀀스를 보여 줍니다. 첫 번째 열에서 문장 부호 문자의 소스 파일에 있는 모든 항목은 두 번째 열의 해당 문자로 바뀝니다.
 
@@ -36,19 +36,19 @@ Visual C++에서는 삼중자 대체가 계속 지원되지만 기본적으로�
 
 | 삼중자 | 문장 부호 문자 |
 |----------|-----------------------|
-| ??= | # |
-| ??( | \[ |
-| ??/ | \\ |
-| ??) | ] |
-| ??' | ^ |
-| ??\< | { |
-| ??! | &#124; |
-| ??> | } |
-| ??- | ~ |
+| `??=` | `#` |
+| `??(` | `[` |
+| `??/` | `\` |
+| `??)` | `]` |
+| `??'` | `^` |
+| `??<` | `{` |
+| `??!` | `|` |
+| `??>` | `}` |
+| `??-` | `~` |
 
 삼중자는 항상 단일 소스 문자로 처리됩니다. 삼중자 변환은 문자열 리터럴 및 문자 상수에서 이스케이프 문자를 인식하기 전에 첫 번째 [변환 단계](../preprocessor/phases-of-translation.md)에서 발생합니다. 위의 표에 나와 있는 9개의 삼중자만 인식됩니다. 다른 모든 문자 시퀀스는 변환되지 않고 유지됩니다.
 
-문자 이스케이프 시퀀스인 **\\?** 는 삼중자와 비슷한 문자 시퀀스가 잘못 해석되는 것을 방지합니다. 이스케이프 시퀀스에 대한 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요. 예를 들어, `What??!` 문자열을 이 `printf` 문으로 출력하려고 하면
+문자 이스케이프 시퀀스인 **`\?`** 는 삼중자와 비슷한 문자 시퀀스가 잘못 해석되는 것을 방지합니다. 이스케이프 시퀀스에 대한 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요. 예를 들어, `What??!` 문자열을 이 `printf` 문으로 출력하려고 하면
 
 ```C
 printf( "What??!\n" );
@@ -64,5 +64,5 @@ printf( "What?\?!\n" );
 
 ## <a name="see-also"></a>참조
 
-[/Zc:trigraphs(삼중자 대체)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[`/Zc:trigraphs`(삼중자 대체)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [C 식별자](../c-language/c-identifiers.md)

@@ -12,18 +12,18 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751180"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228676"
 ---
 # <a name="add-a-property"></a>속성 추가
 
-속성 추가 [마법사를](#names-add-property-wizard) 사용하여 프로젝트의 인터페이스에 메서드를 추가할 수 있습니다.
+[속성 추가 마법사](#names-add-property-wizard)를 사용하여 프로젝트의 인터페이스에 메서드를 추가할 수 있습니다.
 
-**개체에 속성을 추가하려면 다음을 수행합니다.**
+**개체에 속성을 추가하려면:**
 
 1. [클래스 뷰](/visualstudio/ide/viewing-the-structure-of-code)에서 속성을 추가할 인터페이스의 이름을 마우스 오른쪽 단추로 클릭합니다.
 
@@ -32,9 +32,9 @@ ms.locfileid: "81751180"
 
 1. 바로 가기 메뉴에서 **추가**를 선택한 다음, **속성 추가**를 선택합니다.
 
-1. 속성 [추가 마법사에서](#names-add-property-wizard)속성을 만드는 정보를 제공합니다.
+1. [속성 추가 마법사](#names-add-property-wizard)에서 속성을 만드는 데 필요한 정보를 제공합니다.
 
-1. 마법사의 IDL 특성 페이지에서 속성에 대한 인터페이스 정의 언어(IDL) 설정을 [지정합니다.](#idl-attributes-add-property-wizard)
+1. 마법사의 [IDL 특성](#idl-attributes-add-property-wizard) 페이지에서 이 속성에 대한 IDL(인터페이스 정의 언어) 설정을 지정합니다.
 
 1. **마침**을 선택하여 속성을 추가합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "81751180"
 ## <a name="in-this-section"></a>단원 내용
 
 - [이름, 속성 추가 마법사](#names-add-property-wizard)
-- [IDL 속성, 속성 마법사 추가](#idl-attributes-add-property-wizard)
+- [IDL 특성, 속성 추가 마법사](#idl-attributes-add-property-wizard)
 - [스톡 속성](#stock-properties)
 
 ## <a name="names-add-property-wizard"></a>이름, 속성 추가 마법사
@@ -62,7 +62,7 @@ ms.locfileid: "81751180"
 
   속성 이름을 설정합니다. ActiveX 컨트롤과 연결된 MFC dispinterface의 경우, 사용자 고유의 이름을 제공하거나 미리 정의된 목록에서 스톡 속성 이름을 선택할 수 있습니다. 고유한 속성 이름을 제공하는 경우 **스톡** 구현 형식을 사용할 수 없습니다. 목록의 속성에 대한 설명은 [스톡 속성](#stock-properties)을 참조하세요.
 
-  |인터페이스 유형|Description|
+  |인터페이스 유형|설명|
   |--------------------|-----------------|
   |ATL 이중 인터페이스, 사용자 지정 인터페이스 및 로컬 사용자 지정 인터페이스|속성 이름을 제공합니다.|
   |MFC dispinterface, MFC ActiveX 컨트롤 dispinterface|속성 이름을 입력하거나 목록에서 스톡 속성을 선택합니다. 목록에서 속성을 선택하면 **속성 형식** 상자에 적절한 값이 표시됩니다. **구현 형식**에서 선택한 항목에 따라 이 형식을 변경할 수 있습니다.|
@@ -77,7 +77,7 @@ ms.locfileid: "81751180"
 
 - **알림 함수**
 
-  MFC dispinterface 전용. **구현 형식**에서 **멤버 변수**를 지정한 경우에만 사용할 수 있습니다. 속성이 변경될 경우 호출되는 알림 함수의 이름을 설정합니다. 기본적으로 알림 함수의 이름은 `On` *PropertyName*`Changed`로 설정됩니다. 이 이름을 편집할 수 있습니다.
+  MFC dispinterface 전용. **구현 형식**에서 **멤버 변수**를 지정한 경우에만 사용할 수 있습니다. 속성이 변경될 경우 호출되는 알림 함수의 이름을 설정합니다. 기본적으로 알림 함수의 이름은 `On`*PropertyName*`Changed`로 설정됩니다. 이 이름을 편집할 수 있습니다.
 
 - **Get 함수**
 
@@ -91,10 +91,10 @@ ms.locfileid: "81751180"
 
   MFC dispinterface 전용. 추가하는 속성을 구현하는 방법을 지정합니다.
 
-  |구현 형식|Description|
+  |구현 형식|설명|
   |-------------------------|-----------------|
   |**스톡**|**속성 이름**에서 선택한 속성의 스톡 구현을 지정합니다. 기본값입니다. 자세한 내용은 [스톡 속성](#stock-properties)을 참조하세요.<br /><br /> **스톡**을 지정한 후에는 **속성 형식**, **매개 변수 형식** 및 **매개 변수 이름**이 흐리게 표시됩니다.|
-  |**멤버 변수**|속성이 멤버 변수로 추가되도록 지정합니다. 사용자 지정 속성 또는 대부분의 스톡 속성을 멤버 변수로 추가할 수 있습니다. `Caption`의 `hWnd` **Member variable** `Text` 멤버 변수를 지정할 수 없습니다.<br /><br /> **변수 이름** 및 **알림 함수**에 기본 이름을 제공합니다. 이 이름을 편집할 수 있습니다.|
+  |**멤버 변수**|속성이 멤버 변수로 추가되도록 지정합니다. 사용자 지정 속성 또는 대부분의 스톡 속성을 멤버 변수로 추가할 수 있습니다. `Caption`, `hWnd` 및 `Text` 속성에 대한 **멤버 변수**를 지정할 수 없습니다.<br /><br /> **변수 이름** 및 **알림 함수**에 기본 이름을 제공합니다. 이 이름을 편집할 수 있습니다.|
   |**Get/Set 메서드**|기본적으로 속성을 `Get`*PropertyName* 및 `Set`*PropertyName* 함수로 추가하도록 지정합니다. 이러한 이름은 **Get 함수** 및 **Set 함수** 아래에 나타납니다.<br /><br /> Get 함수의 값을 전달하는 기본 **속성 형식**을 변경할 수 있습니다. `Get` 및 `Set` 함수에 대한 매개 변수를 지정할 수 있습니다.|
 
 - **Get 함수**
@@ -112,14 +112,14 @@ ms.locfileid: "81751180"
 
 - **매개 변수 특성**
 
-  ATL 인터페이스 전용. **Parameter 이름으로** 지정된 매개 변수가 `in`"? `out`
+  ATL 인터페이스 전용. **매개 변수 이름**에서 지정된 매개 변수가 `in`, `out`, 모두 또는 없음인지를 설정합니다.
 
   |옵션|설명|
   |------------|-----------------|
   |`in`|호출하는 프로시저에서 호출된 프로시저로 매개 변수가 전달됩니다.|
   |`out`|포인터 매개 변수는 호출된 프로시저에서 호출하는 프로시저로(서버에서 클라이언트로) 반환됩니다.|
 
-- **매개 변수 유형**
+- **매개 변수 형식**
 
   매개 변수의 데이터 형식을 설정합니다. 목록에서 형식을 선택합니다.
 
@@ -157,7 +157,7 @@ ms.locfileid: "81751180"
 
 - `helpstring`
 
-  적용되는 요소를 설명하는 데 사용되는 문자열을 지정합니다. 기본적으로 `property`&nbsp;*속성&nbsp;이름*으로 설정합니다. *MIDL 참조*에서 [helpstring](/windows/win32/Midl/helpstring)을 확인합니다.
+  적용되는 요소를 설명하는 데 사용되는 문자열을 지정합니다. 기본적으로 **`property`** &nbsp;속성&nbsp;이름으로 설정됩니다. *MIDL 참조*에서 [helpstring](/windows/win32/Midl/helpstring)을 확인합니다.
 
 ### <a name="other-options"></a>기타 옵션
 
@@ -181,7 +181,7 @@ ms.locfileid: "81751180"
 
 [속성 추가 마법사](#idl-attributes-add-property-wizard)를 사용하여 MFC dispinterface에 속성을 추가하는 경우 마법사의 [이름](../ide/names-add-property-wizard.md) 페이지에 있는 **속성 이름** 목록에서 스톡 속성을 선택할 수 있습니다. 속성은 다음과 같습니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |`Appearance`|컨트롤의 모양을 결정하는 값을 반환하거나 설정합니다. 컨트롤의 `Appearance` 속성은 3차원 표시 효과를 포함하거나 생략할 수 있습니다. 이 속성은 앰비언트 읽기/쓰기 속성입니다.|
 |`BackColor`|색상표(RGB) 색 또는 미리 정의된 시스템 색에 대한 컨트롤의 앰비언트 `BackColor` 속성을 반환하거나 설정합니다. 기본적으로 해당 값은 컨트롤 컨테이너의 전경색에 해당합니다. 이 속성은 앰비언트 읽기/쓰기 속성입니다.|

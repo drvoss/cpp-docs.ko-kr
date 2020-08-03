@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228000"
 ---
 # <a name="c-logical-operators"></a>C 논리 연산자
 
@@ -34,7 +34,7 @@ ms.locfileid: "62326588"
 
 ## <a name="remarks"></a>설명
 
-논리 연산자는 일반적인 산술 변환을 수행하지 않습니다. 대신 각 피연산자가 0과 같은지를 평가합니다. 논리 연산의 결과는 0 또는 1입니다. 결과 형식은 **int**입니다.
+논리 연산자는 일반적인 산술 변환을 수행하지 않습니다. 대신 각 피연산자가 0과 같은지를 평가합니다. 논리 연산의 결과는 0 또는 1입니다. 결과 형식은 **`int`** 입니다.
 
 C 논리 연산자는 아래에 설명되어 있습니다.
 

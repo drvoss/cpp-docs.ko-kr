@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223774"
 ---
 # <a name="x64-software-conventions"></a>x64 소프트웨어 규칙
 
@@ -18,7 +18,7 @@ ms.locfileid: "79422723"
 
 ## <a name="overview-of-x64-calling-conventions"></a>x64 호출 규칙 개요
 
-x86과 x64 간의 중요한 두 가지 차이점은 64비트 주소 지정 기능과 일반 사용을 위한 16개 64비트 레지스터의 플랫 집합입니다. 확장된 레지스터 집합이 지정된 경우 x64는 [__fastcall](../cpp/fastcall.md) 호출 규칙 및 RISC 기반 예외 처리 모델을 사용합니다. `__fastcall` 규칙은 처음 4개 인수에 레지스터를 사용하고 스택 프레임을 사용하여 추가 인수를 전달합니다. 레지스터 사용, 스택 매개 변수, 반환 값, 스택 해제 등 x64 호출 규칙에 대한 자세한 내용은 [x64 호출 규칙](x64-calling-convention.md)을 참조하세요.
+x86과 x64 간의 중요한 두 가지 차이점은 64비트 주소 지정 기능과 일반 사용을 위한 16개 64비트 레지스터의 플랫 집합입니다. 확장된 레지스터 집합이 지정된 경우 x64는 [__fastcall](../cpp/fastcall.md) 호출 규칙 및 RISC 기반 예외 처리 모델을 사용합니다. **`__fastcall`** 규칙은 처음 4개 인수에 레지스터를 사용하고 스택 프레임을 사용하여 추가 인수를 전달합니다. 레지스터 사용, 스택 매개 변수, 반환 값, 스택 해제 등 x64 호출 규칙에 대한 자세한 내용은 [x64 호출 규칙](x64-calling-convention.md)을 참조하세요.
 
 ## <a name="enable-optimization-for-x64"></a>x64에 최적화 사용
 
@@ -47,19 +47,19 @@ x86과 x64 간의 중요한 두 가지 차이점은 64비트 주소 지정 기�
 |||||
 |-|-|-|-|
 |스칼라 형식|C 데이터 형식|스토리지 크기(바이트)|권장 맞춤|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|단어|
-|**UINT16**|**unsigned short**|2|단어|
-|**INT32**|**int**, **long**|4|2배 단어|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|단어|
+|**UINT16**|**`unsigned short`**|2|단어|
+|**INT32**|**`int`** , **`long`**|4|2배 단어|
 |**UINT32**|**unsigned int, unsigned long**|4|2배 단어|
-|**INT64**|**__int64**|8|4배 단어|
+|**INT64**|**`__int64`**|8|4배 단어|
 |**UINT64**|**unsigned __int64**|8|4배 단어|
-|**FP32(단정밀도)**|**float**|4|2배 단어|
-|**FP64(배정밀도)**|**double**|8|4배 단어|
+|**FP32(단정밀도)**|**`float`**|4|2배 단어|
+|**FP64(배정밀도)**|**`double`**|8|4배 단어|
 |**POINTER**|__\*__|8|4배 단어|
-|**__m64**|**struct __m64**|8|4배 단어|
-|**__m128**|**struct __m128**|16|8배 단어|
+|**`__m64`**|**struct __m64**|8|4배 단어|
+|**`__m128`**|**struct __m128**|16|8배 단어|
 
 ### <a name="aggregates-and-unions"></a>집계 및 공용 구조체
 
@@ -82,19 +82,19 @@ x86과 x64 간의 중요한 두 가지 차이점은 64비트 주소 지정 기�
 ||||
 |-|-|-|
 |스칼라 형식|C 데이터 형식|필요한 맞춤|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|단어|
-|**UINT16**|**unsigned short**|단어|
-|**INT32**|**int**, **long**|2배 단어|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|단어|
+|**UINT16**|**`unsigned short`**|단어|
+|**INT32**|**`int`** , **`long`**|2배 단어|
 |**UINT32**|**unsigned int, unsigned long**|2배 단어|
-|**INT64**|**__int64**|4배 단어|
+|**INT64**|**`__int64`**|4배 단어|
 |**UINT64**|**unsigned __int64**|4배 단어|
-|**FP32(단정밀도)**|**float**|2배 단어|
-|**FP64(배정밀도)**|**double**|4배 단어|
+|**FP32(단정밀도)**|**`float`**|2배 단어|
+|**FP64(배정밀도)**|**`double`**|4배 단어|
 |**POINTER**|<strong>\*</strong>|4배 단어|
-|**__m64**|**struct __m64**|4배 단어|
-|**__m128**|**struct __m128**|8배 단어|
+|**`__m64`**|**struct __m64**|4배 단어|
+|**`__m128`**|**struct __m128**|8배 단어|
 
 다음 집계 맞춤 규칙이 적용됩니다.
 
@@ -206,12 +206,12 @@ x64 아키텍처는 범용 레지스터 16개(이하 '정수 레지스터')와 �
 |RBX|비휘발성|호출 수신자가 보존해야 함|
 |RBP|비휘발성|프레임 포인터로 사용 가능(호출 수신자가 보존해야 함)|
 |RSP|비휘발성|스택 포인터|
-|XMM0, YMM0|휘발성|첫 번째 FP 인수(`__vectorcall` 사용 시에는 첫 번째 벡터 형식 인수)|
-|XMM1, YMM1|휘발성|두 번째 FP 인수(`__vectorcall` 사용 시에는 두 번째 벡터 형식 인수)|
-|XMM2, YMM2|휘발성|세 번째 FP 인수(`__vectorcall` 사용 시에는 세 번째 벡터 형식 인수)|
-|XMM3, YMM3|휘발성|네 번째 FP 인수(`__vectorcall` 사용 시에는 네 번째 벡터 형식 인수)|
-|XMM4, YMM4|휘발성|호출자가 필요에 따라 보존해야 함(`__vectorcall` 사용 시에는 다섯 번째 벡터 형식 인수)|
-|XMM5, YMM5|휘발성|호출자가 필요에 따라 보존해야 함(`__vectorcall` 사용 시에는 여섯 번째 벡터 형식 인수)|
+|XMM0, YMM0|휘발성|첫 번째 FP 인수( **`__vectorcall`** 사용 시에는 첫 번째 벡터 형식 인수)|
+|XMM1, YMM1|휘발성|두 번째 FP 인수( **`__vectorcall`** 사용 시에는 두 번째 벡터 형식 인수)|
+|XMM2, YMM2|휘발성|세 번째 FP 인수( **`__vectorcall`** 사용 시에는 세 번째 벡터 형식 인수)|
+|XMM3, YMM3|휘발성|네 번째 FP 인수( **`__vectorcall`** 사용 시에는 네 번째 벡터 형식 인수)|
+|XMM4, YMM4|휘발성|호출자가 필요에 따라 보존해야 함( **`__vectorcall`** 사용 시에는 다섯 번째 벡터 형식 인수)|
+|XMM5, YMM5|휘발성|호출자가 필요에 따라 보존해야 함( **`__vectorcall`** 사용 시에는 여섯 번째 벡터 형식 인수)|
 |XMM6:XMM15, YMM6:YMM15|비휘발성(XMM), 휘발성(YMM의 위쪽 절반)|호출 수신자가 보존해야 함. YMM 레지스터는 호출자가 필요에 따라 보존해야 함|
 
 함수 종료 시 및 C 런타임 라이브러리 호출 및 Windows 시스템 호출에 대한 함수 진입에서 CPU 플래그 레지스터의 방향 플래그는 삭제되는 것으로 예상됩니다.

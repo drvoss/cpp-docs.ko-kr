@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226531"
 ---
 # <a name="bitwise-shift-operators"></a>비트 시프트 연산자
 
@@ -27,7 +27,7 @@ ms.locfileid: "62326029"
 
 피연산자는 둘 다 정수 계열 값이어야 합니다. 이러한 연산자는 일반적인 산술 변환을 수행하며, 결과의 형식은 변환 후 왼쪽 피연산자의 형식입니다.
 
-왼쪽으로 이동하는 경우 비워진 오른쪽 비트는 0으로 설정됩니다. 오른쪽으로 이동하는 경우 비워진 왼쪽 비트는 변환 후 첫 번째 피연산자의 형식에 따라 채워집니다. 형식이 `unsigned`이면 0으로 설정되고, 그렇지 않으면 부호 비트를 복사하여 채워집니다. 오버플로가 없는 왼쪽 시프트 연산자의 경우 다음 문은
+왼쪽으로 이동하는 경우 비워진 오른쪽 비트는 0으로 설정됩니다. 오른쪽으로 이동하는 경우 비워진 왼쪽 비트는 변환 후 첫 번째 피연산자의 형식에 따라 채워집니다. 형식이 **`unsigned`** 이면 0으로 설정되고, 그렇지 않으면 부호 비트를 복사하여 채워집니다. 오버플로가 없는 왼쪽 시프트 연산자의 경우 다음 문은
 
 ```C
 expr1 << expr2

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 6f7d58bcb42edd89527fff41b08a15321722a6cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229833"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>DEF 파일을 사용하여 DLL에서 내보내기
 
-모듈 정의 또는 DEF 파일(*.def)은 DLL의 다양한 특성을 설명하는 하나 이상의 모듈 문을 포함하는 텍스트 파일입니다. DLL의 함수를 내보내는 데 **__declspec(dllexport)** 키워드를 사용하고 있지 않다면 DLL에 DEF 파일이 필요합니다.
+모듈 정의 또는 DEF 파일(*.def)은 DLL의 다양한 특성을 설명하는 하나 이상의 모듈 문을 포함하는 텍스트 파일입니다. DLL의 함수를 내보내는 데 **`__declspec(dllexport)`** 키워드를 사용하고 있지 않다면 DLL에 DEF 파일이 필요합니다.
 
 최소 DEF 파일에는 다음과 같은 모듈 정의 문이 포함되어야 합니다.
 

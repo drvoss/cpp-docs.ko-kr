@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: c80bb27761b8de91f7caee5932f28f1ec2ac0e29
-ms.sourcegitcommit: 166039ceea3256c26fb23920b96de4257b8cf149
+ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84946650"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229872"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 스키마 참조
 
@@ -31,7 +31,7 @@ IDE에서 구성을 추가하거나 제거한 다음, JSON 파일에서 직접 �
 
 `configuration`에는 다음과 같은 속성이 있습니다.
 
-- `addressSanitizerEnabled`: `true`인 경우 주소 삭제기(Windows에서는 실험적)를 사용하여 프로그램을 컴파일합니다. Linux의 경우 최상의 결과를 얻으려면 -fno-omit-frame-pointer 및 컴파일러 최적화 수준 –Os 또는 -Oo를 사용하여 컴파일합니다.
+- `addressSanitizerEnabled`: **`true`** 인 경우 주소 삭제기(Windows에서는 실험적)를 사용하여 프로그램을 컴파일합니다. Linux의 경우 최상의 결과를 얻으려면 -fno-omit-frame-pointer 및 컴파일러 최적화 수준 –Os 또는 -Oo를 사용하여 컴파일합니다.
 - `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 환경 변수를 통해 AddressSanitizer에 전달되는 런타임 플래그입니다. 형식: flag1=value:flag2=value2.
 - `buildCommandArgs`: --빌드 -- 후 CMake로 전달되는 네이티브 빌드 스위치를 지정합니다. 예를 들어 Ninja 생성기를 사용하는 경우 -v를 전달하면 Ninja에서 명령줄을 출력하도록 강제합니다. Ninja 명령에 대한 자세한 정보는 [Ninja 명령줄 인수](#ninja)를 참조하세요.
 - `buildRoot`: CMake가 선택한 생성기에 대한 빌드 스크립트를 생성하는 디렉터리를 지정합니다.  **-DCMAKE_BINARY_DIR** 스위치에 매핑되고 *CMakeCache.txt*가 만들어질 위치를 지정합니다. 폴더가 없으면 해당 폴더가 만들어집니다. 지원되는 매크로에는 `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`이 포함됩니다.

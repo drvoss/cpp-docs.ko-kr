@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: f94cdff03763f689edbdedffad4ac56abec5ee53
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62233365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218834"
 ---
 # <a name="multidimensional-arrays-c"></a>다차원 배열 (C)
 
@@ -27,7 +27,7 @@ expression1 [ expression2 ] [ expression3 ] ...
 
 ## <a name="examples"></a>예
 
-다음 예제의 경우 이름이 `prop`인 배열이 세 요소로 선언되며 각각 `int` 값의 4x6 배열입니다.
+다음 예제의 경우 이름이 `prop`인 배열이 세 요소로 선언되며 각각 **`int`** 값의 4x6 배열입니다.
 
 ```
 int prop[3][4][6];
@@ -40,7 +40,7 @@ int i, *ip, (*ipp)[6];
 i = prop[0][0][1];
 ```
 
-위의 예제에서는 `int`의 두 번째 개별 `prop` 요소를 참조하는 방법을 보여 줍니다. 배열은 행별로 저장되므로 마지막 첨자는 가장 빠르게 변합니다. 식 `prop[0][0][2]`는 배열의 다음(세 번째) 요소를 나타냅니다.
+위의 예제에서는 `prop`의 두 번째 개별 **`int`** 요소를 참조하는 방법을 보여 줍니다. 배열은 행별로 저장되므로 마지막 첨자는 가장 빠르게 변합니다. 식 `prop[0][0][2]`는 배열의 다음(세 번째) 요소를 나타냅니다.
 
 ```
 i = prop[2][1][3];
@@ -48,13 +48,13 @@ i = prop[2][1][3];
 
 이 문은 `prop`의 개별 요소에 대한 다소 복잡한 참조입니다. 이 식은 다음과 같이 계산됩니다.
 
-1. 첫 번째 첨자인 `2`는 4x6 `int` 배열의 크기로 곱하고 포인터 값 `prop`에 추가됩니다. 결과는 `prop`의 세 번째 4x6 배열을 가리킵니다.
+1. 첫 번째 첨자인 `2`는 4x6 **`int`** 배열의 크기를 곱한 다음 포인터 값 `prop`에 추가됩니다. 결과는 `prop`의 세 번째 4x6 배열을 가리킵니다.
 
-1. 두 번째 첨자인 `1`은 6개 요소 `int` 배열의 크기로 곱하고 `prop[2]`에 의해 표현된 주소에 추가됩니다.
+1. 두 번째 첨자인 `1`은 6개 요소 **`int`** 배열의 크기를 곱한 다음 `prop[2]`으로 표현된 주소에 추가됩니다.
 
-1. 6개 요소 배열의 각 요소는 `int` 값이므로 마지막 첨자인 `3`이 `int`에 추가되기 전에 `prop[2][1]`의 크기로 곱해집니다. 결과 포인터는 6개 요소 배열의 네 번째 요소의 주소를 지정합니다.
+1. 6개 요소 배열의 각 요소는 **`int`** 값이므로 마지막 첨자인 `3`은 **`int`** 의 크기를 곱한 다음 `prop[2][1]`에 추가됩니다. 결과 포인터는 6개 요소 배열의 네 번째 요소의 주소를 지정합니다.
 
-1. 간접 참조 연산자가 포인터 값에 적용됩니다. 결과는 해당 주소의 `int` 요소입니다.
+1. 간접 참조 연산자가 포인터 값에 적용됩니다. 결과는 해당 주소의 **`int`** 요소입니다.
 
 다음 두 예제에서는 간접 참조 연산자가 적용되지 않는 경우를 보여 줍니다.
 

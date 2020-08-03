@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346108"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190067"
 ---
 # <a name="typedef-declarations"></a>Typedef 선언
 
@@ -30,18 +30,18 @@ typedef 선언은 변수 또는 함수 선언과 같은 방식으로 해석되�
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
@@ -49,7 +49,7 @@ typedef 선언은 변수 또는 함수 선언과 같은 방식으로 해석되�
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-typedef 선언은 형식을 만드는 것이 아니라 기존 형식의 동의어나 다른 방식으로 지정할 수 있는 형식의 이름을 만듭니다. typedef 이름을 형식 지정자로 사용하는 경우 특정 형식 지정자와 함께 사용할 수 있습니다. 허용되는 한정자에는 **const** 및 `volatile`이 포함됩니다.
+typedef 선언은 형식을 만드는 것이 아니라 기존 형식의 동의어나 다른 방식으로 지정할 수 있는 형식의 이름을 만듭니다. typedef 이름을 형식 지정자로 사용하는 경우 특정 형식 지정자와 함께 사용할 수 있습니다. 허용되는 한정자에는 **`const`** 및 **`volatile`** 이 포함됩니다.
 
 typedef 이름은 일반 식별자와 네임스페이스를 공유합니다(자세한 내용은 [네임스페이스](../c-language/name-spaces.md) 참조). 따라서 프로그램에 동일한 이름의 typedef 이름과 로컬 범위 식별자가 있을 수 있습니다. 예를 들어:
 

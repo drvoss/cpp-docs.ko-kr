@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211647"
 ---
 # <a name="structure-and-union-members"></a>구조체 및 공용 구조체 멤버
 
@@ -27,7 +27,7 @@ ms.locfileid: "82825693"
 
 다음 목록에서는 멤버 선택 식의 두 가지 형태에 대해 설명합니다.
 
-1. 첫 번째 형태에서 *postfix-expression*은 **struct** 또는 **union** 형식의 값을 나타내며, *identifier*는 지정된 구조체 또는 공용 구조체의 멤버 이름을 지정합니다. 연산값은 *identifier*의 값이며 *postfix-expression*이 l-value인 경우 l-value입니다. 자세한 내용은 [L-Value 및 R-Value 식](../c-language/l-value-and-r-value-expressions.md)을 참조하세요.
+1. 첫 번째 형태에서 *postfix-expression*은 **`struct`** 또는 **`union`** 형식의 값을 나타내며, *identifier*는 지정된 구조체 또는 공용 구조체의 멤버 이름을 지정합니다. 연산값은 *identifier*의 값이며 *postfix-expression*이 l-value인 경우 l-value입니다. 자세한 내용은 [L-Value 및 R-Value 식](../c-language/l-value-and-r-value-expressions.md)을 참조하세요.
 
 1. 두 번째 형태에서 *postfix-expression*은 구조체 또는 공용 구조체에 대한 포인터를 나타내며, *identifier*는 지정된 구조체 또는 공용 구조체의 멤버 이름을 지정합니다. 값은 *identifier*의 값이며 l-value입니다.
 

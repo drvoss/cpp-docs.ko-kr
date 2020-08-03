@@ -1,4 +1,4 @@
-﻿---
+---
 title: MFC DLL 관련 질문과 대답
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e12817e016376d5b76ec67e8bd10fbd3e85dbdda
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422825"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229846"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 관련 질문과 대답
 
@@ -29,7 +29,7 @@ ms.locfileid: "79422825"
 
 ## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a> MFC DLL은 여러 스레드를 만들 수 있습니까?
 
-초기화 도중을 제외하고, MFC DLL은 **TlsAlloc** 같은 Win32 TLS(스레드 로컬 스토리지) 함수를 사용하여 스레드 로컬 스토리지를 할당하는 동안 안전하게 여러 스레드를 만들 수 있습니다. 그러나 MFC DLL이 **__declspec(thread)** 을 사용하여 스레드 로컬 스토리지를 할당하는 경우 클라이언트 애플리케이션은 DLL에 암시적으로 연결되어야 합니다. 클라이언트 애플리케이션이 DLL에 명시적으로 연결하는 경우 **LoadLibrary**를 호출하면 DLL이 성공적으로 로드되지 않습니다. DLL의 스레드 로컬 변수에 대한 자세한 내용은 [스레드](../cpp/thread.md)를 참조하세요.
+초기화 도중을 제외하고, MFC DLL은 **TlsAlloc** 같은 Win32 TLS(스레드 로컬 스토리지) 함수를 사용하여 스레드 로컬 스토리지를 할당하는 동안 안전하게 여러 스레드를 만들 수 있습니다. 그러나 MFC DLL이 **`__declspec(thread)`** 을 사용하여 스레드 로컬 스토리지를 할당하는 경우 클라이언트 애플리케이션은 DLL에 암시적으로 연결되어야 합니다. 클라이언트 애플리케이션이 DLL에 명시적으로 연결하는 경우 **LoadLibrary**를 호출하면 DLL이 성공적으로 로드되지 않습니다. DLL의 스레드 로컬 변수에 대한 자세한 내용은 [스레드](../cpp/thread.md)를 참조하세요.
 
 시작하는 동안 새 MFC 스레드를 만드는 MFC DLL은 애플리케이션에 의해 로드될 때 응답을 중지합니다. 여기에는 다음 내부에서 `AfxBeginThread` 또는 `CWinThread::CreateThread`를 호출하여 스레드를 만드는 경우가 모두 포함됩니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "79422825"
 
 DLL이 정적으로 MFC에 연결된 일반 MFC DLL인 경우 동적으로 MFC에 연결된 일반 MFC DLL로 변경하면 파일 크기가 줄어듭니다.
 
-DLL에 내보낸 함수가 많은 경우 **__declspec(dllexport)** 을 사용하는 대신 .def 파일을 사용하여 함수를 내보내고, 각 내보낸 함수에 .def 파일 [NONAME 특성](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)을 사용합니다. NONAME 특성은 함수 이름이 아닌 서수 값만 DLL의 내보내기 테이블에 저장되게 하므로 파일 크기가 줄어듭니다.
+DLL에 내보낸 함수가 많은 경우 **`__declspec(dllexport)`** 을 사용하는 대신 .def 파일을 사용하여 함수를 내보내고, 각 내보낸 함수에 .def 파일 [NONAME 특성](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)을 사용합니다. NONAME 특성은 함수 이름이 아닌 서수 값만 DLL의 내보내기 테이블에 저장되게 하므로 파일 크기가 줄어듭니다.
 
 애플리케이션에 암시적으로 연결된 DLL은 애플리케이션이 로드될 때 로드됩니다. 로드 성능을 향상시키려면 DLL을 여러 DLL로 분할해 보세요. 로드 후 호출 애플리케이션에 즉시 필요한 모든 함수를 한 DLL에 배치하고 호출 애플리케이션이 해당 DLL에 암시적으로 연결되도록 합니다. 호출 애플리케이션에 즉시 필요하지 않은 다른 함수를 다른 DLL에 배치하고 애플리케이션이 해당 DLL에 명시적으로 연결되도록 합니다. 자세한 내용은 [DLL에 실행 파일 연결](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)을 참조하세요.
 

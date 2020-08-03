@@ -1,8 +1,8 @@
-﻿---
+---
 title: 명령줄에서 Microsoft C++ 도구 집합 사용
-description: Visual Studio IDE 외부의 명령줄에서 Microsoft C++ 컴파일러 도구 체인(MSVC)을 사용합니다.
+description: Visual Studio IDE 외부의 명령줄에서 Microsoft C++ 컴파일러 도구 집합(MSVC)을 사용합니다.
 ms.custom: conceptual
-ms.date: 11/12/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,19 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422903"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229898"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>명령줄에서 Microsoft C++ 도구 집합 사용
 
-Visual Studio에 포함된 도구를 사용하여 명령줄에서 C 및 C++ 애플리케이션을 빌드할 수 있습니다. Microsoft C++(MSVC) 컴파일러 도구 집합을 Visual Studio IDE가 포함되지 않은 독립 실행형 패키지로 다운로드할 수도 있습니다.
+Visual Studio에 포함된 도구를 사용하여 명령줄에서 C 및 C++ 애플리케이션을 빌드할 수 있습니다. MSVC(Microsoft C++) 컴파일러 도구 집합을 독립 실행형 패키지로 다운로드할 수도 있습니다. 이 도구 집합을 사용하지 않으려는 경우 Visual Studio IDE를 설치할 필요가 없습니다.
+
+> [!NOTE]
+> 이 문서에서는 개별 컴파일러, 링커, 라이브러리 관리자 및 기타 기본 도구를 사용하도록 환경을 설정하는 방법을 설명합니다. 네이티브 프로젝트 빌드 시스템 MSBuild는 이 문서에 설명된 환경을 사용하지 않습니다. 명령줄에서 MSBuild를 사용하는 방법에 대한 자세한 내용은 [명령줄에서 MSBuild 사용 - C++](msbuild-visual-cpp.md)를 참조하세요.
 
 ## <a name="download-and-install-the-tools"></a>도구 다운로드 및 설치
 
@@ -231,16 +234,20 @@ Visual Studio 설치 디렉터리를 반영하도록 경로를 조정합니다. 
 [링크](reference/linking.md)<br/>
 링커(link.exe)를 사용하여 컴파일된 개체 파일 및 라이브러리를 앱 및 DLL에 연결합니다.
 
-[MSBuild](msbuild-visual-cpp.md)<br/>
-MSBuild(msbuild.exe) 및 프로젝트 파일(.vcxproj)을 사용하여 빌드를 구성하고 도구 집합을 간접적으로 호출합니다. 이는 Visual Studio IDE에서 프로젝트 **빌드** 또는 **솔루션 빌드** 명령을 실행하는 것과 같습니다. 명령줄에서 MSBuild를 실행하는 것은 고급 시나리오이며 일반적으로 사용하지 않는 것이 좋습니다.
-
-[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Visual Studio IDE를 표시하지 않고 특정 빌드 명령을 실행하려면 명령줄 스위치(예: **/Build** 또는 **/Clean**)와 결합된 DEVENV(devenv.exe)를 사용합니다. Visual Studio에서 MSBuild의 복잡성을 처리할 수 있으므로 일반적으로 MSBuild를 직접 사용하는 것보다 DEVENV를 사용하는 것이 더 좋습니다.
-
 [NMAKE](reference/nmake-reference.md)<br/>
 기존 메이크파일을 기반으로 하여 C++ 프로젝트를 빌드하려면 Windows에서 NMAKE(nmake.exe)를 사용합니다.
 
-명령줄에서 빌드하는 경우 도움말은 F1 명령을 사용하여 즉시 얻을 수 없습니다. 대신 검색 엔진을 사용하여 경고, 오류 및 메시지에 대한 정보를 얻거나 오프라인 도움말 파일을 사용할 수 있습니다. [docs.microsoft.com](https://docs.microsoft.com/cpp/)에서 검색을 사용하려면 페이지 위쪽의 검색 상자를 사용합니다.
+명령줄에서 빌드하는 경우 도움말은 F1 명령을 사용하여 즉시 얻을 수 없습니다. 대신, 검색 엔진을 사용하여 경고, 오류 및 메시지에 대한 정보를 가져올 수 있습니다. 오프라인 도움말 파일을 다운로드하여 사용할 수도 있습니다. [docs.microsoft.com](https://docs.microsoft.com/cpp/)에서 검색을 사용하려면 문서 위쪽의 검색 상자에서 쿼리를 입력합니다.
+
+## <a name="command-line-project-management-tools"></a>명령줄 프로젝트 관리 도구
+
+Visual Studio IDE에서는 MSBuild를 기반으로 하는 네이티브 프로젝트 빌드 시스템을 사용합니다. MSBuild를 직접 호출하거나, IDE를 사용하지 않고 네이티브 프로젝트 시스템을 사용할 수 있습니다.
+
+[MSBuild](msbuild-visual-cpp.md)<br/>
+MSBuild(msbuild.exe) 및 프로젝트 파일(.vcxproj)을 사용하여 빌드를 구성하고 도구 집합을 간접적으로 호출합니다. 이는 Visual Studio IDE에서 프로젝트 **빌드** 또는 **솔루션 빌드** 명령을 실행하는 것과 같습니다. 명령줄에서 MSBuild를 실행하는 것은 고급 시나리오이며 일반적으로 사용하지 않는 것이 좋습니다. Visual Studio 버전 16.5부터 MSBuild는 명령줄 환경을 사용하여 사용되는 도구 집합 및 라이브러리를 제어하지 않습니다.
+
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+Visual Studio IDE를 표시하지 않고 특정 빌드 명령을 실행하려면 명령줄 스위치(예: **/Build** 또는 **/Clean**)와 결합된 DEVENV(devenv.exe)를 사용합니다. Visual Studio에서 MSBuild의 복잡성을 처리할 수 있으므로 일반적으로 MSBuild를 직접 사용하는 것보다 DEVENV를 사용하는 것이 더 좋습니다. Visual Studio 버전 16.5부터 DEVENV는 명령줄 환경을 사용하여 사용되는 도구 집합 및 라이브러리를 제어하지 않습니다.
 
 ## <a name="in-this-section"></a>단원 내용
 

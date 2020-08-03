@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313339"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226518"
 ---
 # <a name="c-sequence-points"></a>C 시퀀스 위치
 
@@ -29,13 +29,13 @@ ms.locfileid: "62313339"
 
 - 식 문의 식. 식 문은 선택적 식과 세미콜론( **;** )으로 구성됩니다. 식은 해당 파생 작업에 대해 계산되며 이 계산 다음에 시퀀스 위치가 있습니다.
 
-- 선택(**if** 또는 `switch`) 문의 제어 식. 선택에 종속된 코드가 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
+- 선택( **`if`** 또는 **`switch`** ) 문의 제어 식. 선택에 종속된 코드가 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
 
-- `while` 또는 **do** 문의 제어 식. `while` 또는 **do** 루프의 다음 반복에 있는 문이 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
+- **`while`** 또는 **`do`** 문의 제어 식. **`while`** 또는 **`do`** 루프의 다음 반복에 있는 문이 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
 
-- **for** 문의 세 가지 식 각각. **for** 루프의 다음 반복에 있는 문이 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
+- **`for`** 문의 세 가지 식 각각. **`for`** 루프의 다음 반복에 있는 문이 실행되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
 
-- `return` 문의 식. 호출 함수로 제어가 반환되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
+- **`return`** 문의 식. 호출 함수로 제어가 반환되기 전에 식이 완전히 계산되고 모든 파생 작업이 완료됩니다.
 
 ## <a name="see-also"></a>참조
 

@@ -4,12 +4,12 @@ description: Visual Studio를 사용하여 CMake 디버거 설정을 구성하�
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224086"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake 디버깅 세션 구성
 
@@ -124,7 +124,7 @@ Visual Studio 2019 버전 16.6에서는 원격 시스템 및 WSL에서의 디버
 다음 옵션을 사용하여 원격 디버그 컴퓨터에서 빌드 컴퓨터(CMakeSettings.json에 정의되어 있음)를 분리하세요.
 
 - `remoteMachineName`: 원격 디버깅 컴퓨터입니다. 빌드 컴퓨터와 다른 경우에만 필요합니다. [연결 관리자](../linux/connect-to-your-remote-linux-computer.md)에 기존 항목이 있어야 합니다. **Ctrl+Space**를 눌러 모든 기존 원격 연결의 목록을 표시합니다.
-- `disableDeploy`: 기본값은 `false`입니다. 빌드/디버그 분리가 사용할 수 없는 상태인지 여부를 나타냅니다. `false`인 경우 이 옵션을 사용하면 서로 분리된 두 컴퓨터에서 빌드 및 디버그가 수행되게 할 수 있습니다.
+- `disableDeploy`: 기본값은 **`false`** 입니다. 빌드/디버그 분리가 사용할 수 없는 상태인지 여부를 나타냅니다. **`false`** 인 경우 이 옵션을 사용하면 서로 분리된 두 컴퓨터에서 빌드 및 디버그가 수행되게 할 수 있습니다.
 - `deployDirectory`: 실행 파일을 복사할 `remoteMachineName`의 해당 디렉터리에 대한 전체 Unix 경로입니다.
 - `deploy`: 고급 배포 설정의 배열입니다. 배포 프로세스를 더 세부적으로 제어하려는 경우에만 이러한 설정을 구성해야 합니다. 기본적으로 프로세스에서 디버그하는 데 필요한 파일만 원격 디버깅 컴퓨터에 배포됩니다.
   - `sourceMachine`: 복사되는 파일이나 디렉터리가 있는 컴퓨터입니다. **Ctrl+Space**를 누르면 연결 관리자에 저장된 모든 원격 연결의 목록이 표시됩니다. WSL에서 기본적으로 빌드하는 경우 이 옵션은 무시됩니다.
@@ -211,7 +211,7 @@ MIEngine 로깅을 사용하여 `gdb`로 전송되는 명령, `gdb`가 반환하
 
 - `visualizerFile`: 이 프로세스를 디버그할 때 사용할 [.natvis 파일](/visualstudio/debugger/create-custom-views-of-native-objects)입니다. 이 옵션은 `gdb` 자동 서식 지정과 호환되지 않습니다. 또한 이 속성을 설정할 때 `showDisplayString`을 설정합니다.
 
-- `showDisplayString`: `visualizerFile`이 지정된 경우 표시 문자열을 사용 하도록 설정하는 부울입니다. 이 옵션을 `true`로 설정하면 디버깅하는 동안 성능이 저하될 수 있습니다.
+- `showDisplayString`: `visualizerFile`이 지정된 경우 표시 문자열을 사용 하도록 설정하는 부울입니다. 이 옵션을 **`true`** 로 설정하면 디버그하는 동안 성능이 저하될 수 있습니다.
 
 - `setupCommands`: 기본 디버거를 설정하기 위해 실행할 하나 이상의 `gdb` 명령입니다.
 

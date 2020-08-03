@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303207"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224047"
 ---
 # <a name="x64-exception-handling"></a>x64 예외 처리
 
@@ -162,11 +162,11 @@ opcode `UWOP_SAVE_XMM128` 및 `UWOP_SAVE_XMM128_FAR`의 경우 모든 128비트 
 
 - `UWOP_SAVE_NONVOL` (4) 2 노드
 
-  PUSH 대신 MOV를 사용하여 스택에 비휘발성 정수 레지스터를 저장합니다. 이 코드는 주로 비휘발성 레지스터가 이전에 할당된 위치에서 스택에 저장되는 ‘축소 래핑’에 사용됩니다.  작업 정보는 레지스터의 번호입니다. 위의 참고 사항에 설명된 대로, 8로 비율 크기 조정된 스택 오프셋은 다음 해제 연산 코드 슬롯에 기록됩니다.
+  PUSH 대신 MOV를 사용하여 스택에 비휘발성 정수 레지스터를 저장합니다. 이 코드는 주로 비휘발성 레지스터가 이전에 할당된 위치에서 스택에 저장되는 ‘축소 래핑’에 사용됩니다. 작업 정보는 레지스터의 번호입니다. 위의 참고 사항에 설명된 대로, 8로 비율 크기 조정된 스택 오프셋은 다음 해제 연산 코드 슬롯에 기록됩니다.
 
 - `UWOP_SAVE_NONVOL_FAR` (5) 3 노드
 
-  PUSH 대신 MOV를 사용하여 긴 오프셋을 가진 스택에 비휘발성 정수 레지스터를 저장합니다. 이 코드는 주로 비휘발성 레지스터가 이전에 할당된 위치에서 스택에 저장되는 ‘축소 래핑’에 사용됩니다.  작업 정보는 레지스터의 번호입니다. 위의 참고 사항에 설명된 대로, 비율 크기 미조정 스택 오프셋은 두 개의 다음 해제 연산 코드 슬롯에 기록됩니다.
+  PUSH 대신 MOV를 사용하여 긴 오프셋을 가진 스택에 비휘발성 정수 레지스터를 저장합니다. 이 코드는 주로 비휘발성 레지스터가 이전에 할당된 위치에서 스택에 저장되는 ‘축소 래핑’에 사용됩니다. 작업 정보는 레지스터의 번호입니다. 위의 참고 사항에 설명된 대로, 비율 크기 미조정 스택 오프셋은 두 개의 다음 해제 연산 코드 슬롯에 기록됩니다.
 
 - `UWOP_SAVE_XMM128` (8) 2 노드
 
@@ -245,7 +245,7 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
 
 또한 연결된 정보를 사용하여 휘발성 레지스터 저장을 그룹화할 수 있습니다. 컴파일러가 함수 항목 프롤로그의 외부에 있게 될 때까지 휘발성 레지스터의 저장을 연기할 수 있습니다. 그룹화된 코드 앞의 함수 부분에 대한 기본 해제 정보가 있으면 휘발성 레지스터를 기록한 다음 크기가 0이 아닌 프롤로그를 포함한 연결된 정보를 설정할 수 있습니다. 이 경우 연결된 정보의 해제 코드는 비휘발성 레지스터의 저장을 반영합니다. 이 경우 해제 코드는 UWOP_SAVE_NONVOL의 모든 인스턴스입니다. PUSH를 사용하여 비휘발성 레지스터를 저장하거나 추가 고정 스택 할당을 사용하여 RSP 레지스터를 수정하는 그룹화는 지원되지 않습니다.
 
-UNW_FLAG_CHAININFO가 설정된 UNWIND_INFO 항목에는 역시 UNWIND_INFO 항목이 설정된 RUNTIME_FUNCTION 항목이 포함될 수 있으며, 이를 ‘다중 축소 래핑’이라고도 부르기도 합니다.  결국 연결된 해제 정보 포인터는 UNW_FLAG_CHAININFO가 지워진 UNWIND_INFO 항목에 도착합니다. 이 항목은 실제 프로시저 진입점을 가리키는 기본 UNWIND_INFO 항목입니다.
+UNW_FLAG_CHAININFO가 설정된 UNWIND_INFO 항목에는 역시 UNWIND_INFO 항목이 설정된 RUNTIME_FUNCTION 항목이 포함될 수 있으며, 이를 ‘다중 축소 래핑’이라고도 부르기도 합니다. 결국 연결된 해제 정보 포인터는 UNW_FLAG_CHAININFO가 지워진 UNWIND_INFO 항목에 도착합니다. 이 항목은 실제 프로시저 진입점을 가리키는 기본 UNWIND_INFO 항목입니다.
 
 ## <a name="unwind-procedure"></a>해제 프로시저
 
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc**는 이 함수 내의 RIP 값입니다. 이 값은 예외 주소이거나 제어가 설정 함수를 떠난 주소입니다. RIP는 컨트롤이 이 함수 내의 일부 보호된 구문 내에 있는지 확인하는 데 사용됩니다(예: `__try`/`__except` 또는 `__try`/`__finally`에 대한 `__try` 블록).
+**ControlPc**는 이 함수 내의 RIP 값입니다. 이 값은 예외 주소이거나 제어가 설정 함수를 떠난 주소입니다. RIP는 컨트롤이 이 함수 내의 일부 보호된 구문 내에 있는지 확인하는 데 사용됩니다(예: `__try`/ **`__except`** 또는 `__try`/ **`__finally`** 에 대한 `__try` 블록).
 
 **ImageBase**는 이 함수에 포함된 모듈의 이미지 기반(로드 주소)으로서 함수 항목 및 해제 정보에 사용되는 32비트 오프셋에 추가되어 상대 주소를 기록합니다.
 
@@ -332,10 +332,10 @@ typedef struct _DISPATCHER_CONTEXT {
 |PROC FRAME \[:*ehandler*]|MASM에서 함수의 구조화된 예외 처리 해제 동작에 대한 .xdata에서 .pdata 및 해제 정보의 함수 테이블 항목을 생성하도록 합니다.  *ehandler*가 있는 경우 이 proc은 언어별 처리기로 .xdata에 입력됩니다.<br /><br /> FRAME 특성을 사용하는 경우 ENDPROLOG 지시문 뒤에 와야 합니다.  함수가 리프 함수([함수 형식](../build/stack-usage.md#function-types))인 경우 의사 연산의 나머지와 마찬가지로 FRAME 특성이 필요하지 않습니다.|
 |.PUSHREG *register*|프롤로그의 현재 오프셋을 사용하여 지정된 레지스터 번호에 대한 UWOP_PUSH_NONVOL 해제 코드 항목을 생성합니다.<br /><br /> 비휘발성 정수 레지스터에서만 사용합니다.  비휘발성 레지스터 푸시의 경우 대신 ALLOCSTACK 8을 사용합니다.|
 |.SETFRAME *register*, *offset*|지정된 레지스터 및 오프셋을 사용하여 해제 정보에서 프레임 레지스터 필드와 오프셋을 채웁니다. 오프셋은 16의 배수여야 하며 240보다 작거나 같아야 합니다. 이 지시문은 현재 프롤로그 오프셋을 사용하여 지정된 레지스터에 대한 UWOP_SET_FPREG 해제 코드 항목을 생성합니다.|
-|.ALLOCSTACK *size*|프롤로그에서 현재 오프셋의 지정된 크기를 사용하여 UWOP_ALLOC_SMALL 또는 UWOP_ALLOC_LARGE를 생성합니다.<br /><br /> ‘크기’ 피연산자는 8의 배수여야 합니다. |
-|.SAVEREG *register*, *offset*|현재 프롤로그 오프셋을 사용하여 지정된 레지스터 및 오프셋에 대한 UWOP_SAVE_NONVOL 또는 UWOP_SAVE_NONVOL_FAR 해제 코드 항목 중 하나를 생성합니다. MASM은 가장 효율적인 인코딩을 선택합니다.<br /><br /> ‘오프셋’은 양수여야 하며 8의 배수여야 합니다.  ‘오프셋’은 프로시저 프레임의 베이스를 기준으로 하는데, 이는 RSP에 있거나 프레임 포인터를 사용하는 경우 배율 크기 조정이 되지 않은 프레임 포인터에 있습니다. |
-|.SAVEXMM128 *register*, *offset*|현재 프롤로그 오프셋을 사용하여 지정된 XMM 레지스터 및 오프셋에 대한 UWOP_SAVE_XMM128 또는 UWOP_SAVE_XMM128_FAR 해제 코드 항목 중 하나를 생성합니다. MASM은 가장 효율적인 인코딩을 선택합니다.<br /><br /> ‘오프셋’은 양수여야 하며 16의 배수여야 합니다.   ‘오프셋’은 프로시저 프레임의 베이스를 기준으로 하는데, 이는 RSP에 있거나 프레임 포인터를 사용하는 경우 배율 크기 조정이 되지 않은 프레임 포인터에 있습니다. |
-|.PUSHFRAME \[*code*]|UWOP_PUSH_MACHFRAME 해제 코드 항목을 생성합니다. 선택적 ‘코드’가 지정된 경우 해제 코드 항목에는 한정자 1이 지정됩니다.  그러지 않으면 한정자 0이 지정됩니다.|
+|.ALLOCSTACK *size*|프롤로그에서 현재 오프셋의 지정된 크기를 사용하여 UWOP_ALLOC_SMALL 또는 UWOP_ALLOC_LARGE를 생성합니다.<br /><br /> ‘크기’ 피연산자는 8의 배수여야 합니다.|
+|.SAVEREG *register*, *offset*|현재 프롤로그 오프셋을 사용하여 지정된 레지스터 및 오프셋에 대한 UWOP_SAVE_NONVOL 또는 UWOP_SAVE_NONVOL_FAR 해제 코드 항목 중 하나를 생성합니다. MASM은 가장 효율적인 인코딩을 선택합니다.<br /><br /> ‘오프셋’은 양수여야 하며 8의 배수여야 합니다. ‘오프셋’은 프로시저 프레임의 베이스를 기준으로 하는데, 이는 RSP에 있거나 프레임 포인터를 사용하는 경우 배율 크기 조정이 되지 않은 프레임 포인터에 있습니다.|
+|.SAVEXMM128 *register*, *offset*|현재 프롤로그 오프셋을 사용하여 지정된 XMM 레지스터 및 오프셋에 대한 UWOP_SAVE_XMM128 또는 UWOP_SAVE_XMM128_FAR 해제 코드 항목 중 하나를 생성합니다. MASM은 가장 효율적인 인코딩을 선택합니다.<br /><br /> ‘오프셋’은 양수여야 하며 16의 배수여야 합니다.  ‘오프셋’은 프로시저 프레임의 베이스를 기준으로 하는데, 이는 RSP에 있거나 프레임 포인터를 사용하는 경우 배율 크기 조정이 되지 않은 프레임 포인터에 있습니다.|
+|.PUSHFRAME \[*code*]|UWOP_PUSH_MACHFRAME 해제 코드 항목을 생성합니다. 선택적 ‘코드’가 지정된 경우 해제 코드 항목에는 한정자 1이 지정됩니다. 그러지 않으면 한정자 0이 지정됩니다.|
 |.ENDPROLOG|프롤로그 선언의 끝을 신호로 보냅니다.  함수의 처음 255바이트에서 발생해야 합니다.|
 
 대부분의 opcode를 적절하게 사용하는 샘플 함수 프롤로그는 다음과 같습니다.

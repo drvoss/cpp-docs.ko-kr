@@ -6,16 +6,16 @@ helpviewer_keywords:
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-ms.openlocfilehash: 041c44829b8a267ca053dc85da0333e86db6b7b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbbace9780ab96891ceb85f885335e42c577fda1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325496"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211725"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>접두사 증가 및 감소 연산자
 
-증가 또는 감소 연산자가 피연산자 앞에 올 때 단항 연산자(`++` 및 **--** )를 "접두사" 증가 또는 감소 연산자라고 합니다. 후위 증가 및 감소는 전위 증가 및 감소보다 우선 순위가 높습니다. 피연산자는 정수, 부동 및 포인터 형식이어야 하며 수정할 수 있는 l-value 식(**const** 특성이 없는 식)이어야 합니다. 결과는 l-value입니다.
+증가 또는 감소 연산자가 피연산자 앞에 올 때 단항 연산자(`++` 및 **--** )를 "접두사" 증가 또는 감소 연산자라고 합니다. 후위 증가 및 감소는 전위 증가 및 감소보다 우선 순위가 높습니다. 피연산자는 정수, 부동 및 포인터 형식이어야 하며 수정할 수 있는 l-value 식( **`const`** 특성이 없는 식)이어야 합니다. 결과는 l-value입니다.
 
 연산자가 피연산자 앞에 오면 피연산자가 증가하거나 감소하고 새 값이 식의 결과가 됩니다.
 

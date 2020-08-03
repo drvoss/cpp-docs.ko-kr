@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42547828e78566982053d22e8288fe1ccbe6e26b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158238"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229534"
 ---
 # <a name="simple-variable-declarations"></a>단순 변수 선언
 
@@ -31,7 +31,7 @@ ms.locfileid: "62158238"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
-산술, 구조체, 공용 구조체, 열거형 및 void 형식과 `typedef` 이름으로 나타내는 형식의 경우 형식 지정자가 모든 형식 정보를 제공하므로 선언에 단순 선언자를 사용할 수 있습니다. 포인터, 배열 및 함수 형식에는 복잡한 선언자가 필요합니다.
+산술, 구조체, 공용 구조체, 열거형 및 void 형식과 **`typedef`** 이름으로 나타내는 형식의 경우 형식 지정자가 모든 형식 정보를 제공하므로 선언에 단순 선언자를 사용할 수 있습니다. 포인터, 배열 및 함수 형식에는 복잡한 선언자가 필요합니다.
 
 쉼표( **,** )로 구분된 식별자 목록을 사용하여 같은 선언에 여러 변수를 지정할 수 있습니다. 선언에 정의된 모든 변수의 기본 형식은 같습니다. 예를 들어:
 
@@ -40,7 +40,7 @@ int x, y;        /* Declares two simple variables of type int */
 int const z = 1; /* Declares a constant value of type int */
 ```
 
-`x` 및 `y` 변수는 특정 구현에 대해 `int` 형식으로 정의된 집합에 값을 보유할 수 있습니다. 단순 개체 `z`가 값 1로 초기화되며 수정할 수 없습니다.
+`x` 및 `y` 변수는 특정 구현에 대해 **`int`** 형식으로 정의된 집합에 값을 보유할 수 있습니다. 단순 개체 `z`가 값 1로 초기화되며 수정할 수 없습니다.
 
 `z`의 선언이 초기화되지 않은 정적 변수용이거나 파일 범위에 있을 경우 초기 값 0을 수신하고 이 값은 수정할 수 없습니다.
 
@@ -49,7 +49,7 @@ unsigned long reply, flag; /* Declares two variables
                               named reply and flag     */
 ```
 
-이 예제에서 `reply` 변수와 `flag` 변수 모두 `unsigned long` 형식이고 부호 없는 정수 값을 갖습니다.
+이 예제에서 `reply` 변수와 `flag` 변수 모두 **`unsigned long`** 형식이고 부호 없는 정수 계열 값을 갖습니다.
 
 ## <a name="see-also"></a>참조
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 281234b857a97acbb57ebbfca7b678a637d00764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7c55c15a8f3e2a53e350da947cf524ae064a09
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231431"
 ---
 # <a name="type-conversions-c"></a>형식 변환 (C)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62346290"
 
 - 값이 인수로 함수에 전달되거나, 형식이 함수에서 반환되는 경우
 
-문자, short 정수, 부호가 있거나 없는 모든 정수 비트 필드 또는 열거형 형식의 개체는 정수를 사용할 수 있는 모든 식에서 사용될 수 있습니다. `int`가 원래 형식의 모든 값을 나타낼 수 있으면 해당 값이 `int`로 변환되고, 그렇지 않으면 `unsigned int`로 변환됩니다. 이 프로세스를 "정수 계열 확장"이라고 합니다. 정수 계열 확장은 값을 유지합니다. 즉, 확장 후의 값과 확장 전의 값이 동일한 것으로 보장됩니다. 자세한 내용은 [일반적인 산술 변환](../c-language/usual-arithmetic-conversions.md)을 참조하세요.
+문자, short 정수, 부호가 있거나 없는 모든 정수 비트 필드 또는 열거형 형식의 개체는 정수를 사용할 수 있는 모든 식에서 사용될 수 있습니다. **`int`** 가 원래 형식의 모든 값을 나타낼 수 있으면 해당 값이 **`int`** 로 변환되고, 그렇지 않으면 **`unsigned int`** 로 변환됩니다. 이 프로세스를 "정수 계열 확장"이라고 합니다. 정수 계열 확장은 값을 유지합니다. 즉, 확장 후의 값과 확장 전의 값이 동일한 것으로 보장됩니다. 자세한 내용은 [일반적인 산술 변환](../c-language/usual-arithmetic-conversions.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

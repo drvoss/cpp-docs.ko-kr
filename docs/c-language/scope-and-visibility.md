@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158347"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199401"
 ---
 # <a name="scope-and-visibility"></a>범위 및 표시 영역
 
@@ -27,7 +27,7 @@ ms.locfileid: "62158347"
 
 함수 프로토타입 범위 함수 프로토타입 범위를 포함하는 식별자에 대한 선언자 또는 형식 지정자는 함수 프로토타입(함수 선언의 일부가 아님)의 매개 변수 선언 목록 내에 나타납니다. 해당 범위는 함수 선언자 끝에서 종료됩니다.
 
-다른 소스 파일에서 변수를 화면에 표시하기에 적절한 선언은 [스토리지 클래스](../c-language/c-storage-classes.md)에서 설명합니다. 하지만 **static** 스토리지 클래스 지정자를 사용하여 외부 수준에서 선언한 변수와 함수는 정의된 소스 파일 내에서만 표시됩니다. 다른 모든 함수는 전역적으로 표시됩니다.
+다른 소스 파일에서 변수를 화면에 표시하기에 적절한 선언은 [스토리지 클래스](../c-language/c-storage-classes.md)에서 설명합니다. 하지만 **`static`** 스토리지 클래스 지정자를 사용하여 외부 수준에서 선언한 변수와 함수는 정의된 소스 파일 내에서만 표시됩니다. 다른 모든 함수는 전역적으로 표시됩니다.
 
 ## <a name="see-also"></a>참조
 

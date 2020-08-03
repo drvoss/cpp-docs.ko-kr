@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d516f7923144f0e24bda676147ed529546def25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213764"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>기본 MFC DLL에서 데이터베이스, OLE 및 소켓 MFC 확장 DLL 사용
 
@@ -92,7 +92,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }
 ```
 
-**InitYourExtDLL** 함수를 내보내야 합니다. 이 작업은 **__declspec(dllexport)** 를 사용하여 수행하거나 DLL의 .def 파일에서 다음과 같이 수행할 수 있습니다.
+**InitYourExtDLL** 함수를 내보내야 합니다. 이 작업은 다음과 같이 DLL의 .def 파일에서 **`__declspec(dllexport)`** 을 사용하여 수행할 수 있습니다.
 
 ```
 // YourExtDLL.Def:

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226355"
 ---
 # <a name="one-dimensional-arrays"></a>1차원 배열
 
@@ -49,11 +49,11 @@ b[a]
 
 더하기 연산자([가감 연산자](../c-language/c-additive-operators.md) 참조)에 대한 변환 규칙에 따라 정수 계열 값은 포인터로 주소가 지정된 형식의 길이를 곱하여 주소 오프셋으로 변환됩니다.
 
-예를 들어 `line` 식별자가 `int` 값의 배열을 참조하는 경우 다음 절차는 첨자식 `line[ i ]`를 평가하는 데 사용됩니다.
+예를 들어 `line` 식별자가 **`int`** 값의 배열을 참조하는 경우, 다음 절차는 첨자식 `line[ i ]`를 평가하는 데 사용됩니다.
 
-1. 정수 값 `i`를 `int` 항목의 길이로 정의된 바이트 수와 곱합니다. 변환된 `i`의 값은 `i``int`개의 위치를 나타냅니다.
+1. 정수 값 `i`를 **`int`** 항목의 길이로 정의된 바이트 수와 곱합니다. 변환된 `i`의 값은 `i` **`int`** 개의 위치를 나타냅니다.
 
-1. 이 변환된 값을 원래 포인터 값(`line`)에 더하여 `line`으로부터 `i``int`개 위치만큼 떨어져 있는 주소를 생성합니다.
+1. 이 변환된 값을 원래 포인터 값(`line`)에 더하여 `line`으로부터 `i` **`int`** 개 위치만큼 떨어져 있는 주소를 생성합니다.
 
 1. 간접 참조 연산자가 새 주소에 적용됩니다. 결과는 해당 위치에 있는 배열 요소의 값입니다(직관적으로 `line [ i ]`).
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 42e3a7f1f1c34ba5a263adfca7496c24e162ab5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213751"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>디버그 빌드를 사용한 메모리 덮어쓰기 확인
 
@@ -21,7 +21,7 @@ afxMemDF |= checkAlwaysMemDF;
 
 디버그 메모리 할당자는 모든 메모리 할당 주위에 가드 바이트를 넣습니다. 그러나 가드 바이트는 변경되었는지가 확인된 경우(메모리 덮어쓰기를 나타냄) 외에는 유용하지 않습니다. 확인된 경우에는 실제로 메모리 덮어쓰기를 수행할 수 있는 버퍼를 제공합니다.
 
-`checkAlwaysMemDF`를 켜면 **new** 또는 **delete**를 호출할 때마다 MFC에서 `AfxCheckMemory` 함수를 호출하도록 합니다. 메모리 덮어쓰기가 검색되면 다음과 유사한 추적 메시지를 생성합니다.
+`checkAlwaysMemDF`를 켜면 **`new`** 또는 **`delete`** 를 호출할 때마다 MFC에서 `AfxCheckMemory` 함수를 호출하도록 합니다. 메모리 덮어쓰기가 검색되면 다음과 유사한 추적 메시지를 생성합니다.
 
 ```
 Damage Occurred! Block=0x5533

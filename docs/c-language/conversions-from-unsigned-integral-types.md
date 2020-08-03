@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226466"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>부호 없는 정수 계열 형식에서 변환
 
@@ -35,7 +35,7 @@ printf_s( "%hd\n", j );   // Prints -3
 
 **Microsoft 전용**
 
-Microsoft 컴파일러에서 **unsigned**(또는 **unsigned int**) 및 **unsigned long**은 고유하지만 같은 형식입니다. **unsigned int** 값의 변환은 **unsigned long**의 변환과 동일하게 진행됩니다.
+Microsoft 컴파일러에서 **`unsigned`** (또는 **`unsigned int`** )와 **`unsigned long`** 은 고유하지만 같은 형식입니다. **`unsigned int`** 값의 변환은 **`unsigned long`** 의 변환과 동일하게 진행됩니다.
 
 **Microsoft 전용 종료**
 
@@ -45,46 +45,46 @@ Microsoft 컴파일러에서 **unsigned**(또는 **unsigned int**) 및 **unsigne
 
 |시작|대상|메서드|
 |----------|--------|------------|
-|**unsigned char**|**char**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
-|**unsigned char**|**short**|0 확장|
-|**unsigned char**|**long**|0 확장|
-|**unsigned char**|**long long**|0 확장|
-|**unsigned char**|**unsigned short**|0 확장|
-|**unsigned char**|**unsigned long**|0 확장|
-|**unsigned char**|**unsigned long long**|0 확장|
-|**unsigned char**|**float**|**long**으로 변환(**long**을 **float**로 변환)|
-|**unsigned char**|**double**|**long**으로 변환(**long**을 **double**로 변환)|
-|**unsigned char**|**long double**|**long**으로 변환(**long**을 **double**로 변환)|
-|**unsigned short**|**char**|하위 바이트 유지|
-|**unsigned short**|**short**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
-|**unsigned short**|**long**|0 확장|
-|**unsigned short**|**long long**|0 확장|
-|**unsigned short**|**unsigned char**|하위 바이트 유지|
-|**unsigned short**|**unsigned long**|0 확장|
-|**unsigned short**|**unsigned long long**|0 확장|
-|**unsigned short**|**float**|**long**으로 변환(**long**을 **float**로 변환)|
-|**unsigned short**|**double**|**long**으로 변환(**long**을 **double**로 변환)|
-|**unsigned short**|**long double**|**long**으로 변환(**long**을 **double**로 변환)|
-|**unsigned long**|**char**|하위 바이트 유지|
-|**unsigned long**|**short**|하위 단어 유지|
-|**unsigned long**|**long**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
-|**unsigned long**|**long long**|0 확장|
-|**unsigned long**|**unsigned char**|하위 바이트 유지|
-|**unsigned long**|**unsigned short**|하위 단어 유지|
-|**unsigned long**|**unsigned long long**|0 확장|
-|**unsigned long**|**float**|**long**으로 변환(**long**을 **float**로 변환)|
-|**unsigned long**|**double**|**double**로 직접 변환|
-|**unsigned long**|**long double**|**long**으로 변환(**long**을 **double**로 변환)|
-|**unsigned long long**|**char**|하위 바이트 유지|
-|**unsigned long long**|**short**|하위 단어 유지|
-|**unsigned long long**|**long**|하위 dword 유지|
-|**unsigned long long**|**long long**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
-|**unsigned long long**|**unsigned char**|하위 바이트 유지|
-|**unsigned long long**|**unsigned short**|하위 단어 유지|
-|**unsigned long long**|**unsigned long**|하위 dword 유지|
-|**unsigned long long**|**float**|**long**으로 변환(**long**을 **float**로 변환)|
-|**unsigned long long**|**double**|**double**로 직접 변환|
-|**unsigned long long**|**long double**|**long**으로 변환(**long**을 **double**로 변환)|
+|**`unsigned char`**|**`char`**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
+|**`unsigned char`**|**`short`**|0 확장|
+|**`unsigned char`**|**`long`**|0 확장|
+|**`unsigned char`**|**`long long`**|0 확장|
+|**`unsigned char`**|**`unsigned short`**|0 확장|
+|**`unsigned char`**|**`unsigned long`**|0 확장|
+|**`unsigned char`**|**`unsigned long long`**|0 확장|
+|**`unsigned char`**|**`float`**|**`long`** 으로 변환, **`long`** 을 **`float`** 로 변환|
+|**`unsigned char`**|**`double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
+|**`unsigned char`**|**`long double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
+|**`unsigned short`**|**`char`**|하위 바이트 유지|
+|**`unsigned short`**|**`short`**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
+|**`unsigned short`**|**`long`**|0 확장|
+|**`unsigned short`**|**`long long`**|0 확장|
+|**`unsigned short`**|**`unsigned char`**|하위 바이트 유지|
+|**`unsigned short`**|**`unsigned long`**|0 확장|
+|**`unsigned short`**|**`unsigned long long`**|0 확장|
+|**`unsigned short`**|**`float`**|**`long`** 으로 변환, **`long`** 을 **`float`** 로 변환|
+|**`unsigned short`**|**`double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
+|**`unsigned short`**|**`long double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
+|**`unsigned long`**|**`char`**|하위 바이트 유지|
+|**`unsigned long`**|**`short`**|하위 단어 유지|
+|**`unsigned long`**|**`long`**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
+|**`unsigned long`**|**`long long`**|0 확장|
+|**`unsigned long`**|**`unsigned char`**|하위 바이트 유지|
+|**`unsigned long`**|**`unsigned short`**|하위 단어 유지|
+|**`unsigned long`**|**`unsigned long long`**|0 확장|
+|**`unsigned long`**|**`float`**|**`long`** 으로 변환, **`long`** 을 **`float`** 로 변환|
+|**`unsigned long`**|**`double`**|**`double`** 로 직접 변환|
+|**`unsigned long`**|**`long double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
+|**`unsigned long long`**|**`char`**|하위 바이트 유지|
+|**`unsigned long long`**|**`short`**|하위 단어 유지|
+|**`unsigned long long`**|**`long`**|하위 dword 유지|
+|**`unsigned long long`**|**`long long`**|비트 패턴 유지(상위 비트가 부호 비트가 됨)|
+|**`unsigned long long`**|**`unsigned char`**|하위 바이트 유지|
+|**`unsigned long long`**|**`unsigned short`**|하위 단어 유지|
+|**`unsigned long long`**|**`unsigned long`**|하위 dword 유지|
+|**`unsigned long long`**|**`float`**|**`long`** 으로 변환, **`long`** 을 **`float`** 로 변환|
+|**`unsigned long long`**|**`double`**|**`double`** 로 직접 변환|
+|**`unsigned long long`**|**`long double`**|**`long`** 으로 변환, **`long`** 을 **`double`** 로 변환|
 
 ## <a name="see-also"></a>참조
 

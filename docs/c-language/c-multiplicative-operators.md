@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227987"
 ---
 # <a name="c-multiplicative-operators"></a>곱하기 연산자
 
@@ -62,7 +62,7 @@ double x = 2.0, y;
 y = x * i;
 ```
 
-이 경우 `x`를 `i`로 곱하여 20.0이라는 값을 제공합니다. 결과는 **double** 형식입니다.
+이 경우 `x`를 `i`로 곱하여 20.0이라는 값을 제공합니다. 결과는 **`double`** 형식입니다.
 
 ```
 n = i / j;

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d792dac45d69a0857bda551d1f3c03fc3d03d1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221203"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229885"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Visual Basic 애플리케이션에서 DLL 함수 호출
 
 Visual Basic 애플리케이션(또는 Pascal, Fortran 등 다른 언어의 애플리케이션)이 C/C++ DLL에서 함수를 호출하려면 컴파일러에서 수행하는 이름 장식 없이 올바른 호출 규칙을 사용하여 함수를 내보내야 합니다.
 
-`__stdcall`은 함수의 올바른 호출 규칙(호출된 함수가 스택을 정리하고 매개 변수가 오른쪽에서 왼쪽으로 전달됨)을 만들지만 함수 이름을 다르게 데코레이트합니다. 따라서 DLL에서 내보낸 함수에 **__declspec(dllexport)** 를 사용하는 경우 데코레이트된 이름을 내보냅니다.
+**`__stdcall`** 은 함수의 올바른 호출 규칙(호출된 함수가 스택을 정리하고 매개 변수가 오른쪽에서 왼쪽으로 전달됨)을 만들지만 함수 이름을 다르게 데코레이트합니다. 따라서 DLL에서 내보낸 함수에 **`__declspec(dllexport)`** 를 사용하는 경우 데코레이트된 이름을 내보냅니다.
 
-`__stdcall` 이름 장식에서는 기호 이름 앞에 밑줄( **\_** )을 붙이고 @ 기호( **\@** )와 인수 목록의 바이트 수(필요한 스택 공간)를 추가합니다. 따라서 다음과 같이 선언된 함수는
+**`__stdcall`** 이름 데코레이션에서는 기호 이름 앞에 밑줄( **\_** )을 붙이고 @ 기호( **\@** )와 인수 목록의 바이트 수(필요한 스택 공간)를 추가합니다. 따라서 다음과 같이 선언된 함수는
 
 ```C
 int __stdcall func (int a, double b)
@@ -31,15 +31,15 @@ int __stdcall func (int a, double b)
 
 출력에서 `_func@12`로 데코레이트됩니다.
 
-C 호출 규칙(`__cdecl`)은 이름을 `_func`로 데코레이트합니다.
+C 호출 규칙( **`__cdecl`** )은 이름을 `_func`로 데코레이트합니다.
 
-데코레이트된 이름을 가져오려면 [/MAP](reference/map-generate-mapfile.md)를 사용합니다. **__declspec(dllexport)** 를 사용하면 다음을 수행합니다.
+데코레이트된 이름을 가져오려면 [/MAP](reference/map-generate-mapfile.md)를 사용합니다. **`__declspec(dllexport)`** 을 사용하면 다음을 수행합니다.
 
-- C 호출 규칙(`__cdecl`)을 사용하여 함수를 내보내는 경우 이름을 내보낼 때 앞에 오는 밑줄( **\_** )을 제거합니다.
+- C 호출 규칙( **`__cdecl`** )을 사용하여 함수를 내보내는 경우 이름을 내보낼 때 앞에 오는 밑줄( **\_** )을 제거합니다.
 
-- 내보내는 함수에서 C 호출 규칙(예: `__stdcall`)을 사용하지 않는 경우 데코레이트된 이름을 내보냅니다.
+- 내보내는 함수에서 C 호출 규칙(예: **`__stdcall`** )을 사용하지 않는 경우 데코레이트된 이름을 내보냅니다.
 
-스택 정리가 발생하는 위치를 재정의할 방법이 없으므로 `__stdcall`을 사용해야 합니다. `__stdcall`를 사용하여 이름을 데코레이트하지 않으려면 .def 파일의 EXPORTS 섹션에서 별칭을 사용하여 이름을 지정해야 합니다. 다음 함수 선언의 경우 다음과 같이 표시됩니다.
+스택 정리가 발생하는 위치를 재정의할 방법이 없으므로 **`__stdcall`** 을 사용해야 합니다. **`__stdcall`** 을 사용하여 이름을 데코레이트하지 않으려면 .def 파일의 EXPORTS 섹션에서 별칭을 사용하여 이름을 지정해야 합니다. 다음 함수 선언의 경우 다음과 같이 표시됩니다.
 
 ```C
 int  __stdcall MyFunc (int a, double b);
