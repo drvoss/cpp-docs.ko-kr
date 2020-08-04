@@ -125,7 +125,7 @@
       items:
         - name: '기본 제공 연산자, 우선 순위 및 결합성'
           href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-        - name: __alignof 연산자
+        - name: alignof 연산자
           href: ../cpp/alignof-operator.md
         - name: __uuidof operator
           href: ../cpp/uuidof-operator.md
@@ -191,7 +191,7 @@
           href: ../cpp/typeid-operator.md
         - name: '단항 더하기 및 부정 연산자: + 및 -'
           href: ../cpp/unary-plus-and-negation-operators-plus-and.md
-    - name: 표현식
+    - name: 식
       items:
         - name: 표현식
           href: ../cpp/expressions-cpp.md
