@@ -494,7 +494,7 @@
                   href: ../build/reference/e-preprocess-to-stdout.md
                 - name: /EH(예외 처리 모델)
                   href: ../build/reference/eh-exception-handling-model.md
-                - name: '/EP(#line 지시문 없이 stdout로 전처리)'
+                - name: /EP(#line 지시문 없이 stdout로 전처리)
                   href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
                 - name: /errorReport(내부 컴파일러 오류 보고)
                   href: ../build/reference/errorreport-report-internal-compiler-errors.md
@@ -669,6 +669,8 @@
                   href: ../build/reference/showincludes-list-include-files.md
                 - name: /source-charset(소스 문자 집합 설정)
                   href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /sourceDependencies (소스 레벨 종속성 보고)
+                  href: ../build/reference/sourcedependencies.md
                 - name: /std(언어 표준 버전 지정)
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP(소스 파일 형식 지정)'
