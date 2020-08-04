@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215324"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521254"
 ---
 # <a name="custom-c"></a>custom(C++)
 
@@ -44,16 +44,14 @@ ms.locfileid: "87215324"
 
 ### <a name="attribute-context"></a>특성 컨텍스트
 
-|||
-|-|-|
-|**적용 대상**|비 COM **인터페이스**, **`class`** , **`enum`** s, `idl_module` 메서드, 인터페이스 멤버, 인터페이스 매개 변수, **`typedef`** **`union`** **`struct`** s, s, s|
-|**불가능**|예|
-|**필수 특성**|**coclass** (클래스에서 사용 되는 경우)|
-|**잘못된 특성**|없음|
+- **적용 대상**: 비 COM `interface` , `idl_module` 메서드, 인터페이스 멤버, 인터페이스 매개 변수,,,, **`typedef`** **`class`** **`enum`** **`union`** 및 **`struct`** 형식입니다.
+- **반복**가능: 예.
+- **필수 특성**: **coclass** (클래스에서 사용 되는 경우).
+- **잘못 된 특성**: 없음.
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [IDL 특성](idl-attributes.md)<br/>
 [독립형 특성](stand-alone-attributes.md)<br/>

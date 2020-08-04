@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233017"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520929"
 ---
 # <a name="pair-structure"></a>pair 구조체
 
@@ -68,7 +68,7 @@ template<class T1, class T2>
 *오른쪽*\
 다른 쌍의 요소를 초기화하는 데 해당 값을 사용할 쌍입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 첫 번째 (기본) 생성자는 쌍의 첫 번째 요소를 type `T1` 의 기본 및 두 번째 요소의 기본 형식으로 초기화 합니다 `T2` .
 
@@ -80,7 +80,7 @@ template<class T1, class T2>
 
 ## <a name="remarks"></a>설명
 
-템플릿 구조체는 각각 및 형식의 개체 쌍을 저장 `T1` 합니다 `T2` . 형식은 `first_type` 템플릿 매개 변수와 같으며 `T1` 형식은 `second_type` 템플릿 매개 변수와 같습니다 `T2` . `T1`그리고 `T2` 각각 기본 생성자, 단일 인수 생성자 및 소멸자만 제공 해야 합니다. 형식이가 아닌 `pair` 로 선언 되기 때문에 형식의 모든 멤버는 public입니다 **`struct`** **`class`** . 쌍을 사용하는 두 가지 가장 일반적인 방법은 두 값을 반환하는 함수에 대한 반환 형식으로 사용하거나, 각 요소에 키와 값 형식이 둘 다 연결되어 있는 결합형 컨테이너 클래스 [map 클래스](../standard-library/map-class.md) 및 [multimap 클래스](../standard-library/multimap-class.md)에 대한 요소로 사용하는 것입니다. 후자는 쌍 결합형 컨테이너에 대 한 요구 사항을 충족 하 고 `pair` <  **`const`** `key_type` ,> 형식의 값 형식을 갖습니다 `mapped_type` .
+템플릿 구조체는 각각 및 형식의 개체 쌍을 저장 `T1` 합니다 `T2` . 형식은 `first_type` 템플릿 매개 변수와 같으며 `T1` 형식은 `second_type` 템플릿 매개 변수와 같습니다 `T2` . `T1`그리고 `T2` 각각 기본 생성자, 단일 인수 생성자 및 소멸자만 제공 해야 합니다. 형식이가 아닌 `pair` 로 선언 되기 때문에 형식의 모든 멤버는 public입니다 **`struct`** **`class`** . 쌍을 사용하는 두 가지 가장 일반적인 방법은 두 값을 반환하는 함수에 대한 반환 형식으로 사용하거나, 각 요소에 키와 값 형식이 둘 다 연결되어 있는 결합형 컨테이너 클래스 [map 클래스](../standard-library/map-class.md) 및 [multimap 클래스](../standard-library/multimap-class.md)에 대한 요소로 사용하는 것입니다. 후자는 쌍 결합형 컨테이너에 대 한 요구 사항을 충족 하 고 형식의 값 형식을 갖습니다 `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>예제
 

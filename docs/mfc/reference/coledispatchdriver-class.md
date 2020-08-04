@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214102"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520644"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 클래스
 
@@ -47,7 +47,7 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|`COleDispatchDriver` 개체를 생성합니다.|
 
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Public 연산자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[COleDispatchDriver:: operator =](#operator_eq)|원본 값을 개체에 복사 `COleDispatchDriver` 합니다.|
 |[COleDispatchDriver:: operator LPDISPATCH](#operator_lpdispatch)|기본 포인터에 액세스 `IDispatch` 합니다.|
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|`IDispatch`또는 개체 소멸 중에를 해제할 것인지 여부를 지정 합니다 `ReleaseDispatch` .|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|이에 연결 된 인터페이스에 대 한 포인터를 나타냅니다 `IDispatch` `COleDispatchDriver` .|
@@ -148,11 +148,11 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
 ### <a name="remarks"></a>설명
 
-폼 `COleDispatchDriver` ( `LPDISPATCH lpDispatch` , **BOOL** `bAutoRelease`  =  **TRUE**)은 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 인터페이스에 연결 합니다.
+양식은 `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 인터페이스에 연결 됩니다.
 
-`COleDispatchDriver`() 폼은 **`const`** `COleDispatchDriver` &  `dispatchSrc` 기존 개체를 복사 `COleDispatchDriver` 하 고 참조 횟수를 증가 시킵니다.
+양식은 `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` 기존 개체를 복사 `COleDispatchDriver` 하 고 참조 횟수를 증가 시킵니다.
 
-폼 `COleDispatchDriver` ()은 개체를 만들지만 `COleDispatchDriver` 인터페이스에 연결 하지는 않습니다 `IDispatch` . `COleDispatchDriver`인수 없이 ()를 사용 하기 전에 `IDispatch` [Coledispatchdriver:: Createdispatch](#createdispatch) 또는 [Coledispatchdriver:: AttachDispatch](#attachdispatch)를 사용 하 여를 연결 해야 합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
+폼에서 `COleDispatchDriver( )` 개체를 만들지만 `COleDispatchDriver` 인터페이스를 연결 하지는 않습니다 `IDispatch` . 인수 없이를 사용 하려면 먼저 `COleDispatchDriver( )` `IDispatch` [Coledispatchdriver:: Createdispatch](#createdispatch) 또는 [Coledispatchdriver:: AttachDispatch](#attachdispatch)를 사용 하 여를 연결 해야 합니다. 자세한 내용은 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)을 참조하십시오.
 
 ### <a name="example"></a>예제
 
@@ -183,7 +183,7 @@ BOOL CreateDispatch(
 *lpszProgID*<br/>
 디스패치 개체를 만들려는 자동화 개체의 프로그래밍 ID(예: "Excel.Document.5")에 대한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아닌 값이고, 실패하면 0입니다.
 
@@ -199,7 +199,7 @@ BOOL CreateDispatch(
 LPDISPATCH DetachDispatch();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 연결 된 OLE 개체에 대 한 포인터 `IDispatch` 입니다.
 
@@ -278,7 +278,7 @@ void AFX_CDECL InvokeHelper(
 
 *Vtret* 인수의 가능한 값은 varenum 열거형에서 가져옵니다. 가능한 값은 다음과 같습니다.
 
-|기호|반환 형식|
+|Symbol|반환 형식|
 |------------|-----------------|
 |VT_EMPTY|**`void`**|
 |VT_I2|**`short`**|
@@ -406,7 +406,7 @@ void AFX_CDECL SetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 ACDUAL](../../overview/visual-cpp-samples.md)<br/>

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453082"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521280"
 ---
-# <a name="outofrange-class"></a>out_of_range 클래스
+# <a name="out_of_range-class"></a>out_of_range 클래스
 
 이 클래스는 유효 범위를 벗어난 인수를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>설명
 
-[what](../standard-library/exception-class.md)에서 반환된 값은 **message**`.`[data](../standard-library/basic-string-class.md#data)의 복사본입니다.
+에서 반환 하는 값은 `what()` 의 복사본입니다 `message.data()` . 자세한 내용은 [`what`](../standard-library/exception-class.md) 및 [`data`](../standard-library/basic-string-class.md#data)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<stdexcept>
+**헤더:**\<stdexcept>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [logic_error 클래스](../standard-library/logic-error-class.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)

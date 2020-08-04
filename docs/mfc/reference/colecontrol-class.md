@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470921"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520696"
 ---
 # <a name="colecontrol-class"></a>COleControl 클래스
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|`COleControl` 개체를 만듭니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|컨트롤의 현재 모양을 검색 합니다.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|앰비언트 BackColor 속성의 값을 반환 합니다.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|컨트롤의 모양을 업데이트 해야 할 때 프레임 워크에서 호출 됩니다.|
 |[COleControl::DrawMetafile](#drawmetafile)|메타 파일 장치 컨텍스트를 사용할 때 프레임 워크에서 호출 됩니다.|
@@ -580,7 +580,7 @@ OLE 컨트롤 프레임 워크를 개발 하는 방법에 대 한 자세한 내�
 OLE_COLOR AmbientBackColor();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 앰비언트 BackColor 속성 (있는 경우)의 현재 값입니다. 속성이 지원 되지 않는 경우이 함수는 시스템 정의 Windows 배경색을 반환 합니다.
 
@@ -596,7 +596,7 @@ OLE_COLOR AmbientBackColor();
 CString AmbientDisplayName();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 OLE 컨트롤의 이름입니다. 기본값은 길이가 0 인 문자열입니다.
 
@@ -612,7 +612,7 @@ OLE 컨트롤의 이름입니다. 기본값은 길이가 0 인 문자열입니�
 LPFONTDISP AmbientFont();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 앰비언트 글꼴 디스패치 인터페이스에 대 한 포인터입니다. 기본값은 NULL입니다. 반환 값이 NULL이 아닌 경우 [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 멤버 함수를 호출 하 여 글꼴을 해제 해야 합니다.
 
@@ -628,7 +628,7 @@ LPFONTDISP AmbientFont();
 OLE_COLOR AmbientForeColor();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 앰비언트 ForeColor 속성의 현재 값입니다 (있는 경우). 지원 되지 않는 경우이 함수는 시스템 정의 Windows 텍스트 색을 반환 합니다.
 
@@ -644,7 +644,7 @@ OLE_COLOR AmbientForeColor();
 LCID AmbientLocaleID();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 LocaleID 속성 값입니다 (있는 경우). 이 속성이 지원 되지 않는 경우이 함수는 0을 반환 합니다.
 
@@ -660,7 +660,7 @@ LCID AmbientLocaleID();
 short AmbientAppearance();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 모양입니다.
 
@@ -680,7 +680,7 @@ short AmbientAppearance();
 CString AmbientScaleUnits();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 앰비언트 ScaleUnits을 포함 하는 문자열입니다. 이 속성이 지원 되지 않는 경우이 함수는 길이가 0 인 문자열을 반환 합니다.
 
@@ -696,7 +696,7 @@ CString AmbientScaleUnits();
 BOOL AmbientShowGrabHandles();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 잡기 핸들을 표시 해야 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0이 아닌 값을 반환 합니다.
 
@@ -712,7 +712,7 @@ UI가 활성화 될 때 컨테이너를 사용 하 여 컨트롤에서 빗살 �
 BOOL AmbientShowHatching();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 빗살 무늬 패턴을 표시 해야 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0이 아닌 값을 반환 합니다.
 
@@ -728,7 +728,7 @@ BOOL AmbientShowHatching();
 short AmbientTextAlign();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 앰비언트 TextAlign 속성의 상태입니다. 이 속성이 지원 되지 않는 경우이 함수는 0을 반환 합니다.
 
@@ -753,7 +753,7 @@ short AmbientTextAlign();
 BOOL AmbientUIDead();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 사용자 인터페이스 작업에 응답 해야 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 이 속성이 지원 되지 않는 경우이 함수는 0을 반환 합니다.
 
@@ -769,7 +769,7 @@ BOOL AmbientUIDead();
 BOOL AmbientUserMode();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너가 사용자 모드에 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0 (디자인 모드)입니다. 이 속성이 지원 되지 않는 경우이 함수는 TRUE를 반환 합니다.
 
@@ -807,7 +807,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 *dispid*<br/>
 컨트롤의 바인딩된 속성에 대 한 디스패치 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 변경이 허용 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다. 기본값은 0이 아닙니다.
 
@@ -850,7 +850,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 *lpRect*<br/>
 입력 시 조정할 캐럿 영역을 포함 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다. 출력에서 조정 된 캐럿 영역 또는 캐럿 사각형이 완전히 적용 되는 경우 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1044,7 +1044,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 *pPX*<br/>
 [Cpropexchange](../../mfc/reference/cpropexchange-class.md) 개체에 대 한 포인터입니다. 프레임 워크는 해당 방향을 포함 하 여 속성 교환의 컨텍스트를 설정 하기 위해이 개체를 제공 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1091,7 +1091,7 @@ BOOL ExchangeVersion(
 *bConvert*<br/>
 영구 데이터를 저장 하거나 로드 된 것과 동일한 형식으로 유지 관리할 때 최신 형식으로 변환할지 여부를 나타냅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수에서 0이 아닌 값을 가져왔습니다. 그렇지 않으면 0입니다.
 
@@ -1186,7 +1186,7 @@ void AFX_CDECL FireEvent(
 
 *Pbparams* 인수는 공백으로 구분 된 **VTS_** 목록입니다. 공백(쉼표가 아님)으로 구분된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정합니다. 가능한 값은 다음과 같습니다.
 
-|기호|매개 변수 유형|
+|Symbol|매개 변수 유형|
 |------------|--------------------|
 |VTS_COLOR|OLE_COLOR|
 |VTS_FONT|`IFontDisp*`|
@@ -1204,7 +1204,7 @@ void AFX_CDECL FireEvent(
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> Variant 데이터 상수에 대 한 포인터를 제공 하는 VTS_FONT 및 VTS_PICTURE를 제외 하 고 모든 variant 형식에 대해 추가 변형 상수가 정의 되었습니다. 이러한 상수는 **VTS_P** 규칙을 사용 하 여 명명 됩니다 `constantname` . 예를 들어 VTS_PCOLOR은 VTS_COLOR 상수에 대 한 포인터입니다.
+> Variant 데이터 상수에 대 한 포인터를 제공 하는 VTS_FONT 및 VTS_PICTURE를 제외 하 고 모든 variant 형식에 대해 추가 변형 상수가 정의 되었습니다. 이러한 상수는 VTS_P 규칙을 사용 하 여 명명 됩니다 \<CONSTANT-NAME> . 예를 들어 VTS_PCOLOR은 VTS_COLOR 상수에 대 한 포인터입니다.
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl:: FireKeyDown
 
@@ -1451,7 +1451,7 @@ void FireReadyStateChange();
 virtual DWORD GetActivationPolicy();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 POINTERINACTIVE 열거의 플래그 조합입니다. 가능한 플래그는 다음과 같습니다.
 
@@ -1520,7 +1520,7 @@ BOOL GetAmbientProperty(
 |VT_DISPATCH|`LPDISPATCH*`|
 |VT_FONT|`LPFONTDISP*`|
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 앰비언트 속성이 지원 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -1538,7 +1538,7 @@ BOOL GetAmbientProperty(
 short GetAppearance ();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 반환 값은 현재 모양 설정을 **`short`** (VT_I2) 값으로 지정 합니다. 컨트롤의 모양이 flat 이면이 값은 0이 고, 컨트롤의 모양이 3D 이면 1입니다.
 
@@ -1550,7 +1550,7 @@ short GetAppearance ();
 OLE_COLOR GetBackColor();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 반환 값은 현재 배경색을 OLE_COLOR 값으로 지정 합니다. 이 값은를 호출 하 여 COLORREF 값으로 변환할 수 있습니다 `TranslateColor` .
 
@@ -1562,7 +1562,7 @@ OLE_COLOR GetBackColor();
 short GetBorderStyle();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤에 표준 테두리가 있으면 1이 고, 그렇지 않으면입니다. 컨트롤에 테두리가 없으면 0입니다.
 
@@ -1574,7 +1574,7 @@ short GetBorderStyle();
 CWnd* GetCapture();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 활성화 되 고 창이 없는 경우 컨트롤 **`this`** 에 현재 마우스 캡처가 있으면 (컨트롤의 컨테이너에 의해 결정 됨)가 반환 되 고, 캡처가 없으면 NULL이 반환 됩니다.
 
@@ -1597,7 +1597,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 *pclsid*<br/>
 클래스 ID의 위치에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출이 실패 한 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1646,7 +1646,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 LPOLECLIENTSITE GetClientSite();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너에 있는 컨트롤의 현재 클라이언트 사이트에 대 한 포인터입니다.
 
@@ -1662,7 +1662,7 @@ LPOLECLIENTSITE GetClientSite();
 virtual DWORD GetControlFlags();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 ControlFlags 열거에서 플래그의 ORed 조합입니다.
 
@@ -1738,7 +1738,7 @@ CDC* GetDC(
 
 - OLEDC_OFFSCREEN은 개체가 화면에 복사 되어야 하는 화면 외부 비트맵으로 렌더링 하려는 컨테이너를 알려 줍니다. 개체는 수행 하려는 그리기 작업이 많은 깜박임을 생성 하는 경우이 플래그를 사용 해야 합니다. 컨테이너는이 요청을 그대로 사용할 수 있습니다. 그러나이 플래그를 설정 하지 않으면 컨테이너에서 화면 DC를 다시 만들어야 합니다. 이렇게 하면 개체에서 **XOR** 작업을 통해 선택 항목을 표시 하는 등의 직접 화면 작업을 수행할 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 컨테이너 클라이언트 영역에 대 한 디스플레이 장치 컨텍스트에 대 한 포인터 `CWnd` 이 고, 그렇지 않으면 반환 값이 NULL입니다. 표시 장치 컨텍스트는 컨테이너 창의 클라이언트 영역에서 그리는 다음 GDI 함수에서 사용할 수 있습니다.
 
@@ -1754,7 +1754,7 @@ CDC* GetDC(
 BOOL GetEnabled();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤을 사용할 수 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1766,7 +1766,7 @@ BOOL GetEnabled();
 LPDISPATCH GetExtendedControl();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너의 확장 컨트롤 개체에 대 한 포인터입니다. 사용할 수 있는 개체가 없으면이 값은 NULL입니다.
 
@@ -1784,7 +1784,7 @@ LPDISPATCH GetExtendedControl();
 CWnd* GetFocus();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 활성화 되 고 창이 없는 경우 컨트롤 **`this`** 에 현재 키보드 포커스가 있으면 (컨트롤의 컨테이너에 의해 결정 됨)가 반환 되 고, 포커스가 없는 경우에는 NULL이 반환 됩니다.
 
@@ -1802,7 +1802,7 @@ CWnd* GetFocus();
 LPFONTDISP GetFont();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 스톡 글꼴 속성의 글꼴 디스패치 인터페이스에 대 한 포인터입니다.
 
@@ -1842,7 +1842,7 @@ void GetFontTextMetrics(
 OLE_COLOR GetForeColor();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 반환 값은 현재 전경색을 OLE_COLOR 값으로 지정 합니다. 이 값은를 호출 하 여 [Colorref](/windows/win32/gdi/colorref) 값으로 변환할 수 있습니다 `TranslateColor` .
 
@@ -1854,7 +1854,7 @@ OLE_COLOR GetForeColor();
 OLE_HANDLE GetHwnd();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 OLE 컨트롤의 창 핸들입니다 (있는 경우). 그렇지 않으면 NULL입니다.
 
@@ -1900,7 +1900,7 @@ void GetNotSupported();
 long GetReadyState();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 준비 상태 이며 다음 값 중 하나입니다.
 
@@ -1929,7 +1929,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 *lpRect*<br/>
 컨트롤의 좌표가 복사 될 사각형 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 내부 활성 상태 이면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1964,7 +1964,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
 BSTR GetText();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤 텍스트 문자열의 현재 값 또는 문자열이 없는 경우 길이가 0 인 문자열입니다.
 
@@ -1983,7 +1983,7 @@ BSTR GetText();
 virtual IDropTarget* GetWindowlessDropTarget();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체의 인터페이스에 대 한 포인터 `IDropTarget` 입니다. 창에는 창이 없으므로 창 없는 개체는 인터페이스를 등록할 수 없습니다 `IDropTarget` . 그러나 끌어서 놓기를 참여 하기 위해 창 없는 개체는 여전히 인터페이스를 구현 하 고에서 반환할 수 있습니다 `GetWindowlessDropTarget` .
 
@@ -2023,7 +2023,7 @@ void InitializeIIDs(
 CFontHolder& InternalGetFont();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스톡 글꼴 개체를 포함 하는 [Cfontholder](../../mfc/reference/cfontholder-class.md) 개체에 대 한 참조입니다.
 
@@ -2035,7 +2035,7 @@ CFontHolder& InternalGetFont();
 const CString& InternalGetText();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤 텍스트 문자열에 대 한 참조입니다.
 
@@ -2116,7 +2116,7 @@ OLE 컨트롤의 특수 한 로드를 허용 합니다.
 BOOL IsConvertingVBX();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 변환 되 고 있으면 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2142,7 +2142,7 @@ VBX 컨트롤을 사용 하는 폼을 OLE 컨트롤을 사용 하는 폼으로 �
 BOOL IsInvokeAllowed(DISPID dispid);
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 초기화 되었으면 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2158,7 +2158,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 상태가 마지막으로 저장 된 이후 수정 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2174,7 +2174,7 @@ BOOL IsModified();
 BOOL IsOptimizedDraw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨테이너가 현재 그리기 작업에 대해 최적화 된 그리기를 지원 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -2190,7 +2190,7 @@ BOOL IsOptimizedDraw();
 virtual BOOL IsSubclassedControl();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤이 서브클래싱된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -2227,7 +2227,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 *거부*<br/>
 컨트롤의 내부 활성 상태를 잠그면 TRUE이 고, 그렇지 않으면입니다. 잠금이 해제 되 면 FALSE입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 잠금이 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -2360,7 +2360,7 @@ virtual BOOL OnDoVerb(
 *lpRect*<br/>
 컨테이너에 상대적인 컨트롤의 좌표가 복사 될 RECT 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -2440,7 +2440,7 @@ virtual BOOL OnEdit(
 *lpRect*<br/>
 컨테이너의 컨트롤에서 사용 하는 사각형에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -2477,7 +2477,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 *ppenumOleVerb*<br/>
 `IEnumOLEVERB`컨트롤의 동사를 열거 하는 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동사를 사용할 수 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2573,7 +2573,7 @@ virtual BOOL OnGetColorSet(
 *ppColorSet*<br/>
 사용할 색 집합을 복사 해야 하는 위치에 대 한 포인터입니다. 함수에서 색 집합을 반환 하지 않는 경우 NULL이 반환 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 올바른 색 집합이 반환 되 면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 0입니다.
 
@@ -2620,7 +2620,7 @@ virtual BOOL OnGetDisplayString(
 *strValue*<br/>
 문자열이 반환 되는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열이 Strvalue에 반환 되 면 0이 아닌 *값이 고,* 그렇지 않으면 0입니다.
 
@@ -2636,7 +2636,7 @@ virtual BOOL OnGetDisplayString(
 virtual HMENU OnGetInPlaceMenu();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 메뉴에 대 한 핸들입니다. 컨트롤에가 없으면 NULL입니다. 기본 구현에서는 NULL을 반환 합니다.
 
@@ -2693,7 +2693,7 @@ typedef struct tagExtentInfo
 *psizel*<br/>
 컨트롤에 의해 반환 되는 데이터 크기 조정을 가리킵니다. 반환 된 크기 조정 데이터는 조정 되지 않은 모든 차원에 대해-1로 설정 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공적으로 반환 하거나 크기를 조정 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2723,7 +2723,7 @@ virtual BOOL OnGetPredefinedStrings(
 *pCookieArray*<br/>
 반환 값으로 채워질 DWORD 배열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 요소가 *Pstringarray* 및 *pCookieArray*에 추가 된 경우 0이 아닙니다.
 
@@ -2753,7 +2753,7 @@ virtual BOOL OnGetPredefinedValue(
 *lpvarOut*<br/>
 속성 값이 반환 되는 구조에 대 한 포인터 `VARIANT` 입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 값이 *Lpvarout*에서 반환 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -2783,7 +2783,7 @@ virtual BOOL OnGetViewExtent(
 *lpsizel*<br/>
 개체의 크기가 반환 되는 위치를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 익스텐트 정보가 성공적으로 반환 되 면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 0입니다.
 
@@ -2813,7 +2813,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 *pRect*<br/>
 개체를 그려야 하는 사각형을 지정 하는 [RECTL](/windows/win32/api/windef/ns-windef-rectl) 구조체를 가리킵니다. 이 매개 변수는 개체의 위치 지정 및 늘이기를 제어 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체로 크기가 지정 된 사각형이 성공적으로 반환 되 면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 0입니다.
 
@@ -2829,7 +2829,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 virtual DWORD OnGetViewStatus();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 VIEWSTATUS 열거형 값 중 하나입니다. 그렇지 않으면 0입니다. 가능한 값은 다음을 조합한 것입니다.
 
@@ -2916,7 +2916,7 @@ WM_SETCURSOR 발생 한 마우스 메시지의 식별자입니다.
 *bSetAlways*<br/>
 개체에서 커서를 설정 해야 하는지 여부를 지정 합니다. TRUE 이면 개체가 커서를 설정 해야 합니다. FALSE 이면 커서는 커서를 설정할 필요가 없으며,이 경우에는 S_FALSE를 반환 해야 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3021,7 +3021,7 @@ virtual BOOL OnMapPropertyToPage(
 *pbPageOptional*<br/>
 지정 된 속성 페이지 사용이 선택 사항 인지 여부를 나타내는 표시기를 반환 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Lpclsid*에 클래스 ID가 반환 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -3064,7 +3064,7 @@ virtual BOOL OnProperties(
 *lpRect*<br/>
 컨테이너의 컨트롤에서 사용 하는 사각형에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -3112,7 +3112,7 @@ virtual BOOL OnQueryHitPoint(
 
 - HITRESULT_HIT *Ptlloc* 는 개체의 이미지 내에 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 적중 결과가 성공적으로 반환 되 면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 0입니다. 적중은 OLE 컨트롤 표시 영역과 겹칩니다.
 
@@ -3154,7 +3154,7 @@ virtual BOOL OnQueryHitRect(
 
 - HITRESULT_HIT 사각형에서 하나 이상의 점이 개체에서 적중 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 적중 결과가 성공적으로 반환 되 면 0이 아닌 값이 반환 됩니다. 그렇지 않으면 0입니다.
 
@@ -3180,7 +3180,7 @@ virtual BOOL OnRenderData(
 *lpStgMedium*<br/>
 데이터가 반환 되는 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3212,7 +3212,7 @@ virtual BOOL OnRenderFileData(
 *.Pfile*<br/>
 데이터가 렌더링 될 [CFile](../../mfc/reference/cfile-class.md) 개체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3242,7 +3242,7 @@ virtual BOOL OnRenderGlobalData(
 *phGlobal*<br/>
 데이터가 반환 될 전역 메모리의 핸들을 가리킵니다. 메모리가 할당 되지 않은 경우이 매개 변수는 NULL이 될 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3306,7 +3306,7 @@ virtual BOOL OnSetData(
 *bRelease*<br/>
 컨트롤에서 저장소 미디어를 해제 해야 하면 TRUE이 고, 그렇지 않으면입니다. 컨트롤에서 저장 미디어를 해제 하지 않아야 하면 FALSE입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3331,7 +3331,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 *lpSizeL*<br/>
 정수 (long) `SIZEL` 를 사용 하 여 컨트롤의 너비와 높이를 나타내는 구조체에 대 한 포인터로, HIMETRIC 단위로 표현 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 크기 변경이 허용 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -3359,7 +3359,7 @@ virtual BOOL OnSetObjectRects(
 *lpRectClip*<br/>
 `RECT`컨트롤을 클리핑할 사각형 영역을 나타내는 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 위치를 조정 하는 것이 허용 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -3421,7 +3421,7 @@ Windows에 의해 전달 됩니다. 추가 메시지 관련 정보를 지정 합
 *plResult*<br/>
 Windows 결과 코드입니다. 메시지 처리 결과를 지정 하며 보낸 메시지에 따라 다릅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3453,7 +3453,7 @@ virtual UINT ParentToClient(
 *bHitTest*<br/>
 지점에서 적중 테스트를 수행할지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *BHitTest* 가 FALSE 이면 HTNOWHERE을 반환 합니다. *BHitTest* 가 TRUE 인 경우는 OLE 컨트롤의 클라이언트 영역에서 부모 (컨테이너) 포인트가 배치 위치를 반환 하며, 다음 마우스 적중 테스트 값 중 하나입니다.
 
@@ -3575,7 +3575,7 @@ void Refresh();
 BOOL ReleaseCapture();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3596,7 +3596,7 @@ int ReleaseDC(CDC* pDC);
 *컨트롤러가*<br/>
 해제할 컨테이너 장치 컨텍스트를 식별 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -3705,7 +3705,7 @@ CFont* SelectFontObject(
 *fontHolder*<br/>
 선택할 글꼴을 나타내는 [Cfontholder](../../mfc/reference/cfontholder-class.md) 개체에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 선택 된 글꼴에 대 한 포인터입니다. 호출자가 *Fontholder를* 사용 하는 모든 그리기 작업을 완료 한 경우 [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)에 매개 변수로 전달 하 여 이전에 선택한 글꼴을 다시 선택 해야 합니다.
 
@@ -3722,7 +3722,7 @@ CFont* SelectStockFont(CDC* pDC);
 *컨트롤러가*<br/>
 글꼴이 선택 될 장치 컨텍스트입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 선택한 개체에 대 한 포인터 `CFont` 입니다. 완료 되 면 [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) 를 사용 하 여이 글꼴을 장치 컨텍스트로 다시 선택 해야 합니다.
 
@@ -3788,7 +3788,7 @@ DWORD SerializeVersion(
 *bConvert*<br/>
 영구 데이터를 저장 하는 경우 해당 데이터를 최신 형식으로 변환할지, 아니면 로드 했을 때와 동일한 형식으로 유지할지를 나타냅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 버전 번호입니다. 지정 된 보관 파일이 로드 되는 경우 `SerializeVersion` 해당 보관 파일에서 로드 된 버전을 반환 합니다. 그렇지 않으면 현재 로드 된 버전을 반환 합니다.
 
@@ -3855,7 +3855,7 @@ void SetBorderStyle(short sBorderStyle);
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd`마우스 입력을 이전에 받은 창 개체에 대 한 포인터입니다.
 
@@ -3879,7 +3879,7 @@ BOOL SetControlSize(int cx, int cy);
 *cy*<br/>
 컨트롤의 새 높이 (픽셀)를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -3914,7 +3914,7 @@ void SetEnabled(BOOL bEnabled);
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd`이전에 입력 포커스가 있던 창 개체에 대 한 포인터 이거나, 이러한 창이 없으면 NULL입니다.
 
@@ -4042,7 +4042,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 *lpRect*<br/>
 컨테이너에 상대적인 컨트롤의 새 좌표가 포함 된 사각형에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 호출에 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -4153,7 +4153,7 @@ OLE_COLOR 데이터 형식입니다. 자세한 내용은 Windows [OleTranslateCo
 *hpal*<br/>
 선택적인 색상표에 대 한 핸들입니다. NULL 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 장치에서 나타낼 수 있는 *clrcolor* 값에 가장 가까운 단색을 정의 하는 RGB (빨강, 녹색, 파랑) 32 비트 색 값입니다.
 
@@ -4169,7 +4169,7 @@ OLE_COLOR 데이터 형식입니다. 자세한 내용은 Windows [OleTranslateCo
 BOOL WillAmbientsBeValidDuringLoad();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 0이 아닌 값은 앰비언트 속성이 유효 함을 나타냅니다. 그렇지 않으면 앰비언트 속성이 유효 하지 않습니다.
 
@@ -4199,7 +4199,7 @@ virtual LRESULT WindowProc(
 *lParam*<br/>
 메시지 처리에 사용 되는 추가 정보를 제공 합니다. 매개 변수 값은 메시지에 따라 다릅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 발송 된 메시지의 반환 값입니다.
 
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 이 함수를 호출 하 여 컨트롤의 메시지 맵을 통해 특정 메시지를 디스패치합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MFC 샘플 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 샘플 TESTHELP](../../overview/visual-cpp-samples.md)<br/>

@@ -1,16 +1,16 @@
 ---
 title: 컴파일러 옵션 범주별 목록
 description: Microsoft C/c + + 컴파일러 명령줄 옵션 범주별 참조 목록입니다.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223878"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520955"
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 
@@ -171,6 +171,7 @@ ms.locfileid: "87223878"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | 초기 화면 배너를 표시하지 않습니다. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 추가 보안 기능 및 경고를 사용하도록 설정합니다. |
 | [`/showIncludes`](showincludes-list-include-files.md) | 컴파일하는 동안 전체 포함 파일의 목록을 표시합니다. |
+| [`/sourceDependencies`](sourcedependencies.md) | 헤더, 모듈 및 기타 소스 종속성을 나열 합니다. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | C 소스 파일을 지정합니다. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | 모든 소스 파일을 C로 지정 합니다. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | C++ 소스 파일을 지정합니다. |
@@ -231,7 +232,7 @@ ms.locfileid: "87223878"
 | [`/Ze`](za-ze-disable-language-extensions.md) | 더 이상 사용되지 않습니다. 언어 확장을 사용합니다. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Visual Studio 2015에서 제거 되었습니다. 함수 프로토타입을 생성합니다. |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C/c + + 빌드 참조](c-cpp-building-reference.md)\
 [MSVC 컴파일러 옵션](compiler-options.md)\

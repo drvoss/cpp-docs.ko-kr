@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228949"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521124"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ ms.locfileid: "87228949"
 
 ## <a name="grammar"></a>문법
 
-*decl-지정자*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *확장-decl-seq*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*확장-decl-modifier* *확장-decl-시퀀스*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *`extended-decl-modifier`* <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***number***`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ ms.locfileid: "87228949"
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get-func-name_ &#124;- **`,put=`** _func-name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ ms.locfileid: "87228949"
 
 확장 특성 문법은는,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 등의 Microsoft 전용 저장소 클래스 특성을 지원 [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) [`thread`](../cpp/thread.md) 합니다. 또한 다음과 같은 COM 개체 특성도 지원 합니다. [`property`](../cpp/property-cpp.md) [`uuid`](../cpp/uuid-cpp.md)
 
-,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** 및 **`uuid`** 저장소 클래스 특성은 해당 특성이 적용 되는 개체 또는 함수의 선언에만 해당 되는 속성입니다. **`thread`** 특성은 데이터 및 개체에만 영향을 줍니다. **`naked`** 및 **`spectre`** 특성은 함수에만 영향을 줍니다. **`dllimport`** 및 **`dllexport`** 특성은 함수, 데이터 및 개체에 영향을 줍니다. **`property`**, **`selectany`** 및 **UU'ID** 특성은 COM 개체에 영향을 줍니다.
+,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** 및 **`uuid`** 저장소 클래스 특성은 해당 특성이 적용 되는 개체 또는 함수의 선언에만 해당 되는 속성입니다. **`thread`** 특성은 데이터 및 개체에만 영향을 줍니다. **`naked`** 및 **`spectre`** 특성은 함수에만 영향을 줍니다. **`dllimport`** 및 **`dllexport`** 특성은 함수, 데이터 및 개체에 영향을 줍니다. **`property`**, **`selectany`** 및 특성은 **`uuid`** COM 개체에 영향을 줍니다.
 
 이전 버전과의 호환성을 위해 **`_declspec`** 는 **`__declspec`** 컴파일러 옵션 [/Za \( 사용 안 함 언어 확장](../build/reference/za-ze-disable-language-extensions.md) 을 지정 하지 않는 경우의 동의어입니다.
 

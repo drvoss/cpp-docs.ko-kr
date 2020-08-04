@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229105"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521163"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>배타적 비트 OR 연산자: ^
 
@@ -28,7 +28,7 @@ ms.locfileid: "87229105"
 
 ## <a name="remarks"></a>설명
 
-배타적 비트 OR 연산자 ( **`^`** )는 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교 합니다. 첫 번째 피연산자의 비트가 0이 고 다른 비트가 1 이면 해당 결과 비트는 1로 설정 됩니다. 그렇지 않으면 해당 결과 비트는 0으로 설정됩니다.
+배타적 비트 OR 연산자 ( **`^`** )는 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교 합니다. 피연산자 중 하나의 비트가 0이 고 다른 피연산자의 비트가 1 이면 해당 결과 비트는 1로 설정 됩니다. 그렇지 않으면 해당 결과 비트는 0으로 설정됩니다.
 
 연산자에 대 한 두 피연산자는 정수 계열 형식 이어야 합니다. [표준 변환](standard-conversions.md) 에서 다루는 일반적인 산술 변환은 피연산자에 적용 됩니다.
 
@@ -53,6 +53,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

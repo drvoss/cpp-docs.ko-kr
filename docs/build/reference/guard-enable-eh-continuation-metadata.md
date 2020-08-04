@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190522"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520527"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (EH 연속 메타데이터 사용)
 
@@ -51,9 +51,9 @@ Comdat에서 찾았지만를 사용 하 여 컴파일되지 않은 SEH 섹션 �
 
 링커가 메타 데이터를 생성할 수 없는 경우 다음 오류 중 하나를 내보냅니다.
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 이진 파일에 EHCONT 데이터가 포함 되어 있는지 확인 하려면 이진의 load config를 덤프할 때 다음 요소를 찾습니다.
 
@@ -87,7 +87,7 @@ e:\>link /dump /loadconfig CETTest.exe
 
 1. 드롭다운 컨트롤에서 **예 (/b가드: ehcont)** 를 선택 하 여 EH 연속 메타 데이터를 사용 하도록 설정 하거나 **No (/sguard: ehcont-)** 를 선택 하 여 사용 하지 않도록 설정 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [/s가드 (제어 흐름 보호 사용)](guard-enable-control-flow-guard.md)\
 [MSVC 컴파일러 옵션](compiler-options.md)\

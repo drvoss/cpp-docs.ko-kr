@@ -1,8 +1,8 @@
 ---
 title: /Yu(미리 컴파일된 헤더 파일 사용)
-ms.date: 11/04/2016
+ms.date: 07/31/2020
 f1_keywords:
-- /yu
+- /Yu
 helpviewer_keywords:
 - Yu compiler option [C++]
 - /Yu compiler option [C++]
@@ -11,92 +11,88 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cccce39949f23e4ceb72807ecaef3597ab733c4
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316147"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520464"
 ---
-# <a name="yu-use-precompiled-header-file"></a>/Yu(미리 컴파일된 헤더 파일 사용)
+# <a name="yu-use-precompiled-header-file"></a>`/Yu`(미리 컴파일된 헤더 파일 사용)
 
-현재 컴파일에서 기존의 미리 컴파일된 헤더 (.pch) 파일을 사용 하도록 컴파일러에 지시 합니다.
+컴파일러가 현재 컴파일에서 기존의 미리 컴파일된 헤더 () 파일을 사용 하도록 지시 *`.pch`* 합니다.
 
 ## <a name="syntax"></a>구문
 
-```
-/Yu[filename]
-```
+> **`/Yu`**\[*파일 이름*]
 
 ## <a name="arguments"></a>인수
 
 *filename*<br/>
-이름을 사용 하 여 소스 파일에 포함 된 헤더 파일에 **#include** 전처리기 지시문입니다.
+전처리기 지시문을 사용 하 여 소스 파일에 포함 된 헤더 파일의 이름입니다 `#include` .
 
 ## <a name="remarks"></a>설명
 
-포함 파일의 이름을 둘 다에 대해 동일 해야 합니다 **/Yc** 및 미리 컴파일된 헤더를 만드는 옵션 후속 **/Yu** 미리 컴파일된 헤더 사용을 지정 하는 옵션입니다.
+포함 파일의 이름은 **`/Yc`** 미리 컴파일된 헤더를 만드는 옵션과 **`/Yu`** 미리 컴파일된 헤더 사용을 나타내는 이후 옵션 모두에서 동일 해야 합니다.
 
-에 대 한 **/Yc**를 `filename` 시점을 지정 중지 되는 미리 컴파일; 컴파일러 컴파일하며 모든 코드 `filename` include 파일 확장의 기본 이름을 사용 하 여 미리 컴파일된 헤더의 결과 .pch로 합니다.
+의 **`/Yc`** 경우 *filename* 은 미리 컴파일을 중지 하는 지점을 지정 합니다. 컴파일러는 모든 코드를 *파일 이름* 으로 미리 컴파일하고 포함 파일의 기본 이름과의 확장명을 사용 하 여 결과 미리 컴파일된 헤더의 이름을 지정 합니다 *`.pch`* .
 
-.Pch 파일을 만들어야 합니다를 사용 하 여 **/Yc**합니다.
+를 *`.pch`* 사용 하 여 파일을 만들어야 합니다 **`/Yc`** .
 
-컴파일러는.h 파일로 미리 컴파일된 하기 전에 발생 하는 모든 코드를 처리 합니다. 뒤에 건너뜁니다 합니다 **#include** .h 파일과 연결 된 지시문.pch 파일에 포함 된 코드를 사용 하 고 다음 모든 코드를 컴파일합니다 `filename`합니다.
+컴파일러는 .h 파일 이전에 발생 하는 모든 코드를 미리 컴파일된 것으로 처리 합니다. 이 `#include` 지시문은 파일에 연결 된 지시문 바로 다음에 *`.h`* 파일에 포함 된 코드를 사용 하 *`.pch`* 고 파일 *이름*뒤에 모든 코드를 컴파일하는 것으로 건너뜁니다.
 
-명령줄에서 없습니다 사이 공백을 **/Yu** 고 `filename`입니다.
+명령줄에서 **`/Yu`** 및 *파일 이름*사이에는 공백이 허용 되지 않습니다.
 
-지정 하는 경우는 **/Yu** 옵션 없이 소스 프로그램 파일 이름 포함 해야 합니다는 [#pragma hdrstop](../../preprocessor/hdrstop.md) 미리 컴파일된 헤더.pch 파일의 파일 이름을 지정 하는 pragma입니다. 이 경우 컴파일러에서 라는 미리 컴파일된 헤더 (.pch 파일)를 사용할지 [/Fp (이름입니다. Pch 파일)](fp-name-dot-pch-file.md)합니다. 컴파일러는 해당 pragma의 위치를 건너뛰고 pragma를 사용 하면 지정 된 미리 컴파일된 헤더 파일의 컴파일된 상태를 복원만 pragma 뒤에 오는 코드를 컴파일합니다. 하는 경우 **#pragma hdrstop** 확장명이.pch 인 소스 파일의 기본 이름에서 파생 된 이름으로 파일의 컴파일러는 파일 이름을 지정 하지 않습니다. 사용할 수도 있습니다는 **/Fp** 다른.pch 파일을 지정 하는 옵션입니다.
+파일 이름 없이 옵션을 지정 하는 경우 **`/Yu`** 소스 프로그램에는 [`#pragma hdrstop`](../../preprocessor/hdrstop.md) 미리 컴파일된 헤더 파일의 파일 이름을 지정 하는 pragma가 포함 되어 있어야 합니다 *`.pch`* . 이 경우 컴파일러는에 의해 이름이 지정 된 미리 컴파일된 헤더 (파일)를 사용 합니다 *`.pch`* [`/Fp (Name .pch file)`](fp-name-dot-pch-file.md) . 컴파일러가 해당 pragma의 위치로 건너뛰고 지정 된 미리 컴파일된 헤더 파일에서 컴파일된 상태를 복원 합니다. 그런 다음 pragma 다음에 오는 코드만 컴파일합니다. `#pragma hdrstop`에서 파일 이름을 지정 하지 않은 경우 컴파일러는 확장명이 인 소스 파일의 기본 이름에서 파생 된 이름을 사용 하 여 파일을 찾습니다 *`.pch`* . 옵션을 사용 하 여 **`/Fp`** 다른 파일을 지정할 수도 있습니다 *`.pch`* .
 
-지정 하는 경우는 **/Yu** 파일 이름 없이 옵션을 지정 하지는 **hdrstop** pragma에 오류 메시지가 생성 되 고 컴파일이 성공 합니다.
+**`/Yu`** 파일 이름 없이 옵션을 지정 하 고 pragma를 지정 하지 않으면 `hdrstop` 오류 메시지가 생성 되 고 컴파일이 실패 합니다.
 
-경우는 **/Yc** `filename` 하 고 **/Yu** `filename` 옵션 같은 명령줄에서 발생 하 고 모두 동일한 파일 이름을 참조 **/Yc** `filename` 사용 우선 순위가 최대 모든 코드를 미리 컴파일 및 명명 된 파일을 포함 합니다. 이 기능은 메이크파일 작성을 단순화 합니다.
+**`/Yc`** _filename_ **`/Yu`** 같은 명령줄에서 파일 이름 및 _파일_ 이름 옵션을 사용 하 고 둘 다 동일한 파일 이름을 참조 하는 경우 파일 이름에 우선 순위를 지정 하 여 명명 된 파일을 포함 하 여 **`/Yc`** _filename_ 모든 코드를 미리 컴파일하는 것입니다. 이 기능은 메이크파일 작성을 간소화 합니다.
 
-.Pch 파일에서 컴퓨터 환경에 대 한 정보 뿐만 아니라 프로그램의 메모리 주소 정보에 포함 하기 때문에 만들어진 컴퓨터의 pch 파일만 사용 해야 합니다.
+파일에는 *`.pch`* 컴퓨터 환경 및 프로그램에 대 한 메모리 주소 정보에 대 한 정보가 포함 되어 있으므로 파일을 만든 컴퓨터 에서만 파일을 사용 해야 합니다 *`.pch`* .
 
 미리 컴파일된 헤더에 대 한 자세한 내용은 다음을 참조 하세요.
 
-- [/Y(미리 컴파일된 헤더)](y-precompiled-headers.md)
+- [`/Y`(미리 컴파일된 헤더)](y-precompiled-headers.md)
 
 - [미리 컴파일된 헤더 파일](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
-1. 지정할 [/Yc (미리 컴파일된 헤더 파일 만들기)](yc-create-precompiled-header-file.md) 프로젝트에서.cpp 파일입니다.
+1. 프로젝트의 .cpp 파일에 [ `/Yc` (미리 컴파일된 헤더 파일 만들기)](yc-create-precompiled-header-file.md) 를 지정 합니다.
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [Visual Studio에서 C++ 컴파일러 및 빌드 속성 설정](../working-with-project-properties.md)을 참조합니다.
 
-1. **C/C++** 폴더를 클릭합니다.
+1. **구성 속성**  >  **C/c + +**  >  **미리 컴파일된 헤더** 속성 페이지를 선택 합니다.
 
-1. 클릭 합니다 **미리 컴파일된 헤더** 속성 페이지.
-
-1. 수정 된 **파일에서 PCH 만들기/사용** 속성 또는 **미리 컴파일된 헤더 만들기/사용** 속성입니다.
+1. **미리 컴파일된 헤더** 속성, **CREATE/Use PCH to File** 속성 또는 **Create/use 미리 컴파일된 헤더** 속성을 수정 합니다.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
 
-- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>을 참조하십시오.
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>를 확인합니다.
 
-## <a name="examples"></a>예제
+## <a name="example"></a>예제
 
-하는 경우 다음 코드:
+다음 코드는 다음과 같습니다.
 
-```
+```cpp
 #include <afxwin.h>   // Include header for class library
 #include "resource.h" // Include resource definitions
 #include "myapp.h"    // Include information specific to this app
 ...
 ```
 
-명령줄을 사용 하 여 컴파일된 `CL /YuMYAPP.H PROG.CPP`, 컴파일러는 세 가지를 처리 하지 않습니다 문은 하지만 MYAPP.pch 사용 하 여 미리 컴파일된 코드 파일 (및 모든 파일)의 세 가지를 모두 전처리에 포함 된 저장 함으로써 포함 합니다.
+는 명령줄을 사용 하 여 컴파일되며 `CL /YuMYAPP.H PROG.CPP` 컴파일러는 세 개의 include 문을 처리 하지 않습니다. 대신에서 미리 컴파일된 코드를 사용 합니다 .이 코드는 *`MYAPP.pch`* 세 파일 (및 포함 될 수 있는 모든 파일)을 전처리 하는 데 소요 되는 시간을 절약 합니다.
 
-사용할 수는 [/Fp (이름입니다. Pch 파일)](fp-name-dot-pch-file.md) 옵션을 **/Yu** 이름 중 하나는 파일 이름 인수를 다른 경우.pch 파일의 이름을 지정 하는 옵션 **/Yc** 또는 같은 소스 파일의 기본 이름을 다음:
+[`/Fp (Name .pch file)`](fp-name-dot-pch-file.md)다음 예제와 같이 옵션을 옵션과 함께 사용 하 여 **`/Yu`** *`.pch`* 이름이 *filename* 인수 **`/Yc`** 또는 원본 파일의 기본 이름과 다른 경우 파일 이름을 지정할 수 있습니다.
 
-```
+```cmd
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 ```
 
-이 명령은 MYPCH.pch 라는 미리 컴파일된 헤더 파일을 지정 합니다. 컴파일러 모든까지 헤더 파일을 포함 하 여 MYAPP.h 미리 컴파일된 상태를 복원 하려면 해당 콘텐츠를 사용 합니다. 컴파일러는 MYAPP.h 뒤에 오는 코드를 컴파일합니다 **포함** 문입니다.
+이 명령은 이라는 미리 컴파일된 헤더 파일을 지정 합니다 *`MYPCH.pch`* . 컴파일러는 해당 콘텐츠를 사용 하 여 모든 헤더 파일의 미리 컴파일된 상태를까지 복원 *`MYAPP.h`* 합니다. 그런 다음 컴파일러는 * 지시문 후에 발생 하는 코드를 컴파일합니다 `#include "MYAPP.h"` .
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

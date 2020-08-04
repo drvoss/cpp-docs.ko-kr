@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42d640ba456e8327df7a070cb12914b765c07bf5
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204991"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520916"
 ---
 # <a name="allocator-class"></a>allocator 클래스
 
@@ -131,7 +131,7 @@ const_pointer address(const_reference val) const;
 *짧은*\
 주소를 검색하는 개체의 const 또는 nonconst 값입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 각각 const 또는 nonconst 값으로 발견된 개체에 대한 const 또는 nonconst 포인터입니다.
 
@@ -199,7 +199,7 @@ pointer allocate(size_type count, const void* _Hint);
 *_Hint*\
 할당자 개체를 지원할 수 있는 const 포인터는 요청 이전에 할당된 개체의 주소를 찾음으로써 스토리지의 요청을 충족시킵니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 할당된 개체에 대한 포인터이거나, 메모리가 할당되지 않은 경우 null입니다.
 
@@ -558,7 +558,7 @@ void destroy(pointer ptr);
 
 #### <a name="remarks"></a>설명
 
-멤버 함수는 소멸자 *ptr* `ptr->` **Type**::**~ type**을 호출 하 여 ptr에 지정 된 개체를 삭제 합니다.
+멤버 함수는 소멸자를 호출 하 여 *ptr*에서 지정 된 개체를 삭제 합니다 `ptr->Type::~Type` .
 
 #### <a name="example"></a>예제
 
@@ -678,7 +678,7 @@ The difference between the integer's addresses is: 8.
 size_type max_size() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 할당할 수 있는 요소의 수입니다.
 
@@ -753,7 +753,7 @@ template <class Other>
 *오른쪽*\
 다른 할당자 개체에 할당할 할당자 개체입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 할당자 개체에 대한 참조
 

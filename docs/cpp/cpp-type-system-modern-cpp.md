@@ -1,19 +1,18 @@
-﻿---
+---
 title: C++ 형식 시스템
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228988"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521215"
 ---
 # <a name="c-type-system"></a>C++ 형식 시스템
 
 *형식의* 개념은 c + +에서 매우 중요 합니다. 모든 변수, 함수 인수 및 함수 반환 값은 형식이 있어야 컴파일할 수 있습니다. 또한 모든 식(리터럴 값 포함)은 확인 전 컴파일러가 암시적으로 형식을 지정합니다. 형식에는 **`int`** 정수 값을 저장 **`double`** 하거나, 부동 소수점 값 ( *스칼라* 데이터 형식이 라고도 함)을 저장 하거나, 텍스트를 저장 하는 표준 라이브러리 클래스 [std:: basic_string](../standard-library/basic-string-class.md) 를 저장 하는 몇 가지 예가 있습니다. 또는를 정의 하 여 고유 형식을 만들 수 **`class`** 있습니다 **`struct`** . 이 형식은 변수에 할당되는(또는 식 결과) 메모리 양, 해당 변수에 저장할 수 있는 값의 유형, 이러한 값(비트 패턴)의 해석 방법 및 여기에 대해 수행할 수 있는 작업을 지정합니다. 이 문서에는 C++ 형식 시스템의 주요 기능에 대한 비공식적 개요가 들어 있습니다.
-
 
 ## <a name="terminology"></a>용어
 
@@ -52,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>기본(기본 제공) 형식
 
-일부 언어와 달리, C++에는 다른 형식이 파생되는 유니버설 기본 형식이 없습니다. 이 언어에는 *기본 제공 형식*이 라고도 하는 여러 가지 *기본 형식이*포함 되어 있습니다. 여기에는,,, 등의 숫자 형식과 **`int`** **`double`** **`long`** **`bool`** **`char`** **`wchar_t`** ASCII 및 유니코드 문자에 대 한 및 형식이 각각 포함 됩니다. 32 비트로 저장 되는 대부분의 기본 형식 (예를 들어, **`bool`** **`double`** **wc.exe `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` unsigned int '**)은 0에서 4294967295 사이의 값을 저장할 수 있습니다. 각 사례에서 사용할 수 있는 값의 총 수는 동일하며, 범위만 다릅니다.
+일부 언어와 달리, C++에는 다른 형식이 파생되는 유니버설 기본 형식이 없습니다. 이 언어에는 *기본 제공 형식*이 라고도 하는 여러 가지 *기본 형식이*포함 되어 있습니다. 여기에는,,, 등의 숫자 형식과 **`int`** **`double`** **`long`** **`bool`** **`char`** **`wchar_t`** ASCII 및 유니코드 문자에 대 한 및 형식이 각각 포함 됩니다. 대부분의 정수 계열 기본 형식 ( **`bool`** ,, **`double`** **`wchar_t`** 및 관련 형식 제외)에는 **`unsigned`** 변수가 저장할 수 있는 값의 범위를 수정 하는 버전이 있습니다. 예를 들어 **`int`** 32 비트 부호 있는 정수를 저장 하는는-2147483648에서 2147483647 사이의 값을 나타낼 수 있습니다. **`unsigned int`** 또한 32 비트로 저장 되는는 0에서 4294967295 사이의 값을 저장할 수 있습니다. 각 사례에서 사용할 수 있는 값의 총 수는 동일하며, 범위만 다릅니다.
 
 제어 기본 항목은 어떤 작업을 수행할 수 있는지 및 기본 형식 및 방법들이 다른 기본 형식으로 변환될 수 있는지를 통제하도록 만든 컴파일러에 의해 인식됩니다. 기본 제공 형식 및 크기와 숫자 제한의 전체 목록은 [기본 제공 형식](../cpp/fundamental-types-cpp.md)을 참조 하세요.
 
-다음 그림은 기본 제공 형식의 상대적 크기를 보여 줍니다.
+다음 그림에서는 Microsoft c + + 구현에서 기본 제공 형식의 상대적 크기를 보여 줍니다.
 
 ![형식에서 빌드된&#45;의 크기 (바이트)](../cpp/media/built-intypesizes.png "형식에서 빌드된&#45;의 크기 (바이트)")
 
-다음 표에는 가장 자주 사용하는 기본 형식이 나와 있습니다.
+다음 표에서는 가장 자주 사용 되는 기본 형식 및 Microsoft c + + 구현에서의 크기를 보여 줍니다.
 
-|Type|크기|설명|
-|----------|----------|-------------|
-|int|4바이트|정수 값에 대한 기본 선택입니다.|
-|double|8바이트|부동 소수점 값에 대한 기본 선택입니다.|
-|bool|1바이트|true 또는 false가 될 수 있는 값을 나타냅니다.|
-|char|1바이트|UNICODE로 변환되지 않는 이전 C 스타일 문자열 또는 std::string 개체의 ASCII 문자에 사용합니다.|
-|wchar_t|2바이트|UNICODE 형식(Windows의 경우 UTF-16, 운영 체제마다 다를 수 있음)으로 인코딩할 수 있는 "와이드" 문자 값을 나타냅니다. `std::wstring` 형식 문자열에 사용되는 문자 형식입니다.|
-|부호 없는 &nbsp; 문자|1바이트|C + +에는 기본 제공 바이트 형식이 없습니다.  **`unsigned char`** 바이트 값을 나타내는 데 사용 합니다.|
-|부호 없는 정수|4바이트|비트 플래그에 대한 기본 선택입니다.|
-|long long|8바이트|매우 큰 정수 값을 나타냅니다.|
+| Type | 크기 | 의견 |
+|--|--|--|
+| **`int`** | 4바이트 | 정수 값에 대한 기본 선택입니다. |
+| **`double`** | 8바이트 | 부동 소수점 값에 대한 기본 선택입니다. |
+| **`bool`** | 1바이트 | true 또는 false가 될 수 있는 값을 나타냅니다. |
+| **`char`** | 1바이트 | UNICODE로 변환되지 않는 이전 C 스타일 문자열 또는 std::string 개체의 ASCII 문자에 사용합니다. |
+| **`wchar_t`** | 2바이트 | UNICODE 형식(Windows의 경우 UTF-16, 운영 체제마다 다를 수 있음)으로 인코딩할 수 있는 "와이드" 문자 값을 나타냅니다. `std::wstring` 형식 문자열에 사용되는 문자 형식입니다. |
+| **`unsigned char`** | 1바이트 | C + +에는 기본 제공 바이트 형식이 없습니다.  **`unsigned char`** 바이트 값을 나타내는 데 사용 합니다. |
+| **`unsigned int`** | 4바이트 | 비트 플래그에 대한 기본 선택입니다. |
+| **`long long`** | 8바이트 | 매우 큰 정수 값을 나타냅니다. |
+
+다른 c + + 구현에서는 특정 숫자 형식에 대해 서로 다른 크기를 사용할 수 있습니다. C + + 표준에 필요한 크기 및 크기 관계에 대 한 자세한 내용은 [기본 제공 형식](fundamental-types-cpp.md)을 참조 하세요.
 
 ## <a name="the-void-type"></a>void 형식입니다.
 
-형식은 특수 한 형식입니다 **`void`** . 형식의 변수는 선언할 수 **`void`** 없지만 __ \* void__ 형식의 변수 (에 대 한 포인터)를 선언할 수 있습니다 **`void`** . 이러한 변수는 원시 (형식화 되지 않은) 메모리를 할당할 때 필요할 수도 있습니다. 그러나에 대 한 포인터 **`void`** 는 형식이 안전 하지 않으며 일반적으로 최신 c + +에서 사용 하지 않는 것이 좋습니다. 함수 선언에서 **`void`** 반환 값은 함수가 값을 반환 하지 않음을 의미 합니다 .이는 일반적이 고 허용 되는 사용입니다 **`void`** . C 언어는 매개 변수 목록에서 선언 하는 매개 변수가 없는 함수를 필요로 하지만 ( **`void`** 예:) `fou(void)` 이 방법은 최신 c + +에서는 권장 되지 않으며 선언 되어야 `fou()` 합니다. 자세한 내용은 [형식 변환 및 형식 안전성](../cpp/type-conversions-and-type-safety-modern-cpp.md)을 참조 하세요.
+**`void`** 형식은 특수 한 형식입니다. 형식의 변수는 선언할 수 없지만 형식의 변수 **`void`** `void *` (에 대 한 포인터)를 선언할 수 있습니다. 이러한 변수는 **`void`** 원시 (형식화 되지 않은) 메모리를 할당할 때 필요할 수도 있습니다. 그러나에 대 한 포인터 **`void`** 는 형식이 안전 하지 않으며 일반적으로 최신 c + +에서 사용 하지 않는 것이 좋습니다. 함수 선언에서 **`void`** 반환 값은 함수가 값을 반환 하지 않음을 의미 합니다 .이는 일반적이 고 허용 되는 사용입니다 **`void`** . C 언어는 매개 변수 목록에서 선언 하는 매개 변수가 없는 함수를 필요로 하지만 ( **`void`** 예:) `fou(void)` 이 방법은 최신 c + +에서는 권장 되지 않으며 선언 되어야 `fou()` 합니다. 자세한 내용은 [형식 변환 및 형식 안전성](../cpp/type-conversions-and-type-safety-modern-cpp.md)을 참조 하세요.
 
 ## <a name="const-type-qualifier"></a>const 형식 한정자
 
@@ -156,7 +157,7 @@ void someFunction() {
 
 C 및 c + +의 클래식 Win32 프로그래밍에서 대부분의 함수는 Windows 관련 typedef 및 `#define` 매크로 (에 정의 됨 `windef.h` )를 사용 하 여 매개 변수 및 반환 값의 형식을 지정 합니다. 이러한 Windows 데이터 형식은 대부분 C/c + + 기본 제공 형식에 지정 된 특수 이름 (별칭)입니다. 이러한 형식 정의 및 전처리기 정의의 전체 목록은 [Windows 데이터 형식](/windows/win32/WinProg/windows-data-types)을 참조 하세요. 이러한 형식 정의 중 일부 (예: `HRESULT` 및) `LCID` 는 유용 하 고 설명이 포함 되어 있습니다. 등의 다른 항목 `INT` 은 특별 한 의미가 없으며 기본적인 c + + 형식의 별칭입니다. 그 외 Windows 데이터 유형은 C 프로그래밍 및 16비트 프로세서 시기부터 내려온 이름을 그대로 가지고 있으며 최신 하드웨어 또는 운영 체제에 다른 목적과 의미를 가지고 있지 않습니다. Windows 런타임 라이브러리와 연결 된 특수 데이터 형식도 [Windows 런타임 기본 데이터 형식](/windows/win32/WinRT/base-data-types)으로 나열 됩니다. 현대적인 C++에서 일반적인 지침은 Windows 형식이 값 해석 방식에 대해 추가적인 의미를 전달하지 않는 한 C++ 기본 형식을 사용하는 것입니다.
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
 C++ 형식 시스템에 대한 자세한 내용은 다음 항목을 참조하십시오.
 
@@ -166,7 +167,7 @@ C++ 형식 시스템에 대한 자세한 내용은 다음 항목을 참조하십
 [형식 변환 및 형식 안전성](../cpp/type-conversions-and-type-safety-modern-cpp.md)\
 일반적인 형식 변환 문제를 설명하고 이러한 문제를 방지하는 방법을 보여 줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [C + +를 다시 시작 합니다.](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 언어 참조](../cpp/cpp-language-reference.md)<br/>

@@ -1,15 +1,15 @@
 ---
 title: 컴파일러 옵션 사전순 목록
 description: Microsoft C/c + + 컴파일러 명령줄 옵션의 사전순으로 표시 되는 참조 목록입니다.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223891"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520864"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>컴파일러 옵션 사전순 목록
 
@@ -124,6 +124,7 @@ ms.locfileid: "87223891"
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 추가 보안 기능 및 경고를 사용하도록 설정합니다. |
 | [`/showIncludes`](showincludes-list-include-files.md) | 컴파일을 하는 동안 포함 파일 목록을 표시합니다. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | 원본 문자 집합을 설정 합니다. |
+| [`/sourceDependencies`](sourcedependencies.md) | 헤더, 모듈 및 기타 소스 종속성을 나열 합니다. |
 | [`/std`](std-specify-language-standard-version.md) | C + + 표준 버전 호환성 선택기입니다. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | C 소스 파일을 지정합니다. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | 모든 소스 파일을 C로 지정 합니다. |
@@ -174,7 +175,7 @@ ms.locfileid: "87223891"
 | [`/Zs`](zs-syntax-check-only.md) | 구문만 확인합니다. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Windows 런타임에서 실행할 출력 파일을 생성 합니다. |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [MSVC 컴파일러 옵션](compiler-options.md)\
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)

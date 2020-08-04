@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e11c7e6abd2d5832c57d0379473c6783128f63e3
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749716"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521150"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**마이크로소프트 특정**
+**Microsoft 전용**
 
-a를 `BSTR` `BSTR` **_로**`bstr_t`감싸는 것으로 복사합니다.
+`BSTR`을 `BSTR`로 래핑된 `_bstr_t`로 복사합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>매개 변수
 
-*s*<br/>
+*삭제*<br/>
 `BSTR`로 래핑된 `BSTR`로 복사되는 `_bstr_t`입니다.
 
 ## <a name="remarks"></a>설명
 
-**할당은 이진** 복사본을 수행하므로 콘텐츠에 `BSTR` 관계없이 전체 길이가 복사됩니다.
+**Assign** 는 이진 복사를 수행 합니다. 즉, `BSTR` 콘텐츠와 상관 없이의 전체 길이가 복사 됩니다.
 
 ## <a name="example"></a>예제
 
