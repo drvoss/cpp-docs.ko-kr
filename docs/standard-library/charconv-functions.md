@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230198"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565952"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 함수
 
@@ -23,9 +23,9 @@ ms.locfileid: "87230198"
 |[to_chars](#to_chars) | 정수 또는 부동 소수점 값을의 시퀀스로 변환 **`char`** 합니다. |
 |[from_chars](#from_chars) | 의 시퀀스를 **`char`** 정수 또는 부동 소수점 값으로 변환 합니다. |
 
-이러한 변환 함수는 성능을 위해 조정 되며 최단 왕복 동작을 지원 합니다. 최단 왕복 동작 이란 숫자가 문자로 변환 될 때 해당 문자를 다시 부동 소수점으로 변환 하는 경우 원래 숫자를 복구할 수 있도록 충분 한 소수 자릿수가 기록 됨을 의미 합니다.
+이러한 변환 함수는 성능을 위해 조정 되며 최단 왕복 동작을 지원 합니다. 최단 왕복 동작 이란 숫자를 문자로 변환 하는 경우 해당 문자를 다시 부동 소수점으로 변환 하는 경우 원래 숫자를 복구할 수 있도록 충분 한 소수 자릿수가 기록 됨을 의미 합니다.
 
-- Chars를 숫자로 변환 하는 경우 숫자 값을 null로 종료할 필요가 없습니다. 마찬가지로 숫자를 문자로 변환 하는 경우 결과가 null로 종료 되지 않습니다.
+- Chars를 숫자로 변환 하는 경우 숫자 값을 null로 종료할 필요가 없습니다. 마찬가지로 숫자를 문자로 변환 하는 경우 결과는 null로 종료 되지 않습니다.
 - 변환 함수는 메모리를 할당 하지 않습니다. 모든 경우에서 버퍼를 소유 합니다.
 - 변환 함수는를 throw 하지 않습니다. 변환이 성공 했는지 여부를 확인할 수 있는 결과가 반환 됩니다.
 - 변환 함수는 런타임 반올림 모드를 구분 하지 않습니다.
@@ -95,9 +95,9 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="remarks"></a>설명
 
-[Chars_format](chars-format-class.md) 매개 변수를 사용 하는 함수는 변환 지정자를 다음과 같이를 사용 하는 것 처럼 결정 합니다. 변환 지정자는가 이면이 고,가 이면 `printf()` `f` `fmt` `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` (결과의 앞에 "0x"가 없는 경우)이 `fmt` 고, `chars_format::hex` `g` `fmt` 가 `chars_format::general` 이면입니다. 가장 짧은 고정 표기법을 지정 하는 경우 값이 매우 크거나 매우 작은 경우 가능한 가장 짧은 표현이 될 수 있으므로 출력 시간이 길어질 수 있습니다.
+[Chars_format](chars-format-class.md) 매개 변수를 사용 하는 함수는 변환 지정자를 다음과 같이를 사용 하는 것 처럼 결정 합니다. 변환 지정자는가 이면이 고,가 이면이 고,가 이면입니다 `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` `fmt` `chars_format::general` . 가장 짧은 고정 표기법을 지정 하는 경우 값이 매우 크거나 매우 작은 경우 가능한 가장 짧은 표현이 될 수 있으므로 출력 시간이 길어질 수 있습니다.
 
-다음 표에서는 `fmt` 및 매개 변수의 다양 한 조합에 지정 된 변환 동작에 대해 설명 합니다 `precision` . "최단 왕복" 이라는 용어는 해당 함수를 사용 하 여 해당 표시를 구문 분석 하 여 값을 정확 하 게 복구 하는 데 필요한 최소 자릿수를 기록 하는 것을 의미 합니다 `from_chars` .
+다음 표에서는 `fmt` 및 매개 변수의 다양 한 조합에 지정 된 변환 동작에 대해 설명 합니다 `precision` . "최단 왕복 동작" 이란 용어는 해당 함수를 사용 하 여 표시를 구문 분석 하 여 값을 정확 하 게 복구 하는 데 필요한 최소 자릿수를 기록 하는 것을 의미 합니다 `from_chars` .
 
 | `fmt`및 `precision` 조합 | 출력 |
 |--|--|
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>요구 사항
+
+**헤더:**\<charconv>
+
+**네임스페이스:** std
+
+/std: c + + 17 이상이 필요 합니다.
+
 ## <a name="see-also"></a>참고 항목
 
 [\<charconv>](charconv.md)  
-[라운드트립 하는 가장 짧은 10 진수 문자열입니다.](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[라운드트립 하는 가장 짧은 10 진수 문자열입니다](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ . [printf () 서식 지정자](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
