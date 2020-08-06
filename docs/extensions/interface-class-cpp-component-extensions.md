@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228702"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807747"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>인터페이스 클래스(C++/CLI 및 C++/CX)
 
@@ -24,9 +24,8 @@ ms.locfileid: "87228702"
 ### <a name="syntax"></a>구문
 
 ```cpp
-interface_access
-interface class
-name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+interface_access interface class name : inherit_access base_interface {};
+interface_access interface struct name : inherit_access base_interface {};
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -85,7 +84,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 컴파일러 옵션: `/clr`
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 다음 코드 예제에서는 인터페이스를 통해 클록 함수의 동작을 정의할 수 있는 방법을 보여 줍니다.
 
