@@ -3,12 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226791"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390002"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -513,12 +513,11 @@ C++용 플랫폼 간 웹 API인 CPPRestSDK가 버전 2.9.0으로 업데이트되
 
 리팩터링 및 코드 탐색에 IntelliSense 엔진을 사용하는 일부 C++ 작업은 훨씬 더 빨리 실행됩니다. 다음 값은 3500개 프로젝트가 있는 Visual Studio Chromium 솔루션을 기준으로 합니다.
 
-|||
-|-|-|
-|기능|성능 향상|
-|이름 바꾸기|5.3배|
-|시그니처 변경 |4.5배|
-|모든 참조 찾기|4.7배|
+| 기능 | 성능 향상 |
+|--|--|
+| 이름 바꾸기 | 5.3배 |
+| 시그니처 변경 | 4.5배 |
+| 모든 참조 찾기 | 4.7배 |
 
 C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 마우스 탐색을 쉽게 해줍니다. Productivity Power Tools 팩의 구조 시각화 도우미도 이제 제품에 기본적으로 포함됩니다.
 
@@ -667,7 +666,7 @@ Windows SDK Insider Preview의 빌드 17025부터 C++/WinRT가 Windows SDK에 �
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
 
-- 실행할 코드 분석 규칙을 지정할 수 있는 [/analyze:ruleset](../build/reference/analyze-code-analysis.md)에 대한 지원이 추가되었습니다.
+- 실행할 코드 분석 규칙을 지정할 수 있는 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md)에 대한 지원이 추가되었습니다.
 - 추가 C++ Core Guidelines 규칙에 대한 지원이 추가되었습니다.  자세한 내용은 [C++ 핵심 지침 검사기 사용](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)을 참조하세요.
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017에서 단위 테스트

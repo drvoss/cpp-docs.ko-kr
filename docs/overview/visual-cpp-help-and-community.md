@@ -1,18 +1,18 @@
 ---
 title: Visual C++ 도움말 및 커뮤니티
-ms.date: 11/30/2017
+ms.date: 08/03/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e3dd475112f217e9d7891a18f7dc91972b221dd9
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405080"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565926"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 도움말 및 커뮤니티
 
-다음은 C++ 코드를 작성하고 Visual Studio 개발 도구를 사용하는 방법에 대한 정보를 가져오는 방법입니다.
+다음은 C++ 코드를 작성하고 Visual Studio 개발 도구를 사용하는 방법에 대한 도움말 및 정보를 찾을 수 있는 위치입니다.
 
 ## <a name="samples"></a>샘플
 
@@ -42,4 +42,4 @@ Microsoft 개발자 콘텐츠를 온라인으로 볼 수 있습니다. 이 콘�
 |[C++ 팀 블로그](https://devblogs.microsoft.com/cppblog/)|다양한 주제에 대한 Microsoft C++ 제품 팀 전문가의 게시물을 포함합니다.|
 |[Channel 9](https://channel9.msdn.com/)|동영상 인터뷰 및 강의를 포함합니다. Channel 9 홈페이지에서 검색 상자를 사용하여 C++ 콘텐츠 찾을 수 있습니다.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Visual Studio 및 관련 개발 도구에 대한 기사 및 뉴스를 포함합니다.|
-|[MSDN 포럼](https://social.msdn.microsoft.com/Forums/) 및 Visual Studio [Developer Community](https://developercommunity.visualstudio.com)|C++에 대한 질문을 게시하고 Microsoft 및 커뮤니티 전문가로부터 답변을 얻을 수 있는 공식 Microsoft 포럼입니다.|
+|[Microsoft Docs Q&A](https://docs.microsoft.com/answers/topics/c%2B%2B.html) 및 Visual Studio C++ [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)|C++에 대한 질문을 게시하고 Microsoft 및 커뮤니티 전문가로부터 답변을 얻을 수 있는 공식 Microsoft 포럼입니다.|
