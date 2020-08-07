@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: eaa4d50fc50528febf923f1c13a5283b9a1bd389
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
+ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334957"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87870154"
 ---
 # <a name="iterators"></a>반복기
 
@@ -34,7 +34,7 @@ range-for 루프를 사용하여 이 작업을 다 간단하게 수행할 수 �
 ```cpp
 for (auto num : vec)
 {
-    // no deference operator
+    // no dereference operator
     cout << num << " ";
 }
 ```
@@ -88,7 +88,7 @@ C + + 표준 라이브러리의 컨테이너 및 알고리즘에서 반복기가
 
 Microsoft c + +는 이제 확인 된 반복기 및 디버그 반복기를 제공 하 여 컨테이너의 경계를 덮어쓰지 않도록 합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md) 및 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)\
 [C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
