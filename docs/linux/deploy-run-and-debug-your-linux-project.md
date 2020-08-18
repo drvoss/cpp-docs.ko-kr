@@ -1,24 +1,22 @@
 ---
-title: Visual Studio에서 C++ Linux 프로젝트 배포, 실행 및 디버그
-description: Visual Studio에 있는 C++ Linux 프로젝트 내의 원격 대상에서 코드를 컴파일하고, 실행하고, 디버그하는 방법을 설명합니다.
-ms.date: 06/07/2019
+title: Visual Studio에서 Linux MSBuild C++ 프로젝트 배포, 실행 및 디버그
+description: Visual Studio에서 MSBuild 기반 C++ Linux 프로젝트로부터 원격 대상으로 코드를 컴파일하고, 실행하고, 디버그하는 방법을 설명합니다.
+ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404413"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043891"
 ---
-# <a name="deploy-run-and-debug-your-linux-project"></a>Linux 프로젝트 배포, 실행 및 디버그
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Linux MSBuild 프로젝트 배포, 실행 및 디버그
 
 ::: moniker range="vs-2015"
-
-Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
-
+Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다. 이러한 버전에 대한 설명서를 보려면 목차 위에 있는 **버전** 드롭다운을 **Visual Studio 2017** 또는 **Visual Studio 2019**로 설정합니다.
 ::: moniker-end
 
-Visual Studio에서 Linux C++ 프로젝트를 만들고 [Linux 연결 관리자](connect-to-your-remote-linux-computer.md)를 사용하여 프로젝트에 연결하면 해당 프로젝트를 실행하고 디버그할 수 있습니다. 원격 대상에서 코드를 컴파일, 실행 및 디버그합니다.
+Visual Studio에서 MSBuild 기반 Linux C++ 프로젝트를 만들고 [Linux 연결 관리자](connect-to-your-remote-linux-computer.md)를 사용하여 프로젝트에 연결하면 해당 프로젝트를 실행하고 디버그할 수 있습니다. 원격 대상에서 코드를 컴파일, 실행 및 디버그합니다.
 
 ::: moniker range="vs-2019"
 
@@ -52,9 +50,9 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 
    ::: moniker-end
 
-   - **gdbserver** 모드에서 원격 시스템의 gdbserver에 연결된 GDB는 로컬에서 실행됩니다.  Linux 콘솔 창이 지원하는 모드는 이 모드뿐입니다.
+   - **gdbserver** 모드에서 원격 시스템의 gdbserver에 연결된 GDB는 로컬에서 실행됩니다.
 
-   - **gdb** 모드에서 Visual Studio 디버거는 원격 시스템에서 GDB를 구동합니다. GDB의 로컬 버전이 대상 컴퓨터에 설치된 버전과 호환되지 않을 경우 더 나은 옵션입니다. |
+   - **gdb** 모드에서 Visual Studio 디버거는 원격 시스템에서 GDB를 구동합니다. GDB의 로컬 버전이 대상 컴퓨터에 설치된 버전과 호환되지 않을 경우 더 나은 옵션입니다. Linux 콘솔 창이 지원하는 모드는 이 모드뿐입니다.
 
    > [!NOTE]
    > gdbserver 디버깅 모드에서 중단점에 도달할 수 없는 경우 gdb 모드를 시도해 보세요. 우선 원격 대상에 gdb가 [설치](download-install-and-setup-the-linux-development-workload.md)되어 있어야 합니다.
@@ -91,19 +89,16 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 
    ![Linux 콘솔 창](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options-msbuild-based-projects"></a>다른 디버깅 옵션 구성(MSBuild 기반 프로젝트)
+## <a name="configure-other-debugging-options-msbuild-projects"></a>다른 디버깅 옵션 구성(MSBuild 프로젝트)
 
 - 프로젝트의 **디버깅** 속성 페이지에서 **프로그램 인수** 항목을 사용하여 명령줄 인수를 실행 파일에 전달할 수 있습니다.
+- 프로젝트의 **디버깅** 속성 페이지에서 **사전 실행 명령**을 사용하여 `DISPLAY` 환경 변수를 내보낼 수 있습니다. 예: `export DISPLAY=:0.0`
 
    ![프로그램 인수](media/settings_programarguments.png)
 
 - 특정 디버거 옵션은 **추가 디버거 명령** 항목을 통해 GDB에 전달될 수 있습니다.  예를 들어 SIGILL(잘못된 명령) 신호를 무시하고자 할 경우  위 그림처럼 **추가 디버거 명령** 항목에 다음 내용을 추가하면 **handle** 명령을 사용하여 이 작업을 수행할 수 있습니다.
 
    `handle SIGILL nostop noprint`
-
-## <a name="configure-other-debugging-options-cmake-projects"></a>다른 디버깅 옵션 구성(CMake 프로젝트)
-
-launch.vs.json 파일에서 CMake 프로젝트에 대한 명령줄 인수를 추가로 지정할 수 있습니다. 자세한 내용은 [CMake 프로젝트 디버그](cmake-linux-project.md#debug_cmake_project)를 참조하세요.
 
 ## <a name="debug-with-attach-to-process"></a>프로세스에 연결을 사용하여 디버그
 
@@ -128,11 +123,9 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> 빌드 및 디버깅에 다른 머신 지정
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> MSBuild 기반 Linux 프로젝트에서 빌드 및 디버깅을 위해 다른 컴퓨터 지정
 
 Visual Studio 2019 버전 16.1에서는 MSBuild 기반 Linux 프로젝트와 원격 Linux 머신을 대상으로 하는 CMake 프로젝트 둘 다에 대해, 원격 빌드 머신과 원격 디버그 머신을 분리할 수 있습니다. 예를 들어 IoT 시나리오를 대상으로 하는 경우, 이제 x64에서 교차 컴파일하여 ARM 디바이스에 배포할 수 있습니다.
-
-### <a name="msbuild-based-projects"></a>MSBuild 기반 프로젝트
 
 기본적으로 원격 디버그 머신은 원격 빌드 머신과 같습니다(**구성 속성** > **일반** > **원격 빌드 머신**). 새 원격 디버그 머신을 지정하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **구성 속성** > **디버깅** > **원격 디버그 머신**으로 이동합니다.  
 
@@ -176,7 +169,6 @@ IntelliSense에서 설정된 모든 원격 연결 목록을 제안합니다. **�
 배포를 완전히 제어하려는 경우 launch.vs.json 파일에 다음 코드 블록을 추가할 수 있습니다. 자리 표시자 값을 실제 값으로 바꿔야 합니다.
 
 ```json
-
 "disableDeploy": false,
 "deployDirectory": "~\foo",
 "deploy" : [
@@ -188,15 +180,14 @@ IntelliSense에서 설정된 모든 원격 연결 목록을 제안합니다. **�
       "executable": "false"
    }
 ]
-
 ```
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>다음 단계
 
-- Linux에서 ARM 디바이스를 디버깅하려면 다음 블로그 게시물을 참조하세요. [Visual Studio에서 포함 ARM 디바이스 디버깅](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/).
+- Linux에서 ARM 디바이스를 디버깅하려면 [Visual Studio에서 포함된 ARM 디바이스 디버깅](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/) 블로그 게시물을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [C++ 디버깅 속성(Linux C++)](prop-pages/debugging-linux.md)

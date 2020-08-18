@@ -1,15 +1,16 @@
 ---
-title: Visual Studio에서 C++ Linux 프로젝트 구성
-ms.date: 06/22/2020
+title: Visual Studio에서 Linux MSBuild C++ 프로젝트 구성
+ms.date: 08/06/2020
+description: Visual Studio에서 MSBuild 기반 Linux 프로젝트를 구성하여 빌드할 수 있습니다.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269743"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043865"
 ---
-# <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio에서 Linux MSBuild C++ 프로젝트 구성
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ Linux 지원은 Visual Studio 2017 이상에서 사용할 수 있습니다.
 
 ::: moniker-end
 
-이 토픽에서는 [Visual Studio에서 새로운 C++ Linux 프로젝트 만들기](create-a-new-linux-project.md)에서 설명된 대로 C++ Linux 프로젝트를 구성하는 방법을 설명합니다. CMake Linux 프로젝트의 경우 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.
+이 항목에서는 [Visual Studio에서 Linux MSBuild C++ 프로젝트 만들기](create-a-new-linux-project.md)에 설명된 대로 MSBuild 기반 Linux 프로젝트를 구성하는 방법을 설명합니다. Linux CMake 프로젝트의 경우 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.
 
 물리적 Linux 머신, 가상 머신 또는 [Linux용 Windows 하위 시스템](/windows/wsl/about)(WSL)을 대상으로 지정하도록 Linux 프로젝트를 구성할 수 있습니다.
 
