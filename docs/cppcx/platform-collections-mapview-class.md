@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214999"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610896"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 클래스
 
@@ -48,17 +48,17 @@ ref class MapView sealed;
 
 MapView는 ABI (응용 프로그램 이진 인터페이스)를 통해 전달 되는 [Windows:: Foundation \<K,V> :: Collections:: IMapView](/uwp/api/windows.foundation.collections.imapview-2) 인터페이스의 구체적인 c + + 구현입니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.
 
-### <a name="members"></a>멤버
+### <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[MapView:: MapView](#ctor)|MapView 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[MapView:: First](#first)|맵 뷰의 첫 번째 요소로 초기화하는 반복기를 반환합니다.|
 |[MapView:: HasKey](#haskey)|현재 MapView에 지정한 키가 들어 있는지 여부를 확인합니다.|
@@ -76,7 +76,7 @@ MapView는 ABI (응용 프로그램 이진 인터페이스)를 통해 전달 되
 
 **네임스페이스:** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>MapView:: First 메서드
+## <a name="mapviewfirst-method"></a><a name="first"></a> MapView:: First 메서드
 
 맵 뷰의 첫 번째 요소를 지정하는 반복기를 반환합니다.
 
@@ -95,7 +95,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예들 들어 `auto x = myMapView->First();`입니다.
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView:: HasKey 메서드
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView:: HasKey 메서드
 
 현재 MapView에 지정한 키가 들어 있는지 여부를 확인합니다.
 
@@ -111,11 +111,11 @@ bool HasKey(K key);
 *key*<br/>
 MapView 요소를 찾는 데 사용되는 키입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 키가 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView:: Lookup 메서드
+## <a name="mapviewlookup-method"></a><a name="lookup"></a> MapView:: Lookup 메서드
 
 K 형식의 지정된 키와 연결된 V 형식의 값을 검색합니다.
 
@@ -130,11 +130,11 @@ V Lookup(K key);
 *key*<br/>
 MapView에서 요소를 찾는 데 사용되는 키입니다. 의 형식은 형식 `key` 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `key`와 쌍을 이루는 값입니다. 반환 값의 형식은 형식 이름 *V*입니다.
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView:: MapView 생성자
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView:: MapView 생성자
 
 MapView 클래스의 새 인스턴스를 초기화합니다.
 
@@ -175,9 +175,9 @@ MapView(
 현재 MapView를 초기화하는 데 사용되는 요소 범위 다음의 첫 번째 요소의 입력 반복기입니다.
 
 *l*<br/>
-요소가 mapview에 삽입 되는 [std:: \<K,V> > initializer_list<std::p](../standard-library/initializer-list-class.md) 입니다.
+요소가 mapview에 삽입 되는 [std:: initializer_list \<std::pair\<K,V> > ](../standard-library/initializer-list-class.md) 입니다.
 
-## <a name="mapviewsize-method"></a><a name="size"></a>MapView:: Size 메서드
+## <a name="mapviewsize-method"></a><a name="size"></a> MapView:: Size 메서드
 
 현재 MapView 개체의 요소 수를 반환합니다.
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 현재 MapView의 요소 수입니다.
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>MapView:: Split 메서드
+## <a name="mapviewsplit-method"></a><a name="split"></a> MapView:: Split 메서드
 
 현재 MapView 개체를 두 개의 MapView 개체로 분할합니다. 이 메서드는 작동하지 않습니다.
 

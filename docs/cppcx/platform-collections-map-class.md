@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 30dbc71a03c398c77124738b2477a3563191d50d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214986"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610909"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 클래스
 
@@ -63,21 +63,21 @@ ref class Map sealed;
 
 - public enum 클래스
 
-Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 래퍼입니다. 이는 공용 Windows 런타임 인터페이스를 통해 전달 되는 [windows:: foundation:: collections:: IMap<windows:: foundation:: collections: \<K,V> > : inputiterator<ikeyvaluepair<k](/uwp/api/windows.foundation.collections.imap-2) 및 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 형식에 대 한 c + +의 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::Map` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수 또는 반환 값의 형식을 [Windows:: Foundation:: Collections:: IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)으로 변경 하 여 오류를 해결할 수 있습니다.
+Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 래퍼입니다. 공용 Windows 런타임 인터페이스를 통해 전달 되는 [Windows:: Foundation:: Collections:: IMap \<Windows::Foundation::Collections::IKeyValuePair\<K,V> > ](/uwp/api/windows.foundation.collections.imap-2) 및 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 형식에 대 한 c + +의 구체적인 구현입니다. 공용 반환 값 또는 매개 변수에서 `Platform::Collections::Map` 형식을 사용하려고 하면 컴파일러 오류 C3986이 발생합니다. 매개 변수 또는 반환 값의 형식을 [Windows:: Foundation:: Collections:: IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)으로 변경 하 여 오류를 해결할 수 있습니다.
 
 자세한 내용은 [컬렉션](../cppcx/collections-c-cx.md)을 참조 하세요.
 
-### <a name="members"></a>멤버
+### <a name="members"></a>구성원
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[Map:: Map](#ctor)|Map 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[Map:: Clear](#clear)|현재 Map 개체에서 모든 키/값 쌍을 제거합니다.|
 |[Map:: First](#first)|맵의 첫 번째 요소를 지정하는 반복기를 반환합니다.|
@@ -92,7 +92,7 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 
 |||
 |-|-|
-|Name|설명|
+|속성|Description|
 |[Map:: MapChanged](#mapchanged) 이벤트|Map이 변경될 때 발생합니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
@@ -105,7 +105,7 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 
 **네임스페이스:** Platform::Collections
 
-## <a name="mapclear-method"></a><a name="clear"></a>Map:: Clear 메서드
+## <a name="mapclear-method"></a><a name="clear"></a> Map:: Clear 메서드
 
 현재 Map 개체에서 모든 키/값 쌍을 제거합니다.
 
@@ -115,7 +115,7 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 virtual void Clear();
 ```
 
-## <a name="mapfirst-method"></a><a name="first"></a>Map:: First 메서드
+## <a name="mapfirst-method"></a><a name="first"></a> Map:: First 메서드
 
 Map의 첫 번째 요소를 지정 하는 반복기를 반환 하거나 **`nullptr`** map이 비어 있는 경우을 반환 합니다.
 
@@ -134,7 +134,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예들 들어 `auto x = myMap->First();`입니다.
 
-## <a name="mapgetview-method"></a><a name="getview"></a>Map:: GetView 메서드
+## <a name="mapgetview-method"></a><a name="getview"></a> Map:: GetView 메서드
 
 현재 지도의 읽기 전용 뷰를 반환 합니다. 즉, [Windows:: Foundation:: collections:: IMapView \<K,V> ](/uwp/api/windows.foundation.collections.imapview-2) 인터페이스를 구현 하는 [Platform:: Collections:: mapview 클래스](../cppcx/platform-collections-mapview-class.md)입니다.
 
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `MapView` 개체입니다.
 
-## <a name="maphaskey-method"></a><a name="haskey"></a>Map:: HasKey 메서드
+## <a name="maphaskey-method"></a><a name="haskey"></a> Map:: HasKey 메서드
 
 현재 Map에 지정한 키가 들어 있는지 여부를 확인합니다.
 
@@ -163,11 +163,11 @@ bool HasKey(K key);
 *key*<br/>
 Map 요소를 찾는 데 사용되는 키입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 키가 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="mapinsert-method"></a><a name="insert"></a>Map:: Insert 메서드
+## <a name="mapinsert-method"></a><a name="insert"></a> Map:: Insert 메서드
 
 지정한 키/값 쌍을 현재 Map 개체에 추가합니다.
 
@@ -185,11 +185,11 @@ virtual bool Insert(K key, V value);
 *value*<br/>
 키-값 쌍의 값 부분입니다. *값* 의 형식은 형식 이름 *V*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 현재 Map의 기존 요소 키가 *키* 와 일치 하 고 해당 요소의 값 부분이 *value*로 설정 되어 있으면입니다. **`false`** 현재 Map의 기존 요소가 *키* 와 일치 하지 않고 *키 및* *값* 매개 변수가 키-값 쌍으로 만들어진 다음 현재 맵에 추가 되는 경우입니다.
 
-## <a name="maplookup-method"></a><a name="lookup"></a>Map:: Lookup 메서드
+## <a name="maplookup-method"></a><a name="lookup"></a> Map:: Lookup 메서드
 
 K 형식의 지정된 키(해당 키가 있는 경우)와 연결된 V 형식의 값을 검색합니다.
 
@@ -204,7 +204,7 @@ V Lookup(K key);
 *key*<br/>
 지도에서 요소를 찾는 데 사용되는 키입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *키*와 쌍으로 연결 된 값입니다. 반환 값의 형식은 형식 이름 *V*입니다.
 
@@ -212,7 +212,7 @@ V Lookup(K key);
 
 키가 없으면 [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) 이 throw 됩니다.
 
-## <a name="mapmap-constructor"></a><a name="ctor"></a>Map:: Map 생성자
+## <a name="mapmap-constructor"></a><a name="ctor"></a> Map:: Map 생성자
 
 Map 클래스의 새 인스턴스를 초기화합니다.
 
@@ -246,7 +246,7 @@ Map(
 *last*<br/>
 현재 Map를 초기화하는 데 사용되는 요소 범위 다음의 첫 번째 요소의 입력 반복기입니다.
 
-## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Map:: MapChanged 이벤트
+## <a name="mapmapchanged-event"></a><a name="mapchanged"></a> Map:: MapChanged 이벤트
 
 맵에서 항목이 삽입되거나 제거될 때 발생합니다.
 
@@ -264,7 +264,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 C #을 사용 하거나 project IMap을 IDictionary로 Visual Basic 하는 앱을 Windows 런타임 \<K,V> \<K,V> 합니다.
 
-## <a name="mapremove-method"></a><a name="remove"></a>Map:: Remove 메서드
+## <a name="mapremove-method"></a><a name="remove"></a> Map:: Remove 메서드
 
 지정한 키/값 쌍을 현재 Map 개체에서 삭제합니다.
 
@@ -279,7 +279,7 @@ virtual void Remove(K key);
 *key*<br/>
 키-값 쌍의 키 부분입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-## <a name="mapsize-method"></a><a name="size"></a>Map:: Size 메서드
+## <a name="mapsize-method"></a><a name="size"></a> Map:: Size 메서드
 
 맵의 [Windows:: Foundation:: Collections:: inputiterator<ikeyvaluepair<k \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 요소 수를 반환 합니다.
 

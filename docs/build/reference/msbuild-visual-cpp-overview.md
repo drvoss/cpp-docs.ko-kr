@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190496"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610852"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ 프로젝트용 MSBuild 내부
 
@@ -23,15 +23,15 @@ IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전*\\
 
   대상에서 사용되는 기본 대상 파일(.targets) 및 속성 파일(.props)을 포함합니다. 기본적으로 $(VCTargetsPath) 매크로는 이 디렉터리를 참조합니다. *버전* 자리 표시자는 visual studio 버전: V160 For visual studio 2019, V150 For visual studio 2017를 참조 합니다.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets \\ 플랫폼 \\ *플랫폼*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ 플랫폼 \\ *플랫폼*\\
 
   해당 부모 디렉터리의 대상과 속성을 재정의하는 플랫폼별 대상 및 속성 파일을 포함합니다. 이 디렉터리에는 이 디렉터리에 있는 대상에서 사용되는 작업을 정의하는 DLL도 포함됩니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ vctargets \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *버전* \\ 플랫폼 \\ *플랫폼* \\ platformtoolsets \\ *집합*\\
 
   빌드가 지정된 *도구 집합*을 사용하여 C++ 애플리케이션을 생성하도록 하는 디렉터리를 포함합니다. *platform* 자리 표시자는 ARM, Win32 또는 x64 하위 디렉터리를 나타냅니다. *도구 집합* 자리 표시자는 도구 집합 하위 디렉터리를 나타냅니다.
 
@@ -71,7 +71,7 @@ IDE에서 프로젝트 속성을 설정한 다음, 다음 프로젝트를 저장
 
 지원 파일 디렉터리에는 다음과 같은 확장을 사용하는 파일이 포함되어 있습니다.
 
-| 내선 번호 | 설명 |
+| 내선 번호 | Description |
 | --------- | ----------- |
 | .targets | 대상에서 실행되는 작업을 지정하는 `Target` XML 요소를 포함합니다. 또한 파일 및 명령줄 옵션을 작업 매개 변수에 할당하는 데 사용되는 `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup` 및 사용자 정의 `Item` 요소를 포함할 수 있습니다.<br /><br /> 자세한 내용은 [Target 요소(MSBuild)](/visualstudio/msbuild/target-element-msbuild)를 참조하세요. |
 | .props | 빌드하는 동안 사용되는 파일 및 매개 변수 설정을 지정하는 `Property Group` 및 사용자 정의 `Property` XML 요소를 포함합니다.<br /><br /> 또한 추가 설정을 지정하는 `ItemDefinitionGroup` 및 사용자 정의 `Item` XML 요소를 포함할 수 있습니다. 항목 정의 그룹에 정의 된 항목은 속성과 비슷하지만 명령줄에서 액세스할 수 없습니다. Visual Studio 프로젝트 파일은 속성 대신 항목을 사용하여 설정을 나타내는 경우가 많습니다.<br /><br /> 자세한 내용은 [ItemGroup 요소 (msbuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [Itemdefinitiongroup 요소 (Msbuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)및 [Item 요소 (msbuild)](/visualstudio/msbuild/item-element-msbuild)를 참조 하세요. |

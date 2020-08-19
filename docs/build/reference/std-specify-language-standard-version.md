@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223826"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610961"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`(언어 표준 버전 지정)
+# <a name="std-specify-language-standard-version"></a>`/std` (언어 표준 버전 지정)
 
 지정된 C++ 언어 표준 버전에서 지원되는 C++ 언어 기능을 사용합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "87223826"
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>설명
 
@@ -31,7 +31,7 @@ ms.locfileid: "87223826"
 
 - [중괄호로 묶인에 대 한 규칙 `auto` -초기화 목록](https://wg21.link/n3922)
 
-- [`typename`템플릿 템플릿-매개 변수](https://wg21.link/n4051)
+- [`typename` 템플릿 템플릿-매개 변수](https://wg21.link/n4051)
 
 - [삼중자 제거](https://wg21.link/n4086)
 

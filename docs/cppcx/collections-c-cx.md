@@ -2,12 +2,12 @@
 title: 컬렉션(C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233511"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610948"
 ---
 # <a name="collections-ccx"></a>컬렉션(C++/CX)
 
@@ -39,7 +39,7 @@ Windows 런타임는 컬렉션 및 관련 형식에 대 한 인터페이스를 �
 > [!IMPORTANT]
 > 자체 프로그램 안에서 시퀀스를 전달하는 경우에는 `Vector` 보다 효율적인 `std::vector` 또는 `IVector`를 사용합니다. ABI 너머로 컨테이너를 전달할 때만 `IVector` 를 사용합니다.
 >
-> Windows 런타임 형식 시스템은 가변 배열의 개념을 지원 하지 않으므로 IVector<Platform:: Array \<T>>를 반환 값 또는 메서드 매개 변수로 전달할 수 없습니다. ABI 전반에서 가변 배열 또는 시퀀스의 시퀀스를 전달하려면 `IVector<IVector<T>^>`를 사용합니다.
+> Windows 런타임 형식 시스템은 가변 배열의 개념을 지원 하지 않으므로를 `IVector<Platform::Array<T>>` 반환 값 또는 메서드 매개 변수로 전달할 수 없습니다. ABI 전반에서 가변 배열 또는 시퀀스의 시퀀스를 전달하려면 `IVector<IVector<T>^>`를 사용합니다.
 
 `Vector<T>` 는 컬렉션의 항목을 추가, 제거 및 액세스하는 데 필요한 메서드를 제공하며, `IVector<T>`로 암시적으로 변환할 수 있습니다. 또한 `Vector<T>`인스턴스에서 STL 알고리즘을 사용할 수 있습니다. 다음 예제에서는 몇 가지 기본 사용법을 보여 줍니다. 여기에 사용된 [begin 함수](../cppcx/begin-function.md) 및 [end 함수](../cppcx/end-function.md) 는 `Platform::Collections` 네임스페이스가 아니라 `std` 네임스페이스에서 가져온 것입니다.
 
@@ -121,7 +121,7 @@ STL 입력 반복기의 요구 사항을 충족하는 STL 반복기입니다.
 STL 변경 가능 임의 액세스 반복기의 요구 사항을 충족하는 STL 반복기입니다.
 
 [Platform:: Collections:: VectorViewIterator 클래스](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-STL 임의 액세스 반복기의 요구 사항을 충족 하는 STL 반복기 **`const`** 입니다.
+STL 임의 액세스 반복기의 요구 사항을 충족 하는 STL 반복기  **`const`** 입니다.
 
 ### <a name="begin-and-end-functions"></a>begin() 및 end() 함수
 
@@ -129,7 +129,7 @@ STL 사용으로 `Vector` ,`VectorView`, `Map`, `MapView` 및 임의 `Windows::F
 
 다음 표에서는 사용 가능한 반복기 및 함수를 보여 줍니다.
 
-|반복기|Functions|
+|Iterators|Functions|
 |---------------|---------------|
 |[Platform:: Collections:: VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (내부적으로 [Windows:: Foundation:: Collections:: IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1) 및 int 저장)|[시작](../cppcx/begin-function.md) /  [end](../cppcx/end-function.md)([Windows:: Foundation:: Collections:: IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1))|
 |[Platform:: Collections:: VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (내부적으로 [Ivectorview \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^ 및 int 저장)|[시작](../cppcx/begin-function.md) /  [end](../cppcx/end-function.md) ([ivectorview \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^)|
