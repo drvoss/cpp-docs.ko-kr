@@ -3,12 +3,12 @@ title: Visual Studio의 새로운 C++ 기능
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390002"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144180"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio의 새로운 C++ 기능
 
@@ -636,7 +636,7 @@ C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소�
 
 데스크톱 브리지를 통해 데스크톱 애플리케이션 패키징을 훨씬 간소화하는 프로젝트 템플릿인 **Windows 애플리케이션 패키징 프로젝트**가 추가되었습니다. **파일 | 새로 만들기 | 프로젝트 | 설치됨 | Visual C++ | 유니버설 Windows 플랫폼**에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio(데스크톱 브리지)를 사용하여 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조하세요.
 
-이제 새 코드를 작성할 때 헤더 파일에서만 구현되는 Windows 런타임용 표준 C++ 언어 프로젝션인 C++/WinRT를 사용할 수 있습니다. C++/WinRT를 사용하면 모든 표준 규격 C++ 컴파일러를 통해 Windows 런타임 API를 사용하고 작성할 수 있습니다. C++/WinRT는 C++ 개발자에게 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT: Windows 런타임용 최신 C++](https://moderncpp.com/)를 참조하세요.
+이제 새 코드를 작성할 때 헤더 파일에서만 구현되는 Windows 런타임용 표준 C++ 언어 프로젝션인 C++/WinRT를 사용할 수 있습니다. C++/WinRT를 사용하면 모든 표준 규격 C++ 컴파일러를 통해 Windows 런타임 API를 사용하고 작성할 수 있습니다. C++/WinRT는 C++ 개발자에게 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) 참조하세요.
 
 Windows SDK Insider Preview의 빌드 17025부터 C++/WinRT가 Windows SDK에 포함됩니다. 자세한 내용은 [Windows SDK에 이제 C++/WinRT가 포함됨(영문)](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/)을 참조하세요.
 
