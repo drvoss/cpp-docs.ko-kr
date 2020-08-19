@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752119"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561819"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -183,105 +183,105 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|Description|
 |----------|-----------------|
-|[CTreeCtrl:::CTreeCtrl](#ctreectrl)|`CTreeCtrl` 개체를 생성합니다.|
+|[CTreeCtrl:: CTreeCtrl](#ctreectrl)|`CTreeCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|Description|
 |----------|-----------------|
-|[CTreeCtrl::만들기](#create)|트리 뷰 컨트롤을 만들고 `CTreeCtrl` 개체에 연결합니다.|
-|[CTreeCtrl::드래그 이미지 만들기](#createdragimage)|지정된 트리 뷰 항목에 대한 드래그 비트맵을 만듭니다.|
-|[CTreeCtrl::만들기](#createex)|지정된 Windows 확장 스타일을 사용하여 트리 컨트롤을 만들고 `CTreeCtrl` 개체에 연결합니다.|
-|[CTreeCtrl::D모든 항목](#deleteallitems)|트리 뷰 컨트롤의 모든 항목을 삭제합니다.|
-|[CTreeCtrl::Delete항목](#deleteitem)|트리 뷰 컨트롤에서 새 항목을 삭제합니다.|
-|[CTreeCtrl::편집 라벨](#editlabel)|지정된 트리 뷰 항목을 제자리에서 편집합니다.|
-|[CTreeCtrl::종료 편집 레이블지금](#endeditlabelnow)|현재 트리 뷰 컨트롤에서 트리 뷰 항목의 레이블에 대한 편집 작업을 취소합니다.|
-|[CTreeCtrl:::가시성 보장](#ensurevisible)|트리 뷰 항목이 트리 보기 컨트롤에 표시되는지 확인합니다.|
-|[CTreeCtrl::확장](#expand)|지정된 트리 뷰 항목의 하위 항목을 확장하거나 축소합니다.|
-|[CTreeCtrl::GetBkColor](#getbkcolor)|컨트롤의 현재 배경색을 검색합니다.|
-|[CTreeCtrl::GetCheck](#getcheck)|트리 컨트롤 항목의 검사 상태를 검색합니다.|
-|[CTreeCtrl:::겟차일드아이템](#getchilditem)|지정된 트리 뷰 항목의 자식을 검색합니다.|
-|[CTreeCtrl::GetCount](#getcount)|트리 보기 컨트롤과 연결된 트리 항목 수를 검색합니다.|
-|[CTreeCtrl:::GetDropHilight항목](#getdrophilightitem)|끌어서 놓기 작업의 대상을 검색합니다.|
-|[CTreeCtrl::GetEditControl](#geteditcontrol)|지정된 트리 뷰 항목을 편집하는 데 사용되는 편집 컨트롤의 핸들을 검색합니다.|
-|[CTreeCtrl::GetExtended스타일](#getextendedstyle)|현재 트리 뷰 컨트롤에서 사용 하는 확장 된 스타일을 검색 합니다.|
-|[CTreeCtrl::GetFirstvisible항목](#getfirstvisibleitem)|지정된 트리 뷰 항목의 첫 번째 표시되는 항목을 검색합니다.|
-|[CTreeCtrl::GetImageList](#getimagelist)|트리 뷰 컨트롤과 연결된 이미지 목록의 핸들을 검색합니다.|
-|[CTreeCtrl:::GetIndent](#getindent)|트리 뷰 항목의 오프셋(픽셀)을 부모에서 검색합니다.|
-|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|트리 뷰의 삽입 표시를 그리는 데 사용되는 색상을 검색합니다.|
-|[CTreeCtrl::GetItem](#getitem)|지정된 트리 뷰 항목의 특성을 검색합니다.|
-|[CTreeCtrl:::겟아이템데이터](#getitemdata)|항목과 연결된 응용 프로그램 별 값을 반환합니다.|
-|[CTreeCtrl::겟아이템확장이미지인덱스](#getitemexpandedimageindex)|현재 트리 뷰 컨트롤의 지정된 항목이 확장된 상태에 있을 때 표시할 이미지 인덱스를 검색합니다.|
-|[CTreeCtrl::GetItem높이](#getitemheight)|트리 뷰 항목의 현재 높이를 검색합니다.|
-|[CTreeCtrl::겟아이템이미지](#getitemimage)|항목과 연결된 이미지를 검색합니다.|
-|[CTreeCtrl:::겟아이템파트렉트](#getitempartrect)|현재 트리 뷰 컨트롤에서 지정된 항목의 지정된 부분에 대한 경계 사각형을 검색합니다.|
-|[CTreeCtrl:::겟아이템렉트](#getitemrect)|트리 뷰 항목의 경계 사각형을 검색합니다.|
-|[CTreeCtrl::겟아이템스테이트](#getitemstate)|항목의 상태를 반환합니다.|
-|[CTreeCtrl::겟아이템스테이트엑스](#getitemstateex)|현재 트리 뷰 컨트롤에서 지정된 항목의 확장 된 상태를 검색 합니다.|
-|[CTreeCtrl:::GetItem텍스트](#getitemtext)|항목의 텍스트를 반환합니다.|
-|[CTreeCtrl::GetLastVisible항목](#getlastvisibleitem)|현재 트리 뷰 컨트롤에서 마지막으로 확장된 항목을 검색합니다.|
-|[CTreeCtrl::겟라인컬러](#getlinecolor)|트리 뷰 컨트롤의 현재 선 색상을 검색합니다.|
-|[CTreeCtrl::GetNext항목](#getnextitem)|지정된 관계와 일치하는 다음 트리 뷰 항목을 검색합니다.|
-|[CTreeCtrl::GetNextSibling항목](#getnextsiblingitem)|지정된 트리 뷰 항목의 다음 형제를 검색합니다.|
-|[CTreeCtrl::GetNextVisible항목](#getnextvisibleitem)|지정된 트리 뷰 항목의 다음에 표시되는 항목을 검색합니다.|
-|[CTreeCtrl::GetParent항목](#getparentitem)|지정된 트리 뷰 항목의 부모를 검색합니다.|
-|[CTreeCtrl::GetPrevSibling항목](#getprevsiblingitem)|지정된 트리 뷰 항목의 이전 형제를 검색합니다.|
-|[CTreeCtrl::GetPrevvisible항목](#getprevvisibleitem)|지정된 트리 뷰 항목의 이전 표시 항목을 검색합니다.|
-|[CTreeCtrl::GetRootItem](#getrootitem)|지정된 트리 뷰 항목의 루트를 검색합니다.|
-|[CTreeCtrl::Get스크롤 타임](#getscrolltime)|트리 뷰 컨트롤의 최대 스크롤 시간을 검색합니다.|
-|[CTreeCtrl:::GetSelectedCount](#getselectedcount)|현재 트리 뷰 컨트롤에서 선택한 항목수를 검색합니다.|
-|[CTreeCtrl::GetSelected항목](#getselecteditem)|현재 선택한 트리 뷰 항목을 검색합니다.|
-|[CTreeCtrl::GetTextColor](#gettextcolor)|컨트롤의 현재 텍스트 색상을 검색합니다.|
-|[CTreeCtrl::getToolTips](#gettooltips)|트리 뷰 컨트롤에서 사용하는 자식 ToolTip 컨트롤에 대한 핸들을 검색합니다.|
-|[CTreeCtrl:::눈에 보이는 카운트](#getvisiblecount)|트리 보기 컨트롤과 연결된 표시되는 트리 항목 수를 검색합니다.|
-|[CTreeCtrl::히트 테스트](#hittest)|개체와 관련된 커서의 현재 위치를 `CTreeCtrl` 반환합니다.|
-|[CTreeCtrl::삽입항목](#insertitem)|트리 뷰 컨트롤에 새 항목을 삽입합니다.|
-|[CTreeCtrl::항목하스어린이](#itemhaschildren)|지정된 항목에 하위 항목이 있는 경우 0이 아닌 항목을 반환합니다.|
-|[CTreeCtrl:::맵아치드토아이템](#mapaccidtoitem)|지정된 접근성 식별자를 현재 트리 뷰 컨트롤의 트리 뷰 항목에 핸들에 매핑합니다.|
-|[CTreeCtrl:::맵아이템토아키드](#mapitemtoaccid)|지정된 핸들을 현재 트리 뷰 컨트롤의 트리 뷰 항목에 액세스 가능성 식별자에 매핑합니다.|
-|[CTreeCtrl::선택](#select)|지정된 트리 뷰 항목을 선택, 스크롤또는 다시 그립니다.|
-|[CTreeCtrl::선택 드롭 대상](#selectdroptarget)|끌어서 놓기 작업의 대상으로 트리 항목을 다시 그립니다.|
-|[CTreeCtrl::선택 항목](#selectitem)|지정된 트리 뷰 항목을 선택합니다.|
-|[CTreeCtrl::선택첫번째가시블](#selectsetfirstvisible)|지정된 트리 뷰 항목을 첫 번째 표시되는 항목으로 선택합니다.|
-|[CTreeCtrl::SetAuto스크롤정보](#setautoscrollinfo)|현재 트리 뷰 컨트롤의 자동 스크롤 속도를 설정합니다.|
-|[CTreeCtrl:::SetBkColor](#setbkcolor)|컨트롤의 배경색을 설정합니다.|
-|[CTreeCtrl::세트 체크](#setcheck)|트리 컨트롤 항목의 검사 상태를 설정합니다.|
-|[CTreeCtrl::세트확장 스타일](#setextendedstyle)|현재 트리 뷰 컨트롤에 대한 확장 스타일을 설정합니다.|
-|[CTreeCtrl::세트 이미지 목록](#setimagelist)|트리 뷰 컨트롤과 연결된 이미지 목록의 핸들을 설정합니다.|
-|[CTreeCtrl::설정](#setindent)|트리 뷰 항목의 오프셋(픽셀)을 상위 항목에서 설정합니다.|
-|[CTreeCtrl::설정 삽입마크](#setinsertmark)|트리 뷰 컨트롤에서 삽입 표시를 설정합니다.|
-|[CTreeCtrl::설정 삽입마크컬러](#setinsertmarkcolor)|트리 뷰의 삽입 표시를 그리는 데 사용되는 색상을 설정합니다.|
-|[CTreeCtrl::세트 아이템](#setitem)|지정된 트리 뷰 항목의 특성을 설정합니다.|
-|[CTreeCtrl:::세트항목데이터](#setitemdata)|항목과 연결된 응용 프로그램별 값을 설정합니다.|
-|[CTreeCtrl::세트항목확장이미지인덱스](#setitemexpandedimageindex)|현재 트리 뷰 컨트롤의 지정된 항목이 확장된 상태에 있을 때 표시할 이미지의 인덱스를 설정합니다.|
-|[CTreeCtrl:::세트항목높이](#setitemheight)|트리 뷰 항목의 높이를 설정합니다.|
-|[CTreeCtrl:::세트항목 이미지](#setitemimage)|이미지를 항목과 연결합니다.|
-|[CTreeCtrl::세트항목 상태](#setitemstate)|항목의 상태를 설정합니다.|
-|[CTreeCtrl::세트아이템스테이트엑스](#setitemstateex)|현재 트리 뷰 컨트롤에서 지정된 항목의 확장 된 상태를 설정 합니다.|
-|[CTreeCtrl:::세트항목 텍스트](#setitemtext)|항목의 텍스트를 설정합니다.|
-|[CTreeCtrl::설정선색상](#setlinecolor)|트리 뷰 컨트롤의 현재 선 색상을 설정합니다.|
-|[CTreeCtrl::세트스크롤 타임](#setscrolltime)|트리 뷰 컨트롤의 최대 스크롤 시간을 설정합니다.|
-|[CTreeCtrl::SetTextColor](#settextcolor)|컨트롤의 텍스트 색상을 설정합니다.|
-|[CTreeCtrl::설정 도구 팁](#settooltips)|트리 뷰 컨트롤의 자식 ToolTip 컨트롤을 설정합니다.|
-|[CTreeCtrl:::쇼인포팁](#showinfotip)|현재 트리 뷰 컨트롤에서 지정된 항목에 대한 정보 팁을 표시합니다.|
-|[CTreeCtrl:::정렬 어린이](#sortchildren)|지정된 상위 항목의 자식을 정렬합니다.|
-|[CTreeCtrl::정렬어린이CB](#sortchildrencb)|응용 프로그램 정의 정렬 함수를 사용하여 지정된 상위 항목의 자식을 정렬합니다.|
+|[CTreeCtrl:: Create](#create)|Tree view 컨트롤을 만들고이를 개체에 연결 `CTreeCtrl` 합니다.|
+|[CTreeCtrl:: CreateDragImage](#createdragimage)|지정 된 트리 뷰 항목에 대 한 끌기 비트맵을 만듭니다.|
+|[CTreeCtrl:: CreateEx](#createex)|지정 된 Windows 확장 스타일을 사용 하 여 트리 컨트롤을 만들고이를 `CTreeCtrl` 개체에 연결 합니다.|
+|[CTreeCtrl::D eleteAllItems](#deleteallitems)|Tree view 컨트롤의 모든 항목을 삭제 합니다.|
+|[CTreeCtrl::D eleteItem](#deleteitem)|Tree view 컨트롤에서 새 항목을 삭제 합니다.|
+|[CTreeCtrl:: EditLabel](#editlabel)|지정 된 트리 뷰 항목을 내부에서 편집 합니다.|
+|[CTreeCtrl:: EndEditLabelNow](#endeditlabelnow)|현재 트리 뷰 컨트롤에서 트리 뷰 항목의 레이블에 대 한 편집 작업을 취소 합니다.|
+|[CTreeCtrl:: Ensurevisible\](#ensurevisible)|트리 뷰 항목이 트리 뷰 컨트롤에 표시 되는지 확인 합니다.|
+|[CTreeCtrl:: Expand](#expand)|지정 된 트리 보기 항목의 자식 항목을 확장 하거나 축소 합니다.|
+|[CTreeCtrl:: GetBkColor](#getbkcolor)|컨트롤의 현재 배경색을 검색 합니다.|
+|[CTreeCtrl:: GetCheck](#getcheck)|트리 컨트롤 항목의 검사 상태를 검색 합니다.|
+|[CTreeCtrl:: GetChildItem](#getchilditem)|지정 된 트리 뷰 항목의 자식을 검색 합니다.|
+|[CTreeCtrl:: GetCount](#getcount)|Tree view 컨트롤과 연결 된 트리 항목 수를 검색 합니다.|
+|[CTreeCtrl:: GetDropHilightItem](#getdrophilightitem)|끌어서 놓기 작업의 대상을 검색 합니다.|
+|[CTreeCtrl:: GetEditControl](#geteditcontrol)|지정 된 트리 뷰 항목을 편집 하는 데 사용 되는 편집 컨트롤의 핸들을 검색 합니다.|
+|[CTreeCtrl:: GetExtendedStyle](#getextendedstyle)|현재 트리 뷰 컨트롤에서 사용 하는 확장 스타일을 검색 합니다.|
+|[CTreeCtrl:: GetFirstVisibleItem](#getfirstvisibleitem)|지정 된 트리 뷰 항목에서 표시 되는 첫 번째 항목을 검색 합니다.|
+|[CTreeCtrl:: GetImageList](#getimagelist)|Tree view 컨트롤과 연결 된 이미지 목록의 핸들을 검색 합니다.|
+|[CTreeCtrl:: GetIndent](#getindent)|부모에서 트리 뷰 항목의 오프셋 (픽셀 단위)을 검색 합니다.|
+|[CTreeCtrl:: GetInsertMarkColor](#getinsertmarkcolor)|트리 뷰의 삽입 표시를 그리는 데 사용 되는 색을 검색 합니다.|
+|[CTreeCtrl:: GetItem](#getitem)|지정 된 트리 뷰 항목의 특성을 검색 합니다.|
+|[CTreeCtrl:: GetItemData](#getitemdata)|항목과 연결 된 응용 프로그램별 값을 반환 합니다.|
+|[CTreeCtrl:: GetItemExpandedImageIndex](#getitemexpandedimageindex)|현재 트리 뷰 컨트롤의 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스를 검색 합니다.|
+|[CTreeCtrl:: GetItemHeight](#getitemheight)|트리 뷰 항목의 현재 높이를 검색 합니다.|
+|[CTreeCtrl:: GetItemImage](#getitemimage)|항목과 연결 된 이미지를 검색 합니다.|
+|[CTreeCtrl:: GetItemPartRect](#getitempartrect)|현재 트리 뷰 컨트롤에서 지정 된 항목의 지정 된 부분에 대 한 경계 사각형을 검색 합니다.|
+|[CTreeCtrl:: GetItemRect](#getitemrect)|트리 뷰 항목의 경계 사각형을 검색 합니다.|
+|[CTreeCtrl:: GetItemState](#getitemstate)|항목의 상태를 반환 합니다.|
+|[CTreeCtrl:: GetItemStateEx](#getitemstateex)|현재 트리 뷰 컨트롤에서 지정 된 항목의 확장 상태를 검색 합니다.|
+|[CTreeCtrl:: GetItemText](#getitemtext)|항목의 텍스트를 반환 합니다.|
+|[CTreeCtrl:: GetLastVisibleItem](#getlastvisibleitem)|현재 트리 뷰 컨트롤에서 마지막으로 확장 된 항목을 검색 합니다.|
+|[CTreeCtrl:: GetLineColor](#getlinecolor)|Tree view 컨트롤의 현재 줄 색을 검색 합니다.|
+|[CTreeCtrl:: GetNextItem](#getnextitem)|지정 된 관계와 일치 하는 다음 트리 뷰 항목을 검색 합니다.|
+|[CTreeCtrl:: GetNextSiblingItem](#getnextsiblingitem)|지정 된 트리 뷰 항목의 다음 형제를 검색 합니다.|
+|[CTreeCtrl:: GetNextVisibleItem](#getnextvisibleitem)|지정 된 트리 보기 항목의 표시 되는 다음 항목을 검색 합니다.|
+|[CTreeCtrl:: GetParentItem](#getparentitem)|지정 된 트리 뷰 항목의 부모를 검색 합니다.|
+|[CTreeCtrl:: GetPrevSiblingItem](#getprevsiblingitem)|지정 된 트리 뷰 항목의 이전 형제를 검색 합니다.|
+|[CTreeCtrl:: GetPrevVisibleItem](#getprevvisibleitem)|지정 된 트리 보기 항목의 표시 된 이전 항목을 검색 합니다.|
+|[CTreeCtrl:: GetRootItem](#getrootitem)|지정 된 트리 뷰 항목의 루트를 검색 합니다.|
+|[CTreeCtrl:: GetScrollTime](#getscrolltime)|Tree view 컨트롤의 최대 스크롤 시간을 검색 합니다.|
+|[CTreeCtrl:: GetSelectedCount](#getselectedcount)|현재 트리 뷰 컨트롤에서 선택 된 항목 수를 검색 합니다.|
+|[CTreeCtrl:: GetSelectedItem](#getselecteditem)|현재 선택 된 트리 뷰 항목을 검색 합니다.|
+|[CTreeCtrl:: GetTextColor](#gettextcolor)|컨트롤의 현재 텍스트 색을 검색 합니다.|
+|[CTreeCtrl:: GetToolTips](#gettooltips)|Tree view 컨트롤에서 사용 하는 자식 도구 설명 컨트롤에 대 한 핸들을 검색 합니다.|
+|[CTreeCtrl:: GetVisibleCount](#getvisiblecount)|Tree view 컨트롤과 연결 된 표시 되는 트리 항목의 수를 검색 합니다.|
+|[CTreeCtrl:: System.windows.media.visualtreehelper.hittest](#hittest)|개체와 관련 된 커서의 현재 위치를 반환 합니다 `CTreeCtrl` .|
+|[CTreeCtrl:: InsertItem](#insertitem)|Tree view 컨트롤에 새 항목을 삽입 합니다.|
+|[CTreeCtrl:: ItemHasChildren](#itemhaschildren)|지정 된 항목에 자식 항목이 있으면 0이 아닌 값을 반환 합니다.|
+|[CTreeCtrl:: MapAccIdToItem](#mapaccidtoitem)|지정 된 액세스 가능성 식별자를 현재 트리 뷰 컨트롤의 트리 뷰 항목에 대 한 핸들에 매핑합니다.|
+|[CTreeCtrl:: MapItemToAccID](#mapitemtoaccid)|지정 된 핸들을 현재 트리 뷰 컨트롤의 트리 뷰 항목에 대 한 액세스 가능성 식별자에 매핑합니다.|
+|[CTreeCtrl:: Select](#select)|를 선택 하거나, 뷰로 스크롤하거나, 지정 된 트리 보기 항목을 다시 그립니다.|
+|[CTreeCtrl:: SelectDropTarget](#selectdroptarget)|트리 항목을 끌어서 놓기 작업의 대상으로 다시 그립니다.|
+|[CTreeCtrl:: SelectItem](#selectitem)|지정 된 트리 보기 항목을 선택 합니다.|
+|[CTreeCtrl:: SelectSetFirstVisible](#selectsetfirstvisible)|지정 된 트리 보기 항목을 첫 번째 표시 항목으로 선택 합니다.|
+|[CTreeCtrl:: SetAutoscrollInfo](#setautoscrollinfo)|현재 트리 뷰 컨트롤의 자동 스크롤 rate를 설정 합니다.|
+|[CTreeCtrl:: SetBkColor](#setbkcolor)|컨트롤의 배경색을 설정 합니다.|
+|[CTreeCtrl:: SetCheck](#setcheck)|트리 컨트롤 항목의 검사 상태를 설정 합니다.|
+|[CTreeCtrl:: SetExtendedStyle](#setextendedstyle)|현재 트리 뷰 컨트롤에 대 한 확장 스타일을 설정 합니다.|
+|[CTreeCtrl:: Seon Agelist](#setimagelist)|Tree view 컨트롤과 연결 된 이미지 목록의 핸들을 설정 합니다.|
+|[CTreeCtrl:: SetIndent](#setindent)|부모에서 트리 뷰 항목의 오프셋 (픽셀 단위)을 설정 합니다.|
+|[CTreeCtrl:: SetInsertMark](#setinsertmark)|Tree view 컨트롤에서 삽입 표시를 설정 합니다.|
+|[CTreeCtrl:: SetInsertMarkColor](#setinsertmarkcolor)|트리 뷰에 삽입 표시를 그리는 데 사용 되는 색을 설정 합니다.|
+|[CTreeCtrl:: SetItem](#setitem)|지정 된 트리 뷰 항목의 특성을 설정 합니다.|
+|[CTreeCtrl:: SetItemData](#setitemdata)|항목과 연결 된 응용 프로그램별 값을 설정 합니다.|
+|[CTreeCtrl:: SetItemExpandedImageIndex](#setitemexpandedimageindex)|현재 트리 뷰 컨트롤의 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스를 설정 합니다.|
+|[CTreeCtrl:: SetItemHeight](#setitemheight)|트리 뷰 항목의 높이를 설정 합니다.|
+|[CTreeCtrl:: SetItemImage](#setitemimage)|이미지를 항목과 연결 합니다.|
+|[CTreeCtrl:: SetItemState](#setitemstate)|항목의 상태를 설정 합니다.|
+|[CTreeCtrl:: SetItemStateEx](#setitemstateex)|현재 트리 뷰 컨트롤에서 지정 된 항목의 확장 상태를 설정 합니다.|
+|[CTreeCtrl:: SetItemText](#setitemtext)|항목의 텍스트를 설정 합니다.|
+|[CTreeCtrl:: SetLineColor](#setlinecolor)|Tree view 컨트롤의 현재 선 색을 설정 합니다.|
+|[CTreeCtrl:: SetScrollTime](#setscrolltime)|Tree view 컨트롤의 최대 스크롤 시간을 설정 합니다.|
+|[CTreeCtrl:: SetTextColor](#settextcolor)|컨트롤의 텍스트 색을 설정 합니다.|
+|[CTreeCtrl:: SetToolTips](#settooltips)|트리 뷰 컨트롤의 자식 도구 설명 컨트롤을 설정 합니다.|
+|[CTreeCtrl:: ShowInfoTip](#showinfotip)|현재 트리 뷰 컨트롤의 지정 된 항목에 대 한 정보 팁을 표시 합니다.|
+|[CTreeCtrl:: SortChildren](#sortchildren)|지정 된 부모 항목의 자식을 정렬 합니다.|
+|[CTreeCtrl:: SortChildrenCB](#sortchildrencb)|응용 프로그램 정의 정렬 함수를 사용 하 여 지정 된 부모 항목의 자식을 정렬 합니다.|
 
 ## <a name="remarks"></a>설명
 
-"트리 뷰 컨트롤"은 문서의 머리글, 인덱스의 항목 또는 디스크의 파일 및 디렉터리와 같은 항목의 계층적 목록을 표시하는 창입니다. 각 항목은 레이블과 선택적 비트맵 이미지로 구성되며 각 항목에는 레이블과 연결된 하위 항목 목록이 있을 수 있습니다. 항목을 클릭하면 사용자는 연결된 하위 항목 목록을 확장하고 축소할 수 있습니다.
+"트리 뷰 컨트롤"은 문서의 머리글, 인덱스의 항목 또는 디스크의 파일 및 디렉터리와 같은 항목의 계층 목록을 표시 하는 창입니다. 각 항목은 레이블과 선택적 비트맵 이미지로 구성 되며 각 항목에는 연결 된 하위 항목 목록이 있을 수 있습니다. 사용자는 항목을 클릭 하 여 연결 된 하위 항목 목록을 확장 하거나 축소할 수 있습니다.
 
-이 컨트롤(및 `CTreeCtrl` 따라서 클래스)은 Windows 98 및 Windows NT 버전 4 이상에서 실행되는 프로그램에서만 사용할 수 있습니다.
+이 컨트롤과 `CTreeCtrl` 클래스는 windows 98 및 WINDOWS NT 버전 4 이상에서 실행 되는 프로그램에만 사용할 수 있습니다.
 
-사용에 `CTreeCtrl`대한 자세한 내용은 다음을 참조하십시오.
+사용에 대 한 자세한 내용은 `CTreeCtrl` 다음을 참조 하세요.
 
 - [컨트롤](../../mfc/controls-mfc.md)
 
 - [CTreeCtrl 사용](../../mfc/using-ctreectrl.md)
 
-- Windows SDK의 [트리 뷰 제어 참조입니다.](/windows/win32/Controls/tree-view-control-reference)
+- Windows SDK의 [Tree View 컨트롤 참조](/windows/win32/Controls/tree-view-control-reference) 입니다.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -297,9 +297,9 @@ class CTreeCtrl : public CWnd
 
 **헤더:** afxcmn.h
 
-## <a name="ctreectrlcreate"></a><a name="create"></a>CTreeCtrl::만들기
+## <a name="ctreectrlcreate"></a><a name="create"></a> CTreeCtrl:: Create
 
-대화 상자 템플릿에서 트리 컨트롤을 지정하거나 [CTreeView를](../../mfc/reference/ctreeview-class.md)사용하는 경우 대화 상자 또는 보기가 만들어지면 트리 컨트롤이 자동으로 만들어집니다.
+대화 상자 템플릿에서 트리 컨트롤을 지정 하거나 [Ctreeview](../../mfc/reference/ctreeview-class.md)를 사용 하는 경우에는 대화 상자 또는 뷰를 만들 때 트리 컨트롤이 자동으로 만들어집니다.
 
 ```
 virtual BOOL Create(
@@ -312,36 +312,36 @@ virtual BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *dwStyle*<br/>
-트리 뷰 컨트롤의 스타일을 지정합니다. [CreateWindow에](/windows/win32/api/winuser/nf-winuser-createwindoww)설명된 창 스타일과 Windows SDK에 설명된 [트리 뷰 컨트롤 스타일의](/windows/win32/Controls/tree-view-control-window-styles) 조합을 적용합니다.
+Tree view 컨트롤의 스타일을 지정 합니다. [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)에 설명 된 창 스타일을 적용 하 고 Windows SDK에 설명 된 대로 [트리 뷰 컨트롤 스타일](/windows/win32/Controls/tree-view-control-window-styles) 의 조합을 적용 합니다.
 
 *rect*<br/>
-트리 뷰 컨트롤의 크기와 위치를 지정합니다. [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조일 수 있습니다.
+트리 뷰 컨트롤의 크기와 위치를 지정 합니다. 이는 [Crect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조 일 수 있습니다.
 
 *pParentWnd*<br/>
-트리 뷰 컨트롤의 상위 창(일반적으로 을 `CDialog`지정합니다.) NULL이 아니어야 합니다.
+트리 뷰 컨트롤의 부모 창 (일반적으로)을 지정 합니다 `CDialog` . NULL이 아니어야 합니다.
 
 *nID*<br/>
-트리 뷰 컨트롤의 ID를 지정합니다.
+Tree view 컨트롤의 ID를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-초기화가 성공한 경우 0이 아닙니다. 그렇지 않으면 0.
+초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-트리 컨트롤을 다른 창의 자식 창으로 만들려면 `Create` 멤버 함수를 사용합니다. 을 사용하여 `Create`트리 컨트롤을 만드는 경우 다른 트리 뷰 스타일 외에 WS_VISIBLE 전달해야 합니다.
+트리 컨트롤을 다른 창의 자식 창으로 만들려면 `Create` 멤버 함수를 사용 합니다. 를 사용 하 여 트리 컨트롤을 만드는 경우 `Create` 다른 트리 뷰 스타일 외에도 WS_VISIBLE 전달 해야 합니다.
 
-두 단계로 `CTreeCtrl` 구성합니다. 먼저 생성자 호출 한 `Create`다음 호출 `CTreeCtrl` 합니다 .
+`CTreeCtrl`두 단계로을 생성 합니다. 먼저 생성자를 호출한 다음을 호출 합니다 `Create` .이 메서드는 트리 뷰 컨트롤을 만들고이를 `CTreeCtrl` 개체에 연결 합니다.
 
-확장 된 창 스타일을 사용하여 트리 컨트롤을 `Create`만들려면 대신 [CreateEx를](#createex) 호출합니다.
+확장 창 스타일을 사용 하 여 트리 컨트롤을 만들려면 대신 [Createex](#createex) 를 호출 `Create` 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]
 
-## <a name="ctreectrlcreateex"></a><a name="createex"></a>CTreeCtrl::만들기
+## <a name="ctreectrlcreateex"></a><a name="createex"></a> CTreeCtrl:: CreateEx
 
-이 함수를 호출하여 컨트롤(자식 창)을 `CTreeCtrl` 만들고 개체와 연결합니다.
+컨트롤 (자식 창)을 만들어 개체와 연결 하려면이 함수를 호출 `CTreeCtrl` 합니다.
 
 ```
 virtual BOOL CreateEx(
@@ -355,31 +355,31 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>매개 변수
 
 *dwExStyle*<br/>
-생성되는 컨트롤의 확장 스타일을 지정합니다. 확장 된 Windows 스타일 목록은 Windows SDK에서 [CreateWindowEx에](/windows/win32/api/winuser/nf-winuser-createwindowexw) 대한 *dwExStyle* 매개 변수를 참조하십시오.
+만들려는 컨트롤의 확장 스타일을 지정 합니다. 확장 된 Windows 스타일의 목록에 대해서는 Windows SDK의 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 에 대 한 *dwexstyle* 매개 변수를 참조 하세요.
 
 *dwStyle*<br/>
-트리 뷰 컨트롤의 스타일을 지정합니다. [CreateWindow에](/windows/win32/api/winuser/nf-winuser-createwindoww)설명된 창 스타일과 Windows SDK에 설명된 [트리 뷰 컨트롤 스타일의](/windows/win32/Controls/tree-view-control-window-styles) 조합을 적용합니다.
+Tree view 컨트롤의 스타일을 지정 합니다. [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)에 설명 된 창 스타일을 적용 하 고 Windows SDK에 설명 된 대로 [트리 뷰 컨트롤 스타일](/windows/win32/Controls/tree-view-control-window-styles) 의 조합을 적용 합니다.
 
 *rect*<br/>
-*pParentWnd의*클라이언트 좌표에서 생성할 창의 크기와 위치를 설명하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다.
+*PParentWnd*의 클라이언트 좌표에서 만들 창의 크기와 위치를 설명 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 참조입니다.
 
 *pParentWnd*<br/>
-컨트롤의 부모인 창에 대한 포인터입니다.
+컨트롤의 부모 창에 대 한 포인터입니다.
 
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
 ### <a name="return-value"></a>Return Value
 
-그렇지 않으면 성공하면 0이 아닙니다.
+성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-만들기 `CreateEx` 대신 [Create](#create) Windows 확장 스타일 **서문 WS_EX_** 지정된 확장 된 Windows 스타일을 적용합니다.
+`CreateEx` [Create](#create) 대신를 사용 하 여 **WS_EX_** windows 확장 스타일로 지정 된 확장 된 windows 스타일을 적용 합니다.
 
-## <a name="ctreectrlcreatedragimage"></a><a name="createdragimage"></a>CTreeCtrl::드래그 이미지 만들기
+## <a name="ctreectrlcreatedragimage"></a><a name="createdragimage"></a> CTreeCtrl:: CreateDragImage
 
-이 함수를 호출하여 트리 뷰 컨트롤에서 지정된 항목에 대한 드래그 비트맵을 만들고, 비트맵에 대한 이미지 목록을 만들고, 이미지 목록에 비트맵을 추가합니다.
+이 함수를 호출 하 여 tree view 컨트롤에서 지정 된 항목에 대 한 끌기 비트맵을 만들고 비트맵의 이미지 목록을 만든 다음 이미지 목록에 비트맵을 추가 합니다.
 
 ```
 CImageList* CreateDragImage(HTREEITEM hItem);
@@ -387,22 +387,22 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-드래그할 트리 항목의 핸들입니다.
+*hItem*<br/>
+끌 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 끌기 비트맵이 추가된 이미지 목록에 대한 포인터입니다. 그렇지 않으면 NULL.
+성공 하는 경우 끌기 비트맵이 추가 된 이미지 목록에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-응용 프로그램은 이미지 목록 기능을 사용하여 항목을 끌 때 이미지를 표시합니다.
+응용 프로그램은 항목을 끌 때 이미지 목록 함수를 사용 하 여 이미지를 표시 합니다.
 
-개체는 `CImageList` 영구적이며 완료되면 삭제해야 합니다. 다음은 그 예입니다.
+`CImageList`개체는 영구적 이며 완료 되 면 삭제 해야 합니다. 예를 들면 다음과 같습니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
-## <a name="ctreectrlctreectrl"></a><a name="ctreectrl"></a>CTreeCtrl:::CTreeCtrl
+## <a name="ctreectrlctreectrl"></a><a name="ctreectrl"></a> CTreeCtrl:: CTreeCtrl
 
 `CTreeCtrl` 개체를 생성합니다.
 
@@ -410,9 +410,9 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 CTreeCtrl();
 ```
 
-## <a name="ctreectrldeleteallitems"></a><a name="deleteallitems"></a>CTreeCtrl::D모든 항목
+## <a name="ctreectrldeleteallitems"></a><a name="deleteallitems"></a> CTreeCtrl::D eleteAllItems
 
-이 함수를 호출하여 트리 뷰 컨트롤에서 모든 항목을 삭제합니다.
+Tree view 컨트롤에서 모든 항목을 삭제 하려면이 함수를 호출 합니다.
 
 ```
 BOOL DeleteAllItems();
@@ -426,9 +426,9 @@ BOOL DeleteAllItems();
 
 [!code-cpp[NVC_MFC_CTreeCtrl#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]
 
-## <a name="ctreectrldeleteitem"></a><a name="deleteitem"></a>CTreeCtrl::Delete항목
+## <a name="ctreectrldeleteitem"></a><a name="deleteitem"></a> CTreeCtrl::D eleteItem
 
-이 함수를 호출하여 트리 뷰 컨트롤에서 항목을 삭제합니다.
+Tree view 컨트롤에서 항목을 삭제 하려면이 함수를 호출 합니다.
 
 ```
 BOOL DeleteItem(HTREEITEM hItem);
@@ -436,8 +436,8 @@ BOOL DeleteItem(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-삭제할 트리 항목의 핸들입니다. *hitem에* TVI_ROOT 값이 있으면 모든 항목이 트리 보기 컨트롤에서 삭제됩니다.
+*hItem*<br/>
+삭제할 트리 항목의 핸들입니다. *Hitem* 에 TVI_ROOT 값이 있으면 모든 항목이 tree view 컨트롤에서 삭제 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -447,9 +447,9 @@ BOOL DeleteItem(HTREEITEM hItem);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]
 
-## <a name="ctreectrleditlabel"></a><a name="editlabel"></a>CTreeCtrl::편집 라벨
+## <a name="ctreectrleditlabel"></a><a name="editlabel"></a> CTreeCtrl:: EditLabel
 
-이 함수를 호출하여 지정된 항목의 텍스트의 현재 편집을 시작합니다.
+지정 된 항목의 텍스트를 전체 편집 하려면이 함수를 호출 합니다.
 
 ```
 CEdit* EditLabel(HTREEITEM hItem);
@@ -457,24 +457,24 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 편집할 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 항목 텍스트를 `CEdit` 편집하는 데 사용되는 개체에 대한 포인터입니다. 그렇지 않으면 NULL.
+성공 하면 항목 텍스트를 편집 하는 데 사용 되는 개체에 대 한 포인터 `CEdit` 이 고, 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-편집은 항목의 텍스트를 텍스트가 포함된 한 줄 편집 컨트롤로 대체하여 수행됩니다.
+항목의 텍스트를 텍스트를 포함 하는 한 줄 편집 컨트롤로 바꿔서 편집을 수행 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]
 
-## <a name="ctreectrlendeditlabelnow"></a><a name="endeditlabelnow"></a>CTreeCtrl::종료 편집 레이블지금
+## <a name="ctreectrlendeditlabelnow"></a><a name="endeditlabelnow"></a> CTreeCtrl:: EndEditLabelNow
 
-현재 트리 뷰 컨트롤에서 트리 뷰 항목의 레이블에 대한 편집 작업을 마칠 수 있습니다.
+현재 트리 뷰 컨트롤에서 트리 뷰 항목의 레이블에 대 한 편집 작업을 끝냅니다.
 
 ```
 BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
@@ -482,21 +482,20 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*fCancelWithoutSave*|【인】 TRUE는 편집 작업을 종료하기 전에 트리 뷰 항목에 대한 변경 내용을 삭제하거나 작업을 종료하기 전에 트리 뷰 항목에 대한 변경 내용을 저장하는 FALSE입니다.|
+*fCancelWithoutSave*\
+진행 편집 작업을 종료 하기 전에 트리 뷰 항목에 대 한 변경 내용을 취소 하려면 TRUE이 고, 작업을 종료 하기 전에 트리 뷰 항목에 대 한 변경 내용을 저장 하려면 FALSE입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) 메시지를 보냅니다.
 
-## <a name="ctreectrlensurevisible"></a><a name="ensurevisible"></a>CTreeCtrl:::가시성 보장
+## <a name="ctreectrlensurevisible"></a><a name="ensurevisible"></a> CTreeCtrl:: Ensurevisible\
 
-이 함수를 호출하여 트리 뷰 항목이 표시되는지 확인합니다.
+이 함수를 호출 하 여 트리 뷰 항목이 표시 되는지 확인 합니다.
 
 ```
 BOOL EnsureVisible(HTREEITEM hItem);
@@ -504,24 +503,24 @@ BOOL EnsureVisible(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-표시되는 트리 항목의 핸들입니다.
+*hItem*<br/>
+표시 되는 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-시스템이 트리 뷰 컨트롤의 항목을 스크롤하여 지정된 항목이 표시되는지 확인하면 TRUE를 반환합니다. 그렇지 않으면 반환 값은 FALSE입니다.
+시스템에서 트리 뷰 컨트롤의 항목을 스크롤하여 지정 된 항목이 표시 되는지 확인 하면 TRUE를 반환 합니다. 그렇지 않으면 반환 값은 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-필요한 경우 이 함수는 상위 항목을 확장하거나 트리 뷰 컨트롤을 스크롤하여 항목이 표시되도록 합니다.
+필요한 경우 함수는 부모 항목을 확장 하거나 항목이 표시 되도록 tree view 컨트롤을 스크롤합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]
 
-## <a name="ctreectrlexpand"></a><a name="expand"></a>CTreeCtrl::확장
+## <a name="ctreectrlexpand"></a><a name="expand"></a> CTreeCtrl:: Expand
 
-지정된 상위 항목과 연결된 하위 항목(있는 경우)의 목록을 확장하거나 축소하려면 이 함수를 호출합니다.
+지정 된 부모 항목과 연결 된 자식 항목 (있는 경우)의 목록을 확장 하거나 축소 하려면이 함수를 호출 합니다.
 
 ```
 BOOL Expand(
@@ -531,19 +530,19 @@ BOOL Expand(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-확장 중인 트리 항목의 핸들입니다.
+*hItem*<br/>
+확장 되는 트리 항목의 핸들입니다.
 
 *nCode*<br/>
-수행할 작업 유형을 나타내는 플래그입니다. 이 플래그는 다음 값 중 하나를 가질 수 있습니다.
+수행할 동작의 유형을 나타내는 플래그입니다. 이 플래그는 다음 값 중 하나를 가질 수 있습니다.
 
-- TVE_COLLAPSE 목록을 축소합니다.
+- TVE_COLLAPSE는 목록을 축소 합니다.
 
-- TVE_COLLAPSERESET 목록을 축소하고 하위 항목을 제거합니다. TVIS_EXPANDEDONCE 상태 플래그가 재설정됩니다. 이 플래그는 TVE_COLLAPSE 플래그와 함께 사용해야 합니다.
+- TVE_COLLAPSERESET는 목록을 축소 하 고 자식 항목을 제거 합니다. TVIS_EXPANDEDONCE 상태 플래그를 다시 설정 합니다. 이 플래그는 TVE_COLLAPSE 플래그와 함께 사용 해야 합니다.
 
-- TVE_EXPAND 목록을 확장합니다.
+- TVE_EXPAND 목록을 확장 합니다.
 
-- TVE_TOGGLE 현재 확장된 경우 목록을 축소하거나 현재 축소된 경우 목록을 축소합니다.
+- TVE_TOGGLE 현재 확장 된 경우 목록을 축소 하거나 현재 축소 되어 있는 경우 확장 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -551,11 +550,11 @@ BOOL Expand(
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::보장가볼](#ensurevisible)수 있습니다.
+  [CTreeCtrl:: ensurevisible\](#ensurevisible)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetbkcolor"></a><a name="getbkcolor"></a>CTreeCtrl::GetBkColor
+## <a name="ctreectrlgetbkcolor"></a><a name="getbkcolor"></a> CTreeCtrl:: GetBkColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_GETBKCOLOR Win32 [메시지의](/windows/win32/Controls/tvm-getbkcolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETBKCOLOR](/windows/win32/Controls/tvm-getbkcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF GetBkColor() const;
@@ -563,15 +562,15 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>Return Value
 
-컨트롤의 현재 창 배경색을 나타내는 COLORREF 값입니다. 이 값이 -1이면 컨트롤이 시스템 창 색상을 사용하고 있습니다. 이 경우 컨트롤에서 `::GetSysColor(COLOR_WINDOW)` 사용 하는 현재 시스템 색상을 얻을 수 있습니다.
+컨트롤의 현재 창 배경색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 시스템 창 색을 사용 합니다. 이 경우를 사용 하 여 `::GetSysColor(COLOR_WINDOW)` 컨트롤에서 사용 중인 현재 시스템 색을 가져올 수 있습니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetTextColor에](#settextcolor)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetTextColor](#settextcolor)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetcheck"></a><a name="getcheck"></a>CTreeCtrl::GetCheck
+## <a name="ctreectrlgetcheck"></a><a name="getcheck"></a> CTreeCtrl:: GetCheck
 
-이 멤버 함수를 호출하여 항목의 검사 상태를 검색합니다.
+항목의 check 상태를 검색 하려면이 멤버 함수를 호출 합니다.
 
 ```
 BOOL GetCheck(HTREEITEM hItem) const;
@@ -579,20 +578,20 @@ BOOL GetCheck(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-상태 정보를 수신할 HTREEITEM입니다.
+*hItem*<br/>
+상태 정보를 받을 대상에 대 한 HTREEITEM입니다.
 
 ### <a name="return-value"></a>Return Value
 
-트리 컨트롤 항목이 선택된 경우 0이 아닙니다. 그렇지 않으면 0.
+트리 컨트롤 항목이 선택 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetCheck에](#setcheck)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetCheck](#setcheck)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetchilditem"></a><a name="getchilditem"></a>CTreeCtrl:::겟차일드아이템
+## <a name="ctreectrlgetchilditem"></a><a name="getchilditem"></a> CTreeCtrl:: GetChildItem
 
-이 함수를 호출하여 *hItem*에서 지정한 항목의 자식인 트리 뷰 항목을 검색합니다.
+*Hitem*으로 지정 된 항목의 자식인 트리 뷰 항목을 검색 하려면이 함수를 호출 합니다.
 
 ```
 HTREEITEM GetChildItem(HTREEITEM hItem) const;
@@ -600,20 +599,20 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 자식 항목의 핸들입니다. 그렇지 않으면 NULL.
+성공 하는 경우 자식 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]
 
-## <a name="ctreectrlgetcount"></a><a name="getcount"></a>CTreeCtrl::GetCount
+## <a name="ctreectrlgetcount"></a><a name="getcount"></a> CTreeCtrl:: GetCount
 
-이 함수를 호출하여 트리 뷰 컨트롤의 항목 수를 검색합니다.
+Tree view 컨트롤의 항목 수를 검색 하려면이 함수를 호출 합니다.
 
 ```
 UINT GetCount() const;
@@ -621,15 +620,15 @@ UINT GetCount() const;
 
 ### <a name="return-value"></a>Return Value
 
-트리 뷰 컨트롤의 항목 수입니다.
+Tree view 컨트롤의 항목 수입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]
 
-## <a name="ctreectrlgetdrophilightitem"></a><a name="getdrophilightitem"></a>CTreeCtrl:::GetDropHilight항목
+## <a name="ctreectrlgetdrophilightitem"></a><a name="getdrophilightitem"></a> CTreeCtrl:: GetDropHilightItem
 
-이 함수를 호출하여 끌어서 놓기 작업의 대상인 항목을 검색합니다.
+이 함수를 호출 하 여 끌어서 놓기 작업의 대상인 항목을 검색 합니다.
 
 ```
 HTREEITEM GetDropHilightItem() const;
@@ -637,15 +636,15 @@ HTREEITEM GetDropHilightItem() const;
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 항목의 핸들이 삭제되었습니다. 그렇지 않으면 NULL.
+성공 하는 경우 삭제 된 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]
 
-## <a name="ctreectrlgeteditcontrol"></a><a name="geteditcontrol"></a>CTreeCtrl::GetEditControl
+## <a name="ctreectrlgeteditcontrol"></a><a name="geteditcontrol"></a> CTreeCtrl:: GetEditControl
 
-이 함수를 호출하여 트리 뷰 항목의 텍스트를 편집하는 데 사용되는 편집 컨트롤의 핸들을 검색합니다.
+이 함수를 호출 하 여 트리 뷰 항목의 텍스트를 편집 하는 데 사용 되는 편집 컨트롤의 핸들을 검색 합니다.
 
 ```
 CEdit* GetEditControl() const;
@@ -653,15 +652,15 @@ CEdit* GetEditControl() const;
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 항목 텍스트를 편집하는 데 사용되는 편집 컨트롤에 대한 포인터입니다. 그렇지 않으면 NULL.
+성공 하는 경우 항목 텍스트를 편집 하는 데 사용 되는 편집 컨트롤에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]
 
-## <a name="ctreectrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTreeCtrl::GetExtended스타일
+## <a name="ctreectrlgetextendedstyle"></a><a name="getextendedstyle"></a> CTreeCtrl:: GetExtendedStyle
 
-현재 트리 뷰 컨트롤에서 사용 하는 확장 된 스타일을 검색 합니다.
+현재 트리 뷰 컨트롤에서 사용 하는 확장 스타일을 검색 합니다.
 
 ```
 DWORD GetExtendedStyle() const;
@@ -669,15 +668,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 트리 뷰 컨트롤의 확장된 스타일(OR)을 비트로 조합한 값입니다. 자세한 내용은 [트리 뷰 컨트롤 확장 스타일을](/windows/win32/Controls/tree-view-control-window-extended-styles)참조하십시오.
+현재 트리 뷰 컨트롤의 확장 스타일의 비트 조합 (또는)을 포함 하는 값입니다. 자세한 내용은 [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)을 참조 하세요.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) 메시지를 보냅니다.
 
-## <a name="ctreectrlgetfirstvisibleitem"></a><a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstvisible항목
+## <a name="ctreectrlgetfirstvisibleitem"></a><a name="getfirstvisibleitem"></a> CTreeCtrl:: GetFirstVisibleItem
 
-이 함수를 호출하여 트리 뷰 컨트롤의 첫 번째 표시되는 항목을 검색합니다.
+이 함수를 호출 하 여 tree view 컨트롤에서 표시 되는 첫 번째 항목을 검색 합니다.
 
 ```
 HTREEITEM GetFirstVisibleItem() const;
@@ -685,15 +684,15 @@ HTREEITEM GetFirstVisibleItem() const;
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 표시되는 항목의 핸들; 그렇지 않으면 NULL.
+표시 되는 첫 번째 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetCheck에](#setcheck)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetCheck](#setcheck)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetimagelist"></a><a name="getimagelist"></a>CTreeCtrl::GetImageList
+## <a name="ctreectrlgetimagelist"></a><a name="getimagelist"></a> CTreeCtrl:: GetImageList
 
-이 함수를 호출하여 트리 뷰 컨트롤과 연결된 일반 또는 상태 이미지 목록의 핸들을 검색합니다.
+이 함수를 호출 하 여 tree view 컨트롤과 연결 된 일반 또는 상태 이미지 목록의 핸들을 검색 합니다.
 
 ```
 CImageList* GetImageList(UINT nImageList) const;
@@ -704,27 +703,27 @@ CImageList* GetImageList(UINT nImageList) const;
 *nImageList*<br/>
 검색할 이미지 목록의 유형입니다. 이미지 목록은 다음 값 중 하나일 수 있습니다.
 
-- TVSIL_NORMAL 트리 뷰 항목에 대해 선택되고 선택되지 않은 이미지가 포함된 일반 이미지 목록을 검색합니다.
+- TVSIL_NORMAL는 트리 보기 항목에 대해 선택 된 이미지와 nonselected 이미지를 포함 하는 일반 이미지 목록을 검색 합니다.
 
-- TVSIL_STATE 사용자 정의 상태에 있는 트리 뷰 항목에 대한 이미지가 포함된 상태 이미지 목록을 검색합니다.
+- TVSIL_STATE는 사용자 정의 상태의 트리 뷰 항목에 대 한 이미지가 포함 된 상태 이미지 목록을 검색 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 컨트롤의 이미지 목록에 대한 포인터; 그렇지 않으면 NULL.
+성공 하는 경우 컨트롤의 이미지 목록에 대 한 포인터 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-트리 뷰 컨트롤의 각 항목에는 비트매핑된 이미지 쌍이 연관되어 있을 수 있습니다. 항목을 선택하면 한 이미지가 표시되고 다른 이미지는 항목을 선택하지 않을 때 표시됩니다. 예를 들어 항목이 선택될 때 열려 있는 폴더와 선택하지 않을 때 닫힌 폴더가 표시될 수 있습니다.
+Tree view 컨트롤의 각 항목에는 연결 된 비트맵 이미지 쌍이 있을 수 있습니다. 항목이 선택 되 면 하나의 이미지가 표시 되 고, 항목을 선택 하지 않으면 다른 이미지가 표시 됩니다. 예를 들어 항목을 선택 하면 열려 있는 폴더를 표시 하 고 선택 하지 않으면 폴더를 닫을 수 있습니다.
 
-이미지 목록에 대한 자세한 내용은 [CImageList](../../mfc/reference/cimagelist-class.md) 클래스를 참조하십시오.
+이미지 목록에 대 한 자세한 내용은 [CImageList](../../mfc/reference/cimagelist-class.md) 클래스를 참조 하세요.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#11](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]
 
-## <a name="ctreectrlgetindent"></a><a name="getindent"></a>CTreeCtrl:::GetIndent
+## <a name="ctreectrlgetindent"></a><a name="getindent"></a> CTreeCtrl:: GetIndent
 
-이 함수를 호출하여 하위 항목이 부모 항목에 대해 들여쓰기되는 양을 픽셀 단위로 검색합니다.
+자식 항목이 부모 항목을 기준으로 들여쓰기 되는 크기 (픽셀)를 검색 하려면이 함수를 호출 합니다.
 
 ```
 UINT GetIndent() const;
@@ -732,15 +731,15 @@ UINT GetIndent() const;
 
 ### <a name="return-value"></a>Return Value
 
-픽셀단위로 측정된 들여쓰기의 양입니다.
+측정 된 들여쓰기 크기 (픽셀)입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#12](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]
 
-## <a name="ctreectrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor
+## <a name="ctreectrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a> CTreeCtrl:: GetInsertMarkColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF GetInsertMarkColor() const;
@@ -748,15 +747,15 @@ COLORREF GetInsertMarkColor() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 삽입 마크 색상을 포함하는 COLORREF 값입니다.
+현재 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]
 
-## <a name="ctreectrlgetitem"></a><a name="getitem"></a>CTreeCtrl::GetItem
+## <a name="ctreectrlgetitem"></a><a name="getitem"></a> CTreeCtrl:: GetItem
 
-이 함수를 호출하여 지정된 트리 뷰 항목의 특성을 검색합니다.
+이 함수를 호출 하 여 지정 된 트리 뷰 항목의 특성을 검색 합니다.
 
 ```
 BOOL GetItem(TVITEM* pItem) const;
@@ -765,7 +764,7 @@ BOOL GetItem(TVITEM* pItem) const;
 ### <a name="parameters"></a>매개 변수
 
 *pItem*<br/>
-Windows SDK에 설명된 대로 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조에 대한 포인터입니다.
+Windows SDK 설명 된 [Tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -773,11 +772,11 @@ Windows SDK에 설명된 대로 [TVITEM](/windows/win32/api/commctrl/ns-commctrl
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::DeleteItem](#deleteitem)에 대한 예제를 참조하십시오.
+  [CTreeCtrl::D eleteitem](#deleteitem)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetitemdata"></a><a name="getitemdata"></a>CTreeCtrl:::겟아이템데이터
+## <a name="ctreectrlgetitemdata"></a><a name="getitemdata"></a> CTreeCtrl:: GetItemData
 
-이 함수를 호출하여 지정된 항목과 연결된 응용 프로그램 별 값을 검색합니다.
+지정 된 항목과 연결 된 응용 프로그램별 값을 검색 하려면이 함수를 호출 합니다.
 
 ```
 DWORD_PTR GetItemData(HTREEITEM hItem) const;
@@ -785,20 +784,20 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 데이터를 검색할 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-*hItem에서*지정한 항목과 연결된 포인터 크기의 응용 프로그램별 값입니다.
+*Hitem*으로 지정 된 항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]
 
-## <a name="ctreectrlgetitemexpandedimageindex"></a><a name="getitemexpandedimageindex"></a>CTreeCtrl::겟아이템확장이미지인덱스
+## <a name="ctreectrlgetitemexpandedimageindex"></a><a name="getitemexpandedimageindex"></a> CTreeCtrl:: GetItemExpandedImageIndex
 
-현재 트리 뷰 컨트롤의 지정된 항목이 확장된 상태에 있을 때 표시할 이미지 인덱스를 검색합니다.
+현재 트리 뷰 컨트롤의 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스를 검색 합니다.
 
 ```
 int GetItemExpandedImageIndex(HTREEITEM hItem)const;
@@ -806,21 +805,20 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
+*hItem*\
+진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정된 항목이 확장된 상태에 있을 때 표시할 이미지의 인덱스입니다.
+지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 메시지를 보냅니다. 이 메시지는 트리 뷰 컨트롤 항목을 설명하는 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조를 반환한 다음 `iExpandedImage` 이 메서드는 해당 구조에서 멤버를 검색합니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 메시지를 보냅니다. 이 메시지는 트리 뷰 컨트롤 항목을 설명 하는 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체를 반환 하 고이 메서드는 `iExpandedImage` 해당 구조체에서 멤버를 검색 합니다.
 
-## <a name="ctreectrlgetitemheight"></a><a name="getitemheight"></a>CTreeCtrl::GetItem높이
+## <a name="ctreectrlgetitemheight"></a><a name="getitemheight"></a> CTreeCtrl:: GetItemHeight
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_GETITEMHEIGHT Win32 [메시지의](/windows/win32/Controls/tvm-getitemheight)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETITEMHEIGHT](/windows/win32/Controls/tvm-getitemheight)의 동작을 구현 합니다.
 
 ```
 SHORT GetItemHeight() const;
@@ -828,15 +826,15 @@ SHORT GetItemHeight() const;
 
 ### <a name="return-value"></a>Return Value
 
-항목의 높이(픽셀)입니다.
+항목의 높이 (픽셀)입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#15](../../mfc/reference/codesnippet/cpp/ctreectrl-class_15.cpp)]
 
-## <a name="ctreectrlgetitemimage"></a><a name="getitemimage"></a>CTreeCtrl::겟아이템이미지
+## <a name="ctreectrlgetitemimage"></a><a name="getitemimage"></a> CTreeCtrl:: GetItemImage
 
-트리 뷰 컨트롤의 각 항목에는 비트매핑된 이미지 쌍이 연관되어 있을 수 있습니다.
+Tree view 컨트롤의 각 항목에는 연결 된 비트맵 이미지 쌍이 있을 수 있습니다.
 
 ```
 BOOL GetItemImage(
@@ -847,14 +845,14 @@ BOOL GetItemImage(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 이미지를 검색할 항목의 핸들입니다.
 
 *nImage*<br/>
-트리 뷰 컨트롤의 이미지 목록 내에서 항목 이미지의 인덱스를 받는 정수입니다.
+트리 뷰 컨트롤의 이미지 목록 내에서 항목 이미지의 인덱스를 수신 하는 정수입니다.
 
-*n선택이미지*<br/>
-트리 뷰 컨트롤의 이미지 목록 내에서 항목의 선택한 이미지 인덱스를 받는 정수입니다.
+*nSelectedImage*<br/>
+트리 뷰 컨트롤의 이미지 목록에서 항목의 선택 된 이미지의 인덱스를 받는 정수입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -862,17 +860,17 @@ BOOL GetItemImage(
 
 ### <a name="remarks"></a>설명
 
-이미지는 항목 레이블의 왼쪽에 나타납니다. 항목을 선택하면 한 이미지가 표시되고 다른 이미지는 항목을 선택하지 않을 때 표시됩니다. 예를 들어 항목이 선택될 때 열려 있는 폴더와 선택하지 않을 때 닫힌 폴더가 표시될 수 있습니다.
+이미지는 항목 레이블의 왼쪽에 표시 됩니다. 항목이 선택 되 면 하나의 이미지가 표시 되 고, 항목을 선택 하지 않으면 다른 이미지가 표시 됩니다. 예를 들어 항목을 선택 하면 열려 있는 폴더를 표시 하 고 선택 하지 않으면 폴더를 닫을 수 있습니다.
 
-이 함수를 호출하여 트리 뷰 컨트롤의 이미지 목록 내에서 항목 이미지의 인덱스와 선택한 이미지를 검색합니다.
+이 함수를 호출 하 여 트리 뷰 컨트롤의 이미지 목록에서 항목 이미지 및 선택한 이미지의 인덱스를 검색 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#16](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]
 
-## <a name="ctreectrlgetitempartrect"></a><a name="getitempartrect"></a>CTreeCtrl:::겟아이템파트렉트
+## <a name="ctreectrlgetitempartrect"></a><a name="getitempartrect"></a> CTreeCtrl:: GetItemPartRect
 
-현재 트리 뷰 컨트롤에서 지정된 항목의 지정된 부분에 대한 경계 사각형을 검색합니다.
+현재 트리 뷰 컨트롤에서 지정 된 항목의 지정 된 부분에 대 한 경계 사각형을 검색 합니다.
 
 ```
 BOOL GetItemPartRect(
@@ -883,37 +881,40 @@ BOOL GetItemPartRect(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
-|*nPart*|【인】 부품의 식별자입니다. TVGIPR_BUTTON 설정해야 합니다.|
-|*Lprect*|【아웃】 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 이 메서드가 성공하면 구조체는 *hItem* 및 *nPart에*의해 지정된 부품의 사각형 좌표를 받습니다.|
+*hItem*\
+진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
+
+*n 부분*\
+진행 파트의 식별자입니다. TVGIPR_BUTTON으로 설정 해야 합니다.
+
+*lpRect*\
+제한이 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다. 이 메서드가 성공적으로 수행 되 면 구조는 *Hitem* 및 *npart*로 지정 된 파트의 사각형 좌표를 수신 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-각 트리 컨트롤 항목은 그래픽 사각형으로 경계가 됩니다. 해당 사각형의 점을 클릭할 때마다 항목이 *적중되었다고*합니다. 이 메서드는 사각형의 점을 클릭할 때 *hItem* 매개 변수로 식별된 항목이 적중되도록 가장 큰 사각형을 반환합니다.
+각 트리 컨트롤 항목은 그래픽 사각형에 의해 제한 됩니다. 해당 사각형의 특정 지점을 클릭할 때마다 항목이 *적중*된 것으로 간주 됩니다. 이 메서드는 사각형의 점이 클릭 될 때 *Hitem* 매개 변수로 식별 되는 항목이 적중 되도록 가장 큰 사각형을 반환 합니다.
 
-이 메서드는 Windows SDK에 설명 된 TVM_GETITEMPARTRECT 메시지를 보냅니다. 자세한 내용은 [TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect) 매크로를 참조하세요.
+이 메서드는 Windows SDK에서 설명 하는 TVM_GETITEMPARTRECT 메시지를 보냅니다. 자세한 내용은 [TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect) 매크로를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 내게 필요한 옵션 식별자와 [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) 메서드를 사용하여 루트 트리 뷰 항목에 대한 핸들을 검색합니다. 그런 다음 예제에서는 핸들과 [CTreeCtrl::GetItemPartRect](#getitempartrect) 메서드를 사용하여 해당 항목 주위에 3D 사각형을 그립니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) 메서드를 사용하여 루트 트리 뷰 항목을 내게 필요한 옵션 식별자와 연결했습니다.
+다음 코드 예제에서는 액세스 가능성 식별자 및 [CTreeCtrl:: MapAccIdToItem](#mapaccidtoitem) 메서드를 사용 하 여 루트 트리 뷰 항목에 대 한 핸들을 검색 합니다. 그런 다음이 예제에서는 핸들 및 [CTreeCtrl:: GetItemPartRect](#getitempartrect) 메서드를 사용 하 여 해당 항목 주위에 3d 사각형을 그립니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. [CTreeCtrl:: MapItemToAccID](#mapitemtoaccid) 메서드를 사용 하 여 루트 트리 보기 항목을 접근성 식별자와 연결 했습니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]
 
-## <a name="ctreectrlgetitemrect"></a><a name="getitemrect"></a>CTreeCtrl:::겟아이템렉트
+## <a name="ctreectrlgetitemrect"></a><a name="getitemrect"></a> CTreeCtrl:: GetItemRect
 
-*hItem에* 대한 경계 사각형을 검색하고 표시되는지 여부를 확인하려면 이 함수를 호출합니다.
+*Hitem* 에 대 한 경계 사각형을 검색 하 고 표시 되는지 여부를 확인 하려면이 함수를 호출 합니다.
 
 ```
 BOOL GetItemRect(
@@ -924,26 +925,26 @@ BOOL GetItemRect(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-트리 뷰 컨트롤 항목의 핸들입니다.
+*hItem*<br/>
+Tree view 컨트롤 항목의 핸들입니다.
 
-*Lprect*<br/>
-경계 사각형을 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 좌표는 트리 뷰 컨트롤의 왼쪽 위 모서리를 기준으로 합니다.
+*lpRect*<br/>
+경계 사각형을 받는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다. 좌표는 tree view 컨트롤의 왼쪽 위 모퉁이를 기준으로 합니다.
 
-*b텍스트전용*<br/>
-이 매개변수가 0이 아닌 경우 경계 사각형에는 항목의 텍스트만 포함됩니다. 그렇지 않으면 트리 뷰 컨트롤에서 항목이 차지하는 전체 선이 포함됩니다.
+*bTextOnly*<br/>
+이 매개 변수가 0이 아니면 경계 사각형에는 항목의 텍스트만 포함 됩니다. 그렇지 않으면 항목이 tree view 컨트롤에서 차지 하는 전체 줄을 포함 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-항목이 표시되는 경우 비영이 표시되고 경계 사각형이 *lpRect에*포함되어 있습니다. 그렇지 않으면 *lpRect초기화되지* 않은 0입니다.
+항목이 표시 되는 경우 0이 아니며, 경계 사각형은 *lpRect*에 포함 됩니다. 그렇지 않으면 0이 *lpRect* 초기화 되지 않습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]
 
-## <a name="ctreectrlgetitemstate"></a><a name="getitemstate"></a>CTreeCtrl::겟아이템스테이트
+## <a name="ctreectrlgetitemstate"></a><a name="getitemstate"></a> CTreeCtrl:: GetItemState
 
-hItem 에 의해 지정된 항목의 상태를 *반환합니다.*
+*Hitem*으로 지정 된 항목의 상태를 반환 합니다.
 
 ```
 UINT GetItemState(
@@ -953,23 +954,23 @@ UINT GetItemState(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 상태를 검색할 항목의 핸들입니다.
 
 *nStateMask*<br/>
-검색할 상태를 하나 이상 나타내는 마스크입니다. *nStateMask에*대 한 가능한 값에 대 `state` 한 `stateMask` 자세한 내용은 Windows SDK에서 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조의 구성원및 멤버에 대 한 토론을 참조 하십시오.
+검색할 하나 이상의 상태를 나타내는 마스크입니다. *NStateMask*의 가능한 값에 대 한 자세한 내용은 `state` 및 `stateMask` Windows SDK에서 [tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조의 및 멤버에 대 한 설명을 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
-nStateMask에서 지정한 값의 비트 OR을 보유하는 UINT입니다. 가능한 값에 대한 자세한 내용은 [CTreeCtrl::GetItem](#getitem)을 참조하십시오. 특정 상태에 대한 값을 찾으려면 다음 예제와 같이 상태 값과 반환 값의 BITWISE AND 작업을 수행합니다.
+NStateMask로 지정 된 값의 비트 OR을 보유 하는 UINT입니다. 가능한 값에 대 한 자세한 내용은 [CTreeCtrl:: GetItem](#getitem)를 참조 하세요. 특정 상태에 대 한 값을 찾으려면 다음 예제와 같이 상태 값 및 반환 값의 비트 AND 연산을 수행 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]
 
-## <a name="ctreectrlgetitemstateex"></a><a name="getitemstateex"></a>CTreeCtrl::겟아이템스테이트엑스
+## <a name="ctreectrlgetitemstateex"></a><a name="getitemstateex"></a> CTreeCtrl:: GetItemStateEx
 
-현재 트리 뷰 컨트롤에서 지정된 항목의 확장 된 상태를 검색 합니다.
+현재 트리 뷰 컨트롤에서 지정 된 항목의 확장 상태를 검색 합니다.
 
 ```
 UINT GetItemStateEx(HTREEITEM hItem) const;
@@ -977,21 +978,20 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
+*hItem*\
+진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-항목의 확장된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 멤버를 참조하십시오.
+항목의 확장 된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 멤버를 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 메시지를 보냅니다. 이 메시지는 트리 뷰 컨트롤 항목을 설명하는 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조를 반환하고 이 `uStateEx` 메서드는 해당 구조에서 멤버를 검색합니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 메시지를 보냅니다. 이 메시지는 트리 뷰 컨트롤 항목을 설명 하는 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체를 반환 하 고,이 메서드는 `uStateEx` 해당 구조체에서 멤버를 검색 합니다.
 
-## <a name="ctreectrlgetitemtext"></a><a name="getitemtext"></a>CTreeCtrl:::GetItem텍스트
+## <a name="ctreectrlgetitemtext"></a><a name="getitemtext"></a> CTreeCtrl:: GetItemText
 
-hItem 에 의해 지정된 항목의 텍스트를 *반환합니다.*
+*Hitem*으로 지정 된 항목의 텍스트를 반환 합니다.
 
 ```
 CString GetItemText(HTREEITEM hItem) const;
@@ -999,20 +999,20 @@ CString GetItemText(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 텍스트를 검색할 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-항목의 텍스트가 포함된 `CString` 개체입니다.
+`CString`항목의 텍스트를 포함 하는 개체입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetNext항목에](#getnextitem)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetNextItem](#getnextitem)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetlastvisibleitem"></a><a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisible항목
+## <a name="ctreectrlgetlastvisibleitem"></a><a name="getlastvisibleitem"></a> CTreeCtrl:: GetLastVisibleItem
 
-현재 트리 뷰 컨트롤에서 마지막으로 확장되지 않은 노드 항목을 검색합니다.
+현재 트리 뷰 컨트롤에서 마지막 확장 되지 않은 노드 항목을 검색 합니다.
 
 ```
 HTREEITEM GetLastVisibleItem() const;
@@ -1020,27 +1020,27 @@ HTREEITEM GetLastVisibleItem() const;
 
 ### <a name="return-value"></a>Return Value
 
-메서드가 성공하면 마지막 확장되지 않은 노드 항목에 대한 핸들입니다. 그렇지 않으면 NULL이 됩니다.
+메서드가 성공 하는 경우 마지막 확장 되지 않은 노드 항목에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) 메시지를 보냅니다. 자세한 내용은 해당 메시지의 *플래그* 매개 변수에서 TVGN_LASTVISIBLE 플래그를 참조하세요.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) 메시지를 보냅니다. 자세한 내용은 해당 메시지의 *플래그* 매개 변수에서 TVGN_LASTVISIBLE 플래그를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 다음 예제에서는 이러한 변수 중 하나 이상을 사용합니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 다음 예제에서는 이러한 변수 중 하나 이상이 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 확장되지 않은 마지막 트리 뷰 노드 항목에 대한 핸들을 검색한 다음 해당 항목 주위에 3D 사각형을 그립니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다.
+다음 코드 예제에서는 마지막 확장 되지 않은 트리-뷰 노드 항목에 대 한 핸들을 검색 한 다음 해당 항목 주위에 3D 사각형을 그립니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]
 
-## <a name="ctreectrlgetlinecolor"></a><a name="getlinecolor"></a>CTreeCtrl::겟라인컬러
+## <a name="ctreectrlgetlinecolor"></a><a name="getlinecolor"></a> CTreeCtrl:: GetLineColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_GETLINECOLOR Win32 [메시지의](/windows/win32/Controls/tvm-getlinecolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)의 동작을 구현 합니다.
 
 ```
 COLORREF GetLineColor() const;
@@ -1048,15 +1048,15 @@ COLORREF GetLineColor() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 선 색상입니다.
+현재 선 색입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]
 
-## <a name="ctreectrlgetnextitem"></a><a name="getnextitem"></a>CTreeCtrl::GetNext항목
+## <a name="ctreectrlgetnextitem"></a><a name="getnextitem"></a> CTreeCtrl:: GetNextItem
 
-이 함수를 호출하여 *nCode* 매개 변수로 표시된 지정된 관계가 있는 트리 뷰 항목을 *hItem*에 검색합니다.
+*Ncode* 매개 변수로 표시 되는 지정 된 관계를 포함 하는 트리 뷰 항목을 *hitem*으로 검색 하려면이 함수를 호출 합니다.
 
 ```
 HTREEITEM GetNextItem(
@@ -1066,51 +1066,51 @@ HTREEITEM GetNextItem(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 *nCode*<br/>
-*hItem*에 대한 관계 유형을 나타내는 플래그입니다. 이 플래그는 다음 값 중 하나일 수 있습니다.
+*Hitem*에 대 한 관계 유형을 나타내는 플래그입니다. 이 플래그는 다음 값 중 하나일 수 있습니다.
 
-- TVGN_CARET 현재 선택한 항목을 검색합니다.
+- TVGN_CARET 현재 선택 된 항목을 검색 합니다.
 
-- TVGN_CHILD *hItem* 매개 변수에 의해 지정 된 항목의 첫 번째 자식 항목을 검색 합니다.
+- TVGN_CHILD는 *Hitem* 매개 변수로 지정 된 항목의 첫 번째 자식 항목을 검색 합니다.
 
-- TVGN_DROPHILITE 끌어서 놓기 작업의 대상인 항목을 검색합니다.
+- TVGN_DROPHILITE는 끌어서 놓기 작업의 대상인 항목을 검색 합니다.
 
-- TVGN_FIRSTVISIBLE 표시되는 첫 번째 항목을 검색합니다.
+- TVGN_FIRSTVISIBLE는 첫 번째로 표시 되는 항목을 검색 합니다.
 
-- TVGN_LASTVISIBLE 트리에서 마지막으로 확장된 항목을 검색합니다. 이렇게 하면 트리 뷰 창에 표시되는 마지막 항목이 검색되지 않습니다.
+- TVGN_LASTVISIBLE는 트리에서 마지막으로 확장 된 항목을 검색 합니다. 그러면 트리 뷰 창에 표시 되는 마지막 항목이 검색 되지 않습니다.
 
-- TVGN_NEXT 다음 형제 항목을 검색합니다.
+- TVGN_NEXT는 다음 형제 항목을 검색 합니다.
 
-- TVGN_NEXTVISIBLE 지정된 항목 다음에 표시되는 다음 항목을 검색합니다.
+- TVGN_NEXTVISIBLE 지정 된 항목 다음에 표시 되는 다음 항목을 검색 합니다.
 
-- TVGN_PARENT 지정된 항목의 부모를 검색합니다.
+- TVGN_PARENT 지정 된 항목의 부모를 검색 합니다.
 
-- TVGN_PREVIOUS 이전 형제 항목을 검색합니다.
+- TVGN_PREVIOUS 이전 형제 항목을 검색 합니다.
 
-- TVGN_PREVIOUSVISIBLE 지정된 항목 앞에 표시되는 첫 번째 항목을 검색합니다.
+- TVGN_PREVIOUSVISIBLE 지정 된 항목 앞에 표시 되는 첫 번째 표시 항목을 검색 합니다.
 
-- TVGN_ROOT 지정된 항목이 일부인 루트 항목의 첫 번째 자식 항목을 검색합니다.
+- TVGN_ROOT는 지정 된 항목이 속한 루트 항목의 첫 번째 자식 항목을 검색 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 다음 항목의 핸들입니다. 그렇지 않으면 NULL.
+성공 하면 다음 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-검색 중인 항목이 트리의 루트 노드인 경우 이 함수는 NULL을 반환합니다. 예를 들어 트리 뷰의 루트 노드의 첫 번째 수준 자식에서 TVGN_PARENT 플래그와 함께 이 메시지를 사용하는 경우 메시지가 NULL을 반환합니다.
+검색 되는 항목이 트리의 루트 노드인 경우이 함수는 NULL을 반환 합니다. 예를 들어이 메시지를 트리 뷰의 루트 노드의 첫 번째 수준 자식에 TVGN_PARENT 플래그로 사용 하면 메시지는 NULL을 반환 합니다.
 
 ### <a name="example"></a>예제
 
-루프에서 사용하는 `GetNextItem` 예제는 [CTreeCtrl::DeleteItem](#deleteitem)을 참조하십시오.
+루프에서를 사용 하는 방법에 대 한 예제는 `GetNextItem` [CTreeCtrl::D eleteitem](#deleteitem)를 참조 하세요.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
-## <a name="ctreectrlgetnextsiblingitem"></a><a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSibling항목
+## <a name="ctreectrlgetnextsiblingitem"></a><a name="getnextsiblingitem"></a> CTreeCtrl:: GetNextSiblingItem
 
-이 함수를 호출하여 hItem 의 다음 형제를 *검색합니다.*
+*Hitem*의 다음 형제를 검색 하려면이 함수를 호출 합니다.
 
 ```
 HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
@@ -1118,20 +1118,20 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-다음 형제 항목의 핸들입니다. 그렇지 않으면 NULL.
+다음 형제 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]
 
-## <a name="ctreectrlgetnextvisibleitem"></a><a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisible항목
+## <a name="ctreectrlgetnextvisibleitem"></a><a name="getnextvisibleitem"></a> CTreeCtrl:: GetNextVisibleItem
 
-이 함수를 호출하여 다음에 표시되는 hItem 항목을 *검색합니다.*
+이 함수를 호출 하 여 *Hitem*의 다음 표시 항목을 검색 합니다.
 
 ```
 HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
@@ -1139,20 +1139,20 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-다음에 표시되는 항목의 핸들; 그렇지 않으면 NULL.
+표시 되는 다음 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetCheck에](#setcheck)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetCheck](#setcheck)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetparentitem"></a><a name="getparentitem"></a>CTreeCtrl::GetParent항목
+## <a name="ctreectrlgetparentitem"></a><a name="getparentitem"></a> CTreeCtrl:: GetParentItem
 
-이 함수를 호출하여 *hItem*의 부모를 검색합니다.
+*Hitem*의 부모를 검색 하려면이 함수를 호출 합니다.
 
 ```
 HTREEITEM GetParentItem(HTREEITEM hItem) const;
@@ -1160,24 +1160,24 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-상위 항목의 핸들; 그렇지 않으면 NULL.
+부모 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-지정된 항목의 부모가 트리의 루트 노드인 경우 이 함수는 NULL을 반환합니다.
+이 함수는 지정 된 항목의 부모가 트리의 루트 노드인 경우 NULL을 반환 합니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::보장가볼](#ensurevisible)수 있습니다.
+  [CTreeCtrl:: ensurevisible\](#ensurevisible)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetprevsiblingitem"></a><a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSibling항목
+## <a name="ctreectrlgetprevsiblingitem"></a><a name="getprevsiblingitem"></a> CTreeCtrl:: GetPrevSiblingItem
 
-이 함수를 호출하여 hItem 의 이전 형제를 *검색합니다.*
+*Hitem*의 이전 형제를 검색 하려면이 함수를 호출 합니다.
 
 ```
 HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
@@ -1185,20 +1185,20 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 형제의 핸들입니다. 그렇지 않으면 NULL.
+이전 형제의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]
 
-## <a name="ctreectrlgetprevvisibleitem"></a><a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevvisible항목
+## <a name="ctreectrlgetprevvisibleitem"></a><a name="getprevvisibleitem"></a> CTreeCtrl:: GetPrevVisibleItem
 
-이 함수를 호출하여 *hItem*의 이전 표시되는 항목을 검색합니다.
+이 함수를 호출 하 여 *Hitem*의 이전 표시 항목을 검색 합니다.
 
 ```
 HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
@@ -1206,20 +1206,20 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 표시되는 항목의 핸들; 그렇지 않으면 NULL.
+표시 된 이전 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]
 
-## <a name="ctreectrlgetrootitem"></a><a name="getrootitem"></a>CTreeCtrl::GetRootItem
+## <a name="ctreectrlgetrootitem"></a><a name="getrootitem"></a> CTreeCtrl:: GetRootItem
 
-이 함수를 호출하여 트리 뷰 컨트롤의 루트 항목을 검색합니다.
+이 함수를 호출 하 여 tree view 컨트롤의 루트 항목을 검색 합니다.
 
 ```
 HTREEITEM GetRootItem() const;
@@ -1227,15 +1227,15 @@ HTREEITEM GetRootItem() const;
 
 ### <a name="return-value"></a>Return Value
 
-루트 항목의 핸들; 그렇지 않으면 NULL.
+루트 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::편집 레이블에](#editlabel)대 한 예제를 참조 하십시오.
+  [CTreeCtrl:: EditLabel](#editlabel)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgetscrolltime"></a><a name="getscrolltime"></a>CTreeCtrl::Get스크롤 타임
+## <a name="ctreectrlgetscrolltime"></a><a name="getscrolltime"></a> CTreeCtrl:: GetScrollTime
 
-이 멤버 함수를 호출하여 트리 뷰 컨트롤의 최대 스크롤 시간을 검색합니다.
+이 멤버 함수를 호출 하 여 tree view 컨트롤의 최대 스크롤 시간을 검색 합니다.
 
 ```
 UINT GetScrollTime() const;
@@ -1243,15 +1243,15 @@ UINT GetScrollTime() const;
 
 ### <a name="return-value"></a>Return Value
 
-최대 스크롤 시간(밀리초)입니다.
+최대 스크롤 시간 (밀리초)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)의 동작을 구현 합니다.
 
-## <a name="ctreectrlgetselectedcount"></a><a name="getselectedcount"></a>CTreeCtrl:::GetSelectedCount
+## <a name="ctreectrlgetselectedcount"></a><a name="getselectedcount"></a> CTreeCtrl:: GetSelectedCount
 
-현재 트리 뷰 컨트롤에서 선택한 항목수를 검색합니다.
+현재 트리 뷰 컨트롤에서 선택 된 항목 수를 검색 합니다.
 
 ```
 UINT GetSelectedCount();
@@ -1259,15 +1259,15 @@ UINT GetSelectedCount();
 
 ### <a name="return-value"></a>Return Value
 
-선택한 항목의 수입니다.
+선택 된 항목의 수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) 메시지를 보냅니다.
 
-## <a name="ctreectrlgetselecteditem"></a><a name="getselecteditem"></a>CTreeCtrl::GetSelected항목
+## <a name="ctreectrlgetselecteditem"></a><a name="getselecteditem"></a> CTreeCtrl:: GetSelectedItem
 
-이 함수를 호출하여 트리 뷰 컨트롤의 현재 선택된 항목을 검색합니다.
+이 함수를 호출 하 여 tree view 컨트롤에서 현재 선택 된 항목을 검색 합니다.
 
 ```
 HTREEITEM GetSelectedItem() const;
@@ -1275,15 +1275,15 @@ HTREEITEM GetSelectedItem() const;
 
 ### <a name="return-value"></a>Return Value
 
-선택한 항목의 핸들; 그렇지 않으면 NULL.
+선택한 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]
 
-## <a name="ctreectrlgettextcolor"></a><a name="gettextcolor"></a>CTreeCtrl::GetTextColor
+## <a name="ctreectrlgettextcolor"></a><a name="gettextcolor"></a> CTreeCtrl:: GetTextColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_GETTEXTCOLOR Win32 [메시지의](/windows/win32/Controls/tvm-gettextcolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETTEXTCOLOR](/windows/win32/Controls/tvm-gettextcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF GetTextColor() const;
@@ -1291,15 +1291,15 @@ COLORREF GetTextColor() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 텍스트 색상을 나타내는 COLORREF 값입니다. 이 값이 -1이면 컨트롤이 텍스트 색상에 대한 시스템 색상을 사용하고 있습니다.
+현재 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 합니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetTextColor에](#settextcolor)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetTextColor](#settextcolor)의 예제를 참조 하세요.
 
-## <a name="ctreectrlgettooltips"></a><a name="gettooltips"></a>CTreeCtrl::getToolTips
+## <a name="ctreectrlgettooltips"></a><a name="gettooltips"></a> CTreeCtrl:: GetToolTips
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)의 동작을 구현 합니다.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -1307,19 +1307,19 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Return Value
 
-트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대한 포인터입니다. 멤버 [만들기](#create) 함수에서 TVS_NOTOOLTIPS 스타일을 사용하는 경우 도구 설명이 사용되지 않고 NULL이 반환됩니다.
+트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터입니다. [Create](#create) member 함수에서 스타일 TVS_NOTOOLTIPS를 사용 하는 경우 도구 설명을 사용 하지 않고 NULL이 반환 됩니다.
 
 ### <a name="remarks"></a>설명
 
-MFC 구현은 `GetToolTips` 도구 `CToolTipCtrl` 설명 컨트롤에 대한 핸들이 아니라 트리 컨트롤에서 사용되는 개체를 반환합니다.
+의 MFC 구현은 `GetToolTips` `CToolTipCtrl` 도구 설명 컨트롤에 대 한 핸들이 아니라 트리 컨트롤에서 사용 하는 개체를 반환 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#25](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]
 
-## <a name="ctreectrlgetvisiblecount"></a><a name="getvisiblecount"></a>CTreeCtrl:::눈에 보이는 카운트
+## <a name="ctreectrlgetvisiblecount"></a><a name="getvisiblecount"></a> CTreeCtrl:: GetVisibleCount
 
-이 함수를 호출하여 트리 뷰 컨트롤에서 표시되는 항목수를 검색합니다.
+Tree view 컨트롤에서 표시 되는 항목 수를 검색 하려면이 함수를 호출 합니다.
 
 ```
 UINT GetVisibleCount() const;
@@ -1327,15 +1327,15 @@ UINT GetVisibleCount() const;
 
 ### <a name="return-value"></a>Return Value
 
-트리 뷰 컨트롤에서 표시되는 항목 의 수입니다. 그렇지 않은 경우 - 1.
+Tree view 컨트롤에 표시 되는 항목의 수입니다. 그렇지 않으면-1입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetCheck에](#setcheck)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetCheck](#setcheck)의 예제를 참조 하세요.
 
-## <a name="ctreectrlhittest"></a><a name="hittest"></a>CTreeCtrl::히트 테스트
+## <a name="ctreectrlhittest"></a><a name="hittest"></a> CTreeCtrl:: System.windows.media.visualtreehelper.hittest
 
-이 함수를 호출하여 트리 뷰 컨트롤의 클라이언트 영역을 기준으로 지정된 점의 위치를 확인합니다.
+이 함수를 호출 하 여 tree view 컨트롤의 클라이언트 영역을 기준으로 지정 된 점의 위치를 확인 합니다.
 
 ```
 HTREEITEM HitTest(
@@ -1348,35 +1348,35 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ### <a name="parameters"></a>매개 변수
 
 *pt*<br/>
-테스트할 점의 클라이언트 좌표입니다.
+테스트할 지점의 클라이언트 좌표입니다.
 
 *pFlags*<br/>
-적중 테스트 결과에 대한 정보를 수신하는 정수에 대한 포인터입니다. 비고 섹션의 `flags` 멤버 아래에 나열된 값 중 하나 이상이 될 수 있습니다.
+적중 횟수 테스트의 결과에 대 한 정보를 수신 하는 정수에 대 한 포인터입니다. 설명 섹션의 멤버 아래에 나열 된 값 중 하나 이상이 될 수 있습니다 `flags` .
 
 *pHitTestInfo*<br/>
-적중 테스트의 결과에 대한 정보를 수신하는 [타히트TESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) 구조의 주소입니다.
+적중 횟수 테스트에 대 한 위치를 포함 하 고 적중 횟수 테스트 결과에 대 한 정보를 받는 [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) 구조체의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
-지정된 점 또는 NULL을 차지하는 트리 뷰 항목의 핸들은 항목을 차지하지 않는 경우 점을 차지합니다.
+지정 된 지점을 차지 하는 트리 뷰 항목의 핸들 이거나, 해당 요소를 차지 하는 항목이 없는 경우 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수가 호출되면 *pt* 매개 변수는 테스트할 점의 좌표를 지정합니다. 이 함수는 항목을 차지하지 않는 항목이 없는 경우 지정된 지점 또는 NULL에서 항목의 핸들을 반환합니다. 또한 *pFlags* 매개 변수에는 지정된 점의 위치를 나타내는 값이 포함됩니다. 가능한 값은 다음과 같습니다.
+이 함수가 호출 되 면 *pt* 매개 변수는 테스트할 지점의 좌표를 지정 합니다. 함수는 지정 된 지점에 있는 항목의 핸들을 반환 하거나, 해당 요소를 차지 하는 항목이 없는 경우 NULL을 반환 합니다. 또한 *Pflags* 매개 변수는 지정 된 지점의 위치를 나타내는 값을 포함 합니다. 가능한 값은 다음과 같습니다.
 
 |||
 |-|-|
 |값|의미|
-|TVHT_ABOVE|클라이언트 영역 위.|
-|TVHT_BELOW|클라이언트 영역 아래.|
-|TVHT_NOWHERE|클라이언트 영역에서는 마지막 항목 아래에 있습니다.|
-|TVHT_ONITEM|항목과 연결된 비트맵 또는 레이블에서|
-|TVHT_ONITEMBUTTON|항목과 연결된 단추에 있습니다.|
-|TVHT_ONITEMICON|항목과 연결된 비트맵에서.|
-|TVHT_ONITEMINDENT|항목과 연결된 들여쓰기에서입니다.|
-|TVHT_ONITEMLABEL|항목과 연결된 레이블(문자열)에서|
+|TVHT_ABOVE|클라이언트 영역을 초과 합니다.|
+|TVHT_BELOW|클라이언트 영역 아래에 있습니다.|
+|TVHT_NOWHERE|클라이언트 영역에 있지만 마지막 항목 아래에 있습니다.|
+|TVHT_ONITEM|항목과 연결 된 비트맵 또는 레이블입니다.|
+|TVHT_ONITEMBUTTON|항목과 연결 된 단추입니다.|
+|TVHT_ONITEMICON|항목과 연결 된 비트맵|
+|TVHT_ONITEMINDENT|항목에 연결 된 들여쓰기를 사용 합니다.|
+|TVHT_ONITEMLABEL|항목과 연결 된 레이블 (문자열)|
 |TVHT_ONITEMRIGHT|항목의 오른쪽 영역에 있습니다.|
-|TVHT_ONITEMSTATEICON|사용자 정의 상태에 있는 트리 뷰 항목의 상태 아이콘입니다.|
+|TVHT_ONITEMSTATEICON|사용자 정의 상태의 트리 뷰 항목에 대 한 상태 아이콘|
 |TVHT_TOLEFT|클라이언트 영역의 왼쪽에 있습니다.|
 |TVHT_TORIGHT|클라이언트 영역의 오른쪽에 있습니다.|
 |||
@@ -1385,9 +1385,9 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]
 
-## <a name="ctreectrlinsertitem"></a><a name="insertitem"></a>CTreeCtrl::삽입항목
+## <a name="ctreectrlinsertitem"></a><a name="insertitem"></a> CTreeCtrl:: InsertItem
 
-이 함수를 호출하여 트리 뷰 컨트롤에 새 항목을 삽입합니다.
+이 함수를 호출 하 여 트리 뷰 컨트롤에 새 항목을 삽입 합니다.
 
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
@@ -1418,51 +1418,51 @@ HTREEITEM InsertItem(
 
 ### <a name="parameters"></a>매개 변수
 
-*lp인더스트럿트*<br/>
-삽입할 `TVINSERTSTRUCT` 트리 뷰 항목의 특성을 지정하는 포인터입니다.
+*lpInsertStruct*<br/>
+`TVINSERTSTRUCT`삽입할 트리 뷰 항목의 특성을 지정 하는에 대 한 포인터입니다.
 
 *nMask*<br/>
-설정할 속성을 지정하는 정수입니다. Windows `TVITEM` SDK의 구조를 참조하십시오.
+설정할 특성을 지정 하는 정수입니다. `TVITEM`Windows SDK 구조를 참조 하세요.
 
 *lpszItem*<br/>
-항목의 텍스트가 포함된 문자열의 주소입니다.
+항목의 텍스트를 포함 하는 문자열의 주소입니다.
 
 *nImage*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목 이미지의 인덱스입니다.
+트리 뷰 컨트롤의 이미지 목록에 있는 항목의 이미지 인덱스입니다.
 
-*n선택이미지*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목의 선택한 이미지 인덱스입니다.
+*nSelectedImage*<br/>
+트리 뷰 컨트롤의 이미지 목록에서 선택한 항목 이미지의 인덱스입니다.
 
 *nState*<br/>
-항목의 상태에 대한 값을 지정합니다. 적절한 상태 목록은 Windows SDK의 트리 뷰 제어 항목 상태를 참조하십시오.
+항목의 상태에 대 한 값을 지정 합니다. 적절 한 상태 목록은 Windows SDK의 트리 뷰 컨트롤 항목 상태를 참조 하세요.
 
 *nStateMask*<br/>
-설정할 상태를 지정합니다. Windows `TVITEM` SDK의 구조를 참조하십시오.
+설정할 상태를 지정 합니다. `TVITEM`Windows SDK 구조를 참조 하세요.
 
 *lParam*<br/>
-항목과 연결된 포인터 크기의 응용 프로그램별 값입니다.
+항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
-*h부모*<br/>
-삽입된 항목의 부모의 핸들입니다.
+*hParent*<br/>
+삽입 된 항목의 부모에 대 한 핸들입니다.
 
-*h인서삽입후*<br/>
-새 항목을 삽입할 항목의 핸들입니다.
+*hInsertAfter*<br/>
+새 항목을 삽입할 때 기준이 되는 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 새 항목의 핸들; 그렇지 않으면 NULL.
+성공 하는 경우 새 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-이 예제에서는 트리 컨트롤 항목을 삽입할 때 함수의 각 버전을 사용할 수 있는 상황을 보여 주며 있습니다.
+이 예제에서는 트리 컨트롤 항목을 삽입할 때 각 버전의 함수를 사용할 수 있는 상황을 보여 줍니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]
 
-## <a name="ctreectrlitemhaschildren"></a><a name="itemhaschildren"></a>CTreeCtrl::항목하스어린이
+## <a name="ctreectrlitemhaschildren"></a><a name="itemhaschildren"></a> CTreeCtrl:: ItemHasChildren
 
-이 함수를 사용하여 *hItem에서* 지정한 트리 항목에 하위 항목이 있는지 여부를 확인합니다.
+*Hitem* 으로 지정 된 트리 항목에 자식 항목이 있는지 여부를 확인 하려면이 함수를 사용 합니다.
 
 ```
 BOOL ItemHasChildren(HTREEITEM hItem) const;
@@ -1470,24 +1470,24 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
-*hItem에서* 지정한 트리 항목에 하위 항목이 있는 경우 0이 아닙니다. 0이 아닌 경우.
+*Hitem* 에서 지정한 트리 항목에 자식 항목이 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-그렇다면 [CTreeCtrl::GetChildItem을](#getchilditem) 사용하여 해당 자식 항목을 검색할 수 있습니다.
+이 경우 [CTreeCtrl:: GetChildItem](#getchilditem) 를 사용 하 여 해당 자식 항목을 검색할 수 있습니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetSelected항목에](#getselecteditem)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetSelectedItem](#getselecteditem)의 예제를 참조 하세요.
 
-## <a name="ctreectrlmapaccidtoitem"></a><a name="mapaccidtoitem"></a>CTreeCtrl:::맵아치드토아이템
+## <a name="ctreectrlmapaccidtoitem"></a><a name="mapaccidtoitem"></a> CTreeCtrl:: MapAccIdToItem
 
-지정된 접근성 식별자를 현재 트리 뷰 컨트롤의 트리 뷰 항목 핸들에 매핑합니다.
+지정 된 액세스 가능성 식별자를 현재 트리 뷰 컨트롤의 트리 뷰 항목 핸들에 매핑합니다.
 
 ```
 HTREEITEM MapAccIdToItem(UINT uAccId) const;
@@ -1495,35 +1495,34 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*uAccId*|【인】 트리 뷰 항목의 요소에 대한 내게 필요한 옵션 식별자입니다.|
+*uAccId*\
+진행 트리 뷰 항목의 요소에 대 한 액세스 가능성 식별자입니다.
 
 ### <a name="return-value"></a>Return Value
 
-*uAccId* 매개 변수에 `HTREEITEM`해당하는 트리 뷰 항목 () 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 *hItem* 멤버를 참조하십시오.
+`HTREEITEM` *Uaccid* 매개 변수에 해당 하는 트리 뷰 항목 ()에 대 한 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 *hitem* 멤버를 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-내게 필요한 옵션 지원은 장애가 있는 사용자가 컴퓨터를 사용하는 데 도움이 되는 응용 프로그램입니다. 내게 필요한 옵션 식별자는 `IAccessible` 인터페이스에서 창에 요소를 고유하게 지정하는 데 사용됩니다. 내게 필요한 옵션 식별자에 대한 자세한 내용은 Microsoft 개발자 [네트워크에서](https://go.microsoft.com/fwlink/p/?linkid=56322)"활성 접근성 지원 정보" 항목을 검색합니다.
+내게 필요한 옵션 지원 기능은 장애가 있는 사용자가 컴퓨터를 사용할 수 있도록 지 원하는 응용 프로그램입니다. 내게 필요한 옵션 식별자는 인터페이스에서 `IAccessible` 창에 있는 요소를 고유 하 게 지정 하는 데 사용 됩니다. 내게 필요한 옵션 식별자에 대 한 자세한 내용을 보려면 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)에서 "About Active Accessibility Support" 항목을 검색 하십시오.
 
-이 메서드는 Windows SDK에 설명 된 [TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 내게 필요한 옵션 식별자와 [CTreeCtrl::MapAccIdToItem](#mapaccidtoitem) 메서드를 사용하여 루트 트리 뷰 항목에 대한 핸들을 검색합니다. 이 예제에서는 핸들과 [CTreeCtrl::GetItemPartRect](#getitempartrect) 메서드를 사용하여 해당 항목 주위에 3D 사각형을 그립니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. [CTreeCtrl::MapItemToAccID](#mapitemtoaccid) 메서드를 사용하여 루트 트리 뷰 항목을 내게 필요한 옵션 식별자와 연결했습니다.
+다음 코드 예제에서는 액세스 가능성 식별자 및 [CTreeCtrl:: MapAccIdToItem](#mapaccidtoitem) 메서드를 사용 하 여 루트 트리 뷰 항목에 대 한 핸들을 검색 합니다. 이 예제에서는 핸들 및 [CTreeCtrl:: GetItemPartRect](#getitempartrect) 메서드를 사용 하 여 해당 항목 주위에 3d 사각형을 그립니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. [CTreeCtrl:: MapItemToAccID](#mapitemtoaccid) 메서드를 사용 하 여 루트 트리 보기 항목을 접근성 식별자와 연결 했습니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]
 
-## <a name="ctreectrlmapitemtoaccid"></a><a name="mapitemtoaccid"></a>CTreeCtrl:::맵아이템토아키드
+## <a name="ctreectrlmapitemtoaccid"></a><a name="mapitemtoaccid"></a> CTreeCtrl:: MapItemToAccID
 
-현재 트리 뷰 컨트롤에서 트리 뷰 항목의 지정된 핸들을 내게 필요한 옵션 식별자에 매핑합니다.
+현재 트리 뷰 컨트롤에 있는 트리 뷰 항목의 지정 된 핸들을 내게 필요한 옵션 식별자에 매핑합니다.
 
 ```
 UINT MapItemToAccID(HTREEITEM hItem) const;
@@ -1531,35 +1530,34 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 컨트롤의 트리 뷰 항목의 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 *hItem* 멤버를 참조하십시오.|
+*hItem*\
+진행 컨트롤의 트리 뷰 항목에 대 한 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 *hitem* 멤버를 참조 하십시오.
 
 ### <a name="return-value"></a>Return Value
 
-*hItem* 매개 변수에 해당하는 내게 필요한 옵션 식별자입니다.
+*Hitem* 매개 변수에 해당 하는 액세스 가능성 식별자입니다.
 
 ### <a name="remarks"></a>설명
 
-내게 필요한 옵션 지원은 장애가 있는 사용자가 컴퓨터를 사용하는 데 도움이 되는 응용 프로그램입니다. 내게 필요한 옵션 식별자는 `IAccessible` 인터페이스에서 창에 요소를 고유하게 지정하는 데 사용됩니다. 내게 필요한 옵션 식별자에 대한 자세한 내용은 Microsoft 개발자 [네트워크에서](https://go.microsoft.com/fwlink/p/?linkid=56322)"활성 접근성 지원 정보" 항목을 검색합니다.
+내게 필요한 옵션 지원 기능은 장애가 있는 사용자가 컴퓨터를 사용할 수 있도록 지 원하는 응용 프로그램입니다. 내게 필요한 옵션 식별자는 인터페이스에서 `IAccessible` 창에 있는 요소를 고유 하 게 지정 하는 데 사용 됩니다. 내게 필요한 옵션 식별자에 대 한 자세한 내용을 보려면 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)에서 "About Active Accessibility Support" 항목을 검색 하십시오.
 
-이 메서드는 Windows SDK에 설명 된 [TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 트리 뷰 제어 항목에 대한 식별 번호를 가져옵니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. 이 코드 예제는 루트 국가/지역 노드에 대한 고유 식별 번호를 가져옵니다.
+다음 코드 예제에서는 트리 뷰 컨트롤 항목에 대 한 id 번호를 가져옵니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. 이 코드 예제에서는 루트 국가/지역 노드에 대 한 고유 id를 가져옵니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]
 
-## <a name="ctreectrlselect"></a><a name="select"></a>CTreeCtrl::선택
+## <a name="ctreectrlselect"></a><a name="select"></a> CTreeCtrl:: Select
 
-이 함수를 호출하여 지정된 트리 뷰 항목을 선택하거나, 항목을 뷰로 스크롤하거나, 끌어서 놓기 작업의 대상을 나타내는 데 사용되는 스타일로 항목을 다시 그립니다.
+이 함수를 호출 하 여 지정 된 트리 보기 항목을 선택 하거나, 항목을 뷰로 스크롤하거나, 끌어서 놓기 작업의 대상을 나타내는 데 사용 되는 스타일로 항목을 다시 그립니다.
 
 ```
 BOOL Select(
@@ -1569,17 +1567,17 @@ BOOL Select(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 *nCode*<br/>
-취할 작업 유형입니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.
+수행할 동작의 유형입니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.
 
-- TVGN_CARET 지정된 항목으로 선택 영역을 설정합니다.
+- TVGN_CARET 선택 항목을 지정 된 항목으로 설정 합니다.
 
-- TVGN_DROPHILITE 끌어서 놓기 작업의 대상을 나타내는 데 사용되는 스타일로 지정된 항목을 다시 그립니다.
+- TVGN_DROPHILITE 끌어서 놓기 작업의 대상을 나타내는 데 사용 되는 스타일로 지정 된 항목을 다시 그립니다.
 
-- TVGN_FIRSTVISIBLE 지정된 항목이 첫 번째 표시되는 항목이 되도록 트리 뷰를 세로로 스크롤합니다.
+- TVGN_FIRSTVISIBLE 지정 된 항목이 첫 번째 표시 항목이 되도록 트리 뷰를 세로로 스크롤합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1587,15 +1585,15 @@ BOOL Select(
 
 ### <a name="remarks"></a>설명
 
-*nCode에* TVGN_CARET 값이 포함되어 있으면 부모 창은 TVN_SELCHANGING 및 TVN_SELCHANGED 알림 메시지를 받습니다. 또한 지정된 항목이 축소된 상위 항목의 자식인 경우 부모의 하위 항목 목록이 확장되어 지정된 항목을 표시합니다. 이 경우 부모 창은 TVN_ITEMEXPANDING 수신하고 알림 메시지를 TVN_ITEMEXPANDED.
+*Ncode* 에 TVGN_CARET 값이 포함 되어 있으면 부모 창에서 TVN_SELCHANGING 및 TVN_SELCHANGED 알림 메시지를 받습니다. 또한 지정 된 항목이 축소 된 부모 항목의 자식인 경우 부모의 자식 항목 목록이 확장 되어 지정 된 항목을 표시 합니다. 이 경우 부모 창에는 TVN_ITEMEXPANDING 및 TVN_ITEMEXPANDED 알림 메시지가 수신 됩니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::HitTest에](#hittest)대한 예제를 참조하십시오.
+  [CTreeCtrl:: system.windows.media.visualtreehelper.hittest](#hittest)의 예제를 참조 하세요.
 
-## <a name="ctreectrlselectdroptarget"></a><a name="selectdroptarget"></a>CTreeCtrl::선택 드롭 대상
+## <a name="ctreectrlselectdroptarget"></a><a name="selectdroptarget"></a> CTreeCtrl:: SelectDropTarget
 
-이 함수를 호출하여 끌어서 놓기 작업의 대상을 나타내는 데 사용되는 스타일로 항목을 다시 그립니다.
+이 함수를 호출 하 여 끌어서 놓기 작업의 대상을 나타내는 데 사용 되는 스타일로 항목을 다시 그립니다.
 
 ```
 BOOL SelectDropTarget(HTREEITEM hItem);
@@ -1603,7 +1601,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1614,9 +1612,9 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]
 
-## <a name="ctreectrlselectitem"></a><a name="selectitem"></a>CTreeCtrl::선택 항목
+## <a name="ctreectrlselectitem"></a><a name="selectitem"></a> CTreeCtrl:: SelectItem
 
-지정된 트리 뷰 항목을 선택하려면 이 함수를 호출합니다.
+지정 된 트리 보기 항목을 선택 하려면이 함수를 호출 합니다.
 
 ```
 BOOL SelectItem(HTREEITEM hItem);
@@ -1624,7 +1622,7 @@ BOOL SelectItem(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -1633,15 +1631,15 @@ BOOL SelectItem(HTREEITEM hItem);
 
 ### <a name="remarks"></a>설명
 
-*hItem이* NULL이면 이 함수는 항목을 선택하지 않습니다.
+*Hitem* 이 NULL 인 경우이 함수는 항목을 선택 하지 않습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]
 
-## <a name="ctreectrlselectsetfirstvisible"></a><a name="selectsetfirstvisible"></a>CTreeCtrl::선택첫번째가시블
+## <a name="ctreectrlselectsetfirstvisible"></a><a name="selectsetfirstvisible"></a> CTreeCtrl:: SelectSetFirstVisible
 
-지정된 항목이 첫 번째 표시되는 항목이 되도록 이 함수를 호출하여 트리 뷰를 세로로 스크롤합니다.
+지정 된 항목이 첫 번째 표시 항목이 되도록이 함수를 호출 하 여 트리 뷰를 세로로 스크롤합니다.
 
 ```
 BOOL SelectSetFirstVisible(HTREEITEM hItem);
@@ -1649,8 +1647,8 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-첫 번째 표시되는 항목으로 설정할 트리 항목의 핸들입니다.
+*hItem*<br/>
+표시 되는 첫 번째 항목으로 설정할 트리 항목의 핸들입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1658,15 +1656,15 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 ### <a name="remarks"></a>설명
 
-함수는 TVM_SELECTITEM 및 TVGN_FIRSTVISIBLE 메시지 매개 변수를 사용하여 창에 메시지를 보냅니다.
+함수는 TVM_SELECTITEM 및 TVGN_FIRSTVISIBLE 메시지 매개 변수를 사용 하 여 창에 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]
 
-## <a name="ctreectrlsetautoscrollinfo"></a><a name="setautoscrollinfo"></a>CTreeCtrl::SetAuto스크롤정보
+## <a name="ctreectrlsetautoscrollinfo"></a><a name="setautoscrollinfo"></a> CTreeCtrl:: SetAutoscrollInfo
 
-현재 트리 뷰 컨트롤의 자동 스크롤 속도를 설정합니다.
+현재 트리 뷰 컨트롤의 자동 스크롤 rate를 설정 합니다.
 
 ```
 BOOL SetAutoscrollInfo(
@@ -1676,36 +1674,37 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*uPixelsPerSec*|【인】 스크롤할 초당 픽셀 수입니다.|
-|*uUpdateTime*|【인】 컨트롤 업데이트 사이의 시간 간격입니다.|
+*uPixelsPerSec*\
+진행 스크롤할 초당 픽셀 수입니다.
+
+*uUpdateTime*\
+진행 컨트롤 업데이트 사이의 시간 간격입니다.
 
 ### <a name="return-value"></a>Return Value
 
-항상 TRUE를 반환합니다.
+항상 TRUE를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-자동 스크롤 매개 변수는 현재 표시되지 않는 항목을 보기로 스크롤하는 데 사용됩니다. 트리 뷰 컨트롤에는 트리 뷰 컨트롤 확장 스타일에 설명된 TVS_EX_AUTOHSCROLL 확장 [스타일이](/windows/win32/Controls/tree-view-control-window-extended-styles)있어야 합니다.
+자동 스크롤 매개 변수는 현재 표시 되지 않는 항목을 뷰로 스크롤 하는 데 사용 됩니다. 트리 뷰 컨트롤에는 [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)에 설명 된 TVS_EX_AUTOHSCROLL 확장 스타일이 있어야 합니다.
 
-이 메서드는 Windows SDK에 설명 된 [TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 트리 뷰 컨트롤의 자동 스크롤 동작을 설정합니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. 포커스가 있는 트리 항목을 표시하기 위해 자동으로 스크롤해야 하도록 트리 뷰 컨트롤을 의도적으로 좁혀야 합니다. 코드 예제에서는 트리 항목이 보기가 될 때까지 5초마다 초당 30픽셀을 자동으로 스크롤하도록 트리 뷰 컨트롤을 설정합니다.
+다음 코드 예제에서는 현재 트리 뷰 컨트롤의 자동 스크롤 동작을 설정 합니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. 의도적으로 트리 뷰 컨트롤의 범위를 좁히기 때문에 포커스가 있는 트리 항목을 표시 하기 위해 자동으로 스크롤해야 합니다. 코드 예제에서는 트리 항목이 뷰에 있을 때까지 5 초 마다 30 픽셀을 자동으로 스크롤 하도록 트리 뷰 컨트롤을 설정 합니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]
 
-## <a name="ctreectrlsetbkcolor"></a><a name="setbkcolor"></a>CTreeCtrl:::SetBkColor
+## <a name="ctreectrlsetbkcolor"></a><a name="setbkcolor"></a> CTreeCtrl:: SetBkColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -1713,20 +1712,20 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>매개 변수
 
-*Clr*<br/>
-새 배경색을 포함하는 COLORREF 값입니다. 이 값이 -1이면 컨트롤이 배경 색에 시스템 색상을 사용하여 되돌리게 됩니다.
+*clr*<br/>
+새 배경색을 포함 하는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 배경색의 시스템 색을 사용 하 여로 돌아갑니다.
 
 ### <a name="return-value"></a>Return Value
 
-현재 텍스트 색상을 나타내는 COLORREF 값입니다. 이 값이 -1이면 컨트롤이 텍스트 색상에 대한 시스템 색상을 사용하고 있습니다.
+현재 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 합니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::SetTextColor에](#settextcolor)대한 예제를 참조하십시오.
+  [CTreeCtrl:: SetTextColor](#settextcolor)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetcheck"></a><a name="setcheck"></a>CTreeCtrl::세트 체크
+## <a name="ctreectrlsetcheck"></a><a name="setcheck"></a> CTreeCtrl:: SetCheck
 
-이 멤버 함수를 호출하여 트리 제어 항목에 대한 확인 상태를 설정합니다.
+이 멤버 함수를 호출 하 여 트리 컨트롤 항목에 대 한 검사 상태를 설정 합니다.
 
 ```
 BOOL SetCheck(
@@ -1736,11 +1735,11 @@ BOOL SetCheck(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-검사 상태 변경을 받을 HTREEITEM입니다.
+*hItem*<br/>
+확인 상태 변경을 받을 HTREEITEM입니다.
 
 *fCheck*<br/>
-트리 컨트롤 항목을 선택하거나 선택 취소할지 여부를 나타냅니다. 기본적으로 검사할 항목을 `SetCheck` 설정합니다.
+트리 컨트롤 항목을 선택 하거나 선택 취소 해야 하는지 여부를 나타냅니다. 기본적으로는 `SetCheck` 선택할 항목을 설정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1748,7 +1747,7 @@ BOOL SetCheck(
 
 ### <a name="remarks"></a>설명
 
-트리 컨트롤 항목을 *선택하면(fCheck* set true) 항목이 인접한 체크 표시와 함께 나타납니다.
+트리 컨트롤 항목이 선택 되어 있으면 ( *Fcheck* 가 TRUE로 설정 됨) 항목에 인접 확인 표시가 표시 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -1756,13 +1755,13 @@ BOOL SetCheck(
 
 ### <a name="example"></a>예제
 
-확인란을 사용하려면 트리 컨트롤을 채우기 전에 TVS_CHECKBOXES 설정합니다.
+확인란을 사용 하려면 트리 컨트롤을 채우기 전에 TVS_CHECKBOXES을 설정 합니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]
 
-## <a name="ctreectrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTreeCtrl::세트확장 스타일
+## <a name="ctreectrlsetextendedstyle"></a><a name="setextendedstyle"></a> CTreeCtrl:: SetExtendedStyle
 
-현재 트리 뷰 컨트롤에 대한 확장 스타일을 설정합니다.
+현재 트리 뷰 컨트롤에 대 한 확장 스타일을 설정 합니다.
 
 ```
 DWORD SetExtendedStyle(
@@ -1772,36 +1771,37 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*dwExMask*|【인】 현재 트리 뷰 컨트롤에서 어떤 스타일을 지정하는 비트 마스크는 이 메서드의 영향을 받습니다. 이 매개변수가 0이면 무시되고 *dwExStyles* 매개 변수의 값이 트리 뷰 컨트롤에 할당됩니다.<br /><br /> 트리 뷰 제어 확장 스타일에 설명된 스타일의 0 또는 비트 조합(OR)을 [지정합니다.](/windows/win32/Controls/tree-view-control-window-extended-styles)|
-|*dwExStyles*|【인】 현재 트리 뷰 컨트롤에서 설정하거나 지울 스타일을 지정하는 비트 마스크입니다.<br /><br /> 스타일 조합을 설정하려면 트리 뷰 컨트롤 확장 스타일에 설명된 스타일의 비트 조합(OR)을 [지정합니다.](/windows/win32/Controls/tree-view-control-window-extended-styles) 스타일 세트를 지우려면 0을 지정합니다.|
+*dwExMask*\
+진행 이 메서드의 영향을 받는 현재 트리 뷰 컨트롤의 스타일을 지정 하는 비트 마스크입니다. 이 매개 변수가 0 이면 무시 되 고 *Dwexstyles* 매개 변수의 값이 트리 뷰 컨트롤에 할당 됩니다. [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)에 설명 된 스타일의 0 또는 비트 조합 (또는)을 지정 합니다.
+
+*dwExStyles*\
+진행 설정 하거나 해제할 현재 트리 뷰 컨트롤의 스타일을 지정 하는 비트 마스크입니다. 스타일의 조합을 설정 하려면 [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)에 설명 된 스타일의 비트 조합 (또는)을 지정 합니다. 스타일 집합을 지우려면 0을 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 확장 된 컨트롤 스타일을 포함 하는 값입니다.
+이전 확장 컨트롤 스타일을 포함 하는 값입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 *dwExMask* 매개 변수에 지정된 스타일을 지운 다음 *dwExStyles* 매개 변수에 지정된 스타일을 설정합니다. *dwExMask의* 비트에 해당하는 확장 된 스타일만 변경됩니다.
+이 메서드는 *Dwexmask* 매개 변수에 지정 된 스타일을 지운 다음 *dwexmask* 매개 변수에 지정 된 스타일을 설정 합니다. *Dwexmask* 의 비트에 해당 하는 확장 된 스타일만 변경 됩니다.
 
-이 메서드는 Windows SDK에 설명 된 [TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 TVS_EX_AUTOHSCROLL 확장 된 스타일을 현재 트리 뷰 컨트롤에 추가 합니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. 포커스가 있는 트리 항목을 표시하기 위해 자동으로 스크롤해야 하도록 트리 뷰 컨트롤을 의도적으로 좁혀야 합니다.
+다음 코드 예제에서는 현재 트리 뷰 컨트롤에 TVS_EX_AUTOHSCROLL 확장 스타일을 추가 합니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. 의도적으로 트리 뷰 컨트롤의 범위를 좁히기 때문에 포커스가 있는 트리 항목을 표시 하기 위해 자동으로 스크롤해야 합니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]
 
-## <a name="ctreectrlsetimagelist"></a><a name="setimagelist"></a>CTreeCtrl::세트 이미지 목록
+## <a name="ctreectrlsetimagelist"></a><a name="setimagelist"></a> CTreeCtrl:: Seon Agelist
 
-이 함수를 호출하여 트리 뷰 컨트롤의 일반 또는 상태 이미지 목록을 설정하고 새 이미지를 사용하여 컨트롤을 다시 그립니다.
+이 함수를 호출 하 여 tree view 컨트롤에 대 한 일반 또는 상태 이미지 목록을 설정 하 고 새 이미지를 사용 하 여 컨트롤을 다시 그립니다.
 
 ```
 CImageList* SetImageList(
@@ -1812,26 +1812,26 @@ CImageList* SetImageList(
 ### <a name="parameters"></a>매개 변수
 
 *pImageList*<br/>
-할당할 이미지 목록에 대한 포인터입니다. *pImageList가* NULL이면 모든 이미지가 트리 보기 컨트롤에서 제거됩니다.
+할당할 이미지 목록에 대 한 포인터입니다. *Pimagelist* 가 NULL 이면 모든 이미지가 tree view 컨트롤에서 제거 됩니다.
 
 *nImageListType*<br/>
 설정할 이미지 목록의 유형입니다. 이미지 목록은 다음 값 중 하나일 수 있습니다.
 
-- TVSIL_NORMAL 트리 뷰 항목에 대해 선택되고 선택되지 않은 이미지가 포함된 일반 이미지 목록을 설정합니다. 이미지를 오버레이하려면 이 상태를 사용해야 합니다.
+- TVSIL_NORMAL는 트리 보기 항목에 대해 선택 된 이미지와 nonselected 이미지를 포함 하는 일반 이미지 목록을 설정 합니다. 오버레이 이미지에는이 상태를 사용 해야 합니다.
 
-- TVSIL_STATE 사용자 정의 상태에 있는 트리 뷰 항목에 대한 이미지가 포함된 상태 이미지 목록을 설정합니다.
+- TVSIL_STATE는 사용자 정의 상태의 트리 뷰 항목에 대 한 이미지가 포함 된 상태 이미지 목록을 설정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 이미지 목록에 대한 포인터(있는 경우); 그렇지 않으면 NULL.
+이전 이미지 목록에 대 한 포인터입니다 (있는 경우). 그렇지 않으면 NULL입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetImageList에](#getimagelist)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetImageList](#getimagelist)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetindent"></a><a name="setindent"></a>CTreeCtrl::설정
+## <a name="ctreectrlsetindent"></a><a name="setindent"></a> CTreeCtrl:: SetIndent
 
-이 함수를 호출하여 트리 뷰 컨트롤의 들여쓰기 너비를 설정하고 새 너비를 반영하도록 컨트롤을 다시 그립니다.
+이 함수를 호출 하 여 트리 뷰 컨트롤의 들여쓰기 너비를 설정 하 고 컨트롤을 다시 그리면 새 너비가 반영 됩니다.
 
 ```cpp
 void SetIndent(UINT nIndent);
@@ -1840,15 +1840,15 @@ void SetIndent(UINT nIndent);
 ### <a name="parameters"></a>매개 변수
 
 *nIndent*<br/>
-들여쓰기의 너비(픽셀)입니다. *nIndent가* 시스템 정의 최소 너비보다 작은 경우 새 너비는 시스템 정의 최소값으로 설정됩니다.
+들여쓰기의 너비 (픽셀)입니다. *N 들여쓰기가* 시스템에서 정의한 최소 너비 보다 작은 경우 새 너비는 시스템 정의 최소로 설정 됩니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetIndent에](#getindent)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetIndent](#getindent)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetinsertmark"></a><a name="setinsertmark"></a>CTreeCtrl::설정 삽입마크
+## <a name="ctreectrlsetinsertmark"></a><a name="setinsertmark"></a> CTreeCtrl:: SetInsertMark
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_SETINSERTMARK Win32 [메시지의](/windows/win32/Controls/tvm-setinsertmark)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETINSERTMARK](/windows/win32/Controls/tvm-setinsertmark)의 동작을 구현 합니다.
 
 ```
 BOOL SetInsertMark(
@@ -1858,11 +1858,11 @@ BOOL SetInsertMark(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-삽입 표시를 배치할 항목을 지정하는 HTREEITEM입니다. 이 인수가 NULL이면 삽입 표시가 제거됩니다.
+*hItem*<br/>
+삽입 표시가 배치 될 항목을 지정 하는 HTREEITEM입니다. 이 인수가 NULL 이면 삽입 표시가 제거 됩니다.
 
 *fAfter*<br/>
-삽입 표시가 지정된 항목 앞이나 후에 배치되는지 지정하는 BOOL 값입니다. 이 인수가 0이 아닌 경우 항목 의 다음 삽입 표시가 배치됩니다. 이 인수가 0이면 삽입 표시가 항목 앞에 배치됩니다.
+삽입 표시가 지정 된 항목의 앞 이나 뒤에 배치 되는지 여부를 지정 하는 부울 값입니다. 이 인수가 0이 아닌 경우 삽입 표시는 항목 뒤에 배치 됩니다. 이 인수가 0 인 경우 삽입 표시는 항목 앞에 배치 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1872,9 +1872,9 @@ BOOL SetInsertMark(
 
 [!code-cpp[NVC_MFC_CTreeCtrl#31](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]
 
-## <a name="ctreectrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CTreeCtrl::설정 삽입마크컬러
+## <a name="ctreectrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a> CTreeCtrl:: SetInsertMarkColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_SETINSERTMARKCOLOR Win32 [메시지의](/windows/win32/Controls/tvm-setinsertmarkcolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETINSERTMARKCOLOR](/windows/win32/Controls/tvm-setinsertmarkcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -1883,19 +1883,19 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="parameters"></a>매개 변수
 
 *clrNew*<br/>
-새 삽입 마크 색상을 포함하는 COLORREF 값입니다.
+새 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 삽입 마크 색상을 포함하는 COLORREF 값입니다.
+이전 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetInsertMarkColor에](#getinsertmarkcolor)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetInsertMarkColor](#getinsertmarkcolor)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetitem"></a><a name="setitem"></a>CTreeCtrl::세트 아이템
+## <a name="ctreectrlsetitem"></a><a name="setitem"></a> CTreeCtrl:: SetItem
 
-이 함수를 호출하여 지정된 트리 뷰 항목의 특성을 설정합니다.
+지정 된 트리 뷰 항목의 특성을 설정 하려면이 함수를 호출 합니다.
 
 ```
 BOOL SetItem(TVITEM* pItem);
@@ -1914,31 +1914,31 @@ BOOL SetItem(
 ### <a name="parameters"></a>매개 변수
 
 *pItem*<br/>
-Windows SDK에 설명된 대로 새 항목 특성을 포함하는 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조에 대한 포인터입니다.
+Windows SDK 설명 된 대로 새 항목 특성을 포함 하는 [Tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조체에 대 한 포인터입니다.
 
-*h항목*<br/>
-특성을 설정할 항목의 핸들입니다. Windows `hItem` SDK에서 `TVITEM` 구조의 멤버를 참조하십시오.
+*hItem*<br/>
+특성이 설정 될 항목의 핸들입니다. `hItem`Windows SDK 구조체의 멤버를 참조 하십시오 `TVITEM` .
 
 *nMask*<br/>
-설정할 속성을 지정하는 정수입니다. 구조의 `mask` 멤버를 `TVITEM` 참조하십시오.
+설정할 특성을 지정 하는 정수입니다. `mask`구조체의 멤버를 참조 하십시오 `TVITEM` .
 
 *lpszItem*<br/>
-항목의 텍스트가 포함된 문자열의 주소입니다.
+항목의 텍스트를 포함 하는 문자열의 주소입니다.
 
 *nImage*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목 이미지의 인덱스입니다. 구조의 `iImage` 멤버를 `TVITEM` 참조하십시오.
+트리 뷰 컨트롤의 이미지 목록에 있는 항목의 이미지 인덱스입니다. `iImage`구조체의 멤버를 참조 하십시오 `TVITEM` .
 
-*n선택이미지*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목의 선택한 이미지 인덱스입니다. 구조의 `iSelectedImage` 멤버를 `TVITEM` 참조하십시오.
+*nSelectedImage*<br/>
+트리 뷰 컨트롤의 이미지 목록에서 선택한 항목 이미지의 인덱스입니다. `iSelectedImage`구조체의 멤버를 참조 하십시오 `TVITEM` .
 
 *nState*<br/>
-항목의 상태에 대한 값을 지정합니다. 구조의 `State` 멤버를 `TVITEM` 참조하십시오.
+항목의 상태에 대 한 값을 지정 합니다. `State`구조체의 멤버를 참조 하십시오 `TVITEM` .
 
 *nStateMask*<br/>
-설정할 상태를 지정합니다. 구조의 `stateMask` 멤버를 `TVITEM` 참조하십시오.
+설정할 상태를 지정 합니다. `stateMask`구조체의 멤버를 참조 하십시오 `TVITEM` .
 
 *lParam*<br/>
-항목과 연결된 포인터 크기의 응용 프로그램별 값입니다.
+항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1946,17 +1946,17 @@ Windows SDK에 설명된 대로 새 항목 특성을 포함하는 [TVITEM](/wind
 
 ### <a name="remarks"></a>설명
 
-구조에서 `TVITEM` 멤버는 `hItem` 항목을 식별하고 멤버는 `mask` 설정할 특성을 지정합니다.
+구조에서 `TVITEM` `hItem` 멤버는 항목을 식별 하 고, 멤버는 `mask` 설정할 특성을 지정 합니다.
 
-`mask` 멤버 또는 *nMask* 매개 변수가 TVIF_TEXT 값을 `pszText` 지정하는 경우 멤버 또는 *lpszItem은* null 종료된 `cchTextMax` 문자열의 주소이며 멤버는 무시됩니다. (또는 *nMask)가*TVIF_STATE 값을 지정하는 `stateMask` 경우 `mask` 멤버 또는 *nStateMask* 매개 변수는 변경할 `state` 항목 상태를 지정하고 멤버 또는 *nState* 매개 변수는 해당 상태에 대한 값을 포함합니다.
+`mask`멤버 또는 *nmask* 매개 변수가 TVIF_TEXT 값을 지정 하는 경우 `pszText` 멤버 또는 *lpszItem* 는 null로 끝나는 문자열의 주소이 고 `cchTextMax` 멤버는 무시 됩니다. `mask`(또는 *nmask*)가 TVIF_STATE 값을 지정 하는 경우 `stateMask` 멤버 또는 *nStateMask* 매개 변수는 변경할 항목 상태를 지정 하 고 `state` member 또는 *nmask* 매개 변수는 해당 상태에 대 한 값을 포함 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]
 
-## <a name="ctreectrlsetitemdata"></a><a name="setitemdata"></a>CTreeCtrl:::세트항목데이터
+## <a name="ctreectrlsetitemdata"></a><a name="setitemdata"></a> CTreeCtrl:: SetItemData
 
-이 함수를 호출하여 지정된 항목과 연결된 응용 프로그램 별 값을 설정합니다.
+지정 된 항목과 연결 된 응용 프로그램별 값을 설정 하려면이 함수를 호출 합니다.
 
 ```
 BOOL SetItemData(
@@ -1966,11 +1966,11 @@ BOOL SetItemData(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 데이터를 검색할 항목의 핸들입니다.
 
 *dwData*<br/>
-*hItem에서*지정한 항목과 연결된 포인터 크기의 응용 프로그램별 값입니다.
+*Hitem*으로 지정 된 항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1980,9 +1980,9 @@ BOOL SetItemData(
 
 [!code-cpp[NVC_MFC_CTreeCtrl#33](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]
 
-## <a name="ctreectrlsetitemexpandedimageindex"></a><a name="setitemexpandedimageindex"></a>CTreeCtrl::세트항목확장이미지인덱스
+## <a name="ctreectrlsetitemexpandedimageindex"></a><a name="setitemexpandedimageindex"></a> CTreeCtrl:: SetItemExpandedImageIndex
 
-현재 트리 뷰 컨트롤의 지정된 항목이 확장된 상태에 있을 때 표시할 이미지의 인덱스를 설정합니다.
+현재 트리 뷰 컨트롤의 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스를 설정 합니다.
 
 ```
 BOOL SetItemExpandedImageIndex(
@@ -1992,34 +1992,35 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
-|*iExpandedImage*|【인】 지정된 항목이 확장된 상태에 있을 때 표시할 이미지의 인덱스입니다.|
+*hItem*\
+진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
+
+*iExpandedImage*\
+진행 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 메시지를 보냅니다. 이 메서드는 [tvITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 `iExpandedImage` 멤버에 *iExpandedImage* 매개 변수를 할당 하 고 메시지에서 해당 구조를 사용 합니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 메시지를 보냅니다. 이 메서드는 TVITEMEX 구조체의 멤버에 *iExpandedImage* 매개 변수를 할당 한 `iExpandedImage` 다음 메시지에서 해당 구조를 사용 합니다. [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제는 [CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex) 메서드가 [CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex) 메서드에 의해 설정된 값을 반환하는지 여부를 확인하는 간단한 테스트입니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다.
+다음 코드 예제는 [CTreeCtrl:: GetItemExpandedImageIndex](#getitemexpandedimageindex) 메서드가 [CTreeCtrl:: SetItemExpandedImageIndex](#setitemexpandedimageindex) 메서드에 의해 설정 된 값을 반환 하는지 여부를 확인 하는 간단한 테스트입니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]
 
-## <a name="ctreectrlsetitemheight"></a><a name="setitemheight"></a>CTreeCtrl:::세트항목높이
+## <a name="ctreectrlsetitemheight"></a><a name="setitemheight"></a> CTreeCtrl:: SetItemHeight
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)의 동작을 구현 합니다.
 
 ```
 SHORT SetItemHeight(SHORT cyHeight);
@@ -2027,20 +2028,20 @@ SHORT SetItemHeight(SHORT cyHeight);
 
 ### <a name="parameters"></a>매개 변수
 
-*사이 높이*<br/>
-트리 뷰의 모든 항목의 새 높이를 픽셀 단위로 지정합니다. 이 인수가 이미지의 높이보다 낮으면 이미지높이로 설정됩니다. 이 인수가 짝수이 아닌 경우 가장 가까운 짝수 값으로 반올림됩니다. 이 인수가 -1이면 컨트롤이 기본 항목 높이를 사용하여 되돌아갑니다.
+*cyHeight*<br/>
+트리 뷰에서 모든 항목의 새 높이 (픽셀)를 지정 합니다. 이 인수가 이미지의 높이 보다 작은 경우 이미지의 높이로 설정 됩니다. 이 인수를 사용할 수 없는 경우에도 가장 가까운 값으로 반올림 됩니다. 이 인수가-1 이면 컨트롤은 기본 항목 높이를 사용 하 여로 돌아갑니다.
 
 ### <a name="return-value"></a>Return Value
 
-항목의 이전 높이(픽셀)입니다.
+항목의 이전 높이 (픽셀)입니다.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetItemHeight에](#getitemheight)대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetItemHeight](#getitemheight)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetitemimage"></a><a name="setitemimage"></a>CTreeCtrl:::세트항목 이미지
+## <a name="ctreectrlsetitemimage"></a><a name="setitemimage"></a> CTreeCtrl:: SetItemImage
 
-이미지를 항목과 연결합니다.
+이미지를 항목과 연결 합니다.
 
 ```
 BOOL SetItemImage(
@@ -2051,14 +2052,14 @@ BOOL SetItemImage(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 이미지를 설정할 항목의 핸들입니다.
 
 *nImage*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목 이미지의 인덱스입니다.
+트리 뷰 컨트롤의 이미지 목록에 있는 항목의 이미지 인덱스입니다.
 
-*n선택이미지*<br/>
-트리 뷰 컨트롤의 이미지 목록에서 항목의 선택한 이미지 인덱스입니다.
+*nSelectedImage*<br/>
+트리 뷰 컨트롤의 이미지 목록에서 선택한 항목 이미지의 인덱스입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2066,19 +2067,19 @@ BOOL SetItemImage(
 
 ### <a name="remarks"></a>설명
 
-트리 뷰 컨트롤의 각 항목에는 비트매핑된 이미지 쌍이 연관되어 있을 수 있습니다. 이미지는 항목 레이블의 왼쪽에 나타납니다. 항목을 선택하면 한 이미지가 표시되고 다른 이미지는 항목을 선택하지 않을 때 표시됩니다. 예를 들어 항목이 선택될 때 열려 있는 폴더와 선택하지 않을 때 닫힌 폴더가 표시될 수 있습니다.
+Tree view 컨트롤의 각 항목에는 연결 된 비트맵 이미지 쌍이 있을 수 있습니다. 이미지는 항목 레이블의 왼쪽에 표시 됩니다. 항목이 선택 되 면 하나의 이미지가 표시 되 고, 항목을 선택 하지 않으면 다른 이미지가 표시 됩니다. 예를 들어 항목을 선택 하면 열려 있는 폴더를 표시 하 고 선택 하지 않으면 폴더를 닫을 수 있습니다.
 
-이 함수를 호출하여 트리 뷰 컨트롤의 이미지 목록 내에서 항목 이미지및 선택한 이미지의 인덱스를 설정합니다.
+이 함수를 호출 하 여 트리 뷰 컨트롤의 이미지 목록에서 항목 이미지의 인덱스와 선택한 이미지를 설정 합니다.
 
-이미지에 대한 자세한 내용은 [CImageList](../../mfc/reference/cimagelist-class.md)을 참조하십시오.
+이미지에 대 한 자세한 내용은 [CImageList](../../mfc/reference/cimagelist-class.md)를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetItemImage](#getitemimage)에 대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetItemImage](#getitemimage)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetitemstate"></a><a name="setitemstate"></a>CTreeCtrl::세트항목 상태
+## <a name="ctreectrlsetitemstate"></a><a name="setitemstate"></a> CTreeCtrl:: SetItemState
 
-*hItem*에서 지정한 항목의 상태를 설정합니다.
+*Hitem*으로 지정 된 항목의 상태를 설정 합니다.
 
 ```
 BOOL SetItemState(
@@ -2089,14 +2090,14 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 상태를 설정할 항목의 핸들입니다.
 
 *nState*<br/>
-항목에 대한 새 상태를 지정합니다.
+항목의 새 상태를 지정 합니다.
 
 *nStateMask*<br/>
-변경할 상태를 지정합니다.
+변경할 상태를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2104,15 +2105,15 @@ BOOL SetItemState(
 
 ### <a name="remarks"></a>설명
 
-상태에 대한 자세한 내용은 [CTreeCtrl::GetItem](#getitem)을 참조하십시오.
+상태에 대 한 자세한 내용은 [CTreeCtrl:: GetItem](#getitem)를 참조 하세요.
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetItemState](#getitemstate)에 대한 예제를 참조하십시오.
+  [CTreeCtrl:: GetItemState](#getitemstate)의 예제를 참조 하세요.
 
-## <a name="ctreectrlsetitemstateex"></a><a name="setitemstateex"></a>CTreeCtrl::세트아이템스테이트엑스
+## <a name="ctreectrlsetitemstateex"></a><a name="setitemstateex"></a> CTreeCtrl:: SetItemStateEx
 
-현재 트리 뷰 컨트롤에서 지정된 항목의 확장 된 상태를 설정 합니다.
+현재 트리 뷰 컨트롤에서 지정 된 항목의 확장 상태를 설정 합니다.
 
 ```
 BOOL SetItemStateEx(
@@ -2122,34 +2123,35 @@ BOOL SetItemStateEx(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 트리 뷰 컨트롤 항목에 핸들을 보입니다.|
-|*uStateEx*|【인】 항목의 확장된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 멤버를 참조하십시오.|
+*hItem*\
+진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
+
+*uStateEx*\
+진행 항목의 확장 된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 멤버를 참조 하십시오.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 메시지를 보냅니다. 이 메서드는 [tvITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 `uStateEx` 멤버에 *uStateEx* 매개 변수를 할당 하 고 메시지에서 해당 구조를 사용 합니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 메시지를 보냅니다. 이 메서드는 TVITEMEX 구조체의 멤버에 *uStateEx* 매개 변수를 할당 한 `uStateEx` 다음 메시지에서 해당 구조를 사용 합니다. [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 현재 `m_treeCtrl`트리 뷰 컨트롤에 액세스하는 데 사용되는 변수 를 정의합니다. 또한 코드 예제에서는 서명되지 않은 정수 및 여러 HTREEITEM 변수를 정의합니다. 이러한 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_treeCtrl` 현재 트리 뷰 컨트롤에 액세스 하는 데 사용 되는 변수를 정의 합니다. 또한 코드 예제는 부호 없는 정수와 여러 HTREEITEM 변수를 정의 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 트리 뷰 항목을 비활성화된 상태로 설정합니다. 표시되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베니아 및 워싱턴 주에 대한 하위 노드 및 해당 주의 도시에 대한 트리 항목으로 구성된 트리 뷰를 만들었습니다. 이 코드 예제는 펜실베니아 노드를 비활성화된 상태로 설정합니다.
+다음 코드 예제에서는 트리 뷰 항목을 사용 안 함 상태로 설정 합니다. 표시 되지 않는 코드 예제의 이전 섹션에서는 미국의 루트 국가/지역 노드, 펜실베이니아 및 워싱턴의 주에 대 한 하위 노드 및 해당 상태의 도시에 대 한 트리 항목으로 구성 된 트리 뷰를 만들었습니다. 이 코드 예제에서는 펜실베이니아 노드를 disabled 상태로 설정 합니다.
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]
 
-## <a name="ctreectrlsetitemtext"></a><a name="setitemtext"></a>CTreeCtrl:::세트항목 텍스트
+## <a name="ctreectrlsetitemtext"></a><a name="setitemtext"></a> CTreeCtrl:: SetItemText
 
-*hItem*에 의해 지정된 항목의 텍스트를 설정합니다.
+*Hitem*으로 지정 된 항목의 텍스트를 설정 합니다.
 
 ```
 BOOL SetItemText(
@@ -2159,11 +2161,11 @@ BOOL SetItemText(
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
+*hItem*<br/>
 텍스트를 설정할 항목의 핸들입니다.
 
 *lpszItem*<br/>
-항목에 대한 새 텍스트가 포함된 문자열의 주소
+항목의 새 텍스트를 포함 하는 문자열의 주소입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2173,9 +2175,9 @@ BOOL SetItemText(
 
 [!code-cpp[NVC_MFC_CTreeCtrl#34](../../mfc/reference/codesnippet/cpp/ctreectrl-class_42.cpp)]
 
-## <a name="ctreectrlsetlinecolor"></a><a name="setlinecolor"></a>CTreeCtrl::설정선색상
+## <a name="ctreectrlsetlinecolor"></a><a name="setlinecolor"></a> CTreeCtrl:: SetLineColor
 
-이 멤버 함수를 호출하여 트리 뷰 컨트롤의 현재 선 색상을 설정합니다.
+이 멤버 함수를 호출 하 여 tree view 컨트롤의 현재 선 색을 설정 합니다.
 
 ```
 COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
@@ -2184,23 +2186,23 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ### <a name="parameters"></a>매개 변수
 
 *clrNew*<br/>
-새 선 색상입니다.
+새 줄 색입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 선 색상입니다.
+이전 선 색입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_SETLINECOLOR Win32 [메시지의](/windows/win32/Controls/tvm-setlinecolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#35](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]
 
-## <a name="ctreectrlsetscrolltime"></a><a name="setscrolltime"></a>CTreeCtrl::세트스크롤 타임
+## <a name="ctreectrlsetscrolltime"></a><a name="setscrolltime"></a> CTreeCtrl:: SetScrollTime
 
-이 멤버 함수를 호출하여 트리 뷰 컨트롤의 최대 스크롤 시간을 설정합니다.
+이 멤버 함수를 호출 하 여 tree view 컨트롤의 최대 스크롤 시간을 설정 합니다.
 
 ```
 UINT SetScrollTime(UINT uScrollTime);
@@ -2208,20 +2210,20 @@ UINT SetScrollTime(UINT uScrollTime);
 
 ### <a name="parameters"></a>매개 변수
 
-*u스크롤타임*<br/>
-밀리초 단위로 새 최대 스크롤 시간입니다. 이 값이 100보다 적으면 100으로 반올림됩니다.
+*uScrollTime*<br/>
+새 최대 스크롤 시간 (밀리초)입니다. 이 값이 100 보다 작은 경우 100으로 반올림 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 최대 스크롤 시간(밀리초)입니다.
+이전 최대 스크롤 시간 (밀리초)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_SETSCROLLTIME Win32 [메시지의](/windows/win32/Controls/tvm-setscrolltime)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)의 동작을 구현 합니다.
 
-## <a name="ctreectrlsettextcolor"></a><a name="settextcolor"></a>CTreeCtrl::SetTextColor
+## <a name="ctreectrlsettextcolor"></a><a name="settextcolor"></a> CTreeCtrl:: SetTextColor
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)의 동작을 구현 합니다.
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -2229,20 +2231,20 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>매개 변수
 
-*Clr*<br/>
-새 텍스트 색상을 포함하는 COLORREF 값입니다. 이 인수가 -1이면 컨트롤이 텍스트 색상에 시스템 색상을 사용하여 되돌리게 됩니다.
+*clr*<br/>
+새 텍스트 색을 포함 하는 COLORREF 값입니다. 이 인수가-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 하 여로 돌아갑니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 텍스트 색상을 나타내는 COLORREF 값입니다. 이 값이 -1이면 컨트롤이 텍스트 색상에 시스템 색상을 사용하고 있었습니다.
+이전 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤에서 텍스트 색의 시스템 색을 사용 하는 것입니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]
 
-## <a name="ctreectrlsettooltips"></a><a name="settooltips"></a>CTreeCtrl::설정 도구 팁
+## <a name="ctreectrlsettooltips"></a><a name="settooltips"></a> CTreeCtrl:: SetToolTips
 
-이 멤버 함수는 Windows SDK에 설명된 대로 TVM_SETTOOLTIPS Win32 [메시지의](/windows/win32/Controls/tvm-settooltips)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [TVM_SETTOOLTIPS](/windows/win32/Controls/tvm-settooltips)의 동작을 구현 합니다.
 
 ```
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
@@ -2251,23 +2253,23 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>매개 변수
 
 *pWndTip*<br/>
-트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대한 포인터입니다.
+트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-컨트롤에서 이전에 사용한 도구 설명이 포함된 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대한 포인터 또는 이전에 도구 설명이 사용되지 않은 경우 NULL입니다.
+컨트롤에서 이전에 사용한 도구 설명을 포함 하는 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터 이거나, 이전에 사용 된 도구 설명이 없는 경우 NULL입니다.
 
 ### <a name="remarks"></a>설명
 
-도구 설명팁을 사용하려면 객체를 작성할 `CTreeCtrl` 때 TVS_NOTOOLTIPS 스타일을 지정합니다.
+도구 설명을 사용 하려면 개체를 만들 때 TVS_NOTOOLTIPS 스타일을 지정 합니다 `CTreeCtrl` .
 
 ### <a name="example"></a>예제
 
-  [CTreeCtrl::GetToolTips에](#gettooltips)대한 예제를 참조하십시오.
+  [CTreeCtrl:: gettooltips](#gettooltips)의 예제를 참조 하세요.
 
-## <a name="ctreectrlshowinfotip"></a><a name="showinfotip"></a>CTreeCtrl:::쇼인포팁
+## <a name="ctreectrlshowinfotip"></a><a name="showinfotip"></a> CTreeCtrl:: ShowInfoTip
 
-현재 트리 뷰 컨트롤에서 지정된 항목에 대한 정보 팁을 표시합니다.
+현재 트리 뷰 컨트롤의 지정 된 항목에 대 한 정보 팁을 표시 합니다.
 
 ```cpp
 void ShowInfoTip(HTREEITEM hItem);
@@ -2275,19 +2277,18 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*h항목*|【인】 컨트롤의 트리 뷰 항목에 대한 핸들입니다. 자세한 내용은 `hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조의 멤버를 참조하십시오.|
+*hItem*\
+진행 컨트롤의 트리 뷰 항목에 대 한 핸들입니다. 자세한 내용은 `hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 멤버를 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-도구 설명과 인포팁의 차이점에 대한 자세한 내용은 [Microsoft 개발자 네트워크에서](https://go.microsoft.com/fwlink/p/?linkid=56322)"도구 설명 및 정보 설명" 항목을 검색합니다.
+도구 설명 및 infotips 간의 차이점에 대 한 자세한 내용을 보려면 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)에서 "도구 설명 및 infotips" 항목을 검색 하십시오.
 
-이 메서드는 Windows SDK에 설명 된 [TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip) 메시지를 보냅니다.
 
-## <a name="ctreectrlsortchildren"></a><a name="sortchildren"></a>CTreeCtrl:::정렬 어린이
+## <a name="ctreectrlsortchildren"></a><a name="sortchildren"></a> CTreeCtrl:: SortChildren
 
-이 함수를 호출하여 트리 뷰 컨트롤에서 지정된 상위 항목의 자식 항목을 사전순으로 정렬합니다.
+이 함수를 호출 하 여 트리 뷰 컨트롤에서 지정 된 부모 항목의 자식 항목을 사전순으로 정렬 합니다.
 
 ```
 BOOL SortChildren(HTREEITEM hItem);
@@ -2295,8 +2296,8 @@ BOOL SortChildren(HTREEITEM hItem);
 
 ### <a name="parameters"></a>매개 변수
 
-*h항목*<br/>
-하위 항목을 정렬해야 하는 상위 항목의 핸들입니다. *hItem이* NULL이면 트리의 루트에서 정렬이 진행됩니다.
+*hItem*<br/>
+자식 항목을 정렬할 부모 항목의 핸들입니다. *Hitem* 이 NULL 인 경우 정렬은 트리의 루트에서 진행 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2304,15 +2305,15 @@ BOOL SortChildren(HTREEITEM hItem);
 
 ### <a name="remarks"></a>설명
 
-`SortChildren`나무를 통해 저주하지 않습니다; *hItem의* 직계 자식만 정렬됩니다.
+`SortChildren` 는 트리를 재귀적으로 하지 않습니다. *Hitem* 의 직계 자식만 정렬 됩니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]
 
-## <a name="ctreectrlsortchildrencb"></a><a name="sortchildrencb"></a>CTreeCtrl::정렬어린이CB
+## <a name="ctreectrlsortchildrencb"></a><a name="sortchildrencb"></a> CTreeCtrl:: SortChildrenCB
 
-이 함수를 호출하여 항목을 비교하는 응용 프로그램 정의 콜백 함수를 사용하여 트리 뷰 항목을 정렬합니다.
+항목을 비교 하는 응용 프로그램 정의 콜백 함수를 사용 하 여 트리 뷰 항목을 정렬 하려면이 함수를 호출 합니다.
 
 ```
 BOOL SortChildrenCB(LPTVSORTCB pSort);
@@ -2321,7 +2322,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 ### <a name="parameters"></a>매개 변수
 
 *pSort*<br/>
-[TVSORTCB](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) 구조에 대한 포인터입니다.
+[Tvsortcb](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2329,9 +2330,9 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ### <a name="remarks"></a>설명
 
-구조의 비교 함수는 `lpfnCompare`첫 번째 항목이 두 번째 항목 앞에 오는 경우 음수 값을 반환해야 하며, 첫 번째 항목이 두 번째 항목을 따라야 하는 경우 양수 값, 두 항목이 해당하는 경우 0을 반환해야 합니다.
+구조체의 비교 함수는 첫 번째 항목이 두 번째 항목 앞에와 야 `lpfnCompare` 하는 경우 음수 값을 반환 해야 하 고 첫 번째 항목이 두 번째 항목을 따라야 하는 경우 양수 값을 반환 해야 합니다. 두 항목이 같으면 0입니다.
 
-*lParam1* 및 *lParam2* 매개변수는 `lParam` 비교되는 두 항목에 대한 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조의 멤버에 해당합니다. *lParamSort* 매개 변수는 `lParam` 구조의 `TV_SORTCB` 멤버에 해당합니다.
+*LParam1* 및 *lParam2* 매개 변수는 `lParam` 비교 되는 두 항목에 대 한 [tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조의 멤버에 해당 합니다. *Lparamsort* 매개 변수는 `lParam` 구조체의 멤버에 해당 합니다 `TV_SORTCB` .
 
 ### <a name="example"></a>예제
 
@@ -2339,7 +2340,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

@@ -138,12 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 1e1e2609c5c4d7a5f93f4c63a26ae2fecbc98b0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bde29e2d6148dd5aa5c39ac6a923048694e3a32d
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222175"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562449"
 ---
 # <a name="unordered_map-class"></a>unordered_map 클래스
 
@@ -162,17 +162,24 @@ class unordered_map;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*Key*|키 형식입니다.|
-|*Ty*|매핑된 형식입니다.|
-|*해시*|해시 함수 개체 형식입니다.|
-|*Pred*|같음 비교 함수 개체 형식입니다.|
-|*#C4*|할당자 클래스입니다.|
+*키인지*\
+키 형식입니다.
+
+*Ty*\
+매핑된 형식입니다.
+
+*해시로*\
+해시 함수 개체 형식입니다.
+
+*Pred*\
+같음 비교 함수 개체 형식입니다.
+
+*#C4*\
+할당자 클래스입니다.
 
 ## <a name="members"></a>멤버
 
-|형식 정의|설명|
+|형식 정의|Description|
 |-|-|
 |[allocator_type](#allocator_type)|스토리지 관리를 위한 할당자의 형식입니다.|
 |[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|
@@ -191,11 +198,11 @@ class unordered_map;
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[at](#at)|지정된 키 값이 있는 요소를 찾습니다.|
 |[시작](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
-|[bucket](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|
+|[버킷](#bucket)|키 값에 대한 버킷 개수를 가져옵니다.|
 |[bucket_count](#bucket_count)|버킷 개수를 가져옵니다.|
 |[bucket_size](#bucket_size)|버킷의 크기를 가져옵니다.|
 |[cbegin](#cbegin)|제어되는 시퀀스의 시작을 지정합니다.|
@@ -222,7 +229,7 @@ class unordered_map;
 |[스왑을](#swap)|두 컨테이너의 내용을 바꿉니다.|
 |[unordered_map](#unordered_map)|컨테이너 개체를 만듭니다.|
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[unordered_map::operator[]](#op_at)|지정된 키가 있는 요소를 찾거나 삽입합니다.|
 |[unordered_map:: operator =](#op_eq)|해시 테이블을 복사합니다.|
@@ -243,7 +250,7 @@ class unordered_map;
 
 **네임스페이스:** std
 
-## <a name="unordered_mapallocator_type"></a><a name="allocator_type"></a>unordered_map:: allocator_type
+## <a name="unordered_mapallocator_type"></a><a name="allocator_type"></a> unordered_map:: allocator_type
 
 스토리지 관리를 위한 할당자의 형식입니다.
 
@@ -281,7 +288,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_mapat"></a><a name="at"></a>unordered_map:: at
+## <a name="unordered_mapat"></a><a name="at"></a> unordered_map:: at
 
 지정된 키 값을 사용하여 unordered_map에서 요소를 찾습니다.
 
@@ -292,9 +299,8 @@ const Ty& at(const Key& key) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|-|-|
-|*key*|찾을 키 값입니다.|
+*키인지*\
+찾을 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -331,7 +337,7 @@ int main()
 }
 ```
 
-## <a name="unordered_mapbegin"></a><a name="begin"></a>unordered_map:: begin
+## <a name="unordered_mapbegin"></a><a name="begin"></a> unordered_map:: begin
 
 제어되는 시퀀스 또는 버킷의 시작을 지정합니다.
 
@@ -344,9 +350,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*nbucket*|버킷 번호입니다.|
+*nbucket*\
+버킷 번호입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -396,7 +401,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapbucket"></a><a name="bucket"></a>unordered_map:: 버킷
+## <a name="unordered_mapbucket"></a><a name="bucket"></a> unordered_map:: 버킷
 
 키 값에 대한 버킷 개수를 가져옵니다.
 
@@ -452,7 +457,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_mapbucket_count"></a><a name="bucket_count"></a>unordered_map:: bucket_count
+## <a name="unordered_mapbucket_count"></a><a name="bucket_count"></a> unordered_map:: bucket_count
 
 버킷 개수를 가져옵니다.
 
@@ -538,7 +543,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapbucket_size"></a><a name="bucket_size"></a>unordered_map:: bucket_size
+## <a name="unordered_mapbucket_size"></a><a name="bucket_size"></a> unordered_map:: bucket_size
 
 버킷의 크기를 가져옵니다.
 
@@ -594,7 +599,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_mapcbegin"></a><a name="cbegin"></a>unordered_map:: cbegin
+## <a name="unordered_mapcbegin"></a><a name="cbegin"></a> unordered_map:: cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -620,7 +625,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="unordered_mapcend"></a><a name="cend"></a>unordered_map:: cend
+## <a name="unordered_mapcend"></a><a name="cend"></a> unordered_map:: cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -647,7 +652,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="unordered_mapclear"></a><a name="clear"></a>unordered_map:: clear
+## <a name="unordered_mapclear"></a><a name="clear"></a> unordered_map:: clear
 
 모든 요소를 제거합니다.
 
@@ -714,7 +719,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapconst_iterator"></a><a name="const_iterator"></a>unordered_map:: const_iterator
+## <a name="unordered_mapconst_iterator"></a><a name="const_iterator"></a> unordered_map:: const_iterator
 
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.
 
@@ -757,7 +762,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_map:: const_local_iterator
+## <a name="unordered_mapconst_local_iterator"></a><a name="const_local_iterator"></a> unordered_map:: const_local_iterator
 
 제어되는 시퀀스에 대한 상수 버킷 반복기의 형식입니다.
 
@@ -805,7 +810,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapconst_pointer"></a><a name="const_pointer"></a>unordered_map:: const_pointer
+## <a name="unordered_mapconst_pointer"></a><a name="const_pointer"></a> unordered_map:: const_pointer
 
 요소에 대한 상수 포인터의 형식입니다.
 
@@ -851,7 +856,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapconst_reference"></a><a name="const_reference"></a>unordered_map:: const_reference
+## <a name="unordered_mapconst_reference"></a><a name="const_reference"></a> unordered_map:: const_reference
 
 요소에 대한 상수 참조의 형식입니다.
 
@@ -897,7 +902,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapcount"></a><a name="count"></a>unordered_map:: count
+## <a name="unordered_mapcount"></a><a name="count"></a> unordered_map:: count
 
 지정한 키와 일치하는 요소의 수를 찾습니다.
 
@@ -952,7 +957,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="unordered_mapdifference_type"></a><a name="difference_type"></a>unordered_map::d ifference_type
+## <a name="unordered_mapdifference_type"></a><a name="difference_type"></a> unordered_map::d ifference_type
 
 두 요소 사이의 부호가 있는 거리의 형식입니다.
 
@@ -1011,7 +1016,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="unordered_mapemplace"></a><a name="emplace"></a>unordered_map:: emplace
+## <a name="unordered_mapemplace"></a><a name="emplace"></a> unordered_map:: emplace
 
 생성된 요소를 unordered_map의 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
@@ -1022,9 +1027,8 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*args*|값이 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_map에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.|
+*args*\
+값이 동등 하 게 `unordered_map` 정렬 된 요소를 이미 포함 하 고 있지 않은 경우에 삽입할 요소를 생성 하기 위해 전달 되는 인수입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1040,7 +1044,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 코드 예제를 보려면 [map::emplace](../standard-library/map-class.md#emplace)를 참조하세요.
 
-## <a name="unordered_mapemplace_hint"></a><a name="emplace_hint"></a>unordered_map:: emplace_hint
+## <a name="unordered_mapemplace_hint"></a><a name="emplace_hint"></a> unordered_map:: emplace_hint
 
 배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
@@ -1051,10 +1055,11 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*args*|unordered_map이 해당 요소를 이미 포함하고 있지 않거나, 보다 일반적으로는 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 unordered_map에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.|
-|*where*|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|
+*args*\
+unordered_map이 해당 요소를 이미 포함하고 있지 않거나, 보다 일반적으로는 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 unordered_map에 삽입되는 요소를 생성하기 위해 전달되는 인수입니다.
+
+*위치*\
+올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1072,7 +1077,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 코드 예제를 보려면 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)를 참조하세요.
 
-## <a name="unordered_mapempty"></a><a name="empty"></a>unordered_map:: empty
+## <a name="unordered_mapempty"></a><a name="empty"></a> unordered_map:: empty
 
 요소가 있는지 여부를 테스트합니다.
 
@@ -1139,7 +1144,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapend"></a><a name="end"></a>unordered_map:: end
+## <a name="unordered_mapend"></a><a name="end"></a> unordered_map:: end
 
 제어되는 시퀀스의 끝을 지정합니다.
 
@@ -1152,15 +1157,14 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*nbucket*|버킷 번호입니다.|
+*nbucket*\
+버킷 번호입니다.
 
 ### <a name="remarks"></a>설명
 
 처음 두 멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 정방향 반복기를 반환합니다. 마지막 두 멤버 함수는 버킷 *n 버킷의*끝 바로 다음을 가리키는 전방 반복기를 반환 합니다.
 
-## <a name="unordered_mapequal_range"></a><a name="equal_range"></a>unordered_map:: equal_range
+## <a name="unordered_mapequal_range"></a><a name="equal_range"></a> unordered_map:: equal_range
 
 지정된 키와 일치하는 범위를 찾습니다.
 
@@ -1228,7 +1232,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]
 ```
 
-## <a name="unordered_maperase"></a><a name="erase"></a>unordered_map:: erase
+## <a name="unordered_maperase"></a><a name="erase"></a> unordered_map:: erase
 
 지정된 위치에서 unordered_map의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.
 
@@ -1262,7 +1266,7 @@ size_type erase(const key_type& Key);
 
 코드 예제를 보려면 [map::erase](../standard-library/map-class.md#erase)를 참조하세요.
 
-## <a name="unordered_mapfind"></a><a name="find"></a>unordered_map:: find
+## <a name="unordered_mapfind"></a><a name="find"></a> unordered_map:: find
 
 지정된 키와 일치하는 요소를 찾습니다.
 
@@ -1322,7 +1326,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="unordered_mapget_allocator"></a><a name="get_allocator"></a>unordered_map:: get_allocator
+## <a name="unordered_mapget_allocator"></a><a name="get_allocator"></a> unordered_map:: get_allocator
 
 저장된 할당자 개체를 가져옵니다.
 
@@ -1360,7 +1364,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_maphash_function"></a><a name="hash"></a>unordered_map:: hash_function
+## <a name="unordered_maphash_function"></a><a name="hash"></a> unordered_map:: hash_function
 
 저장된 해시 함수 개체를 가져옵니다.
 
@@ -1398,7 +1402,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_maphasher"></a><a name="hasher"></a>unordered_map:: hasher
+## <a name="unordered_maphasher"></a><a name="hasher"></a> unordered_map:: hasher
 
 해시 함수의 형식입니다.
 
@@ -1436,7 +1440,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_mapinsert"></a><a name="insert"></a>unordered_map:: insert
+## <a name="unordered_mapinsert"></a><a name="insert"></a> unordered_map:: insert
 
 unordered_map에 요소 또는 요소의 범위를 삽입합니다.
 
@@ -1470,15 +1474,26 @@ IList);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|키가 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_map에 삽입되는 요소의 값입니다.|
-|*Where*|올바른 삽입 지점 검색을 시작할 위치입니다.|
-|*ValTy*|Unordered_map에서 [value_type](../standard-library/map-class.md#value_type)요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 사용 하는 템플릿 매개 변수입니다.|
-|*첫째*|복사할 첫 번째 요소의 위치입니다.|
-|*최신*|복사할 마지막 요소 바로 다음 위치입니다.|
-|*InputIterator*|[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|
-|*IList*|요소를 복사할 [initializer_list](../standard-library/initializer-list.md) 입니다.|
+*짧은*\
+키가 동등하게 정렬된 요소가 이미 포함되어 있지 않으면 unordered_map에 삽입되는 요소의 값입니다.
+
+*위치*\
+올바른 삽입 지점 검색을 시작할 위치입니다.
+
+*ValTy*\
+Unordered_map에서 [value_type](../standard-library/map-class.md#value_type)요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 사용 하는 템플릿 매개 변수입니다.
+
+*기본*\
+복사할 첫 번째 요소의 위치입니다.
+
+*최신*\
+복사할 마지막 요소 바로 다음 위치입니다.
+
+*InputIterator*\
+[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.
+
+*IList*\
+요소를 복사할 [initializer_list](../standard-library/initializer-list.md) 입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1504,7 +1519,7 @@ IList);
 
 코드 예제를 보려면 [map::insert](../standard-library/map-class.md#insert)를 참조하세요.
 
-## <a name="unordered_mapiterator"></a><a name="iterator"></a>unordered_map:: iterator
+## <a name="unordered_mapiterator"></a><a name="iterator"></a> unordered_map:: iterator
 
 제어되는 시퀀스에 대한 반복기의 형식입니다.
 
@@ -1547,7 +1562,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapkey_eq"></a><a name="key_eq"></a>unordered_map:: key_eq
+## <a name="unordered_mapkey_eq"></a><a name="key_eq"></a> unordered_map:: key_eq
 
 저장된 비교 함수 개체를 가져옵니다.
 
@@ -1587,7 +1602,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_mapkey_equal"></a><a name="key_equal"></a>unordered_map:: key_equal
+## <a name="unordered_mapkey_equal"></a><a name="key_equal"></a> unordered_map:: key_equal
 
 비교 함수의 형식입니다.
 
@@ -1627,7 +1642,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_mapkey_type"></a><a name="key_type"></a>unordered_map:: key_type
+## <a name="unordered_mapkey_type"></a><a name="key_type"></a> unordered_map:: key_type
 
 정렬 키의 형식입니다.
 
@@ -1682,7 +1697,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapload_factor"></a><a name="load_factor"></a>unordered_map:: load_factor
+## <a name="unordered_mapload_factor"></a><a name="load_factor"></a> unordered_map:: load_factor
 
 버킷당 평균 요소 수를 계산합니다.
 
@@ -1768,7 +1783,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_maplocal_iterator"></a><a name="local_iterator"></a>unordered_map:: local_iterator
+## <a name="unordered_maplocal_iterator"></a><a name="local_iterator"></a> unordered_map:: local_iterator
 
 버킷 반복기의 형식입니다.
 
@@ -1816,7 +1831,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapmapped_type"></a><a name="mapped_type"></a>unordered_map:: mapped_type
+## <a name="unordered_mapmapped_type"></a><a name="mapped_type"></a> unordered_map:: mapped_type
 
 각 키와 연결된 매핑된 값의 형식입니다.
 
@@ -1871,7 +1886,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_map:: max_bucket_count
+## <a name="unordered_mapmax_bucket_count"></a><a name="max_bucket_count"></a> unordered_map:: max_bucket_count
 
 최대 버킷 개수를 가져옵니다.
 
@@ -1957,7 +1972,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapmax_load_factor"></a><a name="max_load_factor"></a>unordered_map:: max_load_factor
+## <a name="unordered_mapmax_load_factor"></a><a name="max_load_factor"></a> unordered_map:: max_load_factor
 
 버킷당 최대 요소 수를 가져오거나 설정합니다.
 
@@ -2050,7 +2065,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapmax_size"></a><a name="max_size"></a>unordered_map:: max_size
+## <a name="unordered_mapmax_size"></a><a name="max_size"></a> unordered_map:: max_size
 
 제어되는 시퀀스의 최대 크기를 가져옵니다.
 
@@ -2085,7 +2100,7 @@ int main()
 max_size() == 536870911
 ```
 
-## <a name="unordered_mapoperator"></a><a name="op_at"></a>unordered_map:: operator []
+## <a name="unordered_mapoperator"></a><a name="op_at"></a> unordered_map:: operator []
 
 지정된 키가 있는 요소를 찾거나 삽입합니다.
 
@@ -2097,9 +2112,8 @@ Ty& operator[](Key&& keyval);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*Keyval*|찾거나 삽입할 키 값입니다.|
+*Keyval*\
+찾거나 삽입할 키 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -2172,7 +2186,7 @@ c2["abc"] == 1
 
 구성원 함수는 `where` 반복기를 [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())`의 반환 값으로 결정합니다. (해당 요소가 없는 경우 지정 된 키를 가진 요소를 삽입 합니다.) 그런 다음에 대 한 참조를 반환 `(*where).second` 합니다.
 
-## <a name="unordered_mapoperator"></a><a name="op_eq"></a>unordered_map:: operator =
+## <a name="unordered_mapoperator"></a><a name="op_eq"></a> unordered_map:: operator =
 
 다른 unordered_map의 요소를 사용하여 이 unordered_map의 요소를 대체합니다.
 
@@ -2232,7 +2246,7 @@ int main( )
    }
 ```
 
-## <a name="unordered_mappointer"></a><a name="pointer"></a>unordered_map::p ointer
+## <a name="unordered_mappointer"></a><a name="pointer"></a> unordered_map::p ointer
 
 요소에 대한 포인터의 형식입니다.
 
@@ -2278,7 +2292,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapreference"></a><a name="reference"></a>unordered_map:: reference
+## <a name="unordered_mapreference"></a><a name="reference"></a> unordered_map:: reference
 
 요소에 대한 참조의 형식입니다.
 
@@ -2324,7 +2338,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_maprehash"></a><a name="rehash"></a>unordered_map:: rehash
+## <a name="unordered_maprehash"></a><a name="rehash"></a> unordered_map:: rehash
 
 해시 테이블을 다시 빌드합니다.
 
@@ -2402,7 +2416,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapsize"></a><a name="size"></a>unordered_map:: size
+## <a name="unordered_mapsize"></a><a name="size"></a> unordered_map:: size
 
 요소 수를 계산합니다.
 
@@ -2469,7 +2483,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapsize_type"></a><a name="size_type"></a>unordered_map:: size_type
+## <a name="unordered_mapsize_type"></a><a name="size_type"></a> unordered_map:: size_type
 
 두 요소 사이의 부호가 없는 거리의 형식입니다.
 
@@ -2505,7 +2519,7 @@ int main()
 size == 0
 ```
 
-## <a name="unordered_mapswap"></a><a name="swap"></a>unordered_map:: swap
+## <a name="unordered_mapswap"></a><a name="swap"></a> unordered_map:: swap
 
 두 컨테이너의 내용을 바꿉니다.
 
@@ -2577,7 +2591,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapunordered_map"></a><a name="unordered_map"></a>unordered_map:: unordered_map
+## <a name="unordered_mapunordered_map"></a><a name="unordered_map"></a> unordered_map:: unordered_map
 
 컨테이너 개체를 만듭니다.
 
@@ -2624,16 +2638,29 @@ unordered_map(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*항상*|저장할 할당자 개체입니다.|
-|*생략*|저장할 비교 함수 개체입니다.|
-|*해시*|저장할 해시 함수 개체입니다.|
-|*Bucket_count*|최소 버킷 수입니다.|
-|*오른쪽*|복사할 컨테이너입니다.|
-|*첫째*||
-|*최신*||
-|*IList*|복사할 요소가 포함된 initializer_list입니다.|
+*항상*\
+저장할 할당자 개체입니다.
+
+*생략*\
+저장할 비교 함수 개체입니다.
+
+*해시로*\
+저장할 해시 함수 개체입니다.
+
+*Bucket_count*\
+최소 버킷 수입니다.
+
+*오른쪽*\
+복사할 컨테이너입니다.
+
+*기본*\
+복사할 첫 번째 요소의 위치입니다.
+
+*최신*\
+복사할 마지막 요소 바로 다음 위치입니다.
+
+*IList*\
+복사할 요소가 포함된 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -2783,7 +2810,7 @@ int main()
 [a, 1] [b, 2] [c, 3]
 ```
 
-## <a name="unordered_mapvalue_type"></a><a name="value_type"></a>unordered_map:: value_type
+## <a name="unordered_mapvalue_type"></a><a name="value_type"></a> unordered_map:: value_type
 
 요소의 형식입니다.
 

@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Name|Description|
+|속성|Description|
 |`m_CmdUsage`|`CMap`명령을 사용 횟수에 매핑하는 개체입니다.|
 |`m_nMinUsagePercentage`|명령이 자주 사용 되는 최소 사용 백분율입니다.|
 |`m_nStartCount`|이 개체가 추적 데이터의 최소 양을 수집 했는지 여부를 확인 하는 데 사용 되는 시작 카운터입니다.|

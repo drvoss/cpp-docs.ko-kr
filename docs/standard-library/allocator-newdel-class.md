@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: aa5012f6657b2676756d1d8023274a524b451df3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 30e0f7902a8af435b46aaedf0b38661b7a6604a8
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617471"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562599"
 ---
 # <a name="allocator_newdel-class"></a>allocator_newdel 클래스
 
@@ -29,9 +29,8 @@ class allocator_newdel;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Type*|할당자에 의해 할당된 요소 형식입니다.|
+*입력할*\
+할당자에 의해 할당된 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 

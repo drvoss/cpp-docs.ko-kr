@@ -77,7 +77,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Name|Description|
+|속성|Description|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`에서 가져온 모든 핸들에 대해를 호출 `UpdateSystemColors` 합니다.|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|`OpenThemeData`을 호출 하 여 다양 한 컨트롤을 그리기 위한 핸들을 가져옵니다. 창, 도구 모음, 단추 등|
 

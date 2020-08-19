@@ -1,5 +1,5 @@
 ---
-title: C월칼Ctrl 클래스
+title: CMonthCalCtrl 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - CMonthCalCtrl
@@ -90,14 +90,14 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d986aa5f8e232f0ab94858dbdfae5754536ccdb9
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752825"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562144"
 ---
-# <a name="cmonthcalctrl-class"></a>C월칼Ctrl 클래스
+# <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 클래스
 
 달력 컨트롤의 기능을 캡슐화합니다.
 
@@ -111,71 +111,71 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|속성|Description|
+|이름|Description|
 |----------|-----------------|
-|[C월CalCtrl:::C월칼Ctrl](#cmonthcalctrl)|`CMonthCalCtrl` 개체를 생성합니다.|
+|[CMonthCalCtrl:: CMonthCalCtrl](#cmonthcalctrl)|`CMonthCalCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|속성|Description|
+|이름|Description|
 |----------|-----------------|
-|[C월CalCtrl::만들기](#create)|월 달력 컨트롤을 만들고 개체에 `CMonthCalCtrl` 연결합니다.|
-|[C월CalCtrl::GetCalendarBorder](#getcalendarborder)|현재 월 달력 컨트롤의 테두리 너비를 검색합니다.|
-|[C월CalCtrl::GetCalendarCount](#getcalendarcount)|현재 월 달력 컨트롤에 표시되는 달력 수를 검색합니다.|
-|[C월CalCtrl::GetCalendar그리드정보](#getcalendargridinfo)|현재 월 달력 컨트롤에 대 한 정보를 검색합니다.|
-|[C월칼Ctrl::겟칼리드](#getcalid)|현재 월 달력 컨트롤에 대 한 달력 식별자를 검색 합니다.|
-|[C월CalCtrl::GetColor](#getcolor)|월 달력 컨트롤의 지정된 영역의 색상을 가져옵니다.|
-|[C월CalCtrl::GetCurrentView](#getcurrentview)|현재 월 달력 컨트롤에 의해 현재 표시 되는 보기를 검색 합니다.|
-|[C월CalCtrl::겟커셀](#getcursel)|현재 선택한 날짜에 표시된 대로 시스템 시간을 검색합니다.|
-|[C월CalCtrl::GetFirstDayOfweek](#getfirstdayofweek)|달력의 맨 왼쪽 열에 표시할 요일의 첫 날을 가져옵니다.|
-|[C월CalCtrl::겟맥스셀카운트](#getmaxselcount)|월 달력 컨트롤에서 선택할 수 있는 현재 최대 일 수를 검색합니다.|
-|[C월CalCtrl::겟맥스투데이폭](#getmaxtodaywidth)|현재 월 달력 컨트롤에 대 한 "오늘" 문자열의 최대 너비를 검색합니다.|
-|[C월칼렉트: 겟민렉트](#getminreqrect)|월 달력 컨트롤에서 전체 월을 표시하는 데 필요한 최소 크기를 검색합니다.|
-|[C월칼Ctrl::겟월델타](#getmonthdelta)|월 캘린더 컨트롤의 스크롤 속도를 검색합니다.|
-|[C월CalCtrl::GetMonthRange](#getmonthrange)|월 캘린더 컨트롤의 표시의 높고 낮은 제한을 나타내는 날짜 정보를 검색합니다.|
-|[C월CalCtrl::GetRange](#getrange)|월 캘린더 컨트롤에 설정된 현재 최소 날짜와 최대 날짜를 검색합니다.|
-|[C월칼Ctrl::겟셀레인지](#getselrange)|사용자가 현재 선택한 날짜 범위의 상한 및 하한을 나타내는 날짜 정보를 검색합니다.|
-|[C월칼Ctrl::GetToday](#gettoday)|월 달력 컨트롤에 대해 "오늘"로 지정된 날짜의 날짜 정보를 검색합니다.|
-|[C월CalCtrl::히트 테스트](#hittest)|화면의 지정된 지점에 있는 월 캘린더 컨트롤섹션을 결정합니다.|
-|[C월칼Ctrl::이센추시뷰](#iscenturyview)|현재 월 달력 컨트롤의 현재 보기가 세기 뷰인지 여부를 나타냅니다.|
-|[C월칼Ctrl::이십년뷰](#isdecadeview)|현재 월 달력 컨트롤의 현재 보기가 10년 보기인지 여부를 나타냅니다.|
-|[C월CalCtrl::이월보기](#ismonthview)|현재 월 달력 컨트롤의 현재 보기가 월 보기인지 여부를 나타냅니다.|
-|[C월칼Ctrl::이스이어뷰](#isyearview)|현재 월 달력 컨트롤의 현재 보기가 연도 보기인지 여부를 나타냅니다.|
-|[C월CalCtrl::SetCalendarBorder](#setcalendarborder)|현재 월 달력 컨트롤의 테두리 너비를 설정합니다.|
-|[C월CalCtrl::SetCalendarBorder기본](#setcalendarborderdefault)|현재 월 달력 컨트롤의 테두리의 기본 너비를 설정합니다.|
-|[C월CalCtrl:::세트칼리드](#setcalid)|현재 월 달력 컨트롤의 달력 식별자를 설정합니다.|
-|[C월칼Ctrl::세트센추치뷰](#setcenturyview)|세기 보기를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.|
-|[C월CalCtrl::세트컬러](#setcolor)|월 달력 컨트롤의 지정된 영역의 색상을 설정합니다.|
-|[C월CalCtrl::설정현재보기](#setcurrentview)|지정된 뷰를 표시하도록 현재 월 달력 컨트롤을 설정합니다.|
-|[C월CalCtrl::세트컬셀](#setcursel)|월 달력 컨트롤에 대해 현재 선택한 날짜를 설정합니다.|
-|[C월CalCtrl::SetDaystate](#setdaystate)|월 달력 컨트롤의 일 동안 표시를 설정합니다.|
-|[C월CalCtrl::SetDecadeView](#setdecadeview)|현재 월 달력 컨트롤을 10년 보기로 설정합니다.|
-|[C월칼Ctrl::셋퍼스트데이오브위크](#setfirstdayofweek)|달력의 가장 왼쪽 열에 표시할 요일을 설정합니다.|
-|[C월CalCtrl::세트맥스셀카운트](#setmaxselcount)|월 캘린더 컨트롤에서 선택할 수 있는 최대 일 수를 설정합니다.|
-|[C월칼Ctrl::세트월델타](#setmonthdelta)|월 캘린더 컨트롤의 스크롤 속도를 설정합니다.|
-|[C월CalCtrl::세트월뷰](#setmonthview)|현재 월 캘린더 컨트롤을 설정하여 월 보기를 표시합니다.|
-|[C월CalCtrl::세트레인지](#setrange)|월 캘린더 컨트롤의 최소 및 최대 허용 날짜를 설정합니다.|
-|[C월칼Ctrl::세트셀레인지](#setselrange)|월 캘린더 컨트롤의 선택 항목을 지정된 날짜 범위로 설정합니다.|
-|[C월칼Ctrl::세트투데이](#settoday)|현재 날짜의 달력 컨트롤을 설정합니다.|
-|[C월CalCtrl::세트이어뷰](#setyearview)|현재 월 달력 컨트롤을 연도 보기로 설정합니다.|
-|[C월칼Ctrl::크기민렉](#sizeminreq)|월 캘린더 컨트롤을 최소 1개월 크기로 다시 그립니다.|
-|[C월칼트르::사이즈렉토민](#sizerecttomin)|현재 월 달력 컨트롤의 경우 지정된 사각형에 맞는 모든 캘린더를 포함할 수 있는 가장 작은 사각형을 계산합니다.|
+|[CMonthCalCtrl:: Create](#create)|Month calendar 컨트롤을 만들고이를 개체에 연결 `CMonthCalCtrl` 합니다.|
+|[CMonthCalCtrl:: GetCalendarBorder](#getcalendarborder)|현재 month calendar 컨트롤의 테두리 너비를 검색 합니다.|
+|[CMonthCalCtrl:: GetCalendarCount](#getcalendarcount)|현재 월 달력 컨트롤에 표시 되는 달력 수를 검색 합니다.|
+|[CMonthCalCtrl:: GetCalendarGridInfo](#getcalendargridinfo)|현재 monthcalendar 컨트롤에 대 한 정보를 검색 합니다.|
+|[CMonthCalCtrl:: GetCalID](#getcalid)|현재 monthcalendar 컨트롤의 달력 식별자를 검색 합니다.|
+|[CMonthCalCtrl:: GetColor](#getcolor)|Month calendar 컨트롤의 지정 된 영역 색을 가져옵니다.|
+|[CMonthCalCtrl:: GetCurrentView](#getcurrentview)|현재 monthcalendar 컨트롤에서 현재 표시 하는 뷰를 검색 합니다.|
+|[CMonthCalCtrl:: GetCurSel](#getcursel)|현재 선택 된 날짜로 표시 되는 시스템 시간을 검색 합니다.|
+|[CMonthCalCtrl:: GetFirstDayOfWeek](#getfirstdayofweek)|달력의 가장 왼쪽 열에 표시 되는 첫째 요일을 가져옵니다.|
+|[CMonthCalCtrl:: GetMaxSelCount](#getmaxselcount)|Month calendar 컨트롤에서 선택할 수 있는 현재 최대 일 수를 검색 합니다.|
+|[CMonthCalCtrl:: GetMaxTodayWidth](#getmaxtodaywidth)|현재 month calendar 컨트롤에 대 한 "Today" 문자열의 최대 너비를 검색 합니다.|
+|[CMonthCalCtrl:: GetMinReqRect](#getminreqrect)|Month calendar 컨트롤에서 전체 월을 표시 하는 데 필요한 최소 크기를 검색 합니다.|
+|[CMonthCalCtrl:: GetMonthDelta](#getmonthdelta)|Monthcalendar 컨트롤의 스크롤 주기를 검색 합니다.|
+|[CMonthCalCtrl:: GetMonthRange](#getmonthrange)|Monthcalendar 컨트롤 표시의 상한 및 하 한을 나타내는 날짜 정보를 검색 합니다.|
+|[CMonthCalCtrl:: GetRange](#getrange)|Month calendar 컨트롤에서 설정 된 현재 최소 및 최대 날짜를 검색 합니다.|
+|[CMonthCalCtrl:: GetSelRange](#getselrange)|사용자가 현재 선택한 날짜 범위의 상한 및 하 한을 나타내는 날짜 정보를 검색 합니다.|
+|[CMonthCalCtrl:: GetToday](#gettoday)|Monthcalendar 컨트롤에 대해 "오늘"로 지정 된 날짜에 대 한 날짜 정보를 검색 합니다.|
+|[CMonthCalCtrl:: System.windows.media.visualtreehelper.hittest](#hittest)|화면의 지정 된 지점에 있는 monthcalendar 컨트롤의 섹션을 결정 합니다.|
+|[CMonthCalCtrl:: IsCenturyView](#iscenturyview)|현재 monthcalendar 컨트롤의 현재 보기가 세기 뷰 인지 여부를 나타냅니다.|
+|[CMonthCalCtrl:: IsDecadeView](#isdecadeview)|현재 월 달력 컨트롤의 현재 뷰가 10 월 뷰입니다 여부를 나타냅니다.|
+|[CMonthCalCtrl:: IsMonthView](#ismonthview)|현재 월 달력 컨트롤의 현재 뷰가 월 보기 인지 여부를 나타냅니다.|
+|[CMonthCalCtrl:: IsYearView](#isyearview)|현재 monthcalendar 컨트롤의 현재 뷰가 연도 뷰 인지 여부를 나타냅니다.|
+|[CMonthCalCtrl:: SetCalendarBorder](#setcalendarborder)|현재 월 달력 컨트롤의 테두리 두께를 설정 합니다.|
+|[CMonthCalCtrl:: SetCalendarBorderDefault](#setcalendarborderdefault)|현재 월 달력 컨트롤 테두리의 기본 너비를 설정 합니다.|
+|[CMonthCalCtrl:: SetCalID](#setcalid)|현재 month calendar 컨트롤의 달력 식별자를 설정 합니다.|
+|[CMonthCalCtrl:: SetCenturyView](#setcenturyview)|세기 보기를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.|
+|[CMonthCalCtrl:: SetColor](#setcolor)|Month calendar 컨트롤의 지정 된 영역 색을 설정 합니다.|
+|[CMonthCalCtrl:: SetCurrentView](#setcurrentview)|지정 된 뷰를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.|
+|[CMonthCalCtrl:: SetCurSel](#setcursel)|Monthcalendar 컨트롤에 현재 선택한 날짜를 설정 합니다.|
+|[CMonthCalCtrl:: SetDayState](#setdaystate)|Monthcalendar 컨트롤의 일에 대 한 표시를 설정 합니다.|
+|[CMonthCalCtrl:: SetDecadeView](#setdecadeview)|현재 월 달력 컨트롤을 10 년 뷰로 설정 합니다.|
+|[CMonthCalCtrl:: SetFirstDayOfWeek](#setfirstdayofweek)|달력의 가장 왼쪽 열에 표시할 요일을 설정 합니다.|
+|[CMonthCalCtrl:: SetMaxSelCount](#setmaxselcount)|Monthcalendar 컨트롤에서 선택할 수 있는 최대 일 수를 설정 합니다.|
+|[CMonthCalCtrl:: SetMonthDelta](#setmonthdelta)|Monthcalendar 컨트롤에 대 한 스크롤 빈도를 설정 합니다.|
+|[CMonthCalCtrl:: SetMonthView](#setmonthview)|월 보기를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.|
+|[CMonthCalCtrl:: SetRange](#setrange)|Monthcalendar 컨트롤에 대해 허용 되는 최소 및 최대 날짜를 설정 합니다.|
+|[CMonthCalCtrl:: SetSelRange](#setselrange)|Month calendar 컨트롤의 선택 항목을 지정 된 날짜 범위로 설정 합니다.|
+|[CMonthCalCtrl:: SetToday](#settoday)|현재 날짜에 대 한 달력 컨트롤을 설정 합니다.|
+|[CMonthCalCtrl:: SetYearView](#setyearview)|현재 월 달력 컨트롤을 연도 뷰로 설정 합니다.|
+|[CMonthCalCtrl:: SizeMinReq](#sizeminreq)|Month calendar 컨트롤을 최소 1 개월 크기로 다시 그립니다.|
+|[CMonthCalCtrl:: SizeRectToMin](#sizerecttomin)|현재 month calendar 컨트롤의 경우 지정 된 사각형에 맞는 모든 달력을 포함할 수 있는 가장 작은 사각형을 계산 합니다.|
 
 ## <a name="remarks"></a>설명
 
-월 캘린더 컨트롤은 사용자가 날짜를 선택할 수 있는 간단한 일정 인터페이스를 사용자에게 제공합니다. 사용자는 다음과 같은 각을 통해 디스플레이를 변경할 수 있습니다.
+Month calendar 컨트롤은 사용자가 날짜를 선택할 수 있는 간단한 달력 인터페이스를 사용자에 게 제공 합니다. 사용자는 다음을 수행 하 여 표시를 변경할 수 있습니다.
 
-- 월에서 앞뒤로 스크롤합니다.
+- 월부터 매월 앞뒤로 스크롤합니다.
 
-- 오늘 텍스트를 클릭하여 현재 날짜를 표시합니다(MCS_NOTODAY 스타일이 사용되지 않는 경우).
+- 오늘 텍스트를 클릭 하 여 현재 날짜를 표시 합니다 (MCS_NOTODAY 스타일이 사용 되지 않는 경우).
 
-- 팝업 메뉴에서 한 달 또는 1년을 선택합니다.
+- 팝업 메뉴에서 월 또는 연도를 선택 합니다.
 
-객체를 만들 때 다양한 스타일을 적용하여 월 캘린더 컨트롤을 사용자 지정할 수 있습니다. 이러한 스타일은 Windows SDK의 [월 캘린더 제어 스타일에](/windows/win32/Controls/month-calendar-control-styles) 설명되어 있습니다.
+개체를 만들 때 다양 한 스타일을 개체에 적용 하 여 month calendar 컨트롤을 사용자 지정할 수 있습니다. 이러한 스타일은 Windows SDK의 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles) 에 설명 되어 있습니다.
 
-월 캘린더 컨트롤은 1개월 이상 표시할 수 있으며 날짜를 굵게 표시하여 특별한 날(예: 공휴일)을 나타낼 수 있습니다.
+Month calendar 컨트롤은 한 달 이상 표시 될 수 있으며 날짜를 굵게 표시 하 여 특별 한 일 (예: 휴일)을 나타낼 수 있습니다.
 
-월 달력 컨트롤 사용에 대한 자세한 내용은 [CMonthCalCtrl 사용을](../../mfc/using-cmonthcalctrl.md)참조하십시오.
+Month calendar 컨트롤 사용에 대 한 자세한 내용은 [CMonthCalCtrl 사용](../../mfc/using-cmonthcalctrl.md)을 참조 하세요.
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -189,9 +189,9 @@ class CMonthCalCtrl : public CWnd
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxdtctl.h
+**헤더:** afxdtctl
 
-## <a name="cmonthcalctrlcmonthcalctrl"></a><a name="cmonthcalctrl"></a>C월CalCtrl:::C월칼Ctrl
+## <a name="cmonthcalctrlcmonthcalctrl"></a><a name="cmonthcalctrl"></a> CMonthCalCtrl:: CMonthCalCtrl
 
 `CMonthCalCtrl` 개체를 생성합니다.
 
@@ -201,11 +201,11 @@ CMonthCalCtrl();
 
 ### <a name="remarks"></a>설명
 
-개체를 `Create` 생성한 후 호출해야 합니다.
+`Create`개체를 생성 한 후에는를 호출 해야 합니다.
 
-## <a name="cmonthcalctrlcreate"></a><a name="create"></a>C월CalCtrl::만들기
+## <a name="cmonthcalctrlcreate"></a><a name="create"></a> CMonthCalCtrl:: Create
 
-월 달력 컨트롤을 만들고 개체에 `CMonthCalCtrl` 연결합니다.
+Month calendar 컨트롤을 만들고이를 개체에 연결 `CMonthCalCtrl` 합니다.
 
 ```
 virtual BOOL Create(
@@ -224,45 +224,45 @@ virtual BOOL Create(
 ### <a name="parameters"></a>매개 변수
 
 *dwStyle*<br/>
-월 달력 컨트롤에 적용된 Windows 스타일의 조합을 지정합니다. 스타일에 대한 자세한 내용은 Windows SDK의 [월 캘린더 제어 스타일을](/windows/win32/Controls/month-calendar-control-styles) 참조하십시오.
+Month calendar 컨트롤에 적용 되는 Windows 스타일의 조합을 지정 합니다. 스타일에 대 한 자세한 내용은 Windows SDK의 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles) 을 참조 하세요.
 
 *rect*<br/>
-[RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 참조입니다. 월 달력 컨트롤의 위치와 크기를 포함합니다.
+[RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 참조입니다. Month calendar 컨트롤의 위치와 크기를 포함 합니다.
 
 *pt*<br/>
-월 달력 컨트롤의 위치를 식별하는 [POINT](/windows/win32/api/windef/ns-windef-point) 구조에 대한 참조입니다.
+Month calendar 컨트롤의 위치를 식별 하는 [요소](/windows/win32/api/windef/ns-windef-point) 구조체에 대 한 참조입니다.
 
 *pParentWnd*<br/>
-월 달력 컨트롤의 부모 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대한 포인터입니다. NULL이 아니어야 합니다.
+Month calendar 컨트롤의 부모 창인 [CWnd](../../mfc/reference/cwnd-class.md) 개체에 대 한 포인터입니다. NULL이 아니어야 합니다.
 
 *nID*<br/>
-월 캘린더 컨트롤의 제어 ID를 지정합니다.
+Monthcalendar 컨트롤의 컨트롤 ID를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-초기화가 성공한 경우 0이 아닙니다. 그렇지 않으면 0.
+초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-다음 두 단계로 월 캘린더 컨트롤을 만듭니다.
+두 단계로 month calendar 컨트롤을 만듭니다.
 
-1. [CMonthCalCtrl을](../../mfc/reference/cmonthcalctrl-class.md) 호출하여 `CMonthCalCtrl` 개체를 생성합니다.
+1. [Cmonthcalctrl](../../mfc/reference/cmonthcalctrl-class.md) 을 호출 하 여 `CMonthCalCtrl` 개체를 생성 합니다.
 
-1. 월 달력 컨트롤을 만들고 개체에 연결 하는 이 `CMonthCalCtrl` 멤버 함수를 호출 합니다.
+1. Month calendar 컨트롤을 만들고이를 개체에 연결 하는이 멤버 함수를 호출 `CMonthCalCtrl` 합니다.
 
-호출하면 `Create`공통 컨트롤이 초기화됩니다. 호출 버전에 `Create` 따라 크기가 결정됩니다.
+를 호출 하면 `Create` 공용 컨트롤이 초기화 됩니다. 호출 하는 버전에 `Create` 따라 크기가 결정 됩니다.
 
-- MFC가 컨트롤의 크기를 한 달로 자동으로 조정하려면 *pt* 매개 변수를 사용하는 재정의를 호출합니다.
+- MFC에서 컨트롤의 크기를 한 달로 자동으로 조정 하도록 하려면 *pt* 매개 변수를 사용 하는 재정의를 호출 합니다.
 
-- 컨트롤의 크기를 직접 조정하려면 *rect* 매개 변수를 사용하는 이 함수의 재정의를 호출합니다.
+- 컨트롤의 크기를 조정 하려면 *rect* 매개 변수를 사용 하는이 함수의 재정의를 호출 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]
 
-## <a name="cmonthcalctrlgetcalendarborder"></a><a name="getcalendarborder"></a>C월CalCtrl::GetCalendarBorder
+## <a name="cmonthcalctrlgetcalendarborder"></a><a name="getcalendarborder"></a> CMonthCalCtrl:: GetCalendarBorder
 
-현재 월 달력 컨트롤의 테두리 너비를 검색합니다.
+현재 month calendar 컨트롤의 테두리 너비를 검색 합니다.
 
 ```
 int GetCalendarBorder() const;
@@ -270,15 +270,15 @@ int GetCalendarBorder() const;
 
 ### <a name="return-value"></a>Return Value
 
-컨트롤 테두리의 너비(픽셀)입니다.
+컨트롤 테두리의 너비 (픽셀)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCALENDARBORDER](/windows/win32/Controls/mcm-getcalendarborder) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCALENDARBORDER](/windows/win32/Controls/mcm-getcalendarborder) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlgetcalendarcount"></a><a name="getcalendarcount"></a>C월CalCtrl::GetCalendarCount
+## <a name="cmonthcalctrlgetcalendarcount"></a><a name="getcalendarcount"></a> CMonthCalCtrl:: GetCalendarCount
 
-현재 월 달력 컨트롤에 표시되는 달력 수를 검색합니다.
+현재 월 달력 컨트롤에 표시 되는 달력 수를 검색 합니다.
 
 ```
 int GetCalendarCount() const;
@@ -286,15 +286,15 @@ int GetCalendarCount() const;
 
 ### <a name="return-value"></a>Return Value
 
-월 캘린더 컨트롤에 현재 표시되는 달력 수입니다. 허용되는 최대 캘린더 수는 12개입니다.
+Month calendar 컨트롤에 현재 표시 된 달력의 수입니다. 허용 되는 최대 달력 수는 12입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCALENDARCOUNT](/windows/win32/Controls/mcm-getcalendarcount) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCALENDARCOUNT](/windows/win32/Controls/mcm-getcalendarcount) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlgetcalendargridinfo"></a><a name="getcalendargridinfo"></a>C월CalCtrl::GetCalendar그리드정보
+## <a name="cmonthcalctrlgetcalendargridinfo"></a><a name="getcalendargridinfo"></a> CMonthCalCtrl:: GetCalendarGridInfo
 
-현재 월 달력 컨트롤에 대 한 정보를 검색합니다.
+현재 monthcalendar 컨트롤에 대 한 정보를 검색 합니다.
 
 ```
 BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
@@ -302,33 +302,32 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*pmcGridInfo*|【아웃】 현재 월 달력 컨트롤에 대한 정보를 수신하는 [MCGRIDINFO](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) 구조에 대한 포인터입니다. 호출자는 이 구조를 할당하고 초기화할 책임이 있습니다.|
+*pmcGridInfo*\
+제한이 현재 month calendar 컨트롤에 대 한 정보를 수신 하는 [Mcgridinfo](/windows/win32/api/commctrl/ns-commctrl-mcgridinfo) 구조체에 대 한 포인터입니다. 호출자는이 구조체를 할당 하 고 초기화 해야 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCALENDARGRIDINFO](/windows/win32/Controls/mcm-getcalendargridinfo) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCALENDARGRIDINFO](/windows/win32/Controls/mcm-getcalendargridinfo) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 `GetCalendarGridInfo` 메서드를 사용 하 여 현재 월 달력 컨트롤에 표시 되는 달력 날짜를 검색 합니다.
+다음 코드 예제에서는 메서드를 사용 하 여 `GetCalendarGridInfo` 현재 month calendar 컨트롤이 표시 하는 달력 날짜를 검색 합니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_3.cpp)]
 
-## <a name="cmonthcalctrlgetcalid"></a><a name="getcalid"></a>C월칼Ctrl::겟칼리드
+## <a name="cmonthcalctrlgetcalid"></a><a name="getcalid"></a> CMonthCalCtrl:: GetCalID
 
-현재 월 달력 컨트롤에 대 한 달력 식별자를 검색 합니다.
+현재 monthcalendar 컨트롤의 달력 식별자를 검색 합니다.
 
 ```
 CALID GetCalID() const;
@@ -340,13 +339,13 @@ CALID GetCalID() const;
 
 ### <a name="remarks"></a>설명
 
-달력 식별자는 그레고리오력(지역화), 일본어 또는 회교식 달력과 같은 지역별 달력을 나타냅니다. 응용 프로그램은 다양한 언어 지원 기능이 있는 달력 식별자를 사용할 수 있습니다.
+달력 식별자는 양력 (지역화 된), 일본어 또는 회교식 달력과 같은 지역별 달력을 나타냅니다. 응용 프로그램은 다양 한 언어 지원 기능이 있는 달력 식별자를 사용할 수 있습니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCALID](/windows/win32/Controls/mcm-getcalid) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCALID](/windows/win32/Controls/mcm-getcalid) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlgetcolor"></a><a name="getcolor"></a>C월CalCtrl::GetColor
+## <a name="cmonthcalctrlgetcolor"></a><a name="getcolor"></a> CMonthCalCtrl:: GetColor
 
-*nRegion에서*지정한 월 달력 컨트롤 영역의 색상을 검색합니다.
+*Nregion*으로 지정 된 month calendar 컨트롤 영역의 색을 검색 합니다.
 
 ```
 COLORREF GetColor(int nRegion) const;
@@ -354,16 +353,16 @@ COLORREF GetColor(int nRegion) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*n지역*<br/>
-색상을 검색하는 월 달력 컨트롤의 영역입니다. 값 목록은 setColor 의 *nRegion* 매개 [변수를](#setcolor)참조하십시오.
+*nRegion*<br/>
+색을 검색할 month calendar 컨트롤의 지역입니다. 값 목록은 [Setcolor](#setcolor)의 *nregion* 매개 변수를 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 월 달력 컨트롤의 부분과 연관된 색상을 지정하는 [COLORREF](/windows/win32/gdi/colorref) 값입니다. 그렇지 않으면 이 멤버 함수는 -1을 반환합니다.
+성공 하면 month calendar 컨트롤의 부분과 관련 된 색을 지정 하는 [Colorref](/windows/win32/gdi/colorref) 값입니다. 그렇지 않으면이 멤버 함수는-1을 반환 합니다.
 
-## <a name="cmonthcalctrlgetcurrentview"></a><a name="getcurrentview"></a>C월CalCtrl::GetCurrentView
+## <a name="cmonthcalctrlgetcurrentview"></a><a name="getcurrentview"></a> CMonthCalCtrl:: GetCurrentView
 
-현재 월 달력 컨트롤에 의해 현재 표시 되는 보기를 검색 합니다.
+현재 monthcalendar 컨트롤에서 현재 표시 하는 뷰를 검색 합니다.
 
 ```
 DWORD GetCurrentView() const;
@@ -371,34 +370,34 @@ DWORD GetCurrentView() const;
 
 ### <a name="return-value"></a>Return Value
 
-다음 값 중 하나로 표시되는 현재 뷰:
+현재 뷰로, 다음 값 중 하나로 표시 됩니다.
 
 |값|의미|
 |-----------|-------------|
-|MCMV_MONTH|월간 보기|
+|MCMV_MONTH|월별 보기|
 |MCMV_YEAR|연간 보기|
-|MCMV_DECADE|10년 전망|
-|MCMV_CENTURY|센추리 뷰|
+|MCMV_DECADE|10 년 보기|
+|MCMV_CENTURY|세기 보기|
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제는 현재 표시되는 월 캘린더 컨트롤을 보는 보고서입니다.
+다음 코드 예제에서는 현재 표시 된 month calendar 컨트롤의 보기를 보고 합니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_4.cpp)]
 
-## <a name="cmonthcalctrlgetcursel"></a><a name="getcursel"></a>C월CalCtrl::겟커셀
+## <a name="cmonthcalctrlgetcursel"></a><a name="getcursel"></a> CMonthCalCtrl:: GetCurSel
 
-현재 선택한 날짜에 표시된 대로 시스템 시간을 검색합니다.
+현재 선택 된 날짜로 표시 되는 시스템 시간을 검색 합니다.
 
 ```
 BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateTime) const;
@@ -409,27 +408,27 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ### <a name="parameters"></a>매개 변수
 
 *refDateTime*<br/>
-[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 참조입니다. 현재 시간을 수신합니다.
+[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다. 현재 시간을 받습니다.
 
-*pDate시간*<br/>
-현재 선택한 날짜 정보를 수신하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다. 이 매개 변수는 유효한 주소여야 하며 NULL일 수 없습니다.
+*pDateTime*<br/>
+현재 선택 된 날짜 정보를 수신 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 영하지 않은; 기타 0.
+성공 하면 0이 아닌 값 otherwize 0.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_GETCURSEL](/windows/win32/Controls/mcm-getcursel)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETCURSEL](/windows/win32/Controls/mcm-getcursel)의 동작을 구현 합니다.
 
 > [!NOTE]
-> 스타일 MCS_MULTISELECT 설정하면 이 멤버 함수가 실패합니다.
+> 이 멤버 함수는 스타일 MCS_MULTISELECT 설정 된 경우 실패 합니다.
 
-의 MFC 구현에서 `GetCurSel` `COleDateTime` 사용, 사용 또는 `CTime` 구조 용도를 `SYSTEMTIME` 지정할 수 있습니다.
+MFC의 구현에서 `GetCurSel` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
-## <a name="cmonthcalctrlgetfirstdayofweek"></a><a name="getfirstdayofweek"></a>C월CalCtrl::GetFirstDayOfweek
+## <a name="cmonthcalctrlgetfirstdayofweek"></a><a name="getfirstdayofweek"></a> CMonthCalCtrl:: GetFirstDayOfWeek
 
-달력의 맨 왼쪽 열에 표시할 요일의 첫 날을 가져옵니다.
+달력의 가장 왼쪽 열에 표시 되는 첫째 요일을 가져옵니다.
 
 ```
 int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
@@ -437,16 +436,16 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*pbLocal*<br/>
-BOOL 값에 대한 포인터입니다. 값이 0이 아닌 경우 컨트롤의 설정이 컨트롤 패널의 설정과 일치하지 않습니다.
+*Plocal*<br/>
+부울 값에 대 한 포인터입니다. 값이 0이 아닌 경우 컨트롤의 설정이 제어판의 설정과 일치 하지 않습니다.
 
 ### <a name="return-value"></a>Return Value
 
-주의 첫 날을 나타내는 정수 값입니다. 이러한 정수의 표현에 대한 자세한 내용은 **비고를** 참조하십시오.
+주의 첫째 요일을 나타내는 정수 값입니다. 이러한 정수가 나타내는 내용에 대 한 자세한 내용은 **설명 부분** 을 참조 하십시오.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_GETFIRSTDAYOFWEEK Win32 [메시지의](/windows/win32/Controls/mcm-getfirstdayofweek)동작을 구현합니다. 요일은 다음과 같이 정수로 표시됩니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-getfirstdayofweek)의 동작을 구현 합니다. 요일은 다음과 같이 정수로 표시 됩니다.
 
 |값|요일|
 |-----------|---------------------|
@@ -460,11 +459,11 @@ BOOL 값에 대한 포인터입니다. 값이 0이 아닌 경우 컨트롤의 �
 
 ### <a name="example"></a>예제
 
-  [CMonthCalCtrl::SetFirstDayOfWeek에](#setfirstdayofweek)대한 예제를 참조하십시오.
+  [Cmonthcalctrl:: SetFirstDayOfWeek](#setfirstdayofweek)의 예제를 참조 하세요.
 
-## <a name="cmonthcalctrlgetmaxselcount"></a><a name="getmaxselcount"></a>C월CalCtrl::겟맥스셀카운트
+## <a name="cmonthcalctrlgetmaxselcount"></a><a name="getmaxselcount"></a> CMonthCalCtrl:: GetMaxSelCount
 
-월 달력 컨트롤에서 선택할 수 있는 현재 최대 일 수를 검색합니다.
+Month calendar 컨트롤에서 선택할 수 있는 현재 최대 일 수를 검색 합니다.
 
 ```
 int GetMaxSelCount() const;
@@ -476,15 +475,15 @@ int GetMaxSelCount() const;
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_GETMAXSELCOUNT Win32 [메시지의](/windows/win32/Controls/mcm-getmaxselcount)동작을 구현합니다. MCS_MULTISELECT 스타일 집합이 있는 컨트롤에 이 멤버 함수를 사용합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETMAXSELCOUNT](/windows/win32/Controls/mcm-getmaxselcount)의 동작을 구현 합니다. MCS_MULTISELECT 스타일이 설정 된 컨트롤에 대해이 멤버 함수를 사용 합니다.
 
 ### <a name="example"></a>예제
 
-  [CMonthCalCtrl::SetMaxSelCount에](#setmaxselcount)대한 예제를 참조하십시오.
+  [Cmonthcalctrl:: SetMaxSelCount](#setmaxselcount)의 예제를 참조 하세요.
 
-## <a name="cmonthcalctrlgetmaxtodaywidth"></a><a name="getmaxtodaywidth"></a>C월CalCtrl::겟맥스투데이폭
+## <a name="cmonthcalctrlgetmaxtodaywidth"></a><a name="getmaxtodaywidth"></a> CMonthCalCtrl:: GetMaxTodayWidth
 
-현재 월 달력 컨트롤에 대 한 "오늘" 문자열의 최대 너비를 검색합니다.
+현재 month calendar 컨트롤에 대 한 "Today" 문자열의 최대 너비를 검색 합니다.
 
 ```
 DWORD GetMaxTodayWidth() const;
@@ -492,11 +491,11 @@ DWORD GetMaxTodayWidth() const;
 
 ### <a name="return-value"></a>Return Value
 
-픽셀 단위로 "오늘" 문자열의 너비입니다.
+"오늘" 문자열의 너비 (픽셀)입니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
@@ -508,13 +507,13 @@ DWORD GetMaxTodayWidth() const;
 
 ### <a name="remarks"></a>설명
 
-사용자는 월력 컨트롤의 맨 아래에 표시되는 "오늘" 문자열을 클릭하여 현재 날짜로 돌아갈 수 있습니다. "오늘" 문자열에는 레이블 텍스트와 날짜 텍스트가 포함됩니다.
+사용자는 month calendar 컨트롤의 맨 아래에 표시 되는 "오늘" 문자열을 클릭 하 여 현재 날짜로 돌아갈 수 있습니다. "Today" 문자열은 레이블 텍스트 및 날짜 텍스트를 포함 합니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETMAXTODAYWIDTH](/windows/win32/Controls/mcm-getmaxtodaywidth) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETMAXTODAYWIDTH](/windows/win32/Controls/mcm-getmaxtodaywidth) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlgetminreqrect"></a><a name="getminreqrect"></a>C월칼렉트: 겟민렉트
+## <a name="cmonthcalctrlgetminreqrect"></a><a name="getminreqrect"></a> CMonthCalCtrl:: GetMinReqRect
 
-월 달력 컨트롤에서 전체 월을 표시하는 데 필요한 최소 크기를 검색합니다.
+Month calendar 컨트롤에서 전체 월을 표시 하는 데 필요한 최소 크기를 검색 합니다.
 
 ```
 BOOL GetMinReqRect(RECT* pRect) const;
@@ -523,19 +522,19 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>매개 변수
 
 *pRect*<br/>
-경계 사각형 정보를 수신하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다. 이 매개 변수는 유효한 주소여야 하며 NULL일 수 없습니다.
+경계 사각형 정보를 수신 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공하면 이 멤버 함수는 `lpRect` 0이 아닌 것을 반환하고 해당 경계 정보를 수신합니다. 실패하면 멤버 함수는 0을 반환합니다.
+성공 하면이 멤버 함수는 0이 아닌 값을 반환 하 고 `lpRect` 해당 하는 경계 정보를 받습니다. 실패 하면 멤버 함수는 0을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_GETMINREQRECT Win32 [메시지의](/windows/win32/Controls/mcm-getminreqrect)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETMINREQRECT](/windows/win32/Controls/mcm-getminreqrect)의 동작을 구현 합니다.
 
-## <a name="cmonthcalctrlgetmonthdelta"></a><a name="getmonthdelta"></a>C월칼Ctrl::겟월델타
+## <a name="cmonthcalctrlgetmonthdelta"></a><a name="getmonthdelta"></a> CMonthCalCtrl:: GetMonthDelta
 
-월 캘린더 컨트롤의 스크롤 속도를 검색합니다.
+Monthcalendar 컨트롤의 스크롤 주기를 검색 합니다.
 
 ```
 int GetMonthDelta() const;
@@ -543,15 +542,15 @@ int GetMonthDelta() const;
 
 ### <a name="return-value"></a>Return Value
 
-월 캘린더 컨트롤의 스크롤 속도입니다. 스크롤 속도는 사용자가 스크롤 단추를 한 번 클릭할 때 컨트롤이 디스플레이를 이동하는 월 수입니다.
+Month calendar 컨트롤의 스크롤 빈도입니다. 스크롤 비율은 사용자가 스크롤 단추를 한 번 클릭 하면 컨트롤이 표시를 이동 하는 월 수입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_GETMONTHDELTA](/windows/win32/Controls/mcm-getmonthdelta)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETMONTHDELTA](/windows/win32/Controls/mcm-getmonthdelta)의 동작을 구현 합니다.
 
-## <a name="cmonthcalctrlgetmonthrange"></a><a name="getmonthrange"></a>C월CalCtrl::GetMonthRange
+## <a name="cmonthcalctrlgetmonthrange"></a><a name="getmonthrange"></a> CMonthCalCtrl:: GetMonthRange
 
-월 캘린더 컨트롤의 표시의 높고 낮은 제한을 나타내는 날짜 정보를 검색합니다.
+Monthcalendar 컨트롤 표시의 상한 및 하 한을 나타내는 날짜 정보를 검색 합니다.
 
 ```
 int GetMonthRange(
@@ -572,41 +571,41 @@ int GetMonthRange(
 
 ### <a name="parameters"></a>매개 변수
 
-*레프민레인지*<br/>
-허용되는 최소 날짜를 포함하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 참조입니다.
+*refMinRange*<br/>
+허용 되는 최소 날짜를 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-*레프맥스 레인지*<br/>
-허용되는 최대 `COleDateTime` 날짜를 `CTime` 포함하는 또는 개체에 대한 참조입니다.
+*refMaxRange*<br/>
+허용 되는 최대 날짜를 포함 하는 또는 개체에 대 한 참조 `COleDateTime` `CTime` 입니다.
 
 *pMinRange*<br/>
-범위의 가장 낮은 끝에 있는 날짜를 포함하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+범위의 최하위 끝에 있는 날짜를 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-*pMax Range*<br/>
-범위의 `SYSTEMTIME` 가장 높은 끝에 있는 날짜를 포함하는 구조체에 대한 포인터입니다.
+*pMaxRange*<br/>
+`SYSTEMTIME`범위의 최고 끝에 있는 날짜를 포함 하는 구조체에 대 한 포인터입니다.
 
 *dwFlags*<br/>
-검색할 범위 제한의 범위를 지정하는 값입니다. 이 값은 다음 중 하나여야 합니다.
+검색할 범위 제한의 범위를 지정 하는 값입니다. 이 값은 다음 중 하나 여야 합니다.
 
 |값|의미|
 |-----------|-------------|
-|GMR_DAYSTATE|부분적으로만 표시되는 가시 범위의 이전 및 후행 개월을 포함합니다.|
-|GMR_VISIBLE|완전히 표시되는 달만 포함합니다.|
+|GMR_DAYSTATE|부분적 으로만 표시 되는 표시 된 범위의 선행 및 후행 월을 포함 합니다.|
+|GMR_VISIBLE|완전히 표시 되는 월만 포함 합니다.|
 
 ### <a name="return-value"></a>Return Value
 
-첫 번째 및 두 번째 버전에서 *refMinRange* 및 *refMaxRange* 또는 세 번째 버전에서 *pMinRange* 및 *pMaxRange로* 표시된 두 제한에 따라 범위를 나타내는 정수입니다.
+첫 번째 및 두 번째 버전에서 *refMinRange* 및 *refMaxRange* 로 표시 되는 두 제한에 따라 범위를 지정 하는 정수 이며 세 번째 버전의 *pMinRange* 및 *pMaxRange* 입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_GETMONTHRANGE Win32 [메시지의](/windows/win32/Controls/mcm-getmonthrange)동작을 구현합니다. 의 MFC 구현에서 `GetMonthRange`사용, `COleDateTime` 사용 또는 `CTime` 구조 용도를 지정할 `SYSTEMTIME` 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETMONTHRANGE](/windows/win32/Controls/mcm-getmonthrange)의 동작을 구현 합니다. MFC의 구현에서 `GetMonthRange` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
 ### <a name="example"></a>예제
 
-  [CMonthCalCtrl::SetDayState에](#setdaystate)대한 예제를 참조하십시오.
+  [Cmonthcalctrl:: SetDayState](#setdaystate)의 예제를 참조 하세요.
 
-## <a name="cmonthcalctrlgetrange"></a><a name="getrange"></a>C월CalCtrl::GetRange
+## <a name="cmonthcalctrlgetrange"></a><a name="getrange"></a> CMonthCalCtrl:: GetRange
 
-월 캘린더 컨트롤에 설정된 현재 최소 날짜와 최대 날짜를 검색합니다.
+Month calendar 컨트롤에서 설정 된 현재 최소 및 최대 날짜를 검색 합니다.
 
 ```
 DWORD GetRange(
@@ -625,31 +624,31 @@ DWORD GetRange(
 ### <a name="parameters"></a>매개 변수
 
 *pMinRange*<br/>
-범위의 가장 `COleDateTime` 낮은 `CTime` 끝에 있는 날짜를 포함하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+`COleDateTime` `CTime` 범위의 최하위 끝에 있는 날짜를 포함 하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-*pMax Range*<br/>
-범위의 가장 `COleDateTime` 높은 `CTime` 끝에 있는 날짜를 포함하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+*pMaxRange*<br/>
+`COleDateTime` `CTime` 범위의 최고 끝에 있는 날짜를 포함 하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-0이 될 수 있는 DWORD(제한설정 없음) 또는 제한 정보를 지정하는 다음 값의 조합입니다.
+0 (제한이 설정 되지 않음) 이거나 제한 정보를 지정 하는 다음 값의 조합일 수 있는 DWORD입니다.
 
 |값|의미|
 |-----------|-------------|
-|GDTR_MAX|컨트롤에 대한 최대 제한이 설정됩니다. *pMaxRange는* 유효하며 해당 날짜 정보가 포함되어 있습니다.|
-|GDTR_MIN|컨트롤에 대한 최소 제한이 설정됩니다. *pMinRange는* 유효하며 해당 날짜 정보가 포함되어 있습니다.|
+|GDTR_MAX|컨트롤에 대해 최대 한도가 설정 됩니다. *pMaxRange* 는 유효 하며 해당 날짜 정보를 포함 합니다.|
+|GDTR_MIN|컨트롤에 대해 최소 제한이 설정 됩니다. *pMinRange* 는 유효 하며 해당 날짜 정보를 포함 합니다.|
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_GETRANGE Win32 [메시지의](/windows/win32/Controls/mcm-getrange)동작을 구현합니다. 의 MFC 구현에서 `GetRange` `COleDateTime` 사용, 사용 또는 `CTime` 구조 용도를 `SYSTEMTIME` 지정할 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETRANGE](/windows/win32/Controls/mcm-getrange)의 동작을 구현 합니다. MFC의 구현에서 `GetRange` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]
 
-## <a name="cmonthcalctrlgetselrange"></a><a name="getselrange"></a>C월칼Ctrl::겟셀레인지
+## <a name="cmonthcalctrlgetselrange"></a><a name="getselrange"></a> CMonthCalCtrl:: GetSelRange
 
-사용자가 현재 선택한 날짜 범위의 상한 및 하한을 나타내는 날짜 정보를 검색합니다.
+사용자가 현재 선택한 날짜 범위의 상한 및 하 한을 나타내는 날짜 정보를 검색 합니다.
 
 ```
 BOOL GetSelRange(
@@ -667,17 +666,17 @@ BOOL GetSelRange(
 
 ### <a name="parameters"></a>매개 변수
 
-*레프민레인지*<br/>
-허용되는 최소 날짜를 포함하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 참조입니다.
+*refMinRange*<br/>
+허용 되는 최소 날짜를 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-*레프맥스 레인지*<br/>
-허용되는 최대 `COleDateTime` 날짜를 `CTime` 포함하는 또는 개체에 대한 참조입니다.
+*refMaxRange*<br/>
+허용 되는 최대 날짜를 포함 하는 또는 개체에 대 한 참조 `COleDateTime` `CTime` 입니다.
 
 *pMinRange*<br/>
-범위의 가장 낮은 끝에 있는 날짜를 포함하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+범위의 최하위 끝에 있는 날짜를 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-*pMax Range*<br/>
-범위의 `SYSTEMTIME` 가장 높은 끝에 있는 날짜를 포함하는 구조체에 대한 포인터입니다.
+*pMaxRange*<br/>
+`SYSTEMTIME`범위의 최고 끝에 있는 날짜를 포함 하는 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -685,13 +684,13 @@ BOOL GetSelRange(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_GETSELRANGE](/windows/win32/Controls/mcm-getselrange)Win32 메시지의 동작을 구현합니다. `GetSelRange`MCS_MULTISELECT 스타일을 사용하지 않는 월 달력 컨트롤에 적용하면 실패합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETSELRANGE](/windows/win32/Controls/mcm-getselrange)의 동작을 구현 합니다. `GetSelRange` MCS_MULTISELECT 스타일을 사용 하지 않는 month calendar 컨트롤에 적용 되는 경우이 실패 합니다.
 
-의 MFC 구현에서 `GetSelRange`사용, `COleDateTime` 사용 또는 `CTime` 구조 용도를 지정할 `SYSTEMTIME` 수 있습니다.
+MFC의 구현에서 `GetSelRange` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
-## <a name="cmonthcalctrlgettoday"></a><a name="gettoday"></a>C월칼Ctrl::GetToday
+## <a name="cmonthcalctrlgettoday"></a><a name="gettoday"></a> CMonthCalCtrl:: GetToday
 
-월 달력 컨트롤에 대해 "오늘"로 지정된 날짜의 날짜 정보를 검색합니다.
+Monthcalendar 컨트롤에 대해 "오늘"로 지정 된 날짜에 대 한 날짜 정보를 검색 합니다.
 
 ```
 BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& refDateTime) const;
@@ -702,10 +701,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ### <a name="parameters"></a>매개 변수
 
 *refDateTime*<br/>
-현재 날짜를 나타내는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 참조입니다.
+현재 날짜를 나타내는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-*pDate시간*<br/>
-날짜 정보를 수신하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다. 이 매개 변수는 유효한 주소여야 하며 NULL일 수 없습니다.
+*pDateTime*<br/>
+날짜 정보를 수신 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다. 이 매개 변수는 유효한 주소 여야 하며 NULL 일 수 없습니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -713,15 +712,15 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_GETTODAY](/windows/win32/Controls/mcm-gettoday)Win32 메시지의 동작을 구현합니다. 의 MFC 구현에서 `GetToday` `COleDateTime` 사용, 사용 또는 `CTime` 구조 용도를 `SYSTEMTIME` 지정할 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_GETTODAY](/windows/win32/Controls/mcm-gettoday)의 동작을 구현 합니다. MFC의 구현에서 `GetToday` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]
 
-## <a name="cmonthcalctrlhittest"></a><a name="hittest"></a>C월CalCtrl::히트 테스트
+## <a name="cmonthcalctrlhittest"></a><a name="hittest"></a> CMonthCalCtrl:: System.windows.media.visualtreehelper.hittest
 
-지정된 위치에 있는 월 달력 컨트롤(있는 경우)을 결정합니다.
+지정 된 위치에 있는 월 달력 컨트롤 (있는 경우)을 결정 합니다.
 
 ```
 DWORD HitTest(PMCHITTESTINFO pMCHitTest);
@@ -730,19 +729,19 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 ### <a name="parameters"></a>매개 변수
 
 *pMCHitTest*<br/>
-월 캘린더 컨트롤에 대한 적중 테스트 지점이 포함된 [MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo) 구조에 대한 포인터입니다.
+Month calendar 컨트롤의 적중 테스트 지점이 포함 된 [Mchittestinfo](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo) 구조에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-DWORD 값입니다. 구조의 **uHit** 멤버와 `MCHITTESTINFO` 동일합니다.
+DWORD 값입니다. 구조체의 **Uhit** 멤버와 같습니다 `MCHITTESTINFO` .
 
 ### <a name="remarks"></a>설명
 
-`HitTest`는 `MCHITTESTINFO` 적중 테스트에 대한 정보가 포함된 구조를 사용합니다.
+`HitTest``MCHITTESTINFO`적중 횟수 테스트에 대 한 정보를 포함 하는 구조체를 사용 합니다.
 
-## <a name="cmonthcalctrliscenturyview"></a><a name="iscenturyview"></a>C월칼Ctrl::이센추시뷰
+## <a name="cmonthcalctrliscenturyview"></a><a name="iscenturyview"></a> CMonthCalCtrl:: IsCenturyView
 
-현재 월 달력 컨트롤의 현재 보기가 세기 뷰인지 여부를 나타냅니다.
+현재 monthcalendar 컨트롤의 현재 보기가 세기 뷰 인지 여부를 나타냅니다.
 
 ```
 BOOL IsCenturyView() const;
@@ -750,15 +749,15 @@ BOOL IsCenturyView() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 뷰가 세기 뷰인 경우 TRUE; 그렇지 않으면 false입니다.
+현재 보기가 세기 뷰 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_CENTURY 반환하는 경우 이 메서드는 TRUE를 반환합니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_CENTURY을 반환 하는 경우이 메서드는 TRUE를 반환 합니다.
 
-## <a name="cmonthcalctrlisdecadeview"></a><a name="isdecadeview"></a>C월칼Ctrl::이십년뷰
+## <a name="cmonthcalctrlisdecadeview"></a><a name="isdecadeview"></a> CMonthCalCtrl:: IsDecadeView
 
-현재 월 달력 컨트롤의 현재 보기가 10년 보기인지 여부를 나타냅니다.
+현재 월 달력 컨트롤의 현재 뷰가 10 월 뷰입니다 여부를 나타냅니다.
 
 ```
 BOOL IsDecadeView() const;
@@ -766,15 +765,15 @@ BOOL IsDecadeView() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 뷰가 10년 뷰인 경우 TRUE입니다. 그렇지 않으면 false입니다.
+현재 뷰가 10 년 뷰입니다 경우 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_DECADE 반환하는 경우 이 메서드는 TRUE를 반환합니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_DECADE을 반환 하는 경우이 메서드는 TRUE를 반환 합니다.
 
-## <a name="cmonthcalctrlismonthview"></a><a name="ismonthview"></a>C월CalCtrl::이월보기
+## <a name="cmonthcalctrlismonthview"></a><a name="ismonthview"></a> CMonthCalCtrl:: IsMonthView
 
-현재 월 달력 컨트롤의 현재 보기가 월 보기인지 여부를 나타냅니다.
+현재 월 달력 컨트롤의 현재 뷰가 월 보기 인지 여부를 나타냅니다.
 
 ```
 BOOL IsMonthView() const;
@@ -782,15 +781,15 @@ BOOL IsMonthView() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 뷰가 월 보기인 경우 TRUE입니다. 그렇지 않으면 false입니다.
+현재 보기가 월 보기 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_MONTH 반환하는 경우 이 메서드는 TRUE를 반환합니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_MONTH을 반환 하는 경우이 메서드는 TRUE를 반환 합니다.
 
-## <a name="cmonthcalctrlisyearview"></a><a name="isyearview"></a>C월칼Ctrl::이스이어뷰
+## <a name="cmonthcalctrlisyearview"></a><a name="isyearview"></a> CMonthCalCtrl:: IsYearView
 
-현재 월 달력 컨트롤의 현재 보기가 연도 보기인지 여부를 나타냅니다.
+현재 monthcalendar 컨트롤의 현재 뷰가 연도 뷰 인지 여부를 나타냅니다.
 
 ```
 BOOL IsYearView() const;
@@ -798,15 +797,15 @@ BOOL IsYearView() const;
 
 ### <a name="return-value"></a>Return Value
 
-현재 뷰가 연도 뷰인 경우 TRUE입니다. 그렇지 않으면 false입니다.
+현재 뷰가 연도 보기 이면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_YEAR 반환하는 경우 이 메서드는 TRUE를 반환합니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_GETCURRENTVIEW](/windows/win32/Controls/mcm-getcurrentview) 메시지를 보냅니다. 해당 메시지가 MCMV_YEAR을 반환 하는 경우이 메서드는 TRUE를 반환 합니다.
 
-## <a name="cmonthcalctrlsetcalendarborder"></a><a name="setcalendarborder"></a>C월CalCtrl::SetCalendarBorder
+## <a name="cmonthcalctrlsetcalendarborder"></a><a name="setcalendarborder"></a> CMonthCalCtrl:: SetCalendarBorder
 
-현재 월 달력 컨트롤의 테두리 너비를 설정합니다.
+현재 월 달력 컨트롤의 테두리 두께를 설정 합니다.
 
 ```cpp
 void SetCalendarBorder(int cxyBorder);
@@ -814,31 +813,30 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*cxyBorder*|【인】 테두리의 너비(픽셀)입니다.|
+*cxyBorder*\
+진행 테두리의 너비 (픽셀)입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드가 성공하면 테두리 너비가 *cxyBorder* 매개 변수로 설정됩니다. 그렇지 않으면 테두리 너비가 현재 [테마에](/windows/win32/Controls/visual-styles-overview)의해 지정된 기본값으로 재설정되거나 테마를 사용하지 않으면 0으로 재설정됩니다.
+이 메서드가 성공 하면 테두리 너비가 *cxyBorder* 매개 변수로 설정 됩니다. 그렇지 않으면 테두리 너비가 현재 [테마](/windows/win32/Controls/visual-styles-overview)에 지정 된 기본값으로 다시 설정 되 고 테마가 사용 되지 않는 경우에는 0으로 다시 설정 됩니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제는 월 캘린더 컨트롤의 테두리 너비를 8픽셀로 설정합니다. [CMonthCalCtrl::GetCalendarBorder](#getcalendarborder) 메서드를 사용하여 이 메서드가 성공했는지 여부를 확인합니다.
+다음 코드 예제에서는 month calendar 컨트롤의 테두리 너비를 8 픽셀로 설정 합니다. [Cmonthcalctrl:: GetCalendarBorder](#getcalendarborder) 메서드를 사용 하 여이 메서드가 성공 했는지 여부를 확인 합니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_8.cpp)]
 
-## <a name="cmonthcalctrlsetcalendarborderdefault"></a><a name="setcalendarborderdefault"></a>C월CalCtrl::SetCalendarBorder기본
+## <a name="cmonthcalctrlsetcalendarborderdefault"></a><a name="setcalendarborderdefault"></a> CMonthCalCtrl:: SetCalendarBorderDefault
 
-현재 월 달력 컨트롤의 테두리의 기본 너비를 설정합니다.
+현재 월 달력 컨트롤 테두리의 기본 너비를 설정 합니다.
 
 ```cpp
 void SetCalendarBorderDefault();
@@ -846,13 +844,13 @@ void SetCalendarBorderDefault();
 
 ### <a name="remarks"></a>설명
 
-테두리 너비는 현재 [테마에](/windows/win32/Controls/visual-styles-overview)의해 지정된 기본값또는 테마를 사용하지 않는 경우 0으로 설정됩니다.
+테두리 너비는 현재 [테마](/windows/win32/Controls/visual-styles-overview)에서 지정 된 기본값으로 설정 됩니다. 또는 테마가 사용 되지 않는 경우 0입니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_SETCALENDARBORDER](/windows/win32/Controls/mcm-setcalendarborder) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlsetcalid"></a><a name="setcalid"></a>C월CalCtrl:::세트칼리드
+## <a name="cmonthcalctrlsetcalid"></a><a name="setcalid"></a> CMonthCalCtrl:: SetCalID
 
-현재 월 달력 컨트롤의 달력 식별자를 설정합니다.
+현재 month calendar 컨트롤의 달력 식별자를 설정 합니다.
 
 ```
 BOOL SetCalID(CALID calid);
@@ -860,33 +858,32 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*칼ID*|【인】 [달력 식별자](/windows/win32/Intl/calendar-identifiers) 상수 중 하나입니다.|
+*calid*\
+진행 [달력 식별자](/windows/win32/Intl/calendar-identifiers) 상수 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-달력 식별자는 그레고리오력(지역화), 일본어 또는 회교식 달력과 같은 지역별 달력을 지정합니다. 달력을 `SetCalID` 포함하는 로캘이 컴퓨터에 설치된 경우 *calid* 매개 변수에 의해 지정된 달력을 표시하는 메서드를 사용합니다.
+달력 식별자는 양력 (지역화 된), 일본어 또는 회교식 달력과 같은 지역별 달력을 지정 합니다. 달력을 `SetCalID` 포함 하는 로캘이 컴퓨터에 설치 된 경우에는 *calid* 매개 변수로 지정 된 달력을 표시 하려면 메서드를 사용 합니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_SETCALID](/windows/win32/Controls/mcm-setcalid) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_SETCALID](/windows/win32/Controls/mcm-setcalid) 메시지를 보냅니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제는 일본 황제 시대 달력을 표시하는 월 달력 컨트롤을 설정합니다. 이 `SetCalID` 메서드는 해당 일정이 컴퓨터에 설치된 경우에만 성공합니다.
+다음 코드 예제에서는 월 달력 컨트롤을 설정 하 여 일본 황제 달력을 표시 합니다. `SetCalID`메서드는 해당 달력이 컴퓨터에 설치 되어 있는 경우에만 성공 합니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_9.cpp)]
 
-## <a name="cmonthcalctrlsetcenturyview"></a><a name="setcenturyview"></a>C월칼Ctrl::세트센추치뷰
+## <a name="cmonthcalctrlsetcenturyview"></a><a name="setcenturyview"></a> CMonthCalCtrl:: SetCenturyView
 
 세기 보기를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.
 
@@ -896,15 +893,15 @@ BOOL SetCenturyView();
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [CMonthCalCtrl::SetCurrentView](#setcurrentview) 메서드를 사용 `MCMV_CENTURY`하 여 00000뷰를 나타내는 뷰를 설정 합니다.
+이 메서드는 [Cmonthcalctrl:: SetCurrentView](#setcurrentview) 메서드를 사용 하 여 뷰를로 설정 합니다 `MCMV_CENTURY` .이는 세기 뷰를 나타냅니다.
 
-## <a name="cmonthcalctrlsetcolor"></a><a name="setcolor"></a>C월CalCtrl::세트컬러
+## <a name="cmonthcalctrlsetcolor"></a><a name="setcolor"></a> CMonthCalCtrl:: SetColor
 
-월 달력 컨트롤의 지정된 영역의 색상을 설정합니다.
+Month calendar 컨트롤의 지정 된 영역 색을 설정 합니다.
 
 ```
 COLORREF SetColor(
@@ -914,36 +911,36 @@ COLORREF SetColor(
 
 ### <a name="parameters"></a>매개 변수
 
-*n지역*<br/>
-설정할 월 달력 색상을 지정하는 정수 값입니다. 이 값은 다음 중 하나일 수 있습니다.
+*nRegion*<br/>
+설정할 월 달력 색을 지정 하는 정수 값입니다. 이 값은 다음 중 하나일 수 있습니다.
 
 |값|의미|
 |-----------|-------------|
-|MCSC_BACKGROUND|월 사이에 표시되는 배경색입니다.|
-|MCSC_MONTHBK|월 내에 표시되는 배경색입니다.|
-|MCSC_TEXT|한 달 이내에 텍스트를 표시하는 데 사용되는 색상입니다.|
-|MCSC_TITLEBK|달력 제목에 표시되는 배경색입니다.|
-|MCSC_TITLETEXT|캘린더 제목 내에 텍스트를 표시하는 데 사용되는 색상입니다.|
-|MCSC_TRAILINGTEXT|헤더 및 후일 텍스트를 표시하는 데 사용되는 색상입니다. 헤더 및 후행 일은 현재 달력에 표시되는 이전 및 다음 달의 날짜입니다.|
+|MCSC_BACKGROUND|월 사이에 표시 되는 배경색입니다.|
+|MCSC_MONTHBK|월 내에 표시 되는 배경색입니다.|
+|MCSC_TEXT|한 달 내에 텍스트를 표시 하는 데 사용 되는 색입니다.|
+|MCSC_TITLEBK|달력의 제목에 표시 되는 배경색입니다.|
+|MCSC_TITLETEXT|달력의 제목 내에 텍스트를 표시 하는 데 사용 되는 색입니다.|
+|MCSC_TRAILINGTEXT|머리글 및 후행 일 텍스트를 표시 하는 데 사용 되는 색입니다. 머리글과 후행 일은 현재 달력에 표시 되는 이전 및 다음 달의 날짜입니다.|
 
 *ref*<br/>
-월 달력 컨트롤의 지정된 부분에 대 한 새 색상 설정에 대 한 COLORREF 값입니다.
+Month calendar 컨트롤의 지정 된 부분에 대 한 새 색 설정의 COLORREF 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
-성공한 경우 월 달력 컨트롤의 지정된 부분에 대한 이전 색상 설정을 나타내는 COLORREF 값입니다. 그렇지 않으면 이 메시지가 -1을 반환합니다.
+성공 하면 month calendar 컨트롤의 지정 된 부분에 대 한 이전 색 설정을 나타내는 COLORREF 값입니다. 그렇지 않으면이 메시지는-1을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_SETCOLOR Win32 [메시지의](/windows/win32/Controls/mcm-setcolor)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETCOLOR](/windows/win32/Controls/mcm-setcolor)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]
 
-## <a name="cmonthcalctrlsetcurrentview"></a><a name="setcurrentview"></a>C월CalCtrl::설정현재보기
+## <a name="cmonthcalctrlsetcurrentview"></a><a name="setcurrentview"></a> CMonthCalCtrl:: SetCurrentView
 
-지정된 뷰를 표시하도록 현재 월 달력 컨트롤을 설정합니다.
+지정 된 뷰를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.
 
 ```
 BOOL SetCurrentView(DWORD dwNewView);
@@ -951,21 +948,25 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*dwNewView*|【인】 월별, 연간, 10년 또는 세기 보기를 지정하는 다음 값 중 하나입니다.<br /><br /> MCMV_MONTH: 월간 보기<br /><br /> MCMV_YEAR: 연간 보기<br /><br /> MCMV_DECADE: 10년 전망<br /><br /> MCMV_CENTURY: 센추리 뷰|
+*dwNewView*\
+진행 월별, 연간, 10 또는 세기 뷰를 지정 하는 다음 값 중 하나입니다.
+
+- `MCMV_MONTH`: 월별 보기
+- `MCMV_YEAR`: 연간 보기
+- `MCMV_DECADE`: 10, 10 뷰
+- `MCMV_CENTURY`: 세기 뷰
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 Windows SDK에 설명 된 [MCM_SETCURRENTVIEW](/windows/win32/Controls/mcm-setcurrentview) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_SETCURRENTVIEW](/windows/win32/Controls/mcm-setcurrentview) 메시지를 보냅니다.
 
-## <a name="cmonthcalctrlsetcursel"></a><a name="setcursel"></a>C월CalCtrl::세트컬셀
+## <a name="cmonthcalctrlsetcursel"></a><a name="setcursel"></a> CMonthCalCtrl:: SetCurSel
 
-월 달력 컨트롤에 대해 현재 선택한 날짜를 설정합니다.
+Monthcalendar 컨트롤에 현재 선택한 날짜를 설정 합니다.
 
 ```
 BOOL SetCurSel(const COleDateTime& refDateTime);
@@ -976,10 +977,10 @@ BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 ### <a name="parameters"></a>매개 변수
 
 *refDateTime*<br/>
-현재 선택한 월 달력 컨트롤을 나타내는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 참조입니다.
+현재 선택 된 month calendar 컨트롤을 나타내는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 또는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 참조입니다.
 
-*pDate시간*<br/>
-현재 선택 항목으로 설정할 날짜가 포함된 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+*pDateTime*<br/>
+현재 선택 항목으로 설정할 날짜를 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -987,15 +988,15 @@ BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_SETCURSEL Win32 [메시지의](/windows/win32/Controls/mcm-setcursel)동작을 구현합니다. 의 MFC 구현에서 `SetCurSel` `COleDateTime` 사용, 사용 또는 `CTime` 구조 용도를 `SYSTEMTIME` 지정할 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETCURSEL](/windows/win32/Controls/mcm-setcursel)의 동작을 구현 합니다. MFC의 구현에서 `SetCurSel` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]
 
-## <a name="cmonthcalctrlsetdaystate"></a><a name="setdaystate"></a>C월CalCtrl::SetDaystate
+## <a name="cmonthcalctrlsetdaystate"></a><a name="setdaystate"></a> CMonthCalCtrl:: SetDayState
 
-월 달력 컨트롤의 일 동안 표시를 설정합니다.
+Monthcalendar 컨트롤의 일에 대 한 표시를 설정 합니다.
 
 ```
 BOOL SetDayState(
@@ -1005,11 +1006,11 @@ BOOL SetDayState(
 
 ### <a name="parameters"></a>매개 변수
 
-*n개월*<br/>
-*pStates가* 가리키는 배열에 있는 요소 수를 나타내는 값입니다.
+*nMonths*<br/>
+*Pstates* 가 가리키는 배열에 있는 요소 수를 나타내는 값입니다.
 
-*p스테이트*<br/>
-월 달력 컨트롤이 매일 표시에서 그리는 방법을 정의하는 [MONTHDAYSTATE](/windows/win32/Controls/monthdaystate) 값 배열에 대한 포인터입니다. MONTHDAYSTATE 데이터 형식은 비트 필드로 각 비트(1~31)는 한 달의 일 상태를 나타냅니다. 비트가 켜지면 해당 날이 굵게 표시됩니다. 그렇지 않으면 강조없이 표시됩니다.
+*pStates*<br/>
+Monthcalendar 컨트롤에서 각 날짜를 표시 하는 방법을 정의 하는 값의 [Monthdaystate](/windows/win32/Controls/monthdaystate) 배열에 대 한 포인터입니다. MONTHDAYSTATE 데이터 형식은 비트 필드입니다. 여기서 각 비트 (1-31)는 한 달의 일 상태를 나타냅니다. 비트가 켜져 있으면 해당 날짜가 굵게 표시 됩니다. 그렇지 않으면 강조 표시 되지 않고 표시 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1017,15 +1018,15 @@ BOOL SetDayState(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_SETDAYSTATE Win32 [메시지의](/windows/win32/Controls/mcm-setdaystate)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETDAYSTATE](/windows/win32/Controls/mcm-setdaystate)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]
 
-## <a name="cmonthcalctrlsetdecadeview"></a><a name="setdecadeview"></a>C월CalCtrl::SetDecadeView
+## <a name="cmonthcalctrlsetdecadeview"></a><a name="setdecadeview"></a> CMonthCalCtrl:: SetDecadeView
 
-현재 월 달력 컨트롤을 10년 보기로 설정합니다.
+현재 월 달력 컨트롤을 10 년 뷰로 설정 합니다.
 
 ```
 BOOL SetDecadeView();
@@ -1033,15 +1034,15 @@ BOOL SetDecadeView();
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [CMonthCalCtrl::SetCurrentView](#setcurrentview) 메서드를 사용 `MCMV_DECADE`하 여 10 0 뷰를 나타내는 뷰를 설정 합니다.
+이 메서드는 [Cmonthcalctrl:: SetCurrentView](#setcurrentview) 메서드를 사용 하 여 10 월 뷰를 나타내는 뷰로 설정 합니다 `MCMV_DECADE` .
 
-## <a name="cmonthcalctrlsetfirstdayofweek"></a><a name="setfirstdayofweek"></a>C월칼Ctrl::셋퍼스트데이오브위크
+## <a name="cmonthcalctrlsetfirstdayofweek"></a><a name="setfirstdayofweek"></a> CMonthCalCtrl:: SetFirstDayOfWeek
 
-달력의 가장 왼쪽 열에 표시할 요일을 설정합니다.
+달력의 가장 왼쪽 열에 표시할 요일을 설정 합니다.
 
 ```
 BOOL SetFirstDayOfWeek(
@@ -1051,27 +1052,27 @@ BOOL SetFirstDayOfWeek(
 
 ### <a name="parameters"></a>매개 변수
 
-*아이데이 (약)*<br/>
-요일을 나타내는 정수 값을 해당 주의 첫 번째 날로 설정합니다. 이 값은 일 번호 중 하나여야 합니다. 하루 번호에 대한 설명은 [GetFirstDayOfWeek를](#getfirstdayofweek) 참조하십시오.
+*iDay*<br/>
+요일을 1 일로 설정 해야 하는 날짜를 나타내는 정수 값입니다. 이 값은 일 번호 중 하나 여야 합니다. [GetFirstDayOfWeek](#getfirstdayofweek) 를 참조 하십시오.
 
 *lpnOld*<br/>
-이전에 설정한 주의 첫 날을 나타내는 정수에 대한 포인터입니다.
+이전에 설정한 주의 첫째 요일을 나타내는 정수에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-주 전날의 첫 날이 LOCALE_IFIRSTDAYOFWEEK 값이 아닌 값으로 설정된 경우 비영(nonzero)은 제어판 설정에 표시된 날입니다. 그렇지 않으면 이 함수는 0을 반환합니다.
+이 값이 0이 아닌 값으로 설정 된 경우에는 0이 아닌 값으로 설정 되 고,이 값은 제어판 설정에 표시 되는 일 LOCALE_IFIRSTDAYOFWEEK입니다. 그렇지 않으면이 함수는 0을 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_SETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-setfirstdayofweek)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-setfirstdayofweek)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]
 
-## <a name="cmonthcalctrlsetmaxselcount"></a><a name="setmaxselcount"></a>C월CalCtrl::세트맥스셀카운트
+## <a name="cmonthcalctrlsetmaxselcount"></a><a name="setmaxselcount"></a> CMonthCalCtrl:: SetMaxSelCount
 
-월 캘린더 컨트롤에서 선택할 수 있는 최대 일 수를 설정합니다.
+Monthcalendar 컨트롤에서 선택할 수 있는 최대 일 수를 설정 합니다.
 
 ```
 BOOL SetMaxSelCount(int nMax);
@@ -1080,7 +1081,7 @@ BOOL SetMaxSelCount(int nMax);
 ### <a name="parameters"></a>매개 변수
 
 *nMax*<br/>
-선택할 수 있는 최대 일 수를 나타내도록 설정되는 값입니다.
+선택할 수 있는 최대 날짜 수를 나타내도록 설정 되는 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1088,15 +1089,15 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_SETMAXSELCOUNT Win32 [메시지의](/windows/win32/Controls/mcm-setmaxselcount)동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETMAXSELCOUNT](/windows/win32/Controls/mcm-setmaxselcount)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#8](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]
 
-## <a name="cmonthcalctrlsetmonthdelta"></a><a name="setmonthdelta"></a>C월칼Ctrl::세트월델타
+## <a name="cmonthcalctrlsetmonthdelta"></a><a name="setmonthdelta"></a> CMonthCalCtrl:: SetMonthDelta
 
-월 캘린더 컨트롤의 스크롤 속도를 설정합니다.
+Monthcalendar 컨트롤에 대 한 스크롤 빈도를 설정 합니다.
 
 ```
 int SetMonthDelta(int iDelta);
@@ -1104,20 +1105,20 @@ int SetMonthDelta(int iDelta);
 
 ### <a name="parameters"></a>매개 변수
 
-*아이델타*<br/>
-컨트롤의 스크롤 속도로 설정할 개월 수입니다. 이 값이 0이면 월 델타가 기본값으로 재설정되고 컨트롤에 표시되는 월 수입니다.
+*iDelta*<br/>
+컨트롤의 스크롤 비율로 설정할 월 수입니다. 이 값이 0 이면 월 델타는 컨트롤에 표시 되는 월 수 인 기본값으로 다시 설정 됩니다.
 
 ### <a name="return-value"></a>Return Value
 
-이전 스크롤 속도입니다. 스크롤 속도가 이전에 설정되지 않은 경우 반환 값은 0입니다.
+이전 스크롤 율입니다. 스크롤 비율이 이전에 설정 되지 않은 경우 반환 값은 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_SETMONTHDELTA](/windows/win32/Controls/mcm-setmonthdelta)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETMONTHDELTA](/windows/win32/Controls/mcm-setmonthdelta)의 동작을 구현 합니다.
 
-## <a name="cmonthcalctrlsetmonthview"></a><a name="setmonthview"></a>C월CalCtrl::세트월뷰
+## <a name="cmonthcalctrlsetmonthview"></a><a name="setmonthview"></a> CMonthCalCtrl:: SetMonthView
 
-현재 월 캘린더 컨트롤을 설정하여 월 보기를 표시합니다.
+월 보기를 표시 하도록 현재 월 달력 컨트롤을 설정 합니다.
 
 ```
 BOOL SetMonthView();
@@ -1125,27 +1126,27 @@ BOOL SetMonthView();
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [CMonthCalCtrl::SetCurrentView](#setcurrentview) 메서드를 사용 하 여 MCMV_MONTH 뷰를 설정 하 고 월 보기를 나타냅니다.
+이 메서드는 [Cmonthcalctrl:: SetCurrentView](#setcurrentview) 메서드를 사용 하 여 뷰를 월 보기를 나타내는 MCMV_MONTH로 설정 합니다.
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월 `m_monthCalCtrl`달력 컨트롤에 프로그래밍 방식으로 액세스하는 데 사용되는 변수 를 정의합니다. 이 변수는 다음 예제에서 사용됩니다.
+다음 코드 예제에서는 `m_monthCalCtrl` month calendar 컨트롤에 프로그래밍 방식으로 액세스 하는 데 사용 되는 변수를 정의 합니다. 이 변수는 다음 예제에서 사용됩니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]
 
 ### <a name="example"></a>예제
 
-다음 코드 예제에서는 월, 연도, 10년 및 세기 보기를 표시할 월 달력 컨트롤을 설정합니다.
+다음 코드 예에서는 month 달력 컨트롤을 설정 하 여 월, 연도, 10 년 및 세기 뷰를 표시 합니다.
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_15.cpp)]
 
-## <a name="cmonthcalctrlsetrange"></a><a name="setrange"></a>C월CalCtrl::세트레인지
+## <a name="cmonthcalctrlsetrange"></a><a name="setrange"></a> CMonthCalCtrl:: SetRange
 
-월 캘린더 컨트롤의 최소 및 최대 허용 날짜를 설정합니다.
+Monthcalendar 컨트롤에 허용 되는 최소 및 최대 날짜를 설정 합니다.
 
 ```
 BOOL SetRange(
@@ -1164,10 +1165,10 @@ BOOL SetRange(
 ### <a name="parameters"></a>매개 변수
 
 *pMinRange*<br/>
-범위의 가장 `COleDateTime` 낮은 `CTime` 끝에 있는 날짜를 포함하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+`COleDateTime` `CTime` 범위의 최하위 끝에 있는 날짜를 포함 하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-*pMax Range*<br/>
-범위의 가장 `COleDateTime` 높은 `CTime` 끝에 있는 `SYSTEMTIME` 날짜를 포함하는 개체, 개체 또는 구조체에 대한 포인터입니다.
+*pMaxRange*<br/>
+`COleDateTime`범위의 최고 끝에 있는 날짜를 포함 하는 개체, 개체 또는 구조에 대 한 포인터 `CTime` `SYSTEMTIME` 입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1175,15 +1176,15 @@ BOOL SetRange(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_SETRANGE](/windows/win32/Controls/mcm-setrange)Win32 메시지의 동작을 구현합니다. 의 MFC 구현에서 `SetRange`사용, `COleDateTime` 사용 또는 `CTime` 구조 용도를 지정할 `SYSTEMTIME` 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETRANGE](/windows/win32/Controls/mcm-setrange)의 동작을 구현 합니다. MFC의 구현에서 `SetRange` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
 ### <a name="example"></a>예제
 
-  [CMonthCalCtrl::GetRange에](#getrange)대한 예제를 참조하십시오.
+  [Cmonthcalctrl:: GetRange](#getrange)의 예제를 참조 하세요.
 
-## <a name="cmonthcalctrlsetselrange"></a><a name="setselrange"></a>C월칼Ctrl::세트셀레인지
+## <a name="cmonthcalctrlsetselrange"></a><a name="setselrange"></a> CMonthCalCtrl:: SetSelRange
 
-월 캘린더 컨트롤의 선택 항목을 지정된 날짜 범위로 설정합니다.
+Month calendar 컨트롤의 선택 항목을 지정 된 날짜 범위로 설정 합니다.
 
 ```
 BOOL SetSelRange(
@@ -1202,10 +1203,10 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>매개 변수
 
 *pMinRange*<br/>
-범위의 가장 `COleDateTime` 낮은 `CTime` 끝에 있는 날짜를 포함하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+`COleDateTime` `CTime` 범위의 최하위 끝에 있는 날짜를 포함 하는 개체, 개체 또는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
-*pMax Range*<br/>
-범위의 가장 `COleDateTime` 높은 `CTime` 끝에 있는 `SYSTEMTIME` 날짜를 포함하는 개체, 개체 또는 구조체에 대한 포인터입니다.
+*pMaxRange*<br/>
+`COleDateTime`범위의 최고 끝에 있는 날짜를 포함 하는 개체, 개체 또는 구조에 대 한 포인터 `CTime` `SYSTEMTIME` 입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1213,11 +1214,11 @@ BOOL SetSelRange(
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 MCM_SETSELRANGE Win32 [메시지의](/windows/win32/Controls/mcm-setselrange)동작을 구현합니다. 의 MFC 구현에서 `SetSelRange`사용, `COleDateTime` 사용 또는 `CTime` 구조 용도를 지정할 `SYSTEMTIME` 수 있습니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETSELRANGE](/windows/win32/Controls/mcm-setselrange)의 동작을 구현 합니다. MFC의 구현에서 `SetSelRange` `COleDateTime` 사용, `CTime` 사용 또는 구조 사용을 지정할 수 있습니다 `SYSTEMTIME` .
 
-## <a name="cmonthcalctrlsettoday"></a><a name="settoday"></a>C월칼Ctrl::세트투데이
+## <a name="cmonthcalctrlsettoday"></a><a name="settoday"></a> CMonthCalCtrl:: SetToday
 
-현재 날짜의 달력 컨트롤을 설정합니다.
+현재 날짜에 대 한 달력 컨트롤을 설정 합니다.
 
 ```cpp
 void SetToday(const COleDateTime& refDateTime);
@@ -1228,22 +1229,22 @@ void SetToday(const LPSYSTEMTIME pDateTime);
 ### <a name="parameters"></a>매개 변수
 
 *refDateTime*<br/>
-현재 날짜를 포함하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체에 대한 참조입니다.
+현재 날짜를 포함 하는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 개체에 대 한 참조입니다.
 
-*pDate시간*<br/>
-두 번째 버전에서는 현재 날짜 정보를 포함하는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대한 포인터입니다. 세 번째 버전에서는 현재 날짜 정보가 포함된 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조에 대한 포인터입니다.
+*pDateTime*<br/>
+두 번째 버전에서 현재 날짜 정보를 포함 하는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체에 대 한 포인터입니다. 세 번째 버전에서 현재 날짜 정보를 포함 하는 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 구조체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 멤버 함수는 Windows SDK에 설명된 대로 [MCM_SETTODAY](/windows/win32/Controls/mcm-settoday)Win32 메시지의 동작을 구현합니다.
+이 멤버 함수는 Windows SDK에 설명 된 대로 Win32 메시지 [MCM_SETTODAY](/windows/win32/Controls/mcm-settoday)의 동작을 구현 합니다.
 
 ### <a name="example"></a>예제
 
-  [CMonthCalCtrl::GetToday에](#gettoday)대한 예제를 참조하십시오.
+  [Cmonthcalctrl:: GetToday](#gettoday)의 예제를 참조 하세요.
 
-## <a name="cmonthcalctrlsetyearview"></a><a name="setyearview"></a>C월CalCtrl::세트이어뷰
+## <a name="cmonthcalctrlsetyearview"></a><a name="setyearview"></a> CMonthCalCtrl:: SetYearView
 
-현재 월 달력 컨트롤을 연도 보기로 설정합니다.
+현재 월 달력 컨트롤을 연도 뷰로 설정 합니다.
 
 ```
 BOOL SetYearView();
@@ -1251,15 +1252,15 @@ BOOL SetYearView();
 
 ### <a name="return-value"></a>Return Value
 
-이 메서드가 성공하면 TRUE입니다. 그렇지 않으면 false입니다.
+이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 [CMonthCalCtrl::SetCurrentView](#setcurrentview) 메서드를 사용 하 여 뷰를 MCMV_YEAR 설정 합니다., 연간 보기를 나타내는.
+이 메서드는 [Cmonthcalctrl:: SetCurrentView](#setcurrentview) 메서드를 사용 하 여 뷰를 연간 뷰를 나타내는 MCMV_YEAR로 설정 합니다.
 
-## <a name="cmonthcalctrlsizeminreq"></a><a name="sizeminreq"></a>C월칼Ctrl::크기민렉
+## <a name="cmonthcalctrlsizeminreq"></a><a name="sizeminreq"></a> CMonthCalCtrl:: SizeMinReq
 
-월 캘린더 컨트롤을 한 달을 표시하는 최소 크기로 표시합니다.
+월 달력 컨트롤을 한 달에 표시 되는 최소 크기로 표시 합니다.
 
 ```
 BOOL SizeMinReq(BOOL bRepaint = TRUE);
@@ -1268,19 +1269,19 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ### <a name="parameters"></a>매개 변수
 
 *bRepaint*<br/>
-컨트롤을 다시 칠할지 여부를 지정합니다. 기본적으로 TRUE입니다. FALSE인 경우 다시 그리기가 발생하지 않습니다.
+컨트롤을 다시 그릴지 여부를 지정 합니다. 기본적으로 TRUE입니다. FALSE 이면 다시 그려야 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-월 달력 컨트롤의 크기가 최소인 경우 0이 아닙니다. 그렇지 않으면 0.
+Month calendar 컨트롤의 크기가 최소로 조정 되 면 0이 아닌 값으로 조정 됩니다. 그렇지 않으면 0입니다.
 
 ### <a name="remarks"></a>설명
 
-호출에 `SizeMinReq` 한 달 달력에 대한 전체 월 캘린더 컨트롤이 성공적으로 표시됩니다.
+`SizeMinReq`를 성공적으로 호출 하면 한 달의 달력에 대 한 전체 월 달력 컨트롤이 표시 됩니다.
 
-## <a name="cmonthcalctrlsizerecttomin"></a><a name="sizerecttomin"></a>C월칼트르::사이즈렉토민
+## <a name="cmonthcalctrlsizerecttomin"></a><a name="sizerecttomin"></a> CMonthCalCtrl:: SizeRectToMin
 
-현재 월 달력 컨트롤의 경우 지정된 사각형에 맞는 모든 캘린더를 포함할 수 있는 가장 작은 사각형을 계산합니다.
+현재 month calendar 컨트롤의 경우 지정 된 사각형에 맞는 모든 달력을 포함할 수 있는 가장 작은 사각형을 계산 합니다.
 
 ```
 LPRECT SizeRectToMin(LPRECT lpRect);
@@ -1288,21 +1289,20 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*Lprect*|【인】 원하는 수의 달력을 포함하는 사각형을 정의하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대한 포인터입니다.|
+*lpRect*\
+진행 원하는 달력 수를 포함 하는 사각형을 정의 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
-크기가 [lpRect](/windows/win32/api/windef/ns-windef-rect) 매개 변수에 의해 정의된 사각형보다 작거나 같은 사각형을 정의하는 *RECT* 구조에 대한 포인터입니다.
+*LpRect* 매개 변수에 의해 정의 된 사각형 보다 작거나 같은 크기의 사각형을 정의 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-이 메서드는 *lpRect* 매개 변수에 의해 지정 된 사각형에 맞게 수 있는 달력 수를 계산 하 고 해당 수의 달력을 포함할 수 있는 가장 작은 사각형을 반환 합니다. 실제로 이 메서드는 지정된 사각형을 원하는 수의 달력에 정확히 맞도록 축소합니다.
+이 메서드는 *lpRect* 매개 변수로 지정 된 사각형에 맞출 수 있는 달력 수를 계산한 다음 해당 수의 달력을 포함할 수 있는 가장 작은 사각형을 반환 합니다. 실제로이 메서드는 지정 된 사각형을 원하는 수의 달력에 정확히 맞게 축소 합니다.
 
-이 메서드는 Windows SDK에 설명 된 [MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin) 메시지를 보냅니다.
+이 메서드는 Windows SDK에서 설명 하는 [MCM_SIZERECTTOMIN](/windows/win32/Controls/mcm-sizerecttomin) 메시지를 보냅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [MFC 샘플 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 클래스](../../mfc/reference/cwnd-class.md)<br/>

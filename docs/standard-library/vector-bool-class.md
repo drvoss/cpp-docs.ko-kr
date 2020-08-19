@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 7819c8c2ebe8a07a76e242ea2ef3c19206ab69be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211998"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562454"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 
@@ -62,11 +62,11 @@ class vector<bool, Allocator>
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**:\<vector>
+**헤더**: \<vector>
 
 **네임스페이스:** std
 
-## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>vector \<bool> :: const_pointer
+## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a> vector \<bool> :: const_pointer
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -74,7 +74,7 @@ class vector<bool, Allocator>
 typedef const_iterator const_pointer;
 ```
 
-## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>vector \<bool> :: const_reference
+## <a name="vectorboolconst_reference"></a><a name="const_reference"></a> vector \<bool> :: const_reference
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 고정 참조로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -86,7 +86,7 @@ typedef bool const_reference;
 
 자세한 내용과 코드 예제는 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)를 참조하세요.
 
-## <a name="vectorboolflip"></a><a name="flip"></a>vector \<bool> :: flip
+## <a name="vectorboolflip"></a><a name="flip"></a> vector \<bool> :: flip
 
 `vector<bool>`의 모든 비트를 반대로 바꿉니다.
 
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="vectorbooloperator"></a><a name="op_at"></a>vector \<bool> :: operator []
+## <a name="vectorbooloperator"></a><a name="op_at"></a> vector \<bool> :: operator []
 
 지정된 위치에서 `vector<bool>` 요소에 대한 시뮬레이션 참조를 반환합니다.
 
@@ -136,9 +136,8 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*Pos*|`vector<bool>` 요소의 위치입니다.|
+*Pos*\
+`vector<bool>` 요소의 위치입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -181,7 +180,7 @@ int main()
 }
 ```
 
-## <a name="vectorboolpointer"></a><a name="pointer"></a>vector \<bool> ::p ointer
+## <a name="vectorboolpointer"></a><a name="pointer"></a> vector \<bool> ::p ointer
 
 `vector<bool>` 개체에 포함된 시퀀스의 부울 요소에 대해 포인터로 사용할 수 있는 개체를 설명하는 형식입니다.
 
@@ -189,7 +188,7 @@ int main()
 typedef iterator pointer;
 ```
 
-## <a name="vectorboolreference-class"></a><a name="reference_class"></a>vector \<bool> :: Reference 클래스
+## <a name="vectorboolreference-class"></a><a name="reference_class"></a> vector \<bool> :: Reference 클래스
 
 `vector<bool>::reference`클래스는 시뮬레이션할 [vector \<bool> 클래스](../standard-library/vector-bool-class.md) 에서 제공 하는 프록시 클래스입니다 `bool&` .
 
@@ -204,7 +203,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>vector \<bool> :: reference:: flip
+### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a> vector \<bool> :: reference:: flip
 
 참조 된 [vector \<bool> ](../standard-library/vector-bool-class.md) 요소의 부울 값을 반전 합니다.
 
@@ -251,7 +250,7 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>vector \<bool> :: reference:: operator bool
+### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a> vector \<bool> :: reference:: operator bool
 
 에서로의 암시적 변환을 `vector<bool>::reference` 제공 **`bool`** 합니다.
 
@@ -267,7 +266,7 @@ Vector 개체의 요소에 대 한 부울 값입니다 \<bool> .
 
 `vector<bool>` 개체는 이 연산자로 수정할 수 없습니다.
 
-### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>vector \<bool> :: reference:: operator =
+### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a> vector \<bool> :: reference:: operator =
 
 비트에 부울 값을 할당하거나 참조된 요소에 저장된 값을 비트에 할당합니다.
 
@@ -355,7 +354,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="vectorboolswap"></a><a name="swap"></a>vector \<bool> :: swap
+## <a name="vectorboolswap"></a><a name="swap"></a> vector \<bool> :: swap
 
 `vector<bool>`프록시 클래스 [vector \<bool> :: reference](#reference_class)를 사용 하 여 부울 벡터 ()의 두 요소를 교환 하는 정적 멤버 함수입니다.
 

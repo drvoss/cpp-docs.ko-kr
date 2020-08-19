@@ -67,7 +67,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|Name|Description|
+|속성|Description|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|도구 모음과 도킹 표시줄 가장자리 사이의 간격 크기를 정의 합니다. 이 공간은 도크 공간의 맞춤에 따라 왼쪽 가장자리 또는 위쪽 가장자리에서 측정 됩니다.|
 
 ## <a name="remarks"></a>설명

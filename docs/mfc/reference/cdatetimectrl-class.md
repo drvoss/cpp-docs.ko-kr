@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 80b6177d788cfbe44388ec1e6a203b8037f834bc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223098"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561949"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 클래스
 
@@ -61,13 +61,13 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CDateTimeCtrl](#cdatetimectrl)|`CDateTimeCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CloseMonthCal](#closemonthcal)|현재 날짜 및 시간 선택 컨트롤을 닫습니다.|
 |[CDateTimeCtrl:: Create](#create)|날짜 및 시간 선택 컨트롤을 만들고이를 개체에 연결 `CDateTimeCtrl` 합니다.|
@@ -108,7 +108,7 @@ class CDateTimeCtrl : public CWnd
 
 **헤더:** afxdtctl
 
-## <a name="cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a>CDateTimeCtrl:: CDateTimeCtrl
+## <a name="cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a> CDateTimeCtrl:: CDateTimeCtrl
 
 `CDateTimeCtrl` 개체를 생성합니다.
 
@@ -116,7 +116,7 @@ class CDateTimeCtrl : public CWnd
 CDateTimeCtrl();
 ```
 
-## <a name="cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a>CDateTimeCtrl:: CloseMonthCal
+## <a name="cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a> CDateTimeCtrl:: CloseMonthCal
 
 현재 날짜 및 시간 선택 컨트롤을 닫습니다.
 
@@ -140,7 +140,7 @@ void CloseMonthCal() const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]
 
-## <a name="cdatetimectrlcreate"></a><a name="create"></a>CDateTimeCtrl:: Create
+## <a name="cdatetimectrlcreate"></a><a name="create"></a> CDateTimeCtrl:: Create
 
 날짜 및 시간 선택 컨트롤을 만들고이를 개체에 연결 `CDateTimeCtrl` 합니다.
 
@@ -184,7 +184,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]
 
-## <a name="cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a>CDateTimeCtrl:: GetDateTimePickerInfo
+## <a name="cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a> CDateTimeCtrl:: GetDateTimePickerInfo
 
 현재 날짜 및 시간 선택 컨트롤에 대 한 정보를 검색 합니다.
 
@@ -194,9 +194,8 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*pDateTimePickerInfo*|제한이 현재 날짜 및 시간 선택 컨트롤에 대 한 설명을 수신 하는 [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) 구조체에 대 한 포인터입니다.<br /><br /> 호출자는이 구조체를 할당 해야 합니다. 그러나이 메서드는 구조체의 *Cbsize* 멤버를 초기화 합니다.|
+*pDateTimePickerInfo*\
+제한이 현재 날짜 및 시간 선택 컨트롤에 대 한 설명을 수신 하는 [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) 구조체에 대 한 포인터입니다. 호출자는이 구조체를 할당 해야 합니다. 그러나이 메서드는 구조체의 *Cbsize* 멤버를 초기화 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -218,7 +217,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a>CDateTimeCtrl:: GetMonthCalColor
+## <a name="cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a> CDateTimeCtrl:: GetMonthCalColor
 
 날짜 및 시간 선택 컨트롤 내에서 월 달력의 지정 된 부분에 대 한 색을 검색 합니다.
 
@@ -243,7 +242,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a>CDateTimeCtrl:: GetMonthCalCtrl
+## <a name="cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a> CDateTimeCtrl:: GetMonthCalCtrl
 
 `CMonthCalCtrl`날짜 및 시간 선택 컨트롤과 연결 된 개체를 검색 합니다.
 
@@ -263,7 +262,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]
 
-## <a name="cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a>CDateTimeCtrl:: GetMonthCalFont
+## <a name="cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a> CDateTimeCtrl:: GetMonthCalFont
 
 날짜 및 시간 선택 컨트롤의 month calendar 컨트롤에서 현재 사용 하는 글꼴을 가져옵니다.
 
@@ -279,7 +278,7 @@ CFont* GetMonthCalFont() const;
 
 `CFont`반환 값이 가리키는 개체는 임시 개체 이며 다음 유휴 처리 시간 중에 제거 됩니다.
 
-## <a name="cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a>CDateTimeCtrl:: GetMonthCalStyle
+## <a name="cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a> CDateTimeCtrl:: GetMonthCalStyle
 
 현재 날짜 및 시간 선택 컨트롤과 연결 된 드롭다운 월 달력 컨트롤의 스타일을 가져옵니다.
 
@@ -295,7 +294,7 @@ DWORD GetMonthCalStyle() const;
 
 이 메서드는 Windows SDK에서 설명 하는 [DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle) 메시지를 보냅니다.
 
-## <a name="cdatetimectrlgetrange"></a><a name="getrange"></a>CDateTimeCtrl:: GetRange
+## <a name="cdatetimectrlgetrange"></a><a name="getrange"></a> CDateTimeCtrl:: GetRange
 
 날짜 및 시간 선택 컨트롤의 현재 허용 되는 최소 및 최대 시스템 시간을 검색 합니다.
 
@@ -337,7 +336,7 @@ DWORD GetRange(
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]
 
-## <a name="cdatetimectrlgettime"></a><a name="gettime"></a>CDateTimeCtrl:: GetTime
+## <a name="cdatetimectrlgettime"></a><a name="gettime"></a> CDateTimeCtrl:: GetTime
 
 날짜 및 시간 선택 컨트롤에서 현재 선택한 시간을 검색 하 여 지정 된 구조체에 배치 `SYSTEMTIME` 합니다.
 
@@ -369,7 +368,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]
 
-## <a name="cdatetimectrlgetidealsize"></a><a name="getidealsize"></a>CDateTimeCtrl:: GetIdealSize
+## <a name="cdatetimectrlgetidealsize"></a><a name="getidealsize"></a> CDateTimeCtrl:: GetIdealSize
 
 현재 날짜 또는 시간을 표시 하는 데 필요한 날짜 및 시간 선택 컨트롤의 이상적인 크기를 반환 합니다.
 
@@ -379,9 +378,8 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*psize*|제한이 컨트롤의 이상적인 크기를 포함 하는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.|
+*psize*\
+제한이 컨트롤의 이상적인 크기를 포함 하는 [크기](/windows/win32/api/windef/ns-windef-size) 구조체에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -403,7 +401,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-## <a name="cdatetimectrlsetformat"></a><a name="setformat"></a>CDateTimeCtrl:: SetFormat
+## <a name="cdatetimectrlsetformat"></a><a name="setformat"></a> CDateTimeCtrl:: SetFormat
 
 지정 된 서식 문자열에 따라 날짜 및 시간 선택 컨트롤의 표시를 설정 합니다.
 
@@ -431,7 +429,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]
 
-## <a name="cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a>CDateTimeCtrl:: SetMonthCalColor
+## <a name="cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a> CDateTimeCtrl:: SetMonthCalColor
 
 날짜 및 시간 선택 컨트롤 내에서 월 달력의 지정 된 부분에 대 한 색을 설정 합니다.
 
@@ -470,7 +468,7 @@ COLORREF SetMonthCalColor(
 
   [CDateTimeCtrl:: GetMonthCalColor](#getmonthcalcolor)의 예제를 참조 하세요.
 
-## <a name="cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a>CDateTimeCtrl:: SetMonthCalFont
+## <a name="cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a> CDateTimeCtrl:: SetMonthCalFont
 
 날짜 및 시간 선택 컨트롤의 자식 month calendar 컨트롤에서 사용할 글꼴을 설정 합니다.
 
@@ -499,7 +497,7 @@ void SetMonthCalFont(
 > [!NOTE]
 > 이 코드를 사용 하는 경우 `CDialog` 형식의 *m_MonthFont* 이라고 하는 파생 클래스의 멤버를 만들려고 `CFont` 합니다.
 
-## <a name="cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a>CDateTimeCtrl:: SetMonthCalStyle
+## <a name="cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a> CDateTimeCtrl:: SetMonthCalStyle
 
 현재 날짜 및 시간 선택 컨트롤과 연결 된 드롭다운 월 달력 컨트롤의 스타일을 설정 합니다.
 
@@ -509,9 +507,8 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*dwStyle*|진행 월 달력 컨트롤 스타일의 비트 조합 (또는) 인 새 month calendar 컨트롤 스타일입니다. 자세한 내용은 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles)을 참조 하세요.|
+*dwStyle*\
+진행 월 달력 컨트롤 스타일의 비트 조합 (또는) 인 새 month calendar 컨트롤 스타일입니다. 자세한 내용은 [Month Calendar 컨트롤 스타일](/windows/win32/Controls/month-calendar-control-styles)을 참조 하세요.
 
 ### <a name="return-value"></a>Return Value
 
@@ -533,7 +530,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]
 
-## <a name="cdatetimectrlsetrange"></a><a name="setrange"></a>CDateTimeCtrl:: SetRange
+## <a name="cdatetimectrlsetrange"></a><a name="setrange"></a> CDateTimeCtrl:: SetRange
 
 날짜 및 시간 선택 컨트롤에 대해 허용 되는 최소 및 최대 시스템 시간을 설정 합니다.
 
@@ -567,7 +564,7 @@ BOOL SetRange(
 
   [CDateTimeCtrl:: GetRange](#getrange)의 예제를 참조 하세요.
 
-## <a name="cdatetimectrlsettime"></a><a name="settime"></a>CDateTimeCtrl:: SetTime
+## <a name="cdatetimectrlsettime"></a><a name="settime"></a> CDateTimeCtrl:: SetTime
 
 날짜 및 시간 선택 컨트롤의 시간을 설정 합니다.
 

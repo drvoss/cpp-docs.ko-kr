@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 594cec7d4898960cb78284dcbb5ad677027cd947
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219211"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561832"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf 클래스
 
@@ -160,7 +160,7 @@ class basic_streambuf;
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[basic_streambuf](#basic_streambuf)|`basic_streambuf` 형식의 개체를 생성합니다.|
 
@@ -220,7 +220,7 @@ class basic_streambuf;
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[연산자 =](#op_eq)|이 개체의 값을 다른 `basic_streambuf` 개체에서 할당합니다.|
 
@@ -230,7 +230,7 @@ class basic_streambuf;
 
 **네임스페이스:** std
 
-## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf:: basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a> basic_streambuf:: basic_streambuf
 
 `basic_streambuf` 형식의 개체를 생성합니다.
 
@@ -251,7 +251,7 @@ basic_streambuf(const basic_streambuf& right);
 
 두 번째 보호 된 생성자는 *오른쪽*에서 포인터와 로캘을 복사 합니다.
 
-## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf:: char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
 형식 이름을 **Elem** 템플릿 매개 변수와 연결합니다.
 
@@ -259,7 +259,7 @@ basic_streambuf(const basic_streambuf& right);
 typedef Elem char_type;
 ```
 
-## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf:: eback
+## <a name="basic_streambufeback"></a><a name="eback"></a> basic_streambuf:: eback
 
 포인터를 입력 버퍼의 시작 부분에 반환하는 보호된 함수입니다.
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 입력 버퍼의 시작 부분에 대한 포인터입니다.
 
-## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf:: egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a> basic_streambuf:: egptr
 
 입력 버퍼의 끝 부분을 막 지나는 포인터를 반환하는 보호된 함수입니다.
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 입력 버퍼의 끝을 바로 지난 포인터입니다.
 
-## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf:: epptr
+## <a name="basic_streambufepptr"></a><a name="epptr"></a> basic_streambuf:: epptr
 
 출력 버퍼의 끝 부분을 막 지나는 포인터를 반환하는 보호된 함수입니다.
 
@@ -295,7 +295,7 @@ char_type *epptr() const;
 
 출력 버퍼의 끝을 바로 지난 포인터입니다.
 
-## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf:: gbump
+## <a name="basic_streambufgbump"></a><a name="gbump"></a> basic_streambuf:: gbump
 
 입력 버퍼에 대 한 다음 포인터에 *count* 를 추가 하는 보호 된 함수입니다.
 
@@ -308,7 +308,7 @@ void gbump(int count);
 *수*\
 포인터를 이동시킬 양입니다.
 
-## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf:: getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a> basic_streambuf:: getloc
 
 Basic_streambuf 개체의 로캘을 가져옵니다.
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf:: gptr
+## <a name="basic_streambufgptr"></a><a name="gptr"></a> basic_streambuf:: gptr
 
 포인터를 입력 버퍼의 다음 요소에 반환하는 보호된 함수입니다.
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 입력 버퍼의 다음 요소에 대한 포인터입니다.
 
-## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf:: imbue
+## <a name="basic_streambufimbue"></a><a name="imbue"></a> basic_streambuf:: imbue
 
 [Pubimbue](#pubimbue)에서 호출 하는 보호 된 가상 함수입니다.
 
@@ -371,7 +371,7 @@ virtual void imbue(const locale& _Loc);
 
 기본 동작은 아무것도 수행하지 않는 것입니다.
 
-## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf:: in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a> basic_streambuf:: in_avail
 
 버퍼에서 읽을 준비가 된 요소의 수를 반환합니다.
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf:: int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a> basic_streambuf:: int_type
 
 basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 중 하나와 연결합니다.
 
@@ -413,7 +413,7 @@ basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 �
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf:: off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a> basic_streambuf:: off_type
 
 basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 중 하나와 연결합니다.
 
@@ -421,7 +421,7 @@ basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 �
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf:: operator =
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a> basic_streambuf:: operator =
 
 이 개체의 값을 다른 `basic_streambuf` 개체에서 할당합니다.
 
@@ -438,7 +438,7 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 Protected 멤버 연산자는 입력 버퍼와 출력 버퍼를 제어 하는 포인터를 *오른쪽* 에서 복사 합니다. 또한 `right.`[getloc()](#getloc)를 `locale object`에 저장합니다. 을 반환 **`*this`** 합니다.
 
-## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf:: 오버플로
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a> basic_streambuf:: 오버플로
 
 가득 찬 버퍼에 새 문자를 삽입할 때 호출할 수 있는 보호된 가상 함수입니다.
 
@@ -473,7 +473,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 소비의 정의는 파생 클래스에 따라 다릅니다. 예를 들어, `filebuf` 클래스는 문자를 파일에 기록하는 반면, `strstreambuf` 클래스는 문자를 버퍼에 보관하고(버퍼가 동적으로 지정된 경우) 오버플로 호출에 대한 응답으로 버퍼를 확장합니다. 이 확장은 이전 버퍼를 해제하고 더 큰 새 버퍼로 대체하여 수행됩니다. 포인터는 필요에 따라 조정됩니다.
 
-## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf::p backfail
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a> basic_streambuf::p backfail
 
 보호된 가상 멤버 함수는 요소를 입력 스트림에 다시 넣은 후 다음 포인터에서 가리키는 현재 요소로 설정하려고 합니다.
 
@@ -500,7 +500,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 - 공통된 입력 및 출력 스트림이 있는 스트림 버퍼의 경우, 출력 버퍼에 대한 시작 포인터와 다음 포인터 사이의 일부 또는 모든 요소를 외부 대상에 기록하여 putback 위치를 사용 가능하게 만들 수 있습니다.
 
-## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::p 기반
+## <a name="basic_streambufpbase"></a><a name="pbase"></a> basic_streambuf::p 기반
 
 포인터를 출력 버퍼의 시작 부분에 반환하는 보호된 함수입니다.
 
@@ -512,7 +512,7 @@ char_type *pbase() const;
 
 출력 버퍼의 시작 부분에 대한 포인터입니다.
 
-## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::p 범프
+## <a name="basic_streambufpbump"></a><a name="pbump"></a> basic_streambuf::p 범프
 
 출력 버퍼의 다음 포인터에 *count* 를 추가 하는 보호 된 함수입니다.
 
@@ -525,7 +525,7 @@ void pbump(int count);
 *수*\
 쓰기 위치를 앞으로 이동시킬 문자 수입니다.
 
-## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::p os_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a> basic_streambuf::p os_type
 
 basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 중 하나와 연결합니다.
 
@@ -533,7 +533,7 @@ basic_streambuf 범위 내 형식 이름을 템플릿 매개 변수의 형식 �
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::p ptr
+## <a name="basic_streambufpptr"></a><a name="pptr"></a> basic_streambuf::p ptr
 
 포인터를 출력 버퍼의 다음 요소에 반환하는 보호된 함수입니다.
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 출력 버퍼의 다음 요소에 대한 포인터입니다.
 
-## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::p ubimbue
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a> basic_streambuf::p ubimbue
 
 basic_streambuf 개체의 로캘을 설정합니다.
 
@@ -570,7 +570,7 @@ locale pubimbue(const locale& _Loc);
 
 `pubimbue`의 사용 예제는 [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)를 참조하세요.
 
-## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::p ubseekoff
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a> basic_streambuf::p ubseekoff
 
 파생 클래스에서 재정의되는 보호된 가상 함수인 [seekoff](#seekoff)를 호출합니다.
 
@@ -599,7 +599,7 @@ pos_type pubseekoff(off_type _Off,
 
 *_Way*를 기준으로 포인터를 이동 합니다.
 
-## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::p ubseekpos
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p ubseekpos
 
 파생 클래스에서 재정의 되는 보호 된 가상 함수인 [seekpos](#seekpos)를 호출 하 고 현재 포인터 위치를 다시 설정 합니다.
 
@@ -623,7 +623,7 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 멤버 함수는 [seekpos](#seekpos)(_ *Sp*, `_Which`)를 반환합니다.
 
-## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::p ubsetbuf
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a> basic_streambuf::p ubsetbuf
 
 파생 클래스에서 재정의되는 보호된 가상 함수인 [setbuf](#setbuf)를 호출합니다.
 
@@ -645,7 +645,7 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 [Setbuf](#setbuf)( `_Buffer` ,)를 반환 `count` 합니다.
 
-## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::p ubsync
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a> basic_streambuf::p ubsync
 
 파생 클래스에서 재정의 되는 보호 된 가상 함수인 [sync](#sync)를 호출 하 고이 버퍼와 연결 된 외부 스트림을 업데이트 합니다.
 
@@ -657,7 +657,7 @@ int pubsync();
 
 실패 하면 [sync](#sync) 또는-1을 반환 합니다.
 
-## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf:: sbumpc
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a> basic_streambuf:: sbumpc
 
 스트림 포인터를 이동하여 현재 요소를 읽고 반환합니다.
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf:: seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a> basic_streambuf:: seekoff
 
 제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.
 
@@ -738,7 +738,7 @@ virtual pos_type seekoff(
 
 하나 이상의 스트림 위치를 정상적으로 변경하는 경우 함수는 결과 스트림 위치 또는 결과 스트림 위치 중 하나를 반환합니다. 실패하면 잘못된 스트림 위치를 반환합니다. 기본 동작은 잘못된 스트림 위치를 반환하는 것입니다.
 
-## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf:: seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a> basic_streambuf:: seekpos
 
 제어되는 스트림의 현재 위치를 변경하려고 하는 보호된 가상 멤버 함수입니다.
 
@@ -766,7 +766,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 하나 이상의 스트림 위치를 정상적으로 변경하는 경우 함수는 결과 스트림 위치 또는 결과 스트림 위치 중 하나를 반환합니다. 아닌 경우 잘못된 스트림 위치(-1)를 반환합니다. 기본 동작은 잘못된 스트림 위치를 반환하는 것입니다.
 
-## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf:: setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a> basic_streambuf:: setbuf
 
 파생된 각 스트림 버퍼와 관련된 작업을 수행하는 보호된 가상 멤버 함수입니다.
 
@@ -792,7 +792,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md)를 참조하세요. `setbuf`는 사용할 `streambuf` 개체에 대한 메모리 영역을 제공합니다. 버퍼가 사용되는 방법은 파생 클래스에서 정의됩니다.
 
-## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf:: setg
+## <a name="basic_streambufsetg"></a><a name="setg"></a> basic_streambuf:: setg
 
 입력 버퍼에 대한 시작 포인터에 _ *Gbeg*, 다음 포인터에 `_Gnext`, 끝 포인터 `_Gend`를 저장하는 보호된 함수입니다.
 
@@ -813,7 +813,7 @@ void setg(char_type* _Gbeg,
 *_Gend*\
 버퍼의 끝에 대한 포인터입니다.
 
-## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf:: setp
+## <a name="basic_streambufsetp"></a><a name="setp"></a> basic_streambuf:: setp
 
 시작 포인터에 *_Pbeg* 를 저장 하 고 출력 버퍼에 대 한 끝 포인터에 *_Pend* 를 저장 하는 보호 된 함수입니다.
 
@@ -829,7 +829,7 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 *_Pend*\
 버퍼의 끝에 대한 포인터입니다.
 
-## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf:: sgetc
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a> basic_streambuf:: sgetc
 
 스트림에서 위치를 변경하지 않고 현재 요소를 반환합니다.
 
@@ -865,7 +865,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf:: sgetn
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: sgetn
 
 입력 버퍼에서 문자 *수를 계산* 하 여 제공 된 버퍼 *ptr*에 저장 합니다.
 
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf:: showmanyc
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a> basic_streambuf:: showmanyc
 
 입력 스트림에서 추출할 수 있는 문자 수를 반환하고 프로그램이 무기한 대기하지 않도록 해주는 보호된 가상 멤버 함수입니다.
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 기본 동작은 0을 반환하는 것입니다.
 
-## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf:: snextc
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a> basic_streambuf:: snextc
 
 현재 요소를 읽고 다음 요소를 반환합니다.
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf:: sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a> basic_streambuf:: sputbackc
 
 스트림에 char_type을 넣습니다.
 
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf:: sputc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a> basic_streambuf:: sputc
 
 스트림에 문자를 넣습니다.
 
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf:: sputn
+## <a name="basic_streambufsputn"></a><a name="sputn"></a> basic_streambuf:: sputn
 
 스트림에 문자열을 넣습니다.
 
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf:: stossc
+## <a name="basic_streambufstossc"></a><a name="stossc"></a> basic_streambuf:: stossc
 
 스트림에서 현재 요소를 지나 이동합니다.
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf:: sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a> basic_streambuf:: sungetc
 
 스트림에서 문자를 가져옵니다.
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf:: swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf:: swap
 
 이 개체에 있는 값을 제공된 `basic_streambuf` 개체에 있는 값으로 교환합니다.
 
@@ -1200,15 +1200,14 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*오른쪽*|값을 교환하는 데 사용되는 `basic_streambuf` 개체에 대한 lvalue 참조입니다.|
+*오른쪽*\
+값을 교환하는 데 사용되는 `basic_streambuf` 개체에 대한 lvalue 참조입니다.
 
 ### <a name="remarks"></a>설명
 
 보호 된 멤버 함수는 및을 *제어 하는 모든 포인터* 와 함께 교환 `input buffer` `output buffer` 됩니다. 또한 `right.`[getloc()](#getloc)을 `locale` 개체와 교환합니다.
 
-## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf:: sync
+## <a name="basic_streambufsync"></a><a name="sync"></a> basic_streambuf:: sync
 
 제어된 스트림을 연결된 외부 스트림과 동기화하려고 하는 보호된 가상 함수입니다.
 
@@ -1224,7 +1223,7 @@ virtual int sync();
 
 `sync`에는 출력 버퍼에 대한 시작 포인터와 다음 포인터 사이의 모든 요소를 기록하는 것이 포함됩니다. 입력 버퍼에 대한 다음 포인터와 끝 포인터 사이의 모든 요소를 되돌려 놓는 것은 포함되지 않습니다.
 
-## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf:: traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a> basic_streambuf:: traits_type
 
 형식 이름을 **Tr** 템플릿 매개 변수와 연결합니다.
 
@@ -1232,7 +1231,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf:: uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a> basic_streambuf:: uflow
 
 입력 스트림에서 현재 요소를 추출하는 보호된 가상 함수입니다.
 
@@ -1256,7 +1255,7 @@ virtual int_type uflow();
 
 함수가 성공할 수 없는 경우 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)를 반환 하거나 예외를 throw 합니다. 성공할 경우, 위에서 설명한 대로 변환된 입력 스트림에서 현재 요소 `ch`를 반환하고 입력 버퍼의 다음 포인터로 이동합니다. 기본 동작은 [underflow](#underflow)를 호출하는 것입니다. 해당 함수가 **traits_type::eof**를 반환할 경우 **traits_type::eof**를 반환합니다. 아닌 경우, 위에서 설명한 대로 변환된 입력 스트림에서 현재 요소 **ch**를 반환하고 입력 버퍼의 다음 포인터로 이동합니다.
 
-## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf:: 언더플로
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a> basic_streambuf:: 언더플로
 
 입력 스트림에서 현재 요소를 추출하는 보호된 가상 함수입니다.
 
@@ -1286,7 +1285,7 @@ virtual int_type underflow();
 
 `strstreambuf` 클래스에서 `underflow`는 `overflow`에 대한 호출에 의해 동적으로 할당된 스토리지에 액세스하도록 [egptr](#egptr) 포인터를 조정합니다.
 
-## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf:: xsgetn
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a> basic_streambuf:: xsgetn
 
 입력 스트림에서 요소를 추출하기 위한 보호된 가상 함수입니다.
 
@@ -1314,7 +1313,7 @@ virtual streamsize xsgetn(
 
 보호 된 가상 구성원 함수는 [sbumpc](#sbumpc)를 반복 해 서 호출 하는 것 처럼 입력 스트림에서 요소 *수를 계산* 하 여 *ptr*에서 시작 하는 배열에 저장 합니다. 실제로 추출된 요소의 수를 반환합니다.
 
-## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf:: xsputn
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: xsputn
 
 요소를 출력 스트림에 삽입하기 위한 보호된 가상 함수입니다.
 

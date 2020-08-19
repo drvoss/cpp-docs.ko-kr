@@ -77,7 +77,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>보호된 데이터 멤버
 
-|Name|Description|
+|속성|Description|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|대체 (fallback)가 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.|
 |[m_hTransaction](#m_htransaction)|트랜잭션 핸들입니다.|

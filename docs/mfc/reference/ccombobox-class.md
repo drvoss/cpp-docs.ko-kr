@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 4e7eba94084a96c833136e4c92de481fdc435c7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183112"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561676"
 ---
 # <a name="ccombobox-class"></a>CComboBox 클래스
 
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|Description|
 |----------|-----------------|
 |[CComboBox:: CComboBox](#ccombobox)|`CComboBox` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|콤보 상자의 목록 상자 또는 CBS_SORT 스타일이 있는 목록 상자의 정렬 된 위치에 문자열을 추가 합니다.|
 |[CComboBox:: Clear](#clear)|편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (선택 취소) 합니다.|
@@ -262,7 +262,7 @@ class CComboBox : public CWnd
 
 **헤더:** afxwin.h
 
-## <a name="ccomboboxaddstring"></a><a name="addstring"></a>CComboBox:: AddString
+## <a name="ccomboboxaddstring"></a><a name="addstring"></a> CComboBox:: AddString
 
 콤보 상자의 목록 상자에 문자열을 추가 합니다.
 
@@ -292,7 +292,7 @@ int AddString(LPCTSTR lpszString);
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox:: CComboBox
+## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a> CComboBox:: CComboBox
 
 `CComboBox` 개체를 생성합니다.
 
@@ -304,7 +304,7 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-## <a name="ccomboboxclear"></a><a name="clear"></a>CComboBox:: Clear
+## <a name="ccomboboxclear"></a><a name="clear"></a> CComboBox:: Clear
 
 콤보 상자의 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (선택 취소) 합니다.
 
@@ -320,7 +320,7 @@ void Clear();
 
 [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]
 
-## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox:: CompareItem
+## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a> CComboBox:: CompareItem
 
 정렬 된 소유자 그리기 콤보 상자의 목록 상자 부분에서 새 항목의 상대 위치를 확인 하기 위해 프레임 워크에서 호출 됩니다.
 
@@ -353,7 +353,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-## <a name="ccomboboxcopy"></a><a name="copy"></a>CComboBox:: Copy
+## <a name="ccomboboxcopy"></a><a name="copy"></a> CComboBox:: Copy
 
 콤보 상자의 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 CF_TEXT 형식으로 클립보드에 복사 합니다.
 
@@ -365,7 +365,7 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-## <a name="ccomboboxcreate"></a><a name="create"></a>CComboBox:: Create
+## <a name="ccomboboxcreate"></a><a name="create"></a> CComboBox:: Create
 
 콤보 상자를 만들고 개체에 연결 `CComboBox` 합니다.
 
@@ -423,7 +423,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-## <a name="ccomboboxcut"></a><a name="cut"></a>CComboBox:: Cut
+## <a name="ccomboboxcut"></a><a name="cut"></a> CComboBox:: Cut
 
 콤보 상자 편집 컨트롤에서 현재 선택 항목 (있는 경우)을 삭제 (잘라내기) 하 고 삭제 된 텍스트를 클립보드에 CF_TEXT 형식으로 복사 합니다.
 
@@ -439,7 +439,7 @@ void Cut();
 
 [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]
 
-## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::D eleteItem
+## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a> CComboBox::D eleteItem
 
 사용자가 소유자 그리기 개체에서 항목을 삭제 `CComboBox` 하거나 콤보 상자를 소멸 시키는 경우 프레임 워크에서 호출 됩니다.
 
@@ -460,7 +460,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::D eleteString
+## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a> CComboBox::D eleteString
 
 콤보 상자에서 *n 인덱스* 위치에 있는 항목을 삭제 합니다.
 
@@ -485,7 +485,7 @@ int DeleteString(UINT nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-## <a name="ccomboboxdir"></a><a name="dir"></a>CComboBox: ir:D
+## <a name="ccomboboxdir"></a><a name="dir"></a> CComboBox: ir:D
 
 콤보 상자의 목록 상자에 파일 이름 또는 드라이브 목록을 추가 합니다.
 
@@ -531,7 +531,7 @@ int Dir(
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox::D rawItem
+## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a> CComboBox::D rawItem
 
 소유자 그리기 콤보 상자의 시각적 측면이 변경 될 때 프레임 워크에서 호출 됩니다.
 
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-## <a name="ccomboboxfindstring"></a><a name="findstring"></a>CComboBox:: FindString
+## <a name="ccomboboxfindstring"></a><a name="findstring"></a> CComboBox:: FindString
 
 콤보 상자의 목록 상자에서 지정 된 접두사를 포함 하는 첫 번째 문자열을 찾습니다.
 
@@ -584,7 +584,7 @@ int FindString(
 
 [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]
 
-## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox:: FindStringExact
+## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a> CComboBox:: FindStringExact
 
 `FindStringExact`멤버 함수를 호출 하 여 *lpszFind*에 지정 된 문자열과 일치 하는 첫 번째 목록 상자 문자열 (콤보 상자)을 찾습니다.
 
@@ -614,7 +614,7 @@ int FindStringExact(
 
 [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]
 
-## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox:: GetComboBoxInfo
+## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a> CComboBox:: GetComboBoxInfo
 
 개체에 대 한 정보를 검색 `CComboBox` 합니다.
 
@@ -635,7 +635,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 
 이 멤버 함수는 Windows SDK에 설명 된 대로 [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) 메시지의 기능을 에뮬레이트합니다.
 
-## <a name="ccomboboxgetcount"></a><a name="getcount"></a>CComboBox:: GetCount
+## <a name="ccomboboxgetcount"></a><a name="getcount"></a> CComboBox:: GetCount
 
 콤보 상자의 목록 상자 부분에 있는 항목 수를 검색 하려면이 멤버 함수를 호출 합니다.
 
@@ -651,7 +651,7 @@ int GetCount() const;
 
 [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]
 
-## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox:: GetCueBanner
+## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a> CComboBox:: GetCueBanner
 
 콤보 상자 컨트롤에 대해 표시 되는 큐 텍스트를 가져옵니다.
 
@@ -665,10 +665,11 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*lpszText*|제한이 큐 배너 텍스트를 받는 버퍼에 대 한 포인터입니다.|
-|*cchText*|진행 *LpszText* 매개 변수가 가리키는 버퍼의 크기입니다.|
+*lpszText*\
+제한이 큐 배너 텍스트를 받는 버퍼에 대 한 포인터입니다.
+
+*cchText*\
+진행 *LpszText* 매개 변수가 가리키는 버퍼의 크기입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -684,7 +685,7 @@ BOOL GetCueBanner(
 
 이 메서드는 Windows SDK에서 설명 하는 [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) 메시지를 보냅니다.
 
-## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox:: GetCurSel
+## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a> CComboBox:: GetCurSel
 
 콤보 상자에서 선택 된 항목을 확인 하려면이 멤버 함수를 호출 합니다.
 
@@ -698,13 +699,13 @@ int GetCurSel() const;
 
 ### <a name="remarks"></a>설명
 
-`GetCurSel`인덱스를 목록에 반환 합니다.
+`GetCurSel` 인덱스를 목록에 반환 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]
 
-## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox:: GetDroppedControlRect
+## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a> CComboBox:: GetDroppedControlRect
 
 `GetDroppedControlRect`멤버 함수를 호출 하 여 드롭다운 콤보 상자에 표시 되는 (드롭다운) 목록 상자의 화면 좌표를 검색 합니다.
 
@@ -721,7 +722,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 
 [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]
 
-## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox:: GetDroppedState
+## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a> CComboBox:: GetDroppedState
 
 `GetDroppedState`멤버 함수를 호출 하 여 드롭다운 콤보 상자의 목록 상자가 표시 되는지 여부를 확인 합니다.
 
@@ -737,7 +738,7 @@ BOOL GetDroppedState() const;
 
 [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]
 
-## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox:: GetDroppedWidth
+## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a> CComboBox:: GetDroppedWidth
 
 콤보 상자의 목록 상자에 허용 되는 최소 너비 (픽셀)를 검색 하려면이 함수를 호출 합니다.
 
@@ -759,7 +760,7 @@ int GetDroppedWidth() const;
 
   [Setdroppedwidth](#setdroppedwidth)의 예제를 참조 하세요.
 
-## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox:: GetEditSel
+## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a> CComboBox:: GetEditSel
 
 콤보 상자의 편집 컨트롤에서 현재 선택 된 항목의 시작 및 끝 문자 위치를 가져옵니다.
 
@@ -775,7 +776,7 @@ DWORD GetEditSel() const;
 
 [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]
 
-## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox:: GetExtendedUI
+## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a> CComboBox:: GetExtendedUI
 
 `GetExtendedUI`멤버 함수를 호출 하 여 콤보 상자에 기본 사용자 인터페이스나 확장 사용자 인터페이스가 있는지 여부를 확인 합니다.
 
@@ -801,7 +802,7 @@ BOOL GetExtendedUI() const;
 
 [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]
 
-## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox:: GetHorizontalExtent
+## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a> CComboBox:: GetHorizontalExtent
 
 콤보 상자에서 콤보 상자의 목록 상자 부분을 가로로 스크롤할 수 있는 너비 (픽셀)를 검색 합니다.
 
@@ -821,7 +822,7 @@ UINT GetHorizontalExtent() const;
 
 [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]
 
-## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox:: GetItemData
+## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a> CComboBox:: GetItemData
 
 지정 된 콤보 상자 항목과 연결 된 응용 프로그램 제공 32 비트 값을 검색 합니다.
 
@@ -846,7 +847,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]
 
-## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox:: GetItemDataPtr
+## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a> CComboBox:: GetItemDataPtr
 
 지정 된 콤보 상자 항목과 연결 된 응용 프로그램 제공 32 비트 값을 포인터로 검색 합니다 ( **`void`** <strong>\*</strong> ).
 
@@ -867,7 +868,7 @@ void* GetItemDataPtr(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]
 
-## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox:: GetItemHeight
+## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a> CComboBox:: GetItemHeight
 
 `GetItemHeight`멤버 함수를 호출 하 여 콤보 상자에서 목록 항목의 높이를 검색 합니다.
 
@@ -888,7 +889,7 @@ int GetItemHeight(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]
 
-## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox:: GetLBText
+## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a> CComboBox:: GetLBText
 
 콤보 상자의 목록 상자에서 문자열을 가져옵니다.
 
@@ -925,7 +926,7 @@ void GetLBText(
 
 [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]
 
-## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox:: GetLBTextLen
+## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a> CComboBox:: GetLBTextLen
 
 콤보 상자의 목록 상자에 있는 문자열의 길이를 가져옵니다.
 
@@ -946,7 +947,7 @@ int GetLBTextLen(int nIndex) const;
 
   [Ccombobox:: GetLBText](#getlbtext)의 예제를 참조 하세요.
 
-## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox:: GetLocale
+## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a> CComboBox:: GetLocale
 
 콤보 상자에서 사용 하는 로캘을 검색 합니다.
 
@@ -966,7 +967,7 @@ LCID GetLocale() const;
 
   [Ccombobox:: SetLocale](#setlocale)의 예제를 참조 하세요.
 
-## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox:: GetMinVisible
+## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a> CComboBox:: GetMinVisible
 
 현재 콤보 상자 컨트롤의 드롭다운 목록에 표시 되는 최소 항목 수를 가져옵니다.
 
@@ -982,7 +983,7 @@ int GetMinVisible() const;
 
 이 메서드는 Windows SDK에서 설명 하는 [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) 메시지를 보냅니다.
 
-## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox:: GetTopIndex
+## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a> CComboBox:: GetTopIndex
 
 콤보 상자의 목록 상자 부분에서 표시 되는 첫 번째 항목의 0부터 시작 하는 인덱스를 검색 합니다.
 
@@ -1002,7 +1003,7 @@ int GetTopIndex() const;
 
 [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]
 
-## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox:: InitStorage
+## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a> CComboBox:: InitStorage
 
 콤보 상자의 목록 상자 부분에 목록 상자 항목을 저장할 메모리를 할당 합니다.
 
@@ -1036,7 +1037,7 @@ Windows 95/98에만 해당: *wParam* 매개 변수는 16 비트 값으로 제한
 
 [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]
 
-## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox:: InsertString
+## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a> CComboBox:: InsertString
 
 콤보 상자의 목록 상자에 문자열을 삽입합니다.
 
@@ -1069,7 +1070,7 @@ int InsertString(
 
 [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]
 
-## <a name="ccomboboxlimittext"></a><a name="limittext"></a>CComboBox:: 개 텍스트
+## <a name="ccomboboxlimittext"></a><a name="limittext"></a> CComboBox:: 개 텍스트
 
 사용자가 콤보 상자의 편집 컨트롤에 입력할 수 있는 텍스트의 길이 (바이트)를 제한 합니다.
 
@@ -1090,13 +1091,13 @@ BOOL LimitText(int nMaxChars);
 
 콤보 상자에 [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)스타일이 없으면 텍스트 제한을 편집 컨트롤의 크기 보다 크게 설정 해도 아무런 효과가 없습니다.
 
-`LimitText`사용자가 입력할 수 있는 텍스트만 제한 합니다. 메시지가 전송 될 때 편집 컨트롤에 이미 있는 텍스트에는 영향을 주지 않으며, 목록 상자에서 문자열을 선택할 때 편집 컨트롤에 복사 되는 텍스트의 길이에도 영향을 주지 않습니다.
+`LimitText` 사용자가 입력할 수 있는 텍스트만 제한 합니다. 메시지가 전송 될 때 편집 컨트롤에 이미 있는 텍스트에는 영향을 주지 않으며, 목록 상자에서 문자열을 선택할 때 편집 컨트롤에 복사 되는 텍스트의 길이에도 영향을 주지 않습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]
 
-## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox:: MeasureItem
+## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a> CComboBox:: MeasureItem
 
 소유자 그리기 스타일을 사용 하는 콤보 상자를 만들 때 프레임 워크에서 호출 됩니다.
 
@@ -1121,7 +1122,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-## <a name="ccomboboxpaste"></a><a name="paste"></a>CComboBox::P aste
+## <a name="ccomboboxpaste"></a><a name="paste"></a> CComboBox::P aste
 
 클립보드의 데이터를 현재 커서 위치에 있는 콤보 상자의 편집 컨트롤에 삽입 합니다.
 
@@ -1137,7 +1138,7 @@ void Paste();
 
 [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]
 
-## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox:: ResetContent
+## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a> CComboBox:: ResetContent
 
 콤보 상자의 목록 상자와 편집 컨트롤에서 모든 항목을 제거 합니다.
 
@@ -1149,7 +1150,7 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]
 
-## <a name="ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox:: SelectString
+## <a name="ccomboboxselectstring"></a><a name="selectstring"></a> CComboBox:: SelectString
 
 콤보 상자의 목록 상자에서 문자열을 검색 하 고, 문자열이 있으면 목록 상자에서 문자열을 선택 하 여 편집 컨트롤에 복사 합니다.
 
@@ -1181,7 +1182,7 @@ int SelectString(
 
 [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]
 
-## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox:: SetCueBanner
+## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a> CComboBox:: SetCueBanner
 
 콤보 상자 컨트롤에 대해 표시 되는 큐 텍스트를 설정 합니다.
 
@@ -1191,9 +1192,8 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*lpszText*|진행 큐 텍스트를 포함 하는 null로 끝나는 버퍼에 대 한 포인터입니다.|
+*lpszText*\
+진행 큐 텍스트를 포함 하는 null로 끝나는 버퍼에 대 한 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1217,7 +1217,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox:: SetCurSel
+## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a> CComboBox:: SetCurSel
 
 콤보 상자의 목록 상자에서 문자열을 선택 합니다.
 
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]
 
-## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox:: SetDroppedWidth
+## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a> CComboBox:: SetDroppedWidth
 
 콤보 상자의 목록 상자에 허용 되는 최소 너비 (픽셀)를 설정 하려면이 함수를 호출 합니다.
 
@@ -1269,7 +1269,7 @@ int SetDroppedWidth(UINT nWidth);
 
 [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]
 
-## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox:: SetEditSel
+## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a> CComboBox:: SetEditSel
 
 콤보 상자의 편집 컨트롤에서 문자를 선택 합니다.
 
@@ -1302,7 +1302,7 @@ BOOL SetEditSel(
 
   [Ccombobox:: GetEditSel](#geteditsel)의 예제를 참조 하세요.
 
-## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox:: SetExtendedUI
+## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a> CComboBox:: SetExtendedUI
 
 `SetExtendedUI` 멤버 함수를 호출하여 기본 사용자 인터페이스 또는 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일이 있는 콤보 상자의 확장 사용자 인터페이스를 선택합니다.
 
@@ -1333,7 +1333,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
   [Ccombobox:: GetExtendedUI](#getextendedui)의 예제를 참조 하세요.
 
-## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox:: SetHorizontalExtent
+## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a> CComboBox:: SetHorizontalExtent
 
 콤보 상자의 목록 상자 부분을 가로로 스크롤할 수 있는 너비 (픽셀)를 설정 합니다.
 
@@ -1354,7 +1354,7 @@ void SetHorizontalExtent(UINT nExtent);
 
 [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]
 
-## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox:: SetItemData
+## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a> CComboBox:: SetItemData
 
 콤보 상자의 지정 된 항목과 연결 된 32 비트 값을 설정 합니다.
 
@@ -1384,7 +1384,7 @@ int SetItemData(
 
 [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]
 
-## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox:: SetItemDataPtr
+## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a> CComboBox:: SetItemDataPtr
 
 콤보 상자의 지정 된 항목과 연결 된 32 비트 값을 지정 된 포인터 ()로 설정 합니다 **`void`** <strong>\*</strong> .
 
@@ -1414,7 +1414,7 @@ int SetItemDataPtr(
 
 [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]
 
-## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox:: SetItemHeight
+## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a> CComboBox:: SetItemHeight
 
 멤버 함수를 호출 하 여 콤보 `SetItemHeight` 상자에 목록 항목의 높이를 설정 하거나 콤보 상자의 편집 컨트롤 (또는 정적 텍스트) 부분의 높이를 설정 합니다.
 
@@ -1448,7 +1448,7 @@ int SetItemHeight(
 
 [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]
 
-## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox:: SetLocale
+## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a> CComboBox:: SetLocale
 
 이 콤보 상자의 로캘 식별자를 설정 합니다.
 
@@ -1473,7 +1473,7 @@ LCID SetLocale(LCID nNewLocale);
 
 [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]
 
-## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox:: SetMinVisibleItems
+## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a> CComboBox:: SetMinVisibleItems
 
 현재 콤보 상자 컨트롤의 드롭다운 목록에 표시 되는 최소 항목 수를 설정 합니다.
 
@@ -1483,9 +1483,8 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*iMinVisible*|진행 표시 되는 최소 항목 수를 지정 합니다.|
+*iMinVisible 않음*\
+진행 표시 되는 최소 항목 수를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1507,7 +1506,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox:: SetTopIndex
+## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a> CComboBox:: SetTopIndex
 
 콤보 상자의 목록 상자 부분에 특정 항목이 표시 되는지 확인 합니다.
 
@@ -1532,7 +1531,7 @@ int SetTopIndex(int nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]
 
-## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox:: ShowDropDown
+## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a> CComboBox:: ShowDropDown
 
 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일을 포함 하는 콤보 상자의 목록 상자를 표시 하거나 숨깁니다.
 

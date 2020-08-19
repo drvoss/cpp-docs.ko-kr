@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213218"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560636"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,12 +26,13 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*상수 식*|부울로 변환할 수 있는 정수 계열 상수 식입니다.<br /><br /> 평가 된 식이 0 (false) 이면 *문자열-리터럴* 매개 변수가 표시 되 고 컴파일이 오류와 함께 실패 합니다. 식이 0이 아니면 (true) **`static_assert`** 선언은 적용 되지 않습니다.|
-|*string-literal*|*상수 식* 매개 변수가 0 인 경우 표시 되는 메시지입니다. 메시지는 컴파일러의 [기본 문자 집합](../c-language/ascii-character-set.md) 에 있는 문자열입니다. 즉, [멀티 바이트 또는 와이드 문자가](../c-language/multibyte-and-wide-characters.md)아닙니다.|
+*상수 식*\
+부울로 변환할 수 있는 정수 계열 상수 식입니다. 평가 된 식이 0 (false) 이면 *문자열-리터럴* 매개 변수가 표시 되 고 컴파일이 오류와 함께 실패 합니다. 식이 0이 아니면 (true) **`static_assert`** 선언은 적용 되지 않습니다.
+
+*문자열-리터럴*\
+*상수 식* 매개 변수가 0 인 경우 표시 되는 메시지입니다. 메시지는 컴파일러의 [기본 문자 집합](../c-language/ascii-character-set.md) 에 있는 문자열입니다. 즉, [멀티 바이트 또는 와이드 문자가](../c-language/multibyte-and-wide-characters.md)아닙니다.
 
 ## <a name="remarks"></a>설명
 
@@ -43,7 +44,7 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 **`static_assert`** 네임 스페이스, 클래스 또는 블록 범위에서 키워드를 사용할 수 있습니다. 키워드는 **`static_assert`** 네임 스페이스 범위에서 사용할 수 있으므로 프로그램에 새 이름을 도입 하지 않더라도 기술적으로 선언 됩니다.
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 다음 예제에서 선언에는 **`static_assert`** 네임 스페이스 범위가 있습니다. 컴파일러가 `void *` 형식의 크기를 알고 있기 때문에 식이 즉시 계산됩니다.
 
@@ -53,7 +54,7 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 다음 예제에서 **`static_assert`** 선언은 클래스 범위를 갖습니다. 는 **`static_assert`** 템플릿 매개 변수가 POD ( *일반 이전 데이터* ) 형식 인지 확인 합니다. 컴파일러는 **`static_assert`** 선언 될 때 선언을 검사 하지만 클래스 템플릿이에서 인스턴스화될 때까지 *상수 식* 매개 변수를 평가 하지 않습니다 `basic_string` `main()` .
 
@@ -82,7 +83,7 @@ int main()
 }
 ```
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 다음 예제에서 선언에는 **`static_assert`** 블록 범위가 있습니다. 는 **`static_assert`** VMPage 구조의 크기가 시스템의 가상 메모리 pagesize와 같은지 확인 합니다.
 
@@ -108,6 +109,6 @@ public:
 [어설션 및 사용자 제공 메시지(C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
 [#error 지시문 (C/c + +)](../preprocessor/hash-error-directive-c-cpp.md)<br/>
 [assert 매크로, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
-[모음](../cpp/templates-cpp.md)<br/>
+[템플릿](../cpp/templates-cpp.md)<br/>
 [ASCII 문자 집합](../c-language/ascii-character-set.md)<br/>
 [선언 및 정의](declarations-and-definitions-cpp.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: 124c49b22566e44989fd30a3274c2d121532eef4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 340a4e51c82f1799ebea138ce230393825b9e636
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617474"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562612"
 ---
 # <a name="allocator_fixed_size-class"></a>allocator_fixed_size 클래스
 
@@ -29,9 +29,8 @@ class allocator_fixed_size;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Type*|할당자에 의해 할당된 요소 형식입니다.|
+*입력할*\
+할당자에 의해 할당된 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 

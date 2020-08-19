@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219354"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560963"
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 
 정수 오버플로를 방지할 수 있도록 정수 기본 형식을 확장하고 다양한 형식의 정수 비교를 허용합니다.
 
 > [!NOTE]
-> 최신 버전의 SafeInt 라이브러리는에 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 있습니다. SafeInt 라이브러리를 사용 하려면 리포지토리를 복제 하 고`#include "SafeInt.hpp"`
+> 최신 버전의 SafeInt 라이브러리는에 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 있습니다. SafeInt 라이브러리를 사용 하려면 리포지토리를 복제 하 고 `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>구문
 
@@ -33,23 +33,29 @@ class SafeInt;
 
 ### <a name="parameters"></a>매개 변수
 
-| 템플릿  |  설명 |
-|--------|------------|
-| T         |  `SafeInt`로 대체되는 정수 또는 부울 매개 변수의 형식입니다. |
-| E         |  오류 처리 정책을 정의하는 열거형 데이터 형식입니다. |
-| U         |  보조 피연산자에 대한 정수 또는 부울 매개 변수의 형식입니다. |
+*`T`*\
+`SafeInt`로 대체되는 정수 또는 부울 매개 변수의 형식입니다.
 
-| 매개 변수  |  설명 |
-|---------|-----------------|
-| *rhs*      |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *i*        |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
-| *비트씩*     |  [in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다. |
+*`E`*\
+오류 처리 정책을 정의하는 열거형 데이터 형식입니다.
+
+*`U`*\
+보조 피연산자에 대한 정수 또는 부울 매개 변수의 형식입니다.
+
+*rhs*\
+[in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다.
+
+*보이지*\
+[in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다.
+
+*비트씩*\
+[in] 여러 독립 실행형 함수에서 연산자의 오른쪽에 있는 값을 나타내는 입력 매개 변수입니다.
 
 ## <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| 이름                          |  설명 |
+| 이름                          |  Description |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  기본 생성자입니다. |
 
@@ -174,7 +180,7 @@ class SafeInt;
 
 `SafeInt`와 정수 형식 간의 비교 작업은 양쪽으로 모두 수행할 수 있습니다. 예를 들어 `SafeInt<int>(x) < y`와 `y> SafeInt<int>(x)`는 둘 다 유효하며 동일한 결과를 반환합니다.
 
-많은 이항 연산자는 두 가지 형식 사용을 지원 하지 않습니다 `SafeInt` . 이러한 예로 `&` 연산자가 있습니다. `SafeInt<T, E> & int`는 지원 되지만은 지원 되지 않습니다 `SafeInt<T, E> & SafeInt<U, E>` . 두 번째 식의 경우 컴파일러에서 반환할 매개 변수 형식을 알 수 없습니다. 이 문제에 대한 한 가지 솔루션은 두 번째 매개 변수를 기본 형식으로 다시 캐스팅하는 것입니다. 이 작업은 같은 매개 변수를 사용하여 `SafeInt<T, E> & (U)SafeInt<U, E>`로 수행할 수 있습니다.
+많은 이항 연산자는 두 가지 형식 사용을 지원 하지 않습니다 `SafeInt` . 이러한 예로 `&` 연산자가 있습니다. `SafeInt<T, E> & int` 는 지원 되지만은 지원 되지 않습니다 `SafeInt<T, E> & SafeInt<U, E>` . 두 번째 식의 경우 컴파일러에서 반환할 매개 변수 형식을 알 수 없습니다. 이 문제에 대한 한 가지 솔루션은 두 번째 매개 변수를 기본 형식으로 다시 캐스팅하는 것입니다. 이 작업은 같은 매개 변수를 사용하여 `SafeInt<T, E> & (U)SafeInt<U, E>`로 수행할 수 있습니다.
 
 > [!NOTE]
 > 비트 연산의 경우 서로 다른 두 매개 변수가 동일한 크기여야 합니다. 크기가 다르면, 컴파일러에서 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 예외가 throw됩니다. 이 작업의 결과는 정확 하지 않을 수 있습니다. 이 문제를 해결 하려면 더 큰 매개 변수와 크기가 같은 작은 매개 변수를 캐스팅 합니다.
@@ -248,7 +254,7 @@ int main()
 
 **네임 스페이스:** 없음
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt:: SafeInt
 
 `SafeInt` 개체를 생성합니다.
 
@@ -277,7 +283,7 @@ SafeInt (const U& i)
 `u`<br/>
 [in] U 형식의 `SafeInt`입니다. 새로운 `SafeInt` 개체는 *u*와 동일한 값을 갖지만 T 형식입니다.
 
-`U`에 저장 된 데이터의 형식 `SafeInt` 입니다. 부울, 문자 또는 정수 형식일 수 있습니다. 정수 형식인 경우 signed 또는 unsigned가 될 수 있으며 8 비트에서 64 비트 사이 여야 합니다.
+`U` 에 저장 된 데이터의 형식 `SafeInt` 입니다. 부울, 문자 또는 정수 형식일 수 있습니다. 정수 형식인 경우 signed 또는 unsigned가 될 수 있으며 8 비트에서 64 비트 사이 여야 합니다.
 
 ### <a name="remarks"></a>설명
 
