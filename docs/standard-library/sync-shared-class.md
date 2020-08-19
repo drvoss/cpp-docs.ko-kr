@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 9f1a984d38bed9dd3795164e355c7ccac100ae6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232887"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562079"
 ---
 # <a name="sync_shared-class"></a>sync_shared 클래스
 
@@ -32,15 +32,14 @@ class sync_shared
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*캐시*|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+*캐시*\
+동기화 필터와 연결된 캐시 형식입니다. , 또는 일 수 있습니다 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ### <a name="member-functions"></a>멤버 함수
 
 |멤버 함수|Description|
 |-|-|
-|[할당](#allocate)|메모리 블록을 할당합니다.|
+|[추가로](#allocate)|메모리 블록을 할당합니다.|
 |[할당](#deallocate)|지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.|
 |[equals](#equals)|두 캐시가 같은지 비교합니다.|
 
@@ -50,7 +49,7 @@ class sync_shared
 
 **네임스페이스:** stdext
 
-## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared:: allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a> sync_shared:: allocate
 
 메모리 블록을 할당합니다.
 
@@ -60,9 +59,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*count*|할당할 배열의 요소 수입니다.|
+*수*\
+할당할 배열의 요소 수입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -72,7 +70,7 @@ void *allocate(std::size_t count);
 
 구성원 함수는 뮤텍스를 잠그고, `cache.allocate(count)`를 호출하고, 뮤텍스 잠금을 해제한 다음 이전 호출의 결과를 `cache.allocate(count)`에 반환합니다. `cache`는 현재 캐시 개체를 나타냅니다.
 
-## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::d eallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a> sync_shared::d eallocate
 
 지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|*count*|스토리지에서 할당을 취소할 개체의 수입니다.|
+*ptr*\
+스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.
+
+*수*\
+스토리지에서 할당을 취소할 개체의 수입니다.
 
 ### <a name="remarks"></a>설명
 
 이 구성원 함수는 뮤텍스를 잠그고, `cache.deallocate(ptr, count)`를 호출한 다음(여기서 `cache`는 캐시 개체를 나타냄) 뮤텍스 잠금을 해제합니다.
 
-## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared:: equals
+## <a name="sync_sharedequals"></a><a name="equals"></a> sync_shared:: equals
 
 두 캐시가 같은지 비교합니다.
 
@@ -101,10 +100,11 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*캐시*|동기화 필터와 연결된 캐시 형식입니다.|
-|*기타*|같은지 비교할 캐시입니다.|
+*캐시*\
+동기화 필터와 연결된 캐시 형식입니다.
+
+*다른*\
+같은지 비교할 캐시입니다.
 
 ### <a name="return-value"></a>Return Value
 

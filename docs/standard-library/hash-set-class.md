@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 5dacf0b80acfd376db6738ef0d3bdc881c4c1736
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212321"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561182"
 ---
 # <a name="hash_set-class"></a>hash_set 클래스
 
@@ -150,7 +150,7 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[hash_set](#hash_set)|비어 있거나 다른 `hash_set`의 전체 또는 일부의 복사본인 `hash_set`을 생성합니다.|
 
@@ -206,7 +206,7 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[hash_set:: operator =](#op_eq)|`hash_set`의 요소를 다른 `hash_set`의 복사본으로 대체합니다.|
 
@@ -216,7 +216,7 @@ hash_set 클래스에서 제공하는 반복기는 양방향 반복기이지만,
 
 **네임스페이스:** stdext
 
-## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set:: allocator_type
+## <a name="hash_setallocator_type"></a><a name="allocator_type"></a> hash_set:: allocator_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -229,7 +229,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>설명
 
-`allocator_type`는 템플릿 매개 변수 *할당자*의 동의어입니다.
+`allocator_type` 는 템플릿 매개 변수 *할당자*의 동의어입니다.
 
 *할당자*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
 
@@ -237,7 +237,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="hash_setbegin"></a><a name="begin"></a>hash_set:: begin
+## <a name="hash_setbegin"></a><a name="begin"></a> hash_set:: begin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -298,7 +298,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2
 ```
 
-## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set:: cbegin
+## <a name="hash_setcbegin"></a><a name="cbegin"></a> hash_set:: cbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -345,7 +345,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_setcend"></a><a name="cend"></a>hash_set:: cend
+## <a name="hash_setcend"></a><a name="cend"></a> hash_set:: cend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -393,7 +393,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_setclear"></a><a name="clear"></a>hash_set:: clear
+## <a name="hash_setclear"></a><a name="clear"></a> hash_set:: clear
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -437,7 +437,7 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.
 ```
 
-## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set:: const_iterator
+## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a> hash_set:: const_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -456,7 +456,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)에 대한 예제를 참조하세요.
 
-## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set:: const_pointer
+## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a> hash_set:: const_pointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -473,7 +473,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 대부분의 경우 [const_iterator](#const_iterator) 를 사용 하 여 hash_set 개체의 요소에 액세스 해야 합니다 **`const`** .
 
-## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set:: const_reference
+## <a name="hash_setconst_reference"></a><a name="const_reference"></a> hash_set:: const_reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -520,7 +520,7 @@ int main( )
 The first element in the hash_set is 10.
 ```
 
-## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator
+## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -539,7 +539,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
-## <a name="hash_setcount"></a><a name="count"></a>hash_set:: count
+## <a name="hash_setcount"></a><a name="count"></a> hash_set:: count
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -603,7 +603,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set:: crbegin
+## <a name="hash_setcrbegin"></a><a name="crbegin"></a> hash_set:: crbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -655,7 +655,7 @@ int main( )
 The first element in the reversed hash_set is 30.
 ```
 
-## <a name="hash_setcrend"></a><a name="crend"></a>hash_set:: crend
+## <a name="hash_setcrend"></a><a name="crend"></a> hash_set:: crend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -708,7 +708,7 @@ int main( )
 The last element in the reversed hash_set is 10.
 ```
 
-## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set::d ifference_type
+## <a name="hash_setdifference_type"></a><a name="difference_type"></a> hash_set::d ifference_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -785,7 +785,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.
 ```
 
-## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set:: emplace
+## <a name="hash_setemplace"></a><a name="emplace"></a> hash_set:: emplace
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -801,9 +801,8 @@ emplace(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
+*짧은*\
+`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -837,7 +836,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set:: emplace_hint
+## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a> hash_set:: emplace_hint
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -853,10 +852,11 @@ iterator emplace(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.|
-|*_Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 *_Where*바로 뒤에 오는 경우에는 로그 시간 대신 분할 상환 일정 시간에 삽입이 발생할 수 있습니다.|
+*짧은*\
+`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_set](../standard-library/hash-set-class.md)에 삽입될 요소의 값입니다.
+
+*_Where*\
+올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 *_Where*바로 뒤에 오는 경우에는 로그 시간 대신 분할 상환 일정 시간에 삽입이 발생할 수 있습니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -892,7 +892,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setempty"></a><a name="empty"></a>hash_set:: empty
+## <a name="hash_setempty"></a><a name="empty"></a> hash_set:: empty
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -941,7 +941,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.
 ```
 
-## <a name="hash_setend"></a><a name="end"></a>hash_set:: end
+## <a name="hash_setend"></a><a name="end"></a> hash_set:: end
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -960,7 +960,7 @@ hash_set에서 마지막 요소 다음에 나오는 위치의 주소를 지정�
 
 ### <a name="remarks"></a>설명
 
-`end`는 반복기가 hash_set의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
+`end` 는 반복기가 hash_set의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1004,7 +1004,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2
 ```
 
-## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set:: equal_range
+## <a name="hash_setequal_range"></a><a name="equal_range"></a> hash_set:: equal_range
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1089,7 +1089,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ```
 
-## <a name="hash_seterase"></a><a name="erase"></a>hash_set:: erase
+## <a name="hash_seterase"></a><a name="erase"></a> hash_set:: erase
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1209,7 +1209,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ```
 
-## <a name="hash_setfind"></a><a name="find"></a>hash_set:: find
+## <a name="hash_setfind"></a><a name="find"></a> hash_set:: find
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1287,7 +1287,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set:: get_allocator
+## <a name="hash_setget_allocator"></a><a name="get_allocator"></a> hash_set:: get_allocator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1363,7 +1363,7 @@ int main( )
 }
 ```
 
-## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set:: hash_set
+## <a name="hash_sethash_set"></a><a name="hash_set"></a> hash_set:: hash_set
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1419,13 +1419,20 @@ hash_set(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*항상*|이 `hash_set` 개체에 사용할 스토리지 할당자 클래스로, 기본값은 `Allocator`입니다.|
-|*생략*|`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.|
-|*오른쪽*|생성된 `hash_set`이 복사본으로 지정될 `hash_set`입니다.|
-|*첫째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|*최신*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
+*항상*\
+이 `hash_set` 개체에 사용할 스토리지 할당자 클래스로, 기본값은 `Allocator`입니다.
+
+*생략*\
+`hash_set`의 요소 순서를 지정하는 데 사용되는 `const Traits` 형식의 비교 함수로, 기본값은 `hash_compare`입니다.
+
+*오른쪽*\
+생성된 `hash_set`이 복사본으로 지정될 `hash_set`입니다.
+
+*기본*\
+복사할 요소의 범위에서 첫 번째 요소의 위치입니다.
+
+*최신*\
+복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1447,7 +1454,7 @@ hash_set(
 
 `hash_set` 컨테이너에 있는 요소의 실제 순서는 해시 함수, 순서 지정 함수 및 해시 테이블의 현재 크기에 따라 달라지고, 일반적으로 순서 지정 함수에 의해서만 결정된 경우 set 컨테이너에서 예상 가능하던 것처럼 실제 순서를 예상할 수는 없습니다.
 
-## <a name="hash_setinsert"></a><a name="insert"></a>hash_set:: insert
+## <a name="hash_setinsert"></a><a name="insert"></a> hash_set:: insert
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1472,13 +1479,20 @@ void insert(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 `hash_set`에 삽입될 요소의 값입니다.|
-|*Where*|올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.|
-|*첫째*|`hash_set`에서 복사할 첫 번째 요소의 위치입니다.|
-|*최신*|`hash_set`에서 복사할 마지막 요소 바로 다음 위치입니다.|
-|*IList*|요소를 복사해올 initializer_list입니다.|
+*짧은*\
+`hash_set`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 `hash_set`에 삽입될 요소의 값입니다.
+
+*위치*\
+올바른 삽입 지점 검색을 시작할 위치입니다. 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.
+
+*기본*\
+`hash_set`에서 복사할 첫 번째 요소의 위치입니다.
+
+*최신*\
+`hash_set`에서 복사할 마지막 요소 바로 다음 위치입니다.
+
+*IList*\
+요소를 복사해올 initializer_list입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1494,7 +1508,7 @@ void insert(
 
 세 번째 멤버 함수는 지정된 `hash_set`의 [`First`, `Last`) 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 `hash_set`에 요소 값의 시퀀스를 삽입합니다.
 
-## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set:: iterator
+## <a name="hash_setiterator"></a><a name="iterator"></a> hash_set:: iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1513,7 +1527,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 `iterator`를 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set:: key_comp
+## <a name="hash_setkey_comp"></a><a name="key_comp"></a> hash_set:: key_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1589,7 +1603,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set:: key_compare
+## <a name="hash_setkey_compare"></a><a name="key_compare"></a> hash_set:: key_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1602,7 +1616,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>설명
 
-`key_compare`는 템플릿 매개 변수 *특성*의 동의어입니다.
+`key_compare` 는 템플릿 매개 변수 *특성*의 동의어입니다.
 
 *특성* 에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조 하세요.
 
@@ -1612,7 +1626,7 @@ typedef Traits key_compare;
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
-## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set:: key_type
+## <a name="hash_setkey_type"></a><a name="key_type"></a> hash_set:: key_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1625,7 +1639,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>설명
 
-`key_type`는 템플릿 매개 변수 *키*의 동의어입니다.
+`key_type` 는 템플릿 매개 변수 *키*의 동의어입니다.
 
 *키*에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조 하세요.
 
@@ -1635,7 +1649,7 @@ typedef Key key_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set:: lower_bound
+## <a name="hash_setlower_bound"></a><a name="lower_bound"></a> hash_set:: lower_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1709,7 +1723,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set:: max_size
+## <a name="hash_setmax_size"></a><a name="max_size"></a> hash_set:: max_size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1747,7 +1761,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set:: operator =
+## <a name="hash_setoperator"></a><a name="op_eq"></a> hash_set:: operator =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1762,9 +1776,8 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*오른쪽*|`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.|
+*오른쪽*\
+`hash_set`에 복사되는 [hash_set](../standard-library/hash-set-class.md)입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1808,7 +1821,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set::p ointer
+## <a name="hash_setpointer"></a><a name="pointer"></a> hash_set::p ointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1825,7 +1838,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 
 대부분의 경우 [iterator](#iterator)를 사용하여 hash_set 개체의 요소에 액세스해야 합니다.
 
-## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set:: rbegin
+## <a name="hash_setrbegin"></a><a name="rbegin"></a> hash_set:: rbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1908,7 +1921,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreference"></a><a name="reference"></a>hash_set:: reference
+## <a name="hash_setreference"></a><a name="reference"></a> hash_set:: reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1958,7 +1971,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.
 ```
 
-## <a name="hash_setrend"></a><a name="rend"></a>hash_set:: rend
+## <a name="hash_setrend"></a><a name="rend"></a> hash_set:: rend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2044,7 +2057,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator
+## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a> hash_set:: reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2063,7 +2076,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="hash_setsize"></a><a name="size"></a>hash_set:: size
+## <a name="hash_setsize"></a><a name="size"></a> hash_set:: size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2110,7 +2123,7 @@ The hash_set length is 1.
 The hash_set length is now 2.
 ```
 
-## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set:: size_type
+## <a name="hash_setsize_type"></a><a name="size_type"></a> hash_set:: size_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2127,7 +2140,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="hash_setswap"></a><a name="swap"></a>hash_set:: swap
+## <a name="hash_setswap"></a><a name="swap"></a> hash_set:: swap
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2201,7 +2214,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.
 ```
 
-## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set:: upper_bound
+## <a name="hash_setupper_bound"></a><a name="upper_bound"></a> hash_set:: upper_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2275,7 +2288,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.
 ```
 
-## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set:: value_comp
+## <a name="hash_setvalue_comp"></a><a name="value_comp"></a> hash_set:: value_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2351,7 +2364,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set:: value_compare
+## <a name="hash_setvalue_compare"></a><a name="value_compare"></a> hash_set:: value_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2364,7 +2377,7 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>설명
 
-`value_compare`는 템플릿 매개 변수 *특성*의 동의어입니다.
+`value_compare` 는 템플릿 매개 변수 *특성*의 동의어입니다.
 
 *특성* 에 대 한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조 하세요.
 
@@ -2374,7 +2387,7 @@ typedef key_compare value_compare;
 
 `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.
 
-## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set:: value_type
+## <a name="hash_setvalue_type"></a><a name="value_type"></a> hash_set:: value_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.

@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203911"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562573"
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
 
@@ -116,14 +116,15 @@ class array;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|`Ty`|요소의 형식입니다.|
-|`N`|요소의 수입니다.|
+`Ty`\
+요소의 형식입니다.
+
+`N`\
+요소의 수입니다.
 
 ## <a name="members"></a>멤버
 
-|형식 정의|설명|
+|형식 정의|Description|
 |-|-|
 |[const_iterator](#const_iterator)|제어되는 시퀀스에 대한 상수 반복기의 형식입니다.|
 |[const_pointer](#const_pointer)|요소에 대한 상수 포인터의 형식입니다.|
@@ -137,7 +138,7 @@ class array;
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
-|멤버 함수|설명|
+|멤버 함수|Description|
 |-|-|
 |[array](#array)|배열 개체를 생성합니다.|
 |[assign](#assign)|않게. `fill`를 사용 합니다.) 모든 요소를 바꿉니다.|
@@ -159,7 +160,7 @@ class array;
 |[size](#size)|요소 수를 계산합니다.|
 |[스왑을](#swap)|두 컨테이너의 내용을 바꿉니다.|
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[array:: operator =](#op_eq)|제어되는 시퀀스를 바꿉니다.|
 |[array:: operator\[\]](#op_at)|지정된 위치에 있는 요소에 액세스합니다.|
@@ -180,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **네임스페이스:** std
 
-## <a name="arrayarray"></a><a name="array"></a>array:: array
+## <a name="arrayarray"></a><a name="array"></a> array:: array
 
 배열 개체를 생성합니다.
 
@@ -239,11 +240,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>array:: assign
+## <a name="arrayassign"></a><a name="assign"></a> array:: assign
 
 C++11에서는 사용되지 않으며, [fill](#fill)로 대체되었습니다. 모든 요소를 바꿉니다.
 
-## <a name="arrayat"></a><a name="at"></a>array:: at
+## <a name="arrayat"></a><a name="at"></a> array:: at
 
 지정된 위치에 있는 요소에 액세스합니다.
 
@@ -289,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>array:: back
+## <a name="arrayback"></a><a name="back"></a> array:: back
 
 마지막 요소에 액세스합니다.
 
@@ -334,7 +335,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>array:: begin
+## <a name="arraybegin"></a><a name="begin"></a> array:: begin
 
 제어되는 시퀀스의 시작을 지정합니다.
 
@@ -379,7 +380,7 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>array:: cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a> array:: cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -405,7 +406,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>array:: cend
+## <a name="arraycend"></a><a name="cend"></a> array:: cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -433,7 +434,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>array:: const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a> array:: const_iterator
 
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.
 
@@ -481,7 +482,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>array:: const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a> array:: const_pointer
 
 요소에 대한 상수 포인터의 형식입니다.
 
@@ -525,7 +526,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>array:: const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a> array:: const_reference
 
 요소에 대한 상수 참조의 형식입니다.
 
@@ -569,7 +570,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>array:: const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> array:: const_reverse_iterator
 
 제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.
 
@@ -613,7 +614,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>array:: crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a> array:: crbegin
 
 역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.
 
@@ -657,7 +658,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>array:: crend
+## <a name="arraycrend"></a><a name="crend"></a> array:: crend
 
 역방향 배열에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.
 
@@ -701,7 +702,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>배열::d ata
+## <a name="arraydata"></a><a name="data"></a> 배열::d ata
 
 첫 번째 요소의 주소를 가져옵니다.
 
@@ -747,7 +748,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>배열::d ifference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a> 배열::d ifference_type
 
 두 요소 사이의 부호가 있는 거리의 형식입니다.
 
@@ -791,7 +792,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>array:: empty
+## <a name="arrayempty"></a><a name="empty"></a> array:: empty
 
 요소가 있는지 여부를 테스트합니다.
 
@@ -841,7 +842,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>array:: end
+## <a name="arrayend"></a><a name="end"></a> array:: end
 
 제어되는 시퀀스의 끝을 지정합니다.
 
@@ -887,7 +888,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>array:: fill
+## <a name="arrayfill"></a><a name="fill"></a> array:: fill
 
 배열을 삭제하고 지정된 요소를 빈 배열에 복사합니다.
 
@@ -897,9 +898,8 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|배열에 삽입되는 요소의 값입니다.|
+*짧은*\
+배열에 삽입되는 요소의 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>array:: front
+## <a name="arrayfront"></a><a name="front"></a> array:: front
 
 첫 번째 요소에 액세스합니다.
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>array:: iterator
+## <a name="arrayiterator"></a><a name="iterator"></a> array:: iterator
 
 제어되는 시퀀스에 대한 반복기의 형식입니다.
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>array:: max_size
+## <a name="arraymax_size"></a><a name="max_size"></a> array:: max_size
 
 요소 수를 계산합니다.
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>array:: operator []
+## <a name="arrayoperator"></a><a name="op_at"></a> array:: operator []
 
 지정된 위치에 있는 요소에 액세스합니다.
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>array:: operator =
+## <a name="arrayoperator"></a><a name="op_eq"></a> array:: operator =
 
 제어되는 시퀀스를 바꿉니다.
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>배열::p
+## <a name="arraypointer"></a><a name="pointer"></a> 배열::p
 
 요소에 대한 포인터의 형식입니다.
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>array:: rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a> array:: rbegin
 
 제어되는 역방향 시퀀스의 시작을 지정합니다.
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>array:: reference
+## <a name="arrayreference"></a><a name="reference"></a> array:: reference
 
 요소에 대한 참조의 형식입니다.
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>array:: rend
+## <a name="arrayrend"></a><a name="rend"></a> array:: rend
 
 제어되는 역방향 시퀀스의 끝을 지정합니다.
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>array:: reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a> array:: reverse_iterator
 
 제어되는 시퀀스에 대한 반대 반복기의 형식입니다.
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>array:: size
+## <a name="arraysize"></a><a name="size"></a> array:: size
 
 요소 수를 계산합니다.
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>array:: size_type
+## <a name="arraysize_type"></a><a name="size_type"></a> array:: size_type
 
 두 요소 사이의 부호가 없는 거리의 형식입니다.
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>array:: swap
+## <a name="arrayswap"></a><a name="swap"></a> array:: swap
 
 이 배열의 내용을 다른 배열과 교환합니다.
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>array:: value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a> array:: value_type
 
 요소의 형식입니다.
 

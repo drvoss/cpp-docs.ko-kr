@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: abcc18ee29e2dcb09ca15ae77219ae5dd4d74c65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228936"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561390"
 ---
 # <a name="decltype--c"></a>decltype(C++)
 
@@ -26,9 +26,8 @@ ms.locfileid: "87228936"
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*expression*|식입니다. 자세한 내용은 [식](../cpp/expressions-cpp.md)을 참조 하세요.|
+*식*\
+식입니다. 자세한 내용은 [식](../cpp/expressions-cpp.md)을 참조 하세요.
 
 ## <a name="return-value"></a>Return Value
 
@@ -204,4 +203,4 @@ static_assert(test2, "PASS2");
 
 Visual Studio 2010 이상 버전
 
-`decltype(auto)`Visual Studio 2015 이상이 필요 합니다.
+`decltype(auto)` Visual Studio 2015 이상이 필요 합니다.

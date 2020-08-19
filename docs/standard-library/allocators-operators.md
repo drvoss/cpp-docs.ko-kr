@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204562"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561220"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 연산자
 
@@ -20,7 +20,7 @@ ms.locfileid: "87204562"
 |-|-|
 |[연산자! =](#op_neq)|[연산자 = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 지정된 클래스의 할당자 개체가 다른지 테스트합니다.
 
@@ -33,10 +33,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*비어*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
-|*오른쪽*|같지 않은지를 테스트할 할당자 개체 중 하나입니다.|
+*비어*\
+같지 않은지를 테스트할 할당자 개체 중 하나입니다.
+
+*오른쪽*\
+같지 않은지를 테스트할 할당자 개체 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -46,7 +47,7 @@ bool operator!=(
 
 템플릿 연산자는 `!(left == right)`을 반환합니다.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 지정된 클래스의 할당자 개체가 같은지 테스트합니다.
 
@@ -59,10 +60,11 @@ bool operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*비어*|같은지를 테스트할 할당자 개체 중 하나입니다.|
-|*오른쪽*|같은지를 테스트할 할당자 개체 중 하나입니다.|
+*비어*\
+같은지를 테스트할 할당자 개체 중 하나입니다.
+
+*오른쪽*\
+같은지를 테스트할 할당자 개체 중 하나입니다.
 
 ### <a name="return-value"></a>Return Value
 

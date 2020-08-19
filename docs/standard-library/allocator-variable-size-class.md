@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: 4e4c5ab0167d49c9ee892f39f18892edd004c3f6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 24769962d615c75f4573a6261b6000fadf39b218
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623698"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561351"
 ---
 # <a name="allocator_variable_size-class"></a>allocator_variable_size 클래스
 
@@ -29,9 +29,8 @@ class allocator_variable_size;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Type*|할당자에 의해 할당된 요소 형식입니다.|
+*입력할*\
+할당자에 의해 할당된 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 

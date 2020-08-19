@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6ab2164e4969a2320f67d479062808b33b0869f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212139"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560298"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -70,10 +70,11 @@ void swap (
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*비어*|`sstream` 개체에 대한 참조입니다.|
-|*오른쪽*|`sstream` 개체에 대한 참조입니다.|
+*비어*\
+`sstream` 개체에 대한 참조입니다.
+
+*오른쪽*\
+`sstream` 개체에 대한 참조입니다.
 
 ## <a name="remarks"></a>설명
 

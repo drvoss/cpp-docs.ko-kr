@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228130"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560558"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc 클래스
 
@@ -32,9 +32,8 @@ class rts_alloc
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*캐시*|배열에 포함된 캐시 인스턴스의 형식입니다. [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+*캐시*\
+배열에 포함된 캐시 인스턴스의 형식입니다. , 또는 일 수 있습니다 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>설명
 
@@ -44,7 +43,7 @@ class rts_alloc
 
 |멤버 함수|Description|
 |-|-|
-|[할당](#allocate)|메모리 블록을 할당합니다.|
+|[추가로](#allocate)|메모리 블록을 할당합니다.|
 |[할당](#deallocate)|지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.|
 |[equals](#equals)|두 캐시가 같은지 비교합니다.|
 
@@ -54,7 +53,7 @@ class rts_alloc
 
 **네임스페이스:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc:: allocate
 
 메모리 블록을 할당합니다.
 
@@ -64,9 +63,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*count*|할당할 배열의 요소 수입니다.|
+*수*\
+할당할 배열의 요소 수입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -76,7 +74,7 @@ void *allocate(std::size_t count);
 
 멤버 함수는를 반환 합니다 `caches[_IDX].allocate(count)` . 여기서 인덱스는 `_IDX` 요청 된 블록 크기 *수*에 의해 결정 되거나, *개수가* 너무 크면를 반환 `operator new(count)` 합니다. `cache`를 반환합니다.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
 지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.
 
@@ -86,16 +84,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|*count*|스토리지에서 할당을 취소할 개체의 수입니다.|
+*ptr*\
+스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.
+
+*수*\
+스토리지에서 할당을 취소할 개체의 수입니다.
 
 ### <a name="remarks"></a>설명
 
 멤버 함수는를 호출 합니다 `caches[_IDX].deallocate(ptr, count)` . 여기서 인덱스는 `_IDX` 요청 된 블록 크기 *수*에 의해 결정 되거나, *개수가* 너무 크면를 반환 `operator delete(ptr)` 합니다.
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: equals
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: equals
 
 두 캐시가 같은지 비교합니다.
 
@@ -105,10 +104,11 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*_Cache*|필터와 연결된 캐시 개체입니다.|
-|*_Other*|같은지 비교할 캐시 개체입니다.|
+*_Cache*\
+필터와 연결된 캐시 개체입니다.
+
+*_Other*\
+같은지 비교할 캐시 개체입니다.
 
 ### <a name="remarks"></a>설명
 

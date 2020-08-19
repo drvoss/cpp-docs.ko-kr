@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 8694f450642b4d179562ef03a609eaf96004eb34
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4722a9c535207b21098db4e33810340d99e6b6a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222422"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561442"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset 클래스
 
@@ -148,7 +148,7 @@ hash_multiset 클래스에서 제공하는 반복기는 양방향 반복기이�
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[hash_multiset](#hash_multiset)|비어 있거나 다른 `hash_multiset`의 전체 또는 일부의 복사본인 `hash_multiset`을 생성합니다.|
 
@@ -204,7 +204,7 @@ hash_multiset 클래스에서 제공하는 반복기는 양방향 반복기이�
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[hash_multiset:: operator =](#op_eq)|hash_multiset의 요소를 다른 hash_multiset의 복사본으로 바꿉니다.|
 
@@ -214,7 +214,7 @@ hash_multiset 클래스에서 제공하는 반복기는 양방향 반복기이�
 
 **네임스페이스:** stdext
 
-## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a>hash_multiset:: allocator_type
+## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a> hash_multiset:: allocator_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -229,7 +229,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="hash_multisetbegin"></a><a name="begin"></a>hash_multiset:: begin
+## <a name="hash_multisetbegin"></a><a name="begin"></a> hash_multiset:: begin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -290,7 +290,7 @@ The first element of hms1 is 1
 The first element of hms1 is now 2
 ```
 
-## <a name="hash_multisetcbegin"></a><a name="cbegin"></a>hash_multiset:: cbegin
+## <a name="hash_multisetcbegin"></a><a name="cbegin"></a> hash_multiset:: cbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -337,7 +337,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_multisetcend"></a><a name="cend"></a>hash_multiset:: cend
+## <a name="hash_multisetcend"></a><a name="cend"></a> hash_multiset:: cend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -385,7 +385,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_multisetclear"></a><a name="clear"></a>hash_multiset:: clear
+## <a name="hash_multisetclear"></a><a name="clear"></a> hash_multiset:: clear
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -429,7 +429,7 @@ The size of the hash_multiset is initially 2.
 The size of the hash_multiset after clearing is 0.
 ```
 
-## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a>hash_multiset:: const_iterator
+## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a> hash_multiset:: const_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -448,7 +448,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a>hash_multiset:: const_pointer
+## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a> hash_multiset:: const_pointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -465,7 +465,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 대부분의 경우 [const_iterator](#const_iterator) 를 사용 하 여 hash_multiset 개체의 요소에 액세스 해야 합니다 **`const`** .
 
-## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a>hash_multiset:: const_reference
+## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a> hash_multiset:: const_reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -512,7 +512,7 @@ int main( )
 The first element in the hash_multiset is 10.
 ```
 
-## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator
+## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> hash_multiset:: const_reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -531,7 +531,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
-## <a name="hash_multisetcount"></a><a name="count"></a>hash_multiset:: count
+## <a name="hash_multisetcount"></a><a name="count"></a> hash_multiset:: count
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -594,7 +594,7 @@ The number of elements in hms1 with a sort key of 1 is: 2.
 The number of elements in hms1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a>hash_multiset:: crbegin
+## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a> hash_multiset:: crbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -646,7 +646,7 @@ int main( )
 The first element in the reversed hash_multiset is 30.
 ```
 
-## <a name="hash_multisetcrend"></a><a name="crend"></a>hash_multiset:: crend
+## <a name="hash_multisetcrend"></a><a name="crend"></a> hash_multiset:: crend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -699,7 +699,7 @@ int main( )
 The last element in the reversed hash_multiset is 10.
 ```
 
-## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a>hash_multiset::d ifference_type
+## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a> hash_multiset::d ifference_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -779,7 +779,7 @@ The number '20' occurs 2 times in hash_multiset hms1.
 The number of elements in the hash_multiset hms1 is 3.
 ```
 
-## <a name="hash_multisetemplace"></a><a name="emplace"></a>hash_multiset:: emplace
+## <a name="hash_multisetemplace"></a><a name="emplace"></a> hash_multiset:: emplace
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -793,9 +793,8 @@ iterator insert(ValTy&& val);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|`hash_multiset`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_multiset](../standard-library/hash-multiset-class.md)에 삽입될 요소의 값입니다.|
+*짧은*\
+`hash_multiset`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_multiset](../standard-library/hash-multiset-class.md)에 삽입될 요소의 값입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -829,7 +828,7 @@ int main( )
 After the emplace insertion, hms3 contains a.
 ```
 
-## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a>hash_multiset:: emplace_hint
+## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a> hash_multiset:: emplace_hint
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -885,7 +884,7 @@ int main( )
 After the emplace insertion, hms1 contains a.
 ```
 
-## <a name="hash_multisetempty"></a><a name="empty"></a>hash_multiset:: empty
+## <a name="hash_multisetempty"></a><a name="empty"></a> hash_multiset:: empty
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -934,7 +933,7 @@ The hash_multiset hms1 is not empty.
 The hash_multiset hms2 is empty.
 ```
 
-## <a name="hash_multisetend"></a><a name="end"></a>hash_multiset:: end
+## <a name="hash_multisetend"></a><a name="end"></a> hash_multiset:: end
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -953,7 +952,7 @@ hash_multiset에서 마지막 요소 다음에 나오는 위치의 주소를 지
 
 ### <a name="remarks"></a>설명
 
-`end`는 반복기가 hash_multiset의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
+`end` 는 반복기가 hash_multiset의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다. `end`에서 반환한 값은 역참조되지 않아야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -997,7 +996,7 @@ The last element of hms1 is 3
 The last element of hms1 is now 2
 ```
 
-## <a name="hash_multisetequal_range"></a><a name="equal_range"></a>hash_multiset:: equal_range
+## <a name="hash_multisetequal_range"></a><a name="equal_range"></a> hash_multiset:: equal_range
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1084,7 +1083,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_multiset hms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="hash_multiseterase"></a><a name="erase"></a>hash_multiset:: erase
+## <a name="hash_multiseterase"></a><a name="erase"></a> hash_multiset:: erase
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1207,7 +1206,7 @@ After another element with a key equal to that of the 2nd element
 is deleted, the hash_multiset hms3 is: 0 3.
 ```
 
-## <a name="hash_multisetfind"></a><a name="find"></a>hash_multiset:: find
+## <a name="hash_multisetfind"></a><a name="find"></a> hash_multiset:: find
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1285,7 +1284,7 @@ The hash_multiset hms1 doesn't have an element with a key of 40.
 The element of hms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a>hash_multiset:: get_allocator
+## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a> hash_multiset:: get_allocator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1361,7 +1360,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a>hash_multiset:: hash_multiset
+## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a> hash_multiset:: hash_multiset
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1448,7 +1447,7 @@ hash_multiset(
 
 해시된 set 컨테이너에 있는 요소의 실제 순서는 해시 함수, 순서 지정 함수 및 해시 테이블의 현재 크기에 따라 달라지고, 일반적으로 순서 지정 함수에 의해서만 결정된 경우 set 컨테이너에서 예상 가능하던 것처럼 실제 순서를 예상할 수는 없습니다.
 
-## <a name="hash_multisetinsert"></a><a name="insert"></a>hash_multiset:: insert
+## <a name="hash_multisetinsert"></a><a name="insert"></a> hash_multiset:: insert
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1517,7 +1516,7 @@ hash_multiset에서 복사할 마지막 요소 바로 다음 위치입니다.
 
 삽입 지점이 *바로 뒤에*오면 로그 시간 대신 insert의 힌트 버전에 대 한 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
 
-## <a name="hash_multisetiterator"></a><a name="iterator"></a>hash_multiset:: iterator
+## <a name="hash_multisetiterator"></a><a name="iterator"></a> hash_multiset:: iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1536,7 +1535,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 `iterator`을 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a>hash_multiset:: key_comp
+## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a> hash_multiset:: key_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1612,7 +1611,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a>hash_multiset:: key_compare
+## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a> hash_multiset:: key_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1625,7 +1624,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>설명
 
-`key_compare`는 템플릿 매개 변수 *특성*의 동의어입니다.
+`key_compare` 는 템플릿 매개 변수 *특성*의 동의어입니다.
 
 *특성* 에 대 한 자세한 내용은 [hash_multiset 클래스](../standard-library/hash-multiset-class.md) 항목을 참조 하세요.
 
@@ -1635,7 +1634,7 @@ typedef Traits key_compare;
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
-## <a name="hash_multisetkey_type"></a><a name="key_type"></a>hash_multiset:: key_type
+## <a name="hash_multisetkey_type"></a><a name="key_type"></a> hash_multiset:: key_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1648,7 +1647,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>설명
 
-`key_type`는 템플릿 매개 변수 *키*의 동의어입니다.
+`key_type` 는 템플릿 매개 변수 *키*의 동의어입니다.
 
 `key_type` 및 [value_type](../standard-library/hash-set-class.md#value_type)은 둘 다 템플릿 매개 변수 *Key*의 동의어입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.
 
@@ -1658,7 +1657,7 @@ typedef Key key_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a>hash_multiset:: lower_bound
+## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a> hash_multiset:: lower_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1725,7 +1724,7 @@ int main() {
 }
 ```
 
-## <a name="hash_multisetmax_size"></a><a name="max_size"></a>hash_multiset:: max_size
+## <a name="hash_multisetmax_size"></a><a name="max_size"></a> hash_multiset:: max_size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1763,7 +1762,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetoperator"></a><a name="op_eq"></a>hash_multiset:: operator =
+## <a name="hash_multisetoperator"></a><a name="op_eq"></a> hash_multiset:: operator =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1778,9 +1777,8 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*오른쪽*|`hash_multiset`에 복사되는 [hash_multiset](../standard-library/hash-multiset-class.md)입니다.|
+*오른쪽*\
+`hash_multiset`에 복사되는 [hash_multiset](../standard-library/hash-multiset-class.md)입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1824,7 +1822,7 @@ int main( )
 }
 ```
 
-## <a name="hash_multisetpointer"></a><a name="pointer"></a>hash_multiset::p ointer
+## <a name="hash_multisetpointer"></a><a name="pointer"></a> hash_multiset::p ointer
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1841,7 +1839,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 대부분의 경우 [iterator](#iterator)를 사용하여 multiset 개체의 요소에 액세스해야 합니다.
 
-## <a name="hash_multisetrbegin"></a><a name="rbegin"></a>hash_multiset:: rbegin
+## <a name="hash_multisetrbegin"></a><a name="rbegin"></a> hash_multiset:: rbegin
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1924,7 +1922,7 @@ The reversed hash_multiset is: 30 20 10
 After the erasure, the first element in the reversed hash_multiset is 20.
 ```
 
-## <a name="hash_multisetreference"></a><a name="reference"></a>hash_multiset:: reference
+## <a name="hash_multisetreference"></a><a name="reference"></a> hash_multiset:: reference
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -1974,7 +1972,7 @@ The first element in the hash_multiset is 10.
 The first element in the hash_multiset is now 15.
 ```
 
-## <a name="hash_multisetrend"></a><a name="rend"></a>hash_multiset:: rend
+## <a name="hash_multisetrend"></a><a name="rend"></a> hash_multiset:: rend
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2060,7 +2058,7 @@ The reversed hash_multiset is: 30 20 10 .
 After the erasure, the last element in the reversed hash_multiset is 20.
 ```
 
-## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a>hash_multiset:: reverse_iterator
+## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a> hash_multiset:: reverse_iterator
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2079,7 +2077,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="hash_multisetsize"></a><a name="size"></a>hash_multiset:: size
+## <a name="hash_multisetsize"></a><a name="size"></a> hash_multiset:: size
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2126,7 +2124,7 @@ The hash_multiset length is 1.
 The hash_multiset length is now 2.
 ```
 
-## <a name="hash_multisetsize_type"></a><a name="size_type"></a>hash_multiset:: size_type
+## <a name="hash_multisetsize_type"></a><a name="size_type"></a> hash_multiset:: size_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2143,7 +2141,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="hash_multisetswap"></a><a name="swap"></a>hash_multiset:: swap
+## <a name="hash_multisetswap"></a><a name="swap"></a> hash_multiset:: swap
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2217,7 +2215,7 @@ After swapping with hms2, list hms1 is: 200 100.
 After swapping with hms3, list hms1 is: 300.
 ```
 
-## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a>hash_multiset:: upper_bound
+## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a> hash_multiset:: upper_bound
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2295,7 +2293,7 @@ The first element of hms1 with a key greater than
 that of the initial element of hms1 is: 20.
 ```
 
-## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a>hash_multiset:: value_comp
+## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a> hash_multiset:: value_comp
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2376,7 +2374,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of hms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ```
 
-## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a>hash_multiset:: value_compare
+## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a> hash_multiset:: value_compare
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.
@@ -2389,7 +2387,7 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>설명
 
-`value_compare`는 템플릿 매개 변수 *특성*의 동의어입니다.
+`value_compare` 는 템플릿 매개 변수 *특성*의 동의어입니다.
 
 *특성* 에 대 한 자세한 내용은 [hash_multiset 클래스](../standard-library/hash-multiset-class.md) 항목을 참조 하세요.
 
@@ -2399,7 +2397,7 @@ typedef key_compare value_compare;
 
 `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.
 
-## <a name="hash_multisetvalue_type"></a><a name="value_type"></a>hash_multiset:: value_type
+## <a name="hash_multisetvalue_type"></a><a name="value_type"></a> hash_multiset:: value_type
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)를 대신 사용하는 것이 좋습니다.

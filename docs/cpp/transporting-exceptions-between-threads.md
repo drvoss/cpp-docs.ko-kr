@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186102"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561364"
 ---
 # <a name="transporting-exceptions-between-threads"></a>스레드 간 예외 전송
 
@@ -40,12 +40,17 @@ namespace std
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*지정 되지 않은*|`exception_ptr` 형식을 구현하는 데 사용되는 지정되지 않은 내부 클래스입니다.|
-|*®*|예외를 참조하는 `exception_ptr` 개체입니다.|
-|*우표*|예외를 나타내는 클래스입니다.|
-|*e*|매개 변수 `E` 클래스의 인스턴스입니다.|
+*지정 되지 않은*\
+`exception_ptr` 형식을 구현하는 데 사용되는 지정되지 않은 내부 클래스입니다.
+
+*®*\
+예외를 참조하는 `exception_ptr` 개체입니다.
+
+*우표*\
+예외를 나타내는 클래스입니다.
+
+*우표*\
+매개 변수 `E` 클래스의 인스턴스입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -61,7 +66,7 @@ namespace std
 
 하지만 보조 스레드에서 예외를 throw하는 경우 기본 스레드가 이를 처리하도록 합니다. 이것은 애플리케이션에서 2차 스레드의 수에 관계없이 일관성 있으며 통합된 방식으로 예외를 다루기를 원하기 때문입니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 앞의 시나리오를 처리하기 위해 스레드 간에 예외를 전송할 때 C++ 표준이 지원됩니다. 보조 스레드가 예외를 throw 하는 경우 해당 예외는 *현재 예외가*됩니다. 실제 세계에 대 한 비유를 통해 현재 예외를 *비행*이라고 합니다. 현재 예외는 throw되는 시점부터 이 예외를 catch하는 예외 처리기가 반환될 때까지 발생 중입니다.
 
@@ -90,7 +95,7 @@ C++ 표준 위원회 제안서에 대한 자세한 내용은 문서 번호 N2179
    > [!IMPORTANT]
    > **/Ehsc** 컴파일러 옵션을 지정 하 고 c + + 예외만 catch 하는 것이 좋습니다. **/Eha** 또는 **/clr** 컴파일러 옵션을 사용 하 고 **`catch`** 줄임표 (...) *예외 선언* ()이 있는 문에는 보안 위협에 노출 `catch(...)` 합니다. 문을 사용 하 여 **`catch`** 몇 가지 특정 예외를 캡처하는 것이 좋습니다. 하지만 `catch(...)` 문은 예기치 않은 심각한 예외를 포함하여 모든 C++ 및 SEH 예외를 캡처합니다. 예기치 않은 예외를 무시하거나 잘못 처리하는 경우 악성 코드가 이 기회를 이용하여 프로그램 보안을 해칠 수 있습니다.
 
-## <a name="usage"></a>사용
+## <a name="usage"></a>사용량
 
 다음 섹션에서는 `exception_ptr` 형식 및 `current_exception` , `rethrow_exception` 및 함수를 사용 하 여 예외를 전송 하는 방법을 설명 합니다 `make_exception_ptr` .
 

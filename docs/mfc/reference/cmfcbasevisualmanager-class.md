@@ -28,20 +28,20 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754881"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561325"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 클래스
 
-파생된 시각적 관리자와 Windows 테마 API 간의 계층입니다.
+파생 된 visual 관리자와 Windows 테마 API 간의 계층입니다.
 
-`CMFCBaseVisualManager`사용 가능한 경우 UxTheme.dll을 로드하고 Windows 테마 API 메서드에 대한 액세스를 관리합니다.
+`CMFCBaseVisualManager` UxTheme.dll를 로드 하 고, 사용 가능한 경우 Windows 테마 API 메서드에 대 한 액세스를 관리 합니다.
 
-이 클래스는 내부 용으로만 사용됩니다.
+이 클래스는 내부용 으로만 사용 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -55,51 +55,51 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|속성|Description|
-|[CMFC베이스비주얼매니저::CMFC베이스비주얼매니저](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` 개체를 생성하고 초기화합니다.|
+|이름|Description|
+|[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` 개체를 생성하고 초기화합니다.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
 |||
 |-|-|
-|속성|Description|
-|[CMFC베이스비주얼매니저::D로체크박스](#drawcheckbox)|현재 Windows 테마를 사용하여 확인란 컨트롤을 그립니다.|
-|[CMFC베이스비주얼매니저::D로콤보보보보보보보](#drawcomboborder)|현재 Windows 테마를 사용하여 콤보 상자 테두리를 그립니다.|
-|[CMFC베이스비주얼매니저::D로컴보드롭버튼](#drawcombodropbutton)|현재 Windows 테마를 사용하여 콤보 상자 드롭다운 단추를 그립니다.|
-|[CMFC베이스비주얼매니저::D로 푸시버튼](#drawpushbutton)|현재 Windows 테마를 사용하여 푸시 버튼을 그립니다.|
-|[CMFC베이스비주얼매니저::D로라디오버튼](#drawradiobutton)|현재 Windows 테마를 사용하여 라디오 단추 컨트롤을 그립니다.|
-|[CMFC베이스 비주얼 매니저::D원시 상태표시진행](#drawstatusbarprogress)|현재 Windows 테마를 사용하여 상태 표시줄 [컨트롤(CMFCStatusBar 클래스)에](../../mfc/reference/cmfcstatusbar-class.md)진행률 표시줄을 그립니다.|
-|[CMFC베이스비주얼매니저::필레바파네](#fillrebarpane)|현재 Windows 테마를 사용하여 철근 컨트롤의 배경을 채웁니다.|
-|[CMFC베이스 비주얼 매니저::겟스탠다드윈도우테마](#getstandardwindowstheme)|현재 Windows 테마를 가져옵니다.|
+|이름|Description|
+|[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|현재 Windows 테마를 사용 하 여 확인란 컨트롤을 그립니다.|
+|[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|현재 Windows 테마를 사용 하 여 콤보 상자 테두리를 그립니다.|
+|[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|현재 Windows 테마를 사용 하 여 콤보 상자 드롭다운 단추를 그립니다.|
+|[CMFCBaseVisualManager::D rawPushButton](#drawpushbutton)|현재 Windows 테마를 사용 하 여 누름 단추를 그립니다.|
+|[CMFCBaseVisualManager::D rawRadioButton](#drawradiobutton)|현재 Windows 테마를 사용 하 여 라디오 단추 컨트롤을 그립니다.|
+|[CMFCBaseVisualManager::D rawStatusBarProgress](#drawstatusbarprogress)|현재 Windows 테마를 사용 하 여 상태 표시줄 컨트롤 ( [Cmfcstatusbar 클래스](../../mfc/reference/cmfcstatusbar-class.md))에 진행률 표시줄을 그립니다.|
+|[CMFCBaseVisualManager:: Fillre바 창](#fillrebarpane)|현재 Windows 테마를 사용 하 여 rebar 컨트롤의 배경을 채웁니다.|
+|[CMFCBaseVisualManager:: GetStandardWindowsTheme](#getstandardwindowstheme)|현재 Windows 테마를 가져옵니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
 |||
 |-|-|
-|속성|Description|
-|[CMFC베이스비주얼매니저::정리테마](#cleanupthemes)|에서 `CloseThemeData` `UpdateSystemColors`얻은 모든 핸들에 대한 호출|
-|[CMFC베이스 비주얼 매니저::업데이트시스템색상](#updatesystemcolors)|창, 도구 모음, 단추 등 다양한 컨트롤을 그리기 위한 핸들을 얻기 위한 호출입니다. `OpenThemeData`|
+|Name|Description|
+|[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`에서 가져온 모든 핸들에 대해를 호출 `UpdateSystemColors` 합니다.|
+|[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|`OpenThemeData`을 호출 하 여 다양 한 컨트롤을 그리기 위한 핸들을 가져옵니다. 창, 도구 모음, 단추 등|
 
 ## <a name="remarks"></a>설명
 
 이 클래스의 개체를 직접 인스턴스화할 필요는 없습니다.
 
-모든 시각적 관리자의 기본 클래스이기 때문에 [CMFCVisualManager::GetInstance를](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)호출하고 현재 Visual Manager에 대한 포인터를 `CMFCBaseVisualManager` 가져오고 해당 포인터를 사용하는 메서드에 액세스할 수 있습니다. 그러나 현재 Windows 테마를 사용 하 여 컨트롤을 표시 해야 하는 `CMFCVisualManagerWindows` 경우 인터페이스를 사용 하는 것이 좋습니다.
+이 클래스는 모든 시각적 관리자의 기본 클래스 이므로 [Cmfcvisualmanager:: GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)를 호출 하 고, 현재 시각적 관리자에 대 한 포인터를 가져오고, 해당 포인터를 사용 하기 위한 메서드에 액세스할 수 있습니다 `CMFCBaseVisualManager` . 그러나 현재 Windows 테마를 사용 하 여 컨트롤을 표시 해야 하는 경우 인터페이스를 사용 하는 것이 좋습니다 `CMFCVisualManagerWindows` .
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFC베이스비주얼매니저](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afxvisualmanager.h
+**헤더:** afxvisualmanager
 
-## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFC베이스비주얼매니저::정리테마
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a> CMFCBaseVisualManager:: CleanUpThemes
 
-에서 `CloseThemeData` `UpdateSystemColors`얻은 모든 핸들에 대한 호출
+`CloseThemeData`에서 가져온 모든 핸들에 대해를 호출 `UpdateSystemColors` 합니다.
 
 ```cpp
 void CleanUpThemes();
@@ -109,7 +109,7 @@ void CleanUpThemes();
 
 내부 전용입니다.
 
-## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFC베이스비주얼매니저::CMFC베이스비주얼매니저
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a> CMFCBaseVisualManager:: CMFCBaseVisualManager
 
 `CMFCBaseVisualManager` 개체를 생성하고 초기화합니다.
 
@@ -117,9 +117,9 @@ void CleanUpThemes();
 CMFCBaseVisualManager();
 ```
 
-## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFC베이스비주얼매니저::D로체크박스
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a> CMFCBaseVisualManager::D rawCheckBox
 
-현재 Windows 테마를 사용하여 확인란 컨트롤을 그립니다.
+현재 Windows 테마를 사용 하 여 확인란 컨트롤을 그립니다.
 
 ```
 virtual BOOL DrawCheckBox(
@@ -135,33 +135,33 @@ virtual BOOL DrawCheckBox(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *rect*<br/>
-【인】 확인란의 경계 사각형입니다.
+진행 확인란의 경계 사각형입니다.
 
-*b 강조 표시*<br/>
-【인】 확인란이 강조 표시되어 있는지 여부를 지정합니다.
+*bHighlighted 표시*<br/>
+진행 확인란이 강조 표시 되는지 여부를 지정 합니다.
 
 *nState*<br/>
-[in] 0: 체크무미, 1은 보통,
+[in] 0 (선택 하지 않음), 1 (확인 된 표준)
 
-2 혼합 정상.
+2 (mixed normal의 경우)
 
 *bEnabled*<br/>
-【인】 확인란이 활성화되어 있는지 여부를 지정합니다.
+진행 확인란의 설정 여부를 지정 합니다.
 
-*bpressed*<br/>
-【인】 확인란을 눌렀는지 여부를 지정합니다.
+*bPressed*<br/>
+진행 확인란을 눌렀는지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
 ### <a name="remarks"></a>설명
 
-*nState값은* 다음 확인란 스타일에 해당합니다.
+*Nstate* 의 값은 다음 확인란 스타일에 해당 합니다.
 
 |nState|확인란 스타일|
 |------------|---------------------|
@@ -169,9 +169,9 @@ TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFC베이스비주얼매니저::D로콤보보보보보보보
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a> CMFCBaseVisualManager::D rawComboBorder
 
-현재 Windows 테마를 사용하여 콤보 상자 테두리를 그립니다.
+현재 Windows 테마를 사용 하 여 콤보 상자 테두리를 그립니다.
 
 ```
 virtual BOOL DrawComboBorder(
@@ -184,28 +184,28 @@ virtual BOOL DrawComboBorder(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터입니다.
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *rect*<br/>
-【인】 콤보 상자 테두리의 경계 사각형입니다.
+진행 콤보 상자 테두리의 경계 사각형입니다.
 
-*b 장애인*<br/>
-【인】 콤보 상자 테두리를 사용하지 않도록 설정했는지 여부를 지정합니다.
+*bDisabled*<br/>
+진행 콤보 상자 테두리를 사용할 수 없는지 여부를 지정 합니다.
 
-*비스드 드롭*<br/>
-【인】 콤보 상자 테두리를 삭제하는지 여부를 지정합니다.
+*bIsDropped*<br/>
+진행 콤보 상자 테두리를 삭제할지 여부를 지정 합니다.
 
-*비스하이라이트*<br/>
-【인】 콤보 상자 테두리가 강조 표시되어 있는지 여부를 지정합니다.
+*bIsHighlighted*<br/>
+진행 콤보 상자 테두리를 강조 표시할지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFC베이스비주얼매니저::D로컴보드롭버튼
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a> CMFCBaseVisualManager::D rawComboDropButton
 
-현재 Windows 테마를 사용하여 콤보 상자 드롭다운 단추를 그립니다.
+현재 Windows 테마를 사용 하 여 콤보 상자 드롭다운 단추를 그립니다.
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -218,21 +218,28 @@ virtual BOOL DrawComboDropButton(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|Description|
-|---------------|-----------------|
-|*pDC*|【인】 장치 컨텍스트에 대한 포인터입니다.|
-|*rect*|【인】 콤보 상자 드롭다운 버튼의 경계 사각형입니다.|
-|*b 장애인*|【인】 콤보 상자 드롭다운 단추를 사용하지 않도록 설정했는지 여부를 지정합니다.|
-|*비스드 드롭*|【인】 콤보 상자 드롭다운 버튼을 삭제할지 여부를 지정합니다.|
-|*비스하이라이트*|【인】 콤보 상자 드롭다운 버튼이 강조 표시되어 있는지 여부를 지정합니다.|
+*컨트롤러가*\
+진행 장치 컨텍스트에 대 한 포인터입니다.
+
+*직교*\
+진행 콤보 상자 드롭다운 단추의 경계 사각형입니다.
+
+*bDisabled*\
+진행 콤보 상자 드롭다운 단추를 사용할 수 없는지 여부를 지정 합니다.
+
+*bIsDropped*\
+진행 콤보 상자 드롭다운 단추를 삭제할지 여부를 지정 합니다.
+
+*bIsHighlighted*\
+진행 콤보 상자 드롭다운 단추가 강조 표시 되는지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFC베이스비주얼매니저::D로 푸시버튼
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a> CMFCBaseVisualManager::D rawPushButton
 
-현재 Windows 테마를 사용하여 푸시 버튼을 그립니다.
+현재 Windows 테마를 사용 하 여 누름 단추를 그립니다.
 
 ```
 virtual BOOL DrawPushButton(
@@ -244,25 +251,25 @@ virtual BOOL DrawPushButton(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터입니다.
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *rect*<br/>
-【인】 푸시 버튼의 경계 사각형입니다.
+진행 누름 단추의 경계 사각형입니다.
 
-*p 버튼*<br/>
-【인】 그릴 [CMFCButton 클래스](../../mfc/reference/cmfcbutton-class.md) 개체에 대한 포인터입니다.
+*pButton*<br/>
+진행 그릴 [Cmfcbutton 클래스](../../mfc/reference/cmfcbutton-class.md) 개체에 대 한 포인터입니다.
 
 *uiState*<br/>
-【인】 무시. 상태는 *pButton에서*가져온 것입니다.
+진행 무시. *Pbutton*에서 상태를 가져옵니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFC베이스비주얼매니저::D로라디오버튼
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a> CMFCBaseVisualManager::D rawRadioButton
 
-현재 Windows 테마를 사용하여 라디오 단추 컨트롤을 그립니다.
+현재 Windows 테마를 사용 하 여 라디오 단추 컨트롤을 그립니다.
 
 ```
 virtual BOOL DrawRadioButton(
@@ -276,31 +283,31 @@ virtual BOOL DrawRadioButton(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터입니다.
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *rect*<br/>
-【인】 라디오 단추의 경계 사각형입니다.
+진행 라디오 단추의 경계 사각형입니다.
 
-*b 강조 표시*<br/>
-【인】 라디오 버튼이 강조 표시되어 있는지 여부를 지정합니다.
+*bHighlighted 표시*<br/>
+진행 라디오 단추가 강조 표시 되는지 여부를 지정 합니다.
 
-*b 확인됨*<br/>
-【인】 라디오 단추를 선택했는지 여부를 지정합니다.
+*bChecked*<br/>
+진행 라디오 단추가 선택 되어 있는지 여부를 지정 합니다.
 
 *bEnabled*<br/>
-【인】 라디오 버튼이 활성화되어 있는지 여부를 지정합니다.
+진행 라디오 단추를 사용할 수 있는지 여부를 지정 합니다.
 
-*bpressed*<br/>
-【인】 라디오 버튼을 누를지 여부를 지정합니다.
+*bPressed*<br/>
+진행 라디오 단추를 눌렀는지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFC베이스 비주얼 매니저::D원시 상태표시진행
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a> CMFCBaseVisualManager::D rawStatusBarProgress
 
-현재 Windows 테마를 사용하여 상태 표시줄 [컨트롤(CMFCStatusBar 클래스)에서](../../mfc/reference/cmfcstatusbar-class.md)진행률 표시줄을 그립니다.
+현재 Windows 테마를 사용 하 여 상태 표시줄 컨트롤 ( [Cmfcstatusbar 클래스](../../mfc/reference/cmfcstatusbar-class.md))에 진행률 표시줄을 그립니다.
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -317,40 +324,40 @@ virtual BOOL DrawStatusBarProgress(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터입니다.
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *pStatusBar*<br/>
-【인】 상태 표시줄에 대한 포인터입니다. 이 값은 무시됩니다.
+진행 상태 표시줄에 대 한 포인터입니다. 이 값은 무시됩니다.
 
-*직류 진행률*<br/>
-【인】 *pDC* 좌표에서 진행률 표시줄의 경계 사각형입니다.
+*rectProgress*<br/>
+진행 *PDC* 좌표에 있는 진행률 표시줄의 경계 사각형입니다.
 
 *nProgressTotal*<br/>
-【인】 총 진행률 값입니다.
+진행 총 진행률 값입니다.
 
 *nProgressCurr*<br/>
-【인】 현재 진행률 값입니다.
+진행 현재 진행 값입니다.
 
-*클러바*<br/>
-【인】 시작 색상입니다. `CMFCBaseVisualManager`무시합니다. 파생 클래스는 색상 그라데이션에 사용할 수 있습니다.
+*clrBar*<br/>
+진행 시작 색입니다. `CMFCBaseVisualManager` 는이를 무시 합니다. 파생 클래스에서 색 그라데이션과 함께 사용할 수 있습니다.
 
 *clrProgressBarDest*<br/>
-【인】 끝 색상입니다. `CMFCBaseVisualManager`무시합니다. 파생 클래스는 색상 그라데이션에 사용할 수 있습니다.
+진행 마지막 색입니다. `CMFCBaseVisualManager` 는이를 무시 합니다. 파생 클래스에서 색 그라데이션과 함께 사용할 수 있습니다.
 
 *clrProgressText*<br/>
-【인】 텍스트 색상을 진행합니다. `CMFCBaseVisualManager`무시합니다. 텍스트 색상은 에 `afxGlobalData.clrBtnText`의해 정의됩니다.
+진행 진행률 텍스트 색입니다. `CMFCBaseVisualManager` 는이를 무시 합니다. 텍스트 색은에 의해 정의 됩니다 `afxGlobalData.clrBtnText` .
 
 *bProgressText*<br/>
-【인】 진행률 텍스트를 표시할지 여부를 지정합니다.
+진행 진행률 텍스트를 표시할지 여부를 지정 합니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFC베이스비주얼매니저::필레바파네
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a> CMFCBaseVisualManager:: Fillre바 창
 
-현재 Windows 테마를 사용하여 철근 컨트롤의 배경을 채웁니다.
+현재 Windows 테마를 사용 하 여 rebar 컨트롤의 배경을 채웁니다.
 
 ```
 virtual void FillReBarPane(
@@ -361,20 +368,20 @@ virtual void FillReBarPane(
 
 ### <a name="parameters"></a>매개 변수
 
-*pDC*<br/>
-【인】 장치 컨텍스트에 대한 포인터입니다.
+*컨트롤러가*<br/>
+진행 장치 컨텍스트에 대 한 포인터입니다.
 
 *pBar*<br/>
-【인】 배경을 그려야 하는 창에 대한 포인터입니다.
+진행 배경을 그려야 하는 창에 대 한 포인터입니다.
 
 *rectClient*<br/>
-【인】 채울 영역의 경계 사각형입니다.
+진행 채워질 영역의 경계 사각형입니다.
 
 ### <a name="return-value"></a>Return Value
 
-TRUE 테마 API가 활성화되어 있는 경우; 그렇지 않으면 거짓.
+테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
-## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFC베이스 비주얼 매니저::겟스탠다드윈도우테마
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a> CMFCBaseVisualManager:: GetStandardWindowsTheme
 
 현재 Windows 테마를 가져옵니다.
 
@@ -384,21 +391,21 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>Return Value
 
-현재 선택한 Windows 테마 색상입니다. 다음 열거된 값 중 하나가 될 수 있습니다.
+현재 선택 된 Windows 테마 색입니다. 다음 열거형 값 중 하나일 수 있습니다.
 
-- `WinXpTheme_None`- 테마가 활성화되지 않습니다.
+- `WinXpTheme_None` -테마를 사용할 수 없습니다.
 
-- `WinXpTheme_NonStandard`- 비 표준 테마가 선택됩니다 (테마가 선택되었지만 아래 목록에서 는 선택되지 않습니다).
+- `WinXpTheme_NonStandard` -비표준 테마가 선택 됩니다 (테마를 선택 하 고 아래 목록에서 없음).
 
-- `WinXpTheme_Blue`- 파란색 테마 (루나).
+- `WinXpTheme_Blue` -파란색 테마 (Luna).
 
-- `WinXpTheme_Olive`- 올리브 테마.
+- `WinXpTheme_Olive` -올리브 테마.
 
-- `WinXpTheme_Silver`- 실버 테마.
+- `WinXpTheme_Silver` -은색 테마.
 
-## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFC베이스 비주얼 매니저::업데이트시스템색상
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a> CMFCBaseVisualManager:: UpdateSystemColors
 
-창, 도구 모음, 단추 등 다양한 컨트롤을 그리기 위한 핸들을 얻기 위한 호출입니다. `OpenThemeData`
+`OpenThemeData`을 호출 하 여 다양 한 컨트롤을 그리기 위한 핸들을 가져옵니다. 창, 도구 모음, 단추 등
 
 ```cpp
 void UpdateSystemColors();
@@ -408,7 +415,7 @@ void UpdateSystemColors();
 
 내부 전용입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>
 [클래스](../../mfc/reference/mfc-classes.md)

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948551"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562040"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
-**__Error_mode** 를 수정 하 여 프로그램이 종료 될 수 있는 오류에 대해 C 런타임이 오류 메시지를 기록 하는 기본이 아닌 위치를 확인 합니다.
+프로그램이 종료 될 수 있는 오류에 대해 C 런타임이 오류 메시지를 기록 하는 기본이 아닌 위치를 확인 하기 위해 **__error_mode** 를 수정 합니다.
 
 > [!IMPORTANT]
 > 이 API는 Windows 런타임에서 실행되는 애플리케이션에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
@@ -53,7 +53,7 @@ int _set_error_mode(
 *mode_val*<br/>
 오류 메시지의 대상입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 오류가 발생하면 이전 설정 또는 -1을 반환합니다.
 
@@ -63,7 +63,7 @@ int _set_error_mode(
 
 *Mode_val* 매개 변수는 다음 값 중 하나로 설정할 수 있습니다.
 
-|매개 변수|설명|
+|값|Description|
 |---------------|-----------------|
 |**_OUT_TO_DEFAULT**|오류 싱크는 **__app_type**에 의해 결정 됩니다.|
 |**_OUT_TO_STDERR**|오류 싱크가 표준 오류입니다.|
@@ -102,6 +102,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[assert 매크로, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 7425f99f7966548bdb1f94d3007382eeb99863df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193226"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561208"
 ---
 # <a name="freelist-class"></a>freelist 클래스
 
@@ -30,10 +30,11 @@ class freelist : public Max
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Sz*|할당할 배열의 요소 수입니다.|
-|*최대값*|사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.|
+*Sz*\
+할당할 배열의 요소 수입니다.
+
+*최대값*\
+사용 가능 목록에 저장할 최대 요소 수를 나타내는 최대 클래스입니다. 최대 클래스는 [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) 또는 [max_variable_size](../standard-library/max-variable-size-class.md)가 될 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -41,7 +42,7 @@ class freelist : public Max
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[freelist](#freelist)|`freelist` 형식의 개체를 생성합니다.|
 
@@ -58,7 +59,7 @@ class freelist : public Max
 
 **네임스페이스:** stdext
 
-## <a name="freelistfreelist"></a><a name="freelist"></a>freelist:: freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a> freelist:: freelist
 
 `freelist` 형식의 개체를 생성합니다.
 
@@ -68,7 +69,7 @@ freelist();
 
 ### <a name="remarks"></a>설명
 
-## <a name="freelistpop"></a><a name="pop"></a>freelist::p op
+## <a name="freelistpop"></a><a name="pop"></a> freelist::p op
 
 사용 가능 목록에서 첫 번째 메모리 블록을 제거합니다.
 
@@ -84,7 +85,7 @@ void *pop();
 
 목록이 비어 있으면 멤버 함수는 NULL을 반환 합니다. 그렇지 않으면 목록에서 첫 번째 메모리 블록을 제거합니다.
 
-## <a name="freelistpush"></a><a name="push"></a>freelist::p 밀어넣기
+## <a name="freelistpush"></a><a name="push"></a> freelist::p 밀어넣기
 
 목록에 메모리 블록을 추가합니다.
 
@@ -94,9 +95,8 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*ptr*|사용 가능 목록에 추가할 메모리 블록의 포인터입니다.|
+*ptr*\
+사용 가능 목록에 추가할 메모리 블록의 포인터입니다.
 
 ### <a name="return-value"></a>Return Value
 

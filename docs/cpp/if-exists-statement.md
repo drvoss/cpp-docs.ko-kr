@@ -8,12 +8,12 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 611fe53b960a7c8f80990240aa4fc8ac4affb606
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6522b1877dd2517032fc140de42671353ce9c357
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187402"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561403"
 ---
 # <a name="__if_exists-statement"></a>__if_exists 문
 
@@ -29,10 +29,11 @@ statements
 
 #### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*identifier*|존재 여부를 테스트할 식별자입니다.|
-|*할당문*|*식별자* 가 있는 경우 실행할 하나 이상의 문입니다.|
+*identifier*\
+존재 여부를 테스트할 식별자입니다.
+
+*할당문*\
+*식별자* 가 있는 경우 실행할 하나 이상의 문입니다.
 
 ## <a name="remarks"></a>설명
 

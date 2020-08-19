@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 95d72c00247396a860fae67cda55ec0f6647ed59
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90da4e575d70fc3f551d75681d2563896a6647d7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224736"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560519"
 ---
 # <a name="multimap-class"></a>multimap 클래스
 
@@ -153,7 +153,7 @@ C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater
 
 ### <a name="constructors"></a>생성자
 
-|생성자|설명|
+|생성자|Description|
 |-|-|
 |[multimap](#multimap)|비어 있거나 다른 `multimap`의 전체 또는 일부의 복사본인 `multimap`을 생성합니다.|
 
@@ -209,7 +209,7 @@ C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater
 
 ### <a name="operators"></a>연산자
 
-|연산자|설명|
+|연산자|Description|
 |-|-|
 |[연산자 =](#op_eq)|`multimap`의 요소를 다른 `multimap`의 복사본으로 대체합니다.|
 
@@ -221,7 +221,7 @@ C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater
 
 ( **key**, **value**) 쌍은 `pair` 형식의 개체로 multimap에 저장됩니다. Pair 클래스에는에 \<utility> 의해 자동으로 포함 되는 헤더가 필요 합니다 \<map> .
 
-## <a name="multimapallocator_type"></a><a name="allocator_type"></a>multimap:: allocator_type
+## <a name="multimapallocator_type"></a><a name="allocator_type"></a> multimap:: allocator_type
 
 multimap 개체의 할당자 클래스를 나타내는 형식입니다.
 
@@ -233,7 +233,7 @@ typedef Allocator allocator_type;
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="multimapbegin"></a><a name="begin"></a>multimap:: begin
+## <a name="multimapbegin"></a><a name="begin"></a> multimap:: begin
 
 multimap의 첫 번째 요소 주소를 지정하는 반복기를 반환합니다.
 
@@ -288,7 +288,7 @@ The first element of m1 is 0
 First element of m1 is now 1
 ```
 
-## <a name="multimapcbegin"></a><a name="cbegin"></a>multimap:: cbegin
+## <a name="multimapcbegin"></a><a name="cbegin"></a> multimap:: cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -314,7 +314,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="multimapcend"></a><a name="cend"></a>multimap:: cend
+## <a name="multimapcend"></a><a name="cend"></a> multimap:: cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -342,7 +342,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="multimapclear"></a><a name="clear"></a>multimap:: clear
+## <a name="multimapclear"></a><a name="clear"></a> multimap:: clear
 
 multimap의 모든 요소를 지웁니다.
 
@@ -386,7 +386,7 @@ The size of the multimap is initially 2.
 The size of the multimap after clearing is 0.
 ```
 
-## <a name="multimapconst_iterator"></a><a name="const_iterator"></a>multimap:: const_iterator
+## <a name="multimapconst_iterator"></a><a name="const_iterator"></a> multimap:: const_iterator
 
 Multimap의 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -408,7 +408,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="multimapconst_pointer"></a><a name="const_pointer"></a>multimap:: const_pointer
+## <a name="multimapconst_pointer"></a><a name="const_pointer"></a> multimap:: const_pointer
 
 Multimap의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** .
 
@@ -422,7 +422,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 대부분의 경우 [iterator](#iterator)를 사용하여 multimap 개체의 요소에 액세스해야 합니다.
 
-## <a name="multimapconst_reference"></a><a name="const_reference"></a>multimap:: const_reference
+## <a name="multimapconst_reference"></a><a name="const_reference"></a> multimap:: const_reference
 
 **`const`** 작업을 읽고 수행 하기 위해 multimap에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다 **`const`** .
 
@@ -472,7 +472,7 @@ The key of the first element in the multimap is 1.
 The data value of the first element in the multimap is 10.
 ```
 
-## <a name="multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>multimap:: const_reverse_iterator
+## <a name="multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator
 
 Multimap의 모든 요소를 읽을 수 있는 양방향 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -494,7 +494,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.
 
-## <a name="multimapcount"></a><a name="count"></a>multimap:: count
+## <a name="multimapcount"></a><a name="count"></a> multimap:: count
 
 키가 매개 변수로 지정된 키와 일치하는 multimap의 요소 수를 반환합니다.
 
@@ -515,7 +515,7 @@ multimap에서 일치하는지 확인할 요소의 키입니다.
 
 멤버 함수는 다음 범위에 있는 요소 중에서
 
-\[lower_bound (*키*), upper_bound (*키*))
+\[ lower_bound (*키*), upper_bound (*키*))
 
 키 값 *키*가 있는입니다.
 
@@ -563,7 +563,7 @@ The number of elements in m1 with a sort key of 2 is: 2.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="multimapcrbegin"></a><a name="crbegin"></a>multimap:: crbegin
+## <a name="multimapcrbegin"></a><a name="crbegin"></a> multimap:: crbegin
 
 역방향 multimap에서 첫 번째 요소의 주소를 지정하는 상수 반복기를 반환합니다.
 
@@ -613,7 +613,7 @@ int main( )
 The first element of the reversed multimap m1 is 3.
 ```
 
-## <a name="multimapcrend"></a><a name="crend"></a>multimap:: crend
+## <a name="multimapcrend"></a><a name="crend"></a> multimap:: crend
 
 역방향 multimap에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.
 
@@ -666,7 +666,7 @@ int main( )
 The last element of the reversed multimap m1 is 1.
 ```
 
-## <a name="multimapdifference_type"></a><a name="difference_type"></a>multimap::d ifference_type
+## <a name="multimapdifference_type"></a><a name="difference_type"></a> multimap::d ifference_type
 
 반복기가 가리키는 요소 사이의 범위에 있는 multimap의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.
 
@@ -724,7 +724,7 @@ int main( )
 The number of elements in the multimap m1 is: 4.
 ```
 
-## <a name="multimapemplace"></a><a name="emplace"></a>multimap:: emplace
+## <a name="multimapemplace"></a><a name="emplace"></a> multimap:: emplace
 
 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
@@ -735,9 +735,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*args*|multimap에 삽입할 요소를 생성하기 위해 전달되는 인수입니다.|
+*args*\
+multimap에 삽입할 요소를 생성하기 위해 전달되는 인수입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -792,7 +791,7 @@ int main()
 }
 ```
 
-## <a name="multimapemplace_hint"></a><a name="emplace_hint"></a>multimap:: emplace_hint
+## <a name="multimapemplace_hint"></a><a name="emplace_hint"></a> multimap:: emplace_hint
 
 배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.
 
@@ -805,10 +804,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*args*|multimap에 삽입할 요소를 생성하기 위해 전달되는 인수입니다.|
-|*where*|올바른 삽입 지점 검색을 시작할 위치입니다. *이 지점이 바로 앞에*오면 로그 시간 대신 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.|
+*args*\
+multimap에 삽입할 요소를 생성하기 위해 전달되는 인수입니다.
+
+*위치*\
+올바른 삽입 지점 검색을 시작할 위치입니다. *이 지점이 바로 앞에*오면 로그 시간 대신 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -824,7 +824,7 @@ iterator emplace_hint(
 
 코드 예제를 보려면 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)를 참조하세요.
 
-## <a name="multimapempty"></a><a name="empty"></a>multimap:: empty
+## <a name="multimapempty"></a><a name="empty"></a> multimap:: empty
 
 multimap이 비어 있는지 테스트합니다.
 
@@ -869,7 +869,7 @@ The multimap m1 is not empty.
 The multimap m2 is empty.
 ```
 
-## <a name="multimapend"></a><a name="end"></a>multimap:: end
+## <a name="multimapend"></a><a name="end"></a> multimap:: end
 
 마지막 바로 다음 반복기를 반환합니다.
 
@@ -891,7 +891,7 @@ iterator end();
 
 코드 예제를 보려면 [multimap::find](#find)를 참조하세요.
 
-## <a name="multimapequal_range"></a><a name="equal_range"></a>multimap:: equal_range
+## <a name="multimapequal_range"></a><a name="equal_range"></a> multimap:: equal_range
 
 요소의 키가 지정된 값과 일치하는 요소 범위를 찾습니다.
 
@@ -972,7 +972,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="multimaperase"></a><a name="erase"></a>multimap:: erase
+## <a name="multimaperase"></a><a name="erase"></a> multimap:: erase
 
 지정된 위치에서 multimap의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.
 
@@ -1012,7 +1012,7 @@ size_type erase(
 
 코드 예제를 보려면 [map::erase](../standard-library/map-class.md#erase)를 참조하세요.
 
-## <a name="multimapfind"></a><a name="find"></a>multimap:: find
+## <a name="multimapfind"></a><a name="find"></a> multimap:: find
 
 지정된 키와 같은 키를 포함하는 multimap 내 요소의 위치를 가리키는 반복기를 반환합니다.
 
@@ -1099,7 +1099,7 @@ int main()
 }
 ```
 
-## <a name="multimapget_allocator"></a><a name="get_allocator"></a>multimap:: get_allocator
+## <a name="multimapget_allocator"></a><a name="get_allocator"></a> multimap:: get_allocator
 
 multimap을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.
 
@@ -1171,7 +1171,7 @@ int main( )
 }
 ```
 
-## <a name="multimapinsert"></a><a name="insert"></a>multimap:: insert
+## <a name="multimapinsert"></a><a name="insert"></a> multimap:: insert
 
 multimap에 요소 또는 요소의 범위를 삽입합니다.
 
@@ -1211,15 +1211,26 @@ IList);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*짧은*|multimap에 삽입할 요소의 값입니다.|
-|*Where*|올바른 삽입 지점 검색을 시작할 위치입니다. *이 지점이 바로 앞에*오면 로그 시간 대신 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.|
-|*ValTy*|Map에서 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 완벽 하 게 전달 하는 템플릿 매개 변수입니다.|
-|*첫째*|복사할 첫 번째 요소의 위치입니다.|
-|*최신*|복사할 마지막 요소 바로 다음 위치입니다.|
-|*InputIterator*|[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.|
-|*IList*|요소를 복사할 [initializer_list](../standard-library/initializer-list.md) 입니다.|
+*짧은*\
+multimap에 삽입할 요소의 값입니다.
+
+*위치*\
+올바른 삽입 지점 검색을 시작할 위치입니다. *이 지점이 바로 앞에*오면 로그 시간 대신 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.
+
+*ValTy*\
+Map에서 [value_type](../standard-library/map-class.md#value_type)의 요소를 생성 하는 데 사용할 수 있는 인수 형식을 지정 하 고 *Val* 을 인수로 완벽 하 게 전달 하는 템플릿 매개 변수입니다.
+
+*기본*\
+복사할 첫 번째 요소의 위치입니다.
+
+*최신*\
+복사할 마지막 요소 바로 다음 위치입니다.
+
+*InputIterator*\
+[value_type](../standard-library/map-class.md#value_type) 개체를 생성하는 데 사용할 수 있는 형식의 요소를 가리키는 [입력 반복기](../standard-library/input-iterator-tag-struct.md)의 요구 사항을 충족하는 템플릿 함수 인수입니다.
+
+*IList*\
+요소를 복사할 [initializer_list](../standard-library/initializer-list.md) 입니다.
 
 ### <a name="return-value"></a>Return Value
 
@@ -1331,7 +1342,7 @@ int main()
 }
 ```
 
-## <a name="multimapiterator"></a><a name="iterator"></a>multimap:: iterator
+## <a name="multimapiterator"></a><a name="iterator"></a> multimap:: iterator
 
 multimap에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.
 
@@ -1353,7 +1364,7 @@ typedef implementation-defined iterator;
 
 `iterator`를 선언하고 사용하는 방법에 대한 예제는 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="multimapkey_comp"></a><a name="key_comp"></a>multimap:: key_comp
+## <a name="multimapkey_comp"></a><a name="key_comp"></a> multimap:: key_comp
 
 multimap에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.
 
@@ -1424,7 +1435,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="multimapkey_compare"></a><a name="key_compare"></a>multimap:: key_compare
+## <a name="multimapkey_compare"></a><a name="key_compare"></a> multimap:: key_compare
 
 multimap의 두 요소 간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.
 
@@ -1442,7 +1453,7 @@ typedef Traits key_compare;
 
 `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.
 
-## <a name="multimapkey_type"></a><a name="key_type"></a>multimap:: key_type
+## <a name="multimapkey_type"></a><a name="key_type"></a> multimap:: key_type
 
 multimap의 각 요소를 구성하는 정렬 키 개체를 설명하는 형식입니다.
 
@@ -1460,7 +1471,7 @@ typedef Key key_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="multimaplower_bound"></a><a name="lower_bound"></a>multimap:: lower_bound
+## <a name="multimaplower_bound"></a><a name="lower_bound"></a> multimap:: lower_bound
 
 multimap에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.
 
@@ -1548,7 +1559,7 @@ that of the last element is: 20.
 This is not the last element of multimap m1.
 ```
 
-## <a name="multimapmapped_type"></a><a name="mapped_type"></a>multimap:: mapped_type
+## <a name="multimapmapped_type"></a><a name="mapped_type"></a> multimap:: mapped_type
 
 multimap에 저장된 데이터 형식을 나타내는 형식입니다.
 
@@ -1566,7 +1577,7 @@ typedef Type mapped_type;
 
 `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.
 
-## <a name="multimapmax_size"></a><a name="max_size"></a>multimap:: max_size
+## <a name="multimapmax_size"></a><a name="max_size"></a> multimap:: max_size
 
 multimap의 최대 길이를 반환합니다.
 
@@ -1598,7 +1609,7 @@ int main( )
 }
 ```
 
-## <a name="multimapmultimap"></a><a name="multimap"></a>multimap:: multimap
+## <a name="multimapmultimap"></a><a name="multimap"></a> multimap:: multimap
 
 비어 있거나 다른 multimap의 전체 또는 일부분에 대한 복사본인 multimap을 생성합니다.
 
@@ -1651,14 +1662,23 @@ multimap(
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*항상*|이 multimap 개체에 사용할 스토리지 할당자 클래스로, 기본값은 Allocator입니다.|
-|*생략*|map의 요소 순서를 지정하는 데 사용되는 `constTraits` 형식의 비교 함수로, 기본값은 `Traits`입니다.|
-|*오른쪽*|생성된 set가 복사본으로 지정될 map입니다.|
-|*첫째*|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|
-|*최신*|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|
-|*IList*|요소를 복사해올 initializer_list입니다.|
+*항상*\
+이 multimap 개체에 사용할 스토리지 할당자 클래스로, 기본값은 Allocator입니다.
+
+*생략*\
+map의 요소 순서를 지정하는 데 사용되는 `constTraits` 형식의 비교 함수로, 기본값은 `Traits`입니다.
+
+*오른쪽*\
+생성된 set가 복사본으로 지정될 map입니다.
+
+*기본*\
+복사할 요소의 범위에서 첫 번째 요소의 위치입니다.
+
+*최신*\
+복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.
+
+*IList*\
+요소를 복사해올 initializer_list입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1786,7 +1806,7 @@ int main()
 }
 ```
 
-## <a name="multimapoperator"></a><a name="op_eq"></a>multimap:: operator =
+## <a name="multimapoperator"></a><a name="op_eq"></a> multimap:: operator =
 
 multimap의 요소를 다른 multimap의 복사본으로 대체합니다.
 
@@ -1798,9 +1818,8 @@ multimap& operator=(multimap&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|-|-|
-|*오른쪽*|`multimap`에 복사되는 [multimap](../standard-library/multimap-class.md)입니다.|
+*오른쪽*\
+`multimap`에 복사되는 [multimap](../standard-library/multimap-class.md)입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1843,7 +1862,7 @@ int main( )
    }
 ```
 
-## <a name="multimappointer"></a><a name="pointer"></a>multimap::p
+## <a name="multimappointer"></a><a name="pointer"></a> multimap::p
 
 multimap에서 요소에 대한 포인터를 제공하는 형식입니다.
 
@@ -1857,7 +1876,7 @@ typedef typename allocator_type::pointer pointer;
 
 대부분의 경우 [iterator](#iterator)를 사용하여 multimap 개체의 요소에 액세스해야 합니다.
 
-## <a name="multimaprbegin"></a><a name="rbegin"></a>multimap:: rbegin
+## <a name="multimaprbegin"></a><a name="rbegin"></a> multimap:: rbegin
 
 역방향 multimap에서 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.
 
@@ -1937,7 +1956,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the first element in the reversed multimap is 2.
 ```
 
-## <a name="multimapreference"></a><a name="reference"></a>multimap:: reference
+## <a name="multimapreference"></a><a name="reference"></a> multimap:: reference
 
 multimap에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -1994,7 +2013,7 @@ The data value of first element in the multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="multimaprend"></a><a name="rend"></a>multimap:: rend
+## <a name="multimaprend"></a><a name="rend"></a> multimap:: rend
 
 역방향 multimap에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.
 
@@ -2078,7 +2097,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the last element in the reversed multimap is 2.
 ```
 
-## <a name="multimapreverse_iterator"></a><a name="reverse_iterator"></a>multimap:: reverse_iterator
+## <a name="multimapreverse_iterator"></a><a name="reverse_iterator"></a> multimap:: reverse_iterator
 
 역방향 multimap의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.
 
@@ -2100,7 +2119,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="multimapsize"></a><a name="size"></a>multimap:: size
+## <a name="multimapsize"></a><a name="size"></a> multimap:: size
 
 multimap에 있는 요소 수를 반환합니다.
 
@@ -2144,7 +2163,7 @@ The multimap length is 1.
 The multimap length is now 2.
 ```
 
-## <a name="multimapsize_type"></a><a name="size_type"></a>multimap:: size_type
+## <a name="multimapsize_type"></a><a name="size_type"></a> multimap:: size_type
 
 multimap에서 요소 수를 계산하는 부호 없는 정수 형식입니다.
 
@@ -2156,7 +2175,7 @@ typedef typename allocator_type::size_type size_type;
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="multimapswap"></a><a name="swap"></a>multimap:: swap
+## <a name="multimapswap"></a><a name="swap"></a> multimap:: swap
 
 두 multimap의 요소를 교환합니다.
 
@@ -2225,7 +2244,7 @@ After swapping with m2, multimap m1 is: 100 200.
 After swapping with m3, multimap m1 is: 300.
 ```
 
-## <a name="multimapupper_bound"></a><a name="upper_bound"></a>multimap:: upper_bound
+## <a name="multimapupper_bound"></a><a name="upper_bound"></a> multimap:: upper_bound
 
 multimap에서 지정된 키보다 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.
 
@@ -2304,7 +2323,7 @@ The first element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="multimapvalue_comp"></a><a name="value_comp"></a>multimap:: value_comp
+## <a name="multimapvalue_comp"></a><a name="value_comp"></a> multimap:: value_comp
 
 구성원 함수는 키 값을 비교하여 multimap의 요소 순서를 결정하는 함수 개체를 반환합니다.
 
@@ -2370,7 +2389,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="multimapvalue_type"></a><a name="value_type"></a>multimap:: value_type
+## <a name="multimapvalue_type"></a><a name="value_type"></a> multimap:: value_type
 
 map에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.
 

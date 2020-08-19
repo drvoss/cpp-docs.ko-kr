@@ -1,4 +1,4 @@
-﻿---
+---
 title: allocator_suballoc 클래스
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 01d282585133d55ee3f7ec96c212705c2afca9d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 47b82a198a52a61bd5558bd59a38b1d328fa67b2
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617433"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562586"
 ---
 # <a name="allocator_suballoc-class"></a>allocator_suballoc 클래스
 
@@ -27,9 +27,8 @@ class allocator_suballoc;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Type*|할당자에 의해 할당된 요소 형식입니다.|
+*입력할*\
+할당자에 의해 할당된 요소 형식입니다.
 
 ## <a name="remarks"></a>설명
 

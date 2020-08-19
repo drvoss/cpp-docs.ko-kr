@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224593"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562092"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread 클래스
 
@@ -32,9 +32,8 @@ class sync_per_thread
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*캐시*|동기화 필터와 연결된 캐시 형식입니다. [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) 또는 [cache_suballoc](../standard-library/cache-suballoc-class.md)일 수 있습니다.|
+*캐시*\
+동기화 필터와 연결된 캐시 형식입니다. , 또는 일 수 있습니다 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) [`cache_freelist`](../standard-library/cache-freelist-class.md) [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>설명
 
@@ -44,7 +43,7 @@ class sync_per_thread
 
 |멤버 함수|Description|
 |-|-|
-|[할당](#allocate)|메모리 블록을 할당합니다.|
+|[추가로](#allocate)|메모리 블록을 할당합니다.|
 |[할당](#deallocate)|지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.|
 |[equals](#equals)|두 캐시가 같은지 비교합니다.|
 
@@ -54,7 +53,7 @@ class sync_per_thread
 
 **네임스페이스:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a> sync_per_thread:: allocate
 
 메모리 블록을 할당합니다.
 
@@ -64,15 +63,14 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*count*|할당할 배열의 요소 수입니다.|
+*수*\
+할당할 배열의 요소 수입니다.
 
 ### <a name="remarks"></a>설명
 
 구성원 함수는 현재 스레드에 속하는 캐시 개체에 대한 `cache::allocate(count)` 호출 결과를 반환합니다. 현재 스레드에 대해 캐시 개체가 할당되지 않은 경우에는 먼저 캐시 개체가 할당됩니다.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d eallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a> sync_per_thread::d eallocate
 
 지정된 위치부터 시작하여 스토리지에서 지정된 개수의 개체를 해제합니다.
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*ptr*|스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|
-|*count*|스토리지에서 할당을 취소할 개체의 수입니다.|
+*ptr*\
+스토리지에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.
+
+*수*\
+스토리지에서 할당을 취소할 개체의 수입니다.
 
 ### <a name="remarks"></a>설명
 
 구성원 함수는 현재 스레드에 속하는 캐시 개체에 대해 `deallocate`를 호출합니다. 현재 스레드에 대해 캐시 개체가 할당되지 않은 경우에는 먼저 캐시 개체가 할당됩니다.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a> sync_per_thread:: equals
 
 두 캐시가 같은지 비교합니다.
 
@@ -101,10 +100,11 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*캐시*|동기화 필터의 캐시 개체입니다.|
-|*기타*|같은지 비교할 캐시 개체입니다.|
+*캐시*\
+동기화 필터의 캐시 개체입니다.
+
+*다른*\
+같은지 비교할 캐시 개체입니다.
 
 ### <a name="return-value"></a>Return Value
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217456"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560454"
 ---
 # <a name="span-class-c-standard-library"></a>span 클래스 (c + + 표준 라이브러리)
 
@@ -75,10 +75,11 @@ class span;
 
 ### <a name="template-parameters"></a>템플릿 매개 변수
 
-|매개 변수|설명|
-|-|-|
-|`T`| 범위에 있는 요소의 형식입니다. |
-|`Extent`| 컴파일 시간에 지정 된 경우 범위의 요소 수입니다. `std::dynamic_extent`런타임에 요소 수를 지정 하면이 고, 그렇지 않으면입니다. |
+`T`\
+ 범위에 있는 요소의 형식입니다.
+
+`Extent`\
+ 컴파일 시간에 지정 된 경우 범위의 요소 수입니다. `std::dynamic_extent`런타임에 요소 수를 지정 하면이 고, 그렇지 않으면입니다.
 
 [추론 가이드](#deduction_guides)
 
@@ -742,7 +743,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 ### <a name="remarks"></a>설명
 
-`rend`는 span [:: end](#end) 가 범위와 함께 사용 되는 것 처럼 역방향 범위에 사용 됩니다. 이를 사용 하 여 역방향 반복기가 범위 끝에 도달 했는지 여부를 테스트 합니다.
+`rend` 는 span [:: end](#end) 가 범위와 함께 사용 되는 것 처럼 역방향 범위에 사용 됩니다. 이를 사용 하 여 역방향 반복기가 범위 끝에 도달 했는지 여부를 테스트 합니다.
 
 에서 반환 된 값은 `rend` 역참조 되지 않아야 합니다.
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`생성자.
+`span` 생성자.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ span(const span<T, OtherExtent>& other) noexcept
 |---------|---------|
 |`span()` | 빈 범위를 생성 합니다. 템플릿 매개 변수가 또는 인 경우에만 오버 로드 확인 중에만 고려 `Extent` 됩니다 `0` `dynamic_extent` .|
 |`span(It first, size_type count)` | 반복기의 첫 번째 요소에서 범위를 생성 `count` `first` 합니다.  템플릿 매개 변수가이 아닌 경우 오버 로드 확인 중에만 고려 `Extent` `dynamic_extent` 됩니다. |
-|`span(It first, End last)` | 끝에 도달할 때까지 반복기의 요소에서 범위를 생성 `first` `last` 합니다. 템플릿 매개 변수가이 아닌 경우 오버 로드 확인 중에만 고려 `Extent` `dynamic_extent` 됩니다. `It`이어야 합니다 `contiguous_iterator` .  |
+|`span(It first, End last)` | 끝에 도달할 때까지 반복기의 요소에서 범위를 생성 `first` `last` 합니다. 템플릿 매개 변수가이 아닌 경우 오버 로드 확인 중에만 고려 `Extent` `dynamic_extent` 됩니다. `It` 이어야 합니다 `contiguous_iterator` .  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  `N`지정 된 배열의 요소에서 범위를 생성 합니다. 템플릿 매개 변수가 이거나 같으면 오버 로드 확인 중에만 고려 됩니다 `Extent` `dynamic_extent` `N` . |
 |`span(R&& r)` |  범위에서 범위를 생성 합니다. 템플릿 매개 변수가이 아닌 경우에만 오버 로드 확인에 참여 `Extent` `dynamic_extent` 합니다.|
 |`span(const span& other)` |  컴파일러에서 생성 된 복사 생성자입니다. 범위가 요소를 보유 하기 위해 메모리를 할당 하지 않으므로 데이터 포인터의 단순 복사본은 안전 합니다. |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>추론 가이드
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> 추론 가이드
 
 다음 추론 가이드는 범위에 대해 제공 됩니다.
 

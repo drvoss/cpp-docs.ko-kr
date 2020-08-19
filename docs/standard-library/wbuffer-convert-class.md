@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688536"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561117"
 ---
 # <a name="wbuffer_convert-class"></a>wbuffer_convert 클래스
 
@@ -27,15 +27,18 @@ class wbuffer_convert
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Codecvt*|변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.|
-|*Elem*|와이드 문자 요소 형식입니다.|
-|*특성*|*Elem*과 연결된 특성입니다.|
+*Codecvt*\
+변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.
 
-## <a name="remarks"></a>주의
+*E*\
+와이드 문자 요소 형식입니다.
 
-이 클래스 템플릿은 형식 `_Elem`의 요소 전송을 제어 하는 스트림 버퍼에 대해 설명 합니다 .이는 문자 특성이 `std::streambuf` 형식의 바이트 스트림 버퍼를 대상으로 하 `Traits` 클래스에서 설명 합니다.
+*특징이*\
+*Elem*과 연결된 특성입니다.
+
+## <a name="remarks"></a>설명
+
+이 클래스 템플릿은 형식의 요소에 대 한 전송을 제어 하는 스트림 버퍼에 대해 설명 합니다 `_Elem` . 해당 문자 특성은 클래스에서 `Traits` 형식의 바이트 스트림 버퍼에 대 한 형식으로 표현 됩니다 `std::streambuf` .
 
 `Elem` 값 시퀀스와 멀티바이트 시퀀스 간 변환은 클래스 `Codecvt<Elem, char, std::mbstate_t>`의 개체에 의해 수행되며, 표준 코드 변환 패싯 `std::codecvt<Elem, char, std::mbstate_t>`의 요구 사항을 충족합니다.
 

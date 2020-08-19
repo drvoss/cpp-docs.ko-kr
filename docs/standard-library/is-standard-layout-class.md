@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457411"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560597"
 ---
-# <a name="isstandardlayout-class"></a>is_standard_layout 클래스
+# <a name="is_standard_layout-class"></a>is_standard_layout 클래스
 
 형식이 표준 레이아웃인지 테스트합니다.
 
@@ -27,9 +27,8 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
-|---------------|-----------------|
-|*Ty*|쿼리할 형식입니다.|
+*Ty*\
+쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -37,10 +36,10 @@ struct is_standard_layout;
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<type_traits>
+**헤더:**\<type_traits>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [<type_traits>](../standard-library/type-traits.md)
