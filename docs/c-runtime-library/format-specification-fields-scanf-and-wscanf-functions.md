@@ -1,6 +1,8 @@
 ---
 title: '형식 사양 필드: scanf 및 wscanf 함수'
 ms.date: 11/04/2016
+ms.topic: reference
+ms.custom: contperfq1
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -10,12 +12,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 025d4c164d3afe1ca6b05c1c8e76441109cbc4ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4be7aa5e0790f0124890ee981ffd58e3027ea59b
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438370"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659333"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>형식 사양 필드: scanf 및 wscanf 함수
 
