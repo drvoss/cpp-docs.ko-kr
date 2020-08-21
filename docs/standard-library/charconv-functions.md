@@ -1,18 +1,19 @@
 ---
 title: '&lt;charconv &gt; 함수'
-ms.date: 07/22/2020
+description: <charconv>정수 또는 부동 소수점 값을 문자로 변환 하는 라이브러리 함수에 대해 설명 합니다.
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565952"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722156"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 함수
 
@@ -99,15 +100,11 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 다음 표에서는 `fmt` 및 매개 변수의 다양 한 조합에 지정 된 변환 동작에 대해 설명 합니다 `precision` . "최단 왕복 동작" 이란 용어는 해당 함수를 사용 하 여 표시를 구문 분석 하 여 값을 정확 하 게 복구 하는 데 필요한 최소 자릿수를 기록 하는 것을 의미 합니다 `from_chars` .
 
-| `fmt`및 `precision` 조합 | 출력 |
+| `fmt` 및 `precision` 조합 | 결과 |
 |--|--|
 |  Neither | 고정 또는 과학적 표기법 중에서 더 짧은 것은 tiebreaker으로 고정을 선호 합니다.</br>이 동작은 매개 변수를 사용 하는 오버 로드에 의해 시뮬레이션 될 수 없습니다 `fmt` . |
 | `fmt` | 가장 짧은 과학적 형식 등 지정 된 형식에 대 한 최단 왕복 동작입니다. |
 | `fmt` 및 `precision` | `printf()`가장 짧은 왕복 동작 없이 스타일을 사용 하 여 지정 된 전체 자릿수를 사용 합니다. |
-
-### <a name="return-value"></a>반환 값
-
-변환 결과를 포함 하는 [to_chars_result](to-chars-result-structure.md) 입니다.
 
 ### <a name="example"></a>예제
 

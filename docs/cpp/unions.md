@@ -1,47 +1,50 @@
 ---
-title: Unions
-ms.date: 05/06/2019
+title: union
+description: 표준 c + + union class 형식 및 키워드, 사용 및 제한 사항에 대 한 설명입니다.
+ms.date: 08/18/2020
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
-- class types [C++], unions as
+- class type [C++], union as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+no-loc:
+- union
+- struct
+- enum
+- class
+- static
+ms.openlocfilehash: a4dc07df5e7858dffe62478509ee1d8dc759ce96
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213140"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722182"
 ---
-# <a name="unions"></a>Unions
+# `union`
 
 > [!NOTE]
-> C + + 17 이상에서 **std:: variant** 클래스는 공용 구조체에 대 한 형식 안전 대안입니다.
+> C + + 17 이상에서는에 `std::variant` class 대 한 형식 안전 대안입니다 union .
 
-는 **`union`** 모든 멤버가 동일한 메모리 위치를 공유 하는 사용자 정의 형식입니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.
+는 **`union`** 모든 멤버가 동일한 메모리 위치를 공유 하는 사용자 정의 형식입니다. 이 정의는 지정 된 시간에의 union 멤버 목록에서 둘 이상의 개체를 포함할 수 있음을 의미 합니다. 또한 멤버의 수에 관계 없이 union 항상 가장 큰 멤버를 저장 하는 데 충분 한 메모리를 사용 한다는 것을 의미 합니다.
 
-공용 구조체는 개체는 많고 메모리는 제한된 경우 메모리를 보존하는 데 유용할 수 있습니다. 그러나 언제든지 기록된 마지막 멤버에 액세스할 수 있도록 해야 하므로 특별히 주의하여 올바르게 사용해야 합니다. 멤버 형식에 특수한 생성자가 있으면 추가 코드를 작성하여 해당 멤버를 명시적으로 생성하고 삭제해야 합니다. 공용 구조체를 사용하기 전에 해결하려는 문제가 기본 클래스와 파생 클래스 중 어떤 클래스를 사용하여 더 잘 표현할 수 있는지를 고려해야 합니다.
+는 union 많은 개체와 제한 된 메모리가 있는 경우 메모리를 절약 하는 데 유용할 수 있습니다. 그러나를 union 올바르게 사용 하려면 추가 주의가 필요 합니다. 사용자는 할당 한 동일한 멤버에 항상 액세스할 수 있는지 확인 해야 합니다. 멤버 형식에 특수 con 또는이 있는 경우에 struct 는 해당 멤버를 명시적으로 con 하 고 제거 하는 추가 코드를 작성 해야 합니다 struct . 를 사용 하기 전에 union 해결 하려는 문제가 기본 class 및 파생 형식을 사용 하 여 더 잘 표현 될 수 있는지를 고려 하세요 class .
 
 ## <a name="syntax"></a>구문
 
-```cpp
-union [name]  { member-list };
-```
+> **`union`***`tag`* <sub>opt</sub> **`{`** opt *`member-list`***`};`**
 
 ### <a name="parameters"></a>매개 변수
 
-*name*<br/>
-공용 구조체에 지정된 형식 이름입니다.
+*`tag`*<br/>
+에 지정 된 형식 이름 union 입니다.
 
-*멤버 목록*<br/>
-공용 구조체에 포함할 수 있는 멤버입니다. 설명 부분을 참조하세요.
+*`member-list`*<br/>
+에 union 포함 될 수 있는 멤버입니다.
 
-## <a name="remarks"></a>설명
+## <a name="declare-a-no-locunion"></a>선언 union
 
-## <a name="declaring-a-union"></a>공용 구조체 선언
-
-키워드를 사용 하 여 공용 구조체의 선언을 시작 **`union`** 하 고 멤버 목록을 중괄호로 묶습니다.
+union키워드를 사용 하 여의 선언을 시작 **`union`** 하 고 멤버 목록을 중괄호로 묶습니다.
 
 ```cpp
 // declaring_a_union.cpp
@@ -54,6 +57,7 @@ union RecordType    // Declare a simple union type
     double d;
     int *int_ptr;
 };
+
 int main()
 {
     RecordType t;
@@ -62,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="using-unions"></a>공용 구조체 사용
+## <a name="use-a-no-locunion"></a>사용 union
 
-이전 예제에서 공용 구조체에 액세스하는 코드는 데이터를 보유하고 있는 멤버를 알고 있어야 합니다. 이 문제의 가장 일반적인 솔루션은 현재 공용 구조체에 저장되는 데이터의 형식을 나타내는 추가 열거형 멤버와 함께 구조체의 용 구조체를 묶는 것입니다. 이를 구별 된 *공용 구조체* 라고 하며 다음 예제에서는 기본 패턴을 보여 줍니다.
+이전 예제에서에 액세스 하는 모든 코드는 union 데이터를 보유 하는 멤버를 알고 있어야 합니다. 이 문제에 대 한 가장 일반적인 해결책을 *구분 union *된 이라고 합니다. 에를 union 포함 하 고에 현재 저장 되어 있는 struct enum 멤버 형식을 나타내는 멤버를 포함 합니다 union . 다음 예제에서는 기본 패턴을 보여 줍니다.
 
 ```cpp
 #include <queue>
@@ -107,16 +111,27 @@ struct Input
 void Process_Temp(TempData t) {}
 void Process_Wind(WindData w) {}
 
-// Container for all the data records
-queue<Input> inputs;
-void Initialize();
+void Initialize(std::queue<Input>& inputs)
+{
+    Input first;
+    first.type = WeatherDataType::Temperature;
+    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
+    inputs.push(first);
+
+    Input second;
+    second.type = WeatherDataType::Wind;
+    second.wind = { 204, 1418859354, 14, 27 };
+    inputs.push(second);
+}
 
 int main(int argc, char* argv[])
 {
-    Initialize();
+    // Container for all the data records
+    queue<Input> inputs;
+    Initialize(inputs);
     while (!inputs.empty())
     {
-        Input i = inputs.front();
+        Input const i = inputs.front();
         switch (i.type)
         {
         case WeatherDataType::Temperature:
@@ -133,29 +148,17 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-
-void Initialize()
-{
-    Input first, second;
-    first.type = WeatherDataType::Temperature;
-    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
-    inputs.push(first);
-
-    second.type = WeatherDataType::Wind;
-    second.wind = { 204,1418859354, 14, 27 };
-    inputs.push(second);
-}
 ```
 
-이전 예제에서는 입력 구조체의 공용 구조체에 이름이 없습니다. 이는 익명 공용 구조체이며 해당 멤버는 구조체의 직접 멤버인 것처럼 액세스할 수 있습니다. 익명 공용 구조체에 대한 자세한 내용은 아래 섹션을 참조하세요.
+이전 예제에서의에는 union `Input` struct 이름이 없으므로 *익명* 이라고 합니다 union . 해당 멤버는의 멤버인 것 처럼 직접 액세스할 수 있습니다 struct . 익명을 사용 하는 방법에 대 한 자세한 내용은 union [anonymous union ](#anonymous_unions) 섹션을 참조 하십시오.
 
-물론 이전 예제에서는 공통 기본 클래스에서 파생되는 클래스를 사용하고 컨테이너에 있는 각 개체의 런타임 형식에 기반하여 코드를 분기함으로써 해결할 수 있는 문제를 보여 줍니다. 따라서 코드를 더 쉽게 유지 관리하고 이해할 수 있지만 공용 구조체를 사용하는 경우보다 느릴 수도 있습니다. 또한 공용 구조체를 사용하면 전혀 관련이 없는 형식을 저장하고, 공용 구조체 변수 자체의 형식을 변경하지 않고도 저장된 값의 형식을 동적으로 변경할 수 있습니다. 따라서 요소가 서로 다른 형식의 다양한 값을 저장하는 MyUnionType의 유형이 다른 배열을 만들 수 있습니다.
+이전 예제에서는 class 공통 기반에서 파생 되는 형식을 사용 하 여 해결할 수 있는 문제를 보여 줍니다 class . 컨테이너에 있는 각 개체의 런타임 형식에 따라 코드를 분기할 수 있습니다. 코드를 유지 관리 하 고 이해 하는 것이 더 쉬울 수도 있지만를 사용 하는 것 보다 속도가 느릴 수 있습니다 union . 또한를 사용 하 여 union 관련이 없는 형식을 저장할 수 있습니다. 를 union 사용 하면 변수 자체의 형식을 변경 하지 않고 저장 된 값의 형식을 동적으로 변경할 수 있습니다 union . 예를 들어 `MyUnionType` 요소가 다른 형식의 다른 값을 저장 하는의 다른 배열을 만들 수 있습니다.
 
-이전 예제의 `Input` 구조체는 쉽게 악용될 수 있습니다. 데이터를 보유하는 멤버에 액세스하는 판별자를 올바르게 사용하는 것은 전적으로 사용자의 책임입니다. 다음 예제에 표시된 대로 공용 구조체를 private로 설정하고 특별한 액세스 함수를 제공하면 악용으로부터 보호할 수 있습니다.
+예제에서를 악용 하는 것이 쉽습니다 `Input` struct . 사용자는 판별자를 올바르게 사용 하 여 데이터를 보유 하는 멤버에 액세스 하는 것이 좋습니다. union **`private`** 다음 예제와 같이를 만들고 특수 액세스 기능을 제공 하 여 오용 으로부터 보호할 수 있습니다.
 
-## <a name="unrestricted-unions-c11"></a>무제한 공용 구조체(C++11)
+## <a name="unrestricted-no-locunion-c11"></a>무제한 union (c + + 11)
 
-C++03 이전 버전에서는 형식에 사용자가 제공한 생성자, 소멸자 또는 할당 연산자가 없는 한 클래스 형식과 함께 비정적 데이터 멤버를 공용 구조체에 포함할 수 있습니다. C++ 11에서는 이러한 제한이 제거됩니다. 이러한 멤버를 공용 구조체에 포함하면 컴파일러는 사용자가 제공하지 않은 특수 멤버 함수를 삭제된 것으로 자동으로 표시합니다. 공용 구조체가 클래스 또는 구조체 내부에서 익명 공용 구조체인 경우 사용자가 제공하지 않은 클래스 또는 구조체의 특수 멤버 함수는 삭제된 것으로 표시됩니다. 다음 예제에서는 공용 구조체의 멤버 중 하나에 이러한 특별한 처리가 필요한 멤버가 있는 경우를 처리하는 방법을 보여 줍니다.
+C + + 03 및 이전 버전에서는 union static class 형식에 사용자가 제공 하는 con struct ors, de struct ors 또는 대입 연산자가 없는 한 형식이 있는 비 데이터 멤버가 포함 될 수 있습니다. C++ 11에서는 이러한 제한이 제거됩니다. 이러한 멤버를에 포함 하는 경우 union 컴파일러는 사용자가 제공 하지 않는 특수 멤버 함수를 자동으로로 표시 **`deleted`** 합니다. union이 또는 내부에 있는 경우 union class struct class struct 사용자가 제공 하지 않은 또는의 특수 멤버 함수는로 표시 됩니다 **`deleted`** . 다음 예제에서는이 경우를 처리 하는 방법을 보여 줍니다. 의 멤버 중 하나 union 에이 특수 처리가 필요한 멤버가 있습니다.
 
 ```cpp
 // for MyVariant
@@ -513,99 +516,13 @@ int main()
     char c;
     cin >> c;
 }
-#include <queue>
-#include <iostream>
-using namespace std;
-
-enum class WeatherDataType
-{
-    Temperature, Wind
-};
-
-struct TempData
-{
-    TempData() : StationId(""), time(0), current(0), maxTemp(0), minTemp(0) {}
-    TempData(string id, time_t t, double cur, double max, double min)
-        : StationId(id), time(t), current(cur), maxTemp(max), minTemp(0) {}
-    string StationId;
-    time_t time = 0;
-    double current;
-    double maxTemp;
-    double minTemp;
-};
-
-struct WindData
-{
-    int StationId;
-    time_t time;
-    int speed;
-    short direction;
-};
-
-struct Input
-{
-    Input() {}
-    Input(const Input&) {}
-
-    ~Input()
-    {
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-    }
-
-    WeatherDataType type;
-    void SetTemp(const TempData& td)
-    {
-        type = WeatherDataType::Temperature;
-
-        // must use placement new because of string member!
-        new(&temp) TempData(td);
-    }
-
-    TempData GetTemp()
-    {
-        if (type == WeatherDataType::Temperature)
-            return temp;
-        else
-            throw logic_error("Can't return TempData when Input holds a WindData");
-    }
-    void SetWind(WindData wd)
-    {
-        // Explicitly delete struct member that has a
-        // non-trivial constructor
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-        wind = wd; //placement new not required.
-    }
-    WindData GetWind()
-    {
-        if (type == WeatherDataType::Wind)
-        {
-            return wind;
-        }
-        else
-            throw logic_error("Can't return WindData when Input holds a TempData");
-    }
-
-private:
-
-    union
-    {
-        TempData temp;
-        WindData wind;
-    };
-};
 ```
 
-공용 구조체는 참조를 저장할 수 없습니다. 공용 구조체는 상속을 지원하지 않습니다. 따라서 공용 구조체 자체를 기본 클래스로 사용하거나, 다른 클래스에서 상속하거나, 가상 함수를 가질 수 없습니다.
+는 union 참조를 저장할 수 없습니다. union또한는 상속을 지원 하지 않습니다. 즉,을 union 기본으로 사용 class 하거나 다른에서 상속 class 하거나 가상 함수를 사용할 수 없습니다.
 
-## <a name="initializing-unions"></a>공용 구조체 초기화
+## <a name="initialize-a-no-locunion"></a>를 초기화합니다.union
 
-중괄호 안에 식을 배치하여 동일한 문에서 공용 구조체를 선언하고 초기화할 수 있습니다. 식이 확인되면 공용 구조체의 첫 번째 필드에 할당됩니다.
+union중괄호로 묶인 식을 할당 하 여 동일한 문에서을 선언 하 고 초기화할 수 있습니다. 식이 평가 되 고의 첫 번째 필드에 할당 됩니다 union .
 
 ```cpp
 #include <iostream>
@@ -623,7 +540,7 @@ int main()
     union NumericType Values = { 10 };   // iValue = 10
     cout << Values.iValue << endl;
     Values.dValue = 3.1416;
-    cout << Values.dValue) << endl;
+    cout << Values.dValue << endl;
 }
 /* Output:
 10
@@ -631,32 +548,30 @@ int main()
 */
 ```
 
-`NumericType` 공용 구조체는 다음 그림과 같이 개념적으로 메모리에 배열됩니다.
+는 `NumericType` union 다음 그림과 같이 개념적으로 메모리에 정렬 됩니다.
 
-![숫자 형식 공용 구조체에 데이터 저장](../cpp/media/vc38ul1.png "NumericType 공용 구조체에 데이터 저장") <br/>
-NumericType 공용 구조체에 데이터 스토리지
+![숫자 형식으로 데이터 저장::: no loc (union):::](../cpp/media/vc38ul1.png "NumericType::: no loc (union):::에 데이터를 저장 합니다.") <br/>
+데이터 `NumericType` 저장소 union
 
-## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>익명 공용 구조체
+## <a name="anonymous-no-locunion"></a><a name="anonymous_unions"></a> 익명 union
 
-익명 공용 구조체는 *클래스 이름* 또는 *선언 자 목록*없이 선언 된 공용 구조체입니다.
+익명 union 은 또는 없이 선언 된 하나 *`class-name`* 입니다 *`declarator-list`* .
 
-```cpp
-union  {  member-list  }
-```
+> **`union  {`**  *`member-list`*  **`}`**
 
-익명 공용 구조체에 선언된 이름은 비멤버 변수처럼 직접 사용됩니다. 따라서 익명 공용 구조체에 선언된 이름은 주변 범위에서 고유해야 합니다.
+익명에 선언 된 이름은 union 비멤버 변수와 같이 직접 사용 됩니다. 익명의 선언 된 이름이 union 주변 범위에서 고유 해야 함을 의미 합니다.
 
-명명 된 공용 구조체에 대 한 제한 사항 외에도 익명 공용 구조체에는 다음과 같은 추가 제한이 적용 됩니다.
+익명에 union 는 다음과 같은 추가 제한이 적용 됩니다.
 
-- 또한 **`static`** 파일 또는 네임 스페이스 범위에서 선언 된 것 처럼 선언 해야 합니다.
+- 파일 또는 네임 스페이스 범위에서 선언 된 경우로도 선언 해야 합니다 **`static`** .
 
-- 멤버는 멤버만 가질 수 있으며 **`public`** **`private`** **`protected`** 익명 공용 구조체의 멤버는 오류를 생성 합니다.
+- 멤버는 하나만 포함할 수 있습니다 **`public`** . **`private`** **`protected`** 익명의 및 멤버는 union 오류를 생성 합니다.
 
-- 멤버 함수를 사용할 수 없습니다.
+- 멤버 함수를 포함할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)<br/>
 [C++ 키워드](../cpp/keywords-cpp.md)<br/>
-[class](../cpp/class-cpp.md)<br/>
-[struct](../cpp/struct-cpp.md)
+[`class`](../cpp/class-cpp.md)<br/>
+[`struct`](../cpp/struct-cpp.md)
