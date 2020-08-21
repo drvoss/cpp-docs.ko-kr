@@ -48,6 +48,8 @@
       href: ../linux/cmake-linux-project.md
     - name: Linux CMake 프로젝트 구성
       href: ../linux/cmake-linux-configure.md
+    - name: CMake 디버깅 세션 구성
+      href: ../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json
     - name: '자습서: Visual Studio에서 C++ 플랫폼 간 프로젝트 만들기'
       href: ../build/get-started-linux-cmake.md
 - name: Address Sanitizer를 사용하도록 Linux 프로젝트 구성
