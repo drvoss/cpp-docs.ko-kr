@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410176"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831140"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 열거형
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 열거형
 
 이미지 편집기 대화 상자에서 이미지를 수정 하는 데 사용 하는 그리기 모드를 지정 합니다.
 
@@ -33,27 +33,26 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>멤버
 
-|||
+|Name|설명|
 |-|-|
-|이름|설명|
-|IMAGE_EDIT_MODE_PEN|각 픽셀을 그리는 데 사용 합니다.|
-|IMAGE_EDIT_MODE_FILL|현재 커서 위치에 있는 색을 포함 하는 모든 인접 한 영역을 채우는 데 사용 합니다.|
-|IMAGE_EDIT_MODE_LINE|줄을 그리는 데 사용 합니다.|
-|IMAGE_EDIT_MODE_RECT|사각형을 그리는 데 사용 합니다.|
-|IMAGE_EDIT_MODE_ELLIPSE|타원을 그리는 데 사용 합니다.|
-|IMAGE_EDIT_MODE_COLOR|현재 커서 위치에 현재 색을 색으로 설정 하는 데 사용 합니다.|
+|IMAGE_EDIT_MODE_PEN|개별 픽셀을 그리는 데 사용 됩니다.|
+|IMAGE_EDIT_MODE_FILL|현재 커서 위치에 있는 색을 포함 하는 모든 인접 영역을 채우는 데 사용 됩니다.|
+|IMAGE_EDIT_MODE_LINE|선을 그리는 데 사용 됩니다.|
+|IMAGE_EDIT_MODE_RECT|사각형을 그리는 데 사용 됩니다.|
+|IMAGE_EDIT_MODE_ELLIPSE|타원을 그리는 데 사용 됩니다.|
+|IMAGE_EDIT_MODE_COLOR|현재 커서 위치의 색으로 현재 색을 설정 하는 데 사용 됩니다.|
 
 ### <a name="remarks"></a>설명
 
-합니다 `CMFCImagePaintArea` 고 `CMFCImageEditorDialog` 클래스 현재 그리기 모드를 설정 하려면이 열거형을 사용 합니다. 이미지 편집기 대화 상자 그림 영역을 수정 하는 그리기 모드와 현재 색 사용 됩니다. 에 대 한 자세한 내용은 `CMFCImagePaintArea` 하 고 `CMFCImageEditorDialog`를 참조 하세요 [CMFCImagePaintArea 클래스](../../mfc/reference/cmfcimagepaintarea-class.md) 및 [CMFCImageEditorDialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)합니다.
+`CMFCImagePaintArea`및 `CMFCImageEditorDialog` 클래스는이 열거형을 사용 하 여 현재 그리기 모드를 설정 합니다. 그리기 모드와 현재 색은 이미지 편집기 대화 상자에서 그림 영역을 수정 하는 데 사용 됩니다. 및에 대 한 자세한 내용은 `CMFCImagePaintArea` `CMFCImageEditorDialog` [Cmfcimagepaintarea 클래스](../../mfc/reference/cmfcimagepaintarea-class.md) 및 [cmfcimageeditordialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)를 참조 하세요.
 
-IMAGE_EDIT_MODE_COLOR 그리기 모드를 사용 하 여 이미지에서 색을 선택 하면 프레임 워크 IMAGE_EDIT_MODE_PEN에 현재 그리기 모드를 설정 합니다.
+IMAGE_EDIT_MODE_COLOR 그리기 모드를 사용 하 여 이미지에서 색을 선택 하는 경우 프레임 워크는 현재 그리기 모드를 IMAGE_EDIT_MODE_PEN 설정 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** afximagepaintarea.h
+**헤더:** afximagepaintarea
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [계층 구조 차트](../../mfc/hierarchy-chart.md)<br/>

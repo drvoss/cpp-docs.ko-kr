@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075303"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832453"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL 프로젝트에 개체 및 컨트롤 추가
 
@@ -25,11 +25,15 @@ ms.locfileid: "80075303"
 
 ATL 코드 마법사 중 하나를 사용하여 ATL 또는 MFC 기반 프로젝트에 개체나 컨트롤을 추가할 수 있습니다. 추가한 각 COM 개체 또는 컨트롤에 대해 마법사는 cpp 및 .h 파일과 스크립트 기반 레지스트리 지원을 위한.rgs 파일을 생성합니다. 다음 ATL 코드 마법사는 Visual Studio에서 사용할 수 있습니다.
 
-||||
-|-|-|-|
-|[ATL 단순 개체](../../atl/reference/atl-simple-object-wizard.md)|[ATL 대화 상자](../../atl/reference/atl-dialog-wizard.md)|[ATL 컨트롤](../../atl/reference/atl-control-wizard.md)|
-|[ATL 속성 페이지](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page 구성 요소](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB 소비자](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[MFC에 ATL 지원 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 구성 요소 마법사](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB 공급자](../../atl/reference/atl-ole-db-provider-wizard.md)|
+- [ATL 단순 개체](../../atl/reference/atl-simple-object-wizard.md)
+- [ATL 대화 상자](../../atl/reference/atl-dialog-wizard.md)
+- [ATL 컨트롤](../../atl/reference/atl-control-wizard.md)
+- [ATL 속성 페이지](../../atl/reference/atl-property-page-wizard.md)
+- [ATL Active Server Page 구성 요소](../../atl/reference/atl-active-server-page-component-wizard.md)
+- [ATL OLE DB 소비자](../../atl/reference/atl-ole-db-consumer-wizard.md)
+- [MFC에 ATL 지원 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)
+- [ATL COM+ 1.0 구성 요소 마법사](../../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [ATL OLE DB 공급자](../../atl/reference/atl-ole-db-provider-wizard.md)
 
 > [!NOTE]
 > ATL 개체를 프로젝트에 추가하기 전에 관련 도움말 항목에서 개체에 대한 세부 정보 및 요구 사항을 검토해야 합니다.
@@ -51,6 +55,6 @@ ATL 코드 마법사 중 하나를 사용하여 ATL 또는 MFC 기반 프로젝�
 
 [ATL 프로젝트 마법사](../../atl/reference/atl-project-wizard.md)<br/>
 [Visual Studio의 C++ 프로젝트 형식](../../build/reference/visual-cpp-project-types.md)<br/>
-[ATL COM 개체 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[ATL COM 개체의 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL 및 C 런타임 코드를 사용한 프로그래밍](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [기본 ATL 프로젝트 구성](../../atl/reference/default-atl-project-configurations.md)

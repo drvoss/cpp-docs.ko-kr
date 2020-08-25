@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224814"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833246"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 함수
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[isdigit](#isdigit)\
+[isgraph](#isgraph)\
+[islower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[isupper](#isupper)\
+[isxdigit](#isxdigit)\
+[tolower](#tolower)\
+[toupper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 특정 패싯이 지정된 로캘에 저장되었는지를 테스트합니다.
 
@@ -65,7 +73,7 @@ bool has_facet(const locale& Loc);
 *Loc*\
 패싯이 있는지 테스트할 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 로캘에 테스트 된 패싯이 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isalnum
+## <a name="isalnum"></a><a name="isalnum"></a> isalnum
 
 로캘의 요소가 알파벳인지 또는 숫자인지를 테스트합니다.
 
@@ -111,7 +119,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 영숫자 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 영숫자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 로캘의 요소가 영문자인지를 테스트합니다.
 
@@ -178,7 +186,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 영문자 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 한 요소가 영문자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 로캘의 요소가 제어 문자인지를 테스트합니다.
 
@@ -243,7 +251,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 한 요소가 제어 문자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>isdigit
+## <a name="isdigit"></a><a name="isdigit"></a> isdigit
 
 로캘의 요소가 숫자인지를 테스트합니다.
 
@@ -308,7 +316,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 숫자 문자인 경우 **`false`** 그렇지 않으면입니다.
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 로캘의 요소가 영숫자인지 문장 부호인지를 테스트합니다.
 
@@ -373,7 +381,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 영숫자 또는 문장 부호 문자인 경우 **`false`** 그렇지 않으면입니다.
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>islower
+## <a name="islower"></a><a name="islower"></a> islower
 
 로캘의 요소가 소문자인지를 테스트합니다.
 
@@ -438,7 +446,7 @@ bool islower(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 소문자 문자인 경우 **`false`** 그렇지 않으면입니다.
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 로캘의 요소가 인쇄 가능한 문자인지를 테스트합니다.
 
@@ -503,7 +511,7 @@ bool isprint(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 인쇄 가능한 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 로캘의 요소가 문장 부호 문자인지를 테스트합니다.
 
@@ -567,7 +575,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 문장 부호 문자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 로캘의 요소가 공백 문자인지를 테스트합니다.
 
@@ -632,7 +640,7 @@ bool isspace(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 공백 문자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>isupper
+## <a name="isupper"></a><a name="isupper"></a> isupper
 
 로캘의 요소가 대문자인지를 테스트합니다.
 
@@ -697,7 +705,7 @@ bool isupper(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 대문자 이면이 고, 그렇지 않으면입니다. **`false`** 그렇지 않으면입니다.
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 로캘의 요소가 16자 숫자를 나타내는 데 사용되는 문자인지를 테스트합니다.
 
@@ -762,7 +770,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 *Loc*\
 테스트할 요소를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 테스트 된 요소가 16 진수를 나타내는 데 사용 되는 문자인 경우 **`false`** 그렇지 않으면입니다.
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>tolower
+## <a name="tolower"></a><a name="tolower"></a> tolower
 
 문자를 소문자로 변환합니다.
 
@@ -829,7 +837,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 *Loc*\
 변환할 문자를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 소문자로 변환된 문자입니다.
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>toupper
+## <a name="toupper"></a><a name="toupper"></a> toupper
 
 문자를 대문자로 변환합니다.
 
@@ -878,7 +886,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 *Loc*\
 변환할 문자를 포함하는 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대문자로 변환된 문자입니다.
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 로캘에 저장된 지정된 형식의 패싯에 대한 참조를 반환합니다.
 
@@ -924,7 +932,7 @@ const Facet& use_facet(const locale& Loc);
 *Loc*\
 참조되는 패싯의 형식을 포함하는 const 로캘입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수 로캘 내에 포함된 `Facet` 클래스의 패싯에 대한 참조입니다.
 

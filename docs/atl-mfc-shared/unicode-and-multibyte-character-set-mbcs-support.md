@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 217690e09ed595bb9fa9572693bf774259c42412
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219029"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831985"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>유니코드 및 멀티바이트 문자 집합(MBCS) 지원
 
@@ -33,17 +33,38 @@ Microsoft는 모든 새 개발을 위해 MFC 유니코드 라이브러리를 권
 
 이러한 라이브러리, 디버거 및 DLL 파일은 MFC에서 유니코드를 지 원하는 데 사용 됩니다.
 
-|||||
-|-|-|-|-|
-|UAFXCW. LIB|UAFXCW. .PDB|UAFXCWD. LIB|UAFXCWD. .PDB|
-|MFC*버전*U .lib|MFC*버전*U .pdb|MFC*버전*U.DLL|MFC*버전*UD. LIB|
-|MFC*버전*UD. .PDB|MFC*버전*UD.DLL|MFCS*버전*U .lib|MFCS*버전*U .pdb|
-|MFCS*버전*UD. LIB|MFCS*버전*UD. .PDB|MFCM*버전*U .lib|MFCM*버전*U .pdb|
-|MFCM*버전*U.DLL|MFCM*버전*UD. LIB|MFCM*버전*UD. .PDB|MFCM*버전*UD.DLL|
+:::row:::
+   :::column span="":::
+      MFC*버전*..lib \
+      MFC*버전*UD. LIB
+      MFCM*버전*# .lib \
+      MFCM*버전*UD. LIB
+      MFCS*버전*# .lib \
+      MFCS*버전*UD. LIB
+      UAFXCW. LIB
+      UAFXCWD. LIB
+   :::column-end:::
+   :::column span="":::
+      MFC*버전*U .pdb \
+      MFC*버전*UD. .PDB
+      MFCM*버전*U .pdb \
+      MFCM*버전*UD. .PDB
+      MFCS*버전*U .pdb \
+      MFCS*버전*UD. .PDB
+      UAFXCW. .PDB
+      UAFXCWD. .PDB
+   :::column-end:::
+   :::column span="":::
+      MFC*버전*U.DLL \
+      MFC*버전*UD.DLL \
+      MFCM*버전*U.DLL \
+      MFCM*버전*UD.DLL
+   :::column-end:::
+:::row-end:::
 
 *버전* 은 파일의 버전 번호를 나타냅니다. 예를 들어 ' 140 '은 버전 14.0을 의미 합니다.
 
-`CString`는 TCHAR.H 데이터 형식을 기반으로 합니다. 프로그램 빌드에 대 한 기호 _UNICODE 정의 된 경우 TCHAR.H는 **`wchar_t`** 16 비트 문자 인코딩 형식인 형식으로 정의 됩니다. 그렇지 않으면 **`char`** 표준 8 비트 문자 인코딩으로 tchar.h가 정의 됩니다. 따라서 유니코드에서는 `CString` 16 비트 문자로 구성 됩니다. 유니코드를 사용 하지 않으면 형식의 문자로 구성 됩니다 **`char`** .
+`CString` 는 TCHAR.H 데이터 형식을 기반으로 합니다. 프로그램 빌드에 대 한 기호 _UNICODE 정의 된 경우 TCHAR.H는 **`wchar_t`** 16 비트 문자 인코딩 형식인 형식으로 정의 됩니다. 그렇지 않으면 **`char`** 표준 8 비트 문자 인코딩으로 tchar.h가 정의 됩니다. 따라서 유니코드에서는 `CString` 16 비트 문자로 구성 됩니다. 유니코드를 사용 하지 않으면 형식의 문자로 구성 됩니다 **`char`** .
 
 응용 프로그램의 유니코드 프로그래밍을 완료 하려면 다음을 수행 해야 합니다.
 
@@ -59,9 +80,9 @@ Microsoft는 모든 새 개발을 위해 MFC 유니코드 라이브러리를 권
 
   - 사용할 LPTSTR를 사용 **`char`** <strong>\*</strong> 합니다.
 
-  - **Const char**를 사용할 LPCTSTR를 사용 <strong>\*</strong> 합니다. `CString`와 LPCTSTR 간에 변환할 LPCTSTR 연산자를 제공 합니다 `CString` .
+  - 을 사용 하는 LPCTSTR를 사용 **`const char`** <strong>\*</strong> 합니다. `CString` 와 LPCTSTR 간에 변환할 LPCTSTR 연산자를 제공 합니다 `CString` .
 
-`CString`는 유니코드 인식 생성자, 할당 연산자 및 비교 연산자도 제공 합니다.
+`CString` 는 유니코드 인식 생성자, 할당 연산자 및 비교 연산자도 제공 합니다.
 
 [런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md) 는 모든 문자열 처리 함수의 이식 가능한 버전을 정의 합니다. 자세한 내용은 [국제화](../c-runtime-library/internationalization.md)범주를 참조 하세요.
 
@@ -78,9 +99,9 @@ DBCS에서 지정 된 문자열은 모든 싱글바이트 ANSI 문자, 모든 �
 > [!NOTE]
 > MFC의 유니코드 문자열 serialization은 실행 중인 응용 프로그램의 버전에 관계 없이 유니코드 및 MBCS 문자열을 모두 읽을 수 있습니다. 데이터 파일은 프로그램의 유니코드 및 MBCS 버전 간에 이식 가능 합니다.
 
-`CString`멤버 함수는 호출 하는 C 런타임 함수의 특수 "일반 텍스트" 버전을 사용 하거나 유니코드 인식 함수를 사용 합니다. 따라서 예를 들어 `CString` 함수가 일반적으로를 호출 하는 경우 `strcmp` 해당 제네릭 텍스트 함수를 `_tcscmp` 대신 호출 합니다. _MBCS 및 _UNICODE 기호가 정의 된 방식에 따라은 다음과 같이 `_tcscmp` 매핑됩니다.
+`CString` 멤버 함수는 호출 하는 C 런타임 함수의 특수 "일반 텍스트" 버전을 사용 하거나 유니코드 인식 함수를 사용 합니다. 따라서 예를 들어 `CString` 함수가 일반적으로를 호출 하는 경우 `strcmp` 해당 제네릭 텍스트 함수를 `_tcscmp` 대신 호출 합니다. _MBCS 및 _UNICODE 기호가 정의 된 방식에 따라은 다음과 같이 `_tcscmp` 매핑됩니다.
 
-|||
+|기호|기능|
 |-|-|
 |_MBCS 정의됨|`_mbscmp`|
 |_UNICODE 정의됨|`wcscmp`|

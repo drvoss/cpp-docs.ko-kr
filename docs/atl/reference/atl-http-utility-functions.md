@@ -2,18 +2,18 @@
 title: ATL HTTP 유틸리티 함수
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: c95681503da0d661382e6da33bd33e8f2004838b
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833987"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 유틸리티 함수
 
 이러한 함수는 Url 조작을 지원 합니다.
 
-|||
+|기능|설명|
 |-|-|
 |[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes 안전 하지 않은 문자 및 공백을 이스케이프 시퀀스로 변환 하는 것을 포함 하는 URL입니다.|
 |[AtlCombineUrl](#atlcombineurl)|기준 URL과 상대 URL을 단일 정식 URL로 결합 합니다.|
@@ -28,7 +28,7 @@ ms.locfileid: "82168607"
 
 **헤더:**
 
-## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 
 안전하지 않은 문자와 공백을 이스케이프 시퀀스로 변환하는 등 URL을 정식화하려면 이 함수를 호출합니다.
 
@@ -68,7 +68,7 @@ inline BOOL AtlCanonicalizeUrl(
 
 - ATL_URL_NO_META는 URL에서 메타 시퀀스 (예: "." 및 ".")를 제거 하지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -76,7 +76,7 @@ inline BOOL AtlCanonicalizeUrl(
 
 는 현재 버전의 [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) 처럼 동작 하지만 WinInet 또는 Internet Explorer를 설치 하지 않아도 됩니다.
 
-## <a name="atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
+## <a name="atlcombineurl"></a><a name="atlcombineurl"></a> AtlCombineUrl
 
 기본 URL과 상대 URL을 단일 정규 URL로 결합하려면 이 함수를 호출합니다.
 
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
 *dwFlags*<br/>
 이 함수의 동작을 제어 하는 플래그입니다. [AtlCanonicalizeUrl](#atlcanonicalizeurl)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -114,7 +114,7 @@ inline BOOL AtlCombineUrl(
 
 는 현재 버전의 [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) 처럼 동작 하지만 WinInet 또는 Internet Explorer를 설치 하지 않아도 됩니다.
 
-## <a name="atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a><a name="atlescapeurl"></a> AtlEscapeUrl
 
 모든 안전하지 않은 문자를 이스케이프 시퀀스로 변환하려면 이 함수를 호출합니다.
 
@@ -151,11 +151,11 @@ DWORD 변수에 대 한 포인터입니다. 함수가 성공 하면 *pdwStrLen* 
 *dwFlags*<br/>
 이 함수의 동작을 제어 하 ATL_URL 플래그입니다. 가능한 값에 대해서는 [ATLCanonicalizeUrl](#atlcanonicalizeurl) 을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
-## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a>워크플로
+## <a name="atlgetdefaulturlport"></a><a name="atlgetdefaulturlport"></a> 워크플로
 
 특정 인터넷 프로토콜 또는 체계와 관련된 기본 포트 번호를 가져오려면 이 함수를 호출합니다.
 
@@ -168,11 +168,11 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 *m_nScheme*<br/>
 포트 번호를 가져올 체계를 식별 하는 [ATL_URL_SCHEME](atl-url-scheme-enum.md) 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 체계와 관련 된 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) 또는 구성표를 인식할 수 없는 경우 ATL_URL_INVALID_PORT_NUMBER입니다.
 
-## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
 
 URL에서 문자를 안전하게 사용할 수 있는지 확인하려면 이 함수를 호출합니다.
 
@@ -185,7 +185,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 *chIn*<br/>
 안전을 위해 테스트할 문자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 입력 문자가 안전 하지 않으면 TRUE를 반환 하 고 그렇지 않으면 FALSE를 반환 합니다.
 
@@ -193,7 +193,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 Url에 사용 하지 않아야 하는 문자는이 함수를 사용 하 여 테스트 하 고 [AtlCanonicalizeUrl](#atlcanonicalizeurl)를 사용 하 여 변환할 수 있습니다.
 
-## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a><a name="atlunescapeurl"></a> AtlUnescapeUrl
 
 이스케이프된 문자를 원래 값으로 다시 변환하려면 이 함수를 호출합니다.
 
@@ -225,7 +225,7 @@ DWORD 변수에 대 한 포인터입니다. 함수가 성공 하면 변수는 �
 *dwMaxLength*<br/>
 *LpszStringOut*버퍼의 크기입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -233,7 +233,7 @@ DWORD 변수에 대 한 포인터입니다. 함수가 성공 하면 변수는 �
 
 [AtlEscapeUrl](#atlescapeurl)에 의해 적용 되는 변환 프로세스를 반대로 바꿉니다.
 
-## <a name="rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a><a name="rgbtohtml"></a> RGBToHtml
 
 [Colorref](/windows/win32/gdi/colorref) 값을 해당 색 값에 해당 하는 HTML 텍스트로 변환 합니다.
 
@@ -255,7 +255,7 @@ HTML 색 값에 대 한 텍스트를 받을 호출자가 할당 한 버퍼입니
 *nBuffer*<br/>
 버퍼의 크기 (바이트)입니다 (null 종결자의 공간 포함).
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE를 반환 하 고 실패 하면 FALSE를 반환 합니다.
 
@@ -263,7 +263,7 @@ HTML 색 값에 대 한 텍스트를 받을 호출자가 할당 한 버퍼입니
 
 HTML 색 값은 색의 빨간색, 녹색 및 파랑 구성 요소 각각에 대해 2 자리를 사용 하는 파운드 기호 (예: #FFFFFF은 흰색)입니다.
 
-## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 
 시스템 시간을 HTTP 헤더에서 사용하기에 적합한 형식의 문자열로 변환하려면 이 함수를 호출합니다.
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 HTTP 형식 문자열로 가져올 시스템 시간입니다.
 
 *strTime*<br/>
-RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) 및 rfc 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt))에 정의 된 HTTP 날짜 시간을 받을 문자열 변수에 대 한 참조입니다.
+RFC 2616 ( [https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt) ) 및 rfc 1123 ()에 정의 된 HTTP 날짜 시간을 받을 문자열 변수에 대 한 참조 [https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt) 입니다.
 
 ## <a name="see-also"></a>참고 항목
 

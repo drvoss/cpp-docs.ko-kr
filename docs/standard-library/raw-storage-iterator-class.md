@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217638"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831426"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator 클래스
 
@@ -46,26 +46,26 @@ template <class OutputIterator, class Type>
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|지정된 기본 출력 반복기를 사용하여 원시 스토리지 반복기를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[element_type](#element_type)|원시 스토리지 반복기를 저장할 요소를 설명하는 형식을 제공합니다.|
 |[iter_type](#iter_type)|원시 스토리지 반복기의 기반이 되는 반복기를 설명하는 형식을 제공합니다.|
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자](#op_star)|출력 반복기 식을 구현 하는 데 사용 되는 역참조 연산자 \* `ii`  =  `x` 입니다.|
 |[연산자 =](#op_eq)|\* `i`  =  메모리에 저장 하기 위한 원시 저장소 반복기 식을 구현 하는 데 사용 되는 할당 연산자 `x` 입니다.|
 |[operator + +](#op_add_add)|원시 스토리지 반복기에 대한 사전 증가 및 사후 증가 연산자입니다.|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 원시 스토리지 반복기를 저장할 요소를 설명하는 형식을 제공합니다.
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 형식은 raw_storage_iterator 클래스 템플릿 매개 변수의 동의어입니다 `Type` .
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 원시 스토리지 반복기의 기반이 되는 반복기를 설명하는 형식을 제공합니다.
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 이 형식은 템플릿 매개 변수 `ForwardIterator`의 동의어입니다.
 
-### <a name="operator"></a><a name="op_star"></a>연산자\*
+### <a name="operator"></a><a name="op_star"></a> 연산자\*
 
 원시 저장소 반복기 식 ii x를 구현 하는 데 사용 되는 역참조 연산자 \* *ii*  =  *x*입니다.
 
@@ -97,7 +97,7 @@ typedef ForwardIterator iter_type;
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 원시 스토리지 반복기에 대한 참조
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>연산자 =
+### <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 \* *i*  =  메모리에 저장 하기 위해 원시 저장소 반복기 식 i*x* 를 구현 하는 데 사용 되는 할당 연산자입니다.
 
@@ -171,7 +171,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 *짧은*\
 메모리에 삽입할 형식 개체의 값입니다 `Type` .
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 연산자는 `val`을 메모리에 삽입한 다음 원시 스토리지 반복기에 대한 참조를 반환합니다.
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>operator + +
+### <a name="operator"></a><a name="op_add_add"></a> operator + +
 
 원시 스토리지 반복기에 대한 사전 증가 및 사후 증가 연산자입니다.
 
@@ -241,7 +241,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 원시 스토리지 반복기 또는 원시 스토리지 반복기에 대한 참조입니다.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 지정된 기본 출력 반복기를 사용하여 원시 스토리지 반복기를 생성합니다.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 189fd70ce10b6067646553f2b92a8fc09239d054
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834221"
 ---
 # <a name="unique_lock-class"></a>unique_lock 클래스
 
@@ -38,7 +38,7 @@ class unique_lock;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|`unique_lock` 개체를 생성합니다.|
 |[~ unique_lock 소멸자](#dtorunique_lock_destructor)|`unique_lock` 개체와 연결된 모든 리소스를 해제합니다.|
@@ -74,7 +74,7 @@ class unique_lock;
 
 **네임스페이스:** std
 
-## <a name="lock"></a><a name="lock"></a>잠기지
+## <a name="lock"></a><a name="lock"></a> 잠기지
 
 스레드가 연결된 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.
 
@@ -90,7 +90,7 @@ void lock();
 
 그렇지 않으면이 메서드는 `lock` 연결 된에 대해 `mutex` 를 호출 하 고 내부 스레드 소유권 플래그를로 설정 **`true`** 합니다.
 
-## <a name="mutex"></a><a name="mutex"></a>뮤텍스의
+## <a name="mutex"></a><a name="mutex"></a> 뮤텍스의
 
 연결된 `mutex`에 대해 저장된 포인터를 검색합니다.
 
@@ -98,7 +98,7 @@ void lock();
 mutex_type *mutex() const noexcept;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>연산자 bool
+## <a name="operator-bool"></a><a name="op_bool"></a> 연산자 bool
 
 연결된 뮤텍스의 소유권이 호출 스레드에 있는지를 지정합니다.
 
@@ -106,11 +106,11 @@ mutex_type *mutex() const noexcept;
 explicit operator bool() noexcept
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 스레드가 뮤텍스를 소유 하는 경우 그렇지 않으면 **`false`** 입니다.
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 저장된 `mutex` 포인터 및 연결된 소유권 상태를 지정한 개체에서 복사합니다.
 
@@ -123,7 +123,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 *다른*\
 `unique_lock` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `*this`
 
@@ -133,7 +133,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 복사 후이 메서드는 *다른* 를 기본 생성 상태로 설정 합니다.
 
-## <a name="owns_lock"></a><a name="owns_lock"></a>owns_lock
+## <a name="owns_lock"></a><a name="owns_lock"></a> owns_lock
 
 호출 스레드가 연결된 `mutex`를 소유하는지를 지정합니다.
 
@@ -141,11 +141,11 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 bool owns_lock() const noexcept;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 스레드가를 소유 하는 경우 `mutex` 이 고, 그렇지 않으면 **`false`** 입니다.
 
-## <a name="release"></a><a name="release"></a>릴리스
+## <a name="release"></a><a name="release"></a> 릴리스
 
 연결된 `mutex` 개체에서 `unique_lock` 개체의 연결을 끊습니다.
 
@@ -153,7 +153,7 @@ bool owns_lock() const noexcept;
 mutex_type *release() noexcept;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 저장된 `mutex` 포인터의 이전 값입니다.
 
@@ -161,7 +161,7 @@ mutex_type *release() noexcept;
 
 이 메서드는 저장 된 포인터의 값을 `mutex` 0으로 설정 하 고 내부 `mutex` 소유권 플래그를로 설정 **`false`** 합니다.
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 연결된 `mutex` 및 소유권 상태를 지정된 개체의 mutex 및 소유권 상태로 바꿉니다.
 
@@ -174,7 +174,7 @@ void swap(unique_lock& Other) noexcept;
 *다른*\
 `unique_lock` 개체입니다.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 차단되지 않고 연결된 `mutex`의 소유권을 가져오려고 시도합니다.
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 bool try_lock() noexcept;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 메서드가의 소유권을 가져오면 `mutex` 이 고, 그렇지 않으면 **`false`** 입니다.
 
@@ -192,7 +192,7 @@ bool try_lock() noexcept;
 
 호출 스레드가 `mutex`를 이미 소유하고 있으면 이 메서드는 오류 코드가 `resource_deadlock_would_occur`인 `system_error`를 throw합니다.
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 차단되지 않고 연결된 `mutex`의 소유권을 가져오려고 시도합니다.
 
@@ -207,7 +207,7 @@ bool try_lock_for(
 *Rel_time*\
 메서드가 `mutex`의 소유권을 가져오려고 시도하는 최대 시간을 지정하는 [chrono::duration](../standard-library/duration-class.md) 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 메서드가의 소유권을 가져오면 `mutex` 이 고, 그렇지 않으면 **`false`** 입니다.
 
@@ -217,7 +217,7 @@ bool try_lock_for(
 
 호출 스레드가 `mutex`를 이미 소유하고 있으면 이 메서드는 오류 코드가 `resource_deadlock_would_occur`인 `system_error`를 throw합니다.
 
-## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a> try_lock_until
 
 차단되지 않고 연결된 `mutex`의 소유권을 가져오려고 시도합니다.
 
@@ -233,7 +233,7 @@ bool try_lock_until(const xtime* Abs_time);
 *Abs_time*\
 임계값을 지정하는 특정 시점으로, 이 시간 경과 후에는 메서드가 더 이상 `mutex`의 소유권을 가져오려고 시도하지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 메서드가의 소유권을 가져오면 `mutex` 이 고, 그렇지 않으면 **`false`** 입니다.
 
@@ -243,7 +243,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 호출 스레드가 `mutex`를 이미 소유하고 있으면 이 메서드는 오류 코드가 `resource_deadlock_would_occur`인 `system_error`를 throw합니다.
 
-## <a name="unique_lock-constructor"></a><a name="unique_lock"></a>unique_lock 생성자
+## <a name="unique_lock-constructor"></a><a name="unique_lock"></a> unique_lock 생성자
 
 `unique_lock` 개체를 생성합니다.
 
@@ -293,7 +293,7 @@ unique_lock(mutex_type& Mtx,
 
 나머지 생성자는 저장 된 포인터로 & *mtx.exe* 를 저장 합니다 `mutex` . `mutex`의 소유권은 두 번째 인수(있는 경우)에 의해 결정됩니다.
 
-|||
+|Name|설명|
 |-|-|
 |`No argument`|연결된 `mutex` 개체에 대해 `lock` 메서드를 호출하여 소유권을 가져옵니다.|
 |`Adopt`|이때 소유권이 있는 것으로 가정합니다. 생성자를 호출할 때 `Mtx`가 잠겨 있어야 합니다.|
@@ -314,7 +314,7 @@ unique_lock(mutex_type& Mtx,
 
 호출 스레드가 연결된 `mutex`를 소유하는 경우 소멸자는 `mutex` 개체에 대해 unlock을 호출하여 소유권을 해제합니다.
 
-## <a name="unlock"></a><a name="unlock"></a>잠금을
+## <a name="unlock"></a><a name="unlock"></a> 잠금을
 
 연결된 `mutex`의 소유권을 해제합니다.
 

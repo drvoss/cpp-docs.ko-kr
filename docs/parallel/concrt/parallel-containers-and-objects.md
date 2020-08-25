@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: dffe9b3490f52645414643ebc23ab78553abafff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213907"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831790"
 ---
 # <a name="parallel-containers-and-objects"></a>병렬 컨테이너 및 개체
 
@@ -21,7 +21,7 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 *동시 개체* 는 구성 요소 간에 동시에 공유 됩니다. 동시 개체의 상태를 병렬로 계산 하는 프로세스는 동일한 상태를 직렬로 계산 하는 다른 프로세스와 동일한 결과를 생성 합니다. [Concurrency:: 결합할](../../parallel/concrt/reference/combinable-class.md) 수 있는 클래스는 동시 개체 형식의 한 예입니다. `combinable`클래스를 사용 하 여 병렬로 계산을 수행한 다음 이러한 계산을 최종 결과로 결합할 수 있습니다. 뮤텍스와 같은 동기화 메커니즘을 사용 하 여 공유 변수 또는 리소스에 대 한 액세스를 동기화 하는 경우 동시 개체를 사용 합니다.
 
-## <a name="sections"></a><a name="top"></a>섹션이
+## <a name="sections"></a><a name="top"></a> 섹션이
 
 이 항목에서는 다음과 같은 병렬 컨테이너 및 개체에 대해 자세히 설명 합니다.
 
@@ -63,11 +63,11 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
   - [예](#combinable-examples)
 
-## <a name="concurrent_vector-class"></a><a name="vector"></a>concurrent_vector 클래스
+## <a name="concurrent_vector-class"></a><a name="vector"></a> concurrent_vector 클래스
 
 [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 클래스는 [std:: vector](../../standard-library/vector-class.md) 클래스와 마찬가지로 요소에 임의로 액세스할 수 있도록 하는 시퀀스 컨테이너 클래스입니다. 클래스는 동시성이 보장 되는 `concurrent_vector` 추가 및 요소 액세스 작업을 가능 하 게 합니다. 추가 작업은 기존 포인터 또는 반복기를 무효화 하지 않습니다. 반복기 액세스 및 트래버스 작업도 동시성이 안전 합니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다.
 
-### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a>Concurrent_vector와 vector의 차이점
+### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a> Concurrent_vector와 vector의 차이점
 
 `concurrent_vector`클래스는 클래스와 유사 합니다 `vector` . 개체에 대 한 추가, 요소 액세스 및 반복기 액세스 작업의 복잡성은 `concurrent_vector` 개체의 경우와 동일 합니다 `vector` . 다음은가와 어떻게 다른 지를 보여 주는 점입니다 `concurrent_vector` `vector` .
 
@@ -87,27 +87,56 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 - 런타임은 형식에 대해의 특수화 된 버전을 정의 하지 않습니다 `concurrent_vector` **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a>동시성이 안전 하 게 작동 하는 작업
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> 동시성이 안전 하 게 작동 하는 작업
 
 개체의 크기를 추가 하거나 늘리거나 개체의 요소에 액세스 하는 모든 메서드는 `concurrent_vector` `concurrent_vector` 동시성이 안전 합니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다. 이 규칙의 예외는 `resize` 메서드입니다.
 
 다음 표에서는 동시성이 보장 되는 일반적인 `concurrent_vector` 메서드 및 연산자를 보여 줍니다.
 
-||||
-|-|-|-|
-|[at](reference/concurrent-vector-class.md#at)|[종단](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
-|[시작](reference/concurrent-vector-class.md#begin)|[앞뒤](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
-|[뒤로](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
-|[수용](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
-|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
+:::row:::
+   :::column span="":::
+      [`at`](reference/concurrent-vector-class.md#at)\
+      [`back`](reference/concurrent-vector-class.md#back)\
+      [`begin`](reference/concurrent-vector-class.md#begin)\
+      [`capacity`](reference/concurrent-vector-class.md#capacity)
+   :::column-end:::
+   :::column span="":::
+      [`empty`](reference/concurrent-vector-class.md#empty)\
+      [`end`](reference/concurrent-vector-class.md#end)\
+      [`front`](reference/concurrent-vector-class.md#front)\
+      [`grow_by`](reference/concurrent-vector-class.md#grow_by)
+   :::column-end:::
+   :::column span="":::
+      [`grow_to_at_least`](reference/concurrent-vector-class.md#grow_to_at_least)\
+      [`max_size`](reference/concurrent-vector-class.md#max_size)\
+      [`operator[]`](reference/concurrent-vector-class.md#operator_at)\
+      [`push_back`](reference/concurrent-vector-class.md#push_back)
+   :::column-end:::
+   :::column span="":::
+      [`rbegin`](reference/concurrent-vector-class.md#rbegin)\
+      [`rend`](reference/concurrent-vector-class.md#rend)\
+      [`size`](reference/concurrent-vector-class.md#size)
+   :::column-end:::
+:::row-end:::
 
 런타임에서 c + + 표준 라이브러리와의 호환성을 위해 제공 하는 작업 (예:) `reserve` 은 동시성이 안전 하지 않습니다. 다음 표에서는 동시성이 보장 되지 않는 일반적인 메서드 및 연산자를 보여 줍니다.
 
-|||
-|-|-|
-|[assign](reference/concurrent-vector-class.md#assign)|[두기](reference/concurrent-vector-class.md#reserve)|
-|[해제](reference/concurrent-vector-class.md#clear)|[조정해](reference/concurrent-vector-class.md#resize)|
-|[연산자 =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+:::row:::
+   :::column span="":::
+      [`assign`](reference/concurrent-vector-class.md#assign)\
+      [`clear`](reference/concurrent-vector-class.md#clear)
+   :::column-end:::
+   :::column span="":::
+      [`operator=`](reference/concurrent-vector-class.md#operator_eq)\
+      [`reserve`](reference/concurrent-vector-class.md#reserve)
+   :::column-end:::
+   :::column span="":::
+      [`resize`](reference/concurrent-vector-class.md#resize)
+   :::column-end:::
+   :::column span="":::
+      [`shrink_to_fit`](reference/concurrent-vector-class.md#shrink_to_fit)
+   :::column-end:::
+:::row-end:::
 
 기존 요소의 값을 수정 하는 연산은 동시성이 안전 하지 않습니다. [Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 개체와 같은 동기화 개체를 사용 하 여 동일한 데이터 요소에 대 한 동시 읽기 및 쓰기 작업을 동기화 합니다. 동기화 개체에 대 한 자세한 내용은 [동기화 데이터 구조](../../parallel/concrt/synchronization-data-structures.md)를 참조 하세요.
 
@@ -117,7 +146,7 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 메서드는 `end` 동시성이 안전 하지만 [push_back](reference/concurrent-vector-class.md#push_back) 메서드에 대 한 동시 호출로 인해에서 반환 하는 값이 `end` 변경 됩니다. 반복기가 트래버스하는 요소 수는 결정 되지 않습니다. 따라서이 프로그램은 실행 될 때마다 다른 결과를 생성할 수 있습니다. 요소 형식이 trivial이 아닌 경우 및 호출 사이에 경합 상태가 있을 수 `push_back` `end` 있습니다. `end`메서드는 할당 되었지만 완전히 초기화 되지 않은 요소를 반환할 수 있습니다.
 
-### <a name="exception-safety"></a><a name="vector-exceptions"></a>예외 안전성
+### <a name="exception-safety"></a><a name="vector-exceptions"></a> 예외 안전성
 
 증가 또는 할당 작업에서 예외를 throw 하는 경우 개체의 상태가 `concurrent_vector` 유효 하지 않게 됩니다. 달리 지정 되지 `concurrent_vector` 않은 경우 잘못 된 상태의 개체 동작은 정의 되지 않습니다. 그러나 개체의 상태가 잘못 된 경우에도 소멸자는 항상 개체가 할당 하는 메모리를 해제 합니다.
 
@@ -129,11 +158,11 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 [[맨 위로](#top)이동]
 
-## <a name="concurrent_queue-class"></a><a name="queue"></a>concurrent_queue 클래스
+## <a name="concurrent_queue-class"></a><a name="queue"></a> concurrent_queue 클래스
 
 [Std:: queue](../../standard-library/queue-class.md) 클래스와 마찬가지로 [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) 클래스를 사용 하 여 front 및 back 요소에 액세스할 수 있습니다. 클래스는 동시성이 보장 되는 큐에 넣기 `concurrent_queue` 및 큐에서 제거 작업을 가능 하 게 합니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다. `concurrent_queue`또한 클래스는 동시성이 안전 하지 않은 반복기 지원도 제공 합니다.
 
-### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a>Concurrent_queue와 큐의 차이점
+### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a> Concurrent_queue와 큐의 차이점
 
 `concurrent_queue`클래스는 클래스와 유사 합니다 `queue` . 다음은가와 어떻게 다른 지를 보여 주는 점입니다 `concurrent_queue` `queue` .
 
@@ -147,27 +176,47 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 - `concurrent_queue`클래스는 메서드 대신 [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) 메서드를 제공 합니다 `size` . `unsafe_size`메서드는 동시성이 보장 되지 않습니다.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a>동시성이 안전 하 게 작동 하는 작업
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> 동시성이 안전 하 게 작동 하는 작업
 
 개체에서 큐에 넣기 또는 큐에서 제거 하는 모든 메서드 `concurrent_queue` 는 동시성이 보장 됩니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다.
 
 다음 표에서는 동시성이 보장 되는 일반적인 `concurrent_queue` 메서드 및 연산자를 보여 줍니다.
 
-|||
-|-|-|
-|[empty](reference/concurrent-queue-class.md#empty)|[push](reference/concurrent-queue-class.md#push)|
-|[get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|
+:::row:::
+   :::column span="":::
+      [`empty`](reference/concurrent-queue-class.md#empty)
+   :::column-end:::
+   :::column span="":::
+      [`get_allocator`](reference/concurrent-queue-class.md#get_allocator)
+   :::column-end:::
+   :::column span="":::
+      [`push`](reference/concurrent-queue-class.md#push)
+   :::column-end:::
+   :::column span="":::
+      [`try_pop`](reference/concurrent-queue-class.md#try_pop)
+   :::column-end:::
+:::row-end:::
 
 메서드는 `empty` 동시성이 안전 하지만, 동시 작업을 수행 하면 메서드가 반환 되기 전에 큐가 늘어나거나 줄어들 수 있습니다 `empty` .
 
 다음 표에서는 동시성이 보장 되지 않는 일반적인 메서드 및 연산자를 보여 줍니다.
 
-|||
-|-|-|
-|[해제](reference/concurrent-queue-class.md#clear)|[unsafe_end](reference/concurrent-queue-class.md#unsafe_end)|
-|[unsafe_begin](reference/concurrent-queue-class.md#unsafe_begin)|[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)|
+:::row:::
+   :::column span="":::
+      [`clear`](reference/concurrent-queue-class.md#clear)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_begin`](reference/concurrent-queue-class.md#unsafe_begin)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_end`](reference/concurrent-queue-class.md#unsafe_end)
+   :::column-end:::
+   :::column span="":::
+      [`unsafe_size`](reference/concurrent-queue-class.md#unsafe_size)
+   :::column-end:::
+:::row-end:::
 
-### <a name="iterator-support"></a><a name="queue-iterators"></a>반복기 지원
+### <a name="iterator-support"></a><a name="queue-iterators"></a> 반복기 지원
 
 는 `concurrent_queue` 동시성이 안전 하지 않은 반복기를 제공 합니다. 디버깅에만 이러한 반복기를 사용 하는 것이 좋습니다.
 
@@ -179,9 +228,9 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 |`operator*`|현재 항목에 대 한 참조를 검색 합니다.|
 |`operator->`|현재 항목에 대 한 포인터를 검색 합니다.|
 
-[[맨 위로](#top)이동]
+\[[위쪽](#top)]
 
-## <a name="concurrent_unordered_map-class"></a><a name="unordered_map"></a>concurrent_unordered_map 클래스
+## <a name="concurrent_unordered_map-class"></a><a name="unordered_map"></a> concurrent_unordered_map 클래스
 
 [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) 클래스는 [std:: unordered_map](../../standard-library/unordered-map-class.md) 클래스와 마찬가지로 [std::p air \<const Key, Ty> ](../../standard-library/pair-structure.md)형식의 요소에 대 한 다양 한 길이의 요소 시퀀스를 제어 하는 결합형 컨테이너 클래스입니다. 순서가 지정 되지 않은 지도는 키와 값 쌍을 추가 하거나 키로 값을 조회할 수 있는 사전으로 생각 하면 됩니다. 이 클래스는 공유 컨테이너에 동시에 액세스 하거나,이를 삽입 하거나, 업데이트 해야 하는 여러 스레드나 태스크가 있는 경우에 유용 합니다.
 
@@ -191,7 +240,7 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 를 사용 하 여 `concurrent_unordered_map` 맵을 수행 하 고 작업을 병렬로 줄이기 위해를 사용 하는 예제는 [방법: 매핑 수행 및 병렬 작업 줄이기](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)를 참조 하세요.
 
-### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a>Concurrent_unordered_map와 unordered_map의 차이점
+### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a> Concurrent_unordered_map와 unordered_map의 차이점
 
 `concurrent_unordered_map`클래스는 클래스와 유사 합니다 `unordered_map` . 다음은가와 어떻게 다른 지를 보여 주는 점입니다 `concurrent_unordered_map` `unordered_map` .
 
@@ -199,37 +248,68 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 - 삽입 작업은 기존 포인터 또는 반복기를 무효화 하지 않으며 맵에 이미 존재 하는 항목의 순서를 변경 하지도 않습니다. 삽입 및 트래버스 작업은 동시에 발생할 수 있습니다.
 
-- `concurrent_unordered_map`는 전방 반복만 지원 합니다.
+- `concurrent_unordered_map` 는 전방 반복만 지원 합니다.
 
 - 삽입은에서 반환 하는 반복기를 무효화 하거나 업데이트 하지 않습니다 `equal_range` . 삽입은 범위의 끝에 같지 않은 항목을 추가할 수 있습니다. Begin iterator는 동일한 항목을 가리킵니다.
 
 교착 상태를 방지 하기 위해의 메서드는 `concurrent_unordered_map` 메모리 할당자, 해시 함수 또는 기타 사용자 정의 코드를 호출할 때 잠금을 보유 하지 않습니다. 또한 해시 함수는 항상 동일한 키를 동일한 값으로 평가 하는지 확인 해야 합니다. 최상의 해시 함수는 해시 코드 공간에서 키를 균일 하 게 분산 합니다.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a>동시성이 안전 하 게 작동 하는 작업
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> 동시성이 안전 하 게 작동 하는 작업
 
 클래스는 동시성이 보장 되는 `concurrent_unordered_map` 삽입 및 요소 액세스 작업을 가능 하 게 합니다. 삽입 작업은 기존 포인터 또는 반복기를 무효화 하지 않습니다. 반복기 액세스 및 트래버스 작업도 동시성이 안전 합니다. 여기서는 동시성이 안전 함을 의미 하는 포인터가 나 반복기는 항상 유효 합니다. 요소 초기화 나 특정 트래버스 주문의 보장은 아닙니다. 다음 표에서는 동시성이 보장 되는 일반적으로 사용 되는 `concurrent_unordered_map` 메서드 및 연산자를 보여 줍니다.
 
-|||||
-|-|-|-|-|
-|[at](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|
-|`begin`|`empty`|`get_allocator`|`max_size`|
-|`cbegin`|`end`|`hash_function`|[operator&#91;&#93;](reference/concurrent-unordered-map-class.md#operator_at)|
-|`cend`|`equal_range`|[insert](reference/concurrent-unordered-map-class.md#insert)|`size`|
+:::row:::
+   :::column span="":::
+      [`at`](reference/concurrent-unordered-map-class.md#at)\
+      [`begin`](reference/concurrent-unordered-map-class.md#begin)\
+      [`cbegin`](reference/concurrent-unordered-map-class.md#cbegin)\
+      [`cend`](reference/concurrent-unordered-map-class.md#cend)
+   :::column-end:::
+   :::column span="":::
+      [`count`](reference/concurrent-unordered-map-class.md#count)\
+      [`empty`](reference/concurrent-unordered-map-class.md#empty)\
+      [`end`](reference/concurrent-unordered-map-class.md#cend)\
+      [`equal_range`](reference/concurrent-unordered-map-class.md#equal_range)
+   :::column-end:::
+   :::column span="":::
+      [`find`](reference/concurrent-unordered-map-class.md#find)\
+      [`get_allocator`](reference/concurrent-unordered-map-class.md#get_allocator)\
+      [`hash_function`](reference/concurrent-unordered-map-class.md#hash_function)\
+      [`insert`](reference/concurrent-unordered-map-class.md#insert)
+   :::column-end:::
+   :::column span="":::
+      [`key_eq`](reference/concurrent-unordered-map-class.md#key_eq)\
+      [`max_size`](reference/concurrent-unordered-map-class.md#max_size)\
+      [`operator[]`](./reference/concurrent-unordered-map-class.md#operator_at)\
+      [`size`](reference/concurrent-unordered-map-class.md#size)
+   :::column-end:::
+:::row-end:::
 
 동시에 `count` 실행 되는 스레드에서 메서드를 안전 하 게 호출할 수 있지만 새 값이 컨테이너에 동시에 삽입 되는 경우 다른 스레드가 다른 결과를 받을 수 있습니다.
 
 다음 표에서는 동시성이 보장 되지 않는 일반적으로 사용 되는 메서드 및 연산자를 보여 줍니다.
 
-||||
-|-|-|-|
-|`clear`|`max_load_factor`|`rehash`|
-|`load_factor`|[연산자 =](reference/concurrent-unordered-map-class.md#operator_eq)
+:::row:::
+   :::column span="":::
+      [`clear`](reference/concurrent-unordered-map-class.md#clear)\
+      [`load_factor`](reference/concurrent-unordered-map-class.md#load_factor)
+   :::column-end:::
+   :::column span="":::
+      [`max_load_factor`](reference/concurrent-unordered-map-class.md#max_load_factor)
+   :::column-end:::
+   :::column span="":::
+      [`operator=`](reference/concurrent-unordered-map-class.md#operator_eq)
+   :::column-end:::
+   :::column span="":::
+      [`rehash`](reference/concurrent-unordered-map-class.md#rehash)
+   :::column-end:::
+:::row-end:::
 
 이러한 메서드 외에도로 시작 하는 모든 메서드 `unsafe_` 는 동시성이 안전 하지 않습니다.
 
 [[맨 위로](#top)이동]
 
-## <a name="concurrent_unordered_multimap-class"></a><a name="unordered_multimap"></a>concurrent_unordered_multimap 클래스
+## <a name="concurrent_unordered_multimap-class"></a><a name="unordered_multimap"></a> concurrent_unordered_multimap 클래스
 
 [Concurrency:: concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) 클래스는 `concurrent_unordered_map` 여러 값이 동일한 키에 매핑되도록 허용 한다는 점을 제외 하 고 클래스와 매우 비슷합니다. 또한 다음과 같은 점에서와 다릅니다 `concurrent_unordered_map` .
 
@@ -237,13 +317,13 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 - `concurrent_unordered_multimap`클래스는 `operator[]` 및 메서드를 제공 하지 않습니다 `at` .
 
-다음 예에서는를 사용 하기 위한 기본 구조를 보여 줍니다 `concurrent_unordered_multimap` . 이 예에서는 [' a ', ' i '] 범위의 문자 키를 삽입 합니다. `concurrent_unordered_multimap`키에 여러 값을 사용할 수 있습니다.
+다음 예에서는를 사용 하기 위한 기본 구조를 보여 줍니다 `concurrent_unordered_multimap` . 이 예에서는 [' a ', ' i '] 범위의 문자 키를 삽입 합니다. `concurrent_unordered_multimap` 키에 여러 값을 사용할 수 있습니다.
 
 [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]
 
 [[맨 위로](#top)이동]
 
-## <a name="concurrent_unordered_set-class"></a><a name="unordered_set"></a>concurrent_unordered_set 클래스
+## <a name="concurrent_unordered_set-class"></a><a name="unordered_set"></a> concurrent_unordered_set 클래스
 
 [Concurrency:: concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) 클래스는 `concurrent_unordered_map` 키 및 값 쌍 대신 값을 관리 한다는 점을 제외 하 고 클래스와 매우 비슷합니다. `concurrent_unordered_set`클래스는 `operator[]` 및 메서드를 제공 하지 않습니다 `at` .
 
@@ -253,7 +333,7 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 [[맨 위로](#top)이동]
 
-## <a name="concurrent_unordered_multiset-class"></a><a name="unordered_multiset"></a>concurrent_unordered_multiset 클래스
+## <a name="concurrent_unordered_multiset-class"></a><a name="unordered_multiset"></a> concurrent_unordered_multiset 클래스
 
 [Concurrency:: concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) 클래스는 `concurrent_unordered_set` 중복 값을 허용 한다는 점을 제외 하 고 클래스와 유사 합니다. 또한 다음과 같은 점에서와 다릅니다 `concurrent_unordered_set` .
 
@@ -261,19 +341,19 @@ PPL (병렬 패턴 라이브러리)에는 해당 요소에 스레드로부터 �
 
 - `concurrent_unordered_multiset`클래스는 `operator[]` 및 메서드를 제공 하지 않습니다 `at` .
 
-다음 예에서는를 사용 하기 위한 기본 구조를 보여 줍니다 `concurrent_unordered_multiset` . 이 예에서는 [' a ', ' i '] 범위의 문자 값을 삽입 합니다. `concurrent_unordered_multiset`값을 여러 번 사용할 수 있도록 합니다.
+다음 예에서는를 사용 하기 위한 기본 구조를 보여 줍니다 `concurrent_unordered_multiset` . 이 예에서는 [' a ', ' i '] 범위의 문자 값을 삽입 합니다. `concurrent_unordered_multiset` 값을 여러 번 사용할 수 있도록 합니다.
 
 [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]
 
 [[맨 위로](#top)이동]
 
-## <a name="combinable-class"></a><a name="combinable"></a>결합 가능한 클래스
+## <a name="combinable-class"></a><a name="combinable"></a> 결합 가능한 클래스
 
 [Concurrency:: 결합할](../../parallel/concrt/reference/combinable-class.md) 수 있는 클래스는 세분화 된 계산을 수행한 다음 이러한 계산을 최종 결과로 병합할 수 있는 재사용 가능한 스레드 로컬 저장소를 제공 합니다. `combinable` 개체는 환산(reduction) 변수로 간주될 수 있습니다.
 
 `combinable`클래스는 여러 스레드나 작업 간에 공유 되는 리소스가 있는 경우에 유용 합니다. `combinable`클래스를 사용 하면 잠금 없는 방식으로 공유 리소스에 대 한 액세스를 제공 하 여 공유 상태를 제거할 수 있습니다. 따라서이 클래스는 뮤텍스와 같은 동기화 메커니즘을 사용 하 여 여러 스레드의 공유 데이터에 대 한 액세스를 동기화 하는 대신 사용할 수 있는 방법을 제공 합니다.
 
-### <a name="methods-and-features"></a><a name="combinable-features"></a>메서드 및 기능
+### <a name="methods-and-features"></a><a name="combinable-features"></a> 메서드 및 기능
 
 다음 표에서는 클래스의 몇 가지 중요 한 메서드를 보여 줍니다 `combinable` . 모든 클래스 메서드에 대 한 자세한 내용은 `combinable` [결합 가능한 클래스](../../parallel/concrt/reference/combinable-class.md)를 참조 하세요.
 

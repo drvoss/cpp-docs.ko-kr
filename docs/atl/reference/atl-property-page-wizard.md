@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321671"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833935"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 속성 페이지 마법사
 
@@ -41,9 +41,8 @@ Visual Studio 2008부터, 이 마법사에서 생성된 등록 스크립트는 �
 
 개체를 구현하기 위해 생성된 C++ 클래스에 대한 정보를 제공합니다.
 
-|||
-|-|-|
 |용어|정의|
+|-|-|
 |**짧은 이름**|개체의 약식 이름을 설정합니다. 해당 필드를 개별적으로 변경하지 않는 한, 지정한 이름에 따라 **Coclass** 이름, 파일(**.cpp** 및 **.h**) 이름, **형식** 이름, **ProgID**가 결정됩니다.|
 |**.h 파일**|새 개체 클래스에 대한 헤더 파일의 이름을 설정합니다. 기본적으로 이 이름은 **짧은 이름**에 지정한 이름을 기반으로 합니다. 파일 이름을 선택한 위치에 저장하거나 클래스 선언을 기존 파일에 추가하려면 줄임표 단추를 클릭합니다. 기존 파일을 선택하는 경우, 마법사에서 **마침**을 클릭해야 해당 파일이 선택한 위치에 저장됩니다.<br /><br /> 마법사는 파일을 덮어쓰지 않습니다. 기존 파일의 이름을 선택하면 마법사에서 **마침**을 클릭할 때 클래스 선언을 파일의 내용에 추가해야 하는지 여부를 나타내는 메시지가 표시됩니다. **예**를 클릭하여 파일을 추가하거나, **아니요**를 클릭하여 마법사로 돌아가서 다른 파일 이름을 지정합니다.|
 |**클래스**|개체를 구현하는 클래스의 이름을 설정합니다. 이 이름은 **짧은 이름**에 지정한 이름을 기반으로 하며, 클래스 이름의 일반적인 접두사인 ‘C’가 앞에 추가됩니다.|
@@ -61,11 +60,11 @@ Visual Studio 2008부터, 이 마법사에서 생성된 등록 스크립트는 �
    > [!NOTE]
    > 특성을 사용하여 프로젝트를 만들거나 이 마법사 페이지에서 속성 페이지에 특성이 사용된다고 지정한 경우, ATL에는 `coclass` 특성이 없기 때문에 이 옵션을 변경할 수 없습니다.
 
-- **Type**
+- **유형**
 
    레지스트리에 표시되는 개체 설명을 설정합니다.
 
-- **Progid**
+- **ProgID**
 
    컨테이너에서 개체의 CLSID 대신 사용할 수 있는 이름을 설정합니다.
 
@@ -75,4 +74,4 @@ Visual Studio 2008부터, 이 마법사에서 생성된 등록 스크립트는 �
 
 [옵션, ATL 속성 페이지 마법사](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [문자열, ATL 속성 페이지 마법사](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[예: 속성 페이지 구현](../../atl/example-implementing-a-property-page.md)
+[예제: 속성 페이지 구현](../../atl/example-implementing-a-property-page.md)

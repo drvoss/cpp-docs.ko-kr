@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219055"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832011"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 클래스
 
@@ -35,7 +35,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>메서드
 
-|||
+|속성|설명|
 |-|-|
 |[추가로](#allocate)|새 문자열 데이터 구조를 할당 하려면이 메서드를 호출 합니다.|
 |[복제](#clone)|의 다른 인스턴스와 함께 사용할 새 문자열 관리자에 대 한 포인터를 반환 하려면이 메서드를 호출 `CSimpleStringT` 합니다.|
@@ -53,7 +53,7 @@ __interface IAtlStringMgr
 
 **헤더:** atlsimpstr
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr:: Allocate
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a> IAtlStringMgr:: Allocate
 
 새 문자열 데이터 구조를 할당 합니다.
 
@@ -69,7 +69,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 *nCharSize*<br/>
 문자열 관리자에서 사용 하는 문자 형식의 크기 (바이트)입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새로 할당된 메모리 블록에 대한 포인터를 반환합니다.
 
@@ -83,7 +83,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 > 사용 예제는 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)를 참조 하세요.
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:: Clone
+## <a name="iatlstringmgrclone"></a><a name="clone"></a> IAtlStringMgr:: Clone
 
 의 다른 인스턴스와 함께 사용할 새 문자열 관리자에 대 한 포인터를 반환 합니다 `CSimpleStringT` .
 
@@ -91,7 +91,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 IAtlStringMgr* Clone() throw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `IAtlStringMgr` 개체의 복사본을 반환합니다.
 
@@ -104,7 +104,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 > 사용 예제는 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)를 참조 하세요.
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:: Free
+## <a name="iatlstringmgrfree"></a><a name="free"></a> IAtlStringMgr:: Free
 
 문자열 데이터 구조를 해제 합니다.
 
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 > 사용 예제는 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)를 참조 하세요.
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IGetNilString Stringmgr::
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a> IGetNilString Stringmgr::
 
 빈 문자열에 대 한 문자열 데이터 구조에 대 한 포인터를 반환 합니다.
 
@@ -132,7 +132,7 @@ void Free(CStringData* pData) throw();
 CStringData* GetNilString() throw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CStringData`빈 문자열을 나타내는 데 사용 되는 개체에 대 한 포인터입니다.
 
@@ -146,7 +146,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 > 사용 예제는 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)를 참조 하세요.
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:: 다시 할당
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a> IAtlStringMgr:: 다시 할당
 
 문자열 데이터 구조를 다시 할당 합니다.
 
@@ -168,7 +168,7 @@ CStringData* Reallocate(
 *nCharSize*<br/>
 문자열 관리자에서 사용 하는 문자 형식의 크기 (바이트)입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새로 할당된 메모리 블록의 시작 부분에 대한 포인터를 반환합니다.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182501"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831465"
 ---
 # <a name="function-class"></a>function 클래스
 
@@ -107,19 +107,19 @@ public:
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[function](#function)|비어 있거나 고정된 시그니처가 포함된 임의 형식의 호출 가능 개체를 저장하는 래퍼를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[result_type](#result_type)|호출 가능 개체의 반환 형식입니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[assign](#assign)|이 함수 개체에 호출 가능 개체를 할당합니다.|
 |[스왑을](#swap)|두 개의 호출 가능 개체를 바꿉니다.|
@@ -128,13 +128,13 @@ public:
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 지정 되지 않음](#op_unspecified)|저장된 호출 가능 개체가 있는지 테스트합니다.|
 |[연산자 ()](#op_call)|호출 가능 개체를 호출합니다.|
 |[연산자 =](#op_eq)|저장된 호출 가능 개체를 바꿉니다.|
 
-## <a name="assign"></a><a name="assign"></a>할당
+## <a name="assign"></a><a name="assign"></a> 할당
 
 이 함수 개체에 호출 가능 개체를 할당합니다.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>연산자 지정 되지 않음
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> 연산자 지정 되지 않음
 
 저장된 호출 가능 개체가 있는지 테스트합니다.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>연산자 ()
+## <a name="operator"></a><a name="op_call"></a> 연산자 ()
 
 호출 가능 개체를 호출합니다.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 저장된 호출 가능 개체를 바꿉니다.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 호출 가능 개체의 반환 형식입니다.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 개의 호출 가능 개체를 바꿉니다.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>대상을
+## <a name="target"></a><a name="target"></a> 대상을
 
 저장된 호출 가능 개체가 지정된 대로 호출 가능한지 테스트합니다.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 호출 가능 개체에 대한 형식 정보를 가져옵니다.
 

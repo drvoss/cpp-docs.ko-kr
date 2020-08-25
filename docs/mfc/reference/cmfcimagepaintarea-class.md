@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562157"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831153"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 클래스
 
@@ -37,17 +37,15 @@ class CMFCImagePaintArea : public CButton
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCImagePaintArea:: CMFCImagePaintArea](#cmfcimagepaintarea)|`CMFCImagePaintArea` 개체를 생성합니다.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCImagePaintArea:: GetMode](#getmode)|현재 그리기 모드를 검색 합니다.|
 |[CMFCImagePaintArea:: SetBitmap](#setbitmap)|그림 영역에 대 한 비트맵 이미지를 설정 합니다.|
 |[CMFCImagePaintArea:: SetColor](#setcolor)|현재 그리기 색을 설정 합니다.|
@@ -102,7 +100,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 IMAGE_EDIT_MODE GetMode() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 그리기 모드를 지정 하는 [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 값입니다.
 

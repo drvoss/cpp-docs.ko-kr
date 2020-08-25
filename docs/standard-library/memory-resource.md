@@ -1,18 +1,18 @@
 ---
-title: '&lt;memory_resource &gt;'
+title: '&lt;memory_resource&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: de88feb691d0ec1bc9bf9b9dc2bc40cbc31a1cfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687706"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831049"
 ---
-# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource&gt;
 
 컨테이너 클래스 템플릿 memory_resource 및 해당 지원 템플릿을 정의 합니다.
 
@@ -26,20 +26,20 @@ ms.locfileid: "72687706"
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|연산자의 좌 변에 있는 memory_resource 개체가 우변에 있는 memory_resource 개체와 같지 않은 지 테스트 합니다.|
-|[연산자==](../standard-library/memory-resource-operators.md#op_eq_eq)|연산자의 좌 변에 있는 memory_resource 개체가 우변에 있는 memory_resource 개체와 같은지 테스트 합니다.|
+|[연산자! =](../standard-library/memory-resource-operators.md#op_neq)|연산자의 좌 변에 있는 memory_resource 개체가 우변에 있는 memory_resource 개체와 같지 않은 지 테스트 합니다.|
+|[연산자 = =](../standard-library/memory-resource-operators.md#op_eq_eq)|연산자의 좌 변에 있는 memory_resource 개체가 우변에 있는 memory_resource 개체와 같은지 테스트 합니다.|
 
 ### <a name="specialized-template-functions"></a>특별 템플릿 함수
 
-|||
+|Name|설명|
 |-|-|
 |[polymorphic_allocator](../standard-library/memory-resource-functions.md#poly_alloc)||
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get_default_resource](../standard-library/memory-resource-functions.md#get_default)||
 |[new_delete_resource](../standard-library/memory-resource-functions.md#new_delete)||
@@ -48,7 +48,7 @@ ms.locfileid: "72687706"
 
 ### <a name="classes-and-structs"></a>클래스 및 구조체
 
-|||
+|Name|설명|
 |-|-|
 |[memory_resource 클래스](../standard-library/memory-resource-class.md)||
 |[monotonic_buffer_resource 클래스](../standard-library/monotonic-buffer-resource-class.md)||
@@ -56,8 +56,8 @@ ms.locfileid: "72687706"
 |[synchronized_pool_resource 클래스](../standard-library/synchronized-pool-resource-class.md)||
 |[unsynchronized_pool_resource 클래스](../standard-library/unsynchronized-pool-resource-class.md)||
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[C + + 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)

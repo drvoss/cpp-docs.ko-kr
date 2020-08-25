@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561325"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834299"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 클래스
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` 개체를 생성하고 초기화합니다.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|현재 Windows 테마를 사용 하 여 확인란 컨트롤을 그립니다.|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|현재 Windows 테마를 사용 하 여 콤보 상자 테두리를 그립니다.|
 |[CMFCBaseVisualManager::D rawComboDropButton](#drawcombodropbutton)|현재 Windows 테마를 사용 하 여 콤보 상자 드롭다운 단추를 그립니다.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|||
+|Name|설명|
 |-|-|
-|속성|Description|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|`CloseThemeData`에서 가져온 모든 핸들에 대해를 호출 `UpdateSystemColors` 합니다.|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|`OpenThemeData`을 호출 하 여 다양 한 컨트롤을 그리기 위한 핸들을 가져옵니다. 창, 도구 모음, 단추 등|
 
@@ -155,7 +152,7 @@ virtual BOOL DrawCheckBox(
 *bPressed*<br/>
 진행 확인란을 눌렀는지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -199,7 +196,7 @@ virtual BOOL DrawComboBorder(
 *bIsHighlighted*<br/>
 진행 콤보 상자 테두리를 강조 표시할지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -233,7 +230,7 @@ virtual BOOL DrawComboDropButton(
 *bIsHighlighted*\
 진행 콤보 상자 드롭다운 단추가 강조 표시 되는지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -263,7 +260,7 @@ virtual BOOL DrawPushButton(
 *uiState*<br/>
 진행 무시. *Pbutton*에서 상태를 가져옵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -301,7 +298,7 @@ virtual BOOL DrawRadioButton(
 *bPressed*<br/>
 진행 라디오 단추를 눌렀는지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -351,7 +348,7 @@ virtual BOOL DrawStatusBarProgress(
 *bProgressText*<br/>
 진행 진행률 텍스트를 표시할지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -377,7 +374,7 @@ virtual void FillReBarPane(
 *rectClient*<br/>
 진행 채워질 영역의 경계 사각형입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 테마 API를 사용 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -389,7 +386,7 @@ virtual void FillReBarPane(
 virtual WinXpTheme GetStandardWindowsTheme();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 선택 된 Windows 테마 색입니다. 다음 열거형 값 중 하나일 수 있습니다.
 

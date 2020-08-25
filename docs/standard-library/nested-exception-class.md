@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212191"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836441"
 ---
 # <a name="nested_exception-class"></a>nested_exception 클래스
 
@@ -32,34 +32,34 @@ class nested_exception {
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
-|[연산자 =](#op_as)||
+|[연산자 =](#op_as)|대입 연산자입니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|저장 된 예외를 throw 합니다.|
 |[nested_ptr](#nested_ptr)|저장 된 예외를 반환 합니다.|
 
-### <a name="operator"></a><a name="op_as"></a>연산자 =
+### <a name="operator"></a><a name="op_as"></a> 연산자 =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a> nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 이 개체가 캡처한 저장 된 예외 `nested_exception` 입니다.
 
-### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a> rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;

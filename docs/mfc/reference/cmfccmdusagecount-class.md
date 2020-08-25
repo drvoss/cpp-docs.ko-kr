@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834279"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 클래스
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|기본 생성자입니다.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCCmdUsageCount:: AddCmd](#addcmd)|지정 된 명령과 연결 된 카운터를 하나씩 늘립니다.|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|지정 된 명령 ID와 연결 된 사용 횟수를 검색 합니다.|
 |[CMFCCmdUsageCount:: Hasenou징 정보](#hasenoughinformation)|이 개체가 추적 데이터의 최소 양을 수집 했는지 여부를 확인 합니다.|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+|Name|설명|
 |-|-|
-|속성|Description|
 |`m_CmdUsage`|`CMap`명령을 사용 횟수에 매핑하는 개체입니다.|
 |`m_nMinUsagePercentage`|명령이 자주 사용 되는 최소 사용 백분율입니다.|
 |`m_nStartCount`|이 개체가 추적 데이터의 최소 양을 수집 했는지 여부를 확인 하는 데 사용 되는 시작 카운터입니다.|
@@ -124,7 +121,7 @@ UINT GetCount(UINT uiCmd) const;
 *uiCmd*\
 진행 검색할 명령 카운터의 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 명령 ID와 연결 된 사용 횟수입니다.
 
@@ -136,7 +133,7 @@ UINT GetCount(UINT uiCmd) const;
 BOOL HasEnoughInformation() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 개체가 추적 데이터의 최소 크기를 받은 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -159,7 +156,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 *uiCmd*\
 진행 확인할 명령을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 명령이 자주 사용 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -218,7 +215,7 @@ static BOOL __stdcall SetOptions(
 *nMinUsagePercentage*\
 진행 새 최소 사용 백분율입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, *nMinUsagePercentage* 매개 변수가 100 보다 크거나 같으면 FALSE입니다.
 

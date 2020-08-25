@@ -1,21 +1,21 @@
 ---
-title: 비 확장 가능C++ (COM 특성)
+title: 비 확장 가능 (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214687"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833038"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-`IDispatch` 구현에 인터페이스 설명에 나열 된 속성 및 메서드만 포함 하 고 런타임에 추가 멤버로 확장할 수 없도록 지정 합니다.
+`IDispatch`구현 시 인터페이스 설명에 나열 된 속성 및 메서드만 포함 하 고 런타임에 추가 멤버로 확장할 수 없도록 지정 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214687"
 [nonextensible]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**비 확장 가능** C++ 특성에는 [비 확장](/windows/win32/Midl/nonextensible) MIDL 특성과 동일한 기능이 있습니다.
+**비 확장 가능** c + + 특성에는 [비 확장](/windows/win32/Midl/nonextensible) MIDL 특성과 동일한 기능이 있습니다.
 
 **비 확장** 을 사용 하려면 [oleautomation](oleautomation.md) 특성도 필요 합니다.
 
@@ -50,13 +50,11 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
-|**필수 특성**|`dual` 및 `oleautomation`또는 `dispinterface`|
+|**불가능**|아니요|
+|**필수 특성**|`dual` 및 `oleautomation` 또는 `dispinterface`|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

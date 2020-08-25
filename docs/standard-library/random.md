@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217651"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831440"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "87217651"
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**:\<random>
+**헤더**: \<random>
 
 **네임스페이스:** std
 
@@ -225,9 +225,8 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> 불명확한 생성기
 
-|||
-|-|-|
-|[random_device 클래스](../standard-library/random-device-class.md)|외부 디바이스를 사용하여 불명확하고 암호로 보호되는 임의 시퀀스를 생성합니다. 일반적으로 엔진을 시드하는 데 사용됩니다. 성능은 낮지만 품질은 매우 높습니다. 자세한 내용은 [설명 부분](#comments)을 참조 하십시오.|
+[random_device 클래스](../standard-library/random-device-class.md)\
+외부 디바이스를 사용하여 불명확하고 암호로 보호되는 임의 시퀀스를 생성합니다. 일반적으로 엔진을 시드하는 데 사용됩니다. 성능은 낮지만 품질은 매우 높습니다. 자세한 내용은 [설명 부분](#comments)을 참조 하십시오.
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> 매개 변수가 미리 정의된 엔진 형식 정의
 
@@ -281,7 +280,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24`24 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994).
+- `ranlux24` 24 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +292,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48`48 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994)
+- `ranlux48` 48 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994)
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -309,7 +308,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 엔진 템플릿은 독립형 URNG 또는 [엔진 어댑터](#engadapt)에 전달되는 기본 엔진으로 사용됩니다. 일반적으로 엔진 템플릿은 [미리 정의된 형식 정의](#typedefs)를 사용하여 인스턴스화되고 [분포](#distributions)로 전달됩니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.
 
-|||
+|Name|설명|
 |-|-|
 |[linear_congruential_engine 클래스](../standard-library/linear-congruential-engine-class.md)|선형 합동 알고리즘을 사용하여 임의 시퀀스를 생성합니다. 가장 간단하지만 품질이 가장 떨어집니다.|
 |[mersenne_twister_engine 클래스](../standard-library/mersenne-twister-engine-class.md)|메르센 트위스터 알고리즘을 사용하여 임의 시퀀스를 생성합니다. 가장 복잡하지만 품질이 가장 뛰어납니다(random_device 클래스 제외). 성능이 매우 빠릅니다.|
@@ -319,7 +318,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 엔진 어댑터는 다른 기본 엔진을 조정하는 템플릿입니다. 일반적으로 엔진 템플릿은 [미리 정의된 형식 정의](#typedefs)를 사용하여 인스턴스화되고 [분포](#distributions)로 전달됩니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.
 
-|||
+|Name|설명|
 |-|-|
 |[discard_block_engine 클래스](../standard-library/discard-block-engine-class.md)|기본 엔진에서 반환된 값을 버려 임의의 시퀀스를 생성합니다.|
 |[independent_bits_engine 클래스](../standard-library/independent-bits-engine-class.md)|기본 엔진에서 반환한 값의 비트를 다시 압축하여 지정된 수의 비트를 사용하여 임의 시퀀스를 생성합니다.|
@@ -333,7 +332,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="uniform-distributions"></a>균등 분포
 
-|||
+|Name|설명|
 |-|-|
 |[uniform_int_distribution 클래스](../standard-library/uniform-int-distribution-class.md)|닫힌 간격 \[a, b](포함-포함) 내 범위 전체에서 균등 정수값 분포를 생성합니다.|
 |[uniform_real_distribution 클래스](../standard-library/uniform-real-distribution-class.md)|반 열린 간격 [a, b)(포함-제외) 내 범위 전체에서 균등 실수값(부동 소수점) 분포를 생성합니다.|
@@ -343,7 +342,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="bernoulli-distributions"></a>베르누이 분포
 
-|||
+|Name|설명|
 |-|-|
 |[bernoulli_distribution 클래스](../standard-library/bernoulli-distribution-class.md)|값의 베르누이 분포를 생성 **`bool`** 합니다.|
 |[binomial_distribution 클래스](../standard-library/binomial-distribution-class.md)|정수 값의 이항 분포를 생성합니다.|
@@ -354,7 +353,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="normal-distributions"></a>정규 분포
 
-|||
+|Name|설명|
 |-|-|
 |[cauchy_distribution 클래스](../standard-library/cauchy-distribution-class.md)|실수(부동 소수점) 값의 코시 분포를 생성합니다.|
 |[chi_squared_distribution 클래스](../standard-library/chi-squared-distribution-class.md)|실수(부동 소수점) 값의 카이 제곱 분포를 생성합니다.|
@@ -367,7 +366,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="poisson-distributions"></a>푸아송 분포
 
-|||
+|Name|설명|
 |-|-|
 |[exponential_distribution 클래스](../standard-library/exponential-distribution-class.md)|실수(부동 소수점) 값의 지수 분포를 생성합니다.|
 |[extreme_value_distribution 클래스](../standard-library/extreme-value-distribution-class.md)|실수(부동 소수점) 값의 극단값 분포를 생성합니다.|
@@ -379,7 +378,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 #### <a name="sampling-distributions"></a>표본 분포
 
-|||
+|Name|설명|
 |-|-|
 |[discrete_distribution 클래스](../standard-library/discrete-distribution-class.md)|이산 정수 분포를 생성합니다.|
 |[piecewise_constant_distribution 클래스](../standard-library/piecewise-constant-distribution-class.md)|실수(부동 소수점) 값의 부분 일정 분포를 생성합니다.|
@@ -391,7 +390,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 이 섹션에서는 \<random> 헤더에서 제공되는 일반 유틸리티 함수를 나열합니다.
 
-|||
+|Name|설명|
 |-|-|
 |[seed_seq 클래스](../standard-library/seed-seq-class.md)|편향되지 않은 암호화된 시드 시퀀스를 생성합니다. 임의 변량 스트림의 복제를 피하는 데 사용됩니다. 엔진에서 여러 URNG가 인스턴스화되는 경우 유용합니다.|
 
@@ -399,20 +398,20 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 이 섹션에서는 \<random> 헤더에서 제공되는 연산자를 나열합니다.
 
-|||
+|Name|설명|
 |-|-|
 |`operator==`|연산자의 좌변에 있는 URNG가 우변에 있는 엔진과 같은지 테스트합니다.|
 |`operator!=`|연산자의 좌변에 있는 URNG가 우변에 있는 엔진과 다른지 테스트합니다.|
 |`operator<<`|스트림에 상태 정보를 씁니다.|
 |`operator>>`|스트림에 상태 정보를 추출합니다.|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>엔진 및 배포
+## <a name="engines-and-distributions"></a><a name="engdist"></a> 엔진 및 배포
 
 에 정의 된 이러한 각 클래스 템플릿 범주에 대 한 자세한 내용은 다음 섹션을 참조 하십시오 \<random> . 이러한 클래스 템플릿 범주는 모두 형식을 인수로 사용 하 고, 공유 템플릿 매개 변수 이름을 사용 하 여 다음과 같이 실제 인수 형식으로 허용 되는 형식의 속성을 설명 합니다.
 
-- `IntType`,,,,,, 또는을 나타냅니다 **`short`** **`int`** **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** **`unsigned long long`** .
+- `IntType` ,,,,,, 또는을 나타냅니다 **`short`** **`int`** **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** **`unsigned long long`** .
 
-- `UIntType`, **`unsigned short`** , **`unsigned int`** 또는를 나타냅니다 **`unsigned long`** **`unsigned long long`** .
+- `UIntType` , **`unsigned short`** , **`unsigned int`** 또는를 나타냅니다 **`unsigned long`** **`unsigned long long`** .
 
 - `RealType`**`float`**, 또는을 나타냅니다 **`double`** **`long double`** .
 
@@ -440,7 +439,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 - 인수 `seed_seq& seq`가 있는 명시적 생성자로, 마치 `seed(seq)`를 호출하는 것처럼 시드된 생성기를 만듭니다.
 
-- `void discard(unsigned long long count)`시간을 효과적으로 호출 `operator()` `count` 하 고 각 값을 삭제 합니다.
+- `void discard(unsigned long long count)` 시간을 효과적으로 호출 `operator()` `count` 하 고 각 값을 삭제 합니다.
 
 **엔진 어댑터**는 다음 구성원를 추가적으로 지원합니다. `Engine`은 엔진 어댑터의 첫 번째 템플릿 매개 변수로, 기본 엔진의 형식을 지정합니다.
 
@@ -496,10 +495,10 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 아래 비교 테이블에 표시된 것처럼 Visual Studio에는 `mt19937` 및 `random_device`라는 매우 유용한 URNG가 있습니다.
 
-|URNG|빠름|암호로 보호|시드 가능|결정적|
+|URNG|빠름|암호로 보호|시드 가능|명확함|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|예|예|예|예로<sup>*</sup>|
-|`random_device`|예|예|아니요|예|
+|`mt19937`|예|아니요|예|예로<sup>*</sup>|
+|`random_device`|아니요|예|아니요|아니요|
 
 <sup>* 알려진 시드와 함께 제공되는 경우</sup>
 

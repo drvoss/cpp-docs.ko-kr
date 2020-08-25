@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404296"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830789"
 ---
 # <a name="ole-background"></a>OLE 백그라운드
 
@@ -62,11 +62,11 @@ OLE는 응용 프로그램 간의 원활한 상호 작용 목표를 달성 하�
 
 - [OLE 백그라운드: 컨테이너 및 서버](ole-background-containers-and-servers.md)
 
-- [OLE 백그라운드 구현 전략](ole-background-implementation-strategies.md)
+- [OLE 배경: 구현 전략](ole-background-implementation-strategies.md)
 
 - [OLE 백그라운드: MFC 구현](ole-background-mfc-implementation.md)
 
-위의 문서에서 찾을 수 없는 일반적인 OLE 정보는 Microsoft Docs에서 [OLE를 검색](https://docs.microsoft.com/search/?terms=ole) 합니다.
+위의 문서에서 찾을 수 없는 일반적인 OLE 정보는 Microsoft Docs에서 [OLE를 검색](/search/?terms=ole) 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

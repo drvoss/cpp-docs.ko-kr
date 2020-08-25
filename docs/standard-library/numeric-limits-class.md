@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520605"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830685"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 클래스
 
@@ -101,7 +101,7 @@ template <class Type>
 
 ## <a name="static-functions-and-constants"></a>정적 함수 및 상수
 
-|||
+|Name|설명|
 |-|-|
 |[denorm_min](#denorm_min)|0이 아닌 가장 작은 비정규화된 값을 반환합니다.|
 |[숫자](#digits)|정밀도의 손실 없이 형식이 나타낼 수 있는 기수 자릿수를 반환합니다.|
@@ -136,7 +136,7 @@ template <class Type>
 |[tinyness_before](#tinyness_before)|값이 너무 작아서 반올림하기 전에 정규화된 값으로 나타낼 수 없음을 형식이 확인할 수 있는지 테스트합니다.|
 |[traps](#traps)|산술 예외를 보고하는 트래핑이 형식에 대해 구현되었는지 테스트합니다.|
 
-### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a> denorm_min
 
 0이 아닌 가장 작은 비정규화된 값을 반환합니다.
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a><a name="digits"></a>올
+### <a name="digits"></a><a name="digits"></a> 올
 
 정밀도의 손실 없이 형식이 나타낼 수 있는 기수 자릿수를 반환합니다.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a><a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a> digits10
 
 정밀도의 손실 없이 형식이 나타낼 수 있는 10진수 자릿수를 반환합니다.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a><a name="epsilon"></a>엡실론
+### <a name="epsilon"></a><a name="epsilon"></a> 엡실론
 
 함수는 1과 데이터 형식에 대해 나타낼 수 있는 1보다 큰 가장 작은 값 사이의 차이를 반환합니다.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a> has_denorm
 
 형식이 비정규화된 값을 허용하는지 테스트합니다.
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a> has_denorm_loss
 
 정밀도 손실이 부정확한 결과가 아니라 비정규화 손실로 검색되는지 테스트합니다.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a> has_infinity
 
 형식에 양의 무한대 표현이 있는지 테스트합니다.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a> has_quiet_NaN
 
 형식에 신호를 보내지 않는 자동 NAN(숫자가 아님) 표현이 있는지 테스트합니다.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a> has_signaling_NaN
 
 형식에 신호를 보내는 NAN(숫자가 아님) 표현이 있는지 테스트합니다.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a><a name="infinity"></a>infinity
+### <a name="infinity"></a><a name="infinity"></a> infinity
 
 형식의 양의 무한대 표현(사용 가능한 경우)입니다.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a> is_bounded
 
 형식이 나타낼 수 있는 값 집합이 유한한지 테스트합니다.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a><a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a> is_exact
 
 형식에서 수행되는 계산에 반올림 오류가 없는지 테스트합니다.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a> is_iec559
 
 형식이 IEC 559 표준을 준수하는지 테스트합니다.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a><a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a> is_integer
 
 형식이 정수 표현인지 테스트합니다.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
 **형식** 에 모듈로 표현이 있는지 테스트 합니다.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a><a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a> is_signed
 
 형식에 부호 있는 표현이 있는지 테스트합니다.
 
@@ -927,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a> is_specialized
 
 형식에 클래스 템플릿에 정의 된 명시적 특수화가 있는지 테스트 `numeric_limits` 합니다.
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a><a name="lowest"></a>가장 낮은
+### <a name="lowest"></a><a name="lowest"></a> 가장 낮은
 
 최대한의 음의 무한대 값을 반환합니다.
 
@@ -997,7 +997,7 @@ static constexpr Type lowest() throw();
 
 해당 형식으로 최대한의 음의 무한대 값을 반환합니다(일반적으로 정수 형식은 `min()`, 부동소수점 형식은 `-max()`). 가 이면 반환 값은 의미가 `is_bounded` **`true`** 있습니다.
 
-### <a name="max"></a><a name="max"></a>최대값
+### <a name="max"></a><a name="max"></a> 최대값
 
 형식에 대한 유한 최대값을 반환합니다.
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a> max_digits10
 
 형식의 두 고유 값에 고유 10진수 표현이 있는지 확인하는 데 필요한 10진수 자릿수를 반환합니다.
 
@@ -1055,7 +1055,7 @@ static constexpr int max_digits10 = 0;
 
 멤버는 형식의 두 고유 값에 고유 10진수 표현이 있는지 확인하는 데 필요한 10진수 자릿수를 저장합니다.
 
-### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a> max_exponent
 
 밑수 기수에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 양의 정수 지수를 반환합니다.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a> max_exponent10
 
 밑수 10에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 양의 정수 지수를 반환합니다.
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a> min_exponent
 
 밑수 기수에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 음의 정수 지수를 반환합니다.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a> min_exponent10
 
 밑수 10에 대한 해당 거듭제곱을 계산할 때 부동 소수점 형식이 유한 값으로 나타낼 수 있는 최대 음의 정수 지수를 반환합니다.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a> quiet_NaN
 
 형식에 대한 자동 NAN(숫자가 아님) 표현을 반환합니다.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a><a name="radix"></a>기 수
+### <a name="radix"></a><a name="radix"></a> 기 수
 
 형식 표현에 사용되는 정수 밑수(기수라고도 함)를 반환합니다.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a><a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a> round_error
 
 형식에 대한 최대 반올림 오차를 반환합니다.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a><a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a> round_style
 
 구현에서 부동 소수점 값을 정수 값으로 반올림하기 위해 선택할 수 있는 다양한 메서드를 설명하는 값을 반환합니다.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a> signaling_NaN
 
 형식에 대한 신호를 보내는 NAN(숫자가 아님) 표현을 반환합니다.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a> tinyness_before
 
 값이 너무 작아서 반올림하기 전에 정규화된 값으로 나타낼 수 없음을 형식이 확인할 수 있는지 테스트합니다.
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a><a name="traps"></a>트랩
+### <a name="traps"></a><a name="traps"></a> 트랩
 
 산술 예외를 보고하는 트래핑이 형식에 대해 구현되었는지 테스트합니다.
 

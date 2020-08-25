@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: d36e3a301aa5b861c296b0bb4859e9442dbdb75e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 92408e91b41b474da3a2da6ad0646feb3a6b8fc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560883"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831842"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 클래스
 
@@ -33,17 +33,15 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|`CMFCRibbonCustomizePropertyPage` 개체를 생성합니다.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCRibbonCustomizePropertyPage:: AddCustomCategory](#addcustomcategory)|사용자 지정 범주를 **명령** 콤보 상자에 추가 합니다.|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|프레임 워크에서이 클래스 형식과 연결 된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대 한 포인터를 가져오는 데 사용 됩니다.|

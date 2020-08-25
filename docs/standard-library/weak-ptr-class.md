@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: f76682b14e49e5f699144674da33b0826975e2d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a4989b9ac29e6a35e50479343d6bcf5a39ae1b0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217339"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831738"
 ---
 # <a name="weak_ptr-class"></a>weak_ptr 클래스
 
@@ -62,7 +62,7 @@ template<class T> class weak_ptr;
 
 ## <a name="members"></a>멤버
 
-|||
+|Name|설명|
 |-|-|
 | **생성자** | |
 |[weak_ptr](#weak_ptr)|`weak_ptr`를 생성합니다.|
@@ -80,7 +80,7 @@ template<class T> class weak_ptr;
 | **연산자** | |
 |[연산자 =](#op_eq)|소유하는 리소스를 대체합니다.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 요소의 유형입니다.
 
@@ -117,7 +117,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a><a name="expired"></a>종료
+## <a name="expired"></a><a name="expired"></a> 종료
 
 소유권이 만료 되었는지 테스트 합니다. 즉, 참조 된 개체가 삭제 되었는지 테스트 합니다.
 
@@ -166,7 +166,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a><a name="lock"></a>잠기지
+## <a name="lock"></a><a name="lock"></a> 잠기지
 
 `shared_ptr`리소스의 소유권을 공유 하는을 가져옵니다.
 
@@ -215,7 +215,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 소유하는 리소스를 대체합니다.
 
@@ -273,7 +273,7 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 **`true`** 이이 `weak_ptr` 제공 된 포인터 앞에 정렬 (또는 보다 작음) 되 면을 반환 합니다.
 
@@ -294,7 +294,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 **`true`** **`*this`** 가 *ptr*이전에 정렬 된 경우 템플릿 멤버 함수는를 반환 합니다.
 
-## <a name="reset"></a><a name="reset"></a>다시 설정
+## <a name="reset"></a><a name="reset"></a> 다시 설정
 
 소유 된 리소스를 해제 합니다.
 
@@ -336,7 +336,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 `weak_ptr` 개체를 교환합니다.
 
@@ -405,7 +405,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 `shared_ptr`공유 리소스를 소유 하는 개체 수를 계산 합니다.
 
@@ -445,7 +445,7 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a><a name="weak_ptr"></a>weak_ptr
+## <a name="weak_ptr"></a><a name="weak_ptr"></a> weak_ptr
 
 `weak_ptr`를 생성합니다.
 
@@ -514,7 +514,7 @@ wp0.expired() == true
 *wp2.lock() == 5
 ```
 
-## <a name="weak_ptr"></a><a name="tilde-weak_ptr"></a>~ weak_ptr
+## <a name="weak_ptr"></a><a name="tilde-weak_ptr"></a> ~ weak_ptr
 
 `weak_ptr`을 삭제합니다.
 

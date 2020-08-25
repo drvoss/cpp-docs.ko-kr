@@ -1,17 +1,17 @@
 ---
-title: id (C++ COM 특성)
+title: id (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830555"
 ---
 # <a name="id"></a>id
 
@@ -28,9 +28,9 @@ ms.locfileid: "80168059"
 *dispid*<br/>
 인터페이스 메서드의 디스패치 ID입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Id** C++ 특성에는 [id](/windows/win32/Midl/id) MIDL 특성과 동일한 기능이 있습니다.
+**Id** c + + 특성에는 [id](/windows/win32/Midl/id) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -38,12 +38,10 @@ ms.locfileid: "80168059"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 메서드|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

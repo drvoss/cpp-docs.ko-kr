@@ -4,12 +4,12 @@ ms.date: 07/15/2020
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-ms.openlocfilehash: 97e1327553d778b92fbd841f4069ca85880922c8
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a207de02a44ad960e84c6de3f78323c2f990e42c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446426"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832155"
 ---
 # <a name="symbols-reference"></a>기호 참조
 
@@ -76,7 +76,8 @@ ms.locfileid: "86446426"
 
 :::row:::
    :::column span="":::
-      [`$`](dollar.md)<br/>[`?`](q.md)
+      [`$`](dollar.md)\
+      [`?`](q.md)
    :::column-end:::
    :::column span="":::
       [`@@:`](at-at.md)
@@ -93,20 +94,26 @@ ms.locfileid: "86446426"
 
 :::row:::
    :::column span="":::
-      [`@code`](at-code.md)<br/>[`@CodeSize`](at-codesize.md)<br/>[`@CurSeg`](at-curseg.md)
+      [`@code`](at-code.md)\
+      [`@CodeSize`](at-codesize.md)\
+      [`@CurSeg`](at-curseg.md)
    :::column-end:::
    :::column span="":::
-      [`@data`](at-data.md)<br/>[`@DataSize`](at-datasize.md)<br/>[`@fardata`](at-fardata.md)
+      [`@data`](at-data.md)\
+      [`@DataSize`](at-datasize.md)\
+      [`@fardata`](at-fardata.md)
    :::column-end:::
    :::column span="":::
-      [`@fardata?`](at-fardata-q.md)<br/>[`@Model`](at-model.md)
+      [`@fardata?`](at-fardata-q.md)\
+      [`@Model`](at-model.md)
    :::column-end:::
    :::column span="":::
-      [`@stack`](at-stack.md)<br/>[`@WordSize`](at-wordsize.md)
+      [`@stack`](at-stack.md)\
+      [`@WordSize`](at-wordsize.md)
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Microsoft 매크로 어셈블러 참조](microsoft-macro-assembler-reference.md)\
 [MASM BNF 문법](masm-bnf-grammar.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a7448730501d6f3b50008966134f708ae99ddb5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743877"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830763"
 ---
 # <a name="signal-action-constants"></a>신호 작업 상수
 
@@ -26,11 +26,11 @@ ms.locfileid: "57743877"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `func` 인수는 함수 주소 또는 아래에 나열되고 SIGNAL.H에 정의된 매니페스트 상수 중 하나여야 합니다.
 
-|||
+|상수|설명|
 |-|-|
 | `SIG_DFL`  | 시스템 기본 응답을 사용합니다. 호출 프로그램이 스트림 I/O를 사용하는 경우 런타임 라이브러리에 의해 생성된 버퍼는 플러시되지 않습니다.  |
 | `SIG_IGN`  | 인터럽트 신호를 무시합니다. 프로세스의 부동 소수점 상태가 정의되지 않은 상태로 유지되므로 `SIGFPE`에 대해서는 이 값이 지정되지 않습니다.  |

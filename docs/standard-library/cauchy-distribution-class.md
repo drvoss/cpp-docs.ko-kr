@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217833"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830802"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution 클래스
 
@@ -80,10 +80,8 @@ public:
 
 코시 분포 분포에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 `a` 및 `b` 각각에 대한 값을 반환합니다.
 
@@ -240,7 +238,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:: cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a> cauchy_distribution:: cauchy_distribution
 
 분포를 생성합니다.
 
@@ -268,7 +266,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a> cauchy_distribution::p aram_type
 
 분포의 모든 매개 변수를 저장합니다.
 

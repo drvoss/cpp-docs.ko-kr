@@ -1,17 +1,17 @@
 ---
-title: iid_is (C++ COM 특성)
+title: iid_is (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167994"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832219"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -28,9 +28,9 @@ ms.locfileid: "80167994"
 *expression*<br/>
 인터페이스 포인터가 가리키는 COM 인터페이스의 IID를 지정 하는 C 언어 식입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Iid_is** C++ 특성에는 [iid_is](/windows/win32/Midl/iid-is) MIDL 특성과 동일한 기능이 있습니다.
+**Iid_is** c + + 특성에는 [iid_is](/windows/win32/Midl/iid-is) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -53,12 +53,10 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 매개 변수, 데이터 멤버|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

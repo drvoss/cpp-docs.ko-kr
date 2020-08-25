@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222578"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831504"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "87222578"
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**:\<complex>
+**헤더**: \<complex>
 
 **네임스페이스:** std
 
@@ -42,7 +42,7 @@ ms.locfileid: "87222578"
 
    (*a/*(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi*실수 집합 *i*<sup>2</sup> 의 대 수에 대 한 규칙을 복소수 집합 및 해당 구성 요소에 적용할 수 있습니다. 예를 들면 다음과 같습니다.
+A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi*실수 집합 *i*<sup>2</sup> 의 대 수에 대 한 규칙을 복소수 집합 및 해당 구성 요소에 적용할 수 있습니다. 예를 들어:
 
    (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
@@ -72,7 +72,7 @@ A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|복소수의 모듈러스를 계산합니다.|
 |[acos](../standard-library/complex-functions.md#acos)||
@@ -102,7 +102,7 @@ A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자! =](../standard-library/complex-operators.md#op_neq)|하나 또는 둘 모두 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 같지 않은지 테스트합니다.|
 |[연산자](../standard-library/complex-operators.md#op_star)|하나 또는 둘 다 실수 및 허수 부분에서 형식의 일부에 속할 수 있는 두 복소수를 곱합니다.|
@@ -115,7 +115,7 @@ A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[하므로\<double>](../standard-library/complex-double.md)|명시적으로 특수화 된 클래스 템플릿은 형식이 인 개체의 순서가 지정 된 쌍을 저장 하는 개체를 설명 합니다 **`double`** . 여기서 첫 번째 개체는 복소수의 실수 부분을 나타내고 두 번째 개체는 허수 부분을 나타냅니다.|
 |[하므로\<float>](../standard-library/complex-float.md)|명시적으로 특수화 된 클래스 템플릿은 형식이 인 개체의 순서가 지정 된 쌍을 저장 하는 개체를 설명 합니다 **`float`** . 여기서 첫 번째 개체는 복소수의 실수 부분을 나타내고 두 번째 개체는 허수 부분을 나타냅니다.|
@@ -126,7 +126,7 @@ A 2 =-1 *형식의 복소수* *z* = (*a*, *b*)를 표시 하 여  =  *a*  +  *bi
 
 \<complex>헤더는 실수 부분이 0이 고 허수 부분이 입력 매개 변수의 값이 되는 복소수를 만드는 다음 [사용자 정의 리터럴을](../cpp/user-defined-literals-cpp.md) 정의 합니다.
 
-|||
+|선언|설명|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|반환 값: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}`를 반환합니다.|

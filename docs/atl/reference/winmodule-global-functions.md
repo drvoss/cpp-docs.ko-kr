@@ -5,12 +5,12 @@ f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 1a929fd0f583150e84ce5b1efa7e896bc16e4247
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f1dcb325f8844a74b3dd831a51050083e7ea552
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229937"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834403"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 전역 함수
 
@@ -19,7 +19,7 @@ ms.locfileid: "87229937"
 > [!IMPORTANT]
 > 다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
-|||
+|Name|설명|
 |-|-|
 |[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|이 함수는 `_AtlCreateWndData` 구조를 초기화하고 추가하는 데 사용됩니다.|
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|기존 `_AtlCreateWndData` 구조를 추출하려면 이 함수를 호출합니다.|
@@ -28,7 +28,7 @@ ms.locfileid: "87229937"
 
 **헤더:** 서 기. h
 
-## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a> AtlWinModuleAddCreateWndData
 
 이 함수는 `_AtlCreateWndData` 구조를 초기화하고 추가하는 데 사용됩니다.
 
@@ -54,7 +54,7 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 `_AtlCreateWndData` **`this`** 클래스 인스턴스를 참조 하는 데 사용 되는 포인터를 저장 하 고 모듈의 구조에서 참조 되는 목록에 추가 하는 데 사용 되는 구조체를 초기화 `_ATL_WIN_MODULE70` 합니다. [Catlwinmodule:: AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)에서 호출 됩니다.
 
-## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a> AtlWinModuleExtractCreateWndData
 
 기존 `_AtlCreateWndData` 구조를 추출하려면 이 함수를 호출합니다.
 
@@ -67,7 +67,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 *pWinModule*<br/>
 모듈의 [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조체에 대 한 포인터를 반환 합니다.
 

@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 2be4cb1936536b68aed1f8ea937f6f72904c766d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831569"
 ---
 # <a name="crowset-class"></a>CRowset 클래스
 
@@ -259,7 +259,7 @@ class CRowset
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddRefRows](#addrefrows)|현재 행과 연결 된 참조 횟수를 늘립니다.|
 |[닫기](#close)|행과 현재 인터페이스를 해제 `IRowset` 합니다.|
@@ -292,7 +292,7 @@ OLE DB에서 행 집합은 프로그램에서 데이터를 설정 하 고 검색
 
 이 클래스는 인스턴스화되지 않으며 대신 또는에 대 한 템플릿 매개 변수로 전달 됩니다 `CTable` `CCommand` ( `CRowset` 기본값).
 
-## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset:: AddRefRows
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a> CRowset:: AddRefRows
 
 [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 를 호출 하 여 현재 행 핸들과 연결 된 참조 수를 하나씩 늘립니다.
 
@@ -310,7 +310,7 @@ HRESULT AddRefRows() throw();
 
 이 메서드는 현재 행 핸들의 참조 횟수를 증가 시킵니다. [ReleaseRows](../../data/oledb/crowset-releaserows.md) 를 호출 하 여 카운트를 감소 시킵니다. Move 메서드에 의해 반환 된 행의 참조 횟수는 1입니다.
 
-## <a name="crowsetclose"></a><a name="close"></a>CRowset:: Close
+## <a name="crowsetclose"></a><a name="close"></a> CRowset:: Close
 
 행과 현재 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) 인터페이스를 해제 합니다.
 
@@ -324,7 +324,7 @@ void Close() throw();
 
 이 메서드는 현재 행 집합에 있는 모든 행을 해제 합니다.
 
-## <a name="crowsetcompare"></a><a name="compare"></a>CRowset:: Compare
+## <a name="crowsetcompare"></a><a name="compare"></a> CRowset:: Compare
 
 [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))를 사용 하 여 두 책갈피를 비교 합니다.
 
@@ -347,7 +347,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 *pComparison*<br/>
 제한이 비교 결과에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -357,7 +357,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 소비자에서 책갈피를 사용 하는 방법에 대 한 자세한 내용은 [책갈피 사용](../../data/oledb/using-bookmarks.md)을 참조 하세요.
 
-## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset:: CRowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a> CRowset:: CRowset
 
 새 개체를 만들고 `CRowset` (선택 사항) 매개 변수로 제공 된 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) 인터페이스에 연결 합니다.
 
@@ -374,7 +374,7 @@ CRowset(IRowset* pRowset);
 *pRowset*<br/>
 [in] 이 클래스와 연결된 `IRowset` 인터페이스에 대한 포인터입니다.
 
-## <a name="crowsetdelete"></a><a name="delete"></a>CRowset::D e)
+## <a name="crowsetdelete"></a><a name="delete"></a> CRowset::D e)
 
 [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 를 호출 하 여 행 집합에서 현재 행을 삭제 합니다.
 
@@ -388,7 +388,7 @@ HRESULT Delete() const throw();
 
 표준 HRESULT입니다.
 
-## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset:: FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a> CRowset:: FindNextRow
 
 지정 된 책갈피 다음에 일치 하는 다음 행을 찾습니다.
 
@@ -431,7 +431,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 *pBookmark*<br/>
 진행 검색을 시작할 위치에 대 한 책갈피입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -441,7 +441,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 소비자에서 책갈피를 사용 하는 방법에 대 한 자세한 내용은 [책갈피 사용](../../data/oledb/using-bookmarks.md)을 참조 하세요.
 
-## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a> CRowset:: GetApproximatePosition
 
 책갈피에 해당 하는 행의 대략적인 위치를 반환 합니다.
 
@@ -464,7 +464,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 *pcRows*<br/>
 제한이 에서 `GetApproximatePosition` 행의 총 수를 반환 하는 위치에 대 한 포인터입니다. 행 개수가 필요 하지 않은 경우 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -474,7 +474,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 소비자에서 책갈피를 사용 하는 방법에 대 한 자세한 내용은 [책갈피 사용](../../data/oledb/using-bookmarks.md)을 참조 하세요.
 
-## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset:: GetData
+## <a name="crowsetgetdata"></a><a name="getdata"></a> CRowset:: GetData
 
 행 집합의 행 복사본에서 데이터를 검색합니다.
 
@@ -491,7 +491,7 @@ HRESULT GetData(int nAccessor) throw();
 *nAccessor*<br/>
 진행 데이터에 액세스 하는 데 사용할 접근자의 (0 오프셋) 인덱스 번호입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -499,7 +499,7 @@ HRESULT GetData(int nAccessor) throw();
 
 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)에서 autoaccessor가 아닌 접근자를 지정 하는 경우이 메서드를 사용 하 여 접근자 번호를 전달 하 여 명시적으로 데이터를 가져옵니다.
 
-## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset:: GetDataHere
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset:: GetDataHere
 
 현재 행에서 데이터를 검색 하 여 지정 된 버퍼에 배치 합니다.
 
@@ -518,7 +518,7 @@ HRESULT GetDataHere(int nAccessor,
 *pBuffer*<br/>
 제한이 현재 레코드에 대 한 데이터를 저장할 버퍼입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -526,7 +526,7 @@ HRESULT GetDataHere(int nAccessor,
 
 이 함수를 사용 하는 방법에 대 한 예제는 [Multiread 샘플](../../overview/visual-cpp-samples.md)을 참조 하세요.
 
-## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset:: GetOriginalData
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a> CRowset:: GetOriginalData
 
 `IRowsetUpdate::GetOriginalData`을 호출 하 여 가장 최근에 데이터 원본에서 인출 되거나 데이터 원본으로 전송 된 데이터를 검색 합니다.
 
@@ -546,7 +546,7 @@ HRESULT GetOriginalData() throw();
 
 이 메서드에는 `IRowsetUpdate` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetUpdate` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset:: GetRowStatus
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a> CRowset:: GetRowStatus
 
 모든 행의 상태를 반환 합니다.
 
@@ -561,7 +561,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 *pStatus*<br/>
 제한이 가 상태 값을 반환 하는 위치에 대 한 포인터 `GetRowStatus` 입니다. OLE DB 프로그래머 참조에서 DBPENDINGSTATUS를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -569,7 +569,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 이 메서드에는 `IRowsetUpdate` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetUpdate` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetinsert"></a><a name="insert"></a>CRowset:: Insert
+## <a name="crowsetinsert"></a><a name="insert"></a> CRowset:: Insert
 
 접근자의 데이터를 사용 하 여 새 행을 만들고 초기화 합니다.
 
@@ -588,7 +588,7 @@ HRESULT Insert(int nAccessor = 0,
 *bGetHRow*<br/>
 진행 삽입 된 행에 대 한 핸들을 검색할지 여부를 나타냅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -606,7 +606,7 @@ HRESULT Insert(int nAccessor = 0,
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset:: IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a> CRowset:: IsSameRow
 
 지정 된 행을 현재 행과 비교 합니다.
 
@@ -621,11 +621,11 @@ HRESULT IsSameRow(HROW hRow) const throw();
 *hRow*<br/>
 진행 현재 행과 비교할 행의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다. S_OK는 행이 동일 함을 나타냅니다. 다른 값은 Windows SDK *OLE DB 프로그래머 참조* 에서 [IRowsetIndentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 를 참조 하세요.
 
-## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset:: MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a> CRowset:: MoveFirst
 
 커서를 초기 위치로 이동 하 고 초기 행을 검색 합니다.
 
@@ -643,7 +643,7 @@ HRESULT MoveFirst() throw();
 
 [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) 를 호출 하 여 다음 인출 위치를 초기 위치 (행 집합이 만들어질 때 다음 인출 위치 였던 위치)로 변경 하 고 초기 행을 검색 합니다.
 
-## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset:: MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a> CRowset:: MoveLast
 
 커서를 마지막 행으로 이동 합니다.
 
@@ -663,7 +663,7 @@ HRESULT MoveLast() throw();
 
 이 메서드를 사용 하려면 `DBPROP_CANSCROLLBACKWARDS` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에를 VARIANT_TRUE 설정 해야 합니다. 성능 향상을 위해를 VARIANT_TRUE 설정할 수도 있습니다 `DBPROP_QUICKRESTART` .
 
-## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset:: MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a> CRowset:: MoveNext
 
 커서를 다음 레코드로 이동 합니다.
 
@@ -684,7 +684,7 @@ HRESULT MoveNext(LONG lSkip,
 *bForward*<br/>
 진행 를 전달 **`true`** 하 여 다음 레코드로 이동 **`false`** 합니다. 뒤로 이동 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다. 행 집합의 끝에 도달 하면 DB_S_ENDOFROWSET 반환 됩니다.
 
@@ -700,7 +700,7 @@ HRESULT MoveNext(LONG lSkip,
 
 그렇지 않은 경우 ( *Lskip* >= 0 및 *bforward* = true 인 경우) 추가 속성을 설정할 필요가 없습니다.
 
-## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset:: MovePrev
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a> CRowset:: MovePrev
 
 커서를 이전 레코드로 이동 합니다.
 
@@ -718,7 +718,7 @@ HRESULT MovePrev() throw();
 
 이 메서드를 사용 하려면 `DBPROP_CANFETCHBACKWARDS` `DBPROP_CANSCROLLBACKWARDS` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 또는을 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset:: MoveToBookmark
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a> CRowset:: MoveToBookmark
 
 책갈피 또는 해당 책갈피에서 지정 된 오프셋 (*Lskip*)의 행으로 표시 된 행을 인출 합니다.
 
@@ -737,7 +737,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 *lSkip*<br/>
 진행 책갈피에서 대상 행 까지의 행 개수입니다. *Lskip* 이 0 이면 인출 된 첫 번째 행이 책갈피가 설정 된 행입니다. *Lskip* 이 1 이면 인출 된 첫 번째 행이 책갈피가 설정 된 행 뒤의 행입니다. *Lskip* 이-1 이면 인출 된 첫 번째 행이 책갈피가 설정 된 행 앞의 행입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -747,7 +747,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 소비자에서 책갈피를 사용 하는 방법에 대 한 자세한 내용은 [책갈피 사용](../../data/oledb/using-bookmarks.md)을 참조 하세요.
 
-## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset:: MoveToRatio
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a> CRowset:: MoveToRatio
 
 행 집합의 소수 위치에서 시작 하 여 행을 인출 합니다.
 
@@ -769,13 +769,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 *bForward*<br/>
 진행 앞뒤로 이동할지 여부를 나타냅니다. 기본값은 전달입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-`MoveToRatio`는 대략 다음 수식에 따라 행을 페치합니다.
+`MoveToRatio` 는 대략 다음 수식에 따라 행을 페치합니다.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
@@ -783,7 +783,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 이 메서드에는 `IRowsetScroll` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetScroll` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset:: ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a> CRowset:: ReleaseRows
 
 [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 를 호출 하 여 현재 행 핸들을 해제 합니다.
 
@@ -797,7 +797,7 @@ HRESULT ReleaseRows() throw();
 
 표준 HRESULT입니다.
 
-## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset:: SetData
+## <a name="crowsetsetdata"></a><a name="setdata"></a> CRowset:: SetData
 
 하나 이상의 행 열에 데이터 값을 설정 합니다.
 
@@ -814,7 +814,7 @@ HRESULT SetData(int nAccessor) const throw();
 *nAccessor*<br/>
 진행 데이터에 액세스 하는 데 사용할 접근자의 번호입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -826,7 +826,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 하나 이상의 열에 쓸 수 없는 경우 설정 작업이 실패할 수 있습니다. 이 문제를 해결하려면 커서 맵을 수정합니다.
 
-## <a name="crowsetundo"></a><a name="undo"></a>CRowset:: Undo
+## <a name="crowsetundo"></a><a name="undo"></a> CRowset:: Undo
 
 마지막 인출 또는 [업데이트](../../data/oledb/crowset-update.md)이후 행에 적용 된 변경 내용을 취소 합니다.
 
@@ -849,7 +849,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 *pStatus*<br/>
 제한이 에서 행 상태 값을 반환 하는 위치에 대 한 포인터 `Undo` 입니다. *Pstatus* 가 null 인 경우에는 상태가 반환 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -857,7 +857,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 이 메서드에는 `IRowsetUpdate` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetUpdate` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetupdate"></a><a name="update"></a>CRowset:: Update
+## <a name="crowsetupdate"></a><a name="update"></a> CRowset:: Update
 
 마지막 인출 또는 호출 이후 현재 행에 대해 보류 중인 변경 내용을 모두 전송 `Update` 합니다.
 
@@ -880,7 +880,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 *pStatus*<br/>
 제한이 에서 행 상태 값을 반환 하는 위치에 대 한 포인터 `Update` 입니다. *Pstatus* 가 null 인 경우에는 상태가 반환 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -890,7 +890,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 이 메서드에는 `IRowsetUpdate` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetUpdate` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset:: UpdateAll
+## <a name="crowsetupdateall"></a><a name="updateall"></a> CRowset:: UpdateAll
 
 마지막 인출 또는 호출 이후 모든 행에 대해 보류 중인 변경 내용을 모두 전송 `Update` 합니다.
 
@@ -915,13 +915,13 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>설명
 
-[업데이트](../../data/oledb/crowset-update.md) 또는을 사용 하 여 해당 행이 마지막으로 인출 되거나 업데이트 된 이후 모든 행에 대해 보류 중인 변경 내용을 전송 `UpdateAll` 합니다. `UpdateAll`는 여전히 핸들 ( *Pphrow*참조)이 있는지 여부에 관계 없이 수정 된 모든 행을 업데이트 합니다.
+[업데이트](../../data/oledb/crowset-update.md) 또는을 사용 하 여 해당 행이 마지막으로 인출 되거나 업데이트 된 이후 모든 행에 대해 보류 중인 변경 내용을 전송 `UpdateAll` 합니다. `UpdateAll` 는 여전히 핸들 ( *Pphrow*참조)이 있는지 여부에 관계 없이 수정 된 모든 행을 업데이트 합니다.
 
 예를 들어 행 집합에 5 개의 행을 삽입 하는 데를 사용 하는 경우를 `Insert` `Update` 5 번 호출 하거나 `UpdateAll` 한 번 호출 하 여 모두 업데이트할 수 있습니다.
 
 이 메서드에는 `IRowsetUpdate` 모든 공급자에서 지원 되지 않을 수 있는 선택적 인터페이스가 필요 합니다 .이 경우 메서드는 E_NOINTERFACE를 반환 합니다. `DBPROP_IRowsetUpdate` `Open` 행 집합을 포함 하는 테이블이 나 명령에 대해를 호출 하기 전에 VARIANT_TRUE 설정 해야 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 

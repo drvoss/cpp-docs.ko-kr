@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623457"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831686"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>방법: 컨트롤 추가, 편집 또는 삭제 (c + +)
 
@@ -148,7 +148,7 @@ ms.locfileid: "84623457"
 
 ### <a name="troubleshooting"></a>문제 해결
 
-대화 상자에 공용 컨트롤이 나 rich edit 컨트롤을 추가한 후에는 대화 상자를 테스트할 때 표시 되지 않습니다. 또는 대화 자체가 나타나지 않습니다. 예를 들면 다음과 같습니다.
+대화 상자에 공용 컨트롤이 나 rich edit 컨트롤을 추가한 후에는 대화 상자를 테스트할 때 표시 되지 않습니다. 또는 대화 자체가 나타나지 않습니다. 예를 들어:
 
 1. Win32 프로젝트를 만들고 응용 프로그램 설정을 수정 하 여 콘솔 앱이 아닌 Windows 응용 프로그램을 만듭니다.
 
@@ -166,20 +166,38 @@ ms.locfileid: "84623457"
 
 현재 대화 상자에 다음 공용 컨트롤 또는 rich edit 컨트롤을 끌어서 놓으면 **대화 상자 편집기** 가 자동으로 프로젝트에 코드를 추가 하지 않습니다. 이 문제가 발생 하는 경우에도 Visual Studio에서 오류 또는 경고를 제공 하지 않습니다. 수정 하려면 컨트롤에 대 한 코드를 수동으로 추가 합니다.
 
-||||
-|-|-|-|
-|슬라이더 컨트롤|트리 컨트롤|날짜 시간 선택|
-|Spin 컨트롤|탭 컨트롤|Month Calendar|
-|Progress 컨트롤|애니메이션 컨트롤|IP 주소 컨트롤|
-|바로 가기 키|Rich Edit 컨트롤|확장 된 콤보 상자|
-|목록 컨트롤|Rich Edit 2.0 컨트롤|사용자 지정 컨트롤|
+:::row:::
+   :::column span="":::
+      애니메이션 제어 \
+      사용자 지정 컨트롤 \
+      날짜 시간 선택 \
+      확장 된 콤보 상자
+   :::column-end:::
+   :::column span="":::
+      핫 키 \
+      IP 주소 제어 \
+      목록 컨트롤 \
+      Month Calendar
+   :::column-end:::
+   :::column span="":::
+      진행률 컨트롤 \
+      Rich Edit 2.0 Control \
+      Rich Edit 컨트롤 \
+      슬라이더 컨트롤
+   :::column-end:::
+   :::column span="":::
+      Spin 컨트롤 \
+      탭 컨트롤 \
+      트리 컨트롤
+   :::column-end:::
+:::row-end:::
 
 대화 상자에서 공용 컨트롤을 사용 하려면 대화 상자를 만들기 전에 [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) 를 호출 해야 `AFXInitCommonControls` 합니다.
 
 RichEdit 컨트롤을 사용 하려면를 호출 해야 `LoadLibrary` 합니다. 자세한 내용은 Windows SDK의 [Rich Edit 컨트롤 정보](/windows/win32/Controls/about-rich-edit-controls) 및 [Rich edit 컨트롤 개요](../mfc/overview-of-the-rich-edit-control.md)를 참조 하세요.
 
 > [!NOTE]
-> MFC에서 RichEdit 컨트롤을 사용 하려면 먼저 [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) 를 호출 하 여 RichEdit 2.0 컨트롤 (riched20.dll)을 로드 해야 합니다. DLL)을 호출 하거나 [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) 를 호출 하 여 이전 RichEdit 1.0 컨트롤 (RICHED32)을 로드 합니다. DLL).
+> MFC에서 RichEdit 컨트롤을 사용 하려면 먼저 [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) 를 호출 하 여 RichEdit 2.0 컨트롤 (RICHED20.DLL)을 로드 하거나 [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) 를 호출 하 여 이전 RichEdit 1.0 컨트롤 (RICHED32.DLL)을 로드 해야 합니다.
 >
 > 이전 RichEdit 1.0 컨트롤과 함께 현재 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 클래스를 사용할 수 있지만 `CRichEditCtrl` RichEdit 2.0 컨트롤을 지원 하도록 설계 되었습니다. RichEdit 1.0 및 RichEdit 2.0는 유사 하기 때문에 대부분의 메서드는 작동 합니다. 그러나 1.0 컨트롤과 2.0 컨트롤 간에는 몇 가지 차이점이 있으므로 일부 메서드가 제대로 작동 하지 않거나 작동 하지 않을 수 있습니다.
 
@@ -189,10 +207,10 @@ Visual Studio에서는 ActiveX 컨트롤을 대화 상자에 삽입할 수 있�
 
 **Activex 컨트롤 삽입** 대화 상자를 사용 하면 대화 상자 [편집기](dialog-editor.md)를 사용 하는 동안 activex 컨트롤을 대화 상자에 삽입할 수 있습니다. 이 대화 상자에는 다음과 같은 속성이 있습니다.
 
-|속성|Description|
+|속성|설명|
 |---|---|
 |**ActiveX 컨트롤**|ActiveX 컨트롤 목록을 표시 합니다.<br/><br/>이 대화 상자에서 컨트롤을 삽입 해도 래퍼 클래스는 생성 되지 않습니다. 래퍼 클래스가 필요한 경우 [클래스 뷰](/visualstudio/ide/viewing-the-structure-of-code) 를 사용 하 여 래퍼 클래스를 만듭니다. [클래스 추가](../ide/adding-a-class-visual-cpp.md)를 참조 하세요.<br/><br/>이 대화 상자에 ActiveX 컨트롤이 표시 되지 않는 경우 공급 업체의 지침에 따라 컨트롤을 설치 해 보십시오.|
-|**경로**|ActiveX 컨트롤을 찾은 파일을 표시 합니다.|
+|**Path**|ActiveX 컨트롤을 찾은 파일을 표시 합니다.|
 
 > [!CAUTION]
 > 시스템에 일부 ActiveX 컨트롤을 배포하지 못할 수 있습니다. 컨트롤을 설치한 소프트웨어에 대 한 사용권 계약을 참조 하거나 소프트웨어 회사에 문의 하십시오.

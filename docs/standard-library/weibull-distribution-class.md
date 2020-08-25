@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 73b307fe0231b549a41accd48bba2a6f017486e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224515"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831699"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution 클래스
 
@@ -77,10 +77,8 @@ class weibull_distribution
 
 클래스 템플릿은 와이블 분포에 따라 분포 된 경우 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
+[weibull_distribution](#weibull_distribution)\
+[param_type](#param_type)|
 
 속성 함수 `a()` 및 `b()`는 저장된 분포 매개 변수인 *a* 및 *b* 각각에 대한 값을 반환합니다.
 
@@ -213,7 +211,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution:: weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a> weibull_distribution:: weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -239,7 +237,7 @@ explicit weibull_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::p aram_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a> weibull_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

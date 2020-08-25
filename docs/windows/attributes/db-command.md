@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831374"
 ---
 # <a name="db_command"></a>db_command
 
@@ -46,7 +46,7 @@ OLE DB 명령의 텍스트를 포함하는 명령 문자열입니다. 다음은 
 
 > **( \[ ** *bindtype* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ , ...]]] **)**
 
-각 항목이 나타내는 의미는 다음과 같습니다.
+다음은 각 문자에 대한 설명입니다.
 
 - **(** 는 데이터 바인딩 블록의 시작을 표시합니다.
 
@@ -238,9 +238,7 @@ int main() {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`** , 멤버, 메서드, 로컬|
 |**불가능**|아니요|

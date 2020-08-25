@@ -6,31 +6,31 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: 18c0912c506bc52421b18d36346204b557c0fc5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca19eba1632ef3754b704c82ad5a872160ae0c91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325729"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834468"
 ---
 # <a name="window-class-macros"></a>창 클래스 매크로
 
-이러한 매크로는 창 클래스 유틸리티를 정의합니다.
+이러한 매크로는 창 클래스 유틸리티를 정의 합니다.
 
-|||
+|Name|설명|
 |-|-|
 |[DECLARE_WND_CLASS](#declare_wnd_class)|새 창 클래스의 이름을 지정할 수 있습니다.|
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(비주얼 스튜디오 2017) 새 창 클래스의 이름과 새 클래스가 사용할 창 프로시저인 둘러싸는 클래스를 지정할 수 있습니다.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) 새 창 클래스의 이름과 새 클래스에 사용할 창 프로시저를 포함 하는 바깥쪽 클래스의 이름을 지정할 수 있습니다.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|새 창 클래스의 기반이 되는 기존 창 클래스의 이름을 지정할 수 있습니다.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|클래스의 매개 변수를 지정할 수 있습니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlwin.h
+**헤더:.**
 
-## <a name="declare_wnd_class"></a><a name="declare_wnd_class"></a>DECLARE_WND_CLASS
+## <a name="declare_wnd_class"></a><a name="declare_wnd_class"></a> DECLARE_WND_CLASS
 
-새 창 클래스의 이름을 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 배치합니다.
+새 창 클래스의 이름을 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.
 
 ```
 DECLARE_WND_CLASS( WndClassName )
@@ -39,17 +39,17 @@ DECLARE_WND_CLASS( WndClassName )
 ### <a name="parameters"></a>매개 변수
 
 *WndClassName*<br/>
-【인】 새 창 클래스의 이름입니다. NULL이면 ATL은 창 클래스 이름을 생성합니다.
+진행 새 창 클래스의 이름입니다. NULL 인 경우 ATL은 창 클래스 이름을 생성 합니다.
 
 ### <a name="remarks"></a>설명
 
-/허용 컴파일러 옵션을 사용하는 경우 DECLARE_WND_CLASS 컴파일러 오류가 발생합니다. 대신 DECLARE_WND_CLASS2 사용합니다.
+/Permissive-컴파일러 옵션을 사용 하는 경우 DECLARE_WND_CLASS 컴파일러 오류가 발생 합니다. 대신 DECLARE_WND_CLASS2를 사용 해야 합니다.
 
-DECLARE_WND_CLASS [CWndClassInfo에서](cwndclassinfo-class.md)정보를 관리할 새 창 클래스의 이름을 지정할 수 있습니다. DECLARE_WND_CLASS 다음과 같은 정적 함수를 구현하여 새 창 클래스를 정의합니다.
+DECLARE_WND_CLASS를 사용 하 여 [CWndClassInfo](cwndclassinfo-class.md)에서 관리 되는 정보를 포함 하는 새 창 클래스의 이름을 지정할 수 있습니다. DECLARE_WND_CLASS는 다음 정적 함수를 구현 하 여 새 창 클래스를 정의 합니다.
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
-DECLARE_WND_CLASS 새 창에 대해 다음 스타일을 지정합니다.
+DECLARE_WND_CLASS 새 창에 대해 다음과 같은 스타일을 지정 합니다.
 
 - CS_HREDRAW
 
@@ -57,15 +57,15 @@ DECLARE_WND_CLASS 새 창에 대해 다음 스타일을 지정합니다.
 
 - CS_DBLCLKS
 
-DECLARE_WND_CLASS 기본 창의 배경색도 지정합니다. [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) 매크로를 사용하여 고유한 스타일과 배경색을 제공합니다.
+또한 DECLARE_WND_CLASS는 기본 창의 배경색을 지정 합니다. [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) 매크로를 사용 하 여 고유한 스타일과 배경색을 제공 합니다.
 
-[CWindowImpl은](cwindowimpl-class.md) DECLARE_WND_CLASS 매크로를 사용하여 새 창 클래스를 기반으로 창을 만듭니다. 이 동작을 재정의하려면 [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) 매크로를 사용하거나 [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) 함수의 고유한 구현을 제공합니다.
+[CWindowImpl](cwindowimpl-class.md) 는 DECLARE_WND_CLASS 매크로를 사용 하 여 새 창 클래스를 기반으로 창을 만듭니다. 이 동작을 재정의 하려면 [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) 매크로를 사용 하거나 [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) 함수의 고유한 구현을 제공 합니다.
 
-ATL에서 창 사용에 대 한 자세한 내용은 [ATL 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하십시오.
+ATL에서 windows를 사용 하는 방법에 대 한 자세한 내용은 [Atl 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하세요.
 
-## <a name="declare_wnd_class2"></a><a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2
+## <a name="declare_wnd_class2"></a><a name="declare_wnd_class2"></a> DECLARE_WND_CLASS2
 
-(비주얼 스튜디오 2017) DECLARE_WND_CLASS 비슷하지만 /permissive- 옵션을 사용하여 컴파일 할 때 종속 이름 오류를 피할 수있는 추가 매개 변수가 있습니다.
+(Visual Studio 2017) DECLARE_WND_CLASS와 유사 하지만/permissive-옵션을 사용 하 여 컴파일할 때 종속 이름 오류를 방지 하는 추가 매개 변수가 있습니다.
 
 ```
 DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
@@ -74,19 +74,19 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>매개 변수
 
 *WndClassName*<br/>
-【인】 새 창 클래스의 이름입니다. NULL이면 ATL은 창 클래스 이름을 생성합니다.
+진행 새 창 클래스의 이름입니다. NULL 인 경우 ATL은 창 클래스 이름을 생성 합니다.
 
-*클래스 를 둘러싸는*<br/>
-【인】 새 창 클래스를 둘러싸는 창 클래스의 이름입니다. NULL이 될 수 없습니다.
+*EnclosingClass*<br/>
+진행 새 창 클래스를 포함 하는 창 클래스의 이름입니다. NULL이 될 수 없습니다.
 
 ### <a name="remarks"></a>설명
 
-/permissive-옵션을 사용하는 경우 DECLARE_WND_CLASS 종속 이름을 포함하기 때문에 컴파일 오류가 발생합니다. DECLARE_WND_CLASS2 이 매크로가 사용되고 /permissive-플래그 에서 오류를 일으키지 않는 클래스의 이름을 명시적으로 지정해야 합니다.
-그렇지 않으면 이 매크로는 [DECLARE_WND_CLASS.](#declare_wnd_class)
+/Permissive-옵션을 사용 하는 경우 DECLARE_WND_CLASS에 종속 이름이 포함 되어 있으므로 컴파일 오류가 발생 합니다. DECLARE_WND_CLASS2를 사용 하려면이 매크로를 사용 하는 클래스의 이름을 명시적으로 지정 해야 하며/permissive-플래그에서 오류를 발생 시 키 지 않습니다.
+그렇지 않으면이 매크로는 [DECLARE_WND_CLASS](#declare_wnd_class)와 동일 합니다.
 
-## <a name="declare_wnd_superclass"></a><a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS
+## <a name="declare_wnd_superclass"></a><a name="declare_wnd_superclass"></a> DECLARE_WND_SUPERCLASS
 
-클래스의 매개 변수를 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 배치합니다.
+클래스의 매개 변수를 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.
 
 ```
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
@@ -95,28 +95,28 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 ### <a name="parameters"></a>매개 변수
 
 *WndClassName*<br/>
-【인】 *OrigWndClassName을*수퍼클래스로 지정하는 창 클래스의 이름입니다. NULL이면 ATL은 창 클래스 이름을 생성합니다.
+진행 슈퍼 클래스에서 *OrigWndClassName*하는 창 클래스의 이름입니다. NULL 인 경우 ATL은 창 클래스 이름을 생성 합니다.
 
-*오리그웬드클래스이름*<br/>
-【인】 기존 창 클래스의 이름입니다.
+*OrigWndClassName*<br/>
+진행 기존 창 클래스의 이름입니다.
 
 ### <a name="remarks"></a>설명
 
-이 매크로를 사용하면 기존 창 클래스를 수퍼클래스로 지정할 수 있습니다. [CWndClassInfo는](cwndclassinfo-class.md) 슈퍼 클래스의 정보를 관리합니다.
+이 매크로를 사용 하 여 기존 창 클래스의 슈퍼 클래스를 지정할 창 클래스의 이름을 지정할 수 있습니다. [CWndClassInfo](cwndclassinfo-class.md) 는 슈퍼 클래스의 정보를 관리 합니다.
 
-DECLARE_WND_SUPERCLASS 다음과 같은 정적 함수를 구현합니다.
+DECLARE_WND_SUPERCLASS는 다음 정적 함수를 구현 합니다.
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
-기본적으로 [CWindowImpl은](cwindowimpl-class.md) [DECLARE_WND_CLASS](#declare_wnd_class) 매크로를 사용하여 새 창 클래스를 기반으로 창을 만듭니다. -derived 클래스에서 DECLARE_WND_SUPERCLASS `CWindowImpl`매크로를 지정하면 window 클래스는 기존 클래스를 기반으로 하지만 창 프로시저를 사용합니다. 이 기술을 수퍼 클래스링이라고 합니다.
+기본적으로 [CWindowImpl](cwindowimpl-class.md) 는 [DECLARE_WND_CLASS](#declare_wnd_class) 매크로를 사용 하 여 새 창 클래스를 기반으로 창을 만듭니다. 파생 클래스에서 DECLARE_WND_SUPERCLASS 매크로를 지정 하 여 `CWindowImpl` window 클래스는 기존 클래스를 기반으로 하지만 창 프로시저를 사용 합니다. 이 기법은 superclassing 라고 합니다.
 
-DECLARE_WND_CLASS 및 DECLARE_WND_SUPERCLASS 매크로를 사용하는 것 외에도 [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) 함수를 사용자 고유의 구현으로 재정의할 수 있습니다.
+DECLARE_WND_CLASS 및 DECLARE_WND_SUPERCLASS 매크로를 사용 하는 것 외에도 [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) 함수를 고유한 구현으로 재정의할 수 있습니다.
 
-ATL에서 창 사용에 대 한 자세한 내용은 [ATL 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하십시오.
+ATL에서 windows를 사용 하는 방법에 대 한 자세한 내용은 [Atl 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하세요.
 
-## <a name="declare_wnd_class_ex"></a><a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX
+## <a name="declare_wnd_class_ex"></a><a name="declare_wnd_class_ex"></a> DECLARE_WND_CLASS_EX
 
-새 창 클래스의 기반이 되는 기존 창 클래스의 이름을 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 배치합니다.
+새 창 클래스의 기반이 되는 기존 창 클래스의 이름을 지정할 수 있습니다. 이 매크로를 ATL ActiveX 컨트롤의 컨트롤 클래스에 놓습니다.
 
 ```
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
@@ -125,21 +125,21 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 ### <a name="parameters"></a>매개 변수
 
 *WndClassName*<br/>
-【인】 새 창 클래스의 이름입니다. NULL이면 ATL은 창 클래스 이름을 생성합니다.
+진행 새 창 클래스의 이름입니다. NULL 인 경우 ATL은 창 클래스 이름을 생성 합니다.
 
-*스타일*<br/>
-【인】 창의 스타일입니다.
+*style*<br/>
+진행 창의 스타일입니다.
 
-*bkgnd*<br/>
-【인】 창의 배경색입니다.
+*배경*<br/>
+진행 창의 배경색입니다.
 
 ### <a name="remarks"></a>설명
 
-이 매크로를 사용하면 [CWndClassInfo](cwndclassinfo-class.md)에서 정보를 관리하는 새 창 클래스의 클래스 매개 변수를 지정할 수 있습니다. DECLARE_WND_CLASS_EX 다음과 같은 정적 함수를 구현하여 새 창 클래스를 정의합니다.
+이 매크로를 사용 하 여 [CWndClassInfo](cwndclassinfo-class.md)에서 관리 되는 정보를 포함 하는 새 창 클래스의 클래스 매개 변수를 지정할 수 있습니다. DECLARE_WND_CLASS_EX는 다음 정적 함수를 구현 하 여 새 창 클래스를 정의 합니다.
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
-기본 스타일과 배경색을 사용하려면 [DECLARE_WND_CLASS](#declare_wnd_class) 매크로를 사용합니다. ATL에서 창 사용에 대 한 자세한 내용은 [ATL 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하십시오.
+기본 스타일 및 배경색을 사용 하려면 [DECLARE_WND_CLASS](#declare_wnd_class) 매크로를 사용 합니다. ATL에서 windows를 사용 하는 방법에 대 한 자세한 내용은 [Atl 창 클래스](../../atl/atl-window-classes.md)문서를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

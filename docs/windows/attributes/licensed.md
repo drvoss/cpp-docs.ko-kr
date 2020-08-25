@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 53b1a356f3a7e224cb85c15b8aa725a5f0469157
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201715"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832492"
 ---
 # <a name="licensed"></a>licensed
 
@@ -50,12 +50,10 @@ public:
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|`coclass`|
 |**잘못된 특성**|없음|
 

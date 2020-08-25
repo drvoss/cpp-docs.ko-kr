@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fe2d0e57c0746f25187028b85157d66ee736ca4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212165"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836428"
 ---
 # <a name="ltnewgt"></a>&lt;신규&gt;
 
@@ -31,13 +31,13 @@ ms.locfileid: "87212165"
 
 ### <a name="objects"></a>개체
 
-|||
+|Name|설명|
 |-|-|
 |[nothrow](../standard-library/new-functions.md#nothrow)|및 버전의 인수로 사용할 개체를 제공 합니다 **`nothrow`** **`new`** **`delete`** .|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|새 처리기로 사용하기에 적합한 함수를 가리키는 형식입니다.|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
@@ -45,7 +45,7 @@ ms.locfileid: "87212165"
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
 |[launder](../standard-library/new-functions.md#launder)||
@@ -53,7 +53,7 @@ ms.locfileid: "87212165"
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[operator delete](../standard-library/new-operators.md#op_delete)|개별 개체에 대해 스토리지를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|개체 배열에 대해 스토리지를 할당 해제하기 위해 delete 식에서 호출되는 함수입니다.|
@@ -62,13 +62,13 @@ ms.locfileid: "87212165"
 
 ### <a name="enums"></a>열거형
 
-|||
+|Name|설명|
 |-|-|
 |[align_val_t](../standard-library/new-operators.md#op_align_val_t)||
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[bad_alloc 클래스](../standard-library/bad-alloc-class.md)|이 클래스는 할당 요청이 성공하지 못했음을 나타내기 위해 발생하는 예외를 설명합니다.|
 |[bad_array_new_length 클래스](../standard-library/bad-array-new-length.md)||

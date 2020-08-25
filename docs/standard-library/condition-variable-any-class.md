@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831479"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any 클래스
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|`condition_variable_any` 개체를 생성합니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[notify_all](#notify_all)|`condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.|
 |[notify_one](#notify_one)|`condition_variable_any` 개체를 대기 중인 스레드 중 하나를 차단 해제합니다.|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|
 |[wait_until](#wait_until)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 `condition_variable_any` 개체를 생성합니다.
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 메모리가 부족한 경우 생성자에서 `not_enough_memory` 오류 코드가 있는 [system_error](../standard-library/system-error-class.md) 개체를 throw합니다. 몇 가지 다른 리소스를 사용할 수 없기 때문에 개체를 생성할 수 없는 경우 생성자에서 `resource_unavailable_try_again` 오류 코드가 있는 `system_error` 개체를 throw합니다.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 `condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.
 
@@ -73,7 +73,7 @@ condition_variable_any();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 `condition_variable_any` 개체를 기다리는 스레드 중 하나를 차단 해제합니다.
 
@@ -81,7 +81,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>대기한
+## <a name="wait"></a><a name="wait"></a> 대기한
 
 스레드를 차단합니다.
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.
 
@@ -135,7 +135,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 *Pred*\
 또는를 반환 하는 식입니다 **`true`** **`false`** .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 메서드는 `cv_status::timeout` *Rel_time* 경과할 때 대기가 종료 될 경우를 반환 합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.
 
@@ -190,7 +190,7 @@ void wait_until(
 *Pred*\
 또는를 반환 하는 식입니다 **`true`** **`false`** .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 형식을 반환 하는 메서드는 `cv_status` `cv_status::timeout` *Abs_time* 경과할 때 대기가 종료 될 경우를 반환 합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.
 

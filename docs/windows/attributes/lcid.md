@@ -1,17 +1,17 @@
 ---
-title: lcid (C++ COM 특성)
+title: lcid (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7533cd9b269a879c5c2f061dcdfc632b1b27c871
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834182"
 ---
 # <a name="lcid"></a>lcid
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214801"
 [lcid]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Lcid** C++ 특성은 [lcid](/windows/win32/Midl/lcid) MIDL 특성의 기능을 구현 합니다. 라이브러리 블록에 대 한 로캘을 구현 하려면 [module](module-cpp.md) 특성에 **lcid =** `lcid` 매개 변수를 사용 합니다.
+**Lcid** c + + 특성은 [lcid](/windows/win32/Midl/lcid) MIDL 특성의 기능을 구현 합니다. 라이브러리 블록에 대 한 로캘을 구현 하려면 module 특성에 대해 **lcid =** `lcid` 매개 변수를 사용 [module](module-cpp.md) 합니다.
 
 ## <a name="example"></a>예제
 
@@ -44,12 +44,10 @@ __interface IStatic {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 매개 변수|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

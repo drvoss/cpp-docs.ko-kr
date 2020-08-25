@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212050"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831413"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution 클래스
 
@@ -78,10 +78,8 @@ public:
 
 클래스 템플릿에서는 분포를 사용 하 여 사용자 지정 정수 형식의 값을 생성 하는 포함-포함 분포를 설명 하므로 모든 값이 동일 하 게 될 수 있습니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 속성 멤버 `a()`는 분포의 현재 저장된 최하한을 반환하고 `b()`는 현재 저장된 최상한을 반환합니다. 이 분포 클래스의 경우 최하한과 최상한 값은 공통 속성 함수 `min()` 및 `max()`가 반환한 값과 동일합니다.
 
@@ -179,7 +177,7 @@ Distribution for 200 samples:
 
 **네임스페이스:** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:: uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a> uniform_int_distribution:: uniform_int_distribution
 
 분포를 생성합니다.
 
@@ -208,7 +206,7 @@ explicit uniform_int_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p aram_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a> uniform_int_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

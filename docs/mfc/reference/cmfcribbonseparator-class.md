@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560870"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831803"
 ---
 # <a name="cmfcribbonseparator-class"></a>Cmfc리본 구분 기호 클래스
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[Cmfc리본 구분 기호:: Cmfc리본 구분 기호](#cmfcribbonseparator)|`CMFCRibbonSeparator` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[Cmfc리본 구분 기호:: AddToListBox](#addtolistbox)|**사용자 지정** 대화 상자의 **명령** 목록에 구분 기호를 추가 합니다. [Cmfc리본 Baseelement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)를 재정의 합니다.|
 |`CMFCRibbonSeparator::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|
 |`CMFCRibbonSeparator::GetThisClass`|프레임 워크에서이 클래스 형식과 연결 된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대 한 포인터를 가져오는 데 사용 됩니다.|
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|||
+|Name|설명|
 |-|-|
-|속성|Description|
 |[Cmfc리본 구분 기호:: CopyFrom](#copyfrom)|다른 개체에서 구분 기호의 멤버 변수를 설정 하는 복사 메서드입니다.|
 |[Cmfc리본 구분 기호:: GetRegularSize](#getregularsize)|구분 기호의 크기를 반환 합니다.|
 |[Cmfc리본 구분 기호:: IsSeparator](#isseparator)|구분 기호 인지 여부를 나타냅니다.|
@@ -116,7 +113,7 @@ virtual int AddToListBox(
 *bDeep*<br/>
 진행 무시.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *PWndListBox*에 의해 지정 된 목록 상자의 문자열에 대 한 0부터 시작 하는 인덱스입니다.
 
@@ -169,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 *컨트롤러가*<br/>
 진행 장치 콘텐츠에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 장치 컨텍스트에서 구분 기호의 크기입니다.
 
@@ -181,7 +178,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 virtual BOOL IsSeparator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 클래스의 경우 항상 TRUE입니다.
 
@@ -193,7 +190,7 @@ virtual BOOL IsSeparator() const;
 virtual BOOL IsTabStop() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 클래스의 경우 항상 FALSE입니다.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833182"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -45,7 +45,7 @@ C++ 언어와 C++ 표준 라이브러리는 두 가지 문자열 형식을 지�
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[연산자 +](../standard-library/string-operators.md#op_add)|두 문자열 개체를 연결합니다.|
 |[연산자! =](../standard-library/string-operators.md#op_neq)|연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.|
@@ -59,9 +59,9 @@ C++ 언어와 C++ 표준 라이브러리는 두 가지 문자열 형식을 지�
 
 ### <a name="specialized-template-functions"></a>특별 템플릿 함수
 
-|||
+|Name|설명|
 |-|-|
-|hash|문자열의 해시를 생성 합니다.|
+|`hash`|문자열의 해시를 생성 합니다.|
 |[스왑을](../standard-library/string-functions.md#swap)|두 문자열의 문자 배열을 교환합니다.|
 |[stod](../standard-library/string-functions.md#stod)|문자 시퀀스를로 변환 **`double`** 합니다.|
 |[stof](../standard-library/string-functions.md#stof)|문자 시퀀스를로 변환 **`float`** 합니다.|
@@ -88,7 +88,7 @@ C++ 언어와 C++ 표준 라이브러리는 두 가지 문자열 형식을 지�
 
 ### <a name="specializations"></a>특수화
 
-|||
+|Name|설명|
 |-|-|
 |[char_traits \<char> 구조체](../standard-library/char-traits-char-struct.md)|`char_traits` \<CharType> 형식의 요소에 대 한 템플릿 구조체의 특수화 인 구조체입니다 **`char`** .|
 |[char_traits<wchar_t> 구조체](../standard-library/char-traits-wchar-t-struct.md)|`char_traits` \<CharType> 형식의 요소에 대 한 템플릿 구조체의 특수화 인 구조체입니다 **`wchar_t`** .|

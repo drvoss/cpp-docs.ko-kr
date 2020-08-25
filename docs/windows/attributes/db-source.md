@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215298"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831387"
 ---
 # <a name="db_source"></a>db_source
 
@@ -50,7 +50,7 @@ ms.locfileid: "87215298"
 
 ## <a name="example"></a>예제
 
-이 샘플은 클래스에 대 한 **db_source** 를 호출 하 여 `ds` Northwind 데이터베이스를 사용 하 여 데이터 원본에 대 한 연결을 만듭니다. `ds`는 클래스에 내부적으로 사용할 수 있는 데이터 소스에 대 한 핸들입니다 `CMyCommand` .
+이 샘플은 클래스에 대 한 **db_source** 를 호출 하 여 `ds` Northwind 데이터베이스를 사용 하 여 데이터 원본에 대 한 연결을 만듭니다. `ds` 는 클래스에 내부적으로 사용할 수 있는 데이터 소스에 대 한 핸들입니다 `CMyCommand` .
 
 ```cpp
 // db_source_1.cpp
@@ -68,12 +68,10 @@ class CMyCommand {};
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`** , 멤버, 메서드, 로컬|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

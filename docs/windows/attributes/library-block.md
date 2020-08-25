@@ -1,17 +1,17 @@
 ---
-title: library_block (C++ COM 특성)
+title: library_block (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13988abc12eb0b136dfc8d2c0d597005b56f0526
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214775"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834118"
 ---
 # <a name="library_block"></a>library_block
 
@@ -23,7 +23,7 @@ ms.locfileid: "80214775"
 [library_block]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 구조체를 라이브러리 블록 내에 저장 하는 경우 참조 여부와 관계 없이 형식 라이브러리로 전달 됩니다. 기본적으로 [coclass](coclass.md) [, 특성 및](dispinterface.md) [idl_module](idl-module.md) 특성에 의해 수정 된 구문만 라이브러리 블록에 배치 됩니다.
 
@@ -44,12 +44,10 @@ __interface IMyInterface {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|원하는 위치|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -58,4 +56,4 @@ __interface IMyInterface {
 ## <a name="see-also"></a>참고 항목
 
 [컴파일러 특성](compiler-attributes.md)<br/>
-[독립 실행형 특성](stand-alone-attributes.md)
+[독립형 특성](stand-alone-attributes.md)

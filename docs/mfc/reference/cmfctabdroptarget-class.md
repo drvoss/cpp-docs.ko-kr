@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834234"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 클래스
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|기본 생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCTabDropTarget:: System.windows.uielement.ondragenter](#ondragenter)|사용자가 개체를 탭 창으로 끌 때 프레임 워크에서 호출 됩니다. ( [Coledroptarget:: system.windows.uielement.ondragenter](../../mfc/reference/coledroptarget-class.md#ondragenter)를 재정의 합니다.)|
 |[CMFCTabDropTarget:: System.windows.uielement.ondragleave](#ondragleave)|사용자가 포커스가 있는 탭 창 밖으로 개체를 끌 때 프레임 워크에서 호출 됩니다. ( [Coledroptarget:: system.windows.uielement.ondragleave](../../mfc/reference/coledroptarget-class.md#ondragleave)를 재정의 합니다.)|
 |[CMFCTabDropTarget:: System.windows.uielement.ondragover](#ondragover)|사용자가 포커스를 가진 탭 창으로 개체를 끌 때 프레임 워크에서 호출 됩니다. ( [Coledroptarget:: system.windows.uielement.ondragover](../../mfc/reference/coledroptarget-class.md#ondragover)를 재정의 합니다.)|
@@ -105,7 +103,7 @@ virtual DROPEFFECT OnDragEnter(
 *까지*\
 진행 클라이언트 좌표에서 커서의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 놓기가 *point*로 지정 된 위치에서 발생 하는 경우 발생 하는 효과입니다. 다음 중 하나 이상이 될 수 있습니다.
 
@@ -168,7 +166,7 @@ virtual DROPEFFECT OnDragOver(
 *까지*\
 진행 클라이언트 좌표로 나타낸 마우스 포인터의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 놓기가 *point*로 지정 된 위치에서 발생 하는 경우 발생 하는 효과입니다. 다음 중 하나 이상이 될 수 있습니다.
 
@@ -218,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 *까지*\
 진행 클라이언트 좌표로 나타낸 마우스 포인터의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 결과 삭제 효과입니다. 다음 중 하나 이상이 될 수 있습니다.
 
@@ -251,7 +249,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 *pOwner*\
 진행 놓기 대상으로 등록할 tab 컨트롤입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 등록이 성공 하면 0이 아닌 값이 됩니다. 그렇지 않으면 0입니다.
 
